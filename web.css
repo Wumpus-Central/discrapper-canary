@@ -33062,8 +33062,8 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 }
 
 .upsellContainer__0b69f.updatedStyling__0b69f {
-    background: var(--background-surface-high);
-    border: 1px solid var(--border-muted)
+    background: var(--background-surface-highest);
+    border: 1px solid var(--border-subtle)
 }
 
 .expressiveGradient__0b69f {
