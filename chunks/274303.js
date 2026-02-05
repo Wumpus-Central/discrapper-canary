@@ -1,11 +1,11 @@
 "use strict";
 let r, i;
-n.d(t, { A: () => y, U: () => c }), n(321073);
+n.d(t, { A: () => S, U: () => c }), n(321073);
 var a = n(247775),
     s = n(311907),
     o = n(73153),
-    l = n(252919),
-    u = n(111613);
+    l = n(111613),
+    u = n(50502);
 n(573879);
 var c = (function (e) {
     return (e[(e.INVALID = 0)] = "INVALID"), (e[(e.VALIDATING = 1)] = "VALIDATING"), (e[(e.VALID = 2)] = "VALID"), e;
@@ -14,17 +14,17 @@ let d = [],
     _ = !1;
 function f(e) {
     let { user: t } = e;
-    (r = t.id), (_ = !1), !i && (0, l.A)(t) && (i = !0);
+    (r = t.id), (_ = !1);
     let n = d.slice(),
-        a = n.findIndex((e) => {
+        i = n.findIndex((e) => {
             let { id: n } = e;
             return n === t.id;
         });
-    a > -1
-        ? ((d[a].avatar = t.avatar),
-          (d[a].username = t.username),
-          (d[a].discriminator = t.discriminator),
-          (d[a].tokenStatus = 2))
+    i > -1
+        ? ((d[i].avatar = t.avatar),
+          (d[i].username = t.username),
+          (d[i].discriminator = t.discriminator),
+          (d[i].tokenStatus = 2))
         : n.push({
               id: t.id,
               avatar: t.avatar,
@@ -74,17 +74,21 @@ function g(e, t) {
 }
 function E(e) {
     let { from: t, to: n } = e;
-    d = (0, u.E8)(d, t, n);
+    d = (0, l.E8)(d, t, n);
 }
 function A(e) {
+    let { multiAccountMobileExperimentEnabled: t } = e;
+    i = t;
+}
+function I(e) {
     let { userId: t, pushSyncToken: n } = e;
     d = d.map((e) => (e.id === t ? { ...e, pushSyncToken: n } : e));
 }
-function I(e) {
+function T(e) {
     let { invalidPushSyncTokens: t } = e;
     d = d.map((e) => (null != e.pushSyncToken && t.includes(e.pushSyncToken) ? { ...e, pushSyncToken: null } : e));
 }
-class T extends s.Ay.PersistedStore {
+class y extends s.Ay.PersistedStore {
     static displayName = "MultiAccountStore";
     static persistKey = "MultiAccountStore";
     static migrations = [
@@ -121,13 +125,17 @@ class T extends s.Ay.PersistedStore {
         });
     }
     get canUseMultiAccountNotifications() {
-        return this.getCanUseMultiAccountMobile();
+        return (
+            this.getCanUseMultiAccountMobile() &&
+            u.w.getCurrentConfig({ location: "09e468_1" }, { autoTrackExposure: !1 })
+                .isMultiAccountMobileNotificationsEnabled
+        );
     }
     get isSwitchingAccount() {
         return _;
     }
 }
-let y = new T(o.h, {
+let S = new y(o.h, {
     CONNECTION_OPEN: f,
     LOGOUT: p,
     MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: (e) => g(e.userId, 1),
@@ -136,6 +144,7 @@ let y = new T(o.h, {
     MULTI_ACCOUNT_REMOVE_ACCOUNT: (e) => h(e.userId),
     MULTI_ACCOUNT_MOVE_ACCOUNT: E,
     CURRENT_USER_UPDATE: m,
-    MULTI_ACCOUNT_UPDATE_PUSH_SYNC_TOKEN: A,
-    MULTI_ACCOUNT_INVALIDATE_PUSH_SYNC_TOKENS: I,
+    MULTI_ACCOUNT_MOBILE_EXPERIMENT_UPDATE: A,
+    MULTI_ACCOUNT_UPDATE_PUSH_SYNC_TOKEN: I,
+    MULTI_ACCOUNT_INVALIDATE_PUSH_SYNC_TOKENS: T,
 });
