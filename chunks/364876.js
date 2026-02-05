@@ -24,9 +24,9 @@ function E() {
         g = e?.gradient,
         _ =
             null != g && null != g.colors && g.colors.length >= 2
-                ? (0, d.K5)({ gradient: g.colors, angle: g.angle ?? void 0 }, { colorStops: [0, 12, 100] })
+                ? (0, d.K5)({ gradient: g.colors, angle: g.angle ?? void 0 })
                 : void 0,
-        x = (0, d.gc)(E ?? void 0);
+        x = (0, d.gc)(E);
     null != x && ((x.backgroundSize = "cover, auto"), (x.backgroundPosition = "right center, 0% 0%"));
     let T = (0, d.x)(x, _);
     return null == e || null == n

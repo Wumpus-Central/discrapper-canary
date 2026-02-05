@@ -262,7 +262,7 @@ function eg(e) {
     let { className: t, config: n } = e,
         r = (0, Y.T)(n.asset),
         l = (0, Y.T)(n.backgroundAsset),
-        o = (0, F.gc)(l ?? void 0),
+        o = (0, F.gc)(l),
         c = s.useMemo(() => {
             let e = n.gradient;
             if (null != e && null != e.colors && !(e.colors.length < 2))
