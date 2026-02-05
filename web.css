@@ -51857,12 +51857,7 @@ div.modalOverrideBody__34eac {
     vertical-align: top
 }
 
-.productVariantsOuterContainer__2c397 {
-    gap: var(--space-12)
-}
-
-.productVariantsContainer__2c397,
-.productVariantsOuterContainer__2c397 {
+.productVariantsContainer__2c397 {
     align-items: center;
     display: flex;
     flex-direction: row
@@ -51885,11 +51880,17 @@ div.modalOverrideBody__34eac {
     justify-content: center
 }
 
+.productVariant__2c397.productVariantOverflow__2c397 {
+    background-color: var(--control-overlay-secondary-background-default);
+    box-shadow: inset 0 0 0 0 transparent, 0 0 0 1px var(--control-overlay-secondary-border-hover), 0 0 0 2px var(--background-base-low)
+}
+
 .full-motion .productVariant__2c397 {
     transition: box-shadow .25s ease, height .25s ease, margin-inline-start .25s ease, width .25s ease
 }
 
-.full-motion .productVariantCheckmark__2c397 {
+.full-motion .productVariantCheckmark__2c397,
+.full-motion .productVariantOverflowIcon__2c397 {
     transition: height .25s ease, width .25s ease
 }
 
@@ -51912,6 +51913,11 @@ div.modalOverrideBody__34eac {
 .expanded__2c397 .productVariantCheckmark__2c397 {
     height: 16px;
     width: 16px
+}
+
+.expanded__2c397 .productVariantOverflowIcon__2c397 {
+    height: 18px;
+    width: 18px
 }
 
 .collapsed__2c397.productVariantsContainer__2c397 {
@@ -51938,6 +51944,11 @@ div.modalOverrideBody__34eac {
 .collapsed__2c397 .productVariantCheckmark__2c397 {
     height: 12px;
     width: 12px
+}
+
+.collapsed__2c397 .productVariantOverflowIcon__2c397 {
+    height: 14px;
+    width: 14px
 }
 
 .wishlistButton__979b1 {
