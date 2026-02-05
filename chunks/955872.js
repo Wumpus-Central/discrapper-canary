@@ -78,7 +78,7 @@ function B() {
                           user: e,
                           nameplate: F,
                           ...H,
-                          className: null == F ? k.t : void 0,
+                          className: null == F ? k.tJ : void 0,
                           isHighlighted: !0,
                       }),
                       children: (0, i.jsx)(M.A, {}),
@@ -97,21 +97,37 @@ function B() {
                   Q &&
                       !w &&
                       (0, i.jsx)(p.d, {
-                          className: k.E,
+                          className: k.EL,
                           showUpsell: Q && !Z,
                           text: U.intl.format(U.t.TmfgI2, { onClick: () => (0, C.K)({ analyticsSource: K }) }),
                           textVariant: "heading-md/medium",
-                          button: (0, i.jsx)(c.Button, {
-                              variant: J ? "overlay-primary" : "expressive",
-                              onClick: () => {
-                                  P.default.track(G.HAw.TRY_IT_OUT_PRESET_CLICKED, {
-                                      cta_variant: "floating_action_button",
-                                  }),
-                                      $?.current?.scrollIntoView({ behavior: "smooth" });
-                              },
-                              text: U.intl.string(U.t.uw9zI7),
-                              icon: c.tvc,
-                          }),
+                          useUpdatedStyling: J,
+                          button: J
+                              ? (0, i.jsx)("div", {
+                                    className: k.Xl,
+                                    children: (0, i.jsx)(c.Button, {
+                                        variant: "overlay-primary",
+                                        onClick: () => {
+                                            P.default.track(G.HAw.TRY_IT_OUT_PRESET_CLICKED, {
+                                                cta_variant: "floating_action_button",
+                                            }),
+                                                $?.current?.scrollIntoView({ behavior: "smooth" });
+                                        },
+                                        text: U.intl.string(U.t.uw9zI7),
+                                        icon: c.tvc,
+                                    }),
+                                })
+                              : (0, i.jsx)(c.Button, {
+                                    variant: "expressive",
+                                    onClick: () => {
+                                        P.default.track(G.HAw.TRY_IT_OUT_PRESET_CLICKED, {
+                                            cta_variant: "floating_action_button",
+                                        }),
+                                            $?.current?.scrollIntoView({ behavior: "smooth" });
+                                    },
+                                    text: U.intl.string(U.t.uw9zI7),
+                                    icon: c.tvc,
+                                }),
                       }),
               ],
           });

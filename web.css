@@ -33061,6 +33061,11 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     padding: 0
 }
 
+.upsellContainer__0b69f.updatedStyling__0b69f {
+    background: var(--background-surface-high);
+    border: 1px solid var(--border-muted)
+}
+
 .expressiveGradient__0b69f {
     align-items: center;
     display: flex;

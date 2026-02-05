@@ -2,6 +2,7 @@
 e.exports = {
     Zj: "upsellContainer__0b69f",
     Me: "withGradientBg__0b69f",
+    ww: "updatedStyling__0b69f",
     nC: "expressiveGradient__0b69f",
     Ay: "radialMask__0b69f",
     u8: "hasPreviewSound__0b69f",

@@ -26,40 +26,42 @@ function m(e) {
             position: I = "floating",
             useGradientBg: T = !1,
             hoveredNitroLockedSound: y,
+            useUpdatedStyling: S = !1,
         } = e,
-        S = c.r.useConfig({ location: "PremiumFloatingPickerUpsell" }).enabled,
-        v = (0, o.zhh)({
+        v = c.r.useConfig({ location: "PremiumFloatingPickerUpsell" }).enabled,
+        C = (0, o.zhh)({
             transform: t ? "translateY(0%)" : "translateY(120%)",
             opacity: +!!t,
             config: { tension: 120, friction: 14 },
         }),
-        C = S && null != y,
-        b = y?.emojiId != null || y?.emojiName != null,
-        N = n;
-    if (C) {
+        b = v && null != y,
+        N = y?.emojiId != null || y?.emojiName != null,
+        R = n;
+    if (b) {
         let e = d.A.getGuild(y.guildId);
-        N = p.intl.format(p.t.eku049, { serverName: e?.name ?? p.intl.string(p.t.DmIUGK) });
+        R = p.intl.format(p.t.eku049, { serverName: e?.name ?? p.intl.string(p.t.DmIUGK) });
     }
     return (0, r.jsx)(s.animated.div, {
-        style: { ...v },
+        style: { ...C },
         className: a()(
             h.Zj,
             T && h.Me,
+            S && h.ww,
             { [h.tO]: "floating" === I, [h.Kx]: "inline" === I, [h.ik]: "bottom" === I },
             E,
         ),
         children: (0, r.jsxs)(g, {
-            hasPreviewSound: C,
+            hasPreviewSound: b,
             useGradientBg: T,
             children: [
-                C &&
+                b &&
                     (0, r.jsxs)("div", {
                         className: h.Ed,
                         children: [
                             (0, r.jsxs)("div", {
                                 className: h.vg,
                                 children: [
-                                    b && (0, r.jsx)(l.A, { emojiId: y.emojiId, emojiName: y.emojiName }),
+                                    N && (0, r.jsx)(l.A, { emojiId: y.emojiId, emojiName: y.emojiName }),
                                     (0, r.jsx)(o.Text, {
                                         variant: "text-sm/semibold",
                                         color: "text-strong",
@@ -71,11 +73,11 @@ function m(e) {
                                 variant: "text-xs/normal",
                                 color: "text-muted",
                                 className: h.Fr,
-                                children: N ?? n,
+                                children: R ?? n,
                             }),
                         ],
                     }),
-                !C &&
+                !b &&
                     (0, r.jsx)(o.Text, {
                         variant: i ?? "text-sm/medium",
                         color: "text-strong",
