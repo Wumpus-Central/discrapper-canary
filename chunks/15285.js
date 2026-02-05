@@ -168,9 +168,8 @@ function eS() {
     for (let t of Z) t.pid in eu || ((eu[t.pid] = t), e.push(t));
     let t = [];
     for (let e of Object.values(eu)) Z.some((t) => t.pid === e.pid) || (t.push(e), delete eu[e.pid]);
-    (e.length > 0 || t.length > 0) &&
-        (G.info("Running Games Changed", { runningGames: Z, added: e, removed: t, previousGames: eu }),
-        c.h.dispatch({ type: "RUNNING_GAMES_CHANGE", games: Z, added: e, removed: t }));
+    G.info("Running Games Changed", { runningGames: Z, added: e, removed: t, previousGames: eu }),
+        c.h.dispatch({ type: "RUNNING_GAMES_CHANGE", games: Z, added: e, removed: t });
 }
 function ev() {
     J = Q.length > 0 ? Q[0] : null;
@@ -178,9 +177,8 @@ function ev() {
     for (let t of Q) t.pid in ec || ((ec[t.pid] = t), e.push(t));
     let t = [];
     for (let e of Object.values(ec)) Q.some((t) => t.pid === e.pid) || (t.push(e), delete ec[e.pid]);
-    (e.length > 0 || t.length > 0) &&
-        (G.info("Running Non-Games Changed", { runningNonGames: Q, added: e, removed: t, previousNonGames: ec }),
-        c.h.dispatch({ type: "RUNNING_NON_GAMES_CHANGE", nonGames: Q, added: e, removed: t }));
+    G.info("Running Non-Games Changed", { runningNonGames: Q, added: e, removed: t, previousNonGames: ec }),
+        c.h.dispatch({ type: "RUNNING_NON_GAMES_CHANGE", nonGames: Q, added: e, removed: t });
 }
 function eC(e) {
     if ((0, y.n1)(e)) return `${e.exePath}:${e.id}`;
