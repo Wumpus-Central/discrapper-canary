@@ -6,13 +6,13 @@ var i = n(627968),
     l = n.n(r),
     a = n(821418),
     o = n(665260),
-    c = n(80703),
-    d = n(311907),
+    d = n(80703),
+    c = n(311907),
     u = n(362474),
     h = n(397927),
     _ = n(73153),
-    p = n(846293),
-    g = n(198982),
+    g = n(846293),
+    p = n(198982),
     m = n(17841),
     f = n(829691),
     A = n(394681),
@@ -43,11 +43,11 @@ var M = n(172799),
     V = n(396574),
     W = n(985018),
     H = n(473169);
-d.Ay.initialize();
+c.Ay.initialize();
 let K = "register",
     z = "login";
 async function Q(e) {
-    let { invite: t } = await p.Ay.resolveInvite(e, G.S3d.INVITE);
+    let { invite: t } = await g.Ay.resolveInvite(e, G.S3d.INVITE);
     null != t && (0, f.v)(t);
 }
 class q extends s.PureComponent {
@@ -78,10 +78,16 @@ class q extends s.PureComponent {
         else if (this.getMode() === z && i !== e.authenticated && i) {
             let e = T.default.getFingerprint();
             if (null != e) {
-                let t = (0, c.d)(e);
-                this.track(G.HAw.INVITE_LOGIN_SUCCESSFUL, { prev_user_id: t });
+                let n = (0, d.d)(e);
+                L.default.track(G.HAw.INVITE_LOGIN_SUCCESSFUL, {
+                    invite_code: (0, S.m0)(this.getInviteKey()),
+                    guild_id: t.guild?.id,
+                    channel_id: t.channel?.id,
+                    inviter_id: t.inviter?.id,
+                    prev_user_id: n,
+                });
             }
-            p.Ay.acceptInvite({
+            g.Ay.acceptInvite({
                 inviteKey: r,
                 context: this.getAcceptInviteContext(G.S3d.INVITE),
                 skipOnboarding: !0,
@@ -91,7 +97,11 @@ class q extends s.PureComponent {
         if (
             (n !== e.nativeAppState &&
                 n === G.fAW.OPEN &&
-                this.track(G.HAw.INVITE_APP_INVOKED, {
+                L.default.track(G.HAw.INVITE_APP_INVOKED, {
+                    invite_code: (0, S.m0)(this.getInviteKey()),
+                    guild_id: t.guild?.id,
+                    channel_id: t.channel?.id,
+                    inviter_id: t.inviter?.id,
                     user_is_member: null != t.guild && null != R.A.getGuild(t.guild.id),
                     size_total: t.approximate_member_count,
                     invite_type: null != t.type ? M.Xd[t.type] : void 0,
@@ -110,10 +120,10 @@ class q extends s.PureComponent {
                             ? G.BVt.GUILD_MEMBER_VERIFICATION(t.guild.id)
                             : G.BVt.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code),
                     );
-                } else p.Ay.transitionToInvite(t, s);
+                } else g.Ay.transitionToInvite(t, s);
         }
     }
-    getAcceptInviteContext = (e) => p.Ay.getInviteContext(e, this.props.invite);
+    getAcceptInviteContext = (e) => g.Ay.getInviteContext(e, this.props.invite);
     getInviteKey() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.props;
         return e.inviteKey;
@@ -127,31 +137,20 @@ class q extends s.PureComponent {
         (null != t.channel || e?.channel != null) &&
             (t.guild?.id != null
                 ? n(G.BVt.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code))
-                : p.Ay.transitionToInvite(e ?? t, n));
+                : g.Ay.transitionToInvite(e ?? t, n));
     };
-    track(e, t) {
-        let { invite: n } = this.props,
-            i = (0, S.m0)(this.getInviteKey());
-        L.default.track(e, {
-            guild_id: null != n.guild ? n.guild.id : null,
-            channel_id: null != n.channel ? n.channel.id : null,
-            inviter_id: null != n.inviter ? n.inviter.id : null,
-            invite_code: i,
-            ...t,
-        });
-    }
     handleAccept = () => {
         this.setState({ error: null });
         let e = this.getInviteKey();
-        p.Ay.acceptInvite({
+        g.Ay.acceptInvite({
             inviteKey: e,
             context: this.getAcceptInviteContext(G.S3d.INVITE),
             skipOnboarding: !0,
             callback: (t) => {
-                (0, f.v)(t), null != t.channel && p.Ay.openApp(e, t.channel.id);
+                (0, f.v)(t), null != t.channel && g.Ay.openApp(e, t.channel.id);
             },
         }).catch((e) => {
-            if (e instanceof g.Wl || e instanceof g.LG) {
+            if (e instanceof p.Wl || e instanceof p.LG) {
                 let t = (0, k.s)(e.code);
                 this.setState({ error: { code: e.code, message: t } });
             } else this.setState({ error: { code: e.code, message: W.intl.string(W.t.dDZRdy) } });
@@ -253,7 +252,7 @@ class q extends s.PureComponent {
                                                     invite_code: t.code,
                                                     guild_id: t.guild?.id,
                                                 }),
-                                                    p.Ay.openNativeAppModal(t.code);
+                                                    g.Ay.openNativeAppModal(t.code);
                                             },
                                             variant: "primary",
                                             fullWidth: !0,
@@ -330,13 +329,20 @@ class q extends s.PureComponent {
                 return this.renderSpinner(W.intl.string(W.t["Z+hCVU"]));
             case G.elq.RESOLVED:
                 if (n && (0, o.Lt)(e.flags ?? 0, a.Q.IS_GUEST_INVITE))
-                    return p.Ay.openApp(e.code), u.u.set(N.B, e.code), this.renderAppOpened(() => s(G.BVt.APP));
+                    return g.Ay.openApp(e.code), u.u.set(N.B, e.code), this.renderAppOpened(() => s(G.BVt.APP));
                 if (n || !V.VP) return this.renderAuthenticatedOrDownload();
                 if (this.getMode() === z) return (0, i.jsx)(P.A, { invite: e, transitionTo: s, location: r });
                 else
                     return (0, i.jsx)(U.A, {
                         invite: e,
-                        onLoginStart: () => this.track(G.HAw.INVITE_LOGIN),
+                        onLoginStart: () => {
+                            L.default.track(G.HAw.INVITE_LOGIN, {
+                                invite_code: e.code,
+                                guild_id: e.guild?.id,
+                                channel_id: e.channel?.id,
+                                inviter_id: e.inviter?.id,
+                            });
+                        },
                         location: r,
                         transitionTo: s,
                     });
@@ -354,7 +360,7 @@ class q extends s.PureComponent {
         }
     }
 }
-let Y = d.Ay.connectStores([O.A, b.A, T.default, I.A, m.A], (e) => {
+let Y = c.Ay.connectStores([O.A, b.A, T.default, I.A, m.A], (e) => {
     let { inviteKey: t } = e;
     return {
         invite: O.A.getInvite(t) ?? {},
