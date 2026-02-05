@@ -27,6 +27,7 @@ var s = (function (e) {
             (e.BOT_DATA_ACCESS = "BOT_DATA_ACCESS"),
             (e.WIDGETS = "WIDGETS"),
             (e.WISHLIST = "WISHLIST"),
+            (e.MAIN = "MAIN"),
             e
         );
     })({}),
