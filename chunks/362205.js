@@ -60,25 +60,25 @@ function h(e) {
                     let e = l.current !== t,
                         a = () => {
                             if (null == n.current || null == r.current || null == o.current) return;
-                            let [a, s] = [n.current.getBoundingClientRect(), o.current.getBoundingClientRect()],
-                                _ = a.width / 2;
-                            c({
-                                y: (s.y - a.y) / _,
-                                height: s.height / _,
-                                immediate: b.A.useReducedMotion || i.current || e,
-                            }),
+                            let [a, _] = [n.current.getBoundingClientRect(), o.current.getBoundingClientRect()],
+                                u = a.width / 2,
+                                d = (_.y - a.y) / u,
+                                m = _.height / u;
+                            i.current || e || b.A.useReducedMotion
+                                ? (s.y.set(d), s.height.set(m))
+                                : c({ y: d, height: m }),
                                 (i.current = !1),
                                 (l.current = t);
                         },
-                        s = null;
+                        _ = null;
                     return (
                         e
-                            ? (s = requestAnimationFrame(() => {
-                                  (s = null), a();
+                            ? (_ = requestAnimationFrame(() => {
+                                  (_ = null), a();
                               }))
                             : a(),
                         () => {
-                            null != s && cancelAnimationFrame(s);
+                            null != _ && cancelAnimationFrame(_);
                         }
                     );
                 }, [e, c, s.y, s.height, t]),
