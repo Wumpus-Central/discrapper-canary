@@ -451,7 +451,7 @@ class T {
             this.props.channel.type !== C.rbe.GUILD_VOICE &&
             this.props.channel.type !== C.rbe.GUILD_STAGE_VOICE
         ) {
-            let e = (0, g.i)(this.props.channel, this.props.messages);
+            let e = (0, g.A)({ channel: this.props.channel, messages: this.props.messages, track: !0 });
             null != e ? this.scrollToMessage({ jumpTargetId: e, animate: !1 }) : this.scrollToNewMessages();
         } else
             null != e
