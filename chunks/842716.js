@@ -1,62 +1,54 @@
-"use strict";
-n.d(t, { A: () => g }), n(667532);
-var r = n(311907),
-    i = n(506774),
-    a = n(73153),
-    s = n(768570);
-let o = s.nC,
-    l = "tokenized",
-    u = !1,
-    c = {};
-function d(e) {
-    let { id: t, query: n } = e;
-    if ("string" != typeof n || "" === (n = n.trim())) return;
-    let r = (c[t] = c[t] ?? []),
-        a = r.indexOf(n);
-    -1 !== a
-        ? (r.splice(a, 1), r.unshift(n))
-        : null != r[0] && "" !== r[0] && n.startsWith(r[0])
-          ? (r[0] = n)
-          : a < 0 && r.unshift(n),
-        r.length > 5 && r.splice(5, r.length),
-        i.w.set(s.nC, { history: c });
-}
-function _(e) {
-    let { id: t } = e;
-    delete c[t], i.w.set(s.nC, { history: c });
-}
-function f(e) {
-    let { id: t, query: n } = e;
-    null != c[t] && ((c[t] = c[t].filter((e) => e !== n)), i.w.set(s.nC, { history: c }));
-}
-function p(e) {
-    return (
-        Object.keys(e).forEach((t) => {
-            Array.isArray(e[t]) && (e[t] = e[t].filter((e) => "string" == typeof e && e.trim())),
-                (Array.isArray(e[t]) && 0 !== e[t].length) || delete e[t];
-        }),
-        e
-    );
-}
-function h() {
-    i.w.remove(s.nC), (c = {});
-}
-class m extends r.Ay.Store {
-    static displayName = s.yQ;
+r.d(t, { A: () => d }), r(667532);
+var n = r(311907),
+    s = r(506774),
+    l = r(73153),
+    a = r(768570);
+let i = a.nC,
+    o = !1,
+    u = {};
+class c extends n.Ay.Store {
+    static displayName = a.yQ;
     initialize() {
-        let e = i.w.get(o);
-        e?.history != null && (c = p(e.history)), (u = !!i.w.get(l));
+        var e;
+        let t = s.w.get(i);
+        t?.history != null &&
+            (Object.keys((e = t.history)).forEach((t) => {
+                Array.isArray(e[t]) && (e[t] = e[t].filter((e) => "string" == typeof e && e.trim())),
+                    (Array.isArray(e[t]) && 0 !== e[t].length) || delete e[t];
+            }),
+            (u = e)),
+            (o = !!s.w.get("tokenized"));
     }
     isTokenized() {
-        return u;
+        return o;
     }
     getHistory(e) {
-        return c[e];
+        return u[e];
     }
 }
-let g = new m(a.h, {
-    SEARCH_HISTORY_WEB_CLEAR_ITEMS: _,
-    SEARCH_HISTORY_WEB_REMOVE_ITEM: f,
-    SEARCH_HISTORY_WEB_ADD_ITEM: d,
-    LOGOUT: h,
+let d = new c(l.h, {
+    SEARCH_HISTORY_WEB_CLEAR_ITEMS: function (e) {
+        let { id: t } = e;
+        delete u[t], s.w.set(a.nC, { history: u });
+    },
+    SEARCH_HISTORY_WEB_REMOVE_ITEM: function (e) {
+        let { id: t, query: r } = e;
+        null != u[t] && ((u[t] = u[t].filter((e) => e !== r)), s.w.set(a.nC, { history: u }));
+    },
+    SEARCH_HISTORY_WEB_ADD_ITEM: function (e) {
+        let { id: t, query: r } = e;
+        if ("string" != typeof r || "" === (r = r.trim())) return;
+        let n = (u[t] = u[t] ?? []),
+            l = n.indexOf(r);
+        -1 !== l
+            ? (n.splice(l, 1), n.unshift(r))
+            : null != n[0] && "" !== n[0] && r.startsWith(n[0])
+              ? (n[0] = r)
+              : l < 0 && n.unshift(r),
+            n.length > 5 && n.splice(5, n.length),
+            s.w.set(a.nC, { history: u });
+    },
+    LOGOUT: function () {
+        s.w.remove(a.nC), (u = {});
+    },
 });

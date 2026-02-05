@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => ee }), n(321073), n(667532);
+n.d(t, { A: () => Z }), n(321073), n(667532);
 var r = n(33851),
     i = n.n(r),
     a = n(311907),
@@ -84,9 +84,9 @@ function P(e, t) {
     if (null == i || null == a || !x(a.mode)) return;
     i.results = M(n, a.mode.type === A.o$q.FILTER ? v : C);
     let { query: s, mode: o, tokens: l, cursorScope: u } = a,
-        c = Y(e, o, l),
+        c = H(e, o, l),
         d = D({ searchContext: e, query: s, mode: o, tokens: l, cursorScope: u, autocompletes: c });
-    y.set(r, d), J.emitChange();
+    y.set(r, d), q.emitChange();
 }
 function M(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : v,
@@ -105,7 +105,7 @@ function k(e) {
 }
 function U(e) {
     let { searchContext: t } = e;
-    k(t), q(t);
+    k(t), W(t);
 }
 function G(e) {
     let t,
@@ -127,10 +127,10 @@ function G(e) {
                 e.context.setQuery({ query: a, filters: { guild: r ?? void 0 }, boosters: (0, p.X3)(I.rD.USER) }),
                 (t = l?.autocompletes ?? []),
                 (u = !1);
-        } else e.context.clearQuery(), (t = Y(n, s, r));
+        } else e.context.clearQuery(), (t = H(n, s, r));
     } else {
         let e = S.get(o);
-        null != e && (e.context.clearQuery(), (e.results = [])), (t = Y(n, s, r));
+        null != e && (e.context.clearQuery(), (e.results = [])), (t = H(n, s, r));
     }
     let c = D({ searchContext: n, query: a, mode: s, tokens: r, cursorScope: i, autocompletes: t });
     return y.set(o, c), u;
@@ -187,26 +187,7 @@ function j(e, t) {
     let s = [r];
     return null != i && s.push(i), null != a && s.push(a), { group: A.x2k.DATES, results: s };
 }
-function H(e) {
-    if (_.A.hidePersonalInformation) return null;
-    {
-        let t = n(842716).A,
-            r = (0, g.Jl)(e);
-        if (null == r) return null;
-        let i = t.getHistory(r);
-        if (null == i) return null;
-        let a = [],
-            s = new Set();
-        return (
-            i.forEach((t) => {
-                let n = e.type === A.I4_.CHANNEL ? (0, g.EH)(t) : t;
-                "" === n || s.has(n) || (s.add(n), a.push({ text: n }));
-            }),
-            { group: A.x2k.HISTORY, results: a }
-        );
-    }
-}
-function Y(e, t, n) {
+function H(e, t, n) {
     switch (t.type) {
         case A.o$q.FILTER:
             let r = V({ filter: t.filter, currentToken: t.token, searchContext: e, maxResults: v, tokens: n });
@@ -215,50 +196,27 @@ function Y(e, t, n) {
             return B(t, e, n);
         case A.o$q.EMPTY:
             let i = [];
-            i.push(F(t.token, e));
-            {
-                let t = H(e);
-                null != t && i.push(t);
-            }
-            return i;
+            return i.push(F(t.token, e)), i;
     }
 }
-function W() {
+function Y() {
     (0, g.Pe)();
 }
-function K(e) {
-    let t = y.get(e);
-    if (null == t) return;
-    let { searchContext: n, query: r, mode: i, tokens: a, cursorScope: s, autocompletes: o } = t,
-        l = [];
-    o.forEach((e) => {
-        e.group !== A.x2k.HISTORY && l.push(e);
-    });
-    let u = D({ searchContext: n, query: r, mode: i, tokens: a, cursorScope: s, autocompletes: l });
-    y.set(e, u);
-}
-function z(e) {
-    let { autocompleteStateId: t } = e;
-    K(t);
-}
-function $() {
-    for (let e of y.keys()) K(e);
-}
-function q(e) {
+function W(e) {
     let t = (0, g.bS)(e),
         n = y.get(t);
     if (null == n) return !1;
     let { query: r, mode: i, tokens: a, cursorScope: s } = n,
-        o = D({ searchContext: e, query: r, mode: i, tokens: a, cursorScope: s, autocompletes: Y(e, i, a) });
+        o = D({ searchContext: e, query: r, mode: i, tokens: a, cursorScope: s, autocompletes: H(e, i, a) });
     y.set(t, o);
 }
-function Z() {
-    return null != T && q(T);
+function K() {
+    return null != T && W(T);
 }
-function Q() {
-    return null != T && q(T);
+function z() {
+    return null != T && W(T);
 }
-class X extends a.Ay.Store {
+class $ extends a.Ay.Store {
     static displayName = "SearchAutocompleteStore";
     initialize() {
         this.waitFor(l.A, u.Ay, c.A, d.A, _.A, f.default);
@@ -271,15 +229,13 @@ class X extends a.Ay.Store {
         return T;
     }
 }
-let J = new X(s.h, {
+let q = new $(s.h, {
         SEARCH_AUTOCOMPLETE_INITIALIZE: U,
         SEARCH_AUTOCOMPLETE_QUERY_UPDATE: G,
         SEARCH_EDITOR_STATE_CLEAR: L,
-        CHANNEL_CREATE: W,
-        CHANNEL_DELETE: W,
-        STREAMER_MODE_UPDATE: Z,
-        CHANNEL_SELECT: Q,
-        LOGOUT: $,
-        SEARCH_HISTORY_WEB_CLEAR_ITEMS: z,
+        CHANNEL_CREATE: Y,
+        CHANNEL_DELETE: Y,
+        STREAMER_MODE_UPDATE: K,
+        CHANNEL_SELECT: z,
     }),
-    ee = J;
+    Z = q;
