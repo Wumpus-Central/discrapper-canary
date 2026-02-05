@@ -31,7 +31,7 @@ let s = (e) => {
                 variant: t ? "secondary" : "active",
                 onClick: () =>
                     (0, r.mMO)(async () => {
-                        let { default: e } = await Promise.all([n.e("98363"), n.e("4543")]).then(n.bind(n, 780086));
+                        let { default: e } = await n.e("98363").then(n.bind(n, 780086));
                         return (t) => (0, i.jsx)(e, { ...t });
                     }),
                 text: t ? a.intl.string(a.t.IyjHD9) : a.intl.string(a.t["KU/aN4"]),

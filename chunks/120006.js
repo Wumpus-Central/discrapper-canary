@@ -1,71 +1,62 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => A });
 var i = n(627968),
     r = n(64700),
     a = n(397927),
     l = n(976860),
-    s = n(345942),
-    o = n(71393),
-    d = n(954571),
-    c = n(486020),
-    u = n(396415),
-    A = n(652215),
-    h = n(985018),
-    _ = n(605540);
-function m(e, t, n) {
-    return (0, i.jsxs)(
-        "button",
-        {
-            className: _.kL,
-            onClick: n,
-            children: [
-                "function" == typeof e
-                    ? (0, i.jsx)("div", {
-                          className: _.Kk,
-                          children: (0, i.jsx)(e, { className: _.__invalid_iconInner, color: a.LU0.colors.WHITE.css }),
-                      })
-                    : (0, i.jsx)("img", { className: _.Kk, alt: "", src: e }),
-                (0, i.jsx)(a.Text, { className: _.Qq, variant: "text-md/medium", children: t }),
-                (0, i.jsx)(u.A, { className: _.UE }),
-            ],
-        },
-        t,
-    );
-}
-function p() {
-    let e = o.A.getGuildsArray().filter((e) => e.features.has(A.GuildFeatures.HUB));
+    s = n(954571),
+    o = n(396415),
+    d = n(652215),
+    c = n(985018),
+    u = n(605540);
+function A() {
+    var e, t, n;
     return (0, i.jsxs)(r.Fragment, {
         children: [
             (0, i.jsxs)("header", {
-                className: _.wx,
+                className: u.wx,
                 children: [
                     (0, i.jsx)(a.Heading, {
                         variant: "heading-lg/semibold",
                         color: "text-strong",
-                        children: h.intl.string(h.t.IuMx1Y),
+                        children: c.intl.string(c.t.IuMx1Y),
                     }),
                     (0, i.jsx)(a.Text, {
                         tag: "div",
                         variant: "heading-md/normal",
-                        children: h.intl.string(h.t.DwevPs),
+                        children: c.intl.string(c.t.DwevPs),
                     }),
                 ],
             }),
-            (0, i.jsxs)("div", {
-                className: _.Vg,
-                children: [
-                    e.map((e) =>
-                        m(c.Ay.getGuildIconURL({ id: e.id, icon: e.icon, size: 240 }), e.name, () => {
-                            var t;
-                            (t = e.id),
-                                d.default.track(A.HAw.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, { guild_id: t }),
-                                (0, s.u)(t);
-                        }),
-                    ),
-                    m(a.QGJ, h.intl.string(h.t.AhKnz4), () => {
-                        d.default.track(A.HAw.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED),
-                            (0, l.pX)(A.BVt.GUILD_DISCOVERY);
+            (0, i.jsx)("div", {
+                className: u.Vg,
+                children:
+                    ((e = a.QGJ),
+                    (t = c.intl.string(c.t.AhKnz4)),
+                    (n = () => {
+                        s.default.track(d.HAw.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED),
+                            (0, l.pX)(d.BVt.GUILD_DISCOVERY);
                     }),
-                ],
+                    (0, i.jsxs)(
+                        "button",
+                        {
+                            className: u.kL,
+                            onClick: n,
+                            children: [
+                                "function" == typeof e
+                                    ? (0, i.jsx)("div", {
+                                          className: u.Kk,
+                                          children: (0, i.jsx)(e, {
+                                              className: u.__invalid_iconInner,
+                                              color: a.LU0.colors.WHITE.css,
+                                          }),
+                                      })
+                                    : (0, i.jsx)("img", { className: u.Kk, alt: "", src: e }),
+                                (0, i.jsx)(a.Text, { className: u.Qq, variant: "text-md/medium", children: t }),
+                                (0, i.jsx)(o.A, { className: u.UE }),
+                            ],
+                        },
+                        t,
+                    )),
             }),
         ],
     });

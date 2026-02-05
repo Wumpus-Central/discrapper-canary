@@ -32,13 +32,13 @@ function I(e) {
         } = e,
         R = j === y.author.id,
         { channel: L, approximate_member_count: M, approximate_presence_count: O } = b,
-        P = b.state === x.elq.ACCEPTING,
-        D = null != L ? (0, p.OY)(L) : null,
+        D = b.state === x.elq.ACCEPTING,
+        P = null != L ? (0, p.OY)(L) : null,
         k = null != S,
-        U = null != D,
-        w = null != D && D.isGuildStageVoice(),
+        U = null != P,
+        w = null != P && P.isGuildStageVoice(),
         G = (0, r.Lt)(b.flags ?? 0, a.Q.IS_GUEST_INVITE),
-        B = D?.isGuildVoiceOrThread() ?? !1,
+        B = P?.isGuildVoiceOrThread() ?? !1,
         F = S?.features.has(x.GuildFeatures.HUB) ?? !1,
         H = S?.id,
         { analyticsLocations: V } = (0, u.Ay)(c.A.INVITE_EMBED),
@@ -83,7 +83,7 @@ function I(e) {
                 children: (0, i.jsx)(o.mir, { size: "md", color: "currentColor", className: C.G }),
             })),
         B
-            ? ((I = (0, i.jsx)(h.A.Channel, { channel: D })),
+            ? ((I = (0, i.jsx)(h.A.Channel, { channel: P })),
               (t = (0, i.jsxs)("span", {
                   className: C.FA,
                   children: [
@@ -96,7 +96,7 @@ function I(e) {
               })))
             : (null != M && M >= 5) || (null != O && O > 0)
               ? (t = (0, i.jsx)(h.A.Data, { members: M, membersOnline: O }))
-              : U && (t = (0, i.jsx)(h.A.Channel, { channel: D, guild: S })),
+              : U && (t = (0, i.jsx)(h.A.Channel, { channel: P, guild: S })),
         (0, i.jsxs)(h.A, {
             children: [
                 (0, i.jsx)(h.A.GuildSplash, { guild: S }),
@@ -114,7 +114,7 @@ function I(e) {
                             className: C.UD,
                             children: (0, i.jsx)(o.Button, {
                                 onClick: Q,
-                                loading: P,
+                                loading: D,
                                 variant: "active",
                                 fullWidth: B,
                                 text: B
@@ -138,9 +138,7 @@ function I(e) {
                                 children: E.intl.format(E.t["/o1IfA"], {
                                     onClick: () =>
                                         (0, o.mMO)(async () => {
-                                            let { default: e } = await Promise.all([n.e("98363"), n.e("13781")]).then(
-                                                n.bind(n, 780086),
-                                            );
+                                            let { default: e } = await n.e("98363").then(n.bind(n, 780086));
                                             return (t) => (0, i.jsx)(e, { ...t });
                                         }),
                                 }),
