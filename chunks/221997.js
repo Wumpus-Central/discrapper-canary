@@ -5,7 +5,7 @@ n(64700);
 var i = n(397927),
     a = n(261225),
     s = n(673277),
-    o = n(684109),
+    o = n(458306),
     l = n(304973);
 let u = {
     name: "FeaturedChip",
@@ -16,7 +16,7 @@ let u = {
                 (0, r.jsx)(i.Text, {
                     variant: "text-lg/semibold",
                     children:
-                        "Featured Chip will take up the full width of the parent, so it is best suited for Stack or Grid parents",
+                        "Featured Chip will take up the full width of the parent, so it is best suited for CmsStack or Grid parents",
                 }),
                 (0, r.jsx)(s.A, { children: (0, r.jsx)(l.A, { ...e }) }),
                 (0, r.jsxs)(s.A, {
@@ -38,7 +38,7 @@ let u = {
                 (0, r.jsxs)(s.A, {
                     children: [
                         (0, r.jsx)(i.Text, { variant: "text-lg/semibold", children: "Stack:" }),
-                        (0, r.jsxs)(o.A, {
+                        (0, r.jsxs)(o.Kp, {
                             direction: "horizontal",
                             children: [
                                 (0, r.jsx)(l.A, { ...e }),

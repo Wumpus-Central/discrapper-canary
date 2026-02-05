@@ -34,7 +34,7 @@ let l = (e) => e,
             },
             {
                 block: "Section",
-                verticalMargin: 32,
+                verticalMargin: 48,
                 padding: 0,
                 children: [
                     {
@@ -42,21 +42,64 @@ let l = (e) => e,
                         columns: 2,
                         children: [
                             {
-                                block: "ContainedHero",
-                                backgroundColor: "red",
-                                bannerSrc:
+                                block: "FeaturedCollection",
+                                backgroundImage:
                                     "https://cdn.discordapp.com/assets/content/cd657aa88cb5c636a97dd3a5d68debfb009515cdc1c541296c1ac4e3ad5fc63e",
                                 logoSrc:
                                     "https://cdn.discordapp.com/assets/content/272efe50874c7fc6e788078e6f8b5fdfc40a7de7358fe3672f1b5e3659047bda",
+                                supplementalImage:
+                                    "https://cdn.discordapp.com/assets/content/c73a78420e788a01f10ae7106a1b858e78fffd11e0e2eee6ece0acf192bc3bf3.png",
+                                href: "",
+                                ctaText: "Take Me There",
                             },
                             {
-                                block: "ContainedHero",
-                                backgroundColor: "red",
-                                bannerSrc:
+                                block: "FeaturedCollection",
+                                backgroundImage:
                                     "https://cdn.discordapp.com/assets/content/cd657aa88cb5c636a97dd3a5d68debfb009515cdc1c541296c1ac4e3ad5fc63e",
                                 logoSrc:
                                     "https://cdn.discordapp.com/assets/content/272efe50874c7fc6e788078e6f8b5fdfc40a7de7358fe3672f1b5e3659047bda",
+                                supplementalImage:
+                                    "https://cdn.discordapp.com/assets/content/c73a78420e788a01f10ae7106a1b858e78fffd11e0e2eee6ece0acf192bc3bf3.png",
+                                href: "",
+                                ctaText: "Take Me There",
                             },
+                        ],
+                    },
+                ],
+            },
+            {
+                block: "Section",
+                verticalMargin: 8,
+                padding: 0,
+                children: [
+                    {
+                        block: "Stack",
+                        direction: "horizontal",
+                        justify: "space-between",
+                        children: [
+                            { block: "Heading", content: "Discord Orb Exclusives", variant: "heading-lg/semibold" },
+                            {
+                                block: "Button",
+                                ctaText: "Shop All Discord Orb Exclusives",
+                                href: "",
+                                variant: "secondary",
+                            },
+                        ],
+                    },
+                ],
+            },
+            {
+                block: "Section",
+                verticalMargin: 8,
+                padding: 0,
+                children: [
+                    {
+                        block: "InteractiveHScroll",
+                        children: [
+                            { block: "ShopProductCard", skuId: l("1458472704079434020") },
+                            { block: "ShopProductCard", skuId: l("1458472704167379109") },
+                            { block: "ShopProductCard", skuId: l("1458472704192811088") },
+                            { block: "ShopProductCard", skuId: l("1458472704222171347") },
                         ],
                     },
                 ],
@@ -65,7 +108,7 @@ let l = (e) => e,
                 block: "Section",
                 verticalMargin: 32,
                 padding: 0,
-                children: [{ block: "Text", variant: "text-lg/semibold", content: "Buy from the shop" }],
+                children: [{ block: "Text", variant: "text-lg/semibold", content: "Find Your Style" }],
             },
             {
                 block: "Section",

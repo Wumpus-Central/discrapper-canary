@@ -10,7 +10,7 @@ var r = n(64700),
     c = n(673277),
     d = n(304973),
     _ = n(18769),
-    f = n(219561),
+    f = n(458306),
     p = n(244190);
 let h = {
         ContainedHero: a.A,
@@ -28,9 +28,10 @@ let h = {
         FeaturedCollection: _.A,
         FeaturedProduct: () => null,
         ShopProductCard: p.A,
+        Button: f.ar,
+        Heading: f.Oo,
         Stack: f.Kp,
         Text: f.t,
-        Heading: f.Oo,
     },
     m = (e) => {
         let { overrides: t } = e;

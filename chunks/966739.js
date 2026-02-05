@@ -5,7 +5,7 @@ n(64700);
 var i = n(397927),
     a = n(261225),
     s = n(673277),
-    o = n(684109),
+    o = n(458306),
     l = n(753825);
 let u = {
     name: "FeaturedProduct",
@@ -34,7 +34,7 @@ let u = {
                 (0, r.jsxs)(s.A, {
                     children: [
                         (0, r.jsx)(i.Text, { variant: "text-lg/semibold", children: "Stack:" }),
-                        (0, r.jsxs)(o.A, {
+                        (0, r.jsxs)(o.Kp, {
                             direction: "horizontal",
                             children: [
                                 (0, r.jsx)(l.A, { ...e }),
