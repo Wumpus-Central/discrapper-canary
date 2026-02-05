@@ -18,7 +18,7 @@ function h(e, t) {
     return [
         { resourceId: e, type: E.P.GUILD_EVENT },
         ...(e === g.ME
-            ? _.A.getPrivateChannelIds()
+            ? _.default.getPrivateChannelIds()
             : (0, l.A)(e, { withVoiceChannels: t, withCurrentVoiceChannel: !0 }).map((e) => e.id)),
     ];
 }

@@ -79,7 +79,7 @@ function k(e) {
     return !0;
 }
 function U(e) {
-    let t = f.A.getPrivateChannelIds(),
+    let t = f.default.getPrivateChannelIds(),
         n = 0;
     for (let r of t) {
         if (n >= R) return;
@@ -197,7 +197,7 @@ function ee(e) {
 class et extends r.Ay.Store {
     static displayName = "Overlay-v3-Text-Chat-Store";
     initialize() {
-        this.waitFor(E.A, o.A, l.A, s.A, u.A, f.A, c.Ay, d.A, _.Ay), G();
+        this.waitFor(E.A, o.A, l.A, s.A, u.A, f.default, c.Ay, d.A, _.Ay), G();
     }
     getSessionEntries(e) {
         return [null != e ? S.values(e) : S.values(), S.version];

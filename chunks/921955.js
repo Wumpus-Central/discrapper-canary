@@ -31,7 +31,7 @@ function I() {
 class N extends l.Ay.Store {
     static displayName = "ActivityInviteModalStore";
     initialize() {
-        this.waitFor(c.A, d.A, u.A, h.A, p.A, A.default);
+        this.waitFor(c.A, d.A, u.A, h.A, p.default, A.default);
     }
     getActivity() {
         return _;
@@ -55,7 +55,7 @@ let v = new N(a.h, {
                             (x = (
                                 "" === t.trim()
                                     ? ((n = []),
-                                      p.A.getPrivateChannelIds().forEach((e) => {
+                                      p.default.getPrivateChannelIds().forEach((e) => {
                                           let t = c.A.getChannel(e);
                                           if (null != t)
                                               if (t.type === g.rbe.DM) {

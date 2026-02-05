@@ -12,8 +12,8 @@ var l = n(627968),
     g = n(704554),
     I = n(594831),
     E = n(734057),
-    A = n(71393),
-    f = n(994500),
+    f = n(71393),
+    A = n(994500),
     m = n(287809),
     S = n(645959),
     p = n(256415),
@@ -48,19 +48,19 @@ let G = (0, s.throttle)(
         sortType: h.r.JARO_WINKLER,
         searchStringGenerator: (e) => {
             let { channel: t } = e,
-                n = [(0, d.m1)(t, m.default, f.A), t.name, t.id];
+                n = [(0, d.m1)(t, m.default, A.A), t.name, t.id];
             if (t.isDM()) {
                 let e = t.getRecipientId(),
                     l = m.default.getUser(e),
-                    i = f.A.getNickname(e);
+                    i = A.A.getNickname(e);
                 n.push(l?.username, l?.globalName, i);
             } else if (t.isMultiUserDM())
                 for (let e of t.recipients ?? []) {
                     let t = m.default.getUser(e),
-                        l = f.A.getNickname(e);
+                        l = A.A.getNickname(e);
                     n.push(t?.username, t?.globalName, l);
                 }
-            let l = null != t.guild_id ? (A.A.getGuild(t.guild_id)?.name ?? null) : null;
+            let l = null != t.guild_id ? (f.A.getGuild(t.guild_id)?.name ?? null) : null;
             return null != l && n.push(l), n.filter(N.Vq);
         },
         throttleMs: 100,
@@ -76,17 +76,17 @@ function L() {
         c = s.trim().toLowerCase(),
         h =
             ((e = (0, I.Dz)()),
-            (0, a.yK)([S.A, E.A], () => {
+            (0, a.yK)([S.default, E.A], () => {
                 let t = [];
-                for (let e of S.A.getPrivateChannelIds()) {
+                for (let e of S.default.getPrivateChannelIds()) {
                     let n = E.A.getChannel(e);
                     null != n && t.push({ channel: n, voiceStates: [] });
                 }
                 for (let n of e) t.push(n);
                 return t;
             }, [e])),
-        [A, f] = i.useState([]);
-    (0, g.RT)(s, h, f, b);
+        [f, A] = i.useState([]);
+    (0, g.RT)(s, h, A, b);
     let m = i.useRef(null),
         p = (0, o.A)("friends-widget-messages", m),
         [N, M] = (0, a.bG)([v.A], () => v.A.getFavoriteTargetIdsForTab(y.x.MESSAGES), [], T.D),
@@ -112,8 +112,8 @@ function L() {
                             kind: "SEARCH_RESULTS",
                             key: "SEARCH_RESULTS",
                             title: R.intl.string(D.default.HGimIS),
-                            channelIds: A.map((e) => e.channel.id),
-                            length: A.length,
+                            channelIds: f.map((e) => e.channel.id),
+                            length: f.length,
                         })
                       : (N.length > 0 &&
                             M > 0 &&
@@ -149,7 +149,7 @@ function L() {
                                 length: L.recentTextRows.length,
                             })),
                   e);
-        }, [c, N, L.activeNowRows, L.dmRows, L.recentTextRows, M, A, k]),
+        }, [c, N, L.activeNowRows, L.dmRows, L.recentTextRows, M, f, k]),
         P = i.useMemo(() => F.map((e) => e.length), [F]),
         j = (0, _.Dk)(() => {
             let e = new Set();
@@ -206,7 +206,7 @@ function L() {
                 let s = `${i.key}:${e.row}`;
                 switch (i.kind) {
                     case "SEARCH_RESULTS": {
-                        let i = A[e.row].channel;
+                        let i = f[e.row].channel;
                         if (null == i) return null;
                         return (0, l.jsx)(
                             C.V,
@@ -256,7 +256,7 @@ function L() {
                         return i.kind, null;
                 }
             },
-            [W, n, t, A],
+            [W, n, t, f],
         ),
         X = i.useCallback(() => 40, []),
         K = i.useCallback(() => 50, []),

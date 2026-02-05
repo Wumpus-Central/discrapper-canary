@@ -33,7 +33,7 @@ function p() {
         !(function (e) {
             var t, n;
             let { channelId: i, path: s, basePath: r } = o.A.getState(),
-                a = _.A.getPrivateChannelIds(),
+                a = _.default.getPrivateChannelIds(),
                 l = __OVERLAY__ ? a : [...h(), ...a],
                 c =
                     (null == i ? ((t = s ?? r), h().findIndex((e) => t.startsWith(e))) : null != i ? l.indexOf(i) : 0) +

@@ -21,7 +21,7 @@ var a = n(627968),
     A = n(701940),
     C = n(661251);
 function S() {
-    let e = (0, d.yK)([f.A], () => f.A.getSortedChannels()[1]),
+    let e = (0, d.yK)([f.default], () => f.default.getSortedChannels()[1]),
         [t, n] = s.useState(e.length > 0 ? e[0].channelId : void 0),
         { selectedChannel: i, options: l } = (0, d.cf)([p.A, _.default, g.A], () => ({
             selectedChannel: p.A.getChannel(t),

@@ -1,4 +1,4 @@
-n.d(t, { A: () => v, Y: () => f }), n(321073);
+n.d(t, { A: () => v, Y: () => A }), n(321073);
 var l,
     i = n(311907),
     s = n(713402),
@@ -12,8 +12,8 @@ var l,
     g = n(914853),
     I = n(956753),
     E = n(648427),
-    A = n(316541),
-    f = (((l = {}).ACTIVE_NOW = "ACTIVE_NOW"), (l.DMS = "DMS"), (l.RECENT_TEXT = "RECENT_TEXT"), l);
+    f = n(316541),
+    A = (((l = {}).ACTIVE_NOW = "ACTIVE_NOW"), (l.DMS = "DMS"), (l.RECENT_TEXT = "RECENT_TEXT"), l);
 let m = new s.J(
         function (e) {
             let t = [];
@@ -40,7 +40,7 @@ function T(e) {
         let n = t.isPrivate(),
             l = !n && (0, u.ke)(t.type);
         if (!n && !l) return null;
-        let i = A.A.hasActiveNowChannelId({ kind: A.u.Text, channelId: e }),
+        let i = f.A.hasActiveNowChannelId({ kind: f.u.Text, channelId: e }),
             s = l && (a.A.getChannelHistory().includes(e) || E.A.getTextChannelHistory().includes(e)),
             r = d.Ay.hasUnread(e) || d.Ay.getMentionCount(e) > 0,
             c = null != t.lastMessageId ? h.default.extractTimestamp(t.lastMessageId) : 0,
@@ -50,7 +50,7 @@ function T(e) {
                 if (i) {
                     let n;
                     return (
-                        (t = A.A.getScoreForChannelId(e) ?? 0),
+                        (t = f.A.getScoreForChannelId(e) ?? 0),
                         (n = Math.floor(Math.max(0, Math.min(0x2540be3ff, 1e6 * t)))),
                         `AN\0${String(0x2540be3ff - n).padStart(10, "0")}\0${e}`
                     );
@@ -71,7 +71,7 @@ function T(e) {
     return null == t ? m.delete(e) : m.set(e, t);
 }
 function _() {
-    let e = A.A.getActiveNowChannelIds({ kind: A.u.Text }),
+    let e = f.A.getActiveNowChannelIds({ kind: f.u.Text }),
         t = new Set(e),
         n = !1;
     for (let t of e) n = T(t) || n;
@@ -81,17 +81,17 @@ function _() {
 function y() {
     m.clear(), (p = new Set());
     let e = !1;
-    for (let t of c.A.getPrivateChannelIds()) e = T(t) || e;
+    for (let t of c.default.getPrivateChannelIds()) e = T(t) || e;
     for (let t of a.A.getChannelHistory()) e = T(t) || e;
     for (let t of E.A.getTextChannelHistory()) e = T(t) || e;
-    let t = A.A.getActiveNowChannelIds({ kind: A.u.Text });
+    let t = f.A.getActiveNowChannelIds({ kind: f.u.Text });
     for (let n of ((p = new Set(t)), t)) e = T(n) || e;
     return e;
 }
 class C extends i.Ay.Store {
     static displayName = "FriendsWidgetMessagesStore";
     initialize() {
-        this.waitFor(o.A, A.A, a.A, d.Ay, c.A, E.A), y();
+        this.waitFor(o.A, f.A, a.A, d.Ay, c.default, E.A), y();
     }
     getRows(e) {
         return [m.values(e), m.version];
@@ -129,7 +129,7 @@ let x = (e) => (0, I.v$)(e, "FriendsWidgetMessagesStore"),
                   }),
                   TYPING_START: x(function (e) {
                       var t = e.channelId;
-                      let n = new Set(A.A.getActiveNowChannelIds({ kind: A.u.Text })),
+                      let n = new Set(f.A.getActiveNowChannelIds({ kind: f.u.Text })),
                           l = !1;
                       for (let e of ((l = T(t) || l), n)) p.has(e) || (l = T(e) || l);
                       for (let e of p) n.has(e) || (l = T(e) || l);

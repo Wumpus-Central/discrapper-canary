@@ -232,8 +232,8 @@ let P = (e) => {
         h = l.Children.count(a),
         m = v.A.getMutablePrivateChannels(),
         _ = (0, N.uX)(m),
-        x = (0, d.yK)([R.A, b.A, T.A], () => {
-            let e = R.A.getPrivateChannelIds();
+        x = (0, d.yK)([R.default, b.A, T.A], () => {
+            let e = R.default.getPrivateChannelIds();
             return (0, N.eh)(e, [b.A, T.A]);
         });
     (0, I.P)(C._);

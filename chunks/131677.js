@@ -10,7 +10,7 @@ var i = n(311907),
 let u = [],
     h = new Set();
 function A() {
-    let e = c.A.getPrivateChannelIds().filter((e) => o.Ay.getMentionCount(e) > 0);
+    let e = c.default.getPrivateChannelIds().filter((e) => o.Ay.getMentionCount(e) > 0);
     return e.length > 20 && (e.length = 20), !(0, a.in)(e, u) && ((u = e), (h = new Set(e)), !0);
 }
 function g() {
@@ -24,7 +24,7 @@ function m(e) {
 class p extends i.Ay.Store {
     static displayName = "PrivateChannelReadStateStore";
     initialize() {
-        this.waitFor(c.A, r.A, d.A, o.Ay);
+        this.waitFor(c.default, r.A, d.A, o.Ay);
     }
     getUnreadPrivateChannelIds() {
         return u;
