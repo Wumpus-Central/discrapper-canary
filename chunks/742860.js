@@ -128,57 +128,57 @@ function J(e) {
     });
 }
 function X(e) {
-    let { isInteractable: t, containerRef: n, onAcceptQuest: i } = e,
-        { quest: o, onGameSheetOpen: c, onGameSheetClose: x, taskDetails: p } = s.useContext(G.T),
-        { expansionSpring: _ } = s.useContext(M.PW),
-        b = s.useRef(null),
-        C = (0, d.bG)([f.A], () => f.A.isEnrolling(o.id), [o]),
-        T = s.useMemo(() => (0, S.tW)(o, S.fY.QUEST_BAR_HERO), [o]),
-        y = (0, A.NA)({ quest: o }),
-        N = s.useMemo(() => (0, S.tW)(o, S.fY.HERO_IMAGE), [o]),
-        E = s.useMemo(() => (null == N ? {} : { backgroundImage: `url(${N.url})` }), [N]),
-        O = (0, h.Ay)(),
-        P = (0, u.Mw)(O),
-        L = j.t.useConfig({ location: K.rE.QUESTS_BAR }),
-        U = (0, A.mU)({
-            quest: o,
+    let { preferImageHeroAsset: t, isInteractable: n, containerRef: i, onAcceptQuest: o } = e,
+        { quest: c, onGameSheetOpen: x, onGameSheetClose: p, taskDetails: _ } = s.useContext(G.T),
+        { expansionSpring: b } = s.useContext(M.PW),
+        C = s.useRef(null),
+        T = (0, d.bG)([f.A], () => f.A.isEnrolling(c.id), [c]),
+        y = s.useMemo(() => (0, S.tW)(c, t ? S.fY.QUEST_BAR_HERO_IMAGE : S.fY.QUEST_BAR_HERO), [c, t]),
+        N = (0, A.NA)({ quest: c }),
+        E = s.useMemo(() => (0, S.tW)(c, S.fY.HERO_IMAGE), [c]),
+        O = s.useMemo(() => (null == E ? {} : { backgroundImage: `url(${E.url})` }), [E]),
+        P = (0, h.Ay)(),
+        L = (0, u.Mw)(P),
+        U = j.t.useConfig({ location: K.rE.QUESTS_BAR }),
+        B = (0, A.mU)({
+            quest: c,
             location: K.rE.QUESTS_BAR,
             questContent: v.uF.QUEST_BAR_V2,
-            taskDetails: p,
+            taskDetails: _,
             sourceQuestContent: v.uF.QUEST_BAR_V2,
-            popoutTargetElementRef: b,
-            onGameSheetOpened: c,
-            onGameSheetClosed: x,
+            popoutTargetElementRef: C,
+            onGameSheetOpened: x,
+            onGameSheetClosed: p,
             gameProfileSource: g.Ob.QuestBar,
         }),
-        B = (0, R.Pd)(o);
+        F = (0, R.Pd)(c);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)("div", {
-                ref: b,
+                ref: C,
                 children: (0, a.jsxs)("div", {
                     className: q.do,
-                    ref: n,
+                    ref: i,
                     children: [
                         (0, a.jsxs)("div", {
                             className: q.zH,
                             children: [
-                                (0, a.jsx)(J, { quest: o }),
+                                (0, a.jsx)(J, { quest: c }),
                                 (0, a.jsx)(m.Heading, {
                                     className: q.DD,
                                     color: "text-strong",
                                     variant: "heading-md/medium",
-                                    children: $.intl.format($.t.EQa7os, { questName: o.config.messages.questName }),
+                                    children: $.intl.format($.t.EQa7os, { questName: c.config.messages.questName }),
                                 }),
-                                (0, a.jsx)(m.Text, { className: q.h_, variant: "text-xs/normal", children: U }),
+                                (0, a.jsx)(m.Text, { className: q.h_, variant: "text-xs/normal", children: B }),
                             ],
                         }),
                         (0, a.jsx)("div", {
                             className: q.lO,
                             children:
-                                L.enabled && B === R.UA.UNENROLLED && L.enabledQuestStates.has(R.UA.UNENROLLED)
+                                U.enabled && F === R.UA.UNENROLLED && U.enabledQuestStates.has(R.UA.UNENROLLED)
                                     ? (0, a.jsx)(k.A, {
-                                          quest: o,
+                                          quest: c,
                                           surface: R.V3.QUEST_BAR_FOOTER,
                                           size: "sm",
                                           analyticsCtxQuestContent: v.uF.QUEST_BAR_V2,
@@ -186,40 +186,40 @@ function X(e) {
                                       })
                                     : (0, a.jsx)(m.Button, {
                                           variant: "primary",
-                                          onClick: t ? i : void 0,
-                                          loading: C,
-                                          text: y,
+                                          onClick: n ? o : void 0,
+                                          loading: T,
+                                          text: N,
                                           size: "sm",
-                                          icon: (0, D.Oz)(o),
+                                          icon: (0, D.Oz)(c),
                                           fullWidth: !0,
                                       }),
                         }),
                     ],
                 }),
             }),
-            null != N &&
+            null != E &&
                 (0, a.jsx)(r.animated.div, {
                     className: q.AK,
-                    style: { opacity: (0, w.a)(_.to([0, 1], [1, 0])) },
-                    children: (0, a.jsx)("div", { className: l()(q.LC, q.Ge), style: E }),
+                    style: { opacity: (0, w.a)(b.to([0, 1], [1, 0])) },
+                    children: (0, a.jsx)("div", { className: l()(q.LC, q.Ge), style: O }),
                 }),
             (0, a.jsxs)(r.animated.div, {
                 className: q.IC,
                 style: {
-                    backdropFilter: (0, w.Q)(_.to([0, 1], [5, 0]).to((e) => `blur(${e}px)`)),
-                    filter: (0, w.Q)(_.to([0, 1], [0.8, 1]).to((e) => `brightness(${e})`)),
+                    backdropFilter: (0, w.Q)(b.to([0, 1], [5, 0]).to((e) => `blur(${e}px)`)),
+                    filter: (0, w.Q)(b.to([0, 1], [0.8, 1]).to((e) => `brightness(${e})`)),
                 },
                 children: [
-                    T.isAnimated
+                    y.isAnimated
                         ? (0, a.jsx)(I.Sn, {
                               id: "QuestBarContentExpanded_heroAnimated",
-                              children: (e) => (0, a.jsx)(Q, { ref: e, autoPlay: !0, asset: T, className: q.LO }),
+                              children: (e) => (0, a.jsx)(Q, { ref: e, autoPlay: !0, asset: y, className: q.LO }),
                           })
                         : (0, a.jsx)(I.Sn, {
                               id: "QuestBarContentExpanded_heroStatic",
-                              children: (e) => (0, a.jsx)("img", { ref: e, alt: "", className: q.LO, src: T.url }),
+                              children: (e) => (0, a.jsx)("img", { ref: e, alt: "", className: q.LO, src: y.url }),
                           }),
-                    (0, a.jsx)("div", { className: l()(q.tV, { [q.tt]: P }) }),
+                    (0, a.jsx)("div", { className: l()(q.tV, { [q.tt]: L }) }),
                 ],
             }),
         ],
@@ -319,23 +319,23 @@ async function ee(e, t, n, a) {
           : (0, _.Oy)(e.id, { questContent: t, questContentCTA: n, sourceQuestContent: a });
 }
 let et = s.forwardRef(function (e, t) {
-    let { children: n, className: i, overlayRef: o } = e,
-        { collapsedHeight: d, isExpanded: c, isExpansionAnimationComplete: u, quest: m } = s.useContext(G.T),
-        { expansionSpring: h } = s.useContext(M.PW),
-        { launchInGameActivity: x } = (0, C.zW)(m),
-        p = (0, E.vA)(m),
-        g = s.useCallback(async () => {
-            let e = p ? T.Cy.START_QUEST : T.Cy.ACCEPT_QUEST;
-            await ee(m, v.uF.QUEST_BAR_V2, e, v.uF.QUEST_BAR_V2), p && x();
-        }, [m, x, p]),
-        _ = m.userStatus?.enrolledAt != null,
-        f = c && u;
+    let { children: n, className: i, overlayRef: o, isUnfurl: d } = e,
+        { collapsedHeight: c, isExpanded: u, isExpansionAnimationComplete: m, quest: h } = s.useContext(G.T),
+        { expansionSpring: x } = s.useContext(M.PW),
+        { launchInGameActivity: p } = (0, C.zW)(h),
+        g = (0, E.vA)(h),
+        _ = s.useCallback(async () => {
+            let e = g ? T.Cy.START_QUEST : T.Cy.ACCEPT_QUEST;
+            await ee(h, v.uF.QUEST_BAR_V2, e, v.uF.QUEST_BAR_V2), g && p();
+        }, [h, p, g]),
+        f = h.userStatus?.enrolledAt != null,
+        b = u && m;
     return (0, a.jsxs)(r.animated.div, {
-        "aria-hidden": !f,
-        className: l()(i, q.Rh, { [q.Yd]: f, [q.iH]: _ }),
+        "aria-hidden": !b,
+        className: l()(i, q.Rh, { [q.Yd]: b, [q.iH]: f }),
         style: {
             transform: (0, r.to)(
-                [h.to({ range: [0, 1], output: [0, -100] }), h.to({ range: [0, 1], output: [0, d] })],
+                [x.to({ range: [0, 1], output: [0, -100] }), x.to({ range: [0, 1], output: [0, c] })],
                 (e, t) => `translateY(calc(${e}% + ${t}px))`,
             ),
         },
@@ -343,9 +343,9 @@ let et = s.forwardRef(function (e, t) {
             n,
             (0, a.jsx)(r.animated.div, {
                 style: { opacity: 1 },
-                children: _
+                children: f
                     ? (0, a.jsx)(Z, { overlayRef: o, containerRef: t })
-                    : (0, a.jsx)(X, { isInteractable: f, containerRef: t, onAcceptQuest: g }),
+                    : (0, a.jsx)(X, { preferImageHeroAsset: d, isInteractable: b, containerRef: t, onAcceptQuest: _ }),
             }),
         ],
     });

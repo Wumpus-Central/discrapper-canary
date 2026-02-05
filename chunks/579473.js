@@ -24,6 +24,7 @@ var h = (function (e) {
         (e.HERO_VIDEO = "hero_video"),
         (e.QUEST_BAR_HERO = "quest_bar_hero"),
         (e.QUEST_BAR_HERO_VIDEO = "quest_bar_hero_video"),
+        (e.QUEST_BAR_HERO_IMAGE = "quest_bar_hero_image"),
         (e.REWARD = "reward"),
         (e.REWARD_IMAGE = "reward_image"),
         (e.GAME_TILE = "game_tile"),
@@ -81,6 +82,9 @@ function A(e, t, n, a) {
             s = t;
             break;
         }
+        case "quest_bar_hero_image":
+            s = e.config.assets.questBarHero;
+            break;
         case "reward": {
             let t = (0, o.sn)(e);
             if (t.type === i.l.VIRTUAL_CURRENCY)

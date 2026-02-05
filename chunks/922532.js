@@ -14,42 +14,43 @@ function o(e) {
             isQuestAccepted: u,
             prevIsQuestAccepted: m,
             impressionRef: h,
+            onQuestBarFocus: x,
         } = e,
-        x = a.useRef(-1),
-        p = a.useRef(!1),
-        [g, _] = a.useState(!1),
-        [f, v] = a.useState(!1),
-        b = a.useCallback(() => {
-            _(!0);
-        }, []),
+        p = a.useRef(-1),
+        g = a.useRef(!1),
+        [_, f] = a.useState(!1),
+        [v, b] = a.useState(!1),
         j = a.useCallback(() => {
-            _(!1), p.current || c || o(!1);
-        }, [c, o]),
+            f(!0);
+        }, []),
         A = a.useCallback(() => {
-            _(!1), c || o(!1), (p.current = !1);
+            f(!1), g.current || c || o(!1);
         }, [c, o]),
         C = a.useCallback(() => {
-            v(!0);
-        }, []),
+            f(!1), c || o(!1), (g.current = !1);
+        }, [c, o]),
         S = a.useCallback(() => {
-            v(!1), o(!1);
+            b(!0);
+        }, []),
+        T = a.useCallback(() => {
+            b(!1), o(!1);
         }, [o]),
-        T = a.useCallback(
+        y = a.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                if (n) return;
+                if ((x(), n)) return;
                 let { withDelay: t = !1 } = e;
-                t ? (x.current = window.setTimeout(d, 75)) : d();
+                t ? (p.current = window.setTimeout(d, 75)) : d();
             },
-            [d, n],
+            [d, n, x],
         ),
-        y = a.useCallback(() => {
-            T();
-        }, [T]),
         N = a.useCallback(() => {
-            window.clearTimeout(x.current), g || f || p.current || o(!1);
-        }, [g, f, o]),
+            y();
+        }, [y]),
         E = a.useCallback(() => {
+            window.clearTimeout(p.current), _ || v || g.current || o(!1);
+        }, [_, v, o]),
+        I = a.useCallback(() => {
             (0, i.av)({
                 questId: t.id,
                 event: r.HAw.QUEST_HOVER,
@@ -61,10 +62,10 @@ function o(e) {
                 shouldExtendSession: !0,
                 sourceQuestContent: s.uF.QUEST_BAR_V2,
             }),
-                (p.current = !0),
-                T({ withDelay: !0 });
-        }, [T, h, t.id]),
-        I = a.useCallback(() => {
+                (g.current = !0),
+                y({ withDelay: !0 });
+        }, [y, h, t.id]),
+        k = a.useCallback(() => {
             (0, i.av)({
                 questId: t.id,
                 event: r.HAw.QUEST_HOVER_OFF,
@@ -75,32 +76,32 @@ function o(e) {
                 },
                 sourceQuestContent: s.uF.QUEST_BAR_V2,
             }),
-                (p.current = !1),
-                N();
-        }, [N, h, t.id]);
+                (g.current = !1),
+                E();
+        }, [E, h, t.id]);
     return (
         a.useEffect(() => {
-            f && I();
-        }, [f, I]),
+            v && k();
+        }, [v, k]),
         a.useLayoutEffect(() => {
-            u && !m && p.current && d();
+            u && !m && g.current && d();
         }, [d, u, m]),
         a.useLayoutEffect(() => {
-            c || !u || m || p.current || o(!1);
+            c || !u || m || g.current || o(!1);
         }, [u, c, m, o]),
         {
-            ctxMenuOpen: g,
-            gameSheetOpen: f,
-            handleCtxMenuOpened: b,
-            handleCtxMenuClosed: j,
-            handleCtxMenuSelection: A,
-            handleGameSheetOpened: C,
-            handleGameSheetClosed: S,
-            handleFocus: T,
-            handleFocusWithoutDelay: y,
-            handleBlur: N,
-            handleMouseEnter: E,
-            handleMouseLeave: I,
+            ctxMenuOpen: _,
+            gameSheetOpen: v,
+            handleCtxMenuOpened: j,
+            handleCtxMenuClosed: A,
+            handleCtxMenuSelection: C,
+            handleGameSheetOpened: S,
+            handleGameSheetClosed: T,
+            handleFocus: y,
+            handleFocusWithoutDelay: N,
+            handleBlur: E,
+            handleMouseEnter: I,
+            handleMouseLeave: k,
         }
     );
 }
