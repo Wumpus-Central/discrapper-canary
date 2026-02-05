@@ -612,7 +612,7 @@ class eC extends _.A {
             null != e && t.push(e);
         }
         this.context === eu.x.DEFAULT && (0, C.I)("RtcConnection").enabled && t.push("audio_transport_cc");
-        let { enabled: n } = (0, I.r)({ location: "_chooseExperiments" });
+        let { enabled: n } = I.A.getConfig({ location: "_chooseExperiments" });
         n && t.push("should_analyze_user_voice_volume"),
             t.push("keyframe_on_join"),
             L.A.getCurrentConfig({ location: "_chooseExperiments" }, { autoTrackExposure: !0 }).enabled &&

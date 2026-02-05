@@ -142,8 +142,9 @@ class R extends r.Ay.Store {
         return null != p && this.isPrioritySpeaker(p, e) && this.isSpeaking(p, e);
     }
     getVoiceVolume(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.x.DEFAULT;
-        return (0, a.r)({ location: "SpeakingStore" }).enabled ? (f.get(t)?.get(e)?.voiceDb ?? -1 / 0) : -1 / 0;
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.x.DEFAULT,
+            n = a.A.getConfig({ location: "SpeakingStore" });
+        return n.enabled && !n.disableUI ? (f.get(t)?.get(e)?.voiceDb ?? -1 / 0) : -1 / 0;
     }
 }
 let O = new R(i.h, {
