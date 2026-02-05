@@ -3,7 +3,7 @@ n.d(t, { A: () => c });
 var i = n(627968),
     s = n(64700),
     r = n(218681),
-    l = n(563495),
+    l = n(92674),
     a = n(397927);
 let o = window.ResizeObserver ?? r.t;
 function c(e) {

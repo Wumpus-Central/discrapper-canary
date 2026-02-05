@@ -221,7 +221,7 @@ function ew(e) {
 function ex(e) {
     let { questId: t } = e,
         n = new Set(E);
-    n.add(t), (E = n);
+    n.add(t), (E = n), v === t && (v = null);
 }
 function eP(e) {
     let { dismissedQuestUserStatus: t } = e;

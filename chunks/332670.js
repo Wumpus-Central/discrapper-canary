@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, { A: () => i });
-var r = n(563495);
+var r = n(92674);
 class i extends r.FrameLoop {
     _requestAnimationFrame = (e) => requestAnimationFrame(e);
     _cancelAnimationFrame = (e) => cancelAnimationFrame(e);
