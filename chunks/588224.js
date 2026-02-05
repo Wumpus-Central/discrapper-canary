@@ -29,8 +29,8 @@ var i = n(627968),
     R = n(290863),
     O = n(528767),
     L = n(485296),
-    D = n(977997),
-    M = n(427262),
+    M = n(977997),
+    D = n(427262),
     G = n(340851),
     U = n(652215),
     P = n(31408),
@@ -63,7 +63,7 @@ let w = l.memo((e) => {
             [x, s.id],
         ),
         W = (0, h.A)(null != Y ? [Y.applicationId] : []),
-        K = (0, I.A)(x, s.guild_id)[0],
+        K = (0, I.Ay)(x, s.guild_id)[0],
         z = (0, u.YY)(K?.application_id).data ?? void 0,
         [X, q] = (0, r.yK)(
             [N.A],
@@ -71,8 +71,8 @@ let w = l.memo((e) => {
             [s, x],
         ),
         J = (0, r.bG)([O.A], () => O.A.getSessionById(a)),
-        Q = M.Ay.useName(l),
-        Z = (0, r.bG)([D.A], () => D.A.getVoicePlatformForChannel(s.id, x), [s.id, x]),
+        Q = D.Ay.useName(l),
+        Z = (0, r.bG)([M.A], () => M.A.getVoicePlatformForChannel(s.id, x), [s.id, x]),
         { enableHangStatus: $ } = (0, m.$j)({ guildId: s.guild_id, location: "VoiceUsers" }),
         ee = (0, g.Ay)(s, !0, l),
         et = (0, r.bG)([p.A], () => (f ? p.A.getHangStatusActivity() : null), [f]),
@@ -134,8 +134,8 @@ let V = [],
             [N, j] = l.useState(null),
             [v, O] = l.useState(!1),
             L = l.useRef(null),
-            D = (0, S.$n)(s.id, d ?? V),
-            { shouldShow: M, dismiss: P } = (0, f.Z0)(s, { collapsed: c }),
+            M = (0, S.$n)(s.id, d ?? V),
+            { shouldShow: D, dismiss: P } = (0, f.Z0)(s, { collapsed: c }),
             B = l.useRef(
                 new o.J_(50, () => {
                     j(L.current), (L.current = null);
@@ -162,7 +162,7 @@ let V = [],
                 if (c) return [];
                 let e = new Set();
                 return (
-                    D?.forEach((t) => {
+                    M?.forEach((t) => {
                         let { user: n } = t;
                         R.A.getActivities(n.id, s.guild_id).forEach((t) => {
                             null != t.application_id && e.add(t.application_id);
@@ -173,8 +173,8 @@ let V = [],
             });
         (0, h.A)(W);
         let K = (() => {
-            if (null == D || 0 === D.length) return null;
-            let e = c && D.length > u + 1 ? D.slice(0, u) : D,
+            if (null == M || 0 === M.length) return null;
+            let e = c && M.length > u + 1 ? M.slice(0, u) : M,
                 t = A.A.getGuildRingingUsers(s.id),
                 l = e.map((e) => {
                     let { user: l, nick: a, voiceState: r } = e,
@@ -205,10 +205,10 @@ let V = [],
                     );
                 });
             return (
-                M && l.unshift((0, i.jsx)(x.p, { channel: s, onClose: P }, "voice-invite-suggestions-button")),
+                D && l.unshift((0, i.jsx)(x.p, { channel: s, onClose: P }, "voice-invite-suggestions-button")),
                 null != p && p > 0
                     ? l.push((0, i.jsx)(G.aI, { collapsed: c, numAudience: p }))
-                    : c && D.length > u + 1 && l.push((0, i.jsx)(G.LR, { numUsers: D.length - u })),
+                    : c && M.length > u + 1 && l.push((0, i.jsx)(G.LR, { numUsers: M.length - u })),
                 l
             );
         })();

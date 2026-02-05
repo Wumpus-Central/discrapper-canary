@@ -87,7 +87,7 @@ function I(e) {
 function S(e) {
     let { userId: t, channel: n } = e,
         o = (0, r.bG)([m.default], () => m.default.getUser(t)),
-        d = (0, _.A)(t, n.guild_id),
+        d = (0, _.Ay)(t, n.guild_id),
         u = (0, p.A)(t, n.id),
         g = l.useMemo(
             () =>

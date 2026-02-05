@@ -12,17 +12,24 @@ let d = (e) =>
 function c(e, t) {
     return (0, i.bG)(
         [a.A, s.A, l.default],
-        () =>
-            (e.id === l.default.getId() ? a.A.getActivities() : s.A.getActivities(e.id))
-                .filter(d)
-                .filter(
-                    (e) =>
-                        !(0, r.A)(e) &&
-                        (null == t ||
-                            null == e.application_id ||
-                            null == t.application_id ||
-                            e.application_id !== t.application_id),
-                ),
+        () => {
+            let n = (e.id === l.default.getId() ? a.A.getActivities() : s.A.getActivities(e.id))
+                    .filter(d)
+                    .filter(
+                        (e) =>
+                            !(0, r.A)(e) &&
+                            (null == t ||
+                                null == e.application_id ||
+                                null == t.application_id ||
+                                e.application_id !== t.application_id),
+                    ),
+                i = new Map();
+            for (let e of n) {
+                let t = e.application_id ?? e.name;
+                null == t || i.has(t) || i.set(t, e);
+            }
+            return Array.from(i.values());
+        },
         [e.id, t],
         i.My,
     );

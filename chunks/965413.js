@@ -224,8 +224,8 @@ class g extends r.A {
         return !!this.isTargetInDareVoiceChannel(e) && l.A.getUsersWithVideo(e.guildId).has(e.targetId);
     }
     isSameGameAsSender(e) {
-        let t = (0, a.n)(e.senderId, e.guildId)[0],
-            n = (0, a.n)(e.targetId, e.guildId)[0],
+        let t = (0, a.nn)(e.senderId, e.guildId)[0],
+            n = (0, a.nn)(e.targetId, e.guildId)[0],
             r = t?.application_id,
             s = n?.application_id;
         return null != r && null != s && r === s && null != i.A.getApplication(r);

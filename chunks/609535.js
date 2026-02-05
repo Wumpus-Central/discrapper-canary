@@ -1,4 +1,4 @@
-n.r(
+i.r(
     (e.exports = {
         ellipsis: "ellipsis__2ef49",
         headerContainer: "headerContainer__2ef49",
@@ -11,11 +11,13 @@ n.r(
         openGameProfile: "openGameProfile__2ef49",
         assets: "assets__2ef49",
         assetsHangStatus: "assetsHangStatus__2ef49",
+        assetsUserActivityHover: "assetsUserActivityHover__2ef49",
         assetsLargeMaskStreamPreview: "assetsLargeMaskStreamPreview__2ef49",
         assetsLargeMaskVoiceChannel: "assetsLargeMaskVoiceChannel__2ef49",
         assetsLargeMaskActivityFeed: "assetsLargeMaskActivityFeed__2ef49",
         assetsLargeImage: "assetsLargeImage__2ef49",
         assetsLargeImageSpotify: "assetsLargeImageSpotify__2ef49",
+        activityVoiceChannelUserHover: "activityVoiceChannelUserHover__2ef49",
         assetsLargeImageStreamPreview: "assetsLargeImageStreamPreview__2ef49 assetsLargeImage__2ef49",
         assetsLargeImageStreamPreviewXbox: "assetsLargeImageStreamPreviewXbox__2ef49 assetsLargeImage__2ef49",
         assetsLargeImageActivityFeed: "assetsLargeImageActivityFeed__2ef49 assetsLargeImage__2ef49",
@@ -71,7 +73,6 @@ n.r(
         streamName: "streamName__2ef49",
         streamGame: "streamGame__2ef49",
         activityVoiceChannel: "activityVoiceChannel__2ef49",
-        activityVoiceChannelUserHover: "activityVoiceChannelUserHover__2ef49",
         platformIcon: "platformIcon__2ef49",
         icon: "icon__2ef49",
         wrap: "wrap__2ef49",

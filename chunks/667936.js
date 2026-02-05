@@ -61,14 +61,15 @@ let b = (e) => {
         }, [d, s, t.guild_id])();
     if (null == f) return null;
     let b = g || (0, u.A)(n),
-        N = (0, m.gV)(t.type);
+        N = (0, m.gV)(t.type),
+        T = d ? E.z : E.A;
     return (0, i.jsxs)("div", {
         className: C.Eb,
         children: [
             (0, i.jsx)("div", {
                 className: C.Il,
                 children: b
-                    ? (0, i.jsx)(E.A, {
+                    ? (0, i.jsx)(T, {
                           activity: n,
                           embeddedApp: a,
                           user: f,

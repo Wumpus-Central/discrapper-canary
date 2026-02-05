@@ -23,7 +23,7 @@ class _ extends i.A {
                 n.application?.id == null ||
                 o.default.extractTimestamp(t) < Date.now() - c.M ||
                 null ==
-                    (0, u.n)(e.userId, e.guildId).find(
+                    (0, u.nn)(e.userId, e.guildId).find(
                         (e) => n.application?.id != null && e.application_id === n.application.id,
                     )
             )

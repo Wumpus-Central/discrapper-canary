@@ -12,7 +12,7 @@ var i = n(627968),
 function A(e) {
     let { guildId: t, onSetActivityStatus: n } = e,
         A = (0, s.bG)([d.default], () => d.default.getId()),
-        g = (0, o.A)(A, t)[0],
+        g = (0, o.Ay)(A, t)[0],
         m = (0, a.YY)(g?.application_id).data ?? void 0,
         p = l.useCallback(() => {
             null != m && ((0, c.xA)(m.id, !0), n());

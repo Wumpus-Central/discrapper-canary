@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => v, z: () => y });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -15,111 +15,114 @@ var i = n(627968),
     p = n(486020),
     _ = n(403362),
     x = n(427262),
-    f = n(6676);
-let E = h.DN.SIZE_24;
-function C(e) {
-    let { activity: t, user: n, embeddedApp: l, onOpenSpotifyAlbum: s } = e,
-        a = t?.assets,
-        r = t?.application_id;
-    if (null == t || null == a || (null == a.large_image && null == a.small_image))
+    f = n(652215),
+    E = n(985018),
+    C = n(6676);
+let I = h.DN.SIZE_24;
+function S(e) {
+    let { activity: t, user: n, embeddedApp: l, onOpenSpotifyAlbum: s, compact: a } = e,
+        r = t?.assets,
+        u = t?.application_id;
+    if (null == t || null == r || (null == r.large_image && null == r.small_image))
         if (null == l) return null;
         else {
-            let e, t;
+            let e, t, n;
             return (
                 (e = p.Ay.getApplicationIconURL({ id: l.application.id, icon: l.application.icon })),
                 (t = l.application.name),
+                (n = a ? C.p_ : C.P3),
                 (0, i.jsx)(o.m, {
                     text: t,
                     position: "top",
                     asContainer: !0,
-                    children: (0, i.jsx)("img", { alt: t, src: e, className: f.P3 }),
+                    children: (0, i.jsx)("img", { alt: t, src: e, className: n }),
                 })
             );
         }
-    let u = a.large_image ?? a.small_image,
-        h = (0, c.A)(t),
-        A = h ? f.RC : f.P3,
-        g =
-            null != u
-                ? (0, i.jsx)("img", { alt: a.large_text ?? "", src: (0, m.uD)(r, u, [128, 128]), className: A })
+    let h = r.large_image ?? r.small_image,
+        A = (0, c.A)(t),
+        g = a ? C.p_ : A ? C.RC : C.P3,
+        _ =
+            null != h
+                ? (0, i.jsx)("img", { alt: r.large_text ?? "", src: (0, m.uD)(u, h, [128, 128]), className: g })
                 : null;
-    return h && null != s
-        ? ((g = (0, i.jsx)(d.DUT, {
-              className: f.vk,
+    return A && null != s
+        ? ((_ = (0, i.jsx)(d.DUT, {
+              className: C.vk,
               onClick: () => {
                   s(t, n.id);
               },
-              children: g,
+              children: _,
           })),
-          (0, i.jsx)(o.m, { text: null != a.large_text ? a.large_text : null, position: "top", children: g }))
-        : g;
+          (0, i.jsx)(o.m, { text: null != r.large_text ? r.large_text : null, position: "top", children: _ }))
+        : _;
 }
-function I(e) {
-    let { activity: t, embeddedApp: n, onOpenSpotifyTrack: l } = e,
-        s = t?.details,
-        a = t?.name,
-        r = a;
-    if (null != n) r = n.application.name;
+function b(e) {
+    let { activity: t, embeddedApp: n, onOpenSpotifyTrack: l, compact: s } = e,
+        a = t?.details,
+        r = t?.name,
+        o = r;
+    if (null != n) o = n.application.name;
     else {
-        if (!(null != t && (0, c.A)(t)) || null == t.sync_id || null == s || null == l) return null;
-        (a = s),
-            (r = (0, i.jsx)(d.DUT, {
-                className: f.wp,
+        if (!(null != t && (0, c.A)(t)) || null == t.sync_id || null == a || null == l) return null;
+        (r = a),
+            (o = (0, i.jsx)(d.DUT, {
+                className: C.wp,
                 onClick: () => {
                     l(t);
                 },
-                children: s,
+                children: a,
             }));
     }
     return (0, i.jsx)(d.Heading, {
-        variant: "heading-sm/semibold",
+        variant: s ? "heading-sm/medium" : "heading-sm/semibold",
         color: "text-strong",
-        className: f.wx,
-        children: r,
+        className: C.wx,
+        children: o,
     });
 }
-function S(e) {
-    let { activity: t, user: n, onOpenSpotifyArtist: l } = e,
-        s = t?.details,
-        r = t?.state,
-        o = s;
+function N(e) {
+    let { activity: t, user: n, onOpenSpotifyArtist: l, muted: s } = e,
+        r = t?.details,
+        o = t?.state,
+        d = r;
     return (null != t &&
         (0, c.A)(t) &&
-        null != r &&
-        (o = [
+        null != o &&
+        (d = [
             (0, i.jsx)(
                 A.A,
                 {
-                    artists: r,
-                    linkClassName: f.hw,
+                    artists: o,
+                    linkClassName: s ? C.QJ : C.hw,
                     canOpen: null != t.sync_id,
                     onOpenSpotifyArtist: (e) => {
                         l?.(t, n.id, e);
                     },
                 },
-                r,
+                o,
             ),
         ]),
-    null == o || "" === o)
+    null == d || "" === d)
         ? null
-        : (0, i.jsx)("div", { className: a()(f.Mo, f.Tf, f.p9), children: o });
+        : (0, i.jsx)("div", { className: a()(C.Mo, s ? C.JF : C.Tf, C.p9), children: d });
 }
-function b(e) {
+function T(e) {
     let { activity: t } = e,
         n = t?.state;
     return null == n || "" === n || (0, c.A)(t)
         ? null
-        : (0, i.jsx)("div", { className: a()(f.Mo, f.Tf, f.p9, f.__invalid_activity), children: n });
+        : (0, i.jsx)("div", { className: a()(C.Mo, C.Tf, C.p9, C.__invalid_activity), children: n });
 }
-function N(e) {
+function j(e) {
     let { activity: t } = e;
     if (null == t || !(0, c.A)(t)) return null;
     let { timestamps: n } = t;
     if (n?.start == null || n?.end == null) return null;
     let { start: l, end: s } = n;
-    return (0, i.jsx)(u.A, { start: l, end: s, className: f.Jq, themed: !0, singleLine: !0 });
+    return (0, i.jsx)(u.A, { start: l, end: s, className: C.Jq, themed: !0, singleLine: !0 });
 }
-function T(e) {
+function v(e) {
     let {
             activity: t,
             embeddedApp: n,
@@ -134,12 +137,12 @@ function T(e) {
     null != n
         ? (p = Array.from(n.embeddedActivity.userIds))
         : (0, c.A)(t) && null != d && (p = d.map((e) => e.user.id));
-    let T = (0, r.yK)([g.default], () => p.map((e) => g.default.getUser(e)).filter(_.Vq)),
-        j = null != n || (0, c.A)(t),
+    let f = (0, r.yK)([g.default], () => p.map((e) => g.default.getUser(e)).filter(_.Vq)),
+        E = null != n || (0, c.A)(t),
         v = l.useMemo(() => {
             let e = new Map();
             return (
-                j &&
+                E &&
                     null != d &&
                     d.forEach((t) => {
                         let n = t.member;
@@ -147,27 +150,27 @@ function T(e) {
                     }),
                 e
             );
-        }, [d, j]);
-    return j
+        }, [d, E]);
+    return E
         ? (0, i.jsxs)("div", {
-              className: f.ec,
+              className: C.ec,
               children: [
                   (0, i.jsxs)("div", {
-                      className: f.Wh,
+                      className: C.Wh,
                       children: [
-                          (0, i.jsx)(C, { activity: t, user: s, embeddedApp: n, onOpenSpotifyAlbum: m }),
+                          (0, i.jsx)(S, { activity: t, user: s, embeddedApp: n, onOpenSpotifyAlbum: m }),
                           (0, i.jsxs)("div", {
-                              className: f.X0,
+                              className: C.X0,
                               children: [
-                                  (0, i.jsx)(I, { activity: t, embeddedApp: n, onOpenSpotifyTrack: u }),
-                                  (0, i.jsx)(S, { activity: t, user: s, onOpenSpotifyArtist: A }),
-                                  (0, i.jsx)(b, { activity: t }),
+                                  (0, i.jsx)(b, { activity: t, embeddedApp: n, onOpenSpotifyTrack: u }),
+                                  (0, i.jsx)(N, { activity: t, user: s, onOpenSpotifyArtist: A }),
+                                  (0, i.jsx)(T, { activity: t }),
                                   p.length > 0 &&
                                       (0, i.jsx)(h.Ay, {
-                                          className: f.TN,
+                                          className: C.TN,
                                           guildId: a.guild_id,
-                                          users: T,
-                                          size: E,
+                                          users: f,
+                                          size: I,
                                           max: 7,
                                           renderUser: (e) => {
                                               if (null == e || e === h.mt) return null;
@@ -182,9 +185,9 @@ function T(e) {
                                                       children: (0, i.jsx)(
                                                           "img",
                                                           {
-                                                              src: e.getAvatarURL(a.guild_id, E),
+                                                              src: e.getAvatarURL(a.guild_id, I),
                                                               alt: n,
-                                                              className: f.my,
+                                                              className: C.my,
                                                           },
                                                           e.id,
                                                       ),
@@ -197,8 +200,58 @@ function T(e) {
                           }),
                       ],
                   }),
-                  (0, i.jsx)(N, { activity: t }),
+                  (0, i.jsx)(j, { activity: t }),
               ],
           })
         : null;
+}
+function y(e) {
+    let {
+        activity: t,
+        embeddedApp: n,
+        user: l,
+        onOpenSpotifyTrack: s,
+        onOpenSpotifyArtist: a,
+        onOpenSpotifyAlbum: r,
+    } = e;
+    if (!(null != n || (0, c.A)(t))) return null;
+    let o = null,
+        u = t?.type ?? null;
+    return (
+        (o =
+            null != n
+                ? u === f.$pd.WATCHING
+                    ? E.intl.string(E.t.xeqvTg)
+                    : E.intl.string(E.t.J4MQFX)
+                : E.intl.string(E.t.ep6av7)),
+        (0, i.jsxs)("div", {
+            className: C.ec,
+            children: [
+                null != o &&
+                    (0, i.jsx)("div", {
+                        className: C.N1,
+                        children: (0, i.jsx)(d.Heading, {
+                            variant: "text-xs/medium",
+                            color: "text-muted",
+                            children: o,
+                        }),
+                    }),
+                (0, i.jsxs)("div", {
+                    className: C.Wh,
+                    children: [
+                        (0, i.jsx)(S, { activity: t, user: l, embeddedApp: n, onOpenSpotifyAlbum: r, compact: !0 }),
+                        (0, i.jsxs)("div", {
+                            className: C.X0,
+                            children: [
+                                (0, i.jsx)(b, { activity: t, embeddedApp: n, onOpenSpotifyTrack: s, compact: !0 }),
+                                (0, i.jsx)(N, { activity: t, user: l, onOpenSpotifyArtist: a, muted: !0 }),
+                                (0, i.jsx)(T, { activity: t }),
+                            ],
+                        }),
+                    ],
+                }),
+                (0, i.jsx)(j, { activity: t }),
+            ],
+        })
+    );
 }
