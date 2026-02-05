@@ -35889,6 +35889,141 @@ html:not(.chat-input) .inputInner_b1f01d {
     padding-top: var(--space-8)
 }
 
+.popoutCard__411a9 {
+    padding: 12px;
+    width: 260px
+}
+
+.tooltipContainer__411a9 {
+    max-width: 260px;
+    padding: 8px
+}
+
+.content__411a9 {
+    flex-direction: column
+}
+
+.content__411a9,
+.headerRow__411a9 {
+    display: flex;
+    gap: 8px
+}
+
+.headerRow__411a9 {
+    align-items: center
+}
+
+.titleRow__411a9 {
+    flex: 1;
+    gap: 6px;
+    min-width: 0
+}
+
+.spicinessRow__411a9,
+.titleRow__411a9 {
+    align-items: center;
+    display: flex
+}
+
+.spicinessRow__411a9 {
+    gap: 4px
+}
+
+.kindIcon__411a9 {
+    color: var(--white)
+}
+
+.channelIcon__411a9,
+.spicinessIconMild__411a9 {
+    color: var(--status-positive)
+}
+
+.spicinessIconSpicy__411a9 {
+    color: var(--status-warning)
+}
+
+.spicinessIconUnhinged__411a9 {
+    color: var(--status-danger)
+}
+
+.guildPart__411a9,
+.locationRow__411a9 {
+    align-items: center;
+    display: flex;
+    gap: 6px;
+    min-width: 0
+}
+
+.guildPart__411a9 {
+    flex: 0 1 auto;
+    max-width: 45%
+}
+
+.guildIcon__411a9 {
+    flex: 0 0 auto
+}
+
+.guildNameTruncated__411a9 {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.separatorIcon__411a9 {
+    color: var(--text-muted);
+    flex: 0 0 auto
+}
+
+.channelPart__411a9 {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    gap: 6px;
+    min-width: 0
+}
+
+.channelNameTruncated__411a9 {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.footer__411a9 {
+    padding-top: 4px
+}
+
+@keyframes completedShine__411a9 {
+    0% {
+        background-position: 0 50%
+    }
+
+    to {
+        background-position: 200% 50%
+    }
+}
+
+.completedShinyText__411a9 {
+    background: linear-gradient(90deg, var(--status-positive) 0, var(--white) 25%, var(--status-positive) 50%, var(--white) 75%, var(--status-positive) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-position: 0 50%;
+    background-size: 200% 100%;
+    color: transparent;
+    display: inline-block;
+    -webkit-text-fill-color: transparent;
+    animation: completedShine__411a9 1.8s linear infinite
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .completedShinyText__411a9 {
+        animation: none;
+        background-position: 100% 50%
+    }
+}
+
 @keyframes placeholderPulse__27cc6 {
     0% {
         opacity: .5

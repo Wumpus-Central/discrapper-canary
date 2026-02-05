@@ -68,7 +68,7 @@ function D(e) {
             return null == ("" === t ? null : t) && null == e.emoji ? null : e;
         }, [n]),
         B = (0, m.Uk)("ActivityStatus"),
-        j = i.useMemo(() => (null != F && B ? (0, g.a)(F) : null), [F, B]),
+        j = i.useMemo(() => (null != F && B ? (0, g.aF)(F) : null), [F, B]),
         H = (0, u.bG)([A.default], () => A.default.getId() === t?.id),
         Y = (0, u.bG)([p.A], () =>
             V

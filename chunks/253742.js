@@ -15,8 +15,8 @@ var i = n(627968),
     p = n(659974),
     g = n(384059),
     E = n(480890),
-    f = n(551826),
-    I = n(342296),
+    I = n(551826),
+    f = n(342296),
     C = n(961350),
     N = n(430452),
     T = n(485296),
@@ -57,9 +57,13 @@ function O(e) {
     function F(e) {
         null != M
             ? (0, c.L3)(e, async () => {
-                  let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("84841"), n.e("31885")]).then(
-                      n.bind(n, 107632),
-                  );
+                  let { default: e } = await Promise.all([
+                      n.e("97262"),
+                      n.e("42128"),
+                      n.e("82892"),
+                      n.e("84841"),
+                      n.e("31885"),
+                  ]).then(n.bind(n, 107632));
                   return (t) =>
                       (0, i.jsx)(e, {
                           ...t,
@@ -85,7 +89,7 @@ function O(e) {
     }
     let Y = (0, s.bG)([T.A], () => T.A.getVoiceVolume(h.id)),
         W = (0, p.v)({ isSpeaking: w, voiceDb: Y, spreadDirection: p.O.INSET_ONLY, maxInnerSpreadRadius: 3 });
-    return (0, i.jsx)(I.A, {
+    return (0, i.jsx)(f.A, {
         targetElementRef: t,
         user: h,
         guildId: M,
@@ -103,7 +107,7 @@ function O(e) {
                     className: b.H,
                     onContextMenu: F,
                     focusProps: y,
-                    children: (0, i.jsx)(f.A, {
+                    children: (0, i.jsx)(I.A, {
                         shakeLocation: x.uD.VOICE_USER,
                         isShaking: w,
                         children: (0, i.jsx)("div", {
@@ -147,15 +151,15 @@ function R(e) {
                 }
             return [i, !1];
         })(t, _, p),
-        f = c ? d.QGg : d.j96,
-        I = c ? v.intl.string(v.t["Z/Tya5"]) : v.intl.string(v.t.XR5BAc),
+        I = c ? d.QGg : d.j96,
+        f = c ? v.intl.string(v.t["Z/Tya5"]) : v.intl.string(v.t.XR5BAc),
         N = (0, i.jsx)(o.m, {
-            text: I,
+            text: f,
             ariaHidden: !0,
             children: (0, i.jsx)(d.K0, {
-                "aria-label": I,
+                "aria-label": f,
                 onClick: () => u(!c),
-                icon: () => (0, i.jsx)(f, { size: "md" }),
+                icon: () => (0, i.jsx)(I, { size: "md" }),
                 variant: "icon-only",
                 size: "sm",
             }),

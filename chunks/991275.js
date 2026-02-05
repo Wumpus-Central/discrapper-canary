@@ -86,8 +86,9 @@ let Q = z.Ay.getEnableHardwareAcceleration(),
                                 n.e("3795"),
                                 n.e("42128"),
                                 n.e("97283"),
+                                n.e("82892"),
                                 n.e("84841"),
-                                n.e("29347"),
+                                n.e("48354"),
                             ]).then(n.bind(n, 107632)),
                             t = H.A.isInChannel(F.A.getVoiceChannelId(), c.id);
                         return (n) => (0, r.jsx)(e, { ...n, user: c, guildId: I, channel: A, showMediaItems: t });

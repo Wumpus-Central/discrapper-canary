@@ -86,7 +86,7 @@ function G(e) {
         let s = A.default.getUser(t.id);
         null != s &&
             (0, u.L3)(e, async () => {
-                let { default: e } = await Promise.all([n.e("97262"), n.e("91042"), n.e("62841")]).then(
+                let { default: e } = await Promise.all([n.e("97262"), n.e("82892"), n.e("91042"), n.e("62841")]).then(
                     n.bind(n, 365689),
                 );
                 return (t) => (0, i.jsx)(e, { ...t, user: s, guildId: l, showChatItems: !1 });
