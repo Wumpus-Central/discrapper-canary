@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => P });
+n.d(t, { A: () => U });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -19,56 +19,63 @@ var r = n(627968),
     A = n(975571),
     I = n(474090),
     T = n(94264),
-    y = n(788868),
-    S = n(652215),
-    v = n(901123),
-    C = n(49370),
-    b = n(985018),
-    N = n(125634),
-    R = n(268920),
-    O = n(633217),
-    D = n(909340);
-let L = () => {
+    y = n(566119),
+    S = n(788868),
+    v = n(652215),
+    C = n(901123),
+    b = n(49370),
+    N = n(985018),
+    R = n(125634),
+    O = n(268920),
+    D = n(633217),
+    L = n(909340);
+let w = () => {
         let e = (0, l.bG)([_.A], () => _.A.useReducedMotion);
         return (0, r.jsx)("div", {
-            className: N.s,
+            className: R.s,
             children: e
-                ? (0, r.jsx)("img", { src: R.A, className: N.Cb, alt: "Orb" })
+                ? (0, r.jsx)("img", { src: O.A, className: R.Cb, alt: "Orb" })
                 : (0, r.jsxs)(f.A, {
                       autoPlay: !0,
                       loop: !0,
-                      className: N.Cb,
+                      className: R.Cb,
                       children: [
-                          (0, r.jsx)("source", { src: O.A, type: "video/webm" }),
-                          (0, r.jsx)("img", { src: R.A, className: N.Cb, alt: "Orb" }),
+                          (0, r.jsx)("source", { src: D.A, type: "video/webm" }),
+                          (0, r.jsx)("img", { src: O.A, className: R.Cb, alt: "Orb" }),
                       ],
                   }),
         });
     },
-    w = 4100;
-function x() {
-    (0, m.pX)(`${v.BV.NITRO_HOME}?section=orbs`);
+    x = 4100;
+function P() {
+    (0, y.RQ)(), (0, m.pX)(`${C.BV.NITRO_HOME}?section=orbs`);
 }
-function P(e) {
-    let { targetElementRef: t, shouldShow: n, onRequestClose: a, ctaText: m, ctaOnClick: v } = e,
-        R = (0, l.bG)([_.A], () => _.A.useReducedMotion),
-        O = (0, l.bG)([p.A], () => p.A.getRewardForProgram(h.W.NITRO)),
-        P = (0, l.bG)([E.default], () => E.default.getCurrentUser()),
-        { balance: M } = (0, g.W)(),
-        k = !(0, I.ki)(P),
-        U = i.useMemo(() => {
-            let e = (0, I.YE)(P, y.PremiumTypes.TIER_2);
-            if (!p.A.passesGeneralUIInvariant(h.W.NITRO) || k) return null;
-            if (e && null != O) {
-                let e = (0, o.default)(new Date(O.next_reward_date), new Date());
+function M() {
+    (0, y.gP)(), (0, m.pX)(`${C.BV.NITRO_HOME}?section=orbs`);
+}
+function k() {
+    (0, y.b)(), window.open(A.A.getArticleURL(v.MVz.ORBS_FAQ), "_blank");
+}
+function U(e) {
+    let { targetElementRef: t, shouldShow: n, onRequestClose: a, ctaText: m, ctaOnClick: A } = e,
+        y = (0, l.bG)([_.A], () => _.A.useReducedMotion),
+        C = (0, l.bG)([p.A], () => p.A.getRewardForProgram(h.W.NITRO)),
+        O = (0, l.bG)([E.default], () => E.default.getCurrentUser()),
+        { balance: D } = (0, g.W)(),
+        U = !(0, I.ki)(O),
+        G = i.useMemo(() => {
+            let e = (0, I.YE)(O, S.PremiumTypes.TIER_2);
+            if (!p.A.passesGeneralUIInvariant(h.W.NITRO) || U) return null;
+            if (e && null != C) {
+                let e = (0, o.default)(new Date(C.next_reward_date), new Date());
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(d.EYj, {
                             variant: "text-xs/normal",
                             color: "text-default",
-                            children: b.intl.format(C.default["AvL/At"], {
+                            children: N.intl.format(b.default["AvL/At"], {
                                 days: Math.max(1, e),
-                                deepLinkToNitroOrbs: x,
+                                deepLinkToNitroOrbs: P,
                             }),
                         }),
                         (0, r.jsx)(T.A, {}),
@@ -76,8 +83,8 @@ function P(e) {
                 });
             }
             return null;
-        }, [P, k, O]),
-        G = (M ?? 0) >= w;
+        }, [O, U, C]),
+        V = (D ?? 0) >= x;
     return (0, r.jsx)(u.x, {
         targetElementRef: t,
         shouldShow: n,
@@ -87,67 +94,65 @@ function P(e) {
         modal: !0,
         closeOnClickOutside: !0,
         children: (0, r.jsx)(d.NPJ, {
-            theme: G ? S.NJ8.DARKER : void 0,
+            theme: V ? v.NJ8.DARKER : void 0,
             children: (e) =>
                 (0, r.jsxs)("div", {
-                    className: s()(e, N.j),
+                    className: s()(e, R.j),
                     children: [
-                        G &&
+                        V &&
                             (0, r.jsx)(f.A, {
-                                autoPlay: !R,
-                                loop: !R,
+                                autoPlay: !y,
+                                loop: !y,
                                 muted: !0,
                                 playsInline: !0,
                                 tabIndex: -1,
-                                className: N.yG,
-                                src: D.A,
+                                className: R.yG,
+                                src: L.A,
                             }),
                         (0, r.jsxs)("div", {
-                            className: N.Qs,
+                            className: R.Qs,
                             children: [
                                 (0, r.jsx)(c.q, { onClick: a }),
                                 (0, r.jsxs)("div", {
-                                    className: N.hQ,
+                                    className: R.hQ,
                                     children: [
-                                        (0, r.jsx)(L, {}),
+                                        (0, r.jsx)(w, {}),
                                         (0, r.jsxs)("div", {
-                                            className: N.y$,
+                                            className: R.y$,
                                             children: [
-                                                (M ?? 0) > 0 &&
+                                                (D ?? 0) > 0 &&
                                                     (0, r.jsxs)("div", {
-                                                        className: N.E2,
+                                                        className: R.E2,
                                                         children: [
                                                             (0, r.jsx)(d.EYj, {
                                                                 variant: "display-lg",
-                                                                className: N.K,
-                                                                children: M ?? 0,
+                                                                className: R.K,
+                                                                children: D ?? 0,
                                                             }),
                                                             (0, r.jsx)(d.EYj, {
                                                                 variant: "text-xs/normal",
                                                                 color: "text-muted",
-                                                                children: b.intl.string(C.default.KclK9z),
+                                                                children: N.intl.string(b.default.KclK9z),
                                                             }),
                                                         ],
                                                     }),
-                                                U,
+                                                G,
                                             ],
                                         }),
                                         (0, r.jsx)(d.$nd, {
                                             text: m,
                                             variant: "primary",
                                             size: "sm",
-                                            onClick: v,
+                                            onClick: A,
                                             fullWidth: !0,
                                         }),
                                         (0, r.jsx)(d.EYj, {
                                             variant: "text-xs/normal",
-                                            color: k ? "text-default" : "text-muted",
-                                            className: N.CU,
-                                            children: k
-                                                ? b.intl.format(C.default.juvXqj, { deepLinkToNitroOrbs: x })
-                                                : b.intl.format(C.default.fhAVek, {
-                                                      helpdeskArticle: A.A.getArticleURL(S.MVz.ORBS_FAQ),
-                                                  }),
+                                            color: U ? "text-default" : "text-muted",
+                                            className: R.CU,
+                                            children: U
+                                                ? N.intl.format(b.default.juvXqj, { deepLinkToNitroOrbs: M })
+                                                : N.intl.format(b.default.fhAVek, { helpdeskArticle: k }),
                                         }),
                                     ],
                                 }),
