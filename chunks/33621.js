@@ -6,7 +6,7 @@ let a = (0, i.mj)({
     kind: "user",
     defaultConfig: { enabled: !1, enabledQuestStates: new Set() },
     variations: {
-        1: { enabled: !0, enabledQuestStates: new Set([l.U.UNENROLLED]) },
-        2: { enabled: !0, enabledQuestStates: new Set([l.U.UNENROLLED, l.U.ENROLLED]) },
+        1: { enabled: !0, enabledQuestStates: new Set([l.UA.UNENROLLED]) },
+        2: { enabled: !0, enabledQuestStates: new Set([l.UA.UNENROLLED, l.UA.ENROLLED]) },
     },
 });

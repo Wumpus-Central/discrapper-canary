@@ -1,4 +1,4 @@
-n.d(t, { A: () => P });
+n.d(t, { A: () => D });
 var i = n(627968);
 n(64700);
 var l = n(503698),
@@ -72,14 +72,14 @@ function O(e) {
         _.tooltipText,
     );
 }
-let P = (e) => {
+let D = (e) => {
     let {
             quest: t,
             location: n,
             size: l,
             isFocused: I,
-            isQuestExpired: P,
-            isExpanded: D,
+            isQuestExpired: D,
+            isExpanded: P,
             isAnimating: k,
             contentPosition: U,
             sourceQuestContent: w,
@@ -88,7 +88,7 @@ let P = (e) => {
         B = (0, A.S5)(t.userStatus?.completedAt, { year: "numeric", month: "long", day: "numeric" }),
         F = G >= A.F3.ACCEPTED,
         H = G >= A.F3.COMPLETED,
-        V = D || k,
+        V = P || k,
         z = (0, g.wT)(t, y.rE.QUESTS_CARD, n, w),
         W = (0, f.Ut)(),
         Y = (0, A.fc)(t),
@@ -102,9 +102,9 @@ let P = (e) => {
         }),
         K = (0, s.bG)([h.A], () => null != h.A.questEnrollmentBlockedUntil, []),
         Q = p.t.useConfig({ location: y.rE.QUEST_HOME_DESKTOP }),
-        J = (0, v.P)(t),
+        J = (0, v.Pd)(t),
         X = (0, s.bG)([u.default], () => u.default.locale),
-        Z = P && !H,
+        Z = D && !H,
         $ = (0, C.vv)(t);
     return (0, i.jsx)("div", {
         className: L.zr,
@@ -119,7 +119,7 @@ let P = (e) => {
                     children: (0, i.jsxs)("div", {
                         className: L.D9,
                         children: [
-                            P &&
+                            D &&
                                 (0, i.jsx)("div", {
                                     className: L.FL,
                                     children: (0, i.jsx)(d.EpV, { color: d.LU0.colors.WHITE }),
@@ -150,7 +150,7 @@ let P = (e) => {
                                             ? "text-sm/medium"
                                             : "text-xs/medium",
                                 className: L.$p,
-                                children: P
+                                children: D
                                     ? R.intl.formatToPlainString(R.t["ge+AJp"], {
                                           questName: t.config.messages.questName,
                                       })
@@ -197,7 +197,7 @@ let P = (e) => {
                             })({
                                 quest: t,
                                 locale: X,
-                                isQuestExpired: P,
+                                isQuestExpired: D,
                                 collectibleQuestRewardDescription: q,
                                 formattedCompletionDate: B,
                             }),
@@ -243,9 +243,10 @@ let P = (e) => {
                                   text: R.intl.string(R.t.LLLLPD),
                               }),
                               !Z &&
-                                  (Q.enabled && J === v.U.UNENROLLED && Q.enabledQuestStates.has(v.U.UNENROLLED)
+                                  (Q.enabled && J === v.UA.UNENROLLED && Q.enabledQuestStates.has(v.UA.UNENROLLED)
                                       ? (0, i.jsx)(T.A, {
                                             quest: t,
+                                            surface: v.V3.QUEST_EMBED,
                                             analyticsCtxQuestContent: n,
                                             analyticsCtxSourceQuestContent: w,
                                             analyticsCtxQuestContentPosition: U,

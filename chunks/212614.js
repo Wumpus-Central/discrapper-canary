@@ -23,36 +23,37 @@ function u(e) {
 let m = function (e) {
     let {
             quest: t,
-            preClickCallback: n,
-            analyticsCtxQuestContent: m,
-            analyticsCtxSourceQuestContent: _,
-            analyticsCtxQuestContentPosition: h,
-            size: p = "md",
+            surface: n,
+            preClickCallback: m,
+            analyticsCtxQuestContent: _,
+            analyticsCtxSourceQuestContent: h,
+            analyticsCtxQuestContentPosition: p,
+            size: g = "md",
         } = e,
-        g = (0, a.P)(t);
+        A = (0, a.Pd)(t);
     if (0 === Object.keys(t.config.taskConfigV2.tasks).length)
         return (0, i.jsx)(l.$nd, { variant: "primary", fullWidth: !0, size: "sm", text: s.intl.string(s.t.P84bAD) });
-    let A = Object.values(t.config.taskConfigV2.tasks)[0];
-    switch (g) {
-        case a.U.UNENROLLED:
+    let f = Object.values(t.config.taskConfigV2.tasks)[0];
+    switch (A) {
+        case a.UA.UNENROLLED:
             return (0, i.jsx)(r.A, {
                 quest: t,
-                taskType: A.type,
-                size: p,
-                preClickCallback: n,
-                analyticsCtxQuestContent: m,
-                analyticsCtxSourceQuestContent: _,
-                analyticsCtxQuestContentPosition: h,
+                taskType: f.type,
+                size: g,
+                preClickCallback: m,
+                analyticsCtxQuestContent: _,
+                analyticsCtxSourceQuestContent: h,
+                analyticsCtxQuestContentPosition: p,
             });
-        case a.U.ENROLLED:
-            return (0, i.jsx)(o, { taskType: A.type });
-        case a.U.INCOMPLETE:
-            return (0, i.jsx)(d, { taskType: A.type });
-        case a.U.COMPLETED:
-            return (0, i.jsx)(c, { taskType: A.type });
-        case a.U.CLAIMED:
-            return (0, i.jsx)(u, { taskType: A.type });
+        case a.UA.ENROLLED:
+            return (0, i.jsx)(o, { taskType: f.type });
+        case a.UA.INCOMPLETE:
+            return (0, i.jsx)(d, { taskType: f.type });
+        case a.UA.COMPLETED:
+            return (0, i.jsx)(c, { taskType: f.type });
+        case a.UA.CLAIMED:
+            return (0, i.jsx)(u, { taskType: f.type });
         default:
-            return (0, i.jsx)(l.$nd, { variant: "primary", fullWidth: !0, size: p, text: s.intl.string(s.t.P84bAD) });
+            return (0, i.jsx)(l.$nd, { variant: "primary", fullWidth: !0, size: g, text: s.intl.string(s.t.P84bAD) });
     }
 };

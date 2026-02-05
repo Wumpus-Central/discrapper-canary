@@ -151,7 +151,7 @@ function X(e) {
             onGameSheetClosed: x,
             gameProfileSource: g.Ob.QuestBar,
         }),
-        B = (0, R.P)(o);
+        B = (0, R.Pd)(o);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)("div", {
@@ -176,9 +176,10 @@ function X(e) {
                         (0, a.jsx)("div", {
                             className: q.lO,
                             children:
-                                L.enabled && B === R.U.UNENROLLED && L.enabledQuestStates.has(R.U.UNENROLLED)
+                                L.enabled && B === R.UA.UNENROLLED && L.enabledQuestStates.has(R.UA.UNENROLLED)
                                     ? (0, a.jsx)(k.A, {
                                           quest: o,
+                                          surface: R.V3.QUEST_BAR_FOOTER,
                                           size: "sm",
                                           analyticsCtxQuestContent: v.uF.QUEST_BAR_V2,
                                           analyticsCtxSourceQuestContent: v.uF.QUEST_BAR_V2,

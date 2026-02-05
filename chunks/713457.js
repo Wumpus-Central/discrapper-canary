@@ -111,7 +111,7 @@ function O(e) {
         ei = es && et === h.X0.SELECT,
         el = es && !ei && en.length > 1,
         er = x.t.useConfig({ location: y.rE.QUEST_HOME_DESKTOP }),
-        eo = (0, S.P)(t),
+        eo = (0, S.Pd)(t),
         ed = s.useCallback(
             (e) => {
                 ea(e), e === y.fO.DESKTOP && O([]);
@@ -225,11 +225,12 @@ function O(e) {
                   }))
                 : X
                   ? (e_ =
-                        er.enabled && eo === S.U.UNENROLLED && er.enabledQuestStates.has(S.U.UNENROLLED)
+                        er.enabled && eo === S.UA.UNENROLLED && er.enabledQuestStates.has(S.UA.UNENROLLED)
                             ? (0, a.jsx)("div", {
                                   className: E.x6,
                                   children: (0, a.jsx)(C.A, {
                                       quest: t,
+                                      surface: S.V3.QUEST_HOME_TILE_FOOTER,
                                       analyticsCtxQuestContent: n,
                                       analyticsCtxSourceQuestContent: M,
                                       analyticsCtxQuestContentPosition: w,
@@ -343,9 +344,10 @@ function O(e) {
                           : (0, a.jsx)("div", {
                                 className: E.x6,
                                 children:
-                                    er.enabled && eo === S.U.UNENROLLED && er.enabledQuestStates.has(S.U.UNENROLLED)
+                                    er.enabled && eo === S.UA.UNENROLLED && er.enabledQuestStates.has(S.UA.UNENROLLED)
                                         ? (0, a.jsx)(C.A, {
                                               quest: t,
+                                              surface: S.V3.QUEST_HOME_TILE_FOOTER,
                                               analyticsCtxQuestContent: n,
                                               analyticsCtxSourceQuestContent: M,
                                               analyticsCtxQuestContentPosition: w,
