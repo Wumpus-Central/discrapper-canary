@@ -6,15 +6,15 @@ var s = n(503698),
     a = n(311907),
     l = n(732955),
     o = n(775602),
-    c = n(371476),
-    d = n(103733),
-    u = n(982237),
+    c = n(103733),
+    d = n(258799),
+    u = n(253558),
     _ = n(985018),
-    m = n(764694);
+    m = n(392044);
 let A = (e) => {
     let { className: t, onBackClick: n } = e,
         s = (0, a.bG)([o.A], () => o.A.useReducedMotion),
-        { visibilityPercentageRef: A, visibilityPercentage: g } = (0, d.U)(!s);
+        { visibilityPercentageRef: A, visibilityPercentage: g } = (0, c.U)(!s);
     return (0, i.jsxs)("div", {
         className: r()(m.kL, t),
         "data-testid": "all-perks-hero-header",
@@ -33,8 +33,8 @@ let A = (e) => {
                 children: (0, i.jsxs)("div", {
                     className: m.N1,
                     children: [
-                        (0, i.jsx)(u.A, { containerVisibilityPercentage: g, isMotionReduced: s }),
-                        (0, i.jsx)(c.A, { children: _.intl.string(_.t["hqjDX/"]) }),
+                        (0, i.jsx)(d.A, { containerVisibilityPercentage: g, isMotionReduced: s }),
+                        (0, i.jsx)(u.A, { children: _.intl.string(_.t["hqjDX/"]) }),
                     ],
                 }),
             }),

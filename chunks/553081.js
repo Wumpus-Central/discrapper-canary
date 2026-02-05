@@ -23,13 +23,13 @@ var i = n(627968),
     f = n(170887),
     N = n(131168),
     b = n(511484),
-    R = n(703982),
-    v = n(891858),
-    O = n(807676),
-    j = n(322631),
-    P = n(568031),
-    y = n(518491),
-    L = n(157839),
+    R = n(322631),
+    v = n(568031),
+    O = n(518491),
+    j = n(965591),
+    P = n(157839),
+    y = n(60508),
+    L = n(821158),
     D = n(235365),
     M = n(994763),
     G = n(788868),
@@ -94,7 +94,7 @@ let H = (e) => {
                                           onChange: (e) => et(e),
                                           threshold: 0.1,
                                           active: !0,
-                                          children: (0, i.jsx)(y.A, {
+                                          children: (0, i.jsx)(O.A, {
                                               buttonVisibilityRef: J,
                                               className: B.v1,
                                               enablePremiumBrandRefresh: ec,
@@ -102,8 +102,8 @@ let H = (e) => {
                                               discountedPrice: ei,
                                           }),
                                       }),
-                                      (0, i.jsx)(L.A, {
-                                          variant: j.cJ.WHATS_NEW,
+                                      (0, i.jsx)(P.A, {
+                                          variant: R.cJ.WHATS_NEW,
                                           className: B.Iw,
                                           noBackground: !0,
                                           leftAlignHeaders: !0,
@@ -114,17 +114,17 @@ let H = (e) => {
                                               location: _.A.PREMIUM_MARKETING_NITRO_HOME_ORBS_SECTION,
                                               sectionRef: r,
                                           }),
-                                      (0, i.jsx)(L.A, {
+                                      (0, i.jsx)(P.A, {
                                           className: B.xU,
-                                          variant: j.cJ.PERKS_DISCOVERABILITY,
+                                          variant: R.cJ.PERKS_DISCOVERABILITY,
                                           noBackground: !0,
                                           leftAlignHeaders: !0,
-                                          showAllPerksButton: (0, i.jsx)(O.A, {
+                                          showAllPerksButton: (0, i.jsx)(L.A, {
                                               setIsAllPerksVisible: $,
-                                              previousComponent: j.A2.HOME,
+                                              previousComponent: R.A2.HOME,
                                           }),
                                       }),
-                                      (0, i.jsx)(P.A, {
+                                      (0, i.jsx)(v.A, {
                                           className: B.Zy,
                                           location: _.A.PREMIUM_MARKETING_GIFT_SECTION,
                                           analyticsLocation: { page: U.liQ.NITRO_HOME, section: U.JJy.GIFT_BANNER },
@@ -154,7 +154,7 @@ let H = (e) => {
                           }),
                           en &&
                               null != ei &&
-                              (0, i.jsx)(R.A, {
+                              (0, i.jsx)(j.A, {
                                   isVisible: es && Z,
                                   premiumSubscription: F,
                                   churnDiscountOffer: q,
@@ -162,10 +162,10 @@ let H = (e) => {
                               }),
                       ],
                   }),
-                  (0, i.jsx)(v.A, {
+                  (0, i.jsx)(y.A, {
                       isAllPerksVisible: Q,
                       setIsAllPerksVisible: $,
-                      previousComponent: j.A2.HOME,
+                      previousComponent: R.A2.HOME,
                       enablePremiumBrandRefresh: ec,
                   }),
               ],
