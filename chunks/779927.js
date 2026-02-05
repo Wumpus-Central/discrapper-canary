@@ -1,3 +1,3 @@
-i.exports = JSON.parse(
-    '{"d3yO98":["Aktywni teraz"],"HGimIS":["Wyniki wyszukiwania"],"GKTlS6":["Ulubione"],"OskevP":["Ulubione"],"DUIbKP":["Wyniki wyszukiwania"],"uhJexs":["Czat"]}',
+a.exports = JSON.parse(
+    '{"iK1QsY":["Dodaj kanał do ulubionych"],"w1MU8Y":["Dodaj użytkownika do ulubionych"],"xB/0Z9":["Szukaj kanał\xf3w tekstowych i PW"],"d3yO98":["Aktywni teraz"],"uC6Lhg":["Ostatnie kanały tekstowe"],"HGimIS":["Wyniki wyszukiwania"],"GKTlS6":["Ulubione"],"trKJoT":["W grze"],"OV3KfO":["Szukaj kanał\xf3w głosowych"],"OskevP":["Ulubione"],"C+ojiQ":["Znajomi na kanałach głosowych"],"DUIbKP":["Wyniki wyszukiwania"],"9ME4wE":["Sugerowane kanały głosowe"],"ERApc4":["Zamknij czat nakładki"],"x1k3cO":["aktualnie gra w ",[1,"gameName"]],"uhJexs":["Czat"],"xpv/t5":["Wybierz czat, aby rozpocząć rozmowę."],"tYPfF2":["Zminimalizuj tekst na kanale głosowym"],"KWrMk5":["Otw\xf3rz czat nakładki"],"2yFtJ1":["Ostatnie czaty nakładki"],"dvUElD":["Usuń kanał z ulubionych"],"Xr8XHk":["Usuń użytkownika z ulubionych"]}',
 );

@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"d3yO98":["En ligne"],"HGimIS":["R\xe9sultats de la recherche"],"GKTlS6":["Favoris"],"OskevP":["Favoris"],"DUIbKP":["R\xe9sultats de la recherche"],"uhJexs":["Discuter"]}',
+e.exports = JSON.parse(
+    '{"iK1QsY":["Salon favori"],"w1MU8Y":["Utilisateur favori"],"xB/0Z9":["Rechercher dans les salons textuels et les MP"],"d3yO98":["En ligne"],"uC6Lhg":["Salons textuels r\xe9cents"],"HGimIS":["R\xe9sultats de la recherche"],"GKTlS6":["Favoris"],"trKJoT":["En jeu"],"OV3KfO":["Rechercher dans les salons vocaux"],"OskevP":["Favoris"],"C+ojiQ":["Ami(e)s en vocal"],"DUIbKP":["R\xe9sultats de la recherche"],"9ME4wE":["Salons vocaux sugg\xe9r\xe9s"],"ERApc4":["Fermer l\'overlay de discussion"],"x1k3cO":["en train de jouer \xe0 ",[1,"gameName"]],"uhJexs":["Discuter"],"xpv/t5":["S\xe9lectionne une conversation pour commencer \xe0 envoyer des messages."],"tYPfF2":["Minimiser le chat direct"],"KWrMk5":["Ouvrir l\'overlay de discussion"],"2yFtJ1":["Overlays de discussion r\xe9cents"],"dvUElD":["Enlever le salon des favoris"],"Xr8XHk":["Enlever l\'utilisateur des favoris"]}',
 );
