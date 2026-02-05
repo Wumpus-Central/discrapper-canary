@@ -125,19 +125,19 @@ function T(e) {
     s.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_SET_PENDING_COLLECTIBLES_ITEM", item: e });
 }
 function y(e) {
-    s.h.dispatch({ type: "USER_SETTINGS_SET_PENDING_PRIMARY_GUILD_ID", primaryGuildId: e });
+    s.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PRIMARY_GUILD_ID", primaryGuildId: e });
 }
 function S(e) {
     s.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_SET_PENDING_DISPLAY_NAME_STYLES", displayNameStyles: e });
 }
 function v() {
-    s.h.dispatch({ type: "USER_SETTINGS_CLEAR_ERRORS" });
+    s.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_CLEAR_ERRORS" });
 }
 function C() {
-    s.h.dispatch({ type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
+    s.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_PENDING_ACCOUNT_CHANGES" });
 }
 function b() {
-    s.h.dispatch({ type: "USER_SETTINGS_RESET_ALL_PENDING" });
+    s.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_PENDING_CHANGES" });
 }
 function N() {
     s.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM" });
@@ -146,5 +146,5 @@ function R() {
     s.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_PENDING_LEGACY_USERNAME_DISABLED" });
 }
 function O() {
-    s.h.dispatch({ type: "USER_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES" });
+    s.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_PENDING_PRIMARY_GUILD_CHANGES" });
 }

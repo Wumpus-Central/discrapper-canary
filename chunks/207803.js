@@ -39,21 +39,21 @@ async function g(e, t) {
     let r = (0, f.h)();
     null != e.bio && r && (e.bio = o.Ay.parse(void 0, e.bio).content);
     try {
-        a.h.dispatch({ type: "USER_PROFILE_UPDATE_START", userId: n });
+        a.h.dispatch({ type: "USER_PROFILE_UPDATE_START", userId: n, guildId: t });
         let r = await i.Bo.patch({
             url: null != t ? p.Rsh.USER_GUILD_PROFILE(t, p.ME) : p.Rsh.USER_PROFILE(p.ME),
             body: e,
             rejectWithError: !1,
         });
-        if (r.ok) a.h.dispatch({ type: "USER_PROFILE_UPDATE_SUCCESS", userId: n, ...r.body });
+        if (r.ok) a.h.dispatch({ type: "USER_PROFILE_UPDATE_SUCCESS", userId: n, guildId: t, ...r.body });
         else {
             let e = new s.LG(r);
-            a.h.dispatch({ type: "USER_PROFILE_UPDATE_FAILURE", errors: r.body, apiError: e });
+            a.h.dispatch({ type: "USER_PROFILE_UPDATE_FAILURE", guildId: t, errors: r.body, apiError: e });
         }
         return r;
-    } catch (t) {
-        let e = new s.LG(t);
-        return a.h.dispatch({ type: "USER_PROFILE_UPDATE_FAILURE", errors: {}, apiError: e }), t;
+    } catch (n) {
+        let e = new s.LG(n);
+        return a.h.dispatch({ type: "USER_PROFILE_UPDATE_FAILURE", guildId: t, errors: {}, apiError: e }), n;
     }
 }
 function E(e, t) {
@@ -61,7 +61,7 @@ function E(e, t) {
     null != n && a.h.dispatch({ type: "USER_PROFILE_PIN_BADGES_ON_CLIENT", badges: e, ttlInSeconds: t, userId: n });
 }
 function A() {
-    a.h.dispatch({ type: "USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
+    a.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_PENDING_PROFILE_CHANGES" });
 }
 function I(e) {
     e?.startsWith("https:") === !0

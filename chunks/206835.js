@@ -13,7 +13,7 @@ function l() {
         analyticsLocations: u,
     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return (0, r.useCallback)(() => {
-        null != e && (0, i.V2)(e);
+        null != e && (0, i.V2)(e.id);
         {
             let { openUserSettings: t } = n(840065);
             t(a.X.PROFILE_PANEL, {
@@ -25,4 +25,4 @@ function l() {
         }
     }, [e, t, l, u]);
 }
-n(833336), n(628965);
+n(836602), n(628965);

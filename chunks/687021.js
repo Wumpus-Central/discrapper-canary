@@ -7,10 +7,10 @@ var i = n(627968),
     o = n(444550),
     c = n(263063),
     d = n(128450),
-    u = n(71393),
-    _ = n(711014),
-    m = n(403362),
-    A = n(833336),
+    u = n(836602),
+    _ = n(71393),
+    m = n(711014),
+    A = n(403362),
     g = n(985018),
     E = n(306505);
 function h(e) {
@@ -25,16 +25,16 @@ function h(e) {
 }
 function p(e) {
     let { guildId: t, globalOption: n, onChange: r, renderOptionSuffix: a } = e,
-        d = (0, l.bG)([A.A], () => A.A.showNotice()),
-        h = (0, l.bG)([_.Ay], () => _.Ay.getFlattenedGuildIds()),
-        p = (0, l.bG)([u.A], () => u.A.getGuilds()),
+        d = (0, l.bG)([u.A], () => u.A.showNotice()),
+        h = (0, l.bG)([m.Ay], () => m.Ay.getFlattenedGuildIds()),
+        p = (0, l.bG)([_.A], () => _.A.getGuilds()),
         C = s.useMemo(() => {
             let e = h
                 .map((e) => {
                     let t = p[e];
                     return null == t ? null : { label: t.name, value: t.id };
                 })
-                .filter(m.Vq);
+                .filter(A.Vq);
             return null != n && e.unshift(n), e;
         }, [h, p, n]),
         x = s.useCallback(

@@ -5,55 +5,59 @@ var i = n(627968),
     a = n(36525),
     l = n(587600),
     o = n(207803),
-    c = n(624826),
-    d = n(354694),
-    u = n(159001),
-    _ = n(833336),
+    c = n(836602),
+    d = n(624826),
+    u = n(354694),
+    _ = n(159001),
     m = n(985018);
 function A() {
-    let e = (0, r.bG)([_.A], () => _.A.getIsSubmitDisabled()),
-        t = (0, r.bG)([_.A], () => _.A.getGuild()),
-        n = (0, r.bG)([_.A], () => _.A.getErrors()),
+    let {
+            selectedGuildId: e,
+            canSubmit: t,
+            errors: n,
+        } = (0, r.cf)([c.A], () => ({
+            selectedGuildId: c.A.selectedGuildId,
+            canSubmit: c.A.canSubmit(),
+            errors: c.A.getErrors(c.A.selectedGuildId),
+        })),
         [A, g] = s.useState(!1),
         E = s.useMemo(
             () =>
-                n?.message != null
-                    ? n?.message
-                    : n?.guild_tag !== void 0 && n.guild_tag.length > 0
-                      ? n.guild_tag[0]
-                      : Object.keys(n ?? {}).length > 0
-                        ? m.intl.string(m.t.s35OuK)
-                        : null,
+                n?.guild_tag !== void 0 && n.guild_tag.length > 0
+                    ? n.guild_tag[0]
+                    : Object.keys(n ?? {}).length > 0
+                      ? m.intl.string(m.t.s35OuK)
+                      : null,
             [n],
         ),
         h = s.useCallback(async () => {
             g(!0);
-            let e = _.A.getAllPending(),
-                n = (0, l.C5)(e),
-                i = (0, l.yX)(e),
+            let t = c.A.getPendingChanges(e),
+                n = (0, l.C5)(t),
+                i = (0, l.yX)(t),
                 s = !0;
             if (Object.keys(n).length > 0) {
-                let i = await (0, u.GL)(t?.id, n);
+                let i = await (0, _.GL)(e, n);
                 if (((s = s && (i?.ok ?? !1)), i?.ok)) {
-                    let t = i.body;
-                    void 0 !== e.pendingAvatar &&
-                        (0, c.t)({
+                    let e = i.body;
+                    void 0 !== t.pendingAvatar &&
+                        (0, d.t)({
                             isGuildProfile: !0,
-                            avatarHash: t.avatar,
+                            avatarHash: e.avatar,
                             avatarId: n.avatarId,
-                            avatarAssetOrigin: e.pendingAvatar?.assetOrigin,
+                            avatarAssetOrigin: t.pendingAvatar?.assetOrigin,
                         }),
-                        (0, u.go)();
+                        (0, _.go)();
                 }
             }
             if (Object.keys(i).length > 0) {
-                let e = await (0, o.gi)(i, t?.id);
-                (s = s && (e?.ok ?? !1)), e?.ok ? (0, u.RE)() : (0, d.N)();
+                let t = await (0, o.gi)(i, e);
+                (s = s && (t?.ok ?? !1)), t?.ok ? (0, _.RE)() : (0, u.N)();
             }
-            s && (0, u.x8)(), g(!1);
-        }, [t?.id]),
+            s && (0, _.x8)(), g(!1);
+        }, [e]),
         p = s.useCallback(() => {
-            (0, u.IM)();
+            (0, _.IM)();
         }, []);
-    return (0, i.jsx)(a.A, { submitting: A, onSave: h, onReset: p, disabled: e, errorMessage: E ?? void 0 });
+    return (0, i.jsx)(a.A, { submitting: A, onSave: h, onReset: p, disabled: !t, errorMessage: E ?? void 0 });
 }

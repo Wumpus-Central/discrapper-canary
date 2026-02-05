@@ -1,21 +1,16 @@
-l.d(t, { b: () => o });
-var s = l(311907),
-    a = l(833336),
-    n = l(836602),
-    i = l(696451),
-    r = l(427262);
-function o(e, t) {
-    let l = r.Ay.useName(e) ?? "";
+s.d(t, { b: () => r });
+var l = s(311907),
+    a = s(836602),
+    n = s(696451),
+    i = s(427262);
+function r(e, t) {
+    let s = i.Ay.useName(e);
     return (
-        (0, s.bG)(
-            [a.A, n.A, i.Ay],
-            () =>
-                null != t
-                    ? (a.A.getPendingNickname() ?? i.Ay.getNick(t, e?.id))
-                    : n.A.getPendingChanges().pendingGlobalName,
-            [t, e],
-        ) ??
-        l ??
-        l
+        (0, l.bG)([a.A, n.Ay], () => {
+            let s = a.A.getPendingChanges(t);
+            return null != t ? (s.pendingNickname ?? n.Ay.getNick(t, e?.id)) : s.pendingGlobalName;
+        }, [t, e]) ??
+        s ??
+        ""
     );
 }

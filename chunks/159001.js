@@ -1,29 +1,29 @@
 "use strict";
 n.d(t, {
     Er: () => f,
-    GL: () => s,
+    GL: () => o,
     IM: () => I,
     Iz: () => _,
-    JJ: () => o,
+    JJ: () => l,
     Oz: () => p,
     RE: () => A,
-    V2: () => l,
+    V2: () => u,
     WR: () => d,
     Zz: () => m,
     go: () => E,
     mZ: () => g,
-    sy: () => u,
     x8: () => T,
     y3: () => h,
     zq: () => c,
 });
 var r = n(562465),
     i = n(73153),
-    a = n(652215);
-async function s(e, t) {
+    a = n(836602),
+    s = n(652215);
+async function o(e, t) {
     let {
         nick: n,
-        avatar: s,
+        avatar: a,
         avatarDescription: o,
         avatarId: l,
         avatarDecoration: u,
@@ -31,10 +31,10 @@ async function s(e, t) {
         displayNameStyles: d,
     } = t;
     if (null == e) throw Error("Need guildId");
-    i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_SUBMIT" });
+    i.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_SUBMIT", guildId: e });
     let _ = {
         nick: n,
-        avatar: s,
+        avatar: a,
         avatar_description: o,
         avatar_id: l,
         avatar_decoration_sku_id: void 0 !== u ? (u?.skuId ?? null) : void 0,
@@ -44,65 +44,70 @@ async function s(e, t) {
         display_name_colors: void 0 !== d ? (null !== d ? d.colors : null) : void 0,
     };
     try {
-        let t = await r.Bo.patch({ url: a.Rsh.SET_GUILD_MEMBER(e), body: _, oldFormErrors: !0, rejectWithError: !1 }),
+        let t = await r.Bo.patch({ url: s.Rsh.SET_GUILD_MEMBER(e), body: _, oldFormErrors: !0, rejectWithError: !1 }),
             n = t.body;
         return (
-            i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS" }),
+            i.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS", guildId: e }),
             i.h.dispatch({ type: "GUILD_MEMBER_PROFILE_UPDATE", guildMember: n, guildId: e }),
-            (null != s || null != l) && i.h.dispatch({ type: "RECENT_AVATARS_UPDATE" }),
+            (null != a || null != l) && i.h.dispatch({ type: "RECENT_AVATARS_UPDATE" }),
             t
         );
-    } catch (t) {
-        let e = t.body;
+    } catch (n) {
+        let t = n.body;
         return (
-            e?.username != null && ((e.nick = e.username), delete e.username),
-            i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE", errors: t.body }),
-            t
+            t?.username != null && ((t.nick = t.username), delete t.username),
+            i.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE", guildId: e, errors: n.body }),
+            n
         );
     }
 }
-function o(e) {
-    i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_SET_GUILD", guild: e });
-}
 function l(e) {
-    i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_INIT", guild: e });
+    i.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_SET_GUILD", guildId: e });
 }
-function u() {
-    i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM" });
+function u(e) {
+    i.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_INIT", guildId: e });
 }
 function c(e) {
-    i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR", avatar: e });
+    let t = a.A.selectedGuildId;
+    i.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR", guildId: t, avatar: e });
 }
 function d(e) {
-    i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_COLLECTIBLES_ITEM", item: e });
+    let t = a.A.selectedGuildId;
+    i.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_SET_PENDING_COLLECTIBLES_ITEM", guildId: t, item: e });
 }
 function _(e) {
-    i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER", banner: e });
+    let t = a.A.selectedGuildId;
+    i.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER", guildId: t, banner: e });
 }
 function f(e) {
-    i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO", bio: e });
+    let t = a.A.selectedGuildId;
+    i.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_SET_PENDING_BIO", guildId: t, bio: e });
 }
 function p(e) {
-    i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS", pronouns: e });
+    let t = a.A.selectedGuildId;
+    i.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS", guildId: t, pronouns: e });
 }
 function h(e) {
-    i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME", nickname: e });
+    let t = a.A.selectedGuildId;
+    null != t && i.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_SET_PENDING_NICKNAME", guildId: t, nickname: e });
 }
 function m(e) {
-    i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS", themeColors: e });
+    let t = a.A.selectedGuildId;
+    i.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS", guildId: t, themeColors: e });
 }
 function g(e) {
-    i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_DISPLAY_NAME_STYLES", displayNameStyles: e });
+    let t = a.A.selectedGuildId;
+    i.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_SET_PENDING_DISPLAY_NAME_STYLES", guildId: t, displayNameStyles: e });
 }
 function E() {
-    i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES" });
+    i.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_PENDING_ACCOUNT_CHANGES" });
 }
 function A() {
-    i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
+    i.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_PENDING_PROFILE_CHANGES" });
 }
 function I() {
-    i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING" });
+    i.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_RESET_PENDING_CHANGES" });
 }
 function T() {
-    i.h.dispatch({ type: "GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS" });
+    i.h.dispatch({ type: "USER_SETTINGS_ACCOUNT_CLEAR_ERRORS" });
 }

@@ -1,170 +1,169 @@
-l.d(t, { A: () => k });
-var s = l(627968),
-    a = l(64700),
-    n = l(503698),
-    i = l.n(n),
-    r = l(311907),
-    o = l(397927),
-    d = l(736653),
-    c = l(833336),
-    u = l(141468),
-    m = l(963852),
-    _ = l(763754),
-    x = l(20851),
-    g = l(369496),
-    h = l(550111),
-    p = l(919395),
-    f = l(287070),
-    N = l(101058),
-    A = l(836602),
-    C = l(950191),
-    j = l(686189),
-    S = l(946356),
-    T = l(954571),
-    v = l(975571),
-    E = l(652215),
-    b = l(996988),
-    L = l(927961),
-    D = l(985018),
-    I = l(635249);
-function k(e) {
+s.d(t, { A: () => I });
+var l = s(627968),
+    a = s(64700),
+    n = s(503698),
+    i = s.n(n),
+    r = s(311907),
+    o = s(397927),
+    d = s(736653),
+    c = s(141468),
+    u = s(963852),
+    m = s(763754),
+    _ = s(20851),
+    x = s(369496),
+    h = s(550111),
+    p = s(919395),
+    g = s(287070),
+    f = s(101058),
+    N = s(836602),
+    C = s(950191),
+    A = s(686189),
+    j = s(946356),
+    S = s(954571),
+    T = s(975571),
+    v = s(652215),
+    E = s(996988),
+    b = s(927961),
+    L = s(985018),
+    D = s(635249);
+function I(e) {
     let {
             user: t,
-            guild: l,
+            guild: s,
             displayName: n,
-            selectedFontId: k,
+            selectedFontId: I,
             selectedEffectId: y,
-            selectedColors: w,
-            onClose: R,
+            selectedColors: P,
+            onClose: w,
         } = e,
-        G = (0, d.Ay)(),
-        O = (0, o.Mwr)(G),
-        [z, M] = (0, a.useState)(O),
-        H = (0, C.Ay)(t.id, null),
-        { bannerSrc: U } = (0, j.A)({ displayProfile: H, size: 413, canAnimate: !1 }),
-        Y = (0, r.cf)([A.A, c.A], () => (null == l ? A.A.getPendingChanges() : c.A.getAllPending())),
-        B = (0, N.V7)({ userId: t.id, image: Y.pendingAvatar }),
-        { userNameplate: J, guildNameplate: F, pendingNameplate: V } = (0, p.rv)(t, l?.id),
-        q = null != F ? (0, g.WK)(F) : void 0;
-    z && !O ? (G = E.NJ8.DARK) : !z && O && (G = E.NJ8.LIGHT);
-    let K = (0, a.useCallback)(() => {
-            T.default.track(E.HAw.DISPLAY_NAME_STYLES_CLOSED), R();
-        }, [R]),
-        X = (0, a.useCallback)((e) => {
-            M(e === E.NJ8.DARK), T.default.track(E.HAw.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === E.NJ8.DARK });
+        R = (0, d.Ay)(),
+        G = (0, o.Mwr)(R),
+        [O, z] = (0, a.useState)(G),
+        M = (0, C.Ay)(t.id, null),
+        { bannerSrc: H } = (0, A.A)({ displayProfile: M, size: 413, canAnimate: !1 }),
+        U = (0, r.cf)([N.A], () => N.A.getPendingChanges(s?.id)),
+        Y = (0, f.V7)({ userId: t.id, image: U.pendingAvatar }),
+        { userNameplate: B, guildNameplate: J, pendingNameplate: F } = (0, p.rv)(t, s?.id),
+        V = null != J ? (0, x.WK)(J) : void 0;
+    O && !G ? (R = v.NJ8.DARK) : !O && G && (R = v.NJ8.LIGHT);
+    let q = (0, a.useCallback)(() => {
+            S.default.track(v.HAw.DISPLAY_NAME_STYLES_CLOSED), w();
+        }, [w]),
+        K = (0, a.useCallback)((e) => {
+            z(e === v.NJ8.DARK), S.default.track(v.HAw.DISPLAY_NAME_STYLES_THEME_TOGGLE, { dark: e === v.NJ8.DARK });
         }, []),
-        Q = (0, a.useMemo)(
-            () => ({ ...(0, _.FT)(t, null), nick: n, displayNameStyles: { fontId: k, effectId: y, colors: w } }),
-            [t, k, y, w, n],
+        X = (0, a.useMemo)(
+            () => ({ ...(0, m.FT)(t, null), nick: n, displayNameStyles: { fontId: I, effectId: y, colors: P } }),
+            [t, I, y, P, n],
         );
-    return (0, s.jsxs)("div", {
-        className: I._l,
+    return (0, l.jsxs)("div", {
+        className: D._l,
         children: [
-            (0, s.jsx)(o.rQ0, {
+            (0, l.jsx)(o.rQ0, {
                 "data-migration-pending": !0,
                 separator: !1,
-                className: I.bV,
-                children: (0, s.jsx)(o.s_y, { "data-migration-pending": !0, onClick: K, innerClassName: I.b }),
+                className: D.bV,
+                children: (0, l.jsx)(o.s_y, { "data-migration-pending": !0, onClick: q, innerClassName: D.b }),
             }),
-            null != U &&
-                (0, s.jsx)(S.A, {
+            null != H &&
+                (0, l.jsx)(j.A, {
                     user: t,
-                    displayProfile: H,
-                    themeType: b.d.MODAL_V2,
-                    className: I.LX,
+                    displayProfile: M,
+                    themeType: E.d.MODAL_V2,
+                    className: D.LX,
                     forceUserTheme: !0,
-                    children: (0, s.jsx)("div", { className: I.b8, style: { backgroundImage: `url(${U})` } }),
+                    children: (0, l.jsx)("div", { className: D.b8, style: { backgroundImage: `url(${H})` } }),
                 }),
-            (0, s.jsx)(o.NPJ, {
-                theme: G,
+            (0, l.jsx)(o.NPJ, {
+                theme: R,
                 children: (e) =>
-                    (0, s.jsxs)("div", {
-                        className: i()(I.cq, e),
+                    (0, l.jsxs)("div", {
+                        className: i()(D.cq, e),
                         inert: !0,
                         children: [
-                            (0, s.jsx)(f.A, {
+                            (0, l.jsx)(g.A, {
                                 user: t,
-                                guild: l,
-                                ...Y,
-                                pendingAvatar: B,
+                                guild: s,
+                                ...U,
+                                pendingAvatar: Y,
                                 pendingGlobalName: n,
-                                pendingDisplayNameStyles: Q.displayNameStyles,
+                                pendingDisplayNameStyles: X.displayNameStyles,
                                 canUsePremiumCustomization: !0,
                                 disabledInputs: !0,
                                 hideCustomStatus: !0,
                                 hideBioSection: !0,
-                                containerClassName: I.ME,
+                                containerClassName: D.ME,
                                 interactive: !1,
                                 hideExampleButton: !0,
                             }),
-                            (0, s.jsx)(x.A, {
-                                author: Q,
-                                message: (0, u.rh)({
-                                    ...(0, m.Ay)({ channelId: "1337", content: D.intl.string(L.default.h5Cuej) }),
-                                    state: E.cmJ.SENT,
+                            (0, l.jsx)(_.A, {
+                                author: X,
+                                message: (0, c.rh)({
+                                    ...(0, u.Ay)({ channelId: "1337", content: L.intl.string(b.default.h5Cuej) }),
+                                    state: v.cmJ.SENT,
                                     id: "0",
                                 }),
                                 isGroupStart: !0,
                                 hideSimpleEmbedContent: !0,
                                 hideGuildTag: !0,
-                                className: I.OT,
-                                previewGuildId: l?.id,
+                                className: D.OT,
+                                previewGuildId: s?.id,
                             }),
-                            (0, s.jsx)(h.A, {
+                            (0, l.jsx)(h.A, {
                                 user: t,
-                                guildId: l?.id,
-                                nameplate: V,
-                                nameplateData: null == V ? (q ?? J) : void 0,
+                                guildId: s?.id,
+                                nameplate: F,
+                                nameplateData: null == F ? (V ?? B) : void 0,
                                 pendingGlobalName: n,
-                                pendingDisplayNameStyles: Q.displayNameStyles,
+                                pendingDisplayNameStyles: X.displayNameStyles,
                                 isHighlighted: !0,
-                                className: I.qF,
+                                className: D.qF,
                             }),
                         ],
                     }),
             }),
-            (0, s.jsxs)("div", {
-                className: I.dI,
+            (0, l.jsxs)("div", {
+                className: D.dI,
                 children: [
-                    (0, s.jsx)(o.Text, {
+                    (0, l.jsx)(o.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: D.intl.format(L.default.prQba8, {
-                            helpArticleLink: v.A.getArticleURL(E.MVz.DISPLAY_NAME_STYLES),
+                        children: L.intl.format(b.default.prQba8, {
+                            helpArticleLink: T.A.getArticleURL(v.MVz.DISPLAY_NAME_STYLES),
                         }),
                     }),
-                    (0, s.jsx)(P, { darkPreview: z, onToggleTheme: X }),
+                    (0, l.jsx)(k, { darkPreview: O, onToggleTheme: K }),
                 ],
             }),
         ],
     });
 }
-function P(e) {
-    let { darkPreview: t, onToggleTheme: l } = e,
-        a = t ? E.NJ8.DARK : E.NJ8.LIGHT;
-    return (0, s.jsx)(o.IzF, {
-        className: I.xr,
-        optionClassName: I.$C,
+function k(e) {
+    let { darkPreview: t, onToggleTheme: s } = e,
+        a = t ? v.NJ8.DARK : v.NJ8.LIGHT;
+    return (0, l.jsx)(o.IzF, {
+        className: D.xr,
+        optionClassName: D.$C,
         options: [
             {
                 name: "",
-                tooltip: D.intl.string(D.t.b8Cei3),
-                value: E.NJ8.DARK,
+                tooltip: L.intl.string(L.t.b8Cei3),
+                value: v.NJ8.DARK,
                 icon: o.Zve,
-                className: a === E.NJ8.DARK ? I.iB : void 0,
+                className: a === v.NJ8.DARK ? D.iB : void 0,
             },
             {
                 name: "",
-                tooltip: D.intl.string(D.t.K2sFfo),
-                value: E.NJ8.LIGHT,
+                tooltip: L.intl.string(L.t.K2sFfo),
+                value: v.NJ8.LIGHT,
                 icon: o.FVN,
-                className: a === E.NJ8.LIGHT ? I.iB : void 0,
+                className: a === v.NJ8.LIGHT ? D.iB : void 0,
             },
         ],
         value: a,
         onChange: (e) => {
             let { value: t } = e;
-            return l(t);
+            return s(t);
         },
         look: "pill",
     });

@@ -16,11 +16,7 @@ var i = n(627968),
 function h() {
     let { canSubmit: e, errors: t } = (0, r.cf)([u.A], () => ({ canSubmit: u.A.canSubmit(), errors: u.A.getErrors() })),
         [n, h] = s.useState(!1),
-        p = s.useMemo(
-            () =>
-                t?.message != null ? t?.message : Object.keys(t ?? {}).length > 0 ? E.intl.string(E.t["84MExs"]) : null,
-            [t],
-        ),
+        p = s.useMemo(() => (Object.keys(t ?? {}).length > 0 ? E.intl.string(E.t["84MExs"]) : null), [t]),
         C = s.useCallback(async () => {
             h(!0);
             let e = u.A.getPendingChanges(),
