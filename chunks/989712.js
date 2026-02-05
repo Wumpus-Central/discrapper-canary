@@ -4,6 +4,7 @@ e.exports = {
     ou: "subContent__75e8e",
     HD: "avatars__75e8e",
     A6: "recipientUserAvatar__75e8e",
+    XH: "recipientAvatarMask__75e8e",
     GM: "currentUserAvatar__75e8e",
     FS: "textContainer__75e8e",
     jA: "subHeaderContainer__75e8e",
