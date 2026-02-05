@@ -5183,6 +5183,7 @@ var na = (function (e) {
             (e.REPLY_NUDGES_CREATED = "reply_nudges_created"),
             (e.REPLY_NUDGE_OPENED = "reply_nudge_opened"),
             (e.APP_TRANSACTION_ID_SYNCED = "app_transaction_id_synced"),
+            (e.PARENTAL_CONSENT_CHECKED = "parental_consent_checked"),
             e
         );
     })({}),

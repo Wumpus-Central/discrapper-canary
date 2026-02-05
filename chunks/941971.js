@@ -4,7 +4,7 @@ var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
-    s = n(92674),
+    s = n(563495),
     o = n(397927),
     l = n(94095);
 let u = Object.freeze({ tension: 400, friction: 30 }),
