@@ -27,6 +27,7 @@ function m() {
                 onSelectionChange: (e) => u.setState({ setting: e }),
                 options: m,
                 selectionMode: "single",
+                clearable: !0,
             }),
             (0, a.jsx)(l.ZiE, {
                 label: "Setting Section (Legacy)",

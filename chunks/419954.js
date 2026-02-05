@@ -1,23 +1,24 @@
 n.d(t, {
-    AK: () => f,
+    AK: () => N,
     D1: () => A,
-    E2: () => N,
-    FW: () => E,
-    Hn: () => I,
+    E2: () => b,
+    FW: () => h,
+    Hn: () => S,
     Hr: () => a,
-    Qx: () => S,
-    Tf: () => C,
+    Qx: () => f,
+    Tf: () => x,
     WI: () => l,
     bd: () => m,
     dT: () => d,
-    gN: () => g,
+    eA: () => g,
+    gN: () => E,
     hl: () => s,
     i4: () => o,
-    sN: () => T,
+    sN: () => I,
     t_: () => c,
-    v_: () => p,
+    v_: () => C,
     zC: () => u,
-    zD: () => x,
+    zD: () => T,
     zZ: () => _,
 });
 var i = n(963935);
@@ -63,35 +64,38 @@ function A(e, t) {
     return r(e, i.Z6.LIST, t);
 }
 function g(e, t) {
-    return r(e, i.Z6.RELATED, t);
+    return r(e, i.Z6.NESTED_PANEL, t);
 }
 function E(e, t) {
+    return r(e, i.Z6.RELATED, t);
+}
+function h(e, t) {
     return r(e, i.Z6.FIELD_SET, t);
 }
-function h(e, t, n) {
+function p(e, t, n) {
     return { ...n, key: e, type: t };
 }
-function p(e, t) {
-    return h(e, i.Z6.STATIC, t);
-}
 function C(e, t) {
-    return h(e, i.Z6.BUTTON, t);
+    return p(e, i.Z6.STATIC, t);
 }
 function x(e, t) {
-    return h(e, i.Z6.TOGGLE, t);
+    return p(e, i.Z6.BUTTON, t);
 }
 function T(e, t) {
-    return h(e, i.Z6.SLIDER, t);
+    return p(e, i.Z6.TOGGLE, t);
 }
 function I(e, t) {
-    return h(e, i.Z6.SELECT, t);
+    return p(e, i.Z6.SLIDER, t);
 }
 function S(e, t) {
-    return h(e, i.Z6.RADIO, t);
+    return p(e, i.Z6.SELECT, t);
 }
 function f(e, t) {
-    return h(e, i.Z6.NAVIGATOR, t);
+    return p(e, i.Z6.RADIO, t);
 }
 function N(e, t) {
-    return h(e, i.Z6.CUSTOM, t);
+    return p(e, i.Z6.NAVIGATOR, t);
+}
+function b(e, t) {
+    return p(e, i.Z6.CUSTOM, t);
 }

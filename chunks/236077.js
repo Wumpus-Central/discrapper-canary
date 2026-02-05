@@ -6,13 +6,21 @@ class a {
     map = new Map();
     defaultPanel;
     register(e) {
-        let { node: t, parentPanelKey: n, parentTabKey: i, parentCategoryKey: s, parentAccordionKey: r } = e;
+        let {
+            node: t,
+            parentSidebarItemKey: n,
+            parentPanelKey: i,
+            parentTabKey: s,
+            parentCategoryKey: r,
+            parentAccordionKey: a,
+        } = e;
         this.map.set(t.key, {
             node: t,
-            parentPanelKey: n,
-            parentTabKey: i,
-            parentCategoryKey: s,
-            parentAccordionKey: r,
+            parentSidebarItemKey: n,
+            parentPanelKey: i,
+            parentTabKey: s,
+            parentCategoryKey: r,
+            parentAccordionKey: a,
         });
     }
     entry(e) {

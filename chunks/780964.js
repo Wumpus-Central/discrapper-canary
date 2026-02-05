@@ -22,6 +22,7 @@ var r = (function (e) {
         (e.ACCOUNT_BACKUP_CODES_SETTING = "account_backup_codes_setting"),
         (e.ACCOUNT_SMS_BACKUP_AUTHENTICATION_SETTING = "account_sms_backup_authentication_setting"),
         (e.ACCOUNT_SECURITY_KEYS_SETTING = "account_security_keys_setting"),
+        (e.ACCOUNT_SESSIONS_NESTED_PANEL = "account_sessions_nested_panel"),
         (e.ACCOUNT_REMOVAL_CATEGORY = "account_removal_category"),
         (e.ACCOUNT_REMOVAL_SETTING = "account_removal_setting"),
         (e.ACCOUNT_STANDING_TAB = "account_standing_tab"),

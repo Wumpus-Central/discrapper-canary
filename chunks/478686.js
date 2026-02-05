@@ -7,6 +7,7 @@ n.d(t, {
                 return (
                     s.register({
                         node: t,
+                        parentSidebarItemKey: r.sidebarItem,
                         parentPanelKey: r.panel?.key,
                         parentTabKey: r.tab?.key,
                         parentCategoryKey: r.category?.key,
@@ -15,8 +16,9 @@ n.d(t, {
                     t
                 );
             let a = r;
-            t.type === i.Z6.SIDEBAR_ITEM && (a = { ...r, panel: t.layout[0] }),
+            t.type === i.Z6.SIDEBAR_ITEM && (a = { ...r, sidebarItem: t.key, panel: t.layout[0] }),
                 t.type === i.Z6.PANEL && (a = { ...r, panel: t }),
+                t.type === i.Z6.NESTED_PANEL && (a = { ...r, panel: t.layout[0] }),
                 t.type === i.Z6.CATEGORY && (a = { ...r, category: t }),
                 t.type === i.Z6.ACCORDION && (a = { ...r, accordion: t }),
                 t.type === i.Z6.TAB_ITEM && (a = { ...r, tab: t });
@@ -30,6 +32,7 @@ n.d(t, {
             return (
                 s.register({
                     node: o,
+                    parentSidebarItemKey: a.sidebarItem,
                     parentPanelKey: a.panel?.key,
                     parentTabKey: a.tab?.key,
                     parentCategoryKey: a.category?.key,

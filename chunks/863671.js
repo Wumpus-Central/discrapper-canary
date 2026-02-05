@@ -1,4 +1,4 @@
-i.d(e, { $: () => N });
+i.d(e, { $: () => N, C: () => I });
 var n = i(64700),
     l = i(934551),
     s = i(554146),
@@ -33,7 +33,7 @@ let _ = (0, a.zZ)(o.X.SESSIONS_CATEGORY, {
     }),
     I = (0, a.t_)(o.X.SESSIONS_PANEL, {
         usePredicate: () => (0, d.dk)("SessionsPanel"),
-        useTitle: () => g.intl.string(g.t["+1h0k/"]),
+        useTitle: () => ((0, d._A)("SessionsPanel") ? g.intl.string(g.t.mEndXM) : g.intl.string(g.t["+1h0k/"])),
         hideInStreamerMode: !0,
         buildLayout: () => [_],
     }),
@@ -43,4 +43,5 @@ let _ = (0, a.zZ)(o.X.SESSIONS_CATEGORY, {
         icon: l.LaptopPhoneIcon,
         trailing: { type: u.S.BADGE_NEW, getDismissibleContentTypes: () => [s.M.AUTH_SESSIONS_NEW] },
         buildLayout: () => ((0, d.WJ)("SessionsPanel") ? [I] : [c]),
+        usePredicate: () => !(0, d._A)("SessionsPanel"),
     });
