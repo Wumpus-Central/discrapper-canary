@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { e: () => f });
+n.d(t, { v: () => f });
 var r = n(627968),
     i = n(64700),
     a = n(835245),
@@ -23,34 +23,39 @@ let _ = [
         },
     ],
     f = {
-        name: "Add Payment Step",
-        id: "add-payment-step",
-        component: (e) => {
-            let { useStripeElements: t } = e,
-                { analyticsLocations: n } = (0, o.Ay)(s.A.PAYMENT_FLOW_TEST_PAGE),
-                l = i.useMemo(() => (0, a.A)(), []),
-                u = i.useCallback(() => {}, []);
-            return (0, r.jsx)(
-                c.dL,
-                {
-                    stepConfigs: _,
-                    analyticsLocations: n,
-                    applicationId: d.FYj,
-                    initialPlanId: void 0,
-                    skuId: null,
-                    isGift: !1,
-                    hideErrors: !1,
-                    loadId: l,
-                    purchaseType: d.VVm.ONE_TIME,
-                    disablePurchases: !0,
-                    excludeSubscriptionPlansBySKU: !0,
-                    renderHeader: () => null,
-                    onClose: u,
-                    onComplete: () => {},
-                    paymentContextOverrides: { paymentElementsEnabled: t },
+        title: "Add Payment (Legacy Checkout)",
+        stories: [
+            {
+                name: "Add Payment Step",
+                id: "add-payment-step",
+                component: (e) => {
+                    let { useStripeElements: t } = e,
+                        { analyticsLocations: n } = (0, o.Ay)(s.A.PAYMENT_FLOW_TEST_PAGE),
+                        l = i.useMemo(() => (0, a.A)(), []),
+                        u = i.useCallback(() => {}, []);
+                    return (0, r.jsx)(
+                        c.dL,
+                        {
+                            stepConfigs: _,
+                            analyticsLocations: n,
+                            applicationId: d.FYj,
+                            initialPlanId: void 0,
+                            skuId: null,
+                            isGift: !1,
+                            hideErrors: !1,
+                            loadId: l,
+                            purchaseType: d.VVm.ONE_TIME,
+                            disablePurchases: !0,
+                            excludeSubscriptionPlansBySKU: !0,
+                            renderHeader: () => null,
+                            onClose: u,
+                            onComplete: () => {},
+                            paymentContextOverrides: { paymentElementsEnabled: t },
+                        },
+                        `${l}-${t}`,
+                    );
                 },
-                `${l}-${t}`,
-            );
-        },
-        controls: { useStripeElements: { label: "Use Stripe Elements", type: "boolean", defaultValue: !1 } },
+                controls: { useStripeElements: { label: "Use Stripe Elements", type: "boolean", defaultValue: !1 } },
+            },
+        ],
     };

@@ -1,6 +1,5 @@
 "use strict";
 e.exports = {
-    Du: "stepBody_bf1b4a",
     qL: "bodyColumnMiddle_bf1b4a",
     mT: "bodyColumnLeft_bf1b4a",
     Tc: "bodyColumnRight_bf1b4a",

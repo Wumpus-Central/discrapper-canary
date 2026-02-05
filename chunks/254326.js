@@ -83,7 +83,7 @@ let h = (0, i.createContext)({
                 renderRightColumn: s,
                 ctaDisabled: o,
                 loading: l,
-            } = (0, _.eI)({ handleStepChange: r, handleClose: i });
+            } = (0, _.e)({ handleStepChange: r, handleClose: i });
         return t({
             paymentModalStepProps: n,
             unifiedStepProps: {
