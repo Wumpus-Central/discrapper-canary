@@ -23,7 +23,12 @@ function x(e) {
         contentClassName: m.hQ,
         height: 560,
         children: [
-            (0, a.jsx)(c.A, { analyticsLocations: o, handleOpenUserProfileModal: t, numWishlistItemsToRecommend: 9 }),
+            (0, a.jsx)(c.A, {
+                analyticsLocations: o,
+                handleOpenUserProfileModal: t,
+                numWishlistItemsToRecommend: 9,
+                className: m.KN,
+            }),
             (0, a.jsx)("div", {
                 className: m.UD,
                 children: (0, a.jsx)(s.$nd, {

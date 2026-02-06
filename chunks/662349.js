@@ -30,15 +30,15 @@ function _(e) {
     });
 }
 function f(e) {
-    let { onClick: t, isHoveringOrFocusing: n, currentUser: a, wishlistOwner: s, isOwned: l } = e,
-        { label: u, icon: d } = i.useMemo(
+    let { onClick: t, isHoveringOrFocusing: n, currentUser: a, wishlistOwner: s, isOwned: l, hideIcon: u } = e,
+        { label: d, icon: f } = i.useMemo(
             () =>
                 null == s || s.id === a?.id || l
                     ? { label: c.intl.string(c.t.FdGl5A), icon: void 0 }
-                    : { label: c.intl.string(c.t.ilhtIa), icon: o.okO },
-            [l, s, a],
+                    : { label: c.intl.string(c.t.ilhtIa), icon: u ? void 0 : o.okO },
+            [l, s, a, u],
         );
-    return (0, r.jsx)(_, { label: u, icon: d, onClick: t, isHoveringOrFocusing: n });
+    return (0, r.jsx)(_, { label: d, icon: f, onClick: t, isHoveringOrFocusing: n });
 }
 function p(e) {
     let { sku: t, onClick: n, isHoveringOrFocusing: a } = e,
