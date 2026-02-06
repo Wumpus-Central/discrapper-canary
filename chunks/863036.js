@@ -14,12 +14,12 @@ var u = n(735438),
     A = n(860689),
     I = n(734057),
     T = n(652215);
-let y = T.XlH.CLOSED,
-    S = {},
+let S = T.XlH.CLOSED,
+    y = {},
     v = {},
     C = !1,
-    b = !1,
-    N = null,
+    N = !1,
+    b = null,
     R = [
         "name",
         "type",
@@ -62,15 +62,15 @@ function O(e) {
 function D(e) {
     let t = I.A.getChannel(e.channelId);
     if (null == t) return w();
-    (y = T.XlH.OPEN),
+    (S = T.XlH.OPEN),
         (s = a = t),
-        (N = "location" in e && null != e.location ? e.location : null),
+        (b = "location" in e && null != e.location ? e.location : null),
         (i = "subsection" in e ? e.subsection : null),
         null != s && (s = s.set("nsfw", s.isNSFW())),
         (o = I.A.getChannel(s.parent_id)),
         (l = s.getGuildId());
     let n = s.isModeratorReportChannel() ? T.p_A.PERMISSIONS : T.p_A.OVERVIEW;
-    return (S = {}), L({ type: "CHANNEL_SETTINGS_SET_SECTION", section: r ?? n, subsection: i }), !0;
+    return (y = {}), L({ type: "CHANNEL_SETTINGS_SET_SECTION", section: r ?? n, subsection: i }), !0;
 }
 function L(e) {
     (r = e.section),
@@ -86,17 +86,17 @@ function L(e) {
             ));
 }
 function w() {
-    (b = !1), (y = T.XlH.CLOSED), (r = null), (s = a = null), (o = null), (v = {});
+    (N = !1), (S = T.XlH.CLOSED), (r = null), (s = a = null), (o = null), (v = {});
 }
 function x() {
-    (y = T.XlH.SUBMITTING), (S = {});
+    (S = T.XlH.SUBMITTING), (y = {});
 }
-function P() {
-    (a = s), (y = T.XlH.OPEN);
+function M() {
+    (a = s), (S = T.XlH.OPEN);
 }
-function M(e) {
-    (y = T.XlH.OPEN),
-        (S = Object.keys(e.errors ?? {}).reduce((t, n) => {
+function P(e) {
+    (S = T.XlH.OPEN),
+        (y = Object.keys(e.errors ?? {}).reduce((t, n) => {
             let r = e.errors[n];
             return (0, u.isArray)(r) ? (t[n] = r.join("\n")) : (t[n] = r), t;
         }, {}));
@@ -129,8 +129,8 @@ function U(e) {
         availableTags: A,
         defaultSortOrder: I,
         defaultForumLayout: T,
-        defaultTagSetting: y,
-        iconEmoji: S,
+        defaultTagSetting: S,
+        iconEmoji: y,
         themeColor: v,
     } = e;
     if (null == s) return !1;
@@ -153,9 +153,9 @@ function U(e) {
         void 0 !== m && (s = s.set("defaultReactionEmoji", m)),
         null != A && (s = s.set("availableTags", A)),
         null != I && (s = s.set("defaultSortOrder", I)),
-        null != y && (s = s.set("defaultTagSetting", y)),
+        null != S && (s = s.set("defaultTagSetting", S)),
         null != T && (s = s.set("defaultForumLayout", T)),
-        void 0 !== S && (s = s.set("iconEmoji", S)),
+        void 0 !== y && (s = s.set("iconEmoji", y)),
         null != v && (s = s.set("themeColor", v)),
         k();
 }
@@ -172,15 +172,16 @@ function G(e) {
         maxAge: e.max_age,
         createdAt: _()(e.created_at),
         type: e.type,
+        roles: e.roles,
     });
 }
-function V(e) {
+function F(e) {
     (v = {}),
         e.invites.forEach((e) => {
             v[e.code] = G(e);
         });
 }
-function F(e) {
+function V(e) {
     (v = { ...v }), delete v[e.code];
 }
 function B(e) {
@@ -205,7 +206,7 @@ function W(e) {
         channel: { id: t },
     } = e;
     if (null == s || s.id !== t) return !1;
-    y = T.XlH.CLOSED;
+    S = T.XlH.CLOSED;
 }
 function K(e) {
     let { overwriteId: t } = e;
@@ -220,7 +221,7 @@ class z extends f.Ay.Store {
         return s !== a;
     }
     isOpen() {
-        return b;
+        return N;
     }
     getSection() {
         return r;
@@ -235,40 +236,40 @@ class z extends f.Ay.Store {
         return s;
     }
     getFormState() {
-        return y;
+        return S;
     }
     getCategory() {
         return o;
     }
     getProps() {
         return {
-            submitting: y === T.XlH.SUBMITTING,
-            errors: S,
+            submitting: S === T.XlH.SUBMITTING,
+            errors: y,
             channel: s,
             section: r,
             subsection: i,
             invites: v,
             selectedOverwriteId: l,
             hasChanges: this.hasChanges(),
-            analyticsLocation: N,
+            analyticsLocation: b,
         };
     }
 }
 let $ = new z(h.h, {
         CHANNEL_SETTINGS_INIT: D,
         CHANNEL_SETTINGS_SUBMIT: x,
-        CHANNEL_SETTINGS_SUBMIT_SUCCESS: P,
-        CHANNEL_SETTINGS_SUBMIT_FAILURE: M,
+        CHANNEL_SETTINGS_SUBMIT_SUCCESS: M,
+        CHANNEL_SETTINGS_SUBMIT_FAILURE: P,
         CHANNEL_SETTINGS_CLOSE: w,
         CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: Y,
         CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: Y,
         CHANNEL_SETTINGS_OVERWRITE_SELECT: K,
         CHANNEL_SETTINGS_UPDATE: U,
         CHANNEL_SETTINGS_SET_SECTION: L,
-        CHANNEL_SETTINGS_LOADED_INVITES: V,
+        CHANNEL_SETTINGS_LOADED_INVITES: F,
         CHANNEL_UPDATES: H,
         CHANNEL_DELETE: W,
-        INSTANT_INVITE_REVOKE_SUCCESS: F,
+        INSTANT_INVITE_REVOKE_SUCCESS: V,
         INSTANT_INVITE_CREATE_SUCCESS: B,
     }),
     q = $;
