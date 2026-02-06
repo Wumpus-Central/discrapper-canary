@@ -1,6 +1,7 @@
-n.d(t, { t: () => l });
+"use strict";
+n.d(t, { t: () => r });
 var i,
-    l =
+    r =
         (((i = {}).ACCENT = "accent"),
         (i.GREEN = "statusGreen"),
         (i.YELLOW = "statusYellow"),
