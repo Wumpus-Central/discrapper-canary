@@ -1,11 +1,11 @@
 "use strict";
 n.d(t, {
     B3: () => R,
-    BQ: () => P,
+    BQ: () => M,
     CI: () => E,
-    Fw: () => S,
+    Fw: () => y,
     GD: () => g,
-    J6: () => N,
+    J6: () => b,
     K3: () => L,
     Ko: () => p,
     Li: () => c.L,
@@ -15,12 +15,12 @@ n.d(t, {
     WQ: () => k,
     ZV: () => f,
     aJ: () => v,
-    eA: () => y,
+    eA: () => S,
     ej: () => I,
     fO: () => h,
     fP: () => A,
     gB: () => C,
-    hK: () => b,
+    hK: () => N,
     kL: () => w,
     mg: () => T,
     pc: () => G,
@@ -83,6 +83,7 @@ var r = n(735438),
             (e.QUEST_DEEP_LINK_UTIL = "quest_deep_link_util"),
             (e.YOU_TAB_PROFILE_HEADER = "you_tab_profile_header"),
             (e.QUEST_INSTRUCTIONS = "quest_instructions"),
+            (e.QUEST_ACTIVITY_BOTTOM_SHEET = "quest_activity_bottom_sheet"),
             (e.QUEST_PRIMARY_CTA = "quest_primary_cta"),
             e
         );
@@ -111,7 +112,7 @@ var A = (function (e) {
 })({});
 let I = "545364944258990091",
     T = "{reward_code}";
-var y = (function (e) {
+var S = (function (e) {
     return (
         (e.EXCLUDED_QUEST = "excluded_quest"),
         (e.UNKNOWN_QUEST = "unknown_quest"),
@@ -119,11 +120,11 @@ var y = (function (e) {
         e
     );
 })({});
-let S = "1333839522189938740",
+let y = "1333839522189938740",
     v = "1410358070831480904",
     C = "1420556874629251124",
-    b = "1402418703554842694",
-    N = new Set([l.yW.DESKTOP_ACCOUNT_PANEL_AREA, l.yW.MOBILE_HOME_DOCK_AREA]),
+    N = "1402418703554842694",
+    b = new Set([l.yW.DESKTOP_ACCOUNT_PANEL_AREA, l.yW.MOBILE_HOME_DOCK_AREA]),
     R = new Set([
         i.n.STREAM_ON_DESKTOP,
         i.n.PLAY_ON_DESKTOP,
@@ -161,7 +162,7 @@ var w = (function (e) {
     x = (function (e) {
         return (e.VIDEO = "task_video"), (e.PLAY = "task_play"), e;
     })({}),
-    P = (function (e) {
+    M = (function (e) {
         return (
             (e.VIRTUAL_CURRENCY = "reward_virtual_currency"),
             (e.COLLECTIBLE = "reward_collectible"),
@@ -169,7 +170,7 @@ var w = (function (e) {
             e
         );
     })({});
-let M = [
+let P = [
     { group: "task", filter: "task_play" },
     { group: "task", filter: "task_video" },
     { group: "reward", filter: "reward_virtual_currency" },
@@ -179,12 +180,12 @@ let M = [
 function k(e) {
     return Object.values(x).includes(e)
         ? { group: "task", filter: e }
-        : Object.values(P).includes(e)
+        : Object.values(M).includes(e)
           ? { group: "reward", filter: e }
           : null;
 }
 let U = ["reward", "task"],
-    G = Object.entries((0, r.groupBy)(M, "group")).sort((e, t) => {
+    G = Object.entries((0, r.groupBy)(P, "group")).sort((e, t) => {
         let n = U.indexOf(e[0]),
             r = U.indexOf(t[0]);
         return n < r ? -1 : +(r < n);
