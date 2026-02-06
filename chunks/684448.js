@@ -45,7 +45,7 @@ function h(e) {
             let e = null != N && !T && !O;
             return y || e
                 ? (0, r.jsxs)(r.Fragment, { children: [D, L] })
-                : (0, r.jsxs)(s.A, { delay: 150, tooltipClassName: h, children: [D, L] });
+                : (0, r.jsxs)(s.A, { delay: 150, className: h, children: [D, L] });
         };
     return (0, r.jsx)(o.Text, { variant: `text-${A}/medium`, color: "none", className: a()(f.ps, n), children: w() });
 }
