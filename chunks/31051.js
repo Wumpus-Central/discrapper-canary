@@ -1,4 +1,4 @@
-n.d(t, { A: () => j });
+n.d(t, { A: () => y });
 var i = n(627968),
     l = n(735438),
     a = n(158954),
@@ -119,7 +119,7 @@ let S = (e) => {
             disabled: t,
         });
     },
-    y = (e) => {
+    j = (e) => {
         let { message: t, header: n, body: l, compact: r, actionButton: o } = e;
         return (0, i.jsxs)(d.A, {
             className: v.og,
@@ -138,7 +138,7 @@ let S = (e) => {
                                 (0, i.jsx)(s.Exy, { type: "beta", variant: "expressive" }),
                                 (0, i.jsx)("h2", { className: v.DD, children: n }),
                                 (0, i.jsx)(s.Text, { variant: "text-md/medium", color: "text-subtle", children: l }),
-                                (0, i.jsx)("div", { className: v.UD, children: o }),
+                                null != o && (0, i.jsx)("div", { className: v.UD, children: o }),
                             ],
                         }),
                     ],
@@ -146,7 +146,7 @@ let S = (e) => {
             ],
         });
     },
-    j = (e) => {
+    y = (e) => {
         let { message: t, channel: n, compact: l } = e,
             a = t.premiumGroupInviteId,
             {
@@ -173,8 +173,13 @@ let S = (e) => {
         let A = (0, x.o1)({ sender: p, channel: n, isSender: g, inviteState: s });
         if (null == A) return null;
         let C = s === E.xI.PENDING,
-            I = g
-                ? (0, i.jsx)(b, { disabled: !C, invite: c, channel: n })
-                : (0, i.jsx)(S, { disabled: !C, invite: c, isExistingSub: null != h });
-        return (0, i.jsx)(y, { message: A.message, header: A.header, body: A.body, compact: l, actionButton: I });
+            I = null;
+        return (
+            (I = g
+                ? C
+                    ? (0, i.jsx)(b, { disabled: !1, invite: c, channel: n })
+                    : null
+                : (0, i.jsx)(S, { disabled: !C, invite: c, isExistingSub: null != h })),
+            (0, i.jsx)(j, { message: A.message, header: A.header, body: A.body, compact: l, actionButton: I })
+        );
     };

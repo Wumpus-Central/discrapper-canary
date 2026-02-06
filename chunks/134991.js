@@ -22,7 +22,7 @@ let h = (e) => {
         graphic: { type: "image", src: m },
         shouldShow: n,
         title: u.intl.format(c.default.bx8sR9, { premiumGroupProductName: (0, o.DP)() }),
-        body: u.intl.format(c.default.StWqzJ, { totalSeats: o.LM }),
+        body: u.intl.format(c.default.Pw4OFZ, { premiumGroupProductName: (0, o.DP)() }),
         onRequestClose: h,
         actions: [{ text: u.intl.string(c.default.DD26QR), onClick: x }],
     });
