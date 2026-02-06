@@ -17,7 +17,7 @@ let _ = { enableBuildOverrides: !1, enableEmojiClick: !0 },
     f = d(o.A.RULES, [(0, s.A)({ enableBuildOverrides: !0 })]),
     p = i().omit(d(o.A.RULES, [(0, s.A)(_)]), "paragraph", "newline"),
     h = d(o.A.CHANNEL_TOPIC_RULES, [
-        (0, s.A)({ ..._, emojiTooltipPosition: "bottom" }),
+        (0, s.A)({ ..._, emojiTooltipPosition: "bottom", shouldCloseDefaultModals: !0, shouldStopPropagation: !0 }),
         { codeBlock: { react: o.A.RULES.text.react } },
     ]),
     m = d(o.A.VOICE_CHANNEL_STATUS_RULES, [(0, s.A)({ ..._, enableEmojiClick: !1 })]),

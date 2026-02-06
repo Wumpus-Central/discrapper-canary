@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Y: () => N }), n(321073);
+n.d(t, { Y: () => b }), n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(735438),
@@ -310,13 +310,8 @@ let y = s.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
             },
             dismissable: { label: "Dismissable", type: "boolean", defaultValue: !0 },
         },
-    };
-function v(e) {
-    let { variant: t, immediateDelivery: n } = e,
-        [a, s] = i.useState(!1);
-    return (0, r.jsx)(c._P, { ...t, immediateDelivery: n ? { value: a, onChange: s } : void 0 });
-}
-let C = {
+    },
+    v = {
         purchaseButtonText: "Subscribe",
         totalDue: 999,
         renewalPrice: 1099,
@@ -324,8 +319,8 @@ let C = {
         period: "month",
         startDate: new Date(),
     },
-    b = { type: c.I0.Subscription, props: C },
-    N = {
+    C = { type: c.I0.Subscription, props: v },
+    b = {
         title: "Unified Checkout",
         stories: [
             S,
@@ -337,15 +332,19 @@ let C = {
             {
                 name: "Primitive: Legal Copy",
                 id: "unified-checkout-legal-copy",
-                component: v,
+                component: function (e) {
+                    let { variant: t = C, immediateDelivery: n } = e,
+                        [a, s] = i.useState(!1);
+                    return (0, r.jsx)(c._P, { ...t, immediateDelivery: n ? { value: a, onChange: s } : void 0 });
+                },
                 controls: {
                     variant: {
                         label: "Variant",
                         type: "select",
-                        defaultValue: b,
+                        defaultValue: C,
                         options: [
-                            { label: "Subscription", value: b },
-                            { label: "Subscription Trial", value: { type: c.I0.SubscriptionTrial, props: C } },
+                            { label: "Subscription", value: C },
+                            { label: "Subscription Trial", value: { type: c.I0.SubscriptionTrial, props: v } },
                             {
                                 label: "Orbs Redemption",
                                 value: { type: c.I0.OrbsRedemption, props: { purchaseButtonText: "Redeem" } },

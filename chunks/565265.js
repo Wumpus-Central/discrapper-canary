@@ -1,4 +1,4 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => _ });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -8,16 +8,13 @@ var i = n(627968),
     d = n(442433),
     c = n(46054),
     u = n(742589),
-    h = n(652215),
-    A = n(985018),
-    g = n(980017),
+    h = n(985018),
+    A = n(980017),
     m = n(206314);
 function p(e) {
     return e.matches("a") || "highlight" === e.className || e.className.includes("mention");
 }
-class _ extends l.Component {
-    _mouseDown = !1;
-    _mouseUp = !1;
+class g extends l.Component {
     handleOpenTopic = (e) => {
         let t = e.target;
         if ((0, r.vq)(t)) {
@@ -30,30 +27,12 @@ class _ extends l.Component {
             return (t) => (0, i.jsx)(e, { ...t, ...this.props });
         });
     };
-    onMouseDown = () => {
-        this._mouseDown = !0;
-    };
-    onMouseMove = () => {
-        this._mouseDown && (this._mouseDown = !1);
-    };
-    onMouseUp = (e) => {
-        this._mouseDown && e.button !== h.hE4.SECONDARY && this.handleOpenTopic(e),
-            (this._mouseUp = !0),
-            (this._mouseDown = !1);
-    };
     handleContextMenu = (e) => {
         let { channel: t, guild: l } = this.props;
         (0, d.L3)(e, async () => {
             let { default: e } = await n.e("17425").then(n.bind(n, 340968));
             return (n) => (0, i.jsx)(e, { ...n, channel: t, guild: l, includeTopic: !0 });
         });
-    };
-    handleClick = (e) => {
-        if (this._mouseUp) {
-            this._mouseUp = !1;
-            return;
-        }
-        this.handleOpenTopic(e);
     };
     render() {
         let { channel: e } = this.props;
@@ -64,21 +43,18 @@ class _ extends l.Component {
                   children: [
                       (0, i.jsx)(u.A.Divider, {}),
                       (0, i.jsxs)("div", {
-                          className: a()(g.At, g.lu, m.PT),
-                          onMouseDown: this.onMouseDown,
-                          onMouseMove: this.onMouseMove,
-                          onMouseUp: this.onMouseUp,
+                          className: a()(A.At, A.lu, m.PT),
                           onContextMenu: this.handleContextMenu,
-                          onClick: this.handleClick,
+                          onClick: this.handleOpenTopic,
                           children: [
                               (0, i.jsx)(o.DUT, {
-                                  onClick: this.handleClick,
-                                  "aria-label": A.intl.string(A.t.mKwsSp),
-                                  className: g.h8,
+                                  onClick: this.handleOpenTopic,
+                                  "aria-label": h.intl.string(h.t.mKwsSp),
+                                  className: A.h8,
                               }),
                               null == e.linkedLobby || t
                                   ? c.A.parseTopic(e.topic, !0, { channelId: e.id })
-                                  : A.intl.string(A.t["XJVlf/"]),
+                                  : h.intl.string(h.t["XJVlf/"]),
                           ],
                       }),
                   ],
@@ -86,4 +62,4 @@ class _ extends l.Component {
             : null;
     }
 }
-let x = _;
+let _ = g;
