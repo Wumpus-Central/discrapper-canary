@@ -24,38 +24,41 @@ function m(e) {
             role: E = "dialog",
             "aria-label": A,
             dismissable: I = !0,
-            onClose: T,
+            maxHeight: T = "default",
+            onClose: S,
             contentOutsideContainer: y,
-            trackingProps: S,
-            children: v,
+            trackingProps: v,
+            children: C,
         } = e,
-        C = i.useId(),
-        b = i.useMemo(() => ({ id: C, headingId: `heading-${C}`, onClose: T, dismissable: I }), [I, C, T]),
-        N = (0, f.kS)(t, n),
-        R = i.useRef(null);
+        N = i.useId(),
+        b = i.useMemo(() => ({ id: N, headingId: `heading-${N}`, onClose: S, dismissable: I }), [I, N, S]),
+        R = (0, f.kS)(t, n),
+        O = i.useRef(null);
     return (0, r.jsx)(_.V.Provider, {
         value: b,
         children: (0, r.jsx)(u.l, {
-            id: C,
+            id: N,
             role: E,
             "aria-label": A,
             "aria-labelledby": null != A ? void 0 : b.headingId,
             returnRef: g,
-            trackingProps: { ...S, impressionType: S?.impressionType ?? l.ImpressionTypes.MODAL },
+            trackingProps: { ...v, impressionType: v?.impressionType ?? l.ImpressionTypes.MODAL },
             children: (0, r.jsx)(c.xp, {
-                containerRef: R,
+                containerRef: O,
                 children: (0, r.jsx)(d.F, {
                     forceLevel: 1,
                     children: (0, r.jsxs)("div", {
-                        ref: R,
+                        ref: O,
                         className: s()(h.outerContainer, { [h.fullScreenOnMobile]: m }),
                         children: [
                             y,
                             (0, r.jsx)(o.animated.div, {
                                 "data-mana-component": "modal",
-                                className: s()(h.container, h[`size-${a}`], h[`padding-size-${p}`]),
-                                style: N,
-                                children: v,
+                                className: s()(h.container, h[`size-${a}`], h[`padding-size-${p}`], {
+                                    [h.maxHeightViewport]: "viewport" === T,
+                                }),
+                                style: R,
+                                children: C,
                             }),
                         ],
                     }),

@@ -66,8 +66,8 @@ function g(e) {
         [_, f] = i.useState("intro"),
         [g, E] = i.useState(!1),
         [A, I] = i.useState(!1),
-        [T, y] = i.useState(!1),
-        [S, v] = i.useState(null),
+        [T, S] = i.useState(!1),
+        [y, v] = i.useState(null),
         C = i.useCallback(async () => {
             if (
                 (v(null),
@@ -80,7 +80,7 @@ function g(e) {
             }
             return !0;
         }, [t, n, l, u, c]),
-        b = i.useCallback(async () => {
+        N = i.useCallback(async () => {
             if (
                 (v(null),
                 t > 0 && (await new Promise((e) => setTimeout(e, 1e3 * t))),
@@ -91,13 +91,13 @@ function g(e) {
                 throw Error("onComplete failed");
             }
         }, [t, a, o, u, c]),
-        N = [
+        b = [
             {
                 stepKey: "intro",
                 modalProps: {
                     title: "Verify radness",
                     subtitle: "To verify your radness, we need to ask you a few deep and personal questions.",
-                    notice: null != S ? { message: S.message, type: S.type } : void 0,
+                    notice: null != y ? { message: y.message, type: y.type } : void 0,
                 },
                 body: (0, r.jsx)(p, {}),
                 nextButtonProps: { text: "Verify" },
@@ -110,8 +110,8 @@ function g(e) {
                     subtitle:
                         "Before we get started verifying your radness, we need to make sure you're safe and sound.",
                     notice:
-                        null != S
-                            ? { message: S.message, type: S.type }
+                        null != y
+                            ? { message: y.message, type: y.type }
                             : T
                               ? {
                                     message: "Great job, helmets are important for protecting your brain!",
@@ -119,7 +119,7 @@ function g(e) {
                                 }
                               : void 0,
                 },
-                body: (0, r.jsx)(h, { setIsSafetyAccepted: E, setIsHelmetSelected: y }),
+                body: (0, r.jsx)(h, { setIsSafetyAccepted: E, setIsHelmetSelected: S }),
                 nextEnabled: g,
                 onNext: C,
             },
@@ -128,15 +128,15 @@ function g(e) {
                 modalProps: {
                     title: "Enter passcode",
                     subtitle: "Enter your passcode to complete the radness verification process.",
-                    notice: null != S ? { message: S.message, type: S.type } : void 0,
+                    notice: null != y ? { message: y.message, type: y.type } : void 0,
                 },
                 body: (0, r.jsx)(m, { setIsPasscodeValid: I }),
                 nextButtonProps: { text: "Verify passcode" },
                 nextEnabled: A,
             },
         ],
-        R = N.slice(1).map((e) => e.stepKey);
-    return (0, r.jsx)(s.t04, { steps: N, currentStepKey: _, numberedSteps: R, onStepChange: f, onComplete: b, ...d });
+        R = b.slice(1).map((e) => e.stepKey);
+    return (0, r.jsx)(s.t04, { steps: b, currentStepKey: _, numberedSteps: R, onStepChange: f, onComplete: N, ...d });
 }
 let E = {
     title: "Modal",
@@ -603,6 +603,122 @@ let E = {
                         { label: "Success", value: "success" },
                     ],
                 },
+            },
+        },
+        {
+            name: "BaseModal",
+            id: "base-modal",
+            component: function (e) {
+                let { dismissable: t, tallContent: n, ...i } = e;
+                return (0, r.jsxs)(u.BJc, {
+                    gap: 16,
+                    align: "center",
+                    children: [
+                        (0, r.jsx)(u.Text, {
+                            variant: "text-md/normal",
+                            children: "Click the button below to open the base modal",
+                        }),
+                        (0, r.jsx)(u.Button, {
+                            variant: "primary",
+                            text: "Open BaseModal",
+                            onClick: () =>
+                                (0, u.qfG)(
+                                    (e) =>
+                                        (0, r.jsx)(s.dWK, {
+                                            ...e,
+                                            ...i,
+                                            "aria-label": "Base Modal Example",
+                                            children: (0, r.jsx)(s.cwr, {
+                                                children: (0, r.jsxs)(u.BJc, {
+                                                    gap: 16,
+                                                    children: [
+                                                        (0, r.jsx)(u.Text, {
+                                                            variant: "text-lg/semibold",
+                                                            children: "BaseModal Content",
+                                                        }),
+                                                        (0, r.jsx)(u.Text, {
+                                                            variant: "text-md/normal",
+                                                            children:
+                                                                "This is the raw BaseModal container. It provides the modal chrome (animation, sizing, padding, focus management) without any opinionated header, body, or action bar layout.",
+                                                        }),
+                                                        n
+                                                            ? Array.from({ length: 20 }, (e, t) =>
+                                                                  (0, r.jsxs)(
+                                                                      u.Text,
+                                                                      {
+                                                                          variant: "text-md/normal",
+                                                                          children: [
+                                                                              "Item ",
+                                                                              t + 1,
+                                                                              " — This is filler content to demonstrate overflow and scrolling behavior.",
+                                                                          ],
+                                                                      },
+                                                                      t,
+                                                                  ),
+                                                              )
+                                                            : null,
+                                                    ],
+                                                }),
+                                            }),
+                                        }),
+                                    { dismissable: t },
+                                ),
+                        }),
+                    ],
+                });
+            },
+            controls: {
+                size: {
+                    label: "Size",
+                    type: "select",
+                    defaultValue: "md",
+                    options: [
+                        { label: "Small", value: "sm" },
+                        { label: "Medium", value: "md" },
+                        { label: "Large", value: "lg" },
+                        { label: "Extra Large", value: "xl" },
+                        { label: "Extra Extra Large", value: "xxl" },
+                    ],
+                },
+                paddingSize: {
+                    label: "Padding Size",
+                    type: "select",
+                    defaultValue: "sm",
+                    options: [
+                        { label: "Small (24px)", value: "sm" },
+                        { label: "Large (32px)", value: "lg" },
+                    ],
+                },
+                animationVariant: {
+                    label: "Animation Variant",
+                    type: "select",
+                    defaultValue: "default",
+                    options: [
+                        { label: "Default", value: "default" },
+                        { label: "Subtle", value: "subtle" },
+                    ],
+                },
+                fullScreenOnMobile: { label: "Full Screen on Mobile", type: "boolean", defaultValue: !0 },
+                role: {
+                    label: "Role",
+                    type: "select",
+                    defaultValue: "dialog",
+                    options: [
+                        { label: "Dialog", value: "dialog" },
+                        { label: "Alert Dialog", value: "alertdialog" },
+                    ],
+                },
+                maxHeight: {
+                    label: "Max Height",
+                    type: "select",
+                    defaultValue: "default",
+                    options: [
+                        { label: "Default", value: "default" },
+                        { label: "Viewport", value: "viewport" },
+                    ],
+                },
+                dismissable: { label: "Dismissable", type: "boolean", defaultValue: !0 },
+                tallContent: { label: "Tall Content", type: "boolean", defaultValue: !1 },
             },
         },
     ],
