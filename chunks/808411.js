@@ -15,7 +15,8 @@ let u = () => {
         [m, g] = i.useState("darkslategray"),
         [E, A] = i.useState("blanchedalmond"),
         [I, T] = i.useState("pink"),
-        y = i.useMemo(
+        [S, y] = i.useState(!0),
+        v = i.useMemo(
             () =>
                 Object.entries(o.fh).map((e) => {
                     let [t, n] = e;
@@ -23,7 +24,7 @@ let u = () => {
                 }),
             [],
         ),
-        S = i.useMemo(
+        C = i.useMemo(
             () =>
                 Object.entries(o.qP).map((e) => {
                     let [t, n] = e;
@@ -40,6 +41,7 @@ let u = () => {
                 weight: _,
                 variant: p,
                 override: { default: { background: m, gradientStart: E, gradientEnd: I } },
+                glowing: S,
             }),
             (0, r.jsx)(l.nB, {}),
             (0, r.jsx)(l.MG, {
@@ -81,7 +83,7 @@ let u = () => {
                         null !== e && h(e);
                     },
                     value: p,
-                    options: S,
+                    options: C,
                     selectionMode: "single",
                     fullWidth: !0,
                 }),
@@ -95,7 +97,16 @@ let u = () => {
                         null !== e && f(e);
                     },
                     value: _,
-                    options: y,
+                    options: v,
+                }),
+            }),
+            (0, r.jsx)(l.MG, {
+                children: (0, r.jsx)(s.Checkbox, {
+                    label: "Glowing",
+                    checked: S,
+                    onChange: (e) => {
+                        y(e);
+                    },
                 }),
             }),
             (0, r.jsx)(l.nB, {}),

@@ -21,35 +21,39 @@ let d = (e) => {
             weight: u = "light",
             variant: c,
             override: d,
-            labelledBy: _,
+            glowing: _ = !0,
+            labelledBy: f,
         } = e,
-        f = null != d && "unset" === c,
-        p = (0, o.Ay)(),
-        h = d?.[p] ?? d?.default,
-        m = i.useMemo(() => ((t - n) / (a - n)) * 100, [t, n, a]),
-        g = t === n,
-        E = f
-            ? {
-                  "--custom-background": h?.background,
-                  "--custom-gradient-start": h?.gradientStart,
-                  "--custom-gradient-end": h?.gradientEnd,
-                  "--custom-gradient-glow": h?.gradientEnd,
-              }
-            : {};
+        p = null != d && "unset" === c,
+        h = (0, o.Ay)(),
+        m = d?.[h] ?? d?.default,
+        g = i.useMemo(() => ((t - n) / (a - n)) * 100, [t, n, a]),
+        E = t === n,
+        A = {
+            ...(p
+                ? {
+                      "--custom-background": m?.background,
+                      "--custom-gradient-start": m?.gradientStart,
+                      "--custom-gradient-end": m?.gradientEnd,
+                      "--custom-gradient-glow": m?.gradientEnd,
+                  }
+                : {}),
+            ...(!_ && { "--custom-gradient-glow": "transparent" }),
+        };
     return (0, r.jsx)("div", {
         className: s()(l.progressContainer, l[u], l[c]),
-        style: E,
+        style: A,
         children: (0, r.jsxs)("div", {
-            className: s()(l.progress, { [l.empty]: g }),
-            style: { width: `${m}%` },
+            className: s()(l.progress, { [l.empty]: E }),
+            style: { width: `${g}%` },
             role: "meter",
             "aria-valuenow": t,
             "aria-valuemin": n,
             "aria-valuemax": a,
-            "aria-labelledby": _,
+            "aria-labelledby": f,
             children: [
-                (0, r.jsx)("div", { className: s()(l.glow, { [l.empty]: g }) }),
-                (0, r.jsx)("div", { className: s()(l.bar, l[c], { [l.empty]: g }) }),
+                (0, r.jsx)("div", { className: s()(l.glow, { [l.empty]: E }) }),
+                (0, r.jsx)("div", { className: s()(l.bar, l[c], { [l.empty]: E }) }),
             ],
         }),
     });
