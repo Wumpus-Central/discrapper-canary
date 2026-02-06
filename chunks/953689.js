@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => A, n: () => E });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -39,8 +39,8 @@ class g extends i.Component {
                 disabled: o,
                 className: u,
                 finePrint: d,
-                showPricingLink: g,
-                showWithdrawalWaiver: E,
+                showPricingLink: f,
+                showWithdrawalWaiver: g,
                 isTrial: A,
                 inReverseTrial: I,
                 isDiscount: T,
@@ -49,11 +49,11 @@ class g extends i.Component {
             } = this.props,
             { hasAcceptedEULA: v, hasAcceptedWithdrawalWaiver: C } = this.state;
         return (l()(!A || null != y, "subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true"),
-        a || (null != e && !i) || E)
+        a || (null != e && !i) || g)
             ? (0, r.jsxs)("div", {
                   className: u,
                   children: [
-                      E &&
+                      g &&
                           (0, r.jsx)(c.Heading, {
                               variant: "heading-md/semibold",
                               className: m.Hc,
@@ -77,7 +77,7 @@ class g extends i.Component {
                             })
                           : null,
                       null == d ? null : (0, r.jsx)("div", { className: s()(m.aO, S), children: d }),
-                      E
+                      g
                           ? (0, r.jsxs)("div", {
                                 className: u,
                                 children: [
@@ -91,7 +91,7 @@ class g extends i.Component {
                                 ],
                             })
                           : null,
-                      g &&
+                      f &&
                           (0, r.jsxs)("div", {
                               className: m.aO,
                               children: [
@@ -101,48 +101,56 @@ class g extends i.Component {
                                   }),
                               ],
                           }),
-                      A &&
-                          null != y &&
-                          (0, r.jsx)(c.Text, {
-                              variant: "text-xs/medium",
-                              color: "interactive-text-default",
-                              children: h.intl.format(h.t["Hvo/Z5"], {
-                                  buttonText: (0, f.ff)(null, y),
-                                  interval: f.Ay.formatInterval(y?.interval),
-                                  cancelSubscriptionArticle: _.A.getArticleURL(p.MVz.PREMIUM_DETAILS_CANCEL_SUB),
-                                  paidServiceTermsArticle: _.A.getArticleURL(p.MVz.PAID_TERMS),
-                              }),
-                          }),
-                      I &&
-                          null != y &&
-                          (0, r.jsx)(c.Text, {
-                              variant: "text-xs/medium",
-                              color: "interactive-text-default",
-                              children: h.intl.format(h.t.Oo2FeS, {
-                                  buttonText: (0, f.ff)(null, y),
-                                  interval: f.Ay.formatInterval(y?.interval),
-                                  cancelSubscriptionArticle: _.A.getArticleURL(p.MVz.PREMIUM_DETAILS_CANCEL_SUB),
-                                  paidServiceTermsArticle: _.A.getArticleURL(p.MVz.PAID_TERMS),
-                              }),
-                          }),
-                      T &&
-                          null != y &&
-                          (0, r.jsx)(c.Text, {
-                              variant: "text-xs/medium",
-                              color: "interactive-text-default",
-                              children: h.intl.format(h.t["Z2c+aV"], {
-                                  buttonText: (0, f.ff)(null, y),
-                                  interval: f.Ay.formatInterval(y?.interval),
-                                  cancelSubscriptionArticle: _.A.getArticleURL(p.MVz.PREMIUM_DETAILS_CANCEL_SUB),
-                                  paidServiceTermsArticle: _.A.getArticleURL(p.MVz.PAID_TERMS),
-                              }),
-                          }),
+                      (0, r.jsx)(E, { isTrial: A, subscriptionPlan: y, inReverseTrial: I, isDiscount: T }),
                   ],
               })
             : null;
     }
 }
-let E = u.Ay.connectStores([d.A], (e) => {
+function E(e) {
+    let { isTrial: t, subscriptionPlan: n, inReverseTrial: i, isDiscount: a } = e;
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            t &&
+                null != n &&
+                (0, r.jsx)(c.Text, {
+                    variant: "text-xs/medium",
+                    color: "interactive-text-default",
+                    children: h.intl.format(h.t["Hvo/Z5"], {
+                        buttonText: (0, f.ff)(null, n),
+                        interval: f.Ay.formatInterval(n?.interval),
+                        cancelSubscriptionArticle: _.A.getArticleURL(p.MVz.PREMIUM_DETAILS_CANCEL_SUB),
+                        paidServiceTermsArticle: _.A.getArticleURL(p.MVz.PAID_TERMS),
+                    }),
+                }),
+            i &&
+                null != n &&
+                (0, r.jsx)(c.Text, {
+                    variant: "text-xs/medium",
+                    color: "interactive-text-default",
+                    children: h.intl.format(h.t.Oo2FeS, {
+                        buttonText: (0, f.ff)(null, n),
+                        interval: f.Ay.formatInterval(n?.interval),
+                        cancelSubscriptionArticle: _.A.getArticleURL(p.MVz.PREMIUM_DETAILS_CANCEL_SUB),
+                        paidServiceTermsArticle: _.A.getArticleURL(p.MVz.PAID_TERMS),
+                    }),
+                }),
+            a &&
+                null != n &&
+                (0, r.jsx)(c.Text, {
+                    variant: "text-xs/medium",
+                    color: "interactive-text-default",
+                    children: h.intl.format(h.t["Z2c+aV"], {
+                        buttonText: (0, f.ff)(null, n),
+                        interval: f.Ay.formatInterval(n?.interval),
+                        cancelSubscriptionArticle: _.A.getArticleURL(p.MVz.PREMIUM_DETAILS_CANCEL_SUB),
+                        paidServiceTermsArticle: _.A.getArticleURL(p.MVz.PAID_TERMS),
+                    }),
+                }),
+        ],
+    });
+}
+let A = u.Ay.connectStores([d.A], (e) => {
     let { eulaId: t } = e;
     return { hasPreviouslyAcceptedEULA: null != t && d.A.hasAcceptedEULA(t) };
 })(g);

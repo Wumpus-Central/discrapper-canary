@@ -1,43 +1,51 @@
 "use strict";
-n.d(t, { XH: () => p, Z$: () => f, l$: () => m });
-var r = n(627968);
-n(64700);
-var i = n(158954),
-    a = n(854354),
-    s = n(270537),
-    o = n(934581),
-    l = n(446929),
-    u = n(299301),
-    c = n(888751),
-    d = n(985018),
-    _ = n(756366);
-let f = (e) => {
+n.d(t, { PI: () => b, XH: () => S, Z$: () => y, l$: () => C });
+var r = n(627968),
+    i = n(64700),
+    a = n(997101),
+    s = n(158954),
+    o = n(311907),
+    l = n(821891),
+    u = n(953689),
+    c = n(854354),
+    d = n(93159),
+    _ = n(270537),
+    f = n(934581),
+    p = n(446929),
+    h = n(299301),
+    m = n(615405),
+    g = n(927578),
+    E = n(156312),
+    A = n(888751),
+    I = n(985018),
+    T = n(756366);
+let y = (e) => {
         let {
                 isPrepaidPaymentSource: t,
                 invoiceSummaryTypeWithPreview: n,
                 subscriptionPlan: i,
-                premiumTrialOffer: o,
-                isCustomGift: l,
+                premiumTrialOffer: a,
+                isCustomGift: s,
             } = e,
-            { invoicePreview: f } = n,
-            p =
-                n.type === u.N$.PREMIUM_GIFT
-                    ? (0, c.fk)(f, { isCustomGift: l, isPrepaidPaymentSource: t, subscriptionPlan: i })
-                    : (0, c.iQ)(f, {
+            { invoicePreview: o } = n,
+            l =
+                n.type === h.N$.PREMIUM_GIFT
+                    ? (0, A.fk)(o, { isCustomGift: s, isPrepaidPaymentSource: t, subscriptionPlan: i })
+                    : (0, A.iQ)(o, {
                           isPrepaidPaymentSource: t,
                           invoiceSummaryTypeWithPreview: n,
                           subscriptionPlan: i,
-                          premiumTrialOffer: o,
+                          premiumTrialOffer: a,
                       }),
-            h = (0, a.lp)(f, { manualLineItems: p, addTaxLineItem: !0 });
-        return (0, r.jsx)(s.V, {
-            label: d.intl.string(_.default.eoXh7B),
-            lineItems: h,
-            currency: f.currency,
-            totalDueLabel: d.intl.string(_.default.R0cZsM),
+            u = (0, c.lp)(o, { manualLineItems: l, addTaxLineItem: !0 });
+        return (0, r.jsx)(_.V, {
+            label: I.intl.string(T.default.eoXh7B),
+            lineItems: u,
+            currency: o.currency,
+            totalDueLabel: I.intl.string(T.default.R0cZsM),
         });
     },
-    p = (e) => {
+    S = (e) => {
         let {
                 selectedPlanId: t,
                 priceOptions: n,
@@ -46,7 +54,7 @@ let f = (e) => {
                 subscriptionPeriodEnd: s,
                 discountInvoiceItems: o,
             } = e,
-            u = (0, l.RO)({
+            l = (0, p.RO)({
                 selectedPlanId: t,
                 priceOptions: n,
                 planOptions: i,
@@ -54,20 +62,58 @@ let f = (e) => {
                 subscriptionPeriodEnd: s,
                 discountInvoiceItems: o,
             });
-        return (0, r.jsx)(l.fJ, { planOptions: i, ...u, shouldUseUnifiedCheckoutUI: !0 });
+        return (0, r.jsx)(p.fJ, { planOptions: i, ...l, shouldUseUnifiedCheckoutUI: !0 });
     },
-    h = (e) => {
+    v = (e) => {
         let { fractionalPremiumInfo: t, isEligibleForTrial: n, trialPeriodCopy: r, subscriptionPeriodEnd: i } = e,
-            a = n ? { variant: o.uA.TRIAL, trialPeriod: r, trialEnd: i } : {};
-        return { fractionalPremiumBannerMessage: (0, o.NQ)({ fractionalPremiumInfo: t, ...a }) };
+            a = n ? { variant: f.uA.TRIAL, trialPeriod: r, trialEnd: i } : {};
+        return { fractionalPremiumBannerMessage: (0, f.NQ)({ fractionalPremiumInfo: t, ...a }) };
     },
-    m = (e) => {
-        let { fractionalPremiumInfo: t, isEligibleForTrial: n, trialPeriodCopy: a, subscriptionPeriodEnd: s } = e,
-            { fractionalPremiumBannerMessage: o } = h({
+    C = (e) => {
+        let { fractionalPremiumInfo: t, isEligibleForTrial: n, trialPeriodCopy: i, subscriptionPeriodEnd: a } = e,
+            { fractionalPremiumBannerMessage: o } = v({
                 fractionalPremiumInfo: t,
                 isEligibleForTrial: n,
-                trialPeriodCopy: a,
-                subscriptionPeriodEnd: s,
+                trialPeriodCopy: i,
+                subscriptionPeriodEnd: a,
             });
-        return null != o && "" !== o ? (0, r.jsx)(i.wx6, { type: "info", children: o }) : null;
+        return null != o && "" !== o ? (0, r.jsx)(s.wx6, { type: "info", children: o }) : null;
     };
+function b(e) {
+    let {
+            setHasAcceptedTerms: t,
+            isTrial: n,
+            isDiscount: s,
+            plan: c,
+            isGift: _,
+            priceOptions: f,
+            renewalInvoicePreview: p,
+            isEmbeddedIAP: h,
+            paymentSourceType: A,
+            inReverseTrial: I,
+        } = e,
+        { hasAcceptedTerms: T } = (0, E.P5)(),
+        y = (0, o.bG)([m.A], () => a.M.EEA_COUNTRIES.has(m.A.ipCountryCodeWithFallback)),
+        S = y ? { value: T, onChange: t } : void 0,
+        v = (0, g.y8)(c.id, !1, _, f);
+    return (
+        i.useLayoutEffect(() => {
+            t(!y);
+        }, [y, t]),
+        (0, r.jsxs)(d.tb, {
+            immediateDelivery: S,
+            children: [
+                (0, r.jsx)(l.W, {
+                    hide: n || s,
+                    subscriptionPlan: c,
+                    renewalInvoice: p,
+                    isGift: _,
+                    paymentSourceType: A,
+                    isEmbeddedIAP: h,
+                    basePrice: v,
+                }),
+                (0, r.jsx)(u.n, { isTrial: n, subscriptionPlan: c, inReverseTrial: I, isDiscount: s }),
+            ],
+        })
+    );
+}

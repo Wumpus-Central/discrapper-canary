@@ -58,6 +58,7 @@ let p = (e) => (0, r.jsx)(h, { ...e }),
             isStepLoading: l,
             paymentSelectContent: u,
             invoiceSummaryContent: c,
+            legalContent: d,
         } = e;
         return l
             ? (0, r.jsx)(g, {})
@@ -78,6 +79,7 @@ let p = (e) => (0, r.jsx)(h, { ...e }),
                       null != o && (0, r.jsx)("div", { className: f.P3, children: o }),
                       (0, r.jsx)("div", { className: f.Jv, children: u }),
                       (0, r.jsx)("div", { className: f.ZF, children: c }),
+                      d,
                   ],
               });
     };
