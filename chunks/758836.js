@@ -1,8 +1,8 @@
 "use strict";
 n.d(t, {
-    Bn: () => P,
+    Bn: () => M,
     Dp: () => U,
-    Dy: () => y,
+    Dy: () => S,
     G2: () => C,
     H1: () => O,
     MS: () => z,
@@ -12,21 +12,21 @@ n.d(t, {
     QB: () => B,
     Tq: () => I,
     Vk: () => W,
-    _6: () => F,
+    _6: () => V,
     ck: () => D,
     cw: () => R,
-    dF: () => N,
+    dF: () => b,
     gs: () => k,
     l5: () => x,
     md: () => L,
     nE: () => H,
     op: () => Y,
-    pQ: () => V,
-    rr: () => S,
+    pQ: () => F,
+    rr: () => y,
     uY: () => v,
     ue: () => K,
     x3: () => w,
-    xG: () => M,
+    xG: () => P,
 });
 var r = n(544198),
     i = n.n(r),
@@ -79,8 +79,8 @@ var T = (function (e) {
         e
     );
 })({});
-let y = 24,
-    S = 225;
+let S = 24,
+    y = 225;
 var v = (function (e) {
         return (
             (e.SEARCH_ICON = "search icon"), (e.SEARCH_BAR = "search bar"), (e.SEARCH_BAR_CLEAR = "search bar clear"), e
@@ -95,12 +95,12 @@ var v = (function (e) {
             (e.PROFILE_EFFECTS = "profile-effects"),
             (e.NAMEPLATES = "nameplates"),
             (e.BUNDLES = "bundles"),
-            (e.COLLECTION_INDEX = "collection-index-page"),
+            (e.LAYOUT = "layout"),
             e
         );
     })({});
-let b = ["avatar-decorations", "profile-effects", "nameplates", "bundles"],
-    N = (e) => b.includes(e),
+let N = ["avatar-decorations", "profile-effects", "nameplates", "bundles"],
+    b = (e) => N.includes(e),
     R = (e) => null != e && "home" !== e && "catalog" !== e,
     O = 800,
     D = [
@@ -442,8 +442,8 @@ let b = ["avatar-decorations", "profile-effects", "nameplates", "bundles"],
     L = 12,
     w = 60,
     x = 5,
-    P = 3,
-    M = ["1212569433839636530", "1212570343567261736", "1212582298893946880"];
+    M = 3,
+    P = ["1212569433839636530", "1212570343567261736", "1212582298893946880"];
 var k = (function (e) {
     return (
         (e[(e.FIAT = 0)] = "FIAT"),
@@ -457,8 +457,8 @@ var k = (function (e) {
 })({});
 let U = { ORB_PROFILE_BADGE: "1342211853484429445", FRACTIONAL_PREMIUM: _.j.PREMIUM_TIER_2_3_DAY },
     G = new Set(Object.values(U)),
-    V = (e) => G.has(e),
-    F = [u.q.AVATAR_DECORATION, u.q.PROFILE_EFFECT, u.q.NAMEPLATE, u.q.BUNDLE],
+    F = (e) => G.has(e),
+    V = [u.q.AVATAR_DECORATION, u.q.PROFILE_EFFECT, u.q.NAMEPLATE, u.q.BUNDLE],
     B = [
         { sortType: d.$.RELEVANCE, sortDirection: c.A.DESC },
         { sortType: d.$.RECENCY, sortDirection: c.A.DESC },

@@ -28,7 +28,7 @@ var i = n(627968),
     L = n(264140),
     O = n(72800),
     R = n(811736),
-    P = n(898455),
+    P = n(696086),
     j = n(500831),
     D = n(491026),
     w = n(920814),
@@ -527,15 +527,13 @@ function ti() {
                                                 }),
                                                 h &&
                                                     (0, i.jsx)(b.A, {
-                                                        path: eO.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(
-                                                            ":collectionId",
-                                                        ),
+                                                        path: eO.BVt.COLLECTIBLES_SHOP_LAYOUT(":layoutId"),
                                                         render: function (e) {
                                                             let { match: t, ...n } = e,
-                                                                { collectionId: r } = t.params;
+                                                                { layoutId: r } = t.params;
                                                             return null == r || "" === r
                                                                 ? (0, i.jsx)(R.A, { ...n })
-                                                                : (0, i.jsx)(P.A, { collectionId: r, ...n });
+                                                                : (0, i.jsx)(P.A, { layoutId: r, ...n });
                                                         },
                                                         disableTrack: !0,
                                                     }),
