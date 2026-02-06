@@ -28,8 +28,8 @@ function v(e, t, n) {
     let y = c.A.getCurrentlySelectedChannelId(),
         N = u.A.getChannel(y),
         O = r.A.getApplication(t),
-        b = o.Ay.getRunningGames().find((e) => e.id === t),
-        j = b?.name ?? O?.name,
+        j = o.Ay.getRunningGames().find((e) => e.id === t),
+        b = j?.name ?? O?.name,
         w = (0, A.mG)(N?.guild_id, N?.id, v),
         L = (0, i.jsxs)("div", {
             className: C.Ql,
@@ -46,10 +46,10 @@ function v(e, t, n) {
                         className: C.G3,
                         children: T.intl.format(T.t["q7/rgv"], {
                             username: w ?? v.username,
-                            gameName: j,
+                            gameName: b,
                             gameIcon: () =>
-                                null != O || null != b
-                                    ? (0, i.jsx)(d.A, { game: O, pid: b?.pid, size: d.M.XSMALL, className: C.Gt })
+                                null != O || null != j
+                                    ? (0, i.jsx)(d.A, { game: O, pid: j?.pid, size: d.M.XSMALL, className: C.Gt })
                                     : null,
                         }),
                     }),
@@ -60,7 +60,7 @@ function v(e, t, n) {
             notif_type: S.KS.NowPlayingNotification,
             notif_user_id: v.id,
             activity_type: n.type,
-            activity_name: j ?? n.name,
+            activity_name: b ?? n.name,
         }),
         { hasChat: M } = (0, g.NI)("nowPlayingNotification");
     return {
@@ -68,6 +68,7 @@ function v(e, t, n) {
         className: C.dn,
         wrapperClassName: C.P6,
         animationWrapperClassName: C.VG,
+        clickZoneClassName: C.EO,
         maxBodyLines: 1,
         disableClickableRegions: !M,
         onNotificationShow: () => {

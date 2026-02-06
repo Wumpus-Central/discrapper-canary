@@ -1,39 +1,43 @@
-n.d(t, { t: () => L }), n(321073);
+n.d(t, { t: () => P }), n(321073);
 var l = n(627968),
     i = n(64700),
-    s = n(735438),
-    r = n(837381),
+    r = n(735438),
+    s = n(837381),
     a = n(311907),
     u = n(397927),
     o = n(928039),
     d = n(47167),
-    c = n(485947),
-    h = n(379078),
-    g = n(704554),
-    I = n(594831),
-    E = n(734057),
+    c = n(379078),
+    h = n(704554),
+    g = n(594831),
+    I = n(734057),
     f = n(71393),
-    A = n(994500),
+    A = n(222823),
+    E = n(994500),
     m = n(287809),
     S = n(645959),
     p = n(256415),
     N = n(403362),
     T = n(996439),
     _ = n(810412),
-    y = n(914853),
-    C = n(437331),
-    x = n(91868),
-    v = n(406595),
-    M = n(652215),
-    D = n(895867),
-    R = n(985018),
-    U = n(416001);
-function O(e) {
+    C = n(914853),
+    y = n(179917),
+    x = n(419072),
+    v = n(437331),
+    M = n(91868),
+    D = n(554932),
+    R = n(406595),
+    U = n(557404),
+    O = n(652215),
+    G = n(895867),
+    b = n(985018),
+    w = n(416001);
+function L(e) {
     return Array.from(e).sort();
 }
-let G = (0, s.throttle)(
+let F = (0, r.throttle)(
         (e) => {
-            (0, _.Y)(M.uss.FRIENDS, {
+            (0, _.Y)(O.uss.FRIENDS, {
                 locked: p.default.isInstanceLocked(),
                 shownUserIds: e.shownUserIds,
                 liveUserIds: [],
@@ -43,21 +47,21 @@ let G = (0, s.throttle)(
         3e3,
         { leading: !0, trailing: !1 },
     ),
-    b = {
-        searchType: h.n.REGEX,
-        sortType: h.r.JARO_WINKLER,
+    k = {
+        searchType: c.n.REGEX,
+        sortType: c.r.JARO_WINKLER,
         searchStringGenerator: (e) => {
             let { channel: t } = e,
-                n = [(0, d.m1)(t, m.default, A.A), t.name, t.id];
+                n = [(0, d.m1)(t, m.default, E.A), t.name, t.id];
             if (t.isDM()) {
                 let e = t.getRecipientId(),
                     l = m.default.getUser(e),
-                    i = A.A.getNickname(e);
+                    i = E.A.getNickname(e);
                 n.push(l?.username, l?.globalName, i);
             } else if (t.isMultiUserDM())
                 for (let e of t.recipients ?? []) {
                     let t = m.default.getUser(e),
-                        l = A.A.getNickname(e);
+                        l = E.A.getNickname(e);
                     n.push(t?.username, t?.globalName, l);
                 }
             let l = null != t.guild_id ? (f.A.getGuild(t.guild_id)?.name ?? null) : null;
@@ -65,105 +69,171 @@ let G = (0, s.throttle)(
         },
         throttleMs: 100,
     };
-function w(e) {
-    let { title: t } = e;
-    return (0, l.jsx)(c.A, { className: U.uW, children: t });
-}
-function L() {
+function P() {
     let e,
         { onPrimaryAction: t, onContextMenu: n } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        [s, d] = i.useState(""),
-        c = s.trim().toLowerCase(),
-        h =
-            ((e = (0, I.Dz)()),
-            (0, a.yK)([S.default, E.A], () => {
+        [r, d] = i.useState(""),
+        c = r.trim().toLowerCase(),
+        f =
+            ((e = (0, g.Dz)()),
+            (0, a.yK)([S.default, I.A], () => {
                 let t = [];
                 for (let e of S.default.getPrivateChannelIds()) {
-                    let n = E.A.getChannel(e);
+                    let n = I.A.getChannel(e);
                     null != n && t.push({ channel: n, voiceStates: [] });
                 }
                 for (let n of e) t.push(n);
                 return t;
             }, [e])),
-        [f, A] = i.useState([]);
-    (0, g.RT)(s, h, A, b);
-    let m = i.useRef(null),
-        p = (0, o.A)("friends-widget-messages", m),
-        [N, M] = (0, a.bG)([v.A], () => v.A.getFavoriteTargetIdsForTab(y.x.MESSAGES), [], T.D),
-        [L, k] = (0, a.bG)(
-            [x.A],
+        [E, m] = i.useState([]);
+    (0, h.RT)(r, f, m, k);
+    let p = i.useRef(null),
+        N = (0, o.A)("friends-widget-messages", p),
+        [O, P] = (0, a.bG)([R.A], () => R.A.getFavoriteTargetIdsForTab(C.x.MESSAGES), [], T.D),
+        [j, V] = (0, a.bG)(
+            [M.A],
             () => {
-                let [e, t] = x.A.getRows(x.Y.ACTIVE_NOW),
-                    [n] = x.A.getRows(x.Y.DMS),
-                    [l] = x.A.getRows(x.Y.RECENT_TEXT),
+                let [e, t] = M.A.getRows(M.Y.ACTIVE_NOW),
+                    [n] = M.A.getRows(M.Y.DMS),
+                    [l] = M.A.getRows(M.Y.RECENT_TEXT),
                     i = n.slice(0, 5),
-                    s = l.slice(0, 8);
-                return [{ activeNowRows: e.slice(0, 10), dmRows: i, recentTextRows: s }, t];
+                    r = l.slice(0, 8);
+                return [{ activeNowRows: e.slice(0, 10), dmRows: i, recentTextRows: r }, t];
             },
             [],
             T.D,
         ),
-        F = i.useMemo(() => {
-            let e = [];
-            return 0 === k
-                ? []
-                : ("" !== c
-                      ? e.push({
-                            kind: "SEARCH_RESULTS",
-                            key: "SEARCH_RESULTS",
-                            title: R.intl.string(D.default.HGimIS),
-                            channelIds: f.map((e) => e.channel.id),
-                            length: f.length,
-                        })
-                      : (N.length > 0 &&
-                            M > 0 &&
-                            e.push({
-                                kind: "FAVORITES",
-                                key: "FAVORITES",
-                                title: R.intl.string(D.default.GKTlS6),
-                                channelIds: N,
-                                length: N.length,
-                            }),
-                        L.dmRows.length > 0 &&
-                            e.push({
-                                kind: "DMS",
-                                key: "DMS",
-                                title: R.intl.string(R.t.YUU0RF),
-                                channelIds: L.dmRows.map((e) => e.channelId),
-                                length: L.dmRows.length,
-                            }),
-                        L.activeNowRows.length > 0 &&
-                            e.push({
-                                kind: "ACTIVE_NOW",
-                                key: "ACTIVE_NOW",
-                                title: R.intl.string(D.default.d3yO98),
-                                channelIds: L.activeNowRows.map((e) => e.channelId),
-                                length: L.activeNowRows.length,
-                            }),
-                        L.recentTextRows.length > 0 &&
-                            e.push({
-                                kind: "TEXT_CHANNELS",
-                                key: "TEXT_CHANNELS",
-                                title: R.intl.string(D.default.uC6Lhg),
-                                channelIds: L.recentTextRows.map((e) => e.channelId),
-                                length: L.recentTextRows.length,
-                            })),
-                  e);
-        }, [c, N, L.activeNowRows, L.dmRows, L.recentTextRows, M, f, k]),
-        P = i.useMemo(() => F.map((e) => e.length), [F]),
-        j = (0, _.Dk)(() => {
+        H = (0, a.bG)([x.A], () => x.A.getCollapsedSectionOverridesForTab(C.x.MESSAGES), []),
+        Y = i.useCallback((e) => {
+            (0, D.G)({ tab: C.x.MESSAGES, sectionKey: e });
+        }, []),
+        W = i.useMemo(() => {
             let e = new Set();
-            for (let t of F) for (let n of t.channelIds) e.add(n);
+            for (let t of O) e.add(t);
+            for (let t of j.dmRows) e.add(t.channelId);
+            for (let t of j.activeNowRows) e.add(t.channelId);
+            for (let t of j.recentTextRows) e.add(t.channelId);
+            return Array.from(e);
+        }, [O, j.activeNowRows, j.dmRows, j.recentTextRows]),
+        { unreadOrMentionChannels: z } = (0, a.cf)([A.Ay], () => {
+            let e = new Set();
+            for (let t of W) {
+                let n = A.Ay.hasUnread(t),
+                    l = A.Ay.getMentionCount(t),
+                    i = A.Ay.getIsMentionLowImportance(t),
+                    r = l > 0 && !i;
+                (n || r) && e.add(t);
+            }
+            return { unreadOrMentionChannels: e };
+        }, [W]),
+        $ = i.useMemo(() => {
+            let e = (e) => !0 === H[e],
+                t = (e) => z.has(e),
+                n = [];
+            if (0 === V) return [];
+            if ("" !== c)
+                return (
+                    n.push({
+                        kind: "SEARCH_RESULTS",
+                        key: "SEARCH_RESULTS",
+                        title: b.intl.string(G.default.HGimIS),
+                        count: E.length,
+                        channelIds: E.map((e) => e.channel.id),
+                        length: E.length,
+                    }),
+                    n
+                );
+            if (O.length > 0 && P > 0) {
+                let l = e("FAVORITES") ? O.filter(t) : O;
+                n.push({
+                    kind: "FAVORITES",
+                    key: "FAVORITES",
+                    title: b.intl.string(G.default.GKTlS6),
+                    count: O.length,
+                    channelIds: l,
+                    length: Math.max(l.length, 1),
+                });
+            }
+            if (j.activeNowRows.length > 0) {
+                let l = j.activeNowRows.map((e) => e.channelId),
+                    i = e("ACTIVE_NOW") ? l.filter(t) : l;
+                n.push({
+                    kind: "ACTIVE_NOW",
+                    key: "ACTIVE_NOW",
+                    title: b.intl.string(G.default.d3yO98),
+                    count: l.length,
+                    channelIds: i,
+                    length: Math.max(i.length, 1),
+                });
+            }
+            if (j.dmRows.length > 0) {
+                let l = j.dmRows.map((e) => e.channelId),
+                    i = e("DMS") ? l.filter(t) : l;
+                n.push({
+                    kind: "DMS",
+                    key: "DMS",
+                    title: b.intl.string(b.t.YUU0RF),
+                    count: l.length,
+                    channelIds: i,
+                    length: Math.max(i.length, 1),
+                });
+            }
+            if (j.recentTextRows.length > 0) {
+                let l = j.recentTextRows.map((e) => e.channelId),
+                    i = e("TEXT_CHANNELS") ? l.filter(t) : l;
+                n.push({
+                    kind: "TEXT_CHANNELS",
+                    key: "TEXT_CHANNELS",
+                    title: b.intl.string(G.default.uC6Lhg),
+                    count: l.length,
+                    channelIds: i,
+                    length: Math.max(i.length, 1),
+                });
+            }
+            return n;
+        }, [H, z, c, O, j.activeNowRows, j.dmRows, j.recentTextRows, P, E, V]),
+        B = i.useMemo(() => $.map((e) => e.length), [$]),
+        K = i.useCallback(
+            (e) => {
+                let t = $.findIndex((e) => "FAVORITES" === e.kind);
+                if (-1 === t) {
+                    for (let t = 0; t < $.length; t += 1) {
+                        let n = $[t].channelIds.findIndex((t) => t === e);
+                        if (-1 !== n) return { section: t, row: n };
+                    }
+                    return null;
+                }
+                let n = $[t],
+                    l = n?.channelIds.findIndex((t) => t === e) ?? -1;
+                return -1 !== l ? { section: t, row: l } : null;
+            },
+            [$],
+        ),
+        X = i.useCallback(() => {
+            let e = $.findIndex((e) => "FAVORITES" === e.kind);
+            return -1 === e ? null : { section: e, row: void 0 };
+        }, [$]);
+    (0, U.$)({
+        scrollerRef: p,
+        favoriteTargetIds: O,
+        getScrollTargetForTargetId: (e) => K(e),
+        getFallbackScrollTarget: X,
+        padding: 8,
+        animate: !1,
+    });
+    let Z = (0, _.Dk)(() => {
+            let e = new Set();
+            for (let t of $) for (let n of t.channelIds) e.add(n);
             return e;
-        }, [F]),
-        { shownUserIds: V, contentInventoryIds: H } = (0, a.bG)(
+        }, [$]),
+        { shownUserIds: Q, contentInventoryIds: q } = (0, a.bG)(
             [],
             () =>
                 (function (e) {
                     let t = new Set(),
                         n = new Set();
                     for (let l of e) {
-                        let e = E.A.getChannel(l);
+                        let e = I.A.getChannel(l);
                         if (null != e) {
                             if (e.isDM()) {
                                 let n = e.getRecipientId?.() ?? null;
@@ -178,124 +248,102 @@ function L() {
                         }
                     }
                     return { shownUserIds: t, contentInventoryIds: n };
-                })(j),
-            [j],
+                })(Z),
+            [Z],
         ),
-        Y = (0, _.Dk)(() => V, [V]),
-        z = (0, _.Dk)(() => H, [H]);
+        J = (0, _.Dk)(() => Q, [Q]),
+        ee = (0, _.Dk)(() => q, [q]);
     i.useEffect(() => {
-        (0 !== Y.size || 0 !== z.size) && G({ shownUserIds: O(Y), contentInventoryIds: O(z) });
-    }, [Y, z]);
-    let W = i.useCallback((e) => F[e], [F]),
-        B = i.useCallback(
+        (0 !== J.size || 0 !== ee.size) && F({ shownUserIds: L(J), contentInventoryIds: L(ee) });
+    }, [J, ee]);
+    let et = i.useCallback((e) => $[e], [$]),
+        en = i.useCallback(
             (e) => {
                 let { section: t } = e,
-                    n = W(t);
-                return null == n
-                    ? null
-                    : (0, l.jsxs)(l.Fragment, {
-                          children: [(0, l.jsx)(u.AC4, { children: n.title }), (0, l.jsx)(w, { title: n.title })],
-                      });
+                    n = et(t);
+                if (null == n) return null;
+                let i = "SEARCH_RESULTS" !== n.kind,
+                    r = i && !0 === H[n.key];
+                return (0, l.jsxs)(l.Fragment, {
+                    children: [
+                        (0, l.jsx)(u.AC4, { children: n.title }),
+                        (0, l.jsx)(y.I, {
+                            title: n.title,
+                            count: n.count,
+                            isCollapsed: r,
+                            canCollapse: i,
+                            onToggle: () => Y(n.key),
+                        }),
+                    ],
+                });
             },
-            [W],
+            [H, et, Y],
         ),
-        $ = i.useCallback(
+        el = i.useCallback(
             (e) => {
-                let i = W(e.section);
+                let i = et(e.section);
                 if (null == i) return null;
+                let r = i.channelIds[e.row];
+                if (null == r) return null;
                 let s = `${i.key}:${e.row}`;
-                switch (i.kind) {
-                    case "SEARCH_RESULTS": {
-                        let i = f[e.row].channel;
-                        if (null == i) return null;
-                        return (0, l.jsx)(
-                            C.V,
-                            { channelId: i.id, listItemId: s, onPrimaryAction: t, onContextMenu: n },
-                            s,
-                        );
-                    }
-                    case "FAVORITES": {
-                        let r = i.channelIds[e.row];
-                        if (null == r) return null;
-                        return (0, l.jsx)(
-                            C.V,
-                            {
-                                channelId: r,
-                                listItemId: s,
-                                shouldHighlightIfRecentlyAdded: !0,
-                                onPrimaryAction: t,
-                                onContextMenu: n,
-                            },
-                            s,
-                        );
-                    }
-                    case "ACTIVE_NOW": {
-                        let r = i.channelIds[e.row];
-                        if (null == r) return null;
-                        return (0, l.jsx)(
-                            C.V,
-                            { channelId: r, listItemId: s, onPrimaryAction: t, onContextMenu: n },
-                            s,
-                        );
-                    }
-                    case "DMS":
-                        let r;
-                        return null == (r = i.channelIds[e.row])
-                            ? null
-                            : (0, l.jsx)(C.V, { channelId: r, listItemId: s, onPrimaryAction: t, onContextMenu: n }, s);
-                    case "TEXT_CHANNELS": {
-                        let r = i.channelIds[e.row];
-                        if (null == r) return null;
-                        return (0, l.jsx)(
-                            C.V,
-                            { channelId: r, listItemId: s, onPrimaryAction: t, onContextMenu: n },
-                            s,
-                        );
-                    }
-                    default:
-                        return i.kind, null;
-                }
+                return (0, l.jsx)(
+                    v.V,
+                    {
+                        channelId: r,
+                        listItemId: s,
+                        shouldHighlightIfRecentlyAdded: "FAVORITES" === i.kind,
+                        onPrimaryAction: t,
+                        onContextMenu: n,
+                    },
+                    s,
+                );
             },
-            [W, n, t, f],
+            [et, n, t],
         ),
-        X = i.useCallback(() => 40, []),
-        K = i.useCallback(() => 50, []),
-        Q = i.useCallback((e) => {
-            d(e), m.current?.scrollToTop();
+        ei = i.useCallback(() => 40, []),
+        er = i.useCallback(
+            (e, t) => {
+                let n = et(e);
+                return null == n ? 50 : 50 * (null != n.channelIds[t]);
+            },
+            [et],
+        ),
+        es = i.useCallback((e) => {
+            d(e), p.current?.scrollToTop();
         }, []);
     return (0, l.jsxs)("div", {
-        className: U.kL,
+        className: w.kL,
         children: [
             (0, l.jsx)("div", {
-                className: U.MT,
+                className: w.MT,
                 children: (0, l.jsx)(u.IWV, {
-                    query: s,
-                    onChange: Q,
+                    query: r,
+                    onChange: es,
                     onClear: () => d(""),
-                    placeholder: R.intl.string(D.default["xB/0Z9"]),
+                    placeholder: b.intl.string(G.default["xB/0Z9"]),
                     size: "md",
                 }),
             }),
-            (0, l.jsx)(r.hD, {
-                navigator: p,
-                children: (0, l.jsx)(r.PR, {
+            (0, l.jsx)(s.hD, {
+                navigator: N,
+                children: (0, l.jsx)(s.PR, {
                     children: (e) => {
                         let { ref: t, role: n, ...i } = e;
                         return (0, l.jsx)(u.skg, {
                             children: (e) =>
                                 (0, l.jsx)(u.B8B, {
                                     innerRole: n,
-                                    innerAriaLabel: R.intl.string(R.t.OIgYlQ),
+                                    innerAriaLabel: b.intl.string(b.t.OIgYlQ),
                                     ref: (e) => {
-                                        (m.current = e), (t.current = e?.getScrollerNode() ?? null);
+                                        (p.current = e), (t.current = e?.getScrollerNode() ?? null);
                                     },
-                                    className: U.p_,
-                                    sectionHeight: X,
-                                    rowHeight: K,
+                                    className: w.p_,
+                                    sectionHeight: ei,
+                                    rowHeight: er,
                                     sidebarHeight: 0,
-                                    renderSection: B,
-                                    renderRow: $,
-                                    sections: P,
+                                    renderSection: en,
+                                    renderRow: el,
+                                    sections: B,
                                     paddingBottom: 8,
                                     ...i,
                                     ...e,

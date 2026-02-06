@@ -1,8 +1,8 @@
 n.d(t, { C: () => V });
 var l = n(627968),
     i = n(64700),
-    s = n(311907),
-    r = n(377802),
+    r = n(311907),
+    s = n(377802),
     a = n(342952),
     u = n(397927),
     o = n(47167),
@@ -11,17 +11,17 @@ var l = n(627968),
     h = n(734057),
     g = n(71393),
     I = n(576705),
-    E = n(222823),
+    f = n(222823),
     A = n(994500),
-    f = n(309010),
+    E = n(309010),
     m = n(287809),
     S = n(977997),
     p = n(607567),
     N = n(403362),
     T = n(996439),
     _ = n(914853),
-    y = n(676923),
-    C = n(1404),
+    C = n(676923),
+    y = n(1404),
     x = n(483392),
     v = n(578093),
     M = n(912156),
@@ -33,8 +33,8 @@ var l = n(627968),
     b = n(985018),
     w = n(783346),
     L = n(416001),
-    k = n(905777);
-function F(e) {
+    F = n(905777);
+function k(e) {
     let { isCollapsed: t } = e;
     return (0, l.jsx)(x.C, { isCollapsed: t, size: "md", className: L.t4 });
 }
@@ -45,7 +45,7 @@ function j(e) {
     let { channelId: t, guildId: n } = e,
         i = (function (e) {
             let { channelId: t } = e;
-            return (0, s.yK)(
+            return (0, r.yK)(
                 [S.A, m.default, c.A, A.A],
                 () =>
                     Object.values(S.A.getVoiceStatesForChannel(t))
@@ -65,7 +65,7 @@ function j(e) {
     return 0 === i.length
         ? null
         : (0, l.jsx)("div", {
-              className: k.X0,
+              className: F.X0,
               children: (0, l.jsx)(a.A, {
                   users: i,
                   guildId: n ?? void 0,
@@ -88,31 +88,31 @@ function V(e) {
             onPrimaryAction: N,
             onContextMenu: x,
         } = e,
-        L = (0, s.bG)([h.A], () => h.A.getChannel(n), [n]),
+        L = (0, r.bG)([h.A], () => h.A.getChannel(n), [n]),
         V = (0, o.Ay)(L ?? void 0, !0) ?? "???",
         H = L?.getGuildId?.() ?? null,
-        Y = (0, s.bG)([g.A], () => (null != H ? (g.A.getGuild(H) ?? null) : null), [H]),
-        z = (0, s.bG)([f.A], () => f.A.getVoiceChannelId() === n, [n]),
-        W = (0, s.bG)([I.A], () => null != L && (!!L.isPrivate?.() || I.A.can(G.xBc.READ_MESSAGE_HISTORY, L)), [L]),
-        [B] = (0, s.bG)(
+        Y = (0, r.bG)([g.A], () => (null != H ? (g.A.getGuild(H) ?? null) : null), [H]),
+        W = (0, r.bG)([E.A], () => E.A.getVoiceChannelId() === n, [n]),
+        z = (0, r.bG)([I.A], () => null != L && (!!L.isPrivate?.() || I.A.can(G.xBc.READ_MESSAGE_HISTORY, L)), [L]),
+        [$] = (0, r.bG)(
             [p.Ay],
             () => (null == L || null == H ? [[], 0] : [p.Ay.getVoiceStatesForChannel(L), p.Ay.getVoiceStateVersion(H)]),
             [L, H],
             T.D,
         ),
-        $ = null != B && B.length > 0,
-        X = (0, U.A2)(n),
-        K = (0, O.X)(L),
-        Q = i.useRef(null),
-        Z = i.useCallback(() => {
-            let e = Q.current;
-            null != e && (clearTimeout(e), (Q.current = null));
+        B = null != $ && $.length > 0,
+        K = (0, U.A2)(n),
+        X = (0, O.X6)(L),
+        Z = i.useRef(null),
+        Q = i.useCallback(() => {
+            let e = Z.current;
+            null != e && (clearTimeout(e), (Z.current = null));
         }, []);
     i.useEffect(
         () => () => {
-            Z();
+            Q();
         },
-        [Z],
+        [Q],
     );
     let q = i.useCallback(
             (e) => {
@@ -127,19 +127,19 @@ function V(e) {
             [n, N],
         ),
         ee = i.useCallback(() => {
-            W && N?.({ type: D.c.OPEN_TEXT_CHAT_CHANNEL, channelId: n, guildId: H });
-        }, [W, n, H, N]),
+            z && N?.({ type: D.c.OPEN_TEXT_CHAT_CHANNEL, channelId: n, guildId: H });
+        }, [z, n, H, N]),
         et = i.useCallback(
             (e) => {
-                if ($) return void S?.(n);
+                if (B) return void S?.(n);
             },
-            [n, $, S],
+            [n, B, S],
         ),
         en = i.useCallback(
             (e) => {
-                Z(), ee();
+                Q(), ee();
             },
-            [Z, ee],
+            [Q, ee],
         ),
         el = i.useCallback(
             (e) => {
@@ -147,33 +147,33 @@ function V(e) {
             },
             [L, n, Y, x],
         ),
-        { mentionCount: ei } = (0, s.cf)(
-            [E.Ay],
+        { mentionCount: ei } = (0, r.cf)(
+            [f.Ay],
             () => ({
-                mentionCount: E.Ay.getMentionCount(n),
-                isMentionLowImportance: E.Ay.getIsMentionLowImportance(n),
-                unread: E.Ay.hasUnread(n),
+                mentionCount: f.Ay.getMentionCount(n),
+                isMentionLowImportance: f.Ay.getIsMentionLowImportance(n),
+                unread: f.Ay.hasUnread(n),
             }),
             [n],
         ),
-        es = (0, u.rdh)(u.LU0.colors.STATUS_POSITIVE),
-        er = (0, u.rdh)(u.LU0.colors.STATUS_DANGER),
+        er = (0, u.rdh)(u.LU0.colors.STATUS_POSITIVE),
+        es = (0, u.rdh)(u.LU0.colors.STATUS_DANGER),
         ea = (0, u.rdh)(u.LU0.colors.TEXT_STRONG),
         eu = (0, u.rdh)(u.LU0.colors.TEXT_MUTED),
-        eo = z ? es : ei > 0 ? ea : eu,
+        eo = W ? er : ei > 0 ? ea : eu,
         {
             Component: ed,
             events: { onMouseEnter: ec, onMouseLeave: eh },
-        } = (0, r.O)(),
+        } = (0, s.O)(),
         eg = () => {
-            let e = z ? b.intl.string(b.t["6vrfgt"]) : b.intl.string(b.t.S0W8Z5),
-                t = z ? er.hex() : es.hex(),
-                n = z ? ed : u._jp;
+            let e = W ? b.intl.string(b.t["6vrfgt"]) : b.intl.string(b.t.S0W8Z5),
+                t = W ? es.hex() : er.hex(),
+                n = W ? ed : u._jp;
             return (0, l.jsx)("div", {
                 onDoubleClick: P,
-                children: (0, l.jsx)(y.S, {
+                children: (0, l.jsx)(C.S, {
                     tooltipText: e,
-                    onClick: z ? J : q,
+                    onClick: W ? J : q,
                     onMouseEnter: ec,
                     onMouseLeave: eh,
                     children: (0, l.jsx)(n, { size: "sm", color: t }),
@@ -183,14 +183,14 @@ function V(e) {
     return (0, l.jsxs)("div", {
         onDoubleClick: en,
         children: [
-            (0, l.jsx)(C.D, {
+            (0, l.jsx)(y.D, {
                 listItemId: a,
-                recentlyAddedTimestampMs: A ? X : null,
+                recentlyAddedTimestampMs: A ? K : null,
                 onClick: et,
                 onContextMenu: el,
                 avatar:
                     null != L
-                        ? (0, l.jsx)(M.A, { isTyping: K, guild: Y ?? void 0, channel: L, size: M.Q.SMALL_32 })
+                        ? (0, l.jsx)(M.A, { isTyping: X, guild: Y ?? void 0, channel: L, size: M.Q.SMALL_32 })
                         : null,
                 primaryText: (0, l.jsxs)("div", {
                     className: w.QV,
@@ -201,7 +201,7 @@ function V(e) {
                         (0, l.jsx)(u.Text, {
                             className: w.Xh,
                             variant: "text-sm/medium",
-                            color: z ? "status-positive-text" : ei > 0 ? "text-strong" : "text-muted",
+                            color: W ? "status-positive-text" : ei > 0 ? "text-strong" : "text-muted",
                             children: V,
                         }),
                     ],
@@ -212,25 +212,25 @@ function V(e) {
                         : null,
                 rightActions: (e) => {
                     switch (!0) {
-                        case !$:
+                        case !B:
                             return e
                                 ? (0, l.jsxs)("div", {
-                                      className: k.YT,
+                                      className: F.YT,
                                       onDoubleClick: P,
                                       children: [eg(), (0, l.jsx)(v.j, { tab: _.x.VOICE, targetId: n })],
                                   })
                                 : null;
-                        case $:
+                        case B:
                             return (0, l.jsxs)(l.Fragment, {
                                 children: [
                                     m
                                         ? (0, l.jsxs)("div", {
-                                              className: k.YT,
+                                              className: F.YT,
                                               onDoubleClick: P,
                                               children: [eg(), (0, l.jsx)(v.j, { tab: _.x.VOICE, targetId: n })],
                                           })
                                         : (0, l.jsx)(j, { channelId: n, guildId: H }),
-                                    (0, l.jsx)(F, { isCollapsed: !m }),
+                                    (0, l.jsx)(k, { isCollapsed: !m }),
                                 ],
                             });
                         default:
@@ -238,10 +238,10 @@ function V(e) {
                     }
                 },
             }),
-            m && B.length > 0
+            m && $.length > 0
                 ? (0, l.jsx)("div", {
-                      className: k.Nz,
-                      children: B.slice(0, 25).map((e) =>
+                      className: F.Nz,
+                      children: $.slice(0, 25).map((e) =>
                           (0, l.jsx)(
                               R.a,
                               { channelId: n, guildId: H, userId: e.user.id, onDoubleClick: P, onContextMenu: x },

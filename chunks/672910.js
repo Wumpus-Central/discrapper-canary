@@ -203,8 +203,8 @@ function T(e) {
     });
 }
 function y(e) {
-    let { observe: t, children: n } = e;
-    return t ? (0, r.jsx)(_.A, { className: E.VC, children: n }) : n;
+    let { observe: t, className: n, children: i } = e;
+    return t ? (0, r.jsx)(_.A, { className: s()(E.VC, n), children: i }) : i;
 }
 let S = { mass: 1, friction: 8, tension: 300 };
 function v() {
@@ -279,26 +279,28 @@ function C(e) {
                 onConfirmClick: M,
                 onCancelClick: k,
                 disableClickableRegions: U = !1,
-                ...G
+                clickZoneClassName: G,
+                ...V
             },
-            status: V,
+            status: F,
         } = t,
-        F = !s && a,
-        B = 0 === n && !U && !F,
-        { ref: j, springs: H } = (0, h.Ru)(t.id, o, l);
+        B = !s && a,
+        j = 0 === n && !U && !B,
+        { ref: H, springs: Y } = (0, h.Ru)(t.id, o, l);
     return (0, r.jsx)(T, {
         transitionState: o,
-        springs: H,
+        springs: Y,
         scaleOverride: C?.scale,
         index: n,
         locked: a,
         animationWrapperClassName: E,
         children: (0, r.jsx)(y, {
-            observe: B,
+            observe: j,
+            className: G,
             children: (0, r.jsx)(I, {
-                ...G,
-                title: "function" == typeof G.title ? G.title(S) : G.title,
-                containerRef: j,
+                ...V,
+                title: "function" == typeof V.title ? V.title(S) : V.title,
+                containerRef: H,
                 notificationId: t.id,
                 onNotificationShow: 0 === n ? A : void 0,
                 onDismissClick: S,
@@ -309,8 +311,8 @@ function C(e) {
                 expand: !1,
                 index: n,
                 locked: a,
-                status: V,
-                contentOpacity: H.contentOpacity,
+                status: F,
+                contentOpacity: Y.contentOpacity,
             }),
         }),
     });

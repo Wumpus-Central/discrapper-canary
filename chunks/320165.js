@@ -25,8 +25,8 @@ var i = n(627968),
     y = n(578093),
     N = n(145567),
     O = n(922611),
-    b = n(201479),
-    j = n(691761),
+    j = n(201479),
+    b = n(691761),
     w = n(34307),
     L = n(652215),
     R = n(895867),
@@ -49,7 +49,18 @@ function z(e) {
               autoInvert: !1,
               ignoreModalClicks: !0,
               onRequestClose: s,
-              renderPopout: (e) => (0, i.jsx)(c.A, { ...e, channel: t, onJump: () => {} }),
+              renderPopout: (e) =>
+                  (0, i.jsx)(c.A, {
+                      ...e,
+                      channel: t,
+                      onJump: () => {
+                          (0, I.YX)(L.uss.TEXT_CHAT_V3, {
+                              type: I.Z5.TEXT_CHAT,
+                              value: I.IP.PANEL_OPENED,
+                              secondaryValue: "jumped",
+                          });
+                      },
+                  }),
               clickTrap: !0,
               children: (e) => {
                   let { onClick: t, ...n } = e;
@@ -86,7 +97,12 @@ function V(e) {
         ),
         [h, A] = l.useState(!1),
         g = l.useCallback(() => {
-            A((e) => !e);
+            A((e) => !e),
+                (0, I.YX)(L.uss.TEXT_CHAT_V3, {
+                    type: I.Z5.TEXT_CHAT,
+                    value: I.IP.SETTINGS_OPENED,
+                    secondaryValue: "notification_settings",
+                });
         }, []),
         p = D.intl.string(D.t.h850Ss),
         f = u || c !== L.orn.ALL_MESSAGES ? d.a_I : d.XFE;
@@ -200,12 +216,12 @@ function G(e) {
         [z, V] = l.useState(!1),
         G = (0, r.bG)([_.A], () => _.A.getChannelId(), []),
         H = t?.isDM() ? (n?.id ?? null) : null,
-        Y = (0, j.p)(H),
+        Y = (0, b.p)(H),
         F = G === t?.id,
         W = D.intl.string(R.default.tYPfF2),
-        K = (0, r.bG)([f.A], () => (t?.isThread() && null != t.parent_id ? f.A.getChannel(t.parent_id) : null), [t]),
-        Z = (0, r.bG)([S.default, E.A], () => (null != K ? (0, h.m1)(K, S.default, E.A) : null), [K]),
-        B = (0, r.bG)([], () => {
+        Z = (0, r.bG)([f.A], () => (t?.isThread() && null != t.parent_id ? f.A.getChannel(t.parent_id) : null), [t]),
+        K = (0, r.bG)([S.default, E.A], () => (null != Z ? (0, h.m1)(Z, S.default, E.A) : null), [Z]),
+        X = (0, r.bG)([], () => {
             var e, i;
             return (
                 (e = t),
@@ -223,7 +239,7 @@ function G(e) {
                           : null
             );
         }, [t, n]),
-        X = l.useCallback(
+        B = l.useCallback(
             (e) => {
                 k(t) &&
                     ((0, I.YX)(L.uss.TEXT_CHAT_V3, {
@@ -261,7 +277,7 @@ function G(e) {
                 children: [
                     (0, i.jsx)("div", {
                         className: M.gr,
-                        children: (0, i.jsx)(b.J, {
+                        children: (0, i.jsx)(j.J, {
                             application: Y,
                             fallback: (0, i.jsx)(O.g, { channel: null, user: n, guild: a, size: O.c.SIZE_24 }),
                         }),
@@ -274,7 +290,7 @@ function G(e) {
                                 let e = (0, A.gU)(t, a);
                                 return null != e ? (0, i.jsx)(e, { className: M.gr, size: "xs" }) : null;
                             })(),
-                            null != K && null != Z
+                            null != Z && null != K
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(d.DUT, {
@@ -285,8 +301,8 @@ function G(e) {
                                                       (0, N.D$)({
                                                           target: {
                                                               kind: N.bB.CHANNEL,
-                                                              channelId: K.id,
-                                                              guildId: K.getGuildId?.() ?? K.guild_id ?? null,
+                                                              channelId: Z.id,
+                                                              guildId: Z.getGuildId?.() ?? Z.guild_id ?? null,
                                                               messageId: null,
                                                           },
                                                           source: w.B.MANUAL,
@@ -296,7 +312,7 @@ function G(e) {
                                               children: (0, i.jsx)(d.Text, {
                                                   variant: "text-sm/medium",
                                                   color: "text-muted",
-                                                  children: Z,
+                                                  children: K,
                                               }),
                                           }),
                                           (0, i.jsx)(d._BQ, {
@@ -338,7 +354,7 @@ function G(e) {
                 children: [
                     (0, i.jsx)(U, {
                         channel: t,
-                        onStartPrivateCall: X,
+                        onStartPrivateCall: B,
                         pinsOpen: z,
                         onTogglePinsPopout: J,
                         onRequestClosePinsPopout: () => V(!1),
@@ -350,10 +366,10 @@ function G(e) {
                         onRequestClosePinsPopout: () => V(!1),
                     }),
                     x &&
-                        null != B &&
+                        null != X &&
                         (0, i.jsx)(y.j, {
-                            tab: B.tab,
-                            targetId: B.targetId,
+                            tab: X.tab,
+                            targetId: X.targetId,
                             widgetType: L.uss.TEXT_CHAT_V3,
                             shouldStopPropagation: !1,
                         }),
