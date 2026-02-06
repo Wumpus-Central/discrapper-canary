@@ -1,87 +1,101 @@
 "use strict";
-n.d(t, { A: () => m }), n(667532);
+n.d(t, { A: () => A }), n(667532);
 var r = n(960488),
     i = n(311907),
     a = n(73153),
     s = n(463347),
     o = n(824865),
-    l = n(652215);
-let u = 20,
-    c = [
-        l.BVt.CHANNEL_THREAD_VIEW(s.pv.guildId(), s.pv.channelId({ optional: !0 }), ":threadId", ":messageId?"),
-        l.BVt.CHANNEL(s.pv.guildId(), s.pv.channelId({ optional: !0 }), ":messageId?"),
-        l.BVt.VOICE_CHAT_CHANNEL_PARTIAL(s.pv.guildId(), s.pv.channelId({ optional: !0 }), ":messageId?"),
-        l.BVt.CHANNELS_GAME_SHOP(s.pv.guildId(), ":pageIndex", ":skuId?", ":slug?"),
-        l.BVt.NOTIFICATIONS,
-        l.BVt.FRIENDS,
-        l.BVt.ME,
-        l.BVt.MESSAGE_REQUESTS,
-        l.BVt.GUILD_DISCOVERY,
-        l.BVt.APPLICATION_STORE,
-        l.BVt.COLLECTIBLES_SHOP,
-        l.BVt.USERS(":userId"),
-        l.BVt.GUILD_DISCOVERY,
-        l.BVt.GLOBAL_DISCOVERY,
-        l.BVt.QUEST_HOME,
-        l.BVt.QUEST_HOME_V2,
-        l.BVt.GLOBAL_DISCOVERY_SERVERS,
-        l.BVt.GLOBAL_DISCOVERY_APPS,
+    l = n(545167),
+    u = n(652215);
+let c = 20,
+    d = [
+        u.BVt.CHANNEL_THREAD_VIEW(s.pv.guildId(), s.pv.channelId({ optional: !0 }), ":threadId", ":messageId?"),
+        u.BVt.CHANNEL(s.pv.guildId(), s.pv.channelId({ optional: !0 }), ":messageId?"),
+        u.BVt.VOICE_CHAT_CHANNEL_PARTIAL(s.pv.guildId(), s.pv.channelId({ optional: !0 }), ":messageId?"),
+        u.BVt.CHANNELS_GAME_SHOP(s.pv.guildId(), ":pageIndex", ":skuId?", ":slug?"),
+        u.BVt.NOTIFICATIONS,
+        u.BVt.FRIENDS,
+        u.BVt.ME,
+        u.BVt.MESSAGE_REQUESTS,
+        u.BVt.GUILD_DISCOVERY,
+        u.BVt.APPLICATION_STORE,
+        u.BVt.COLLECTIBLES_SHOP,
+        u.BVt.USERS(":userId"),
+        u.BVt.GUILD_DISCOVERY,
+        u.BVt.GLOBAL_DISCOVERY,
+        u.BVt.QUEST_HOME,
+        u.BVt.QUEST_HOME_V2,
+        u.BVt.GLOBAL_DISCOVERY_SERVERS,
+        u.BVt.GLOBAL_DISCOVERY_APPS,
     ],
-    d = [],
-    _ = 0;
-function f(e, t) {
+    _ = [],
+    f = 0,
+    p = !!(null != window && "navigation" in window) && (window.navigation.canGoBack ?? !1),
+    h = !!(null != window && "navigation" in window) && (window.navigation.canGoForward ?? !1);
+function m(e, t) {
     if (t < 0 || t >= e.length) throw RangeError("index out of bounds");
     let n = 0,
         r = t;
     for (; n < r; ) ([e[n], e[r]] = [e[r], e[n]]), n++, r--;
     return e;
 }
-function p(e) {
+function g(e) {
     let { location: t, action: n } = e;
-    if ("POP" === n) {
-        let e = d.findIndex((e) => e.path === t.pathname);
-        if (-1 !== e) return (_ = e), !0;
+    if (
+        ("navigation" in window &&
+            ((p = window.navigation.canGoBack ?? !1), (h = window.navigation.canGoForward ?? !1)),
+        "POP" === n)
+    ) {
+        let e = _.findIndex((e) => e.path === t.pathname);
+        if (-1 !== e) {
+            f = e;
+            return;
+        }
     }
     if (t.source === o.A.USER_NAVIGATED_BACK) {
-        _ < d.length - 1 && _++;
+        f < _.length - 1 && f++;
         return;
     }
     if (t.source === o.A.USER_NAVIGATED_FORWARD) {
-        _ > 0 && _--;
+        f > 0 && f--;
         return;
     }
     let { pathname: i } = t,
         a = "REPLACE" === n,
-        s = (0, r.B6)(i, c);
-    if (null == s) return !1;
-    if (a && d.length > 0) return (d[_] = { path: i, params: s.params }), !0;
-    if (d.length > 0) {
-        if (i === d[_].path) return !1;
-        let e = d.findIndex((e) => e.path === i);
-        -1 !== e && (d.splice(e, 1), _ >= e && (_ -= 1));
+        s = (0, r.B6)(i, d);
+    if (null != s) {
+        if (a && _.length > 0) {
+            _[f] = { path: i, params: s.params };
+            return;
+        }
+        if (_.length > 0) {
+            if (i === _[f].path) return;
+            let e = _.findIndex((e) => e.path === i);
+            -1 !== e && (_.splice(e, 1), f >= e && (f -= 1));
+        }
+        for (f > 0 && m(_, f), f = 0; _.length > c; ) _.pop();
+        _.unshift({ path: i, params: s.params });
     }
-    for (_ > 0 && f(d, _), _ = 0; d.length > u; ) d.pop();
-    d.unshift({ path: i, params: s.params });
 }
-class h extends i.Ay.Store {
+class E extends i.Ay.Store {
     static displayName = "BackForwardNavStore";
     initialize() {
-        (d = []), (_ = 0);
+        (_ = []), (f = 0);
     }
     get pastPlaces() {
-        return d;
+        return _;
     }
     get canGoBack() {
-        return _ < d.length - 1;
+        return (0, l.vY)({ location: "canGoBackForward" }) ? f < _.length - 1 : p;
     }
     get canGoForward() {
-        return _ > 0;
+        return (0, l.vY)({ location: "canGoBackForward" }) ? f > 0 : h;
     }
     get backDestination() {
-        return this.canGoBack ? d[_ + 1] : null;
+        return this.canGoBack ? _[f + 1] : null;
     }
     get forwardDestination() {
-        return this.canGoForward ? d[_ - 1] : null;
+        return this.canGoForward ? _[f - 1] : null;
     }
 }
-let m = new h(a.h, { ROUTE_CHANGED: p });
+let A = new E(a.h, { ROUTE_CHANGED: g });

@@ -14,7 +14,7 @@ function d(e) {
     if (!(0, a.TX)()) return;
     if (
         (s.default.track(u.HAw.APP_BACK_FORWARD_NAVIGATED, { nav_direction: -1, nav_trigger: e }),
-        !(0, o.vY)({ location: e }))
+        !(0, o.vY)({ location: "navigatingBackForward" }))
     )
         return void (0, a.aX)();
     let t = l.A.backDestination;
@@ -24,7 +24,7 @@ function _(e) {
     if (!(0, a.TX)()) return;
     if (
         (s.default.track(u.HAw.APP_BACK_FORWARD_NAVIGATED, { nav_direction: 1, nav_trigger: e }),
-        !(0, o.vY)({ location: e }))
+        !(0, o.vY)({ location: "navigatingBackForward" }))
     )
         return void (0, a.sY)();
     let t = l.A.forwardDestination;
