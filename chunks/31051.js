@@ -178,7 +178,9 @@ let S = (e) => {
             (I = g
                 ? C
                     ? (0, i.jsx)(b, { disabled: !1, invite: c, channel: n })
-                    : null
+                    : s === E.xI.REMOVED
+                      ? (0, i.jsx)(b, { disabled: !0, invite: c, channel: n })
+                      : null
                 : (0, i.jsx)(S, { disabled: !C, invite: c, isExistingSub: null != h })),
             (0, i.jsx)(j, { message: A.message, header: A.header, body: A.body, compact: l, actionButton: I })
         );

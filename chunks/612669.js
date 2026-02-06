@@ -28,7 +28,7 @@ let g = (e) => {
             let o = p.intl.format(h.default.MkcFjx, { receiverName: e, premiumGroupProductName: u });
             switch (c) {
                 case m.xI.ACCEPTED:
-                    (t = p.intl.formatToPlainString(h.default["5uwv8J"], { premiumGroupProductName: u })),
+                    (t = p.intl.formatToPlainString(h.default.K37xCB, { premiumGroupProductName: u })),
                         (n = p.intl.formatToPlainString(h.default["W7e/z1"], { receiverName: e }));
                     break;
                 case m.xI.REMOVED:
