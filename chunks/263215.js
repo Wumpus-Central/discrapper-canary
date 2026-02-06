@@ -6,7 +6,7 @@ var r = n(64700),
     s = n(897418),
     o = n(645619),
     l = n(568065);
-let u = new Set([...Array.from(l.aH), i.FB]);
+let u = new Set([...Array.from(l.aH), ...Array.from(l.m_), i.FB]);
 function c(e) {
     let t = (0, a.bG)([o.A], () => o.A.getStateForGuild(e)?.powerupCatalog?.[l.o9.PERK]),
         n = (0, s.A)(e);

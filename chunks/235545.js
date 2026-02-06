@@ -8,4 +8,6 @@ e.exports = {
     xQ: "footerContainer_a1e8da",
     U7: "footerDetails_a1e8da",
     II: "statusContainer_a1e8da",
+    R9: "perkCardImageContainer_a1e8da",
+    qS: "badge_a1e8da",
 };

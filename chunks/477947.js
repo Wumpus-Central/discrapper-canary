@@ -67,6 +67,26 @@ function r(e) {
             return l.intl.string(l.t.s2U0Nw);
         case s.bl.DOLLAR_SIGN:
             return l.intl.string(l.t.AWIIQw);
+        case s.bl.CLOVER:
+            return l.intl.string(l.t.ZzsbQp);
+        case s.bl.BLOSSOM:
+            return l.intl.string(l.t.uGSJSU);
+        case s.bl.POTTED_PLANT:
+            return l.intl.string(l.t.BGZKO9);
+        case s.bl.MAPLE:
+            return l.intl.string(l.t.Rqq6To);
+        case s.bl.WILTED_FLOWER:
+            return l.intl.string(l.t.o1OjGD);
+        case s.bl.BUTTERFLY:
+            return l.intl.string(l.t["76qj8a"]);
+        case s.bl.SNAIL:
+            return l.intl.string(l.t.mFQo1S);
+        case s.bl.CATERPILLAR:
+            return l.intl.string(l.t.fTwuEi);
+        case s.bl.SPIDER:
+            return l.intl.string(l.t.TzZYZM);
+        case s.bl.BEE:
+            return l.intl.string(l.t["6euAa8"]);
         default:
             (0, i.xb)(e);
     }

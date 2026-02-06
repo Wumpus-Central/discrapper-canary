@@ -12,12 +12,12 @@ function u(e) {
     return (0, i.jsx)("img", { className: t, alt: "", src: c });
 }
 function h(e) {
-    let { className: t, powerup: n, isHovering: l } = e,
-        c = (0, r.A)(n, l);
+    let { className: t, powerup: n, isHovering: l, forceStaticImage: c } = e,
+        h = (0, r.A)(n, l, c);
     switch (n.type) {
         case o.o9.LEVEL:
             return (0, i.jsx)(u, {});
         case o.o9.PERK:
-            return (0, i.jsx)("img", { alt: "", src: c, className: s()(d.T, { [d.W]: n.skuId === a.aN }, t) });
+            return (0, i.jsx)("img", { alt: "", src: h, className: s()(d.T, { [d.W]: n.skuId === a.aN }, t) });
     }
 }

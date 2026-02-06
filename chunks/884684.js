@@ -4,7 +4,7 @@ var r = n(64700),
     i = n(311907),
     s = n(645619),
     o = n(568065);
-let a = Object.entries({ guildTagsBadgePacks: [l.OJ, l.jF] }).reduce((e, t) => {
+let a = Object.entries({ guildTagsBadgePacks: [l.OJ, l.jF, l.Ht, l.tv] }).reduce((e, t) => {
         let [n, r] = t;
         for (let t of r) e[t] = n;
         return e;

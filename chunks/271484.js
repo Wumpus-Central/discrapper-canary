@@ -1,4 +1,4 @@
-n.d(t, { A: () => x, g: () => f });
+n.d(t, { A: () => h, g: () => v });
 var r = n(627968),
     l = n(64700),
     i = n(512750),
@@ -6,42 +6,52 @@ var r = n(627968),
     o = n(397927),
     a = n(997509),
     u = n(645619),
-    d = n(363487),
-    c = n(915667),
-    p = n(652215),
-    m = n(333354),
-    A = n(985018),
-    _ = n(870166),
-    g = n(849630);
-function f(e, t) {
-    let f = (0, d.A)(t) ?? !1,
-        x = (0, s.bG)([u.A], () => u.A.getStateForGuild(t)?.allPowerups),
-        h = (0, s.bG)([u.A], () => u.A.getStateForGuild(t)?.unlockedPowerups);
+    d = n(128069),
+    c = n(363487),
+    p = n(915667),
+    m = n(568065),
+    A = n(652215),
+    _ = n(333354),
+    g = n(985018),
+    f = n(870166),
+    x = n(849630);
+function v(e, t) {
+    let v = (0, c.A)(t) ?? !1,
+        h = (0, s.bG)([u.A], () => u.A.getStateForGuild(t)?.allPowerups),
+        j = (0, s.bG)([u.A], () => u.A.getStateForGuild(t)?.unlockedPowerups),
+        b = (0, d.RA)(t, "usePowerupGroupConfig");
     return l.useMemo(() => {
         let l = (e) =>
                 "guildTagsBadgePacks" === e
                     ? (function (e) {
-                          let { guildId: t, canUseBoosts: l, allPowerups: s, unlockedPowerups: u } = e,
-                              d = A.intl.string(m.default.KC9HRW),
-                              f = A.intl.string(m.default.GJiSmP),
-                              x = s?.[i.SL],
-                              h = u?.[i.SL] != null,
-                              v = A.intl.string(m.default["/egwJA"]),
-                              j = h ? void 0 : A.intl.string(m.default.W6Vwn3),
-                              b = h ? void 0 : A.intl.string(m.default.lvk1Gc),
-                              E = h ? A.intl.string(m.default["9CfkLO"]) : A.intl.string(A.t["+7XY31"]),
-                              I = h ? "secondary" : "expressive",
-                              S = l
+                          let {
+                                  guildId: t,
+                                  canUseBoosts: l,
+                                  allPowerups: s,
+                                  unlockedPowerups: u,
+                                  isWaveTwoEnabled: d,
+                              } = e,
+                              c = g.intl.string(_.default.KC9HRW),
+                              v = g.intl.string(_.default.GJiSmP),
+                              h = s?.[i.SL],
+                              j = u?.[i.SL] != null,
+                              b = g.intl.string(_.default["/egwJA"]),
+                              E = j ? void 0 : g.intl.string(_.default.W6Vwn3),
+                              I = j ? void 0 : g.intl.string(_.default.lvk1Gc),
+                              S = j ? g.intl.string(_.default["9CfkLO"]) : g.intl.string(g.t["+7XY31"]),
+                              w = j ? "secondary" : "expressive",
+                              C = l
                                   ? () => {
-                                        h
-                                            ? a.A.open(t, p.BEX.TAG, p.JJy.GUILD_POWERUPS_OVERVIEW_CARD)
-                                            : null != x && (0, c.A)(t, x),
+                                        j
+                                            ? a.A.open(t, A.BEX.TAG, A.JJy.GUILD_POWERUPS_OVERVIEW_CARD)
+                                            : null != h && (0, p.A)(t, h),
                                             (0, o.s7G)();
                                     }
-                                  : void 0;
+                                  : void 0,
+                              N = d ? m.m_ : void 0;
                           return {
-                              title: d,
-                              description: f,
+                              title: c,
+                              description: v,
                               openModal: function (e) {
                                   let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                                   (0, o.mMO)(
@@ -50,17 +60,19 @@ function f(e, t) {
                                           return (n) =>
                                               (0, r.jsx)(i, {
                                                   guildId: t,
-                                                  title: d,
-                                                  description: A.intl.string(m.default.BBRFRd),
+                                                  title: c,
+                                                  description: g.intl.string(_.default.BBRFRd),
                                                   powerups: e,
-                                                  footerInfoText: b,
+                                                  newPowerupSkuIdSet: N,
+                                                  forceStaticImages: d,
+                                                  footerInfoText: I,
                                                   footerAction:
-                                                      l && null != S && null != E
+                                                      l && null != C && null != S
                                                           ? {
-                                                                variant: I,
-                                                                text: E,
-                                                                icon: "expressive" === I ? o._Jp : void 0,
-                                                                onClick: S,
+                                                                variant: w,
+                                                                text: S,
+                                                                icon: "expressive" === w ? o._Jp : void 0,
+                                                                onClick: C,
                                                             }
                                                           : void 0,
                                                   ...n,
@@ -69,11 +81,14 @@ function f(e, t) {
                                       { onCloseCallback: i?.onModalClose },
                                   );
                               },
-                              viewCta: v,
-                              viewCtaTooltip: j,
-                              image: { staticUrl: g.A, animatedUrl: _.A },
+                              viewCta: b,
+                              viewCtaTooltip: E,
+                              badge: d ? "new" : void 0,
+                              newPowerupSkuIdSet: N,
+                              image: { staticUrl: x.A, animatedUrl: f.A },
+                              forceStaticImages: d,
                           };
-                      })({ guildId: t, canUseBoosts: f, allPowerups: x, unlockedPowerups: h })
+                      })({ guildId: t, canUseBoosts: v, allPowerups: h, unlockedPowerups: j, isWaveTwoEnabled: b })
                     : void 0,
             s = {};
         for (let t of e) {
@@ -81,8 +96,8 @@ function f(e, t) {
             null != e && (s[t] = e);
         }
         return s;
-    }, [e, t, f, x, h]);
+    }, [e, t, v, h, j, b]);
 }
-function x(e, t) {
-    return f([e], t)[e];
+function h(e, t) {
+    return v([e], t)[e];
 }

@@ -2,11 +2,11 @@
 n.d(t, {
     C9: () => l,
     Sl: () => u,
-    Tf: () => p,
+    Tf: () => m,
     Ub: () => o,
     bl: () => a,
     hc: () => d,
-    kO: () => h,
+    kO: () => g,
     lv: () => c,
     xj: () => s,
 });
@@ -45,6 +45,16 @@ var r = n(512750),
             (e[(e.TROPHY = 28)] = "TROPHY"),
             (e[(e.MONEY_BAG = 29)] = "MONEY_BAG"),
             (e[(e.DOLLAR_SIGN = 30)] = "DOLLAR_SIGN"),
+            (e[(e.CLOVER = 31)] = "CLOVER"),
+            (e[(e.BLOSSOM = 32)] = "BLOSSOM"),
+            (e[(e.POTTED_PLANT = 33)] = "POTTED_PLANT"),
+            (e[(e.MAPLE = 34)] = "MAPLE"),
+            (e[(e.WILTED_FLOWER = 35)] = "WILTED_FLOWER"),
+            (e[(e.BUTTERFLY = 36)] = "BUTTERFLY"),
+            (e[(e.SNAIL = 37)] = "SNAIL"),
+            (e[(e.CATERPILLAR = 38)] = "CATERPILLAR"),
+            (e[(e.SPIDER = 39)] = "SPIDER"),
+            (e[(e.BEE = 40)] = "BEE"),
             e
         );
     })({}),
@@ -127,6 +137,16 @@ let l = {
     28: 1,
     29: 1,
     30: 1,
+    40: 1,
+    39: 2,
+    38: 2,
+    37: 2,
+    36: 2,
+    35: 2,
+    32: 1,
+    33: 2,
+    31: 1,
+    34: 1,
 };
 var u = (function (e) {
     return (
@@ -143,5 +163,17 @@ let c = { 12: 16, 14: 16, 16: 16, 24: 24, 32: 32, 36: 40 },
     d = [6, 0, 7, 8, 1, 2, 4, 5, 9, 3],
     _ = [21, 22, 23, 24, 25],
     f = [26, 27, 28, 29, 30],
-    p = { [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_PETS]: _, [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_FLEX]: f },
-    h = { [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_PETS]: r.OJ, [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_FLEX]: r.jF };
+    p = [31, 32, 33, 34, 35],
+    h = [36, 37, 38, 39, 40],
+    m = {
+        [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_PETS]: _,
+        [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_FLEX]: f,
+        [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_PLANT]: p,
+        [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES]: h,
+    },
+    g = {
+        [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_PETS]: r.OJ,
+        [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_FLEX]: r.jF,
+        [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_PLANT]: r.Ht,
+        [i.GuildFeatures.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES]: r.tv,
+    };

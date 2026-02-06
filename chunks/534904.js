@@ -1,29 +1,45 @@
-t.d(s, { default: () => l });
-var a = t(627968),
-    i = t(158954),
-    r = t(397927),
-    n = t(363487),
-    d = t(539085),
-    o = t(154);
+s.d(a, { default: () => l });
+var t = s(627968),
+    i = s(158954),
+    r = s(397927),
+    n = s(363487),
+    d = s(539085),
+    o = s(154);
 function l(e) {
-    let { guildId: s, title: t, description: l, powerups: c, footerInfoText: x, footerAction: u, ...p } = e,
-        m = (0, n.A)(s),
-        v =
-            null != x && x.length > 0
-                ? (0, a.jsx)("div", {
+    let {
+            guildId: a,
+            title: s,
+            description: l,
+            powerups: c,
+            newPowerupSkuIdSet: x,
+            forceStaticImages: u,
+            footerInfoText: m,
+            footerAction: p,
+            ...v
+        } = e,
+        h = (0, n.A)(a),
+        j =
+            null != m && m.length > 0
+                ? (0, t.jsx)("div", {
                       className: o.x,
-                      children: (0, a.jsx)(r.Text, { variant: "text-sm/medium", children: x }),
+                      children: (0, t.jsx)(r.Text, { variant: "text-sm/medium", children: m }),
                   })
                 : void 0;
-    return (0, a.jsx)(i.Modal, {
-        title: t,
+    return (0, t.jsx)(i.Modal, {
+        title: s,
         subtitle: l,
-        actionBarInput: v,
-        actions: null != u ? [u] : [],
-        ...p,
-        children: (0, a.jsx)("div", {
+        actionBarInput: j,
+        actions: null != p ? [p] : [],
+        ...v,
+        children: (0, t.jsx)("div", {
             className: o.p,
-            children: c.map((e) => (0, a.jsx)(d.A, { guildId: s, powerup: e, canUseBoosts: m ?? !1 }, e.skuId)),
+            children: c.map((e) =>
+                (0, t.jsx)(
+                    d.A,
+                    { guildId: a, powerup: e, canUseBoosts: h ?? !1, isNewPerk: x?.has(e.skuId), forceStaticImages: u },
+                    e.skuId,
+                ),
+            ),
         }),
     });
 }
