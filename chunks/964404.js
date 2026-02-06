@@ -5,7 +5,7 @@ var r = n(735438),
     a = n(311907),
     s = n(506774),
     o = n(73153);
-n(677313), n(743898);
+n(677313);
 var l = n(185928),
     u = n(652215),
     c = n(698279),
@@ -30,11 +30,11 @@ function I() {}
 function T() {
     return (m.darkSidebar = !m.darkSidebar), !0;
 }
-function y() {
+function S() {
     let e = a.Ay.PersistedStore.migrateAndReadStoreState("AccessibilityStore", []).state;
     return e?.darkSidebar ?? !1;
 }
-class S extends a.Ay.DeviceSettingsStore {
+class y extends a.Ay.DeviceSettingsStore {
     static displayName = "UnsyncedUserSettingsStore";
     static persistKey = "UnsyncedUserSettingsStore";
     static migrations = [
@@ -67,7 +67,7 @@ class S extends a.Ay.DeviceSettingsStore {
         },
     ];
     initialize(e) {
-        ((m = e ?? {}).darkSidebar = m.darkSidebar ?? y()), (m.hdrDynamicRange = m.hdrDynamicRange ?? "no-limit");
+        ((m = e ?? {}).darkSidebar = m.darkSidebar ?? S()), (m.hdrDynamicRange = m.hdrDynamicRange ?? "no-limit");
     }
     getUserAgnosticState() {
         return m;
@@ -101,9 +101,6 @@ class S extends a.Ay.DeviceSettingsStore {
     }
     get homeSidebarWidth() {
         return m.homeSidebarWidth ?? h();
-    }
-    get callParticipantsSidebarWidth() {
-        return m.callParticipantsSidebarWidth ?? 360;
     }
     get callHeaderHeight() {
         return m.callHeaderHeight;
@@ -157,7 +154,7 @@ class S extends a.Ay.DeviceSettingsStore {
         return m.hdrDynamicRange ?? "no-limit";
     }
 }
-let v = new S(o.h, {
+let v = new y(o.h, {
     UNSYNCED_USER_SETTINGS_UPDATE: g,
     LOGOUT: E,
     LOGIN_SUCCESS: A,

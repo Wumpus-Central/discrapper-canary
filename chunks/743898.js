@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { P: () => r });
-let r = (e) => {
+n.d(t, { P: () => i });
+let i = (e) => {
     let { maxWidth: t, minWidth: n } = e;
     return t <= n;
 };
