@@ -6,7 +6,7 @@ var i = n(397927),
     a = n(206845),
     s = n(604238),
     o = n(261225),
-    l = n(135340),
+    l = n(282203),
     u = n(985018);
 let c = {
     name: "SkuList",
@@ -33,7 +33,7 @@ let c = {
                 (0, r.jsx)("br", {}),
                 (0, r.jsx)(o.A, {
                     columns: 3,
-                    children: (0, r.jsx)(l.A, { skuIds: t.split(","), skuBlock: "ShopProductCard", componentMap: n }),
+                    children: (0, r.jsx)(l.A, { skuIds: t?.split(","), skuBlock: "ShopProductCard", componentMap: n }),
                 }),
                 (0, r.jsx)("hr", {}),
                 (0, r.jsx)(i.Text, { variant: "text-md/bold", children: "Sample Skus:" }),
