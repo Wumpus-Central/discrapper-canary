@@ -19,8 +19,8 @@ var r = n(627968),
     A = n(985018),
     I = n(101541);
 let T = "***@***.***",
-    y = "****",
-    S = "***",
+    S = "****",
+    y = "***",
     v = new h.YS({ id: _.a, brand: p.Ay.Types.UNKNOWN, type: g.hes.CARD });
 function C(e, t) {
     if (e instanceof h.YS)
@@ -28,7 +28,7 @@ function C(e, t) {
             ? { brand: null, label: A.intl.string(A.t.eQ2bLp) }
             : {
                   brand: t ? p.Ay.Types.UNKNOWN : e.brand,
-                  label: A.intl.formatToPlainString(A.t.QvBAQk, { last4: t ? y : e.last4 }),
+                  label: A.intl.formatToPlainString(A.t.QvBAQk, { last4: t ? S : e.last4 }),
               };
     if (e instanceof h.SJ) return { brand: p.Ay.Types.PAYPAL, label: t ? T : e.email };
     if (e instanceof h.A0) return { brand: p.Ay.Types.SOFORT, label: t ? T : e.email };
@@ -38,7 +38,7 @@ function C(e, t) {
     else if (e instanceof h.F_) return { brand: p.Ay.Types.GCASH, label: A.intl.string(A.t.PjehcF) };
     else if (e instanceof h.Xj) return { brand: p.Ay.Types.GRABPAY, label: A.intl.string(A.t.T5davE) };
     else if (e instanceof h.am) return { brand: p.Ay.Types.MOMO_WALLET, label: A.intl.string(A.t.J0A1Vk) };
-    else if (e instanceof h._1) return { brand: p.Ay.Types.VENMO, label: t ? S : "@" + e.username };
+    else if (e instanceof h._1) return { brand: p.Ay.Types.VENMO, label: t ? y : "@" + e.username };
     else if (e instanceof h.i6) return { brand: p.Ay.Types.KAKAOPAY, label: A.intl.string(A.t.CSVexi) };
     else if (e instanceof h.cg) return { brand: p.Ay.Types.GOPAY_WALLET, label: A.intl.string(A.t["43J8JK"]) };
     else if (e instanceof h.UG) return { brand: p.Ay.Types.BANCONTACT, label: A.intl.string(A.t["1ITkfq"]) };
@@ -50,10 +50,11 @@ function C(e, t) {
             label:
                 null == e.bank ? A.intl.string(A.t.nSbwqC) : A.intl.format(A.t["9kUlRU"], { bank: (0, d.o0)(e.bank) }),
         };
-    else if (e instanceof h.FQ) return { brand: p.Ay.Types.CASH_APP, label: t ? S : e.username };
+    else if (e instanceof h.FQ) return { brand: p.Ay.Types.CASH_APP, label: t ? y : e.username };
+    else if (e instanceof h.LQ) return { brand: null, label: A.intl.string(A.t["5/Y1kC"]) };
     throw Error("Invalid Payment Source");
 }
-function b(e, t, n) {
+function N(e, t, n) {
     if (t.value === _.a) return (0, r.jsx)("div", { className: I.wC, children: t.label });
     if (null != e) {
         let t = e instanceof f.A ? e.source : e,
@@ -68,7 +69,7 @@ function b(e, t, n) {
     }
     return (0, r.jsx)("div", { className: I.wC, children: t.label });
 }
-function N(e) {
+function b(e) {
     let { isTrial: t, selectedPaymentSource: n, paymentSources: r, defaultPaymentSourceId: i } = e,
         a = n instanceof f.A ? n.source : n;
     if (null != a) {
@@ -188,8 +189,8 @@ function D(e) {
             optionClassName: g,
             dropdownLoading: E,
             paymentGatewayRestrictions: T,
-            shouldUseUnifiedCheckoutUI: y,
-            newPaymentMethodOptionLabel: S,
+            shouldUseUnifiedCheckoutUI: S,
+            newPaymentMethodOptionLabel: y,
             defaultPaymentSourceId: v,
         } = e,
         {
@@ -206,18 +207,18 @@ function D(e) {
             onChange: _,
             onPaymentSourceAdd: f,
             paymentGatewayRestrictions: T,
-            includeNewPaymentSourceOption: !y,
+            includeNewPaymentSourceOption: !S,
         }),
-        P = i.useMemo(() => new Map(a.map((e) => [e.id, e])), [a]),
-        M = N({ isTrial: p, selectedPaymentSource: L, paymentSources: a, defaultPaymentSourceId: v }),
-        k = y
+        M = i.useMemo(() => new Map(a.map((e) => [e.id, e])), [a]),
+        P = b({ isTrial: p, selectedPaymentSource: L, paymentSources: a, defaultPaymentSourceId: v }),
+        k = S
             ? (0, r.jsx)(O, {
                   onPaymentSourceAdd: f,
                   disabled: h,
                   handleChange: D,
                   paymentSourceOptions: w,
                   selectedPaymentSourceId: x,
-                  newPaymentMethodOptionLabel: S,
+                  newPaymentMethodOptionLabel: y,
               })
             : E
               ? (0, r.jsx)("div", {
@@ -239,15 +240,15 @@ function D(e) {
                           let [t] = e;
                           return E
                               ? (0, r.jsx)(c.y$y, { type: c.tVU.SPINNING_CIRCLE })
-                              : b(null == t.value ? void 0 : P.get(t.value), t, d);
+                              : N(null == t.value ? void 0 : M.get(t.value), t, d);
                       },
-                      renderOptionLabel: (e) => b(null == e.value ? void 0 : P.get(e.value), e, d),
+                      renderOptionLabel: (e) => N(null == e.value ? void 0 : M.get(e.value), e, d),
                       "data-migration-pending": !0,
                   });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             k,
-            null != M
+            null != P
                 ? (0, r.jsxs)("div", {
                       className: I.ot,
                       children: [
@@ -258,7 +259,7 @@ function D(e) {
                               className: I.fT,
                               color: o.A.unsafe_rawColors.YELLOW_300.css,
                           }),
-                          (0, r.jsx)(c.Text, { variant: "text-xs/normal", children: M }),
+                          (0, r.jsx)(c.Text, { variant: "text-xs/normal", children: P }),
                       ],
                   })
                 : null,

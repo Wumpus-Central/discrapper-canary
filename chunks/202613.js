@@ -5,17 +5,18 @@ n.d(t, {
     EE: () => h,
     FQ: () => v,
     F_: () => g,
+    LQ: () => N,
     Pw: () => C,
     Qh: () => _,
     SJ: () => c,
     Tu: () => f,
-    UG: () => S,
+    UG: () => y,
     Ux: () => m,
     Xj: () => E,
     YS: () => u,
     _1: () => I,
     am: () => A,
-    cg: () => y,
+    cg: () => S,
     i6: () => T,
     rJ: () => p,
 }),
@@ -91,13 +92,15 @@ class l extends i.A {
             case o.hes.KAKAOPAY:
                 return new T({ ...n });
             case o.hes.GOPAY_WALLET:
-                return new y({ ...n });
-            case o.hes.BANCONTACT:
                 return new S({ ...n });
+            case o.hes.BANCONTACT:
+                return new y({ ...n });
             case o.hes.IDEAL:
                 return new h({ ...n, bank: e.bank });
             case o.hes.CASH_APP:
                 return new v({ ...n, username: e.username });
+            case o.hes.TDS_WALLET:
+                return new N({ ...n });
             default:
                 (0, s.xb)(e);
         }
@@ -129,15 +132,17 @@ class l extends i.A {
             case o.hes.KAKAOPAY:
                 return new T(e);
             case o.hes.GOPAY_WALLET:
-                return new y(e);
-            case o.hes.BANCONTACT:
                 return new S(e);
+            case o.hes.BANCONTACT:
+                return new y(e);
             case o.hes.EPS:
                 return new p(e);
             case o.hes.IDEAL:
                 return new h(e);
             case o.hes.CASH_APP:
                 return new v(e);
+            case o.hes.TDS_WALLET:
+                return new N(e);
             default:
                 (0, s.xb)(t);
         }
@@ -263,7 +268,7 @@ class T extends l {
             throw Error(`Cannot instantiate KaKaoPaySourceRecord with type: ${e.type}, must be ${o.hes.KAKAOPAY}`);
     }
 }
-class y extends l {
+class S extends l {
     constructor(e) {
         if ((super(e), e.type !== o.hes.GOPAY_WALLET))
             throw Error(
@@ -271,7 +276,7 @@ class y extends l {
             );
     }
 }
-class S extends l {
+class y extends l {
     constructor(e) {
         if ((super(e), e.type !== o.hes.BANCONTACT))
             throw Error(`Cannot instantiate BancontactSourceRecord with type: ${e.type}, must be ${o.hes.BANCONTACT}`);
@@ -300,5 +305,11 @@ class C extends l {
             e.type !== o.hes.APPLE)
         )
             throw Error(`Cannot instantiate AppleSourceRecord with type: ${e.type}, must be ${o.hes.APPLE}`);
+    }
+}
+class N extends l {
+    constructor(e) {
+        if ((super(e), e.type !== o.hes.TDS_WALLET))
+            throw Error(`Cannot instantiate TDSWalletSourceRecord with type: ${e.type}, must be ${o.hes.TDS_WALLET}`);
     }
 }

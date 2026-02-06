@@ -1,12 +1,12 @@
 "use strict";
 n.d(t, {
     AD: () => C,
-    Cm: () => N,
-    DY: () => b,
-    FX: () => V,
+    Cm: () => b,
+    DY: () => N,
+    FX: () => F,
     Gg: () => A,
     Jo: () => et,
-    Kc: () => y,
+    Kc: () => S,
     Kf: () => eh,
     L_: () => em,
     Lt: () => j,
@@ -20,10 +20,10 @@ n.d(t, {
     TG: () => eE,
     Tk: () => eo,
     U2: () => l,
-    VV: () => P,
+    VV: () => M,
     Wz: () => ef,
     Xl: () => u,
-    YI: () => Z,
+    YI: () => X,
     Yr: () => e_,
     ZE: () => $,
     _A: () => h,
@@ -33,15 +33,15 @@ n.d(t, {
     dL: () => H,
     do: () => I,
     e$: () => z,
-    fr: () => M,
+    fr: () => P,
     gx: () => eA,
     hC: () => c,
     hV: () => k,
     he: () => T,
-    il: () => X,
-    js: () => F,
+    il: () => Q,
+    js: () => V,
     kM: () => m,
-    kv: () => S,
+    kv: () => y,
     mX: () => ed,
     me: () => K,
     nf: () => B,
@@ -53,7 +53,7 @@ n.d(t, {
     rz: () => L,
     sE: () => eu,
     sJ: () => W,
-    sh: () => Q,
+    sh: () => Z,
     tE: () => G,
     tF: () => x,
     w7: () => el,
@@ -126,6 +126,7 @@ var m = (function (e) {
             (e[(e.APPLE_PARTNER = 6)] = "APPLE_PARTNER"),
             (e[(e.VIRTUAL_CURRENCY = 8)] = "VIRTUAL_CURRENCY"),
             (e[(e.APPLE_ADVANCED_COMMERCE = 9)] = "APPLE_ADVANCED_COMMERCE"),
+            (e[(e.TDS = 10)] = "TDS"),
             e
         );
     })({}),
@@ -141,6 +142,7 @@ let E = Object.freeze({
         6: "Apple Partner",
         8: "Virtual Currency",
         9: "Apple ACOM",
+        10: "TDS",
     }),
     A = Object.freeze({
         BRAINTREE: { KEY: window.GLOBAL_ENV.BRAINTREE_KEY, PAYMENT_GATEWAY: "braintree" },
@@ -176,7 +178,7 @@ var I = (function (e) {
             e
         );
     })({});
-let y = new Map([
+let S = new Map([
         [7, "paysafecard"],
         [8, "gcash"],
         [9, "grabpay_MY"],
@@ -185,15 +187,15 @@ let y = new Map([
         [12, "gopay_wallet"],
         [17, "cashapp"],
     ]),
-    S = new Map([
+    y = new Map([
         [14, "bancontact"],
         [3, "giropay"],
         [16, "ideal"],
     ]),
     v = new Set([7, 8, 9, 12, 10, 13, 14, 15, 16, 4, 3, 5, 17]),
     C = new Set([7, 9, 3, 5, 4, 14, 15, 16]),
-    b = new Set([1, 2, 6, 8, 10, 11, 13, 12, 17]),
-    N = new Set([3, 4, 5, 14, 15, 16, 7, 9, 12]),
+    N = new Set([1, 2, 6, 8, 10, 11, 13, 12, 17, 19]),
+    b = new Set([3, 4, 5, 14, 15, 16, 7, 9, 12]),
     R = new Set([6]);
 var O = (function (e) {
         return (e[(e.NEW = 1)] = "NEW"), e;
@@ -227,10 +229,10 @@ Object.freeze({ CONSTANT: 1, APPLE_STICKER: 2 });
 var x = (function (e) {
         return (e[(e.DISCOVERY = 0)] = "DISCOVERY"), (e[(e.CHECKOUT = 1)] = "CHECKOUT"), e;
     })({}),
-    P = (function (e) {
+    M = (function (e) {
         return (e[(e.SUBSCRIPTION = 0)] = "SUBSCRIPTION"), (e[(e.ONE_TIME = 1)] = "ONE_TIME"), e;
     })({});
-let M = Object.freeze({ 0: "subscription", 1: "sku" });
+let P = Object.freeze({ 0: "subscription", 1: "sku" });
 var k = (function (e) {
     return (
         (e[(e.VIEW_CHANNEL = 1024)] = "VIEW_CHANNEL"),
@@ -296,8 +298,8 @@ let U = Object.freeze({
     G = function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     },
-    V = () => null,
-    F = () => Promise.resolve(),
+    F = () => null,
+    V = () => Promise.resolve(),
     B = [
         U.KICK_MEMBERS,
         U.BAN_MEMBERS,
@@ -490,7 +492,7 @@ var z = (function (e) {
             e
         );
     })({}),
-    Z = (function (e) {
+    X = (function (e) {
         return (
             (e[(e.CLOSE_NORMAL = 1e3)] = "CLOSE_NORMAL"),
             (e[(e.CLOSE_UNSUPPORTED = 1003)] = "CLOSE_UNSUPPORTED"),
@@ -504,8 +506,8 @@ var z = (function (e) {
             e
         );
     })({});
-let Q = 250,
-    X = "token",
+let Z = 250,
+    Q = "token",
     J = "tokens",
     ee = "status.discord.com",
     et = `https://${ee}`,
