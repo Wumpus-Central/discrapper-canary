@@ -13,6 +13,7 @@ class a extends r.A {
     subscriptionPeriodStart;
     subscriptionPeriodEnd;
     status;
+    orbsReward;
     static createInvoiceFromServer(e) {
         return new a({
             id: e.id,
@@ -25,6 +26,7 @@ class a extends r.A {
             subscriptionPeriodStart: new Date(e.subscription_period_start),
             subscriptionPeriodEnd: new Date(e.subscription_period_end),
             status: e.status,
+            orbsReward: e.orbs_reward,
         });
     }
     constructor(e) {
@@ -38,7 +40,8 @@ class a extends r.A {
             (this.taxInclusive = e.taxInclusive),
             (this.subscriptionPeriodStart = e.subscriptionPeriodStart),
             (this.subscriptionPeriodEnd = e.subscriptionPeriodEnd),
-            (this.status = e.status);
+            (this.status = e.status),
+            (this.orbsReward = e.orbsReward);
     }
     findInvoiceItemByPlanId(e) {
         return this.invoiceItems.find((t) => t.subscriptionPlanId === e) ?? null;

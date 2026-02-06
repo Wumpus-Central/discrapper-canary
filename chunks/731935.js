@@ -134,6 +134,7 @@ class E extends o.A {
     tenantMetadata;
     thumbnailAssetId;
     description;
+    orbsReward;
     static createFromServer(e) {
         let { price: t } = e;
         return new E({
@@ -182,6 +183,7 @@ class E extends o.A {
             tenantMetadata: g(e.tenant_metadata),
             thumbnailAssetId: e.thumbnail_asset_id,
             description: e.description,
+            orbsReward: e.orbs_reward,
         });
     }
     constructor(e) {
@@ -221,7 +223,8 @@ class E extends o.A {
             (this.bundledSkus = e.bundledSkus),
             (this.tenantMetadata = e.tenantMetadata),
             (this.thumbnailAssetId = e.thumbnailAssetId),
-            (this.description = e.description);
+            (this.description = e.description),
+            (this.orbsReward = e.orbsReward);
     }
     get supportedOperatingSystems() {
         let e = null != this.systemRequirements ? Object.keys(this.systemRequirements) : [];
