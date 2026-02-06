@@ -122,13 +122,7 @@ function N(e) {
                     premiumSubscriberCount: t.premiumSubscriberCount,
                 }),
             }),
-            (0, i.jsx)(x.a, {
-                guildId: t.id,
-                targetElementRef: r,
-                appliedBoostCount: E,
-                maxBoostCount: o,
-                premiumSubscriberCount: t.premiumSubscriberCount,
-            }),
+            (0, i.jsx)(x.a, { guildId: t.id, targetElementRef: r }),
         ],
     });
 }
