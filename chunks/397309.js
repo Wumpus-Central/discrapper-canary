@@ -1,38 +1,37 @@
-"use strict";
-s.d(t, { A: () => u });
-var n = s(627968),
-    r = s(64700),
-    l = s(503698),
-    a = s.n(l),
-    i = s(397927),
-    o = s(938191),
+s.d(t, { A: () => d });
+var r = s(627968),
+    l = s(64700),
+    a = s(503698),
+    n = s.n(a),
+    o = s(397927),
+    i = s(938191),
     c = s(758836),
-    d = s(985018);
-function u(e) {
+    u = s(985018);
+function d(e) {
     let { handleTransition: t, onClose: s } = e,
-        l = (0, o.yB)("CollectiblesIndexPageContextMenu"),
-        u = r.useMemo(
+        a = (0, i.yB)("CollectiblesIndexPageContextMenu"),
+        d = l.useMemo(
             () => [
-                { label: d.intl.string(d.t.dRZYNE), value: c.G2.AVATAR_DECORATIONS },
-                { label: d.intl.string(d.t["1cNjtx"]), value: c.G2.PROFILE_EFFECTS },
-                { label: d.intl.string(d.t.V68Fqz), value: c.G2.NAMEPLATES },
-                { label: d.intl.string(d.t.FYFpps), value: c.G2.BUNDLES },
-                { label: d.intl.string(d.t.xFcotU), value: c.G2.CATALOG },
+                { label: u.intl.string(u.t.dRZYNE), value: c.G2.AVATAR_DECORATIONS },
+                { label: u.intl.string(u.t["1cNjtx"]), value: c.G2.PROFILE_EFFECTS },
+                { label: u.intl.string(u.t.V68Fqz), value: c.G2.NAMEPLATES },
+                { label: u.intl.string(u.t.FYFpps), value: c.G2.BUNDLES },
+                { label: u.intl.string(u.t.xFcotU), value: c.G2.CATALOG },
             ],
             [],
         );
-    return (0, n.jsx)("div", {
-        className: a()({ [o.jP]: l }),
-        children: (0, n.jsx)(i.W1t, {
+    return (0, r.jsx)("div", {
+        className: n()({ [i.jP]: a }),
+        children: (0, r.jsx)(o.W1t, {
             "data-menu-migrated": !0,
             navId: "collectibles-index-page-menu",
-            className: a()({ [o.jP]: l }),
+            className: n()({ [i.jP]: a }),
             onClose: s,
-            "aria-label": d.intl.string(d.t.xFcotU),
+            "aria-label": u.intl.string(u.t.xFcotU),
             onSelect: () => {},
-            children: u.map((e) =>
-                (0, n.jsx)(
-                    i.Drp,
+            children: d.map((e) =>
+                (0, r.jsx)(
+                    o.Drp,
                     {
                         id: e.value,
                         label: e.label,

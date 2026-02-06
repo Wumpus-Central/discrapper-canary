@@ -95,6 +95,7 @@ var v = (function (e) {
             (e.PROFILE_EFFECTS = "profile-effects"),
             (e.NAMEPLATES = "nameplates"),
             (e.BUNDLES = "bundles"),
+            (e.COLLECTION_INDEX = "collection-index-page"),
             e
         );
     })({});

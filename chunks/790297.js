@@ -1,5 +1,5 @@
 "use strict";
-s.d(t, { N0: () => h, lC: () => m, uS: () => _ });
+s.d(t, { N0: () => h, lC: () => _, uS: () => m });
 var n = s(64700),
     r = s(311907),
     l = s(793574),
@@ -10,7 +10,7 @@ var n = s(64700),
     d = s(758836),
     u = s(652215),
     g = s(788868);
-let m = (e) => {
+let _ = (e) => {
         let { analyticsSource: t, analyticsLocations: s } = (0, r.cf)([c.A], () => c.A.getAnalytics()),
             n = ((e) => {
                 switch (e) {
@@ -27,14 +27,15 @@ let m = (e) => {
                     case d.G2.NAMEPLATES:
                         return l.A.COLLECTIBLES_SHOP_NAMEPLATES_TAB;
                     case d.G2.CATALOG:
+                    case d.G2.COLLECTION_INDEX:
                         return l.A.COLLECTIBLES_SHOP;
                 }
             })(e),
             { analyticsLocations: i, newestAnalyticsLocation: o } = (0, a.Ay)([...s, l.A.COLLECTIBLES_SHOP, n]);
         return { analyticsSource: t, analyticsLocations: i, newestAnalyticsLocation: o, currentTabLocation: n };
     },
-    _ = (e, t, s, r, l) => {
-        let { analyticsLocations: a, analyticsSource: o, currentTabLocation: c, newestAnalyticsLocation: g } = m(t);
+    m = (e, t, s, r, l) => {
+        let { analyticsLocations: a, analyticsSource: o, currentTabLocation: c, newestAnalyticsLocation: g } = _(t);
         n.useEffect(() => {
             if (r !== d.Pf.VISIBLE || g !== c) return;
             let n = t === d.G2.CATALOG ? l : o;
@@ -48,7 +49,7 @@ let m = (e) => {
         }, [a, e, t, s, c, r, l, o, g]);
     },
     h = (e, t) => {
-        let { analyticsLocations: s } = m(e);
+        let { analyticsLocations: s } = _(e);
         n.useEffect(() => {
             null == t ||
                 o.Ay.canUseCollectibles(t) ||

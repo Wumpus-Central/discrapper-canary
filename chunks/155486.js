@@ -1,120 +1,119 @@
-"use strict";
-s.d(t, { G: () => N });
-var n = s(627968),
-    r = s(64700),
-    l = s(503698),
-    a = s.n(l),
-    i = s(696292),
-    o = s(311907),
+s.d(t, { G: () => G });
+var r = s(627968),
+    l = s(64700),
+    a = s(503698),
+    n = s.n(a),
+    o = s(696292),
+    i = s(311907),
     c = s(554146),
-    d = s(397927),
-    u = s(770178),
-    g = s(736653),
-    m = s(379848),
-    _ = s(742589),
-    h = s(545986),
-    p = s(657331),
-    f = s(318346),
-    E = s(151252),
-    C = s(142270),
-    b = s(287809),
-    A = s(379177),
-    x = s(365491),
-    S = s(628979),
-    v = s(494573),
-    L = s(758836),
-    T = s(652215);
+    u = s(397927),
+    d = s(770178),
+    b = s(736653),
+    S = s(379848),
+    E = s(742589),
+    p = s(545986),
+    f = s(657331),
+    h = s(318346),
+    m = s(151252),
+    A = s(142270),
+    C = s(287809),
+    g = s(379177),
+    T = s(365491),
+    y = s(628979),
+    O = s(494573),
+    R = s(758836),
+    L = s(652215);
 s(801416);
-var I = s(49999),
-    O = s(518477),
-    y = s(985018),
-    j = s(78716);
-function N(e) {
+var x = s(49999),
+    N = s(518477),
+    v = s(985018),
+    _ = s(78716);
+function G(e) {
     let { selectedTab: t, handleTransition: s } = e,
-        l = (0, g.Ay)(),
-        N = (0, o.bG)([b.default], () => b.default.getCurrentUser()),
-        { enabled: k } = (0, E.Z)({ location: "collectibles_shop_header_bar" }),
-        { searchQuery: R } = (0, x.v)(),
-        B = r.useRef(null),
-        [P, M] = r.useState(!1);
-    (0, u.g)(
-        B,
-        r.useCallback((e) => {
-            M(e.contentRect.width < 800);
+        a = (0, b.Ay)(),
+        G = (0, i.bG)([C.default], () => C.default.getCurrentUser()),
+        { enabled: I } = (0, m.Z)({ location: "collectibles_shop_header_bar" }),
+        { searchQuery: j } = (0, T.v)(),
+        w = l.useRef(null),
+        [D, P] = l.useState(!1);
+    (0, d.g)(
+        w,
+        l.useCallback((e) => {
+            P(e.contentRect.width < 800);
         }, []),
     );
-    let D = (0, A.rR)("CollectiblesShopHeaderBar"),
-        w = D ? [c.M.ORB_RENTAL_NEW_BADGE] : [],
-        [H, G] = (0, m.kn)(w),
-        U = D && H === c.M.ORB_RENTAL_NEW_BADGE;
-    r.useEffect(
+    let F = (0, g.rR)("CollectiblesShopHeaderBar"),
+        k = F ? [c.M.ORB_RENTAL_NEW_BADGE] : [],
+        [B, M] = (0, S.kn)(k),
+        $ = F && B === c.M.ORB_RENTAL_NEW_BADGE;
+    l.useEffect(
         () => () => {
-            U && G(I.i.USER_DISMISS);
+            $ && M(x.i.USER_DISMISS);
         },
-        [U, G],
+        [$, M],
     );
-    let F = r.useMemo(
+    let U = l.useMemo(
             () => [
-                { tab: L.G2.HOME, label: y.intl.string(y.t.ijDDwz) },
-                { tab: L.G2.CATALOG, label: y.intl.string(y.t.Ah5sJo), hasSubmenu: !0 },
-                ...(k ? [{ tab: L.G2.ORBS, label: y.intl.string(y.t.EBYkzk) }] : []),
+                { tab: R.G2.HOME, label: v.intl.string(v.t.ijDDwz) },
+                { tab: R.G2.CATALOG, label: v.intl.string(v.t.Ah5sJo), hasSubmenu: !0 },
+                ...(I ? [{ tab: R.G2.ORBS, label: v.intl.string(v.t.EBYkzk) }] : []),
             ],
-            [k],
+            [I],
         ),
-        V = t === L.G2.ORBS ? T.liQ.SHOP_ORBS_TAB : T.liQ.COLLECTIBLES_SHOP,
-        z = r.useCallback(() => {
-            (0, f.Y)({ pageType: V, sectionType: T.JJy.ORBS_BALANCE_MENU, ctaObject: T.ZSU.CTA_TO_QUEST_HOME }),
-                (0, h.navigateToQuestHome)({ fromContent: i.u.ORBS_BALANCE_MENU });
-        }, [V]),
-        $ = r.useCallback(() => {
-            N?.id != null &&
-                (0, p.openUserProfileModal)({ userId: N.id, tabSection: O.RP.WISHLIST, showGuildProfile: !1 });
-        }, [N?.id]),
-        K = r.useCallback(
+        H = t === R.G2.ORBS ? L.liQ.SHOP_ORBS_TAB : L.liQ.COLLECTIBLES_SHOP,
+        q = l.useCallback(() => {
+            (0, h.Y)({ pageType: H, sectionType: L.JJy.ORBS_BALANCE_MENU, ctaObject: L.ZSU.CTA_TO_QUEST_HOME }),
+                (0, p.navigateToQuestHome)({ fromContent: o.u.ORBS_BALANCE_MENU });
+        }, [H]),
+        z = l.useCallback(() => {
+            G?.id != null &&
+                (0, f.openUserProfileModal)({ userId: G.id, tabSection: N.RP.WISHLIST, showGuildProfile: !1 });
+        }, [G?.id]),
+        V = l.useCallback(
             (e) => {
-                s(e), e === L.G2.ORBS && U && G(I.i.USER_DISMISS);
+                s(e), e === R.G2.ORBS && $ && M(x.i.USER_DISMISS);
             },
-            [s, U, G],
+            [s, $, M],
         );
-    return (0, n.jsx)(d.NPJ, {
-        theme: l,
+    return (0, r.jsx)(u.NPJ, {
+        theme: a,
         children: (e) =>
-            (0, n.jsx)("div", {
-                ref: B,
-                children: (0, n.jsxs)(_.A, {
+            (0, r.jsx)("div", {
+                ref: w,
+                children: (0, r.jsxs)(E.A, {
                     disableDoubleClick: !0,
-                    className: a()(e, j.jr),
-                    innerClassname: k ? j.vi : void 0,
+                    className: n()(e, _.jr),
+                    innerClassname: I ? _.vi : void 0,
                     children: [
-                        (0, n.jsx)(d.DUT, {
-                            className: j.sU,
-                            onClick: () => s(L.G2.HOME),
-                            "aria-label": y.intl.string(y.t.pWG4ze) + " home",
-                            children: (0, n.jsx)(d.U1X, { size: "md", color: d.LU0.colors.TEXT_DEFAULT }),
+                        (0, r.jsx)(u.DUT, {
+                            className: _.sU,
+                            onClick: () => s(R.G2.HOME),
+                            "aria-label": v.intl.string(v.t.pWG4ze) + " home",
+                            children: (0, r.jsx)(u.U1X, { size: "md", color: u.LU0.colors.TEXT_DEFAULT }),
                         }),
-                        (0, n.jsx)(v.A, { tabs: F, selectedTab: t, onTabSelect: K, showOrbRentalNewBadge: U }),
-                        (0, n.jsxs)("div", {
-                            className: j.sZ,
+                        (0, r.jsx)(O.A, { tabs: U, selectedTab: t, onTabSelect: V, showOrbRentalNewBadge: $ }),
+                        (0, r.jsxs)("div", {
+                            className: _.sZ,
                             children: [
-                                (0, n.jsx)(S.A, {
+                                (0, r.jsx)(y.A, {
                                     handleTransition: s,
                                     selectedTab: t,
-                                    isNarrow: P,
-                                    hasText: "" !== R,
+                                    isNarrow: D,
+                                    hasText: "" !== j,
                                 }),
-                                (0, n.jsx)(d.DUT, {
-                                    className: j.ij,
-                                    onClick: $,
-                                    "aria-label": y.intl.string(y.t["7lZ31J"]),
-                                    children: (0, n.jsx)(d.C3E, { size: "xs", color: "currentColor" }),
+                                (0, r.jsx)(u.DUT, {
+                                    className: _.ij,
+                                    onClick: z,
+                                    "aria-label": v.intl.string(v.t["7lZ31J"]),
+                                    children: (0, r.jsx)(u.C3E, { size: "xs", color: "currentColor" }),
                                 }),
-                                k &&
-                                    (0, n.jsx)(C.SS, {
-                                        analyticsPage: V,
-                                        cardAlignment: C.SS.CardAlignment.END,
-                                        ctaText: y.intl.string(y.t.VC4Mq0),
-                                        ctaOnClick: z,
-                                        className: j.oz,
+                                I &&
+                                    (0, r.jsx)(A.SS, {
+                                        analyticsPage: H,
+                                        cardAlignment: A.SS.CardAlignment.END,
+                                        ctaText: v.intl.string(v.t.VC4Mq0),
+                                        ctaOnClick: q,
+                                        className: _.oz,
                                     }),
                             ],
                         }),

@@ -1,25 +1,24 @@
-"use strict";
-s.d(t, { S: () => E, v: () => p });
-var n = s(64700),
-    r = s(353640),
-    l = s(499867),
-    a = s(401864),
-    i = s(124987),
-    o = s(946716),
+s.d(t, { S: () => m, v: () => f });
+var r = s(64700),
+    l = s(353640),
+    a = s(499867),
+    n = s(401864),
+    o = s(124987),
+    i = s(946716),
     c = s(856686);
-function d(e, t) {
+function u(e, t) {
     let s = new Set(e);
     return s.has(t) ? s.delete(t) : s.add(t), s;
 }
-let u = { sortType: i.$.RECENCY, sortDirection: a.A.DESC },
-    g = { sortType: i.$.POPULARITY, sortDirection: a.A.DESC },
-    m = { sortType: i.$.RELEVANCE, sortDirection: a.A.DESC },
-    _ = {
+let d = { sortType: o.$.RECENCY, sortDirection: n.A.DESC },
+    b = { sortType: o.$.POPULARITY, sortDirection: n.A.DESC },
+    S = { sortType: o.$.RELEVANCE, sortDirection: n.A.DESC },
+    E = {
         itemTypeFilters: new Set(),
         colorFilters: new Set(),
         themeFilters: new Set(),
         orbEligible: !1,
-        sort: u,
+        sort: d,
         searchQuery: "",
         queryPageSize: 0,
         queryPageOffset: 0,
@@ -27,48 +26,48 @@ let u = { sortType: i.$.RECENCY, sortDirection: a.A.DESC },
         userHasSelectedSort: !1,
         currentTab: null,
     },
-    h = (e) => {
-        let { colorFilters: t, themeFilters: s, searchQuery: n, itemTypeFilters: r } = e;
-        return t.size > 0 || s.size > 0 || "" !== n.trim() ? m : r.size > 0 ? g : u;
+    p = (e) => {
+        let { colorFilters: t, themeFilters: s, searchQuery: r, itemTypeFilters: l } = e;
+        return t.size > 0 || s.size > 0 || "" !== r.trim() ? S : l.size > 0 ? b : d;
     },
-    p = (0, r.v)(
-        (0, l.eh)((e, t) => ({
-            ..._,
+    f = (0, l.v)(
+        (0, a.eh)((e, t) => ({
+            ...E,
             hasDefaultFilters: () =>
-                !t().hasFilters() && t().sort.sortType === u.sortType && t().sort.sortDirection === u.sortDirection,
+                !t().hasFilters() && t().sort.sortType === d.sortType && t().sort.sortDirection === d.sortDirection,
             hasFilters: () => {
-                let { itemTypeFilters: e, colorFilters: s, themeFilters: n, orbEligible: r, searchQuery: l } = t();
-                return [e, s, n].some((e) => e.size > 0) || r || "" !== l;
+                let { itemTypeFilters: e, colorFilters: s, themeFilters: r, orbEligible: l, searchQuery: a } = t();
+                return [e, s, r].some((e) => e.size > 0) || l || "" !== a;
             },
             hasRelevanceFilters: () => {
-                let { colorFilters: e, themeFilters: s, searchQuery: n } = t();
-                return e.size > 0 || s.size > 0 || "" !== n.trim();
+                let { colorFilters: e, themeFilters: s, searchQuery: r } = t();
+                return e.size > 0 || s.size > 0 || "" !== r.trim();
             },
             onToggleItemType: (t) => {
                 e((e) => {
-                    let s = d(e.itemTypeFilters, t),
-                        n = { ...e, itemTypeFilters: s, queryPageOffset: 0 };
-                    return e.userHasSelectedSort || (n.sort = h(n)), n;
+                    let s = u(e.itemTypeFilters, t),
+                        r = { ...e, itemTypeFilters: s, queryPageOffset: 0 };
+                    return e.userHasSelectedSort || (r.sort = p(r)), r;
                 });
             },
             onToggleColor: (t) => {
                 e((e) => {
-                    let s = d(e.colorFilters, t),
-                        n = { ...e, colorFilters: s, queryPageOffset: 0 };
-                    return e.userHasSelectedSort || (n.sort = h(n)), n;
+                    let s = u(e.colorFilters, t),
+                        r = { ...e, colorFilters: s, queryPageOffset: 0 };
+                    return e.userHasSelectedSort || (r.sort = p(r)), r;
                 });
             },
             onToggleTheme: (t) => {
                 e((e) => {
-                    let s = d(e.themeFilters, t),
-                        n = { ...e, themeFilters: s, queryPageOffset: 0 };
-                    return e.userHasSelectedSort || (n.sort = h(n)), n;
+                    let s = u(e.themeFilters, t),
+                        r = { ...e, themeFilters: s, queryPageOffset: 0 };
+                    return e.userHasSelectedSort || (r.sort = p(r)), r;
                 });
             },
             onToggleOrbEligible: () => {
                 e((e) => {
                     let t = { ...e, orbEligible: !e.orbEligible, queryPageOffset: 0 };
-                    return e.userHasSelectedSort || (t.sort = h(t)), t;
+                    return e.userHasSelectedSort || (t.sort = p(t)), t;
                 });
             },
             onSetSort: (t) => {
@@ -82,8 +81,8 @@ let u = { sortType: i.$.RECENCY, sortDirection: a.A.DESC },
                     let s = { ...e, searchQuery: t, queryPageOffset: 0 };
                     return (
                         "" !== t.trim()
-                            ? ((s.sort = m), (s.userHasSelectedSort = !1))
-                            : e.userHasSelectedSort || (s.sort = h(s)),
+                            ? ((s.sort = S), (s.userHasSelectedSort = !1))
+                            : e.userHasSelectedSort || (s.sort = p(s)),
                         s
                     );
                 });
@@ -97,7 +96,7 @@ let u = { sortType: i.$.RECENCY, sortDirection: a.A.DESC },
             setItemTypeFilter: (t) => {
                 e((e) => {
                     let s = new Set([t]),
-                        n = {
+                        r = {
                             ...e,
                             colorFilters: new Set(),
                             themeFilters: new Set(),
@@ -105,62 +104,62 @@ let u = { sortType: i.$.RECENCY, sortDirection: a.A.DESC },
                             itemTypeFilters: s,
                             queryPageOffset: 0,
                         };
-                    return e.userHasSelectedSort || (n.sort = h(n)), n;
+                    return e.userHasSelectedSort || (r.sort = p(r)), r;
                 });
             },
             clearFilters: () => {
                 e({ colorFilters: new Set(), themeFilters: new Set(), itemTypeFilters: new Set(), orbEligible: !1 });
             },
             reset: () => {
-                let { queryPageSize: s, queryPageOffset: n } = t();
-                e({ ..._, queryPageSize: s, queryPageOffset: n });
+                let { queryPageSize: s, queryPageOffset: r } = t();
+                e({ ...E, queryPageSize: s, queryPageOffset: r });
             },
             setCurrentTab: (t) => {
                 e({ currentTab: t });
             },
         })),
     ),
-    f = (e) => {
+    h = (e) => {
         let {
             itemTypeFilters: t,
             colorFilters: s,
-            themeFilters: n,
-            orbEligible: r,
-            sort: l,
-            searchQuery: a,
-            queryPageSize: i,
-            queryPageOffset: o,
+            themeFilters: r,
+            orbEligible: l,
+            sort: a,
+            searchQuery: n,
+            queryPageSize: o,
+            queryPageOffset: i,
         } = e;
         return {
             item_types: Array.from(t),
             colors: Array.from(s),
-            themes: Array.from(n),
-            orbs_eligible: !!r || void 0,
-            offset: o,
-            limit: i,
-            sort_type: l.sortType,
-            sort_direction: l.sortDirection,
-            search: "" !== a ? a : void 0,
+            themes: Array.from(r),
+            orbs_eligible: !!l || void 0,
+            offset: i,
+            limit: o,
+            sort_type: a.sortType,
+            sort_direction: a.sortDirection,
+            search: "" !== n ? n : void 0,
         };
     },
-    E = () => {
+    m = () => {
         let { onSetResponse: e, setSearchError: t, setIsFetchingResults: s } = (0, c.S)();
-        n.useEffect(() => {
-            let n = (n) => {
-                let r = async () => {
+        r.useEffect(() => {
+            let r = (r) => {
+                let l = async () => {
                     s(!0);
                     try {
                         let t,
                             s,
-                            r,
                             l,
-                            a = await (0, o.$)(n);
+                            a,
+                            n = await (0, i.$)(r);
                         e(
-                            ((t = a.skus),
-                            (s = a.pagination.total),
-                            (r = a.pagination.has_more),
-                            (l = a.pagination.offset),
-                            { skus: t, totalCount: s, hasMorePages: r, pageOffset: l, pageLimit: a.pagination.limit }),
+                            ((t = n.skus),
+                            (s = n.pagination.total),
+                            (l = n.pagination.has_more),
+                            (a = n.pagination.offset),
+                            { skus: t, totalCount: s, hasMorePages: l, pageOffset: a, pageLimit: n.pagination.limit }),
                         );
                     } catch (e) {
                         t(e?.message ?? "Unknown error");
@@ -168,21 +167,21 @@ let u = { sortType: i.$.RECENCY, sortDirection: a.A.DESC },
                         s(!1);
                     }
                 };
-                0 !== n.limit && r();
+                0 !== r.limit && l();
             };
-            n(f(p.getState()));
-            let r = p.subscribe(f, n, { equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t) }),
-                l = p.subscribe(
+            r(h(f.getState()));
+            let l = f.subscribe(h, r, { equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t) }),
+                a = f.subscribe(
                     (e) => e.hasFilters(),
                     (e, t) => {
                         if (!e && t) {
-                            let e = p.getState();
-                            e.userHasSelectedSort || p.setState({ sort: h(e) });
+                            let e = f.getState();
+                            e.userHasSelectedSort || f.setState({ sort: p(e) });
                         }
                     },
                 );
             return () => {
-                r(), l();
+                l(), a();
             };
         }, [e, t, s]);
     };

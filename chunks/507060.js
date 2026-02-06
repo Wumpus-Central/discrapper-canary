@@ -15,8 +15,8 @@ var i = n(627968),
     p = n(97469),
     g = n(186111),
     E = n(203982),
-    f = n(652215),
-    I = n(985018),
+    I = n(652215),
+    f = n(985018),
     C = n(136042);
 let N = (0, _.Fe)({
         createPromise: () => Promise.resolve().then(n.bind(n, 944771)),
@@ -25,20 +25,20 @@ let N = (0, _.Fe)({
     }),
     T = (0, _.Fe)({
         createPromise: () =>
-            Promise.all([n.e("68587"), n.e("43600"), n.e("21968"), n.e("78888")]).then(n.bind(n, 667587)),
+            Promise.all([n.e("43600"), n.e("68587"), n.e("21968"), n.e("78888")]).then(n.bind(n, 667587)),
         webpackId: 667587,
         name: "ChannelSettings",
     }),
     S = (0, _.Fe)({
-        createPromise: () => n.e("59275").then(n.bind(n, 737630)),
+        createPromise: () => Promise.all([n.e("63757"), n.e("59275")]).then(n.bind(n, 737630)),
         webpackId: 737630,
         name: "CollectiblesShop",
     }),
     x = (0, _.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("68587"),
                 n.e("43600"),
+                n.e("68587"),
                 n.e("63379"),
                 n.e("56026"),
                 n.e("16301"),
@@ -56,10 +56,10 @@ let N = (0, _.Fe)({
         name: "GuildSettings",
     }),
     v = {
-        [f.zgK.CHANNEL_SETTINGS]: () => (0, i.jsx)(T, {}),
-        [f.zgK.GUILD_SETTINGS]: () => (0, i.jsx)(x, {}),
-        [f.zgK.COLLECTIBLES_SHOP]: () => (0, i.jsx)(S, {}),
-        [f.zgK.COMPONENT_PLAYGROUND]: () => (0, i.jsx)(N, {}),
+        [I.zgK.CHANNEL_SETTINGS]: () => (0, i.jsx)(T, {}),
+        [I.zgK.GUILD_SETTINGS]: () => (0, i.jsx)(x, {}),
+        [I.zgK.COLLECTIBLES_SHOP]: () => (0, i.jsx)(S, {}),
+        [I.zgK.COMPONENT_PLAYGROUND]: () => (0, i.jsx)(N, {}),
     },
     b = "SHOWN",
     y = "HIDDEN",
@@ -107,7 +107,7 @@ class R extends r.PureComponent {
         o.Ay.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
         s.A.parallel([s.A.spring(t, { toValue: 0, ...L }), s.A.spring(n, { toValue: 1.1, ...L })]).start(() => {
-            e(), E._.dispatch(f.jej.LAYER_POP_COMPLETE);
+            e(), E._.dispatch(I.jej.LAYER_POP_COMPLETE);
         });
     }
     animateUnder() {
@@ -134,11 +134,11 @@ class R extends r.PureComponent {
                 "aria-label": A
                     ? (function (e) {
                           switch (e) {
-                              case f.zgK.CHANNEL_SETTINGS:
-                                  return I.intl.string(I.t.XPDhcc);
-                              case f.zgK.COLLECTIBLES_SHOP:
-                                  return I.intl.string(I.t.pWG4ze);
-                              case f.zgK.COMPONENT_PLAYGROUND:
+                              case I.zgK.CHANNEL_SETTINGS:
+                                  return f.intl.string(f.t.XPDhcc);
+                              case I.zgK.COLLECTIBLES_SHOP:
+                                  return f.intl.string(f.t.pWG4ze);
+                              case I.zgK.COMPONENT_PLAYGROUND:
                                   return "Component Playground";
                               default:
                                   return "";
@@ -162,10 +162,10 @@ class R extends r.PureComponent {
 }
 class P extends r.PureComponent {
     componentDidMount() {
-        E._.subscribe(f.jej.LAYER_POP_ESCAPE_KEY, u.jH);
+        E._.subscribe(I.jej.LAYER_POP_ESCAPE_KEY, u.jH);
     }
     componentWillUnmount() {
-        E._.unsubscribe(f.jej.LAYER_POP_ESCAPE_KEY, u.jH);
+        E._.unsubscribe(I.jej.LAYER_POP_ESCAPE_KEY, u.jH);
     }
     renderLayers() {
         let { children: e, layers: t, hasFullScreenLayer: n } = this.props,

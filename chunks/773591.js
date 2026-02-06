@@ -10,124 +10,122 @@ var n = s(627968),
     d = s(287809),
     u = s(954571),
     g = s(440938),
-    m = s(590180),
-    _ = s(511265),
+    _ = s(590180),
+    m = s(511265),
     h = s(206077),
     p = s(100057),
     f = s(392183),
-    E = s(751304),
-    C = s(561769),
-    b = s(998694),
+    x = s(751304),
+    E = s(561769),
+    C = s(998694),
     A = s(758836),
-    x = s(652215),
+    b = s(652215),
     S = s(985018),
     v = s(157884),
     L = s(517700),
-    T = s(304009),
-    I = s(495482),
-    O = s(479512),
-    y = s(867341),
-    j = s(632728),
+    I = s(304009),
+    j = s(495482),
+    k = s(479512),
+    O = s(867341),
+    T = s(632728),
     N = s(368146),
-    k = s(536003);
+    y = s(536003);
 function R(e) {
     let { isFetchingCategories: t, scrollerRef: s, tab: R } = e,
         B = (0, g.uM)(),
-        P = B?.sessionId ?? "",
-        { noCache: M, includeUnpublished: D } = (0, b.A)(),
-        w = (0, a.bG)([d.default], () => d.default.getCurrentUser()),
-        H = (0, a.bG)([m.A], () => m.A.productsWithVariantsAsGroup),
-        [G, U] = r.useState(1),
+        M = B?.sessionId ?? "",
+        { noCache: P, includeUnpublished: D } = (0, C.A)(),
+        H = (0, a.bG)([d.default], () => d.default.getCurrentUser()),
+        w = (0, a.bG)([_.A], () => _.A.productsWithVariantsAsGroup),
+        [U, G] = r.useState(1),
         F = (0, c.DP)(),
         V = (0, i.qB)(F),
-        [z, $, K] = r.useMemo(() => {
+        [K, z, W] = r.useMemo(() => {
             switch (R) {
                 case A.G2.AVATAR_DECORATIONS:
-                    return [S.intl.string(S.t.dRZYNE), V ? O.A : I.A, l.R.AVATAR_DECORATION];
+                    return [S.intl.string(S.t.dRZYNE), V ? k.A : j.A, l.R.AVATAR_DECORATION];
                 case A.G2.PROFILE_EFFECTS:
-                    return [S.intl.string(S.t["1cNjtx"]), V ? k.A : N.A, l.R.PROFILE_EFFECT];
+                    return [S.intl.string(S.t["1cNjtx"]), V ? y.A : N.A, l.R.PROFILE_EFFECT];
                 case A.G2.NAMEPLATES:
-                    return [S.intl.string(S.t.V68Fqz), V ? j.A : y.A, l.R.NAMEPLATE];
+                    return [S.intl.string(S.t.V68Fqz), V ? T.A : O.A, l.R.NAMEPLATE];
                 case A.G2.BUNDLES:
-                    return [S.intl.string(S.t.FYFpps), V ? T.A : L.A, l.R.BUNDLE];
+                    return [S.intl.string(S.t.FYFpps), V ? I.A : L.A, l.R.BUNDLE];
             }
         }, [R, V]),
-        W = (0, _.p)(),
-        Y = r.useMemo(
+        Y = (0, m.p)(),
+        $ = r.useMemo(
             () =>
-                W(
-                    H.filter(
+                Y(
+                    w.filter(
                         (e) =>
-                            (e.type === K ||
-                                (e.type === l.R.VARIANTS_GROUP && e.variants?.some((e) => e.type === K) === !0)) &&
+                            (e.type === W ||
+                                (e.type === l.R.VARIANTS_GROUP && e.variants?.some((e) => e.type === W) === !0)) &&
                             !A.MS.some((t) => {
                                 let { categorySkuId: s } = t;
                                 return s === e.categorySkuId;
                             }),
                     ),
                 ),
-            [H, K, W],
+            [w, W, Y],
         ),
-        q = (0, h.X)(Y);
+        Z = (0, h.X)($);
     return (r.useEffect(() => {
         (0, p.z)({
-            sessionId: P,
+            sessionId: M,
             checkpoint: p.t.SHOP_MOUNTED,
             tab: R,
             unpublishedCategoriesShown: D,
-            cacheDisabled: M,
+            cacheDisabled: P,
         });
     }, []),
     r.useEffect(() => {
         t ||
             (0, p.z)({
-                sessionId: P,
+                sessionId: M,
                 checkpoint: p.t.SHOP_RENDERED,
                 tab: R,
                 unpublishedCategoriesShown: D,
-                cacheDisabled: M,
+                cacheDisabled: P,
             });
-    }, [P, D, M, t, R]),
-    t || null == w)
+    }, [M, D, P, t, R]),
+    t || null == H)
         ? (0, n.jsx)(f.A, {})
         : (0, n.jsxs)(n.Fragment, {
               children: [
                   (0, n.jsx)("div", {
-                      style: { backgroundImage: `url(${$})` },
+                      style: { backgroundImage: `url(${z})` },
                       className: v.cI,
-                      children: (0, n.jsx)(o.Heading, { variant: "heading-xxl/extrabold", children: z }),
+                      children: (0, n.jsx)(o.Heading, { variant: "heading-xxl/extrabold", children: K }),
                   }),
                   (0, n.jsx)("div", {
                       className: v.ZE,
-                      children: q
-                          .slice(40 * (G - 1), 40 * G)
-                          .map((e, t) =>
-                              null == m.A.getCategory(e.categorySkuId)
-                                  ? null
-                                  : (0, n.jsx)(
-                                        g.R9,
-                                        {
-                                            newValue: { tilePosition: t },
-                                            children: (0, n.jsx)(
-                                                E.A,
-                                                { skuId: e.skuId, onClickAnalytics: (0, C.UU)(e, R, B) },
-                                                e.skuId,
-                                            ),
-                                        },
-                                        e.skuId,
-                                    ),
-                          ),
+                      children: Z.slice(40 * (U - 1), 40 * U).map((e, t) =>
+                          null == _.A.getCategory(e.categorySkuId)
+                              ? null
+                              : (0, n.jsx)(
+                                    g.R9,
+                                    {
+                                        newValue: { tilePosition: t },
+                                        children: (0, n.jsx)(
+                                            x.A,
+                                            { skuId: e.skuId, onClickAnalytics: (0, E.UU)(e, R, B) },
+                                            e.skuId,
+                                        ),
+                                    },
+                                    e.skuId,
+                                ),
+                      ),
                   }),
-                  q.length > 40 &&
+                  Z.length > 40 &&
                       (0, n.jsx)("div", {
                           className: v.Ej,
                           children: (0, n.jsx)("div", {
                               children: (0, n.jsx)(o.mgR, {
-                                  currentPage: G,
-                                  totalCount: q.length,
+                                  currentPage: U,
+                                  totalCount: Z.length,
                                   pageSize: 40,
                                   onPageChange: (e) => {
-                                      u.default.track(x.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                      u.default.track(b.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                           collectibles_shop_session_id: B?.sessionId,
                                           page_section: B?.pageSection,
                                           page_category: B?.pageCategory,
@@ -136,7 +134,7 @@ function R(e) {
                                           cta_name: `${R} page ${e}`,
                                           page_type: R,
                                       }),
-                                          U(e),
+                                          G(e),
                                           s?.current?.scrollToTop({ animate: !0 });
                                   },
                                   disablePaginationGap: !0,

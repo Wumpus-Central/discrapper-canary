@@ -8,6 +8,7 @@ e.exports = {
     EF: "categoryWrapper__6db1d",
     vY: "cardsContainer__6db1d",
     bx: "shop__6db1d",
+    Qs: "content__6db1d",
     oQ: "easterEggAnimation__6db1d",
     uA: "easterEggAnimationReverse__6db1d",
     LZ: "categories__6db1d",

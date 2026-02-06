@@ -1,33 +1,32 @@
-"use strict";
-s.d(t, { g: () => i }), s(321073);
-var n = s(64700),
-    r = s(417597),
-    l = s(73153),
-    a = s(248352);
-function i() {
-    let e = n.useRef(new Map()),
-        t = (0, r.bG)([a.A], () => a.A.getUserDiscounts());
-    n.useEffect(() => {
+s.d(t, { g: () => o }), s(321073);
+var r = s(64700),
+    l = s(417597),
+    a = s(73153),
+    n = s(248352);
+function o() {
+    let e = r.useRef(new Map()),
+        t = (0, l.bG)([n.A], () => n.A.getUserDiscounts());
+    r.useEffect(() => {
         let s = e.current,
-            n = Date.now(),
-            r = [];
+            r = Date.now(),
+            l = [];
         return (
             t.forEach((e) => {
                 if (null == e.expiresAt) return;
-                let t = e.expiresAt.getTime() - n;
-                if (t <= 0) r.push(e.discountId);
+                let t = e.expiresAt.getTime() - r;
+                if (t <= 0) l.push(e.discountId);
                 else {
-                    let n = setTimeout(
+                    let r = setTimeout(
                         () => {
-                            l.h.dispatch({ type: "COLLECTIBLES_USER_DISCOUNTS_EXPIRED", discountIds: [e.discountId] }),
+                            a.h.dispatch({ type: "COLLECTIBLES_USER_DISCOUNTS_EXPIRED", discountIds: [e.discountId] }),
                                 s.delete(e.discountId);
                         },
                         Math.min(0x7fffffff, t),
                     );
-                    s.set(e.discountId, n);
+                    s.set(e.discountId, r);
                 }
             }),
-            r.length > 0 && l.h.dispatch({ type: "COLLECTIBLES_USER_DISCOUNTS_EXPIRED", discountIds: r }),
+            l.length > 0 && a.h.dispatch({ type: "COLLECTIBLES_USER_DISCOUNTS_EXPIRED", discountIds: l }),
             () => {
                 s.forEach((e) => clearTimeout(e)), s.clear();
             }
