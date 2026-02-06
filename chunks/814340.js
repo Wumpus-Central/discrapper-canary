@@ -1,4 +1,4 @@
-n.d(t, { A: () => W });
+n.d(t, { A: () => K });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -31,7 +31,7 @@ var i = n(627968),
     L = n(652215),
     M = n(985018),
     D = n(171814);
-let U = () =>
+let G = () =>
     (0, i.jsxs)("div", {
         className: D.p$,
         children: [
@@ -45,7 +45,7 @@ let U = () =>
             }),
         ],
     });
-class G extends l.Component {
+class U extends l.Component {
     static defaultProps = { unread: !1 };
     render() {
         let e = C.A.getGuild(this.props.channel.guild_id);
@@ -63,13 +63,13 @@ let P = o.Ay.connectStores([I.Ay, f.A], (e) => {
             isMentionLowImportance: I.Ay.getIsMentionLowImportance(t.id),
             category: f.A.getChannel(t.parent_id),
         };
-    })(G),
+    })(U),
     w = o.Ay.connectStores([N.Ay], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id)
             throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
         return { voiceStates: N.Ay.getVoiceStates(t.guild_id)[t.id] };
-    })(G),
+    })(U),
     k = o.Ay.connectStores([x.default], (e) => {
         let { guild: t } = e;
         return { unread: x.default.hasUnread(t.id) };
@@ -242,6 +242,7 @@ class F extends l.PureComponent {
                 e.preventDefault(), e.stopPropagation(), n.length > 0 ? this.search("") : (0, y.jD)();
                 return;
             case "k":
+            case "t":
                 (!0 === e.ctrlKey || !0 === e.metaKey) && (e.preventDefault(), e.stopPropagation(), (0, y.jD)());
                 return;
             case "enter": {
@@ -316,7 +317,7 @@ class F extends l.PureComponent {
             let { query: e } = this.state,
                 { results: t } = this.props;
             return 0 === t.length && e.length > 0
-                ? (0, i.jsx)(U, {})
+                ? (0, i.jsx)(G, {})
                 : 0 === t.length
                   ? null
                   : (0, i.jsx)(c.Eie, {
@@ -504,7 +505,7 @@ class F extends l.PureComponent {
         });
     }
 }
-function W(e) {
+function K(e) {
     let t = (0, o.cf)([j.A], () => j.A.getProps());
     return (0, i.jsx)(F, { ...t, ...e });
 }
