@@ -10,5 +10,4 @@ e.exports = {
     Pf: "label__409aa",
     gM: "fixedContent__409aa",
     PP: "searchBarContainer__409aa",
-    To: "popoverAnchor__409aa",
 };
