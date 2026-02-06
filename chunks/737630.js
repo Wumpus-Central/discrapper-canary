@@ -10,41 +10,40 @@ var n = s(627968),
     d = s(397927),
     u = s(944791),
     g = s(444927),
-    m = s(688810),
-    _ = s(697454),
+    _ = s(688810),
+    m = s(697454),
     h = s(611924),
-    p = s(545746),
-    f = s(594832),
-    E = s(287809),
-    C = s(440938),
-    b = s(590180),
-    A = s(161918),
-    x = s(790297),
-    S = s(338769),
-    v = s(841702),
-    L = s(716633),
-    T = s(621653),
+    p = s(594832),
+    f = s(287809),
+    x = s(440938),
+    E = s(590180),
+    C = s(161918),
+    A = s(790297),
+    b = s(338769),
+    S = s(841702),
+    v = s(716633),
+    L = s(621653),
     I = s(983545),
-    O = s(365491),
-    y = s(530971),
-    j = s(177366),
-    N = s(155486),
-    k = s(278576),
-    R = s(120286),
-    B = s(870308),
-    P = s(938191),
+    j = s(365491),
+    k = s(530971),
+    O = s(177366),
+    T = s(155486),
+    N = s(278576),
+    y = s(120286),
+    R = s(870308),
+    B = s(938191),
     M = s(758836),
-    D = s(652215),
-    w = s(650583),
+    P = s(652215),
+    D = s(650583),
     H = s(157884);
-let G = (e) => {
+let w = (e) => {
         let { children: t, shouldAddEventListener: s, onClose: n } = e,
             l = (0, c.useHasAnyModalOpen)();
         return (
             r.useEffect(() => {
                 if (!s || l) return;
                 let e = (e) => {
-                    e.key === w.N$.Escape && n();
+                    e.key === D.N$.Escape && n();
                 };
                 return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
             }, [s, l, n]),
@@ -53,78 +52,77 @@ let G = (e) => {
     },
     U = function (e) {
         let { tab: t = M.G2.HOME } = e;
-        (0, h.P)(_.a), (0, T.g)();
+        (0, h.P)(m.a), (0, L.g)();
         let s = (0, g.A)((0, i.A)()),
-            l = (0, o.bG)([E.default], () => E.default.getCurrentUser());
-        (0, f.pE)();
-        let c = (0, P.yB)("CollectiblesShop"),
-            { onClose: w } = (0, k.tR)(),
-            { currentTab: U, hasFilters: F } = (0, O.v)(),
-            V = r.useMemo(() => (t === M.G2.HOME && U && F() ? U : t), [t, U, F]),
-            { categories: z, refreshCategories: $ } = (0, v.Ay)({ logPerf: !0 }, { sessionId: s, tab: V }),
-            K = (0, L.x)(z),
+            l = (0, o.bG)([f.default], () => f.default.getCurrentUser());
+        (0, p.pE)();
+        let c = (0, B.yB)("CollectiblesShop"),
+            { onClose: D } = (0, N.tR)(),
+            { currentTab: U, hasFilters: G } = (0, j.v)(),
+            F = r.useMemo(() => (t === M.G2.HOME && U && G() ? U : t), [t, U, G]),
+            { categories: V, refreshCategories: K } = (0, S.Ay)({ logPerf: !0 }, { sessionId: s, tab: F }),
+            z = (0, v.x)(V),
             [W, Y] = r.useState(),
-            q = (0, o.bG)([b.A], () => b.A.getCategory(W)?.name),
-            [Z, X] = r.useState();
-        (0, j.XU)();
-        let J = r.useCallback((e, t) => {
-                X(e), Y(t);
+            $ = (0, o.bG)([E.A], () => E.A.getCategory(W)?.name),
+            [Z, q] = r.useState();
+        (0, O.XU)();
+        let X = r.useCallback((e, t) => {
+                q(e), Y(t);
             }, []),
-            { selectedTab: Q, transitionState: ee, transitionToTab: et } = (0, I.o)(V);
-        (0, x.uS)(s, Q, q, ee, Z), (0, x.N0)(Q, l);
-        let { dismissShopButtonDC: es } = (0, B.A)();
+            { selectedTab: J, transitionState: Q, transitionToTab: ee } = (0, I.o)(F);
+        (0, A.uS)(s, J, $, Q, Z), (0, A.N0)(J, l);
+        let { dismissShopButtonDC: et } = (0, R.A)();
         r.useEffect(() => {
-            es();
-        }, [es]),
+            et();
+        }, [et]),
             r.useEffect(() => {
-                (0, u.I)(D.BVt.COLLECTIBLES_SHOP);
-            }, []),
-            (0, p.A)({ ignoreCacheTTL: !0 });
-        let en = r.useRef(null),
-            er = r.useRef(null);
-        (0, d.tjt)(en),
+                (0, u.I)(P.BVt.COLLECTIBLES_SHOP);
+            }, []);
+        let es = r.useRef(null),
+            en = r.useRef(null);
+        (0, d.tjt)(es),
             r.useEffect(() => {
-                er.current?.focus();
+                en.current?.focus();
             }, []),
-            (0, P.gB)();
-        let { analyticsLocations: el } = (0, x.lC)(Q),
-            ea = (0, S.V)(Q, "collectibles_shop");
-        return (0, n.jsx)(m.f5, {
-            value: el,
-            children: (0, n.jsx)(C.R9, {
-                newValue: { sessionId: s, pageCategory: q, pageSize: M.l5 },
-                children: (0, n.jsx)(A.iM, {
-                    tab: Q,
-                    children: (0, n.jsx)(G, {
-                        onClose: w,
+            (0, B.gB)();
+        let { analyticsLocations: er } = (0, A.lC)(J),
+            el = (0, b.V)(J, "collectibles_shop");
+        return (0, n.jsx)(_.f5, {
+            value: er,
+            children: (0, n.jsx)(x.R9, {
+                newValue: { sessionId: s, pageCategory: $, pageSize: M.l5 },
+                children: (0, n.jsx)(C.iM, {
+                    tab: J,
+                    children: (0, n.jsx)(w, {
+                        onClose: D,
                         shouldAddEventListener: !1,
                         children: (0, n.jsxs)("div", {
-                            className: a()(H.bx, { [P.jP]: c }),
-                            ref: er,
+                            className: a()(H.bx, { [B.jP]: c }),
+                            ref: en,
                             tabIndex: -1,
                             children: [
-                                (0, n.jsx)(N.G, { handleTransition: et, selectedTab: Q }),
-                                null != ea &&
-                                    ea.type === S.Z.COUNTDOWN &&
-                                    (0, n.jsx)(R.k, {
-                                        message: ea.message,
-                                        onClick: () => et(M.G2.HOME),
+                                (0, n.jsx)(T.G, { handleTransition: ee, selectedTab: J }),
+                                null != el &&
+                                    el.type === b.Z.COUNTDOWN &&
+                                    (0, n.jsx)(y.k, {
+                                        message: el.message,
+                                        onClick: () => ee(M.G2.HOME),
                                         variant: "pink",
-                                        countdownEndDate: ea.countdownEndDate,
+                                        countdownEndDate: el.countdownEndDate,
                                     }),
                                 (0, n.jsx)("div", {
                                     className: a()(H.td, {
-                                        [H.RK]: ee === M.Pf.VISIBLE,
-                                        [H.in]: ee === M.Pf.IN,
-                                        [H.FD]: ee === M.Pf.OUT,
+                                        [H.RK]: Q === M.Pf.VISIBLE,
+                                        [H.in]: Q === M.Pf.IN,
+                                        [H.FD]: Q === M.Pf.OUT,
                                     }),
-                                    children: (0, n.jsx)(y.A, {
-                                        tab: Q,
-                                        refreshCategories: $,
-                                        transitionToTab: et,
-                                        transitionState: ee,
-                                        sortedCategories: K,
-                                        updateAnalyticsState: J,
+                                    children: (0, n.jsx)(k.A, {
+                                        tab: J,
+                                        refreshCategories: K,
+                                        transitionToTab: ee,
+                                        transitionState: Q,
+                                        sortedCategories: z,
+                                        updateAnalyticsState: X,
                                     }),
                                 }),
                             ],
