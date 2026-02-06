@@ -1,8 +1,8 @@
 "use strict";
 n.r(t), n.d(t, { openPlayground: () => d, openPlaygroundFromParsedUrl: () => _ });
 var r = n(398590),
-    i = n(186111),
-    a = n(287809),
+    i = n(790271),
+    a = n(186111),
     s = n(944771),
     o = n(3258),
     l = n(652215);
@@ -25,13 +25,12 @@ function c(e, t) {
     return null;
 }
 function d(e, t) {
-    let n = a.default.getCurrentUser();
-    if (!n?.isStaff() && !n?.isStaffPersonal()) return !1;
-    let s = null != e ? u(e) : null,
-        d = null != s && null != t ? c(s, t) : null;
+    if (!(0, i.mz)("playground_open")) return !1;
+    let n = null != e ? u(e) : null,
+        s = null != n && null != t ? c(n, t) : null;
     return (
-        o.PlaygroundStore.setState({ selectedCollection: s, selectedStory: d }),
-        i.A.getLayers().includes(l.zgK.COMPONENT_PLAYGROUND) || (0, r.id)(l.zgK.COMPONENT_PLAYGROUND),
+        o.PlaygroundStore.setState({ selectedCollection: n, selectedStory: s }),
+        a.A.getLayers().includes(l.zgK.COMPONENT_PLAYGROUND) || (0, r.id)(l.zgK.COMPONENT_PLAYGROUND),
         !0
     );
 }

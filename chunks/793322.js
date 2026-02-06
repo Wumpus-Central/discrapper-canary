@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $P: () => B, F6: () => H, L$: () => F, LV: () => P, WU: () => G, jD: () => V, wf: () => j });
+n.d(t, { $P: () => B, F6: () => H, L$: () => V, LV: () => M, WU: () => G, jD: () => F, wf: () => j });
 var r = n(397927),
     i = n(73153),
     a = n(308528),
@@ -11,20 +11,20 @@ var r = n(397927),
     d = n(629357),
     _ = n(329308),
     f = n(979286),
-    p = n(22007),
-    h = n(378570),
-    m = n(345942),
-    g = n(849823),
-    E = n(95701),
-    A = n(734057),
-    I = n(189081),
-    T = n(309010),
+    p = n(790271),
+    h = n(22007),
+    m = n(378570),
+    g = n(345942),
+    E = n(849823),
+    A = n(95701),
+    I = n(734057),
+    T = n(189081),
+    S = n(309010),
     y = n(967198),
-    S = n(954571),
-    v = n(427262),
+    v = n(954571),
     C = n(988102),
-    b = n(174768),
-    N = n(652215),
+    N = n(174768),
+    b = n(652215),
     R = n(746080),
     O = n(758836);
 let D = () => Promise.resolve();
@@ -41,20 +41,20 @@ function x(e) {
     let t = L[e.charAt(0)] ?? null;
     return [e.replace(w, ""), t];
 }
-function P(e) {
+function M(e) {
     let [t, n] = x(e);
     return { query: t, queryMode: n };
 }
-function M(e) {
+function P(e) {
     let t;
-    if (b.A.isOpen()) return;
+    if (N.A.isOpen()) return;
     let n = y.A.getGuildId(),
-        r = T.A.getChannelId(n);
+        r = S.A.getChannelId(n);
     if (null != r) {
-        let e = A.A.getChannel(r);
+        let e = I.A.getChannel(r);
         t = null != e ? e.type : null;
     }
-    S.default.track(N.HAw.QUICKSWITCHER_OPENED, {
+    v.default.track(b.HAw.QUICKSWITCHER_OPENED, {
         source: e,
         current_guild_id: n,
         current_channel_id: r,
@@ -62,9 +62,9 @@ function M(e) {
     });
 }
 function k(e, t) {
-    let { results: n, queryMode: r, query: i, maxQueryLength: a } = b.A.getProps(),
+    let { results: n, queryMode: r, query: i, maxQueryLength: a } = N.A.getProps(),
         s = y.A.getGuildId(),
-        o = T.A.getChannelId(s),
+        o = S.A.getChannelId(s),
         l = n[(0, d.Vv)(d.vB.DOWN, -1, n)],
         u = C.A.isEmail(i),
         c = C.A.isPhoneNumber(i),
@@ -84,15 +84,15 @@ function k(e, t) {
             query: u || c || _ ? null : i,
             top_result_type: p(l),
             top_result_score: null != l ? l.score : null,
-            num_results_total: b.A.getResultTotals(),
-            num_results_users: b.A.getResultTotals(d.rD.USER),
-            num_results_text_channels: b.A.getResultTotals(d.rD.TEXT_CHANNEL),
-            num_results_voice_channels: b.A.getResultTotals(d.rD.VOICE_CHANNEL),
-            num_results_guilds: b.A.getResultTotals(d.rD.GUILD),
-            num_results_group_dms: b.A.getResultTotals(d.rD.GROUP_DM),
+            num_results_total: N.A.getResultTotals(),
+            num_results_users: N.A.getResultTotals(d.rD.USER),
+            num_results_text_channels: N.A.getResultTotals(d.rD.TEXT_CHANNEL),
+            num_results_voice_channels: N.A.getResultTotals(d.rD.VOICE_CHANNEL),
+            num_results_guilds: N.A.getResultTotals(d.rD.GUILD),
+            num_results_group_dms: N.A.getResultTotals(d.rD.GROUP_DM),
         };
     if (null != o) {
-        let e = A.A.getChannel(o);
+        let e = I.A.getChannel(o);
         h.current_channel_type = null != e ? e.type : null;
     }
     if (null != t) {
@@ -103,7 +103,7 @@ function k(e, t) {
                 break;
             case d.rD.TEXT_CHANNEL:
             case d.rD.VOICE_CHANNEL:
-                i instanceof E.YB && (h.selected_guild_id = null != i.guild_id ? i.guild_id : null),
+                i instanceof A.YB && (h.selected_guild_id = null != i.guild_id ? i.guild_id : null),
                     (h.selected_channel_id = i.id);
                 break;
             case d.rD.GROUP_DM:
@@ -113,7 +113,7 @@ function k(e, t) {
                 h.selected_user_id = i.id;
         }
     }
-    S.default.track(e, h);
+    v.default.track(e, h);
 }
 function U() {
     i.h.dispatch({ type: "QUICKSWITCHER_HIDE" });
@@ -121,67 +121,67 @@ function U() {
 function G() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "KEYBIND",
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-    M(e), i.h.dispatch({ type: "QUICKSWITCHER_SHOW", ...P(t) });
-}
-function V() {
-    k(N.HAw.QUICKSWITCHER_CLOSED), U();
+    P(e), i.h.dispatch({ type: "QUICKSWITCHER_SHOW", ...M(t) });
 }
 function F() {
+    k(b.HAw.QUICKSWITCHER_CLOSED), U();
+}
+function V() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "KEYBIND";
-    b.A.isOpen() ? V() : G(e);
+    N.A.isOpen() ? F() : G(e);
 }
 function B(e) {
-    i.h.dispatch({ type: "QUICKSWITCHER_SEARCH", ...P(e) });
+    i.h.dispatch({ type: "QUICKSWITCHER_SEARCH", ...M(e) });
 }
 function j(e) {
     i.h.dispatch({ type: "QUICKSWITCHER_SELECT", selectedIndex: e });
 }
 function H(e) {
     let t,
-        E = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    U(), (0, r.s7G)(), k(N.HAw.QUICKSWITCHER_RESULT_SELECTED, e);
-    let { type: T, record: y } = e,
-        S = { page: N.liQ.QUICK_SWITCHER };
-    switch (T) {
+        A = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    U(), (0, r.s7G)(), k(b.HAw.QUICKSWITCHER_RESULT_SELECTED, e);
+    let { type: S, record: y } = e,
+        v = { page: b.liQ.QUICK_SWITCHER };
+    switch (S) {
         case d.rD.GUILD:
-            (0, m.u)(y.id, { navigationReplace: !0 });
+            (0, g.u)(y.id, { navigationReplace: !0 });
             break;
         case d.rD.TEXT_CHANNEL:
-            null != (t = A.A.getChannel(y.id)) &&
-                (0, h.iN)(t.id, { state: { analyticsSource: S }, navigationReplace: !0 });
+            null != (t = I.A.getChannel(y.id)) &&
+                (0, m.iN)(t.id, { state: { analyticsSource: v }, navigationReplace: !0 });
             break;
         case d.rD.VOICE_CHANNEL:
-            null != (t = A.A.getChannel(y.id)) &&
-                (E ? s.A.updateChatOpen(y.id, !0) : u.default.selectVoiceChannel(y.id),
-                (0, h.iN)(t.id, { state: { analyticsSource: S }, navigationReplace: !0 }));
+            null != (t = I.A.getChannel(y.id)) &&
+                (A ? s.A.updateChatOpen(y.id, !0) : u.default.selectVoiceChannel(y.id),
+                (0, m.iN)(t.id, { state: { analyticsSource: v }, navigationReplace: !0 }));
             break;
         case d.rD.USER:
             a.A.openPrivateChannel({ recipientIds: [y.id], location: "Quickswitcher" }),
-                o.A.channelListScrollTo(N.ME, A.A.getDMFromUserId(y.id));
+                o.A.channelListScrollTo(b.ME, I.A.getDMFromUserId(y.id));
             break;
         case d.rD.GROUP_DM:
-            (0, h.iN)(y.id, { navigationReplace: !0 }), o.A.channelListScrollTo(N.ME, y.id);
+            (0, m.iN)(y.id, { navigationReplace: !0 }), o.A.channelListScrollTo(b.ME, y.id);
             break;
         case d.rD.APPLICATION:
-            let C = I.A.getActiveLibraryApplication(y.id);
-            D(y.id, C, { analyticsParams: { source: N.ThZ.QUICK_SWITCHER, location: N.ThZ.QUICK_SWITCHER } });
+            let C = T.A.getActiveLibraryApplication(y.id);
+            D(y.id, C, { analyticsParams: { source: b.ThZ.QUICK_SWITCHER, location: b.ThZ.QUICK_SWITCHER } });
             break;
         case d.rD.LINK:
-            (0, p.A)(y.path, { navigationReplace: !0 });
+            (0, h.A)(y.path, { navigationReplace: !0 });
             break;
         case d.rD.IN_APP_NAVIGATION:
             if (e.record.type === _.t1.SETTINGS) {
-                let t = (0, g.default)(e.record.path);
+                let t = (0, E.default)(e.record.path);
                 if (null != t) {
                     let { openUserSettingsFromParsedUrl: e } = n(840065);
                     e({ match: t, urlOrigin: "quickswitcher" });
                 }
             } else if (e.record.type === _.t1.PLAYGROUND) {
-                if (!(0, v.Gn)()) return;
+                if (!(0, p.mz)("quickswitcher_action")) return;
                 {
                     let { PlaygroundStore: t } = n(3258),
                         r = e.record.collectionId ?? null;
-                    t.setState({ selectedCollection: r, selectedStory: null }), (0, l.id)(N.zgK.COMPONENT_PLAYGROUND);
+                    t.setState({ selectedCollection: r, selectedStory: null }), (0, l.id)(b.zgK.COMPONENT_PLAYGROUND);
                 }
             } else
                 e.record.type === _.t1.SHOP_ORBS_TAB
@@ -190,7 +190,7 @@ function H(e) {
                           analyticsLocations: [c.A.QUICK_SWITCHER],
                           analyticsSource: c.A.QUICK_SWITCHER,
                       })
-                    : (0, p.A)(y.path, { navigationReplace: !0 });
+                    : (0, h.A)(y.path, { navigationReplace: !0 });
     }
     i.h.dispatch({ type: "QUICKSWITCHER_SWITCH_TO", result: e });
 }
