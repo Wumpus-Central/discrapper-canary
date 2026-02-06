@@ -19,8 +19,8 @@ var r = n(627968),
     A = n(996988),
     I = n(985018),
     T = n(856171);
-let y = 4;
-function S(e) {
+let S = 4;
+function y(e) {
     let t = (0, c.A)(e.map((e) => e.applicationId));
     return (0, o.cf)([d.A], () =>
         Object.fromEntries(
@@ -37,8 +37,8 @@ function S(e) {
 function v(e) {
     let { widgets: t = [], onClick: n, className: a } = e,
         { trackUserProfileAction: c } = (0, p.NJ)(),
-        v = S(t.filter((e) => e instanceof h.R)),
-        b = (0, i.useMemo)(
+        v = y(t.filter((e) => e instanceof h.R)),
+        N = (0, i.useMemo)(
             () => [
                 ...new Set(
                     t
@@ -55,27 +55,26 @@ function v(e) {
             ],
             [t, v],
         ),
-        N = (0, o.bG)([d.A], () => d.A.canFetchDetectableGames()),
+        b = (0, o.bG)([d.A], () => d.A.canFetchDetectableGames()),
         [R, O] = (0, i.useState)([]),
         { themeType: D } = (0, E.E)(),
         L = D === A.d.SIDEBAR,
         w = (0, i.useRef)(!1);
     return (
         (0, i.useEffect)(() => {
-            N
+            b
                 ? u.A.getDetectableGames()
                 : O(
-                      b
-                          .map((e) => d.A.getDetectableGame(e))
+                      N.map((e) => d.A.getDetectableGame(e))
                           .filter((e) => null != e)
                           .map((e) => ({
                               image: _.Ay.getApplicationIconURL({ id: e.id, icon: e.icon }) ?? "",
                               name: e.name,
                           }))
                           .filter((e) => "" !== e.image)
-                          .slice(0, y),
+                          .slice(0, S),
                   );
-        }, [b, N]),
+        }, [N, b]),
         (0, i.useEffect)(() => {
             0 === R.length || w.current || (c({ action: "VIEW_GAME_WIDGET_BREADCRUMB" }), (w.current = !0));
         }, [c, R.length]),
@@ -100,8 +99,8 @@ function v(e) {
                                 {
                                     iconUrl: e.image,
                                     name: e.name,
-                                    displayCount: t === R.length - 1 && b.length > y,
-                                    gameCount: b.length - R.length,
+                                    displayCount: t === R.length - 1 && N.length > S,
+                                    gameCount: N.length - R.length,
                                 },
                                 t,
                             ),
