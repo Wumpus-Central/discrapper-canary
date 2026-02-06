@@ -79,20 +79,6 @@ let i = {
         inlineRequire: () => n(314497).A,
         hasStoreChangeListeners: !0,
     },
-    VoiceDareTrackingManager: {
-        actions: [
-            "PRESENCE_UPDATES",
-            "VOICE_STATE_UPDATES",
-            "VOICE_DARES_LOCAL_ACCEPT_OFFER",
-            "VOICE_DARES_LOCAL_DECLINE_OFFER",
-            "VOICE_DARES_LOCAL_COMPLETE",
-            "VOICE_DARES_LOCAL_CHICKEN_OUT",
-            "VOICE_DARES_LOCAL_CLEARED",
-            "VOICE_DARES_LOCAL_REQUEST_CANCEL",
-            "LOGOUT",
-        ],
-        inlineRequire: () => n(965413).A,
-    },
     TopEmojisDataManager: { actions: ["EMOJI_INTERACTION_INITIATED"], inlineRequire: () => n(347209).A },
     EntityVersionsManager: {
         actions: ["GUILD_CREATE", "DELETED_ENTITY_IDS"],

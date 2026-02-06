@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -11,53 +11,45 @@ var i = n(503698),
     c = n(886019),
     d = n(559405),
     _ = n(890330),
-    f = n(979016),
-    p = n(613125);
+    f = n(613125);
 n(851883);
-var h = n(123511);
-let m = 14;
-function g(e) {
+var p = n(123511);
+let h = 14;
+function m(e) {
     let {
             customStatusActivity: t,
             iconClassName: n,
             textClassName: i,
-            voiceChannel: g,
-            hangStatus: E,
-            userId: A,
-            textSize: I = "xs",
-            animateEmoji: T = !0,
-            hideEmoji: y = !1,
+            voiceChannel: m,
+            hangStatus: g,
+            userId: E,
+            textSize: A = "xs",
+            animateEmoji: I = !0,
+            hideEmoji: T = !1,
             hideTooltip: S = !1,
         } = e,
-        v = (0, _.v)("ActivityStatus", g),
-        { defaultStatusVariant: C } = (0, u.$j)({ guildId: g?.guild_id, location: "CustomStatusVoiceDare" }),
-        b = null != E && v,
-        N = b && null != A ? (0, c.Au)(A, E, C) : null,
-        R = t?.emoji,
-        O = (0, p.Z)({ customStatusActivity: t, statusOwnerId: A }),
-        D = O.statusTextOverride ?? N ?? t?.state,
-        L = null != D && "" !== D,
-        w = null;
-    b && null != A
-        ? (w = (0, r.jsx)(d.A, { userId: A, size: m, className: a()(n, h.W9), hangStatusActivity: E }))
-        : null == R || y || (w = (0, r.jsx)(l.A, { emoji: R, animate: T, className: n, hideTooltip: S || L }));
-    let x = L ? (null != w ? ` ${D}` : D) : null,
-        P = () => {
-            let e = null != R && !y && !L;
+        y = (0, _.v)("ActivityStatus", m),
+        { defaultStatusVariant: v } = (0, u.$j)({ guildId: m?.guild_id, location: "CustomStatusVoiceDare" }),
+        C = null != g && y,
+        N = C && null != E ? (0, c.Au)(E, g, v) : null,
+        b = t?.emoji,
+        R = (0, f.Z)({ customStatusActivity: t, statusOwnerId: E, location: "CustomStatusVoiceDare" }),
+        O = N ?? R.statusTextOverride ?? t?.state,
+        D = null != O && "" !== O,
+        L = null;
+    C && null != E
+        ? (L = (0, r.jsx)(d.A, { userId: E, size: h, className: a()(n, p.W9), hangStatusActivity: g }))
+        : null == b || T || (L = (0, r.jsx)(l.A, { emoji: b, animate: I, className: n, hideTooltip: S || D }));
+    let w = D ? (null != L ? ` ${O}` : O) : null,
+        x = () => {
+            let e = null != b && !T && !D;
             return S || e
-                ? (0, r.jsxs)(r.Fragment, { children: [w, x] })
-                : null != O.presence
-                  ? (0, r.jsx)(s.m, {
-                        delay: 150,
-                        __unsupportedReactNodeAsText:
-                            null != A
-                                ? (0, r.jsx)(f.A, { userId: A, presence: O.presence, surfaceKind: f.n.Tooltip })
-                                : null,
-                        children: (0, r.jsxs)("span", { children: [w, x] }),
-                    })
-                  : (0, r.jsxs)("span", { children: [w, x] });
+                ? (0, r.jsxs)(r.Fragment, { children: [L, w] })
+                : null != R.presence
+                  ? (0, r.jsx)(s.m, { delay: 150, children: (0, r.jsxs)("span", { children: [L, w] }) })
+                  : (0, r.jsxs)("span", { children: [L, w] });
         };
-    return null == t && null == E
+    return null == t && null == g
         ? null
-        : (0, r.jsx)(o.Text, { variant: `text-${I}/medium`, color: "none", className: a()(h.ps, i), children: P() });
+        : (0, r.jsx)(o.Text, { variant: `text-${A}/medium`, color: "none", className: a()(p.ps, i), children: x() });
 }

@@ -57,13 +57,9 @@ function O(e) {
     function F(e) {
         null != M
             ? (0, c.L3)(e, async () => {
-                  let { default: e } = await Promise.all([
-                      n.e("97262"),
-                      n.e("42128"),
-                      n.e("82892"),
-                      n.e("84841"),
-                      n.e("31885"),
-                  ]).then(n.bind(n, 107632));
+                  let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("84841"), n.e("31885")]).then(
+                      n.bind(n, 107632),
+                  );
                   return (t) =>
                       (0, i.jsx)(e, {
                           ...t,

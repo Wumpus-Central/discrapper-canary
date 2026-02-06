@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => V });
+n.d(t, { A: () => F });
 var r = n(627968),
     i = n(64700),
     a = n(735438),
@@ -19,20 +19,20 @@ var r = n(627968),
     A = n(600975),
     I = n(386784),
     T = n(545868),
-    y = n(332173),
-    S = n(176201),
+    S = n(332173),
+    y = n(176201),
     v = n(676608),
     C = n(342296),
-    b = n(260509),
-    N = n(734057),
+    N = n(260509),
+    b = n(734057),
     R = n(696451),
     O = n(317525),
     D = n(71393),
     L = n(287809),
     w = n(427262),
     x = n(985018),
-    P = n(206314),
-    M = n(377086);
+    M = n(206314),
+    P = n(377086);
 let k = (0, A.C)({
     kind: "user",
     id: "2021-07_role_popout",
@@ -45,7 +45,7 @@ function U(e) {
         u = i.useRef(null),
         c = (0, l.bG)([D.A], () => D.A.getGuild(a)?.ownerId, [a]),
         f = (0, l.bG)([L.default], () => L.default.getUser(t.userId), [t.userId]),
-        p = (0, l.bG)([N.A], () => N.A.getChannel(s), [s]);
+        p = (0, l.bG)([b.A], () => b.A.getChannel(s), [s]);
     return null == f || null == p
         ? null
         : (0, r.jsx)(
@@ -81,9 +81,8 @@ function U(e) {
                                           n.e("3795"),
                                           n.e("42128"),
                                           n.e("97283"),
-                                          n.e("82892"),
                                           n.e("84841"),
-                                          n.e("48354"),
+                                          n.e("29347"),
                                       ]).then(n.bind(n, 107632));
                                       return (t) =>
                                           (0, r.jsx)(e, { ...t, user: f, guildId: a, channel: p, showMediaItems: !0 });
@@ -110,7 +109,7 @@ function G(e) {
     let _ = (0, I.A)(a),
         p = (0, l.bG)([D.A], () => {
             let e = D.A.getGuild(a);
-            return null == e ? null : (0, b.af)(e);
+            return null == e ? null : (0, N.af)(e);
         }, [a]),
         h = (0, l.yK)([R.Ay, L.default], () => {
             let e = R.Ay.getMembers(a),
@@ -137,18 +136,18 @@ function G(e) {
         : (0, r.jsx)(u.C.Provider, {
               value: void 0,
               children: (0, r.jsx)("div", {
-                  className: P.qm,
+                  className: M.qm,
                   ref: d,
                   ...t,
                   children: (0, r.jsxs)(c.HOs, {
-                      className: P.bY,
+                      className: M.bY,
                       children: [
-                          (0, r.jsx)(g.Y, { id: n, guildId: a, title: m.name, count: A, className: P.sd }),
+                          (0, r.jsx)(g.Y, { id: n, guildId: a, title: m.name, count: A, className: M.sd }),
                           T,
                           null == A || A <= T.length
                               ? null
                               : (0, r.jsx)(E.A, {
-                                    className: P.sd,
+                                    className: M.sd,
                                     children: x.intl.formatToPlainString(x.t["9oMmZC"], { count: A - T.length }),
                                 }),
                       ],
@@ -156,31 +155,31 @@ function G(e) {
               }),
           });
 }
-function V(e) {
+function F(e) {
     let { roleId: t, channelId: n, roleName: a, guildId: s, children: u, inlinePreview: d = !1 } = e,
         { analyticsLocations: _ } = (0, m.Ay)(h.A.ROLE_MENTION),
         f = (0, l.bG)([p.A], () => p.A.roleStyle),
         g = (0, l.bG)([O.A], () => (null == s || null == t ? null : O.A.getRole(s, t))),
         E = (0, v.jV)(s, g),
-        A = !d && null != g && !(0, S.Qv)(g),
+        A = !d && null != g && !(0, y.Qv)(g),
         I = A && "dot" === f,
         C = A && "username" === f,
-        b = E && null != g ? g.colorStrings : null,
-        N = i.useRef(null),
+        N = E && null != g ? g.colorStrings : null,
+        b = i.useRef(null),
         R = (e) =>
-            (0, r.jsxs)(y.A, {
-                ref: N,
-                className: P.Dz,
+            (0, r.jsxs)(S.A, {
+                ref: b,
+                className: M.Dz,
                 color: C ? g.color : null,
-                roleColors: C ? b : null,
+                roleColors: C ? N : null,
                 ...e,
                 children: [
                     I &&
                         null != g.color &&
                         (0, r.jsx)(c.WYI, {
                             color: (0, o.Hl)(g.color),
-                            colors: b,
-                            className: M.m,
+                            colors: N,
+                            className: P.m,
                             background: !1,
                             tooltip: !1,
                         }),
@@ -193,7 +192,7 @@ function V(e) {
         : (0, r.jsx)(m.f5, {
               value: _,
               children: (0, r.jsx)(c.YNO, {
-                  targetElementRef: N,
+                  targetElementRef: b,
                   preload: async () => {
                       null != t && (await (0, T.a)(s, t));
                   },

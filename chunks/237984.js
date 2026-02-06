@@ -62,7 +62,7 @@ function _(e, t) {
     let i = (0, a.TId)(t);
     (0, a.mMO)(
         async () => {
-            let { default: i } = await Promise.all([n.e("82653"), n.e("94988")]).then(n.bind(n, 599466));
+            let { default: i } = await n.e("68823").then(n.bind(n, 599466));
             return (n) => (0, r.jsx)(i, { ...n, location: e, appContext: t });
         },
         null != i ? { contextKey: i } : void 0,

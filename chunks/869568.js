@@ -9,8 +9,8 @@ var i = n(627968),
     d = n(990078),
     c = n(397927),
     u = n(442433),
-    m = n(181658),
-    g = n(80682),
+    g = n(181658),
+    m = n(80682),
     x = n(793574),
     h = n(688810),
     _ = n(342296),
@@ -33,7 +33,7 @@ async function O(e, t, n) {
     try {
         await j.A.updateMemberRoles(t, e.id, s, [], [n]);
     } catch (t) {
-        let e = new m.A(t);
+        let e = new g.A(t);
         (0, c.qfG)((t) =>
             (0, i.jsx)(a.Modal, {
                 ...t,
@@ -49,11 +49,11 @@ async function O(e, t, n) {
     }
 }
 function G(e) {
-    let { member: t, guildId: l, roleId: o, locked: m } = e,
+    let { member: t, guildId: l, roleId: o, locked: g } = e,
         x = s.useRef(null),
         h = s.useMemo(() => ({ [l]: [t.id] }), [l, t.id]);
     function p(e) {
-        if ((e.stopPropagation(), !m)) {
+        if ((e.stopPropagation(), !g)) {
             let n;
             if (e.shiftKey) return void O(t, l, o);
             (n = N.A.getRole(o)),
@@ -86,14 +86,14 @@ function G(e) {
         let s = A.default.getUser(t.id);
         null != s &&
             (0, u.L3)(e, async () => {
-                let { default: e } = await Promise.all([n.e("97262"), n.e("82892"), n.e("91042"), n.e("62841")]).then(
+                let { default: e } = await Promise.all([n.e("97262"), n.e("91042"), n.e("62841")]).then(
                     n.bind(n, 365689),
                 );
                 return (t) => (0, i.jsx)(e, { ...t, user: s, guildId: l, showChatItems: !1 });
             });
     }
     return (
-        (0, g.E)(h, "GuildSettingsRolesEditMembers"),
+        (0, m.E)(h, "GuildSettingsRolesEditMembers"),
         (0, i.jsx)("div", {
             className: R.Q,
             children: (0, i.jsx)(_.A, {
@@ -120,10 +120,10 @@ function G(e) {
                             (0, i.jsx)("div", {
                                 className: y.O6,
                                 children: (0, i.jsx)(d.m, {
-                                    text: m ? S.intl.string(S.t.wkrQaK) : S.intl.string(S.t["7sFNfW"]),
+                                    text: g ? S.intl.string(S.t.wkrQaK) : S.intl.string(S.t["7sFNfW"]),
                                     position: "top",
                                     children: (0, i.jsx)(c.DUT, {
-                                        className: r()(y.DT, { [y.li]: m }),
+                                        className: r()(y.DT, { [y.li]: g }),
                                         onClick: p,
                                         children: (0, i.jsx)(c.aXh, { size: "xs", color: "currentColor" }),
                                     }),
@@ -168,13 +168,13 @@ function D(e) {
             roleMembers: d,
             handleAddClick: u,
         } = e,
-        { analyticsLocations: m } = (0, h.Ay)(x.A.MEMBER_LIST),
-        g = s.useMemo(() => l.trim().toLowerCase(), [l]);
-    (0, E.cG)(t, g);
-    let _ = s.useMemo(() => d.filter((e) => (0, E.EF)(g, e)), [d, g]),
+        { analyticsLocations: g } = (0, h.Ay)(x.A.MEMBER_LIST),
+        m = s.useMemo(() => l.trim().toLowerCase(), [l]);
+    (0, E.cG)(t, m);
+    let _ = s.useMemo(() => d.filter((e) => (0, E.EF)(m, e)), [d, m]),
         A = s.useMemo(() => _.sort((e, t) => e.name.localeCompare(t.name)), [_]);
     return (0, i.jsx)(h.f5, {
-        value: m,
+        value: g,
         children: (0, i.jsx)(c.Eie, {
             className: y.p_,
             sections: [Math.max(_.length, 1)],
@@ -216,8 +216,8 @@ function M(e) {
 }
 function k(e) {
     let { guild: t, role: l, locked: a, setSelectedSection: d } = e,
-        [u, m] = s.useState(""),
-        { headerHeight: g, headerRef: x } = (0, b.A)(0),
+        [u, g] = s.useState(""),
+        { headerHeight: m, headerRef: x } = (0, b.A)(0),
         { scrolledToTop: h, handleScroll: _ } = (0, T.u)(),
         A = l.managed || a,
         j = (0, E.K5)(t.id, l.id),
@@ -250,7 +250,7 @@ function k(e) {
                                 selectedSection: I.T$.MEMBERS,
                                 setSelectedSection: d,
                             }),
-                            (0, i.jsx)(M, { query: u, setQuery: m, locked: A, handleAddClick: C }),
+                            (0, i.jsx)(M, { query: u, setQuery: g, locked: A, handleAddClick: C }),
                             N
                                 ? (0, i.jsx)(c.po8, {
                                       className: y.v6,
@@ -263,7 +263,7 @@ function k(e) {
                 }),
             }),
             (0, i.jsx)(D, {
-                headerHeight: g + 8,
+                headerHeight: m + 8,
                 query: u,
                 guildId: t.id,
                 roleId: l.id,

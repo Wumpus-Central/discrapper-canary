@@ -19,8 +19,8 @@ var i = n(627968),
     C = n(820284),
     E = n(765671),
     I = n(475743),
-    b = n(646865),
-    N = n(10716),
+    N = n(646865),
+    b = n(10716),
     S = n(795816),
     T = n(933958),
     v = n(967812),
@@ -73,8 +73,8 @@ var i = n(627968),
     eC = n(203982),
     eE = n(723702),
     eI = n(837921),
-    eb = n(475815),
-    eN = n(134047),
+    eN = n(475815),
+    eb = n(134047),
     eS = n(313961),
     eT = n(520698),
     ev = n(780642),
@@ -113,7 +113,7 @@ class eF extends l.PureComponent {
     }
     componentDidMount() {
         let { channel: e, layout: t } = this.props;
-        this.currentDocument.addEventListener(eb.Wb, this.handleFullScreenChange),
+        this.currentDocument.addEventListener(eN.Wb, this.handleFullScreenChange),
             e_.default.track(ew.HAw.VIDEO_LAYOUT_TOGGLED, {
                 video_layout: this.inPopout ? "popout" : t,
                 ...(0, R.QS)(e.id),
@@ -121,7 +121,7 @@ class eF extends l.PureComponent {
     }
     componentWillUnmount() {
         this._videoBackgroundTooltipTimeout.stop(),
-            this.currentDocument.removeEventListener(eb.Wb, this.handleFullScreenChange),
+            this.currentDocument.removeEventListener(eN.Wb, this.handleFullScreenChange),
             (this.inPopout && (0, eE.isMac)()) || this.maybeLeaveFullScreen();
     }
     componentDidUpdate(e) {
@@ -130,8 +130,8 @@ class eF extends l.PureComponent {
         null != s &&
             e.mode === ew._Of.VIDEO &&
             i === ew._Of.VOICE &&
-            (0, eb._U)(s, this.currentDocument) &&
-            (0, eb.sP)(s, this.currentDocument),
+            (0, eN._U)(s, this.currentDocument) &&
+            (0, eN.sP)(s, this.currentDocument),
             (e.participantsOpen !== t || l !== e.layout) && this._contentRef.current?.triggerResize(),
             e.inCall && !n && this.inPopout && m.h.wait(() => this.handleClosePopout());
     }
@@ -188,7 +188,7 @@ class eF extends l.PureComponent {
     handleFullScreenChange = () => {
         let e = this.getRootNode();
         null != e &&
-            ((0, eb._U)(e, this.currentDocument) ||
+            ((0, eN._U)(e, this.currentDocument) ||
                 this.props.layout !== ew.DUB.FULL_SCREEN ||
                 this.handleFullScreen());
     };
@@ -196,14 +196,14 @@ class eF extends l.PureComponent {
         let e = this.getRootNode();
         null != e &&
             (this.props.layout !== ew.DUB.FULL_SCREEN
-                ? ((this._prevLayout = this.props.layout), this.handleChangeLayout(ew.DUB.FULL_SCREEN), (0, eb.tl)(e))
+                ? ((this._prevLayout = this.props.layout), this.handleChangeLayout(ew.DUB.FULL_SCREEN), (0, eN.tl)(e))
                 : this.maybeLeaveFullScreen());
     };
     maybeLeaveFullScreen = () => {
         let e = this.getRootNode();
         null == e ||
             (this.props.layout === ew.DUB.FULL_SCREEN &&
-                (this.handleChangeLayout(this._prevLayout), (0, eb.sP)(e, this.currentDocument)));
+                (this.handleChangeLayout(this._prevLayout), (0, eN.sP)(e, this.currentDocument)));
     };
     handleToggleLayout = () => {
         this.handleChangeLayout(this.props.layout === ew.DUB.NORMAL ? ew.DUB.NO_CHAT : ew.DUB.NORMAL);
@@ -352,7 +352,6 @@ class eF extends l.PureComponent {
                                         let { default: t } = await Promise.all([
                                             n.e("97262"),
                                             n.e("42128"),
-                                            n.e("82892"),
                                             n.e("84841"),
                                             n.e("52458"),
                                         ]).then(n.bind(n, 107632));
@@ -401,7 +400,7 @@ class eF extends l.PureComponent {
                 let n = e.getGuildId();
                 null == n || ec.Ay.isCurrentUserGuest(n) || (0, K.pX)((0, ex.vJ)(n)), H.openChannelCallPopout(e);
             };
-        null == t || (0, b.f)() ? n() : (0, y.A)({ onConfirm: n });
+        null == t || (0, N.f)() ? n() : (0, y.A)({ onConfirm: n });
     };
     handleStayOnTop = (e) => {
         (0, eD.X)(j.A.VOICE_CONTROL_TRAY, eD.O.STAY_ON_TOP, e), H.setAlwaysOnTop(ew.MLl.CHANNEL_CALL_POPOUT, e);
@@ -731,8 +730,8 @@ let eK = function (e) {
         { width: h = 0, height: m = 0, ref: g } = (0, E.Ay)(),
         { ref: _ } = (0, E.Ay)(),
         f = (0, B.Us)(),
-        b = (0, U.A)(),
-        S = (0, c.bG)([em.A], () => (b?.channelId ?? em.A.getVoiceChannelId()) === t.id),
+        N = (0, U.A)(),
+        S = (0, c.bG)([em.A], () => (N?.channelId ?? em.A.getVoiceChannelId()) === t.id),
         {
             participants: y,
             filteredParticipants: R,
@@ -785,11 +784,11 @@ let eK = function (e) {
         }, []),
         ei = z?.id ?? null,
         el = (0, v.A)(ei, t.id),
-        es = (0, c.bG)([N.A], () => N.A.getFetchState(), []),
+        es = (0, c.bG)([b.A], () => b.A.getFetchState(), []),
         ea = (0, I.A)(es);
     l.useEffect(() => {
-        es === N.$.ERROR &&
-            ea !== N.$.ERROR &&
+        es === b.$.ERROR &&
+            ea !== b.$.ERROR &&
             (0, A.showToast)((0, A.createToast)(ek.intl.string(ek.t["AlJyI+"]), A.ToastType.FAILURE));
     }, [es, ea]);
     let ec = (0, c.bG)([T.Ay], () => T.Ay.getSelfEmbeddedActivityForChannel(t.id), [t]);
@@ -813,12 +812,12 @@ let eK = function (e) {
         ex = o - 550,
         eC = T.Ay.getEmbeddedActivitiesForChannel(t.id),
         { enabled: eE } = V.s.useConfig({ location: "ChannelCall" }),
-        eb = (0, eN.T)({ channel: t, location: "ChannelCall" });
+        eN = (0, eb.T)({ channel: t, location: "ChannelCall" });
     l.useEffect(() => {
-        if (!eb || !S || null != eS.A.getAllChatOpen()[t.id] || o <= 0) return;
+        if (!eN || !S || null != eS.A.getAllChatOpen()[t.id] || o <= 0) return;
         let e = !(0, ef.P)({ maxWidth: ex, minWidth: 450 });
         p.A.updateChatOpen(t.id, e, "auto open screen width");
-    }, [eb, ex, o, t.id, S]);
+    }, [eN, ex, o, t.id, S]);
     let { theme: eT } = (0, A.wRf)();
     return (0, i.jsx)(O.f5, {
         value: e_,

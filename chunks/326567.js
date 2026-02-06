@@ -8,7 +8,7 @@ function s(e, t, s, a, r) {
         ? (0, l.L3)(
               e,
               async () => {
-                  let { default: e } = await Promise.all([n.e("82892"), n.e("11590")]).then(n.bind(n, 335253));
+                  let { default: e } = await n.e("52502").then(n.bind(n, 335253));
                   return (n) =>
                       (0, i.jsx)(e, {
                           ...n,
