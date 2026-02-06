@@ -12,6 +12,8 @@ var r = n(64700),
             (e[(e.SOCIAL_LAYER_SKU_PREVIEW = 6)] = "SOCIAL_LAYER_SKU_PREVIEW"),
             (e[(e.GUILD_POWERUPS_COACHMARK_ASSET = 7)] = "GUILD_POWERUPS_COACHMARK_ASSET"),
             (e[(e.BADGE_IMAGE_WITH_PROGRESS_CIRCLE = 8)] = "BADGE_IMAGE_WITH_PROGRESS_CIRCLE"),
+            (e[(e.GUILD_POWERUPS_PROGRESS_BAR_COACHMARK_GRAPHIC = 9)] =
+                "GUILD_POWERUPS_PROGRESS_BAR_COACHMARK_GRAPHIC"),
             e
         );
     })({});
@@ -25,6 +27,7 @@ let a = {
         6: () => n.e("58529").then(n.bind(n, 275256)),
         7: () => n.e("58407").then(n.bind(n, 939034)),
         8: () => n.e("823").then(n.bind(n, 713290)),
+        9: () => n.e("37103").then(n.bind(n, 152338)),
     },
     s = {
         0: r.lazy(a[0]),
@@ -36,4 +39,5 @@ let a = {
         6: r.lazy(a[6]),
         7: r.lazy(a[7]),
         8: r.lazy(a[8]),
+        9: r.lazy(a[9]),
     };
