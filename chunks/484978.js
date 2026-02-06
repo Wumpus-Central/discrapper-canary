@@ -46,7 +46,6 @@ e.exports = {
     OJ: "nameOnTop_c50f62",
     L$: "variantName_c50f62",
     Ms: "externalProductProfilePreview_c50f62",
-    ij: "wishlistButton_c50f62",
     fN: "orbIconAligned_c50f62",
     Hx: "modalFooter_c50f62",
     Q2: "modalFooterText_c50f62",

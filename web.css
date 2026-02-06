@@ -52050,45 +52050,71 @@ div.modalOverrideBody__34eac {
     align-items: center;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    background: rgba(0, 0, 0, .52);
+    background: var(--control-overlay-secondary-background-default);
     border: 1px solid var(--border-muted);
     border-radius: var(--radius-sm);
+    box-sizing: border-box;
     cursor: pointer;
     display: flex;
     flex-shrink: 0;
-    gap: 4px;
     justify-content: center;
-    padding: 9px
+    transition: background-color 50ms ease-in
 }
 
-.disabledButton__979b1 {
+.wishlistButton__979b1.disabled__979b1 {
     cursor: not-allowed;
     opacity: .5
 }
 
-.withHover__979b1 {
-    transition: background-color 50ms ease-in, color 50ms ease-in, border-color 50ms ease-in, opacity 50ms ease-in
-}
-
-.withHover__979b1:hover {
+.wishlistButton__979b1:not(.disabled__979b1):hover {
     background: var(--control-overlay-secondary-background-hover);
-    transition: background-color .15s ease-out, color .15s ease-out, border-color .15s ease-out, opacity .15s ease-out
+    transition: background-color .15s ease-out
 }
 
-.withHover__979b1:active {
-    background: var(--control-overlay-secondary-background-active)
+.wishlistButton__979b1:not(.disabled__979b1):active {
+    background: var(--control-overlay-secondary-background-active);
+    transition: background-color .15s ease-out
+}
+
+.sm__979b1 {
+    height: 32px;
+    width: 32px
+}
+
+.md__979b1 {
+    height: 40px;
+    width: 40px
+}
+
+.theme-light .wishlistButton__979b1.variantDefault__979b1 {
+    background: hsl(var(--primary-100-hsl)/.66);
+    border: 1px solid var(--border-subtle)
+}
+
+.theme-light .wishlistButton__979b1.variantDefault__979b1:not(.disabled__979b1):hover {
+    background: hsl(var(--primary-100-hsl)/1)
+}
+
+.theme-light .wishlistButton__979b1.variantDefault__979b1:not(.disabled__979b1):active {
+    background: hsl(var(--primary-100-hsl)/.52)
 }
 
 .normalIconColor__979b1 {
+    fill: var(--icon-strong);
+    transition: fill 50ms ease-in
+}
+
+.variantSecondaryOverlay__979b1 .normalIconColor__979b1 {
     fill: var(--white)
 }
 
-.wishlistedOrHoveredIconColor__979b1 {
-    fill: #ec1060
+.normalIconColor__979b1.wishlistedOrAnimating__979b1 {
+    fill: #ec1060;
+    transition: fill .15s ease-out
 }
 
-.disabledIconColor__979b1 {
-    fill: var(--icon-strong)
+.disabled__979b1 .normalIconColor__979b1 {
+    fill: var(--icon-subtle)
 }
 
 .toastIcon__979b1 {
