@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
     AN: () => g,
-    Ar: () => b,
+    Ar: () => N,
     DQ: () => m,
     E: () => eg,
     F1: () => eT,
@@ -9,26 +9,26 @@ n.d(t, {
     Ip: () => R,
     Ju: () => W,
     KJ: () => U,
-    NS: () => y,
+    NS: () => S,
     PZ: () => C,
     Po: () => tu,
-    Q0: () => M,
+    Q0: () => P,
     Qd: () => E,
-    Sx: () => S,
+    Sx: () => y,
     TO: () => _,
     TY: () => eh,
     Tz: () => p,
     X9: () => eA,
     Y2: () => c,
-    YW: () => Q,
+    YW: () => Z,
     _o: () => to,
-    ak: () => eV,
+    ak: () => eF,
     eF: () => d,
     fL: () => I,
     he: () => f,
     iL: () => L,
     ju: () => v,
-    kW: () => N,
+    kW: () => b,
     nT: () => x,
     nx: () => B,
     oJ: () => ef,
@@ -157,7 +157,7 @@ var r = n(852015),
             e
         );
     })({}),
-    y = (function (e) {
+    S = (function (e) {
         return (
             (e[(e.UNSET_UI_DENSITY = 0)] = "UNSET_UI_DENSITY"),
             (e[(e.COMPACT = 1)] = "COMPACT"),
@@ -167,7 +167,7 @@ var r = n(852015),
             e
         );
     })({}),
-    S = (function (e) {
+    y = (function (e) {
         return (
             (e[(e.UNSET = 0)] = "UNSET"),
             (e[(e.DARK = 1)] = "DARK"),
@@ -208,7 +208,7 @@ var r = n(852015),
     C = (function (e) {
         return (e[(e.AUTO = 0)] = "AUTO"), (e[(e.H12 = 1)] = "H12"), (e[(e.H23 = 2)] = "H23"), e;
     })({}),
-    b = (function (e) {
+    N = (function (e) {
         return (
             (e[(e.LAUNCH_PAD_DISABLED = 0)] = "LAUNCH_PAD_DISABLED"),
             (e[(e.LAUNCH_PAD_GESTURE_FULL_SCREEN = 1)] = "LAUNCH_PAD_GESTURE_FULL_SCREEN"),
@@ -217,7 +217,7 @@ var r = n(852015),
             e
         );
     })({}),
-    N = (function (e) {
+    b = (function (e) {
         return (
             (e[(e.SWIPE_RIGHT_TO_LEFT_UNSET = 0)] = "SWIPE_RIGHT_TO_LEFT_UNSET"),
             (e[(e.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS = 1)] = "SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS"),
@@ -270,17 +270,17 @@ class w extends s.G {
     constructor() {
         super("discord_protos.discord_users.v1.PreloadedUserSettings", [
             { no: 1, name: "versions", kind: "message", T: () => u.u },
-            { no: 2, name: "inbox", kind: "message", T: () => M },
+            { no: 2, name: "inbox", kind: "message", T: () => P },
             { no: 3, name: "guilds", kind: "message", T: () => U },
-            { no: 4, name: "user_content", kind: "message", T: () => Q },
+            { no: 4, name: "user_content", kind: "message", T: () => Z },
             { no: 5, name: "voice_and_video", kind: "message", T: () => er },
             { no: 6, name: "text_and_images", kind: "message", T: () => ef },
             { no: 7, name: "notifications", kind: "message", T: () => eh },
             { no: 8, name: "privacy", kind: "message", T: () => eg },
             { no: 9, name: "debug", kind: "message", T: () => eA },
             { no: 10, name: "game_library", kind: "message", T: () => eT },
-            { no: 11, name: "status", kind: "message", T: () => eS },
-            { no: 12, name: "localization", kind: "message", T: () => eN },
+            { no: 11, name: "status", kind: "message", T: () => ey },
+            { no: 12, name: "localization", kind: "message", T: () => eb },
             { no: 13, name: "appearance", kind: "message", T: () => eL },
             { no: 14, name: "guild_folders", kind: "message", T: () => eU },
             { no: 15, name: "favorites", kind: "message", T: () => eB },
@@ -314,13 +314,13 @@ class w extends s.G {
                     a.versions = u.u.internalBinaryRead(e, e.uint32(), n, a.versions);
                     break;
                 case 2:
-                    a.inbox = M.internalBinaryRead(e, e.uint32(), n, a.inbox);
+                    a.inbox = P.internalBinaryRead(e, e.uint32(), n, a.inbox);
                     break;
                 case 3:
                     a.guilds = U.internalBinaryRead(e, e.uint32(), n, a.guilds);
                     break;
                 case 4:
-                    a.userContent = Q.internalBinaryRead(e, e.uint32(), n, a.userContent);
+                    a.userContent = Z.internalBinaryRead(e, e.uint32(), n, a.userContent);
                     break;
                 case 5:
                     a.voiceAndVideo = er.internalBinaryRead(e, e.uint32(), n, a.voiceAndVideo);
@@ -341,10 +341,10 @@ class w extends s.G {
                     a.gameLibrary = eT.internalBinaryRead(e, e.uint32(), n, a.gameLibrary);
                     break;
                 case 11:
-                    a.status = eS.internalBinaryRead(e, e.uint32(), n, a.status);
+                    a.status = ey.internalBinaryRead(e, e.uint32(), n, a.status);
                     break;
                 case 12:
-                    a.localization = eN.internalBinaryRead(e, e.uint32(), n, a.localization);
+                    a.localization = eb.internalBinaryRead(e, e.uint32(), n, a.localization);
                     break;
                 case 13:
                     a.appearance = eL.internalBinaryRead(e, e.uint32(), n, a.appearance);
@@ -397,17 +397,17 @@ class w extends s.G {
     }
     internalBinaryWrite(e, t, n) {
         e.versions && u.u.internalBinaryWrite(e.versions, t.tag(1, r.O0.LengthDelimited).fork(), n).join(),
-            e.inbox && M.internalBinaryWrite(e.inbox, t.tag(2, r.O0.LengthDelimited).fork(), n).join(),
+            e.inbox && P.internalBinaryWrite(e.inbox, t.tag(2, r.O0.LengthDelimited).fork(), n).join(),
             e.guilds && U.internalBinaryWrite(e.guilds, t.tag(3, r.O0.LengthDelimited).fork(), n).join(),
-            e.userContent && Q.internalBinaryWrite(e.userContent, t.tag(4, r.O0.LengthDelimited).fork(), n).join(),
+            e.userContent && Z.internalBinaryWrite(e.userContent, t.tag(4, r.O0.LengthDelimited).fork(), n).join(),
             e.voiceAndVideo && er.internalBinaryWrite(e.voiceAndVideo, t.tag(5, r.O0.LengthDelimited).fork(), n).join(),
             e.textAndImages && ef.internalBinaryWrite(e.textAndImages, t.tag(6, r.O0.LengthDelimited).fork(), n).join(),
             e.notifications && eh.internalBinaryWrite(e.notifications, t.tag(7, r.O0.LengthDelimited).fork(), n).join(),
             e.privacy && eg.internalBinaryWrite(e.privacy, t.tag(8, r.O0.LengthDelimited).fork(), n).join(),
             e.debug && eA.internalBinaryWrite(e.debug, t.tag(9, r.O0.LengthDelimited).fork(), n).join(),
             e.gameLibrary && eT.internalBinaryWrite(e.gameLibrary, t.tag(10, r.O0.LengthDelimited).fork(), n).join(),
-            e.status && eS.internalBinaryWrite(e.status, t.tag(11, r.O0.LengthDelimited).fork(), n).join(),
-            e.localization && eN.internalBinaryWrite(e.localization, t.tag(12, r.O0.LengthDelimited).fork(), n).join(),
+            e.status && ey.internalBinaryWrite(e.status, t.tag(11, r.O0.LengthDelimited).fork(), n).join(),
+            e.localization && eb.internalBinaryWrite(e.localization, t.tag(12, r.O0.LengthDelimited).fork(), n).join(),
             e.appearance && eL.internalBinaryWrite(e.appearance, t.tag(13, r.O0.LengthDelimited).fork(), n).join(),
             e.guildFolders && eU.internalBinaryWrite(e.guildFolders, t.tag(14, r.O0.LengthDelimited).fork(), n).join(),
             e.favorites && eB.internalBinaryWrite(e.favorites, t.tag(15, r.O0.LengthDelimited).fork(), n).join(),
@@ -430,7 +430,7 @@ class w extends s.G {
     }
 }
 let x = new w();
-class P extends s.G {
+class M extends s.G {
     constructor() {
         super("discord_protos.discord_users.v1.InboxSettings", [
             {
@@ -479,7 +479,7 @@ class P extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let M = new P();
+let P = new M();
 class k extends s.G {
     constructor() {
         super("discord_protos.discord_users.v1.AllGuildSettings", [
@@ -608,8 +608,8 @@ class G extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let V = new G();
-class F extends s.G {
+let F = new G();
+class V extends s.G {
     constructor() {
         super("discord_protos.discord_users.v1.GuildSettings", [
             { no: 1, name: "channels", kind: "map", K: 6, V: { kind: "message", T: () => W } },
@@ -623,7 +623,7 @@ class F extends s.G {
             { no: 9, name: "disable_raid_alert_nag", kind: "scalar", T: 8 },
             { no: 10, name: "custom_notification_sound_config", kind: "message", T: () => z },
             { no: 11, name: "leaderboards_disabled", kind: "scalar", T: 8 },
-            { no: 12, name: "guild_dismissible_content_states", kind: "map", K: 5, V: { kind: "message", T: () => V } },
+            { no: 12, name: "guild_dismissible_content_states", kind: "map", K: 5, V: { kind: "message", T: () => F } },
         ]);
     }
     create(e) {
@@ -739,7 +739,7 @@ class F extends s.G {
                     a = t.int32();
                     break;
                 case 2:
-                    s = V.internalBinaryRead(t, t.uint32(), n);
+                    s = F.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -747,7 +747,7 @@ class F extends s.G {
                     );
             }
         }
-        e[a ?? 0] = s ?? V.create();
+        e[a ?? 0] = s ?? F.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.channels))
@@ -773,13 +773,13 @@ class F extends s.G {
         Object.keys(e.guildDismissibleContentStates)))
             t.tag(12, r.O0.LengthDelimited).fork().tag(1, r.O0.Varint).int32(parseInt(i)),
                 t.tag(2, r.O0.LengthDelimited).fork(),
-                V.internalBinaryWrite(e.guildDismissibleContentStates[i], t, n),
+                F.internalBinaryWrite(e.guildDismissibleContentStates[i], t, n),
                 t.join().join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let B = new F();
+let B = new V();
 class j extends s.G {
     constructor() {
         super("discord_protos.discord_users.v1.ChannelIconEmoji", [
@@ -980,7 +980,7 @@ class $ extends s.G {
     }
 }
 let q = new $();
-class Z extends s.G {
+class X extends s.G {
     constructor() {
         super("discord_protos.discord_users.v1.UserContentSettings", [
             { no: 1, name: "dismissed_contents", kind: "scalar", T: 12 },
@@ -1123,8 +1123,8 @@ class Z extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let Q = new Z();
-class X extends s.G {
+let Z = new X();
+class Q extends s.G {
     constructor() {
         super("discord_protos.discord_users.v1.VideoFilterAsset", [
             { no: 1, name: "id", kind: "scalar", T: 6 },
@@ -1168,7 +1168,7 @@ class X extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let J = new X();
+let J = new Q();
 class ee extends s.G {
     constructor() {
         super("discord_protos.discord_users.v1.VideoFilterBackgroundBlur", [
@@ -1216,7 +1216,7 @@ class en extends s.G {
             { no: 6, name: "afk_timeout", kind: "message", T: () => o.ZQ },
             { no: 7, name: "stream_notifications_enabled", kind: "message", T: () => o._t },
             { no: 8, name: "native_phone_integration_enabled", kind: "message", T: () => o._t },
-            { no: 9, name: "soundboard_settings", kind: "message", T: () => eQ },
+            { no: 9, name: "soundboard_settings", kind: "message", T: () => eZ },
             { no: 10, name: "disable_stream_previews", kind: "message", T: () => o._t },
             { no: 11, name: "soundmoji_volume", kind: "message", T: () => o.uN },
         ]);
@@ -1273,7 +1273,7 @@ class en extends s.G {
                     );
                     break;
                 case 9:
-                    a.soundboardSettings = eQ.internalBinaryRead(e, e.uint32(), n, a.soundboardSettings);
+                    a.soundboardSettings = eZ.internalBinaryRead(e, e.uint32(), n, a.soundboardSettings);
                     break;
                 case 10:
                     a.disableStreamPreviews = o._t.internalBinaryRead(e, e.uint32(), n, a.disableStreamPreviews);
@@ -1314,7 +1314,7 @@ class en extends s.G {
                     .internalBinaryWrite(e.nativePhoneIntegrationEnabled, t.tag(8, r.O0.LengthDelimited).fork(), n)
                     .join(),
             e.soundboardSettings &&
-                eQ.internalBinaryWrite(e.soundboardSettings, t.tag(9, r.O0.LengthDelimited).fork(), n).join(),
+                eZ.internalBinaryWrite(e.soundboardSettings, t.tag(9, r.O0.LengthDelimited).fork(), n).join(),
             e.disableStreamPreviews &&
                 o._t.internalBinaryWrite(e.disableStreamPreviews, t.tag(10, r.O0.LengthDelimited).fork(), n).join(),
             e.soundmojiVolume &&
@@ -1879,6 +1879,7 @@ class ep extends s.G {
             { no: 16, name: "enable_profile_updates_notifications", kind: "message", T: () => o._t },
             { no: 17, name: "enable_server_trending_notifications", kind: "message", T: () => o._t },
             { no: 18, name: "enable_dm_reply_nudge_reminders", kind: "message", T: () => o._t },
+            { no: 19, name: "enable_summary_reminder_notifications", kind: "message", T: () => o._t },
         ]);
     }
     create(e) {
@@ -2005,6 +2006,14 @@ class ep extends s.G {
                         a.enableDmReplyNudgeReminders,
                     );
                     break;
+                case 19:
+                    a.enableSummaryReminderNotifications = o._t.internalBinaryRead(
+                        e,
+                        e.uint32(),
+                        n,
+                        a.enableSummaryReminderNotifications,
+                    );
+                    break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
@@ -2078,6 +2087,14 @@ class ep extends s.G {
             e.enableDmReplyNudgeReminders &&
                 o._t
                     .internalBinaryWrite(e.enableDmReplyNudgeReminders, t.tag(18, r.O0.LengthDelimited).fork(), n)
+                    .join(),
+            e.enableSummaryReminderNotifications &&
+                o._t
+                    .internalBinaryWrite(
+                        e.enableSummaryReminderNotifications,
+                        t.tag(19, r.O0.LengthDelimited).fork(),
+                        n,
+                    )
                     .join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
@@ -2502,7 +2519,7 @@ class eI extends s.G {
     }
 }
 let eT = new eI();
-class ey extends s.G {
+class eS extends s.G {
     constructor() {
         super("discord_protos.discord_users.v1.StatusSettings", [
             { no: 1, name: "status", kind: "message", T: () => o.hU },
@@ -2563,7 +2580,7 @@ class ey extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let eS = new ey();
+let ey = new eS();
 class ev extends s.G {
     constructor() {
         super("discord_protos.discord_users.v1.CustomStatus", [
@@ -2629,7 +2646,7 @@ class ev extends s.G {
     }
 }
 let eC = new ev();
-class eb extends s.G {
+class eN extends s.G {
     constructor() {
         super("discord_protos.discord_users.v1.LocalizationSettings", [
             { no: 1, name: "locale", kind: "message", T: () => o.hU },
@@ -2679,7 +2696,7 @@ class eb extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let eN = new eb();
+let eb = new eN();
 class eR extends s.G {
     constructor() {
         super("discord_protos.discord_users.v1.ChannelListSettings", [
@@ -2729,9 +2746,9 @@ let eO = new eR();
 class eD extends s.G {
     constructor() {
         super("discord_protos.discord_users.v1.AppearanceSettings", [
-            { no: 1, name: "theme", kind: "enum", T: () => ["discord_protos.discord_users.v1.Theme", S] },
+            { no: 1, name: "theme", kind: "enum", T: () => ["discord_protos.discord_users.v1.Theme", y] },
             { no: 2, name: "developer_mode", kind: "scalar", T: 8 },
-            { no: 3, name: "client_theme_settings", kind: "message", T: () => eM },
+            { no: 3, name: "client_theme_settings", kind: "message", T: () => eP },
             { no: 4, name: "mobile_redesign_disabled", kind: "scalar", T: 8 },
             { no: 6, name: "channel_list_layout", kind: "message", T: () => o.hU },
             { no: 7, name: "message_previews", kind: "message", T: () => o.hU },
@@ -2747,14 +2764,14 @@ class eD extends s.G {
                 no: 11,
                 name: "launch_pad_mode",
                 kind: "enum",
-                T: () => ["discord_protos.discord_users.v1.LaunchPadMode", b],
+                T: () => ["discord_protos.discord_users.v1.LaunchPadMode", N],
             },
-            { no: 12, name: "ui_density", kind: "enum", T: () => ["discord_protos.discord_users.v1.UIDensity", y] },
+            { no: 12, name: "ui_density", kind: "enum", T: () => ["discord_protos.discord_users.v1.UIDensity", S] },
             {
                 no: 13,
                 name: "swipe_right_to_left_mode",
                 kind: "enum",
-                T: () => ["discord_protos.discord_users.v1.SwipeRightToLeftMode", N],
+                T: () => ["discord_protos.discord_users.v1.SwipeRightToLeftMode", b],
             },
         ]);
     }
@@ -2787,7 +2804,7 @@ class eD extends s.G {
                     a.developerMode = e.bool();
                     break;
                 case 3:
-                    a.clientThemeSettings = eM.internalBinaryRead(e, e.uint32(), n, a.clientThemeSettings);
+                    a.clientThemeSettings = eP.internalBinaryRead(e, e.uint32(), n, a.clientThemeSettings);
                     break;
                 case 4:
                     a.mobileRedesignDisabled = e.bool();
@@ -2840,7 +2857,7 @@ class eD extends s.G {
         0 !== e.theme && t.tag(1, r.O0.Varint).int32(e.theme),
             !1 !== e.developerMode && t.tag(2, r.O0.Varint).bool(e.developerMode),
             e.clientThemeSettings &&
-                eM.internalBinaryWrite(e.clientThemeSettings, t.tag(3, r.O0.LengthDelimited).fork(), n).join(),
+                eP.internalBinaryWrite(e.clientThemeSettings, t.tag(3, r.O0.LengthDelimited).fork(), n).join(),
             !1 !== e.mobileRedesignDisabled && t.tag(4, r.O0.Varint).bool(e.mobileRedesignDisabled),
             e.channelListLayout &&
                 o.hU.internalBinaryWrite(e.channelListLayout, t.tag(6, r.O0.LengthDelimited).fork(), n).join(),
@@ -2922,7 +2939,7 @@ class ew extends s.G {
     }
 }
 let ex = new ew();
-class eP extends s.G {
+class eM extends s.G {
     constructor() {
         super("discord_protos.discord_users.v1.ClientThemeSettings", [
             { no: 2, name: "background_gradient_preset_id", kind: "message", T: () => o.ZQ },
@@ -2973,11 +2990,11 @@ class eP extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let eM = new eP();
+let eP = new eM();
 class ek extends s.G {
     constructor() {
         super("discord_protos.discord_users.v1.GuildFolders", [
-            { no: 1, name: "folders", kind: "message", repeat: 1, T: () => eV },
+            { no: 1, name: "folders", kind: "message", repeat: 1, T: () => eF },
             { no: 2, name: "guild_positions", kind: "scalar", repeat: 1, T: 6 },
         ]);
     }
@@ -2996,7 +3013,7 @@ class ek extends s.G {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    a.folders.push(eV.internalBinaryRead(e, e.uint32(), n));
+                    a.folders.push(eF.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 2:
                     if (i === r.O0.LengthDelimited)
@@ -3015,7 +3032,7 @@ class ek extends s.G {
     }
     internalBinaryWrite(e, t, n) {
         for (let i = 0; i < e.folders.length; i++)
-            eV.internalBinaryWrite(e.folders[i], t.tag(1, r.O0.LengthDelimited).fork(), n).join();
+            eF.internalBinaryWrite(e.folders[i], t.tag(1, r.O0.LengthDelimited).fork(), n).join();
         if (e.guildPositions.length) {
             t.tag(2, r.O0.LengthDelimited).fork();
             for (let n = 0; n < e.guildPositions.length; n++) t.fixed64(e.guildPositions[n]);
@@ -3086,8 +3103,8 @@ class eG extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let eV = new eG();
-class eF extends s.G {
+let eF = new eG();
+class eV extends s.G {
     constructor() {
         super("discord_protos.discord_users.v1.Favorites", [
             { no: 1, name: "favorite_channels", kind: "map", K: 6, V: { kind: "message", T: () => eH } },
@@ -3157,7 +3174,7 @@ class eF extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let eB = new eF();
+let eB = new eV();
 class ej extends s.G {
     constructor() {
         super("discord_protos.discord_users.v1.FavoriteChannel", [
@@ -3403,7 +3420,7 @@ class e$ extends s.G {
     }
 }
 let eq = new e$();
-class eZ extends s.G {
+class eX extends s.G {
     constructor() {
         super("discord_protos.discord_users.v1.SoundboardSettings", [{ no: 1, name: "volume", kind: "scalar", T: 2 }]);
     }
@@ -3437,8 +3454,8 @@ class eZ extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let eQ = new eZ();
-class eX extends s.G {
+let eZ = new eX();
+class eQ extends s.G {
     constructor() {
         super("discord_protos.discord_users.v1.CustomCallSound", [
             { no: 1, name: "sound_id", kind: "scalar", T: 6 },
@@ -3482,7 +3499,7 @@ class eX extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let eJ = new eX();
+let eJ = new eQ();
 class e0 extends s.G {
     constructor() {
         super("discord_protos.discord_users.v1.BroadcastSettings", [
