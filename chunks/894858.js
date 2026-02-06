@@ -5,6 +5,7 @@ let r = (0, n(839214).D)(() => ({
     currentTabKeys: new Map(),
     currentCategoryKey: void 0,
     disableSidebarCategoryAutoSelect: !1,
+    disableSidebarScrollAnimate: !0,
     requestedTargetKey: void 0,
     navTransition: void 0,
     showNavigationMobile: !0,
