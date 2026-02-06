@@ -86,50 +86,47 @@ function v(e) {
         s,
         {
             planId: n,
-            enableNoPaymentTrial: a,
-            startingPremiumSubscriptionPlanId: L,
-            onClose: o,
-            followupSKUInfo: u,
-            isDowngrade: b,
-            hideClose: v,
-            postSuccessGuild: j,
-            paymentSourceType: k,
-            startingFractionalPremiumEndsAt: U,
-            customCTAType: w,
+            startingPremiumSubscriptionPlanId: a,
+            onClose: L,
+            followupSKUInfo: o,
+            isDowngrade: u,
+            hideClose: b,
+            postSuccessGuild: v,
+            paymentSourceType: j,
+            startingFractionalPremiumEndsAt: k,
+            customCTAType: U,
         } = e,
-        { isDisplayingWowMomentConfirmation: O, customCheckoutFlow: D, isPremiumGroupPurchase: y } = (0, H.P5)(),
-        { theme: S } = (0, c.wRf)(),
-        F = (0, C.bG)([g.A], () => (null != u ? g.A.get(u.id) : null)),
-        q = (0, N.b2)(U);
+        { isDisplayingWowMomentConfirmation: w, customCheckoutFlow: O, isPremiumGroupPurchase: D } = (0, H.P5)(),
+        { theme: y } = (0, c.wRf)(),
+        S = (0, C.bG)([g.A], () => (null != o ? g.A.get(o.id) : null)),
+        F = (0, N.b2)(k);
     i.useEffect(() => {
-        if (null == u || null != F) return;
-        let { applicationId: e, id: t } = u;
+        if (null == o || null != S) return;
+        let { applicationId: e, id: t } = o;
         (0, d.EX)(e, t).catch(x.FXj);
-    }, [u, F]);
-    let G = (e) =>
-        y
+    }, [o, S]);
+    let q = (e) =>
+        D
             ? P.intl.formatToPlainString(T.default.pDiwHe, { premiumGroupProductName: (0, _.DP)(), totalSeats: _.LM })
             : e.skuId === f.pe.TIER_0
-              ? x.NcF.has(k ?? x.hes.UNKNOWN)
+              ? x.NcF.has(j ?? x.hes.UNKNOWN)
                   ? P.intl.format(P.t.o6hBiR, {})
                   : P.intl.string(P.t["AGf/ye"])
               : e.skuId === f.pe.TIER_1
-                ? x.NcF.has(k ?? x.hes.UNKNOWN)
+                ? x.NcF.has(j ?? x.hes.UNKNOWN)
                     ? P.intl.format(P.t.o6hBiR, {})
                     : P.intl.string(P.t.knvOVz)
-                : x.NcF.has(k ?? x.hes.UNKNOWN)
+                : x.NcF.has(j ?? x.hes.UNKNOWN)
                   ? P.intl.format(P.t.A4THYt, {})
-                  : a
-                    ? P.intl.string(P.t["g52y/r"])
-                    : P.intl.string(P.t.aTUr3Z);
-    if ("deeplink_to_desktop_app" === w)
+                  : P.intl.string(P.t.aTUr3Z);
+    if ("deeplink_to_desktop_app" === U)
         t = (0, l.jsx)("div", {
             className: R.Qq,
             children: (0, l.jsxs)("p", { children: [P.intl.string(P.t.bIVRSQ), " ", P.intl.string(P.t["0UJqOy"])] }),
         });
-    else if (null != F)
-        t = (0, l.jsx)("div", { className: R.Qq, children: P.intl.format(P.t["tsQOs+"], { skuName: F.name }) });
-    else if (q && !b) {
+    else if (null != S)
+        t = (0, l.jsx)("div", { className: R.Qq, children: P.intl.format(P.t["tsQOs+"], { skuName: S.name }) });
+    else if (F && !u) {
         let e = M.A.get(n);
         r()(null != e, "Missing plan"),
             e.skuId === f.pe.TIER_0
@@ -156,59 +153,59 @@ function v(e) {
                           }),
                       ],
                   }));
-    } else if (null != L) t = (0, l.jsx)(Z, { planId: n, startingPremiumSubscriptionPlanId: L });
-    else if (null != j) {
+    } else if (null != a) t = (0, l.jsx)(Z, { planId: n, startingPremiumSubscriptionPlanId: a });
+    else if (null != v) {
         let e = M.A.get(n);
         r()(null != e, "Missing plan"),
             (t = (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, l.jsx)("div", { className: R.Qq, children: G(e) }),
+                    (0, l.jsx)("div", { className: R.Qq, children: q(e) }),
                     (0, l.jsx)("div", {
                         className: R.Qq,
-                        children: P.intl.format(P.t["6aZ0NR"], { guildName: j.name }),
+                        children: P.intl.format(P.t["6aZ0NR"], { guildName: v.name }),
                     }),
                 ],
             }));
     } else {
         let e = M.A.get(n);
-        r()(null != e, "Missing plan"), (t = (0, l.jsx)("div", { className: R.Qq, children: G(e) }));
+        r()(null != e, "Missing plan"), (t = (0, l.jsx)("div", { className: R.Qq, children: q(e) }));
     }
-    let K = h.Ay.getPremiumType(n);
-    r()(null != K, "premium type should not be null in purchase confirmation");
-    let [Q, W] = i.useState(!1),
-        Y = i.useCallback(() => {
-            null != o && (o(), D === I.uH.APPLE_PAYMENT_LINK && W(!0));
-        }, [o, D]);
-    s = y
+    let G = h.Ay.getPremiumType(n);
+    r()(null != G, "premium type should not be null in purchase confirmation");
+    let [K, Q] = i.useState(!1),
+        W = i.useCallback(() => {
+            null != L && (L(), O === I.uH.APPLE_PAYMENT_LINK && Q(!0));
+        }, [L, O]);
+    s = D
         ? P.intl.string(T.default.clIveA)
-        : "deeplink_to_desktop_app" === w || D === I.uH.APPLE_PAYMENT_LINK
+        : "deeplink_to_desktop_app" === U || O === I.uH.APPLE_PAYMENT_LINK
           ? P.intl.string(P.t.qXV2XU)
-          : null != F
-            ? P.intl.formatToPlainString(P.t["1qGgm4"], { skuName: F.name })
-            : b
+          : null != S
+            ? P.intl.formatToPlainString(P.t["1qGgm4"], { skuName: S.name })
+            : u
               ? P.intl.string(P.t.QJ9EyM)
-              : null != j
+              : null != v
                 ? P.intl.string(P.t.ta3cXY)
                 : P.intl.string(P.t.TkTvBz);
-    let B = () =>
-        x.NcF.has(k ?? x.hes.UNKNOWN)
+    let Y = () =>
+        x.NcF.has(j ?? x.hes.UNKNOWN)
             ? A.Ay.Types.PREMIUM_PAYMENT_STARTED
-            : null != L
+            : null != a
               ? A.Ay.Types.PREMIUM_UPDATED
               : A.Ay.Types.PREMIUM_ACTIVATED;
-    return O
-        ? (0, l.jsx)(E.A, { type: B(), text: t, buttonText: s, hideClose: v, onClose: Y, buttonLoading: Q })
+    return w
+        ? (0, l.jsx)(E.A, { type: Y(), text: t, buttonText: s, hideClose: b, onClose: W, buttonLoading: K })
         : (0, l.jsxs)("div", {
               className: R.EL,
               children: [
-                  (0, l.jsx)(m.A, { type: B(), theme: S }),
+                  (0, l.jsx)(m.A, { type: Y(), theme: y }),
                   t,
-                  v
+                  b
                       ? null
                       : (0, l.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: R.x6,
-                            children: (0, l.jsx)(c.Button, { variant: "primary", text: s, onClick: Y, loading: Q }),
+                            children: (0, l.jsx)(c.Button, { variant: "primary", text: s, onClick: W, loading: K }),
                         }),
               ],
           });
