@@ -6,17 +6,18 @@ var r = n(627968),
     s = n(604238);
 function o(e, t) {
     if ("string" == typeof e) return e;
-    let { block: n, ...i } = e,
-        s = t[n];
-    if (null == s) return null;
-    let l = (() => {
-        if ("children" in e) {
-            if (!Array.isArray(e.children) && null != e.children) return o(e.children, t);
-            if (null != e.children && e.children.length > 0) return e.children.map((e) => o(e, t));
-        }
-        return null;
-    })();
-    return (0, r.jsx)(s, { ...i, children: l }, (0, a.A)());
+    let { block: n, passComponentMap: i, ...s } = e,
+        l = t[n];
+    if (null == l) return null;
+    let u = (() => {
+            if ("children" in e) {
+                if (!Array.isArray(e.children) && null != e.children) return o(e.children, t);
+                if (null != e.children && e.children.length > 0) return e.children.map((e) => o(e, t));
+            }
+            return null;
+        })(),
+        c = i ? { ...s, componentMap: t } : s;
+    return (0, r.jsx)(l, { ...c, children: u }, (0, a.A)());
 }
 function l(e, t) {
     return e.children.map((e) => o(e, t));
