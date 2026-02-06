@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => A, X: () => E });
+n.d(t, { A: () => g, X: () => m });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -8,92 +8,87 @@ var i = n(503698),
     o = n(73939),
     l = n(397927),
     u = n(235986),
-    c = n(805466),
-    d = n(282413),
-    _ = n(383501),
-    f = n(6155),
-    p = n(919706),
-    h = n(598565),
-    m = n(985018),
-    g = n(319567);
-function E(e) {
-    let { title: t, onJumpToChannel: n, onHide: i, idle: a, preventIdleComponent: o } = e,
-        u = (0, s.bG)([_.A], () => _.A.getChannelId()),
-        d = null != u ? (0, r.jsx)(f.A, { voiceChannelId: u, idle: a }) : null,
-        { enabled: p } = c.A.useExperiment({ location: "PictureInPicturePlayer" });
-    return (0, r.jsxs)(o, {
-        className: g.Nc,
+    c = n(282413),
+    d = n(383501),
+    _ = n(6155),
+    f = n(919706),
+    p = n(985018),
+    h = n(319567);
+function m(e) {
+    let { title: t, onJumpToChannel: n, idle: i, preventIdleComponent: a } = e,
+        o = (0, s.bG)([d.A], () => d.A.getChannelId()),
+        u = null != o ? (0, r.jsx)(_.A, { voiceChannelId: o, idle: i }) : null;
+    return (0, r.jsxs)(a, {
+        className: h.Nc,
         children: [
             (0, r.jsxs)(l.DUT, {
-                className: g.qd,
+                className: h.qd,
                 onClick: n,
                 children: [
                     (0, r.jsx)(l.rJJ, {
                         size: "custom",
                         color: "currentColor",
-                        "aria-label": m.intl.string(m.t.mSfLs0),
-                        className: g.Gv,
+                        "aria-label": p.intl.string(p.t.mSfLs0),
+                        className: h.Gv,
                         width: 20,
                         height: 20,
                     }),
                     (0, r.jsx)(l.Heading, {
                         variant: "heading-md/normal",
-                        className: g.TK,
+                        className: h.TK,
                         color: "always-white",
                         children: t,
                     }),
                 ],
             }),
-            p && null != i ? (0, r.jsx)(h.A, { onClick: i, label: m.intl.string(m.t.BEuDEn) }) : null,
-            d,
+            u,
         ],
     });
 }
-function A(e) {
+function g(e) {
     let {
         children: t,
         idle: n,
         onJumpToChannel: i,
-        onHide: s,
-        backgroundKey: l,
-        onActive: c,
-        onForceIdle: _,
-        renderBottomLeftControls: f,
-        renderBottomRightControls: h,
-        screenMessage: m,
-        hideControls: A = !1,
-        className: I,
-        innerClassName: T,
-        videoControlsClassName: y,
+        backgroundKey: s,
+        onActive: l,
+        onForceIdle: d,
+        renderBottomLeftControls: _,
+        renderBottomRightControls: p,
+        screenMessage: g,
+        hideControls: E = !1,
+        className: A,
+        innerClassName: I,
+        videoControlsClassName: T,
         ...S
     } = e;
     return (0, r.jsxs)("div", {
-        onMouseMove: c,
-        onMouseDown: c,
-        onMouseLeave: _,
-        className: a()(g.Hu, { [g.N7]: n }, I),
+        onMouseMove: l,
+        onMouseDown: l,
+        onMouseLeave: d,
+        className: a()(h.Hu, { [h.N7]: n }, A),
         onDoubleClick: i,
         children: [
-            (0, r.jsx)(o.F, { children: (0, r.jsx)(d.o, { className: T, children: t }, l) }),
-            null != m ? (0, r.jsx)(p.A, { size: "small", ...m }) : null,
-            !A &&
+            (0, r.jsx)(o.F, { children: (0, r.jsx)(c.o, { className: I, children: t }, s) }),
+            null != g ? (0, r.jsx)(f.A, { size: "small", ...g }) : null,
+            !E &&
                 (0, r.jsxs)("div", {
-                    className: a()(g._v, y, "theme-dark"),
+                    className: a()(h._v, T, "theme-dark"),
                     children: [
                         (0, r.jsx)("div", {
-                            className: g.K1,
-                            children: (0, r.jsx)(E, { idle: n, onJumpToChannel: i, onHide: s, ...S }),
+                            className: h.K1,
+                            children: (0, r.jsx)(m, { idle: n, onJumpToChannel: i, ...S }),
                         }),
                         (0, r.jsxs)("div", {
-                            className: g.q6,
+                            className: h.q6,
                             children: [
                                 (0, r.jsx)(u.A, {
                                     grow: 0,
                                     shrink: 1,
                                     basis: "50%",
                                     align: u.A.Align.CENTER,
-                                    className: g.Px,
-                                    children: f?.(),
+                                    className: h.Px,
+                                    children: _?.(),
                                 }),
                                 (0, r.jsx)(u.A, {
                                     grow: 0,
@@ -101,7 +96,7 @@ function A(e) {
                                     justify: u.A.Justify.END,
                                     basis: "50%",
                                     align: u.A.Align.CENTER,
-                                    children: h?.(),
+                                    children: p?.(),
                                 }),
                             ],
                         }),
