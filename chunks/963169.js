@@ -1,31 +1,32 @@
-i.d(e, { MS: () => d, OE: () => h, Qb: () => u });
-var n = i(73153),
-    r = i(824865),
-    a = i(976860),
-    s = i(954571),
-    l = i(545167),
-    o = i(729904),
-    c = i(652215);
-function d(t, e) {
-    n.h.dispatch({ type: "ROUTE_CHANGED", location: t, action: e });
+"use strict";
+n.d(t, { MS: () => c, OE: () => d, Qb: () => _ });
+var r = n(73153),
+    i = n(824865),
+    a = n(976860),
+    s = n(954571),
+    o = n(545167),
+    l = n(729904),
+    u = n(652215);
+function c(e, t) {
+    r.h.dispatch({ type: "ROUTE_CHANGED", location: e, action: t });
 }
-function h(t) {
+function d(e) {
     if (!(0, a.TX)()) return;
     if (
-        (s.default.track(c.HAw.APP_BACK_FORWARD_NAVIGATED, { nav_direction: -1, nav_trigger: t }),
-        !(0, l.vY)({ location: "navigatingBackForward" }))
+        (s.default.track(u.HAw.APP_BACK_FORWARD_NAVIGATED, { nav_direction: -1, nav_trigger: e }),
+        !(0, o.vY)({ location: "navigatingBackForward" }))
     )
         return void (0, a.aX)();
-    let e = o.A.backDestination;
-    null != e && (0, a.pX)(e.path, { source: r.A.USER_NAVIGATED_BACK });
+    let t = l.A.backDestination;
+    null != t && (0, a.pX)(t.path, { source: i.A.USER_NAVIGATED_BACK });
 }
-function u(t) {
+function _(e) {
     if (!(0, a.TX)()) return;
     if (
-        (s.default.track(c.HAw.APP_BACK_FORWARD_NAVIGATED, { nav_direction: 1, nav_trigger: t }),
-        !(0, l.vY)({ location: "navigatingBackForward" }))
+        (s.default.track(u.HAw.APP_BACK_FORWARD_NAVIGATED, { nav_direction: 1, nav_trigger: e }),
+        !(0, o.vY)({ location: "navigatingBackForward" }))
     )
         return void (0, a.sY)();
-    let e = o.A.forwardDestination;
-    null != e && (0, a.pX)(e.path, { source: r.A.USER_NAVIGATED_FORWARD });
+    let t = l.A.forwardDestination;
+    null != t && (0, a.pX)(t.path, { source: i.A.USER_NAVIGATED_FORWARD });
 }

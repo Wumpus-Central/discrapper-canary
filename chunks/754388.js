@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     wx: "header__6c75d",
     iT: "modalCloseButton__6c75d",
