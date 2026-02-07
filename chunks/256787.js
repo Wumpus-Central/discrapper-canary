@@ -57,6 +57,7 @@ let i = [
         r.M.GAME_SERVER_HOSTING_NEW_BADGE,
         r.M.GAME_SERVER_HOSTING_NEW_COACHMARK,
         r.M.GUILD_TAG_AVAILABLE_COACHMARK_V2,
+        r.M.GAME_CLAIM_COACHMARK,
     ],
     u = [r.M.BOOST_TO_UNLOCK_COACHMARK];
 function c(e) {
