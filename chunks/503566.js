@@ -1,50 +1,51 @@
-a.d(t, { _: () => A });
-var n = a(627968);
-a(64700);
-var i = a(397927),
-    s = a(551262),
-    l = a(986268),
-    r = a(473145),
-    o = a(631305),
-    c = a(874864),
-    d = a(652215),
-    u = a(985018),
-    p = a(227800);
-function _(e) {
-    let { guild: t, banner: a } = e;
-    return (0, n.jsx)("div", {
-        className: p.C1,
-        style: { backgroundImage: `url(${a}` },
-        children: (0, n.jsxs)("div", {
-            className: p.F,
+"use strict";
+n.d(t, { _: () => x });
+var i = n(627968);
+n(64700);
+var s = n(397927),
+    l = n(551262),
+    r = n(986268),
+    a = n(473145),
+    o = n(631305),
+    d = n(874864),
+    c = n(652215),
+    u = n(985018),
+    g = n(227800);
+function m(e) {
+    let { guild: t, banner: n } = e;
+    return (0, i.jsx)("div", {
+        className: g.C1,
+        style: { backgroundImage: `url(${n}` },
+        children: (0, i.jsxs)("div", {
+            className: g.F,
             children: [
-                (0, n.jsx)(l.A, { guild: t, isBannerVisible: !0 }),
-                (0, n.jsx)(i.Heading, { className: p.J5, variant: "heading-md/semibold", children: t.name }),
-                (0, n.jsx)(s.A, { className: p.Wm, open: !1 }),
+                (0, i.jsx)(r.A, { guild: t, isBannerVisible: !0 }),
+                (0, i.jsx)(s.Heading, { className: g.J5, variant: "heading-md/semibold", children: t.name }),
+                (0, i.jsx)(l.A, { className: g.Wm, open: !1 }),
             ],
         }),
     });
 }
-function A(e) {
-    let { analyticsLocations: t, analyticsLocation: a, guild: i, isGIF: s, banner: l } = e,
-        p = s ? (0, r.Ys)(d.GuildFeatures.ANIMATED_BANNER) : (0, r.Ys)(d.GuildFeatures.BANNER);
-    if (null != p) {
+function x(e) {
+    let { analyticsLocations: t, analyticsLocation: n, guild: s, isGIF: l, banner: r } = e,
+        g = l ? (0, a.Ys)(c.GuildFeatures.ANIMATED_BANNER) : (0, a.Ys)(c.GuildFeatures.BANNER);
+    if (null != g) {
         let e;
         (0, o.A)({
             analyticsLocations: t,
-            analyticsSourceLocation: a,
-            guild: i,
+            analyticsSourceLocation: n,
+            guild: s,
             headerProps: {
                 title: u.intl.string(u.t["rv2H+1"]),
                 subtitle:
-                    ((e = (0, r.gb)(p)),
-                    s
+                    ((e = (0, a.gb)(g)),
+                    l
                         ? u.intl.formatToPlainString(u.t["TR/Uyt"], { targetLevelOrPlan: e })
                         : u.intl.formatToPlainString(u.t.B253V6, { targetLevelOrPlan: e })),
-                image: (0, n.jsx)(_, { guild: i, banner: l }),
+                image: (0, i.jsx)(m, { guild: s, banner: r }),
             },
             perkIntro: u.intl.string(u.t.ZuItcI),
-            perks: s ? (0, c.Pf)() : (0, c.QR)(),
+            perks: l ? (0, d.Pf)() : (0, d.QR)(),
         });
     }
 }

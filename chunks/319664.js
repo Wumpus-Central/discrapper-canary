@@ -1,89 +1,90 @@
-i.d(t, { A: () => j });
-var s = i(627968);
-i(64700);
-var r = i(503698),
-    n = i.n(r),
-    l = i(732955),
-    d = i(397927),
-    a = i(58149),
-    o = i(289397),
-    c = i(997509),
-    C = i(954571),
-    u = i(634654),
-    x = i(652215),
-    h = i(985018),
-    _ = i(587106);
-function p(e) {
+"use strict";
+n.d(t, { A: () => A });
+var i = n(627968);
+n(64700);
+var s = n(503698),
+    l = n.n(s),
+    r = n(732955),
+    a = n(397927),
+    o = n(58149),
+    d = n(289397),
+    c = n(997509),
+    u = n(954571),
+    g = n(634654),
+    m = n(652215),
+    x = n(985018),
+    h = n(587106);
+function _(e) {
     let { pills: t } = e;
-    return (0, s.jsx)("div", {
-        className: _.nM,
+    return (0, i.jsx)("div", {
+        className: h.nM,
         children: t.map((e) =>
-            (0, s.jsx)(
+            (0, i.jsx)(
                 "div",
-                { className: _.Io, children: (0, s.jsx)(d.Text, { variant: "text-sm/normal", children: e }) },
+                { className: h.Io, children: (0, i.jsx)(a.Text, { variant: "text-sm/normal", children: e }) },
                 e,
             ),
         ),
     });
 }
-function j(e) {
-    let { guildId: t, showCTA: i, responsive: r = !0 } = e,
-        j = [
-            [h.intl.string(h.t["73h51J"]), h.intl.string(h.t["gbjs/6"])],
-            [h.intl.string(h.t.mCoH0V), h.intl.string(h.t["l/BuSI"])],
-            [h.intl.string(h.t.psQktv), h.intl.string(h.t.nMhIZQ)],
-            [h.intl.string(h.t["0ItLmF"]), h.intl.string(h.t.yQHqsC)],
+function A(e) {
+    let { guildId: t, showCTA: n, responsive: s = !0 } = e,
+        A = [
+            [x.intl.string(x.t["73h51J"]), x.intl.string(x.t["gbjs/6"])],
+            [x.intl.string(x.t.mCoH0V), x.intl.string(x.t["l/BuSI"])],
+            [x.intl.string(x.t.psQktv), x.intl.string(x.t.nMhIZQ)],
+            [x.intl.string(x.t["0ItLmF"]), x.intl.string(x.t.yQHqsC)],
         ];
-    return (0, s.jsx)("div", {
-        className: n()({ [_.no]: r }),
-        children: (0, s.jsxs)("div", {
-            className: _.kL,
+    return (0, i.jsx)("div", {
+        className: l()({ [h.no]: s }),
+        children: (0, i.jsxs)("div", {
+            className: h.kL,
             children: [
-                (0, s.jsxs)("div", {
-                    className: _.Qs,
+                (0, i.jsxs)("div", {
+                    className: h.Qs,
                     children: [
-                        (0, s.jsx)("div", {
-                            className: _.V_,
-                            children: j.map((e, t) => (0, s.jsx)(p, { pills: e }, `pill-row-${t}`)),
+                        (0, i.jsx)("div", {
+                            className: h.V_,
+                            children: A.map((e, t) => (0, i.jsx)(_, { pills: e }, `pill-row-${t}`)),
                         }),
-                        (0, s.jsxs)("div", {
-                            className: _.mv,
+                        (0, i.jsxs)("div", {
+                            className: h.mv,
                             children: [
-                                (0, s.jsx)(d.Text, {
+                                (0, i.jsx)(a.Text, {
                                     variant: "text-lg/medium",
                                     color: "text-strong",
-                                    children: h.intl.string(h.t["67arYL"]),
+                                    children: x.intl.string(x.t["67arYL"]),
                                 }),
-                                i &&
-                                    (0, s.jsx)(l.$nd, {
-                                        text: h.intl.string(h.t.oyzLpD),
-                                        icon: d.EdP,
+                                n &&
+                                    (0, i.jsx)(r.$nd, {
+                                        text: x.intl.string(x.t.oyzLpD),
+                                        icon: a.EdP,
                                         iconPosition: "end",
                                         size: "md",
                                         onClick: () => {
-                                            C.default.track(x.HAw.GUILD_SHOP_PREVIEW_CLICK, {
-                                                ...(0, a.H$)(t),
-                                                action_taken: u.hN.GET_STARTED_CLICK,
+                                            u.default.track(m.HAw.GUILD_SHOP_PREVIEW_CLICK, {
+                                                ...(0, o.H$)(t),
+                                                action_taken: g.hN.GET_STARTED_CLICK,
                                             }),
-                                                c.A.open(t, x.BEX.GUILD_PRODUCTS);
+                                                c.A.open(t, m.BEX.GUILD_PRODUCTS);
                                         },
                                     }),
                             ],
                         }),
                     ],
                 }),
-                (0, s.jsxs)("div", {
-                    className: _.SN,
+                (0, i.jsxs)("div", {
+                    className: h.SN,
                     children: [
-                        (0, s.jsx)("img", {
-                            src: (0, o.n)("server_products/storefront/preview-mural.png"),
+                        (0, i.jsx)("img", {
+                            src: (0, d.n)("server_products/storefront/preview-mural.png"),
                             alt: "",
-                            className: _.$G,
+                            className: h.$G,
                         }),
-                        (0, s.jsx)("img", {
-                            src: (0, o.n)("server_products/storefront/preview-mural-reduced.png"),
+                        (0, i.jsx)("img", {
+                            src: (0, d.n)("server_products/storefront/preview-mural-reduced.png"),
                             alt: "",
-                            className: _.rp,
+                            className: h.rp,
                         }),
                     ],
                 }),

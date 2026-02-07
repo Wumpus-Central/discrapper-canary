@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__3dc42",
     Qs: "content__3dc42",
