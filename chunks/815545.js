@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ol: () => I, Q8: () => m, Sb: () => T, Tp: () => A, qi: () => y }), n(321073);
+n.d(t, { Ol: () => T, Q8: () => m, Sb: () => S, Tp: () => A, qi: () => y }), n(321073);
 var r = n(284009),
     i = n.n(r),
     a = n(155718),
@@ -77,46 +77,49 @@ function A(e, t, n, r) {
     }
     throw Error(`Unexpected invoice plan: ${e.subscriptionPlanId}`);
 }
-let I = (e, t) => {
+let I = (e) => {
+        if (null != e) return "interval_count" in e ? e.interval_count : e.intervalCount;
+    },
+    T = (e, t) => {
         let {
-                premiumTrialOffer: n,
+                subscriptionTrial: n,
                 subscriptionPlan: r,
                 overrideAmount: u,
                 isPrepaidPaymentSource: c,
                 currency: d,
             } = t,
-            _ = r ?? s.A.get(e.subscriptionPlanId),
-            f = n?.subscription_trial;
+            _ = r ?? s.A.get(e.subscriptionPlanId);
         i()(null != _, "Missing subscriptionPlan");
-        let p = A(e, _, c, (0, o.re)({ intervalType: f?.interval, intervalCount: f?.interval_count })),
+        let f = I(n),
+            p = A(e, _, c, (0, o.re)({ intervalType: n?.interval, intervalCount: f })),
             h = null != u ? u : e.amount,
             m = (0, l.$g)(h, d),
             g = c ? m : (0, l.CE)(m, _.interval, _.intervalCount),
             E = e.discounts ?? [],
-            I = E.find((e) => e.type === a.iS.SUBSCRIPTION_PLAN),
-            T = E.find((e) => e.type === a.iS.PREMIUM_TRIAL),
+            T = E.find((e) => e.type === a.iS.SUBSCRIPTION_PLAN),
+            S = E.find((e) => e.type === a.iS.PREMIUM_TRIAL),
             y = E.find((e) => e.type === a.iS.ENTITLEMENT),
-            S = E.reduce((e, t) => e + t.amount, 0);
+            v = E.reduce((e, t) => e + t.amount, 0);
         return {
             label: p,
             value: g,
             amount: h,
-            amountWithoutDiscount: e.amount + S,
-            discountAmountOff: S,
+            amountWithoutDiscount: e.amount + v,
+            discountAmountOff: v,
             formattedPrice: m,
             subscriptionPlan: _,
-            subscriptionTrial: f,
-            trialDiscount: T,
-            subscriptionDiscount: I,
+            subscriptionTrial: n,
+            trialDiscount: S,
+            subscriptionDiscount: T,
             entitlementDiscount: y,
         };
     },
-    T = (e, t) => {
+    S = (e, t) => {
         let n = (0, u.Z)(e.invoiceItems);
         return { subscriptionPlanInvoiceItem: n.find((e) => e.subscriptionPlanId === t.id), coalescedInvoiceItems: n };
     },
     y = (e, t) => {
-        let { subscriptionPlanInvoiceItem: n, coalescedInvoiceItems: r } = T(e, t);
+        let { subscriptionPlanInvoiceItem: n, coalescedInvoiceItems: r } = S(e, t);
         i()(null != n, "Expected newPlanInvoiceItem");
         let s = r.find((e) => !(0, o.z4)(e.subscriptionPlanId) && e.amount < 0),
             u = r.find(

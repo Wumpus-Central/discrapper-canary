@@ -19863,6 +19863,17 @@ body .headerAnimation_b54a5b {
     display: flex
 }
 
+.footerContentContainer__962c6 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.noBackButton__962c6 {
+    justify-content: flex-end
+}
+
 .body_c6f1a4 {
     background-color: var(--modal-background);
     border-radius: var(--radius-md);

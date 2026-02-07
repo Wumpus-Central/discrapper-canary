@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { PI: () => b, XH: () => S, Z$: () => y, l$: () => C });
+n.d(t, { PI: () => N, XH: () => y, Z$: () => S, l$: () => C });
 var r = n(627968),
     i = n(64700),
     a = n(997101),
@@ -19,12 +19,12 @@ var r = n(627968),
     A = n(888751),
     I = n(985018),
     T = n(756366);
-let y = (e) => {
+let S = (e) => {
         let {
                 isPrepaidPaymentSource: t,
                 invoiceSummaryTypeWithPreview: n,
                 subscriptionPlan: i,
-                premiumTrialOffer: a,
+                subscriptionTrial: a,
                 isCustomGift: s,
             } = e,
             { invoicePreview: o } = n,
@@ -35,8 +35,8 @@ let y = (e) => {
                           isPrepaidPaymentSource: t,
                           invoiceSummaryTypeWithPreview: n,
                           subscriptionPlan: i,
-                          premiumTrialOffer: a,
-                      }),
+                          subscriptionTrial: a,
+                      }).lineItems,
             u = (0, c.lp)(o, { manualLineItems: l, addTaxLineItem: !0 });
         return (0, r.jsx)(_.V, {
             label: I.intl.string(T.default.eoXh7B),
@@ -45,7 +45,7 @@ let y = (e) => {
             totalDueLabel: I.intl.string(T.default.R0cZsM),
         });
     },
-    S = (e) => {
+    y = (e) => {
         let {
                 selectedPlanId: t,
                 priceOptions: n,
@@ -79,7 +79,7 @@ let y = (e) => {
             });
         return null != o && "" !== o ? (0, r.jsx)(s.wx6, { type: "info", children: o }) : null;
     };
-function b(e) {
+function N(e) {
     let {
             setHasAcceptedTerms: t,
             isTrial: n,
@@ -93,15 +93,15 @@ function b(e) {
             inReverseTrial: I,
         } = e,
         { hasAcceptedTerms: T } = (0, E.P5)(),
-        y = (0, o.bG)([m.A], () => a.M.EEA_COUNTRIES.has(m.A.ipCountryCodeWithFallback)),
-        S = y ? { value: T, onChange: t } : void 0,
+        S = (0, o.bG)([m.A], () => a.M.EEA_COUNTRIES.has(m.A.ipCountryCodeWithFallback)),
+        y = S ? { value: T, onChange: t } : void 0,
         v = (0, g.y8)(c.id, !1, _, f);
     return (
         i.useLayoutEffect(() => {
-            t(!y);
-        }, [y, t]),
+            t(!S);
+        }, [S, t]),
         (0, r.jsxs)(d.tb, {
-            immediateDelivery: S,
+            immediateDelivery: y,
             children: [
                 (0, r.jsx)(l.W, {
                     hide: n || s,

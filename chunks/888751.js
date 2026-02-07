@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { BZ: () => y, Gj: () => T, fk: () => A, iQ: () => E }), n(321073);
+n.d(t, { BZ: () => S, Gj: () => T, fk: () => A, iQ: () => E }), n(321073);
 var r = n(627968);
 n(64700);
 var i = n(93159),
@@ -41,7 +41,7 @@ let m = (e, t, n) => ({ id: e.discount_id ?? t, label: n, amount: -e.amount }),
                 isPrepaidPaymentSource: n,
                 invoiceSummaryTypeWithPreview: r,
                 subscriptionPlan: i,
-                premiumTrialOffer: a,
+                subscriptionTrial: a,
             } = t,
             { newPlanInvoiceItem: l, basePlanFullAmount: u, invoiceAdjustmentDisplayItems: c } = (0, s.qi)(e, i),
             d = r.type === o.N$.PREMIUM_DEFAULT ? u : void 0,
@@ -55,21 +55,19 @@ let m = (e, t, n) => ({ id: e.discount_id ?? t, label: n, amount: -e.amount }),
             } = (0, s.Ol)(l, {
                 overrideAmount: d,
                 subscriptionPlan: i,
-                premiumTrialOffer: a,
+                subscriptionTrial: a,
                 isPrepaidPaymentSource: n,
                 currency: e.currency,
             }),
             T = null != E || null != A || null != I,
-            y = [
-                { id: l.id, label: _, amount: T ? g : h },
-                ...c.map((e) => ({ id: e.id, label: e.label, amount: e.amount })),
-            ];
+            S = { id: l.id, label: _, amount: T ? g : h },
+            y = [S, ...c.map((e) => ({ id: e.id, label: e.label, amount: e.amount }))];
         return (
             null != I
                 ? y.push(m(I, "trial-discount", f.intl.string(p.default["7LeLN4"])))
                 : (null != E && y.push(m(E, "subscription-discount", f.intl.string(p.default["9yHcmL"]))),
                   null != A && y.push(m(A, "entitlement-discount", f.intl.string(f.t.A7Hpfs)))),
-            y
+            { lineItems: y, primaryLineItem: S }
         );
     },
     A = (e, t) => {
@@ -99,7 +97,7 @@ let m = (e, t, n) => ({ id: e.discount_id ?? t, label: n, amount: -e.amount }),
         return {
             lineItems: r.map((e) => {
                 let { subscriptionPlanPrice: t, showGuildSubscriptionAdjustmentTooltip: r } = e,
-                    { label: i } = (0, s.Ol)(e, { premiumTrialOffer: n, currency: o }),
+                    { label: i } = (0, s.Ol)(e, { subscriptionTrial: n, currency: o }),
                     a = r ? f.intl.format(f.t.UDop9c, {}) : void 0;
                 return { id: e.id, label: i, amount: t, tooltip: a };
             }),
@@ -110,20 +108,20 @@ let m = (e, t, n) => ({ id: e.discount_id ?? t, label: n, amount: -e.amount }),
             totalLineItemLabel: I(i, a),
         };
     },
-    y = (e, t, n) => {
+    S = (e, t, n) => {
         let { isPrepaidPaymentSource: a, giftRecipient: m, isPremiumGroupPurchase: E } = n,
             A = e.type === o.N$.PREMIUM_GIFT,
             { invoicePreview: I } = e,
             { subscriptionPlanInvoiceItem: T } = (0, s.Sb)(I, t),
-            y = "";
-        y = E
+            S = "";
+        S = E
             ? null != T
                 ? (0, s.Tp)(T, t)
                 : f.intl.formatToPlainString(h.default["8bPDtb"], { premiumGroupProductName: (0, _.DP)() })
             : A
               ? g(t)
               : (0, l.Mn)(t.id, !1, a);
-        let S =
+        let y =
                 A && null != m
                     ? {
                           username: c.Ay.getUserTag(m, { identifiable: "never" }),
@@ -133,14 +131,14 @@ let m = (e, t, n) => ({ id: e.discount_id ?? t, label: n, amount: -e.amount }),
                     : void 0,
             v = null == m ? f.intl.string(p.default.AM9XGb) : "",
             C = A ? v : f.intl.string(p.default["2zUa6I"]),
-            b = (0, l.m6)(t.id) === d.PremiumTypes.TIER_0 ? (0, r.jsx)(i.DH, {}) : (0, r.jsx)(i.JW, {}),
-            N = (A ? T?.amount : T?.subscriptionPlanPrice) ?? 0,
-            R = (0, u.$g)(N, I.currency);
+            N = (0, l.m6)(t.id) === d.PremiumTypes.TIER_0 ? (0, r.jsx)(i.DH, {}) : (0, r.jsx)(i.JW, {}),
+            b = (A ? T?.amount : T?.subscriptionPlanPrice) ?? 0,
+            R = (0, u.$g)(b, I.currency);
         return {
-            label: y,
+            label: S,
             description: C,
             price: e.type === o.N$.PREMIUM_GIFT ? R : (0, u.CE)(R, t.interval, t.intervalCount),
-            gift: S,
-            graphic: b,
+            gift: y,
+            graphic: N,
         };
     };
