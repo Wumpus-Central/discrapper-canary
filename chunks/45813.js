@@ -70,7 +70,7 @@ class C extends d.PureComponent {
                 href: `https://youtu.be/${t}`,
                 thumbnail: { url: `https://i.ytimg.com/vi/${t}/hqdefault.jpg`, width: 432, height: 240 },
                 video: {
-                    url: `https://www.youtube.com/embed/${t}?vq=large&rel=0&controls=0&showinfo=0`,
+                    url: `https://www.youtube.com/embed/${t}?vq=large&rel=0&controls=0&showinfo=0&pageType=${b.NzX}`,
                     width: 432,
                     height: 240,
                 },

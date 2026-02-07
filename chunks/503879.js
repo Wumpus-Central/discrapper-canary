@@ -1,4 +1,4 @@
-a.d(t, { A: () => T, s: () => v });
+a.d(t, { A: () => R, s: () => f });
 var n = a(627968),
     i = a(64700),
     s = a(503698),
@@ -17,12 +17,13 @@ var n = a(627968),
     A = a(203982),
     C = a(652215),
     b = a(709992);
-let v = { SMALL: { width: 640, height: 360, margin: 15 }, MEDIUM: { width: 880, height: 495, margin: 20 } },
-    f = { width: 1920, height: 1080 },
-    j = { width: 1280, height: 720 },
-    I = (e) => (0, x.$o)({ ...e, className: b.tN, mediaPlayerClassName: b.yf }),
-    E = (e) => (0, n.jsx)(_.Ay, { ...e }),
-    S = (e) => {
+let v = `rel=0&iv_load_policy=3&showinfo=0&modestbranding=1&pageType=${C.NzX}`,
+    f = { SMALL: { width: 640, height: 360, margin: 15 }, MEDIUM: { width: 880, height: 495, margin: 20 } },
+    j = { width: 1920, height: 1080 },
+    I = { width: 1280, height: 720 },
+    E = (e) => (0, x.$o)({ ...e, className: b.tN, mediaPlayerClassName: b.yf }),
+    S = (e) => (0, n.jsx)(_.Ay, { ...e }),
+    N = (e) => {
         let t,
             a,
             i,
@@ -39,11 +40,8 @@ let v = { SMALL: { width: 640, height: 360, margin: 15 }, MEDIUM: { width: 880, 
                 onMute: A,
             } = e;
         if (s.type === C.geh.YOUTUBE_VIDEO)
-            (t = { url: (0, C.PE$)(s.youtubeVideoId), ...f }),
-                (a = {
-                    url: `${(0, C.uJ2)(s.youtubeVideoId)}?rel=0&iv_load_policy=3&showinfo=0&modestbranding=1`,
-                    ...j,
-                }),
+            (t = { url: (0, C.PE$)(s.youtubeVideoId), ...j }),
+                (a = { url: `${(0, C.uJ2)(s.youtubeVideoId)}?${v}`, ...I }),
                 (i = u.mt.YOUTUBE);
         else {
             let e = null != s.width ? s.width : 0,
@@ -51,7 +49,7 @@ let v = { SMALL: { width: 640, height: 360, margin: 15 }, MEDIUM: { width: 880, 
             (t = { url: s.thumbnailSrc, width: e, height: n }),
                 (a = { url: s.src, proxyURL: s.src, width: e, height: n });
         }
-        let v = (0, n.jsx)(d.rr, {
+        let f = (0, n.jsx)(d.rr, {
             href: null,
             thumbnail: t,
             video: a,
@@ -68,18 +66,18 @@ let v = { SMALL: { width: 640, height: 360, margin: 15 }, MEDIUM: { width: 880, 
             autoMute: _,
             onMute: A,
             autoPlay: m,
-            renderVideoComponent: I,
-            renderImageComponent: E,
+            renderVideoComponent: E,
+            renderImageComponent: S,
             renderLinkComponent: x.bU,
         });
-        return m ? v : (0, n.jsx)(o.DUT, { className: b.AU, onClick: h, children: v });
+        return m ? f : (0, n.jsx)(o.DUT, { className: b.AU, onClick: h, children: f });
     },
-    N = () =>
+    y = () =>
         (0, n.jsx)("div", {
             className: b.eM,
             children: (0, n.jsx)(g.A, { inactive: !0, className: b.J6, renderLinkComponent: x.bU }),
         });
-class y extends i.PureComponent {
+class T extends i.PureComponent {
     static defaultProps = { autoplayInterval: 8e3, paused: !1 };
     state = {
         currentIndex: 0,
@@ -100,8 +98,8 @@ class y extends i.PureComponent {
     }
     getItemSize = () => {
         let { width: e } = this.props,
-            t = v.MEDIUM;
-        return null != e && e < t.width && (t = v.SMALL), t;
+            t = f.MEDIUM;
+        return null != e && e < t.width && (t = f.SMALL), t;
     };
     getStyle(e, t) {
         let a = t.interpolate({ inputRange: [0, 1], outputRange: [1, 0], extrapolate: r.A.Extrapolate.CLAMP });
@@ -176,7 +174,7 @@ class y extends i.PureComponent {
             onMouseLeave: c ? null : this.handleEdgeItemMouseLeave,
             children:
                 e.type === C.geh.VIDEO || e.type === C.geh.YOUTUBE_VIDEO
-                    ? (0, n.jsx)(S, {
+                    ? (0, n.jsx)(N, {
                           item: e,
                           size: this.getItemSize(),
                           onPlay: this.handlePlay,
@@ -236,7 +234,7 @@ class y extends i.PureComponent {
                         src: this.getPaginationSrc(e),
                         draggable: !1,
                     }),
-                    e.type === C.geh.YOUTUBE_VIDEO || e.type === C.geh.VIDEO ? (0, n.jsx)(N, {}) : null,
+                    e.type === C.geh.YOUTUBE_VIDEO || e.type === C.geh.VIDEO ? (0, n.jsx)(y, {}) : null,
                     i ? (0, n.jsx)("div", { className: b.SD }) : null,
                 ],
             },
@@ -270,4 +268,4 @@ class y extends i.PureComponent {
         });
     }
 }
-let T = (0, c.A)(y);
+let R = (0, c.A)(T);

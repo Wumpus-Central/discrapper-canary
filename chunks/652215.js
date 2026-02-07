@@ -7,19 +7,19 @@ n.d(t, {
     $jw: () => nS,
     $pd: () => eX,
     AD1: () => f.AD,
-    AKn: () => rb,
+    AKn: () => rR,
     AMi: () => t$,
     AO_: () => nE,
-    AaC: () => nH,
+    AaC: () => nY,
     Ahp: () => td,
-    Ajs: () => rD,
-    An1: () => rS,
+    Ajs: () => rL,
+    An1: () => ry,
     AnalyticsObjectTypes: () => tO,
     Auw: () => i.A,
     BBH: () => tT,
     BEX: () => T,
     BIo: () => no,
-    BRT: () => nq,
+    BRT: () => nX,
     BVt: () => d.BV,
     BYE: () => tQ,
     CS1: () => eO,
@@ -31,10 +31,10 @@ n.d(t, {
     DUB: () => nf,
     DYY: () => f.DY,
     Dmq: () => ne,
-    DpB: () => n1,
+    DpB: () => n2,
     DqD: () => e6,
     EMb: () => eS,
-    EZt: () => n9,
+    EZt: () => re,
     EkJ: () => ea,
     F05: () => tA,
     FI6: () => t5,
@@ -44,22 +44,22 @@ n.d(t, {
     Fz7: () => nC,
     G2g: () => tk,
     G6Q: () => J,
-    GD: () => n4,
+    GD: () => n5,
     GaG: () => nI,
     Gg3: () => f.Gg,
     GuildFeatures: () => M,
-    H2B: () => r_,
+    H2B: () => rf,
     HAw: () => ns,
-    Hf6: () => n0,
+    Hf6: () => n1,
     I4_: () => tI,
     IWg: () => g,
     Ign: () => eL,
     IjB: () => e1,
     ItT: () => tu,
-    J$u: () => nU,
+    J$u: () => nG,
     JJy: () => tb,
     Joy: () => f.Jo,
-    K3c: () => rC,
+    K3c: () => rN,
     KE7: () => A,
     KIY: () => tY,
     KL3: () => eD,
@@ -67,46 +67,47 @@ n.d(t, {
     KcG: () => f.Kc,
     Kf: () => f.Kf,
     Ks6: () => nR,
-    LU7: () => rf,
+    LU7: () => rp,
     LWr: () => tJ,
     L_o: () => f.L_,
     Lti: () => f.Lt,
     Lw6: () => f.Lw,
-    Ly6: () => rs,
+    Ly6: () => ro,
     M2T: () => t4,
     ME: () => d.ME,
-    MLl: () => ru,
+    MLl: () => rc,
     MRS: () => s.M,
     MVz: () => nx,
     MdR: () => to,
     Mmu: () => tN,
     NA2: () => ek,
-    NH1: () => rA,
+    NH1: () => rI,
     NJ8: () => f.NJ,
-    NKC: () => rm,
-    NOr: () => ry,
+    NKC: () => rg,
+    NOr: () => rv,
     NcF: () => f.Nc,
+    NzX: () => nU,
     O3O: () => tW,
     OLI: () => f.OL,
-    OQC: () => nQ,
+    OQC: () => nJ,
     OSZ: () => Z,
-    Oi0: () => rO,
+    Oi0: () => rD,
     P0V: () => eK,
-    P6Q: () => ro,
+    P6Q: () => rl,
     PE$: () => nk,
     PE1: () => tM,
     Pq7: () => f.Pq,
-    Puh: () => n7,
+    Puh: () => n8,
     PvD: () => er,
     Q4z: () => tw,
     Q7O: () => f.Q7,
-    QCW: () => nX,
+    QCW: () => nZ,
     RCc: () => e9,
     RWi: () => ng,
-    R_U: () => nV,
+    R_U: () => nB,
     RoK: () => ts,
     Rsh: () => eg,
-    Rv1: () => rL,
+    Rv1: () => rw,
     S3d: () => V,
     S7L: () => k,
     SH7: () => a.S,
@@ -133,26 +134,26 @@ n.d(t, {
     Uyk: () => nt,
     VFs: () => eW,
     VVm: () => f.VV,
-    VX0: () => nF,
+    VX0: () => nV,
     W6J: () => p.W6,
     WA1: () => eF,
     WMy: () => p.WM,
-    WTw: () => nJ,
-    WxW: () => rN,
+    WTw: () => n0,
+    WxW: () => rb,
     Wzo: () => f.Wz,
-    X30: () => rM,
+    X30: () => rP,
     X7G: () => tf,
-    X8x: () => rt,
+    X8x: () => rn,
     XAf: () => e0,
     XL8: () => t9,
-    XYD: () => rd,
+    XYD: () => r_,
     XYq: () => p.XY,
     XgB: () => eB,
     XlF: () => f.Xl,
     XlH: () => m,
     Xlh: () => tc,
     Xmn: () => na,
-    YAq: () => nW,
+    YAq: () => nK,
     YI$: () => f.YI,
     YYv: () => d.YY,
     Yri: () => f.Yr,
@@ -162,7 +163,7 @@ n.d(t, {
     ZGg: () => eY,
     ZSU: () => tR,
     ZzC: () => eZ,
-    _4N: () => rT,
+    _4N: () => rS,
     _Ak: () => f._A,
     _Ee: () => ep,
     _Of: () => eq,
@@ -183,22 +184,22 @@ n.d(t, {
     clD: () => f.cl,
     cmJ: () => B,
     d0r: () => eP,
-    d3x: () => nB,
+    d3x: () => nj,
     d68: () => o.d,
     d7Q: () => ey,
-    dD: () => ra,
+    dD: () => rs,
     dJq: () => ed,
     dL4: () => f.dL,
     dSh: () => tp,
     da6: () => tl,
     do8: () => f.do,
-    ds3: () => n8,
-    dzt: () => nK,
+    ds3: () => n9,
+    dzt: () => nz,
     e$_: () => f.e$,
     eA$: () => eo,
     eAD: () => eQ,
     eGj: () => e_,
-    eMA: () => n5,
+    eMA: () => n7,
     eQT: () => eJ,
     elq: () => w,
     ewM: () => tz,
@@ -206,32 +207,32 @@ n.d(t, {
     fAW: () => x,
     fHV: () => ex,
     fg2: () => tj,
-    fic: () => rw,
+    fic: () => rx,
     frM: () => f.fr,
     frR: () => el,
     ftr: () => tG,
     g0g: () => nA,
     g6G: () => p.g6,
-    gG4: () => nj,
+    gG4: () => nH,
     gGk: () => nT,
     gNP: () => d.gN,
     gT8: () => t_,
-    g_B: () => rr,
-    geh: () => rn,
+    g_B: () => ri,
+    geh: () => rr,
     gfo: () => nu,
     gfq: () => tU,
     gh6: () => es,
     gkb: () => nd,
     gp3: () => e3,
-    guM: () => rR,
+    guM: () => rO,
     gxX: () => f.gx,
     h3J: () => e5,
     hCb: () => f.hC,
     hCu: () => E,
     hE4: () => nb,
     hH7: () => ni,
-    hK1: () => rc,
-    hM6: () => nG,
+    hK1: () => rd,
+    hM6: () => nF,
     hVb: () => f.hV,
     hcd: () => e2,
     hes: () => f.he,
@@ -251,21 +252,21 @@ n.d(t, {
     kqX: () => L,
     kvI: () => r.k,
     l2F: () => e4,
-    l6E: () => nZ,
+    l6E: () => nQ,
     l90: () => tg,
     lAJ: () => s.l,
-    lLE: () => rE,
-    lM6: () => re,
+    lLE: () => rA,
+    lM6: () => rt,
     lT7: () => nn,
     liQ: () => tC,
     lid: () => t8,
     m3P: () => N,
-    m_i: () => rl,
+    m_i: () => ru,
     mdB: () => tx,
     meB: () => f.me,
     mu: () => eH,
     n5X: () => nc,
-    n83: () => n$,
+    n83: () => nq,
     nRU: () => b,
     nc_: () => tL,
     nd0: () => S,
@@ -277,7 +278,7 @@ n.d(t, {
     o1q: () => nD,
     oA2: () => t7,
     oIV: () => e7,
-    oJQ: () => nY,
+    oJQ: () => nW,
     ogj: () => P,
     orn: () => eA,
     p2C: () => te,
@@ -293,7 +294,7 @@ n.d(t, {
     rbe: () => r.r,
     rs7: () => th,
     rzx: () => f.rz,
-    sFm: () => ri,
+    sFm: () => ra,
     sJq: () => f.sJ,
     s_7: () => eV,
     sbO: () => Y,
@@ -302,24 +303,24 @@ n.d(t, {
     t02: () => tS,
     tEg: () => f.tE,
     tF5: () => f.tF,
-    tSW: () => n2,
+    tSW: () => n3,
     txh: () => tK,
     uJ2: () => nP,
-    uJv: () => rx,
-    uPF: () => rp,
+    uJv: () => rM,
+    uPF: () => rh,
     uaN: () => tr,
     ugG: () => tB,
-    uje: () => n3,
+    uje: () => n6,
     ump: () => t2,
     uss: () => q,
     uvi: () => eR,
-    uw8: () => rv,
+    uw8: () => rC,
     vkP: () => G,
     w7I: () => f.w7,
     wLU: () => ti,
-    wLn: () => rI,
-    wY_: () => rh,
-    wqg: () => rg,
+    wLn: () => rT,
+    wY_: () => rm,
+    wqg: () => rE,
     x0t: () => f.x0,
     x2k: () => t0,
     xBc: () => f.xB,
@@ -328,9 +329,9 @@ n.d(t, {
     xei: () => f.xe,
     xfJ: () => f.xf,
     yFH: () => Q,
-    yKI: () => nz,
+    yKI: () => n$,
     yTV: () => tH,
-    zF_: () => n6,
+    zF_: () => n4,
     zOV: () => tV,
     zWA: () => I,
     zgK: () => nh,
@@ -5885,8 +5886,9 @@ var nx = (function (e) {
     })({});
 let nP = (e) => `https://www.youtube.com/embed/${e}`,
     nk = (e) => `https://img.youtube.com/vi/${e}/maxresdefault.jpg`,
-    nU = "https://discordapp.com/mweb-handoff";
-var nG = (function (e) {
+    nU = "2",
+    nG = "https://discordapp.com/mweb-handoff";
+var nF = (function (e) {
         return (
             (e[(e.HIDDEN = 1)] = "HIDDEN"),
             (e[(e.PRIVATE = 2)] = "PRIVATE"),
@@ -5897,7 +5899,7 @@ var nG = (function (e) {
             e
         );
     })({}),
-    nF = (function (e) {
+    nV = (function (e) {
         return (
             (e.DONE = "DONE"),
             (e.PLANNING = "PLANNING"),
@@ -5909,10 +5911,10 @@ var nG = (function (e) {
             e
         );
     })({}),
-    nV = (function (e) {
+    nB = (function (e) {
         return (e.PULL = "PULL"), (e.PUSH = "PUSH"), (e.CONFLICT = "CONFLICT"), (e.NONE = "NONE"), e;
     })({}),
-    nB = (function (e) {
+    nj = (function (e) {
         return (
             (e.DISCORD = "discord"),
             (e.STEAM = "steam"),
@@ -5927,7 +5929,7 @@ var nG = (function (e) {
             e
         );
     })({});
-let nj = Object.freeze({
+let nH = Object.freeze({
         discord: "Discord",
         steam: "Steam",
         uplay: "Uplay",
@@ -5939,12 +5941,12 @@ let nj = Object.freeze({
         nvidia_gdn_app: "NVIDIA Cloud Gaming Application",
         roblox: "Roblox",
     }),
-    nH = 6016,
-    nY = 3384;
-var nW = (function (e) {
+    nY = 6016,
+    nW = 3384;
+var nK = (function (e) {
         return (e.USAGE_STATISTICS = "usage_statistics"), (e.PERSONALIZATION = "personalization"), e;
     })({}),
-    nK = (function (e) {
+    nz = (function (e) {
         return (
             (e[(e.MUTUAL_FRIENDS = 2)] = "MUTUAL_FRIENDS"),
             (e[(e.MUTUAL_GUILDS = 4)] = "MUTUAL_GUILDS"),
@@ -5952,18 +5954,18 @@ var nW = (function (e) {
             e
         );
     })({});
-let nz = 14,
-    n$ = 30;
-var nq = (function (e) {
+let n$ = 14,
+    nq = 30;
+var nX = (function (e) {
     return (
         (e.OVERLAY = "OVERLAY"), (e.APP = "APP"), (e.POPOUT = "POPOUT"), (e.CALL_TILE_POPOUT = "CALL_TILE_POPOUT"), e
     );
 })({});
-let nX = __OVERLAY__ ? "OVERLAY" : "APP";
-var nZ = (function (e) {
+let nZ = __OVERLAY__ ? "OVERLAY" : "APP";
+var nQ = (function (e) {
         return (e.COMPLETE = "complete"), (e.TRANSITION = "transition"), e;
     })({}),
-    nQ = (function (e) {
+    nJ = (function (e) {
         return (
             (e.QUEUED = "queued"),
             (e.PLANNING = "planning"),
@@ -5978,7 +5980,7 @@ var nZ = (function (e) {
             e
         );
     })({}),
-    nJ = (function (e) {
+    n0 = (function (e) {
         return (
             (e.INSTALL_REQUIRED = "install_required"),
             (e.INSTALLING = "installing"),
@@ -5990,7 +5992,7 @@ var nZ = (function (e) {
             e
         );
     })({}),
-    n0 = (function (e) {
+    n1 = (function (e) {
         return (
             (e.PLAY = "play"),
             (e.INSTALL = "install"),
@@ -6001,18 +6003,18 @@ var nZ = (function (e) {
             e
         );
     })({}),
-    n1 = (function (e) {
+    n2 = (function (e) {
         return (
             (e.NAME = "name"), (e.PLATFORM = "platform"), (e.ACTIONS = "actions"), (e.LAST_PLAYED = "last_played"), e
         );
     })({}),
-    n2 = (function (e) {
+    n3 = (function (e) {
         return (e.ASCENDING = "asc"), (e.DESCENDING = "desc"), e;
     })({}),
-    n3 = (function (e) {
+    n6 = (function (e) {
         return (e.WINDOWS = "1"), (e.MACOS = "2"), (e.LINUX = "3"), e;
     })({}),
-    n6 = (function (e) {
+    n4 = (function (e) {
         return (
             (e[(e.PURCHASE = 1)] = "PURCHASE"),
             (e[(e.PREMIUM_SUBSCRIPTION = 2)] = "PREMIUM_SUBSCRIPTION"),
@@ -6029,7 +6031,7 @@ var nZ = (function (e) {
             e
         );
     })({}),
-    n4 = (function (e) {
+    n5 = (function (e) {
         return (
             (e[(e.QUEST_REWARD = 1)] = "QUEST_REWARD"),
             (e[(e.DEVELOPER_GIFT = 2)] = "DEVELOPER_GIFT"),
@@ -6041,10 +6043,10 @@ var nZ = (function (e) {
             e
         );
     })({}),
-    n5 = (function (e) {
+    n7 = (function (e) {
         return (e.ESRB = "1"), (e.PEGI = "2"), e;
     })({}),
-    n7 = (function (e) {
+    n8 = (function (e) {
         return (
             (e[(e.DURABLE_PRIMARY = 1)] = "DURABLE_PRIMARY"),
             (e[(e.DURABLE = 2)] = "DURABLE"),
@@ -6055,7 +6057,7 @@ var nZ = (function (e) {
             e
         );
     })({}),
-    n8 = (function (e) {
+    n9 = (function (e) {
         return (
             (e[(e.FULL = 1)] = "FULL"),
             (e[(e.EARLY_ACCESS = 2)] = "EARLY_ACCESS"),
@@ -6063,7 +6065,7 @@ var nZ = (function (e) {
             e
         );
     })({}),
-    n9 = (function (e) {
+    re = (function (e) {
         return (
             (e[(e.PREMIUM = 1)] = "PREMIUM"),
             (e[(e.BOOST = 2)] = "BOOST"),
@@ -6075,10 +6077,10 @@ var nZ = (function (e) {
             e
         );
     })({}),
-    re = (function (e) {
+    rt = (function (e) {
         return (e.WIN32 = "win32"), (e.WIN64 = "win64"), (e.MACOS = "macos"), (e.LINUX = "linux"), e;
     })({}),
-    rt = (function (e) {
+    rn = (function (e) {
         return (
             (e.EMPTY_MESSAGE = "EMPTY_MESSAGE"),
             (e.MESSAGE_TOO_LONG = "MESSAGE_TOO_LONG"),
@@ -6088,10 +6090,10 @@ var nZ = (function (e) {
             e
         );
     })({}),
-    rn = (function (e) {
+    rr = (function (e) {
         return (e[(e.IMG = 1)] = "IMG"), (e[(e.YOUTUBE_VIDEO = 2)] = "YOUTUBE_VIDEO"), (e[(e.VIDEO = 3)] = "VIDEO"), e;
     })({}),
-    rr = (function (e) {
+    ri = (function (e) {
         return (
             (e.NOW_PLAYING = "1"),
             (e.RECENTLY_PLAYED = "2"),
@@ -6104,7 +6106,7 @@ var nZ = (function (e) {
             e
         );
     })({}),
-    ri = (function (e) {
+    ra = (function (e) {
         return (
             (e.APPLICATION_LIBRARY_BADGE = "application_library_badge_18_11_02"),
             (e.SERVER_DISCOVERY_BADGE = "server_discovery_badge_19_02_11"),
@@ -6112,7 +6114,7 @@ var nZ = (function (e) {
             e
         );
     })({}),
-    ra = (function (e) {
+    rs = (function (e) {
         return (
             (e.TRENDING_GIFS = "Trending"),
             (e.FAVORITES = "Favorites"),
@@ -6122,12 +6124,12 @@ var nZ = (function (e) {
             e
         );
     })({});
-let rs = new Set([f.Yr.USD, f.Yr.CAD, f.Yr.EUR, f.Yr.AUD, f.Yr.GBP, f.Yr.PHP, f.Yr.MYR, f.Yr.VND, f.Yr.KRW, f.Yr.IDR]);
-var ro = (function (e) {
+let ro = new Set([f.Yr.USD, f.Yr.CAD, f.Yr.EUR, f.Yr.AUD, f.Yr.GBP, f.Yr.PHP, f.Yr.MYR, f.Yr.VND, f.Yr.KRW, f.Yr.IDR]);
+var rl = (function (e) {
     return (e.ALWAYS = "ALWAYS"), (e.ON_CLICK = "ON_CLICK"), (e.IF_MODERATOR = "IF_MODERATOR"), e;
 })({});
-let rl = [];
-var ru = (function (e) {
+let ru = [];
+var rc = (function (e) {
         return (
             (e.CHANNEL_CALL_POPOUT = "DISCORD_CHANNEL_CALL_POPOUT"),
             (e.CALL_TILE_POPOUT = "DISCORD_CALL_TILE_POPOUT"),
@@ -6140,10 +6142,10 @@ var ru = (function (e) {
             e
         );
     })({}),
-    rc = (function (e) {
+    rd = (function (e) {
         return (e.LOADED = "loaded"), (e.UNLOADED = "unloaded"), e;
     })({}),
-    rd = (function (e) {
+    r_ = (function (e) {
         return (
             (e.CONNECTING = "CONNECTING"),
             (e.ACTIVE = "ACTIVE"),
@@ -6154,7 +6156,7 @@ var ru = (function (e) {
             e
         );
     })({}),
-    r_ = (function (e) {
+    rf = (function (e) {
         return (
             (e.USER_REQUESTED = "user_requested"),
             (e.STREAM_FULL = "stream_full"),
@@ -6163,13 +6165,13 @@ var ru = (function (e) {
             e
         );
     })({}),
-    rf = (function (e) {
+    rp = (function (e) {
         return (e.SOUND = "SOUND"), (e.VIDEO = "VIDEO"), e;
     })({}),
-    rp = (function (e) {
+    rh = (function (e) {
         return (e.PLAYING = "playing"), (e.PAUSED = "paused"), e;
     })({}),
-    rh = (function (e) {
+    rm = (function (e) {
         return (
             (e.NONE = "none"),
             (e.WIFI = "wifi"),
@@ -6182,7 +6184,7 @@ var ru = (function (e) {
             e
         );
     })({}),
-    rm = (function (e) {
+    rg = (function (e) {
         return (
             (e.UNKNOWN = "unknown"),
             (e.SLOW_TWO_G = "slow-2g"),
@@ -6193,14 +6195,14 @@ var ru = (function (e) {
             e
         );
     })({});
-let rg = "discodoEasterEgg";
-var rE = (function (e) {
+let rE = "discodoEasterEgg";
+var rA = (function (e) {
         return (e.INITIAL = "initial"), (e.ENTER = "enter"), (e.UPDATE = "update"), (e.LEAVE = "leave"), e;
     })({}),
-    rA = (function (e) {
+    rI = (function (e) {
         return (e[(e.INCOMING = 1)] = "INCOMING"), (e[(e.CHANNEL_FOLLOWER = 2)] = "CHANNEL_FOLLOWER"), e;
     })({}),
-    rI = (function (e) {
+    rT = (function (e) {
         return (
             (e[(e.APPLICATION = 0)] = "APPLICATION"),
             (e[(e.OVERVIEW = 1)] = "OVERVIEW"),
@@ -6212,22 +6214,22 @@ var rE = (function (e) {
             e
         );
     })({});
-let rT = 2500,
-    rS = 0,
-    ry = 2592e6;
-var rv = (function (e) {
+let rS = 2500,
+    ry = 0,
+    rv = 2592e6;
+var rC = (function (e) {
         return (e.USERS = "users"), (e.ROLES = "roles"), (e.EVERYONE = "everyone"), e;
     })({}),
-    rC = (function (e) {
+    rN = (function (e) {
         return (e[(e.AUTO = 1)] = "AUTO"), (e[(e.FULL = 2)] = "FULL"), e;
     })({});
-let rN = 100,
-    rb = /(mfa\.[a-z0-9_-]{20,})|([a-z0-9_-]{23,28}\.[a-z0-9_-]{6,7}\.[a-z0-9_-]{27})/i;
-var rR = (function (e) {
+let rb = 100,
+    rR = /(mfa\.[a-z0-9_-]{20,})|([a-z0-9_-]{23,28}\.[a-z0-9_-]{6,7}\.[a-z0-9_-]{27})/i;
+var rO = (function (e) {
     return (e[(e.NULL = 0)] = "NULL"), (e[(e.DISABLED = 1)] = "DISABLED"), (e[(e.ENABLED = 2)] = "ENABLED"), e;
 })({});
-let rO = "https://creator-support.discord.com/hc/en-us/articles/12653663868823";
-var rD = (function (e) {
+let rD = "https://creator-support.discord.com/hc/en-us/articles/12653663868823";
+var rL = (function (e) {
         return (
             (e[(e.CLIPS_ENABLED = 1)] = "CLIPS_ENABLED"),
             (e[(e.ALLOW_VOICE_RECORDING = 2)] = "ALLOW_VOICE_RECORDING"),
@@ -6235,10 +6237,10 @@ var rD = (function (e) {
             e
         );
     })({}),
-    rL = (function (e) {
+    rw = (function (e) {
         return (e.LOADING = "LOADING"), (e.ERROR = "ERROR"), (e.READY = "READY"), e;
     })({});
-let rw = Object.freeze({
+let rx = Object.freeze({
         APPLICATIONS: (e) => (null != e ? `applications/${e}` : null),
         APP_PREMIUM_BUTTON: (e) => (null != e ? `premium-button/${e}` : null),
         CUSTOM_ACTIVITY_LINK: (e, t) => (null != e && null != t ? `custom-activity-links/${e}/${t}` : null),
@@ -6253,5 +6255,5 @@ let rw = Object.freeze({
         GAME_UPDATE: (e, t) => (null != t ? `games/${e}/updates/${t}` : null),
         __DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU: (e) => (null != e ? `useParentSkuData/${e}` : null),
     }),
-    rx = 4096,
-    rM = 17718768e5;
+    rM = 4096,
+    rP = 17718768e5;

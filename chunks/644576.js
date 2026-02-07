@@ -1,4 +1,4 @@
-a.d(t, { A: () => E });
+a.d(t, { A: () => S });
 var n = a(627968),
     i = a(64700),
     s = a(503698),
@@ -30,17 +30,15 @@ let C = (e) => {
     },
     v = { width: 1280, height: 720 },
     f = { width: 640, height: 360 },
-    j = (e) => {
+    j = `rel=0&iv_load_policy=3&showinfo=0&modestbranding=1&pageType=${g.NzX}`,
+    I = (e) => {
         let t,
             a,
             i,
             { item: s, onPlay: l, volume: r, onVolumeChange: u, onMute: h, isMuted: m, autoPlay: x } = e;
         if (s.type === g.geh.YOUTUBE_VIDEO)
             (t = { url: (0, g.PE$)(s.youtubeVideoId), ...v }),
-                (a = {
-                    url: `${(0, g.uJ2)(s.youtubeVideoId)}?rel=0&iv_load_policy=3&showinfo=0&modestbranding=1`,
-                    ...f,
-                }),
+                (a = { url: `${(0, g.uJ2)(s.youtubeVideoId)}?${j}`, ...f }),
                 (i = d.mt.YOUTUBE);
         else {
             let e = null != s.width ? s.width : 0,
@@ -72,7 +70,7 @@ let C = (e) => {
             }),
         });
     };
-class I extends i.PureComponent {
+class E extends i.PureComponent {
     static defaultProps = { paused: !1, videoAutoPlay: !0 };
     state = {
         hasInteracted: !1,
@@ -132,7 +130,7 @@ class I extends i.PureComponent {
         switch (e.type) {
             case g.geh.YOUTUBE_VIDEO:
             case g.geh.VIDEO:
-                a = (0, n.jsx)(j, {
+                a = (0, n.jsx)(I, {
                     item: e,
                     onPlay: this.handlePlay,
                     isMuted: i,
@@ -192,4 +190,4 @@ class I extends i.PureComponent {
         });
     }
 }
-let E = I;
+let S = E;

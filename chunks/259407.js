@@ -1,11 +1,12 @@
-t.d(l, { Ay: () => p, mt: () => m });
+t.d(l, { Ay: () => g, mt: () => p });
 var r,
     s = t(627968),
     n = t(64700),
     i = t(998218),
-    a = t(802571);
-let o = "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts";
-function d(e, l) {
+    a = t(652215),
+    o = t(802571);
+let d = "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts";
+function u(e, l) {
     let t = i.A.toURLSafe(e ?? "");
     if (null === t) return "";
     if (null == l) return t.toString();
@@ -15,7 +16,7 @@ function d(e, l) {
     }
     return t.toString();
 }
-function u(e) {
+function h(e) {
     let { src: l, autoMute: t, ...r } = e,
         i = n.useRef(null),
         a = n.useCallback(
@@ -29,20 +30,20 @@ function u(e) {
             [t],
         );
     n.useEffect(() => (window.addEventListener("message", a), () => window.removeEventListener("message", a)), [a]);
-    let o = d(l, { utm_source: "discord.gg" });
-    return (0, s.jsx)(c, { src: o, ref: i, ...r });
+    let o = u(l, { utm_source: "discord.gg" });
+    return (0, s.jsx)(m, { src: o, ref: i, ...r });
 }
-function h(e) {
+function c(e) {
     let { src: l, autoMute: t, ...r } = e,
-        n = d(l, { autoplay: "1", auto_play: "1", mute: t ? "1" : void 0 });
-    return (0, s.jsx)(c, { src: n, ...r });
+        n = u(l, { autoplay: "1", auto_play: "1", mute: t ? "1" : void 0, pageType: a.NzX });
+    return (0, s.jsx)(m, { src: n, ...r });
 }
-let c = n.forwardRef(function (e, l) {
+let m = n.forwardRef(function (e, l) {
     let { allowFullScreen: t, ...r } = e,
-        n = t ? `${o} allow-fullscreen` : o;
+        n = t ? `${d} allow-fullscreen` : d;
     return (0, s.jsx)("iframe", {
         ref: l,
-        className: a.Qu,
+        className: o.Qu,
         allow: t ? "autoplay; fullscreen" : "autoplay",
         frameBorder: 0,
         scrolling: "no",
@@ -51,14 +52,14 @@ let c = n.forwardRef(function (e, l) {
         ...r,
     });
 });
-var m = (((r = {}).YOUTUBE = "YouTube"), (r.TIKTOK = "TikTok"), r);
-function p(e) {
+var p = (((r = {}).YOUTUBE = "YouTube"), (r.TIKTOK = "TikTok"), r);
+function g(e) {
     switch (e.provider) {
         case "YouTube":
-            return (0, s.jsx)(h, { ...e });
-        case "TikTok":
-            return (0, s.jsx)(u, { ...e });
-        default:
             return (0, s.jsx)(c, { ...e });
+        case "TikTok":
+            return (0, s.jsx)(h, { ...e });
+        default:
+            return (0, s.jsx)(m, { ...e });
     }
 }
