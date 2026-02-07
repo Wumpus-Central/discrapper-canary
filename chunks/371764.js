@@ -1,10 +1,10 @@
-n.d(t, { x: () => x });
+n.d(t, { x: () => C });
 var i = n(627968);
 n(64700);
 var s = n(110259),
-    r = n(877624),
-    a = n(934551),
-    l = n(158954),
+    a = n(877624),
+    l = n(934551),
+    r = n(158954),
     o = n(232582),
     c = n(732955),
     d = n(397927),
@@ -13,44 +13,44 @@ var s = n(110259),
     m = n(139286),
     A = n(975571),
     g = n(498470),
-    E = n(637706),
-    h = n(895163),
+    h = n(637706),
+    x = n(895163),
     p = n(985018),
-    C = n(122506);
-let x = (e) => {
+    E = n(122506);
+let C = (e) => {
     let { componentId: t, promotionBannerMarketingComponentFields: n } = e,
-        { analyticsLocations: x } = (0, _.Ay)(),
+        { analyticsLocations: C } = (0, _.Ay)(),
         T = (0, u.p)();
     (0, m.A)({
         type: s.ImpressionTypes.VIEW,
         name: s.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
-        properties: { component_type: r.C.MARKETING_PAGE_BANNER, component_id: t },
+        properties: { component_type: a.C.MARKETING_PAGE_BANNER, component_id: t },
     });
-    let I = (0, h.Xn)("marketing_page_banner"),
-        S = (0, g.h)({
+    let S = (0, x.Xn)("marketing_page_banner"),
+        I = (0, g.h)({
             buttonAction:
-                I.treatment === h.tz.PLAN_SELECTION
+                S.treatment === x.tz.PLAN_SELECTION
                     ? o.dz.OPEN_PLAN_SELECTION_MODAL
                     : (n.button?.buttonAction ?? o.dz.OPEN_TIER_2_PAYMENT_MODAL),
-            analyticsLocations: x,
+            analyticsLocations: C,
             analyticsLocation: T.location,
         }),
-        f = (0, E.a)(n.body);
+        f = (0, h.a)(n.body);
     return (0, i.jsxs)("div", {
-        className: C.kL,
+        className: E.kL,
         children: [
             (0, i.jsx)("div", {
-                className: C.LY,
-                children: (0, i.jsx)(d._V3, { src: n.assetUrl, width: 96, height: 96, className: C.ot }),
+                className: E.LY,
+                children: (0, i.jsx)("img", { src: n.assetUrl, className: E.ot, alt: "" }),
             }),
             (0, i.jsxs)("div", {
-                className: C.IH,
+                className: E.IH,
                 children: [
-                    (0, i.jsx)(l.DZT, { variant: "heading-md/semibold", color: "text-strong", children: n.header }),
-                    (0, i.jsxs)(l.EYj, {
+                    (0, i.jsx)(r.DZT, { variant: "heading-md/semibold", color: "text-strong", children: n.header }),
+                    (0, i.jsxs)(r.EYj, {
                         variant: "text-md/medium",
                         color: "text-subtle",
-                        className: C.tb,
+                        className: E.tb,
                         children: [
                             f,
                             "" !== n.helpArticleId &&
@@ -58,7 +58,7 @@ let x = (e) => {
                                     children: [
                                         "\xa0",
                                         (0, i.jsx)(d.MzZ, {
-                                            className: C.$T,
+                                            className: E.$T,
                                             href: A.A.getArticleURL(n.helpArticleId),
                                             children: p.intl.string(p.t["sBp+u0"]),
                                         }),
@@ -70,13 +70,13 @@ let x = (e) => {
             }),
             null != n.button &&
                 (0, i.jsx)("div", {
-                    className: C.UD,
+                    className: E.UD,
                     children: (0, i.jsx)(c.$nd, {
                         variant: "expressive",
                         size: "md",
-                        onClick: S,
+                        onClick: I,
                         text: n.button.copy,
-                        icon: a.NitroWheelIcon,
+                        icon: l.NitroWheelIcon,
                     }),
                 }),
         ],

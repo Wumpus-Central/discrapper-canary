@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { pz: () => l, vY: () => c });
-var r = n(600975),
-    i = n(945810),
-    a = n(723702);
-let s = (0, r.C)({
+i.d(e, { pz: () => l, vY: () => c });
+var n = i(600975),
+    r = i(945810),
+    a = i(723702);
+let s = (0, n.C)({
     kind: "user",
     id: "2025-08_back_forward",
     label: "Back Forward",
@@ -39,20 +38,17 @@ let s = (0, r.C)({
         },
     ],
 });
-function o() {
-    return { autoTrackExposure: !0, disable: !(0, a.isDesktop)() };
+function l(t) {
+    return s.useExperiment(t, { autoTrackExposure: !0, disable: !(0, a.isDesktop)() });
 }
-function l(e) {
-    return s.useExperiment(e, o());
-}
-let u = (0, i.mj)({
+let o = (0, r.mj)({
     name: "2026-02-bf-browser",
     kind: "user",
     defaultConfig: { allowEnhancedNav: !0 },
     variations: { 1: { allowEnhancedNav: !1 } },
 });
-function c(e) {
+function c(t) {
     if (!(0, a.isDesktop)()) return !1;
-    let { allowEnhancedNav: t } = u.getConfig(e);
-    return t;
+    let { allowEnhancedNav: e } = o.getConfig(t);
+    return e;
 }

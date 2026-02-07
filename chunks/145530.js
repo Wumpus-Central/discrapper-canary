@@ -1,41 +1,42 @@
-n.d(t, { A: () => j }), n(938796);
-var i = n(627968),
-    l = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(665260),
-    o = n(158954),
-    d = n(314116),
-    c = n(397927),
-    u = n(687709),
-    h = n(843472),
-    A = n(47167),
-    g = n(12351),
-    m = n(386467),
-    p = n(928658),
-    _ = n(226698),
-    x = n(994500),
-    f = n(287809),
-    E = n(628691),
-    C = n(636922),
-    I = n(652215),
-    S = n(985018),
-    b = n(641131),
-    N = n(378720);
-class T extends l.PureComponent {
+"use strict";
+s.d(t, { A: () => C }), s(938796);
+var n = s(627968),
+    i = s(64700),
+    r = s(503698),
+    a = s.n(r),
+    l = s(665260),
+    c = s(158954),
+    o = s(314116),
+    d = s(397927),
+    u = s(687709),
+    p = s(843472),
+    g = s(47167),
+    h = s(12351),
+    f = s(386467),
+    m = s(928658),
+    A = s(226698),
+    x = s(994500),
+    E = s(287809),
+    b = s(628691),
+    _ = s(636922),
+    T = s(652215),
+    I = s(985018),
+    S = s(641131),
+    v = s(378720);
+class N extends i.PureComponent {
     state = { report: !1, resolveFlag: !1 };
     handleDelete = () => {
         let { report: e, resolveFlag: t } = this.state,
-            { channel: n, message: i, moderatorReportData: l } = this.props,
-            { moderatorReportChannelId: s, isFlagResolved: a } = l ?? {};
+            { channel: s, message: n, moderatorReportData: i } = this.props,
+            { moderatorReportChannelId: r, isFlagResolved: a } = i ?? {};
         e
-            ? (0, p.V2)(i, "message_delete_alert", () =>
-                  h.A.deleteMessage(n.id, i.id).then(() => {
-                      null != s && (t && !a && _.A.resolveFlag(s), this.props.onClose?.());
+            ? (0, m.V2)(n, "message_delete_alert", () =>
+                  p.A.deleteMessage(s.id, n.id).then(() => {
+                      null != r && (t && !a && A.A.resolveFlag(r), this.props.onClose?.());
                   }),
               )
-            : h.A.deleteMessage(n.id, i.id).then(() => {
-                  null != s && (t && !a && _.A.resolveFlag(s), this.props.onClose?.());
+            : p.A.deleteMessage(s.id, n.id).then(() => {
+                  null != r && (t && !a && A.A.resolveFlag(r), this.props.onClose?.());
               });
     };
     handleDeleteMana = () => {
@@ -50,25 +51,25 @@ class T extends l.PureComponent {
     render() {
         let e,
             t,
-            { report: n, resolveFlag: l } = this.state,
-            { channel: s, message: a, showContextMenuHint: d, moderatorReportData: u, ...h } = this.props,
-            A = s.type === I.rbe.GUILD_ANNOUNCEMENT && (0, r.Lt)(a.flags, I.pr7.CROSSPOSTED);
-        d && (e = (0, i.jsx)(g.A, { className: N.Vc, children: S.intl.format(S.t.IxY7E6, {}) })),
-            (0, E.AR)(a) &&
-                (t = (0, i.jsx)("div", {
-                    className: N.Vc,
-                    children: (0, i.jsx)(c.dOG, {
-                        label: S.intl.string(S.t.x0jzo9),
-                        checked: n,
+            { report: s, resolveFlag: i } = this.state,
+            { channel: r, message: a, showContextMenuHint: o, moderatorReportData: u, ...p } = this.props,
+            g = r.type === T.rbe.GUILD_ANNOUNCEMENT && (0, l.Lt)(a.flags, T.pr7.CROSSPOSTED);
+        o && (e = (0, n.jsx)(h.A, { className: v.Vc, children: I.intl.format(I.t.IxY7E6, {}) })),
+            (0, b.AR)(a) &&
+                (t = (0, n.jsx)("div", {
+                    className: v.Vc,
+                    children: (0, n.jsx)(d.dOG, {
+                        label: I.intl.string(I.t.x0jzo9),
+                        checked: s,
                         onChange: this.handleToggleReport,
                     }),
                 }));
-        let p = A ? S.intl.string(S.t["2kHABX"]) : S.intl.string(S.t.AMvpS4),
-            _ = (0, i.jsxs)(i.Fragment, {
+        let m = g ? I.intl.string(I.t["2kHABX"]) : I.intl.string(I.t.AMvpS4),
+            A = (0, n.jsxs)(n.Fragment, {
                 children: [
-                    (0, i.jsx)("div", {
-                        className: N.iU,
-                        children: (0, i.jsx)(C.A, { channel: s, message: a, disableInteraction: !0 }),
+                    (0, n.jsx)("div", {
+                        className: v.iU,
+                        children: (0, n.jsx)(_.A, { channel: r, message: a, disableInteraction: !0 }),
                     }),
                     t,
                     e,
@@ -76,100 +77,100 @@ class T extends l.PureComponent {
             });
         if (u?.moderatorReportChannelId != null) {
             let { isFlagResolved: e } = u;
-            return (0, i.jsx)(m.A.Provider, {
-                value: s.guild_id,
-                children: (0, i.jsx)(o.Modal, {
-                    title: S.intl.string(S.t.MWMcg7),
-                    subtitle: p,
+            return (0, n.jsx)(f.A.Provider, {
+                value: r.guild_id,
+                children: (0, n.jsx)(c.Modal, {
+                    title: I.intl.string(I.t.MWMcg7),
+                    subtitle: m,
                     actions: [
-                        { variant: "critical-primary", text: S.intl.string(S.t.oyYWHE), onClick: this.handleDelete },
+                        { variant: "critical-primary", text: I.intl.string(I.t.oyYWHE), onClick: this.handleDelete },
                     ],
                     actionBarInput: e
                         ? void 0
-                        : (0, i.jsx)(c.Checkbox, {
-                              checked: l,
-                              label: S.intl.string(b.default["8yIKem"]),
+                        : (0, n.jsx)(d.Checkbox, {
+                              checked: i,
+                              label: I.intl.string(S.default["8yIKem"]),
                               onChange: (e) => this.handleToggleResolveFlag(e),
                           }),
-                    ...h,
-                    children: _,
+                    ...p,
+                    children: A,
                 }),
             });
         }
-        return (0, i.jsx)(m.A.Provider, {
-            value: s.guild_id,
-            children: (0, i.jsx)(o.Modal, {
-                title: A ? S.intl.string(S.t.aIz1oV) : S.intl.string(S.t.MWMcg7),
-                subtitle: p,
+        return (0, n.jsx)(f.A.Provider, {
+            value: r.guild_id,
+            children: (0, n.jsx)(c.Modal, {
+                title: g ? I.intl.string(I.t.aIz1oV) : I.intl.string(I.t.MWMcg7),
+                subtitle: m,
                 actions: [
-                    { text: S.intl.string(S.t["ETE/oC"]), onClick: h.onClose, variant: "secondary" },
-                    { text: S.intl.string(S.t.oyYWHE), onClick: this.handleDeleteMana, variant: "critical-primary" },
+                    { text: I.intl.string(I.t["ETE/oC"]), onClick: p.onClose, variant: "secondary" },
+                    { text: I.intl.string(I.t.oyYWHE), onClick: this.handleDeleteMana, variant: "critical-primary" },
                 ],
-                onClose: h.onClose,
-                transitionState: h.transitionState,
-                children: _,
+                onClose: p.onClose,
+                transitionState: p.transitionState,
+                children: A,
             }),
         });
     }
 }
-let j = {
+let C = {
     confirmPin: function (e, t) {
-        let n,
-            l = (0, A.m1)(e, f.default, x.A);
-        (n = e.isPrivate() ? S.intl.string(S.t.hMRngA) : S.intl.formatToPlainString(S.t["3IRluI"], { channelName: l })),
-            (0, d.A)({
-                title: S.intl.string(S.t.bKMaZX),
-                subtitle: n,
-                confirmText: S.intl.string(S.t.rOQ5BX),
+        let s,
+            i = (0, g.m1)(e, E.default, x.A);
+        (s = e.isPrivate() ? I.intl.string(I.t.hMRngA) : I.intl.formatToPlainString(I.t["3IRluI"], { channelName: i })),
+            (0, o.A)({
+                title: I.intl.string(I.t.bKMaZX),
+                subtitle: s,
+                confirmText: I.intl.string(I.t.rOQ5BX),
                 variant: "primary",
                 onConfirm: () => {
                     u.A.pinMessage(e, t.id);
                 },
-                cancelText: S.intl.string(S.t["ETE/oC"]),
-                children: (0, i.jsx)("div", {
-                    className: N.iU,
-                    children: (0, i.jsx)(C.A, { channel: e, message: t, animateAvatar: !1, disableInteraction: !0 }),
+                cancelText: I.intl.string(I.t["ETE/oC"]),
+                children: (0, n.jsx)("div", {
+                    className: v.iU,
+                    children: (0, n.jsx)(_.A, { channel: e, message: t, animateAvatar: !1, disableInteraction: !0 }),
                 }),
             });
     },
     confirmUnpin: function (e, t) {
-        (0, d.A)({
-            title: S.intl.string(S.t.CFF2vL),
-            subtitle: S.intl.string(S.t.NjEPp7),
-            confirmText: S.intl.string(S.t.lAU5jB),
+        (0, o.A)({
+            title: I.intl.string(I.t.CFF2vL),
+            subtitle: I.intl.string(I.t.NjEPp7),
+            confirmText: I.intl.string(I.t.lAU5jB),
             variant: "critical",
             onConfirm: () => {
                 u.A.unpinMessage(e, t.id);
             },
-            cancelText: S.intl.string(S.t["ETE/oC"]),
-            children: (0, i.jsxs)(i.Fragment, {
+            cancelText: I.intl.string(I.t["ETE/oC"]),
+            children: (0, n.jsxs)(n.Fragment, {
                 children: [
-                    (0, i.jsx)("div", {
-                        className: a()(N.iU, N.YK),
-                        children: (0, i.jsx)(C.A, { channel: e, message: t, disableInteraction: !0 }),
+                    (0, n.jsx)("div", {
+                        className: a()(v.iU, v.YK),
+                        children: (0, n.jsx)(_.A, { channel: e, message: t, disableInteraction: !0 }),
                     }),
-                    (0, i.jsx)(g.A, { children: S.intl.format(S.t.oCVB3Y, {}) }),
+                    (0, n.jsx)(h.A, { children: I.intl.format(I.t.oCVB3Y, {}) }),
                 ],
             }),
         });
     },
     confirmDelete: function (e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : void 0;
-        (0, c.qfG)((s) =>
-            (0, i.jsx)(T, { channel: e, message: t, showContextMenuHint: n, moderatorReportData: l, ...s }),
+        let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+            i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : void 0;
+        (0, d.qfG)((r) =>
+            (0, n.jsx)(N, { channel: e, message: t, showContextMenuHint: s, moderatorReportData: i, ...r }),
         );
     },
-    confirmEdit: function (e, t, n) {
-        (0, d.A)({
-            title: S.intl.string(S.t.aIz1oV),
-            subtitle: S.intl.string(S.t.grBcM8),
-            confirmText: S.intl.string(S.t["cY+Oob"]),
+    confirmEdit: function (e, t, s) {
+        (0, o.A)({
+            title: I.intl.string(I.t.aIz1oV),
+            subtitle: I.intl.string(I.t.grBcM8),
+            confirmText: I.intl.string(I.t["cY+Oob"]),
             variant: "primary",
             onConfirm: () => {
-                h.A.editMessage(e, t, n);
+                p.A.editMessage(e, t, s);
             },
-            cancelText: S.intl.string(S.t["ETE/oC"]),
+            cancelText: I.intl.string(I.t["ETE/oC"]),
         });
     },
 };

@@ -1,19 +1,14 @@
-"use strict";
-n.d(t, { h5: () => a, jU: () => i, lA: () => r });
-var r = (function (e) {
-        return (
-            (e[(e.INITIALIZE = 0)] = "INITIALIZE"),
-            (e[(e.RTC_TRANSFORM = 1)] = "RTC_TRANSFORM"),
-            (e[(e.SET_KEY_RATCHET = 2)] = "SET_KEY_RATCHET"),
-            (e[(e.UPDATE_SSRC = 3)] = "UPDATE_SSRC"),
-            (e[(e.UPDATE_CODECS = 4)] = "UPDATE_CODECS"),
-            (e[(e.DESTROY_USER = 5)] = "DESTROY_USER"),
-            e
-        );
-    })({}),
-    i = (function (e) {
-        return (e[(e.ENCRYPT = 0)] = "ENCRYPT"), (e[(e.DECRYPT = 1)] = "DECRYPT"), e;
-    })({}),
-    a = (function (e) {
-        return (e[(e.PROTOCOL_VERSION_CHANGED = 0)] = "PROTOCOL_VERSION_CHANGED"), e;
-    })({});
+t.d(r, { h5: () => s, jU: () => l, lA: () => i });
+var n,
+    a,
+    o,
+    i =
+        (((n = {})[(n.INITIALIZE = 0)] = "INITIALIZE"),
+        (n[(n.RTC_TRANSFORM = 1)] = "RTC_TRANSFORM"),
+        (n[(n.SET_KEY_RATCHET = 2)] = "SET_KEY_RATCHET"),
+        (n[(n.UPDATE_SSRC = 3)] = "UPDATE_SSRC"),
+        (n[(n.UPDATE_CODECS = 4)] = "UPDATE_CODECS"),
+        (n[(n.DESTROY_USER = 5)] = "DESTROY_USER"),
+        n),
+    l = (((a = {})[(a.ENCRYPT = 0)] = "ENCRYPT"), (a[(a.DECRYPT = 1)] = "DECRYPT"), a),
+    s = (((o = {})[(o.PROTOCOL_VERSION_CHANGED = 0)] = "PROTOCOL_VERSION_CHANGED"), o);

@@ -1,35 +1,11 @@
 "use strict";
-n.d(t, { my: () => a });
-var r = n(919015),
-    i = n(478681);
-function a(e, t, n) {
+r.d(e, { my: () => s });
+var n = r(919015),
+    i = r(478681);
+function s(t, e, r) {
     try {
-        Object.defineProperty(e, t, { value: n, writable: !0, configurable: !0 });
-    } catch (n) {
-        r.T && i.vF.log(`Failed to add non-enumerable property "${t}" to object`, e);
-    }
-}
-function s(e) {
-    try {
-        return isElement(e) ? htmlTreeAsString(e) : Object.prototype.toString.call(e);
-    } catch (e) {
-        return "<unknown>";
-    }
-}
-function o(e) {
-    if ("object" != typeof e || null === e) return {};
-    {
-        let t = {};
-        for (let n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
-        return t;
-    }
-}
-function l(e) {
-    if (!isPlainObject(e)) return !1;
-    try {
-        let t = Object.getPrototypeOf(e).constructor.name;
-        return !t || "Object" === t;
-    } catch (e) {
-        return !0;
+        Object.defineProperty(t, e, { value: r, writable: !0, configurable: !0 });
+    } catch (r) {
+        n.T && i.vF.log(`Failed to add non-enumerable property "${e}" to object`, t);
     }
 }

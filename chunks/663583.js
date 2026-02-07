@@ -1,15 +1,12 @@
 "use strict";
-n.d(t, { KU: () => o, rm: () => s });
-var r = n(924251),
-    i = n(628227);
-function a() {
-    let e = (0, i.E)();
-    return (0, r.h)(e).getCurrentScope();
-}
+r.d(e, { KU: () => o, rm: () => s });
+var n = r(924251),
+    i = r(628227);
 function s() {
-    let e = (0, i.E)();
-    return (0, r.h)(e).getIsolationScope();
+    let t = (0, i.E)();
+    return (0, n.h)(t).getIsolationScope();
 }
 function o() {
-    return a().getClient();
+    let t;
+    return ((t = (0, i.E)()), (0, n.h)(t).getCurrentScope()).getClient();
 }
