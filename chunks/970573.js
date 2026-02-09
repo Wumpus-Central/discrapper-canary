@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => y, X: () => j });
+n.d(t, { A: () => C, X: () => S });
 var i,
     s = n(627968),
     r = n(64700),
@@ -9,77 +9,75 @@ var i,
     c = n(397927),
     d = n(830215),
     u = n(442433),
-    h = n(30058),
-    _ = n(427157),
-    p = n(961350),
-    g = n(351906),
-    m = n(287809),
-    f = n(954571),
-    A = n(427262),
-    E = n(429707),
-    x = n(274303),
-    v = n(994125),
-    I = n(652215),
-    N = n(985018),
-    S = n(364877),
-    j =
+    h = n(427157),
+    _ = n(961350),
+    p = n(351906),
+    g = n(287809),
+    m = n(954571),
+    f = n(427262),
+    A = n(429707),
+    E = n(274303),
+    x = n(994125),
+    v = n(652215),
+    I = n(985018),
+    N = n(364877),
+    S =
         (((i = {})[(i.LOGIN_REQUIRED = 0)] = "LOGIN_REQUIRED"),
         (i[(i.SWITCHED = 1)] = "SWITCHED"),
         (i[(i.REMOVED = 2)] = "REMOVED"),
         i);
-function C(e) {
+function j(e) {
     let { actionText: t, user: n, onAction: i } = e,
         {
             currentUser: r,
             hidePrivateData: l,
-            isAuthenticated: v,
-        } = (0, o.cf)([m.default, g.A, p.default], () => ({
-            currentUser: m.default.getCurrentUser(),
-            hidePrivateData: g.A.hidePersonalInformation,
-            isAuthenticated: p.default.isAuthenticated(),
+            isAuthenticated: x,
+        } = (0, o.cf)([g.default, p.A, _.default], () => ({
+            currentUser: g.default.getCurrentUser(),
+            hidePrivateData: p.A.hidePersonalInformation,
+            isAuthenticated: _.default.isAuthenticated(),
         })),
-        j = new _.A(n),
-        C = v && r?.id === j.id,
-        y = n.tokenStatus === x.U.INVALID,
-        T = l || j.hasUniqueUsername() ? null : `#${j.discriminator}`,
-        b = null;
+        S = new h.A(n),
+        j = x && r?.id === S.id,
+        C = n.tokenStatus === E.U.INVALID,
+        T = l || S.hasUniqueUsername() ? null : `#${S.discriminator}`,
+        y = null;
     return (
-        h.A.useConfig({ location: "Account card load" }),
-        C
-            ? (b = (0, s.jsx)(c.Text, {
+        j
+            ? (y = (0, s.jsx)(c.Text, {
                   variant: "text-sm/semibold",
-                  className: S.dx,
+                  className: N.dx,
                   color: "text-feedback-positive",
-                  children: N.intl.string(N.t.seV8yt),
+                  children: I.intl.string(I.t.seV8yt),
               }))
-            : y &&
-              (b = (0, s.jsx)(c.Text, {
+            : C &&
+              (y = (0, s.jsx)(c.Text, {
                   variant: "text-sm/semibold",
-                  className: S.dx,
+                  className: N.dx,
                   color: "text-feedback-critical",
-                  children: N.intl.string(N.t.tYX2ps),
+                  children: I.intl.string(I.t.tYX2ps),
               })),
         (0, s.jsx)("div", {
-            className: S.KJ,
+            className: N.KJ,
             children: (0, s.jsxs)("div", {
-                className: S.yS,
+                className: N.yS,
                 children: [
                     (0, s.jsx)(c.euF, {
-                        src: j.getAvatarURL(void 0, 40),
+                        src: S.getAvatarURL(void 0, 40),
                         size: c._3J.SIZE_40,
                         "aria-label": n.username,
                     }),
                     (0, s.jsxs)("div", {
-                        className: a()(S.K_, { [S.zU]: !C }),
+                        className: a()(N.K_, { [N.zU]: !j }),
                         children: [
                             (0, s.jsxs)("div", {
-                                className: S.Xh,
+                                className: N.Xh,
                                 children: [
                                     (0, s.jsx)(c.Text, {
                                         variant: "text-md/semibold",
                                         color: "text-strong",
                                         lineClamp: 1,
-                                        children: A.Ay.getUserTag(j, {
+                                        children: f.Ay.getUserTag(S, {
                                             mode: "username",
                                             identifiable: l ? "never" : "always",
                                         }),
@@ -91,23 +89,23 @@ function C(e) {
                                     }),
                                 ],
                             }),
-                            b,
+                            y,
                         ],
                     }),
                     (0, s.jsxs)("div", {
-                        className: S.Xp,
+                        className: N.Xp,
                         children: [
-                            !C &&
+                            !j &&
                                 (0, s.jsx)(c.Button, {
                                     variant: "secondary",
-                                    text: y ? N.intl.string(N.t["DSN+hw"]) : t,
+                                    text: C ? I.intl.string(I.t["DSN+hw"]) : t,
                                     onClick: function () {
-                                        y
+                                        C
                                             ? i(0, n.id)
-                                            : (f.default.track(I.HAw.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
-                                                  location: { section: I.JJy.MANAGE_ACCOUNTS_MODAL },
+                                            : (m.default.track(v.HAw.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
+                                                  location: { section: v.JJy.MANAGE_ACCOUNTS_MODAL },
                                               }),
-                                              E.Mx(n.id),
+                                              A.Mx(n.id),
                                               i(1, n.id));
                                     },
                                 }),
@@ -118,23 +116,23 @@ function C(e) {
                                         let { onSelect: t } = e;
                                         return (0, s.jsx)(c.W1t, {
                                             "data-menu-migrated-auto": !0,
-                                            "aria-label": N.intl.string(N.t["41qiDU"]),
+                                            "aria-label": I.intl.string(I.t["41qiDU"]),
                                             navId: "manage-multi-account",
                                             onClose: u.Z_,
                                             onSelect: t,
                                             children: (0, s.jsx)(c.Drp, {
                                                 id: "remove-account",
-                                                label: N.intl.string(N.t.lSLMaU),
+                                                label: I.intl.string(I.t.lSLMaU),
                                                 action: () => {
                                                     let e;
                                                     d.A.logout("multi_accounts_list", null, n.id).finally(() => {
-                                                        E.At(n.id);
+                                                        A.At(n.id);
                                                     }),
                                                         (e = {}),
                                                         null != r
-                                                            ? (e.section = I.JJy.MANAGE_ACCOUNTS_MODAL)
-                                                            : (e.page = I.S3d.LOGIN),
-                                                        f.default.track(I.HAw.MULTI_ACCOUNT_ACCOUNT_REMOVE, {
+                                                            ? (e.section = v.JJy.MANAGE_ACCOUNTS_MODAL)
+                                                            : (e.page = v.S3d.LOGIN),
+                                                        m.default.track(v.HAw.MULTI_ACCOUNT_ACCOUNT_REMOVE, {
                                                             location: e,
                                                         }),
                                                         i(2, n.id),
@@ -145,7 +143,7 @@ function C(e) {
                                         });
                                     });
                                 },
-                                "aria-label": N.intl.string(N.t.PdRCRg),
+                                "aria-label": I.intl.string(I.t.PdRCRg),
                                 variant: "icon-only",
                             }),
                         ],
@@ -155,20 +153,20 @@ function C(e) {
         })
     );
 }
-function y(e) {
+function C(e) {
     let { actionText: t, onAction: n } = e,
-        { isLoading: i, multiAccountUsers: l } = (0, v.K)();
+        { isLoading: i, multiAccountUsers: l } = (0, x.K)();
     return (0, s.jsx)("div", {
-        className: S.p_,
+        className: N.p_,
         children: i
-            ? (0, s.jsx)(c.y$y, { className: S.u1 })
+            ? (0, s.jsx)(c.y$y, { className: N.u1 })
             : l.map((e, i) =>
                   (0, s.jsxs)(
                       r.Fragment,
                       {
                           children: [
-                              (0, s.jsx)(C, { user: e, actionText: t, onAction: n }, e.id),
-                              l.length - 1 !== i && (0, s.jsx)("div", { role: "separator", className: S.me }),
+                              (0, s.jsx)(j, { user: e, actionText: t, onAction: n }, e.id),
+                              l.length - 1 !== i && (0, s.jsx)("div", { role: "separator", className: N.me }),
                           ],
                       },
                       e.id,
