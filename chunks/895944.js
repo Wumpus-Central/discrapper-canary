@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => S });
+n.d(t, { A: () => y });
 var r = n(410530),
     i = n(892227),
     a = n(582972),
@@ -53,7 +53,7 @@ function I() {
 function T() {
     p.clear();
 }
-class y extends s.Ay.PersistedStore {
+class S extends s.Ay.PersistedStore {
     static displayName = "ProgramRewardsStore";
     static persistKey = "ProgramRewardsStore";
     initialize(e) {
@@ -89,15 +89,20 @@ class y extends s.Ay.PersistedStore {
         if (e === d.W.NITRO) {
             let t = this.getRewardForProgram(e);
             if (null == t) return !1;
-            let n = t.total_countdown_duration_ms;
-            if (null == n || n <= 0) return !1;
+            let n = this.getTotalDaysInDuration(e);
+            if (null == n) return !1;
             let r = t.next_reward_date;
             if (null == r || "" === r) return !1;
             let a = new Date(r).getTime();
-            if (Number.isNaN(a) || a <= Date.now() || (0, i.default)(new Date(r), new Date()) > n / c.A.Millis.DAY)
-                return !1;
+            if (Number.isNaN(a) || a <= Date.now() || (0, i.default)(new Date(r), new Date()) > n) return !1;
         }
         return !0;
+    }
+    getTotalDaysInDuration(e) {
+        let t = this.getRewardForProgram(e);
+        if (null == t) return null;
+        let n = t.total_countdown_duration_ms;
+        return null == n || n <= 0 ? null : Math.ceil(n / c.A.Millis.DAY);
     }
     isFetching() {
         return p.isLoading();
@@ -130,7 +135,7 @@ class y extends s.Ay.PersistedStore {
         p.forceExpire();
     }
 }
-let S = new y(o.h, {
+let y = new S(o.h, {
     LOGOUT: T,
     PROGRAM_REWARDS_FETCH: E,
     PROGRAM_REWARDS_FETCH_SUCCESS: A,
