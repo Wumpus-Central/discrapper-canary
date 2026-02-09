@@ -6,13 +6,13 @@ var i = n(627968),
     l = n.n(r),
     a = n(821418),
     o = n(665260),
-    d = n(80703),
-    c = n(311907),
+    c = n(80703),
+    d = n(311907),
     u = n(362474),
     h = n(397927),
     _ = n(73153),
-    g = n(846293),
-    p = n(198982),
+    p = n(846293),
+    g = n(198982),
     m = n(17841),
     f = n(829691),
     A = n(394681),
@@ -24,8 +24,8 @@ var i = n(627968),
     S = n(21599),
     j = n(942614),
     C = n(976860),
-    y = n(210714),
-    T = n(961350),
+    T = n(210714),
+    y = n(961350),
     b = n(650048),
     R = n(71393),
     O = n(299091),
@@ -43,22 +43,22 @@ var M = n(172799),
     V = n(396574),
     W = n(985018),
     H = n(473169);
-c.Ay.initialize();
+d.Ay.initialize();
 let K = "register",
     z = "login";
 async function Q(e) {
-    let { invite: t } = await g.Ay.resolveInvite(e, G.S3d.INVITE);
+    let { invite: t } = await p.Ay.resolveInvite(e, G.S3d.INVITE);
     null != t && (0, f.v)(t);
 }
 class q extends s.PureComponent {
-    state = { error: null };
+    state = { error: null, appHasOpened: !1 };
     componentDidMount() {
         let { isUnderage: e, login: t, inviteKey: n } = this.props,
-            i = T.default.getAnalyticsToken();
+            i = y.default.getAnalyticsToken();
         if (
-            (null != i && _.h.dispatch({ type: "SET_ANALYTICS_TOKEN", analyticsToken: i, userId: T.default.getId() }),
+            (null != i && _.h.dispatch({ type: "SET_ANALYTICS_TOKEN", analyticsToken: i, userId: y.default.getId() }),
             L.default.track(G.HAw.INVITE_VIEWED, { invite_code: n }, { flush: !0 }),
-            (0, y.d)("invite"),
+            (0, T.d)("invite"),
             !V.VP)
         ) {
             let e = this.getInviteKey();
@@ -73,12 +73,12 @@ class q extends s.PureComponent {
     componentDidUpdate(e) {
         let { invite: t, nativeAppState: n, authenticated: i, transitionTo: s } = this.props,
             r = this.getInviteKey();
-        if (r !== this.getInviteKey(e)) Q(r);
+        if (r !== this.getInviteKey(e)) Q(r), this.setState({ appHasOpened: !1 });
         else if (t.state === G.elq.APP_NOT_OPENED) this.handleContinue();
         else if (this.getMode() === z && i !== e.authenticated && i) {
-            let e = T.default.getFingerprint();
+            let e = y.default.getFingerprint();
             if (null != e) {
-                let n = (0, d.d)(e);
+                let n = (0, c.d)(e);
                 L.default.track(G.HAw.INVITE_LOGIN_SUCCESSFUL, {
                     invite_code: (0, S.m0)(this.getInviteKey()),
                     guild_id: t.guild?.id,
@@ -87,7 +87,7 @@ class q extends s.PureComponent {
                     prev_user_id: n,
                 });
             }
-            g.Ay.acceptInvite({
+            p.Ay.acceptInvite({
                 inviteKey: r,
                 context: this.getAcceptInviteContext(G.S3d.INVITE),
                 skipOnboarding: !0,
@@ -120,10 +120,13 @@ class q extends s.PureComponent {
                             ? G.BVt.GUILD_MEMBER_VERIFICATION(t.guild.id)
                             : G.BVt.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code),
                     );
-                } else g.Ay.transitionToInvite(t, s);
+                } else p.Ay.transitionToInvite(t, s);
         }
+        this.state.appHasOpened ||
+            (n !== G.fAW.OPEN && t.state !== G.elq.APP_OPENED) ||
+            this.setState({ appHasOpened: !0 });
     }
-    getAcceptInviteContext = (e) => g.Ay.getInviteContext(e, this.props.invite);
+    getAcceptInviteContext = (e) => p.Ay.getInviteContext(e, this.props.invite);
     getInviteKey() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.props;
         return e.inviteKey;
@@ -137,20 +140,20 @@ class q extends s.PureComponent {
         (null != t.channel || e?.channel != null) &&
             (t.guild?.id != null
                 ? n(G.BVt.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code))
-                : g.Ay.transitionToInvite(e ?? t, n));
+                : p.Ay.transitionToInvite(e ?? t, n));
     };
     handleAccept = () => {
         this.setState({ error: null });
         let e = this.getInviteKey();
-        g.Ay.acceptInvite({
+        p.Ay.acceptInvite({
             inviteKey: e,
             context: this.getAcceptInviteContext(G.S3d.INVITE),
             skipOnboarding: !0,
             callback: (t) => {
-                (0, f.v)(t), null != t.channel && g.Ay.openApp(e, t.channel.id);
+                (0, f.v)(t), null != t.channel && p.Ay.openApp(e, t.channel.id);
             },
         }).catch((e) => {
-            if (e instanceof p.Wl || e instanceof p.LG) {
+            if (e instanceof g.Wl || e instanceof g.LG) {
                 let t = (0, k.s)(e.code);
                 this.setState({ error: { code: e.code, message: t } });
             } else this.setState({ error: { code: e.code, message: W.intl.string(W.t.dDZRdy) } });
@@ -252,7 +255,7 @@ class q extends s.PureComponent {
                                                     invite_code: t.code,
                                                     guild_id: t.guild?.id,
                                                 }),
-                                                    g.Ay.openNativeAppModal(t.code);
+                                                    p.Ay.openNativeAppModal(t.code);
                                             },
                                             variant: "primary",
                                             fullWidth: !0,
@@ -318,10 +321,8 @@ class q extends s.PureComponent {
     }
     render() {
         let { invite: e, nativeAppState: t, authenticated: n, transitionTo: s, location: r } = this.props;
-        if (t === G.fAW.OPEN) return this.renderAppOpened();
+        if (this.state.appHasOpened || t === G.fAW.OPEN || e.state === G.elq.APP_OPENED) return this.renderAppOpened();
         switch (e.state) {
-            case G.elq.APP_OPENED:
-                return this.renderAppOpened();
             case G.elq.APP_NOT_OPENED:
                 return this.renderContinue();
             case G.elq.RESOLVING:
@@ -329,7 +330,7 @@ class q extends s.PureComponent {
                 return this.renderSpinner(W.intl.string(W.t["Z+hCVU"]));
             case G.elq.RESOLVED:
                 if (n && (0, o.Lt)(e.flags ?? 0, a.Q.IS_GUEST_INVITE))
-                    return g.Ay.openApp(e.code), u.u.set(N.B, e.code), this.renderAppOpened(() => s(G.BVt.APP));
+                    return p.Ay.openApp(e.code), u.u.set(N.B, e.code), this.renderAppOpened(() => s(G.BVt.APP));
                 if (n || !V.VP) return this.renderAuthenticatedOrDownload();
                 if (this.getMode() === z) return (0, i.jsx)(P.A, { invite: e, transitionTo: s, location: r });
                 else
@@ -360,12 +361,12 @@ class q extends s.PureComponent {
         }
     }
 }
-let Y = c.Ay.connectStores([O.A, b.A, T.default, I.A, m.A], (e) => {
+let Y = d.Ay.connectStores([O.A, b.A, y.default, I.A, m.A], (e) => {
     let { inviteKey: t } = e;
     return {
         invite: O.A.getInvite(t) ?? {},
         nativeAppState: I.A.getState(t),
-        authenticated: T.default.isAuthenticated(),
+        authenticated: y.default.isAuthenticated(),
         defaultRoute: b.A.defaultRoute,
         isUnderage: m.A.isUnderageAnonymous(),
     };
