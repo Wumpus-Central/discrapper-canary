@@ -26,6 +26,8 @@ function d(e, t) {
                         return;
                     case l.jF:
                     case l.OJ:
+                    case l.Ht:
+                    case l.tv:
                         (0, s.s7G)(), a.A.open(e, o.BEX.TAG, o.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
                     default:

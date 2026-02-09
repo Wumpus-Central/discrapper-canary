@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     lm: "notice__8a2c0",
     Ac: "qrCodeContainer__8a2c0",
