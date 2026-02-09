@@ -52266,6 +52266,13 @@ div.modalOverrideBody__34eac {
     text-shadow: 0 0 4px var(--background-base-low)
 }
 
+.warning_a0d96d {
+    background: var(--background-base-lowest);
+    border: 3px dashed var(--input-border-error-default);
+    border-radius: var(--radius-md);
+    padding: 16px
+}
+
 .container_b4f99f {
     background: var(--background-surface-higher);
     box-sizing: border-box;

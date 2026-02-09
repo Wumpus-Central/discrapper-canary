@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { E: () => g, e: () => E });
+n.d(t, { E: () => E, e: () => A });
 var r = n(64700),
     i = n(735438),
     a = n(528226),
@@ -13,8 +13,9 @@ var r = n(64700),
     f = n(18769),
     p = n(458306),
     h = n(282203),
-    m = n(954644);
-let g = {
+    m = n(954644),
+    g = n(634791);
+let E = {
         ContainedHero: a.A,
         BasicHero: (e) => {
             let { bannerSrc: t } = e;
@@ -36,11 +37,14 @@ let g = {
         Heading: p.Oo,
         Stack: p.Kp,
         Text: p.t,
+        Any1: g.A,
+        Any2: g.A,
+        Any3: g.A,
     },
-    E = function () {
+    A = function () {
         let { overrides: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         return r.useMemo(() => {
-            let t = (0, i.cloneDeep)(g);
+            let t = (0, i.cloneDeep)(E);
             if (null != e) for (let [n, r] of Object.entries(e)) null != r && (t[n] = r);
             return t;
         }, [e]);
