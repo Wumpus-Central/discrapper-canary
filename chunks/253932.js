@@ -1,546 +1,547 @@
 "use strict";
 n.d(t, {
-    $s: () => J,
-    Bh: () => v,
-    CY: () => eA,
-    D_: () => g,
-    FA: () => ee,
-    G2: () => eT,
-    H1: () => eo,
-    HO: () => ea,
-    HZ: () => eW,
-    Hu: () => e6,
-    Iv: () => eK,
-    JG: () => ek,
-    JI: () => eb,
-    JV: () => b,
-    Jr: () => L,
-    Kg: () => ec,
-    LJ: () => e4,
-    ML: () => A,
-    NF: () => eq,
-    NO: () => D,
-    NR: () => C,
-    PZ: () => eQ,
-    Pf: () => Y,
-    Pw: () => eU,
-    Q$: () => eS,
-    Q_: () => eD,
-    Qe: () => ed,
-    Qr: () => R,
-    S0: () => eM,
-    SI: () => E,
-    SY: () => S,
-    Sf: () => ex,
-    T3: () => O,
-    TA: () => eY,
-    UM: () => K,
-    Vd: () => e$,
-    Vv: () => ez,
-    WY: () => X,
-    X6: () => ey,
-    Xi: () => e1,
-    YX: () => q,
-    Yh: () => es,
-    Yt: () => e2,
-    Zk: () => eH,
-    Zp: () => y,
-    Zr: () => $,
-    Zt: () => Z,
-    _3: () => U,
-    _6: () => eI,
-    _8: () => eX,
-    _Z: () => eV,
-    _z: () => k,
-    b0: () => P,
-    bm: () => G,
-    cU: () => eu,
-    cj: () => ep,
-    dG: () => ei,
-    dm: () => eB,
-    e: () => W,
-    eK: () => I,
-    eh: () => eL,
-    gs: () => T,
-    hD: () => ev,
-    hH: () => er,
-    he: () => eh,
-    iM: () => x,
-    j0: () => e0,
-    j7: () => en,
-    jP: () => eE,
-    jW: () => eN,
-    kt: () => ew,
-    l_: () => e_,
-    m$: () => ej,
-    n6: () => Q,
-    ng: () => e3,
-    ns: () => j,
-    on: () => ef,
-    oz: () => N,
-    pE: () => eF,
-    pK: () => eJ,
-    qN: () => eZ,
-    rs: () => eC,
-    tP: () => M,
-    tz: () => em,
-    uB: () => H,
-    uh: () => F,
-    vL: () => et,
-    vf: () => el,
-    wv: () => V,
-    xM: () => B,
+    $s: () => ee,
+    Bh: () => C,
+    CY: () => eI,
+    D_: () => E,
+    FA: () => et,
+    G2: () => eS,
+    H1: () => el,
+    HO: () => es,
+    HZ: () => eK,
+    Hu: () => e4,
+    Iv: () => ez,
+    JG: () => eU,
+    JI: () => eR,
+    JV: () => R,
+    Jr: () => w,
+    Kg: () => ed,
+    LJ: () => e5,
+    ML: () => I,
+    NF: () => eX,
+    NO: () => L,
+    NR: () => N,
+    PZ: () => eJ,
+    Pf: () => W,
+    Pw: () => eG,
+    Q$: () => ey,
+    Q_: () => eL,
+    Qe: () => e_,
+    Qr: () => O,
+    S0: () => eP,
+    SI: () => A,
+    SY: () => y,
+    Sf: () => eM,
+    T3: () => D,
+    TA: () => eW,
+    UM: () => z,
+    Vd: () => eq,
+    Vv: () => e$,
+    WY: () => Z,
+    X6: () => ev,
+    Xi: () => e2,
+    YX: () => X,
+    Yh: () => eo,
+    Yt: () => e3,
+    Zk: () => eY,
+    Zp: () => v,
+    Zr: () => q,
+    Zt: () => Q,
+    _3: () => G,
+    _6: () => eT,
+    _8: () => eZ,
+    _Z: () => eB,
+    _z: () => U,
+    b0: () => k,
+    bm: () => F,
+    cU: () => ec,
+    cj: () => eh,
+    dG: () => ea,
+    dm: () => ej,
+    e: () => K,
+    eK: () => T,
+    eh: () => ew,
+    gs: () => S,
+    hD: () => eC,
+    hH: () => ei,
+    he: () => em,
+    iM: () => M,
+    j0: () => e1,
+    j7: () => er,
+    jP: () => eA,
+    jW: () => eb,
+    kt: () => ex,
+    l_: () => ef,
+    m$: () => eH,
+    n6: () => J,
+    ng: () => e6,
+    ns: () => H,
+    on: () => ep,
+    oz: () => b,
+    pE: () => eV,
+    pK: () => e0,
+    qN: () => eQ,
+    rs: () => eN,
+    tP: () => P,
+    tz: () => eg,
+    uB: () => Y,
+    uh: () => V,
+    vL: () => en,
+    vf: () => eu,
+    wv: () => B,
+    xM: () => j,
 });
 var r = n(735438),
-    i = n(311907),
-    a = n(873298),
-    s = n(406935),
-    o = n(52133),
-    l = n(461012),
-    u = n(809976),
-    c = n(646769),
-    d = n(397438),
-    _ = n(656402),
-    f = n(355097),
-    p = n(652215),
-    h = n(815968),
-    m = n(823894);
-let g = (0, c.c$)(
+    i = n(923457),
+    a = n(311907),
+    s = n(873298),
+    o = n(406935),
+    l = n(52133),
+    u = n(461012),
+    c = n(207560),
+    d = n(646769),
+    _ = n(397438),
+    f = n(656402),
+    p = n(355097),
+    h = n(652215),
+    m = n(815968),
+    g = n(823894);
+let E = (0, d.c$)(
         "textAndImages",
         "useLegacyChatInput",
         (e) => e?.value ?? !1,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    E = (0, c.c$)(
+    A = (0, d.c$)(
         "textAndImages",
         "useRichChatInput",
         (e) => e?.value ?? !0,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    A = (0, c.c$)(
+    I = (0, d.c$)(
         "textAndImages",
         "includeStickersInAutocomplete",
         (e) => e?.value ?? !1,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    I = (0, c.c$)(
+    T = (0, d.c$)(
         "textAndImages",
         "includeSoundmojiInAutocomplete",
         (e) => e?.value ?? !0,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    T = (0, c.c$)(
+    S = (0, d.c$)(
         "textAndImages",
         "renderSpoilers",
-        (e) => e?.value ?? p.P6Q.ON_CLICK,
-        (e) => s.hU.create({ value: e }),
+        (e) => e?.value ?? h.P6Q.ON_CLICK,
+        (e) => o.hU.create({ value: e }),
     ),
-    S = (0, c.c$)(
+    y = (0, d.c$)(
         "textAndImages",
         "useThreadSidebar",
         (e) => e?.value ?? !0,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     );
-(0, c.c$)(
+(0, d.c$)(
     "notifications",
     "showInAppNotifications",
     (e) => e?.value ?? !0,
-    (e) => s._t.create({ value: e }),
+    (e) => o._t.create({ value: e }),
 );
-let y = (0, c.c$)(
+let v = (0, d.c$)(
     "notifications",
     "reactionNotifications",
-    (e) => e ?? a.Tz.NOTIFICATIONS_ENABLED,
+    (e) => e ?? s.Tz.NOTIFICATIONS_ENABLED,
     (e) => e,
 );
-(0, c.c$)(
+(0, d.c$)(
     "notifications",
     "customStatusPushNotifications",
-    (e) => e ?? a.DQ.STATUS_PUSH_UNSET,
+    (e) => e ?? s.DQ.STATUS_PUSH_UNSET,
     (e) => e,
 ),
-    (0, c.c$)(
+    (0, d.c$)(
         "notifications",
         "enableSummaryReminderNotifications",
         (e) => e?.value ?? !0,
-        (e) => s._t.create({ value: !!e }),
+        (e) => o._t.create({ value: !!e }),
     );
-let v = (0, c.c$)(
+let C = (0, d.c$)(
         "notifications",
         "enableVoiceActivityNotifications",
         (e) => e?.value ?? !0,
-        (e) => s._t.create({ value: !!e }),
+        (e) => o._t.create({ value: !!e }),
     ),
-    C = (0, c.c$)(
+    N = (0, d.c$)(
         "notifications",
         "enableFriendOnlineNotifications",
         (e) => e?.value ?? !0,
-        (e) => s._t.create({ value: !!e }),
+        (e) => o._t.create({ value: !!e }),
     ),
-    N = (0, c.c$)(
+    b = (0, d.c$)(
         "notifications",
         "enableFriendAnniversaryNotifications",
         (e) => e?.value ?? !0,
-        (e) => s._t.create({ value: !!e }),
+        (e) => o._t.create({ value: !!e }),
     ),
-    b = (0, c.c$)(
+    R = (0, d.c$)(
         "notifications",
         "enableGameUpdateNotifications",
         (e) => e?.value ?? !0,
-        (e) => s._t.create({ value: !!e }),
+        (e) => o._t.create({ value: !!e }),
     ),
-    R = (0, c.c$)(
+    O = (0, d.c$)(
         "notifications",
         "enableServerTrendingNotifications",
         (e) => e?.value ?? !0,
-        (e) => s._t.create({ value: !!e }),
+        (e) => o._t.create({ value: !!e }),
     ),
-    O = (0, c.c$)(
+    D = (0, d.c$)(
         "notifications",
         "enableProfileUpdatesNotifications",
         (e) => e?.value ?? !0,
-        (e) => s._t.create({ value: !!e }),
+        (e) => o._t.create({ value: !!e }),
     ),
-    D = (0, c.c$)(
+    L = (0, d.c$)(
         "notifications",
         "quietMode",
         (e) => e?.value ?? !1,
-        (e) => s._t.create({ value: !!e }),
+        (e) => o._t.create({ value: !!e }),
     ),
-    L = (0, c.c$)(
+    w = (0, d.c$)(
         "notifications",
         "focusModeExpiresAtMs",
         (e) => e ?? "0",
         (e) => e,
     ),
-    w = [],
-    x = (0, c.c$)(
+    x = [],
+    M = (0, d.c$)(
         "textAndImages",
         "emojiPickerCollapsedSections",
-        (e) => e ?? w,
+        (e) => e ?? x,
         (e) => e,
     ),
-    M = (0, c.c$)(
+    P = (0, d.c$)(
         "textAndImages",
         "stickerPickerCollapsedSections",
-        (e) => e ?? w,
+        (e) => e ?? x,
         (e) => e,
     ),
-    P = (0, c.c$)(
+    k = (0, d.c$)(
         "textAndImages",
         "soundboardPickerCollapsedSections",
-        (e) => e ?? w,
+        (e) => e ?? x,
         (e) => e,
     ),
-    k = (0, c.c$)(
+    U = (0, d.c$)(
         "textAndImages",
         "viewImageDescriptions",
         (e) => e?.value ?? !1,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    U = (0, c.c$)(
+    G = (0, d.c$)(
         "textAndImages",
         "showCommandSuggestions",
         (e) => e?.value ?? !0,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    G = (0, c.c$)(
+    F = (0, d.c$)(
         "voiceAndVideo",
         "alwaysPreviewVideo",
         (e) => e?.value ?? !1,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    F = (0, c.c$)(
+    V = (0, d.c$)(
         "voiceAndVideo",
         "disableStreamPreviews",
         (e) => e?.value,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    V = (0, c.c$)(
+    B = (0, d.c$)(
         "notifications",
         "notifyFriendsOnGoLive",
         (e) => e?.value,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    B = "0",
-    j = (0, c.c$)(
+    j = "0",
+    H = (0, d.c$)(
         "notifications",
         "notificationCenterAckedBeforeId",
-        (e) => e ?? B,
+        (e) => e ?? j,
         (e) => e,
     ),
-    H = (0, c.c$)(
+    Y = (0, d.c$)(
         "gameLibrary",
         "installShortcutDesktop",
         (e) => e?.value ?? !1,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    Y = (0, c.c$)(
+    W = (0, d.c$)(
         "gameLibrary",
         "installShortcutStartMenu",
         (e) => e?.value ?? !0,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    W = (0, c.c$)(
+    K = (0, d.c$)(
         "privacy",
         "allowActivityPartyPrivacyFriends",
         (e) => e?.value ?? !0,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    K = (0, c.c$)(
+    z = (0, d.c$)(
         "privacy",
         "allowActivityPartyPrivacyVoiceChannel",
         (e) => e?.value ?? !0,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    z = [],
-    $ = (0, c.c$)(
+    $ = [],
+    q = (0, d.c$)(
         "privacy",
         "messageRequestRestrictedGuildIds",
-        (e) => e ?? z,
+        (e) => e ?? $,
         (e) => e,
     ),
-    q = (0, c.c$)(
+    X = (0, d.c$)(
         "privacy",
         "defaultMessageRequestRestricted",
         (e) => e?.value,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    X = (0, c.c$)(
+    Z = (0, d.c$)(
         "privacy",
         "nonSpamRetrainingOptIn",
         (e) => e?.value,
-        (e) => (null == e ? void 0 : s._t.create({ value: e })),
+        (e) => (null == e ? void 0 : o._t.create({ value: e })),
     );
-(0, c.c$)(
+(0, d.c$)(
     "privacy",
     "contactSyncEnabled",
     (e) => e?.value ?? !1,
-    (e) => s._t.create({ value: e }),
+    (e) => o._t.create({ value: e }),
 );
-let Z = (0, c.c$)(
+let Q = (0, d.c$)(
         "privacy",
         "defaultGuildsRestricted",
         (e) => e ?? !1,
         (e) => e,
     ),
-    Q = (0, c.c$)(
+    J = (0, d.c$)(
         "privacy",
         "defaultGuildsRestrictedV2",
         (e) => e?.value,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    J = (0, c.c$)(
+    ee = (0, d.c$)(
         "privacy",
         "restrictedGuildIds",
         (e) => e ?? [],
         (e) => e,
     );
-(0, c.c$)(
+(0, d.c$)(
     "privacy",
     "friendDiscoveryFlags",
     (e) => e?.value ?? 0,
-    (e) => s.ZQ.create({ value: e }),
+    (e) => o.ZQ.create({ value: e }),
 );
-let ee = (0, c.c$)(
+let et = (0, d.c$)(
         "privacy",
         "friendSourceFlags",
-        (e) => e?.value ?? p.yKI,
-        (e) => s.ZQ.create({ value: e }),
+        (e) => e?.value ?? h.yKI,
+        (e) => o.ZQ.create({ value: e }),
     ),
-    et = (0, c.c$)(
+    en = (0, d.c$)(
         "debug",
         "rtcPanelShowVoiceStates",
         (e) => e?.value ?? !1,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    en = (0, c.c$)(
+    er = (0, d.c$)(
         "textAndImages",
         "convertEmoticons",
         (e) => e?.value ?? !0,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    er = (0, c.c$)(
+    ei = (0, d.c$)(
         "textAndImages",
         "messageDisplayCompact",
         (e) => e?.value ?? !1,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    ei = (0, c.c$)(
+    ea = (0, d.c$)(
         "voiceAndVideo",
         "soundboardSettings",
         (e) => e,
         (e) => e,
     ),
-    ea = (0, c.c$)(
+    es = (0, d.c$)(
         "voiceAndVideo",
         "soundmojiVolume",
         (e) => e?.value ?? 100,
-        (e) => s.uN.create({ value: e }),
+        (e) => o.uN.create({ value: e }),
     ),
-    es = (0, c.c$)(
+    eo = (0, d.c$)(
         "voiceAndVideo",
         "streamNotificationsEnabled",
         (e) => e?.value ?? !0,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    eo = (0, c.c$)(
+    el = (0, d.c$)(
         "privacy",
         "dropsOptedOut",
         (e) => e?.value ?? !1,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    el = (0, c.c$)(
+    eu = (0, d.c$)(
         "privacy",
         "quests3PDataOptedOut",
         (e) => e?.value ?? !1,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     );
-(0, c.c$)(
+(0, d.c$)(
     "voiceAndVideo",
     "nativePhoneIntegrationEnabled",
     (e) => e?.value ?? !0,
-    (e) => s._t.create({ value: e }),
+    (e) => o._t.create({ value: e }),
 );
-let eu = (0, c.c$)(
+let ec = (0, d.c$)(
         "voiceAndVideo",
         "afkTimeout",
         (e) => e?.value ?? 60,
-        (e) => s.ZQ.create({ value: e }),
+        (e) => o.ZQ.create({ value: e }),
     ),
-    ec = (0, c.c$)(
+    ed = (0, d.c$)(
         "textAndImages",
         "viewNsfwGuilds",
         (e) => e?.value ?? !1,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    ed = (0, c.c$)(
+    e_ = (0, d.c$)(
         "textAndImages",
         "viewNsfwCommands",
         (e) => e?.value ?? !1,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     );
-(0, c.c$)(
+(0, d.c$)(
     "privacy",
     "detectPlatformAccounts",
     (e) => e?.value ?? !0,
-    (e) => s._t.create({ value: e }),
+    (e) => o._t.create({ value: e }),
 );
-let e_ = (0, c.c$)(
+let ef = (0, d.c$)(
         "gameLibrary",
         "disableGamesTab",
         (e) => e?.value ?? !1,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    ef = (0, c.c$)(
+    ep = (0, d.c$)(
         "textAndImages",
         "enableTtsCommand",
         (e) => e?.value ?? !0,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    ep = (0, c.c$)(
+    eh = (0, d.c$)(
         "textAndImages",
         "explicitContentFilter",
-        (e) => e?.value ?? _.Je.NON_FRIENDS,
-        (e) => s.ZQ.create({ value: e }),
+        (e) => e?.value ?? f.Je.NON_FRIENDS,
+        (e) => o.ZQ.create({ value: e }),
     );
-(0, c.c$)(
+(0, d.c$)(
     "textAndImages",
     "dmSpamFilter",
-    (e) => e?.value ?? _.uH.NON_FRIENDS,
-    (e) => s.ZQ.create({ value: e }),
+    (e) => e?.value ?? f.uH.NON_FRIENDS,
+    (e) => o.ZQ.create({ value: e }),
 );
-let eh = (0, c.c$)(
+let em = (0, d.c$)(
         "textAndImages",
         "dmSpamFilterV2",
-        (e) => e ?? a.he.DEFAULT_UNSET,
+        (e) => e ?? s.he.DEFAULT_UNSET,
         (e) => e,
     ),
-    em = (0, c.c$)(
+    eg = (0, d.c$)(
         "status",
         "showCurrentGame",
         (e) => e?.value ?? !0,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     );
-(0, c.c$)(
+(0, d.c$)(
     "privacy",
     "recentGamesEnabled",
     (e) => e?.value ?? !0,
-    (e) => s._t.create({ value: e }),
+    (e) => o._t.create({ value: e }),
 );
-let eg = new Set(Object.values(p.clD)),
-    eE = (0, c.c$)(
+let eE = new Set(Object.values(h.clD)),
+    eA = (0, d.c$)(
         "status",
         "status",
-        (e) => (null != e && eg.has(e.value) ? e.value : p.clD.UNKNOWN),
-        (e) => s.hU.create({ value: e }),
+        (e) => (null != e && eE.has(e.value) ? e.value : h.clD.UNKNOWN),
+        (e) => o.hU.create({ value: e }),
     ),
-    eA = (0, c.c$)(
+    eI = (0, d.c$)(
         "status",
         "statusExpiresAtMs",
         (e) => e ?? "0",
         (e) => e,
     ),
-    eI = (0, c.c$)(
+    eT = (0, d.c$)(
         "status",
         "statusCreatedAtMs",
         (e) => e,
         (e) => e,
     ),
-    eT = (0, c.c$)(
+    eS = (0, d.c$)(
         "status",
         "customStatus",
         (e) => e,
         (e) => e,
     ),
-    eS = (0, c.c$)(
+    ey = (0, d.c$)(
         "clips",
         "allowVoiceRecording",
         (e) => e?.value ?? !0,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    ey = (0, c.Mt)(
-        (0, c.c$)(
+    ev = (0, d.Mt)(
+        (0, d.c$)(
             "textAndImages",
             "inlineAttachmentMedia",
             (e) => e?.value ?? !0,
-            (e) => s._t.create({ value: e }),
+            (e) => o._t.create({ value: e }),
         ),
         "text",
         "inlineAttachmentMedia",
     ),
-    ev = (0, c.Mt)(
-        (0, c.c$)(
+    eC = (0, d.Mt)(
+        (0, d.c$)(
             "textAndImages",
             "inlineEmbedMedia",
             (e) => e?.value ?? !0,
-            (e) => s._t.create({ value: e }),
+            (e) => o._t.create({ value: e }),
         ),
         "text",
         "inlineEmbedMedia",
     ),
-    eC = (0, c.Mt)(
-        (0, c.c$)(
+    eN = (0, d.Mt)(
+        (0, d.c$)(
             "textAndImages",
             "renderEmbeds",
             (e) => e?.value ?? !0,
-            (e) => s._t.create({ value: e }),
+            (e) => o._t.create({ value: e }),
         ),
         "text",
         "renderEmbeds",
     ),
-    eN = (0, c.Mt)(
-        (0, c.c$)(
+    eb = (0, d.Mt)(
+        (0, d.c$)(
             "textAndImages",
             "renderReactions",
             (e) => e?.value ?? !0,
-            (e) => s._t.create({ value: e }),
+            (e) => o._t.create({ value: e }),
         ),
         "text",
         "renderReactions",
     );
-(0, c.Mt)(
-    (0, c.c$)(
+(0, d.Mt)(
+    (0, d.c$)(
         "textAndImages",
         "defaultReactionEmoji",
         (e) => {
@@ -555,39 +556,39 @@ let eg = new Set(Object.values(p.clD)),
         (e) => {
             let { emojiId: t, emojiName: n, animated: r, disableDoubleTap: i } = e;
             return {
-                emojiId: s.ol.create({ value: t }),
-                emojiName: s.hU.create({ value: n }),
-                animated: s._t.create({ value: r }),
-                disableDoubleTap: s._t.create({ value: i }),
+                emojiId: o.ol.create({ value: t }),
+                emojiName: o.hU.create({ value: n }),
+                animated: o._t.create({ value: r }),
+                disableDoubleTap: o._t.create({ value: i }),
             };
         },
-        { comparator: o.A },
+        { comparator: l.A },
     ),
     "text",
     "defaultReactionEmoji",
 );
-let eb = (0, c.c$)(
+let eR = (0, d.c$)(
         "localization",
         "timezoneOffset",
         (e) => e?.value ?? null,
-        (e) => s.as.create({ value: e ?? 0 }),
+        (e) => o.as.create({ value: e ?? 0 }),
     ),
-    eR = new Set([h.YP.AUTO, l.b.COZY, l.b.COMPACT]);
-(0, c.c$)(
+    eO = new Set([m.YP.AUTO, u.b.COZY, u.b.COMPACT]);
+(0, d.c$)(
     "appearance",
     "channelListLayout",
-    (e) => (null != e && eR.has(e.value) ? e.value : l.b.COZY),
-    (e) => s.hU.create({ value: e }),
+    (e) => (null != e && eO.has(e.value) ? e.value : u.b.COZY),
+    (e) => o.hU.create({ value: e }),
 );
-let eO = new Set([l.P.ALL, l.P.UNREADS, l.P.NONE]);
-(0, c.c$)(
+let eD = new Set([u.P.ALL, u.P.UNREADS, u.P.NONE]);
+(0, d.c$)(
     "appearance",
     "messagePreviews",
-    (e) => (null != e && eO.has(e.value) ? e.value : l.P.ALL),
-    (e) => s.hU.create({ value: e }),
+    (e) => (null != e && eD.has(e.value) ? e.value : u.P.ALL),
+    (e) => o.hU.create({ value: e }),
 );
-let eD = (0, c.Mt)(
-        (0, c.c$)(
+let eL = (0, d.Mt)(
+        (0, d.c$)(
             "appearance",
             "developerMode",
             (e) => e ?? !1,
@@ -596,7 +597,7 @@ let eD = (0, c.Mt)(
         "appearance",
         "developerMode",
     ),
-    eL = (0, c.c$)(
+    ew = (0, d.c$)(
         "appearance",
         "clientThemeSettings",
         (e) => ({
@@ -613,7 +614,7 @@ let eD = (0, c.Mt)(
         }),
         (e) => ({
             backgroundGradientPresetId:
-                null != e.backgroundGradientPresetId ? s.ZQ.create({ value: e.backgroundGradientPresetId }) : void 0,
+                null != e.backgroundGradientPresetId ? o.ZQ.create({ value: e.backgroundGradientPresetId }) : void 0,
             customUserThemeSettings:
                 null != e.customUserThemeSettings
                     ? {
@@ -626,135 +627,135 @@ let eD = (0, c.Mt)(
         }),
         { comparator: r.isEqual },
     ),
-    ew = (0, c.Tg)(
-        (0, c.Mt)(
-            (0, c.c$)(
+    ex = (0, d.Tg)(
+        (0, d.Mt)(
+            (0, d.c$)(
                 "textAndImages",
                 "gifAutoPlay",
                 (e) => e?.value ?? !0,
-                (e) => s._t.create({ value: e }),
+                (e) => o._t.create({ value: e }),
             ),
             "text",
             "gifAutoPlay",
         ),
         "gifAutoPlay",
-        () => d.A.getOverride("gifAutoPlay")?.value,
-        () => (0, i.bG)([d.A], () => d.A.getOverride("gifAutoPlay")?.value),
+        () => _.A.getOverride("gifAutoPlay")?.value,
+        () => (0, a.bG)([_.A], () => _.A.getOverride("gifAutoPlay")?.value),
     ),
-    ex = (0, c.Tg)(
-        (0, c.Mt)(
-            (0, c.c$)(
+    eM = (0, d.Tg)(
+        (0, d.Mt)(
+            (0, d.c$)(
                 "textAndImages",
                 "animateEmoji",
                 (e) => e?.value ?? !0,
-                (e) => s._t.create({ value: e }),
+                (e) => o._t.create({ value: e }),
             ),
             "text",
             "animateEmoji",
         ),
         "animateEmoji",
-        () => d.A.getOverride("animateEmoji")?.value,
-        () => (0, i.bG)([d.A], () => d.A.getOverride("animateEmoji")?.value),
+        () => _.A.getOverride("animateEmoji")?.value,
+        () => (0, a.bG)([_.A], () => _.A.getOverride("animateEmoji")?.value),
     ),
-    eM = (0, c.Tg)(
-        (0, c.Mt)(
-            (0, c.c$)(
+    eP = (0, d.Tg)(
+        (0, d.Mt)(
+            (0, d.c$)(
                 "textAndImages",
                 "animateStickers",
-                (e) => e?.value ?? m.BJ.ALWAYS_ANIMATE,
-                (e) => s.ZQ.create({ value: e }),
+                (e) => e?.value ?? g.BJ.ALWAYS_ANIMATE,
+                (e) => o.ZQ.create({ value: e }),
             ),
             "text",
             "animateStickers",
         ),
         "animateStickers",
-        () => d.A.getOverride("animateStickers")?.value,
-        () => (0, i.bG)([d.A], () => d.A.getOverride("animateStickers")?.value),
+        () => _.A.getOverride("animateStickers")?.value,
+        () => (0, a.bG)([_.A], () => _.A.getOverride("animateStickers")?.value),
     ),
-    eP = [],
-    ek = (0, c.c$)(
+    ek = [],
+    eU = (0, d.c$)(
         "privacy",
         "activityRestrictedGuildIds",
-        (e) => e ?? eP,
+        (e) => e ?? ek,
         (e) => e,
     ),
-    eU = (0, c.c$)(
+    eG = (0, d.c$)(
         "privacy",
         "activityRestrictedGuildIds",
-        (e) => e ?? eP,
+        (e) => e ?? ek,
         (e) => e,
-        { delay: f.Sb.FREQUENT_USER_ACTION },
+        { delay: p.Sb.FREQUENT_USER_ACTION },
     ),
-    eG = [],
-    eF = (0, c.c$)(
+    eF = [],
+    eV = (0, d.c$)(
         "privacy",
         "activityJoiningRestrictedGuildIds",
-        (e) => e ?? eG,
+        (e) => e ?? eF,
         (e) => e,
     );
-(0, c.c6)({
-    baseSetting: (0, c.c$)(
+(0, d.c6)({
+    baseSetting: (0, d.c$)(
         "privacy",
         "defaultGuildsActivityRestricted",
         (e) => e,
-        (e) => e ?? a.AN.OFF,
+        (e) => e ?? s.AN.OFF,
     ),
-    isEligible: () => (0, u.oK)("user_settings"),
-    useIsEligible: () => (0, u.ty)("user_settings"),
-    ineligibleDefault: a.AN.OFF,
-    eligibleDefault: () => a.AN.ON_FOR_LARGE_GUILDS,
+    isEligible: () => (0, c.To)(i.p.GUILD_ACTIVITY_STATUS),
+    useIsEligible: () => (0, c.yv)(i.p.GUILD_ACTIVITY_STATUS),
+    ineligibleDefault: s.AN.OFF,
+    eligibleDefault: () => s.AN.ON_FOR_LARGE_GUILDS,
 });
-let eV = (0, c.c6)({
-        baseSetting: (0, c.c$)(
+let eB = (0, d.c6)({
+        baseSetting: (0, d.c$)(
             "privacy",
             "defaultGuildsActivityRestrictedV2",
-            (e) => (e === a.Qd.ACTIVITY_STATUS_UNSET ? null : e),
-            (e) => e ?? a.Qd.ACTIVITY_STATUS_OFF,
+            (e) => (e === s.Qd.ACTIVITY_STATUS_UNSET ? null : e),
+            (e) => e ?? s.Qd.ACTIVITY_STATUS_OFF,
         ),
-        isEligible: () => (0, u.oK)("user_settings"),
-        useIsEligible: () => (0, u.ty)("user_settings"),
-        ineligibleDefault: a.Qd.ACTIVITY_STATUS_OFF,
-        eligibleDefault: () => a.Qd.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS,
+        isEligible: () => (0, c.To)(i.p.GUILD_ACTIVITY_STATUS),
+        useIsEligible: () => (0, c.yv)(i.p.GUILD_ACTIVITY_STATUS),
+        ineligibleDefault: s.Qd.ACTIVITY_STATUS_OFF,
+        eligibleDefault: () => s.Qd.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS,
     }),
-    eB = (0, c.c$)(
+    ej = (0, d.c$)(
         "privacy",
         "familyCenterEnabledV2",
         (e) => e?.value,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    ej = (0, c.c$)(
+    eH = (0, d.c$)(
         "privacy",
         "hideLegacyUsername",
         (e) => e?.value ?? !1,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    eH = (0, c.c$)(
+    eY = (0, d.c$)(
         "privacy",
         "allowGameFriendDmsInDiscord",
         (e) => e?.value ?? !0,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    eY = (0, c.c$)(
+    eW = (0, d.c$)(
         "privacy",
         "slayerSdkReceiveDmsInGame",
-        (e) => e ?? a.fL.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET,
+        (e) => e ?? s.fL.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET,
         (e) => e,
     ),
-    eW = (0, c.c$)(
+    eK = (0, d.c$)(
         "ads",
         "alwaysDeliver",
         (e) => e ?? !1,
         (e) => e,
     ),
-    eK = (e) => {
+    ez = (e) => {
         let { explicitContentGuilds: t, explicitContentFriendDm: n, explicitContentNonFriendDm: r } = e ?? {};
         return {
-            explicitContentGuilds: t ?? a.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
-            explicitContentFriendDm: n ?? a.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
-            explicitContentNonFriendDm: r ?? a.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
+            explicitContentGuilds: t ?? s.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
+            explicitContentFriendDm: n ?? s.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
+            explicitContentNonFriendDm: r ?? s.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
         };
     },
-    ez = (e) => {
+    e$ = (e) => {
         let { explicitContentGuilds: t, explicitContentFriendDm: n, explicitContentNonFriendDm: r } = e;
         return {
             explicitContentGuilds: t ?? void 0,
@@ -762,16 +763,16 @@ let eV = (0, c.c6)({
             explicitContentNonFriendDm: r ?? void 0,
         };
     },
-    e$ = (0, c.c$)("textAndImages", "explicitContentSettings", eK, ez),
-    eq = (e) => {
+    eq = (0, d.c$)("textAndImages", "explicitContentSettings", ez, e$),
+    eX = (e) => {
         let { goreContentGuilds: t, goreContentFriendDm: n, goreContentNonFriendDm: r } = e ?? {};
         return {
-            goreContentGuilds: t ?? a.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
-            goreContentFriendDm: n ?? a.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
-            goreContentNonFriendDm: r ?? a.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
+            goreContentGuilds: t ?? s.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
+            goreContentFriendDm: n ?? s.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
+            goreContentNonFriendDm: r ?? s.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
         };
     },
-    eX = (e) => {
+    eZ = (e) => {
         let { goreContentGuilds: t, goreContentFriendDm: n, goreContentNonFriendDm: r } = e;
         return {
             goreContentGuilds: t ?? void 0,
@@ -779,81 +780,81 @@ let eV = (0, c.c6)({
             goreContentNonFriendDm: r ?? void 0,
         };
     },
-    eZ = (0, c.c$)("textAndImages", "goreContentSettings", eq, eX);
-(0, c.c$)(
+    eQ = (0, d.c$)("textAndImages", "goreContentSettings", eX, eZ);
+(0, d.c$)(
     "appearance",
     "searchResultExactCountEnabled",
     (e) => e?.value ?? !1,
-    (e) => s._t.create({ value: e }),
+    (e) => o._t.create({ value: e }),
 ),
-    (0, c.c$)(
+    (0, d.c$)(
         "appearance",
         "happeningNowCardsDisabled",
         (e) => e?.value ?? !1,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     );
-let eQ = (0, c.c$)(
+let eJ = (0, d.c$)(
     "appearance",
     "timestampHourCycle",
-    (e) => e ?? a.PZ.AUTO,
+    (e) => e ?? s.PZ.AUTO,
     (e) => e,
 );
-(0, c.c$)(
+(0, d.c$)(
     "appearance",
     "launchPadMode",
-    (e) => e ?? a.Ar.LAUNCH_PAD_DISABLED,
+    (e) => e ?? s.Ar.LAUNCH_PAD_DISABLED,
     (e) => e,
 ),
-    (0, c.c$)(
+    (0, d.c$)(
         "appearance",
         "swipeRightToLeftMode",
-        (e) => e ?? a.kW.SWIPE_RIGHT_TO_LEFT_UNSET,
+        (e) => e ?? s.kW.SWIPE_RIGHT_TO_LEFT_UNSET,
         (e) => e,
     );
-let eJ = (0, c.c$)(
+let e0 = (0, d.c$)(
         "userContent",
         "lastReceivedChangelogId",
         (e) => e ?? "0",
         (e) => e,
     ),
-    e0 = (0, c.c$)(
+    e1 = (0, d.c$)(
         "safetySettings",
         "ignoreProfileSpeedbumpDisabled",
         (e) => e ?? !1,
         (e) => e,
     ),
-    e1 = (0, c.c$)(
+    e2 = (0, d.c$)(
         "appearance",
         "uiDensity",
-        (e) => (e === a.NS.UNSET_UI_DENSITY ? a.NS.DEFAULT : (e ?? a.NS.DEFAULT)),
+        (e) => (e === s.NS.UNSET_UI_DENSITY ? s.NS.DEFAULT : (e ?? s.NS.DEFAULT)),
         (e) => e,
     ),
-    e2 = (0, c.c$)(
+    e3 = (0, d.c$)(
         "inAppFeedbackSettings",
         "inAppFeedbackStates",
         (e) =>
             (0, r.mapValues)(e ?? {}, (e) => (0, r.mapValues)(e, (e) => (e?.value != null ? Number(e.value) : void 0))),
         (e) =>
             (0, r.mapValues)(e, (e) =>
-                (0, r.mapValues)(e, (e) => s.ol.create({ value: null != e ? String(e) : void 0 })),
+                (0, r.mapValues)(e, (e) => o.ol.create({ value: null != e ? String(e) : void 0 })),
             ),
-        { delay: f.Sb.AUTOMATED },
+        { delay: p.Sb.AUTOMATED },
     ),
-    e3 = (0, c.c$)(
+    e6 = (0, d.c$)(
         "textAndImages",
         "showMentionSuggestions",
         (e) => e?.value ?? !0,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    e6 = (0, c.c$)(
+    e4 = (0, d.c$)(
         "textAndImages",
         "isCrossDmSearchEnabled",
         (e) => e?.value ?? !1,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     ),
-    e4 = (0, c.c$)(
+    e5 = (0, d.c$)(
         "notifications",
         "enableDmReplyNudgeReminders",
         (e) => e?.value ?? !0,
-        (e) => s._t.create({ value: e }),
+        (e) => o._t.create({ value: e }),
     );
