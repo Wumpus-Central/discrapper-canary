@@ -266,6 +266,7 @@ var r = (function (e) {
         (e.VOICE_BYPASS_SYSTEM_INPUT_PROCESSING_SETTING = "voice_bypass_system_input_processing_setting"),
         (e.VOICE_SILENCE_WARNING_SETTING = "voice_silence_warning_setting"),
         (e.VOICE_SWITCH_CHANNEL_ALERT_SETTING = "voice_switch_channel_alert_setting"),
+        (e.VOICE_HARDWARE_MUTE_SILENCE_ALERT_SETTING = "voice_hardware_mute_silence_alert_setting"),
         (e.VOICE_GLOBAL_ATTENUATION_FIELD_SET = "voice_global_attenuation_field_set"),
         (e.VOICE_GLOBAL_ATTENUATION_SLIDER = "voice_global_attenuation_slider"),
         (e.VOICE_GLOBAL_ATTENUATION_FOR_SELF_SETTING = "voice_global_attenuation_for_self_setting"),

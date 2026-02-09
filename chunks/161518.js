@@ -29,14 +29,14 @@ class u extends i.Ay.Store {
 }
 function c(e) {
     let { activeErrors: t } = e;
-    if (__OVERLAY__ || !(t instanceof Map)) return;
+    if (__OVERLAY__ || !(t instanceof Map)) return !1;
     s instanceof Map || (s = new Map());
     let n = new Set(t.keys()),
         i = new Set(s.keys());
-    if (!(0, r._)(n, i))
-        for (let [e, n] of ((s = t), (o = new Map()), s.entries())) {
-            let t = o.get(n.type) ?? [];
-            t.push(e), o.set(n.type, t);
-        }
+    if ((0, r._)(n, i)) return !1;
+    for (let [e, n] of ((s = t), (o = new Map()), s.entries())) {
+        let t = o.get(n.type) ?? [];
+        t.push(e), o.set(n.type, t);
+    }
 }
 let d = new u(a.h, { ACTIVE_AV_ERRORS_CHANGED: c });

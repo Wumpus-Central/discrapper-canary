@@ -50,6 +50,7 @@ class y extends a.Ay.DeviceSettingsStore {
                     "useSystemTheme",
                     "expressionPickerWidth",
                     "disableVoiceChannelChangeAlert",
+                    "disableHardwareMuteSilenceAlert",
                     "disableHideSelfStreamAndVideoConfirmationAlert",
                     "pushUpsellDismissed",
                     "disableEmbeddedActivityPopOutAlert",
@@ -113,6 +114,9 @@ class y extends a.Ay.DeviceSettingsStore {
     }
     get disableVoiceChannelChangeAlert() {
         return m.disableVoiceChannelChangeAlert ?? !1;
+    }
+    get disableHardwareMuteSilenceAlert() {
+        return m.disableHardwareMuteSilenceAlert ?? !1;
     }
     get disableEmbeddedActivityPopOutAlert() {
         return m.disableEmbeddedActivityPopOutAlert ?? !1;

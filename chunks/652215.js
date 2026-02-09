@@ -5145,6 +5145,7 @@ var na = (function (e) {
             (e.PREMIUM_FEATURE_ERROR = "premium_feature_error"),
             (e.EMOJI_STUDIO_ENDED = "emoji_studio_ended"),
             (e.PASSWORD_RESET_ACTION = "password_reset_action"),
+            (e.HARDWARE_MUTE_GUESSED = "hardware_mute_guessed"),
             (e.GUILD_CHANNEL_RESYNC_REQUESTED = "guild_channel_resync_requested"),
             (e.GUILD_CHANNEL_RESYNC_EXECUTED = "guild_channel_resync_executed"),
             (e.GUILD_CHANNEL_RESYNC_COMPLETED = "guild_channel_resync_completed"),
