@@ -22,7 +22,11 @@ function l(e) {
             null != m && m.length > 0
                 ? (0, t.jsx)("div", {
                       className: o.x,
-                      children: (0, t.jsx)(r.Text, { variant: "text-sm/medium", children: m }),
+                      children: (0, t.jsx)(r.Text, {
+                          variant: "text-sm/semibold",
+                          color: "text-feedback-warning",
+                          children: m,
+                      }),
                   })
                 : void 0;
     return (0, t.jsx)(i.Modal, {
