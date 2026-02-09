@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $G: () => o, NM: () => s, Ps: () => l, RE: () => r, Vh: () => i, vf: () => a });
+n.d(t, { $G: () => s, Ps: () => o, RE: () => r, Vh: () => i, vf: () => a });
 var r = (function (e) {
         return (
             (e[(e.NOT_ELIGIBLE = -1)] = "NOT_ELIGIBLE"),
@@ -37,9 +37,8 @@ var r = (function (e) {
     })({}),
     a = (function (e) {
         return (e.MANUAL = "manual"), (e.AUTO = "auto"), (e.AUTO_FALLBACK = "auto_fallback"), e;
-    })({});
-let s = ["2023-10_triggerdebuggingaa", "2023-10_guildaa"];
-var o = (function (e) {
+    })({}),
+    s = (function (e) {
         return (
             (e[(e.NONE = 0)] = "NONE"),
             (e[(e.CONNECTION_OPEN = 1)] = "CONNECTION_OPEN"),
@@ -55,6 +54,6 @@ var o = (function (e) {
             e
         );
     })({}),
-    l = (function (e) {
+    o = (function (e) {
         return (e[(e.EXPERIMENT = 0)] = "EXPERIMENT"), (e[(e.EXPERIMENT_TREATMENT = 1)] = "EXPERIMENT_TREATMENT"), e;
     })({});
