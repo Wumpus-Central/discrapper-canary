@@ -17,8 +17,8 @@ function u(e) {
         isLoadingAssets: x,
         currentQuestVisibleReason: p,
         shouldShowQuestBar: g,
-        isQuestEnrollmentBlocked: _,
-        impressionRef: f,
+        isQuestEnrollmentBlocked: f,
+        impressionRef: _,
     } = e;
     a.useEffect(() => {
         n &&
@@ -29,15 +29,15 @@ function u(e) {
                     content_id: r.uF.QUEST_BAR,
                     content_name: (0, d.jO)(r.uF.QUEST_BAR),
                     reason: "asset_loading_error",
-                    impression_id: f.current?.getId(),
+                    impression_id: _.current?.getId(),
                 },
                 sourceQuestContent: r.uF.QUEST_BAR_V2,
             }),
             i.A.increment({
                 name: s.K.QUEST_CONTENT_RENDERING_FAILURE,
-                tags: [`quest_id:${t.id}`, "reason:asset_loading_error"],
+                tags: [`quest_id:${t.id}`, `quest_content:${(0, d.jO)(r.uF.QUEST_BAR)}`, "reason:asset_loading_error"],
             }));
-    }, [n, f, t.id]),
+    }, [n, _, t.id]),
         a.useEffect(() => {
             u ||
                 (0, o.av)({
@@ -47,11 +47,11 @@ function u(e) {
                         content_id: r.uF.QUEST_BAR,
                         content_name: (0, d.jO)(r.uF.QUEST_BAR),
                         reason: "not_eligible_for_quest",
-                        impression_id: f.current?.getId(),
+                        impression_id: _.current?.getId(),
                     },
                     sourceQuestContent: r.uF.QUEST_BAR_V2,
                 });
-        }, [u, f, t.id]),
+        }, [u, _, t.id]),
         a.useEffect(() => {
             m ||
                 !h ||
@@ -63,12 +63,12 @@ function u(e) {
                         content_id: r.uF.QUEST_BAR,
                         content_name: (0, d.jO)(r.uF.QUEST_BAR),
                         reason: p,
-                        impression_id: f.current?.getId(),
+                        impression_id: _.current?.getId(),
                     },
                     sourceQuestContent: r.uF.QUEST_BAR_V2,
                 });
-        }, [m, h, x, t.id, p, f]),
+        }, [m, h, x, t.id, p, _]),
         a.useEffect(() => {
-            (!g || _) && l.A.clearTracking(), m && h && !x && !n && u && l.A.stopTracking(t.id);
-        }, [g, _, m, h, x, n, u, t.id]);
+            (!g || f) && l.A.clearTracking(), m && h && !x && !n && u && l.A.stopTracking(t.id);
+        }, [g, f, m, h, x, n, u, t.id]);
 }
