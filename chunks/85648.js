@@ -1,4 +1,4 @@
-i.d(t, { S: () => A });
+i.d(t, { S: () => S });
 var n = i(934551),
     l = i(419954),
     s = i(780964),
@@ -7,14 +7,15 @@ var n = i(934551),
     u = i(147878),
     o = i(28161),
     d = i(114074),
-    _ = i(985018);
-let T = (0, l.t_)(s.X.DISPLAY_PANEL, {
-        useTitle: () => _.intl.string(_.t.DVatCa),
-        buildLayout: () => [d.K, a.V, u.Y, o.f],
+    _ = i(413336),
+    T = i(985018);
+let A = (0, l.t_)(s.X.DISPLAY_PANEL, {
+        useTitle: () => T.intl.string(T.t.DVatCa),
+        buildLayout: () => [d.K, a.V, u.Y, o.f, (0, _.$)(!0)],
     }),
-    A = (0, l.i4)(s.X.DISPLAY_SIDEBAR_ITEM, {
-        useTitle: () => _.intl.string(_.t.DVatCa),
+    S = (0, l.i4)(s.X.DISPLAY_SIDEBAR_ITEM, {
+        useTitle: () => T.intl.string(T.t.DVatCa),
         icon: n.PaintPaletteIcon,
         usePredicate: () => (0, r.bp)("DisplaySidebarItem"),
-        buildLayout: () => [T],
+        buildLayout: () => [A],
     });

@@ -5,7 +5,10 @@ var n = i(934551),
     r = i(358776),
     a = i(413336),
     u = i(985018);
-let o = (0, l.t_)(s.X.STREAMER_MODE_PANEL, { useTitle: () => u.intl.string(u.t.S5GfOW), buildLayout: () => [a.X] }),
+let o = (0, l.t_)(s.X.STREAMER_MODE_PANEL, {
+        useTitle: () => u.intl.string(u.t.S5GfOW),
+        buildLayout: () => [(0, a.$)(!1)],
+    }),
     d = (0, l.i4)(s.X.STREAMER_MODE_SIDEBAR_ITEM, {
         useTitle: () => u.intl.string(u.t.S5GfOW),
         icon: n.ScreenStreamIcon,
