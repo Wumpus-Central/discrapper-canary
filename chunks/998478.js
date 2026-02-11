@@ -20,6 +20,20 @@ let N = (0, n.WI)(s.X.APP_SECTION, {
     useTitle: () => C.intl.string(C.t.f2n1TP),
     buildLayout: function () {
         let e = (0, r.Ci)("AppSection_buildLayout");
-        return [e ? g.q : null, o.yj, _.S, a.wC, e ? null : g.q, E.z, d.g, T.$, A.w, I.$, S.a, c.i, u._].filter(l.Vq);
+        return [
+            e ? g.q : null,
+            o.yj,
+            e ? _.S : null,
+            a.wC,
+            e ? null : g.q,
+            E.z,
+            e ? null : d.g,
+            T.$,
+            A.w,
+            I.$,
+            S.a,
+            c.i,
+            u._,
+        ].filter(l.Vq);
     },
 });

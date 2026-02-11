@@ -187,6 +187,7 @@ var r = (function (e) {
         (e.DISPLAY_PANEL = "display_panel"),
         (e.DISPLAY_THEME_CATEGORY = "display_theme_category"),
         (e.DISPLAY_SYNC_PROFILE_THEMES = "display_sync_profile_themes"),
+        (e.DISPLAY_CHAT_CATEGORY = "display_chat_category"),
         (e.DISPLAY_MESSAGE_COMPOSER_CATEGORY = "display_message_composer_category"),
         (e.DISPLAY_SEARCH_CATEGORY = "display_search_category"),
         (e.APPEARANCE_SIDEBAR_ITEM = "appearance_sidebar_item"),
