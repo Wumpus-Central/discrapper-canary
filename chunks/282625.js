@@ -9,8 +9,8 @@ var i = n(627968),
     d = n(311907),
     c = n(397927),
     u = n(137130),
-    m = n(442433),
-    g = n(974544),
+    g = n(442433),
+    m = n(974544),
     x = n(928039),
     h = n(544028),
     _ = n(411153),
@@ -48,7 +48,7 @@ let L = s.forwardRef((e, t) => {
                       { user: s } = t;
                   null != s &&
                       null != l &&
-                      (0, m.L3)(e, async () => {
+                      (0, g.L3)(e, async () => {
                           let { default: e } = await n.e("76926").then(n.bind(n, 422189));
                           return (t) => (0, i.jsx)(e, { ...t, guildId: l, user: s });
                       });
@@ -59,7 +59,7 @@ let L = s.forwardRef((e, t) => {
                   null != t.options.channel &&
                       "string" != typeof t.options.channel &&
                       null != s &&
-                      (0, m.L3)(e, async () => {
+                      (0, g.L3)(e, async () => {
                           let { default: e } = await n.e("23440").then(n.bind(n, 194195));
                           return (n) =>
                               null != t.options.channel ? (0, i.jsx)(e, { ...n, channel: t.options.channel }) : null;
@@ -73,18 +73,18 @@ let L = s.forwardRef((e, t) => {
                           let s = p.A.getChannel(t.targetId),
                               r = f.A.getGuild(l);
                           if (null != s && null != r)
-                              return (0, m.L3)(e, async () => {
+                              return (0, g.L3)(e, async () => {
                                   let { default: e } = await n.e("23440").then(n.bind(n, 194195));
                                   return (t) => (0, i.jsx)(e, { ...t, channel: s });
                               });
-                          return (0, m.L3)(e, async () => {
+                          return (0, g.L3)(e, async () => {
                               let { default: e } = await n.e("15687").then(n.bind(n, 646938));
                               return (n) => (0, i.jsx)(e, { ...n, id: t.targetId, label: R.intl.string(R.t.rCazna) });
                           });
                       case y.GaG.USER:
                           let o = N.default.getUser(t.targetId);
                           if (null != o && null != l)
-                              return (0, m.L3)(e, async () => {
+                              return (0, g.L3)(e, async () => {
                                   let { default: e } = await n.e("76926").then(n.bind(n, 422189));
                                   return (t) => (0, i.jsx)(e, { ...t, guildId: l, user: o });
                               });
@@ -103,8 +103,8 @@ function D(e) {
             scroller: d,
             setExpandedRef: c,
             setLastExpandedRef: u,
-            onHeaderClick: m,
-            onContentClick: g,
+            onHeaderClick: g,
+            onContentClick: m,
         } = e,
         h = s.useRef(d);
     s.useEffect(() => {
@@ -133,8 +133,8 @@ function D(e) {
                                     a?.(e);
                                 },
                                 className: O.nM,
-                                onHeaderClick: m,
-                                onContentClick: g,
+                                onHeaderClick: g,
+                                onContentClick: m,
                                 log: e,
                                 expanded: t,
                             },
@@ -202,7 +202,7 @@ class M extends s.PureComponent {
             id: e.value,
             value: e.value,
             label: e.label,
-            leading: (0, i.jsx)(v.Hg, { themeOverride: null, actionType: t, targetType: n, action: e.value }),
+            leading: (0, i.jsx)(v.H, { themeOverride: null, actionType: t, targetType: n, action: e.value }),
         };
     };
     formatUserOption = (e) => {
@@ -302,9 +302,9 @@ class M extends s.PureComponent {
                 isLoading: o,
                 hasError: d,
                 guildId: u,
-                guild: m,
+                guild: g,
             } = this.props;
-        if (r) return (0, i.jsx)(g.A, {});
+        if (r) return (0, i.jsx)(m.A, {});
         if (o || a) return this.renderSpinner();
         if (0 === s.length) {
             let e = d ? R.intl.string(R.t.tzkaD7) : R.intl.string(R.t.lNuYhh),
@@ -321,7 +321,7 @@ class M extends s.PureComponent {
         return (0, i.jsx)(D, {
             logs: s,
             guildId: u,
-            guild: m,
+            guild: g,
             expandedId: e,
             lastExpandedId: t,
             setExpandedRef: this.handleSetExpandedRef,

@@ -10,8 +10,8 @@ var l = n(627968),
     c = n(397927),
     _ = n(137130),
     d = n(688810),
-    g = n(836731),
-    A = n(189552),
+    A = n(836731),
+    g = n(189552),
     T = n(276373),
     I = n(523599),
     N = n(438407),
@@ -20,8 +20,8 @@ var l = n(627968),
     S = n(71393),
     G = n(562153),
     O = n(829887),
-    C = n(652215),
-    R = n(985018),
+    R = n(652215),
+    C = n(985018),
     L = n(585951),
     D = n(100411);
 function f(e) {
@@ -29,9 +29,9 @@ function f(e) {
         { analyticsLocations: s } = (0, d.Ay)(),
         _ = T.getSimpleAuditLogTitleFromChange(t),
         I = T.getSimpleAuditLogTitleContextFromChange(t),
-        S = T.findChangeByKey(C.gGk.REASON, t)?.newValue,
+        S = T.findChangeByKey(R.gGk.REASON, t)?.newValue,
         O = T.getSimpleAuditLogChangeDetails(t),
-        f = (0, g.L4)(t.id),
+        f = (0, A.L4)(t.id),
         x = (0, E.bG)([m.Ay], () => (null != t.userId ? m.Ay.getMember(n.guildId, t.userId) : null), [
             n.guildId,
             t.userId,
@@ -39,7 +39,7 @@ function f(e) {
         M = (0, h.gn)(x?.guildId, x?.userId, x?.colorStrings ?? null),
         p = r.useCallback(
             (e) => (t) => {
-                t.preventDefault(), t.stopPropagation(), null != e && (0, A.Ko)(e, s);
+                t.preventDefault(), t.stopPropagation(), null != e && (0, g.Ko)(e, s);
             },
             [s],
         ),
@@ -49,7 +49,7 @@ function f(e) {
                     ? null
                     : (0, l.jsx)(u.m, {
                           asContainer: !0,
-                          text: R.intl.string(R.t.mvsi9n),
+                          text: C.intl.string(C.t.mvsi9n),
                           children: (0, l.jsx)(c.DUT, {
                               onClick: p(x),
                               tag: "span",
@@ -138,7 +138,7 @@ function f(e) {
                             variant: "text-sm/normal",
                             color: "text-muted",
                             tag: "span",
-                            children: (0, l.jsx)(N.ri, { log: t, guild: a, onContentClick: () => {}, className: L.zm }),
+                            children: (0, l.jsx)(N.r, { log: t, guild: a, onContentClick: () => {}, className: L.zm }),
                         }),
                     }),
                 }),
@@ -160,7 +160,7 @@ function x(e) {
     null == n || 0 === a.length)
         ? null
         : (0, l.jsx)(c.D0$, {
-              label: R.intl.string(R.t.flCxLo),
+              label: C.intl.string(C.t.flCxLo),
               children:
                   a.length > 0
                       ? (0, l.jsx)(O.SQ, {

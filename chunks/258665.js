@@ -9,8 +9,8 @@ var i = n(627968),
     d = n(582754),
     c = n(397927),
     u = n(573648),
-    m = n(793574),
-    g = n(47167),
+    g = n(793574),
+    m = n(47167),
     x = n(342296),
     h = n(544028),
     _ = n(427157),
@@ -59,17 +59,7 @@ let y = s.forwardRef((e, t) => {
             theme: M,
         } = e,
         k = s.useRef(null),
-        U = (function () {
-            let { changes: e } = l;
-            return (
-                (l.actionType !== C.RWi.DELETE ||
-                    l.action === C.F_X.MEMBER_BAN_ADD ||
-                    l.action === C.F_X.MEMBER_KICK ||
-                    l.action === C.F_X.MEMBER_PRUNE) &&
-                null != e &&
-                e.some((e) => !(0, T.kW)(l, e))
-            );
-        })(),
+        U = b.checkChangesToRender(l),
         P = v.headerDefault;
     h ? (P = v.headerExpanded) : U && (P = v.headerClickable);
     let w = l.timestampStart.calendar(),
@@ -92,7 +82,7 @@ let y = s.forwardRef((e, t) => {
                         onClick: F,
                         ...e,
                         children: [
-                            (0, i.jsx)(T.Hg, { action: l.action, actionType: l.actionType, targetType: l.targetType }),
+                            (0, i.jsx)(T.H, { action: l.action, actionType: l.actionType, targetType: l.targetType }),
                             (function () {
                                 let {
                                     user: e,
@@ -104,7 +94,7 @@ let y = s.forwardRef((e, t) => {
                                         targetElementRef: k,
                                         user: e,
                                         guildId: N,
-                                        newAnalyticsLocations: [m.A.AVATAR],
+                                        newAnalyticsLocations: [g.A.AVATAR],
                                         children: (e) =>
                                             (0, i.jsx)(c.euF, {
                                                 ...e,
@@ -183,7 +173,7 @@ let y = s.forwardRef((e, t) => {
                                                           channel:
                                                               null == s.channel || "string" == typeof s.channel
                                                                   ? s.channel
-                                                                  : (0, g.m1)(s.channel, p.default, A.A, !0),
+                                                                  : (0, m.m1)(s.channel, p.default, A.A, !0),
                                                           channelHook: (e, t) =>
                                                               (0, i.jsx)("span", { onContextMenu: R, children: e }, t),
                                                           subtarget: s.subtarget,
@@ -206,7 +196,7 @@ let y = s.forwardRef((e, t) => {
                         ],
                     }),
                     h ? (0, i.jsx)("div", { className: v.divider }) : null,
-                    h && null != y ? (0, i.jsx)(T.ri, { log: l, guild: y, onContentClick: O }) : null,
+                    h && null != y ? (0, i.jsx)(T.r, { log: l, guild: y, onContentClick: O }) : null,
                 ],
             }),
     });
