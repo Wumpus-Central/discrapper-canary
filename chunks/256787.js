@@ -61,7 +61,7 @@ let i = [
         r.M.GUILD_TAG_AVAILABLE_COACHMARK_V2,
         r.M.GAME_CLAIM_COACHMARK,
     ],
-    u = [r.M.BOOST_TO_UNLOCK_COACHMARK];
+    u = [r.M.BOOST_TO_UNLOCK_COACHMARK, r.M.EXPIRING_POWERUP_COACHMARK];
 function c(e) {
     return a.includes(e);
 }
