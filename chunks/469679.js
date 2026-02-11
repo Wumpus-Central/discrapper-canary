@@ -15,6 +15,15 @@ let a = (0, r.mj)({
         minLatestMessageAgeMs: 24 * i.A.Millis.HOUR,
     },
     variations: {
+        0: {
+            enabled: !0,
+            displayNudges: !1,
+            minUserDMAffinity: -1,
+            maxNudgeCount: 2,
+            maxNudgeAge: 3 * i.A.Millis.DAY,
+            minSinceReceiverMessageMs: 12 * i.A.Millis.HOUR,
+            minLatestMessageAgeMs: 24 * i.A.Millis.HOUR,
+        },
         1: {
             enabled: !0,
             displayNudges: !0,

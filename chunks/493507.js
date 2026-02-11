@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => F }), n(321073), n(134528), n(947204);
+n.d(t, { A: () => B }), n(321073), n(134528), n(947204);
 var r = n(311907),
     i = n(73153),
     a = n(626584),
@@ -11,75 +11,75 @@ var r = n(311907),
     d = n(734057),
     _ = n(222823),
     f = n(994500),
-    p = n(309010),
-    h = n(543465),
-    m = n(954571),
-    g = n(469679),
-    E = n(575443),
-    A = n(652215);
-let I = new a.A("ReplyNudgeStore"),
-    T = !1,
+    h = n(309010),
+    p = n(543465),
+    g = n(954571),
+    E = n(469679),
+    A = n(575443),
+    I = n(652215);
+let T = new a.A("ReplyNudgeStore"),
     y = !1,
-    S = {},
-    v = new Set();
-function C(e, t) {
+    S = !1,
+    v = {},
+    C = new Set();
+function b(e, t) {
     let { maxNudgeAge: r, maxNudgeCount: i } = t,
         a = Date.now(),
         s = {},
         o = Object.entries(e);
     o.sort((e, t) => t[1].timestamp - e[1].timestamp);
     let l = 0;
-    for (let [e, { timestamp: t, isActive: u, lastMessageId: c, affinity: p, authorId: h }] of o)
-        if (null != t && a - t < E.Mk) {
+    for (let [e, { timestamp: t, isActive: u, lastMessageId: c, affinity: h, authorId: p }] of o)
+        if (null != t && a - t < A.Mk) {
             let o = a - t,
-                g = _.Ay.lastMessageId(e),
-                E = u && o >= r,
-                I = u && l >= i,
-                T = u && g !== c,
-                y = u && !E && !I && !T,
-                S = null;
+                E = _.Ay.lastMessageId(e),
+                A = u && o >= r,
+                T = u && l >= i,
+                y = u && E !== c,
+                S = u && !A && !T && !y,
+                v = null;
             if (
-                (E ? (S = "aged_out") : I ? (S = "evicted_max_count") : T && (S = "more_recent_message"),
-                (s[e] = { timestamp: t, isActive: y, lastMessageId: c, affinity: p, authorId: h }),
-                y)
+                (A ? (v = "aged_out") : T ? (v = "evicted_max_count") : y && (v = "more_recent_message"),
+                (s[e] = { timestamp: t, isActive: S, lastMessageId: c, affinity: h, authorId: p }),
+                S)
             )
                 l++;
-            else if (u && !y) {
+            else if (u && !S) {
                 let t = d.A.getChannel(e);
                 Promise.resolve()
                     .then(n.bind(n, 645959))
                     .then((n) => {
                         let { default: r } = n;
-                        m.default.track(A.HAw.REPLY_NUDGE_DISMISSED, {
+                        g.default.track(I.HAw.REPLY_NUDGE_DISMISSED, {
                             channel_id: e,
                             channel_type: t?.type,
                             guild_id: t?.guild_id,
-                            dismiss_method: S,
+                            dismiss_method: v,
                             nudge_age_ms: o,
-                            nudge_author_affinity: p,
-                            nudge_author_id: h,
-                            nudge_author_is_friend: f.A.isFriend(h),
+                            nudge_author_affinity: h,
+                            nudge_author_id: p,
+                            nudge_author_is_friend: f.A.isFriend(p),
                             nudge_message_id: c,
                             channel_dm_list_index: r.getPrivateChannelIds().indexOf(e),
                         });
                     });
             }
         }
-    return I.info(`Pruned ${o.length - Object.keys(s).length} expired nudges`), s;
+    return T.info(`Pruned ${o.length - Object.keys(s).length} expired nudges`), s;
 }
-function b(e, t) {
-    if (!(e in S)) return !1;
-    let r = S[e];
+function N(e, t) {
+    if (!(e in v)) return !1;
+    let r = v[e];
     if (!r.isActive) return !1;
     let i = Date.now() - r.timestamp;
-    S[e].isActive = !1;
+    v[e].isActive = !1;
     let a = d.A.getChannel(e);
     return (
         Promise.resolve()
             .then(n.bind(n, 645959))
             .then((n) => {
                 let { default: s } = n;
-                m.default.track(A.HAw.REPLY_NUDGE_DISMISSED, {
+                g.default.track(I.HAw.REPLY_NUDGE_DISMISSED, {
                     channel_id: e,
                     channel_type: a?.type,
                     guild_id: a?.guild_id,
@@ -95,59 +95,59 @@ function b(e, t) {
         !0
     );
 }
-function N() {
+function R() {
     let e = [];
-    for (let [t, { isActive: n }] of Object.entries(S)) n && e.push(t);
+    for (let [t, { isActive: n }] of Object.entries(v)) n && e.push(t);
     return e;
 }
-function R(e) {
+function O(e) {
     let t = d.A.getChannel(e);
-    if (null == t) return I.warn("getDMChannelAffinity: Unable to find channel", { channelId: e }), null;
-    if (t?.isDM() !== !0) return I.warn("getDMChannelAffinity: Channel is not a DM", { channelId: e }), null;
+    if (null == t) return T.warn("getDMChannelAffinity: Unable to find channel", { channelId: e }), null;
+    if (t?.isDM() !== !0) return T.warn("getDMChannelAffinity: Channel is not a DM", { channelId: e }), null;
     let n = t.getRecipientId();
     return o.A.getUserAffinity(n)?.dmProbability ?? null;
 }
-function O(e) {
+function D(e) {
     let { channelId: t, timestamp: r, lastMessageId: i, affinity: a, authorId: s } = e;
-    if (h.Ay.isChannelMuted(null, t)) return !1;
-    let { maxNudgeAge: o, maxNudgeCount: l } = g.T.getConfig({ location: "handleReplyNudgeSet" });
-    if (t in (S = C(S, { maxNudgeAge: o, maxNudgeCount: l }))) return !1;
-    let u = N();
+    if (p.Ay.isChannelMuted(null, t)) return !1;
+    let { maxNudgeAge: o, maxNudgeCount: l } = E.T.getConfig({ location: "handleReplyNudgeSet" });
+    if (t in (v = b(v, { maxNudgeAge: o, maxNudgeCount: l }))) return !1;
+    let u = R();
     if (u.length >= l) {
         let e = u.at(-1),
             r = 1 / 0;
         for (let t of u) {
-            let n = R(t);
+            let n = O(t);
             if (null == n) {
-                I.warn("handleReplyNudgeSet: Nudge affinity is null", { nudgedChannelId: t });
+                T.warn("handleReplyNudgeSet: Nudge affinity is null", { nudgedChannelId: t });
                 continue;
             }
             n < r && ((r = n), (e = t));
         }
-        let i = R(t);
-        if (null == i) return I.warn("handleReplyNudgeSet: New nudge affinity is null", { channelId: t }), !1;
+        let i = O(t);
+        if (null == i) return T.warn("handleReplyNudgeSet: New nudge affinity is null", { channelId: t }), !1;
         if (i < r)
             return (
-                I.info("handleReplyNudgeSet: New nudge is lower than the lowest affinity. No space to nudge.", {
+                T.info("handleReplyNudgeSet: New nudge is lower than the lowest affinity. No space to nudge.", {
                     channelId: t,
                     lowestAffinity: r,
                     newNudgeAffinity: i,
                 }),
                 !1
             );
-        I.info("handleReplyNudgeSet: Evicting nudge with lowest affinity", {
+        T.info("handleReplyNudgeSet: Evicting nudge with lowest affinity", {
             channelId: t,
             lowestAffinity: r,
             newNudgeAffinity: i,
         });
-        let a = S[e];
+        let a = v[e];
         if (a?.isActive) {
             let t = d.A.getChannel(e);
             Promise.resolve()
                 .then(n.bind(n, 645959))
                 .then((n) => {
                     let { default: r } = n;
-                    m.default.track(A.HAw.REPLY_NUDGE_DISMISSED, {
+                    g.default.track(I.HAw.REPLY_NUDGE_DISMISSED, {
                         channel_id: e,
                         channel_type: t?.type,
                         guild_id: t?.guild_id,
@@ -161,59 +161,61 @@ function O(e) {
                     });
                 });
         }
-        delete S[e];
+        delete v[e];
     }
-    (S[t] = { timestamp: r, isActive: !0, lastMessageId: i, affinity: a, authorId: s }), v.add(t);
+    (v[t] = { timestamp: r, isActive: !0, lastMessageId: i, affinity: a, authorId: s }), C.add(t);
 }
-function D(e) {
+function L(e) {
     let { channelId: t } = e;
-    return b(t, "manual");
+    return N(t, "manual");
 }
-function L() {
-    if (y) return !1;
-    y = !0;
-}
-function w(e) {
-    let { message: t } = e;
-    return b(t.channel_id, "message_sent");
+function w() {
+    if (S) return !1;
+    S = !0;
+    let { maxNudgeAge: e, maxNudgeCount: t } = E.T.getConfig({ location: "handleNudgesInitialized" });
+    v = b(v, { maxNudgeAge: e, maxNudgeCount: t });
 }
 function x(e) {
+    let { message: t } = e;
+    return N(t.channel_id, "message_sent");
+}
+function P(e) {
     let { channelId: t, userId: n } = e;
-    return n === c.default.getId() && b(t, "reaction_added");
+    return n === c.default.getId() && N(t, "reaction_added");
 }
-function P() {
-    let e = p.A.getLastSelectedChannelId();
-    return null != e && b(e, "channel_opened");
+function M() {
+    let e = h.A.getLastSelectedChannelId();
+    return null != e && N(e, "channel_opened");
 }
-function M(e) {
+function k(e) {
     let {
         channel: { id: t },
     } = e;
-    return b(t, "channel_deleted");
+    return N(t, "channel_deleted");
 }
-function k() {
+function U() {
     let {
             displayNudges: e,
             maxNudgeAge: t,
             maxNudgeCount: n,
-        } = g.T.getConfig({ location: "handleNudgeVisibilityChange" }),
+        } = E.T.getConfig({ location: "handleNudgeVisibilityChange" }),
         r = !1 !== l.LJ.getSetting() && e;
-    if (T === r) return !1;
-    (T = r) && ((S = C(S, { maxNudgeAge: t, maxNudgeCount: n })), (v = new Set(N()))),
-        !1 === l.LJ.getSetting() && ((S = {}), (v = new Set()));
+    if (y === r) return !1;
+    (y = r) && ((v = b(v, { maxNudgeAge: t, maxNudgeCount: n })), (C = new Set(R()))),
+        !1 === l.LJ.getSetting() && ((v = {}), (C = new Set()));
 }
-function U() {
+function G() {
     let e = !1;
-    for (let t of Object.keys(S))
-        if (h.Ay.isChannelMuted(null, t)) {
-            let r = S[t];
+    for (let t of Object.keys(v))
+        if (p.Ay.isChannelMuted(null, t)) {
+            let r = v[t];
             if (r?.isActive) {
                 let e = d.A.getChannel(t);
                 Promise.resolve()
                     .then(n.bind(n, 645959))
                     .then((n) => {
                         let { default: i } = n;
-                        m.default.track(A.HAw.REPLY_NUDGE_DISMISSED, {
+                        g.default.track(I.HAw.REPLY_NUDGE_DISMISSED, {
                             channel_id: t,
                             channel_type: e?.type,
                             guild_id: e?.guild_id,
@@ -227,49 +229,49 @@ function U() {
                         });
                     });
             }
-            delete S[t], (e = !0);
+            delete v[t], (e = !0);
         }
     return e;
 }
-function G() {
-    (S = {}), (v = new Set()), (T = !1), (y = !1);
+function F() {
+    (v = {}), (C = new Set()), (y = !1), (S = !1);
 }
 class V extends r.Ay.PersistedStore {
     static displayName = "ReplyNudgeStore";
     static persistKey = "ReplyNudgeStore";
     initialize(e) {
-        (S = e?.nudgedChannels ?? {}),
-            this.waitFor(s.A, c.default, d.A, _.Ay, f.A, p.A, o.A, h.Ay, u.A),
-            this.syncWith([u.A, s.A], k),
-            this.syncWith([h.Ay], U);
+        (v = e?.nudgedChannels ?? {}),
+            this.waitFor(s.A, c.default, d.A, _.Ay, f.A, h.A, o.A, p.Ay, u.A),
+            this.syncWith([u.A, s.A], U),
+            this.syncWith([p.Ay], G);
     }
     getState() {
-        return { nudgedChannels: S };
+        return { nudgedChannels: v };
     }
     getNudgeTimestamp(e) {
-        if (!T) return null;
-        let t = S[e];
-        return null == t ? null : t.isActive || v.has(e) ? (S[e].timestamp ?? null) : null;
+        if (!y) return null;
+        let t = v[e];
+        return null == t ? null : t.isActive || C.has(e) ? (v[e].timestamp ?? null) : null;
     }
     isChannelNudged(e) {
         let { includeInvisible: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return (!!T || !!t) && S[e]?.isActive === !0;
+        return (!!y || !!t) && v[e]?.isActive === !0;
     }
     getChannelNudge(e) {
         let { includeInvisible: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return T || t ? (S[e] ?? null) : null;
+        return y || t ? (v[e] ?? null) : null;
     }
     isNudgesInitialized() {
-        return y;
+        return S;
     }
 }
-let F = new V(i.h, {
-    REPLY_NUDGE_SET: O,
-    REPLY_NUDGE_CLEAR: D,
-    REPLY_NUDGES_INITIALIZED: L,
-    MESSAGE_CREATE: w,
-    MESSAGE_REACTION_ADD: x,
-    CHANNEL_SELECT: P,
-    CHANNEL_DELETE: M,
-    LOGOUT: G,
+let B = new V(i.h, {
+    REPLY_NUDGE_SET: D,
+    REPLY_NUDGE_CLEAR: L,
+    REPLY_NUDGES_INITIALIZED: w,
+    MESSAGE_CREATE: x,
+    MESSAGE_REACTION_ADD: P,
+    CHANNEL_SELECT: M,
+    CHANNEL_DELETE: k,
+    LOGOUT: F,
 });
