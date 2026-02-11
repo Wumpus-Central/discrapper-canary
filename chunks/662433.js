@@ -12,10 +12,10 @@ let u = 145,
     _ = 29,
     f = 1.3,
     p = 15,
-    h = 120,
+    h = 91,
     m = 65,
     g = 1.05,
-    E = 8;
+    E = 10;
 function A(e, t, n) {
     return Math.max(t, Math.min(n, e));
 }

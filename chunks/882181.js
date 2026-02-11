@@ -12,6 +12,7 @@ e.exports = {
     h_: "burstEmoji_b7f4b4",
     u1: "spinner_b7f4b4",
     Px: "reactor_b7f4b4",
+    Z7: "reactorClickable_b7f4b4",
     Bi: "reactorInfo_b7f4b4",
     UU: "name_b7f4b4",
     Ci: "ellipsized_b7f4b4",
