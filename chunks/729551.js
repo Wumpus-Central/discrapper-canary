@@ -38,7 +38,7 @@ function O(e) {
 }
 function D(e) {
     let { textVariant: t, className: n } = e;
-    return (0, r.jsx)(l.EYj, { variant: t, className: s()(R.Om, n), children: "•" });
+    return (0, r.jsx)(l.EYj, { variant: t, className: s()(R.Om, n), "aria-hidden": !0, children: "•" });
 }
 function L(e) {
     let {
