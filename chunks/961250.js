@@ -18,5 +18,5 @@ async function u() {
     a.A.shouldFetch() && (await l());
 }
 async function c() {
-    (0, s.T0)("ProgramRewardsActionCreators") && (0, s.mY)() && (await l());
+    !(0, s.T0)("ProgramRewardsActionCreators") || !(0, s.mY)() || a.A.isFetching() || (await l());
 }

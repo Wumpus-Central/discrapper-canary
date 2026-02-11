@@ -397,7 +397,10 @@ let i = {
         actions: [
             "POST_CONNECTION_OPEN",
             "BILLING_SUBSCRIPTION_UPDATE_SUCCESS",
-            "CURRENT_USER_UPDATE",
+            "BILLING_SUBSCRIPTION_CANCEL_SUCCESS",
+            "PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS",
+            "BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS",
+            "BILLING_PAYMENT_SOURCE_CREATE_SUCCESS",
             "VIRTUAL_CURRENCY_BALANCE_UPDATE",
         ],
         inlineRequire: () => n(415202).A,
