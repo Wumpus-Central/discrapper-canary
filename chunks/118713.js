@@ -6,7 +6,7 @@ var r = n(627968),
     s = n.n(a),
     o = n(713517),
     l = n(949317);
-let u = 1e3,
+let u = 5e3,
     c = (e) => null != e && "object" == typeof e && e.$$typeof === Symbol.for("react.portal"),
     d = (e, t, n) =>
         e === t
@@ -25,58 +25,58 @@ let u = 1e3,
     f = (e) => {
         let { children: t, paused: n = !1, slideDuration: a = u } = e,
             [s, f] = i.useState(0),
-            p = i.useRef(null),
-            h = (0, o.M)(p),
-            m = i.useRef(void 0),
-            g = i.useMemo(
+            h = i.useRef(null),
+            p = (0, o.M)(h),
+            g = i.useRef(void 0),
+            E = i.useMemo(
                 () =>
                     i.Children.map(t, (e) => (!i.isValidElement(e) || c(e) ? e : i.cloneElement(e, { tabIndex: -1 }))),
                 [t],
             );
         i.useEffect(() => {
-            Array.isArray(g) ? f(s >= g?.length ? g?.length - 1 : s) : f(0);
-        }, [g, s]);
-        let E = n || h;
+            Array.isArray(E) ? f(s >= E?.length ? Math.max(E?.length - 1, 0) : s) : f(0);
+        }, [E, s]);
+        let A = n || p;
         return (i.useEffect(() => {
-            if (E) {
-                null != m.current && (window.clearTimeout(m.current), (m.current = void 0));
+            if (A) {
+                null != g.current && (window.clearTimeout(g.current), (g.current = void 0));
                 return;
             }
             let e = () => {
                 f((e) => {
                     let t = e + 1;
-                    return t >= (g?.length ?? 1) ? 0 : t;
+                    return t >= (E?.length ?? 1) ? 0 : t;
                 }),
-                    (m.current = window.setTimeout(e, a));
+                    (g.current = window.setTimeout(e, a));
             };
-            window.clearTimeout(m.current), (m.current = window.setTimeout(e, a));
-        }, [E, a, g]),
+            window.clearTimeout(g.current), (g.current = window.setTimeout(e, a));
+        }, [A, a, E]),
         i.useEffect(
             () => () => {
-                window.clearTimeout(m.current);
+                window.clearTimeout(g.current);
             },
             [],
         ),
-        null == g)
+        null == E)
             ? null
-            : Array.isArray(g)
+            : Array.isArray(E)
               ? (0, r.jsx)("div", {
-                    ref: p,
+                    ref: h,
                     className: l.carousel,
                     children: (0, r.jsx)("div", {
                         className: l.children,
-                        children: g?.map((e, t) => {
-                            let n = d(t, s, g.length);
-                            return (0, r.jsx)(_, { index: t, active: !1, position: n, children: e }, t);
+                        children: E?.map((e, t) => {
+                            let n = d(t, s, E.length);
+                            return (0, r.jsx)(_, { position: n, children: e }, t);
                         }),
                     }),
                 })
               : (0, r.jsx)("div", {
-                    ref: p,
+                    ref: h,
                     className: l.carousel,
                     children: (0, r.jsx)("div", {
                         className: l.children,
-                        children: (0, r.jsx)(_, { index: 0, active: !0, position: "center", children: t }),
+                        children: (0, r.jsx)(_, { position: "center", children: t }),
                     }),
                 });
     };
