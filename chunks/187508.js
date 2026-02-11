@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => er, pK: () => G }), n(667532), n(321073);
+n.d(t, { Ay: () => ei, pK: () => F }), n(667532), n(321073);
 var r = n(735438),
     i = n.n(r),
     a = n(311907),
@@ -11,276 +11,276 @@ var r = n(735438),
     d = n(451919),
     _ = n(143413),
     f = n(204162),
-    p = n(383233),
-    h = n(961350),
-    m = n(734057),
-    g = n(320501),
-    E = n(222823),
-    A = n(994500),
-    I = n(967198),
-    T = n(543465),
-    y = n(287809),
-    S = n(652215);
-let v = "recentMentionFilterSettings",
-    C = [],
-    b = {},
+    h = n(383233),
+    p = n(961350),
+    g = n(734057),
+    E = n(320501),
+    A = n(222823),
+    I = n(994500),
+    T = n(967198),
+    y = n(543465),
+    S = n(287809),
+    v = n(652215);
+let C = "recentMentionFilterSettings",
+    b = [],
     N = {},
-    R = !1,
-    O = !0,
-    D = s.w.get(v, { guildFilter: S.KE7.ALL_SERVERS, everyoneFilter: !0, roleFilter: !0 }),
-    L = !1,
-    w = 0,
-    x = !1;
-function P(e) {
-    (b = {}),
+    R = {},
+    O = !1,
+    D = !0,
+    L = s.w.get(C, { guildFilter: v.KE7.ALL_SERVERS, everyoneFilter: !0, roleFilter: !0 }),
+    w = !1,
+    x = 0,
+    P = !1;
+function M(e) {
+    (N = {}),
         e.forEach((e) => {
-            null == b[e.getChannelId()] && (b[e.getChannelId()] = 0), b[e.getChannelId()]++;
+            null == N[e.getChannelId()] && (N[e.getChannelId()] = 0), N[e.getChannelId()]++;
         });
 }
-function M(e) {
+function k(e) {
     let { addedMessages: t, deletedMessages: n } = e;
     null != t &&
         t.forEach((e) => {
-            null == b[e.getChannelId()] && (b[e.getChannelId()] = 0), b[e.getChannelId()]++;
+            null == N[e.getChannelId()] && (N[e.getChannelId()] = 0), N[e.getChannelId()]++;
         }),
         null != n &&
             n.forEach((e) => {
-                null != b[e.getChannelId()] && (b[e.getChannelId()] = Math.max(0, b[e.getChannelId()] - 1));
+                null != N[e.getChannelId()] && (N[e.getChannelId()] = Math.max(0, N[e.getChannelId()] - 1));
             });
 }
-function k(e) {
-    let { guildId: t } = e;
-    (R = !0), null == t && D.guildFilter === S.KE7.THIS_SERVER && z({ guildFilter: S.KE7.ALL_SERVERS });
-}
 function U(e) {
-    if (e instanceof p.Ay) return e;
-    let t = g.A.getMessage(e.channel_id, e.id);
-    return null != t ? t : (0, c.rh)(e);
+    let { guildId: t } = e;
+    (O = !0), null == t && L.guildFilter === v.KE7.THIS_SERVER && z({ guildFilter: v.KE7.ALL_SERVERS });
 }
 function G(e) {
-    let t = m.A.getBasicChannel(e.channel_id);
+    if (e instanceof h.Ay) return e;
+    let t = E.A.getMessage(e.channel_id, e.id);
+    return null != t ? t : (0, c.rh)(e);
+}
+function F(e) {
+    let t = g.A.getBasicChannel(e.channel_id);
     if (
         null == t ||
-        !S.kvI.GUILD_TEXTUAL.has(t.type) ||
-        T.Ay.isGuildOrCategoryOrChannelMuted(t.guild_id, t.id) ||
+        !v.kvI.GUILD_TEXTUAL.has(t.type) ||
+        y.Ay.isGuildOrCategoryOrChannelMuted(t.guild_id, t.id) ||
         (0, u.UK)(t.id)
     )
         return !1;
-    switch (T.Ay.resolvedMessageNotifications(t)) {
-        case S.orn.ALL_MESSAGES:
+    switch (y.Ay.resolvedMessageNotifications(t)) {
+        case v.orn.ALL_MESSAGES:
             return !0;
-        case S.orn.ONLY_MENTIONS:
-            let n = T.Ay.isSuppressEveryoneEnabled(t.guild_id),
-                r = T.Ay.isSuppressRolesEnabled(t.guild_id),
-                i = y.default.getCurrentUser();
+        case v.orn.ONLY_MENTIONS:
+            let n = y.Ay.isSuppressEveryoneEnabled(t.guild_id),
+                r = y.Ay.isSuppressRolesEnabled(t.guild_id),
+                i = S.default.getCurrentUser();
             if (null == i) return !1;
             return (0, d.Ay)({ message: e, userId: i.id, suppressEveryone: n, suppressRoles: r });
-        case S.orn.NO_MESSAGES:
+        case v.orn.NO_MESSAGES:
         default:
             return !1;
     }
 }
 function V(e) {
     let { hasMoreAfter: t, messages: n, isAfter: r } = e,
-        a = i().map(n, U);
-    M({ addedMessages: a }),
-        r ? (C = C.concat(a)) : ((C = a), (N = {})),
+        a = i().map(n, G);
+    k({ addedMessages: a }),
+        r ? (b = b.concat(a)) : ((b = a), (R = {})),
         i().forEach(a, (e) => {
-            N[e.id] = !0;
+            R[e.id] = !0;
         }),
-        (R = !1),
-        (O = t),
-        (w = (0, o.tB)()),
-        (L = !0);
+        (O = !1),
+        (D = t),
+        (x = (0, o.tB)()),
+        (w = !0);
 }
-function F() {
-    R = !1;
+function B() {
+    O = !1;
 }
-function B(e) {
+function j(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-    if ((0, _.A)(e) && !S.MRS.SELF_MENTIONABLE_SYSTEM.has(e.type)) return null;
+    if ((0, _.A)(e) && !v.MRS.SELF_MENTIONABLE_SYSTEM.has(e.type)) return null;
     null == t && (t = e.channel_id);
-    let n = m.A.getChannel(t);
+    let n = g.A.getChannel(t);
     if (
         null == n ||
-        n.type === S.rbe.DM ||
-        (D.guildFilter === S.KE7.THIS_SERVER && n.getGuildId() !== I.A.getGuildId())
+        n.type === v.rbe.DM ||
+        (L.guildFilter === v.KE7.THIS_SERVER && n.getGuildId() !== T.A.getGuildId())
     )
         return null;
-    let r = h.default.getId();
-    if (A.A.isBlockedOrIgnoredForMessage(e) || (0, f.A)(e, r)) return null;
-    e = U(e);
-    let i = !D.everyoneFilter,
-        a = !D.roleFilter;
+    let r = p.default.getId();
+    if (I.A.isBlockedOrIgnoredForMessage(e) || (0, f.A)(e, r)) return null;
+    e = G(e);
+    let i = !L.everyoneFilter,
+        a = !L.roleFilter;
     return (0, d.Ay)({ message: e, userId: r, suppressEveryone: i, suppressRoles: a })
-        ? (x &&
-              E.Ay.ackMessageId(n.id) !== e.id &&
+        ? (P &&
+              A.Ay.ackMessageId(n.id) !== e.id &&
               (0, d.Ay)({
                   message: e,
                   userId: r,
-                  suppressEveryone: T.Ay.isSuppressEveryoneEnabled(n.getGuildId()),
-                  suppressRoles: T.Ay.isSuppressRolesEnabled(n.getGuildId()),
+                  suppressEveryone: y.Ay.isSuppressEveryoneEnabled(n.getGuildId()),
+                  suppressRoles: y.Ay.isSuppressRolesEnabled(n.getGuildId()),
               }) &&
-              (x = !1),
+              (P = !1),
           e)
         : null;
 }
-function j(e) {
-    let { channelId: t, message: n } = e,
-        r = y.default.getCurrentUser();
-    if (null == r || !(0, d.bG)({ rawMessage: n, userId: r.id, suppressRoles: !1, suppressEveryone: !1 })) return !1;
-    let i = B(n, t);
-    if (null == i) return !1;
-    (C = C.slice()).unshift(i), (N[i.id] = !0), M({ addedMessages: [i] });
-}
 function H(e) {
+    let { channelId: t, message: n } = e,
+        r = S.default.getCurrentUser();
+    if (null == r || !(0, d.bG)({ rawMessage: n, userId: r.id, suppressRoles: !1, suppressEveryone: !1 })) return !1;
+    let i = j(n, t);
+    if (null == i) return !1;
+    (b = b.slice()).unshift(i), (R[i.id] = !0), k({ addedMessages: [i] });
+}
+function Y(e) {
     let t = e.message.id;
-    if (null == t || null == N[t]) return !1;
-    let n = i().findIndex(C, (e) => {
+    if (null == t || null == R[t]) return !1;
+    let n = i().findIndex(b, (e) => {
             let { id: n } = e;
             return n === t;
         }),
-        r = (C = C.slice())[n];
-    null != r && (C[n] = (0, c.IU)(r, e.message));
+        r = (b = b.slice())[n];
+    null != r && (b[n] = (0, c.IU)(r, e.message));
 }
-function Y(e) {
-    if (null == N[e]) return !1;
-    delete N[e],
-        M({
-            deletedMessages: i().filter(C, (t) => {
+function W(e) {
+    if (null == R[e]) return !1;
+    delete R[e],
+        k({
+            deletedMessages: i().filter(b, (t) => {
                 let { id: n } = t;
                 return n === e;
             }),
         }),
-        (C = i().filter(C, (t) => {
+        (b = i().filter(b, (t) => {
             let { id: n } = t;
             return n !== e;
         }));
 }
-function W(e) {
-    let { id: t } = e;
-    return Y(t);
-}
 function K(e) {
+    let { id: t } = e;
+    return W(t);
+}
+function $(e) {
     let { ids: t } = e;
-    i().forEach(t, Y);
+    i().forEach(t, W);
 }
 function z(e) {
-    let t = { ...D };
-    (D = i().defaults(i().pick(e, ["guildFilter", "roleFilter", "everyoneFilter"]), D)), s.w.set(v, D);
-    let n = (e, n) => t[e] !== D[e] && D[e] === n,
-        r = n("guildFilter", S.KE7.THIS_SERVER) || n("everyoneFilter", !1) || n("roleFilter", !1);
-    N = {};
+    let t = { ...L };
+    (L = i().defaults(i().pick(e, ["guildFilter", "roleFilter", "everyoneFilter"]), L)), s.w.set(C, L);
+    let n = (e, n) => t[e] !== L[e] && L[e] === n,
+        r = n("guildFilter", v.KE7.THIS_SERVER) || n("everyoneFilter", !1) || n("roleFilter", !1);
+    R = {};
     let a = [];
     r &&
-        C.forEach((e) => {
-            let t = B(e);
-            null != t && (a.push(t), (N[t.id] = !0));
+        b.forEach((e) => {
+            let t = j(e);
+            null != t && (a.push(t), (R[t.id] = !0));
         }),
-        P((C = a)),
-        0 === C.length && (L = !1);
-}
-function $() {
-    if (D.guildFilter !== S.KE7.THIS_SERVER) return !1;
-    L = !1;
+        M((b = a)),
+        0 === b.length && (w = !1);
 }
 function q() {
-    (C = []), (N = {}), (L = !1), (x = !1), (b = {});
+    if (L.guildFilter !== v.KE7.THIS_SERVER) return !1;
+    w = !1;
+}
+function X() {
+    (b = []), (R = {}), (w = !1), (P = !1), (N = {});
 }
 function Z(e) {
     let { guild: t } = e,
         n = [];
-    (C = i().filter(C, (e) => {
-        let r = m.A.getChannel(e.channel_id);
-        return (null != r && r.getGuildId() !== t.id) || (delete N[e.id], n.push(e), !1);
+    (b = i().filter(b, (e) => {
+        let r = g.A.getChannel(e.channel_id);
+        return (null != r && r.getGuildId() !== t.id) || (delete R[e.id], n.push(e), !1);
     })),
-        M({ deletedMessages: n });
+        k({ deletedMessages: n });
 }
 function Q() {
-    M({ deletedMessages: i().filter(C, (e) => A.A.isBlockedOrIgnoredForMessage(e)) }),
-        (C = C.filter((e) => !A.A.isBlockedOrIgnoredForMessage(e)));
-}
-function X(e) {
-    let { channel: t } = e,
-        n = [];
-    (C = i().filter(C, (e) => e.channel_id !== t.id || (delete N[e.id], n.push(e), !1))), M({ deletedMessages: n });
+    k({ deletedMessages: i().filter(b, (e) => I.A.isBlockedOrIgnoredForMessage(e)) }),
+        (b = b.filter((e) => !I.A.isBlockedOrIgnoredForMessage(e)));
 }
 function J(e) {
-    q();
+    let { channel: t } = e,
+        n = [];
+    (b = i().filter(b, (e) => e.channel_id !== t.id || (delete R[e.id], n.push(e), !1))), k({ deletedMessages: n });
 }
 function ee(e) {
-    let { size: t } = e;
-    M({ deletedMessages: C.slice(t) });
-    for (let e = t; e < C.length; ++e) delete N[C[e].id];
-    C.length > (C = C.slice(0, t)).length && (O = !0);
+    X();
 }
 function et(e) {
-    x = !0;
+    let { size: t } = e;
+    k({ deletedMessages: b.slice(t) });
+    for (let e = t; e < b.length; ++e) delete R[b[e].id];
+    b.length > (b = b.slice(0, t)).length && (D = !0);
 }
-class en extends a.Ay.Store {
+function en(e) {
+    P = !0;
+}
+class er extends a.Ay.Store {
     static displayName = "RecentMentionsStore";
     initialize() {
-        this.waitFor(h.default, m.A, g.A, E.Ay, A.A, I.A, T.Ay, y.default);
+        this.waitFor(p.default, g.A, E.A, A.Ay, I.A, T.A, y.Ay, S.default);
     }
     get hasLoadedEver() {
-        return L;
-    }
-    get lastLoaded() {
         return w;
     }
-    getMentions() {
-        return L || C.length > 0 ? C : null;
-    }
-    getSettingsFilteredMentions() {
-        return L || C.length > 0 ? C.filter(G) : null;
-    }
-    hasMention(e) {
-        return N[e];
-    }
-    get loading() {
-        return R;
-    }
-    get hasMore() {
-        return O;
-    }
-    get guildFilter() {
-        return D.guildFilter;
-    }
-    get everyoneFilter() {
-        return D.everyoneFilter;
-    }
-    get roleFilter() {
-        return D.roleFilter;
-    }
-    get mentionsAreStale() {
+    get lastLoaded() {
         return x;
     }
+    getMentions() {
+        return w || b.length > 0 ? b : null;
+    }
+    getSettingsFilteredMentions() {
+        return w || b.length > 0 ? b.filter(F) : null;
+    }
+    hasMention(e) {
+        return R[e];
+    }
+    get loading() {
+        return O;
+    }
+    get hasMore() {
+        return D;
+    }
+    get guildFilter() {
+        return L.guildFilter;
+    }
+    get everyoneFilter() {
+        return L.everyoneFilter;
+    }
+    get roleFilter() {
+        return L.roleFilter;
+    }
+    get mentionsAreStale() {
+        return P;
+    }
     get mentionCountByChannel() {
-        return b;
+        return N;
     }
     getMentionCountForChannel(e) {
-        return b[e] ?? 0;
+        return N[e] ?? 0;
     }
 }
-let er = new en(l.h, {
-    LOAD_RECENT_MENTIONS: k,
+let ei = new er(l.h, {
+    LOAD_RECENT_MENTIONS: U,
     LOAD_RECENT_MENTIONS_SUCCESS: V,
-    LOAD_RECENT_MENTIONS_FAILURE: F,
+    LOAD_RECENT_MENTIONS_FAILURE: B,
     SET_RECENT_MENTIONS_FILTER: z,
-    CLEAR_MENTIONS: J,
-    TRUNCATE_MENTIONS: ee,
-    CHANNEL_SELECT: $,
-    CONNECTION_OPEN: q,
+    CLEAR_MENTIONS: ee,
+    TRUNCATE_MENTIONS: et,
+    CHANNEL_SELECT: q,
+    CONNECTION_OPEN: X,
     GUILD_DELETE: Z,
-    MESSAGE_CREATE: j,
-    MESSAGE_UPDATE: H,
-    MESSAGE_DELETE: W,
-    RECENT_MENTION_DELETE: W,
-    MESSAGE_DELETE_BULK: K,
-    CHANNEL_DELETE: X,
-    THREAD_DELETE: X,
+    MESSAGE_CREATE: H,
+    MESSAGE_UPDATE: Y,
+    MESSAGE_DELETE: K,
+    RECENT_MENTION_DELETE: K,
+    MESSAGE_DELETE_BULK: $,
+    CHANNEL_DELETE: J,
+    THREAD_DELETE: J,
     RELATIONSHIP_ADD: Q,
     RELATIONSHIP_REMOVE: Q,
     RELATIONSHIP_UPDATE: Q,
-    SET_RECENT_MENTIONS_STALE: et,
+    SET_RECENT_MENTIONS_STALE: en,
 });

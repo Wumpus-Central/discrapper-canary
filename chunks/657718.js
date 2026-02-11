@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { S: () => T });
+n.d(t, { S: () => y });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -11,110 +11,110 @@ var r = n(627968),
     d = n(426333),
     _ = n(27989),
     f = n(460890),
-    p = n(145188),
-    h = n(289873),
-    m = n(834730),
-    g = n(165180);
-let E = { xs: "text-xs/medium", sm: "text-sm/medium", md: "text-md/medium" },
-    A = { xs: "xxs", sm: "xs", md: "refresh_sm" },
-    I = { xs: "sm", sm: "sm", md: "md" };
-function T(e) {
+    h = n(145188),
+    p = n(289873),
+    g = n(834730),
+    E = n(165180);
+let A = { xs: "text-xs/medium", sm: "text-sm/medium", md: "text-md/medium" },
+    I = { xs: "xxs", sm: "xs", md: "refresh_sm" },
+    T = { xs: "sm", sm: "sm", md: "md" };
+function y(e) {
     let {
             role: t = "button",
             variant: n = "primary",
             size: a = "md",
             text: _,
-            icon: p,
-            iconPosition: h = "start",
-            iconOpticalOffsetMargin: A = 0,
-            fullWidth: I = !1,
-            focusProps: T,
-            loading: C,
-            loadingStartedLabel: b,
-            loadingFinishedLabel: N,
-            rounded: R = !1,
-            type: O = "button",
-            rel: D,
-            onClick: L,
-            onDoubleClick: w,
-            onMouseEnter: x,
-            onMouseLeave: P,
-            onMouseUp: M,
-            onMouseDown: k,
-            onKeyDown: U,
-            disabled: G,
+            icon: h,
+            iconPosition: p = "start",
+            iconOpticalOffsetMargin: I = 0,
+            fullWidth: T = !1,
+            focusProps: y,
+            loading: b,
+            loadingStartedLabel: N,
+            loadingFinishedLabel: R,
+            rounded: O = !1,
+            type: D = "button",
+            rel: L,
+            onClick: w,
+            onDoubleClick: x,
+            onMouseEnter: P,
+            onMouseLeave: M,
+            onMouseUp: k,
+            onMouseDown: U,
+            onKeyDown: G,
+            disabled: F,
             minWidth: V,
-            className: F,
-            style: B,
-            buttonRef: j,
-            ...H
+            className: B,
+            style: j,
+            buttonRef: H,
+            ...Y
         } = e,
-        Y = (0, c.C)(),
-        W = Y?.size ?? a,
-        K = Y?.fullWidth ?? I,
+        W = (0, c.C)(),
+        K = W?.size ?? a,
+        $ = W?.fullWidth ?? T,
         z = null != _,
-        $ = i.useRef(null),
-        q = j ?? $,
-        Z = (0, r.jsx)(v, { icon: p, iconOpticalOffsetMargin: A, iconPosition: h, size: W, ref: q, disabled: G }),
+        q = i.useRef(null),
+        X = H ?? q,
+        Z = (0, r.jsx)(C, { icon: h, iconOpticalOffsetMargin: I, iconPosition: p, size: K, ref: X, disabled: F }),
         Q = "expressive" === n,
-        X = i.useContext(u.C),
-        { theme: J, i18n: ee } = (0, f.G9)(),
-        et = (0, o.q)(J),
-        en = i.useRef(!1);
+        J = i.useContext(u.C),
+        { theme: ee, i18n: et } = (0, f.G9)(),
+        en = (0, o.q)(ee),
+        er = i.useRef(!1);
     i.useEffect(() => {
-        !0 === C && ((en.current = !0), l.O.announce(b ?? ee.BUTTON_LOADING_STARTED_LABEL)),
-            !1 === C && !0 === en.current && (l.O.announce(N ?? ee.BUTTON_LOADING_FINISHED_LABEL), (en.current = !1));
-    }, [C, b, N, ee.BUTTON_LOADING_STARTED_LABEL, ee.BUTTON_LOADING_FINISHED_LABEL]);
-    let er = (0, r.jsxs)("div", {
-            className: s()(g.buttonChildren, { [g.loading]: C }),
+        !0 === b && ((er.current = !0), l.O.announce(N ?? et.BUTTON_LOADING_STARTED_LABEL)),
+            !1 === b && !0 === er.current && (l.O.announce(R ?? et.BUTTON_LOADING_FINISHED_LABEL), (er.current = !1));
+    }, [b, N, R, et.BUTTON_LOADING_STARTED_LABEL, et.BUTTON_LOADING_FINISHED_LABEL]);
+    let ei = (0, r.jsxs)("div", {
+            className: s()(E.buttonChildren, { [E.loading]: b }),
             children: [
-                null != Z && "start" === h && Z,
-                z && (0, r.jsx)(m.E, { tag: "span", variant: E[W], color: "none", lineClamp: 1, children: _ }),
-                null != Z && "end" === h && Z,
+                null != Z && "start" === p && Z,
+                z && (0, r.jsx)(g.E, { tag: "span", variant: A[K], color: "none", lineClamp: 1, children: _ }),
+                null != Z && "end" === p && Z,
             ],
         }),
-        ei = G || C,
-        ea = V;
-    null != ea && "number" == typeof ea && (ea = `${ea}px`);
-    let es = (0, r.jsx)(d.vN, {
-        ...T,
+        ea = F || b,
+        es = V;
+    null != es && "number" == typeof es && (es = `${es}px`);
+    let eo = (0, r.jsx)(d.vN, {
+        ...y,
         children: (0, r.jsxs)("button", {
             "data-mana-component": "button",
             role: t,
-            "aria-busy": C,
-            className: s()(g.button, g[W], g[n], { [g.hasText]: z, [g.fullWidth]: K, [g.rounded]: R }),
-            ref: q,
-            rel: D,
-            type: O,
-            onClick: ei ? (e) => e.preventDefault() : L,
-            onDoubleClick: ei ? (e) => e.preventDefault() : w,
-            onMouseUp: ei ? void 0 : M,
-            onMouseDown: ei ? void 0 : k,
-            onKeyDown: ei ? void 0 : U,
-            onMouseEnter: ei ? void 0 : x,
-            onMouseLeave: ei ? void 0 : P,
-            disabled: G,
-            style: { "--__button-min-width": ea },
-            ...H,
+            "aria-busy": b,
+            className: s()(E.button, E[K], E[n], { [E.hasText]: z, [E.fullWidth]: $, [E.rounded]: O }),
+            ref: X,
+            rel: L,
+            type: D,
+            onClick: ea ? (e) => e.preventDefault() : w,
+            onDoubleClick: ea ? (e) => e.preventDefault() : x,
+            onMouseUp: ea ? void 0 : k,
+            onMouseDown: ea ? void 0 : U,
+            onKeyDown: ea ? void 0 : G,
+            onMouseEnter: ea ? void 0 : P,
+            onMouseLeave: ea ? void 0 : M,
+            disabled: F,
+            style: { "--__button-min-width": es },
+            ...Y,
             children: [
                 Q &&
-                    (0, r.jsx)(S, {
-                        hasReducedMotion: X.reducedMotion.enabled,
-                        buttonRef: q,
-                        isLightMode: et,
-                        disabled: G,
+                    (0, r.jsx)(v, {
+                        hasReducedMotion: J.reducedMotion.enabled,
+                        buttonRef: X,
+                        isLightMode: en,
+                        disabled: F,
                     }),
-                null == C
-                    ? (0, r.jsx)("div", { className: g.buttonChildrenWrapper, children: er })
-                    : (0, r.jsx)(y, { loading: C, size: W, children: er }),
+                null == b
+                    ? (0, r.jsx)("div", { className: E.buttonChildrenWrapper, children: ei })
+                    : (0, r.jsx)(S, { loading: b, size: K, children: ei }),
             ],
         }),
     });
     return Q
-        ? (0, r.jsx)("div", { className: s()(g.expressiveWrapper, { [g.fullWidth]: K, [g.hasText]: z }), children: es })
-        : es;
+        ? (0, r.jsx)("div", { className: s()(E.expressiveWrapper, { [E.fullWidth]: $, [E.hasText]: z }), children: eo })
+        : eo;
 }
-function y(e) {
+function S(e) {
     let { children: t, loading: n, size: a } = e,
         o = i.useRef(null),
         [l, u] = i.useState(n);
@@ -134,23 +134,23 @@ function y(e) {
             [n],
         ),
         (0, r.jsxs)("div", {
-            className: g.buttonChildrenWrapper,
+            className: E.buttonChildrenWrapper,
             children: [
                 t,
                 l &&
                     (0, r.jsx)("div", {
-                        className: s()(g.spinnerWrapper, { [g.fadeIn]: n, [g.fadeOut]: !n }),
-                        children: (0, r.jsx)(h.y, {
-                            type: h.t.PULSING_ELLIPSIS,
-                            className: s()(g.spinner, g[`spinner-${a}`]),
-                            itemClassName: g.spinnerItem,
+                        className: s()(E.spinnerWrapper, { [E.fadeIn]: n, [E.fadeOut]: !n }),
+                        children: (0, r.jsx)(p.y, {
+                            type: p.t.PULSING_ELLIPSIS,
+                            className: s()(E.spinner, E[`spinner-${a}`]),
+                            itemClassName: E.spinnerItem,
                         }),
                     }),
             ],
         })
     );
 }
-function S(e) {
+function v(e) {
     let { hasReducedMotion: t, buttonRef: n, isLightMode: a, disabled: o } = e,
         l = i.useRef(null);
     return (
@@ -175,8 +175,8 @@ function S(e) {
         (0, r.jsxs)(r.Fragment, {
             children: [
                 !o &&
-                    (0, r.jsx)(p.s, {
-                        className: s()(g.expressiveRive, g.expressiveBackground),
+                    (0, r.jsx)(h.s, {
+                        className: s()(E.expressiveRive, E.expressiveBackground),
                         eventTargetRef: n,
                         fit: "layout",
                         artboard: "BaseGlowRemapped",
@@ -185,17 +185,17 @@ function S(e) {
                     }),
                 !t &&
                     !o &&
-                    (0, r.jsx)(p.s, {
-                        className: s()(g.expressiveRive, g.expressiveHoverContainer),
+                    (0, r.jsx)(h.s, {
+                        className: s()(E.expressiveRive, E.expressiveHoverContainer),
                         fit: "layout",
                         artboard: a ? "HoverLightmode" : "HoverDarkmode",
                     }),
-                (0, r.jsx)("div", { className: s()(g.expressiveRive, g.expressiveFill) }),
+                (0, r.jsx)("div", { className: s()(E.expressiveRive, E.expressiveFill) }),
             ],
         })
     );
 }
-function v(e) {
+function C(e) {
     let { icon: t, iconOpticalOffsetMargin: n, iconPosition: a, size: s, ref: o, disabled: l } = e,
         u = null;
     function c() {
@@ -231,14 +231,14 @@ function v(e) {
         "function" == typeof t || t?.type === "icon")
     ) {
         let e = "function" == typeof t ? t : t.asset;
-        u = (0, r.jsx)(e, { color: "currentColor", style: c(), size: A[s], className: g.icon });
+        u = (0, r.jsx)(e, { color: "currentColor", style: c(), size: I[s], className: E.icon });
     } else if (null != t) {
         if ("rive" === t.type) {
             let e = t.asset;
-            u = (0, r.jsx)(e, { ...t.riveProps, eventTargetRef: o, style: { width: _.E[A[s]], height: _.E[A[s]] } });
+            u = (0, r.jsx)(e, { ...t.riveProps, eventTargetRef: o, style: { width: _.E[I[s]], height: _.E[I[s]] } });
         } else if ("sticker" === t.type) {
             let e = t.component;
-            u = (0, r.jsx)(e, { size: _.E[I[s]], sticker: t.asset, isInteracting: d });
+            u = (0, r.jsx)(e, { size: _.E[T[s]], sticker: t.asset, isInteracting: d });
         }
     }
     return u;

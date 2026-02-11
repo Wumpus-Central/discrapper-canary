@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { fE: () => h, jK: () => m, ob: () => c, qT: () => g }), n(938796), n(321073);
+n.d(t, { fE: () => p, jK: () => g, ob: () => c, qT: () => E }), n(938796), n(321073);
 var r = n(852015),
     i = n(144367),
     a = n(428420),
@@ -58,7 +58,7 @@ var r = n(852015),
             e
         );
     })({}),
-    p = (function (e) {
+    h = (function (e) {
         return (
             (e[(e.USER_LINK_STATUS_UNSPECIFIED = 0)] = "USER_LINK_STATUS_UNSPECIFIED"),
             (e[(e.PENDING = 1)] = "PENDING"),
@@ -68,7 +68,7 @@ var r = n(852015),
             e
         );
     })({}),
-    h = (function (e) {
+    p = (function (e) {
         return (
             (e[(e.NONE_UNSPECIFIED = 0)] = "NONE_UNSPECIFIED"),
             (e[(e.SUBSCRIPTION = 1)] = "SUBSCRIPTION"),
@@ -78,7 +78,7 @@ var r = n(852015),
             e
         );
     })({}),
-    m = (function (e) {
+    g = (function (e) {
         return (
             (e[(e.NONE_UNSPECIFIED = 0)] = "NONE_UNSPECIFIED"),
             (e[(e.BOOST_ONLY = 1)] = "BOOST_ONLY"),
@@ -88,7 +88,7 @@ var r = n(852015),
             e
         );
     })({}),
-    g = (function (e) {
+    E = (function (e) {
         return (
             (e[(e.UNSPECIFIED = 0)] = "UNSPECIFIED"),
             (e[(e.PRIMARY = 1)] = "PRIMARY"),
@@ -96,7 +96,7 @@ var r = n(852015),
             e
         );
     })({});
-class E extends s.G {
+class A extends s.G {
     constructor() {
         super("discord_protos.users.v1.TimeOfDay", [
             { no: 1, name: "hours", kind: "scalar", T: 5 },
@@ -150,8 +150,8 @@ class E extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let A = new E();
-class I extends s.G {
+let I = new A();
+class T extends s.G {
     constructor() {
         super("discord_protos.users.v1.User", [
             { no: 1, name: "id", kind: "scalar", T: 4 },
@@ -161,11 +161,11 @@ class I extends s.G {
             { no: 5, name: "bot", kind: "scalar", T: 8 },
             { no: 6, name: "public_flags", kind: "scalar", T: 4 },
             { no: 8, name: "global_name", kind: "message", T: () => o.hU },
-            { no: 9, name: "avatar_decoration_data", kind: "message", T: () => y },
-            { no: 10, name: "primary_guild", kind: "message", T: () => L },
-            { no: 11, name: "collectibles", kind: "message", T: () => O },
+            { no: 9, name: "avatar_decoration_data", kind: "message", T: () => v },
+            { no: 10, name: "primary_guild", kind: "message", T: () => w },
+            { no: 11, name: "collectibles", kind: "message", T: () => D },
             { no: 12, name: "safety_state", kind: "message", T: () => u.ew },
-            { no: 13, name: "display_name_styles", kind: "message", T: () => b },
+            { no: 13, name: "display_name_styles", kind: "message", T: () => R },
         ]);
     }
     create(e) {
@@ -204,19 +204,19 @@ class I extends s.G {
                     a.globalName = o.hU.internalBinaryRead(e, e.uint32(), n, a.globalName);
                     break;
                 case 9:
-                    a.avatarDecorationData = y.internalBinaryRead(e, e.uint32(), n, a.avatarDecorationData);
+                    a.avatarDecorationData = v.internalBinaryRead(e, e.uint32(), n, a.avatarDecorationData);
                     break;
                 case 10:
-                    a.primaryGuild = L.internalBinaryRead(e, e.uint32(), n, a.primaryGuild);
+                    a.primaryGuild = w.internalBinaryRead(e, e.uint32(), n, a.primaryGuild);
                     break;
                 case 11:
-                    a.collectibles = O.internalBinaryRead(e, e.uint32(), n, a.collectibles);
+                    a.collectibles = D.internalBinaryRead(e, e.uint32(), n, a.collectibles);
                     break;
                 case 12:
                     a.safetyState = u.ew.internalBinaryRead(e, e.uint32(), n, a.safetyState);
                     break;
                 case 13:
-                    a.displayNameStyles = b.internalBinaryRead(e, e.uint32(), n, a.displayNameStyles);
+                    a.displayNameStyles = R.internalBinaryRead(e, e.uint32(), n, a.displayNameStyles);
                     break;
                 default:
                     let s = n.readUnknownField;
@@ -237,18 +237,18 @@ class I extends s.G {
             "0" !== e.publicFlags && t.tag(6, r.O0.Varint).uint64(e.publicFlags),
             e.globalName && o.hU.internalBinaryWrite(e.globalName, t.tag(8, r.O0.LengthDelimited).fork(), n).join(),
             e.avatarDecorationData &&
-                y.internalBinaryWrite(e.avatarDecorationData, t.tag(9, r.O0.LengthDelimited).fork(), n).join(),
-            e.primaryGuild && L.internalBinaryWrite(e.primaryGuild, t.tag(10, r.O0.LengthDelimited).fork(), n).join(),
-            e.collectibles && O.internalBinaryWrite(e.collectibles, t.tag(11, r.O0.LengthDelimited).fork(), n).join(),
+                v.internalBinaryWrite(e.avatarDecorationData, t.tag(9, r.O0.LengthDelimited).fork(), n).join(),
+            e.primaryGuild && w.internalBinaryWrite(e.primaryGuild, t.tag(10, r.O0.LengthDelimited).fork(), n).join(),
+            e.collectibles && D.internalBinaryWrite(e.collectibles, t.tag(11, r.O0.LengthDelimited).fork(), n).join(),
             e.safetyState && u.ew.internalBinaryWrite(e.safetyState, t.tag(12, r.O0.LengthDelimited).fork(), n).join(),
             e.displayNameStyles &&
-                b.internalBinaryWrite(e.displayNameStyles, t.tag(13, r.O0.LengthDelimited).fork(), n).join();
+                R.internalBinaryWrite(e.displayNameStyles, t.tag(13, r.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-new I();
-class T extends s.G {
+new T();
+class y extends s.G {
     constructor() {
         super("discord_protos.users.v1.MediumUser", [
             { no: 1, name: "id", kind: "scalar", T: 6 },
@@ -322,7 +322,7 @@ class T extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-new T();
+new y();
 class S extends s.G {
     constructor() {
         super("discord_protos.users.v1.UserAvatarDecoration", [
@@ -372,8 +372,8 @@ class S extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let y = new S();
-class v extends s.G {
+let v = new S();
+class C extends s.G {
     constructor() {
         super("discord_protos.users.v1.UserNameplate", [
             { no: 1, name: "asset", kind: "scalar", T: 9 },
@@ -432,7 +432,7 @@ class v extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let C = new v();
+let b = new C();
 class N extends s.G {
     constructor() {
         super("discord_protos.users.v1.DisplayNameStyles", [
@@ -500,10 +500,10 @@ class N extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let b = new N();
-class R extends s.G {
+let R = new N();
+class O extends s.G {
     constructor() {
-        super("discord_protos.users.v1.UserCollectibles", [{ no: 1, name: "nameplate", kind: "message", T: () => C }]);
+        super("discord_protos.users.v1.UserCollectibles", [{ no: 1, name: "nameplate", kind: "message", T: () => b }]);
     }
     create(e) {
         let t = {};
@@ -518,7 +518,7 @@ class R extends s.G {
             s = e.pos + t;
         for (; e.pos < s; ) {
             let [t, i] = e.tag();
-            if (1 === t) a.nameplate = C.internalBinaryRead(e, e.uint32(), n, a.nameplate);
+            if (1 === t) a.nameplate = b.internalBinaryRead(e, e.uint32(), n, a.nameplate);
             else {
                 let s = n.readUnknownField;
                 if ("throw" === s)
@@ -530,13 +530,13 @@ class R extends s.G {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        e.nameplate && C.internalBinaryWrite(e.nameplate, t.tag(1, r.O0.LengthDelimited).fork(), n).join();
+        e.nameplate && b.internalBinaryWrite(e.nameplate, t.tag(1, r.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let O = new R();
-class D extends s.G {
+let D = new O();
+class L extends s.G {
     constructor() {
         super("discord_protos.users.v1.UserPrimaryGuild", [
             { no: 1, name: "identity_guild_id", kind: "message", T: () => o.ol },
@@ -592,14 +592,14 @@ class D extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let L = new D();
-class w extends s.G {
+let w = new L();
+class x extends s.G {
     constructor() {
         super("discord_protos.users.v1.ScheduleRule", [
             { no: 1, name: "rule_id", kind: "scalar", T: 9 },
             { no: 2, name: "label", kind: "scalar", T: 9 },
-            { no: 3, name: "start_time", kind: "message", T: () => A },
-            { no: 4, name: "end_time", kind: "message", T: () => A },
+            { no: 3, name: "start_time", kind: "message", T: () => I },
+            { no: 4, name: "end_time", kind: "message", T: () => I },
             { no: 5, name: "days", kind: "enum", repeat: 1, T: () => ["discord_protos.users.v1.DayOfWeek", c] },
         ]);
     }
@@ -624,10 +624,10 @@ class w extends s.G {
                     a.label = e.string();
                     break;
                 case 3:
-                    a.startTime = A.internalBinaryRead(e, e.uint32(), n, a.startTime);
+                    a.startTime = I.internalBinaryRead(e, e.uint32(), n, a.startTime);
                     break;
                 case 4:
-                    a.endTime = A.internalBinaryRead(e, e.uint32(), n, a.endTime);
+                    a.endTime = I.internalBinaryRead(e, e.uint32(), n, a.endTime);
                     break;
                 case 5:
                     if (i === r.O0.LengthDelimited) for (let t = e.int32() + e.pos; e.pos < t; ) a.days.push(e.int32());
@@ -647,8 +647,8 @@ class w extends s.G {
         if (
             ("" !== e.ruleId && t.tag(1, r.O0.LengthDelimited).string(e.ruleId),
             "" !== e.label && t.tag(2, r.O0.LengthDelimited).string(e.label),
-            e.startTime && A.internalBinaryWrite(e.startTime, t.tag(3, r.O0.LengthDelimited).fork(), n).join(),
-            e.endTime && A.internalBinaryWrite(e.endTime, t.tag(4, r.O0.LengthDelimited).fork(), n).join(),
+            e.startTime && I.internalBinaryWrite(e.startTime, t.tag(3, r.O0.LengthDelimited).fork(), n).join(),
+            e.endTime && I.internalBinaryWrite(e.endTime, t.tag(4, r.O0.LengthDelimited).fork(), n).join(),
             e.days.length)
         ) {
             t.tag(5, r.O0.LengthDelimited).fork();
@@ -659,11 +659,11 @@ class w extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let x = new w();
+let P = new x();
 class M extends s.G {
     constructor() {
         super("discord_protos.users.v1.RestrictedSchedule", [
-            { no: 1, name: "rules", kind: "message", repeat: 1, T: () => x },
+            { no: 1, name: "rules", kind: "message", repeat: 1, T: () => P },
         ]);
     }
     create(e) {
@@ -679,7 +679,7 @@ class M extends s.G {
             s = e.pos + t;
         for (; e.pos < s; ) {
             let [t, i] = e.tag();
-            if (1 === t) a.rules.push(x.internalBinaryRead(e, e.uint32(), n));
+            if (1 === t) a.rules.push(P.internalBinaryRead(e, e.uint32(), n));
             else {
                 let s = n.readUnknownField;
                 if ("throw" === s)
@@ -692,13 +692,13 @@ class M extends s.G {
     }
     internalBinaryWrite(e, t, n) {
         for (let i = 0; i < e.rules.length; i++)
-            x.internalBinaryWrite(e.rules[i], t.tag(1, r.O0.LengthDelimited).fork(), n).join();
+            P.internalBinaryWrite(e.rules[i], t.tag(1, r.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let P = new M();
-class k extends s.G {
+let k = new M();
+class U extends s.G {
     constructor() {
         super("discord_protos.users.v1.CrossPlatformRestriction", [
             { no: 1, name: "restriction_expiry", kind: "message", T: () => l.D },
@@ -743,22 +743,22 @@ class k extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let U = new k();
-class G extends s.G {
+let G = new U();
+class F extends s.G {
     constructor() {
         super("discord_protos.users.v1.UserData", [
-            { no: 1, name: "linked_users", kind: "map", K: 6, V: { kind: "message", T: () => V } },
-            { no: 2, name: "safety_feature_limits", kind: "map", K: 13, V: { kind: "message", T: () => Y } },
-            { no: 3, name: "safety_flags", kind: "map", K: 13, V: { kind: "message", T: () => K } },
-            { no: 4, name: "quest", kind: "message", T: () => q },
-            { no: 5, name: "primary_guild", kind: "message", T: () => L },
-            { no: 6, name: "cross_platform_restriction", kind: "message", T: () => U },
-            { no: 7, name: "collectibles", kind: "message", T: () => O },
+            { no: 1, name: "linked_users", kind: "map", K: 6, V: { kind: "message", T: () => B } },
+            { no: 2, name: "safety_feature_limits", kind: "map", K: 13, V: { kind: "message", T: () => W } },
+            { no: 3, name: "safety_flags", kind: "map", K: 13, V: { kind: "message", T: () => $ } },
+            { no: 4, name: "quest", kind: "message", T: () => X },
+            { no: 5, name: "primary_guild", kind: "message", T: () => w },
+            { no: 6, name: "cross_platform_restriction", kind: "message", T: () => G },
+            { no: 7, name: "collectibles", kind: "message", T: () => D },
             { no: 8, name: "safety_state", kind: "message", T: () => u.ew },
-            { no: 9, name: "premium_state", kind: "message", T: () => Z },
-            { no: 10, name: "display_name_styles", kind: "message", T: () => b },
-            { no: 11, name: "store_country", kind: "message", T: () => J },
-            { no: 12, name: "restricted_schedule", kind: "message", T: () => P },
+            { no: 9, name: "premium_state", kind: "message", T: () => Q },
+            { no: 10, name: "display_name_styles", kind: "message", T: () => R },
+            { no: 11, name: "store_country", kind: "message", T: () => ee },
+            { no: 12, name: "restricted_schedule", kind: "message", T: () => k },
         ]);
     }
     create(e) {
@@ -785,31 +785,31 @@ class G extends s.G {
                     this.binaryReadMap3(a.safetyFlags, e, n);
                     break;
                 case 4:
-                    a.quest = q.internalBinaryRead(e, e.uint32(), n, a.quest);
+                    a.quest = X.internalBinaryRead(e, e.uint32(), n, a.quest);
                     break;
                 case 5:
-                    a.primaryGuild = L.internalBinaryRead(e, e.uint32(), n, a.primaryGuild);
+                    a.primaryGuild = w.internalBinaryRead(e, e.uint32(), n, a.primaryGuild);
                     break;
                 case 6:
-                    a.crossPlatformRestriction = U.internalBinaryRead(e, e.uint32(), n, a.crossPlatformRestriction);
+                    a.crossPlatformRestriction = G.internalBinaryRead(e, e.uint32(), n, a.crossPlatformRestriction);
                     break;
                 case 7:
-                    a.collectibles = O.internalBinaryRead(e, e.uint32(), n, a.collectibles);
+                    a.collectibles = D.internalBinaryRead(e, e.uint32(), n, a.collectibles);
                     break;
                 case 8:
                     a.safetyState = u.ew.internalBinaryRead(e, e.uint32(), n, a.safetyState);
                     break;
                 case 9:
-                    a.premiumState = Z.internalBinaryRead(e, e.uint32(), n, a.premiumState);
+                    a.premiumState = Q.internalBinaryRead(e, e.uint32(), n, a.premiumState);
                     break;
                 case 10:
-                    a.displayNameStyles = b.internalBinaryRead(e, e.uint32(), n, a.displayNameStyles);
+                    a.displayNameStyles = R.internalBinaryRead(e, e.uint32(), n, a.displayNameStyles);
                     break;
                 case 11:
-                    a.storeCountry = J.internalBinaryRead(e, e.uint32(), n, a.storeCountry);
+                    a.storeCountry = ee.internalBinaryRead(e, e.uint32(), n, a.storeCountry);
                     break;
                 case 12:
-                    a.restrictedSchedule = P.internalBinaryRead(e, e.uint32(), n, a.restrictedSchedule);
+                    a.restrictedSchedule = k.internalBinaryRead(e, e.uint32(), n, a.restrictedSchedule);
                     break;
                 default:
                     let s = n.readUnknownField;
@@ -833,7 +833,7 @@ class G extends s.G {
                     a = t.fixed64().toString();
                     break;
                 case 2:
-                    s = V.internalBinaryRead(t, t.uint32(), n);
+                    s = B.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -841,7 +841,7 @@ class G extends s.G {
                     );
             }
         }
-        e[a ?? "0"] = s ?? V.create();
+        e[a ?? "0"] = s ?? B.create();
     }
     binaryReadMap2(e, t, n) {
         let r = t.uint32(),
@@ -855,7 +855,7 @@ class G extends s.G {
                     a = t.uint32();
                     break;
                 case 2:
-                    s = Y.internalBinaryRead(t, t.uint32(), n);
+                    s = W.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -863,7 +863,7 @@ class G extends s.G {
                     );
             }
         }
-        e[a ?? 0] = s ?? Y.create();
+        e[a ?? 0] = s ?? W.create();
     }
     binaryReadMap3(e, t, n) {
         let r = t.uint32(),
@@ -877,7 +877,7 @@ class G extends s.G {
                     a = t.uint32();
                     break;
                 case 2:
-                    s = K.internalBinaryRead(t, t.uint32(), n);
+                    s = $.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -885,47 +885,47 @@ class G extends s.G {
                     );
             }
         }
-        e[a ?? 0] = s ?? K.create();
+        e[a ?? 0] = s ?? $.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.linkedUsers))
             t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.Bit64).fixed64(i),
                 t.tag(2, r.O0.LengthDelimited).fork(),
-                V.internalBinaryWrite(e.linkedUsers[i], t, n),
+                B.internalBinaryWrite(e.linkedUsers[i], t, n),
                 t.join().join();
         for (let i of Object.keys(e.safetyFeatureLimits))
             t.tag(2, r.O0.LengthDelimited).fork().tag(1, r.O0.Varint).uint32(parseInt(i)),
                 t.tag(2, r.O0.LengthDelimited).fork(),
-                Y.internalBinaryWrite(e.safetyFeatureLimits[i], t, n),
+                W.internalBinaryWrite(e.safetyFeatureLimits[i], t, n),
                 t.join().join();
         for (let i of Object.keys(e.safetyFlags))
             t.tag(3, r.O0.LengthDelimited).fork().tag(1, r.O0.Varint).uint32(parseInt(i)),
                 t.tag(2, r.O0.LengthDelimited).fork(),
-                K.internalBinaryWrite(e.safetyFlags[i], t, n),
+                $.internalBinaryWrite(e.safetyFlags[i], t, n),
                 t.join().join();
-        e.quest && q.internalBinaryWrite(e.quest, t.tag(4, r.O0.LengthDelimited).fork(), n).join(),
-            e.primaryGuild && L.internalBinaryWrite(e.primaryGuild, t.tag(5, r.O0.LengthDelimited).fork(), n).join(),
+        e.quest && X.internalBinaryWrite(e.quest, t.tag(4, r.O0.LengthDelimited).fork(), n).join(),
+            e.primaryGuild && w.internalBinaryWrite(e.primaryGuild, t.tag(5, r.O0.LengthDelimited).fork(), n).join(),
             e.crossPlatformRestriction &&
-                U.internalBinaryWrite(e.crossPlatformRestriction, t.tag(6, r.O0.LengthDelimited).fork(), n).join(),
-            e.collectibles && O.internalBinaryWrite(e.collectibles, t.tag(7, r.O0.LengthDelimited).fork(), n).join(),
+                G.internalBinaryWrite(e.crossPlatformRestriction, t.tag(6, r.O0.LengthDelimited).fork(), n).join(),
+            e.collectibles && D.internalBinaryWrite(e.collectibles, t.tag(7, r.O0.LengthDelimited).fork(), n).join(),
             e.safetyState && u.ew.internalBinaryWrite(e.safetyState, t.tag(8, r.O0.LengthDelimited).fork(), n).join(),
-            e.premiumState && Z.internalBinaryWrite(e.premiumState, t.tag(9, r.O0.LengthDelimited).fork(), n).join(),
+            e.premiumState && Q.internalBinaryWrite(e.premiumState, t.tag(9, r.O0.LengthDelimited).fork(), n).join(),
             e.displayNameStyles &&
-                b.internalBinaryWrite(e.displayNameStyles, t.tag(10, r.O0.LengthDelimited).fork(), n).join(),
-            e.storeCountry && J.internalBinaryWrite(e.storeCountry, t.tag(11, r.O0.LengthDelimited).fork(), n).join(),
+                R.internalBinaryWrite(e.displayNameStyles, t.tag(10, r.O0.LengthDelimited).fork(), n).join(),
+            e.storeCountry && ee.internalBinaryWrite(e.storeCountry, t.tag(11, r.O0.LengthDelimited).fork(), n).join(),
             e.restrictedSchedule &&
-                P.internalBinaryWrite(e.restrictedSchedule, t.tag(12, r.O0.LengthDelimited).fork(), n).join();
+                k.internalBinaryWrite(e.restrictedSchedule, t.tag(12, r.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-new G();
-class F extends s.G {
+new F();
+class V extends s.G {
     constructor() {
         super("discord_protos.users.v1.LinkedUser", [
             { no: 1, name: "user_id", kind: "scalar", T: 6 },
             { no: 2, name: "link_type", kind: "enum", T: () => ["discord_protos.users.v1.UserLinkType", f] },
-            { no: 3, name: "link_status", kind: "enum", T: () => ["discord_protos.users.v1.UserLinkStatus", p] },
+            { no: 3, name: "link_status", kind: "enum", T: () => ["discord_protos.users.v1.UserLinkStatus", h] },
             { no: 4, name: "requestor_id", kind: "scalar", T: 6 },
             { no: 5, name: "created_at", kind: "message", T: () => l.D },
             { no: 6, name: "updated_at", kind: "message", T: () => l.D },
@@ -984,8 +984,8 @@ class F extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let V = new F();
-class B extends s.G {
+let B = new V();
+class j extends s.G {
     constructor() {
         super("discord_protos.users.v1.RateLimitData", [
             { no: 1, name: "limit_expiry", kind: "message", T: () => l.D },
@@ -1021,11 +1021,11 @@ class B extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let j = new B();
-class H extends s.G {
+let H = new j();
+class Y extends s.G {
     constructor() {
         super("discord_protos.users.v1.FeatureLimits", [
-            { no: 1, name: "map", kind: "map", K: 13, V: { kind: "message", T: () => j } },
+            { no: 1, name: "map", kind: "map", K: 13, V: { kind: "message", T: () => H } },
         ]);
     }
     create(e) {
@@ -1064,7 +1064,7 @@ class H extends s.G {
                     a = t.uint32();
                     break;
                 case 2:
-                    s = j.internalBinaryRead(t, t.uint32(), n);
+                    s = H.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -1072,20 +1072,20 @@ class H extends s.G {
                     );
             }
         }
-        e[a ?? 0] = s ?? j.create();
+        e[a ?? 0] = s ?? H.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let i of Object.keys(e.map))
             t.tag(1, r.O0.LengthDelimited).fork().tag(1, r.O0.Varint).uint32(parseInt(i)),
                 t.tag(2, r.O0.LengthDelimited).fork(),
-                j.internalBinaryWrite(e.map[i], t, n),
+                H.internalBinaryWrite(e.map[i], t, n),
                 t.join().join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let Y = new H();
-class W extends s.G {
+let W = new Y();
+class K extends s.G {
     constructor() {
         super("discord_protos.users.v1.SafetyFlag", [{ no: 1, name: "flag_expiry", kind: "message", T: () => l.D }]);
     }
@@ -1119,7 +1119,7 @@ class W extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let K = new W();
+let $ = new K();
 class z extends s.G {
     constructor() {
         super("discord_protos.users.v1.GuildShardingConfig", [
@@ -1163,7 +1163,7 @@ class z extends s.G {
     }
 }
 new z();
-class $ extends s.G {
+class q extends s.G {
     constructor() {
         super("discord_protos.users.v1.QuestMetadata", [{ no: 1, name: "quests_completed", kind: "scalar", T: 13 }]);
     }
@@ -1197,21 +1197,21 @@ class $ extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let q = new $();
-class X extends s.G {
+let X = new q();
+class Z extends s.G {
     constructor() {
         super("discord_protos.users.v1.PremiumState", [
             {
                 no: 1,
                 name: "premium_source",
                 kind: "enum",
-                T: () => ["discord_protos.users.v1.PremiumSource", h, "PREMIUM_SOURCE_"],
+                T: () => ["discord_protos.users.v1.PremiumSource", p, "PREMIUM_SOURCE_"],
             },
             {
                 no: 2,
                 name: "premium_subscription_type",
                 kind: "enum",
-                T: () => ["discord_protos.users.v1.PremiumSubscriptionType", m, "PREMIUM_SUBSCRIPTION_TYPE_"],
+                T: () => ["discord_protos.users.v1.PremiumSubscriptionType", g, "PREMIUM_SUBSCRIPTION_TYPE_"],
             },
             {
                 no: 3,
@@ -1219,7 +1219,7 @@ class X extends s.G {
                 kind: "enum",
                 T: () => [
                     "discord_protos.users.v1.PremiumSubscriptionGroupRole",
-                    g,
+                    E,
                     "PREMIUM_SUBSCRIPTION_GROUP_ROLE_",
                 ],
             },
@@ -1266,8 +1266,8 @@ class X extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let Z = new X();
-class Q extends s.G {
+let Q = new Z();
+class J extends s.G {
     constructor() {
         super("discord_protos.users.v1.StoreCountry", [
             { no: 1, name: "country", kind: "scalar", T: 9 },
@@ -1311,4 +1311,4 @@ class Q extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let J = new Q();
+let ee = new J();

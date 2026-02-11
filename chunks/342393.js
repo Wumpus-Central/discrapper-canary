@@ -117,26 +117,26 @@
             "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
         );
     }
-    function p(e) {
+    function h(e) {
         return e && e.__esModule && Object.prototype.hasOwnProperty.call(e, "default") ? e.default : e;
     }
-    var h,
-        m,
+    var p,
         g,
         E,
-        A = { exports: {} };
-    function I() {
-        return m ? h : ((m = 1), (h = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"));
+        A,
+        I = { exports: {} };
+    function T() {
+        return g ? p : ((g = 1), (p = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"));
     }
-    A.exports = (function () {
-        if (E) return g;
-        E = 1;
-        var e = I();
+    I.exports = (function () {
+        if (A) return E;
+        A = 1;
+        var e = T();
         function t() {}
         function n() {}
         return (
             (n.resetWarningCache = t),
-            (g = function () {
+            (E = function () {
                 function r(t, n, r, i, a, s) {
                     if (s !== e) {
                         var o = Error(
@@ -175,8 +175,8 @@
             })
         );
     })()();
-    var T = p(A.exports),
-        y = function (e, n, r) {
+    var y = h(I.exports),
+        S = function (e, n, r) {
             var i = !!r,
                 a = t.useRef(r);
             t.useEffect(
@@ -201,7 +201,7 @@
                     [i, n, e, a],
                 );
         },
-        S = function (e) {
+        v = function (e) {
             var n = t.useRef(e);
             return (
                 t.useEffect(
@@ -213,28 +213,28 @@
                 n.current
             );
         },
-        v = function (e) {
+        C = function (e) {
             return null !== e && "object" === i(e);
         },
-        C = function (e) {
-            return v(e) && "function" == typeof e.then;
-        },
         b = function (e) {
+            return C(e) && "function" == typeof e.then;
+        },
+        N = function (e) {
             return (
-                v(e) &&
+                C(e) &&
                 "function" == typeof e.elements &&
                 "function" == typeof e.createToken &&
                 "function" == typeof e.createPaymentMethod &&
                 "function" == typeof e.confirmCardPayment
             );
         },
-        N = "[object Object]",
-        R = function e(t, n) {
-            if (!v(t) || !v(n)) return t === n;
+        R = "[object Object]",
+        O = function e(t, n) {
+            if (!C(t) || !C(n)) return t === n;
             var r = Array.isArray(t);
             if (r !== Array.isArray(n)) return !1;
-            var i = Object.prototype.toString.call(t) === N;
-            if (i !== (Object.prototype.toString.call(n) === N)) return !1;
+            var i = Object.prototype.toString.call(t) === R;
+            if (i !== (Object.prototype.toString.call(n) === R)) return !1;
             if (!i && !r) return t === n;
             var a = Object.keys(t),
                 s = Object.keys(n);
@@ -250,10 +250,10 @@
                 };
             return c.every(f);
         },
-        O = function (e, t, n) {
-            return v(e)
+        D = function (e, t, n) {
+            return C(e)
                 ? Object.keys(e).reduce(function (i, s) {
-                      var o = !v(t) || !R(e[s], t[s]);
+                      var o = !C(t) || !O(e[s], t[s]);
                       return n.includes(s)
                           ? (o &&
                                 console.warn(
@@ -266,26 +266,26 @@
                   }, null)
                 : null;
         },
-        D =
+        L =
             "Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.",
-        L = function (e) {
-            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : D;
-            if (null === e || b(e)) return e;
+        w = function (e) {
+            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L;
+            if (null === e || N(e)) return e;
             throw Error(t);
         },
-        w = function (e) {
-            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : D;
-            if (C(e))
+        x = function (e) {
+            var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L;
+            if (b(e))
                 return {
                     tag: "async",
                     stripePromise: Promise.resolve(e).then(function (e) {
-                        return L(e, t);
+                        return w(e, t);
                     }),
                 };
-            var n = L(e, t);
+            var n = w(e, t);
             return null === n ? { tag: "empty" } : { tag: "sync", stripe: n };
         },
-        x = function (e) {
+        P = function (e) {
             e &&
                 e._registerWrapper &&
                 e.registerAppInfo &&
@@ -296,9 +296,9 @@
                     url: "https://stripe.com/docs/stripe-js/react",
                 }));
         },
-        P = t.createContext(null);
-    P.displayName = "ElementsContext";
-    var M = function (e, t) {
+        M = t.createContext(null);
+    M.displayName = "ElementsContext";
+    var k = function (e, t) {
             if (!e)
                 throw Error(
                     "Could not find Elements context; You need to wrap the part of your app that ".concat(
@@ -308,13 +308,13 @@
                 );
             return e;
         },
-        k = function (e) {
+        U = function (e) {
             var n = e.stripe,
                 r = e.options,
                 i = e.children,
                 a = t.useMemo(
                     function () {
-                        return w(n);
+                        return x(n);
                     },
                     [n],
                 ),
@@ -350,7 +350,7 @@
                 },
                 [a, o, r],
             );
-            var c = S(n);
+            var c = v(n);
             t.useEffect(
                 function () {
                     null !== c &&
@@ -361,12 +361,12 @@
                 },
                 [c, n],
             );
-            var d = S(r);
+            var d = v(r);
             return (
                 t.useEffect(
                     function () {
                         if (o.elements) {
-                            var e = O(r, d, ["clientSecret", "fonts"]);
+                            var e = D(r, d, ["clientSecret", "fonts"]);
                             e && o.elements.update(e);
                         }
                     },
@@ -374,28 +374,28 @@
                 ),
                 t.useEffect(
                     function () {
-                        x(o.stripe);
+                        P(o.stripe);
                     },
                     [o.stripe],
                 ),
-                t.createElement(P.Provider, { value: o }, i)
+                t.createElement(M.Provider, { value: o }, i)
             );
         };
-    k.propTypes = { stripe: T.any, options: T.object };
-    var U = function (e) {
-            return M(t.useContext(P), e);
+    U.propTypes = { stripe: y.any, options: y.object };
+    var G = function (e) {
+            return k(t.useContext(M), e);
         },
-        G = function () {
-            return U("calls useElements()").elements;
+        F = function () {
+            return G("calls useElements()").elements;
         },
         V = function (e) {
-            return (0, e.children)(U("mounts <ElementsConsumer>"));
+            return (0, e.children)(G("mounts <ElementsConsumer>"));
         };
-    V.propTypes = { children: T.func.isRequired };
-    var F = ["on", "session"],
-        B = t.createContext(null);
-    B.displayName = "CheckoutSdkContext";
-    var j = function (e, t) {
+    V.propTypes = { children: y.func.isRequired };
+    var B = ["on", "session"],
+        j = t.createContext(null);
+    j.displayName = "CheckoutSdkContext";
+    var H = function (e, t) {
             if (!e)
                 throw Error(
                     "Could not find CheckoutProvider context; You need to wrap the part of your app that ".concat(
@@ -405,23 +405,23 @@
                 );
             return e;
         },
-        H = t.createContext(null);
-    H.displayName = "CheckoutContext";
-    var Y = function (e, t) {
+        Y = t.createContext(null);
+    Y.displayName = "CheckoutContext";
+    var W = function (e, t) {
             if (!e) return null;
             e.on, e.session;
-            var n = o(e, F);
+            var n = o(e, B);
             return t ? Object.assign(t, n) : Object.assign(e.session(), n);
         },
-        W =
+        K =
             "Invalid prop `stripe` supplied to `CheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.",
-        K = function (e) {
+        $ = function (e) {
             var n = e.stripe,
                 r = e.options,
                 i = e.children,
                 a = t.useMemo(
                     function () {
-                        return w(n, W);
+                        return x(n, K);
                     },
                     [n],
                 ),
@@ -441,7 +441,7 @@
                         return n.stripe && n.checkoutSdk ? n : { stripe: e, checkoutSdk: t };
                     });
                 },
-                p = t.useRef(!1);
+                h = t.useRef(!1);
             t.useEffect(
                 function () {
                     var e = !0;
@@ -449,16 +449,16 @@
                         "async" !== a.tag || d.stripe
                             ? "sync" === a.tag &&
                               a.stripe &&
-                              !p.current &&
-                              ((p.current = !0),
+                              !h.current &&
+                              ((h.current = !0),
                               a.stripe.initCheckout(r).then(function (e) {
                                   e && (f(a.stripe, e), e.on("change", u));
                               }))
                             : a.stripePromise.then(function (t) {
                                   t &&
                                       e &&
-                                      !p.current &&
-                                      ((p.current = !0),
+                                      !h.current &&
+                                      ((h.current = !0),
                                       t.initCheckout(r).then(function (e) {
                                           e && (f(t, e), e.on("change", u));
                                       }));
@@ -470,59 +470,59 @@
                 },
                 [a, d, r, u],
             );
-            var h = S(n);
+            var p = v(n);
             t.useEffect(
                 function () {
-                    null !== h &&
-                        h !== n &&
+                    null !== p &&
+                        p !== n &&
                         console.warn(
                             "Unsupported prop change on CheckoutProvider: You cannot change the `stripe` prop after setting it.",
                         );
                 },
-                [h, n],
+                [p, n],
             );
-            var m = S(r),
-                g = S(d.checkoutSdk);
+            var g = v(r),
+                E = v(d.checkoutSdk);
             t.useEffect(
                 function () {
                     if (d.checkoutSdk) {
                         var e,
                             t,
-                            n = null == m || null == (e = m.elementsOptions) ? void 0 : e.appearance,
+                            n = null == g || null == (e = g.elementsOptions) ? void 0 : e.appearance,
                             i = null == r || null == (t = r.elementsOptions) ? void 0 : t.appearance,
-                            a = !R(i, n),
-                            s = !g && d.checkoutSdk;
+                            a = !O(i, n),
+                            s = !E && d.checkoutSdk;
                         i && (a || s) && d.checkoutSdk.changeAppearance(i);
                     }
                 },
-                [r, m, d.checkoutSdk, g],
+                [r, g, d.checkoutSdk, E],
             ),
                 t.useEffect(
                     function () {
-                        x(d.stripe);
+                        P(d.stripe);
                     },
                     [d.stripe],
                 );
-            var E = t.useMemo(
+            var A = t.useMemo(
                 function () {
-                    return Y(d.checkoutSdk, o);
+                    return W(d.checkoutSdk, o);
                 },
                 [d.checkoutSdk, o],
             );
             return d.checkoutSdk
-                ? t.createElement(B.Provider, { value: d }, t.createElement(H.Provider, { value: E }, i))
+                ? t.createElement(j.Provider, { value: d }, t.createElement(Y.Provider, { value: A }, i))
                 : null;
         };
-    K.propTypes = {
-        stripe: T.any,
-        options: T.shape({ fetchClientSecret: T.func.isRequired, elementsOptions: T.object }).isRequired,
+    $.propTypes = {
+        stripe: y.any,
+        options: y.shape({ fetchClientSecret: y.func.isRequired, elementsOptions: y.object }).isRequired,
     };
     var z = function (e) {
-            return j(t.useContext(B), e);
+            return H(t.useContext(j), e);
         },
-        $ = function (e) {
-            var n = t.useContext(B),
-                r = t.useContext(P);
+        q = function (e) {
+            var n = t.useContext(j),
+                r = t.useContext(M);
             if (n && r)
                 throw Error(
                     "You cannot wrap the part of your app that ".concat(
@@ -530,11 +530,11 @@
                         " in both <CheckoutProvider> and <Elements> providers.",
                     ),
                 );
-            return n ? j(n, e) : M(r, e);
+            return n ? H(n, e) : k(r, e);
         },
-        q = function () {
+        X = function () {
             z("calls useCheckout()");
-            var e = t.useContext(H);
+            var e = t.useContext(Y);
             if (!e)
                 throw Error(
                     "Could not find Checkout Context; You need to wrap the part of your app that calls useCheckout() in an <CheckoutProvider> provider.",
@@ -545,7 +545,7 @@
         Q = function (e) {
             return e.charAt(0).toUpperCase() + e.slice(1);
         },
-        X = function (e, n) {
+        J = function (e, n) {
             var r = "".concat(Q(e), "Element"),
                 i = function (n) {
                     var i,
@@ -556,59 +556,59 @@
                         d = n.onBlur,
                         _ = n.onFocus,
                         f = n.onReady,
-                        p = n.onChange,
-                        h = n.onEscape,
-                        m = n.onClick,
-                        g = n.onLoadError,
-                        E = n.onLoaderStart,
-                        A = n.onNetworksChange,
-                        I = n.onConfirm,
-                        T = n.onCancel,
-                        v = n.onShippingAddressChange,
-                        C = n.onShippingRateChange,
-                        b = $("mounts <".concat(r, ">")),
-                        N = "elements" in b ? b.elements : null,
-                        R = "checkoutSdk" in b ? b.checkoutSdk : null,
-                        D = l(t.useState(null), 2),
-                        L = D[0],
-                        w = D[1],
-                        x = t.useRef(null),
-                        P = t.useRef(null);
-                    y(L, "blur", d),
-                        y(L, "focus", _),
-                        y(L, "escape", h),
-                        y(L, "click", m),
-                        y(L, "loaderror", g),
-                        y(L, "loaderstart", E),
-                        y(L, "networkschange", A),
-                        y(L, "confirm", I),
-                        y(L, "cancel", T),
-                        y(L, "shippingaddresschange", v),
-                        y(L, "shippingratechange", C),
-                        y(L, "change", p),
+                        h = n.onChange,
+                        p = n.onEscape,
+                        g = n.onClick,
+                        E = n.onLoadError,
+                        A = n.onLoaderStart,
+                        I = n.onNetworksChange,
+                        T = n.onConfirm,
+                        y = n.onCancel,
+                        C = n.onShippingAddressChange,
+                        b = n.onShippingRateChange,
+                        N = q("mounts <".concat(r, ">")),
+                        R = "elements" in N ? N.elements : null,
+                        O = "checkoutSdk" in N ? N.checkoutSdk : null,
+                        L = l(t.useState(null), 2),
+                        w = L[0],
+                        x = L[1],
+                        P = t.useRef(null),
+                        M = t.useRef(null);
+                    S(w, "blur", d),
+                        S(w, "focus", _),
+                        S(w, "escape", p),
+                        S(w, "click", g),
+                        S(w, "loaderror", E),
+                        S(w, "loaderstart", A),
+                        S(w, "networkschange", I),
+                        S(w, "confirm", T),
+                        S(w, "cancel", y),
+                        S(w, "shippingaddresschange", C),
+                        S(w, "shippingratechange", b),
+                        S(w, "change", h),
                         f &&
                             (i =
                                 "expressCheckout" === e
                                     ? f
                                     : function () {
-                                          f(L);
+                                          f(w);
                                       }),
-                        y(L, "ready", i),
+                        S(w, "ready", i),
                         t.useLayoutEffect(
                             function () {
-                                if (null === x.current && null !== P.current && (N || R)) {
+                                if (null === P.current && null !== M.current && (R || O)) {
                                     var t = null;
-                                    if (R)
+                                    if (O)
                                         switch (e) {
                                             case "payment":
-                                                t = R.createPaymentElement(c);
+                                                t = O.createPaymentElement(c);
                                                 break;
                                             case "address":
                                                 if ("mode" in c) {
                                                     var n = c.mode,
                                                         i = o(c, Z);
-                                                    if ("shipping" === n) t = R.createShippingAddressElement(i);
-                                                    else if ("billing" === n) t = R.createBillingAddressElement(i);
+                                                    if ("shipping" === n) t = O.createShippingAddressElement(i);
+                                                    else if ("billing" === n) t = O.createBillingAddressElement(i);
                                                     else
                                                         throw Error(
                                                             "Invalid options.mode. mode must be 'billing' or 'shipping'.",
@@ -619,10 +619,10 @@
                                                     );
                                                 break;
                                             case "expressCheckout":
-                                                t = R.createExpressCheckoutElement(c);
+                                                t = O.createExpressCheckoutElement(c);
                                                 break;
                                             case "currencySelector":
-                                                t = R.createCurrencySelectorElement();
+                                                t = O.createCurrencySelectorElement();
                                                 break;
                                             default:
                                                 throw Error(
@@ -632,36 +632,36 @@
                                                     ),
                                                 );
                                         }
-                                    else N && (t = N.create(e, c));
-                                    (x.current = t), w(t), t && t.mount(P.current);
+                                    else R && (t = R.create(e, c));
+                                    (P.current = t), x(t), t && t.mount(M.current);
                                 }
                             },
-                            [N, R, c],
+                            [R, O, c],
                         );
-                    var M = S(c);
+                    var k = v(c);
                     return (
                         t.useEffect(
                             function () {
-                                if (x.current) {
-                                    var e = O(c, M, ["paymentRequest"]);
-                                    e && "update" in x.current && x.current.update(e);
+                                if (P.current) {
+                                    var e = D(c, k, ["paymentRequest"]);
+                                    e && "update" in P.current && P.current.update(e);
                                 }
                             },
-                            [c, M],
+                            [c, k],
                         ),
                         t.useLayoutEffect(function () {
                             return function () {
-                                if (x.current && "function" == typeof x.current.destroy)
+                                if (P.current && "function" == typeof P.current.destroy)
                                     try {
-                                        x.current.destroy(), (x.current = null);
+                                        P.current.destroy(), (P.current = null);
                                     } catch (e) {}
                             };
                         }, []),
-                        t.createElement("div", { id: a, className: s, ref: P })
+                        t.createElement("div", { id: a, className: s, ref: M })
                     );
                 },
                 a = function (e) {
-                    $("mounts <".concat(r, ">"));
+                    q("mounts <".concat(r, ">"));
                     var n = e.id,
                         i = e.className;
                     return t.createElement("div", { id: n, className: i });
@@ -669,45 +669,45 @@
                 s = n ? a : i;
             return (
                 (s.propTypes = {
-                    id: T.string,
-                    className: T.string,
-                    onChange: T.func,
-                    onBlur: T.func,
-                    onFocus: T.func,
-                    onReady: T.func,
-                    onEscape: T.func,
-                    onClick: T.func,
-                    onLoadError: T.func,
-                    onLoaderStart: T.func,
-                    onNetworksChange: T.func,
-                    onConfirm: T.func,
-                    onCancel: T.func,
-                    onShippingAddressChange: T.func,
-                    onShippingRateChange: T.func,
-                    options: T.object,
+                    id: y.string,
+                    className: y.string,
+                    onChange: y.func,
+                    onBlur: y.func,
+                    onFocus: y.func,
+                    onReady: y.func,
+                    onEscape: y.func,
+                    onClick: y.func,
+                    onLoadError: y.func,
+                    onLoaderStart: y.func,
+                    onNetworksChange: y.func,
+                    onConfirm: y.func,
+                    onCancel: y.func,
+                    onShippingAddressChange: y.func,
+                    onShippingRateChange: y.func,
+                    options: y.object,
                 }),
                 (s.displayName = r),
                 (s.__elementType = e),
                 s
             );
         },
-        J = "u" < typeof window,
-        ee = t.createContext(null);
-    ee.displayName = "EmbeddedCheckoutProviderContext";
-    var et = function () {
-            var e = t.useContext(ee);
+        ee = "u" < typeof window,
+        et = t.createContext(null);
+    et.displayName = "EmbeddedCheckoutProviderContext";
+    var en = function () {
+            var e = t.useContext(et);
             if (!e) throw Error("<EmbeddedCheckout> must be used within <EmbeddedCheckoutProvider>");
             return e;
         },
-        en =
+        er =
             "Invalid prop `stripe` supplied to `EmbeddedCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.",
-        er = function (e) {
+        ei = function (e) {
             var n = e.stripe,
                 r = e.options,
                 i = e.children,
                 a = t.useMemo(
                     function () {
-                        return w(n, en);
+                        return x(n, er);
                     },
                     [n],
                 ),
@@ -751,11 +751,11 @@
                 ),
                 t.useEffect(
                     function () {
-                        x(o);
+                        P(o);
                     },
                     [o],
                 );
-            var _ = S(n);
+            var _ = v(n);
             t.useEffect(
                 function () {
                     null !== _ &&
@@ -766,7 +766,7 @@
                 },
                 [_, n],
             );
-            var f = S(r);
+            var f = v(r);
             return (
                 t.useEffect(
                     function () {
@@ -809,13 +809,13 @@
                     },
                     [f, r],
                 ),
-                t.createElement(ee.Provider, { value: c }, i)
+                t.createElement(et.Provider, { value: c }, i)
             );
         },
-        ei = function (e) {
+        ea = function (e) {
             var n = e.id,
                 r = e.className,
-                i = et().embeddedCheckout,
+                i = en().embeddedCheckout,
                 a = t.useRef(!1),
                 s = t.useRef(null);
             return (
@@ -836,61 +836,61 @@
                 t.createElement("div", { ref: s, id: n, className: r })
             );
         },
-        ea = function (e) {
+        es = function (e) {
             var n = e.id,
                 r = e.className;
-            return et(), t.createElement("div", { id: n, className: r });
+            return en(), t.createElement("div", { id: n, className: r });
         },
-        es = J ? ea : ei,
-        eo = function () {
-            return $("calls useStripe()").stripe;
+        eo = ee ? es : ea,
+        el = function () {
+            return q("calls useStripe()").stripe;
         },
-        el = X("auBankAccount", J),
-        eu = X("card", J),
-        ec = X("cardNumber", J),
-        ed = X("cardExpiry", J),
-        e_ = X("cardCvc", J),
-        ef = X("fpxBank", J),
-        ep = X("iban", J),
-        eh = X("idealBank", J),
-        em = X("p24Bank", J),
-        eg = X("epsBank", J),
-        eE = X("payment", J),
-        eA = X("expressCheckout", J),
-        eI = X("currencySelector", J),
-        eT = X("paymentRequestButton", J),
-        ey = X("linkAuthentication", J),
-        eS = X("address", J),
-        ev = X("shippingAddress", J),
-        eC = X("paymentMethodMessaging", J),
-        eb = X("affirmMessage", J),
-        eN = X("afterpayClearpayMessage", J);
-    (e.AddressElement = eS),
-        (e.AffirmMessageElement = eb),
-        (e.AfterpayClearpayMessageElement = eN),
-        (e.AuBankAccountElement = el),
-        (e.CardCvcElement = e_),
-        (e.CardElement = eu),
-        (e.CardExpiryElement = ed),
-        (e.CardNumberElement = ec),
-        (e.CheckoutProvider = K),
-        (e.CurrencySelectorElement = eI),
-        (e.Elements = k),
+        eu = J("auBankAccount", ee),
+        ec = J("card", ee),
+        ed = J("cardNumber", ee),
+        e_ = J("cardExpiry", ee),
+        ef = J("cardCvc", ee),
+        eh = J("fpxBank", ee),
+        ep = J("iban", ee),
+        em = J("idealBank", ee),
+        eg = J("p24Bank", ee),
+        eE = J("epsBank", ee),
+        eA = J("payment", ee),
+        eI = J("expressCheckout", ee),
+        eT = J("currencySelector", ee),
+        ey = J("paymentRequestButton", ee),
+        eS = J("linkAuthentication", ee),
+        ev = J("address", ee),
+        eC = J("shippingAddress", ee),
+        eb = J("paymentMethodMessaging", ee),
+        eN = J("affirmMessage", ee),
+        eR = J("afterpayClearpayMessage", ee);
+    (e.AddressElement = ev),
+        (e.AffirmMessageElement = eN),
+        (e.AfterpayClearpayMessageElement = eR),
+        (e.AuBankAccountElement = eu),
+        (e.CardCvcElement = ef),
+        (e.CardElement = ec),
+        (e.CardExpiryElement = e_),
+        (e.CardNumberElement = ed),
+        (e.CheckoutProvider = $),
+        (e.CurrencySelectorElement = eT),
+        (e.Elements = U),
         (e.ElementsConsumer = V),
-        (e.EmbeddedCheckout = es),
-        (e.EmbeddedCheckoutProvider = er),
-        (e.EpsBankElement = eg),
-        (e.ExpressCheckoutElement = eA),
-        (e.FpxBankElement = ef),
+        (e.EmbeddedCheckout = eo),
+        (e.EmbeddedCheckoutProvider = ei),
+        (e.EpsBankElement = eE),
+        (e.ExpressCheckoutElement = eI),
+        (e.FpxBankElement = eh),
         (e.IbanElement = ep),
-        (e.IdealBankElement = eh),
-        (e.LinkAuthenticationElement = ey),
-        (e.P24BankElement = em),
-        (e.PaymentElement = eE),
-        (e.PaymentMethodMessagingElement = eC),
-        (e.PaymentRequestButtonElement = eT),
-        (e.ShippingAddressElement = ev),
-        (e.useCheckout = q),
-        (e.useElements = G),
-        (e.useStripe = eo);
+        (e.IdealBankElement = em),
+        (e.LinkAuthenticationElement = eS),
+        (e.P24BankElement = eg),
+        (e.PaymentElement = eA),
+        (e.PaymentMethodMessagingElement = eb),
+        (e.PaymentRequestButtonElement = ey),
+        (e.ShippingAddressElement = eC),
+        (e.useCheckout = X),
+        (e.useElements = F),
+        (e.useStripe = el);
 });

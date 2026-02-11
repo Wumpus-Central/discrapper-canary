@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => eI });
+n.d(t, { A: () => eT });
 var r = n(311907),
     i = n(73153),
     a = n(684013),
@@ -11,20 +11,19 @@ var r = n(311907),
     d = n(41984),
     _ = n(870507),
     f = n(682763),
-    p = n(912865),
-    h = n(275115),
-    m = n(321090),
-    g = n(222506),
-    E = n(127242),
-    A = n(680243),
-    I = n(96175),
-    T = n(905555),
-    y = n(672396),
-    S = n(644434);
-let v = new s.A("OverlayV3Store"),
-    C = new Set(),
+    h = n(912865),
+    p = n(275115),
+    g = n(321090),
+    E = n(222506),
+    A = n(127242),
+    I = n(680243),
+    T = n(96175),
+    y = n(905555),
+    S = n(672396),
+    v = n(644434);
+let C = new s.A("OverlayV3Store"),
     b = new Set(),
-    N = null,
+    N = new Set(),
     R = null,
     O = null,
     D = null,
@@ -32,126 +31,127 @@ let v = new s.A("OverlayV3Store"),
     w = null,
     x = null,
     P = null,
-    M = {},
+    M = null,
     k = {},
-    U = {};
-function G(e, t) {
-    null == U[e] && (U[e] = new Set()), U[e].add(t);
+    U = {},
+    G = {};
+function F(e, t) {
+    null == G[e] && (G[e] = new Set()), G[e].add(t);
 }
 function V(e) {
-    null != U[e] && (U[e] = new Set());
+    null != G[e] && (G[e] = new Set());
 }
-let F = (0, I.I2)();
-function B() {
-    F = (0, I.I2)();
+let B = (0, T.I2)();
+function j() {
+    B = (0, T.I2)();
 }
-function j(e, t) {
-    if (null != N) {
-        null != t && (k[e] = t);
+function H(e, t) {
+    if (null != R) {
+        null != t && (U[e] = t);
         try {
-            if ((N.trackGame(e), C.has(e))) return;
-            C.add(e),
+            if ((R.trackGame(e), b.has(e))) return;
+            b.add(e),
                 (0, f.dK)(e, "maybeTrackGame", { newOverlayMethod: null != t ? d.Ue[t] : null }),
                 a.A.updateOverlayState(e, d.AR.WAITING_FOR_POPOUT_OPEN, "OverlayStore.maybeTrackGame");
         } catch (t) {
-            v.error("Error tracking game:", t), (0, f.mD)(e, t, { crashType: "renderer" });
+            C.error("Error tracking game:", t), (0, f.mD)(e, t, { crashType: "renderer" });
         }
     }
 }
-function H(e) {
-    if (!C.has(e)) return;
-    let t = k[e],
-        n = M[e];
+function Y(e) {
+    if (!b.has(e)) return;
+    let t = U[e],
+        n = k[e];
     (0, f.dK)(e, "removeTrackedGame", { overlayMethod: null != t ? d.Ue[t] : null, overlayState: n }),
-        C.delete(e),
-        delete M[e],
+        b.delete(e),
         delete k[e],
-        b.delete(e);
+        delete U[e],
+        N.delete(e);
     try {
-        if (null == N) return;
-        N.untrackGame(e), v.verbose(`Removing tracked game ${e}`);
-        let t = C.values().next().value;
-        x === e && (x = t ?? null);
+        if (null == R) return;
+        R.untrackGame(e), C.verbose(`Removing tracked game ${e}`);
+        let t = b.values().next().value;
+        P === e && (P = t ?? null);
     } catch (t) {
-        v.error("Error removing tracked game:", t), (0, f.mD)(e, t, { crashType: "native" });
+        C.error("Error removing tracked game:", t), (0, f.mD)(e, t, { crashType: "native" });
     }
 }
-function Y() {
+function W() {
     try {
-        for (let e of C) N?.untrackGame(e);
-        C.clear(),
+        for (let e of b) R?.untrackGame(e);
+        b.clear(),
             (0, f._r)(null, "clearTrackedGames"),
-            (M = {}),
             (k = {}),
-            b.clear(),
-            v.verbose("Cleared all tracked games");
+            (U = {}),
+            N.clear(),
+            C.verbose("Cleared all tracked games");
     } catch (e) {
-        v.error("Error clearing tracked games:", e), (0, f.mD)(c.UNSET_PID, e, { crashType: "native" });
+        C.error("Error clearing tracked games:", e), (0, f.mD)(c.UNSET_PID, e, { crashType: "native" });
     }
 }
-async function W() {
-    if (!A.A.isOverlayEnabled) return void Y();
-    await J();
+async function K() {
+    if (!I.A.isOverlayEnabled) return void W();
+    await ee();
     let e = new Set(
         o.Ay.getRunningGames()
             .filter((e) => o.Ay.getOverlayEnabledForGame(e))
             .map((e) => e.pid),
     );
-    for (let t of new Set([...C].filter((t) => !e.has(t)))) H(t);
-    for (let e of C) j(e);
+    for (let t of new Set([...b].filter((t) => !e.has(t)))) Y(t);
+    for (let e of b) H(e);
 }
-function K(e) {
+function $(e) {
     let t = o.Ay.getGameOrTransformedSubgameForPID(e);
-    a.A.setAssociatedGame(x ?? c.UNSET_PID, e, t);
+    a.A.setAssociatedGame(P ?? c.UNSET_PID, e, t);
 }
 function z() {
-    null == w ||
-        L !== w ||
-        (null != N &&
-            ((w = null),
-            (0, f.dK)(L, "renderer_window_refreshing_finished"),
-            N.readyToShow?.(L),
-            a.A.updateOverlayState(L, d.AR.OVERLAY_RENDERING, "checkPopoutRefresh"),
-            v.verbose(`Showing overlay v3 for pid ${L}`)));
+    null == x ||
+        w !== x ||
+        (null != R &&
+            ((x = null),
+            (0, f.dK)(w, "renderer_window_refreshing_finished"),
+            R.readyToShow?.(w),
+            a.A.updateOverlayState(w, d.AR.OVERLAY_RENDERING, "checkPopoutRefresh"),
+            C.verbose(`Showing overlay v3 for pid ${w}`)));
 }
-function $(e, t) {
+function q(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (null != e) {
-        let t = k[e] === d.Ue.OutOfProcessLimitedInteraction;
-        if (t !== P) {
-            P = t;
+        let t = U[e] === d.Ue.OutOfProcessLimitedInteraction;
+        if (t !== M) {
+            M = t;
             try {
-                "function" == typeof N?.setLimitedInteraction
-                    ? (v.info("Setting limited interaction", t),
+                "function" == typeof R?.setLimitedInteraction
+                    ? (C.info("Setting limited interaction", t),
                       (0, f._r)(e, "focus_and_interaction_set", { isLimitedInteraction: t, focusable: !t }),
-                      N.setLimitedInteraction(t))
-                    : v.info("No setLimitedInteraction function found, skipping");
+                      R.setLimitedInteraction(t))
+                    : C.info("No setLimitedInteraction function found, skipping");
             } catch (t) {
-                v.error("Error setting limited interaction mode:", t), (0, f.mD)(e, t, { crashType: "native" });
+                C.error("Error setting limited interaction mode:", t), (0, f.mD)(e, t, { crashType: "native" });
             }
         }
     }
     a.A.setFocusedPID(0 === e ? null : e, t, n);
 }
-function q() {
-    $(null, null, !0);
+function X() {
+    q(null, null, !0);
 }
 function Z(e) {
-    if (F.allDone) {
-        if (!b.has(e))
+    if (B.allDone) {
+        if (!N.has(e))
             return void a.A.updateOverlayState(e, d.AR.WAITING_FOR_SUCCESSFUL_SHOW, "maybeTrackSuccessfullyShown");
         a.A.successfullyShown(e);
     }
 }
 function Q(e) {
     let { pid: t } = e;
-    b.add(t), Z(t);
+    N.add(t), Z(t);
 }
-function X(e) {
+function J(e) {
     let { initialized: t } = e;
-    if (((F = { ...F, windowHandleSentToNative: t }), t)) {
-        let e = D ?? c.UNSET_PID;
-        F.reactInitializationStarted
+    if (((B = { ...B, windowHandleSentToNative: t }), t)) {
+        let e = L ?? c.UNSET_PID;
+        B.reactInitializationStarted
             ? a.A.updateOverlayState(e, d.AR.WAITING_FOR_SUCCESSFUL_SHOW, "handleOverlayV3WindowHandleInitialized")
             : a.A.updateOverlayState(
                   e,
@@ -161,107 +161,107 @@ function X(e) {
             (0, f._r)(e, "window_handle_initialized");
     }
 }
-async function J() {
-    A.A.isModuleLoaded || A.A.isModuleLoading || (await (0, f.P_)()), (N = await (0, T.N)());
+async function ee() {
+    I.A.isModuleLoaded || I.A.isModuleLoading || (await (0, f.P_)()), (R = await (0, y.N)());
 }
-async function ee(e) {
+async function et(e) {
     e.overlayMethod === d.Ue.OutOfProcess || e.overlayMethod === d.Ue.OutOfProcessLimitedInteraction
-        ? (await J(), j(e.pid, e.overlayMethod))
-        : H(e.pid),
-        eA.emitChange();
+        ? (await ee(), H(e.pid, e.overlayMethod))
+        : Y(e.pid),
+        eI.emitChange();
 }
-function et() {
-    B(), (P = null);
-}
-function en(e) {
-    let { createWindowTriggeringPID: t } = e;
-    (F = { ...F, popoutOpened: !0 }), K(t), (x = t), (D = t), (0, c.setPID)(t);
+function en() {
+    j(), (M = null);
 }
 function er(e) {
+    let { createWindowTriggeringPID: t } = e;
+    (B = { ...B, popoutOpened: !0 }), $(t), (P = t), (L = t), (0, c.setPID)(t);
+}
+function ei(e) {
     let { createWindowTriggeringPID: t, nativeWindowHandle: n } = e;
     a.A.updateOverlayState(t, d.AR.WAITING_FOR_MODULE_POPOUT_CAPTURE, "handleOverlayCreateWindowHandleSuccess");
 }
-function ei(e) {
+function ea(e) {
     let { createWindowTriggeringPID: t, error: n, nativeWindowHandle: r } = e;
     a.A.updateOverlayState(t, d.AR.OVERLAY_CRASHED_DISABLED, "handleOverlayWindowCreationFailure"),
-        (F = { ...F, errorMessage: "Error in _createOutOfProcessOverlayHostWindow: " + n }),
-        (0, f._r)(t, "renderer_window_mounting_failed", { error: n, popoutInitializationStages: F });
+        (B = { ...B, errorMessage: "Error in _createOutOfProcessOverlayHostWindow: " + n }),
+        (0, f._r)(t, "renderer_window_mounting_failed", { error: n, popoutInitializationStages: B });
 }
-function ea() {
-    q(), null != x && V(x), (x = null), (D = null), (0, c.setPID)(c.UNSET_PID), B();
-}
-function es(e) {
-    let { refreshingPID: t } = e;
-    return (
-        v.verbose(`Refreshing OOP host window for pid ${t}`), (w = t), (x = t), (D = t), (0, c.setPID)(t), K(t), z(), !0
-    );
+function es() {
+    X(), null != P && V(P), (P = null), (L = null), (0, c.setPID)(c.UNSET_PID), j();
 }
 function eo(e) {
+    let { refreshingPID: t } = e;
+    return (
+        C.verbose(`Refreshing OOP host window for pid ${t}`), (x = t), (P = t), (L = t), (0, c.setPID)(t), $(t), z(), !0
+    );
+}
+function el(e) {
     let { pid: t, windowHandle: n, windowClass: r } = e;
     null != r && _.C.has(r)
-        ? q()
-        : ($(t, null != n ? (0, I.Oy)(n) : null), t !== R && v.info("OverlayStore: Focused new PID", t));
+        ? X()
+        : (q(t, null != n ? (0, T.Oy)(n) : null), t !== O && C.info("OverlayStore: Focused new PID", t));
 }
-function el() {
-    q();
+function eu() {
+    X();
 }
-function eu(e) {
+function ec(e) {
     let { pid: t, windowHandle: n } = e;
     return (
-        null != n && null != t && G(t, (0, I.Oy)(n)),
-        (R !== t || O !== n) &&
-            (0, f._r)(t ?? R ?? c.UNSET_PID, "overlay_focused", {
+        null != n && null != t && F(t, (0, T.Oy)(n)),
+        (O !== t || D !== n) &&
+            (0, f._r)(t ?? O ?? c.UNSET_PID, "overlay_focused", {
                 focusedPID: t,
-                focusedWindowHandle: O,
+                focusedWindowHandle: D,
                 windowHandle: n,
             }),
-        (R = t),
-        (O = n),
+        (O = t),
+        (D = n),
         !0
     );
 }
-function ec() {
-    (F = { ...F, showInactiveCalled: !0 }), N?.onNativePopoutShowInactiveSuccess?.();
-}
 function ed() {
-    (F = { ...F, allDone: !0 }),
-        C.forEach((e) => {
+    (B = { ...B, showInactiveCalled: !0 }), R?.onNativePopoutShowInactiveSuccess?.();
+}
+function e_() {
+    (B = { ...B, allDone: !0 }),
+        b.forEach((e) => {
             Z(e);
         });
 }
-function e_(e) {
-    let { update: t } = e;
-    F = { ...F, ...t };
-}
 function ef(e) {
-    let { pid: t, windowHandle: n } = e;
-    (L = t),
-        z(),
-        null != n && null != t && G(t, (0, I.Oy)(n)),
-        null != N && (null != n || N.version?.() > 0) && N.setRenderingWindowHandle?.((0, I.Oy)(n ?? "0"), t);
-}
-function ep(e) {
-    v.verbose("Updating OverlayMethod", e), ee(e);
+    let { update: t } = e;
+    B = { ...B, ...t };
 }
 function eh(e) {
-    M[e.pid] = e.overlayState;
+    let { pid: t, windowHandle: n } = e;
+    (w = t),
+        z(),
+        null != n && null != t && F(t, (0, T.Oy)(n)),
+        null != R && (null != n || R.version?.() > 0) && R.setRenderingWindowHandle?.((0, T.Oy)(n ?? "0"), t);
 }
-function em() {
-    (N = A.A.getNativeModule()), W();
+function ep(e) {
+    C.verbose("Updating OverlayMethod", e), et(e);
+}
+function em(e) {
+    k[e.pid] = e.overlayState;
 }
 function eg() {
-    N = null;
+    (R = I.A.getNativeModule()), K();
 }
-class eE extends r.Ay.Store {
+function eE() {
+    R = null;
+}
+class eA extends r.Ay.Store {
     static displayName = "Overlay-V3-Store";
     initialize() {
-        this.waitFor(l.default, u.A, p.A, h.A, m.A, g.A, E.A, A.A, o.Ay);
+        this.waitFor(l.default, u.A, h.A, p.A, g.A, E.A, A.A, I.A, o.Ay);
     }
     isOverlayV3EnabledForPID(e) {
-        return C.has(e);
+        return b.has(e);
     }
     getWidgetByType(e) {
-        let t = u.A.getLayout(S.G);
+        let t = u.A.getLayout(v.G);
         if (null != t) {
             let n = t.widgets.find((t) => {
                 let n = u.A.getWidget(t);
@@ -276,67 +276,67 @@ class eE extends r.Ay.Store {
         return null != t && t.pinned;
     }
     getTargetPID() {
-        return y.ed && (D === c.UNSET_PID || null == D) ? c.DEV_PID : (D ?? c.UNSET_PID);
+        return S.ed && (L === c.UNSET_PID || null == L) ? c.DEV_PID : (L ?? c.UNSET_PID);
     }
     getFocusedPID() {
-        return R;
-    }
-    getFocusedWindowHandle() {
         return O;
     }
+    getFocusedWindowHandle() {
+        return D;
+    }
     getKnownWindowHandlesForPID(e) {
-        return null == U[e] ? null : U[e];
+        return null == G[e] ? null : G[e];
     }
     isFocused(e) {
-        return null != R && e !== c.UNSET_PID && (!!C.has(e) || e === c.DEV_PID) && R === e;
+        return null != O && e !== c.UNSET_PID && (!!b.has(e) || e === c.DEV_PID) && O === e;
     }
     getFocusedRunningGame() {
-        return null == R ? null : (o.Ay.getGameOrTransformedSubgameForPID(R) ?? null);
+        return null == O ? null : (o.Ay.getGameOrTransformedSubgameForPID(O) ?? null);
     }
     getPopoutInitializationStages() {
-        return F;
+        return B;
     }
     isWindowHandleInitialized() {
-        return F.windowHandleSentToNative;
+        return B.windowHandleSentToNative;
     }
     isReady(e) {
-        return !!C.has(e) && M[e] === d.AR.OVERLAY_RENDERING;
+        return !!b.has(e) && k[e] === d.AR.OVERLAY_RENDERING;
     }
     getOverlayState(e) {
-        return M[e] ?? null;
-    }
-    getIsOverlayPreShown(e) {
-        let t = M[e];
-        return null != t && I.Ms.has(t);
-    }
-    getOverlayMethod(e) {
         return k[e] ?? null;
     }
+    getIsOverlayPreShown(e) {
+        let t = k[e];
+        return null != t && T.Ms.has(t);
+    }
+    getOverlayMethod(e) {
+        return U[e] ?? null;
+    }
 }
-let eA = new eE(
+let eI = new eA(
         i.h,
-        __OVERLAY__ || !y.OX
-            ? { OVERLAY_FOCUSED: eu }
+        __OVERLAY__ || !S.OX
+            ? { OVERLAY_FOCUSED: ec }
             : {
                   OVERLAY_UPDATE_OVERLAY_METHOD: ep,
-                  OVERLAY_UPDATE_OVERLAY_STATE: eh,
-                  OVERLAY_FOCUSED: eu,
-                  OVERLAY_OOP_UI_INITIALIZED: ed,
-                  OVERLAY_OOP_UI_SHOW_INACTIVE_SUCCESS: ec,
-                  OVERLAY_OOP_POPOUT_INITIALIZATION_STAGE_CHANGED: e_,
-                  OVERLAY_UI_FOCUSED_PID: ef,
-                  OVERLAY_V3_PRE_CREATE_POPOUT: et,
-                  OVERLAY_V3_POST_CREATE_POPOUT: en,
-                  OVERLAY_V3_CREATE_WINDOW_HANDLE_SUCCESS: er,
-                  OVERLAY_V3_WINDOW_CREATION_FAILURE: ei,
-                  OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS: em,
-                  OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED: eg,
-                  OVERLAY_V3_NATIVE_REFRESH_HOST_WINDOW: es,
-                  OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: ea,
-                  OVERLAY_V3_NATIVE_FOCUS_GAINED: eo,
-                  OVERLAY_V3_NATIVE_FOCUS_LOST: el,
+                  OVERLAY_UPDATE_OVERLAY_STATE: em,
+                  OVERLAY_FOCUSED: ec,
+                  OVERLAY_OOP_UI_INITIALIZED: e_,
+                  OVERLAY_OOP_UI_SHOW_INACTIVE_SUCCESS: ed,
+                  OVERLAY_OOP_POPOUT_INITIALIZATION_STAGE_CHANGED: ef,
+                  OVERLAY_UI_FOCUSED_PID: eh,
+                  OVERLAY_V3_PRE_CREATE_POPOUT: en,
+                  OVERLAY_V3_POST_CREATE_POPOUT: er,
+                  OVERLAY_V3_CREATE_WINDOW_HANDLE_SUCCESS: ei,
+                  OVERLAY_V3_WINDOW_CREATION_FAILURE: ea,
+                  OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS: eg,
+                  OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED: eE,
+                  OVERLAY_V3_NATIVE_REFRESH_HOST_WINDOW: eo,
+                  OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: es,
+                  OVERLAY_V3_NATIVE_FOCUS_GAINED: el,
+                  OVERLAY_V3_NATIVE_FOCUS_LOST: eu,
                   OVERLAY_V3_NATIVE_SUCCESSFULLY_SHOWN: Q,
-                  OVERLAY_V3_NATIVE_WINDOW_HANDLE_INITIALIZED: X,
+                  OVERLAY_V3_NATIVE_WINDOW_HANDLE_INITIALIZED: J,
               },
     ),
-    eI = eA;
+    eT = eI;

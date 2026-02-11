@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     CR: "modalRoot__45776",
     Zy: "modalRootPortrait__45776",

@@ -1,58 +1,65 @@
-n.d(t, { A: () => d });
+"use strict";
+n.d(t, { A: () => f });
 var r = n(64700),
-    s = n(771253),
-    i = n(412703),
-    l = n(902173),
-    a = n(579473),
-    o = n(717415),
+    i = n(771253),
+    a = n(412703),
+    s = n(902173),
+    o = n(579473),
+    l = n(717415),
     u = n(652215);
-let c = new Set([u.NKC.FIVE_G, u.NKC.FOUR_G, u.NKC.UNKNOWN]);
-function d(e, t, n) {
-    let { quest: u } = r.useContext(o.VideoQuestModalContext),
-        { questConfig: d } = r.useContext(o.VideoQuestConfigContext),
-        m = r.useRef(!1),
-        E = r.useRef(null),
-        f = d.taskConfigV2.tasks[i.n.WATCH_VIDEO]?.assets,
-        p = r.useMemo(() => d.features.includes(l.L.FULL_EPISODE_VIDEO_QUEST), [d.features]),
-        v = r.useMemo(
+let c = new Set([u.NKC.FIVE_G, u.NKC.FOUR_G, u.NKC.UNKNOWN]),
+    d = 8e5;
+function _(e, t, n) {
+    return i.Ay.isSupported() && null != e.videoHls
+        ? o.fY.VIDEO_PLAYER_VIDEO_HLS
+        : n
+          ? null
+          : c.has(t) || null == e.videoLowRes
+            ? o.fY.VIDEO_PLAYER_VIDEO
+            : o.fY.VIDEO_PLAYER_VIDEO_LOW_RES;
+}
+function f(e, t, n, u) {
+    let { quest: c } = r.useContext(l.VideoQuestModalContext),
+        { questConfig: f } = r.useContext(l.VideoQuestConfigContext),
+        h = r.useRef(!1),
+        p = r.useRef(null),
+        g = f.taskConfigV2.tasks[a.n.WATCH_VIDEO]?.assets,
+        E = r.useMemo(() => f.features.includes(s.L.FULL_EPISODE_VIDEO_QUEST), [f.features]),
+        A = r.useMemo(() => (null != g ? _(g, t, E) : null), [g, t, E]),
+        I = r.useMemo(
             () =>
-                null != f
-                    ? s.Ay.isSupported() && null != f.videoHls
-                        ? a.fY.VIDEO_PLAYER_VIDEO_HLS
-                        : p
-                          ? null
-                          : c.has(t) || null == f.videoLowRes
-                            ? a.fY.VIDEO_PLAYER_VIDEO
-                            : a.fY.VIDEO_PLAYER_VIDEO_LOW_RES
-                    : null,
-            [f, t, p],
+                null != u
+                    ? { url: u, mimetype: "video/mp4", isAnimated: !0 }
+                    : null != A
+                      ? (0, o.tW)(c, A, void 0, !1)
+                      : null,
+            [c, A, u],
         ),
-        h = r.useMemo(() => (null != v ? (0, a.tW)(u, v, void 0, !1) : null), [u, v]),
-        _ = () => {
-            null != E.current && 8e5 !== E.current.config.minAutoBitrate && (E.current.config.minAutoBitrate = 8e5);
+        T = () => {
+            null != p.current && p.current.config.minAutoBitrate !== d && (p.current.config.minAutoBitrate = d);
         },
-        C = r.useCallback(() => {
-            null != E.current && (E.current.config.minAutoBitrate = 8e5);
+        y = r.useCallback(() => {
+            null != p.current && (p.current.config.minAutoBitrate = d);
         }, []);
     return (
         r.useEffect(() => {
-            if (v !== a.fY.VIDEO_PLAYER_VIDEO_HLS || null == h || null == e.current || m.current) return;
-            (E.current = new s.Ay({
+            if (A !== o.fY.VIDEO_PLAYER_VIDEO_HLS || null == I || null == e.current || h.current) return;
+            (p.current = new i.Ay({
                 backBufferLength: 20,
                 maxBufferLength: 30,
                 startPosition: n,
                 startFragPrefetch: !0,
                 startLevel: -1,
             })),
-                E.current.on(s.Ay.Events.FRAG_LOADING, _),
-                E.current.loadSource(h.url),
-                E.current.attachMedia(e.current),
-                (m.current = !0);
-            let t = E.current;
+                p.current.on(i.Ay.Events.FRAG_LOADING, T),
+                p.current.loadSource(I.url),
+                p.current.attachMedia(e.current),
+                (h.current = !0);
+            let t = p.current;
             return () => {
-                null != t && t.off(s.Ay.Events.FRAG_LOADING, _);
+                null != t && t.off(i.Ay.Events.FRAG_LOADING, T);
             };
-        }, [h, v, e, n]),
-        { videoAssetType: v, videoAsset: h, hlsRef: E, onFirstChunkLoaded: C }
+        }, [I, A, e, n]),
+        { videoAssetType: A, videoAsset: I, hlsRef: p, onFirstChunkLoaded: y }
     );
 }

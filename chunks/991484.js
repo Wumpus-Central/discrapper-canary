@@ -1,23 +1,24 @@
-n.d(t, { A: () => s });
+"use strict";
+n.d(t, { A: () => i });
 var r = n(64700);
-function s(e) {
+function i(e) {
     let {
             getCurrentVideoTime: t,
             isPlaying: n,
-            isMetadataLoaded: s,
-            isInitialSeekComplete: i,
-            onAnalytics: l,
-            emitIntervalMs: a,
-            minSegmentDurationMs: o,
+            isMetadataLoaded: i,
+            isInitialSeekComplete: a,
+            onAnalytics: s,
+            emitIntervalMs: o,
+            minSegmentDurationMs: l,
         } = e,
         [u, c] = r.useState(null),
         d = (0, r.useRef)(null),
-        m = (0, r.useRef)(Date.now()),
-        E = (0, r.useRef)(!1),
-        f = (0, r.useCallback)(
+        _ = (0, r.useRef)(Date.now()),
+        f = (0, r.useRef)(!1),
+        h = (0, r.useCallback)(
             (e) => {
                 e.segmentEndSec < e.segmentStartSec ||
-                    l({
+                    s({
                         start_time: e.startTime,
                         end_time: e.endTime,
                         duration: e.endTime - e.startTime,
@@ -26,56 +27,56 @@ function s(e) {
                         segment_duration_sec: e.segmentEndSec - e.segmentStartSec,
                     });
             },
-            [l],
+            [s],
         ),
         p = (0, r.useCallback)(() => {
             let e = t();
-            if (null != e && s && i) {
+            if (null != e && i && a) {
                 let t = Date.now();
-                c({ startTime: t, endTime: t, segmentStartSec: e, segmentEndSec: e }), (E.current = !0);
+                c({ startTime: t, endTime: t, segmentStartSec: e, segmentEndSec: e }), (f.current = !0);
             }
-        }, [t, s, i]),
-        v = (0, r.useCallback)(() => {
+        }, [t, i, a]),
+        g = (0, r.useCallback)(() => {
             let e = t();
             if (null == e || null == u) return;
             let n = Date.now();
-            n - m.current < a ||
-                e - u.segmentStartSec < o / 1e3 ||
-                (f({ ...u, endTime: n, segmentEndSec: e }),
+            n - _.current < o ||
+                e - u.segmentStartSec < l / 1e3 ||
+                (h({ ...u, endTime: n, segmentEndSec: e }),
                 c({ startTime: n, endTime: n, segmentStartSec: e, segmentEndSec: e }),
-                (m.current = n));
-        }, [u, f, a, o, t]);
+                (_.current = n));
+        }, [u, h, o, l, t]);
     return (
         (0, r.useEffect)(() => {
-            (s && i) || (c(null), (E.current = !1));
-        }, [s, i]),
+            (i && a) || (c(null), (f.current = !1));
+        }, [i, a]),
         (0, r.useEffect)(() => {
-            if (n && s && i)
-                E.current || p(),
+            if (n && i && a)
+                f.current || p(),
                     (d.current = window.setInterval(() => {
-                        v();
+                        g();
                     }, 200));
             else {
                 let e = t();
                 if (null != u && null != e) {
                     let t = Date.now();
-                    e - u.segmentStartSec > 0.2 && f({ ...u, endTime: t, segmentEndSec: e });
+                    e - u.segmentStartSec > 0.2 && h({ ...u, endTime: t, segmentEndSec: e });
                 }
-                c(null), (E.current = !1), null != d.current && (clearInterval(d.current), (d.current = null));
+                c(null), (f.current = !1), null != d.current && (clearInterval(d.current), (d.current = null));
             }
             return () => {
                 null != d.current && (clearInterval(d.current), (d.current = null));
             };
-        }, [n, s, i, u, v, f, p, t]),
+        }, [n, i, a, u, g, h, p, t]),
         {
             forceSendCurrentSegment: (0, r.useCallback)(() => {
                 let e = t();
                 if (null != u && null != e) {
                     let t = Date.now();
-                    e - u.segmentStartSec > 0.2 && f({ ...u, endTime: t, segmentEndSec: e }), c(null), (E.current = !1);
+                    e - u.segmentStartSec > 0.2 && h({ ...u, endTime: t, segmentEndSec: e }), c(null), (f.current = !1);
                 }
-            }, [u, f, t]),
-            isInitialized: E.current,
+            }, [u, h, t]),
+            isInitialized: f.current,
         }
     );
 }

@@ -19,111 +19,111 @@ function d(e, t, n) {
         });
     return (0, i.forwardRef)(function (n, f) {
         let {
-                onScroll: p,
-                dir: h = "ltr",
-                sections: m,
-                columns: g,
-                getItemKey: E,
-                getItemHeight: A,
-                getSectionHeight: I,
-                chunkSize: T,
-                renderSection: y,
-                renderItem: S,
-                getSectionProps: v,
-                itemGutter: C,
-                removeEdgeItemGutters: b,
-                sectionGutter: N,
-                padding: R,
-                paddingVertical: O,
-                paddingHorizontal: D,
-                fade: L = !1,
-                className: w,
-                style: x,
-                maxContentWidth: P,
-                renderAccessory: M,
-                onItemVisibilityChange: k,
-                ...U
+                onScroll: h,
+                dir: p = "ltr",
+                sections: g,
+                columns: E,
+                getItemKey: A,
+                getItemHeight: I,
+                getSectionHeight: T,
+                chunkSize: y,
+                renderSection: S,
+                renderItem: v,
+                getSectionProps: C,
+                itemGutter: b,
+                removeEdgeItemGutters: N,
+                sectionGutter: R,
+                padding: O,
+                paddingVertical: D,
+                paddingHorizontal: L,
+                fade: w = !1,
+                className: x,
+                style: P,
+                maxContentWidth: M,
+                renderAccessory: k,
+                onItemVisibilityChange: U,
+                ...G
             } = n,
-            G = i.useRef(null),
+            F = i.useRef(null),
             V = i.useRef(null),
-            F = i.useRef({}),
-            [B, j] = i.useState(!1),
-            { scrollerRef: H, scrollerState: Y, getScrollerState: W } = (0, o.F6)();
-        (0, o._I)({ scrollerRef: H, className: w, specs: a, orientation: "vertical", dir: h });
+            B = i.useRef({}),
+            [j, H] = i.useState(!1),
+            { scrollerRef: Y, scrollerState: W, getScrollerState: K } = (0, o.F6)();
+        (0, o._I)({ scrollerRef: Y, className: x, specs: a, orientation: "vertical", dir: p });
         let {
-            forceUpdateOnChunkChange: K,
+            forceUpdateOnChunkChange: $,
             coordsMap: z,
-            gridData: $,
-            visibleSections: q,
+            gridData: q,
+            visibleSections: X,
             totalHeight: Z,
             forceUpdate: Q,
-            masonryComputer: X,
+            masonryComputer: J,
         } = (0, o.vL)({
-            sections: m,
-            columns: g,
-            getItemKey: E,
-            getItemHeight: A,
-            getSectionHeight: I,
-            chunkSize: T,
-            itemGutter: C,
-            removeEdgeItemGutters: b,
-            sectionGutter: N,
-            padding: R,
-            paddingVertical: O,
-            paddingHorizontal: D,
-            getScrollerState: W,
-            dir: h,
-            maxBufferWidth: P,
+            sections: g,
+            columns: E,
+            getItemKey: A,
+            getItemHeight: I,
+            getSectionHeight: T,
+            chunkSize: y,
+            itemGutter: b,
+            removeEdgeItemGutters: N,
+            sectionGutter: R,
+            padding: O,
+            paddingVertical: D,
+            paddingHorizontal: L,
+            getScrollerState: K,
+            dir: p,
+            maxBufferWidth: M,
         });
         i.useEffect(() => {
-            null != k && (0, l.EL)(q, F.current, k), (F.current = q);
-        }, [q, k]);
-        let J = (0, i.useCallback)(
+            null != U && (0, l.EL)(X, B.current, U), (B.current = X);
+        }, [X, U]);
+        let ee = (0, i.useCallback)(
                 function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
-                    e > Y.current.dirty && (Y.current.dirty = e), 2 === e ? Q() : K(1);
+                    e > W.current.dirty && (W.current.dirty = e), 2 === e ? Q() : $(1);
                 },
-                [K, Y, Q],
+                [$, W, Q],
             ),
-            ee = (0, o.kR)(H),
-            et = (0, i.useCallback)(() => X.itemGrid, [X]),
-            en = (0, i.useCallback)(() => X.coordsMap, [X]),
-            er = i.useCallback(() => J(), [J]);
-        (0, o.Bb)({ ref: H, key: "container", onUpdate: er, resizeObserver: _, listenerMap: d }),
+            et = (0, o.kR)(Y),
+            en = (0, i.useCallback)(() => J.itemGrid, [J]),
+            er = (0, i.useCallback)(() => J.coordsMap, [J]),
+            ei = i.useCallback(() => ee(), [ee]);
+        (0, o.Bb)({ ref: Y, key: "container", onUpdate: ei, resizeObserver: _, listenerMap: d }),
             (0, i.useImperativeHandle)(
                 f,
                 () => ({
-                    getScrollerNode: () => H.current,
-                    getItemGrid: et,
-                    getCoordsMap: en,
-                    getScrollerState: W,
-                    ...(0, o.cJ)(H, W, ee),
+                    getScrollerNode: () => Y.current,
+                    getItemGrid: en,
+                    getCoordsMap: er,
+                    getScrollerState: K,
+                    ...(0, o.cJ)(Y, K, et),
                 }),
-                [H, W, et, ee, en],
+                [Y, K, en, et, er],
             );
-        let ei = (0, i.useCallback)(
+        let ea = (0, i.useCallback)(
             (e) => {
-                J(1),
-                    null == G.current ? j(!0) : clearTimeout(G.current),
-                    (G.current = setTimeout(() => {
-                        (G.current = null), j(!1);
+                ee(1),
+                    null == F.current ? H(!0) : clearTimeout(F.current),
+                    (F.current = setTimeout(() => {
+                        (F.current = null), H(!1);
                     }, 200)),
-                    null != p && p(e);
+                    null != h && h(e);
             },
-            [p, J],
+            [h, ee],
         );
         return (
             i.useLayoutEffect(() => {
-                2 !== Y.current.dirty && (Y.current.dirty = 2);
-            }, [Z, Y]),
+                2 !== W.current.dirty && (W.current.dirty = 2);
+            }, [Z, W]),
             (0, r.jsxs)("div", {
-                ref: H,
-                onScroll: ei,
-                className: s()(w, { [e]: !0, [t]: L, [c.qw]: B }),
-                style: (0, o.Ze)(x),
-                ...U,
+                ref: Y,
+                onScroll: ea,
+                className: s()(x, { [e]: !0, [t]: w, [c.qw]: j }),
+                style: (0, o.Ze)(P),
+                ...G,
                 children: [
-                    M?.(Z) ?? null,
+                    k?.(Z) ?? null,
                     (0, i.useMemo)(
                         () =>
                             (0, r.jsx)(u.xpW, {
@@ -132,12 +132,12 @@ function d(e, t, n) {
                                     style: { height: Z },
                                     className: c.Qs,
                                     ref: V,
-                                    children: Object.keys(q).map((e) => {
+                                    children: Object.keys(X).map((e) => {
                                         let t = (0, o.Vd)(e),
                                             n = z[e],
-                                            i = q[e],
+                                            i = X[e],
                                             a = z[(0, o.tx)(t)],
-                                            s = v?.(t);
+                                            s = C?.(t);
                                         return null != n && null != i
                                             ? (0, r.jsxs)(
                                                   "div",
@@ -145,11 +145,11 @@ function d(e, t, n) {
                                                       ...s,
                                                       style: { ...n, ...(s?.style ?? {}) },
                                                       children: [
-                                                          null != y && null != a && y(t, a, e),
+                                                          null != S && null != a && S(t, a, e),
                                                           i.map((e) => {
                                                               let [t, n, r] = e,
                                                                   i = z[t];
-                                                              return null != i ? S(n, r, i, t, $) : null;
+                                                              return null != i ? v(n, r, i, t, q) : null;
                                                           }),
                                                       ],
                                                   },
@@ -159,7 +159,7 @@ function d(e, t, n) {
                                     }),
                                 }),
                             }),
-                        [q, S, y, z, Z, v, $],
+                        [X, v, S, z, Z, C, q],
                     ),
                 ],
             })

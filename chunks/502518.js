@@ -1,6 +1,6 @@
 "use strict";
 let r, i;
-n.d(t, { b: () => H, q: () => V }), n(142703), n(667532), n(321073);
+n.d(t, { b: () => Y, q: () => V }), n(142703), n(667532), n(321073);
 var a = n(835245);
 n(423034);
 var s = n(80703),
@@ -11,36 +11,36 @@ var s = n(80703),
 let d = "x-science-test",
     _ = 1500,
     f = 1e4,
-    p = 36e5,
-    h = 6e4,
-    m = 36e5,
-    g = p,
+    h = 36e5,
+    p = 6e4,
+    g = 36e5,
     E = h,
-    A = m,
-    I = _,
-    T = 0,
+    A = p,
+    I = g,
+    T = _,
     y = 0,
     S = 0,
     v = 0,
     C = 0,
-    b = null,
-    N = 0,
-    R = Number.MAX_SAFE_INTEGER,
-    O = 0,
+    b = 0,
+    N = null,
+    R = 0,
+    O = Number.MAX_SAFE_INTEGER,
     D = 0,
-    L = null,
-    w = !1,
-    x = null,
-    P = null;
-function M() {
-    (y = 0), (S = 0), (v = 0), (N = 0), (R = Number.MAX_SAFE_INTEGER), (O = 0), (D = 0), (b = Date.now()), (C = T);
+    L = 0,
+    w = null,
+    x = !1,
+    P = null,
+    M = null;
+function k() {
+    (S = 0), (v = 0), (C = 0), (R = 0), (O = Number.MAX_SAFE_INTEGER), (D = 0), (L = 0), (N = Date.now()), (b = y);
 }
-function k(e) {
+function U(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
     return e + t;
 }
-let U = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
-    G = new u.n(),
+let G = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
+    F = new u.n(),
     V = {
         handleConnectionOpen: () => {},
         handleConnectionClosed: () => {},
@@ -48,39 +48,39 @@ let U = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
         handleTrack: () => {},
         handleSetAnalyticsToken: () => {},
     },
-    F = [],
-    B = null,
-    j = () => Promise.resolve({ sessionId: void 0 }),
-    H = (e) => {
+    B = [],
+    j = null,
+    H = () => Promise.resolve({ sessionId: void 0 }),
+    Y = (e) => {
         let {
             dispatcher: t,
             actionHandler: n,
             getFingerprint: u,
-            getSessionId: p = j,
-            TRACKING_URL: h,
-            drainTimeoutOverride: m,
-            waitFor: H,
-            scheduleWhenIdle: Y = U,
-            getLaunchSignature: W = () => null,
+            getSessionId: h = H,
+            TRACKING_URL: p,
+            drainTimeoutOverride: g,
+            waitFor: Y,
+            scheduleWhenIdle: W = G,
+            getLaunchSignature: K = () => null,
         } = e;
-        function K(e) {
+        function $(e) {
             if (null != i) return i;
             let t = e.fingerprint ?? u();
             return null != t ? (0, s.d)(t) : null;
         }
         function z() {
-            return 0 !== F.length && (null != i ? null != r : null != u());
+            return 0 !== B.length && (null != i ? null != r : null != u());
         }
-        function $(e) {
+        function q(e) {
             let { shouldFlushOnNextTick: t = !1 } = e;
-            null == B && z() && (B = t ? setTimeout(q, 0) : Y(q, { timeout: I }));
+            null == j && z() && (j = t ? setTimeout(X, 0) : W(X, { timeout: T }));
         }
-        function q() {
-            if (((B = null), !z())) return Promise.resolve();
-            let e = F.slice();
-            (F = []), (N = k(N));
+        function X() {
+            if (((j = null), !z())) return Promise.resolve();
+            let e = B.slice();
+            (B = []), (R = U(R));
             let t = e.length;
-            (R = Math.min(R, t)), (O = Math.max(O, t)), (D = k(D, t));
+            (O = Math.min(O, t)), (D = Math.max(D, t)), (L = U(L, t));
             let n = Z(e);
             return (
                 n.then(
@@ -88,10 +88,10 @@ let U = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                         e.forEach((e) => {
                             e.resolve?.();
                         }),
-                            (S = k(S));
+                            (v = U(v));
                     },
                     (t) => {
-                        F.unshift(...e), (v = k(v));
+                        B.unshift(...e), (C = U(C));
                         let { message: n } = t.body || t;
                         console.warn("[AnalyticsTrackingStore] Track:", n);
                     },
@@ -100,14 +100,14 @@ let U = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
             );
         }
         function Z(e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h,
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p,
                 n = Date.now(),
                 i = e.map((e) => ({ ...e, properties: { ...e.properties, client_send_timestamp: n } })),
                 s = {};
             return (
-                w || ((P = (0, a.A)()), (s[d] = P), (w = !0)),
+                x || ((M = (0, a.A)()), (s[d] = M), (x = !0)),
                 l.Bo.post({ url: t, headers: s, body: { token: r, events: i }, retries: 3, rejectWithError: !1 }).then(
-                    (e) => (s[d] && (x = e?.headers?.[d] ?? null), e),
+                    (e) => (s[d] && (P = e?.headers?.[d] ?? null), e),
                 )
             );
         }
@@ -116,80 +116,80 @@ let U = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 type: c.bZ.CLIENT_TELEMETRY,
                 properties: {
                     client_track_timestamp: Date.now(),
-                    rpc_success_count: S,
-                    rpc_failure_count: v,
-                    first_seen_event_sequence_number: C,
-                    last_seen_event_sequence_number: T,
-                    telemetry_period_start_timestamp: b,
+                    rpc_success_count: v,
+                    rpc_failure_count: C,
+                    first_seen_event_sequence_number: b,
+                    last_seen_event_sequence_number: y,
+                    telemetry_period_start_timestamp: N,
                     telemetry_period_end_timestamp: Date.now(),
-                    event_queue_rejection_count: y,
-                    event_queue_batch_count: N,
-                    event_queue_batch_min_size: R === Number.MAX_SAFE_INTEGER ? 0 : R,
-                    event_queue_batch_max_size: O,
-                    event_queue_batch_avg_size: N > 0 ? D / N : 0,
-                    science_request_id: P,
-                    science_response: x,
-                    launch_signature: W(),
+                    event_queue_rejection_count: S,
+                    event_queue_batch_count: R,
+                    event_queue_batch_min_size: O === Number.MAX_SAFE_INTEGER ? 0 : O,
+                    event_queue_batch_max_size: D,
+                    event_queue_batch_avg_size: R > 0 ? L / R : 0,
+                    science_request_id: M,
+                    science_response: P,
+                    launch_signature: K(),
                 },
             };
-            return M(), Z([e], c.mX.CLIENT_TELEMETRY);
-        }
-        function X() {
-            if (null == L) return !1;
-            switch (L.type) {
-                case "timeout":
-                    clearTimeout(L.id);
-                    break;
-                case "interval":
-                    clearInterval(L.id);
-                    break;
-                default:
-                    L.type;
-            }
-            return (L = null), !0;
+            return k(), Z([e], c.mX.CLIENT_TELEMETRY);
         }
         function J() {
-            if (null != L) return;
+            if (null == w) return !1;
+            switch (w.type) {
+                case "timeout":
+                    clearTimeout(w.id);
+                    break;
+                case "interval":
+                    clearInterval(w.id);
+                    break;
+                default:
+                    w.type;
+            }
+            return (w = null), !0;
+        }
+        function ee() {
+            if (null != w) return;
             let e = () => {
-                let t = 0.1 * g;
-                L = {
+                let t = 0.1 * E;
+                w = {
                     type: "timeout",
                     id: setTimeout(
                         () => {
                             Q(), e();
                         },
-                        Math.max(g + (Math.floor(Math.random() * t * 2) - t), E),
+                        Math.max(E + (Math.floor(Math.random() * t * 2) - t), A),
                     ),
                 };
             };
-            L = {
+            w = {
                 type: "timeout",
                 id: setTimeout(
                     () => {
                         Q(), e();
                     },
-                    Math.floor(Math.random() * (A - E) + E),
+                    Math.floor(Math.random() * (I - A) + A),
                 ),
             };
         }
-        function ee() {
-            if (!X()) return;
+        function et() {
+            if (!J()) return;
         }
-        (I = m ?? _),
+        (T = g ?? _),
             (V.handleConnectionOpen = function (e) {
                 let { analyticsToken: t, user: n } = e;
-                return null != t && (r = t), null != n.id && (i = n.id), J(), $({ shouldFlushOnNextTick: !1 }), !1;
+                return null != t && (r = t), null != n.id && (i = n.id), ee(), q({ shouldFlushOnNextTick: !1 }), !1;
             }),
             (V.handleConnectionClosed = function () {
-                return q(), ee(), (r = null), (i = null), !1;
+                return X(), et(), (r = null), (i = null), !1;
             }),
             (V.handleFingerprint = function () {
-                return q(), !1;
+                return X(), !1;
             }),
             (V.handleTrack = function (e) {
                 let { event: t, properties: n, flush: r, fingerprint: i, resolve: a } = e;
                 return (
-                    p().then((e) => {
+                    h().then((e) => {
                         let { sessionId: s } = e,
                             o = {
                                 type: t,
@@ -197,31 +197,31 @@ let U = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                                 properties: {
                                     client_track_timestamp: Date.now(),
                                     client_heartbeat_session_id: s,
-                                    event_sequence_number: ++T,
+                                    event_sequence_number: ++y,
                                     ...n,
                                 },
                                 resolve: a,
                             },
-                            l = K(o);
-                        if ((null != l && (o.properties.client_uuid = G.generate(l)), F.push(o), F.length > f)) {
-                            let e = F.length - f;
-                            (y = k(y, e)), (F = F.slice(-f));
+                            l = $(o);
+                        if ((null != l && (o.properties.client_uuid = F.generate(l)), B.push(o), B.length > f)) {
+                            let e = B.length - f;
+                            (S = U(S, e)), (B = B.slice(-f));
                         }
-                        r ? $({ shouldFlushOnNextTick: !0 }) : $({ shouldFlushOnNextTick: !1 });
+                        r ? q({ shouldFlushOnNextTick: !0 }) : q({ shouldFlushOnNextTick: !1 });
                     }),
                     !1
                 );
             }),
             (V.handleSetAnalyticsToken = function (e) {
                 let { analyticsToken: t, userId: n } = e;
-                return null == r && null != t && ((r = t), (i = n), $({ shouldFlushOnNextTick: !1 })), !1;
+                return null == r && null != t && ((r = t), (i = n), q({ shouldFlushOnNextTick: !1 })), !1;
             });
-        class et extends o.Ay.Store {
+        class en extends o.Ay.Store {
             static displayName = "AnalyticsTrackingStore";
             initialize() {
-                null != H && this.waitFor(...H);
+                null != Y && this.waitFor(...Y);
             }
             submitEventsImmediately = Z;
         }
-        return new et(t, n);
+        return new en(t, n);
     };

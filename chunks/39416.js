@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, { default: () => N, errors: () => R, load: () => O, loadView: () => H });
+n.r(t), n.d(t, { default: () => R, errors: () => O, load: () => D, loadView: () => Y });
 var r = n(643479),
     i = n(504925),
     a = n(761799),
@@ -11,70 +11,70 @@ var r = n(643479),
     d = n(766493),
     _ = n(525012),
     f = n(242389),
-    p = n(842962),
-    h = n(312597),
-    m = n(116811),
-    g = n(124864),
-    E = n(284776),
-    A = n(201147),
-    I = n(147687),
-    T = n(205710),
-    y = n(479533),
-    S = n(67286),
-    v = n(906037),
-    C = n(306827),
-    b = n(264572).Buffer;
-let N = { load: O, loadView: H, errors: C.A },
-    R = C.A;
-function O(e, t = {}) {
-    return D(e)
-        ? ((t.async = !0), L(e, t).then((e) => F(e, t)))
-        : G(e)
-          ? ((t.async = !0), V(e).then((e) => F(e, t)))
-          : F(e, t);
+    h = n(842962),
+    p = n(312597),
+    g = n(116811),
+    E = n(124864),
+    A = n(284776),
+    I = n(201147),
+    T = n(147687),
+    y = n(205710),
+    S = n(479533),
+    v = n(67286),
+    C = n(906037),
+    b = n(306827),
+    N = n(264572).Buffer;
+let R = { load: D, loadView: Y, errors: b.A },
+    O = b.A;
+function D(e, t = {}) {
+    return L(e)
+        ? ((t.async = !0), w(e, t).then((e) => B(e, t)))
+        : F(e)
+          ? ((t.async = !0), V(e).then((e) => B(e, t)))
+          : B(e, t);
 }
-function D(e) {
+function L(e) {
     return "string" == typeof e;
 }
-function L(e, t) {
+function w(e, t) {
     return /^\w+:\/\//.test(e)
         ? "u" > typeof fetch
-            ? w(e, t)
-            : x(e, t)
-        : M(e)
+            ? x(e, t)
+            : P(e, t)
+        : k(e)
           ? Promise.resolve((0, r.C5)(e))
-          : k(e, t);
+          : U(e, t);
 }
-function w(e, { length: t } = {}) {
+function x(e, { length: t } = {}) {
     let n = { method: "GET" };
     return (
         Number.isInteger(t) && t >= 0 && (n.headers = { range: `bytes=0-${t - 1}` }),
         fetch(e, n).then((e) => e.arrayBuffer())
     );
 }
-function x(e, { length: t } = {}) {
+function P(e, { length: t } = {}) {
     return new Promise((n, r) => {
         let i = {};
         Number.isInteger(t) && t >= 0 && (i.headers = { range: `bytes=0-${t - 1}` }),
-            P(e)(e, i, (e) => {
+            M(e)(e, i, (e) => {
                 if (e.statusCode >= 200 && e.statusCode <= 299) {
                     let t = [];
-                    e.on("data", (e) => t.push(b.from(e))),
+                    e.on("data", (e) => t.push(N.from(e))),
                         e.on("error", (e) => r(e)),
-                        e.on("end", () => n(b.concat(t)));
+                        e.on("end", () => n(N.concat(t)));
                 } else r(`Could not fetch file: ${e.statusCode} ${e.statusMessage}`), e.resume();
             }).on("error", (e) => r(e));
     });
 }
-function P(e) {
+function M(e) {
     return /^https:\/\//.test(e) ? require("https").get : require("http").get;
 }
-function M(e) {
+function k(e) {
     return /^data:[^;,]*(;base64)?,/.test(e);
 }
-function k(e, { length: t } = {}) {
+function U(e, { length: t } = {}) {
     return new Promise((n, r) => {
-        let i = U();
+        let i = G();
         i.open(e, (a, s) => {
             a
                 ? r(a)
@@ -82,7 +82,7 @@ function k(e, { length: t } = {}) {
                       if (a) r(a);
                       else {
                           let a = Math.min(o.size, void 0 !== t ? t : o.size),
-                              l = b.alloc(a),
+                              l = N.alloc(a),
                               u = { buffer: l, length: a };
                           i.read(s, u, (t) => {
                               t
@@ -96,14 +96,14 @@ function k(e, { length: t } = {}) {
         });
     });
 }
-function U() {
+function G() {
     try {
         return require("fs");
     } catch (e) {
         return;
     }
 }
-function G(e) {
+function F(e) {
     return "u" > typeof File && e instanceof File;
 }
 function V(e) {
@@ -112,24 +112,24 @@ function V(e) {
         (r.onload = (e) => t(e.target.result)), (r.onerror = () => n(r.error)), r.readAsArrayBuffer(e);
     });
 }
-function F(e, t) {
-    return B(e) && (e = new Uint8Array(e).buffer), H(j(e), t);
+function B(e, t) {
+    return j(e) && (e = new Uint8Array(e).buffer), Y(H(e), t);
 }
-function B(e) {
+function j(e) {
     try {
-        return b.isBuffer(e);
+        return N.isBuffer(e);
     } catch (e) {
         return !1;
     }
 }
-function j(e) {
+function H(e) {
     try {
         return new DataView(e);
     } catch (t) {
         return new i.A(e);
     }
 }
-function H(
+function Y(
     e,
     { expanded: t = !1, async: n = !1, includeUnknown: i = !1, domParser: s } = {
         expanded: !1,
@@ -138,149 +138,149 @@ function H(
         domParser: void 0,
     },
 ) {
-    let b = !1,
-        N = {},
-        R = [],
+    let N = !1,
+        R = {},
+        O = [],
         {
-            fileType: O,
-            fileDataOffset: D,
-            jfifDataOffset: L,
-            tiffHeaderOffset: w,
-            iptcDataOffset: x,
-            xmpChunks: P,
-            iccChunks: M,
-            mpfDataOffset: k,
-            pngHeaderOffset: U,
-            pngTextChunks: G,
+            fileType: D,
+            fileDataOffset: L,
+            jfifDataOffset: w,
+            tiffHeaderOffset: x,
+            iptcDataOffset: P,
+            xmpChunks: M,
+            iccChunks: k,
+            mpfDataOffset: U,
+            pngHeaderOffset: G,
+            pngTextChunks: F,
             pngChunkOffsets: V,
-            vp8xChunkOffset: F,
-            gifHeaderOffset: B,
+            vp8xChunkOffset: B,
+            gifHeaderOffset: j,
         } = o.A.parseAppMarkers(e, n);
-    if (a.A.USE_JPEG && a.A.USE_FILE && Y(D)) {
-        b = !0;
-        let n = c.A.read(e, D);
-        t ? (N.file = n) : (N = (0, r.dP)({}, N, n));
+    if (a.A.USE_JPEG && a.A.USE_FILE && W(L)) {
+        N = !0;
+        let n = c.A.read(e, L);
+        t ? (R.file = n) : (R = (0, r.dP)({}, R, n));
     }
-    if (a.A.USE_JPEG && a.A.USE_JFIF && W(L)) {
-        b = !0;
-        let n = d.A.read(e, L);
-        t ? (N.jfif = n) : (N = (0, r.dP)({}, N, n));
+    if (a.A.USE_JPEG && a.A.USE_JFIF && K(w)) {
+        N = !0;
+        let n = d.A.read(e, w);
+        t ? (R.jfif = n) : (R = (0, r.dP)({}, R, n));
     }
-    if (a.A.USE_EXIF && K(w)) {
-        b = !0;
-        let { tags: n, byteOrder: o } = l.A.read(e, w, i);
+    if (a.A.USE_EXIF && $(x)) {
+        N = !0;
+        let { tags: n, byteOrder: o } = l.A.read(e, x, i);
         if (
-            (n.Thumbnail && ((N.Thumbnail = n.Thumbnail), delete n.Thumbnail),
-            t ? ((N.exif = n), z(N)) : (N = (0, r.dP)({}, N, n)),
-            a.A.USE_TIFF && a.A.USE_IPTC && n["IPTC-NAA"] && !$(x))
+            (n.Thumbnail && ((R.Thumbnail = n.Thumbnail), delete n.Thumbnail),
+            t ? ((R.exif = n), z(R)) : (R = (0, r.dP)({}, R, n)),
+            a.A.USE_TIFF && a.A.USE_IPTC && n["IPTC-NAA"] && !q(P))
         ) {
             let e = _.A.read(n["IPTC-NAA"].value, 0, i);
-            t ? (N.iptc = e) : (N = (0, r.dP)({}, N, e));
+            t ? (R.iptc = e) : (R = (0, r.dP)({}, R, e));
         }
-        if (a.A.USE_TIFF && a.A.USE_XMP && n.ApplicationNotes && !q(P)) {
+        if (a.A.USE_TIFF && a.A.USE_XMP && n.ApplicationNotes && !X(M)) {
             let e = f.A.read((0, r.YF)(n.ApplicationNotes.value), void 0, s);
-            t ? (N.xmp = e) : (delete e._raw, (N = (0, r.dP)({}, N, e)));
+            t ? (R.xmp = e) : (delete e._raw, (R = (0, r.dP)({}, R, e)));
         }
         if (a.A.USE_PHOTOSHOP && n.ImageSourceData && n.PhotoshopSettings) {
-            let e = p.A.read(n.PhotoshopSettings.value, i);
-            t ? (N.photoshop = e) : (N = (0, r.dP)({}, N, e));
+            let e = h.A.read(n.PhotoshopSettings.value, i);
+            t ? (R.photoshop = e) : (R = (0, r.dP)({}, R, e));
         }
-        if (a.A.USE_TIFF && a.A.USE_ICC && n.ICC_Profile && !Z(M)) {
-            let e = h.A.read(n.ICC_Profile.value, [
+        if (a.A.USE_TIFF && a.A.USE_ICC && n.ICC_Profile && !Z(k)) {
+            let e = p.A.read(n.ICC_Profile.value, [
                 { offset: 0, length: n.ICC_Profile.value.length, chunkNumber: 1, chunksTotal: 1 },
             ]);
-            t ? (N.icc = e) : (N = (0, r.dP)({}, N, e));
+            t ? (R.icc = e) : (R = (0, r.dP)({}, R, e));
         }
         if (a.A.USE_MAKER_NOTES && n.MakerNote) {
             if (Q(n)) {
-                let a = m.A.read(e, w, n.MakerNote.__offset, o, i);
-                t ? (N.makerNotes = a) : (N = (0, r.dP)({}, N, a));
-            } else if (X(n)) {
-                let a = g.A.read(e, w, n.MakerNote.__offset, i);
-                t ? (N.makerNotes = a) : (N = (0, r.dP)({}, N, a));
+                let a = g.A.read(e, x, n.MakerNote.__offset, o, i);
+                t ? (R.makerNotes = a) : (R = (0, r.dP)({}, R, a));
+            } else if (J(n)) {
+                let a = E.A.read(e, x, n.MakerNote.__offset, i);
+                t ? (R.makerNotes = a) : (R = (0, r.dP)({}, R, a));
             }
         }
         n.MakerNote && delete n.MakerNote.__offset;
     }
-    if (a.A.USE_JPEG && a.A.USE_IPTC && $(x)) {
-        b = !0;
-        let n = _.A.read(e, x, i);
-        t ? (N.iptc = n) : (N = (0, r.dP)({}, N, n));
+    if (a.A.USE_JPEG && a.A.USE_IPTC && q(P)) {
+        N = !0;
+        let n = _.A.read(e, P, i);
+        t ? (R.iptc = n) : (R = (0, r.dP)({}, R, n));
     }
-    if (a.A.USE_XMP && q(P)) {
-        b = !0;
-        let n = f.A.read(e, P, s);
-        t ? (N.xmp = n) : (delete n._raw, (N = (0, r.dP)({}, N, n)));
+    if (a.A.USE_XMP && X(M)) {
+        N = !0;
+        let n = f.A.read(e, M, s);
+        t ? (R.xmp = n) : (delete n._raw, (R = (0, r.dP)({}, R, n)));
     }
-    if ((a.A.USE_JPEG || a.A.USE_WEBP) && a.A.USE_ICC && Z(M)) {
-        b = !0;
-        let t = h.A.read(e, M, n);
-        t instanceof Promise ? R.push(t.then(es)) : es(t);
+    if ((a.A.USE_JPEG || a.A.USE_WEBP) && a.A.USE_ICC && Z(k)) {
+        N = !0;
+        let t = p.A.read(e, k, n);
+        t instanceof Promise ? O.push(t.then(eo)) : eo(t);
     }
-    if (a.A.USE_MPF && J(k)) {
-        b = !0;
-        let n = u.A.read(e, k, i);
-        t ? (N.mpf = n) : (N = (0, r.dP)({}, N, n));
+    if (a.A.USE_MPF && ee(U)) {
+        N = !0;
+        let n = u.A.read(e, U, i);
+        t ? (R.mpf = n) : (R = (0, r.dP)({}, R, n));
     }
-    if (a.A.USE_PNG && a.A.USE_PNG_FILE && ee(U)) {
-        b = !0;
-        let n = E.A.read(e, U);
-        t ? ((N.png = N.png ? (0, r.dP)({}, N.png, n) : n), (N.pngFile = n)) : (N = (0, r.dP)({}, N, n));
+    if (a.A.USE_PNG && a.A.USE_PNG_FILE && et(G)) {
+        N = !0;
+        let n = A.A.read(e, G);
+        t ? ((R.png = R.png ? (0, r.dP)({}, R.png, n) : n), (R.pngFile = n)) : (R = (0, r.dP)({}, R, n));
     }
-    if (a.A.USE_PNG && et(G)) {
-        b = !0;
-        let { readTags: t, readTagsPromise: r } = A.A.read(e, G, n, i);
-        eo(t), r && R.push(r.then((e) => e.forEach(eo)));
+    if (a.A.USE_PNG && en(F)) {
+        N = !0;
+        let { readTags: t, readTagsPromise: r } = I.A.read(e, F, n, i);
+        el(t), r && O.push(r.then((e) => e.forEach(el)));
     }
-    if (a.A.USE_PNG && en(V)) {
-        b = !0;
-        let n = I.A.read(e, V);
-        t ? (N.png = N.png ? (0, r.dP)({}, N.png, n) : n) : (N = (0, r.dP)({}, N, n));
+    if (a.A.USE_PNG && er(V)) {
+        N = !0;
+        let n = T.A.read(e, V);
+        t ? (R.png = R.png ? (0, r.dP)({}, R.png, n) : n) : (R = (0, r.dP)({}, R, n));
     }
-    if (a.A.USE_WEBP && er(F)) {
-        b = !0;
-        let n = T.A.read(e, F);
-        t ? (N.riff = N.riff ? (0, r.dP)({}, N.riff, n) : n) : (N = (0, r.dP)({}, N, n));
-    }
-    if (a.A.USE_GIF && ei(B)) {
-        b = !0;
+    if (a.A.USE_WEBP && ei(B)) {
+        N = !0;
         let n = y.A.read(e, B);
-        t ? (N.gif = N.gif ? (0, r.dP)({}, N.gif, n) : n) : (N = (0, r.dP)({}, N, n));
+        t ? (R.riff = R.riff ? (0, r.dP)({}, R.riff, n) : n) : (R = (0, r.dP)({}, R, n));
     }
-    let j = v.A.get(N, t);
-    j && (t ? (N.composite = j) : (N = (0, r.dP)({}, N, j)));
-    let ea = (a.A.USE_JPEG || a.A.USE_WEBP) && a.A.USE_EXIF && a.A.USE_THUMBNAIL && S.A.get(e, N.Thumbnail, w);
+    if (a.A.USE_GIF && ea(j)) {
+        N = !0;
+        let n = S.A.read(e, j);
+        t ? (R.gif = R.gif ? (0, r.dP)({}, R.gif, n) : n) : (R = (0, r.dP)({}, R, n));
+    }
+    let H = C.A.get(R, t);
+    H && (t ? (R.composite = H) : (R = (0, r.dP)({}, R, H)));
+    let es = (a.A.USE_JPEG || a.A.USE_WEBP) && a.A.USE_EXIF && a.A.USE_THUMBNAIL && v.A.get(e, R.Thumbnail, x);
     if (
-        (ea ? ((b = !0), (N.Thumbnail = ea)) : delete N.Thumbnail,
-        O && (t ? (N.file || (N.file = {}), (N.file.FileType = O)) : (N.FileType = O), (b = !0)),
-        !b)
+        (es ? ((N = !0), (R.Thumbnail = es)) : delete R.Thumbnail,
+        D && (t ? (R.file || (R.file = {}), (R.file.FileType = D)) : (R.FileType = D), (N = !0)),
+        !N)
     )
-        throw new C.A.MetadataMissingError();
-    if (n) return Promise.all(R).then(() => N);
-    return N;
-    function es(e) {
-        t ? (N.icc = e) : (N = (0, r.dP)({}, N, e));
-    }
+        throw new b.A.MetadataMissingError();
+    if (n) return Promise.all(O).then(() => R);
+    return R;
     function eo(e) {
+        t ? (R.icc = e) : (R = (0, r.dP)({}, R, e));
+    }
+    function el(e) {
         if (t) {
             for (let t of ["exif", "iptc"]) {
                 let n = `__${t}`;
-                e[n] && ((N[t] = N[t] ? (0, r.dP)({}, N.exif, e[n]) : e[n]), delete e[n]);
+                e[n] && ((R[t] = R[t] ? (0, r.dP)({}, R.exif, e[n]) : e[n]), delete e[n]);
             }
-            (N.png = N.png ? (0, r.dP)({}, N.png, e) : e), (N.pngText = N.pngText ? (0, r.dP)({}, N.png, e) : e);
+            (R.png = R.png ? (0, r.dP)({}, R.png, e) : e), (R.pngText = R.pngText ? (0, r.dP)({}, R.png, e) : e);
         } else
-            (N = (0, r.dP)({}, N, e.__exif ? e.__exif : {}, e.__iptc ? e.__iptc : {}, e)),
-                delete N.__exif,
-                delete N.__iptc;
+            (R = (0, r.dP)({}, R, e.__exif ? e.__exif : {}, e.__iptc ? e.__iptc : {}, e)),
+                delete R.__exif,
+                delete R.__iptc;
     }
-}
-function Y(e) {
-    return void 0 !== e;
 }
 function W(e) {
     return void 0 !== e;
 }
 function K(e) {
+    return void 0 !== e;
+}
+function $(e) {
     return void 0 !== e;
 }
 function z(e) {
@@ -305,10 +305,10 @@ function z(e) {
             } catch (e) {}
     }
 }
-function $(e) {
+function q(e) {
     return void 0 !== e;
 }
-function q(e) {
+function X(e) {
     return Array.isArray(e) && e.length > 0;
 }
 function Z(e) {
@@ -324,16 +324,13 @@ function Q(e) {
         e.MakerNote.__offset
     );
 }
-function X(e) {
+function J(e) {
     let t = "PENTAX ";
     return (
         e.MakerNote.value.length > t.length &&
         (0, r.YF)(e.MakerNote.value.slice(0, t.length)) === t &&
         e.MakerNote.__offset
     );
-}
-function J(e) {
-    return void 0 !== e;
 }
 function ee(e) {
     return void 0 !== e;
@@ -348,5 +345,8 @@ function er(e) {
     return void 0 !== e;
 }
 function ei(e) {
+    return void 0 !== e;
+}
+function ea(e) {
     return void 0 !== e;
 }

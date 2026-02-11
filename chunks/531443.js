@@ -1,10 +1,11 @@
-n.d(t, { G: () => o });
+"use strict";
+n.d(t, { G: () => l });
 var r = n(141711),
-    s = n(118356),
-    i = n(740644),
-    l = n(497329);
-let a = new s.Vy("SimpleMuxWrapper");
-class o {
+    i = n(118356),
+    a = n(740644),
+    s = n(497329);
+let o = new i.Vy("SimpleMuxWrapper");
+class l {
     isMonitoring = !1;
     videoElement;
     config;
@@ -13,7 +14,7 @@ class o {
     constructor(e) {
         (this.config = e),
             (this.videoElement = e.videoElement),
-            (this.sessionId = l.C.generateSessionId()),
+            (this.sessionId = s.C.generateSessionId()),
             (this.hlsInstance = e.hlsInstance);
     }
     initialize() {
@@ -21,13 +22,13 @@ class o {
             debug: this.config.debug ?? !1,
             disableCookies: !0,
             respectDoNotTrack: !0,
-            data: i.H.mapDiscordToMuxMetadata(this.config, this.sessionId),
+            data: a.H.mapDiscordToMuxMetadata(this.config, this.sessionId),
         };
         null != this.hlsInstance && ((e.hlsjs = this.hlsInstance), (e.Hls = this.hlsInstance.constructor));
         try {
             r.A.monitor(this.videoElement, e), (this.isMonitoring = !0);
         } catch (e) {
-            a.error("Error creating Mux monitor", e), (this.isMonitoring = !1);
+            o.error("Error creating Mux monitor", e), (this.isMonitoring = !1);
         }
     }
     endSession() {
@@ -36,7 +37,7 @@ class o {
                 "function" == typeof r.A.destroyMonitor && r.A.destroyMonitor(this.videoElement),
                     (this.isMonitoring = !1);
             } catch (e) {
-                a.error("Error ending Mux session", e);
+                o.error("Error ending Mux session", e);
             }
     }
     destroy() {
@@ -45,7 +46,7 @@ class o {
                 "function" == typeof r.A.destroyMonitor && r.A.destroyMonitor(this.videoElement),
                     (this.isMonitoring = !1);
             } catch (e) {
-                a.error("Error destroying Mux monitor", e);
+                o.error("Error destroying Mux monitor", e);
             }
     }
     getSessionId() {

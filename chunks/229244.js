@@ -13,8 +13,8 @@ var a = n(627968),
     x = n(92246),
     p = n(792620),
     g = n(241124),
-    _ = n(947926),
-    f = n(717695),
+    f = n(947926),
+    _ = n(717695),
     v = n(164203),
     b = n(127219),
     j = n(438038),
@@ -572,7 +572,7 @@ function G() {
                                             isPreview: !0,
                                             source: "preview",
                                             questId: "0",
-                                            children: (0, a.jsx)(f.A, { children: (0, a.jsx)(_.Y, { quest: t }) }),
+                                            children: (0, a.jsx)(_.A, { children: (0, a.jsx)(f.Y, { quest: t }) }),
                                         }),
                                     }),
                                 ],
@@ -669,11 +669,7 @@ function G() {
                                     text: "Open Video Player Modal",
                                     onClick: () => {
                                         (0, m.mMO)(async () => {
-                                            let { default: e } = await Promise.all([
-                                                n.e("35584"),
-                                                n.e("23628"),
-                                                n.e("18728"),
-                                            ]).then(n.bind(n, 717415));
+                                            let { default: e } = await Promise.resolve().then(n.bind(n, 717415));
                                             return (n) =>
                                                 (0, a.jsx)(e, {
                                                     ...n,

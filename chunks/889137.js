@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { P: () => Q, YW: () => J });
+n.d(t, { P: () => Q, YW: () => ee });
 let r = Symbol.for("@ts-pattern/matcher"),
     i = Symbol.for("@ts-pattern/isVariadic"),
     a = "@ts-pattern/anonymous-select-key",
@@ -72,10 +72,10 @@ function d(...e) {
 }
 function _(e) {
     return Object.assign(e, {
-        optional: () => p(e),
-        and: (t) => g(e, t),
-        or: (t) => E(e, t),
-        select: (t) => (void 0 === t ? I(e) : I(t, e)),
+        optional: () => h(e),
+        and: (t) => E(e, t),
+        or: (t) => A(e, t),
+        select: (t) => (void 0 === t ? T(e) : T(t, e)),
     });
 }
 function f(e) {
@@ -86,10 +86,10 @@ function f(e) {
                 yield Object.assign(t, { [i]: !0 });
             },
         }),
-        { optional: () => f(p(e)), select: (t) => f(void 0 === t ? I(e) : I(t, e)) },
+        { optional: () => f(h(e)), select: (t) => f(void 0 === t ? T(e) : T(t, e)) },
     );
 }
-function p(e) {
+function h(e) {
     return _({
         [r]: () => ({
             match: (t) => {
@@ -106,15 +106,15 @@ function p(e) {
         }),
     });
 }
-let h = (e, t) => {
+let p = (e, t) => {
         for (let n of e) if (!t(n)) return !1;
         return !0;
     },
-    m = (e, t) => {
+    g = (e, t) => {
         for (let [n, r] of e.entries()) if (!t(r, n)) return !1;
         return !0;
     };
-function g(...e) {
+function E(...e) {
     return _({
         [r]: () => ({
             match: (t) => {
@@ -129,7 +129,7 @@ function g(...e) {
         }),
     });
 }
-function E(...e) {
+function A(...e) {
     return _({
         [r]: () => ({
             match: (t) => {
@@ -144,10 +144,10 @@ function E(...e) {
         }),
     });
 }
-function A(e) {
+function I(e) {
     return { [r]: () => ({ match: (t) => ({ matched: !!e(t) }) }) };
 }
-function I(...e) {
+function T(...e) {
     let t = "string" == typeof e[0] ? e[0] : void 0,
         n = 2 === e.length ? e[1] : "string" == typeof e[0] ? void 0 : e[0];
     return _({
@@ -167,102 +167,102 @@ function I(...e) {
         }),
     });
 }
-function T(e) {
+function y(e) {
     return "number" == typeof e;
 }
-function y(e) {
+function S(e) {
     return "string" == typeof e;
 }
-function S(e) {
+function v(e) {
     return "bigint" == typeof e;
 }
-let v = _(
-        A(function (e) {
+let C = _(
+        I(function (e) {
             return !0;
         }),
     ),
-    C = v,
-    b = (e) =>
+    b = C,
+    N = (e) =>
         Object.assign(_(e), {
             startsWith: (t) => {
                 var n;
-                return b(g(e, ((n = t), A((e) => y(e) && e.startsWith(n)))));
+                return N(E(e, ((n = t), I((e) => S(e) && e.startsWith(n)))));
             },
             endsWith: (t) => {
                 var n;
-                return b(g(e, ((n = t), A((e) => y(e) && e.endsWith(n)))));
+                return N(E(e, ((n = t), I((e) => S(e) && e.endsWith(n)))));
             },
-            minLength: (t) => b(g(e, ((e) => A((t) => y(t) && t.length >= e))(t))),
-            maxLength: (t) => b(g(e, ((e) => A((t) => y(t) && t.length <= e))(t))),
+            minLength: (t) => N(E(e, ((e) => I((t) => S(t) && t.length >= e))(t))),
+            maxLength: (t) => N(E(e, ((e) => I((t) => S(t) && t.length <= e))(t))),
             includes: (t) => {
                 var n;
-                return b(g(e, ((n = t), A((e) => y(e) && e.includes(n)))));
+                return N(E(e, ((n = t), I((e) => S(e) && e.includes(n)))));
             },
             regex: (t) => {
                 var n;
-                return b(g(e, ((n = t), A((e) => y(e) && !!e.match(n)))));
+                return N(E(e, ((n = t), I((e) => S(e) && !!e.match(n)))));
             },
         }),
-    N = b(A(y)),
-    R = (e, t) => A((n) => T(n) && e <= n && t >= n),
-    O = (e) => A((t) => T(t) && t < e),
-    D = (e) => A((t) => T(t) && t > e),
-    L = (e) => A((t) => T(t) && t <= e),
-    w = (e) => A((t) => T(t) && t >= e),
-    x = () => A((e) => T(e) && Number.isInteger(e)),
-    P = () => A((e) => T(e) && Number.isFinite(e)),
-    M = () => A((e) => T(e) && e > 0),
-    k = () => A((e) => T(e) && e < 0),
-    U = (e) =>
+    R = N(I(S)),
+    O = (e, t) => I((n) => y(n) && e <= n && t >= n),
+    D = (e) => I((t) => y(t) && t < e),
+    L = (e) => I((t) => y(t) && t > e),
+    w = (e) => I((t) => y(t) && t <= e),
+    x = (e) => I((t) => y(t) && t >= e),
+    P = () => I((e) => y(e) && Number.isInteger(e)),
+    M = () => I((e) => y(e) && Number.isFinite(e)),
+    k = () => I((e) => y(e) && e > 0),
+    U = () => I((e) => y(e) && e < 0),
+    G = (e) =>
         Object.assign(_(e), {
-            between: (t, n) => U(g(e, R(t, n))),
-            lt: (t) => U(g(e, O(t))),
-            gt: (t) => U(g(e, D(t))),
-            lte: (t) => U(g(e, L(t))),
-            gte: (t) => U(g(e, w(t))),
-            int: () => U(g(e, x())),
-            finite: () => U(g(e, P())),
-            positive: () => U(g(e, M())),
-            negative: () => U(g(e, k())),
+            between: (t, n) => G(E(e, O(t, n))),
+            lt: (t) => G(E(e, D(t))),
+            gt: (t) => G(E(e, L(t))),
+            lte: (t) => G(E(e, w(t))),
+            gte: (t) => G(E(e, x(t))),
+            int: () => G(E(e, P())),
+            finite: () => G(E(e, M())),
+            positive: () => G(E(e, k())),
+            negative: () => G(E(e, U())),
         }),
-    G = U(A(T)),
-    V = (e, t) => A((n) => S(n) && e <= n && t >= n),
-    F = (e) => A((t) => S(t) && t < e),
-    B = (e) => A((t) => S(t) && t > e),
-    j = (e) => A((t) => S(t) && t <= e),
-    H = (e) => A((t) => S(t) && t >= e),
-    Y = () => A((e) => S(e) && e > 0),
-    W = () => A((e) => S(e) && e < 0),
-    K = (e) =>
+    F = G(I(y)),
+    V = (e, t) => I((n) => v(n) && e <= n && t >= n),
+    B = (e) => I((t) => v(t) && t < e),
+    j = (e) => I((t) => v(t) && t > e),
+    H = (e) => I((t) => v(t) && t <= e),
+    Y = (e) => I((t) => v(t) && t >= e),
+    W = () => I((e) => v(e) && e > 0),
+    K = () => I((e) => v(e) && e < 0),
+    $ = (e) =>
         Object.assign(_(e), {
-            between: (t, n) => K(g(e, V(t, n))),
-            lt: (t) => K(g(e, F(t))),
-            gt: (t) => K(g(e, B(t))),
-            lte: (t) => K(g(e, j(t))),
-            gte: (t) => K(g(e, H(t))),
-            positive: () => K(g(e, Y())),
-            negative: () => K(g(e, W())),
+            between: (t, n) => $(E(e, V(t, n))),
+            lt: (t) => $(E(e, B(t))),
+            gt: (t) => $(E(e, j(t))),
+            lte: (t) => $(E(e, H(t))),
+            gte: (t) => $(E(e, Y(t))),
+            positive: () => $(E(e, W())),
+            negative: () => $(E(e, K())),
         }),
-    z = K(A(S)),
-    $ = _(
-        A(function (e) {
+    z = $(I(v)),
+    q = _(
+        I(function (e) {
             return "boolean" == typeof e;
         }),
     ),
-    q = _(
-        A(function (e) {
+    X = _(
+        I(function (e) {
             return "symbol" == typeof e;
         }),
     ),
     Z = _(
-        A(function (e) {
+        I(function (e) {
             return null == e;
         }),
     );
 var Q = {
     __proto__: null,
     matcher: r,
-    optional: p,
+    optional: h,
     array: function (...e) {
         return f({
             [r]: () => ({
@@ -299,7 +299,7 @@ var Q = {
                             n[e] = (n[e] || []).concat([t]);
                         },
                         i = e[0];
-                    return { matched: h(t, (e) => l(i, e, r)), selections: n };
+                    return { matched: p(t, (e) => l(i, e, r)), selections: n };
                 },
                 getSelectionKeys: () => (0 === e.length ? [] : u(e[0])),
             }),
@@ -323,7 +323,7 @@ var Q = {
                         );
                     let [a, s] = e;
                     return {
-                        matched: m(t, (e, t) => {
+                        matched: g(t, (e, t) => {
                             let n = l(a, t, i),
                                 r = l(s, e, i);
                             return n && r;
@@ -335,8 +335,8 @@ var Q = {
             }),
         });
     },
-    intersection: g,
-    union: E,
+    intersection: E,
+    union: A,
     not: function (e) {
         return _({
             [r]: () => ({
@@ -346,35 +346,35 @@ var Q = {
             }),
         });
     },
-    when: A,
-    select: I,
-    any: v,
-    _: C,
-    string: N,
-    between: R,
-    lt: O,
-    gt: D,
-    lte: L,
-    gte: w,
-    int: x,
-    finite: P,
-    positive: M,
-    negative: k,
-    number: G,
+    when: I,
+    select: T,
+    any: C,
+    _: b,
+    string: R,
+    between: O,
+    lt: D,
+    gt: L,
+    lte: w,
+    gte: x,
+    int: P,
+    finite: M,
+    positive: k,
+    negative: U,
+    number: F,
     betweenBigInt: V,
-    ltBigInt: F,
-    gtBigInt: B,
-    lteBigInt: j,
-    gteBigInt: H,
-    positiveBigInt: Y,
-    negativeBigInt: W,
+    ltBigInt: B,
+    gtBigInt: j,
+    lteBigInt: H,
+    gteBigInt: Y,
+    positiveBigInt: W,
+    negativeBigInt: K,
     bigint: z,
-    boolean: $,
-    symbol: q,
+    boolean: q,
+    symbol: X,
     nullish: Z,
     instanceOf: function (e) {
         return _(
-            A(
+            I(
                 (function (e) {
                     return (t) => t instanceof e;
                 })(e),
@@ -382,14 +382,14 @@ var Q = {
         );
     },
     shape: function (e) {
-        return _(A(d(e)));
+        return _(I(d(e)));
     },
 };
-let X = { matched: !1, value: void 0 };
-function J(e) {
-    return new ee(e, X);
+let J = { matched: !1, value: void 0 };
+function ee(e) {
+    return new et(e, J);
 }
-class ee {
+class et {
     constructor(e, t) {
         (this.input = void 0), (this.state = void 0), (this.input = e), (this.state = t);
     }
@@ -409,13 +409,13 @@ class ee {
             u =
                 r.some((e) => l(e, this.input, o)) && (!t || t(this.input))
                     ? { matched: !0, value: n(i ? (a in s ? s[a] : s) : this.input, this.input) }
-                    : X;
-        return new ee(this.input, u);
+                    : J;
+        return new et(this.input, u);
     }
     when(e, t) {
         if (this.state.matched) return this;
         let n = !!e(this.input);
-        return new ee(this.input, n ? { matched: !0, value: t(this.input, this.input) } : X);
+        return new et(this.input, n ? { matched: !0, value: t(this.input, this.input) } : J);
     }
     otherwise(e) {
         return this.state.matched ? this.state.value : e(this.input);

@@ -1,11 +1,14 @@
-n.d(t, { H: () => r });
-class r {
+"use strict";
+n.d(t, { H: () => a });
+let r = "1qd16mdmdjasipqg3irobln4u",
+    i = "1.0.0";
+class a {
     static mapDiscordToMuxMetadata(e, t) {
         return {
-            env_key: "1qd16mdmdjasipqg3irobln4u",
+            env_key: r,
             session_id: t,
             player_name: "discord",
-            player_version: "1.0.0",
+            player_version: i,
             video_id: e.contentMetadata.contentId,
             video_title: e.contentMetadata.title,
             video_duration: e.contentMetadata.durationMs ?? 1e3 * e.contentMetadata.durationSec,
@@ -23,7 +26,7 @@ class r {
     }
     static getAppVersion() {
         try {
-            return "493560";
+            return "495496";
         } catch {
             return "unknown";
         }

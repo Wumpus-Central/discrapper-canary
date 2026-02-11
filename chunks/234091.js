@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => C });
+n.d(t, { A: () => b });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -11,70 +11,70 @@ var r = n(627968),
     d = n(422936),
     _ = n(234419),
     f = n(811611),
-    p = n(954571),
-    h = n(256449),
-    m = n(679382),
-    g = n(148355),
-    E = n(320061),
-    A = n(823894),
-    I = n(652215),
-    T = n(788868),
-    y = n(985018),
-    S = n(48187);
-let v = 80;
-function C(e) {
+    h = n(954571),
+    p = n(256449),
+    g = n(679382),
+    E = n(148355),
+    A = n(320061),
+    I = n(823894),
+    T = n(652215),
+    y = n(788868),
+    S = n(985018),
+    v = n(48187);
+let C = 80;
+function b(e) {
     let { className: t, onClose: n } = e;
-    (0, h.XQ)();
+    (0, p.XQ)();
     let { analyticsLocations: a } = (0, c.Ay)(u.A.EMPTY_STATE),
-        C = (0, o.yK)([m.A], () => A.vX.map((e) => m.A.getStickerById(e)));
+        b = (0, o.yK)([g.A], () => I.vX.map((e) => g.A.getStickerById(e)));
     i.useEffect(() => {
-        p.default.track(I.HAw.PREMIUM_UPSELL_VIEWED, {
-            type: T.e.EMPTY_STICKER_PICKER_UPSELL,
-            source: { section: I.JJy.EMPTY_STICKER_PICKER_UPSELL },
+        h.default.track(T.HAw.PREMIUM_UPSELL_VIEWED, {
+            type: y.e.EMPTY_STICKER_PICKER_UPSELL,
+            source: { section: T.JJy.EMPTY_STICKER_PICKER_UPSELL },
             location_stack: a,
         });
     }, [a]);
-    let b = (0, _.V)(),
-        N = (0, d.O)(),
-        R = null != b || null != N,
-        O = b?.subscription_trial?.sku_id === T.pe.TIER_0;
+    let N = (0, _.V)(),
+        R = (0, d.O)(),
+        O = null != N || null != R,
+        D = N?.subscription_trial?.sku_id === y.pe.TIER_0;
     return (0, r.jsxs)("div", {
-        className: s()(S.p$, t, { [S.Hz]: R }),
+        className: s()(v.p$, t, { [v.Hz]: O }),
         children: [
-            R
+            O
                 ? (0, r.jsx)(f.Ay, {
-                      discountOffer: N,
-                      trialOffer: b,
+                      discountOffer: R,
+                      trialOffer: N,
                       onClose: n,
-                      type: T.e.EMPTY_STICKER_PICKER_UPSELL,
-                      subscriptionTier: b?.subscription_trial?.sku_id ?? T.pe.TIER_2,
-                      children: y.intl.string(y.t.FnNud4),
+                      type: y.e.EMPTY_STICKER_PICKER_UPSELL,
+                      subscriptionTier: N?.subscription_trial?.sku_id ?? y.pe.TIER_2,
+                      children: S.intl.string(S.t.FnNud4),
                   })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(l.Heading, {
-                              className: S.wx,
+                              className: v.wx,
                               variant: "heading-xl/semibold",
-                              children: y.intl.string(y.t.HEm04J),
+                              children: S.intl.string(S.t.HEm04J),
                           }),
                           (0, r.jsx)(l.Text, {
-                              className: S.VA,
+                              className: v.VA,
                               color: "text-default",
                               variant: "text-md/normal",
-                              children: y.intl.string(y.t.FnNud4),
+                              children: S.intl.string(S.t.FnNud4),
                           }),
                           (0, r.jsx)("div", {
-                              className: S.l1,
-                              children: C.filter((e) => null != e).map((e) =>
-                                  (0, r.jsx)(g.A, { sticker: e, className: S.yI, size: v }, e?.id),
-                              ),
+                              className: v.l1,
+                              children: b
+                                  .filter((e) => null != e)
+                                  .map((e) => (0, r.jsx)(E.A, { sticker: e, className: v.yI, size: C }, e?.id)),
                           }),
                       ],
                   }),
-            !R &&
-                (0, r.jsx)(E.A, {
-                    analyticsSection: I.JJy.EXPRESSION_PICKER,
-                    buttonText: R ? (O ? y.intl.string(y.t.hz78hE) : y.intl.string(y.t["Gd/XHF"])) : void 0,
+            !O &&
+                (0, r.jsx)(A.A, {
+                    analyticsSection: T.JJy.EXPRESSION_PICKER,
+                    buttonText: O ? (D ? S.intl.string(S.t.hz78hE) : S.intl.string(S.t["Gd/XHF"])) : void 0,
                 }),
         ],
     });

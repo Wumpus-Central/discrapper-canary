@@ -10,36 +10,36 @@ var r = n(627968),
     c = n(489990);
 let d = 1080,
     _ = (e) => {
-        let { seats: t, participant: n, participants: a, channel: _, idle: f, enableAnimations: p = !0 } = e,
-            h = t.find((e) => e.claimedBy === n.userId),
-            m = null != h,
-            [g, E] = i.useState(!1),
-            A = (0, l.A)(n),
-            { x: I, y: T } = i.useMemo(() => {
+        let { seats: t, participant: n, participants: a, channel: _, idle: f, enableAnimations: h = !0 } = e,
+            p = t.find((e) => e.claimedBy === n.userId),
+            g = null != p,
+            [E, A] = i.useState(!1),
+            I = (0, l.A)(n),
+            { x: T, y } = i.useMemo(() => {
                 let e = { ...n.position };
-                if (m) {
-                    let t = o.dG[h.id - 1];
-                    null != t && ((e.x = t.x + t.player.x), (e.y = t.y + t.player.y - A.height));
+                if (g) {
+                    let t = o.dG[p.id - 1];
+                    null != t && ((e.x = t.x + t.player.x), (e.y = t.y + t.player.y - I.height));
                 }
                 return e;
-            }, [n.position, h, m, A]);
+            }, [n.position, p, g, I]);
         return (0, r.jsx)("div", {
-            className: s()(c.Wp, { [c.lv]: g }),
-            style: { transform: `translate3d(${I}px, ${T}px, 0)`, zIndex: T },
+            className: s()(c.Wp, { [c.lv]: E }),
+            style: { transform: `translate3d(${T}px, ${y}px, 0)`, zIndex: y },
             children:
-                m &&
+                g &&
                 (0, r.jsx)("div", {
                     className: c.my,
                     children: (0, r.jsx)(u.A, {
                         seats: t,
-                        claimedSeat: h,
+                        claimedSeat: p,
                         participant: n,
                         participants: a,
                         channel: _,
                         idle: f,
-                        flip: I > d,
-                        handleHover: (e) => E(e),
-                        enableAnimations: p,
+                        flip: T > d,
+                        handleHover: (e) => A(e),
+                        enableAnimations: h,
                     }),
                 }),
         });
