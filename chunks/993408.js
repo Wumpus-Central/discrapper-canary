@@ -3,19 +3,18 @@ n.d(t, {
     $W: () => F,
     $b: () => Y,
     Br: () => A,
-    Bs: () => ei,
-    CE: () => ea,
+    Bs: () => en,
+    CE: () => er,
     G0: () => g,
-    H1: () => J,
     HF: () => $,
     P_: () => R,
     R8: () => I,
-    V6: () => en,
+    V6: () => ee,
     WU: () => K,
-    Zu: () => et,
+    Zu: () => J,
     aT: () => z,
     aw: () => q,
-    bf: () => er,
+    bf: () => et,
     c7: () => Q,
     f6: () => L,
     fT: () => C,
@@ -205,30 +204,11 @@ let g = (e) => e?.premiumType != null,
             );
             return r?.amount;
         }),
-    J = (e, t) => {
-        let n = [];
-        for (let r of e) {
-            let e = r.heroRanking;
-            if (null != e)
-                for (let r of e) {
-                    let e = t.get(r);
-                    if (null != e && !q(e) && (n.push(r), n.length >= f.Bn)) return n;
-                }
-        }
-        return ee(n);
-    },
-    ee = (e) => {
-        if (e.length < f.Bn) {
-            let t = f.xG.slice(0, f.Bn - e.length);
-            return e.concat(t);
-        }
-        return e;
-    },
-    et = (e) => {
+    J = (e) => {
         let { product: t, isPartiallyOwnedBundle: n, isPurchased: r } = e;
         return !n && !(f.Dp.ORB_PROFILE_BADGE === t?.skuId && r);
     },
-    en = (e, t) => {
+    ee = (e, t) => {
         switch (e) {
             case i.R.AVATAR_DECORATION:
                 return "avatar decoration";
@@ -248,13 +228,13 @@ let g = (e) => e?.premiumType != null,
                 return "unknown";
         }
     },
-    er = (e, t, n) =>
+    et = (e, t, n) =>
         e.sort((e, r) => {
             let i = n ? (0, _.CW)({ product: e, isPremiumUser: t }) : A(e, t, !1),
                 a = n ? (0, _.CW)({ product: r, isPremiumUser: t }) : A(r, t, !1);
             return (i?.amount ?? 0) - (a?.amount ?? 0);
         }),
-    ei = (e, t) => {
+    en = (e, t) => {
         if (0 === t.length || 0 === e.length) return e;
         let n = t.map((e) => e.discountId);
         return e.sort((e, t) => {
@@ -262,4 +242,4 @@ let g = (e) => e?.premiumType != null,
             return (t.eligibleOffers?.some((e) => n.includes(e)) ?? !1) - r;
         });
     },
-    ea = (e) => e.filter((e) => !e.isCategoryReward);
+    er = (e) => e.filter((e) => !e.isCategoryReward);

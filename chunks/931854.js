@@ -1,7 +1,6 @@
 "use strict";
 e.exports = {
     qL: "bodyColumnMiddle_bf1b4a",
-    mT: "bodyColumnLeft_bf1b4a",
     Tc: "bodyColumnRight_bf1b4a",
     uh: "sendTo_bf1b4a",
     iX: "customGiftMessageWrapper_bf1b4a",
@@ -10,10 +9,4 @@ e.exports = {
     uW: "wishlistGiftPreview_bf1b4a",
     vX: "wishlistGiftPreviewHeader_bf1b4a",
     fi: "wishlistGiftPreviewFooter_bf1b4a",
-    B7: "selectGiftTitle_bf1b4a",
-    Cb: "recommendedGiftPreview_bf1b4a",
-    D8: "navigateToShopButton_bf1b4a",
-    V1: "navigateToShopBody_bf1b4a",
-    Lc: "navigateToShopTextWrapper_bf1b4a",
-    sV: "shopIcon_bf1b4a",
 };

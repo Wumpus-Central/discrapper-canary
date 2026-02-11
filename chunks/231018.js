@@ -1,38 +1,30 @@
 "use strict";
-n.d(t, { A: () => d }), n(801541);
+n.d(t, { A: () => u }), n(801541);
 var r = n(627968);
 n(64700);
 var i = n(889137),
     a = n(397927),
-    s = n(547065),
-    o = n(166532),
-    l = n(788868),
-    u = n(985018),
-    c = n(54196);
-function d(e) {
-    let { step: t, onClose: n, giftingOrigin: d } = e,
-        { enabled: _ } = s.P.useExperiment(
-            { location: "CollectiblesGiftPaymentModalHeader" },
-            { autoTrackExposure: !1 },
-        ),
-        f = (0, i.YW)(t)
-            .with(o.pn.REVIEW, () => u.intl.string(u.t.JbRd5s))
-            .with(o.pn.ADD_PAYMENT_STEPS, () => u.intl.string(u.t.QiGOak))
-            .with(o.pn.GIFT_CUSTOMIZATION, () =>
-                _ && d === l.vQ.DM_CHANNEL ? u.intl.string(u.t["xU+d9M"]) : u.intl.string(u.t["JCFN/y"]),
-            )
-            .with(o.pn.AWAITING_PURCHASE_TOKEN_AUTH, () => u.intl.string(u.t.lDbi6H))
-            .with(o.pn.CONFIRM, () => "")
+    s = n(166532),
+    o = n(985018),
+    l = n(54196);
+function u(e) {
+    let { step: t, onClose: n } = e,
+        u = (0, i.YW)(t)
+            .with(s.pn.REVIEW, () => o.intl.string(o.t.JbRd5s))
+            .with(s.pn.ADD_PAYMENT_STEPS, () => o.intl.string(o.t.QiGOak))
+            .with(s.pn.GIFT_CUSTOMIZATION, () => o.intl.string(o.t["JCFN/y"]))
+            .with(s.pn.AWAITING_PURCHASE_TOKEN_AUTH, () => o.intl.string(o.t.lDbi6H))
+            .with(s.pn.CONFIRM, () => "")
             .otherwise(() => null);
-    return null == f
+    return null == u
         ? null
         : (0, r.jsxs)(a.rQ0, {
               "data-migration-pending": !0,
-              className: c.H,
-              separator: t !== o.pn.CONFIRM,
+              className: l.H,
+              separator: t !== s.pn.CONFIRM,
               children: [
-                  (0, r.jsx)(a.Heading, { variant: "heading-lg/semibold", children: f }),
-                  (0, r.jsx)(a.s_y, { "data-migration-pending": !0, onClick: n, className: c.P }),
+                  (0, r.jsx)(a.Heading, { variant: "heading-lg/semibold", children: u }),
+                  (0, r.jsx)(a.s_y, { "data-migration-pending": !0, onClick: n, className: l.P }),
               ],
           });
 }
