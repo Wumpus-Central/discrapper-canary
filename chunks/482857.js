@@ -74,7 +74,7 @@ function S(e) {
             e.stopPropagation(),
                 null != n &&
                     (0, s.L3)(e, async () => {
-                        let { default: e } = await Promise.all([t.e("95950"), t.e("3795"), t.e("7869")]).then(
+                        let { default: e } = await Promise.all([t.e("77371"), t.e("3795"), t.e("97580")]).then(
                             t.bind(t, 406406),
                         );
                         return (t) => (0, i.jsx)(e, { guildEventId: w, recurrenceId: D, channel: S, guild: n, ...t });

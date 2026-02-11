@@ -1,5 +1,5 @@
 Object.defineProperty(e, "__esModule", { value: !0 });
-let i = a(778090);
+let i = a(200865);
 e.default = class {
     constructor(t) {
         (this.data = { name: null }), void 0 !== t.name && this.name(t.name);

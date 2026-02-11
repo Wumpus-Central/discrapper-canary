@@ -24,12 +24,12 @@ Object.defineProperty(e, "__esModule", { value: !0 }),
         e.ICalAlarmType =
         e.ICalAlarm =
             void 0);
-let r = i(a(399207));
+let r = i(a(987518));
 function n(t) {
     return new r.default(t);
 }
 e.default = n;
-var s = a(856267);
+var s = a(312611);
 Object.defineProperty(e, "ICalAlarm", {
     enumerable: !0,
     get: function () {
@@ -42,7 +42,7 @@ Object.defineProperty(e, "ICalAlarm", {
             return s.ICalAlarmType;
         },
     });
-var o = a(244015);
+var o = a(370090);
 Object.defineProperty(e, "ICalAttendee", {
     enumerable: !0,
     get: function () {
@@ -67,7 +67,7 @@ Object.defineProperty(e, "ICalAttendee", {
             return o.ICalAttendeeStatus;
         },
     });
-var d = a(399207);
+var d = a(987518);
 Object.defineProperty(e, "ICalCalendar", {
     enumerable: !0,
     get: function () {
@@ -80,14 +80,14 @@ Object.defineProperty(e, "ICalCalendar", {
             return d.ICalCalendarMethod;
         },
     });
-var l = a(948857);
+var l = a(174664);
 Object.defineProperty(e, "ICalCategory", {
     enumerable: !0,
     get: function () {
         return i(l).default;
     },
 });
-var u = a(816978);
+var u = a(142222);
 Object.defineProperty(e, "ICalEvent", {
     enumerable: !0,
     get: function () {
@@ -112,7 +112,7 @@ Object.defineProperty(e, "ICalEvent", {
             return u.ICalEventTransparency;
         },
     });
-var h = a(873956);
+var h = a(58315);
 Object.defineProperty(e, "ICalEventRepeatingFreq", {
     enumerable: !0,
     get: function () {
@@ -125,7 +125,7 @@ Object.defineProperty(e, "ICalEventRepeatingFreq", {
             return h.ICalWeekday;
         },
     });
-var c = a(778090);
+var c = a(200865);
 Object.defineProperty(e, "formatDate", {
     enumerable: !0,
     get: function () {
