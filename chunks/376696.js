@@ -63,8 +63,8 @@ function R(e) {
         $ = Y.length + k.length > 0,
         Z = null != L,
         ee = n.id === C.default.getId();
-    return Q || $ || Z
-        ? ee && ((Z && !Q && !$) || D)
+    return Q || $ || ee || Z
+        ? ee && ((!Q && !$) || D)
             ? M({ position: "right", nudge: 0, closePopout: () => {}, updatePosition: () => {} })
             : (0, i.jsxs)(o.HOs, {
                   className: a()(j.kL, { [j.iA]: G }),
