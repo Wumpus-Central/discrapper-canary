@@ -498,92 +498,94 @@ let W = function (e) {
             function n() {
                 let e = T.Ay.isSwitchingPlansDisabled(t),
                     n = T.Ay.getSwitchingPlansDisabledMessage(t);
-                return !0 === (0, j.g)({ location: "renderButtons" })
-                    ? q
-                        ? (0, i.jsx)("div", {
-                              className: M.f6,
-                              children: (0, i.jsx)(c.Button, {
-                                  variant: "secondary",
-                                  disabled: O,
-                                  onClick: et,
-                                  size: "md",
-                                  text: G.intl.string(G.t.eFlYVA),
-                              }),
-                          })
-                        : (0, i.jsxs)("div", {
-                              className: M.f6,
-                              children: [
-                                  (0, i.jsx)(o.m_, {
-                                      text: n,
-                                      asContainer: !0,
-                                      children: (0, i.jsx)(c.Button, {
-                                          variant: "expressive",
-                                          size: "md",
-                                          icon: c.tvc,
-                                          disabled: e,
-                                          onClick: () => {
-                                              (0, g.A)({
-                                                  analyticsLocations: z,
-                                                  analyticsLocation: k,
-                                                  analyticsObject: H,
-                                                  subscription: t,
-                                              });
-                                          },
-                                          text: G.intl.string(G.t["dylp/7"]),
-                                      }),
+                if (!0 === (0, j.g)({ location: "renderButtons" })) {
+                    if (q)
+                        return (0, i.jsx)("div", {
+                            className: M.f6,
+                            children: (0, i.jsx)(c.Button, {
+                                variant: "secondary",
+                                disabled: O,
+                                onClick: et,
+                                size: "md",
+                                text: G.intl.string(G.t.eFlYVA),
+                            }),
+                        });
+                    let s = t.hasPremiumAtLeast(P.PremiumTypes.TIER_2);
+                    return (0, i.jsxs)("div", {
+                        className: M.f6,
+                        children: [
+                            (0, i.jsx)(o.m_, {
+                                text: n,
+                                asContainer: !0,
+                                children: (0, i.jsx)(c.Button, {
+                                    variant: s ? "primary" : "expressive",
+                                    size: "md",
+                                    icon: s ? void 0 : c.tvc,
+                                    disabled: e,
+                                    onClick: () => {
+                                        (0, g.A)({
+                                            analyticsLocations: z,
+                                            analyticsLocation: k,
+                                            analyticsObject: H,
+                                            subscription: t,
+                                        });
+                                    },
+                                    text: G.intl.string(G.t["dylp/7"]),
+                                }),
+                            }),
+                            (0, i.jsx)(c.Button, {
+                                variant: "secondary",
+                                onClick: en,
+                                disabled: O,
+                                size: "md",
+                                text: G.intl.string(G.t["ETE/oC"]),
+                            }),
+                        ],
+                    });
+                }
+                return (0, i.jsxs)("div", {
+                    className: U.Lv,
+                    children: [
+                        q
+                            ? (0, i.jsx)("div", {
+                                  className: U.xP,
+                                  children: (0, i.jsx)(c.QWc, {
+                                      variant: "always-white",
+                                      disabled: O,
+                                      onClick: et,
+                                      size: "sm",
+                                      text: G.intl.string(G.t.eFlYVA),
                                   }),
-                                  (0, i.jsx)(c.Button, {
-                                      variant: "secondary",
+                              })
+                            : (0, i.jsx)("div", {
+                                  className: U.Nn,
+                                  children: (0, i.jsx)(c.QWc, {
+                                      variant: "always-white",
                                       onClick: en,
                                       disabled: O,
-                                      size: "md",
+                                      size: "sm",
                                       text: G.intl.string(G.t["ETE/oC"]),
                                   }),
-                              ],
-                          })
-                    : (0, i.jsxs)("div", {
-                          className: U.Lv,
-                          children: [
-                              q
-                                  ? (0, i.jsx)("div", {
-                                        className: U.xP,
-                                        children: (0, i.jsx)(c.QWc, {
-                                            variant: "always-white",
-                                            disabled: O,
-                                            onClick: et,
-                                            size: "sm",
-                                            text: G.intl.string(G.t.eFlYVA),
-                                        }),
-                                    })
-                                  : (0, i.jsx)("div", {
-                                        className: U.Nn,
-                                        children: (0, i.jsx)(c.QWc, {
-                                            variant: "always-white",
-                                            onClick: en,
-                                            disabled: O,
-                                            size: "sm",
-                                            text: G.intl.string(G.t["ETE/oC"]),
-                                        }),
-                                    }),
-                              (0, i.jsx)(o.m_, {
-                                  text: n,
-                                  asContainer: !0,
-                                  children: (0, i.jsx)(R.A, {
-                                      className: a()(U.au, U.lB),
-                                      disabled: e,
-                                      onClick: () => {
-                                          (0, g.A)({
-                                              analyticsLocations: z,
-                                              analyticsLocation: k,
-                                              analyticsObject: H,
-                                              subscription: t,
-                                          });
-                                      },
-                                      text: G.intl.string(G.t["dylp/7"]),
-                                  }),
                               }),
-                          ],
-                      });
+                        (0, i.jsx)(o.m_, {
+                            text: n,
+                            asContainer: !0,
+                            children: (0, i.jsx)(R.A, {
+                                className: a()(U.au, U.lB),
+                                disabled: e,
+                                onClick: () => {
+                                    (0, g.A)({
+                                        analyticsLocations: z,
+                                        analyticsLocation: k,
+                                        analyticsObject: H,
+                                        subscription: t,
+                                    });
+                                },
+                                text: G.intl.string(G.t["dylp/7"]),
+                            }),
+                        }),
+                    ],
+                });
             }
             if (T.Ay.isBaseSubscriptionCanceled(t))
                 return (0, i.jsx)("div", {
