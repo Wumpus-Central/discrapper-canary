@@ -54925,7 +54925,7 @@ div.modalOverrideBody__34eac {
 @value maxModalWidth from "./MarkdownModal.module.css";
 
 .video__1689b {
-    border-radius: 3px
+    border-radius: var(--radius-xs)
 }
 
 @media (max-width:480px) {
@@ -54935,23 +54935,36 @@ div.modalOverrideBody__34eac {
 }
 
 .container__1689b {
-    padding-bottom: 20px
+    padding-bottom: var(--space-20)
 }
 
-.container__1689b p>img,
+.paragraph__1689b {
+    margin: var(--space-8) 0
+}
+
+.paragraph__1689b>img {
+    border-radius: var(--radius-xs)
+}
+
+.list__1689b {
+    margin: var(--space-4) 0 var(--space-4) var(--space-20);
+    padding: 0
+}
+
+.listItem__1689b {
+    margin-bottom: var(--space-16)
+}
+
 .image__1689b {
-    border-radius: 5px
+    border-radius: var(--radius-xs)
 }
 
 .title__1689b {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 20px;
     text-transform: uppercase
 }
 
 .lead__1689b {
-    border-radius: 5px;
+    border-radius: var(--radius-xs);
     margin-bottom: 20px
 }
 
@@ -54961,14 +54974,14 @@ div.modalOverrideBody__34eac {
 .progress__1689b {
     align-items: center;
     display: flex;
-    margin-top: 40px
+    margin-top: var(--space-24)
 }
 
 .added__1689b.marginTop__1689b,
 .fixed__1689b.marginTop__1689b,
 .improved__1689b.marginTop__1689b,
 .progress__1689b.marginTop__1689b {
-    margin-top: 20px
+    margin-top: var(--space-32)
 }
 
 .added__1689b:after,
@@ -55036,8 +55049,6 @@ h3.improved__1689b:after {
     border-radius: 5px;
     color: var(--white);
     display: flex;
-    font-size: 16px;
-    line-height: 18px;
     padding: 16px
 }
 
@@ -56972,7 +56983,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

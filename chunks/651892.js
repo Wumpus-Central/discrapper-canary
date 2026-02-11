@@ -104,7 +104,7 @@ let T = (e) => {
     let { hasVideoAsset: t, playerState: n, pauseReason: r } = e;
     return t
         ? n === o.Q6.PAUSED && r === a.Yg.LOST_FOCUS
-            ? u.intl.string(u.t["U7Xrb+"])
+            ? u.intl.string(u.t.w6PeBF)
             : null
         : (0, i.isWeb)()
           ? u.intl.string(u.t["E1du/q"])
