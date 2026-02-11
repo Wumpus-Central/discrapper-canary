@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => y });
+n.d(t, { A: () => C });
 var r = n(410530),
     i = n(892227),
     a = n(582972),
@@ -9,10 +9,11 @@ var r = n(410530),
     u = n(287809),
     c = n(927813),
     d = n(649032),
-    _ = n(26508);
-let f = 864e5,
-    p = new l.Z({ ttlMs: f });
-function h() {
+    _ = n(26508),
+    f = n(880403);
+let h = 864e5,
+    p = new l.Z({ ttlMs: h });
+function g() {
     let e = p.getValue();
     if (null == e) return { state: "MORE_THAN_24H_BEFORE_REWARD" };
     let t = new Date();
@@ -26,17 +27,17 @@ function h() {
     }
     return { state: "MORE_THAN_24H_BEFORE_REWARD" };
 }
-function m(e, t) {
-    return "LESS_THAN_24H_BEFORE_REWARD" === e ? (t ?? f) : f;
+function E(e, t) {
+    return "LESS_THAN_24H_BEFORE_REWARD" === e ? (t ?? h) : h;
 }
-function g() {
-    let { state: e, msUntilReward: t } = h();
-    p.setTtl(m(e, t));
+function A() {
+    let { state: e, msUntilReward: t } = g();
+    p.setTtl(E(e, t));
 }
-function E() {
+function I() {
     p.setLoading();
 }
-function A(e) {
+function T(e) {
     let { programRewards: t } = e;
     if (!p.isLoading()) return !1;
     let n = new Map();
@@ -44,16 +45,16 @@ function A(e) {
         n.set(e.reward_program, e);
     }),
         p.setValue(n),
-        g();
+        A();
 }
-function I() {
+function y() {
     if (!p.isLoading()) return !1;
     p.setError();
 }
-function T() {
+function S() {
     p.clear();
 }
-class S extends s.Ay.PersistedStore {
+class v extends s.Ay.PersistedStore {
     static displayName = "ProgramRewardsStore";
     static persistKey = "ProgramRewardsStore";
     initialize(e) {
@@ -61,7 +62,7 @@ class S extends s.Ay.PersistedStore {
             let t = new Map(e.cache.value);
             p.restore({ value: t, fetchedAt: e.cache.fetchedAt });
         }
-        g();
+        A();
     }
     getState() {
         let e = p.serialize();
@@ -120,7 +121,11 @@ class S extends s.Ay.PersistedStore {
         );
     }
     shouldFetch() {
-        return !!(0, _.T0)("ProgramRewardsStore.shouldFetch") && !!(0, _.mY)() && p.shouldFetch();
+        return (
+            !!(0, _.T0)("ProgramRewardsStore.shouldFetch") &&
+            !!(0, _.mY)() &&
+            (p.shouldFetch() || (0, f.A)(this.getRewardForProgram(d.W.NITRO)))
+        );
     }
     isError() {
         return p.isError();
@@ -135,11 +140,11 @@ class S extends s.Ay.PersistedStore {
         p.forceExpire();
     }
 }
-let y = new S(o.h, {
-    LOGOUT: T,
-    PROGRAM_REWARDS_FETCH: E,
-    PROGRAM_REWARDS_FETCH_SUCCESS: A,
-    PROGRAM_REWARDS_FETCH_FAILURE: I,
-    CURRENT_USER_UPDATE: g,
-    CONNECTION_OPEN: g,
+let C = new v(o.h, {
+    LOGOUT: S,
+    PROGRAM_REWARDS_FETCH: I,
+    PROGRAM_REWARDS_FETCH_SUCCESS: T,
+    PROGRAM_REWARDS_FETCH_FAILURE: y,
+    CURRENT_USER_UPDATE: A,
+    CONNECTION_OPEN: A,
 });
