@@ -1,52 +1,70 @@
-a.d(n, { default: () => m });
-var o = a(627968);
-a(64700);
-var e = a(827734),
-    s = a(397927),
-    r = a(688810),
-    d = a(87719),
-    i = a(244975),
-    l = a(788868),
-    c = a(652215),
-    p = a(985018),
-    f = a(915865),
-    u = a(953239),
-    A = a(929103);
-function C(t, n) {
-    return (0, o.jsx)(s.LpS, { text: t, className: u.Ad, color: e.A.unsafe_rawColors.BRAND_500.css }, n);
+o.d(n, { default: () => g });
+var a = o(627968);
+o(64700);
+var e = o(827734),
+    r = o(397927),
+    i = o(688810),
+    s = o(87719),
+    l = o(414345),
+    c = o(244975),
+    d = o(788868),
+    p = o(652215),
+    C = o(985018),
+    A = o(915865),
+    f = o(953239),
+    u = o(929103);
+function m(t, n) {
+    return (0, a.jsx)(r.LpS, { text: t, className: f.Ad, color: e.A.unsafe_rawColors.BRAND_500.css }, n);
 }
-function m(t) {
-    let { guildCount: n, onClose: a, analyticsLocations: e, ...u } = t,
-        m = function (t, n) {
-            return (0, o.jsx)(
-                s.DUT,
+function g(t) {
+    let { guildCount: n, onClose: o, analyticsLocations: e, ...f } = t,
+        g = function (t, n) {
+            return (0, a.jsx)(
+                r.DUT,
                 {
-                    className: f.C,
+                    className: A.C,
                     tag: "span",
                     onClick: () => {
-                        a(), (0, d.e)();
+                        o(), (0, s.e)();
                     },
                     children: t,
                 },
                 n,
             );
         },
-        { analyticsLocations: L } = (0, r.Ay)(e);
-    return (0, o.jsx)(r.f5, {
-        value: L,
-        children: (0, o.jsx)(i.A, {
-            artURL: A.A,
-            onClose: a,
-            type: l.e.GUILD_CAP_MODAL_UPSELL,
-            title: p.intl.string(p.t["CoNXB+"]),
-            body:
-                n < c.qlD
-                    ? p.intl.format(p.t["5qLH7B"], { guildCount: n, onAndMore: m, newBadgeHook: C })
-                    : p.intl.format(p.t.mk9CS6, { onAndMore: m, newBadgeHook: C }),
-            context:
-                n < c.qlD ? p.intl.formatToPlainString(p.t["C+Hqzs"], { guildCount: n }) : p.intl.string(p.t.m0xavd),
-            glowUp: p.intl.format(p.t["6Dl5X1"], { onAndMore: m }),
-            ...u,
-        }),
-    });
+        { analyticsLocations: k } = (0, i.Ay)(e);
+    return (0, l.g)({ location: "PremiumGuildCapUpsell" })
+        ? (0, a.jsx)(c.F, {
+              title: C.intl.string(C.t["CoNXB+"]),
+              subtitle:
+                  n < p.qlD
+                      ? C.intl.format(C.t["5qLH7B"], { guildCount: n, onAndMore: g, newBadgeHook: m })
+                      : C.intl.format(C.t.mk9CS6, { onAndMore: g, newBadgeHook: m }),
+              graphic: { src: u.A, type: "image" },
+              secondaryCTA: C.intl.string(C.t["13/7kX"]),
+              onSecondaryClick: o,
+              onClose: o,
+              ...f,
+          })
+        : (0, a.jsx)(i.f5, {
+              value: k,
+              children: (0, a.jsx)(c.A, {
+                  artURL: u.A,
+                  onClose: o,
+                  type: d.e.GUILD_CAP_MODAL_UPSELL,
+                  title: C.intl.string(C.t["CoNXB+"]),
+                  secondaryCTA: C.intl.string(C.t["13/7kX"]),
+                  onSecondaryClick: o,
+                  body:
+                      n < p.qlD
+                          ? C.intl.format(C.t["5qLH7B"], { guildCount: n, onAndMore: g, newBadgeHook: m })
+                          : C.intl.format(C.t.mk9CS6, { onAndMore: g, newBadgeHook: m }),
+                  context:
+                      n < p.qlD
+                          ? C.intl.formatToPlainString(C.t["C+Hqzs"], { guildCount: n })
+                          : C.intl.string(C.t.m0xavd),
+                  glowUp: C.intl.format(C.t["6Dl5X1"], { onAndMore: g }),
+                  ...f,
+              }),
+          });
 }

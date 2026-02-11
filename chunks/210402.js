@@ -1,32 +1,45 @@
-e.d(a, { default: () => l });
-var c = e(627968);
-e(64700);
-var n = e(87719),
-    o = e(244975),
-    s = e(788868),
-    i = e(652215),
-    r = e(985018),
-    d = e(451067),
-    p = e(196436);
-function l(t) {
-    let { onClose: a, analyticsSource: e, onLearnMore: l, ..._ } = t,
-        u = s.pe.TIER_2,
-        b = r.intl.format(r.t.hDMlqD, {
+n.d(t, { default: () => u });
+var a = n(627968);
+n(64700);
+var i = n(87719),
+    r = n(414345),
+    s = n(244975),
+    o = n(788868),
+    c = n(652215),
+    l = n(985018),
+    d = n(451067),
+    p = n(196436);
+function u(e) {
+    let { onClose: t, analyticsSource: n, onLearnMore: u, ...b } = e,
+        g = o.pe.TIER_2,
+        f = l.intl.format(l.t.hDMlqD, {
             onLearnMore: function () {
-                l?.(), a(), (0, n.e)();
+                u?.(), t(), (0, i.e)();
             },
         });
-    return (0, c.jsx)(o.A, {
-        artURL: p.A,
-        artContainerClassName: d.z,
-        type: s.e.VIDEO_BACKGROUNDS_MODAL,
-        title: r.intl.string(r.t.fHqiDW),
-        body: b,
-        glowUp: b,
-        analyticsSource: e,
-        analyticsLocation: { page: i.liQ.PREMIUM_UPSELL_MODAL_VIDEO_BACKGROUNDS, object: i.ZSU.BUTTON_CTA },
-        onClose: a,
-        subscriptionTier: u,
-        ..._,
-    });
+    return (0, r.g)({ location: "PremiumVideoBackgroundsUpsell" })
+        ? (0, a.jsx)(s.F, {
+              title: l.intl.string(l.t.fHqiDW),
+              subtitle: f,
+              graphic: { src: p.A, type: "image" },
+              onSecondaryClick: t,
+              secondaryCTA: l.intl.string(l.t["13/7kX"]),
+              onClose: t,
+              showEnhancedUpsell: !0,
+              subscriptionTier: g,
+              ...b,
+          })
+        : (0, a.jsx)(s.A, {
+              artURL: p.A,
+              artContainerClassName: d.z,
+              type: o.e.VIDEO_BACKGROUNDS_MODAL,
+              title: l.intl.string(l.t.fHqiDW),
+              body: f,
+              glowUp: f,
+              analyticsSource: n,
+              analyticsLocation: { page: c.liQ.PREMIUM_UPSELL_MODAL_VIDEO_BACKGROUNDS, object: c.ZSU.BUTTON_CTA },
+              onClose: t,
+              subscriptionTier: g,
+              ...b,
+          });
 }

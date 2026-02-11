@@ -1,39 +1,53 @@
-d.d(c, { default: () => p });
-var a = d(627968);
-d(64700);
-var t = d(87719),
-    s = d(377108),
-    n = d(244975),
-    A = d(652215),
-    f = d(985018);
-function p(e) {
+t.d(n, { default: () => d });
+var a = t(627968);
+t(64700);
+var o = t(87719),
+    i = t(414345),
+    l = t(377108),
+    r = t(244975),
+    c = t(652215),
+    s = t(985018);
+function d(e) {
     let {
-            premiumUpsellType: c,
-            title: d,
-            body: p,
-            glowUp: b,
-            analyticsSource: o,
-            onClose: r,
-            onSecondaryClick: i,
-            ...l
+            premiumUpsellType: n,
+            title: t,
+            body: d,
+            glowUp: u,
+            analyticsSource: p,
+            onClose: h,
+            onSecondaryClick: C,
+            ...b
         } = e,
-        L = (0, s.A)(c);
-    return (0, a.jsx)(n.A, {
-        artURL: L,
-        type: c,
-        title: d,
-        body: p,
-        glowUp: b,
-        onSecondaryClick: () => {
-            i(), (0, t.x)(r);
-        },
-        secondaryCTA: f.intl.string(f.t.PcTCB7),
-        onClose: r,
-        enableArtBoxShadow: !1,
-        analyticsSource: o,
-        analyticsLocation: { section: A.JJy.USER_PROFILE, object: A.ZSU.BUTTON_CTA },
-        hideBackButton: !0,
-        showEnhancedUpsell: !0,
-        ...l,
-    });
+        y = (0, l.u)(n),
+        g = (0, l.A)(n);
+    return (0, i.g)({ location: "PremiumProfileDecorationUpsell" })
+        ? (0, a.jsx)(r.F, {
+              title: t,
+              subtitle: d,
+              graphic: g,
+              onSecondaryClick: () => {
+                  C(), (0, o.x)(h);
+              },
+              secondaryCTA: s.intl.string(s.t.PcTCB7),
+              onClose: h,
+              showEnhancedUpsell: !0,
+          })
+        : (0, a.jsx)(r.A, {
+              artURL: y,
+              type: n,
+              title: t,
+              body: d,
+              glowUp: u,
+              onSecondaryClick: () => {
+                  C(), (0, o.x)(h);
+              },
+              secondaryCTA: s.intl.string(s.t.PcTCB7),
+              onClose: h,
+              enableArtBoxShadow: !1,
+              analyticsSource: p,
+              analyticsLocation: { section: c.JJy.USER_PROFILE, object: c.ZSU.BUTTON_CTA },
+              hideBackButton: !0,
+              showEnhancedUpsell: !0,
+              ...b,
+          });
 }

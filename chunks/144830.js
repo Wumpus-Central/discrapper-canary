@@ -27,7 +27,7 @@ var n = s(627968),
     S = s(788868),
     k = s(985018),
     b = s(151e3);
-function D(e) {
+function y(e) {
     let {
         icon: t,
         onClick: s,
@@ -73,7 +73,7 @@ function D(e) {
         ],
     });
 }
-function U(e) {
+function D(e) {
     let { option: t, source: s, isAnimated: i } = e,
         [a, o] = l.useState(!1);
     if (
@@ -92,7 +92,7 @@ function U(e) {
         alt: t.id,
     });
 }
-function y(e) {
+function U(e) {
     let {
             option: t,
             source: i,
@@ -105,12 +105,12 @@ function y(e) {
         v = (0, u.p)(),
         { analyticsLocations: T } = (0, p.Ay)(x.A.VIDEO_BACKGROUND_IMAGE_OPTION),
         C = (0, o.bG)([f.A], () => null != E && f.A.hasHotspot(E)),
-        D = l.useCallback((e) => {
+        y = l.useCallback((e) => {
             if (!(0, j.u)(e)) throw e;
         }, []),
-        y = h
-            ? (0, n.jsx)(A.A, { className: b.PQ, src: i, loop: !0, playOnHover: !0, muted: !0, onPlayError: D })
-            : (0, n.jsx)(U, { isAnimated: _, option: (0, O.d1)(t) ? t : void 0, source: i });
+        U = h
+            ? (0, n.jsx)(A.A, { className: b.PQ, src: i, loop: !0, playOnHover: !0, muted: !0, onPlayError: y })
+            : (0, n.jsx)(D, { isAnimated: _, option: (0, O.d1)(t) ? t : void 0, source: i });
     function B() {
         null != E &&
             C &&
@@ -131,7 +131,7 @@ function y(e) {
             }),
         children: [
             r ? (0, n.jsx)("div", { className: b.SH }) : null,
-            (0, n.jsx)("div", { onFocus: B, onMouseEnter: B, className: b.kV, children: y }),
+            (0, n.jsx)("div", { onFocus: B, onMouseEnter: B, className: b.kV, children: U }),
             h || _
                 ? (0, n.jsx)("div", {
                       className: b.uZ,
@@ -163,7 +163,7 @@ function M(e) {
         children: (0, n.jsxs)("div", {
             className: b.$g,
             children: [
-                (0, n.jsxs)(D, {
+                (0, n.jsxs)(y, {
                     className: b.__invalid_backgroundOptionBlurred,
                     disabled: l,
                     icon: c.XGR,
@@ -209,7 +209,7 @@ function L(e) {
         onClick: function () {
             (0, c.mMO)(
                 async () => {
-                    let { default: e } = await Promise.all([s.e("90017"), s.e("53653"), s.e("66863")]).then(
+                    let { default: e } = await Promise.all([s.e("59701"), s.e("53653"), s.e("8261")]).then(
                         s.bind(s, 551028),
                     );
                     return (s) =>
@@ -260,13 +260,13 @@ function w(e) {
         children: (0, n.jsxs)("div", {
             className: b.to,
             children: [
-                (0, n.jsx)(D, {
+                (0, n.jsx)(y, {
                     selected: null == i,
                     icon: c.KTN,
                     onClick: () => a(null),
                     text: k.intl.string(k.t.fUdMeO),
                 }),
-                (0, n.jsx)(D, {
+                (0, n.jsx)(y, {
                     selected: "blur" === i,
                     icon: c.fBX,
                     onClick: () => a("blur"),
@@ -284,7 +284,7 @@ function w(e) {
                                   __unsupportedReactNodeAsText: (0, n.jsx)(B, {}),
                                   "aria-label": k.intl.string(k.t["T+yRY3"]),
                                   children: (0, n.jsx)(
-                                      y,
+                                      U,
                                       {
                                           option: e,
                                           source: t,
@@ -307,7 +307,7 @@ function w(e) {
                             text: e.name,
                             "aria-label": e.name,
                             children: (0, n.jsx)(
-                                y,
+                                U,
                                 {
                                     option: e.id,
                                     source: e.source,
