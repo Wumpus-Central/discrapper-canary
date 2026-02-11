@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ts: () => m });
+n.d(t, { Ts: () => g });
 var r = n(141931),
     i = n(506774),
     a = n(430452),
@@ -11,7 +11,7 @@ var r = n(141931),
     d = n(652215);
 let _ = window.DiscordNative,
     f = `${d.HAw.APP_NATIVE_CRASH}Storage`;
-function p(e) {
+function h(e) {
     return {
         did_crash: !0,
         electron_crash_reporter_did_crash: !0,
@@ -20,39 +20,39 @@ function p(e) {
         child_process_crash_exit_code: e.exitCode ?? null,
     };
 }
-function h(e, t) {
-    let n = p(t);
+function p(e, t) {
+    let n = h(t);
     o.default.track(d.HAw.APP_NATIVE_CRASH, n);
 }
-async function m() {
+async function g() {
     if (__OVERLAY__) return;
     let e = _?.processUtils?.getLastCrash;
-    if (((0, l.isDesktop)() && u.Ay.on("CRASH_REPORTER_NEW_CRASH", h), null == e))
+    if (((0, l.isDesktop)() && u.Ay.on("CRASH_REPORTER_NEW_CRASH", p), null == e))
         return void console.log("AppCrashedFatalReport: getLastCrash not supported.");
     let t = await e(),
-        { didCrashReporterSeeCrash: n, didCrashOrUncleanExit: r } = g(i.w.get(f, {}), t),
-        a = A(n, r, t);
+        { didCrashReporterSeeCrash: n, didCrashOrUncleanExit: r } = E(i.w.get(f, {}), t),
+        a = I(n, r, t);
     o.default.track(d.HAw.APP_NATIVE_CRASH, a),
         i.w.set(f, { lastId: t?.id }),
-        r && setTimeout(async () => await E(), 1e4);
+        r && setTimeout(async () => await A(), 1e4);
 }
-function g(e, t) {
+function E(e, t) {
     let n = e?.lastId !== t?.id && t?.id != null,
         r = t?.rendererCrashExitCode ?? null,
         i = n || (null != r && 0 !== r);
     return { didCrashReporterSeeCrash: n, didCrashOrUncleanExit: i };
 }
-async function E() {
+async function A() {
     if (s.default.getCurrentUser()?.isStaff())
         try {
-            await a.A.getMediaEngine().writeAudioDebugState(),
+            await a.Ay.getMediaEngine().writeAudioDebugState(),
                 await (0, c.a)(d.Umv.RTC),
                 console.log("Successfully uploaded debug files");
         } catch (e) {
             console.log("Failed to upload debug files");
         }
 }
-function A(e, t, n) {
+function I(e, t, n) {
     function i(e) {
         return n?.storedInformation != null && 1 === n.storedInformation[e];
     }

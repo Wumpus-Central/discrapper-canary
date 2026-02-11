@@ -9,9 +9,9 @@ function l(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     r.h.dispatch({ type: "PUSH_TO_TALK_STATE_CHANGE", isActive: e, isPriority: t, isLatched: n });
-    let l = a.A.getMode() === s.TBI.PUSH_TO_TALK,
+    let l = a.Ay.getMode() === s.TBI.PUSH_TO_TALK,
         u =
             (0, i.H)({ location: "doPTT", autoTrackExposure: !1 }).enableLatching &&
-            !0 === a.A.getModeOptions().pttLatchingEnabled;
-    a.A.getMediaEngine().eachConnection((r) => r.setForceAudioInput(e, t, l && u && !n && !e), o.x.DEFAULT);
+            !0 === a.Ay.getModeOptions().pttLatchingEnabled;
+    a.Ay.getMediaEngine().eachConnection((r) => r.setForceAudioInput(e, t, l && u && !n && !e), o.x.DEFAULT);
 }

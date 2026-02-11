@@ -23,8 +23,8 @@ class d extends s.A {
             (n === i.x.DEFAULT &&
                 t !== c.S7L.DISCONNECTED &&
                 t === c.S7L.RTC_CONNECTED &&
-                o.A.getKrispEnableStats() &&
-                o.A.getNoiseCancellation() &&
+                o.Ay.getKrispEnableStats() &&
+                o.Ay.getNoiseCancellation() &&
                 (a.A.setNoiseCancellation(!1), a.A.setNoiseCancellation(!0)));
     };
     actions = {

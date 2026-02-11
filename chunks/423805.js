@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => p });
 var r = n(827343),
     i = n(439372),
     a = n(49463),
@@ -13,14 +13,14 @@ function _() {
     return (0, d.Lb)({ location: "VoiceFilterLoopbackManager", autoTrackExposure: !1 });
 }
 function f() {
-    if (!_() || !l.A.getVoiceFilterPlaybackEnabled() || !u.A.isConnected() || null == l.A.getActiveVoiceFilter())
+    if (!_() || !l.Ay.getVoiceFilterPlaybackEnabled() || !u.A.isConnected() || null == l.Ay.getActiveVoiceFilter())
         return !1;
     let e = u.A.getChannelId(),
         t = null != e ? o.A.getChannel(e) : null,
         { mute: n, selfMute: r, suppress: i } = (0, s.k)({ channel: t });
     return !(n || r || i);
 }
-class p extends i.A {
+class h extends i.A {
     actions = {
         VOICE_FILTER_LOOPBACK_TOGGLE: this.updateLoopbackState,
         RTC_CONNECTION_STATE: this.updateLoopbackState,
@@ -31,11 +31,11 @@ class p extends i.A {
     };
     stores = new Map().set(a.A, this.handleExperimentStateChange);
     handleExperimentStateChange() {
-        !_() && l.A.getVoiceFilterPlaybackEnabled() && (0, c.KM)(!1);
+        !_() && l.Ay.getVoiceFilterPlaybackEnabled() && (0, c.KM)(!1);
     }
     updateLoopbackState() {
         let e = f();
-        e !== l.A.getLoopbackReasons().has("voice_filter") && r.A.setLoopback("voice_filter", e);
+        e !== l.Ay.getLoopbackReasons().has("voice_filter") && r.A.setLoopback("voice_filter", e);
     }
 }
-let h = new p();
+let p = new h();

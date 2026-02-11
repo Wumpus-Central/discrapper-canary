@@ -302,7 +302,7 @@ function ef() {
         c = (0, _.bG)([j.A], () => j.A.getChannel(d)),
         u = (0, _.bG)([w.A], () => (null != c ? w.A.getGuild(c.guild_id) : null)),
         h = (0, _.bG)([I.Ay, P.A], () => (0, T.A)(I.Ay, P.A)),
-        p = (0, _.bG)([L.A], () => (0, N.A)(L.A)),
+        p = (0, _.bG)([L.Ay], () => (0, N.A)(L.Ay)),
         A = (0, _.bG)([D.A], () => null != D.A.getCurrentUserActiveStream()),
         { analyticsLocations: f } = (0, v.Ay)(S.A.OVERLAY),
         { showKeybindIndicators: g, dismissKeybindNotification: m } = (0, ee.B)();

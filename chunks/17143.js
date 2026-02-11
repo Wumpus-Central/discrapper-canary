@@ -29,13 +29,13 @@ class D extends s.PureComponent {
         this._initTimeout.start(1e3, this.setupVoiceActivity);
     }
     setupVoiceActivity = () => {
-        f.A.getMediaEngine().on(u.bg.VoiceActivity, this.handleVoiceActivity);
+        f.Ay.getMediaEngine().on(u.bg.VoiceActivity, this.handleVoiceActivity);
     };
     componentWillUnmount() {
         this._initTimeout.stop(),
             this._silenceTimeout.stop(),
             this._micTestStop(),
-            f.A.getMediaEngine().removeListener(u.bg.VoiceActivity, this.handleVoiceActivity);
+            f.Ay.getMediaEngine().removeListener(u.bg.VoiceActivity, this.handleVoiceActivity);
     }
     handleVoiceActivity = (e) => {
         let { isMicTesting: t } = this.state;
@@ -180,22 +180,22 @@ function I(e) {
             outputVolume: r,
             inputMode: u,
             isDeafened: d,
-        } = (0, c.cf)([f.A], () => {
-            let e = f.A.getInputDeviceId(),
-                t = f.A.getInputDevices(),
+        } = (0, c.cf)([f.Ay], () => {
+            let e = f.Ay.getInputDeviceId(),
+                t = f.Ay.getInputDevices(),
                 i = o().find(t, (t) => {
                     let { id: i } = t;
                     return i === e;
                 }),
-                n = f.A.getOutputDeviceId(),
-                s = f.A.getOutputDevices(),
+                n = f.Ay.getOutputDeviceId(),
+                s = f.Ay.getOutputDevices(),
                 l = o().find(s, (e) => {
                     let { id: t } = e;
                     return t === n;
                 }),
-                { threshold: a, autoThreshold: r } = f.A.getModeOptions(),
-                c = f.A.getInputVolume(),
-                u = f.A.getOutputVolume();
+                { threshold: a, autoThreshold: r } = f.Ay.getModeOptions(),
+                c = f.Ay.getInputVolume(),
+                u = f.Ay.getOutputVolume();
             return {
                 inputDevice: i,
                 outputDevice: l,
@@ -203,8 +203,8 @@ function I(e) {
                 autoThreshold: r,
                 inputVolume: c,
                 outputVolume: u,
-                inputMode: f.A.getMode(),
-                isDeafened: f.A.isSelfDeaf(),
+                inputMode: f.Ay.getMode(),
+                isDeafened: f.Ay.isSelfDeaf(),
             };
         }),
         h = (0, c.bG)([x.A], () => x.A.isConnected()),

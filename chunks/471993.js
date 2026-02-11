@@ -30,7 +30,7 @@ function f(e, t, f) {
                 ? { width: 1920, height: 1080 }
                 : { width: 1280, height: 720 };
         (0, a.Xd)({ preset: _.jQ.PRESET_CUSTOM, resolution: r.height, frameRate: _.kn.FPS_30, soundshareEnabled: !0 }),
-            u.A.getMediaEngine()
+            u.Ay.getMediaEngine()
                 .getDesktopSource(r, !0)
                 .then((n) => {
                     (0, a.XI)(e, t, { pid: null, sourceId: n, sourceName: null, analyticsLocations: f });

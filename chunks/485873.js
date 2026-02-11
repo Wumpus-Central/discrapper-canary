@@ -8,7 +8,7 @@ var a = n(311907),
     s = n(824744),
     o = n(985018);
 function c(e) {
-    let t = (0, a.bG)([u.A], () => (0, s.M)(u.A.getInputVolume()));
+    let t = (0, a.bG)([u.Ay], () => (0, s.M)(u.Ay.getInputVolume()));
     return (0, r.jsx)(l.aK1, {
         id: "input",
         label: o.intl.string(o.t.OX2Bnr),

@@ -15,13 +15,13 @@ let u = {
         if (
             null != u &&
             null != d &&
-            !i.A.getInputDetectedThisConnection() &&
+            !i.Ay.getInputDetectedThisConnection() &&
             a.A.getState() === l.S7L.RTC_CONNECTED &&
-            i.A.getSettings().mode === l.TBI.VOICE_ACTIVITY &&
-            i.A.getSettings().silenceWarning &&
-            !1 === i.A.getInputDetected() &&
+            i.Ay.getSettings().mode === l.TBI.VOICE_ACTIVITY &&
+            i.Ay.getSettings().silenceWarning &&
+            !1 === i.Ay.getInputDetected() &&
             !c &&
-            !i.A.isSelfMute()
+            !i.Ay.isSelfMute()
         )
             return [{ type: s.iy.NO_AUDIO_INPUT_DETECTED, ...(0, o.jY)() }];
     },

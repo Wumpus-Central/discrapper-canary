@@ -25,19 +25,19 @@ function m(e) {
             localVideoDisabled: M = !1,
             localVideoAutoDisabled: S = !1,
         } = (0, l.cf)(
-            [o.A],
+            [o.Ay],
             () =>
                 n
-                    ? { muted: o.A.isSelfMute(t), deafened: o.A.isSelfDeaf(t) }
+                    ? { muted: o.Ay.isSelfMute(t), deafened: o.Ay.isSelfDeaf(t) }
                     : {
-                          muted: o.A.isLocalMute(e, t),
-                          localVideoDisabled: o.A.isLocalVideoDisabled(e, t),
-                          localVideoAutoDisabled: o.A.isLocalVideoAutoDisabled(e, t),
+                          muted: o.Ay.isLocalMute(e, t),
+                          localVideoDisabled: o.Ay.isLocalVideoDisabled(e, t),
+                          localVideoAutoDisabled: o.Ay.isLocalVideoAutoDisabled(e, t),
                       },
             [n, t, e],
         ),
         x =
-            o.A.supports(_.O5.DISABLE_VIDEO) && !n
+            o.Ay.supports(_.O5.DISABLE_VIDEO) && !n
                 ? (0, i.jsx)(
                       a.sLh,
                       {

@@ -31,10 +31,10 @@ let A = {
             if (null == l.default.getUser(t) || d?.id === t)
                 throw new s.A({ errorCode: u.Lw6.INVALID_USER }, `Invalid user id: ${t}`);
             if ((null != n && r.A.setLocalPan(t, n.left, n.right), null != i && r.A.setLocalVolume(t, i), null != o)) {
-                let e = a.A.isLocalMute(t);
+                let e = a.Ay.isLocalMute(t);
                 ((e && !o) || (!e && o)) && r.A.toggleLocalMute(t);
             }
-            return { user_id: t, pan: a.A.getLocalPan(t), volume: a.A.getLocalVolume(t), mute: a.A.isLocalMute(t) };
+            return { user_id: t, pan: a.Ay.getLocalPan(t), volume: a.Ay.getLocalVolume(t), mute: a.Ay.isLocalMute(t) };
         },
     },
     [u.e$_.GET_VOICE_SETTINGS]: { scope: { [c.sm.ANY]: [i.F.RPC, i.F.RPC_VOICE_READ] }, handler: () => (0, d.l6)() },
@@ -45,11 +45,11 @@ let A = {
                 .required()
                 .keys({
                     input: (0, o.A)(e).keys({
-                        device_id: e.string().valid(Object.keys(a.A.getInputDevices())),
+                        device_id: e.string().valid(Object.keys(a.Ay.getInputDevices())),
                         volume: e.number().min(0).max(100),
                     }),
                     output: (0, o.A)(e).keys({
-                        device_id: e.string().valid(Object.keys(a.A.getOutputDevices())),
+                        device_id: e.string().valid(Object.keys(a.Ay.getOutputDevices())),
                         volume: e.number().min(0).max(200),
                     }),
                     mode: (0, o.A)(e).keys({
@@ -99,8 +99,8 @@ let A = {
                     null != n.volume && r.A.setOutputVolume(n.volume)),
                 i)
             ) {
-                let e = a.A.getMode(),
-                    t = a.A.getModeOptions();
+                let e = a.Ay.getMode(),
+                    t = a.Ay.getModeOptions();
                 null != i.type && (e = i.type),
                     null != i.auto_threshold && (t.autoThreshold = i.auto_threshold),
                     null != i.threshold && (t.threshold = i.threshold),
@@ -116,11 +116,11 @@ let A = {
                 null != u && r.A.setSilenceWarning(u),
                 null != A)
             ) {
-                let e = a.A.isSelfDeaf();
+                let e = a.Ay.isSelfDeaf();
                 ((e && !A) || (!e && A)) && r.A.toggleSelfDeaf();
             }
             if (null != h) {
-                let e = a.A.isSelfMute();
+                let e = a.Ay.isSelfMute();
                 ((e && !h) || (!e && h)) && r.A.toggleSelfMute();
             }
             return (0, d.l6)();

@@ -1,4 +1,4 @@
-i.d(e, { S: () => o });
+i.d(t, { S: () => o });
 var n = i(311907),
     l = i(827343),
     s = i(419954),
@@ -10,10 +10,10 @@ let o = (0, s.zD)(a.X.STREAMING_ADVANCED_SCREENSHARE, {
     useSearchTerms: () => [u.intl.string(u.t["Fj/xn1"])],
     useSubtitle: () => u.intl.string(u.t["Fj/xn1"]),
     useValue: function () {
-        return (0, n.bG)([r.A], () => r.A.getVideoHook());
+        return (0, n.bG)([r.Ay], () => r.Ay.getVideoHook());
     },
     setValue: l.A.setVideoHook,
     usePredicate: function () {
-        return (0, n.bG)([r.A], () => r.A.supportsVideoHook());
+        return (0, n.bG)([r.Ay], () => r.Ay.supportsVideoHook());
     },
 });

@@ -20,20 +20,20 @@ var i = s(503698),
     v = s(731854),
     A = s(191850),
     S = s(985018),
-    C = s(607186);
-function y() {
-    return (0, r.jsx)("span", { className: C.gO, children: "•" });
+    y = s(607186);
+function C() {
+    return (0, r.jsx)("span", { className: y.gO, children: "•" });
 }
 function b(e) {
     let { source: t } = e,
         { data: s } = (0, c.YY)(null != t && (0, _.l)(t) ? t.id : void 0);
     return null == t
-        ? (0, r.jsx)(o.Fzq, { className: C.Jd, size: "md", color: "currentColor" })
+        ? (0, r.jsx)(o.Fzq, { className: y.Jd, size: "md", color: "currentColor" })
         : (0, _.l)(t)
           ? (0, r.jsx)(d.A, { game: s, pid: t.pid })
           : null == t.icon || "" === t.icon
-            ? (0, r.jsx)(o.Fzq, { className: C.Jd, size: "md", color: "currentColor" })
-            : (0, r.jsx)("img", { src: t.icon, alt: "", className: C.pI });
+            ? (0, r.jsx)(o.Fzq, { className: y.Jd, size: "md", color: "currentColor" })
+            : (0, r.jsx)("img", { src: t.icon, alt: "", className: y.pI });
 }
 function w() {
     let [{ preset: e, resolution: t, fps: s, muteStreamAudio: i, selectedSource: c, sourceType: d, audioSourceId: _ }] =
@@ -56,22 +56,22 @@ function w() {
                 : e === j.jQ.PRESET_AUTO
                   ? S.intl.string(A.default.m4jtlc)
                   : void 0,
-        P = (0, a.bG)([f.A], () => f.A.getUseSystemScreensharePicker() && (0, h.isLinux)());
+        P = (0, a.bG)([f.Ay], () => f.Ay.getUseSystemScreensharePicker() && (0, h.isLinux)());
     return (0, r.jsxs)("div", {
-        className: C.zr,
+        className: y.zr,
         children: [
             U && (0, r.jsx)(b, { source: c }),
             (0, r.jsxs)("div", {
-                className: C.z,
+                className: y.z,
                 children: [
                     (0, r.jsx)(o.Text, {
-                        className: C.fB,
+                        className: y.fB,
                         variant: "text-md/semibold",
                         color: "text-strong",
                         children: U ? (c?.name ?? S.intl.string(A.default["hJMA+x"])) : T,
                     }),
                     (0, r.jsxs)(o.Text, {
-                        className: C.kI,
+                        className: y.kI,
                         variant: "text-xs/medium",
                         color: "text-muted",
                         children: [
@@ -79,38 +79,38 @@ function w() {
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsxs)("span", {
-                                            className: C.x5,
+                                            className: y.x5,
                                             children: [
                                                 (0, r.jsx)(o.Zes, {
-                                                    className: C.Kk,
+                                                    className: y.Kk,
                                                     size: "xxs",
                                                     color: "currentColor",
                                                 }),
                                                 T,
                                             ],
                                         }),
-                                        (0, r.jsx)(y, {}),
+                                        (0, r.jsx)(C, {}),
                                     ],
                                 }),
                             null != D && (0, r.jsx)("span", { children: D }),
                             !L &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
-                                        (0, r.jsx)(y, {}),
+                                        (0, r.jsx)(C, {}),
                                         (0, r.jsx)("span", { children: R }),
-                                        (0, r.jsx)(y, {}),
+                                        (0, r.jsx)(C, {}),
                                         (0, r.jsx)("span", { children: `${O}fps` }),
                                     ],
                                 }),
                             i &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
-                                        (0, r.jsx)(y, {}),
+                                        (0, r.jsx)(C, {}),
                                         (0, r.jsxs)("span", {
-                                            className: C.x5,
+                                            className: y.x5,
                                             children: [
                                                 (0, r.jsx)(o._RO, {
-                                                    className: n()(C.Kk, C.tG),
+                                                    className: n()(y.Kk, y.tG),
                                                     size: "xxs",
                                                     color: "currentColor",
                                                 }),
@@ -123,12 +123,12 @@ function w() {
                                 !G &&
                                 P &&
                                 (0, r.jsxs)(r.Fragment, {
-                                    children: [(0, r.jsx)(y, {}), S.intl.string(A.default["n9/rUq"])],
+                                    children: [(0, r.jsx)(C, {}), S.intl.string(A.default["n9/rUq"])],
                                 }),
                             G
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
-                                          (0, r.jsx)(y, {}),
+                                          (0, r.jsx)(C, {}),
                                           (0, r.jsx)("span", {
                                               children: E.find((e) => {
                                                   let { id: t } = e;

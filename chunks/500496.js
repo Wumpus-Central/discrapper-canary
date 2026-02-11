@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => m }), n(938796);
+n.d(t, { A: () => g }), n(938796);
 var r = n(665260),
     i = n(173618),
     a = n(274372),
@@ -11,9 +11,9 @@ var r = n(665260),
     d = n(616356),
     _ = n(734057),
     f = n(430452),
-    p = n(873985),
-    h = n(652215);
-class m extends i.A {
+    h = n(873985),
+    p = n(652215);
+class g extends i.A {
     socket;
     constructor(e) {
         super(), (this.socket = e);
@@ -27,28 +27,28 @@ class m extends i.A {
     computeVoiceFlags() {
         let e = 0,
             t = c.Q$.getSetting();
-        e = (0, r.lA)(e, h.Ajs.ALLOW_VOICE_RECORDING, t);
-        let n = (0, s.A)(f.A),
+        e = (0, r.lA)(e, p.Ajs.ALLOW_VOICE_RECORDING, t);
+        let n = (0, s.A)(f.Ay),
             i =
                 (0, o.TD)() &&
-                (d.A.getCurrentUserActiveStream()?.state === h.XYD.ACTIVE ||
-                    d.A.getCurrentUserActiveStream()?.state === h.XYD.PAUSED),
+                (d.A.getCurrentUserActiveStream()?.state === p.XYD.ACTIVE ||
+                    d.A.getCurrentUserActiveStream()?.state === p.XYD.PAUSED),
             _ = (0, o.Ao)() && l.Ay.getVisibleGame()?.windowHandle != null;
-        e = (0, r.lA)(e, h.Ajs.CLIPS_ENABLED, i || _);
-        let { enableViewerClipping: p } = u.A.getCurrentConfig(
+        e = (0, r.lA)(e, p.Ajs.CLIPS_ENABLED, i || _);
+        let { enableViewerClipping: h } = u.A.getCurrentConfig(
                 { location: "computeVoiceFlags" },
                 { autoTrackExposure: !1 },
             ),
-            m = p && n && a.A.getSettings().viewerClipsEnabled;
-        return (0, r.lA)(e, h.Ajs.ALLOW_ANY_VIEWER_CLIPS, m);
+            g = h && n && a.A.getSettings().viewerClipsEnabled;
+        return (0, r.lA)(e, p.Ajs.ALLOW_ANY_VIEWER_CLIPS, g);
     }
     getInitialState() {
         return {
             guildId: null,
             channelId: null,
-            selfMute: f.A.isSelfMute(),
-            selfDeaf: f.A.isSelfDeaf(),
-            selfVideo: f.A.isVideoEnabled(),
+            selfMute: f.Ay.isSelfMute(),
+            selfDeaf: f.Ay.isSelfDeaf(),
+            selfVideo: f.Ay.isVideoEnabled(),
             preferredRegion: null,
             preferredRegions: null,
             videoStreamParameters: null,
@@ -60,12 +60,12 @@ class m extends i.A {
         return {
             guildId: t,
             channelId: n,
-            selfMute: f.A.isSelfMute(),
-            selfDeaf: f.A.isSelfDeaf(),
-            selfVideo: f.A.isVideoEnabled(),
-            preferredRegion: p.A.getPreferredRegion(),
-            preferredRegions: p.A.getPreferredRegions(),
-            videoStreamParameters: f.A.getVideoStreamParameters(),
+            selfMute: f.Ay.isSelfMute(),
+            selfDeaf: f.Ay.isSelfDeaf(),
+            selfVideo: f.Ay.isVideoEnabled(),
+            preferredRegion: h.A.getPreferredRegion(),
+            preferredRegions: h.A.getPreferredRegions(),
+            videoStreamParameters: f.Ay.getVideoStreamParameters(),
             flags: this.computeVoiceFlags(),
         };
     }
@@ -84,7 +84,7 @@ class m extends i.A {
             videoStreamParameters: l,
             flags: u = 0,
         } = e;
-        a && _.A.getChannel(n)?.type === h.rbe.GUILD_STAGE_VOICE
+        a && _.A.getChannel(n)?.type === p.rbe.GUILD_STAGE_VOICE
             ? this.socket.voiceStateUpdate({
                   guildId: t,
                   channelId: n,

@@ -39,8 +39,8 @@ class T extends h.A {
                 );
     }
     _stopAndClearSounds = () => {
-        c.A.supports(C.O5.SAMPLE_PLAYBACK) &&
-            c.A.getMediaEngine().eachConnection((e) => {
+        c.Ay.supports(C.O5.SAMPLE_PLAYBACK) &&
+            c.Ay.getMediaEngine().eachConnection((e) => {
                 e.stopAllSamplesLocalPlayback();
             }),
             this.playingSoundsWeb.forEach((e) => {
@@ -55,7 +55,7 @@ class T extends h.A {
                 i = arguments.length > 2 ? arguments[2] : void 0,
                 r = arguments.length > 3 ? arguments[3] : void 0,
                 a = null != r && u.A.getVoiceChannelId() === r;
-            if ((null == r || a) && !c.A.isDeaf() && !m.A.isLocalSoundboardMuted(i))
+            if ((null == r || a) && !c.Ay.isDeaf() && !m.A.isLocalSoundboardMuted(i))
                 try {
                     let r = {
                         soundKey: `${i}-${t}`,
@@ -63,7 +63,7 @@ class T extends h.A {
                         soundVolume: (0, E.A)(n),
                         reportSoundStartedPlaying: () => (0, _.dZ)(t, i),
                     };
-                    c.A.supports(C.O5.SAMPLE_PLAYBACK) ? await (0, I.o)(r) : await (0, I.G)(r, e.playingSoundsWeb);
+                    c.Ay.supports(C.O5.SAMPLE_PLAYBACK) ? await (0, I.o)(r) : await (0, I.G)(r, e.playingSoundsWeb);
                 } catch (e) {
                     N.warn(`Error playing soundboard sound: ${e.message}`);
                 } finally {

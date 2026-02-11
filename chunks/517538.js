@@ -24,8 +24,8 @@ var a = n(627968),
     x = n(74848),
     p = n(430452),
     g = n(731854),
-    _ = n(442456),
-    f = n(661251);
+    f = n(442456),
+    _ = n(661251);
 function v(e) {
     let { recording: t } = e;
     return (0, a.jsxs)(a.Fragment, {
@@ -92,7 +92,7 @@ function j() {
     let { name: e } = (0, x.x5)(g.oh.AUDIO_INPUT),
         [t, n] = s.useState(!1),
         [i, l] = s.useState([]),
-        v = (0, r.bG)([p.A], () => p.A.getKrispSuppressionLevel()),
+        v = (0, r.bG)([p.Ay], () => p.Ay.getKrispSuppressionLevel()),
         [j, A] = s.useState(null),
         C = s.useRef(null),
         S = s.useRef(null),
@@ -111,20 +111,20 @@ function j() {
             noiseCancellationSupported: L,
             noiseCancellationEnableStats: U,
             vadDuringPreProcess: B,
-        } = (0, r.cf)([p.A], () => ({
-            krispModels: p.A.getKrispModels(),
-            krispModelOverride: p.A.getKrispModelOverride(),
-            echoCancellation: p.A.getEchoCancellation(),
-            autoThreshold: p.A.getModeOptions().autoThreshold,
-            vadUseKrisp: p.A.getModeOptions().vadUseKrisp,
-            inputMode: p.A.getMode(),
-            vadKrispActivationThreshold: p.A.getKrispVadActivationThreshold(),
-            noiseCancellation: p.A.getNoiseCancellation(),
-            noiseSuppression: p.A.getNoiseSuppression(),
-            noiseSuppressionSupported: p.A.isNoiseSuppressionSupported(),
-            noiseCancellationSupported: p.A.isNoiseCancellationSupported(),
-            noiseCancellationEnableStats: p.A.getKrispEnableStats(),
-            vadDuringPreProcess: p.A.getModeOptions().vadDuringPreProcess,
+        } = (0, r.cf)([p.Ay], () => ({
+            krispModels: p.Ay.getKrispModels(),
+            krispModelOverride: p.Ay.getKrispModelOverride(),
+            echoCancellation: p.Ay.getEchoCancellation(),
+            autoThreshold: p.Ay.getModeOptions().autoThreshold,
+            vadUseKrisp: p.Ay.getModeOptions().vadUseKrisp,
+            inputMode: p.Ay.getMode(),
+            vadKrispActivationThreshold: p.Ay.getKrispVadActivationThreshold(),
+            noiseCancellation: p.Ay.getNoiseCancellation(),
+            noiseSuppression: p.Ay.getNoiseSuppression(),
+            noiseSuppressionSupported: p.Ay.isNoiseSuppressionSupported(),
+            noiseCancellationSupported: p.Ay.isNoiseCancellationSupported(),
+            noiseCancellationEnableStats: p.Ay.getKrispEnableStats(),
+            vadDuringPreProcess: p.Ay.getModeOptions().vadDuringPreProcess,
         })),
         G = D ? "KRISP" : M ? "STANDARD" : "NONE",
         F = (0, m.v)(),
@@ -132,7 +132,7 @@ function j() {
             C.current?.stop(), (C.current = null), A(null);
         }, []);
     function W() {
-        p.A.getMediaEngine().stopRecordingRawSamples();
+        p.Ay.getMediaEngine().stopRecordingRawSamples();
     }
     function H(e) {
         if ((t && W(), V(), null == F)) return;
@@ -151,7 +151,7 @@ function j() {
         V();
     }, [V]),
         (0, u.l0)(() => {
-            c.A.setMode(p.A.getMode(), { vadDuringPreProcess: null, vadKrispActivationThreshold: void 0 });
+            c.A.setMode(p.Ay.getMode(), { vadDuringPreProcess: null, vadKrispActivationThreshold: void 0 });
         });
     let K = [];
     return (
@@ -159,9 +159,9 @@ function j() {
         P && K.push({ id: "standard", label: "Standard", value: "STANDARD" }),
         K.push({ id: "disabled", label: "Disabled", value: "NONE" }),
         (0, a.jsx)(d.IpV, {
-            className: f.nd,
+            className: _.nd,
             children: (0, a.jsxs)("div", {
-                className: _.l,
+                className: f.l,
                 children: [
                     (0, a.jsx)(d.Text, { variant: "text-lg/bold", children: "Krisp Tester" }),
                     (0, a.jsx)(h.U, {
@@ -260,7 +260,7 @@ function j() {
                                           V(),
                                               n(!0),
                                               c.A.setLoopback("krisp_test", !0),
-                                              p.A.getMediaEngine().startRecordingRawSamples((t, a, s) => {
+                                              p.Ay.getMediaEngine().startRecordingRawSamples((t, a, s) => {
                                                   n(!1), c.A.setLoopback("krisp_test", !1);
                                                   let i = new AudioBuffer({
                                                       length: t.length,

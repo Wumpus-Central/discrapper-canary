@@ -1,4 +1,4 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => f });
 var i = n(627968);
 n(64700);
 var r = n(179771),
@@ -16,16 +16,16 @@ var r = n(179771),
     p = n(629471),
     g = n(693806),
     E = n(613057),
-    f = n(652215);
-let I = {
-    [f.e$_.TOGGLE_VIDEO]: {
+    I = n(652215);
+let f = {
+    [I.e$_.TOGGLE_VIDEO]: {
         scope: { [E.sm.ALL]: [r.F.RPC, r.F.RPC_VIDEO_WRITE] },
         handler() {
-            let e = h.A.isVideoEnabled();
-            null != (0, g.A)() && (e ? l.A.setVideoEnabled(!1) : (0, u.A)(() => l.A.setVideoEnabled(!0), f.BRT.APP));
+            let e = h.Ay.isVideoEnabled();
+            null != (0, g.A)() && (e ? l.A.setVideoEnabled(!1) : (0, u.A)(() => l.A.setVideoEnabled(!0), I.BRT.APP));
         },
     },
-    [f.e$_.TOGGLE_SCREENSHARE]: {
+    [I.e$_.TOGGLE_SCREENSHARE]: {
         scope: { [E.sm.ALL]: [r.F.RPC, r.F.RPC_SCREENSHARE_WRITE] },
         validation: (e) =>
             (0, p.A)(e)

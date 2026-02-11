@@ -1,4 +1,4 @@
-i.d(e, { m: () => d });
+i.d(t, { m: () => d });
 var n = i(827343),
     l = i(419954),
     s = i(430452),
@@ -9,17 +9,17 @@ var n = i(827343),
 let d = (0, l.sN)(r.X.VOICE_PUSH_TO_TALK_RELEASE_DELAY_SETTING, {
     useTitle: () => o.intl.string(o.t.GCNMM8),
     useSearchTerms: () => [o.intl.string(o.t["pS+K2L"]), o.intl.string(o.t.nuFtHH)],
-    setValue: function (t) {
-        n.A.setMode(u.TBI.PUSH_TO_TALK, { delay: t });
+    setValue: function (e) {
+        n.A.setMode(u.TBI.PUSH_TO_TALK, { delay: e });
     },
     minValue: 0,
     maxValue: u.IjB,
     getInitialValue: function () {
-        let { delay: t } = s.A.getModeOptions();
-        return t;
+        let { delay: e } = s.Ay.getModeOptions();
+        return e;
     },
-    onValueRender: function (t) {
-        return t >= 1e3 ? ((t /= 1e3), `${t.toFixed(2)}s`) : `${t.toFixed(0)}\u00A0ms`;
+    onValueRender: function (e) {
+        return e >= 1e3 ? ((e /= 1e3), `${e.toFixed(2)}s`) : `${e.toFixed(0)}\u00A0ms`;
     },
     usePredicate: a.P,
 });

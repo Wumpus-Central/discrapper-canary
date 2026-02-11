@@ -6,6 +6,6 @@ function a(e) {
     return e.supports(i.O5.MEDIAPIPE) && Object.values(e.getVideoDevices()).length > 0;
 }
 function s() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r.A;
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r.Ay;
     return a(e);
 }

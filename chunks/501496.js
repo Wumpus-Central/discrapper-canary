@@ -1,4 +1,4 @@
-i.d(e, { A: () => S });
+i.d(t, { A: () => A });
 var n = i(627968);
 i(64700);
 var l = i(417597),
@@ -8,29 +8,29 @@ var l = i(417597),
     u = i(975571),
     o = i(652215),
     d = i(731854),
-    T = i(985018),
-    A = i(835818);
-function S() {
-    return (0, l.bG)([a.A], () => a.A.supports(d.O5.LOOPBACK))
+    _ = i(985018),
+    T = i(835818);
+function A() {
+    return (0, l.bG)([a.Ay], () => a.Ay.supports(d.O5.LOOPBACK))
         ? (0, n.jsx)("div", {
-              className: A.a,
+              className: T.a,
               children: (0, n.jsx)(r.A, {
-                  title: T.intl.string(T.t.gyljWE),
-                  description: T.intl.string(T.t["8hhsCU"]),
+                  title: _.intl.string(_.t.gyljWE),
+                  description: _.intl.string(_.t["8hhsCU"]),
                   notchBackground: r.V.GRAY,
-                  captionVoice: T.intl.string(T.t.bp3JOV),
+                  captionVoice: _.intl.string(_.t.bp3JOV),
                   captionNoVoice: (0, n.jsxs)(n.Fragment, {
                       children: [
-                          T.intl.string(T.t["MA+OZh"]),
+                          _.intl.string(_.t["MA+OZh"]),
                           (0, n.jsx)(s.MzZ, {
-                              className: A.X,
+                              className: T.X,
                               href: u.A.getArticleURL(o.MVz.NO_INPUT_DETECTED),
-                              children: T.intl.string(T.t.RYKKox),
+                              children: _.intl.string(_.t.RYKKox),
                           }),
                       ],
                   }),
-                  buttonTest: T.intl.string(T.t.c4qHt6),
-                  buttonStop: T.intl.string(T.t.I6OnJ3),
+                  buttonTest: _.intl.string(_.t.c4qHt6),
+                  buttonStop: _.intl.string(_.t.I6OnJ3),
                   buttonVariant: "primary",
                   location: { page: o.liQ.USER_SETTINGS, section: o.JJy.SETTINGS_VOICE_AND_VIDEO },
               }),

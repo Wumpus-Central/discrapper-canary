@@ -28,8 +28,8 @@ var i = n(989349),
     g = n(857071),
     y = n(751496),
     L = n(780732),
-    k = n(772786),
-    f = n(869968),
+    f = n(772786),
+    k = n(869968),
     x = n(923349),
     G = n(437852),
     j = n(264779),
@@ -83,8 +83,8 @@ var i = n(989349),
 n(436317);
 var ey = n(788868),
     eL = n(654487),
-    ek = n(818348),
-    ef = n(731854);
+    ef = n(818348),
+    ek = n(731854);
 let ex = {
         [eg.kqX.DOWNLOAD_NAG]: o.M.NAGBAR_NOTICE_DOWNLOAD,
         [eg.kqX.CONNECT_SPOTIFY]: o.M.NAGBAR_NOTICE_CONNECT_SPOTIFY,
@@ -296,11 +296,11 @@ let eK = {
     [eg.kqX.HARDWARE_MUTE]: {
         predicate: () =>
             eE.A.isConnected() &&
-            er.A.isHardwareMute() &&
-            er.A.isHardwareMuteNoticeEnabled() &&
+            er.Ay.isHardwareMute() &&
+            er.Ay.isHardwareMuteNoticeEnabled() &&
             !W.Ay.disableHardwareMuteSilenceAlert,
         metadata: () => {
-            let e = er.A.getInputDeviceId(),
+            let e = er.Ay.getInputDeviceId(),
                 t = Z.A.getVendor(e),
                 n = Z.A.getModel(e);
             if (null != t && null != n) return { vendor: t, model: n };
@@ -309,8 +309,8 @@ let eK = {
     [eg.kqX.PTT_NO_KEYBIND_WARNING]: {
         predicate: () =>
             !!eE.A.isConnected() &&
-            er.A.getMode() === eg.TBI.PUSH_TO_TALK &&
-            !(er.A.getSettings().modeOptions.shortcut.length > 0) &&
+            er.Ay.getMode() === eg.TBI.PUSH_TO_TALK &&
+            !(er.Ay.getSettings().modeOptions.shortcut.length > 0) &&
             !!K.A.getConfig({ location: "NoticeStore" }).showPTTNoKeybindWarning,
     },
     [eg.kqX.DISPATCH_ERROR]: {
@@ -354,7 +354,7 @@ let eK = {
         predicate: (e) => {
             let { voiceChannelId: t } = e;
             return (
-                null != t && eN.A.hasVideo(t) && !er.A.supports(ef.O5.VIDEO) && !eW(eg.kqX.VIDEO_UNSUPPORTED_BROWSER)
+                null != t && eN.A.hasVideo(t) && !er.Ay.supports(ek.O5.VIDEO) && !eW(eg.kqX.VIDEO_UNSUPPORTED_BROWSER)
             );
         },
     },
@@ -570,7 +570,7 @@ let eK = {
             let { premiumSubscription: t, currentUser: n } = e,
                 i = null != t && l()(t.currentPeriodEnd).isBefore(l()()),
                 r = null != t && null != t.paymentSourceId ? eR.A.getPaymentSource(t.paymentSourceId) : null,
-                s = null != r && ek.AD.has(r.type),
+                s = null != r && ef.AD.has(r.type),
                 a =
                     null != t &&
                     t.status === eg.Dmq.PAST_DUE &&
@@ -590,7 +590,7 @@ let eK = {
                   };
         },
     },
-    [eg.kqX.POMELO_ELIGIBLE]: { predicate: () => (0, k.x)() && !eW(eg.kqX.POMELO_ELIGIBLE) },
+    [eg.kqX.POMELO_ELIGIBLE]: { predicate: () => (0, f.x)() && !eW(eg.kqX.POMELO_ELIGIBLE) },
     [eg.kqX.AUTO_MODERATION_MENTION_RAID_DETECTION]: {
         predicate: (e) => {
             let { selectedGuildId: t } = e,
@@ -642,7 +642,7 @@ let eK = {
         predicate: (e) => {
             let { currentUser: t } = e,
                 n = eR.A.paymentSources ?? {};
-            return f.A.getIsTargeted() && !(0, ep.TW)(t) && 0 !== Object.keys(n).length;
+            return k.A.getIsTargeted() && !(0, ep.TW)(t) && 0 !== Object.keys(n).length;
         },
     },
     [eg.kqX.BLOCK_USER_FEEDBACK_NAGBAR]: {
@@ -657,7 +657,7 @@ let eK = {
                 eW(eg.kqX.SYSTEM_SERVICE_WARNING) ||
                 !(0, H.yA)(C.Ay) ||
                 null == t ||
-                er.A.getMode() !== eg.TBI.PUSH_TO_TALK
+                er.Ay.getMode() !== eg.TBI.PUSH_TO_TALK
             )
                 return !1;
             let n = C.Ay.getVisibleGame();
@@ -667,7 +667,7 @@ let eK = {
     [eg.kqX.E2EE_UPDATE_REQUIRED]: {
         predicate: () => {
             if (eW(eg.kqX.E2EE_UPDATE_REQUIRED) || !eE.A.isConnected()) return !1;
-            let e = er.A.getMediaEngine();
+            let e = er.Ay.getMediaEngine();
             return 1 !== (e.getSupportedSecureFramesProtocolVersion?.() ?? 0);
         },
         metadata: () => ({ dismissUntil: l()().add(5, "days").toDate() }),
@@ -683,7 +683,7 @@ let eK = {
                 return !1;
             let e = (0, y.b)({ location: "NoticeStore" }).enabled,
                 t = (0, L.r)({ location: "NoticeStore" }).enabled;
-            return (!!e || !!t) && !1 === er.A.isH264MfDecodeAvailable();
+            return (!!e || !!t) && !1 === er.Ay.isH264MfDecodeAvailable();
         },
     },
 };
@@ -737,7 +737,7 @@ class eQ extends s.Ay.Store {
                 J.default,
                 Z.A,
                 ee.A,
-                f.A,
+                k.A,
                 et.A,
                 T.A,
                 en.A,
@@ -753,7 +753,7 @@ class eQ extends s.Ay.Store {
                 el.A,
                 h.A,
                 g.A,
-                er.A,
+                er.Ay,
                 es.A,
                 eR.A,
                 ea.A,

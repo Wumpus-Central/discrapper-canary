@@ -1,4 +1,4 @@
-i.d(e, { L: () => P });
+i.d(t, { L: () => y });
 var n = i(627968),
     l = i(64700),
     s = i(574381),
@@ -7,60 +7,60 @@ var n = i(627968),
     u = i(314116),
     o = i(421380),
     d = i(397927),
-    T = i(827343),
-    A = i(77729),
-    S = i(839214),
-    E = i(98919),
-    g = i(709710),
-    _ = i(419954),
-    c = i(430452),
+    _ = i(827343),
+    T = i(77729),
+    A = i(839214),
+    S = i(98919),
+    E = i(709710),
+    c = i(419954),
+    g = i(430452),
     I = i(353835),
-    N = i(780964),
-    C = i(652215),
+    C = i(780964),
+    N = i(652215),
     O = i(731854),
-    L = i(985018);
-let R = (0, S.D)(() => ({ isUploading: !1, isDisabled: !1 }));
-async function b() {
-    let t = await A.A.fileManager.getLogPath();
-    A.A.fileManager.showItemInFolder(t);
+    b = i(985018);
+let m = (0, A.D)(() => ({ isUploading: !1, isDisabled: !1 }));
+async function L() {
+    let e = await T.A.fileManager.getLogPath();
+    T.A.fileManager.showItemInFolder(e);
 }
-function D(t) {
+function p(e) {
     (0, u.A)({
-        title: L.intl.string(L.t["7UXEF2"]),
-        subtitle: L.intl.string(L.t.IYPrRl),
-        confirmText: L.intl.string(L.t.BddRzS),
-        onConfirm: () => T.A.setDebugLogging(t),
+        title: b.intl.string(b.t["7UXEF2"]),
+        subtitle: b.intl.string(b.t.IYPrRl),
+        confirmText: b.intl.string(b.t.BddRzS),
+        onConfirm: () => _.A.setDebugLogging(e),
     });
 }
-async function m(t) {
-    let { onUploadStart: e, onUploadFinish: i } = t;
-    e?.();
+async function R(e) {
+    let { onUploadStart: t, onUploadFinish: i } = e;
+    t?.();
     try {
-        let t, e;
-        await c.A.getMediaEngine().writeAudioDebugState(),
+        let e, t;
+        await g.Ay.getMediaEngine().writeAudioDebugState(),
             await I.A.submitLiveCrashReport({ message: { message: "User Live Dump" } }),
-            await (0, E.a)(C.Umv.RTC),
-            (t = L.intl.string(L.t["fKBB8+"])),
-            (e = L.intl.string(L.t.BvyxE7)),
-            (0, a.A)({ title: t, subtitle: e });
+            await (0, S.a)(N.Umv.RTC),
+            (e = b.intl.string(b.t["fKBB8+"])),
+            (t = b.intl.string(b.t.BvyxE7)),
+            (0, a.A)({ title: e, subtitle: t });
     } catch (r) {
         var l;
-        let t, e, i, s;
+        let e, t, i, s;
         (l = r.displayMessage),
-            (t = L.intl.string(L.t.QZg0J7)),
-            (e = l ?? L.intl.string(L.t.VzHcSm)),
-            (i = (0, g.B1)(g.iy.DEBUG_LOG_UPLOAD_FAILED)?.errorCode),
-            (s = L.intl.formatToPlainString(L.t.ejOT95, { errorCode: i })),
+            (e = b.intl.string(b.t.QZg0J7)),
+            (t = l ?? b.intl.string(b.t.VzHcSm)),
+            (i = (0, E.B1)(E.iy.DEBUG_LOG_UPLOAD_FAILED)?.errorCode),
+            (s = b.intl.formatToPlainString(b.t.ejOT95, { errorCode: i })),
             (0, d.qfG)((i) =>
                 (0, n.jsx)(d.VoidConfirmModal, {
-                    header: t,
+                    header: e,
                     confirmButtonColor: o.$n.Colors.BRAND,
-                    confirmText: L.intl.string(L.t.BddRzS),
+                    confirmText: b.intl.string(b.t.BddRzS),
                     ...i,
                     children: (0, n.jsxs)("div", {
                         style: { display: "flex", flexDirection: "column", height: "100%" },
                         children: [
-                            (0, n.jsx)(d.Text, { variant: "text-md/normal", children: e }),
+                            (0, n.jsx)(d.Text, { variant: "text-md/normal", children: t }),
                             (0, n.jsx)(d.Text, {
                                 variant: "text-sm/semibold",
                                 selectable: !0,
@@ -75,35 +75,35 @@ async function m(t) {
         i?.();
     }
 }
-async function p() {
-    await m({
-        onUploadStart: () => R.setState({ isUploading: !0 }),
-        onUploadFinish: () => R.setState({ isUploading: !1, isDisabled: !0 }),
+async function D() {
+    await R({
+        onUploadStart: () => m.setState({ isUploading: !0 }),
+        onUploadFinish: () => m.setState({ isUploading: !1, isDisabled: !0 }),
     });
 }
-let P = (0, _.E2)(N.X.VOICE_AND_VIDEO_DEBUG_LOGGING, {
-    useSearchTerms: () => [L.intl.string(L.t["726JHL"]), L.intl.string(L.t.EbwFfR), L.intl.string(L.t.nuPtYi)],
+let y = (0, c.E2)(C.X.VOICE_AND_VIDEO_DEBUG_LOGGING, {
+    useSearchTerms: () => [b.intl.string(b.t["726JHL"]), b.intl.string(b.t.EbwFfR), b.intl.string(b.t.nuPtYi)],
     usePredicate: function () {
-        let t = (0, r.bG)([c.A], () => c.A.supports(O.O5.DEBUG_LOGGING));
-        return s.Av && t && null != A.A.fileManager.readLogFiles;
+        let e = (0, r.bG)([g.Ay], () => g.Ay.supports(O.O5.DEBUG_LOGGING));
+        return s.Av && e && null != T.A.fileManager.readLogFiles;
     },
     Component: function () {
-        let t = (0, r.bG)([c.A], () => c.A.getDebugLogging()),
-            e = R.useField("isUploading"),
-            i = R.useField("isDisabled"),
+        let e = (0, r.bG)([g.Ay], () => g.Ay.getDebugLogging()),
+            t = m.useField("isUploading"),
+            i = m.useField("isDisabled"),
             s = l.useId();
         return (0, n.jsxs)("fieldset", {
             children: [
-                (0, n.jsx)(d.AC4, { tag: "legend", id: s, children: L.intl.string(L.t["FjN+et"]) }),
+                (0, n.jsx)(d.AC4, { tag: "legend", id: s, children: b.intl.string(b.t["FjN+et"]) }),
                 (0, n.jsxs)(d.BJc, {
                     direction: "vertical",
                     gap: 4,
                     children: [
                         (0, n.jsx)(d.dOG, {
-                            label: L.intl.string(L.t["726JHL"]),
-                            description: L.intl.string(L.t["/7ak9Q"]),
-                            checked: t,
-                            onChange: D,
+                            label: b.intl.string(b.t["726JHL"]),
+                            description: b.intl.string(b.t["/7ak9Q"]),
+                            checked: e,
+                            onChange: p,
                         }),
                         (0, n.jsx)("div", {
                             role: "group",
@@ -112,17 +112,17 @@ let P = (0, _.E2)(N.X.VOICE_AND_VIDEO_DEBUG_LOGGING, {
                                 children: [
                                     (0, n.jsx)(d.Button, {
                                         variant: "secondary",
-                                        text: L.intl.string(L.t.EbwFfR),
-                                        onClick: p,
-                                        loading: e,
+                                        text: b.intl.string(b.t.EbwFfR),
+                                        onClick: D,
+                                        loading: t,
                                         disabled: i,
-                                        "aria-label": L.intl.string(L.t.aY1OH2),
+                                        "aria-label": b.intl.string(b.t.aY1OH2),
                                     }),
                                     (0, n.jsx)(d.Button, {
                                         variant: "secondary",
-                                        text: L.intl.string(L.t.nuPtYi),
-                                        onClick: b,
-                                        "aria-label": L.intl.string(L.t["L/hFOe"]),
+                                        text: b.intl.string(b.t.nuPtYi),
+                                        onClick: L,
+                                        "aria-label": b.intl.string(b.t["L/hFOe"]),
                                     }),
                                 ],
                             }),

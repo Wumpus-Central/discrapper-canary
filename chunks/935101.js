@@ -14,10 +14,10 @@ let h = 3 * c.A.Millis.SECOND,
 function m() {
     let { showPTTSpeakingIndicator: e } = u.A.useConfig({ location: "useSpeakingWhilePTT" }),
         [t, n] = i.useState(!1),
-        c = (0, r.bG)([s.A], () => s.A.getMode() === A.TB.PUSH_TO_TALK),
+        c = (0, r.bG)([s.Ay], () => s.Ay.getMode() === A.TB.PUSH_TO_TALK),
         m = (0, r.bG)([o.A], () => o.A.getRTCConnectionId()),
-        p = (0, r.bG)([s.A], () => {
-            let e = s.A.getModeOptions().updatedAt;
+        p = (0, r.bG)([s.Ay], () => {
+            let e = s.Ay.getModeOptions().updatedAt;
             return null != e && Date.now() - e < _;
         }),
         g = i.useRef(new l.Ep());
@@ -40,9 +40,9 @@ function m() {
                     : (t = 0);
             }
             return (
-                p && e && c && null != m && s.A.getMediaEngine().on(a.bg.VoiceActivity, r),
+                p && e && c && null != m && s.Ay.getMediaEngine().on(a.bg.VoiceActivity, r),
                 () => {
-                    s.A.getMediaEngine().removeListener(a.bg.VoiceActivity, r), i.stop();
+                    s.Ay.getMediaEngine().removeListener(a.bg.VoiceActivity, r), i.stop();
                 }
             );
         }, [e, c, p, m]),

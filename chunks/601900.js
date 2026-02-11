@@ -30,8 +30,8 @@ function c(e) {
 }
 function d() {
     return {
-        videoDeviceName: a.A.getVideoDevices()[a.A.getVideoDeviceId()]?.name,
-        audioInputDeviceName: a.A.getInputDevices()[a.A.getInputDeviceId()]?.name,
-        audioOutputDeviceName: a.A.getOutputDevices()[a.A.getOutputDeviceId()]?.name,
+        videoDeviceName: a.Ay.getVideoDevices()[a.Ay.getVideoDeviceId()]?.name,
+        audioInputDeviceName: a.Ay.getInputDevices()[a.Ay.getInputDeviceId()]?.name,
+        audioOutputDeviceName: a.Ay.getOutputDevices()[a.Ay.getOutputDeviceId()]?.name,
     };
 }

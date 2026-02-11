@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => I }), n(321073);
+n.d(t, { A: () => T }), n(321073);
 var r = n(554146),
     i = n(439372),
     a = n(626584),
@@ -11,15 +11,15 @@ var r = n(554146),
     d = n(971778),
     _ = n(342887),
     f = n(805026),
-    p = n(652215),
-    h = n(49999);
-let m = new a.A("VoiceFilterManager");
-function g(e) {
+    h = n(652215),
+    p = n(49999);
+let g = new a.A("VoiceFilterManager");
+function E(e) {
     let t = u.Ay.getVoiceFilters();
     return null != t.getModelIdsForVoiceId ? t.getModelIdsForVoiceId(e.id) : Object.values(e.modelIds ?? {});
 }
-let E = null;
-class A extends i.A {
+let A = null;
+class I extends i.A {
     actions = {
         VOICE_FILTER_REQUEST_SWITCH: this.handleVoiceFilterRequestSwitch,
         VOICE_FILTER_PREFETCH: this.handleVoiceFilterPrefetch,
@@ -31,24 +31,24 @@ class A extends i.A {
     async handleVoiceFilterRequestSwitch(e) {
         let { newVoiceFilterId: t, analyticsContext: n } = e;
         if (__OVERLAY__) return;
-        null != E && E.abort();
+        null != A && A.abort();
         let r = new AbortController();
-        if (((E = r), null == t)) return void (0, _.DF)(null, n);
+        if (((A = r), null == t)) return void (0, _.DF)(null, n);
         let i = d.A.getVoiceFilter(t);
-        if (null == i) return void m.error("requested Voice Filter is missing in VoiceFilterStore");
-        let a = g(i);
+        if (null == i) return void g.error("requested Voice Filter is missing in VoiceFilterStore");
+        let a = E(i);
         if (a.length > 0) {
             let e = d.A.getVoiceFilterModels(),
                 t = [];
             for (let n of a) {
                 let r = e[n]?.url;
                 if (null == r) {
-                    m.error("Missing model url for voice filter", i.id, n);
+                    g.error("Missing model url for voice filter", i.id, n);
                     continue;
                 }
                 t.push({ voiceFilterId: i.id, modelId: n, url: r, fileName: (0, f.L)(n) });
             }
-            m.info("Waiting for dependencies for voice filter", i.id, t);
+            g.info("Waiting for dependencies for voice filter", i.id, t);
             let r = t.map((e) => (0, _.g8)(e, n));
             await Promise.all(r);
         }
@@ -60,7 +60,7 @@ class A extends i.A {
             n = d.A.getVoiceFilterModels(),
             r = new Set();
         for (let e of Object.values(t))
-            for (let t of g(e))
+            for (let t of E(e))
                 r.has(t) ||
                     (r.add(t),
                     (0, _.g8)(
@@ -74,9 +74,9 @@ class A extends i.A {
             a = null != r && i in r,
             s = (r?.message ?? String(r)).substring(0, 200);
         a && (s = i),
-            l.default.track(p.HAw.VOICE_FILTER_DOWNLOAD_ATTEMPTED, {
+            l.default.track(h.HAw.VOICE_FILTER_DOWNLOAD_ATTEMPTED, {
                 canceled: a,
-                active_voice_filter_id: o.A.getActiveVoiceFilter() ?? null,
+                active_voice_filter_id: o.Ay.getActiveVoiceFilter() ?? null,
                 success: !1,
                 voice_filter_id: n,
                 model_id: t,
@@ -85,19 +85,19 @@ class A extends i.A {
     }
     handleVoiceFilterApplied(e) {
         let { voiceFilterId: t, analyticsContext: n, activationDurationMs: i } = e,
-            a = o.A.getPreviousVoiceFilter();
+            a = o.Ay.getPreviousVoiceFilter();
         if (null !== a && null === t) {
-            let e = o.A.getPreviousVoiceFilterAppliedAt(),
+            let e = o.Ay.getPreviousVoiceFilterAppliedAt(),
                 t = null === e ? null : Date.now() - e;
-            l.default.track(p.HAw.VOICE_FILTER_DISABLED, {
+            l.default.track(h.HAw.VOICE_FILTER_DISABLED, {
                 active_voice_filter_id: a,
                 duration_voice_filter_applied: t,
             });
         }
         null !== t &&
-            ((0, s.Dr)(r.M.VOICE_FILTER_IN_CALL_COACHMARK, { dismissAction: h.i.INDIRECT_ACTION }),
-            (0, s.Dr)(r.M.VOICE_FILTER_FIRST_USE_COACHMARK, { dismissAction: h.i.INDIRECT_ACTION }),
-            l.default.track(p.HAw.VOICE_FILTER_ENABLED, {
+            ((0, s.Dr)(r.M.VOICE_FILTER_IN_CALL_COACHMARK, { dismissAction: p.i.INDIRECT_ACTION }),
+            (0, s.Dr)(r.M.VOICE_FILTER_FIRST_USE_COACHMARK, { dismissAction: p.i.INDIRECT_ACTION }),
+            l.default.track(h.HAw.VOICE_FILTER_ENABLED, {
                 active_voice_filter_id: t,
                 previous_filter_id: a,
                 ...(0, c.A)(n),
@@ -106,10 +106,10 @@ class A extends i.A {
     }
     handleVoiceFilterApplyFailed(e) {
         let { voiceFilterId: t } = e;
-        l.default.track(p.HAw.VOICE_FILTER_ACTIVATE_FAILED, { active_voice_filter_id: t ?? null });
+        l.default.track(h.HAw.VOICE_FILTER_ACTIVATE_FAILED, { active_voice_filter_id: t ?? null });
     }
     handleVoiceFilterDownloadCanceled() {
         u.Ay.stopVoiceFilterDownloads();
     }
 }
-let I = new A();
+let T = new I();

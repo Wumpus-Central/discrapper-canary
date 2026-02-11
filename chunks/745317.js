@@ -19,7 +19,7 @@ var n = s(627968),
     _ = s(602785);
 function h() {
     let [e, t] = l.useState(!1),
-        s = (0, i.bG)([p.A], () => p.A.isMediaFilterSettingLoading());
+        s = (0, i.bG)([p.Ay], () => p.Ay.isMediaFilterSettingLoading());
     return (l.useEffect(() => {
         let e = new a.Ep();
         return (
@@ -49,13 +49,13 @@ function O(e) {
         } = e,
         { analyticsLocations: T } = (0, c.Ay)(),
         { id: C } = (0, u.x5)(j.oh.VIDEO_INPUT),
-        S = (0, i.bG)([p.A], () => p.A.isVideoAvailable()),
+        S = (0, i.bG)([p.Ay], () => p.Ay.isVideoAvailable()),
         k = m.bm.useSetting();
     return (0, n.jsxs)(o.BJc, {
         gap: 20,
         children: [
             E(C),
-            p.A.isEnabled()
+            p.Ay.isEnabled()
                 ? null
                 : (0, n.jsx)(o.Text, {
                       className: _.u5,

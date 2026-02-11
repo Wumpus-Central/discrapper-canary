@@ -25,7 +25,7 @@ class s extends r.A {
     };
     _stopAndClearSounds = () => {};
     _handleToggleSelfDeafened = () => {
-        l.A.isDeaf() && this._stopAndClearSounds();
+        l.Ay.isDeaf() && this._stopAndClearSounds();
     };
     _handleSoundboardSoundReceived = (e) => {
         let { soundId: t, soundVolume: n, userId: i, channelId: r } = e;

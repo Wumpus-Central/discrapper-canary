@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => y });
+n.d(t, { A: () => S });
 var r = n(311907),
     i = n(73153),
     a = n(555444),
@@ -11,12 +11,12 @@ var r = n(311907),
     d = n(977997),
     _ = n(652215);
 let f = !0,
-    p = !0,
-    h = !0;
-function m(e) {
+    h = !0,
+    p = !0;
+function g(e) {
     return null == e || !!e.suppress || null != e.requestToSpeakTimestamp;
 }
-function g() {
+function E() {
     let e,
         t = c.A.getChannelId(),
         n = !1;
@@ -24,56 +24,56 @@ function g() {
     else {
         let r = o.A.getChannel(t),
             i = d.A.getVoiceState(r?.getGuildId(), s.default.getId());
-        n = l.A.getMode() === _.TBI.VOICE_ACTIVITY;
+        n = l.Ay.getMode() === _.TBI.VOICE_ACTIVITY;
         let c =
             (0, a.H)({ location: "doPTT", autoTrackExposure: !1 }).enableLatching &&
-            l.A.getModeOptions().pttLatchingEnabled;
-        e = !(n || c) || null == r || r.isPrivate() || r.isGuildStageVoice() || u.A.can(_.xBc.USE_VAD, r) || m(i);
+            l.Ay.getModeOptions().pttLatchingEnabled;
+        e = !(n || c) || null == r || r.isPrivate() || r.isGuildStageVoice() || u.A.can(_.xBc.USE_VAD, r) || g(i);
     }
     let r = e || !n,
-        g = e || n;
-    if (f === e && p === g) return !1;
-    (h = r), (f = r), (p = g), i.h.dispatch({ type: "SET_VAD_PERMISSION", hasPermission: f, hasLatchPermission: p });
+        E = e || n;
+    if (f === e && h === E) return !1;
+    (p = r), (f = r), (h = E), i.h.dispatch({ type: "SET_VAD_PERMISSION", hasPermission: f, hasLatchPermission: h });
 }
-function E(e) {
+function A(e) {
     let { voiceStates: t } = e;
     return t.some((e) => {
         let { userId: t } = e;
-        return t === s.default.getId() && g();
+        return t === s.default.getId() && E();
     });
 }
-function A() {
-    h = !0;
-}
 function I() {
-    h = f;
+    p = !0;
 }
-class T extends r.Ay.Store {
+function T() {
+    p = f;
+}
+class y extends r.Ay.Store {
     static displayName = "PermissionVADStore";
     initialize() {
-        this.waitFor(s.default, o.A, l.A, u.A, c.A, d.A);
+        this.waitFor(s.default, o.A, l.Ay, u.A, c.A, d.A);
     }
     shouldShowWarning() {
-        return !h;
+        return !p;
     }
     canUseVoiceActivity() {
         return f;
     }
     canUseLatching() {
-        return p;
+        return h;
     }
 }
-let y = new T(i.h, {
-    RTC_CONNECTION_STATE: g,
-    MEDIA_ENGINE_SET_AUDIO_ENABLED: g,
-    AUDIO_SET_MODE: g,
-    CHANNEL_UPDATES: g,
-    THREAD_UPDATE: g,
-    GUILD_ROLE_UPDATE: g,
-    GUILD_MEMBER_UPDATE: g,
-    IMPERSONATE_UPDATE: g,
-    IMPERSONATE_STOP: g,
-    VOICE_STATE_UPDATES: E,
-    AUDIO_TOGGLE_SELF_MUTE: I,
-    PERMISSION_CLEAR_VAD_WARNING: A,
+let S = new y(i.h, {
+    RTC_CONNECTION_STATE: E,
+    MEDIA_ENGINE_SET_AUDIO_ENABLED: E,
+    AUDIO_SET_MODE: E,
+    CHANNEL_UPDATES: E,
+    THREAD_UPDATE: E,
+    GUILD_ROLE_UPDATE: E,
+    GUILD_MEMBER_UPDATE: E,
+    IMPERSONATE_UPDATE: E,
+    IMPERSONATE_STOP: E,
+    VOICE_STATE_UPDATES: A,
+    AUDIO_TOGGLE_SELF_MUTE: T,
+    PERMISSION_CLEAR_VAD_WARNING: I,
 });

@@ -13,11 +13,11 @@ let u = new Set(["DisplayPort"]),
 function h() {
     let e;
     if ((0, l.kBI)(A)) return;
-    let t = o.A.getInputDeviceId(),
-        r = o.A.getOutputDeviceId();
+    let t = o.Ay.getInputDeviceId(),
+        r = o.Ay.getOutputDeviceId();
     if (d.A.getState().neverShowModal || a().isEmpty(d.A.lastDeviceConnected)) return;
-    let h = (0, d.x)(o.A.getInputDevices()[t]),
-        _ = (0, d.x)(o.A.getOutputDevices()[r]);
+    let h = (0, d.x)(o.Ay.getInputDevices()[t]),
+        _ = (0, d.x)(o.Ay.getOutputDevices()[r]);
     if (a().some(d.A.lastDeviceConnected, (e) => u.has(e.displayName) || e.displayName === h || e.displayName === _))
         return;
     let m = a().some(

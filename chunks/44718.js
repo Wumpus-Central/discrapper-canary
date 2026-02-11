@@ -13,7 +13,7 @@ let u = 30,
         getActiveErrors: () => {
             if (
                 (a.A.getRTCConnection()?.getDurationSeconds() ?? 0) < u ||
-                performance.now() - i.A.getLastAudioInputDeviceChangeTimestamp() < c
+                performance.now() - i.Ay.getLastAudioInputDeviceChangeTimestamp() < c
             )
                 return;
             let e =

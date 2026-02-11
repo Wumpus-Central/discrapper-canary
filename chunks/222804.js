@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var r = n(197094),
     i = n(439372),
     a = n(626584),
@@ -11,9 +11,9 @@ var r = n(197094),
 let d = +l.A.Millis.SECOND,
     _ = 30 * l.A.Millis.SECOND,
     f = 360,
-    p = new a.A("RTCLatencyTestManager");
-p.enableNativeLogger(!0);
-class h extends i.A {
+    h = new a.A("RTCLatencyTestManager");
+h.enableNativeLogger(!0);
+class p extends i.A {
     refetchTimeout;
     actions = { POST_CONNECTION_OPEN: () => this._handleConnectionOpen() };
     _terminate() {
@@ -22,19 +22,19 @@ class h extends i.A {
     _handleTestRegionsResponse = (e) => {
         let t = e.map((e) => e.region);
         o.A.shouldPerformLatencyTest(t)
-            ? s.A.getMediaEngine()
+            ? s.Ay.getMediaEngine()
                   .rankRtcRegions(e)
                   .then((e) => {
-                      p.verbose("RTC region latency test completed, ranked regions are: ", e), (0, r.b)(e, t);
+                      h.verbose("RTC region latency test completed, ranked regions are: ", e), (0, r.b)(e, t);
                   })
-                  .catch((e) => p.warn(e))
-            : p.verbose(`RTC cached ranked preferred regions are ${o.A.getPreferredRegions()}`);
+                  .catch((e) => h.warn(e))
+            : h.verbose(`RTC cached ranked preferred regions are ${o.A.getPreferredRegions()}`);
     };
     _fetchAndScheduleRefetch = () => {
-        let e = s.A.supports(c.O5.PORT_AWARE_LATENCY_TESTING) ? 2 : 1;
+        let e = s.Ay.supports(c.O5.PORT_AWARE_LATENCY_TESTING) ? 2 : 1;
         (0, r.B)(e)
             .then((e) => this._handleTestRegionsResponse(e.body))
-            .catch((e) => p.warn(e)),
+            .catch((e) => h.warn(e)),
             (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, f * l.A.Millis.MINUTE));
     };
     _handleConnectionOpen = () => {
@@ -45,4 +45,4 @@ class h extends i.A {
         }
     };
 }
-let m = new h();
+let g = new p();

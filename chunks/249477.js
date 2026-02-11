@@ -15,8 +15,8 @@ var i = n(627968),
     p = n(504982),
     g = n(815706),
     E = n(134047),
-    f = n(313961),
-    I = n(626584),
+    I = n(313961),
+    f = n(626584),
     C = n(953384),
     N = n(973522),
     T = n(15285),
@@ -67,8 +67,8 @@ async function en(e) {
         } = e,
         h = await (0, j.E1)(t.pid),
         { gameName: _, gameId: m, exe: p, distributor: g, rawExePath: E } = (0, N.wH)(t),
-        f = r.enabledLegacy || r.enabledOOP,
-        I = O.x.legacyEnabled || O.x.oopEnabled,
+        I = r.enabledLegacy || r.enabledOOP,
+        f = O.x.legacyEnabled || O.x.oopEnabled,
         C = r.source;
     Z.default.track(ee.HAw.LAUNCH_GAME, {
         game: _,
@@ -79,8 +79,8 @@ async function en(e) {
         game_platform: ee.yTV.DESKTOP,
         detection_method: i,
         distributor: g,
-        is_overlay_enabled: I,
-        is_overlay_game_enabled: f,
+        is_overlay_enabled: f,
+        is_overlay_game_enabled: I,
         is_overlay_game_source: C,
         fullscreen_type: null != h ? c.aI[h] : c.aI.UNKNOWN.toString(),
         hardware_display_count: (await u.A?.hardware?.getDisplayCount?.()) ?? null,
@@ -141,7 +141,7 @@ class ei extends r.PureComponent {
                     guild_scheduled_event_id: r?.id,
                     ...(0, h.JK)(e.voiceChannelGuildId, e.voiceChannelId, e.videoEnabled),
                     ...a?.voiceStateAnalytics?.getStats(),
-                    ...f.A.getSelectedParticipantStats(e.voiceChannelId),
+                    ...I.A.getSelectedParticipantStats(e.voiceChannelId),
                 });
         }
         if (e.voiceChannelId !== t && null != t) {
@@ -220,7 +220,7 @@ class ei extends r.PureComponent {
                 let e = o.name;
                 d.A.identifyGame(c, e)
                     .then((e) => d.A.reportUnverifiedGame(e))
-                    .catch((e) => new I.A("AutoAnalytics").error("Cannot identify game", e));
+                    .catch((e) => new f.A("AutoAnalytics").error("Cannot identify game", e));
             }
         }
         if (e.runningNonGame !== u && u?.id != null && e.runningNonGame?.id !== u.id) {
@@ -305,7 +305,7 @@ class ei extends r.PureComponent {
 function er() {
     let [e, t] = (0, o.yK)([Y.A], () => [Y.A.getVoiceChannelId(), Y.A.getChannelId()], []),
         n = (0, o.bG)([U.A], () => U.A.getChannel(t), [t]),
-        a = (0, o.bG)([f.A], () => n?.id != null && f.A.getChatOpen(n.id), [n]),
+        a = (0, o.bG)([I.A], () => n?.id != null && I.A.getChatOpen(n.id), [n]),
         l = n?.nsfw,
         s = (0, o.bG)([U.A], () => U.A.getChannel(e), [e]),
         d = (0, o.bG)([W.A], () => W.A.getGuildId(), []),
@@ -313,9 +313,9 @@ function er() {
         u = (0, o.bG)([K.default], () => K.default.getCurrentUser(), []),
         g = (0, o.bG)([k.Ay], () => null != u && null != d && (k.Ay.getMember(d, u.id)?.isPending ?? !1), [u, d]),
         E = (0, o.bG)([Q.Ay], () => Q.Ay.getState().section, []),
-        I = (0, o.bG)([$.A], () => $.A.getHomeLink(), []),
+        f = (0, o.bG)([$.A], () => $.A.getHomeLink(), []),
         C = (0, o.bG)([S.A], () => S.A.isConnected(), []),
-        [N, b] = (0, o.yK)([B.A], () => [B.A.isVideoEnabled(), B.A.isScreenSharing()], []),
+        [N, b] = (0, o.yK)([B.Ay], () => [B.Ay.isVideoEnabled(), B.Ay.isScreenSharing()], []),
         O = (0, o.bG)([q.A], () => q.A.getPrimaryActivity(), []),
         { currentGame: R, currentNonGame: P } = (0, o.cf)(
             [T.Ay],
@@ -332,7 +332,7 @@ function er() {
             isNSFWChannel: l,
             selectedGuildId: d,
             friendsTabSection: E,
-            homeLink: I,
+            homeLink: f,
             connected: C,
             videoEnabled: N,
             isScreenSharing: b,

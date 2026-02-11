@@ -23,7 +23,7 @@ let I = (0, s.bd)(a.X.INPUT_PROFILE_VOICE_ADVANCED_ACCORDION, {
         let t;
         return (
             (e = a.X.INPUT_PROFILE_VOICE_ADVANCED_ACCORDION),
-            (t = (0, n.bG)([r.A], () => r.A.isInputProfileCustom())),
+            (t = (0, n.bG)([r.Ay], () => r.Ay.isInputProfileCustom())),
             (0, l.A)(e, { limit: t ? 3 : 2 })
         );
     },

@@ -12,7 +12,7 @@ let A = 2.5 * d.A.Millis.SECOND,
     h = +d.A.Millis.HOUR;
 function _() {
     let [e, t] = i.useState(!1),
-        n = (0, r.bG)([s.A], () => s.A.getMode() === u.TB.PUSH_TO_TALK),
+        n = (0, r.bG)([s.Ay], () => s.Ay.getMode() === u.TB.PUSH_TO_TALK),
         d = (0, r.bG)([o.A], () => null != o.A.getChannelId() && (o.A.getDuration() ?? Number.MAX_VALUE) < A),
         [_, m] = i.useState(!1),
         { showPTTJoinTooltip: p } = c.A.useConfig({ location: "usePTTJoinTooltip" }),
@@ -32,13 +32,13 @@ function _() {
         }
         d || m(!1);
     }, [d, n, p, e]);
-    let f = i.useCallback(() => {
+    let I = i.useCallback(() => {
         m(!1), g.current.stop();
     }, []);
     return (
         (0, l.l0)(() => {
             g.current.stop(), E.current.stop();
         }),
-        { shouldShowTooltip: _, dismissTooltip: f }
+        { shouldShowTooltip: _, dismissTooltip: I }
     );
 }

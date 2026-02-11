@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => B, Bz: () => v, Xi: () => S, iA: () => h }), n(321073);
+n.d(t, { Ay: () => j, Bz: () => C, Xi: () => v, iA: () => p }), n(321073);
 var r = n(311907),
     i = n(205693),
     a = n(73153),
@@ -8,11 +8,11 @@ var r = n(311907),
     l = n(287809),
     u = n(652215),
     c = n(731854);
-let d = S(c.x.DEFAULT, u.zWA.TRANSPORT, 0),
+let d = v(c.x.DEFAULT, u.zWA.TRANSPORT, 0),
     _ = d,
     f = {},
-    p = new Map(),
-    h = {
+    h = new Map(),
+    p = {
         availableOutgoingBitrate: !0,
         bitrate: !0,
         bitrateTarget: !0,
@@ -37,70 +37,70 @@ let d = S(c.x.DEFAULT, u.zWA.TRANSPORT, 0),
         videoEntropy: !0,
         audioLevel: !0,
     },
-    m = 600;
-function g(e, t, n) {
+    g = 600;
+function E(e, t, n) {
     return `${e}:${t}:${n}`;
 }
-function E(e, t) {
+function A(e, t) {
     return `${e}:${t}`;
 }
-class A {
+class I {
     state;
     constructor(e) {
         this.state = e;
     }
     static empty() {
-        return new A({});
+        return new I({});
     }
     put(e, t, n, r) {
         if ("" === r) {
             let r = { ...this.state };
-            return delete r[g(e, t, n)], new A(r);
+            return delete r[E(e, t, n)], new I(r);
         }
-        return new A({ [g(e, t, n)]: r, ...this.state });
+        return new I({ [E(e, t, n)]: r, ...this.state });
     }
     get(e, t, n) {
-        let r = this.state[g(e, t, n)];
+        let r = this.state[E(e, t, n)];
         return null != r ? r : null;
     }
 }
-let I = A.empty(),
-    T = !1,
-    y = null;
-function S(e, t, n) {
+let T = I.empty(),
+    y = !1,
+    S = null;
+function v(e, t, n) {
     return `${e}:${t}:${n}`;
 }
-function v(e) {
+function C(e) {
     let [t, n] = e.split(":");
     return { context: t, section: n };
 }
-function C() {
+function b() {
     Object.values(c.x).forEach((e) => {
         f[e] = {};
     });
 }
-function b() {
-    null != y && (y.destroy(), (y = null));
+function N() {
+    null != S && (S.destroy(), (S = null));
 }
-function N(e) {
+function R(e) {
     _ = e.section ?? d;
 }
-function R() {
-    b();
-}
-function O(e) {
-    null != e.channelId && (C(), p.clear());
+function O() {
+    N();
 }
 function D(e) {
-    if (null === e.streamId) {
-        let t = E(e.userId, e.context);
-        p.set(t, c.r8.NO_OVERRIDE);
-    }
+    null != e.channelId && (b(), h.clear());
 }
 function L(e) {
-    _ = e.section;
+    if (null === e.streamId) {
+        let t = A(e.userId, e.context);
+        h.set(t, c.r8.NO_OVERRIDE);
+    }
 }
 function w(e) {
+    _ = e.section;
+}
+function x(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
         r = {};
@@ -113,31 +113,31 @@ function w(e) {
                 for (let e = 0; e < a.length; e++) {
                     let r = t[e],
                         i = "object" == typeof r ? r : {};
-                    s.push(w(a[e], i, n));
+                    s.push(x(a[e], i, n));
                 }
             } else r[i] = a;
         else if ("object" == typeof a && null !== a) {
             let t = "object" == typeof e && null !== e ? e : {};
-            r[i] = w(a, t, n);
-        } else if (i in h && "number" == typeof a) {
+            r[i] = x(a, t, n);
+        } else if (i in p && "number" == typeof a) {
             let t = (r[i] = Array.isArray(e) ? e : []);
-            t.push({ value: a, time: n }), t.length > m && t.shift();
+            t.push({ value: a, time: n }), t.length > g && t.shift();
         } else r[i] = a;
     }
     return r;
 }
-function x(e) {
+function P(e) {
     let { connectionStats: t } = e;
     Object.values(c.x).forEach((e) => {
         t.filter((t) => {
             let { context: n } = t;
             return n === e;
         }).forEach((t, n) => {
-            P({ context: e, stats: t.stats, index: n });
+            M({ context: e, stats: t.stats, index: n });
         });
     });
 }
-function P(e) {
+function M(e) {
     let { context: t, stats: n, index: r } = e,
         i = f[t];
     if (null != n) {
@@ -148,19 +148,19 @@ function P(e) {
             } = n;
             Object.keys(e).includes(a) || (_ = d);
         }
-        i[r] = w(n, i[r]);
+        i[r] = x(n, i[r]);
     } else delete i[r];
 }
-function M(e) {
+function k(e) {
     s._w();
 }
-function k(e) {
+function U(e) {
     let { path: t } = e,
-        n = o.A.getMediaEngine();
-    if ((b(), !n.supports(c.O5.CONNECTION_REPLAY) || 0 === t.length)) return;
+        n = o.Ay.getMediaEngine();
+    if ((N(), !n.supports(c.O5.CONNECTION_REPLAY) || 0 === t.length)) return;
     let r = n.createReplayConnection(c.x.DEFAULT, t);
     null != r &&
-        ((y = r),
+        ((S = r),
         r.on(i.yq.Video, (e, t, n, i, s) => {
             a.h.dispatch({
                 type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT",
@@ -172,21 +172,21 @@ function k(e) {
         }),
         a.h.wait(() => s.ho()));
 }
-function U(e) {
-    I = I.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId);
-}
 function G(e) {
+    T = T.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId);
+}
+function F(e) {
     let { value: t } = e;
-    T = t;
+    y = t;
 }
 function V(e) {
     let { userId: t, context: n, quality: r } = e;
-    p.set(E(t, n), r);
+    h.set(A(t, n), r);
 }
-C();
-class F extends r.Ay.Store {
+b();
+class B extends r.Ay.Store {
     initialize() {
-        this.waitFor(o.A, l.default);
+        this.waitFor(o.Ay, l.default);
     }
     static displayName = "RTCDebugStore";
     getSection() {
@@ -216,26 +216,26 @@ class F extends r.Ay.Store {
         return Object.values(f[e]);
     }
     getVideoStreams() {
-        return I;
-    }
-    shouldRecordNextConnection() {
         return T;
     }
+    shouldRecordNextConnection() {
+        return y;
+    }
     getSimulcastDebugOverride(e, t) {
-        let n = E(e, t);
-        return p.has(n) ? p.get(n) : c.r8.NO_OVERRIDE;
+        let n = A(e, t);
+        return h.has(n) ? h.get(n) : c.r8.NO_OVERRIDE;
     }
 }
-let B = new F(a.h, {
-    RTC_DEBUG_MODAL_OPEN: N,
-    RTC_DEBUG_MODAL_CLOSE: R,
-    RTC_DEBUG_MODAL_SET_SECTION: L,
-    RTC_DEBUG_MODAL_OPEN_REPLAY: M,
-    RTC_DEBUG_MODAL_OPEN_REPLAY_AT_PATH: k,
-    RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT: U,
-    RTC_DEBUG_SET_RECORDING_FLAG: G,
+let j = new B(a.h, {
+    RTC_DEBUG_MODAL_OPEN: R,
+    RTC_DEBUG_MODAL_CLOSE: O,
+    RTC_DEBUG_MODAL_SET_SECTION: w,
+    RTC_DEBUG_MODAL_OPEN_REPLAY: k,
+    RTC_DEBUG_MODAL_OPEN_REPLAY_AT_PATH: U,
+    RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT: G,
+    RTC_DEBUG_SET_RECORDING_FLAG: F,
     RTC_DEBUG_SET_SIMULCAST_OVERRIDE: V,
-    VOICE_CHANNEL_SELECT: O,
-    RTC_CONNECTION_VIDEO: D,
-    MEDIA_ENGINE_CONNECTION_STATS: x,
+    VOICE_CHANNEL_SELECT: D,
+    RTC_CONNECTION_VIDEO: L,
+    MEDIA_ENGINE_CONNECTION_STATS: P,
 });

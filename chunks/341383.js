@@ -46,7 +46,7 @@ function U(e, t, n, i) {
     let s = !1;
     if (e) i.pressedTime = r;
     else if (null != i.pressedTime && (0, N.H)({ location: "doPTT", autoTrackExposure: !1 }).enableLatching) {
-        let { pttLatchingEnabled: e = !1 } = S.A.getModeOptions(a),
+        let { pttLatchingEnabled: e = !1 } = S.Ay.getModeOptions(a),
             t = n ? l.vadPriorityLatched : l.latched;
         (s = t.has(i.id)) || !0 !== e || !(r < i.pressedTime + 150) || !w
             ? (t.delete(i.id), (s = !1))
@@ -64,14 +64,14 @@ let G = {
     [j.hCu.UNASSIGNED]: { onTrigger() {}, keyEvents: {} },
     [j.hCu.PUSH_TO_TALK]: {
         onTrigger(e, t) {
-            S.A.getMode(t.context) === j.TBI.PUSH_TO_TALK && ((G[j.hCu.PUSH_TO_TALK].isPressed = e), U(e, !1, !1, t));
+            S.Ay.getMode(t.context) === j.TBI.PUSH_TO_TALK && ((G[j.hCu.PUSH_TO_TALK].isPressed = e), U(e, !1, !1, t));
         },
         keyEvents: { keyup: !0, keydown: !0 },
         isPressed: !1,
     },
     [j.hCu.PUSH_TO_TALK_PRIORITY]: {
         onTrigger(e, t) {
-            (S.A.getMode() === j.TBI.PUSH_TO_TALK || P.A.getCurrentConfig({ location: "keybinds" }).onPTTKeybind) &&
+            (S.Ay.getMode() === j.TBI.PUSH_TO_TALK || P.A.getCurrentConfig({ location: "keybinds" }).onPTTKeybind) &&
                 ((G[j.hCu.PUSH_TO_TALK_PRIORITY].isPressed = e), U(e, !0, !1, t));
         },
         keyEvents: { keyup: !0, keydown: !0 },
@@ -79,7 +79,7 @@ let G = {
     },
     [j.hCu.VAD_PRIORITY]: {
         onTrigger(e, t) {
-            S.A.getMode() === j.TBI.VOICE_ACTIVITY &&
+            S.Ay.getMode() === j.TBI.VOICE_ACTIVITY &&
                 P.A.getCurrentConfig({ location: "keybinds" }).separateKeybind &&
                 ((G[j.hCu.VAD_PRIORITY].isPressed = e), U(e, !0, !0, t));
         },
@@ -88,7 +88,7 @@ let G = {
     },
     [j.hCu.PUSH_TO_MUTE]: {
         onTrigger(e) {
-            S.A.getMode() === j.TBI.VOICE_ACTIVITY &&
+            S.Ay.getMode() === j.TBI.VOICE_ACTIVITY &&
                 ((G[j.hCu.PUSH_TO_MUTE].isPressed = e), r.A.setTemporarySelfMute(e));
         },
         keyEvents: { keyup: !0, keydown: !0 },
@@ -105,7 +105,7 @@ let G = {
     [j.hCu.TOGGLE_CAMERA]: { onTrigger: () => (0, d.s)(), keyEvents: { keyup: !0, keydown: !1 } },
     [j.hCu.TOGGLE_VOICE_MODE]: {
         onTrigger() {
-            let e = S.A.getMode() === j.TBI.PUSH_TO_TALK ? j.TBI.VOICE_ACTIVITY : j.TBI.PUSH_TO_TALK;
+            let e = S.Ay.getMode() === j.TBI.PUSH_TO_TALK ? j.TBI.VOICE_ACTIVITY : j.TBI.PUSH_TO_TALK;
             r.A.setMode(e);
         },
         keyEvents: { keyup: !0, keydown: !1 },

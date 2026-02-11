@@ -55,8 +55,8 @@ let Q = { width: 232, height: 315 },
     en = 128;
 function er(e) {
     let { header: t } = e,
-        n = P.A.getCameraComponent(),
-        a = (0, l.bG)([P.A], () => P.A.getVideoDeviceId()),
+        n = P.Ay.getCameraComponent(),
+        a = (0, l.bG)([P.Ay], () => P.Ay.getVideoDeviceId()),
         s = (0, v.A)();
     return (
         i.useEffect(() => {
@@ -164,7 +164,7 @@ function ea(e) {
         v = null != S ? G.Ay.getGuildIconURL({ id: S.id, icon: S.icon, size: en }) : null,
         C = (0, E.Y)(_, en, !0) ?? v,
         b = (0, A.Ay)(_),
-        [N, R] = (0, l.yK)([P.A], () => [P.A.supports($.O5.VIDEO), Object.keys(P.A.getVideoDevices()).length]),
+        [N, R] = (0, l.yK)([P.Ay], () => [P.Ay.supports($.O5.VIDEO), Object.keys(P.Ay.getVideoDevices()).length]),
         O = null != S ? `${b}, ${S.name}` : b,
         D = (0, l.bG)([k.A], () => k.A.isFocused()),
         M = (0, l.bG)([F.A], () => F.A.getMode(_.id)),

@@ -21,12 +21,12 @@ var i = n(627968),
     I = n(183184),
     T = n(47167),
     C = n(713654),
-    v = n(880144),
-    y = n(338771),
+    y = n(880144),
+    v = n(338771),
     N = n(263063),
     O = n(178442),
-    b = n(209932),
-    j = n(989799),
+    j = n(209932),
+    b = n(989799),
     w = n(167579),
     L = n(704877),
     R = n(173660),
@@ -35,17 +35,17 @@ var i = n(627968),
     k = n(594831),
     z = n(222692),
     V = n(709562),
-    U = n(996744),
-    P = n(85612),
+    P = n(996744),
+    U = n(85612),
     G = n(277342),
     H = n(616356),
     Y = n(961350),
     F = n(71393),
     W = n(430452),
-    K = n(383501),
-    Z = n(309010),
-    B = n(287809),
-    X = n(977997),
+    Z = n(383501),
+    X = n(309010),
+    K = n(287809),
+    B = n(977997),
     J = n(810412),
     Q = n(823901),
     q = n(592598),
@@ -123,7 +123,7 @@ function es(e) {
         },
         S = (0, ee.b4)()?.id,
         T = (0, a.bG)([q.A], () => q.A.isLimitedInteractionOverrideEnabled(S)),
-        C = (0, U.Cg)({ location: g.A.OVERLAY, autoTrackExposure: !0 });
+        C = (0, P.Cg)({ location: g.A.OVERLAY, autoTrackExposure: !0 });
     return (0, i.jsx)(c.YNO, {
         targetElementRef: s,
         clickTrap: !0,
@@ -131,7 +131,7 @@ function es(e) {
             let { closePopout: t } = e,
                 n = f(t);
             return C
-                ? (0, i.jsx)(P.a, { wide: !0, showOutputDevices: !0, onSettingsButtonClick: n, showSearchBar: !T })
+                ? (0, i.jsx)(U.a, { wide: !0, showOutputDevices: !0, onSettingsButtonClick: n, showSearchBar: !T })
                 : (0, i.jsx)(E.A, {
                       onClose: n,
                       maybeRenderPTTCheckbox: !0,
@@ -241,8 +241,8 @@ function er(e) {
 function eo(e) {
     let { voiceChannel: t, locked: n } = e,
         s = l.useRef(null),
-        r = (0, a.bG)([W.A], () => W.A.isVideoEnabled()),
-        o = (0, a.bG)([W.A], () => Object.values(W.A.getVideoDevices())[0]),
+        r = (0, a.bG)([W.Ay], () => W.Ay.isVideoEnabled()),
+        o = (0, a.bG)([W.Ay], () => Object.values(W.Ay.getVideoDevices())[0]),
         d = o?.disabled ?? !0,
         A = !1 === d,
         m = (0, L.A)(t),
@@ -268,7 +268,7 @@ function eo(e) {
         T = null != t ? (0, D.Q)({ enabled: r, cameraUnavailable: d, hasPermission: m, channel: t }) : void 0;
     l.useEffect(() => () => E(), [r, E]);
     let C = el(n),
-        v = null == t || !m;
+        y = null == t || !m;
     return (0, i.jsx)(c.YNO, {
         targetElementRef: s,
         clickTrap: !0,
@@ -294,7 +294,7 @@ function eo(e) {
                 onContextMenu: p(n),
                 onMouseEnter: S,
                 onMouseLeave: I,
-                disabled: v,
+                disabled: y,
                 isTrayButton: !0,
             });
         },
@@ -304,9 +304,9 @@ function ed(e) {
     let t,
         { voiceChannel: n, locked: s } = e,
         r = l.useRef(null),
-        d = (0, a.bG)([B.default], () => B.default.getCurrentUser()),
+        d = (0, a.bG)([K.default], () => K.default.getCurrentUser()),
         u = (0, L.A)(n),
-        h = (0, a.cf)([W.A], () => (0, v.A)(W.A)),
+        h = (0, a.cf)([W.Ay], () => (0, y.A)(W.Ay)),
         A = (0, a.bG)([H.A], () => H.A.getCurrentUserActiveStream()),
         m = (0, a.bG)([$.A], () => $.A.getTargetPID()),
         g = (0, Q.y)({ pid: m, allowOneClickGoLive: !0, analyticsLocation: et.ThZ.UNLOCKED_OVERLAY }),
@@ -332,7 +332,7 @@ function ed(e) {
                         value: J.IP.DISABLED,
                         userId: Y.default.getId(),
                     }),
-                    (0, y.A)(A, !1)
+                    (0, v.A)(A, !1)
                 );
             p();
         },
@@ -392,7 +392,7 @@ function eu(e) {
         r = l.useRef(null),
         o = t?.getGuildId() ?? null,
         { mute: u, suppress: h } = (0, R.A)(t),
-        m = (0, a.bG)([W.A], () => W.A.isDeaf()),
+        m = (0, a.bG)([W.Ay], () => W.Ay.isDeaf()),
         g = null == t || u || h || m,
         { analyticsLocations: f } = (0, p.Ay)();
     function _(e) {
@@ -408,7 +408,7 @@ function eu(e) {
             events: { onClick: x, onMouseEnter: S, onMouseLeave: I },
         } = (0, d.E)(),
         T = el(s),
-        C = (0, a.bG)([b.A, Y.default], () => b.A.isUserPlayingSounds(Y.default.getId()), []) ? "green" : void 0;
+        C = (0, a.bG)([j.A, Y.default], () => j.A.isUserPlayingSounds(Y.default.getId()), []) ? "green" : void 0;
     return (0, i.jsx)(c.YNO, {
         targetElementRef: r,
         clickTrap: !0,
@@ -416,7 +416,7 @@ function eu(e) {
             let { closePopout: n } = e;
             return g || null == t
                 ? (0, i.jsx)(i.Fragment, {})
-                : (0, i.jsx)(j.A, { guildId: o, channel: t, onClose: T(n), analyticsSource: "action bar button" });
+                : (0, i.jsx)(b.A, { guildId: o, channel: t, onClose: T(n), analyticsSource: "action bar button" });
         },
         align: "center",
         position: "top",
@@ -459,7 +459,7 @@ function eu(e) {
 function ec(e) {
     let { voiceChannel: t, locked: n } = e,
         r = l.useRef(null),
-        o = (0, a.bG)([Z.A], () => Z.A.getVoiceChannelId() === t?.id),
+        o = (0, a.bG)([X.A], () => X.A.getVoiceChannelId() === t?.id),
         d = () => {
             (0, J.YX)(et.uss.QUICK_ACTIONS, {
                 type: J.Z5.CALL_BUTTON,
@@ -574,8 +574,8 @@ function eA(e) {
 function em(e) {
     let { voiceChannel: t } = e,
         n = t?.id,
-        l = (0, a.cf)([K.A], () => ({ quality: K.A.getQuality(), state: K.A.getState(), lastPing: K.A.getLastPing() })),
-        s = (0, a.bG)([X.A], () => null != n && X.A.hasVideo(n), [n]);
+        l = (0, a.cf)([Z.A], () => ({ quality: Z.A.getQuality(), state: Z.A.getState(), lastPing: Z.A.getLastPing() })),
+        s = (0, a.bG)([B.A], () => null != n && B.A.hasVideo(n), [n]);
     return (
         null != n &&
         null != t &&

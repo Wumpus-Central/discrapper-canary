@@ -14,7 +14,7 @@ let c = 10,
             let e = a.A.getRTCConnection();
             if (null == e) return null;
             let t = e.getMediaEngineConnectionId();
-            if (null == t || !i.A.isVideoEnabled()) return null;
+            if (null == t || !i.Ay.isVideoEnabled()) return null;
             let n = a.A.getLastNonZeroRemoteVideoSinkWantsTime();
             if ((null != n && performance.now() - n < d) || !e.hasActiveRemoteWants()) return null;
             let s = (0, u.xA)(t, r.default.getId());

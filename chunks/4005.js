@@ -9,7 +9,7 @@ var r = n(627968),
     u = n(430452),
     c = n(985018);
 let d = () => {
-    let e = (0, s.bG)([u.A], () => u.A.isInteractionRequired(), []),
+    let e = (0, s.bG)([u.Ay], () => u.Ay.isInteractionRequired(), []),
         t = i.useRef(null);
     function n() {
         null !== t.current && ((0, o.OoC)(t.current), (t.current = null));

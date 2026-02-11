@@ -38,7 +38,7 @@ class p extends a.A {
         let a = null != l.Ay.getVisibleGame(),
             _ = d.A.isVisible(),
             m = s.A.getWindowVisible(c.MLl.CHANNEL_CALL_POPOUT),
-            p = o.A.isLocalVideoDisabled(t, n),
+            p = o.Ay.isLocalVideoDisabled(t, n),
             g = h.has(t);
         !a || _ || m || p || g || (A.add(t), r.A.setDisableLocalVideo(t, c.bb8.DISABLED, n, !1));
     }

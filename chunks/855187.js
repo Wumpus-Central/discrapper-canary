@@ -10,13 +10,13 @@ var i = n(311907),
     u = n(985018);
 function c(e, t) {
     let c = (0, a.k34)(),
-        { videoEnabled: d, hasVideoDevice: _ } = (0, i.cf)([l.A], () => ({
-            videoEnabled: l.A.isVideoEnabled(),
-            hasVideoDevice: l.A.isVideoAvailable(),
+        { videoEnabled: d, hasVideoDevice: _ } = (0, i.cf)([l.Ay], () => ({
+            videoEnabled: l.Ay.isVideoEnabled(),
+            hasVideoDevice: l.Ay.isVideoAvailable(),
         })),
         f = (0, i.bG)([o.default], () => o.default.getId() === e),
-        p = (0, s.A)();
-    function h() {
+        h = (0, s.A)();
+    function p() {
         (0, a.mMO)(
             async () => {
                 let { default: e } = await Promise.all([n.e("95782"), n.e("82277")]).then(n.bind(n, 308229));
@@ -25,11 +25,11 @@ function c(e, t) {
             { modalKey: "camera-preview", contextKey: null != t ? (0, a.TId)(t) : c },
         );
     }
-    return (!d || p) && f && _
+    return (!d || h) && f && _
         ? (0, r.jsx)(a.Drp, {
               id: "change-video-background",
               label: d ? u.intl.string(u.t.mZKxHb) : u.intl.string(u.t["vkV93/"]),
-              action: h,
+              action: p,
               icon: d ? a.fBX : a.bMW,
               leadingAccessory: { type: "icon", icon: d ? a.fBX : a.bMW },
           })

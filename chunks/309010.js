@@ -228,7 +228,7 @@ class en extends f.Ay.Store {
                 null != e.selectedChannelIds && (w = { ...e.selectedChannelIds, null: null });
         }
         this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type),
-            this.waitFor(I.default, T.A, y.Ay, S.A, v.A, C.A, b.A);
+            this.waitFor(I.default, T.A, y.Ay, S.A, v.Ay, C.A, b.A);
     }
     getChannelId(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -236,7 +236,7 @@ class en extends f.Ay.Store {
         return t ? (w[n] ?? G(n)) : w[n];
     }
     getVoiceChannelId() {
-        return v.A.isSupported() ? o : null;
+        return v.Ay.isSupported() ? o : null;
     }
     getMostRecentSelectedTextChannelId(e) {
         return null == e ? null : (P[e] ?? null);

@@ -1,4 +1,4 @@
-i.d(e, { S: () => d });
+i.d(t, { S: () => d });
 var n = i(827343),
     l = i(793574),
     s = i(419954),
@@ -12,15 +12,15 @@ let d = (0, s.sN)(u.X.VOICE_OUTPUT_VOLUME_SETTING, {
     minValue: 0,
     maxValue: 200,
     getInitialValue: function () {
-        let t = r.A.getOutputVolume();
-        return (0, a.M)(t);
+        let e = r.Ay.getOutputVolume();
+        return (0, a.M)(e);
     },
-    onValueRender: function (t) {
-        return `${t.toFixed(0)}%`;
+    onValueRender: function (e) {
+        return `${e.toFixed(0)}%`;
     },
-    asValueChanges: function (t) {
-        let e = [l.A.USER_SETTINGS_VOICE_AND_VIDEO],
-            i = (0, a.w)(t);
-        n.A.setOutputVolume(i, { analyticsLocations: e });
+    asValueChanges: function (e) {
+        let t = [l.A.USER_SETTINGS_VOICE_AND_VIDEO],
+            i = (0, a.w)(e);
+        n.A.setOutputVolume(i, { analyticsLocations: t });
     },
 });

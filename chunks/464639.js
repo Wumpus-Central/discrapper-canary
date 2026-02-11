@@ -1,4 +1,4 @@
-i.d(e, { e: () => S });
+i.d(t, { e: () => A });
 var n = i(311907),
     l = i(827343),
     s = i(419954),
@@ -8,25 +8,25 @@ var n = i(311907),
     o = i(985018);
 let d = (0, s.sN)(a.X.VOICE_GLOBAL_ATTENUATION_SLIDER, {
         useTitle: () => o.intl.string(o.t.AlybXj),
-        setValue: (t) =>
-            l.A.setAttenuation(t, r.A.getAttenuateWhileSpeakingSelf(), r.A.getAttenuateWhileSpeakingOthers()),
+        setValue: (e) =>
+            l.A.setAttenuation(e, r.Ay.getAttenuateWhileSpeakingSelf(), r.Ay.getAttenuateWhileSpeakingOthers()),
         minValue: 0,
         maxValue: 100,
-        getInitialValue: () => r.A.getAttenuation(),
+        getInitialValue: () => r.Ay.getAttenuation(),
     }),
-    T = (0, s.zD)(a.X.VOICE_GLOBAL_ATTENUATION_FOR_SELF_SETTING, {
+    _ = (0, s.zD)(a.X.VOICE_GLOBAL_ATTENUATION_FOR_SELF_SETTING, {
         useTitle: () => o.intl.string(o.t["9dHxRY"]),
-        useValue: () => (0, n.bG)([r.A], () => r.A.getAttenuateWhileSpeakingSelf()),
-        setValue: (t) => l.A.setAttenuation(r.A.getAttenuation(), t, r.A.getAttenuateWhileSpeakingOthers()),
+        useValue: () => (0, n.bG)([r.Ay], () => r.Ay.getAttenuateWhileSpeakingSelf()),
+        setValue: (e) => l.A.setAttenuation(r.Ay.getAttenuation(), e, r.Ay.getAttenuateWhileSpeakingOthers()),
     }),
-    A = (0, s.zD)(a.X.VOICE_GLOBAL_ATTENUATION_FOR_OTHERS_SETTING, {
+    T = (0, s.zD)(a.X.VOICE_GLOBAL_ATTENUATION_FOR_OTHERS_SETTING, {
         useTitle: () => o.intl.string(o.t.SMt0Gr),
-        useValue: () => (0, n.bG)([r.A], () => r.A.getAttenuateWhileSpeakingOthers()),
-        setValue: (t) => l.A.setAttenuation(r.A.getAttenuation(), r.A.getAttenuateWhileSpeakingSelf(), t),
+        useValue: () => (0, n.bG)([r.Ay], () => r.Ay.getAttenuateWhileSpeakingOthers()),
+        setValue: (e) => l.A.setAttenuation(r.Ay.getAttenuation(), r.Ay.getAttenuateWhileSpeakingSelf(), e),
     }),
-    S = (0, s.FW)(a.X.VOICE_GLOBAL_ATTENUATION_FIELD_SET, {
+    A = (0, s.FW)(a.X.VOICE_GLOBAL_ATTENUATION_FIELD_SET, {
         useTitle: () => o.intl.string(o.t.oSdBvW),
         useSubtitle: () => o.intl.string(o.t["0A/8Rt"]),
-        usePredicate: () => (0, n.bG)([r.A], () => r.A.supports(u.O5.ATTENUATION)),
-        buildLayout: () => [d, T, A],
+        usePredicate: () => (0, n.bG)([r.Ay], () => r.Ay.supports(u.O5.ATTENUATION)),
+        buildLayout: () => [d, _, T],
     });

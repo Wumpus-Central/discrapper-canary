@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => S });
+n.d(t, { A: () => v });
 var r = n(812729),
     i = n.n(r),
     a = n(735438),
@@ -11,24 +11,24 @@ var r = n(812729),
     d = n(405018),
     _ = n(704877),
     f = n(675991),
-    p = n(442353),
-    h = n(734057),
-    m = n(430452),
-    g = n(309010),
-    E = n(723702),
-    A = n(837921),
-    I = n(652215),
-    T = n(985018);
-class y extends c.A {
+    h = n(442353),
+    p = n(734057),
+    g = n(430452),
+    E = n(309010),
+    A = n(723702),
+    I = n(837921),
+    T = n(652215),
+    y = n(985018);
+class S extends c.A {
     callbackActions = {
-        [A.dv.VIDEO]: () => {
-            m.A.isVideoEnabled() ? l.A.setVideoEnabled(!1) : (0, p.A)(() => l.A.setVideoEnabled(!0), I.BRT.APP);
+        [I.dv.VIDEO]: () => {
+            g.Ay.isVideoEnabled() ? l.A.setVideoEnabled(!1) : (0, h.A)(() => l.A.setVideoEnabled(!0), T.BRT.APP);
         },
-        [A.dv.MUTE]: () => l.A.toggleSelfMute({ location: "Thumbar" }),
-        [A.dv.DEAFEN]: () => l.A.toggleSelfDeaf({ location: "Thumbar" }),
-        [A.dv.DISCONNECT]: () => u.default.disconnect(),
+        [I.dv.MUTE]: () => l.A.toggleSelfMute({ location: "Thumbar" }),
+        [I.dv.DEAFEN]: () => l.A.toggleSelfDeaf({ location: "Thumbar" }),
+        [I.dv.DISCONNECT]: () => u.default.disconnect(),
     };
-    isSupported = (0, E.isMac)() || (0, E.isWindows)();
+    isSupported = (0, A.isMac)() || (0, A.isWindows)();
     prevButtons = [];
     _initialize() {
         this.isSupported &&
@@ -46,7 +46,7 @@ class y extends c.A {
             o.h.subscribe("AUDIO_TOGGLE_SELF_DEAF", this.handleViewUpdate),
             o.h.subscribe("AUDIO_TOGGLE_LOCAL_MUTE", this.handleViewUpdate),
             o.h.subscribe("AUDIO_SET_LOCAL_VIDEO_DISABLED", this.handleViewUpdate),
-            A.Ay.on("THUMBAR_BUTTONS_CLICKED", (e, t) => this.buttonClicked(t)));
+            I.Ay.on("THUMBAR_BUTTONS_CLICKED", (e, t) => this.buttonClicked(t)));
     }
     _terminate() {
         this.isSupported &&
@@ -71,13 +71,13 @@ class y extends c.A {
             : console.error(`ThumbarButtonsManager: Unknown callback eventName: "${e.buttonName}"`, e);
     };
     handleViewUpdate = s().debounce(() => {
-        let e = g.A.getVoiceChannelId();
+        let e = E.A.getVoiceChannelId();
         if (null == e) return void this.setThumbarButtons([]);
-        let t = m.A.isSelfMute(),
-            n = m.A.isSelfDeaf(),
-            r = m.A.isVideoEnabled(),
-            i = m.A.isVideoAvailable(),
-            a = h.A.getChannel(e),
+        let t = g.Ay.isSelfMute(),
+            n = g.Ay.isSelfDeaf(),
+            r = g.Ay.isVideoEnabled(),
+            i = g.Ay.isVideoAvailable(),
+            a = p.A.getChannel(e),
             s = null == a || (0, _.r)(a),
             { reachedLimit: o, limit: l } = null != a ? (0, d.M)(a) : { reachedLimit: void 0, limit: void 0 },
             u = (0, f.Q)({
@@ -90,14 +90,14 @@ class y extends c.A {
                 channelLimitReached: o,
             });
         this.setThumbarButtons([
-            { name: A.dv.VIDEO, active: !r, tooltip: u, flags: i ? [] : ["disabled"] },
-            { name: A.dv.MUTE, active: t, tooltip: t ? T.intl.string(T.t.YqAjXy) : T.intl.string(T.t.w4m945) },
-            { name: A.dv.DEAFEN, active: n, tooltip: n ? T.intl.string(T.t["2US872"]) : T.intl.string(T.t.wjcRFX) },
-            { name: A.dv.DISCONNECT, active: !0, tooltip: T.intl.string(T.t["6vrfgt"]) },
+            { name: I.dv.VIDEO, active: !r, tooltip: u, flags: i ? [] : ["disabled"] },
+            { name: I.dv.MUTE, active: t, tooltip: t ? y.intl.string(y.t.YqAjXy) : y.intl.string(y.t.w4m945) },
+            { name: I.dv.DEAFEN, active: n, tooltip: n ? y.intl.string(y.t["2US872"]) : y.intl.string(y.t.wjcRFX) },
+            { name: I.dv.DISCONNECT, active: !0, tooltip: y.intl.string(y.t["6vrfgt"]) },
         ]);
     }, 100);
     setThumbarButtons(e) {
-        i()(this.prevButtons, e) || ((this.prevButtons = e), A.Ay.setThumbarButtons(e));
+        i()(this.prevButtons, e) || ((this.prevButtons = e), I.Ay.setThumbarButtons(e));
     }
 }
-let S = new y();
+let v = new S();

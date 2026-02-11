@@ -1,4 +1,4 @@
-s.d(t, { KL: () => C, tS: () => b, yB: () => y });
+s.d(t, { KL: () => y, tS: () => b, yB: () => C });
 var r = s(627968),
     i = s(64700),
     n = s(735438),
@@ -79,13 +79,13 @@ function S(e, t) {
                 r = { ...e, selectedSource: s },
                 i = s?.name;
             if (null != s && s.id?.startsWith(o.fS.CAMERA) && null != i) {
-                let e = l().maxBy(Object.values(x.A.getInputDevices()), (e) => (0, a.default)(i, e.name));
-                r.audioSourceId = e?.id ?? x.A.getInputDeviceId();
+                let e = l().maxBy(Object.values(x.Ay.getInputDevices()), (e) => (0, a.default)(i, e.name));
+                r.audioSourceId = e?.id ?? x.Ay.getInputDeviceId();
             }
             return r;
         }
         case "set_audio_source":
-            return { ...e, audioSourceId: t.audioSourceId ?? x.A.getInputDeviceId() };
+            return { ...e, audioSourceId: t.audioSourceId ?? x.Ay.getInputDeviceId() };
         case "set_selected_channel":
             return { ...e, selectedChannel: t.channelId };
         case "set_discord_source_id":
@@ -94,17 +94,17 @@ function S(e, t) {
             return e;
     }
 }
-function C(e) {
+function y(e) {
     let { dispatch: t, state: s, children: i } = e;
     return (0, r.jsx)(A.Provider, { value: t, children: (0, r.jsx)(v.Provider, { value: s, children: i }) });
 }
-function y(e, t, s) {
+function C(e, t, s) {
     let { defaultAutoQuality: r, allowAutoQuality: n } = (0, p.X5)({ location: "useCreateGoLiveModalState" }),
         { preset: l, resolution: a, fps: o, soundshareEnabled: v } = (0, c.cf)([h.A], () => h.A.getState());
     r && (l = _.jQ.PRESET_AUTO);
-    let A = (0, c.bG)([x.A], () => x.A.getInputDeviceId()),
-        C = f.uh.useSetting() ?? !1,
-        y = f.wv.useSetting() ?? !1;
+    let A = (0, c.bG)([x.Ay], () => x.Ay.getInputDeviceId()),
+        y = f.uh.useSetting() ?? !1,
+        C = f.wv.useSetting() ?? !1;
     (l in _.jQ && (l !== _.jQ.PRESET_AUTO || n)) || (l = _.jQ.PRESET_VIDEO),
         (0, m.A)(_.jQ.PRESET_CUSTOM, a, o, t, s) || ((a = _.on.RESOLUTION_720), (o = _.kn.FPS_30));
     let [b, w] = i.useReducer(S, {
@@ -113,10 +113,10 @@ function y(e, t, s) {
         preset: l,
         resolution: a,
         fps: o,
-        hidePreview: C,
-        notifyFriends: y,
+        hidePreview: y,
+        notifyFriends: C,
         selectedSource: e,
-        nativeSourceType: x.A.getUseGamescopeCapture() ? "gamescope" : "",
+        nativeSourceType: x.Ay.getUseGamescopeCapture() ? "gamescope" : "",
         audioSourceId: A,
     });
     return (

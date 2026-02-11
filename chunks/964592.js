@@ -9,7 +9,7 @@ var a = n(311907),
     o = n(723702),
     c = n(985018);
 function d(e) {
-    let t = (0, a.bG)([u.A], () => (0, s.M)(u.A.getOutputVolume()));
+    let t = (0, a.bG)([u.Ay], () => (0, s.M)(u.Ay.getOutputVolume()));
     return (0, r.jsx)(l.aK1, {
         id: "output",
         label: c.intl.string(c.t.eATD2B),

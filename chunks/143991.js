@@ -15,8 +15,8 @@ var i = n(627968),
     p = n(95701),
     g = n(616356),
     E = n(961350),
-    f = n(734057),
-    I = n(71393),
+    I = n(734057),
+    f = n(71393),
     C = n(430452),
     N = n(803224),
     T = n(383501),
@@ -40,13 +40,13 @@ function O(e, t, n, i) {
 function R() {
     return (
         O(
-            [C.A, S.A],
+            [C.Ay, S.A],
             () => ({
                 inVoiceChannel: null != S.A.getVoiceChannelId(),
-                selfMute: C.A.isSelfMute(),
-                selfDeaf: C.A.isSelfDeaf(),
-                audioPermissionReady: C.A.isNativeAudioPermissionReady(),
-                shouldSkipMuteUnmuteSound: C.A.shouldSkipMuteUnmuteSound(),
+                selfMute: C.Ay.isSelfMute(),
+                selfDeaf: C.Ay.isSelfDeaf(),
+                audioPermissionReady: C.Ay.isNativeAudioPermissionReady(),
+                shouldSkipMuteUnmuteSound: C.Ay.shouldSkipMuteUnmuteSound(),
             }),
             (e, t) => {
                 let {
@@ -58,7 +58,7 @@ function R() {
                 } = t;
                 if (e.selfDeaf !== r) return r ? "deafen" : "undeafen";
                 if (a && (n || e.audioPermissionReady) && e.selfMute !== i)
-                    return l ? void C.A.notifyMuteUnmuteSoundWasSkipped() : i ? "mute" : "unmute";
+                    return l ? void C.Ay.notifyMuteUnmuteSoundWasSkipped() : i ? "mute" : "unmute";
             },
         ),
         null
@@ -67,8 +67,8 @@ function R() {
 function P() {
     return (
         O(
-            [C.A, S.A],
-            () => ({ videoEnabled: C.A.isVideoEnabled(), inVoiceChannel: null != S.A.getVoiceChannelId() }),
+            [C.Ay, S.A],
+            () => ({ videoEnabled: C.Ay.isVideoEnabled(), inVoiceChannel: null != S.A.getVoiceChannelId() }),
             (e, t) => {
                 let { videoEnabled: n, inVoiceChannel: i } = t;
                 if (!(0, _.q)()) return;
@@ -82,9 +82,9 @@ function P() {
 function j() {
     return (
         O(
-            [f.A, T.A, S.A, c.default],
+            [I.A, T.A, S.A, c.default],
             () => {
-                let e = f.A.getChannel(S.A.getVoiceChannelId()),
+                let e = I.A.getChannel(S.A.getVoiceChannelId()),
                     t = e?.type,
                     n = e?.getGuildId(),
                     i = T.A.getWasEverRtcConnected(),
@@ -123,8 +123,8 @@ function D() {
             () => x.A.isCurrentUserPTTActive() || x.A.isCurrentUserPTTLatched(),
             (e, t) => {
                 if (e !== t) {
-                    let e = C.A.isSelfMute();
-                    if (C.A.getMode() === L.TBI.PUSH_TO_TALK && !e) return t ? "ptt_start" : "ptt_stop";
+                    let e = C.Ay.isSelfMute();
+                    if (C.Ay.getMode() === L.TBI.PUSH_TO_TALK && !e) return t ? "ptt_start" : "ptt_stop";
                 }
             },
         ),
@@ -134,8 +134,8 @@ function D() {
 function w() {
     return (
         O(
-            [C.A],
-            () => C.A.getActiveVoiceFilter(),
+            [C.Ay],
+            () => C.Ay.getActiveVoiceFilter(),
             (e, t) => {
                 if (e !== t)
                     if (null != t) return null != e ? "voice_filter_swap" : "voice_filter_on";
@@ -148,12 +148,12 @@ function w() {
 function M() {
     return (
         O(
-            [C.A],
-            () => C.A.isSelfMutedTemporarily(),
+            [C.Ay],
+            () => C.Ay.isSelfMutedTemporarily(),
             (e, t) => {
                 if (e !== t) {
-                    let e = C.A.isSelfMute();
-                    if (C.A.getMode() === L.TBI.VOICE_ACTIVITY && !e) return t ? "ptt_stop" : "ptt_start";
+                    let e = C.Ay.isSelfMute();
+                    if (C.Ay.getMode() === L.TBI.VOICE_ACTIVITY && !e) return t ? "ptt_stop" : "ptt_start";
                 }
             },
         ),
@@ -167,8 +167,8 @@ function U() {
             () => x.A.isCurrentUserPrioritySpeaker(),
             (e, t) => {
                 if (e !== t) {
-                    let e = C.A.isSelfMute();
-                    if (C.A.getMode() === L.TBI.VOICE_ACTIVITY && !e) return t ? "ptt_start" : "ptt_stop";
+                    let e = C.Ay.isSelfMute();
+                    if (C.Ay.getMode() === L.TBI.VOICE_ACTIVITY && !e) return t ? "ptt_start" : "ptt_stop";
                 }
             },
         ),
@@ -207,7 +207,7 @@ function k() {
 function V() {
     return (
         O(
-            [S.A, g.A, E.default, v.A, f.A],
+            [S.A, g.A, E.default, v.A, I.A],
             () => {
                 let e,
                     t,
@@ -218,7 +218,7 @@ function V() {
                     l = 0,
                     s = g.A.getAllActiveStreams();
                 if (null != n) {
-                    let i = f.A.getChannel(n);
+                    let i = I.A.getChannel(n);
                     null != i &&
                         ((e = i.type),
                         (t = b.Ay.countVoiceStatesForChannel(i.id) - !!v.A.isInChannel(i.id)),
@@ -255,11 +255,11 @@ function V() {
                     e.voiceChannelId !== i ||
                     null == i ||
                     (function (e) {
-                        let t = f.A.getChannel(e);
+                        let t = I.A.getChannel(e);
                         if (null == t) return !1;
                         let n = t.getGuildId();
                         if (null == n) return !1;
-                        let i = I.A.getGuild(n);
+                        let i = f.A.getGuild(n);
                         return null != i && i.afkChannelId === t.id;
                     })(i) ||
                     (null != n && p.Do.has(n))

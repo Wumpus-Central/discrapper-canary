@@ -11,8 +11,8 @@ function c(e, t) {
     (0, o.Fc)(n), (0, o.ZG)();
     let i = t ?? e.channelId;
     l()(null != i, "attempted to transfer to unknown channel"),
-        e.selfMute !== r.A.isSelfMute() && s.A.toggleSelfMute(),
-        e.selfDeaf !== r.A.isSelfDeaf() && s.A.toggleSelfDeaf(),
+        e.selfMute !== r.Ay.isSelfMute() && s.A.toggleSelfMute(),
+        e.selfDeaf !== r.Ay.isSelfDeaf() && s.A.toggleSelfDeaf(),
         (0, d.A)(i, "discord_client", n),
         a.default.selectVoiceChannel(i, !1);
 }

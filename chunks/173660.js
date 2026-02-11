@@ -12,23 +12,23 @@ function c(e) {
             channel: t,
             authenticationStore: n = a.default,
             voiceStateStore: r = l.A,
-            mediaEngineStore: c = s.A,
+            mediaEngineStore: c = s.Ay,
             permissionStore: d = o.A,
             impersonateStore: _ = i.A,
         } = e,
         f = null != t ? r.getVoiceState(t.getGuildId(), n.getId()) : null,
-        p = c.isSelfMute() || c.isSelfMutedTemporarily(),
-        h = t?.getGuildId(),
-        m = _.isViewingRoles(h) && !d.can(u.xBc.SPEAK, t);
-    return { selfMute: p, suppress: f?.suppress || m, mute: f?.mute ?? !1 };
+        h = c.isSelfMute() || c.isSelfMutedTemporarily(),
+        p = t?.getGuildId(),
+        g = _.isViewingRoles(p) && !d.can(u.xBc.SPEAK, t);
+    return { selfMute: h, suppress: f?.suppress || g, mute: f?.mute ?? !1 };
 }
 function d(e) {
-    return (0, r.cf)([a.default, l.A, s.A, o.A, i.A], () =>
+    return (0, r.cf)([a.default, l.A, s.Ay, o.A, i.A], () =>
         c({
             channel: e,
             authenticationStore: a.default,
             voiceStateStore: l.A,
-            mediaEngineStore: s.A,
+            mediaEngineStore: s.Ay,
             permissionStore: o.A,
             impersonateStore: i.A,
         }),

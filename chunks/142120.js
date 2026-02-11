@@ -232,8 +232,8 @@ function eg(e) {
 class eE extends a.Ay.Store {
     static displayName = "GatewayConnectionStore";
     initialize() {
-        this.waitFor(_.default, f.A, h.A, p.A, g.A, E.A, A.A, I.A, T.A, d.A),
-            this.syncWith([p.A], J),
+        this.waitFor(_.default, f.A, h.A, p.Ay, g.A, E.A, A.A, I.A, T.A, d.A),
+            this.syncWith([p.Ay], J),
             this.syncWith([I.A], ee);
     }
     getSocket() {

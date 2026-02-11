@@ -126,7 +126,7 @@ function K(e) {
 }
 async function k(e) {
     let t = s.default.getStaticAuthSessionId();
-    return a()(null != t, "[getCurrentUserPublicKey] session id should not be null"), await d.A.getMLSSigningKey(t, e);
+    return a()(null != t, "[getCurrentUserPublicKey] session id should not be null"), await d.Ay.getMLSSigningKey(t, e);
 }
 function Y(e) {
     let t = r.fromByteArray(new Uint8Array(e));

@@ -15,8 +15,8 @@ var i = n(735438),
     p = n(430452),
     g = n(383501),
     E = n(287809),
-    f = n(977997),
-    I = n(636401),
+    I = n(977997),
+    f = n(636401),
     C = n(90924),
     N = n(592653),
     T = n(629471),
@@ -33,8 +33,8 @@ function O(e) {
         } = e,
         i = h.A.getChannel(t);
     if (null == i || !(0, C.B_)(i, n.application.id, n.authorization.scopes))
-        throw new I.A({ errorCode: y.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${t}`);
-    if ((0, o.$v)(i)) throw new I.A({ errorCode: y.Lw6.INVALID_CHANNEL }, `Invalid nsfw channel id: ${i.id}`);
+        throw new f.A({ errorCode: y.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${t}`);
+    if ((0, o.$v)(i)) throw new f.A({ errorCode: y.Lw6.INVALID_CHANNEL }, `Invalid nsfw channel id: ${i.id}`);
 }
 let R = (e) => (0, T.A)(e).keys({ channel_id: e.string().allow(null) });
 function P(e) {
@@ -42,7 +42,7 @@ function P(e) {
         args: { channel_id: t },
     } = e;
     if (null != t && null == h.A.getChannel(t))
-        throw new I.A({ errorCode: y.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${t}`);
+        throw new f.A({ errorCode: y.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${t}`);
 }
 let j = {
     [y.ZE4.GUILD_STATUS]: {
@@ -52,7 +52,7 @@ let j = {
             let {
                 args: { guild_id: t },
             } = e;
-            if (null == m.A.getGuild(t)) throw new I.A({ errorCode: y.Lw6.INVALID_GUILD }, `Invalid guild id: ${t}`);
+            if (null == m.A.getGuild(t)) throw new f.A({ errorCode: y.Lw6.INVALID_GUILD }, `Invalid guild id: ${t}`);
             return (e) => {
                 let { prevState: n, dispatch: i } = e,
                     a = m.A.getGuild(t);
@@ -70,13 +70,13 @@ let j = {
                 args: { channel_id: t },
             } = e;
             if (null == h.A.getChannel(t))
-                throw new I.A({ errorCode: y.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${t}`);
+                throw new f.A({ errorCode: y.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${t}`);
             return (e) => {
                 let { prevState: n, dispatch: i } = e,
                     a = h.A.getChannel(t);
                 if (null == a) return;
                 let l = a.getGuildId(),
-                    s = Object.values(f.A.getVoiceStatesForChannel(a.id));
+                    s = Object.values(I.A.getVoiceStatesForChannel(a.id));
                 return (
                     n &&
                         r()
@@ -98,13 +98,13 @@ let j = {
                 args: { channel_id: t },
             } = e;
             if (null == h.A.getChannel(t))
-                throw new I.A({ errorCode: y.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${t}`);
+                throw new f.A({ errorCode: y.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${t}`);
             return (e) => {
                 let { prevState: n, dispatch: i } = e,
                     a = h.A.getChannel(t);
                 if (null == a) return;
                 let l = a.getGuildId(),
-                    s = Object.values(f.A.getVoiceStatesForChannel(a.id));
+                    s = Object.values(I.A.getVoiceStatesForChannel(a.id));
                 return (
                     r()
                         .differenceBy(n, s, (e) => {
@@ -125,13 +125,13 @@ let j = {
                 args: { channel_id: t },
             } = e;
             if (null == h.A.getChannel(t))
-                throw new I.A({ errorCode: y.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${t}`);
+                throw new f.A({ errorCode: y.Lw6.INVALID_CHANNEL }, `Invalid channel id: ${t}`);
             return (e) => {
                 let { prevState: n, dispatch: i } = e,
                     a = h.A.getChannel(t);
                 if (null == a) return;
                 let l = a.getGuildId(),
-                    s = Object.values(f.A.getVoiceStatesForChannel(a.id)).map((e) => (0, C.qG)(l, a.id, e));
+                    s = Object.values(I.A.getVoiceStatesForChannel(a.id)).map((e) => (0, C.qG)(l, a.id, e));
                 return (
                     r()
                         .differenceWith(s, n, r().isEqual)
@@ -181,7 +181,7 @@ let j = {
         handler(e) {
             let { socket: t } = e;
             if (l.zy(l.iu(t.application.flags ?? 0), l.iu(y.gfo.DISABLE_RELATIONSHIPS_ACCESS)))
-                throw new I.A({ errorCode: y.Lw6.INVALID_PERMISSIONS }, "Missing Permissions");
+                throw new f.A({ errorCode: y.Lw6.INVALID_PERMISSIONS }, "Missing Permissions");
         },
     },
     [y.ZE4.CURRENT_USER_UPDATE]: {
@@ -231,7 +231,7 @@ let j = {
         scope: { [b.sm.ALL]: [b.hj, a.F.RPC_VIDEO_READ] },
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
-                i = { active: p.A.isVideoEnabled() };
+                i = { active: p.Ay.isVideoEnabled() };
             return r().isEqual(i, t) || n(i), i;
         },
     },

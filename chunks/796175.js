@@ -22,28 +22,28 @@ var i = t(311907),
     j = t(572164),
     S = t(399925),
     v = t(643501),
-    V = t(670470),
-    G = t(972432),
-    E = t(471993),
-    w = t(616356),
-    T = t(961350),
-    M = t(734057),
-    y = t(430452),
+    y = t(670470),
+    V = t(972432),
+    G = t(471993),
+    E = t(616356),
+    w = t(961350),
+    T = t(734057),
+    M = t(430452),
     X = t(287809),
     _ = t(652896),
     k = t(652215),
     U = t(731854),
     z = t(985018);
 function F(e) {
-    return (0, i.bG)([w.A], () => {
-        let n = w.A.getActiveStreamForApplicationStream(e);
+    return (0, i.bG)([E.A], () => {
+        let n = E.A.getActiveStreamForApplicationStream(e);
         return null != n && (0, _._z)(n) === (0, _._z)(e);
     });
 }
 function P(e) {
     let n,
         t,
-        w,
+        E,
         P,
         R,
         D,
@@ -65,10 +65,10 @@ function P(e) {
         ee = (0, i.cf)([X.default], () => W?.ownerId === X.default.getCurrentUser()?.id),
         en = (function (e) {
             let n = F(e),
-                t = (0, C.A)(y.A),
+                t = (0, C.A)(M.Ay),
                 a = (0, j.Et)(),
-                s = e.ownerId === T.default.getId(),
-                { enableViewerClipping: o, ignoreSenderPreference: d } = V.A.useExperiment(
+                s = e.ownerId === w.default.getId(),
+                { enableViewerClipping: o, ignoreSenderPreference: d } = y.A.useExperiment(
                     { location: "StreamContextMenu" },
                     { autoTrackExposure: !1 },
                 ),
@@ -84,12 +84,12 @@ function P(e) {
                 : null;
         })(W),
         et = F(W),
-        el = ((n = F(W)), (t = (0, G.A)(W.ownerId, U.x.STREAM)), n ? t : null),
+        el = ((n = F(W)), (t = (0, V.A)(W.ownerId, U.x.STREAM)), n ? t : null),
         ei =
             ((P = (0, i.bG)([v.default], () => null != v.default.getRemoteSessionId())),
-            (R = (0, i.bG)([M.A], () => M.A.getChannel(W.channelId), [W.channelId])),
+            (R = (0, i.bG)([T.A], () => T.A.getChannel(W.channelId), [W.channelId])),
             (D = F(W)),
-            ((w = (L = null != (N = X.default.getCurrentUser()) && W.ownerId === N.id)
+            ((E = (L = null != (N = X.default.getCurrentUser()) && W.ownerId === N.id)
                 ? z.intl.string(z.t.S5anIc)
                 : D
                   ? z.intl.string(z.t.q3O3J8)
@@ -98,7 +98,7 @@ function P(e) {
                 ? null
                 : (0, l.jsx)(r.Drp, {
                       id: "watch",
-                      label: w,
+                      label: E,
                       action: D
                           ? function () {
                                 (0, d.vN)((0, _._z)(W));
@@ -111,7 +111,7 @@ function P(e) {
                   })),
         er =
             ((O = F(W)),
-            (B = (0, i.bG)([y.A], () => y.A.isLocalMute(W.ownerId, U.x.STREAM))),
+            (B = (0, i.bG)([M.Ay], () => M.Ay.isLocalMute(W.ownerId, U.x.STREAM))),
             (Q = null != (J = X.default.getCurrentUser()) && W.ownerId === J.id),
             !O || Q
                 ? null
@@ -125,10 +125,10 @@ function P(e) {
                   })),
         ea = (function (e) {
             let n = F(e),
-                t = e.ownerId === T.default.getId(),
-                s = y.A.supports(U.O5.SIDECHAIN_COMPRESSION),
-                o = (0, i.bG)([y.A], () => y.A.getSidechainCompression()),
-                d = (0, i.bG)([y.A], () => y.A.getSidechainCompressionStrength()),
+                t = e.ownerId === w.default.getId(),
+                s = M.Ay.supports(U.O5.SIDECHAIN_COMPRESSION),
+                o = (0, i.bG)([M.Ay], () => M.Ay.getSidechainCompression()),
+                d = (0, i.bG)([M.Ay], () => M.Ay.getSidechainCompressionStrength()),
                 { analyticsLocations: c } = (0, A.Ay)();
             return !t && n && s
                 ? (0, l.jsxs)(r.rXV, {
@@ -162,13 +162,13 @@ function P(e) {
         eo = (0, p.A)(W.channelId, W.ownerId),
         ed = (0, h.A)(W.channelId),
         ec = (0, g.A)(W.channelId, (0, _._z)(W)),
-        eu = (0, i.bG)([M.A], () => M.A.getChannel(W.channelId), [W.channelId]),
+        eu = (0, i.bG)([T.A], () => T.A.getChannel(W.channelId), [W.channelId]),
         eA = (0, I.h)({ stream: W, channelId: W.channelId }),
         eg = (0, m.u)({ userId: W.ownerId, channelId: W.channelId, guildId: W.guildId, minimal: $ }),
         { analyticsLocations: eh } = (0, A.Ay)(u.A.STREAM_CONTEXT_MENU),
         ep = (0, x.E)({
             stream: W,
-            handleGoLive: () => (0, E.A)(W.guildId, W.channelId, eh),
+            handleGoLive: () => (0, G.A)(W.guildId, W.channelId, eh),
             minimal: $,
             appContext: Z,
         });

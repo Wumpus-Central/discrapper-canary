@@ -27,7 +27,7 @@ function f() {
                 let t = "windowHandle" in e ? e.windowHandle : void 0;
                 if (null != t) {
                     try {
-                        let e = a.A.getMediaEngine(),
+                        let e = a.Ay.getMediaEngine(),
                             r = await e.getSingleWindowPreview(t, 960, 540);
                         if (null != r) {
                             s(r.url), h(!1);

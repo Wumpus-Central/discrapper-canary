@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => p });
 var i = n(627968);
 n(64700);
 var l = n(503698),
@@ -11,35 +11,35 @@ var l = n(503698),
     u = n(824744),
     h = n(723702),
     A = n(447404),
-    g = n(35204);
-function m(e) {
+    m = n(35204);
+function p(e) {
     let {
             className: t,
             iconClassName: n,
             sliderClassName: l,
-            userId: m,
-            context: p,
+            userId: p,
+            context: g,
             currentWindow: _ = window,
-            location: x,
+            location: f,
         } = e,
-        { currentVolume: f, muted: E } = (0, a.cf)([c.A], () => ({
-            currentVolume: c.A.getLocalVolume(m, p),
-            muted: c.A.isLocalMute(m, p),
+        { currentVolume: x, muted: C } = (0, a.cf)([c.Ay], () => ({
+            currentVolume: c.Ay.getLocalVolume(p, g),
+            muted: c.Ay.isLocalMute(p, g),
         }));
     return (0, i.jsx)(A.A, {
         children: (0, i.jsx)(d.A, {
             currentWindow: _,
-            iconClassName: s()(n, g.pd),
+            iconClassName: s()(n, m.pd),
             sliderClassName: l,
             className: t,
-            value: (0, u.M)(f),
-            muted: E,
+            value: (0, u.M)(x),
+            muted: C,
             maxValue: h.isPlatformEmbedded ? 200 : 100,
             onValueChange: (e) => {
-                e > 0 && E && r.A.toggleLocalMute(m, p), r.A.setLocalVolume(m, (0, u.w)(e), p);
+                e > 0 && C && r.A.toggleLocalMute(p, g), r.A.setLocalVolume(p, (0, u.w)(e), g);
             },
             onToggleMute: () => {
-                null != x && (0, o.X)(x, o.O.VOLUME, E), r.A.toggleLocalMute(m, p);
+                null != f && (0, o.X)(f, o.O.VOLUME, C), r.A.toggleLocalMute(p, g);
             },
         }),
     });

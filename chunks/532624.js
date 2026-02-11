@@ -321,7 +321,7 @@ function ed(e) {
 }
 let e_ = [
     function () {
-        let e = h.A.getShortcuts();
+        let e = h.Ay.getShortcuts();
         return (
             o().each(U, (t) => {
                 t.action === y.hCu.PUSH_TO_TALK &&
@@ -330,7 +330,7 @@ let e_ = [
                     ei(t);
             }),
             o().reduce(
-                h.A.getShortcuts(),
+                h.Ay.getShortcuts(),
                 (e, t, n) => {
                     let r = o().find(U, (e) => e.action === y.hCu.PUSH_TO_TALK && !0 === e.managed && e.context === n);
                     if (null == r)
@@ -451,7 +451,7 @@ class ep extends l.Ay.DeviceSettingsStore {
             ),
     ];
     initialize(e) {
-        for (let t in (__OVERLAY__ || this.waitFor(h.A, T.default), (U = e ?? {})))
+        for (let t in (__OVERLAY__ || this.waitFor(h.Ay, T.default), (U = e ?? {})))
             delete U[t].latched, delete U[t].pressedTime;
     }
     getUserAgnosticState() {

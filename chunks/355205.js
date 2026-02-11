@@ -1,4 +1,4 @@
-n.d(t, { A: () => ej }), n(321073);
+n.d(t, { A: () => ev }), n(321073);
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -10,46 +10,46 @@ var i = n(627968),
     u = n(554146),
     h = n(116833),
     A = n(342494),
-    g = n(397927),
-    m = n(73153),
-    p = n(298990),
+    m = n(397927),
+    p = n(73153),
+    g = n(298990),
     _ = n(367513),
-    x = n(951001),
-    f = n(492684),
-    E = n(707606),
-    C = n(475743),
+    f = n(951001),
+    x = n(492684),
+    C = n(707606),
+    E = n(475743),
     I = n(775602),
-    S = n(646865),
+    N = n(646865),
     b = n(795816),
-    N = n(933958),
+    S = n(933958),
     T = n(47563),
-    j = n(576437),
-    v = n(688810),
-    y = n(362490),
+    v = n(576437),
+    y = n(688810),
+    j = n(362490),
     R = n(429913),
     O = n(568598),
     L = n(384059),
-    D = n(47167),
-    M = n(402216),
+    M = n(47167),
+    D = n(402216),
     G = n(603047),
     U = n(404374),
     P = n(379848),
-    k = n(625180),
-    w = n(91242),
+    w = n(625180),
+    k = n(91242),
     V = n(15285),
     B = n(769015),
     H = n(279250),
     F = n(880144),
-    Y = n(277680),
+    K = n(277680),
     W = n(118277),
-    K = n(905552),
+    Y = n(905552),
     z = n(95035),
-    X = n(87001),
-    q = n(249972),
+    q = n(87001),
+    X = n(249972),
     J = n(277009),
     Q = n(201805),
-    Z = n(95701),
-    $ = n(616356),
+    $ = n(95701),
+    Z = n(616356),
     ee = n(961350),
     et = n(734057),
     en = n(71393),
@@ -64,20 +64,20 @@ var i = n(627968),
     eu = n(975571),
     eh = n(723702),
     eA = n(498057),
-    eg = n(994314),
-    em = n(485599),
-    ep = n(204722),
+    em = n(994314),
+    ep = n(485599),
+    eg = n(204722),
     e_ = n(535111),
-    ex = n(652215),
-    ef = n(5867),
-    eE = n(49999),
-    eC = n(165610),
+    ef = n(652215),
+    ex = n(5867),
+    eC = n(49999),
+    eE = n(165610),
     eI = n(654487),
-    eS = n(985018),
+    eN = n(985018),
     eb = n(176869);
-let eN = (0, f.A)(function (e) {
+let eS = (0, x.A)(function (e) {
     let { message: t } = e;
-    return (0, i.jsx)(eg.A, { children: t });
+    return (0, i.jsx)(em.A, { children: t });
 });
 class eT extends l.PureComponent {
     activityPopoutTargetRef = l.createRef();
@@ -91,11 +91,11 @@ class eT extends l.PureComponent {
         }
         return (0, i.jsx)("div", {
             className: eb.YX,
-            children: (0, i.jsx)(g.akl, { importData: t, shouldAnimate: !e, className: eb._7 }),
+            children: (0, i.jsx)(m.akl, { importData: t, shouldAnimate: !e, className: eb._7 }),
         });
     }
     renderActions() {
-        return (0, i.jsx)(ep.f, { ...this.props, inviteButtonRef: this.inviteButtonRef });
+        return (0, i.jsx)(eg.f, { ...this.props, inviteButtonRef: this.inviteButtonRef });
     }
     renderAccountLinkPopover() {
         let {
@@ -108,77 +108,77 @@ class eT extends l.PureComponent {
                 analyticsContext: r,
                 runningGame: d,
                 parentAnalyticsLocation: c,
-                analyticsLocations: g,
-                canStartAuthorization: m,
+                analyticsLocations: m,
+                canStartAuthorization: p,
                 accountLinkButtonRef: _,
-                startAuthorization: x,
-                didStartAuthorization: f,
+                startAuthorization: f,
+                didStartAuthorization: x,
             } = this.props,
-            E = (0, ep.W)(l, s, a),
-            C = [];
+            C = (0, eg.W)(l, s, a),
+            E = [];
         return n
             ? null
-            : (e && f
-                  ? E && null == a
-                      ? C.push(u.M.ACCOUNT_LINK_INVITE_FRIENDS)
-                      : C.push(u.M.POST_ACCOUNT_CONNECTION_RTC_POPOVER)
-                  : m && null != l && C.push(u.M.ACCOUNT_LINK_PROMPT),
+            : (e && x
+                  ? C && null == a
+                      ? E.push(u.M.ACCOUNT_LINK_INVITE_FRIENDS)
+                      : E.push(u.M.POST_ACCOUNT_CONNECTION_RTC_POPOVER)
+                  : p && null != l && E.push(u.M.ACCOUNT_LINK_PROMPT),
               (0, i.jsx)(P.Ay, {
-                  contentTypes: C,
-                  groupName: eE.m.ACCOUNT_NAME_ZONE,
+                  contentTypes: E,
+                  groupName: eC.m.ACCOUNT_NAME_ZONE,
                   bypassAutoDismiss: !0,
                   children: (e) => {
                       let { visibleContent: n, markAsDismissed: a } = e;
                       return n === u.M.ACCOUNT_LINK_INVITE_FRIENDS
                           ? (0, i.jsx)(A.AM, {
-                                title: eS.intl.string(eS.t["0l2pEt"]),
-                                body: eS.intl.string(eS.t["DSZUK/"]),
+                                title: eN.intl.string(eN.t["0l2pEt"]),
+                                body: eN.intl.string(eN.t["DSZUK/"]),
                                 targetElementRef: this.inviteButtonRef,
                                 align: "right",
                                 shouldShow: !0,
-                                onRequestClose: () => a(eE.i.USER_DISMISS),
+                                onRequestClose: () => a(eC.i.USER_DISMISS),
                                 caretConfig: { align: "end" },
                                 actions: [
                                     {
-                                        text: eS.intl.string(eS.t.YdkBCH),
+                                        text: eN.intl.string(eN.t.YdkBCH),
                                         onClick: () => {
-                                            a(eE.i.TAKE_ACTION),
+                                            a(eC.i.TAKE_ACTION),
                                                 o()(null != s, "Received null activity"),
-                                                ec.default.track(ex.HAw.ACTIVITY_PANEL_BUTTON_CLICKED, {
+                                                ec.default.track(ef.HAw.ACTIVITY_PANEL_BUTTON_CLICKED, {
                                                     action_type: "invite_to_game",
                                                     game_id: d?.id ?? null,
                                                     application_id: s.application_id,
                                                 }),
                                                 (0, L.X)(c, L.O.INVITE),
-                                                ec.default.track(ex.HAw.OPEN_MODAL, {
+                                                ec.default.track(ef.HAw.OPEN_MODAL, {
                                                     type: "Send Join Invite",
                                                     application_id: s.application_id,
                                                     location: r.location,
                                                 }),
-                                                (0, p.qf)(s, !1);
+                                                (0, g.qf)(s, !1);
                                         },
                                     },
                                 ],
                             })
                           : n === u.M.POST_ACCOUNT_CONNECTION_RTC_POPOVER
                             ? (0, i.jsx)(A.AM, {
-                                  title: eS.intl.string(eS.t.MxAlrB),
-                                  body: eS.intl.string(eS.t["/UTTEg"]),
+                                  title: eN.intl.string(eN.t.MxAlrB),
+                                  body: eN.intl.string(eN.t["/UTTEg"]),
                                   targetElementRef: this.accountLinkUpsellTargetRef,
                                   position: "top",
                                   align: "left",
                                   caretConfig: { align: "start" },
                                   actions: [
                                       {
-                                          text: eS.intl.string(eS.t.aRIFWD),
+                                          text: eN.intl.string(eN.t.aRIFWD),
                                           onClick: () => {
-                                              a(eE.i.TAKE_ACTION),
-                                                  window.open(eu.A.getArticleURL(ex.MVz.IN_GAME_FEATURES), "_blank");
+                                              a(eC.i.TAKE_ACTION),
+                                                  window.open(eu.A.getArticleURL(ef.MVz.IN_GAME_FEATURES), "_blank");
                                           },
                                       },
                                   ],
                                   shouldShow: !0,
-                                  onRequestClose: () => a(eE.i.USER_DISMISS),
+                                  onRequestClose: () => a(eC.i.USER_DISMISS),
                               })
                             : n === u.M.ACCOUNT_LINK_PROMPT
                               ? (0, i.jsx)(A.AM, {
@@ -187,21 +187,21 @@ class eT extends l.PureComponent {
                                         component: h.DynamicGraphicComponent.ACCOUNT_LINK_DISPLAY,
                                         props: { application: l },
                                     },
-                                    title: eS.intl.formatToPlainString(t.altTitle ? eS.t.hUbQT2 : eS.t["lo6H6+"], {
+                                    title: eN.intl.formatToPlainString(t.altTitle ? eN.t.hUbQT2 : eN.t["lo6H6+"], {
                                         gameName: l.name,
                                     }),
-                                    body: eS.intl.string(t.altBody ? eS.t["JKqu+4"] : eS.t.qYAzOp),
+                                    body: eN.intl.string(t.altBody ? eN.t["JKqu+4"] : eN.t.qYAzOp),
                                     targetElementRef: _,
                                     align: "right",
                                     shouldShow: !0,
                                     gradientColor: "purple",
-                                    onRequestClose: () => a(eE.i.USER_DISMISS),
+                                    onRequestClose: () => a(eC.i.USER_DISMISS),
                                     caretConfig: { align: "end" },
                                     actions: [
                                         {
-                                            text: eS.intl.string(t.altCta ? eS.t.jynBQ5 : eS.t.lw71Nf),
+                                            text: eN.intl.string(t.altCta ? eN.t.jynBQ5 : eN.t.lw71Nf),
                                             onClick: () => {
-                                                a(eE.i.TAKE_ACTION), x({ analyticsLocations: g });
+                                                a(eC.i.TAKE_ACTION), f({ analyticsLocations: m });
                                             },
                                         },
                                     ],
@@ -231,23 +231,23 @@ class eT extends l.PureComponent {
     }
     renderScreenshare() {
         let { isStreaming: e, streamMetadata: t, streamQualityIndicator: n } = this.props,
-            { title: l, sanitizedTitle: s } = (0, Y.A)(t);
+            { title: l, sanitizedTitle: s } = (0, K.A)(t);
         return (0, i.jsxs)("div", {
             className: eb.cm,
             ref: this.accountLinkUpsellTargetRef,
             children: [
                 e
                     ? (0, i.jsx)(W.A, { title: s, icon: t?.sourceIcon })
-                    : (0, i.jsx)(M.Ay, { look: M.Ay.Looks.GRAY, size: M.Ay.Sizes.SMALL, className: eb.Ok }),
+                    : (0, i.jsx)(D.Ay, { look: D.Ay.Looks.GRAY, size: D.Ay.Sizes.SMALL, className: eb.Ok }),
                 (0, i.jsxs)("div", {
                     className: eb.pq,
                     children: [
-                        (0, i.jsx)(em.A, { children: l }),
+                        (0, i.jsx)(ep.A, { children: l }),
                         null != n &&
                             (0, i.jsxs)("div", {
                                 className: eb.qi,
                                 children: [
-                                    (0, i.jsx)(g.tvc, { size: "xxs", color: U.k0.PREMIUM_TIER_2 }),
+                                    (0, i.jsx)(m.tvc, { size: "xxs", color: U.k0.PREMIUM_TIER_2 }),
                                     (0, i.jsx)(J.A, { className: eb.s, variant: "text-xxs/semibold", children: n }),
                                 ],
                             }),
@@ -258,26 +258,26 @@ class eT extends l.PureComponent {
     }
     handleApplicationLinkClick = () => {
         let { isActivityPopoutOpen: e } = this.props;
-        this.handleChannelLinkClick(), e && m.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
+        this.handleChannelLinkClick(), e && p.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
     };
     handleChannelLinkClick = () => {
         let { channel: e, embeddedActivity: t, isActivityPopoutOpen: n } = this.props;
         o()(null != t, "Activity cannot be null during navigation click"),
             o()(null != e, "Channel cannot be null during navigation click"),
-            x.A.channelListScrollTo(e.guild_id ?? ex.ME, e.id),
+            f.A.channelListScrollTo(e.guild_id ?? ef.ME, e.id),
             !n &&
-                ((0, Z.gV)(e.type) &&
+                ((0, $.gV)(e.type) &&
                     _.A.selectParticipant(
                         e.id,
                         (0, O.Qt)({ applicationId: t.applicationId, instanceId: t.compositeInstanceId }),
                     ),
-                (0, Z.pQ)(e.type) && (0, b.gk)(ef.Gd.PANEL));
+                (0, $.pQ)(e.type) && (0, b.gk)(ex.Gd.PANEL));
     };
     handleFrameLinkClick = () => {
         let { frame: e, isActivityPopoutOpen: t } = this.props;
         (o()(null != e, "Frame cannot be null during navigation click"), t)
-            ? m.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" })
-            : k.A.updateFrameLayoutMode({ applicationId: e.applicationId, layoutMode: eC.y.FOCUSED });
+            ? p.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" })
+            : w.A.updateFrameLayoutMode({ applicationId: e.applicationId, layoutMode: eE.y.FOCUSED });
     };
     renderEmbeddedActivity() {
         let e,
@@ -294,17 +294,17 @@ class eT extends l.PureComponent {
         let d = { start: n.connectedSince },
             c = s;
         null != a && null != l
-            ? ((e = ex.BVt.CHANNEL(a.id, l.id)), (c = `${c} / ${a.name}`))
-            : null != l && (e = ex.BVt.CHANNEL(ex.ME, l.id));
+            ? ((e = ef.BVt.CHANNEL(a.id, l.id)), (c = `${c} / ${a.name}`))
+            : null != l && (e = ef.BVt.CHANNEL(ef.ME, l.id));
         let u = (0, i.jsx)(z.A, {
                 href: e,
                 onClick: this.handleChannelLinkClick,
-                children: (0, i.jsx)(eg.A, { className: eb.Ix, children: c }),
+                children: (0, i.jsx)(em.A, { className: eb.Ix, children: c }),
             }),
             h = (0, i.jsx)(z.A, {
                 href: e,
                 onClick: this.handleApplicationLinkClick,
-                children: (0, i.jsx)(em.A, { className: eb._W, children: t.name }),
+                children: (0, i.jsx)(ep.A, { className: eb._W, children: t.name }),
             }),
             A = (0, i.jsxs)(i.Fragment, {
                 children: [
@@ -314,13 +314,13 @@ class eT extends l.PureComponent {
                         size: B.M.SMALL,
                         ref: this.accountLinkUpsellTargetRef,
                     }),
-                    (0, i.jsx)(j.M, {
+                    (0, i.jsx)(v.M, {
                         popoutTargetRef: this.activityPopoutTargetRef,
                         isForceShowSharingPopout: r,
                         setIsForceShowSharingPopout: o,
                         children: (0, i.jsxs)("div", {
                             className: eb.pq,
-                            children: [h, null != l && (0, Z.pQ)(l.type) ? u : (0, i.jsx)(eN, { timestamps: d })],
+                            children: [h, null != l && (0, $.pQ)(l.type) ? u : (0, i.jsx)(eS, { timestamps: d })],
                         }),
                     }),
                 ],
@@ -331,13 +331,13 @@ class eT extends l.PureComponent {
         let { application: e, frame: t } = this.props;
         if (null == t || null == e) return null;
         let n = { start: t.connectedSince },
-            l = (0, i.jsx)(g.DUT, {
+            l = (0, i.jsx)(m.DUT, {
                 onClick: this.handleFrameLinkClick,
                 onMouseDown: (e) => {
                     e.stopPropagation();
                 },
                 className: eb.rB,
-                children: (0, i.jsx)(em.A, { className: eb._W, children: e.name }),
+                children: (0, i.jsx)(ep.A, { className: eb._W, children: e.name }),
             }),
             s = (0, i.jsxs)(i.Fragment, {
                 children: [
@@ -347,7 +347,7 @@ class eT extends l.PureComponent {
                         size: B.M.SMALL,
                         ref: this.accountLinkUpsellTargetRef,
                     }),
-                    (0, i.jsxs)("div", { className: eb.pq, children: [l, (0, i.jsx)(eN, { timestamps: n })] }),
+                    (0, i.jsxs)("div", { className: eb.pq, children: [l, (0, i.jsx)(eS, { timestamps: n })] }),
                 ],
             });
         return (0, i.jsx)("div", { className: eb.cm, children: s });
@@ -366,7 +366,7 @@ class eT extends l.PureComponent {
         } = this.props;
         if (
             !s &&
-            ((!(0, ep.W)(o, d, t) &&
+            ((!(0, eg.W)(o, d, t) &&
                 !(function (e) {
                     let { application: t, frame: n } = e;
                     return null != t && null != n && n.applicationId === t.id;
@@ -393,58 +393,58 @@ class eT extends l.PureComponent {
         });
     }
 }
-let ej = (0, E.A)(function (e) {
+let ev = (0, C.A)(function (e) {
     let { guildId: t, ...n } = e,
         s = (0, c.bG)([ee.default], () => ee.default.getId()),
-        a = (0, c.bG)([V.Ay, ed.A], () => (0, K.A)(V.Ay, ed.A)),
+        a = (0, c.bG)([V.Ay, ed.A], () => (0, Y.A)(V.Ay, ed.A)),
         r = (0, c.bG)([er.A, et.A], () => et.A.getChannel(er.A.getVoiceChannelId())),
-        o = (0, c.bG)([N.Ay], () => N.Ay.getConnectedActivityChannelId()),
+        o = (0, c.bG)([S.Ay], () => S.Ay.getConnectedActivityChannelId()),
         u = (0, c.bG)([et.A], () => et.A.getChannel(o)),
         h = (0, c.bG)([en.A], () => en.A.getGuild(u?.guild_id)),
-        [A, g] = (0, c.yK)([$.A], () => [$.A.getCurrentUserActiveStream(), $.A.getStreamerActiveStreamMetadata()]),
-        m = (0, c.bG)([I.A], () => I.A.useReducedMotion),
-        p = (0, c.bG)([N.Ay], () => N.Ay.getCurrentEmbeddedActivity()),
-        _ = (0, c.bG)([w.A], () => w.A.getConnectedFrame()),
-        x = (0, c.bG)([en.A, el.A], () => null == r || H.vz(r, en.A, el.A, !1)),
-        [f] = (0, R.A)([
-            (null != g && null != g.id
-                ? g.id
+        [A, m] = (0, c.yK)([Z.A], () => [Z.A.getCurrentUserActiveStream(), Z.A.getStreamerActiveStreamMetadata()]),
+        p = (0, c.bG)([I.A], () => I.A.useReducedMotion),
+        g = (0, c.bG)([S.Ay], () => S.Ay.getCurrentEmbeddedActivity()),
+        _ = (0, c.bG)([k.A], () => k.A.getConnectedFrame()),
+        f = (0, c.bG)([en.A, el.A], () => null == r || H.vz(r, en.A, el.A, !1)),
+        [x] = (0, R.A)([
+            (null != m && null != m.id
+                ? m.id
                 : null != a && null != a.id
                   ? a.id
-                  : null != p
-                    ? p.applicationId
+                  : null != g
+                    ? g.applicationId
                     : null != _
                       ? _.applicationId
                       : void 0) ?? "",
         ]),
-        E = (0, c.bG)([G.A], () => G.A.getFakeGameData()),
-        b = (0, c.bG)([N.Ay], () => N.Ay.getCurrentEmbeddedActivity()),
-        j = (0, T.u)() && null != b && (0, S.f)(),
-        O = (0, c.bG)([ei.A], () => (0, F.A)(ei.A) && (0, eh.isWindows)()),
-        L = (0, c.bG)([es.A], () => (null != s ? es.A.findActivity(s, (e) => e.type === ex.$pd.PLAYING) : null)),
-        M = null != A && A.ownerId === s && A.state !== ex.XYD.ENDED,
-        U = (0, c.bG)([eo.default, ea.A], () => (null != u ? (0, D.m1)(u, eo.default, ea.A) : void 0)),
-        P = (0, q.A)(),
-        [k, B] = l.useState(!1),
-        Y = (0, c.bG)([X.A], () => X.A.getWindowOpen(ex.MLl.ACTIVITY_POPOUT)),
+        C = (0, c.bG)([G.A], () => G.A.getFakeGameData()),
+        b = (0, c.bG)([S.Ay], () => S.Ay.getCurrentEmbeddedActivity()),
+        v = (0, T.u)() && null != b && (0, N.f)(),
+        O = (0, c.bG)([ei.Ay], () => (0, F.A)(ei.Ay) && (0, eh.isWindows)()),
+        L = (0, c.bG)([es.A], () => (null != s ? es.A.findActivity(s, (e) => e.type === ef.$pd.PLAYING) : null)),
+        D = null != A && A.ownerId === s && A.state !== ef.XYD.ENDED,
+        U = (0, c.bG)([eo.default, ea.A], () => (null != u ? (0, M.m1)(u, eo.default, ea.A) : void 0)),
+        P = (0, X.A)(),
+        [w, B] = l.useState(!1),
+        K = (0, c.bG)([q.A], () => q.A.getWindowOpen(ef.MLl.ACTIVITY_POPOUT)),
         {
             hasAlreadyLinked: W,
             canStartAuthorization: z,
             connectionApp: J,
-            startAuthorization: Z,
-        } = (0, y.RD)(f, { allowedFlows: [y._M.RPC, y._M.WEB] }),
-        [eu, eg] = l.useState(!1),
-        em = (0, C.A)(f?.id);
+            startAuthorization: $,
+        } = (0, j.RD)(x, { allowedFlows: [j._M.RPC, j._M.WEB] }),
+        [eu, em] = l.useState(!1),
+        ep = (0, E.A)(x?.id);
     l.useEffect(() => {
-        em !== f?.id && eg(!1);
-    }, [f, em]);
-    let { isQuestBarEmpty: ep, hasLoadedQuestBar: e_ } = (0, Q.c9)({ location: eI.rE.CONFLICT_CHECKS }),
-        { parentAnalyticsLocation: ef, analyticsLocations: eE } = (0, v.Ay)(),
-        eC = eA.A.useConfig({ location: "ActivityPanelGameCard" }),
-        eS = (0, d.K)((e) => {
+        ep !== x?.id && em(!1);
+    }, [x, ep]);
+    let { isQuestBarEmpty: eg, hasLoadedQuestBar: e_ } = (0, Q.c9)({ location: eI.rE.CONFLICT_CHECKS }),
+        { parentAnalyticsLocation: ex, analyticsLocations: eC } = (0, y.Ay)(),
+        eE = eA.A.useConfig({ location: "ActivityPanelGameCard" }),
+        eN = (0, d.K)((e) => {
             e &&
                 null != J &&
-                ec.default.track(ex.HAw.ACTIVITY_PANEL_SDK_LINK_VIEWED, {
+                ec.default.track(ef.HAw.ACTIVITY_PANEL_SDK_LINK_VIEWED, {
                     game_id: a?.id ?? null,
                     application_id: J.id,
                 });
@@ -452,35 +452,35 @@ let ej = (0, E.A)(function (e) {
     return (0, i.jsx)(eT, {
         ...n,
         guildId: t,
-        canGoLive: O || j || void 0 !== E,
+        canGoLive: O || v || void 0 !== C,
         activity: L,
-        embeddedActivity: p,
+        embeddedActivity: g,
         frame: _,
         userId: s,
-        runningGame: E ?? a,
-        application: f,
-        useReducedMotion: m,
-        isStreaming: M,
+        runningGame: C ?? a,
+        application: x,
+        useReducedMotion: p,
+        isStreaming: D,
         channel: u,
-        canStream: x,
+        canStream: f,
         stream: A,
-        streamMetadata: g,
+        streamMetadata: m,
         channelName: U,
         guildForConnectedChannel: h,
         streamQualityIndicator: P,
-        isForceShowSharingPopout: k,
+        isForceShowSharingPopout: w,
         setIsForceShowSharingPopout: B,
-        isActivityPopoutOpen: Y,
+        isActivityPopoutOpen: K,
         hasAlreadyLinked: W,
-        blockAccountLinkDismissibleContent: !e_ || !ep,
-        accountLinkCopyConfig: eC,
-        parentAnalyticsLocation: ef,
-        analyticsLocations: eE,
+        blockAccountLinkDismissibleContent: !e_ || !eg,
+        accountLinkCopyConfig: eE,
+        parentAnalyticsLocation: ex,
+        analyticsLocations: eC,
         canStartAuthorization: z,
-        accountLinkButtonRef: eS,
+        accountLinkButtonRef: eN,
         startAuthorization: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return eg(!0), Z(...t);
+            return em(!0), $(...t);
         },
         didStartAuthorization: eu,
         connectionApp: J,

@@ -28,7 +28,7 @@ class _ extends a.A {
         let n = t.originChannelId,
             r = u.A.getChannelId(d.eGj);
         null == c.A.getGuildId() && null != n && n === r && (0, s.pX)(d.BVt.CHANNEL(d.ME, t.id)),
-            null != n && n === u.A.getVoiceChannelId() && i.default.selectVoiceChannel(t.id, l.A.isVideoEnabled());
+            null != n && n === u.A.getVoiceChannelId() && i.default.selectVoiceChannel(t.id, l.Ay.isVideoEnabled());
     }
     handleLogout() {
         r.h.dispatch({

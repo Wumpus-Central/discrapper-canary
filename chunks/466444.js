@@ -35,8 +35,8 @@ let _ = {
                 } = e,
                 o = h(t);
             null != n && r.A.setMode(n.type, { shortcut: (0, s.OH)(n.shortcut) }, o),
-                null != i && i !== l.A.isSelfMute(o) && r.A.toggleSelfMute({ context: o }),
-                null != a && a !== l.A.isSelfDeaf(o) && r.A.toggleSelfDeaf({ context: o });
+                null != i && i !== l.Ay.isSelfMute(o) && r.A.toggleSelfMute({ context: o }),
+                null != a && a !== l.Ay.isSelfDeaf(o) && r.A.toggleSelfDeaf({ context: o });
         },
     },
     [u.e$_.SET_USER_VOICE_SETTINGS_2]: {
@@ -51,7 +51,7 @@ let _ = {
                     args: { user_id: n, mute: i, volume: a },
                 } = e,
                 s = h(t);
-            null != i && i !== l.A.isLocalMute(n, s) && r.A.toggleLocalMute(n, s),
+            null != i && i !== l.Ay.isLocalMute(n, s) && r.A.toggleLocalMute(n, s),
                 null != a && r.A.setLocalVolume(n, a, s);
         },
     },
@@ -62,7 +62,7 @@ let _ = {
             let {
                 args: { active: t },
             } = e;
-            l.A.getMode(A.x.DEFAULT) === u.TBI.PUSH_TO_TALK && (0, a.N)(t);
+            l.Ay.getMode(A.x.DEFAULT) === u.TBI.PUSH_TO_TALK && (0, a.N)(t);
         },
     },
 };

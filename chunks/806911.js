@@ -237,7 +237,7 @@ class el extends i.PureComponent {
                       (c = (0, r.jsx)(Z.A, {
                           paused: this.streamerPaused,
                           streamId: t,
-                          component: j.A.getVideoComponent(),
+                          component: j.Ay.getVideoComponent(),
                           mirror: o,
                           children: (0, r.jsx)(D.A, {
                               size: d._3J.SIZE_80,
@@ -272,7 +272,7 @@ function eu(e) {
     let { channel: t, width: n } = e,
         i = (0, u.bG)([W.A], () => W.A.getSpeaker(t.id)),
         a = (0, u.bG)([A.A], () => A.A.getParticipant(t.id, i), [t.id, i]),
-        s = (0, u.bG)([j.A], () => l()(j.A.getVideoDevices()).values().first()),
+        s = (0, u.bG)([j.Ay], () => l()(j.Ay.getVideoDevices()).values().first()),
         o = (0, u.bG)(
             [K.A],
             () =>
@@ -283,8 +283,8 @@ function eu(e) {
         ),
         d = null == s || s.disabled,
         _ = !d,
-        f = (0, u.bG)([j.A], () => !d && j.A.isVideoEnabled(), [d]),
-        h = (0, u.bG)([j.A], () => (0, N.A)(j.A)),
+        f = (0, u.bG)([j.Ay], () => !d && j.Ay.isVideoEnabled(), [d]),
+        h = (0, u.bG)([j.Ay], () => (0, N.A)(j.Ay)),
         p = (0, u.bG)([B.default], () => B.default.getId()),
         g = (0, u.bG)([V.A], () => V.A.getCurrentUserActiveStream()),
         E = null != a && "user" in a ? a.user.id : "",

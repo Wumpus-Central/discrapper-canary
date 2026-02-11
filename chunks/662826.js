@@ -1,4 +1,4 @@
-i.d(e, { g: () => A });
+i.d(t, { g: () => T });
 var n = i(311907),
     l = i(274372),
     s = i(915618),
@@ -7,17 +7,17 @@ var n = i(311907),
     u = i(419954),
     o = i(430452),
     d = i(780964),
-    T = i(985018);
-let A = (0, u.zD)(d.X.CLIPS_VIEWERSIDE_CLIPS_SETTING, {
-    useTitle: () => T.intl.string(T.t.NWw7kY),
-    useSubtitle: () => T.intl.string(T.t["0vjy8N"]),
+    _ = i(985018);
+let T = (0, u.zD)(d.X.CLIPS_VIEWERSIDE_CLIPS_SETTING, {
+    useTitle: () => _.intl.string(_.t.NWw7kY),
+    useSubtitle: () => _.intl.string(_.t["0vjy8N"]),
     useValue: function () {
         return (0, n.bG)([l.A], () => l.A.getSettings().viewerClipsEnabled);
     },
-    setValue: (t) => r.Wn({ enabled: t, trackAnalytics: !0 }),
+    setValue: (e) => r.Wn({ enabled: e, trackAnalytics: !0 }),
     usePredicate: function () {
-        let { enableViewerClipping: t } = a.A.useExperiment({ location: "Data & Privacy" }, { autoTrackExposure: !1 }),
-            e = (0, n.bG)([o.A], () => (0, s.A)(o.A));
-        return t && e;
+        let { enableViewerClipping: e } = a.A.useExperiment({ location: "Data & Privacy" }, { autoTrackExposure: !1 }),
+            t = (0, n.bG)([o.Ay], () => (0, s.A)(o.Ay));
+        return e && t;
     },
 });

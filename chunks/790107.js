@@ -27,7 +27,7 @@ async function _(e, t) {
         throw (c.error(`uploadDebugFiles: read error '${e}'`), new i._(i.ct.READ));
     }
     if (0 === a.length) throw new i._(i.ct.NO_FILE);
-    let _ = { extraInfo: t, mediaEngineState: s.A.getState() },
+    let _ = { extraInfo: t, mediaEngineState: s.Ay.getState() },
         f = [
             ...a.map((e) => ({ name: e.name, file: e, filename: e.name })),
             {
@@ -36,13 +36,13 @@ async function _(e, t) {
                 file: new Blob([JSON.stringify(_, void 0, 2)]),
             },
         ],
-        p = new Set();
+        h = new Set();
     try {
         n = await r.Bo.post({
             url: u.Rsh.DEBUG_LOGS(u.Umv.RTC),
             attachments: [
                 ...f.map((e) => {
-                    let t = d(p, e.name);
+                    let t = d(h, e.name);
                     return { name: t, file: e.file, filename: t };
                 }),
             ],

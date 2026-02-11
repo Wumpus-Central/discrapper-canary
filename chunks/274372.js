@@ -242,7 +242,7 @@ class ei extends i.Ay.DeviceSettingsStore {
         (e) => ({ ...e, clipsSettings: { ...e.clipsSettings, decoupledClipsEnabled: O.decoupledClipsEnabled } }),
         (e) => ({ ...e, hardwareClassificationForDecoupled: e.hardwareClassificationForDecoupled ?? null }),
         (e) => {
-            let t = n(430452).A.getHardwareEncoding();
+            let t = n(430452).Ay.getHardwareEncoding();
             return {
                 ...e,
                 clipsSettings: {

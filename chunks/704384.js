@@ -6,7 +6,7 @@ var l = n(175203),
     a = n(348702);
 function r(e) {
     let { aspectRatio: t, className: n, children: r, width: o, ...d } = e,
-        c = s.A.getVideoComponent();
+        c = s.Ay.getVideoComponent();
     return (0, i.jsx)("div", {
         style: { width: o },
         className: a.A,

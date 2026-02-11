@@ -15,8 +15,8 @@ var r = n(73153),
     p = n(383501),
     g = n(309010),
     E = n(967198),
-    f = n(977997),
-    I = n(652215),
+    I = n(977997),
+    f = n(652215),
     C = n(731854);
 function N() {
     let e = i;
@@ -30,21 +30,21 @@ function T() {
         (function () {
             let e = p.A.getChannelId(),
                 t = g.A.getChannelId();
-            if (!_.A.supports(C.O5.VIDEO) || c.A.getWindowOpen(I.MLl.CHANNEL_CALL_POPOUT)) return !0;
+            if (!_.Ay.supports(C.O5.VIDEO) || c.A.getWindowOpen(f.MLl.CHANNEL_CALL_POPOUT)) return !0;
             let n = null != e && u.A.getAllActiveStreams().some((t) => !o.A.isParticipantPoppedOut(e, (0, d._z)(t)));
             if (
                 !(
                     (null != e &&
-                        Object.values(f.A.getVideoVoiceStatesForChannel(e)).some((t) => {
+                        Object.values(I.A.getVideoVoiceStatesForChannel(e)).some((t) => {
                             let { userId: n } = t;
-                            return !_.A.isLocalVideoDisabled(n) && !o.A.isParticipantPoppedOut(e, n);
+                            return !_.Ay.isLocalVideoDisabled(n) && !o.A.isParticipantPoppedOut(e, n);
                         })) ||
                     n
                 )
             )
                 return !0;
             let i = h.A.hasLayers();
-            return !(i && h.A.getLayers().includes(I.zgK.RTC_DEBUG)) && (!!i || e === t);
+            return !(i && h.A.getLayers().includes(f.zgK.RTC_DEBUG)) && (!!i || e === t);
         })()
     )
         return N();
@@ -52,7 +52,7 @@ function T() {
     let n = A.A.getChannel(e);
     return (
         !(null == n || m.A.isOpen(e)) &&
-        (r.h.wait(() => a.ho(n.id, I.o1q.VIDEO, { channel: n })), p.A.getRTCConnection()?.setPipOpen(!0), void (i = e))
+        (r.h.wait(() => a.ho(n.id, f.o1q.VIDEO, { channel: n })), p.A.getRTCConnection()?.setPipOpen(!0), void (i = e))
     );
 }
 class S extends l.A {
@@ -60,11 +60,11 @@ class S extends l.A {
         g.A.addChangeListener(T),
             E.A.addChangeListener(T),
             p.A.addChangeListener(T),
-            f.A.addChangeListener(T),
+            I.A.addChangeListener(T),
             h.A.addChangeListener(T),
             u.A.addChangeListener(T),
             c.A.addChangeListener(T),
-            _.A.addChangeListener(T),
+            _.Ay.addChangeListener(T),
             s.Ay.addChangeListener(T),
             o.A.addChangeListener(T);
     }
@@ -72,11 +72,11 @@ class S extends l.A {
         g.A.removeChangeListener(T),
             E.A.removeChangeListener(T),
             p.A.removeChangeListener(T),
-            f.A.removeChangeListener(T),
+            I.A.removeChangeListener(T),
             h.A.removeChangeListener(T),
             u.A.removeChangeListener(T),
             c.A.removeChangeListener(T),
-            _.A.removeChangeListener(T),
+            _.Ay.removeChangeListener(T),
             s.Ay.removeChangeListener(T),
             o.A.removeChangeListener(T);
     }

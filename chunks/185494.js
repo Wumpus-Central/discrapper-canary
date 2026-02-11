@@ -1,8 +1,8 @@
-n.d(t, { l: () => I });
+n.d(t, { l: () => N });
 var i = n(627968),
     l = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     r = n(92674),
     o = n(311907),
     c = n(435371),
@@ -20,14 +20,14 @@ let C = (e) => 1 - Math.pow(1 - e, 4),
     x = { mass: 1, friction: 64, tension: 1e3, clamp: !0 },
     S = { mass: 1, friction: 64, tension: 1e3 },
     T = { mass: 1, friction: 35, tension: 1e3 };
-function I(e) {
+function N(e) {
     let {} = e,
         { activeVoice: t } = (0, f.f)(),
         n = (0, h.A)(t),
-        a = (0, g.e)(t),
-        { toggleLoopback: I, isLoopbackEnabled: N } = (function () {
+        s = (0, g.e)(t),
+        { toggleLoopback: N, isLoopbackEnabled: I } = (function () {
             let { activeVoice: e } = (0, f.f)(),
-                t = (0, o.bG)([A.A], () => A.A.getVoiceFilterPlaybackEnabled()),
+                t = (0, o.bG)([A.Ay], () => A.Ay.getVoiceFilterPlaybackEnabled()),
                 n = l.useCallback(() => {
                     (0, m.Ak)(t ? "voice_filter_loopback_off" : "voice_filter_loopback_on"), (0, p.KM)(!t);
                 }, [t]);
@@ -44,14 +44,14 @@ function I(e) {
                 { isLoopbackEnabled: t, toggleLoopback: n }
             );
         })(),
-        v = N ? d.GOW : d.uik,
-        y = l.useCallback(() => (0, p.OR)(null), []),
+        y = I ? d.GOW : d.uik,
+        v = l.useCallback(() => (0, p.OR)(null), []),
         b = (0, d.rdh)(d.LU0.colors.BACKGROUND_BASE_LOWER).hex(),
-        R = (0, d.rdh)(d.LU0.colors.WHITE).hex(),
-        j = l.useRef(0),
-        M = t !== n ? j.current + 1 : j.current;
+        j = (0, d.rdh)(d.LU0.colors.WHITE).hex(),
+        R = l.useRef(0),
+        M = t !== n ? R.current + 1 : R.current;
     l.useEffect(() => {
-        j.current = M;
+        R.current = M;
     }, [M]);
     let D = null != t,
         O = !D,
@@ -62,17 +62,17 @@ function I(e) {
                 opacity: +!!D,
                 height: 72 * !!D,
                 pointerEvents: D ? "auto" : "none",
-                backgroundColor: a?.baseColor ?? b,
+                backgroundColor: s?.baseColor ?? b,
                 config: (e) => ("backgroundColor" === e ? { easing: C, duration: 200 } : x),
                 delay: 100 * !!L,
             },
             "respect-motion-settings",
         ),
         k = (0, d.pnh)(
-            a?.id,
+            s?.id,
             {
                 key: M,
-                from: { opacity: 0, background: a?.splashGradient },
+                from: { opacity: 0, background: s?.splashGradient },
                 enter: { opacity: 1, delay: L ? 100 : 50 },
                 leave: { opacity: 0, delay: L ? 100 : 150 },
                 config: { easing: C, duration: L ? 250 : 200 },
@@ -91,7 +91,7 @@ function I(e) {
             [t],
         ),
         G = (0, d.pnh)(
-            a?.iconURL,
+            s?.iconURL,
             {
                 key: M,
                 from: { opacity: 0, scale: 80 / 88, translateX: L ? -16 : 0 },
@@ -102,7 +102,7 @@ function I(e) {
             "respect-motion-settings",
         ),
         F = (0, d.pnh)(
-            a?.name,
+            s?.name,
             {
                 key: M,
                 from: { opacity: 0, scale: L ? 0.9 : 1, translateY: 16 * !L },
@@ -124,13 +124,13 @@ function I(e) {
             },
             "respect-motion-settings",
         ),
-        H = _.intl.string(N ? _.t.esVyo6 : _.t.UQqFCF);
+        H = _.intl.string(I ? _.t.esVyo6 : _.t.UQqFCF);
     return (0, i.jsxs)(r.animated.div, {
         className: E.TC,
         "aria-hidden": O,
         style: w,
         children: [
-            (0, i.jsx)("div", { className: s()([E.ab, E.k]) }),
+            (0, i.jsx)("div", { className: a()([E.ab, E.k]) }),
             k((e) => (0, i.jsx)(r.animated.div, { className: E.ab, style: e })),
             (0, i.jsx)("div", {
                 className: E.P0,
@@ -173,7 +173,7 @@ function I(e) {
                                 (0, i.jsx)(d.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
-                                    children: _.intl.string(N ? _.t.Sg6cfm : _.t.ZKhtw0),
+                                    children: _.intl.string(I ? _.t.Sg6cfm : _.t.ZKhtw0),
                                 }),
                             ],
                         }),
@@ -183,13 +183,13 @@ function I(e) {
                             className: E._o,
                             style: U[0],
                             children: (0, i.jsx)(d.DUT, {
-                                className: s()(E.x6, { [E.v3]: N }),
+                                className: a()(E.x6, { [E.v3]: I }),
                                 "aria-label": H,
                                 "aria-hidden": O,
                                 focusProps: { enabled: D },
                                 tabIndex: D ? 0 : -1,
-                                onClick: () => I(),
-                                children: (0, i.jsx)(v, { size: "custom", width: 20, height: 20, color: R }),
+                                onClick: () => N(),
+                                children: (0, i.jsx)(y, { size: "custom", width: 20, height: 20, color: j }),
                             }),
                         }),
                     }),
@@ -204,8 +204,8 @@ function I(e) {
                                 "aria-hidden": O,
                                 focusProps: { enabled: D },
                                 tabIndex: D ? 0 : -1,
-                                onClick: y,
-                                children: (0, i.jsx)(d.aXh, { size: "custom", width: 20, height: 20, color: R }),
+                                onClick: v,
+                                children: (0, i.jsx)(d.aXh, { size: "custom", width: 20, height: 20, color: j }),
                             }),
                         }),
                     }),

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => A });
 var r = n(451988),
     i = n(439372),
     a = n(855511),
@@ -11,10 +11,10 @@ var r = n(451988),
     d = n(485296),
     _ = n(607567),
     f = n(927813),
-    p = n(58149),
-    h = n(652215);
-let m = +f.A.Millis.MINUTE;
-class g extends i.A {
+    h = n(58149),
+    p = n(652215);
+let g = +f.A.Millis.MINUTE;
+class E extends i.A {
     _currentUserSpeaking = !1;
     _anyoneElseSpeaking = !1;
     _voiceChannelId;
@@ -33,7 +33,7 @@ class g extends i.A {
             if (((this._voiceChannelId = e), null == e)) return void this._reset();
             null == this._reportInterval &&
                 ((this._reportInterval = new r.IX()),
-                this._reportInterval.start(m, () => {
+                this._reportInterval.start(g, () => {
                     this._trackStartSpeaking(), this._trackStartListening();
                 }));
         }
@@ -53,8 +53,8 @@ class g extends i.A {
         if (this._currentUserSpeaking) {
             let e = u.A.getChannelId(),
                 t = u.A.getGuildId();
-            (0, p.zV)(h.HAw.START_SPEAKING, {
-                mode: l.A.getMode(),
+            (0, h.zV)(p.HAw.START_SPEAKING, {
+                mode: l.Ay.getMode(),
                 priority: d.A.isCurrentUserPrioritySpeaking(),
                 channel: e,
                 server: t,
@@ -69,11 +69,11 @@ class g extends i.A {
         }
     }
     _trackStartListening() {
-        if (l.A.isDeaf() || !this._anyoneElseSpeaking) return;
+        if (l.Ay.isDeaf() || !this._anyoneElseSpeaking) return;
         let e = u.A.getChannelId(),
             t = u.A.getGuildId();
-        (0, p.zV)(h.HAw.START_LISTENING, {
-            mute: l.A.isMute(),
+        (0, h.zV)(p.HAw.START_LISTENING, {
+            mute: l.Ay.isMute(),
             anyone_priority: d.A.isAnyonePrioritySpeaking(),
             channel: e,
             server: t,
@@ -91,7 +91,7 @@ class g extends i.A {
             u.A.removeChangeListener(this._handleRTCConnectionStoreChanged);
     }
     getGameMetadata() {
-        let e = c.A.findActivity((e) => e.type === h.$pd.PLAYING),
+        let e = c.A.findActivity((e) => e.type === p.$pd.PLAYING),
             t = s.Ay.getCurrentGameForAnalytics();
         return {
             game_platform: (0, a.A)(e),
@@ -104,4 +104,4 @@ class g extends i.A {
         };
     }
 }
-let E = new g();
+let A = new E();

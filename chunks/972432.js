@@ -13,7 +13,7 @@ var l = n(311907),
 function g(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.x.DEFAULT,
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0,
-        g = (0, l.bG)([d.A], () => d.A.getLocalVolume(e, t), [e, t]),
+        g = (0, l.bG)([d.Ay], () => d.Ay.getLocalVolume(e, t), [e, t]),
         E = e === s.default.getCurrentUser()?.id,
         _ = t === c.x.STREAM;
     return E

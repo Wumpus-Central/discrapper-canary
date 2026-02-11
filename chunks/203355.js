@@ -22,8 +22,8 @@ var i = n(627968),
     T = n(901690),
     N = n(919706),
     I = n(616356),
-    v = n(961350),
-    y = n(734057),
+    y = n(961350),
+    v = n(734057),
     b = n(430452),
     j = n(531685),
     R = n(200749),
@@ -74,11 +74,11 @@ function W(e) {
             idle: W = !1,
             controlsBottom: z,
         } = e,
-        Y = b.A.getVideoComponent(),
-        q = (0, r.bG)([v.default], () => v.default.getId()),
+        Y = b.Ay.getVideoComponent(),
+        q = (0, r.bG)([y.default], () => y.default.getId()),
         J = (0, _.A)(),
         { stream: $, user: Z, streamId: X } = t,
-        Q = (0, r.bG)([y.A], () => y.A.getChannel($.channelId)),
+        Q = (0, r.bG)([v.A], () => v.A.getChannel($.channelId)),
         ee = (0, r.bG)([I.A], () => I.A.getActiveStreamForUser(Z.id, $.guildId), [Z.id, $.guildId]),
         { defaultWatchMultipleStreams: et } = (0, E.W)({ location: "StreamTile" }),
         en = (0, r.bG)([I.A], () => I.A.getAllActiveStreams().length > 0),
@@ -94,7 +94,7 @@ function W(e) {
     if (
         (l.useEffect(() => {
             V.info(
-                `Stream Tile State - activeStream: ${null != ee} | selected: ${n} | Video: ${null != Y} | MediaEngine: ${b.A.supports(F.O5.VIDEO)}`,
+                `Stream Tile State - activeStream: ${null != ee} | selected: ${n} | Video: ${null != Y} | MediaEngine: ${b.Ay.supports(F.O5.VIDEO)}`,
             );
         }, [Y, ee, n]),
         J)
@@ -104,7 +104,7 @@ function W(e) {
     if (null != eo || ee?.state === U.XYD.FAILED)
         return (0, i.jsx)(O.A, { avError: eo?.type, avErrorContext: eo, selected: n, stream: t.stream, width: S });
     if (t.type === G.lp.HIDDEN_STREAM) return (0, i.jsx)(L.A, { selected: n, participant: t, width: S });
-    if (!(null != ee && !n && null != Y && b.A.supports(F.O5.VIDEO)))
+    if (!(null != ee && !n && null != Y && b.Ay.supports(F.O5.VIDEO)))
         return (0, i.jsxs)("div", {
             className: a()(B.Qs, B.Rh, { [B.EX]: er }),
             children: [

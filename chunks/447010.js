@@ -10,7 +10,7 @@ let l = {
         let { voiceChannelId: t, voiceState: n } = e,
             l = r.A.getChannel(t),
             u = l?.isGuildStageVoice() && n?.suppress,
-            c = 0 === Object.keys(i.A.getInputDevices()).length,
+            c = 0 === Object.keys(i.Ay.getInputDevices()).length,
             d = a.A.getMediaSessionId();
         if (c && null != l && null != d && !u) return [{ type: s.iy.NO_INPUT_DEVICES, ...(0, o.jY)() }];
     },

@@ -15,11 +15,11 @@ var i = n(64700),
     p = n(723702),
     g = n(837921),
     E = n(652215);
-let f = (0, p.isMac)() ? null : "DEFAULT";
-class I extends i.PureComponent {
+let I = (0, p.isMac)() ? null : "DEFAULT";
+class f extends i.PureComponent {
     getIcon = () => {
         let { deafened: e, muted: t, speaking: n, connected: i, unread: r } = this.props,
-            a = f;
+            a = I;
         return (0, p.isMac)() && !i
             ? a
             : (0, p.isLinux)() || !i
@@ -33,7 +33,7 @@ class I extends i.PureComponent {
         g.Ay.setSystemTrayIcon(this.getIcon());
     }
     componentWillUnmount() {
-        g.Ay.setSystemTrayIcon(f);
+        g.Ay.setSystemTrayIcon(I);
     }
     render() {
         return null;
@@ -46,7 +46,7 @@ p.isPlatformEmbedded &&
     g.Ay.on("SYSTEM_TRAY_OPEN_VOICE_SETTINGS", () => {
         (0, d.openUserSettings)(o.X.VOICE_AND_VIDEO_PANEL, { section: E.nc_.VOICE });
     }),
-    (C = r.Ay.connectStores([h.A, u.A, m.A, c.default, _.A, A.A, l.A], () => {
+    (C = r.Ay.connectStores([h.A, u.Ay, m.A, c.default, _.A, A.A, l.A], () => {
         let e = c.default.getTotalMentionCount(),
             t = c.default.hasAnyUnread(),
             n = (0, s.dH)([_.A, l.A]),
@@ -54,9 +54,9 @@ p.isPlatformEmbedded &&
         return {
             connected: h.A.isConnected(),
             speaking: m.A.isCurrentUserSpeaking(),
-            muted: u.A.isSelfMute() || u.A.isSelfMutedTemporarily(),
-            deafened: u.A.isSelfDeaf(),
+            muted: u.Ay.isSelfMute() || u.Ay.isSelfMutedTemporarily(),
+            deafened: u.Ay.isSelfDeaf(),
             unread: i,
         };
-    })(I)));
+    })(f)));
 let N = C;

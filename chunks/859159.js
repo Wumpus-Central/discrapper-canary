@@ -36,7 +36,7 @@ class l {
         };
     }
     getUserVoiceSettingsStats(e) {
-        let t = i.A.getSettings(e),
+        let t = i.Ay.getSettings(e),
             n = new Set(Object.keys(t.localMutes)),
             a = new Set(Object.keys(t.localVolumes));
         return (

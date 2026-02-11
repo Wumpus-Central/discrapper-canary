@@ -15,8 +15,8 @@ var i = n(627968),
     p = n(734057),
     g = n(430452),
     E = n(994500),
-    f = n(427262),
-    I = n(607272),
+    I = n(427262),
+    f = n(607272),
     C = n(513297),
     N = n(414711),
     T = n(187696),
@@ -35,20 +35,20 @@ function O(e) {
             c.A.openPrivateChannel({ recipientIds: t.id, joinCall: !0, joinCallVideo: !0 });
         }, [t.id]),
         _ = r.useCallback(() => {
-            I.A.removeFriend({ userId: t.id, applicationId: a ? n : null, location: "Friends" });
+            f.A.removeFriend({ userId: t.id, applicationId: a ? n : null, location: "Friends" });
         }, [n, a, t.id]),
         m = r.useCallback(() => {
             let e = a ? y.intl.string(y.t.RLcE6x) : y.intl.string(y.t.cvSt1J);
             d.A.show({
-                title: y.intl.formatToPlainString(y.t.fPLvZd, { name: f.Ay.getName(t) }),
-                body: y.intl.formatToPlainString(y.t.l5FFq6, { name: f.Ay.getName(t) }),
+                title: y.intl.formatToPlainString(y.t.fPLvZd, { name: I.Ay.getName(t) }),
+                body: y.intl.formatToPlainString(y.t.l5FFq6, { name: I.Ay.getName(t) }),
                 confirmText: e,
                 confirmVariant: "critical-primary",
                 cancelText: y.intl.string(y.t["ETE/oC"]),
                 onConfirm: _,
             });
         }, [_, a, t]),
-        p = (0, s.bG)([g.A], () => g.A.supports(b.O5.VIDEO)),
+        p = (0, s.bG)([g.Ay], () => g.Ay.supports(b.O5.VIDEO)),
         E = t.isProvisional,
         C = a ? y.intl.string(y.t.RLcE6x) : y.intl.string(y.t.cvSt1J);
     return (0, i.jsxs)(o.W1t, {

@@ -15,20 +15,20 @@ var i = n(827343),
     p = n(731854);
 function g() {
     if (!(0, r.L)()) return;
-    let e = A.A.isVideoEnabled(),
-        t = Object.values(A.A.getVideoDevices())[0],
+    let e = A.Ay.isVideoEnabled(),
+        t = Object.values(A.Ay.getVideoDevices())[0],
         n = !1 === (t?.disabled ?? !0),
-        g = A.A.supportsInApp(p.O5.VIDEO) && A.A.supportsInApp(p.O5.DESKTOP_CAPTURE),
+        g = A.Ay.supportsInApp(p.O5.VIDEO) && A.Ay.supportsInApp(p.O5.DESKTOP_CAPTURE),
         E = u.A.getChannel(h.A.getChannelId()),
-        f = _.default.getCurrentUser()?.id;
-    if (null == E || null == f) return;
-    let { reachedLimit: I } = (0, o.M)(E);
-    if (!I) {
+        I = _.default.getCurrentUser()?.id;
+    if (null == E || null == I) return;
+    let { reachedLimit: f } = (0, o.M)(E);
+    if (!f) {
         if (E.isGuildStageVoice()) {
             let e = a.A.getMutableParticipants(E.id, l.ip.SPEAKER),
                 t = e?.find((e) => {
                     let { user: t } = e;
-                    return t.id === f;
+                    return t.id === I;
                 });
             if (!(0, s.Bw)(E.guild_id) || !g || null == t || t.voiceState.suppress) return;
         }

@@ -19,8 +19,8 @@ var r = s(627968),
     v = s(576705),
     A = s(967198),
     S = s(287809),
-    C = s(607567),
-    y = s(403362),
+    y = s(607567),
+    C = s(403362),
     b = s(279250),
     w = s(652215),
     I = s(191850),
@@ -29,10 +29,10 @@ var r = s(627968),
 function O(e) {
     let { result: t, onSelectChannel: s } = e,
         i = (0, a.bG)([j.A], () => j.A.getGuild(t.record.guild_id)),
-        n = (0, a.yK)([C.Ay, S.default], () =>
-            C.Ay.getVoiceStatesForChannel(t.record)
+        n = (0, a.yK)([y.Ay, S.default], () =>
+            y.Ay.getVoiceStatesForChannel(t.record)
                 .map((e) => S.default.getUser(e.user.id))
-                .filter(y.Vq),
+                .filter(C.Vq),
         );
     return (0, r.jsxs)(c.DUT, {
         className: N.p8,
@@ -76,7 +76,7 @@ function T(e) {
             }
             return e;
         }),
-        C = (0, a.yK)([f.A, m.A, _.A, j.A, v.A], () => {
+        y = (0, a.yK)([f.A, m.A, _.A, j.A, v.A], () => {
             let e = [],
                 t = new Set();
             for (let s of f.A.getChannelHistory()) {
@@ -92,17 +92,18 @@ function T(e) {
             return e;
         }),
         T = i.useMemo(() => {
-            let e = new Set(C.map((e) => e.id)),
+            let e = new Set(y.map((e) => e.id)),
                 t = new Set(S.map((e) => e.id));
             return [
                 ...S.toSorted((t, s) => (e.has(t.id) && !e.has(s.id) ? -1 : e.has(s.id) && !e.has(t.id) ? 1 : 0))
                     .map((e) => (0, u.A)(e.id))
-                    .filter(y.Vq),
-                ...C.filter((e) => !t.has(e.id))
+                    .filter(C.Vq),
+                ...y
+                    .filter((e) => !t.has(e.id))
                     .map((e) => (0, u.A)(e.id))
-                    .filter(y.Vq),
+                    .filter(C.Vq),
             ];
-        }, [C, S]),
+        }, [y, S]),
         M = "" !== o ? p : T;
     return (0, r.jsxs)("div", {
         className: l()(N.zr, s),

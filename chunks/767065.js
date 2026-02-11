@@ -177,7 +177,7 @@ class eb extends _.A {
         super(),
             (this.context = i),
             this.recordEvent({ c: 0 }),
-            (this._fetchAsyncResourcesPromise = G.A.fetchAsyncResources().catch((e) => {
+            (this._fetchAsyncResourcesPromise = G.Ay.fetchAsyncResources().catch((e) => {
                 $.A.captureException(e);
             })),
             (this.userId = e),
@@ -237,7 +237,7 @@ class eb extends _.A {
             (this.reconnecting = !1),
             (this._lastSentSpeakingStatus = 0),
             (this._lastSentSSRC = void 0);
-        const d = G.A.supports(ec.O5.FIRST_FRAME_CALLBACK) && G.A.supports(ec.O5.REMOTE_USER_MULTI_STREAM);
+        const d = G.Ay.supports(ec.O5.FIRST_FRAME_CALLBACK) && G.Ay.supports(ec.O5.REMOTE_USER_MULTI_STREAM);
         if (i === ec.x.DEFAULT) {
             const t = U.A.getChannel(this.channelId)?.type === el.rbe.GUILD_STAGE_VOICE;
             (this._localMediaSinkWantsManager = new ee.Ay(e, t, d)),
@@ -276,7 +276,7 @@ class eb extends _.A {
                 (this.powerMonitorListener = q.A.remotePowerMonitor.on("resume", this._handlePowerResume)),
             (this._supportedBandwidthEstimationExperiments = []),
             (this._bandwidthEstimationExperiment = null),
-            G.A.getMediaEngine().getSupportedBandwidthEstimationExperiments((e) => {
+            G.Ay.getMediaEngine().getSupportedBandwidthEstimationExperiments((e) => {
                 this._supportedBandwidthEstimationExperiments = e;
             });
     }
@@ -429,7 +429,7 @@ class eb extends _.A {
     sendSpeaking(e, t) {
         let n = this._socket;
         if (null == n || !this.shouldSendSpeaking(e, t)) return;
-        let r = G.A.getPacketDelay();
+        let r = G.Ay.getPacketDelay();
         n.speaking(e, r, t);
     }
     sendVideo(e, t, n, r) {
@@ -605,7 +605,7 @@ class eb extends _.A {
         let t = [];
         if (
             (this._recordingEnabled && t.push("connection_log"),
-            G.A.supports(ec.O5.FIXED_KEYFRAME_INTERVAL) && t.push("fixed_keyframe_interval"),
+            G.Ay.supports(ec.O5.FIXED_KEYFRAME_INTERVAL) && t.push("fixed_keyframe_interval"),
             0 !== this._supportedBandwidthEstimationExperiments.length)
         ) {
             let e = D.A.workerExperimentString();
@@ -646,9 +646,9 @@ class eb extends _.A {
                     userId: this.userId,
                     sessionId: this.sessionId,
                     token: t,
-                    maxDaveProtocolVersion: G.A.getSupportedSecureFramesProtocolVersion(),
-                    video: G.A.supports(ec.O5.VIDEO),
-                    streamParameters: G.A.getVideoStreamParameters(this.context),
+                    maxDaveProtocolVersion: G.Ay.getSupportedSecureFramesProtocolVersion(),
+                    video: G.Ay.supports(ec.O5.VIDEO),
+                    streamParameters: G.Ay.getVideoStreamParameters(this.context),
                 }),
                     this.setState(el.S7L.AUTHENTICATING);
             });
@@ -687,7 +687,7 @@ class eb extends _.A {
                                 participant_type: "sender",
                                 guild_region: B.A.getRegion(this.hostname),
                                 hostname: this.hostname,
-                                hardware_enabled: G.A.getHardwareEncoding(),
+                                hardware_enabled: G.Ay.getHardwareEncoding(),
                                 ...t,
                                 ...e.getNetworkStats(),
                                 ...e.getCodecUsageStats("sender", this.userId),
@@ -711,7 +711,7 @@ class eb extends _.A {
                             participant_type: "receiver",
                             guild_region: B.A.getRegion(this.hostname),
                             hostname: this.hostname,
-                            hardware_enabled: G.A.getHardwareEncoding(),
+                            hardware_enabled: G.Ay.getHardwareEncoding(),
                             ...n,
                             ...e.getNetworkStats(),
                             ...e.getCodecUsageStats("receiver", t),
@@ -719,7 +719,7 @@ class eb extends _.A {
                 });
             }
             let t = this.getMediaSessionId();
-            G.A.getMediaEngine()
+            G.Ay.getMediaEngine()
                 .getCodecSurvey()
                 .then((e) => {
                     let n = JSON.parse(e);
@@ -736,7 +736,7 @@ class eb extends _.A {
                 }),
                 this._trackMLSFailures({ recovered: !1, downgraded: !1 });
             let n = B.A.shouldIncludePreferredRegion() ? B.A.getPreferredRegion() : null,
-                a = G.A.getSettings(),
+                a = G.Ay.getSettings(),
                 s = U.A.getChannel(this.channelId),
                 o = L.A.getConnectionStats(this.getMediaEngineConnectionId())?.stats.rtp.outbound.find(
                     (e) => "audio" === e.type,
@@ -775,7 +775,7 @@ class eb extends _.A {
                     ping_bad_count: this._pingBadCount,
                     ping_timeout: this._pingTimeouts.length,
                     input_detected: this._inputDetected,
-                    no_input_detected_notice: G.A.getNoInputDetectedNotice(),
+                    no_input_detected_notice: G.Ay.getNoInputDetectedNotice(),
                     audio_input_mode: a.mode,
                     automatic_audio_input_sensitivity_enabled: a.modeOptions.autoThreshold,
                     audio_input_sensitivity: a.modeOptions.threshold,
@@ -793,25 +793,25 @@ class eb extends _.A {
                     num_fast_udp_reconnects:
                         null != this._connection ? this._connection?.getNumFastUdpReconnects() : null,
                     parent_media_session_id: this.parentMediaSessionId,
-                    audio_subsystem: G.A.getMediaEngine().getAudioSubsystem(),
-                    audio_layer: G.A.getMediaEngine().getAudioLayer(),
+                    audio_subsystem: G.Ay.getMediaEngine().getAudioSubsystem(),
+                    audio_layer: G.Ay.getMediaEngine().getAudioLayer(),
                     automatic_audio_subsystem: a.automaticAudioSubsystem,
                     participant_type: this.getVoiceParticipantType(),
                     audio_capture_sample_rate_mismatch_percent: o,
-                    krisp_sdk_version: G.A.getState().krispVersion,
+                    krisp_sdk_version: G.Ay.getState().krispVersion,
                     secure_frames_max_concurrent_transitions: this._secureFramesMaxConcurrentTransitions,
                     secure_frames_transition_prepare_count: this._secureFramesTransitionPrepareCount,
                     secure_frames_transition_execute_count: this._secureFramesTransitionExecuteCount,
                     vad_use_advanced_voice_activity: a.modeOptions.vadUseKrisp,
-                    soundshare_experimental: G.A.getExperimentalSoundshare(),
+                    soundshare_experimental: G.Ay.getExperimentalSoundshare(),
                     join_voice_id: this.joinVoiceId,
                     bypass_system_input_processing: a.bypassSystemInputProcessing,
-                    system_microphone_mode: G.A.getSystemMicrophoneMode(),
+                    system_microphone_mode: G.Ay.getSystemMicrophoneMode(),
                 };
             Promise.all([
                 (async () => (await this._systemResources?.getBatteryLevelStats()) ?? { batteryUsageRounded: null })(),
                 P.A.getKrispModel(),
-                G.A.getKrispEnableStats() ? G.A.getMediaEngine().getNoiseCancellationStats() : Promise.resolve(null),
+                G.Ay.getKrispEnableStats() ? G.Ay.getMediaEngine().getNoiseCancellationStats() : Promise.resolve(null),
             ]).then((e) => {
                 let [{ batteryUsageRounded: t }, n, r] = e;
                 H.default.track(el.HAw.VOICE_DISCONNECT, {
@@ -870,7 +870,7 @@ class eb extends _.A {
             this._chooseExperiments(s ?? []),
             0 === a.length &&
                 a.push({ type: ec.mI.VIDEO, rid: "100", ssrc: i + 1, rtxSsrc: i + 2, quality: 100, active: !1 });
-        let o = G.A.getMediaEngine(),
+        let o = G.Ay.getMediaEngine(),
             l = M.A.getPersistentCodesEnabled(),
             u = k.default.getStaticAuthSessionId() ?? void 0,
             c = (0, h.tB)(),
@@ -881,19 +881,19 @@ class eb extends _.A {
                 modes: r,
                 experiments: this._selectedExperiments,
                 streamParameters: a,
-                qosEnabled: G.A.getQoS(),
+                qosEnabled: G.Ay.getQoS(),
                 signingKeyId: l ? u : void 0,
                 ...this.getExtraConnectionOptions(),
             }),
             _ = (0, h.tB)() - c;
         (0, K.isWeb)() && !eu.PF && $.A.captureMessage("Browser does not support Unified Plan"),
             d.setUseElectronVideo(o.supports(ec.O5.ELECTRON_VIDEO)),
-            G.A.supports(ec.O5.IMAGE_QUALITY_MEASUREMENT) &&
+            G.Ay.supports(ec.O5.IMAGE_QUALITY_MEASUREMENT) &&
                 d.setVideoQualityMeasurement("imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec");
         let g = ["unk"];
         g.push("nvNewPresets"),
             this.context === ec.x.STREAM ? g.push("nvRelaxRc=250") : g.push("nvRelaxRc=75"),
-            G.A.getUseVaapiEncoder() && g.push("vaapi"),
+            G.Ay.getUseVaapiEncoder() && g.push("vaapi"),
             this.context === ec.x.STREAM &&
                 "streamer" === this.getVoiceParticipantType() &&
                 (0, x.b)("handleReady").enabled &&
@@ -998,9 +998,9 @@ class eb extends _.A {
             d.on(f.yq.VideoDecoderFallback, (t) => {
                 let n = U.A.getChannel(this.channelId),
                     r = n?.type === el.rbe.GUILD_STAGE_VOICE;
-                if (!G.A.isVideoDecoderFallbackEnabled() || r) {
+                if (!G.Ay.isVideoDecoderFallbackEnabled() || r) {
                     if (!this._videoDecoderFallbackSuppressed) {
-                        let e = G.A.isVideoDecoderFallbackEnabled() ? "stage channel" : "not in fallback treatment";
+                        let e = G.Ay.isVideoDecoderFallbackEnabled() ? "stage channel" : "not in fallback treatment";
                         this.logger.info(`Suppressing video decoder fallback: ${e}`),
                             (this._videoDecoderFallbackSuppressed = !0);
                     }
@@ -1062,7 +1062,7 @@ class eb extends _.A {
                 ) {
                     let e = B.A.shouldIncludePreferredRegion() ? B.A.getPreferredRegion() : null;
                     if (this._connecting) {
-                        let t = G.A.getSettings(),
+                        let t = G.Ay.getSettings(),
                             n = this._getAnalyticsProperties();
                         H.default.track(el.HAw.VOICE_CONNECTION_SUCCESS, {
                             ...n,
@@ -1072,14 +1072,14 @@ class eb extends _.A {
                             cloudflare_best_region: e,
                             connect_time: (0, h.tB)() - (this._connected ? this._connectStartTime : this._createdTime),
                             connect_count: this._connectCount,
-                            audio_subsystem: G.A.getMediaEngine().getAudioSubsystem(),
-                            audio_layer: G.A.getMediaEngine().getAudioLayer(),
+                            audio_subsystem: G.Ay.getMediaEngine().getAudioSubsystem(),
+                            audio_layer: G.Ay.getMediaEngine().getAudioLayer(),
                             automatic_audio_subsystem: t.automaticAudioSubsystem,
                             media_session_id: this.getMediaSessionId(),
                             participant_type: this.getVoiceParticipantType(),
                             join_voice_id: this.joinVoiceId,
                             is_camera_enabled:
-                                G.A.getMediaEngine().getVideoInputDeviceId() !== ec.qe && d.context === ec.x.DEFAULT,
+                                G.Ay.getMediaEngine().getVideoInputDeviceId() !== ec.qe && d.context === ec.x.DEFAULT,
                             ...this.stateHistory.getVoiceConnectionSuccessStats(),
                         });
                         let r = performance.now(),
@@ -1261,7 +1261,7 @@ class eb extends _.A {
         }
     }
     _handleControlPing(e) {
-        G.A.supports(ec.O5.NATIVE_PING) || this._handlePing(e);
+        G.Ay.supports(ec.O5.NATIVE_PING) || this._handlePing(e);
     }
     _handlePing(e) {
         if (void 0 !== e) {
@@ -1318,7 +1318,7 @@ class eb extends _.A {
                     participant_type: "receiver",
                     guild_region: B.A.getRegion(this.hostname),
                     hostname: this.hostname,
-                    hardware_enabled: G.A.getHardwareEncoding(),
+                    hardware_enabled: G.Ay.getHardwareEncoding(),
                     ...n,
                     ...t.getNetworkStats(),
                     ...t.getCodecUsageStats("receiver", e),
@@ -1735,13 +1735,13 @@ class eb extends _.A {
     }
     getAudioDeviceStates = () => ({
         input_device: this.getInputDeviceName(),
-        input_device_count: Object.keys(G.A.getInputDevices()).length,
+        input_device_count: Object.keys(G.Ay.getInputDevices()).length,
         output_device: this.getOutputDeviceName(),
-        output_device_count: Object.keys(G.A.getOutputDevices()).length,
+        output_device_count: Object.keys(G.Ay.getOutputDevices()).length,
     });
     getVideoDeviceStates = () => ({
         camera_device: this.getVideoDeviceName(),
-        camera_device_count: Object.keys(G.A.getVideoDevices()).length,
+        camera_device_count: Object.keys(G.Ay.getVideoDevices()).length,
     });
     _trackVoiceConnectionConnecting = () => {
         let e = U.A.getChannel(this.channelId),
@@ -1757,7 +1757,7 @@ class eb extends _.A {
             context: this.context,
             channel_type: t,
             participant_type: this.getVoiceParticipantType(),
-            is_muted: G.A.isMute(),
+            is_muted: G.Ay.isMute(),
             join_voice_id: this.joinVoiceId,
             connection_serial: this._connectionSerial,
         });
@@ -1768,16 +1768,16 @@ class eb extends _.A {
         return null != t && l().v3(t) % 100 <= 5;
     }
     getInputDeviceName() {
-        let e = G.A.getInputDeviceId();
-        return G.A.getInputDevices()[e]?.name;
+        let e = G.Ay.getInputDeviceId();
+        return G.Ay.getInputDevices()[e]?.name;
     }
     getOutputDeviceName() {
-        let e = G.A.getOutputDeviceId();
-        return G.A.getOutputDevices()[e]?.name;
+        let e = G.Ay.getOutputDeviceId();
+        return G.Ay.getOutputDevices()[e]?.name;
     }
     getVideoDeviceName() {
-        let e = G.A.getVideoDeviceId();
-        return G.A.getVideoDevices()[e]?.name;
+        let e = G.Ay.getVideoDeviceId();
+        return G.Ay.getVideoDevices()[e]?.name;
     }
     getInputDeviceSampleRate() {
         return this._voiceQuality?.getAudioDeviceStats().input_device_session_sample_rate ?? null;

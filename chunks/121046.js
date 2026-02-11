@@ -8,8 +8,8 @@ var i = n(311907),
 function d(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.x.DEFAULT,
         n = (0, i.bG)([s.default], () => s.default.getId()),
-        d = (0, i.bG)([a.A], () => a.A.supports(o.O5.DISABLE_VIDEO)),
-        c = (0, i.bG)([a.A], () => a.A.isLocalVideoDisabled(n, t), [n, t]);
+        d = (0, i.bG)([a.Ay], () => a.Ay.supports(o.O5.DISABLE_VIDEO)),
+        c = (0, i.bG)([a.Ay], () => a.Ay.isLocalVideoDisabled(n, t), [n, t]);
     return [
         (null == e || e === n) && d,
         c,

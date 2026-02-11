@@ -31,7 +31,7 @@ class h extends l.A {
         null != t && (0, a.vN)((0, s._z)(t), !1);
     };
     handleStopUserVideo = () => {
-        u.A.isVideoEnabled() && r.A.setVideoEnabled(!1);
+        u.Ay.isVideoEnabled() && r.A.setVideoEnabled(!1);
     };
 }
 let _ = new h();

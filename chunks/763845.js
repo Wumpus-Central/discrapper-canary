@@ -1,8 +1,8 @@
 n.d(t, { A: () => S });
 var i = n(627968),
     l = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     r = n(205693),
     o = n(397927),
     c = n(233545),
@@ -18,7 +18,7 @@ var i = n(627968),
     E = n(985018),
     C = n(101937);
 let x = () => {
-        h.A.getMediaEngine().once(r.bg.ConnectionStats, (e) => {
+        h.Ay.getMediaEngine().once(r.bg.ConnectionStats, (e) => {
             let t = JSON.stringify(
                 Object.values(_.x)
                     .map((t) => {
@@ -51,7 +51,7 @@ let x = () => {
                 null != t && t(), c.ho();
             }, [e]),
             n = (0, l.useCallback)(() => {
-                let { hostname: t, averagePing: n, lastPing: a, outboundLossRate: r } = e,
+                let { hostname: t, averagePing: n, lastPing: s, outboundLossRate: r } = e,
                     o = u.Q_.getSetting();
                 return (0, i.jsxs)(l.Fragment, {
                     children: [
@@ -72,10 +72,10 @@ let x = () => {
                             className: C.xB,
                             children: E.intl.format(E.t["X58/lN"], { averagePing: n.toFixed(0) }),
                         }),
-                        null != a
+                        null != s
                             ? (0, i.jsx)("div", {
                                   className: C.xB,
-                                  children: E.intl.format(E.t["6iv2TF"], { lastPing: a.toFixed(0) }),
+                                  children: E.intl.format(E.t["6iv2TF"], { lastPing: s.toFixed(0) }),
                               })
                             : null,
                         null != r
@@ -85,7 +85,7 @@ let x = () => {
                               })
                             : null,
                         (0, i.jsxs)("div", {
-                            className: s()(C.xB, C.xJ),
+                            className: a()(C.xB, C.xJ),
                             children: [
                                 null == r ? E.intl.formatToPlainString(E.t.vggaMt, { badPing: 250 }) : null,
                                 null != r
@@ -96,7 +96,7 @@ let x = () => {
                     ],
                 });
             }, [e]),
-            { connectionState: a, connectionTypeText: r } = e,
+            { connectionState: s, connectionTypeText: r } = e,
             A = u.Q_.getSetting(),
             S = {
                 [f.S7L.AWAITING_ENDPOINT]: E.intl.format(E.t.Eu2vUR, { url: f.qF7.STATUS }),
@@ -115,16 +115,16 @@ let x = () => {
                     url: p.A.getArticleURL(f.MVz.VOICE_CONNECTION_ERRORS),
                 }),
                 [f.S7L.RTC_DISCONNECTED]: E.intl.string(E.t.fOX25I),
-            }[a];
+            }[s];
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                "function" == typeof S ? S() : (0, i.jsx)("p", { className: s()(C.xB, C.xJ), children: S }),
+                "function" == typeof S ? S() : (0, i.jsx)("p", { className: a()(C.xB, C.xJ), children: S }),
                 (0, i.jsx)("hr", { className: C.me }),
                 (0, i.jsxs)("div", {
                     className: C.Vf,
                     children: [
                         (0, i.jsxs)("span", {
-                            className: s()(C.uO, C.ro),
+                            className: a()(C.uO, C.ro),
                             children: [
                                 (0, i.jsx)(o.XAi, {
                                     size: "xxs",
@@ -135,12 +135,12 @@ let x = () => {
                             ],
                         }),
                         A &&
-                            h.A.supports(_.O5.DIAGNOSTICS) &&
+                            h.Ay.supports(_.O5.DIAGNOSTICS) &&
                             !__OVERLAY__ &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsxs)(o.MzZ, {
-                                        className: s()(C.Ce, C.ro),
+                                        className: a()(C.Ce, C.ro),
                                         onClick: t,
                                         children: [
                                             E.intl.string(E.t.KBoWg9),
@@ -152,7 +152,7 @@ let x = () => {
                                         ],
                                     }),
                                     (0, i.jsxs)(o.MzZ, {
-                                        className: s()(C.d3, C.ro),
+                                        className: a()(C.d3, C.ro),
                                         onClick: x,
                                         title: "Copy to clipboard",
                                         children: [

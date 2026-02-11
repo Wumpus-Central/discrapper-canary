@@ -701,7 +701,7 @@ function e7() {
         { selfDeaf: C, deaf: S } = (0, ec.A)(f),
         T = (0, c.bG)([k.A], () => ((0, R.kK)() ? k.A.getCurrentBuildOverride().overrides?.discord_web : null)),
         I = (0, c.bG)([eE.A], () => eE.A.getPremiumTypeSubscription()),
-        w = (0, c.bG)([ej.A], () => ej.A.getSpeakingWhileMuted()),
+        w = (0, c.bG)([ej.Ay], () => ej.Ay.getSpeakingWhileMuted()),
         D = (0, c.bG)([O.A], () => O.A.isFullscreenInContext()),
         M = (0, c.bG)([eb.A], () => eb.A.hasLayers()),
         P = (0, p.red)(p.DXt) || M || ew.P.isDisallowPopupsSet() || D,
@@ -875,12 +875,12 @@ function e2(e) {
             latched: A,
         } = e,
         C = n || r || i,
-        S = (0, c.bG)([ej.A], () => ej.A.getMode() === eF.TBI.PUSH_TO_TALK),
+        S = (0, c.bG)([ej.Ay], () => ej.Ay.getMode() === eF.TBI.PUSH_TO_TALK),
         { showPTTIconIndicator: T } = em.A.useConfig({ location: "MicrophoneButton" }),
         E = s.useRef(null),
         { Component: I, events: k, play: R } = (0, ep.q)(C),
         O = i || r ? p.O1p : I,
-        w = (0, c.bG)([ej.A], () => ej.A.getSettings().modeOptions.shortcut),
+        w = (0, c.bG)([ej.Ay], () => ej.Ay.getSettings().modeOptions.shortcut),
         P = (0, D.A)(n, i, r, o);
     t = g
         ? { tooltipType: "green_void_do_not_use", tooltipText: eK.intl.string(eK.t["29gnR4"]), tooltipForceOpen: !0 }

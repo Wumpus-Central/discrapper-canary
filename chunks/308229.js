@@ -21,7 +21,7 @@ var i = n(627968),
     O = n(682225);
 function x(e) {
     let { transitionState: t, videoEnabled: n, onEnable: x, onClose: D } = e,
-        f = v.A.getCameraComponent(),
+        f = v.Ay.getCameraComponent(),
         A = u.bm.useSetting(),
         [S, w] = a.useState((0, g.i)(b.default.getCurrentUser())),
         E = (0, r.p)(),

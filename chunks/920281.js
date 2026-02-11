@@ -22,8 +22,8 @@ async function d(e) {
     var t;
     let s,
         { width: d, height: u, types: f = [i.fS.CAMERA, i.fS.SCREEN, i.fS.WINDOW] } = e,
-        h = l.A.getVideoDevices(),
-        x = (0, n.A)(l.A.getMediaEngine(), f, { width: d, height: u }),
+        h = l.Ay.getVideoDevices(),
+        x = (0, n.A)(l.Ay.getMediaEngine(), f, { width: d, height: u }),
         p = (0, a.e)(),
         m = await p,
         _ = await x,

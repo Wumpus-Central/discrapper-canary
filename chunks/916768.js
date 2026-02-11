@@ -28,8 +28,8 @@ var i = n(627968),
     g = n(688810),
     y = n(587895),
     L = n(315982),
-    k = n(235986),
-    f = n(420216),
+    f = n(235986),
+    k = n(420216),
     x = n(984870),
     G = n(626262),
     j = n(813803),
@@ -122,32 +122,32 @@ let ey = (e) => {
             ],
         });
     };
-function ek(e) {
+function ef(e) {
     return (0, eP.isWindows)() && E().satisfies(U.A?.os.release, ep.PH)
         ? `ms-settings:sound-properties?endpointId=${e}`
         : "ms-settings:sound";
 }
-function ef(e) {
+function ek(e) {
     let t,
         n,
         { noticeType: l } = e,
         { windowsMuteAndZeroVolumeDetectionEnabled: r } = (0, Q.I)({ location: "AudioIssueNoticeNoInput" }),
         s = (0, J.x5)(eM.oh.AUDIO_INPUT),
         a = s?.guid ?? "",
-        { inputDeviceOSMuted: o, inputDeviceOSVolume: d } = (0, c.cf)([eA.A], () => ({
-            inputDeviceOSMuted: eA.A.getInputDeviceOSMuted(),
-            inputDeviceOSVolume: eA.A.getInputDeviceOSVolume(),
+        { inputDeviceOSMuted: o, inputDeviceOSVolume: d } = (0, c.cf)([eA.Ay], () => ({
+            inputDeviceOSMuted: eA.Ay.getInputDeviceOSMuted(),
+            inputDeviceOSVolume: eA.Ay.getInputDeviceOSVolume(),
         })),
         A = (0, eP.isWindows)() && E().satisfies(U.A?.os.release, ep.PH) && r,
         u = !1;
     return (
         A && !0 === o
             ? ((t = eh.intl.string(eh.t.ppW3ri)),
-              (n = (0, i.jsx)(_.eCN, { href: ek(a), noticeType: l, children: eh.intl.string(eh.t.QghSIq) })))
+              (n = (0, i.jsx)(_.eCN, { href: ef(a), noticeType: l, children: eh.intl.string(eh.t.QghSIq) })))
             : A && 0 === d
               ? ((t = eh.intl.string(eh.t.j4gGA4)),
-                (n = (0, i.jsx)(_.eCN, { href: ek(a), noticeType: l, children: eh.intl.string(eh.t.QghSIq) })))
-              : eA.A.supports(eM.O5.LOOPBACK)
+                (n = (0, i.jsx)(_.eCN, { href: ef(a), noticeType: l, children: eh.intl.string(eh.t.QghSIq) })))
+              : eA.Ay.supports(eM.O5.LOOPBACK)
                 ? ((t = eh.intl.string(eh.t.dNAJ18)),
                   (u = !0),
                   (n = (0, i.jsx)(_.zr9, {
@@ -224,7 +224,7 @@ let eG = l.memo(function () {
     if (null != I) return (0, i.jsx)(G.$, { dismissibleContent: I, noticeType: r.type });
     if (null != U) return (0, i.jsx)(j._, { dismissibleContent: U, noticeType: r.type });
     if (null != h) return (0, i.jsx)(x.T, { dismissibleContent: h });
-    if (null != B) return (0, i.jsx)(f.r, { dismissibleContent: B, noticeType: r.type });
+    if (null != B) return (0, i.jsx)(k.r, { dismissibleContent: B, noticeType: r.type });
     let Q = r.metadata?.premiumType;
     switch (r.type) {
         case eD.kqX.PTT_NO_KEYBIND_WARNING:
@@ -422,7 +422,7 @@ let eG = l.memo(function () {
                 ],
             });
         case eD.kqX.NO_INPUT_DETECTED:
-            return (0, i.jsx)(ef, { noticeType: r.type });
+            return (0, i.jsx)(ek, { noticeType: r.type });
         case eD.kqX.NO_INPUT_DEVICES_DETECTED:
             return (0, i.jsx)(eL, { noticeType: r.type });
         case eD.kqX.HARDWARE_MUTE:
@@ -477,8 +477,8 @@ let eG = l.memo(function () {
             });
         case eD.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
             if (null == r.metadata) return null;
-            let { skuId: ek, applicationId: eG } = r.metadata,
-                ej = eN.A.get(ek),
+            let { skuId: ef, applicationId: eG } = r.metadata,
+                ej = eN.A.get(ef),
                 eB = y.A.getApplication(eG);
             if (null == ej || null == eB) return null;
             let eq = { page: eD.liQ.IN_APP };
@@ -624,8 +624,8 @@ let eG = l.memo(function () {
                 color: _.Hv$.DEFAULT,
                 children: [
                     (0, i.jsx)(_.PMB, { onClick: () => ex(), noticeType: eD.kqX.DISPATCH_INSTALL_SCRIPT_PROGRESS }),
-                    (0, i.jsxs)(k.A, {
-                        justify: k.A.Justify.CENTER,
+                    (0, i.jsxs)(f.A, {
+                        justify: f.A.Justify.CENTER,
                         children: [
                             null != eV
                                 ? eh.intl.formatToPlainString(eh.t["pHj+z4"], {
@@ -644,9 +644,9 @@ let eG = l.memo(function () {
             if (null != eR.A.testModeEmbeddedApplicationId)
                 return (0, i.jsx)(_.$Td, {
                     color: _.Hv$.WARNING,
-                    children: (0, i.jsxs)(k.A, {
-                        justify: k.A.Justify.CENTER,
-                        align: k.A.Align.CENTER,
+                    children: (0, i.jsxs)(f.A, {
+                        justify: f.A.Justify.CENTER,
+                        align: f.A.Align.CENTER,
                         children: [
                             (0, i.jsx)("div", {
                                 children: eh.intl.format(eh.t["1qxVe4"], {
@@ -659,9 +659,9 @@ let eG = l.memo(function () {
                 });
             return (0, i.jsx)(_.$Td, {
                 color: _.Hv$.WARNING,
-                children: (0, i.jsxs)(k.A, {
-                    justify: k.A.Justify.CENTER,
-                    align: k.A.Align.CENTER,
+                children: (0, i.jsxs)(f.A, {
+                    justify: f.A.Justify.CENTER,
+                    align: f.A.Align.CENTER,
                     children: [
                         (0, i.jsx)("div", {
                             children: eh.intl.format(eh.t.Fv5HrE, { applicationName: r.metadata.applicationName }),

@@ -15,7 +15,7 @@ function d(e) {
             [o.my.STUDIO]: c.intl.string(c.t.VZPR0R),
             [o.my.CUSTOM]: c.intl.string(c.t["N/PQjv"]),
         },
-        d = (0, a.bG)([u.A], () => u.A.getActiveInputProfile()),
+        d = (0, a.bG)([u.Ay], () => u.Ay.getActiveInputProfile()),
         m = t.map((t) =>
             (0, r.jsx)(
                 l.iDA,

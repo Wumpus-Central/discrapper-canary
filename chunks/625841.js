@@ -28,15 +28,15 @@ function I(e) {
             selectedDeviceId: S,
             onSelectDevice: N,
             hideDeviceTypeIcon: O = !1,
-            label: w,
-            ...j
+            label: y,
+            ...w
         } = e,
         {
-            setDevice: M,
-            Icon: b,
-            getCanSetDevice: E,
-            getWarningMessage: L,
-            getLocation: y,
+            setDevice: j,
+            Icon: M,
+            getCanSetDevice: b,
+            getWarningMessage: E,
+            getLocation: L,
         } = {
             [A.oh.AUDIO_INPUT]: {
                 setDevice: d.A.setInputDevice,
@@ -66,11 +66,11 @@ function I(e) {
         { analyticsLocations: V } = (0, h.Ay)(),
         R = (0, r.bG)([m.A], () => m.A.theme),
         [k, W] = s.useState(I),
-        U = y(l),
+        U = L(l),
         [P, G] = (0, x.tR)(t, { location: U }),
         { id: H } = (0, x.x5)(t),
-        z = (0, r.bG)([g.A], () => E(g.A)),
-        B = (0, n.jsx)(u.po8, { messageType: u.YCn.WARNING, children: L() }),
+        z = (0, r.bG)([g.Ay], () => b(g.Ay)),
+        B = (0, n.jsx)(u.po8, { messageType: u.YCn.WARNING, children: E() }),
         F = s.useCallback(
             (e) => {
                 e === D
@@ -82,9 +82,9 @@ function I(e) {
                           shown_device_count: P.length,
                           hidden_device_count: G.length,
                       }))
-                    : (N?.(e) ?? !0) && M(e, { location: U, analyticsLocations: V });
+                    : (N?.(e) ?? !0) && j(e, { location: U, analyticsLocations: V });
             },
-            [t, U, P.length, G.length, V, N, M],
+            [t, U, P.length, G.length, V, N, j],
         );
     function $(e) {
         let t,
@@ -105,7 +105,7 @@ function I(e) {
                 !O &&
                     (0, n.jsx)("div", {
                         className: C.Kt,
-                        children: (0, n.jsx)(b, {
+                        children: (0, n.jsx)(M, {
                             size: "custom",
                             width: 20,
                             height: 20,
@@ -134,7 +134,7 @@ function I(e) {
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)(o.Te, {
-                label: w,
+                label: y,
                 value: S ?? H,
                 onChange: F,
                 options: (function () {
@@ -160,7 +160,7 @@ function I(e) {
                     return $(t);
                 },
                 optionClassName: C.OS,
-                ...j,
+                ...w,
                 "data-migration-pending": !0,
             }),
             !z && B,

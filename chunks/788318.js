@@ -1,6 +1,6 @@
 "use strict";
 let r, i;
-n.d(t, { A: () => T });
+n.d(t, { A: () => y });
 var a = n(735438),
     s = n.n(a),
     o = n(311907),
@@ -10,9 +10,9 @@ var a = n(735438),
     d = n(616356),
     _ = n(961350),
     f = n(430452),
-    p = n(485296),
-    h = n(806931);
-function m() {
+    h = n(485296),
+    p = n(806931);
+function g() {
     let e,
         t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     if (null == r) e = null;
@@ -21,7 +21,7 @@ function m() {
         let t = d.A.getLastActiveStream(),
             n = null != e ? u.A.getParticipant(r, e) : null;
         if (
-            ((n?.type !== h.lp.ACTIVITY && (n?.type !== h.lp.USER || n.voiceState?.selfVideo)) || (e = null),
+            ((n?.type !== p.lp.ACTIVITY && (n?.type !== p.lp.USER || n.voiceState?.selfVideo)) || (e = null),
             null != t && null == e)
         ) {
             let n = u.A.getParticipant(r, (0, c._z)(t))?.id;
@@ -31,16 +31,16 @@ function m() {
             let t = _.default.getId(),
                 n = s()(u.A.getVideoParticipants(r)).filter(
                     (e) =>
-                        e.type === h.lp.USER &&
+                        e.type === p.lp.USER &&
                         e.user.id !== t &&
-                        !f.A.isLocalVideoDisabled(e.user.id) &&
+                        !f.Ay.isLocalVideoDisabled(e.user.id) &&
                         !u.A.isParticipantPoppedOut(r, e.id),
                 ),
                 a = n.map((e) => e.user.id),
                 o = Date.now();
             null ==
                 (e = n
-                    .map((e) => [e.user.id, p.A.getSpeakingDuration(e.user.id, o)])
+                    .map((e) => [e.user.id, h.A.getSpeakingDuration(e.user.id, o)])
                     .filter((e) => {
                         let [t, n] = e;
                         return 0 !== n;
@@ -51,20 +51,20 @@ function m() {
                     })?.[0]) && (e = null != i && a.has(i) ? i : n.first()?.user?.id);
         }
     }
-    i !== e && ((i = e), t && I.emitChange());
+    i !== e && ((i = e), t && T.emitChange());
 }
-let g = s().throttle(m, 300, { trailing: !0 });
-function E() {
-    return g(), !1;
+let E = s().throttle(g, 300, { trailing: !0 });
+function A() {
+    return E(), !1;
 }
-class A extends o.Ay.Store {
+class I extends o.Ay.Store {
     static displayName = "VideoSpeakerStore";
     initialize() {
-        this.waitFor(u.A, _.default, p.A, d.A, f.A), this.syncWith([u.A, d.A], E);
+        this.waitFor(u.A, _.default, h.A, d.A, f.Ay), this.syncWith([u.A, d.A], A);
     }
     getSpeaker(e) {
-        return r !== e && ((r = e), m(!1)), i ?? _.default.getId();
+        return r !== e && ((r = e), g(!1)), i ?? _.default.getId();
     }
 }
-let I = new A(l.h, { AUDIO_SET_LOCAL_VIDEO_DISABLED: E }),
-    T = I;
+let T = new I(l.h, { AUDIO_SET_LOCAL_VIDEO_DISABLED: A }),
+    y = T;

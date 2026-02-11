@@ -18,8 +18,8 @@ function p(e, t) {
             channelId: e.id,
             channelName: (0, i.m1)(e, l.default, o.A),
             guildName: m?.name ?? u.intl.string(u.t.LJpTRF),
-            muted: a.A.isSelfMute(),
-            deafened: a.A.isSelfDeaf(),
+            muted: a.Ay.isSelfMute(),
+            deafened: a.Ay.isSelfDeaf(),
             nonce: s,
         });
     return p ? `${(0, r.TP)()}${d.Rsh.XBOX_HANDOFF}?${_.toString()}` : `${c.Gp}?${_.toString()}`;

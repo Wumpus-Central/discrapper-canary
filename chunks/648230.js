@@ -19,8 +19,8 @@ var r = s(627968),
     v = s(15285),
     A = s(253932),
     S = s(430452),
-    C = s(383501),
-    y = s(287809),
+    y = s(383501),
+    C = s(287809),
     b = s(157257),
     w = s(723702),
     I = s(927578),
@@ -48,13 +48,13 @@ function Q(e) {
         q = (0, u.bG)([v.Ay], () => (null != n ? (v.Ay.getGameForPID(n) ?? void 0) : void 0)),
         K = i.useRef(performance.now()),
         Y = (0, u.bG)(
-            [S.A],
+            [S.Ay],
             () =>
-                (S.A.getUseSystemScreensharePicker() || S.A.getUseGamescopeCapture()) &&
+                (S.Ay.getUseSystemScreensharePicker() || S.Ay.getUseGamescopeCapture()) &&
                 ((0, w.isLinux)() || ((0, w.isMac)() && o().satisfies(m.A?.os.release, W.WZ))),
         ),
         { analyticsLocations: $ } = (0, j.Ay)(a, g.A.GO_LIVE_MODAL_V2),
-        X = (0, u.bG)([y.default], () => y.default.getCurrentUser()),
+        X = (0, u.bG)([C.default], () => C.default.getCurrentUser()),
         J = (0, H.A)(),
         { state: ee, dispatch: et } = (0, U.yB)(q, X, J),
         es = (0, p.A)((0, w.isWindows)() && null != q && Q ? "confirm" : "source_select");
@@ -116,7 +116,7 @@ function Q(e) {
                     impressionProperties: {
                         location_stack: $,
                         application_id: (0, w.isWindows)() ? (0, O.A)(v.Ay, b.A)?.id : void 0,
-                        parent_media_session_id: C.A.getMediaSessionId(),
+                        parent_media_session_id: y.A.getMediaSessionId(),
                     },
                 },
             },

@@ -84,7 +84,7 @@ class f {
                 }),
                 this.onMLModuleLoaded?.(),
                 (this.state.nativeMLModuleState = r.Q.LOADED);
-            let t = l.A.getMediaEngine();
+            let t = l.Ay.getMediaEngine();
             t.setClipsMLPipelineEnabled(!0);
             let a = n.A.getSettings()?.mlPipelinesEnabled ?? {
                 emotionClassifier: !0,

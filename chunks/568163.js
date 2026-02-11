@@ -6,7 +6,7 @@ var a = i(311907),
     r = i(430452),
     d = i(985018);
 function c(t) {
-    return (0, a.bG)([r.A], () => r.A.hasContext(t.id), [t.id])
+    return (0, a.bG)([r.Ay], () => r.Ay.hasContext(t.id), [t.id])
         ? (0, l.jsx)(e.Drp, {
               id: "ingame-voice",
               label: d.intl.string(d.t["pOul5/"]),

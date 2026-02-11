@@ -231,19 +231,19 @@ class et extends u.Ay.PersistedStore {
         return D[e] ?? !1;
     }
     getLastActiveStream() {
-        return (0, p.A)(y.A) ? (Array.from(r.values()).pop() ?? null) : null;
+        return (0, p.A)(y.Ay) ? (Array.from(r.values()).pop() ?? null) : null;
     }
     getAllActiveStreams() {
-        return (0, p.A)(y.A) ? Array.from(r.values()) : [];
+        return (0, p.A)(y.Ay) ? Array.from(r.values()) : [];
     }
     getAllActiveStreamsForChannel(e) {
-        return (0, p.A)(y.A) ? Array.from(r.values()).filter((t) => t.channelId === e) : [];
+        return (0, p.A)(y.Ay) ? Array.from(r.values()).filter((t) => t.channelId === e) : [];
     }
     getActiveStreamForStreamKey(e) {
-        return (0, p.A)(y.A) ? (r.get(e) ?? null) : null;
+        return (0, p.A)(y.Ay) ? (r.get(e) ?? null) : null;
     }
     getActiveStreamForApplicationStream(e) {
-        if (!(0, p.A)(y.A) || null == e) return null;
+        if (!(0, p.A)(y.Ay) || null == e) return null;
         let t = (0, f._z)(e);
         return this.getActiveStreamForStreamKey(t) ?? null;
     }
@@ -273,31 +273,31 @@ class et extends u.Ay.PersistedStore {
         return t?.previewDisabled ?? !1;
     }
     getAnyStreamForUser(e) {
-        if (!(0, p.A)(y.A)) return null;
+        if (!(0, p.A)(y.Ay)) return null;
         let t = i[e];
         return null == t ? null : (Object.values(t).find((e) => ee(e)) ?? null);
     }
     getAnyDiscoverableStreamForUser(e) {
-        if (!(0, p.A)(y.A)) return null;
+        if (!(0, p.A)(y.Ay)) return null;
         let t = i[e];
         return null == t ? null : (Object.values(t).find((e) => ee(e) && !1 !== e.discoverable) ?? null);
     }
     getStreamForUser(e, t) {
-        if (!(0, p.A)(y.A)) return null;
+        if (!(0, p.A)(y.Ay)) return null;
         let n = i[e]?.[t ?? N.eGj];
         return null != n && ee(n) ? n : null;
     }
     getRTCStream(e) {
-        return (0, p.A)(y.A) ? (a[e] ?? null) : null;
+        return (0, p.A)(y.Ay) ? (a[e] ?? null) : null;
     }
     getAllApplicationStreams() {
-        return (0, p.A)(y.A) ? k().filter((e) => null != e && J(e.streamType, e.channelId)) : [];
+        return (0, p.A)(y.Ay) ? k().filter((e) => null != e && J(e.streamType, e.channelId)) : [];
     }
     getAllApplicationStreamsForChannel(e) {
-        return (0, p.A)(y.A) ? k().filter((t) => null != t && t.channelId === e && J(t.streamType, t.channelId)) : [];
+        return (0, p.A)(y.Ay) ? k().filter((t) => null != t && t.channelId === e && J(t.streamType, t.channelId)) : [];
     }
     getViewerIds(e) {
-        if (!(0, p.A)(y.A)) return [];
+        if (!(0, p.A)(y.Ay)) return [];
         let t = null,
             n = null != (t = "string" == typeof e ? e : (0, f._z)(e)) ? a[t] : null;
         return null != n ? n.viewerIds : [];
@@ -306,7 +306,7 @@ class et extends u.Ay.PersistedStore {
         return L;
     }
     getStreamingState() {
-        return (0, p.A)(y.A)
+        return (0, p.A)(y.Ay)
             ? {
                   activeStreams: Array.from(r.entries()),
                   streamsByUserAndGuild: i,

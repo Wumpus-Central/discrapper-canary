@@ -15,8 +15,8 @@ var i = n(311907),
     p = n(287809),
     g = n(977997),
     E = n(954571),
-    f = n(403362),
-    I = n(723702),
+    I = n(403362),
+    f = n(723702),
     C = n(90924),
     N = n(592653),
     T = n(639621),
@@ -40,7 +40,7 @@ class y {
             (this.registerTransportsForEmbeddedPlatform = e.registerTransportsForEmbeddedPlatform);
     }
     loadServer() {
-        for (let e of (I.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports))
+        for (let e of (f.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports))
             this.rpcServer.registerTransport(e);
         for (let [e, t] of Object.entries(this.rpcCommandHandlers)) this.rpcServer.setCommandHandler(e, t);
         for (let [e, t] of Object.entries(this.rpcEventHandlers)) this.rpcServer.setEventHandler(e, t);
@@ -57,7 +57,7 @@ class y {
             (this.rpcServer.onDisconnect = (e, t) => {
                 r.h.dispatch({ type: "RPC_APP_DISCONNECTED", socketId: e.id, application: e.application, reason: t });
             });
-        let e = [o.A, d.Ay, A.A, g.A, u.A, h.A];
+        let e = [o.A, d.Ay, A.A, g.A, u.Ay, h.A];
         new i.ru(e.concat(this.stores), () => this.rpcServer.updateSubscriptions()).attach("RPCServerManager"),
             r.h.subscribe("MESSAGE_CREATE", this.handleMessage),
             r.h.subscribe("MESSAGE_UPDATE", this.handleMessage),
@@ -129,7 +129,7 @@ class y {
                 (t = S.ZE4.MESSAGE_DELETE), (n = e.channelId), (i = { id: e.id }), (r = `${t}${e.id}`);
                 break;
             default:
-                return (0, f.xb)(e);
+                return (0, I.xb)(e);
         }
         null != n &&
             this.rpcServer.dispatchToSubscriptions(t, { channel_id: n }, { channel_id: n, message: (0, C.Yj)(i) }, r);

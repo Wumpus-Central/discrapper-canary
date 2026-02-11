@@ -29,7 +29,7 @@ function S(e) {
         c = (0, a.bG)([p.A], () => p.A.getVoiceChannelId()),
         _ = (0, a.bG)([h.A], () => h.A.getChannel(c), [c]),
         E = (0, a.bG)([f.default], () => f.default.getCurrentUser()),
-        x = (0, a.bG)([m.A], () => (0, d.A)(m.A)),
+        x = (0, a.bG)([m.Ay], () => (0, d.A)(m.Ay)),
         S = (0, a.bG)([A.A, g.A], () => null != _ && (0, o.vz)(_, A.A, g.A));
     return l.useCallback(async () => {
         await T({
@@ -59,7 +59,7 @@ async function I(e) {
         u = h.A.getChannel(r),
         c = f.default.getCurrentUser(),
         _ = null != u && (0, o.vz)(u, A.A, g.A),
-        E = (0, d.A)(m.A);
+        E = (0, d.A)(m.Ay);
     await T({
         pid: t,
         voiceChannelId: r,

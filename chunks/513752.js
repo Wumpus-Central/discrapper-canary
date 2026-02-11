@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => p });
 var r = n(73153),
     i = n(58149),
     a = n(329551),
@@ -24,22 +24,22 @@ let f = (e, t) => {
             duration_speaking_voice_filter_ms: null != n ? [...n.values()] : null,
         };
     },
-    p = () => {
+    h = () => {
         let e = (0, a.i)(_.default.getCurrentUser());
         return {
-            video_device_name: u.A.getVideoDevices()[u.A.getVideoDeviceId()]?.name,
-            video_hardware_scaling_enabled: u.A.getHardwareEncoding(),
+            video_device_name: u.Ay.getVideoDevices()[u.Ay.getVideoDeviceId()]?.name,
+            video_hardware_scaling_enabled: u.Ay.getHardwareEncoding(),
             video_effect_type: (0, o.wC)(e),
             video_effect_detail: (0, o._V)(e),
         };
     };
-function h(e, t, n, i) {
+function p(e, t, n, i) {
     let a = d.A.getVoiceChannelId(),
         o = l.A.getChannel(a);
     if (null == t && null != a && null != o) {
         let t = f(o, i);
         if ((e(), s.A.hasUsedBackgroundInCall)) {
-            let e = { ...t, ...p() };
+            let e = { ...t, ...h() };
             r.h.dispatch({ type: "VIDEO_BACKGROUND_SHOW_FEEDBACK", analyticsData: e });
         } else r.h.dispatch({ type: "VOICE_CHANNEL_SHOW_FEEDBACK", analyticsData: t });
     } else e();

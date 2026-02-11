@@ -7,7 +7,7 @@ var i = n(397927),
     s = n(731854),
     o = n(985018);
 function l(e) {
-    a.A.supports(s.O5.VIDEO)
+    a.Ay.supports(s.O5.VIDEO)
         ? (0, i.mMO)(async () => {
               let { default: t } = await n.e("11487").then(n.bind(n, 792866));
               return (n) =>

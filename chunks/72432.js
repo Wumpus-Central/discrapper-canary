@@ -28,25 +28,25 @@ async function N(e, t) {
         S = N?.getGuildId(),
         b = u.A.getGuild(S)?.premiumTier;
     if (null == n || null == N || null == l) return [!1, "no user or channel"];
-    let y = null;
-    if (null == (y = "number" == typeof e ? r.Ay.getGameForPID(e) : e)) return [!1, "no source"];
+    let j = null;
+    if (null == (j = "number" == typeof e ? r.Ay.getGameForPID(e) : e)) return [!1, "no source"];
     if (
-        !m.A.getUseSystemScreensharePicker() &&
+        !m.Ay.getUseSystemScreensharePicker() &&
         !(await s.A.hasPermission(I.iL.SCREEN_RECORDING, { showAuthorizationError: !1 }))
     )
         return [!1, "no permission"];
-    let { preset: j, resolution: R, fps: L, soundshareEnabled: M } = d.A.getState(),
-        O = t?.preset ?? j,
-        { allowAutoQuality: P } = (0, g.eO)({ location: "startStreamWithSource" });
-    O !== C.jQ.PRESET_AUTO || P || (O = C.jQ.PRESET_VIDEO);
-    let D = O === C.jQ.PRESET_AUTO ? C.jQ.PRESET_VIDEO : O,
-        [k, U] = (0, f.A)(D, n, b) ?? [],
+    let { preset: y, resolution: R, fps: L, soundshareEnabled: M } = d.A.getState(),
+        O = t?.preset ?? y,
+        { allowAutoQuality: D } = (0, g.eO)({ location: "startStreamWithSource" });
+    O !== C.jQ.PRESET_AUTO || D || (O = C.jQ.PRESET_VIDEO);
+    let P = O === C.jQ.PRESET_AUTO ? C.jQ.PRESET_VIDEO : O,
+        [k, U] = (0, f.A)(P, n, b) ?? [],
         w = k ?? t?.resolution ?? R,
         G = U ?? t?.fps ?? L,
         B = t?.previewDisabled ?? o.uh.getSetting(),
         F = t?.soundshareEnabled ?? M;
     return (
-        (0, A.A)(D, w, G, n, b, N) || ((O = C.jQ.PRESET_VIDEO), (w = C.on.RESOLUTION_720), (G = C.kn.FPS_30)),
+        (0, A.A)(P, w, G, n, b, N) || ((O = C.jQ.PRESET_VIDEO), (w = C.on.RESOLUTION_720), (G = C.kn.FPS_30)),
         (0, a.Xd)({ preset: O, resolution: w, frameRate: G, soundshareEnabled: F }),
         (0, a.XI)(S, l, {
             ...(function (e) {
@@ -68,8 +68,8 @@ async function N(e, t) {
                           `Starting stream for source id ${e.id} and name ${e.name} converted to running game pid ${a}`,
                       ),
                       { pid: a });
-            })(y),
-            audioSourceId: y.id?.startsWith(i.fS.CAMERA) ? t?.audioSourceId : void 0,
+            })(j),
+            audioSourceId: j.id?.startsWith(i.fS.CAMERA) ? t?.audioSourceId : void 0,
             sound: F,
             previewDisabled: B,
             goLiveModalDurationMs: t?.goLiveModalDurationMs,

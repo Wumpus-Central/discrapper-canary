@@ -93,7 +93,7 @@ async function X(e, t) {
         eP = q.default.getFocusedPID(),
         eC = q.default.getSelectedGuildId(),
         eG = q.default.getSelectedChannelId(),
-        eR = U.A.getState(),
+        eR = U.Ay.getState(),
         ej = C.A.games,
         ew = Object.values(H.A.paymentSources).map((e) => e.toJS()),
         e_ = H.A.defaultPaymentSourceId,

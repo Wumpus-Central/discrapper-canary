@@ -112,12 +112,12 @@ function e$() {
         r.useEffect(() => {
             ej.default.track(eV.HAw.OPEN_POPOUT, { type: eV.JJy.NOISE_CANCELLATION_POPOUT });
         }, []);
-    let { noiseCancellationActive: t, systemMicrophoneMode: n } = (0, c.cf)([ev.A], () => ({
-            noiseCancellationActive: ev.A.getNoiseCancellation(),
-            systemMicrophoneMode: ev.A.getSystemMicrophoneMode(),
+    let { noiseCancellationActive: t, systemMicrophoneMode: n } = (0, c.cf)([ev.Ay], () => ({
+            noiseCancellationActive: ev.Ay.getNoiseCancellation(),
+            systemMicrophoneMode: ev.Ay.getSystemMicrophoneMode(),
         })),
         a = !(0, Q.A)(!0, n, { location: "NoiseCancellationPopout" }),
-        l = (0, c.bG)([ev.A], () => ev.A.getActiveInputProfile()),
+        l = (0, c.bG)([ev.Ay], () => ev.Ay.getActiveInputProfile()),
         s = null != l && l !== eY.my.CUSTOM,
         o = eW.intl.string(eW.t.uKdWn6),
         d = eW.intl.string(eW.t.uKdWn6);
@@ -126,7 +126,7 @@ function e$() {
             ? ((o = eW.intl.string(eW.t.mXZgC9)),
               (d = eW.intl.format(eW.t.F6lrb4, {
                   onSettingsClick: () => {
-                      ev.A.getMediaEngine().showSystemCaptureConfigurationUI("microphone_modes");
+                      ev.Ay.getMediaEngine().showSystemCaptureConfigurationUI("microphone_modes");
                   },
               })))
             : s &&
@@ -210,7 +210,7 @@ function eX(e) {
         N = (0, $.Us)(),
         T = r.useCallback(
             (e) => {
-                if (ev.A.isVideoEnabled() === e) return;
+                if (ev.Ay.isVideoEnabled() === e) return;
                 let n = () => {
                     f.A.setVideoEnabled(e), e && (0, X.pX)(eV.BVt.CHANNEL(t.getGuildId() ?? eV.ME, t.id));
                 };
@@ -746,20 +746,20 @@ let e6 = (0, T.A)(function (e) {
         o = (0, c.bG)([eT.A], () => eT.A.getChannel(l), [l]),
         d = o?.getGuildId(),
         u = (0, c.bG)([eS.A], () => eS.A.getGuild(d), [d]),
-        A = (0, c.cf)([ev.A], () => ({
-            noiseCancellationSupported: ev.A.isNoiseCancellationSupported(),
-            noiseCancellationActive: (0, Q.A)(ev.A.getNoiseCancellation(), ev.A.getSystemMicrophoneMode(), {
+        A = (0, c.cf)([ev.Ay], () => ({
+            noiseCancellationSupported: ev.Ay.isNoiseCancellationSupported(),
+            noiseCancellationActive: (0, Q.A)(ev.Ay.getNoiseCancellation(), ev.Ay.getSystemMicrophoneMode(), {
                 location: "RTCConnection",
             }),
-            noiseCancellationError: ev.A.isNoiseCancellationError(),
-            canGoLive: (0, Y.A)(ev.A),
+            noiseCancellationError: ev.Ay.isNoiseCancellationError(),
+            canGoLive: (0, Y.A)(ev.Ay),
         })),
         h = (0, c.bG)(
-            [ev.A, z.A],
+            [ev.Ay, z.A],
             () =>
                 z.A.hasHotspot(eF._.VOICE_PANEL_INTRODUCTION) &&
                 (0, ew.mv)(a) &&
-                !ev.A.isInteractionRequired() &&
+                !ev.Ay.isInteractionRequired() &&
                 !o?.isGuildStageVoice(),
         ),
         _ = (0, c.bG)([eR.A], () => null != l && eR.A.hasVideo(l), [l]),

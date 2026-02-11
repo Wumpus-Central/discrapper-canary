@@ -15,8 +15,8 @@ let h = { ignoredDevices: {} },
     p = {},
     g = {},
     E = {},
-    f = { id: null, justChanged: !1 },
     I = { id: null, justChanged: !1 },
+    f = { id: null, justChanged: !1 },
     C = /\(([^)]+)\)/;
 function N(e) {
     if ((0, c.getPlatform)() === c.PlatformTypes.WINDOWS) {
@@ -37,7 +37,7 @@ class S extends a.Ay.DeviceSettingsStore {
     static persistKey = "ConnectedDeviceStore";
     static migrations = [(e) => (null == e.ignoredDevices ? { ...e, ignoredDevices: {} } : e)];
     initialize(e) {
-        this.waitFor(d.A, o.A), (_ = e ?? h);
+        this.waitFor(d.Ay, o.A), (_ = e ?? h);
     }
     getUserAgnosticState() {
         return _;
@@ -52,33 +52,33 @@ class S extends a.Ay.DeviceSettingsStore {
         return p;
     }
     get lastInputSystemDevice() {
-        return f;
+        return I;
     }
     get outputDevices() {
         return g;
     }
     get lastOutputSystemDevice() {
-        return I;
+        return f;
     }
 }
 let x = new S(l.h, {
     MEDIA_ENGINE_DEVICES: function (e) {
         let { inputDevices: t, outputDevices: n } = e,
             i = {};
-        (f.justChanged = !1),
+        (I.justChanged = !1),
             t.forEach((e) => {
                 if (((i[N(e)] = e.id), e.id === A.dx)) {
                     let t = e.originalId ?? e.originalName;
-                    t !== f.id && (f.justChanged = !0), (f.id = t);
+                    t !== I.id && (I.justChanged = !0), (I.id = t);
                 }
             });
         let a = {};
         if (
-            ((I.justChanged = !1),
+            ((f.justChanged = !1),
             n.forEach((e) => {
                 if (((a[N(e)] = e.id), e.id === A.dx)) {
                     let t = e.originalId ?? e.originalName;
-                    t !== I.id && (I.justChanged = !0), (I.id = t);
+                    t !== f.id && (f.justChanged = !0), (f.id = t);
                 }
             }),
             !m)

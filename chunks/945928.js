@@ -1,4 +1,4 @@
-i.d(t, { Q: () => m });
+i.d(t, { Q: () => L });
 var n = i(64700),
     l = i(311907),
     s = i(827343),
@@ -19,7 +19,7 @@ var n = i(64700),
     N = i(903427),
     O = i(509381),
     b = i(985018);
-let L = (0, a.Qx)(_.X.VOICE_INPUT_PROFILE_SETTING, {
+let m = (0, a.Qx)(_.X.VOICE_INPUT_PROFILE_SETTING, {
         useTitle: () => b.intl.string(b.t.LM3U3k),
         usePredicate: function () {
             let { enabledInputProfiles: e } = (0, T._)({ location: "SettingsRendererConfig" });
@@ -27,7 +27,7 @@ let L = (0, a.Qx)(_.X.VOICE_INPUT_PROFILE_SETTING, {
         },
         useSearchTerms: () => [b.intl.string(b.t.nuFtHH), b.intl.string(b.t.VZPR0R), b.intl.string(b.t.cjPbpT)],
         useValue: function () {
-            return (0, l.bG)([d.A], () => d.A.getActiveInputProfile() ?? O.my.CUSTOM);
+            return (0, l.bG)([d.Ay], () => d.Ay.getActiveInputProfile() ?? O.my.CUSTOM);
         },
         setValue: function (e) {
             let t = [r.A.USER_SETTINGS_VOICE_AND_VIDEO];
@@ -45,13 +45,13 @@ let L = (0, a.Qx)(_.X.VOICE_INPUT_PROFILE_SETTING, {
             });
         },
     }),
-    m = (0, a.zZ)(_.X.VOICE_INPUT_PROFILE_CATEGORY, {
+    L = (0, a.zZ)(_.X.VOICE_INPUT_PROFILE_CATEGORY, {
         useInlineNotice: function () {
-            let e = (0, l.bG)([o.A, d.A], () => {
-                let e = d.A.getInputDeviceId();
+            let e = (0, l.bG)([o.A, d.Ay], () => {
+                let e = d.Ay.getInputDeviceId();
                 return (
                     (o.A.hasEchoCancellation(e) || o.A.hasNoiseSuppression(e) || o.A.hasAutomaticGainControl(e)) &&
-                    d.A.isInputProfileCustom()
+                    d.Ay.isInputProfileCustom()
                 );
             });
             return n.useMemo(() => {
@@ -63,5 +63,5 @@ let L = (0, a.Qx)(_.X.VOICE_INPUT_PROFILE_SETTING, {
                     };
             }, [e]);
         },
-        buildLayout: () => [L, E.O, c.w, S.h, N.K, g.C, C.m, I.A, A.U],
+        buildLayout: () => [m, E.O, c.w, S.h, N.K, g.C, C.m, I.A, A.U],
     });

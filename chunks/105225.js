@@ -73,7 +73,7 @@ var i = n(627968),
     eC = n(49999),
     eE = n(913957);
 function eI(e, t) {
-    if (ei.A.isVideoEnabled() === e) return;
+    if (ei.Ay.isVideoEnabled() === e) return;
     let n = () => A.A.setVideoEnabled(e);
     (0, v.X)(C.A.VOICE_CONTROL_TRAY, v.O.CAMERA, e), e ? (0, e_.A)(n, t) : n();
 }
@@ -354,7 +354,7 @@ let ey = function (e) {
         { cameraUnavailable: x, enabled: I } = (0, ea.A)(),
         v = (0, eo.A)(t),
         { suppress: y, selfMute: j, mute: L } = (0, ed.A)(t),
-        { canGoLive: D } = (0, c.cf)([ei.A], () => ({ canGoLive: (0, M.A)(ei.A) })),
+        { canGoLive: D } = (0, c.cf)([ei.Ay], () => ({ canGoLive: (0, M.A)(ei.Ay) })),
         G = (0, O.A)(),
         U = (0, c.bG)([R.default], () => null != R.default.getAwaitingRemoteSessionInfo()),
         k = null != G,

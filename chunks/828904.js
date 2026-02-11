@@ -105,7 +105,7 @@ function S(e) {
                                       className: s()(E.tN, D.C2),
                                       children: (0, n.jsx)(p.A, {
                                           streamId: l,
-                                          videoComponent: h.A.getMediaEngine().Video,
+                                          videoComponent: h.Ay.getMediaEngine().Video,
                                           paused: !1,
                                           videoSpinnerContext: u.u.REPLAY_VIDEO_STREAM,
                                           userId: a,

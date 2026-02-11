@@ -17,7 +17,7 @@ function h(e) {
             { location: "VoiceEffectsActionBar" },
             { autoTrackExposure: !1 },
         ),
-        p = (0, a.A)(d.A);
+        p = (0, a.A)(d.Ay);
     if (null == t || null != A) return null;
     let g = m && p;
     return g

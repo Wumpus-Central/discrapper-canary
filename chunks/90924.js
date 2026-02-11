@@ -36,8 +36,8 @@ var i = n(567243),
     p = n(71393),
     g = n(430452),
     E = n(320501),
-    f = n(290863),
-    I = n(287809),
+    I = n(290863),
+    f = n(287809),
     C = n(977997),
     N = n(927813),
     T = n(562153),
@@ -85,7 +85,7 @@ function G(e, t) {
             ),
         Promise.all(n).then(() => {
             let n =
-                    (!e.isNSFW() || I.default.getCurrentUser()?.nsfwAllowed === !0) && t
+                    (!e.isNSFW() || f.default.getCurrentUser()?.nsfwAllowed === !0) && t
                         ? E.A.getMessages(e.id).toArray().map(k)
                         : [],
                 r = Object.values(C.A.getVoiceStatesForChannel(e.id)).map((t) => V(i, e.id, t));
@@ -132,24 +132,24 @@ function k(e) {
 }
 function V(e, t, n) {
     let { mute: i, deaf: r, selfMute: a, selfDeaf: l, suppress: s, userId: o } = n,
-        d = I.default.getUser(o);
+        d = f.default.getUser(o);
     if (null == d) throw Error(`Invalid user id: ${o}`);
     return {
         nick: T.Ay.getName(e, t, d),
-        mute: g.A.isLocalMute(d.id),
-        volume: g.A.getLocalVolume(d.id),
-        pan: g.A.getLocalPan(d.id),
+        mute: g.Ay.isLocalMute(d.id),
+        volume: g.Ay.getLocalVolume(d.id),
+        pan: g.Ay.getLocalPan(d.id),
         voice_state: { mute: i, deaf: r, self_mute: a, self_deaf: l, suppress: s },
         user: (0, b.A)(d),
     };
 }
 function B(e, t) {
-    return { type: e, user: (0, b.A)(t), presence: { status: f.A.getStatus(t.id, null), activity: null } };
+    return { type: e, user: (0, b.A)(t), presence: { status: I.A.getStatus(t.id, null), activity: null } };
 }
 function H(e, t) {
     return null == t
         ? e
-        : { ...e, presence: { ...e.presence, activity: f.A.getApplicationActivity(e.user.id, t) ?? null } };
+        : { ...e, presence: { ...e.presence, activity: I.A.getApplicationActivity(e.user.id, t) ?? null } };
 }
 function F(e) {
     let t;
@@ -222,15 +222,15 @@ function Q(e, t) {
     null == t && (e.authorization.scopes = [y.hj]);
 }
 function X(e) {
-    let t = g.A.getSettings(),
+    let t = g.Ay.getSettings(),
         n = (e) =>
             Object.values(e)
                 .sort((e, t) => e.index - t.index)
                 .map((e) => ({ id: e.id, name: e.name })),
         i = e(t);
     return {
-        input: { available_devices: n(g.A.getInputDevices()), device_id: t.inputDeviceId, volume: t.inputVolume },
-        output: { available_devices: n(g.A.getOutputDevices()), device_id: t.outputDeviceId, volume: t.outputVolume },
+        input: { available_devices: n(g.Ay.getInputDevices()), device_id: t.inputDeviceId, volume: t.inputVolume },
+        output: { available_devices: n(g.Ay.getOutputDevices()), device_id: t.outputDeviceId, volume: t.outputVolume },
         mode: {
             type: t.mode,
             auto_threshold: t.modeOptions.autoThreshold,
@@ -248,7 +248,7 @@ function X(e) {
     };
 }
 function Z(e, t) {
-    let n = g.A.getSettings(e),
+    let n = g.Ay.getSettings(e),
         i = t(n);
     return {
         input_mode: { type: n.mode, shortcut: i },

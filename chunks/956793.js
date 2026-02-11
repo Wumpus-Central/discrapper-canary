@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { default: () => p });
+n.d(t, { default: () => h });
 var r = n(73153),
     i = n(323073),
     a = n(108713),
@@ -12,7 +12,7 @@ var o = n(574172),
     d = n(430452),
     _ = n(381222),
     f = n(652215);
-let p = {
+let h = {
     selectChannel(e) {
         let {
             guildId: t,
@@ -45,7 +45,7 @@ let p = {
             s = a?.getGuildId();
         a?.isGuildVocalOrThread() && (0, i.qR)(a)
             ? (0, l.pX)(f.BVt.CHANNEL(s, e))
-            : d.A.isSupported() && (null != e && d.A.getMediaEngine().interact(), (0, _.x)(e, s, t, n, r));
+            : d.Ay.isSupported() && (null != e && d.Ay.getMediaEngine().interact(), (0, _.x)(e, s, t, n, r));
     },
     disconnect() {
         let e = s.default.getRemoteSessionId();

@@ -23,7 +23,7 @@ function f(e) {
         }, []),
         C = n.useCallback(
             async (e, t, r, n) => {
-                o.A.supports(E.O5.MLS_PAIRWISE_FINGERPRINTS)
+                o.Ay.supports(E.O5.MLS_PAIRWISE_FINGERPRINTS)
                     ? d.A.getRTCConnection()?.getMLSPairwiseFingerprint(0, r, (e) => {
                           T(new Uint8Array(e));
                       })

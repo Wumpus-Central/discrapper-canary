@@ -21,19 +21,19 @@ var i = n(627968),
     I = n(996439),
     T = n(810412),
     C = n(799808),
-    v = n(129537),
-    y = n(412477),
+    y = n(129537),
+    v = n(412477),
     N = n(916494),
     O = n(897720),
-    b = n(392164),
-    j = n(652215),
+    j = n(392164),
+    b = n(652215),
     w = n(731854),
     L = n(985018),
     R = n(384339);
 let D = l.memo(function (e) {
         let { participant: t, channel: n, context: l } = e,
             a = t.user?.id;
-        return (0, r.bG)([E.A], () => null != t.user && null != l && null != n && E.A.isLocalVideoDisabled(a, l), [
+        return (0, r.bG)([E.Ay], () => null != t.user && null != l && null != n && E.Ay.isLocalVideoDisabled(a, l), [
             a,
             t.user,
             l,
@@ -55,7 +55,7 @@ let D = l.memo(function (e) {
             h = l.useCallback(
                 (e, l) => {
                     let a = e.user;
-                    (0, T.YX)(j.uss.VIDEO, { type: T.Z5.CAMERA, value: T.IP.SETTINGS_OPENED, userId: a?.id }),
+                    (0, T.YX)(b.uss.VIDEO, { type: T.Z5.CAMERA, value: T.IP.SETTINGS_OPENED, userId: a?.id }),
                         (0, d.L3)(l, async () => {
                             let { default: e } = await Promise.all([n.e("97262"), n.e("87997"), n.e("99871")]).then(
                                 n.bind(n, 180812),
@@ -66,7 +66,7 @@ let D = l.memo(function (e) {
                                     user: a,
                                     mediaEngineContext: t,
                                     onWatchStream: () => {
-                                        (0, T.YX)(j.uss.VIDEO, {
+                                        (0, T.YX)(b.uss.VIDEO, {
                                             type: T.Z5.GO_LIVE,
                                             value: T.IP.ENABLED,
                                             userId: a?.id,
@@ -80,7 +80,7 @@ let D = l.memo(function (e) {
             g = (0, T.Dk)(() => new Set(a.map((e) => e.user?.id)), [a]);
         l.useEffect(() => {
             c &&
-                (0, T.Y)(j.uss.VIDEO, {
+                (0, T.Y)(b.uss.VIDEO, {
                     locked: S.default.isInstanceLocked(),
                     shownUserIds: Array.from(g),
                     liveUserIds: Array.from(g),
@@ -153,7 +153,7 @@ let D = l.memo(function (e) {
             : A
               ? (0, i.jsx)("div", {
                     ref: m,
-                    children: (0, i.jsx)(y.g, { emptyText: L.intl.string(L.t.aTiM42), icon: o.npA, absolute: !0 }),
+                    children: (0, i.jsx)(v.g, { emptyText: L.intl.string(L.t.aTiM42), icon: o.npA, absolute: !0 }),
                 })
               : null;
     }),
@@ -188,7 +188,7 @@ function V(e) {
             cropSelfVideo: !0,
             version: o,
         }),
-        T = (0, r.bG)([g.A], () => g.A.getWindowState(b.f)),
+        T = (0, r.bG)([g.A], () => g.A.getWindowState(j.f)),
         C = {
             id: e.widget.id,
             containerSize: { containerHeight: m, containerWidth: A },
@@ -225,7 +225,7 @@ function V(e) {
                     let { width: o, height: d } = z({
                         ...r,
                         widget: a,
-                        operation: v.P.RESIZE_NORTH,
+                        operation: y.P.RESIZE_NORTH,
                         computedSize: { width: l, height: i },
                         originSize: { width: l, height: i },
                     });

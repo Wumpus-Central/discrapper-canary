@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => A });
+n.d(t, { A: () => I });
 var r = n(397927),
     i = n(73153),
     a = n(15285),
@@ -11,25 +11,25 @@ var r = n(397927),
     d = n(274372),
     _ = n(915618),
     f = n(572164),
-    p = n(399925);
+    h = n(399925);
 n(63389);
-var h = n(696016),
-    m = n(985018);
-let g = "CLIPS_IN_CALL_WARNING";
-class E extends u.A {
+var p = n(696016),
+    g = n(985018);
+let E = "CLIPS_IN_CALL_WARNING";
+class A extends u.A {
     showClipsToast() {
         (0, r.showToast)({
-            id: g,
-            message: m.intl.string(m.t["d+41qJ"]),
+            id: E,
+            message: g.intl.string(g.t["d+41qJ"]),
             type: r.ToastType.CLIP,
-            options: { duration: h.Vi },
+            options: { duration: p.Vi },
         });
     }
     applyNativeClipsSettings(e) {
-        if (!(0, _.A)(o.A)) return;
+        if (!(0, _.A)(o.Ay)) return;
         let t = d.A.getSettings(),
             n = (0, f.TD)(),
-            r = o.A.getMediaEngine();
+            r = o.Ay.getMediaEngine();
         if (
             (r.setClipBufferLength(n ? t.clipsLength / 1e3 : 0),
             r.setClipsMaxPendingTasks(c.A.getConfig({ location: "applyNativeClipsSettings" }).count),
@@ -51,7 +51,7 @@ class E extends u.A {
         let t = a.Ay.getVisibleGame();
         null == t ||
             (e.added.find((e) => e.pid === t.pid)
-                ? setTimeout(() => this.fireClipsInitEvent(), h.dV)
+                ? setTimeout(() => this.fireClipsInitEvent(), p.dV)
                 : this.fireClipsInitEvent());
     }
     fireClipsInitEvent() {
@@ -69,9 +69,9 @@ class E extends u.A {
     loadClipsFromStorage() {
         let e = d.A.getSettings().storageLocation;
         "" !== e &&
-            p.Fb(e).catch((e) => {
-                h.nx.error("Failed to load clips directory on connection open", e);
+            h.Fb(e).catch((e) => {
+                p.nx.error("Failed to load clips directory on connection open", e);
             });
     }
 }
-let A = new E();
+let I = new A();

@@ -40,7 +40,7 @@ function S(e) {
     (0, h.jd)(), (0, x.A)(t, g.FX);
     let [{ nativeSourceType: s }, i] = (0, p.tS)(),
         n = (0, f.isMac)() && a().satisfies(d.A?.os.release, _.WZ),
-        l = u.A.getUseGamescopeCapture(),
+        l = u.Ay.getUseGamescopeCapture(),
         S = l ? "gamescope" : "screen";
     return (0, r.jsxs)("div", {
         className: v.zr,

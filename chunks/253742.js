@@ -36,7 +36,7 @@ function O(e) {
     let t = r.useRef(null),
         { parentAnalyticsLocation: a } = (0, m.Ay)(),
         { channel: A, user: h, nick: C, mute: O, deaf: R, serverMute: P, serverDeaf: j } = e,
-        D = (0, s.bG)([N.A], () => N.A.isLocalMute(h.id)),
+        D = (0, s.bG)([N.Ay], () => N.Ay.isLocalMute(h.id)),
         w = (0, u.A)({ userId: h.id, checkSoundSharing: !0 }),
         M = A.getGuildId() ?? void 0,
         U = h.getAvatarURL(A.guild_id, 24),

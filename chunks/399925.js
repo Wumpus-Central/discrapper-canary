@@ -175,7 +175,7 @@ async function Y(e) {
         o = (0, N.A)(e, t, C.nQ.CLIP, n, r),
         l = `${(0, b.A)(o.applicationName.substring(0, 20))}_${o.id}.mp4`,
         c = s.A.fileManager.join(i, l),
-        d = g.A.getMediaEngine(),
+        d = g.Ay.getMediaEngine(),
         _ = JSON.stringify(o),
         f = null != e ? (0, u.Iy)(e).ownerId : void 0,
         h = j(e);
@@ -226,7 +226,7 @@ async function W(e) {
         { enableViewerClipping: o } = c.A.getCurrentConfig({ location: "SaveClip" }, { autoTrackExposure: !1 });
     if (v.A.getIsAtMaxSaveClipOperations()) return;
     let _ = (0, R.TD)() && null != h.A.getCurrentUserActiveStream(),
-        f = (0, R.Ao)() && l.Ay.getVisibleGame()?.windowHandle != null && g.A.hasClipsSource(),
+        f = (0, R.Ao)() && l.Ay.getVisibleGame()?.windowHandle != null && g.Ay.hasClipsSource(),
         A = null != e && null != h.A.getActiveStreamForStreamKey(e) && o,
         T = (0, S.Vr)() && (0, R.TD)() && null == h.A.getCurrentUserActiveStream() && null != E.A.getChannelId();
     if (!_ && !f && !A && !T) return;
@@ -290,7 +290,7 @@ async function K(e, t) {
     let i = h.A.getCurrentUserActiveStream(),
         o = null != i ? (0, u._z)(i) : void 0,
         c = e ?? o,
-        _ = g.A.getMediaEngine(),
+        _ = g.Ay.getMediaEngine(),
         f = (0, N.A)(c, t, C.nQ.SCREENSHOT),
         E = v.A.getSettings().storageLocation,
         A = "jpeg",
@@ -348,7 +348,7 @@ async function z(e, t) {
     if (null == n) return;
     let r = { ...n, ...t };
     null != (await (0, O.q)(r)) &&
-        (await g.A.getMediaEngine().updateClipMetadata(r.filepath, JSON.stringify(r)),
+        (await g.Ay.getMediaEngine().updateClipMetadata(r.filepath, JSON.stringify(r)),
         T.default.track(x.HAw.CLIP_EDITED, { clip_id: r.id }),
         a.h.dispatch({ type: "CLIPS_UPDATE_METADATA", clip: r }));
 }
@@ -377,7 +377,7 @@ async function J(e) {
         (await s.A.clips.deleteClip(e), a.h.dispatch({ type: "CLIPS_DELETE_CLIP", filepath: e }));
 }
 async function ee(e) {
-    let t = g.A.getMediaEngine(),
+    let t = g.Ay.getMediaEngine(),
         n = await t.exportClip(
             e.filepath,
             e.editMetadata ?? {
@@ -403,7 +403,7 @@ function er(e) {
     });
 }
 function ei(e) {
-    let t = g.A.getMediaEngine().setClipsMLPipelineTypeEnabled;
+    let t = g.Ay.getMediaEngine().setClipsMLPipelineTypeEnabled;
     null != t &&
         (t("emotion_classifier", e.emotionClassifier),
         t("wake_word_detector", e.wakeWordDetector),
