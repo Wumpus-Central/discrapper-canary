@@ -1,5 +1,5 @@
 "use strict";
-s.d(t, { A: () => C });
+s.d(t, { A: () => E });
 var n = s(627968),
     r = s(64700),
     l = s(311907),
@@ -10,27 +10,27 @@ var n = s(627968),
     d = s(4227),
     u = s(856686),
     g = s(429876),
-    m = s(599062),
-    _ = s(998694),
+    _ = s(599062),
+    m = s(998694),
     h = s(231209),
     p = s(781724),
     f = s(758836);
-let E = [f.G2.HOME, f.G2.ORBS];
-function C(e) {
+let x = [f.G2.HOME, f.G2.ORBS];
+function E(e) {
     let {
             tab: t,
-            sortedCategories: s,
+            categories: s,
             transitionToTab: i,
             transitionState: o,
             updateAnalyticsState: c,
             refreshCategories: d,
         } = e,
-        _ = b();
-    A(_);
-    let C = (0, l.bG)([a.A], () => a.A.useReducedMotion),
-        [x, S] = r.useState(void 0),
+        m = C();
+    A(m);
+    let E = (0, l.bG)([a.A], () => a.A.useReducedMotion),
+        [b, S] = r.useState(void 0),
         [v, L] = r.useState(!0),
-        T = r.useMemo(
+        I = r.useMemo(
             () =>
                 s.filter(
                     (e) =>
@@ -41,7 +41,7 @@ function C(e) {
                 ),
             [s],
         ),
-        I = r.useCallback(
+        j = r.useCallback(
             (e) => {
                 let {
                     sourceButton: t,
@@ -51,30 +51,30 @@ function C(e) {
                     isOrbsExclusive: l,
                 } = e;
                 c(t, s);
-                let a = n && !C,
+                let a = n && !E,
                     o = l ? f.G2.ORBS : f.G2.CATALOG;
                 S(s), L(!r), i(o, a);
             },
-            [C, i, c],
+            [E, i, c],
         ),
-        { searchError: O } = (0, u.S)();
-    return null != O
+        { searchError: k } = (0, u.S)();
+    return null != k
         ? (0, n.jsx)(p.A, {})
-        : null != _
-          ? (0, n.jsx)(m.h, { onRetry: d, errorMessage: _, errorOrigin: m.A.SHOP_PAGE })
-          : E.includes(t)
-            ? (0, n.jsx)(h.A, { handleTransition: I, tab: t, transitionState: o })
+        : null != m
+          ? (0, n.jsx)(_.h, { onRetry: d, errorMessage: m, errorOrigin: _.A.SHOP_PAGE })
+          : x.includes(t)
+            ? (0, n.jsx)(h.A, { handleTransition: j, tab: t, transitionState: o })
             : (0, n.jsx)(g.A, {
                   tab: t,
-                  sortedCategories: T,
-                  initialCategoryId: x,
+                  categories: I,
+                  initialCategoryId: b,
                   showFilterInitially: v,
                   onUnmount: () => {
                       S(void 0), L(!0);
                   },
               });
 }
-let b = () =>
+let C = () =>
         (0, l.bG)([c.A, d.A], () =>
             null != c.A.error
                 ? `shop load fetch categories error: ${c.A.error.message}`
@@ -86,7 +86,7 @@ let b = () =>
         ),
     A = (e) => {
         let t = (0, l.bG)([i.default], () => i.default.getCurrentUser()),
-            { noCache: s, includeUnpublished: n } = (0, _.A)();
+            { noCache: s, includeUnpublished: n } = (0, m.A)();
         r.useEffect(() => {
             null != e &&
                 o.A.captureMessage(e, {
