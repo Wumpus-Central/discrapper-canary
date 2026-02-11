@@ -17,7 +17,11 @@ function h(e) {
         { analyticsLocations: i } = (0, l.Ay)(o.A.GIFT_BUTTON),
         h = (0, c.R1)(n),
         { Component: m, events: g, play: E } = (0, a.T)(),
-        { openGiftModal: A, shouldShowWishlistModal: I } = (0, u.$)({
+        {
+            openGiftModal: A,
+            shouldShowWishlistModal: I,
+            shouldShowGiftSelectionModal: T,
+        } = (0, u.$)({
             giftRecipient: h,
             analyticsLocations: i,
             analyticsObject: {
@@ -32,12 +36,12 @@ function h(e) {
     return t
         ? null
         : (0, r.jsx)(s.m, {
-              ariaHidden: I,
-              text: f.intl.string(I ? f.t.TW4JV0 : f.t.sWtWDX),
+              ariaHidden: I || T,
+              text: f.intl.string(I || T ? f.t.TW4JV0 : f.t.sWtWDX),
               children: (0, r.jsx)(d.A, {
                   className: p.x6,
                   isActive: !1,
-                  "aria-label": f.intl.string(I ? f.t.TW4JV0 : f.t.Z1RnTk),
+                  "aria-label": f.intl.string(I || T ? f.t.TW4JV0 : f.t.Z1RnTk),
                   "aria-haspopup": "dialog",
                   onClick: () => {
                       A(), E();
