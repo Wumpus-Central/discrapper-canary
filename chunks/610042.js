@@ -114,7 +114,10 @@ function N(e) {
                                         className: A.XY,
                                         children: _.intl.string(h.default.G3qiHu),
                                     }),
-                                    (0, i.jsx)("div", { className: A.WM, children: (0, i.jsx)(m.u, { onClick: n }) }),
+                                    (0, i.jsx)("div", {
+                                        className: A.WM,
+                                        children: (0, i.jsx)(m.u, { onClick: n, size: "sm" }),
+                                    }),
                                 ],
                             }),
                         (0, i.jsxs)(c.DUT, {
