@@ -543,6 +543,7 @@ var r = (function (e) {
         (e.GIFT_CODE_EMBED = "gift code embed"),
         (e.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED = "slayer storefront product details embed"),
         (e.CF_WARP_SETTINGS = "cloudflare warp settings"),
+        (e.AGE_GROUP = "age group"),
         e
     );
 })(r || {});
