@@ -1,23 +1,22 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => h });
 var i = n(627968),
     r = n(64700),
     a = n(362599),
     l = n(342494),
     s = n(732955),
-    o = n(397927),
-    d = n(976860),
-    c = n(652215),
-    u = n(49999),
-    A = n(49370),
-    h = n(985018);
-function _(e) {
-    let { targetElementRef: t, dismissPopover: n, lastGrantedRewardAmount: _, children: m } = e,
-        p = r.useCallback(() => {
-            n(u.i.TAKE_ACTION), (0, d.pX)(`${c.BVt.NITRO_HOME}?section=orbs`);
+    o = n(976860),
+    d = n(652215),
+    c = n(49999),
+    u = n(49370),
+    A = n(985018);
+function h(e) {
+    let { targetElementRef: t, dismissPopover: n, lastGrantedRewardAmount: h, children: _ } = e,
+        m = r.useCallback(() => {
+            n(c.i.TAKE_ACTION), (0, o.pX)(`${d.BVt.NITRO_HOME}?section=orbs`);
         }, [n]),
-        g = (0, i.jsx)(l.AM, {
+        p = (0, i.jsx)(l.AM, {
             targetElementRef: t,
-            onRequestClose: () => n(u.i.USER_DISMISS),
+            onRequestClose: () => n(c.i.USER_DISMISS),
             graphic: { type: "rive", rive: a.Z },
             badge: { type: "beta", variant: "expressive" },
             alignmentStrategy: "edge",
@@ -25,14 +24,10 @@ function _(e) {
             position: "right",
             caretConfig: { align: "start" },
             size: "md",
-            title: h.intl.string(A.default["78+gLr"]),
-            body: h.intl.formatToPlainString(A.default.Ry1TXC, { orbsCount: _ }),
-            actions: [{ text: h.intl.string(h.t.RzWDqY), icon: s.tvc, onClick: p }],
-            gradientColor: {
-                type: "custom",
-                start: o.LU0.colors.EXPRESSIVE_GRADIENT_PURPLE_START,
-                end: o.LU0.colors.EXPRESSIVE_GRADIENT_PURPLE_END,
-            },
+            title: A.intl.string(u.default["78+gLr"]),
+            body: A.intl.formatToPlainString(u.default.Ry1TXC, { orbsCount: h }),
+            actions: [{ text: A.intl.string(A.t.RzWDqY), icon: s.tvc, onClick: m }],
+            gradientColor: "nitro-pink",
         });
-    return (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)("div", { children: m }), g] });
+    return (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)("div", { children: _ }), p] });
 }
