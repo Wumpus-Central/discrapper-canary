@@ -2,10 +2,10 @@
 n.r(t),
     n.d(t, {
         USER_SETTINGS_MODAL_KEY: () => _,
-        getUserSettingsSectionsByWebUserSettings: () => g,
-        getWebUserSettingsByUserSettingsSections: () => m,
+        getUserSettingsSectionsByWebUserSettings: () => E,
+        getWebUserSettingsByUserSettingsSections: () => g,
         openUserSettings: () => f,
-        openUserSettingsFromParsedUrl: () => E,
+        openUserSettingsFromParsedUrl: () => A,
     });
 var r = n(627968),
     i = n(397927),
@@ -49,13 +49,13 @@ async function f(e) {
                           n.e("3183"),
                           n.e("9753"),
                           n.e("2292"),
-                          n.e("41538"),
-                          n.e("62733"),
+                          n.e("67231"),
                           n.e("84127"),
+                          n.e("62733"),
                           n.e("83518"),
-                          n.e("76418"),
-                          n.e("77749"),
+                          n.e("69733"),
                           n.e("69946"),
+                          n.e("86713"),
                           n.e("12664"),
                           n.e("34749"),
                           n.e("44667"),
@@ -64,14 +64,13 @@ async function f(e) {
                           n.e("67646"),
                           n.e("15207"),
                           n.e("34348"),
-                          n.e("45937"),
+                          n.e("26320"),
                           n.e("36059"),
                           n.e("95782"),
-                          n.e("75274"),
-                          n.e("59765"),
-                          n.e("33337"),
+                          n.e("16558"),
+                          n.e("30485"),
                           n.e("98082"),
-                          n.e("24439"),
+                          n.e("70733"),
                       ]).then(n.bind(n, 796150));
                       return (n) => (0, r.jsx)(t, { ...n, target: e });
                   },
@@ -79,7 +78,7 @@ async function f(e) {
               ),
         u?.();
 }
-function p(e) {
+function h(e) {
     let { section: t, subsection: n, urlOrigin: r } = e;
     o.default.track(d.HAw.USER_SETTINGS_URL_PARSED, {
         user_settings_section: t,
@@ -87,7 +86,7 @@ function p(e) {
         user_settings_url_origin: r,
     });
 }
-function h(e) {
+function p(e) {
     let { section: t, subsection: n, urlOrigin: r } = e;
     o.default.track(d.HAw.USER_SETTINGS_URL_PARSING_FAILED, {
         user_settings_section: t,
@@ -95,7 +94,7 @@ function h(e) {
         user_settings_url_origin: r,
     });
 }
-function m() {
+function g() {
     let e = (0, u.WJ)("getWebUserSettingFromSection"),
         t = new Map([
             [d.nc_.ACCOUNT, l.X.ACCOUNT_PANEL],
@@ -137,19 +136,19 @@ function m() {
         ]);
     return e || t.delete(d.nc_.CONNECTED_GAMES), t;
 }
-function g() {
-    let e = m(),
+function E() {
+    let e = g(),
         t = new Map();
     for (let [n, r] of e.entries()) t.set(r, n);
     return t;
 }
-function E(e) {
+function A(e) {
     let { match: t, urlOrigin: n, analyticsLocations: r } = e;
-    p({ section: t.section, subsection: t.subsection, urlOrigin: n });
-    let i = m(),
+    h({ section: t.section, subsection: t.subsection, urlOrigin: n });
+    let i = g(),
         a = i.get(t.section);
     if (null == a) {
-        h({ section: t.section, subsection: t.subsection, urlOrigin: n }), f();
+        p({ section: t.section, subsection: t.subsection, urlOrigin: n }), f();
         return;
     }
     f((null != t.subsection && "" !== t.subsection ? i.get(d.nc_[t.subsection]) : null) ?? a, {
