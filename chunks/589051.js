@@ -2,7 +2,7 @@
 n.d(t, {
     E: () => x,
     Fg: () => m,
-    H: () => S,
+    H: () => y,
     Jo: () => c,
     LA: () => _,
     M8: () => w,
@@ -14,7 +14,7 @@ n.d(t, {
     cB: () => l,
     lR: () => I,
     m5: () => A,
-    o0: () => b,
+    o0: () => N,
     oA: () => f,
     sq: () => T,
     wD: () => p,
@@ -122,7 +122,7 @@ function T(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return I.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-let y = (0, a.C)({
+let S = (0, a.C)({
     kind: "user",
     id: "2025-10_overlay_negative_widget_testing",
     label: "Overlay Negative Widget Testing",
@@ -191,15 +191,15 @@ let y = (0, a.C)({
         },
     ],
 });
-function S(e) {
+function y(e) {
     let t = v(e, !1);
-    if (i()(y.definition.defaultConfig, t)) return "control";
-    let n = y.definition.treatments.find((e) => i()(e.config, t));
+    if (i()(S.definition.defaultConfig, t)) return "control";
+    let n = S.definition.treatments.find((e) => i()(e.config, t));
     return null == n ? "control" : `treatment-${n.id}`;
 }
 function v(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return y.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return S.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
 let C = (0, a.C)({
     id: "2025-11_overlay_welcome_notification",
@@ -208,11 +208,11 @@ let C = (0, a.C)({
     defaultConfig: { enabled: !1 },
     treatments: [{ id: 1, label: "Modular Experience", config: { enabled: !0 } }],
 });
-function b(e) {
+function N(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return C.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-let N = (0, a.C)({
+let b = (0, a.C)({
     id: "2025-11_overlay_bug_reporter",
     label: "Overlay Bug Reporter",
     kind: "user",
@@ -221,16 +221,20 @@ let N = (0, a.C)({
 });
 function R(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return N.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return b.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
 function O(e) {
-    return N.useExperiment({ location: e }).enabled;
+    return b.useExperiment({ location: e }).enabled;
 }
 let D = (0, s.mj)({
     name: "2025-11-overlay-chat",
     kind: "user",
-    defaultConfig: { hasChat: !1, hasFriendList: !1 },
-    variations: { 1: { hasChat: !0, hasFriendList: !1 }, 2: { hasChat: !0, hasFriendList: !0 } },
+    defaultConfig: { hasChat: !1, hasFriendList: !1, showNowPlayingForDifferentGames: !1 },
+    variations: {
+        1: { hasChat: !0, hasFriendList: !1, showNowPlayingForDifferentGames: !1 },
+        2: { hasChat: !0, hasFriendList: !0, showNowPlayingForDifferentGames: !1 },
+        3: { hasChat: !0, hasFriendList: !0, showNowPlayingForDifferentGames: !0 },
+    },
 });
 function L(e) {
     return D.getConfig({ location: e });
@@ -242,7 +246,7 @@ function x() {
     m("OVERLAY_INITIALIZED"),
         A("OVERLAY_INITIALIZED"),
         v("OVERLAY_INITIALIZED"),
-        b("OVERLAY_INITIALIZED"),
+        N("OVERLAY_INITIALIZED"),
         R("OVERLAY_INITIALIZED"),
         L("OVERLAY_INITIALIZED");
 }

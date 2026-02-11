@@ -680,6 +680,7 @@ class e0 extends l.PureComponent {
                                                     filterAfterTimestamp: p,
                                                     showingQuarantineBanner: A,
                                                     typingGradient: I,
+                                                    hideSummaries: c === L.oU.OVERLAY,
                                                 }),
                                                 x
                                                     ? null

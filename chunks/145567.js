@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { D$: () => _, Ml: () => u, S$: () => p, bB: () => c, lu: () => f });
+n.d(t, { $p: () => p, D$: () => _, Ml: () => u, S$: () => h, bB: () => c, lu: () => f });
 var r = n(73153),
     i = n(308528),
     a = n(961350),
@@ -63,7 +63,10 @@ function f(e) {
         r.h.dispatch({ type: "OVERLAY_TEXT_CHAT_REMOVE_CHANNEL", channelId: t })
     );
 }
-function p(e) {
+function p() {
+    return r.h.dispatch({ type: "OVERLAY_TEXT_CHAT_REMOVE_ALL_CHANNELS" });
+}
+function h(e) {
     let { minimized: t } = e;
     return r.h.dispatch({ type: "OVERLAY_TEXT_CHAT_SET_VOICE_CHAT_MINIMIZED", minimized: t });
 }

@@ -1,4 +1,4 @@
-n.d(t, { b: () => w });
+n.d(t, { b: () => k });
 var l = n(627968),
     i = n(64700),
     r = n(503698),
@@ -6,74 +6,77 @@ var l = n(627968),
     a = n(311907),
     u = n(397927),
     o = n(730134),
-    d = n(566903),
-    c = n(47167),
-    h = n(410540),
-    g = n(302223),
-    I = n(609425),
-    f = n(922301),
-    A = n(750112),
-    E = n(853390),
-    m = n(253932),
-    S = n(734057),
-    p = n(290863),
-    N = n(383501),
-    T = n(222823),
-    _ = n(309010),
-    C = n(977997),
-    y = n(486020),
-    x = n(914853),
-    v = n(545807),
-    M = n(406595),
-    D = n(652215),
-    R = n(985018),
-    U = n(742466);
-let O = i.memo(function (e) {
+    d = n(775602),
+    c = n(566903),
+    h = n(47167),
+    g = n(410540),
+    I = n(302223),
+    f = n(609425),
+    A = n(922301),
+    E = n(750112),
+    m = n(853390),
+    S = n(253932),
+    p = n(734057),
+    N = n(290863),
+    T = n(383501),
+    _ = n(222823),
+    C = n(309010),
+    y = n(741961),
+    x = n(287809),
+    M = n(977997),
+    v = n(486020),
+    D = n(914853),
+    R = n(545807),
+    U = n(406595),
+    O = n(652215),
+    G = n(985018),
+    b = n(742466);
+let w = i.memo(function (e) {
     let { startTimestampMs: t } = e,
-        n = (0, v.A)(),
+        n = (0, R.A)(),
         [l, r] = i.useState(() => Date.now());
     i.useEffect(() => {
         let e = n.setInterval(() => r(Date.now()), 1e3);
         return () => n.clearInterval(e);
     }, [n]);
     let s = Math.max(0, (l - t) / 1e3);
-    return (0, E.f)(s);
+    return (0, m.f)(s);
 });
-O.displayName = "OverlayElapsedTime";
-let G = i.memo(function () {
-    let e = (0, v.A)(),
+w.displayName = "OverlayElapsedTime";
+let F = i.memo(function () {
+    let e = (0, R.A)(),
         [t, n] = i.useState(() => Date.now());
     i.useEffect(() => {
         let t = e.setInterval(() => n(Date.now()), 1e3);
         return () => e.clearInterval(t);
     }, [e]);
-    let l = (0, a.bG)([N.A], () => N.A.getDuration() ?? 0, [t]) ?? 0;
-    return (0, E.f)(l / 1e3);
+    let l = (0, a.bG)([T.A], () => T.A.getDuration() ?? 0, [t]) ?? 0;
+    return (0, m.f)(l / 1e3);
 });
-function b(e) {
+function L(e) {
     var t;
     let n,
-        { currentUser: r, activity: s, currentGameName: E } = e,
-        N = r?.id ?? null,
-        T = (0, I.A)({ userId: N, guildId: null }),
-        { isMobileOnline: C, status: x } = (0, a.cf)(
-            [p.A],
+        { currentUser: r, activity: s, currentGameName: d } = e,
+        m = r?.id ?? null,
+        T = (0, f.A)({ userId: m, guildId: null }),
+        { isMobileOnline: _, status: y } = (0, a.cf)(
+            [N.A],
             () =>
-                null == N
+                null == m
                     ? { isMobileOnline: void 0, status: void 0 }
-                    : { isMobileOnline: p.A.isMobileOnline(N), status: p.A.getStatus(N) },
-            [N],
+                    : { isMobileOnline: N.A.isMobileOnline(m), status: N.A.getStatus(m) },
+            [m],
         ),
-        v = (0, a.bG)([_.A], () => _.A.getVoiceChannelId()),
-        M = (0, a.bG)([S.A], () => (null != v ? S.A.getChannel(v) : null), [v]),
-        b = (0, c.Ay)(M),
-        w = (0, h.A)(N ?? "0") ?? null,
-        L = null != N ? w : null,
-        F =
-            null == (n = (0, d.A)(s, !0).text ?? E)
+        x = (0, a.bG)([C.A], () => C.A.getVoiceChannelId()),
+        M = (0, a.bG)([p.A], () => (null != x ? p.A.getChannel(x) : null), [x]),
+        D = (0, h.Ay)(M),
+        R = (0, g.A)(m ?? "0") ?? null,
+        U = null != m ? R : null,
+        L =
+            null == (n = (0, c.A)(s, !0).text ?? d)
                 ? null
-                : s?.type === D.$pd.PLAYING || null == s
-                  ? R.intl.formatToPlainString(R.t.lFApmz, { game: n })
+                : s?.type === O.$pd.PLAYING || null == s
+                  ? G.intl.formatToPlainString(G.t.lFApmz, { game: n })
                   : n,
         k = s?.timestamps?.start != null ? ((t = s.timestamps.start) < 1e12 ? 1e3 * t : t) : null,
         P = i.useMemo(
@@ -92,48 +95,48 @@ function b(e) {
                           : null != i
                             ? { type: "custom_status", customStatusActivity: i }
                             : { type: "none" };
-                })({ activityLabel: F, activityStartTimestampMs: k, voiceCallName: b, customStatusActivity: L }),
-            [F, k, b, L],
+                })({ activityLabel: L, activityStartTimestampMs: k, voiceCallName: D, customStatusActivity: U }),
+            [L, k, D, U],
         );
     if (null == r) return null;
     let j =
             null == r.banner
                 ? null
-                : ((0, y.z)({ id: r.id, banner: r.banner, canAnimate: m.kt.getSetting(), size: 600 }) ?? null),
+                : ((0, v.z)({ id: r.id, banner: r.banner, canAnimate: S.kt.getSetting(), size: 600 }) ?? null),
         V = r.globalName ?? r.username;
     return (0, l.jsxs)("div", {
-        className: U.cI,
+        className: b.cI,
         children: [
-            (0, l.jsx)("div", { className: U.CK, style: { backgroundImage: null != j ? `url(${j})` : void 0 } }),
+            (0, l.jsx)("div", { className: b.CK, style: { backgroundImage: null != j ? `url(${j})` : void 0 } }),
             (0, l.jsxs)("div", {
-                className: U.vK,
+                className: b.vK,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: U.iy,
+                        className: b.iy,
                         children: [
-                            (0, l.jsx)(o.A, { user: r, isMobile: C, status: x, className: U.my, size: u._3J.SIZE_40 }),
+                            (0, l.jsx)(o.A, { user: r, isMobile: _, status: y, className: b.my, size: u._3J.SIZE_40 }),
                             (0, l.jsxs)("div", {
-                                className: U.ic,
+                                className: b.ic,
                                 children: [
-                                    (0, l.jsx)(A.A, {
+                                    (0, l.jsx)(E.A, {
                                         userName: V,
-                                        textClassName: U.Xh,
+                                        textClassName: b.Xh,
                                         displayNameStyles: T,
-                                        effectDisplayType: f.G.ANIMATED,
+                                        effectDisplayType: A.G.ANIMATED,
                                     }),
                                     (() => {
                                         switch (P.type) {
                                             case "activity":
                                                 return (0, l.jsxs)("div", {
-                                                    className: U.nU,
+                                                    className: b.nU,
                                                     children: [
                                                         (0, l.jsx)(u._xR, {
                                                             size: "xxs",
                                                             color: "currentColor",
-                                                            className: U.Wo,
+                                                            className: b.Wo,
                                                         }),
                                                         (0, l.jsx)(u.Text, {
-                                                            className: U.Yg,
+                                                            className: b.Yg,
                                                             variant: "text-xs/medium",
                                                             color: "text-subtle",
                                                             children: P.label,
@@ -142,15 +145,15 @@ function b(e) {
                                                 });
                                             case "voice_call":
                                                 return (0, l.jsxs)("div", {
-                                                    className: U.nU,
+                                                    className: b.nU,
                                                     children: [
                                                         (0, l.jsx)(u.HKD, {
                                                             size: "xxs",
                                                             color: "currentColor",
-                                                            className: U.Wo,
+                                                            className: b.Wo,
                                                         }),
                                                         (0, l.jsx)(u.Text, {
-                                                            className: U.Yg,
+                                                            className: b.Yg,
                                                             variant: "text-xs/medium",
                                                             color: "text-subtle",
                                                             children: P.label,
@@ -159,12 +162,12 @@ function b(e) {
                                                 });
                                             case "custom_status":
                                                 return (0, l.jsx)("div", {
-                                                    className: U.nU,
-                                                    children: (0, l.jsx)(g.A, {
+                                                    className: b.nU,
+                                                    children: (0, l.jsx)(I.A, {
                                                         activity: P.customStatusActivity,
-                                                        className: U.tR,
-                                                        emojiClassName: U.qp,
-                                                        textClassName: U.Yg,
+                                                        className: b.tR,
+                                                        emojiClassName: b.qp,
+                                                        textClassName: b.Yg,
                                                         hideTooltip: !0,
                                                     }),
                                                 });
@@ -180,19 +183,19 @@ function b(e) {
                         ? null == P.startTimestampMs
                             ? null
                             : (0, l.jsx)(u.Text, {
-                                  className: U.p0,
+                                  className: b.p0,
                                   variant: "code",
                                   tag: "div",
-                                  children: (0, l.jsx)(O, { startTimestampMs: P.startTimestampMs }),
+                                  children: (0, l.jsx)(w, { startTimestampMs: P.startTimestampMs }),
                               })
                         : "voice_call" === P.type
-                          ? null == v
+                          ? null == x
                               ? null
                               : (0, l.jsx)(u.Text, {
-                                    className: U.p0,
+                                    className: b.p0,
                                     variant: "code",
                                     tag: "div",
-                                    children: (0, l.jsx)(G, {}),
+                                    children: (0, l.jsx)(F, {}),
                                 })
                           : null,
                 ],
@@ -200,54 +203,75 @@ function b(e) {
         ],
     });
 }
-function w(e) {
+function k(e) {
     let { currentUser: t, activity: n, currentGameName: r, activeTab: s, onTabChange: u } = e,
         {
             friendsHasUnreadFavorites: o,
-            messagesHasUnreadFavorites: d,
-            voiceHasActiveFavorites: c,
-        } = (0, a.cf)([M.A, T.Ay, S.A, C.A], () => {
-            let [e] = M.A.getFavoriteTargetIdsForTab(x.x.FRIENDS),
-                [t] = M.A.getFavoriteTargetIdsForTab(x.x.MESSAGES),
-                [n] = M.A.getFavoriteTargetIdsForTab(x.x.VOICE),
-                l = (e) => T.Ay.hasUnread(e) || T.Ay.getMentionCount(e) > 0,
-                i = e.some((e) => {
-                    let t = S.A.getDMFromUserId(e);
-                    return null != t && l(t);
-                });
+            messagesHasUnreadFavorites: c,
+            voiceHasActiveFavorites: h,
+            friendsHasTypingInFavorites: g,
+            messagesHasTypingInFavorites: I,
+        } = (0, a.cf)([U.A, _.Ay, p.A, M.A, y.A, x.default], () => {
+            let e = x.default.getCurrentUser()?.id ?? null,
+                [t] = U.A.getFavoriteTargetIdsForTab(D.x.FRIENDS),
+                [n] = U.A.getFavoriteTargetIdsForTab(D.x.MESSAGES),
+                [l] = U.A.getFavoriteTargetIdsForTab(D.x.VOICE),
+                i = (e) => _.Ay.hasUnread(e) || _.Ay.getMentionCount(e) > 0,
+                r = (t) => {
+                    let n = y.A.getTypingUsers(t);
+                    for (let t in n) if (t !== e) return !0;
+                    return !1;
+                },
+                s = (e) => p.A.getDMFromUserId(e) ?? null,
+                a = t.some((e) => {
+                    let t = s(e);
+                    return null != t && i(t);
+                }),
+                u = t.some((e) => {
+                    let t = s(e);
+                    return null != t && r(t);
+                }),
+                o = n.some(i),
+                d = n.some(r);
             return {
-                friendsHasUnreadFavorites: i,
-                messagesHasUnreadFavorites: t.some(l),
-                voiceHasActiveFavorites: n.some((e) => {
-                    let t = C.A.getVoiceStatesForChannel(e);
+                friendsHasUnreadFavorites: a,
+                messagesHasUnreadFavorites: o,
+                voiceHasActiveFavorites: l.some((e) => {
+                    let t = M.A.getVoiceStatesForChannel(e);
                     for (let e in t) return !0;
                     return !1;
                 }),
+                friendsHasTypingInFavorites: u,
+                messagesHasTypingInFavorites: d,
             };
         }, []),
-        h = i.useMemo(() => ({ [x.x.FRIENDS]: o, [x.x.MESSAGES]: d, [x.x.VOICE]: c }), [o, d, c]);
+        f = i.useMemo(() => ({ [D.x.FRIENDS]: o, [D.x.MESSAGES]: c, [D.x.VOICE]: h }), [o, c, h]),
+        A = (0, a.bG)([d.A], () => d.A.useReducedMotion),
+        E = i.useMemo(() => ({ [D.x.FRIENDS]: !A && g, [D.x.MESSAGES]: !A && I, [D.x.VOICE]: !1 }), [A, g, I]);
     return (0, l.jsxs)("div", {
-        className: U.kL,
+        className: b.kL,
         children: [
-            (0, l.jsx)(b, { currentUser: t, activity: n, currentGameName: r }),
+            (0, l.jsx)(L, { currentUser: t, activity: n, currentGameName: r }),
             (0, l.jsx)("div", {
-                className: U.vR,
+                className: b.vR,
                 role: "tablist",
-                "aria-label": R.intl.string(R.t.TdEu5X),
+                "aria-label": G.intl.string(G.t.TdEu5X),
                 children: [
-                    { id: x.x.FRIENDS, label: R.t.TdEu5X },
-                    { id: x.x.MESSAGES, label: R.t.OIgYlQ },
-                    { id: x.x.VOICE, label: R.t.K3lovD },
+                    { id: D.x.FRIENDS, label: G.t.TdEu5X },
+                    { id: D.x.MESSAGES, label: G.t.OIgYlQ },
+                    { id: D.x.VOICE, label: G.t.K3lovD },
                 ].map((e) => {
                     let { id: t, label: n } = e,
-                        i = !0 === h[t];
+                        i = !0 === f[t],
+                        r = !0 === E[t];
                     return (0, l.jsx)(
-                        L,
+                        P,
                         {
                             tab: t,
-                            label: R.intl.formatToPlainString(n, {}),
+                            label: G.intl.formatToPlainString(n, {}),
                             selected: s === t,
                             shouldShowCutoutDot: i,
+                            shouldPulseDot: r,
                             onSelect: u,
                         },
                         t,
@@ -257,17 +281,26 @@ function w(e) {
         ],
     });
 }
-function L(e) {
-    let { tab: t, label: n, selected: i, shouldShowCutoutDot: r = !1, onSelect: a, className: o } = e;
+function P(e) {
+    let {
+            tab: t,
+            label: n,
+            selected: i,
+            shouldShowCutoutDot: r = !1,
+            shouldPulseDot: a = !1,
+            onSelect: o,
+            className: d,
+        } = e,
+        c = r ? s()(b.OD, a && b.S) : null;
     return (0, l.jsxs)(u.DUT, {
         role: "tab",
         "aria-selected": i,
-        className: s()(U.Mf, i && U.jP, o),
-        onClick: () => a(t),
+        className: s()(b.Mf, i && b.jP, d),
+        onClick: () => o(t),
         children: [
-            r ? (0, l.jsx)("span", { className: U.OD, "aria-hidden": !0 }) : null,
+            null != c ? (0, l.jsx)("span", { className: c, "aria-hidden": !0 }) : null,
             (0, l.jsx)(u.Text, { variant: "text-sm/medium", color: "currentColor", children: n }),
         ],
     });
 }
-G.displayName = "OverlayVoiceCallElapsedTime";
+F.displayName = "OverlayVoiceCallElapsedTime";

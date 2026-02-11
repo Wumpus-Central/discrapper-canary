@@ -23,8 +23,8 @@ var l = n(627968),
     C = n(914853),
     y = n(179917),
     x = n(419072),
-    v = n(437331),
-    M = n(91868),
+    M = n(437331),
+    v = n(91868),
     D = n(554932),
     R = n(406595),
     U = n(557404),
@@ -32,10 +32,10 @@ var l = n(627968),
     G = n(895867),
     b = n(985018),
     w = n(416001);
-function L(e) {
+function F(e) {
     return Array.from(e).sort();
 }
-let F = (0, r.throttle)(
+let L = (0, r.throttle)(
         (e) => {
             (0, _.Y)(O.uss.FRIENDS, {
                 locked: p.default.isInstanceLocked(),
@@ -91,14 +91,14 @@ function P() {
         N = (0, o.A)("friends-widget-messages", p),
         [O, P] = (0, a.bG)([R.A], () => R.A.getFavoriteTargetIdsForTab(C.x.MESSAGES), [], T.D),
         [j, V] = (0, a.bG)(
-            [M.A],
+            [v.A],
             () => {
-                let [e, t] = M.A.getRows(M.Y.ACTIVE_NOW),
-                    [n] = M.A.getRows(M.Y.DMS),
-                    [l] = M.A.getRows(M.Y.RECENT_TEXT),
+                let [e, t] = v.A.getRows(v.Y.ACTIVE_NOW),
+                    [n] = v.A.getRows(v.Y.DMS),
+                    [l] = v.A.getRows(v.Y.RECENT_TEXT),
                     i = n.slice(0, 5),
                     r = l.slice(0, 8);
-                return [{ activeNowRows: e.slice(0, 10), dmRows: i, recentTextRows: r }, t];
+                return [{ activeNowRows: e.slice(0, 8), dmRows: i, recentTextRows: r }, t];
             },
             [],
             T.D,
@@ -155,15 +155,15 @@ function P() {
                 });
             }
             if (j.activeNowRows.length > 0) {
-                let l = j.activeNowRows.map((e) => e.channelId),
-                    i = e("ACTIVE_NOW") ? l.filter(t) : l;
+                let t = j.activeNowRows.map((e) => e.channelId),
+                    l = e("ACTIVE_NOW") ? [] : t;
                 n.push({
                     kind: "ACTIVE_NOW",
                     key: "ACTIVE_NOW",
                     title: b.intl.string(G.default.d3yO98),
-                    count: l.length,
-                    channelIds: i,
-                    length: Math.max(i.length, 1),
+                    count: t.length,
+                    channelIds: l,
+                    length: Math.max(l.length, 1),
                 });
             }
             if (j.dmRows.length > 0) {
@@ -226,7 +226,7 @@ function P() {
             for (let t of $) for (let n of t.channelIds) e.add(n);
             return e;
         }, [$]),
-        { shownUserIds: Q, contentInventoryIds: q } = (0, a.bG)(
+        { shownUserIds: Q, contentInventoryIds: J } = (0, a.bG)(
             [],
             () =>
                 (function (e) {
@@ -251,11 +251,11 @@ function P() {
                 })(Z),
             [Z],
         ),
-        J = (0, _.Dk)(() => Q, [Q]),
-        ee = (0, _.Dk)(() => q, [q]);
+        q = (0, _.Dk)(() => Q, [Q]),
+        ee = (0, _.Dk)(() => J, [J]);
     i.useEffect(() => {
-        (0 !== J.size || 0 !== ee.size) && F({ shownUserIds: L(J), contentInventoryIds: L(ee) });
-    }, [J, ee]);
+        (0 !== q.size || 0 !== ee.size) && L({ shownUserIds: F(q), contentInventoryIds: F(ee) });
+    }, [q, ee]);
     let et = i.useCallback((e) => $[e], [$]),
         en = i.useCallback(
             (e) => {
@@ -287,7 +287,7 @@ function P() {
                 if (null == r) return null;
                 let s = `${i.key}:${e.row}`;
                 return (0, l.jsx)(
-                    v.V,
+                    M.V,
                     {
                         channelId: r,
                         listItemId: s,

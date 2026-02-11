@@ -25,8 +25,8 @@ var i = n(284009),
     y = n(309010),
     N = n(461213),
     O = n(351906),
-    b = n(287809),
-    j = n(977997),
+    j = n(287809),
+    b = n(977997),
     w = n(845618),
     L = n(927813),
     R = n(9302),
@@ -35,17 +35,17 @@ var i = n(284009),
     k = n(592598),
     z = n(395011),
     V = n(897720),
-    U = n(243612),
-    P = n(240933),
+    P = n(243612),
+    U = n(240933),
     G = n(428731),
     H = n(714642),
     Y = n(970495),
     F = n(122749),
     W = n(925159),
-    K = n(128307),
-    Z = n(533923),
-    B = n(965082),
-    X = n(749471),
+    Z = n(128307),
+    X = n(533923),
+    K = n(965082),
+    B = n(749471),
     J = n(672396),
     Q = n(652215),
     q = n(985018);
@@ -171,12 +171,13 @@ function ef() {
                 )
                     return !1;
                 let r = y.A.getVoiceChannelId(),
-                    o = j.A.getDiscoverableVoiceStateForUser(e)?.channelId;
+                    o = b.A.getDiscoverableVoiceStateForUser(e)?.channelId;
                 if (null != r && null != o && r === o) return !1;
-                let d = (0, U.qv)();
+                let d = (0, P.qv)(),
+                    { showNowPlayingForDifferentGames: u } = (0, D.NI)("nowPlayingNotification");
                 return (
                     null != d &&
-                    d.id === a &&
+                    (d.id === a || !!u) &&
                     (null == (i = er[a]?.[e]?.lastSentTimestamp) || Date.now() - i > ed
                         ? (null != (l = (0, W.A)(e, a, s)) &&
                               (eo(a, e, { userId: e, gameId: a, lastSentTimestamp: Date.now() }),
@@ -194,7 +195,7 @@ function ef() {
             !(function (e) {
                 let t = T.A.getActivities(e);
                 if (0 === t.length) return !1;
-                let n = (0, U.qv)();
+                let n = (0, P.qv)();
                 return null != n && null != t.find((e) => e.application_id === n.id);
             })(e) &&
             !a
@@ -254,8 +255,8 @@ class ex extends s.Ay.Store {
             y.A,
             N.A,
             O.A,
-            b.default,
-            j.A,
+            j.default,
+            b.A,
         ),
             this.syncWith([I.A], ef),
             (function () {
@@ -283,7 +284,7 @@ let eS = new ex(r.h, {
         eh(0);
         let n = z.A.getFocusedPID() ?? R.UNSET_PID;
         if (M.default.hasChangedRenderMode(n)) return;
-        let i = (0, X.A)((0, U.qv)(), t);
+        let i = (0, B.A)((0, P.qv)(), t);
         null != i && eg(i, { priority: V.In.URGENT, type: V.zb.NUDGE, duration: ee });
     },
     OVERLAY_SET_INPUT_LOCKED: function (e) {
@@ -307,14 +308,14 @@ let eS = new ex(r.h, {
     MESSAGE_CREATE: function (e) {
         let { channelId: t, message: n } = e,
             i = E.A.getChannel(t),
-            a = b.default.getUser(n.author?.id);
+            a = j.default.getUser(n.author?.id);
         if (null == i || null == a) return !1;
         if ([Q.xL.JOIN, Q.xL.JOIN_REQUEST, Q.xL.STREAM_REQUEST].includes(n.activity?.type)) {
             if (!(0, A.lx)(n, t, !0, !0)) return !1;
             let e = (function (e, t, n) {
                 let i, a, s, r, o, u;
                 if ((l()(null != t.activity, "received null message activity"), n.id === _.default.getId())) return !1;
-                let c = (0, U.qv)();
+                let c = (0, P.qv)();
                 if (null == c || null == c.id) return !1;
                 let h = d.A.getApplication(c.id),
                     A = [c.id];
@@ -349,13 +350,13 @@ let eS = new ex(r.h, {
                 if (null == s || null == r) return !1;
                 switch (t.activity.type) {
                     case Q.xL.JOIN:
-                        o = (0, P.A)(e, t, n, s, r);
+                        o = (0, U.A)(e, t, n, s, r);
                         break;
                     case Q.xL.JOIN_REQUEST:
-                        o = (0, K.A)(e, n, c, s);
+                        o = (0, Z.A)(e, n, c, s);
                         break;
                     case Q.xL.STREAM_REQUEST:
-                        o = (0, Z.A)(e, n, c, s);
+                        o = (0, X.A)(e, n, c, s);
                 }
                 return (
                     null != o &&
@@ -382,7 +383,7 @@ let eS = new ex(r.h, {
         if (k.A.isNotificationDisabled(J.KS.TextChat) || O.A.disableNotifications || !(0, A.lx)(n, t)) return !1;
         let s = !S.A.isSoundDisabled(w.cH),
             r = x.A.getMessage(t, n.id) ?? (0, h.rh)(n),
-            o = (0, B.A)(i, r, a, s);
+            o = (0, K.A)(i, r, a, s);
         if (null == o) return !1;
         eg(o, { type: V.zb.TEXT, channelId: i.id, expirationExternallyManaged: !0, messageType: n.type }), eh();
     },
@@ -413,7 +414,7 @@ let eS = new ex(r.h, {
     ACTIVITY_USER_ACTION: function (e) {
         let t,
             { actionType: n, user: i, applicationId: l } = e,
-            a = (0, U.qv)();
+            a = (0, P.qv)();
         return (
             null != a &&
             a?.id != null &&

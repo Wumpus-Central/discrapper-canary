@@ -17,4 +17,6 @@ e.exports = {
     Mf: "tab__49ef0",
     jP: "tabSelected__49ef0",
     OD: "unreadFavoritesDot__49ef0",
+    S: "unreadFavoritesDotPulsing__49ef0",
+    Me: "favoritesDotPulse__49ef0",
 };
