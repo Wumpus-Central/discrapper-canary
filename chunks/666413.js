@@ -1,18 +1,18 @@
 "use strict";
-s.d(t, { S: () => m });
+s.d(t, { S: () => _ });
 var n = s(627968),
-    r = s(64700),
-    l = s(503698),
-    a = s.n(l),
-    i = s(92674),
+    l = s(64700),
+    r = s(503698),
+    a = s.n(r),
+    i = s(563495),
     o = s(607399),
     c = s(946015),
     d = s(397927),
     u = s(854818),
-    g = s(410885);
-let m = r.memo(function (e) {
+    g = s(263571);
+let _ = l.memo(function (e) {
     let { countdownTimerBlock: t, isVisible: s } = e,
-        r = (0, d.zhh)({
+        l = (0, d.zhh)({
             transform: `translateX(-50%) ${s ? "translateY(-75%)" : "translateY(0%)"}`,
             opacity: +!!s,
             config: { tension: 120, friction: 12 },
@@ -21,7 +21,7 @@ let m = r.memo(function (e) {
         className: a()([g.lP, o.Fr && g.yJ]),
         role: "status",
         style: {
-            ...r,
+            ...l,
             ...(null != t.bannerUrl &&
                 "" !== t.bannerUrl && {
                     backgroundImage: `url(${t.bannerUrl})`,

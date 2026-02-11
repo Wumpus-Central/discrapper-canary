@@ -10,8 +10,8 @@ var l = n(627968),
     c = n(570209),
     _ = n(775602),
     d = n(47167),
-    g = n(713654),
-    A = n(863439),
+    A = n(713654),
+    g = n(863439),
     T = n(465364),
     I = n(81437),
     N = n(976860),
@@ -20,8 +20,8 @@ var l = n(627968),
     S = n(253932),
     G = n(95701),
     O = n(734057),
-    C = n(71393),
-    R = n(576705),
+    R = n(71393),
+    C = n(576705),
     L = n(994500),
     D = n(309010),
     f = n(287809),
@@ -30,11 +30,11 @@ var l = n(627968),
     p = n(712838),
     U = n(652215),
     k = n(985018),
-    b = n(274808);
+    b = n(82206);
 function F(e) {
     let { parentChannel: t, onSelectChannel: n } = e;
     if (t?.name == null) return null;
-    let r = null != t ? (0, g.gU)(t) : null;
+    let r = null != t ? (0, A.gU)(t) : null;
     if (null == r) return null;
     let a = (0, l.jsxs)(l.Fragment, {
         children: [
@@ -71,14 +71,14 @@ function j(e) {
         k = r.useCallback((e) => {
             if (e === D.A.getChannelId()) return;
             let t = O.A.getChannel(e);
-            null == t || ((R.A.can(U.xBc.VIEW_CHANNEL, t) || t.isPrivate()) && (0, h.iN)(t.id));
+            null == t || ((C.A.can(U.xBc.VIEW_CHANNEL, t) || t.isPrivate()) && (0, h.iN)(t.id));
         }, []),
         j = null != t ? (0, d.m1)(t, f.default, L.A, !1) : "???",
-        v = x && null != t.guild_id ? C.A.getGuild(t.guild_id)?.name : null,
+        v = x && null != t.guild_id ? R.A.getGuild(t.guild_id)?.name : null,
         P = t?.parent_id != null ? O.A.getChannel(t.parent_id) : null,
         y = P?.name ?? null,
-        X = (0, g.gU)(t) ?? E.N$i,
-        B = R.A.can(U.xBc.MANAGE_MESSAGES, t),
+        X = (0, A.gU)(t) ?? E.N$i,
+        B = C.A.can(U.xBc.MANAGE_MESSAGES, t),
         { content: V } = (0, T.Ay)({ content: j, embeds: [] }, { postProcessor: a }),
         H = r.useRef(null),
         [w, W] = r.useState(!1);
@@ -88,7 +88,7 @@ function j(e) {
     }, []);
     let Y = [j, y, v].filter((e) => null != e).join(", ");
     return (0, l.jsx)(m.Bs.Provider, {
-        value: (0, A.A)(M, B),
+        value: (0, g.A)(M, B),
         children: (0, l.jsxs)("ul", {
             role: "group",
             className: b.JT,
@@ -147,19 +147,19 @@ let v = r.memo(function (e) {
             messages: i,
             blockCount: o,
             ignoreCount: d,
-            onPageChange: g,
-            onClick: A,
+            onPageChange: A,
+            onClick: g,
             paginationTotalCount: T,
             renderPageWrapper: h,
             onBlockedResultsClick: m,
             searchRequestAnalyticsId: S,
             searchResultsQuery: G,
-            isFavoritesSearch: C,
+            isFavoritesSearch: R,
         } = e,
-        { offset: R, totalResults: D, isSearching: f, showBlockedResults: p } = t,
+        { offset: C, totalResults: D, isSearching: f, showBlockedResults: p } = t,
         F = r.useCallback(
             (e, t) => {
-                A?.(e, t);
+                g?.(e, t);
                 let n = () => {
                     let t = O.A.getChannel(e.channel_id),
                         n = null != t ? t.getGuildId() : null;
@@ -168,7 +168,7 @@ let v = r.memo(function (e) {
                 };
                 (0, I.A)(e, n) && n();
             },
-            [A, S],
+            [g, S],
         ),
         v = r.useMemo(() => {
             let e,
@@ -220,10 +220,10 @@ let v = r.memo(function (e) {
                     totalResults: D,
                     scrollTo: a,
                     renderEmbeds: n,
-                    offset: R,
+                    offset: C,
                     jumpToMessage: F,
                     listNavigator: V,
-                    favoriteSearch: C ?? !1,
+                    favoriteSearch: R ?? !1,
                 },
                 `${t.id}-${i}`,
             );
@@ -264,11 +264,11 @@ let v = r.memo(function (e) {
                   })
                 : null,
             !f &&
-                !C &&
+                !R &&
                 (0, l.jsx)(M.A, {
                     renderPageWrapper: h,
-                    onPageChange: g,
-                    offset: R,
+                    onPageChange: A,
+                    offset: C,
                     totalCount: T ?? D,
                     pageSize: U.T_y,
                 }),

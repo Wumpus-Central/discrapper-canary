@@ -1,26 +1,26 @@
 n.d(t, { A: () => h });
 var a = n(627968),
-    s = n(64700),
-    i = n(503698),
-    l = n.n(i),
-    r = n(92674),
+    i = n(64700),
+    s = n(503698),
+    l = n.n(s),
+    r = n(563495),
     o = n(397927),
     d = n(915089),
     c = n(49999),
     u = n(985018),
-    m = n(501785);
+    m = n(649419);
 function h(e) {
     let {
             markAsDismissed: t,
             heading: n,
-            subheading: i,
+            subheading: s,
             children: h,
             height: x,
             className: p,
             contentClassName: g,
         } = e,
         _ = (0, d.GV)(),
-        f = s.useRef(null),
+        f = i.useRef(null),
         v = (0, o.zhh)({
             from: { transform: "translate3d(-110%, 0, 0)", height: x },
             to: { transform: "translate3d(0, 0, 0)", height: x },
@@ -51,7 +51,7 @@ function h(e) {
                         (0, a.jsx)(o.Heading, { id: _, variant: "heading-lg/semibold", children: n }),
                     ],
                 }),
-                null != i && (0, a.jsx)(o.Text, { variant: "text-md/normal", color: "text-subtle", children: i }),
+                null != s && (0, a.jsx)(o.Text, { variant: "text-md/normal", color: "text-subtle", children: s }),
                 (0, a.jsx)(o.HOs, {
                     className: m.XG,
                     fade: !0,

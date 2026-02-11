@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => C });
+n.d(t, { A: () => I });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
@@ -18,8 +18,8 @@ var i = n(627968),
     m = n(672396),
     E = n(652215),
     x = n(985018),
-    y = n(300597),
-    v = n(473169);
+    y = n(48703),
+    v = n(522759);
 function S() {
     let e = h.default.getNotificationPositionMode(),
         t = e !== E.G6Q.DISABLED,
@@ -35,7 +35,7 @@ function S() {
         text_activation_hotkey: null != i ? (0, A.dI)(i.shortcut) : null,
     });
 }
-class I extends s.PureComponent {
+class C extends s.PureComponent {
     state = { selectedSection: "GENERAL" };
     componentDidMount() {
         r.A.track(E.HAw.SETTINGS_PANE_VIEWED, {
@@ -231,7 +231,7 @@ class I extends s.PureComponent {
         });
     }
 }
-function C(e) {
+function I(e) {
     let { onClose: t } = e,
         {
             avatarSizeMode: n,
@@ -251,7 +251,7 @@ function C(e) {
             shouldShowInviteNotification: !_.A.isNotificationDisabled(m.KS.ActivityInvite),
         })),
         u = (0, g.A)({ location: "Overlay Settings" });
-    return (0, i.jsx)(I, {
+    return (0, i.jsx)(C, {
         onClose: t,
         avatarSizeMode: n,
         displayNameMode: s,

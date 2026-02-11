@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => p });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -12,43 +12,43 @@ var i = n(503698),
     d = n(734057),
     _ = n(818348),
     f = n(985018),
-    p = n(814651);
-function h(e) {
+    h = n(78437);
+function p(e) {
     var t;
     let { stream: n, width: i } = e,
-        h = (0, s.bG)([d.A], () => d.A.getChannel(n.channelId));
+        p = (0, s.bG)([d.A], () => d.A.getChannel(n.channelId));
     (0, u.Ay)(() => {
-        h?.isGuildStageVoice() && (0, l.Xi)((0, c._z)(n), !1);
+        p?.isGuildStageVoice() && (0, l.Xi)((0, c._z)(n), !1);
     });
-    let m = () => (0, l.Xi)((0, c._z)(n)),
-        g = (t = i) < 550 ? "small" : t < 1e3 ? "medium" : "large";
+    let g = () => (0, l.Xi)((0, c._z)(n)),
+        E = (t = i) < 550 ? "small" : t < 1e3 ? "medium" : "large";
     return (0, r.jsx)(o.NPJ, {
         disableAdaptiveTheme: !0,
         theme: _.NJ.MIDNIGHT,
         children: (e) =>
             (0, r.jsx)("div", {
-                className: a()(p.container, e),
+                className: a()(h.container, e),
                 children: (0, r.jsxs)("div", {
-                    className: p.content,
+                    className: h.content,
                     children: [
                         (0, r.jsx)("div", {
-                            className: a()(p.artContainer, p[g]),
-                            children: (0, r.jsx)("div", { className: a()(p.art, p[g]) }),
+                            className: a()(h.artContainer, h[E]),
+                            children: (0, r.jsx)("div", { className: a()(h.art, h[E]) }),
                         }),
                         (0, r.jsxs)("div", {
-                            className: p.cta,
+                            className: h.cta,
                             children: [
                                 (0, r.jsx)(o.Heading, {
                                     color: "none",
-                                    variant: "small" === g ? "heading-md/normal" : "heading-lg/normal",
-                                    className: p.header,
+                                    variant: "small" === E ? "heading-md/normal" : "heading-lg/normal",
+                                    className: h.header,
                                     children: f.intl.formatToMarkdownString(f.t.Kb4Ukp, {}),
                                 }),
                                 (0, r.jsx)(o.Button, {
                                     variant: "secondary",
-                                    size: "small" === g ? "sm" : "md",
+                                    size: "small" === E ? "sm" : "md",
                                     onClick: (e) => {
-                                        e.stopPropagation(), m();
+                                        e.stopPropagation(), g();
                                     },
                                     text: f.intl.string(f.t["4EGMWL"]),
                                 }),

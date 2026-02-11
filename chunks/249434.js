@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
@@ -8,20 +8,20 @@ var i = n(627968),
     o = n(555337),
     d = n(339984),
     c = n(985018),
-    u = n(577332);
-function m(e) {
+    u = n(31186);
+function g(e) {
     let { profile: t, handleIconChange: l, canManageGuild: o } = e,
-        m = s.useCallback(() => {
+        g = s.useCallback(() => {
             l(null);
         }, [l]),
-        g = s.useCallback(
+        m = s.useCallback(
             (e, t) => {
                 (0, r.mMO)(async () => {
                     let { default: s } = await Promise.all([
+                        n.e("59701"),
                         n.e("35929"),
                         n.e("74571"),
-                        n.e("90017"),
-                        n.e("17464"),
+                        n.e("33535"),
                     ]).then(n.bind(n, 142630));
                     return (n) =>
                         (0, i.jsx)(s, {
@@ -53,7 +53,7 @@ function m(e) {
                             disabled: !o,
                             text: c.intl.string(c.t.r3JdsT),
                         }),
-                        (0, i.jsx)(a.Ay, { tabIndex: 0, onChange: g, disabled: !o }),
+                        (0, i.jsx)(a.Ay, { tabIndex: 0, onChange: m, disabled: !o }),
                     ],
                 }),
             }),
@@ -62,14 +62,14 @@ function m(e) {
                       variant: "critical-secondary",
                       size: "sm",
                       text: c.intl.string(c.t.x8AlTm),
-                      onClick: m,
+                      onClick: g,
                       disabled: !o,
                   })
                 : null,
         ],
     });
 }
-function g(e) {
+function m(e) {
     let { profile: t, canManageGuild: n, onIconChange: s } = e,
         a = (0, l.bG)([o.A], () => o.A.getError("icon"));
     return (0, i.jsx)("section", {
@@ -78,7 +78,7 @@ function g(e) {
             label: c.intl.string(c.t.FkQnxJ),
             description: c.intl.string(c.t.KjkA0W),
             errorMessage: a,
-            children: (0, i.jsx)(m, { profile: t, canManageGuild: n, handleIconChange: s }),
+            children: (0, i.jsx)(g, { profile: t, canManageGuild: n, handleIconChange: s }),
         }),
     });
 }

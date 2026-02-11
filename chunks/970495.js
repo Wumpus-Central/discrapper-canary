@@ -21,23 +21,23 @@ var i = n(627968),
     I = n(589051),
     T = n(761661),
     C = n(592598),
-    v = n(658198),
-    y = n(581730),
+    y = n(658198),
+    v = n(581730),
     N = n(672396),
     O = n(652215),
-    b = n(985018),
-    j = n(676667);
+    j = n(985018),
+    b = n(13217);
 function w(e) {
     let { user: t, application: n, runningGame: l } = e;
     return null != n || null != l
         ? (0, i.jsx)("div", {
-              className: j.R3,
+              className: b.R3,
               children: (0, i.jsx)(s.Qk9, {
                   lowerBadge: (0, i.jsx)("div", {
-                      className: j.oM,
+                      className: b.oM,
                       children:
                           null != n || null != l
-                              ? (0, i.jsx)(m.A, { game: n, pid: l?.pid, size: m.M.XXSMALL, className: j.Gt })
+                              ? (0, i.jsx)(m.A, { game: n, pid: l?.pid, size: m.M.XXSMALL, className: b.Gt })
                               : null,
                   }),
                   lowerBadgeSize: { width: 16, height: 16 },
@@ -49,28 +49,28 @@ function w(e) {
 function L(e) {
     let { user: t, application: n, runningGame: l, username: r, onWatchClick: o, buttonColor: d } = e;
     return (0, i.jsxs)("div", {
-        className: j.kL,
+        className: b.kL,
         children: [
-            (0, i.jsx)("div", { className: j.H, children: (0, i.jsx)(w, { user: t, application: n, runningGame: l }) }),
+            (0, i.jsx)("div", { className: b.H, children: (0, i.jsx)(w, { user: t, application: n, runningGame: l }) }),
             (0, i.jsx)("div", {
-                className: a()(j.rf, j.FR),
+                className: a()(b.rf, b.FR),
                 children: (0, i.jsx)(s.Text, {
                     variant: "text-sm/medium",
                     color: "interactive-text-default",
-                    className: j.G3,
-                    children: b.intl.format(b.t.vTPX23, { username: r }),
+                    className: b.G3,
+                    children: j.intl.format(j.t.vTPX23, { username: r }),
                 }),
             }),
             (0, i.jsx)("div", {
-                className: j.Xm,
+                className: b.Xm,
                 children: (0, i.jsx)(s.DUT, {
                     onClick: o,
-                    className: a()(j.kx, "green" === d && j.Ib, "gray" === d && j.E0),
+                    className: a()(b.kx, "green" === d && b.Ib, "gray" === d && b.E0),
                     children: (0, i.jsx)(s.Text, {
                         variant: "text-sm/medium",
                         color: "always-white",
                         tag: "span",
-                        children: b.intl.string(b.t["xl+bTG"]),
+                        children: j.intl.string(j.t["xl+bTG"]),
                     }),
                 }),
             }),
@@ -80,25 +80,25 @@ function L(e) {
 function R(e) {
     let { user: t, application: n, runningGame: l, username: r, onWatchClick: o, iconColor: d } = e;
     return (0, i.jsxs)("div", {
-        className: j.kL,
+        className: b.kL,
         children: [
-            (0, i.jsx)("div", { className: j.H, children: (0, i.jsx)(w, { user: t, application: n, runningGame: l }) }),
+            (0, i.jsx)("div", { className: b.H, children: (0, i.jsx)(w, { user: t, application: n, runningGame: l }) }),
             (0, i.jsx)("div", {
-                className: a()(j.rf, j.FR),
+                className: a()(b.rf, b.FR),
                 children: (0, i.jsx)(s.Text, {
                     variant: "text-sm/medium",
                     color: "interactive-text-default",
-                    className: j.G3,
-                    children: b.intl.format(b.t.NmEczg, { username: r }),
+                    className: b.G3,
+                    children: j.intl.format(j.t.NmEczg, { username: r }),
                 }),
             }),
-            (0, i.jsx)("div", { className: j.U4 }),
+            (0, i.jsx)("div", { className: b.U4 }),
             (0, i.jsx)("div", {
-                className: j.Xm,
+                className: b.Xm,
                 children: (0, i.jsx)(s.DUT, {
                     onClick: o,
-                    className: j.zf,
-                    children: (0, i.jsx)(v.b, {
+                    className: b.zf,
+                    children: (0, i.jsx)(y.b, {
                         size: "sm",
                         color: "green" === d ? "white" : s.LU0.colors.INTERACTIVE_TEXT_ACTIVE.css,
                     }),
@@ -115,15 +115,15 @@ function D(e, t, n) {
         s = n?.application_id,
         u = p.A.getChannel(t),
         m = null != s ? c.A.getApplication(s) : null,
-        v = null != s ? f.A.getDetectableGame(s) : null,
-        b = null != s ? A.Ay.getRunningGames().find((e) => e.id === s) : null,
-        j = b?.name ?? v?.name ?? m?.name,
+        y = null != s ? f.A.getDetectableGame(s) : null,
+        j = null != s ? A.Ay.getRunningGames().find((e) => e.id === s) : null,
+        b = j?.name ?? y?.name ?? m?.name,
         w = (0, x.mG)(u?.guild_id, u?.id, l),
-        { trackView: D, trackClick: M } = (0, y.Y9)(N.KS.StreamWatchNudge, {
+        { trackView: D, trackClick: M } = (0, v.Y9)(N.KS.StreamWatchNudge, {
             notif_type: N.KS.StreamWatchNudge,
             notif_user_id: l.id,
             activity_type: n?.type,
-            activity_name: j ?? n?.name,
+            activity_name: b ?? n?.name,
         });
     return {
         body: (() => {
@@ -132,14 +132,14 @@ function D(e, t, n) {
                     return (0, i.jsx)(L, {
                         user: l,
                         application: m,
-                        runningGame: b,
+                        runningGame: j,
                         username: w,
                         buttonColor: "green",
                     });
                 case I.wD.GRAY_BUTTON_WITH_TEXT:
-                    return (0, i.jsx)(L, { user: l, application: m, runningGame: b, username: w, buttonColor: "gray" });
+                    return (0, i.jsx)(L, { user: l, application: m, runningGame: j, username: w, buttonColor: "gray" });
                 case I.wD.SINGLE_ICON_BUTTON:
-                    return (0, i.jsx)(R, { user: l, application: m, runningGame: b, username: w, iconColor: "white" });
+                    return (0, i.jsx)(R, { user: l, application: m, runningGame: j, username: w, iconColor: "white" });
             }
         })(),
         maxBodyLines: 1,

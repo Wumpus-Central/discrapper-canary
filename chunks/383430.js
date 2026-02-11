@@ -6,7 +6,7 @@ var i = n(627968),
     s = n(486020),
     o = n(188275),
     d = n(985018),
-    c = n(416e3);
+    c = n(126854);
 function u(e) {
     let { title: t, handleOpenCollectiblesShop: n, handleOpenGameShop: u, socialLayerStorefrontApplicationId: g } = e,
         m = l.useRef(null),
@@ -19,7 +19,7 @@ function u(e) {
         _ = l.useMemo(() => (null == h ? null : s.Ay.getApplicationIconURL({ id: h.id, icon: h.icon, size: 20 })), [h]),
         A = l.useMemo(() => (null == _ ? a.U1X : () => (0, i.jsx)("img", { className: c.I, src: _, alt: "" })), [_]),
         I = l.useMemo(() => (null == _ ? { type: "icon", icon: a.U1X } : { type: "image", src: _ }), [_]),
-        j = l.useMemo(
+        v = l.useMemo(
             () =>
                 (0, i.jsxs)(a.rXV, {
                     children: [
@@ -54,7 +54,7 @@ function u(e) {
                 onSelect: void 0,
                 onClose: t,
                 "aria-label": d.intl.string(d.t.GdNkvG),
-                children: j,
+                children: v,
             });
         },
         children: (e) =>

@@ -1,11 +1,11 @@
 n.d(t, { A: () => A });
 var a = n(627968),
-    s = n(64700),
-    i = n(503698),
-    l = n.n(i),
+    i = n(64700),
+    s = n(503698),
+    l = n.n(s),
     r = n(106778),
     o = n(340287),
-    d = n(92674),
+    d = n(563495),
     c = n(311907),
     u = n(475743),
     m = n(775602),
@@ -15,43 +15,43 @@ var a = n(627968),
     g = n(963713),
     _ = n(772244),
     f = n(851110),
-    v = n(307725),
+    v = n(655207),
     b = n(231901);
 let j = ["#51BC9D"],
     A = (e) => {
-        let { overlayRef: t, progressBarRef: n, isHovered: i } = e,
-            { quest: A, isExpanded: C } = s.useContext(g.T),
-            { expansionSpring: S } = s.useContext(p.PW),
+        let { overlayRef: t, progressBarRef: n, isHovered: s } = e,
+            { quest: A, isExpanded: C } = i.useContext(g.T),
+            { expansionSpring: S } = i.useContext(p.PW),
             { completionSpring: T, startCompletionAnimation: y } = (0, _.Ry)(),
-            N = A.userStatus?.completedAt != null,
-            E = s.useRef(!1),
+            E = A.userStatus?.completedAt != null,
+            N = i.useRef(!1),
             I = (0, c.bG)([m.A], () => m.A.useReducedMotion),
-            k = s.useRef(null),
+            k = i.useRef(null),
             R = (0, c.bG)([h.A], () => h.A.hasLayers()),
             O = (0, u.A)(R),
-            [w, D] = s.useState(null),
-            [M, P] = s.useState(null),
-            L = s.useRef(new r.OH({ gravity: 0, wind: 0 })),
+            [w, D] = i.useState(null),
+            [M, P] = i.useState(null),
+            L = i.useRef(new r.OH({ gravity: 0, wind: 0 })),
             U = (0, r.f9)(w, M),
-            B = s.useCallback(() => {
+            B = i.useCallback(() => {
                 if (I) return;
                 let e = n.current,
                     t = k.current;
                 if (null != t && null != e && U.isReady) {
-                    var a, s, i, l;
+                    var a, i, s, l;
                     let { x: n, y: r } = e.getBoundingClientRect(),
                         { x: o, y: d } = t.getBoundingClientRect();
                     U.createMultipleConfetti(
                         ((a = n - o),
-                        (s = r - d),
-                        (i = e.clientHeight),
+                        (i = r - d),
+                        (s = e.clientHeight),
                         (l = e.clientWidth),
                         {
                             ...f.Mw,
                             position: {
                                 type: "static-random",
-                                minValue: { x: a, y: s },
-                                maxValue: { x: a + i, y: s + l },
+                                minValue: { x: a, y: i },
+                                maxValue: { x: a + s, y: i + l },
                             },
                             velocity: {
                                 type: "static-random",
@@ -67,23 +67,23 @@ let j = ["#51BC9D"],
                 }
             }, [n, k, U, I]),
             G = (0, u.A)(C);
-        return (s.useEffect(() => {
-            N && C && !G && (y(), B());
-        }, [C, N, y, B, G]),
-        s.useEffect(() => {
-            N &&
+        return (i.useEffect(() => {
+            E && C && !G && (y(), B());
+        }, [C, E, y, B, G]),
+        i.useEffect(() => {
+            E &&
                 !R &&
                 O &&
                 setTimeout(() => {
                     y(), B();
                 }, 200);
-        }, [N, O, R, y, B]),
-        s.useEffect(() => {
-            U.isReady && (!E.current && N && (y(), B()), (E.current = N));
-        }, [N, E, B, y, U]),
-        s.useEffect(() => {
-            i && N && (y(), B());
-        }, [i, N, y, B]),
+        }, [E, O, R, y, B]),
+        i.useEffect(() => {
+            U.isReady && (!N.current && E && (y(), B()), (N.current = E));
+        }, [E, N, B, y, U]),
+        i.useEffect(() => {
+            s && E && (y(), B());
+        }, [s, E, y, B]),
         I)
             ? null
             : (0, a.jsxs)("div", {

@@ -1,8 +1,8 @@
 n.d(t, { A: () => _ });
 var a = n(627968),
-    s = n(64700),
-    i = n(503698),
-    l = n.n(i),
+    i = n(64700),
+    s = n(503698),
+    l = n.n(s),
     r = n(607399),
     o = n(397927),
     d = n(354949),
@@ -10,16 +10,16 @@ var a = n(627968),
     u = n(446868),
     m = n(652215),
     h = n(985018),
-    x = n(441609);
+    x = n(26939);
 let p = c.A.getArticleURL(m.MVz.VERIFICATION_FAQ);
-class g extends s.PureComponent {
+class g extends i.PureComponent {
     static defaultProps = { types: [m.Fz7.CAPTCHA], onCaptchaVerify: m.tEg, onLogout: m.tEg };
     renderFields() {
-        let { types: e, captchaKey: t, theme: n, onCaptchaVerify: s } = this.props;
+        let { types: e, captchaKey: t, theme: n, onCaptchaVerify: i } = this.props;
         return (0, a.jsx)(a.Fragment, {
             children: e.map((e) =>
                 e === m.Fz7.CAPTCHA
-                    ? (0, a.jsx)(d.A, { onVerify: s, theme: n }, t)
+                    ? (0, a.jsx)(d.A, { onVerify: i, theme: n }, t)
                     : (0, a.jsx)(o.Button, { onClick: () => this.handleClick(e), text: u.A.getButtonTitle(e) }, e),
             ),
         });

@@ -7,7 +7,7 @@ var r = n(627968),
     o = n(962125),
     l = n(151271),
     u = n(652215),
-    c = n(103551);
+    c = n(75421);
 let d = (e) => {
         let { activeIndex: t, categoryListRef: n, getScrollOffsetForIndex: r } = e,
             a = i.useRef(u.An1),
@@ -37,41 +37,41 @@ let d = (e) => {
                 store: u,
                 children: _,
                 className: f,
-                listPadding: p,
-                rowCount: h,
-                getScrollOffsetForIndex: m,
-                categoryHeight: g,
-                onScroll: E,
-                renderCategoryListItem: A,
-                rowCountBySection: I,
-                renderSection: T,
+                listPadding: h,
+                rowCount: p,
+                getScrollOffsetForIndex: g,
+                categoryHeight: E,
+                onScroll: A,
+                renderCategoryListItem: I,
+                rowCountBySection: T,
+                renderSection: y,
             } = e,
-            y = u.useStore((e) => e.activeCategoryIndex);
-        d({ activeIndex: y, categoryListRef: t, getScrollOffsetForIndex: m });
-        let S = i.useCallback(
+            S = u.useStore((e) => e.activeCategoryIndex);
+        d({ activeIndex: S, categoryListRef: t, getScrollOffsetForIndex: g });
+        let v = i.useCallback(
                 (e) => {
                     let { searchQuery: t } = l.RQ.getState();
                     u.setActiveCategoryIndex(e), "" !== t ? (0, l.Ri)("") : n.current?.scrollToSectionTop(e);
                 },
                 [n, u],
             ),
-            v = i.useCallback((e) => A(a[e], e, () => S(e), y === e), [y, a, S, A]),
-            C = i.useMemo(() => ("function" == typeof g ? (e) => g(a[e], e) : g), [a, g]);
+            C = i.useCallback((e) => I(a[e], e, () => v(e), S === e), [S, a, v, I]),
+            b = i.useMemo(() => ("function" == typeof E ? (e) => E(a[e], e) : E), [a, E]);
         return (0, r.jsxs)("div", {
             className: s()(c.i, f),
             children: [
                 (0, r.jsx)(o.A, {
-                    listPadding: p,
-                    onScroll: E,
+                    listPadding: h,
+                    onScroll: A,
                     ref: t,
-                    renderRow: v,
-                    rowCount: h,
-                    rowHeight: C,
+                    renderRow: C,
+                    rowCount: p,
+                    rowHeight: b,
                     hideScrollbar: !0,
-                    rowCountBySection: I,
-                    renderSection: T,
+                    rowCountBySection: T,
+                    renderSection: y,
                 }),
-                _?.(S),
+                _?.(v),
             ],
         });
     };

@@ -7,7 +7,7 @@ var l = n(503698),
     r = n(827734),
     o = n(492518),
     d = n(985018),
-    c = n(865444);
+    c = n(85474);
 function u(e) {
     let { icon: t, style: n } = e;
     return (0, i.jsx)("div", { className: s()(c.Lw, n), children: t });

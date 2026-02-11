@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => A });
 var r = n(627968),
     i = n(64700),
     a = n(665260),
@@ -11,24 +11,24 @@ var r = n(627968),
     d = n(716965),
     _ = n(647053),
     f = n(566615),
-    p = n(652215),
-    h = n(778712),
-    m = n(985018),
-    g = n(21998);
-function E(e) {
-    let { user: t, application: n, bot: E, accountScopes: A, showLogout: I, location: T, scopes: y } = e,
-        S = (0, f.i)(),
-        v = c.Ay.getApplicationIconURL({ id: n.id, icon: n.icon }),
-        C = c.Ay.getUserAvatarURL(t),
-        b = i.useMemo(
+    h = n(652215),
+    p = n(778712),
+    g = n(985018),
+    E = n(615404);
+function A(e) {
+    let { user: t, application: n, bot: A, accountScopes: I, showLogout: T, location: y, scopes: S } = e,
+        v = (0, f.i)(),
+        C = c.Ay.getApplicationIconURL({ id: n.id, icon: n.icon }),
+        b = c.Ay.getUserAvatarURL(t),
+        N = i.useMemo(
             () =>
-                y.some((e) => (0, _.RM)(e))
+                S.some((e) => (0, _.RM)(e))
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(l.E, {
                                   variant: "text-lg/normal",
                                   color: "text-default",
-                                  children: m.intl.string(m.t.uT1CPa),
+                                  children: g.intl.string(g.t.uT1CPa),
                               }),
                               (0, r.jsx)(s.DZT, {
                                   variant: "heading-xxl/bold",
@@ -44,70 +44,70 @@ function E(e) {
                                   color: "text-strong",
                                   children: [
                                       n.name,
-                                      null != E
+                                      null != A
                                           ? (0, r.jsx)(u.A, {
-                                                className: g.AO,
+                                                className: E.AO,
                                                 verified:
-                                                    null != E.public_flags &&
-                                                    (0, a.Lt)(E.public_flags, p.nhx.VERIFIED_BOT),
+                                                    null != A.public_flags &&
+                                                    (0, a.Lt)(A.public_flags, h.nhx.VERIFIED_BOT),
                                             })
                                           : null,
                                   ],
                               }),
-                              A.length > 0
+                              I.length > 0
                                   ? (0, r.jsx)(l.E, {
                                         variant: "text-md/normal",
                                         color: "text-default",
-                                        children: m.intl.string(m.t.jFbDnJ),
+                                        children: g.intl.string(g.t.jFbDnJ),
                                     })
                                   : (0, r.jsx)(l.E, {
                                         variant: "text-md/normal",
                                         color: "text-default",
-                                        children: m.intl.string(m.t["X+Fdpo"]),
+                                        children: g.intl.string(g.t["X+Fdpo"]),
                                     }),
                           ],
                       }),
-            [A.length, n, E, y],
+            [I.length, n, A, S],
         );
     return (0, r.jsxs)("header", {
-        id: S,
-        className: g.wx,
+        id: v,
+        className: E.wx,
         children: [
             (0, r.jsxs)("div", {
-                className: g.Y,
+                className: E.Y,
                 children: [
-                    (0, r.jsx)(o.eu, { className: g.my, src: v, size: h._3.SIZE_80, "aria-label": n.name }),
+                    (0, r.jsx)(o.eu, { className: E.my, src: C, size: p._3.SIZE_80, "aria-label": n.name }),
                     (0, r.jsxs)("div", {
-                        className: g.I5,
+                        className: E.I5,
                         children: [
-                            (0, r.jsx)("div", { className: g.pw }),
-                            (0, r.jsx)("div", { className: g.pw }),
-                            (0, r.jsx)("div", { className: g.pw }),
+                            (0, r.jsx)("div", { className: E.pw }),
+                            (0, r.jsx)("div", { className: E.pw }),
+                            (0, r.jsx)("div", { className: E.pw }),
                         ],
                     }),
-                    (0, r.jsx)(o.eu, { className: g.my, src: C, size: h._3.SIZE_80, "aria-label": t.username }),
+                    (0, r.jsx)(o.eu, { className: E.my, src: b, size: p._3.SIZE_80, "aria-label": t.username }),
                 ],
             }),
-            b,
-            I
+            N,
+            T
                 ? (0, r.jsx)("div", {
-                      className: g.Ny,
+                      className: E.Ny,
                       children: (0, r.jsxs)(l.E, {
                           variant: "text-sm/normal",
                           color: "text-muted",
                           children: [
-                              m.intl.format(m.t.qRvpYU, {
+                              g.intl.format(g.t.qRvpYU, {
                                   userHook: () =>
                                       (0, r.jsxs)(
                                           l.E,
                                           {
-                                              className: g.ZD,
+                                              className: E.ZD,
                                               variant: "text-sm/normal",
                                               children: [
                                                   t.username,
                                                   !t.hasUniqueUsername() &&
                                                       (0, r.jsx)(l.E, {
-                                                          className: g.Jb,
+                                                          className: E.Jb,
                                                           variant: "text-sm/normal",
                                                           children: `#${t.discriminator}`,
                                                       }),
@@ -118,9 +118,9 @@ function E(e) {
                               }),
                               (0, r.jsx)(s.DUT, {
                                   tag: "a",
-                                  className: g.Pg,
-                                  onClick: () => (0, d.Vh)(T, "oauth2_logout"),
-                                  children: m.intl.string(m.t["yV/hjC"]),
+                                  className: E.Pg,
+                                  onClick: () => (0, d.Vh)(y, "oauth2_logout"),
+                                  children: g.intl.string(g.t["yV/hjC"]),
                               }),
                           ],
                       }),

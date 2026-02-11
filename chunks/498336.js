@@ -1,7 +1,7 @@
 n.d(t, { A: () => y });
 var a = n(627968),
-    s = n(989349),
-    i = n.n(s),
+    i = n(989349),
+    s = n.n(i),
     l = n(311907),
     r = n(562465),
     o = n(554146),
@@ -19,11 +19,11 @@ var a = n(627968),
     b = n(967198),
     j = n(642020),
     A = n(652215),
-    C = n(45298);
+    C = n(300756);
 async function S(e, t, n) {
     await r.Bo.patch({
         url: A.Rsh.APPLIED_BOOST_MODIFY_END_DATE,
-        body: { applied_boost_ids: t.map((e) => e.id), ends_at: n ? null : i()().add(1, "day") },
+        body: { applied_boost_ids: t.map((e) => e.id), ends_at: n ? null : s()().add(1, "day") },
         rejectWithError: !0,
     }),
         (0, c.VU)(e),
@@ -36,7 +36,7 @@ function y() {
     let e = (0, l.bG)([b.A], () => b.A.getGuildId()),
         t = (0, l.bG)([v.A], () => v.A.getGuild(e)?.name),
         n = (0, l.yK)([_.A], () => [...j.DX, ...j.gh].filter((t) => null != e && (0, h.zs)(t, e))),
-        s = (0, l.yK)([f.A], () => (null != e ? (f.A.getAppliedGuildBoostsForGuild(e) ?? []) : []));
+        i = (0, l.yK)([f.A], () => (null != e ? (f.A.getAppliedGuildBoostsForGuild(e) ?? []) : []));
     if (null != e)
         return (0, a.jsxs)(d.IpV, {
             className: C.kL,
@@ -83,14 +83,14 @@ function y() {
                                     variant: "primary",
                                     text: "Set Half Boosts expiring in 1 day",
                                     onClick: () => {
-                                        S(e, s.slice(Math.floor(s.length / 2)), !1);
+                                        S(e, i.slice(Math.floor(i.length / 2)), !1);
                                     },
                                 }),
                                 (0, a.jsx)(d.Button, {
                                     variant: "primary",
                                     text: "Reset End Date",
                                     onClick: () => {
-                                        S(e, s, !0);
+                                        S(e, i, !0);
                                     },
                                 }),
                             ],

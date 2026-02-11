@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => C });
+n.d(t, { A: () => b });
 var r = n(627968),
     i = n(503698),
     a = n.n(i),
@@ -11,64 +11,64 @@ var r = n(627968),
     d = n(287809),
     _ = n(298072),
     f = n(466459),
-    p = n(623373),
-    h = n(561769),
-    m = n(846957),
-    g = n(929283),
-    E = n(245068),
-    A = n(761365),
-    I = n(550674),
-    T = n(8056);
-let y = (e) => {
+    h = n(623373),
+    p = n(561769),
+    g = n(846957),
+    E = n(929283),
+    A = n(245068),
+    I = n(761365),
+    T = n(550674),
+    y = n(998918);
+let S = (e) => {
         let { product: t, isCardHovered: n } = e,
-            i = (0, p.YW)(t),
+            i = (0, h.YW)(t),
             { isPurchased: o, isPartiallyOwnedBundle: l } = (0, f.h)(t),
             u = i === s.R.PROFILE_EFFECT;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)("div", {
-                    className: a()(T.mA, { [T.zj]: (o || l) && !n, [T.Ge]: u }),
-                    children: (0, r.jsx)(S, { product: t, isCardHovered: n }),
+                    className: a()(y.mA, { [y.zj]: (o || l) && !n, [y.Ge]: u }),
+                    children: (0, r.jsx)(v, { product: t, isCardHovered: n }),
                 }),
-                o && (0, r.jsx)(v, { hidden: n }),
+                o && (0, r.jsx)(C, { hidden: n }),
             ],
         });
     },
-    S = (e) => {
+    v = (e) => {
         let { product: t, isCardHovered: n } = e,
             i = (0, l.bG)([d.default], () => d.default.getCurrentUser()),
-            a = (0, p.YW)(t),
-            o = (0, I.D)(t);
+            a = (0, h.YW)(t),
+            o = (0, T.D)(t);
         switch (a) {
             case s.R.PROFILE_EFFECT:
                 return (0, r.jsx)(c.A, { skuId: o.skuId, isHighlighted: n, removeSetHeight: !0 });
             case s.R.AVATAR_DECORATION:
-                return (0, r.jsx)(g.i, { item: o, user: i, isHighlighted: n, avatarSize: u._3J.SIZE_120 });
+                return (0, r.jsx)(E.i, { item: o, user: i, isHighlighted: n, avatarSize: u._3J.SIZE_120 });
             case s.R.NAMEPLATE:
-                return (0, r.jsx)(A.A, { nameplate: o, user: i, isHighlighted: n });
+                return (0, r.jsx)(I.A, { nameplate: o, user: i, isHighlighted: n });
             case s.R.BUNDLE:
-                return (0, r.jsx)(E.X, { product: t, user: i, isHighlighted: n });
+                return (0, r.jsx)(A.X, { product: t, user: i, isHighlighted: n });
             case s.R.EXTERNAL_SKU:
-                return (0, r.jsx)(m.B, { product: t, animationState: n ? "on" : "off" });
+                return (0, r.jsx)(g.B, { product: t, animationState: n ? "on" : "off" });
             default:
                 return null;
         }
     },
-    v = (e) => {
+    C = (e) => {
         let { hidden: t } = e;
         return (0, r.jsx)(o.rOg, {
             size: "custom",
             color: u.LU0.colors.INTERACTIVE_TEXT_ACTIVE,
             width: 40,
             height: 40,
-            className: a()(T.zo, { [T.R]: t }),
+            className: a()(y.zo, { [y.R]: t }),
         });
     },
-    C = (e) => {
+    b = (e) => {
         let { skuId: t, isCardHovered: n, overrideVariantIndex: i } = e,
-            a = (0, h.Vm)(t),
+            a = (0, p.Vm)(t),
             s = (0, _.Q)(a);
         if (null == a) return null;
-        let o = (0, p.rb)(a, i ?? s);
-        return (0, r.jsx)(y, { product: o, isCardHovered: n });
+        let o = (0, h.rb)(a, i ?? s);
+        return (0, r.jsx)(S, { product: o, isCardHovered: n });
     };

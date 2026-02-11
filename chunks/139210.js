@@ -1,9 +1,9 @@
 n.d(t, { A: () => S });
 var a = n(627968),
-    s = n(64700),
-    i = n(503698),
-    l = n.n(i),
-    r = n(92674),
+    i = n(64700),
+    s = n(503698),
+    l = n.n(s),
+    r = n(563495),
     o = n(397927),
     d = n(341915),
     c = n(590202),
@@ -18,28 +18,28 @@ var a = n(627968),
     v = n(223352),
     b = n(152515),
     j = n(985018),
-    A = n(116224);
+    A = n(229170);
 let C = (0, r.animated)(x.Ay),
     S = (e) => {
-        let { withUnfurlTimeout: t, unfurlTimeoutDurationInMilliseconds: n, onUnfurlTimeoutComplete: i } = e,
+        let { withUnfurlTimeout: t, unfurlTimeoutDurationInMilliseconds: n, onUnfurlTimeoutComplete: s } = e,
             x = (0, u.go)(),
-            { expansionSpring: S } = s.useContext(_.PW),
+            { expansionSpring: S } = i.useContext(_.PW),
             {
                 onCtxMenuOpen: T,
                 onCtxMenuClose: y,
-                onCtxMenuSelect: N,
-                isExpanded: E,
+                onCtxMenuSelect: E,
+                isExpanded: N,
                 isExpansionAnimationComplete: I,
                 quest: k,
-            } = s.useContext(f.T),
-            R = s.useCallback(() => {
+            } = i.useContext(f.T),
+            R = i.useCallback(() => {
                 (0, g.Zc)(k, {
                     content: d.uF.QUEST_BAR_V2,
                     ctaContent: c.Cy.OPEN_DISCLOSURE,
                     sourceQuestContent: d.uF.QUEST_BAR_V2,
                 });
             }, [k]),
-            O = s.useCallback(() => {
+            O = i.useCallback(() => {
                 (0, m.pu)(k, {
                     content: d.uF.QUEST_BAR_V2,
                     ctaContent: c.Cy.OPEN_GAME_LINK,
@@ -47,7 +47,7 @@ let C = (0, r.animated)(x.Ay),
                     sourceQuestContent: d.uF.QUEST_BAR_V2,
                 });
             }, [x, k]),
-            w = E && I,
+            w = N && I,
             D = (0, a.jsx)(o.DUT, {
                 onClick: O,
                 className: l()(A.vk, { [A.wm]: w }),
@@ -90,12 +90,12 @@ let C = (0, r.animated)(x.Ay),
                         t
                             ? (0, a.jsx)("div", {
                                   className: A.uJ,
-                                  children: (0, a.jsx)(b.n, { timeoutDurationInMilliseconds: n, onTimeoutComplete: i }),
+                                  children: (0, a.jsx)(b.n, { timeoutDurationInMilliseconds: n, onTimeoutComplete: s }),
                               })
                             : (0, a.jsx)(h.C, {
                                   onOpen: T,
                                   onClose: y,
-                                  onSelect: N,
+                                  onSelect: E,
                                   questContent: d.uF.QUEST_BAR_V2,
                                   quest: k,
                                   shouldShowDisclosure: !0,

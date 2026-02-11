@@ -1,18 +1,18 @@
 n.d(t, { A: () => A });
 var i = n(627968),
     r = n(64700),
-    a = n(503698),
-    l = n.n(a),
+    l = n(503698),
+    a = n.n(l),
     s = n(615300),
     o = n(837381),
     d = n(397927),
     c = n(442433);
 n(687599);
-var u = n(102752);
+var u = n(58826);
 let A = function (e) {
     let {
             index: t,
-            children: a,
+            children: l,
             user: A,
             channel: h,
             onClick: _,
@@ -21,13 +21,13 @@ let A = function (e) {
             onOtherHover: g,
             className: E,
         } = e,
-        [f, I] = r.useState(!1),
+        [I, f] = r.useState(!1),
         [C, N] = r.useState(!1),
         T = () => {
-            I(!0), !m || p || C || g?.();
+            f(!0), !m || p || C || g?.();
         },
         S = () => {
-            I(!1);
+            f(!1);
         };
     return (0, i.jsx)(o.tG, {
         id: h.id,
@@ -35,7 +35,7 @@ let A = function (e) {
             (0, i.jsx)(d.vN3, {
                 offset: { left: -8, right: -8 },
                 children: (0, i.jsx)(s.A.div, {
-                    className: l()(u.Cf, E, { [u.vu]: p || C, [u.CJ]: 0 === t }),
+                    className: a()(u.Cf, E, { [u.vu]: p || C, [u.CJ]: 0 === t }),
                     onContextMenu: (e) => {
                         null != A &&
                             (N(!0),
@@ -45,7 +45,7 @@ let A = function (e) {
                                     let { default: e } = await Promise.all([
                                         n.e("97262"),
                                         n.e("32418"),
-                                        n.e("22252"),
+                                        n.e("93382"),
                                     ]).then(n.bind(n, 668569));
                                     return (t) => (0, i.jsx)(e, { ...t, user: A });
                                 },
@@ -61,7 +61,7 @@ let A = function (e) {
                     onClick: _ ?? void 0,
                     style: { LIST_ROW_HEIGHT: 73, opacity: 1 },
                     ...e,
-                    children: a(f || p || C),
+                    children: l(I || p || C),
                 }),
             }),
     });

@@ -18,8 +18,8 @@ var i = n(627968),
     x = n(878831),
     E = n(768349),
     C = n(985018),
-    I = n(609653),
-    T = n(103467);
+    I = n(62323),
+    T = n(748921);
 function v(e) {
     let { message: t, applicationName: n, iconSrc: l, channel: a, currentUserId: s, viewAction: d } = e,
         c = (0, _.Ay)(t),
@@ -61,15 +61,15 @@ function N(e) {
             staticBannerSrc: N,
             onClickContent: S,
             iconSrc: b,
-            onView: y,
-            presenceActivity: j,
+            onView: j,
+            presenceActivity: y,
             analyticsLocations: R,
             showAuthButton: L,
             startAuthorization: M,
             accountLinkButtonRef: O,
-            renderAccountLinkUpsell: P,
+            renderAccountLinkUpsell: D,
         } = e,
-        D = (0, s.bG)([g.A], () => g.A.getMessages(r.id)),
+        P = (0, s.bG)([g.A], () => g.A.getMessages(r.id)),
         { actions: k, hasAccountLinkButton: U } = l.useMemo(() => {
             let e = [],
                 i = !0,
@@ -89,7 +89,7 @@ function N(e) {
                     : null != T && ((e = [T]), (i = !1)),
                 e.length > 0)
             )
-                if (!(0, f.p)(t.id, D, n.id, j)) return { actions: [], hasAccountLinkButton: !1 };
+                if (!(0, f.p)(t.id, P, n.id, y)) return { actions: [], hasAccountLinkButton: !1 };
                 else
                     L &&
                         i &&
@@ -105,7 +105,7 @@ function N(e) {
                         }),
                         (l = !0));
             return { actions: e, hasAccountLinkButton: l };
-        }, [p, h, T, D, j, n.id, t.id, L, M, R, O]),
+        }, [p, h, T, P, y, n.id, t.id, L, M, R, O]),
         w = k.some((e) => e.trackingArea === u.kY.CLOUD_PLAY);
     (0, x.A)(w, R);
     let G = k.length > 0,
@@ -138,7 +138,7 @@ function N(e) {
                       trackingConfig: {
                           id: n.id,
                           linkType: E.J.RICH_PRESENCE_INVITE,
-                          onView: y,
+                          onView: j,
                           referrerId: t.author.id,
                           guildId: r.guild_id,
                           channelId: t.channel_id,
@@ -146,7 +146,7 @@ function N(e) {
                           isDeadEnd: !0,
                       },
                   }),
-                  U ? P() : null,
+                  U ? D() : null,
               ],
           });
 }

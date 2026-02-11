@@ -19,11 +19,11 @@ var l = n(311907),
     x = n(661191),
     E = n(820672),
     C = n(768349),
-    I = n(426127),
+    I = n(55705),
     T = n(985018);
 function v(e) {
-    let { currentUserId: t, message: v, application: N, channel: S, analyticsLocations: b, onView: y } = e,
-        { staticBannerSrc: j, videoBannerSrc: R, bannerAspectRatio: L } = (0, u.f)(N),
+    let { currentUserId: t, message: v, application: N, channel: S, analyticsLocations: b, onView: j } = e,
+        { staticBannerSrc: y, videoBannerSrc: R, bannerAspectRatio: L } = (0, u.f)(N),
         M = A.Ay.getApplicationIconURL({ id: N.id, icon: N.icon }),
         O = (0, l.bG)([m.Ay, p.A], () =>
             m.Ay.getVisibleRunningGames().find((e) => {
@@ -33,8 +33,8 @@ function v(e) {
                 return null != n && t === n.id;
             }),
         ),
-        P = (0, l.bG)([h.A], () => h.A.getCurrentUserActiveStream()),
-        D = (0, l.bG)([g.A], () => g.A.getChannelId()),
+        D = (0, l.bG)([h.A], () => h.A.getCurrentUserActiveStream()),
+        P = (0, l.bG)([g.A], () => g.A.getChannelId()),
         k = x.default.extractTimestamp(v.id) + E.M < Date.now(),
         U = (0, i.jsx)(i.Fragment, { children: (0, r.Wf)(v, S, t) }),
         { analyticsLocations: w } = (0, o.Ay)(b, s.A.REQUEST_TO_STREAM_INVITE_EMBED),
@@ -43,15 +43,15 @@ function v(e) {
     return (
         k
             ? ((G = T.intl.string(I.default.u4QmWl)), (B = !0))
-            : null != P
+            : null != D
               ? ((G = T.intl.string(I.default.P0wwmM)), (B = !0))
-              : D !== S.id
+              : P !== S.id
                 ? ((G = T.intl.string(I.default.qRXats)), (B = !0))
                 : null == O && ((G = T.intl.string(I.default["43zohO"])), (B = !0)),
         (0, i.jsx)(d.h, {
             header: T.intl.string(I.default.nAyuPp),
             title: N.name,
-            staticBannerSrc: j,
+            staticBannerSrc: y,
             videoBannerSrc: R,
             bannerAspectRatio: L,
             iconSrc: M ?? void 0,
@@ -84,7 +84,7 @@ function v(e) {
                 guildId: S.guild_id,
                 channelId: S.id,
                 messageId: v.id,
-                onView: y,
+                onView: j,
                 isDeadEnd: k,
             },
         })

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => I });
+n.d(t, { A: () => T });
 var r = n(627968);
 n(64700);
 var i = n(735438),
@@ -12,12 +12,12 @@ var i = n(735438),
     d = n(961350),
     _ = n(734057),
     f = n(290863),
-    p = n(383501),
-    h = n(162605),
-    m = n(37962),
-    g = n(670455),
-    E = n(652215);
-class A extends m.A {
+    h = n(383501),
+    p = n(162605),
+    g = n(37962),
+    E = n(670455),
+    A = n(652215);
+class I extends g.A {
     actions = {
         VOICE_CHANNEL_SHOW_FEEDBACK: (e) => this.handleVoiceChannelFeedback(e),
         STREAM_CLOSE: (e) => this.handleStreamClose(e),
@@ -30,19 +30,19 @@ class A extends m.A {
     handleVoiceChannelFeedback = (e) => {
         let { analyticsData: t } = e;
         (0, i.sum)(t.duration_speaking_voice_filter_ms) >= 5e3 &&
-            this.possiblyShowFeedbackModal(g.MW.VOICE_FILTER, () => {
+            this.possiblyShowFeedbackModal(E.MW.VOICE_FILTER, () => {
                 (0, a.mMO)(async () => {
                     let { VoiceFilterFeedbackModal: e } = await Promise.all([
                         n.e("16833"),
                         n.e("26484"),
-                        n.e("51997"),
+                        n.e("21847"),
                     ]).then(n.bind(n, 455071));
                     return (n) => (0, r.jsx)(e, { ...n, analyticsData: t });
                 });
             }),
-            this.possiblyShowFeedbackModal(g.MW.VOICE, () => {
+            this.possiblyShowFeedbackModal(E.MW.VOICE, () => {
                 (0, a.mMO)(async () => {
-                    let { default: e } = await Promise.all([n.e("16833"), n.e("49911"), n.e("36278")]).then(
+                    let { default: e } = await Promise.all([n.e("16833"), n.e("49911"), n.e("67612")]).then(
                         n.bind(n, 302252),
                     );
                     return (n) => (0, r.jsx)(e, { ...n, analyticsData: t });
@@ -53,19 +53,19 @@ class A extends m.A {
         let { streamKey: t, canShowFeedback: i } = e,
             s = (0, l.Iy)(t),
             o = (0, u.Ee)(s, f.A),
-            c = h.A.getVideoStats(t) ?? {},
+            c = p.A.getVideoStats(t) ?? {},
             _ = {
-                media_session_id: h.A.getMediaSessionId(t),
-                rtc_connection_id: h.A.getRtcConnectionId(t),
-                stream_region: h.A.getRegion(t),
-                max_viewers: h.A.getMaxViewers(t),
-                parent_media_session_id: h.A.getRTCConnection(t)?.parentMediaSessionId,
+                media_session_id: p.A.getMediaSessionId(t),
+                rtc_connection_id: p.A.getRtcConnectionId(t),
+                stream_region: p.A.getRegion(t),
+                max_viewers: p.A.getMaxViewers(t),
+                parent_media_session_id: p.A.getRTCConnection(t)?.parentMediaSessionId,
                 ...c,
             };
         i &&
-            this.possiblyShowFeedbackModal(g.MW.STREAM, () => {
+            this.possiblyShowFeedbackModal(E.MW.STREAM, () => {
                 (0, a.mMO)(async () => {
-                    let { default: e } = await Promise.all([n.e("16833"), n.e("49911"), n.e("80760")]).then(
+                    let { default: e } = await Promise.all([n.e("16833"), n.e("49911"), n.e("1154")]).then(
                         n.bind(n, 218738),
                     );
                     return (t) =>
@@ -81,9 +81,9 @@ class A extends m.A {
     };
     handleVideoBackgroundShowFeedback = (e) => {
         let { analyticsData: t } = e;
-        this.possiblyShowFeedbackModal(g.MW.VIDEO_BACKGROUND, () => {
+        this.possiblyShowFeedbackModal(E.MW.VIDEO_BACKGROUND, () => {
             (0, a.mMO)(async () => {
-                let { default: e } = await Promise.all([n.e("16833"), n.e("26484"), n.e("23866")]).then(
+                let { default: e } = await Promise.all([n.e("16833"), n.e("26484"), n.e("53536")]).then(
                     n.bind(n, 932140),
                 );
                 return (n) => (0, r.jsx)(e, { ...n, analyticsData: t });
@@ -95,14 +95,14 @@ class A extends m.A {
             u = o.A.getApplication(t),
             d = (0, s.H)(i),
             f = _.A.getChannel(d),
-            h = { rtc_connection_id: p.A.getRTCConnectionId(), media_session_id: p.A.getMediaSessionId() },
-            m = c.A.getWindowOpen(E.MLl.CHANNEL_CALL_POPOUT) ? a.KX8 : a.SYi;
+            p = { rtc_connection_id: h.A.getRTCConnectionId(), media_session_id: h.A.getMediaSessionId() },
+            g = c.A.getWindowOpen(A.MLl.CHANNEL_CALL_POPOUT) ? a.KX8 : a.SYi;
         null != u &&
             l &&
-            this.possiblyShowFeedbackModal(g.MW.ACTIVITY, () => {
+            this.possiblyShowFeedbackModal(E.MW.ACTIVITY, () => {
                 (0, a.mMO)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("16833"), n.e("26484"), n.e("24921")]).then(
+                        let { default: e } = await Promise.all([n.e("16833"), n.e("26484"), n.e("14547")]).then(
                             n.bind(n, 969611),
                         );
                         return (t) =>
@@ -111,18 +111,18 @@ class A extends m.A {
                                 activityApplication: u,
                                 channel: f,
                                 embeddedActivityLocation: i,
-                                analyticsData: h,
+                                analyticsData: p,
                             });
                     },
-                    { contextKey: m },
+                    { contextKey: g },
                 );
             });
     };
     handleInAppReportsFeedback = (e) => {
         let { reportId: t, reportType: i } = e;
-        this.possiblyShowFeedbackModal(g.MW.IN_APP_REPORTS, () => {
+        this.possiblyShowFeedbackModal(E.MW.IN_APP_REPORTS, () => {
             (0, a.mMO)(async () => {
-                let { default: e } = await Promise.all([n.e("16833"), n.e("26484"), n.e("94759")]).then(
+                let { default: e } = await Promise.all([n.e("16833"), n.e("26484"), n.e("5205")]).then(
                     n.bind(n, 255189),
                 );
                 return (n) => (0, r.jsx)(e, { ...n, reportId: t, reportType: i });
@@ -130,9 +130,9 @@ class A extends m.A {
         });
     };
     handleBlockUserFeedback = () => {
-        this.possiblyShowFeedbackModal(g.MW.BLOCK_USER, () => {
+        this.possiblyShowFeedbackModal(E.MW.BLOCK_USER, () => {
             (0, a.mMO)(async () => {
-                let { default: e } = await Promise.all([n.e("16833"), n.e("26484"), n.e("15627")]).then(
+                let { default: e } = await Promise.all([n.e("16833"), n.e("26484"), n.e("8421")]).then(
                     n.bind(n, 307750),
                 );
                 return (t) => (0, r.jsx)(e, { ...t });
@@ -141,9 +141,9 @@ class A extends m.A {
     };
     handleAgeVerificationFeedback = (e) => {
         let { dismissibleContent: t } = e;
-        this.possiblyShowFeedbackModal(g.MW.AGE_VERIFICATION, () => {
+        this.possiblyShowFeedbackModal(E.MW.AGE_VERIFICATION, () => {
             (0, a.mMO)(async () => {
-                let { default: e } = await Promise.all([n.e("16833"), n.e("26484"), n.e("13146")]).then(
+                let { default: e } = await Promise.all([n.e("16833"), n.e("26484"), n.e("56160")]).then(
                     n.bind(n, 949004),
                 );
                 return (n) => (0, r.jsx)(e, { dismissibleContent: t, ...n });
@@ -151,4 +151,4 @@ class A extends m.A {
         });
     };
 }
-let I = new A();
+let T = new I();

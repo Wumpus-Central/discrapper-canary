@@ -2,7 +2,7 @@
 n.d(t, { A: () => P });
 var i = n(627968),
     s = n(64700),
-    l = n(92674),
+    l = n(563495),
     a = n(311907),
     r = n(397927),
     o = n(685399),
@@ -21,8 +21,8 @@ var i = n(627968),
     y = n(458294),
     v = n(71393),
     S = n(576705),
-    I = n(584569),
-    C = n(383501),
+    C = n(584569),
+    I = n(383501),
     N = n(309010),
     T = n(543465),
     O = n(607567),
@@ -32,7 +32,7 @@ var i = n(627968),
     R = n(652215),
     w = n(349828),
     L = n(985018),
-    k = n(852388);
+    k = n(716622);
 class M extends s.PureComponent {
     static getDerivedStateFromProps(e) {
         let { guild: t } = e;
@@ -166,8 +166,8 @@ function P(e) {
         L = (0, o.a1)(n?.id),
         k = (0, d.vj)(n?.id),
         P = n?.features.has(R.GuildFeatures.COMMUNITY) ?? !1,
-        G = (0, a.bG)([C.A], () => C.A.getChannelId()),
-        U = (0, a.bG)([I.A], () => I.A.desyncedVoiceStatesCount);
+        G = (0, a.bG)([I.A], () => I.A.getChannelId()),
+        V = (0, a.bG)([C.A], () => C.A.desyncedVoiceStatesCount);
     return (0, i.jsx)(M, {
         guildId: t,
         guild: n,
@@ -179,7 +179,7 @@ function P(e) {
         selectedVoiceChannelId: b,
         voiceStates: u,
         rtcConnectedChannelId: G,
-        rtcDesyncedVoiceStatesCount: U,
+        rtcDesyncedVoiceStatesCount: V,
         collapsedChannels: h,
         collapseMuted: c,
         guildReadStateSentinel: w,

@@ -23,7 +23,7 @@ var i = n(627968),
     p = n(268719),
     m = n(234957),
     U = n(652215),
-    M = n(119907);
+    M = n(50397);
 let h = l.memo(function (e) {
     let {
             message: t,
@@ -34,8 +34,8 @@ let h = l.memo(function (e) {
             hideSimpleEmbedContent: g = !0,
             channel: y,
             isGroupStart: L,
-            animateAvatar: k,
-            subscribeToComponentDispatch: f,
+            animateAvatar: f,
+            subscribeToComponentDispatch: k,
             renderThreadAccessory: x,
             trackAnnouncementViews: G = !1,
             ...j
@@ -54,8 +54,8 @@ let h = l.memo(function (e) {
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
-        w = t.type === U.lAJ.REPLY ? t.messageReference : void 0,
-        F = (0, o.bG)([_.A], () => _.A.getMessageByReference(w)),
+        F = t.type === U.lAJ.REPLY ? t.messageReference : void 0,
+        w = (0, o.bG)([_.A], () => _.A.getMessageByReference(F)),
         H = (0, a.rm)(t.id),
         W = (0, T.Ay)(t),
         Y = (0, o.bG)(
@@ -70,7 +70,7 @@ let h = l.memo(function (e) {
         compact: n,
         className: s()(l, { [M.M1]: (0, u.ec)(t), [M.XN]: B }),
         disableInteraction: B,
-        childrenRepliedMessage: (0, m.A)(t, y, w, F, n),
+        childrenRepliedMessage: (0, m.A)(t, y, F, w, n),
         childrenExecutedCommand: (0, p.A)(t, y, n),
         childrenHeader: (0, P.A)({ ...e, guildId: y.guild_id, author: W, roleIcon: K }),
         childrenAccessories: e.hideAccessories ? void 0 : (0, O.J)(e, b, V),

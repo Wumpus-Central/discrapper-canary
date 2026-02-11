@@ -1,8 +1,8 @@
 n.d(t, { A: () => E }), n(801541);
 var i = n(627968),
     l = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     r = n(889137),
     o = n(397927),
     c = n(375901),
@@ -11,31 +11,31 @@ var i = n(627968),
     h = n(922529),
     m = n(888675),
     A = n(652215),
-    p = n(985018),
-    g = n(410132),
-    f = n(119907);
+    g = n(985018),
+    p = n(785186),
+    f = n(50397);
 function _(e) {
-    let { expanded: t, onClick: n, count: l, compact: a, collapsedReason: s, canUncollapse: c = !0 } = e,
-        u = (0, r.YW)({ collapsedReason: s })
-            .with({ collapsedReason: p.t["VFWjc+"] }, () =>
-                (0, i.jsx)(o.G3N, { size: "md", color: "currentColor", className: g.Q6 }),
+    let { expanded: t, onClick: n, count: l, compact: s, collapsedReason: a, canUncollapse: c = !0 } = e,
+        u = (0, r.YW)({ collapsedReason: a })
+            .with({ collapsedReason: g.t["VFWjc+"] }, () =>
+                (0, i.jsx)(o.G3N, { size: "md", color: "currentColor", className: p.Q6 }),
             )
-            .with({ collapsedReason: p.t["+FcYM/"] }, () =>
-                (0, i.jsx)(o.KTN, { size: "md", color: "currentColor", className: g.Q6 }),
+            .with({ collapsedReason: g.t["+FcYM/"] }, () =>
+                (0, i.jsx)(o.KTN, { size: "md", color: "currentColor", className: p.Q6 }),
             )
-            .otherwise(() => (0, i.jsx)(o.PGe, { size: "md", color: "currentColor", className: g.Q6 })),
-        h = c ? u : (0, i.jsx)(o.DUT, { tag: "span", onClick: n, className: g.Y4, children: u });
+            .otherwise(() => (0, i.jsx)(o.PGe, { size: "md", color: "currentColor", className: p.Q6 })),
+        h = c ? u : (0, i.jsx)(o.DUT, { tag: "span", onClick: n, className: p.Y4, children: u });
     return (0, i.jsx)(d.A, {
-        compact: a,
+        compact: s,
         role: "group",
         childrenMessageContent: (0, i.jsx)(m.A, {
-            compact: a,
-            className: g.L9,
+            compact: s,
+            className: p.L9,
             iconNode: h,
             children: (0, i.jsxs)("div", {
-                className: g.Fo,
+                className: p.Fo,
                 children: [
-                    p.intl.format(s, { count: l }),
+                    g.intl.format(a, { count: l }),
                     c &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
@@ -43,8 +43,8 @@ function _(e) {
                                 (0, i.jsx)(o.DUT, {
                                     tag: "span",
                                     onClick: n,
-                                    className: g.rB,
-                                    children: t ? p.intl.string(p.t.fgq1gs) : p.intl.string(p.t.XJuakA),
+                                    className: p.rB,
+                                    children: t ? g.intl.string(g.t.fgq1gs) : g.intl.string(g.t.XJuakA),
                                 }),
                             ],
                         }),
@@ -54,9 +54,9 @@ function _(e) {
     });
 }
 let E = l.memo(function (e) {
-    let { messages: t, channel: n, compact: a = !1, unreadId: r, collapsedReason: o, canUncollapse: d = !0 } = e,
+    let { messages: t, channel: n, compact: s = !1, unreadId: r, collapsedReason: o, canUncollapse: d = !0 } = e,
         { hasJumpTarget: m = !1 } = t,
-        [p, E] = l.useState(m && d),
+        [g, E] = l.useState(m && d),
         [C, x] = l.useState(!1),
         S = l.useCallback(() => {
             d ? E((e) => !e) : x(!0);
@@ -70,17 +70,17 @@ let E = l.memo(function (e) {
         return null;
     let T = t.hasUnread ? t.content.length - 1 : t.content.length;
     return (0, i.jsxs)("div", {
-        className: s()({ [f._A]: !0, [g.sz]: p }),
+        className: a()({ [f._A]: !0, [p.sz]: g }),
         children: [
-            t.hasUnread && (!p || t.content[0]?.type === A.TZK.DIVIDER)
+            t.hasUnread && (!g || t.content[0]?.type === A.TZK.DIVIDER)
                 ? (0, i.jsx)(h.A, { isUnread: !0, id: r }, "divider")
                 : null,
             (0, i.jsx)(
                 _,
-                { count: T, compact: a, expanded: p, onClick: S, collapsedReason: o, canUncollapse: d },
+                { count: T, compact: s, expanded: g, onClick: S, collapsedReason: o, canUncollapse: d },
                 "collapsed-message-item",
             ),
-            p
+            g
                 ? t.content.map((e, l) => {
                       if (e.type === A.TZK.DIVIDER && l > 0) {
                           let e = t.content[l + 1]?.isGroupStart ?? !1;
@@ -92,8 +92,8 @@ let E = l.memo(function (e) {
                               t,
                               {
                                   id: (0, c.j)(n.id, e.content.id),
-                                  className: g.__invalid_blocked,
-                                  compact: a,
+                                  className: p.__invalid_blocked,
+                                  compact: s,
                                   channel: n,
                                   message: e.content,
                                   groupId: e.groupId,

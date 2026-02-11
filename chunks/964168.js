@@ -1,52 +1,52 @@
 "use strict";
-n.d(t, { default: () => T, m: () => S });
+n.d(t, { default: () => y, m: () => v });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(92674),
+    o = n(563495),
     l = n(397927),
     u = n(964486),
     c = n(235986),
     d = n(954571),
     _ = n(859703),
     f = n(890687),
-    p = n(590202),
-    h = n(652215),
-    m = n(985018),
-    g = n(627574),
-    E = n(295171);
-let A = 2500,
-    I = 467;
-function T(e) {
+    h = n(590202),
+    p = n(652215),
+    g = n(985018),
+    E = n(566380),
+    A = n(295171);
+let I = 2500,
+    T = 467;
+function y(e) {
     let { questId: t, survey: n, transitionState: a, onClose: s, onSubmit: _ } = e,
-        p = (0, f.C5)(t),
-        [T, S] = i.useState(0),
-        [C, b] = (0, l.zhh)(() => ({ from: { width: "0%" }, config: { duration: A } })),
-        N = (e) => {
+        h = (0, f.C5)(t),
+        [y, v] = i.useState(0),
+        [b, N] = (0, l.zhh)(() => ({ from: { width: "0%" }, config: { duration: I } })),
+        R = (e) => {
             _(),
-                S(1),
-                null != p &&
-                    d.default.track(h.HAw.QUEST_SURVEY_SUBMITTED, { ...v(p, n), choice: e.text, choice_id: e.key });
+                v(1),
+                null != h &&
+                    d.default.track(p.HAw.QUEST_SURVEY_SUBMITTED, { ...C(h, n), choice: e.text, choice_id: e.key });
         },
-        R = async (e) => {
-            1 === e && (await b({ width: "100%" }), s());
+        O = async (e) => {
+            1 === e && (await N({ width: "100%" }), s());
         };
     return (
         (0, u.Ay)(() => {
-            null != p && d.default.track(h.HAw.QUEST_SURVEY_DISPLAYED, v(p, n));
+            null != h && d.default.track(p.HAw.QUEST_SURVEY_DISPLAYED, C(h, n));
         }),
-        null == p && s(),
+        null == h && s(),
         (0, r.jsx)(l.EOs, {
             "data-migration-pending": !0,
             transitionState: a,
             size: l.rIJ.DYNAMIC,
-            className: g.modalRoot,
+            className: E.modalRoot,
             parentComponent: "QuestSurveyModal",
             children: (0, r.jsxs)(l.tN_, {
-                activeSlide: T,
-                width: I,
-                onSlideReady: R,
+                activeSlide: y,
+                width: T,
+                onSlideReady: O,
                 children: [
                     (0, r.jsxs)(l.q7S, {
                         id: 0,
@@ -55,10 +55,10 @@ function T(e) {
                                 "data-migration-pending": !0,
                                 direction: c.A.Direction.VERTICAL,
                                 separator: !1,
-                                className: g.Hc,
+                                className: E.Hc,
                                 children: [
-                                    (0, r.jsx)(l.s_y, { "data-migration-pending": !0, className: g.PV, onClick: s }),
-                                    (0, r.jsx)("img", { src: E, alt: "", className: g.LY }),
+                                    (0, r.jsx)(l.s_y, { "data-migration-pending": !0, className: E.PV, onClick: s }),
+                                    (0, r.jsx)("img", { src: A, alt: "", className: E.LY }),
                                     (0, r.jsx)(l.Heading, { variant: "heading-lg/semibold", children: n.title }),
                                     (0, r.jsx)(l.Text, {
                                         variant: "text-md/normal",
@@ -69,8 +69,8 @@ function T(e) {
                             }),
                             (0, r.jsx)(l.$mQ, {
                                 "data-migration-pending": !0,
-                                className: g.jE,
-                                children: n.choices.map((e) => (0, r.jsx)(y, { choice: e, onClick: N }, e.key)),
+                                className: E.jE,
+                                children: n.choices.map((e) => (0, r.jsx)(S, { choice: e, onClick: R }, e.key)),
                             }),
                         ],
                     }),
@@ -79,31 +79,31 @@ function T(e) {
                         children: [
                             (0, r.jsxs)(l.$mQ, {
                                 "data-migration-pending": !0,
-                                className: g.wD,
+                                className: E.wD,
                                 children: [
-                                    (0, r.jsx)("img", { src: E, alt: "", className: g.LY }),
+                                    (0, r.jsx)("img", { src: A, alt: "", className: E.LY }),
                                     (0, r.jsx)(l.Heading, {
                                         variant: "heading-lg/semibold",
-                                        children: m.intl.string(m.t.KTjjrG),
+                                        children: g.intl.string(g.t.KTjjrG),
                                     }),
                                     (0, r.jsx)(l.Text, {
                                         variant: "text-md/normal",
                                         color: "text-muted",
-                                        children: m.intl.string(m.t.AvbrEM),
+                                        children: g.intl.string(g.t.AvbrEM),
                                     }),
                                 ],
                             }),
                             (0, r.jsx)(l.jlY, {
                                 "data-migration-pending": !0,
                                 children: (0, r.jsxs)("div", {
-                                    className: g.cG,
+                                    className: E.cG,
                                     children: [
                                         (0, r.jsx)(l.Button, {
                                             variant: "primary",
-                                            text: m.intl.string(m.t.cpT0Cq),
+                                            text: g.intl.string(g.t.cpT0Cq),
                                             onClick: s,
                                         }),
-                                        (0, r.jsx)(o.animated.div, { className: g.ce, style: C }),
+                                        (0, r.jsx)(o.animated.div, { className: E.ce, style: b }),
                                     ],
                                 }),
                             }),
@@ -114,15 +114,15 @@ function T(e) {
         })
     );
 }
-function y(e) {
+function S(e) {
     let { className: t, choice: n, onClick: i } = e;
     return (0, r.jsxs)(l.DUT, {
-        className: s()(g.z5, t),
+        className: s()(E.z5, t),
         onClick: () => i(n),
         children: [(0, r.jsx)(l.Text, { variant: "text-sm/semibold", children: n.text }), (0, r.jsx)(l._BQ, {})],
     });
 }
-function S(e) {
+function v(e) {
     let t = !1;
     (0, l.mMO)(
         async () => {
@@ -139,15 +139,15 @@ function S(e) {
         {
             onCloseCallback: () => {
                 let n = _.A.getQuest(e.questId);
-                null != n && d.default.track(h.HAw.QUEST_SURVEY_DISMISSED, { ...v(n, e.survey), submitted: t });
+                null != n && d.default.track(p.HAw.QUEST_SURVEY_DISMISSED, { ...C(n, e.survey), submitted: t });
             },
         },
     );
 }
-function v(e, t) {
+function C(e, t) {
     return {
         quest_id: e.id,
-        quest_status: (0, p.NI)(e),
+        quest_status: (0, h.NI)(e),
         survey_id: t.id,
         survey_title: t.title,
         survey_subtitle: t.subtitle,

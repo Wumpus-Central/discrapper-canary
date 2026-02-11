@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { d: () => m });
+n.d(t, { d: () => g });
 var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
-    s = n(92674),
+    s = n(563495),
     o = n(397927),
     l = n(565645),
     u = n(736653),
@@ -12,76 +12,76 @@ var i = n(503698),
     d = n(71393),
     _ = n(857586),
     f = n(788868),
-    p = n(985018),
-    h = n(732591);
-function m(e) {
+    h = n(985018),
+    p = n(431009);
+function g(e) {
     let {
             showUpsell: t,
             text: n,
             textVariant: i,
             button: u,
-            buttonAnalyticsObject: m,
-            className: E,
-            onSubscribeModalClose: A,
-            position: I = "floating",
-            useGradientBg: T = !1,
-            hoveredNitroLockedSound: y,
-            useUpdatedStyling: S = !1,
+            buttonAnalyticsObject: g,
+            className: A,
+            onSubscribeModalClose: I,
+            position: T = "floating",
+            useGradientBg: y = !1,
+            hoveredNitroLockedSound: S,
+            useUpdatedStyling: v = !1,
         } = e,
-        v = c.r.useConfig({ location: "PremiumFloatingPickerUpsell" }).enabled,
-        C = (0, o.zhh)({
+        C = c.r.useConfig({ location: "PremiumFloatingPickerUpsell" }).enabled,
+        b = (0, o.zhh)({
             transform: t ? "translateY(0%)" : "translateY(120%)",
             opacity: +!!t,
             config: { tension: 120, friction: 14 },
         }),
-        b = v && null != y,
-        N = y?.emojiId != null || y?.emojiName != null,
-        R = n;
-    if (b) {
-        let e = d.A.getGuild(y.guildId);
-        R = p.intl.format(p.t.eku049, { serverName: e?.name ?? p.intl.string(p.t.DmIUGK) });
+        N = C && null != S,
+        R = S?.emojiId != null || S?.emojiName != null,
+        O = n;
+    if (N) {
+        let e = d.A.getGuild(S.guildId);
+        O = h.intl.format(h.t.eku049, { serverName: e?.name ?? h.intl.string(h.t.DmIUGK) });
     }
     return (0, r.jsx)(s.animated.div, {
-        style: { ...C },
+        style: { ...b },
         className: a()(
-            h.Zj,
-            T && h.Me,
-            S && h.ww,
-            { [h.tO]: "floating" === I, [h.Kx]: "inline" === I, [h.ik]: "bottom" === I },
-            E,
+            p.Zj,
+            y && p.Me,
+            v && p.ww,
+            { [p.tO]: "floating" === T, [p.Kx]: "inline" === T, [p.ik]: "bottom" === T },
+            A,
         ),
-        children: (0, r.jsxs)(g, {
-            hasPreviewSound: b,
-            useGradientBg: T,
+        children: (0, r.jsxs)(E, {
+            hasPreviewSound: N,
+            useGradientBg: y,
             children: [
-                b &&
+                N &&
                     (0, r.jsxs)("div", {
-                        className: h.Ed,
+                        className: p.Ed,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: h.vg,
+                                className: p.vg,
                                 children: [
-                                    N && (0, r.jsx)(l.A, { emojiId: y.emojiId, emojiName: y.emojiName }),
+                                    R && (0, r.jsx)(l.A, { emojiId: S.emojiId, emojiName: S.emojiName }),
                                     (0, r.jsx)(o.Text, {
                                         variant: "text-sm/semibold",
                                         color: "text-strong",
-                                        children: y.name,
+                                        children: S.name,
                                     }),
                                 ],
                             }),
                             (0, r.jsx)(o.Text, {
                                 variant: "text-xs/normal",
                                 color: "text-muted",
-                                className: h.Fr,
-                                children: R ?? n,
+                                className: p.Fr,
+                                children: O ?? n,
                             }),
                         ],
                     }),
-                !b &&
+                !N &&
                     (0, r.jsx)(o.Text, {
                         variant: i ?? "text-sm/medium",
                         color: "text-strong",
-                        className: h.tD,
+                        className: p.tD,
                         children: n,
                     }),
                 "string" == typeof u
@@ -89,23 +89,23 @@ function m(e) {
                           size: "sm",
                           subscriptionTier: f.pe.TIER_2,
                           buttonTextOverride: u,
-                          premiumModalAnalyticsLocation: m,
+                          premiumModalAnalyticsLocation: g,
                           tabIndex: t ? 0 : -1,
-                          onSubscribeModalClose: A,
+                          onSubscribeModalClose: I,
                       })
                     : u,
             ],
         }),
     });
 }
-function g(e) {
+function E(e) {
     let { hasPreviewSound: t, useGradientBg: n, children: i } = e,
         s = (0, u.Ay)();
     return n
         ? (0, r.jsx)(o.hLv, {
               color: "nitro-pink",
               offsetBottom: -3,
-              className: a()(h.nC, { [h.Ay]: (0, o.Mwr)(s), [h.u8]: t }),
+              className: a()(p.nC, { [p.Ay]: (0, o.Mwr)(s), [p.u8]: t }),
               children: i,
           })
         : i;

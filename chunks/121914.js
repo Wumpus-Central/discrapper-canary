@@ -21,12 +21,12 @@ var i,
     I = n(187667),
     T = n(922611),
     C = n(651813),
-    v = n(919843),
-    y = n(534765),
+    y = n(919843),
+    v = n(534765),
     N = n(34307),
     O = n(652215),
-    b = n(985018),
-    j = n(58812),
+    j = n(985018),
+    b = n(716514),
     w = (((i = {}).DEFAULT = "DEFAULT"), (i.CHANNEL_TYPE = "CHANNEL_TYPE"), i);
 let L = a.memo(function (e) {
     let { channelId: t, selectedVoiceChannelId: n, iconVariant: i = "DEFAULT" } = e,
@@ -48,18 +48,18 @@ let L = a.memo(function (e) {
             [t],
         ),
         {
-            label: U,
-            user: P,
+            label: P,
+            user: U,
             guild: G,
             channel: H,
         } = (0, o.cf)([m.A, g.A, x.default, f.A], () => {
             let e = m.A.getChannel(t) ?? null;
-            if (null == e) return { label: b.intl.string(b.t.zLZPmk), user: null, guild: null, channel: null };
+            if (null == e) return { label: j.intl.string(j.t.zLZPmk), user: null, guild: null, channel: null };
             let n = (0, c.m1)(e, x.default, f.A);
             return { label: n, user: (0, C.j)(e, x.default), guild: (0, C.P)(e, g.A), channel: e };
         }, [t]);
     a.useEffect(() => {
-        null == H && (0, v.b)(t);
+        null == H && (0, y.b)(t);
     }, [H, t]);
     let Y = (0, o.bG)([E.A, x.default], () => {
             if (null == H) return !1;
@@ -73,7 +73,7 @@ let L = a.memo(function (e) {
             return null != e && p.Ay.hasUnread(e);
         }, [H]),
         W = (0, l.jsx)("div", {
-            className: j.St,
+            className: b.St,
             children: (() => {
                 let e = H?.isPrivate() ?? !1;
                 if ("CHANNEL_TYPE" === i && !e) {
@@ -86,10 +86,10 @@ let L = a.memo(function (e) {
                     return (
                         t && (n.boxShadow = `0 0 0 2px rgba(${i}), 0 0 12px 2px rgba(${a})`),
                         (0, l.jsx)("div", {
-                            className: r()(j.s, w && j.lJ),
+                            className: r()(b.s, w && b.lJ),
                             style: n,
                             children: (0, l.jsx)(e, {
-                                className: j.Yc,
+                                className: b.Yc,
                                 size: "sm",
                                 color: w ? u.LU0.colors.WHITE : u.LU0.colors.ICON_STATUS_ONLINE,
                             }),
@@ -98,7 +98,7 @@ let L = a.memo(function (e) {
                 }
                 return (0, l.jsx)(T.g, {
                     channel: H,
-                    user: P,
+                    user: U,
                     guild: G,
                     isSelected: w,
                     size: T.c.SIZE_40,
@@ -108,26 +108,26 @@ let L = a.memo(function (e) {
                 });
             })(),
         }),
-        K = (0, y.r)({ channel: H, guild: G, user: P }),
-        Z = H?.isPrivate() ?? !1,
-        B = G?.name ?? "",
-        X = Z ? void 0 : U,
-        J = Z ? U : "" !== B ? B : U,
+        Z = (0, v.r)({ channel: H, guild: G, user: U }),
+        X = H?.isPrivate() ?? !1,
+        K = G?.name ?? "",
+        B = X ? void 0 : P,
+        J = X ? P : "" !== K ? K : P,
         Q = (() => {
-            if (null == H || Z) return null;
+            if (null == H || X) return null;
             let e = (0, h.gU)(H, G);
             return (e ??= u.oyn), (0, l.jsx)(e, { size: "sm", color: u.LU0.colors.INTERACTIVE_ICON_DEFAULT });
         })();
     return null == H
-        ? (0, l.jsx)("div", { className: j.R })
+        ? (0, l.jsx)("div", { className: b.R })
         : (0, l.jsx)(d.u, {
-              title: X,
+              title: B,
               body: J,
               asset: Q,
               assetSize: 20,
-              "aria-label": U,
+              "aria-label": P,
               children: (0, l.jsxs)(u.DUT, {
-                  className: j.pc,
+                  className: b.pc,
                   onClick: () => {
                       s && (0, S.S$)({ minimized: !1 }),
                           (0, S.D$)({
@@ -136,13 +136,13 @@ let L = a.memo(function (e) {
                               widgetType: O.uss.TEXT_CHAT_V3,
                           });
                   },
-                  onContextMenu: K,
+                  onContextMenu: Z,
                   onMouseEnter: () => k(!0),
                   onMouseLeave: () => k(!1),
                   children: [
                       W,
                       (0, l.jsx)("div", {
-                          className: j.vT,
+                          className: b.vT,
                           children: (0, l.jsx)(A.A, { selected: w, hovered: M, unread: F }),
                       }),
                   ],

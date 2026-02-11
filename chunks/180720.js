@@ -1,4 +1,4 @@
-n.d(t, { T: () => F }), n(321073);
+n.d(t, { T: () => L }), n(321073);
 var l = n(627968),
     i = n(64700),
     r = n(735438),
@@ -23,13 +23,13 @@ var l = n(627968),
     C = n(179917),
     y = n(419072),
     x = n(294809),
-    v = n(554932),
-    M = n(406595),
+    M = n(554932),
+    v = n(406595),
     D = n(557404),
     R = n(652215),
-    U = n(895867),
+    U = n(822889),
     O = n(985018),
-    G = n(416001);
+    G = n(77347);
 function b(e) {
     return Array.from(e).sort();
 }
@@ -45,16 +45,16 @@ let w = (0, r.throttle)(
     3e3,
     { leading: !0, trailing: !1 },
 );
-function L(e) {
+function F(e) {
     let t = 0x811c9dc5;
     for (let n = 0; n < e.length; n += 1) (t ^= e.charCodeAt(n)), (t = Math.imul(t, 0x1000193));
     return t >>> 0;
 }
-function F() {
+function L() {
     let { onPrimaryAction: e, onContextMenu: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         [n, r] = i.useState(""),
         p = n.trim().toLowerCase(),
-        [R, F] = i.useState(() => new Set()),
+        [R, L] = i.useState(() => new Set()),
         k = (0, a.bG)([y.A], () => y.A.getCollapsedSectionOverridesForTab(_.x.VOICE), []),
         P = (0, h.qZ)(),
         j = i.useMemo(() => {
@@ -63,24 +63,24 @@ function F() {
             return e;
         }, [P]),
         V = i.useCallback((e) => {
-            F((t) => {
+            L((t) => {
                 let n = new Set(t);
                 return n.has(e) ? n.delete(e) : n.add(e), n;
             });
         }, []),
         H = i.useCallback((e) => {
-            (0, v.G)({ tab: _.x.VOICE, sectionKey: e });
+            (0, M.G)({ tab: _.x.VOICE, sectionKey: e });
         }, []),
         Y = i.useMemo(() => new Set(P.map((e) => e.channel.id)), [P]),
         [W, z] = i.useState([]);
     (0, d.RT)(n, P, z, h.MV);
     let $ = i.useRef(null),
         B = (0, o.A)("friends-widget-voice", $),
-        [K, X] = (0, a.bG)([M.A], () => M.A.getFavoriteTargetIdsForTab(_.x.VOICE), [], N.D),
+        [K, X] = (0, a.bG)([v.A], () => v.A.getFavoriteTargetIdsForTab(_.x.VOICE), [], N.D),
         Z = i.useMemo(() => K.filter((e) => Y.has(e)), [K, Y]),
-        { friendVoiceChannelIds: Q, recentVoiceChannelIds: q } = (0, h.S4)(),
-        J = i.useMemo(() => Q.filter((e) => Y.has(e)), [Q, Y]),
-        ee = i.useMemo(() => q.filter((e) => Y.has(e)), [q, Y]),
+        { friendVoiceChannelIds: Q, recentVoiceChannelIds: J } = (0, h.S4)(),
+        q = i.useMemo(() => Q.filter((e) => Y.has(e)), [Q, Y]),
+        ee = i.useMemo(() => J.filter((e) => Y.has(e)), [J, Y]),
         et = (0, a.bG)([E.A], () => E.A.getVoiceChannelId(), []),
         en = (0, a.bG)(
             [f.A],
@@ -97,11 +97,11 @@ function F() {
                 (t = String((e = new Date()).getDate()).padStart(2, "0")),
                 (n = String(e.getMonth() + 1).padStart(2, "0")),
                 (l = String(e.getFullYear() % 100).padStart(2, "0")),
-                L(`${t}${n}${l}`)
+                F(`${t}${n}${l}`)
             );
         }, []),
         ei = i.useMemo(() => new Set(K), [K]),
-        er = i.useMemo(() => J.filter((e) => !ei.has(e)), [J, ei]),
+        er = i.useMemo(() => q.filter((e) => !ei.has(e)), [q, ei]),
         es = i.useMemo(() => ee.filter((e) => !ei.has(e)), [ee, ei]),
         ea = i.useMemo(() => {
             let e = [],
@@ -125,7 +125,7 @@ function F() {
                     return {
                         channelId: e.channel.id,
                         voiceUserCount: e.voiceStates?.length ?? 0,
-                        shuffle: ((t = e.channel.id), L(`${el}:${t}`)),
+                        shuffle: ((t = e.channel.id), F(`${el}:${t}`)),
                     };
                 }),
                 s = r.filter((e) => e.voiceUserCount > 0),

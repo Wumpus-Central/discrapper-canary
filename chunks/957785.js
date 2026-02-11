@@ -8,46 +8,46 @@ var i = n(627968),
     d = n(594832),
     c = n(183555),
     u = n(524380),
-    h = n(733557);
+    h = n(55751);
 let A = l.forwardRef(function (e, t) {
     let {
             onCardClick: n,
             tooltipConfig: l,
             shouldScalePreview: s = !0,
             renderPreview: A,
-            moreCount: g,
-            isSingleCard: m = !1,
-            wishlistId: p,
+            moreCount: m,
+            isSingleCard: p = !1,
+            wishlistId: g,
             wishlistItem: _,
-            cardSize: x = u.Y.MEDIUM,
+            cardSize: f = u.Y.MEDIUM,
         } = e,
-        { skuId: f, skuProductLine: E } = _,
-        { trackUserProfileWishlistAction: C } = (0, c.NJ)(),
+        { skuId: x, skuProductLine: C } = _,
+        { trackUserProfileWishlistAction: E } = (0, c.NJ)(),
         I = s ? h.ho : h.C8,
-        S = m ? h.pr : h.Nr,
-        b = null != g && g > 0,
-        N = (0, i.jsxs)(o.DUT, {
+        b = p ? h.pr : h.Nr,
+        N = null != m && m > 0,
+        S = (0, i.jsxs)(o.DUT, {
             onClick: () => {
                 n(),
-                    C({
-                        action: b ? "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD" : "PRESS_WISHLIST_BREADCRUMB_CARD",
-                        skuId: b ? null : f,
-                        wishlistId: p,
-                        productLines: new Set([E]),
+                    E({
+                        action: N ? "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD" : "PRESS_WISHLIST_BREADCRUMB_CARD",
+                        skuId: N ? null : x,
+                        wishlistId: g,
+                        productLines: new Set([C]),
                     });
             },
-            className: a()(S, { [h.ax]: x === u.Y.SMALL }),
+            className: a()(b, { [h.ax]: f === u.Y.SMALL }),
             "aria-label": l.title ?? "",
             innerRef: t,
             children: [
                 (0, i.jsx)("div", { className: I, children: A() }),
-                b &&
+                N &&
                     (0, i.jsx)("div", {
                         className: h.sv,
                         children: (0, i.jsxs)(o.Text, {
                             variant: "text-xs/medium",
                             color: "always-white",
-                            children: ["+", g],
+                            children: ["+", m],
                         }),
                     }),
             ],
@@ -58,6 +58,6 @@ let A = l.forwardRef(function (e, t) {
         assetSize: d.Q8,
         title: l.title,
         body: l.body ?? "",
-        children: N,
+        children: S,
     });
 });

@@ -21,8 +21,8 @@ var i = n(627968),
     I = n(402216),
     T = n(506326),
     C = n(428249),
-    v = n(661908),
-    y = n(474397),
+    y = n(661908),
+    v = n(474397),
     N = n(279877),
     O = n(976860),
     j = n(219271),
@@ -43,7 +43,7 @@ var i = n(627968),
     F = n(652215),
     W = n(381941),
     Z = n(985018),
-    X = n(72007);
+    X = n(383929);
 function K(e) {
     let t,
         { entry: n, currentUserActivity: a, idx: r, variant: o } = e,
@@ -73,7 +73,7 @@ function K(e) {
                             t = R.A.getChannel(e) ?? null;
                         s()(null != t, "Send channel must be defined"),
                             (0, O.pX)(F.BVt.CHANNEL(t.guild_id, t.id)),
-                            (0, y.A)(F.BRT.OVERLAY, !0),
+                            (0, v.A)(F.BRT.OVERLAY, !0),
                             !0 === n.extra.fake_inventory_item
                                 ? await (0, C.J)({
                                       channel: t,
@@ -109,18 +109,18 @@ function K(e) {
                 t = R.A.getChannel(e) ?? null;
             s()(null != t, "Send channel must be defined"),
                 (0, O.pX)(F.BVt.CHANNEL(t.guild_id, t.id)),
-                (0, y.A)(F.BRT.OVERLAY, !0),
+                (0, v.A)(F.BRT.OVERLAY, !0),
                 (0, H.YX)(F.uss.ACTIVITY, { type: H.Z5.REDIRECT, value: H.IP.CHAT, userId: d.id });
         },
-        v = S ? Z.intl.string(Z.t["3fRySx"]) : Z.intl.string(Z.t.XHxDIV);
+        y = S ? Z.intl.string(Z.t["3fRySx"]) : Z.intl.string(Z.t.XHxDIV);
     return (
         (t = "sent" === m ? (_ ? h.oyn : h.BNr) : S ? h.DpX : h.lX7),
         (0, i.jsx)(c.m, {
-            text: v,
-            "aria-label": v,
+            text: y,
+            "aria-label": y,
             children: (0, i.jsx)(h.K0, {
                 icon: t,
-                "aria-label": v,
+                "aria-label": y,
                 loading: "sending" === m,
                 onClick: _ ? T : I,
                 variant: "subtle" === o ? "icon-only" : "secondary",
@@ -283,7 +283,7 @@ function q(e) {
 }
 function $(e) {
     let { gamingId: t, maxUserShowCount: n, userAffinityThresholdV2: i = 0.0029 } = e,
-        a = (0, v.A)(t);
+        a = (0, y.A)(t);
     (0, _.Ay)(() => {
         (0, j.u)();
     });
@@ -394,7 +394,7 @@ function en(e) {
         n = (0, Y.b4)(),
         l = n?.id,
         a = n?.altId,
-        s = (0, v.A)(l),
+        s = (0, y.A)(l),
         r = (0, u.bG)([z.default], () => z.default.getCurrentUser()),
         o = null != a ? a : l,
         d = (0, u.bG)([D.A], () => (null == o ? null : D.A.getApplicationActivity(o)), [o]);

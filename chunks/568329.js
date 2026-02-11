@@ -1,23 +1,23 @@
 n.d(t, { PW: () => d, dN: () => c, oK: () => u }), n(321073);
 var a = n(627968),
-    s = n(64700),
-    i = n(340287),
-    l = n(92674),
+    i = n(64700),
+    s = n(340287),
+    l = n(563495),
     r = n(765671),
     o = n(398025);
 n(272111);
-let d = s.createContext({
+let d = i.createContext({
         registerComponent: () => {},
         unregisterComponent: () => {},
         animatedComponents: {},
-        expandedContentRef: s.createRef(),
-        collapsedContentRef: s.createRef(),
+        expandedContentRef: i.createRef(),
+        collapsedContentRef: i.createRef(),
         recalculateAnimationPositions: () => {},
         animatedComponentProps: [],
         expansionSpring: new l.SpringValue(0),
         mountPoints: new Map(),
     }),
-    c = s.forwardRef(function (e, t) {
+    c = i.forwardRef(function (e, t) {
         let { children: n, id: c, inState: u, isTextTransition: m = !1 } = e,
             {
                 recalculateAnimationPositions: h,
@@ -25,14 +25,14 @@ let d = s.createContext({
                 unregisterComponent: p,
                 expansionSpring: g,
                 mountPoints: _,
-            } = s.useContext(d),
-            f = s.useRef(null),
-            v = s.useRef(null),
-            b = s.useRef(void 0);
-        s.useEffect(() => {
+            } = i.useContext(d),
+            f = i.useRef(null),
+            v = i.useRef(null),
+            b = i.useRef(void 0);
+        i.useEffect(() => {
             h();
         }, [h]),
-            s.useLayoutEffect(() => {
+            i.useLayoutEffect(() => {
                 let e = f.current;
                 return (
                     null != e && x(e, c, u),
@@ -41,7 +41,7 @@ let d = s.createContext({
                     }
                 );
             }, [c, u, x, p]);
-        let j = s.useCallback(
+        let j = i.useCallback(
             (e) => {
                 let { height: t } = e;
                 b.current !== t && (h(), (b.current = t));
@@ -58,7 +58,7 @@ let d = s.createContext({
                   ? (C = (0, a.jsxs)(a.Fragment, {
                         children: [
                             "collapsed" === u &&
-                                (0, i.createPortal)(
+                                (0, s.createPortal)(
                                     (0, a.jsx)(l.animated.div, {
                                         style: {
                                             position: "absolute",
@@ -69,7 +69,7 @@ let d = s.createContext({
                                     A,
                                 ),
                             "expanded" === u &&
-                                (0, i.createPortal)(
+                                (0, s.createPortal)(
                                     (0, a.jsx)(l.animated.div, {
                                         style: {
                                             position: "absolute",
@@ -81,7 +81,7 @@ let d = s.createContext({
                                 ),
                         ],
                     }))
-                  : "collapsed" === u && (C = (0, i.createPortal)(n(v), A)),
+                  : "collapsed" === u && (C = (0, s.createPortal)(n(v), A)),
             (0, a.jsxs)("div", {
                 style: { opacity: +((null == C && "collapsed" === u) || null == A) },
                 ref: t,
@@ -90,25 +90,25 @@ let d = s.createContext({
         );
     }),
     u = (e) => {
-        let { children: t, expandedContentRef: n, collapsedContentRef: i, expansionSpring: l } = e,
-            [r, o] = s.useState({}),
-            [c, u] = s.useState([]),
-            [m, h] = s.useState(() => new Map()),
-            x = s.useCallback((e, t, n) => {
+        let { children: t, expandedContentRef: n, collapsedContentRef: s, expansionSpring: l } = e,
+            [r, o] = i.useState({}),
+            [c, u] = i.useState([]),
+            [m, h] = i.useState(() => new Map()),
+            x = i.useCallback((e, t, n) => {
                 o((a) => {
-                    let s = a[t] ?? { expanded: null, collapsed: null };
-                    return { ...a, [t]: { ...s, [n]: e } };
+                    let i = a[t] ?? { expanded: null, collapsed: null };
+                    return { ...a, [t]: { ...i, [n]: e } };
                 }),
                     h((e) => {
                         let n = new Map(e);
-                        return n.set(t, s.createRef()), n;
+                        return n.set(t, i.createRef()), n;
                     });
             }, []),
-            p = s.useCallback((e, t) => {
+            p = i.useCallback((e, t) => {
                 let n = !1;
                 o((a) => {
-                    let s = a[e] ?? { expanded: null, collapsed: null };
-                    return (s[t] = null), (n = null == s.expanded && null == s.collapsed), { ...a, [e]: s };
+                    let i = a[e] ?? { expanded: null, collapsed: null };
+                    return (i[t] = null), (n = null == i.expanded && null == i.collapsed), { ...a, [e]: i };
                 }),
                     n &&
                         h((t) => {
@@ -116,17 +116,17 @@ let d = s.createContext({
                             return n.delete(e), n;
                         });
             }, []),
-            g = s.useCallback(() => {
+            g = i.useCallback(() => {
                 let e = [];
                 for (let t in r) {
-                    if (null == r[t] || null == n.current || null == i.current) continue;
+                    if (null == r[t] || null == n.current || null == s.current) continue;
                     let a = r[t].collapsed,
-                        s = r[t].expanded;
-                    if (null == a || null == s) continue;
-                    let l = s.getBoundingClientRect(),
+                        i = r[t].expanded;
+                    if (null == a || null == i) continue;
+                    let l = i.getBoundingClientRect(),
                         o = n.current.getBoundingClientRect(),
                         d = a.getBoundingClientRect(),
-                        c = i.current.getBoundingClientRect(),
+                        c = s.current.getBoundingClientRect(),
                         u = l.top - o.top + 12,
                         m = d.top - c.top,
                         h = l.left - o.left + 12,
@@ -145,14 +145,14 @@ let d = s.createContext({
                     });
                 }
                 u(e);
-            }, [r, n, i, u]);
+            }, [r, n, s, u]);
         return (0, a.jsx)(d.Provider, {
             value: {
                 registerComponent: x,
                 unregisterComponent: p,
                 animatedComponents: r,
                 expandedContentRef: n,
-                collapsedContentRef: i,
+                collapsedContentRef: s,
                 recalculateAnimationPositions: g,
                 animatedComponentProps: c,
                 expansionSpring: l,

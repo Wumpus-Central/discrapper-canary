@@ -15,7 +15,7 @@ var l = n(627968),
     v = n(172799),
     j = n(652215),
     A = n(985018),
-    N = n(912579);
+    N = n(67501);
 let f = r.Ay.connectStores([x.A], () => ({ hideValue: x.A.hideInstantInvites }))((e) => {
         let { value: t, autoFocus: n, hideValue: i, onCopy: s, disabled: a } = e;
         return (0, l.jsx)(o.A, {

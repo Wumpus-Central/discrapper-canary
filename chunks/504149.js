@@ -2,7 +2,7 @@
 n.d(t, { A: () => _ });
 var r = n(627968),
     i = n(64700),
-    a = n(92674),
+    a = n(563495),
     s = n(765671),
     o = n(700331),
     l = n(454290);
@@ -30,32 +30,32 @@ function c(e) {
 }
 function d(e) {
     let { children: t } = e,
-        { scale: n, x: d, y: _, setOffset: f, zoomed: p, setZoomed: h } = (0, l.Q)(),
-        { ref: m, width: g, height: E } = (0, s.Ay)(),
-        [A, I] = [g ?? 0, E ?? 0],
-        T = i.useRef(!1),
-        [y, S] = i.useState({ x: 0, y: 0 }),
-        v = (e, t) => {
+        { scale: n, x: d, y: _, setOffset: f, zoomed: h, setZoomed: p } = (0, l.Q)(),
+        { ref: g, width: E, height: A } = (0, s.Ay)(),
+        [I, T] = [E ?? 0, A ?? 0],
+        y = i.useRef(!1),
+        [S, v] = i.useState({ x: 0, y: 0 }),
+        C = (e, t) => {
             let r = c({
-                width: A * n.goal,
-                height: I * n.goal,
+                width: I * n.goal,
+                height: T * n.goal,
                 offset: { x: d.goal, y: _.goal },
                 delta: { x: e, y: t },
             });
             f(r.x, r.y, { immediate: !0 });
         },
-        C = (e) => {
-            p && 0 === e.button && (e.preventDefault(), (T.current = !0), S({ x: e.clientX, y: e.clientY }));
-        },
         b = (e) => {
-            if (!p) {
+            h && 0 === e.button && (e.preventDefault(), (y.current = !0), v({ x: e.clientX, y: e.clientY }));
+        },
+        N = (e) => {
+            if (!h) {
                 if (0 === e.button) {
-                    o.l.markActionPerformed(o.N.ZOOM_IN_IMAGE_PRESSED), h(!0);
+                    o.l.markActionPerformed(o.N.ZOOM_IN_IMAGE_PRESSED), p(!0);
                     let t = e.clientX - window.innerWidth / 2,
                         r = e.clientY - window.innerHeight / 2,
                         i = c({
-                            width: A * n.goal,
-                            height: I * n.goal,
+                            width: I * n.goal,
+                            height: T * n.goal,
                             offset: { x: 0, y: 0 },
                             delta: { x: -t * (n.goal - 1), y: -r * (n.goal - 1) },
                         });
@@ -63,19 +63,19 @@ function d(e) {
                 }
                 return;
             }
-            (e.clientX - y.x) ** 2 + (e.clientY - y.y) ** 2 < u &&
-                (o.l.markActionPerformed(o.N.ZOOM_OUT_IMAGE_PRESSED), h(!1)),
-                (T.current = !1);
+            (e.clientX - S.x) ** 2 + (e.clientY - S.y) ** 2 < u &&
+                (o.l.markActionPerformed(o.N.ZOOM_OUT_IMAGE_PRESSED), p(!1)),
+                (y.current = !1);
         };
     return (0, r.jsx)(a.animated.div, {
-        ref: m,
-        onMouseDown: C,
-        onMouseUp: b,
-        onMouseMove: (e) => T.current && v(e.movementX, e.movementY),
-        onWheel: (e) => !e.ctrlKey && v(-e.deltaX, -e.deltaY),
-        onMouseLeave: () => (T.current = !1),
+        ref: g,
+        onMouseDown: b,
+        onMouseUp: N,
+        onMouseMove: (e) => y.current && C(e.movementX, e.movementY),
+        onWheel: (e) => !e.ctrlKey && C(-e.deltaX, -e.deltaY),
+        onMouseLeave: () => (y.current = !1),
         onClick: (e) => e.stopPropagation(),
-        style: { scale: n, x: d, y: _, cursor: p ? "zoom-out" : "zoom-in" },
+        style: { scale: n, x: d, y: _, cursor: h ? "zoom-out" : "zoom-in" },
         children: t,
     });
 }

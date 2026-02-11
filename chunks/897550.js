@@ -1,8 +1,8 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => f });
 var i = n(627968),
     r = n(64700),
-    a = n(503698),
-    l = n.n(a),
+    l = n(503698),
+    a = n.n(l),
     s = n(421380),
     o = n(481859),
     d = n(235986),
@@ -12,7 +12,7 @@ var i = n(627968),
     h = n(590858),
     _ = n(652215),
     m = n(985018),
-    p = n(918704);
+    p = n(40926);
 let g = {
     [_.uje.WINDOWS]: A.PlatformTypes.WINDOWS,
     [_.uje.MACOS]: A.PlatformTypes.OSX,
@@ -21,18 +21,18 @@ let g = {
 class E extends r.PureComponent {
     render() {
         let { active: e, children: t, pageSize: n, onClick: r } = this.props,
-            a = n === h.q.LARGE;
+            l = n === h.q.LARGE;
         return (0, i.jsx)(s.$n, {
-            size: a ? s.$n.Sizes.MIN : s.$n.Sizes.LARGE,
-            fullWidth: !a,
+            size: l ? s.$n.Sizes.MIN : s.$n.Sizes.LARGE,
+            fullWidth: !l,
             color: e ? p.gl : p.Hu,
-            className: l()({ [p.AA]: a, [p.Wt]: !a, [p.jP]: e, [p.I7]: !e }),
+            className: a()({ [p.AA]: l, [p.Wt]: !l, [p.jP]: e, [p.I7]: !e }),
             onClick: r,
             children: t,
         });
     }
 }
-class f extends r.PureComponent {
+class I extends r.PureComponent {
     constructor(e) {
         super(e);
         const t = (0, A.getPlatform)(),
@@ -140,4 +140,4 @@ class f extends r.PureComponent {
         });
     }
 }
-let I = f;
+let f = I;

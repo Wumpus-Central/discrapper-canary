@@ -6,9 +6,9 @@ var l = n(503698),
     a = n(837381),
     r = n(672117),
     o = n(397927),
-    d = n(69813),
-    c = n(728444),
-    u = n(811094);
+    d = n(814823),
+    c = n(719550),
+    u = n(516632);
 function h(e) {
     let {
             id: t,
@@ -16,32 +16,32 @@ function h(e) {
             innerClassName: l,
             renderIcon: h,
             text: A,
-            selected: g,
-            trailing: m,
-            background: p,
+            selected: m,
+            trailing: p,
+            background: g,
             showUnread: _ = !1,
-            ref: x,
-            ...f
+            ref: f,
+            ...x
         } = e,
-        E = (0, a.rm)(t),
-        C = (0, r.O)(A) ?? "";
+        C = (0, a.rm)(t),
+        E = (0, r.O)(A) ?? "";
     return (0, i.jsx)("li", {
-        ref: x,
+        ref: f,
         children: (0, i.jsxs)(o.sqX, {
-            ...f,
-            buttonProps: { ...E, id: t, role: "button" },
+            ...x,
+            buttonProps: { ...C, id: t, role: "button" },
             tag: "div",
-            "aria-label": C,
+            "aria-label": E,
             focusProps: { offset: { top: 1, bottom: 1, right: 4 } },
             onContextMenu:
-                null != f.onContextMenu
-                    ? f.onContextMenu
+                null != x.onContextMenu
+                    ? x.onContextMenu
                     : (e) => {
                           e.stopPropagation();
                       },
-            className: s()(c.fx, u.iE, { [u.J1]: g }, n),
+            className: s()(c.fx, u.iE, { [u.J1]: m }, n),
             children: [
-                p,
+                g,
                 _ ? (0, i.jsx)("div", { className: s()(u.gy, u.WS) }) : null,
                 (0, i.jsx)("div", {
                     className: s()([u.nf, u.ae, l]),
@@ -50,7 +50,7 @@ function h(e) {
                         children: [
                             (0, i.jsx)("div", { className: u.zc, children: h(u.Kk) }),
                             (0, i.jsx)("div", { className: u.UU, "aria-hidden": !0, children: A }),
-                            m,
+                            p,
                         ],
                     }),
                 }),

@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => g });
 var i = n(627968),
     l = n(311907),
     s = n(827734),
@@ -10,9 +10,9 @@ var i = n(627968),
     u = n(274372),
     h = n(572164),
     A = n(806931),
-    g = n(985018),
-    m = n(639291);
-let p = (e) => {
+    m = n(985018),
+    p = n(27962);
+let g = (e) => {
     let { channelId: t } = e;
     return (0, l.bG)([c.A, o.A, u.A, d.Ay], () => {
         if (null == t) return !1;
@@ -24,21 +24,21 @@ let p = (e) => {
         );
     })
         ? (0, i.jsx)(a.m, {
-              text: g.intl.string(g.t.DJXW3G),
+              text: m.intl.string(m.t.DJXW3G),
               children: (0, i.jsxs)("div", {
-                  className: m.g0,
+                  className: p.g0,
                   children: [
                       (0, i.jsx)(r.fkz, {
                           icon: r.xgA,
                           shape: r.EGs.ROUND_LEFT,
                           color: s.A.unsafe_rawColors.PRIMARY_500.css,
-                          className: m.Z7,
+                          className: p.Z7,
                       }),
                       (0, i.jsx)(r.LpS, {
-                          text: g.intl.string(g.t.pCMkDb),
+                          text: m.intl.string(m.t.pCMkDb),
                           shape: r.EGs.ROUND_RIGHT,
                           color: s.A.unsafe_rawColors.PRIMARY_500.css,
-                          className: m.lm,
+                          className: p.lm,
                       }),
                   ],
               }),

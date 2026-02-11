@@ -7,13 +7,13 @@ var l = n(735438),
     r = n(5658),
     o = n(712209),
     d = n(985018),
-    c = n(48355);
+    c = n(297513);
 function u(e, t, n) {
-    let { markChannelRead: l, markGuildRead: u, deleteChannel: h, toggle: A, getNumUnreadChannels: g } = t,
-        m = null;
+    let { markChannelRead: l, markGuildRead: u, deleteChannel: h, toggle: A, getNumUnreadChannels: m } = t,
+        p = null;
     return s().flatMap(e, (e) => {
-        let t = e.sortOrder !== m;
-        m = e.sortOrder;
+        let t = e.sortOrder !== p;
+        p = e.sortOrder;
         let s = [];
         return (
             t &&
@@ -44,7 +44,7 @@ function u(e, t, n) {
                         toggle: A,
                         deleteChannel: h,
                         onJump: n,
-                        getNumUnreadChannels: g,
+                        getNumUnreadChannels: m,
                     },
                     e.channelId,
                 ),

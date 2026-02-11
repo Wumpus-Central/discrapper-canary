@@ -20,16 +20,16 @@ var i = n(627968),
     N = n(997509),
     j = n(427157),
     T = n(317525),
-    C = n(576705),
-    v = n(351906),
-    E = n(147925),
-    I = n(486020),
+    v = n(576705),
+    C = n(351906),
+    I = n(147925),
+    E = n(486020),
     S = n(661191),
     y = n(447066),
     O = n(652215),
     w = n(985018),
-    R = n(86789),
-    k = n(473169);
+    R = n(244243),
+    k = n(522759);
 function L(e) {
     let t,
         {
@@ -42,8 +42,8 @@ function L(e) {
             onEnable: U,
         } = e,
         [D, P] = l.useState(!1),
-        B = (0, m.bG)([v.A], () => v.A.hidePersonalInformation),
-        W = (0, m.bG)([C.A], () => C.A.can(O.xBc.KICK_MEMBERS, n)),
+        B = (0, m.bG)([C.A], () => C.A.hidePersonalInformation),
+        W = (0, m.bG)([v.A], () => v.A.can(O.xBc.KICK_MEMBERS, n)),
         H = l.useCallback(() => {
             P(!0), U(s);
         }, [s, U]),
@@ -166,7 +166,7 @@ function L(e) {
                     ? (0, i.jsx)(_.A.Child, {
                           shrink: 0,
                           grow: 0,
-                          children: (0, i.jsx)(E.A, { className: R.eO, expanded: L && !D, "aria-hidden": !0 }),
+                          children: (0, i.jsx)(I.A, { className: R.eO, expanded: L && !D, "aria-hidden": !0 }),
                       })
                     : (0, i.jsx)(_.A.Child, {
                           shrink: 0,
@@ -378,7 +378,7 @@ function L(e) {
                                                               }),
                                                               draggable: !1,
                                                               className: a()(R.Zg, "emoji", "jumboable"),
-                                                              src: I.Ay.getEmojiURL({
+                                                              src: E.Ay.getEmojiURL({
                                                                   id: e.id,
                                                                   animated: e.animated,
                                                                   size: 28,

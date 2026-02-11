@@ -1,14 +1,14 @@
 n.d(t, { A: () => p });
 var a = n(627968),
-    s = n(64700),
-    i = n(397927),
+    i = n(64700),
+    s = n(397927),
     l = n(442433),
     r = n(611010),
     o = n(734057),
     d = n(71393),
     c = n(287809),
-    u = n(815907),
-    m = n(661251);
+    u = n(872985),
+    m = n(930821);
 let h = {
         ClipsContextMenu: async () => {
             let { default: e } = await n.e("44751").then(n.bind(n, 575538));
@@ -53,18 +53,18 @@ let h = {
                     n.e("22191"),
                     n.e("25961"),
                     n.e("8018"),
-                    n.e("21968"),
+                    n.e("96760"),
                     n.e("35894"),
                     n.e("50796"),
                     n.e("24202"),
                     n.e("8458"),
                     n.e("11810"),
-                    n.e("39048"),
+                    n.e("52848"),
                     n.e("17537"),
-                    n.e("33105"),
+                    n.e("2717"),
                     n.e("36290"),
                     n.e("54469"),
-                    n.e("59461"),
+                    n.e("92719"),
                 ]).then(n.bind(n, 544676)),
                 t = Object.values(d.A.getGuilds())[0];
             return null == t ? () => null : (n) => (0, a.jsx)(e, { ...n, guild: t });
@@ -105,14 +105,14 @@ let h = {
                 });
         },
         StaffOnlyEntryDebugMenu: async () => {
-            let { default: e } = await n.e("89346").then(n.bind(n, 949881)),
+            let { default: e } = await n.e("66965").then(n.bind(n, 949881)),
                 { ContentInventoryEntryType: t } = await Promise.resolve().then(n.bind(n, 681154)),
-                { ContentInventoryAuthorType: s } = await Promise.resolve().then(n.bind(n, 6161)),
-                i = c.default.getCurrentUser(),
+                { ContentInventoryAuthorType: i } = await Promise.resolve().then(n.bind(n, 6161)),
+                s = c.default.getCurrentUser(),
                 l = {
                     id: "mock-entry-123",
-                    author_id: i?.id ?? "123456789",
-                    author_type: s.USER,
+                    author_id: s?.id ?? "123456789",
+                    author_type: i.USER,
                     content_type: t.PLAYED_GAME,
                     participants: [],
                     traits: [],
@@ -121,7 +121,7 @@ let h = {
             return () => (0, a.jsx)(e, { entry: l, requestId: "mock-request-123" });
         },
         AddQuestionsContextMenu: async () => {
-            let { AddQuestionsContextMenu: e } = await Promise.all([n.e("10614"), n.e("11810"), n.e("23342")]).then(
+            let { AddQuestionsContextMenu: e } = await Promise.all([n.e("10614"), n.e("11810"), n.e("76210")]).then(
                     n.bind(n, 892921),
                 ),
                 t = Object.values(d.A.getGuilds())[0];
@@ -140,20 +140,20 @@ let h = {
         ChannelListThreadContextMenu: async () => {
             let { default: e } = await Promise.all([n.e("99011"), n.e("78441"), n.e("73545")]).then(n.bind(n, 44536)),
                 t = d.A.getGuilds(),
-                s = null;
+                i = null;
             for (let e of Object.values(t)) {
                 for (let t of Object.values(o.A.getMutableGuildChannelsForGuild(e.id))) {
                     let e = o.A.getAllThreadsForParent(t.id);
                     if (e.length > 0) {
-                        s = e[0];
+                        i = e[0];
                         break;
                     }
                 }
-                if (null != s) break;
+                if (null != i) break;
             }
-            return null == s
+            return null == i
                 ? (console.log("No thread channel found for ChannelListThreadContextMenu"), () => null)
-                : (t) => (0, a.jsx)(e, { ...t, channel: s });
+                : (t) => (0, a.jsx)(e, { ...t, channel: i });
         },
         MembersTableSortContextMenu: async () => {
             let { default: e } = await n.e("73091").then(n.bind(n, 779662)),
@@ -167,47 +167,47 @@ let h = {
         },
     },
     x = {
-        GuildShopSortOptions: s.lazy(async () => {
+        GuildShopSortOptions: i.lazy(async () => {
             let { default: e } = await n.e("50974").then(n.bind(n, 324269)),
                 { default: t } = await n.e("55197").then(n.bind(n, 558060));
             return { default: () => (0, a.jsx)(t, { defaultSortOption: void 0, children: (0, a.jsx)(e, {}) }) };
         }),
     };
 function p() {
-    let e = s.useMemo(
+    let e = i.useMemo(
             () =>
                 Object.keys(h)
                     .map((e) => ({ label: e, value: e, id: e }))
                     .sort((e, t) => e.label.localeCompare(t.label)),
             [],
         ),
-        t = s.useMemo(
+        t = i.useMemo(
             () =>
                 Object.keys(x)
                     .map((e) => ({ label: e, value: e, id: e }))
                     .sort((e, t) => e.label.localeCompare(t.label)),
             [],
         ),
-        [n, r] = s.useState(null),
-        [o, d] = s.useState(null),
-        c = s.useCallback(
+        [n, r] = i.useState(null),
+        [o, d] = i.useState(null),
+        c = i.useCallback(
             (e) => {
                 null != n && (0, l.L3)(e, h[n]);
             },
             [n],
         ),
         p = null != o ? x[o] : null;
-    return (0, a.jsx)(i.IpV, {
+    return (0, a.jsx)(s.IpV, {
         className: m.nd,
-        children: (0, a.jsxs)(i.BJc, {
+        children: (0, a.jsxs)(s.BJc, {
             className: u.l$,
             gap: 16,
             children: [
-                (0, a.jsxs)(i.BJc, {
+                (0, a.jsxs)(s.BJc, {
                     gap: 8,
                     children: [
-                        (0, a.jsx)(i.Text, { variant: "eyebrow", children: "Context Menus" }),
-                        (0, a.jsx)(i.Text, {
+                        (0, a.jsx)(s.Text, { variant: "eyebrow", children: "Context Menus" }),
+                        (0, a.jsx)(s.Text, {
                             variant: "text-sm/normal",
                             color: "text-muted",
                             children:
@@ -215,12 +215,12 @@ function p() {
                         }),
                     ],
                 }),
-                (0, a.jsxs)(i.BJc, {
+                (0, a.jsxs)(s.BJc, {
                     direction: "horizontal",
                     gap: 8,
                     align: "end",
                     children: [
-                        (0, a.jsx)(i.ZiE, {
+                        (0, a.jsx)(s.ZiE, {
                             label: "Open a Context Menu",
                             placeholder: "Select a menu",
                             options: e,
@@ -228,14 +228,14 @@ function p() {
                             onSelectionChange: r,
                             selectionMode: "single",
                         }),
-                        (0, a.jsx)(i.Button, { variant: "primary", text: "Open", disabled: null == n, onClick: c }),
+                        (0, a.jsx)(s.Button, { variant: "primary", text: "Open", disabled: null == n, onClick: c }),
                     ],
                 }),
-                (0, a.jsxs)(i.BJc, {
+                (0, a.jsxs)(s.BJc, {
                     gap: 8,
                     children: [
-                        (0, a.jsx)(i.Text, { variant: "eyebrow", children: "Popout Menus" }),
-                        (0, a.jsx)(i.Text, {
+                        (0, a.jsx)(s.Text, { variant: "eyebrow", children: "Popout Menus" }),
+                        (0, a.jsx)(s.Text, {
                             variant: "text-sm/normal",
                             color: "text-muted",
                             children:
@@ -243,11 +243,11 @@ function p() {
                         }),
                     ],
                 }),
-                (0, a.jsx)(i.BJc, {
+                (0, a.jsx)(s.BJc, {
                     direction: "horizontal",
                     gap: 8,
                     align: "end",
-                    children: (0, a.jsx)(i.ZiE, {
+                    children: (0, a.jsx)(s.ZiE, {
                         label: "Render a Popout Menu",
                         placeholder: "Select a popout",
                         options: t,
@@ -257,8 +257,8 @@ function p() {
                     }),
                 }),
                 null != p &&
-                    (0, a.jsx)(s.Suspense, {
-                        fallback: (0, a.jsx)(i.Text, {
+                    (0, a.jsx)(i.Suspense, {
+                        fallback: (0, a.jsx)(s.Text, {
                             variant: "text-sm/normal",
                             color: "text-muted",
                             children: "Loading...",

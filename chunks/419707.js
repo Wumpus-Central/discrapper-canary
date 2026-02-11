@@ -1,21 +1,21 @@
 "use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
     r = n.n(l),
-    a = n(92674),
+    a = n(563495),
     o = n(397927),
     d = n(765671),
     c = n(985018),
-    u = n(301563);
-let m = s.memo(function (e) {
+    u = n(349429);
+let g = s.memo(function (e) {
     let {
             renderHeader: t,
             children: n,
             isExpanded: l,
-            isStuck: m,
-            onExpand: g,
+            isStuck: g,
+            onExpand: m,
             disableAnimation: x,
             disableBackground: h,
         } = e,
@@ -55,8 +55,8 @@ let m = s.memo(function (e) {
                 children: [
                     (0, i.jsx)(o.DUT, {
                         innerRef: j,
-                        onClick: m ? void 0 : g,
-                        className: r()(u.MU, { [u.$M]: l && m }),
+                        onClick: g ? void 0 : m,
+                        className: r()(u.MU, { [u.$M]: l && g }),
                         "aria-label": c.intl.string(c.t.dcl9MQ),
                         children: t,
                     }),

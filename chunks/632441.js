@@ -18,9 +18,9 @@ var n = r(627968),
     C = r(75811),
     R = r(930840);
 r(603266);
-var m = r(652215),
-    y = r(985018),
-    N = r(42768);
+var y = r(652215),
+    m = r(985018),
+    N = r(250950);
 function I(e) {
     let { badgeText: t, badgeColor: r } = e,
         u = l.useRef(t),
@@ -41,7 +41,7 @@ function h(e) {
     (0, A.w)({ channelId: h, userId: r, nickname: p, onAlertOpen: U });
     let { isCurrentUserKeyPersistent: D, isOtherUserKeyPersistent: O, loading: V } = (0, f.q)({ userId: r }),
         K = l.useCallback(() => {
-            null != k && ((0, E.bk)(r, k, O, h, m.ThZ.E2EE_USER_VERIFY_MODAL), U());
+            null != k && ((0, E.bk)(r, k, O, h, y.ThZ.E2EE_USER_VERIFY_MODAL), U());
         }, [k, r, O, h, U]),
         j = l.useCallback(() => {
             null != k && ((0, E.Dh)(r, k, O), U());
@@ -49,8 +49,8 @@ function h(e) {
         [L, G] = l.useMemo(
             () =>
                 M
-                    ? [y.intl.string(y.t.UNUuem), i.LU0.colors.BACKGROUND_BRAND.css]
-                    : [y.intl.string(y.t.y2b7CA), i.LU0.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css],
+                    ? [m.intl.string(m.t.UNUuem), i.LU0.colors.BACKGROUND_BRAND.css]
+                    : [m.intl.string(m.t.y2b7CA), i.LU0.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css],
             [M],
         ),
         Y = l.useMemo(
@@ -63,8 +63,8 @@ function h(e) {
     }, [h, r]);
     let z = {
             transitionState: t,
-            title: y.intl.string(y.t["/WPGnF"]),
-            subtitle: y.intl.format(y.t.oc2kce, { username: p }),
+            title: m.intl.string(m.t["/WPGnF"]),
+            subtitle: m.intl.format(m.t.oc2kce, { username: p }),
         },
         B = (0, n.jsxs)(n.Fragment, {
             children: [
@@ -75,7 +75,7 @@ function h(e) {
                             (0, n.jsx)(i.po8, {
                                 messageType: i.YCn.INFO,
                                 className: N.Ht,
-                                children: y.intl.format(y.t.uZDkz0, { count: P }),
+                                children: m.intl.format(m.t.uZDkz0, { count: P }),
                             }),
                         (0, n.jsxs)("div", {
                             className: N.wx,
@@ -83,7 +83,7 @@ function h(e) {
                                 (0, n.jsx)(i.Heading, {
                                     variant: "text-sm/bold",
                                     color: "text-strong",
-                                    children: y.intl.string(y.t["/WPGnF"]),
+                                    children: m.intl.string(m.t["/WPGnF"]),
                                 }),
                                 null != v &&
                                     (0, n.jsx)(R.c, {
@@ -108,10 +108,10 @@ function h(e) {
             ],
         }),
         H = {
-            text: M ? y.intl.string(y.t["Osb+/n"]) : y.intl.string(y.t["0tvNAn"]),
+            text: M ? m.intl.string(m.t["Osb+/n"]) : m.intl.string(m.t["0tvNAn"]),
             disabled: null == v || V,
             onClick: M ? j : K,
         },
-        q = { text: y.intl.string(y.t["ETE/oC"]), onClick: U, variant: "secondary" };
+        q = { text: m.intl.string(m.t["ETE/oC"]), onClick: U, variant: "secondary" };
     return (0, n.jsx)(u.Modal, { onClose: U, ...z, actions: [q, H], children: B });
 }

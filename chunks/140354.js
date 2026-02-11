@@ -1,8 +1,8 @@
 n.d(t, { A: () => C });
 var i = n(627968),
     r = n(64700),
-    a = n(503698),
-    l = n.n(a),
+    l = n(503698),
+    a = n.n(l),
     s = n(311907),
     o = n(397927),
     d = n(765671),
@@ -15,11 +15,11 @@ var i = n(627968),
     p = n(817818),
     g = n(967305),
     E = n(985018),
-    f = n(666088),
-    I = n(22004);
+    I = n(490346),
+    f = n(457898);
 function C(e) {
     let { guildId: t, channelId: n } = e,
-        { ref: a, width: C, height: N } = (0, d.Ay)(),
+        { ref: l, width: C, height: N } = (0, d.Ay)(),
         T = r.useCallback(() => {
             null != t && null != n && ((0, p.sy)(t), (0, g.default)({ guildId: t, returnChannelId: n }));
         }, [t, n]),
@@ -27,24 +27,24 @@ function C(e) {
         x = r.useMemo(() => (null == S ? null : _.Ay.getGuildSplashURL({ id: S.id, splash: S.splash })), [S]),
         v = (0, u.S)(x);
     return (0, i.jsxs)("div", {
-        className: l()(f.kf, I.iW, { [I.Me]: null == x }),
-        ref: a,
+        className: a()(I.kf, f.iW, { [f.Me]: null == x }),
+        ref: l,
         children: [
             null != x
-                ? (0, i.jsx)(c.A, { className: I.xX, src: x, width: C, height: N, imageClassName: I.Iv })
+                ? (0, i.jsx)(c.A, { className: f.xX, src: x, width: C, height: N, imageClassName: f.Iv })
                 : (0, i.jsx)(A.A, {}),
             null != v &&
                 null != x &&
                 (0, i.jsx)("div", {
-                    className: I.D7,
+                    className: f.D7,
                     style: { background: `linear-gradient(180deg, ${(0, m.cb)(v, 0.16)} 0%, ${(0, m.cb)(v, 1)} 100%)` },
                 }),
-            null != x && (0, i.jsx)("div", { className: I.D7 }),
+            null != x && (0, i.jsx)("div", { className: f.D7 }),
             (0, i.jsxs)("div", {
-                className: l()(f.Cj, f.Vw),
+                className: a()(I.Cj, I.Vw),
                 children: [
                     (0, i.jsxs)("div", {
-                        className: f.wx,
+                        className: I.wx,
                         children: [
                             (0, i.jsx)(o.Heading, {
                                 variant: "heading-xxl/normal",

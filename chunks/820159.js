@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => A });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -11,11 +11,11 @@ var r = n(627968),
     d = n(31717),
     _ = n(522602),
     f = n(317681),
-    p = n(35277),
-    h = n(711371),
-    m = n(985018),
-    g = n(562650);
-function E(e, t, n) {
+    h = n(35277),
+    p = n(711371),
+    g = n(985018),
+    E = n(40672);
+function A(e, t, n) {
     let { attributes: i, children: a, element: s } = t;
     switch (s.type) {
         case "applicationCommand":
@@ -31,24 +31,24 @@ function E(e, t, n) {
                 let e;
                 (e =
                     u > 0
-                        ? m.intl.formatToPlainString(m.t.BP8N0K, { count: l })
-                        : m.intl.formatToPlainString(m.t.lziVC9, { count: l })),
+                        ? g.intl.formatToPlainString(g.t.BP8N0K, { count: l })
+                        : g.intl.formatToPlainString(g.t.lziVC9, { count: l })),
                     (d["data-trailing-placeholder"] = e);
             }
-            return (0, r.jsx)("div", { className: g.uB, ...i, ...d, children: a });
+            return (0, r.jsx)("div", { className: E.uB, ...i, ...d, children: a });
         case "applicationCommandOption":
-            return (0, r.jsx)(A, { attributes: i, channelId: n, element: s, children: a });
+            return (0, r.jsx)(I, { attributes: i, channelId: n, element: s, children: a });
         default:
             return null;
     }
 }
-let A = (e) => {
+let I = (e) => {
     let t,
-        { channelId: n, element: a, attributes: f, children: E } = e,
-        A = (0, o.f7)(),
-        I = (0, o.zL)(),
-        T = (0, o.RV)(),
-        { optionType: y, errored: S } = (0, l.cf)(
+        { channelId: n, element: a, attributes: f, children: A } = e,
+        I = (0, o.f7)(),
+        T = (0, o.zL)(),
+        y = (0, o.RV)(),
+        { optionType: S, errored: v } = (0, l.cf)(
             [c.A],
             () => ({
                 optionType: c.A.getOption(n, a.optionName)?.type,
@@ -56,39 +56,39 @@ let A = (e) => {
             }),
             [n, a.optionName],
         ),
-        v = (0, l.bG)([_.A], () => _.A.getUpload(n, a.optionName, d.C.SlashCommand), [n, a.optionName]),
-        C = a.children[a.children.length - 1],
-        b = null != C && h.l5.isText(C) && C.text.endsWith("\n"),
-        N = s()(g.S0, g.xP, { [g.t$]: I && A, [g.$2]: (!I || !A) && S }),
-        R = i.useCallback(() => {
-            h.VW.isVoid(T, a) || p.b.selectCommandOption(T, a.optionName, !0);
-        }, [T, a]);
+        C = (0, l.bG)([_.A], () => _.A.getUpload(n, a.optionName, d.C.SlashCommand), [n, a.optionName]),
+        b = a.children[a.children.length - 1],
+        N = null != b && p.l5.isText(b) && b.text.endsWith("\n"),
+        R = s()(E.S0, E.xP, { [E.t$]: T && I, [E.$2]: (!T || !I) && v }),
+        O = i.useCallback(() => {
+            p.VW.isVoid(y, a) || h.b.selectCommandOption(y, a.optionName, !0);
+        }, [y, a]);
     return (
         (t =
-            y === u.n4.ATTACHMENT
-                ? v?.filename != null
+            S === u.n4.ATTACHMENT
+                ? C?.filename != null
                     ? (0, r.jsxs)("span", {
-                          className: s()(g._K, g.dU),
+                          className: s()(E._K, E.dU),
                           contentEditable: !1,
-                          children: [v.filename, E],
+                          children: [C.filename, A],
                       })
                     : (0, r.jsxs)("span", {
-                          className: s()(g._K, g.ZI),
+                          className: s()(E._K, E.ZI),
                           contentEditable: !1,
-                          children: [m.intl.string(m.t.GRdFni), E],
+                          children: [g.intl.string(g.t.GRdFni), A],
                       })
                 : (0, r.jsxs)("span", {
-                      className: g._K,
-                      children: [E, b ? (0, r.jsx)("span", { className: g.Nx, contentEditable: !1 }) : null],
+                      className: E._K,
+                      children: [A, N ? (0, r.jsx)("span", { className: E.Nx, contentEditable: !1 }) : null],
                   })),
         (0, r.jsxs)("span", {
             ...f,
-            className: N,
+            className: R,
             children: [
                 (0, r.jsxs)("span", {
-                    className: g.gA,
+                    className: E.gA,
                     contentEditable: !1,
-                    onClick: R,
+                    onClick: O,
                     children: [a.optionDisplayName, "​"],
                 }),
                 t,

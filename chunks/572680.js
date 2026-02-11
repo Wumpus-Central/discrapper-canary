@@ -2,9 +2,9 @@ i.d(t, { A: () => T });
 var n = i(627968),
     l = i(64700),
     a = i(106778),
-    r = i(92674),
-    o = i(615300),
-    s = i(397927),
+    s = i(563495),
+    r = i(615300),
+    o = i(397927),
     u = i(565645),
     d = i(21161),
     c = i(750506),
@@ -12,16 +12,16 @@ var n = i(627968),
     m = i(486020),
     p = i(690521),
     g = i(851110),
-    A = i(624085);
+    A = i(407847);
 let f = [];
 function T(e) {
     let { messageId: t, emoji: i, startPosition: T, targetPosition: E } = e,
-        [I, x] = l.useState(0),
+        [x, I] = l.useState(0),
         [N, v] = l.useState(0),
-        [R, j] = l.useState(null),
-        { confettiCanvas: S } = l.useContext(d.x),
-        b = (0, a.f9)(S, R),
-        C = l.useMemo(
+        [j, R] = l.useState(null),
+        { confettiCanvas: C } = l.useContext(d.x),
+        S = (0, a.f9)(C, j),
+        b = l.useMemo(
             () => [
                 {
                     src: null == i.id ? p.Ay.getURL(i.name) : m.Ay.getEmojiURL({ id: i.id, animated: !1, size: 22 }),
@@ -32,39 +32,39 @@ function T(e) {
         ),
         y = E.x - (E.width / 2) * 0.5,
         _ = E.y - (E.height / 2) * 0.5,
-        O = (0, s.zhh)({
+        O = (0, o.zhh)({
             from: { y: T.y },
             to: { y: _ },
-            config: { duration: 450, easing: o.A.Easing.in(o.A.Easing.exp) },
+            config: { duration: 450, easing: r.A.Easing.in(r.A.Easing.exp) },
             onChange: (e) => {
                 let { y: t } = e;
                 v(t);
             },
         }),
-        M = (0, s.zhh)({
+        M = (0, o.zhh)({
             from: { x: T.x, scale: 1, opacity: 1 },
             to: { x: y, scale: 0.5, opacity: 0.4 },
-            config: { duration: 450, easing: o.A.Easing.in(o.A.Easing.ease) },
+            config: { duration: 450, easing: r.A.Easing.in(r.A.Easing.ease) },
             onRest: () => {
                 (0, h.p)(t, i.name, i.id);
             },
             onChange: (e) => {
                 let { x: t } = e;
-                x(t);
+                I(t);
             },
         });
     return (
         l.useEffect(() => {
-            I > 0 && N > 0 && b.createConfetti({ ...g.Mw, position: { type: "static", value: { x: I, y: N } } });
-        }, [b, I, N]),
+            x > 0 && N > 0 && S.createConfetti({ ...g.Mw, position: { type: "static", value: { x: x, y: N } } });
+        }, [S, x, N]),
         (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, n.jsx)(a.K_, { ref: j, sprites: C, colors: f, spriteWidth: g.wn, spriteHeight: g.wn }),
+                (0, n.jsx)(a.K_, { ref: R, sprites: b, colors: f, spriteWidth: g.wn, spriteHeight: g.wn }),
                 (0, n.jsx)(c.Ay, {
-                    children: (0, n.jsx)(r.animated.div, {
+                    children: (0, n.jsx)(s.animated.div, {
                         style: { ...O },
                         className: A.qq,
-                        children: (0, n.jsx)(r.animated.div, {
+                        children: (0, n.jsx)(s.animated.div, {
                             style: { ...M, opacity: M.opacity },
                             children: (0, n.jsx)(u.A, {
                                 className: A.Zg,

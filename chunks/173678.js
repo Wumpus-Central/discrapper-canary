@@ -1,4 +1,4 @@
-n.d(t, { M: () => _, z: () => x });
+n.d(t, { M: () => _, z: () => f });
 var i = n(627968),
     l = n(575593),
     s = n(635358),
@@ -10,9 +10,9 @@ var i = n(627968),
     u = n(957785),
     h = n(788868),
     A = n(985018),
-    g = n(733557),
-    m = n(101616);
-function p(e, t, n) {
+    m = n(55751),
+    p = n(754558);
+function g(e, t, n) {
     (0, d.A)({
         skuId: e.skuId,
         isGift: !0,
@@ -29,34 +29,34 @@ function _(e, t) {
             analyticsLocations: a,
             onViewWishlist: d,
             isSingleCard: h = !1,
-            wishlistId: m,
+            wishlistId: p,
             showTypeTooltip: _ = !1,
-            cardSize: x,
+            cardSize: f,
         } = t,
-        f = null != e.bundleItems && e.bundleItems.length > 0,
-        E = null != n && n > 0,
-        C = _ && !E,
-        I = E ? A.intl.string(A.t.TxBQzD) : A.intl.string(A.t.pLPjsb),
-        S = {
-            title: C ? A.intl.string(A.t.HFhcqh) : I,
-            body: C ? A.intl.string(A.t.ilhtIa) : void 0,
-            renderIcon: C ? r.GM : void 0,
+        x = null != e.bundleItems && e.bundleItems.length > 0,
+        C = null != n && n > 0,
+        E = _ && !C,
+        I = C ? A.intl.string(A.t.TxBQzD) : A.intl.string(A.t.pLPjsb),
+        b = {
+            title: E ? A.intl.string(A.t.HFhcqh) : I,
+            body: E ? A.intl.string(A.t.ilhtIa) : void 0,
+            renderIcon: E ? r.GM : void 0,
             shouldShow: !0,
         },
-        b = !f && e.collectiblesItem.type === l.R.PROFILE_EFFECT;
+        N = !x && e.collectiblesItem.type === l.R.PROFILE_EFFECT;
     return (0, i.jsx)(
         u.A,
         {
             onCardClick: () => {
-                E ? d() : p(e, s, a);
+                C ? d() : g(e, s, a);
             },
-            tooltipConfig: S,
-            shouldScalePreview: f || !b,
+            tooltipConfig: b,
+            shouldScalePreview: x || !N,
             renderPreview: () => {
-                if (f) {
+                if (x) {
                     let t = { items: e.bundleItems };
                     return (0, i.jsx)("div", {
-                        className: g.hT,
+                        className: m.hT,
                         children: (0, i.jsx)(o.X, { product: t, isHighlighted: !1, user: s }),
                     });
                 }
@@ -65,13 +65,13 @@ function _(e, t) {
             moreCount: n,
             isSingleCard: h,
             wishlistItem: e,
-            wishlistId: m,
-            cardSize: x,
+            wishlistId: p,
+            cardSize: f,
         },
         e.skuId,
     );
 }
-function x(e, t) {
+function f(e, t) {
     let { profileOwner: n, analyticsLocations: s, wishlistId: r, onViewWishlist: o } = t,
         d = null != e.bundleItems && e.bundleItems.length > 0,
         c = _(e, {
@@ -97,17 +97,17 @@ function x(e, t) {
                   }
               })(e);
     return (0, i.jsxs)("div", {
-        className: m.D5,
+        className: p.D5,
         children: [
             c,
             (0, i.jsxs)("div", {
-                className: m.S7,
+                className: p.S7,
                 children: [
                     (0, i.jsx)(a.DUT, {
                         onClick: () => {
-                            p(e, n, s);
+                            g(e, n, s);
                         },
-                        className: m.Hh,
+                        className: p.Hh,
                         "aria-label": A.intl.string(A.t.pLPjsb),
                         children: (0, i.jsx)(a.Text, {
                             variant: "text-sm/semibold",

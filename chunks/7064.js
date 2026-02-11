@@ -1,32 +1,32 @@
 n.d(t, { A: () => _ });
 var i = n(627968),
     s = n(64700),
-    r = n(397927),
-    a = n(195043),
-    l = n(193658),
+    a = n(397927),
+    l = n(195043),
+    r = n(193658),
     o = n(355097),
     c = n(531525),
     d = n(985018),
-    u = n(943626);
+    u = n(27676);
 function _(e) {
     let { currentUser: t, disabled: n, handleDisableAccount: _, handleDeleteAccount: m } = e,
         A = t.isClaimed(),
         g = s.useRef(null);
     return (
-        (0, l.A)(g, o.Ew.AccountScrollPositions.DISABLE_ACCOUNT),
-        (0, i.jsx)(a.x, {
+        (0, r.A)(g, o.Ew.AccountScrollPositions.DISABLE_ACCOUNT),
+        (0, i.jsx)(l.x, {
             setting: c.H.ACCOUNT_DISABLE_ACCOUNT,
             children: (0, i.jsx)("div", {
                 ref: g,
-                children: (0, i.jsx)(r.D0$, {
+                children: (0, i.jsx)(a.D0$, {
                     label: d.intl.string(d.t.ZKsIks),
                     description: A ? d.intl.string(d.t.TIh3Yj) : d.intl.string(d.t.czsGA8),
-                    children: (0, i.jsxs)(r.ButtonGroup, {
+                    children: (0, i.jsxs)(a.ButtonGroup, {
                         size: "sm",
                         className: u.U,
                         children: [
                             A
-                                ? (0, i.jsx)(r.Button, {
+                                ? (0, i.jsx)(a.Button, {
                                       variant: "critical-primary",
                                       size: "sm",
                                       text: d.intl.string(d.t.jf5GGb),
@@ -34,9 +34,9 @@ function _(e) {
                                       onClick: _,
                                   })
                                 : null,
-                            (0, i.jsx)(a.x, {
+                            (0, i.jsx)(l.x, {
                                 setting: c.H.ACCOUNT_DELETE_ACCOUNT,
-                                children: (0, i.jsx)(r.Button, {
+                                children: (0, i.jsx)(a.Button, {
                                     variant: "critical-secondary",
                                     size: "sm",
                                     text: d.intl.string(d.t["8lQ2rR"]),

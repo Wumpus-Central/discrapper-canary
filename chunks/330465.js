@@ -4,7 +4,7 @@ var i = n(627968),
     s = n(503698),
     a = n.n(s),
     r = n(131346),
-    o = n(92674),
+    o = n(563495),
     d = n(837381),
     c = n(607399),
     u = n(417597),
@@ -30,9 +30,9 @@ var i = n(627968),
     O = n(65611),
     L = n(652215),
     M = n(985018),
-    D = n(837021);
-let U = { analyticsSource: { page: L.liQ.GUILD_CHANNEL, section: L.JJy.CHANNEL_LIST, object: L.ZSU.CHANNEL } };
-function G(e, t) {
+    D = n(508831);
+let G = { analyticsSource: { page: L.liQ.GUILD_CHANNEL, section: L.JJy.CHANNEL_LIST, object: L.ZSU.CHANNEL } };
+function U(e, t) {
     (0, p.L3)(e, async () => {
         let { default: e } = await Promise.all([
             n.e("43600"),
@@ -42,16 +42,16 @@ function G(e, t) {
             n.e("16301"),
             n.e("22191"),
             n.e("25961"),
-            n.e("21968"),
+            n.e("96760"),
             n.e("35894"),
-            n.e("41538"),
+            n.e("67231"),
             n.e("50796"),
             n.e("8458"),
             n.e("11810"),
-            n.e("39048"),
+            n.e("52848"),
             n.e("36290"),
             n.e("54469"),
-            n.e("74984"),
+            n.e("69400"),
         ]).then(n.bind(n, 544676));
         return (n) => (0, i.jsx)(e, { ...n, guild: t });
     });
@@ -69,9 +69,9 @@ let P = l.memo(function (e) {
             unread: B = !1,
             mediaState: H,
             unavailable: F = !1,
-            badge: W = 0,
-            isMentionLowImportance: K,
-            contextMenu: Y = G,
+            badge: K = 0,
+            isMentionLowImportance: W,
+            contextMenu: Y = U,
             draggable: z = !1,
             sorting: q = !1,
             preloadOnClick: X = !0,
@@ -83,14 +83,14 @@ let P = l.memo(function (e) {
         { id: ee, parentId: et } = t,
         en = e.upperBadge ?? (F ? (0, O.em)() : null != H ? (0, O.oi)(H) : void 0),
         ei = e.lowerBadge ?? void 0;
-    null == ei && W > 0
+    null == ei && K > 0
         ? (ei =
               (0, O.wN)(
-                  W,
-                  K ? A.LU0.colors.BACKGROUND_MOD_STRONG.css : A.LU0.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
+                  K,
+                  W ? A.LU0.colors.BACKGROUND_MOD_STRONG.css : A.LU0.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
               ) ?? void 0)
         : null == ei && null != J && (ei = (0, O.eW)({ guildJoinRequestStatus: J }) ?? void 0);
-    let el = e.lowerBadgeSize ?? { width: (0, A.o6S)(W) },
+    let el = e.lowerBadgeSize ?? { width: (0, A.o6S)(K) },
         [{ dragging: es }, ea] = (0, r.i)({
             type: N.PJ.GUILD,
             item: () => (
@@ -113,7 +113,7 @@ let P = l.memo(function (e) {
         eg = (0, b.nr)() && !c.Fr;
     l.useEffect(() => () => ep.cancel(), [ep]);
     let e_ = l.useCallback(() => {
-            null != P ? (0, f.pX)(P, { state: U }) : (0, x.u)(ee, { state: U });
+            null != P ? (0, f.pX)(P, { state: G }) : (0, x.u)(ee, { state: G });
         }, [ee, P]),
         ef = l.useCallback(() => {
             if (null != P || null == w || F || !X) return;
@@ -168,7 +168,7 @@ let P = l.memo(function (e) {
         }),
         ey = eg
             ? (0, i.jsx)(A.jlP, {
-                  ariaLabel: M.intl.formatToPlainString(M.t["/uzRss"], { guildName: w.name, mentions: W }),
+                  ariaLabel: M.intl.formatToPlainString(M.t["/uzRss"], { guildName: w.name, mentions: K }),
                   name: w.name,
                   onClick: e_,
                   onMouseEnter: eb,
@@ -194,7 +194,7 @@ let P = l.memo(function (e) {
                       "data-dnd-name": w.name,
                       "data-drop-hovering": eA,
                       children: (0, i.jsx)(A.jlP, {
-                          ariaLabel: M.intl.formatToPlainString(M.t["/uzRss"], { guildName: w.name, mentions: W }),
+                          ariaLabel: M.intl.formatToPlainString(M.t["/uzRss"], { guildName: w.name, mentions: K }),
                           name: w.name,
                           onClick: e_,
                           onMouseEnter: eb,

@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(158954),
     a = n(292666),
     s = n(397927),
-    o = n(94576);
+    o = n(580002);
 function l(e) {
     let { controls: t, props: n, onPropsChange: l } = e,
         u = (e, t) => {

@@ -7,7 +7,7 @@ var r = n(627968),
     o = n(158954),
     l = n(713517),
     u = n(607123),
-    c = n(72939);
+    c = n(880313);
 function d(e) {
     let {
             sku: t,
@@ -16,29 +16,29 @@ function d(e) {
             cardStyle: d,
             skuPreviewStyle: _,
             disableHoverOrFocus: f,
-            onHoverOrFocusChange: p,
-            onClick: h,
-            options: m,
+            onHoverOrFocusChange: h,
+            onClick: p,
+            options: g,
         } = e,
-        g = i.useRef(null),
-        { isHoveringOrFocusing: E } = (0, l.A)(g),
-        A = i.useRef(p);
+        E = i.useRef(null),
+        { isHoveringOrFocusing: A } = (0, l.A)(E),
+        I = i.useRef(h);
     return (
         i.useEffect(() => {
-            A.current = p;
-        }, [p]),
+            I.current = h;
+        }, [h]),
         i.useEffect(() => {
-            A.current?.(E);
-        }, [E]),
+            I.current?.(A);
+        }, [A]),
         (0, r.jsxs)(o.DUT, {
-            innerRef: g,
+            innerRef: E,
             className: s()(c.N, d),
-            onClick: h,
+            onClick: p,
             children: [
                 (0, r.jsx)(o.AC4, { children: (0, r.jsx)(o.H, { children: t.name }) }),
                 (0, r.jsx)("div", {
                     className: s()(c.e, _),
-                    children: (0, r.jsx)(u.Ay, { sku: t, isFocused: !f && E, user: n, options: m }),
+                    children: (0, r.jsx)(u.Ay, { sku: t, isFocused: !f && A, user: n, options: g }),
                 }),
                 a,
             ],

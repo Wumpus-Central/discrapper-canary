@@ -20,14 +20,14 @@ var i = n(627968),
     C = n(168428),
     I = n(652215),
     T = n(985018),
-    v = n(875871);
+    v = n(14977);
 function N(e) {
     let { invite: t, isMemberOfGuild: n, message: a, onTransitionToInviteChannel: d, onAcceptInstantInvite: u } = e,
         m = l.useRef(null),
         [h, g] = l.useState(!0),
         [N, b] = l.useState(!1),
-        y = t.state === I.elq.ACCEPTING,
-        j = (0, s.bG)([c.A], () => c.A.useReducedMotion);
+        j = t.state === I.elq.ACCEPTING,
+        y = (0, s.bG)([c.A], () => c.A.useReducedMotion);
     l.useLayoutEffect(() => {
         b((m.current?.clientHeight ?? 0) > 292);
     }, [b]);
@@ -43,10 +43,10 @@ function N(e) {
                 N && m.current?.clientHeight != null
                     ? {
                           height: h ? 292 : m.current.clientHeight + 36 + 48,
-                          transition: j ? void 0 : "height 0.2s ease",
+                          transition: y ? void 0 : "height 0.2s ease",
                       }
                     : {},
-            [h, N, j],
+            [h, N, y],
         );
     return null == R
         ? (0, i.jsx)(C.A, {})
@@ -96,7 +96,7 @@ function N(e) {
                                       profile: R,
                                       isMemberOfGuild: n,
                                       message: a,
-                                      submitting: y,
+                                      submitting: j,
                                       onTransitionToInviteChannel: d,
                                       onAcceptInstantInvite: u,
                                   }),

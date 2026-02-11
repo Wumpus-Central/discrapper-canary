@@ -8,7 +8,7 @@ var r = n(627968),
     l = n(397927),
     u = n(775602),
     c = n(169909),
-    d = n(457806);
+    d = n(86e3);
 function _(e) {
     let { look: t = c.r0.LARGE_BANNER } = e,
         n = (0, o.bG)([u.A], () => u.A.useReducedMotion),

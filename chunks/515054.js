@@ -13,7 +13,7 @@ var i = n(627968),
     x = n(463259),
     f = n(133583),
     h = n(518477),
-    p = n(96124);
+    p = n(905182);
 function _(e) {
     let { children: t, className: n, scrollerRef: l, ...a } = e;
     return (0, i.jsx)(s.HOs, { ref: l, className: r()(p.gN, n), fade: !0, ...a, children: t });
@@ -44,7 +44,7 @@ function I(e) {
             onClose: x,
         } = e,
         { trackUserProfileAction: f } = (0, o.NJ)(),
-        [{ section: _, text: I }, j] = l.useState(
+        [{ section: _, text: I }, v] = l.useState(
             g.find((e) => {
                 let { section: t } = e;
                 return t === m;
@@ -66,7 +66,7 @@ function I(e) {
                         c.A.hasUnsavedChanges() && _ === h.RP.WIDGETS
                             ? d.A.notifyUnsavedWidgets()
                             : (f({ action: "PRESS_SECTION", section: e }),
-                              j((t) => g.find((t) => t.section === e) ?? t));
+                              v((t) => g.find((t) => t.section === e) ?? t));
                     },
                     children: g.map((e) =>
                         (0, i.jsx)(

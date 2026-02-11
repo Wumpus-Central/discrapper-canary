@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => p });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -12,58 +12,58 @@ var i = n(503698),
     d = n(405269),
     _ = n(403362),
     f = n(985018),
-    p = n(102373);
-let h = function (e) {
-    let { createdAt: t, participantIds: n, applicationId: i, title: h, guildId: m, className: g } = e,
-        E = (0, u.h)(i),
-        A = (0, s.yK)([c.default], () => n.map((e) => c.default.getUser(e)).filter(_.Vq) ?? []),
-        I = E?.name,
-        T = null != t ? (0, d.Fe)(new Date(t)) : null,
-        y = E?.getIconURL(32);
+    h = n(51099);
+let p = function (e) {
+    let { createdAt: t, participantIds: n, applicationId: i, title: p, guildId: g, className: E } = e,
+        A = (0, u.h)(i),
+        I = (0, s.yK)([c.default], () => n.map((e) => c.default.getUser(e)).filter(_.Vq) ?? []),
+        T = A?.name,
+        y = null != t ? (0, d.Fe)(new Date(t)) : null,
+        S = A?.getIconURL(32);
     if (null == t) return null;
-    let S = null == h || "" === h;
+    let v = null == p || "" === p;
     return (0, r.jsxs)("div", {
-        className: a()(g, p.kL),
+        className: a()(E, h.kL),
         children: [
             (0, r.jsx)("div", {
-                className: p.gS,
+                className: h.gS,
                 "aria-hidden": "true",
                 children:
-                    null != y
-                        ? (0, r.jsx)("img", { src: y, alt: "", className: p.NH })
+                    null != S
+                        ? (0, r.jsx)("img", { src: S, alt: "", className: h.NH })
                         : (0, r.jsx)(l.kN9, { size: "sm", color: "currentColor" }),
             }),
             (0, r.jsxs)("div", {
-                className: p.i0,
+                className: h.i0,
                 children: [
                     (0, r.jsx)(l.Text, {
-                        className: p.NV,
+                        className: h.NV,
                         variant: "text-md/normal",
-                        color: S ? "text-subtle" : "text-default",
-                        children: S ? f.intl.string(f.t.Cyxddp) : h,
+                        color: v ? "text-subtle" : "text-default",
+                        children: v ? f.intl.string(f.t.Cyxddp) : p,
                     }),
-                    null != I &&
-                        "" !== I &&
+                    null != T &&
+                        "" !== T &&
                         (0, r.jsx)(l.Text, {
-                            className: p.xD,
+                            className: h.xD,
                             color: "text-subtle",
                             variant: "text-sm/medium",
-                            children: I,
+                            children: T,
                         }),
                     (0, r.jsx)(l.Text, {
-                        className: p.xD,
+                        className: h.xD,
                         color: "text-subtle",
                         variant: "text-sm/normal",
-                        children: T,
+                        children: y,
                     }),
                 ],
             }),
             (0, r.jsx)("div", {
-                className: p.jW,
+                className: h.jW,
                 children: (0, r.jsx)(o.A, {
                     maxUsers: 4,
-                    users: A,
-                    guildId: m,
+                    users: I,
+                    guildId: g,
                     size: l._3J.SIZE_24,
                     "aria-label": f.intl.string(f.t.WTozwe),
                 }),

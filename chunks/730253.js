@@ -1,4 +1,4 @@
-n.d(t, { A: () => D }), n(321073);
+n.d(t, { A: () => M }), n(321073);
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -10,85 +10,85 @@ var i = n(627968),
     u = n(442433),
     h = n(933958),
     A = n(969151),
-    g = n(941971),
-    m = n(900848),
-    p = n(65611),
+    m = n(941971),
+    p = n(900848),
+    g = n(65611),
     _ = n(855725),
-    x = n(366811),
-    f = n(616356),
-    E = n(734057),
-    C = n(309010),
+    f = n(366811),
+    x = n(616356),
+    C = n(734057),
+    E = n(309010),
     I = n(977997),
-    S = n(661191),
-    b = n(181079),
-    N = n(93055),
+    b = n(661191),
+    N = n(181079),
+    S = n(93055),
     T = n(210082),
-    j = n(595567),
-    v = n(332396),
-    y = n(652215),
+    v = n(595567),
+    y = n(332396),
+    j = n(652215),
     R = n(985018),
-    O = n(299446);
-let L = { analyticsSource: { page: y.liQ.GUILD_CHANNEL, section: y.JJy.CHANNEL_LIST, object: y.ZSU.CHANNEL } };
-function D() {
+    O = n(4720);
+let L = { analyticsSource: { page: j.liQ.GUILD_CHANNEL, section: j.JJy.CHANNEL_LIST, object: j.ZSU.CHANNEL } };
+function M() {
     let e,
         t,
         s,
-        D,
         M,
+        D,
         G,
         U,
         P,
-        k,
         w,
+        k,
         V,
         B,
         H = (0, r.Vd)("favorites"),
-        { favoriteAdded: F, clearFavoriteAdded: Y } = (0, N.CJ)(),
-        [W, K] = l.useState(!1),
-        { favoriteServerMuted: z, favoriteChannels: X } = (0, o.cf)([b.A], () => ({
-            favoriteChannels: b.A.getFavoriteChannels(),
-            favoriteServerMuted: b.A.favoriteServerMuted,
+        { favoriteAdded: F, clearFavoriteAdded: K } = (0, S.CJ)(),
+        [W, Y] = l.useState(!1),
+        { favoriteServerMuted: z, favoriteChannels: q } = (0, o.cf)([N.A], () => ({
+            favoriteChannels: N.A.getFavoriteChannels(),
+            favoriteServerMuted: N.A.favoriteServerMuted,
         })),
-        q = (0, o.bG)([C.A], () => C.A.getChannelId(y.YYv)),
-        J = (0, o.bG)([E.A], () => E.A.getChannel(q)),
-        Q = (0, x.A)((e) => e.guildId) === y.YYv,
-        { badge: Z, unread: $ } = (0, T.A)(X),
+        X = (0, o.bG)([E.A], () => E.A.getChannelId(j.YYv)),
+        J = (0, o.bG)([C.A], () => C.A.getChannel(X)),
+        Q = (0, f.A)((e) => e.guildId) === j.YYv,
+        { badge: $, unread: Z } = (0, T.A)(q),
         ee =
-            ((t = null != (e = (0, o.bG)([C.A], () => C.A.getVoiceChannelId())) && null != X[e]),
-            (s = (0, o.bG)([f.A], () => {
+            ((t = null != (e = (0, o.bG)([E.A], () => E.A.getVoiceChannelId())) && null != q[e]),
+            (s = (0, o.bG)([x.A], () => {
                 if (!t) return !1;
-                let e = f.A.getCurrentUserActiveStream();
-                return null != e && null != X[e.channelId];
+                let e = x.A.getCurrentUserActiveStream();
+                return null != e && null != q[e.channelId];
             })),
-            (D = (0, o.bG)([f.A], () => f.A.getAllApplicationStreams().some((e) => null != X[e.channelId]))),
-            (M = (0, o.bG)([I.A], () => t && null != e && I.A.hasVideo(e), [t, e])),
+            (M = (0, o.bG)([x.A], () => x.A.getAllApplicationStreams().some((e) => null != q[e.channelId]))),
+            (D = (0, o.bG)([I.A], () => t && null != e && I.A.hasVideo(e), [t, e])),
             (G = (0, o.yK)([h.Ay], () =>
-                S.default.keys(X).reduce((e, t) => (e.push(...h.Ay.getEmbeddedActivitiesForChannel(t)), e), []),
+                b.default.keys(q).reduce((e, t) => (e.push(...h.Ay.getEmbeddedActivitiesForChannel(t)), e), []),
             )),
             (U = (0, o.bG)([h.Ay], () =>
                 Array.from(h.Ay.getSelfEmbeddedActivities().values()).some((e) => {
                     let { location: t } = e,
                         n = (0, A.H)(t);
-                    return null != n && null != X[n];
+                    return null != n && null != q[n];
                 }),
             )),
             (P = G.length > 0),
-            (k = !1),
             (w = !1),
+            (k = !1),
             (V = !1),
             (B = !1),
-            t ? ((k = !M), (w = M), (V = s), (B = U)) : ((V = D), (B = P)),
-            (0, p.oi)({ audio: k, video: w, screenshare: V, liveStage: !1, isCurrentUserConnected: t, activity: B })),
-        et = Z > 0 ? (0, _.w)(Z) : null,
+            t ? ((w = !D), (k = D), (V = s), (B = U)) : ((V = M), (B = P)),
+            (0, g.oi)({ audio: w, video: k, screenshare: V, liveStage: !1, isCurrentUserConnected: t, activity: B })),
+        et = $ > 0 ? (0, _.w)($) : null,
         en = l.useCallback(() => {
-            Y();
-        }, [Y]);
-    return (0, i.jsxs)(m.c, {
+            K();
+        }, [K]);
+    return (0, i.jsxs)(p.c, {
         children: [
-            (0, i.jsx)(g.A, { selected: Q, hovered: W, unread: $ && !z, className: O.Io }),
-            (0, i.jsx)(v.A, {
+            (0, i.jsx)(m.A, { selected: Q, hovered: W, unread: Z && !z, className: O.Io }),
+            (0, i.jsx)(y.A, {
                 onShow: en,
-                children: (0, i.jsx)(j.Q, {
+                children: (0, i.jsx)(v.Q, {
                     children: (0, i.jsx)(d.Qk9, {
                         selected: !0,
                         upperBadge: ee,
@@ -97,13 +97,13 @@ function D() {
                             ...H,
                             ariaLabel: R.intl.formatToPlainString(R.t["/uzRss"], {
                                 guildName: R.intl.string(R.t.wMWyci),
-                                mentions: Z,
+                                mentions: $,
                             }),
                             "aria-selected": Q,
-                            to: { pathname: y.BVt.CHANNEL(y.YYv, q), state: L },
+                            to: { pathname: j.BVt.CHANNEL(j.YYv, X), state: L },
                             selected: Q || W,
-                            onMouseEnter: () => K(!0),
-                            onMouseLeave: () => K(!1),
+                            onMouseEnter: () => Y(!0),
+                            onMouseLeave: () => Y(!1),
                             onMouseDown: function () {
                                 null != J && c.A.preload(J.guild_id, J.id);
                             },

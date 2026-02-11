@@ -3,7 +3,7 @@ var i = n(627968),
     l = n(64700),
     s = n(397927),
     a = n(847599),
-    r = n(263518);
+    r = n(82096);
 let o = function (e) {
     let {
         title: t,
@@ -14,17 +14,17 @@ let o = function (e) {
         onDisagree: u,
         modalType: h,
         channelId: A,
-        guildId: g,
+        guildId: m,
     } = e;
     l.useEffect(() => {
-        (0, a.Bf)(h, A, g);
-    }, [h, A, g]);
-    let m = l.useCallback(() => {
-            (0, a.mU)(a.IY.NSFW_CHANNEL_DISAGREE_CTA, h, A, g), u?.();
-        }, [u, h, A, g]),
-        p = l.useCallback(() => {
-            (0, a.mU)(a.IY.NSFW_CHANNEL_AGREE_CTA, h, A, g), c?.();
-        }, [c, h, A, g]);
+        (0, a.Bf)(h, A, m);
+    }, [h, A, m]);
+    let p = l.useCallback(() => {
+            (0, a.mU)(a.IY.NSFW_CHANNEL_DISAGREE_CTA, h, A, m), u?.();
+        }, [u, h, A, m]),
+        g = l.useCallback(() => {
+            (0, a.mU)(a.IY.NSFW_CHANNEL_AGREE_CTA, h, A, m), c?.();
+        }, [c, h, A, m]);
     return (0, i.jsxs)(s.BJc, {
         justify: "center",
         align: "center",
@@ -53,8 +53,8 @@ let o = function (e) {
                 align: "center",
                 gap: 16,
                 children: [
-                    null != d && null != u ? (0, i.jsx)(s.Button, { variant: "secondary", text: d, onClick: m }) : null,
-                    null != o && null != c ? (0, i.jsx)(s.Button, { onClick: p, text: o }) : null,
+                    null != d && null != u ? (0, i.jsx)(s.Button, { variant: "secondary", text: d, onClick: p }) : null,
+                    null != o && null != c ? (0, i.jsx)(s.Button, { onClick: g, text: o }) : null,
                 ],
             }),
         ],

@@ -4,7 +4,7 @@ var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
-    s = n(562650);
+    s = n(40672);
 function o(e) {
     let { attributes: t, children: n, leaf: i, text: o } = e;
     if (i.commandName) {

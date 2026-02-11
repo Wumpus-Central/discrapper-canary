@@ -1,7 +1,7 @@
-n.d(t, { default: () => N });
+n.d(t, { default: () => E });
 var a = n(627968),
-    s = n(64700),
-    i = n(835245),
+    i = n(64700),
+    s = n(835245),
     l = n(158954),
     r = n(554146),
     o = n(397927),
@@ -18,9 +18,9 @@ var a = n(627968),
     v = n(807734),
     b = n(652215),
     j = n(239093),
-    A = n(536242),
+    A = n(949268),
     C = n(985018),
-    S = n(62959),
+    S = n(499453),
     T = n(700129);
 function y(e) {
     let { modalSessionId: t, entryPoint: n } = e;
@@ -45,15 +45,15 @@ function y(e) {
             })
           : null;
 }
-let N = function (e) {
-    let { transitionState: t, entryPoint: n, onClose: u, onComplete: j, dismissable: N, classificationId: E } = e,
-        [I, k] = s.useState(r.M.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
-        R = s.useRef(I),
+let E = function (e) {
+    let { transitionState: t, entryPoint: n, onClose: u, onComplete: j, dismissable: E, classificationId: N } = e,
+        [I, k] = i.useState(r.M.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
+        R = i.useRef(I),
         [O, w] = (0, d.kn)([I], void 0, !0),
-        D = s.useMemo(() => (0, i.A)(), []),
-        M = s.useRef(!1),
+        D = i.useMemo(() => (0, s.A)(), []),
+        M = i.useRef(!1),
         P = (0, m.W$)();
-    s.useEffect(() => {
+    i.useEffect(() => {
         R.current = O;
     }, [O]);
     let { loading: L, ageVerificationMethods: U } = (0, v.A)({
@@ -63,10 +63,10 @@ let N = function (e) {
         onMethodClick: () => {
             k(r.M.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
         },
-        classificationId: E,
+        classificationId: N,
     });
     return (
-        s.useLayoutEffect(
+        i.useLayoutEffect(
             () => () => {
                 if (M.current) return;
                 let e = R.current;
@@ -79,14 +79,14 @@ let N = function (e) {
             },
             [],
         ),
-        s.useEffect(() => {
+        i.useEffect(() => {
             (0, g.Bs)(D, g.WU.EXPRESSIVE_PRIMARY, n);
         }, [D, n]),
         (0, a.jsx)(l.ExpressiveModal, {
             transitionState: t,
             onClose: u,
             gradientColor: "blue",
-            dismissable: N,
+            dismissable: E,
             graphic: { type: "image", src: T.A },
             title: (0, f.ST)(n),
             subtitle: (0, f.mK)(
@@ -143,7 +143,7 @@ let N = function (e) {
                               direction: "vertical",
                               gap: 8,
                               children: U.map((e) => {
-                                  let { title: t, description: n, onClick: s } = e;
+                                  let { title: t, description: n, onClick: i } = e;
                                   return (0, a.jsx)(
                                       c.PQ,
                                       {
@@ -151,7 +151,7 @@ let N = function (e) {
                                           title: t,
                                           description: n,
                                           buttonDisabled: L,
-                                          onButtonPress: () => s(D),
+                                          onButtonPress: () => i(D),
                                       },
                                       t,
                                   );

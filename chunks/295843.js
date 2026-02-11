@@ -1,4 +1,4 @@
-n.d(t, { A: () => j, k: () => R });
+n.d(t, { A: () => y, k: () => R });
 var i = n(627968),
     l = n(64700),
     a = n(758879),
@@ -20,7 +20,7 @@ var i = n(627968),
     C = n(371794),
     I = n(652215),
     T = n(985018),
-    v = n(187663);
+    v = n(34077);
 class N extends l.Component {
     static defaultProps = { renderFallback: I.tEg };
     state = { playing: !1, muted: !0 };
@@ -141,6 +141,6 @@ function b(e) {
         libraryApplication: null != n ? A.A.getLibraryApplication(n.applicationId, n.applicationId, !0) : null,
     };
 }
-let y = (0, p.A)((0, h.A)(N)),
-    j = r.Ay.connectStores(S, b)(y),
+let j = (0, p.A)((0, h.A)(N)),
+    y = r.Ay.connectStores(S, b)(j),
     R = (0, h.A)(r.Ay.connectStores(S, b)(N));

@@ -1,140 +1,140 @@
-n.d(t, { Ay: () => _, dd: () => p, lD: () => C });
+n.d(t, { Ay: () => x, dd: () => h, lD: () => T });
 var i = n(627968);
 n(64700);
-var l = n(873298),
-    s = n(397927),
-    a = n(285058),
+var s = n(873298),
+    a = n(397927),
+    l = n(285058),
     r = n(195043),
     o = n(723702),
-    d = n(253932),
-    c = n(790174),
+    c = n(253932),
+    d = n(790174),
     u = n(531525),
-    h = n(652215),
-    A = n(985018),
-    g = n(536482),
-    m = n(208746);
-function p() {
-    let e = d.tz.useSetting();
+    _ = n(652215),
+    m = n(985018),
+    A = n(730844),
+    g = n(13476);
+function h() {
+    let e = c.tz.useSetting();
     return (0, i.jsxs)("div", {
-        className: m.QF,
+        className: g.QF,
         children: [
             (0, i.jsxs)("div", {
-                className: m.v_,
+                className: g.v_,
                 children: [
-                    (0, i.jsx)(s.Heading, {
-                        className: m.n7,
+                    (0, i.jsx)(a.Heading, {
+                        className: g.n7,
                         variant: "heading-md/medium",
                         color: "text-strong",
-                        children: A.intl.string(A.t.TqdOvC),
+                        children: m.intl.string(m.t.TqdOvC),
                     }),
                     !e &&
                         (0, i.jsx)("div", {
-                            className: m.ZT,
-                            children: (0, i.jsx)(s.wx6, {
+                            className: g.ZT,
+                            children: (0, i.jsx)(a.wx6, {
                                 type: "warning",
-                                children: A.intl.string(g.default["xxI0/W"]),
+                                children: m.intl.string(A.default["xxI0/W"]),
                             }),
                         }),
                 ],
             }),
-            (0, i.jsx)(a.A, {}),
+            (0, i.jsx)(l.A, {}),
         ],
     });
 }
-function _(e) {
+function x(e) {
     let { className: t } = e;
-    return (0, i.jsxs)(c.A, {
+    return (0, i.jsxs)(d.A, {
         className: t,
-        title: A.intl.string(A.t.Cq98yL),
+        title: m.intl.string(m.t.Cq98yL),
         children: [
-            (0, i.jsx)(E, {}),
-            (0, i.jsx)(s.cGx, { gap: 32 }),
-            (0, i.jsx)(x, {}),
-            (0, i.jsx)(s.cGx, { gap: 32 }),
-            (0, i.jsx)(f, {}),
-            (0, i.jsx)(s.cGx, { gap: 32 }),
             (0, i.jsx)(C, {}),
+            (0, i.jsx)(a.cGx, { gap: 32 }),
+            (0, i.jsx)(p, {}),
+            (0, i.jsx)(a.cGx, { gap: 32 }),
+            (0, i.jsx)(E, {}),
+            (0, i.jsx)(a.cGx, { gap: 32 }),
+            (0, i.jsx)(T, {}),
         ],
     });
 }
-function x() {
-    let e = d._Z.useSetting(),
+function p() {
+    let e = c._Z.useSetting(),
         t = [
-            { value: l.Qd.ACTIVITY_STATUS_ON, name: A.intl.string(A.t.UzGMH9) },
-            { value: l.Qd.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS, name: A.intl.string(g.default["/sAeRY"]) },
-            { value: l.Qd.ACTIVITY_STATUS_OFF, name: A.intl.string(g.default.m3oL7Q) },
+            { value: s.Qd.ACTIVITY_STATUS_ON, name: m.intl.string(m.t.UzGMH9) },
+            { value: s.Qd.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS, name: m.intl.string(A.default["/sAeRY"]) },
+            { value: s.Qd.ACTIVITY_STATUS_OFF, name: m.intl.string(A.default.m3oL7Q) },
         ];
-    return (0, i.jsxs)(s.nVY, {
-        label: A.intl.string(g.default.TG0QsS),
-        description: A.intl.string(g.default.OO17Lg),
+    return (0, i.jsxs)(a.nVY, {
+        label: m.intl.string(A.default.TG0QsS),
+        description: m.intl.string(A.default.OO17Lg),
         children: [
-            (0, i.jsx)(s.z6M, {
-                label: A.intl.string(g.default["/LHVbt"]),
+            (0, i.jsx)(a.z6M, {
+                label: m.intl.string(A.default["/LHVbt"]),
                 options: t,
                 value: e,
                 onChange: (e) => {
-                    d._Z.updateSetting(e);
+                    c._Z.updateSetting(e);
                 },
             }),
-            (0, i.jsx)(p, {}),
+            (0, i.jsx)(h, {}),
         ],
     });
 }
-function f() {
-    let e = d.e.useSetting(),
-        t = d.UM.useSetting();
+function E() {
+    let e = c.e.useSetting(),
+        t = c.UM.useSetting();
     return (0, i.jsx)(r.x, {
         setting: u.H.ACTIVITY_PRIVACY_RICH_PRESENCE,
-        children: (0, i.jsxs)(s.nVY, {
-            label: A.intl.string(g.default["5rYBAQ"]),
+        children: (0, i.jsxs)(a.nVY, {
+            label: m.intl.string(A.default["5rYBAQ"]),
             children: [
-                (0, i.jsx)(s.dOG, {
-                    label: A.intl.string(g.default.khuuzv),
-                    description: A.intl.string(g.default["8EWsJ8"]),
+                (0, i.jsx)(a.dOG, {
+                    label: m.intl.string(A.default.khuuzv),
+                    description: m.intl.string(A.default["8EWsJ8"]),
                     id: "allow-friends-to-join-my-game",
                     checked: e,
-                    onChange: (e) => d.e.updateSetting(e),
+                    onChange: (e) => c.e.updateSetting(e),
                 }),
-                (0, i.jsx)(s.dOG, {
-                    label: A.intl.string(g.default.Uz5Ipi),
-                    description: A.intl.string(g.default.CZI2Gb),
+                (0, i.jsx)(a.dOG, {
+                    label: m.intl.string(A.default.Uz5Ipi),
+                    description: m.intl.string(A.default.CZI2Gb),
                     id: "allow-vc-join-without-request",
                     checked: t,
-                    onChange: (e) => d.UM.updateSetting(e),
-                }),
-            ],
-        }),
-    });
-}
-function E() {
-    let e = d.tz.useSetting(),
-        t = o.isPlatformEmbedded ? A.intl.string(g.default.UQ9RHJ) : A.intl.string(A.t.oKqC4t);
-    return (0, i.jsx)(r.x, {
-        setting: u.H.ACTIVITY_PRIVACY_STATUS,
-        children: (0, i.jsxs)(s.BJc, {
-            gap: 32,
-            children: [
-                (0, i.jsx)("div", { children: A.intl.string(g.default.t2YsrV) }),
-                (0, i.jsx)(s.dOG, {
-                    label: A.intl.string(g.default.WhdCGP),
-                    description: t,
-                    id: "share-my-activity",
-                    checked: e,
-                    onChange: d.tz.updateSetting,
+                    onChange: (e) => c.UM.updateSetting(e),
                 }),
             ],
         }),
     });
 }
 function C() {
+    let e = c.tz.useSetting(),
+        t = o.isPlatformEmbedded ? m.intl.string(A.default.UQ9RHJ) : m.intl.string(m.t.oKqC4t);
+    return (0, i.jsx)(r.x, {
+        setting: u.H.ACTIVITY_PRIVACY_STATUS,
+        children: (0, i.jsxs)(a.BJc, {
+            gap: 32,
+            children: [
+                (0, i.jsx)("div", { children: m.intl.string(A.default.t2YsrV) }),
+                (0, i.jsx)(a.dOG, {
+                    label: m.intl.string(A.default.WhdCGP),
+                    description: t,
+                    id: "share-my-activity",
+                    checked: e,
+                    onChange: c.tz.updateSetting,
+                }),
+            ],
+        }),
+    });
+}
+function T() {
     return (0, i.jsx)(r.x, {
         setting: u.H.ACTIVITY_PRIVACY_TOS,
-        children: (0, i.jsx)(s.ZpM, {
-            type: s.ZpM.Types.PRIMARY,
-            className: m.AX,
-            children: (0, i.jsx)(s.Text, {
+        children: (0, i.jsx)(a.ZpM, {
+            type: a.ZpM.Types.PRIMARY,
+            className: g.AX,
+            children: (0, i.jsx)(a.Text, {
                 variant: "text-sm/normal",
-                children: A.intl.format(A.t.xvCsx4, { termsLink: h.X7G.TERMS, privacyLink: h.X7G.PRIVACY }),
+                children: m.intl.format(m.t.xvCsx4, { termsLink: _.X7G.TERMS, privacyLink: _.X7G.PRIVACY }),
             }),
         }),
     });

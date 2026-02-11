@@ -1,29 +1,29 @@
 n.d(t, { s: () => g });
 var i = n(627968),
     s = n(64700),
-    r = n(503698),
-    a = n.n(r),
-    l = n(112303),
-    o = n(50567);
-let c = { VERTICAL: l.yG, HORIZONTAL: l.OZ, HORIZONTAL_REVERSE: l.y0 },
-    d = { START: l.KF, END: l.HA, CENTER: l.pb, BETWEEN: l.G1, AROUND: l.nm },
-    u = { NO_WRAP: l.B, WRAP: l.aR, WRAP_REVERSE: l.KM },
-    _ = { START: l.j$, END: l.S_, CENTER: l.YO, STRETCH: l.ai },
+    a = n(503698),
+    l = n.n(a),
+    r = n(597833),
+    o = n(913953);
+let c = { VERTICAL: r.yG, HORIZONTAL: r.OZ, HORIZONTAL_REVERSE: r.y0 },
+    d = { START: r.KF, END: r.HA, CENTER: r.pb, BETWEEN: r.G1, AROUND: r.nm },
+    u = { NO_WRAP: r.B, WRAP: r.aR, WRAP_REVERSE: r.KM },
+    _ = { START: r.j$, END: r.S_, CENTER: r.YO, STRETCH: r.ai },
     m = { SMALL: o.sf, LARGE: o.S6 };
 class A extends s.PureComponent {
     static defaultProps = { className: o.Gu, style: {}, wrap: !1 };
     render() {
-        let { children: e, className: t, shrink: n, grow: r, basis: l, style: c, wrap: d, ...u } = this.props,
+        let { children: e, className: t, shrink: n, grow: a, basis: r, style: c, wrap: d, ...u } = this.props,
             _ = {
-                style: { flexGrow: r, flexShrink: n, flexBasis: l, ...c },
-                className: t === o.Gu ? t : a()(o.Gu, t),
+                style: { flexGrow: a, flexShrink: n, flexBasis: r, ...c },
+                className: t === o.Gu ? t : l()(o.Gu, t),
                 ...u,
             };
         if (!d && "string" != typeof e && 1 === s.Children.count(e)) {
             let n = s.Children.only(e);
             return (
                 (_.style = { ..._.style, ...n.props.style }),
-                (_.className = a()(n.props.className, t)),
+                (_.className = l()(n.props.className, t)),
                 s.cloneElement(n, _)
             );
         }
@@ -53,8 +53,8 @@ class g extends s.PureComponent {
                 className: t,
                 direction: n,
                 justify: s,
-                align: r,
-                wrap: l,
+                align: a,
+                wrap: r,
                 shrink: c,
                 grow: d,
                 basis: u,
@@ -63,6 +63,6 @@ class g extends s.PureComponent {
                 ...A
             } = this.props,
             g = { flexShrink: c, flexGrow: d, flexBasis: u, ..._ };
-        return (0, i.jsx)("div", { style: g, className: a()(o.Uu, n, s, r, l, m, t), ...A, children: e });
+        return (0, i.jsx)("div", { style: g, className: l()(o.Uu, n, s, a, r, m, t), ...A, children: e });
     }
 }

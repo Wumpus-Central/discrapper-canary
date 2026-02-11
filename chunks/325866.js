@@ -1,7 +1,7 @@
 i.d(t, { A: () => S });
 var n = i(627968),
     s = i(64700),
-    a = i(92674),
+    a = i(563495),
     r = i(397927),
     l = i(950191),
     o = i(840065),
@@ -11,11 +11,11 @@ var n = i(627968),
     m = i(789622),
     E = i(652215),
     g = i(985018),
-    h = i(299043);
+    h = i(190269);
 function S(e) {
-    let { userRef: t, usernameSuggestionLoading: i = !1, oneClickFlow: S = !1, ..._ } = e,
-        { user: A, editState: f, onClose: N } = _,
-        T = (0, l.Ay)(A.id),
+    let { userRef: t, usernameSuggestionLoading: i = !1, oneClickFlow: S = !1, ...A } = e,
+        { user: _, editState: f, onClose: N } = A,
+        T = (0, l.Ay)(_.id),
         x = (function (e, t, i) {
             switch (e) {
                 case m.iv.EDIT_USERNAME:
@@ -40,7 +40,7 @@ function S(e) {
                 default:
                     return { header: g.intl.string(g.t["a/zCWh"]), subtitle: g.intl.string(g.t.gGz0se) };
             }
-        })(f, u.Ay.getName(A), N),
+        })(f, u.Ay.getName(_), N),
         [v, I] = (0, r.zhh)(() => ({ opacity: 0, y: 10 }));
     return (
         s.useEffect(() => {
@@ -77,7 +77,7 @@ function S(e) {
                         }),
                     ],
                 }),
-                (0, n.jsx)(c.A, { ..._, displayProfile: T, ref: t, usernameSuggestionLoading: i, oneClickFlow: S }),
+                (0, n.jsx)(c.A, { ...A, displayProfile: T, ref: t, usernameSuggestionLoading: i, oneClickFlow: S }),
             ],
         })
     );

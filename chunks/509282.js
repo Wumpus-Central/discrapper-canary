@@ -24,8 +24,8 @@ var i = n(627968),
     N = n(376374),
     S = n(652215),
     b = n(435220),
-    y = n(985018),
-    j = n(159740);
+    j = n(985018),
+    y = n(61434);
 let R = (0, s.UT)([f.A, x.A, g.A], {
         getQueryId: S.fic.SKU,
         get: (e) => {
@@ -65,25 +65,25 @@ function M(e) {
         N = l.useMemo(
             () =>
                 x > 0 && C > 0
-                    ? y.intl.formatToPlainString(y.t["jA648+"], { subCount: x, itemCount: C })
+                    ? j.intl.formatToPlainString(j.t["jA648+"], { subCount: x, itemCount: C })
                     : x > 0
-                      ? y.intl.formatToPlainString(y.t.GSfibA, { count: x })
+                      ? j.intl.formatToPlainString(j.t.GSfibA, { count: x })
                       : C > 0
-                        ? y.intl.formatToPlainString(y.t.j7Go5A, { count: C })
-                        : y.intl.string(y.t.rMA98g),
+                        ? j.intl.formatToPlainString(j.t.j7Go5A, { count: C })
+                        : j.intl.string(j.t.rMA98g),
             [C, x],
         );
     if (!r || null == c) return null;
     let R = () => {
         (0, o.mMO)(async () => {
-            let { default: e } = await Promise.all([n.e("33563"), n.e("43245")]).then(n.bind(n, 719847));
+            let { default: e } = await Promise.all([n.e("33563"), n.e("4437")]).then(n.bind(n, 719847));
             return (n) =>
                 (0, i.jsx)(e, { transitionState: n.transitionState, onClose: n.onClose, appId: t, guildId: g });
         });
     };
-    return (0, i.jsx)(P, {
+    return (0, i.jsx)(D, {
         appName: c.name,
-        title: y.intl.formatToPlainString(y.t.XDRjs5, { appName: c.name }),
+        title: j.intl.formatToPlainString(j.t.XDRjs5, { appName: c.name }),
         description: N,
         link: `${location.protocol}//${location.host}${S.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(c.id, b.GlobalDiscoveryAppsSections.STORE)}`,
         onLinkCopy: () => {
@@ -94,7 +94,7 @@ function M(e) {
             R(), E.default.track(S.HAw.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, { application_id: t, area: "app_icon" });
         },
         children: (0, i.jsx)("div", {
-            className: j.mZ,
+            className: y.mZ,
             children: (0, i.jsx)(o.Button, {
                 onClick: () => {
                     R(),
@@ -103,7 +103,7 @@ function M(e) {
                             area: "open_store_button",
                         });
                 },
-                text: y.intl.string(y.t.kRvlKJ),
+                text: j.intl.string(j.t.kRvlKJ),
             }),
         }),
     });
@@ -129,19 +129,19 @@ function O(e) {
         C = (0, v.G)(A?.id ?? ""),
         { openModal: M, subscriptionPurchaseButtonState: O } = (0, h.A)({ skuId: a, initialSubscribeForGuild: f });
     if (!C || null == A || null == c) return null;
-    let D = c.type === S.Puh.SUBSCRIPTION,
-        k = !!D && (0, _.bg)(c.flags),
+    let P = c.type === S.Puh.SUBSCRIPTION,
+        k = !!P && (0, _.bg)(c.flags),
         U = () => {
             (0, o.mMO)(async () => {
-                let { default: e } = await Promise.all([n.e("33563"), n.e("43245")]).then(n.bind(n, 719847));
+                let { default: e } = await Promise.all([n.e("33563"), n.e("4437")]).then(n.bind(n, 719847));
                 return (t) =>
                     (0, i.jsx)(e, { transitionState: t.transitionState, onClose: t.onClose, appId: A.id, guildId: f });
             });
         },
         w = () => {
             (0, o.mMO)(async () => {
-                let e = D ? (await Promise.resolve().then(n.bind(n, 168393))).SubscriptionDetailsModal : null,
-                    t = D ? null : (await Promise.resolve().then(n.bind(n, 963179))).ItemDetailsModal;
+                let e = P ? (await Promise.resolve().then(n.bind(n, 168393))).SubscriptionDetailsModal : null,
+                    t = P ? null : (await Promise.resolve().then(n.bind(n, 963179))).ItemDetailsModal;
                 return (n) => {
                     let l = () => {
                         n.onClose(), U();
@@ -168,20 +168,20 @@ function O(e) {
                 };
             });
         },
-        G = D
+        G = P
             ? k
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(o.nys, { size: "custom", width: 12, height: 12 }),
                           " ",
-                          y.intl.string(y.t.wnifjC),
+                          j.intl.string(j.t.wnifjC),
                       ],
                   })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(o.RR9, { size: "custom", width: 12, height: 12 }),
                           " ",
-                          y.intl.string(y.t.NRC3ar),
+                          j.intl.string(j.t.NRC3ar),
                       ],
                   })
             : g?.description?.trim();
@@ -193,7 +193,7 @@ function O(e) {
             area: "purchase_button",
         });
     };
-    return (0, i.jsx)(P, {
+    return (0, i.jsx)(D, {
         appName: A.name,
         title: c.name,
         description: G,
@@ -211,7 +211,7 @@ function O(e) {
                 });
         },
         children: (0, i.jsxs)("div", {
-            className: j.w,
+            className: y.w,
             children: [
                 (0, i.jsx)(o.Button, {
                     variant: "secondary",
@@ -223,9 +223,9 @@ function O(e) {
                                 area: "view_details",
                             });
                     },
-                    text: y.intl.string(y.t.DXYfjO),
+                    text: j.intl.string(j.t.DXYfjO),
                 }),
-                D
+                P
                     ? null != m
                         ? (0, i.jsx)(N.rc, {
                               onClick: M,
@@ -237,22 +237,22 @@ function O(e) {
                               subscriptionPlan: m,
                               state: O,
                           })
-                        : (0, i.jsx)(o.Button, { variant: "primary", text: y.intl.string(y.t.uuzaAK), onClick: w })
+                        : (0, i.jsx)(o.Button, { variant: "primary", text: j.intl.string(j.t.uuzaAK), onClick: w })
                     : (0, i.jsx)(N.$P, { appId: A.id, sku: c, icon: o.U1X, onHasClicked: B }),
             ],
         }),
     });
 }
-function P(e) {
+function D(e) {
     let { appName: t, title: n, description: l, link: a, iconSrc: r, onIconClick: s, onLinkCopy: d, children: c } = e;
     return (0, i.jsxs)("div", {
-        className: j.iE,
+        className: y.iE,
         children: [
             (0, i.jsxs)("div", {
-                className: j.wx,
+                className: y.wx,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: j.qd,
+                        className: y.qd,
                         children: [
                             (0, i.jsx)(o.U1X, { size: "xxs" }),
                             (0, i.jsx)(o.Text, { variant: "eyebrow", color: "text-muted", children: t }),
@@ -260,13 +260,13 @@ function P(e) {
                     }),
                     C.p5 &&
                         (0, i.jsx)(o.K0, {
-                            "aria-label": y.intl.string(y.t.WqhZss),
+                            "aria-label": j.intl.string(j.t.WqhZss),
                             icon: () => (0, i.jsx)(o.qYV, { size: "xs" }),
                             size: "sm",
                             onClick: () => {
                                 (0, C.C)(a, () => {
                                     (0, o.showToast)(
-                                        (0, o.createToast)(y.intl.string(y.t["L/PwZf"]), o.ToastType.SUCCESS),
+                                        (0, o.createToast)(j.intl.string(j.t["L/PwZf"]), o.ToastType.SUCCESS),
                                     ),
                                         d();
                                 });
@@ -276,18 +276,18 @@ function P(e) {
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: j.Qs,
+                className: y.Qs,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: j.oB,
+                        className: y.oB,
                         children: [
                             null != r &&
                                 (0, i.jsx)(o.DUT, {
                                     onClick: s,
-                                    children: (0, i.jsx)("img", { src: r.href, alt: "", className: j.Z2 }),
+                                    children: (0, i.jsx)("img", { src: r.href, alt: "", className: y.Z2 }),
                                 }),
                             (0, i.jsxs)("div", {
-                                className: j.Tf,
+                                className: y.Tf,
                                 style: null == l ? { justifyContent: "space-evenly" } : void 0,
                                 children: [
                                     (0, i.jsx)(o.Text, { variant: "heading-md/semibold", tag: "div", children: n }),
@@ -296,7 +296,7 @@ function P(e) {
                                             variant: "heading-md/medium",
                                             color: "text-muted",
                                             tag: "div",
-                                            className: j.h_,
+                                            className: y.h_,
                                             children: l,
                                         }),
                                 ],

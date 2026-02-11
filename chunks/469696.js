@@ -2,18 +2,18 @@ n.d(t, { A: () => d });
 var i = n(627968);
 n(64700);
 var s = n(503698),
-    r = n.n(s),
-    a = n(397927),
-    l = n(534),
-    o = n(473169),
+    a = n.n(s),
+    l = n(397927),
+    r = n(126100),
+    o = n(522759),
     c = n(327499);
 let d = (e) => {
     let { text: t, className: n } = e;
     return (0, i.jsxs)("div", {
-        className: r()(n, l.I),
+        className: a()(n, r.I),
         children: [
-            (0, i.jsx)("img", { className: l.S, src: c, alt: "" }),
-            (0, i.jsx)(a.Text, { className: o.Ot, variant: "text-sm/medium", color: "text-muted", children: t }),
+            (0, i.jsx)("img", { className: r.S, src: c, alt: "" }),
+            (0, i.jsx)(l.Text, { className: o.Ot, variant: "text-sm/medium", color: "text-muted", children: t }),
         ],
     });
 };

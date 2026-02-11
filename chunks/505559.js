@@ -1,12 +1,12 @@
-n.d(t, { A: () => a });
+n.d(t, { A: () => l });
 var i = n(627968);
 n(64700);
 var s = n(397927),
-    r = n(23579);
-let a = (e) => {
+    a = n(296137);
+let l = (e) => {
     let { enablePremiumBrandRefresh: t = !1, text: n } = e;
     return (0, i.jsx)("div", {
-        className: t ? r.x : r.U,
+        className: t ? a.x : a.U,
         children: (0, i.jsx)(s.Text, {
             variant: t ? "text-sm/bold" : "text-xs/bold",
             color: "always-white",

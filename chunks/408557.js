@@ -9,15 +9,15 @@ var r = n(627968),
     u = n(721768);
 n(827669);
 var c = n(985018),
-    d = n(947941);
+    d = n(58275);
 function _(e) {
     let t,
         a,
         _,
-        { className: f, activeCommand: p, activeOption: h, optionStates: m, channelId: g } = e,
-        E = i.useCallback(
+        { className: f, activeCommand: h, activeOption: p, optionStates: g, channelId: E } = e,
+        A = i.useCallback(
             (e) => {
-                let t = p?.rootCommand?.id;
+                let t = h?.rootCommand?.id;
                 null == t
                     ? e.preventDefault()
                     : (0, o.L3)(e, async () => {
@@ -25,19 +25,19 @@ function _(e) {
                           return (n) => (0, r.jsx)(e, { ...n, id: t, label: c.intl.string(c.t.oJ1Muw) });
                       });
             },
-            [p?.rootCommand?.id],
+            [h?.rootCommand?.id],
         ),
-        A = i.useCallback(() => {
-            u.Gf({ channelId: g, command: null, section: null });
-        }, [g]);
-    if (null == p) return null;
-    if (null != h) {
-        let e = m[h.name].lastValidationResult;
-        (t = h.displayName), (a = h.displayDescription), (_ = e?.success ? null : e?.error);
-    } else (t = `/${p.displayName}`), (a = p.displayDescription), (_ = null);
+        I = i.useCallback(() => {
+            u.Gf({ channelId: E, command: null, section: null });
+        }, [E]);
+    if (null == h) return null;
+    if (null != p) {
+        let e = g[p.name].lastValidationResult;
+        (t = p.displayName), (a = p.displayDescription), (_ = e?.success ? null : e?.error);
+    } else (t = `/${h.displayName}`), (a = h.displayDescription), (_ = null);
     return (0, r.jsxs)("div", {
         className: s()(f, d.M0),
-        onContextMenu: E,
+        onContextMenu: A,
         children: [
             (0, r.jsxs)("div", {
                 className: d.iz,
@@ -48,7 +48,7 @@ function _(e) {
                         : (0, r.jsx)("span", { className: d.h_, children: a }),
                 ],
             }),
-            (0, r.jsx)("div", { className: d.o1, children: (0, r.jsx)(l.x, { onClick: A }) }),
+            (0, r.jsx)("div", { className: d.o1, children: (0, r.jsx)(l.x, { onClick: I }) }),
         ],
     });
 }

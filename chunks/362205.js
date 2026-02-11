@@ -1,40 +1,40 @@
 n.d(t, { A: () => h });
-var r = n(627968),
-    a = n(64700),
-    o = n(503698),
-    i = n.n(o),
+var a = n(627968),
+    r = n(64700),
+    i = n(503698),
+    o = n.n(i),
     l = n(284009),
     s = n.n(l),
-    c = n(92674),
-    _ = n(837381),
+    c = n(563495),
+    d = n(837381),
     u = n(397927),
-    d = n(964486),
-    b = n(775602),
+    _ = n(964486),
+    g = n(775602),
     m = n(253932),
-    g = n(894858),
-    p = n(890690),
-    f = n(637577);
+    b = n(894858),
+    f = n(890690),
+    p = n(652099);
 function x(e) {
-    let { category: t, onClick: n, active: a } = e,
-        { useTitle: o, useSubnavLabel: l, key: c } = t,
-        d = o?.(),
-        b = l?.() ?? d;
+    let { category: t, onClick: n, active: r } = e,
+        { useTitle: i, useSubnavLabel: l, key: c } = t,
+        _ = i?.(),
+        g = l?.() ?? _;
     return (
-        s()(null != b, "[SettingsSubnavigationCategory] Category must have a title"),
-        (0, r.jsx)(_.tG, {
+        s()(null != g, "[SettingsSubnavigationCategory] Category must have a title"),
+        (0, a.jsx)(d.tG, {
             id: c,
             children: (e) =>
-                (0, r.jsx)(u.DUT, { onClick: n, className: i()(f.AS, { [f.vu]: a }), ...e, children: b }, c),
+                (0, a.jsx)(u.DUT, { onClick: n, className: o()(p.AS, { [p.vu]: r }), ...e, children: g }, c),
         })
     );
 }
 function h(e) {
     let { categories: t } = e,
-        n = g.A.useField("currentCategoryKey");
-    (0, d.Ay)(() => {
-        t.some((e) => e.key === n) || g.A.setState({ currentCategoryKey: t[0].key });
+        n = b.A.useField("currentCategoryKey");
+    (0, _.Ay)(() => {
+        t.some((e) => e.key === n) || b.A.setState({ currentCategoryKey: t[0].key });
     });
-    let o = a.useMemo(
+    let i = r.useMemo(
             () =>
                 Math.max(
                     t.findIndex((e) => e.key === n),
@@ -43,70 +43,70 @@ function h(e) {
             [t, n],
         ),
         {
-            thumbRef: i,
+            thumbRef: o,
             trackRef: l,
             thumbAnchorRef: s,
-            springs: _,
+            springs: d,
         } = (function (e) {
             let t = m.Xi.useSetting(),
-                n = a.useRef(null),
-                r = a.useRef(null),
-                o = a.useRef(null),
-                i = a.useRef(!0),
-                l = a.useRef(t),
+                n = r.useRef(null),
+                a = r.useRef(null),
+                i = r.useRef(null),
+                o = r.useRef(!0),
+                l = r.useRef(t),
                 [s, c] = (0, u.zhh)(() => ({ y: 0, height: 0, config: { mass: 0.1, friction: 20, tension: 300 } }));
             return (
-                a.useLayoutEffect(() => {
+                r.useLayoutEffect(() => {
                     let e = l.current !== t,
-                        a = () => {
-                            if (null == n.current || null == r.current || null == o.current) return;
-                            let [a, _] = [n.current.getBoundingClientRect(), o.current.getBoundingClientRect()],
-                                u = a.width / 2,
-                                d = (_.y - a.y) / u,
-                                m = _.height / u;
-                            i.current || e || b.A.useReducedMotion
-                                ? (s.y.set(d), s.height.set(m))
-                                : c({ y: d, height: m }),
-                                (i.current = !1),
+                        r = () => {
+                            if (null == n.current || null == a.current || null == i.current) return;
+                            let [r, d] = [n.current.getBoundingClientRect(), i.current.getBoundingClientRect()],
+                                u = r.width / 2,
+                                _ = (d.y - r.y) / u,
+                                m = d.height / u;
+                            o.current || e || g.A.useReducedMotion
+                                ? (s.y.set(_), s.height.set(m))
+                                : c({ y: _, height: m }),
+                                (o.current = !1),
                                 (l.current = t);
                         },
-                        _ = null;
+                        d = null;
                     return (
                         e
-                            ? (_ = requestAnimationFrame(() => {
-                                  (_ = null), a();
+                            ? (d = requestAnimationFrame(() => {
+                                  (d = null), r();
                               }))
-                            : a(),
+                            : r(),
                         () => {
-                            null != _ && cancelAnimationFrame(_);
+                            null != d && cancelAnimationFrame(d);
                         }
                     );
                 }, [e, c, s.y, s.height, t]),
-                { thumbRef: r, trackRef: n, thumbAnchorRef: o, springs: s }
+                { thumbRef: a, trackRef: n, thumbAnchorRef: i, springs: s }
             );
-        })(o);
+        })(i);
     return (
-        (0, p.u)(t),
-        (0, r.jsxs)("div", {
-            className: f.o8,
+        (0, f.u)(t),
+        (0, a.jsxs)("div", {
+            className: p.o8,
             role: "list",
-            style: { "--custom-nav-count": t.length, "--custom-nav-index": o, "--custom-nav-width": "2px" },
+            style: { "--custom-nav-count": t.length, "--custom-nav-index": i, "--custom-nav-width": "2px" },
             children: [
-                (0, r.jsx)("div", {
-                    className: f.u4,
+                (0, a.jsx)("div", {
+                    className: p.u4,
                     "aria-hidden": "true",
                     ref: l,
-                    children: (0, r.jsx)(c.animated.div, { className: f.FF, style: _, ref: i }),
+                    children: (0, a.jsx)(c.animated.div, { className: p.FF, style: d, ref: o }),
                 }),
-                (0, r.jsx)("div", { className: f.gu, "aria-hidden": "true", ref: s }),
+                (0, a.jsx)("div", { className: p.gu, "aria-hidden": "true", ref: s }),
                 t.map((e) =>
-                    (0, r.jsx)(
+                    (0, a.jsx)(
                         x,
                         {
                             onClick: () => {
                                 var t;
                                 return (
-                                    (t = e.key), void g.A.setState({ requestedTargetKey: t, showNavigationMobile: !1 })
+                                    (t = e.key), void b.A.setState({ requestedTargetKey: t, showNavigationMobile: !1 })
                                 );
                             },
                             active: e.key === n,

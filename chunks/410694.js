@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { J: () => N }), n(321073);
+n.d(t, { J: () => R }), n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(435371),
     s = n(397927),
     o = n(957565),
     l = n(265486),
-    u = n(640192);
+    u = n(90358);
 function c(e) {
     return isFinite(e) ? e.toFixed(1) + "s" : "Live";
 }
@@ -20,19 +20,19 @@ function _(e, t) {
         : n.join(", ");
 }
 let f = "Stats for Nerds",
-    p = "Close",
-    h = "Copy to JSON",
-    m = "Copied!",
-    g = "Resolution",
-    E = "Viewport",
-    A = "Video",
-    I = "Audio",
-    T = "Audio Channels",
-    y = "Container",
-    S = "Format",
-    v = "Buffer Health",
-    C = "Error";
-function b(e) {
+    h = "Close",
+    p = "Copy to JSON",
+    g = "Copied!",
+    E = "Resolution",
+    A = "Viewport",
+    I = "Video",
+    T = "Audio",
+    y = "Audio Channels",
+    S = "Container",
+    v = "Format",
+    C = "Buffer Health",
+    b = "Error";
+function N(e) {
     return JSON.stringify(
         {
             media: {
@@ -74,25 +74,25 @@ function b(e) {
         2,
     );
 }
-function N(e) {
+function R(e) {
     let { stats: t, onClose: n } = e,
-        [N, R] = i.useState(!1),
-        O = i.useRef(null);
+        [R, O] = i.useState(!1),
+        D = i.useRef(null);
     i.useEffect(
         () => () => {
-            null != O.current && clearTimeout(O.current);
+            null != D.current && clearTimeout(D.current);
         },
         [],
     );
-    let D = i.useCallback(() => {
-        let e = b(t);
+    let L = i.useCallback(() => {
+        let e = N(t);
         (0, o.C)(
             e,
             () => {
-                R(!0),
-                    null != O.current && clearTimeout(O.current),
-                    (O.current = window.setTimeout(() => {
-                        R(!1), (O.current = null);
+                O(!0),
+                    null != D.current && clearTimeout(D.current),
+                    (D.current = window.setTimeout(() => {
+                        O(!1), (D.current = null);
                     }, 2e3));
             },
             () => {},
@@ -109,21 +109,21 @@ function N(e) {
                         className: u.Pz,
                         children: [
                             (0, r.jsx)(a.m_, {
-                                text: N ? m : h,
+                                text: R ? g : p,
                                 children: (0, r.jsx)(s.DUT, {
                                     className: u.cL,
-                                    onClick: D,
-                                    "aria-label": N ? m : h,
+                                    onClick: L,
+                                    "aria-label": R ? g : p,
                                     focusProps: { offset: 2 },
                                     children: (0, r.jsx)(s.TdU, { size: "md", color: "currentColor" }),
                                 }),
                             }),
                             (0, r.jsx)(a.m_, {
-                                text: p,
+                                text: h,
                                 children: (0, r.jsx)(s.DUT, {
                                     className: u.b,
                                     onClick: n,
-                                    "aria-label": p,
+                                    "aria-label": h,
                                     focusProps: { offset: 2 },
                                     children: (0, r.jsx)(s.PGe, { size: "md", color: "currentColor" }),
                                 }),
@@ -139,7 +139,7 @@ function N(e) {
                         (0, r.jsxs)("div", {
                             className: u.N8,
                             children: [
-                                (0, r.jsx)("span", { className: u.Zh, children: y }),
+                                (0, r.jsx)("span", { className: u.Zh, children: S }),
                                 (0, r.jsx)("span", { className: u.cR, children: t.codecInfo.containerFormat }),
                             ],
                         }),
@@ -147,7 +147,7 @@ function N(e) {
                         (0, r.jsxs)("div", {
                             className: u.N8,
                             children: [
-                                (0, r.jsx)("span", { className: u.Zh, children: S }),
+                                (0, r.jsx)("span", { className: u.Zh, children: v }),
                                 (0, r.jsx)("span", {
                                     className: u.cR,
                                     children: _(t.codecInfo.isProgressive ?? null, t.codecInfo.isFragmented ?? null),
@@ -158,7 +158,7 @@ function N(e) {
                         (0, r.jsxs)("div", {
                             className: u.N8,
                             children: [
-                                (0, r.jsx)("span", { className: u.Zh, children: g }),
+                                (0, r.jsx)("span", { className: u.Zh, children: E }),
                                 (0, r.jsxs)("span", {
                                     className: u.cR,
                                     children: [
@@ -174,7 +174,7 @@ function N(e) {
                         (0, r.jsxs)("div", {
                             className: u.N8,
                             children: [
-                                (0, r.jsx)("span", { className: u.Zh, children: E }),
+                                (0, r.jsx)("span", { className: u.Zh, children: A }),
                                 (0, r.jsxs)("span", {
                                     className: u.cR,
                                     children: [t.viewportWidth, "x", t.viewportHeight],
@@ -185,7 +185,7 @@ function N(e) {
                         (0, r.jsxs)("div", {
                             className: u.N8,
                             children: [
-                                (0, r.jsx)("span", { className: u.Zh, children: A }),
+                                (0, r.jsx)("span", { className: u.Zh, children: I }),
                                 (0, r.jsxs)("span", {
                                     className: u.cR,
                                     children: [
@@ -199,7 +199,7 @@ function N(e) {
                         (0, r.jsxs)("div", {
                             className: u.N8,
                             children: [
-                                (0, r.jsx)("span", { className: u.Zh, children: I }),
+                                (0, r.jsx)("span", { className: u.Zh, children: T }),
                                 (0, r.jsxs)("span", {
                                     className: u.cR,
                                     children: [
@@ -213,7 +213,7 @@ function N(e) {
                         (0, r.jsxs)("div", {
                             className: u.N8,
                             children: [
-                                (0, r.jsx)("span", { className: u.Zh, children: T }),
+                                (0, r.jsx)("span", { className: u.Zh, children: y }),
                                 (0, r.jsxs)("span", {
                                     className: u.cR,
                                     children: [
@@ -227,7 +227,7 @@ function N(e) {
                     (0, r.jsxs)("div", {
                         className: u.N8,
                         children: [
-                            (0, r.jsx)("span", { className: u.Zh, children: v }),
+                            (0, r.jsx)("span", { className: u.Zh, children: C }),
                             (0, r.jsx)("span", { className: u.cR, children: c(t.bufferedSeconds) }),
                         ],
                     }),
@@ -237,7 +237,7 @@ function N(e) {
                             children: (0, r.jsxs)("div", {
                                 className: u.N8,
                                 children: [
-                                    (0, r.jsx)("span", { className: u.Zh, children: C }),
+                                    (0, r.jsx)("span", { className: u.Zh, children: b }),
                                     (0, r.jsxs)("span", {
                                         className: u.cR,
                                         children: [t.errorCode, null !== t.errorMessage && `: ${t.errorMessage}`],

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => p });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -10,38 +10,38 @@ var r = n(627968),
     c = n(538355),
     d = n(715628),
     _ = n(752636),
-    f = n(119907);
-function p(e) {
+    f = n(50397);
+function h(e) {
     let {
             message: t,
             channel: n,
             compact: a,
-            className: p,
-            isGroupStart: h,
-            hideSimpleEmbedContent: m = !0,
-            disableInteraction: g,
-            previewGuildId: E,
-            preview: A,
-            author: I,
+            className: h,
+            isGroupStart: p,
+            hideSimpleEmbedContent: g = !0,
+            disableInteraction: E,
+            previewGuildId: A,
+            preview: I,
+            author: T,
         } = e,
-        T = E ?? (0, l.U)(t),
-        y = (0, o.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
-        { content: S } = (0, c.A)(t, {
-            hideSimpleEmbedContent: m,
-            allowList: y,
-            allowHeading: y,
+        y = A ?? (0, l.U)(t),
+        S = (0, o.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
+        { content: v } = (0, c.A)(t, {
+            hideSimpleEmbedContent: g,
+            allowList: S,
+            allowHeading: S,
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
-        v = i.useMemo(() => (0, _.A)({ ...e, channel: n, guildId: T }), [e, n, T]);
+        C = i.useMemo(() => (0, _.A)({ ...e, channel: n, guildId: y }), [e, n, y]);
     return (0, r.jsx)(u.A, {
         compact: a,
-        className: s()(p, { [f.iU]: !0, [f.HJ]: !a, [f._A]: h }),
-        childrenHeader: v,
-        childrenMessageContent: (0, d.A)(e, S),
-        disableInteraction: g,
-        author: I,
-        preview: A,
+        className: s()(h, { [f.iU]: !0, [f.HJ]: !a, [f._A]: p }),
+        childrenHeader: C,
+        childrenMessageContent: (0, d.A)(e, v),
+        disableInteraction: E,
+        author: T,
+        preview: I,
     });
 }
-let h = i.memo(p);
+let p = i.memo(h);

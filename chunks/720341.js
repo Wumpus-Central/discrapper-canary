@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { V: () => p });
+n.d(t, { V: () => h });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -10,36 +10,36 @@ var r = n(627968),
     c = n(934551),
     d = n(460890),
     _ = n(834730),
-    f = n(730909);
-function p(e) {
+    f = n(22051);
+function h(e) {
     let {
             value: t,
             onChange: n,
             minValue: a,
-            maxValue: p,
-            disabled: h = !1,
-            readOnly: m = !1,
-            className: g,
-            "aria-label": E,
+            maxValue: h,
+            disabled: p = !1,
+            readOnly: g = !1,
+            className: E,
+            "aria-label": A,
         } = e,
-        { i18n: A } = (0, d.G9)(),
-        [I, T] = i.useState(t);
+        { i18n: I } = (0, d.G9)(),
+        [T, y] = i.useState(t);
     return (
         i.useEffect(() => {
-            T(t);
+            y(t);
         }, [t]),
         (0, r.jsx)(o.Vv, {
             value: t,
-            focusedValue: I,
-            onFocusChange: T,
+            focusedValue: T,
+            onFocusChange: y,
             onChange: n,
             minValue: a,
-            maxValue: p,
-            isDisabled: h,
-            isReadOnly: m,
-            "aria-label": E,
+            maxValue: h,
+            isDisabled: p,
+            isReadOnly: g,
+            "aria-label": A,
             "data-mana-component": "calendar",
-            className: s()(f.BJ, g),
+            className: s()(f.BJ, E),
             children: (e) =>
                 (0, r.jsxs)(r.Fragment, {
                     children: [
@@ -50,7 +50,7 @@ function p(e) {
                                     variant: "icon-only",
                                     size: "sm",
                                     icon: c.ChevronSmallLeftIcon,
-                                    "aria-label": A.CALENDAR_PREVIOUS_MONTH_LABEL,
+                                    "aria-label": I.CALENDAR_PREVIOUS_MONTH_LABEL,
                                     onClick: () => e.state.focusPreviousPage(),
                                     slot: "previous",
                                 }),
@@ -64,7 +64,7 @@ function p(e) {
                                     size: "sm",
                                     icon: c.ChevronSmallRightIcon,
                                     onClick: () => e.state.focusNextPage(),
-                                    "aria-label": A.CALENDAR_NEXT_MONTH_LABEL,
+                                    "aria-label": I.CALENDAR_NEXT_MONTH_LABEL,
                                     slot: "next",
                                 }),
                             ],

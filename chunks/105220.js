@@ -1,8 +1,8 @@
 n.d(t, { A: () => T });
 var i = n(627968),
     r = n(64700),
-    a = n(284009),
-    l = n.n(a),
+    l = n(284009),
+    a = n.n(l),
     s = n(397927),
     o = n(143991),
     d = n(942857),
@@ -15,10 +15,10 @@ var i = n(627968),
     p = n(575486),
     g = n(531685),
     E = n(203982),
-    f = n(249477),
-    I = n(507060),
+    I = n(249477),
+    f = n(507060),
     C = n(652215),
-    N = n(92854);
+    N = n(563760);
 let T = r.memo(function () {
     let e = (0, d.A)(),
         t = r.useRef(null),
@@ -26,7 +26,7 @@ let T = r.memo(function () {
             let { duration: n, intensity: i } = e;
             if (A.A.useReducedMotion || !g.A.isFocused()) return;
             let { current: r } = t;
-            l()(null != r, "Shakeable is shaken when not mounted"), r.shake(n, i);
+            a()(null != r, "Shakeable is shaken when not mounted"), r.shake(n, i);
         }, []);
     return (
         r.useEffect(() => (u.A.setLayout(c.Ay), u.A.enable(), () => u.A.disable()), []),
@@ -44,10 +44,10 @@ let T = r.memo(function () {
             ref: t,
             className: N.y,
             children: [
-                (0, i.jsx)(I.A, { className: N.Z, children: (0, i.jsx)(m.A, {}) }),
+                (0, i.jsx)(f.A, { className: N.Z, children: (0, i.jsx)(m.A, {}) }),
                 (0, i.jsx)(_.A, {}),
                 (0, i.jsx)(o.A, {}),
-                (0, i.jsx)(f.A, {}),
+                (0, i.jsx)(I.A, {}),
                 (0, i.jsx)(p.A, {}),
                 !e && (0, i.jsx)(s.Smm, {}),
             ],

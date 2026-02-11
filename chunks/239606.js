@@ -1,7 +1,7 @@
 n.d(t, { A: () => ed });
 var i = n(627968),
     s = n(64700),
-    l = n(92674),
+    l = n(563495),
     a = n(311907),
     r = n(397927),
     d = n(80682),
@@ -26,8 +26,8 @@ var i = n(627968),
     y = n(950191),
     C = n(346713),
     P = n(484509),
-    L = n(716804),
-    S = n(679492),
+    S = n(716804),
+    L = n(679492),
     O = n(718019),
     R = n(31432),
     D = n(915614),
@@ -57,7 +57,7 @@ var i = n(627968),
     es = n(652215),
     el = n(996988),
     ea = n(985018),
-    er = n(661388);
+    er = n(156614);
 function ed(e) {
     let {
             user: t,
@@ -93,10 +93,10 @@ function ed(e) {
         [eE, ey] = s.useState(!1),
         { defaultWishlistId: eC } = (0, a.cf)([E.A], () => ({ defaultWishlistId: E.A.getFirstWishlistId(t.id) }));
     (0, I.fw)({ wishlistId: eC, userId: t.id });
-    let eP = (0, S.fC)(),
-        eL = (0, r.zhh)({ opacity: +(null != eP.interactionType), config: { duration: 150 } }),
-        eS = s.useMemo(() => (null != ed ? { [ed]: [t.id] } : {}), [ed, t.id]);
-    (0, d.E)(eS, "UserProfileModalV2");
+    let eP = (0, L.fC)(),
+        eS = (0, r.zhh)({ opacity: +(null != eP.interactionType), config: { duration: 150 } }),
+        eL = s.useMemo(() => (null != ed ? { [ed]: [t.id] } : {}), [ed, t.id]);
+    (0, d.E)(eL, "UserProfileModalV2");
     let eO = (0, y.Ay)(t.id, eI ? ed : void 0),
         eR = v.Ay.useName(eO?.guildId, eo, t),
         { relationshipType: eD, originApplicationId: eM } = (0, a.cf)([j.A], () => ({
@@ -137,9 +137,9 @@ function ed(e) {
                 fetchStartedAt: eO?.fetchStartedAt,
                 fetchEndedAt: eO?.fetchEndedAt,
                 isLoaded: eO?.isLoaded,
-                children: (0, i.jsx)(S.Hl, {
+                children: (0, i.jsx)(L.Hl, {
                     value: eP,
-                    children: (0, i.jsx)(L.N, {
+                    children: (0, i.jsx)(S.N, {
                         value: em,
                         children: (0, i.jsxs)(r.EOs, {
                             "data-migration-pending": !0,
@@ -196,7 +196,7 @@ function ed(e) {
                                                             style: { backgroundImage: `url(${eU})` },
                                                         }),
                                                     null != eP.interactionType &&
-                                                        (0, i.jsx)(l.animated.div, { style: eL, className: er.tB }),
+                                                        (0, i.jsx)(l.animated.div, { style: eS, className: er.tB }),
                                                     (0, i.jsx)(ee.A, {
                                                         onAutoHide: () => (0, et.XA)(null),
                                                         className: er.oR,

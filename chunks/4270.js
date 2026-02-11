@@ -1,8 +1,8 @@
 n.d(t, { A: () => b });
 var i = n(627968),
     r = n(64700),
-    a = n(503698),
-    l = n.n(a),
+    l = n(503698),
+    a = n.n(l),
     s = n(837381),
     o = n(731738),
     d = n(397927),
@@ -15,19 +15,19 @@ var i = n(627968),
     p = n(336590),
     g = n(471271),
     E = n(957283),
-    f = n(284306),
-    I = n(790499),
+    I = n(284306),
+    f = n(790499),
     C = n(514426),
     N = n(977524),
     T = n(687599),
     S = n(652215),
     x = n(985018),
-    v = n(843284);
+    v = n(38702);
 function b() {
     let e = r.useRef(null),
-        t = (0, f.A)(),
-        n = (0, I.I)(),
-        a = (0, p.r)(),
+        t = (0, I.A)(),
+        n = (0, f.I)(),
+        l = (0, p.r)(),
         b = (0, c.w)(),
         y = (0, A.A)("message-requests-spam-list"),
         { channelId: L } = (0, E.N)(),
@@ -52,15 +52,15 @@ function b() {
                     N.A,
                     {
                         index: n,
-                        className: l()({ [v.wH]: null != L && L === o, [v.wZ]: null != L && L === s }),
+                        className: a()({ [v.wH]: null != L && L === o, [v.wZ]: null != L && L === s }),
                         channel: r.channel,
                         user: r.user,
-                        hasSingleMessageRequest: a,
+                        hasSingleMessageRequest: l,
                     },
                     o,
                 );
             },
-            [t, a, L],
+            [t, l, L],
         ),
         D = r.useCallback(
             () =>
@@ -101,12 +101,12 @@ function b() {
               navigator: y,
               children: (0, i.jsx)(s.PR, {
                   children: (n) => {
-                      let { ref: r, role: a, ...l } = n;
+                      let { ref: r, role: l, ...a } = n;
                       return (0, i.jsx)(
                           d.B8B,
                           {
                               className: v.p_,
-                              innerRole: a,
+                              innerRole: l,
                               innerAriaLabel: x.intl.string(x.t.e7GWjQ),
                               ref: (t) => {
                                   (e.current = t), (r.current = t?.getScrollerNode() ?? null);
@@ -120,7 +120,7 @@ function b() {
                               sections: [t.length],
                               chunkSize: 30,
                               fade: !0,
-                              ...l,
+                              ...a,
                           },
                           "message-requests-spam-list",
                       );

@@ -8,18 +8,18 @@ var r = n(627968),
     l = n(397927),
     u = n(62539),
     c = n(985018),
-    d = n(50652);
+    d = n(863598);
 function _(e) {
     let { page: t, totalPageCount: n, disabled: a, onPageChange: o } = e,
         [u, c] = i.useState(!1),
         [_, f] = i.useState(null),
-        p = null != _ && _ >= 1 && _ <= n,
-        h = (e) => {
+        h = null != _ && _ >= 1 && _ <= n,
+        p = (e) => {
             let t = parseInt(e);
             "" === e || isNaN(t) ? f(null) : f(t);
         },
-        m = (e) => {
-            "Enter" === e.key && null != _ && p && (o(_), c(!1), f(null));
+        g = (e) => {
+            "Enter" === e.key && null != _ && h && (o(_), c(!1), f(null));
         };
     return a
         ? (0, r.jsx)(
@@ -36,11 +36,11 @@ function _(e) {
                         type: "number",
                         autoFocus: !0,
                         value: null == _ ? "" : `${_}`,
-                        onChange: h,
+                        onChange: p,
                         onBlur: () => {
                             c(!1), f(null);
                         },
-                        onKeyUp: m,
+                        onKeyUp: g,
                         disabled: a,
                     },
                     t.key,
@@ -67,16 +67,16 @@ function f(e) {
             pageSize: i,
             maxVisiblePages: a,
             disablePaginationGap: f,
-            onPageChange: p,
-            hideMaxPage: h = !1,
-            className: m,
-            renderPageWrapper: g,
+            onPageChange: h,
+            hideMaxPage: p = !1,
+            className: g,
+            renderPageWrapper: E,
         } = e,
-        E = Math.ceil(n / i);
-    function A(e) {
-        null != p && p(e);
-    }
+        A = Math.ceil(n / i);
     function I(e) {
+        null != h && h(e);
+    }
+    function T(e) {
         let { key: t, disabled: n, navigateToPage: i } = e;
         return (0, r.jsxs)(
             o.$n,
@@ -96,7 +96,7 @@ function f(e) {
             t,
         );
     }
-    function T(e) {
+    function y(e) {
         let { key: t, disabled: n, navigateToPage: i } = e;
         return (0, r.jsxs)(
             o.$n,
@@ -116,7 +116,7 @@ function f(e) {
             t,
         );
     }
-    function y(e) {
+    function S(e) {
         return (0, r.jsx)(
             l.DUT,
             {
@@ -129,30 +129,30 @@ function f(e) {
             e.key,
         );
     }
-    function S(e) {
-        let t = y(e);
-        return null != g ? g(e, t) : t;
-    }
     function v(e) {
-        return (0, r.jsx)(_, { page: e, totalPageCount: E, disabled: !!f, onPageChange: p }, e.key);
+        let t = S(e);
+        return null != E ? E(e, t) : t;
     }
     function C(e) {
+        return (0, r.jsx)(_, { page: e, totalPageCount: A, disabled: !!f, onPageChange: h }, e.key);
+    }
+    function b(e) {
         let { pages: t, hasMultiplePages: n } = e;
         return n
             ? (0, r.jsx)("div", {
-                  className: s()(d.Ug, m),
+                  className: s()(d.Ug, g),
                   children: (0, r.jsx)("nav", {
                       className: d.DU,
                       children: t.map((e) => {
                           switch (e.type) {
                               case u._.BACK:
-                                  return I(e);
-                              case u._.PAGE:
-                                  return S(e);
-                              case u._.GAP:
-                                  return v(e);
-                              case u._.NEXT:
                                   return T(e);
+                              case u._.PAGE:
+                                  return v(e);
+                              case u._.GAP:
+                                  return C(e);
+                              case u._.NEXT:
+                                  return y(e);
                               default:
                                   return null;
                           }
@@ -162,11 +162,11 @@ function f(e) {
             : null;
     }
     return (0, r.jsx)(u.J, {
-        totalPageCount: E,
+        totalPageCount: A,
         selectedPage: t,
         maxVisiblePages: a,
-        hideMaxPage: h,
-        onPageChange: A,
-        children: C,
+        hideMaxPage: p,
+        onPageChange: I,
+        children: b,
     });
 }

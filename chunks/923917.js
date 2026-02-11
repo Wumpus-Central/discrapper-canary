@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => z, q: () => Y });
+n.d(t, { A: () => z, q: () => W });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -11,41 +11,41 @@ var r = n(627968),
     d = n(337836),
     _ = n(158954),
     f = n(311907),
-    p = n(397927),
-    h = n(318009),
-    m = n(92960),
-    g = n(14214),
-    E = n(775602),
-    A = n(697138),
-    I = n(933958),
-    T = n(793574),
-    y = n(688810),
-    S = n(590703),
-    v = n(681582),
-    C = n(573435),
-    b = n(71855),
-    N = n(203480),
-    R = n(670735),
-    O = n(549205),
-    D = n(750506),
-    L = n(267102),
-    w = n(666347),
-    x = n(97469),
-    P = n(975616),
-    M = n(611635),
-    k = n(723702),
-    U = n(677134),
-    G = n(837921),
+    h = n(397927),
+    p = n(318009),
+    g = n(92960),
+    E = n(14214),
+    A = n(775602),
+    I = n(697138),
+    T = n(933958),
+    y = n(793574),
+    S = n(688810),
+    v = n(590703),
+    C = n(681582),
+    b = n(573435),
+    N = n(71855),
+    R = n(203480),
+    O = n(670735),
+    D = n(549205),
+    L = n(750506),
+    w = n(267102),
+    x = n(666347),
+    P = n(97469),
+    M = n(975616),
+    k = n(611635),
+    U = n(723702),
+    G = n(677134),
+    F = n(837921),
     V = n(913934),
-    F = n(869146),
-    B = n(652215),
-    j = n(392164),
-    H = n(32069);
-function Y(e) {
+    B = n(869146),
+    j = n(652215),
+    H = n(392164),
+    Y = n(628867);
+function W(e) {
     let { withTitleBar: t, isFullScreen: n } = e;
-    return t && k.isPlatformEmbedded && !n;
+    return t && U.isPlatformEmbedded && !n;
 }
-class W extends i.Component {
+class K extends i.Component {
     rootRef = i.createRef();
     _cleanupWindowActionCreators = void 0;
     _combokeys = null;
@@ -58,16 +58,16 @@ class W extends i.Component {
             this.updateClientTheme(),
             (0, V.M)(e),
             e.addEventListener("blur", this.handleBlur),
-            k.isPlatformEmbedded
-                ? t.addEventListener("contextmenu", U.contextMenuCallbackNative, !1)
-                : t.addEventListener("contextmenu", U.contextMenuCallbackWeb, !1),
+            U.isPlatformEmbedded
+                ? t.addEventListener("contextmenu", G.contextMenuCallbackNative, !1)
+                : t.addEventListener("contextmenu", G.contextMenuCallbackWeb, !1),
             e.addEventListener("beforeunload", this.beforeUnload),
             this.registerPopoutGlobalKeybinds();
     }
     beforeUnload = (e) => {
         let { onBeforeUnload: t } = this.props,
             n = () => {
-                F.A.unmountWindow(this.props.windowKey), k.isPlatformEmbedded && G.Ay.close(this.props.windowKey);
+                B.A.unmountWindow(this.props.windowKey), U.isPlatformEmbedded && F.Ay.close(this.props.windowKey);
             };
         null != t ? t({ e, unmountWindow: n }) : n();
     };
@@ -80,10 +80,10 @@ class W extends i.Component {
             t = e.document;
         this.unregisterPopoutGlobalKeybinds(),
             e.removeEventListener("blur", this.handleBlur),
-            k.isPlatformEmbedded
-                ? t.removeEventListener("contextmenu", U.contextMenuCallbackNative)
-                : t.removeEventListener("contextmenu", U.contextMenuCallbackWeb),
-            (0, c.r)(() => p.red.setState((e) => ({ ...e, [p.KX8]: [] }))),
+            U.isPlatformEmbedded
+                ? t.removeEventListener("contextmenu", G.contextMenuCallbackNative)
+                : t.removeEventListener("contextmenu", G.contextMenuCallbackWeb),
+            (0, c.r)(() => h.red.setState((e) => ({ ...e, [h.KX8]: [] }))),
             e.removeEventListener("beforeunload", this.beforeUnload);
     }
     updateTitle() {
@@ -97,13 +97,13 @@ class W extends i.Component {
             r = !1,
             i = n.head;
         l()(null != i, `Window document ${r ? "body" : "head"} was null`);
-        let a = i.querySelector(`style[${S.Vg}]`);
+        let a = i.querySelector(`style[${v.Vg}]`);
         if (null != a) {
             a.textContent = e;
             return;
         }
         let s = n.createElement("style");
-        s.setAttribute(S.Vg, "true"), (s.textContent = e), i.appendChild(s);
+        s.setAttribute(v.Vg, "true"), (s.textContent = e), i.appendChild(s);
     }
     handleBlur = () => {
         this.props.onBlur?.();
@@ -111,8 +111,8 @@ class W extends i.Component {
     registerPopoutGlobalKeybinds() {
         let { guestWindow: e } = this.props,
             t = e.document;
-        for (let e of ((this._combokeys = (0, O.I)(t.documentElement)),
-        [g.VT, g.rR, m.D, ...(this.props.keybinds ?? [])]))
+        for (let e of ((this._combokeys = (0, D.I)(t.documentElement)),
+        [E.VT, E.rR, g.D, ...(this.props.keybinds ?? [])]))
             if (e.comboKeysBindGlobal)
                 for (let t of e.binds)
                     this._combokeys.bindGlobal(t, (t, n) => ("function" == typeof e.action && e.action(t, n), !1));
@@ -131,56 +131,56 @@ class W extends i.Component {
                 clientThemesClassName: l,
                 contentClassName: c,
                 themeOverride: f,
-                titleBarTheme: m,
-                hideModals: g = !1,
-                appContext: E,
+                titleBarTheme: g,
+                hideModals: E = !1,
+                appContext: A,
             } = this.props,
-            I = Y({ withTitleBar: a, isFullScreen: i }),
-            T = n === j.f ? w.A : R.A;
+            T = W({ withTitleBar: a, isFullScreen: i }),
+            y = n === H.f ? x.A : O.A;
         return (0, r.jsx)(u.Kd, {
             children: (0, r.jsx)(
-                P.e,
+                M.e,
                 {
                     windowKey: n,
                     themeOverride: f,
-                    children: (0, r.jsx)(A.A, {
-                        children: (0, r.jsxs)(p.xpW, {
+                    children: (0, r.jsx)(I.A, {
+                        children: (0, r.jsxs)(h.xpW, {
                             containerRef: this.rootRef,
                             children: [
-                                (0, r.jsx)(K, {
+                                (0, r.jsx)($, {
                                     guestWindow: o,
                                     className: l,
-                                    children: (0, r.jsxs)(T, {
+                                    children: (0, r.jsxs)(y, {
                                         children: [
-                                            (0, r.jsx)(C.Al, {}),
-                                            (0, r.jsx)(L.Wr, {
-                                                appContext: E ?? B.BRT.POPOUT,
+                                            (0, r.jsx)(b.Al, {}),
+                                            (0, r.jsx)(w.Wr, {
+                                                appContext: A ?? j.BRT.POPOUT,
                                                 renderWindow: o,
-                                                children: (0, r.jsx)(v.l, {
-                                                    children: (0, r.jsxs)(D.Yf, {
+                                                children: (0, r.jsx)(C.l, {
+                                                    children: (0, r.jsxs)(L.Yf, {
                                                         children: [
                                                             (0, r.jsxs)("div", {
-                                                                className: H.SW,
+                                                                className: Y.SW,
                                                                 children: [
-                                                                    I &&
+                                                                    T &&
                                                                         (0, r.jsx)(_.NPJ, {
-                                                                            theme: m,
+                                                                            theme: g,
                                                                             children: (e) =>
-                                                                                (0, r.jsx)(b.cq, {
+                                                                                (0, r.jsx)(N.cq, {
                                                                                     windowKey: n,
-                                                                                    className: s()(e, H.uv),
+                                                                                    className: s()(e, Y.uv),
                                                                                 }),
                                                                         }),
                                                                     (0, r.jsx)("div", {
-                                                                        className: s()(H.Qs, c),
+                                                                        className: s()(Y.Qs, c),
                                                                         children: t,
                                                                     }),
                                                                 ],
                                                             }),
-                                                            !g && (0, r.jsx)(p.bM6, {}),
-                                                            (0, r.jsx)(h.A, {}),
+                                                            !E && (0, r.jsx)(h.bM6, {}),
+                                                            (0, r.jsx)(p.A, {}),
                                                             (0, r.jsx)(d.P, {}),
-                                                            (0, r.jsx)(D.C8, {}),
+                                                            (0, r.jsx)(L.C8, {}),
                                                         ],
                                                     }),
                                                 }),
@@ -198,9 +198,9 @@ class W extends i.Component {
         });
     }
 }
-let K = i.forwardRef(function (e, t) {
+let $ = i.forwardRef(function (e, t) {
         let { guestWindow: n, className: a, children: o } = e,
-            { lang: u, style: c, className: d } = (0, M.xb)();
+            { lang: u, style: c, className: d } = (0, k.xb)();
         return (
             i.useEffect(() => {
                 let e = n.document.documentElement;
@@ -214,26 +214,26 @@ let K = i.forwardRef(function (e, t) {
         );
     }),
     z = i.forwardRef(function (e, t) {
-        let { guestWindow: n, isFullScreen: i } = (0, f.cf)([F.A], () => ({
-            guestWindow: F.A.getWindow(e.windowKey),
-            isFullScreen: F.A.isWindowFullScreen(e.windowKey),
+        let { guestWindow: n, isFullScreen: i } = (0, f.cf)([B.A], () => ({
+            guestWindow: B.A.getWindow(e.windowKey),
+            isFullScreen: B.A.isWindowFullScreen(e.windowKey),
         }));
         l()(null != n, "Missing guestWindow reference");
-        let { forcedColors: a, connectedEmbeddedActivity: s } = (0, f.cf)([E.A, I.Ay], () => ({
-            forcedColors: E.A.useForcedColors ? "yes" : "no",
-            connectedEmbeddedActivity: I.Ay.getCurrentEmbeddedActivity(),
+        let { forcedColors: a, connectedEmbeddedActivity: s } = (0, f.cf)([A.A, T.Ay], () => ({
+            forcedColors: A.A.useForcedColors ? "yes" : "no",
+            connectedEmbeddedActivity: T.Ay.getCurrentEmbeddedActivity(),
         }));
-        (0, N.A)(n, !1);
-        let { analyticsLocations: o } = (0, y.Ay)(T.A.POPOUT_WINDOW),
-            { clientThemesClassName: u, clientThemesCSS: c } = (0, S.Ay)(),
-            d = (0, x.NC)(),
+        (0, R.A)(n, !1);
+        let { analyticsLocations: o } = (0, S.Ay)(y.A.POPOUT_WINDOW),
+            { clientThemesClassName: u, clientThemesCSS: c } = (0, v.Ay)(),
+            d = (0, P.NC)(),
             _ = e.themeOverride ?? d;
         return null == n
             ? null
-            : (0, r.jsx)(p.WaV, {
-                  children: (0, r.jsx)(y.f5, {
+            : (0, r.jsx)(h.WaV, {
+                  children: (0, r.jsx)(S.f5, {
                       value: o,
-                      children: (0, r.jsx)(W, {
+                      children: (0, r.jsx)(K, {
                           ref: t,
                           ...e,
                           titleBarTheme: _,

@@ -5,7 +5,7 @@ var r = n(627968),
     a = n(868903),
     s = n(15626),
     o = n(778328),
-    l = n(46751);
+    l = n(688381);
 function u(e) {
     let {
             listRef: t,
@@ -15,19 +15,19 @@ function u(e) {
             layout: d = "default",
             items: _,
             onRemove: f,
-            children: p,
+            children: h,
         } = e,
-        [h, m] = i.useState(() => new Set()),
-        g = i.useContext(s._);
+        [p, g] = i.useState(() => new Set()),
+        E = i.useContext(s._);
     return (0, r.jsxs)(a.CR, {
         "aria-label": n,
-        id: g?.controlId,
-        "aria-describedby": g?.describedById,
+        id: E?.controlId,
+        "aria-describedby": E?.describedById,
         "data-layout": d,
         className: l.WD,
         selectionMode: c,
-        selectedKeys: h,
-        onSelectionChange: m,
+        selectedKeys: p,
+        onSelectionChange: g,
         disabledKeys: u,
         onRemove: f,
         children: [
@@ -38,7 +38,7 @@ function u(e) {
                     (0, i.createElement)(o.v, { ...e, key: e.id, layout: d, accessibilityHint: e.accessibilityHint }),
                 ),
             }),
-            p,
+            h,
         ],
     });
 }

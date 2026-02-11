@@ -5,7 +5,7 @@ n(64700);
 var i = n(503698),
     a = n.n(i),
     s = n(397927),
-    o = n(798233);
+    o = n(14503);
 let l = () => (0, r.jsx)("hr", { className: o.ts }),
     u = (e) => {
         let { label: t, children: n, direction: i = "horizontal", className: u } = e;

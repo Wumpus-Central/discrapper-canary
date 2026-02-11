@@ -3,7 +3,7 @@ var n = i(627968),
     s = i(64700),
     a = i(503698),
     r = i.n(a),
-    l = i(92674),
+    l = i(563495),
     o = i(417597),
     d = i(990078),
     u = i(397927),
@@ -13,12 +13,12 @@ var n = i(627968),
     g = i(915614),
     h = i(427262),
     S = i(871210),
-    _ = i(885168),
-    A = i(621866),
+    A = i(885168),
+    _ = i(621866),
     f = i(789622),
     N = i(996988),
     T = i(985018),
-    x = i(299043),
+    x = i(190269),
     v = i(166723);
 let I = s.forwardRef(function (e, t) {
     let {
@@ -26,8 +26,8 @@ let I = s.forwardRef(function (e, t) {
             error: a,
             formValues: I,
             displayProfile: p,
-            onChangeFormValue: C,
-            onFocusDisplayName: R,
+            onChangeFormValue: R,
+            onFocusDisplayName: C,
             onFocusUsername: y,
             editState: L,
             footerNotice: O,
@@ -36,17 +36,17 @@ let I = s.forwardRef(function (e, t) {
         } = e,
         { username: P, globalName: G } = I,
         U = s.useRef(null),
-        b = s.useRef(null),
-        D = s.useMemo(() => i.merge({ discriminator: "0000" }), [i]),
-        [w, k] = (0, u.zhh)(() => ({ opacity: 0, y: 5 }));
+        D = s.useRef(null),
+        w = s.useMemo(() => i.merge({ discriminator: "0000" }), [i]),
+        [k, b] = (0, u.zhh)(() => ({ opacity: 0, y: 5 }));
     s.useEffect(() => {
-        k({ y: 0, opacity: 1, from: { y: 5, opacity: 0 } });
-    }, [k, L]),
+        b({ y: 0, opacity: 1, from: { y: 5, opacity: 0 } });
+    }, [b, L]),
         s.useImperativeHandle(
             t,
             () => ({
                 focusDisplayName: () => {
-                    b.current?.focus();
+                    D.current?.focus();
                 },
                 focusUsername: () => {
                     U.current?.focus();
@@ -93,8 +93,8 @@ let I = s.forwardRef(function (e, t) {
                 (0, n.jsxs)("div", {
                     className: x.Kq,
                     children: [
-                        (0, n.jsx)(g.A, { user: D, displayProfile: p, themeType: N.d.SIDEBAR }),
-                        (0, n.jsx)(E.A, { user: D, displayProfile: p, themeType: N.d.SIDEBAR, className: x.my }),
+                        (0, n.jsx)(g.A, { user: w, displayProfile: p, themeType: N.d.SIDEBAR }),
+                        (0, n.jsx)(E.A, { user: w, displayProfile: p, themeType: N.d.SIDEBAR, className: x.my }),
                         L === f.iv.PREVIEW &&
                             null != H &&
                             (0, n.jsx)("div", {
@@ -112,7 +112,7 @@ let I = s.forwardRef(function (e, t) {
                 }),
                 L !== f.iv.PREVIEW &&
                     (0, n.jsxs)(l.animated.div, {
-                        style: { opacity: w.opacity, y: w.y },
+                        style: { opacity: k.opacity, y: k.y },
                         className: x.Kf,
                         children: [
                             (0, n.jsxs)(u.BJc, {
@@ -124,9 +124,9 @@ let I = s.forwardRef(function (e, t) {
                                             value: G ?? "",
                                             placeholder: h.Ay.getName(i),
                                             maxLength: 32,
-                                            onChange: (e) => C({ globalName: e }),
-                                            onFocus: R,
-                                            inputRef: b,
+                                            onChange: (e) => R({ globalName: e }),
+                                            onFocus: C,
+                                            inputRef: D,
                                         }),
                                     (L === f.iv.EDIT_USERNAME || L === f.iv.SUGGESTION) &&
                                         (0, n.jsx)(u.ksK, {
@@ -135,7 +135,7 @@ let I = s.forwardRef(function (e, t) {
                                             value: P ?? "",
                                             placeholder: i.username,
                                             maxLength: 32,
-                                            onChange: (e) => C({ username: e.replace("@", "") }),
+                                            onChange: (e) => R({ username: e.replace("@", "") }),
                                             onFocus: y,
                                             inputRef: U,
                                         }),
@@ -144,14 +144,14 @@ let I = s.forwardRef(function (e, t) {
                             (0, n.jsx)("div", {
                                 className: x.zC,
                                 children: (() => {
-                                    if (null != a) return (0, n.jsx)(_.A, { type: "error", children: a });
+                                    if (null != a) return (0, n.jsx)(A.A, { type: "error", children: a });
                                     if (null != O) {
                                         if (L !== f.iv.SUGGESTION)
                                             return (0, n.jsx)(u.Text, { variant: "text-sm/normal", children: O });
-                                        else if (!M) return (0, n.jsx)(_.A, { type: "success", children: O });
+                                        else if (!M) return (0, n.jsx)(A.A, { type: "success", children: O });
                                     }
                                     return null == O && null == a && (L === f.iv.EDIT_USERNAME || L === f.iv.SUGGESTION)
-                                        ? (0, n.jsx)(A.A, { username: P, oneClickFlow: j })
+                                        ? (0, n.jsx)(_.A, { username: P, oneClickFlow: j })
                                         : null;
                                 })(),
                             }),

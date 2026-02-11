@@ -1,8 +1,8 @@
 n.d(t, { A: () => g });
 var i = n(627968),
     r = n(64700),
-    a = n(960488),
-    l = n(311907),
+    l = n(960488),
+    a = n(311907),
     s = n(308528),
     o = n(456412),
     d = n(210714),
@@ -11,7 +11,7 @@ var i = n(627968),
     A = n(341338),
     h = n(998515),
     _ = n(652215),
-    m = n(58682);
+    m = n(881640);
 class p extends r.Component {
     componentDidMount() {
         this.fetchStoreListing(), (0, d.d)("channel_store_listing");
@@ -26,13 +26,13 @@ class p extends r.Component {
     };
     renderApplicationListing = (e) => {
         let { location: t } = e,
-            { channel: n, skuId: r, width: a } = this.props;
+            { channel: n, skuId: r, width: l } = this.props;
         return (0, i.jsx)(A.A, {
             channel: n,
             inputSkuId: r,
             fetchStoreListing: this.fetchStoreListing,
             location: t,
-            pageSize: (0, h.getPageSize)(a),
+            pageSize: (0, h.getPageSize)(l),
         });
     };
     render() {
@@ -42,14 +42,14 @@ class p extends r.Component {
                   root: !0,
                   children: (0, i.jsx)("div", {
                       className: m.gE,
-                      children: (0, i.jsx)(a.qh, { path: "*", render: this.renderApplicationListing }),
+                      children: (0, i.jsx)(l.qh, { path: "*", render: this.renderApplicationListing }),
                   }),
               })
             : null;
     }
 }
 let g = (0, o.A)(
-    l.Ay.connectStores([c.A], (e) => {
+    a.Ay.connectStores([c.A], (e) => {
         let { channel: t, inputSkuId: n } = e;
         return { skuId: null != n ? n : c.A.getSkuIdForChannel(t.id) };
     })(p),

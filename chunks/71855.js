@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { LI: () => A, cq: () => C, m2: () => E, v5: () => b });
+n.d(t, { LI: () => I, cq: () => b, m2: () => A, v5: () => N });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -11,69 +11,69 @@ var r = n(627968),
     d = n(155545),
     _ = n(561155),
     f = n(723702),
-    p = n(837921),
-    h = n(985018),
-    m = n(450295);
-let g = 1e3;
-function E(e) {
+    h = n(837921),
+    p = n(985018),
+    g = n(17937);
+let E = 1e3;
+function A(e) {
     let { isPopoutWindow: t } = e;
     return t ? "refresh-title-bar-small" : void 0;
 }
-function A(e) {
+function I(e) {
     let { isPopoutWindow: t } = e;
     return t ? 16 : 24;
 }
-let I = (e) => p.Ay.close(e),
-    T = (e) => p.Ay.minimize(e),
-    y = (e) => p.Ay.maximize(e);
-function S(e) {
+let T = (e) => h.Ay.close(e),
+    y = (e) => h.Ay.minimize(e),
+    S = (e) => h.Ay.maximize(e);
+function v(e) {
     e.stopPropagation();
 }
-function v(e) {
+function C(e) {
     let { windowKey: t, showDivider: n } = e,
         i = (0, r.jsx)(o.DUT, {
-            className: s()(m.R6, m.d1),
-            onClick: () => I(t),
-            "aria-label": h.intl.string(h.t.ZdNUj2),
+            className: s()(g.R6, g.d1),
+            onClick: () => T(t),
+            "aria-label": p.intl.string(p.t.ZdNUj2),
             tabIndex: -1,
             children: (0, r.jsx)(c.A, {}),
         }),
         a = (0, r.jsx)(o.DUT, {
-            className: s()(m.R6, m.T0),
-            onClick: () => y(t),
-            "aria-label": h.intl.string(h.t.G1u0hK),
+            className: s()(g.R6, g.T0),
+            onClick: () => S(t),
+            "aria-label": p.intl.string(p.t.G1u0hK),
             tabIndex: -1,
             children: (0, r.jsx)(d.A, {}),
         }),
         l = (0, r.jsx)(o.DUT, {
-            className: s()(m.R6, m.T0),
-            onClick: () => T(t),
-            "aria-label": h.intl.string(h.t.CxOC4U),
+            className: s()(g.R6, g.T0),
+            onClick: () => y(t),
+            "aria-label": p.intl.string(p.t.CxOC4U),
             tabIndex: -1,
             children: (0, r.jsx)(_.A, {}),
         });
-    return (0, r.jsxs)("div", { className: s()(m.kU, { [m.Fx]: n }), children: [l, a, i] });
+    return (0, r.jsxs)("div", { className: s()(g.kU, { [g.Fx]: n }), children: [l, a, i] });
 }
-function C(e) {
+function b(e) {
     let { leading: t, title: n, trailing: a, windowKey: o, className: l } = e,
         u = (0, f.getPlatform)(),
-        c = i.useCallback(() => y(o), [o]),
+        c = i.useCallback(() => S(o), [o]),
         d = u === f.PlatformTypes.WINDOWS || u === f.PlatformTypes.LINUX;
     return (0, r.jsxs)("div", {
-        className: s()(m.M0, l),
+        className: s()(g.M0, l),
         onDoubleClick: c,
         children: [
-            (0, r.jsx)("div", { className: m.R4, onDoubleClick: S, children: t }),
-            (0, r.jsx)("div", { className: m.DD, children: n }),
+            (0, r.jsx)("div", { className: g.R4, onDoubleClick: v, children: t }),
+            (0, r.jsx)("div", { className: g.DD, children: n }),
             (0, r.jsxs)("div", {
-                className: m.ZY,
-                onDoubleClick: S,
-                children: [a, d && (0, r.jsx)(v, { windowKey: o, showDivider: null != a })],
+                className: g.ZY,
+                onDoubleClick: v,
+                children: [a, d && (0, r.jsx)(C, { windowKey: o, showDivider: null != a })],
             }),
         ],
     });
 }
-function b(e) {
+function N(e) {
     let { fixed: t = !1, show: n, windowKey: a } = e,
         o = (0, f.getPlatform)(),
         c = i.useCallback(() => {
@@ -81,16 +81,16 @@ function b(e) {
         }, []),
         d = i.useCallback(() => {
             let e = u.A.getLastShowTimestamp();
-            (null != e && Date.now() - e < g) || y(a);
+            (null != e && Date.now() - e < E) || S(a);
         }, [a]),
         _ = o === f.PlatformTypes.WINDOWS;
     if (o === f.PlatformTypes.WEB) return null;
-    let p = _ || o === f.PlatformTypes.LINUX;
+    let h = _ || o === f.PlatformTypes.LINUX;
     return (0, r.jsx)("div", {
-        className: s()(m.M0, m.bN, { [m.Zu]: t, [m.WU]: n }),
+        className: s()(g.M0, g.bN, { [g.Zu]: t, [g.WU]: n }),
         onClick: c,
         onDoubleClick: d,
         children:
-            p && (0, r.jsx)("div", { className: m.ZY, onDoubleClick: S, children: (0, r.jsx)(v, { windowKey: a }) }),
+            h && (0, r.jsx)("div", { className: g.ZY, onDoubleClick: v, children: (0, r.jsx)(C, { windowKey: a }) }),
     });
 }

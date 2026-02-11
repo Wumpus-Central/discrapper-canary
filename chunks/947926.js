@@ -1,9 +1,9 @@
 n.d(t, { A: () => V, Y: () => G });
 var a = n(627968),
-    s = n(64700),
-    i = n(503698),
-    l = n.n(i),
-    r = n(92674),
+    i = n(64700),
+    s = n(503698),
+    l = n.n(s),
+    r = n(563495),
     o = n(311907),
     d = n(475743),
     c = n(676594),
@@ -13,8 +13,8 @@ var a = n(627968),
     x = n(245853),
     p = n(921517),
     g = n(677402),
-    f = n(943849),
-    _ = n(890687),
+    _ = n(943849),
+    f = n(890687),
     v = n(792620),
     b = n(241124),
     j = n(73473),
@@ -23,8 +23,8 @@ var a = n(627968),
     S = n(139210),
     T = n(568329),
     y = n(818276),
-    N = n(742860),
-    E = n(783569),
+    E = n(742860),
+    N = n(783569),
     I = n(963713),
     k = n(717695),
     R = n(899592),
@@ -33,11 +33,11 @@ var a = n(627968),
     D = n(20732),
     M = n(147150),
     P = n(654487),
-    L = n(419548);
+    L = n(346774);
 function U(e) {
     let { isExpanded: t, questId: n } = e;
     return (
-        (0, _.H6)({
+        (0, f.H6)({
             mode: t ? P.fP.EXPANDED : P.fP.COLLAPSED,
             questContent: h.uF.QUEST_BAR_V2,
             questId: n,
@@ -48,35 +48,35 @@ function U(e) {
 }
 function B() {
     return (
-        s.useEffect(() => {
+        i.useEffect(() => {
             c.l.trigger();
         }, []),
         null
     );
 }
 function G(e) {
-    let { quest: t, unfurlEnabled: n = !1, unfurlDurationInMilliseconds: i } = e,
-        c = (0, f.L)({ quest: t, location: P.rE.QUESTS_BAR }),
+    let { quest: t, unfurlEnabled: n = !1, unfurlDurationInMilliseconds: s } = e,
+        c = (0, _.L)({ quest: t, location: P.rE.QUESTS_BAR }),
         x = (0, g.H)({ location: P.rE.QUESTS_BAR }),
         p = (0, o.bG)([m.A], () => null != m.A.questEnrollmentBlockedUntil),
         { isQuestBarVisible: G, reason: F } = (0, A.TQ)({ quest: t, location: P.rE.QUESTS_BAR }),
         V = (0, o.bG)([u.A], () => u.A.hasLayers()),
-        W = s.useRef(null),
-        H = s.useMemo(() => (0, v.vv)(t), [t]),
+        W = i.useRef(null),
+        H = i.useMemo(() => (0, v.vv)(t), [t]),
         K = t.id,
         z = t.userStatus?.enrolledAt != null,
         $ = (0, d.A)(z),
         q = t.userStatus?.completedAt != null,
         { hasError: Q, isLoading: Y } = (0, b.Gk)(),
-        J = s.useContext(k.Z) || (x && G && !Y && !p),
+        J = i.useContext(k.Z) || (x && G && !Y && !p),
         { hasSeenUnfurl: X, handleUnfurlDismissed: Z } = (0, M.a)(K),
         {
             isExpanded: ee,
             setIsExpanded: et,
             expandQuestBar: en,
             isExpansionAnimationComplete: ea,
-            isVisibilityAnimationAtRest: es,
-            expansionSpring: ei,
+            isVisibilityAnimationAtRest: ei,
+            expansionSpring: es,
             visibilitySpring: el,
             springConfig: er,
             onQuestBarFocus: eo,
@@ -97,8 +97,8 @@ function G(e) {
             handleCtxMenuSelection: ex,
             handleGameSheetOpened: ep,
             handleGameSheetClosed: eg,
-            handleFocusWithoutDelay: ef,
-            handleBlur: e_,
+            handleFocusWithoutDelay: e_,
+            handleBlur: ef,
             handleMouseEnter: ev,
             handleMouseLeave: eb,
         } = (0, w.m)({
@@ -117,22 +117,22 @@ function G(e) {
         hasAssetsError: Q,
         isEligibleForQuests: x,
         isQuestBarVisible: J,
-        isVisibilityAnimationAtRest: es,
+        isVisibilityAnimationAtRest: ei,
         isLoadingAssets: Y,
         currentQuestVisibleReason: F,
         shouldShowQuestBar: G,
         isQuestEnrollmentBlocked: p,
         impressionRef: W,
     });
-    let ej = s.useRef(null),
-        eA = s.useRef(null),
-        eC = s.useRef(null),
-        eS = (0, _.fc)(t);
+    let ej = i.useRef(null),
+        eA = i.useRef(null),
+        eC = i.useRef(null),
+        eS = (0, f.fc)(t);
     if (
-        (s.useEffect(() => {
+        (i.useEffect(() => {
             H && (0, C.l9)();
         }, [H]),
-        !x || (!J && es && !Y) || Q)
+        !x || (!J && ei && !Y) || Q)
     )
         return Q ? c.log("Not rendered due to asset error") : x || c.log("Not rendered due to ineligibility"), null;
     let eT = 70 + 78 * !!q;
@@ -154,19 +154,19 @@ function G(e) {
                         "aria-hidden": !J,
                         onMouseLeave: eb,
                         onMouseEnter: ev,
-                        onFocus: ef,
-                        onBlur: e_,
-                        className: l()(L.iE, { [L.Xc]: !J, [L.uv]: J && es }),
+                        onFocus: e_,
+                        onBlur: ef,
+                        className: l()(L.iE, { [L.Xc]: !J, [L.uv]: J && ei }),
                         style: { height: el.to({ range: [0, 1], output: [0, eT] }) },
                         children: (0, a.jsx)(r.animated.div, {
                             className: l()(L.FG, { [L.E$]: ee, [L.KA]: z }),
-                            children: (0, a.jsx)(E.R, {
+                            children: (0, a.jsx)(N.R, {
                                 springConfig: er,
                                 isExpanded: ee,
                                 children: (0, a.jsx)(T.oK, {
                                     expandedContentRef: ej,
                                     collapsedContentRef: eA,
-                                    expansionSpring: ei,
+                                    expansionSpring: es,
                                     children: (0, a.jsxs)(I.C, {
                                         quest: t,
                                         taskDetails: eS,
@@ -184,7 +184,7 @@ function G(e) {
                                                 { ref: eA, className: L.Qs, overlayRef: eC },
                                                 q ? "collapsed-with-rewards" : "collapsed-without-rewards",
                                             ),
-                                            (0, a.jsx)(N.A, {
+                                            (0, a.jsx)(E.A, {
                                                 className: L.Qs,
                                                 overlayRef: eC,
                                                 ref: ej,
@@ -194,7 +194,7 @@ function G(e) {
                                                         (0, a.jsx)(R.A, {}),
                                                         !z &&
                                                             (0, a.jsx)(S.A, {
-                                                                unfurlTimeoutDurationInMilliseconds: i,
+                                                                unfurlTimeoutDurationInMilliseconds: s,
                                                                 withUnfurlTimeout: ec,
                                                                 onUnfurlTimeoutComplete: eu,
                                                             }),
@@ -215,8 +215,8 @@ function G(e) {
 }
 function F(e) {
     let { quest: t } = e,
-        { unfurlEnabled: n, unfurlDurationInMilliseconds: s } = (0, p.sH)();
-    return (0, a.jsx)(G, { quest: t, unfurlEnabled: n, unfurlDurationInMilliseconds: s });
+        { unfurlEnabled: n, unfurlDurationInMilliseconds: i } = (0, p.sH)();
+    return (0, a.jsx)(G, { quest: t, unfurlEnabled: n, unfurlDurationInMilliseconds: i });
 }
 let V =
     21552 == n.j
@@ -224,7 +224,7 @@ let V =
               let e = (0, A.dN)(),
                   { enabled: t, variant: n } = x.qd.getConfig({ location: P.rE.QUESTS_BAR });
               if (null == e) return null;
-              let s = (0, p.RL)(e.config) ? (0, a.jsx)(F, { quest: e }) : (0, a.jsx)(G, { quest: e });
+              let i = (0, p.RL)(e.config) ? (0, a.jsx)(F, { quest: e }) : (0, a.jsx)(G, { quest: e });
               return (0, a.jsx)(
                   b.jY,
                   {
@@ -232,7 +232,7 @@ let V =
                       questId: e.id,
                       listenForSourceError: t,
                       retrySourceLoadOnError: n === x.LO.LISTEN_AND_RETRY_LOADING,
-                      children: s,
+                      children: i,
                   },
                   e.id,
               );

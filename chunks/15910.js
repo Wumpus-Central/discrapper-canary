@@ -1,14 +1,14 @@
 n.d(t, { j: () => _ });
 var i = n(627968),
     l = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     r = n(444058),
-    o = n(92674),
+    o = n(563495),
     c = n(397927),
     d = n(927813),
     u = n(985018),
-    h = n(626228);
+    h = n(682758);
 function m(e) {
     if (null != e) {
         let t = new Date(),
@@ -40,7 +40,7 @@ let A = (e) => {
             ),
         });
     },
-    p = () => {
+    g = () => {
         let [e, t] = l.useState(!1);
         l.useEffect(() => {
             let e;
@@ -66,7 +66,7 @@ let A = (e) => {
             children: [(0, i.jsx)("div", { className: h.Cj }), (0, i.jsx)("div", { className: h.Cj })],
         });
     },
-    g = (e) => {
+    p = (e) => {
         let { digits: t } = e;
         return (0, i.jsxs)(i.Fragment, {
             children: [
@@ -80,26 +80,26 @@ let A = (e) => {
         return (0, i.jsxs)("div", {
             className: h.eh,
             children: [
-                (0, i.jsx)(g, { digits: t.hours }),
-                (0, i.jsx)(p, {}),
-                (0, i.jsx)(g, { digits: t.minutes }),
-                (0, i.jsx)(p, {}),
-                (0, i.jsx)(g, { digits: t.seconds }),
+                (0, i.jsx)(p, { digits: t.hours }),
+                (0, i.jsx)(g, {}),
+                (0, i.jsx)(p, { digits: t.minutes }),
+                (0, i.jsx)(g, {}),
+                (0, i.jsx)(p, { digits: t.seconds }),
             ],
         });
     };
 function _(e) {
-    let { textVariant: t, className: n, catalogUpdateTime: a, isScrolled: r } = e,
-        [o, d] = l.useState(() => m(a));
+    let { textVariant: t, className: n, catalogUpdateTime: s, isScrolled: r } = e,
+        [o, d] = l.useState(() => m(s));
     return (
         l.useEffect(() => {
             let e = setInterval(() => {
-                d(() => m(a));
+                d(() => m(s));
             }, 1e3);
             return () => clearInterval(e);
-        }, [a]),
+        }, [s]),
         (0, i.jsxs)("div", {
-            className: s()(n, h.Pc, { [h.NW]: r }),
+            className: a()(n, h.Pc, { [h.NW]: r }),
             "aria-label": o.countdownString,
             children: [
                 (0, i.jsxs)("div", {

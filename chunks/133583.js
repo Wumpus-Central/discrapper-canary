@@ -17,11 +17,11 @@ var i = n(627968),
     _ = n(808247),
     A = n(594832),
     I = n(287809),
-    j = n(183555),
-    v = n(622543),
+    v = n(183555),
+    j = n(622543),
     T = n(600761),
-    E = n(535089),
-    b = n(128988),
+    b = n(535089),
+    E = n(128988),
     y = n(515054),
     C = n(203647),
     N = n(383430),
@@ -29,7 +29,7 @@ var i = n(627968),
     w = n(518477),
     k = n(188275),
     R = n(985018),
-    O = n(39427);
+    O = n(376721);
 function L(e) {
     let { isSocialLayerStorefrontEnabled: t, handleOpenShop: n, handleOpenGameShop: l } = e;
     return t
@@ -85,16 +85,16 @@ function D(e) {
             wishlistId: N,
             currentUser: S,
             wishlistSettings: D,
-        } = (0, r.cf)([v.A, I.default], () => {
-            let e = v.A.getFirstWishlistId(t.id);
+        } = (0, r.cf)([j.A, I.default], () => {
+            let e = j.A.getFirstWishlistId(t.id);
             return {
                 wishlistId: e,
                 currentUser: I.default.getCurrentUser(),
-                wishlistSettings: null != e ? v.A.getWishlistSettings(t.id, e) : null,
+                wishlistSettings: null != e ? j.A.getWishlistSettings(t.id, e) : null,
             };
         }),
         { analyticsLocations: G } = (0, u.Ay)(),
-        { trackUserProfileWishlistAction: M } = (0, j.NJ)(),
+        { trackUserProfileWishlistAction: M } = (0, v.NJ)(),
         U = S?.id === t.id,
         F = !1 === t.nsfwAllowed,
         W = k.XR,
@@ -113,7 +113,7 @@ function D(e) {
             },
             [M],
         ),
-        J = (0, E.A)({ wishlistId: N, onAction: q, productLines: X?.getProductLines() ?? null }),
+        J = (0, b.A)({ wishlistId: N, onAction: q, productLines: X?.getProductLines() ?? null }),
         Z = l.useCallback(() => {
             if (null == N) return;
             let e = H ? a.a.PRIVATE : a.a.PUBLIC;
@@ -190,7 +190,7 @@ function D(e) {
                 className: O.XG,
                 fade: !0,
                 children: [
-                    (0, i.jsx)(b.A, { scrollerRef: n }),
+                    (0, i.jsx)(E.A, { scrollerRef: n }),
                     (0, i.jsxs)("div", {
                         ref: J,
                         className: O.U1,

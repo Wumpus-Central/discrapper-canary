@@ -2,7 +2,7 @@
 n.d(t, { A: () => o });
 var r = n(627968),
     i = n(64700),
-    a = n(10855);
+    a = n(718841);
 let s = () => (0, r.jsx)("div", { className: a.iM }),
     o = (e) => {
         let { children: t } = e,

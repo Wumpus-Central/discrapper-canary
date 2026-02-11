@@ -1,8 +1,8 @@
 n.d(t, { A: () => p });
 var i = n(627968),
     r = n(64700),
-    a = n(835245),
-    l = n(607399),
+    l = n(835245),
+    a = n(607399),
     s = n(732955),
     o = n(397927),
     d = n(954571),
@@ -11,14 +11,14 @@ var i = n(627968),
     A = n(652215),
     h = n(613057),
     _ = n(985018),
-    m = n(742249);
+    m = n(9043);
 function p(e) {
     let { applicationId: t } = e.match.params,
         [p, g] = r.useState(!1),
         E = r.useRef(!1),
-        [f, I] = r.useState(null),
-        C = !c.isPlatformEmbedded && !l.Fr && !p,
-        N = r.useMemo(() => (0, a.A)(), []);
+        [I, f] = r.useState(null),
+        C = !c.isPlatformEmbedded && !a.Fr && !p,
+        N = r.useMemo(() => (0, l.A)(), []);
     return (r.useEffect(() => {
         C &&
             !0 !== E.current &&
@@ -32,7 +32,7 @@ function p(e) {
                     })
                         .then((e) => {
                             let n = e ?? !1;
-                            I(n),
+                            f(n),
                                 d.default.track(A.HAw.ACTIVITY_DEEP_LINK_ATTEMPTED, {
                                     application_id: t,
                                     source_url: location.href,
@@ -41,7 +41,7 @@ function p(e) {
                                 });
                         })
                         .catch(() => {
-                            I(!1),
+                            f(!1),
                                 d.default.track(A.HAw.ACTIVITY_DEEP_LINK_ATTEMPTED, {
                                     application_id: t,
                                     source_url: location.href,
@@ -53,8 +53,8 @@ function p(e) {
                 }),
             (E.current = !0));
     }, [t, C, N]),
-    C && !1 !== f)
-        ? !0 === f
+    C && !1 !== I)
+        ? !0 === I
             ? (0, i.jsxs)("div", {
                   className: m.k,
                   children: [

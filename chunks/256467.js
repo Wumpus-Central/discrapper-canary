@@ -30,8 +30,8 @@ var s = i(627968),
     V = i(746080),
     k = i(412728),
     D = i(985018),
-    U = i(86719),
-    P = i(638990);
+    U = i(701741),
+    P = i(370808);
 function E(e) {
     let { guildId: t, productId: i } = e,
         { loaded: r, subscriptionsSettings: n } = (0, g.G)(t),

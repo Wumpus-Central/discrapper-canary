@@ -1,15 +1,15 @@
 n.d(t, { A: () => u });
 var i = n(627968),
     r = n(64700),
-    a = n(92674),
-    l = n(311907),
+    l = n(563495),
+    a = n(311907),
     s = n(397927),
     o = n(775602),
-    d = n(330640);
+    d = n(719990);
 let c = { mass: 1, tension: 600, friction: 60, clamp: !0 },
     u = function (e) {
         let { animate: t, state: n, cleanUp: u, children: A } = e,
-            h = (0, l.bG)([o.A], () => o.A.useReducedMotion),
+            h = (0, a.bG)([o.A], () => o.A.useReducedMotion),
             _ = r.useMemo(
                 () =>
                     !1 === t || h
@@ -27,5 +27,5 @@ let c = { mass: 1, tension: 600, friction: 60, clamp: !0 },
                 [t, u, h, n],
             ),
             m = (0, s.zhh)(_);
-        return (0, i.jsx)(a.animated.div, { style: m, className: d.Hp, children: A });
+        return (0, i.jsx)(l.animated.div, { style: m, className: d.Hp, children: A });
     };

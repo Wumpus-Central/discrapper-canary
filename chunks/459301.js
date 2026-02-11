@@ -19,18 +19,18 @@ var n = i(627968),
     C = i(236698),
     O = i(976860),
     L = i(392943),
-    R = i(954571),
-    b = i(12901),
-    D = i(715999),
+    b = i(954571),
+    D = i(12901),
+    R = i(715999),
     m = i(934370),
     p = i(450987),
-    P = i(623375),
-    G = i(652215),
+    y = i(623375),
+    P = i(652215),
     v = i(788868),
-    f = i(985018),
-    V = i(895431),
-    h = i(458017),
-    y = i(120499),
+    G = i(985018),
+    f = i(215765),
+    V = i(42299),
+    h = i(120499),
     U = i(684399),
     M = i(446115);
 let X = () => {
@@ -38,26 +38,26 @@ let X = () => {
             { analyticsLocations: e } = (0, A.Ay)(T.A.CF_WARP_SETTINGS);
         return (
             (0, l.useEffect)(() => {
-                R.default.track(G.HAw.PREMIUM_UPSELL_VIEWED, { type: v.e.PRIVACY_PERK_SETTINGS, location_stack: e });
+                b.default.track(P.HAw.PREMIUM_UPSELL_VIEWED, { type: v.e.PRIVACY_PERK_SETTINGS, location_stack: e });
             }, [e]),
             (0, n.jsxs)("div", {
-                className: h.V1,
+                className: V.V1,
                 children: [
                     (0, n.jsxs)(r.hLv, {
                         color: "pink",
                         children: [
                             (0, n.jsx)("div", {
-                                className: h.N1,
+                                className: V.N1,
                                 children: (0, n.jsxs)("div", {
-                                    className: h.wx,
+                                    className: V.wx,
                                     children: [
                                         (0, n.jsxs)("div", {
-                                            className: h.QF,
+                                            className: V.QF,
                                             children: [
                                                 (0, n.jsx)(L.A, { color: t ? "black" : "white" }),
-                                                (0, n.jsx)("div", { className: h.zN }),
+                                                (0, n.jsx)("div", { className: V.zN }),
                                                 (0, n.jsx)("img", {
-                                                    src: t ? U : y,
+                                                    src: t ? U : h,
                                                     alt: "Cloudflare",
                                                     width: 103,
                                                     height: 15,
@@ -69,20 +69,20 @@ let X = () => {
                                 }),
                             }),
                             (0, n.jsxs)("div", {
-                                className: h.hQ,
+                                className: V.hQ,
                                 children: [
                                     (0, n.jsx)("img", { src: M, width: "100", alt: "Private browsing perk logo" }),
                                     (0, n.jsxs)("div", {
-                                        className: h.Qs,
-                                        children: [(0, n.jsx)(m.F, {}), (0, n.jsx)(D.q, {})],
+                                        className: V.Qs,
+                                        children: [(0, n.jsx)(m.F, {}), (0, n.jsx)(R.q, {})],
                                     }),
-                                    (0, n.jsx)("div", { className: h.yP }),
-                                    (0, n.jsx)("div", { className: h.OQ, children: (0, n.jsx)(x, {}) }),
+                                    (0, n.jsx)("div", { className: V.yP }),
+                                    (0, n.jsx)("div", { className: V.OQ, children: (0, n.jsx)(x, {}) }),
                                 ],
                             }),
                         ],
                     }),
-                    (0, n.jsx)(P.u, {}),
+                    (0, n.jsx)(y.u, {}),
                 ],
             })
         );
@@ -110,10 +110,10 @@ let X = () => {
             });
         if (!u)
             return (0, n.jsxs)("div", {
-                className: h._u,
+                className: V._u,
                 children: [
                     (0, n.jsx)(S.A, {
-                        buttonTextOverride: f.intl.string(f.t["8x0jKT"]),
+                        buttonTextOverride: G.intl.string(G.t["8x0jKT"]),
                         subscriptionTier: v.pe.TIER_2,
                         fullWidth: !0,
                         size: "sm",
@@ -124,10 +124,10 @@ let X = () => {
                     }),
                     (0, n.jsx)(a.$nd, {
                         variant: "secondary",
-                        text: f.intl.string(f.t.ZnqyZ2),
+                        text: G.intl.string(G.t.ZnqyZ2),
                         size: "sm",
                         onClick: () => {
-                            (0, b.default)(), (0, O.pX)(G.BVt.APPLICATION_STORE), (d.current = !0);
+                            (0, D.default)(), (0, O.pX)(P.BVt.APPLICATION_STORE), (d.current = !0);
                         },
                     }),
                 ],
@@ -144,18 +144,18 @@ let X = () => {
                 return (0, n.jsx)(a.$nd, {
                     variant: "primary",
                     onClick: () => {
-                        (0, o.u)(G.HAw.NITRO_WARP_CTA_CLICKED, { is_enable_warp: !0 }),
+                        (0, o.u)(P.HAw.NITRO_WARP_CTA_CLICKED, { is_enable_warp: !0 }),
                             i(g.Lk.READY_FOR_LICENSE),
                             (d.current = !0);
                     },
-                    text: f.intl.string(V.default.J09UWz),
+                    text: G.intl.string(f.default.J09UWz),
                 });
             case g.Lk.INSTALLING:
             case g.Lk.READY_FOR_LICENSE:
             case g.Lk.WAITING_FOR_TERMS:
             case g.Lk.INSTALLING_TIMEOUT:
                 return (0, n.jsx)("div", {
-                    className: h.u1,
+                    className: V.u1,
                     children: (0, n.jsx)(r.y$y, { type: r.tVU.SPINNING_CIRCLE }),
                 });
         }

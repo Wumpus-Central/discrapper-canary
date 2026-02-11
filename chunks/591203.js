@@ -1,4 +1,4 @@
-i.d(e, { L: () => D });
+i.d(e, { L: () => R });
 var n = i(627968),
     l = i(64700),
     s = i(311907),
@@ -19,18 +19,18 @@ var n = i(627968),
     C = i(652215);
 i(980504);
 var O = i(985018),
-    L = i(17786);
-function R(t) {
+    L = i(972628);
+function b(t) {
     return (0, s.bG)([S.A], () => {
         if (null == t) return null;
         let { guildId: e, soundId: i } = t;
         return S.A.getSound("0" === e ? "0" : e, i);
     });
 }
-function b(t) {
+function D(t) {
     let { guildId: e } = t,
         i = (0, s.bG)([N.A], () => N.A.settings.guilds?.guilds?.[e]?.joinSound),
-        l = R(i);
+        l = b(i);
     if (null == i || null == l) return null;
     let { emojiId: u, emojiName: o } = l,
         d = null != u || null != o;
@@ -44,13 +44,13 @@ function b(t) {
         ],
     });
 }
-let D = (0, T.E2)(I.X.ENTRANCE_SOUNDS_SETTING, {
+let R = (0, T.E2)(I.X.ENTRANCE_SOUNDS_SETTING, {
     useSearchTerms: () => [O.intl.string(O.t.nzUc3B)],
     Component: function () {
         let { analyticsLocations: t } = (0, u.Ay)(),
             [e, i] = l.useState("0"),
             a = (0, g.mz)(e),
-            T = R(a),
+            T = b(a),
             I = a?.type === g.PP.GLOBAL,
             N = (0, s.bG)([S.A], () => S.A.hasFetchedAllSounds()) && null != a && null == T;
         l.useEffect(() => {
@@ -59,9 +59,9 @@ let D = (0, T.E2)(I.X.ENTRANCE_SOUNDS_SETTING, {
             l.useEffect(() => {
                 (0, A.E7)();
             }, []);
-        let D = l.useCallback((t, e) => {
+        let R = l.useCallback((t, e) => {
             let { inDropdown: i } = e;
-            return null == t ? null : i ? (0, n.jsx)(b, { guildId: t.value }) : null;
+            return null == t ? null : i ? (0, n.jsx)(D, { guildId: t.value }) : null;
         }, []);
         return (0, n.jsxs)(r.nVY, {
             label: O.intl.string(O.t.nzUc3B),
@@ -74,7 +74,7 @@ let D = (0, T.E2)(I.X.ENTRANCE_SOUNDS_SETTING, {
                     onChange: (t) => {
                         i(null == t ? "0" : t.id);
                     },
-                    renderOptionSuffix: D,
+                    renderOptionSuffix: R,
                     hideDivider: !0,
                 }),
                 (0, n.jsxs)(d.A, {

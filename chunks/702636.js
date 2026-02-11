@@ -1,0 +1,15 @@
+t.exports = {
+    yl: "modal__45314",
+    wx: "header__45314",
+    O_: "headerIconContainer__45314",
+    q9: "acronym__45314",
+    TK: "headerText__45314",
+    tp: "table__45314",
+    CZ: "tableContainer__45314",
+    qd: "tableHeader__45314",
+    lM: "permissionsTable__45314",
+    ce: "permissionRow__45314",
+    xE: "bullet__45314",
+    dT: "bulletWarning__45314 bullet__45314",
+    qr: "footer__45314",
+};

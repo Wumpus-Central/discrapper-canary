@@ -1,7 +1,7 @@
 n.d(t, { A: () => h });
 var l = n(627968),
     r = n(64700),
-    a = n(92674),
+    a = n(563495),
     i = n(66455),
     s = n(311907),
     o = n(397927),
@@ -10,8 +10,8 @@ var l = n(627968),
     c = n(761640),
     _ = n(706752),
     d = n(290294),
-    g = n(420775),
-    A = n(684968),
+    A = n(420775),
+    g = n(684968),
     T = n(486974),
     I = n(652215);
 function N(e, t) {
@@ -33,9 +33,9 @@ function h(e) {
     let { userId: t, guildId: n, onClose: h, analyticsLocation: m, className: S } = e,
         G = (0, s.bG)([c.Ay], () => c.Ay.getGuildSidebarState(n), [n]),
         O = G?.details.modViewPanel ?? T.g.INFO,
-        C = (0, E.A)(t),
-        R = null == O ? null : O === T.g.INFO ? "backwards" : "forwards",
-        L = (0, i.A)(R),
+        R = (0, E.A)(t),
+        C = null == O ? null : O === T.g.INFO ? "backwards" : "forwards",
+        L = (0, i.A)(C),
         { reducedMotion: D } = r.useContext(o.CZY),
         f = r.useCallback(
             (e) => {
@@ -57,7 +57,7 @@ function h(e) {
     let M = (0, o.pnh)(
         O,
         { value: 0, from: { value: 1 }, enter: { value: 0 }, leave: { value: -1 } },
-        C !== t ? "animate-never" : "animate-always",
+        R !== t ? "animate-never" : "animate-always",
     );
     return (0, l.jsx)(a.animated.div, {
         style: { position: "relative", height: "100%", flex: 1, overflow: "hidden" },
@@ -82,14 +82,14 @@ function h(e) {
                             case T.g.INFO:
                                 return (0, l.jsx)(d.A, { userId: t, guildId: n, onNavigate: f, className: S });
                             case T.g.MESSAGE_HISTORY:
-                                return (0, l.jsx)(g.A, {
+                                return (0, l.jsx)(A.A, {
                                     userId: t,
                                     guildId: n,
                                     onNavigate: () => f(T.g.INFO),
                                     className: S,
                                 });
                             case T.g.PERMISSIONS:
-                                return (0, l.jsx)(A.A, {
+                                return (0, l.jsx)(g.A, {
                                     userId: t,
                                     guildId: n,
                                     onNavigate: () => f(T.g.INFO),

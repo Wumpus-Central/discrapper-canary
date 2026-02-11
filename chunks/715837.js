@@ -2,8 +2,8 @@ n.d(t, { A: () => g });
 var i = n(627968);
 n(64700);
 var r = n(397927),
-    a = n(599941),
-    l = n(922975),
+    l = n(599941),
+    a = n(922975),
     s = n(700206),
     o = n(950344),
     d = n(815332),
@@ -13,10 +13,10 @@ var r = n(397927),
     h = n(406140),
     _ = n(652215),
     m = n(985018),
-    p = n(510465);
+    p = n(43955);
 let g = (e) => {
     let { guild: t } = e,
-        n = (0, a.uk)(t.id)[0];
+        n = (0, l.uk)(t.id)[0];
     (0, o.A)({
         guildId: t.id,
         groupListingId: n?.id,
@@ -24,14 +24,14 @@ let g = (e) => {
         relevantSubscriptionListingIds: n?.subscription_listings_ids,
     });
     let { activeSubscription: g } = (0, s.A)(n?.id),
-        E = (0, a.Tq)(t.id),
-        f = E?.description,
-        { editStateIds: I } = l.d0(n?.id ?? null, t.id);
+        E = (0, l.Tq)(t.id),
+        I = E?.description,
+        { editStateIds: f } = a.d0(n?.id ?? null, t.id);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(h.A, {
                 title: m.intl.format(m.t["rm+ojA"], { serverName: t.name }),
-                description: f ?? null,
+                description: I ?? null,
                 coverImageAsset: E?.cover_image_asset ?? null,
                 guild: t,
                 children: [
@@ -42,7 +42,7 @@ let g = (e) => {
             (0, i.jsx)(r.Fmo, {
                 children: (0, i.jsx)(u.A, {
                     guildId: t.id,
-                    children: I.map((e) =>
+                    children: f.map((e) =>
                         (0, i.jsx)(
                             A.A,
                             {

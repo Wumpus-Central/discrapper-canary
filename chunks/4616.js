@@ -1,9 +1,9 @@
 n.d(t, { A: () => d });
 var i = n(627968),
     r = n(64700),
-    a = n(503698),
-    l = n.n(a),
-    s = n(397086);
+    l = n(503698),
+    a = n.n(l),
+    s = n(64988);
 class o extends r.PureComponent {
     unmounting = !1;
     state = { loaded: !1 };
@@ -29,15 +29,15 @@ class o extends r.PureComponent {
         this.unmounting = !0;
     }
     render() {
-        let { className: e, src: t, alt: n, width: r, height: a, onLoad: o, style: d, imageClassName: c } = this.props,
+        let { className: e, src: t, alt: n, width: r, height: l, onLoad: o, style: d, imageClassName: c } = this.props,
             { loaded: u } = this.state;
         return (0, i.jsx)("div", {
             className: e,
-            style: { ...d, width: r, height: a },
+            style: { ...d, width: r, height: l },
             children: (0, i.jsx)("img", {
-                className: l()(s.S, c, { [s.K]: u }),
+                className: a()(s.S, c, { [s.K]: u }),
                 width: r,
-                height: a,
+                height: l,
                 src: t,
                 alt: n,
                 onLoad: o,

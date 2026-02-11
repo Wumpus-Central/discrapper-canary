@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => m, e: () => h });
+n.d(t, { A: () => g, e: () => p });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -10,8 +10,8 @@ var r = n(627968),
     c = n(682718),
     d = n(453771),
     _ = n(985018),
-    f = n(202494);
-let p = (e) => {
+    f = n(13600);
+let h = (e) => {
     let { filename: t } = e,
         i = (0, d.GD)(t),
         a = n(714694)(`./icon-file-${i}.svg`);
@@ -22,7 +22,7 @@ let p = (e) => {
         title: i,
     });
 };
-function h(e) {
+function p(e) {
     let { channelId: t, file: n } = e,
         a = i.useMemo(() => {
             let e = n.items;
@@ -42,7 +42,7 @@ function h(e) {
         children: (0, r.jsxs)("div", {
             className: f.NJ,
             children: [
-                (0, r.jsx)(p, { filename: a }),
+                (0, r.jsx)(h, { filename: a }),
                 (0, r.jsxs)("div", {
                     className: f.Jg,
                     children: [
@@ -74,7 +74,7 @@ function h(e) {
         }),
     });
 }
-let m = (e) => {
+let g = (e) => {
     let { className: t, url: n, fileName: i, fileSize: a, onClick: o, onContextMenu: c, renderAdjacentContent: d } = e;
     return (0, r.jsxs)("div", {
         className: s()(f.Ig, t),
@@ -82,7 +82,7 @@ let m = (e) => {
             (0, r.jsxs)("div", {
                 className: f.NJ,
                 children: [
-                    (0, r.jsx)(p, { filename: i }),
+                    (0, r.jsx)(h, { filename: i }),
                     (0, r.jsxs)("div", {
                         className: f.Jg,
                         children: [

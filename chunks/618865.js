@@ -5,28 +5,28 @@ var r = n(627968),
     a = n(397927),
     s = n(716965),
     o = n(985018),
-    l = n(80739);
+    l = n(740837);
 let u = 5;
 function c(e) {
     let { selectedGuildId: t, selectedChannelId: n, onChannelChange: c, error: d } = e,
         [_, f] = i.useState(null),
-        p = i.useRef(!1);
+        h = i.useRef(!1);
     if (
         (i.useEffect(() => {
             async function e(e) {
                 let n = await (0, s.$Q)(e);
                 t === e &&
-                    (n.sort((e, t) => e.name.localeCompare(t.name)), f({ guildId: e, channels: n }), (p.current = !0));
+                    (n.sort((e, t) => e.name.localeCompare(t.name)), f({ guildId: e, channels: n }), (h.current = !0));
             }
             f(null), null == t ? c(null) : e(t);
         }, [c, t]),
         i.useEffect(() => {
-            !p.current || (null == _ ? null != n && c(null) : _.channels.some((e) => e.id === n) || c(null));
+            !h.current || (null == _ ? null != n && c(null) : _.channels.some((e) => e.id === n) || c(null));
         }, [_, c, n, t]),
         null == t)
     )
         return null;
-    let h =
+    let p =
         null == _ || _.guildId !== t ? [] : (_?.channels ?? []).map((e) => ({ id: e.id, value: e.id, label: e.name }));
     return (0, r.jsx)("div", {
         className: l.g,
@@ -38,7 +38,7 @@ function c(e) {
             errorMessage: d,
             onSelectionChange: c,
             placeholder: o.intl.string(o.t["Re/64R"]),
-            options: h,
+            options: p,
             value: n ?? void 0,
         }),
     });

@@ -3,7 +3,7 @@ var i = n(627968),
     l = n(64700),
     a = n(503698),
     s = n.n(a),
-    r = n(92674),
+    r = n(563495),
     o = n(397927),
     d = n(475743),
     u = n(652896),
@@ -14,7 +14,7 @@ var i = n(627968),
     g = n(916494),
     p = n(897720),
     f = n(652215),
-    _ = n(578950);
+    _ = n(653300);
 let E = { mass: 1, tension: 250, friction: 18, clamp: !0 },
     x = l.memo(function (e) {
         let {
@@ -26,8 +26,8 @@ let E = { mass: 1, tension: 250, friction: 18, clamp: !0 },
                 activeStreams: I,
                 streamParticipants: T,
                 participantsVersion: C,
-                pinned: v,
-                padding: y,
+                pinned: y,
+                padding: v,
             } = e,
             N = T.map((e) => ({
                 participant: e,
@@ -36,29 +36,29 @@ let E = { mass: 1, tension: 250, friction: 18, clamp: !0 },
                 height: a,
                 locked: S,
                 widgetId: t,
-                pinned: v,
+                pinned: y,
             })),
             O = (0, d.A)(n),
-            b = (0, d.A)(S),
-            j = x === p.IV.VERTICAL,
-            w = S || b !== S || O !== n,
+            j = (0, d.A)(S),
+            b = x === p.IV.VERTICAL,
+            w = S || j !== S || O !== n,
             L = l.useMemo(() => {
                 let e = 0,
                     t = 0;
-                return j
-                    ? N.map((t, n) => ({ ...t, y: (e += t.height + (n > 0 ? y : 0)) - t.height, x: 0 }))
-                    : N.map((e, n) => ({ ...e, x: (t += e.width + (n > 0 ? y : 0)) - e.width, y: 0 }));
-            }, [N, y, j]),
+                return b
+                    ? N.map((t, n) => ({ ...t, y: (e += t.height + (n > 0 ? v : 0)) - t.height, x: 0 }))
+                    : N.map((e, n) => ({ ...e, x: (t += e.width + (n > 0 ? v : 0)) - e.width, y: 0 }));
+            }, [N, v, b]),
             R = l.useMemo(
                 () =>
                     0 === L.length
                         ? (0, g.uc)(m.Ub)
-                        : L.reduce((e, t) => e + t.height, 0) + (j ? y * (L.length - 1) : 0),
-                [L, j, y],
+                        : L.reduce((e, t) => e + t.height, 0) + (b ? v * (L.length - 1) : 0),
+                [L, b, v],
             ),
             D = l.useMemo(
-                () => (0 === L.length ? m.Ub : L.reduce((e, t) => e + t.width, 0) + (j ? 0 : y * (L.length - 1))),
-                [L, j, y],
+                () => (0 === L.length ? m.Ub : L.reduce((e, t) => e + t.width, 0) + (b ? 0 : v * (L.length - 1))),
+                [L, b, v],
             ),
             M = (0, o.pnh)(
                 L,
@@ -92,8 +92,8 @@ let E = { mass: 1, tension: 250, friction: 18, clamp: !0 },
                     });
             }, [k, z]),
             (0, i.jsx)("div", {
-                className: s()({ [_.UT]: !0, [_.Vd]: j, [_.xM]: !j }),
-                style: j ? { height: R } : { width: D },
+                className: s()({ [_.UT]: !0, [_.Vd]: b, [_.xM]: !b }),
+                style: b ? { height: R } : { width: D },
                 children: M((e, t, l, s) =>
                     (0, i.jsx)(r.animated.div, {
                         className: _.ux,

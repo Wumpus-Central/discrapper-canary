@@ -2,15 +2,15 @@
 n.d(t, { A: () => L });
 var i = n(627968),
     s = n(64700),
-    l = n(92674),
+    l = n(563495),
     r = n(311907),
     a = n(827734),
     o = n(73939),
     d = n(582754),
     c = n(397927),
     u = n(736653),
-    m = n(58149),
-    g = n(954571),
+    g = n(58149),
+    m = n(954571),
     x = n(203982),
     h = n(555337),
     _ = n(418448),
@@ -29,7 +29,7 @@ var i = n(627968),
     y = n(133154),
     R = n(652215),
     O = n(985018),
-    G = n(484729);
+    G = n(536451);
 function L() {
     let e = (0, r.bG)([h.A], () => h.A.getGuild());
     return null == e ? null : (0, i.jsx)(D, { guild: e });
@@ -97,8 +97,8 @@ function D(e) {
             return !0;
         },
         J = async () => {
-            g.default.track(R.HAw.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
-                ...(0, m.H$)(h),
+            m.default.track(R.HAw.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+                ...(0, g.H$)(h),
                 step: b.Hy[L],
                 back: !1,
                 skip: !M,
@@ -107,8 +107,8 @@ function D(e) {
                 (await X()) && (0, A._k)(h, L);
         },
         Z = async () => {
-            g.default.track(R.HAw.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
-                ...(0, m.H$)(h),
+            m.default.track(R.HAw.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+                ...(0, g.H$)(h),
                 step: b.Hy[L],
                 back: !0,
                 skip: !1,

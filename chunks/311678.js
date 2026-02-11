@@ -4,43 +4,43 @@ var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(92674),
+    o = n(563495),
     l = n(397927),
     u = n(765671),
-    c = n(342860);
+    c = n(674062);
 let d = 100;
 function _(e) {
     let { children: t, className: n, collapsibleContent: a, isExpanded: _ } = e,
-        [f, p] = i.useState(!1),
-        [h, m] = i.useState(!0),
-        [g, E] = i.useState(!1),
-        A = _ ?? f,
-        { ref: I, height: T = 0 } = (0, u.Ay)(),
-        { ref: y, height: S = 0 } = (0, u.Ay)(),
-        v = (0, l.zhh)(
-            { height: A ? T + S : S, config: o.config.stiff, onRest: () => E(!0) },
-            h ? "animate-never" : "respect-motion-settings",
+        [f, h] = i.useState(!1),
+        [p, g] = i.useState(!0),
+        [E, A] = i.useState(!1),
+        I = _ ?? f,
+        { ref: T, height: y = 0 } = (0, u.Ay)(),
+        { ref: S, height: v = 0 } = (0, u.Ay)(),
+        C = (0, l.zhh)(
+            { height: I ? y + v : v, config: o.config.stiff, onRest: () => A(!0) },
+            p ? "animate-never" : "respect-motion-settings",
         ),
-        C = i.useCallback(() => {
-            p(!f);
-        }, [f, p]);
+        b = i.useCallback(() => {
+            h(!f);
+        }, [f, h]);
     return (
         i.useLayoutEffect(() => {
             let e = setTimeout(() => {
-                m(!1);
+                g(!1);
             }, d);
             return () => clearTimeout(e);
         }, []),
         (0, r.jsx)("div", {
-            className: s()(c.uR, { [c.$M]: A }, n),
+            className: s()(c.uR, { [c.$M]: I }, n),
             children: (0, r.jsxs)(o.animated.div, {
-                className: s()(c.N0, { [c.Mm]: A && g }),
-                style: v,
+                className: s()(c.N0, { [c.Mm]: I && E }),
+                style: C,
                 children: [
-                    (0, r.jsx)("div", { ref: y, className: s()(c.wx, { [c.$M]: A }), children: t({ onClick: C }) }),
+                    (0, r.jsx)("div", { ref: S, className: s()(c.wx, { [c.$M]: I }), children: t({ onClick: b }) }),
                     (0, r.jsx)(l.M1G, {
-                        enabled: !A,
-                        children: (0, r.jsx)("div", { ref: I, "aria-hidden": !A, children: a }),
+                        enabled: !I,
+                        children: (0, r.jsx)("div", { ref: T, "aria-hidden": !I, children: a }),
                     }),
                 ],
             }),

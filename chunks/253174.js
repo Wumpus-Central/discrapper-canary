@@ -4,7 +4,7 @@ var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(985018),
-    s = n(119636);
+    s = n(10758);
 let o = function () {
     return (0, r.jsx)(i.oyn, {
         size: "md",

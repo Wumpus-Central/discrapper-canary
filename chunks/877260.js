@@ -1,25 +1,25 @@
-n.d(t, { L: () => p }), n(321073);
-var r = n(627968),
-    a = n(64700),
-    l = n(503698),
-    i = n.n(l),
-    s = n(837381),
-    o = n(607399),
+n.d(t, { L: () => h }), n(321073);
+var a = n(627968),
+    r = n(64700),
+    i = n(503698),
+    o = n.n(i),
+    l = n(837381),
+    s = n(607399),
     c = n(397927),
-    u = n(775602),
-    d = n(928039),
+    d = n(775602),
+    u = n(928039),
     _ = n(379848),
-    m = n(97469),
-    x = n(933297),
-    h = n(894858),
-    y = n(188180),
-    g = n(985018),
-    b = n(658646);
-function p(e) {
-    let { root: t, footer: n, onClose: l, emptyState: y, searchQuery: p, onSearchChange: j } = e,
-        A = h.A.useField("showNavigationMobile"),
-        C = a.useRef(null),
-        S = a.useMemo(() => {
+    g = n(97469),
+    m = n(933297),
+    b = n(894858),
+    f = n(188180),
+    p = n(985018),
+    x = n(45272);
+function h(e) {
+    let { root: t, footer: n, onClose: i, emptyState: f, searchQuery: h, onSearchChange: C } = e,
+        S = b.A.useField("showNavigationMobile"),
+        v = r.useRef(null),
+        T = r.useMemo(() => {
             let e = [];
             return (
                 t.layout.forEach((t) => {
@@ -27,8 +27,8 @@ function p(e) {
                     n.forEach((t) => {
                         if (null != t.trailing)
                             switch (t.trailing.type) {
-                                case x.Si.BADGE_NEW:
-                                case x.Si.STRONGLY_DISCOURAGED_CUSTOM:
+                                case m.Si.BADGE_NEW:
+                                case m.Si.STRONGLY_DISCOURAGED_CUSTOM:
                                     t.trailing.getDismissibleContentTypes?.()?.forEach((t) => {
                                         e.push(t);
                                     });
@@ -38,7 +38,7 @@ function p(e) {
                 e
             );
         }, [t.layout]),
-        [N, T] = a.useMemo(() => {
+        [j, k] = r.useMemo(() => {
             let e = [],
                 n = [];
             return (
@@ -48,83 +48,83 @@ function p(e) {
                 [e, n]
             );
         }, [t.layout]),
-        k = (0, m.NC)(),
-        E = (0, d.A)("settings-sidebar", C);
+        N = (0, g.NC)(),
+        I = (0, u.A)("settings-sidebar", v);
     return (
-        a.useEffect(() => {
-            let e = h.A.subscribe(
+        r.useEffect(() => {
+            let e = b.A.subscribe(
                 (e) => {
                     let { currentPanelKey: t } = e;
                     return t;
                 },
                 (e) => {
-                    if (null == C.current || null == e) return;
-                    let t = C.current.getScrollerNode()?.querySelector(`[data-settings-sidebar-item="${e}"]`);
+                    if (null == v.current || null == e) return;
+                    let t = v.current.getScrollerNode()?.querySelector(`[data-settings-sidebar-item="${e}"]`);
                     if (null == t) return;
-                    let n = h.A.getField("disableSidebarScrollAnimate");
+                    let n = b.A.getField("disableSidebarScrollAnimate");
                     requestAnimationFrame(() => {
-                        C.current?.scrollIntoViewNode({ node: t, padding: 8, animate: !n && !u.A.useReducedMotion });
+                        v.current?.scrollIntoViewNode({ node: t, padding: 8, animate: !n && !d.A.useReducedMotion });
                     });
                 },
                 { equalityFn: (e, t) => e === t, fireImmediately: !0 },
             );
             return () => {
-                e(), h.A.setState({ disableSidebarScrollAnimate: !0 });
+                e(), b.A.setState({ disableSidebarScrollAnimate: !0 });
             };
         }, []),
-        (0, r.jsx)(c.NPJ, {
-            theme: k,
+        (0, a.jsx)(c.NPJ, {
+            theme: N,
             children: (e) =>
-                (0, r.jsx)(_.Ay, {
-                    contentTypes: S,
+                (0, a.jsx)(_.Ay, {
+                    contentTypes: T,
                     children: (t) => {
-                        let { visibleContent: a } = t;
-                        return (0, r.jsxs)("div", {
-                            className: i()(b.pz, e, { [b.Hw]: o.Fr, [b.n7]: A }),
+                        let { visibleContent: r } = t;
+                        return (0, a.jsxs)("div", {
+                            className: o()(x.pz, e, { [x.Hw]: s.Fr, [x.n7]: S }),
                             children: [
-                                (0, r.jsxs)("div", {
-                                    className: b.gM,
+                                (0, a.jsxs)("div", {
+                                    className: x.gM,
                                     children: [
-                                        o.Fr &&
-                                            (0, r.jsx)("div", {
-                                                className: b.hg,
-                                                children: (0, r.jsx)(c.K0, {
+                                        s.Fr &&
+                                            (0, a.jsx)("div", {
+                                                className: x.hg,
+                                                children: (0, a.jsx)(c.K0, {
                                                     icon: c.d$L,
-                                                    onClick: l,
+                                                    onClick: i,
                                                     variant: "icon-only",
                                                     size: "sm",
-                                                    "aria-label": g.intl.string(g.t.cpT0Cq),
+                                                    "aria-label": p.intl.string(p.t.cpT0Cq),
                                                 }),
                                             }),
-                                        (0, r.jsx)("div", {
-                                            children: N.map((e) =>
-                                                (0, r.jsx)(f, { section: e, visibleContent: a, hoisted: !0 }, e.key),
+                                        (0, a.jsx)("div", {
+                                            children: j.map((e) =>
+                                                (0, a.jsx)(y, { section: e, visibleContent: r, hoisted: !0 }, e.key),
                                             ),
                                         }),
-                                        null != p && null != j && (0, r.jsx)(v, { searchQuery: p, onSearchChange: j }),
-                                        null != y && 0 === T.length && (0, r.jsx)(y, {}),
+                                        null != h && null != C && (0, a.jsx)(A, { searchQuery: h, onSearchChange: C }),
+                                        null != f && 0 === k.length && (0, a.jsx)(f, {}),
                                     ],
                                 }),
-                                (0, r.jsx)(s.hD, {
-                                    navigator: E,
-                                    children: (0, r.jsx)(s.PR, {
+                                (0, a.jsx)(l.hD, {
+                                    navigator: I,
+                                    children: (0, a.jsx)(l.PR, {
                                         children: (e) => {
-                                            let { ref: t, ...l } = e;
-                                            return (0, r.jsxs)(c.ChK, {
+                                            let { ref: t, ...i } = e;
+                                            return (0, a.jsxs)(c.ChK, {
                                                 ref: (e) => {
-                                                    (C.current = e), (t.current = e?.getScrollerNode() ?? null);
+                                                    (v.current = e), (t.current = e?.getScrollerNode() ?? null);
                                                 },
-                                                className: b.Mt,
+                                                className: x.Mt,
                                                 fade: !0,
-                                                ...l,
+                                                ...i,
                                                 children: [
-                                                    (0, r.jsx)("nav", {
-                                                        className: b.C$,
-                                                        children: T.map((e) =>
-                                                            (0, r.jsx)(f, { section: e, visibleContent: a }, e.key),
+                                                    (0, a.jsx)("nav", {
+                                                        className: x.C$,
+                                                        children: k.map((e) =>
+                                                            (0, a.jsx)(y, { section: e, visibleContent: r }, e.key),
                                                         ),
                                                     }),
-                                                    null != n && (0, r.jsx)(n, {}),
+                                                    null != n && (0, a.jsx)(n, {}),
                                                 ],
                                             });
                                         },
@@ -137,34 +137,34 @@ function p(e) {
         })
     );
 }
-function f(e) {
-    let { section: t, visibleContent: n, hoisted: a = !1 } = e,
-        l = t.useTitle?.();
-    return (0, r.jsxs)("ul", {
-        className: b.uW,
-        "aria-label": l,
+function y(e) {
+    let { section: t, visibleContent: n, hoisted: r = !1 } = e,
+        i = t.useTitle?.();
+    return (0, a.jsxs)("ul", {
+        className: x.uW,
+        "aria-label": i,
         children: [
-            null != l &&
-                (0, r.jsx)("div", {
-                    className: b.a9,
-                    children: (0, r.jsx)(c.Heading, {
-                        className: b.Pf,
+            null != i &&
+                (0, a.jsx)("div", {
+                    className: x.a9,
+                    children: (0, a.jsx)(c.Heading, {
+                        className: x.Pf,
                         variant: "heading-sm/medium",
                         color: "text-muted",
-                        children: l,
+                        children: i,
                     }),
                 }),
-            t.layout.map((e) => (0, r.jsx)(y.X, { node: e, visibleContent: n, hoisted: a }, e.key)),
+            t.layout.map((e) => (0, a.jsx)(f.X, { node: e, visibleContent: n, hoisted: r }, e.key)),
         ],
     });
 }
-function v(e) {
+function A(e) {
     let { searchQuery: t, onSearchChange: n } = e,
-        l = a.useCallback(() => {
+        i = r.useCallback(() => {
             n("");
         }, [n]);
-    return (0, r.jsx)("div", {
-        className: b.PP,
-        children: (0, r.jsx)(c.IWV, { size: "md", query: t, onChange: n, onClear: l }),
+    return (0, a.jsx)("div", {
+        className: x.PP,
+        children: (0, a.jsx)(c.IWV, { size: "md", query: t, onChange: n, onClear: i }),
     });
 }

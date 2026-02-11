@@ -18,7 +18,7 @@ var i = n(627968),
     x = n(652215),
     E = n(172799),
     C = n(985018),
-    I = n(563111);
+    I = n(42441);
 function T(e) {
     let t,
         n,
@@ -30,21 +30,21 @@ function T(e) {
             onTransitionToInviteChannel: S,
             onAcceptInstantInvite: b,
         } = e,
-        y = v?.id,
-        j = (0, o.bG)([p.A], () => p.A.getGuildId()),
+        j = v?.id,
+        y = (0, o.bG)([p.A], () => p.A.getGuildId()),
         R = (0, o.bG)(
             [h.A],
-            () => (null != a && null != a.target_user ? h.A.getActiveStreamForUser(a.target_user.id, y) : null),
-            [a, y],
+            () => (null != a && null != a.target_user ? h.A.getActiveStreamForUser(a.target_user.id, j) : null),
+            [a, j],
         ),
         L = (0, o.bG)(
             [h.A],
-            () => (null != a && null != a.target_user ? h.A.getStreamForUser(a.target_user.id, y) : null),
-            [a, y],
+            () => (null != a && null != a.target_user ? h.A.getStreamForUser(a.target_user.id, j) : null),
+            [a, j],
         ),
         { analyticsLocations: M } = (0, u.Ay)(c.A.INVITE_EMBED),
         O = null != a && a.target_type === E.yV.STREAM && null != a.target_user && null != R,
-        P =
+        D =
             null != a &&
             null != L &&
             null != a.channel &&
@@ -52,8 +52,8 @@ function T(e) {
             L.channelId === a.channel.id &&
             L.guildId === a.guild.id;
     r()(null != a, "Invite cannot be null");
-    let { target_type: D, target_user: k } = a;
-    r()(D === E.yV.STREAM && null != k, "invalid streaming invite");
+    let { target_type: P, target_user: k } = a;
+    r()(P === E.yV.STREAM && null != k, "invalid streaming invite");
     let U = T === k.id,
         w = a.state === x.elq.ACCEPTING,
         G = l.useCallback(() => {
@@ -69,14 +69,14 @@ function T(e) {
     let F = null != a.channel ? (0, _.OY)(a.channel) : null,
         H = A.Ay.getName(k),
         V = "active";
-    B && !P
+    B && !D
         ? (n = U ? C.intl.string(C.t.oBLoZJ) : C.intl.formatToPlainString(C.t["0QJmA+"], { name: H }))
         : ((t = C.intl.string(C.t.I6JG46)),
           (V = "active"),
           O && ((t = C.intl.string(C.t.Q1W99y)), (V = "secondary")),
           (n = U ? C.intl.string(C.t["4hyaHu"]) : C.intl.formatToPlainString(C.t.QmlLEq, { name: H })));
     let z =
-        j === v.id && null != F
+        y === v.id && null != F
             ? (0, i.jsx)(m.A.Channel, { channel: F })
             : C.intl.formatToPlainString(C.t.u0vaDE, { guildName: v.name });
     return (0, i.jsxs)(m.A, {
@@ -87,11 +87,11 @@ function T(e) {
                     (0, i.jsxs)("div", {
                         className: I.iH,
                         children: [
-                            (0, i.jsx)(m.A.Icon, { guild: v, onClick: B && P ? G : void 0 }),
-                            (0, i.jsx)(m.A.Info, { title: n, onClick: B && P ? G : void 0, children: z }),
+                            (0, i.jsx)(m.A.Icon, { guild: v, onClick: B && D ? G : void 0 }),
+                            (0, i.jsx)(m.A.Info, { title: n, onClick: B && D ? G : void 0, children: z }),
                         ],
                     }),
-                    P ? (0, i.jsx)(s.$nd, { onClick: G, loading: w, disabled: O, variant: V, text: t }) : null,
+                    D ? (0, i.jsx)(s.$nd, { onClick: G, loading: w, disabled: O, variant: V, text: t }) : null,
                 ],
             }),
         ],

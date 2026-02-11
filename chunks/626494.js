@@ -4,10 +4,10 @@ var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(92674),
+    o = n(563495),
     l = n(397927),
     u = n(475743),
-    c = n(971020);
+    c = n(701486);
 let d = 8;
 function _() {
     let e = (0, l.rdh)(l.LU0.colors.MOBILE_BACKGROUND_SCRIM_OPAQUE).spring({ opacity: 0.25 }),
@@ -29,34 +29,34 @@ let f = i.forwardRef(function (e, t) {
             backdropInstant: i = !1,
             zIndexBoost: a = 0,
             LayerComponent: f,
-            isVisible: p,
-            onClose: h,
+            isVisible: h,
+            onClose: p,
         } = e,
-        m = _()[n],
-        g = (0, l.rdh)(l.LU0.colors.MOBILE_BACKGROUND_SCRIM_OPAQUE).spring({ opacity: 0 }),
-        E = n === l.F2Z.BLUR ? d : 0,
-        A = { background: g, backdropFilter: "blur(0px)" },
-        I = { background: m, backdropFilter: `blur(${E}px)` },
-        T = (0, u.A)(i),
-        y = (0, l.pnh)(
-            p,
+        g = _()[n],
+        E = (0, l.rdh)(l.LU0.colors.MOBILE_BACKGROUND_SCRIM_OPAQUE).spring({ opacity: 0 }),
+        A = n === l.F2Z.BLUR ? d : 0,
+        I = { background: E, backdropFilter: "blur(0px)" },
+        T = { background: g, backdropFilter: `blur(${A}px)` },
+        y = (0, u.A)(i),
+        S = (0, l.pnh)(
+            h,
             {
                 keys: (e) => (e ? "backdrop" : "empty"),
-                config: { duration: i || T ? 0 : 200 },
-                from: A,
-                enter: I,
-                leave: A,
+                config: { duration: i || y ? 0 : 200 },
+                from: I,
+                enter: T,
+                leave: I,
             },
             "animate-always",
         );
     if (null == f) {
         let e = { zIndex: 1e3 + a };
-        return y((t, n) =>
-            n ? (0, r.jsx)(o.animated.div, { className: c.t, style: { ...t, ...e }, onClick: h }) : null,
+        return S((t, n) =>
+            n ? (0, r.jsx)(o.animated.div, { className: c.t, style: { ...t, ...e }, onClick: p }) : null,
         );
     }
     return (0, r.jsx)(f, {
-        children: y((e, t) =>
+        children: S((e, t) =>
             t
                 ? (0, r.jsx)(o.animated.div, {
                       className: s()(c.t, c.o),
@@ -67,7 +67,7 @@ let f = i.forwardRef(function (e, t) {
                                         "radial-gradient(96.68% 96.68% at 50.04% 3.32%, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.00) 100%)",
                                 }
                               : e,
-                      onClick: h,
+                      onClick: p,
                   })
                 : null,
         ),

@@ -4,17 +4,17 @@ var i = n(627968),
     s = n(64700),
     l = n(503698),
     r = n.n(l),
-    a = n(92674),
+    a = n(563495),
     o = n(311907),
     d = n(397927),
     c = n(474001),
     u = n(309326),
-    m = n(580043),
-    g = n(71393),
+    g = n(580043),
+    m = n(71393),
     x = n(213733),
     h = n(652215),
     _ = n(985018),
-    A = n(306769);
+    A = n(875139);
 let p = { tension: 200, friction: 20 },
     f = { ...p, clamp: !0 };
 function j(e) {
@@ -23,13 +23,13 @@ function j(e) {
         u = () => {
             n(1);
         },
-        m = () => {
+        g = () => {
             n(2);
         },
-        g = 2 === t,
+        m = 2 === t,
         x = 1 === t;
-    if (!(!(l >= o) && l / o >= 0.8) || g) return null;
-    let h = x || g ? A.R : null,
+    if (!(!(l >= o) && l / o >= 0.8) || m) return null;
+    let h = x || m ? A.R : null,
         p = x ? c.A.Stages.FLYING : c.A.Stages.HOVERING;
     return (0, i.jsx)(d.c7X, {
         from: { opacity: 0 },
@@ -41,7 +41,7 @@ function j(e) {
                 className: A.Pc,
                 style: e,
                 children: [
-                    (0, i.jsx)(c.A, { className: A.a_, stage: p, onFlyingComplete: m }),
+                    (0, i.jsx)(c.A, { className: A.a_, stage: p, onFlyingComplete: g }),
                     (0, i.jsx)("div", {
                         className: r()(A.Sb, h),
                         children: _.intl.format(_.t.qV3Erl, { numLeft: o - l }),
@@ -64,8 +64,8 @@ function N(e) {
             tier: o,
             showHeaderLockStatus: c,
             headerButton: u = null,
-            subscriptionsRequired: m,
-            subscriptionCount: g,
+            subscriptionsRequired: g,
+            subscriptionCount: m,
             className: h,
         } = e,
         _ = (e) => {
@@ -97,11 +97,11 @@ function N(e) {
                                 ? (0, i.jsx)(b, {
                                       transform: e?.unlockedTranslateY.to((e) => `translate3d(0, ${e}px, 0)`),
                                       headerButton: u,
-                                      subscriptionsRequired: m,
+                                      subscriptionsRequired: g,
                                       hasAnimatedUnlocked: l,
                                   })
                                 : null,
-                            (0, i.jsx)(j, { numUnlocked: g, numRequired: m }),
+                            (0, i.jsx)(j, { numUnlocked: m, numRequired: g }),
                         ],
                     }),
                 }),
@@ -121,7 +121,7 @@ function E(e) {
             guildId: f,
             showHeaderLockStatus: j = !0,
         } = e,
-        E = (0, o.bG)([g.A], () => g.A.getGuild(f)?.premiumTier ?? h.TVA.NONE),
+        E = (0, o.bG)([m.A], () => m.A.getGuild(f)?.premiumTier ?? h.TVA.NONE),
         b = h.M2T[l.tier],
         T = a && l.tier <= E,
         C = l.tier !== h.TVA.NONE && l.tier !== h.TVA.TIER_1;
@@ -166,7 +166,7 @@ function E(e) {
                                                           {
                                                               className: A.d_,
                                                               children: [
-                                                                  (0, i.jsx)(m.A, {
+                                                                  (0, i.jsx)(g.A, {
                                                                       name: String(e.icon),
                                                                       icon: n,
                                                                       className: A.kf,

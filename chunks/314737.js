@@ -8,9 +8,9 @@ var i = n(627968),
     o = n.n(a),
     d = n(735438),
     c = n.n(d),
-    u = n(92674),
-    m = n(835245),
-    g = n(311907),
+    u = n(563495),
+    g = n(835245),
+    m = n(311907),
     x = n(990078),
     h = n(397927),
     _ = n(157559),
@@ -40,14 +40,14 @@ var i = n(627968),
     B = n(652215);
 n(307731);
 var F = n(985018),
-    H = n(602217),
-    V = n(506823);
+    H = n(970415),
+    V = n(436833);
 let z = c().throttle(A.dZ, 1e3),
     W = (e) => {
         let { guildId: t, emoji: n, onEdit: l, editingDisabled: a = !1, isNewlyAdded: o = !1 } = e,
             [d, c] = s.useState(n.name),
-            m = G.Ay.getEmojiURL({ id: n.id, animated: n.animated, size: 32 }),
-            [g] = (0, h.zhh)(
+            g = G.Ay.getEmojiURL({ id: n.id, animated: n.animated, size: 32 }),
+            [m] = (0, h.zhh)(
                 () => ({ from: { scale: 2 }, to: { scale: 1 }, config: { mass: 10, tension: 1500, friction: 115 } }),
                 o ? "respect-motion-settings" : "animate-never",
             ),
@@ -66,7 +66,7 @@ let z = c().throttle(A.dZ, 1e3),
                         text: n.available ? null : F.intl.string(F.t.KUzI73),
                         children: (0, i.jsx)(u.animated.div, {
                             className: r()(H.mp, { [H.Zw]: !n.available }),
-                            style: { ...(o ? g : {}), ...(o ? f : {}), backgroundImage: `url(${m})` },
+                            style: { ...(o ? m : {}), ...(o ? f : {}), backgroundImage: `url(${g})` },
                         }),
                     }),
                 }),
@@ -193,7 +193,7 @@ let z = c().throttle(A.dZ, 1e3),
         let { emojis: t, guild: n, onEdit: l, editingDisabled: r = !1, newlyAddedEmojiIds: a } = e,
             o = s.useMemo(() => [...t].reverse(), [t]),
             { canManageGuildExpression: d } = (0, y.ie)(n),
-            c = (0, g.bG)([R.A], () => R.A.theme);
+            c = (0, m.bG)([R.A], () => R.A.theme);
         return 0 === t.length
             ? (0, i.jsx)(h.ppr, { theme: c, children: (0, i.jsx)(h.SGT, { children: F.intl.string(F.t.SpxYoT) }) })
             : (0, i.jsxs)("div", {
@@ -285,11 +285,11 @@ let z = c().throttle(A.dZ, 1e3),
     Z = () => {
         let e = s.useRef(null),
             t = s.useRef(0),
-            l = (0, g.bG)([P.A], () => P.A.getGuild()),
+            l = (0, m.bG)([P.A], () => P.A.getGuild()),
             [r, a] = s.useState("");
         o()(null != l, "ConnectedGuildSettingsEmoji must be rendered within a guild context");
-        let d = (0, g.bG)([R.A], () => R.A.theme),
-            { revision: u, emojis: x } = (0, g.cf)([U.A], () => ({
+        let d = (0, m.bG)([R.A], () => R.A.theme),
+            { revision: u, emojis: x } = (0, m.cf)([U.A], () => ({
                 revision: U.A.getEmojiRevision(l.id),
                 emojis: U.A.getEmojis(l.id),
             })),
@@ -358,7 +358,7 @@ let z = c().throttle(A.dZ, 1e3),
                 w.X({ emojiId: i.id, userImage: { data: e, file: t, image: n } });
             },
             $ = async (e) => {
-                a((0, m.A)()),
+                a((0, g.A)()),
                     O.default.track(B.HAw.EMOJI_UPLOAD_STARTED, { guild_id: l.id, upload_id: r }),
                     await (0, S.UD)(e, q),
                     p(!0);

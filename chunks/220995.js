@@ -3,7 +3,7 @@ var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(92674),
+    r = n(563495),
     o = n(110259),
     d = n(311907),
     c = n(435371),
@@ -19,8 +19,8 @@ var i = n(627968),
     C = n(582904),
     E = n(652215),
     I = n(985018),
-    N = n(430023),
-    b = n(77615);
+    b = n(314957),
+    N = n(377157);
 let S = (e) => 1 - Math.pow(1 - e, 4);
 function T(e) {
     let { channel: t, onClose: n } = e,
@@ -120,30 +120,30 @@ function T(e) {
               onRequestClose: J,
               children: (e) =>
                   (0, i.jsx)(r.animated.div, {
-                      className: N.lY,
+                      className: b.lY,
                       style: W,
                       children: (0, i.jsx)(u.DUT, {
                           innerRef: s,
-                          className: a()({ [N.vk]: !G }, b.q7, b.L9, b.vk),
+                          className: a()({ [b.vk]: !G }, N.q7, N.L9, N.vk),
                           "aria-disabled": G,
                           "aria-label": I.intl.string(I.t.F3qiJr),
                           ...e,
                           children: (0, i.jsxs)("div", {
-                              className: a()(N.Qs, b.Qs),
+                              className: a()(b.Qs, N.Qs),
                               children: [
                                   (0, i.jsxs)("div", {
-                                      className: N.R4,
+                                      className: b.R4,
                                       style: { "--custom-voice-invite-suggestions-timer-size": 24 },
                                       children: [
                                           (0, i.jsxs)(
                                               "svg",
                                               {
-                                                  className: a()(N.O1, { [N.Ft]: F }),
+                                                  className: a()(b.O1, { [b.Ft]: F }),
                                                   viewBox: "0 0 24 24",
                                                   style: { "--custom-voice-invite-suggestions-timer-duration": 1e4 },
                                                   children: [
-                                                      (0, i.jsx)("circle", { className: N.qB }),
-                                                      (0, i.jsx)("circle", { className: N.hN }),
+                                                      (0, i.jsx)("circle", { className: b.qB }),
+                                                      (0, i.jsx)("circle", { className: b.hN }),
                                                   ],
                                               },
                                               `voice-invite-suggestions-timer-${R}`,
@@ -153,7 +153,7 @@ function T(e) {
                                               width: 14,
                                               height: 14,
                                               color: "currentColor",
-                                              className: a()(N.Hk, N.Kk),
+                                              className: a()(b.Hk, b.Kk),
                                           }),
                                       ],
                                   }),
@@ -162,23 +162,23 @@ function T(e) {
                                       overflowOnly: !0,
                                       children: (0, i.jsx)(u.Text, {
                                           variant: "text-sm/medium",
-                                          className: N.Pf,
+                                          className: b.Pf,
                                           lineClamp: 1,
                                           children: I.intl.string(I.t["EE+P0H"]),
                                       }),
                                   }),
                                   V
                                       ? (0, i.jsx)(u.DUT, {
-                                            className: N.VN,
+                                            className: b.VN,
                                             onClick: () => Y("user_explicit"),
                                             "aria-label": I.intl.string(I.t.cpT0Cq),
                                             children: (0, i.jsx)(u.PGe, {
                                                 size: "xs",
                                                 color: "currentColor",
-                                                className: N.Kk,
+                                                className: b.Kk,
                                             }),
                                         })
-                                      : (0, i.jsx)(u._BQ, { size: "xs", color: "currentColor", className: N.Kk }),
+                                      : (0, i.jsx)(u._BQ, { size: "xs", color: "currentColor", className: b.Kk }),
                               ],
                           }),
                       }),

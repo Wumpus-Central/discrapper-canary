@@ -2,8 +2,8 @@ n.d(t, { A: () => M }), n(323874), n(14289), n(35956);
 var i = n(627968);
 n(64700);
 var r = n(835245),
-    a = n(80703),
-    l = n(397927),
+    l = n(80703),
+    a = n(397927),
     s = n(73153),
     o = n(384904),
     d = n(6981),
@@ -16,8 +16,8 @@ var r = n(835245),
     p = n(793574),
     g = n(627363),
     E = n(121623),
-    f = n(200330),
-    I = n(708281),
+    I = n(200330),
+    f = n(708281),
     C = n(807876),
     N = n(890687),
     T = n(976860),
@@ -38,7 +38,7 @@ function w(e, t) {
             invite_code: null,
             has_auth_token: null,
             is_backgrounded: null,
-            fingerprint: (0, a.d)(e),
+            fingerprint: (0, l.d)(e),
             link_type: t,
         });
 }
@@ -64,8 +64,8 @@ let M = {
                 throw new O.A({ errorCode: j.Lw6.INVALID_GUILD_TEMPLATE }, `Invalid guild template id: ${t}`);
             return (
                 L.Ay.focus(),
-                (0, l.mMO)(async () => {
-                    let { default: e } = await Promise.all([n.e("7726"), n.e("4042")]).then(n.bind(n, 72715));
+                (0, a.mMO)(async () => {
+                    let { default: e } = await Promise.all([n.e("7726"), n.e("58938")]).then(n.bind(n, 72715));
                     return (t) => (0, i.jsx)(e, { ...t, guildTemplate: r });
                 }),
                 { guildTemplate: r, code: t }
@@ -82,14 +82,14 @@ let M = {
                 s.h.wait(() => {
                     A.A.resolveGiftCode(t, !0, !0)
                         .then((r) => {
-                            let { giftCode: a } = r;
+                            let { giftCode: l } = r;
                             L.Ay.focus(),
                                 v.default.track(j.HAw.OPEN_MODAL, { type: "gift_accept", location: j.$OG }),
-                                (0, l.mMO)(async () => {
-                                    let { default: e } = await n.e("14439").then(n.bind(n, 67327));
+                                (0, a.mMO)(async () => {
+                                    let { default: e } = await n.e("36820").then(n.bind(n, 67327));
                                     return (n) => (0, i.jsx)(e, { code: t, ...n });
                                 }),
-                                e({ giftCode: a });
+                                e({ giftCode: l });
                         })
                         .catch(() => r(new O.A({ errorCode: j.Lw6.INVALID_GIFT_CODE }, `Invalid gift code: ${t}`)));
                 });
@@ -164,13 +164,13 @@ let M = {
                         w(i.fingerprint, (0, P.OE)(t)));
                     break;
                 case P.XK.OAUTH2:
-                    let a = new URL(j.BVt.OAUTH2_AUTHORIZE, window.location.origin);
-                    a.search = i.search;
-                    let l = (0, f.getOAuth2AuthorizeProps)(a.toString());
-                    if (null != l) return (0, f.openOAuth2ModalWithCreateGuildModal)(l), !0;
+                    let l = new URL(j.BVt.OAUTH2_AUTHORIZE, window.location.origin);
+                    l.search = i.search;
+                    let a = (0, I.getOAuth2AuthorizeProps)(l.toString());
+                    if (null != a) return (0, I.openOAuth2ModalWithCreateGuildModal)(a), !0;
                     return !1;
                 case P.XK.ONE_TIME_LOGIN:
-                    if (null != i) return (0, I.N)({ token: i.token }), w(i.fingerprint, (0, P.OE)(t)), !0;
+                    if (null != i) return (0, f.N)({ token: i.token }), w(i.fingerprint, (0, P.OE)(t)), !0;
                     return !1;
                 case P.XK.SHOP:
                     null != i &&
@@ -195,15 +195,15 @@ let M = {
                                             attempt_id: n,
                                         });
                                     let r = await g.Ay.fetchApplication(e),
-                                        a = r?.bot?.id;
-                                    if (null == a)
+                                        l = r?.bot?.id;
+                                    if (null == l)
                                         return void v.default.track(j.HAw.ACTIVITY_DEEP_LINK_RECEIVED, {
                                             application_id: e,
                                             success: !1,
                                             failure_reason: "no_bot_user",
                                             attempt_id: n,
                                         });
-                                    let l = await c.A.openPrivateChannel({ recipientIds: a }),
+                                    let a = await c.A.openPrivateChannel({ recipientIds: l }),
                                         s = new URL(t),
                                         o = s.searchParams.get("referrer_id") ?? void 0,
                                         { customId: d } = await (0, m.d9)(
@@ -213,7 +213,7 @@ let M = {
                                         );
                                     await (0, _.A)({
                                         targetApplicationId: e,
-                                        channelId: l,
+                                        channelId: a,
                                         analyticsLocations: [p.A.DEEPLINK],
                                         customId: d,
                                         referrerId: o,
@@ -259,17 +259,17 @@ let M = {
         scope: P.LQ,
         handler: async (e) => {
             let {
-                args: { providerType: t, code: n, openid_params: i, iss: r, state: a },
+                args: { providerType: t, code: n, openid_params: i, iss: r, state: l },
             } = e;
-            if (!S.A.hasPendingAuthorizedState(a))
+            if (!S.A.hasPendingAuthorizedState(l))
                 throw new O.A(
                     { errorCode: j.Lw6.INVALID_CONNECTION_CALLBACK_STATE },
                     "Provider authorization did not originate from this discord client",
                 );
             try {
                 return (
-                    S.A.deletePendingAuthorizedState(a),
-                    await u.A.callback(t, { code: n, openid_params: i, iss: r, state: a })
+                    S.A.deletePendingAuthorizedState(l),
+                    await u.A.callback(t, { code: n, openid_params: i, iss: r, state: l })
                 );
             } catch (e) {
                 if (e?.status === 400)

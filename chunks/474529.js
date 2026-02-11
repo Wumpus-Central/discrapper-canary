@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => p });
 var r = n(627968);
 n(64700);
 var i = n(110259),
@@ -9,11 +9,11 @@ var i = n(110259),
     l = n(139286),
     u = n(793943),
     c = n(738419),
-    d = n(520650),
+    d = n(674547),
     _ = n(985018),
-    f = n(61305),
-    p = n(114149);
-function h() {
+    f = n(214783),
+    h = n(114149);
+function p() {
     let { analyticsLocations: e } = (0, o.Ay)();
     (0, l.A)({
         name: i.ImpressionNames.CUSTOM_THEMES_PREVIEW_THEMES_BANNER,
@@ -29,7 +29,7 @@ function h() {
             (0, r.jsxs)("div", {
                 className: f.r$,
                 children: [
-                    (0, r.jsx)("img", { src: p.A, className: f._e, alt: "" }),
+                    (0, r.jsx)("img", { src: h.A, className: f._e, alt: "" }),
                     (0, r.jsxs)("div", {
                         className: f.P_,
                         children: [

@@ -19,8 +19,8 @@ var i = n(627968),
     C = n(661191),
     E = n(652215),
     I = n(37411),
-    N = n(985018),
-    b = n(533848);
+    b = n(985018),
+    N = n(64022);
 function S(e) {
     let { channel: t, isStandardGap: s = !1 } = e,
         r = (0, d.yK)([A.A, _.Ay, g.A], () => {
@@ -44,13 +44,13 @@ function S(e) {
             (0, m.TE)();
         }, []),
         (0, i.jsxs)("div", {
-            className: a()(b.SW, { [b.iA]: s }),
+            className: a()(N.SW, { [N.iA]: s }),
             children: [
                 (0, i.jsx)(c.Text, {
-                    className: b.DD,
+                    className: N.DD,
                     variant: "text-xs/bold",
                     color: "text-default",
-                    children: t.isForumLikeChannel() ? N.intl.string(N.t.ioVdO2) : N.intl.string(N.t.VNYs2v),
+                    children: t.isForumLikeChannel() ? b.intl.string(b.t.ioVdO2) : b.intl.string(b.t.VNYs2v),
                 }),
                 r
                     .slice(0, t.isForumLikeChannel() ? r.length : u)
@@ -58,7 +58,7 @@ function S(e) {
                     .filter((e) => l.isValidElement(e))
                     .slice(0, u),
                 (0, i.jsx)(c.DUT, {
-                    className: b.OS,
+                    className: N.OS,
                     onClick: () => {
                         t.isForumLikeChannel()
                             ? (0, h.iN)(t.id)
@@ -70,7 +70,7 @@ function S(e) {
                     children: (0, i.jsx)(c.Text, {
                         variant: "text-sm/normal",
                         color: "none",
-                        children: N.intl.string(N.t["4qdZ93"]),
+                        children: b.intl.string(b.t["4qdZ93"]),
                     }),
                 }),
             ],
@@ -82,20 +82,20 @@ function T(e) {
         n = (0, d.bG)([f.default], () => f.default.getUser(t.ownerId)),
         l = (0, m.JO)(t);
     return (0, i.jsxs)(c.DUT, {
-        className: b.nM,
+        className: N.nM,
         onClick: (e) => {
             (0, p.JA)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, I.H9.POPOUT);
         },
         children: [
             null == n
-                ? (0, i.jsx)("img", { className: b.my, src: x.Ay.getDefaultAvatarURL(void 0, void 0), alt: "" })
-                : (0, i.jsx)(u.A, { className: b.my, user: n, size: c._3J.SIZE_16 }),
-            (0, i.jsx)(c.Text, { className: b.UU, variant: "text-sm/normal", color: "none", children: t.name }),
+                ? (0, i.jsx)("img", { className: N.my, src: x.Ay.getDefaultAvatarURL(void 0, void 0), alt: "" })
+                : (0, i.jsx)(u.A, { className: N.my, user: n, size: c._3J.SIZE_16 }),
+            (0, i.jsx)(c.Text, { className: N.UU, variant: "text-sm/normal", color: "none", children: t.name }),
             (0, i.jsxs)(c.Text, {
-                className: b.vE,
+                className: N.vE,
                 variant: "text-sm/normal",
                 color: "none",
-                children: [(0, i.jsx)("span", { className: b.xE, children: "•" }), (0, m.aK)(l)],
+                children: [(0, i.jsx)("span", { className: N.xE, children: "•" }), (0, m.aK)(l)],
             }),
         ],
     });

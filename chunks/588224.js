@@ -19,8 +19,8 @@ var i = n(627968),
     C = n(551826),
     E = n(159426),
     I = n(25528),
-    N = n(530804),
-    b = n(481947),
+    b = n(530804),
+    N = n(481947),
     S = n(616356),
     T = n(961350),
     v = n(696451),
@@ -34,12 +34,12 @@ var i = n(627968),
     G = n(340851),
     U = n(652215),
     P = n(31408),
-    w = n(50314);
+    w = n(665076);
 let k = l.memo((e) => {
     let { mute: t, deaf: n, user: l, channel: s, sessionId: a, nick: o } = e,
         f = l.id,
         x = (0, r.bG)([T.default], () => T.default.getId() === f, [f]),
-        [b, j, R] = (0, r.yK)(
+        [N, j, R] = (0, r.yK)(
             [y.Ay],
             () =>
                 x
@@ -77,7 +77,7 @@ let k = l.memo((e) => {
         ee = (0, m.Ay)(s, !0, l),
         et = (0, r.bG)([g.A], () => (x ? g.A.getHangStatusActivity() : null), [x]),
         en = (0, _.h)(f),
-        ei = (0, N.uy)(s.id, f),
+        ei = (0, b.uy)(s.id, f),
         { enableVCStatusIcons: el, enableRequestToStream: es } = E.m.useExperiment(
             { guildId: s.guild_id, location: "VoiceUsers" },
             { autoTrackExposure: Y?.session_id != null },
@@ -93,9 +93,9 @@ let k = l.memo((e) => {
             disconnected: ei,
             otherClientSessionType: J?.clientInfo?.os,
             voicePlatform: $,
-            localMute: b && !x,
+            localMute: N && !x,
             localVideoDisabled: R,
-            mute: t || b,
+            mute: t || N,
             deaf: n || j,
             speaking: k,
             latched: B,
@@ -134,7 +134,7 @@ let V = [],
             [S, v] = l.useState(null),
             [y, O] = l.useState(!1),
             L = l.useRef(null),
-            M = (0, N.$n)(s.id, d ?? V),
+            M = (0, b.$n)(s.id, d ?? V),
             { shouldShow: D, dismiss: P } = (0, x.Z0)(s, { collapsed: c }),
             B = l.useRef(
                 new o.J_(50, () => {
@@ -214,7 +214,7 @@ let V = [],
         })();
         return null == Y && null == E
             ? null
-            : (0, i.jsxs)(b.Wr, {
+            : (0, i.jsxs)(N.Wr, {
                   className: a()(C, w.p_, { [w.yZ]: c, [w.lY]: _, [w.fT]: I }),
                   collapsed: c,
                   children: [Y, E],

@@ -1,9 +1,9 @@
 n.d(t, { A: () => P }), n(134528), n(947204);
 var a = n(627968),
-    s = n(64700),
-    i = n(503698),
-    l = n.n(i),
-    r = n(92674),
+    i = n(64700),
+    s = n(503698),
+    l = n.n(s),
+    r = n(563495),
     o = n(417597),
     d = n(990078),
     c = n(582754),
@@ -23,13 +23,13 @@ var a = n(627968),
     S = n(270045),
     T = n(57718),
     y = n(398025),
-    N = n(545986),
-    E = n(516226),
+    E = n(545986),
+    N = n(516226),
     I = n(720875),
     k = n(419367),
     R = n(652215),
     O = n(985018),
-    w = n(627669);
+    w = n(679643);
 function D(e) {
     let { children: t, variant: n = "default" } = e;
     return (0, a.jsx)("div", {
@@ -43,20 +43,20 @@ function D(e) {
     });
 }
 function M(e) {
-    let { quest: t, errorHints: n, warningHints: i, isDarkTheme: l, sourceQuestContent: o } = e,
+    let { quest: t, errorHints: n, warningHints: s, isDarkTheme: l, sourceQuestContent: o } = e,
         { ref: d, height: c = 0 } = (0, m.Ay)([n]),
         h = t.userStatus?.completedAt != null,
         x = (0, _.Vn)(t),
-        { type: p, hints: g } = s.useMemo(
+        { type: p, hints: g } = i.useMemo(
             () =>
                 h || x
                     ? { type: 2, hints: [] }
                     : n.length > 0
                       ? { type: 0, hints: n.map((e) => e.message) }
-                      : i.length > 0
-                        ? { type: 1, hints: i }
+                      : s.length > 0
+                        ? { type: 1, hints: s }
                         : { type: 2, hints: [] },
-            [n, h, x, i],
+            [n, h, x, s],
         ),
         f = 2 !== p,
         v = (0, u.zhh)({ opacity: +!!f, height: f ? c : 0, config: k.N }),
@@ -95,7 +95,7 @@ function P(e) {
     let {
             quest: t,
             isHovering: n,
-            errorHints: i,
+            errorHints: s,
             warningHints: r,
             isVisibleInViewport: m,
             onCtxMenuClose: A,
@@ -111,11 +111,11 @@ function P(e) {
         V = (0, _.S5)(t.config.expiresAt, { month: "numeric", day: "numeric" }),
         W = t.userStatus?.enrolledAt != null,
         H = t.userStatus?.completedAt != null,
-        { onAssetLoadComplete: K } = s.useContext(E.M),
+        { onAssetLoadComplete: K } = i.useContext(N.M),
         z = B ? "text-muted" : "always-white",
-        $ = s.useCallback(() => {
+        $ = i.useCallback(() => {
             L &&
-                (0, N.d5)({
+                (0, E.d5)({
                     quest: t,
                     questContent: g.uF.QUEST_HOME_DESKTOP,
                     sourceQuestContent: P,
@@ -123,7 +123,7 @@ function P(e) {
                 });
         }, [L, t, P]),
         q = (0, o.bG)([p.A], () => p.A.getQuestHomeTakeoverConfig()),
-        Q = s.useMemo(() => null != q && (0, j.f0)(q, t.id), [q, t.id]);
+        Q = i.useMemo(() => null != q && (0, j.f0)(q, t.id), [q, t.id]);
     return (0, a.jsxs)("div", {
         className: w.kL,
         children: [
@@ -269,7 +269,7 @@ function P(e) {
                             }),
                         ],
                     }),
-                    (0, a.jsx)(M, { quest: t, errorHints: i, warningHints: r, isDarkTheme: B, sourceQuestContent: P }),
+                    (0, a.jsx)(M, { quest: t, errorHints: s, warningHints: r, isDarkTheme: B, sourceQuestContent: P }),
                 ],
             }),
         ],

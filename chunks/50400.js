@@ -1,7 +1,7 @@
 n.d(t, { A: () => O });
 var i = n(627968),
     l = n(64700),
-    s = n(92674),
+    s = n(563495),
     a = n(837381),
     r = n(311907),
     o = n(397927),
@@ -19,11 +19,11 @@ var i = n(627968),
     C = n(531685),
     E = n(941971),
     I = n(375855),
-    N = n(900848),
-    b = n(65611),
+    b = n(900848),
+    N = n(65611),
     S = n(652215),
     T = n(985018),
-    v = n(308294);
+    v = n(2724);
 let y = { friction: 28, tension: 600 };
 function j(e) {
     switch (e) {
@@ -80,7 +80,7 @@ class R extends l.PureComponent {
             l = t.type === S.rbe.DM ? f.default.getUser(t.getRecipientId()) : null;
         null != l
             ? (0, d.L3)(e, async () => {
-                  let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("39778"), n.e("54266")]).then(
+                  let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("39778"), n.e("38522")]).then(
                       n.bind(n, 385913),
                   );
                   return (n) => (0, i.jsx)(e, { ...n, channel: t, user: l });
@@ -127,7 +127,7 @@ class R extends l.PureComponent {
                 });
         return (0, i.jsx)(s.animated.div, {
             style: this.getAnimatedStyle(),
-            children: (0, i.jsxs)(N.c, {
+            children: (0, i.jsxs)(b.c, {
                 children: [
                     (0, i.jsx)(E.A, { hovered: !p && m, selected: !p && n, unread: !p && u, className: v.I }),
                     (0, i.jsx)(I.A, {
@@ -135,8 +135,8 @@ class R extends l.PureComponent {
                         children: (0, i.jsx)(o.Qk9, {
                             rounded: !0,
                             selected: !1,
-                            lowerBadge: l > 0 ? (0, b.wN)(l, void 0, !0) : null,
-                            upperBadge: (0, b.oi)({ audio: a, video: r, screenshare: d, isCurrentUserConnected: c }),
+                            lowerBadge: l > 0 ? (0, N.wN)(l, void 0, !0) : null,
+                            upperBadge: (0, N.oi)({ audio: a, video: r, screenshare: d, isCurrentUserConnected: c }),
                             lowerBadgeSize: { width: (0, o.o6S)(l) },
                             children: _(),
                         }),
@@ -157,9 +157,9 @@ let O = l.forwardRef(function (e, t) {
         C = (0, r.bG)([_.A], () => _.A.getChannelId(), []),
         E = (0, r.bG)([g.Ay], () => g.Ay.getMentionCount(n), [n]),
         I = d === n,
-        N = !1,
-        b = !1;
-    (I || f) && ((N = u === S._Of.VOICE), (b = u === S._Of.VIDEO));
+        b = !1,
+        N = !1;
+    (I || f) && ((b = u === S._Of.VOICE), (N = u === S._Of.VIDEO));
     let T = (0, o.rdh)(o.LU0.modules.guildbar.AVATAR_SIZE);
     return (0, i.jsx)(R, {
         ...e,
@@ -168,8 +168,8 @@ let O = l.forwardRef(function (e, t) {
         unread: E > 0,
         selected: C === n,
         badge: E,
-        audio: N,
-        video: b,
+        audio: b,
+        video: N,
         stream: A,
         isCurrentUserInThisDMCall: I,
         size: T,

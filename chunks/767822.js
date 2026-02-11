@@ -2,15 +2,15 @@
 n.d(t, { A: () => x });
 var i = n(627968),
     s = n(64700),
-    l = n(92674),
+    l = n(563495),
     r = n(827734),
     a = n(397927),
     o = n(627794),
     d = n(53594),
     c = n(268749),
     u = n(690420),
-    m = n(985018),
-    g = n(522743);
+    g = n(985018),
+    m = n(81701);
 function x(e) {
     let { guildId: t, triggerType: n } = e,
         x = s.useMemo(() => () => (0, o._I)(t, n), [t, n]),
@@ -34,19 +34,19 @@ function x(e) {
         });
     return null == p || N
         ? (0, i.jsxs)("div", {
-              className: g.$F,
+              className: m.$F,
               style: { height: N ? "auto" : "60px" },
               children: [
                   (0, i.jsx)(l.animated.div, {
-                      className: g.pT,
+                      className: m.pT,
                       style: C,
                       children: (0, i.jsx)(u.A, { rule: E, persistEdit: _ }),
                   }),
                   (0, i.jsx)(l.animated.div, {
-                      className: g.animatedNewRuleContainer,
+                      className: m.animatedNewRuleContainer,
                       style: T,
                       children: (0, i.jsxs)(a.DUT, {
-                          className: g.Y0,
+                          className: m.Y0,
                           onClick: () => {
                               f(t, n);
                           },
@@ -56,12 +56,12 @@ function x(e) {
                                   width: 20,
                                   height: 20,
                                   color: r.A.unsafe_rawColors.BLUE_345.css,
-                                  className: g.WW,
+                                  className: m.WW,
                               }),
                               (0, i.jsx)(a.Text, {
                                   variant: "text-md/semibold",
                                   color: "text-link",
-                                  children: m.intl.format(m.t.dNjRAf, { ruleName: j() }),
+                                  children: g.intl.format(g.t.dNjRAf, { ruleName: j() }),
                               }),
                           ],
                       }),

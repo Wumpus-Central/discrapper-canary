@@ -1,8 +1,8 @@
 n.d(t, { A: () => m });
 var i = n(627968),
     r = n(64700),
-    a = n(835245),
-    l = n(607399),
+    l = n(835245),
+    a = n(607399),
     s = n(732955),
     o = n(397927),
     d = n(642277),
@@ -10,17 +10,17 @@ var i = n(627968),
     u = n(652215),
     A = n(613057),
     h = n(985018),
-    _ = n(742249);
+    _ = n(9043);
 function m(e) {
     let { applicationId: t } = e,
         [m, p] = r.useState(null),
         [g, E] = r.useState(!1),
-        f = r.useRef(!1),
-        I = !c.isPlatformEmbedded && !l.Fr,
-        C = r.useMemo(() => (0, a.A)(), []);
+        I = r.useRef(!1),
+        f = !c.isPlatformEmbedded && !a.Fr,
+        C = r.useMemo(() => (0, l.A)(), []);
     if (
         (r.useEffect(() => {
-            I && !0 !== f.current
+            f && !0 !== I.current
                 ? (Promise.resolve()
                       .then(n.bind(n, 129014))
                       .then((e) => {
@@ -38,13 +38,13 @@ function m(e) {
                               })
                               .then(() => n.disconnect());
                       }),
-                  (f.current = !0))
-                : I || E(!0);
-        }, [t, I, C]),
+                  (I.current = !0))
+                : f || E(!0);
+        }, [t, f, C]),
         g)
     )
         return (0, i.jsx)(d.A, {});
-    if (I && !1 !== m)
+    if (f && !1 !== m)
         if (!0 === m)
             return (0, i.jsxs)("div", {
                 className: _.k,

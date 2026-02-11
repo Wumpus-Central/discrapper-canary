@@ -1,23 +1,23 @@
 n.d(t, { A: () => h });
 var i = n(627968),
     r = n(64700),
-    a = n(362599),
-    l = n(342494),
+    l = n(362599),
+    a = n(342494),
     s = n(732955),
     o = n(976860),
     d = n(652215),
     c = n(49999),
-    u = n(49370),
+    u = n(723468),
     A = n(985018);
 function h(e) {
     let { targetElementRef: t, dismissPopover: n, children: h } = e,
         _ = r.useCallback(() => {
             n(c.i.TAKE_ACTION), (0, o.pX)(`${d.BVt.NITRO_HOME}?section=orbs`);
         }, [n]),
-        m = (0, i.jsx)(l.AM, {
+        m = (0, i.jsx)(a.AM, {
             targetElementRef: t,
             onRequestClose: () => n(c.i.USER_DISMISS),
-            graphic: { type: "rive", rive: a.Z },
+            graphic: { type: "rive", rive: l.Z },
             badge: { type: "beta", variant: "expressive" },
             alignmentStrategy: "edge",
             align: "top",

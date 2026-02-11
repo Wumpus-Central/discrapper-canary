@@ -2,9 +2,9 @@ n.d(t, { A: () => o });
 var i = n(627968);
 n(64700);
 var r = n(397927),
-    a = n(228160),
-    l = n(985018),
-    s = n(606921);
+    l = n(21786),
+    a = n(985018),
+    s = n(636155);
 function o() {
     return (0, i.jsx)("div", {
         className: s.iE,
@@ -17,13 +17,13 @@ function o() {
                     variant: "heading-xxl/normal",
                     color: "text-strong",
                     className: s.R_,
-                    children: l.intl.string(a.default["VAK+h9"]),
+                    children: a.intl.string(l.default["VAK+h9"]),
                 }),
                 (0, i.jsx)(r.Text, {
                     variant: "text-lg/normal",
                     color: "text-muted",
                     className: s.Qq,
-                    children: l.intl.string(a.default.dcpdhC),
+                    children: a.intl.string(l.default.dcpdhC),
                 }),
             ],
         }),

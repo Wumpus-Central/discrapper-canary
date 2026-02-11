@@ -8,8 +8,8 @@ var l = n(311907),
     o = n(122906),
     d = n(401755),
     c = n(985018),
-    u = n(687563),
-    m = n(563111);
+    u = n(131317),
+    m = n(42441);
 function _(e) {
     let { code: t } = e,
         _ = (0, l.bG)([o.A], () => o.A.getGuildTemplate(t));
@@ -37,7 +37,7 @@ function _(e) {
         : (0, i.jsx)(a.Button, {
               onClick: () => {
                   (0, a.mMO)(async () => {
-                      let { default: e } = await Promise.all([n.e("7726"), n.e("4042")]).then(n.bind(n, 72715));
+                      let { default: e } = await Promise.all([n.e("7726"), n.e("58938")]).then(n.bind(n, 72715));
                       return (t) => (0, i.jsx)(e, { ...t, guildTemplate: _ });
                   });
               },

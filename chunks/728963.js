@@ -18,7 +18,7 @@ var i = n(627968),
     x = n(763754);
 n(827669);
 var E = n(985018),
-    C = n(998815);
+    C = n(99245);
 let I = { tag: "span", variant: "text-md/normal", color: "text-default" },
     T = { className: r()("mention", C.lE) };
 function v(e) {
@@ -29,7 +29,7 @@ let N = l.memo(function (e) {
         { channel: n, messageId: a, interactionData: r } = e,
         { analyticsLocations: N } = (0, c.Ay)(),
         { onCopy: S, copyRef: b } = (0, u.A)(n, r?.application_command?.id),
-        y = (0, s.bG)([A.A], () => A.A.getGuild(n.guild_id), [n.guild_id]);
+        j = (0, s.bG)([A.A], () => A.A.getGuild(n.guild_id), [n.guild_id]);
     if (
         (l.useEffect(() => {
             (null == r || (r.type === d.kc.CHAT && void 0 === r.application_command)) && m.S7(n.id, a);
@@ -168,7 +168,7 @@ let N = l.memo(function (e) {
                 })({
                     option: t,
                     channel: n,
-                    guild: y,
+                    guild: j,
                     messageId: a,
                     parentOptionKey: null,
                     commandOptionSpec: s[t.name],

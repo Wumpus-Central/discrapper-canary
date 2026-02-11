@@ -2,7 +2,7 @@
 n.d(t, { A: () => D });
 var i = n(627968),
     s = n(64700),
-    r = n(92674),
+    r = n(563495),
     l = n(311907),
     a = n(397927),
     o = n(73153),
@@ -24,9 +24,9 @@ var i = n(627968),
     S = n(172799),
     j = n(652215),
     C = n(985018),
-    y = n(446160);
-function T() {
-    return (0, i.jsx)("div", { className: y.$k, children: (0, i.jsx)(a.y$y, {}) });
+    T = n(480018);
+function y() {
+    return (0, i.jsx)("div", { className: T.$k, children: (0, i.jsx)(a.y$y, {}) });
 }
 let b = (e) => {
     let t = e?.state == null && e?.channel == null;
@@ -68,11 +68,11 @@ function O(e) {
             e !== h && _(e);
         }, [d, h]),
         (0, i.jsxs)(r.animated.div, {
-            className: y.qF,
+            className: T.qF,
             style: m,
             children: [
                 (0, i.jsx)(r.animated.div, {
-                    className: y.NS,
+                    className: T.NS,
                     style: m,
                     children: (0, i.jsx)("section", { ref: p, className: o?.(h), children: t(h) }),
                 }),
@@ -86,7 +86,7 @@ function L(e) {
     return null != t && (0, v.Fk)(t)
         ? (0, i.jsx)(O, {
               startAnimHeightPx: 0,
-              innerStyle: () => y.ui,
+              innerStyle: () => T.ui,
               ...e,
               children: (e) => (null == t ? null : 1 === e ? (0, i.jsx)(N.s, { invite: t }) : null),
           })
@@ -94,21 +94,21 @@ function L(e) {
 }
 function w(e) {
     let { invite: t } = e,
-        n = { 1: y._r, 2: y.Gm, 0: y.Kt };
+        n = { 1: T._r, 2: T.Gm, 0: T.Kt };
     return (0, i.jsx)(O, {
         startAnimHeightPx: 200,
         innerStyle: (e) => n[e],
         ...e,
         children: (n) =>
             ((n) => {
-                if (null == t) return (0, i.jsx)(T, {});
+                if (null == t) return (0, i.jsx)(y, {});
                 switch (n) {
                     case 1:
                         return (0, i.jsx)(I.A, { ...e, invite: t });
                     case 2:
                         return (0, i.jsx)(R, { ...e, invite: t });
                     default:
-                        return (0, i.jsx)(T, {});
+                        return (0, i.jsx)(y, {});
                 }
             })(n),
     });
@@ -123,9 +123,9 @@ function k(e) {
     }
     return (0, i.jsxs)(h.Ay, {
         theme: j.NJ8.DARK,
-        className: y.G3,
+        className: T.G3,
         style: r,
-        contentClassName: y.__,
+        contentClassName: T.__,
         children: [(0, i.jsx)(w, { ...e, onAcceptInvite: n }), (0, i.jsx)(L, { ...e })],
     });
 }

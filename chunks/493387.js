@@ -1,4 +1,4 @@
-n.d(t, { A: () => C }), n(321073);
+n.d(t, { A: () => E }), n(321073);
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -10,12 +10,12 @@ var i = n(627968),
     u = n(397927),
     h = n(736653),
     A = n(531685),
-    g = n(85448),
-    m = n(806931),
-    p = n(254187),
-    _ = n(20976),
-    x = n(162253);
-let f = {
+    m = n(85448),
+    p = n(806931),
+    g = n(941493),
+    _ = n(641254),
+    f = n(861303);
+let x = {
     SCALE_MIN: 0.7,
     SCALE_MAX: 1,
     DURATION_IN: 300,
@@ -23,7 +23,7 @@ let f = {
     EASING_IN: r.A.Easing.inOut(r.A.Easing.back()),
     EASING_OUT: r.A.Easing.quad,
 };
-class E extends l.PureComponent {
+class C extends l.PureComponent {
     scaleAnimation = new r.A.Value(0);
     spriteAnimation = new r.A.Value(0);
     spriteOpacity = new r.A.Value(0);
@@ -40,7 +40,7 @@ class E extends l.PureComponent {
         t.setValue(0),
             n.setValue(0),
             r.A.parallel([
-                r.A.timing(t, { toValue: 1, duration: f.DURATION_IN, easing: f.EASING_IN }),
+                r.A.timing(t, { toValue: 1, duration: x.DURATION_IN, easing: x.EASING_IN }),
                 r.A.timing(n, { toValue: 1, duration: 200 }),
             ]).start(e);
     }
@@ -50,7 +50,7 @@ class E extends l.PureComponent {
         let s = [];
         for (let e = 0; e < 23; e++) s.push(r.A.timing(n, { toValue: -26 * e, duration: 17 }));
         r.A.sequence([
-            r.A.timing(t, { toValue: 0, duration: f.DURATION_OUT, easing: f.EASING_OUT }),
+            r.A.timing(t, { toValue: 0, duration: x.DURATION_OUT, easing: x.EASING_OUT }),
             r.A.sequence(s),
             r.A.timing(l, { toValue: 0, duration: 125 }),
         ]).start(e);
@@ -58,7 +58,7 @@ class E extends l.PureComponent {
     getScaleStyle() {
         let { scaleAnimation: e } = this;
         return r.A.accelerate({
-            transform: [{ scale: e.interpolate({ inputRange: [0, 1], outputRange: [f.SCALE_MIN, f.SCALE_MAX] }) }],
+            transform: [{ scale: e.interpolate({ inputRange: [0, 1], outputRange: [x.SCALE_MIN, x.SCALE_MAX] }) }],
             opacity: e,
         });
     }
@@ -77,14 +77,14 @@ class E extends l.PureComponent {
     render() {
         let { theme: e, children: t, className: n } = this.props,
             l = (0, c.Mw)(e),
-            s = a()(p._y, { [x.cp]: l, [x.QB]: !l });
+            s = a()(g._y, { [f.cp]: l, [f.QB]: !l });
         return (0, i.jsxs)(r.A.div, {
             role: "listitem",
-            className: a()(p.kY, n),
+            className: a()(g.kY, n),
             style: this.getWidthStyle(),
             children: [
                 (0, i.jsx)("div", {
-                    className: a()(p.XY, _.xM, _.wq, _.Hu),
+                    className: a()(g.XY, _.xM, _.wq, _.Hu),
                     children: (0, i.jsx)(r.A.div, { className: s, style: this.getSpriteStyle() }),
                 }),
                 (0, i.jsx)(r.A.div, { style: this.getScaleStyle(), children: t }),
@@ -92,31 +92,31 @@ class E extends l.PureComponent {
         });
     }
 }
-function C(e) {
+function E(e) {
     var t;
     let { participants: n, onContextMenu: l, className: s, onClick: r, width: c, guildId: _ } = e,
-        x = (0, h.Ay)(),
-        f = ((t = n.length), ((0, u.FT9)(u._3J.SIZE_80) + 16) * t > c ? u._3J.SIZE_40 : u._3J.SIZE_80),
-        C = (0, o.bG)([A.A], () => A.A.isFocused()),
+        f = (0, h.Ay)(),
+        x = ((t = n.length), ((0, u.FT9)(u._3J.SIZE_80) + 16) * t > c ? u._3J.SIZE_40 : u._3J.SIZE_80),
+        E = (0, o.bG)([A.A], () => A.A.isFocused()),
         I = n.map((e) => {
-            if (e.type !== m.lp.USER) return null;
+            if (e.type !== p.lp.USER) return null;
             let { user: t, voiceState: n, speaking: s, latched: a, ringing: o } = e;
             return (0, i.jsx)(
-                E,
+                C,
                 {
-                    className: p.Wp,
-                    width: (0, u.FT9)(f),
-                    theme: x,
+                    className: g.Wp,
+                    width: (0, u.FT9)(x),
+                    theme: f,
                     children: (0, i.jsx)(u.sqX, {
                         "aria-label": t.username,
                         onClick: (t) => r?.(e, t),
                         onContextMenu: (t) => l?.(e, t),
                         children: (0, i.jsx)(
-                            g.A,
+                            m.A,
                             {
                                 userId: t.id,
-                                src: t.getAvatarURL(_, (0, u.FT9)(f), s && C),
-                                size: f,
+                                src: t.getAvatarURL(_, (0, u.FT9)(x), s && E),
+                                size: x,
                                 muted: n?.isVoiceMuted() ?? !1,
                                 deafen: n?.isVoiceDeafened() ?? !1,
                                 speaking: s,
@@ -130,5 +130,5 @@ function C(e) {
                 t.id,
             );
         });
-    return (0, i.jsx)(d.F, { component: "div", role: "list", className: a()(p.zr, s), children: I });
+    return (0, i.jsx)(d.F, { component: "div", role: "list", className: a()(g.zr, s), children: I });
 }

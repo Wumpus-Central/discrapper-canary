@@ -2,22 +2,22 @@
 s.d(t, { A: () => g });
 var n = s(627968);
 s(64700);
-var r = s(503698),
-    l = s.n(r),
+var l = s(503698),
+    r = s.n(l),
     a = s(311907),
     i = s(653887),
     o = s(775602),
     c = s(607470),
     d = s(531685),
-    u = s(402314);
+    u = s(24212);
 let g = (e) => {
-    let { bannerStatic: t, bannerAnimated: s, bannerRive: r, isResponsive: g = !1, eventTargetRef: m } = e,
-        _ = (0, a.bG)([o.A], () => o.A.useReducedMotion),
+    let { bannerStatic: t, bannerAnimated: s, bannerRive: l, isResponsive: g = !1, eventTargetRef: _ } = e,
+        m = (0, a.bG)([o.A], () => o.A.useReducedMotion),
         h = (0, a.bG)([d.A], () => d.A.isFocused()),
-        p = null != s && !_ && h;
-    return null != r
-        ? (0, n.jsx)(i._, { src: r, fit: "fit-width", eventTargetRef: m })
+        p = null != s && !m && h;
+    return null != l
+        ? (0, n.jsx)(i._, { src: l, fit: "fit-width", eventTargetRef: _ })
         : p
-          ? (0, n.jsx)(c.A, { className: l()({ [u.no]: g }, u.BW, u.ud), src: s, autoPlay: !0, loop: !0 })
-          : (0, n.jsx)("div", { className: l()({ [u.no]: g }, u.BW, u._e), style: { backgroundImage: `url(${t})` } });
+          ? (0, n.jsx)(c.A, { className: r()({ [u.no]: g }, u.BW, u.ud), src: s, autoPlay: !0, loop: !0 })
+          : (0, n.jsx)("div", { className: r()({ [u.no]: g }, u.BW, u._e), style: { backgroundImage: `url(${t})` } });
 };

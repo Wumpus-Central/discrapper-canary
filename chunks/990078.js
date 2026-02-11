@@ -9,48 +9,48 @@ var r = n(627968),
     u = n(348275),
     c = n(505679),
     d = n(747781),
-    _ = n(894524);
+    _ = n(69042);
 function f(e) {
     let {
             children: t,
             text: n,
             keyboardShortcut: f,
-            __unsupportedReactNodeAsText: p,
-            asContainer: h = !1,
-            tag: m = "span",
-            position: g = "top",
-            align: E = "center",
-            spacing: A,
-            layerContext: I,
-            targetElementRef: T,
-            anchorRef: y,
-            caretConfig: S,
-            positionKey: v,
-            ariaHidden: C = !1,
-            ...b
+            __unsupportedReactNodeAsText: h,
+            asContainer: p = !1,
+            tag: g = "span",
+            position: E = "top",
+            align: A = "center",
+            spacing: I,
+            layerContext: T,
+            targetElementRef: y,
+            anchorRef: S,
+            caretConfig: v,
+            positionKey: C,
+            ariaHidden: b = !1,
+            ...N
         } = e,
-        [N, R] = i.useState(null);
+        [R, O] = i.useState(null);
     i.useLayoutEffect(() => {
-        null != y && R(y.current);
-    }, [y]);
-    let O = i.useCallback(
+        null != S && O(S.current);
+    }, [S]);
+    let D = i.useCallback(
             (e) => {
-                null == y && R(e), (0, u.cZ)(T, e);
+                null == S && O(e), (0, u.cZ)(y, e);
             },
-            [T, y],
+            [y, S],
         ),
         {
-            tooltipId: D,
-            isVisible: L,
-            targetElementRef: w,
-            trigger: x,
-        } = (0, d.D)({ children: t, targetElementRef: O, asContainer: h, containerTag: m, ariaHidden: C, ...b }),
-        [P, M] = i.useState(!1),
-        { defaultLayerContext: k } = (0, s.G98)(),
-        U = i.useMemo(
+            tooltipId: L,
+            isVisible: w,
+            targetElementRef: x,
+            trigger: P,
+        } = (0, d.D)({ children: t, targetElementRef: D, asContainer: p, containerTag: g, ariaHidden: b, ...N }),
+        [M, k] = i.useState(!1),
+        { defaultLayerContext: U } = (0, s.G98)(),
+        G = i.useMemo(
             () =>
-                null != p
-                    ? p
+                null != h
+                    ? h
                     : null == n || "" === n
                       ? null
                       : null != f && "" !== f
@@ -62,41 +62,41 @@ function f(e) {
                               ],
                           })
                         : n,
-            [n, f, p],
+            [n, f, h],
         ),
-        G = null != U && ("string" != typeof U || "" !== U),
-        V = L || P;
+        F = null != G && ("string" != typeof G || "" !== G),
+        V = w || M;
     i.useEffect(() => {
-        L && G ? M(!0) : G || M(!1);
-    }, [L, G]);
-    let F = i.useCallback(() => {
-            M(!1);
+        w && F ? k(!0) : F || k(!1);
+    }, [w, F]);
+    let B = i.useCallback(() => {
+            k(!1);
         }, []),
-        B = (0, c.j)({ shouldShow: L, onExitComplete: F });
-    if (!G && (L || !P)) return t;
-    if (null == t || (!h && !i.isValidElement(t))) return null;
-    let j = v ?? (0, u.Xj)(n),
-        H = B((e, t) =>
+        j = (0, c.j)({ shouldShow: w, onExitComplete: B });
+    if (!F && (w || !M)) return t;
+    if (null == t || (!p && !i.isValidElement(t))) return null;
+    let H = C ?? (0, u.Xj)(n),
+        Y = j((e, t) =>
             t
                 ? (0, r.jsx)(l.R, {
-                      isVisible: L,
+                      isVisible: w,
                       isRendered: V,
-                      targetElementRef: w,
-                      targetElement: N,
-                      anchorRef: y,
-                      id: D,
-                      content: U,
-                      position: g,
-                      align: E,
-                      spacing: A,
-                      caretConfig: S,
-                      layerContext: I ?? k,
+                      targetElementRef: x,
+                      targetElement: R,
+                      anchorRef: S,
+                      id: L,
+                      content: G,
+                      position: E,
+                      align: A,
+                      spacing: I,
+                      caretConfig: v,
+                      layerContext: T ?? U,
                       animationStyle: e,
-                      positionKey: j,
+                      positionKey: H,
                   })
                 : null,
         );
     return (0, r.jsxs)(r.Fragment, {
-        children: [x, C || null == U || "" === U ? null : (0, r.jsx)(a.A, { id: D, children: U }), H],
+        children: [P, b || null == G || "" === G ? null : (0, r.jsx)(a.A, { id: L, children: G }), Y],
     });
 }

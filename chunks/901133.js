@@ -1,8 +1,8 @@
 n.d(t, { A: () => C });
 var i = n(627968),
     r = n(64700),
-    a = n(503698),
-    l = n.n(a),
+    l = n(503698),
+    a = n.n(l),
     s = n(990078),
     o = n(397927),
     d = n(793574),
@@ -15,8 +15,8 @@ var i = n(627968),
     p = n(485599),
     g = n(652215),
     E = n(985018),
-    f = n(308685);
-class I extends r.PureComponent {
+    I = n(22883);
+class f extends r.PureComponent {
     partyMemberAvatarRef = r.createRef();
     partyMemberOverflowRef = r.createRef();
     isHost() {
@@ -44,9 +44,9 @@ class I extends r.PureComponent {
     renderPartyMember = (e, t) => {
         let n;
         if (null == e) return null;
-        let { host: a, onUserContextMenu: c } = this.props;
+        let { host: l, onUserContextMenu: c } = this.props;
         return (
-            (n = a?.id === e.id ? E.intl.string(E.t["N9bqD+"]) : E.intl.string(E.t.Z2Y4c9)),
+            (n = l?.id === e.id ? E.intl.string(E.t["N9bqD+"]) : E.intl.string(E.t.Z2Y4c9)),
             (0, i.jsx)(
                 u.A,
                 {
@@ -56,15 +56,15 @@ class I extends r.PureComponent {
                     position: "top",
                     align: "center",
                     clickTrap: !0,
-                    children: (a) =>
+                    children: (l) =>
                         (0, i.jsx)(s.m, {
                             text: n,
                             children: (0, r.createElement)(o.euF, {
-                                ...a,
+                                ...l,
                                 key: e.id,
                                 src: e.getAvatarURL(void 0, 24),
                                 size: o._3J.SIZE_24,
-                                className: l()(f.my, t),
+                                className: a()(I.my, t),
                                 "aria-label": e.username,
                                 onContextMenu: (t) => void (null != e && c?.(t, e)),
                                 avatarContentRef: this.partyMemberAvatarRef,
@@ -88,7 +88,7 @@ class I extends r.PureComponent {
                         children: (0, i.jsx)("div", {
                             ...n,
                             ref: this.partyMemberOverflowRef,
-                            className: l()(f.ju, t),
+                            className: a()(I.ju, t),
                             children: e,
                         }),
                     }),
@@ -109,12 +109,12 @@ class I extends r.PureComponent {
     }
     render() {
         return (0, i.jsxs)("div", {
-            className: f.Jh,
+            className: I.Jh,
             children: [
                 this.renderTitle(),
                 (0, i.jsx)(c.A, {
                     justify: c.A.Justify.END,
-                    className: f.Hg,
+                    className: I.Hg,
                     children: (0, i.jsx)(A.A, {
                         users: this.props.party,
                         max: this.isHost() ? 5 : 4,
@@ -123,11 +123,11 @@ class I extends r.PureComponent {
                     }),
                 }),
                 (0, i.jsxs)("div", {
-                    className: f.Pt,
+                    className: I.Pt,
                     children: [this.renderHelpIcon(), this.renderStopListeningButton()],
                 }),
             ],
         });
     }
 }
-let C = I;
+let C = f;

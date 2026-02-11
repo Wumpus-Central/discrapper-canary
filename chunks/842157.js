@@ -24,33 +24,33 @@ var i = n(627968),
     N = n(206589),
     S = n(154297),
     b = n(833349),
-    y = n(946255),
-    j = n(755420),
+    j = n(946255),
+    y = n(755420),
     R = n(877044),
     L = n(878831),
     M = n(652215),
     O = n(768349),
-    P = n(985018),
-    D = n(609653);
+    D = n(985018),
+    P = n(62323);
 function k(e) {
     let { presenceActivity: t, remoteJoinPlatform: n } = e,
-        a = (0, j.z4)({ platforms: t?.supported_platforms, currentPlatform: M.yTV.DESKTOP }),
+        a = (0, y.z4)({ platforms: t?.supported_platforms, currentPlatform: M.yTV.DESKTOP }),
         o = l.useMemo(
             () =>
                 a
                     .map((e) => {
                         switch (e) {
-                            case j.FL.MOBILE:
+                            case y.FL.MOBILE:
                                 return (0, i.jsx)(d.u6o, { size: "xxs", color: "currentColor" });
-                            case j.FL.ANDROID:
+                            case y.FL.ANDROID:
                                 return (0, i.jsx)(R.x, { width: s.E.xxs, height: s.E.xxs, color: "currentColor" });
-                            case j.FL.IOS:
+                            case y.FL.IOS:
                                 return (0, i.jsx)(d.z0, { size: "xxs", color: "currentColor" });
-                            case j.FL.PLAYSTATION:
+                            case y.FL.PLAYSTATION:
                                 return (0, i.jsx)(d.Xj, { size: "xxs", color: "currentColor" });
-                            case j.FL.XBOX:
+                            case y.FL.XBOX:
                                 return (0, i.jsx)(d.YWd, { size: "xxs", color: "currentColor" });
-                            case j.FL.VR:
+                            case y.FL.VR:
                                 return (0, i.jsx)(r.VrHeadsetIcon, { size: "xxs", color: "currentColor" });
                             default:
                                 return null;
@@ -60,15 +60,15 @@ function k(e) {
             [a],
         );
     if (!(null != n || o.length > 0)) return null;
-    let c = null != n ? (0, S.C)(n) : P.intl.string(P.t["4dGUP0"]);
+    let c = null != n ? (0, S.C)(n) : D.intl.string(D.t["4dGUP0"]);
     return (0, i.jsxs)("div", {
-        className: D.qr,
+        className: P.qr,
         children: [
             (0, i.jsx)("div", {
-                className: D.E6,
-                children: o.map((e, t) => (0, i.jsx)("div", { className: D.F2, children: e }, t)),
+                className: P.E6,
+                children: o.map((e, t) => (0, i.jsx)("div", { className: P.F2, children: e }, t)),
             }),
-            (0, i.jsx)(d.Text, { variant: "text-sm/medium", color: "currentColor", className: D.kB, children: c }),
+            (0, i.jsx)(d.Text, { variant: "text-sm/medium", color: "currentColor", className: P.kB, children: c }),
         ],
     });
 }
@@ -80,7 +80,7 @@ function U(e) {
             channel: s,
             header: E,
             currentUserId: S,
-            launchableAppId: j,
+            launchableAppId: y,
             isEmbeddedApplication: R,
             tryWithGdnAction: U,
             staticBannerSrc: w,
@@ -102,7 +102,7 @@ function U(e) {
             () =>
                 null != X
                     ? (0, i.jsxs)("div", {
-                          className: D.Ym,
+                          className: P.Ym,
                           children: [
                               (0, i.jsx)(d._xR, { size: "xxs", color: "currentColor" }),
                               (0, i.jsx)(p.z, {
@@ -124,7 +124,7 @@ function U(e) {
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)(d.Y3C, { size: "xxs", color: "currentColor" }),
-                              P.intl.string(P.t.TsWCdW),
+                              D.intl.string(D.t.TsWCdW),
                           ],
                       })
                     : null,
@@ -134,14 +134,14 @@ function U(e) {
             () =>
                 (0, i.jsxs)(d.Text, {
                     variant: "text-xs/normal",
-                    className: D.dS,
+                    className: P.dS,
                     color: "none",
                     lineClamp: 2,
                     children: [$ ? (0, C.YC)(t, r, s, S, !1) : Z, $ ? null : et],
                 }),
             [$, t, r, s, S, Z, et],
         ),
-        ei = l.useMemo(() => (0, i.jsxs)("div", { className: D.pq, children: [en, z || $ ? null : W] }), [en, z, $, W]),
+        ei = l.useMemo(() => (0, i.jsxs)("div", { className: P.pq, children: [en, z || $ ? null : W] }), [en, z, $, W]),
         el = (0, A.e)(n),
         { canJoin: ea, remoteJoinPlatform: er } = (0, I.D)({
             presenceActivity: H,
@@ -151,7 +151,7 @@ function U(e) {
             application: n,
             isEmbeddedApplication: R,
             isFrameApplication: el,
-            isGameLaunchable: !!j,
+            isGameLaunchable: !!y,
         }),
         es = (0, I.M)(H, V, t, n),
         eo = (0, T.E)(H, t, n, S),
@@ -166,7 +166,7 @@ function U(e) {
                 i = !1;
             ea
                 ? (e = {
-                      label: P.intl.string(P.t.VJlc0S),
+                      label: D.intl.string(D.t.VJlc0S),
                       trackingArea: h.kY.JOIN,
                       submitting: ec,
                       onClick: () => {
@@ -181,7 +181,7 @@ function U(e) {
                               embedded: (0, b.A)(H, M.jUm.EMBEDDED),
                               remotePartyId: null != er ? H.party?.id : void 0,
                           }),
-                              (0, y.A)({
+                              (0, j.A)({
                                   type: M.UqL.JOIN,
                                   source: M.ThZ.MESSAGE_EMBED,
                                   userId: t.author.id,
@@ -197,7 +197,7 @@ function U(e) {
                   })
                 : es
                   ? ((e = {
-                        label: P.intl.string(P.t.VJlc0S),
+                        label: D.intl.string(D.t.VJlc0S),
                         trackingArea: h.kY.SYNC,
                         onClick: () => {
                             null != H && m.OH(H, t.author.id);
@@ -206,7 +206,7 @@ function U(e) {
                     (n = !1))
                   : eo
                     ? (e = {
-                          label: P.intl.string(P.t["hC/Zey"]),
+                          label: D.intl.string(D.t["hC/Zey"]),
                           trackingArea: h.kY.INVITE,
                           onClick: () => {
                               null != H &&
@@ -218,11 +218,11 @@ function U(e) {
                                   });
                           },
                           disabled: t.author.id === S,
-                          disabledReason: t.author.id === S ? P.intl.string(P.t.IBl8ID) : void 0,
+                          disabledReason: t.author.id === S ? D.intl.string(D.t.IBl8ID) : void 0,
                       })
                     : ed
                       ? (e = {
-                            label: P.intl.string(P.t.KC26NR),
+                            label: D.intl.string(D.t.KC26NR),
                             trackingArea: h.kY.PLAY,
                             onClick: () => {},
                             disabled: !0,
@@ -235,7 +235,7 @@ function U(e) {
                     q &&
                         n &&
                         (l.push({
-                            label: P.intl.string(P.t.lw71Nf),
+                            label: D.intl.string(D.t.lw71Nf),
                             trackingArea: h.kY.CONNECT_ACCOUNT,
                             onClick: () => {
                                 K({ analyticsLocations: Y });

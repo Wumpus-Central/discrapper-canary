@@ -1,7 +1,7 @@
 n.d(t, { A: () => g });
 var a = n(627968),
-    s = n(64700),
-    i = n(417597),
+    i = n(64700),
+    s = n(417597),
     l = n(397927),
     r = n(793574),
     o = n(287809),
@@ -10,11 +10,11 @@ var a = n(627968),
     u = n(841702),
     m = n(751304),
     h = n(61750),
-    x = n(841015);
+    x = n(91753);
 let p = (e) => {
-        let [t, n] = s.useState(0);
+        let [t, n] = i.useState(0);
         return (
-            s.useLayoutEffect(() => {
+            i.useLayoutEffect(() => {
                 let e = c.A.getPurchase;
                 return (
                     (c.A.getPurchase = (e) => void 0),
@@ -29,18 +29,18 @@ let p = (e) => {
         );
     },
     g = () => {
-        let e = (0, i.bG)([o.default], () => o.default.getCurrentUser()),
-            t = (0, i.bG)([d.A], () => d.A.categories),
-            n = (0, i.bG)([c.A], () => c.A.purchases),
-            m = (0, i.bG)([d.A], () => d.A.lastSuccessfulFetch),
+        let e = (0, s.bG)([o.default], () => o.default.getCurrentUser()),
+            t = (0, s.bG)([d.A], () => d.A.categories),
+            n = (0, s.bG)([c.A], () => c.A.purchases),
+            m = (0, s.bG)([d.A], () => d.A.lastSuccessfulFetch),
             g = t.size > 0 && n.size > 0 && null != m,
             { isFetching: _, categories: f } = (0, u.Ay)({ logPerf: !1, stalePurchasesOK: !0, noOp: g }),
             v = g ? t : f,
             b = g || (!_ && v.size > 0),
-            [j, A] = s.useState(""),
-            [C, S] = s.useState(null),
-            [T, y] = s.useState(null);
-        return (s.useEffect(() => {
+            [j, A] = i.useState(""),
+            [C, S] = i.useState(null),
+            [T, y] = i.useState(null);
+        return (i.useEffect(() => {
             if ("" === j.trim() || !b) {
                 S(null), y(null);
                 return;

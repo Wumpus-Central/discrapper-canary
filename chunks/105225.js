@@ -1,11 +1,11 @@
-n.d(t, { Ay: () => ey, SZ: () => eI, rP: () => eN });
+n.d(t, { Ay: () => ey, SZ: () => eI, rP: () => eb });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
     r = n(284009),
     o = n.n(r),
-    d = n(92674),
+    d = n(563495),
     c = n(311907),
     u = n(554146),
     h = n(397927),
@@ -19,8 +19,8 @@ var i = n(627968),
     C = n(793574),
     E = n(688810),
     I = n(313961),
-    N = n(385318),
-    b = n(206018),
+    b = n(385318),
+    N = n(206018),
     S = n(750765),
     T = n(183184),
     v = n(384059),
@@ -71,13 +71,13 @@ var i = n(627968),
     ef = n(652215),
     ex = n(806931),
     eC = n(49999),
-    eE = n(913957);
+    eE = n(832391);
 function eI(e, t) {
     if (ei.Ay.isVideoEnabled() === e) return;
     let n = () => A.A.setVideoEnabled(e);
     (0, v.X)(C.A.VOICE_CONTROL_TRAY, v.O.CAMERA, e), e ? (0, e_.A)(n, t) : n();
 }
-function eN(e) {
+function eb(e) {
     let { channel: t, currentUser: n, exitFullScreen: s, canGoLive: a, hasPermission: r, disabled: o } = e,
         { parentAnalyticsLocation: d, analyticsLocations: A } = (0, E.Ay)(),
         m = (0, w.Us)(),
@@ -91,7 +91,7 @@ function eN(e) {
             (0, eg.A)(x, t.id, A);
         }, [x, t.id, a, s, A]),
         I = (0, k.k0)(),
-        [N, b] = l.useState(!1),
+        [b, N] = l.useState(!1),
         S = () => {
             ((0, v.X)(d, v.O.STREAM, !0), a) ? C() : (0, ep.A)();
         },
@@ -109,12 +109,12 @@ function eN(e) {
                             let { visibleContent: t, markAsDismissed: n } = e;
                             if (t === u.M.TRIAL_NUX_STREAM_COACH_MARK)
                                 return (
-                                    b(!0),
+                                    N(!0),
                                     (0, i.jsx)(V.b, {
                                         buttonRef: _,
                                         dismissed: !1,
                                         onDismiss: () => {
-                                            n(eC.i.USER_DISMISS), b(!1);
+                                            n(eC.i.USER_DISMISS), N(!1);
                                         },
                                     })
                                 );
@@ -165,7 +165,7 @@ function eN(e) {
                                         : null,
                                     popoutOpen: t,
                                     shouldShowTooltip: !t,
-                                    renderNUXHighlight: N,
+                                    renderNUXHighlight: b,
                                     buttonRef: _,
                                     onClick: null != g ? T : S,
                                 });
@@ -177,7 +177,7 @@ function eN(e) {
         ],
     });
 }
-function eb(e) {
+function eN(e) {
     let { channel: t, idle: n, whichPopoutIsOpen: l, setWhichPopoutIsOpen: s } = e,
         a = t.getGuildId();
     return (0, x.A)(a, t.id)
@@ -202,18 +202,18 @@ let eS = l.memo(function (e) {
                 return n !== t?.id;
             }),
         ),
-        N = (0, G.Qs)(s.id),
-        b = l.useRef(null),
+        b = (0, G.Qs)(s.id),
+        N = l.useRef(null),
         S = l.useCallback(
             () =>
                 o?.type === ex.lp.ACTIVITY && o.applicationId === a?.applicationId
                     ? "ACTIVITY"
                     : x
                       ? "STREAM"
-                      : null != N
+                      : null != b
                         ? "EVENT"
                         : "CALL",
-            [o, a?.applicationId, x, N],
+            [o, a?.applicationId, x, b],
         ),
         [T, y] = l.useState(S()),
         j = (0, h.zhh)(
@@ -235,7 +235,7 @@ let eS = l.memo(function (e) {
         else for (let e of C) (0, g.vN)((0, L._z)(e));
     }, [C, f]);
     return (0, i.jsx)(h.YNO, {
-        targetElementRef: b,
+        targetElementRef: N,
         renderPopout: (e) => {
             let { closePopout: n } = e;
             return (0, i.jsx)(eA.A, {
@@ -256,7 +256,7 @@ let eS = l.memo(function (e) {
                 { isShown: u } = l;
             return (0, i.jsx)(d.animated.div, {
                 style: j,
-                ref: b,
+                ref: N,
                 children: ((e, l) => {
                     let d = { isTrayButton: !1, centerButton: !0, popoutOpen: e };
                     switch (T) {
@@ -372,7 +372,7 @@ let ey = function (e) {
             ? (e) => {
                   (0, m.L3)(e, () =>
                       Promise.resolve(() =>
-                          (0, i.jsx)(N.default, {
+                          (0, i.jsx)(b.default, {
                               onClose: m.Z_,
                               renderInputDevices: !0,
                               renderOutputDevices: !0,
@@ -414,7 +414,7 @@ let ey = function (e) {
                                                             showOutputDevices: !0,
                                                             onSettingsButtonClick: n,
                                                         })
-                                                      : (0, i.jsx)(b.A, {
+                                                      : (0, i.jsx)(N.A, {
                                                             onInteraction: ev("AudioDeviceMenu"),
                                                             onClose: n,
                                                             maybeRenderPTTCheckbox: !0,
@@ -494,7 +494,7 @@ let ey = function (e) {
                                   className: eE.qi,
                                   children: [
                                       !k &&
-                                          (0, i.jsx)(eN, {
+                                          (0, i.jsx)(eb, {
                                               channel: t,
                                               currentUser: g,
                                               exitFullScreen: r,
@@ -502,7 +502,7 @@ let ey = function (e) {
                                               hasPermission: v,
                                           }),
                                       !k &&
-                                          (0, i.jsx)(eb, {
+                                          (0, i.jsx)(eN, {
                                               channel: t,
                                               idle: d?.idle ?? !0,
                                               whichPopoutIsOpen: A,

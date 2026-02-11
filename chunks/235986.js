@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => h });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(538640),
-    l = n(20976);
+    o = n(573162),
+    l = n(641254);
 let u = { VERTICAL: l.Vd, HORIZONTAL: o.xM, HORIZONTAL_REVERSE: o.XB },
     c = { START: l.LF, END: l.Ub, CENTER: l.wq, BETWEEN: l.LT, AROUND: l.aD },
     d = { START: l.CT, END: l.ZT, CENTER: l.Hu, STRETCH: l.hx, BASELINE: l.Ju },
@@ -18,16 +18,16 @@ let u = { VERTICAL: l.Vd, HORIZONTAL: o.xM, HORIZONTAL_REVERSE: o.XB },
             justify: a = c.START,
             align: l = d.STRETCH,
             wrap: f = _.NO_WRAP,
-            shrink: p = 1,
-            grow: h = 1,
-            basis: m = "auto",
-            style: g,
-            ...E
+            shrink: h = 1,
+            grow: p = 1,
+            basis: g = "auto",
+            style: E,
+            ...A
         } = e;
         return (0, r.jsx)("div", {
-            style: { flexShrink: p, flexGrow: h, flexBasis: m, ...g },
+            style: { flexShrink: h, flexGrow: p, flexBasis: g, ...E },
             className: s()(o.Uu, i, a, l, f, n),
-            ...E,
+            ...A,
             children: t,
         });
     };
@@ -48,4 +48,4 @@ let u = { VERTICAL: l.Vd, HORIZONTAL: o.xM, HORIZONTAL_REVERSE: o.XB },
     (f.Align = d),
     (f.Justify = c),
     (f.Wrap = _);
-let p = f;
+let h = f;

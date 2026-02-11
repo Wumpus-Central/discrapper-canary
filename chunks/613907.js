@@ -1,8 +1,8 @@
 n.d(t, { A: () => T });
 var i = n(627968),
     l = n(64700),
-    a = n(735438),
-    s = n.n(a),
+    s = n(735438),
+    a = n.n(s),
     r = n(311907),
     o = n(397927),
     c = n(843472),
@@ -11,46 +11,46 @@ var i = n(627968),
     h = n(148355),
     m = n(961350),
     A = n(320501),
-    p = n(287809),
-    g = n(954571),
+    g = n(287809),
+    p = n(954571),
     f = n(427262),
     _ = n(143413),
     E = n(652215),
     C = n(985018),
-    x = n(455683);
+    x = n(989);
 let S = "749054660769218631";
 function T(e) {
     let { channel: t } = e,
-        [n, a] = l.useState("");
+        [n, s] = l.useState("");
     l.useEffect(() => {
         (0, d.zk)("847199849233514549", !0);
     }, []);
     let T = (0, r.bG)(
             [A.A, m.default],
             () =>
-                !!s()(A.A.getMessages(t.id).toArray())
+                !!a()(A.A.getMessages(t.id).toArray())
                     .reverse()
                     .find((e) => e.author.id !== m.default.getId() && e.state === E.cmJ.SENT && !(0, _.A)(e)),
         ),
-        I = (0, r.bG)([p.default], () => p.default.getUser(t.isPrivate() ? t.getRecipientId() : null)),
-        N = f.Ay.useName(I) ?? C.intl.string(C.t.y1Wu2f),
+        N = (0, r.bG)([g.default], () => g.default.getUser(t.isPrivate() ? t.getRecipientId() : null)),
+        I = f.Ay.useName(N) ?? C.intl.string(C.t.y1Wu2f),
         v = (0, r.bG)([u.A], () => u.A.getStickerById(S)),
         y = l.useCallback(async () => {
             if (null == n || "" === n)
                 try {
                     await c.A.sendGreetMessage(t.id, S),
-                        g.default.track(E.HAw.DM_EMPTY_ACTION, {
+                        p.default.track(E.HAw.DM_EMPTY_ACTION, {
                             channel_id: t.id,
                             channel_type: t.type,
                             source: "Wave",
                             type: "Send wave",
                         });
                 } catch (e) {
-                    e.ok || 429 !== e.status || a(C.intl.string(C.t.Whhv4w));
+                    e.ok || 429 !== e.status || s(C.intl.string(C.t.Whhv4w));
                 }
         }, [t.id, t.type, n]),
-        b = C.intl.formatToPlainString(C.t.m0zYbV, { username: N }),
-        R =
+        b = C.intl.formatToPlainString(C.t.m0zYbV, { username: I }),
+        j =
             null != n && "" !== n
                 ? (0, i.jsx)(o.Text, {
                       className: x.z3,
@@ -72,7 +72,7 @@ function T(e) {
                           (0, i.jsx)(o.Text, { className: x.Qq, variant: "text-md/medium", children: b }),
                       ],
                   }),
-                  R,
+                  j,
               ],
           })
         : (0, i.jsxs)("div", {
@@ -87,7 +87,7 @@ function T(e) {
                       disabled: !!n,
                       text: b,
                   }),
-                  R,
+                  j,
               ],
           });
 }

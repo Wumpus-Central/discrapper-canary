@@ -1,8 +1,8 @@
 n.d(t, { g: () => E });
 var i = n(627968),
     r = n(64700),
-    a = n(554146),
-    l = n(379848),
+    l = n(554146),
+    a = n(379848),
     s = n(866945),
     o = n(780964),
     d = n(358776),
@@ -13,10 +13,10 @@ var i = n(627968),
     _ = n(355097),
     m = n(531525),
     p = n(985018),
-    g = n(91492);
+    g = n(718026);
 function E() {
-    let [e, t] = (0, l.kn)([a.M.RESTRICTED_ACCOUNTS_SETTING_NOTICE]);
-    return r.useMemo(() => e === a.M.RESTRICTED_ACCOUNTS_SETTING_NOTICE, [e])
+    let [e, t] = (0, a.kn)([l.M.RESTRICTED_ACCOUNTS_SETTING_NOTICE]);
+    return r.useMemo(() => e === l.M.RESTRICTED_ACCOUNTS_SETTING_NOTICE, [e])
         ? (0, i.jsx)(s.e, {
               label: p.t.zqv4nV,
               labelHook: () => {

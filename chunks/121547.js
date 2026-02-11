@@ -10,7 +10,7 @@ var i = n(627968),
     u = n(808247),
     g = n(518477),
     m = n(985018),
-    x = n(799559);
+    x = n(24917);
 function f(e) {
     let { wishlistId: t, sku: n, analyticsLocations: a, isHoveringOrFocusing: f, onHoverOrFocusChange: h } = e,
         p = l.useRef(null),

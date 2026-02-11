@@ -1,4 +1,4 @@
-n.d(t, { e: () => w, r: () => U });
+n.d(t, { e: () => w, r: () => V });
 var l = n(627968),
     i = n(64700),
     s = n(503698),
@@ -12,25 +12,25 @@ var l = n(627968),
     h = n(835072),
     A = n(313961),
     p = n(85448),
-    I = n(571694),
-    m = n(47167),
+    m = n(571694),
+    I = n(47167),
     x = n(10862),
     v = n(410876),
     S = n(71393),
     y = n(535820),
     E = n(290863),
-    f = n(994500),
-    T = n(287809),
-    C = n(486020),
-    _ = n(240248),
+    T = n(994500),
+    f = n(287809),
+    _ = n(486020),
+    C = n(240248),
     b = n(427262),
     N = n(222075),
     M = n(652215),
     j = n(806931),
     R = n(985018),
-    G = n(912579);
-let U = 48;
-function V(e, t) {
+    G = n(67501);
+let V = 48;
+function U(e, t) {
     if (null != e) return { suggestionData: y.A.getSelectedInviteMetadata(e), source: t };
 }
 let w = i.memo(
@@ -40,19 +40,19 @@ let w = i.memo(
                 user: n,
                 channel: s,
                 inviteKey: y,
-                location: U,
+                location: V,
                 row: w,
                 source: O,
                 shouldRenameButtonCTA: D,
                 ringingEnabled: P,
-                inviteChannel: L,
-                guildId: k,
+                inviteChannel: k,
+                guildId: L,
             } = e,
             [B, F] = i.useState(!1),
             [H, K] = i.useState(!1),
             Q = (0, r.bG)([S.A], () => S.A.getGuild(s?.guild_id)),
             { showActivityStatus: z } = N.o.useExperiment(
-                { guildId: k, location: "InviteRow" },
+                { guildId: L, location: "InviteRow" },
                 { autoTrackExposure: !1 },
             ),
             {
@@ -65,11 +65,11 @@ let w = i.memo(
                     null == n
                         ? { status: void 0, isMobileOnline: void 0, activities: void 0 }
                         : {
-                              status: E.A.getStatus(n.id, k),
+                              status: E.A.getStatus(n.id, L),
                               isMobileOnline: E.A.isMobileOnline(n.id),
-                              activities: E.A.getActivities(n.id, k),
+                              activities: E.A.getActivities(n.id, L),
                           },
-                [n, k],
+                [n, L],
             ),
             { activityStatusText: Y, activityStatusIcon: Z } = i.useMemo(() => {
                 if (!z || null == J) return { activityStatusText: {}, activityStatusIcon: void 0 };
@@ -77,8 +77,8 @@ let w = i.memo(
                 return { activityStatusText: (0, u.A)(e, !1), activityStatusIcon: null == e ? void 0 : (0, h.f)(e) };
             }, [z, J]),
             { voiceChannel: X } = (0, c.A)({ userId: n?.id }),
-            $ = (0, m.Ay)(X),
-            ee = (0, r.bG)([A.A], () => (null != L && null != n ? A.A.getParticipant(L.id, n.id) : null)),
+            $ = (0, I.Ay)(X),
+            ee = (0, r.bG)([A.A], () => (null != k && null != n ? A.A.getParticipant(k.id, n.id) : null)),
             et = P && null != ee && ee.type === j.lp.USER && ee.ringing,
             en = (0, o.S31)(o.clD.ONLINE),
             el = i.useCallback(() => {
@@ -90,8 +90,8 @@ let w = i.memo(
                                   type: d.F.GROUP_DM,
                                   channel: s,
                                   inviteKey: y,
-                                  location: U,
-                                  inviteAnalyticsMetadata: V(w, O),
+                                  location: V,
+                                  inviteAnalyticsMetadata: U(w, O),
                               },
                               (e) => {
                                   F(!1), K(e);
@@ -100,24 +100,24 @@ let w = i.memo(
                         : null != n &&
                           (F(!0),
                           d.A.enqueue(
-                              { type: d.F.USER, user: n, inviteKey: y, location: U, inviteAnalyticsMetadata: V(w, O) },
+                              { type: d.F.USER, user: n, inviteKey: y, location: V, inviteAnalyticsMetadata: U(w, O) },
                               (e) => {
                                   F(!1), K(e);
                               },
                           )));
-            }, [y, s, n, U, w, O]),
+            }, [y, s, n, V, w, O]),
             ei = b.Ay.getName(n),
-            es = null != n ? f.A.getNickname(n.id) : null,
-            ea = null != s ? (0, m.m1)(s, T.default, f.A) : null,
+            es = null != n ? T.A.getNickname(n.id) : null,
+            ea = null != s ? (0, I.m1)(s, f.default, T.A) : null,
             er = null != n ? n.getAvatarURL(s?.guild_id, 32) : null,
-            eo = null != s ? (0, I.Y)(s) : null,
+            eo = null != s ? (0, m.Y)(s) : null,
             ed =
                 null != Q && null != s && null == eo
-                    ? C.Ay.getGuildIconURL({ id: s.guild_id, icon: Q.icon, size: 32 })
+                    ? _.Ay.getGuildIconURL({ id: s.guild_id, icon: Q.icon, size: 32 })
                     : null,
             eu = er ?? eo ?? ed,
             ec = ei ?? ea ?? void 0,
-            eg = null != Q && null == Q.icon ? (0, _.oN)(Q.name) : null,
+            eg = null != Q && null == Q.icon ? (0, C.oN)(Q.name) : null,
             eh = null != eu && null != ec;
         null != n && (t = es ?? ei);
         let eA = b.Ay.getUserTag(n, { decoration: "never" }),
@@ -129,9 +129,9 @@ let w = i.memo(
                 onClick: el,
                 disabled: H,
             }),
-            eI = z && null != Y.text,
-            em = z && null != X && null != $,
-            ex = em || eI || null != n;
+            em = z && null != Y.text,
+            eI = z && null != X && null != $,
+            ex = eI || em || null != n;
         return (0, l.jsxs)("div", {
             className: G.Og,
             children: [
@@ -162,13 +162,13 @@ let w = i.memo(
                                     tag: "strong",
                                     variant: "text-md/semibold",
                                     lineClamp: 1,
-                                    children: [t, null != s ? (0, m.m1)(s, T.default, f.A, !0) : null],
+                                    children: [t, null != s ? (0, I.m1)(s, f.default, T.A, !0) : null],
                                 }),
                                 ex &&
                                     (0, l.jsxs)("div", {
                                         className: a()(G.eq, { [G.DF]: et }),
                                         children: [
-                                            em
+                                            eI
                                                 ? (0, l.jsx)(x.A, {
                                                       size: "custom",
                                                       color: en,
@@ -178,14 +178,14 @@ let w = i.memo(
                                                 : null != Z
                                                   ? (0, l.jsx)(g.A, { icon: Z, className: G.j8 })
                                                   : null,
-                                            em
+                                            eI
                                                 ? (0, l.jsx)(o.Text, {
                                                       variant: "text-xs/medium",
                                                       color: "text-status-online",
                                                       lineClamp: 1,
                                                       children: $,
                                                   })
-                                                : eI
+                                                : em
                                                   ? (0, l.jsx)(o.Text, {
                                                         variant: "text-xs/medium",
                                                         color: "text-status-online",
@@ -213,7 +213,7 @@ let w = i.memo(
                 (0, l.jsxs)("div", {
                     className: G.t$,
                     children: [
-                        P && null != n && null != L && (0, l.jsx)(v.A, { user: n, channel: L, location: "InviteRow" }),
+                        P && null != n && null != k && (0, l.jsx)(v.A, { user: n, channel: k, location: "InviteRow" }),
                         ep,
                     ],
                 }),

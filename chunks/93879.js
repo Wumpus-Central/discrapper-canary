@@ -1,119 +1,119 @@
 "use strict";
-n.d(t, { A: () => S });
+n.d(t, { A: () => v });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(158954),
     l = n(429913),
-    u = n(242640),
+    u = n(798048),
     c = n(178213),
     d = n(594832),
     _ = n(954571),
     f = n(403362),
-    p = n(79871),
-    h = n(453774),
-    m = n(592356),
-    g = n(568751),
-    E = n(620406),
-    A = n(652215),
-    I = n(360469),
-    T = n(985018),
-    y = n(809519);
-function S(e) {
+    h = n(79871),
+    p = n(453774),
+    g = n(592356),
+    E = n(568751),
+    A = n(620406),
+    I = n(652215),
+    T = n(360469),
+    y = n(985018),
+    S = n(10937);
+function v(e) {
     let {
             className: t,
             applicationId: n,
             userIds: a,
-            cardSize: S = u.Y.SMALL,
-            location: v,
-            guildId: C,
-            channelId: b,
+            cardSize: v = u.Y.SMALL,
+            location: C,
+            guildId: b,
+            channelId: N,
         } = e,
-        N = (0, l.h)(n),
-        R = (0, h.A)(N, v),
-        O = (0, c.G)("social_layer_storefront_gifting_breadcrumb"),
-        D = i.useMemo(() => {
-            let e = null != R ? R.getIconURL(I.iu.SMALL) : void 0;
-            return null != e ? (0, r.jsx)("img", { className: y.In, src: e, alt: "" }) : void 0;
-        }, [R]),
+        R = (0, l.h)(n),
+        O = (0, p.A)(R, C),
+        D = (0, c.G)("social_layer_storefront_gifting_breadcrumb"),
+        L = i.useMemo(() => {
+            let e = null != O ? O.getIconURL(T.iu.SMALL) : void 0;
+            return null != e ? (0, r.jsx)("img", { className: S.In, src: e, alt: "" }) : void 0;
+        }, [O]),
         {
-            state: L,
-            recommendations: w,
-            skuIdToUserIdsReasons: x,
-        } = (0, m.A)({ applicationId: R?.id, numWishlistItems: 2, location: v, includeWishlists: !0, userIds: a }),
-        P = i.useMemo(() => new Set(a), [a]),
-        M = i.useMemo(
-            () => w.length > 0 && w.every((e) => x[e.skuId]?.some((e) => e.reason === p.G.WISHLIST && P.has(e.userId))),
-            [w, x, P],
+            state: w,
+            recommendations: x,
+            skuIdToUserIdsReasons: P,
+        } = (0, g.A)({ applicationId: O?.id, numWishlistItems: 2, location: C, includeWishlists: !0, userIds: a }),
+        M = i.useMemo(() => new Set(a), [a]),
+        k = i.useMemo(
+            () => x.length > 0 && x.every((e) => P[e.skuId]?.some((e) => e.reason === h.G.WISHLIST && M.has(e.userId))),
+            [x, P, M],
         ),
-        k = i.useMemo(() => {
-            let e = M && 1 === a.length;
-            return w.map((t) => {
+        U = i.useMemo(() => {
+            let e = k && 1 === a.length;
+            return x.map((t) => {
                 let n =
-                    x[t.skuId]
-                        ?.filter((e) => e.reason === p.G.WISHLIST && P.has(e.userId))
+                    P[t.skuId]
+                        ?.filter((e) => e.reason === h.G.WISHLIST && M.has(e.userId))
                         .map((e) => e.userId)
                         .filter(f.Vq) ?? [];
-                return O
+                return D
                     ? (0, r.jsx)(
-                          g.A,
+                          E.A,
                           {
                               sku: t.sku,
                               source: n.length > 0 ? d.uS.WISHLIST : d.uS.POPULAR,
                               hideIcon: e,
-                              guildId: C,
-                              channelId: b,
-                              style: S === u.Y.SMALL_SQUARE ? y.tM : void 0,
-                              contextContainerClassName: y.RL,
+                              guildId: b,
+                              channelId: N,
+                              style: v === u.Y.SMALL_SQUARE ? S.tM : void 0,
+                              contextContainerClassName: S.RL,
                               userIdsForGifting: a,
                               userIdsForRecommendation: n,
                           },
                           t.sku.id,
                       )
                     : (0, r.jsx)(
-                          E.A,
+                          A.A,
                           {
-                              variant: e ? E.$.NO_ICON : n.length > 0 ? E.$.WISHLIST : E.$.POPULAR,
+                              variant: e ? A.$.NO_ICON : n.length > 0 ? A.$.WISHLIST : A.$.POPULAR,
                               userIdsForRecommendation: n,
                               userIdsForGifting: a,
                               wishlistItem: t,
-                              guildId: C,
-                              channelId: b,
-                              cardSize: S,
-                              contextContainerClassName: y.RL,
+                              guildId: b,
+                              channelId: N,
+                              cardSize: v,
+                              contextContainerClassName: S.RL,
                           },
                           t.skuId,
                       );
             });
-        }, [S, b, C, O, w, x, M, a, P]);
+        }, [v, N, b, D, x, P, k, a, M]);
     i.useEffect(() => {
-        0 !== w.length &&
-            _.default.track(A.HAw.COMMERCE_SHOP_GIFTING_BREADCRUMB_VIEWED, {
-                guild_id: C,
-                channel_id: b,
-                sku_ids: w.map((e) => e.skuId),
-                location: v,
+        0 !== x.length &&
+            _.default.track(I.HAw.COMMERCE_SHOP_GIFTING_BREADCRUMB_VIEWED, {
+                guild_id: b,
+                channel_id: N,
+                sku_ids: x.map((e) => e.skuId),
+                location: C,
             });
-    }, [C, b, w, v]);
-    let U = "loading" === L || 0 === w.length;
+    }, [b, N, x, C]);
+    let G = "loading" === w || 0 === x.length;
     return (0, r.jsxs)("div", {
-        className: s()(y.kL, t),
+        className: s()(S.kL, t),
         children: [
             (0, r.jsxs)("div", {
-                className: y.wx,
+                className: S.wx,
                 children: [
                     (0, r.jsx)(o.EYj, {
                         variant: "text-xs/medium",
                         color: "text-muted",
-                        children: M ? T.intl.string(T.t["7lZ31J"]) : T.intl.string(T.t.BCi1gT),
+                        children: k ? y.intl.string(y.t["7lZ31J"]) : y.intl.string(y.t.BCi1gT),
                     }),
-                    null != D ? D : null,
+                    null != L ? L : null,
                 ],
             }),
             (0, r.jsx)("div", {
-                className: y.ld,
-                children: U ? (0, r.jsx)(o.y$y, { type: o.y$y.Type.SPINNING_CIRCLE, className: y.u1 }) : k,
+                className: S.ld,
+                children: G ? (0, r.jsx)(o.y$y, { type: o.y$y.Type.SPINNING_CIRCLE, className: S.u1 }) : U,
             }),
         ],
     });

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -12,12 +12,12 @@ var i = n(503698),
     d = n(202803),
     _ = n(365526),
     f = n(652215),
-    p = n(446440),
-    h = n(800344);
-function m(e) {
+    h = n(882618),
+    p = n(13490);
+function g(e) {
     return {
-        react(t, i, m) {
-            let g = m.noStyleAndInteraction
+        react(t, i, g) {
+            let E = g.noStyleAndInteraction
                     ? void 0
                     : async (n) => {
                           let r = await (0, d.AN)(t.attachmentUrl);
@@ -26,7 +26,7 @@ function m(e) {
                               e.shouldCloseDefaultModals && (0, s.s7G)(),
                               (0, l.A)(r);
                       },
-                E = m.noStyleAndInteraction
+                A = g.noStyleAndInteraction
                     ? f.tEg
                     : (e) => {
                           (0, o.L3)(e, async () => {
@@ -44,15 +44,15 @@ function m(e) {
                 {
                     role: "link",
                     href: t.attachmentUrl,
-                    onClick: g,
-                    onContextMenu: E,
+                    onClick: E,
+                    onContextMenu: A,
                     className: "attachmentLink",
                     children: [
-                        (0, r.jsx)(s.PtA, { size: "xs", className: a()(h.Kk, p.K), color: "currentColor" }),
-                        (0, _.t)(t, i, m),
+                        (0, r.jsx)(s.PtA, { size: "xs", className: a()(p.Kk, h.K), color: "currentColor" }),
+                        (0, _.t)(t, i, g),
                     ],
                 },
-                m.key,
+                g.key,
             );
         },
     };

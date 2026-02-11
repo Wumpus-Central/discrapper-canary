@@ -1,7 +1,7 @@
 n.d(t, { R: () => h });
 var i = n(627968),
     l = n(64700),
-    a = n(92674);
+    a = n(563495);
 n(311907), n(859703);
 var r = n(341915),
     s = n(890687),
@@ -10,7 +10,7 @@ var r = n(341915),
     c = n(285433),
     u = n(394900),
     m = n(433745),
-    _ = n(868684);
+    _ = n(969862);
 function h(e) {
     let { quest: t, location: n, initiallyExpanded: h, contentPosition: p, sourceQuestContent: g } = e,
         A = (0, s.LS)(t),
@@ -23,8 +23,8 @@ function h(e) {
         } = (0, u.s)({ initiallyExpanded: h || (0, m.RA)({ location: n, quest: t }) }),
         [N, S] = l.useState(!1),
         b = () => S(!0),
-        y = () => S(!1),
-        j = E ?? m._B;
+        j = () => S(!1),
+        y = E ?? m._B;
     return (0, i.jsx)(o.R, {
         questOrQuests: t,
         questContent: n,
@@ -33,12 +33,12 @@ function h(e) {
         sourceQuestContent: g,
         children: (e) =>
             (0, i.jsx)(a.animated.div, {
-                style: { maxHeight: n === r.uF.QUESTS_EMBED ? void 0 : C.to({ range: [0, 1], output: [m.es, j] }) },
+                style: { maxHeight: n === r.uF.QUESTS_EMBED ? void 0 : C.to({ range: [0, 1], output: [m.es, y] }) },
                 className: _.i,
                 onMouseEnter: b,
-                onMouseLeave: y,
+                onMouseLeave: j,
                 onFocus: b,
-                onBlur: y,
+                onBlur: j,
                 children: (0, i.jsxs)("div", {
                     ref: (t) => {
                         (e.current = t), (f.current = t);

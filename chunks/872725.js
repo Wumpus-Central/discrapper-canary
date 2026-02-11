@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => p });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -9,7 +9,7 @@ var r = n(627968),
     u = n(786558),
     c = n(799226),
     d = n(397927),
-    _ = n(92949);
+    _ = n(511291);
 let f = {
         HoverLightmode: { posy: "number", posx: "number" },
         BaseGlow: {},
@@ -18,48 +18,48 @@ let f = {
         BaseGlowRemapped: {},
         ButtonFillDarkmode: {},
     },
-    p = {},
-    h = (e) => {
+    h = {},
+    p = (e) => {
         let {
                 children: t,
                 className: n,
                 cardClassName: a,
-                cardStyle: h = p,
-                cardType: m,
-                artboard: g = "BaseGlowRemapped",
-                fit: E = "layout",
-                glowAmount: A = 8,
-                blurAmount: I = 30,
-                hueRotate: T = 0,
+                cardStyle: p = h,
+                cardType: g,
+                artboard: E = "BaseGlowRemapped",
+                fit: A = "layout",
+                glowAmount: I = 8,
+                blurAmount: T = 30,
+                hueRotate: y = 0,
                 isReducedMotion: S,
             } = e,
-            y = i.useRef(null),
             v = i.useRef(null),
-            { status: C, buffer: N } = (0, c.CE)(o.A),
-            b = i.useContext(l.C),
-            R = S ?? b.reducedMotion.enabled,
-            O = {
-                "--custom-glow-amount": `${A}px`,
-                "--custom-blur-amount": `${I}px`,
-                "--custom-hue-rotate": `${T}deg`,
+            C = i.useRef(null),
+            { status: b, buffer: N } = (0, c.CE)(o.A),
+            R = i.useContext(l.C),
+            O = S ?? R.reducedMotion.enabled,
+            D = {
+                "--custom-glow-amount": `${I}px`,
+                "--custom-blur-amount": `${T}px`,
+                "--custom-hue-rotate": `${y}deg`,
             };
         return (0, r.jsxs)("div", {
-            ref: y,
+            ref: v,
             className: s()(_.kL, n),
-            style: O,
+            style: D,
             children: [
-                C !== c.BW.Loading &&
+                b !== c.BW.Loading &&
                     (0, r.jsx)(u.w, {
                         buffer: N,
-                        artboard: g,
+                        artboard: E,
                         artboardProperties: f,
-                        eventTargetRef: y,
+                        eventTargetRef: v,
                         className: _.Q_,
-                        ref: v,
-                        fit: E,
-                        withReducedMotion: R ? "halt" : "play",
+                        ref: C,
+                        fit: A,
+                        withReducedMotion: O ? "halt" : "play",
                     }),
-                (0, r.jsx)(d.ZpM, { type: m ?? d.sl2.CUSTOM, className: s()(_.Nr, a), style: h, children: t }),
+                (0, r.jsx)(d.ZpM, { type: g ?? d.sl2.CUSTOM, className: s()(_.Nr, a), style: p, children: t }),
             ],
         });
     };

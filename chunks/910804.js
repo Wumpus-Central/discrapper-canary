@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $K: () => h, KF: () => c, Mx: () => f, iH: () => p, kj: () => d, ri: () => _ });
+n.d(t, { $K: () => p, KF: () => c, Mx: () => f, iH: () => h, kj: () => d, ri: () => _ });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -7,7 +7,7 @@ var i = n(503698),
     s = n(397927),
     o = n(138869),
     l = n(386971),
-    u = n(775486);
+    u = n(30944);
 let c = (e) => {
         let { application: t, asset: n, className: i, ...a } = e;
         return (0, r.jsx)(o.A, { application: t, size: o.V.MEDIUM, asset: n, className: i, ...a });
@@ -36,7 +36,7 @@ let f = (e) => {
             ],
         });
     },
-    p = (e) => {
+    h = (e) => {
         let { applicationId: t, storeListingBenefits: n, skuBenefits: i, className: s, ...o } = e;
         return (0, r.jsx)("div", {
             className: a()(u.iq, s),
@@ -44,7 +44,7 @@ let f = (e) => {
             children: (0, r.jsx)(l.mc, { applicationId: t, storeListingBenefits: n, skuBenefits: i, className: u.gX }),
         });
     },
-    h = (e) => {
+    p = (e) => {
         let { children: t, className: n, ...i } = e;
         return (0, r.jsx)("div", { className: a()(u.kL, n), ...i, children: t });
     };

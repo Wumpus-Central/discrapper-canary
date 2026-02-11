@@ -10,7 +10,7 @@ var i = n(627968),
     u = n(206589),
     m = n(768349),
     _ = n(985018),
-    h = n(609653);
+    h = n(62323);
 function p(e) {
     let {
             application: t,
@@ -47,7 +47,7 @@ function p(e) {
                 ? _.intl.formatToPlainString(_.t.JCvHtx, { track: g.details, artist: g.state })
                 : t.name,
         b = g?.timestamps?.start ?? g?.created_at,
-        y = l.useMemo(
+        j = l.useMemo(
             () =>
                 null != b
                     ? (0, i.jsxs)("div", {
@@ -65,7 +65,7 @@ function p(e) {
                     : null,
             [b, g?.timestamps?.end],
         ),
-        j = l.useMemo(
+        y = l.useMemo(
             () =>
                 (0, i.jsxs)("div", {
                     className: h.pq,
@@ -75,18 +75,18 @@ function p(e) {
                             className: h.dS,
                             color: "none",
                             lineClamp: 1,
-                            children: y,
+                            children: j,
                         }),
                         A ? null : f,
                     ],
                 }),
-            [y, A, f],
+            [j, A, f],
         );
     return (0, i.jsx)(r.h, {
         header: p,
         title: S,
         iconSrc: (0, c.A)(g, t.id) ?? void 0,
-        info: j,
+        info: y,
         actions: N,
         onClickContent: E,
         trackingConfig: {

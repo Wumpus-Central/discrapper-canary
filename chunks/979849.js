@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => A });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -11,65 +11,65 @@ var r = n(627968),
     d = n(290863),
     _ = n(837921),
     f = n(351242),
-    p = n(385612),
-    h = n(339984),
-    m = n(577401);
-let g = _.Ay.getEnableHardwareAcceleration() ? l.JsQ : l.euF;
-function E(e) {
+    h = n(385612),
+    p = n(339984),
+    g = n(84279);
+let E = _.Ay.getEnableHardwareAcceleration() ? l.JsQ : l.euF;
+function A(e) {
     let {
             user: t,
             guild: n,
             displayProfile: a,
             canUsePremiumCustomization: _,
-            previewAvatar: E,
-            previewAvatarDecorationSrc: A,
-            previewTheme: I,
-            previewPrimaryColor: T,
-            className: y,
-            disabledInputs: S,
-            isTryItOut: v,
-            onUpsellClick: C,
+            previewAvatar: A,
+            previewAvatarDecorationSrc: I,
+            previewTheme: T,
+            previewPrimaryColor: y,
+            className: S,
+            disabledInputs: v,
+            isTryItOut: C,
+            onUpsellClick: b,
         } = e,
-        b = i.useRef(null),
-        { analyticsLocations: N, newestAnalyticsLocation: R } = (0, u.Ay)(),
-        O = (0, o.bG)([d.A], () => d.A.getStatus(t.id)),
-        D = null == n || a?.canUsePremiumProfileCustomization || _,
-        L = (0, r.jsx)(g, {
-            src: E,
-            avatarDecoration: A,
-            imageClassName: s()(y, { [m.Lw]: !S }),
+        N = i.useRef(null),
+        { analyticsLocations: R, newestAnalyticsLocation: O } = (0, u.Ay)(),
+        D = (0, o.bG)([d.A], () => d.A.getStatus(t.id)),
+        L = null == n || a?.canUsePremiumProfileCustomization || _,
+        w = (0, r.jsx)(E, {
+            src: A,
+            avatarDecoration: I,
+            imageClassName: s()(S, { [g.Lw]: !v }),
             size: l._3J.SIZE_80,
             "aria-label": t.username,
-            status: O,
+            status: D,
             statusTooltip: !1,
-            statusBackdropColor: null != T ? (0, l.C$5)(I) : void 0,
+            statusBackdropColor: null != y ? (0, l.C$5)(T) : void 0,
         });
-    return S
-        ? (0, r.jsx)("div", { className: m.my, children: L })
-        : D
+    return v
+        ? (0, r.jsx)("div", { className: g.my, children: w })
+        : L
           ? (0, r.jsx)(l.YNO, {
-                targetElementRef: b,
+                targetElementRef: N,
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, r.jsx)(f.A, {
                         onClose: t,
                         onChangeAvatar: () =>
-                            (0, p.XD)({ uploadType: h.HL.AVATAR, guildId: n?.id, analyticsSource: R, isTryItOut: v }),
+                            (0, h.XD)({ uploadType: p.HL.AVATAR, guildId: n?.id, analyticsSource: O, isTryItOut: C }),
                         onChangeAvatarDecoration: () => {
-                            (0, c.L)({ guild: null == n ? void 0 : n, analyticsLocations: N });
+                            (0, c.L)({ guild: null == n ? void 0 : n, analyticsLocations: R });
                         },
                     });
                 },
                 children: (e) =>
                     (0, r.jsxs)(l.DUT, {
                         ...e,
-                        innerRef: b,
-                        className: s()(m.my, m.vk),
+                        innerRef: N,
+                        className: s()(g.my, g.vk),
                         children: [
-                            L,
+                            w,
                             (0, r.jsx)(l.R2l, {
                                 size: "custom",
-                                className: m.QY,
+                                className: g.QY,
                                 width: 20,
                                 height: 20,
                                 color: "white",
@@ -78,11 +78,11 @@ function E(e) {
                     }),
             })
           : (0, r.jsxs)(l.DUT, {
-                onClick: C,
-                className: s()(m.my, m.vk),
+                onClick: b,
+                className: s()(g.my, g.vk),
                 children: [
-                    L,
-                    (0, r.jsx)(l.tvc, { size: "custom", className: m.QY, width: 20, height: 20, color: "white" }),
+                    w,
+                    (0, r.jsx)(l.tvc, { size: "custom", className: g.QY, width: 20, height: 20, color: "white" }),
                 ],
             });
 }

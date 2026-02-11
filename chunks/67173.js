@@ -1,9 +1,9 @@
 n.d(t, { A: () => R });
 var i = n(627968),
     r = n(64700),
-    a = n(503698),
-    l = n.n(a),
-    s = n(92674),
+    l = n(503698),
+    a = n.n(l),
+    s = n(563495),
     o = n(837381),
     d = n(158954),
     c = n(311907),
@@ -24,13 +24,13 @@ var i = n(627968),
     x = n(652215),
     v = n(49999),
     b = n(985018),
-    y = n(106417);
+    y = n(817259);
 let L = Math.ceil(Math.sqrt(115200)),
     O = (L - 240) / 2,
     R = function (e) {
         let { selected: t } = e,
             n = (0, o.rm)("quests"),
-            a = r.useRef(null),
+            l = r.useRef(null),
             {
                 shouldShowPopover: R,
                 shouldShowGradientAndBadge: P,
@@ -43,12 +43,12 @@ let L = Math.ceil(Math.sqrt(115200)),
                         v.m.PRIVATE_CHANNELS_LIST,
                         !0,
                     ),
-                    a = r.useCallback(() => {
+                    l = r.useCallback(() => {
                         i(v.i.TAKE_ACTION);
                     }, [i]),
-                    l = n === u.M.QUEST_HOME_ENTRYPOINT_ONBOARDING,
+                    a = n === u.M.QUEST_HOME_ENTRYPOINT_ONBOARDING,
                     s = (0, g.JZ)(u.M.QUEST_HOME_ENTRYPOINT_ONBOARDING);
-                return { shouldShowPopover: l, shouldShowGradientAndBadge: t && !s, dismissOnboardingContent: a };
+                return { shouldShowPopover: a, shouldShowGradientAndBadge: t && !s, dismissOnboardingContent: l };
             })(),
             { shouldShowTakeoverContent: D, dismissTakeoverContent: w, takeoverConfig: M } = (0, C.j)(),
             U = r.useCallback(() => {
@@ -96,9 +96,9 @@ let L = Math.ceil(Math.sqrt(115200)),
                         null != r &&
                         ((e["--custom-takeover-radial-gradient-start"] = i),
                         (e["--custom-takeover-radial-gradient-end"] = r)));
-                let a = null != i && null != r,
-                    l = null != t && null != n;
-                return { inlineCssProperties: e, shouldShowTakeoverGradient: D && (a || l) };
+                let l = null != i && null != r,
+                    a = null != t && null != n;
+                return { inlineCssProperties: e, shouldShowTakeoverGradient: D && (l || a) };
             }, [D, M]),
             ee = (0, i.jsx)("div", {
                 className: y.iE,
@@ -109,9 +109,9 @@ let L = Math.ceil(Math.sqrt(115200)),
                 ref: K,
                 style: Z,
                 children: (0, i.jsxs)(m.z9, {
-                    className: l()({ [y.VU]: $ || J, [y.jR]: $, [y.pC]: D }),
+                    className: a()({ [y.VU]: $ || J, [y.jR]: $, [y.pC]: D }),
                     icon: _.r2v,
-                    listItemRef: a,
+                    listItemRef: l,
                     onClick: U,
                     route: x.BVt.QUEST_HOME_V2,
                     selected: t,
@@ -183,7 +183,7 @@ let L = Math.ceil(Math.sqrt(115200)),
                           children: ee,
                       })
                     : ee,
-                Q && (0, i.jsx)(N.A, { targetElementRef: a, onNavigateToQuestHome: U, onRender: Y, onRequestClose: j }),
+                Q && (0, i.jsx)(N.A, { targetElementRef: l, onNavigateToQuestHome: U, onRender: Y, onRequestClose: j }),
             ],
         });
     };

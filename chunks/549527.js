@@ -24,29 +24,29 @@ var i = n(627968),
     N = n(138298),
     S = n(253932),
     b = n(761640),
-    y = n(734057),
-    j = n(540999),
+    j = n(734057),
+    y = n(540999),
     R = n(71393),
     L = n(576705),
     M = n(994500),
     O = n(309010),
-    P = n(287809),
-    D = n(954571),
+    D = n(287809),
+    P = n(954571),
     k = n(709634),
     U = n(652215),
     w = n(381941),
-    G = n(618231);
+    G = n(8185);
 function B(e) {
     let { message: t, snapshot: n, index: c } = e,
         m = l.useMemo(() => new u.j(t, n, c), [t, n, c]),
         h = (0, r.bG)(
-            [y.A, P.default, M.A, L.A, R.A, _.A],
-            () => m.getForwardInfo(y.A, P.default, M.A, L.A, R.A, _.A).footerInfo,
+            [j.A, D.default, M.A, L.A, R.A, _.A],
+            () => m.getForwardInfo(j.A, D.default, M.A, L.A, R.A, _.A).footerInfo,
             [m],
             s.A,
         ),
         p = l.useCallback(() => {
-            let e = y.A.getChannel(t.channel_id),
+            let e = j.A.getChannel(t.channel_id),
                 n = R.A.getGuild(e?.guild_id),
                 i = t.messageReference?.channel_id,
                 l = O.A.getCurrentlySelectedChannelId(),
@@ -58,7 +58,7 @@ function B(e) {
                 null == i ||
                 (N.A.openModReportAsSidebar({ channelId: e.id, baseChannelId: i, guildId: e.guild_id }),
                 (0, v.iN)(i),
-                D.default.track(U.HAw.MODERATOR_REPORT_ORIGINAL_MESSAGE_LINK_CLICKED, {
+                P.default.track(U.HAw.MODERATOR_REPORT_ORIGINAL_MESSAGE_LINK_CLICKED, {
                     moderator_report_id: t.channel_id,
                     destination_channel_id: i,
                     destination_message_id: t.id,
@@ -156,7 +156,7 @@ function H(e) {
         }, [t, n, s]),
         u = S.hD.useSetting(),
         _ = S.rs.useSetting(),
-        p = (0, r.bG)([j.A], () => j.A.isDeveloper),
+        p = (0, r.bG)([y.A], () => y.A.isDeveloper),
         g = (0, h.S)((d.editedTimestamp ?? d.timestamp).valueOf()),
         {
             content: A,
@@ -172,7 +172,7 @@ function H(e) {
             allowDevLinks: p,
             previewLinkTarget: !0,
         }),
-        E = (0, r.bG)([y.A], () => y.A.getChannel(t.channel_id));
+        E = (0, r.bG)([j.A], () => j.A.getChannel(t.channel_id));
     return null == E
         ? null
         : (0, i.jsx)(

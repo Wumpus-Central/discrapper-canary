@@ -1,22 +1,22 @@
 n.d(t, { m: () => A });
 var i = n(627968),
     l = n(64700),
-    a = n(735438),
-    s = n(92674),
+    s = n(735438),
+    a = n(563495),
     r = n(311907),
     o = n(397927),
     c = n(971778),
     d = n(494783),
     u = n(342887),
     h = n(985018),
-    m = n(938663);
+    m = n(15725);
 function A() {
     let e,
         t,
         n,
         A,
-        p,
         g,
+        p,
         { hasActiveDownloads: f, progress: _ } =
             ((e = (0, r.cf)([c.A], () => c.A.getOngoingDownloads())),
             (t = l.useRef({})),
@@ -27,10 +27,10 @@ function A() {
                 let { downloadedBytes: t } = e;
                 return (t ?? 0) > 0;
             })),
-            (p = (0, a.sumBy)(n, (e) => e?.downloadedBytes ?? 0)),
+            (g = (0, s.sumBy)(n, (e) => e?.downloadedBytes ?? 0)),
             {
                 hasActiveDownloads: A,
-                progress: 0 === (g = (0, a.sumBy)(n, (e) => e?.totalBytes ?? 0)) ? 0 : Math.floor((p / g) * 100),
+                progress: 0 === (p = (0, s.sumBy)(n, (e) => e?.totalBytes ?? 0)) ? 0 : Math.floor((g / p) * 100),
             }),
         { activeVoice: E } = (0, d.f)();
     return (0, o.pnh)(
@@ -43,7 +43,7 @@ function A() {
         "respect-motion-settings",
     )((e, t) =>
         null != t
-            ? (0, i.jsx)(s.animated.div, {
+            ? (0, i.jsx)(a.animated.div, {
                   style: e,
                   className: m.zh,
                   children: (0, i.jsxs)("div", {

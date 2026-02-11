@@ -1,38 +1,38 @@
-n.d(t, { A: () => c });
-var l = n(627968);
-n(64700);
-var s = n(503698),
-    a = n.n(s),
-    i = n(397927),
-    r = n(714510),
-    o = n(646764),
-    u = n(510823);
+s.d(t, { A: () => c });
+var n = s(627968);
+s(64700);
+var l = s(503698),
+    i = s.n(l),
+    a = s(397927),
+    r = s(714510),
+    u = s(646764),
+    o = s(96373);
 let c = function (e) {
     let {
             className: t,
-            autoplay: n,
-            quest: s,
+            autoplay: s,
+            quest: l,
             questContent: c,
             taskDetails: d,
-            location: _,
-            sourceQuestContent: m,
-            gameProfileSource: p,
+            location: m,
+            sourceQuestContent: A,
+            gameProfileSource: E,
         } = e,
-        b = (0, r.mU)({
-            quest: s,
+        p = (0, r.mU)({
+            quest: l,
             taskDetails: d,
-            location: _,
+            location: m,
             questContent: c,
-            sourceQuestContent: m,
-            gameProfileSource: p,
+            sourceQuestContent: A,
+            gameProfileSource: E,
         });
-    return (0, l.jsxs)("div", {
-        className: a()(u.iE, t),
+    return (0, n.jsxs)("div", {
+        className: i()(o.iE, t),
         children: [
-            (0, l.jsx)(o.A, { autoplay: n, className: u.Qq, quest: s, questContent: c, sourceQuestContent: m }),
-            (0, l.jsx)("div", {
-                className: u.C,
-                children: (0, l.jsx)(i.Text, { variant: "text-sm/normal", color: "text-default", children: b }),
+            (0, n.jsx)(u.A, { autoplay: s, className: o.Qq, quest: l, questContent: c, sourceQuestContent: A }),
+            (0, n.jsx)("div", {
+                className: o.C,
+                children: (0, n.jsx)(a.Text, { variant: "text-sm/normal", color: "text-default", children: p }),
             }),
         ],
     });

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { l: () => E });
+n.d(t, { l: () => A });
 var r = n(627968),
     i = n(503698),
     a = n.n(i),
@@ -11,36 +11,36 @@ var r = n(627968),
     d = n(561392),
     _ = n(720341),
     f = n(452027),
-    p = n(934551),
-    h = n(862301),
-    m = n(460890),
-    g = n(25181);
-function E(e) {
+    h = n(934551),
+    p = n(862301),
+    g = n(460890),
+    E = n(944787);
+function A(e) {
     let {
             value: t,
             onChange: n,
             minValue: i,
-            maxValue: E,
-            placeholderValue: A,
-            granularity: I = "day",
-            hourCycle: T,
-            hideTimeZone: y = !1,
-            ...S
+            maxValue: A,
+            placeholderValue: I,
+            granularity: T = "day",
+            hourCycle: y,
+            hideTimeZone: S = !1,
+            ...v
         } = e,
-        { i18n: v } = (0, m.G9)(),
-        { fieldProps: C } = (0, f.n)(S),
-        { disabled: b, errorMessage: N, required: R = !1 } = C,
-        O = { hasError: null != N && "" !== N },
+        { i18n: C } = (0, g.G9)(),
+        { fieldProps: b } = (0, f.n)(v),
+        { disabled: N, errorMessage: R, required: O = !1 } = b,
+        D = { hasError: null != R && "" !== R },
         {
-            refs: D,
-            floatingStyles: L,
-            isOpen: w,
-            setIsOpen: x,
-            context: P,
-            getFloatingProps: M,
-            getReferenceProps: k,
+            refs: L,
+            floatingStyles: w,
+            isOpen: x,
+            setIsOpen: P,
+            context: M,
+            getFloatingProps: k,
+            getReferenceProps: U,
         } = (0, d.u)({ matchReferenceWidth: !1, placement: "bottom-start" }),
-        { isMounted: U, styles: G } = (0, d.D)(P, {
+        { isMounted: G, styles: F } = (0, d.D)(M, {
             common: (e) => {
                 let { side: t } = e;
                 return { transformOrigin: `${"top" === t ? "bottom" : "top"} center` };
@@ -49,16 +49,16 @@ function E(e) {
             duration: 100,
         }),
         V = (e) => {
-            n?.(e), x(!1);
+            n?.(e), P(!1);
         };
     return (0, r.jsx)(f.D, {
-        ...C,
+        ...b,
         children: (e) =>
-            (0, r.jsx)(h.F, {
-                className: g.LF,
-                validation: O,
-                ref: D.setReference,
-                ...k(),
+            (0, r.jsx)(p.F, {
+                className: E.LF,
+                validation: D,
+                ref: L.setReference,
+                ...U(),
                 children: (0, r.jsxs)(s.lr, {
                     id: e.controlId,
                     "aria-labelledby": e.labelId,
@@ -67,48 +67,48 @@ function E(e) {
                     "aria-errormessage": e.errorMessageId,
                     value: t,
                     onChange: V,
-                    isDisabled: b,
-                    isRequired: R,
+                    isDisabled: N,
+                    isRequired: O,
                     minValue: i,
-                    maxValue: E,
-                    placeholderValue: A,
-                    granularity: I,
-                    hourCycle: T,
-                    hideTimeZone: y,
+                    maxValue: A,
+                    placeholderValue: I,
+                    granularity: T,
+                    hourCycle: y,
+                    hideTimeZone: S,
                     "data-mana-component": "date-picker",
-                    className: g.dn,
+                    className: E.dn,
                     children: [
                         (0, r.jsxs)(o.Y, {
-                            className: g.wO,
+                            className: E.wO,
                             children: [
                                 (0, r.jsx)(l.J3, {
                                     children: (e) =>
-                                        (0, r.jsx)(l.Eu, { segment: e, className: a()(g.mX, e.isPlaceholder && g.qf) }),
+                                        (0, r.jsx)(l.Eu, { segment: e, className: a()(E.mX, e.isPlaceholder && E.qf) }),
                                 }),
                                 (0, r.jsx)(u.$, {
-                                    className: g.B7,
-                                    onClick: () => x(!w),
-                                    "aria-label": v.DATE_INPUT_OPEN_CALENDAR_LABEL,
-                                    children: (0, r.jsx)(p.CalendarIcon, { size: "sm", color: "currentColor" }),
+                                    className: E.B7,
+                                    onClick: () => P(!x),
+                                    "aria-label": C.DATE_INPUT_OPEN_CALENDAR_LABEL,
+                                    children: (0, r.jsx)(h.CalendarIcon, { size: "sm", color: "currentColor" }),
                                 }),
                             ],
                         }),
-                        w &&
-                            U &&
+                        x &&
+                            G &&
                             (0, r.jsx)("div", {
-                                ...M(),
-                                ref: D.setFloating,
-                                style: L,
-                                className: g.oO,
+                                ...k(),
+                                ref: L.setFloating,
+                                style: w,
+                                className: E.oO,
                                 children: (0, r.jsx)(c.lG, {
-                                    style: G,
-                                    className: g.r3,
+                                    style: F,
+                                    className: E.r3,
                                     children: (0, r.jsx)(_.V, {
                                         value: t,
                                         onChange: V,
                                         minValue: i,
-                                        maxValue: E,
-                                        disabled: b,
+                                        maxValue: A,
+                                        disabled: N,
                                     }),
                                 }),
                             }),

@@ -6,14 +6,14 @@ var i = n(627968),
     s = n(732955),
     o = n(397927),
     d = n(274372),
-    c = n(239450),
+    c = n(17069),
     u = n(794905),
     m = n(320501),
     _ = n(998218),
     h = n(888675),
     p = n(652215),
     g = n(985018),
-    A = n(633232);
+    A = n(363866);
 function f(e) {
     let { message: t, compact: n } = e,
         f = t.channel_id,
@@ -60,7 +60,7 @@ function f(e) {
         let e = _.A.toURLSafe(S.proxy_url);
         null != e && (e.searchParams.append("format", "webp"), (b = e.toString()));
     }
-    let y = null != b ? [b, I.thumbnail] : [I.thumbnail];
+    let j = null != b ? [b, I.thumbnail] : [I.thumbnail];
     return (0, i.jsx)(h.A, {
         iconNode: (0, i.jsx)(o.xgA, { size: "md", color: "currentColor" }),
         timestamp: t.timestamp,
@@ -68,7 +68,7 @@ function f(e) {
         additionalContent: (0, i.jsxs)("div", {
             className: A.i,
             children: [
-                (0, i.jsx)(c.A, { thumbnails: y, variant: "stacked" }),
+                (0, i.jsx)(c.A, { thumbnails: j, variant: "stacked" }),
                 (0, i.jsx)(s.$nd, { size: "sm", onClick: N, text: g.intl.string(g.t["5qb8EX"]), icon: o.W4J }),
             ],
         }),

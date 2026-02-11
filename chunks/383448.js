@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => p });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -12,29 +12,29 @@ var i = n(503698),
     d = n(946356),
     _ = n(652215),
     f = n(985018),
-    p = n(842218);
-function h(e) {
+    h = n(20508);
+function p(e) {
     let { user: t, className: n } = e,
         {
             isPendingIncoming: i,
-            isBlocked: h,
-            isIgnored: m,
+            isBlocked: p,
+            isIgnored: g,
         } = (0, o.cf)([c.A], () => ({
             isPendingIncoming: c.A.getRelationshipType(t.id) === _.eA$.PENDING_INCOMING,
             isBlocked: c.A.isBlocked(t.id),
             isIgnored: c.A.isIgnored(t.id),
         }));
-    return h || (m && !i)
+    return p || (g && !i)
         ? (0, r.jsxs)(d.A.Overlay, {
-              className: a()(p.k, n),
+              className: a()(h.k, n),
               children: [
-                  h &&
+                  p &&
                       (0, r.jsx)(s.EYj, {
                           variant: "text-sm/semibold",
                           color: "text-default",
                           children: f.intl.string(f.t["oC/fU6"]),
                       }),
-                  m &&
+                  g &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(s.EYj, {

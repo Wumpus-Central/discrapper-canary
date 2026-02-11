@@ -18,18 +18,18 @@ var a = n(627968),
     h = n(665171),
     p = n(397400),
     N = n(165655),
-    A = n(496587),
-    C = n(684610),
-    I = n(500897),
+    I = n(496587),
+    A = n(684610),
+    C = n(500897),
     S = n(225180),
     T = n(117265),
     b = n(365003),
     E = n(680127),
     y = n(858192),
     R = n(49999),
-    M = n(294726),
+    M = n(738072),
     G = n(985018),
-    k = n(748137);
+    k = n(70463);
 function L(e) {
     let { guildId: t, instance: n } = e,
         [s, r] = i.useState(!1),
@@ -57,10 +57,10 @@ function P(e) {
         ...e,
     });
 }
-function O(e) {
+function D(e) {
     return (0, a.jsx)(u.Button, { fullWidth: !0, text: G.intl.string(M.default["fQCcM/"]), variant: "primary", ...e });
 }
-function D(e) {
+function O(e) {
     return (0, a.jsx)(u.Button, {
         fullWidth: !0,
         text: G.intl.string(M.default.gWMqnI),
@@ -103,12 +103,12 @@ function w(e) {
     let { guildId: t, instance: n } = e,
         s = (0, T.A)(n),
         [h, w] = (0, _.kn)([d.M.GAME_SERVER_HOSTING_PORTKEY_TOS]),
-        W = h !== d.M.GAME_SERVER_HOSTING_PORTKEY_TOS,
-        V = (0, o.bG)([g.A], () => g.A.getDetectableGame(n.gameId)),
-        F = (0, b.A)(n.providerType, n.gameServerPanelUrl),
+        F = h !== d.M.GAME_SERVER_HOSTING_PORTKEY_TOS,
+        W = (0, o.bG)([g.A], () => g.A.getDetectableGame(n.gameId)),
+        V = (0, b.A)(n.providerType, n.gameServerPanelUrl),
         q = i.useCallback(() => {
-            (0, p.Ai)(t, n.gameId, V?.name ?? "", n.id),
-                W || null == n.providerType
+            (0, p.Ai)(t, n.gameId, W?.name ?? "", n.id),
+                F || null == n.providerType
                     ? (0, E.A)(t, n)
                     : (0, y.A)({
                           provider: n.providerType,
@@ -116,8 +116,8 @@ function w(e) {
                               w(R.i.TAKE_ACTION), (0, E.A)(t, n);
                           },
                       });
-        }, [n, W, w, t, V?.name]),
-        { handleCopyServerIp: z, animateCopyIcon: H } = (0, I.A)(t, n.id, m.A.GAME_SERVER_GAME, s ?? ""),
+        }, [n, F, w, t, W?.name]),
+        { handleCopyServerIp: z, animateCopyIcon: H } = (0, C.A)(t, n.id, m.A.GAME_SERVER_GAME, s ?? ""),
         $ = (0, S.A)(n.gameId, "cover"),
         K = (0, j.A)(t),
         Y = i.useCallback(() => {
@@ -137,30 +137,30 @@ function w(e) {
                 case l.M.STARTING:
                     return (0, a.jsxs)(a.Fragment, {
                         children: [
-                            (0, a.jsx)(O, { onClick: q }),
+                            (0, a.jsx)(D, { onClick: q }),
                             K && (0, a.jsx)(P, { onClick: Y, disabled: null == n.gameServerPanelUrl }),
                         ],
                     });
                 case l.M.STARTUP_FAILED:
                 case l.M.MISSING_STOCK:
-                    return K ? (0, a.jsx)(D, { onClick: Y }) : (0, a.jsx)(O, { onClick: q, disabled: !0 });
+                    return K ? (0, a.jsx)(O, { onClick: Y }) : (0, a.jsx)(D, { onClick: q, disabled: !0 });
                 case l.M.DELETED:
                     return K
                         ? (0, a.jsx)(P, { onClick: Y, disabled: null == n.gameServerPanelUrl })
-                        : (0, a.jsx)(O, { onClick: q, disabled: !0 });
+                        : (0, a.jsx)(D, { onClick: q, disabled: !0 });
                 case l.M.PROVIDER_ERRORED:
                     return (0, a.jsxs)(a.Fragment, {
                         children: [
-                            K && null != F
+                            K && null != V
                                 ? (0, a.jsx)(B, { guildId: t, instance: n })
-                                : (0, a.jsx)(O, { onClick: q, disabled: !0 }),
+                                : (0, a.jsx)(D, { onClick: q, disabled: !0 }),
                             (0, a.jsx)(U, { guildId: t, instance: n }),
                         ],
                     });
                 default:
                     return null;
             }
-        }, [n, q, K, Y, t, F]),
+        }, [n, q, K, Y, t, V]),
         Q = i.useMemo(() => {
             if (null == n.gameConfig) return null;
             let e = [n.gameConfig.type, n.gameConfig.version].filter(f.Vq).join(" ");
@@ -181,7 +181,7 @@ function w(e) {
                     return null;
             }
         }, [n.status, n.gameServerPanelUrl, K]);
-    return (0, a.jsxs)(A.A, {
+    return (0, a.jsxs)(I.A, {
         actions: Z,
         children: [
             (0, a.jsxs)("div", {
@@ -198,7 +198,7 @@ function w(e) {
                                     (0, a.jsx)(u.Text, {
                                         variant: "text-sm/medium",
                                         color: "text-muted",
-                                        children: [V?.name, Q].filter(f.Vq).join(" • "),
+                                        children: [W?.name, Q].filter(f.Vq).join(" • "),
                                     }),
                                 ],
                             }),
@@ -235,7 +235,7 @@ function w(e) {
                                             children:
                                                 null == s
                                                     ? (0, a.jsx)(u.Text, { variant: "text-sm/medium", children: "—" })
-                                                    : W
+                                                    : F
                                                       ? (0, a.jsxs)(a.Fragment, {
                                                             children: [
                                                                 (0, a.jsx)(u.Text, {
@@ -349,7 +349,7 @@ function w(e) {
             K &&
                 (0, a.jsx)("div", {
                     className: k.overflowMenu,
-                    children: (0, a.jsx)(C.A, { guildId: t, instance: n }),
+                    children: (0, a.jsx)(A.A, { guildId: t, instance: n }),
                 }),
             (0, a.jsx)("div", { className: k.imageBackground, children: (0, a.jsx)(N.T, { imageUrl: $ ?? "" }) }),
         ],

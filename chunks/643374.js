@@ -1,15 +1,15 @@
 n.d(t, { A: () => c });
 var a = n(627968),
-    s = n(64700),
-    i = n(503698),
-    l = n.n(i),
+    i = n(64700),
+    s = n(503698),
+    l = n.n(s),
     r = n(397927),
     o = n(817363),
-    d = n(93064);
+    d = n(774126);
 function c(e) {
-    let { filename: t, className: n, filters: i, buttonText: c, placeholder: u, onFileSelect: m } = e,
-        h = s.useRef(null),
-        x = s.useRef(null);
+    let { filename: t, className: n, filters: s, buttonText: c, placeholder: u, onFileSelect: m } = e,
+        h = i.useRef(null),
+        x = i.useRef(null);
     return (0, a.jsx)(r.vN3, {
         ringTarget: h,
         within: !0,
@@ -31,7 +31,7 @@ function c(e) {
                         m(e.currentTarget.files?.[0]);
                     },
                     multiple: !1,
-                    filters: i,
+                    filters: s,
                 }),
             ],
         }),

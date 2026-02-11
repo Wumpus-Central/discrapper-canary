@@ -17,7 +17,7 @@ var i = n(627968),
     f = n(168428),
     x = n(652215),
     E = n(985018),
-    C = n(563111);
+    C = n(42441);
 function I(e) {
     let t,
         I,
@@ -27,10 +27,10 @@ function I(e) {
             onAcceptInstantInvite: N,
             guild: S,
             invite: b,
-            message: y,
-            currentUserId: j,
+            message: j,
+            currentUserId: y,
         } = e,
-        R = j === y.author.id,
+        R = y === j.author.id,
         { channel: L, approximate_member_count: M, approximate_presence_count: O } = b,
         D = b.state === x.elq.ACCEPTING,
         P = null != L ? (0, p.OY)(L) : null,
@@ -51,8 +51,8 @@ function I(e) {
         Q = l.useCallback(() => {
             let e = "noop";
             k ? (v(), (e = "transition")) : (N(), (e = "accept")),
-                (0, d.he)({ invite: b, action: e, inviter_id: y.author.id, invite_message_id: y.id }, V);
-        }, [b, y, V, k, v, N]);
+                (0, d.he)({ invite: b, action: e, inviter_id: j.author.id, invite_message_id: j.id }, V);
+        }, [b, j, V, k, v, N]);
     if (null == S) {
         if (null == b.guild) return (0, i.jsx)(f.A, {});
         (S = g.DY(b.guild)).premiumTier = b.guild.premium_tier ?? x.TVA.NONE;

@@ -1,7 +1,7 @@
 n.d(t, { A: () => eo }), n(321073);
 var i = n(627968),
     r = n(64700),
-    l = n(92674),
+    l = n(563495),
     a = n(942381),
     s = n(311907),
     o = n(554146),
@@ -54,7 +54,7 @@ var i = n(627968),
     et = n(49999),
     en = n(349828),
     ei = n(985018),
-    er = n(484241);
+    er = n(175739);
 let el = "server-settings",
     ea = { origin: { x: -8, y: -48 }, targetWidth: 40, targetHeight: 40, offset: { x: 0, y: 0 } };
 class es extends r.PureComponent {
@@ -122,12 +122,12 @@ class es extends r.PureComponent {
                     n.e("16301"),
                     n.e("22191"),
                     n.e("25961"),
-                    n.e("21968"),
+                    n.e("96760"),
                     n.e("35894"),
                     n.e("50796"),
                     n.e("8458"),
                     n.e("11810"),
-                    n.e("39048"),
+                    n.e("52848"),
                     n.e("54469"),
                     n.e("52191"),
                 ]).then(n.bind(n, 544676));

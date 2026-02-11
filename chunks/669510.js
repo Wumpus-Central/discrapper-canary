@@ -7,7 +7,7 @@ var r = n(627968),
     o = n(397927),
     l = n(580630),
     u = n(381247),
-    c = n(361728);
+    c = n(85302);
 function d(e) {
     let {
             label: t,
@@ -16,18 +16,18 @@ function d(e) {
             intervalType: d,
             intervalCount: _,
             currency: f,
-            defaultExpanded: p = !1,
+            defaultExpanded: h = !1,
         } = e,
-        [h, m] = i.useState(p),
-        g = i.useMemo(() => a.reduce((e, t) => e + t.amount, 0), [a]),
-        E = (0, l.$g)(g, f),
-        A = (0, l.CE)(E, d, _),
-        I = (0, r.jsxs)(u.h, {
+        [p, g] = i.useState(h),
+        E = i.useMemo(() => a.reduce((e, t) => e + t.amount, 0), [a]),
+        A = (0, l.$g)(E, f),
+        I = (0, l.CE)(A, d, _),
+        T = (0, r.jsxs)(u.h, {
             label: t,
-            defaultExpanded: p,
+            defaultExpanded: h,
             isDisabled: a.length <= 0,
-            onExpandedChange: m,
-            collapsedContent: (0, r.jsx)(o.Text, { variant: "text-md/normal", color: "text-subtle", children: A }),
+            onExpandedChange: g,
+            collapsedContent: (0, r.jsx)(o.Text, { variant: "text-md/normal", color: "text-subtle", children: I }),
             children: [
                 a.map((e) => {
                     let { id: t, label: n, amount: i, icon: a, tooltip: s } = e,
@@ -36,8 +36,8 @@ function d(e) {
                     return (0, r.jsx)(u.i, { label: n, value: c, icon: a, tooltip: s }, t);
                 }),
                 (0, r.jsx)("div", { className: c.m }),
-                (0, r.jsx)(u.i, { label: n ?? t, value: A, color: "text-strong" }),
+                (0, r.jsx)(u.i, { label: n ?? t, value: I, color: "text-strong" }),
             ],
         });
-    return (0, r.jsx)("div", { className: s()({ [c.k]: h }), children: I });
+    return (0, r.jsx)("div", { className: s()({ [c.k]: p }), children: T });
 }

@@ -1,4 +1,4 @@
-n.d(t, { Ix: () => G, J3: () => D, Q3: () => U });
+n.d(t, { Ix: () => M, J3: () => D, Q3: () => U });
 var i = n(627968),
     s = n(64700),
     a = n(311907),
@@ -29,13 +29,13 @@ var i = n(627968),
     R = n(49999),
     y = n(788868),
     P = n(985018),
-    L = n(21082);
+    L = n(318684);
 let D = () => {
         (0, x.Dr)(l.M.CLIENT_THEMES_SPARKLE_PREVIEW, { dismissAction: R.i.PRIMARY, forceTrack: !0 }),
             (0, h.nf)(h.HP.CLIENT_THEMES),
             (0, v.default)();
     },
-    G = () => {
+    M = () => {
         let e,
             { analyticsLocations: t } = (0, _.Ay)(u.A.USER_SETTINGS),
             n = (0, a.bG)([m.A], () => m.A.isPreview),
@@ -111,13 +111,13 @@ let D = () => {
             children: [
                 (0, i.jsxs)(g.Ay, {
                     type: g.v0.SETTINGS,
-                    children: [(0, i.jsx)(g.Ay.Basic, { className: L.a6 }), (0, i.jsx)(M, {}), (0, i.jsx)(A.A, {}), x],
+                    children: [(0, i.jsx)(g.Ay.Basic, { className: L.a6 }), (0, i.jsx)(G, {}), (0, i.jsx)(A.A, {}), x],
                 }),
                 !d && (0, i.jsx)(o.cGx, { className: L.yF }),
             ],
         });
     };
-function M() {
+function G() {
     let e = (0, I.qo)(),
         {
             theme: t,

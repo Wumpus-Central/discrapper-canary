@@ -1,9 +1,9 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => N });
 var a = n(627968),
-    s = n(64700),
-    i = n(503698),
-    l = n.n(i),
-    r = n(92674),
+    i = n(64700),
+    s = n(503698),
+    l = n.n(s),
+    r = n(563495),
     o = n(311907),
     d = n(397927),
     c = n(765671),
@@ -22,34 +22,34 @@ var a = n(627968),
     C = n(713457),
     S = n(419367),
     T = n(985018),
-    y = n(196240);
-let N = async () => await n.e("40119").then(n.t.bind(n, 718698, 19));
-function E(e) {
+    y = n(962734);
+let E = async () => await n.e("40119").then(n.t.bind(n, 718698, 19));
+function N(e) {
     let {
             quest: t,
             questContent: n,
-            isHovering: i,
-            contentPosition: E,
+            isHovering: s,
+            contentPosition: N,
             rowIndex: k,
             isVisibleInViewport: R,
             onReceiveErrorHints: O,
             sourceQuestContent: w,
         } = e,
-        D = s.useRef(null),
+        D = i.useRef(null),
         M = (0, _.mq)(t.config),
         P = (0, _.mH)(t.config),
         L = t.userStatus?.enrolledAt != null,
         { ref: U, scrollHeight: B } = (0, c.wR)(),
         G = 104 !== B,
-        { onAssetLoadComplete: F } = s.useContext(j.M),
-        { expansionSpring: V } = (0, d.zhh)({ expansionSpring: +!!i, config: { ...S.N, clamp: !0 } }),
+        { onAssetLoadComplete: F } = i.useContext(j.M),
+        { expansionSpring: V } = (0, d.zhh)({ expansionSpring: +!!s, config: { ...S.N, clamp: !0 } }),
         W = t.userStatus?.completedAt != null,
         H = t.userStatus?.claimedAt != null,
         K = (0, _.ks)(t.config),
         z = (0, _._Z)(t.config),
         { completedRatio: $, completedRatioDisplay: q } = (0, p.O9)(t),
         Q = (0, x.gj)(t, w, m.Ob.QuestHome, D),
-        Y = s.useMemo(
+        Y = i.useMemo(
             () =>
                 H && K
                     ? T.intl.format(T.t["8Op4c4"], {
@@ -92,7 +92,7 @@ function E(e) {
                           }),
             [M, H, P, t.id, z, K],
         ),
-        J = s.useMemo(() => {
+        J = i.useMemo(() => {
             if (null != Q)
                 return (0, a.jsx)(d.Text, {
                     variant: "text-sm/medium",
@@ -124,7 +124,7 @@ function E(e) {
                                           children: [
                                               W &&
                                                   (0, a.jsx)(d.akl, {
-                                                      importData: N,
+                                                      importData: E,
                                                       className: y.t_,
                                                       loop: !1,
                                                       autoplay: !1,
@@ -134,14 +134,14 @@ function E(e) {
                                                   quest: t,
                                                   size: 76,
                                                   percentComplete: $,
-                                                  percentCompleteText: i && !(0, g.Ic)(t) ? q : void 0,
+                                                  percentCompleteText: s && !(0, g.Ic)(t) ? q : void 0,
                                                   children: (0, a.jsx)("div", {
                                                       className: y.yv,
                                                       children: (0, a.jsx)(v.A, {
                                                           quest: t,
                                                           questContent: n,
                                                           className: y.ve,
-                                                          autoplay: i,
+                                                          autoplay: s,
                                                           onLoadComplete: F,
                                                           lazyLoad: !0,
                                                           sourceQuestContent: w,
@@ -152,7 +152,7 @@ function E(e) {
                                       })
                                     : (0, a.jsx)(v.A, {
                                           quest: t,
-                                          autoplay: i,
+                                          autoplay: s,
                                           questContent: n,
                                           className: y.eB,
                                           onLoadComplete: F,
@@ -191,7 +191,7 @@ function E(e) {
             (0, a.jsx)(C.A, {
                 quest: t,
                 questContent: n,
-                contentPosition: E,
+                contentPosition: N,
                 rowIndex: k,
                 onReceiveErrorHints: O,
                 sourceQuestContent: w,
@@ -199,7 +199,7 @@ function E(e) {
         ],
     });
 }
-let I = s.memo(function (e) {
+let I = i.memo(function (e) {
     let { questId: t, children: n } = e;
     return (0, a.jsx)(
         d.Text,

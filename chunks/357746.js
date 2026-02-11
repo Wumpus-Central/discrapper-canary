@@ -1,4 +1,4 @@
-n.d(t, { A: () => N });
+n.d(t, { A: () => b });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -14,9 +14,9 @@ var i = n(627968),
     p = n(828162),
     g = n(249584),
     _ = n(49999),
-    f = n(333354),
+    f = n(136708),
     x = n(985018),
-    C = n(408392);
+    C = n(14714);
 function E(e) {
     let { indicator: t } = e;
     if (null == t) return null;
@@ -30,42 +30,42 @@ function E(e) {
     }
 }
 let I = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
-    N = l.memo(function (e) {
+    b = l.memo(function (e) {
         let { guildId: t, selected: s } = e,
-            N = (0, m.Ay)(t),
-            b = l.useCallback(() => {
+            b = (0, m.Ay)(t),
+            N = l.useCallback(() => {
                 (0, h.Zm)(t),
                     (0, p.A)(t, d.A.GUILD_POWERUPS_CHANNEL_LIST_ROW),
-                    N?.popout?.markAsDismissed(_.i.INDIRECT_ACTION);
-            }, [t, N]),
+                    b?.popout?.markAsDismissed(_.i.INDIRECT_ACTION);
+            }, [t, b]),
             S = l.useRef(null),
             T = (0, o.red)(o.DXt),
             v = (0, r.bG)([u.A], () => u.A.hasLayers()),
             y = T || v,
             j = l.useCallback(() => {
-                if (N?.popout == null || y) return null;
-                switch (N?.popout?.type) {
+                if (b?.popout == null || y) return null;
+                switch (b?.popout?.type) {
                     case A.o.LEVEL_REACHED:
-                        return (0, i.jsx)(g.HW, { guildId: t, channelRowRef: S, ...N.popout });
+                        return (0, i.jsx)(g.HW, { guildId: t, channelRowRef: S, ...b.popout });
                     case A.o.PERKS_AVAILABLE:
-                        return (0, i.jsx)(g.UB, { guildId: t, channelRowRef: S, ...N.popout });
+                        return (0, i.jsx)(g.UB, { guildId: t, channelRowRef: S, ...b.popout });
                     case A.o.PERKS_PURCHASABLE:
-                        return (0, i.jsx)(g.lw, { guildId: t, channelRowRef: S, ...N.popout });
+                        return (0, i.jsx)(g.lw, { guildId: t, channelRowRef: S, ...b.popout });
                     case A.o.NEW_PERK_AVAILABLE:
-                        return (0, i.jsx)(g.bo, { guildId: t, channelRowRef: S, ...N.popout });
+                        return (0, i.jsx)(g.bo, { guildId: t, channelRowRef: S, ...b.popout });
                     case A.o.BOOST_TO_UNLOCK:
-                        return (0, i.jsx)(g.Gw, { guildId: t, channelRowRef: S, ...N.popout });
+                        return (0, i.jsx)(g.Gw, { guildId: t, channelRowRef: S, ...b.popout });
                     case A.o.GAME_SERVER_HOSTING_AVAILABLE:
                     case A.o.GAME_SERVER_HOSTING_GUILD_ELIGIBLE:
-                        return (0, i.jsx)(g.jz, { guildId: t, channelRowRef: S, ...N.popout });
+                        return (0, i.jsx)(g.jz, { guildId: t, channelRowRef: S, ...b.popout });
                     default:
                         return (0, i.jsx)("div", {});
                 }
-            }, [t, N?.popout, S, y]),
+            }, [t, b?.popout, S, y]),
             [R, O] = l.useState(null);
         l.useEffect(() => {
-            N?.popout == null && O(null);
-        }, [N?.popout]);
+            b?.popout == null && O(null);
+        }, [b?.popout]);
         let L = l.useCallback((e) => {
             O(e);
         }, []);
@@ -77,7 +77,7 @@ let I = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
                     id: `skill-trees-${t}`,
                     renderIcon: (e) => (0, i.jsx)(o._Jp, { size: "md", className: e, color: "currentColor" }),
                     background:
-                        N?.popout != null &&
+                        b?.popout != null &&
                         (0, i.jsx)("div", {
                             className: C.Fi,
                             children: (0, i.jsx)(o.tvC, {
@@ -90,13 +90,13 @@ let I = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
                             }),
                         }),
                     text: (0, i.jsx)("span", {
-                        className: a()({ [C.A7]: N?.showUnread === !0 }),
+                        className: a()({ [C.A7]: b?.showUnread === !0 }),
                         children: x.intl.string(f.default.yv3DJJ),
                     }),
                     selected: s,
-                    onClick: b,
-                    showUnread: N?.showUnread === !0,
-                    trailing: (0, i.jsx)(E, { indicator: N?.indicator }),
+                    onClick: N,
+                    showUnread: b?.showUnread === !0,
+                    trailing: (0, i.jsx)(E, { indicator: b?.indicator }),
                 }),
                 j(),
             ],

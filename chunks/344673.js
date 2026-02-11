@@ -1,8 +1,8 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => N });
 var a = n(627968),
-    s = n(64700),
-    i = n(503698),
-    l = n.n(i),
+    i = n(64700),
+    s = n(503698),
+    l = n.n(s),
     r = n(91871),
     o = n.n(r),
     d = n(989349),
@@ -20,8 +20,8 @@ var a = n(627968),
     j = n(303054),
     A = n(231643),
     C = n(985018),
-    S = n(76584),
-    T = n(661251);
+    S = n(891026),
+    T = n(930821);
 let y = [
         {
             key: "id",
@@ -48,7 +48,7 @@ let y = [
             },
         },
     ],
-    N = [
+    E = [
         {
             id: "details",
             name: "Details",
@@ -58,8 +58,8 @@ let y = [
                         loggedTrigger: {
                             experimentId: t,
                             descriptor: n,
-                            exposureType: s,
-                            excluded: i,
+                            exposureType: i,
+                            excluded: s,
                             timestamp: r,
                             location: o,
                             previouslyTracked: d,
@@ -105,9 +105,9 @@ let y = [
                                 }),
                                 (0, a.jsx)(v.mA, {
                                     name: "Exposure type",
-                                    children: (0, a.jsx)("code", { children: s }),
+                                    children: (0, a.jsx)("code", { children: i }),
                                 }),
-                                (0, a.jsx)(v.mA, { name: "Excluded", children: (0, a.jsx)(v.HY, { value: i }) }),
+                                (0, a.jsx)(v.mA, { name: "Excluded", children: (0, a.jsx)(v.HY, { value: s }) }),
                                 (0, a.jsx)(v.mA, {
                                     name: "Previously tracked",
                                     children: (0, a.jsx)(v.HY, { value: d }),
@@ -120,25 +120,25 @@ let y = [
             },
         },
     ];
-function E() {
-    let [e, t] = s.useState(""),
-        n = s.useRef(null),
-        i = (0, u.yK)([_.A], () => _.A.loggedTriggers),
-        r = s.useMemo(
+function N() {
+    let [e, t] = i.useState(""),
+        n = i.useRef(null),
+        s = (0, u.yK)([_.A], () => _.A.loggedTriggers),
+        r = i.useMemo(
             () =>
-                i
+                s
                     .filter((t) => 0 === e.length || o()(e, t.experimentId))
                     .sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()),
-            [i, e],
+            [s, e],
         ),
-        [d, c] = s.useState(void 0),
+        [d, c] = i.useState(void 0),
         p = r.find((e) => e.key === d),
-        { TabBar: g, renderSelectedTab: v } = (0, A.Ay)({ tabs: N }, []),
-        E = (0, u.bG)([_.A], () => _.A.trackTriggers),
-        I = s.useCallback((e) => {
+        { TabBar: g, renderSelectedTab: v } = (0, A.Ay)({ tabs: E }, []),
+        N = (0, u.bG)([_.A], () => _.A.trackTriggers),
+        I = i.useCallback((e) => {
             x.h.dispatch({ type: "SET_TRACK_TRIGGERS", enabled: e });
         }, []),
-        k = E ? "Stop Tracking" : "Start Tracking";
+        k = N ? "Stop Tracking" : "Start Tracking";
     return (0, a.jsxs)("div", {
         ref: n,
         className: l()(T.nd, S.nd),
@@ -150,10 +150,10 @@ function E() {
                         text: k,
                         children: (0, a.jsx)(h.K0, {
                             size: "sm",
-                            variant: E ? "active" : "primary",
-                            icon: E ? h.E$n : h.udU,
+                            variant: N ? "active" : "primary",
+                            icon: N ? h.E$n : h.udU,
                             "aria-label": k,
-                            onClick: () => I(!E),
+                            onClick: () => I(!N),
                         }),
                     }),
                     (0, a.jsx)(h.IWV, {

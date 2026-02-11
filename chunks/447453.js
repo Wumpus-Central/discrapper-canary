@@ -1,17 +1,17 @@
 "use strict";
-n.d(t, { S: () => p });
+n.d(t, { S: () => h });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(92674),
+    o = n(563495),
     l = n(311907),
     u = n(397927),
     c = n(775602),
     d = n(425763),
     _ = n(985018),
-    f = n(14949);
-function p(e) {
+    f = n(987987);
+function h(e) {
     let { className: t } = e,
         n = [
             { keybinds: ["Spacebar", "Enter"], name: _.intl.string(_.t["cs/HVH"]) },
@@ -19,9 +19,9 @@ function p(e) {
             { keybinds: ["ESC"], name: _.intl.string(_.t["1ioMJQ"]) },
         ],
         a = (0, l.bG)([c.A], () => c.A.useReducedMotion),
-        p = (0, d.VU)();
+        h = (0, d.VU)();
     return (0, u.pnh)(
-        p,
+        h,
         {
             enter: { from: { opacity: 0, y: 80 * !a }, to: { opacity: 1, y: 0 } },
             leave: { opacity: 0, y: 80 * !a },

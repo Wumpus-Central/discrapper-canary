@@ -2,12 +2,12 @@
 n.d(t, { N: () => f });
 var r = n(627968),
     i = n(64700),
-    a = n(92674),
+    a = n(563495),
     s = n(397927),
     o = n(857250),
     l = n(691540),
     u = n(97483),
-    c = n(17069);
+    c = n(420375);
 let d = { duration: 300, friction: 24, tension: 280 },
     _ = {
         [u.xJ.TOP]: {
@@ -39,7 +39,7 @@ function f(e) {
             ((c.current = n.options?.position ?? u.jg.position), (d.current = n.options?.duration ?? u.jg.duration));
     }, [n]);
     let f = i.useMemo(() => _[n?.options?.position ?? c.current], [n]),
-        p = (0, s.pnh)(n, { keys: (e) => e?.id ?? "", ...f.transition });
+        h = (0, s.pnh)(n, { keys: (e) => e?.id ?? "", ...f.transition });
     return (
         i.useEffect(() => {
             null != n &&
@@ -49,7 +49,7 @@ function f(e) {
         }, [n, t]),
         (0, r.jsx)("div", {
             className: f.styles,
-            children: p((e, t) =>
+            children: h((e, t) =>
                 null == t ? null : (0, r.jsx)(a.animated.div, { style: e, children: (0, r.jsx)(o.y, { ...t }) }, t.id),
             ),
         })

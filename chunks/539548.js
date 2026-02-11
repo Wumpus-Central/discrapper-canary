@@ -18,24 +18,24 @@ var s = n(311907),
     g = n(518477),
     I = n(652215),
     j = n(985018),
-    _ = n(78702),
-    N = n(781425);
+    _ = n(278792),
+    N = n(230836);
 function v(e) {
     let { user: t, currentUser: n, guildId: v, onClose: b } = e,
         { voiceActivityStatusEnabled: T } = (0, a.G)({ location: "UserProfileModalActivity" }),
         { live: E, recent: y, stream: C } = (0, u.A)(t.id),
-        { voiceChannel: P, voiceActivity: L } = (0, A.A)({ userId: t.id, guildId: v }),
-        S = (0, s.bG)([r.A], () => r.A.isFetchingUserOutbox(t.id)),
+        { voiceChannel: P, voiceActivity: S } = (0, A.A)({ userId: t.id, guildId: v }),
+        L = (0, s.bG)([r.A], () => r.A.isFetchingUserOutbox(t.id)),
         O = t.id === n.id,
         R = (0, s.bG)([o.A, d.A], () => {
             let e = O ? o.A.getStatus() : d.A.getStatus(t.id);
             return e === l.clD.OFFLINE || e === l.clD.INVISIBLE;
         }),
         D = E.length > 0 || null != C,
-        M = T && null == C && null == L && null != P,
+        M = T && null == C && null == S && null != P,
         G = !R && (D || M),
         U = y.length > 0;
-    return G || U || !S
+    return G || U || !L
         ? (0, i.jsxs)(l.IpV, {
               className: _.XG,
               fade: !0,

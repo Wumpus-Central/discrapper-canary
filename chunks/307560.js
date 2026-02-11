@@ -6,12 +6,12 @@ var r = n(627968),
     a = n(397927),
     o = n(203632),
     c = n(181774),
-    d = n(483968),
-    u = n(927578),
+    u = n(483968),
+    d = n(927578),
     m = n(262737),
     p = n(176448),
     g = n(985018),
-    x = n(55886),
+    x = n(224716),
     A = n(191761);
 let f = () => 80,
     h = (e) => {
@@ -20,9 +20,9 @@ let f = () => 80,
     },
     _ = (e) => {
         let { profileEffect: t, innerRef: n, section: s, isSelected: l, canUsePremiumCollectibles: a, ...o } = e,
-            u = (0, m.V)(t.skuId),
+            d = (0, m.V)(t.skuId),
             g = i.useRef(null),
-            { accessibilityLabel: f, thumbnailPreviewSrc: _, title: E } = u?.config ?? {},
+            { accessibilityLabel: f, thumbnailPreviewSrc: _, title: E } = d?.config ?? {},
             y = i.useMemo(() => (0, c.Rc)(_), [_]);
         return (0, r.jsxs)(h, {
             innerRef: n ?? g,
@@ -31,7 +31,7 @@ let f = () => 80,
             children: [
                 (0, r.jsx)("img", { src: A, alt: f, className: x.rQ }),
                 (0, r.jsx)("img", { className: x.Wv, src: y, alt: E }),
-                (0, r.jsx)(d.A, {
+                (0, r.jsx)(u.A, {
                     skuId: t.skuId,
                     canUsePremiumCollectibles: a,
                     isPurchaseSection: s === p.wn.PURCHASE,
@@ -42,9 +42,9 @@ let f = () => 80,
     },
     E = (e) => {
         let { user: t, guild: n, pendingProfileEffect: i, selectedProfileEffectRef: s, onSelect: l, onOpenShop: c } = e,
-            d = (0, p.Ay)(),
+            u = (0, p.Ay)(),
             m = null != i,
-            A = u.Ay.canUseCollectibles(t);
+            A = d.Ay.canUseCollectibles(t);
         return (0, r.jsx)("section", {
             className: x.uW,
             children: (0, r.jsx)(a.a0_, {
@@ -55,18 +55,18 @@ let f = () => 80,
                 paddingHorizontal: 12,
                 className: x.p_,
                 columns: 3,
-                sections: d.map((e) => {
+                sections: u.map((e) => {
                     let { items: t } = e;
                     return t.length;
                 }),
-                renderItem: (e, t, u, f) => {
-                    let { section: E, items: y } = d[e],
+                renderItem: (e, t, d, f) => {
+                    let { section: E, items: y } = u[e],
                         C = y[t];
                     if (C === p.dP)
                         return (0, r.jsxs)(
                             h,
                             {
-                                style: { ...u },
+                                style: { ...d },
                                 isSelected: !m,
                                 onSelect: () => l(null),
                                 children: [
@@ -84,7 +84,7 @@ let f = () => 80,
                         return (0, r.jsxs)(
                             h,
                             {
-                                style: u,
+                                style: d,
                                 onSelect: c,
                                 children: [
                                     (0, r.jsx)(a.U1X, {
@@ -108,7 +108,7 @@ let f = () => 80,
                         return (0, r.jsx)(
                             _,
                             {
-                                style: { ...u },
+                                style: { ...d },
                                 section: E,
                                 profileEffect: C,
                                 innerRef: e ? s : void 0,
@@ -122,14 +122,14 @@ let f = () => 80,
                     return null;
                 },
                 renderSection: (e, t) => {
-                    let { header: n } = d[e];
+                    let { header: n } = u[e];
                     return (0, r.jsx)("div", {
                         style: { ...t, height: "16px", position: "absolute" },
                         children: (0, r.jsx)(a.Heading, { variant: "heading-md/medium", children: n }),
                     });
                 },
                 getSectionHeight: () => 16,
-                getItemKey: (e, t) => d[e].items[t].skuId,
+                getItemKey: (e, t) => u[e].items[t].skuId,
                 getItemHeight: f,
                 removeEdgeItemGutters: !0,
             }),

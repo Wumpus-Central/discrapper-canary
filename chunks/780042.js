@@ -1,69 +1,69 @@
 "use strict";
-n.d(t, { A: () => T });
+n.d(t, { A: () => y });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
-    o = n(92674),
+    o = n(563495),
     l = n(311907),
     u = n(554146),
     c = n(459192),
     d = n(397927),
     _ = n(775602),
     f = n(379848),
-    p = n(287809),
-    h = n(927578),
-    m = n(49999),
-    g = n(985018),
-    E = n(500320);
-let A = { tension: 750, mass: 2.5, friction: 70 },
-    I = 20;
-function T(e) {
+    h = n(287809),
+    p = n(927578),
+    g = n(49999),
+    E = n(985018),
+    A = n(256466);
+let I = { tension: 750, mass: 2.5, friction: 70 },
+    T = 20;
+function y(e) {
     let { checked: t, onClick: n, id: a = "burst-reaction-toggle-button" } = e,
-        T = (0, l.bG)([_.A], () => _.A.useReducedMotion),
-        y = p.default.getCurrentUser(),
-        S = null == y || (0, h.TW)(y) ? [u.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
-        [v, C] = (0, f.kn)(S),
-        [b, N] = i.useState(!1),
-        [R, O] = (0, d.zhh)(() => ({})),
-        D = (0, o.animated)(d.it9);
-    function L() {
-        O({ from: { rotate: t ? "360deg" : "0deg" }, to: { rotate: t ? "0deg" : "360deg" }, config: A }), n?.(), N(!1);
+        y = (0, l.bG)([_.A], () => _.A.useReducedMotion),
+        S = h.default.getCurrentUser(),
+        v = null == S || (0, p.TW)(S) ? [u.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
+        [C, b] = (0, f.kn)(v),
+        [N, R] = i.useState(!1),
+        [O, D] = (0, d.zhh)(() => ({})),
+        L = (0, o.animated)(d.it9);
+    function w() {
+        D({ from: { rotate: t ? "360deg" : "0deg" }, to: { rotate: t ? "0deg" : "360deg" }, config: I }), n?.(), R(!1);
     }
     i.useEffect(() => {
-        let e = v === u.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-        e && (C(m.i.DISMISS), setTimeout(() => N(e), 200));
-    }, [v, C]);
-    let w = b ? g.intl.string(g.t["Osi/uy"]) : t ? g.intl.string(g.t["5cRA/b"]) : g.intl.string(g.t.buV4av),
-        x = b ? g.intl.string(g.t.ORK94p) : void 0;
+        let e = C === u.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
+        e && (b(g.i.DISMISS), setTimeout(() => R(e), 200));
+    }, [C, b]);
+    let x = N ? E.intl.string(E.t["Osi/uy"]) : t ? E.intl.string(E.t["5cRA/b"]) : E.intl.string(E.t.buV4av),
+        P = N ? E.intl.string(E.t.ORK94p) : void 0;
     return (0, r.jsx)(c.u, {
         position: "top",
-        title: x,
-        body: w,
+        title: P,
+        body: x,
         asset: (0, r.jsx)(d.tvc, { size: "md", color: "currentColor" }),
         assetSize: 20,
-        forceOpen: b,
+        forceOpen: N,
         children: (0, r.jsxs)("div", {
-            "aria-label": w,
+            "aria-label": x,
             children: [
-                (0, r.jsx)("input", { className: E.Qg, checked: t, onChange: L, id: a, type: "checkbox" }),
+                (0, r.jsx)("input", { className: A.Qg, checked: t, onChange: w, id: a, type: "checkbox" }),
                 (0, r.jsxs)("label", {
                     htmlFor: a,
-                    className: s()(E.Pf, { [E.wM]: t }),
+                    className: s()(A.Pf, { [A.wM]: t }),
                     children: [
-                        (0, r.jsx)(D, {
-                            style: T ? void 0 : R,
+                        (0, r.jsx)(L, {
+                            style: y ? void 0 : O,
                             size: "custom",
-                            width: I,
-                            height: I,
+                            width: T,
+                            height: T,
                             color: t ? "white" : "currentColor",
-                            className: E.Kk,
+                            className: A.Kk,
                         }),
                         (0, r.jsx)("span", {
                             children: (0, r.jsx)(d.Text, {
-                                className: E.Qg,
+                                className: A.Qg,
                                 variant: "text-sm/semibold",
-                                children: g.intl.string(g.t.buV4av),
+                                children: E.intl.string(E.t.buV4av),
                             }),
                         }),
                     ],

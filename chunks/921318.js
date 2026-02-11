@@ -1,8 +1,8 @@
 n.d(t, { A: () => j }), n(321073);
 var i = n(627968),
     r = n(64700),
-    a = n(503698),
-    l = n.n(a),
+    l = n(503698),
+    a = n.n(l),
     s = n(997101),
     o = n(311907),
     d = n(435371),
@@ -15,8 +15,8 @@ var i = n(627968),
     p = n(58149),
     g = n(176031),
     E = n(21119),
-    f = n(854627),
-    I = n(734057),
+    I = n(854627),
+    f = n(734057),
     C = n(153488),
     N = n(290863),
     T = n(994500),
@@ -27,21 +27,21 @@ var i = n(627968),
     y = n(344917),
     L = n(652215),
     O = n(985018),
-    R = n(68e4);
+    R = n(790870);
 function P(e) {
     let { user: t, index: n, isCompetitive: r } = e,
-        { status: a, isMobile: l } = (0, o.cf)([N.A], () => ({
+        { status: l, isMobile: a } = (0, o.cf)([N.A], () => ({
             status: N.A.getStatus(t.id),
             isMobile: N.A.isMobileOnline(t.id),
         })),
-        s = (0, o.bG)([S.A, I.A], () => {
-            let e = I.A.getDMFromUserId(t.id);
+        s = (0, o.bG)([S.A, f.A], () => {
+            let e = f.A.getDMFromUserId(t.id);
             return null != e && S.A.isTyping(e, t.id);
         }, [t]),
-        { avatarSrc: d, eventHandlers: u } = (0, f.A)({ userId: t.id, size: c._3J.SIZE_32, animateOnHover: !0 }),
+        { avatarSrc: d, eventHandlers: u } = (0, I.A)({ userId: t.id, size: c._3J.SIZE_32, animateOnHover: !0 }),
         h = async () => {
             await A.A.openPrivateChannel({ recipientIds: [t.id], location: m.A.FREQUENT_FRIENDS_ROW });
-            let e = I.A.getDMFromUserId(t.id);
+            let e = f.A.getDMFromUserId(t.id);
             null != e &&
                 (0, p.zV)(L.HAw.CHANNEL_OPENED, { ...(0, p.qL)(e), location: `${m.A.FREQUENT_FRIENDS_ROW} ${n + 1}` });
         },
@@ -57,9 +57,9 @@ function P(e) {
         children: (0, i.jsx)(c.euF, {
             src: d,
             "aria-label": t.globalName ?? t.username,
-            status: a,
+            status: l,
             isTyping: s,
-            isMobile: l && !s,
+            isMobile: a && !s,
             size: c._3J.SIZE_32,
             CutoutIcon: g,
             avatarTooltipAsset: _ ? "\uD83D\uDD25" : r ? "❄️" : void 0,
@@ -74,7 +74,7 @@ function j() {
     let e,
         t,
         n,
-        { enabled: a } = (0, y.M)("frequent_friends_row"),
+        { enabled: l } = (0, y.M)("frequent_friends_row"),
         A =
             ((e = (0, o.yK)([E.A], () =>
                 [...E.A.getUserAffinities()].sort((e, t) => E.A.compare(e.otherUserId, t.otherUserId)),
@@ -99,13 +99,13 @@ function j() {
             t.length < 3 ? null : { frequentFriends: t, showCompetitiveSpot: n }),
         m = (0, o.bG)([C.A], () => C.A.hasConsented(L.YAq.PERSONALIZATION)),
         p = (0, o.bG)([x.default], () => x.default.getCurrentUser()?.nsfwAllowed ?? !1),
-        [f, I] = r.useState({ scrollLeft: 0, scrollWidth: 0, clientWidth: 0 }),
+        [I, f] = r.useState({ scrollLeft: 0, scrollWidth: 0, clientWidth: 0 }),
         N = r.useRef(null),
         S = (0, o.bG)([v.A], () => v.A.ipCountryCode),
         j = (0, _.uE)(),
         D = r.useCallback(() => {
             let e = N.current?.getScrollerNode();
-            null != e && I({ scrollLeft: e.scrollLeft, scrollWidth: e.scrollWidth, clientWidth: e.clientWidth });
+            null != e && f({ scrollLeft: e.scrollLeft, scrollWidth: e.scrollWidth, clientWidth: e.clientWidth });
         }, []);
     r.useEffect(() => {
         A?.frequentFriends.length != null && D();
@@ -114,24 +114,24 @@ function j() {
         M = r.useCallback(
             (e) => {
                 let t = e.currentTarget;
-                I({ scrollLeft: t.scrollLeft, scrollWidth: t.scrollWidth, clientWidth: t.clientWidth });
+                f({ scrollLeft: t.scrollLeft, scrollWidth: t.scrollWidth, clientWidth: t.clientWidth });
             },
-            [I],
+            [f],
         );
     if (
         (r.useEffect(() => {
             (0, u.xe)();
         }, []),
-        !a || null == A || !m)
+        !l || null == A || !m)
     )
         return null;
     let { frequentFriends: U, showCompetitiveSpot: G } = A,
         k = (S === s.d.AU || S === s.d.GB) && !j,
         V = null != S && s.M.EU_COUNTRIES.has(S) && !p,
         B = !k && !V && null != S && G,
-        H = f.scrollWidth > f.clientWidth,
-        F = f.scrollLeft > 0,
-        Y = f.scrollLeft < f.scrollWidth - f.clientWidth - 2;
+        H = I.scrollWidth > I.clientWidth,
+        F = I.scrollLeft > 0,
+        Y = I.scrollLeft < I.scrollWidth - I.clientWidth - 2;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
@@ -155,7 +155,7 @@ function j() {
                         ref: (e) => {
                             (N.current = e), (w.current = e?.getScrollerNode() != null ? e.getScrollerNode() : null);
                         },
-                        className: l()(R.i9, { [R.BI]: H && F, [R.E2]: H && Y }),
+                        className: a()(R.i9, { [R.BI]: H && F, [R.E2]: H && Y }),
                         orientation: "horizontal",
                         onScroll: M,
                         children: U.map((e, t) =>

@@ -1,4 +1,4 @@
-n.d(t, { A: () => R });
+n.d(t, { A: () => C });
 var l = n(627968),
     r = n(64700),
     a = n(503698),
@@ -10,8 +10,8 @@ var l = n(627968),
     c = n(736653),
     _ = n(80682),
     d = n(793574),
-    g = n(688810),
-    A = n(221950),
+    A = n(688810),
+    g = n(221950),
     T = n(950191),
     I = n(454719),
     N = n(946356),
@@ -20,16 +20,16 @@ var l = n(627968),
     S = n(985925),
     G = n(295191),
     O = n(586387),
-    C = n(12999);
-function R(e) {
-    let { userId: t, guildId: n, onClose: a, className: R, infoPanelClassName: L, style: D, moderatorReportId: f } = e,
+    R = n(971353);
+function C(e) {
+    let { userId: t, guildId: n, onClose: a, className: C, infoPanelClassName: L, style: D, moderatorReportId: f } = e,
         x = (0, S.q)(n),
         M = (0, s.bG)([m.default], () => m.default.getUser(t), [t]),
         p = (0, s.bG)([h.Ay], () => h.Ay.getMember(n, t), [n, t]),
         [U, k] = r.useState(null == M || null == p),
         b = (0, u.A)(p),
         F = r.useRef(null),
-        { analyticsLocations: j } = (0, g.Ay)(d.A.GUILD_MEMBER_MOD_VIEW),
+        { analyticsLocations: j } = (0, A.Ay)(d.A.GUILD_MEMBER_MOD_VIEW),
         v = (0, T.Ay)(t, n),
         P = (0, c.Ay)();
     return (r.useEffect(() => {
@@ -55,7 +55,7 @@ function R(e) {
         !(async function () {
             let e = [
                 E.A.requestMembersById(n, [t]),
-                (0, A.jo)(n, [t]),
+                (0, g.jo)(n, [t]),
                 (0, I.A)(t, void 0, { guildId: n, dispatchWait: !0 }),
             ];
             await Promise.all(e), k(!1);
@@ -64,17 +64,17 @@ function R(e) {
     x)
         ? U || null == M || null == p
             ? (0, l.jsx)("div", {
-                  className: i()(C.so, C.g4, R),
+                  className: i()(R.so, R.g4, C),
                   style: D,
                   children: (0, l.jsx)(o.y$y, {
                       animated: !0,
                       type: U ? o.y$y.Type.SPINNING_CIRCLE : o.y$y.Type.CHASING_DOTS,
                   }),
               })
-            : (0, l.jsx)(g.f5, {
+            : (0, l.jsx)(A.f5, {
                   value: j,
                   children: (0, l.jsx)("div", {
-                      className: i()(C.so, R),
+                      className: i()(R.so, C),
                       style: D,
                       children: (0, l.jsx)(N.A, {
                           user: M,
@@ -82,9 +82,9 @@ function R(e) {
                           themeType: null,
                           themeOverride: P,
                           forceShowPremium: !0,
-                          className: C.a2,
+                          className: R.a2,
                           children: (0, l.jsxs)("div", {
-                              className: C.WH,
+                              className: R.WH,
                               children: [
                                   (0, l.jsx)(O.Ay, { userId: t, guildId: n, onClose: a, moderatorReportId: f }),
                                   (0, l.jsx)(G.A, { userId: t, guildId: n, onClose: a, className: L }),

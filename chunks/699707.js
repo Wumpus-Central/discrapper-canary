@@ -3,7 +3,7 @@ var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(92674),
+    r = n(563495),
     o = n(397927),
     d = n(475743),
     c = n(216418),
@@ -18,9 +18,9 @@ var i = n(627968),
     x = n(163432),
     C = n(652215),
     E = n(806931),
-    I = n(403264),
-    N = n(542411);
-let b = 16 / 9,
+    I = n(691453),
+    b = n(332597);
+let N = 16 / 9,
     S = 8 + x.Vp;
 function T(e) {
     let t,
@@ -60,7 +60,7 @@ function T(e) {
         el = 0;
     (q || $) && (el += 72), q && !$ && (et ? (el += 48) : (el += 8)), $ && (el += 0.5 * S + 8);
     let es = l.useMemo(
-            () => (q && X ? G / (U - 2 * el) : J && null != B && B.width > 0 && B.height > 0 ? B.width / B.height : b),
+            () => (q && X ? G / (U - 2 * el) : J && null != B && B.width > 0 && B.height > 0 ? B.width / B.height : N),
             [J, B, q, G, U, el, X],
         ),
         ea = U - 2 * el,
@@ -116,19 +116,19 @@ function T(e) {
         ex = $ ? [] : (0, f.Cf)(v, L, V),
         { visibleParticipants: eC, participantTileWidth: eE } = (0, x.i4)(G, y);
     return (0, i.jsxs)("div", {
-        className: a()(N.zr, I.tR, D),
+        className: a()(b.zr, I.tR, D),
         children: [
             (0, i.jsxs)("div", {
-                className: N.QX,
+                className: b.QX,
                 style: { opacity: J && K ? 0 : 1 },
                 children: [
                     (0, i.jsxs)(r.animated.div, {
-                        className: N.pc,
+                        className: b.pc,
                         style: { top: em.value.to((e) => (-e * S) / 2) },
                         children: [
                             (0, i.jsx)(r.animated.div, {
                                 style: { width: ep.value },
-                                className: N.tN,
+                                className: b.tN,
                                 children: (0, i.jsx)("div", {
                                     className: I.xS,
                                     style: { aspectRatio: es },
@@ -165,7 +165,7 @@ function T(e) {
                             }),
                             et
                                 ? (0, i.jsx)(r.animated.div, {
-                                      className: a()(N.$l, { [N.N7]: w }),
+                                      className: a()(b.$l, { [b.N7]: w }),
                                       style: { bottom: eg.value },
                                       children: (0, i.jsx)(u.A, {
                                           channelId: O.id,
@@ -177,7 +177,7 @@ function T(e) {
                         ],
                     }),
                     (0, i.jsx)(r.animated.div, {
-                        className: N.Vx,
+                        className: b.Vx,
                         style: {
                             translateY: eA.value.to((e) => (e * S) / 2),
                             opacity: eA.value,

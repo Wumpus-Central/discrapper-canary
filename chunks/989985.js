@@ -2,8 +2,8 @@ n.d(t, { _: () => r });
 var i = n(627968);
 n(64700);
 var l = n(503698),
-    a = n.n(l),
-    s = n(36353);
+    s = n.n(l),
+    a = n(465295);
 function r(e) {
     let {
         bannerIcon: t,
@@ -15,22 +15,22 @@ function r(e) {
         children: d,
     } = e;
     return (0, i.jsxs)("div", {
-        className: a()(s.Ew, c),
+        className: s()(a.Ew, c),
         children: [
             (0, i.jsxs)("div", {
-                className: a()(s.lt, r),
+                className: s()(a.lt, r),
                 children: [
-                    null != t && ("string" == typeof t ? (0, i.jsx)("img", { src: t, alt: "", className: s.q3 }) : t),
+                    null != t && ("string" == typeof t ? (0, i.jsx)("img", { src: t, alt: "", className: a.q3 }) : t),
                     (0, i.jsxs)("div", {
-                        className: s._M,
+                        className: a._M,
                         children: [
-                            (0, i.jsx)("div", { className: a()(s.U_, o), children: n }),
-                            null != l && (0, i.jsx)("div", { className: s.mi, children: l }),
+                            (0, i.jsx)("div", { className: s()(a.U_, o), children: n }),
+                            null != l && (0, i.jsx)("div", { className: a.mi, children: l }),
                         ],
                     }),
                 ],
             }),
-            (0, i.jsx)("div", { className: s.uu, children: d }),
+            (0, i.jsx)("div", { className: a.uu, children: d }),
         ],
     });
 }

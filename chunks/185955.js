@@ -1,9 +1,9 @@
 n.d(t, { A: () => T }), n(321073);
 var i = n(627968),
     s = n(64700),
-    r = n(311907),
-    a = n(843282),
-    l = n(397927),
+    a = n(311907),
+    l = n(843282),
+    r = n(397927),
     o = n(915089),
     c = n(145497),
     d = n(685073),
@@ -12,16 +12,16 @@ var i = n(627968),
     m = n(193658),
     A = n(287809),
     g = n(581781),
-    E = n(743981),
-    h = n(355097),
+    h = n(743981),
+    x = n(355097),
     p = n(985018),
-    C = n(86267);
-let x = (0, o.Ld)(),
+    E = n(919501);
+let C = (0, o.Ld)(),
     T = s.memo(function (e) {
         let { availablePrimaryGuilds: t, pendingPrimaryGuildId: n, onChange: o } = e,
             T = s.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
-            I = (0, r.bG)([A.default], () => (0, d.Zo)(A.default.getCurrentUser()?.primaryGuild).guildId),
-            S = void 0 !== n ? n : I,
+            S = (0, a.bG)([A.default], () => (0, d.Zo)(A.default.getCurrentUser()?.primaryGuild).guildId),
+            I = void 0 !== n ? n : S,
             f = s.useMemo(
                 () => t.reduce((e, t) => (t.profile?.tag != null && e.push({ label: t.name, value: t.id }), e), []),
                 [t],
@@ -61,7 +61,7 @@ let x = (0, o.Ld)(),
                 },
                 [T],
             ),
-            R = s.useCallback(
+            j = s.useCallback(
                 (e) => {
                     if (null == e) return null;
                     let t = T.get(e.value);
@@ -73,7 +73,7 @@ let x = (0, o.Ld)(),
                               guildId: t.id,
                               guildTag: n,
                               guildBadge: t.profile?.badge ?? void 0,
-                              badgeSize: E.Sl.SIZE_16,
+                              badgeSize: h.Sl.SIZE_16,
                               textColor: "interactive-text-default",
                               textVariant: "text-sm/semibold",
                           });
@@ -93,36 +93,36 @@ let x = (0, o.Ld)(),
                 },
                 [o],
             ),
-            j = s.useCallback((e) => e === S, [S]),
-            P = s.useCallback((e) => e, []),
-            y = s.useCallback(() => {
+            R = s.useCallback((e) => e === I, [I]),
+            y = s.useCallback((e) => e, []),
+            P = s.useCallback(() => {
                 o?.(null);
             }, [o]),
             L = s.useRef(null);
         return (
-            (0, m.A)(L, h._F.GUILD_TAG),
+            (0, m.A)(L, x._F.GUILD_TAG),
             (0, i.jsxs)(_.A, {
                 title: p.intl.string(p.t.Pdd1nd),
-                titleId: x,
+                titleId: C,
                 ref: L,
                 children: [
-                    (0, i.jsx)(l.Text, {
-                        className: C.VA,
+                    (0, i.jsx)(r.Text, {
+                        className: E.VA,
                         variant: "text-sm/normal",
                         children: p.intl.string(p.t.mlZ6Jx),
                     }),
-                    (0, i.jsx)(a.Pw, {
-                        className: C.Lt,
-                        optionClassName: C.S0,
-                        isSelected: j,
+                    (0, i.jsx)(l.Pw, {
+                        className: E.Lt,
+                        optionClassName: E.S0,
+                        isSelected: R,
                         options: f,
                         select: O,
                         renderLeading: b,
-                        renderTrailing: R,
+                        renderTrailing: j,
                         renderOptionValue: v,
-                        serialize: P,
-                        clear: y,
-                        clearable: null != S,
+                        serialize: y,
+                        clear: P,
+                        clearable: null != I,
                         maxVisibleItems: 8,
                         "data-migration-pending": !0,
                     }),

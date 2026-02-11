@@ -1,7 +1,7 @@
 n.d(t, { A: () => b });
 var l = n(627968),
-    a = n(64700),
-    i = n(311907),
+    i = n(64700),
+    a = n(311907),
     r = n(397927),
     s = n(964486),
     d = n(58149),
@@ -13,10 +13,10 @@ var l = n(627968),
     x = n(369053),
     g = n(652215),
     h = n(985018),
-    p = n(71561);
+    p = n(624507);
 function A(e) {
-    let { title: t, description: n, onButtonClick: i, trackSettingsUpsellsAction: r } = e,
-        [d, u] = a.useState(!1);
+    let { title: t, description: n, onButtonClick: a, trackSettingsUpsellsAction: r } = e,
+        [d, u] = i.useState(!1);
     return (
         (0, s.Ay)(() => {
             r(x.lJ.SETTINGS_UPSELLS_VIEWED);
@@ -27,14 +27,14 @@ function A(e) {
             buttonText: d ? h.intl.string(h.t["h+WsPb"]) : h.intl.string(h.t.A8t4Nf),
             buttonDisabled: d,
             onButtonPress: () => {
-                i(), u(!0), r(x.lJ.SETTINGS_UPSELLS_APPLY_CLICKED);
+                a(), u(!0), r(x.lJ.SETTINGS_UPSELLS_APPLY_CLICKED);
             },
         })
     );
 }
 function b(e) {
-    let { settingsUpsells: t, channelId: n, onModalClose: a, reportId: s, reportType: o, reportSubType: b } = e,
-        v = (0, i.bG)([m.A], () => m.A.getChannel(n)),
+    let { settingsUpsells: t, channelId: n, onModalClose: i, reportId: s, reportType: o, reportSubType: b } = e,
+        v = (0, a.bG)([m.A], () => m.A.getChannel(n)),
         f = (0, _.MR)(t, v?.type),
         j = (0, x.Mw)(o, b, s);
     return 0 === f.length
@@ -50,10 +50,10 @@ function b(e) {
                   (0, l.jsx)("div", {
                       className: p.uk,
                       children: f.map((e, n) => {
-                          let { getTitle: a, getDescription: i, onApply: r } = e;
+                          let { getTitle: i, getDescription: a, onApply: r } = e;
                           return (0, l.jsx)(
                               A,
-                              { title: a(), description: i(), onButtonClick: r, trackSettingsUpsellsAction: j(t[n]) },
+                              { title: i(), description: a(), onButtonClick: r, trackSettingsUpsellsAction: j(t[n]) },
                               n,
                           );
                       }),
@@ -62,7 +62,7 @@ function b(e) {
                       text: h.intl.string(h.t.olebGx),
                       onClick: () => {
                           (0, c.openUserSettings)(u.X.CONTENT_AND_SOCIAL_PANEL, { section: g.nc_.CONTENT_AND_SOCIAL }),
-                              a(),
+                              i(),
                               d.Ay.trackWithMetadata(g.HAw.IAR_SETTINGS_UPSELLS_ACTION, {
                                   report_id: s,
                                   report_type: o.name,

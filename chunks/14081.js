@@ -13,10 +13,10 @@ var r = n(627968),
     A = n(793506),
     _ = n(204017),
     g = n(843095),
-    f = n(294726),
+    f = n(738072),
     x = n(985018),
-    h = n(876380),
-    v = n(561797);
+    v = n(772574),
+    h = n(41775);
 function j(e) {
     let { guildId: t } = e,
         n = l.useRef(null),
@@ -37,11 +37,11 @@ function j(e) {
               onClick: () => (0, g.A)({ guildId: t, analyticsLocation: d.A.GUILD_POWERUPS_OVERVIEW }),
               children: [
                   (0, r.jsx)("div", {
-                      className: s()(v.ZS, h.Sl),
+                      className: s()(h.ZS, v.Sl),
                       children: (0, r.jsx)(o.E_w, {
                           withReducedMotion: "halt",
                           eventTargetRef: n,
-                          className: v.Sl,
+                          className: h.Sl,
                           fit: "contain",
                           stateMachine: "SM_Main_Int",
                       }),
@@ -51,7 +51,7 @@ function j(e) {
                       textColor: S,
                       footer: (0, r.jsx)(c.$L, { cost: j ?? 0, costDecorator: "+", status: b }),
                       children: (0, r.jsx)(o.EYj, {
-                          className: h.h_,
+                          className: v.h_,
                           color: S,
                           variant: "text-sm/medium",
                           children: x.intl.format(f.default["+UqyGU"], { gameName: E, gameName2: I }),

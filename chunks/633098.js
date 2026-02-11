@@ -1,9 +1,9 @@
-n.d(t, { A: () => j });
+n.d(t, { A: () => v });
 var i = n(627968),
     l = n(64700),
     a = n(503698),
     r = n.n(a),
-    s = n(92674),
+    s = n(563495),
     o = n(311907),
     d = n(397927),
     c = n(775602),
@@ -16,19 +16,19 @@ var i = n(627968),
     p = n(518477),
     _ = n(652215),
     A = n(985018),
-    I = n(892984);
-function j(e) {
+    I = n(829138);
+function v(e) {
     let { className: t } = e,
         { trackUserProfileEditSaved: n } = (0, g.NJ)(),
-        [a, j] = l.useState(!1),
-        v = (0, o.yK)([f.A], () => f.A.getSaveablePendingWidgets() ?? []),
+        [a, v] = l.useState(!1),
+        j = (0, o.yK)([f.A], () => f.A.getSaveablePendingWidgets() ?? []),
         T = (0, o.yK)([f.A], () => f.A.getChangedWidgets()),
-        E = (0, o.yK)([f.A], () => f.A.getRemovedWidgets()),
-        b = (0, o.bG)([f.A], () => f.A.hasUnsavedChanges()),
+        b = (0, o.yK)([f.A], () => f.A.getRemovedWidgets()),
+        E = (0, o.bG)([f.A], () => f.A.hasUnsavedChanges()),
         y = (0, o.bG)([f.A], () => f.A.canSaveChanges()),
         C = (0, o.bG)([f.A], () => f.A.isSubmitting),
         N = (0, o.bG)([c.A], () => c.A.useReducedMotion),
-        S = (0, d.pnh)(b, {
+        S = (0, d.pnh)(E, {
             from: { opacity: 0, y: 80 * !N },
             enter: { opacity: 1, y: 0 },
             leave: { opacity: 0, y: 80 * !N },
@@ -36,7 +36,7 @@ function j(e) {
     l.useEffect(() => {
         let e = null;
         function t() {
-            j(!0), (e = setTimeout(() => j(!1), 500));
+            v(!0), (e = setTimeout(() => v(!1), 500));
         }
         return (
             u._.subscribe(_.jej.EMPHASIZE_NOTICE, t),
@@ -46,12 +46,12 @@ function j(e) {
         );
     }, []),
         l.useEffect(() => {
-            b && d.ORC.announce(A.intl.string(A.t["0Y/qkL"]));
-        }, [b]);
+            E && d.ORC.announce(A.intl.string(A.t["0Y/qkL"]));
+        }, [E]);
     let w = l.useCallback(async () => {
             if (f.A.canSaveChanges()) {
                 try {
-                    await x.A.savePendingWidgets(v);
+                    await x.A.savePendingWidgets(j);
                 } catch (e) {
                     (0, h.XA)(p.jM.WIDGET_SAVE_FAILURE);
                     return;
@@ -64,9 +64,9 @@ function j(e) {
                         (t.numCharactersCommentary = e.games.reduce((e, t) => e + (t.comment?.length ?? 0), 0))),
                         n(t);
                 }
-                for (let e of E) n({ widgetEdited: e.type, isWidgetRemoved: !0 });
+                for (let e of b) n({ widgetEdited: e.type, isWidgetRemoved: !0 });
             }
-        }, [v, T, E, n]),
+        }, [j, T, b, n]),
         k = l.useCallback(() => {
             x.A.clearPendingWidgets();
         }, []);
@@ -93,7 +93,7 @@ function j(e) {
                                       variant: "secondary",
                                       text: A.intl.string(A.t.yBZMsQ),
                                       onClick: k,
-                                      disabled: !b || C,
+                                      disabled: !E || C,
                                   }),
                                   (0, i.jsx)(d.Button, {
                                       size: "sm",
@@ -101,7 +101,7 @@ function j(e) {
                                       text: A.intl.string(A.t["R3BPH+"]),
                                       onClick: w,
                                       loading: C,
-                                      disabled: !y || !b || C,
+                                      disabled: !y || !E || C,
                                   }),
                               ],
                           }),

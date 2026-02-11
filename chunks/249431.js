@@ -5,9 +5,9 @@ n(64700);
 var i = n(503698),
     a = n.n(i),
     s = n(711371),
-    o = n(675841),
-    l = n(562650),
-    u = n(388963);
+    o = n(104355),
+    l = n(40672),
+    u = n(960209);
 let c = {
     strong: o.bold,
     em: o.italics,
@@ -33,8 +33,8 @@ function d(e, t) {
     let n,
         { attributes: i, children: u, leaf: d, text: _ } = t,
         f = !1,
-        [p] = s.VW.node(e, s.PW.parent(s.VW.findPath(e, _)));
-    switch (s.VW.isEditor(p) ? "editor" : p.type) {
+        [h] = s.VW.node(e, s.PW.parent(s.VW.findPath(e, _)));
+    switch (s.VW.isEditor(h) ? "editor" : h.type) {
         case "line":
         case "blockQuote": {
             f = void 0;
