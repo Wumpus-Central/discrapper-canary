@@ -11,6 +11,8 @@ e.exports = {
     mQ: "inviteRowInfo__67dba",
     BT: "inviteRowLabels__67dba",
     DF: "ringing__67dba",
+    eq: "inviteRowSubLabel__67dba",
+    j8: "inviteRowStatusIcon__67dba",
     Iq: "inviteRowEmptyState__67dba",
     t$: "inviteRowActions__67dba",
     UW: "warningContainer__67dba",
@@ -21,5 +23,4 @@ e.exports = {
     P5: "errorLink__67dba",
     q9: "acronym__67dba",
     xF: "footerWithCheckbox__67dba",
-    J2: "subLabel__67dba",
 };

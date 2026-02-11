@@ -8,7 +8,10 @@ e.exports = {
     my: "avatar__1bad5",
     Kk: "icon__1bad5",
     R4: "leading__1bad5",
+    VW: "nameContainer__1bad5",
     UU: "name__1bad5",
+    J2: "subLabel__1bad5",
+    RI: "activityIcon__1bad5",
     r$: "dots__1bad5",
     h5: "status__1bad5",
 };
