@@ -20,5 +20,6 @@ e.exports = {
     TN: "usersSummary__16b66",
     Jq: "timeBar__16b66",
     X0: "detailsAndAvatarsContainer__16b66",
+    Be: "detailsAndAvatarsContainerUserActivities__16b66 detailsAndAvatarsContainer__16b66",
     my: "avatar__16b66",
 };

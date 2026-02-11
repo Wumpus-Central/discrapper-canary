@@ -19,8 +19,8 @@ var i = n(627968),
     C = n(652896),
     E = n(279250),
     I = n(346846),
-    N = n(142524),
-    b = n(958140),
+    b = n(142524),
+    N = n(958140),
     S = n(721931),
     T = n(766319),
     v = n(342296),
@@ -100,8 +100,8 @@ let W = (0, m.J)(function (e) {
             showHangStatus: eE,
         } = e,
         { enableUserHoverActivities: eI } = (0, P.fC)({ guildId: m.guild_id, location: "VoiceUser" }),
-        { standardPopoverGap: eN } = (0, U.FS)({ guildId: m.guild_id, location: "VoiceUser" }),
-        eb = l.useRef(null),
+        { standardPopoverGap: eb } = (0, U.FS)({ guildId: m.guild_id, location: "VoiceUser" }),
+        eN = l.useRef(null),
         [eS, eT] = l.useState(!1),
         ev = l.useRef(null),
         [ey, ej] = l.useState(!1),
@@ -161,7 +161,7 @@ let W = (0, m.J)(function (e) {
         },
         eq = (e) =>
             e_
-                ? (0, i.jsx)(b.h, { ...e, channel: m, setIsHangStatusInputFocused: eO, setIsEmojiPickerOpen: eG })
+                ? (0, i.jsx)(N.h, { ...e, channel: m, setIsHangStatusInputFocused: eO, setIsEmojiPickerOpen: eG })
                 : null != ex
                   ? (0, i.jsx)(S.E, { ...e, hangStatusActivity: ex, channel: m, userId: s.id })
                   : null,
@@ -169,13 +169,13 @@ let W = (0, m.J)(function (e) {
         eJ = () =>
             (0, p.r9)() && (0, p.UK)(m.id)
                 ? null
-                : (0, i.jsx)(N.A, {
+                : (0, i.jsx)(b.A, {
                       user: s,
                       channel: m,
                       onWatch: eY,
                       previewIsOpen: eu,
                       location: eg,
-                      isStandardGap: null != eN,
+                      isStandardGap: null != eb,
                   }),
         eQ = (0, i.jsx)("div", {
             className: H.kZ,
@@ -184,13 +184,13 @@ let W = (0, m.J)(function (e) {
                 ? void 0
                 : () => {
                       eI
-                          ? (e_ && eE && !eS && !eP && ej(!0), eS || eo?.(s.id))
+                          ? (!e_ || !eE || eI || eS || eP || ej(!0), eS || eo?.(s.id))
                           : (el || eE || ew || eV) && !eS && eo?.(s.id);
                   },
             onMouseLeave: em ? void 0 : eF,
             children: (0, i.jsx)(v.A, {
                 clickTrap: s?.id === D.default.getCurrentUser()?.id && eS,
-                targetElementRef: eb,
+                targetElementRef: eN,
                 user: s,
                 guildId: m.guild_id,
                 channelId: m.id,
@@ -239,42 +239,40 @@ let W = (0, m.J)(function (e) {
                         if (em)
                             return (0, i.jsx)(o.m, {
                                 text: (0, x.A)(eh) ?? B.intl.string(B.t.IyYqqY),
-                                children: (0, i.jsx)(y.Ay, { ref: eb, ...l }),
+                                children: (0, i.jsx)(y.Ay, { ref: eN, ...l }),
                             });
                         let r = () => null;
                         return (
-                            eE && eP && (!eI || e_)
+                            eE && eP && !eI
                                 ? (r = eq)
                                 : eI
-                                  ? (r =
-                                        e_ && eE
-                                            ? eq
-                                            : () =>
-                                                  (0, i.jsx)(w.A, {
-                                                      channel: m,
-                                                      user: s,
-                                                      onAction: eF,
-                                                      onWatchStream: el ? eY : void 0,
-                                                      hangStatusActivity: ex,
-                                                      isStandardGap: null != eN,
-                                                  }))
+                                  ? (r = () =>
+                                        (0, i.jsx)(w.A, {
+                                            channel: m,
+                                            user: s,
+                                            onAction: eF,
+                                            onWatchStream: el ? eY : void 0,
+                                            hangStatusActivity: ex,
+                                            renderSelfHangStatus: eq,
+                                            isHoveringHangStatus: ey,
+                                        }))
                                   : el
                                     ? (r = eJ)
                                     : ew && s.id !== O.default.getId()
                                       ? (r = eX)
                                       : eE && (r = eq),
                             (0, i.jsx)(d.YNO, {
-                                targetElementRef: eb,
+                                targetElementRef: eN,
                                 position: "right",
                                 renderPopout: r,
                                 shouldShow: (ec || (eE && eU && (!eI || e_))) && !eS,
                                 onRequestClose: eH,
                                 align: eE && eP && !e_ && !eI ? "center" : void 0,
-                                spacing: eN ?? (eE && eP && (!eI || e_) ? 8 : 0),
+                                spacing: eb ?? (eE && eP && (!eI || e_) ? 8 : 0),
                                 children: () =>
                                     (0, i.jsx)(y.Ay, {
                                         ...l,
-                                        ref: eb,
+                                        ref: eN,
                                         onMouseDown: e.onMouseDown,
                                         onKeyDown: e.onKeyDown,
                                         handleHoverHangStatus: eK,
