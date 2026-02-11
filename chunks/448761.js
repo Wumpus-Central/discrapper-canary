@@ -71,7 +71,7 @@ var r = (function (e) {
     );
 })({});
 let i = {
-    UNDELETABLE: new Set([1, 2, 3, 4, 5, 21, 56, 57, 64]),
+    UNDELETABLE: new Set([1, 2, 3, 4, 5, 21, 35, 56, 57, 64]),
     GUILD_DISCOVERY_STATUS: new Set([14, 15, 16, 17]),
     USER_MESSAGE: new Set([0, 19, 20, 23, 26, 35, 41, 45, 47]),
     NOTIFIABLE_SYSTEM_MESSAGE: new Set([7, 22, 46, 63, 64]),
