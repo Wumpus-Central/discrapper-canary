@@ -18,10 +18,10 @@ let N = (e) => {
         r = l.useMemo(() => {
             switch (n) {
                 case T.kqX.PREMIUM_TIER_2_TRIAL_ENDING:
-                    let e = _.A.getAlmostExpiringTrialOffers([I.pe.TIER_2]);
+                    let e = _.A.getAlmostExpiringTrialOffersForReminder([I.pe.TIER_2]);
                     return { cooldownDurationMs: (0, d.e1)(e[0]) };
                 case T.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING:
-                    let t = _.A.getAlmostExpiringDiscountOffers([I.pe.TIER_2]);
+                    let t = _.A.getAlmostExpiringDiscountOffersForReminder([I.pe.TIER_2]);
                     return { cooldownDurationMs: (0, d.e1)(t[0]) };
                 default:
                     return { cooldownDurationMs: 1 / 0 };

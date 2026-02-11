@@ -437,15 +437,17 @@ let eK = {
     },
     [eg.kqX.PREMIUM_TIER_2_TRIAL_ENDING]: {
         predicate: () =>
-            eO.A.getAlmostExpiringTrialOffers([ey.pe.TIER_2]).length > 0 && !eW(eg.kqX.PREMIUM_TIER_2_TRIAL_ENDING),
+            eO.A.getAlmostExpiringTrialOffersForReminder([ey.pe.TIER_2]).length > 0 &&
+            !eW(eg.kqX.PREMIUM_TIER_2_TRIAL_ENDING),
     },
     [eg.kqX.PREMIUM_TIER_0_TRIAL_ENDING]: {
         predicate: () =>
-            eO.A.getAlmostExpiringTrialOffers([ey.pe.TIER_0]).length > 0 && !eW(eg.kqX.PREMIUM_TIER_0_TRIAL_ENDING),
+            eO.A.getAlmostExpiringTrialOffersForReminder([ey.pe.TIER_0]).length > 0 &&
+            !eW(eg.kqX.PREMIUM_TIER_0_TRIAL_ENDING),
     },
     [eg.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING]: {
         predicate: () =>
-            eO.A.getAlmostExpiringDiscountOffers([ey.pe.TIER_2]).length > 0 &&
+            eO.A.getAlmostExpiringDiscountOffersForReminder([ey.pe.TIER_2]).length > 0 &&
             !eW(eg.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING),
     },
     [eg.kqX.PREMIUM_UNCANCEL]: {
