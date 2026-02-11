@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => g, D1: () => m, Ip: () => _, l0: () => p, rh: () => E });
+n.d(t, { Ay: () => E, D1: () => g, l0: () => h, rh: () => A });
 var r = n(64700),
     i = n(440745),
     a = n.n(i),
@@ -13,10 +13,10 @@ let _ = (0, s.v)(() => ({ palette: {}, fetching: {} }));
 function f(e) {
     return null != _.getState().palette[e];
 }
-async function p(e) {
-    f(e) || (await h(e));
-}
 async function h(e) {
+    f(e) || (await p(e));
+}
+async function p(e) {
     if (!_.getState().fetching[e]) {
         (0, o.r)(() => _.setState((t) => ({ fetching: { ...t.fetching, [e]: !0 } })));
         try {
@@ -33,21 +33,21 @@ async function h(e) {
         }
     }
 }
-function m(e) {
+function g(e) {
     return !_((t) => null != e && t.fetching[e]);
 }
-function g(e, t) {
+function E(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        [r] = E(e, t, n);
+        [r] = A(e, t, n);
     return r;
 }
-function E(e, t) {
+function A(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         i = _((t) => (null == e ? void 0 : t.palette[e])),
         s = (0, l.bG)([u.A], () => (n && u.A.desaturateUserColors ? u.A.saturation : 1));
     return (
         r.useEffect(() => {
-            null != e && null == i && h(e);
+            null != e && null == i && p(e);
         }, [e, i]),
         r.useMemo(
             () =>

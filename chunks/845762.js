@@ -1,17 +1,2 @@
 "use strict";
-e.exports = {
-    kL: "container__0800c",
-    nt: "slotsContainer__0800c",
-    Q0: "slots__0800c",
-    Vg: "slotsWide__0800c",
-    NI: "slot__0800c",
-    Zg: "emoji__0800c",
-    c4: "emojiItemDisabled__0800c",
-    Mk: "animatedPicker__0800c",
-    DZ: "animatedPickerTall__0800c",
-    AW: "emojiPickerHeader__0800c",
-    v6: "emojiPickerHeaderExpanded__0800c",
-    Nz: "dropDownContainer__0800c",
-    Gu: "dropDown__0800c",
-    Y9: "dropDownOpen__0800c",
-};
+e.exports = { Zg: "emoji__0800c", c4: "emojiItemDisabled__0800c" };

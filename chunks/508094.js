@@ -36,7 +36,7 @@ let p = {
                 _ = null != s && null != i && (0, o.Ir)(i, s, A);
             if (null == A) throw new u.A({ errorCode: m.Lw.INVALID_CHANNEL }, "Invalid Channel.");
             if (_)
-                if ((0, d.A)(A)) null != s && (0, o.Ak)(s, A.id, [r.A.RPC]);
+                if ((0, d.Ay)(A)) null != s && (0, o.Ak)(s, A.id, [r.A.RPC]);
                 else throw new u.A({ errorCode: m.Lw.INVALID_PERMISSIONS }, "Invalid Permissions.");
             else throw new u.A({ errorCode: m.Lw.INVALID_SOUND }, "Invalid Sound.");
         },

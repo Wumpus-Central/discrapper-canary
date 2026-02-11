@@ -210,7 +210,6 @@ n.d(t, {
     VOr: () => v.VO,
     VPb: () => q.SkullIcon,
     VQ0: () => eP.V,
-    VRj: () => q.PaintbrushThinIcon,
     VaJ: () => q.StaffBadgeIcon,
     VeA: () => eM.Ve,
     Vs8: () => Z.UnlockRive,

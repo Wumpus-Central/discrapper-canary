@@ -16,8 +16,8 @@ var r = n(397927),
     p = n(123973),
     g = n(102597),
     E = n(904054),
-    f = n(857179),
-    I = n(652215),
+    I = n(857179),
+    f = n(652215),
     C = n(731854);
 let N = new l.A("SoundboardManager");
 class T extends h.A {
@@ -63,7 +63,7 @@ class T extends h.A {
                         soundVolume: (0, E.A)(n),
                         reportSoundStartedPlaying: () => (0, _.dZ)(t, i),
                     };
-                    c.A.supports(C.O5.SAMPLE_PLAYBACK) ? await (0, f.o)(r) : await (0, f.G)(r, e.playingSoundsWeb);
+                    c.A.supports(C.O5.SAMPLE_PLAYBACK) ? await (0, I.o)(r) : await (0, I.G)(r, e.playingSoundsWeb);
                 } catch (e) {
                     N.warn(`Error playing soundboard sound: ${e.message}`);
                 } finally {
@@ -77,9 +77,9 @@ class T extends h.A {
     _handleOpenEducationModal = (e, t) => {
         if (null == e) return;
         let a = d.A.getChannel(t),
-            l = A.Ay.getKeybindForAction(I.hCu.SOUNDBOARD_HOLD);
+            l = A.Ay.getKeybindForAction(f.hCu.SOUNDBOARD_HOLD);
         null != a &&
-            (0, p.A)(a) &&
+            (0, p.Ay)(a) &&
             null != l &&
             o.A.hasHotspot(s._2.SOUNDBOARD_WHEEL_EDUCATION_MODAL) &&
             (0, r.mMO)(async () => {

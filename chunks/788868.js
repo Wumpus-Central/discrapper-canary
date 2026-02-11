@@ -652,7 +652,6 @@ var eW = (function (e) {
             (e.ANIMATED_AVATAR = "animated_avatar"),
             (e.AVATAR_DECORATION = "avatar_decoration"),
             (e.CLIENT_THEME = "client_theme"),
-            (e.SHARED_CANVAS = "shared_canvas"),
             (e.PROFILE_EFFECT = "profile_effect"),
             (e.DISPLAY_NAME_STYLES = "display_name_styles"),
             (e.PRESET = "preset"),
