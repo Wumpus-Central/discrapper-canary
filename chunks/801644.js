@@ -12,7 +12,7 @@ let i = {
         defaultConfig: i,
         variations: {
             1: { ...i, resetSilenceWarningOnDeviceChange: !0 },
-            2: { ...i, resetSilenceWarningAfterNMinutes: 3 },
+            2: { ...i, resetSilenceWarningAfterNMinutes: 10 },
             3: { ...i, enableHardwareSilenceWarning: !0 },
         },
     });
