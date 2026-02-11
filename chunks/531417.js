@@ -59,10 +59,7 @@ class A extends a.A {
                   })
                 : null != (0, d.lE)().getUseLegacyAudioDevice &&
                   (this.audioSubsystem = (0, d.lE)().getUseLegacyAudioDevice() ? h.rB.LEGACY : h.rB.STANDARD),
-            null != e.pingVoiceThread &&
-                "u" > typeof window &&
-                "canary" === window.GLOBAL_ENV.RELEASE_CHANNEL &&
-                this.watchdogTick(),
+            null != e.pingVoiceThread && this.watchdogTick(),
             null != e.setActiveSinksChangeCallback && e.setActiveSinksChangeCallback(this.handleActiveSinksChange),
             e.setLoopbackPlaybackGainMultiplier?.(h.QP),
             e.setVoiceFiltersFailedCallback?.((e) => this.emit(o.bg.VoiceFiltersFailed, e)),
