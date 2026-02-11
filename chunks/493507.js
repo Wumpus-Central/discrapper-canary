@@ -253,6 +253,10 @@ class V extends r.Ay.PersistedStore {
         let t = v[e];
         return null == t ? null : t.isActive || C.has(e) ? (v[e].timestamp ?? null) : null;
     }
+    getNudgeDMTimestamp(e) {
+        let t = this.getNudgeTimestamp(e);
+        return null == t ? null : t + A.aw;
+    }
     isChannelNudged(e) {
         let { includeInvisible: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         return (!!y || !!t) && v[e]?.isActive === !0;
