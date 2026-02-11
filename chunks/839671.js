@@ -39,15 +39,15 @@ function h(e) {
     let { website: t, trackClick: i } = e,
         { action: a, icon: n, title: s } = g(t);
     return (0, l.jsx)(r.m, {
-        __unsupportedReactNodeAsText: t.url,
+        text: s,
         children: (0, l.jsx)(c.MzZ, {
             onClick: () => {
                 i(a);
             },
             className: m.yO,
-            title: s,
             href: t.url,
             target: "_blank",
+            "aria-label": s,
             children: n,
         }),
     });
