@@ -2,14 +2,14 @@
 n.d(t, {
     JM: () => d,
     Js: () => f,
-    Jx: () => g,
-    Xm: () => E,
+    Jx: () => E,
+    Xm: () => A,
     YT: () => c,
-    fx: () => h,
-    oK: () => I,
-    up: () => p,
+    fx: () => p,
+    oK: () => T,
+    up: () => h,
     wr: () => _,
-    xv: () => A,
+    xv: () => I,
 });
 var r = n(957565),
     i = n(723702),
@@ -40,7 +40,7 @@ function d(e) {
         ? null == a
             ? u.intl.formatToPlainString(u.t.Piihy1, { gamePublisher: r })
             : u.intl.formatToPlainString(u.t.DV47Gy, { gamePublisher: r, cosponsorName: a })
-        : n && "en-US" === u.intl.currentLocale
+        : n
           ? u.intl.formatToPlainString(u.t.zDHY3s, { gamePublisher: r })
           : u.intl.formatToPlainString(u.t.euizJY, { gamePublisher: r, gameTitle: i });
 }
@@ -59,7 +59,7 @@ function f(e) {
             return u.intl.string(u.t["BB+2tX"]);
     }
 }
-function p(e) {
+function h(e) {
     switch (e) {
         case l.BQ.VIRTUAL_CURRENCY:
             return u.intl.string(u.t.ElYQFS);
@@ -73,7 +73,7 @@ function p(e) {
             return u.intl.string(u.t["1nJR4p"]);
     }
 }
-function h(e) {
+function p(e) {
     switch (e) {
         case "reward":
             return u.intl.string(u.t.vjLqAU);
@@ -81,11 +81,11 @@ function h(e) {
             return u.intl.string(u.t.Hufmss);
     }
 }
-let m = (e) => `${location.protocol}//${location.host}/quests/${e}`;
-function g(e) {
+let g = (e) => `${location.protocol}//${location.host}/quests/${e}`;
+function E(e) {
     return e.ctaConfig.link;
 }
-let E = (e, t) => {
+let A = (e, t) => {
     (0, s.Y5)({
         questId: e,
         questContent: t.content,
@@ -94,13 +94,13 @@ let E = (e, t) => {
         impressionId: t.impressionId,
         sourceQuestContent: t.sourceQuestContent,
     }),
-        (0, r.C)(m(e));
+        (0, r.C)(g(e));
 };
-function A(e) {
+function I(e) {
     if (0 === e.rewardsConfig.rewards.length) throw Error(`Quest ${e.id} has no rewards configured`);
     return e.rewardsConfig.rewards[0];
 }
-let I = (e) => {
+let T = (e) => {
     let { hasVideoAsset: t, playerState: n, pauseReason: r } = e;
     return t
         ? n === o.Q6.PAUSED && r === a.Yg.LOST_FOCUS
