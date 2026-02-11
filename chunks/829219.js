@@ -189,18 +189,20 @@ async function V(e, t) {
     try {
         let n = (0, N.Li)(t.questContent),
             r = (0, N.L4)(t.questContent),
-            s = await i.Bo.post({
+            s = (0, N.yI)(t.questContent, e),
+            o = await i.Bo.post({
                 url: D.Rsh.QUESTS_ENROLL(e),
                 body: {
                     location: t.questContent,
                     ...(0, N.Kc)(e, t.questContent),
                     metadata_raw: null != n ? n : null,
                     metadata_sealed: null != r ? r : null,
+                    traffic_metadata_raw: null != s ? s : null,
                 },
                 rejectWithError: !0,
             });
         return (
-            a.h.dispatch({ type: "QUESTS_ENROLL_SUCCESS", enrolledQuestUserStatus: (0, R.tp)(s.body) }),
+            a.h.dispatch({ type: "QUESTS_ENROLL_SUCCESS", enrolledQuestUserStatus: (0, R.tp)(o.body) }),
             { type: "success" }
         );
     } catch (t) {
