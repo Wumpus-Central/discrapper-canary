@@ -9,8 +9,8 @@ var i = n(627968),
     d = n(997509),
     c = n(985018),
     u = n(600854),
-    m = n(347953),
-    g = n(622327);
+    g = n(864608),
+    m = n(515176);
 function x(e) {
     let { guildId: t, canManageGuild: n, premiumProgressBarEnabled: x } = e,
         h = (0, a.Ay)(),
@@ -28,7 +28,7 @@ function x(e) {
                     className: u.fi,
                     children: (0, i.jsx)(r.dOG, {
                         label: c.intl.string(c.t.Dl4mJS),
-                        description: c.intl.string(c.t.xzHcod),
+                        description: c.intl.string(c.t.O87mwg),
                         checked: x,
                         onChange: _,
                         disabled: !n,
@@ -38,7 +38,7 @@ function x(e) {
                     className: u.fi,
                     children: (0, i.jsx)("img", {
                         alt: c.intl.string(c.t.UOJp5a),
-                        src: (0, l.qB)(h) ? g : m,
+                        src: (0, l.qB)(h) ? m.A : g.A,
                         className: u.WI,
                     }),
                 }),
