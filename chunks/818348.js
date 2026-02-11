@@ -23,16 +23,16 @@ n.d(t, {
     VV: () => M,
     Wz: () => ef,
     Xl: () => u,
-    YI: () => X,
+    YI: () => Z,
     Yr: () => e_,
-    ZE: () => $,
+    ZE: () => z,
     _A: () => h,
     __: () => D,
     bZ: () => ec,
     cl: () => f,
     dL: () => H,
     do: () => I,
-    e$: () => z,
+    e$: () => $,
     fr: () => P,
     gx: () => eA,
     hC: () => c,
@@ -53,7 +53,7 @@ n.d(t, {
     rz: () => L,
     sE: () => eu,
     sJ: () => W,
-    sh: () => Z,
+    sh: () => X,
     tE: () => G,
     tF: () => x,
     w7: () => el,
@@ -316,7 +316,7 @@ let U = Object.freeze({
     Y = 6463,
     W = 10,
     K = "RpcApplicationLogger";
-var z = (function (e) {
+var $ = (function (e) {
         return (
             (e.DISPATCH = "DISPATCH"),
             (e.SET_CONFIG = "SET_CONFIG"),
@@ -404,7 +404,7 @@ var z = (function (e) {
             e
         );
     })({}),
-    $ = (function (e) {
+    z = (function (e) {
         return (
             (e.CURRENT_USER_UPDATE = "CURRENT_USER_UPDATE"),
             (e.CURRENT_GUILD_MEMBER_UPDATE = "CURRENT_GUILD_MEMBER_UPDATE"),
@@ -492,7 +492,7 @@ var z = (function (e) {
             e
         );
     })({}),
-    X = (function (e) {
+    Z = (function (e) {
         return (
             (e[(e.CLOSE_NORMAL = 1e3)] = "CLOSE_NORMAL"),
             (e[(e.CLOSE_UNSUPPORTED = 1003)] = "CLOSE_UNSUPPORTED"),
@@ -506,7 +506,7 @@ var z = (function (e) {
             e
         );
     })({});
-let Z = 250,
+let X = 250,
     Q = "token",
     J = "tokens",
     ee = "status.discord.com",
@@ -697,6 +697,7 @@ var eu = (function (e) {
             (e.LOCATION_STACK_METADATA = "location_stack_metadata"),
             (e.CREATOR_STORE_PAGE_VIEWED = "creator_store_page_viewed"),
             (e.CREATOR_STORE_PAGE_CTA_CLICKED = "creator_store_page_cta_clicked"),
+            (e.SEO_PAGE_CWV_MEASURED = "seo_page_cwv_measured"),
             e
         );
     })({}),
