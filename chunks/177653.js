@@ -1,10 +1,10 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => S });
 var i = n(627968);
 n(64700);
 var s = n(503698),
-    r = n.n(s),
-    a = n(735438),
-    l = n.n(a),
+    a = n.n(s),
+    l = n(735438),
+    r = n.n(l),
     o = n(311907),
     c = n(397927),
     d = n(287809),
@@ -13,31 +13,42 @@ var s = n(503698),
     m = n(469778),
     A = n(927578),
     g = n(538511),
-    E = n(788868),
-    h = n(652215),
-    p = n(985018),
+    h = n(788868),
+    x = n(652215),
+    p = n(519412),
+    E = n(985018),
     C = n(802937);
-function x(e) {
+function T(e) {
     let t,
-        { user: n, planId: s, count: a, userPremiumSubscription: l, unconsumedFractionalPremiumUnits: d = [] } = e,
-        [_, m] = (0, o.yK)([u.A], () => [u.A.get(s), null != l ? u.A.get(l.planId) : null]);
-    if (null == _ || A.Ay.getInterval(s).intervalType !== E.WT.MONTH) return null;
-    let g = null != m ? m.skuId : null,
-        x = _.skuId === g,
-        T = A.Ay.getDisplayName(s);
-    if (null != l) {
+        {
+            user: n,
+            planId: s,
+            count: l,
+            userPremiumSubscription: r,
+            unconsumedFractionalPremiumUnits: d = [],
+            hasPremiumGroup: _,
+        } = e,
+        [m, g] = (0, o.yK)([u.A], () => [u.A.get(s), null != r ? u.A.get(r.planId) : null]);
+    if (null == m || A.Ay.getInterval(s).intervalType !== h.WT.MONTH) return null;
+    let T = null != g ? g.skuId : null,
+        S = m.skuId === T,
+        I = A.Ay.getDisplayName(s);
+    if (_) t = E.intl.string(p.default["5asczk"]);
+    else if (S && null != r) {
         let e;
-        (e = new Date(l.status === h.Dmq.PAUSED && null != l.pauseEndsAt ? l.pauseEndsAt : l.currentPeriodEnd)),
-            (t = (0, A._e)(e, d));
-    }
+        e = new Date(r.status === x.Dmq.PAUSED && null != r.pauseEndsAt ? r.pauseEndsAt : r.currentPeriodEnd);
+        let n = (0, A._e)(e, d);
+        t = E.intl.formatToPlainString(E.t["5CNRRA"], { date: n ?? 0 });
+    } else t = E.intl.formatToPlainString(E.t.eNXZ5O, { planName: I });
+    let f = n.hasFreePremium() || (null != r && r.isPurchasedExternally);
     return (0, i.jsxs)("div", {
         className: C.Bh,
         children: [
             (0, i.jsx)("div", {
-                className: r()({
-                    [C.sr]: _.skuId === E.pe.TIER_0,
-                    [C.lP]: _.skuId === E.pe.TIER_1,
-                    [C.eb]: _.skuId === E.pe.TIER_2,
+                className: a()({
+                    [C.sr]: m.skuId === h.pe.TIER_0,
+                    [C.lP]: m.skuId === h.pe.TIER_1,
+                    [C.eb]: m.skuId === h.pe.TIER_2,
                 }),
                 children: (0, i.jsx)(c.tvc, { size: "md", color: "currentColor", className: C.Kk }),
             }),
@@ -46,75 +57,72 @@ function x(e) {
                 children: [
                     (0, i.jsx)(c.Heading, {
                         variant: "heading-md/semibold",
-                        children: p.intl.format(p.t.LzobT9, { planName: T }),
+                        children: E.intl.format(E.t.LzobT9, { planName: I }),
                     }),
-                    n.hasFreePremium() || (null != l && l.isPurchasedExternally)
-                        ? null
-                        : (0, i.jsx)(c.Heading, {
-                              className: C.gj,
-                              variant: "heading-sm/semibold",
-                              color: "text-default",
-                              children:
-                                  x && null != l
-                                      ? p.intl.formatToPlainString(p.t["5CNRRA"], { date: t ?? 0 })
-                                      : p.intl.formatToPlainString(p.t.eNXZ5O, { planName: T }),
-                          }),
+                    !f &&
+                        (0, i.jsx)(c.Heading, {
+                            className: C.gj,
+                            variant: "heading-sm/semibold",
+                            color: "text-default",
+                            children: t,
+                        }),
                 ],
             }),
             (0, i.jsx)(c.Text, {
                 className: C.PJ,
                 variant: "text-md/semibold",
-                children: p.intl.format(p.t["ess/xl"], { count: a }),
+                children: E.intl.format(E.t["ess/xl"], { count: l }),
             }),
         ],
     });
 }
-let T = function (e) {
+let S = function (e) {
     let { className: t, entitlements: n } = e,
-        s = l()(Array.from(n))
+        s = r()(Array.from(n))
             .filter((e) => {
                 let { subscriptionPlanId: t, parentId: n, consumed: i } = e;
                 return null != t && null != n && !i;
             })
             .groupBy((e) => e.subscriptionPlanId)
             .value(),
-        a = (0, o.yK)([m.A], () => m.A.getUnactivatedFractionalPremiumUnits()),
+        l = (0, o.yK)([m.A], () => m.A.getUnactivatedFractionalPremiumUnits()),
         u = (0, o.bG)([_.A], () => _.A.getPremiumSubscription()),
         A = (0, o.bG)([_.A], () => null == _.A.getPremiumTypeSubscription()),
-        h = Object.keys(s).some((e) => e === E.gD.PREMIUM_MONTH_TIER_1),
-        T = (0, o.bG)([d.default], () => d.default.getCurrentUser());
-    return null == T
-        ? null
-        : (0, i.jsxs)("div", {
-              children: [
-                  (0, i.jsx)("div", {
-                      className: r()(t, C.xF, C.J_),
-                      children: Object.keys(s).map((e) =>
-                          (0, i.jsx)(
-                              x,
-                              {
-                                  planId: e,
-                                  count: s[e].length,
-                                  userPremiumSubscription: u,
-                                  user: T,
-                                  unconsumedFractionalPremiumUnits: a,
-                              },
-                              e,
-                          ),
-                      ),
-                  }),
-                  h &&
-                      A &&
-                      (0, i.jsxs)("div", {
-                          children: [
-                              (0, i.jsx)(c.Text, {
-                                  className: C.eT,
-                                  variant: "text-md/normal",
-                                  children: p.intl.string(p.t["VNr4+O"]),
-                              }),
-                              (0, i.jsx)(g.i, {}),
-                          ],
-                      }),
-              ],
-          });
+        x = Object.keys(s).some((e) => e === h.gD.PREMIUM_MONTH_TIER_1),
+        p = (0, o.bG)([d.default], () => d.default.getCurrentUser());
+    if (null == p) return null;
+    let S = p.isPremiumWithPremiumGroup();
+    return (0, i.jsxs)("div", {
+        children: [
+            (0, i.jsx)("div", {
+                className: a()(t, C.xF, C.J_),
+                children: Object.keys(s).map((e) =>
+                    (0, i.jsx)(
+                        T,
+                        {
+                            planId: e,
+                            count: s[e].length,
+                            userPremiumSubscription: u,
+                            user: p,
+                            unconsumedFractionalPremiumUnits: l,
+                            hasPremiumGroup: S,
+                        },
+                        e,
+                    ),
+                ),
+            }),
+            x &&
+                A &&
+                (0, i.jsxs)("div", {
+                    children: [
+                        (0, i.jsx)(c.Text, {
+                            className: C.eT,
+                            variant: "text-md/normal",
+                            children: E.intl.string(E.t["VNr4+O"]),
+                        }),
+                        (0, i.jsx)(g.i, {}),
+                    ],
+                }),
+        ],
+    });
 };
