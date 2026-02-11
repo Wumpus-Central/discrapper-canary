@@ -25,7 +25,7 @@ function I(e) {
         { setSelectedGiftingPromotionReward: f, selectedGiftingPromotionReward: R, claimableRewards: C } = (0, _.Pv)(),
         M = (0, a.bG)([E.default], () => E.default.getCurrentUser()),
         N = (0, a.bG)([p.A], () => p.A.getGiftPromotionRewardSkuIds()),
-        y = (0, c.UY)(C, R),
+        y = (0, c.U)(C, R),
         [O, b] = l.useState(y),
         [v, k] = l.useState(!1);
     l.useEffect(() => {
