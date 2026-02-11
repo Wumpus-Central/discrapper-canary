@@ -6,10 +6,10 @@ let l = (0, r.mj)({
     name: "2026-01-quest-bar-unfurl",
     kind: "user",
     defaultConfig: { enabled: !1, variant: null },
-    variations: { 1: { enabled: !0, variant: 0 }, 2: { enabled: !0, variant: 1 } },
+    variations: { 2: { enabled: !0, variant: 0 }, 3: { enabled: !0, variant: 1 } },
 });
 function s(e) {
-    return e.features.includes(a.Li.QUEST_BAR_UNFURL);
+    return !0;
 }
 function o() {
     let { enabled: e, variant: t } = l.useConfig({ location: a.rE.QUESTS_BAR });
