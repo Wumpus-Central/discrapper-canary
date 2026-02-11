@@ -1,4 +1,4 @@
-i.d(e, { z: () => I });
+i.d(t, { z: () => I });
 var n = i(934551),
     l = i(554146),
     s = i(419954),
@@ -7,28 +7,28 @@ var n = i(934551),
     u = i(358776),
     o = i(75698),
     d = i(831562),
-    T = i(927631),
-    A = i(531525),
-    S = i(985018);
-let E = (0, s.zZ)(a.X.CONNECTIONS_ADD_CONNECTIONS_CATEGORY, { buildLayout: () => [d.l] }),
-    g = (0, s.zZ)(a.X.CONNECTIONS_CONNECTED_ACCOUNTS_CATEGORY, { buildLayout: () => [T.W] }),
-    _ = (0, s.t_)(a.X.CONNECTIONS_PANEL, {
+    _ = i(927631),
+    T = i(531525),
+    A = i(985018);
+let S = (0, s.zZ)(a.X.CONNECTIONS_ADD_CONNECTIONS_CATEGORY, { buildLayout: () => [d.l] }),
+    E = (0, s.zZ)(a.X.CONNECTIONS_CONNECTED_ACCOUNTS_CATEGORY, { buildLayout: () => [_.W] }),
+    c = (0, s.t_)(a.X.CONNECTIONS_PANEL, {
         usePredicate: () => !(0, u.dk)("LegacyConnectionsPanel"),
-        useTitle: () => S.intl.string(S.t["3fe7U5"]),
+        useTitle: () => A.intl.string(A.t["3fe7U5"]),
         hideInStreamerMode: !0,
         StronglyDiscouragedCustomComponent: o.Ay,
         buildLayout: () => [],
     }),
-    c = (0, s.t_)(a.X.CONNECTIONS_PANEL, {
+    g = (0, s.t_)(a.X.CONNECTIONS_PANEL, {
         usePredicate: () => (0, u.dk)("ConnectionsPanel"),
-        useTitle: () => S.intl.string(S.t["3fe7U5"]),
+        useTitle: () => A.intl.string(A.t["3fe7U5"]),
         hideInStreamerMode: !0,
-        buildLayout: () => [E, g],
+        buildLayout: () => [S, E],
     }),
     I = (0, s.i4)(a.X.CONNECTIONS_SIDEBAR_ITEM, {
-        useTitle: () => S.intl.string(S.t["3fe7U5"]),
-        getLegacySearchKey: () => ((0, u.WJ)("ConnectionsPanel") ? void 0 : A.H.CONNECTIONS),
+        useTitle: () => A.intl.string(A.t["3fe7U5"]),
+        getLegacySearchKey: () => ((0, u.WJ)("ConnectionsPanel") ? void 0 : T.H.CONNECTIONS),
         icon: n.LinkIcon,
-        trailing: { type: r.S.BADGE_NEW, getDismissibleContentTypes: () => [l.M.NEW_CRUNCHYROLL_CONNECTION] },
-        buildLayout: () => ((0, u.WJ)("ConnectionsPanel") ? [c] : [_]),
+        trailing: { type: r.Si.BADGE_NEW, getDismissibleContentTypes: () => [l.M.NEW_CRUNCHYROLL_CONNECTION] },
+        buildLayout: () => ((0, u.WJ)("ConnectionsPanel") ? [g] : [c]),
     });

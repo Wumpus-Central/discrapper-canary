@@ -1,4 +1,4 @@
-i.d(e, { o: () => C });
+i.d(t, { o: () => N });
 var n = i(311907),
     l = i(419954),
     s = i(933297),
@@ -7,31 +7,31 @@ var n = i(311907),
     u = i(358776),
     o = i(36535),
     d = i(548018),
-    T = i(953410),
-    A = i(102277),
-    S = i(354093),
-    E = i(909081),
-    g = i(25894),
-    _ = i(237948),
-    c = i(32096),
+    _ = i(953410),
+    T = i(102277),
+    A = i(354093),
+    S = i(909081),
+    E = i(25894),
+    c = i(237948),
+    g = i(32096),
     I = i(545214),
-    N = i(985018);
-let C = (0, l.zZ)(a.X.ACCOUNT_AUTHENTICATION_CATEGORY, {
-    useTitle: () => N.intl.string(N.t.pKSjEj),
+    C = i(985018);
+let N = (0, l.zZ)(a.X.ACCOUNT_AUTHENTICATION_CATEGORY, {
+    useTitle: () => C.intl.string(C.t.pKSjEj),
     useInlineNotice: function () {
         return (0, n.bG)([r.default], () => r.default.getCurrentUser()?.mfaEnabled ?? !1)
-            ? { type: s.W.STRONGLY_DISCOURAGED_CUSTOM, notice: o.A }
+            ? { type: s.lT.STRONGLY_DISCOURAGED_CUSTOM, notice: o.A }
             : null;
     },
     buildLayout: () => [
-        S.L,
-        c.A,
+        A.L,
+        g.A,
         I.k,
-        A.v,
+        T.v,
         d.c,
-        T.g,
-        E.T,
-        g.C,
-        ...((0, u.pC)("AccountAuthenticationCategory") ? [_.w] : []),
+        _.g,
+        S.T,
+        E.C,
+        ...((0, u.pC)("AccountAuthenticationCategory") ? [c.w] : []),
     ],
 });

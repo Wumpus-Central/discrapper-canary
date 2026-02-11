@@ -1,4 +1,4 @@
-i.d(e, { s: () => g });
+i.d(t, { s: () => E });
 var n = i(419954),
     l = i(933297),
     s = i(780964),
@@ -7,12 +7,12 @@ var n = i(419954),
     u = i(193660),
     o = i(379897),
     d = i(21117),
-    T = i(617110),
-    A = i(937551),
-    S = i(31118),
-    E = i(985018);
-let g = (0, n.zZ)(s.X.ACCESSIBILITY_OVERVIEW, {
-    useSubnavLabel: () => E.intl.string(E.t.fTNxW7),
-    useInlineNotice: () => ({ type: l.W.STRONGLY_DISCOURAGED_CUSTOM, notice: r.YD }),
-    buildLayout: () => [A.V, a.E, S.k, o.j, T.G, d.b, u.w],
+    _ = i(617110),
+    T = i(937551),
+    A = i(31118),
+    S = i(985018);
+let E = (0, n.zZ)(s.X.ACCESSIBILITY_OVERVIEW, {
+    useSubnavLabel: () => S.intl.string(S.t.fTNxW7),
+    useInlineNotice: () => ({ type: l.lT.STRONGLY_DISCOURAGED_CUSTOM, notice: r.YD }),
+    buildLayout: () => [T.V, a.E, A.k, o.j, _.G, d.b, u.w],
 });

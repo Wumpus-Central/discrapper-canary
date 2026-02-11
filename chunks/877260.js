@@ -27,8 +27,8 @@ function p(e) {
                     n.forEach((t) => {
                         if (null != t.trailing)
                             switch (t.trailing.type) {
-                                case x.S.BADGE_NEW:
-                                case x.S.STRONGLY_DISCOURAGED_CUSTOM:
+                                case x.Si.BADGE_NEW:
+                                case x.Si.STRONGLY_DISCOURAGED_CUSTOM:
                                     t.trailing.getDismissibleContentTypes?.()?.forEach((t) => {
                                         e.push(t);
                                     });

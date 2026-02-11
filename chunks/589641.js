@@ -1,9 +1,9 @@
-n.d(t, { A: () => E, I: () => h });
+n.d(t, { A: () => h, I: () => x });
 var i = n(627968),
     s = n(64700),
-    r = n(397927),
-    a = n(308528),
-    l = n(171316),
+    a = n(397927),
+    l = n(308528),
+    r = n(171316),
     o = n(834981),
     c = n(558001),
     d = n(866945),
@@ -12,23 +12,23 @@ var i = n(627968),
     m = n(835002),
     A = n(985018),
     g = n(842130);
-function E() {
+function h() {
     let e = (0, o.vx)();
     return (0, i.jsx)(d.e, {
         label: g.default.i284fU,
         labelHook: () => {
-            (0, _.default)(), a.A.openPrivateChannel({ recipientIds: e });
+            (0, _.default)(), l.A.openPrivateChannel({ recipientIds: e });
         },
         noticeType: m.YA.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE,
         count: e.length,
     });
 }
-function h() {
-    let e = (0, l.uM)(),
+function x() {
+    let e = (0, r.uM)(),
         t = (0, o.vx)(),
         n = s.useCallback(() => {
             (0, _.default)(),
-                a.A.openPrivateChannel({ recipientIds: t }),
+                l.A.openPrivateChannel({ recipientIds: t }),
                 (0, c.N)(m.YA.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE, m.YX.LEARN_MORE);
         }, [t]),
         d = s.useCallback(() => {
@@ -37,12 +37,12 @@ function h() {
     return s.useMemo(() => {
         if (e)
             return {
-                type: u.W.INLINE_NOTICE,
+                type: u.lT.INLINE_NOTICE,
                 noticeType: "info",
                 trackView: d,
                 useText: () =>
                     A.intl.format(g.default.i284fU, {
-                        hook: (e, t) => (0, i.jsx)(r.MzZ, { onClick: n, children: e }, t),
+                        hook: (e, t) => (0, i.jsx)(a.MzZ, { onClick: n, children: e }, t),
                         count: t.length,
                     }),
             };

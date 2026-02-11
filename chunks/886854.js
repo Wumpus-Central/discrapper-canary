@@ -31,7 +31,7 @@ let C = (0, s.t_)(a.X.APPEARANCE_PANEL, {
         useTitle: () => I.intl.string(I.t["iHH+ky"]),
         getLegacySearchKey: () => ((0, u.WJ)("AppearanceSidebarItem") ? void 0 : g.H.APPEARANCE),
         icon: n.PaintPaletteIcon,
-        trailing: { type: r.S.BADGE_NEW, getDismissibleContentTypes: o.p_, stronglyDiscouragedBadgeComponent: o.AW },
+        trailing: { type: r.Si.BADGE_NEW, getDismissibleContentTypes: o.p_, stronglyDiscouragedBadgeComponent: o.AW },
         usePredicate: () => !(0, u.bp)("AppearanceSidebarItem"),
         buildLayout: () => ((0, u.WJ)("AppearanceSidebarItem") ? [C] : [N]),
     });
