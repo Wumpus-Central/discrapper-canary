@@ -1,19 +1,19 @@
 "use strict";
 let r, i, a;
 n.d(t, {
-    EL: () => A,
-    JK: () => T,
-    MX: () => b,
-    PR: () => y,
-    SB: () => C,
-    TX: () => h,
-    UC: () => S,
-    aX: () => N,
-    bG: () => I,
-    m: () => v,
-    pX: () => g,
-    sY: () => R,
-    uh: () => E,
+    EL: () => I,
+    JK: () => y,
+    MX: () => N,
+    PR: () => S,
+    SB: () => b,
+    TX: () => p,
+    UC: () => v,
+    aX: () => R,
+    bG: () => T,
+    m: () => C,
+    pX: () => E,
+    sY: () => O,
+    uh: () => A,
 }),
     n(321073),
     n(323874),
@@ -26,19 +26,23 @@ var s = n(830845),
     c = n(652215);
 let d = new o.A("Routing/Utils"),
     _ = [c.dSh.DEVELOPER_PORTAL];
-r = __OVERLAY__ ? (0, s.sC)() : (0, s.zR)();
+__OVERLAY__
+    ? (r = (0, s.sC)())
+    : (r = (0, s.zR)()).block((e, t) => {
+          if ("POP" === t && !p()) return !1;
+      });
 let f = !1,
-    p = r.listen((e, t) => {
-        "REPLACE" !== t && ((f = !0), p());
+    h = r.listen((e, t) => {
+        "REPLACE" !== t && ((f = !0), h());
     });
-function h() {
+function p() {
     if (l._.hasSubscribers(c.jej.MODAL_CLOSE)) {
         let { doesTopModalAllowNavigation: e } = n(192308);
         if (!e()) return !1;
     }
     return n(712687).A.close(), !0;
 }
-function m(e, t) {
+function g(e, t) {
     return (
         !!("string" == typeof e && _.some((t) => e.startsWith(t))) &&
         (d.log(`${t} - route to external path ${e}`),
@@ -47,8 +51,8 @@ function m(e, t) {
         !0)
     );
 }
-function g(e, t) {
-    if (m(e, "assign")) return;
+function E(e, t) {
+    if (g(e, "assign")) return;
     d.log(`transitionTo - Transitioning to ${e}`);
     let n = t?.source,
         s = t?.sourceLocationStack;
@@ -59,30 +63,30 @@ function g(e, t) {
     }
     (i = n), (a = s);
 }
-function E(e, t, n, r) {
+function A(e, t, n, r) {
     d.log(`transitionToGuild - Transitioning to ${JSON.stringify({ guildId: e, channelId: t, messageId: n })}`),
-        g(c.BVt.CHANNEL(e, t, n), r);
+        E(c.BVt.CHANNEL(e, t, n), r);
 }
-function A() {
+function I() {
     return null != i && u.n.has(i);
 }
-function I(e, t, n) {
-    m(e, "replace") ||
+function T(e, t, n) {
+    g(e, "replace") ||
         (d.log(`Replacing route with ${e}`), "string" == typeof e ? r.replace(e, t) : r.replace(e), (i = n));
 }
-function T() {
+function y() {
     return r;
 }
-function y() {
+function S() {
     return i;
 }
-function S() {
+function v() {
     return a;
 }
-function v(e) {
+function C(e) {
     return null == e && (e = r.location.pathname ?? ""), !e.startsWith(c.BVt.HANDOFF);
 }
-function C(e) {
+function b(e) {
     if ((null == e && (e = r.location.pathname ?? ""), e.startsWith(c.BVt.LOGIN))) return c.S3d.LOGIN;
     if (e.startsWith(c.BVt.REGISTER)) return c.S3d.REGISTER;
     if (e.startsWith(c.BVt.INVITE(""))) return c.S3d.INVITE;
@@ -100,12 +104,12 @@ function C(e) {
     else if (e.startsWith(c.BVt.ACCOUNT_REVERT(""))) return c.S3d.ACCOUNT_REVERT;
     return e;
 }
-function b() {
+function N() {
     return f;
 }
-function N() {
-    h() && ((i = null), r.goBack());
-}
 function R() {
-    h() && ((i = null), r.goForward());
+    p() && ((i = null), r.goBack());
+}
+function O() {
+    p() && ((i = null), r.goForward());
 }
