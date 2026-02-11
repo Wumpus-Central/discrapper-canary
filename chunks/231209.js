@@ -1,9 +1,9 @@
 "use strict";
-s.d(t, { A: () => B });
+s.d(t, { A: () => M });
 var n = s(627968),
-    r = s(64700),
-    l = s(503698),
-    a = s.n(l),
+    l = s(64700),
+    r = s(503698),
+    a = s.n(r),
     i = s(651162),
     o = s(554146),
     c = s(397927),
@@ -22,23 +22,24 @@ var n = s(627968),
     b = s(565057),
     S = s(227205),
     v = s(457414),
-    L = s(633026),
-    I = s(251191),
-    j = s(613258),
-    k = s(152568),
+    L = s(761218),
+    I = s(633026),
+    j = s(251191),
+    k = s(613258),
+    O = s(152568),
     T = s(758836),
-    O = s(652215),
-    N = s(985018),
-    y = s(201073);
-let R = (e) => {
-        let { handleTransition: t, numVisibleItems: s, isFetchingCategories: l, tab: c } = e,
+    N = s(652215),
+    y = s(985018),
+    R = s(201073);
+let B = (e) => {
+        let { handleTransition: t, numVisibleItems: s, isFetchingCategories: r, tab: c } = e,
             { noCache: d, includeUnpublished: g } = (0, E.A)(),
-            [x, j] = r.useState(!1),
-            O = (0, _.uM)(),
-            R = O?.sessionId ?? "";
-        r.useEffect(() => {
+            [x, k] = l.useState(!1),
+            N = (0, _.uM)(),
+            B = N?.sessionId ?? "";
+        l.useEffect(() => {
             (0, p.z)({
-                sessionId: R,
+                sessionId: B,
                 checkpoint: p.t.SHOP_MOUNTED,
                 tab: c,
                 unpublishedCategoriesShown: g,
@@ -46,60 +47,60 @@ let R = (e) => {
             });
         }, [c]);
         let {
-                isFetchingShopHome: B,
-                fetchShopHomeError: M,
-                shopBlocks: P,
-                refreshShopHome: D,
+                isFetchingShopHome: M,
+                fetchShopHomeError: P,
+                shopBlocks: D,
+                refreshShopHome: H,
             } = (0, h.y)(
                 c,
                 { noCache: d, includeUnpublished: g, includeBundles: !0, logPerf: !0 },
-                { sessionId: R, tab: c },
+                { sessionId: B, tab: c },
             ),
-            H = r.useCallback(() => {
-                D();
-            }, [D]);
-        return (r.useEffect(() => {
-            null != M ||
-                B ||
-                0 === P.length ||
+            w = l.useCallback(() => {
+                H();
+            }, [H]);
+        return (l.useEffect(() => {
+            null != P ||
+                M ||
+                0 === D.length ||
                 (0, p.z)({
-                    sessionId: R,
+                    sessionId: B,
                     checkpoint: p.t.SHOP_RENDERED,
                     tab: c,
                     unpublishedCategoriesShown: g,
                     cacheDisabled: d,
                 });
-        }, [M, B, P.length, g, d, R, c]),
-        null != M)
-            ? (0, n.jsx)(f.h, { onRetry: H, errorOrigin: f.A.SHOP_PAGE, errorMessage: M.message })
-            : B || 0 === P.length
+        }, [P, M, D.length, g, d, B, c]),
+        null != P)
+            ? (0, n.jsx)(f.h, { onRetry: w, errorOrigin: f.A.SHOP_PAGE, errorMessage: P.message })
+            : M || 0 === D.length
               ? (0, n.jsxs)("div", {
-                    className: a()(y.g4, y.Of),
+                    className: a()(R.g4, R.Of),
                     children: [
-                        (0, n.jsx)(S.A, { isLoading: B, handleTransition: t, tab: c }),
-                        (0, n.jsx)(A.A, { isLoading: B, handleTransition: t, categories: [] }),
+                        (0, n.jsx)(S.A, { isLoading: M, handleTransition: t, tab: c }),
+                        (0, n.jsx)(A.A, { isLoading: M, handleTransition: t, categories: [] }),
                         (0, n.jsx)(b.A, {
-                            isLoading: B,
-                            title: c === T.G2.ORBS ? N.intl.string(N.t.dFgeuZ) : N.intl.string(N.t.NSv5KV),
+                            isLoading: M,
+                            title: c === T.G2.ORBS ? y.intl.string(y.t.dFgeuZ) : y.intl.string(y.t.NSv5KV),
                             numVisibleItems: s,
                             tab: c,
                         }),
                     ],
                 })
               : (0, n.jsx)(n.Fragment, {
-                    children: P.map((e, r) =>
-                        ((e, r, d) => {
+                    children: D.map((e, l) =>
+                        ((e, l, d) => {
                             if (null == e) return null;
                             let g = null,
                                 _ = !1;
                             switch (e.type) {
                                 case i.g.HERO:
-                                    g = (0, n.jsx)(S.A, { isLoading: B, handleTransition: t, heroBlock: e, tab: c }, d);
+                                    g = (0, n.jsx)(S.A, { isLoading: M, handleTransition: t, heroBlock: e, tab: c }, d);
                                     break;
                                 case i.g.FEATURED:
                                     g = (0, n.jsx)(
                                         A.A,
-                                        { isLoading: B, handleTransition: t, featuredBlockRecord: e },
+                                        { isLoading: M, handleTransition: t, featuredBlockRecord: e },
                                         d,
                                     );
                                     break;
@@ -109,11 +110,11 @@ let R = (e) => {
                                         b.A,
                                         {
                                             title:
-                                                c === T.G2.ORBS ? N.intl.string(N.t.dFgeuZ) : N.intl.string(N.t.NSv5KV),
-                                            isLoading: B || l,
+                                                c === T.G2.ORBS ? y.intl.string(y.t.dFgeuZ) : y.intl.string(y.t.NSv5KV),
+                                            isLoading: M || r,
                                             numVisibleItems: s,
                                             sortedSkuIds: h,
-                                            buttonContainerClassName: r?.type === i.g.IMMERSIVE_BANNER ? y.w : void 0,
+                                            buttonContainerClassName: l?.type === i.g.IMMERSIVE_BANNER ? R.w : void 0,
                                             prioritizeUserDiscounts: c === T.G2.HOME,
                                             tab: c,
                                             orbsSupportedOnly: c === T.G2.ORBS,
@@ -127,10 +128,10 @@ let R = (e) => {
                                             { isDismissed: s } = (0, u.En)(o.M.COLLECTIBLES_SHOP_WIDE_BANNER, t);
                                         if (s) return null;
                                     }
-                                    g = (0, n.jsx)(k.A, { wideBannerBlock: e, tab: c }, d);
+                                    g = (0, n.jsx)(O.A, { wideBannerBlock: e, tab: c }, d);
                                     break;
                                 case i.g.SHELF:
-                                    g = (0, n.jsx)(I.A, { handleTransition: t, shelf: e, tab: c }, d);
+                                    g = (0, n.jsx)(j.A, { handleTransition: t, shelf: e, tab: c }, d);
                                     break;
                                 case i.g.COUNTDOWN_TIMER:
                                     (g = (0, n.jsx)(C.S, { countdownTimerBlock: e, isVisible: x }, d)), (_ = !0);
@@ -138,13 +139,31 @@ let R = (e) => {
                                 case i.g.IMMERSIVE_BANNER:
                                     g = (0, n.jsx)(
                                         v.A,
-                                        { immersiveBannerBlock: e, onVisibilityChange: (e) => j(!e) },
+                                        { immersiveBannerBlock: e, onVisibilityChange: (e) => k(!e) },
                                         d,
                                     );
                                     break;
                                 case i.g.REWARD_HERO:
-                                    g = (0, n.jsx)(L.A, { isLoading: B, handleTransition: t, heroBlock: e, tab: c }, d);
+                                    g = (0, n.jsx)(I.A, { isLoading: M, handleTransition: t, heroBlock: e, tab: c }, d);
                                     break;
+                                case i.g.MARVEL_RIVALS_PROMOTIONAL_BANNER: {
+                                    let { isDismissed: t } = (0, u.En)(o.M.COLLECTIBLES_SHOP_MARVEL_RIVALS_ORBS_REWARD);
+                                    if (t) return null;
+                                    return (0, n.jsx)(m.rW, {
+                                        blockType: e.type,
+                                        children: (0, n.jsx)(
+                                            L.A,
+                                            {
+                                                onDismiss: () => {
+                                                    (0, u.d6)(o.M.COLLECTIBLES_SHOP_MARVEL_RIVALS_ORBS_REWARD, {});
+                                                },
+                                                skuIds: e.skuIds,
+                                                endTime: e.endTime,
+                                            },
+                                            d,
+                                        ),
+                                    });
+                                }
                                 default:
                                     return null;
                             }
@@ -152,24 +171,24 @@ let R = (e) => {
                                 blockType: e.type,
                                 children: (0, n.jsx)(
                                     "div",
-                                    { className: a()(y.v1, y.Of, { [y.J1]: 0 === d || _ }), children: g },
+                                    { className: a()(R.v1, R.Of, { [R.J1]: 0 === d || _ }), children: g },
                                     d,
                                 ),
                             });
-                        })(e, r > 0 ? P[r - 1] : null, r),
+                        })(e, l > 0 ? D[l - 1] : null, l),
                     ),
                 });
     },
-    B = (e) => {
-        let { handleTransition: t, tab: s, transitionState: l } = e,
-            a = r.useRef(null),
+    M = (e) => {
+        let { handleTransition: t, tab: s, transitionState: r } = e,
+            a = l.useRef(null),
             { handleScroll: i } = (0, d.X)(a, s),
             o = (0, x.U)(),
             u = (0, _.uM)(),
-            [m, h] = r.useState(T.md),
-            [p, f] = r.useState(!1);
+            [m, h] = l.useState(T.md),
+            [p, f] = l.useState(!1);
         return (
-            r.useEffect(() => {
+            l.useEffect(() => {
                 if (null != a.current) {
                     let e = () => {
                             if (null == a.current) return;
@@ -186,16 +205,16 @@ let R = (e) => {
                 }
             }, [a, m, h, f]),
             (0, n.jsx)(c.T7Y, {
-                className: y.OW,
+                className: R.OW,
                 ref: a,
                 onScroll: i,
                 children: (0, n.jsxs)("div", {
-                    className: y.bx,
+                    className: R.bx,
                     children: [
                         (0, n.jsxs)("div", {
-                            className: y.rb,
+                            className: R.rb,
                             children: [
-                                (0, n.jsx)(R, {
+                                (0, n.jsx)(B, {
                                     handleTransition: t,
                                     numVisibleItems: m,
                                     isFetchingCategories: o,
@@ -204,18 +223,18 @@ let R = (e) => {
                                 s !== T.G2.CATALOG &&
                                     m >= 36 &&
                                     (0, n.jsxs)("div", {
-                                        className: y.R$,
+                                        className: R.R$,
                                         children: [
                                             (0, n.jsx)(c.Heading, {
                                                 variant: "heading-md/semibold",
-                                                children: N.intl.string(N.t.Yr70c4),
+                                                children: y.intl.string(y.t.Yr70c4),
                                             }),
                                             (0, n.jsx)(c.Button, {
                                                 variant: "primary",
-                                                text: N.intl.string(N.t.AfrvRD),
+                                                text: y.intl.string(y.t.AfrvRD),
                                                 onClick: () => {
                                                     t({ sourceButton: "shop all button", shouldAnimate: !0 }),
-                                                        g.default.track(O.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                        g.default.track(N.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                             collectibles_shop_session_id: u?.sessionId,
                                                             page_type: s,
                                                             page_category: s === T.G2.HOME ? void 0 : u?.pageCategory,
@@ -228,7 +247,7 @@ let R = (e) => {
                                     }),
                             ],
                         }),
-                        (0, n.jsx)(j.A, { peaking: p, transitioning: l === T.Pf.OUT }),
+                        (0, n.jsx)(k.A, { peaking: p, transitioning: r === T.Pf.OUT }),
                     ],
                 }),
             })

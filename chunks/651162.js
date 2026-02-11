@@ -10,6 +10,7 @@ var r = (function (e) {
         (e[(e.COUNTDOWN_TIMER = 5)] = "COUNTDOWN_TIMER"),
         (e[(e.IMMERSIVE_BANNER = 6)] = "IMMERSIVE_BANNER"),
         (e[(e.REWARD_HERO = 7)] = "REWARD_HERO"),
+        (e[(e.MARVEL_RIVALS_PROMOTIONAL_BANNER = 8)] = "MARVEL_RIVALS_PROMOTIONAL_BANNER"),
         e
     );
 })({});

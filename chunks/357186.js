@@ -27,6 +27,8 @@ function f(e) {
             return (0, c.N)();
         case i.M.GAME_SHOP_ANNOUNCEMENT_MODAL:
             return _.Lo;
+        case i.M.COLLECTIBLES_SHOP_MARVEL_RIVALS_ORBS_REWARD:
+            return 1;
         default:
             return (0, a.dr)(e, { andFail: !1 }), 0;
     }

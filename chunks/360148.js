@@ -8,9 +8,10 @@ var r = n(651162),
     l = n(793295),
     u = n(824699),
     c = n(53941),
-    d = n(163608),
-    _ = n(237463),
-    f = n(893998);
+    d = n(686647),
+    _ = n(163608),
+    f = n(237463),
+    h = n(893998);
 class p {
     shopBlocks;
     categories;
@@ -26,15 +27,17 @@ class p {
                     case r.g.FEED:
                         return l.l.fromServer(e);
                     case r.g.WIDE_BANNER:
-                        return f.y.fromServer(e);
+                        return h.y.fromServer(e);
                     case r.g.SHELF:
-                        return _.r.fromServer(e);
+                        return f.r.fromServer(e);
                     case r.g.COUNTDOWN_TIMER:
                         return s.z.fromServer(e);
                     case r.g.IMMERSIVE_BANNER:
                         return c.A.fromServer(e);
                     case r.g.REWARD_HERO:
-                        return d.E.fromServer(e);
+                        return _.E.fromServer(e);
+                    case r.g.MARVEL_RIVALS_PROMOTIONAL_BANNER:
+                        return d.T.fromServer(e);
                     default:
                         return;
                 }
