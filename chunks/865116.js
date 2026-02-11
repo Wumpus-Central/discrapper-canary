@@ -48,8 +48,10 @@ let s = {
             label: "Disable application collections cache so that you can see updates to collections immediately.",
             category: 4,
         },
+        shop_disable_cache: { label: "Disable collectibles shop cache", category: 5 },
+        shop_include_unpublished: { label: "Show unpublished items in collectibles shop", category: 5 },
         shop_show_debug_overlay: { label: "Show debug log overlay in collectibles shop", category: 5 },
-        bypass_google_sku_sync: { label: "Bypass Google SKU sync in collectibles shop", category: 5 },
+        bypass_google_sku_sync: { label: "[Android] Bypass Google SKU sync in collectibles shop", category: 5 },
         libdiscore_verbose_telemetry_logging: { label: "Enable verbose telemetry logging for libdiscore", category: 6 },
     },
     o = {};

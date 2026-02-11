@@ -1,12 +1,11 @@
 "use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => d });
 var s = n(311907),
     i = n(73153);
 let r = {
         enable_recently_active: "Enable recently active channels",
         theme_setting_in_account_sheet: "Show theme settings in the Account action sheet",
         nav_experiment_server_drawer_enabled: "[NavI] Enable expandable server drawer",
-        shop_include_unpublished: "[Shop] show unpublished items in shop",
         show_icymi_debug_scores: "Show ICYMI debug scores",
         channel_list_scrim: "Dim the channel list when chat appears",
     },
@@ -39,7 +38,7 @@ class a extends s.Ay.DeviceSettingsStore {
         });
     }
 }
-let o = new a(i.h, {
+let d = new a(i.h, {
     DEV_TOOLS_DESIGN_TOGGLE_SET: function (e) {
         l[e.toggle] = e.value;
     },
