@@ -446,18 +446,14 @@ class I {
         let { initialScrollTop: e } = this;
         this.initialScrollTop = void 0;
         let t = S(this.props.messages);
-        if (null != t) this.scrollToMessage({ jumpTargetId: t, animate: !1 });
-        else if (
-            this.props.hasUnreads &&
-            this.props.channel.type !== x.rbe.GUILD_VOICE &&
-            this.props.channel.type !== x.rbe.GUILD_STAGE_VOICE
-        ) {
+        if (null != t) return void this.scrollToMessage({ jumpTargetId: t, animate: !1 });
+        if (this.props.hasUnreads) {
             let e = (0, g.A)({ channel: this.props.channel, messages: this.props.messages, track: !0 });
-            null != e ? this.scrollToMessage({ jumpTargetId: e, animate: !1 }) : this.scrollToNewMessages();
-        } else
-            null != e
-                ? this.scrollTo(e + this.props.placeholderHeight, !1, this.handleScroll)
-                : this.setScrollToBottom();
+            if (null != e) return void this.scrollToMessage({ jumpTargetId: e, animate: !1 });
+            if (this.props.channel.type !== x.rbe.GUILD_VOICE && this.props.channel.type !== x.rbe.GUILD_STAGE_VOICE)
+                return void this.scrollToNewMessages();
+        }
+        null != e ? this.scrollTo(e + this.props.placeholderHeight, !1, this.handleScroll) : this.setScrollToBottom();
     }
     loadMore = (() => {
         var e = this;
