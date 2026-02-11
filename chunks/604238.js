@@ -30,6 +30,7 @@ let T = {
         GridItem: u.A,
         Section: d.A,
         Card: s.A,
+        Skeleton: _.A,
         FeaturedChip: f.A,
         FeaturedCollection: h.A,
         FeaturedProduct: () => null,
@@ -43,7 +44,6 @@ let T = {
         Any1: I.A,
         Any2: I.A,
         Any3: I.A,
-        Skeleton: _.A,
     },
     y = function () {
         let { overrides: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};

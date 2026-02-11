@@ -99,7 +99,7 @@ let r = (e) => e,
                     },
                 ],
             },
-            { block: "SubLayout", tenantId: "dummy-tenant", layoutId: "dummy-popular-picks", passComponentMap: !0 },
+            { block: "SubLayout", tenantId: "dummy-tenant", layoutId: "dummy-popular-picks" },
         ],
     },
     a = {

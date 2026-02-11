@@ -43,7 +43,6 @@ let o = (e) => e,
                         block: "SubLayout",
                         tenantId: "dummy-tenant",
                         layoutId: "dummy-skeleton",
-                        passComponentMap: !0,
                         skeleton: [
                             {
                                 block: "InteractiveHScroll",
