@@ -185,11 +185,14 @@ class eo extends l.PureComponent {
         return this.getMaxParticipants() - t.size - n;
     }
     getCreateGroupButtonAction() {
-        let { channel: e, selectedUsers: t } = this.props,
-            n = this.getRemaining(),
-            i = (null != e && 0 === t.size) || n < 0,
-            l = t.size > 1 || null != e ? ei.intl.string(ei.t.ZGMNA8) : ei.intl.string(ei.t["6Urw1t"]);
-        return { variant: "primary", disabled: i, onClick: this.handleInviteUsers, text: l };
+        let { channel: e, selectedUsers: t, isGdmCopyExperimentEnabled: n } = this.props,
+            i = this.getRemaining(),
+            l = (null != e && 0 === t.size) || i < 0,
+            a =
+                t.size > 1 || null != e
+                    ? ei.intl.string(n ? ei.t["h1/FMu"] : ei.t.ZGMNA8)
+                    : ei.intl.string(n ? ei.t.bA875g : ei.t["6Urw1t"]);
+        return { variant: "primary", disabled: l, onClick: this.handleInviteUsers, text: a };
     }
     renderAddUsersButton() {
         let { channel: e, selectedUsers: t } = this.props;
@@ -204,15 +207,28 @@ class eo extends l.PureComponent {
         });
     }
     getTitle() {
-        return this.isNotFriends()
-            ? ei.intl.string(ei.t.Xjlbvs)
-            : this.isPartyFull()
-              ? ei.intl.string(ei.t.OtTQDz)
-              : ei.intl.string(this.props.isGdmCopyExperimentEnabled ? ei.t.dxYV2y : ei.t.CdNhGX);
+        if (this.isNotFriends()) return ei.intl.string(ei.t.Xjlbvs);
+        if (this.isPartyFull()) return ei.intl.string(ei.t.OtTQDz);
+        let { channel: e, isGdmCopyExperimentEnabled: t } = this.props;
+        return t
+            ? null == e
+                ? ei.intl.string(ei.t.jD1qzM)
+                : ei.intl.string(e.isMultiUserDM() ? ei.t.AQAPts : ei.t.Xjlbvs)
+            : ei.intl.string(ei.t.CdNhGX);
     }
     getSubtitle() {
-        let { channel: e, hasFriends: t } = this.props;
-        if (!t) return ei.intl.string(ei.t["7orY6K"]);
+        let { channel: e, hasFriends: t, isGdmCopyExperimentEnabled: n } = this.props;
+        if (!t) {
+            if (n && null != e && e.isDM()) {
+                let t = e.getRecipientId();
+                if (null != t) {
+                    let e = H.default.getUser(t),
+                        n = null != e ? e.username : "";
+                    return ei.intl.format(ei.t["eg+R9x"], { username: n });
+                }
+            }
+            return ei.intl.string(n ? ei.t["1x/UBX"] : ei.t["7orY6K"]);
+        }
         if (this.isPartyFull()) return;
         if (this.isNotFriends()) {
             let t = null != e ? e.getRecipientId() : null;
@@ -221,10 +237,10 @@ class eo extends l.PureComponent {
                 i = null != n ? n.username : "";
             return ei.intl.format(ei.t["eg+R9x"], { username: i });
         }
-        let n = this.getRemaining();
-        return n <= 0
+        let i = this.getRemaining();
+        return i <= 0
             ? ei.intl.formatToPlainString(ei.t.xYr004, { number: this.getMaxParticipants() })
-            : ei.intl.formatToPlainString(ei.t.HrSDPF, { number: n });
+            : ei.intl.formatToPlainString(ei.t.HrSDPF, { number: i });
     }
     handleKeyDown(e) {
         let {
@@ -292,7 +308,6 @@ class eo extends l.PureComponent {
                     disabled: this.isPartyFull(),
                     value: e,
                     leading: { type: "tags", items: a, onRemove: this.handleRemoveUser },
-                    trailing: l ? u.$p$ : void 0,
                     onChange: this.handleQueryChange,
                     onKeyDown: this.handleKeyDown.bind(this),
                 }),
@@ -333,7 +348,7 @@ class eo extends l.PureComponent {
                         children: (0, i.jsx)(u.Text, {
                             variant: "text-md/normal",
                             color: "text-muted",
-                            children: ei.intl.string(this.props.isGdmCopyExperimentEnabled ? ei.t.z3yXsY : ei.t.SV4DJ1),
+                            children: ei.intl.string(this.props.isGdmCopyExperimentEnabled ? ei.t.J6sMqT : ei.t.SV4DJ1),
                         }),
                     }),
             };

@@ -1,4 +1,4 @@
-n.d(t, { A: () => P });
+n.d(t, { A: () => w });
 var i = n(627968),
     l = n(64700),
     s = n(985623),
@@ -10,33 +10,34 @@ var i = n(627968),
     u = n(397927),
     h = n(951001),
     A = n(775602),
-    g = n(793574),
-    m = n(58149),
-    p = n(688810),
+    m = n(793574),
+    p = n(58149),
+    g = n(688810),
     _ = n(660387),
-    x = n(343328),
-    f = n(485947),
-    E = n(915089),
-    C = n(725323),
+    f = n(343328),
+    x = n(485947),
+    C = n(915089),
+    E = n(725323),
     I = n(611924),
-    S = n(95550),
-    b = n(380335),
-    N = n(309199),
-    T = n(157550),
-    j = n(97469),
-    v = n(734057),
-    y = n(290863),
-    R = n(645959),
-    O = n(701363),
-    L = n(652215),
+    b = n(392135),
+    N = n(95550),
+    S = n(380335),
+    T = n(309199),
+    v = n(157550),
+    y = n(97469),
+    j = n(734057),
+    R = n(290863),
+    O = n(645959),
+    L = n(701363),
+    M = n(652215),
     D = n(985018),
-    M = n(454198);
-let G = l.memo(function () {
+    G = n(454198);
+let U = l.memo(function () {
     return (0, i.jsxs)("svg", {
         width: "184",
         height: "428",
         viewBox: "0 0 184 428",
-        className: M.Ie,
+        className: G.Ie,
         children: [
             (0, i.jsx)("rect", { x: 40, y: 6, width: 144, height: 20, rx: 10 }),
             (0, i.jsx)("circle", { cx: 16, cy: 16, r: 16 }),
@@ -61,7 +62,7 @@ let G = l.memo(function () {
         ],
     });
 });
-class U extends l.Component {
+class P extends l.Component {
     static getDerivedStateFromProps(e) {
         let { children: t, privateChannelIds: n } = e;
         if (null == t) return { preRenderedChildren: 0, nonNullChildren: [], totalRowCount: n.length };
@@ -110,13 +111,13 @@ class U extends l.Component {
         let s = Math.round((e.offsetHeight - 44 * i) / 44),
             a = s > t.length ? t.slice(0, s + 1) : t,
             r = a.map((e) => (null != n[e] ? n[e].getRecipientId() : null)),
-            o = t.some((e) => (0, x.A)(e)),
+            o = t.some((e) => (0, f.A)(e)),
             d = {
                 num_users_visible: a.length,
-                num_users_visible_with_mobile_indicator: r.filter((e) => null != e && y.A.isMobileOnline(e)).length,
+                num_users_visible_with_mobile_indicator: r.filter((e) => null != e && R.A.isMobileOnline(e)).length,
             };
         (this.hasReportedAnalytics = !0),
-            m.Ay.trackWithMetadata(L.HAw.DM_LIST_VIEWED, {
+            p.Ay.trackWithMetadata(M.HAw.DM_LIST_VIEWED, {
                 ...d,
                 ...(0, _.F)(),
                 visible_user_ids: r.filter((e) => null != e),
@@ -127,7 +128,7 @@ class U extends l.Component {
     handleScroll = a()(() => {
         if (null != this._list) {
             let e = this._list.getScrollerNode();
-            null != e && h.A.updateChannelListScroll(L.ME, e.scrollTop);
+            null != e && h.A.updateChannelListScroll(M.ME, e.scrollTop);
         }
         void 0 !== this.props.onHandleScroll && this.props.onHandleScroll();
     }, 100);
@@ -138,7 +139,7 @@ class U extends l.Component {
         return null == o
             ? null
             : (0, i.jsx)(
-                  O.Ay,
+                  L.Ay,
                   { channel: o, selected: o.id === s, "aria-posinset": r + t + 1, "aria-setsize": a },
                   o.id,
               );
@@ -154,31 +155,31 @@ class U extends l.Component {
         return 0 === t
             ? this.renderChild(n)
             : 0 === n && 0 === l.length
-              ? (0, i.jsx)(G, {}, "no-private-channels")
+              ? (0, i.jsx)(U, {}, "no-private-channels")
               : this.renderDM(t, n);
     };
     renderSection = (e) => {
         let { section: t } = e;
-        return 0 === t
-            ? null
-            : (0, i.jsxs)(
-                  f.A,
-                  {
-                      className: M._e,
-                      children: [
-                          (0, i.jsx)("span", { className: M.TK, children: D.intl.string(D.t.YUU0RF) }),
-                          (0, i.jsx)(S.Ay, {
-                              tooltip: D.intl.string(D.t["6Urw1t"]),
-                              tooltipPosition: "top",
-                              className: M.U2,
-                              iconClassName: M.Br,
-                              icon: u.TIR,
-                              subscribeToGlobalHotkey: !0,
-                          }),
-                      ],
-                  },
-                  t,
-              );
+        if (0 === t) return null;
+        let { isGdmCopyExperimentEnabled: n } = this.props;
+        return (0, i.jsxs)(
+            x.A,
+            {
+                className: G._e,
+                children: [
+                    (0, i.jsx)("span", { className: G.TK, children: D.intl.string(D.t.YUU0RF) }),
+                    (0, i.jsx)(N.Ay, {
+                        tooltip: D.intl.string(n ? D.t.bA875g : D.t["6Urw1t"]),
+                        tooltipPosition: "top",
+                        className: G.U2,
+                        iconClassName: G.Br,
+                        icon: u.TIR,
+                        subscribeToGlobalHotkey: !0,
+                    }),
+                ],
+            },
+            t,
+        );
     };
     getRowHeight = (e, t) => {
         let { privateChannelIds: n, density: i } = this.props,
@@ -210,7 +211,7 @@ class U extends l.Component {
                                     (s.current = e?.getScrollerNode() ?? null);
                             },
                             onScroll: this.handleScroll,
-                            className: M.XG,
+                            className: G.XG,
                             sectionHeight: this.getSectionHeight,
                             paddingTop: t,
                             paddingBottom: 8,
@@ -226,28 +227,29 @@ class U extends l.Component {
         });
     }
 }
-let P = (e) => {
+let w = (e) => {
     let { density: t } = (0, u.wRf)(),
         { version: n, theme: s, children: a, listScrollerRef: c } = e,
         h = l.Children.count(a),
-        m = v.A.getMutablePrivateChannels(),
-        _ = (0, N.uX)(m),
-        x = (0, d.yK)([R.default, b.A, T.A], () => {
-            let e = R.default.getPrivateChannelIds();
-            return (0, N.eh)(e, [b.A, T.A]);
+        p = b.A.useConfig({ location: "PrivateChannelsList" }).enabled,
+        _ = j.A.getMutablePrivateChannels(),
+        f = (0, T.uX)(_),
+        x = (0, d.yK)([O.default, S.A, v.A], () => {
+            let e = O.default.getPrivateChannelIds();
+            return (0, T.eh)(e, [S.A, v.A]);
         });
-    (0, I.P)(C._);
-    let { analyticsLocations: f } = (0, p.Ay)(g.A.CONTACTS_LIST),
-        S = (0, j.NC)(),
-        { keyboardModeEnabled: y, version: O } = (0, d.cf)([A.A, v.A], () => ({
+    (0, I.P)(E._);
+    let { analyticsLocations: N } = (0, g.Ay)(m.A.CONTACTS_LIST),
+        R = (0, y.NC)(),
+        { keyboardModeEnabled: L, version: M } = (0, d.cf)([A.A, j.A], () => ({
             keyboardModeEnabled: A.A.keyboardModeEnabled,
-            version: null != n ? `${n}:${v.A.getPrivateChannelsVersion()}` : v.A.getPrivateChannelsVersion(),
+            version: null != n ? `${n}:${j.A.getPrivateChannelsVersion()}` : j.A.getPrivateChannelsVersion(),
         })),
-        L = l.useRef(null),
-        D = c ?? L,
-        M = l.useCallback(
+        D = l.useRef(null),
+        G = c ?? D,
+        U = l.useCallback(
             (e) => {
-                let t = D.current,
+                let t = G.current,
                     n = document.querySelector(e);
                 null != t &&
                     null != n &&
@@ -258,21 +260,21 @@ let P = (e) => {
                         },
                     });
             },
-            [D],
+            [G],
         ),
-        G = l.useCallback(
+        w = l.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = D.current;
+                    let t = G.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
-            [D],
+            [G],
         ),
-        P = l.useCallback(
+        k = l.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = D.current;
+                    let t = G.current;
                     if (null == t) return e();
                     t.scrollToBottom({
                         callback() {
@@ -280,29 +282,30 @@ let P = (e) => {
                         },
                     });
                 }),
-            [D],
+            [G],
         ),
-        k = (0, E.GV)(),
-        w = (0, o.Ay)({
-            id: `private-channels-${k}`,
-            isEnabled: y,
-            scrollToStart: G,
-            scrollToEnd: P,
+        V = (0, C.GV)(),
+        B = (0, o.Ay)({
+            id: `private-channels-${V}`,
+            isEnabled: L,
+            scrollToStart: w,
+            scrollToEnd: k,
             defaultFocused: (h + 1).toString(),
-            setFocus: M,
+            setFocus: U,
         });
-    return (0, i.jsx)(p.f5, {
-        value: f,
+    return (0, i.jsx)(g.f5, {
+        value: N,
         children: (0, i.jsx)(r.hD, {
-            navigator: w,
-            children: (0, i.jsx)(U, {
+            navigator: B,
+            children: (0, i.jsx)(P, {
                 ...e,
                 density: t,
-                channels: _,
+                channels: f,
                 privateChannelIds: x,
-                listRef: D,
-                theme: S ?? s,
-                version: O,
+                listRef: G,
+                theme: R ?? s,
+                version: M,
+                isGdmCopyExperimentEnabled: p,
             }),
         }),
     });
