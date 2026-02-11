@@ -1,4 +1,4 @@
-i.d(e, { j: () => d });
+i.d(t, { j: () => d });
 var n = i(311907),
     l = i(274372),
     s = i(399925),
@@ -10,9 +10,9 @@ let d = (0, r.Hn)(a.X.CLIPS_RESOLUTION, {
     useTitle: () => o.intl.string(o.t.aFudZJ),
     useSubtitle: () => o.intl.string(o.t.nIrkW5),
     useValue: () => (0, n.bG)([l.A], () => l.A.getSettings().clipsQuality.resolution),
-    setValue: (t) => {
-        let { clipsQuality: e } = l.A.getSettings();
-        s.GS({ resolution: t, frameRate: e.frameRate });
+    setValue: (e) => {
+        let { clipsQuality: t } = l.A.getSettings();
+        s.GS({ resolution: e, frameRate: t.frameRate });
     },
     useOptions: () => [
         {
@@ -37,5 +37,4 @@ let d = (0, r.Hn)(a.X.CLIPS_RESOLUTION, {
         },
         { id: "source", value: u.on.RESOLUTION_SOURCE, label: o.intl.string(o.t.XjXqzh) },
     ],
-    fieldLayout: "horizontal-responsive",
 });

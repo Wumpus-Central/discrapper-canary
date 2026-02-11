@@ -1,4 +1,4 @@
-i.d(e, { Z: () => d });
+i.d(t, { Z: () => d });
 var n = i(311907),
     l = i(684013),
     s = i(419954),
@@ -7,11 +7,10 @@ var n = i(311907),
     u = i(652215),
     o = i(985018);
 let d = (0, s.Hn)(a.X.OVERLAY_VOICE_WIDGET_AVATAR_SIZE, {
-    fieldLayout: "horizontal",
     useTitle: () => o.intl.string(o.t.dnvZSg),
     useValue: () => (0, n.bG)([r.default], () => r.default.getAvatarSizeMode()),
-    setValue: (t) => {
-        l.A.setAvatarSizeMode(t);
+    setValue: (e) => {
+        l.A.setAvatarSizeMode(e);
     },
     useOptions: () => [
         { id: "large", label: o.intl.string(o.t.YcOxtr), value: u.OSZ.LARGE },

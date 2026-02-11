@@ -13,5 +13,4 @@ let u = (0, n.Hn)(s.X.CHAT_SPOILERS_SHOW_SPOILERS, {
     ],
     useValue: l.gs.useSetting,
     setValue: l.gs.updateSetting,
-    fieldLayout: "horizontal-responsive",
 });

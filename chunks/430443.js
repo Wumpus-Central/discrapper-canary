@@ -1,4 +1,4 @@
-i.d(e, { U: () => d });
+i.d(t, { U: () => d });
 var n = i(311907),
     l = i(10094),
     s = i(683760),
@@ -15,19 +15,18 @@ let o = [
         useTitle: () => "Premium Type Override",
         useSearchTerms: () => ["nitro override"],
         useSubtitle: () => "Overrides the client's local premium type.",
-        fieldLayout: "horizontal-responsive",
         useOptions: () => o,
         clearable: !0,
         useValue: () =>
             (0, n.bG)([s.A], () => {
-                let t = s.A.getPremiumTypeOverride();
-                return null === t ? 0 : t;
+                let e = s.A.getPremiumTypeOverride();
+                return null === e ? 0 : e;
             }),
-        setValue: (t) => {
-            0 === t
+        setValue: (e) => {
+            0 === e
                 ? (0, l.O)(null, void 0)
-                : null === t
+                : null === e
                   ? (0, l.O)(void 0, void 0)
-                  : (0, l.O)(0 === t ? null : t, void 0);
+                  : (0, l.O)(0 === e ? null : e, void 0);
         },
     });

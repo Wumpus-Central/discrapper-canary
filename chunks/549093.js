@@ -1,4 +1,4 @@
-i.d(e, { q: () => o });
+i.d(t, { q: () => o });
 var n = i(873298),
     l = i(815807),
     s = i(419954),
@@ -13,6 +13,5 @@ let o = (0, s.Hn)(a.X.REACTION_NOTIFICATIONS, {
         { id: "disabled", label: u.intl.string(u.t["xu+UDU"]), value: n.Tz.NOTIFICATIONS_DISABLED },
     ],
     useValue: r.Zp.useSetting,
-    setValue: (t) => (0, l.n4)(t, r.Zp.getSetting()),
-    fieldLayout: "horizontal-responsive",
+    setValue: (e) => (0, l.n4)(e, r.Zp.getSetting()),
 });

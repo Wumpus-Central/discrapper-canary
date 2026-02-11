@@ -1,4 +1,4 @@
-i.d(e, { $: () => S });
+i.d(t, { $: () => A });
 var n = i(391973),
     l = i(395011),
     s = i(897720),
@@ -8,32 +8,31 @@ var n = i(391973),
     o = i(790076),
     d = i(652215);
 i(392164);
-var T = i(985018);
-function A() {
-    let t = l.A.getWidgetByType(d.uss.VOICE_V3);
-    if (null == t) return null;
-    let e = a.A.getWidget(t.id);
-    return null != e && (0, s.ZO)(e) ? e : null;
+var _ = i(985018);
+function T() {
+    let e = l.A.getWidgetByType(d.uss.VOICE_V3);
+    if (null == e) return null;
+    let t = a.A.getWidget(e.id);
+    return null != t && (0, s.ZO)(t) ? t : null;
 }
-let S = (0, r.sN)(u.X.OVERLAY_VOICE_WIDGET_MAX_USERS, {
-    fieldLayout: "horizontal",
-    useTitle: () => T.intl.string(T.t["X/Uyzc"]),
+let A = (0, r.sN)(u.X.OVERLAY_VOICE_WIDGET_MAX_USERS, {
+    useTitle: () => _.intl.string(_.t["X/Uyzc"]),
     minValue: o.G6 - 1,
     maxValue: o.PP,
     markers: o.DA,
-    onMarkerRender: (t) => (t < o.G6 ? T.intl.string(T.t.nrUzFL) : t),
+    onMarkerRender: (e) => (e < o.G6 ? _.intl.string(_.t.nrUzFL) : e),
     getInitialValue: () => {
-        let t = A();
-        return t?.meta.voiceStatesMaxShown ?? 8;
+        let e = T();
+        return e?.meta.voiceStatesMaxShown ?? 8;
     },
-    onValueRender: function (t) {
-        return t < o.G6 ? T.intl.string(T.t.nrUzFL) : `${Math.floor(t)}`;
+    onValueRender: function (e) {
+        return e < o.G6 ? _.intl.string(_.t.nrUzFL) : `${Math.floor(e)}`;
     },
-    setValue: (t) => {
-        let e = A();
-        null != e &&
-            (t < o.G6
-                ? (0, n.cC)(e.id, { voiceStatesMaxShown: -1 })
-                : (0, n.cC)(e.id, { voiceStatesMaxShown: Math.floor(t) }));
+    setValue: (e) => {
+        let t = T();
+        null != t &&
+            (e < o.G6
+                ? (0, n.cC)(t.id, { voiceStatesMaxShown: -1 })
+                : (0, n.cC)(t.id, { voiceStatesMaxShown: Math.floor(e) }));
     },
 });

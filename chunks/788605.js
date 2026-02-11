@@ -1,4 +1,4 @@
-i.d(e, { p: () => d });
+i.d(t, { p: () => d });
 var n = i(311907),
     l = i(684013),
     s = i(419954),
@@ -7,11 +7,10 @@ var n = i(311907),
     u = i(652215),
     o = i(985018);
 let d = (0, s.Hn)(a.X.OVERLAY_VOICE_WIDGET_DISPLAY_USERS, {
-    fieldLayout: "horizontal",
     useTitle: () => o.intl.string(o.t.swsWWC),
     useValue: () => (0, n.bG)([r.default], () => r.default.getDisplayUserMode()),
-    setValue: (t) => {
-        l.A.setDisplayUserMode(t);
+    setValue: (e) => {
+        l.A.setDisplayUserMode(e);
     },
     useOptions: () => [
         { id: "always", label: o.intl.string(o.t.nBmDrT), value: u.f5z.ALWAYS },
