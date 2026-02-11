@@ -1,4 +1,4 @@
-n.d(t, { A: () => S });
+n.d(t, { A: () => N });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -10,14 +10,14 @@ var i = n(627968),
     u = n(186111),
     h = n(942975),
     A = n(379229),
-    g = n(489306),
-    m = n(828162),
-    p = n(249584),
+    m = n(489306),
+    p = n(828162),
+    g = n(249584),
     _ = n(49999),
-    x = n(333354),
-    f = n(985018),
-    E = n(408392);
-function C(e) {
+    f = n(333354),
+    x = n(985018),
+    C = n(408392);
+function E(e) {
     let { indicator: t } = e;
     if (null == t) return null;
     switch (t.type) {
@@ -30,57 +30,59 @@ function C(e) {
     }
 }
 let I = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
-    S = l.memo(function (e) {
+    N = l.memo(function (e) {
         let { guildId: t, selected: s } = e,
-            S = (0, g.Ay)(t),
+            N = (0, m.Ay)(t),
             b = l.useCallback(() => {
                 (0, h.Zm)(t),
-                    (0, m.A)(t, d.A.GUILD_POWERUPS_CHANNEL_LIST_ROW),
-                    S?.popout?.markAsDismissed(_.i.INDIRECT_ACTION);
-            }, [t, S]),
-            N = l.useRef(null),
+                    (0, p.A)(t, d.A.GUILD_POWERUPS_CHANNEL_LIST_ROW),
+                    N?.popout?.markAsDismissed(_.i.INDIRECT_ACTION);
+            }, [t, N]),
+            S = l.useRef(null),
             T = (0, o.red)(o.DXt),
-            j = (0, r.bG)([u.A], () => u.A.hasLayers()),
-            v = T || j,
-            y = l.useCallback(() => {
-                if (S?.popout == null || v) return null;
-                switch (S?.popout?.type) {
+            v = (0, r.bG)([u.A], () => u.A.hasLayers()),
+            y = T || v,
+            j = l.useCallback(() => {
+                if (N?.popout == null || y) return null;
+                switch (N?.popout?.type) {
                     case A.o.LEVEL_REACHED:
-                        return (0, i.jsx)(p.HW, { guildId: t, channelRowRef: N, ...S.popout });
+                        return (0, i.jsx)(g.HW, { guildId: t, channelRowRef: S, ...N.popout });
                     case A.o.PERKS_AVAILABLE:
-                        return (0, i.jsx)(p.UB, { guildId: t, channelRowRef: N, ...S.popout });
+                        return (0, i.jsx)(g.UB, { guildId: t, channelRowRef: S, ...N.popout });
                     case A.o.PERKS_PURCHASABLE:
-                        return (0, i.jsx)(p.lw, { guildId: t, channelRowRef: N, ...S.popout });
+                        return (0, i.jsx)(g.lw, { guildId: t, channelRowRef: S, ...N.popout });
                     case A.o.NEW_PERK_AVAILABLE:
-                        return (0, i.jsx)(p.bo, { guildId: t, channelRowRef: N, ...S.popout });
+                        return (0, i.jsx)(g.bo, { guildId: t, channelRowRef: S, ...N.popout });
+                    case A.o.BOOST_TO_UNLOCK:
+                        return (0, i.jsx)(g.Gw, { guildId: t, channelRowRef: S, ...N.popout });
                     case A.o.GAME_SERVER_HOSTING_AVAILABLE:
                     case A.o.GAME_SERVER_HOSTING_GUILD_ELIGIBLE:
-                        return (0, i.jsx)(p.jz, { guildId: t, channelRowRef: N, ...S.popout });
+                        return (0, i.jsx)(g.jz, { guildId: t, channelRowRef: S, ...N.popout });
                     default:
                         return (0, i.jsx)("div", {});
                 }
-            }, [t, S?.popout, N, v]),
+            }, [t, N?.popout, S, y]),
             [R, O] = l.useState(null);
         l.useEffect(() => {
-            S?.popout == null && O(null);
-        }, [S?.popout]);
+            N?.popout == null && O(null);
+        }, [N?.popout]);
         let L = l.useCallback((e) => {
             O(e);
         }, []);
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(c.G, {
-                    ref: N,
-                    className: E.kL,
+                    ref: S,
+                    className: C.kL,
                     id: `skill-trees-${t}`,
                     renderIcon: (e) => (0, i.jsx)(o._Jp, { size: "md", className: e, color: "currentColor" }),
                     background:
-                        S?.popout != null &&
+                        N?.popout != null &&
                         (0, i.jsx)("div", {
-                            className: E.Fi,
+                            className: C.Fi,
                             children: (0, i.jsx)(o.tvC, {
                                 nextScene: null == R ? "animation" : "LOOP",
-                                className: E.UU,
+                                className: C.UU,
                                 sceneSegments: I,
                                 importData: () => n.e("67807").then(n.t.bind(n, 217762, 19)),
                                 onScenePlay: L,
@@ -88,15 +90,15 @@ let I = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
                             }),
                         }),
                     text: (0, i.jsx)("span", {
-                        className: a()({ [E.A7]: S?.showUnread === !0 }),
-                        children: f.intl.string(x.default.yv3DJJ),
+                        className: a()({ [C.A7]: N?.showUnread === !0 }),
+                        children: x.intl.string(f.default.yv3DJJ),
                     }),
                     selected: s,
                     onClick: b,
-                    showUnread: S?.showUnread === !0,
-                    trailing: (0, i.jsx)(C, { indicator: S?.indicator }),
+                    showUnread: N?.showUnread === !0,
+                    trailing: (0, i.jsx)(E, { indicator: N?.indicator }),
                 }),
-                y(),
+                j(),
             ],
         });
     });
