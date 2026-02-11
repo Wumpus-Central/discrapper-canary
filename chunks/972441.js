@@ -1,35 +1,39 @@
-n.d(t, { A: () => i });
-var _ = n(311907),
-    a = n(73153);
-let r = {},
-    d = new Set(),
-    s = {};
-class l extends _.Ay.Store {
+"use strict";
+n.d(t, { A: () => E });
+var r = n(311907),
+    i = n(73153),
+    a = n(403362),
+    s = n(41770);
+let o = (0, a.m6)() ? { "dummy-shop-home": s.u, "dummy-popular-picks": s.O } : {},
+    l = (0, a.m6)() ? ["dummy-skeleton"] : [],
+    u = o,
+    c = new Set(l),
+    d = {},
+    _ = (e) => {
+        let { layoutId: t } = e;
+        c.add(t);
+    },
+    f = (e) => {
+        let { layout: t } = e;
+        (u[t.id] = t), delete d[t.id], c.delete(t.id);
+    },
+    h = (e) => {
+        let { layoutId: t, apiError: n } = e;
+        (d[t] = n), c.delete(t);
+    };
+function p() {
+    (u = {}), (c = new Set()), (d = {});
+}
+class g extends r.Ay.Store {
     static displayName = "CmsLayoutStore";
     getLayout(e) {
-        return null == e ? null : (r[e] ?? null);
+        return null == e ? null : (u[e] ?? null);
     }
     isFetchingLayout(e) {
-        return null != e && d.has(e);
+        return null != e && c.has(e);
     }
     getFetchError(e) {
-        return null == e ? null : (s[e] ?? null);
+        return null == e ? null : (d[e] ?? null);
     }
 }
-let i = new l(a.h, {
-    CMS_LAYOUT_FETCH: (e) => {
-        let { layoutId: t } = e;
-        d.add(t);
-    },
-    CMS_LAYOUT_FETCH_SUCCESS: (e) => {
-        let { layout: t } = e;
-        (r[t.id] = t), delete s[t.id], d.delete(t.id);
-    },
-    CMS_LAYOUT_FETCH_FAILURE: (e) => {
-        let { layoutId: t, apiError: n } = e;
-        (s[t] = n), d.delete(t);
-    },
-    LOGOUT: function () {
-        (r = {}), (d = new Set()), (s = {});
-    },
-});
+let E = new g(i.h, { CMS_LAYOUT_FETCH: _, CMS_LAYOUT_FETCH_SUCCESS: f, CMS_LAYOUT_FETCH_FAILURE: h, LOGOUT: p });

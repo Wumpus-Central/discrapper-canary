@@ -1,0 +1,115 @@
+"use strict";
+n.d(t, { H: () => d, M: () => c });
+var r = n(627968);
+n(64700);
+var i = n(397927),
+    a = n(41770),
+    s = n(785330);
+let o = (e) => e,
+    l = () =>
+        (0, r.jsxs)("div", {
+            children: [
+                (0, r.jsx)(i.Heading, {
+                    variant: "heading-lg/bold",
+                    children: 'The SubLayout component accepts a layout id and "get or fetch"es the layout',
+                }),
+                (0, r.jsx)(i.Text, {
+                    variant: "text-md/semibold",
+                    children:
+                        "When resolved, the layout trees are merged into one layout. This allows for the asynchronous resolution of layouts, for faster first paints",
+                }),
+                (0, r.jsx)(i.Text, {
+                    variant: "text-md/semibold",
+                    children: "Here, the \"popular picks\" are actually a sub layout with the id 'dummy-popular-picks'",
+                }),
+                (0, r.jsx)("br", {}),
+                (0, r.jsx)("hr", {}),
+                (0, r.jsx)("br", {}),
+                (0, r.jsx)(s.A, { layout: a.u }),
+            ],
+        }),
+    u = {
+        id: "dummy-show-of-skeletons",
+        children: [
+            {
+                block: "ContainedHero",
+                bannerSrc:
+                    "https://cdn.discordapp.com/assets/content/cd657aa88cb5c636a97dd3a5d68debfb009515cdc1c541296c1ac4e3ad5fc63e",
+                logoSrc:
+                    "https://cdn.discordapp.com/assets/content/272efe50874c7fc6e788078e6f8b5fdfc40a7de7358fe3672f1b5e3659047bda",
+                backgroundColor: "rgb(25, 32, 86)",
+                children: [
+                    {
+                        block: "SubLayout",
+                        tenantId: "dummy-tenant",
+                        layoutId: "dummy-skeleton",
+                        passComponentMap: !0,
+                        skeleton: [
+                            {
+                                block: "InteractiveHScroll",
+                                children: [
+                                    {
+                                        block: "Skeleton",
+                                        children: [{ block: "ShopProductCard", skuId: o("1458472704079434020") }],
+                                    },
+                                    {
+                                        block: "Skeleton",
+                                        children: [{ block: "ShopProductCard", skuId: o("1458472704167379109") }],
+                                    },
+                                    {
+                                        block: "Skeleton",
+                                        children: [{ block: "ShopProductCard", skuId: o("1458472704192811088") }],
+                                    },
+                                    {
+                                        block: "Skeleton",
+                                        children: [{ block: "ShopProductCard", skuId: o("1458472704222171347") }],
+                                    },
+                                    {
+                                        block: "Skeleton",
+                                        children: [{ block: "ShopProductCard", skuId: o("1458472704272498709") }],
+                                    },
+                                    {
+                                        block: "Skeleton",
+                                        children: [{ block: "ShopProductCard", skuId: o("1458472704306053202") }],
+                                    },
+                                    {
+                                        block: "Skeleton",
+                                        children: [{ block: "ShopProductCard", skuId: o("1458472704087818312") }],
+                                    },
+                                    {
+                                        block: "Skeleton",
+                                        children: [{ block: "ShopProductCard", skuId: o("1458472704096075816") }],
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                ],
+            },
+        ],
+    },
+    c = { name: "SubLayout", id: "sub-layout-basic", component: l, controls: {} },
+    d = {
+        name: "SubLayout - Loading State",
+        id: "sub-layout-skeleton",
+        component: () =>
+            (0, r.jsxs)("div", {
+                children: [
+                    (0, r.jsx)(i.Heading, {
+                        variant: "heading-lg/bold",
+                        children:
+                            'The SubLayout can take a "Skeleton" property which is just `children` to display if the layout is being fetched from the api',
+                    }),
+                    (0, r.jsx)(i.Text, {
+                        variant: "text-md/semibold",
+                        children:
+                            "Here we use the `Skeleton` component to show the shop cards loading while the (dummy) Shop Cards SubLayout are resolving (it will never stop loading for demonstration purposes)",
+                    }),
+                    (0, r.jsx)("br", {}),
+                    (0, r.jsx)("hr", {}),
+                    (0, r.jsx)("br", {}),
+                    (0, r.jsx)(s.A, { layout: u }),
+                ],
+            }),
+        controls: {},
+    };
