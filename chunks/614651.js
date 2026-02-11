@@ -31,8 +31,8 @@ var i = n(627968),
     P = n(70040),
     L = n(961154),
     D = n(790174),
-    G = n(840065),
-    M = n(531525),
+    M = n(840065),
+    G = n(531525),
     U = n(652215),
     k = n(381941),
     V = n(985018),
@@ -99,13 +99,13 @@ let B = { COZY: "cozy", COMPACT: "compact" },
     Z = () =>
         V.intl.format(V.t.Jae48E, {
             onClick: () => {
-                (0, G.openUserSettings)(y.X.SYNC_FORCED_COLORS, { section: U.nc_.ACCESSIBILITY });
+                (0, M.openUserSettings)(y.X.SYNC_FORCED_COLORS, { section: U.nc_.ACCESSIBILITY });
             },
         }),
     q = () =>
         V.intl.format(V.t["5LEQdc"], {
             onAccessibilityClick: () => {
-                (0, G.openUserSettings)(y.X.ACCESSIBILITY_PANEL, { section: U.nc_.ACCESSIBILITY });
+                (0, M.openUserSettings)(y.X.ACCESSIBILITY_PANEL, { section: U.nc_.ACCESSIBILITY });
             },
         }),
     X = () => {
@@ -251,17 +251,17 @@ class J extends s.Component {
     render() {
         let { density: e } = this.props,
             t = (0, i.jsxs)(f.x, {
-                setting: M.H.APPEARANCE_THEME,
+                setting: G.H.APPEARANCE_THEME,
                 children: [this.renderPreview(), this.renderTheme()],
             }),
-            n = (0, i.jsx)(f.x, { setting: M.H.APPEARANCE_ICON, children: (0, i.jsx)(L.y, {}) }),
+            n = (0, i.jsx)(f.x, { setting: G.H.APPEARANCE_ICON, children: (0, i.jsx)(L.yG, {}) }),
             s = [
                 { name: V.intl.string(V.t["7iegX4"]), value: o.NS.COMPACT },
                 { name: V.intl.string(V.t.bBvAEH), value: o.NS.DEFAULT },
                 { name: V.intl.string(V.t["4cuYHx"]), value: o.NS.COZY },
             ],
             a = (0, i.jsxs)(f.x, {
-                setting: M.H.APPEARANCE_LIST_SPACING,
+                setting: G.H.APPEARANCE_LIST_SPACING,
                 children: [
                     (0, i.jsx)(d.z6M, {
                         label: V.intl.string(V.t["C/5V0A"]),
@@ -274,7 +274,7 @@ class J extends s.Component {
                 ],
             }),
             l = (0, i.jsxs)(f.x, {
-                setting: M.H.APPEARANCE_MESSAGE_DISPLAY_COMPACT,
+                setting: G.H.APPEARANCE_MESSAGE_DISPLAY_COMPACT,
                 children: [
                     (0, i.jsxs)(d.nVY, {
                         label: V.intl.string(V.t["2ed/sA"]),
@@ -303,7 +303,7 @@ class J extends s.Component {
                 ],
             }),
             r = (0, i.jsxs)(f.x, {
-                setting: M.H.APPEARANCE_SCALING_SPACING,
+                setting: G.H.APPEARANCE_SCALING_SPACING,
                 children: [
                     (0, i.jsxs)(d.nVY, {
                         label: V.intl.string(V.t["0Yh+ZX"]),

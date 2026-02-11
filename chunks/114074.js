@@ -33,7 +33,17 @@ let c = (0, a.zZ)(o.X.DISPLAY_THEME_CATEGORY, {
     useHeaderDecoration: function () {
         return (0, n.bG)([r.A, l.A], () => l.A.useForcedColors || r.A.isPreview)
             ? null
-            : { type: u.WX.BUTTON, useText: () => E.intl.string(E.t["E+COuA"]), onClick: d.J3 };
+            : {
+                  type: u.WX.BUTTON_GROUP,
+                  buttons: [
+                      {
+                          id: "open-client-themes-button",
+                          type: u.UV.BUTTON,
+                          useText: () => E.intl.string(E.t["E+COuA"]),
+                          onClick: d.J3,
+                      },
+                  ],
+              };
     },
     buildLayout: () => [A.k, T.x],
 });
