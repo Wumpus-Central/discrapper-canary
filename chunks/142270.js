@@ -1,98 +1,99 @@
 "use strict";
-n.d(t, { SS: () => I, cP: () => A });
+n.d(t, { SS: () => y, cP: () => T });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
     s = n.n(a),
     o = n(82495),
-    l = n(84483),
-    u = n(482589),
-    c = n(938396),
-    d = n(318346),
-    _ = n(309954),
-    f = n(305003),
+    l = n(482589),
+    u = n(938396),
+    c = n(649032),
+    d = n(26508),
+    _ = n(318346),
+    f = n(309954),
+    h = n(305003),
     p = n(162097),
-    h = n(219980),
-    m = n(652215),
-    g = n(985018),
-    E = n(847688);
-let A = { START: E.Vl, END: E.Wk },
-    I = (e) => {
+    g = n(219980),
+    E = n(652215),
+    A = n(985018),
+    I = n(847688);
+let T = { START: I.Vl, END: I.Wk },
+    y = (e) => {
         let {
                 showNotificationBadge: t,
                 ctaText: n,
                 ctaOnClick: a,
-                analyticsPage: I,
-                linkText: T = g.intl.string(g.t.XRdyjz),
-                cardAlignment: y = A.START,
-                className: S,
+                analyticsPage: y,
+                linkText: S = A.intl.string(A.t.XRdyjz),
+                cardAlignment: v = T.START,
+                className: C,
             } = e,
-            { balance: v } = (0, _.W)(),
-            { isInTreatment: C } = (0, l.uX)("BalanceWidgetMenu"),
-            [b, N] = i.useState(f.k.DEFAULT),
-            [R, O] = i.useState(!1),
+            { balance: b } = (0, f.W)(),
+            N = (0, d.DK)(c.W.NITRO, "BalanceWidgetMenu"),
+            [R, O] = i.useState(h.k.DEFAULT),
             [D, L] = i.useState(!1),
-            w = i.useRef(null);
-        (0, u.j)(!R);
-        let x = i.useCallback(() => {
-                let e = !R;
+            [w, x] = i.useState(!1),
+            P = i.useRef(null);
+        (0, l.j)(!D);
+        let M = i.useCallback(() => {
+                let e = !D;
                 e &&
-                    null != I &&
-                    (0, d.Y)({
-                        pageType: I,
-                        sectionType: m.JJy.ORBS_BALANCE_MENU,
-                        ctaObject: m.ZSU.OPEN_ORB_BALANCE_MENU_FROM_PILL,
+                    null != y &&
+                    (0, _.Y)({
+                        pageType: y,
+                        sectionType: E.JJy.ORBS_BALANCE_MENU,
+                        ctaObject: E.ZSU.OPEN_ORB_BALANCE_MENU_FROM_PILL,
                     }),
-                    N(e ? f.k.SELECTED : f.k.DEFAULT),
-                    O(e);
-            }, [R, I]),
-            P = i.useCallback(() => {
-                R && x();
-            }, [R, x]),
-            M = (0, o.A)(null, P),
-            k = i.useMemo(
+                    O(e ? h.k.SELECTED : h.k.DEFAULT),
+                    L(e);
+            }, [D, y]),
+            k = i.useCallback(() => {
+                D && M();
+            }, [D, M]),
+            U = (0, o.A)(null, k),
+            G = i.useMemo(
                 () =>
                     (0, r.jsx)(p.b, {
-                        analyticsPage: I,
+                        analyticsPage: y,
                         ctaText: n,
                         ctaOnClick: () => {
-                            x(), a();
+                            M(), a();
                         },
-                        linkText: T,
+                        linkText: S,
                     }),
-                [I, n, T, x, a],
+                [y, n, S, M, a],
             ),
-            U = i.useMemo(
+            F = i.useMemo(
                 () =>
-                    (0, r.jsx)(c.A, {
-                        targetElementRef: w,
-                        shouldShow: R,
-                        onRequestClose: x,
+                    (0, r.jsx)(u.A, {
+                        targetElementRef: P,
+                        shouldShow: D,
+                        onRequestClose: M,
                         ctaText: n,
                         ctaOnClick: () => {
-                            x(), a();
+                            M(), a();
                         },
                     }),
-                [R, x, n, a],
+                [D, M, n, a],
             );
         return (0, r.jsxs)("div", {
-            className: s()(E.kL, S, { [E.R]: D, [E.RK]: !D }),
+            className: s()(I.kL, C, { [I.R]: w, [I.RK]: !w }),
             children: [
-                (0, r.jsx)(h.J, {
-                    pillRef: w,
-                    balance: v,
-                    balanceWidgetMode: b,
+                (0, r.jsx)(g.J, {
+                    pillRef: P,
+                    balance: b,
+                    balanceWidgetMode: R,
                     onMouseDown: (e) => {
                         e.stopPropagation();
                     },
-                    onClick: x,
+                    onClick: M,
                     showNotificationBadge: t,
                 }),
-                C
-                    ? U
-                    : R &&
-                      (0, r.jsx)("div", { className: s()(E.Ui, y, { [E.R]: D, [E.RK]: !D }), ref: M, children: k }),
+                N
+                    ? F
+                    : D &&
+                      (0, r.jsx)("div", { className: s()(I.Ui, v, { [I.R]: w, [I.RK]: !w }), ref: U, children: G }),
             ],
         });
     };
-I.CardAlignment = A;
+y.CardAlignment = T;

@@ -64,7 +64,7 @@ let z = (e) => {
             isReady: x.A.isReady(),
             programReward: x.A.getRewardForProgram(p.W.NITRO),
         })),
-        J = (0, E.Qs)("PremiumSubscriberHome"),
+        J = (0, E.DK)(p.W.NITRO, "PremiumSubscriberHome"),
         Q = s.useMemo(
             () => !!q && null != X && !!J && "orbs" === new URLSearchParams(a.search).get("section"),
             [a.search, q, X, J],

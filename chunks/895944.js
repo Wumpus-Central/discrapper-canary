@@ -69,7 +69,7 @@ class v extends s.Ay.PersistedStore {
         return { cache: null != e ? { value: Array.from(e.value.entries()), fetchedAt: e.fetchedAt } : null };
     }
     passesGeneralUIInvariant(e) {
-        if (!(0, _.T0)("ProgramRewardsStore")) return !1;
+        if (!(0, _.O7)(e, "ProgramRewardsStore.passesGeneralUIInvariant")) return !1;
         if (e === d.W.NITRO) {
             let t = this.getRewardForProgram(e);
             if (null == t) return !1;
@@ -86,7 +86,7 @@ class v extends s.Ay.PersistedStore {
         return !0;
     }
     passesProgressBarInvariant(e) {
-        if (!(0, _.T0)("ProgramRewardsStore")) return !1;
+        if (!(0, _.O7)(e, "ProgramRewardsStore.passesProgressBarInvariant")) return !1;
         if (e === d.W.NITRO) {
             let t = this.getRewardForProgram(e);
             if (null == t) return !1;
@@ -117,12 +117,12 @@ class v extends s.Ay.PersistedStore {
     isReady() {
         return (
             !this.isFetching() &&
-            (this.hasCachedValue() || !(0, _.T0)("ProgramRewardsStore") || this.isError() || !(0, _.mY)())
+            (this.hasCachedValue() || !(0, _.g_)("ProgramRewardsStore") || this.isError() || !(0, _.mY)())
         );
     }
     shouldFetch() {
         return (
-            !!(0, _.T0)("ProgramRewardsStore.shouldFetch") &&
+            !!(0, _.g_)("ProgramRewardsStore.shouldFetch") &&
             !!(0, _.mY)() &&
             (p.shouldFetch() || (0, f.A)(this.getRewardForProgram(d.W.NITRO)))
         );
