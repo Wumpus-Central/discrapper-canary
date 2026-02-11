@@ -48,6 +48,21 @@ function l(e) {
                                       onChange: (e) => u(t, Number(e)),
                                       label: i.label,
                                   }),
+                              "slider" === i.type &&
+                                  (0, r.jsx)(s.Apm, {
+                                      initialValue: null != o ? Number(o) : 0,
+                                      value: null != o ? Number(o) : void 0,
+                                      minValue: i.minValue,
+                                      maxValue: i.maxValue,
+                                      keyboardStep: (i.maxValue - i.minValue) * 0.05,
+                                      asValueChanges: (e) => u(t, e),
+                                      handleSize: 10,
+                                      disabled: !1,
+                                      stickToMarkers: !1,
+                                      fillStyles: {},
+                                      label: i.label,
+                                      onValueRender: (e) => String(Math.round(1e3 * e) / 1e3),
+                                  }),
                           ],
                       });
                   }),

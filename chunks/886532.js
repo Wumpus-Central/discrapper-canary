@@ -18,7 +18,7 @@ let s = {
                 primaryAsset: { label: "Primary Asset", type: "text", defaultValue: "https://i.imgur.com/xJL1c3t.png" },
                 backgroundAssetUrl: { label: "Background Asset", type: "text", defaultValue: "" },
                 ctaText: { label: "CTA Text", type: "text", defaultValue: "Learn More" },
-                progress: { label: "Progress (0 - 1.0)", type: "number", defaultValue: void 0 },
+                progress: { label: "Progress (0 - 1.0)", type: "slider", defaultValue: 0, minValue: 0, maxValue: 1 },
                 featured: { label: "Featured", type: "boolean", defaultValue: !1 },
                 glowing: { label: "Glowing", type: "boolean", defaultValue: !1 },
             },
@@ -31,6 +31,7 @@ function o(e) {
         style: { maxWidth: "100%", width: t ? 752 : 364 },
         children: (0, r.jsx)(a.S, {
             ...n,
+            progress: null != n.progress && n.progress > 0 ? n.progress : void 0,
             onCtaClick: () => (0, i.showToast)((0, i.createToast)("CTA Clicked!", i.ToastType.SUCCESS)),
         }),
     });
