@@ -1,4 +1,4 @@
-i.d(e, { r: () => A });
+i.d(t, { r: () => T });
 var n = i(311907),
     l = i(684013),
     s = i(592598),
@@ -7,15 +7,20 @@ var n = i(311907),
     u = i(790076),
     o = i(985018);
 let d = (0, u.ze)(!0);
-function T(t) {
-    return (0, r.zD)(t.key, {
-        useTitle: () => o.intl.string(t.title),
-        useSubtitle: () => o.intl.string(t.description),
-        useValue: () => !(0, n.bG)([s.A], () => s.A.getDisabledNotifications().has(t.disabledSetting)),
-        setValue: (e) => {
-            l.A.setNotificationDisabledSetting(t.disabledSetting, !e);
+function _(e) {
+    return (0, r.zD)(e.key, {
+        useTitle: () => o.intl.string(e.title),
+        useSubtitle: () => o.intl.string(e.description),
+        useValue: () => !(0, n.bG)([s.A], () => s.A.getDisabledNotifications().has(e.disabledSetting)),
+        setValue: (t) => {
+            l.A.setNotificationDisabledSetting(e.disabledSetting, !t);
         },
-        usePredicate: t.usePredicate,
+        usePredicate: e.usePredicate,
     });
 }
-let A = (0, r.FW)(a.X.OVERLAY_NOTIFICATIONS_LIST, { buildLayout: () => d.map(T) });
+let T = (0, r.FW)(a.X.OVERLAY_NOTIFICATIONS_LIST, {
+    variant: "compact",
+    useTitle: () => o.intl.string(o.t.gnKWdS),
+    isTitleHiddenVisually: !0,
+    buildLayout: () => d.map(_),
+});

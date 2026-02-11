@@ -25,6 +25,7 @@ let d = (0, s.sN)(a.X.VOICE_GLOBAL_ATTENUATION_SLIDER, {
         setValue: (e) => l.A.setAttenuation(r.Ay.getAttenuation(), r.Ay.getAttenuateWhileSpeakingSelf(), e),
     }),
     A = (0, s.FW)(a.X.VOICE_GLOBAL_ATTENUATION_FIELD_SET, {
+        variant: "compact",
         useTitle: () => o.intl.string(o.t.oSdBvW),
         useSubtitle: () => o.intl.string(o.t["0A/8Rt"]),
         usePredicate: () => (0, n.bG)([r.Ay], () => r.Ay.supports(u.O5.ATTENUATION)),

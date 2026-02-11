@@ -1,45 +1,58 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(627968),
     s = n(64700),
-    r = n(503698),
-    a = n.n(r),
-    l = n(397927),
+    a = n(503698),
+    l = n.n(a),
+    r = n(397927),
     o = n(641324),
     c = n(702421);
-let d = s.memo(function (e) {
+function d(e) {
+    let { title: t, subtitle: n, isHiddenVisually: s } = e;
+    return null == t || "" === t
+        ? null
+        : s
+          ? (0, i.jsx)(r.AC4, { tag: "legend", children: t })
+          : (0, i.jsx)(r.Text, {
+                tag: "legend",
+                variant: "text-md/semibold",
+                color: "text-strong",
+                className: l()(c.DD, { [c.h0]: null != n && "" !== n }),
+                children: t,
+            });
+}
+let u = s.memo(function (e) {
     let { node: t } = e,
-        { useTitle: n, useSubtitle: r, layout: d } = t,
-        u = n?.(),
-        _ = r?.(),
-        m = s.useId(),
-        A = null != u && "" !== u,
-        g = null != _ && "" !== _;
+        { useTitle: n, useSubtitle: a, layout: l, variant: u = "default", isTitleHiddenVisually: _ } = t,
+        m = n(),
+        A = a?.(),
+        g = s.useId(),
+        h = null != m && "" !== m,
+        x = null != A && "" !== A,
+        p = (function (e) {
+            switch (e) {
+                case "default":
+                    return "md";
+                case "compact":
+                    return "xs";
+            }
+        })(u);
     return (0, i.jsxs)("fieldset", {
-        "aria-describedby": g ? m : void 0,
+        "aria-describedby": x ? g : void 0,
         children: [
-            A
-                ? (0, i.jsx)(l.Text, {
-                      tag: "legend",
-                      variant: "text-md/semibold",
-                      color: "text-strong",
-                      className: a()(c.DD, { [c.h0]: g }),
-                      children: u,
-                  })
-                : null,
-            g
-                ? (0, i.jsx)(l.Text, {
+            (0, i.jsx)(d, { title: m, subtitle: A, isHiddenVisually: _ }),
+            x
+                ? (0, i.jsx)(r.Text, {
                       variant: "text-sm/normal",
                       color: "text-default",
-                      id: m,
+                      id: g,
                       className: c.VA,
-                      children: _,
+                      children: A,
                   })
                 : null,
-            (0, i.jsx)(l.BJc, {
-                direction: "vertical",
-                gap: 8,
-                padding: { top: 16 },
-                children: d.map((e) => (0, i.jsx)(o.A, { node: e }, e.key)),
+            (0, i.jsx)(r.BJc, {
+                gap: p,
+                padding: { top: h && !_ ? 16 : 0 },
+                children: l.map((e) => (0, i.jsx)(o.A, { node: e }, e.key)),
             }),
         ],
     });
