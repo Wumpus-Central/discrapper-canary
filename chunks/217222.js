@@ -10,8 +10,9 @@ class l extends r.A {
         super(
             i.h,
             {
-                CONNECTION_OPEN: (e) => this.setExperimentAssignments(e.apexExperiments),
+                CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
                 CONNECTION_OPEN_STATE_UPDATE: (e) => this.setExperimentAssignments(e.apexExperiments),
+                GUILD_CREATE: (e) => this.handleGuildCreate(e),
                 APEX_EXPERIMENT_OVERRIDE_CREATE: (e) => this.createOverride(e.experimentName, e.variantId),
                 APEX_EXPERIMENT_OVERRIDE_DELETE: (e) => this.deleteOverride(e.experimentName),
                 APEX_EXPERIMENT_OVERRIDE_CLEAR: () => this.clearAllOverrides(),
@@ -35,6 +36,16 @@ class l extends r.A {
     }
     initialize(e) {
         this.waitFor(s.default), this.loadStoredState(e, (0, a.DI)());
+    }
+    handleConnectionOpen(e) {
+        let t = e.guilds.reduce((e, t) => (null != t.experiments && (e[t.id] = t.experiments), e), {});
+        return this.setExperimentAssignments(e.apexExperiments, t);
+    }
+    handleGuildCreate(e) {
+        let t = e.guild.experiments;
+        if (null == t) return !0;
+        let n = { [e.guild.id]: t };
+        return this.setGuildExperimentAssignments(n);
     }
 }
 let u = new l();

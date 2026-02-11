@@ -11,41 +11,47 @@ function a(e, t, n, a) {
             definition: s,
             useConfig: function (e) {
                 let n = a(l, e),
-                    [s, d] = (0, i.yK)([t], () => t.getEvaluationAndAssignment(l, n, o), [n]),
-                    _ = d?.variantId,
-                    f = d?.trackedVariantId ?? _,
-                    p = d?.revision,
-                    h = d?.isOverride,
-                    m = d?.exposureTrackingEnabled;
+                    s = a("user", e),
+                    [d, _] = (0, i.yK)([t], () => t.getEvaluationAndAssignment(l, n, o, s), [n, s]),
+                    f = _?.variantId,
+                    h = _?.trackedVariantId ?? f,
+                    p = _?.revision,
+                    g = _?.isOverride,
+                    E = _?.exposureTrackingEnabled,
+                    A = _?.useAsEligibility;
                 return ((0, r.useEffect)(() => {
-                    null != s &&
-                        null != f &&
+                    null != d &&
+                        null != h &&
                         null != p &&
-                        !1 === h &&
-                        !0 === m &&
-                        t.trackExperimentExposure(s, o, e.location, l, p, f, n);
-                }, [n, s, f, p, e.location, h, m]),
-                null == _)
+                        !1 === g &&
+                        !0 === E &&
+                        !0 !== A &&
+                        t.trackExperimentExposure(d, o, e.location, l, p, h, n);
+                }, [n, d, h, p, e.location, g, E, A]),
+                null == f || !0 === A)
                     ? c
-                    : (u[_] ?? c);
+                    : (u[f] ?? c);
             },
             getConfig: function (e) {
                 let r = n(l, e),
-                    [i, a] = t.getEvaluationAndAssignment(l, r, o),
-                    s = a?.variantId,
-                    d = a?.trackedVariantId ?? s,
-                    _ = a?.revision,
-                    f = a?.isOverride,
-                    p = a?.exposureTrackingEnabled;
-                return (null != i &&
-                    null != d &&
+                    i = "guild" === l ? n("user", { location: e.location }) : void 0,
+                    [a, s] = t.getEvaluationAndAssignment(l, r, o, i),
+                    d = s?.variantId,
+                    _ = s?.trackedVariantId ?? d,
+                    f = s?.revision,
+                    h = s?.isOverride,
+                    p = s?.exposureTrackingEnabled,
+                    g = s?.useAsEligibility;
+                return (null != a &&
                     null != _ &&
-                    !1 === f &&
+                    null != f &&
+                    !1 === h &&
                     !0 === p &&
-                    t.trackExperimentExposure(i, o, e.location, l, _, d, r),
-                null == s)
+                    !0 !== g &&
+                    t.trackExperimentExposure(a, o, e.location, l, f, _, r),
+                null == d || !0 === g)
                     ? c
-                    : (u[s] ?? c);
+                    : (u[d] ?? c);
             },
         }
     );

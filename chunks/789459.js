@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => N });
+n.d(t, { A: () => R });
 var r = n(181370),
     i = n.n(r),
     a = n(311907),
@@ -12,109 +12,130 @@ let c = new s.Vy("ApexExperimentStore");
 let d = [l.ni.User, l.ni.Installation],
     _ = { user: {}, guild: {}, installation: {} },
     f = {},
-    p = {},
     h = {},
-    m = {},
+    p = {},
     g = {},
-    E = new Set(),
+    E = {},
     A = new Set(),
-    I = "apexTrackedExposures",
-    T = 2,
-    y = 6048e5,
-    S = {},
-    v = 3,
-    C = {};
-function b(e) {
-    let t = C[e];
-    return null == t && ((t = i().v3(e)), (C[e] = t)), t;
+    I = new Set(),
+    T = "apexTrackedExposures",
+    y = 2,
+    S = 6048e5,
+    v = {},
+    C = 3,
+    b = {};
+function N(e) {
+    let t = b[e];
+    return null == t && ((t = i().v3(e)), (b[e] = t)), t;
 }
-class N extends a.Ay.PersistedStore {
+class R extends a.Ay.PersistedStore {
     static displayName = "ApexExperimentStore";
     static persistKey = "ApexExperimentStore";
     track = () => Promise.resolve();
     surface = "unset";
     loadStoredState(e, t) {
-        for (let n in (null != e && e.version === v
-            ? ((p = e.clientOverrides), (_ = e.evaluatedExperiments))
+        for (let n in (null != e && e.version === C
+            ? ((h = e.clientOverrides), (_ = e.evaluatedExperiments))
             : null != e &&
               2 === e.version &&
-              ((p = e.clientOverrides), (_ = { ...e.evaluatedExperiments, installation: {} })),
-        (m = {}),
+              ((h = e.clientOverrides), (_ = { ...e.evaluatedExperiments, installation: {} })),
+        (g = {}),
         t)) {
-            let e = b(n),
+            let e = N(n),
                 r = t[n];
-            m[n] = { hashedName: e, variantId: r, isOverride: !0, exposureTrackingEnabled: !1 };
+            g[n] = { hashedName: e, variantId: r, isOverride: !0, exposureTrackingEnabled: !1, useAsEligibility: !1 };
         }
-        S = this.loadTrackedExposures();
+        v = this.loadTrackedExposures();
     }
     getState() {
-        return { version: v, evaluatedExperiments: _, clientOverrides: p };
+        return { version: C, evaluatedExperiments: _, clientOverrides: h };
     }
-    setExperimentAssignments(e) {
-        if (null == e) return !1;
-        for (let t of (this.clearSessionOverrides(), d)) {
-            let n = l.ag[t],
-                r = e.assignments[t];
-            if (null == r || null == n) continue;
-            let i = _[n];
-            for (let e in r) {
-                A.add(e);
-                let { evaluation_id: t, assignments: n } = r[e],
-                    a = { evaluationId: t ?? void 0, assignments: {} };
-                for (let [t, r, s, o, u] of ((i[e] = a), n))
-                    (s ??= 0),
-                        (a.assignments[t] = {
-                            hashedName: t,
-                            variantId: r,
-                            trackedVariantId: u,
-                            isOverride: (s & l.fd.IsOverride) != 0,
-                            revision: o,
-                            exposureTrackingEnabled: (s & l.fd.ExposureTrackingEnabled) != 0,
-                        });
+    setExperimentAssignments(e, t) {
+        if (null == e && null == t) return !1;
+        if ((this.clearSessionOverrides(), null != e))
+            for (let t of d) {
+                let n = l.ag[t],
+                    r = e.assignments[t];
+                if (null == r || null == n) continue;
+                let i = _[n];
+                for (let e in r) {
+                    I.add(e);
+                    let { evaluation_id: t, assignments: n } = r[e],
+                        a = { evaluationId: t ?? void 0, assignments: {} };
+                    for (let [t, r, s, o, u] of ((i[e] = a), n))
+                        (s ??= 0),
+                            (a.assignments[t] = {
+                                hashedName: t,
+                                variantId: r,
+                                trackedVariantId: u,
+                                isOverride: (s & l.fd.IsOverride) != 0,
+                                revision: o,
+                                exposureTrackingEnabled: (s & l.fd.ExposureTrackingEnabled) != 0,
+                                useAsEligibility: (s & l.fd.UseAsEligibility) != 0,
+                            });
+                }
+            }
+        return null != t && this.setGuildExperimentAssignments(t), !0;
+    }
+    setGuildExperimentAssignments(e) {
+        let t = _.guild;
+        for (let [n, r] of Object.entries(e ?? {})) {
+            let { evaluation_id: e, assignments: i } = r,
+                a = { evaluationId: e ?? void 0, assignments: {} };
+            for (let [e, r, s, o, u] of ((t[n] = a), i)) {
+                let t = {
+                    hashedName: e,
+                    variantId: r,
+                    trackedVariantId: u,
+                    isOverride: ((s ??= 0) & l.fd.IsOverride) != 0,
+                    revision: o,
+                    exposureTrackingEnabled: (s & l.fd.ExposureTrackingEnabled) != 0,
+                    useAsEligibility: (s & l.fd.UseAsEligibility) != 0,
+                };
+                a.assignments[e] = t;
             }
         }
-        return !0;
     }
     createOverride(e, t) {
-        (p = { ...p, [e]: { hashedName: b(e), variantId: t, isOverride: !0, exposureTrackingEnabled: !1 } }),
+        (h = { ...h, [e]: { hashedName: N(e), variantId: t, isOverride: !0, exposureTrackingEnabled: !1 } }),
             this.trackExposureSuppression(e, "client_override");
     }
     deleteOverride(e) {
-        let { [e]: t, ...n } = p;
-        p = n;
-    }
-    createSessionOverride(e, t) {
-        h = { ...h, [e]: { hashedName: b(e), variantId: t, isOverride: !0, exposureTrackingEnabled: !1 } };
-    }
-    deleteSessionOverride(e) {
         let { [e]: t, ...n } = h;
         h = n;
     }
+    createSessionOverride(e, t) {
+        p = { ...p, [e]: { hashedName: N(e), variantId: t, isOverride: !0, exposureTrackingEnabled: !1 } };
+    }
+    deleteSessionOverride(e) {
+        let { [e]: t, ...n } = p;
+        p = n;
+    }
     setExperimentsMetadata(e) {
-        g = { ...g, ...Object.fromEntries(e.map((e) => [e.name, e])) };
+        E = { ...E, ...Object.fromEntries(e.map((e) => [e.name, e])) };
     }
     getExperimentsMetadata() {
-        return g;
+        return E;
     }
     getClientOverrides() {
-        return p;
-    }
-    getSessionOverrides() {
         return h;
     }
+    getSessionOverrides() {
+        return p;
+    }
     getExperimentClientOverride(e) {
-        return p[e];
+        return h[e];
     }
     getExperimentSessionOverride(e) {
-        return h[e];
+        return p[e];
     }
     handleLogout(e) {
         e || (this.clearUserServerAssignments(), this.clearSessionOverrides()),
-            o.w.remove(I),
+            o.w.remove(T),
             this.clearAllTrackedExposures();
     }
     registerExperiment(e) {
-        (f[e.name] = e), null != m[e.name] && this.trackExposureSuppression(e.name, "cookie_override");
+        (f[e.name] = e), null != g[e.name] && this.trackExposureSuppression(e.name, "cookie_override");
     }
     getRegisteredExperiments() {
         return f;
@@ -124,21 +145,36 @@ class N extends a.Ay.PersistedStore {
         return null != r ? r : this.getServerAssignment(e, t, n);
     }
     getServerAssignment(e, t, n) {
-        let r = b(n),
+        let r = N(n),
             i = _[e][t];
         if (null != i) return i.assignments[r];
     }
     getEvaluation(e, t) {
         return _[e][t]?.evaluationId;
     }
-    getEvaluationAndAssignment(e, t, n) {
+    getEvaluationAndAssignmentInner(e, t, n) {
         let r = this.getOverride(n);
         if (null != r) return [void 0, r];
         let i = _[e][t];
-        return null == i ? [void 0, void 0] : [i.evaluationId, i.assignments[b(n)]];
+        return null == i ? [void 0, void 0] : [i.evaluationId, i.assignments[N(n)]];
+    }
+    getEvaluationAndAssignment(e, t, n, r) {
+        let [i, a] = this.getEvaluationAndAssignmentInner(e, t, n);
+        if ("guild" !== e) return [i, a];
+        {
+            if (null == r) return a?.isOverride ? [i, a] : [i, void 0];
+            let [e, t] = this.getEvaluationAndAssignmentInner("user", r, n);
+            return t?.isOverride
+                ? [i, t]
+                : a?.isOverride
+                  ? [i, a]
+                  : t?.useAsEligibility && a?.variantId != null
+                    ? [i, a]
+                    : [void 0, void 0];
+        }
     }
     trackExperimentExposure(e, t, n, r, i, a, s) {
-        let o = b(`${t}|${i}|${a}|${n}`);
+        let o = N(`${t}|${i}|${a}|${n}`);
         this.shouldTrackExposure(o) &&
             ("user" === r
                 ? this.track(
@@ -159,13 +195,13 @@ class N extends a.Ay.PersistedStore {
                       },
                       { flush: !0 },
                   ),
-            (S[o] = Date.now()),
-            this.saveTrackedExposures(S));
+            (v[o] = Date.now()),
+            this.saveTrackedExposures(v));
     }
     trackCommonTriggerPointExposures(e) {
         for (let t of ["user", "installation"])
             for (let { evaluationId: n, unitId: r } of this.evaluationsWithUnitIds(t)) {
-                let i = b(`${n}|${e}`);
+                let i = N(`${n}|${e}`);
                 this.shouldTrackExposure(i) &&
                     ("user" === t
                         ? this.track(
@@ -178,8 +214,8 @@ class N extends a.Ay.PersistedStore {
                               { evaluation_id: n, exposure_location: e, unit_type: t, installation_id: r },
                               { flush: !0 },
                           ),
-                    (S[i] = Date.now()),
-                    this.saveTrackedExposures(S));
+                    (v[i] = Date.now()),
+                    this.saveTrackedExposures(v));
             }
     }
     trackExposureSuppression(e, t) {
@@ -219,21 +255,21 @@ class N extends a.Ay.PersistedStore {
             });
     }
     shouldTrackExposure(e) {
-        let t = S[e];
-        return null == t || Date.now() - t > y;
+        let t = v[e];
+        return null == t || Date.now() - t > S;
     }
     loadTrackedExposures() {
-        let e = o.w.get(I);
-        if (null == e || e.version !== T) return {};
+        let e = o.w.get(T);
+        if (null == e || e.version !== y) return {};
         let t = e.exposures,
             n = Date.now(),
             r = !1;
-        for (let e in t) n - t[e] > y && (delete t[e], (r = !0));
+        for (let e in t) n - t[e] > S && (delete t[e], (r = !0));
         return r && this.saveTrackedExposures(t), t;
     }
     saveTrackedExposures(e) {
         try {
-            o.w.set(I, { version: T, exposures: e });
+            o.w.set(T, { version: y, exposures: e });
         } catch (e) {
             c.error("Error saving tracked exposures", e),
                 this.track(
@@ -247,8 +283,8 @@ class N extends a.Ay.PersistedStore {
         this.clearAllServerAssignments(),
             this.clearAllOverrides(),
             this.clearAllTrackedExposures(),
-            E.clear(),
-            A.clear();
+            A.clear(),
+            I.clear();
     }
     clearAllServerAssignments() {
         _ = { user: {}, guild: {}, installation: {} };
@@ -257,33 +293,33 @@ class N extends a.Ay.PersistedStore {
         _ = { user: {}, guild: {}, installation: _.installation };
     }
     clearAllOverrides() {
-        (p = {}), (h = {}), (m = {});
+        (h = {}), (p = {}), (g = {});
     }
     clearSessionOverrides() {
-        h = {};
+        p = {};
     }
     clearAllTrackedExposures() {
-        S = {};
+        v = {};
     }
     getHash(e) {
-        return b(e);
+        return N(e);
     }
     handleFetchStart(e) {
-        E.add(e);
+        A.add(e);
     }
     handleFetchSuccess(e, t) {
-        E.delete(e), A.add(e), this.setExperimentAssignments(t);
+        A.delete(e), I.add(e), this.setExperimentAssignments(t);
     }
     handleFetchFailure(e) {
-        E.delete(e), A.add(e);
+        A.delete(e), I.add(e);
     }
     isFetching(e) {
-        return E.has(e);
-    }
-    hasLoaded(e) {
         return A.has(e);
     }
+    hasLoaded(e) {
+        return I.has(e);
+    }
     getOverride(e) {
-        return h[e] ?? p[e] ?? m[e];
+        return p[e] ?? h[e] ?? g[e];
     }
 }
