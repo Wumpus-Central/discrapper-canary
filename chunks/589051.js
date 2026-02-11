@@ -1,24 +1,22 @@
 "use strict";
 n.d(t, {
-    E: () => x,
-    Fg: () => m,
-    H: () => y,
-    Jo: () => c,
-    LA: () => _,
-    M8: () => w,
-    NI: () => L,
-    QC: () => g,
-    X4: () => O,
-    Yz: () => d,
-    aS: () => v,
-    cB: () => l,
-    lR: () => I,
-    m5: () => A,
-    o0: () => N,
-    oA: () => f,
-    sq: () => T,
-    wD: () => p,
-    wG: () => u,
+    E: () => L,
+    Fg: () => p,
+    H: () => T,
+    Jo: () => l,
+    LA: () => c,
+    M8: () => D,
+    NI: () => O,
+    QC: () => h,
+    X4: () => b,
+    Yz: () => u,
+    aS: () => S,
+    lR: () => E,
+    m5: () => g,
+    o0: () => v,
+    oA: () => d,
+    sq: () => A,
+    wD: () => _,
 });
 var r = n(812729),
     i = n.n(r),
@@ -26,18 +24,6 @@ var r = n(812729),
     s = n(945810),
     o = n(688151);
 let l = (0, a.C)({
-    kind: "user",
-    id: "2025-06_overlay_raf_manager",
-    label: "Overlay RAF Manager",
-    commonTriggerPoint: o.$G.CONNECTION_OPEN,
-    defaultConfig: { enabled: !1 },
-    treatments: [{ id: 1, label: "Enable RAF Manager", config: { enabled: !0 } }],
-});
-function u(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return l.getCurrentConfig({ location: e }, { autoTrackExposure: t });
-}
-let c = (0, a.C)({
     kind: "user",
     id: "2025-06_overlay_render_timeout",
     label: "Overlay Render Timeout",
@@ -49,11 +35,11 @@ let c = (0, a.C)({
         { id: 3, label: "Longer Timeouts (16s, 24s)", config: { shortTimeout: 16e3, longTimeout: 24e3 } },
     ],
 });
-function d(e) {
+function u(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return c.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return l.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-let _ = (0, a.C)({
+let c = (0, a.C)({
     kind: "user",
     id: "2025-07_overlay_default_disable",
     label: "Overlay Default Disable",
@@ -61,11 +47,11 @@ let _ = (0, a.C)({
     defaultConfig: { enabled: !1 },
     treatments: [{ id: 1, label: "Enable Default Disable Behavior", config: { enabled: !0 } }],
 });
-function f(e) {
+function d(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return _.getCurrentConfig({ location: e }, { autoTrackExposure: t }).enabled;
+    return c.getCurrentConfig({ location: e }, { autoTrackExposure: t }).enabled;
 }
-var p = (function (e) {
+var _ = (function (e) {
     return (
         (e[(e.GREEN_BUTTON_WITH_TEXT = 0)] = "GREEN_BUTTON_WITH_TEXT"),
         (e[(e.GRAY_BUTTON_WITH_TEXT = 1)] = "GRAY_BUTTON_WITH_TEXT"),
@@ -73,7 +59,7 @@ var p = (function (e) {
         e
     );
 })({});
-let h = (0, s.mj)({
+let f = (0, s.mj)({
     name: "2025-08-overlay-stream-watch-nudge",
     kind: "user",
     defaultConfig: { enabled: !1, designVariant: null },
@@ -83,13 +69,13 @@ let h = (0, s.mj)({
         3: { enabled: !0, designVariant: 2 },
     },
 });
-function m(e) {
-    return h.getConfig({ location: e });
+function p(e) {
+    return f.getConfig({ location: e });
 }
-function g(e) {
-    return h.useConfig({ location: e });
+function h(e) {
+    return f.useConfig({ location: e });
 }
-let E = (0, a.C)({
+let m = (0, a.C)({
     kind: "user",
     id: "2025-10_overlay_v3_one_click_go_live",
     label: "Overlay V3 One Click Go Live",
@@ -103,11 +89,11 @@ let E = (0, a.C)({
         },
     ],
 });
-function A(e) {
+function g(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return E.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return m.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-let I = (0, a.C)({
+let E = (0, a.C)({
     id: "2025-10_overlay_default_keybind",
     label: "Overlay Default Keybind",
     kind: "user",
@@ -118,11 +104,11 @@ let I = (0, a.C)({
         { id: 3, label: "Ctrl + L Keybind", config: { keybindOverride: "ctrl+l" } },
     ],
 });
-function T(e) {
+function A(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return I.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return E.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-let S = (0, a.C)({
+let I = (0, a.C)({
     kind: "user",
     id: "2025-10_overlay_negative_widget_testing",
     label: "Overlay Negative Widget Testing",
@@ -191,42 +177,42 @@ let S = (0, a.C)({
         },
     ],
 });
-function y(e) {
-    let t = v(e, !1);
-    if (i()(S.definition.defaultConfig, t)) return "control";
-    let n = S.definition.treatments.find((e) => i()(e.config, t));
+function T(e) {
+    let t = S(e, !1);
+    if (i()(I.definition.defaultConfig, t)) return "control";
+    let n = I.definition.treatments.find((e) => i()(e.config, t));
     return null == n ? "control" : `treatment-${n.id}`;
 }
-function v(e) {
+function S(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return S.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return I.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-let C = (0, a.C)({
+let y = (0, a.C)({
     id: "2025-11_overlay_welcome_notification",
     label: "Overlay Welcome Notification",
     kind: "user",
     defaultConfig: { enabled: !1 },
     treatments: [{ id: 1, label: "Modular Experience", config: { enabled: !0 } }],
 });
-function N(e) {
+function v(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return C.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return y.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-let b = (0, a.C)({
+let C = (0, a.C)({
     id: "2025-11_overlay_bug_reporter",
     label: "Overlay Bug Reporter",
     kind: "user",
     defaultConfig: { enabled: !1 },
     treatments: [{ id: 1, label: "Enable Bug Reporter", config: { enabled: !0 } }],
 });
-function R(e) {
+function N(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return b.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return C.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
-function O(e) {
-    return b.useExperiment({ location: e }).enabled;
+function b(e) {
+    return C.useExperiment({ location: e }).enabled;
 }
-let D = (0, s.mj)({
+let R = (0, s.mj)({
     name: "2025-11-overlay-chat",
     kind: "user",
     defaultConfig: { hasChat: !1, hasFriendList: !1, showNowPlayingForDifferentGames: !1 },
@@ -236,17 +222,17 @@ let D = (0, s.mj)({
         3: { hasChat: !0, hasFriendList: !0, showNowPlayingForDifferentGames: !0 },
     },
 });
-function L(e) {
-    return D.getConfig({ location: e });
+function O(e) {
+    return R.getConfig({ location: e });
 }
-function w(e) {
-    return D.useConfig({ location: e });
+function D(e) {
+    return R.useConfig({ location: e });
 }
-function x() {
-    m("OVERLAY_INITIALIZED"),
-        A("OVERLAY_INITIALIZED"),
+function L() {
+    p("OVERLAY_INITIALIZED"),
+        g("OVERLAY_INITIALIZED"),
+        S("OVERLAY_INITIALIZED"),
         v("OVERLAY_INITIALIZED"),
         N("OVERLAY_INITIALIZED"),
-        R("OVERLAY_INITIALIZED"),
-        L("OVERLAY_INITIALIZED");
+        O("OVERLAY_INITIALIZED");
 }
