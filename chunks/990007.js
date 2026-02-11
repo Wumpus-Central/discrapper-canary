@@ -1,38 +1,38 @@
-n.d(t, { A: () => L }), n(938796), n(323874), n(14289), n(35956);
+n.d(t, { A: () => L }), n(323874), n(14289), n(35956);
 var i = n(488428),
     r = n(485845),
     a = n(179771),
     l = n(136722),
-    s = n(665260),
-    o = n(562465),
-    d = n(898467),
-    c = n(420970),
-    u = n(506774),
-    A = n(73153),
-    h = n(587895),
-    _ = n(224750),
+    s = n(562465),
+    o = n(898467),
+    d = n(420970),
+    c = n(506774),
+    u = n(73153),
+    A = n(587895),
+    h = n(224750),
+    _ = n(20015),
     m = n(716965),
     p = n(671523),
     g = n(337095),
     E = n(611010),
-    f = n(287809),
-    I = n(927813),
+    I = n(287809),
+    f = n(927813),
     C = n(488926),
     N = n(636401),
     T = n(613057),
     S = n(652215);
 let x = "CachedTokens",
-    v = { "1273616940451102832": new d.A(2, +I.A.Millis.MINUTE) };
+    v = { "1273616940451102832": new o.A(2, +f.A.Millis.MINUTE) };
 async function b(e, t, n) {
     let i,
         a,
+        s,
         o,
         d,
-        c,
         {
-            client_id: u,
-            response_type: A = "code",
-            redirect_uri: I,
+            client_id: c,
+            response_type: u = "code",
+            redirect_uri: f,
             code_challenge: T,
             code_challenge_method: x,
             state: b,
@@ -49,8 +49,8 @@ async function b(e, t, n) {
             isSocketRpcPrivateScope: G,
         } = e;
     if (U?.aborted) throw new N.A({ errorCode: S.Lw6.UNKNOWN_ERROR }, "Request aborted");
-    if (null == u) throw new N.A({ errorCode: S.Lw6.OAUTH2_ERROR }, "No Client ID provided");
-    if (!G && null != I)
+    if (null == c) throw new N.A({ errorCode: S.Lw6.OAUTH2_ERROR }, "No Client ID provided");
+    if (!G && null != f)
         throw new N.A(
             { errorCode: S.Lw6.OAUTH2_ERROR },
             "Redirect URI cannot be used in the RPC OAuth2 Authorization flow",
@@ -58,30 +58,29 @@ async function b(e, t, n) {
     let k = [];
     if (
         ("string" == typeof L ? (k = L.split(" ").filter((e) => e.length > 0)) : Array.isArray(L) && (k = L),
-        null == f.default.getCurrentUser())
+        null == I.default.getCurrentUser())
     )
         throw new N.A({ errorCode: S.Lw6.OAUTH2_ERROR }, "Client is not logged in");
     if (null != w) a = Number(w);
     else {
-        let e = (e) =>
-                null != e && (0, s.Lt)(e.flags, S.gfo.EMBEDDED) && e.integrationTypesConfig?.[r.b.USER_INSTALL] != null,
-            t = h.A.getApplication(u);
-        a = e(t) || e((t = E.Ay.createFromServer(await (0, g.TA)(u, U)))) ? r.b.USER_INSTALL : r.b.GUILD_INSTALL;
+        let e = (e) => (0, _.n)(e, S.gfo.EMBEDDED) && e?.integrationTypesConfig?.[r.b.USER_INSTALL] != null,
+            t = A.A.getApplication(c);
+        a = e(t) || e((t = E.Ay.createFromServer(await (0, g.TA)(c, U)))) ? r.b.USER_INSTALL : r.b.GUILD_INSTALL;
     }
     try {
-        [o, { disclosures: d, allAcked: c }] = await Promise.all([
+        [s, { disclosures: o, allAcked: d }] = await Promise.all([
             (0, m.qY)({
-                clientId: u,
+                clientId: c,
                 scopes: k,
-                responseType: A,
-                redirectUri: I,
+                responseType: u,
+                redirectUri: f,
                 codeChallenge: T,
                 codeChallengeMethod: x,
                 state: b,
                 integrationType: a,
                 signal: U,
             }),
-            (0, _.vG)(u),
+            (0, h.vG)(c),
         ]);
     } catch (t) {
         let { body: e } = t;
@@ -90,15 +89,15 @@ async function b(e, t, n) {
             `OAuth2 Authorization Error: ${e?.message || "Unknown Error"}`,
         );
     }
-    if (j === p.l.NONE && null != o && o.authorized && c)
+    if (j === p.l.NONE && null != s && s.authorized && d)
         try {
             return (
                 await (0, m.Gq)({
                     authorize: !0,
-                    clientId: u,
+                    clientId: c,
                     scopes: k,
-                    responseType: A,
-                    redirectUri: I,
+                    responseType: u,
+                    redirectUri: f,
                     codeChallenge: T,
                     codeChallengeMethod: x,
                     state: b,
@@ -113,25 +112,25 @@ async function b(e, t, n) {
                 `OAuth2 Authorize Error: ${e?.message || "Unknown Error"}`,
             );
         }
-    n?.(o.application, P, M);
+    n?.(s.application, P, M);
     let V = C.x3;
     try {
         V = l.iu(O ?? 0);
     } catch (e) {}
     if (
-        (null != o.integration_type &&
-            Object.values(r.b).includes(o.integration_type) &&
-            (i = new Map()).set(o.integration_type, o),
-        null != v[o.application.id] && (await v[o.application.id].process(), U?.aborted))
+        (null != s.integration_type &&
+            Object.values(r.b).includes(s.integration_type) &&
+            (i = new Map()).set(s.integration_type, s),
+        null != v[s.application.id] && (await v[s.application.id].process(), U?.aborted))
     )
         throw new N.A({ errorCode: S.Lw6.UNKNOWN_ERROR }, "Request aborted");
     return t({
-        clientId: u,
+        clientId: c,
         authorizations: i,
         scopes: k,
         parsedPermissions: V,
-        responseType: A,
-        redirectUri: I,
+        responseType: u,
+        redirectUri: f,
         codeChallenge: T,
         codeChallengeMethod: x,
         state: b,
@@ -139,7 +138,7 @@ async function b(e, t, n) {
         channelId: P,
         prompt: j,
         disableGuildSelect: D,
-        disclosures: d,
+        disclosures: o,
         integrationType: a,
         pid: M,
         signal: U,
@@ -150,7 +149,7 @@ function y(e, t) {
     if (e.authorization.authing) throw new N.A({ errorCode: S.Lw6.INVALID_COMMAND }, "Already authenticating");
     return (
         (e.authorization.authing = !0),
-        o.Bo.get({
+        s.Bo.get({
             url: S.Rsh.OAUTH2_CURRENT_AUTH,
             headers: { Authorization: `Bearer ${t}` },
             oldFormErrors: !0,
@@ -165,14 +164,14 @@ function y(e, t) {
                             { errorCode: S.Lw6.INVALID_CLIENTID },
                             "Application does not match the connection's",
                         );
-                    let s = f.default.getCurrentUser();
+                    let s = I.default.getCurrentUser();
                     if (null == s || !r || s.id !== r.id)
                         throw new N.A({ errorCode: S.Lw6.INVALID_TOKEN }, "Token does not match current user");
                     return (
                         (e.authorization.scopes = [...e.authorization.scopes, ...a, T.VH]),
                         (e.authorization.accessToken = t),
                         (e.authorization.expires = new Date(l)),
-                        A.h.dispatch({ type: "RPC_APP_AUTHENTICATED", socketId: e.id, application: e.application }),
+                        u.h.dispatch({ type: "RPC_APP_AUTHENTICATED", socketId: e.id, application: e.application }),
                         { ...n.body, access_token: t }
                     );
                 },
@@ -187,7 +186,7 @@ function y(e, t) {
 }
 function L(e, t) {
     return {
-        [S.e$_.AUTHENTICATE]: (0, c.T)(S.e$_.AUTHENTICATE, {
+        [S.e$_.AUTHENTICATE]: (0, d.T)(S.e$_.AUTHENTICATE, {
             handler(n) {
                 let {
                     socket: r,
@@ -225,23 +224,23 @@ function L(e, t) {
                                     (t = d.access_token),
                                     (a = d.scope),
                                     (l = d.expires_in),
-                                    ((s = u.w.get(x) ?? {})[n] = { accessToken: t, scope: a, expires: Date.now() + l }),
-                                    u.w.set(x, s),
+                                    ((s = c.w.get(x) ?? {})[n] = { accessToken: t, scope: a, expires: Date.now() + l }),
+                                    c.w.set(x, s),
                                     y(r, d.access_token)
                                 );
                             });
                     return null !=
                         (s = (function (e, t) {
-                            let n = u.w.get(x);
+                            let n = c.w.get(x);
                             if (null != n && null != n[e]) {
                                 let i = n[e];
                                 if (!(i.scope !== t || i.expires <= Date.now())) return i.accessToken;
-                                delete n[e], u.w.set(x, n);
+                                delete n[e], c.w.set(x, n);
                             }
                         })(n, o))
                         ? y(r, s).catch(() => {
                               let e;
-                              return (e = u.w.get(x) ?? {}), delete e[n], u.w.set(x, e), d();
+                              return (e = c.w.get(x) ?? {}), delete e[n], c.w.set(x, e), d();
                           })
                         : d();
                 }

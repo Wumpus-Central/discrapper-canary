@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { A: () => A }), n(938796), n(323874), n(14289), n(35956);
+n.d(t, { A: () => A }), n(323874), n(14289), n(35956);
 var r = n(627968);
 n(64700);
 var i = n(503698),
     a = n.n(i),
     s = n(179771),
-    o = n(665260),
-    l = n(571356),
-    u = n(397927),
-    c = n(537569),
-    d = n(224750),
+    o = n(571356),
+    l = n(397927),
+    u = n(537569),
+    c = n(224750),
+    d = n(20015),
     _ = n(661191),
     f = n(510783),
     p = n(647053),
@@ -18,41 +18,41 @@ var i = n(503698),
     g = n(934715);
 let E = (e) => {
     switch (e) {
-        case d.yW.IP_LOCATION:
-            return u.L_e;
-        case d.yW.DISPLAYS_ADVERTISEMENTS:
-            return u.JD7;
+        case c.yW.IP_LOCATION:
+            return l.L_e;
+        case c.yW.DISPLAYS_ADVERTISEMENTS:
+            return l.JD7;
         default:
             return null;
     }
 };
 function A(e) {
     let t,
-        { application: n, scopes: i, redirectUri: l, approximateGuildCount: A, isEmbeddedFlow: T, disclosures: y } = e,
-        S = new Date(_.default.extractTimestamp(n.id)),
+        { application: n, scopes: i, redirectUri: o, approximateGuildCount: A, isEmbeddedFlow: T, disclosures: S } = e,
+        y = new Date(_.default.extractTimestamp(n.id)),
         v = (0, p.i4)(i),
-        C = (0, o.Lt)(n.flags ?? 0, h.gfo.EMBEDDED);
-    if (null != l && !C && !T)
+        C = (0, d.n)(n, h.gfo.EMBEDDED);
+    if (null != o && !C && !T)
         try {
-            let e = new URL(l);
+            let e = new URL(o);
             t = null != e.host && e.host.length > 0 ? e.origin : e.href;
         } catch (e) {
             t = null;
         }
-    let b = c.v.useExperiment({ location: "oauth2_authorize" });
+    let N = u.v.useExperiment({ location: "oauth2_authorize" });
     return (0, r.jsxs)("div", {
-        className: a()(g.B_, { [g.pN]: b.enabled }),
+        className: a()(g.B_, { [g.pN]: N.enabled }),
         children: [
-            null != t ? (0, r.jsx)(I, { icon: u.qYV, text: m.intl.format(m.t["5k5OKD"], { origin: t }) }) : null,
-            (0, r.jsx)(I, { icon: u.XAi, text: (0, f.w)(n) }),
-            (0, r.jsx)(I, { icon: u.O4, text: m.intl.formatToPlainString(m.t["+1bjc8"], { date: S }) }),
+            null != t ? (0, r.jsx)(I, { icon: l.qYV, text: m.intl.format(m.t["5k5OKD"], { origin: t }) }) : null,
+            (0, r.jsx)(I, { icon: l.XAi, text: (0, f.w)(n) }),
+            (0, r.jsx)(I, { icon: l.O4, text: m.intl.formatToPlainString(m.t["+1bjc8"], { date: y }) }),
             i.includes(s.F.BOT) && null != A
-                ? (0, r.jsx)(I, { icon: u.CnV, text: m.intl.formatToPlainString(m.t.UHGHSP, { guildCount: A }) })
+                ? (0, r.jsx)(I, { icon: l.CnV, text: m.intl.formatToPlainString(m.t.UHGHSP, { guildCount: A }) })
                 : null,
-            (0, r.jsx)(I, { icon: u.lmn, text: v }),
-            null != y
-                ? y.map((e) => {
-                      let t = (0, d.wI)(e),
+            (0, r.jsx)(I, { icon: l.lmn, text: v }),
+            null != S
+                ? S.map((e) => {
+                      let t = (0, c.wI)(e),
                           n = E(e);
                       return null != n && null != t ? (0, r.jsx)(I, { icon: n, text: t }) : null;
                   })
@@ -66,7 +66,7 @@ function I(e) {
         className: g.f_,
         children: [
             (0, r.jsx)(t, { className: g.u7, color: "currentColor" }),
-            (0, r.jsx)(l.E, { variant: "text-xs/normal", className: g.z9, children: n }),
+            (0, r.jsx)(o.E, { variant: "text-xs/normal", className: g.z9, children: n }),
         ],
     });
 }

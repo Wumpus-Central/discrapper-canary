@@ -1,23 +1,23 @@
-n.d(t, { A: () => V }), n(938796);
+n.d(t, { A: () => V });
 var i = n(627968);
 n(64700);
 var r = n(179771),
-    a = n(665260),
-    l = n(420970),
-    s = n(397927),
-    o = n(308368),
-    d = n(298990),
-    c = n(544420),
-    u = n(334738),
-    A = n(181658),
-    h = n(646865),
-    _ = n(795816),
-    m = n(851907),
-    p = n(980142),
-    g = n(572946),
-    E = n(293588),
-    f = n(267102),
-    I = n(869146),
+    a = n(420970),
+    l = n(397927),
+    s = n(308368),
+    o = n(298990),
+    d = n(544420),
+    c = n(334738),
+    u = n(181658),
+    A = n(646865),
+    h = n(795816),
+    _ = n(851907),
+    m = n(980142),
+    p = n(572946),
+    g = n(293588),
+    E = n(20015),
+    I = n(267102),
+    f = n(869146),
     C = n(383233),
     N = n(734057),
     T = n(375492),
@@ -44,10 +44,10 @@ async function k(e, t, n, i) {
             { errorCode: U.Lw6.NO_ELIGIBLE_ACTIVITY },
             "No eligible activity for application. Ensure an activity includes a party and appropriate secret.",
         );
-    let l = (0, p.A)(a, S.A);
+    let l = (0, m.A)(a, S.A);
     if (l) {
         let { lock: t } = (0, w.d5)(e);
-        return (0, d.qf)(a, l).then(() => {
+        return (0, o.qf)(a, l).then(() => {
             throw (
                 (t(),
                 new O.A(
@@ -57,7 +57,7 @@ async function k(e, t, n, i) {
             );
         });
     }
-    await o.A.sendActivityInviteUser({ userId: n, type: i, activity: a, content: r, location: "In-Game Invite" });
+    await s.A.sendActivityInviteUser({ userId: n, type: i, activity: a, content: r, location: "In-Game Invite" });
 }
 let V = {
     [U.e$_.SEND_ACTIVITY_JOIN_INVITE]: {
@@ -80,7 +80,7 @@ let V = {
                 } = e,
                 n = N.A.getDMFromUserId(t);
             null != n &&
-                (0, u.ack)(
+                (0, c.ack)(
                     n,
                     {
                         section: U.JJy.CLOSE_ACTIVITY_JOIN_REQUEST_RPC_COMMAND,
@@ -133,11 +133,11 @@ let V = {
                 } = e,
                 o = t.transport === M.z4.IPC ? (s ?? t.application.id) : t.application.id;
             if (null == o) throw new O.A({ errorCode: U.Lw6.INVALID_COMMAND }, "No application.");
-            let d = Promise.resolve(!1);
+            let c = Promise.resolve(!1);
             return (
                 n === U.xL.JOIN &&
-                    (d = c.A.join({ userId: i, sessionId: r, applicationId: o, channelId: a, messageId: l })),
-                d.then((e) => {
+                    (c = d.A.join({ userId: i, sessionId: r, applicationId: o, channelId: a, messageId: l })),
+                c.then((e) => {
                     if (!e) throw new O.A({ errorCode: U.Lw6.INVALID_INVITE }, "Invite is expired or invalid.");
                 })
             );
@@ -149,40 +149,40 @@ let V = {
             let { socket: t } = e,
                 r = t.application;
             if (null == r.id) throw new O.A({ errorCode: U.Lw6.INVALID_COMMAND }, "No application.");
-            let { channel: a, guild: l, frame: o } = (0, D.W)(),
-                c = (0, m.Ay)({ application: t.application, channelId: a?.id }),
-                u = null != c ? I.A.getWindow(c) : void 0;
+            let { channel: a, guild: s, frame: d } = (0, D.W)(),
+                c = (0, _.Ay)({ application: t.application, channelId: a?.id }),
+                u = null != c ? f.A.getWindow(c) : void 0;
             u?.closed && (u = void 0);
             let A = null != u ? U.BRT.POPOUT : U.BRT.APP;
-            if (((0, L.sP)({}, u?.document), null != o)) {
-                if (o.applicationId !== r.id)
+            if (((0, L.sP)({}, u?.document), null != d)) {
+                if (d.applicationId !== r.id)
                     throw new O.A({ errorCode: U.Lw6.INVALID_COMMAND }, "Application is not currently mounted.");
                 let e = T.A.getApplicationActivity(r.id);
-                if (null != e) (0, d.qf)(e, !1, A);
+                if (null != e) (0, o.qf)(e, !1, A);
                 else
                     throw new O.A(
                         { errorCode: U.Lw6.NO_ELIGIBLE_ACTIVITY },
                         "No eligible activity for application. Ensure an activity was set using setActivity.",
                     );
             } else
-                (0, s.mMO)(
+                (0, l.mMO)(
                     async () => {
                         let { default: e } = await Promise.all([n.e("43600"), n.e("42821")]).then(n.bind(n, 234355));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
-                                guild: l,
+                                guild: s,
                                 channel: a,
                                 applicationId: r.id,
                                 analyticsLocation: U.ThZ.ACTIVITY_RPC,
                                 source: U.PE1.ACTIVITY_INVITE,
                             });
                     },
-                    { contextKey: A === U.BRT.POPOUT ? s.KX8 : s.SYi },
+                    { contextKey: A === U.BRT.POPOUT ? l.KX8 : l.SYi },
                 );
         },
     },
-    [U.e$_.INITIATE_IMAGE_UPLOAD]: (0, l.T)(U.e$_.INITIATE_IMAGE_UPLOAD, {
+    [U.e$_.INITIATE_IMAGE_UPLOAD]: (0, a.T)(U.e$_.INITIATE_IMAGE_UPLOAD, {
         scope: { [M.sm.ANY]: [r.F.RPC, M.hj, M.VH] },
         handler(e) {
             let { socket: t } = e,
@@ -192,10 +192,10 @@ let V = {
             return new Promise((e, t) => {
                 !(function (e, t) {
                     let n;
-                    if ((0, h.f)()) n = I.A.getWindow(U.MLl.ACTIVITY_POPOUT);
+                    if ((0, A.f)()) n = f.A.getWindow(U.MLl.ACTIVITY_POPOUT);
                     else {
                         let e = x.A.getLastFocusedWindowId();
-                        n = null == e ? null : (0, f.Iy)(e)?.renderWindow;
+                        n = null == e ? null : (0, I.Iy)(e)?.renderWindow;
                     }
                     if (null == n) throw new O.A({ errorCode: U.Lw6.UNKNOWN_ERROR }, "No valid window found");
                     let i = n.document.createElement("input");
@@ -220,8 +220,8 @@ let V = {
                         i.click();
                 })(
                     async (r) => {
-                        let a = await (0, _.CS)(n, i, r);
-                        (0, v.Vq)(a) && (0, v.Vq)(a.url) && !(a instanceof A.A) ? e({ image_url: a.url }) : t(a);
+                        let a = await (0, h.CS)(n, i, r);
+                        (0, v.Vq)(a) && (0, v.Vq)(a.url) && !(a instanceof u.A) ? e({ image_url: a.url }) : t(a);
                     },
                     () => t(Error("Upload canceled")),
                 );
@@ -230,7 +230,7 @@ let V = {
             });
         },
     }),
-    [U.e$_.OPEN_SHARE_MOMENT_DIALOG]: (0, l.T)(U.e$_.OPEN_SHARE_MOMENT_DIALOG, {
+    [U.e$_.OPEN_SHARE_MOMENT_DIALOG]: (0, a.T)(U.e$_.OPEN_SHARE_MOMENT_DIALOG, {
         scope: { [M.sm.ANY]: [M.VH] },
         handler(e) {
             let {
@@ -240,15 +240,15 @@ let V = {
             (0, R.lG)(t.transport);
             let i = t.application.id;
             if (null == i) throw new O.A({ errorCode: U.Lw6.INVALID_COMMAND }, "No application.");
-            if (!(0, a.Lt)(t.application.flags ?? 0, U.gfo.EMBEDDED))
+            if (!(0, E.n)(t.application, U.gfo.EMBEDDED))
                 throw new O.A({ errorCode: U.Lw6.INVALID_COMMAND }, "This application cannot access this API");
             let r = (0, j.A)();
             if (!y.A.isDiscordCdnUrl(n))
                 throw new O.A({ errorCode: U.Lw6.INVALID_PAYLOAD }, "mediaUrl must be a Discord CDN url");
-            (0, g.g)({ applicationId: i, channelId: r?.id, mediaUrl: n });
+            (0, p.g)({ applicationId: i, channelId: r?.id, mediaUrl: n });
         },
     }),
-    [U.e$_.SHARE_INTERACTION]: (0, l.T)(U.e$_.SHARE_INTERACTION, {
+    [U.e$_.SHARE_INTERACTION]: (0, a.T)(U.e$_.SHARE_INTERACTION, {
         scope: { [M.sm.ANY]: [M.VH, M.hj] },
         handler(e) {
             let t,
@@ -257,21 +257,21 @@ let V = {
                     args: {
                         command: i,
                         preview_image: r,
-                        components: l,
-                        require_launch_channel: o,
-                        content: d,
-                        options: c,
-                        pid: u,
+                        components: a,
+                        require_launch_channel: s,
+                        content: o,
+                        options: d,
+                        pid: c,
                     },
                 } = e,
-                A = n.application.id;
-            if (null == A) throw new O.A({ errorCode: U.Lw6.INVALID_COMMAND }, "No application.");
-            if (!G.mO.includes(A)) throw new O.A({ errorCode: U.Lw6.INVALID_COMMAND }, "Unsupported application.");
-            if (!(0, a.Lt)(n.application.flags ?? 0, U.gfo.EMBEDDED))
+                u = n.application.id;
+            if (null == u) throw new O.A({ errorCode: U.Lw6.INVALID_COMMAND }, "No application.");
+            if (!G.mO.includes(u)) throw new O.A({ errorCode: U.Lw6.INVALID_COMMAND }, "Unsupported application.");
+            if (!(0, E.n)(n.application, U.gfo.EMBEDDED))
                 throw new O.A({ errorCode: U.Lw6.INVALID_COMMAND }, "This application cannot access this API");
-            let h = (0, j.A)();
-            if (null == h && o) throw new O.A({ errorCode: U.Lw6.INVALID_COMMAND }, "No channel found");
-            if (null !== r || null !== l || null !== d) {
+            let A = (0, j.A)();
+            if (null == A && s) throw new O.A({ errorCode: U.Lw6.INVALID_COMMAND }, "No channel found");
+            if (null !== r || null !== a || null !== o) {
                 let e = [];
                 void 0 !== r &&
                     (e = [
@@ -287,22 +287,22 @@ let V = {
                     ]),
                     (t = new C.Ay({
                         id: b.default.cast(b.default.fromTimestamp(Date.now())),
-                        applicationId: A,
-                        content: d,
-                        components: l,
+                        applicationId: u,
+                        content: o,
+                        components: a,
                         attachments: e,
                     }));
             }
             return new Promise((e) => {
                 let n = !1,
-                    r = (0, w.d5)(u),
-                    a = s.SYi;
-                (I.A.getWindowOpen(U.MLl.ACTIVITY_POPOUT) || r.context === U.BRT.POPOUT) && (a = s.KX8),
-                    (0, E.m)({
-                        applicationId: A,
-                        channel: h,
-                        command: { name: i, options: c },
-                        requireLaunchChannel: !0 === o,
+                    r = (0, w.d5)(c),
+                    a = l.SYi;
+                (f.A.getWindowOpen(U.MLl.ACTIVITY_POPOUT) || r.context === U.BRT.POPOUT) && (a = l.KX8),
+                    (0, g.m)({
+                        applicationId: u,
+                        channel: A,
+                        command: { name: i, options: d },
+                        requireLaunchChannel: !0 === s,
                         onShareResult: (t) => {
                             n || (n = t), r.lock(), e({ success: n });
                         },

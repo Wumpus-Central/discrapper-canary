@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { A: () => I, J: () => A }), n(938796);
+n.d(t, { A: () => I, J: () => A });
 var r = n(64700),
-    i = n(665260),
-    a = n(554146),
-    s = n(522305),
-    o = n(735991),
-    l = n(627363),
+    i = n(554146),
+    a = n(522305),
+    s = n(735991),
+    o = n(627363),
+    l = n(20015),
     u = n(826673),
     c = n(438652),
     d = n(954571),
@@ -14,7 +14,7 @@ var r = n(64700),
     p = n(49999);
 let h = new Set();
 function m(e) {
-    return (0, i.Lt)(e.flags, f.gfo.CLOUD_GAMING_DEMO) && (0, i.Lt)(e.flags, f.gfo.EMBEDDED);
+    return (0, l.n)(e, f.gfo.CLOUD_GAMING_DEMO) && (0, l.n)(e, f.gfo.EMBEDDED);
 }
 function g(e) {
     let { countryCode: t, activity: n } = e;
@@ -26,7 +26,7 @@ function g(e) {
 function E(e) {
     let t = null != e ? (0, _.A)(e) : null,
         n = t?.id,
-        { data: i, refetch: a } = (0, l.YY)(n);
+        { data: i, refetch: a } = (0, o.YY)(n);
     return (
         r.useEffect(() => {
             null == n || null == i || null != i.bot || h.has(n) || (a(), h.add(n));
@@ -44,24 +44,24 @@ function A(e) {
         (!!m(e) ||
             (null != r &&
                 null != n &&
-                !!(0, o.Ag)(n) &&
+                !!(0, s.Ag)(n) &&
                 (n?.embeddedActivityConfig == null ||
                     !!g({ countryCode: t?.alpha2, activity: n.embeddedActivityConfig }))))
     );
 }
 function I(e) {
     let { application: t, analyticsLocations: n } = e,
-        i = A(t),
+        s = A(t),
         { bot: o } = t ?? { bot: null },
         l = E(t),
         { bot: c } = l ?? { bot: null },
         _ = l?.id,
         h = c?.id;
     return r.useMemo(() => {
-        if (!i || null == t) return null;
+        if (!s || null == t) return null;
         let e = () => {
-            (0, u.Dr)(a.M.CLOUD_PLAY_NEW_BADGE, { dismissAction: p.i.TAKE_ACTION }),
-                (0, u.Dr)(a.M.CLOUD_PLAY_POPOVER, { dismissAction: p.i.TAKE_ACTION });
+            (0, u.Dr)(i.M.CLOUD_PLAY_NEW_BADGE, { dismissAction: p.i.TAKE_ACTION }),
+                (0, u.Dr)(i.M.CLOUD_PLAY_POPOVER, { dismissAction: p.i.TAKE_ACTION });
         };
         return m(t) && null != o
             ? () => {
@@ -71,7 +71,7 @@ function I(e) {
                           launching_application_id: t.id,
                           location_stack: n,
                       }),
-                      (0, s.Q)({ appId: t.id, botId: o.id, analyticsLocations: n ?? [] });
+                      (0, a.Q)({ appId: t.id, botId: o.id, analyticsLocations: n ?? [] });
               }
             : null != _ && null != h
               ? () => {
@@ -81,8 +81,8 @@ function I(e) {
                             launching_application_id: _,
                             location_stack: n,
                         }),
-                        (0, s.Q)({ appId: _, botId: h, analyticsLocations: n ?? [] });
+                        (0, a.Q)({ appId: _, botId: h, analyticsLocations: n ?? [] });
                 }
               : void 0;
-    }, [i, t, o, _, h, n]);
+    }, [s, t, o, _, h, n]);
 }

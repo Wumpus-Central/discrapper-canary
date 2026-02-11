@@ -1,4 +1,4 @@
-a.d(t, { A: () => m }), a(938796);
+a.d(t, { A: () => m });
 var n = a(627968),
     i = a(64700),
     s = a(397927),
@@ -11,12 +11,7 @@ var n = a(627968),
 let h = r.A.getArticleURL(c.MVz.BOT_DATA_ACCESS);
 function m(e) {
     let { application: t } = e,
-        {
-            hasMessageContent: a,
-            hasGuildPresences: r,
-            hasGuildMembers: c,
-            hasIntents: m,
-        } = (0, l.Z)({ flags: t?.flags }),
+        { hasMessageContent: a, hasGuildPresences: r, hasGuildMembers: c, hasIntents: m } = (0, l.Z)(t),
         _ = i.useCallback(() => {
             null != t.privacy_policy_url && (0, o.h)({ href: t.privacy_policy_url });
         }, [t.privacy_policy_url]);

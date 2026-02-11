@@ -1,16 +1,15 @@
 "use strict";
-n.d(t, { e: () => d, x: () => c }), n(938796);
+n.d(t, { e: () => d, x: () => c });
 var r = n(64700),
-    i = n(665260),
-    a = n(735991),
+    i = n(735991),
+    a = n(20015),
     s = n(216238),
     o = n(652215);
 function l(e) {
-    if (!(0, a.$B)(e)) return !1;
-    let t = e.flags ?? 0,
-        n = (0, i.Lt)(t, o.gfo.EMBEDDED),
-        r = (0, i.Lt)(t, o.gfo.CONTEXTLESS_ACTIVITY);
-    return n && r;
+    if (!(0, i.$B)(e)) return !1;
+    let t = (0, a.n)(e, o.gfo.EMBEDDED),
+        n = (0, a.n)(e, o.gfo.CONTEXTLESS_ACTIVITY);
+    return t && n;
 }
 function u(e, t) {
     return null != e && !!l(e);

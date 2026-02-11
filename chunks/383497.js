@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { O: () => I }), n(938796);
+n.d(t, { O: () => I });
 var r = n(344351),
-    i = n(665260),
-    a = n(73153),
-    s = n(198982),
+    i = n(73153),
+    a = n(198982),
+    s = n(20015),
     o = n(734057),
     l = n(933958),
     u = n(710839),
@@ -14,18 +14,18 @@ var r = n(344351),
     p = n(574152),
     h = n(652215);
 async function m(e) {
-    let { applicationId: t, channelId: n, guildId: i } = e;
+    let { applicationId: t, channelId: n, guildId: s } = e;
     try {
         return await (0, f.A)(t, n);
     } catch (o) {
-        let e = null != i ? r.T.GUILD_CHANNEL : r.T.PRIVATE_CHANNEL;
-        a.h.dispatch({
+        let e = null != s ? r.T.GUILD_CHANNEL : r.T.PRIVATE_CHANNEL;
+        i.h.dispatch({
             type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
             nonce: "",
             applicationId: t,
             channelId: n ?? null,
-            guildId: i ?? null,
-            error: new s.LG(o),
+            guildId: s ?? null,
+            error: new a.LG(o),
             locationKind: e,
         });
     }
@@ -79,13 +79,13 @@ async function E(e) {
     return !0;
 }
 async function A(e) {
-    let { application: t, applicationId: n, channel: r, onConfirmActivityLaunchChecksAlertOpen: a } = e,
-        s = t ?? (await m({ applicationId: n, channelId: r?.id, guildId: r?.getGuildId() ?? void 0 }));
+    let { application: t, applicationId: n, channel: r, onConfirmActivityLaunchChecksAlertOpen: i } = e,
+        a = t ?? (await m({ applicationId: n, channelId: r?.id, guildId: r?.getGuildId() ?? void 0 }));
     return (
-        null != s &&
-        (!!((0, i.Lt)(s.flags, h.gfo.EMBEDDED_RELEASED) || s.isVerified || l.Ay.hasActivityEverBeenLaunched(n)) ||
+        null != a &&
+        (!!((0, s.n)(a, h.gfo.EMBEDDED_RELEASED) || a.isVerified || l.Ay.hasActivityEverBeenLaunched(n)) ||
             new Promise((e) => {
-                a?.(), (0, d.q)({ application: s, onConfirm: () => e(!0), onCancel: () => e(!1) });
+                i?.(), (0, d.q)({ application: a, onConfirm: () => e(!0), onCancel: () => e(!1) });
             }))
     );
 }

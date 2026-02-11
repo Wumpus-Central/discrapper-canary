@@ -1,4 +1,4 @@
-n.d(t, { A: () => A }), n(938796);
+n.d(t, { A: () => A });
 var i = n(627968);
 n(64700);
 var s = n(158954),
@@ -30,7 +30,7 @@ function u(e) {
 function A(e) {
     let { user: t } = e,
         n = (0, l.bG)([d.A], () => d.A.getUserProfile(t.id)?.application),
-        { hasMessageContent: A, hasGuildPresences: x, hasGuildMembers: m } = (0, r.Z)({ flags: n?.flags });
+        { hasMessageContent: A, hasGuildPresences: x, hasGuildMembers: m } = (0, r.Z)(n);
     return (0, i.jsxs)(s.IpV, {
         fade: !0,
         className: c.XG,

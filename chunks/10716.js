@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { $: () => c, A: () => T }), n(938796);
-var r = n(665260),
-    i = n(311907),
-    a = n(73153),
+n.d(t, { $: () => c, A: () => T });
+var r = n(311907),
+    i = n(73153),
+    a = n(20015),
     s = n(253932),
     o = n(652215);
 function l() {
@@ -31,7 +31,7 @@ function m(e) {
 }
 function g(e) {
     let { applications: t } = e;
-    (d = "LOADED"), (_ = t.filter((e) => null != e.flags && (0, r.Lt)(e.flags, o.gfo.EMBEDDED)));
+    (d = "LOADED"), (_ = t.filter((e) => (0, a.n)(e, o.gfo.EMBEDDED)));
 }
 function E(e) {
     let { type: t } = e;
@@ -41,7 +41,7 @@ function A(e) {
     let { filter: t } = e;
     u.filter = t;
 }
-class I extends i.Ay.PersistedStore {
+class I extends r.Ay.PersistedStore {
     static displayName = "DeveloperActivityShelfStore";
     static persistKey = "DeveloperActivityShelfStore";
     initialize(e) {
@@ -76,7 +76,7 @@ class I extends i.Ay.PersistedStore {
         return this.getIsEnabled() && null != _.find((t) => t.id === e);
     }
 }
-let T = new I(a.h, {
+let T = new I(i.h, {
     LOGOUT: f,
     DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE: p,
     DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE: h,

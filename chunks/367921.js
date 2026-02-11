@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { Ay: () => C, Ke: () => y, Ro: () => I, X1: () => v }), n(938796);
+n.d(t, { Ay: () => C, Ke: () => S, Ro: () => I, X1: () => v });
 var r = n(627968);
 n(64700);
 var i = n(284009),
     a = n.n(i),
-    s = n(665260),
-    o = n(435371),
-    l = n(397927),
-    u = n(158032),
-    c = n(10716),
-    d = n(688810),
+    s = n(435371),
+    o = n(397927),
+    l = n(158032),
+    u = n(10716),
+    c = n(688810),
+    d = n(20015),
     _ = n(156312),
     f = n(295405),
     p = n(927578),
@@ -52,14 +52,14 @@ function I(e) {
 function T(e, t) {
     null != e.current && (e.current.scrollIntoView({ behavior: "smooth" }), t());
 }
-let y = (e) => {
+let S = (e) => {
         let { premiumSubscription: t, isGift: n, planGroup: r, isPrepaid: i, inReverseTrial: a } = e,
             {
                 application: s,
                 selectedPlan: o,
                 hasAcceptedTerms: l,
                 purchaseType: u,
-                paymentSourceId: c,
+                paymentSourceId: d,
                 activeSubscription: f,
                 devShelfFetchState: p,
                 hasPaymentSources: h,
@@ -72,27 +72,27 @@ let y = (e) => {
                 planGroup: r,
                 isPrepaidPaymentSource: i,
                 inReverseTrial: a,
-                paymentSourceId: c,
+                paymentSourceId: d,
                 hasPaymentSources: h,
             }),
-            { analyticsLocations: g } = (0, d.Ay)();
+            { analyticsLocations: g } = (0, c.Ay)();
         return {
             buttonLabel: m,
             analyticsLocations: g,
             application: s,
             hasAcceptedTerms: l,
-            paymentSourceId: c,
+            paymentSourceId: d,
             activeSubscription: f,
             devShelfFetchState: p,
             hasPaymentSources: h,
         };
     },
-    S = async (e) => {
+    y = async (e) => {
         let { paymentSourceId: t, activeSubscription: n, analyticsLocations: r, onNext: i } = e,
             a = f.A.getPaymentSource(t);
         null != a &&
             (await (0, h.c_)(t, (0, m.MP)(n)),
-            await u.uK(n, a, n.currency, (0, p.UC)(n.items, n.currency, n.paymentSourceId), r),
+            await l.uK(n, a, n.currency, (0, p.UC)(n.items, n.currency, n.paymentSourceId), r),
             i());
     },
     v = (e, t) => {
@@ -100,9 +100,9 @@ let y = (e) => {
                 invoiceError: n,
                 planError: i,
                 disablePurchase: a,
-                needsPaymentSource: o,
-                onPaymentSourceAdd: u,
-                onNext: d,
+                needsPaymentSource: s,
+                onPaymentSourceAdd: l,
+                onNext: c,
                 isTrial: _,
                 inReverseTrial: f,
                 makePurchase: p,
@@ -112,25 +112,25 @@ let y = (e) => {
             } = e,
             {
                 buttonLabel: I,
-                analyticsLocations: y,
+                analyticsLocations: S,
                 application: v,
                 hasAcceptedTerms: C,
-                paymentSourceId: b,
-                activeSubscription: N,
+                paymentSourceId: N,
+                activeSubscription: b,
                 devShelfFetchState: R,
                 hasPaymentSources: O,
             } = t;
         if (null != n || null != i || a) return { variant: "active", text: I, disabled: !0 };
-        if (o && O)
+        if (s && O)
             return {
                 text: I,
                 tooltipText: A.intl.string(A.t.L7jbQV),
                 variant: "primary",
                 type: "submit",
                 dataTestId: "submitButton",
-                onClick: u,
+                onClick: l,
             };
-        if (o && !O)
+        if (s && !O)
             return {
                 tooltipText: A.intl.string(A.t.L7jbQV),
                 variant: "active",
@@ -139,7 +139,7 @@ let y = (e) => {
                 dataTestId: "submitButton",
                 disabled: !0,
             };
-        if ((0, s.Lt)(v?.flags ?? 0, g.gfo.EMBEDDED) && R === c.$.LOADING)
+        if ((0, d.n)(v, g.gfo.EMBEDDED) && R === u.$.LOADING)
             return {
                 tooltipText: A.intl.string(A.t.cjA5tj),
                 variant: "active",
@@ -155,7 +155,7 @@ let y = (e) => {
                 onClick: C ? p : () => T(h, m),
                 loading: E,
                 iconPosition: "start",
-                icon: () => (0, r.jsx)(l.tvc, { color: "currentColor" }),
+                icon: () => (0, r.jsx)(o.tvc, { color: "currentColor" }),
                 dataTestId: C ? "purchase" : "submitButton",
             };
         else if (!C)
@@ -167,18 +167,18 @@ let y = (e) => {
                 onClick: () => T(h, m),
                 dataTestId: "submitButton",
             };
-        else if (f && null != N && null != b)
+        else if (f && null != b && null != N)
             return {
                 variant: "active",
                 text: I,
                 dataTestId: "purchase",
-                onClick: () => S({ paymentSourceId: b, activeSubscription: N, analyticsLocations: y, onNext: d }),
+                onClick: () => y({ paymentSourceId: N, activeSubscription: b, analyticsLocations: S, onNext: c }),
                 loading: E,
             };
         else return { variant: "active", text: I, dataTestId: "purchase", onClick: p, loading: E };
     };
 function C(e) {
-    let { premiumSubscription: t, isGift: n, planGroup: i, isPrepaid: a, inReverseTrial: s } = e,
+    let { premiumSubscription: t, isGift: n, planGroup: i, isPrepaid: a, inReverseTrial: l } = e,
         {
             buttonLabel: u,
             analyticsLocations: c,
@@ -188,7 +188,7 @@ function C(e) {
             activeSubscription: p,
             devShelfFetchState: h,
             hasPaymentSources: m,
-        } = y({ premiumSubscription: t, isGift: n, planGroup: i, isPrepaid: a, inReverseTrial: s }),
+        } = S({ premiumSubscription: t, isGift: n, planGroup: i, isPrepaid: a, inReverseTrial: l }),
         {
             tooltipText: g,
             dataTestId: E,
@@ -204,6 +204,6 @@ function C(e) {
             hasPaymentSources: m,
         });
     return null != g
-        ? (0, r.jsx)(o.m_, { text: g, children: (0, r.jsx)(l.Button, { "data-testid": E, ...A }) })
-        : (0, r.jsx)(l.Button, { "data-testid": E, ...A });
+        ? (0, r.jsx)(s.m_, { text: g, children: (0, r.jsx)(o.Button, { "data-testid": E, ...A }) })
+        : (0, r.jsx)(o.Button, { "data-testid": E, ...A });
 }
