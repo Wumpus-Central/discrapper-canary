@@ -2668,6 +2668,7 @@ var tO = (function (e) {
             (e.SETTINGS_IGNORED_USERS = "Ignored Users"),
             (e.SETTINGS_INVENTORY = "Library Inventory"),
             (e.SETTINGS_SWIPE_RIGHT_TO_LEFT = "Swipe Right to Left Setting"),
+            (e.SETTINGS_REACTION_NOTIFICATIONS = "Reaction Notifications"),
             (e.TEXT_COMPONENT = "Text Component"),
             (e.DESIGN_SYSTEM = "Design System"),
             (e.DESIGN_SYSTEM_TEXT = "Design System (Text)"),
@@ -3186,6 +3187,7 @@ let tw = { page: "Direct", object: "Web URL" },
         SECURE_FRAMES: "Secure Frames",
         SECURE_FRAMES_VERIFIED_DEVICES: "Secure Frames Verified Devices",
         PRIVATE_BROWSING: "WARP+",
+        REACTION_NOTIFICATIONS: "Reaction Notifications",
     });
 var tP = (function (e) {
         return (

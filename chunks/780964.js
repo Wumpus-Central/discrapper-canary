@@ -105,6 +105,7 @@ var r = (function (e) {
         (e.GO_LIVE_NOTIFICATIONS = "go_live_notifications"),
         (e.VOICE_ACTIVITY_NOTIFICATIONS = "voice_activity_notifications"),
         (e.REACTION_NOTIFICATIONS = "reaction_notifications"),
+        (e.GDM_ALL_REACTION_NOTIFICATIONS = "gdm_all_reaction_notifications"),
         (e.FRIEND_ONLINE_NOTIFICATIONS = "friend_online_notifications"),
         (e.PROFILE_UPDATES_NOTIFICATIONS = "profile_updates_notifications"),
         (e.GAME_UPDATE_NOTIFICATIONS = "game_update_notifications"),
