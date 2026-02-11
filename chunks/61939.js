@@ -6,8 +6,14 @@ var i = n(945810),
     r = n(954571),
     o = n(661191),
     c = n(652215);
-let d = (0, i.mj)({
+(0, i.mj)({
     name: "2026-01-red-dot-navigate-to-mentions",
+    kind: "user",
+    defaultConfig: { enableTracking: !1, enableNavigation: !1 },
+    variations: { 1: { enableTracking: !0, enableNavigation: !1 }, 2: { enableTracking: !0, enableNavigation: !0 } },
+});
+let d = (0, i.mj)({
+    name: "2026-02-red-dot-navigate-to-mentions-web",
     kind: "user",
     defaultConfig: { enableTracking: !1, enableNavigation: !1 },
     variations: { 1: { enableTracking: !0, enableNavigation: !1 }, 2: { enableTracking: !0, enableNavigation: !0 } },
