@@ -39,6 +39,7 @@ let u = {
         [i.M.BOGO_2025_ANNOUNCEMENT_MODAL]: 0,
         [i.M.NITRO_DROP_REWARD]: 0,
         [i.M.QUEST_HOME_ENTRYPOINT_ONBOARDING]: 0,
+        [i.M.QUEST_HOME_ENTRYPOINT_TAKEOVER_BADGE]: 0,
     },
     c = s.A.Millis.DAY;
 function d(e) {

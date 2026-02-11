@@ -1,15 +1,15 @@
 "use strict";
 n.d(t, {
     IL: () => _,
-    Jq: () => p,
+    Jq: () => h,
     L0: () => d,
-    PN: () => g,
-    XQ: () => m,
+    PN: () => E,
+    XQ: () => g,
     Zm: () => f,
-    ef: () => h,
+    ef: () => p,
     ki: () => c,
-    vf: () => E,
-    zd: () => A,
+    vf: () => A,
+    zd: () => I,
 });
 var r = n(554146);
 let i = [
@@ -48,6 +48,7 @@ let i = [
         r.M.DISCOUNT_OFFER_ACTION_SHEET,
         r.M.MOBILE_PREMIUM_TRIAL_OFFER_ACTION_SHEET,
         r.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER,
+        r.M.QUEST_HOME_ENTRYPOINT_TAKEOVER_BADGE,
     ],
     o = [r.M.GAME_SHOP_NEW_BADGE],
     l = [
@@ -72,22 +73,22 @@ function _(e) {
 function f(e) {
     return c(e) || d(e) || _(e);
 }
-function p(e) {
+function h(e) {
     return !f(e);
 }
-function h(e) {
+function p(e) {
     return l.includes(e);
 }
-function m(e) {
+function g(e) {
     return u.includes(e);
 }
-function g(e) {
+function E(e) {
     return o.includes(e);
 }
-function E(e) {
-    return h(e) || m(e) || g(e);
+function A(e) {
+    return p(e) || g(e) || E(e);
 }
-let A = Object.keys(r.M)
+let I = Object.keys(r.M)
     .map((e) => parseInt(e))
     .filter((e) => !isNaN(e));
-A.filter(p);
+I.filter(h);
