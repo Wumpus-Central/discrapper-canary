@@ -2047,6 +2047,7 @@ let e1 = 128,
         API_DOCS_WEBHOOKS: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/developers/docs/resources/webhook`,
         DEVELOPER_PORTAL: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/developers`,
         DEVELOPER_PORTAL_TEAMS: `${window.GLOBAL_ENV.DEVELOPERS_ENDPOINT}/developers/teams`,
+        DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY: `${window.GLOBAL_ENV.DEVELOPERS_ENDPOINT}/developers/applications/select/game-identity`,
         DEVELOPER_PORTAL_PAYOUT_SETTINGS: (e) =>
             `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/developers/teams/${e}/payout-settings`,
         DEVELOPER_PORTAL_GUILD_ANALYTICS: (e) => `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/developers/servers/${e}`,
