@@ -1,182 +1,187 @@
 n.d(t, { A: () => Q });
 var i = n(627968),
-    l = n(64700),
-    s = n(503698),
-    a = n.n(s),
+    s = n(64700),
+    a = n(503698),
+    l = n.n(a),
     r = n(311907),
     o = n(397927),
-    d = n(73153),
-    c = n(384904),
+    c = n(73153),
+    d = n(384904),
     u = n(923408),
-    h = n(339048),
-    A = n(73825),
-    g = n(252452),
-    m = n(974544),
-    p = n(531260),
-    _ = n(262077),
-    x = n(160946),
-    f = n(235986),
-    E = n(769015),
-    C = n(723588),
-    I = n(608699),
-    S = n(714308),
-    b = n(478407),
+    _ = n(339048),
+    m = n(73825),
+    A = n(252452),
+    g = n(974544),
+    h = n(531260),
+    x = n(262077),
+    p = n(160946),
+    E = n(235986),
+    C = n(769015),
+    T = n(723588),
+    S = n(608699),
+    I = n(714308),
+    f = n(478407),
     N = n(195043),
-    T = n(780964),
+    b = n(780964),
     j = n(840065),
     v = n(351906),
-    y = n(628965),
-    R = n(615405),
-    O = n(295405),
+    O = n(628965),
+    R = n(287809),
+    y = n(615405),
+    P = n(295405),
     L = n(166403),
     D = n(469778),
     M = n(954571),
     G = n(975571),
     U = n(927578),
-    P = n(637073),
-    k = n(887997),
-    w = n(177653),
-    V = n(159906),
+    k = n(637073),
+    V = n(887997),
+    H = n(177653),
+    w = n(159906),
     B = n(758400),
-    H = n(788868),
+    Y = n(788868),
     F = n(652215),
-    Y = n(355097),
+    z = n(355097),
     W = n(531525),
     K = n(985018),
-    z = n(547605);
-function X() {
+    Z = n(547605);
+function q() {
     return (0, i.jsx)(o.ZpM, {
-        className: z.wb,
+        className: Z.wb,
         type: o.ZpM.Types.CUSTOM,
-        children: (0, i.jsxs)(f.A, {
-            align: f.A.Align.CENTER,
+        children: (0, i.jsxs)(E.A, {
+            align: E.A.Align.CENTER,
             children: [
-                (0, i.jsx)(E.A, { game: null, size: E.M.SMALL, className: z.pV }),
-                (0, i.jsx)("span", { className: z.O, children: K.intl.string(K.t["jy/hyj"]) }),
+                (0, i.jsx)(C.A, { game: null, size: C.M.SMALL, className: Z.pV }),
+                (0, i.jsx)("span", { className: Z.O, children: K.intl.string(K.t["jy/hyj"]) }),
             ],
         }),
     });
 }
-function q() {
-    let e = (0, r.bG)([D.A], () => D.A.getForApplication(H.tv));
+function X() {
+    let e = (0, r.bG)([D.A], () => D.A.getForApplication(Y.tv));
     return (
-        l.useEffect(() => {
-            (0, h.LM)(H.tv);
+        s.useEffect(() => {
+            (0, _.LM)(Y.tv);
         }, []),
         (0, i.jsx)(o.nVY, {
             label: K.intl.string(K.t["2GKrvn"]),
             description: K.intl.string(K.t.kNEjGm),
             children:
                 null != e && U.Ay.hasAccountCredit(e)
-                    ? (0, i.jsx)(w.A, { className: z.fX, entitlements: e })
-                    : (0, i.jsx)(X, {}),
+                    ? (0, i.jsx)(H.A, { className: Z.fX, entitlements: e })
+                    : (0, i.jsx)(q, {}),
         })
     );
 }
 function J() {
-    return (0, i.jsx)("hr", { className: z.hr });
+    return (0, i.jsx)("hr", { className: Z.hr });
 }
 let Q = function () {
-    let e = (0, r.bG)([L.A], () => L.A.getPremiumTypeSubscription()),
-        t = (0, _.A)({ subscriptionFilter: (e) => B.Hy.has(e.status) }),
-        n = t.length > 1,
-        s = (0, r.bG)(
-            [O.A],
-            () => (null != e && null != e.paymentSourceId ? O.A.getPaymentSource(e.paymentSourceId) : null),
-            [e],
+    var e;
+    let t = (0, r.bG)([L.A], () => L.A.getPremiumTypeSubscription()),
+        n = (0, x.A)({ subscriptionFilter: (e) => B.Hy.has(e.status) }),
+        a = (0, r.bG)([R.default], () => R.default.getCurrentUser()),
+        _ = n.length > 1,
+        E = (0, r.bG)(
+            [P.A],
+            () => (null != t && null != t.paymentSourceId ? P.A.getPaymentSource(t.paymentSourceId) : null),
+            [t],
         ),
-        h = (0, r.bG)([L.A], () => L.A.hasFetchedSubscriptions()),
-        f = (0, r.bG)([R.A], () => R.A.isBusy),
-        E = (0, x.Y)(),
-        D = (0, r.bG)([y.A], () => y.A.getSubsection()),
-        U = (0, r.bG)([L.A], () => L.A.getActiveApplicationSubscriptions()?.length ?? 0),
-        w = (0, r.bG)(
+        C = (0, r.bG)([L.A], () => L.A.hasFetchedSubscriptions()),
+        D = (0, r.bG)([y.A], () => y.A.isBusy),
+        U = (0, p.Y)(),
+        H = (0, r.bG)([O.A], () => O.A.getSubsection()),
+        q = (0, r.bG)([L.A], () => L.A.getActiveApplicationSubscriptions()?.length ?? 0),
+        Q = (0, r.bG)(
             [L.A],
             () =>
                 Object.values(L.A.getSubscriptions() ?? {})
                     .filter((e) => e.type === F.rzx.GUILD)
                     .filter((e) => e.status !== F.Dmq.ENDED).length,
         ),
-        X = (0, p.A)({ forceFetch: !0 }),
-        Q = (0, P.d)(),
-        Z = null !== e ? e.currentPeriodEnd : void 0,
-        $ =
-            !(Q && !(X.unactivatedUnits.length > 0)) &&
-            (X.fractionalState !== H.xc.NONE || X.unactivatedUnits.length > 0);
-    return (l.useEffect(
+        $ = (0, h.A)({ forceFetch: !0 }),
+        ee = (0, k.d)(),
+        et = null !== t ? t.currentPeriodEnd : void 0,
+        en =
+            !(ee && !($.unactivatedUnits.length > 0)) &&
+            ($.fractionalState !== Y.xc.NONE || $.unactivatedUnits.length > 0);
+    return (s.useEffect(
         () => (
-            d.h.wait(() => {
-                (0, A.zS)(), c.hP(), (0, u.CD)(), c.$o();
+            c.h.wait(() => {
+                (0, m.zS)(), d.hP(), (0, u.CD)(), d.$o();
             }),
             function () {
-                g.A.clearSubsection();
+                A.A.clearSubsection();
             }
         ),
         [],
     ),
     v.A.enabled)
-        ? (0, i.jsx)(m.A, {})
-        : h && E
-          ? D === Y.nR
-              ? (0, i.jsx)(I.A, { onGoBack: () => g.A.clearSubsection() })
-              : D === Y.PZ
-                ? (0, i.jsx)(b.A, { onGoBack: () => g.A.clearSubsection() })
+        ? (0, i.jsx)(g.A, {})
+        : C && U
+          ? H === z.nR
+              ? (0, i.jsx)(S.A, { onGoBack: () => A.A.clearSubsection() })
+              : H === z.PZ
+                ? (0, i.jsx)(f.A, { onGoBack: () => A.A.clearSubsection() })
                 : (0, i.jsx)("div", {
-                      className: z.kL,
+                      className: Z.kL,
                       children: (0, i.jsxs)("div", {
-                          className: z.Qs,
+                          className: Z.Qs,
                           children: [
-                              n ? (0, i.jsx)(B.Sb, {}) : null,
-                              null != e
-                                  ? (0, i.jsx)(B.Ay, { subscription: e, paymentSource: s, busy: f, subscriptions: t })
+                              _ ? (0, i.jsx)(B.Sb, {}) : null,
+                              null != t
+                                  ? (0, i.jsx)(B.Ay, { subscription: t, paymentSource: E, busy: D, subscriptions: n })
                                   : (0, i.jsx)(B.TC, {}),
-                              $ &&
+                              en &&
+                                  ((e = !!a?.isPremiumWithPremiumGroup()),
                                   (0, i.jsxs)("section", {
                                       children: [
                                           (0, i.jsx)(o.Heading, {
                                               variant: "heading-md/bold",
-                                              className: z.HL,
+                                              className: Z.HL,
                                               children: K.intl.string(K.t.Obre8v),
                                           }),
                                           (0, i.jsx)(o.Text, {
                                               variant: "text-md/normal",
-                                              className: z.JU,
+                                              className: Z.JU,
                                               children: K.intl.format(K.t["7Zi06b"], {
                                                   helpCenterLink: G.A.getArticleURL(F.MVz.FRACTIONAL_PREMIUM_ABOUT),
                                               }),
                                           }),
-                                          (0, i.jsx)(k.A, {
-                                              className: z.fX,
-                                              fractionalPremiumInfo: X,
-                                              activationDate: Z,
+                                          (0, i.jsx)(V.A, {
+                                              className: Z.fX,
+                                              fractionalPremiumInfo: $,
+                                              activationDate: et,
+                                              hasPremiumGroup: e,
                                           }),
                                       ],
-                                  }),
-                              (0, i.jsx)(N.x, { setting: W.H.SUBSCRIPTIONS_CREDITS, children: (0, i.jsx)(q, {}) }),
-                              w > 0 &&
+                                  })),
+                              (0, i.jsx)(N.x, { setting: W.H.SUBSCRIPTIONS_CREDITS, children: (0, i.jsx)(X, {}) }),
+                              Q > 0 &&
                                   (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(J, {}),
-                                          (0, i.jsx)(C.A, {
-                                              count: w,
+                                          (0, i.jsx)(T.A, {
+                                              count: Q,
                                               onClickManageSubscription: () =>
-                                                  (0, j.openUserSettings)(T.X.SUBSCRIPTIONS_PANEL, {
+                                                  (0, j.openUserSettings)(b.X.SUBSCRIPTIONS_PANEL, {
                                                       section: F.nc_.SUBSCRIPTIONS,
-                                                      subsection: Y.nR,
+                                                      subsection: z.nR,
                                                   }),
                                           }),
                                       ],
                                   }),
-                              U > 0 &&
+                              q > 0 &&
                                   (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(J, {}),
-                                          (0, i.jsx)(S.A, {
-                                              count: U,
+                                          (0, i.jsx)(I.A, {
+                                              count: q,
                                               onClickManageSubscription: () => {
-                                                  (0, j.openUserSettings)(T.X.SUBSCRIPTIONS_PANEL, {
+                                                  (0, j.openUserSettings)(b.X.SUBSCRIPTIONS_PANEL, {
                                                       section: F.nc_.SUBSCRIPTIONS,
-                                                      subsection: Y.PZ,
+                                                      subsection: z.PZ,
                                                   }),
                                                       M.default.track(
                                                           F.HAw.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED,
@@ -186,9 +191,9 @@ let Q = function () {
                                       ],
                                   }),
                               (0, i.jsx)(J, {}),
-                              null != e ? (0, i.jsx)(V.A, { subscription: e, withOverheadSeparator: !1 }) : null,
+                              null != t ? (0, i.jsx)(w.A, { subscription: t, withOverheadSeparator: !1 }) : null,
                           ],
                       }),
                   })
-          : (0, i.jsx)("div", { className: a()(z.kL, z.Lq), children: (0, i.jsx)(o.y$y, {}) });
+          : (0, i.jsx)("div", { className: l()(Z.kL, Z.Lq), children: (0, i.jsx)(o.y$y, {}) });
 };

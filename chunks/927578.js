@@ -799,7 +799,7 @@ function eT(e, t) {
             });
         let n = new Date(t.subscriptionPeriodStart);
         return (
-            e.isBoostOnly || (n = ey(n, i.unactivatedUnits)),
+            e.isBoostOnly || e.hasAnyPremiumGroup || (n = ey(n, i.unactivatedUnits)),
             r
                 ? P.intl.format(P.t.Vl3cED, { planName: P.intl.string(P.t.Ipxkog), renewalDate: n, price: o })
                 : P.intl.format(P.t.Q18lRK, { renewalDate: n, price: o })

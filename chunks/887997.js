@@ -1,87 +1,98 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => A });
 var i = n(627968);
 n(64700);
 var s = n(503698),
-    r = n.n(s),
-    a = n(397927),
-    l = n(366999),
+    a = n.n(s),
+    l = n(397927),
+    r = n(366999),
     o = n(927578),
     c = n(788868),
-    d = n(985018),
-    u = n(802937);
-function _(e) {
-    let { showChargingUpState: t, rowValueText: n, endsAt: s, fractionalState: l, activationDate: o } = e,
-        _ = t ? d.intl.string(d.t["hT6i/0"]) : d.intl.string(d.t["3G0CTC"]),
-        m = t
-            ? void 0 === o
-                ? null
-                : d.intl.format(d.t["0Vwb/l"], { activateDate: o })
-            : l === c.xc.FP_SUB_PAUSED
-              ? d.intl.format(d.t.MMvaIG, { resumeDate: s.toDate() })
-              : null,
-        A = r()({ [u.Hs]: t, [u.mT]: !t }),
-        g = r()({ [u.CQ]: t, [u.ZM]: !t }),
-        E = r()({ [u.EM]: !t });
+    d = n(519412),
+    u = n(985018),
+    _ = n(802937);
+function m(e) {
+    let t,
+        n,
+        {
+            showChargingUpState: s,
+            rowValueText: r,
+            endsAt: o,
+            fractionalState: m,
+            activationDate: A,
+            hasPremiumGroup: g,
+        } = e;
+    g
+        ? ((t = u.intl.string(d.default["/S02sx"])), (n = u.intl.string(d.default.OPJNST)))
+        : s
+          ? ((t = u.intl.string(u.t["hT6i/0"])),
+            (n = null != A ? u.intl.format(u.t["0Vwb/l"], { activateDate: A }) : null))
+          : ((t = u.intl.string(u.t["3G0CTC"])),
+            (n = m === c.xc.FP_SUB_PAUSED ? u.intl.format(u.t.MMvaIG, { resumeDate: o.toDate() }) : null));
+    let h = a()({ [_.Hs]: s, [_.mT]: !s }),
+        x = a()({ [_.CQ]: s, [_.ZM]: !s }),
+        p = a()({ [_.EM]: !s });
     return (0, i.jsxs)("div", {
-        className: u.r6,
+        className: _.r6,
         children: [
             (0, i.jsxs)("div", {
-                className: u.Nv,
+                className: _.Nv,
                 children: [
-                    (0, i.jsx)(a.Heading, { variant: "heading-md/semibold", className: E, children: _ }),
-                    null !== m && (0, i.jsx)(a.Text, { variant: "text-sm/normal", children: m }),
+                    (0, i.jsx)(l.Heading, { variant: "heading-md/semibold", className: p, children: t }),
+                    null !== n && (0, i.jsx)(l.Text, { variant: "text-sm/normal", children: n }),
                 ],
             }),
-            (0, i.jsx)("div", {
-                className: u.ZS,
-                children: (0, i.jsx)("div", {
-                    className: A,
-                    children: (0, i.jsx)(a.Text, { variant: "text-sm/semibold", className: g, children: n }),
+            !g &&
+                (0, i.jsx)("div", {
+                    className: _.ZS,
+                    children: (0, i.jsx)("div", {
+                        className: h,
+                        children: (0, i.jsx)(l.Text, { variant: "text-sm/semibold", className: x, children: r }),
+                    }),
                 }),
-            }),
         ],
     });
 }
-let m = function (e) {
-    let { fractionalPremiumInfo: t, className: n, activationDate: s } = e,
-        c = (0, o.kX)(t),
-        m = c.length > 0,
-        A = (0, l.Ay)(t.endsAt, l.yE.SHORT_TIME),
-        g = m ? c : A;
+let A = function (e) {
+    let { fractionalPremiumInfo: t, className: n, activationDate: s, hasPremiumGroup: c } = e,
+        d = (0, o.kX)(t),
+        A = d.length > 0,
+        g = (0, r.Ay)(t.endsAt, r.yE.SHORT_TIME),
+        h = A ? d : g;
     return (0, i.jsx)("div", {
         children: (0, i.jsxs)("div", {
-            className: r()(n, u.f8),
+            className: a()(n, _.f8),
             children: [
                 (0, i.jsx)("div", {
-                    className: u.J_,
+                    className: _.J_,
                     children: (0, i.jsxs)("div", {
-                        className: u.Bh,
+                        className: _.Bh,
                         children: [
                             (0, i.jsx)("div", {
-                                className: u.xt,
-                                children: (0, i.jsx)(a.tvc, { size: "md", color: "white", className: u.T8 }),
+                                className: _.xt,
+                                children: (0, i.jsx)(l.tvc, { size: "md", color: "white", className: _.T8 }),
                             }),
                             (0, i.jsx)("div", {
-                                className: u.pt,
-                                children: (0, i.jsx)(a.Heading, {
+                                className: _.pt,
+                                children: (0, i.jsx)(l.Heading, {
                                     variant: "heading-md/semibold",
-                                    children: d.intl.string(d.t.DFMPWS),
+                                    children: u.intl.string(u.t.DFMPWS),
                                 }),
                             }),
-                            (0, i.jsx)(a.Text, {
-                                className: u.PJ,
+                            (0, i.jsx)(l.Text, {
+                                className: _.PJ,
                                 variant: "text-md/semibold",
-                                children: c.length > 0 ? c : d.intl.string(d.t["B66Z+f"]),
+                                children: d.length > 0 ? d : u.intl.string(u.t["B66Z+f"]),
                             }),
                         ],
                     }),
                 }),
-                (0, i.jsx)(_, {
-                    showChargingUpState: m,
-                    rowValueText: g,
+                (0, i.jsx)(m, {
+                    showChargingUpState: A,
+                    rowValueText: h,
                     endsAt: t.endsAt,
                     fractionalState: t.fractionalState,
                     activationDate: s,
+                    hasPremiumGroup: c,
                 }),
             ],
         }),
