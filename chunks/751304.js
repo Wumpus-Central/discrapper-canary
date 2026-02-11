@@ -52,29 +52,28 @@ let R = 4,
                 onClickAnalytics: z,
             } = e,
             { previewingVariantIndex: q, handleEntering: X, handleLeaving: Z } = (0, C.f)(t),
-            Q = (0, y.sC)(),
-            J = (0, _.Mk)(),
-            ee = J?.tab,
-            et = (0, f.ho)(t),
-            en = i.useRef(null),
-            { isHoveringOrFocusing: er } = (0, d.A)(en),
-            { handleCardVisibilityChange: ei } = (0, h.Z)(t.skuId, ee === b.G2.CATALOG ? "full" : ee),
-            ea = (0, y.ql)(t, c.A.COLLECTIBLES_SHOP_CARD, z, Q),
-            es = t.type === o.R.VARIANTS_GROUP && !O,
-            eo = i.useMemo(() => ({ maxVariantsToShow: R, onClick: ea }), [ea]),
-            el = !L || !w,
-            eu = !(D && a) || es,
-            ec = eu || el,
-            ed = el || es;
+            Q = (0, _.Mk)(),
+            J = Q?.tab,
+            ee = (0, f.ho)(t),
+            et = i.useRef(null),
+            { isHoveringOrFocusing: en } = (0, d.A)(et),
+            { handleCardVisibilityChange: er } = (0, h.Z)(t.skuId, J === b.G2.CATALOG ? "full" : J),
+            ei = (0, y.ql)(t, c.A.COLLECTIBLES_SHOP_CARD, z),
+            ea = t.type === o.R.VARIANTS_GROUP && !O,
+            es = i.useMemo(() => ({ maxVariantsToShow: R, onClick: ei }), [ei]),
+            eo = !L || !w,
+            el = !(D && a) || ea,
+            eu = el || eo,
+            ec = eo || ea;
         return (0, r.jsx)(l.L, {
-            innerRef: en,
-            onChange: ei,
+            innerRef: et,
+            onChange: er,
             threshold: 0,
             children: (0, r.jsx)(u.sqX, {
-                ref: en,
-                onClick: M ?? ea,
-                "aria-label": et,
-                className: s()(K, N.ty, { [N.yo]: er }),
+                ref: et,
+                onClick: M ?? ei,
+                "aria-label": ee,
+                className: s()(K, N.ty, { [N.yo]: en }),
                 onFocus: () => V?.(t.skuId),
                 onBlur: () => B?.(t.skuId),
                 onMouseEnter: () => G?.(t.skuId),
@@ -83,8 +82,8 @@ let R = 4,
                     className: N.qt,
                     children: [
                         (0, r.jsx)("div", {
-                            className: s()(N.Dq, { [N.$r]: !a || eu || ed }),
-                            children: (0, r.jsx)(E.A, { skuId: t.skuId, isCardHovered: er, overrideVariantIndex: q }),
+                            className: s()(N.Dq, { [N.$r]: !a || el || ec }),
+                            children: (0, r.jsx)(E.A, { skuId: t.skuId, isCardHovered: en, overrideVariantIndex: q }),
                         }),
                         (0, r.jsxs)("div", {
                             className: N.N1,
@@ -96,17 +95,17 @@ let R = 4,
                                     prioritizedCurrency: $,
                                     skipLimitedTimeCheck: P,
                                 }),
-                                !n && (0, r.jsx)(v.A, { skuId: t.skuId, isCardHovered: er }),
+                                !n && (0, r.jsx)(v.A, { skuId: t.skuId, isCardHovered: en }),
                             ],
                         }),
-                        ec &&
+                        eu &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)("div", { className: N.wY }),
                                     (0, r.jsxs)("div", {
                                         className: N.xQ,
                                         children: [
-                                            eu &&
+                                            el &&
                                                 (0, r.jsxs)("div", {
                                                     className: N.xE,
                                                     children: [
@@ -130,17 +129,17 @@ let R = 4,
                                                                         }),
                                                                 ],
                                                             }),
-                                                        es &&
+                                                        ea &&
                                                             (0, r.jsx)(S.A, {
                                                                 skuId: t.skuId,
-                                                                isCollapsed: !er,
+                                                                isCollapsed: !en,
                                                                 onVariantEnter: X,
                                                                 onVariantExit: Z,
-                                                                overflowProps: eo,
+                                                                overflowProps: es,
                                                             }),
                                                     ],
                                                 }),
-                                            el &&
+                                            eo &&
                                                 (0, r.jsx)("div", {
                                                     className: N.Vs,
                                                     children: (0, r.jsxs)(u.ButtonGroup, {
@@ -151,7 +150,7 @@ let R = 4,
                                                             !L &&
                                                                 (0, r.jsx)(I.A, {
                                                                     skuId: t.skuId,
-                                                                    cardRef: en,
+                                                                    cardRef: et,
                                                                     onClick: k,
                                                                     text: j,
                                                                     prioritizedCurrency: $,
@@ -160,7 +159,7 @@ let R = 4,
                                                             !w &&
                                                                 (0, r.jsx)(T.A, {
                                                                     skuId: t.skuId,
-                                                                    cardRef: en,
+                                                                    cardRef: et,
                                                                     onClick: U,
                                                                     icon: H,
                                                                     prioritizedCurrency: $,

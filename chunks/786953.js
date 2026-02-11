@@ -28,14 +28,13 @@ async function d(e) {
         onRedeemSucceed: d,
         onRedeemFail: _,
         shouldRefetchBalance: f = !0,
-        isRental: p = !1,
     } = e;
     i.h.wait(() => {
         i.h.dispatch({ type: "VIRTUAL_CURRENCY_REDEEM_START", skuId: t });
     }),
         s?.();
     try {
-        let e = { checkout_session_id: n, is_rental: p },
+        let e = { checkout_session_id: n },
             a = (await r.Bo.post({ url: l.Rsh.VIRTUAL_CURRENCY_SKU_REDEEM(t), body: e, rejectWithError: !1 })).body;
         if (null == a || !Array.isArray(a)) {
             let e = "Could not read entitlements from Virtual Currency redemption response. Response: ",

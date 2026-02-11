@@ -15,7 +15,6 @@ let o = "collectibles shop product details modal",
             analyticsLocations: d,
             returnRef: _,
             tab: f,
-            rentalDuration: p,
         } = e;
         if (t.isCategoryReward) {
             let { isPurchased: e } = (0, s.o)(a.A, t);
@@ -34,7 +33,6 @@ let o = "collectibles shop product details modal",
                         analyticsLocations: d,
                         returnRef: _,
                         tab: f,
-                        rentalDuration: p,
                     });
             },
             { modalKey: o },

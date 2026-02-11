@@ -1,4 +1,4 @@
-n.d(e, { $V: () => v, $k: () => g, aG: () => N, mO: () => P, v8: () => S }), n(321073);
+n.d(e, { $V: () => P, $k: () => S, aG: () => v, mO: () => B, v8: () => g }), n(321073);
 var i = n(64700),
     r = n(106778),
     a = n(284009),
@@ -15,8 +15,8 @@ var i = n(64700),
     f = n(318346),
     A = n(954571),
     y = n(203982),
-    I = n(975571),
-    _ = n(993408),
+    _ = n(975571),
+    I = n(993408),
     R = n(442759),
     C = n(158216),
     L = n(758836),
@@ -24,7 +24,7 @@ var i = n(64700),
     T = n(22104),
     b = n(985018);
 let k = (t) => (null != t ? b.intl.format(b.t["4kp0AB"], { itemName: t }) : null),
-    g = (t) => {
+    S = (t) => {
         let {
             product: e,
             overrideTitle: n,
@@ -32,23 +32,16 @@ let k = (t) => (null != t ? b.intl.format(b.t["4kp0AB"], { itemName: t }) : null
             shouldShowPromotionalExperience: r,
             productName: a,
             itemConsumed: l,
-            rentalDuration: s,
         } = t;
         if (null != n) return n;
-        if (null != s)
-            return 3 === s
-                ? b.intl.string(b.t["5Gltxj"])
-                : 7 === s
-                  ? b.intl.string(b.t.UpxLQN)
-                  : b.intl.string(b.t.sYO0Wl);
         if (L.Dp.ORB_PROFILE_BADGE === e.skuId) return b.intl.string(T.default.nvaTQq);
         if (L.Dp.FRACTIONAL_PREMIUM === e.skuId)
             if (l) return b.intl.string(b.t.t0xkSB);
             else return b.intl.string(b.t.g5W1g8);
         if (i && !r) return b.intl.string(b.t.IMffmm);
-        else return b.intl.formatToPlainString(b.t.YNaxMp, { itemName: a });
+        return b.intl.formatToPlainString(b.t.YNaxMp, { itemName: a });
     },
-    S = (t) => {
+    g = (t) => {
         let {
             product: e,
             overrideDescription: n,
@@ -58,23 +51,21 @@ let k = (t) => (null != t ? b.intl.format(b.t["4kp0AB"], { itemName: t }) : null
             itemConsumed: l,
             isFractionalPremiumActive: d,
             expiresAt: u,
-            isRental: p = !1,
         } = t;
         if (null != n) return n;
-        if (p && null != u) return b.intl.format(b.t["HQjw+I"], { itemName: i, date: u });
         if (L.Dp.ORB_PROFILE_BADGE === e.skuId) return b.intl.string(T.default.UnPGii);
         if (L.Dp.FRACTIONAL_PREMIUM === e.skuId) {
             let t = b.intl.formatToPlainString(b.t.Cz1G97, { days: 3 });
             return l
                 ? b.intl.format(b.t.bhLChO, {
-                      helpCenterLink: I.A.getArticleURL(m.MVz.FRACTIONAL_PREMIUM_ABOUT),
+                      helpCenterLink: _.A.getArticleURL(m.MVz.FRACTIONAL_PREMIUM_ABOUT),
                       duration: t,
                       expirationDate: u,
                   })
                 : d
                   ? b.intl.string(b.t.fBmhE9)
                   : b.intl.format(b.t["1ZBX4E"], {
-                        helpCenterLink: I.A.getArticleURL(m.MVz.FRACTIONAL_PREMIUM_ABOUT),
+                        helpCenterLink: _.A.getArticleURL(m.MVz.FRACTIONAL_PREMIUM_ABOUT),
                         duration: t,
                     });
         }
@@ -84,7 +75,7 @@ let k = (t) => (null != t ? b.intl.format(b.t["4kp0AB"], { itemName: t }) : null
         }
         return e.type === s.R.AVATAR_DECORATION && r && null != a ? a : k(i);
     },
-    N = (t) => {
+    v = (t) => {
         let {
                 product: e,
                 onClose: n,
@@ -92,8 +83,8 @@ let k = (t) => (null != t ? b.intl.format(b.t["4kp0AB"], { itemName: t }) : null
                 hasRequiredProductItems: r,
                 handleUseNow: a,
                 isApplying: A,
-                openProfileSettings: I,
-                itemConsumed: _,
+                openProfileSettings: _,
+                itemConsumed: I,
             } = t,
             R = [];
         if (L.Dp.ORB_PROFILE_BADGE === e.skuId)
@@ -120,7 +111,7 @@ let k = (t) => (null != t ? b.intl.format(b.t["4kp0AB"], { itemName: t }) : null
                 },
             );
         else if (L.Dp.FRACTIONAL_PREMIUM === e.skuId)
-            _
+            I
                 ? R.push(
                       { text: b.intl.string(b.t.cpT0Cq), variant: "secondary", onClick: n },
                       {
@@ -147,7 +138,7 @@ let k = (t) => (null != t ? b.intl.format(b.t["4kp0AB"], { itemName: t }) : null
                 text: b.intl.string(b.t["2p2aYz"]),
                 variant: r ? "secondary" : "primary",
                 onClick: () => {
-                    if ((n(), (0, d.jH)(), I?.(), e.type === s.R.AVATAR_DECORATION)) {
+                    if ((n(), (0, d.jH)(), _?.(), e.type === s.R.AVATAR_DECORATION)) {
                         l()(t.type === s.R.AVATAR_DECORATION, "product type and item type are the same"),
                             (0, u.L)({ initialSelectedDecoration: t, analyticsLocations: i });
                         return;
@@ -167,8 +158,8 @@ let k = (t) => (null != t ? b.intl.format(b.t["4kp0AB"], { itemName: t }) : null
         }
         return r && R.push({ text: b.intl.string(b.t.MAS7uK), variant: "primary", onClick: a, loading: A }), R;
     },
-    v = (t, e) => {
-        let n = i.useMemo(() => (0, _.V6)(t.type, t.skuId), [t.type, t.skuId]);
+    P = (t, e) => {
+        let n = i.useMemo(() => (0, I.V6)(t.type, t.skuId), [t.type, t.skuId]);
         return (
             i.useEffect(() => {
                 A.default.track(m.HAw.OPEN_MODAL, {
@@ -181,7 +172,7 @@ let k = (t) => (null != t ? b.intl.format(b.t["4kp0AB"], { itemName: t }) : null
             { productType: n }
         );
     },
-    P = (t, e) => {
+    B = (t, e) => {
         let n = i.useRef(new r.OH()),
             a = (0, i.useRef)(null),
             [l, s] = i.useState(null),

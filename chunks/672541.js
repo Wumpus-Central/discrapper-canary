@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { G4: () => E });
+n.d(t, { G4: () => A });
 var r = n(627968),
     i = n(64700),
     a = n(736843),
@@ -18,13 +18,12 @@ let _ = (e) => {
                 isRedeeming: s,
                 orbRedemptionError: o,
                 onRedeemVirtualCurrency: l,
-                rentalDuration: _,
             } = e,
             {
-                isStepLoading: f,
-                orbPriceAmount: p,
+                isStepLoading: _,
+                orbPriceAmount: f,
                 orbBalanceToDisplay: h,
-                onClickCheckout: m,
+                onClickCheckout: p,
                 showCollectiblesDiscountWarning: g,
                 errorMessage: E,
             } = (0, u.HG)({
@@ -35,23 +34,18 @@ let _ = (e) => {
                 orbRedemptionError: o,
                 onRedeemVirtualCurrency: l,
             }),
-            {
-                disabled: A,
-                tooltipText: I,
-                text: T,
-            } = (0, c.J)({ orbBalance: h, orbPriceAmount: p, rentalDuration: _ });
+            { disabled: A, tooltipText: I, text: T } = (0, c.J)({ orbBalance: h, orbPriceAmount: f });
         return {
-            isStepLoading: f,
+            isStepLoading: _,
             skuId: t,
             reviewBodyContent: (0, r.jsx)(c.c, {
                 skuId: t,
-                orbPriceAmount: p,
+                orbPriceAmount: f,
                 orbBalance: h,
                 renderWithoutContainer: !0,
-                rentalDuration: _,
             }),
             reviewBodyLegalContent: null,
-            primaryCTAButtonProps: { onClick: m, loading: s, text: T, disabled: A, tooltipText: I },
+            primaryCTAButtonProps: { onClick: p, loading: s, text: T, disabled: A, tooltipText: I },
             warningMessage: g ? d.intl.format(d.t.fsOXXO, {}) : null,
             errorMessage: E,
         };
@@ -60,42 +54,37 @@ let _ = (e) => {
         let {
                 renderStep: t,
                 paymentModalStepProps: n,
-                sharedCheckoutContext: {
-                    skuId: r,
-                    analyticsLocations: i,
-                    analyticsSourceLocation: a,
-                    flowSpecificOptions: s,
-                },
+                sharedCheckoutContext: { skuId: r, analyticsLocations: i, analyticsSourceLocation: a },
             } = e,
-            o = s.rentalDuration ?? void 0,
-            { handleClose: l } = n;
-        (0, u.e1)({ handleClose: l });
-        let { orbProductContext: c, isRedeeming: d, orbRedemptionError: f, onRedeemVirtualCurrency: p } = g(),
-            h = _({
+            { handleClose: s } = n;
+        (0, u.e1)({ handleClose: s });
+        let { orbProductContext: o, isRedeeming: l, orbRedemptionError: c, onRedeemVirtualCurrency: d } = E();
+        return t({
+            paymentModalStepProps: n,
+            unifiedStepProps: _({
                 skuId: r,
                 analyticsLocations: i,
                 analyticsSourceLocation: a,
-                orbProductContext: c,
-                isRedeeming: d,
-                orbRedemptionError: f,
-                onRedeemVirtualCurrency: p,
-                rentalDuration: o,
-            });
-        return t({ paymentModalStepProps: n, unifiedStepProps: h });
+                orbProductContext: o,
+                isRedeeming: l,
+                orbRedemptionError: c,
+                onRedeemVirtualCurrency: d,
+            }),
+        });
     },
-    p = (e) => {
+    h = (e) => {
         let { onClose: t, step: n } = e;
         return (0, r.jsx)(o.A, { isOrbCheckout: !0, step: n, onClose: () => t(!1) });
     },
-    h = (0, a.Mz)(),
-    m = (0, i.createContext)({
+    p = (0, a.Mz)(),
+    g = (0, i.createContext)({
         isRedeeming: !1,
         orbRedemptionError: null,
         orbProductContext: null,
         onRedeemVirtualCurrency: () => {},
     }),
-    g = () => (0, i.useContext)(m),
-    E = {
+    E = () => (0, i.useContext)(g),
+    A = {
         UnifiedCheckoutContextProvider: (e) => {
             let {
                     skuId: t,
@@ -106,21 +95,21 @@ let _ = (e) => {
                     flowSpecificOptions: o,
                     children: c,
                 } = e,
-                { onCheckoutSuccess: d, rentalDuration: _ } = o,
+                { onCheckoutSuccess: d } = o,
                 {
-                    orbProductContext: f,
-                    isRedeeming: p,
-                    orbRedemptionError: g,
+                    orbProductContext: _,
+                    isRedeeming: f,
+                    orbRedemptionError: h,
                     onRedeemVirtualCurrency: E,
-                } = (0, l.e6)({ skuId: t, loadId: n, onCheckoutSuccess: d, analyticsLocations: i, rentalDuration: _ }),
+                } = (0, l.e6)({ skuId: t, loadId: n, onCheckoutSuccess: d, analyticsLocations: i }),
                 A = (0, u.My)({
                     onClose: s.onClose,
                     skuId: t,
                     analyticsLocations: i,
                     analyticsSourceLocation: a,
-                    orbProductContext: f,
+                    orbProductContext: _,
                 });
-            return (0, r.jsx)(h.Provider, {
+            return (0, r.jsx)(p.Provider, {
                 value: {
                     sharedCheckoutContext: {
                         loadId: n,
@@ -132,12 +121,12 @@ let _ = (e) => {
                     paymentModalProps: A,
                     renderModalProps: s,
                 },
-                children: (0, r.jsx)(m.Provider, {
-                    value: { orbProductContext: f, isRedeeming: p, orbRedemptionError: g, onRedeemVirtualCurrency: E },
+                children: (0, r.jsx)(g.Provider, {
+                    value: { orbProductContext: _, isRedeeming: f, orbRedemptionError: h, onRedeemVirtualCurrency: E },
                     children: c,
                 }),
             });
         },
-        UnifiedCheckoutCustomHeader: p,
+        UnifiedCheckoutCustomHeader: h,
         UnifiedCheckoutStepDefinitions: { [s.pn.REVIEW]: { StepController: f } },
     };

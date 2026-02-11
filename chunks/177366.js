@@ -1,5 +1,5 @@
 "use strict";
-s.d(t, { XU: () => A, Yr: () => b, k0: () => x });
+s.d(t, { XU: () => A, Yr: () => C, k0: () => b });
 var n = s(64700),
     r = s(960488),
     l = s(311907),
@@ -10,38 +10,38 @@ var n = s(64700),
     d = s(870216),
     u = s(298072),
     g = s(238184),
-    m = s(572595),
-    _ = s(159439),
+    _ = s(572595),
+    m = s(159439),
     h = s(57020),
     p = s(652215);
 let f = "#itemSkuId=",
-    E = RegExp(`^${f}(\\d+)$`),
-    C = [p.BVt.COLLECTIBLES_SHOP],
-    b = (e) => {
+    x = RegExp(`^${f}(\\d+)$`),
+    E = [p.BVt.COLLECTIBLES_SHOP],
+    C = (e) => {
         let t = (0, r.zy)();
         n.useEffect(() => {
-            if (null != e && C.includes(t.pathname))
+            if (null != e && E.includes(t.pathname))
                 return () => {
                     window.location.hash.startsWith(f) && window.location.replace("#");
                 };
         }, [e, t.pathname]);
     },
     A = () => {
-        let e = (0, _.U)(),
+        let e = (0, m.U)(),
             t = n.useRef(null),
             s = (0, r.zy)(),
             a = s.pathname === p.BVt.COLLECTIBLES_SHOP ? i.A.HOME_PAGE_SHOP_TAB : i.A.COLLECTIBLES_SHOP,
             { analyticsLocations: f } = (0, o.Ay)(a),
-            C = (0, g.A)();
+            E = (0, g.A)();
         n.useEffect(() => {
-            let e = E.exec(s.hash);
+            let e = x.exec(s.hash);
             null != e ? (t.current = e[1]) : (t.current = null);
-        }, [C, s.hash]);
-        let b = (0, l.bG)([d.A], () => d.A.initialProductSkuId);
+        }, [E, s.hash]);
+        let C = (0, l.bG)([d.A], () => d.A.initialProductSkuId);
         n.useEffect(() => {
             if (e) return;
             let s = null;
-            if ((null != b ? (s = b) : null != t.current && (s = t.current), null != s)) {
+            if ((null != C ? (s = C) : null != t.current && (s = t.current), null != s)) {
                 let e = setTimeout(() => {
                     ((e) => {
                         let { productSkuId: t, analyticsLocations: s, analyticsSource: n, tab: r } = e,
@@ -49,7 +49,7 @@ let f = "#itemSkuId=",
                             a = c.A.getCategoryForProduct(t);
                         if (null != l && null != a) {
                             let e = l,
-                                i = (0, h.Ak)({ product: l }),
+                                i = (0, h.A)({ product: l }),
                                 o = document.getElementById(`shop-item-${e.skuId}`);
                             if ((o !== document.activeElement && o?.focus(), null != l.variantGroupStoreListingId)) {
                                 let s = c.A.getProductByStoreListingId(l.variantGroupStoreListingId);
@@ -59,7 +59,7 @@ let f = "#itemSkuId=",
                                     null != n && n > -1 && (0, u.n)(s, n);
                                 }
                             }
-                            (0, m.t)({
+                            (0, _.t)({
                                 product: e,
                                 category: a,
                                 analyticsSource: n,
@@ -68,13 +68,13 @@ let f = "#itemSkuId=",
                                 shouldCheckoutWithOrbs: i,
                             });
                         }
-                    })({ productSkuId: s, analyticsLocations: f, analyticsSource: a, tab: C });
+                    })({ productSkuId: s, analyticsLocations: f, analyticsSource: a, tab: E });
                 }, 250);
                 return () => clearTimeout(e);
             }
-        }, [f, a, e, b, C]);
+        }, [f, a, e, C, E]);
     },
-    x = (e) => {
+    b = (e) => {
         let t = n.useRef({}),
             s = (0, l.bG)([a.A], () => a.A.useReducedMotion),
             r = (0, l.bG)([c.A], () => c.A.isFetchingCategories),

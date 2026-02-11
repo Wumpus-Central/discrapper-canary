@@ -27,15 +27,8 @@ let l = function (e) {
         return a.intl.formatToPlainString(a.t.Ofrqj6, { joinedItems: s });
     },
     s = function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = arguments.length > 2 ? arguments[2] : void 0;
+        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         return (0, r.useMemo)(() => {
-            if (null != n)
-                return 3 === n
-                    ? a.intl.string(a.t.QUjmjp)
-                    : 7 === n
-                      ? a.intl.string(a.t.yPxJA2)
-                      : a.intl.string(a.t["o+VpXZ"]);
             if (null != e && null != e.summary && "" !== e.summary) {
                 if (e.type === i.R.BUNDLE && e.summary.includes("{joinedItems}")) {
                     let n = l(e, t);
@@ -55,5 +48,5 @@ let l = function (e) {
                 default:
                     return "";
             }
-        }, [e, t, n]);
+        }, [e, t]);
     };

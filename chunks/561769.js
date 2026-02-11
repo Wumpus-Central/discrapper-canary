@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { AW: () => A, Hi: () => I, UU: () => T, Vm: () => S, ql: () => y, sC: () => E, v3: () => m });
+n.d(t, { AW: () => A, Hi: () => I, UU: () => T, Vm: () => S, ql: () => y, v3: () => g });
 var r = n(64700),
     i = n(575593),
     a = n(417597),
@@ -11,14 +11,11 @@ var r = n(64700),
     d = n(572595),
     _ = n(57020),
     f = n(940622),
-    p = n(758836),
-    h = n(652215);
-let m = r.createContext({ flattenProductVariants: !1 });
-function g() {
-    return r.useContext(m).flattenProductVariants;
-}
+    h = n(758836),
+    p = n(652215);
+let g = r.createContext({ flattenProductVariants: !1 });
 function E() {
-    return r.useContext(m).rentalDuration;
+    return r.useContext(g).flattenProductVariants;
 }
 var A = (function (e) {
         return (
@@ -27,9 +24,6 @@ var A = (function (e) {
             (e.ORBS_EXCLUSIVE = "orbs_exclusive"),
             (e.LIMITED_TIME = "limited_time"),
             (e.NITRO_EXCLUSIVE = "nitro_exclusive"),
-            (e.THREE_DAY_RENTAL = "three_day_rental"),
-            (e.SEVEN_DAY_RENTAL = "seven_day_rental"),
-            (e.RENTAL = "rental"),
             e
         );
     })({}),
@@ -37,47 +31,46 @@ var A = (function (e) {
         return (e.FIAT = "fiat"), (e.ORBS = "orbs"), e;
     })({});
 let T = (e, t, n) => (r) => {
-        l.default.track(h.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+        l.default.track(p.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
             collectibles_shop_session_id: n?.sessionId,
             sku_id: e.skuId,
             page_type: t,
             page_section: n?.pageSection,
-            page_category: t === p.G2.HOME ? void 0 : n?.pageCategory,
-            page_index: t === p.G2.CATALOG ? n?.pageIndex : void 0,
-            page_size: t === p.G2.CATALOG ? n?.pageSize : void 0,
+            page_category: t === h.G2.HOME ? void 0 : n?.pageCategory,
+            page_index: t === h.G2.CATALOG ? n?.pageIndex : void 0,
+            page_size: t === h.G2.CATALOG ? n?.pageSize : void 0,
             tile_type: i.R[e.type],
             tile_position: String(n?.tilePosition),
             cta_name: r,
         });
     },
-    y = (e, t, n, i) => {
-        let l = (0, c.Mk)(),
-            f = l?.tab,
-            { analyticsLocations: p } = (0, o.Ay)(s.A.COLLECTIBLES_SHOP_CARD),
+    y = (e, t, n) => {
+        let i = (0, c.Mk)(),
+            l = i?.tab,
+            { analyticsLocations: f } = (0, o.Ay)(s.A.COLLECTIBLES_SHOP_CARD),
             h = (0, a.bG)([u.A], () => u.A.getCategoryForProduct(e.skuId)),
-            m = r.useRef(null);
+            p = r.useRef(null);
         return r.useCallback(
             (t) => (r) => {
                 if (null == h) return;
-                let a = (0, _.Ak)({ product: e });
-                (m.current = r.currentTarget),
+                let i = (0, _.A)({ product: e });
+                (p.current = r.currentTarget),
                     n?.(),
                     (0, d.t)({
                         product: e,
                         category: h,
-                        shouldCheckoutWithOrbs: a,
-                        analyticsLocations: p,
+                        shouldCheckoutWithOrbs: i,
+                        analyticsLocations: f,
                         analyticsSource: t,
-                        returnRef: m,
-                        tab: f,
-                        rentalDuration: i,
+                        returnRef: p,
+                        tab: l,
                     });
             },
-            [e, f, h, p, n, i],
+            [e, l, h, f, n],
         )(t);
     },
     S = (e) => {
-        let t = g(),
+        let t = E(),
             n = (0, a.bG)([u.A], () =>
                 t ? u.A.getProduct(e) : u.A.getCategoryForProduct(e)?.products.find((t) => t.skuId === e),
             );

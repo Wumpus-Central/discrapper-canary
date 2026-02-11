@@ -23,14 +23,13 @@ let f = (e) => {
                 analyticsLocations: a = [],
                 analyticsSourceLocation: s,
                 onCloseCallback: d,
-                rentalDuration: _,
             } = e,
-            f = (0, r.A)(),
-            h = !1,
-            m = () => {
-                h ||
+            _ = (0, r.A)(),
+            f = !1,
+            p = () => {
+                f ||
                     (0, l.g)(u.HAw.PAYMENT_FLOW_CANCELED, {
-                        loadId: f,
+                        loadId: _,
                         skuId: t,
                         analyticsLocations: a,
                         analyticsSourceLocation: s,
@@ -38,22 +37,21 @@ let f = (e) => {
                     (0, i.OoC)(c);
             },
             g = {
-                loadId: f,
+                loadId: _,
                 skuId: t,
                 onCheckoutSuccess: (e) => {
-                    h || n(e), (h = !0);
+                    f || n(e), (f = !0);
                 },
                 analyticsLocations: a,
                 analyticsSourceLocation: s,
                 onCloseCallback: () => {
-                    (0, o.S)({ checkoutSucceeded: h }), d?.();
+                    (0, o.S)({ checkoutSucceeded: f }), d?.();
                 },
-                rentalDuration: _,
-                onCloseRequest: m,
+                onCloseRequest: p,
             };
-        return p(g);
+        return h(g);
     },
-    p = (e) => {
+    h = (e) => {
         let {
             loadId: t,
             skuId: n,
@@ -61,8 +59,7 @@ let f = (e) => {
             analyticsLocations: i = [],
             analyticsSourceLocation: a,
             onCloseCallback: o,
-            rentalDuration: l,
-            onCloseRequest: u,
+            onCloseRequest: l,
         } = e;
         return (
             _(),
@@ -71,8 +68,8 @@ let f = (e) => {
                 skuId: n,
                 analyticsLocations: i,
                 analyticsSourceLocation: a,
-                flowSpecificOptions: { rentalDuration: l, onCheckoutSuccess: r },
-                openModalOptions: { onCloseCallback: o, modalKey: c, onCloseRequest: u },
+                flowSpecificOptions: { onCheckoutSuccess: r },
+                openModalOptions: { onCloseCallback: o, modalKey: c, onCloseRequest: l },
             })
         );
     };

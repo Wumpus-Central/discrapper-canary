@@ -8,25 +8,18 @@ var i = n(503698),
     c = n(985018),
     o = n(837368);
 function d(e) {
-    var t, n, i;
-    let { product: d, isDarkText: u = !1, isOrbExclusive: m = !1, rentalDuration: x } = e,
-        h =
-            ((t = d.type),
-            (n = m),
-            null != (i = x)
-                ? 3 === i
-                    ? c.intl.string(c.t["52UXCo"])
-                    : 7 === i
-                      ? c.intl.string(c.t.FRR2s2)
-                      : c.intl.string(c.t.VgsFa1)
-                : n
-                  ? c.intl.string(c.t["0TmQRG"])
-                  : t === l.R.AVATAR_DECORATION
-                    ? c.intl.string(c.t["7v0T9P"])
-                    : t === l.R.PROFILE_EFFECT
-                      ? c.intl.string(c.t.wR5wOo)
-                      : null);
-    return null === h
+    var t;
+    let { product: n, isDarkText: i = !1, isOrbExclusive: d = !1 } = e,
+        u =
+            ((t = n.type),
+            d
+                ? c.intl.string(c.t["0TmQRG"])
+                : t === l.R.AVATAR_DECORATION
+                  ? c.intl.string(c.t["7v0T9P"])
+                  : t === l.R.PROFILE_EFFECT
+                    ? c.intl.string(c.t.wR5wOo)
+                    : null);
+    return null === u
         ? null
-        : (0, r.jsx)(s.Text, { variant: "text-xxs/normal", className: a()([o.kL, u ? o.ap : o.aK]), children: h });
+        : (0, r.jsx)(s.Text, { variant: "text-xxs/normal", className: a()([o.kL, i ? o.ap : o.aK]), children: u });
 }

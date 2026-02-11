@@ -22,19 +22,8 @@ let g = (e) => {
         });
     },
     E = (e) => {
-        let { orbBalance: t, orbPriceAmount: n, rentalDuration: r } = e,
-            a = (0, i.useMemo)(
-                () =>
-                    3 === r
-                        ? h.intl.string(h.t.lpAQT0)
-                        : 7 === r
-                          ? h.intl.string(h.t["8Nn0ZK"])
-                          : null != r
-                            ? h.intl.string(h.t["2n5l8j"])
-                            : h.intl.string(h.t.wmcDyu),
-                [r],
-            ),
-            { disabled: s, tooltipText: o } = (0, i.useMemo)(
+        let { orbBalance: t, orbPriceAmount: n } = e,
+            { disabled: r, tooltipText: a } = (0, i.useMemo)(
                 () =>
                     null == n
                         ? { disabled: !0, tooltipText: h.intl.string(h.t["c/rcUu"]) }
@@ -43,21 +32,21 @@ let g = (e) => {
                           : { disabled: !1, tooltipText: null },
                 [n, t],
             );
-        return { disabled: s, tooltipText: o, text: a };
+        return { disabled: r, tooltipText: a, text: h.intl.string(h.t.wmcDyu) };
     },
     A = (e) => {
-        let { orbPriceAmount: t, skuId: n, rentalDuration: i } = e,
-            { skusById: s } = (0, l.A)({
+        let { orbPriceAmount: t, skuId: n } = e,
+            { skusById: i } = (0, l.A)({
                 applicationId: (0, d.p)(n),
                 skuIDs: [n],
                 isGift: !1,
                 currentPaymentSourceId: null,
                 excludeSKUPurchasePreviews: !0,
             }),
-            o = s[n];
-        return void 0 === o
+            s = i[n];
+        return void 0 === s
             ? (0, r.jsx)(c.Yx, { children: (0, r.jsx)(a.y$y, { type: a.y$y.Type.PULSING_ELLIPSIS, className: p.nJ }) })
-            : (0, r.jsx)(u.Uw, { sku: o, value: (0, r.jsx)(g, { orbAmount: t }), rentalDuration: i });
+            : (0, r.jsx)(u.Uw, { sku: s, value: (0, r.jsx)(g, { orbAmount: t }) });
     },
     I = (e) => {
         let { orbBalance: t } = e;
@@ -81,25 +70,20 @@ let g = (e) => {
         });
     },
     T = (e) => {
-        let { skuId: t, orbPriceAmount: n, orbBalance: i, renderWithoutContainer: l, rentalDuration: u } = e,
-            c = (0, r.jsxs)(r.Fragment, {
+        let { skuId: t, orbPriceAmount: n, orbBalance: i, renderWithoutContainer: l } = e,
+            u = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(a.D0$, {
                         label: h.intl.string(h.t.sail9P),
-                        children: (0, r.jsx)(A, { skuId: t, orbPriceAmount: n, rentalDuration: u }),
+                        children: (0, r.jsx)(A, { skuId: t, orbPriceAmount: n }),
                     }),
                     (0, r.jsx)(I, { orbBalance: i }),
                     (0, r.jsx)(o.A, {
                         forceShow: !0,
                         onChange: f.tEg,
-                        finePrint: (0, r.jsx)(s.A, {
-                            rentalDuration: u,
-                            isOrbCheckout: !0,
-                            skuId: t,
-                            purchaseType: f.VVm.ONE_TIME,
-                        }),
+                        finePrint: (0, r.jsx)(s.A, { isOrbCheckout: !0, skuId: t, purchaseType: f.VVm.ONE_TIME }),
                     }),
                 ],
             });
-        return l ? c : (0, r.jsx)("div", { className: p.Du, children: c });
+        return l ? u : (0, r.jsx)("div", { className: p.Du, children: u });
     };
