@@ -9,8 +9,8 @@ var i = n(627968),
     d = n(421380),
     c = n(397927),
     u = n(477947),
-    m = n(81461),
-    g = n(342490),
+    g = n(81461),
+    m = n(342490),
     x = n(743981),
     h = n(583970),
     _ = n(985018),
@@ -23,14 +23,14 @@ function f(e) {
 }
 function j(e) {
     let { badge: t, locked: n = !1, preview: s = !1, selected: l = !1, onClick: d, radioProps: u } = e,
-        g = r()(p.Uh, { [p.fT]: l, [A.av]: n, [A.WZ]: s }),
+        m = r()(p.Uh, { [p.fT]: l, [A.av]: n, [A.WZ]: s }),
         f = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(m.J, { badge: t.kind, width: x.Sl.SIZE_32, height: x.Sl.SIZE_32, className: A.n2 }),
+                (0, i.jsx)(g.J, { badge: t.kind, width: x.Sl.SIZE_32, height: x.Sl.SIZE_32, className: A.n2 }),
                 n && !s && (0, i.jsx)("div", { className: A.py, children: (0, i.jsx)(a.LockIcon, { size: "md" }) }),
             ],
         });
-    if (s) return (0, i.jsx)("div", { className: g, children: f });
+    if (s) return (0, i.jsx)("div", { className: m, children: f });
     if (n && null != t.packName && "" !== t.packName) {
         let e = _.intl.formatToPlainString(h.default.ECl8SQ, { packName: t.packName });
         return (0, i.jsx)(o.m, {
@@ -38,7 +38,7 @@ function j(e) {
             text: e,
             "aria-label": e,
             children: (0, i.jsx)(c.DUT, {
-                className: g,
+                className: m,
                 onClick: () => {
                     d?.();
                 },
@@ -46,15 +46,16 @@ function j(e) {
             }),
         });
     }
-    return (0, i.jsx)(c.DUT, { ...u, className: g, onClick: d, children: f });
+    return (0, i.jsx)(c.DUT, { ...u, className: m, onClick: d, children: f });
 }
 function N(e) {
     let { badgeCollection: t, handleBoostUpsellClick: n, selectedBadge: l, onBadgeClicked: o, headingId: u } = e,
-        [m, x] = s.useState(!1),
+        [g, x] = s.useState(!1),
         N = s.useId(),
         E = (0, d._u)({ orientation: "horizontal", isDisabled: !1, labelledBy: u }),
-        b = !m && t.lockedBadges.length > 0;
+        b = !g && t.lockedBadges.length > 0;
     return (0, i.jsxs)("div", {
+        className: A.zr,
         children: [
             (0, i.jsx)(c.AC4, { id: N, children: _.intl.string(_.t["5AQGuZ"]) }),
             (0, i.jsx)("div", {
@@ -65,7 +66,7 @@ function N(e) {
                     (0, i.jsx)(f, { badge: e, isSelected: e.kind === l, onClick: () => o(e.kind) }, e.kind),
                 ),
             }),
-            m &&
+            g &&
                 (0, i.jsx)("ul", {
                     className: r()(p.p3, A.wA),
                     children: t.lockedBadges.map((e) =>
@@ -100,7 +101,7 @@ function N(e) {
                         }),
                     ],
                 }),
-            m &&
+            g &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         null != n &&
@@ -113,7 +114,7 @@ function N(e) {
                                         className: A.XY,
                                         children: _.intl.string(h.default.G3qiHu),
                                     }),
-                                    (0, i.jsx)("div", { className: A.WM, children: (0, i.jsx)(g.u, { onClick: n }) }),
+                                    (0, i.jsx)("div", { className: A.WM, children: (0, i.jsx)(m.u, { onClick: n }) }),
                                 ],
                             }),
                         (0, i.jsxs)(c.DUT, {
