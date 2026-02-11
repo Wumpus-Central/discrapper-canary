@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { L5: () => a, LO: () => o, RJ: () => c, XM: () => s, qd: () => l, uK: () => u });
+n.d(t, { $4: () => d, L5: () => a, LO: () => o, RJ: () => c, XM: () => s, qd: () => l, uK: () => u });
 var r = n(945810);
 let i = (0, r.mj)({
         name: "2025-11-quest-home-suggested-sort-rotation",
@@ -50,6 +50,12 @@ let l = (0, r.mj)({
     }),
     c = (0, r.mj)({
         name: "2026-01-business-profile-linking",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+    }),
+    d = (0, r.mj)({
+        name: "2026-02-fetch-quest-home-takeover-on-connection-open",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
