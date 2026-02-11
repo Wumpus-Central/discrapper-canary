@@ -7,9 +7,8 @@ var i = n(362058),
     s = n(799226);
 let o = {
     "Gem L1": { reducedMotion: "boolean" },
-    "Gem L1 Test": {},
-    Sparkle: { reducedMotion: "boolean" },
     Sparkle_Tiny: { reducedMotion: "boolean" },
+    Sparkle: { reducedMotion: "boolean" },
 };
 function l(e) {
     let { artboard: t = "Gem L1", stateMachine: n, ...l } = e,

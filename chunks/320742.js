@@ -1,106 +1,105 @@
-"use strict";
-r.d(t, { default: () => b });
-var s = r(627968),
-    a = r(64700),
-    o = r(503698),
-    n = r.n(o),
-    i = r(284009),
-    l = r.n(i),
-    c = r(397927),
-    d = r(964486),
-    u = r(414121),
-    p = r(954571),
-    f = r(10005),
-    C = r(438732),
-    x = r(834981),
-    _ = r(191627),
-    h = r(652215),
-    m = r(842130),
-    y = r(985018),
-    v = r(482064),
-    g = r(473169);
-let b = (e) => {
-    let { transitionState: t, onClose: r } = e,
-        o = (0, C.A)(),
-        [i, b] = a.useState(!1),
-        { getLinkCode: T, isGetLinkCodeLoading: j } = (0, f.A)({}),
-        E = (0, x.VE)(),
-        O = (0, x.VT)(),
-        z = a.useRef(O);
-    l()(!o, "FamilyCenterQRCodeModal should only be rendered for teens.");
-    let N = () => {
-        b(
+s.d(t, { default: () => y });
+var r = s(627968),
+    l = s(64700),
+    a = s(503698),
+    i = s.n(a),
+    o = s(284009),
+    n = s.n(o),
+    d = s(397927),
+    c = s(964486),
+    C = s(414121),
+    u = s(954571),
+    x = s(10005),
+    f = s(438732),
+    _ = s(834981),
+    m = s(191627),
+    h = s(652215),
+    p = s(842130),
+    v = s(985018),
+    g = s(482064),
+    j = s(473169);
+let y = (e) => {
+    let { transitionState: t, onClose: s } = e,
+        a = (0, f.A)(),
+        [o, y] = l.useState(!1),
+        { getLinkCode: z, isGetLinkCodeLoading: N } = (0, x.A)({}),
+        q = (0, _.VE)(),
+        b = (0, _.VT)(),
+        E = l.useRef(b);
+    n()(!a, "FamilyCenterQRCodeModal should only be rendered for teens.");
+    let A = () => {
+        y(
             (e) => (
-                p.default.track(h.HAw.FAMILY_CENTER_ACTION, { action: i ? _.qb.HideQRCode : _.qb.RevealQRCode }), !e
+                u.default.track(h.HAw.FAMILY_CENTER_ACTION, { action: o ? m.qb.HideQRCode : m.qb.RevealQRCode }), !e
             ),
         ),
-            i ||
+            o ||
                 setTimeout(() => {
-                    r();
-                }, _.nz);
+                    s();
+                }, m.nz);
     };
-    (0, d.Ay)(() => {
-        T();
+    (0, c.Ay)(() => {
+        z();
     }),
-        a.useEffect(() => {
-            O > z.current && r();
-        }, [z, O, r]);
-    let q = i && !j && null != E;
-    return (0, s.jsxs)(c.dWK, {
+        l.useEffect(() => {
+            b > E.current && s();
+        }, [E, b, s]);
+    let S = o && !N && null != q;
+    return (0, r.jsxs)(d.dWK, {
         transitionState: t,
-        onClose: r,
+        onClose: s,
         children: [
-            (0, s.jsxs)(c.$Td, {
-                className: v.lm,
-                color: c.Hv$.WARNING,
-                children: [(0, s.jsx)(c.mir, { size: "sm", color: "currentColor" }), y.intl.string(m.default.iHYMAz)],
+            (0, r.jsxs)(d.$Td, {
+                className: g.lm,
+                color: d.Hv$.WARNING,
+                children: [(0, r.jsx)(d.mir, { size: "sm", color: "currentColor" }), v.intl.string(p.default.iHYMAz)],
             }),
-            (0, s.jsxs)(c.cwr, {
+            (0, r.jsxs)(d.cwr, {
                 children: [
-                    (0, s.jsx)(c.Text, {
-                        className: g.QB,
+                    (0, r.jsx)(d.Text, {
+                        className: j.QB,
                         variant: "text-lg/bold",
                         color: "text-strong",
-                        children: y.intl.string(m.default.AVTZaN),
+                        children: v.intl.string(p.default.AVTZaN),
                     }),
-                    (0, s.jsx)(c.Text, {
-                        className: g.SX,
+                    (0, r.jsx)(d.Text, {
+                        className: j.SX,
                         variant: "text-sm/normal",
                         color: "text-default",
-                        children: y.intl.format(m.default.LyyCsE, {
+                        children: v.intl.format(p.default.LyyCsE, {
                             link: "https://support.discord.com/hc/articles/14155060633623",
                         }),
                     }),
-                    (0, s.jsx)("div", {
-                        className: v.Ac,
-                        children: (0, s.jsx)(c.DUT, {
-                            className: n()(v.u3, { [v.RK]: q }),
-                            onClick: N,
-                            children: (0, s.jsx)(u.Lx, {
+                    (0, r.jsx)("div", {
+                        className: g.Ac,
+                        children: (0, r.jsx)(d.DUT, {
+                            className: i()(g.u3, { [g.RK]: S }),
+                            onClick: A,
+                            children: (0, r.jsx)(C.Lx, {
                                 size: 272,
-                                text: q ? E : _.EC,
-                                overlaySize: u.Zs.SIZE_60,
-                                className: v.R6,
+                                text: S ? q : m.EC,
+                                overlaySize: C.Zs.SIZE_60,
+                                className: g.R6,
                             }),
                         }),
                     }),
-                    (0, s.jsx)(c.Text, {
-                        className: v.z_,
+                    (0, r.jsx)(d.Text, {
+                        className: g.z_,
                         variant: "text-xs/semibold",
                         color: "text-default",
-                        children: y.intl.string(m.default.goDyoe),
+                        children: v.intl.string(p.default.goDyoe),
                     }),
                 ],
             }),
-            (0, s.jsx)(c.H7u, {
+            (0, r.jsx)(d.H7u, {
                 actionsFullWidth: !0,
                 actions: [
-                    { variant: "secondary", text: y.intl.string(y.t.cpT0Cq), onClick: r },
+                    { variant: "secondary", text: v.intl.string(v.t.cpT0Cq), onClick: s },
                     {
                         variant: "primary",
-                        text: i ? y.intl.string(m.default.wg2xwQ) : y.intl.string(m.default["10dX6U"]),
-                        onClick: N,
-                        loading: i && j,
+                        text: o ? v.intl.string(p.default.wg2xwQ) : v.intl.string(p.default["10dX6U"]),
+                        onClick: A,
+                        loading: o && N,
                     },
                 ],
             }),
