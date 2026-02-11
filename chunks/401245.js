@@ -22,7 +22,6 @@ let A = null;
 class I extends i.A {
     actions = {
         VOICE_FILTER_REQUEST_SWITCH: this.handleVoiceFilterRequestSwitch,
-        VOICE_FILTER_PREFETCH: this.handleVoiceFilterPrefetch,
         VOICE_FILTER_DOWNLOAD_FAILED: this.handleVoiceFilterDownloadFailed,
         VOICE_FILTER_DOWNLOAD_CANCELED: this.handleVoiceFilterDownloadCanceled,
         VOICE_FILTER_APPLIED: this.handleVoiceFilterApplied,
@@ -53,20 +52,6 @@ class I extends i.A {
             await Promise.all(r);
         }
         r.signal.aborted || (0, _.DF)(t, n);
-    }
-    handleVoiceFilterPrefetch(e) {
-        if (__OVERLAY__) return;
-        let t = d.A.getVoiceFilters(),
-            n = d.A.getVoiceFilterModels(),
-            r = new Set();
-        for (let e of Object.values(t))
-            for (let t of E(e))
-                r.has(t) ||
-                    (r.add(t),
-                    (0, _.g8)(
-                        { voiceFilterId: e.id, modelId: t, url: n[t].url, fileName: (0, f.L)(t) },
-                        { reason: c.O.AUTO_PREFETCH },
-                    ));
     }
     handleVoiceFilterDownloadFailed(e) {
         let { modelId: t, voiceFilterId: n, error: r } = e,

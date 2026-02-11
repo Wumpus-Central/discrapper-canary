@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, { A: () => i, O: () => r });
-let r = { USER_SELECTION: "user_selection", AUTO_PREFETCH: "auto_prefetch" };
+let r = { USER_SELECTION: "user_selection" };
 function i(e) {
     return null == e || e.reason !== r.USER_SELECTION
         ? null

@@ -29,7 +29,7 @@ function N(e) {
             let { activeVoice: e } = (0, f.f)(),
                 t = (0, o.bG)([A.Ay], () => A.Ay.getVoiceFilterPlaybackEnabled()),
                 n = l.useCallback(() => {
-                    (0, m.Ak)(t ? "voice_filter_loopback_off" : "voice_filter_loopback_on"), (0, p.KM)(!t);
+                    (0, m.Ak)(t ? "voice_filter_loopback_off" : "voice_filter_loopback_on"), (0, p.K)(!t);
                 }, [t]);
             return (
                 l.useEffect(
@@ -45,7 +45,7 @@ function N(e) {
             );
         })(),
         y = I ? d.GOW : d.uik,
-        v = l.useCallback(() => (0, p.OR)(null), []),
+        v = l.useCallback(() => (0, p.O)(null), []),
         b = (0, d.rdh)(d.LU0.colors.BACKGROUND_BASE_LOWER).hex(),
         j = (0, d.rdh)(d.LU0.colors.WHITE).hex(),
         R = l.useRef(0),

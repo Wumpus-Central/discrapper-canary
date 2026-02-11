@@ -159,7 +159,7 @@ async function x() {
                 await o.h.dispatch({ type: "VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE", state: E.R.LOADED }),
                 await L();
             let t = u.Ay.getMostRecentlyRequestedVoiceFilter();
-            null != t && (g.A.getVoiceFilter(t)?.available !== !0 ? (0, p.OR)(null) : (0, p.OR)(t)),
+            null != t && (g.A.getVoiceFilter(t)?.available !== !0 ? (0, p.O)(null) : (0, p.O)(t)),
                 u.Ay.getMediaEngine().on(a.bg.VoiceFiltersFailed, (e) => {
                     y.warn(`Voice Filters failed in process: ${e}`),
                         c.default.track(T.HAw.VOICE_FILTER_ERROR, {

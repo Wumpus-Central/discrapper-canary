@@ -524,7 +524,6 @@ let i = {
     VoiceFilterManager: {
         actions: [
             "VOICE_FILTER_REQUEST_SWITCH",
-            "VOICE_FILTER_PREFETCH",
             "VOICE_FILTER_DOWNLOAD_FAILED",
             "VOICE_FILTER_DOWNLOAD_CANCELED",
             "VOICE_FILTER_APPLIED",
