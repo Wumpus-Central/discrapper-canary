@@ -117,7 +117,7 @@ function S(e) {
                     return;
                 }
                 (0, r.mMO)(async () => {
-                    let { default: e } = await Promise.all([t.e("43600"), t.e("28136"), t.e("92779")]).then(
+                    let { default: e } = await Promise.all([t.e("43600"), t.e("28136"), t.e("8421")]).then(
                         t.bind(t, 234355),
                     );
                     return (t) =>

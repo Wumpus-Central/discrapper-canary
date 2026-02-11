@@ -1,6 +1,7 @@
 e.exports = {
     oO: "popover__1bad5",
     vW: "inner__1bad5",
+    DD: "title__1bad5",
     p_: "list__1bad5",
     nM: "row__1bad5",
     vk: "clickable__1bad5",
@@ -14,4 +15,6 @@ e.exports = {
     RI: "activityIcon__1bad5",
     r$: "dots__1bad5",
     h5: "status__1bad5",
+    D9: "ringIconContainer__1bad5",
+    r9: "disabled__1bad5",
 };

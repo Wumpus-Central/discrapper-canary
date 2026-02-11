@@ -32,7 +32,7 @@ let A = (e, t, l) => {
             leadingAccessory: e === d.PE1.GUILD_HEADER ? { type: "icon", icon: s.DpX } : void 0,
             action: () =>
                 (0, s.mMO)(async () => {
-                    let { default: s } = await Promise.all([i.e("43600"), i.e("28136"), i.e("92779")]).then(
+                    let { default: s } = await Promise.all([i.e("43600"), i.e("28136"), i.e("8421")]).then(
                         i.bind(i, 234355),
                     );
                     return (i) => (0, n.jsx)(s, { ...i, guild: t, channel: l, source: e });
