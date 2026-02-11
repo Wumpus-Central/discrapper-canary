@@ -19,8 +19,8 @@ var i = n(627968),
     C = n(290863),
     E = n(461213),
     I = n(977997),
-    b = n(403362),
-    N = n(246084),
+    N = n(403362),
+    b = n(246084),
     S = n(667936),
     T = n(879349),
     v = n(884415),
@@ -32,30 +32,38 @@ var i = n(627968),
     M = n(335419);
 function D(e) {
     let t,
-        { channel: s, guild: a, onAction: m, voiceStates: f, isChannelSelected: x, shouldShowSettingNudge: I } = e;
+        {
+            channel: s,
+            guild: m,
+            onAction: f,
+            voiceStates: x,
+            isChannelSelected: I,
+            shouldShowSettingNudge: b,
+            isStandardGap: T,
+        } = e;
     (t = l.useMemo(
         () =>
-            null == f || f.length > 50
+            null == x || x.length > 50
                 ? {}
                 : {
                       [s.getGuildId()]:
-                          f.map((e) => {
+                          x.map((e) => {
                               let { user: t } = e;
                               return t.id;
                           }) ?? [],
                   },
-        [s, f],
+        [s, x],
     )),
         (0, d.E)(t, "VoiceChannelActivities");
-    let N = (0, u.Ay)(s),
-        T = Array.from((0, u.Rz)(N).values()),
-        v = f?.filter(b.Vq) ?? [],
-        y = (0, r.bG)(
+    let v = (0, u.Ay)(s),
+        y = Array.from((0, u.Rz)(v).values()),
+        M = x?.filter(N.Vq) ?? [],
+        D = (0, r.bG)(
             [E.A, C.A, _.default],
             () => {
                 let e = {};
                 return (
-                    v.forEach((t) => {
+                    M.forEach((t) => {
                         let n =
                             t.user.id === _.default.getId()
                                 ? E.A.findActivity(c.N, !0)
@@ -69,32 +77,32 @@ function D(e) {
                     Object.values(e)
                 );
             },
-            [v],
+            [M],
             r.My,
         ),
-        M = (0, p.m)({ location: "voice_channel_activities" });
-    return y.length + T.length === 0
+        U = (0, p.m)({ location: "voice_channel_activities" });
+    return D.length + y.length === 0
         ? null
         : (0, i.jsxs)(o.HOs, {
-              className: L.kL,
+              className: a()(L.kL, { [L.iA]: T }),
               children: [
-                  (0, i.jsx)(U, { channel: s, isChannelSelected: x, voiceStatesCount: f?.length ?? 0 }),
+                  (0, i.jsx)(G, { channel: s, isChannelSelected: I, voiceStatesCount: x?.length ?? 0 }),
                   (0, i.jsx)("div", { className: L.zN }),
-                  T.map((e, t) =>
+                  y.map((e, t) =>
                       (0, i.jsx)(
                           S.A,
-                          { embeddedApp: e, presenceActivity: e.presenceActivity ?? void 0, channel: s, onAction: m },
+                          { embeddedApp: e, presenceActivity: e.presenceActivity ?? void 0, channel: s, onAction: f },
                           t,
                       ),
                   ),
-                  y.map((e, t) => {
+                  D.map((e, t) => {
                       let { members: n, activity: a } = e;
-                      return M && null != a.application_id && R.sQ.has(a.application_id)
+                      return U && null != a.application_id && R.sQ.has(a.application_id)
                           ? (0, i.jsxs)(
                                 l.Fragment,
                                 {
                                     children: [
-                                        (0, i.jsx)(S.A, { presenceActivity: a, channel: s, members: n, onAction: m }),
+                                        (0, i.jsx)(S.A, { presenceActivity: a, channel: s, members: n, onAction: f }),
                                         (0, i.jsx)(g.A, {
                                             className: L.L,
                                             applicationId: a.application_id,
@@ -107,9 +115,9 @@ function D(e) {
                                 },
                                 `${t}-with-gifting-breadcrumb`,
                             )
-                          : (0, i.jsx)(S.A, { presenceActivity: a, channel: s, members: n, onAction: m }, t);
+                          : (0, i.jsx)(S.A, { presenceActivity: a, channel: s, members: n, onAction: f }, t);
                   }),
-                  I &&
+                  b &&
                       (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)("div", { className: L.zN }),
@@ -138,7 +146,7 @@ function D(e) {
                                                       n.e("35358"),
                                                       n.e("24667"),
                                                   ]).then(n.bind(n, 585265));
-                                                  return (t) => (0, i.jsx)(e, { ...t, guild: a });
+                                                  return (t) => (0, i.jsx)(e, { ...t, guild: m });
                                               });
                                           },
                                       }),
@@ -149,11 +157,11 @@ function D(e) {
               ],
           });
 }
-function U(e) {
+function G(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: l } = e,
         s = (0, r.bG)([x.A], () => !x.A.can(j.xBc.CONNECT, t)),
         o = (0, r.bG)([I.A], () => I.A.hasVideo(t.id)),
-        d = (0, N.Ay)({ channel: t, locked: s, video: o, selected: n }),
+        d = (0, b.Ay)({ channel: t, locked: s, video: o, selected: n }),
         c = (0, r.bG)([f.A], () => f.A.getGuild(t.guild_id));
     return null == (0, m.gU)(t, c)
         ? null
