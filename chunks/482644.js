@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, { baseRules: () => S, customRules: () => v });
+n.r(t), n.d(t, { baseRules: () => C, customRules: () => b });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -11,27 +11,28 @@ var r = n(627968),
     d = n(46054),
     _ = n(976860),
     f = n(780964),
-    p = n(840065),
-    h = n(954571),
-    m = n(652215),
-    g = n(559868);
-let E = l().defaultRules.link,
-    A = { section: m.JJy.SETTINGS_CHANGELOG };
-function I() {
-    h.default.track(m.HAw.PREMIUM_PROMOTION_OPENED, { location: A });
+    h = n(840065),
+    p = n(954571),
+    g = n(652215),
+    E = n(559868),
+    A = n(60639);
+let I = l().defaultRules.link,
+    T = { section: g.JJy.SETTINGS_CHANGELOG };
+function y() {
+    p.default.track(g.HAw.PREMIUM_PROMOTION_OPENED, { location: T });
 }
-function T(e, t) {
+function S(e, t) {
     return null == t ? [] : t.split(" ").map((t) => e[t]);
 }
-let y = (e) => {
-        let { level: t, children: n, className: r = null, styleSheet: a = {} } = e,
-            o = (0, u.$Il)(),
-            l = parseInt(t, 10),
-            c = o + (isNaN(l) ? 1 : l) - 1;
-        return i.createElement(`h${c}`, { className: s()(...T(a, r)) }, n);
+let v = (e) => {
+        let { level: t, children: n, className: r } = e,
+            a = (0, u.$Il)(),
+            s = parseInt(t, 10),
+            o = a + (isNaN(s) ? 1 : s) - 1;
+        return i.createElement(`h${o}`, { className: r }, n);
     },
-    S = null != d.A ? d.A.defaultRules : null,
-    v = {
+    C = null != d.A ? d.A.defaultRules : null,
+    b = {
         link: {
             parse(e, t, n) {
                 let r,
@@ -41,31 +42,31 @@ let y = (e) => {
                 return (
                     (r = a
                         ? (e) => {
-                              I(),
-                                  (0, p.openUserSettings)(f.X.NITRO_PANEL, { section: m.nc_.PREMIUM }),
-                                  n.changeLog.track(m.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "nitro" }),
-                                  (0, u.OoC)(g.lb),
+                              y(),
+                                  (0, h.openUserSettings)(f.X.NITRO_PANEL, { section: g.nc_.PREMIUM }),
+                                  n.changeLog.track(g.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "nitro" }),
+                                  (0, u.OoC)(E.lb),
                                   e.preventDefault();
                           }
                         : s
                           ? (e) => {
                                 (0, _.pX)(i),
-                                    n.changeLog.track(m.HAw.CHANGE_LOG_CTA_CLICKED, {
-                                        ...h.default.getCampaignParams(i),
+                                    n.changeLog.track(g.HAw.CHANGE_LOG_CTA_CLICKED, {
+                                        ...p.default.getCampaignParams(i),
                                     }),
                                     (0, c.bz)(),
-                                    (0, u.OoC)(g.lb),
+                                    (0, u.OoC)(E.lb),
                                     e.preventDefault();
                             }
                           : () => {
                                 n && "function" == typeof n.onLinkClick && n.onLinkClick(i),
-                                    n.changeLog.track(m.HAw.CHANGE_LOG_CTA_CLICKED, {
+                                    n.changeLog.track(g.HAw.CHANGE_LOG_CTA_CLICKED, {
                                         target: i,
                                         cta_type: "inline_link",
-                                        ...h.default.getCampaignParams(i),
+                                        ...p.default.getCampaignParams(i),
                                     });
                             }),
-                    { ...E.parse(e, t, n), callToAction: r }
+                    { ...I.parse(e, t, n), callToAction: r }
                 );
             },
             react: (e, t, n) =>
@@ -85,18 +86,37 @@ let y = (e) => {
         lheading: (e) => ({
             react: (t, n, i) =>
                 (0, r.jsx)(
-                    y,
-                    { level: t.level, className: t.className, styleSheet: e, children: n(t.content, i) },
+                    v,
+                    {
+                        level: t.level,
+                        className: s()(A["heading-md/bold"], ...S(e, t.className)),
+                        children: n(t.content, i),
+                    },
                     i.key,
                 ),
         }),
-        heading: { react: (e, t, n) => (0, r.jsx)(y, { level: e.level, children: t(e.content, n) }, n.key) },
+        heading: {
+            react: (e, t, n) =>
+                (0, r.jsx)(v, { level: e.level, className: A["heading-md/bold"], children: t(e.content, n) }, n.key),
+        },
         image: {
             react(e, t, i) {
                 let a = n(274516)(`./${e.target}`);
                 return (0, r.jsx)("img", { alt: e.alt, src: a }, i.key);
             },
         },
-        blockQuote: { react: S?.blockQuote.react },
-        paragraph: { react: (e, t, n) => (0, r.jsx)("p", { children: t(e.content, n) }, n.key) },
+        blockQuote: { react: C?.blockQuote.react },
+        list: (e) => ({
+            react(t, n, i) {
+                let a = t.ordered ? "ol" : "ul",
+                    o = t.items.map((t, a) =>
+                        (0, r.jsx)("li", { className: s()(A["text-md/normal"], e.listItem), children: n(t, i) }, a),
+                    );
+                return (0, r.jsx)(a, { className: e.list, start: t.start, children: o }, i.key);
+            },
+        }),
+        paragraph: (e) => ({
+            react: (t, n, i) =>
+                (0, r.jsx)("p", { className: s()(A["text-md/normal"], e.paragraph), children: n(t.content, i) }, i.key),
+        }),
     };

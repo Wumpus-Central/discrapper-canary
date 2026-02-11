@@ -2,6 +2,9 @@
 var r = {
     video: "video__1689b",
     container: "container__1689b",
+    paragraph: "paragraph__1689b",
+    list: "list__1689b",
+    listItem: "listItem__1689b",
     image: "image__1689b",
     title: "title__1689b",
     lead: "lead__1689b",
