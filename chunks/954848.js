@@ -8,4 +8,5 @@ e.exports = {
     db: "reviewStepBody_bb5449",
     dD: "checkoutInlineNoticeContainer_bb5449",
     g4: "loadingContainer_bb5449",
+    KX: "giftRedemptionLink_bb5449",
 };

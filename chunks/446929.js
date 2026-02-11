@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $p: () => Z, O8: () => Y, RO: () => W, fJ: () => X });
+n.d(t, { $p: () => Q, O8: () => Y, RO: () => W, gH: () => X });
 var r = n(627968),
     i = n(64700),
     a = n(284009),
@@ -307,6 +307,7 @@ let Y = () => {
             discountAmountOff: u,
             isEligibleForTrial: s,
             userLocale: c,
+            isGift: d,
             isCustomGift: f,
             shouldUseCalculatedDiscount: p,
             discountOffer: (0, D.O)(),
@@ -323,41 +324,60 @@ let Y = () => {
         return { isCurrentPlan: n, disabled: r };
     },
     X = (e) => {
-        let { shouldUseUnifiedCheckoutUI: t, ...n } = e,
-            { planOptions: a, radioGroupRef: s, selectedPlan: o, radioGroupProps: l } = n,
-            u = z(n),
-            c = i.useMemo(
+        let { ...t } = e,
+            { planOptions: n, selectedPlan: a } = t,
+            s = z(t),
+            o = n.length > 0 ? G.hd[n[0]].premiumType : void 0,
+            l = i.useMemo(
                 () =>
-                    a.map((e) => {
-                        let { isCurrentPlan: n, disabled: i } = q(u.premiumSubscription, e);
+                    n.map((e) => {
+                        let { disabled: t } = q(s.premiumSubscription, e),
+                            n = (0, k.R)({
+                                planId: e,
+                                disabled: t,
+                                userLocale: s.userLocale,
+                                discountOffer: s.discountOffer,
+                                priceOptions: s.priceOptions,
+                                isGift: s.isGift,
+                                shouldUseCalculatedDiscount: s.shouldUseCalculatedDiscount,
+                            });
+                        return {
+                            value: n.id,
+                            primaryText: n.planName,
+                            badgeText: n.promoText ?? void 0,
+                            subText: n.priceText,
+                            isDisabled: n.isDisabled,
+                        };
+                    }),
+                [n, s],
+            );
+        return null == o
+            ? null
+            : (0, r.jsx)(_.me, {
+                  headingComponent: (0, r.jsx)(_.ec, { size: "sm", color: "text-strong", premiumType: o }),
+                  planRadioOptions: l,
+                  value: a?.id ?? "",
+                  onChange: (e) => s.selectPlan(e.value),
+              });
+    },
+    Z = (e) => {
+        let { planOptions: t, radioGroupRef: n, selectedPlan: a, radioGroupProps: s } = e,
+            o = z(e),
+            l = i.useMemo(
+                () =>
+                    t.map((e) => {
+                        let { isCurrentPlan: t, disabled: n } = q(o.premiumSubscription, e);
                         return (0, r.jsx)(
                             k.A,
-                            {
-                                planId: e,
-                                selected: o?.id === e,
-                                isCurrentPlan: n,
-                                disabled: i,
-                                shouldUseUnifiedCheckoutUI: t,
-                                ...u,
-                            },
+                            { planId: e, selected: a?.id === e, isCurrentPlan: t, disabled: n, ...o },
                             e,
                         );
                     }),
-                [a, t, u, o],
-            ),
-            d = a.length > 0 ? G.hd[a[0]].premiumType : void 0;
-        return t
-            ? null == d
-                ? null
-                : (0, r.jsx)(_.q7, {
-                      headingComponent: (0, r.jsx)(_.ec, { size: "sm", color: "text-strong", premiumType: d }),
-                      selection: o?.id ?? "",
-                      onChange: u.selectPlan,
-                      planOptionsComponents: c,
-                  })
-            : (0, r.jsx)("div", { ref: s, ...l, children: c });
+                [t, o, a],
+            );
+        return (0, r.jsx)("div", { ref: n, ...s, children: l });
     };
-function Z(e) {
+function Q(e) {
     let {
             selectedPlanId: t,
             planGroup: n,
@@ -392,7 +412,7 @@ function Z(e) {
             shouldShowUpdatedPaymentModal: U,
             discountAmountOff: z,
             isPrepaid: q,
-            radioGroupRef: Z,
+            radioGroupRef: X,
             radioGroupProps: Q,
             selectedPlanPrice: J,
             shouldShowHRKEuroWarning: ee,
@@ -440,9 +460,9 @@ function Z(e) {
                 });
         },
         ei = () =>
-            (0, r.jsx)(X, {
+            (0, r.jsx)(Z, {
                 planOptions: a,
-                radioGroupRef: Z,
+                radioGroupRef: X,
                 radioGroupProps: Q,
                 isGift: T,
                 isPrepaid: q,

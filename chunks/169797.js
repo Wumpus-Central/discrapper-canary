@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Jg: () => _, cy: () => d, oH: () => f, s3: () => c });
+n.d(t, { Jg: () => _, oH: () => f, s3: () => c, tt: () => d });
 var r = n(627968),
     i = n(64700),
     a = n(158954),
@@ -13,12 +13,12 @@ function c(e) {
             () => (null == d ? null : (0, r.jsx)("img", { alt: "", className: u.bI, src: (0, s.t)(d) })),
             [d],
         ),
-        p = i.useMemo(() => {
+        h = i.useMemo(() => {
             if (null != l) return { icon: c, type: { text: l }, variant: "expressive" };
         }, [l, c]);
     return (0, r.jsx)(a.rQ0, {
         ..._,
-        badge: p,
+        badge: h,
         badgePosition: "end",
         gradientColor: t,
         titleTextVariant: "heading-lg/semibold",
@@ -29,10 +29,10 @@ function c(e) {
 }
 function d(e) {
     let { onBackClick: t, primaryButtonProps: n } = e,
-        { onClick: i, text: s, loading: o, disabled: u, icon: c } = n;
+        { variant: i, onClick: s, text: o, loading: u, disabled: c, icon: d } = n;
     return (0, r.jsx)(a.H7u, {
         leading: null != t ? (0, r.jsx)(l.A, { onClick: t }) : void 0,
-        actions: [{ variant: "expressive", text: s, onClick: i, loading: o, disabled: u, icon: c }],
+        actions: [{ variant: i ?? "active", text: o, onClick: s, loading: u, disabled: c, icon: d }],
         actionsFullWidth: !1,
     });
 }

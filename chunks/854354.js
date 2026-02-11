@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Cq: () => c, YR: () => u, lp: () => d, xk: () => _ }), n(321073);
+n.d(t, { Nc: () => c, YR: () => u, lp: () => d, xk: () => _ }), n(321073);
 var r = n(252424),
     i = n(927578),
     a = n(427262),
@@ -7,12 +7,14 @@ var r = n(252424),
     o = n(756366),
     l = n(985018);
 function u(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     switch (e) {
         case s.WT.MONTH:
-            if (1 !== t) return l.intl.formatToPlainString(o.default.OBVcgO, { intervalCount: t });
-            return l.intl.string(o.default.FVzt1W);
+            if (1 !== t)
+                return l.intl.formatToPlainString(n ? o.default.AcRCMp : o.default.OBVcgO, { intervalCount: t });
+            return l.intl.string(n ? o.default["8gVLB3"] : o.default.FVzt1W);
         case s.WT.YEAR:
-            return l.intl.string(o.default.NEHhLR);
+            return l.intl.string(n ? o.default.M2mY1J : o.default.NEHhLR);
         default:
             throw Error("Unexpected interval");
     }

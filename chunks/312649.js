@@ -29,30 +29,33 @@ var r = n(627968),
     D = n(652215),
     L = n(789129);
 let w = (e) => {
-    let { showBackButton: t, onBackClick: n, selectedSkuId: i } = e,
+    let { showBackButton: t, onBackClick: n } = e,
         { premiumSubscription: a, isGift: s, planGroup: o, isPrepaid: l, inReverseTrial: u } = e,
         {
-            buttonLabel: d,
-            analyticsLocations: _,
-            application: h,
-            hasAcceptedTerms: p,
-            paymentSourceId: g,
-            activeSubscription: E,
-            devShelfFetchState: A,
-            hasPaymentSources: T,
+            buttonLabel: c,
+            analyticsLocations: d,
+            application: _,
+            hasAcceptedTerms: h,
+            paymentSourceId: p,
+            activeSubscription: g,
+            devShelfFetchState: E,
+            hasPaymentSources: A,
         } = (0, I.Ke)({ premiumSubscription: a, isGift: s, planGroup: o, isPrepaid: l, inReverseTrial: u }),
-        y = (0, I.X1)(e, {
-            buttonLabel: d,
-            analyticsLocations: _,
-            application: h,
-            hasAcceptedTerms: p,
-            paymentSourceId: g,
-            activeSubscription: E,
-            devShelfFetchState: A,
-            hasPaymentSources: T,
-        }),
-        v = null != i && S.Ay.isPremiumSku(i) ? c.tvc : void 0;
-    return (0, r.jsx)(f.tt, { onBackClick: t ? n : void 0, primaryButtonProps: { ...y, icon: v } });
+        T = i.useMemo(
+            () =>
+                (0, I.X1)(e, {
+                    buttonLabel: c,
+                    analyticsLocations: d,
+                    application: _,
+                    hasAcceptedTerms: h,
+                    paymentSourceId: p,
+                    activeSubscription: g,
+                    devShelfFetchState: E,
+                    hasPaymentSources: A,
+                }),
+            [e, c, d, _, h, p, g, E, A],
+        );
+    return (0, r.jsx)(f.tt, { onBackClick: t ? n : void 0, primaryButtonProps: T });
 };
 function x(e) {
     let {

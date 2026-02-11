@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Y: () => b }), n(321073);
+n.d(t, { Y: () => N }), n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(735438),
@@ -11,8 +11,8 @@ var r = n(627968),
     d = n(812745),
     _ = n(652215),
     f = n(788868),
-    p = n(749226);
-let h = {
+    h = n(749226);
+let p = {
         name: "Primitive: Order Summary Accordion",
         id: "unified-checkout-order-summary",
         component: (e) => {
@@ -26,7 +26,7 @@ let h = {
             return (
                 n && i && a.push({ id: 3, label: "Discount Applied", amount: -100 }),
                 (0, r.jsx)("div", {
-                    className: p.SG,
+                    className: h.SG,
                     children: (0, r.jsx)(c.Vm, { label: t, lineItems: a, currency: _.Yri.USD }),
                 })
             );
@@ -37,7 +37,7 @@ let h = {
             hasLineItems: { label: "Has Line Items", type: "boolean", defaultValue: !0 },
         },
     },
-    m = {
+    g = {
         name: "Primitive: Nitro Plan Select",
         id: "unified-checkout-nitro-plan-select",
         component: (e) => {
@@ -51,16 +51,16 @@ let h = {
                     rightTitleDescriber: d,
                     rightPrimaryText: _,
                     rightSubtext: f,
-                    rightShowSubtext: h,
-                    rightSubtextStrikethrough: m,
+                    rightShowSubtext: p,
+                    rightSubtextStrikethrough: g,
                 } = e,
-                [g, E] = i.useState(0);
+                [E, A] = i.useState(0);
             return (0, r.jsxs)("div", {
-                className: p.Cd,
+                className: h.Cd,
                 children: [
                     (0, r.jsx)(c.q7, {
-                        selection: g,
-                        onChange: E,
+                        selection: E,
+                        onChange: A,
                         planOptions: [
                             {
                                 id: 0,
@@ -74,11 +74,11 @@ let h = {
                                 title: (0, r.jsx)(c.ec, { size: "sm", color: "text-strong", premiumType: t }),
                                 titleDescriber: d,
                                 primaryText: _,
-                                subtext: h ? (0, r.jsx)(c.Lo, { strikethrough: m, price: f }) : void 0,
+                                subtext: p ? (0, r.jsx)(c.Lo, { strikethrough: g, price: f }) : void 0,
                             },
                         ],
                     }),
-                    (0, r.jsxs)(l.Text, { variant: "text-sm/normal", children: ["Selected plan index: ", g] }),
+                    (0, r.jsxs)(l.Text, { variant: "text-sm/normal", children: ["Selected plan index: ", E] }),
                 ],
             });
         },
@@ -108,7 +108,7 @@ let h = {
             },
         },
     },
-    g = {
+    E = {
         name: "Primitive: Subscription Details Accordion",
         id: "unified-checkout-subscription-details",
         component: (e) => {
@@ -126,7 +126,7 @@ let h = {
                       ]
                     : [];
             return (0, r.jsx)("div", {
-                className: p.SG,
+                className: h.SG,
                 children: (0, r.jsx)(c._D, {
                     label: t,
                     lineItems: i,
@@ -141,7 +141,7 @@ let h = {
             hasLineItems: { label: "Has Line Items", type: "boolean", defaultValue: !0 },
         },
     },
-    E = {
+    A = {
         name: "Primitive: Purchase Item",
         id: "unified-checkout-purchase-item",
         component: (e) => {
@@ -156,31 +156,31 @@ let h = {
                 strikethroughPrice: d,
                 hasGift: _,
                 giftUsername: f,
-                giftNickname: h,
+                giftNickname: p,
             } = e;
-            function m(e, p) {
+            function g(e, h) {
                 return (0, r.jsx)(c.f7, {
                     header: n ? t : void 0,
                     headerIconSrc: "https://cdn.discordapp.com/embed/avatars/1.png",
-                    label: `${i} ${p}`,
+                    label: `${i} ${h}`,
                     description: a,
                     price: s,
                     PriceIcon: o ? l.tvc : void 0,
                     strikethroughPrice: u ? d : void 0,
                     graphic: (0, r.jsx)(e, {}),
                     gift: _
-                        ? { username: f, nickname: h, avatarUrl: "https://cdn.discordapp.com/embed/avatars/2.png" }
+                        ? { username: f, nickname: p, avatarUrl: "https://cdn.discordapp.com/embed/avatars/2.png" }
                         : void 0,
                 });
             }
             return (0, r.jsxs)("div", {
-                className: p.SG,
+                className: h.SG,
                 children: [
-                    m(c.JW, "Nitro"),
-                    m(c.DH, "Nitro Basic"),
-                    m(c.a6, "Boost"),
-                    m(c.jw, "App"),
-                    m(c.oo, "Nitro Credit"),
+                    g(c.JW, "Nitro"),
+                    g(c.DH, "Nitro Basic"),
+                    g(c.a6, "Boost"),
+                    g(c.jw, "App"),
+                    g(c.oo, "Nitro Credit"),
                 ],
             });
         },
@@ -198,7 +198,7 @@ let h = {
             giftNickname: { label: "Gift Nickname", type: "text", defaultValue: "Matt" },
         },
     },
-    A = {
+    I = {
         name: "Primitive: Payment Select",
         id: "unified-checkout-payment-select",
         component: (e) => {
@@ -236,8 +236,8 @@ let h = {
             },
         },
     },
-    I = { "nitro-wheel": l.tvc, gift: l.okO, orbs: l.Cp8 };
-function T(e) {
+    T = { "nitro-wheel": l.tvc, gift: l.okO, orbs: l.Cp8 };
+function y(e) {
     let { primaryButtonText: t, primaryButtonIcon: n, headerBadgeHasIcon: i, ...a } = e,
         s = i ? l.gqV : void 0;
     return (0, r.jsxs)(l.BJc, {
@@ -259,7 +259,7 @@ function T(e) {
                                 ...a,
                                 title: a.title,
                                 headerBadgeIcon: s,
-                                primaryButtonProps: { onClick: e.onClose, text: t, icon: "none" !== n ? I[n] : void 0 },
+                                primaryButtonProps: { onClick: e.onClose, text: t, icon: "none" !== n ? T[n] : void 0 },
                                 onBackClick: e.onClose,
                                 children: (0, r.jsx)(l.BJc, {
                                     gap: 16,
@@ -275,11 +275,11 @@ function T(e) {
         ],
     });
 }
-let y = s.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
-    S = {
+let S = s.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
+    v = {
         name: "Modal: Unified Checkout Stateless Modal",
         id: "unified-checkout-stateless-modal",
-        component: T,
+        component: y,
         controls: {
             title: { label: "Title", type: "text", defaultValue: "Checkout" },
             primaryButtonText: { label: "Primary Button Text", type: "text", defaultValue: "Get Nitro Yearly" },
@@ -294,7 +294,7 @@ let y = s.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
                     { label: "None", value: "none" },
                 ],
             },
-            countryCode: { label: "Country Code", type: "select", defaultValue: o.d.US, options: y },
+            countryCode: { label: "Country Code", type: "select", defaultValue: o.d.US, options: S },
             headerBadgeText: { label: "Header Pill Text", type: "text", defaultValue: "PROMO" },
             headerBadgeHasIcon: { label: "Header Badge Has Icon", type: "boolean", defaultValue: !1 },
             gradientColor: {
@@ -311,7 +311,7 @@ let y = s.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
             dismissable: { label: "Dismissable", type: "boolean", defaultValue: !0 },
         },
     },
-    v = {
+    C = {
         purchaseButtonText: "Subscribe",
         totalDue: 999,
         renewalPrice: 1099,
@@ -319,21 +319,21 @@ let y = s.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
         period: "month",
         startDate: new Date(),
     },
-    C = { type: c.I0.Subscription, props: v },
-    b = {
+    b = { type: c.I0.Subscription, props: C },
+    N = {
         title: "Unified Checkout",
         stories: [
-            S,
-            h,
-            m,
+            v,
+            p,
             g,
             E,
             A,
+            I,
             {
                 name: "Primitive: Legal Copy",
                 id: "unified-checkout-legal-copy",
                 component: function (e) {
-                    let { variant: t = C, immediateDelivery: n } = e,
+                    let { variant: t = b, immediateDelivery: n } = e,
                         [a, s] = i.useState(!1);
                     return (0, r.jsx)(c._P, { ...t, immediateDelivery: n ? { value: a, onChange: s } : void 0 });
                 },
@@ -341,10 +341,10 @@ let y = s.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
                     variant: {
                         label: "Variant",
                         type: "select",
-                        defaultValue: C,
+                        defaultValue: b,
                         options: [
-                            { label: "Subscription", value: C },
-                            { label: "Subscription Trial", value: { type: c.I0.SubscriptionTrial, props: v } },
+                            { label: "Subscription", value: b },
+                            { label: "Subscription Trial", value: { type: c.I0.SubscriptionTrial, props: C } },
                             {
                                 label: "Orbs Redemption",
                                 value: { type: c.I0.OrbsRedemption, props: { purchaseButtonText: "Redeem" } },
@@ -356,6 +356,44 @@ let y = s.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
                         ],
                     },
                     immediateDelivery: { label: "Immediate Delivery", type: "boolean", defaultValue: !1 },
+                },
+            },
+            {
+                name: "Primitive: Gift Redemption Link",
+                id: "unified-checkout-gift-redemption-link",
+                component: function () {
+                    return (0, r.jsxs)("div", {
+                        children: [
+                            (0, r.jsx)(l.Text, { variant: "text-sm/normal", children: "Stateless Component:" }),
+                            (0, r.jsx)(c.y, { onClick: _.tEg }),
+                            (0, r.jsx)("br", {}),
+                            (0, r.jsx)(l.Text, { variant: "text-sm/normal", children: "Link with Modal:" }),
+                            (0, r.jsx)(c.Z4, { onComplete: _.tEg }),
+                        ],
+                    });
+                },
+            },
+            {
+                name: "Primitive: Plan Radio Group",
+                id: "unified-checkout-plan-radio-group",
+                component: function () {
+                    let e = [
+                            { primaryText: "Yearly", subText: "$99.99", badgeText: "SAVE 16%", value: "yearly" },
+                            { primaryText: "Monthly", subText: "$99.99", value: "monthly" },
+                        ],
+                        [t, n] = i.useState("yearly");
+                    return (0, r.jsx)("div", {
+                        children: (0, r.jsx)(c.me, {
+                            headingComponent: (0, r.jsx)(c.ec, {
+                                size: "sm",
+                                color: "text-strong",
+                                premiumType: f.PremiumTypes.TIER_2,
+                            }),
+                            planRadioOptions: e,
+                            value: t,
+                            onChange: (e) => n(e.value),
+                        }),
+                    });
                 },
             },
         ],
