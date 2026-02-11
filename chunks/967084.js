@@ -1,3 +1,3 @@
 e.exports = JSON.parse(
-    '{"d3yO98":["Aktiv n\xe5"],"HGimIS":["S\xf8keresultater"],"GKTlS6":["Favoritter"],"OskevP":["Favoritter"],"DUIbKP":["S\xf8keresultater"],"uhJexs":["Chat"]}',
+    '{"iK1QsY":["Merk kanalen som favoritt"],"w1MU8Y":["Favorittbruker"],"xB/0Z9":["S\xf8k i tekstkanaler og DM-er"],"d3yO98":["Aktive n\xe5"],"uC6Lhg":["Nylige tekstkanaler"],"HGimIS":["S\xf8keresultater"],"GKTlS6":["Favoritter"],"trKJoT":["I spillet"],"OV3KfO":["S\xf8k i talekanaler"],"OskevP":["Favoritter"],"C+ojiQ":["Venner i tale"],"DUIbKP":["S\xf8keresultater"],"9ME4wE":["Foresl\xe5tte talekanaler"],"ERApc4":["Lukk overleggschat"],"x1k3cO":[[1,"gameName"]," spilles n\xe5"],"uhJexs":["Chat"],"xpv/t5":["Velg en chat for \xe5 sende meldinger."],"tYPfF2":["Minimer tekst-i-tale"],"KWrMk5":["\xc5pne overleggschat"],"2yFtJ1":["Nylige overleggschatter"],"dvUElD":["Fjern kanalen som favoritt"],"Xr8XHk":["Fjern bruker som favoritt"]}',
 );
