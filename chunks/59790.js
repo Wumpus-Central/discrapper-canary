@@ -14,7 +14,5 @@ e.exports = {
     VD: "progressCellHeader__49035",
     so: "progressCellBody__49035",
     NO: "progressCellText__49035",
-    hP: "actionButton__49035",
-    DX: "actionButtonContents__49035",
-    gE: "actionIcon__49035",
+    sG: "actionButtonGroup__49035",
 };

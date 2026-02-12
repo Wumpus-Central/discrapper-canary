@@ -5,11 +5,11 @@ var i = n(627968),
     a = n.n(l),
     s = n(735438),
     o = n.n(s),
-    d = n(311907),
-    c = n(827734),
-    u = n(990078),
-    A = n(582754),
-    h = n(421380),
+    d = n(158954),
+    c = n(311907),
+    u = n(827734),
+    A = n(990078),
+    h = n(582754),
     _ = n(397927),
     m = n(73153),
     p = n(442433),
@@ -18,8 +18,8 @@ var i = n(627968),
     I = n(707606),
     f = n(456412),
     C = n(587895),
-    N = n(235986),
-    T = n(596719),
+    T = n(235986),
+    N = n(596719),
     S = n(769015),
     x = n(290987),
     v = n(544028),
@@ -38,20 +38,12 @@ let G = (e) => {
         let { className: t, children: n, onContextMenu: r, item: l } = e;
         return (0, i.jsx)("div", { className: t, onContextMenu: (e) => r(e, l), children: n });
     },
-    k = [c.A.unsafe_rawColors.BLUE_345.css, c.A.colors.INTERACTIVE_TEXT_DEFAULT.css],
+    k = [u.A.unsafe_rawColors.BLUE_345.css, u.A.colors.INTERACTIVE_TEXT_DEFAULT.css],
     V = (e) => {
         let { tooltip: t, onClick: n, icon: r } = e;
-        return (0, i.jsx)(u.m, {
+        return (0, i.jsx)(A.m, {
             text: t,
-            children: (0, i.jsx)(h.$n, {
-                "aria-label": t,
-                className: U.hP,
-                innerClassName: U.DX,
-                color: h.$n.Colors.PRIMARY,
-                onClick: n,
-                size: h.$n.Sizes.ICON,
-                children: (0, i.jsx)(r, { className: U.gE }),
-            }),
+            children: (0, i.jsx)(d.K0, { "aria-label": t, variant: "secondary", icon: r, onClick: n, size: "sm" }),
         });
     };
 function B(e, t) {
@@ -139,8 +131,8 @@ class W extends r.PureComponent {
     }
     renderBody(e) {
         let { percent: t, foregroundColor: n, foregroundGradientColor: r, message: l } = e;
-        return (0, i.jsxs)(N.A, {
-            direction: N.A.Direction.VERTICAL,
+        return (0, i.jsxs)(T.A, {
+            direction: T.A.Direction.VERTICAL,
             children: [
                 (0, i.jsx)(_.iCB, {
                     percent: t,
@@ -155,8 +147,8 @@ class W extends r.PureComponent {
     }
     renderStackedProgress(e) {
         let { percents: t, message: n } = e;
-        return (0, i.jsxs)(N.A, {
-            direction: N.A.Direction.VERTICAL,
+        return (0, i.jsxs)(T.A, {
+            direction: T.A.Direction.VERTICAL,
             children: [
                 (0, i.jsx)(_.LvI, {
                     percents: t,
@@ -172,9 +164,9 @@ class W extends r.PureComponent {
         let { item: e } = this.props;
         return this.renderBody({
             message: M.intl.format(M.t.z1oxGO, { remove: () => g.Vt(e.applicationId, e.branchId) }),
-            foregroundColor: (0, A.qB)(e.theme)
-                ? c.A.unsafe_rawColors.PRIMARY_300.css
-                : c.A.unsafe_rawColors.PRIMARY_500.css,
+            foregroundColor: (0, h.qB)(e.theme)
+                ? u.A.unsafe_rawColors.PRIMARY_300.css
+                : u.A.unsafe_rawColors.PRIMARY_500.css,
             percent: 100,
         });
     }
@@ -200,9 +192,9 @@ class W extends r.PureComponent {
             (null == t || null == e) && ((t = 0), (e = M.intl.string(M.t["qS+iKY"]))),
             this.renderBody({
                 percent: t,
-                foregroundColor: (0, A.qB)(i)
-                    ? c.A.unsafe_rawColors.PRIMARY_300.css
-                    : c.A.unsafe_rawColors.PRIMARY_500.css,
+                foregroundColor: (0, h.qB)(i)
+                    ? u.A.unsafe_rawColors.PRIMARY_300.css
+                    : u.A.unsafe_rawColors.PRIMARY_500.css,
                 message: e,
             })
         );
@@ -226,7 +218,7 @@ class W extends r.PureComponent {
                       });
         return this.renderBody({
             message: a,
-            foregroundColor: (0, A.qB)(t) ? c.A.unsafe_rawColors.PRIMARY_300.css : c.A.unsafe_rawColors.PRIMARY_500.css,
+            foregroundColor: (0, h.qB)(t) ? u.A.unsafe_rawColors.PRIMARY_300.css : u.A.unsafe_rawColors.PRIMARY_500.css,
             percent: r,
         });
     }
@@ -268,7 +260,7 @@ class W extends r.PureComponent {
         return this.renderBody({
             percent: l,
             message: Y({ type: r, stage: i, percent: a, progress: n, total: t }),
-            foregroundColor: c.A.unsafe_rawColors.BLUE_345.css,
+            foregroundColor: u.A.unsafe_rawColors.BLUE_345.css,
         });
     }
     renderProgress() {
@@ -317,8 +309,8 @@ let q = () => (0, i.jsx)(V, { icon: _.udU, tooltip: M.intl.string(M.t.YGm6SZ), o
             key: "name",
             cellClassName: U.UQ,
             render: (e) =>
-                (0, i.jsxs)(N.A, {
-                    align: N.A.Align.CENTER,
+                (0, i.jsxs)(T.A, {
+                    align: T.A.Align.CENTER,
                     children: [
                         (0, i.jsx)(S.A, { game: e.application, className: U.__invalid_gameIcon, size: S.M.SMALL }),
                         (0, i.jsx)("div", { className: U.TF, children: e.application.name }),
@@ -357,7 +349,7 @@ let q = () => (0, i.jsx)(V, { icon: _.udU, tooltip: M.intl.string(M.t.YGm6SZ), o
                                       : (0, i.jsx)(z, { item: e })),
                             (r = (0, i.jsx)($, { item: e })))
                           : (r = (0, i.jsx)($, { item: e })),
-                    (0, i.jsxs)(N.A, { justify: N.A.Justify.END, children: [n, r] })
+                    (0, i.jsxs)("div", { className: U.sG, children: [n, r] })
                 );
             },
         },
@@ -402,19 +394,19 @@ class X extends r.PureComponent {
                                   className: a()(U.e4, U.Eg),
                                   title: M.intl.string(M.t.ytoXKr),
                                   getHistoricalTotalBytes: b.A.getHistoricalTotalBytesDownloaded,
-                                  color: c.A.unsafe_rawColors.GREEN_360.resolve({ saturation: 1 }).hex(),
+                                  color: u.A.unsafe_rawColors.GREEN_360.resolve({ saturation: 1 }).hex(),
                                   animate: r,
                               }),
                               (0, i.jsx)(D.A, {
                                   className: a()(U.e4, U.pn),
                                   title: M.intl.string(M.t.SjohhI),
                                   getHistoricalTotalBytes: b.A.getHistoricalTotalBytesWritten,
-                                  color: c.A.unsafe_rawColors.BLUE_345.resolve({ saturation: 1 }).hex(),
+                                  color: u.A.unsafe_rawColors.BLUE_345.resolve({ saturation: 1 }).hex(),
                                   animate: r,
                               }),
                           ],
                       }),
-                      (0, i.jsx)(T.A, {
+                      (0, i.jsx)(N.A, {
                           hasHeader: !1,
                           columns: Q,
                           data: e,
@@ -464,7 +456,7 @@ function Z(e, t, n, i) {
     }, []);
 }
 let J = (0, f.A)(
-    d.Ay.connectStores([C.A, b.A, L.A, v.A, O.A], () => ({
+    c.Ay.connectStores([C.A, b.A, L.A, v.A, O.A], () => ({
         applications: [...Z(L.A.activeItems, !1, C.A, b.A), ...Z(L.A.finishedItems, !0, C.A, b.A)],
         paused: L.A.paused,
         isFocused: O.A.isFocused(),
