@@ -22001,6 +22001,8 @@
   "Xla/TL": "Add {boostCount, plural, one { Boost} other { Boosts} } before it expires in {days, plural, one { day} other { days} } to keep it active.",
   "gG8bI8": "!!{perkName}!! expiring soon",
   "BNS5zl": "Add {boostCount, plural, one { Boost} other { Boosts} } before it expires today to keep it active.",
+  "s+HTdX": "Boosting helps unlock perks for everyone! You’ll also get a special role color and badge for being a Booster. $[View all perks]({{viewAllPerks}})",
+  "qGDEON": "Be the first to Boost this server 🥇",
   "SZPaHH": "Plus, you're getting {boostCount, plural, one { Boost} other { Boosts} } back.",
   "6e2ry1": "Beta ends !!{dateString}!!",
   "YWo6VL": "How it works",
