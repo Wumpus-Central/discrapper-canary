@@ -31,6 +31,7 @@ let _ = {
                 progress: { label: "Progress (0 - 1.0)", type: "slider", defaultValue: 0, minValue: 0, maxValue: 1 },
                 featured: { label: "Featured", type: "boolean", defaultValue: !1 },
                 glowing: { label: "Glowing", type: "boolean", defaultValue: !1 },
+                blurTint: { label: "Blur Tint", type: "color", defaultValue: void 0 },
             },
         },
     ],

@@ -1,33 +1,35 @@
 "use strict";
-n.d(t, { i: () => l });
+n.d(t, { i: () => c });
 var r = n(627968),
-    i = n(158954),
-    a = n(292666),
-    s = n(397927),
-    o = n(94576);
-function l(e) {
-    let { controls: t, props: n, onPropsChange: l } = e,
-        u = (e, t) => {
-            l({ ...n, [e]: t });
+    i = n(310784),
+    a = n.n(i),
+    s = n(158954),
+    o = n(292666),
+    l = n(397927),
+    u = n(94576);
+function c(e) {
+    let { controls: t, props: n, onPropsChange: i } = e,
+        a = (e, t) => {
+            i({ ...n, [e]: t });
         },
         c = Object.entries(t);
     return 0 === c.length
         ? null
         : (0, r.jsx)("div", {
-              className: o.in,
-              children: (0, r.jsx)(i.BJc, {
+              className: u.in,
+              children: (0, r.jsx)(s.BJc, {
                   gap: 16,
                   children: c.map((e) => {
                       let [t, i] = e,
-                          o = n[t] ?? i.defaultValue;
+                          c = n[t] ?? i.defaultValue;
                       return (0, r.jsxs)(r.Fragment, {
                           children: [
                               "select" === i.type &&
                                   null != i.options &&
-                                  (0, r.jsx)(s.l6P, {
+                                  (0, r.jsx)(l.l6P, {
                                       label: i.label,
-                                      value: o,
-                                      onSelectionChange: (e) => u(t, e),
+                                      value: c,
+                                      onSelectionChange: (e) => a(t, e),
                                       options: i.options,
                                       formatOption: (e) => {
                                           let { label: t, value: n } = e;
@@ -37,25 +39,25 @@ function l(e) {
                                       fullWidth: !0,
                                   }),
                               "boolean" === i.type &&
-                                  (0, r.jsx)(s.Checkbox, { checked: o, onChange: (e) => u(t, e), label: i.label }),
+                                  (0, r.jsx)(l.Checkbox, { checked: c, onChange: (e) => a(t, e), label: i.label }),
                               "text" === i.type &&
-                                  (0, r.jsx)(a.k, { value: o, onChange: (e) => u(t, e), label: i.label }),
+                                  (0, r.jsx)(o.k, { value: c, onChange: (e) => a(t, e), label: i.label }),
                               "number" === i.type &&
-                                  (0, r.jsx)(a.k, {
+                                  (0, r.jsx)(o.k, {
                                       type: "number",
-                                      value: String(o),
+                                      value: String(c),
                                       min: i.minValue,
-                                      onChange: (e) => u(t, Number(e)),
+                                      onChange: (e) => a(t, Number(e)),
                                       label: i.label,
                                   }),
                               "slider" === i.type &&
-                                  (0, r.jsx)(s.Apm, {
-                                      initialValue: null != o ? Number(o) : 0,
-                                      value: null != o ? Number(o) : void 0,
+                                  (0, r.jsx)(l.Apm, {
+                                      initialValue: null != c ? Number(c) : 0,
+                                      value: null != c ? Number(c) : void 0,
                                       minValue: i.minValue,
                                       maxValue: i.maxValue,
                                       keyboardStep: (i.maxValue - i.minValue) * 0.05,
-                                      asValueChanges: (e) => u(t, e),
+                                      asValueChanges: (e) => a(t, e),
                                       handleSize: 10,
                                       disabled: !1,
                                       stickToMarkers: !1,
@@ -63,9 +65,42 @@ function l(e) {
                                       label: i.label,
                                       onValueRender: (e) => String(Math.round(1e3 * e) / 1e3),
                                   }),
+                              "color" === i.type &&
+                                  (0, r.jsxs)("div", {
+                                      className: u.fJ,
+                                      children: [
+                                          (0, r.jsx)(s.EYj, {
+                                              variant: "text-md/medium",
+                                              color: "text-strong",
+                                              tag: "label",
+                                              children: i.label,
+                                          }),
+                                          (0, r.jsxs)("div", {
+                                              className: u.nY,
+                                              children: [
+                                                  (0, r.jsx)("input", {
+                                                      type: "color",
+                                                      className: u.oP,
+                                                      value: _(c),
+                                                      onChange: (e) => a(t, e.target.value),
+                                                  }),
+                                                  (0, r.jsx)(o.k, { value: c ?? "", onChange: (e) => a(t, e) }),
+                                              ],
+                                          }),
+                                      ],
+                                  }),
                           ],
                       });
                   }),
               }),
           });
+}
+let d = "#000000";
+function _(e) {
+    if (null == e || "" === e) return d;
+    try {
+        return a()(e).hex();
+    } catch {
+        return d;
+    }
 }

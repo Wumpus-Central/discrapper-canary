@@ -91,7 +91,7 @@ function G(e) {
                               title: b.intl.string(b.t.m7PucM),
                               description: b.intl.format(b.t.zh1X7u, {}),
                               pillText: b.intl.string(b.t.oW0eUd),
-                              primaryAsset: L.A,
+                              backgroundAssetUrl: L.A,
                               progress: w.getDate() / B,
                               ctaText: b.intl.string(b.t.w7s5Qr),
                               onCtaClick: () => (0, E.uE)({ analyticsLocations: a }),

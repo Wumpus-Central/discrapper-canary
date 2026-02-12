@@ -56827,6 +56827,8 @@ h3.improved__1689b:after {
 .card_cf5b44 {
     border: 1px solid var(--border-subtle);
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     height: 380px;
     overflow: hidden;
     position: relative
@@ -56872,17 +56874,22 @@ h3.improved__1689b:after {
 .primaryAssetWrapper_cf5b44 {
     align-items: center;
     display: flex;
+    flex: 1;
     justify-content: center;
-    margin: var(--space-16) auto;
+    margin-inline: auto;
+    margin-bottom: 80px;
     max-width: 400px;
-    position: relative
+    position: relative;
+    width: 100%
 }
 
 .primaryAssetImage_cf5b44 {
+    border-radius: 16px;
     max-height: 180px;
+    max-width: 100%;
     -o-object-fit: contain;
     object-fit: contain;
-    width: 100%
+    overflow: hidden
 }
 
 .contentContainer_cf5b44 {
@@ -58873,6 +58880,28 @@ svg.radioIcon_c1e9c4 {
 
 .controlsSection_df4c28 {
     margin-bottom: 24px
+}
+
+.colorControl_df4c28 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.colorControlInput_df4c28 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.colorSwatch_df4c28 {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    cursor: pointer;
+    height: 40px;
+    width: 40px
 }
 
 .storyContent_df4c28 {

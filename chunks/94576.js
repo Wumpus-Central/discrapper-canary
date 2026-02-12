@@ -16,5 +16,8 @@ e.exports = {
     BT: "controlsRight_df4c28",
     WK: "controlsBottom_df4c28",
     in: "controlsSection_df4c28",
+    fJ: "colorControl_df4c28",
+    nY: "colorControlInput_df4c28",
+    oP: "colorSwatch_df4c28",
     Dw: "storyContent_df4c28",
 };

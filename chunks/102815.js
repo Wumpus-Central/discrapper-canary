@@ -1,113 +1,129 @@
 "use strict";
-n.d(t, { S: () => p });
-var r = n(627968);
-n(64700);
-var i = n(503698),
-    a = n.n(i),
-    s = n(735438),
-    o = n(732955),
-    l = n(462887),
-    u = n(397927),
-    c = n(736653),
-    d = n(613566),
-    _ = n(872725),
-    f = n(652215),
-    h = n(355313);
-let p = (e) => {
+n.d(t, { S: () => A });
+var r = n(627968),
+    i = n(64700),
+    a = n(310784),
+    s = n.n(a),
+    o = n(503698),
+    l = n.n(o),
+    u = n(735438),
+    c = n(732955),
+    d = n(462887),
+    _ = n(397927),
+    f = n(736653),
+    h = n(613566),
+    p = n(872725),
+    g = n(652215),
+    E = n(340091);
+let A = (e) => {
     let {
             title: t,
             description: n,
-            caption: i,
-            pillText: p,
-            primaryAsset: g,
-            backgroundAssetUrl: E,
-            progress: A,
-            ctaText: I,
-            onCtaClick: T,
-            glowing: y,
-            progressGlowing: S = !1,
-            featured: v,
-            className: C,
+            caption: a,
+            pillText: o,
+            primaryAsset: A,
+            backgroundAssetUrl: I,
+            progress: T,
+            ctaText: y,
+            onCtaClick: S,
+            glowing: v,
+            progressGlowing: C = !1,
+            featured: b,
+            className: N,
+            blurTint: R,
         } = e,
-        b = (0, c.DP)(),
-        N = !(0, s.isEmpty)(E),
-        R = N && (0, l.q)(b);
-    return (0, r.jsx)(o.NPJ, {
-        theme: R ? f.NJ8.DARKER : void 0,
+        O = (0, f.DP)(),
+        D = !(0, u.isEmpty)(I),
+        L = D && (0, d.q)(O),
+        w = i.useMemo(() => {
+            if (null != R && "" !== R)
+                try {
+                    let e = s()(R);
+                    return 1 === e.alpha() ? e.alpha(0.25).css() : e.css();
+                } catch {
+                    return;
+                }
+        }, [R]);
+    return (0, r.jsx)(c.NPJ, {
+        theme: L ? g.NJ8.DARKER : void 0,
         children: (e) =>
-            (0, r.jsxs)(_.A, {
-                cardType: u.sl2.PRIMARY,
+            (0, r.jsxs)(p.A, {
+                cardType: _.sl2.PRIMARY,
                 hueRotate: 25,
-                glowAmount: 5 * !!y,
-                blurAmount: 10 * !!y,
-                cardClassName: a()(h.Nr, e, C, { [h.j8]: v }),
+                glowAmount: 5 * !!v,
+                blurAmount: 10 * !!v,
+                cardClassName: l()(E.Nr, e, N, { [E.j8]: b }),
                 cardStyle: {
-                    backgroundImage: N ? `url(${E})` : void 0,
+                    backgroundImage: D ? `url(${I})` : void 0,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundOrigin: "padding-box",
                     backgroundClip: "padding-box",
                 },
                 children: [
-                    !(0, s.isEmpty)(p) &&
-                        (0, r.jsx)(u.Text, {
+                    !(0, u.isEmpty)(o) &&
+                        (0, r.jsx)(_.Text, {
                             variant: "text-xs/bold",
                             color: "badge-expressive-text-default",
-                            className: h.Io,
-                            children: p,
+                            className: E.Io,
+                            children: o,
                         }),
                     (0, r.jsx)("div", {
-                        className: h.qh,
+                        className: E.qh,
                         children:
-                            null != g &&
-                            "" !== g &&
-                            ("string" == typeof g ? (0, r.jsx)("img", { src: g, alt: "", className: h.eq }) : g),
+                            null != A &&
+                            "" !== A &&
+                            ("string" == typeof A ? (0, r.jsx)("img", { src: A, alt: "", className: E.eq }) : A),
                     }),
-                    !(0, s.isEmpty)(i) &&
+                    !(0, u.isEmpty)(a) &&
                         (0, r.jsx)("div", {
-                            className: h.OU,
+                            className: E.OU,
                             children:
-                                "string" == typeof i
-                                    ? (0, r.jsx)(u.Text, {
+                                "string" == typeof a
+                                    ? (0, r.jsx)(_.Text, {
                                           variant: "text-sm/normal",
                                           color: "text-muted",
-                                          children: i,
+                                          children: a,
                                       })
-                                    : i,
+                                    : a,
                         }),
                     (0, r.jsxs)("div", {
-                        className: h.hQ,
+                        className: E.hQ,
                         children: [
-                            (0, r.jsx)("div", { className: h.u_, "aria-hidden": "true" }),
+                            (0, r.jsx)("div", {
+                                className: E.u_,
+                                style: { backgroundColor: w },
+                                "aria-hidden": "true",
+                            }),
                             (0, r.jsxs)("div", {
-                                className: h.P_,
-                                tabIndex: (0, s.isEmpty)(I) ? 0 : void 0,
+                                className: E.P_,
+                                tabIndex: (0, u.isEmpty)(y) ? 0 : void 0,
                                 children: [
-                                    (0, r.jsx)(u.Heading, { variant: "heading-lg/semibold", children: t }),
-                                    !(0, s.isEmpty)(n) &&
-                                        (0, r.jsx)(u.Text, {
+                                    (0, r.jsx)(_.Heading, { variant: "heading-lg/semibold", children: t }),
+                                    !(0, u.isEmpty)(n) &&
+                                        (0, r.jsx)(_.Text, {
                                             variant: "text-sm/normal",
                                             color: "text-default",
-                                            className: h.h_,
+                                            className: E.h_,
                                             children: n,
                                         }),
-                                    null != A &&
+                                    null != T &&
                                         (0, r.jsx)("div", {
-                                            className: h.oU,
-                                            children: (0, r.jsx)(d.Ay, {
-                                                variant: d.qP.BLUE,
-                                                progress: (0, s.clamp)(A, 0, 1),
+                                            className: E.oU,
+                                            children: (0, r.jsx)(h.Ay, {
+                                                variant: h.qP.BLUE,
+                                                progress: (0, u.clamp)(T, 0, 1),
                                                 maximum: 1,
-                                                glowing: S,
+                                                glowing: C,
                                             }),
                                         }),
-                                    !(0, s.isEmpty)(I) &&
+                                    !(0, u.isEmpty)(y) &&
                                         (0, r.jsx)("div", {
-                                            className: h.lI,
-                                            children: (0, r.jsx)(o.$nd, {
-                                                text: I,
-                                                variant: !N && (0, l.q)(b) ? "primary" : "overlay-primary",
-                                                onClick: T,
+                                            className: E.lI,
+                                            children: (0, r.jsx)(c.$nd, {
+                                                text: y,
+                                                variant: !D && (0, d.q)(O) ? "primary" : "overlay-primary",
+                                                onClick: S,
                                             }),
                                         }),
                                 ],
