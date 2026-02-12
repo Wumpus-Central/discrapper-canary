@@ -209,8 +209,14 @@ let N = (0, d.c$)(
         "enableProfileUpdatesNotifications",
         (e) => e?.value ?? !0,
         (e) => o._t.create({ value: !!e }),
-    ),
-    x = (0, d.c$)(
+    );
+(0, d.c$)(
+    "notifications",
+    "enableFriendGamingActivityNotifications",
+    (e) => e?.value ?? !0,
+    (e) => o._t.create({ value: !!e }),
+);
+let x = (0, d.c$)(
         "notifications",
         "quietMode",
         (e) => e?.value ?? !1,

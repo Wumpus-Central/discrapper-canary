@@ -1889,6 +1889,7 @@ class ep extends s.G {
             { no: 18, name: "enable_dm_reply_nudge_reminders", kind: "message", T: () => o._t },
             { no: 19, name: "enable_summary_reminder_notifications", kind: "message", T: () => o._t },
             { no: 20, name: "enable_gdm_all_reaction_notifications", kind: "message", T: () => o._t },
+            { no: 21, name: "enable_friend_gaming_activity_notifications", kind: "message", T: () => o._t },
         ]);
     }
     create(e) {
@@ -2031,6 +2032,14 @@ class ep extends s.G {
                         a.enableGdmAllReactionNotifications,
                     );
                     break;
+                case 21:
+                    a.enableFriendGamingActivityNotifications = o._t.internalBinaryRead(
+                        e,
+                        e.uint32(),
+                        n,
+                        a.enableFriendGamingActivityNotifications,
+                    );
+                    break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
@@ -2116,6 +2125,14 @@ class ep extends s.G {
             e.enableGdmAllReactionNotifications &&
                 o._t
                     .internalBinaryWrite(e.enableGdmAllReactionNotifications, t.tag(20, r.O0.LengthDelimited).fork(), n)
+                    .join(),
+            e.enableFriendGamingActivityNotifications &&
+                o._t
+                    .internalBinaryWrite(
+                        e.enableFriendGamingActivityNotifications,
+                        t.tag(21, r.O0.LengthDelimited).fork(),
+                        n,
+                    )
                     .join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
