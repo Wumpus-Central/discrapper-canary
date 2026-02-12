@@ -20,8 +20,6 @@ e.exports = {
     uC: "guildSidebar_f75fb0",
     gL: "guildBreadcrumbIcon_f75fb0",
     wG: "loader_f75fb0",
-    ej: "forumPostTitle_f75fb0",
-    q1: "forumPostSidebarTitle_f75fb0",
     SC: "subtitleContainer_f75fb0",
     vW: "secureFramesIcon_f75fb0",
     Xn: "shaker_f75fb0",

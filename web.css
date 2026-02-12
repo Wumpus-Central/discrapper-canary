@@ -58406,7 +58406,7 @@ svg.radioIcon_c1e9c4 {
 .caret__9293f {
     color: var(--icon-muted);
     flex-shrink: 0;
-    margin: 0 2px;
+    margin-inline: 0 8px;
     width: 10px
 }
 

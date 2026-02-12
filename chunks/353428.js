@@ -215,7 +215,7 @@ function U(e) {
                         level: x,
                         onContextMenu: u,
                         onClick: d,
-                        className: a()({ [D.or]: o, [D.ej]: N, [D.q1]: o && N }),
+                        className: a()({ [D.or]: o }),
                         children: C,
                     }),
                 ],
