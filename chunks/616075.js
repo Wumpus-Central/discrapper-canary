@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { A: () => a, l: () => i });
-let r = (0, n(600975).C)({
+n.d(t, { l: () => l });
+let i = (0, n(600975).C)({
         kind: "user",
         id: "2021-09_favorites_server",
         label: "Favorites Server",
@@ -28,5 +27,4 @@ let r = (0, n(600975).C)({
             },
         ],
     }),
-    i = (e) => r.useExperiment({ location: e }, { autoTrackExposure: !0 }),
-    a = r;
+    l = (e) => i.useExperiment({ location: e }, { autoTrackExposure: !0 });

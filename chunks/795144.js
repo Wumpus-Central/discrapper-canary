@@ -1,33 +1,34 @@
-t.d(e, { A: () => c });
-var i = t(627968);
-t(64700);
-var r = t(311907),
-    l = t(397927),
-    a = t(967198),
-    d = t(616075),
-    s = t(652215),
-    u = t(985018);
-function c(n) {
-    let e = (0, r.bG)([a.A], () => a.A.getGuildId()),
-        c = n.type === s.rbe.GUILD_CATEGORY,
-        { isFavoritesPerk: o } = (0, d.l)("useChannelFavoriteSetNickname");
-    return __OVERLAY__ || e !== s.YYv
-        ? null
-        : (0, i.jsx)(l.Drp, {
-              id: "set-channel-nickname",
-              label: o && c ? u.intl.string(u.t.xXYKiP) : u.intl.string(u.t.dilOF6),
-              action: function () {
-                  (0, l.mMO)(async () => {
-                      let { default: e } = await t.e("83504").then(t.bind(t, 872243));
-                      return (t) =>
-                          (0, i.jsx)(e, {
-                              ...t,
-                              channelId: n.id,
-                              heading: o && c ? u.intl.string(u.t.xXYKiP) : u.intl.string(u.t.dilOF6),
-                              formTitle: o && c ? u.intl.string(u.t.OCAkGP) : u.intl.string(u.t["621LJD"]),
-                              allowReset: !(o && c),
-                          });
-                  });
-              },
-          });
+n.d(t, { A: () => o });
+var i = n(627968);
+n(64700);
+var a = n(311907),
+    r = n(397927),
+    l = n(967198),
+    d = n(652215),
+    s = n(985018);
+function o(e) {
+    let t = (0, a.bG)([l.A], () => l.A.getGuildId());
+    return (
+        e.type,
+        d.rbe.GUILD_CATEGORY,
+        __OVERLAY__ || t !== d.YYv
+            ? null
+            : (0, i.jsx)(r.Drp, {
+                  id: "set-channel-nickname",
+                  label: s.intl.string(s.t.dilOF6),
+                  action: function () {
+                      (0, r.mMO)(async () => {
+                          let { default: t } = await n.e("83504").then(n.bind(n, 872243));
+                          return (n) =>
+                              (0, i.jsx)(t, {
+                                  ...n,
+                                  channelId: e.id,
+                                  heading: s.intl.string(s.t.dilOF6),
+                                  formTitle: s.intl.string(s.t["621LJD"]),
+                                  allowReset: !0,
+                              });
+                      });
+                  },
+              })
+    );
 }
