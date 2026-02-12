@@ -5,8 +5,8 @@ var l,
     s = n(503698),
     i = n.n(s),
     o = n(284009),
-    d = n.n(o),
-    c = n(444550),
+    c = n.n(o),
+    d = n(444550),
     u = n(155718),
     m = n(594808),
     p = n(207963),
@@ -27,17 +27,18 @@ function I(e) {
         [v, j] = r.useState(!1),
         [S, O] = r.useState(new Map(o?.map((e) => [e.value, e]))),
         [R, y] = r.useState(new Set(S.keys())),
-        [b, P] = r.useState(() => (o ?? []).map((e) => e.value)),
+        b = r.useRef((o ?? []).map((e) => e.value)),
+        P = r.useRef(N),
         [L, D] = r.useState(0);
     r.useEffect(() => {
         let e = (o ?? []).map((e) => e.value);
-        if (e.every((e) => b.includes(e)) && b.every((t) => e.includes(t))) return;
-        P(e);
+        if (e.every((e) => b.current.includes(e)) && b.current.every((t) => e.includes(t)) && N === P.current) return;
+        (b.current = e), (P.current = N);
         let t = new Map(o?.map((e) => [e.value, e]));
         O(t), y(new Set(t.keys())), D((e) => e + 1);
-    }, [o, b]);
+    }, [o, N]);
     let U = (0, p.jc)();
-    d()(null != U, "SearchableSelectActionComponent must be rendered inside a ComponentStateContext");
+    c()(null != U, "SearchableSelectActionComponent must be rendered inside a ComponentStateContext");
     let {
             state: k,
             executeStateUpdate: w,
@@ -93,7 +94,7 @@ function I(e) {
                 children:
                     I > 1
                         ? (0, a.jsx)(
-                              c.p,
+                              d.p,
                               {
                                   value: Array.from(S.values()),
                                   onChange: (e) => {
@@ -108,7 +109,7 @@ function I(e) {
                               L,
                           )
                         : (0, a.jsx)(
-                              c.p,
+                              d.p,
                               {
                                   value: [...S.values()][0],
                                   onChange: (e) => O(null != e ? new Map([[e.value, e]]) : new Map()),
