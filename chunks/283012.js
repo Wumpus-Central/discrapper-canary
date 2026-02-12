@@ -21,7 +21,7 @@ var i = n(627968),
     T = n(652215),
     f = n(340837),
     p = n(985018),
-    D = n(23456);
+    D = n(658938);
 function O(e) {
     let { title: t, emojiId: n, emojiName: l, icon: s, completed: a, Icon: d, onClick: c, ...u } = e,
         m = "channel" === u.variant ? u.channelId : null,

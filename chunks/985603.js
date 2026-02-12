@@ -24,8 +24,8 @@ var r = n(835245),
     S = n(962173),
     x = n(287809),
     v = n(954571),
-    b = n(203982),
-    y = n(998218),
+    y = n(203982),
+    b = n(998218),
     L = n(837921),
     O = n(636401),
     R = n(43203),
@@ -65,7 +65,7 @@ let M = {
             return (
                 L.Ay.focus(),
                 (0, a.mMO)(async () => {
-                    let { default: e } = await Promise.all([n.e("7726"), n.e("58938")]).then(n.bind(n, 72715));
+                    let { default: e } = await Promise.all([n.e("7726"), n.e("4042")]).then(n.bind(n, 72715));
                     return (t) => (0, i.jsx)(e, { ...t, guildTemplate: r });
                 }),
                 { guildTemplate: r, code: t }
@@ -86,7 +86,7 @@ let M = {
                             L.Ay.focus(),
                                 v.default.track(j.HAw.OPEN_MODAL, { type: "gift_accept", location: j.$OG }),
                                 (0, a.mMO)(async () => {
-                                    let { default: e } = await n.e("36820").then(n.bind(n, 67327));
+                                    let { default: e } = await n.e("14439").then(n.bind(n, 67327));
                                     return (n) => (0, i.jsx)(e, { code: t, ...n });
                                 }),
                                 e({ giftCode: l });
@@ -110,7 +110,7 @@ let M = {
                     break;
                 case P.XK.CHANGELOG:
                     null != i &&
-                        ((0, T.bG)(y.A.formatPathWithQuery(j.BVt.CHANGELOGS(i.date), i.query)),
+                        ((0, T.bG)(b.A.formatPathWithQuery(j.BVt.CHANGELOGS(i.date), i.query)),
                         w(i.fingerprint, (0, P.OE)(t)));
                     break;
                 case P.XK.LIBRARY:
@@ -274,7 +274,7 @@ let M = {
             } catch (e) {
                 if (e?.status === 400)
                     throw new O.A({ errorCode: j.Lw6.BAD_REQUEST_FOR_PROVIDER }, "Bad request for provider");
-                throw (b._.dispatch(j.jej.CONNECTIONS_CALLBACK_ERROR), e);
+                throw (y._.dispatch(j.jej.CONNECTIONS_CALLBACK_ERROR), e);
             }
         },
     },

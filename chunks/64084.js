@@ -2,7 +2,7 @@ n.d(t, { A: () => s });
 var i = n(627968),
     r = n(64700),
     l = n(775135),
-    a = n(156e3);
+    a = n(935318);
 function s(e) {
     let { guild: t, setHasSubheader: n } = e,
         s = r.useRef(null);

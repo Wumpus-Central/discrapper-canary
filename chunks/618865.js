@@ -5,7 +5,7 @@ var r = n(627968),
     a = n(397927),
     s = n(716965),
     o = n(985018),
-    l = n(740837);
+    l = n(80739);
 let u = 5;
 function c(e) {
     let { selectedGuildId: t, selectedChannelId: n, onChannelChange: c, error: d } = e,

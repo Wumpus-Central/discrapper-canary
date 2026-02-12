@@ -17,7 +17,7 @@ var i = n(627968),
     A = n(545055),
     p = n(966394),
     f = n(985018),
-    j = n(603478);
+    j = n(93100);
 function N(e) {
     let { guildId: t } = e,
         { guildProfile: d, fetchGuildProfile: m, fetchStatus: N } = (0, g.u)(t),

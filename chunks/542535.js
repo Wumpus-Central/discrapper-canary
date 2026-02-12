@@ -32,7 +32,7 @@ var r = n(627968),
     x = n(788868),
     P = n(854232),
     M = n(985018),
-    k = n(30777);
+    k = n(448263);
 let U = (e) => {
     let { badge: t, tieredTenureBadge: n, currentUserOwnsOrbBadge: i } = e;
     return t.id === I.A.ORB_PROFILE_BADGE

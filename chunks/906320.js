@@ -23,8 +23,8 @@ var i = n(627968),
     S = n(769015),
     x = n(290987),
     v = n(544028),
-    b = n(189081),
-    y = n(194871),
+    y = n(189081),
+    b = n(194871),
     L = n(966846),
     O = n(531685),
     R = n(255438),
@@ -33,7 +33,7 @@ var i = n(627968),
     D = n(250632),
     w = n(652215),
     M = n(985018),
-    U = n(532439);
+    U = n(59790);
 let G = (e) => {
         let { className: t, children: n, onContextMenu: r, item: l } = e;
         return (0, i.jsx)("div", { className: t, onContextMenu: (e) => r(e, l), children: n });
@@ -253,7 +253,7 @@ class W extends r.PureComponent {
     };
     renderProgressPatching() {
         return (0, i.jsx)(j.A, {
-            getHistoricalTotalBytes: y.A.getHistoricalTotalBytesWritten,
+            getHistoricalTotalBytes: b.A.getHistoricalTotalBytesWritten,
             updateInterval: 5e3,
             children: this.renderProgressPatchingBody,
         });
@@ -401,14 +401,14 @@ class X extends r.PureComponent {
                               (0, i.jsx)(D.A, {
                                   className: a()(U.e4, U.Eg),
                                   title: M.intl.string(M.t.ytoXKr),
-                                  getHistoricalTotalBytes: y.A.getHistoricalTotalBytesDownloaded,
+                                  getHistoricalTotalBytes: b.A.getHistoricalTotalBytesDownloaded,
                                   color: c.A.unsafe_rawColors.GREEN_360.resolve({ saturation: 1 }).hex(),
                                   animate: r,
                               }),
                               (0, i.jsx)(D.A, {
                                   className: a()(U.e4, U.pn),
                                   title: M.intl.string(M.t.SjohhI),
-                                  getHistoricalTotalBytes: y.A.getHistoricalTotalBytesWritten,
+                                  getHistoricalTotalBytes: b.A.getHistoricalTotalBytesWritten,
                                   color: c.A.unsafe_rawColors.BLUE_345.resolve({ saturation: 1 }).hex(),
                                   animate: r,
                               }),
@@ -455,7 +455,7 @@ function Z(e, t, n, i) {
                     branchId: s,
                     state: d,
                     application: o,
-                    libraryApplication: b.A.getLibraryApplication(a, s),
+                    libraryApplication: y.A.getLibraryApplication(a, s),
                     finished: t,
                     index: l,
                 }),
@@ -464,8 +464,8 @@ function Z(e, t, n, i) {
     }, []);
 }
 let J = (0, f.A)(
-    d.Ay.connectStores([C.A, y.A, L.A, v.A, O.A], () => ({
-        applications: [...Z(L.A.activeItems, !1, C.A, y.A), ...Z(L.A.finishedItems, !0, C.A, y.A)],
+    d.Ay.connectStores([C.A, b.A, L.A, v.A, O.A], () => ({
+        applications: [...Z(L.A.activeItems, !1, C.A, b.A), ...Z(L.A.finishedItems, !0, C.A, b.A)],
         paused: L.A.paused,
         isFocused: O.A.isFocused(),
         theme: v.A.theme,

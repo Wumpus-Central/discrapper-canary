@@ -21,8 +21,8 @@ var s = n(397927),
     v = n(685049),
     j = n(973397),
     T = n(985018),
-    b = n(966271),
-    E = n(695510);
+    b = n(461349),
+    E = n(8208);
 function y(e) {
     let { index: t, widgetType: n, game: l, children: a } = e,
         { manageFocusOnReorder: r } = (0, h.r)();

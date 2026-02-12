@@ -20,7 +20,7 @@ var n = r(627968),
 r(603266);
 var y = r(652215),
     m = r(985018),
-    N = r(250950);
+    N = r(42768);
 function I(e) {
     let { badgeText: t, badgeColor: r } = e,
         u = l.useRef(t),

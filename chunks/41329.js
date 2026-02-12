@@ -13,7 +13,7 @@ var r = n(627968),
     f = n(664929);
 n(827669);
 var h = n(985018),
-    p = n(152271);
+    p = n(27101);
 let g = 200;
 function E(e, t, n) {
     return (0, r.jsx)(_.A, { className: p.uK, name: e.displayName, state: t, onClick: n }, e.name);

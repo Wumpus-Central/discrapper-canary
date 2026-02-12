@@ -21,10 +21,10 @@ var i = n(627968),
     N = n(315206),
     T = n(844358),
     S = n(828430),
-    x = n(857365),
+    x = n(79746),
     v = n(861638),
-    b = n(793574),
-    y = n(114716),
+    y = n(793574),
+    b = n(114716),
     L = n(752412),
     O = n(105220),
     R = n(778830),
@@ -44,7 +44,7 @@ var i = n(627968),
     W = n(257402),
     q = n(216954),
     z = n(735831),
-    K = n(136334),
+    K = n(913953),
     $ = n(142120),
     Q = n(507263),
     X = n(998345),
@@ -77,8 +77,8 @@ var i = n(627968),
     eS = n(463347),
     ex = n(976860),
     ev = n(569745),
-    eb = n(985986),
-    ey = n(138298),
+    ey = n(985986),
+    eb = n(138298),
     eL = n(940382),
     eO = n(194045),
     eR = n(212371),
@@ -107,8 +107,8 @@ var i = n(627968),
     e0 = n(237631),
     e1 = n(194871),
     e7 = n(856588),
-    e9 = n(612181),
-    e6 = n(723702),
+    e6 = n(612181),
+    e9 = n(723702),
     e5 = n(837921),
     e2 = n(715671),
     e3 = n(652215),
@@ -139,8 +139,8 @@ n(115036),
 let tt = !1;
 (0, v.as)(),
     s.Ay.initialize(),
-    eb.A.loadServer(),
-    e6.isPlatformEmbedded &&
+    ey.A.loadServer(),
+    e9.isPlatformEmbedded &&
         (e5.Ay.on("USER_SETTINGS_OPEN", (e, t) => {
             (0, eH.openUserSettings)();
         }),
@@ -211,8 +211,8 @@ let tn = (0, p.z)((e) => {
             }
         },
     ),
-    tl = (0, p.z)((0, y.C)(O.A, null, { passProps: !1 })),
-    ta = (0, y.C)(X.default, null, { passProps: !1 }),
+    tl = (0, p.z)((0, b.C)(O.A, null, { passProps: !1 })),
+    ta = (0, b.C)(X.default, null, { passProps: !1 }),
     ts = [
         e3.BVt.GUILD_BOOSTING_MARKETING(eS.pv.guildId()),
         ...Array.from(e4.qW).map((e) => e3.BVt.CHANNEL(eS.pv.guildId(), e)),
@@ -225,7 +225,7 @@ let td = [
     {
         path: [e3.BVt.ACTIVITY_DETAILS(":applicationId")],
         render: function (e) {
-            return (0, e9.wR)() ||
+            return (0, e6.wR)() ||
                 eW.default.getLoginStatus() === e3.aUe.LOGGING_IN ||
                 !eW.default.allowLogoutRedirect()
                 ? tl(e)
@@ -268,7 +268,7 @@ let td = [
             let { match: t } = e,
                 { id: n } = t.params;
             return (
-                (0, Q.B)(() => (0, eM.openUserProfileModal)({ userId: n, sourceAnalyticsLocations: [b.A.URI_SCHEME] })),
+                (0, Q.B)(() => (0, eM.openUserProfileModal)({ userId: n, sourceAnalyticsLocations: [y.A.URI_SCHEME] })),
                 (0, i.jsx)(a.rd, { to: eK.A.defaultRoute })
             );
         },
@@ -336,7 +336,7 @@ let td = [
             return (
                 (0, Q.B)(() => {
                     (0, o.mMO)(async () => {
-                        let { default: e } = await Promise.all([n.e("64992"), n.e("6356")]).then(n.bind(n, 401539));
+                        let { default: e } = await Promise.all([n.e("64992"), n.e("67208")]).then(n.bind(n, 401539));
                         return (t) => (0, i.jsx)(e, { ...t, guildId: r });
                     });
                 }),
@@ -447,7 +447,7 @@ class tA extends r.PureComponent {
     rewriterUnlisten = () => {};
     componentDidMount() {
         e5.Ay.setZoomFactor(g.A.zoom),
-            eb.A.init(),
+            ey.A.init(),
             L.A.initialize(),
             eg.A.initialize(),
             W.A.initialize(),
@@ -500,7 +500,7 @@ class tA extends r.PureComponent {
             (this.historyUnlisten = eT.A.addRouteChangeListener(this.handleHistoryChange));
     }
     componentWillUnmount() {
-        eb.A.terminate(),
+        ey.A.terminate(),
             eY.A.terminate(),
             ef.A.terminate(),
             eg.A.terminate(),
@@ -563,7 +563,7 @@ class tA extends r.PureComponent {
                             a &&
                             null != r &&
                             null != eq.Ay.getCurrentSidebarChannelId(r) &&
-                            ey.A.closeChannelSidebar(r),
+                            eb.A.closeChannelSidebar(r),
                         null != o && u)
                     ) {
                         let e = eq.Ay.getCurrentSidebarChannelId(n),
@@ -573,15 +573,15 @@ class tA extends r.PureComponent {
                             else {
                                 let e = { type: eL.LU.THREAD };
                                 null != s && (e.initialMessageId = s),
-                                    ey.A.openThreadAsSidebar({
+                                    eb.A.openThreadAsSidebar({
                                         guildId: i,
                                         baseChannelId: r,
                                         channelId: o,
                                         details: e,
                                     });
                             }
-                        else d && null != e && null != r && ey.A.closeChannelSidebar(r);
-                    } else null == r || a || ey.A.closeChannelSidebar(r);
+                        else d && null != e && null != r && eb.A.closeChannelSidebar(r);
+                    } else null == r || a || eb.A.closeChannelSidebar(r);
                     let c = ed.A.getIsOpen();
                     if (r === e4.VV.ROLE_SUBSCRIPTIONS) eo.A.closeSidebar();
                     else if (m && c) {
@@ -609,7 +609,7 @@ class tA extends r.PureComponent {
                 let n = ez.A.getChannel(l);
                 if (null == n) eD.A.loadThread(l).then(() => tu({ channelId: l, guildId: i, pathname: t }));
                 else if (n?.parent_id !== r)
-                    return ey.A.closeChannelSidebar(r), { path: e3.BVt.CHANNEL(i, r), state: e.state };
+                    return eb.A.closeChannelSidebar(r), { path: e3.BVt.CHANNEL(i, r), state: e.state };
             }
         }
         return null;

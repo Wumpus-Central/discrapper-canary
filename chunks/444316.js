@@ -7,7 +7,7 @@ var s = n(417597),
     l = n(966327),
     a = n(287809),
     o = n(985018),
-    c = n(290616);
+    c = n(36522);
 function d(e) {
     let { friendMemberIds: t } = e,
         n = (0, s.yK)([a.default], () =>

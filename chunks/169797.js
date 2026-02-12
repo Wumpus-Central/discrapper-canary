@@ -6,7 +6,7 @@ var r = n(627968),
     s = n(500380),
     o = n(518977),
     l = n(683433),
-    u = n(13499);
+    u = n(996541);
 function c(e) {
     let { gradientColor: t, title: n, headerBadgeText: l, headerBadgeIcon: c, countryCode: d, ..._ } = e,
         f = i.useCallback(

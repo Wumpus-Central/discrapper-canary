@@ -8,7 +8,7 @@ var i = n(627968),
     c = n(821701),
     d = n(580630),
     u = n(349439),
-    _ = n(22907);
+    _ = n(959349);
 let m = (e) => {
         let { displayName: t, product: n } = e,
             s = (0, u.nF)(n);

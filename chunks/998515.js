@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => L, getPageSize: () => b });
+n.r(t), n.d(t, { default: () => L, getPageSize: () => y });
 var i = n(627968),
     r = n(64700),
     l = n(492462),
@@ -21,16 +21,16 @@ var i = n(627968),
     N = n(590858),
     T = n(652215),
     S = n(985018),
-    x = n(881640);
+    x = n(58682);
 let v = (0, p.Fe)({
     createPromise: () => Promise.all([n.e("19846"), n.e("41031")]).then(n.bind(n, 554238)),
     webpackId: 554238,
 });
-function b(e) {
+function y(e) {
     return e < 1e3 ? N.q.SMALL : N.q.LARGE;
 }
 s.Ay.initialize();
-class y extends r.PureComponent {
+class b extends r.PureComponent {
     stopListeningToHistory;
     componentDidMount() {
         (0, o.N)(this.props.location),
@@ -67,7 +67,7 @@ class y extends r.PureComponent {
                 slug: r,
                 location: a,
                 storeListingId: o.store_listing_id,
-                pageSize: b(s),
+                pageSize: y(s),
             }),
         });
     };
@@ -115,4 +115,4 @@ class y extends r.PureComponent {
         return (0, i.jsx)(g.A, { renderCustomMessage: this.renderCustomErrorMessage, children: n });
     }
 }
-let L = (0, a.y)((0, u.A)((0, A.A)(y)));
+let L = (0, a.y)((0, u.A)((0, A.A)(b)));

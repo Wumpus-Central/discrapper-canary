@@ -13,7 +13,7 @@ var r = n(627968),
     f = n(351242),
     h = n(385612),
     p = n(339984),
-    g = n(84279);
+    g = n(577401);
 let E = _.Ay.getEnableHardwareAcceleration() ? l.JsQ : l.euF;
 function A(e) {
     let {

@@ -20,8 +20,8 @@ var i = n(627968),
     C = n(734057),
     N = n(661191),
     T = n(652215),
-    S = n(480437),
-    x = n(50397);
+    S = n(456107),
+    x = n(119907);
 let v = r.memo(function (e) {
     let {
             message: t,
@@ -29,15 +29,15 @@ let v = r.memo(function (e) {
             onContextMenu: r,
             onClick: l,
             hideSimpleEmbedContent: v = !0,
-            channel: b,
-            isGroupStart: y,
+            channel: y,
+            isGroupStart: b,
             animateAvatar: L,
             subscribeToComponentDispatch: O,
             renderThreadAccessory: R,
             ...P
         } = e,
         j = t.type === T.lAJ.POLL_RESULT || (e.disableInteraction ?? !1),
-        D = t.isFirstMessageInForumPost(b),
+        D = t.isFirstMessageInForumPost(y),
         w = (0, c.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
         {
             content: M,
@@ -56,19 +56,19 @@ let v = r.memo(function (e) {
             [C.A],
             () => t.hasFlag(T.pr7.HAS_THREAD) && C.A.getChannel(N.default.castMessageIdAsChannelId(t.id)),
         ),
-        H = (0, d.$7)({ guildId: b.guild_id, roleId: V.iconRoleId }),
+        H = (0, d.$7)({ guildId: y.guild_id, roleId: V.iconRoleId }),
         F = (0, _.fF)(t),
         Y = (0, _.ZD)(t);
     return (0, i.jsx)(h.A, {
         compact: !1,
         className: a()(n, S.i, { [x.M1]: (0, u.ec)(t), [x.XN]: j }),
         disableInteraction: j,
-        childrenExecutedCommand: (0, f.A)(t, b, !1),
+        childrenExecutedCommand: (0, f.A)(t, y, !1),
         childrenHeader: (0, E.A)({
             message: t,
-            channel: b,
+            channel: y,
             author: V,
-            guildId: b.guild_id,
+            guildId: y.guild_id,
             compact: !1,
             animateAvatar: L,
             isGroupStart: !0,

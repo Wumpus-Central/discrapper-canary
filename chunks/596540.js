@@ -10,7 +10,7 @@ var i = n(627968),
     u = n(480680),
     h = n(652215),
     A = n(985018),
-    m = n(39368);
+    m = n(782462);
 function p(e) {
     let { children: t, popoutPosition: n, popoutAlign: u, targetElementRef: m, spacing: p = 0 } = e,
         { isOpen: _, setIsOpen: f } = (0, c.A)(),

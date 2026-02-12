@@ -7,7 +7,7 @@ var i = n(627968),
     o = n(997509),
     d = n(447066),
     c = n(780765),
-    u = n(49866);
+    u = n(835084);
 function m(e) {
     let {
             integrations: t,

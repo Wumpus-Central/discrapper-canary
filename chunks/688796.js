@@ -14,7 +14,7 @@ var r = n(397927),
     _ = n(652215),
     m = n(339984),
     p = n(985018),
-    g = n(94184);
+    g = n(698290);
 function E(e) {
     let { uploadType: t, imageSrc: l, analyticsSource: a } = e,
         s = o.default.getCurrentUser();
@@ -57,13 +57,13 @@ function I(e) {
         S = n === m.HL.AVATAR || n === m.HL.BANNER,
         x = null != r,
         v = (0, u.u)(n === m.HL.AVATAR ? h.e.ANIMATED_AVATAR_MODAL_UPSELL : h.e.ANIMATED_BANNER_MODAL_UPSELL),
-        b = (0, u.A)(n === m.HL.AVATAR ? h.e.ANIMATED_AVATAR_MODAL_UPSELL : h.e.ANIMATED_BANNER_MODAL_UPSELL);
+        y = (0, u.A)(n === m.HL.AVATAR ? h.e.ANIMATED_AVATAR_MODAL_UPSELL : h.e.ANIMATED_BANNER_MODAL_UPSELL);
     return S
         ? (0, c.g)({ location: "getReducedMotionImageUrl" })
             ? (0, i.jsx)(A.F, {
                   title: n === m.HL.AVATAR ? p.intl.string(p.t.X7tO60) : p.intl.string(p.t.zXPa2C),
                   subtitle: n === m.HL.AVATAR ? p.intl.string(p.t.ifCRdB) : p.intl.string(p.t.yQAnf4),
-                  graphic: b,
+                  graphic: y,
                   onSecondaryClick: () => {
                       I?.(), (0, d.x)(o);
                   },

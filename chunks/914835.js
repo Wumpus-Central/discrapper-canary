@@ -17,7 +17,7 @@ var i = n(627968),
     _ = n(314307),
     E = n(652215),
     C = n(985018),
-    x = n(549661);
+    x = n(790687);
 function S(e) {
     let { userId: t, channel: s } = e,
         h = l.useRef(null),
@@ -28,7 +28,7 @@ function S(e) {
     function T(e) {
         if (null == E) return null;
         (0, c.L3)(e, async () => {
-            let { default: e } = await Promise.all([n.e("97262"), n.e("67447"), n.e("115")]).then(n.bind(n, 708202));
+            let { default: e } = await Promise.all([n.e("97262"), n.e("67447"), n.e("10905")]).then(n.bind(n, 708202));
             return (t) => (0, i.jsx)(e, { ...t, user: E, guildId: s.guild_id, channel: s });
         });
     }

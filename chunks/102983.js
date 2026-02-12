@@ -6,7 +6,7 @@ var l = n(627968),
     a = n(954376),
     u = n(576692),
     o = n(652215),
-    d = n(674825);
+    d = n(75379);
 let c = i.memo(function (e) {
     let {
             channel: t,

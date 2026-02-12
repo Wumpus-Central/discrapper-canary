@@ -18,7 +18,7 @@ let l = {
                     n.e("42128"),
                     n.e("97283"),
                     n.e("84841"),
-                    n.e("9771"),
+                    n.e("29347"),
                 ]).then(n.bind(n, 107632));
                 return (n) => (0, r.jsx)(t, { ...n, user: e, channel: l, guildId: a });
             });

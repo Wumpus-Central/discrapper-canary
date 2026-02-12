@@ -23,11 +23,11 @@ var i = n(627968),
     S = n(741961),
     x = n(287809),
     v = n(615405),
-    b = n(403362),
-    y = n(344917),
+    y = n(403362),
+    b = n(344917),
     L = n(652215),
     O = n(985018),
-    R = n(790870);
+    R = n(68e4);
 function P(e) {
     let { user: t, index: n, isCompetitive: r } = e,
         { status: l, isMobile: a } = (0, o.cf)([N.A], () => ({
@@ -74,7 +74,7 @@ function j() {
     let e,
         t,
         n,
-        { enabled: l } = (0, y.M)("frequent_friends_row"),
+        { enabled: l } = (0, b.M)("frequent_friends_row"),
         A =
             ((e = (0, o.yK)([E.A], () =>
                 [...E.A.getUserAffinities()].sort((e, t) => E.A.compare(e.otherUserId, t.otherUserId)),
@@ -85,7 +85,7 @@ function j() {
                 for (let e of t)
                     if (n.length < 5) {
                         let t = x.default.getUser(e);
-                        !(0, b.Vq)(t) || T.A.isIgnored(t.id) || T.A.isBlocked(t.id) || n.push(t);
+                        !(0, y.Vq)(t) || T.A.isIgnored(t.id) || T.A.isBlocked(t.id) || n.push(t);
                     } else break;
                 return n;
             }, [e])),

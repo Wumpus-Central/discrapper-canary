@@ -11,7 +11,7 @@ var i = n(684013),
     h = n(652215),
     A = n(753070),
     m = n(985018),
-    g = n(55705);
+    g = n(426127);
 function p(e, t, n, p) {
     if (o.A.isNotificationDisabled(c.KS.RequestToStream)) return null;
     let f = t.username,

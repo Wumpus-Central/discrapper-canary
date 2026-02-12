@@ -17,7 +17,7 @@ var i = n(627968),
     f = n(427262),
     x = n(652215),
     C = n(985018),
-    E = n(52734);
+    E = n(6676);
 let I = h.DN.SIZE_24;
 function b(e) {
     let { activity: t, user: n, embeddedApp: l, onOpenSpotifyAlbum: s, compact: a } = e,

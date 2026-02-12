@@ -27,7 +27,7 @@ var A = I(627968),
     M = I(239093),
     B = I(652215),
     m = I(838541),
-    H = I(366906);
+    H = I(26896);
 let h = (E) => {
     let { message: _ } = E,
         { attachments: I } = _;

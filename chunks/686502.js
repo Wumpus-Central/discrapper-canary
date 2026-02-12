@@ -20,7 +20,7 @@ var i = n(627968),
     E = n(272812),
     I = n(652215),
     b = n(985018),
-    N = n(556614),
+    N = n(89996),
     S = n(867010);
 function T(e) {
     let { channel: t, guild: n, width: l, inPopout: s, handleClose: a, userParticipantCount: r } = e;
@@ -91,7 +91,7 @@ function y(e) {
     function u() {
         (0, c.mMO)(
             async () => {
-                let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("97710")]).then(
+                let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("74918")]).then(
                     n.bind(n, 234355),
                 );
                 return (n) => (0, i.jsx)(e, { ...n, guild: s, channel: t, source: I.PE1.ACTIVITY_ENTRY_POINT_TILE });

@@ -19,7 +19,7 @@ var r = n(627968),
     I = n(256698),
     T = n(652215),
     y = n(985018),
-    S = n(122079);
+    S = n(664445);
 let v = (0, l.xI)(S.__invalid_stickerPickerPreviewDimensions),
     C = (0, l.xI)(S.__invalid_stickerPickerPreviewPadding),
     b = 250,
@@ -78,7 +78,7 @@ let v = (0, l.xI)(S.__invalid_stickerPickerPreviewDimensions),
                         e.type === g.op.CREATE_STICKER &&
                             (h.default.track(T.HAw.OPEN_MODAL, { type: T.JJy.CREATE_STICKER_MODAL, location: Y }),
                             (0, u.mMO)(async () => {
-                                let { default: t } = await Promise.all([n.e("29143"), n.e("8414")]).then(
+                                let { default: t } = await Promise.all([n.e("29143"), n.e("64800")]).then(
                                     n.bind(n, 445002),
                                 );
                                 return (n) => (0, r.jsx)(t, { guildId: e.guild_id, ...n });

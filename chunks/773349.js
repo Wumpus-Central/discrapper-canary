@@ -8,7 +8,7 @@ var i = n(627968),
     c = n(287809),
     d = n(427262),
     u = n(283900),
-    _ = n(31435);
+    _ = n(975977);
 let m = s.memo((e) => {
     let { userId: t, subText: n, className: s } = e,
         a = (0, r.bG)([c.default], () => c.default.getUser(t));

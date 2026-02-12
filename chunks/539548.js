@@ -18,8 +18,8 @@ var s = n(311907),
     g = n(518477),
     I = n(652215),
     j = n(985018),
-    _ = n(278792),
-    N = n(230836);
+    _ = n(78702),
+    N = n(781425);
 function v(e) {
     let { user: t, currentUser: n, guildId: v, onClose: b } = e,
         { voiceActivityStatusEnabled: T } = (0, a.G)({ location: "UserProfileModalActivity" }),

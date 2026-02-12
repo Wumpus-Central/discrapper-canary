@@ -28,7 +28,7 @@ var l = n(627968),
     M = n(652215),
     j = n(806931),
     R = n(985018),
-    G = n(67501);
+    G = n(912579);
 let V = 48;
 function U(e, t) {
     if (null != e) return { suggestionData: y.A.getSelectedInviteMetadata(e), source: t };

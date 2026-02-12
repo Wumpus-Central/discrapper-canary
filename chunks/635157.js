@@ -17,7 +17,7 @@ var i = n(627968),
     _ = n(854627),
     E = n(314307),
     C = n(985018),
-    x = n(859588);
+    x = n(82842);
 function S(e) {
     let t,
         { channel: n, children: S, user: T } = e,

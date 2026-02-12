@@ -20,7 +20,7 @@ var i = n(627968),
     C = n(536189),
     I = n(652215),
     T = n(272984),
-    v = n(62323);
+    v = n(609653);
 function N(e) {
     let { partyMembers: t, partySize: n, maxPartySize: l, guildId: a, activityActionType: s } = e,
         o = Math.max(n, t.length),

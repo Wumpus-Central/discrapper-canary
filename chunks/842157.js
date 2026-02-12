@@ -31,7 +31,7 @@ var i = n(627968),
     M = n(652215),
     O = n(768349),
     D = n(985018),
-    P = n(62323);
+    P = n(609653);
 function k(e) {
     let { presenceActivity: t, remoteJoinPlatform: n } = e,
         a = (0, y.z4)({ platforms: t?.supported_platforms, currentPlatform: M.yTV.DESKTOP }),

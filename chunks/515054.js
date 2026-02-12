@@ -13,7 +13,7 @@ var i = n(627968),
     x = n(463259),
     f = n(133583),
     h = n(518477),
-    p = n(905182);
+    p = n(96124);
 function _(e) {
     let { children: t, className: n, scrollerRef: l, ...a } = e;
     return (0, i.jsx)(s.HOs, { ref: l, className: r()(p.gN, n), fade: !0, ...a, children: t });

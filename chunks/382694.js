@@ -20,15 +20,15 @@ var i = n(627968),
     T = n(30084),
     S = n(88001),
     I = n(652215),
-    N = n(355097),
-    f = n(518582),
+    f = n(355097),
+    N = n(519412),
     b = n(985018),
-    j = n(674547),
-    v = n(241015),
-    O = n(15830),
+    j = n(520650),
+    v = n(927961),
+    O = n(950268),
     R = n(817577),
     y = n(804368),
-    P = n(641836),
+    P = n(419455),
     L = n(174872),
     D = n(509442),
     M = n(864579);
@@ -37,7 +37,7 @@ function G(e) {
         { analyticsLocations: a } = (0, c.Ay)(o.A.PREMIUM_MARKETING_PERK_CARD),
         G = (0, p.O9)(),
         U = h.A.useExperiment({ location: "PremiumWhatsNewSection" }).enabled,
-        k = (0, _.A)({ scrollPosition: N._F.TRY_IT_OUT, analyticsLocations: a }),
+        k = (0, _.A)({ scrollPosition: f._F.TRY_IT_OUT, analyticsLocations: a }),
         V = (0, s.useCallback)(() => {
             (0, g.openUserSettings)(
                 m.X.PROFILE_PANEL,
@@ -49,7 +49,7 @@ function G(e) {
             let e = (0, A.WJ)("openCustomAppSettings");
             (0, g.openUserSettings)(e ? m.X.APPEARANCE_IN_APP_ICON : m.X.APPEARANCE_PANEL, {
                 section: I.nc_.APPEARANCE,
-                scrollPosition: e ? void 0 : N.kq.CUSTOM_APP_ICONS,
+                scrollPosition: e ? void 0 : f.kq.CUSTOM_APP_ICONS,
             });
         }, []),
         { currentDate: w, nDaysInMonth: B } = (0, s.useMemo)(() => {
@@ -69,8 +69,8 @@ function G(e) {
                     G
                         ? {
                               id: "premiumGroup",
-                              title: b.intl.string(f.default.YkvksF),
-                              description: b.intl.formatToPlainString(f.default.JlyGQj, {
+                              title: b.intl.string(N.default.YkvksF),
+                              description: b.intl.formatToPlainString(N.default.JlyGQj, {
                                   totalSeats: S.aw,
                                   premiumGroupProductName: (0, S.DP)(),
                               }),

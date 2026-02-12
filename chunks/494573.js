@@ -14,8 +14,8 @@ var r = s(627968),
     S = s(190294),
     f = s(758836),
     m = s(985018),
-    h = s(216862),
-    A = s(974003);
+    h = s(78716),
+    A = s(525037);
 function C(e) {
     let { tab: t, label: s, selected: l, handleTransition: n, hasSubmenu: o, showNewBadge: c } = e;
     return o

@@ -1,4 +1,4 @@
-n.d(t, { A: () => e9 });
+n.d(t, { A: () => e6 });
 var i = n(627968),
     r = n(64700),
     l = n(503698),
@@ -23,8 +23,8 @@ var i = n(627968),
     S = n(155718),
     x = n(933958),
     v = n(967812),
-    b = n(404522),
-    y = n(782091),
+    y = n(404522),
+    b = n(782091),
     L = n(641703),
     O = n(521588),
     R = n(793574),
@@ -39,7 +39,7 @@ var i = n(627968),
     V = n(379848),
     B = n(643501),
     H = n(857253),
-    F = n(263642),
+    F = n(41261),
     Y = n(880144),
     W = n(338771),
     q = n(421838),
@@ -77,8 +77,8 @@ var i = n(627968),
     eS = n(71393),
     ex = n(186111),
     ev = n(430452),
-    eb = n(576705),
-    ey = n(383501),
+    ey = n(576705),
+    eb = n(383501),
     eL = n(994500),
     eO = n(287809),
     eR = n(977997),
@@ -96,7 +96,7 @@ var i = n(627968),
     eF = n(897513),
     eY = n(509381),
     eW = n(985018),
-    eq = n(492685);
+    eq = n(255259);
 let ez = { offset: { left: -1, top: -1, right: 1, bottom: 1 } };
 function eK(e) {
     let t = e.currentTarget;
@@ -219,9 +219,9 @@ function eX(e) {
             [t, N, o],
         ),
         S = A || n || h,
-        { Component: v, play: b, events: y } = (0, m.K)(d.enabled ? "disable" : "enable");
+        { Component: v, play: y, events: b } = (0, m.K)(d.enabled ? "disable" : "enable");
     return (
-        r.useEffect(() => () => b(), [d.enabled, b]),
+        r.useEffect(() => () => y(), [d.enabled, y]),
         (0, i.jsx)(ef.r, {
             onChange: T,
             onCameraUnavailable: C,
@@ -260,10 +260,10 @@ function eX(e) {
                                     c.onClick(e), A && o(e);
                                 },
                                 onMouseEnter: () => {
-                                    d.onMouseEnter?.(), y.onMouseEnter();
+                                    d.onMouseEnter?.(), b.onMouseEnter();
                                 },
                                 onMouseLeave: () => {
-                                    y.onMouseLeave();
+                                    b.onMouseLeave();
                                 },
                                 onContextMenu: (e) => {
                                     o(e);
@@ -293,13 +293,13 @@ function eZ(e) {
         r = (0, $.Us)(),
         { parentAnalyticsLocation: l, newestAnalyticsLocation: s } = (0, P.Ay)(),
         o = r === eV.BRT.POPOUT,
-        d = (0, y.et)(t.id),
-        h = (0, y.dL)(d),
+        d = (0, b.et)(t.id),
+        h = (0, b.dL)(d),
         { userInActivity: _ } = (0, c.cf)([x.Ay], () => ({
             userInActivity: null != x.Ay.getSelfEmbeddedActivityForChannel(t.id),
         })),
-        m = (0, b.b)({ surface: S.YI.VOICE_LAUNCHER, skipFetchingShelf: !0 }),
-        p = d !== y.xy.CAN_LAUNCH,
+        m = (0, y.b)({ surface: S.YI.VOICE_LAUNCHER, skipFetchingShelf: !0 }),
+        p = d !== b.xy.CAN_LAUNCH,
         { Component: I, events: f, play: C } = (0, A.c)();
     return n
         ? (0, i.jsx)(V.GY, {
@@ -425,8 +425,8 @@ function e0(e) {
         S = m.find((e) => e.ownerId === h?.id),
         v = (0, em.T)(n, h, m);
     t = null == S ? (l ? T : eg.A) : () => (0, W.A)(S);
-    let b = null != S || v.length > 0,
-        y = p ? eW.intl.string(eW.t.fjBNo1) : eW.intl.string(eW.t.uQn9B8),
+    let y = null != S || v.length > 0,
+        b = p ? eW.intl.string(eW.t.fjBNo1) : eW.intl.string(eW.t.uQn9B8),
         L = C || s || N,
         O = null != S,
         { Component: R, events: j, play: D } = (0, _.c)(O ? "disable" : "enable");
@@ -451,17 +451,17 @@ function e0(e) {
         children: (e) => {
             let { onClick: n, onMouseEnter: r, ...l } = e;
             return (0, i.jsx)(g.m_, {
-                text: y,
+                text: b,
                 children: (0, i.jsx)(E.$n, {
                     "data-migration-pending": !0,
                     buttonRef: d,
                     size: E.$n.Sizes.MEDIUM,
                     onClick: (e) => {
-                        (0, M.X)(u, M.O.STREAM, null == S), b ? n(e) : t();
+                        (0, M.X)(u, M.O.STREAM, null == S), y ? n(e) : t();
                     },
                     disabled: !p || o,
                     className: a()(eq.x6, eq.Sq, { [eq.rK]: null != S, [eq.r9]: !p || o }),
-                    ...(b ? l : null),
+                    ...(y ? l : null),
                     onMouseEnter: () => {
                         r?.(), j.onMouseEnter();
                     },
@@ -724,11 +724,11 @@ function e7(e) {
         })
     );
 }
-let e9 = (0, T.A)(function (e) {
+let e6 = (0, T.A)(function (e) {
     let t = (0, H.A)(),
         n = (0, c.bG)([B.default], () => B.default.getAwaitingRemoteSessionInfo()),
         l = (0, c.bG)([eO.default], () => eO.default.getCurrentUser()),
-        { channelId: a, ...s } = (0, c.cf)([ey.A], () =>
+        { channelId: a, ...s } = (0, c.cf)([eb.A], () =>
             null != t
                 ? {
                       channelId: t.channelId,
@@ -737,10 +737,10 @@ let e9 = (0, T.A)(function (e) {
                       rtcConnectionLastPing: 0,
                   }
                 : {
-                      channelId: ey.A.getChannelId(),
-                      rtcConnectionQuality: ey.A.getQuality(),
-                      rtcConnectionState: ey.A.getState(),
-                      rtcConnectionLastPing: ey.A.getLastPing(),
+                      channelId: eb.A.getChannelId(),
+                      rtcConnectionQuality: eb.A.getQuality(),
+                      rtcConnectionState: eb.A.getState(),
+                      rtcConnectionLastPing: eb.A.getLastPing(),
                   },
         ),
         o = (0, c.bG)([eT.A], () => eT.A.getChannel(a), [a]),
@@ -766,7 +766,7 @@ let e9 = (0, T.A)(function (e) {
         m = (0, c.bG)([eC.A], () => eC.A.getCurrentUserActiveStream()),
         p = (0, c.bG)([ex.A], () => ex.A.hasLayers()),
         g = (0, c.bG)([K.A], () => K.A.isViewingRoles(d)),
-        E = (0, c.bG)([eb.A], () => g && !eb.A.can(eV.xBc.VIEW_CHANNEL, o), [g, o]),
+        E = (0, c.bG)([ey.A], () => g && !ey.A.can(eV.xBc.VIEW_CHANNEL, o), [g, o]),
         f = eu.vL.useSetting(),
         [C, N, T] = (0, c.yK)(
             [eP.Ay, er.A],
@@ -786,17 +786,17 @@ let e9 = (0, T.A)(function (e) {
                 [],
             [C, N, T],
         ),
-        [x, b] = r.useState(!1);
+        [x, y] = r.useState(!1);
     r.useEffect(() => {
-        (g || E) && b(!1);
-    }, [g, E, b]);
-    let { analyticsLocations: y } = (0, P.Ay)(R.A.RTC_PANEL),
+        (g || E) && y(!1);
+    }, [g, E, y]);
+    let { analyticsLocations: b } = (0, P.Ay)(R.A.RTC_PANEL),
         O = (0, v.A)(d ?? eV.dJq, o?.id),
         j = (0, L.A)(o?.id),
         D = (0, J.T)({ location: "RTCConnection" }),
         w = (0, ee.A)({ channelId: o?.id, location: "RTCConnection" });
     return (0, i.jsx)(P.f5, {
-        value: y,
+        value: b,
         children: (0, i.jsxs)("div", {
             className: eq.iE,
             children: [
@@ -817,7 +817,7 @@ let e9 = (0, T.A)(function (e) {
                     shouldShowVoicePanelIntroduction: h,
                     showSocialLayerStorefrontGiftingButton: D && w,
                     isPrivateChannelWithEnabledActivities: j,
-                    analyticsLocations: y,
+                    analyticsLocations: b,
                 }),
                 !x && g && null != d
                     ? (0, i.jsxs)("div", {
@@ -832,7 +832,7 @@ let e9 = (0, T.A)(function (e) {
                                   size: "sm",
                                   fullWidth: !0,
                                   onClick: () => {
-                                      b(!0);
+                                      y(!0);
                                   },
                                   text: eW.intl.string(eW.t.WAI6xu),
                                   focusProps: ez,

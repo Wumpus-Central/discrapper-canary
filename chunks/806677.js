@@ -10,7 +10,7 @@ var a = i(627968),
     c = i(788868),
     f = i(652215),
     u = i(985018),
-    I = i(8043);
+    I = i(958237);
 function g(e) {
     let { onSelectSku: t, priceOptions: i, showPromotionalGiftBanner: n } = e;
     return (0, a.jsxs)("div", {

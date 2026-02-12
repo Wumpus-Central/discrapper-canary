@@ -5,7 +5,7 @@ var n = i(378729),
     r = i(253932),
     a = i(780964),
     u = i(985018),
-    o = i(308206);
+    o = i(79220);
 let d = (0, s.zD)(a.X.GAME_UPDATE_NOTIFICATIONS, {
     useTitle: () => u.intl.string(o.default["3TO4/r"]),
     useValue: r.JV.useSetting,

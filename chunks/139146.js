@@ -16,7 +16,7 @@ var r = n(627968),
     g = n(620434),
     E = n(49999),
     A = n(985018),
-    I = n(60386);
+    I = n(394236);
 let T = { sm: "xs", md: "refresh_sm" },
     y = (e) => {
         let { product: t, selectedVariantIndex: n, ...a } = e,

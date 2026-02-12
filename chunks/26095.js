@@ -7,7 +7,7 @@ let C = {
     open(E) {
         T.h.dispatch({ type: "SAFETY_HUB_APPEAL_OPEN", classificationId: E }),
             (0, S.mMO)(async () => {
-                let { default: _ } = await Promise.all([I.e("74327"), I.e("30734")]).then(I.bind(I, 355690));
+                let { default: _ } = await Promise.all([I.e("74327"), I.e("5482")]).then(I.bind(I, 355690));
                 return (I) => (0, A.jsx)(_, { classificationId: E, ...I });
             });
     },

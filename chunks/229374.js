@@ -30,7 +30,7 @@ var l = n(627968),
     p = n(712838),
     U = n(652215),
     k = n(985018),
-    b = n(82206);
+    b = n(274808);
 function F(e) {
     let { parentChannel: t, onSelectChannel: n } = e;
     if (t?.name == null) return null;

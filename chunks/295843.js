@@ -20,7 +20,7 @@ var i = n(627968),
     C = n(371794),
     I = n(652215),
     T = n(985018),
-    v = n(34077);
+    v = n(187663);
 class N extends l.Component {
     static defaultProps = { renderFallback: I.tEg };
     state = { playing: !1, muted: !0 };

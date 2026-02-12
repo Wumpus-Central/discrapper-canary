@@ -9,7 +9,7 @@ var n = i(877624),
     c = i(412260),
     d = i(810498),
     m = i(985018),
-    u = i(4733);
+    u = i(708611);
 function x() {
     let { claimableRewards: e } = (0, l.Pv)(),
         t = (0, s.bG)([c.A], () => {

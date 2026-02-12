@@ -21,7 +21,7 @@ var i = n(627968),
     I = n(879124),
     b = n(652215),
     N = n(985018),
-    S = n(587079);
+    S = n(33925);
 function T(e) {
     e.stopPropagation();
 }
@@ -64,7 +64,7 @@ let v = l.memo(function (e) {
                     t = s.getGuildId();
                 null != t &&
                     (0, h.mMO)(async () => {
-                        let { default: l } = await Promise.all([n.e("64233"), n.e("10923")]).then(n.bind(n, 409200));
+                        let { default: l } = await Promise.all([n.e("64233"), n.e("9743")]).then(n.bind(n, 409200));
                         return (n) =>
                             (0, i.jsx)(l, {
                                 ...n,

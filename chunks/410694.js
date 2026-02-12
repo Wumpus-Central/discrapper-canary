@@ -6,7 +6,7 @@ var r = n(627968),
     s = n(397927),
     o = n(957565),
     l = n(265486),
-    u = n(90358);
+    u = n(640192);
 function c(e) {
     return isFinite(e) ? e.toFixed(1) + "s" : "Live";
 }

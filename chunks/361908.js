@@ -17,7 +17,7 @@ function h(e) {
                 o.default.track(c.HAw.MEDIA_CHANNEL_UPSELL_CLICKED, { ...(0, s.H$)(t) }),
                     h(u.i.PRIMARY),
                     (0, a.mMO)(async () => {
-                        let { default: e } = await Promise.all([n.e("64233"), n.e("10923")]).then(n.bind(n, 409200));
+                        let { default: e } = await Promise.all([n.e("64233"), n.e("9743")]).then(n.bind(n, 409200));
                         return (n) => (0, i.jsx)(e, { ...n, channelType: c.rbe.GUILD_MEDIA, guildId: t });
                     });
             },

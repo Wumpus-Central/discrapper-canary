@@ -31,8 +31,8 @@ var r = n(627968),
     w = n(287809),
     x = n(427262),
     P = n(985018),
-    M = n(830412),
-    k = n(858624);
+    M = n(206314),
+    k = n(377086);
 let U = (0, I.C)({
     kind: "user",
     id: "2021-07_role_popout",
@@ -82,7 +82,7 @@ function G(e) {
                                           n.e("42128"),
                                           n.e("97283"),
                                           n.e("84841"),
-                                          n.e("9771"),
+                                          n.e("29347"),
                                       ]).then(n.bind(n, 107632));
                                       return (t) =>
                                           (0, r.jsx)(e, { ...t, user: f, guildId: a, channel: h, showMediaItems: !0 });

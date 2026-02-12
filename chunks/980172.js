@@ -45,7 +45,7 @@ var i = n(627968),
     W = n(53516),
     K = n(789622),
     Z = n(985018),
-    q = n(72936);
+    q = n(240342);
 let X = k.Ay.getEnableHardwareAcceleration() ? _.JsQ : _.euF;
 function J() {
     (0, Y.openUserSettings)(w.X.PROFILE_PANEL, { section: z.nc_.PROFILE_CUSTOMIZATION });
@@ -249,7 +249,7 @@ function et(e) {
                 valueMessage: Z.intl.string(Z.t["8SfTN/"]),
                 handleClick: () =>
                     (0, _.mMO)(async () => {
-                        let { default: e } = await Promise.all([n.e("83269"), n.e("5689")]).then(n.bind(n, 350116));
+                        let { default: e } = await Promise.all([n.e("83269"), n.e("14551")]).then(n.bind(n, 350116));
                         return (t) => (0, i.jsx)(e, { ...t });
                     }),
             };
@@ -266,7 +266,7 @@ function et(e) {
                 }),
                 handleClick: () =>
                     (0, _.mMO)(async () => {
-                        let { default: e } = await Promise.all([n.e("83269"), n.e("5689")]).then(n.bind(n, 350116));
+                        let { default: e } = await Promise.all([n.e("83269"), n.e("14551")]).then(n.bind(n, 350116));
                         return (t) => (0, i.jsx)(e, { ...t });
                     }),
             };

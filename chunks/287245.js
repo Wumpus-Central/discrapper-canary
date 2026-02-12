@@ -21,7 +21,7 @@ var i = n(627968),
     I = n(427262),
     b = n(652215),
     N = n(985018),
-    S = n(739699);
+    S = n(65309);
 let T = (e) => {
         let { channel: t, message: n, out: l = !1, noAnimate: s = !1 } = e,
             o = (0, _.A)(n, {

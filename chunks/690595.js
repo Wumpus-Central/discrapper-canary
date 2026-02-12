@@ -5,7 +5,7 @@ var s = t(503698),
     n = t.n(s),
     i = t(567243),
     a = t(985018),
-    o = t(416845);
+    o = t(61663);
 let d = ["sessionshare.sp-int.playstation.com", "session-share.playstation.com"],
     u = ["PlayStation"];
 function h(e) {

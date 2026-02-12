@@ -16,7 +16,7 @@ var a = i(627968),
     o = i(427262),
     N = i(294454),
     C = i(985018),
-    G = i(36614);
+    G = i(655412);
 function P(t) {
     let { icon: e, label: i } = t;
     return (0, a.jsxs)("div", {

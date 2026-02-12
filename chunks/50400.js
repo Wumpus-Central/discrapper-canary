@@ -1,7 +1,7 @@
 n.d(t, { A: () => O });
 var i = n(627968),
     l = n(64700),
-    s = n(563495),
+    s = n(288720),
     a = n(837381),
     r = n(311907),
     o = n(397927),
@@ -23,7 +23,7 @@ var i = n(627968),
     N = n(65611),
     S = n(652215),
     T = n(985018),
-    v = n(2724);
+    v = n(308294);
 let y = { friction: 28, tension: 600 };
 function j(e) {
     switch (e) {
@@ -80,7 +80,7 @@ class R extends l.PureComponent {
             l = t.type === S.rbe.DM ? f.default.getUser(t.getRecipientId()) : null;
         null != l
             ? (0, d.L3)(e, async () => {
-                  let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("39778"), n.e("38522")]).then(
+                  let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("39778"), n.e("54266")]).then(
                       n.bind(n, 385913),
                   );
                   return (n) => (0, i.jsx)(e, { ...n, channel: t, user: l });

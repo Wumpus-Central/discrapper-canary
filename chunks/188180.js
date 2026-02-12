@@ -10,7 +10,7 @@ var a = n(627968),
     u = n(894858),
     _ = n(942596),
     g = n(362205),
-    m = n(825104);
+    m = n(71862);
 function b(e) {
     let { tag: t, onClick: n, active: r, node: i, visibleContent: l, panelKey: c, listItemProps: d, children: u } = e,
         { icon: g, StronglyDiscouragedCustomComponent: b, trailing: f, useTitle: p, variant: x = "default" } = i,

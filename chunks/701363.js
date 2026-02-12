@@ -48,7 +48,7 @@ var n = s(627968),
     Y = s(837921),
     $ = s(652215),
     J = s(985018),
-    Z = s(477549);
+    Z = s(45119);
 let X = Y.Ay.getEnableHardwareAcceleration() ? p.JsQ : p.euF,
     ee = { offset: { top: 2, bottom: 2, right: 4 } },
     et = (e) => {
@@ -220,7 +220,7 @@ function ea(e) {
                                   s.e("42128"),
                                   s.e("55150"),
                                   s.e("39778"),
-                                  s.e("11865"),
+                                  s.e("92617"),
                               ]).then(s.bind(s, 385913));
                               return (s) => (0, n.jsx)(e, { ...s, user: r, channel: t, channelSelected: i });
                           },

@@ -47,7 +47,7 @@ var r = n(627968),
     z = n(837921),
     q = n(652215),
     X = n(985018),
-    Z = n(268053);
+    Z = n(701939);
 let Q = z.Ay.getEnableHardwareAcceleration(),
     J = 18,
     ee = 42,
@@ -87,7 +87,7 @@ let Q = z.Ay.getEnableHardwareAcceleration(),
                                 n.e("42128"),
                                 n.e("97283"),
                                 n.e("84841"),
-                                n.e("9771"),
+                                n.e("29347"),
                             ]).then(n.bind(n, 107632)),
                             t = Y.A.isInChannel(B.A.getVoiceChannelId(), c.id);
                         return (n) => (0, r.jsx)(e, { ...n, user: c, guildId: T, channel: I, showMediaItems: t });

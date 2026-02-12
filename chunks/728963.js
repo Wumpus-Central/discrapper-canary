@@ -18,7 +18,7 @@ var i = n(627968),
     x = n(763754);
 n(827669);
 var E = n(985018),
-    C = n(99245);
+    C = n(998815);
 let I = { tag: "span", variant: "text-md/normal", color: "text-default" },
     T = { className: r()("mention", C.lE) };
 function v(e) {

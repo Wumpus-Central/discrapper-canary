@@ -36,7 +36,7 @@ var a = n(627968),
     D = n(652215),
     M = n(818348),
     B = n(985018),
-    F = n(550951);
+    F = n(88465);
 function H(e) {
     let { sku: t, guildId: n, shouldShowShopLink: s, onClose: r, trackPDPClick: i } = e,
         o = t?.id,

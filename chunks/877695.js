@@ -20,7 +20,7 @@ var i = n(627968),
     C = n(168428),
     I = n(652215),
     T = n(985018),
-    v = n(14977);
+    v = n(875871);
 function N(e) {
     let { invite: t, isMemberOfGuild: n, message: a, onTransitionToInviteChannel: d, onAcceptInstantInvite: u } = e,
         m = l.useRef(null),

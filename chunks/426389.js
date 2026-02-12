@@ -23,19 +23,19 @@ var i = n(627968),
     S = n(927813),
     x = n(279877),
     v = n(112273),
-    b = n(666290),
-    y = n(928636),
+    y = n(666290),
+    b = n(928636),
     L = n(502696),
     O = n(282447),
     R = n(652215),
     P = n(654487),
     j = n(985018),
-    D = n(832779);
+    D = n(23729);
 let w = 15 * S.A.Millis.MINUTE,
     M = (0, O.A)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
             s = r.useRef(null),
-            d = (0, i.jsx)(b.A, { party: t, onUserContextMenu: n }),
+            d = (0, i.jsx)(y.A, { party: t, onUserContextMenu: n }),
             u = (0, i.jsx)(v.A, { party: t, onChannelContextMenu: l, quest: a }),
             { partiedMembers: A, applicationStreams: h, currentActivities: _, voiceChannels: m } = t,
             p = A.length,
@@ -66,7 +66,7 @@ let w = 15 * S.A.Millis.MINUTE,
                   spacing: 8,
                   children: (e, t) => {
                       let { isShown: n } = t;
-                      return (0, i.jsx)(y.A, {
+                      return (0, i.jsx)(b.A, {
                           ...e,
                           ref: s,
                           onMouseEnter: C,
@@ -127,24 +127,24 @@ function G() {
     r.useEffect(() => {
         I && v.size > 0 && (0, A.yO)(Array.from(v), _.uF.ACTIVITY_PANEL, "NowPlaying");
     }, [v, I]);
-    let b = (0, d.bG)([h.A], () => h.A.earnedQuestForPlacement.get(_.uF.ACTIVITY_PANEL), []),
-        y = r.useMemo(() => {
+    let y = (0, d.bG)([h.A], () => h.A.earnedQuestForPlacement.get(_.uF.ACTIVITY_PANEL), []),
+        b = r.useMemo(() => {
             if (!I) return T;
-            if (null == b) return new Map();
+            if (null == y) return new Map();
             let e = new Map();
             for (let [t, n] of S.entries()) {
-                let i = b.quests.get(n);
+                let i = y.quests.get(n);
                 null != i && e.set(t, i);
             }
             return e;
-        }, [I, b, T, S]),
+        }, [I, y, T, S]),
         L = null;
     return t
         ? (L =
               e.length > 0
                   ? e.map((e) => {
                         let { party: t } = e;
-                        return (0, i.jsx)(M, { party: t, quest: y.get(t.id) }, t.id);
+                        return (0, i.jsx)(M, { party: t, quest: b.get(t.id) }, t.id);
                     })
                   : (0, i.jsxs)("div", {
                         className: D.aM,
