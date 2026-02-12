@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     KQ: "messagesPopoutWrap_e8b59c",
     wx: "header_e8b59c",
