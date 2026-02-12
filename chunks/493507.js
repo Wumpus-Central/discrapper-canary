@@ -183,9 +183,9 @@ function P(e) {
     let { channelId: t, userId: n } = e;
     return n === c.default.getId() && N(t, "reaction_added");
 }
-function M() {
-    let e = h.A.getLastSelectedChannelId();
-    return null != e && N(e, "channel_opened");
+function M(e) {
+    let { guildId: t, channelId: n } = e;
+    return null != n && null == t && N(n, "channel_opened");
 }
 function k(e) {
     let {
