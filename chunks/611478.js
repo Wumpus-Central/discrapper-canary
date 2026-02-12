@@ -33,7 +33,10 @@ let S = (0, r.E2)(o.X.ACCOUNT_PROFILE_SETTING, {
         Component: function () {
             let t = (0, l.bG)([a.default], () => a.default.getCurrentUser());
             return (0, n.jsxs)(n.Fragment, {
-                children: [null != t && (0, n.jsx)(d.A, { currentUser: t }), (0, n.jsx)(A.A, {})],
+                children: [
+                    null != t && (0, n.jsx)(d.A, { currentUser: t }),
+                    null != t && (0, n.jsx)(A.A, { currentUser: t }),
+                ],
             });
         },
     }),

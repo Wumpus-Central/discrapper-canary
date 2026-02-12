@@ -43,7 +43,7 @@ function G() {
         children: [
             (0, s.jsxs)(A.x, {
                 setting: P.H.ACCOUNT_PROFILE,
-                children: [(0, s.jsx)(R.A, { currentUser: e }), (0, s.jsx)(y.A, {})],
+                children: [(0, s.jsx)(R.A, { currentUser: e }), (0, s.jsx)(y.A, { currentUser: e })],
             }),
             (0, s.jsx)(A.x, {
                 setting: P.H.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
