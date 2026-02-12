@@ -12,7 +12,11 @@ let s = {
             id: "perk-card",
             controls: {
                 title: { label: "Title", type: "text", defaultValue: "Perk Title" },
-                description: { label: "Description", type: "text", defaultValue: "This is the perk description." },
+                description: {
+                    label: "Description",
+                    type: "text",
+                    defaultValue: "This is the perk description. When hovered or focused, it will be revealed in full.",
+                },
                 caption: { label: "Caption", type: "text", defaultValue: "" },
                 pillText: { label: "Pill Text", type: "text", defaultValue: "" },
                 primaryAsset: { label: "Primary Asset", type: "text", defaultValue: "https://i.imgur.com/xJL1c3t.png" },
@@ -26,12 +30,12 @@ let s = {
     ],
 };
 function o(e) {
-    let { featured: t, ...n } = e;
+    let { ...t } = e;
     return (0, r.jsx)("div", {
-        style: { maxWidth: "100%", width: t ? 752 : 364 },
+        style: { maxWidth: "100%", width: t.featured ? 752 : 364 },
         children: (0, r.jsx)(a.S, {
-            ...n,
-            progress: null != n.progress && n.progress > 0 ? n.progress : void 0,
+            ...t,
+            progress: null != t.progress && t.progress > 0 ? t.progress : void 0,
             onCtaClick: () => (0, i.showToast)((0, i.createToast)("CTA Clicked!", i.ToastType.SUCCESS)),
         }),
     });

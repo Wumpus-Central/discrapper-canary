@@ -147,7 +147,10 @@ function G() {
                     let n = 0 === t && !0 === e.featured;
                     return (0, i.jsx)(
                         "div",
-                        { className: l()({ [O.Nq]: n }), children: (0, i.jsx)(x.S, { ...e, glowing: null === e.id }) },
+                        {
+                            className: l()({ [O.Nq]: n }),
+                            children: (0, i.jsx)(x.S, { ...e, glowing: null === e.id, featured: n }),
+                        },
                         e.id,
                     );
                 }),
