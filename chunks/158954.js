@@ -99,6 +99,7 @@ n.d(t, {
     I9m: () => q.LinkExternalSmallIcon,
     Ihz: () => q.DoorEnterIcon,
     IpV: () => A.Ip,
+    J$p: () => Z.BoostGemLevelTwoRive,
     J2m: () => q.UserPlayIcon,
     JD7: () => q.EmbedIcon,
     JMI: () => q.SoundboardIcon,
@@ -422,6 +423,7 @@ n.d(t, {
     t04: () => $.t,
     t64: () => q.StrikethroughIcon,
     tEP: () => q.StickerIcon,
+    tIK: () => Z.BoostGemLevelOneRive,
     tN5: () => q.ChevronSmallUpIcon,
     tVU: () => S.t,
     tfB: () => q.WindowLaunchIcon,
@@ -483,6 +485,7 @@ n.d(t, {
     zCo: () => I.zC,
     zWQ: () => q.PhoneHangUpIcon,
     zhh: () => en.z,
+    zzg: () => Z.BoostGemLevelThreeRive,
 });
 var r = n(534514),
     i = n(707554),
