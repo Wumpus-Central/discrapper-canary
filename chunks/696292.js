@@ -49,6 +49,8 @@ var r = (function (e) {
         (e[(e.MEMBERS_LIST_CARD = 44)] = "MEMBERS_LIST_CARD"),
         (e[(e.APP_LAUNCHER = 45)] = "APP_LAUNCHER"),
         (e[(e.ACTIVITY_SUGGESTION = 46)] = "ACTIVITY_SUGGESTION"),
+        (e[(e.QUEST_HOME_ENTRYPOINT = 47)] = "QUEST_HOME_ENTRYPOINT"),
+        (e[(e.QUEST_HOME_ENTRYPOINT_THEMED = 48)] = "QUEST_HOME_ENTRYPOINT_THEMED"),
         e
     );
 })({});
