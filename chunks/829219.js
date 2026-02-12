@@ -218,7 +218,9 @@ async function B(e, t, n) {
         try {
             let r = (0, N.Li)(n),
                 s = (0, N.L4)(n),
-                o = await i.Bo.post({
+                o = (0, N.yI)(n, e),
+                l = (0, N.Gp)(n, e),
+                u = await i.Bo.post({
                     url: D.Rsh.QUESTS_CLAIM_REWARD(e),
                     body: {
                         platform: t,
@@ -226,15 +228,17 @@ async function B(e, t, n) {
                         ...(0, N.Kc)(e, n),
                         metadata_raw: null != r ? r : null,
                         metadata_sealed: null != s ? s : null,
+                        traffic_metadata_raw: null != o ? o : null,
+                        traffic_metadata_sealed: null != l ? l : null,
                     },
                     rejectWithError: !1,
                 }),
-                l = (0, R.Dv)(o.body);
+                c = (0, R.Dv)(u.body);
             return (
-                0 === l.errors.length
-                    ? a.h.dispatch({ type: "QUESTS_CLAIM_REWARD_SUCCESS", questId: e, entitlements: l })
-                    : a.h.dispatch({ type: "QUESTS_CLAIM_REWARD_FAILURE", error: l.errors, questId: e }),
-                l
+                0 === c.errors.length
+                    ? a.h.dispatch({ type: "QUESTS_CLAIM_REWARD_SUCCESS", questId: e, entitlements: c })
+                    : a.h.dispatch({ type: "QUESTS_CLAIM_REWARD_FAILURE", error: c.errors, questId: e }),
+                c
             );
         } catch (t) {
             throw (a.h.dispatch({ type: "QUESTS_CLAIM_REWARD_FAILURE", error: new s.A(t), questId: e }), t);
@@ -258,12 +262,18 @@ async function H(e, t) {
     if (!n && r) {
         a.h.dispatch({ type: "QUESTS_DISMISS_CONTENT_BEGIN", questId: e, content: t });
         try {
-            let n = await i.Bo.post({
-                url: D.Rsh.QUESTS_DISMISS_CONTENT(e, t),
-                body: { ...(0, N.Kc)(e, t) },
-                rejectWithError: !1,
-            });
-            a.h.dispatch({ type: "QUESTS_DISMISS_CONTENT_SUCCESS", dismissedQuestUserStatus: (0, R.tp)(n.body) });
+            let n = (0, N.yI)(t, e),
+                r = (0, N.Gp)(t, e),
+                s = await i.Bo.post({
+                    url: D.Rsh.QUESTS_DISMISS_CONTENT(e, t),
+                    body: {
+                        ...(0, N.Kc)(e, t),
+                        traffic_metadata_raw: null != n ? n : null,
+                        traffic_metadata_sealed: null != r ? r : null,
+                    },
+                    rejectWithError: !1,
+                });
+            a.h.dispatch({ type: "QUESTS_DISMISS_CONTENT_SUCCESS", dismissedQuestUserStatus: (0, R.tp)(s.body) });
         } catch (t) {
             a.h.dispatch({ type: "QUESTS_DISMISS_CONTENT_FAILURE", error: new s.A(t), questId: e });
         }
