@@ -17,7 +17,7 @@ e.exports = {
     p9: "fieldTitle__1fed1",
     PU: "fieldButtonList__1fed1",
     pr: "fieldButton__1fed1",
-    d6: "pomeloWarning__1fed1",
+    a$: "uniqueUsernameWarning__1fed1",
     DT: "removeButton__1fed1",
     mx: "avatarError__1fed1",
     NQ: "constrainedRow__1fed1",

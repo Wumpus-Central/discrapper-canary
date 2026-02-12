@@ -60,39 +60,38 @@ let A = (e) => {
                 forceUsername: i,
                 showAccountIdentifier: a,
                 overrideDiscriminator: o,
-                forcePomelo: l,
-                hideBotTag: u = !1,
-                hideDiscriminator: d = !1,
-                displayNameStylesType: p = c.G.PLAIN,
-                ...g
+                hideBotTag: l = !1,
+                hideDiscriminator: u = !1,
+                displayNameStylesType: d = c.G.PLAIN,
+                ...p
             } = e,
-            I = (0, s.bG)([f.A], () => f.A.hidePersonalInformation),
-            T = I || d || t.isNonUserBot(),
-            y = t.toString(),
-            S = u ? null : E(t),
-            v = t.isVerifiedBot(),
-            C = h.Ay.getName(t),
-            b = i ? y : (n ?? C),
-            N = t.hasUniqueUsername() || l;
-        if (N || b !== y) {
-            let e = b === y && N && i ? h.Ay.getUserTag(t, { forcePomelo: l }) : b,
-                n = a && e !== `@${y}` ? h.Ay.getUserTag(t) : void 0;
+            g = (0, s.bG)([f.A], () => f.A.hidePersonalInformation),
+            I = g || u || t.isNonUserBot(),
+            T = t.toString(),
+            y = l ? null : E(t),
+            S = t.isVerifiedBot(),
+            v = h.Ay.getName(t),
+            C = i ? T : (n ?? v),
+            b = t.hasUniqueUsername();
+        if (b || C !== T) {
+            let e = C === T && b && i ? h.Ay.getUserTag(t) : C,
+                n = a && e !== `@${T}` ? h.Ay.getUserTag(t) : void 0;
             return (0, r.jsx)(A, {
                 primary: e,
                 secondary: n,
-                botType: S,
-                botVerified: v,
-                showStreamerModeTooltip: I && h.Ay.isNameConcealed(e),
-                displayNameStyles: b !== y ? t.displayNameStyles : null,
-                displayNameStylesType: p,
-                ...g,
+                botType: y,
+                botVerified: S,
+                showStreamerModeTooltip: g && h.Ay.isNameConcealed(e),
+                displayNameStyles: C !== T ? t.displayNameStyles : null,
+                displayNameStylesType: d,
+                ...p,
             });
         }
         return (0, r.jsx)(_.A, {
-            name: b,
-            botType: S,
-            botVerified: v,
-            discriminator: T || b !== y ? null : (o ?? t.discriminator),
-            ...g,
+            name: C,
+            botType: y,
+            botVerified: S,
+            discriminator: I || C !== T ? null : (o ?? t.discriminator),
+            ...p,
         });
     };

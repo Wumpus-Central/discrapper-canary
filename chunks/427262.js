@@ -1,15 +1,15 @@
 "use strict";
 n.d(t, {
-    $3: () => p,
-    Ay: () => N,
-    G2: () => T,
-    Gn: () => b,
-    MU: () => A,
-    QV: () => v,
-    R1: () => C,
-    mG: () => h,
-    mv: () => y,
-    tx: () => m,
+    $3: () => h,
+    Ay: () => R,
+    G2: () => y,
+    Gn: () => N,
+    MU: () => I,
+    QV: () => C,
+    R1: () => b,
+    mG: () => p,
+    mv: () => S,
+    tx: () => g,
 });
 var r = n(311907),
     i = n(351906),
@@ -20,39 +20,39 @@ let l = 864e5,
     u = "???",
     c = (e) => `${e[0]}…`,
     d = (e) => `@${e}`,
-    _ = { mode: "full", decoration: "never", identifiable: "auto", forcePomelo: !1 };
+    _ = { mode: "full", decoration: "never", identifiable: "auto" };
 function f(e) {
     return !!(null != e && e.length > 0);
 }
-function p(e) {
+function h(e) {
     return f(e.global_name) ? e.global_name : f(e.globalName) ? e.globalName : f(e.username) ? e.username : u;
 }
-function h(e) {
+function p(e) {
     if (null == e) return;
     let t = i.A.hidePersonalInformation,
-        n = p(e);
-    return t && n.toLocaleLowerCase() === e.username?.toLocaleLowerCase() && "0" === e.discriminator && (n = c(n)), n;
-}
-function m(e) {
-    let t = (0, r.bG)([i.A], () => i.A.hidePersonalInformation);
-    if (null == e) return;
-    let n = p(e);
+        n = h(e);
     return t && n.toLocaleLowerCase() === e.username?.toLocaleLowerCase() && "0" === e.discriminator && (n = c(n)), n;
 }
 function g(e) {
+    let t = (0, r.bG)([i.A], () => i.A.hidePersonalInformation);
+    if (null == e) return;
+    let n = h(e);
+    return t && n.toLocaleLowerCase() === e.username?.toLocaleLowerCase() && "0" === e.discriminator && (n = c(n)), n;
+}
+function E(e) {
     if (null != e)
         if (f(e.globalName)) return e.globalName;
         else if (f(e.global_name)) return e.global_name;
         else return;
 }
-function E(e) {
+function A(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (null == e) return u;
-    let n = g(e),
-        r = t ? v(e) : (e.username ?? u);
+    let n = E(e),
+        r = t ? C(e) : (e.username ?? u);
     return n === r ? n : null != n ? `${n} (${r})` : r;
 }
-function A(e) {
+function I(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     switch (e) {
         case s.clD.ONLINE:
@@ -72,7 +72,7 @@ function A(e) {
             return null;
     }
 }
-function I(e, t) {
+function T(e, t) {
     let { maxDaysOld: n, minDaysOld: r = 0 } = t;
     if (null == e) return !1;
     let i = Date.now() - e.createdAt.getTime(),
@@ -80,53 +80,53 @@ function I(e, t) {
         s = i >= l * r;
     return !!a && !!s;
 }
-function T(e) {
-    return !I(e, { minDaysOld: 0, maxDaysOld: 30 });
-}
 function y(e) {
-    return I(e, { minDaysOld: 0, maxDaysOld: 7 });
+    return !T(e, { minDaysOld: 0, maxDaysOld: 30 });
 }
-function S(e, t, n) {
+function S(e) {
+    return T(e, { minDaysOld: 0, maxDaysOld: 7 });
+}
+function v(e, t, n) {
     if (null == e) return o.intl.string(o.t.sKdZ6U);
     if (!f(e.username)) return u;
     let r = n;
     if (
         ("always" === t.identifiable ? (r = !1) : "never" === t.identifiable && (r = !0),
-        "0" !== e.discriminator && e.discriminator !== s.h3J && !t.forcePomelo)
+        "0" !== e.discriminator && e.discriminator !== s.h3J)
     )
         return "username" === t.mode || r ? e.username : `${e.username}#${e.discriminator}`;
     let i = r ? c(e.username) : e.username;
     return "never" !== t.decoration ? d(i) : i;
 }
-function v(e, t) {
+function C(e, t) {
     let n = { ..._, ...t },
         r = "auto" !== n.identifiable || i.A.hidePersonalInformation;
-    return S(e, n, r);
+    return v(e, n, r);
 }
-function C(e) {
+function b(e) {
     return (0, r.bG)([a.default], () => {
         if (null != e) return e.isPrivate() && e.isDM() ? a.default.getUser(e.getRecipientId()) : null;
     });
 }
-function b() {
+function N() {
     let e = a.default.getCurrentUser();
     return null != e && e.isStaff();
 }
-let N = {
-    getName: h,
-    useName: m,
+let R = {
+    getName: p,
+    useName: g,
     isNameConcealed: (e) => 2 === e.length && e.endsWith("…"),
-    getUserTag: v,
+    getUserTag: C,
     useUserTag: function (e, t) {
-        return S(
+        return v(
             e,
             { ..._, ...t },
             (0, r.bG)([i.A], () => i.A.hidePersonalInformation),
         );
     },
-    getUserIsStaff: b,
-    getFormattedName: E,
-    getGlobalName: g,
-    humanizeStatus: A,
-    useDirectMessageRecipient: C,
+    getUserIsStaff: N,
+    getFormattedName: A,
+    getGlobalName: E,
+    humanizeStatus: I,
+    useDirectMessageRecipient: b,
 };

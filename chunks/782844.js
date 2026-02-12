@@ -1,117 +1,114 @@
-n.d(t, { A: () => B, D: () => w });
+n.d(t, { A: () => V, D: () => U });
 var i,
-    l = n(627968),
-    s = n(64700),
-    a = n(284009),
-    r = n.n(a),
+    s = n(627968),
+    a = n(64700),
+    l = n(284009),
+    r = n.n(l),
     o = n(311907),
-    d = n(397927),
-    c = n(98207),
+    c = n(397927),
+    d = n(98207),
     u = n(631670),
-    h = n(974544),
-    A = n(772786),
-    g = n(210742),
-    m = n(195043),
-    p = n(130771),
-    _ = n(576622),
+    _ = n(974544),
+    m = n(210742),
+    A = n(195043),
+    g = n(130771),
+    h = n(576622),
     x = n(670492),
-    f = n(351906),
+    p = n(351906),
     E = n(628965),
     C = n(287809),
-    I = n(954571),
+    T = n(954571),
     S = n(773669),
-    b = n(544028),
-    N = n(740625),
-    T = n(524738),
-    j = n(972982),
-    v = n(36535),
-    y = n(299116),
-    R = n(433410),
+    I = n(544028),
+    f = n(740625),
+    N = n(524738),
+    b = n(972982),
+    j = n(36535),
+    v = n(299116),
     O = n(457684),
-    L = n(998252),
-    D = n(980172),
-    M = n(531525),
-    G = n(652215),
-    U = n(985018),
-    P = n(139674);
-function k() {
+    R = n(998252),
+    y = n(980172),
+    P = n(531525),
+    L = n(652215),
+    D = n(985018),
+    M = n(139674);
+function G() {
     let e = (0, o.bG)([C.default], () => {
             let e = C.default.getCurrentUser();
             return r()(null != e, "SecuritySettingsTab: currentUser cannot be undefined"), e;
         }),
         t = (0, o.bG)([x.A], () => x.A.getBackupCodes()),
-        n = (0, A.g)(),
-        { teams: i, loading: s } = (0, p.A)({ refreshOnDepChange: !0 });
-    return (0, l.jsxs)(d.lVW, {
+        { teams: n, loading: i } = (0, g.A)({ refreshOnDepChange: !0 });
+    return (0, s.jsxs)(c.lVW, {
         children: [
-            (0, l.jsxs)(m.x, {
-                setting: M.H.ACCOUNT_PROFILE,
-                children: [n && (0, l.jsx)(R.A, {}), (0, l.jsx)(L.A, { currentUser: e }), (0, l.jsx)(D.A, {})],
+            (0, s.jsxs)(A.x, {
+                setting: P.H.ACCOUNT_PROFILE,
+                children: [(0, s.jsx)(R.A, { currentUser: e }), (0, s.jsx)(y.A, {})],
             }),
-            (0, l.jsx)(m.x, {
-                setting: M.H.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
-                children: (0, l.jsxs)(d.nVY, {
-                    className: P.PN,
-                    label: U.intl.string(U.t.pKSjEj),
+            (0, s.jsx)(A.x, {
+                setting: P.H.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
+                children: (0, s.jsxs)(c.nVY, {
+                    className: M.PN,
+                    label: D.intl.string(D.t.pKSjEj),
                     children: [
-                        e.mfaEnabled ? (0, l.jsx)(v.A, {}) : null,
-                        (0, l.jsx)(m.x, { setting: M.H.ACCOUNT_CHANGE_PASSWORD, children: (0, l.jsx)(y.A, {}) }),
-                        (0, l.jsx)(m.x, {
-                            setting: M.H.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
-                            children: (0, l.jsx)(j.A, { backupCodes: t }),
+                        e.mfaEnabled ? (0, s.jsx)(j.A, {}) : null,
+                        (0, s.jsx)(A.x, { setting: P.H.ACCOUNT_CHANGE_PASSWORD, children: (0, s.jsx)(v.A, {}) }),
+                        (0, s.jsx)(A.x, {
+                            setting: P.H.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
+                            children: (0, s.jsx)(b.A, { backupCodes: t }),
                         }),
                     ],
                 }),
             }),
-            (0, l.jsxs)(m.x, {
-                setting: M.H.ACCOUNT_REMOVAL,
+            (0, s.jsxs)(A.x, {
+                setting: P.H.ACCOUNT_REMOVAL,
                 children: [
-                    (0, l.jsx)(d.cGx, {}),
-                    (0, l.jsx)(O.A, { currentUser: e, userTeamsLoading: s, userTeams: i }),
+                    (0, s.jsx)(c.cGx, {}),
+                    (0, s.jsx)(O.A, { currentUser: e, userTeamsLoading: i, userTeams: n }),
                 ],
             }),
         ],
     });
 }
-var w = (((i = {}).SECURITY = "SECURITY"), (i.STANDING = "STANDING"), i);
-class V extends s.PureComponent {
+var U = (((i = {}).SECURITY = "SECURITY"), (i.STANDING = "STANDING"), i);
+class k extends a.PureComponent {
     componentDidMount() {
         let { currentUser: e } = this.props;
-        (0, _.A)(e.id, e.getAvatarURL(void 0, 80));
+        (0, h.A)(e.id, e.getAvatarURL(void 0, 80));
     }
     componentWillUnmount() {
-        c.A.clearBackupCodes(), (0, u.Uo)();
+        d.A.clearBackupCodes(), (0, u.Uo)();
     }
     renderUnhidden() {
         let { subsection: e } = this.props;
-        return (0, l.jsx)(N.R, {
-            header: U.intl.string(U.t["JAIM/m"]),
-            children: (0, l.jsx)(T.A, {
-                parentSetting: M.H.ACCOUNT,
-                settingsSection: G.nc_.ACCOUNT,
-                panelClassName: P.SZ,
+        return (0, s.jsx)(f.R, {
+            header: D.intl.string(D.t["JAIM/m"]),
+            children: (0, s.jsx)(N.A, {
+                parentSetting: P.H.ACCOUNT,
+                settingsSection: L.nc_.ACCOUNT,
+                panelClassName: M.SZ,
                 onTabChange: (e) => {
-                    I.default.track(G.HAw.MY_ACCOUNT_PAGE_TAB_NAVIGATE, {
-                        target_tab_name: e === M.H.ACCOUNT_SECURITY_TAB ? "SECURITY" : "STANDING",
+                    T.default.track(L.HAw.MY_ACCOUNT_PAGE_TAB_NAVIGATE, {
+                        target_tab_name: e === P.H.ACCOUNT_SECURITY_TAB ? "SECURITY" : "STANDING",
                     });
                 },
                 defaultTabIndex: "ACCOUNT_STANDING" === e ? 1 : void 0,
                 tabs: [
-                    { title: U.intl.string(U.t.Am9YHi), component: k, setting: M.H.ACCOUNT_SECURITY_TAB },
-                    { title: U.intl.string(U.t["Vov/9o"]), component: g.A, setting: M.H.PRIVACY_AND_SAFETY_STANDING },
+                    { title: D.intl.string(D.t.Am9YHi), component: G, setting: P.H.ACCOUNT_SECURITY_TAB },
+                    { title: D.intl.string(D.t["Vov/9o"]), component: m.A, setting: P.H.PRIVACY_AND_SAFETY_STANDING },
                 ],
             }),
         });
     }
     render() {
-        return this.props.hide ? (0, l.jsx)(h.A, {}) : this.renderUnhidden();
+        return this.props.hide ? (0, s.jsx)(_.A, {}) : this.renderUnhidden();
     }
 }
-let B = () => {
+let V = () => {
     let e = (0, o.bG)([C.default], () => C.default.getCurrentUser()),
-        t = (0, o.bG)([f.A], () => f.A.hidePersonalInformation),
-        n = (0, o.bG)([b.A], () => b.A.theme),
+        t = (0, o.bG)([p.A], () => p.A.hidePersonalInformation),
+        n = (0, o.bG)([I.A], () => I.A.theme),
         i = (0, o.bG)([S.default], () => S.default.locale),
-        s = (0, o.bG)([E.A], () => E.A.getSubsection());
-    return null == e ? null : (0, l.jsx)(V, { theme: n, currentUser: e, hide: t, locale: i, subsection: s });
+        a = (0, o.bG)([E.A], () => E.A.getSubsection());
+    return null == e ? null : (0, s.jsx)(k, { theme: n, currentUser: e, hide: t, locale: i, subsection: a });
 };

@@ -377,7 +377,6 @@ let i = {
         neverLoadBeforeConnectionOpen: !0,
     },
     ParticipantFocusManager: { inlineRequire: () => n(585250).A, hasStoreChangeListeners: !0 },
-    PomeloManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(80408).A },
     PremiumGiftingIntentManager: {
         actions: ["POST_CONNECTION_OPEN", "CHANNEL_SELECT"],
         inlineRequire: () => n(528153).A,

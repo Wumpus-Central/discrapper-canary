@@ -5,6 +5,5 @@ e.exports = {
     vN: "phoneRevealer__2666b",
     PA: "inlineNoticeText__2666b",
     Uc: "backupCode__2666b",
-    s6: "noticeTextButton__2666b",
     SZ: "tabPanel__2666b",
 };

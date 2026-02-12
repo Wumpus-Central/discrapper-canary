@@ -8,5 +8,5 @@ e.exports = {
     Xh: "username__0a06e",
     D2: "discriminator__0a06e",
     yo: "hovered__0a06e",
-    ID: "alignPomelo__0a06e",
+    Nu: "alignUniqueUsername__0a06e",
 };

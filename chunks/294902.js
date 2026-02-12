@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => p });
 var r = n(627968);
 n(64700);
 var i = n(311907),
@@ -12,53 +12,51 @@ var i = n(311907),
     d = n(351906),
     _ = n(385612),
     f = n(996988),
-    p = n(183959);
-function h(e) {
+    h = n(183959);
+function p(e) {
     let {
             user: t,
             displayProfile: n,
-            guild: h,
-            pendingAvatar: m,
-            pendingNickname: g,
-            pendingGlobalName: E,
-            pendingBio: A,
-            pendingPronouns: I,
-            pendingLegacyUsernameDisabled: T,
-            pendingBadges: y,
-            pendingDisplayNameStyles: S,
-            pendingPrimaryGuildId: v,
-            isTryItOut: C,
+            guild: p,
+            pendingAvatar: g,
+            pendingNickname: E,
+            pendingGlobalName: A,
+            pendingBio: I,
+            pendingPronouns: T,
+            pendingLegacyUsernameDisabled: y,
+            pendingBadges: S,
+            pendingDisplayNameStyles: v,
+            pendingPrimaryGuildId: C,
             hideBioSection: b,
             shouldOpenBadgeTooltip: N,
         } = e,
-        R = (0, i.bG)([c.Ay], () => (null == h ? null : c.Ay.getMember(h.id, t.id))),
+        R = (0, i.bG)([c.Ay], () => (null == p ? null : c.Ay.getMember(p.id, t.id))),
         O = (0, i.bG)([d.A], () => d.A.hidePersonalInformation),
-        D = n?.getPreviewBio(A),
-        L = I ?? n?.pronouns,
-        w = (0, _.eh)({ pendingNickname: g, pendingGlobalName: E, user: t, guildMember: R }),
-        x = (0, a.gS)(v),
+        D = n?.getPreviewBio(I),
+        L = T ?? n?.pronouns,
+        w = (0, _.eh)({ pendingNickname: E, pendingGlobalName: A, user: t, guildMember: R }),
+        x = (0, a.gS)(C),
         P = () => {
-            if (null != R && null !== m && (null != R.avatar || null != m))
+            if (null != R && null !== g && (null != R.avatar || null != g))
                 return (0, r.jsx)(u.A, { user: t, nickname: w });
         };
     return (0, r.jsxs)("div", {
-        className: p.rf,
+        className: h.rf,
         inert: !0,
         children: [
             (0, r.jsx)(o.A, {
                 user: t,
-                guildId: h?.id,
+                guildId: p?.id,
                 usernameIcon: P(),
                 nickname: w,
-                pendingDisplayNameStyles: S,
+                pendingDisplayNameStyles: v,
                 pronouns: L,
                 primaryGuild: x,
-                isTryItOut: C,
                 tags: (0, r.jsx)(s.A, {
                     displayProfile: n,
                     themeType: f.d.POPOUT,
-                    pendingLegacyUsernameDisabled: T,
-                    pendingBadges: y,
+                    pendingLegacyUsernameDisabled: y,
+                    pendingBadges: S,
                     shouldOpenBadgeTooltip: N,
                 }),
             }),

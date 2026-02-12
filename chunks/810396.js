@@ -29,60 +29,58 @@ function A(e) {
             primaryGuild: v,
             className: C,
             tagClassName: b,
-            isTryItOut: N,
-            onOpenProfile: R,
-            onClose: O,
-            nicknameVariant: D = "heading-lg/bold",
+            onOpenProfile: N,
+            onClose: R,
+            nicknameVariant: O = "heading-lg/bold",
         } = e,
-        L = (e) => (null == R ? e : (0, r.jsx)(o.DUT, { onClick: R, className: E.pt, children: e })),
-        w = null != S && S.length > 0,
-        x = (0, u.r)(t),
-        P = (0, d.A)({ userId: t.id, guildId: n, pendingDisplayNameStyles: y }),
-        M = null != P;
+        D = (e) => (null == N ? e : (0, r.jsx)(o.DUT, { onClick: N, className: E.pt, children: e })),
+        L = null != S && S.length > 0,
+        w = (0, u.r)(t),
+        x = (0, d.A)({ userId: t.id, guildId: n, pendingDisplayNameStyles: y }),
+        P = null != x;
     return (0, r.jsxs)("div", {
-        className: a()(E.kL, { [E.Od]: null != x }, C),
+        className: a()(E.kL, { [E.Od]: null != w }, C),
         children: [
             (0, r.jsxs)("div", {
                 className: E.Fj,
                 children: [
-                    L(
-                        M
+                    D(
+                        P
                             ? (0, r.jsx)(o.Text, {
-                                  variant: D,
+                                  variant: O,
                                   children: (0, r.jsx)(f.A, {
                                       userName: I,
-                                      displayNameStyles: P,
+                                      displayNameStyles: x,
                                       effectDisplayType: _.G.ANIMATED,
                                       textClassName: E.iA,
                                       shouldWrap: !0,
                                       loop: !0,
                                       inProfile: !0,
-                                      shouldUnderlineOnHover: null != R,
+                                      shouldUnderlineOnHover: null != N,
                                   }),
                               })
-                            : (0, r.jsx)(o.Text, { className: E.$R, variant: D, children: I }),
+                            : (0, r.jsx)(o.Text, { className: E.$R, variant: O, children: I }),
                     ),
-                    null != x && (0, r.jsx)(c.A, { type: x, verified: t.isVerifiedBot() }),
+                    null != w && (0, r.jsx)(c.A, { type: w, verified: t.isVerifiedBot() }),
                     null != T && (0, r.jsx)("div", { className: E.t4, children: T }),
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: a()(E._A, { [E.hI]: w, [E.Od]: null != x }),
+                className: a()(E._A, { [E.hI]: L, [E.Od]: null != w }),
                 children: [
                     !t.isProvisional &&
-                        L(
+                        D(
                             (0, r.jsx)(l.A, {
                                 user: t,
                                 usernameIcon: i,
                                 forceUsername: !0,
-                                forcePomelo: N,
                                 className: a()(E.a1, b),
                                 usernameClass: E.eb,
                                 discriminatorClass: E.sw,
                                 hideBotTag: !0,
                             }),
                         ),
-                    w &&
+                    L &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)("div", { "aria-hidden": "true", className: E.SC }),
@@ -109,7 +107,7 @@ function A(e) {
                     (0, r.jsx)(h.Ay, {
                         primaryGuild: v,
                         userId: t.id,
-                        onClose: O,
+                        onClose: R,
                         containerClassName: E.L4,
                         className: E.Mp,
                     }),

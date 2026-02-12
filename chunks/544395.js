@@ -16,7 +16,7 @@ let o = { taken: null, error: void 0, rateLimited: !0 },
         },
     };
 class d extends r.Ay.Store {
-    static displayName = "PomeloStore";
+    static displayName = "UniqueUsernamesStore";
     isRateLimited() {
         return null != c.retryAfterTime && Date.now() < c.retryAfterTime;
     }
@@ -48,31 +48,27 @@ class d extends r.Ay.Store {
     }
 }
 let u = new d(l.h, {
-    POMELO_ATTEMPT_SUCCESS: function (e) {
+    UNIQUE_USERNAME_ATTEMPT_SUCCESS: function (e) {
         let { username: t, taken: n } = e;
         c.validations.set(t, { taken: n });
     },
-    POMELO_ATTEMPT_FAILURE: function (e) {
+    UNIQUE_USERNAME_ATTEMPT_FAILURE: function (e) {
         let { username: t, error: n, statusCode: i, retryAfter: s } = e;
         429 === i
             ? c.validations.set(t, { taken: null, error: n, rateLimited: !0 }, (s ?? 7) * a.A.Millis.SECOND)
             : c.validations.set(t, { taken: null, error: n }),
             null != s && (c.retryAfterTime = Date.now() + s * a.A.Millis.SECOND);
     },
-    POMELO_SUGGESTIONS_RESET: function () {
+    UNIQUE_USERNAME_SUGGESTIONS_RESET: function () {
         (c.suggestions.migration = { suggestion: { username: void 0 }, fetched: !1, usernameSuggestionLoading: !1 }),
             (c.suggestions.registration = { suggestion: { username: void 0 }, source: void 0, fetched: !1 });
     },
-    POMELO_SUGGESTIONS_SUCCESS: function (e) {
+    UNIQUE_USERNAME_SUGGESTIONS_SUCCESS: function (e) {
         let { suggestion: t } = e;
         (c.suggestions.migration = { suggestion: t, fetched: !0, usernameSuggestionLoading: !1 }),
             t?.invalid_current_username === !0 && (c.currentUsernameInvalid = !0);
     },
-    POMELO_SUGGESTIONS_FETCH: function (e) {
-        let { usernameSuggestionLoading: t } = e;
-        c.suggestions.migration.usernameSuggestionLoading = t;
-    },
-    POMELO_REGISTRATION_SUGGESTIONS_SUCCESS: function (e) {
+    UNIQUE_USERNAME_REGISTRATION_SUGGESTIONS_SUCCESS: function (e) {
         let { suggestion: t, source: n } = e;
         (c.suggestions.registration = { suggestion: t, source: n, fetched: !0 }),
             t?.username != null && c.validations.set(t.username, { taken: !1 });

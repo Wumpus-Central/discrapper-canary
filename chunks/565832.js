@@ -1,13 +1,13 @@
 n.d(t, { A: () => d });
 var a = n(627968),
-    s = n(311907),
-    i = n(935154),
+    i = n(311907),
+    s = n(935154),
     l = n(748319),
     r = n(287809),
     o = n(427262);
 function d(e) {
     let { nameplate: t } = e,
-        n = (0, s.bG)([r.default], () => r.default.getCurrentUser()),
+        n = (0, i.bG)([r.default], () => r.default.getCurrentUser()),
         d = o.Ay.useName(n) ?? "";
     return (0, a.jsx)(l.g, {
         username: d,
@@ -18,7 +18,7 @@ function d(e) {
         suppress: !1,
         speaking: !1,
         streaming: !1,
-        status: i.cl.ONLINE,
+        status: s.cl.ONLINE,
         currentUser: n,
         activities: [],
         applicationStream: void 0,
@@ -30,7 +30,6 @@ function d(e) {
         occluded: !1,
         dismissibleContents: { avatar: [], settings: [] },
         awaitingRemote: !1,
-        isEligibleForPomelo: !1,
         nameplate: t,
         voiceChannel: null,
         voiceActivityStatusEnabled: !1,

@@ -127,7 +127,6 @@ function C(e) {
                     pendingLegacyUsernameDisabled: k,
                     pendingDisplayNameStyles: U,
                     pendingPrimaryGuildId: G,
-                    isTryItOut: B,
                     hideBioSection: Y,
                     pendingBadges: K,
                     shouldOpenBadgeTooltip: $,
