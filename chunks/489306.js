@@ -19,8 +19,8 @@ var i = n(64700),
     C = n(904629),
     E = n(229548),
     I = n(139032),
-    N = n(294384),
-    b = n(864310),
+    b = n(294384),
+    N = n(864310),
     S = n(553103),
     T = n(568065),
     v = n(652215),
@@ -29,7 +29,7 @@ function j(e) {
     let t = (0, s.bG)([p.A], () => p.A.getNotificationStateForGuild(e), [e]),
         n = (0, s.bG)([g.A], () => g.A.getStateForGuild(e)),
         { indicator: m, showUnread: y } = (function (e, t, n) {
-            let l = (0, b.A)(e).available,
+            let l = (0, N.A)(e).available,
                 { shouldShow: o } = (0, S.A)(e, "useGuildPowerupsNotificationIndicator"),
                 d = (0, r.cN)(a.M.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION, e),
                 c = o && !d,
@@ -57,7 +57,7 @@ function j(e) {
                 p,
                 [g, C] = (0, E.ty)(null != t),
                 S = g === a.M.GUILD_POWERUP_PERKS_COACHMARK,
-                { available: y } = (0, b.A)(e),
+                { available: y } = (0, N.A)(e),
                 j = (0, s.bG)([d.A], () => d.A.getGuild(e)?.features.has(v.GuildFeatures.GAME_SERVERS) ?? !1),
                 R = (0, s.bG)([A.A], () => A.A.getLowestGameCostForGuild(e)),
                 O =
@@ -133,7 +133,8 @@ function j(e) {
                                               let l = t.allPowerups[i];
                                               return null == l ||
                                                   n < l.cost ||
-                                                  (0, N.t)(e, l, "maybeGetPerkPurchaseablePopoutDCF")
+                                                  !l.dependencies.every((e) => null != t.unlockedPowerups[e]) ||
+                                                  (0, b.t)(e, l, "maybeGetPerkPurchaseablePopoutDCF")
                                                   ? null
                                                   : l;
                                           }),
