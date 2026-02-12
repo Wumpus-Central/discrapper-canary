@@ -1,10 +1,11 @@
-n.d(t, { t: () => r });
-var a,
-    r =
-        (((a = {}).ACCENT = "accent"),
-        (a.GREEN = "statusGreen"),
-        (a.YELLOW = "statusYellow"),
-        (a.ORANGE = "statusOrange"),
-        (a.RED = "statusRed"),
-        (a.NONE = "transparent"),
-        a);
+"use strict";
+n.d(t, { t: () => a });
+var i,
+    a =
+        (((i = {}).ACCENT = "accent"),
+        (i.GREEN = "statusGreen"),
+        (i.YELLOW = "statusYellow"),
+        (i.ORANGE = "statusOrange"),
+        (i.RED = "statusRed"),
+        (i.NONE = "transparent"),
+        i);
