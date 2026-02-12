@@ -44,7 +44,7 @@ function I(e) {
         U = (0, r.cf)([N.A], () => N.A.getPendingChanges(s?.id)),
         Y = (0, f.V7)({ userId: t.id, image: U.pendingAvatar }),
         { userNameplate: B, guildNameplate: J, pendingNameplate: F } = (0, p.rv)(t, s?.id),
-        V = null != J ? (0, x.WK)(J) : void 0;
+        V = (0, x.WK)(J);
     O && !G ? (R = v.NJ8.DARK) : !O && G && (R = v.NJ8.LIGHT);
     let q = (0, a.useCallback)(() => {
             S.default.track(v.HAw.DISPLAY_NAME_STYLES_CLOSED), w();

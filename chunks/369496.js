@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { H6: () => u, Ov: () => d, WK: () => _, nI: () => c, wT: () => o }),
+n.d(t, { EQ: () => u, H6: () => _, Ov: () => h, WK: () => l, nI: () => f, wT: () => c }),
     n(393431),
     n(532706),
     n(42231),
@@ -9,17 +9,26 @@ n.d(t, { H6: () => u, Ov: () => d, WK: () => _, nI: () => c, wT: () => o }),
     n(65162);
 var r = n(115943),
     i = n.n(r),
-    a = n(270704);
+    a = n(837015),
+    s = n(270704);
 n(818348);
-var s = n(985018);
-function o(e) {
-    return e.name !== a.KO && (e.name !== a.AK || (l(e.darkBackground) && l(e.lightBackground)));
-}
+var o = n(985018);
 function l(e) {
+    return null == e ? null : { skuId: e.skuId, src: e.asset, imgAlt: e.label, palette: _(e.palette) };
+}
+function u(e) {
+    if (0 === e.items.length) return null;
+    let t = e.items[0];
+    return (0, a.F)(t) ? l(t) : null;
+}
+function c(e) {
+    return e.name !== s.KO && (e.name !== s.AK || (d(e.darkBackground) && d(e.lightBackground)));
+}
+function d(e) {
     return /^#([0-9a-fA-F]{6})$/.test(e);
 }
-let u = (e) => a.fc[e] ?? a.Wj;
-function c(e) {
+let _ = (e) => s.fc[e] ?? s.Wj;
+function f(e) {
     let t = i().decode(e),
         n = i().toRGBA8(t)[0],
         r = document.createElement("canvas");
@@ -28,33 +37,32 @@ function c(e) {
         s = new ImageData(new Uint8ClampedArray(n), t.width, t.height);
     return a.putImageData(s, 0, 0), r.toDataURL("image/png");
 }
-function d() {
+function h() {
     return {
         mallow: {
-            name: s.intl.string(s.t.SbKDHi),
+            name: o.intl.string(o.t.SbKDHi),
             avatarSrc:
                 "https://cdn.discordapp.com/assets/content/6dcafe1231097505560fd098f0e6698990f0082369d34c35d8c3ee9615709f84.png",
         },
         phibi: {
-            name: s.intl.string(s.t["LMSo+F"]),
+            name: o.intl.string(o.t["LMSo+F"]),
             avatarSrc:
                 "https://cdn.discordapp.com/assets/content/17ae2ee3b8476755370ca9fa4d776d0bb811e50962409a7ae2dedd1b96c95eab.png",
         },
         locke: {
-            name: s.intl.string(s.t.g5Dumi),
+            name: o.intl.string(o.t.g5Dumi),
             avatarSrc:
                 "https://cdn.discordapp.com/assets/content/a82a9daadc5c7842f183c0f61966b07d3aeeea478b7c8a4b8af48334eb1ce15f.png",
         },
         cherry: {
-            name: s.intl.string(s.t.p5Z3Ol),
+            name: o.intl.string(o.t.p5Z3Ol),
             avatarSrc:
                 "https://cdn.discordapp.com/assets/content/afc2e8306ce540dccac7da1ca0871684d0bf67e77967ff0f679be84a0a6e51b7.png",
         },
         boom: {
-            name: s.intl.string(s.t.ncslie),
+            name: o.intl.string(o.t.ncslie),
             avatarSrc:
                 "https://cdn.discordapp.com/assets/content/e264a2b0b8d963edd255c223abf1c0554f00a2f3a38640e509a38bc03d73b606.png",
         },
     };
 }
-let _ = (e) => (null == e ? null : { src: e.asset, palette: u(e.palette), imgAlt: e.label });

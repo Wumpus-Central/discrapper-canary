@@ -3,8 +3,8 @@ n.d(t, { A: () => c });
 var r = n(627968),
     i = n(575593),
     a = n(674658),
-    s = n(628856),
-    o = n(226540),
+    s = n(226540),
+    o = n(369496),
     l = n(227),
     u = n(486020);
 let c = (e) => {
@@ -21,8 +21,8 @@ let c = (e) => {
         return (0, r.jsx)("img", { src: e, alt: "" });
     }
     if (_.type === i.R.NAMEPLATE) {
-        let e = (0, s.D)(_);
-        return (0, r.jsx)(l.A, { nameplate: e, placement: o.u.PREVIEW });
+        let e = (0, o.WK)(_);
+        return (0, r.jsx)(l.A, { nameplate: e, placement: s.u.PREVIEW });
     }
     return null;
 };

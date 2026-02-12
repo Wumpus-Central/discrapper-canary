@@ -17,7 +17,9 @@ let r = (0, n(353640).v)(() => ({ imgCache: {}, toolsCache: {} })),
         return {
             toolsCache: e.getState().toolsCache,
             setToolsCache: (t, n, r) => {
-                e.setState((e) => ({ toolsCache: { ...e.toolsCache, [t]: { url: n, palette: r } } }));
+                null != t &&
+                    null != n &&
+                    e.setState((e) => ({ toolsCache: { ...e.toolsCache, [t]: { url: n, palette: r } } }));
             },
             removeToolsCache: (t) => {
                 e.setState((e) => {

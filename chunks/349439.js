@@ -1,56 +1,49 @@
-n.d(t, { GQ: () => A, GZ: () => E, il: () => g, nF: () => _, rj: () => m });
+n.d(t, { GQ: () => u, GZ: () => m, il: () => _, nF: () => d });
 var i = n(575593),
-    s = n(289397),
-    r = n(898461),
-    a = n(837015),
-    l = n(203632),
-    o = n(486020),
-    c = n(788868),
-    d = n(842130),
-    u = n(985018);
-let _ = (e) => {
+    s = n(898461),
+    a = n(203632),
+    l = n(486020),
+    r = n(788868),
+    o = n(842130),
+    c = n(985018);
+let d = (e) => {
         if (0 === e.items.length) return null;
         let t = e.items[0];
-        return (0, r.T)(t) ? (0, o.F_)({ avatarDecoration: { asset: t.asset }, size: 40, canAnimate: !0 }) : null;
+        return (0, s.T)(t) ? (0, l.F_)({ avatarDecoration: { asset: t.asset }, size: 40, canAnimate: !0 }) : null;
     },
-    m = (e) => {
+    u = (e) => {
         if (0 === e.items.length) return null;
         let t = e.items[0];
-        return (0, a.F)(t) ? (0, s.n)(`collectibles/${t.asset}static.png`) : null;
+        return (0, a.C)(t) ? t.thumbnailPreviewSrc : null;
     },
-    A = (e) => {
-        if (0 === e.items.length) return null;
-        let t = e.items[0];
-        return (0, l.C)(t) ? t.thumbnailPreviewSrc : null;
-    },
-    g = (e) => {
+    _ = (e) => {
         if (null == e) return !1;
-        let t = c.hd[e];
-        return t?.skuId === c.pe.GUILD;
+        let t = r.hd[e];
+        return t?.skuId === r.pe.GUILD;
     },
-    E = (e, t) => {
+    m = (e, t) => {
         let n,
             s,
-            r = null != t;
+            a = null != t;
         if (null != e)
             (n = e.name),
                 (s = ((e) => {
                     switch (e) {
                         case i.R.AVATAR_DECORATION:
-                            return u.intl.string(d.default.obi47v);
+                            return c.intl.string(o.default.obi47v);
                         case i.R.PROFILE_EFFECT:
-                            return u.intl.string(d.default.RX8BMR);
+                            return c.intl.string(o.default.RX8BMR);
                         case i.R.NAMEPLATE:
-                            return u.intl.string(d.default.nNGEHk);
+                            return c.intl.string(o.default.nNGEHk);
                         case i.R.BUNDLE:
-                            return u.intl.string(d.default.VS1fKo);
+                            return c.intl.string(o.default.VS1fKo);
                         default:
                             return "";
                     }
                 })(e.type));
-        else if (r && null != t) {
-            let e = c.hd[t];
+        else if (a && null != t) {
+            let e = r.hd[t];
             n = e?.name;
         }
-        return { displayName: n, typeName: s, isSubscription: r };
+        return { displayName: n, typeName: s, isSubscription: a };
     };

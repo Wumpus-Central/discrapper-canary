@@ -8,12 +8,12 @@ var r = n(627968),
     l = n(397927),
     u = n(736653),
     c = n(226540),
-    d = n(227),
-    _ = n(262737),
-    f = n(590180),
-    h = n(442759),
-    p = n(181774),
-    g = n(628856),
+    d = n(369496),
+    _ = n(227),
+    f = n(262737),
+    h = n(590180),
+    p = n(442759),
+    g = n(181774),
     E = n(132198),
     A = n(929283),
     I = n(190016),
@@ -28,9 +28,9 @@ let v = (e) => {
     },
     C = (e) => {
         let { profileEffect: t, fallbackLabel: n } = e,
-            a = (0, _.V)(t?.skuId),
+            a = (0, f.V)(t?.skuId),
             { accessibilityLabel: s, thumbnailPreviewSrc: o, title: l } = a?.config ?? {},
-            u = i.useMemo(() => (0, p.Rc)(o), [o]);
+            u = i.useMemo(() => (0, g.Rc)(o), [o]);
         return null == a
             ? n
             : (0, r.jsxs)("div", {
@@ -52,12 +52,12 @@ let v = (e) => {
                   className: I.rz,
                   onMouseEnter: o,
                   onMouseLeave: l,
-                  children: (0, r.jsx)(d.A, { nameplate: (0, g.D)(t), hovered: a, placement: c.u.MINI_PREVIEW }),
+                  children: (0, r.jsx)(_.A, { nameplate: (0, d.WK)(t), hovered: a, placement: c.u.MINI_PREVIEW }),
               });
     },
     N = (e) => {
         let { product: t, fallbackLabel: n } = e,
-            { firstAvatarDecoration: i, firstProfileEffect: a, firstNameplate: s } = (0, h.f5)(t);
+            { firstAvatarDecoration: i, firstProfileEffect: a, firstNameplate: s } = (0, p.f5)(t);
         return null == i && null == a && null == s
             ? n
             : (0, r.jsxs)("div", {
@@ -84,7 +84,7 @@ let v = (e) => {
     R = (e) => {
         let { product: t, sku: n, fallbackLabel: i } = e,
             o = n?.id,
-            u = (0, s.bG)([f.A], () => f.A.getProduct(n?.id)),
+            u = (0, s.bG)([h.A], () => h.A.getProduct(n?.id)),
             c = t ?? u;
         if (c?.type === a.R.BUNDLE) return (0, r.jsx)(N, { product: c, fallbackLabel: i });
         let [d] = c?.items ?? [];

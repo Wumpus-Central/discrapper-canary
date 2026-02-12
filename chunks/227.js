@@ -6,25 +6,25 @@ var r = n(627968),
     s = n.n(a),
     o = n(607470),
     l = n(12228),
-    u = n(763673),
+    u = n(302086),
     c = n(967054),
     d = n(226540),
     _ = n(267987);
 function f(e) {
     let { nameplate: t, hovered: n, selected: a, content: o, placement: u } = e,
         f = (0, c._)(o, t, n, a, u),
-        h = (0, l.i)(n, a),
-        m = i.useRef(null == t);
+        p = (0, l.i)(n, a),
+        g = i.useRef(null == t);
     return (i.useEffect(() => {
-        m.current || null != t || (m.current = !0);
+        g.current || null != t || (g.current = !0);
     }, [t]),
     null == t)
         ? null
         : (0, r.jsx)("div", {
-              className: s()(_.kL, { [_.qG]: m.current, [_.WB]: u === d.u.ACCOUNT }),
+              className: s()(_.kL, { [_.qG]: g.current, [_.WB]: u === d.u.ACCOUNT }),
               style: { background: f.background },
               "aria-hidden": !0,
-              children: (0, r.jsx)(p, {
+              children: (0, r.jsx)(h, {
                   nameplate: t,
                   className: s()(_._8, {
                       [_.PT]: n,
@@ -35,22 +35,21 @@ function f(e) {
                       [_.Ix]: u === d.u.CHANNEL,
                   }),
                   style: { maskImage: f.maskImage },
-                  animate: h,
-                  loop: !0 === h && !0 === n,
+                  animate: p,
+                  loop: !0 === p && !0 === n,
               }),
           });
 }
-function p(e) {
-    let { nameplate: t, className: n, style: i, animate: a, loop: s } = e,
-        { staticAsset: o, animatedAsset: l } = (0, u.r)(t),
-        c = !l?.endsWith(".webm");
-    return null == o || null == l
-        ? null
-        : c
-          ? (0, r.jsx)(m, { asset: a ? l : o, className: n, style: i })
-          : (0, r.jsx)(h, { animatedAsset: l, staticAsset: o, animate: a, loop: s, style: i, className: n });
-}
 function h(e) {
+    let { nameplate: t, className: n, style: i, animate: a, loop: s } = e,
+        { staticImageUrl: o, animatedImageUrl: l, videoUrl: c } = (0, u.K)(t);
+    if (null == o) return null;
+    if (null != c)
+        return (0, r.jsx)(p, { animatedAsset: c, staticAsset: o, animate: a, loop: s, style: i, className: n });
+    let d = a && null != l ? l : o;
+    return (0, r.jsx)(g, { asset: d, className: n, style: i });
+}
+function p(e) {
     let { staticAsset: t, animatedAsset: n, animate: a, loop: s, className: l, style: u } = e,
         c = i.useRef(null);
     return (
@@ -73,7 +72,7 @@ function h(e) {
         })
     );
 }
-function m(e) {
+function g(e) {
     let { asset: t, className: n, style: i } = e;
     return (0, r.jsx)("img", { src: t, className: n, style: i, alt: "" });
 }

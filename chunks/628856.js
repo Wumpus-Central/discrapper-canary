@@ -1,12 +1,10 @@
 "use strict";
-n.d(t, { D: () => s, t: () => i });
-var r = n(369496);
-function i(e) {
+function r(e) {
     return "object" == typeof e && null != e && "nameplate" in e && "object" == typeof e.nameplate
-        ? { nameplate: a(e.nameplate) }
+        ? { nameplate: i(e.nameplate) }
         : null;
 }
-function a(e) {
+function i(e) {
     if (
         "object" != typeof e ||
         null == e ||
@@ -27,6 +25,4 @@ function a(e) {
         t
     );
 }
-function s(e) {
-    return { src: e.asset, imgAlt: e.label, palette: (0, r.H6)(e.palette) };
-}
+n.d(t, { t: () => r });
