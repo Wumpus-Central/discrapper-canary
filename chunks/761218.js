@@ -1,5 +1,5 @@
 "use strict";
-s.d(t, { A: () => x });
+s.d(t, { A: () => f });
 var n = s(627968),
     l = s(64700),
     r = s(989349),
@@ -9,78 +9,83 @@ var n = s(627968),
     c = s(733391),
     d = s(44724),
     u = s(317560),
-    g = s(204890),
-    _ = s(183802),
-    m = s(67480),
-    h = s(188275),
-    p = s(985018),
-    f = s(27112);
-let x = (e) => {
+    g = s(183802),
+    _ = s(67480),
+    m = s(188275),
+    h = s(985018),
+    p = s(27112);
+let f = (e) => {
     let { onDismiss: t, skuIds: s, endTime: r } = e,
-        x = (0, o.bG)([m.A], () => s.every((e) => null != m.A.get(e)), [s]);
+        f = (0, o.bG)([_.A], () => s.every((e) => null != _.A.get(e)), [s]);
     l.useEffect(() => {
-        for (let e of s) (0, c.qf)(h.Kf, e);
+        for (let e of s) (0, c.qf)(m.Kf, e);
     }, [s]);
-    let E = l.useMemo(() => {
+    let x = l.useMemo(() => {
             let e = a()(),
                 t = Math.max(a()(r).diff(e, "days"), 1);
-            return p.intl.formatToPlainString(p.t.PWw4Vp, { days: t });
+            return h.intl.formatToPlainString(h.t.PWw4Vp, { days: t });
         }, [r]),
+        E = l.useCallback(() => {
+            (0, d.X)({ guildId: m.Kf });
+        }, []),
         C = l.useCallback(() => {
-            (0, d.X)({ guildId: h.Kf });
+            (0, d.default)({ guildId: m.Kf });
         }, []),
-        A = l.useCallback(() => {
-            (0, d.default)({ guildId: h.Kf });
-        }, []),
-        b = l.useCallback((e) => {
-            (0, u.R)({ skuId: e, applicationId: h.XR, guildId: h.Kf, isStorefront: !1 });
+        A = l.useCallback((e) => {
+            (0, u.R)({ skuId: e, applicationId: m.XR, guildId: m.Kf, isStorefront: !1 });
         }, []);
-    return x
+    return f
         ? (0, n.jsx)("div", {
-              className: f.YB,
+              className: p.YB,
               children: (0, n.jsxs)("div", {
-                  className: f.kL,
+                  className: p.kL,
                   children: [
-                      (0, n.jsx)("div", { className: f.b, children: (0, n.jsx)(i.JnF, { size: "sm", onClick: t }) }),
+                      (0, n.jsx)("div", {
+                          className: p.b,
+                          children: (0, n.jsx)(i.JnF, { size: "sm", variant: "icon-only", onClick: t }),
+                      }),
                       (0, n.jsxs)("div", {
-                          className: f.xf,
+                          className: p.xf,
                           children: [
-                              null != E &&
+                              null != x &&
                                   (0, n.jsx)("div", {
-                                      className: f.qw,
-                                      children: (0, n.jsx)(g.J8, { text: `${p.intl.string(p.t.yYEZGi)} (${E})` }),
+                                      className: p.qw,
+                                      children: (0, n.jsx)(i.Exy, {
+                                          type: { text: `${h.intl.string(h.t.yYEZGi)} (${x})` },
+                                          variant: "brand",
+                                      }),
                                   }),
                               (0, n.jsxs)("div", {
-                                  className: f.B5,
+                                  className: p.B5,
                                   children: [
                                       (0, n.jsx)(i.DZT, {
-                                          variant: "heading-xl/extrabold",
+                                          variant: "heading-xl/semibold",
                                           color: "always-white",
-                                          children: p.intl.string(p.t["b3+OH1"]),
+                                          children: h.intl.string(h.t["b3+OH1"]),
                                       }),
                                       (0, n.jsx)(i.$nd, {
-                                          variant: "secondary",
+                                          variant: "overlay-primary",
                                           icon: i.I9m,
                                           iconPosition: "end",
-                                          text: p.intl.string(p.t["kq/75v"]),
-                                          onMouseDown: C,
-                                          onClick: A,
+                                          text: h.intl.string(h.t["kq/75v"]),
+                                          onMouseDown: E,
+                                          onClick: C,
                                       }),
                                   ],
                               }),
                           ],
                       }),
                       (0, n.jsx)("div", {
-                          className: f.$2,
+                          className: p.$2,
                           children: s.map((e, t) =>
                               (0, n.jsx)(
-                                  _.A,
+                                  g.A,
                                   {
                                       skuId: e,
-                                      applicationId: h.XR,
-                                      guildId: h.Kf,
+                                      applicationId: m.XR,
+                                      guildId: m.Kf,
                                       positionInSection: t,
-                                      onClick: () => b(e),
+                                      onClick: () => A(e),
                                   },
                                   e,
                               ),
