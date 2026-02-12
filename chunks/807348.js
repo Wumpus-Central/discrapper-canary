@@ -39,11 +39,9 @@ function l(e) {
 var u = (function (e) {
         return (
             (e[(e.FAVORITES = 0)] = "FAVORITES"),
-            (e[(e.RECENTLY_HEARD = 1)] = "RECENTLY_HEARD"),
-            (e[(e.FREQUENTLY_USED = 2)] = "FREQUENTLY_USED"),
-            (e[(e.GUILD = 3)] = "GUILD"),
-            (e[(e.DEFAULTS = 4)] = "DEFAULTS"),
-            (e[(e.SEARCH = 5)] = "SEARCH"),
+            (e[(e.GUILD = 1)] = "GUILD"),
+            (e[(e.DEFAULTS = 2)] = "DEFAULTS"),
+            (e[(e.SEARCH = 3)] = "SEARCH"),
             e
         );
     })({}),

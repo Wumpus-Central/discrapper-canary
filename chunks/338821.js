@@ -47,7 +47,7 @@ var r = n(627968),
     z = n(698279),
     q = n(788868),
     X = n(985018),
-    Z = n(426889);
+    Z = n(635643);
 let Q = 16,
     J = 48,
     ee = 32,
@@ -60,8 +60,6 @@ let Q = 16,
         [k.Cx.DEFAULTS]: f.A.SOUNDBOARD_DEFAULT_SOUNDS_SECTION,
         [k.Cx.GUILD]: f.A.SOUNDBOARD_GUILD_SOUNDS_SECTION,
         [k.Cx.FAVORITES]: f.A.SOUNDBOARD_FAVORITES_SECTION,
-        [k.Cx.RECENTLY_HEARD]: f.A.SOUNDBOARD_RECENTLY_HEARD_SECTION,
-        [k.Cx.FREQUENTLY_USED]: f.A.SOUNDBOARD_FREQUENTLY_USED_SECTION,
     };
 function es(e, t, n) {
     return (null == n && e.type === k.Cx.GUILD && !t) || (e.type === k.Cx.GUILD && e.guild.id !== n && !t);
@@ -79,16 +77,6 @@ function eo(e) {
         switch (t.type) {
             case k.Cx.FAVORITES:
                 return (0, r.jsx)(u.Gg5, { size: "xs", color: "currentColor", className: Z.nr });
-            case k.Cx.RECENTLY_HEARD:
-                return (0, r.jsx)(u.O4, {
-                    size: "custom",
-                    width: 20,
-                    height: 20,
-                    color: "currentColor",
-                    className: Z.nr,
-                });
-            case k.Cx.FREQUENTLY_USED:
-                return (0, r.jsx)(u.Uy2, { className: Z.nr });
             case k.Cx.GUILD:
                 return (0, r.jsx)(E.A, { guild: t.guild, height: Q, width: Q });
             case k.Cx.DEFAULTS:
@@ -107,10 +95,6 @@ function eo(e) {
         switch (t.type) {
             case k.Cx.FAVORITES:
                 return X.intl.string(X.t.k8fFjp);
-            case k.Cx.RECENTLY_HEARD:
-                return X.intl.string(X.t["8i/+SA"]);
-            case k.Cx.FREQUENTLY_USED:
-                return X.intl.string(X.t["+cGVV6"]);
             case k.Cx.GUILD:
                 return t.guild.name;
             case k.Cx.DEFAULTS:
@@ -190,9 +174,9 @@ function eu(e) {
             categories: eP,
             availableSounds: eM,
             soundCounts: ek,
-        } = (0, j.Ay)(a, { moveDefaultsToBottom: ex.enabled }, ef),
+        } = (0, j.A)(a, { moveDefaultsToBottom: ex.enabled }, ef),
         [eU, eG] = i.useState([]),
-        eF = (0, j.Ip)(eP, eU, eD),
+        eF = (0, j.I)(eP, eU, eD),
         eV = (0, I.RQ)((e) => e.isNitroLockedSectionVisible),
         eB = i.useMemo(() => eF.filter((e) => e.items.length > 0), [eF]),
         ej = i.useMemo(
