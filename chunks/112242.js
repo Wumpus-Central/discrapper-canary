@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => F });
+n.d(t, { A: () => F, X: () => G });
 var r = n(627968),
     i = n(64700),
     a = n(284009),
@@ -46,131 +46,137 @@ function U(e) {
           });
 }
 let G = (e) => {
-    let { hasLegalTermsFlash: t, legalTermsNodeRef: n, onPaymentSourceChange: a, handlePaymentSourceAdd: d } = e,
+    let {
+            hasLegalTermsFlash: t,
+            legalTermsNodeRef: n,
+            onPaymentSourceChange: a,
+            handlePaymentSourceAdd: d,
+            shouldUseUnifiedCheckoutUI: _,
+        } = e,
         {
-            application: _,
-            purchaseState: E,
-            paymentSourceId: T,
-            setPaymentSourceId: N,
-            skusById: w,
-            skuPricePreviewsById: x,
-            selectedSkuId: U,
-            setHasAcceptedTerms: G,
-            isEmbeddedIAP: F,
-            purchaseType: V,
-            purchasePreviewError: B,
-            devShelfFetchState: j,
-            hasPaymentSources: H,
-            checkoutPaymentSources: Y,
-            hasCheckoutContextLoaded: W,
+            application: E,
+            purchaseState: T,
+            paymentSourceId: N,
+            setPaymentSourceId: w,
+            skusById: x,
+            skuPricePreviewsById: U,
+            selectedSkuId: G,
+            setHasAcceptedTerms: F,
+            isEmbeddedIAP: V,
+            purchaseType: B,
+            purchasePreviewError: j,
+            devShelfFetchState: H,
+            hasPaymentSources: Y,
+            checkoutPaymentSources: W,
+            hasCheckoutContextLoaded: K,
         } = (0, D.P5)(),
-        { isGift: K, giftRecipient: $ } = (0, O.Pv)(),
-        z = K && (0, R.Ik)($),
-        { fetched: q, hasAlreadyLinked: X } = (0, p.RD)(_),
-        Z = (0, y.n)({ location: "OneTimePurchaseReview" });
-    s()(null != U, "Expected selectedSkuId");
-    let Q = i.useRef(!1);
+        { isGift: $, giftRecipient: z } = (0, O.Pv)(),
+        q = $ && (0, R.Ik)(z),
+        { fetched: X, hasAlreadyLinked: Z } = (0, p.RD)(E),
+        Q = (0, y.n)({ location: "OneTimePurchaseReview" });
+    s()(null != G, "Expected selectedSkuId");
+    let J = i.useRef(!1);
     i.useEffect(() => {
-        if (W && Y.length > 0 && !Q.current) {
-            Q.current = !0;
-            let e = Y.find((e) => e.enabled) ?? null;
-            null != e ? N(e.id) : N(null);
+        if (K && W.length > 0 && !J.current) {
+            J.current = !0;
+            let e = W.find((e) => e.enabled) ?? null;
+            null != e ? w(e.id) : w(null);
         }
-    }, [W, Y, N]);
-    let J = w[U],
-        ee = J?.eligiblePaymentGateways,
-        et = x[U],
-        en = T ?? C.B,
-        er = Y.length > 0,
-        ei = null != et ? (et[en] ?? (er ? et[C.B] : null)) : null;
-    s()(null != J, "SKU must exist and be fetched."), s()(null != _, "Application must exist.");
-    let ea = (0, l.bG)([h.A, b.A], () => b.A.inTestModeForApplication(_.id) || h.A.inDevModeForApplication(_.id), [
-            _.id,
+    }, [K, W, w]);
+    let ee = x[G],
+        et = ee?.eligiblePaymentGateways,
+        en = U[G],
+        er = N ?? C.B,
+        ei = W.length > 0,
+        ea = null != en ? (en[er] ?? (ei ? en[C.B] : null)) : null;
+    s()(null != ee, "SKU must exist and be fetched."), s()(null != E, "Application must exist.");
+    let es = (0, l.bG)([h.A, b.A], () => b.A.inTestModeForApplication(E.id) || h.A.inDevModeForApplication(E.id), [
+            E.id,
         ]),
-        es = (0, l.bG)([S.A], () => S.A.enabled),
-        eo = o.M.EEA_COUNTRIES.has(v.A.ipCountryCodeWithFallback),
-        el = E === L.h.PURCHASING || E === L.h.COMPLETED,
-        eu = Y.find((e) => e.id === T) ?? null,
-        ec = null != eu ? eu.type : null,
-        ed = null != ee && ee.length > 0 && (T === C.B || null === ec) && H ? I.f.SELECT_PAYMENT_METHOD : void 0,
-        e_ = J.productLine === P.EZt.SOCIAL_LAYER_GAME_ITEM,
-        ef = z && !e_,
-        eh = i.useMemo(
-            () => ({
-                testModeWarning: ea ? M.intl.string(M.t.OvMyMd) : null,
-                devShelfError: (0, g.n)(_, P.gfo.EMBEDDED) && j === h.$.ERROR ? M.intl.string(M.t.tAmECt) : null,
-                socialLayerGameItemDisclaimer:
-                    e_ && q && !X && !K ? M.intl.string(Z ? M.t["3pLGHL"] : M.t["6fBC//"]) : null,
-            }),
-            [ea, _, j, e_, q, X, K, Z],
-        ),
+        eo = (0, l.bG)([S.A], () => S.A.enabled),
+        el = o.M.EEA_COUNTRIES.has(v.A.ipCountryCodeWithFallback),
+        eu = T === L.h.PURCHASING || T === L.h.COMPLETED,
+        ec = W.find((e) => e.id === N) ?? null,
+        ed = null != ec ? ec.type : null,
+        e_ = null != et && et.length > 0 && (N === C.B || null === ed) && Y ? I.f.SELECT_PAYMENT_METHOD : void 0,
+        ef = ee.productLine === P.EZt.SOCIAL_LAYER_GAME_ITEM,
+        eh = q && !ef,
         ep = i.useMemo(
             () => ({
-                label: M.intl.string(M.t["mmDvV+"]),
-                paymentSources: Y,
-                selectedPaymentSourceId: T,
-                onChange: a,
-                onPaymentSourceAdd: d,
-                hidePersonalInformation: es,
-                paymentGatewayRestrictions: ee,
-                defaultPaymentSourceId: Y.find((e) => e.isDefault)?.id,
+                testModeWarning: es ? M.intl.string(M.t.OvMyMd) : null,
+                devShelfError: (0, g.n)(E, P.gfo.EMBEDDED) && H === h.$.ERROR ? M.intl.string(M.t.tAmECt) : null,
+                socialLayerGameItemDisclaimer:
+                    ef && X && !Z && !$ ? M.intl.string(Q ? M.t["3pLGHL"] : M.t["6fBC//"]) : null,
             }),
-            [Y, T, a, d, es, ee],
+            [es, E, H, ef, X, Z, $, Q],
         ),
         em = i.useMemo(
+            () => ({
+                label: M.intl.string(M.t["mmDvV+"]),
+                paymentSources: W,
+                selectedPaymentSourceId: N,
+                onChange: a,
+                onPaymentSourceAdd: d,
+                hidePersonalInformation: eo,
+                paymentGatewayRestrictions: et,
+                defaultPaymentSourceId: W.find((e) => e.isDefault)?.id,
+            }),
+            [W, N, a, d, eo, et],
+        ),
+        eg = i.useMemo(
             () =>
                 (0, r.jsxs)(A.A, {
                     isActive: t,
                     ref: n,
                     children: [
                         (0, r.jsx)(f.A, {
-                            onChange: G,
+                            onChange: F,
                             forceShow: !0,
-                            showWithdrawalWaiver: eo,
-                            disabled: el,
+                            showWithdrawalWaiver: el,
+                            disabled: eu,
                             subscriptionPlan: null,
                             finePrintClassname: k.im,
-                            purchaseType: V,
-                            isGift: K,
+                            purchaseType: B,
+                            isGift: $,
                             finePrint: (0, r.jsx)(c.A, {
-                                paymentSourceType: ec,
-                                isEmbeddedIAP: F,
-                                purchaseType: V,
-                                productLine: J.productLine,
-                                isGift: K,
-                                applicationName: _.name,
-                                hasAlreadyLinked: !q || X,
+                                paymentSourceType: ed,
+                                isEmbeddedIAP: V,
+                                purchaseType: B,
+                                productLine: ee.productLine,
+                                isGift: $,
+                                applicationName: E.name,
+                                hasAlreadyLinked: !X || Z,
                             }),
                         }),
-                        null != eh.socialLayerGameItemDisclaimer
-                            ? (0, r.jsx)("div", {
+                        _ || null == ep.socialLayerGameItemDisclaimer
+                            ? null
+                            : (0, r.jsx)("div", {
                                   className: k.lm,
                                   children: (0, r.jsx)(u.wx6, {
                                       type: "warning",
-                                      children: eh.socialLayerGameItemDisclaimer,
+                                      children: ep.socialLayerGameItemDisclaimer,
                                   }),
-                              })
-                            : null,
+                              }),
                     ],
                 }),
-            [t, n, G, eo, el, V, K, ec, F, J.productLine, _.name, q, X, eh.socialLayerGameItemDisclaimer],
+            [_, t, n, F, el, eu, B, $, ed, V, ee.productLine, E.name, X, Z, ep.socialLayerGameItemDisclaimer],
         );
     return {
-        sku: J,
-        application: _,
-        giftRecipient: $,
-        isGift: K,
-        skuPricePreview: ei,
-        isEmbeddedIAP: F,
-        shouldShowPurchaseReviewImage: ef,
-        paymentRestrictionBannerType: ed,
-        hasCheckoutContextLoaded: W,
-        devShelfFetchState: j,
-        isStepLoading: !W && null == B,
-        purchasePreviewError: B,
-        warningAndErrorMessages: eh,
-        paymentSourceDropdownProps: ep,
-        purchaseTermsAndLegalContent: em,
+        sku: ee,
+        application: E,
+        giftRecipient: z,
+        isGift: $,
+        skuPricePreview: ea,
+        isEmbeddedIAP: V,
+        shouldShowPurchaseReviewImage: eh,
+        paymentRestrictionBannerType: e_,
+        hasCheckoutContextLoaded: K,
+        devShelfFetchState: H,
+        isStepLoading: !K && null == j,
+        purchasePreviewError: j,
+        warningAndErrorMessages: ep,
+        paymentSourceDropdownProps: em,
+        purchaseTermsAndLegalContent: eg,
     };
 };
 function F(e) {

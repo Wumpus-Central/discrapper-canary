@@ -1,13 +1,17 @@
 "use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => l, i: () => o });
 var r = n(627968);
 n(64700);
 var i = n(397927),
     a = n(156312),
     s = n(835120);
-function o(e) {
+let o = () => {
+    let { selectedPlanNotification: e } = (0, a.P5)();
+    return null == e ? null : e;
+};
+function l(e) {
     let { notificationBlockRef: t } = e,
-        { selectedPlanNotification: n } = (0, a.P5)();
+        n = o();
     return null == n
         ? null
         : (0, r.jsxs)("div", {

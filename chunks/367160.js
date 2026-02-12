@@ -144,6 +144,7 @@ let I = (e) => {
             inReverseTrial: K,
         });
     return (0, r.jsx)(o.rg, {
+        shouldShowGlobalNotices: !0,
         upperInlineNoticeContent: es,
         planSelectContent: ed,
         purchaseItemContent: e_,
