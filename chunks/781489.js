@@ -1,11 +1,14 @@
-n.d(t, { e: () => a });
+n.d(t, { e: () => r });
 var i = n(311907),
     l = n(287809),
-    s = n(616075);
-function a(e) {
-    let t = (0, i.bG)([l.default], () => l.default.getCurrentUser());
+    s = n(616075),
+    a = n(996568);
+function r(e) {
+    let t = (0, i.bG)([l.default], () => l.default.getCurrentUser()),
+        n = s.w.useConfig({ location: e }),
+        r = (0, a.l)(e);
     return {
-        isEnabled: (0, s.l)(e).favoritesEnabled,
+        isEnabled: n.enabled || r.favoritesEnabled,
         hasStaffPrivileges: null != t && (t.hasAnyStaffLevel() || t.isStaffPersonal()),
     };
 }
