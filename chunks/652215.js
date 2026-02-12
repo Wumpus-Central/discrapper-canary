@@ -5282,6 +5282,7 @@ var n_ = (function (e) {
         (e.SUMMARIES = "SUMMARIES"),
         (e.SUMMARIES_ENABLED = "SUMMARIES_ENABLED"),
         (e.CLAN_ADMIN_UPSELL = "CLAN_ADMIN_UPSELL"),
+        (e.GAME_CLAIM = "GAME_CLAIM"),
         e
     );
 })({});
