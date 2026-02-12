@@ -27,5 +27,6 @@ let I = (0, l.t_)(s.X.ACCESSIBILITY_PANEL, {
         useTitle: () => c.intl.string(c.t.G0neg7),
         getLegacySearchKey: () => ((0, r.WJ)("AccessibilityPanel") ? void 0 : _.H.ACCESSIBILITY),
         icon: n.AccessibilityIcon,
+        usePredicate: () => !(0, r.bp)("AccessibilitySidebarItem"),
         buildLayout: () => ((0, r.WJ)("AccessibilityPanel") ? [N] : [I]),
     });

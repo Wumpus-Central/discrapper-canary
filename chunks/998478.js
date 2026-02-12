@@ -1,4 +1,4 @@
-i.d(t, { $: () => N });
+i.d(e, { $: () => C });
 var n = i(419954),
     l = i(403362),
     s = i(780964),
@@ -7,32 +7,32 @@ var n = i(419954),
     u = i(830842),
     o = i(886854),
     d = i(340186),
-    _ = i(85648),
-    T = i(890801),
-    A = i(268272),
-    S = i(832688),
-    E = i(334219),
-    c = i(540576),
-    g = i(773140),
+    T = i(85648),
+    A = i(890801),
+    S = i(268272),
+    E = i(832688),
+    g = i(334219),
+    _ = i(540576),
+    c = i(773140),
     I = i(836799),
-    C = i(985018);
-let N = (0, n.WI)(s.X.APP_SECTION, {
-    useTitle: () => C.intl.string(C.t.f2n1TP),
+    N = i(985018);
+let C = (0, n.WI)(s.X.APP_SECTION, {
+    useTitle: () => N.intl.string(N.t.f2n1TP),
     buildLayout: function () {
-        let e = (0, r.Ci)("AppSection_buildLayout");
+        let t = (0, r.Ci)("AppSection_buildLayout");
         return [
-            e ? g.q : null,
-            o.yj,
-            e ? _.S : null,
-            a.wC,
-            e ? null : g.q,
-            E.z,
-            e ? null : d.g,
-            T.$,
-            A.w,
+            t ? c.q : null,
+            t ? null : o.yj,
+            t ? T.S : null,
+            t ? null : a.wC,
+            t ? null : c.q,
+            g.z,
+            t ? null : d.g,
+            A.$,
+            S.w,
             I.$,
-            S.a,
-            e ? null : c.i,
+            E.a,
+            t ? null : _.i,
             u._,
         ].filter(l.Vq);
     },
