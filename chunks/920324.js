@@ -18,14 +18,14 @@ let u = {
                 return (
                     i.useEffect(() => {
                         try {
-                            (0, l.F)(JSON.parse(e)) && a(e);
+                            (0, l.F2)(JSON.parse(e)) && a(e);
                         } catch {}
                     }, [e]),
                     (0, r.jsxs)("div", {
                         children: [
                             (0, r.jsx)(o.A, { value: e, onChange: (e) => t(e) }),
                             (0, r.jsx)("hr", {}),
-                            (0, r.jsx)(l.A, { layout: JSON.parse(n) }),
+                            (0, r.jsx)(l.Ay, { layout: JSON.parse(n) }),
                         ],
                     })
                 );
@@ -70,9 +70,21 @@ let u = {
                             ],
                         };
                     }, [s]);
-                return n ? (0, r.jsx)("div", { children: "Loading..." }) : (0, r.jsx)(l.A, { layout: o });
+                return n ? (0, r.jsx)("div", { children: "Loading..." }) : (0, r.jsx)(l.Ay, { layout: o });
             },
             controls: { collectionId: { label: "Collection Id", type: "text", defaultValue: "1458472704079434020" } },
+        },
+        {
+            name: "Remote Layouts",
+            id: "remote-layouts",
+            component: (e) => {
+                let { layoutId: t, tenantId: n } = e;
+                return (0, r.jsx)(l.Qs, { layoutId: t, tenantId: n });
+            },
+            controls: {
+                layoutId: { label: "Layout Id", type: "text", defaultValue: "1465939725649973269" },
+                tenantId: { label: "Tenant Id", type: "text", defaultValue: n(652215).FYj },
+            },
         },
     ],
 };

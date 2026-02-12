@@ -1,67 +1,67 @@
-n.r(t), n.d(t, { default: () => T });
-var _ = n(627968),
-    a = n(64700),
-    r = n(503698),
-    d = n.n(r),
-    s = n(311907),
-    l = n(397927),
-    i = n(409013),
-    o = n(972441),
-    c = n(785330),
-    u = n(49463),
-    h = n(697454),
-    p = n(611924),
-    b = n(976860),
-    C = n(594832),
-    A = n(621653),
-    g = n(983545),
-    E = n(599062),
-    L = n(155486),
-    y = n(938191),
-    S = n(758836),
-    F = n(652215),
-    O = n(157884);
-let T = (e) => {
-    let { layoutId: t } = e;
-    (0, p.P)(h.a), (0, A.g)(), (0, C.pE)();
-    let n = a.useRef(null);
+t.r(_), t.d(_, { default: () => L });
+var n = t(627968),
+    a = t(64700),
+    d = t(503698),
+    r = t.n(d),
+    s = t(311907),
+    i = t(397927),
+    o = t(409013),
+    c = t(972441),
+    l = t(785330),
+    b = t(49463),
+    u = t(697454),
+    h = t(611924),
+    p = t(976860),
+    g = t(594832),
+    x = t(621653),
+    j = t(983545),
+    A = t(599062),
+    E = t(155486),
+    f = t(938191),
+    C = t(758836),
+    v = t(652215),
+    y = t(157884);
+let L = (e) => {
+    let { layoutId: _ } = e;
+    (0, h.P)(u.a), (0, x.g)(), (0, g.pE)();
+    let t = a.useRef(null);
     a.useEffect(() => {
-        n.current?.focus();
+        t.current?.focus();
     }, []);
-    let r = (0, y.yB)("CollectiblesShopLayout");
-    (0, y.gB)();
-    let { selectedTab: T, transitionToTab: j } = (0, g.o)(S.G2.LAYOUT),
-        x = (0, s.bG)([u.A], () => u.A.hasLoadedExperiments),
-        [f, m, v] = (0, s.yK)([o.A], () => [o.A.getLayout(t), o.A.isFetchingLayout(t), o.A.getFetchError(t)]);
+    let d = (0, f.yB)("CollectiblesShopLayout");
+    (0, f.gB)();
+    let { selectedTab: L, transitionToTab: m } = (0, j.o)(C.G2.LAYOUT),
+        B = (0, s.bG)([b.A], () => b.A.hasLoadedExperiments),
+        [I, O, k] = (0, s.yK)([c.A], () => [c.A.getLayout(_), c.A.isFetchingLayout(_), c.A.getFetchError(_)]);
     return (
         a.useEffect(() => {
-            null == f && null != t && x && (0, i.v)({ tenantId: F.FYj, layoutId: t });
-        }, [f, t, x]),
+            null == I && null != _ && B && (0, o.v)({ tenantId: v.FYj, layoutId: _ });
+        }, [I, _, B]),
         a.useEffect(() => {
-            null == t && (0, b.pX)(F.BVt.COLLECTIBLES_SHOP);
-        }, [t]),
-        (0, _.jsxs)("div", {
-            className: d()(O.bx, { [y.jP]: r }),
-            ref: n,
+            null == _ && (0, p.pX)(v.BVt.COLLECTIBLES_SHOP);
+        }, [_]),
+        (0, n.jsxs)("div", {
+            className: r()(y.bx, { [f.jP]: d }),
+            ref: t,
             tabIndex: -1,
             children: [
-                (0, _.jsx)(L.G, { handleTransition: j, selectedTab: T }),
-                (0, _.jsx)(l.HOs, {
-                    children: (0, _.jsx)("div", {
-                        className: O.Qs,
+                (0, n.jsx)(E.G, { handleTransition: m, selectedTab: L }),
+                (0, n.jsx)(i.HOs, {
+                    children: (0, n.jsx)("div", {
+                        className: y.Qs,
                         children:
-                            m || null == t
-                                ? (0, _.jsx)(l.y$y, {})
-                                : null != v
-                                  ? (0, _.jsx)(E.h, {
-                                        errorMessage: v.message,
-                                        errorOrigin: E.A.SHOP_PAGE,
+                            O || null == _
+                                ? (0, n.jsx)(i.y$y, {})
+                                : null != k
+                                  ? (0, n.jsx)(A.h, {
+                                        errorMessage: k.message,
+                                        errorOrigin: A.A.SHOP_PAGE,
                                         onRetry: () => {
-                                            (0, i.v)({ tenantId: F.FYj, layoutId: t });
+                                            (0, o.v)({ tenantId: v.FYj, layoutId: _ });
                                         },
                                     })
-                                  : null != f
-                                    ? (0, _.jsx)(c.A, { layout: f })
+                                  : null != I
+                                    ? (0, n.jsx)(l.Ay, { layout: I })
                                     : null,
                     }),
                 }),
