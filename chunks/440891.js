@@ -16,61 +16,59 @@ var r = n(627968),
     g = n(985018),
     E = n(500271);
 let A = async () => await n.e("40119").then(n.t.bind(n, 718698, 19));
-function I(e) {
-    let { tooltipPosition: t } = e,
-        { quest: n, sourceQuestContent: I, onClose: T } = i.useContext(p.VideoQuestModalContext),
-        [y, S] = i.useState(!1),
-        v = (0, a.bG)([l.A], () => l.A.useReducedMotion),
-        C = i.useRef(n.userStatus?.completedAt),
-        [b, N] = i.useState(!1),
-        R = (0, d.mq)(n.config),
-        O = () => {
-            S(!0);
+function I() {
+    let { quest: e, sourceQuestContent: t, onClose: n } = i.useContext(p.VideoQuestModalContext),
+        [I, T] = i.useState(!1),
+        y = (0, a.bG)([l.A], () => l.A.useReducedMotion),
+        S = i.useRef(e.userStatus?.completedAt),
+        [v, C] = i.useState(!1),
+        b = (0, d.mq)(e.config),
+        N = () => {
+            T(!0);
         },
-        D = () => {
-            S(!1);
+        R = () => {
+            T(!1);
         },
-        { completedRatio: L, completedRatioDisplay: w } = (0, c.O9)(n),
-        x = n.userStatus?.completedAt != null,
-        P = n.userStatus?.claimedAt != null,
-        M = g.intl.formatToPlainString(x && !P ? g.t.NRp4K4 : g.t["12IWP2"], { rewardName: R });
+        { completedRatio: O, completedRatioDisplay: D } = (0, c.O9)(e),
+        L = e.userStatus?.completedAt != null,
+        w = e.userStatus?.claimedAt != null,
+        x = g.intl.formatToPlainString(L && !w ? g.t.NRp4K4 : g.t["12IWP2"], { rewardName: b });
     i.useEffect(() => {
-        null == C.current && n.userStatus?.completedAt != null && N(!0), (C.current = n.userStatus?.completedAt);
-    }, [n.userStatus?.completedAt]);
-    let k = (0, h.v)({
-        quest: n,
+        null == S.current && e.userStatus?.completedAt != null && C(!0), (S.current = e.userStatus?.completedAt);
+    }, [e.userStatus?.completedAt]);
+    let P = (0, h.v)({
+        quest: e,
         questContent: u.uF.QUEST_HOME_DESKTOP,
-        sourceQuestContent: I,
-        onCloseModal: T,
+        sourceQuestContent: t,
+        onCloseModal: n,
         shouldShowShopIfAlreadyClaimed: !1,
     });
     return (0, r.jsxs)("div", {
         className: E.Tr,
         children: [
-            x && (0, r.jsx)(o.akl, { importData: A, className: E.t_, loop: !1, autoplay: !1, shouldAnimate: b && !v }),
+            L && (0, r.jsx)(o.akl, { importData: A, className: E.t_, loop: !1, autoplay: !1, shouldAnimate: v && !y }),
             (0, r.jsx)(s.m, {
-                position: t,
-                text: M,
-                onTooltipShow: O,
-                onTooltipHide: D,
+                position: "top",
+                text: x,
+                onTooltipShow: N,
+                onTooltipHide: R,
                 children: (0, r.jsx)(o.DUT, {
                     className: E.md,
-                    style: x ? { cursor: "pointer" } : void 0,
+                    style: L ? { cursor: "pointer" } : void 0,
                     onClick: (e) => {
-                        x && k(e);
+                        L && P(e);
                     },
                     children: (0, r.jsx)(_.A, {
-                        quest: n,
                         size: 48,
-                        percentComplete: L,
-                        percentCompleteText: y ? w : void 0,
+                        percentComplete: O,
+                        percentCompleteText: I ? D : void 0,
                         percentCompleteTextVariant: "text-sm/medium",
                         children: (0, r.jsx)(f.A, {
-                            className: E.vt,
-                            quest: n,
+                            fullWidth: !0,
+                            quest: e,
                             questContent: u.uF.VIDEO_MODAL,
                             autoplay: !1,
-                            sourceQuestContent: I,
+                            sourceQuestContent: t,
                         }),
                     }),
                 }),

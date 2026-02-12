@@ -1,4 +1,4 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => b });
 var a = n(627968),
     i = n(64700),
     s = n(503698),
@@ -15,11 +15,11 @@ var a = n(627968),
     g = n(772244),
     _ = n(985018),
     f = n(355862);
-let v = (e) => {
+let b = (e) => {
     let { isFullyExpanded: t, partnerBranding: n } = e,
-        s = (0, g.qV)().label,
-        v = (0, o.bG)([c.A], () => c.A.useReducedMotion),
-        { quest: b } = i.useContext(p.T),
+        s = (0, g.q)().label,
+        b = (0, o.bG)([c.A], () => c.A.useReducedMotion),
+        { quest: v } = i.useContext(p.T),
         { expansionSpring: j } = i.useContext(x.PW),
         A = s ? -4 : 6;
     return (0, a.jsxs)(a.Fragment, {
@@ -39,9 +39,9 @@ let v = (e) => {
                 children: (0, a.jsx)(m.A, {
                     learnMoreStyle: "text",
                     learnMoreFontSize: t ? 9 : void 0,
-                    quest: b,
+                    quest: v,
                     questContent: u.uF.QUEST_BAR_V2,
-                    autoplay: t && !v,
+                    autoplay: t && !b,
                     sourceQuestContent: u.uF.QUEST_BAR_V2,
                     style: { width: 48, height: 48, marginRight: 8, borderRadius: 6 },
                 }),

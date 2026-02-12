@@ -109,10 +109,7 @@ function x(e) {
                                           children: [
                                               (0, r.jsxs)("div", {
                                                   className: D.Df,
-                                                  children: [
-                                                      w ? null : (0, r.jsx)(C.A, { tooltipPosition: "top" }),
-                                                      (0, r.jsx)(v.A, {}),
-                                                  ],
+                                                  children: [w ? null : (0, r.jsx)(C.A, {}), (0, r.jsx)(v.A, {})],
                                               }),
                                               (0, r.jsxs)("div", {
                                                   className: D.eX,
@@ -134,10 +131,7 @@ function x(e) {
                                           children: [
                                               (0, r.jsxs)("div", {
                                                   className: D.uu,
-                                                  children: [
-                                                      w ? null : (0, r.jsx)(C.A, { tooltipPosition: "top" }),
-                                                      (0, r.jsx)(v.A, {}),
-                                                  ],
+                                                  children: [w ? null : (0, r.jsx)(C.A, {}), (0, r.jsx)(v.A, {})],
                                               }),
                                               (0, r.jsxs)("div", {
                                                   className: D.NY,

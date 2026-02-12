@@ -1,6 +1,7 @@
 "use strict";
 e.exports = {
     al: "questRewardTile__28141",
+    Ij: "fullWidth__28141",
     Yi: "rewardHighlight__28141",
     a$: "questRewardTileInteractive__28141",
     eB: "questRewardTileAsset__28141",

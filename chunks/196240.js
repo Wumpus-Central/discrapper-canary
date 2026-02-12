@@ -5,8 +5,6 @@ e.exports = {
     t_: "confetti__956c6",
     Nz: "completionAnimation__956c6",
     Tr: "progressWrapper__956c6",
-    yv: "circularRewardTileWrapper__956c6",
-    ve: "circularQuestRewardTileAsset__956c6",
     eB: "questRewardTileAsset__956c6",
     c6: "assetWrapper__956c6",
     FS: "textContainer__956c6",

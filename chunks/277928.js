@@ -1,7 +1,7 @@
 n.d(t, { A: () => h });
 var a = n(627968),
-    s = n(64700),
-    i = n(397927),
+    i = n(64700),
+    s = n(397927),
     l = n(341915),
     r = n(714510),
     o = n(646764),
@@ -18,8 +18,8 @@ let h = (e) => {
             activeScreen: p,
             popoutTargetElementRef: g,
         } = e,
-        { quest: _, onGameSheetOpen: f, onGameSheetClose: v } = s.useContext(u.T),
-        b = (0, r.VX)(_),
+        { quest: _, onGameSheetOpen: f, onGameSheetClose: b } = i.useContext(u.T),
+        v = (0, r.VX)(_),
         j = (0, r.tH)({
             quest: _,
             isExpanded: t,
@@ -27,7 +27,7 @@ let h = (e) => {
             sourceQuestContent: l.uF.QUEST_BAR_V2,
             popoutTargetElementRef: g,
             onGameSheetOpened: f,
-            onGameSheetClosed: v,
+            onGameSheetClosed: b,
         });
     return (0, a.jsxs)("div", {
         className: m.Z0,
@@ -39,12 +39,11 @@ let h = (e) => {
                 children: (e) =>
                     (0, a.jsx)(c.A, {
                         ref: e,
-                        quest: _,
+                        style: "small",
                         percentComplete: x,
                         size: 42,
-                        strokeWidth: 3,
                         children: (0, a.jsx)(o.A, {
-                            className: m.vt,
+                            fullWidth: !0,
                             quest: _,
                             questContent: l.uF.QUEST_BAR_V2,
                             autoplay: !1,
@@ -59,12 +58,12 @@ let h = (e) => {
                         inState: n,
                         id: "progress-title",
                         children: (e) =>
-                            (0, a.jsx)(i.Text, {
+                            (0, a.jsx)(s.Text, {
                                 ref: e,
                                 className: m.FZ,
                                 color: "text-strong",
                                 variant: "text-sm/semibold",
-                                children: b,
+                                children: v,
                             }),
                     }),
                     (0, a.jsx)(d.dN, {
@@ -72,7 +71,7 @@ let h = (e) => {
                         id: "progress-subtitle",
                         isTextTransition: !0,
                         children: (e) =>
-                            (0, a.jsx)(i.Text, {
+                            (0, a.jsx)(s.Text, {
                                 ref: e,
                                 className: m.FZ,
                                 color: "text-muted",

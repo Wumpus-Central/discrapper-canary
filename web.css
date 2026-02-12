@@ -36366,6 +36366,11 @@ div.modalHeader_c28af8 {
     width: 64px
 }
 
+.fullWidth__28141 {
+    height: 100%;
+    width: 100%
+}
+
 .rewardHighlight__28141 {
     border-radius: 8px;
     overflow: hidden
@@ -53240,6 +53245,7 @@ div.modalOverrideBody__34eac {
 
 .outer__146e2 {
     align-items: center;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     position: relative;
@@ -53262,10 +53268,13 @@ div.modalOverrideBody__34eac {
 }
 
 .inner__146e2 {
+    align-items: center;
     border-radius: 50%;
-    margin: 5px;
-    overflow: visible;
-    position: relative
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%
 }
 
 .coverContent__146e2 {
@@ -53313,18 +53322,6 @@ div.modalOverrideBody__34eac {
     display: flex;
     flex-direction: column;
     margin-inline-start: auto
-}
-
-.questProgressRewardTile__4264a {
-    box-shadow: var(--shadow-high);
-    display: block;
-    flex: 1
-}
-
-.questProgressRewardTile__4264a.questProgressRewardTile__4264a {
-    border-radius: 50%;
-    height: 39px;
-    width: 39px
 }
 
 .cont_b256a2 {
@@ -57282,7 +57279,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 1rem;
+    font-size: 16px;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

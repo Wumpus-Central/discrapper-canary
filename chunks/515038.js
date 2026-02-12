@@ -1,4 +1,4 @@
-n.d(t, { A: () => N });
+n.d(t, { A: () => E });
 var a = n(627968),
     i = n(64700),
     s = n(503698),
@@ -15,21 +15,21 @@ var a = n(627968),
     g = n(710969),
     _ = n(92246),
     f = n(453384),
-    v = n(646764),
-    b = n(398025),
+    b = n(646764),
+    v = n(398025),
     j = n(516226),
     A = n(720875),
     C = n(713457),
     S = n(419367),
     T = n(985018),
     y = n(196240);
-let E = async () => await n.e("40119").then(n.t.bind(n, 718698, 19));
-function N(e) {
+let N = async () => await n.e("40119").then(n.t.bind(n, 718698, 19));
+function E(e) {
     let {
             quest: t,
             questContent: n,
             isHovering: s,
-            contentPosition: N,
+            contentPosition: E,
             rowIndex: k,
             isVisibleInViewport: R,
             onReceiveErrorHints: O,
@@ -124,33 +124,29 @@ function N(e) {
                                           children: [
                                               W &&
                                                   (0, a.jsx)(d.akl, {
-                                                      importData: E,
+                                                      importData: N,
                                                       className: y.t_,
                                                       loop: !1,
                                                       autoplay: !1,
                                                       shouldAnimate: !X,
                                                   }),
                                               (0, a.jsx)(f.A, {
-                                                  quest: t,
                                                   size: 76,
                                                   percentComplete: $,
                                                   percentCompleteText: s && !(0, g.Ic)(t) ? q : void 0,
-                                                  children: (0, a.jsx)("div", {
-                                                      className: y.yv,
-                                                      children: (0, a.jsx)(v.A, {
-                                                          quest: t,
-                                                          questContent: n,
-                                                          className: y.ve,
-                                                          autoplay: s,
-                                                          onLoadComplete: F,
-                                                          lazyLoad: !0,
-                                                          sourceQuestContent: w,
-                                                      }),
+                                                  children: (0, a.jsx)(b.A, {
+                                                      quest: t,
+                                                      questContent: n,
+                                                      autoplay: s,
+                                                      onLoadComplete: F,
+                                                      lazyLoad: !0,
+                                                      fullWidth: !0,
+                                                      sourceQuestContent: w,
                                                   }),
                                               }),
                                           ],
                                       })
-                                    : (0, a.jsx)(v.A, {
+                                    : (0, a.jsx)(b.A, {
                                           quest: t,
                                           autoplay: s,
                                           questContent: n,
@@ -183,7 +179,7 @@ function N(e) {
                     }),
                     G &&
                         (0, a.jsx)(r.animated.div, {
-                            style: { opacity: (0, b.a)(V.to([0, 1], [1, 0])) },
+                            style: { opacity: (0, v.a)(V.to([0, 1], [1, 0])) },
                             className: y.hS,
                         }),
                 ],
@@ -191,7 +187,7 @@ function N(e) {
             (0, a.jsx)(C.A, {
                 quest: t,
                 questContent: n,
-                contentPosition: N,
+                contentPosition: E,
                 rowIndex: k,
                 onReceiveErrorHints: O,
                 sourceQuestContent: w,
