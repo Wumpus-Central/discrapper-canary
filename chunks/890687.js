@@ -131,10 +131,9 @@ function J(e, t, n) {
         l = t.userStatus?.claimedAt != null,
         u = e.userStatus?.enrolledAt != null,
         c = t.userStatus?.enrolledAt != null,
-        { enabled: d, minutes: _ } = (0, D.L5)(K.rE.QUEST_HOME_DESKTOP),
-        f = I.A.Millis.MINUTE * _,
-        h = e6(e, f),
-        p = e6(t, f);
+        d = 20 * I.A.Millis.MINUTE,
+        _ = e6(e, d),
+        f = e6(t, d);
     if (s) {
         let { takeover: r } = n,
             i = null != r && (0, Y.f0)(r, e.id),
@@ -143,8 +142,8 @@ function J(e, t, n) {
             ? i
                 ? X
                 : Z
-            : d && h !== p && (h || p)
-              ? h
+            : _ !== f && (_ || f)
+              ? _
                   ? Z
                   : X
               : o !== l
