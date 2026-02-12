@@ -46,6 +46,9 @@ class u {
     get premiumType() {
         return this._userProfile.premiumType;
     }
+    get private() {
+        return this._userProfile.private;
+    }
     get widgets() {
         return this._userProfile.widgets;
     }

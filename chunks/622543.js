@@ -185,6 +185,7 @@ function X(e) {
                 let { sku_id: t, type: n, expires_at: r } = e;
                 return { expiresAt: null != r ? new Date(r) : void 0, skuId: t, type: n };
             }),
+            private: t.private,
         }),
         c?.expiresAt != null)
     ) {
