@@ -19,8 +19,7 @@ var s = (function (e) {
         (e[(e.NEWS = 1)] = "NEWS"),
         (e[(e.GO_LIVE_VOICE = 2)] = "GO_LIVE_VOICE"),
         (e[(e.GO_LIVE_NON_VOICE = 3)] = "GO_LIVE_NON_VOICE"),
-        (e[(e.KEYBIND_INDICATORS = 4)] = "KEYBIND_INDICATORS"),
-        (e[(e.CONTENT_INVENTORY = 5)] = "CONTENT_INVENTORY"),
+        (e[(e.CONTENT_INVENTORY = 4)] = "CONTENT_INVENTORY"),
         e
     );
 })({});
@@ -69,7 +68,6 @@ var l = (function (e) {
             (e.OverlayCrashed = "Overlay Crashed"),
             (e.ClipsReminderNotification = "Clips Reminder Notification"),
             (e.ClipsNotification = "Clips Notification"),
-            (e.KeybindIndicatorsNotification = "Keybind Indicators Notification"),
             (e.SendGameInvitesNotification = "Send Game Invites Notification"),
             (e.NowPlayingNotification = "Now Playing Notification"),
             (e.RequestToStream = "Request To Stream"),

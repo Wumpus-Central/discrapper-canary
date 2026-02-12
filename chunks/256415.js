@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, { default: () => eA });
+n.r(t), n.d(t, { default: () => eE });
 var r = n(311907),
     i = n(506774),
     a = n(73153),
@@ -28,7 +28,6 @@ let y = Object.freeze({
         textChatNotifications: I.iXc.ENABLED,
         disableExternalLinkAlert: !1,
         disablePinTutorial: !1,
-        showKeybindIndicators: !0,
         disableClickableRegions: !1,
         textWidgetOpacity: T.Li.LOWER,
         showGameInviteNotification: !0,
@@ -93,7 +92,6 @@ let x = { ...y },
         "OVERLAY_SET_INPUT_LOCKED",
         "OVERLAY_SET_NOTIFICATION_POSITION_MODE",
         "OVERLAY_SET_DISABLE_CLICKABLE_REGIONS",
-        "OVERLAY_SET_SHOW_KEYBIND_INDICATORS",
         "OVERLAY_SET_GAME_INVITE_NOTIFICATION",
         "OVERLAY_SET_INVITE_MESSAGE",
         "OVERLAY_SET_TEXT_WIDGET_OPACITY",
@@ -211,7 +209,7 @@ function B(e) {
     (S = t),
         __OVERLAY__ &&
             (n.forEach((e) => {
-                eh.set(e.pid, e);
+                ef.set(e.pid, e);
             }),
             l.x.update({ legacyEnabled: r.legacyEnabled, oopEnabled: r.oopEnabled }));
 }
@@ -296,31 +294,27 @@ function ei(e) {
     x.disableClickableRegions = t;
 }
 function ea(e) {
-    let { shouldShow: t } = e;
-    x.showKeybindIndicators = t;
-}
-function es(e) {
     let { message: t } = e,
         n = x.customInviteMessage !== t;
     return (x.customInviteMessage = t), n;
 }
-function eo(e) {
+function es(e) {
     let { opacity: t } = e,
         n = x.textWidgetOpacity !== t;
     return (x.textWidgetOpacity = t), n;
 }
-function el(e) {
+function eo(e) {
     let { shouldShow: t } = e,
         n = x.showGameInviteNotification !== t;
     return (x.showGameInviteNotification = t), n;
 }
-function eu() {
+function el() {
     x.disableExternalLinkAlert = !0;
 }
-function ec() {
+function eu() {
     N = !0;
 }
-function ed() {
+function ec() {
     a.h.addInterceptor((e) => {
         if (R || !M.has(e.type)) return !1;
         if ("CHANNEL_SELECT" === e.type) {
@@ -345,7 +339,7 @@ function ed() {
         );
     });
 }
-function e_(e) {
+function ed(e) {
     let t = (0, E.getPID)();
     if (null == e.pid || e.pid === t)
         switch (e.type) {
@@ -356,23 +350,23 @@ function e_(e) {
                 null != e.payloads && ((R = !0), e.payloads.forEach((e) => U(e)), (R = !1));
         }
 }
-function ef() {
-    ed(),
-        (0, o.QZ)(e_, (0, E.getRPCAuthToken)()),
+function e_() {
+    ec(),
+        (0, o.QZ)(ed, (0, E.getRPCAuthToken)()),
         (0, o.Ng)(),
         (0, o.tN)({ type: I.kGV.CONNECT, pid: (0, E.getPID)(), token: (0, E.getRPCAuthToken)() });
 }
-let eh = new Map();
-function ep(e) {
-    __OVERLAY__ && (null != e.trackedGame ? eh.set(e.pid, e.trackedGame) : eh.delete(e.pid));
+let ef = new Map();
+function eh(e) {
+    __OVERLAY__ && (null != e.trackedGame ? ef.set(e.pid, e.trackedGame) : ef.delete(e.pid));
 }
-function em(e) {
+function ep(e) {
     __OVERLAY__ && l.x.update({ legacyEnabled: e.legacyEnabled, oopEnabled: e.oopEnabled });
 }
-function eg(e) {
+function em(e) {
     b.delete(e.previousAssociatedGamePID);
 }
-class eE extends r.Ay.PersistedStore {
+class eg extends r.Ay.PersistedStore {
     static displayName = "OverlayStore";
     static persistKey = "OverlayStoreV2";
     static migrations = [
@@ -450,9 +444,6 @@ class eE extends r.Ay.PersistedStore {
     getNotificationPositionMode() {
         return x.notificationPositionMode;
     }
-    get showKeybindIndicators() {
-        return null == x.showKeybindIndicators || x.showKeybindIndicators;
-    }
     get showInviteNotification() {
         return null == x.showGameInviteNotification || x.showGameInviteNotification;
     }
@@ -484,14 +475,14 @@ class eE extends r.Ay.PersistedStore {
         return L;
     }
     getTrackedGame(e) {
-        return eh.get(e) ?? null;
+        return ef.get(e) ?? null;
     }
 }
-let eA = new eE(a.h, {
+let eE = new eg(a.h, {
     LOGOUT: G,
     MULTI_ACCOUNT_REMOVE_ACCOUNT: F,
     CONNECTION_CLOSED: V,
-    OVERLAY_START_SESSION: ef,
+    OVERLAY_START_SESSION: e_,
     OVERLAY_INITIALIZE: B,
     OVERLAY_READY: j,
     OVERLAY_FOCUSED: z,
@@ -499,23 +490,22 @@ let eA = new eE(a.h, {
     OVERLAY_SELECT_CALL: X,
     CALL_DELETE: Z,
     LAYOUT_CREATE: Y,
-    OVERLAY_SET_ENABLED: em,
+    OVERLAY_SET_ENABLED: ep,
     OVERLAY_SET_DISPLAY_NAME_MODE: ee,
     OVERLAY_SET_DISPLAY_USER_MODE: et,
     OVERLAY_SET_AVATAR_SIZE_MODE: en,
     OVERLAY_SET_NOTIFICATION_POSITION_MODE: er,
     OVERLAY_SET_DISABLE_CLICKABLE_REGIONS: ei,
-    OVERLAY_SET_SHOW_KEYBIND_INDICATORS: ea,
-    OVERLAY_SET_INVITE_MESSAGE: es,
-    OVERLAY_SET_GAME_INVITE_NOTIFICATION: el,
-    OVERLAY_SET_TEXT_WIDGET_OPACITY: eo,
-    OVERLAY_DISABLE_EXTERNAL_LINK_ALERT: eu,
-    OVERLAY_INCOMPATIBLE_APP: ec,
+    OVERLAY_SET_INVITE_MESSAGE: ea,
+    OVERLAY_SET_GAME_INVITE_NOTIFICATION: eo,
+    OVERLAY_SET_TEXT_WIDGET_OPACITY: es,
+    OVERLAY_DISABLE_EXTERNAL_LINK_ALERT: el,
+    OVERLAY_INCOMPATIBLE_APP: eu,
     OVERLAY_SET_INPUT_LOCKED: W,
     OVERLAY_ACTIVATE_REGION: K,
     OVERLAY_DEACTIVATE_ALL_REGIONS: $,
     OVERLAY_SET_PREVIEW_IN_GAME_MODE: J,
     WINDOW_RESIZED: Q,
-    OVERLAY_SET_ASSOCIATED_GAME: eg,
-    OVERLAY_TRACKED_GAME_UPDATE: ep,
+    OVERLAY_SET_ASSOCIATED_GAME: em,
+    OVERLAY_TRACKED_GAME_UPDATE: eh,
 });

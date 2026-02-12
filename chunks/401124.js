@@ -82,7 +82,7 @@ function C(e) {
         a = null != i ? l.A.getChannel(i) : null;
     f.default.track(g.HAw.INPUT_MUTE_TOGGLED, {
         enabled: !u.Ay.isSelfMute(),
-        custom_keybind_assigned: null != r && r.id !== d.xC.id,
+        custom_keybind_assigned: null != r,
         used_keybind: t,
         app_in_focus: _.A.isAppFocused(),
         overlay_activated: null != (0, p.A)(),

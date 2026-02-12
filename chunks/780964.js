@@ -418,7 +418,6 @@ var r = (function (e) {
         (e.OVERLAY_BUG_REPORTER_SETTING = "overlay_bug_reporter_setting"),
         (e.OVERLAY_GENERAL_CATEGORY = "overlay_general_category"),
         (e.OVERLAY_KEYBIND_SETTING = "overlay_keybind_setting"),
-        (e.OVERLAY_SHOW_KEYBIND_INDICATORS_SETTING = "overlay_show_keybind_indicators_setting"),
         (e.OVERLAY_LIMITED_INTERACTION_OVERRIDE_SETTING = "overlay_limited_interaction_override_setting"),
         (e.OVERLAY_CLICKABLE_REGIONS_SETTING = "overlay_clickable_regions_setting"),
         (e.OVERLAY_VOICE_WIDGET_CATEGORY = "overlay_voice_widget_category"),

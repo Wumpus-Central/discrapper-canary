@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => A });
 var r = n(311907),
     i = n(73153),
     a = n(256415),
@@ -20,7 +20,7 @@ function f(e) {
     let { applicationId: t, enabled: n } = e;
     return (d.gameSettings[t] = { limitedInteractionOverride: n }), !0;
 }
-function p(e) {
+function h(e) {
     let { setting: t, disabled: n } = e;
     return (
         n ? d.notificationSettings.add(t) : d.notificationSettings.delete(t),
@@ -28,7 +28,7 @@ function p(e) {
         !0
     );
 }
-function h(e) {
+function p(e) {
     switch (e) {
         case l.KS.TextChat:
             return o.M.TEXT_CHAT;
@@ -52,14 +52,13 @@ function h(e) {
             return o.M.GAME_ACTIVITY;
         case l.KS.IncomingCall:
         case l.KS.NewsNudge:
-        case l.KS.KeybindIndicatorsNotification:
         case l.KS.OverlayCrashed:
             return null;
         default:
             (0, s.xb)(e);
     }
 }
-function m(e) {
+function g(e) {
     let { overlayNotificationSettings: t } = e;
     d.notificationSettings = new Set(t.notificationSettings);
     let n = Object.fromEntries(
@@ -75,7 +74,7 @@ function m(e) {
     );
     d.gameSettings = { ...d.gameSettings, ...n };
 }
-class g extends r.Ay.PersistedStore {
+class E extends r.Ay.PersistedStore {
     static displayName = "OverlaySettingsStore";
     static persistKey = "OverlaySettingsStore";
     initialize(e) {
@@ -104,19 +103,19 @@ class g extends r.Ay.PersistedStore {
         return d.notificationSettings.has(e);
     }
     isNotificationDisabled(e) {
-        let t = h(e);
+        let t = p(e);
         return null != t && d.notificationSettings.has(t);
     }
     getDisabledNotifications() {
         return d.notificationSettings;
     }
     getDisabledSettingByNotificationType(e) {
-        return h(e);
+        return p(e);
     }
 }
-let E = new g(i.h, {
+let A = new E(i.h, {
     LOGOUT: u,
     OVERLAY_SET_LIMITED_INTERACTION_OVERRIDE: f,
-    OVERLAY_SET_NOTIFICATION_DISABLED_SETTING: p,
-    OVERLAY_INITIALIZE: m,
+    OVERLAY_SET_NOTIFICATION_DISABLED_SETTING: h,
+    OVERLAY_INITIALIZE: g,
 });
