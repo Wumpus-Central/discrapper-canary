@@ -1,22 +1,23 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => _ });
 var i = n(627968),
     r = n(64700),
     l = n(362599),
     a = n(342494),
     s = n(732955),
     o = n(976860),
-    d = n(652215),
-    c = n(49999),
-    u = n(723468),
-    A = n(985018);
-function h(e) {
-    let { targetElementRef: t, dismissPopover: n, children: h } = e,
-        _ = r.useCallback(() => {
-            n(c.i.TAKE_ACTION), (0, o.pX)(`${d.BVt.NITRO_HOME}?section=orbs`);
+    d = n(235365),
+    c = n(652215),
+    u = n(49999),
+    A = n(723468),
+    h = n(985018);
+function _(e) {
+    let { targetElementRef: t, dismissPopover: n, children: _ } = e,
+        m = r.useCallback(() => {
+            n(u.i.TAKE_ACTION), (0, o.pX)(`${c.BVt.NITRO_HOME}?section=${d.L}`);
         }, [n]),
-        m = (0, i.jsx)(a.AM, {
+        p = (0, i.jsx)(a.AM, {
             targetElementRef: t,
-            onRequestClose: () => n(c.i.USER_DISMISS),
+            onRequestClose: () => n(u.i.USER_DISMISS),
             graphic: { type: "rive", rive: l.Z },
             badge: { type: "beta", variant: "expressive" },
             alignmentStrategy: "edge",
@@ -24,10 +25,10 @@ function h(e) {
             position: "right",
             caretConfig: { align: "start" },
             size: "md",
-            title: A.intl.string(u.default.UPOlxO),
-            body: A.intl.string(u.default.e6r8OX),
-            actions: [{ text: A.intl.string(A.t.RzWDqY), icon: s.tvc, onClick: _ }],
+            title: h.intl.string(A.default.UPOlxO),
+            body: h.intl.string(A.default.e6r8OX),
+            actions: [{ text: h.intl.string(h.t.RzWDqY), icon: s.tvc, onClick: m }],
             gradientColor: "nitro-pink",
         });
-    return (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)("div", { children: h }), m] });
+    return (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)("div", { children: _ }), p] });
 }

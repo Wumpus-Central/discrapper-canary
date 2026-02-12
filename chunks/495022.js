@@ -19,9 +19,9 @@ var i = n(627968),
     C = n(652215),
     T = n(355097),
     S = n(985018),
-    I = n(574268),
-    f = n(561852),
-    N = n(522799),
+    I = n(185902),
+    N = n(561852),
+    f = n(522799),
     b = n(795710),
     j = n(484813),
     v = n(659980),
@@ -38,48 +38,49 @@ var i = n(627968),
     V = n(106731),
     H = n(20462),
     w = n(307966);
-function B() {
-    let { analyticsLocations: e } = (0, o.Ay)(r.A.PREMIUM_MARKETING_PERK_CARD),
-        t = (0, l.Ay)(),
-        { fractionalState: n } = (0, c.A)(),
-        B = (0, h.Xq)(E.f3 / 1024, { useKibibytes: !0 }),
-        Y = (0, u.A)({ scrollPosition: T._F.TRY_IT_OUT, analyticsLocations: e }),
-        F = (0, s.useCallback)(() => {
-            (0, g.openUserSettings)(m.X.APPEARANCE_PANEL, { section: C.nc_.APPEARANCE, analyticsLocations: e });
-        }, [e]),
-        z = (0, s.useCallback)(() => {
+function B(e) {
+    let { glowingPerkId: t = null } = e,
+        { analyticsLocations: n } = (0, o.Ay)(r.A.PREMIUM_MARKETING_PERK_CARD),
+        B = (0, l.Ay)(),
+        { fractionalState: Y } = (0, c.A)(),
+        F = (0, h.Xq)(E.f3 / 1024, { useKibibytes: !0 }),
+        z = (0, u.A)({ scrollPosition: T._F.TRY_IT_OUT, analyticsLocations: n }),
+        W = (0, s.useCallback)(() => {
+            (0, g.openUserSettings)(m.X.APPEARANCE_PANEL, { section: C.nc_.APPEARANCE, analyticsLocations: n });
+        }, [n]),
+        K = (0, s.useCallback)(() => {
             (0, g.openUserSettings)(m.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, {
                 section: C.nc_.GUILD_BOOSTING,
-                analyticsLocations: e,
+                analyticsLocations: n,
             });
-        }, [e]),
-        W = (0, s.useCallback)(() => {
-            let t = (0, A.WJ)("openCustomAppSettings");
-            (0, g.openUserSettings)(t ? m.X.APPEARANCE_IN_APP_ICON : m.X.APPEARANCE_PANEL, {
+        }, [n]),
+        Z = (0, s.useCallback)(() => {
+            let e = (0, A.WJ)("openCustomAppSettings");
+            (0, g.openUserSettings)(e ? m.X.APPEARANCE_IN_APP_ICON : m.X.APPEARANCE_PANEL, {
                 section: C.nc_.APPEARANCE,
-                scrollPosition: t ? void 0 : T.kq.CUSTOM_APP_ICONS,
-                analyticsLocations: e,
+                scrollPosition: e ? void 0 : T.kq.CUSTOM_APP_ICONS,
+                analyticsLocations: n,
             });
-        }, [e]),
-        K = (0, s.useCallback)(() => {
+        }, [n]),
+        q = (0, s.useCallback)(() => {
             (0, _.pX)(C.BVt.COLLECTIBLES_SHOP);
         }, []),
-        Z = (0, s.useCallback)(() => {
+        X = (0, s.useCallback)(() => {
             (0, g.openUserSettings)(m.X.SOUNDBOARD_CATEGORY, {
                 section: C.nc_.VOICE,
                 subsection: T.MJ,
-                analyticsLocations: e,
+                analyticsLocations: n,
             });
-        }, [e]),
-        q = n === E.xc.FP_ONLY,
-        X = (0, s.useMemo)(
+        }, [n]),
+        J = Y === E.xc.FP_ONLY,
+        Q = (0, s.useMemo)(
             () => [
                 {
                     id: "profiles",
                     title: S.intl.string(S.t.KcyDwF),
                     description: S.intl.string(S.t.Mt3U1W),
                     ctaText: S.intl.string(S.t.jVcuVY),
-                    onCtaClick: Y,
+                    onCtaClick: z,
                     primaryAsset: O,
                 },
                 {
@@ -87,17 +88,17 @@ function B() {
                     title: S.intl.string(S.t.kWM48G),
                     description: S.intl.string(S.t.CjRASJ),
                     ctaText: S.intl.string(S.t.jVcuVY),
-                    onCtaClick: F,
+                    onCtaClick: W,
                     primaryAsset: v,
                 },
                 {
                     id: "serverBoosts",
                     title: S.intl.string(S.t["NyDu/6"]),
-                    description: q ? void 0 : S.intl.string(S.t["4pEwXL"]),
-                    caption: q ? S.intl.string(S.t["/VzCKE"]) : void 0,
-                    ctaText: q ? void 0 : S.intl.string(S.t.jVcuVY),
-                    onCtaClick: q ? void 0 : z,
-                    primaryAsset: q ? H.A : R,
+                    description: J ? void 0 : S.intl.string(S.t["4pEwXL"]),
+                    caption: J ? S.intl.string(S.t["/VzCKE"]) : void 0,
+                    ctaText: J ? void 0 : S.intl.string(S.t.jVcuVY),
+                    onCtaClick: J ? void 0 : K,
+                    primaryAsset: J ? H.A : R,
                 },
                 {
                     id: "hdVideo",
@@ -110,45 +111,45 @@ function B() {
                     title: S.intl.string(S.t.OuItFi),
                     description: S.intl.string(S.t.mPyrE6),
                     ctaText: S.intl.string(S.t.jVcuVY),
-                    onCtaClick: W,
+                    onCtaClick: Z,
                     primaryAsset: y,
                 },
                 {
-                    id: "moreEmojiPower",
+                    id: "moreEmojis",
                     title: S.intl.string(S.t["R2IV/Q"]),
                     description: S.intl.string(S.t.R5Xag2),
                     primaryAsset: L,
                 },
                 {
-                    id: "customSoundsEverywhere",
+                    id: "customSounds",
                     title: S.intl.string(S.t.LWsArT),
                     description: S.intl.string(S.t.bTzbVk),
-                    primaryAsset: (0, p.t4)(t, N, b),
+                    primaryAsset: (0, p.t4)(B, f, b),
                 },
                 {
-                    id: "specialStickerAccess",
+                    id: "specialStickers",
                     title: S.intl.string(S.t.tzdIwI),
                     description: S.intl.string(S.t.hJG8ZN),
-                    primaryAsset: (0, p.t4)(t, j, G),
+                    primaryAsset: (0, p.t4)(B, j, G),
                 },
                 {
-                    id: "earlyAccessSeeAllVariant",
+                    id: "earlyAccess",
                     title: S.intl.string(S.t.UkLVeJ),
                     description: S.intl.string(S.t.xf9ePm),
                     primaryAsset: P,
                 },
                 {
-                    id: "specialMemberPricingSeeAllVariant",
+                    id: "specialMemberPricing",
                     title: S.intl.string(S.t["0Mykgq"]),
                     description: S.intl.string(S.t.opgqDZ),
                     ctaText: S.intl.string(S.t.dBJVnZ),
-                    onCtaClick: K,
+                    onCtaClick: q,
                     primaryAsset: M,
                 },
                 {
                     id: "largeUploads",
-                    title: S.intl.formatToPlainString(S.t.jqhAdL, { premiumMaxSize: B }),
-                    description: S.intl.formatToPlainString(S.t["HI+cfm"], { premiumMaxSize: B }),
+                    title: S.intl.formatToPlainString(S.t.jqhAdL, { premiumMaxSize: F }),
+                    description: S.intl.formatToPlainString(S.t["HI+cfm"], { premiumMaxSize: F }),
                     primaryAsset: V,
                 },
                 {
@@ -158,32 +159,32 @@ function B() {
                     primaryAsset: k,
                 },
                 {
-                    id: "entranceSoundsSeeAllVariation",
+                    id: "entranceSounds",
                     title: S.intl.string(S.t["f4M+H9"]),
                     description: S.intl.string(S.t["7ZCYvC"]),
                     ctaText: S.intl.string(S.t.jVcuVY),
-                    onCtaClick: Z,
+                    onCtaClick: X,
                     primaryAsset: D,
                 },
                 {
                     id: "badge",
                     title: S.intl.string(S.t.dcFfSJ),
                     description: S.intl.string(S.t["37MFFq"]),
-                    primaryAsset: q ? w.A : f,
+                    primaryAsset: J ? w.A : N,
                 },
             ],
-            [t, q, B, Y, F, z, W, K, Z],
+            [B, J, F, z, W, K, Z, q, X],
         );
     return (0, i.jsxs)("div", {
         className: I.uW,
         children: [
             (0, i.jsx)(a.Heading, { variant: "display-sm", className: I.R_, children: S.intl.string(S.t["Uh3+CA"]) }),
             (0, i.jsx)(d.A, {
-                children: X.map((e) => {
+                children: Q.map((e) => {
                     if (null != e)
                         return (0, i.jsx)(
                             "div",
-                            { className: I.Nr, children: (0, i.jsx)(x.S, { ...e, glowing: null === e.id }) },
+                            { id: e.id, className: I.Nr, children: (0, i.jsx)(x.S, { ...e, glowing: t === e.id }) },
                             e.id,
                         );
                 }),

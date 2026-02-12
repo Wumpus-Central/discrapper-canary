@@ -20,8 +20,8 @@ var i = n(627968),
     T = n(576622),
     S = n(166403),
     I = n(954571),
-    f = n(170887),
-    N = n(131168),
+    N = n(170887),
+    f = n(131168),
     b = n(482589),
     j = n(511484),
     v = n(322631),
@@ -39,13 +39,12 @@ var i = n(627968),
     H = n(788868),
     w = n(652215),
     B = n(985018),
-    Y = n(520089),
+    Y = n(865047),
     F = n(288894);
 let z = (e) => {
     let { userId: t } = e,
         n = O.m.useConfig({ location: "PremiumSubscriberHome" }).enabled,
-        a = (0, r.zy)(),
-        z = s.useRef(null);
+        a = (0, r.zy)();
     s.useEffect(() => {
         u.h.wait(async () => {
             let e = [(0, h.Ay)()];
@@ -57,37 +56,39 @@ let z = (e) => {
         }, []),
         (0, b.j)(),
         (0, g.P)(A.b);
-    let W = s.useRef(null),
-        K = s.useRef(null),
-        Z = (0, o.bG)([S.A], () => S.A.getPremiumTypeSubscription()),
-        { isReady: q, programReward: X } = (0, o.cf)([x.A], () => ({
+    let z = s.useRef(null),
+        W = s.useRef(null),
+        K = (0, o.bG)([S.A], () => S.A.getPremiumTypeSubscription()),
+        { isReady: Z, programReward: q } = (0, o.cf)([x.A], () => ({
             isReady: x.A.isReady(),
             programReward: x.A.getRewardForProgram(p.W.NITRO),
         })),
-        J = (0, E.DK)(p.W.NITRO, "PremiumSubscriberHome"),
-        Q = s.useMemo(
-            () => !!q && null != X && !!J && "orbs" === new URLSearchParams(a.search).get("section"),
-            [a.search, q, X, J],
-        );
-    (0, V.A)(z, Q);
+        X = (0, E.DK)(p.W.NITRO, "PremiumSubscriberHome"),
+        { scrollTargetId: J, glowingPerkId: Q } = s.useMemo(() => {
+            let e = new URLSearchParams(a.search),
+                t = e.get("perk"),
+                n = e.get("section");
+            return null != t ? { scrollTargetId: t, glowingPerkId: t } : null != n ? { scrollTargetId: n } : {};
+        }, [a.search]);
+    (0, V.z)(J ?? "", null != J);
     let [$, ee] = s.useState(!1),
-        et = (0, N.p)(),
+        et = (0, f.p)(),
         en = s.useRef(null),
         [ei, es] = s.useState(!1),
         [ea, el] = s.useState(!1),
-        er = null != et && null != Z && Z.status === w.Dmq.CANCELED,
-        eo = (0, j.iU)(H.gD.PREMIUM_MONTH_TIER_2, et, Z),
+        er = null != et && null != K && K.status === w.Dmq.CANCELED,
+        eo = (0, j.iU)(H.gD.PREMIUM_MONTH_TIER_2, et, K),
         ec = !ea && er,
         { analyticsLocations: ed } = (0, m.Ay)(_.A.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [eu, e_] = s.useState(!1),
         em = (0, o.bG)([C.A], () => (null != t ? C.A.getUserProfile(t) : null)),
-        eA = (0, f.A)({ location: "PremiumSubscriberHome" });
-    return null != em && (q || null != X)
+        eA = (0, N.A)({ location: "PremiumSubscriberHome" });
+    return null != em && (Z || null != q)
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsxs)(d.GtU, {
                       className: Y.xW,
-                      ref: W,
+                      ref: z,
                       children: [
                           (0, i.jsx)(d.hLv, {
                               color: "nitro-pink",
@@ -108,7 +109,7 @@ let z = (e) => {
                                               discountedPrice: eo,
                                           }),
                                       }),
-                                      n && (0, i.jsx)(M.A, {}),
+                                      n && (0, i.jsx)(M.A, { glowingPerkId: Q }),
                                       !n &&
                                           (0, i.jsx)(D.A, {
                                               variant: v.cJ.WHATS_NEW,
@@ -116,13 +117,10 @@ let z = (e) => {
                                               noBackground: !0,
                                               leftAlignHeaders: !0,
                                           }),
-                                      null != X &&
-                                          J &&
-                                          (0, i.jsx)(k.A, {
-                                              location: _.A.PREMIUM_MARKETING_NITRO_HOME_ORBS_SECTION,
-                                              sectionRef: z,
-                                          }),
-                                      n && (0, i.jsx)(L.A, {}),
+                                      null != q &&
+                                          X &&
+                                          (0, i.jsx)(k.A, { location: _.A.PREMIUM_MARKETING_NITRO_HOME_ORBS_SECTION }),
+                                      n && (0, i.jsx)(L.A, { glowingPerkId: Q }),
                                       !n &&
                                           (0, i.jsx)(D.A, {
                                               className: Y.xU,
@@ -141,7 +139,7 @@ let z = (e) => {
                                       }),
                                       (0, i.jsx)("div", { className: Y.hz }),
                                       (0, i.jsx)(c.L, {
-                                          innerRef: K,
+                                          innerRef: W,
                                           onChange: (e) => {
                                               e &&
                                                   !eu &&
@@ -150,7 +148,7 @@ let z = (e) => {
                                                   }),
                                                   e_(!0));
                                           },
-                                          children: (0, i.jsx)("div", { ref: K, className: Y._Z }),
+                                          children: (0, i.jsx)("div", { ref: W, className: Y._Z }),
                                       }),
                                       (0, i.jsx)("img", {
                                           src: F,
@@ -166,7 +164,7 @@ let z = (e) => {
                               null != eo &&
                               (0, i.jsx)(P.A, {
                                   isVisible: ec && $,
-                                  premiumSubscription: Z,
+                                  premiumSubscription: K,
                                   churnDiscountOffer: et,
                                   discountedPrice: eo,
                               }),

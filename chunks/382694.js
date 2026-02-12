@@ -20,8 +20,8 @@ var i = n(627968),
     T = n(30084),
     S = n(88001),
     I = n(652215),
-    f = n(355097),
-    N = n(518582),
+    N = n(355097),
+    f = n(518582),
     b = n(985018),
     j = n(674547),
     v = n(241015),
@@ -32,44 +32,45 @@ var i = n(627968),
     L = n(174872),
     D = n(509442),
     M = n(864579);
-function G() {
-    let { analyticsLocations: e } = (0, c.Ay)(o.A.PREMIUM_MARKETING_PERK_CARD),
-        t = (0, p.O9)(),
-        a = h.A.useExperiment({ location: "PremiumWhatsNewSection" }).enabled,
-        G = (0, _.A)({ scrollPosition: f._F.TRY_IT_OUT, analyticsLocations: e }),
-        U = (0, s.useCallback)(() => {
+function G(e) {
+    let { glowingPerkId: t = null } = e,
+        { analyticsLocations: a } = (0, c.Ay)(o.A.PREMIUM_MARKETING_PERK_CARD),
+        G = (0, p.O9)(),
+        U = h.A.useExperiment({ location: "PremiumWhatsNewSection" }).enabled,
+        k = (0, _.A)({ scrollPosition: N._F.TRY_IT_OUT, analyticsLocations: a }),
+        V = (0, s.useCallback)(() => {
             (0, g.openUserSettings)(
                 m.X.PROFILE_PANEL,
-                { section: I.nc_.PROFILE_CUSTOMIZATION, analyticsLocations: e },
-                () => (0, u.L)({ analyticsLocations: e }),
+                { section: I.nc_.PROFILE_CUSTOMIZATION, analyticsLocations: a },
+                () => (0, u.L)({ analyticsLocations: a }),
             );
-        }, [e]),
-        k = (0, s.useCallback)(() => {
+        }, [a]),
+        H = (0, s.useCallback)(() => {
             let e = (0, A.WJ)("openCustomAppSettings");
             (0, g.openUserSettings)(e ? m.X.APPEARANCE_IN_APP_ICON : m.X.APPEARANCE_PANEL, {
                 section: I.nc_.APPEARANCE,
-                scrollPosition: e ? void 0 : f.kq.CUSTOM_APP_ICONS,
+                scrollPosition: e ? void 0 : N.kq.CUSTOM_APP_ICONS,
             });
         }, []),
-        { currentDate: V, nDaysInMonth: H } = (0, s.useMemo)(() => {
+        { currentDate: w, nDaysInMonth: B } = (0, s.useMemo)(() => {
             let e = new Date();
             return { currentDate: e, nDaysInMonth: new Date(e.getFullYear(), e.getMonth() + 1, 0).getDate() };
         }, []),
-        w = (0, s.useMemo)(() => {
-            let s = {
+        Y = (0, s.useMemo)(() => {
+            let e = {
                     id: "tenureBadge",
                     title: b.intl.string(b.t.rnsqpa),
                     pillText: b.intl.string(b.t["jyYgZ+"]),
                     primaryAsset: (0, i.jsx)(C.A, {}),
                     ctaText: b.intl.string(b.t.jVcuVY),
-                    onCtaClick: () => (0, T.D)({ analyticsLocations: e }),
+                    onCtaClick: () => (0, T.D)({ analyticsLocations: a }),
                 },
-                l = [
-                    t
+                t = [
+                    G
                         ? {
                               id: "premiumGroup",
-                              title: b.intl.string(N.default.YkvksF),
-                              description: b.intl.formatToPlainString(N.default.JlyGQj, {
+                              title: b.intl.string(f.default.YkvksF),
+                              description: b.intl.formatToPlainString(f.default.JlyGQj, {
                                   totalSeats: S.aw,
                                   premiumGroupProductName: (0, S.DP)(),
                               }),
@@ -84,23 +85,23 @@ function G() {
                               },
                           }
                         : null,
-                    a
+                    U
                         ? {
                               id: "recurring3PPromotions",
                               title: b.intl.string(b.t.m7PucM),
                               description: b.intl.format(b.t.zh1X7u, {}),
                               pillText: b.intl.string(b.t.oW0eUd),
                               primaryAsset: L.A,
-                              progress: V.getDate() / H,
+                              progress: w.getDate() / B,
                               ctaText: b.intl.string(b.t.w7s5Qr),
-                              onCtaClick: () => (0, E.uE)({ analyticsLocations: e }),
+                              onCtaClick: () => (0, E.uE)({ analyticsLocations: a }),
                           }
                         : null,
                     {
                         id: "displayNameStyles",
                         title: b.intl.string(v.default.ABtBDQ),
                         description: b.intl.string(v.default.jhmU5E),
-                        onCtaClick: U,
+                        onCtaClick: V,
                         primaryAsset: P.A,
                         ctaText: b.intl.string(b.t.jVcuVY),
                         pillText: b.intl.string(b.t.y2b7CA),
@@ -121,7 +122,7 @@ function G() {
                         description: b.intl.string(b.t.piFFjd),
                         primaryAsset: M.A,
                         ctaText: b.intl.string(b.t.jVcuVY),
-                        onCtaClick: G,
+                        onCtaClick: k,
                     },
                     {
                         id: "newAppStylesUpdateJune2024",
@@ -129,27 +130,29 @@ function G() {
                         description: b.intl.string(b.t.HC5wVV),
                         primaryAsset: y,
                         ctaText: b.intl.string(b.t.y9TxXV),
-                        onCtaClick: k,
+                        onCtaClick: H,
                     },
                 ],
-                o = (l = l.filter((e) => null != e))[0].featured,
-                c = o ? 5 : 6;
-            return l.splice(+!!o, 0, s), l.length > c && l.splice(c, l.length - c), l;
-        }, [t, a, H, V, e, U, k, G]);
+                s = (t = t.filter((e) => null != e))[0].featured,
+                l = s ? 5 : 6;
+            return t.splice(+!!s, 0, e), t.length > l && t.splice(l, t.length - l), t;
+        }, [G, U, B, w, a, V, H, k]);
     return (0, i.jsxs)("div", {
         className: O.uW,
         children: [
             (0, i.jsx)(r.Heading, { variant: "display-sm", className: O.R_, children: b.intl.string(b.t.Aw5DRm) }),
             (0, i.jsx)("div", {
                 className: O.Ui,
-                children: w.map((e, t) => {
+                children: Y.map((e, n) => {
                     if (null == e) return;
-                    let n = 0 === t && !0 === e.featured;
+                    let s = 0 === n && !0 === e.featured;
                     return (0, i.jsx)(
                         "div",
                         {
-                            className: l()({ [O.Nq]: n }),
-                            children: (0, i.jsx)(x.S, { ...e, glowing: null === e.id, featured: n }),
+                            id: e.id,
+                            className: l()({ [O.Nq]: s }),
+                            style: { scrollMarginTop: 30 },
+                            children: (0, i.jsx)(x.S, { ...e, glowing: t === e.id, featured: s }),
                         },
                         e.id,
                     );

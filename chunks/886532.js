@@ -1,14 +1,20 @@
 "use strict";
-n.d(t, { H: () => s });
+n.d(t, { H: () => _ });
 var r = n(627968),
-    i = n(397927),
-    a = n(102815);
-let s = {
+    i = n(64700),
+    a = n(292666),
+    s = n(732955),
+    o = n(397927),
+    l = n(398590),
+    u = n(102815),
+    c = n(976860),
+    d = n(652215);
+let _ = {
     title: "Perks",
     stories: [
         {
             name: "Perk Card",
-            component: o,
+            component: f,
             id: "perk-card",
             controls: {
                 title: { label: "Title", type: "text", defaultValue: "Perk Title" },
@@ -29,14 +35,35 @@ let s = {
         },
     ],
 };
-function o(e) {
+function f(e) {
     let { ...t } = e;
-    return (0, r.jsx)("div", {
+    return (0, r.jsxs)("div", {
         style: { maxWidth: "100%", width: t.featured ? 752 : 364 },
-        children: (0, r.jsx)(a.S, {
-            ...t,
-            progress: null != t.progress && t.progress > 0 ? t.progress : void 0,
-            onCtaClick: () => (0, i.showToast)((0, i.createToast)("CTA Clicked!", i.ToastType.SUCCESS)),
-        }),
+        children: [
+            (0, r.jsx)(u.S, {
+                ...t,
+                progress: null != t.progress && t.progress > 0 ? t.progress : void 0,
+                onCtaClick: () => (0, o.showToast)((0, o.createToast)("CTA Clicked!", o.ToastType.SUCCESS)),
+            }),
+            (0, r.jsx)(h, {}),
+        ],
+    });
+}
+function h() {
+    let [e, t] = (0, i.useState)("displayNameStyles"),
+        n = `${d.BVt.NITRO_HOME}?perk=${e}`;
+    return (0, r.jsxs)("div", {
+        style: { marginTop: 64, display: "flex", flexDirection: "column", gap: 10 },
+        children: [
+            (0, r.jsx)(a.k, { label: "Deep Linking", value: e, onChange: (e) => t(e), placeholder: "Perk ID" }),
+            (0, r.jsx)(s.$nd, {
+                text: "Test Deep Link",
+                variant: "primary",
+                size: "sm",
+                onClick: () => {
+                    (0, l.jH)(), (0, c.pX)(n);
+                },
+            }),
+        ],
     });
 }

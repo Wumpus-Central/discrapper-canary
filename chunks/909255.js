@@ -1,21 +1,22 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => h });
 var i = n(627968),
     r = n(64700),
     l = n(362599),
     a = n(342494),
     s = n(976860),
-    o = n(652215),
-    d = n(49999),
-    c = n(723468),
-    u = n(985018);
-function A(e) {
-    let { targetElementRef: t, dismissPopover: n, children: A } = e,
-        h = r.useCallback(() => {
-            n(d.i.TAKE_ACTION), (0, s.pX)(`${o.BVt.NITRO_HOME}?section=orbs`);
+    o = n(235365),
+    d = n(652215),
+    c = n(49999),
+    u = n(723468),
+    A = n(985018);
+function h(e) {
+    let { targetElementRef: t, dismissPopover: n, children: h } = e,
+        _ = r.useCallback(() => {
+            n(c.i.TAKE_ACTION), (0, s.pX)(`${d.BVt.NITRO_HOME}?section=${o.L}`);
         }, [n]),
-        _ = (0, i.jsx)(a.AM, {
+        m = (0, i.jsx)(a.AM, {
             targetElementRef: t,
-            onRequestClose: () => n(d.i.USER_DISMISS),
+            onRequestClose: () => n(c.i.USER_DISMISS),
             graphic: { type: "rive", rive: l.Z },
             badge: { type: "beta", variant: "expressive" },
             alignmentStrategy: "edge",
@@ -23,10 +24,10 @@ function A(e) {
             position: "right",
             caretConfig: { align: "start" },
             size: "md",
-            title: u.intl.string(c.default["3BI7j6"]),
-            body: u.intl.string(c.default.XNHr3C),
-            actions: [{ text: u.intl.string(u.t.hvVgAZ), onClick: h }],
+            title: A.intl.string(u.default["3BI7j6"]),
+            body: A.intl.string(u.default.XNHr3C),
+            actions: [{ text: A.intl.string(A.t.hvVgAZ), onClick: _ }],
             gradientColor: "nitro-pink",
         });
-    return (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)("div", { children: A }), _] });
+    return (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)("div", { children: h }), m] });
 }
