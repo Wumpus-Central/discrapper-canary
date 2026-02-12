@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { ML: () => o, P4: () => f, iQ: () => h, pd: () => p }), n(321073);
+n.d(t, { ML: () => o, P4: () => f, iQ: () => p, pd: () => h }), n(321073);
 var r = n(284009),
     i = n.n(r),
     a = n(306173),
@@ -114,5 +114,18 @@ class _ extends u {
     }
 }
 let f = new d("2026-01-libdiscore-batch-store-refactor", "batch-store-refactor"),
-    p = new _("2025-09-libdiscore-telemetry"),
-    h = new c("2025-11-defer-load-late-lazy-cache", "Allow react to render before lazy cache is loaded");
+    h = new _("2025-09-libdiscore-telemetry"),
+    p = new c("2025-11-defer-load-late-lazy-cache", "Allow react to render before lazy cache is loaded");
+class g extends u {
+    label;
+    getLabel() {
+        return this.label;
+    }
+    getTreatments() {
+        return [{ treatmentId: 0 }, { treatmentId: 1 }, { treatmentId: 2 }, { treatmentId: 3 }];
+    }
+    constructor(e, t) {
+        super(e), (this.label = t);
+    }
+}
+new g("2026-01-android-rmle", "Android Pull Mode Rendering");
