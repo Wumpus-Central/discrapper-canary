@@ -3,36 +3,36 @@ var l = i(627968);
 i(64700);
 var a = i(503698),
     n = i.n(a),
-    s = i(798236),
+    s = i(505779),
     r = i(990078),
     c = i(397927),
     o = i(409626),
     d = i(985018),
-    u = i(851822),
-    m = i(307291);
-let x = [s.w.OFFICIAL, s.w.TWITTER, s.w.YOUTUBE];
+    u = i(728528),
+    m = i(612617);
+let x = [s.V.OFFICIAL, s.V.TWITTER, s.V.YOUTUBE];
 function g(e) {
     switch (e.category) {
-        case s.w.OFFICIAL:
+        case s.V.OFFICIAL:
             return {
                 icon: (0, l.jsx)(c.L_e, { colorClass: m.wP }),
                 action: o.Ws.WebsiteLink,
                 title: d.intl.string(d.t.fOUKvg),
             };
-        case s.w.TWITTER:
+        case s.V.TWITTER:
             return {
                 icon: (0, l.jsx)(c.p3p, { colorClass: m.wP }),
                 action: o.Ws.XLink,
                 title: d.intl.string(d.t.INic4y),
             };
-        case s.w.YOUTUBE:
+        case s.V.YOUTUBE:
             return {
                 action: o.Ws.YouTubeLink,
                 icon: (0, l.jsx)(c.CiD, { colorClass: m.wP }),
                 title: d.intl.string(d.t.lNmxbE),
             };
         default:
-            throw Error("Unknown IGDB website category");
+            throw Error("Unknown website category");
     }
 }
 function h(e) {

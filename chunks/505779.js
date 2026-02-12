@@ -1,4 +1,4 @@
-i.d(t, { w: () => a });
+i.d(t, { V: () => a });
 var l,
     a =
         (((l = {})[(l.OFFICIAL = 1)] = "OFFICIAL"),
@@ -19,4 +19,8 @@ var l,
         (l[(l.GOG = 17)] = "GOG"),
         (l[(l.DISCORD = 18)] = "DISCORD"),
         (l[(l.BLUESKY = 19)] = "BLUESKY"),
+        (l[(l.BATTLENET = 20)] = "BATTLENET"),
+        (l[(l.RIOT = 21)] = "RIOT"),
+        (l[(l.ROBLOX = 22)] = "ROBLOX"),
+        (l[(l.MINECRAFT = 23)] = "MINECRAFT"),
         l);
