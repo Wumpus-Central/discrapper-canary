@@ -19,8 +19,8 @@ var i = n(627968),
     C = n(290863),
     E = n(461213),
     I = n(977997),
-    N = n(403362),
-    b = n(246084),
+    b = n(403362),
+    N = n(246084),
     S = n(667936),
     T = n(879349),
     v = n(884415),
@@ -38,7 +38,7 @@ function D(e) {
             onAction: f,
             voiceStates: x,
             isChannelSelected: I,
-            shouldShowSettingNudge: b,
+            shouldShowSettingNudge: N,
             isStandardGap: T,
         } = e;
     (t = l.useMemo(
@@ -57,7 +57,7 @@ function D(e) {
         (0, d.E)(t, "VoiceChannelActivities");
     let v = (0, u.Ay)(s),
         y = Array.from((0, u.Rz)(v).values()),
-        M = x?.filter(N.Vq) ?? [],
+        M = x?.filter(b.Vq) ?? [],
         D = (0, r.bG)(
             [E.A, C.A, _.default],
             () => {
@@ -117,7 +117,7 @@ function D(e) {
                             )
                           : (0, i.jsx)(S.A, { presenceActivity: a, channel: s, members: n, onAction: f }, t);
                   }),
-                  b &&
+                  N &&
                       (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)("div", { className: L.zN }),
@@ -130,10 +130,9 @@ function D(e) {
                                           onClick: () => {
                                               (0, o.mMO)(async () => {
                                                   let { default: e } = await Promise.all([
-                                                      n.e("43549"),
                                                       n.e("62175"),
                                                       n.e("2292"),
-                                                      n.e("41538"),
+                                                      n.e("67231"),
                                                       n.e("62733"),
                                                       n.e("83518"),
                                                       n.e("12664"),
@@ -143,7 +142,7 @@ function D(e) {
                                                       n.e("84704"),
                                                       n.e("67646"),
                                                       n.e("15207"),
-                                                      n.e("35358"),
+                                                      n.e("96800"),
                                                       n.e("24667"),
                                                   ]).then(n.bind(n, 585265));
                                                   return (t) => (0, i.jsx)(e, { ...t, guild: m });
@@ -161,7 +160,7 @@ function G(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: l } = e,
         s = (0, r.bG)([x.A], () => !x.A.can(j.xBc.CONNECT, t)),
         o = (0, r.bG)([I.A], () => I.A.hasVideo(t.id)),
-        d = (0, b.Ay)({ channel: t, locked: s, video: o, selected: n }),
+        d = (0, N.Ay)({ channel: t, locked: s, video: o, selected: n }),
         c = (0, r.bG)([f.A], () => f.A.getGuild(t.guild_id));
     return null == (0, m.gU)(t, c)
         ? null

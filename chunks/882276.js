@@ -14,19 +14,19 @@ async function o(e, t, o) {
             emailToken: _,
             appContext: f,
         } = o,
-        p = (0, a.lxU)();
+        h = (0, a.lxU)();
     try {
         let o,
-            h = d
+            p = d
                 ? i.x.REPORT_TO_MOD.has(e.name)
                     ? await (0, s.Op)(e, t)
                     : await (0, s.m9)(e, t)
                 : await (0, s.IM)(e, t),
-            m = [],
-            g = (e) => {
-                m.push(e);
-            },
+            g = [],
             E = (e) => {
+                g.push(e);
+            },
+            A = (e) => {
                 (o = e), l?.();
             };
         (0, a.mMO)(
@@ -35,8 +35,8 @@ async function o(e, t, o) {
                     n.e("10614"),
                     n.e("28936"),
                     n.e("94857"),
-                    n.e("43549"),
                     n.e("3183"),
+                    n.e("45586"),
                     n.e("61486"),
                     n.e("63786"),
                     n.e("56825"),
@@ -46,20 +46,20 @@ async function o(e, t, o) {
                 ]).then(n.bind(n, 779735));
                 return (n) =>
                     (0, r.jsx)(t, {
-                        menu: h,
+                        menu: p,
                         reportType: e,
                         modalProps: n,
-                        onNavigate: g,
-                        onSubmit: E,
+                        onNavigate: E,
+                        onSubmit: A,
                         isAuthenticated: d,
                         emailToken: _,
                     });
             },
             {
                 onCloseCallback: () => {
-                    (0, s.Hl)(e, m, o), u?.(), c && (0, s.Zv)(e, o ?? null);
+                    (0, s.Hl)(e, g, o), u?.(), c && (0, s.Zv)(e, o ?? null);
                 },
-                contextKey: null != f ? (0, a.TId)(f) : p,
+                contextKey: null != f ? (0, a.TId)(f) : h,
             },
         );
     } catch {}

@@ -70,7 +70,7 @@ let L = (0, p.Fe)({
         name: "LinkAuthorize",
     }),
     F = (0, p.Fe)({
-        createPromise: () => Promise.all([n.e("18994"), n.e("16864")]).then(n.bind(n, 60883)),
+        createPromise: () => Promise.all([n.e("16392"), n.e("16864")]).then(n.bind(n, 60883)),
         webpackId: 60883,
         name: "ActivateDevice",
     }),
@@ -98,7 +98,6 @@ let L = (0, p.Fe)({
                 n.e("28136"),
                 n.e("7034"),
                 n.e("49559"),
-                n.e("43549"),
                 n.e("37372"),
                 n.e("62175"),
                 n.e("97283"),
@@ -106,6 +105,7 @@ let L = (0, p.Fe)({
                 n.e("3183"),
                 n.e("9753"),
                 n.e("2292"),
+                n.e("45586"),
                 n.e("67231"),
                 n.e("24202"),
                 n.e("84127"),
@@ -166,7 +166,7 @@ let L = (0, p.Fe)({
     B = (0, p.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("18994"),
+                n.e("16392"),
                 n.e("48330"),
                 n.e("37372"),
                 n.e("88890"),
@@ -219,6 +219,7 @@ let L = (0, p.Fe)({
                 n.e("8018"),
                 n.e("3183"),
                 n.e("9753"),
+                n.e("45586"),
                 n.e("24202"),
                 n.e("84127"),
                 n.e("93142"),
