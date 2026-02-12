@@ -1,4 +1,4 @@
-n.d(t, { A: () => D }), n(321073);
+n.d(t, { A: () => G }), n(321073);
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -19,18 +19,19 @@ var i = n(627968),
     C = n(290863),
     E = n(461213),
     I = n(977997),
-    b = n(403362),
-    N = n(246084),
-    S = n(667936),
-    T = n(879349),
-    v = n(884415),
-    y = n(611330),
-    j = n(652215),
-    R = n(188275),
-    O = n(985018),
-    L = n(439792),
-    M = n(335419);
-function D(e) {
+    b = n(954571),
+    N = n(403362),
+    S = n(246084),
+    T = n(667936),
+    v = n(879349),
+    y = n(884415),
+    j = n(611330),
+    R = n(652215),
+    O = n(188275),
+    L = n(985018),
+    M = n(439792),
+    D = n(335419);
+function G(e) {
     let t,
         {
             channel: s,
@@ -38,8 +39,8 @@ function D(e) {
             onAction: f,
             voiceStates: x,
             isChannelSelected: I,
-            shouldShowSettingNudge: N,
-            isStandardGap: T,
+            shouldShowSettingNudge: S,
+            isStandardGap: v,
         } = e;
     (t = l.useMemo(
         () =>
@@ -55,15 +56,15 @@ function D(e) {
         [s, x],
     )),
         (0, d.E)(t, "VoiceChannelActivities");
-    let v = (0, u.Ay)(s),
-        y = Array.from((0, u.Rz)(v).values()),
-        M = x?.filter(b.Vq) ?? [],
-        D = (0, r.bG)(
+    let y = (0, u.Ay)(s),
+        j = Array.from((0, u.Rz)(y).values()),
+        D = x?.filter(N.Vq) ?? [],
+        G = (0, r.bG)(
             [E.A, C.A, _.default],
             () => {
                 let e = {};
                 return (
-                    M.forEach((t) => {
+                    D.forEach((t) => {
                         let n =
                             t.user.id === _.default.getId()
                                 ? E.A.findActivity(c.N, !0)
@@ -71,40 +72,43 @@ function D(e) {
                         if (null != n && !(0, A.A)(n)) {
                             let i = `${n.application_id ?? ""}:${n.party?.id ?? t.user.id}`,
                                 l = e[i] ?? { members: [], activity: n };
-                            l.members.push(t), (0, h.A)(l.activity, j.jUm.JOIN) || (l.activity = n), (e[i] = l);
+                            l.members.push(t), (0, h.A)(l.activity, R.jUm.JOIN) || (l.activity = n), (e[i] = l);
                         }
                     }),
                     Object.values(e)
                 );
             },
-            [M],
+            [D],
             r.My,
         ),
-        U = (0, p.m)({ location: "voice_channel_activities" });
-    return D.length + y.length === 0
-        ? null
-        : (0, i.jsxs)(o.HOs, {
-              className: a()(L.kL, { [L.iA]: T }),
+        P = (0, p.m)({ location: "voice_channel_activities" }),
+        w = G.length + j.length > 0;
+    return (l.useEffect(() => {
+        w && b.default.track(R.HAw.OPEN_POPOUT, { type: "Voice Channel Activities", channel_id: s.id });
+    }, [w, s.id]),
+    w)
+        ? (0, i.jsxs)(o.HOs, {
+              className: a()(M.kL, { [M.iA]: v }),
               children: [
-                  (0, i.jsx)(G, { channel: s, isChannelSelected: I, voiceStatesCount: x?.length ?? 0 }),
-                  (0, i.jsx)("div", { className: L.zN }),
-                  y.map((e, t) =>
+                  (0, i.jsx)(U, { channel: s, isChannelSelected: I, voiceStatesCount: x?.length ?? 0 }),
+                  (0, i.jsx)("div", { className: M.zN }),
+                  j.map((e, t) =>
                       (0, i.jsx)(
-                          S.A,
+                          T.A,
                           { embeddedApp: e, presenceActivity: e.presenceActivity ?? void 0, channel: s, onAction: f },
                           t,
                       ),
                   ),
-                  D.map((e, t) => {
+                  G.map((e, t) => {
                       let { members: n, activity: a } = e;
-                      return U && null != a.application_id && R.sQ.has(a.application_id)
+                      return P && null != a.application_id && O.sQ.has(a.application_id)
                           ? (0, i.jsxs)(
                                 l.Fragment,
                                 {
                                     children: [
-                                        (0, i.jsx)(S.A, { presenceActivity: a, channel: s, members: n, onAction: f }),
+                                        (0, i.jsx)(T.A, { presenceActivity: a, channel: s, members: n, onAction: f }),
                                         (0, i.jsx)(g.A, {
-                                            className: L.L,
+                                            className: M.L,
                                             applicationId: a.application_id,
                                             userIds: n.map((e) => e.user.id),
                                             location: "voice_channel",
@@ -115,18 +119,18 @@ function D(e) {
                                 },
                                 `${t}-with-gifting-breadcrumb`,
                             )
-                          : (0, i.jsx)(S.A, { presenceActivity: a, channel: s, members: n, onAction: f }, t);
+                          : (0, i.jsx)(T.A, { presenceActivity: a, channel: s, members: n, onAction: f }, t);
                   }),
-                  N &&
+                  S &&
                       (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)("div", { className: L.zN }),
+                              (0, i.jsx)("div", { className: M.zN }),
                               (0, i.jsx)("div", {
-                                  className: L.Vo,
+                                  className: M.Vo,
                                   children: (0, i.jsx)(o.Text, {
                                       variant: "text-xs/normal",
                                       tag: "span",
-                                      children: O.intl.format(O.t.ePyoY2, {
+                                      children: L.intl.format(L.t.ePyoY2, {
                                           onClick: () => {
                                               (0, o.mMO)(async () => {
                                                   let { default: e } = await Promise.all([
@@ -154,21 +158,22 @@ function D(e) {
                           ],
                       }),
               ],
-          });
+          })
+        : null;
 }
-function G(e) {
+function U(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: l } = e,
-        s = (0, r.bG)([x.A], () => !x.A.can(j.xBc.CONNECT, t)),
+        s = (0, r.bG)([x.A], () => !x.A.can(R.xBc.CONNECT, t)),
         o = (0, r.bG)([I.A], () => I.A.hasVideo(t.id)),
-        d = (0, N.Ay)({ channel: t, locked: s, video: o, selected: n }),
+        d = (0, S.Ay)({ channel: t, locked: s, video: o, selected: n }),
         c = (0, r.bG)([f.A], () => f.A.getGuild(t.guild_id));
     return null == (0, m.gU)(t, c)
         ? null
         : (0, i.jsxs)("div", {
-              className: a()(L.oT, M.oT),
+              className: a()(M.oT, D.oT),
               children: [
-                  (0, i.jsx)(T.A, { channel: t }),
-                  d ? (0, i.jsx)(v.A, { userCount: l, video: o, channel: t }) : (0, i.jsx)(y.A, { userCount: l }),
+                  (0, i.jsx)(v.A, { channel: t }),
+                  d ? (0, i.jsx)(y.A, { userCount: l, video: o, channel: t }) : (0, i.jsx)(j.A, { userCount: l }),
               ],
           });
 }
