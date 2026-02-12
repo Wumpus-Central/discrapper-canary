@@ -42,7 +42,6 @@ let h = {
         },
         GuildContextMenu: async () => {
             let { default: e } = await Promise.all([
-                    n.e("10614"),
                     n.e("49681"),
                     n.e("43600"),
                     n.e("68587"),
@@ -121,7 +120,7 @@ let h = {
             return () => (0, a.jsx)(e, { entry: l, requestId: "mock-request-123" });
         },
         AddQuestionsContextMenu: async () => {
-            let { AddQuestionsContextMenu: e } = await Promise.all([n.e("10614"), n.e("11810"), n.e("23342")]).then(
+            let { AddQuestionsContextMenu: e } = await Promise.all([n.e("11810"), n.e("23342")]).then(
                     n.bind(n, 892921),
                 ),
                 t = Object.values(d.A.getGuilds())[0];
@@ -138,7 +137,7 @@ let h = {
                       });
         },
         ChannelListThreadContextMenu: async () => {
-            let { default: e } = await Promise.all([n.e("99011"), n.e("78441"), n.e("73545")]).then(n.bind(n, 44536)),
+            let { default: e } = await Promise.all([n.e("99011"), n.e("78441"), n.e("91225")]).then(n.bind(n, 44536)),
                 t = d.A.getGuilds(),
                 i = null;
             for (let e of Object.values(t)) {

@@ -1,13 +1,14 @@
+"use strict";
 n.d(t, { A: () => o });
 var i = n(627968);
 n(64700);
-var l = n(397927),
-    s = n(429913),
+var s = n(397927),
+    l = n(429913),
     a = n(102876),
     r = n(985018);
 function o(e) {
     let { applicationIds: t } = e,
-        n = (0, s.A)(t).filter((e) => null != e);
+        n = (0, l.A)(t).filter((e) => null != e);
     if (0 === n.length) return null;
     let o = null;
     if (1 === n.length)
@@ -25,5 +26,5 @@ function o(e) {
             applicationNameLast: () => (0, i.jsx)(a.A, { application: e }, e.id),
         });
     }
-    return (0, i.jsx)(l.Text, { variant: "text-sm/normal", children: o });
+    return (0, i.jsx)(s.Text, { variant: "text-sm/normal", children: o });
 }

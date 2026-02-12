@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => g, n: () => f });
+n.d(t, { A: () => E, n: () => f });
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -14,24 +14,24 @@ let _ = new Set();
 function f(e, t) {
     return `USER_PROFILE_MODAL_KEY:${e}:${null == t ? "" : t}`;
 }
-async function p(e) {
+async function h(e) {
     let {
             userId: t,
             tabSection: a,
             scrollTarget: s,
-            guildId: p,
-            channelId: h,
-            showGuildProfile: m = !0,
-            appContext: g,
-            customStatusPrompt: E,
-            disableActionsForPreview: A = !1,
-            ...I
+            guildId: h,
+            channelId: p,
+            showGuildProfile: g = !0,
+            appContext: E,
+            customStatusPrompt: A,
+            disableActionsForPreview: I = !1,
+            ...T
         } = e,
-        T = l.default.getUser(t);
-    if (null == T) return;
-    let y = l.default.getCurrentUser();
+        y = l.default.getUser(t);
     if (null == y) return;
-    let S = f(t, m ? p : void 0);
+    let S = l.default.getCurrentUser();
+    if (null == S) return;
+    let v = f(t, g ? h : void 0);
     _.add(
         await (0, i.mMO)(
             async () => {
@@ -39,54 +39,53 @@ async function p(e) {
                     await Promise.all([
                         n.e("10614"),
                         n.e("28936"),
-                        n.e("61486"),
-                        n.e("63786"),
-                        n.e("56825"),
+                        n.e("95320"),
                         n.e("10117"),
-                        n.e("12362"),
+                        n.e("66255"),
+                        n.e("45672"),
                         n.e("49282"),
-                        n.e("63974"),
+                        n.e("22623"),
                     ]).then(n.bind(n, 293071))
                 ).default;
                 return (t) =>
                     (0, r.jsx)(e, {
-                        user: T,
-                        currentUser: y,
-                        guildId: p,
+                        user: y,
+                        currentUser: S,
+                        guildId: h,
                         initialTabSection: a,
                         initialScrollTarget: s,
-                        channelId: h,
-                        showGuildProfile: m,
-                        customStatusPrompt: E,
-                        disableActionsForPreview: A,
+                        channelId: p,
+                        showGuildProfile: g,
+                        customStatusPrompt: A,
+                        disableActionsForPreview: I,
                         ...t,
-                        ...I,
+                        ...T,
                     });
             },
             {
-                modalKey: S,
-                contextKey: (0, i.TId)(g ?? (0, o.zd)() ?? d.BRT.APP),
+                modalKey: v,
+                contextKey: (0, i.TId)(E ?? (0, o.zd)() ?? d.BRT.APP),
                 onCloseRequest: () => {
                     c.A.hasUnsavedChanges()
                         ? u.A.notifyUnsavedWidgets()
-                        : ((0, i.OoC)(S), _.delete(S), u.A.clearPendingWidgets());
+                        : ((0, i.OoC)(v), _.delete(v), u.A.clearPendingWidgets());
                 },
             },
         ),
     );
 }
-function h() {
+function p() {
     if (0 !== _.size) {
         for (let e of _) (0, i.OoC)(e);
         _.clear(), u.A.clearPendingWidgets();
     }
 }
-class m extends s.A {
+class g extends s.A {
     _initialize() {
-        a.h.subscribe("USER_PROFILE_MODAL_OPEN", p), a.h.subscribe("USER_PROFILE_MODAL_CLOSE", h);
+        a.h.subscribe("USER_PROFILE_MODAL_OPEN", h), a.h.subscribe("USER_PROFILE_MODAL_CLOSE", p);
     }
     _terminate() {
-        a.h.unsubscribe("USER_PROFILE_MODAL_OPEN", p), a.h.unsubscribe("USER_PROFILE_MODAL_CLOSE", h);
+        a.h.unsubscribe("USER_PROFILE_MODAL_OPEN", h), a.h.unsubscribe("USER_PROFILE_MODAL_CLOSE", p);
     }
 }
-let g = new m();
+let E = new g();

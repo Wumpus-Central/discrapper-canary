@@ -1,7 +1,8 @@
-var i;
-function l() {
+"use strict";
+var a;
+function n() {
     return (
-        i || ((i = new Image()).src = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="), i
+        a || ((a = new Image()).src = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="), a
     );
 }
-n.d(t, { n: () => l });
+r.d(t, { n: () => n });
