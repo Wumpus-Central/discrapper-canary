@@ -116,7 +116,8 @@ function k(e, t) {
                     variant: t ? "overlay-primary" : "secondary",
                     icon: u.tvc,
                     onClick: () => {
-                        (0, S.Jv)(n), (0, I.openUserSettings)(A.X.BILLING_PANEL, { section: C.nc_.BILLING });
+                        (0, S.Jv)(n),
+                            (0, I.openUserSettings)(A.X.SUBSCRIPTIONS_PANEL, { section: C.nc_.SUBSCRIPTIONS });
                     },
                 }),
                 headerText: O.intl.string(R.default.ISnOet),
