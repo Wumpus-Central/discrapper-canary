@@ -4,11 +4,11 @@ var r = n(627968),
     i = n(856535),
     a = n(785330);
 let s = (e) => {
-    let { layoutId: t, tenantId: n, skeleton: s, componentMap: o } = e,
-        { layout: l, loading: u } = (0, i.A)(t, n);
-    return u && null != s
-        ? (0, r.jsx)(a.Ay, { overrides: o, layout: { id: "skeleton", children: s } })
-        : null == l
+    let { layoutId: t, tenantId: n, skeleton: s, requestParams: o, componentMap: l } = e,
+        { layout: u, loading: c } = (0, i.A)(t, n, o);
+    return c && null != s
+        ? (0, r.jsx)(a.Ay, { overrides: l, layout: { id: "skeleton", children: s } })
+        : null == u
           ? null
-          : (0, r.jsx)(a.Ay, { layout: l, overrides: o });
+          : (0, r.jsx)(a.Ay, { layout: u, overrides: l });
 };

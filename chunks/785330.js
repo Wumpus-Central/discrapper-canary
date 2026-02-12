@@ -39,8 +39,8 @@ let _ = (e) => {
         return (0, r.jsx)("div", { children: s });
     },
     f = (e) => {
-        let { layoutId: t, tenantId: n, overrides: i } = e,
-            { layout: a } = (0, l.A)(t, n);
-        return null == a ? null : (0, r.jsx)(_, { layout: a, overrides: i });
+        let { layoutId: t, tenantId: n, overrides: i, requestParams: a } = e,
+            { layout: s } = (0, l.A)(t, n, a);
+        return null == s ? null : (0, r.jsx)(_, { layout: s, overrides: i });
     },
     h = _;
