@@ -5,7 +5,7 @@ var i = n(627968),
     a = n.n(s),
     r = n(284009),
     o = n.n(r),
-    c = n(563495),
+    c = n(40153),
     d = n(835245),
     u = n(311907),
     h = n(827734),
@@ -46,8 +46,8 @@ var i = n(627968),
 n(827669), n(294920);
 var Y = n(478644),
     q = n(985018),
-    J = n(204794),
-    $ = n(178588);
+    J = n(401376),
+    $ = n(111314);
 function X(e, t, n) {
     let i = e.startsWith("attachment://"),
         l = e;
@@ -200,11 +200,11 @@ let Z = l.memo(
             e2 = (0, V.BX)(s),
             { currentAutocompleteType: e7, handleAutocompleteVisibilityChange: e3 } = (0, V.uW)(b, y.id),
             e5 = (0, V.NO)(eN),
-            e9 = (0, V.Vu)(eB, b, eN),
-            e6 = (0, V.C)({ editorRef: eN, disabled: eR, textValue: s, channelId: y.id, chatInputType: b, submit: eH });
+            e6 = (0, V.Vu)(eB, b, eN),
+            e9 = (0, V.C)({ editorRef: eN, disabled: eR, textValue: s, channelId: y.id, chatInputType: b, submit: eH });
         (0, G.R)(eG, y.guild_id, y.id);
-        let [e4, e8] = l.useState(!1),
-            te = j || e4 || s.length > 0 || null != e_ || ef.length > 0,
+        let [e8, e4] = l.useState(!1),
+            te = j || e8 || s.length > 0 || null != e_ || ef.length > 0,
             { editorHeaderHeight: tt, paddingTop: tn } = (0, A.zhh)({
                 editorHeaderHeight: 122 * !!te,
                 paddingTop: 16 * !!te,
@@ -266,11 +266,11 @@ let Z = l.memo(
                                                                   channel: y,
                                                                   onImageUploaded: (e) =>
                                                                       (0, T.x)(y.id, { heroFile: e }),
-                                                                  onFocus: () => e8(!0),
+                                                                  onFocus: () => e4(!0),
                                                               }),
                                                         (0, i.jsx)("input", {
-                                                            onFocus: () => e8(!0),
-                                                            onBlur: () => e8(!1),
+                                                            onFocus: () => e4(!0),
+                                                            onBlur: () => e4(!1),
                                                             maxLength: 140,
                                                             className: J.hz,
                                                             placeholder: q.intl.string(q.t.Z8fYjO),
@@ -452,9 +452,9 @@ let Z = l.memo(
                         : (0, i.jsx)(v.A, {
                               positionTargetRef: eS,
                               type: b,
-                              onSelectGIF: e9,
+                              onSelectGIF: e6,
                               onSelectEmoji: e5,
-                              onSelectSticker: e6,
+                              onSelectSticker: e9,
                               channel: y,
                               closeOnModalOuterClick: eA,
                               parentModalKey: eg,

@@ -4,7 +4,7 @@ var i = n(627968),
     s = n(503698),
     a = n.n(s),
     r = n(131346),
-    o = n(563495),
+    o = n(40153),
     d = n(837381),
     c = n(607399),
     u = n(417597),
@@ -30,7 +30,7 @@ var i = n(627968),
     O = n(65611),
     L = n(652215),
     M = n(985018),
-    D = n(508831);
+    D = n(837021);
 let G = { analyticsSource: { page: L.liQ.GUILD_CHANNEL, section: L.JJy.CHANNEL_LIST, object: L.ZSU.CHANNEL } };
 function U(e, t) {
     (0, p.L3)(e, async () => {
@@ -42,16 +42,16 @@ function U(e, t) {
             n.e("16301"),
             n.e("22191"),
             n.e("25961"),
-            n.e("96760"),
+            n.e("21968"),
             n.e("35894"),
             n.e("67231"),
             n.e("50796"),
             n.e("8458"),
             n.e("11810"),
-            n.e("52848"),
+            n.e("39048"),
             n.e("36290"),
             n.e("54469"),
-            n.e("69400"),
+            n.e("26938"),
         ]).then(n.bind(n, 544676));
         return (n) => (0, i.jsx)(e, { ...n, guild: t });
     });

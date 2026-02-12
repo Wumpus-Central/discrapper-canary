@@ -1,7 +1,7 @@
 n.d(t, { A: () => I });
 var i = n(627968),
     l = n(64700),
-    s = n(563495),
+    s = n(40153),
     a = n(311283),
     r = n(311907),
     o = n(435371),
@@ -17,7 +17,7 @@ var i = n(627968),
     f = n(502754),
     x = n(652215),
     C = n(985018),
-    E = n(168194);
+    E = n(391900);
 let I = l.memo(function (e) {
         let { channel: t, deleteChannel: n } = e,
             a = l.useRef(null),

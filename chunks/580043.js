@@ -4,9 +4,9 @@ var i = n(627968),
     s = n(64700),
     l = n(503698),
     r = n.n(l),
-    a = n(563495),
+    a = n(40153),
     o = n(397927),
-    d = n(167669);
+    d = n(995591);
 class c extends s.Component {
     render() {
         let { icon: e, ...t } = this.props;

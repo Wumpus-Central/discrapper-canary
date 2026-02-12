@@ -2,7 +2,7 @@
 n.d(t, { A: () => P });
 var i = n(627968),
     s = n(64700),
-    l = n(563495),
+    l = n(40153),
     a = n(311907),
     r = n(397927),
     o = n(685399),
@@ -32,7 +32,7 @@ var i = n(627968),
     R = n(652215),
     w = n(349828),
     L = n(985018),
-    k = n(716622);
+    k = n(852388);
 class M extends s.PureComponent {
     static getDerivedStateFromProps(e) {
         let { guild: t } = e;

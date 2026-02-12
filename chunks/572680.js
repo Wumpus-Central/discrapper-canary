@@ -2,7 +2,7 @@ i.d(t, { A: () => T });
 var n = i(627968),
     l = i(64700),
     a = i(106778),
-    s = i(563495),
+    s = i(40153),
     r = i(615300),
     o = i(397927),
     u = i(565645),
@@ -12,7 +12,7 @@ var n = i(627968),
     m = i(486020),
     p = i(690521),
     g = i(851110),
-    A = i(407847);
+    A = i(624085);
 let f = [];
 function T(e) {
     let { messageId: t, emoji: i, startPosition: T, targetPosition: E } = e,

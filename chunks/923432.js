@@ -3,7 +3,7 @@ var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(563495),
+    r = n(40153),
     o = n(311907),
     d = n(397927),
     c = n(250719),
@@ -12,7 +12,7 @@ var i = n(627968),
     A = n(147036),
     m = n(288989),
     p = n(985018),
-    g = n(280284);
+    g = n(317022);
 let _ = { friction: 30, tension: 300 };
 function f(e) {
     let { guildChannels: t, jumpToVoiceChannels: n } = e,

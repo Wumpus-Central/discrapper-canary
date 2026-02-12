@@ -3,7 +3,7 @@ var a = n(627968),
     i = n(64700),
     s = n(503698),
     l = n.n(s),
-    r = n(563495),
+    r = n(40153),
     o = n(311907),
     d = n(397927),
     c = n(775602),
@@ -14,7 +14,7 @@ var a = n(627968),
     p = n(963713),
     g = n(772244),
     _ = n(985018),
-    f = n(651772);
+    f = n(355862);
 let v = (e) => {
     let { isFullyExpanded: t, partnerBranding: n } = e,
         s = (0, g.qV)().label,

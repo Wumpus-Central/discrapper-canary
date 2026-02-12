@@ -4,9 +4,9 @@ var n,
     s = a(64700),
     l = a(503698),
     r = a.n(l),
-    o = a(563495),
+    o = a(40153),
     c = a(397927),
-    d = a(596785);
+    d = a(982339);
 function u(e) {
     let { scrollPosition: t } = e;
     return (0, i.jsx)(o.animated.div, { className: d.tB, style: { opacity: t?.to([0, 100], [0, 1]) } });

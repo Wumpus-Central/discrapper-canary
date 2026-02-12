@@ -3,7 +3,7 @@ var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(563495),
+    r = n(40153),
     o = n(607399),
     d = n(311907),
     c = n(990078),
@@ -20,7 +20,7 @@ var i = n(627968),
     E = n(652215),
     I = n(349828),
     b = n(985018),
-    N = n(628262);
+    N = n(668560);
 function S(e) {
     let { guild: t, controller: n, guildBanner: l, animate: s } = e,
         { value: d } = n.springs;
@@ -91,7 +91,7 @@ function R(e) {
         f = l.useCallback(() => {
             g
                 ? (0, u.mMO)(async () => {
-                      let { default: e } = await Promise.all([n.e("43600"), n.e("75329")]).then(n.bind(n, 234355));
+                      let { default: e } = await Promise.all([n.e("43600"), n.e("52537")]).then(n.bind(n, 234355));
                       return (t) => (0, i.jsx)(e, { ...t, guild: s, source: E.PE1.GUILD_HEADER_INVITE_BUTTON });
                   })
                 : (0, u.mMO)(async () => {

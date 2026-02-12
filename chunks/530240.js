@@ -1,7 +1,7 @@
 n.d(t, { A: () => v, N: () => j }), n(321073);
 var i = n(627968),
     s = n(64700),
-    a = n(563495),
+    a = n(40153),
     l = n(417597),
     r = n(397927),
     o = n(775602),
@@ -18,7 +18,7 @@ var i = n(627968),
     E = n(652215),
     C = n(788868),
     T = n(985018),
-    S = n(904004);
+    S = n(325234);
 function I(e) {
     let {
             guildTier: t,
@@ -79,7 +79,7 @@ function I(e) {
               }),
           );
 }
-function f(e) {
+function N(e) {
     let {
             guildTier: t,
             guildBoostSlot: n,
@@ -92,8 +92,8 @@ function f(e) {
         p = s.useMemo(() => (null != n.cooldownEndsAt ? new Date(n.cooldownEndsAt) : null), [n]),
         E = s.useMemo(() => null != p && p > new Date(), [p]),
         C = (0, m.I5)(n),
-        f = (0, c.A)(),
-        N = s.useRef(null);
+        N = (0, c.A)(),
+        f = s.useRef(null);
     return (0, i.jsxs)("div", {
         className: S.PW,
         children: [
@@ -112,11 +112,11 @@ function f(e) {
                                       showAltText: _,
                                       isCanceled: C,
                                       premiumSubscription: a,
-                                      fractionalPremiumInfo: f,
+                                      fractionalPremiumInfo: N,
                                   }),
                     }),
                     (0, i.jsx)(r.YNO, {
-                        targetElementRef: N,
+                        targetElementRef: f,
                         renderPopout: function (e) {
                             let { closePopout: t } = e;
                             return (0, i.jsx)(d.A, {
@@ -124,7 +124,7 @@ function f(e) {
                                 guildBoostSlot: n,
                                 premiumSubscription: a,
                                 hasCancelableGuildBoostSlot: u,
-                                fractionalState: f.fractionalState,
+                                fractionalState: N.fractionalState,
                             });
                         },
                         position: "right",
@@ -132,7 +132,7 @@ function f(e) {
                         children: (e) =>
                             (0, i.jsx)(r.DUT, {
                                 ...e,
-                                innerRef: N,
+                                innerRef: f,
                                 "aria-label": T.intl.string(T.t.PdRCRg),
                                 className: S.oU,
                                 children: (0, i.jsx)(r.FHP, { size: "md", color: "currentColor" }),
@@ -144,7 +144,7 @@ function f(e) {
         ],
     });
 }
-function N(e) {
+function f(e) {
     let {
             guildId: t,
             guildBoostSlotRecords: n,
@@ -159,7 +159,7 @@ function N(e) {
             (0, i.jsx)(p.A, { guildId: t, boostingVariant: !1 }),
             n.map((e, t) =>
                 (0, i.jsx)(
-                    f,
+                    N,
                     {
                         guildTier: o?.premiumTier,
                         guildBoostSlot: e,
@@ -201,7 +201,7 @@ function b(e) {
             (0, i.jsx)(p.A, { guildId: t, boostingVariant: !1 }),
             n.map((e, t) =>
                 (0, i.jsx)(
-                    f,
+                    N,
                     {
                         guildTier: a?.premiumTier,
                         guildBoostSlot: o,
@@ -285,7 +285,7 @@ function v(e) {
                     .keys(r)
                     .map((e) =>
                         (0, i.jsx)(
-                            N,
+                            f,
                             {
                                 guildId: e,
                                 guildBoostSlotRecords: r[e],
