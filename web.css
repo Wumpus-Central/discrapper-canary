@@ -53567,8 +53567,6 @@ div.modalOverrideBody__34eac {
 
 .container__76394 {
     border-radius: 20px;
-    container-name: animated-border-card-container;
-    container-type: inline-size;
     filter: saturate(var(--saturation-factor, 1));
     overflow: visible;
     position: relative;
@@ -53583,22 +53581,6 @@ div.modalOverrideBody__34eac {
     position: absolute;
     top: calc(var(--custom-glow-amount)*-1 - 1px);
     width: calc(100% + var(--custom-glow-amount)*2 + 2px)
-}
-
-.card__76394 {
-    border-radius: 20px;
-    border-width: 0;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    position: relative;
-    width: 100%
-}
-
-@container animated-border-card-container (min-width: 960px) {
-    .card__76394 {
-        flex-direction: row
-    }
 }
 
 .baseContainer__40d5b {

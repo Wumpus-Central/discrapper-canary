@@ -45,7 +45,7 @@ let f = {
             };
         return (0, r.jsxs)("div", {
             ref: v,
-            className: s()(_.kL, n),
+            className: s()(_.k, n),
             style: D,
             children: [
                 b !== c.BW.Loading &&
@@ -54,12 +54,12 @@ let f = {
                         artboard: E,
                         artboardProperties: f,
                         eventTargetRef: v,
-                        className: _.Q_,
+                        className: _.Q,
                         ref: C,
                         fit: A,
                         withReducedMotion: O ? "halt" : "play",
                     }),
-                (0, r.jsx)(d.ZpM, { type: g ?? d.sl2.CUSTOM, className: s()(_.Nr, a), style: p, children: t }),
+                (0, r.jsx)(d.ZpM, { type: g ?? d.sl2.CUSTOM, className: a, style: p, children: t }),
             ],
         });
     };
