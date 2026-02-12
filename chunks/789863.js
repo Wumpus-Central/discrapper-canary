@@ -5,4 +5,5 @@ e.exports = {
     Zn: "defaultIndicator__43963 indicator__43963",
     NV: "premiumIndicator__43963 indicator__43963",
     tG: "invalidIndicator__43963 indicator__43963",
+    k7: "giftCardIcon__43963",
 };

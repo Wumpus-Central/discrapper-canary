@@ -1,9 +1,9 @@
 n.d(t, { A: () => A });
 var i = n(627968),
     s = n(64700),
-    r = n(397927),
-    a = n(887555),
-    l = n(235986),
+    a = n(397927),
+    l = n(887555),
+    r = n(235986),
     o = n(812745),
     c = n(202613),
     d = n(739508),
@@ -69,18 +69,20 @@ class A extends s.PureComponent {
                                     : e instanceof c.EE
                                       ? null == e.bank
                                           ? _.intl.string(_.t.nSbwqC)
-                                          : _.intl.format(_.t["9kUlRU"], { bank: (0, a.o0)(e.bank) })
+                                          : _.intl.format(_.t["9kUlRU"], { bank: (0, l.o0)(e.bank) })
                                       : e instanceof c.rJ
-                                        ? _.intl.format(_.t.hSPoZw, { bank: (0, a.jK)(e.bank) })
+                                        ? _.intl.format(_.t.hSPoZw, { bank: (0, l.jK)(e.bank) })
                                         : e instanceof c.FQ
                                           ? _.intl.string(_.t["+rbTmL"])
                                           : e instanceof c.Pw
                                             ? _.intl.string(_.t.RFi12i)
-                                            : _.intl.string(_.t.jdPblk);
+                                            : e instanceof c.LQ
+                                              ? _.intl.string(_.t["6EEgNt"])
+                                              : _.intl.string(_.t.jdPblk);
     }
     renderDescription() {
         let { paymentSource: e, descriptionClassName: t } = this.props;
-        return (0, i.jsx)(r.Text, { className: t, variant: "text-md/semibold", children: this.getLabel(e) });
+        return (0, i.jsx)(a.Text, { className: t, variant: "text-md/semibold", children: this.getLabel(e) });
     }
     renderSubText() {
         let { paymentSource: e, locale: t } = this.props,
@@ -99,42 +101,48 @@ class A extends s.PureComponent {
             n
         );
     }
+    renderIcon() {
+        let { paymentSource: e } = this.props;
+        return e instanceof c.LQ
+            ? (0, i.jsx)("div", { className: m.k7, children: (0, i.jsx)(a.pVd, { size: "xs", color: "currentColor" }) })
+            : (0, i.jsx)(o.Ay, { type: this.typeString });
+    }
     render() {
         let {
                 isDefault: e,
                 paymentSource: t,
                 showSubtext: n,
                 isForSubscription: s,
-                showPaymentSourceIcon: a,
-                showLabels: c,
+                showPaymentSourceIcon: l,
+                showLabels: o,
             } = this.props,
-            d = this.renderSubText();
-        return (0, i.jsxs)(l.A, {
+            c = this.renderSubText();
+        return (0, i.jsxs)(r.A, {
             children: [
-                a && (0, i.jsx)(o.Ay, { type: this.typeString }),
-                (0, i.jsxs)(l.A, {
-                    direction: l.A.Direction.VERTICAL,
+                l && this.renderIcon(),
+                (0, i.jsxs)(r.A, {
+                    direction: r.A.Direction.VERTICAL,
                     className: m.Wi,
                     children: [
-                        (0, i.jsxs)(l.A, {
-                            align: l.A.Align.CENTER,
+                        (0, i.jsxs)(r.A, {
+                            align: r.A.Align.CENTER,
                             children: [
                                 this.renderDescription(),
-                                c && e
+                                o && e
                                     ? (0, i.jsx)("div", { className: m.Zn, children: _.intl.string(_.t.bBvAEH) })
                                     : null,
                                 s ? (0, i.jsx)("div", { className: m.NV, children: _.intl.string(_.t.YCrcPL) }) : null,
-                                c && t.invalid
+                                o && t.invalid
                                     ? (0, i.jsx)("div", { className: m.tG, children: _.intl.string(_.t["851k93"]) })
                                     : null,
                             ],
                         }),
-                        n && null != d
-                            ? (0, i.jsx)(r.Text, {
+                        n && null != c
+                            ? (0, i.jsx)(a.Text, {
                                   variant: "text-sm/normal",
                                   color: "text-subtle",
                                   className: m.Sv,
-                                  children: d,
+                                  children: c,
                               })
                             : null,
                     ],
