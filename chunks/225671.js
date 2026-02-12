@@ -1,48 +1,49 @@
-l.d(t, { A: () => o });
-var n = l(942381),
-    i = l(265690),
-    s = l(121894);
-let a = (0, i.h)((e, t) => ({
+"use strict";
+n.d(t, { A: () => l, E: () => s });
+var r = n(942381),
+    i = n(265690),
+    a = n(121894);
+let s = (0, i.h)((e, t) => ({
         selectedUserIds: {},
-        addUsers: (l, n) => {
+        addUsers: (n, r) => {
             let { selectedUserIds: i } = t(),
-                a = new Set([...(i[l] ?? new Set()), ...n]);
-            (0, s.r)(() => {
-                e({ selectedUserIds: { ...i, [l]: a } });
+                s = new Set([...(i[n] ?? new Set()), ...r]);
+            (0, a.r)(() => {
+                e({ selectedUserIds: { ...i, [n]: s } });
             });
         },
-        removeUser: (l, n) => {
+        removeUser: (n, r) => {
             let { selectedUserIds: i } = t(),
-                a = i[l];
-            if (null == a) return;
-            let r = [...a].filter((e) => e !== n);
-            (0, s.r)(() => {
-                e({ selectedUserIds: { ...i, [l]: new Set(r) } });
+                s = i[n];
+            if (null == s) return;
+            let o = [...s].filter((e) => e !== r);
+            (0, a.r)(() => {
+                e({ selectedUserIds: { ...i, [n]: new Set(o) } });
             });
         },
-        clearSelection: (l) => {
-            let { selectedUserIds: n } = t();
-            null != n &&
-                (0, s.r)(() => {
-                    e({ selectedUserIds: { ...n, [l]: new Set() } });
+        clearSelection: (n) => {
+            let { selectedUserIds: r } = t();
+            null != r &&
+                (0, a.r)(() => {
+                    e({ selectedUserIds: { ...r, [n]: new Set() } });
                 });
         },
     })),
-    r = new Set();
-function o(e) {
-    return a(
+    o = new Set();
+function l(e) {
+    return s(
         (t) => ({
-            selectedUserIds: t.selectedUserIds[e] ?? r,
-            addUsers: (l) => {
-                t.addUsers(e, l);
+            selectedUserIds: t.selectedUserIds[e] ?? o,
+            addUsers: (n) => {
+                t.addUsers(e, n);
             },
-            removeUser: (l) => {
-                t.removeUser(e, l);
+            removeUser: (n) => {
+                t.removeUser(e, n);
             },
             clearSelection: () => {
                 t.clearSelection(e);
             },
         }),
-        n.x,
+        r.x,
     );
 }

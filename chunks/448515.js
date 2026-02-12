@@ -644,6 +644,13 @@ Y(
             },
         });
     }),
+    H(["GUILD_BULK_BAN_UPDATE"], (e) => {
+        $({
+            type: "GUILD_BULK_BAN_UPDATE",
+            guildId: e.guild_id,
+            bulkBan: { bannedUsers: e.bulk_ban?.banned_users ?? [], failedUsers: e.bulk_ban?.failed_users ?? [] },
+        });
+    }),
     H(["GUILD_DELETE"], (e) => {
         $({ type: "GUILD_DELETE", guild: e }),
             e.geo_restricted
