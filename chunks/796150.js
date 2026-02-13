@@ -1,91 +1,79 @@
-n.d(t, { default: () => v }), n(142703);
+n.d(t, { default: () => C });
 var r = n(627968),
     a = n(64700),
-    o = n(340287),
     i = n(397927),
-    l = n(830215),
-    s = n(964486),
-    c = n(883662),
-    _ = n(628965),
-    u = n(203982),
-    d = n(115063),
-    b = n(152056),
-    m = n(780964),
-    g = n(162396),
-    p = n(12901),
+    o = n(964486),
+    l = n(883662),
+    s = n(961350),
+    c = n(628965),
+    _ = n(287809),
+    u = n(115063),
+    d = n(152056),
+    g = n(780964),
+    b = n(162396),
+    m = n(12901),
     f = n(921854),
-    x = n(840065),
-    h = n(652215),
-    y = n(985018),
-    C = n(249316);
-function S(e) {
+    p = n(840065),
+    x = n(985018),
+    h = n(249316);
+function y(e) {
     let { destinationPanel: t, originPanel: n } = e;
-    (0, d.iY)({
+    (0, u.iY)({
         destinationPane: t,
         originPane: n,
-        subsection: _.A.getSubsection(),
-        source: _.A.getAnalyticsLocation(),
-        locationStack: _.A.getAnalyticsLocations(),
+        subsection: c.A.getSubsection(),
+        source: c.A.getAnalyticsLocation(),
+        locationStack: c.A.getAnalyticsLocations(),
     });
 }
-function v(e) {
+function C(e) {
     let { target: t, ...n } = e,
-        i = b.A.useField("query"),
-        d = a.useRef(null);
-    (0, s.Ay)(() => {
-        let e = _.A.getSection();
-        null != e && (S({ destinationPanel: e, originPanel: null }), (d.current = e));
+        i = d.A.useField("query"),
+        u = a.useRef(null);
+    (0, o.Ay)(() => {
+        let e = c.A.getSection();
+        null != e && (y({ destinationPanel: e, originPanel: null }), (u.current = e));
     });
-    let y = a.useCallback((e) => {
-            b.A.setState({ query: e });
+    let x = a.useCallback((e) => {
+            d.A.setState({ query: e });
         }, []),
-        [C, v] = a.useState(!1);
-    return (a.useEffect(() => {
+        [h, C] = a.useState(!1);
+    return (a.useLayoutEffect(() => {
         let e = () => {
-            (0, o.flushSync)(() => {
-                v(!0), (0, p.default)();
-            }),
-                setImmediate(() => {
-                    l.A.logout("settings");
-                });
+            null == _.default.getCurrentUser() && (C(!0), (0, m.default)());
         };
-        return (
-            u._.subscribe(h.jej.SETTINGS_TRIGGER_LOGOUT, e),
-            () => {
-                u._.unsubscribe(h.jej.SETTINGS_TRIGGER_LOGOUT, e);
-            }
-        );
+        return s.default.addChangeListener(e), () => s.default.removeChangeListener(e);
     }, []),
-    C)
+    h)
         ? null
-        : (0, r.jsx)(c.A, {
+        : (0, r.jsx)(l.A, {
               partialRoot: f.D,
-              emptyState: j,
-              sidebarFooter: g.A,
+              emptyState: A,
+              sidebarFooter: b.A,
               onPanelChange: (e) => {
-                  let t = (0, x.getUserSettingsSectionsByWebUserSettings)().get(e);
-                  null != t && (S({ destinationPanel: t, originPanel: d.current }), (d.current = t));
+                  let t = (0, p.getUserSettingsSectionsByWebUserSettings)().get(e);
+                  null != t && (y({ destinationPanel: t, originPanel: u.current }), (u.current = t));
               },
               target: t,
-              defaultTarget: m.X.ACCOUNT_PANEL,
+              defaultTarget: g.X.ACCOUNT_PANEL,
               searchQuery: i,
-              onSearchChange: y,
+              onSearchChange: x,
               ...n,
           });
 }
-function j() {
+function A() {
     return (0, r.jsxs)("div", {
-        className: C.t,
+        className: h.t,
         children: [
             (0, r.jsx)(i.Text, {
                 variant: "text-sm/semibold",
                 color: "text-strong",
-                children: y.intl.string(y.t.zihbmv),
+                children: x.intl.string(x.t.zihbmv),
             }),
             (0, r.jsx)(i.Text, {
                 variant: "text-sm/normal",
                 color: "text-subtle",
-                children: y.intl.string(y.t.XclvsB),
+                children: x.intl.string(x.t.XclvsB),
             }),
         ],
     });
