@@ -4,8 +4,8 @@ var r = n(627968),
     i = n(64700),
     a = n(621466),
     s = n(311907),
-    o = n(166649),
-    l = n(531685),
+    o = n(531685),
+    l = n(787541),
     u = n(575486),
     c = n(482361);
 class d extends i.Component {
@@ -21,7 +21,7 @@ class d extends i.Component {
     componentDidUpdate(e) {
         let { position: t, offsetX: n, offsetY: r, tutorialId: i, visible: a, windowSize: s } = e;
         i !== this.props.tutorialId
-            ? o.A.hide(i)
+            ? l.jD(i)
             : (a !== this.props.visible ||
                   t !== this.props.position ||
                   n !== this.props.offsetX ||
@@ -36,23 +36,23 @@ class d extends i.Component {
             position: r,
             offsetX: i,
             offsetY: s,
-            visible: l,
+            visible: o,
             inlineSpecs: u,
             autoInvert: c,
         } = this.props;
         if (e && null == u) {
             let e = t?.current;
             if (!(0, a.vq)(e)) return;
-            let { top: l, left: u, right: d, bottom: _ } = e.getBoundingClientRect();
-            o.A.show(n, {
+            let { top: o, left: u, right: d, bottom: _ } = e.getBoundingClientRect();
+            l.WU(n, {
                 position: r,
                 targetWidth: d - u,
-                targetHeight: _ - l,
+                targetHeight: _ - o,
                 autoInvert: c,
-                origin: { x: u, y: l },
+                origin: { x: u, y: o },
                 offset: { x: i, y: s },
             });
-        } else l && o.A.hide(n);
+        } else o && l.jD(n);
     }
     render() {
         let {
@@ -86,7 +86,7 @@ class d extends i.Component {
 function _(e) {
     let { tutorialId: t } = e,
         n = (0, s.bG)([c.A], () => c.A.shouldShow(t), [t]),
-        i = (0, s.bG)([l.A], () => l.A.isFocused()),
-        a = (0, s.bG)([l.A], () => l.A.windowSize(), []);
+        i = (0, s.bG)([o.A], () => o.A.isFocused()),
+        a = (0, s.bG)([o.A], () => o.A.windowSize(), []);
     return (0, r.jsx)(d, { ...e, visible: n, windowFocused: i, windowSize: a });
 }

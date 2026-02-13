@@ -473,8 +473,8 @@ class eN extends _.A {
     getDurationSeconds() {
         return this.getDuration() / 1e3;
     }
-    getVoiceFilterSpeakingDurationMs() {
-        return null == this._voiceDuration ? null : this._voiceDuration.getVoiceFilterSpeakingDurationMs();
+    getVoiceDurationStats() {
+        return this._voiceDuration?.getDurationStats() ?? null;
     }
     getPacketStats() {
         return this._voiceQuality?.getPacketStats();

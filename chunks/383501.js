@@ -10,21 +10,21 @@ var a = n(311907),
     d = n(961350),
     _ = n(607567),
     f = n(652215),
-    p = n(731854);
-let h = [],
-    m = null,
+    h = n(731854);
+let p = [],
     g = null,
     E = null,
     A = null,
-    I = !1,
+    I = null,
     T = !1,
-    y = null,
-    S = !1,
-    v = null;
-function C(e, t) {
+    y = !1,
+    S = null,
+    v = !1,
+    C = null;
+function b(e, t) {
     if (null == i) throw Error("Creating RTCConnection without session.");
     let r = d.default.getId(),
-        a = new (n(767065).A)({ userId: r, sessionId: i, guildId: e, channelId: t, joinVoiceId: v });
+        a = new (n(767065).A)({ userId: r, sessionId: i, guildId: e, channelId: t, joinVoiceId: C });
     return (
         a.on(o.q.State, (e, t, n) => {
             s.h.wait(() => s.h.dispatch({ type: "RTC_CONNECTION_STATE", state: e, ...t, ...n }));
@@ -38,7 +38,7 @@ function C(e, t) {
                     userId: n,
                     streamId: r,
                     rtcServerId: i,
-                    context: p.x.DEFAULT,
+                    context: h.x.DEFAULT,
                     mediaEngineConnectionId: a.getMediaEngineConnectionId(),
                 }),
             );
@@ -50,7 +50,7 @@ function C(e, t) {
             s.h.wait(() => s.h.dispatch({ type: "RTC_CONNECTION_LOSS_RATE", lossRate: e }));
         }),
         a.on(o.q.Speaking, (e, t) => {
-            A?.setSpeaking(e, t);
+            I?.setSpeaking(e, t);
         }),
         a.on(o.q.Flags, (e, t) => {
             s.h.wait(() => {
@@ -104,22 +104,22 @@ function C(e, t) {
                 s.h.dispatch({ type: "RTC_CONNECTION_ROSTER_MAP_UPDATE", userIds: e });
             });
         }),
-        (A = new l.A(d.default.getId(), t)),
-        (g = null),
-        (I = !1),
+        (I = new l.A(d.default.getId(), t)),
+        (E = null),
         (T = !1),
+        (y = !1),
         a
     );
 }
-function b() {
+function N() {
     if (null == r) return !1;
-    (g = {
+    (E = {
         duration: r.getDuration(),
         mediaSessionId: r.getMediaSessionId() ?? null,
         rtcConnectionId: r.getRTCConnectionId(),
-        wasEverMultiParticipant: I,
-        wasEverRtcConnected: T,
-        voiceStateAnalytics: A,
+        wasEverMultiParticipant: T,
+        wasEverRtcConnected: y,
+        voiceStateAnalytics: I,
         channelId: r.channelId,
     }),
         s.h.dispatch({
@@ -128,21 +128,21 @@ function b() {
         }),
         r.destroy(),
         (r = null),
-        (A = null),
-        (S = !1);
+        (I = null),
+        (v = !1);
 }
-function N(e) {
-    return (i = e.sessionId), (m = null), (E = null), b(), !1;
+function R(e) {
+    return (i = e.sessionId), (g = null), (A = null), N(), !1;
 }
-function R() {
-    (i = null), (m = null), (E = null), b();
+function O() {
+    (i = null), (g = null), (A = null), N();
 }
-function O(e) {
+function D(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         if (
-            (A?.updateVoiceStates(t.userId, t.channelId),
-            (I = I || (A?.getStats().max_voice_state_count ?? 0) > 1),
+            (I?.updateVoiceStates(t.userId, t.channelId),
+            (T = T || (I?.getStats().max_voice_state_count ?? 0) > 1),
             d.default.getId() !== t.userId)
         )
             return e;
@@ -150,29 +150,29 @@ function O(e) {
             t.sessionId === i
                 ? (null != t.guildId && t.guildId === r.guildId) || (null == t.guildId && t.channelId === r.channelId)
                     ? null == t.channelId
-                        ? b()
-                        : (r.setNextChannelId(t.channelId), (S = !0), (v = null), r.clearJoinVoiceId())
-                    : ((t.guildId !== r.guildId && null == t.channelId) || b(),
+                        ? N()
+                        : (r.setNextChannelId(t.channelId), (v = !0), (C = null), r.clearJoinVoiceId())
+                    : ((t.guildId !== r.guildId && null == t.channelId) || N(),
                       null != t.channelId &&
-                          ((m = null),
-                          (E = null),
-                          (r = C(t.guildId, t.channelId)),
-                          (I = (A?.getStats().max_voice_state_count ?? 0) > 1)))
+                          ((g = null),
+                          (A = null),
+                          (r = b(t.guildId, t.channelId)),
+                          (T = (I?.getStats().max_voice_state_count ?? 0) > 1)))
                 : t.guildId === r.guildId &&
                   ((null == u.default.getAwaitingRemoteSessionInfo() || null == u.default.getRemoteSessionId()) &&
-                      (m = r.channelId),
-                  b());
+                      (g = r.channelId),
+                  N());
         else {
             if (t.sessionId !== i || null == t.channelId) return e;
-            (m = null),
-                (E = null),
-                (r = C(t.guildId, t.channelId)),
-                (I = (A?.getStats().max_voice_state_count ?? 0) > 1);
+            (g = null),
+                (A = null),
+                (r = b(t.guildId, t.channelId)),
+                (T = (I?.getStats().max_voice_state_count ?? 0) > 1);
         }
         return !0;
     }, !1);
 }
-function D(e) {
+function L(e) {
     if (
         null == r ||
         (null != e.guildId && e.guildId !== r.guildId) ||
@@ -181,67 +181,67 @@ function D(e) {
         return !1;
     r.connect(e.endpoint, e.token);
 }
-function L() {
-    m = null;
-}
 function w() {
-    E = null;
+    g = null;
 }
-function x(e) {
-    let { guild: t } = e;
-    if (null == r || r.guildId !== t.id) return !1;
-    b();
+function x() {
+    A = null;
 }
 function P(e) {
-    let { channelId: t } = e;
-    if (null == r || r.channelId !== t) return !1;
-    b();
+    let { guild: t } = e;
+    if (null == r || r.guildId !== t.id) return !1;
+    N();
 }
 function M(e) {
-    let { channel: t } = e;
-    if (null == r || r.channelId !== t.id) return !1;
-    b();
+    let { channelId: t } = e;
+    if (null == r || r.channelId !== t) return !1;
+    N();
 }
 function k(e) {
-    let { channelId: t, joinVoiceId: n } = e;
-    null != r && (null == t || r.channelId !== t) && b(), (v = n);
+    let { channel: t } = e;
+    if (null == r || r.channelId !== t.id) return !1;
+    N();
 }
 function U(e) {
-    return e.state === f.g6G.ACTIVE && null != r && r.resetBackoff("App state is active"), !1;
+    let { channelId: t, joinVoiceId: n } = e;
+    null != r && (null == t || r.channelId !== t) && N(), (C = n);
 }
 function G(e) {
-    return e.state === f.S7L.RTC_CONNECTED && (T = !0), !0;
+    return e.state === f.g6G.ACTIVE && null != r && r.resetBackoff("App state is active"), !1;
+}
+function F(e) {
+    return e.state === f.S7L.RTC_CONNECTED && (y = !0), !0;
 }
 function V(e) {
     r?.setNoiseCancellationEnabled(e.enabled);
 }
-function F() {
+function B() {
     return !0;
 }
-function B(e) {
+function j(e) {
     let { context: t, wants: n } = e;
     if (
-        t !== p.x.DEFAULT ||
+        t !== h.x.DEFAULT ||
         !Object.entries(n).some((e) => {
             let [t, n] = e;
             return "any" !== t && 0 !== n;
         })
     )
         return !1;
-    y = performance.now();
-}
-function j(e) {
-    return e.connection === r;
+    S = performance.now();
 }
 function H(e) {
+    return e.connection === r;
+}
+function Y(e) {
     let { userId: t, context: n, quality: i } = e;
     r?.setSimulcastDebugOverride(t, n, i);
 }
-function Y(e) {
+function W(e) {
     let { streamId: t, dimensions: n, zoom: i } = e;
     r?.setVideoSize(t, n, i);
 }
-class W extends a.Ay.Store {
+class K extends a.Ay.Store {
     static displayName = "RTCConnectionStore";
     initialize() {
         this.waitFor(d.default, u.default, _.Ay), (0, c.I)(this.getRTCConnectionId, this.getMediaSessionId);
@@ -259,13 +259,13 @@ class W extends a.Ay.Store {
         return this.getState() === f.S7L.DISCONNECTED;
     }
     getRemoteDisconnectVoiceChannelId() {
-        return m;
+        return g;
     }
     getLastSessionVoiceChannelId() {
-        return E;
+        return A;
     }
     setLastSessionVoiceChannelId(e) {
-        E = e;
+        A = e;
     }
     getGuildId() {
         return r?.guildId;
@@ -280,7 +280,7 @@ class W extends a.Ay.Store {
         return null != r ? r.quality : f.bFR.UNKNOWN;
     }
     getPings() {
-        return null != r ? r.getPings() : h;
+        return null != r ? r.getPings() : p;
     }
     getAveragePing() {
         return null != r ? r?.getAveragePing() : 0;
@@ -298,34 +298,31 @@ class W extends a.Ay.Store {
         return r?.getRTCConnectionId();
     }
     getDuration() {
-        return r?.getDuration() ?? g?.duration;
+        return r?.getDuration() ?? E?.duration;
     }
     getLastRTCConnectionState() {
-        return g;
-    }
-    getVoiceFilterSpeakingDurationMs() {
-        return r?.getVoiceFilterSpeakingDurationMs();
+        return E;
     }
     getPacketStats() {
         return r?.getPacketStats();
     }
     getVoiceStateStats() {
-        return A?.getStats();
+        return I?.getStats();
     }
     getUserVoiceSettingsStats(e) {
-        return A?.getUserVoiceSettingsStats(e);
+        return I?.getUserVoiceSettingsStats(e);
     }
     getWasEverMultiParticipant() {
-        return I;
+        return T;
     }
     getWasEverRtcConnected() {
-        return T;
+        return y;
     }
     getUserIds() {
         return r?.getUserIds();
     }
     getJoinVoiceId() {
-        return v;
+        return C;
     }
     isUserConnected(e) {
         return r?.getIsUserConnected(e);
@@ -338,41 +335,41 @@ class W extends a.Ay.Store {
         return t?.get(e);
     }
     getLastNonZeroRemoteVideoSinkWantsTime() {
-        return y;
-    }
-    getWasMoved() {
         return S;
     }
+    getWasMoved() {
+        return v;
+    }
 }
-let K = new W(
+let $ = new K(
     s.h,
     __OVERLAY__
         ? {}
         : {
-              CONNECTION_OPEN: N,
-              CONNECTION_CLOSED: R,
-              RTC_CONNECTION_STATE: G,
-              RTC_CONNECTION_PING: F,
-              RTC_CONNECTION_LOSS_RATE: F,
-              RTC_CONNECTION_UPDATE_ID: j,
-              RTC_CONNECTION_SECURE_FRAMES_UPDATE: F,
-              RTC_CONNECTION_CLIENT_CONNECT: F,
-              RTC_CONNECTION_CLIENT_DISCONNECT: F,
-              RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: B,
-              VIDEO_SIZE_UPDATE: Y,
-              VOICE_STATE_UPDATES: O,
-              VOICE_CHANNEL_SELECT: k,
+              CONNECTION_OPEN: R,
+              CONNECTION_CLOSED: O,
+              RTC_CONNECTION_STATE: F,
+              RTC_CONNECTION_PING: B,
+              RTC_CONNECTION_LOSS_RATE: B,
+              RTC_CONNECTION_UPDATE_ID: H,
+              RTC_CONNECTION_SECURE_FRAMES_UPDATE: B,
+              RTC_CONNECTION_CLIENT_CONNECT: B,
+              RTC_CONNECTION_CLIENT_DISCONNECT: B,
+              RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: j,
+              VIDEO_SIZE_UPDATE: W,
+              VOICE_STATE_UPDATES: D,
+              VOICE_CHANNEL_SELECT: U,
               AUDIO_SET_NOISE_CANCELLATION: V,
-              VOICE_SERVER_UPDATE: D,
-              CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: L,
-              REMOTE_SESSION_CONNECT: L,
-              CLEAR_LAST_SESSION_VOICE_CHANNEL_ID: w,
-              GUILD_DELETE: x,
-              CHANNEL_DELETE: M,
-              THREAD_DELETE: M,
-              CALL_DELETE: P,
-              APP_STATE_UPDATE: U,
-              RTC_DEBUG_SET_SIMULCAST_OVERRIDE: H,
+              VOICE_SERVER_UPDATE: L,
+              CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: w,
+              REMOTE_SESSION_CONNECT: w,
+              CLEAR_LAST_SESSION_VOICE_CHANNEL_ID: x,
+              GUILD_DELETE: P,
+              CHANNEL_DELETE: k,
+              THREAD_DELETE: k,
+              CALL_DELETE: M,
+              APP_STATE_UPDATE: G,
+              RTC_DEBUG_SET_SIMULCAST_OVERRIDE: Y,
           },
 );
 Promise.resolve()
@@ -380,7 +377,7 @@ Promise.resolve()
     .then((e) => {
         let { addExtraAnalyticsDecorator: t } = e;
         t((e) => {
-            e.client_rtc_state = K.getState();
+            e.client_rtc_state = $.getState();
         });
     });
-let z = K;
+let z = $;

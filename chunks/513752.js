@@ -11,7 +11,8 @@ var r = n(73153),
     d = n(309010),
     _ = n(287809);
 let f = (e, t) => {
-        let n = c.A.getVoiceFilterSpeakingDurationMs();
+        let n = c.A.getRTCConnection(),
+            r = n?.getVoiceDurationStats();
         return {
             channel_id: e.id,
             channel_type: e.type,
@@ -20,8 +21,9 @@ let f = (e, t) => {
             duration: c.A.getDuration(),
             media_session_id: c.A.getMediaSessionId(),
             ...(0, i.JK)(c.A.getGuildId(), c.A.getChannelId(), t),
-            duration_speaking_voice_filter_ids: null != n ? [...n.keys()] : null,
-            duration_speaking_voice_filter_ms: null != n ? [...n.values()] : null,
+            duration_speaking_voice_filter_ids: r?.duration_speaking_voice_filter_ids ?? null,
+            duration_speaking_voice_filter_ms: r?.duration_speaking_voice_filter_ms ?? null,
+            duration_muted_ms: r?.duration_muted_ms ?? null,
         };
     },
     h = () => {
