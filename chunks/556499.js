@@ -1,8 +1,8 @@
 n.d(t, { A: () => y }), n(321073);
 var a = n(627968),
-    s = n(64700),
-    i = n(503698),
-    l = n.n(i),
+    i = n(64700),
+    s = n(503698),
+    l = n.n(s),
     r = n(989349),
     o = n.n(r),
     d = n(158954),
@@ -15,8 +15,8 @@ var a = n(627968),
     g = n(776935),
     _ = n(652215),
     f = n(601107),
-    v = n(788868),
-    b = n(815907),
+    b = n(788868),
+    v = n(815907),
     j = n(935391);
 let A = {
         [_.Dmq.UNPAID]: "Unpaid",
@@ -37,7 +37,7 @@ let A = {
         [f.qf.DEFERRED_START]: "Deferred Start",
         [f.qf.USER_TEMPORARY_BAN]: "User Temp Ban",
     },
-    S = [
+    T = [
         { id: "unpaid", label: "Unpaid", value: _.Dmq.UNPAID },
         { id: "active", label: "Active", value: _.Dmq.ACTIVE },
         { id: "pastDue", label: "Past Due", value: _.Dmq.PAST_DUE },
@@ -48,20 +48,20 @@ let A = {
         { id: "paused", label: "Paused", value: _.Dmq.PAUSED },
         { id: "pausePending", label: "Pause Pending", value: _.Dmq.PAUSE_PENDING },
     ];
-function T(e) {
-    let { subscription: t, onClose: n, onUpdated: i, transitionState: l } = e,
-        [r, c] = s.useState(o()()),
-        [m, h] = s.useState(o()().format("HH:mm")),
-        [x, p] = s.useState(!1),
-        [_, f] = s.useState(void 0),
-        v = async () => {
+function S(e) {
+    let { subscription: t, onClose: n, onUpdated: s, transitionState: l } = e,
+        [r, c] = i.useState(o()()),
+        [m, h] = i.useState(o()().format("HH:mm")),
+        [x, p] = i.useState(!1),
+        [_, f] = i.useState(void 0),
+        b = async () => {
             if (null == r) return void f("Please select a target date");
             let [e, a] = m.split(":").map(Number),
-                s = r.clone().hours(e).minutes(a).seconds(0).milliseconds(0);
+                i = r.clone().hours(e).minutes(a).seconds(0).milliseconds(0);
             p(!0), f(void 0);
             try {
-                await g.tB(t.id, g.H7.TIME_TRAVEL, { targetDate: s, paymentType: g.J7.DEFAULT, sendReminderEmail: !1 }),
-                    i(),
+                await g.tB(t.id, g.H7.TIME_TRAVEL, { targetDate: i, paymentType: g.J7.DEFAULT, sendReminderEmail: !1 }),
+                    s(),
                     n();
             } catch (e) {
                 f(e.body?.message || e.message || "Failed to time travel");
@@ -76,7 +76,7 @@ function T(e) {
         size: "sm",
         actions: [
             { text: "Cancel", variant: "secondary", onClick: n },
-            { text: "Time Travel", variant: "primary", onClick: v, disabled: x || null == r },
+            { text: "Time Travel", variant: "primary", onClick: b, disabled: x || null == r },
         ],
         children: (0, a.jsxs)(u.BJc, {
             gap: 16,
@@ -132,29 +132,28 @@ function T(e) {
 function y(e) {
     var t;
     let n,
-        { subscription: i, onUpdated: r } = e,
-        [d, f] = s.useState(!1),
-        [y, N] = s.useState(!1),
-        [E, I] = s.useState(!1),
-        [k, R] = s.useState(!1),
-        [O, w] = s.useState(null),
-        [D, M] = s.useState(""),
-        P = (e) => {
+        { subscription: s, onUpdated: r } = e,
+        [d, f] = i.useState(!1),
+        [y, N] = i.useState(!1),
+        [E, I] = i.useState(!1),
+        [k, R] = i.useState(!1),
+        [O, w] = i.useState(null),
+        D = (e) => {
             let t = new Date(e);
             return x.default.fromTimestamp(t.getTime());
         },
-        L = async (e) => {
-            let { status: t = i.status, premiumStreakStart: n, endedAt: a } = e,
-                s = {
+        M = async (e) => {
+            let { status: t = s.status, premiumStreakStart: n, endedAt: a } = e,
+                i = {
                     subscription_status: t,
-                    ...(null != n ? { premium_streak_started_at: P(n) } : null),
-                    ...(null != a ? { ended_at: P(a) } : null),
+                    ...(null != n ? { premium_streak_started_at: D(n) } : null),
+                    ...(null != a ? { ended_at: D(a) } : null),
                 };
-            await c.Bo.patch({ url: `/debug/subscriptions/${i.id}`, body: s, rejectWithError: !1 }), r();
+            await c.Bo.patch({ url: `/debug/subscriptions/${s.id}`, body: i, rejectWithError: !1 }), r();
         },
-        U = async () => {
+        P = async () => {
             try {
-                await g.tB(i.id, g.H7.RENEW, {
+                await g.tB(s.id, g.H7.RENEW, {
                     targetDate: o()(new Date()),
                     paymentType: g.J7.DEFAULT,
                     sendReminderEmail: !1,
@@ -164,68 +163,48 @@ function y(e) {
             }
             r();
         },
-        B = async (e) => {
-            let { accepted: t } = e;
-            try {
-                await c.Bo.post({
-                    url: `/debug/subscriptions/${i.id}/members/${D}`,
-                    body: { ...(t ? { accepted: !0 } : {}) },
-                    rejectWithError: !1,
-                }),
-                    M("");
-            } catch (e) {
-                w(e.body?.message || e.message || "Failed to add user to group");
-            }
-        },
-        G = async () => {
-            try {
-                await c.Bo.del({ url: `/debug/subscriptions/${i.id}/members/${D}`, rejectWithError: !1 }), M("");
-            } catch (e) {
-                w(e.body?.message || e.message || "Failed to remove user from group");
-            }
-        },
-        F = v.hd[i.planIdFromItems]?.premiumType === v.PremiumTypes.TIER_0,
-        V = i.metadata?.ended_at,
-        W = null != V ? new Date(V).toISOString().substring(0, 10) : "",
-        H = [
-            { id: "id", label: `ID: ${i.id}`, isDisabled: !1 },
+        U = b.hd[s.planIdFromItems]?.premiumType === b.PremiumTypes.TIER_0,
+        L = s.metadata?.ended_at,
+        B = null != L ? new Date(L).toISOString().substring(0, 10) : "",
+        G = [
+            { id: "id", label: `ID: ${s.id}`, isDisabled: !1 },
             {
                 id: "status",
-                label: `Status: ${(null == t && (t = i.status), t in A) ? A[t] : `Unknown status ${t}`}`,
+                label: `Status: ${(null == t && (t = s.status), t in A) ? A[t] : `Unknown status ${t}`}`,
                 isDisabled: !1,
             },
         ],
-        K = i.hasActiveTrial,
-        z = i.metadata?.active_discount_id != null;
+        F = s.hasActiveTrial,
+        V = s.metadata?.active_discount_id != null;
     return (
-        K && H.push({ id: "trial", label: "Has Trial", isDisabled: !1 }),
-        z && H.push({ id: "active-discount", label: "Has Active Discount", isDisabled: !1 }),
-        i.status !== _.Dmq.ACTIVE &&
-            H.push({
+        F && G.push({ id: "trial", label: "Has Trial", isDisabled: !1 }),
+        V && G.push({ id: "active-discount", label: "Has Active Discount", isDisabled: !1 }),
+        s.status !== _.Dmq.ACTIVE &&
+            G.push({
                 id: "dates",
-                label: `Dates: ${(0, h.i$)(i.createdAt, "LL")} - ${(0, h.i$)(i.currentPeriodEnd, "LL")}`,
+                label: `Dates: ${(0, h.i$)(s.createdAt, "LL")} - ${(0, h.i$)(s.currentPeriodEnd, "LL")}`,
                 isDisabled: !1,
             }),
-        i.status === _.Dmq.PAUSED &&
-            H.push({
+        s.status === _.Dmq.PAUSED &&
+            G.push({
                 id: "pause-reason",
-                label: `Pause Reason: ${i.pauseReason in C ? C[i.pauseReason] : `Unknown pause reason ${i.pauseReason}`}`,
+                label: `Pause Reason: ${s.pauseReason in C ? C[s.pauseReason] : `Unknown pause reason ${s.pauseReason}`}`,
                 isDisabled: !1,
             }),
         (0, a.jsx)("div", {
-            className: l()(b.Nr, F ? b.Qf : b.C1),
+            className: l()(v.Nr, U ? v.Qf : v.C1),
             children: (0, a.jsxs)(u.nVY, {
-                label: `Type: ${null == ((n = i.planIdFromItems)) ? "No plan id" : n in v.hd ? v.hd[n].name : `Unknown plan id ${n}`}`,
+                label: `Type: ${null == ((n = s.planIdFromItems)) ? "No plan id" : n in b.hd ? b.hd[n].name : `Unknown plan id ${n}`}`,
                 className: j.lI,
                 children: [
                     (0, a.jsx)(u.CR_, {
-                        items: H,
+                        items: G,
                         label: "Tags",
                         selectionMode: "none",
                         selectionBehavior: "replace",
                         disabledKeys: new Set(),
                     }),
-                    K &&
+                    F &&
                         (0, a.jsxs)("div", {
                             className: j.VK,
                             children: [
@@ -256,7 +235,7 @@ function y(e) {
                                                     }),
                                                     (0, a.jsx)(u.Text, {
                                                         variant: "text-sm/normal",
-                                                        children: i.trialId,
+                                                        children: s.trialId,
                                                     }),
                                                 ],
                                             }),
@@ -269,8 +248,8 @@ function y(e) {
                                                     (0, a.jsx)(u.Text, {
                                                         variant: "text-sm/normal",
                                                         children:
-                                                            null != i.trialEndsAt
-                                                                ? (0, h.i$)(i.trialEndsAt, "LL")
+                                                            null != s.trialEndsAt
+                                                                ? (0, h.i$)(s.trialEndsAt, "LL")
                                                                 : "N/A",
                                                     }),
                                                 ],
@@ -279,7 +258,7 @@ function y(e) {
                                     }),
                             ],
                         }),
-                    z &&
+                    V &&
                         (0, a.jsxs)("div", {
                             className: j.VK,
                             children: [
@@ -310,7 +289,7 @@ function y(e) {
                                                     }),
                                                     (0, a.jsx)(u.Text, {
                                                         variant: "text-sm/normal",
-                                                        children: i.metadata?.active_discount_id,
+                                                        children: s.metadata?.active_discount_id,
                                                     }),
                                                 ],
                                             }),
@@ -323,9 +302,9 @@ function y(e) {
                                                     (0, a.jsx)(u.Text, {
                                                         variant: "text-sm/normal",
                                                         children:
-                                                            i.metadata?.active_discount_expires_at != null
+                                                            s.metadata?.active_discount_expires_at != null
                                                                 ? (0, h.i$)(
-                                                                      new Date(i.metadata?.active_discount_expires_at),
+                                                                      new Date(s.metadata?.active_discount_expires_at),
                                                                       "LL",
                                                                   )
                                                                 : "N/A",
@@ -336,7 +315,7 @@ function y(e) {
                                     }),
                             ],
                         }),
-                    null != i.metadata &&
+                    null != s.metadata &&
                         (0, a.jsxs)("div", {
                             className: j.VK,
                             children: [
@@ -358,7 +337,7 @@ function y(e) {
                                 d &&
                                     (0, a.jsx)("ul", {
                                         className: j.j3,
-                                        children: Object.entries(i.metadata).map((e) => {
+                                        children: Object.entries(s.metadata).map((e) => {
                                             let [t, n] = e;
                                             return (0, a.jsxs)(
                                                 "li",
@@ -398,10 +377,10 @@ function y(e) {
                                     children: [
                                         (0, a.jsx)(u.l6P, {
                                             label: "Status",
-                                            value: i.status,
-                                            options: S,
+                                            value: s.status,
+                                            options: T,
                                             onSelectionChange: (e) => {
-                                                L({ status: e });
+                                                M({ status: e });
                                             },
                                             selectionMode: "single",
                                             fullWidth: !0,
@@ -415,7 +394,7 @@ function y(e) {
                                                             variant: "primary",
                                                             size: "sm",
                                                             text: "Renew Subscription",
-                                                            onClick: (e) => U(),
+                                                            onClick: (e) => P(),
                                                         }),
                                                         (0, a.jsx)(u.Button, {
                                                             variant: "secondary",
@@ -424,8 +403,8 @@ function y(e) {
                                                             onClick: () => {
                                                                 (0, u.mMO)(() =>
                                                                     Promise.resolve((e) =>
-                                                                        (0, a.jsx)(T, {
-                                                                            subscription: i,
+                                                                        (0, a.jsx)(S, {
+                                                                            subscription: s,
                                                                             onUpdated: r,
                                                                             ...e,
                                                                         }),
@@ -447,48 +426,17 @@ function y(e) {
                                             children: [
                                                 (0, a.jsx)(u.J3s, {
                                                     label: "Premium Streak Start Date",
-                                                    value: o()(i.premiumSince?.toISOString().substring(0, 10)),
-                                                    onSelect: (e) => L({ premiumStreakStart: e.toISOString() }),
+                                                    value: o()(s.premiumSince?.toISOString().substring(0, 10)),
+                                                    onSelect: (e) => M({ premiumStreakStart: e.toISOString() }),
                                                 }),
                                                 (0, a.jsx)(p.A, {}),
                                             ],
                                         }),
                                         (0, a.jsx)(u.J3s, {
                                             label: "Metadata Ended At Date",
-                                            value: o()(W),
-                                            onSelect: (e) => L({ endedAt: e.toISOString() }),
+                                            value: o()(B),
+                                            onSelect: (e) => M({ endedAt: e.toISOString() }),
                                         }),
-                                        i?.planIdFromItems === v.gD.PREMIUM_GROUP_MONTH &&
-                                            (0, a.jsxs)(u.BJc, {
-                                                gap: 8,
-                                                children: [
-                                                    (0, a.jsx)(u.ksK, {
-                                                        label: "Subscription Group Member User ID",
-                                                        value: D,
-                                                        onChange: M,
-                                                    }),
-                                                    (0, a.jsxs)(u.BJc, {
-                                                        gap: 8,
-                                                        direction: "horizontal",
-                                                        children: [
-                                                            (0, a.jsx)(u.Button, {
-                                                                variant: "primary",
-                                                                size: "sm",
-                                                                text: "Add",
-                                                                onClick: () => B({ accepted: !0 }),
-                                                                disabled: "" === D,
-                                                            }),
-                                                            (0, a.jsx)(u.Button, {
-                                                                variant: "secondary",
-                                                                size: "sm",
-                                                                text: "Remove",
-                                                                onClick: () => G(),
-                                                                disabled: "" === D,
-                                                            }),
-                                                        ],
-                                                    }),
-                                                ],
-                                            }),
                                     ],
                                 }),
                         ],
