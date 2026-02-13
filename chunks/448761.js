@@ -67,6 +67,7 @@ var r = (function (e) {
         (e[(e.EMOJI_ADDED = 63)] = "EMOJI_ADDED"),
         (e[(e.PREMIUM_GROUP_INVITE = 64)] = "PREMIUM_GROUP_INVITE"),
         (e[(e.VOICE_SESSION = 65)] = "VOICE_SESSION"),
+        (e[(e.GUILD_BOOST_UPSELL = 66)] = "GUILD_BOOST_UPSELL"),
         e
     );
 })({});
