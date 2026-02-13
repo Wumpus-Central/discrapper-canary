@@ -47,8 +47,8 @@ var i = n(627968),
     q = n(661191),
     J = n(427262),
     $ = n(392135),
-    X = n(625788),
-    Z = n(662367),
+    Z = n(625788),
+    X = n(662367),
     Q = n(58736),
     ee = n(286498),
     et = n(652215),
@@ -163,7 +163,7 @@ class eo extends l.PureComponent {
     createInvite() {
         let { channel: e } = this.props;
         if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return;
-        let { inviteMaxAgeSeconds: t } = Z.A.getCurrentConfig({ location: "5326c5_1" }, { autoTrackExposure: !1 });
+        let { inviteMaxAgeSeconds: t } = X.A.getCurrentConfig({ location: "5326c5_1" }, { autoTrackExposure: !1 });
         p.Ay.createInvite(e.id, { max_age: t }, et.PE1.GROUP_DM);
     }
     isPartyFull() {
@@ -183,7 +183,7 @@ class eo extends l.PureComponent {
     getCreateGroupButtonAction() {
         let { channel: e, selectedUsers: t, isGdmCopyExperimentEnabled: n } = this.props,
             i = this.getRemaining(),
-            l = 0 === t.size || i < 0,
+            l = (null != e && 0 === t.size) || i < 0,
             s =
                 t.size > 1 || null != e
                     ? ei.intl.string(n ? ei.t["h1/FMu"] : ei.t.ZGMNA8)
@@ -884,7 +884,7 @@ function ed(e) {
             );
         }),
         a = (0, c.yK)([k.h], () => k.h.getSections()),
-        { enabled: r } = X.A.useConfig({ location: null == t ? "New DM" : "Existing DM" }),
+        { enabled: r } = Z.A.useConfig({ location: null == t ? "New DM" : "Existing DM" }),
         o = (0, c.bG)([B.default], () => B.default.getCurrentUser()),
         d = (0, c.bG)(
             [B.default],
