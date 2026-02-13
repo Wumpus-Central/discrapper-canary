@@ -653,6 +653,7 @@ class et extends l.PureComponent {
                               variant: "primary",
                               text: z.intl.string(z.t.PDTjLN),
                               type: "button",
+                              disabled: !this.canSubmit(),
                               onClick: () => {
                                   this.setState({ slide: "ADD_MEMBERS", errors: {} });
                               },
