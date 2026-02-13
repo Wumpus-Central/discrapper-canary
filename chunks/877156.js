@@ -1,4 +1,4 @@
-t.d(n, { A: () => I });
+t.d(n, { A: () => S });
 var i = t(627968),
     l = t(64700),
     r = t(311907),
@@ -12,55 +12,60 @@ var i = t(627968),
     m = t(837015),
     E = t(61750),
     g = t(235986),
-    _ = t(369496),
-    x = t(550111),
-    T = t(287809),
-    h = t(482132),
+    x = t(369496),
+    _ = t(550111),
+    h = t(287809),
+    T = t(482132),
     P = t(758836),
     A = t(985018),
-    S = t(401506);
-function I(e) {
+    I = t(401506);
+function S(e) {
     let { rewardSkuId: n, onClose: t } = e,
-        I = (0, r.bG)([T.default], () => T.default.getCurrentUser()),
+        S = (0, r.bG)([h.default], () => h.default.getCurrentUser()),
         j = (0, r.bG)([o.A], () => o.A.useReducedMotion),
         { analyticsLocations: f } = (0, u.Ay)(),
         R = a._3J.SIZE_32,
         { product: C, isFetching: M } = (0, c.q)(n),
         [N, y] = l.useState(!1),
-        O = C?.items[0],
+        b = C?.items[0],
         {
-            isNameplateReward: b,
+            isNameplateReward: O,
             nameplateData: v,
             rewardDeco: k,
         } = l.useMemo(
             () =>
-                null == O
+                null == b
                     ? { isNameplateReward: !1, nameplateData: null, rewardDeco: void 0 }
-                    : (0, m.F)(O)
+                    : (0, m.F)(b)
                       ? {
                             isNameplateReward: !0,
-                            nameplateData: { src: O.asset, palette: (0, _.H6)(O.palette ?? "sky"), imgAlt: O.label },
+                            nameplateData: {
+                                skuId: b.skuId,
+                                src: b.asset,
+                                palette: (0, x.H6)(b.palette ?? "sky"),
+                                imgAlt: b.label,
+                            },
                             rewardDeco: void 0,
                         }
-                      : (0, p.T)(O)
-                        ? { isNameplateReward: !1, nameplateData: null, rewardDeco: (0, d.A)(O.asset, R, !j) }
+                      : (0, p.T)(b)
+                        ? { isNameplateReward: !1, nameplateData: null, rewardDeco: (0, d.A)(b.asset, R, !j) }
                         : { isNameplateReward: !1, nameplateData: null, rewardDeco: void 0 },
-            [O, R, j],
+            [b, R, j],
         );
-    return (0, i.jsx)(h.UX, {
+    return (0, i.jsx)(T.UX, {
         children: (0, i.jsx)(a.jlY, {
             align: g.A.Align.CENTER,
             "data-migration-pending": !0,
             children: (0, i.jsxs)("div", {
-                className: S.W,
+                className: I.W,
                 children: [
-                    b && null != v
+                    O && null != v
                         ? (0, i.jsx)("div", {
-                              className: S.D,
+                              className: I.D,
                               onMouseEnter: () => y(!0),
                               onMouseLeave: () => y(!1),
-                              children: (0, i.jsx)(x.a, {
-                                  user: I,
+                              children: (0, i.jsx)(_.a, {
+                                  user: S,
                                   nameplate: null,
                                   nameplateData: v,
                                   showPlaceholderUser: !0,
@@ -69,9 +74,9 @@ function I(e) {
                               }),
                           })
                         : (0, i.jsx)(a.JsQ, {
-                              "aria-label": I?.username,
+                              "aria-label": S?.username,
                               size: R,
-                              src: I?.getAvatarURL(void 0, (0, a.FT9)(R), !j),
+                              src: S?.getAvatarURL(void 0, (0, a.FT9)(R), !j),
                               avatarDecoration: k,
                           }),
                     (0, i.jsx)(s.$nd, {
