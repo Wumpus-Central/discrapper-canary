@@ -1,11 +1,11 @@
-a.d(t, { A: () => b, i: () => g });
+a.d(t, { A: () => v, i: () => g });
 var n = a(627968),
     i = a(64700),
     s = a(503698),
     l = a.n(s),
     r = a(791332),
     o = a.n(r),
-    c = a(421380),
+    c = a(158954),
     d = a(481859),
     u = a(558179),
     h = a(371794),
@@ -88,15 +88,18 @@ class C extends i.PureComponent {
                     }),
                 }),
                 o
-                    ? (0, n.jsx)(c.$n, {
+                    ? (0, n.jsx)("div", {
                           className: p.OZ,
-                          onClick: this.handleToggleCollapse,
-                          color: c.$n.Colors.PRIMARY,
-                          children: r ? m.intl.string(m.t.DxcOXA) : m.intl.string(m.t.rD6EaA),
+                          children: (0, n.jsx)(c.$nd, {
+                              variant: "secondary",
+                              onClick: this.handleToggleCollapse,
+                              text: r ? m.intl.string(m.t.DxcOXA) : m.intl.string(m.t.rD6EaA),
+                              fullWidth: !0,
+                          }),
                       })
                     : null,
             ],
         });
     }
 }
-let b = C;
+let v = C;
