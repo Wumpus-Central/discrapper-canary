@@ -20,8 +20,8 @@ var n = i(627968),
     _ = i(287809),
     y = i(486020),
     S = i(405269),
-    k = i(723702),
-    w = i(256252),
+    w = i(723702),
+    k = i(256252),
     C = i(382913),
     E = i(985018),
     A = i(433963);
@@ -54,7 +54,7 @@ function L(e) {
                         return "Linux";
                 }
                 return "";
-            })((0, k.getOS)()),
+            })((0, w.getOS)()),
         ),
         [Q, ee] = a.useState(""),
         [et, ei] = a.useState(""),
@@ -71,8 +71,8 @@ function L(e) {
             query: { cache: e },
             rejectWithError: !0,
         }).then((e) => {
-            if (null != e.body && "93179522fde40f7ecc7aea17608967ce0f49de7c" !== e.body.hash) {
-                let e = new Date("1770252554499"),
+            if (null != e.body && "84800b0e9bed6ea0f557b2e971f45d6a89d2708a" !== e.body.hash) {
+                let e = new Date("1770942477402"),
                     t = new Date(),
                     i = (0, S.Tf)(t, e);
                 i.hours > 6 && ep(i.hours);
@@ -92,7 +92,7 @@ function L(e) {
         });
     async function ej() {
         if ((em(!1), "" === T || "" === I || null == D)) return void eo(!0);
-        let e = H?.features?.find((e) => (0, w.wY)(e) === $);
+        let e = H?.features?.find((e) => (0, k.wY)(e) === $);
         ed(!0), eo(!1);
         let t = (0, C.B)(
                 W.map((e) => {
@@ -100,7 +100,7 @@ function L(e) {
                     return t;
                 }),
             ),
-            a = await (0, w.zC)(
+            a = await (0, k.zC)(
                 {
                     name: T,
                     description: I,
@@ -136,7 +136,7 @@ function L(e) {
     return (
         a.useEffect(() => {
             async function e() {
-                K(await (0, w.xt)());
+                K(await (0, k.xt)());
             }
             ex && e();
         }, [ex]),
@@ -214,7 +214,7 @@ function L(e) {
                             ex &&
                                 Object.keys(eb).length > 0 &&
                                 (0, n.jsxs)(d.wx6, {
-                                    type: "critical",
+                                    type: "warning",
                                     children: [
                                         (0, n.jsx)(d.Heading, {
                                             variant: "heading-md/medium",
@@ -296,7 +296,7 @@ function L(e) {
                                     );
                                 },
                                 onChange: z,
-                                options: (0, w.lx)().map((e) => ({ priority: e, value: e.value, label: e.title })),
+                                options: (0, k.lx)().map((e) => ({ priority: e, value: e.value, label: e.title })),
                                 optionClassName: A.sI,
                                 value: D,
                                 maxVisibleItems: 4,
@@ -310,11 +310,11 @@ function L(e) {
                                     value: $,
                                     options:
                                         H?.features
-                                            ?.filter((e) => "" !== (0, w.wY)(e))
+                                            ?.filter((e) => "" !== (0, k.wY)(e))
                                             ?.map((e) => ({
-                                                id: (0, w.wY)(e),
+                                                id: (0, k.wY)(e),
                                                 label: e.name ?? "",
-                                                value: (0, w.wY)(e),
+                                                value: (0, k.wY)(e),
                                             }))
                                             ?.sort((e, t) => e.label.localeCompare(t.label)) ?? [],
                                     disabled: null == H,

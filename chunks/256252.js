@@ -54,7 +54,7 @@ async function h(e, t, i) {
         null != e.experimentOverrides &&
             a.push({
                 name: "experiment_overrides",
-                value: e.experimentOverrides.map((e) => `${e.experimentId}:${e.variantId}`).join(","),
+                value: e.experimentOverrides.map((e) => `${e.experimentId}:${e.variantId}`).join(", "),
             });
     let u = e.feature?.asana_inbox_id;
     null != u && "" !== u && a.push({ name: "asana_inbox_id", value: `${u}` });
