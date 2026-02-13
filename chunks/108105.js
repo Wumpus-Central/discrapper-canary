@@ -322,6 +322,7 @@ function q(e) {
                                     null != V &&
                                         (0, a.jsx)(f._, {
                                             skuId: V.id,
+                                            productName: V.name,
                                             isCardHovered: !0,
                                             className: o()(F.jU, F.ij),
                                             nuxGraphic: (0, y.N)(V),

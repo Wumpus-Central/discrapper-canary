@@ -90,6 +90,7 @@ function Q(e) {
                 }),
             (0, l.jsx)(x._, {
                 skuId: n.id,
+                productName: n.name,
                 isCardHovered: i,
                 nuxGraphic: (0, M.N)(n),
                 onClick: _,
