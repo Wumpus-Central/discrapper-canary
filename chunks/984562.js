@@ -9,8 +9,8 @@ var i = n(627968),
     d = n(837011),
     c = n(90084),
     u = n(685073),
-    m = n(828162),
-    g = n(801264),
+    g = n(828162),
+    m = n(801264),
     x = n(997509),
     h = n(555337),
     _ = n(342490),
@@ -41,8 +41,8 @@ let v = function () {
         y = (0, u.Rg)(e),
         R = !y || t?.tag == null,
         O = t.badge ?? b.hc["0"],
-        G = t.badgeColorPrimary ?? b.Ub["0"].primary,
-        L = t.badgeColorSecondary ?? b.Ub["0"].secondary,
+        G = t.badgeColorPrimary ?? null,
+        L = t.badgeColorSecondary ?? null,
         D = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(p.A, {
@@ -87,7 +87,7 @@ let v = function () {
                                         }),
                                     }),
                                     !S &&
-                                        (0, i.jsx)(g.A, {
+                                        (0, i.jsx)(m.A, {
                                             className: I.pB,
                                             children: (0, i.jsx)(a.Text, {
                                                 variant: "text-xs/medium",
@@ -131,7 +131,7 @@ let v = function () {
                                       className: I.vw,
                                       children: (0, i.jsx)(_.u, {
                                           onClick: () => {
-                                              (0, m.A)(e.id, o.A.GUILD_POWERUPS_GUILD_SETTINGS_TAGS), x.A.close();
+                                              (0, g.A)(e.id, o.A.GUILD_POWERUPS_GUILD_SETTINGS_TAGS), x.A.close();
                                           },
                                       }),
                                   }),

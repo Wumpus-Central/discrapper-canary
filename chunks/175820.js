@@ -18,6 +18,8 @@ e.exports = {
     p3: "pickerGrid_a84c50",
     Uh: "pickerItem_a84c50",
     fT: "pickerItemSelected_a84c50",
+    lM: "pickerItemDefault_a84c50",
+    i0: "pickerItemDefaultIcon_a84c50",
     n8: "disabledForm_a84c50",
     so: "sidebarContainer_a84c50",
 };

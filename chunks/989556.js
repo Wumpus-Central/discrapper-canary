@@ -9,18 +9,18 @@ var i = n(627968),
     d = n(81461),
     c = n(801264),
     u = n(975571),
-    m = n(997509),
-    g = n(555337),
+    g = n(997509),
+    m = n(555337),
     x = n(652215),
     h = n(583970),
     _ = n(985018),
     A = n(175820);
 let p = function (e) {
     let { className: t, guildId: n, tag: s, badge: p, primaryColor: f, secondaryColor: j, isDisabled: N = !1 } = e,
-        E = (0, r.bG)([g.A], () => g.A.getProps().originalProfile),
+        E = (0, r.bG)([m.A], () => m.A.getProps().originalProfile),
         b = null != E && E.tag !== s;
     function T(e) {
-        m.A.updateGuildProfile(n, { tag: e });
+        g.A.updateGuildProfile(n, { tag: e });
     }
     return (0, i.jsxs)("div", {
         className: t,
@@ -44,8 +44,8 @@ let p = function (e) {
                                         badge: p,
                                         width: 40,
                                         height: 40,
-                                        primaryTintColor: f,
-                                        secondaryTintColor: j,
+                                        primaryTintColor: f ?? void 0,
+                                        secondaryTintColor: j ?? void 0,
                                     }),
                                     disabled: N,
                                     value: s ?? "",
