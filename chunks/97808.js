@@ -32,8 +32,11 @@ function S(e) {
     return (0, r.jsx)("rect", { x: c, y: d, width: l, height: o, fill: "transparent", "aria-hidden": !0, ...a });
 }
 function v(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    return null != t ? A.intl.formatToPlainString(A.t["/6mw10"], { label: e, status: (0, h.MU)(t, n) }) : e;
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+    return null != t
+        ? A.intl.formatToPlainString(A.t["/6mw10"], { label: e, status: (0, h.MU)(t, { isMobile: n, isVR: r }) })
+        : e;
 }
 function C(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
@@ -370,7 +373,7 @@ function k(e) {
             specs: R,
         } = e,
         O = { width: (0, E.FT)(n), height: (0, E.FT)(n) },
-        D = null == h || p ? void 0 : v(h, A, T),
+        D = null == h || p ? void 0 : v(h, A, T, y),
         L = R.size * g.Xq,
         w = C(A, n, T, S, y),
         x =

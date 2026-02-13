@@ -53,10 +53,13 @@ function A(e) {
     return n === r ? n : null != n ? `${n} (${r})` : r;
 }
 function I(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        { isMobile: n = !1, isVR: r = !1 } = t;
     switch (e) {
         case s.clD.ONLINE:
-            return t ? o.intl.string(o.t["9hghLD"]) : o.intl.string(o.t.WbGtnH);
+            if (r) return o.intl.string(o.t.SWnU0R);
+            if (n) return o.intl.string(o.t["9hghLD"]);
+            return o.intl.string(o.t.WbGtnH);
         case s.clD.OFFLINE:
             return o.intl.string(o.t.Vv0abJ);
         case s.clD.IDLE:
