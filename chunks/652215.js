@@ -5201,6 +5201,7 @@ var no = (function (e) {
             (e.REPLY_NUDGES_SHOWN = "reply_nudges_shown"),
             (e.APP_TRANSACTION_ID_SYNCED = "app_transaction_id_synced"),
             (e.PARENTAL_CONSENT_CHECKED = "parental_consent_checked"),
+            (e.SEO_PAGE_CWV_MEASURED = "seo_page_cwv_measured"),
             e
         );
     })({}),
