@@ -1,6 +1,5 @@
-"use strict";
-s.d(t, { A: () => n });
-let n = (0, s(945810).mj)({
+n.d(t, { A: () => i });
+let i = (0, n(945810).mj)({
     name: "2025-09-cmc-refresh",
     kind: "user",
     defaultConfig: { newUIEnabled: !1, searchEnabled: !1, desktopSendIconEnabled: !1 },
