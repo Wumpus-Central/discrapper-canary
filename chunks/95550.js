@@ -139,7 +139,10 @@ class eo extends l.PureComponent {
             is_friend: !this.isNotFriends(),
         }),
             W._.subscribe(et.jej.SCROLL_PAGE_UP, this.scrollPageUp),
-            W._.subscribe(et.jej.SCROLL_PAGE_DOWN, this.scrollPageDown);
+            W._.subscribe(et.jej.SCROLL_PAGE_DOWN, this.scrollPageDown),
+            setTimeout(() => {
+                this.forceFocus();
+            }, 0);
     }
     componentWillUnmount() {
         W._.unsubscribe(et.jej.SCROLL_PAGE_UP, this.scrollPageUp),
