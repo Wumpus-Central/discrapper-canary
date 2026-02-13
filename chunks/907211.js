@@ -592,7 +592,7 @@ let { Themes: r } = n(680049).zv,
             },
             CONTROL_SECONDARY_BORDER_ACTIVE: {
                 category: "generic",
-                [r.DARK]: { raw: "TRANSPARENT", opacity: 0 },
+                [r.DARK]: { raw: "WHITE", opacity: 0.03 },
                 [r.LIGHT]: { raw: "BLACK", opacity: 0.04 },
                 [r.MIDNIGHT]: { raw: "PLUM_11", opacity: 0.08 },
                 [r.DARKER]: { raw: "PLUM_11", opacity: 0.06 },
