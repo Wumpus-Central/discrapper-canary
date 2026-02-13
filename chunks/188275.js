@@ -1,12 +1,11 @@
 "use strict";
 n.d(t, {
     Kf: () => a,
-    Lo: () => p,
+    Lo: () => h,
     Nh: () => d,
     Nu: () => c,
     Pc: () => i,
     XR: () => s,
-    Y2: () => h,
     e2: () => u,
     sQ: () => _,
     tC: () => f,
@@ -23,5 +22,4 @@ let i = new Set(["1409663649038995658", "1438571444891025408", "1346069614634864
     d = "Social Layer Storefront Product Details Modal",
     _ = new Set([s, o]),
     f = new Set([a]),
-    p = 2,
-    h = new Date("2026-03-15T00:00:00Z");
+    h = 2;

@@ -1,6 +1,6 @@
 "use strict";
 let r;
-n.d(t, { A: () => U });
+n.d(t, { A: () => j });
 var i = n(311907),
     a = n(73153),
     s = n(773669),
@@ -14,53 +14,54 @@ let u = {},
     d = {},
     _ = {},
     f = {},
-    p = {};
-function h() {
-    (d = {}), (f = {}), (p = {});
-}
-function m(e) {
-    let { skuId: t } = e;
-    f = { ...f, [t]: "checking" };
-}
-function g(e) {
-    let { skuId: t, interactionId: n } = e;
-    if ("checking" !== f[t]) return !1;
-    p[n] = t;
+    h = {},
+    p = { state: "idle" };
+function g() {
+    (d = {}), (f = {}), (h = {}), (p = { state: "idle" });
 }
 function E(e) {
     let { skuId: t } = e;
-    f = { ...f, [t]: "error" };
+    f = { ...f, [t]: "checking" };
 }
 function A(e) {
+    let { skuId: t, interactionId: n } = e;
+    if ("checking" !== f[t]) return !1;
+    h[n] = t;
+}
+function I(e) {
+    let { skuId: t } = e;
+    f = { ...f, [t]: "error" };
+}
+function T(e) {
     let { skuId: t, recipientId: n, eligible: r } = e;
     if (o.default.getId() !== n) return !1;
     f = { ...f, [t]: r ? "eligible" : "ineligible" };
 }
-function I(e) {
+function y(e) {
     let { entitlement: t } = e;
     if (null == f[t.sku_id]) return !1;
     (f = { ...f }), delete f[t.sku_id];
 }
-function T(e) {
+function S(e) {
     let { interactionId: t } = e;
-    if (null == p[t]) return !1;
-    delete p[t];
-}
-function y(e) {
-    let { interactionId: t } = e;
-    if (null == t) return !1;
-    let n = p[t];
-    if (null == n) return !1;
-    (f = { ...f, [n]: "error" }), delete p[t];
-}
-function S() {
-    (f = {}), (p = {});
+    if (null == h[t]) return !1;
+    delete h[t];
 }
 function v(e) {
+    let { interactionId: t } = e;
+    if (null == t) return !1;
+    let n = h[t];
+    if (null == n) return !1;
+    (f = { ...f, [n]: "error" }), delete h[t];
+}
+function C() {
+    (f = {}), (h = {});
+}
+function b(e) {
     let { applicationId: t, userIds: n } = e;
     d = { ...d, [t]: { ...(d[t] ?? {}), [l(n)]: { state: "loading" } } };
 }
-function C(e) {
+function N(e) {
     let { skus: t, skusToRecommendationReasons: n, userIds: r, application: i, numItemsRequested: a } = e;
     d = {
         ...d,
@@ -70,22 +71,22 @@ function C(e) {
         },
     };
 }
-function b(e) {
+function R(e) {
     let { applicationId: t, userIds: n } = e,
         r = l(n);
     if (null != d[t] && null != d[t][r] && "success" === d[t][r].state) return !1;
     d = { ...d, [t]: { ...(d[t] ?? {}), [r]: { state: "error" } } };
 }
-function N(e) {
+function O(e) {
     let { guildId: t } = e,
         n = c[t];
     (c[t] = { ...n, state: "loading" }), (c = { ...c });
 }
-function R(e) {
+function D(e) {
     let { guildId: t, storefront: n } = e;
     (c[t] = { storefront: n, state: "fetched", fetchedAt: Date.now() }), (c = { ...c });
 }
-function O(e) {
+function L(e) {
     let { guildId: t, storefront: n } = e,
         r = c[t];
     r?.storefront != null
@@ -93,7 +94,7 @@ function O(e) {
         : (c[t] = { storefront: n, state: "partially-fetched", fetchedAt: null }),
         (c = { ...c });
 }
-function D(e) {
+function w(e) {
     let { guildId: t, eager: n } = e;
     if (n) {
         let e = c[t];
@@ -101,30 +102,40 @@ function D(e) {
     } else c[t] = { storefront: null, state: "error", fetchedAt: Date.now() };
     c = { ...c };
 }
-function L(e) {
+function x(e) {
     let { guildId: t, pageIndex: n, skuId: r } = e;
     (u[t] = { activePage: n, activeSkuId: r }), (u = { ...u });
 }
-function w(e) {
+function P(e) {
     let { guildId: t, announcement: n } = e;
     (_ = { ..._ })[t] = { state: "success", announcement: n };
 }
-function x(e) {
+function M(e) {
     let { guildId: t } = e;
     (_ = { ..._ })[t] = { state: "error" };
 }
-function P(e) {
+function k(e) {
     let { guildId: t } = e;
     (_ = { ..._ })[t] = { state: "loading" };
 }
-function M() {
+function U() {
+    p = { state: "loading" };
+}
+function G(e) {
+    let { config: t } = e;
+    p = { state: "success", config: t, fetchedAt: Date.now() };
+}
+function F() {
+    p = { state: "error", fetchedAt: Date.now() };
+}
+function V() {
     if (r === s.default.locale) return !1;
     (r = s.default.locale), (u = {}), (c = {}), (d = {});
 }
-class k extends i.Ay.Store {
+class B extends i.Ay.Store {
     static displayName = "SocialLayerStorefrontStore";
     initialize() {
-        this.waitFor(o.default, s.default), this.syncWith([s.default], M), (r = s.default.locale);
+        this.waitFor(o.default, s.default), this.syncWith([s.default], V), (r = s.default.locale);
     }
     getStorefrontData(e) {
         return c[e];
@@ -138,6 +149,12 @@ class k extends i.Ay.Store {
     getAnnouncement(e) {
         return _[e];
     }
+    getConfig() {
+        return "success" === p.state ? p.config : null;
+    }
+    getConfigFetchState() {
+        return p;
+    }
     getSKUEligibility(e) {
         return f[e];
     }
@@ -145,25 +162,28 @@ class k extends i.Ay.Store {
         return "ineligible" !== f[e];
     }
 }
-let U = new k(a.h, {
-    LOGOUT: h,
-    POST_CONNECTION_OPEN: S,
-    ENTITLEMENT_CREATE: I,
-    INTERACTION_FAILURE: y,
-    INTERACTION_SUCCESS: T,
-    SOCIAL_LAYER_STOREFRONT_LOAD: N,
-    SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: R,
-    SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS: O,
-    SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE: D,
-    SET_SOCIAL_LAYER_STOREFRONT_STATE: L,
-    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_SUCCESS: C,
-    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_FAILURE: b,
-    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_START: v,
-    SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_START: P,
-    SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_SUCCESS: w,
-    SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_FAILURE: x,
-    SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_START: m,
-    SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE: g,
-    SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE: E,
-    SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE: A,
+let j = new B(a.h, {
+    LOGOUT: g,
+    POST_CONNECTION_OPEN: C,
+    ENTITLEMENT_CREATE: y,
+    INTERACTION_FAILURE: v,
+    INTERACTION_SUCCESS: S,
+    SOCIAL_LAYER_STOREFRONT_LOAD: O,
+    SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: D,
+    SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS: L,
+    SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE: w,
+    SET_SOCIAL_LAYER_STOREFRONT_STATE: x,
+    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_SUCCESS: N,
+    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_FAILURE: R,
+    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_START: b,
+    SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_START: k,
+    SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_SUCCESS: P,
+    SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_FAILURE: M,
+    SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_START: U,
+    SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS: G,
+    SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_FAILURE: F,
+    SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_START: E,
+    SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE: A,
+    SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE: I,
+    SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE: T,
 });

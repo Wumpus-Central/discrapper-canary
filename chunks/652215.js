@@ -1551,6 +1551,7 @@ let ef = "",
         SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_ELIGIBILITY: (e, t) =>
             `/partner-sdk/guilds/${e}/application-storefront/skus/${t}/eligibility`,
         SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT: (e) => `/partner-sdk/guilds/${e}/application-storefront/announcement`,
+        SOCIAL_LAYER_STOREFRONT_CONFIG: "/partner-sdk/storefront-config",
         ORDER_GET: (e) => `/billing/orders/${e}`,
         ORDER_CREATE: "/billing/orders",
         ORDER_LIST: "/billing/orders",

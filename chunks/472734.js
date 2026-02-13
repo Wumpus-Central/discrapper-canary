@@ -14,8 +14,8 @@ var n = i(627968),
     m = i(844815),
     A = i(204890),
     f = i(383089),
-    j = i(41032),
-    C = i(188275),
+    C = i(41032),
+    j = i(188275),
     h = i(652215),
     k = i(985018),
     S = i(778560);
@@ -39,7 +39,7 @@ function T(t) {
         (M.current.isLaunchable = N), (M.current.isApplicationConnected = R), (M.current.canStartAuthorization = I);
     }, [N, R, I]),
         (0, s.Ay)(() => {
-            u.default.track(h.HAw.OPEN_MODAL, { location_stack: O, type: C.e2, sku_id: T.id, application_id: b.id });
+            u.default.track(h.HAw.OPEN_MODAL, { location_stack: O, type: j.e2, sku_id: T.id, application_id: b.id });
         }),
         e.useEffect(() => {
             if (D) return;
@@ -106,7 +106,7 @@ function T(t) {
             transitionState: a,
             onClose: i,
             children: [
-                (0, n.jsx)(j.z, { sku: T, title: k.intl.string(k.t["5glWta"]) }),
+                (0, n.jsx)(C.z, { sku: T, title: k.intl.string(k.t["5glWta"]) }),
                 (0, n.jsxs)(l.cwr, {
                     children: [
                         (0, n.jsx)(r.Text, {
@@ -121,7 +121,10 @@ function T(t) {
                             L > 0 &&
                             (0, n.jsx)("div", {
                                 className: S.I,
-                                children: (0, n.jsx)(A.J8, { text: k.intl.format(k.t["0StwHe"], { orbs: L }) }),
+                                children: (0, n.jsx)(A.J8, {
+                                    Icon: l.Cp8,
+                                    text: k.intl.format(k.t["0StwHe"], { orbCount: L }),
+                                }),
                             }),
                     ],
                 }),

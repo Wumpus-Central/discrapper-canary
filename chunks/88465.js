@@ -15,5 +15,4 @@ e.exports = {
     r$: "logoContainer__38ccf",
     wm: "logo__38ccf",
     p6: "priceContainer__38ccf",
-    xN: "orbsTextContainer__38ccf",
 };

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => F, X: () => G });
+n.d(t, { A: () => V, X: () => F });
 var r = n(627968),
     i = n(64700),
     a = n(284009),
@@ -19,33 +19,34 @@ var r = n(627968),
     I = n(218075),
     T = n(285719),
     y = n(938289),
-    S = n(351906),
-    v = n(615405),
-    C = n(79387),
-    b = n(147964),
-    N = n(603349),
-    R = n(45938),
-    O = n(937008),
-    D = n(156312),
-    L = n(566980),
-    w = n(938136),
-    x = n(319820),
-    P = n(652215),
-    M = n(985018),
-    k = n(342444);
-function U(e) {
+    S = n(204890),
+    v = n(351906),
+    C = n(615405),
+    b = n(79387),
+    N = n(147964),
+    R = n(603349),
+    O = n(45938),
+    D = n(937008),
+    L = n(156312),
+    w = n(566980),
+    x = n(938136),
+    P = n(319820),
+    M = n(652215),
+    k = n(985018),
+    U = n(342444);
+function G(e) {
     let { application: t, sku: n, isEmbeddedIAP: i } = e;
     return !0 !== i
         ? null
         : (0, r.jsxs)("div", {
-              className: k.qY,
+              className: U.qY,
               children: [
                   (0, r.jsx)(E.A, { game: t }),
-                  (0, r.jsx)(u.Heading, { variant: "heading-lg/bold", className: k.nI, children: n.name }),
+                  (0, r.jsx)(u.Heading, { variant: "heading-lg/bold", className: U.nI, children: n.name }),
               ],
           });
 }
-let G = (e) => {
+let F = (e) => {
     let {
             hasLegalTermsFlash: t,
             legalTermsNodeRef: n,
@@ -56,10 +57,10 @@ let G = (e) => {
         {
             application: E,
             purchaseState: T,
-            paymentSourceId: N,
-            setPaymentSourceId: w,
+            paymentSourceId: S,
+            setPaymentSourceId: R,
             skusById: x,
-            skuPricePreviewsById: U,
+            skuPricePreviewsById: P,
             selectedSkuId: G,
             setHasAcceptedTerms: F,
             isEmbeddedIAP: V,
@@ -69,9 +70,9 @@ let G = (e) => {
             hasPaymentSources: Y,
             checkoutPaymentSources: W,
             hasCheckoutContextLoaded: K,
-        } = (0, D.P5)(),
-        { isGift: $, giftRecipient: z } = (0, O.Pv)(),
-        q = $ && (0, R.Ik)(z),
+        } = (0, L.P5)(),
+        { isGift: $, giftRecipient: z } = (0, D.Pv)(),
+        q = $ && (0, O.Ik)(z),
         { fetched: X, hasAlreadyLinked: Z } = (0, p.RD)(E),
         Q = (0, y.n)({ location: "OneTimePurchaseReview" });
     s()(null != G, "Expected selectedSkuId");
@@ -80,48 +81,48 @@ let G = (e) => {
         if (K && W.length > 0 && !J.current) {
             J.current = !0;
             let e = W.find((e) => e.enabled) ?? null;
-            null != e ? w(e.id) : w(null);
+            null != e ? R(e.id) : R(null);
         }
-    }, [K, W, w]);
+    }, [K, W, R]);
     let ee = x[G],
         et = ee?.eligiblePaymentGateways,
-        en = U[G],
-        er = N ?? C.B,
+        en = P[G],
+        er = S ?? b.B,
         ei = W.length > 0,
-        ea = null != en ? (en[er] ?? (ei ? en[C.B] : null)) : null;
+        ea = null != en ? (en[er] ?? (ei ? en[b.B] : null)) : null;
     s()(null != ee, "SKU must exist and be fetched."), s()(null != E, "Application must exist.");
-    let es = (0, l.bG)([h.A, b.A], () => b.A.inTestModeForApplication(E.id) || h.A.inDevModeForApplication(E.id), [
+    let es = (0, l.bG)([h.A, N.A], () => N.A.inTestModeForApplication(E.id) || h.A.inDevModeForApplication(E.id), [
             E.id,
         ]),
-        eo = (0, l.bG)([S.A], () => S.A.enabled),
-        el = o.M.EEA_COUNTRIES.has(v.A.ipCountryCodeWithFallback),
-        eu = T === L.h.PURCHASING || T === L.h.COMPLETED,
-        ec = W.find((e) => e.id === N) ?? null,
+        eo = (0, l.bG)([v.A], () => v.A.enabled),
+        el = o.M.EEA_COUNTRIES.has(C.A.ipCountryCodeWithFallback),
+        eu = T === w.h.PURCHASING || T === w.h.COMPLETED,
+        ec = W.find((e) => e.id === S) ?? null,
         ed = null != ec ? ec.type : null,
-        e_ = null != et && et.length > 0 && (N === C.B || null === ed) && Y ? I.f.SELECT_PAYMENT_METHOD : void 0,
-        ef = ee.productLine === P.EZt.SOCIAL_LAYER_GAME_ITEM,
+        e_ = null != et && et.length > 0 && (S === b.B || null === ed) && Y ? I.f.SELECT_PAYMENT_METHOD : void 0,
+        ef = ee.productLine === M.EZt.SOCIAL_LAYER_GAME_ITEM,
         eh = q && !ef,
         ep = i.useMemo(
             () => ({
-                testModeWarning: es ? M.intl.string(M.t.OvMyMd) : null,
-                devShelfError: (0, g.n)(E, P.gfo.EMBEDDED) && H === h.$.ERROR ? M.intl.string(M.t.tAmECt) : null,
+                testModeWarning: es ? k.intl.string(k.t.OvMyMd) : null,
+                devShelfError: (0, g.n)(E, M.gfo.EMBEDDED) && H === h.$.ERROR ? k.intl.string(k.t.tAmECt) : null,
                 socialLayerGameItemDisclaimer:
-                    ef && X && !Z && !$ ? M.intl.string(Q ? M.t["3pLGHL"] : M.t["6fBC//"]) : null,
+                    ef && X && !Z && !$ ? k.intl.string(Q ? k.t["3pLGHL"] : k.t["6fBC//"]) : null,
             }),
             [es, E, H, ef, X, Z, $, Q],
         ),
         em = i.useMemo(
             () => ({
-                label: M.intl.string(M.t["mmDvV+"]),
+                label: k.intl.string(k.t["mmDvV+"]),
                 paymentSources: W,
-                selectedPaymentSourceId: N,
+                selectedPaymentSourceId: S,
                 onChange: a,
                 onPaymentSourceAdd: d,
                 hidePersonalInformation: eo,
                 paymentGatewayRestrictions: et,
                 defaultPaymentSourceId: W.find((e) => e.isDefault)?.id,
             }),
-            [W, N, a, d, eo, et],
+            [W, S, a, d, eo, et],
         ),
         eg = i.useMemo(
             () =>
@@ -135,7 +136,7 @@ let G = (e) => {
                             showWithdrawalWaiver: el,
                             disabled: eu,
                             subscriptionPlan: null,
-                            finePrintClassname: k.im,
+                            finePrintClassname: U.im,
                             purchaseType: B,
                             isGift: $,
                             finePrint: (0, r.jsx)(c.A, {
@@ -151,7 +152,7 @@ let G = (e) => {
                         _ || null == ep.socialLayerGameItemDisclaimer
                             ? null
                             : (0, r.jsx)("div", {
-                                  className: k.lm,
+                                  className: U.lm,
                                   children: (0, r.jsx)(u.wx6, {
                                       type: "warning",
                                       children: ep.socialLayerGameItemDisclaimer,
@@ -179,7 +180,7 @@ let G = (e) => {
         purchaseTermsAndLegalContent: eg,
     };
 };
-function F(e) {
+function V(e) {
     let { hasLegalTermsFlash: t, legalTermsNodeRef: n, onPaymentSourceChange: i, handlePaymentSourceAdd: a } = e,
         {
             sku: s,
@@ -194,19 +195,20 @@ function F(e) {
             warningAndErrorMessages: A,
             paymentSourceDropdownProps: y,
             purchaseTermsAndLegalContent: S,
-        } = G({ hasLegalTermsFlash: t, legalTermsNodeRef: n, onPaymentSourceChange: i, handlePaymentSourceAdd: a });
+        } = F({ hasLegalTermsFlash: t, legalTermsNodeRef: n, onPaymentSourceChange: i, handlePaymentSourceAdd: a }),
+        v = f?.orbs_reward;
     return (0, r.jsxs)("div", {
-        className: k.Du,
+        className: U.Du,
         children: [
             (0, r.jsx)(I.j, { paymentRestrictionBannerType: g }),
             null != A.testModeWarning
                 ? (0, r.jsx)(
                       d.A,
                       {
-                          icon: (0, u.kHD)(N.A),
+                          icon: (0, u.kHD)(R.A),
                           iconSize: d.A.Sizes.SMALL,
                           color: d.A.Colors.WARNING,
-                          className: k.QK,
+                          className: U.QK,
                           children: A.testModeWarning,
                       },
                       "TEST_MODE",
@@ -216,33 +218,44 @@ function F(e) {
                 ? (0, r.jsx)(
                       d.A,
                       {
-                          icon: (0, u.kHD)(N.A),
+                          icon: (0, u.kHD)(R.A),
                           iconSize: d.A.Sizes.SMALL,
                           color: d.A.Colors.ERROR,
-                          className: k.QK,
+                          className: U.QK,
                           children: A.devShelfError,
                       },
                       "DEV_SHELF_ERROR",
                   )
                 : null,
-            (0, r.jsx)(U, { application: o, sku: s, isEmbeddedIAP: h }),
-            p && (0, r.jsx)(w.A, { sku: s }),
+            (0, r.jsx)(G, { application: o, sku: s, isEmbeddedIAP: h }),
+            p && (0, r.jsx)(x.A, { sku: s }),
             null != l ? (0, r.jsx)(T.Z, { giftRecipient: l }) : null,
             E
-                ? (0, r.jsx)(u.y$y, { type: u.y$y.Type.WANDERING_CUBES, className: k.fx })
+                ? (0, r.jsx)(u.y$y, { type: u.y$y.Type.WANDERING_CUBES, className: U.fx })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(u.D0$, {
-                              label: c ? M.intl.string(M.t.PEjaCx) : M.intl.string(M.t.sail9P),
+                              label: c ? k.intl.string(k.t.PEjaCx) : k.intl.string(k.t.sail9P),
                               children:
                                   null != f
-                                      ? (0, r.jsx)(x.hl, { sku: s, skuPricePreview: f, application: o })
-                                      : (0, r.jsx)(x.Uw, { sku: s, value: "" }),
+                                      ? (0, r.jsx)(P.hl, { sku: s, skuPricePreview: f, application: o })
+                                      : (0, r.jsx)(P.Uw, { sku: s, value: "" }),
                           }),
                           (0, r.jsx)(_.A, { ...y }),
+                          null != v && v > 0 && (0, r.jsx)(B, { orbsReward: v, isGift: c }),
                       ],
                   }),
             S,
         ],
     });
 }
+let B = (e) => {
+    let { orbsReward: t, isGift: n } = e,
+        i = n ? k.t["ZV+aS9"] : k.t["0StwHe"];
+    return (0, r.jsx)(u.D0$, {
+        children: (0, r.jsx)("div", {
+            className: U.o7,
+            children: (0, r.jsx)(S.J8, { Icon: u.Cp8, text: k.intl.format(i, { orbCount: t }) }),
+        }),
+    });
+};

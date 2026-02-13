@@ -7,4 +7,5 @@ e.exports = {
     qY: "skuHeading_b44961",
     nI: "skuHeadingText_b44961",
     lm: "socialLayerGameItemDisclaimer_b44961",
+    o7: "orbsRewardNotice_b44961",
 };

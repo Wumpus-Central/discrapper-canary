@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Z: () => G }), n(321073);
+n.d(t, { Z: () => V }), n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(735438),
@@ -11,29 +11,30 @@ var r = n(627968),
     d = n(765441),
     _ = n(937008),
     f = n(156312),
-    p = n(871181),
-    h = n(238017),
-    m = n(285719),
-    g = n(650588),
-    E = n(383501),
-    A = n(287809),
-    I = n(67480),
-    T = n(403362),
-    y = n(580630),
-    S = n(871123),
-    v = n(832163),
-    C = n(44724),
-    b = n(980094),
-    N = n(421161),
-    R = n(366523),
-    O = n(652215),
-    D = n(806931),
-    L = n(788868),
-    w = n(818348),
-    x = n(985018),
-    P = n(490669);
-function M(e) {
-    let t = (0, o.bG)([E.A], () => (E.A.isConnected() ? E.A.getChannelId() : null)),
+    h = n(871181),
+    p = n(238017),
+    g = n(285719),
+    E = n(650588),
+    A = n(383501),
+    I = n(287809),
+    T = n(67480),
+    y = n(403362),
+    S = n(580630),
+    v = n(871123),
+    C = n(832163),
+    b = n(44724),
+    N = n(980094),
+    R = n(421161),
+    O = n(204890),
+    D = n(366523),
+    L = n(652215),
+    w = n(806931),
+    x = n(788868),
+    P = n(818348),
+    M = n(985018),
+    k = n(490669);
+function U(e) {
+    let t = (0, o.bG)([A.A], () => (A.A.isConnected() ? A.A.getChannelId() : null)),
         [n, r] = i.useState([]);
     return (
         i.useEffect(() => {
@@ -41,40 +42,40 @@ function M(e) {
                 i = [],
                 a = new Set();
             for (let t of n)
-                (!(0, D.Xw)(t) && !(0, D.Ay)(t)) ||
+                (!(0, w.Xw)(t) && !(0, w.Ay)(t)) ||
                     t.user.id === e ||
                     a.has(t.user.id) ||
                     (a.add(t.user.id), i.push(t));
-            i.sort((e, t) => ((0, D.Ay)(e) && !(0, D.Ay)(t) ? -1 : (0, D.Ay)(t) && !(0, D.Ay)(e) ? 1 : 0)),
+            i.sort((e, t) => ((0, w.Ay)(e) && !(0, w.Ay)(t) ? -1 : (0, w.Ay)(t) && !(0, w.Ay)(e) ? 1 : 0)),
                 r(i.map((e) => e.user));
         }, [t, e]),
         n
     );
 }
-function k(e, t, n) {
+function G(e, t, n) {
     let r = (0, d.A)(),
-        a = M(e),
-        l = (0, o.yK)([A.default], () => n?.map(A.default.getUser).filter(T.Vq) ?? [], [n]);
+        a = U(e),
+        l = (0, o.yK)([I.default], () => n?.map(I.default.getUser).filter(y.Vq) ?? [], [n]);
     return i.useMemo(
         () => s().uniqWith([...(null != t ? [t] : []), ...l, ...a, ...r], (e, t) => e.id === t.id),
         [t, l, a, r],
     );
 }
-function U(e) {
+function F(e) {
     let { handleClose: t, guild: n, sku: a } = e,
         s = i.useCallback(() => {
-            (0, C.X)({ guildId: n.id });
+            (0, b.X)({ guildId: n.id });
         }, [n.id]),
         o = i.useCallback(() => {
             t();
-            let e = v.A.getStorefrontState(n.id)?.activePage;
-            window.location.pathname.includes(O.BVt.CHANNELS_GAME_SHOP(n.id, e ?? 0, a.id)) ||
-                ((0, l.s7G)(), (0, C.default)({ guildId: n.id, pageIndex: e ?? 0, skuId: a.id, slug: a.slug }));
+            let e = C.A.getStorefrontState(n.id)?.activePage;
+            window.location.pathname.includes(L.BVt.CHANNELS_GAME_SHOP(n.id, e ?? 0, a.id)) ||
+                ((0, l.s7G)(), (0, b.default)({ guildId: n.id, pageIndex: e ?? 0, skuId: a.id, slug: a.slug }));
         }, [n.id, a.id, a.slug, t]);
     return (0, r.jsx)("div", {
-        className: P.$O,
+        className: k.$O,
         children: (0, r.jsx)(l.QWc, {
-            text: n.id === (0, S.zf)() ? x.intl.string(x.t.nyIcya) : x.intl.string(x.t.ImioFL),
+            text: n.id === (0, v.zf)() ? M.intl.string(M.t.nyIcya) : M.intl.string(M.t.ImioFL),
             onMouseDown: s,
             onClick: o,
             textVariant: "text-sm/medium",
@@ -82,7 +83,7 @@ function U(e) {
         }),
     });
 }
-let G = (e) => {
+let V = (e) => {
     let { handleStepChange: t, handleClose: n } = e,
         {
             customGiftMessage: i = "",
@@ -90,84 +91,84 @@ let G = (e) => {
             giftRecipient: s,
             emojiConfetti: u,
             soundEffect: d,
-            setEmojiConfetti: E,
-            setSoundEffect: T,
-            giftingOrigin: v,
-            additionalUserIds: C,
+            setEmojiConfetti: A,
+            setSoundEffect: y,
+            giftingOrigin: C,
+            additionalUserIds: b,
         } = (0, _.Pv)(),
-        { selectedSkuId: O, application: D } = (0, f.P5)(),
-        M = (0, o.bG)([A.default], () => A.default.getCurrentUser()),
-        G = k(M?.id, s, C),
-        V = (0, o.bG)([I.A], () => (null != O ? I.A.get(O) : null), [O]),
-        F = (0, S.fq)(V),
-        B = (0, S.xf)(V),
-        j = (0, N.j)(V, { shouldFetchIfMissing: !0 }),
-        H = async (e, t) => {},
-        Y = () =>
-            (0, r.jsx)(p.A, {
+        { selectedSkuId: L, application: w } = (0, f.P5)(),
+        U = (0, o.bG)([I.default], () => I.default.getCurrentUser()),
+        V = G(U?.id, s, b),
+        B = (0, o.bG)([T.A], () => (null != L ? T.A.get(L) : null), [L]),
+        j = (0, v.fq)(B),
+        H = (0, v.xf)(B),
+        Y = (0, R.j)(B, { shouldFetchIfMissing: !0 }),
+        W = async (e, t) => {},
+        K = () =>
+            (0, r.jsx)(h.A, {
                 onTextChange: (e) => a?.(e),
                 pendingText: i,
                 currentText: i,
                 disableThemedBackground: !0,
-                className: P.iX,
-                innerClassName: P.pt,
+                className: k.iX,
+                innerClassName: k.pt,
             }),
-        W = () =>
-            null != s && (v === L.vQ.USER_PROFILE_WISHLIST || v === L.vQ.DM_CHANNEL_WISHLIST)
-                ? (0, r.jsx)(m.Z, { giftRecipient: s })
-                : (0, r.jsx)(c.A, { selectedSkuId: O, validateSelectedGift: H, recipients: G }),
-        K = (e) => {
-            null != T && T(null == e ? void 0 : e);
+        $ = () =>
+            null != s && (C === x.vQ.USER_PROFILE_WISHLIST || C === x.vQ.DM_CHANNEL_WISHLIST)
+                ? (0, r.jsx)(g.Z, { giftRecipient: s })
+                : (0, r.jsx)(c.A, { selectedSkuId: L, validateSelectedGift: W, recipients: V }),
+        z = (e) => {
+            null != y && y(null == e ? void 0 : e);
         },
-        z = () =>
+        q = () =>
             (0, r.jsxs)("div", {
-                className: P.mT,
+                className: k.mT,
                 children: [
-                    null != F &&
-                        (0, r.jsx)(R.A, {
-                            containerClassName: P.T3,
-                            cardImage: F,
-                            cardBackgroundImage: B,
-                            altText: V?.name ?? "",
+                    null != j &&
+                        (0, r.jsx)(D.A, {
+                            containerClassName: k.T3,
+                            cardImage: j,
+                            cardBackgroundImage: H,
+                            altText: B?.name ?? "",
                             shape: "square",
                         }),
                     (0, r.jsxs)("div", {
-                        className: P._T,
+                        className: k._T,
                         children: [
-                            (0, r.jsx)(g.A, { sound: d, onSelect: K }),
-                            (0, r.jsx)(h.A, { setEmojiConfetti: E, emojiConfetti: null == u ? void 0 : u }),
+                            (0, r.jsx)(E.A, { sound: d, onSelect: z }),
+                            (0, r.jsx)(p.A, { setEmojiConfetti: A, emojiConfetti: null == u ? void 0 : u }),
                         ],
                     }),
                 ],
             }),
-        $ = () => {
-            if (null == V) return null;
-            let e = (0, y.$g)(V.price?.amount ?? 0, V.price?.currency ?? w.Yr.USD);
+        X = () => {
+            if (null == B) return null;
+            let e = (0, S.$g)(B.price?.amount ?? 0, B.price?.currency ?? P.Yr.USD);
             return (0, r.jsxs)("div", {
-                className: P.AN,
+                className: k.AN,
                 children: [
-                    (0, r.jsx)(l.zEo, { className: P.jr, children: x.intl.string(x.t.PpoJzt) }),
+                    (0, r.jsx)(l.zEo, { className: k.jr, children: M.intl.string(M.t.PpoJzt) }),
                     (0, r.jsxs)("div", {
-                        className: P.Wx,
+                        className: k.Wx,
                         children: [
                             (0, r.jsx)("div", {
-                                className: P.Xb,
+                                className: k.Xb,
                                 children:
-                                    null != V &&
-                                    null != F &&
-                                    (0, r.jsx)(R.A, {
-                                        containerClassName: P.Iy,
-                                        cardImage: F,
-                                        cardBackgroundImage: B,
-                                        altText: V.name,
+                                    null != B &&
+                                    null != j &&
+                                    (0, r.jsx)(D.A, {
+                                        containerClassName: k.Iy,
+                                        cardImage: j,
+                                        cardBackgroundImage: H,
+                                        altText: B.name,
                                         shape: "square",
                                     }),
                             }),
                             (0, r.jsxs)("div", {
-                                className: P.vz,
+                                className: k.vz,
                                 children: [
-                                    null != D && (0, r.jsx)(b.Q, { application: D }),
-                                    (0, r.jsx)(l.Text, { variant: "text-sm/semibold", children: V.name }),
+                                    null != w && (0, r.jsx)(N.Q, { application: w }),
+                                    (0, r.jsx)(l.Text, { variant: "text-sm/semibold", children: B.name }),
                                 ],
                             }),
                             (0, r.jsx)(l.Text, { variant: "text-md/semibold", children: e }),
@@ -176,22 +177,27 @@ let G = (e) => {
                 ],
             });
         },
-        q = () =>
-            (0, r.jsxs)("div", {
-                className: P.Tc,
+        Z = () => {
+            let e = B?.orbsReward;
+            return (0, r.jsxs)("div", {
+                className: k.Tc,
                 children: [
-                    W(),
-                    Y(),
                     $(),
-                    null != j && null != V && (0, r.jsx)(U, { handleClose: n, sku: V, guild: j }),
+                    K(),
+                    X(),
+                    null != e &&
+                        e > 0 &&
+                        (0, r.jsx)(O.J8, { Icon: l.Cp8, text: M.intl.format(M.t["ZV+aS9"], { orbCount: e }) }),
+                    null != Y && null != B && (0, r.jsx)(F, { handleClose: n, sku: B, guild: Y }),
                 ],
             });
+        };
     return {
-        renderStepBody: () => (0, r.jsxs)("div", { className: P.Du, children: [z(), q()] }),
-        getLeftColumnComponent: z,
-        getRightColumnComponent: q,
+        renderStepBody: () => (0, r.jsxs)("div", { className: k.Du, children: [q(), Z()] }),
+        getLeftColumnComponent: q,
+        getRightColumnComponent: Z,
         onStepChange: t,
         onBackClick: n,
-        disabled: null == s || s.id === M?.id || i.length > L.Jo,
+        disabled: null == s || s.id === U?.id || i.length > x.Jo,
     };
 };
