@@ -3985,6 +3985,7 @@ var no = (function (e) {
             (e.SCREENSHARE_FAILED = "screenshare_failed"),
             (e.PERK_DISCOVERABILITY_CARD_CTA_CLICKED = "perk_discoverability_card_cta_clicked"),
             (e.PREMIUM_TENURE_REWARDS_ORBS_CTA_CLICKED = "premium_tenure_rewards_orbs_cta_clicked"),
+            (e.PREMIUM_TENURE_REWARDS_ORBS_SECTION_IMPRESSION = "premium_tenure_rewards_orbs_section_impression"),
             (e.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED = "premium_whats_new_box_cta_clicked"),
             (e.PREMIUM_WHATS_NEW_VIEW_TIME = "premium_whats_new_view_time"),
             (e.PREMIUM_BEST_OF_VIEW_TIME = "premium_best_of_view_time"),
