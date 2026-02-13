@@ -1,9 +1,9 @@
-n.d(t, { A: () => y, s: () => L });
+n.d(t, { A: () => b, H: () => O });
 var i = n(627968),
     r = n(64700),
-    a = n(503698),
-    l = n.n(a),
-    s = n(960488),
+    l = n(503698),
+    a = n.n(l),
+    s = n(873263),
     o = n(323889),
     d = n(311907),
     c = n(397927),
@@ -18,12 +18,12 @@ var i = n(627968),
     I = n(415441),
     f = n(73473),
     C = n(545986),
-    N = n(796577),
-    T = n(654487),
+    T = n(7832),
+    N = n(654487),
     S = n(49999),
     x = n(985018),
-    v = n(794053);
-function b(e) {
+    v = n(437176);
+function y(e) {
     let { assetImage: t, assetVideo: n } = e;
     return null == n
         ? (0, i.jsxs)("div", {
@@ -35,11 +35,11 @@ function b(e) {
                       children: (0, i.jsx)("img", { className: v.LY, src: t.url, alt: t.altText }),
                   }),
                   (0, i.jsx)("div", {
-                      className: l()(v.LO, v.jx, v.hw),
+                      className: a()(v.LO, v.jx, v.hw),
                       children: (0, i.jsx)("img", { className: v.LY, src: t.url, alt: "" }),
                   }),
                   (0, i.jsx)("div", {
-                      className: l()(v.LO, v.jx, v.Co),
+                      className: a()(v.LO, v.jx, v.Co),
                       children: (0, i.jsx)("img", { className: v.LY, src: t.url, alt: "" }),
                   }),
               ],
@@ -70,18 +70,18 @@ function b(e) {
               ],
           });
 }
-function y(e) {
+function b(e) {
     let { config: t, onQuestCtaClick: n } = e,
-        a = (0, s.zy)(),
+        l = (0, s.zy)(),
         p = (0, s.W6)(),
-        { enabled: I } = (0, h.Z)({ location: T.rE.QUEST_HOME_DESKTOP }),
-        [y, L] = r.useState("display-lg"),
-        O = r.useCallback((e) => {
-            e.contentRect.width < 500 ? L("display-md") : L("display-lg");
+        { enabled: I } = (0, h.Z)({ location: N.rE.QUEST_HOME_DESKTOP }),
+        [b, O] = r.useState("display-lg"),
+        L = r.useCallback((e) => {
+            e.contentRect.width < 500 ? O("display-md") : O("display-lg");
         }, []),
-        R = (0, u.w)(O, [], { fireOnMount: !0 }),
+        R = (0, u.w)(L, [], { fireOnMount: !0 }),
         P = (0, d.bG)([_.A], () => _.A.quests),
-        { dismissTakeoverContent: j } = (0, N.j)();
+        { dismissQuestHomeHeroContent: j } = (0, T.I)();
     return (
         r.useEffect(() => {
             j(S.i.INDIRECT_ACTION);
@@ -93,7 +93,7 @@ function y(e) {
             sourceQuestContent: m.uF.QUEST_HOME_TAKEOVER,
             children: (e) =>
                 (0, i.jsx)("div", {
-                    className: l()(v.iE, "theme-midnight", { [v.Qx]: !I }),
+                    className: a()(v.iE, "theme-midnight", { [v.Qx]: !I }),
                     ref: (t) => {
                         (R.current = t), (e.current = t);
                     },
@@ -132,7 +132,7 @@ function y(e) {
                                                 children: [
                                                     (0, i.jsx)(c.Heading, {
                                                         color: "text-strong",
-                                                        variant: y,
+                                                        variant: b,
                                                         className: v.DD,
                                                         children: t.labelTitle,
                                                     }),
@@ -167,7 +167,7 @@ function y(e) {
                                                                   c.Button,
                                                                   {
                                                                       onClick: () => {
-                                                                          p.replace({ ...a, hash: void 0 }),
+                                                                          p.replace({ ...l, hash: void 0 }),
                                                                               n?.(),
                                                                               window.requestIdleCallback(() => {
                                                                                   (0, C.navigateToQuestHome)({
@@ -198,13 +198,13 @@ function y(e) {
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(b, { assetImage: t.assetHeroImage, assetVideo: t.assetHeroVideo }),
+                            (0, i.jsx)(y, { assetImage: t.assetHeroImage, assetVideo: t.assetHeroVideo }),
                         ],
                     }),
                 }),
         })
     );
 }
-function L() {
-    return (0, i.jsx)("div", { className: l()(v.iE, v.FG, v.B3), children: (0, i.jsx)(c.y$y, {}) });
+function O() {
+    return (0, i.jsx)("div", { className: a()(v.iE, v.FG, v.B3), children: (0, i.jsx)(c.y$y, {}) });
 }

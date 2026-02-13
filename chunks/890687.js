@@ -25,7 +25,6 @@ n.d(t, {
     XD: () => e1,
     YW: () => ex,
     Yl: () => ey,
-    _b: () => e4,
     a5: () => e$,
     aC: () => eY,
     fc: () => eO,
@@ -36,6 +35,7 @@ n.d(t, {
     p5: () => eZ,
     pT: () => eJ,
     sb: () => eQ,
+    vG: () => e4,
     zW: () => eq,
 }),
     n(321073),
@@ -135,9 +135,9 @@ function J(e, t, n) {
         _ = e6(e, d),
         f = e6(t, d);
     if (s) {
-        let { takeover: r } = n,
-            i = null != r && (0, Y.f0)(r, e.id),
-            a = null != r && (0, Y.f0)(r, t.id);
+        let { questHomeHero: r } = n,
+            i = null != r && (0, Y.I0)(r, e.id),
+            a = null != r && (0, Y.I0)(r, t.id);
         return i !== a && (i || a)
             ? i
                 ? X
@@ -239,7 +239,7 @@ function eu(e, t) {
     );
 }
 let ec = {},
-    ed = { takeover: null };
+    ed = { questHomeHero: null };
 function e_(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ec,
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ed,
@@ -253,8 +253,8 @@ function ef(e, t, n) {
     return e.localeCompare(t) * r;
 }
 function eh() {
-    let e = (0, u.bG)([R.A], () => R.A.getQuestHomeTakeoverConfig());
-    return r.useMemo(() => ({ takeover: e }), [e]);
+    let e = (0, u.bG)([R.A], () => R.A.getQuestHomeHeroConfig());
+    return r.useMemo(() => ({ questHomeHero: e }), [e]);
 }
 function ep(e, t) {
     let n = eh(),
@@ -741,14 +741,14 @@ let e3 = (e) => {
         return e.userStatus?.enrolledAt != null && !n && Date.now() - new Date(e.userStatus?.enrolledAt).getTime() > t;
     };
 function e4() {
-    let { enabled: e } = D.XM.useConfig({ location: K.rE.QUEST_HOME_DESKTOP }),
+    let { enabled: e } = D.sn.useConfig({ location: K.rE.QUEST_HOME_DESKTOP }),
         [t, n] = r.useState(e),
         [i, a] = r.useState(e),
         [s, o] = r.useState(!1),
         [l, c] = r.useState(!1),
-        { isFetching: d, takeoverConfig: _ } = (0, u.cf)([R.A], () => ({
-            isFetching: R.A.isFetchingQuestHomeTakeover(),
-            takeoverConfig: R.A.getQuestHomeTakeoverConfig(),
+        { isFetching: d, questHomeHeroConfig: _ } = (0, u.cf)([R.A], () => ({
+            isFetching: R.A.isFetchingQuestHomeHero(),
+            questHomeHeroConfig: R.A.getQuestHomeHeroConfig(),
         })),
         f = r.useMemo(() => {
             if (!e || null == _) return null;
@@ -762,7 +762,7 @@ function e4() {
             e && t();
             async function t() {
                 try {
-                    await (0, N.Tb)();
+                    await (0, N.Yf)();
                 } catch (e) {
                     a(!1), o(!0);
                 } finally {
@@ -782,6 +782,6 @@ function e4() {
                 }
             })();
         }, [_]),
-        { takeover: s || l ? null : f, isLoading: t || d || i }
+        { questHomeHero: s || l ? null : f, isLoading: t || d || i }
     );
 }

@@ -1,19 +1,19 @@
-n.d(t, { j: () => c });
+n.d(t, { I: () => c });
 var i = n(64700),
     r = n(311907),
-    a = n(554146),
-    l = n(379848),
+    l = n(554146),
+    a = n(379848),
     s = n(661191),
     o = n(859703),
     d = n(49999);
 function c() {
-    let e = (0, r.bG)([o.A], () => o.A.getQuestHomeTakeoverConfig()),
+    let e = (0, r.bG)([o.A], () => o.A.getQuestHomeHeroConfig()),
         t = i.useMemo(
             () => (e?.startsAt != null ? s.default.fromTimestamp(new Date(e?.startsAt).valueOf()) : null),
             [e?.startsAt],
         ),
-        [n, c] = (0, l.Cc)(
-            null != t ? a.M.QUEST_HOME_ENTRYPOINT_TAKEOVER_BADGE : null,
+        [n, c] = (0, a.Cc)(
+            null != t ? l.M.QUEST_HOME_ENTRYPOINT_TAKEOVER_BADGE : null,
             t ?? "",
             d.m.PRIVATE_CHANNELS_LIST,
             !0,
@@ -26,8 +26,8 @@ function c() {
             [c],
         );
     return {
-        shouldShowTakeoverContent: n === a.M.QUEST_HOME_ENTRYPOINT_TAKEOVER_BADGE,
-        dismissTakeoverContent: u,
-        takeoverConfig: e,
+        shouldShowQuestHomeHeroContent: n === l.M.QUEST_HOME_ENTRYPOINT_TAKEOVER_BADGE,
+        dismissQuestHomeHeroContent: u,
+        questHomeHeroConfig: e,
     };
 }

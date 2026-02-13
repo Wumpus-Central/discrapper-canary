@@ -11,10 +11,10 @@ n.d(t, {
     Oy: () => V,
     QG: () => Q,
     R2: () => U,
-    Tb: () => eo,
     UZ: () => K,
     WM: () => F,
     Yb: () => W,
+    Yf: () => eo,
     d6: () => z,
     dQ: () => ea,
     g5: () => H,
@@ -482,10 +482,10 @@ async function ea(e) {
 }
 let es = 5 * p.A.Millis.MINUTE;
 async function eo() {
-    if (T.A.isFetchingQuestHomeTakeover()) return;
-    let e = T.A.getLastFetchedQuestHomeTakeover();
+    if (T.A.isFetchingQuestHomeHero()) return;
+    let e = T.A.getLastFetchedQuestHomeHero();
     if (!(null != e && Date.now() - e <= es)) {
-        a.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_TAKEOVER_BEGIN" });
+        a.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_BEGIN" });
         try {
             let e = [y.gh.QUEST_HOME_BANNER],
                 t = await i.Bo.get({
@@ -493,9 +493,9 @@ async function eo() {
                     query: { placements: e, platform: y.vg.WEB },
                     rejectWithError: !1,
                 });
-            a.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_TAKEOVER_SUCCESS", takeover: (0, R.Em)(t.body) });
+            a.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS", questHomeHero: (0, R.Hi)(t.body) });
         } catch (e) {
-            throw (a.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_TAKEOVER_FAILURE", error: new s.A(e) }), e);
+            throw (a.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_FAILURE", error: new s.A(e) }), e);
         }
     }
 }

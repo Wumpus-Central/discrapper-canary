@@ -41,8 +41,8 @@ var i = n(627968),
     H = n(245853),
     F = n(807876),
     Y = n(890687),
-    W = n(590202),
-    q = n(885459),
+    q = n(590202),
+    W = n(885459),
     K = n(545986),
     z = n(419818),
     $ = n(203879),
@@ -50,8 +50,8 @@ var i = n(627968),
     X = n(881172),
     Z = n(724339),
     J = n(516226),
-    ee = n(321503),
-    et = n(65513),
+    ee = n(854514),
+    et = n(321503),
     en = n(475529),
     ei = n(654487),
     er = n(652215),
@@ -112,14 +112,14 @@ function eg(e) {
 function eE(e) {
     let { renderBanner: t, children: n, header: l, withQuestsGrid: s = !0 } = e,
         { isInDiscoverQuestHomeTab: o, onScroll: d, onSelectTab: c, scrollerRef: u, selectedTab: A } = r.useContext(em),
-        { takeover: h, isLoading: _ } = (0, Y._b)(),
+        { questHomeHero: h, isLoading: _ } = (0, Y.vG)(),
         { enabled: m } = (0, j.Z)({ location: ei.rE.QUEST_HOME_DESKTOP }),
-        { enabled: p } = H.XM.useConfig({ location: ei.rE.QUEST_HOME_DESKTOP }),
+        { enabled: p } = H.sn.useConfig({ location: ei.rE.QUEST_HOME_DESKTOP }),
         g = r.useRef(null),
         E = r.useCallback(() => {
             g.current?.resetSortingFiltering();
         }, []);
-    return (0, i.jsxs)(ee.X.Provider, {
+    return (0, i.jsxs)(et.X.Provider, {
         value: u,
         children: [
             l,
@@ -130,8 +130,8 @@ function eE(e) {
                     (function () {
                         if (!o && p) {
                             if (A !== Y.NC.ALL) return null;
-                            if (_) return (0, i.jsx)(et.s, {});
-                            if (null != h) return (0, i.jsx)(et.A, { config: h, onQuestCtaClick: E });
+                            if (_) return (0, i.jsx)(ee.H, {});
+                            if (null != h) return (0, i.jsx)(ee.A, { config: h, onQuestCtaClick: E });
                         }
                         return t();
                     })(),
@@ -144,7 +144,7 @@ function eE(e) {
                                     ? A === Y.NC.CLAIMED
                                         ? (0, i.jsx)(X.A, { onSelectTab: c })
                                         : A === Y.NC.PREVIEW_TOOL
-                                          ? (0, i.jsx)(q.A, {})
+                                          ? (0, i.jsx)(W.A, {})
                                           : (0, i.jsx)(Q.A, { ref: g })
                                     : null,
                             ],
@@ -166,11 +166,11 @@ let eI = function (e) {
         _ && v === Y.NC.CLAIMED && B.A.setState({ tab: Y.NC.ALL });
     }, [_, v]);
     let { onScroll: U, scrollPosition: H } = (0, S.G)(),
-        q = z.A.getState().getUtmCurrentContext(),
+        W = z.A.getState().getUtmCurrentContext(),
         $ = (0, Z.W)((e) => e.registerAssetLoad),
-        Q = r.useRef(q);
+        Q = r.useRef(W);
     r.useEffect(() => {
-        Q.current = q;
+        Q.current = W;
     }),
         r.useEffect(() => {
             let { current: e } = Q;
@@ -238,10 +238,10 @@ let eI = function (e) {
     let eh = r.useCallback(() => {
             (0, K.navigateToQuestHome)({ fromContent: V.uF.QUEST_HOME_MOVE_CALLOUT_DISCOVER }),
                 w.default.track(er.HAw.QUEST_CONTENT_CLICKED, {
-                    cta_name: W.Cy.VIEW_QUESTS,
+                    cta_name: q.Cy.VIEW_QUESTS,
                     click_id: (0, o.A)(),
                     is_targeted: !1,
-                    ...(0, W.fF)(V.uF.QUEST_HOME_MOVE_CALLOUT_DISCOVER),
+                    ...(0, q.fF)(V.uF.QUEST_HOME_MOVE_CALLOUT_DISCOVER),
                 });
         }, []),
         e_ = r.useCallback(

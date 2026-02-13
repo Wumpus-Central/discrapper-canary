@@ -11,23 +11,23 @@ var r = n(439372),
     d = n(245853),
     _ = n(51935),
     f = n(302654),
-    p = n(677402),
-    h = n(654487);
-let m = a.A.Millis.DAY,
-    g = 30 * a.A.Millis.MINUTE,
-    E = 5 * a.A.Millis.SECOND,
-    A = 5 * a.A.Millis.MINUTE,
-    I = 12 * a.A.Millis.HOUR;
-class T extends r.A {
+    h = n(677402),
+    p = n(654487);
+let g = a.A.Millis.DAY,
+    E = 30 * a.A.Millis.MINUTE,
+    A = 5 * a.A.Millis.SECOND,
+    I = 5 * a.A.Millis.MINUTE,
+    T = 12 * a.A.Millis.HOUR;
+class y extends r.A {
     instantiatedAt = Date.now();
     initialFetchTimerId = null;
-    initialTakeoverFetchTimerId = null;
+    initialQuestHomeHeroFetchTimerId = null;
     recurringFetchTimerId = null;
     lastFetchAttemptedAt = 0;
     lastFetchedQuestForLocaleChangeAt = 0;
     _fetch(e) {
         if (
-            !(0, p.s)({ location: h.rE.QUESTS_MANAGER }) ||
+            !(0, h.s)({ location: p.rE.QUESTS_MANAGER }) ||
             u.A.isFetchingCurrentQuests ||
             (0, s.I)() ||
             ((0, l.N1)(), (0, o.isMac)() && "focused" !== i.A.getState())
@@ -40,33 +40,33 @@ class T extends r.A {
         this.lastFetchAttemptedAt = Date.now();
     };
     handlePostConnectionOpen = () => {
-        let e = (0, _.u)({ location: h.rE.QUESTS_MANAGER });
+        let e = (0, _.u)({ location: p.rE.QUESTS_MANAGER });
         window.clearTimeout(this.initialFetchTimerId),
-            window.clearTimeout(this.initialTakeoverFetchTimerId),
+            window.clearTimeout(this.initialQuestHomeHeroFetchTimerId),
             window.clearTimeout(this.recurringFetchTimerId),
             (this.recurringFetchTimerId = window.setInterval(() => {
-                Date.now() - this.lastFetchAttemptedAt > m && this._fetch("post_connect_recurring");
-            }, g));
-        let t = Math.floor(Math.random() * E);
+                Date.now() - this.lastFetchAttemptedAt > g && this._fetch("post_connect_recurring");
+            }, E));
+        let t = Math.floor(Math.random() * A);
         this.initialFetchTimerId = window.setTimeout(() => {
             !(Date.now() - t < u.A.lastFetchedCurrentQuests) &&
                 (e || 0 === u.A.lastFetchedCurrentQuests) &&
                 this._fetch("post_connect_initial");
         }, t);
-        let { enabled: n } = d.XM.getConfig({ location: h.rE.QUESTS_MANAGER }),
-            { enabled: r } = d.$4.getConfig({ location: h.rE.QUESTS_MANAGER });
-        if (n && r && (0, p.s)({ location: h.rE.QUESTS_MANAGER })) {
-            let e = t + Math.floor(Math.random() * E);
-            this.initialTakeoverFetchTimerId = window.setTimeout(() => {
+        let { enabled: n } = d.sn.getConfig({ location: p.rE.QUESTS_MANAGER }),
+            { enabled: r } = d.Iq.getConfig({ location: p.rE.QUESTS_MANAGER });
+        if (n && r && (0, h.s)({ location: p.rE.QUESTS_MANAGER })) {
+            let e = t + Math.floor(Math.random() * A);
+            this.initialQuestHomeHeroFetchTimerId = window.setTimeout(() => {
                 try {
-                    (0, l.Tb)();
+                    (0, l.Yf)();
                 } catch (e) {}
             }, e);
         }
     };
     handleRunningGamesChange = () => {
-        this.instantiatedAt + I > Date.now() ||
-            u.A.lastFetchedCurrentQuests + I > Date.now() ||
+        this.instantiatedAt + T > Date.now() ||
+            u.A.lastFetchedCurrentQuests + T > Date.now() ||
             this._fetch("running_games");
     };
     handleUserSettingsProtoUpdate = (e) => {
@@ -74,12 +74,12 @@ class T extends r.A {
         !("localization" in n.proto) ||
             !t ||
             r ||
-            Date.now() - this.lastFetchedQuestForLocaleChangeAt <= A ||
+            Date.now() - this.lastFetchedQuestForLocaleChangeAt <= I ||
             ((this.lastFetchedQuestForLocaleChangeAt = Date.now()), this._fetch("user_settings"));
     };
     handleLogout = () => {
         window.clearTimeout(this.initialFetchTimerId),
-            window.clearTimeout(this.initialTakeoverFetchTimerId),
+            window.clearTimeout(this.initialQuestHomeHeroFetchTimerId),
             window.clearTimeout(this.recurringFetchTimerId),
             (this.lastFetchAttemptedAt = 0),
             (this.lastFetchedQuestForLocaleChangeAt = 0);
@@ -93,4 +93,4 @@ class T extends r.A {
         LOGOUT: this.handleLogout,
     };
 }
-let S = new T();
+let S = new y();

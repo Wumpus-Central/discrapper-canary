@@ -373,7 +373,7 @@ function e2() {
     Z = !0;
 }
 function e3(e) {
-    (Z = !1), (X = Date.now()), (Q = e.takeover);
+    (Z = !1), (X = Date.now()), (Q = e.questHomeHero);
 }
 function e6() {
     Z = !1;
@@ -474,13 +474,13 @@ class e4 extends k.Ay.Store {
     getQuestLoadedViaPreview(e) {
         return w.get(e);
     }
-    isFetchingQuestHomeTakeover() {
+    isFetchingQuestHomeHero() {
         return Z;
     }
-    getQuestHomeTakeoverConfig() {
+    getQuestHomeHeroConfig() {
         return Q;
     }
-    getLastFetchedQuestHomeTakeover() {
+    getLastFetchedQuestHomeHero() {
         return X;
     }
     get isFetchingEarnedQuestToDeliver() {
@@ -533,8 +533,8 @@ let e5 = new e4(U.h, {
         QUESTS_UPDATE_OPTIMISTIC_PROGRESS: eH,
         QUESTS_RESET_OPTIMISTIC_PROGRESS: eY,
         QUESTS_USER_COMPLETION_UPDATE: e1,
-        QUESTS_FETCH_QUEST_HOME_TAKEOVER_BEGIN: e2,
-        QUESTS_FETCH_QUEST_HOME_TAKEOVER_SUCCESS: e3,
-        QUESTS_FETCH_QUEST_HOME_TAKEOVER_FAILURE: e6,
+        QUESTS_FETCH_QUEST_HOME_HERO_BEGIN: e2,
+        QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS: e3,
+        QUESTS_FETCH_QUEST_HOME_HERO_FAILURE: e6,
     }),
     e7 = e5;

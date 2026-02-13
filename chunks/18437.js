@@ -73,7 +73,7 @@ function I(e, t) {
     }, [e, t]);
 }
 function T(e) {
-    let { takeoverConfig: t, shouldShowTakeoverContent: n } = e,
+    let { questHomeHeroConfig: t, shouldShowQuestHomeHeroContent: n } = e,
         i = n ? d.uF.QUEST_HOME_ENTRYPOINT_THEMED : d.uF.QUEST_HOME_ENTRYPOINT,
         s = r.useMemo(() => {
             let e = (0, h.fF)(i);
