@@ -1,8 +1,8 @@
-n.r(t), n.d(t, { default: () => L, getPageSize: () => y });
+n.r(t), n.d(t, { default: () => O, getPageSize: () => y });
 var i = n(627968),
     r = n(64700),
     l = n(492462),
-    a = n(960488),
+    a = n(873263),
     s = n(311907),
     o = n(255363),
     d = n(384904),
@@ -18,8 +18,8 @@ var i = n(627968),
     I = n(210714),
     f = n(75587),
     C = n(196661),
-    N = n(590858),
-    T = n(652215),
+    T = n(590858),
+    N = n(652215),
     S = n(985018),
     x = n(58682);
 let v = (0, p.Fe)({
@@ -27,7 +27,7 @@ let v = (0, p.Fe)({
     webpackId: 554238,
 });
 function y(e) {
-    return e < 1e3 ? N.q.SMALL : N.q.LARGE;
+    return e < 1e3 ? T.q.SMALL : T.q.LARGE;
 }
 s.Ay.initialize();
 class b extends r.PureComponent {
@@ -35,7 +35,7 @@ class b extends r.PureComponent {
     componentDidMount() {
         (0, o.N)(this.props.location),
             (this.stopListeningToHistory = (0, E.JK)().listen((e) => {
-                e.pathname.startsWith(T.BVt.APPLICATION_STORE) && (0, o.N)(e);
+                e.pathname.startsWith(N.BVt.APPLICATION_STORE) && (0, o.N)(e);
             })),
             this.props.isAuthenticated && (0, d.$o)(),
             m.A.disable(),
@@ -59,7 +59,7 @@ class b extends r.PureComponent {
             { width: s } = this.props,
             o = (0, l.parse)(a.search);
         return (0, i.jsx)(c.A, {
-            page: T.liQ.STORE_LISTING,
+            page: N.liQ.STORE_LISTING,
             root: !0,
             children: (0, i.jsx)(C.A, {
                 skuId: t,
@@ -75,28 +75,28 @@ class b extends r.PureComponent {
         (0, i.jsxs)(a.dO, {
             children: [
                 (0, i.jsx)(a.qh, {
-                    path: T.BVt.APPLICATION_STORE,
+                    path: N.BVt.APPLICATION_STORE,
                     exact: !0,
                     render: () =>
-                        (0, i.jsx)(c.A, { page: T.liQ.STORE_DIRECTORY_HOME, root: !0, children: (0, i.jsx)(f.A, {}) }),
+                        (0, i.jsx)(c.A, { page: N.liQ.STORE_DIRECTORY_HOME, root: !0, children: (0, i.jsx)(f.A, {}) }),
                 }),
                 (0, i.jsx)(a.qh, {
-                    path: T.BVt.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),
+                    path: N.BVt.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),
                     render: this.renderStoreListing,
                 }),
                 (0, i.jsx)(a.qh, {
-                    path: T.BVt.APPLICATION_STORE_LISTING_APPLICATION(":applicationId"),
+                    path: N.BVt.APPLICATION_STORE_LISTING_APPLICATION(":applicationId"),
                     render: this.renderStoreListing,
                 }),
                 (0, i.jsx)(a.qh, {
-                    path: T.BVt.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug"),
+                    path: N.BVt.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug"),
                     render: this.renderStoreListing,
                 }),
                 (0, i.jsx)(a.qh, {
-                    path: T.BVt.APPLICATION_STORE_LISTING_SKU(":skuId"),
+                    path: N.BVt.APPLICATION_STORE_LISTING_SKU(":skuId"),
                     render: this.renderStoreListing,
                 }),
-                (0, i.jsx)(a.rd, { to: T.BVt.APP }),
+                (0, i.jsx)(a.rd, { to: N.BVt.APP }),
             ],
         });
     renderCustomErrorMessage() {
@@ -115,4 +115,9 @@ class b extends r.PureComponent {
         return (0, i.jsx)(g.A, { renderCustomMessage: this.renderCustomErrorMessage, children: n });
     }
 }
-let L = (0, a.y)((0, u.A)((0, A.A)(b)));
+let O = (0, u.A)(
+    (0, A.A)(function (e) {
+        let t = (0, a.zy)();
+        return (0, i.jsx)(b, { ...e, location: t });
+    }),
+);

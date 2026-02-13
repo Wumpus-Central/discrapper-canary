@@ -1,11 +1,12 @@
-e.d(n, { A: () => r });
-function r(t, n) {
-    if (null == t) return {};
-    var e = {};
-    for (var r in t)
-        if ({}.hasOwnProperty.call(t, r)) {
-            if (-1 !== n.indexOf(r)) continue;
-            e[r] = t[r];
+"use strict";
+function r(e, t) {
+    if (null == e) return {};
+    var n = {};
+    for (var r in e)
+        if ({}.hasOwnProperty.call(e, r)) {
+            if (-1 !== t.indexOf(r)) continue;
+            n[r] = e[r];
         }
-    return e;
+    return n;
 }
+n.d(t, { A: () => r });

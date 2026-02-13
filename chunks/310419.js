@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { Bn: () => p, R4: () => h, ev: () => c, h: () => f, sW: () => _, tS: () => d }), n(323874), n(14289), n(35956);
-var r = n(960488),
-    i = n(839214),
+n.d(t, { Bn: () => h, R4: () => p, ev: () => c, h: () => f, sW: () => _, tS: () => d }), n(323874), n(14289), n(35956);
+var r = n(839214),
+    i = n(334465),
     a = n(976860),
     s = n(212534),
     o = n(767599),
@@ -10,7 +10,7 @@ var r = n(960488),
     c = (function (e) {
         return (e.HOME = "home"), (e.SEARCH = "search"), (e.APPLICATION = "application"), (e.CATEGORY = "category"), e;
     })({});
-let d = (0, i.D)(() => ({}));
+let d = (0, r.D)(() => ({}));
 var _ = (function (e) {
     return (
         (e.EXTERNAL = "External"),
@@ -28,19 +28,19 @@ var _ = (function (e) {
         e
     );
 })({});
-let f = (0, i.D)(() => ({ sessionId: null, guildId: null, entrypoint: null, trackedOpenedFromExternalEntrypoint: !1 }));
-function p() {
+let f = (0, r.D)(() => ({ sessionId: null, guildId: null, entrypoint: null, trackedOpenedFromExternalEntrypoint: !1 }));
+function h() {
     let {
         location: { state: e },
     } = (0, a.JK)();
     return e?.previousView;
 }
-function h() {
+function p() {
     let {
         location: { pathname: e, search: t },
     } = (0, a.JK)();
-    if (null != (0, r.B6)(e, { path: u.BVt.GLOBAL_DISCOVERY_APPS, exact: !0 })) return { type: "home" };
-    if (null != (0, r.B6)(e, { path: u.BVt.GLOBAL_DISCOVERY_APPS_SEARCH, exact: !0 })) {
+    if (null != (0, i.B)(e, { path: u.BVt.GLOBAL_DISCOVERY_APPS, exact: !0 })) return { type: "home" };
+    if (null != (0, i.B)(e, { path: u.BVt.GLOBAL_DISCOVERY_APPS_SEARCH, exact: !0 })) {
         let e = new URLSearchParams(t),
             n = { type: "search" },
             r = e.get("q");
@@ -50,10 +50,10 @@ function h() {
         let a = Number(e.get("page"));
         return null != a && a > 1 && (n.page = a), n;
     }
-    let n = (0, r.B6)(e, { path: [u.BVt.GLOBAL_DISCOVERY_APPS_CATEGORY(":categoryId")], exact: !0 }),
-        { categoryId: i } = n?.params ?? {};
-    if (null != n && null != i) return { type: "category", categoryId: i };
-    let c = (0, r.B6)(e, {
+    let n = (0, i.B)(e, { path: [u.BVt.GLOBAL_DISCOVERY_APPS_CATEGORY(":categoryId")], exact: !0 }),
+        { categoryId: r } = n?.params ?? {};
+    if (null != n && null != r) return { type: "category", categoryId: r };
+    let c = (0, i.B)(e, {
             path: [
                 u.BVt.GLOBAL_DISCOVERY_APPS_PROFILE(":applicationId"),
                 u.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(":applicationId", ":section"),

@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, { A: () => R });
-var r = n(960488),
-    i = n(311907),
-    a = n(73153),
-    s = n(212455),
-    o = n(463347),
+var r = n(311907),
+    i = n(73153),
+    a = n(212455),
+    s = n(463347),
+    o = n(334465),
     l = n(976860),
     u = n(961350),
     c = n(650048),
@@ -18,8 +18,8 @@ function E(e) {
     return e === _.ME ? null : (e ?? null);
 }
 function A() {
-    null != h && null == d.A.getGuild(h) && null == s.A.getRequest(h) && (h = null),
-        null != p && null == d.A.getGuild(p) && null == s.A.getRequest(p) && (p = null),
+    null != h && null == d.A.getGuild(h) && null == a.A.getRequest(h) && (h = null),
+        null != p && null == d.A.getGuild(p) && null == a.A.getRequest(p) && (p = null),
         T(h);
 }
 function I(e) {
@@ -55,17 +55,17 @@ function C(e) {
 function b() {
     (h = null), (p = null);
 }
-class N extends i.Ay.PersistedStore {
+class N extends r.Ay.PersistedStore {
     static displayName = "SelectedGuildStore";
     static persistKey = "SelectedGuildStore";
     initialize(e) {
         this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type),
-            this.waitFor(u.default, c.A, d.A, s.A),
+            this.waitFor(u.default, c.A, d.A, a.A),
             (g = e?.selectedGuildTimestampMillis ?? {}),
             (h = e?.selectedGuildId ?? null),
             (p = e?.lastSelectedGuildId ?? null);
         let t = c.A.lastNonVoiceRoute,
-            n = (0, r.B6)(t, { path: _.BVt.CHANNEL(o.pv.guildId()) });
+            n = (0, o.B)(t, { path: _.BVt.CHANNEL(s.pv.guildId()) });
         E(n?.params?.guildId);
     }
     getState() {
@@ -81,7 +81,7 @@ class N extends i.Ay.PersistedStore {
         return h === e ? f : g[e];
     }
 }
-let R = new N(a.h, {
+let R = new N(i.h, {
     CONNECTION_OPEN: A,
     OVERLAY_INITIALIZE: I,
     CHANNEL_SELECT: y,

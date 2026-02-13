@@ -1,16 +1,24 @@
 "use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => l });
 var r = n(627968);
 n(64700);
-var i = n(960488),
+var i = n(873263),
     a = n(110259),
-    s = n(139286);
-function o(e) {
-    let { impressionName: t, impressionProperties: n, disableTrack: o, ...l } = e,
-        u = n;
+    s = n(334465),
+    o = n(139286);
+function l(e) {
+    let { impressionName: t, impressionProperties: n, disableTrack: l, ...u } = e,
+        c = (0, i.zy)(),
+        d = u.location?.pathname ?? c.pathname,
+        _ = n;
+    if ("function" == typeof _) {
+        let e = Array.isArray(u.path) ? u.path : null != u.path ? [u.path] : [],
+            t = null;
+        for (let n of e) if (null != (t = (0, s.B)(d, { path: n, exact: u.exact, strict: u.strict }))) break;
+        _ = _({ match: t });
+    }
     return (
-        "function" == typeof u && (u = u(l)),
-        (0, s.A)({ type: a.ImpressionTypes.PAGE, name: t, properties: u }, { disableTrack: o }, [l.location?.pathname]),
-        (0, r.jsx)(i.qh, { ...l })
+        (0, o.A)({ type: a.ImpressionTypes.PAGE, name: t, properties: _ }, { disableTrack: l }, [d]),
+        (0, r.jsx)(i.qh, { ...u })
     );
 }
