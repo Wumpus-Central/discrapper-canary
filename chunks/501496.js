@@ -1,4 +1,4 @@
-i.d(t, { A: () => A });
+i.d(e, { A: () => E });
 var n = i(627968);
 i(64700);
 var l = i(417597),
@@ -8,32 +8,35 @@ var l = i(417597),
     u = i(975571),
     o = i(652215),
     d = i(731854),
-    _ = i(985018),
+    A = i(985018),
     T = i(835818);
-function A() {
+let S = `${u.A.getArticleURL(o.MVz.VOICE_VIDEO_TROUBLESHOOTING)}?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm`;
+function E() {
     return (0, l.bG)([a.Ay], () => a.Ay.supports(d.O5.LOOPBACK))
-        ? (0, n.jsx)("div", {
-              className: T.a,
-              children: (0, n.jsx)(r.A, {
-                  title: _.intl.string(_.t.gyljWE),
-                  description: _.intl.string(_.t["8hhsCU"]),
-                  notchBackground: r.V.GRAY,
-                  captionVoice: _.intl.string(_.t.bp3JOV),
-                  captionNoVoice: (0, n.jsxs)(n.Fragment, {
-                      children: [
-                          _.intl.string(_.t["MA+OZh"]),
-                          (0, n.jsx)(s.MzZ, {
-                              className: T.X,
-                              href: u.A.getArticleURL(o.MVz.NO_INPUT_DETECTED),
-                              children: _.intl.string(_.t.RYKKox),
-                          }),
-                      ],
-                  }),
-                  buttonTest: _.intl.string(_.t.c4qHt6),
-                  buttonStop: _.intl.string(_.t.I6OnJ3),
-                  buttonVariant: "primary",
-                  location: { page: o.liQ.USER_SETTINGS, section: o.JJy.SETTINGS_VOICE_AND_VIDEO },
+        ? (0, n.jsx)(r.A, {
+              size: "md",
+              notchBackground: r.V.GRAY,
+              captionVoice: A.intl.string(A.t.bp3JOV),
+              captionNoVoice: (0, n.jsxs)(n.Fragment, {
+                  children: [
+                      (0, n.jsx)(s.Text, {
+                          variant: "text-xs/semibold",
+                          color: "text-default",
+                          children: A.intl.string(A.t.bgn75v),
+                      }),
+                      A.intl.string(A.t["MA+OZh"]),
+                      (0, n.jsx)(s.MzZ, {
+                          className: T.X,
+                          href: u.A.getArticleURL(o.MVz.NO_INPUT_DETECTED),
+                          children: A.intl.string(A.t.RYKKox),
+                      }),
+                  ],
               }),
+              helpText: A.intl.format(A.t["V+B3FH"], { guideURL: S }),
+              buttonTest: A.intl.string(A.t.gyljWE),
+              buttonStop: A.intl.string(A.t.I6OnJ3),
+              buttonVariant: "primary",
+              location: { page: o.liQ.USER_SETTINGS, section: o.JJy.SETTINGS_VOICE_AND_VIDEO },
           })
         : null;
 }

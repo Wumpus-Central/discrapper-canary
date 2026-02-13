@@ -74820,9 +74820,6 @@ code {
     --custom-drag-resize-container-handle-bleed: 2px;
     --custom-drag-resize-container-handle-offset: calc(var(--custom-drag-resize-container-handle-bleed) - var(--custom-drag-resize-container-handle-size));
     --custom-embed-spoiler-blur-radius: 44px;
-    --custom-gradient-progress-notch-width: 8px;
-    --custom-gradient-progress-notch-height: 16px;
-    --custom-gradient-progress-notch-margin: 2px;
     --custom-guild-discovery-card-card-height: 320px;
     --custom-guild-discovery-card-card-height-with-tags: 350px;
     --custom-icon-button-icon-lg-size: 36px;
