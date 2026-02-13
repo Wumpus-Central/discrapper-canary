@@ -1,8 +1,8 @@
 n.d(t, { l: () => f });
 var i = n(537569),
     r = n(99066),
-    a = n(658160),
-    l = n(644836),
+    l = n(658160),
+    a = n(644836),
     s = n(589051),
     o = n(728364),
     d = n(398523),
@@ -15,5 +15,5 @@ var i = n(537569),
     p = n(500094),
     g = n(840251),
     E = n(688151);
-let I = [a.s2, l.K6, o.m, _.ks, h.UL, A.qe, s.Jo, s.LA, r.t4, c.A, p.A, i.v, r.ds, u.q, d.A, m.o],
+let I = [l.s2, a.K6, o.m, _.ks, h.UL, A.qe, s.LA, r.t4, c.A, p.A, i.v, r.ds, u.q, d.A, m.o],
     f = new g.E(I, E.$G.CONNECTION_OPEN, { location: "app open" });

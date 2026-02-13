@@ -275,7 +275,7 @@ async function ei(e) {
     if (null == t) return R.error(`Tried to determine first fullscreen type for untracked pid ${e}`), o.aI.UNKNOWN;
     let n = t?.fullscreenType ?? o.aI.UNKNOWN;
     if (G.has(n)) {
-        let t = await (0, y.E1)(e, (0, y.Ag)("first_fullscreen"));
+        let t = await (0, y.E1)(e, 2e3);
         R.verbose(`Resolved fullscreen type for pid ${e}: ${t}`), null != t && (n = t);
     }
     return n;
@@ -283,11 +283,11 @@ async function ei(e) {
 async function ea(e) {
     let t = await ei(e);
     if (F.has(t)) {
-        let n = await (0, y.E1)(e, (0, y.mk)("initial_status"));
+        let n = await (0, y.E1)(e, 3e3);
         null != n && (t = n);
     }
     if (t === o.aI.UNKNOWN) {
-        let n = await (0, y.E1)(e, (0, y.mk)("initial_status"));
+        let n = await (0, y.E1)(e, 3e3);
         null != n && (t = n);
     }
     let n = K(e);
