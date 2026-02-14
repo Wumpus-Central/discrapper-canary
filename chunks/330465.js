@@ -4,14 +4,14 @@ var i = n(627968),
     s = n(503698),
     a = n.n(s),
     r = n(131346),
-    o = n(40153),
+    o = n(522160),
     d = n(837381),
     c = n(607399),
     u = n(417597),
     h = n(451988),
     A = n(397927),
-    m = n(308528),
-    p = n(442433),
+    p = n(308528),
+    m = n(442433),
     g = n(817281),
     _ = n(658128),
     f = n(976860),
@@ -33,7 +33,7 @@ var i = n(627968),
     D = n(837021);
 let G = { analyticsSource: { page: L.liQ.GUILD_CHANNEL, section: L.JJy.CHANNEL_LIST, object: L.ZSU.CHANNEL } };
 function U(e, t) {
-    (0, p.L3)(e, async () => {
+    (0, m.L3)(e, async () => {
         let { default: e } = await Promise.all([
             n.e("43600"),
             n.e("68587"),
@@ -51,7 +51,7 @@ function U(e, t) {
             n.e("39048"),
             n.e("36290"),
             n.e("54469"),
-            n.e("26938"),
+            n.e("57498"),
         ]).then(n.bind(n, 544676));
         return (n) => (0, i.jsx)(e, { ...n, guild: t });
     });
@@ -61,7 +61,7 @@ let P = l.memo(function (e) {
             guildNode: t,
             setRef: n,
             onDragStart: s,
-            onDragEnd: p,
+            onDragEnd: m,
             route: P,
             guild: w,
             animatable: k,
@@ -100,7 +100,7 @@ let P = l.memo(function (e) {
                 { type: t.type, nodeId: t.id }
             ),
             end() {
-                p?.(), (0, g.um)(I.Ay.getCompatibleGuildFolders());
+                m?.(), (0, g.um)(I.Ay.getCompatibleGuildFolders());
             },
             collect: (e) => ({ dragging: e.isDragging() }),
         }),
@@ -108,17 +108,17 @@ let P = l.memo(function (e) {
         [eo, ed] = l.useState(!1),
         ec = !q && eo,
         [eu, eh] = l.useState(!1),
-        [eA, em] = l.useState(!1),
-        [ep] = l.useState(() => new h.J_(70, () => em(!0))),
+        [eA, ep] = l.useState(!1),
+        [em] = l.useState(() => new h.J_(70, () => ep(!0))),
         eg = (0, b.nr)() && !c.Fr;
-    l.useEffect(() => () => ep.cancel(), [ep]);
+    l.useEffect(() => () => em.cancel(), [em]);
     let e_ = l.useCallback(() => {
             null != P ? (0, f.pX)(P, { state: G }) : (0, x.u)(ee, { state: G });
         }, [ee, P]),
         ef = l.useCallback(() => {
             if (null != P || null == w || F || !X) return;
             let e = (0, _.W)(w.id);
-            null != e && m.A.preload(w.id, e);
+            null != e && p.A.preload(w.id, e);
         }, [P, w, F, X]),
         ex = (0, u.bG)([E.Ay], () => E.Ay.isCurrentUserGuest(ee)),
         eC = l.useCallback(
@@ -137,9 +137,9 @@ let P = l.memo(function (e) {
         ),
         eI = l.useCallback(
             (e) => {
-                e ? ep.delay() : (ep.cancel(), em(!1));
+                e ? em.delay() : (em.cancel(), ep(!1));
             },
-            [ep],
+            [em],
         );
     function eb() {
         q || ed(!0);

@@ -1,7 +1,7 @@
 n.d(t, { A: () => u });
 var i = n(627968),
     l = n(64700),
-    s = n(40153),
+    s = n(522160),
     a = n(397927),
     r = n(770178),
     o = n(180686);
@@ -13,8 +13,8 @@ let d = Math.ceil(Math.sqrt(115200)),
             A = l.useCallback((e) => {
                 h(e.contentRect.width);
             }, []),
-            m = (0, r.w)(A, [], { fireOnMount: !0 }),
-            [{ shineSpring: p }, g] = (0, a.zhh)(() => ({
+            p = (0, r.w)(A, [], { fireOnMount: !0 }),
+            [{ shineSpring: m }, g] = (0, a.zhh)(() => ({
                 from: { shineSpring: 0 },
                 config: { clamp: !0, mass: 1, tension: 170, friction: 38 },
             })),
@@ -31,13 +31,13 @@ let d = Math.ceil(Math.sqrt(115200)),
                 let e = (0, i.jsx)(s.animated.div, {
                     className: o.q2,
                     style: {
-                        transform: p.to(
+                        transform: m.to(
                             (e) => `translateX(calc(${e * u}px + ${e * d}px)) translateY(-50%) rotate(45deg)`,
                         ),
                     },
                 });
                 return n(o.VU, o.Qq, o.Kk, e);
-            }, [n, u, p]);
+            }, [n, u, m]);
         return (
             l.useImperativeHandle(t, () => ({ onMouseEnter: _, onMouseLeave: f }), [_, f]),
             (0, i.jsx)("div", {
@@ -46,7 +46,7 @@ let d = Math.ceil(Math.sqrt(115200)),
                 onMouseLeave: f,
                 onFocus: _,
                 onBlur: f,
-                ref: m,
+                ref: p,
                 style: { "--custom-shine-dimensions": "240px", "--custom-shine-rotated-dimensions-delta": `${c}px` },
                 children: x,
             })

@@ -3,7 +3,7 @@ var i = n(627968),
     l = n(64700),
     a = n(503698),
     r = n.n(a),
-    s = n(40153),
+    s = n(522160),
     o = n(827734),
     d = n(990078),
     c = n(397927),
@@ -21,8 +21,8 @@ var i = n(627968),
     I = n(847641),
     T = n(646764),
     v = n(398025),
-    N = n(433745),
-    S = n(654487),
+    S = n(433745),
+    N = n(654487),
     b = n(818348),
     j = n(985018),
     y = n(806449);
@@ -49,9 +49,9 @@ let R = (0, s.animated)(c.abt),
                 H(t.offsetWidth), z(t.scrollWidth);
             }),
             Y = (0, m.w)(W),
-            q = (0, N.a3)(a),
+            q = (0, S.a3)(a),
             K = a === h.uF.QUESTS_EMBED,
-            Q = (0, p.wT)(n, S.rE.QUESTS_CARD, a, w),
+            Q = (0, p.wT)(n, N.rE.QUESTS_CARD, a, w),
             J = n.userStatus?.completedAt != null,
             X = (0, A.Ut)(),
             Z = (0, g.S5)(n.config.expiresAt),
@@ -96,7 +96,7 @@ let R = (0, s.animated)(c.abt),
                     children: [
                         (0, i.jsxs)(s.animated.div, {
                             className: r()(y.VW, { [y.eX]: K }),
-                            style: { y: q ? M.to({ range: [0, 1], output: [N.es, 0] }) : void 0 },
+                            style: { y: q ? M.to({ range: [0, 1], output: [S.es, 0] }) : void 0 },
                             children: [
                                 q &&
                                     (0, i.jsx)(s.animated.div, {
@@ -195,7 +195,7 @@ let R = (0, s.animated)(c.abt),
                         }),
                         (0, i.jsxs)(s.animated.div, {
                             className: y._q,
-                            style: { top: q ? M.to({ range: [0, 1], output: [N.es / 2 - N.uR / 2, N.wl] }) : N.wl },
+                            style: { top: q ? M.to({ range: [0, 1], output: [S.es / 2 - S.uR / 2, S.wl] }) : S.wl },
                             children: [
                                 (0, i.jsx)(E.C, {
                                     questContent: a,
@@ -217,7 +217,7 @@ let R = (0, s.animated)(c.abt),
                                             }),
                                         }),
                                 }),
-                                !(0, N.rW)(a) &&
+                                !(0, S.rW)(a) &&
                                     (0, i.jsx)(c.DUT, {
                                         onClick: et,
                                         className: y.P0,

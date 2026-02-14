@@ -3,15 +3,15 @@ var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(40153),
+    r = n(522160),
     o = n(158954),
     d = n(311907),
     c = n(397927),
     u = n(442433),
     h = n(793574),
     A = n(230135),
-    m = n(552836),
-    p = n(147925),
+    p = n(552836),
+    m = n(147925),
     g = n(363487),
     _ = n(267771),
     f = n(828162),
@@ -23,7 +23,7 @@ let b = l.forwardRef((e, t) => {
     let { appliedBoostCount: n, maxBoostCount: s, premiumSubscriberCount: d, className: u } = e,
         h = n >= s,
         A = Math.min((n / s) * 100, 100),
-        [m, g] = (0, c.zhh)(
+        [p, g] = (0, c.zhh)(
             () => ({ width: n === d ? `calc(${A}% - 4px)` : "0%", config: { tension: 250, damping: 5, mass: 1 } }),
             "respect-motion-settings",
             [n, d],
@@ -37,7 +37,7 @@ let b = l.forwardRef((e, t) => {
             className: I.hQ,
             children: [
                 (0, i.jsx)("div", { className: a()(I.L$, u) }),
-                (0, i.jsx)(r.animated.div, { className: a()(I.qB, { [I.mu]: A <= 5 }), style: m }),
+                (0, i.jsx)(r.animated.div, { className: a()(I.qB, { [I.mu]: A <= 5 }), style: p }),
                 (0, i.jsxs)("div", {
                     className: I.FS,
                     children: [
@@ -70,10 +70,10 @@ let b = l.forwardRef((e, t) => {
                                               maxBoostCount: s,
                                           }),
                                 }),
-                                (0, i.jsx)(p.A, {
+                                (0, i.jsx)(m.A, {
                                     width: 12,
                                     height: 12,
-                                    direction: p.A.Directions.RIGHT,
+                                    direction: m.A.Directions.RIGHT,
                                     className: a()(I.Qq, I.ue),
                                 }),
                             ],
@@ -88,23 +88,23 @@ function N(e) {
     let { guild: t, withMargin: s } = e,
         r = l.useRef(null),
         o = (0, _.A)(t),
-        p = (0, g.A)(t.id),
+        m = (0, g.A)(t.id),
         C = l.useCallback(() => {
             (0, f.A)(t.id, h.A.GUILD_BOOSTING_SIDEBAR_DISPLAY);
         }, [t.id]),
-        E = (0, d.bG)([m.A], () => m.A.getCountForGuild(t.id) ?? 0);
+        E = (0, d.bG)([p.A], () => p.A.getCountForGuild(t.id) ?? 0);
     l.useEffect(() => {
         E !== t.premiumSubscriberCount && (0, A.u)(t.id, t.premiumSubscriberCount);
     }, [t.id, E, t.premiumSubscriberCount]);
     let N = l.useCallback(
         (e) => {
-            p &&
+            m &&
                 (0, u.L3)(e, async () => {
                     let { default: e } = await n.e("71728").then(n.bind(n, 709843));
                     return (n) => (0, i.jsx)(e, { ...n, guild: t });
                 });
         },
-        [p, t],
+        [m, t],
     );
     return (0, i.jsxs)(i.Fragment, {
         children: [

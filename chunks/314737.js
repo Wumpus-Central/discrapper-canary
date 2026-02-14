@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => Z, Bt: () => Y, zI: () => X });
+n.d(t, { Ay: () => Z, Bt: () => K, zI: () => X });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -8,7 +8,7 @@ var i = n(627968),
     o = n.n(a),
     d = n(735438),
     c = n.n(d),
-    u = n(40153),
+    u = n(522160),
     g = n(835245),
     m = n(311907),
     x = n(990078),
@@ -146,7 +146,7 @@ let z = c().throttle(A.dZ, 1e3),
             ],
         });
     },
-    K = (e) => {
+    Y = (e) => {
         let {
             isLoading: t,
             staticEmoji: s,
@@ -169,13 +169,13 @@ let z = c().throttle(A.dZ, 1e3),
                 })
               : (0, i.jsxs)("div", {
                     children: [
-                        (0, i.jsx)(Y, {
+                        (0, i.jsx)(K, {
                             title: F.intl.string(F.t.sMOuuS),
                             maxSlots: (0, D.sN)(a),
                             emojiCount: s.length,
                             children: (0, i.jsx)(X, { emojis: s, guild: a, onEdit: o, newlyAddedEmojiIds: d }),
                         }),
-                        (0, i.jsx)(Y, {
+                        (0, i.jsx)(K, {
                             title: F.intl.string(F.t.wWjQye),
                             maxSlots: (0, D.sN)(a),
                             emojiCount: l.length,
@@ -184,7 +184,7 @@ let z = c().throttle(A.dZ, 1e3),
                     ],
                 });
     },
-    Y = (e) => {
+    K = (e) => {
         let { title: t, maxSlots: n, emojiCount: s, children: l } = e,
             r = Math.max(n - s, 0);
         return (0, i.jsx)(h.nVY, { label: t, description: F.intl.format(F.t.sgL8sI, { count: r }), children: l });
@@ -305,7 +305,7 @@ let z = c().throttle(A.dZ, 1e3),
                 animatedEmoji: V,
                 totalAnimatedEmoji: W,
             } = (0, C.v)({ guild: l }),
-            [Y, X] = s.useState(null);
+            [K, X] = s.useState(null);
         s.useEffect(() => {
             A && ee();
         }, [A]),
@@ -316,18 +316,18 @@ let z = c().throttle(A.dZ, 1e3),
                 null != _ && _ < u && z(l.id);
             }, [u, _, l.id]),
             s.useEffect(() => {
-                if (null != x && null == Y) return void X(x);
-            }, [x, Y]);
+                if (null != x && null == K) return void X(x);
+            }, [x, K]);
         let Z = s.useMemo(
                 () =>
-                    null == Y
+                    null == K
                         ? new Set()
                         : new Set(
                               c()
-                                  .differenceBy(x, Y, "id")
+                                  .differenceBy(x, K, "id")
                                   .map((e) => e.id),
                           ),
-                [x, Y],
+                [x, K],
             ),
             Q = s.useCallback(
                 function () {
@@ -440,7 +440,7 @@ let z = c().throttle(A.dZ, 1e3),
                                 (0, i.jsx)(h.Text, { variant: "text-xs/normal", children: F.intl.string(F.t.EgNCTi) }),
                             ],
                         }),
-                        (0, i.jsx)(K, {
+                        (0, i.jsx)(Y, {
                             isLoading: null == x,
                             staticEmoji: D,
                             animatedEmoji: V,

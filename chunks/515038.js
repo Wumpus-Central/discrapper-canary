@@ -1,9 +1,9 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => N });
 var a = n(627968),
     i = n(64700),
     s = n(503698),
     l = n.n(s),
-    r = n(40153),
+    r = n(522160),
     o = n(311907),
     d = n(397927),
     c = n(765671),
@@ -20,16 +20,16 @@ var a = n(627968),
     j = n(516226),
     A = n(720875),
     C = n(713457),
-    S = n(419367),
-    T = n(985018),
+    T = n(419367),
+    S = n(985018),
     y = n(196240);
-let N = async () => await n.e("40119").then(n.t.bind(n, 718698, 19));
-function E(e) {
+let E = async () => await n.e("40119").then(n.t.bind(n, 718698, 19));
+function N(e) {
     let {
             quest: t,
             questContent: n,
             isHovering: s,
-            contentPosition: E,
+            contentPosition: N,
             rowIndex: k,
             isVisibleInViewport: R,
             onReceiveErrorHints: O,
@@ -38,11 +38,11 @@ function E(e) {
         D = i.useRef(null),
         M = (0, _.mq)(t.config),
         P = (0, _.mH)(t.config),
-        L = t.userStatus?.enrolledAt != null,
-        { ref: U, scrollHeight: B } = (0, c.wR)(),
+        U = t.userStatus?.enrolledAt != null,
+        { ref: L, scrollHeight: B } = (0, c.wR)(),
         G = 104 !== B,
         { onAssetLoadComplete: F } = i.useContext(j.M),
-        { expansionSpring: V } = (0, d.zhh)({ expansionSpring: +!!s, config: { ...S.N, clamp: !0 } }),
+        { expansionSpring: V } = (0, d.zhh)({ expansionSpring: +!!s, config: { ...T.N, clamp: !0 } }),
         W = t.userStatus?.completedAt != null,
         H = t.userStatus?.claimedAt != null,
         K = (0, _.ks)(t.config),
@@ -52,7 +52,7 @@ function E(e) {
         Y = i.useMemo(
             () =>
                 H && K
-                    ? T.intl.format(T.t["8Op4c4"], {
+                    ? S.intl.format(S.t["8Op4c4"], {
                           balanceHook: () =>
                               (0, a.jsxs)(
                                   I,
@@ -69,7 +69,7 @@ function E(e) {
                     : H
                       ? (0, a.jsx)(I, { questId: t.id, children: M })
                       : K
-                        ? T.intl.format(T.t.ro1sze, {
+                        ? S.intl.format(S.t.ro1sze, {
                               balanceHook: () =>
                                   (0, a.jsxs)(
                                       I,
@@ -87,7 +87,7 @@ function E(e) {
                                       t.id,
                                   ),
                           })
-                        : T.intl.format(T.t["0IUT4Y"], {
+                        : S.intl.format(S.t["0IUT4Y"], {
                               rewardWithArticleHook: () => (0, a.jsx)(I, { questId: t.id, children: P }, t.id),
                           }),
             [M, H, P, t.id, z, K],
@@ -118,13 +118,13 @@ function E(e) {
                             className: y.c6,
                             children: [
                                 !H && W && (0, a.jsx)("div", { className: y.Nz }),
-                                L
+                                U
                                     ? (0, a.jsxs)("div", {
                                           className: y.Tr,
                                           children: [
                                               W &&
                                                   (0, a.jsx)(d.akl, {
-                                                      importData: N,
+                                                      importData: E,
                                                       className: y.t_,
                                                       loop: !1,
                                                       autoplay: !1,
@@ -159,14 +159,14 @@ function E(e) {
                         }),
                     }),
                     (0, a.jsxs)("div", {
-                        ref: U,
+                        ref: L,
                         className: l()(y.FS, { [y.wq]: !G }),
                         children: [
                             (0, a.jsx)(d.Heading, {
                                 variant: "eyebrow",
                                 color: "text-brand",
                                 className: y.G$,
-                                children: T.intl.format(T.t.EAYZAr, { questName: t.config.messages.questName }),
+                                children: S.intl.format(S.t.EAYZAr, { questName: t.config.messages.questName }),
                             }),
                             (0, a.jsx)(d.Text, {
                                 variant: "text-md/semibold",
@@ -187,7 +187,7 @@ function E(e) {
             (0, a.jsx)(C.A, {
                 quest: t,
                 questContent: n,
-                contentPosition: E,
+                contentPosition: N,
                 rowIndex: k,
                 onReceiveErrorHints: O,
                 sourceQuestContent: w,

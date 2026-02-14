@@ -3,7 +3,7 @@ var i,
     s,
     a = n(627968),
     l = n(64700),
-    r = n(40153),
+    r = n(522160),
     o = n(397927),
     c = n(396583);
 let d = 3e3,
@@ -49,11 +49,11 @@ let g = (e) => {
                 : { blur: 0 },
         ),
         S = (0, l.useMemo)(() => Math.round((750 + (200 * Math.random() - 100)) * _), [_]),
-        [I, N] = (0, l.useState)(0),
-        [f, b] = (0, l.useState)(1),
+        [I, f] = (0, l.useState)(0),
+        [N, b] = (0, l.useState)(1),
         j = (0, o.zhh)({ xOffset: I, config: { tension: 10, friction: 10, duration: S } });
     return ((0, c.A)(() => {
-        N(f * (0.5 * Math.random() * 5 + 2.5)), b((e) => -1 * e);
+        f(N * (0.5 * Math.random() * 5 + 2.5)), b((e) => -1 * e);
     }, S),
     u)
         ? m

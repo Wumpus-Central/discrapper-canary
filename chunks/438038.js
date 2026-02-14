@@ -1,7 +1,7 @@
 n.d(t, { R: () => h });
 var i = n(627968),
     l = n(64700),
-    a = n(40153);
+    a = n(522160);
 n(311907), n(859703);
 var r = n(341915),
     s = n(890687),
@@ -21,9 +21,9 @@ function h(e) {
             isExpanded: T,
             toggleExpanded: v,
         } = (0, u.s)({ initiallyExpanded: h || (0, m.RA)({ location: n, quest: t }) }),
-        [N, S] = l.useState(!1),
-        b = () => S(!0),
-        j = () => S(!1),
+        [S, N] = l.useState(!1),
+        b = () => N(!0),
+        j = () => N(!1),
         y = E ?? m._B;
     return (0, i.jsx)(o.R, {
         questOrQuests: t,
@@ -50,7 +50,7 @@ function h(e) {
                             quest: t,
                             size: x,
                             expansionSpring: C,
-                            isInteracting: N,
+                            isInteracting: S,
                             isAnimating: I,
                             isExpanded: T,
                             contentPosition: p,
@@ -62,7 +62,7 @@ function h(e) {
                             isQuestExpired: A,
                             location: n,
                             size: x,
-                            isFocused: N,
+                            isFocused: S,
                             isExpanded: T,
                             isAnimating: I,
                             contentPosition: p,

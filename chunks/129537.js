@@ -4,7 +4,7 @@ var i,
     a = n(64700),
     s = n(503698),
     r = n.n(s),
-    o = n(40153),
+    o = n(522160),
     d = n(52133),
     u = n(203982),
     c = n(5463),
@@ -21,7 +21,7 @@ var i,
         (i.RESIZE_SOUTH_WEST = "RESIZE_SOUTH_WEST"),
         (i.RESIZE_SOUTH_EAST = "RESIZE_SOUTH_EAST"),
         i);
-let g = new Set([
+let p = new Set([
     "RESIZE_NORTH",
     "RESIZE_WEST",
     "RESIZE_EAST",
@@ -31,7 +31,7 @@ let g = new Set([
     "RESIZE_SOUTH_WEST",
     "RESIZE_SOUTH_EAST",
 ]);
-function p(e, t, n) {
+function g(e, t, n) {
     let { width: i, height: l, fixed: a } = e;
     return { width: "auto" === i ? "auto" : Math.max(t, i), height: "auto" === l ? "auto" : Math.max(n, l), fixed: a };
 }
@@ -101,7 +101,7 @@ class I extends a.Component {
     constructor(e) {
         super(e),
             (this.anchor = f(e.anchor)),
-            (this.requestedSize = p(e.size, e.minSize.width, e.minSize.height)),
+            (this.requestedSize = g(e.size, e.minSize.width, e.minSize.height)),
             (this.size = this.requestedSize);
     }
     shouldConstrainAutoSizeToExplicitResizeEvents() {
@@ -143,7 +143,7 @@ class I extends a.Component {
     }
     componentDidMount() {
         this.setDOMPositions(f(this.props.anchor)),
-            (this.requestedSize = p(this.props.size, this.props.minSize.width, this.props.minSize.height)),
+            (this.requestedSize = g(this.props.size, this.props.minSize.width, this.props.minSize.height)),
             this.setDOMSize(this.requestedSize),
             this.shouldConstrainAutoSizeToExplicitResizeEvents() &&
                 (this.scheduleConstrainedAutoSizeUpdate(),
@@ -154,7 +154,7 @@ class I extends a.Component {
         null == this.state.operation &&
             ((0, d.A)(this.props.anchor, e.anchor) || this.setDOMPositions(f(this.props.anchor)),
             (0, d.A)(this.props.size, e.size) ||
-                ((this.requestedSize = p(this.props.size, this.props.minSize.width, this.props.minSize.height)),
+                ((this.requestedSize = g(this.props.size, this.props.minSize.width, this.props.minSize.height)),
                 this.setDOMSize(this.requestedSize),
                 this.scheduleConstrainedAutoSizeUpdate()));
     }
@@ -188,7 +188,7 @@ class I extends a.Component {
                 state: { operation: a, operationStarted: s },
             } = this;
         !(null == a || (!s && Math.pow(i - t, 2) + Math.pow(l - n, 2) < 3)) &&
-            ("MOVE" === a ? this.handleDragMove(t, n) : g.has(a) && this.handleResizeMove(t, n));
+            ("MOVE" === a ? this.handleDragMove(t, n) : p.has(a) && this.handleResizeMove(t, n));
     };
     handleResizeMouseDown(e, t) {
         let { clientX: n, clientY: i } = e;
@@ -244,10 +244,10 @@ class I extends a.Component {
         } = this;
         if (null == n) return null;
         (e = Math.max(Math.min(l, e), s)), (t = Math.max(Math.min(a, t), r));
-        let { width: g, height: p } = E(n, this.size),
+        let { width: p, height: g } = E(n, this.size),
             f = t - A,
             _ = e - h,
-            S = (0, c.fh)((0, c.Ly)({ top: f, left: _, bottom: void 0, right: void 0 }, l, a, g, p)),
+            S = (0, c.fh)((0, c.Ly)({ top: f, left: _, bottom: void 0, right: void 0 }, l, a, p, g)),
             I = u ? (0, c.h1)(S) : x("RESIZE_SOUTH_EAST", S);
         this.setDOMPositions(I),
             this.setState(
@@ -269,7 +269,7 @@ class I extends a.Component {
                 },
                 state: { operation: A, operationStarted: m },
             } = this,
-            { startX: g, startY: p } = this.dragState,
+            { startX: p, startY: g } = this.dragState,
             f = 0,
             _ = 0;
         if (null == A) return;
@@ -277,23 +277,23 @@ class I extends a.Component {
             case "RESIZE_EAST":
             case "RESIZE_SOUTH_EAST":
             case "RESIZE_NORTH_EAST":
-                f -= g - e;
+                f -= p - e;
                 break;
             case "RESIZE_WEST":
             case "RESIZE_SOUTH_WEST":
             case "RESIZE_NORTH_WEST":
-                f += g - e;
+                f += p - e;
         }
         switch (A) {
             case "RESIZE_SOUTH":
             case "RESIZE_SOUTH_WEST":
             case "RESIZE_SOUTH_EAST":
-                _ -= p - t;
+                _ -= g - t;
                 break;
             case "RESIZE_NORTH":
             case "RESIZE_NORTH_WEST":
             case "RESIZE_NORTH_EAST":
-                _ += p - t;
+                _ += g - t;
         }
         let E = h({
                 padding: 8,

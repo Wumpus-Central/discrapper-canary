@@ -3,7 +3,7 @@ var a = n(627968),
     i = n(64700),
     s = n(503698),
     l = n.n(s),
-    r = n(40153),
+    r = n(522160),
     o = n(397927),
     d = n(915089),
     c = n(49999),
@@ -21,7 +21,7 @@ function h(e) {
         } = e,
         _ = (0, d.GV)(),
         f = i.useRef(null),
-        v = (0, o.zhh)({
+        b = (0, o.zhh)({
             from: { transform: "translate3d(-110%, 0, 0)", height: x },
             to: { transform: "translate3d(0, 0, 0)", height: x },
             config: { mass: 1, stiffness: 100, damping: 15 },
@@ -31,7 +31,7 @@ function h(e) {
         });
     return (0, a.jsx)(r.animated.div, {
         className: l()(m.kL, p),
-        style: v,
+        style: b,
         children: (0, a.jsxs)("aside", {
             "aria-labelledby": _,
             className: m.Qs,

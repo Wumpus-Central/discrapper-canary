@@ -4,14 +4,14 @@ var i = n(627968),
     s = n(503698),
     a = n.n(s),
     r = n(131346),
-    o = n(40153),
+    o = n(522160),
     d = n(837381),
     c = n(317097),
     u = n(319060),
     h = n(397927),
     A = n(817281),
-    m = n(534409),
-    p = n(711014),
+    p = n(534409),
+    m = n(711014),
     g = n(240248),
     _ = n(263715),
     f = n(941971),
@@ -57,7 +57,7 @@ let y = (0, g.xI)(u.A.FOLDER_ITEM_ANIMATION_DURATION),
             [Q, $] = l.useState(!1),
             [Z, ee] = l.useState(!1),
             et = Q || Z,
-            en = (0, m.qK)("FolderItem");
+            en = (0, p.qK)("FolderItem");
         l.useEffect(() => {
             w && $(!1);
         }, [w]);
@@ -65,7 +65,7 @@ let y = (0, g.xI)(u.A.FOLDER_ITEM_ANIMATION_DURATION),
                 type: _.PJ.FOLDER,
                 item: () => (k?.(), { type: _.PJ.FOLDER, nodeId: u.id }),
                 end() {
-                    V?.(), (0, A.um)(p.Ay.getCompatibleGuildFolders());
+                    V?.(), (0, A.um)(m.Ay.getCompatibleGuildFolders());
                 },
                 collect: (e) => ({ dragging: e.isDragging() }),
             }),
@@ -137,12 +137,12 @@ let y = (0, g.xI)(u.A.FOLDER_ITEM_ANIMATION_DURATION),
                     P ? (0, i.jsx)(C.Ay, { name: er, targetNode: u, onDragOverChanged: es }) : null,
                 ],
             }),
-            em = null != u.color ? u.color : N.DO,
-            ep = em === N.DO ? void 0 : (0, c.Hl)(em);
+            ep = null != u.color ? u.color : N.DO,
+            em = ep === N.DO ? void 0 : (0, c.Hl)(ep);
         return (0, i.jsxs)("div", {
             ref: eh,
             className: a()(T.qc, { [T.Av]: O, [T.Lg]: et }),
-            style: { "--custom-folder-color": ep ?? "" },
+            style: { "--custom-folder-color": em ?? "" },
             "data-drop-hovering": Z,
             children: [
                 !ei && O && (0, i.jsx)("span", { className: T.GO }),

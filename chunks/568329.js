@@ -2,7 +2,7 @@ n.d(t, { PW: () => d, dN: () => c, oK: () => u }), n(321073);
 var a = n(627968),
     i = n(64700),
     s = n(340287),
-    l = n(40153),
+    l = n(522160),
     r = n(765671),
     o = n(398025);
 n(272111);
@@ -27,8 +27,8 @@ let d = i.createContext({
                 mountPoints: _,
             } = i.useContext(d),
             f = i.useRef(null),
-            v = i.useRef(null),
-            b = i.useRef(void 0);
+            b = i.useRef(null),
+            v = i.useRef(void 0);
         i.useEffect(() => {
             h();
         }, [h]),
@@ -44,7 +44,7 @@ let d = i.createContext({
         let j = i.useCallback(
             (e) => {
                 let { height: t } = e;
-                b.current !== t && (h(), (b.current = t));
+                v.current !== t && (h(), (v.current = t));
             },
             [h],
         );
@@ -64,7 +64,7 @@ let d = i.createContext({
                                             position: "absolute",
                                             opacity: (0, o.a)(g.to({ range: [0, 1], output: [1, 0] })),
                                         },
-                                        children: n(v),
+                                        children: n(b),
                                     }),
                                     A,
                                 ),
@@ -75,13 +75,13 @@ let d = i.createContext({
                                             position: "absolute",
                                             opacity: (0, o.a)(g.to({ range: [0, 1], output: [0, 1] })),
                                         },
-                                        children: n(v),
+                                        children: n(b),
                                     }),
                                     A,
                                 ),
                         ],
                     }))
-                  : "collapsed" === u && (C = (0, s.createPortal)(n(v), A)),
+                  : "collapsed" === u && (C = (0, s.createPortal)(n(b), A)),
             (0, a.jsxs)("div", {
                 style: { opacity: +((null == C && "collapsed" === u) || null == A) },
                 ref: t,

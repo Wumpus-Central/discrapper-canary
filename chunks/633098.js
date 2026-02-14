@@ -1,42 +1,42 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => j });
 var i = n(627968),
     l = n(64700),
     a = n(503698),
-    r = n.n(a),
-    s = n(40153),
+    s = n.n(a),
+    r = n(522160),
     o = n(311907),
-    d = n(397927),
-    c = n(775602),
+    c = n(397927),
+    d = n(775602),
     u = n(203982),
     g = n(183555),
     m = n(289173),
     x = n(958805),
     f = n(61881),
-    h = n(384377),
-    p = n(518477),
+    p = n(384377),
+    h = n(518477),
     _ = n(652215),
     A = n(985018),
     I = n(892984);
-function v(e) {
+function j(e) {
     let { className: t } = e,
         { trackUserProfileEditSaved: n } = (0, g.NJ)(),
-        [a, v] = l.useState(!1),
-        j = (0, o.yK)([f.A], () => f.A.getSaveablePendingWidgets() ?? []),
-        T = (0, o.yK)([f.A], () => f.A.getChangedWidgets()),
-        b = (0, o.yK)([f.A], () => f.A.getRemovedWidgets()),
-        E = (0, o.bG)([f.A], () => f.A.hasUnsavedChanges()),
+        [a, j] = l.useState(!1),
+        v = (0, o.yK)([f.A], () => f.A.getSaveablePendingWidgets() ?? []),
+        E = (0, o.yK)([f.A], () => f.A.getChangedWidgets()),
+        T = (0, o.yK)([f.A], () => f.A.getRemovedWidgets()),
+        b = (0, o.bG)([f.A], () => f.A.hasUnsavedChanges()),
         y = (0, o.bG)([f.A], () => f.A.canSaveChanges()),
-        C = (0, o.bG)([f.A], () => f.A.isSubmitting),
-        N = (0, o.bG)([c.A], () => c.A.useReducedMotion),
-        S = (0, d.pnh)(E, {
-            from: { opacity: 0, y: 80 * !N },
+        N = (0, o.bG)([f.A], () => f.A.isSubmitting),
+        S = (0, o.bG)([d.A], () => d.A.useReducedMotion),
+        C = (0, c.pnh)(b, {
+            from: { opacity: 0, y: 80 * !S },
             enter: { opacity: 1, y: 0 },
-            leave: { opacity: 0, y: 80 * !N },
+            leave: { opacity: 0, y: 80 * !S },
         });
     l.useEffect(() => {
         let e = null;
         function t() {
-            v(!0), (e = setTimeout(() => v(!1), 500));
+            j(!0), (e = setTimeout(() => j(!1), 500));
         }
         return (
             u._.subscribe(_.jej.EMPHASIZE_NOTICE, t),
@@ -46,17 +46,17 @@ function v(e) {
         );
     }, []),
         l.useEffect(() => {
-            E && d.ORC.announce(A.intl.string(A.t["0Y/qkL"]));
-        }, [E]);
-    let w = l.useCallback(async () => {
+            b && c.ORC.announce(A.intl.string(A.t["0Y/qkL"]));
+        }, [b]);
+    let k = l.useCallback(async () => {
             if (f.A.canSaveChanges()) {
                 try {
-                    await x.A.savePendingWidgets(j);
+                    await x.A.savePendingWidgets(v);
                 } catch (e) {
-                    (0, h.XA)(p.jM.WIDGET_SAVE_FAILURE);
+                    (0, p.XA)(h.jM.WIDGET_SAVE_FAILURE);
                     return;
                 }
-                for (let e of T) {
+                for (let e of E) {
                     let t = { widgetEdited: e.type, isWidgetRemoved: !1 };
                     (0, m.fu)(e) &&
                         ((t.gameIds = e.games.map((e) => e.applicationId)),
@@ -64,22 +64,22 @@ function v(e) {
                         (t.numCharactersCommentary = e.games.reduce((e, t) => e + (t.comment?.length ?? 0), 0))),
                         n(t);
                 }
-                for (let e of b) n({ widgetEdited: e.type, isWidgetRemoved: !0 });
+                for (let e of T) n({ widgetEdited: e.type, isWidgetRemoved: !0 });
             }
-        }, [j, T, b, n]),
-        k = l.useCallback(() => {
+        }, [v, E, T, n]),
+        R = l.useCallback(() => {
             x.A.clearPendingWidgets();
         }, []);
-    return S((e, n) =>
+    return C((e, n) =>
         n
-            ? (0, i.jsx)(s.animated.div, {
+            ? (0, i.jsx)(r.animated.div, {
                   className: t,
                   style: e,
                   children: (0, i.jsxs)("section", {
-                      className: r()(I.Qs, { [I.hO]: a }),
+                      className: s()(I.Qs, { [I.hO]: a }),
                       "aria-label": A.intl.string(A.t["odDw+z"]),
                       children: [
-                          (0, i.jsx)(d.Text, {
+                          (0, i.jsx)(c.Text, {
                               variant: "text-md/medium",
                               color: "text-strong",
                               className: I.iU,
@@ -88,20 +88,20 @@ function v(e) {
                           (0, i.jsxs)("div", {
                               className: I.o1,
                               children: [
-                                  (0, i.jsx)(d.Button, {
+                                  (0, i.jsx)(c.Button, {
                                       size: "sm",
                                       variant: "secondary",
                                       text: A.intl.string(A.t.yBZMsQ),
-                                      onClick: k,
-                                      disabled: !E || C,
+                                      onClick: R,
+                                      disabled: !b || N,
                                   }),
-                                  (0, i.jsx)(d.Button, {
+                                  (0, i.jsx)(c.Button, {
                                       size: "sm",
                                       variant: "primary",
                                       text: A.intl.string(A.t["R3BPH+"]),
-                                      onClick: w,
-                                      loading: C,
-                                      disabled: !y || !E || C,
+                                      onClick: k,
+                                      loading: N,
+                                      disabled: !y || !b || N,
                                   }),
                               ],
                           }),

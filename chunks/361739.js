@@ -4,14 +4,14 @@ var s,
     r = n(64700),
     l = n(503698),
     o = n.n(l),
-    a = n(40153),
+    a = n(522160),
     c = n(359459),
     d = n(607399),
     u = n(73939),
     h = n(397927),
     _ = n(475743),
-    p = n(723702),
-    S = n(684136),
+    S = n(723702),
+    p = n(684136),
     m = n(63135);
 let E = { HEADER: "HEADER", DIVIDER: "DIVIDER", CUSTOM: "CUSTOM" },
     A = r.createContext(null);
@@ -62,14 +62,14 @@ function b(e) {
                   [m.mobileToolsContainer]: t,
                   [m.mobileSidebarTools]: t,
                   [m.closeIconOnly]: !n,
-                  [m.isMobileAndroid]: !n && !0 === (0, p.isAndroidWeb)(),
+                  [m.isMobileAndroid]: !n && !0 === (0, S.isAndroidWeb)(),
               }),
               ref: l,
               children: (0, i.jsx)(h.xpW, {
                   containerRef: l,
                   children: (0, i.jsx)("div", {
                       className: m.tools,
-                      children: (0, i.jsx)(S.A, {
+                      children: (0, i.jsx)(p.A, {
                           className: o()({ [m.mobileToolsCloseIcon]: t }),
                           closeAction: s,
                           keybind: "ESC",
@@ -84,8 +84,8 @@ let v = function (e) {
             content: n,
             notice: s,
             section: l,
-            closeAction: p,
-            sidebarTheme: S,
+            closeAction: S,
+            sidebarTheme: p,
             contentType: E,
             scrollerRef: f,
             mobileSidebarOpen: N,
@@ -109,7 +109,7 @@ let v = function (e) {
     r.useLayoutEffect(() => {
         null != x.current && C !== l && x.current.scrollTo({ to: 0 });
     }, [l, C, x]);
-    let O = (0, i.jsx)(b, { isMobile: d.Fr, mobileSidebarOpen: N, closeAction: p });
+    let O = (0, i.jsx)(b, { isMobile: d.Fr, mobileSidebarOpen: N, closeAction: S });
     function L() {
         return null == s
             ? null
@@ -129,7 +129,7 @@ let v = function (e) {
                         (null == t
                             ? null
                             : (0, i.jsx)(h.NPJ, {
-                                  theme: S,
+                                  theme: p,
                                   children: (e) =>
                                       (0, i.jsx)("div", {
                                           className: o()(m.sidebarRegion, e, {
@@ -154,7 +154,7 @@ let v = function (e) {
                                       }),
                               })),
                     (function () {
-                        let e = null != g && null != p && N,
+                        let e = null != g && null != S && N,
                             t =
                                 d.Fr &&
                                 (0, i.jsxs)("div", {

@@ -1,9 +1,9 @@
-n.d(t, { A: () => S });
+n.d(t, { A: () => T });
 var a = n(627968),
     i = n(64700),
     s = n(503698),
     l = n.n(s),
-    r = n(40153),
+    r = n(522160),
     o = n(397927),
     d = n(341915),
     c = n(590202),
@@ -15,17 +15,17 @@ var a = n(627968),
     g = n(545986),
     _ = n(568329),
     f = n(963713),
-    v = n(223352),
-    b = n(152515),
+    b = n(223352),
+    v = n(152515),
     j = n(985018),
     A = n(116224);
 let C = (0, r.animated)(x.Ay),
-    S = (e) => {
+    T = (e) => {
         let { withUnfurlTimeout: t, unfurlTimeoutDurationInMilliseconds: n, onUnfurlTimeoutComplete: s } = e,
             x = (0, u.go)(),
-            { expansionSpring: S } = i.useContext(_.PW),
+            { expansionSpring: T } = i.useContext(_.PW),
             {
-                onCtxMenuOpen: T,
+                onCtxMenuOpen: S,
                 onCtxMenuClose: y,
                 onCtxMenuSelect: E,
                 isExpanded: N,
@@ -58,22 +58,22 @@ let C = (0, r.animated)(x.Ay),
                     logotypeStyle: {
                         height: 24,
                         maxWidth: 92,
-                        transform: (0, r.to)([S.to({ range: [0, 1], output: [1, 1] })], (e) => `scale(${e})`),
+                        transform: (0, r.to)([T.to({ range: [0, 1], output: [1, 1] })], (e) => `scale(${e})`),
                     },
                 }),
             });
         return (0, a.jsxs)(r.animated.div, {
             className: l()(A.iE, A.Ht, { [A.tT]: w }),
-            style: { transform: (0, r.to)([S.to({ range: [0, 1], output: [6, 0] })], (e) => `translateY(${e}px)`) },
+            style: { transform: (0, r.to)([T.to({ range: [0, 1], output: [6, 0] })], (e) => `translateY(${e}px)`) },
             children: [
                 (0, a.jsx)(r.animated.div, {
                     className: A.Tu,
-                    style: { opacity: (0, p.a)(S.to({ range: [0, 1], output: [0, 1] })) },
+                    style: { opacity: (0, p.a)(T.to({ range: [0, 1], output: [0, 1] })) },
                 }),
-                (0, a.jsx)(v.A, { isFullyExpanded: w, partnerBranding: D }),
+                (0, a.jsx)(b.A, { isFullyExpanded: w, partnerBranding: D }),
                 (0, a.jsxs)(r.animated.div, {
                     className: A.P0,
-                    style: { opacity: (0, p.a)(S.to({ range: [0, 1], output: [0, 1] })) },
+                    style: { opacity: (0, p.a)(T.to({ range: [0, 1], output: [0, 1] })) },
                     children: [
                         (0, a.jsxs)(o.DUT, {
                             className: A.y8,
@@ -90,10 +90,10 @@ let C = (0, r.animated)(x.Ay),
                         t
                             ? (0, a.jsx)("div", {
                                   className: A.uJ,
-                                  children: (0, a.jsx)(b.n, { timeoutDurationInMilliseconds: n, onTimeoutComplete: s }),
+                                  children: (0, a.jsx)(v.n, { timeoutDurationInMilliseconds: n, onTimeoutComplete: s }),
                               })
                             : (0, a.jsx)(h.C, {
-                                  onOpen: T,
+                                  onOpen: S,
                                   onClose: y,
                                   onSelect: E,
                                   questContent: d.uF.QUEST_BAR_V2,

@@ -1,7 +1,7 @@
 n.d(t, { A: () => O });
 var i = n(627968),
     l = n(64700),
-    s = n(40153),
+    s = n(522160),
     a = n(837381),
     r = n(311907),
     o = n(397927),
@@ -10,8 +10,8 @@ var i = n(627968),
     u = n(571694),
     h = n(47167),
     A = n(598104),
-    m = n(616356),
-    p = n(383501),
+    p = n(616356),
+    m = n(383501),
     g = n(222823),
     _ = n(309010),
     f = n(287809),
@@ -80,7 +80,7 @@ class R extends l.PureComponent {
             l = t.type === S.rbe.DM ? f.default.getUser(t.getRecipientId()) : null;
         null != l
             ? (0, d.L3)(e, async () => {
-                  let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("39778"), n.e("54266")]).then(
+                  let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("39778"), n.e("31885")]).then(
                       n.bind(n, 385913),
                   );
                   return (n) => (0, i.jsx)(e, { ...n, channel: t, user: l });
@@ -103,14 +103,14 @@ class R extends l.PureComponent {
                 unread: u,
                 treeItemProps: h,
             } = this.props,
-            { hovered: m, animating: p } = this.state,
+            { hovered: p, animating: m } = this.state,
             g = e.isMultiUserDM() && null == e.icon,
             _ = () =>
                 (0, i.jsx)(o.jlP, {
                     to: S.BVt.CHANNEL(S.ME, e.id),
                     onMouseEnter: () => this.setState({ hovered: !0 }),
                     onMouseLeave: () => this.setState({ hovered: !1 }),
-                    selected: n || m,
+                    selected: n || p,
                     ariaLabel: null != t ? T.intl.formatToPlainString(T.t.hKarnZ, { mentions: l, name: t }) : "",
                     onContextMenu: this.handleContextMenu,
                     icon: g ? void 0 : this.getChannelIcon(),
@@ -129,7 +129,7 @@ class R extends l.PureComponent {
             style: this.getAnimatedStyle(),
             children: (0, i.jsxs)(b.c, {
                 children: [
-                    (0, i.jsx)(E.A, { hovered: !p && m, selected: !p && n, unread: !p && u, className: v.I }),
+                    (0, i.jsx)(E.A, { hovered: !m && p, selected: !m && n, unread: !m && u, className: v.I }),
                     (0, i.jsx)(I.A, {
                         channel: e,
                         children: (0, i.jsx)(o.Qk9, {
@@ -150,9 +150,9 @@ let O = l.forwardRef(function (e, t) {
     let n = e.channel.id,
         l = (0, h.Ay)(e.channel),
         s = (0, a.Vd)(n, 2),
-        d = (0, r.bG)([p.A], () => p.A.getChannelId(), []),
+        d = (0, r.bG)([m.A], () => m.A.getChannelId(), []),
         u = (0, r.bG)([c.A], () => c.A.getMode(n), [n]),
-        A = (0, r.bG)([m.A], () => m.A.getAllApplicationStreamsForChannel(n).length > 0),
+        A = (0, r.bG)([p.A], () => p.A.getAllApplicationStreamsForChannel(n).length > 0),
         f = (0, r.bG)([x.Ay], () => x.Ay.getVoiceStatesForChannel(e.channel).length > 0, [e.channel]),
         C = (0, r.bG)([_.A], () => _.A.getChannelId(), []),
         E = (0, r.bG)([g.Ay], () => g.Ay.getMentionCount(n), [n]),

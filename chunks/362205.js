@@ -1,40 +1,40 @@
 n.d(t, { A: () => h });
-var a = n(627968),
-    r = n(64700),
+var r = n(627968),
+    a = n(64700),
     i = n(503698),
     o = n.n(i),
     l = n(284009),
     s = n.n(l),
-    c = n(40153),
-    d = n(837381),
+    c = n(522160),
+    _ = n(837381),
     u = n(397927),
-    _ = n(964486),
+    d = n(964486),
     g = n(775602),
-    m = n(253932),
-    b = n(894858),
+    b = n(253932),
+    m = n(894858),
     f = n(890690),
     p = n(637577);
 function x(e) {
-    let { category: t, onClick: n, active: r } = e,
+    let { category: t, onClick: n, active: a } = e,
         { useTitle: i, useSubnavLabel: l, key: c } = t,
-        _ = i?.(),
-        g = l?.() ?? _;
+        d = i?.(),
+        g = l?.() ?? d;
     return (
         s()(null != g, "[SettingsSubnavigationCategory] Category must have a title"),
-        (0, a.jsx)(d.tG, {
+        (0, r.jsx)(_.tG, {
             id: c,
             children: (e) =>
-                (0, a.jsx)(u.DUT, { onClick: n, className: o()(p.AS, { [p.vu]: r }), ...e, children: g }, c),
+                (0, r.jsx)(u.DUT, { onClick: n, className: o()(p.AS, { [p.vu]: a }), ...e, children: g }, c),
         })
     );
 }
 function h(e) {
     let { categories: t } = e,
-        n = b.A.useField("currentCategoryKey");
-    (0, _.Ay)(() => {
-        t.some((e) => e.key === n) || b.A.setState({ currentCategoryKey: t[0].key });
+        n = m.A.useField("currentCategoryKey");
+    (0, d.Ay)(() => {
+        t.some((e) => e.key === n) || m.A.setState({ currentCategoryKey: t[0].key });
     });
-    let i = r.useMemo(
+    let i = a.useMemo(
             () =>
                 Math.max(
                     t.findIndex((e) => e.key === n),
@@ -46,67 +46,67 @@ function h(e) {
             thumbRef: o,
             trackRef: l,
             thumbAnchorRef: s,
-            springs: d,
+            springs: _,
         } = (function (e) {
-            let t = m.Xi.useSetting(),
-                n = r.useRef(null),
-                a = r.useRef(null),
-                i = r.useRef(null),
-                o = r.useRef(!0),
-                l = r.useRef(t),
+            let t = b.Xi.useSetting(),
+                n = a.useRef(null),
+                r = a.useRef(null),
+                i = a.useRef(null),
+                o = a.useRef(!0),
+                l = a.useRef(t),
                 [s, c] = (0, u.zhh)(() => ({ y: 0, height: 0, config: { mass: 0.1, friction: 20, tension: 300 } }));
             return (
-                r.useLayoutEffect(() => {
+                a.useLayoutEffect(() => {
                     let e = l.current !== t,
-                        r = () => {
-                            if (null == n.current || null == a.current || null == i.current) return;
-                            let [r, d] = [n.current.getBoundingClientRect(), i.current.getBoundingClientRect()],
-                                u = r.width / 2,
-                                _ = (d.y - r.y) / u,
-                                m = d.height / u;
+                        a = () => {
+                            if (null == n.current || null == r.current || null == i.current) return;
+                            let [a, _] = [n.current.getBoundingClientRect(), i.current.getBoundingClientRect()],
+                                u = a.width / 2,
+                                d = (_.y - a.y) / u,
+                                b = _.height / u;
                             o.current || e || g.A.useReducedMotion
-                                ? (s.y.set(_), s.height.set(m))
-                                : c({ y: _, height: m }),
+                                ? (s.y.set(d), s.height.set(b))
+                                : c({ y: d, height: b }),
                                 (o.current = !1),
                                 (l.current = t);
                         },
-                        d = null;
+                        _ = null;
                     return (
                         e
-                            ? (d = requestAnimationFrame(() => {
-                                  (d = null), r();
+                            ? (_ = requestAnimationFrame(() => {
+                                  (_ = null), a();
                               }))
-                            : r(),
+                            : a(),
                         () => {
-                            null != d && cancelAnimationFrame(d);
+                            null != _ && cancelAnimationFrame(_);
                         }
                     );
                 }, [e, c, s.y, s.height, t]),
-                { thumbRef: a, trackRef: n, thumbAnchorRef: i, springs: s }
+                { thumbRef: r, trackRef: n, thumbAnchorRef: i, springs: s }
             );
         })(i);
     return (
         (0, f.u)(t),
-        (0, a.jsxs)("div", {
+        (0, r.jsxs)("div", {
             className: p.o8,
             role: "list",
             style: { "--custom-nav-count": t.length, "--custom-nav-index": i, "--custom-nav-width": "2px" },
             children: [
-                (0, a.jsx)("div", {
+                (0, r.jsx)("div", {
                     className: p.u4,
                     "aria-hidden": "true",
                     ref: l,
-                    children: (0, a.jsx)(c.animated.div, { className: p.FF, style: d, ref: o }),
+                    children: (0, r.jsx)(c.animated.div, { className: p.FF, style: _, ref: o }),
                 }),
-                (0, a.jsx)("div", { className: p.gu, "aria-hidden": "true", ref: s }),
+                (0, r.jsx)("div", { className: p.gu, "aria-hidden": "true", ref: s }),
                 t.map((e) =>
-                    (0, a.jsx)(
+                    (0, r.jsx)(
                         x,
                         {
                             onClick: () => {
                                 var t;
                                 return (
-                                    (t = e.key), void b.A.setState({ requestedTargetKey: t, showNavigationMobile: !1 })
+                                    (t = e.key), void m.A.setState({ requestedTargetKey: t, showNavigationMobile: !1 })
                                 );
                             },
                             active: e.key === n,

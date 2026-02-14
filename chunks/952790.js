@@ -3,15 +3,15 @@ var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(40153),
+    r = n(522160),
     o = n(607399),
     d = n(311907),
     c = n(990078),
     u = n(397927),
     h = n(454938),
     A = n(855687),
-    m = n(731091),
-    p = n(544028),
+    p = n(731091),
+    m = n(544028),
     g = n(253932),
     _ = n(576705),
     f = n(486020),
@@ -86,7 +86,7 @@ function y(e) {
 }
 let j = [I.V, E.gNP];
 function R(e) {
-    let { bannerVisible: t, guild: s, onClick: a, onContextMenu: r, ariaControls: o, ariaExpanded: h, children: p } = e,
+    let { bannerVisible: t, guild: s, onClick: a, onContextMenu: r, ariaControls: o, ariaExpanded: h, children: m } = e,
         g = (0, d.bG)([_.A], () => (0, A.K)(_.A, s)),
         f = l.useCallback(() => {
             g
@@ -117,7 +117,7 @@ function R(e) {
                             (0, i.jsx)(y, { guild: s }),
                         ],
                     }),
-                    (0, i.jsx)("div", { className: N.dx, children: p }),
+                    (0, i.jsx)("div", { className: N.dx, children: m }),
                 ],
             }),
             !j.includes(s.id) &&
@@ -133,7 +133,7 @@ function R(e) {
                         children: (0, i.jsx)(u.DpX, { size: "refresh_sm", color: "currentColor" }),
                     }),
                 }),
-            s.id === E.gNP && (0, i.jsx)(m.g, {}),
+            s.id === E.gNP && (0, i.jsx)(p.g, {}),
         ],
     });
 }
@@ -145,7 +145,7 @@ let O = l.memo(function (e) {
             className: r,
             onClick: c,
             onContextMenu: A,
-            onMouseDown: m,
+            onMouseDown: p,
             disableBannerAnimation: _,
             "aria-expanded": C,
             "aria-controls": I,
@@ -168,7 +168,7 @@ let O = l.memo(function (e) {
         K = t ?? F,
         W = l.useRef(void 0),
         Y = g.kt.getSetting(),
-        z = (0, d.bG)([p.A], () => p.A.theme);
+        z = (0, d.bG)([m.A], () => m.A.theme);
     l.useEffect(() => {
         if (k && n && !H.current && Y)
             return (
@@ -198,7 +198,7 @@ let O = l.memo(function (e) {
                         "data-banner-visible": n,
                         ref: K,
                         className: a()(r, { [N.kL]: !0, [N.r9]: q(), [N.Pi]: n, [e]: !1, [N.Iv]: w || (D && P) }),
-                        onMouseDown: m,
+                        onMouseDown: p,
                         onContextMenu: A,
                         children: [
                             (0, i.jsxs)("header", {

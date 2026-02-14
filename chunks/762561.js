@@ -1,7 +1,7 @@
 n.d(t, { A: () => k });
 var i = n(627968),
     l = n(64700),
-    s = n(40153),
+    s = n(522160),
     a = n(158954),
     r = n(311907),
     o = n(397927),
@@ -10,8 +10,8 @@ var i = n(627968),
     u = n(688810),
     h = n(713517),
     A = n(182592),
-    m = n(594832),
-    p = n(183555),
+    p = n(594832),
+    m = n(183555),
     g = n(672385),
     _ = n(622543),
     f = n(950191),
@@ -42,7 +42,7 @@ function k(e) {
         H = (0, d.Ay)(),
         F = l.useRef(Date.now()),
         { analyticsLocations: K } = (0, u.Ay)(c.A.USER_PROFILE_SIDEBAR),
-        W = (0, p.pb)({ layout: "SIDEBAR", userId: t.id, channelId: g.id }),
+        W = (0, m.pb)({ layout: "SIDEBAR", userId: t.id, channelId: g.id }),
         Y = l.useRef(null),
         { isHoveringOrFocusing: z, isHovering: q } = (0, h.A)(Y),
         X = (0, x.fC)(),
@@ -52,11 +52,11 @@ function k(e) {
         },
         $ = B?.widgets != null && B.widgets.length > 0,
         { defaultWishlistId: Z } = (0, r.cf)([_.A], () => ({ defaultWishlistId: _.A.getFirstWishlistId(t.id) })),
-        { wishlist: ee } = (0, m.fw)({ wishlistId: Z, userId: t.id }),
+        { wishlist: ee } = (0, p.fw)({ wishlistId: Z, userId: t.id }),
         et = l.useMemo(() => (null == ee ? null : ee.items.filter((e) => !e.isOwned)), [ee]);
     return (0, i.jsx)(u.f5, {
         value: K,
-        children: (0, i.jsx)(p.of, {
+        children: (0, i.jsx)(m.of, {
             value: W,
             openedAt: F.current,
             fetchStartedAt: B?.fetchStartedAt,

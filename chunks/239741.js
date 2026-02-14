@@ -2,7 +2,7 @@
 n.d(t, { A: () => L });
 var i = n(627968),
     s = n(64700),
-    l = n(40153),
+    l = n(522160),
     r = n(311907),
     a = n(827734),
     o = n(73939),
@@ -69,7 +69,7 @@ function D(e) {
     let V = (0, c.rdh)(a.A.colors.BACKGROUND_SURFACE_HIGH).hex(),
         z = (0, c.rdh)(a.A.unsafe_rawColors.PRIMARY_160).hex(),
         W = (0, d.Mw)(w) ? V : z,
-        K = F.to({ range: [0, 1], output: [W, (0, c.rdh)(a.A.colors.BACKGROUND_FEEDBACK_CRITICAL).hex()] });
+        Y = F.to({ range: [0, 1], output: [W, (0, c.rdh)(a.A.colors.BACKGROUND_FEEDBACK_CRITICAL).hex()] });
     if (D) {
         if (L === b.Hy.DEFAULT_CHANNELS) return (0, i.jsx)(I.G, {});
         else if (L === b.Hy.CUSTOMIZATION_QUESTIONS) return (0, i.jsx)(S.fO, {});
@@ -77,7 +77,7 @@ function D(e) {
         else if (L === b.Hy.CONNECTIONS) return (0, i.jsx)(v.R, {});
         else if ((L === b.Hy.LANDING || L === b.Hy.REVIEW) && f.A.hasChanges()) return (0, i.jsx)(y.A, {});
     }
-    let Y = L === b.kd[b.kd.length - 1],
+    let K = L === b.kd[b.kd.length - 1],
         X = async () => {
             let e = N.A.advancedMode;
             if (M)
@@ -151,7 +151,7 @@ function D(e) {
             className: G.hE,
             children: (0, i.jsx)(l.animated.div, {
                 className: G.kL,
-                style: { backgroundColor: K },
+                style: { backgroundColor: Y },
                 children: (0, i.jsxs)("div", {
                     className: G.nP,
                     ref: B,
@@ -184,7 +184,7 @@ function D(e) {
                                                       children: O.intl.string(O.t.DhYsPL),
                                                   })
                                                 : null,
-                                            Y ? null : $,
+                                            K ? null : $,
                                         ],
                                     }),
                                 ],

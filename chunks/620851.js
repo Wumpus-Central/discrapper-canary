@@ -1,20 +1,20 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => p });
 var i = n(627968),
     l = n(64700),
     a = n(503698),
     s = n.n(a),
     r = n(812729),
     o = n.n(r),
-    d = n(40153),
+    d = n(522160),
     u = n(397927),
     c = n(259788),
     h = n(302614),
     A = n(751747);
 let m = { mass: 1, tension: 600, friction: 60, clamp: !0 };
-function g(e) {
+function p(e) {
     let { locked: t, pinned: n } = e,
         [a, r] = l.useState(0),
-        [g, p] = l.useState(0),
+        [p, g] = l.useState(0),
         [f, _] = l.useState(0),
         E = l.useRef(0),
         [x, S] = l.useState(0),
@@ -22,21 +22,21 @@ function g(e) {
             (e) => ({ timeToLiveMs: e.timeToLiveMs, reappearTimeMs: e.reappearTimeMs }),
             o(),
         ),
-        C = { timeToLiveMs: I, reappearTimeMs: T },
-        y = l.useRef(C);
+        y = { timeToLiveMs: I, reappearTimeMs: T },
+        C = l.useRef(y);
     l.useEffect(() => {
-        y.current = C;
+        C.current = y;
     }),
         l.useEffect(
             () => (
                 (E.current = setInterval(() => {
                     let e = Date.now();
-                    p(e),
+                    g(e),
                         _((t) => {
                             if (0 === t) return e;
                             let n = e - t,
-                                i = y.current.timeToLiveMs,
-                                l = i + y.current.reappearTimeMs;
+                                i = C.current.timeToLiveMs,
+                                l = i + C.current.reappearTimeMs;
                             return n > i ? t + l : t;
                         });
                 }, 100)),
@@ -49,19 +49,19 @@ function g(e) {
     let v = () => {
             r(Date.now()), S((e) => e + 1);
         },
-        N = a > 0 && g - a < 1e3,
-        O = (0, u.pnh)(f > 0 && f < g && g - f < I, {
+        N = a > 0 && p - a < 1e3,
+        O = (0, u.pnh)(f > 0 && f < p && p - f < I, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
             config: m,
         }),
-        [j, b] = l.useState(!1);
+        [b, j] = l.useState(!1);
     if (
         (l.useEffect(() => {
-            x > 10 && b(!0);
+            x > 10 && j(!0);
         }, [x]),
-        j)
+        b)
     )
         throw Error("ClickZoneDebugWidget crashed, too many clicks");
     return t && !n

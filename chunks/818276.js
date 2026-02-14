@@ -1,9 +1,9 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => b });
 var a = n(627968),
     i = n(64700),
     s = n(503698),
     l = n.n(s),
-    r = n(40153),
+    r = n(522160),
     o = n(341915),
     d = n(890687),
     c = n(398025),
@@ -15,33 +15,33 @@ var a = n(627968),
     g = n(783602),
     _ = n(272111),
     f = n(596850);
-let v = i.forwardRef(function (e, t) {
+let b = i.forwardRef(function (e, t) {
     let { className: n, overlayRef: s } = e,
-        { expansionSpring: v } = i.useContext(u.PW),
-        { quest: b, taskDetails: j, isExpanded: A, isExpansionAnimationComplete: C } = i.useContext(x.T),
-        S = b.userStatus?.completedAt != null,
-        T = (0, d.I3)(b),
+        { expansionSpring: b } = i.useContext(u.PW),
+        { quest: v, taskDetails: j, isExpanded: A, isExpansionAnimationComplete: C } = i.useContext(x.T),
+        T = v.userStatus?.completedAt != null,
+        S = (0, d.I3)(v),
         y = i.useRef(null),
-        E = b.userStatus?.enrolledAt != null,
-        N = null != T ? T.percentComplete : j.percentComplete,
+        E = v.userStatus?.enrolledAt != null,
+        N = null != S ? S.percentComplete : j.percentComplete,
         [I, k] = i.useState(!1);
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            S && (0, a.jsx)(h.A, { overlayRef: s, progressBarRef: y, isHovered: I }),
+            T && (0, a.jsx)(h.A, { overlayRef: s, progressBarRef: y, isHovered: I }),
             (0, a.jsx)(r.animated.div, {
                 ref: t,
                 "aria-hidden": A && C,
                 className: l()(n, f.hR, { [f.Ag]: A, [f.s]: E }),
                 style: {
-                    opacity: (0, c.a)(v.to({ range: [0, 1], output: [1, 0] })),
-                    backgroundImage: S ? `linear-gradient(90deg, ${_.V}, ${_.u})` : void 0,
+                    opacity: (0, c.a)(b.to({ range: [0, 1], output: [1, 0] })),
+                    backgroundImage: T ? `linear-gradient(90deg, ${_.V}, ${_.u})` : void 0,
                 },
                 onMouseEnter: () => k(!0),
                 onMouseLeave: () => k(!1),
                 children: (0, a.jsxs)("div", {
                     className: f.o8,
                     children: [
-                        S &&
+                        T &&
                             (0, a.jsxs)(a.Fragment, {
                                 children: [(0, a.jsx)(g.A, {}), (0, a.jsx)("div", { className: f.yF })],
                             }),
@@ -53,7 +53,7 @@ let v = i.forwardRef(function (e, t) {
                                   percentComplete: N,
                               })
                             : null,
-                        S &&
+                        T &&
                             (0, a.jsx)(m.f, {
                                 awaitingConsoleConnections: !1,
                                 hasMadeProgress: !0,

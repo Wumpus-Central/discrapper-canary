@@ -3,7 +3,7 @@ var i = n(627968);
 n(64700);
 var l = n(503698),
     s = n.n(l),
-    a = n(40153),
+    a = n(522160),
     r = n(827734),
     o = n(397927),
     d = n(263063),
@@ -11,13 +11,13 @@ var l = n(503698),
 function u(e) {
     let { guild: t, show: n, active: l, onAnimationStart: u, onAnimationRest: h } = e,
         A = {},
-        m = {};
+        p = {};
     (A.transform = "translate3d(10px, 10px, 0) scale3d(3, 3, 1)"),
-        (m.transform = "translate3d(0, 0, 0) scale3d(1, 1, 1)");
-    let p = (0, o.rdh)(r.A.unsafe_rawColors.BRAND_500).hex(),
+        (p.transform = "translate3d(0, 0, 0) scale3d(1, 1, 1)");
+    let m = (0, o.rdh)(r.A.unsafe_rawColors.BRAND_500).hex(),
         g = (0, o.rdh)(r.A.unsafe_rawColors.PRIMARY_630).hex();
-    l && null == t.icon && ((A.backgroundColor = p), (m.backgroundColor = g));
-    let _ = (0, o.pnh)(n, { from: A, enter: m, leave: A, config: { duration: 100 }, onStart: u, onRest: h });
+    l && null == t.icon && ((A.backgroundColor = m), (p.backgroundColor = g));
+    let _ = (0, o.pnh)(n, { from: A, enter: p, leave: A, config: { duration: 100 }, onStart: u, onRest: h });
     return (0, i.jsx)(i.Fragment, {
         children: _(
             (e, n, l) =>

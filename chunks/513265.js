@@ -1,89 +1,89 @@
-n.d(t, { A: () => g });
-var i = n(627968),
-    s = n(64700),
-    l = n(503698),
-    a = n.n(l),
-    r = n(40153),
-    d = n(311907),
-    o = n(397927),
-    c = n(775602),
-    u = n(384377),
-    A = n(518477),
-    x = n(985018),
-    m = n(845913),
-    p = n(910200);
-let h = {
-        [A.jM.WIDGET_ADDED]: {
-            message: x.intl.string(x.t.fFP1Uy),
-            icon: (0, i.jsx)(o.A9s, { size: "sm", color: o.LU0.colors.STATUS_POSITIVE.css }),
+l.d(t, { A: () => f });
+var i = l(627968),
+    n = l(64700),
+    s = l(503698),
+    a = l.n(s),
+    r = l(522160),
+    o = l(311907),
+    d = l(397927),
+    c = l(775602),
+    u = l(384377),
+    m = l(518477),
+    A = l(985018),
+    x = l(845913),
+    p = l(910200);
+let g = {
+        [m.jM.WIDGET_ADDED]: {
+            message: A.intl.string(A.t.fFP1Uy),
+            icon: (0, i.jsx)(d.A9s, { size: "sm", color: d.LU0.colors.STATUS_POSITIVE.css }),
             toast_id: "user_profile_widget_added",
         },
-        [A.jM.WIDGET_REMOVED]: {
-            message: x.intl.string(x.t.zzsK7h),
-            icon: (0, i.jsx)(o.A9s, { size: "sm", color: o.LU0.colors.STATUS_POSITIVE.css }),
+        [m.jM.WIDGET_REMOVED]: {
+            message: A.intl.string(A.t.zzsK7h),
+            icon: (0, i.jsx)(d.A9s, { size: "sm", color: d.LU0.colors.STATUS_POSITIVE.css }),
             toast_id: "user_profile_widget_removed",
         },
-        [A.jM.WIDGET_SAVE_FAILURE]: {
-            message: x.intl.string(x.t["84MExs"]),
-            icon: (0, i.jsx)(o.d$L, { size: "sm", color: o.LU0.colors.ICON_FEEDBACK_CRITICAL }),
+        [m.jM.WIDGET_SAVE_FAILURE]: {
+            message: A.intl.string(A.t["84MExs"]),
+            icon: (0, i.jsx)(d.d$L, { size: "sm", color: d.LU0.colors.ICON_FEEDBACK_CRITICAL }),
             toast_id: "user_profile_widget_save_failure",
-            type: o.ToastType.FAILURE,
+            type: d.ToastType.FAILURE,
         },
-        [A.jM.SOMETHING_WENT_WRONG]: {
-            message: x.intl.string(x.t.F8FvUy),
-            icon: (0, i.jsx)(o.d$L, { size: "sm", color: o.LU0.colors.ICON_FEEDBACK_CRITICAL }),
+        [m.jM.SOMETHING_WENT_WRONG]: {
+            message: A.intl.string(A.t.F8FvUy),
+            icon: (0, i.jsx)(d.d$L, { size: "sm", color: d.LU0.colors.ICON_FEEDBACK_CRITICAL }),
             toast_id: "user_profile_something_went_wrong",
-            type: o.ToastType.FAILURE,
+            type: d.ToastType.FAILURE,
         },
     },
-    f = (e) => {
-        let { message: t, icon: n, type: s } = e;
+    h = (e) => {
+        let { message: t, icon: l, type: n } = e;
         return (0, i.jsxs)("div", {
-            className: a()(p.oR, m.oR),
-            "data-type": s,
+            className: a()(p.oR, x.oR),
+            "data-type": n,
             children: [
-                (0, i.jsx)("div", { className: m.RC, children: n }),
-                (0, i.jsx)(o.Text, { color: "text-strong", variant: "text-sm/semibold", children: t }),
+                (0, i.jsx)("div", { className: x.RC, children: l }),
+                (0, i.jsx)(d.Text, { color: "text-strong", variant: "text-sm/semibold", children: t }),
             ],
         });
     },
-    g = (e) => {
-        let { className: t, onAutoHide: n } = e,
-            l = (0, u.fu)(),
-            A = (0, d.bG)([c.A], () => c.A.useReducedMotion),
-            [x, p] = s.useState(!1),
-            [g, I] = s.useState(null);
-        s.useEffect(() => {
-            null !== l ? (p(!0), I(h[l]), o.ORC.announce(h[l].message)) : p(!1);
-        }, [l]);
-        let j = (0, o.pnh)(
-            x,
+    f = (e) => {
+        let { className: t, onAutoHide: l } = e,
+            s = (0, u.fu)(),
+            m = (0, o.bG)([c.A], () => c.A.useReducedMotion),
+            [A, p] = n.useState(!1),
+            [f, j] = n.useState(null);
+        n.useEffect(() => {
+            null !== s ? (p(!0), j(g[s]), d.ORC.announce(g[s].message)) : p(!1);
+        }, [s]);
+        let I = (0, d.pnh)(
+            A,
             {
-                from: { transform: A ? "translateY(0)" : "translateY(-12px)", opacity: 0 },
+                from: { transform: m ? "translateY(0)" : "translateY(-12px)", opacity: 0 },
                 enter: { transform: "translateY(0)", opacity: 1 },
-                leave: { transform: A ? "translateY(0)" : "translateY(-12px)", opacity: 0 },
+                leave: { transform: m ? "translateY(0)" : "translateY(-12px)", opacity: 0 },
                 config: { mass: 1, tension: 200, friction: 18, clamp: !0 },
             },
             "animate-always",
         );
         return (
-            s.useEffect(() => {
-                if (x) {
+            n.useEffect(() => {
+                if (A) {
                     let e = setTimeout(() => {
-                        n?.();
+                        l?.();
                     }, 2e3);
                     return () => clearTimeout(e);
                 }
-            }, [x, n]),
+            }, [A, l]),
             (0, i.jsx)(i.Fragment, {
-                children: j(
-                    (e, n) =>
-                        n &&
-                        null !== g &&
+                children: I(
+                    (e, l) =>
+                        l &&
+                        null !== f &&
                         (0, i.jsx)(r.animated.div, {
-                            className: a()(t, m.Jt),
+                            className: a()(t, x.Jt),
                             style: e,
-                            children: (0, i.jsx)(f, { ...g }),
+                            children: (0, i.jsx)(h, { ...f }),
                         }),
                 ),
             })

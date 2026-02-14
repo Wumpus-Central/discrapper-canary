@@ -1,7 +1,7 @@
 n.d(t, { A: () => I });
 var i = n(627968),
     l = n(64700),
-    s = n(40153),
+    s = n(522160),
     a = n(311283),
     r = n(311907),
     o = n(435371),
@@ -10,8 +10,8 @@ var i = n(627968),
     u = n(334738),
     h = n(58149),
     A = n(976860),
-    m = n(734057),
-    p = n(510560),
+    p = n(734057),
+    m = n(510560),
     g = n(572448),
     _ = n(955454),
     f = n(502754),
@@ -41,18 +41,18 @@ let I = l.memo(function (e) {
                 },
                 "animate-always",
             ),
-            m = {
+            p = {
                 opacity: h,
                 height: A.to((e) => {
                     var t, n;
                     return u ? ((t = r), (n = o) + (t - n) * e) : "auto";
                 }),
             };
-        return (0, i.jsx)(s.animated.div, { ref: a, style: m, children: (0, i.jsx)(b, { ...e }) });
+        return (0, i.jsx)(s.animated.div, { ref: a, style: p, children: (0, i.jsx)(b, { ...e }) });
     }),
     b = l.memo(function (e) {
         let { channel: t, onJump: n, deleteChannel: s, toggle: a } = e,
-            o = (0, r.bG)([m.A], () => m.A.getChannel(t.channelId));
+            o = (0, r.bG)([p.A], () => p.A.getChannel(t.channelId));
         if (
             (l.useEffect(() => {
                 null == o ||
@@ -96,7 +96,7 @@ let I = l.memo(function (e) {
                     children: (0, i.jsxs)(d.ButtonGroup, {
                         size: "sm",
                         className: E.GC,
-                        children: [(0, i.jsx)(p.A, { channel: o }), (0, i.jsx)(N, { ...e })],
+                        children: [(0, i.jsx)(m.A, { channel: o }), (0, i.jsx)(N, { ...e })],
                     }),
                 }),
                 children: t.collapsed

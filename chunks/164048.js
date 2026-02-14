@@ -3,11 +3,11 @@ var l = n(627968),
     i = n(64700),
     a = n(503698),
     r = n.n(a),
-    o = n(40153),
+    o = n(522160),
     s = n(417597),
     c = n(827734),
-    u = n(582754),
-    d = n(397927),
+    d = n(582754),
+    u = n(397927),
     m = n(565645),
     h = n(736653),
     p = n(508675),
@@ -16,22 +16,22 @@ var l = n(627968),
     g = n(603414);
 function f(e) {
     let { guildId: t, option: n, selected: a, onSelect: f, hideMemberCount: C, canBeNew: j } = e,
-        v = (0, u.Mw)((0, h.Ay)()),
-        [y, _] = i.useState(!1),
-        N = y && !C,
+        v = (0, d.Mw)((0, h.Ay)()),
+        [_, N] = i.useState(!1),
+        y = _ && !C,
         w = i.useRef(null),
-        { reducedMotion: E } = i.useContext(d.CZY),
-        b = (0, s.bG)([p.Ay], () => n.emoji?.id != null && (p.Ay.getCustomEmojiById(n.emoji?.id)?.animated ?? !1)),
-        I = (0, x.A)(t, 1e3),
-        k = null == I || null == n.roleIds ? 0 : Math.max(...n.roleIds.map((e) => I[e])),
-        M = j && !a && n.isUnseen,
-        T = (0, d.zhh)(
+        { reducedMotion: E } = i.useContext(u.CZY),
+        I = (0, s.bG)([p.Ay], () => n.emoji?.id != null && (p.Ay.getCustomEmojiById(n.emoji?.id)?.animated ?? !1)),
+        M = (0, x.A)(t, 1e3),
+        b = null == M || null == n.roleIds ? 0 : Math.max(...n.roleIds.map((e) => M[e])),
+        k = j && !a && n.isUnseen,
+        T = (0, u.zhh)(
             { transform: a || E.enabled ? "scale(1)" : "scale(0.7)", opacity: +!!a, config: { duration: 150 } },
             "animate-always",
         ),
-        R = (0, d.rdh)(c.A.colors.BORDER_SUBTLE),
-        D = (0, d.rdh)(c.A.unsafe_rawColors.BRAND_500),
-        O = (0, d.zhh)(
+        R = (0, u.rdh)(c.A.colors.BORDER_SUBTLE),
+        D = (0, u.rdh)(c.A.unsafe_rawColors.BRAND_500),
+        O = (0, u.zhh)(
             {
                 from: { color: D.spring() },
                 color: R.spring({ opacity: v ? 0.5 : 0.25 }),
@@ -40,8 +40,8 @@ function f(e) {
             },
             "animate-always",
         ),
-        L = (0, d.pnh)(
-            N,
+        K = (0, u.pnh)(
+            y,
             {
                 from: { transform: E.enabled ? "translateX(0)" : "translateX(8px)", opacity: 0 },
                 enter: { transform: "translateX(0)", opacity: 1 },
@@ -51,34 +51,34 @@ function f(e) {
             },
             "animate-always",
         ),
-        [K, G] = i.useState(!1);
+        [L, H] = i.useState(!1);
     i.useEffect(() => {
-        if (N)
+        if (y)
             return (
                 (w.current = setTimeout(() => {
-                    _(!1), (w.current = null);
+                    N(!1), (w.current = null);
                 }, 3e3)),
                 () => {
                     null != w.current && clearTimeout(w.current);
                 }
             );
-    }, [N]);
-    let H = r()(g.RH, { [g.wH]: a, [g.Vq]: K }),
-        B = M ? { borderColor: O.color } : {};
+    }, [y]);
+    let B = r()(g.RH, { [g.wH]: a, [g.Vq]: L }),
+        G = k ? { borderColor: O.color } : {};
     return (0, l.jsx)(o.animated.div, {
-        style: B,
-        className: H,
-        children: (0, l.jsxs)(d.DUT, {
+        style: G,
+        className: B,
+        children: (0, l.jsxs)(u.DUT, {
             className: g.AP,
             onClick: () => {
-                _(!a), f(!a);
+                N(!a), f(!a);
             },
-            onMouseDown: () => G(!0),
-            onMouseUp: () => G(!1),
+            onMouseDown: () => H(!0),
+            onMouseUp: () => H(!1),
             children: [
                 null != n.emoji && (null != n.emoji.id || null != n.emoji.name)
                     ? (0, l.jsx)(m.A, {
-                          animated: n.emoji.animated || b,
+                          animated: n.emoji.animated || I,
                           className: g.t0,
                           emojiId: n.emoji.id,
                           emojiName: n.emoji.name,
@@ -87,9 +87,9 @@ function f(e) {
                 (0, l.jsxs)("div", {
                     className: g._d,
                     children: [
-                        (0, l.jsx)(d.Text, { variant: "text-md/medium", color: "text-strong", children: n.title }),
+                        (0, l.jsx)(u.Text, { variant: "text-md/medium", color: "text-strong", children: n.title }),
                         n.description.length > 0
-                            ? (0, l.jsx)(d.Text, {
+                            ? (0, l.jsx)(u.Text, {
                                   variant: "text-xs/normal",
                                   color: "text-default",
                                   children: n.description,
@@ -100,29 +100,29 @@ function f(e) {
                 (0, l.jsx)(o.animated.div, {
                     className: g.oE,
                     style: T,
-                    children: (0, l.jsx)(d.A9s, {
+                    children: (0, l.jsx)(u.A9s, {
                         size: "custom",
                         width: 10,
                         height: 10,
                         color: c.A.unsafe_rawColors.WHITE.css,
                     }),
                 }),
-                L(
+                K(
                     (e, t) =>
-                        k > 0 &&
+                        b > 0 &&
                         t &&
                         (0, l.jsx)(o.animated.div, {
                             className: g.Kl,
                             style: e,
-                            children: (0, l.jsx)(d.Text, {
+                            children: (0, l.jsx)(u.Text, {
                                 variant: "text-xs/normal",
                                 color: "always-white",
-                                children: A.intl.format(A.t.EgKsZA, { memberCount: k }),
+                                children: A.intl.format(A.t.EgKsZA, { memberCount: b }),
                             }),
                         }),
                 ),
-                M &&
-                    (0, l.jsx)(d.LpS, {
+                k &&
+                    (0, l.jsx)(u.LpS, {
                         color: c.A.unsafe_rawColors.BRAND_260.css,
                         text: A.intl.string(A.t.y2b7CA),
                         className: g.Ad,
