@@ -997,22 +997,19 @@ class eN extends _.A {
                     e.updateSession({ codecs: t });
             }),
             _.on(f.yq.VideoDecoderFallback, (t) => {
-                let n = G.A.getChannel(this.channelId),
-                    r = n?.type === eu.rbe.GUILD_STAGE_VOICE;
-                if (!F.Ay.isVideoDecoderFallbackEnabled() || r) {
-                    if (!this._videoDecoderFallbackSuppressed) {
-                        let e = F.Ay.isVideoDecoderFallbackEnabled() ? "stage channel" : "not in fallback treatment";
-                        this.logger.info(`Suppressing video decoder fallback: ${e}`),
-                            (this._videoDecoderFallbackSuppressed = !0);
-                    }
+                let n = G.A.getChannel(this.channelId);
+                if (n?.type === eu.rbe.GUILD_STAGE_VOICE) {
+                    this._videoDecoderFallbackSuppressed ||
+                        (this.logger.info("Suppressing video decoder fallback: stage channel"),
+                        (this._videoDecoderFallbackSuppressed = !0));
                     return;
                 }
-                let i = t
+                let r = t
                     .filter((e) => "video" === e.type)
                     .map((e) => e.name)
                     .join(",");
                 this.logger.info(
-                    `The originally selected video decoder is not working, fallback to the other available decoders: ${i}`,
+                    `The originally selected video decoder is not working, fallback to the other available decoders: ${r}`,
                 ),
                     e.updateSession({ codecs: t });
             }),
