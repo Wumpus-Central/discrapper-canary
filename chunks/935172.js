@@ -22,7 +22,6 @@ var r = (function (e) {
         (e.SpeakingWhileMuted = "speakingwhilemuted"),
         (e.Mute = "mute"),
         (e.Deafen = "deafen"),
-        (e.ToggleMuteFromNative = "toggle-mute"),
         (e.NativeMuteChanged = "native-mute-changed"),
         (e.LocalMute = "local-mute"),
         (e.NoiseLevel = "noiselevel"),

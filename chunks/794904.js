@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     nM: "row__89036",
     my: "avatar__89036",
