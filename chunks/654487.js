@@ -1,32 +1,32 @@
 "use strict";
 n.d(t, {
-    B3: () => R,
+    B3: () => O,
     BQ: () => M,
-    CI: () => E,
-    Fw: () => y,
-    GD: () => g,
-    J6: () => b,
-    K3: () => L,
-    Ko: () => p,
+    CI: () => A,
+    Fw: () => v,
+    GD: () => E,
+    J6: () => R,
+    K3: () => w,
+    Ko: () => h,
     Li: () => c.L,
-    Ls: () => O,
-    Pc: () => x,
+    Ls: () => D,
+    Pc: () => P,
     TY: () => u.T,
-    WQ: () => k,
+    WQ: () => U,
     ZV: () => f,
-    aJ: () => v,
+    aJ: () => C,
     eA: () => S,
-    ej: () => I,
-    fO: () => h,
-    fP: () => A,
-    gB: () => C,
+    ej: () => T,
+    fO: () => p,
+    fP: () => I,
+    gB: () => b,
     hK: () => N,
-    kL: () => w,
-    mg: () => T,
-    pc: () => G,
+    kL: () => x,
+    mg: () => y,
+    pc: () => F,
     rE: () => d,
     tZ: () => _,
-    zO: () => D,
+    zO: () => L,
 });
 var r = n(735438),
     i = n(412703),
@@ -85,22 +85,23 @@ var r = n(735438),
             (e.QUEST_INSTRUCTIONS = "quest_instructions"),
             (e.QUEST_ACTIVITY_BOTTOM_SHEET = "quest_activity_bottom_sheet"),
             (e.QUEST_PRIMARY_CTA = "quest_primary_cta"),
+            (e.QUEST_LEARN_MORE_CTA = "quest_learn_more_cta"),
             e
         );
     })({});
 let _ = o.A.Millis.MINUTE * a.K.ConsecutiveHeartbeatPeriodMinutes,
     f = { tension: 900, friction: 45, clamp: !0 },
-    p = { tension: 360, friction: 30, clamp: !0 };
-var h = (function (e) {
+    h = { tension: 360, friction: 30, clamp: !0 };
+var p = (function (e) {
     return (e.CONSOLE = "CONSOLE"), (e.DESKTOP = "DESKTOP"), e;
 })({});
-let m = (0, s.TP)(),
-    g =
-        -1 !== m.indexOf("localhost") || -1 !== m.indexOf("127.0.0.1")
-            ? `${m}/_cdn_storage/`
+let g = (0, s.TP)(),
+    E =
+        -1 !== g.indexOf("localhost") || -1 !== g.indexOf("127.0.0.1")
+            ? `${g}/_cdn_storage/`
             : "https://cdn.discordapp.com/",
-    E = g + "quests/";
-var A = (function (e) {
+    A = E + "quests/";
+var I = (function (e) {
     return (
         (e.COLLAPSED = "collapsed"),
         (e.EXPANDED = "expanded"),
@@ -110,8 +111,8 @@ var A = (function (e) {
         e
     );
 })({});
-let I = "545364944258990091",
-    T = "{reward_code}";
+let T = "545364944258990091",
+    y = "{reward_code}";
 var S = (function (e) {
     return (
         (e.EXCLUDED_QUEST = "excluded_quest"),
@@ -120,19 +121,11 @@ var S = (function (e) {
         e
     );
 })({});
-let y = "1333839522189938740",
-    v = "1410358070831480904",
-    C = "1420556874629251124",
+let v = "1333839522189938740",
+    C = "1410358070831480904",
+    b = "1420556874629251124",
     N = "1402418703554842694",
-    b = new Set([l.yW.DESKTOP_ACCOUNT_PANEL_AREA, l.yW.MOBILE_HOME_DOCK_AREA]),
-    R = new Set([
-        i.n.STREAM_ON_DESKTOP,
-        i.n.PLAY_ON_DESKTOP,
-        i.n.PLAY_ON_XBOX,
-        i.n.PLAY_ON_PLAYSTATION,
-        i.n.PLAY_ON_DESKTOP_V2,
-        i.n.PLAY_ACTIVITY,
-    ]),
+    R = new Set([l.yW.DESKTOP_ACCOUNT_PANEL_AREA, l.yW.MOBILE_HOME_DOCK_AREA]),
     O = new Set([
         i.n.STREAM_ON_DESKTOP,
         i.n.PLAY_ON_DESKTOP,
@@ -149,8 +142,16 @@ let y = "1333839522189938740",
         i.n.PLAY_ON_DESKTOP_V2,
         i.n.PLAY_ACTIVITY,
     ]),
-    L = { is_targeted: !1 };
-var w = (function (e) {
+    L = new Set([
+        i.n.STREAM_ON_DESKTOP,
+        i.n.PLAY_ON_DESKTOP,
+        i.n.PLAY_ON_XBOX,
+        i.n.PLAY_ON_PLAYSTATION,
+        i.n.PLAY_ON_DESKTOP_V2,
+        i.n.PLAY_ACTIVITY,
+    ]),
+    w = { is_targeted: !1 };
+var x = (function (e) {
         return (
             (e.SUGGESTED = "suggested"),
             (e.MOST_RECENT = "most_recent"),
@@ -159,7 +160,7 @@ var w = (function (e) {
             e
         );
     })({}),
-    x = (function (e) {
+    P = (function (e) {
         return (e.VIDEO = "task_video"), (e.PLAY = "task_play"), e;
     })({}),
     M = (function (e) {
@@ -170,23 +171,23 @@ var w = (function (e) {
             e
         );
     })({});
-let P = [
+let k = [
     { group: "task", filter: "task_play" },
     { group: "task", filter: "task_video" },
     { group: "reward", filter: "reward_virtual_currency" },
     { group: "reward", filter: "reward_collectible" },
     { group: "reward", filter: "reward_in_game" },
 ];
-function k(e) {
-    return Object.values(x).includes(e)
+function U(e) {
+    return Object.values(P).includes(e)
         ? { group: "task", filter: e }
         : Object.values(M).includes(e)
           ? { group: "reward", filter: e }
           : null;
 }
-let U = ["reward", "task"],
-    G = Object.entries((0, r.groupBy)(P, "group")).sort((e, t) => {
-        let n = U.indexOf(e[0]),
-            r = U.indexOf(t[0]);
+let G = ["reward", "task"],
+    F = Object.entries((0, r.groupBy)(k, "group")).sort((e, t) => {
+        let n = G.indexOf(e[0]),
+            r = G.indexOf(t[0]);
         return n < r ? -1 : +(r < n);
     });
