@@ -85,19 +85,18 @@ function z(e) {
                 analyticsLocations: n,
             });
         }, [n]),
-        [$, ee] = (0, a.useState)("favorites"),
-        et = z === C.xc.FP_ONLY,
-        en = (0, a.useMemo)(() => {
+        $ = z === C.xc.FP_ONLY,
+        ee = (0, a.useMemo)(() => {
             let { NITRO_FAVORITES: e, CUSTOMIZATIONS: t, LEVEL_UPS: n, SHOW_UP_YOUR_WAY: s } = Y;
             return [
                 {
                     id: "serverBoosts",
                     title: I.intl.string(I.t["NyDu/6"]),
-                    description: et ? void 0 : I.intl.string(I.t["4pEwXL"]),
-                    caption: et ? I.intl.string(I.t["/VzCKE"]) : void 0,
-                    ctaText: et ? void 0 : I.intl.string(I.t.jVcuVY),
-                    onCtaClick: et ? void 0 : q,
-                    primaryAsset: et ? w.A : y,
+                    description: $ ? void 0 : I.intl.string(I.t["4pEwXL"]),
+                    caption: $ ? I.intl.string(I.t["/VzCKE"]) : void 0,
+                    ctaText: $ ? void 0 : I.intl.string(I.t.jVcuVY),
+                    onCtaClick: $ ? void 0 : q,
+                    primaryAsset: $ ? w.A : y,
                     categories: [e],
                 },
                 {
@@ -198,12 +197,14 @@ function z(e) {
                     id: "badge",
                     title: I.intl.string(I.t.dcFfSJ),
                     description: I.intl.string(I.t["37MFFq"]),
-                    primaryAsset: et ? B.A : N,
+                    primaryAsset: $ ? B.A : N,
                     categories: [s],
                 },
             ];
-        }, [i, et, W, K, Z, q, X, J, Q]),
-        ei = (0, a.useMemo)(() => en.filter((e) => null != e && e.categories.includes($)), [en, $]);
+        }, [i, $, W, K, Z, q, X, J, Q]),
+        et = null != t ? ee.find((e) => e?.id === t) : null,
+        [en, ei] = (0, a.useState)(et?.categories[0] ?? "favorites"),
+        es = (0, a.useMemo)(() => ee.filter((e) => null != e && e.categories.includes(en)), [ee, en]);
     return (0, s.jsxs)("div", {
         className: f.uW,
         children: [
@@ -211,8 +212,8 @@ function z(e) {
             (0, s.jsx)(l.VQ0, {
                 type: "top-pill",
                 look: "custom",
-                selectedItem: $,
-                onItemSelect: ee,
+                selectedItem: en,
+                onItemSelect: ei,
                 className: f.Lq,
                 "aria-label": I.intl.string(I.t["Uh3+CA"]),
                 children: F.map((e) =>
@@ -220,7 +221,7 @@ function z(e) {
                 ),
             }),
             (0, s.jsx)(u.A, {
-                children: ei.map((e) => {
+                children: es.map((e) => {
                     if (null != e)
                         return (0, s.jsx)(
                             "div",

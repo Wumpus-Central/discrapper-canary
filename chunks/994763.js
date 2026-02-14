@@ -2,49 +2,48 @@ n.d(t, { z: () => l });
 var i = n(64700),
     s = n(311907),
     a = n(775602);
-function l(e, t) {
-    var n;
-    let l, r;
-    (n = [e]),
-        (l = (0, s.bG)([a.A], () => a.A.useReducedMotion)),
-        (r = i.useRef(!1)),
+function l(e, t, n) {
+    !(function (e, t, n) {
+        let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "start",
+            r = (0, s.bG)([a.A], () => a.A.useReducedMotion),
+            o = i.useRef(!1);
         i.useEffect(() => {
-            if (!t || r.current) return;
-            let n = (() => document.getElementById(e))();
-            if (null != n && n.offsetHeight > 0) {
-                (r.current = !0), n.scrollIntoView({ behavior: l ? "auto" : "smooth" });
+            if (!t || o.current) return;
+            let n = { behavior: r ? "auto" : "smooth", block: l },
+                i = e();
+            if (null != i && i.offsetHeight > 0) {
+                (o.current = !0), i.scrollIntoView(n);
                 return;
             }
-            let i = !1,
-                s = null,
-                a = new ResizeObserver((e) => {
+            let s = !1,
+                a = null,
+                c = new ResizeObserver((e) => {
                     let t = e[0];
                     null == t ||
                         !(t.contentRect.height > 0) ||
-                        r.current ||
-                        i ||
-                        ((r.current = !0),
-                        a.disconnect(),
-                        t.target.scrollIntoView({ behavior: l ? "auto" : "smooth" }));
+                        o.current ||
+                        s ||
+                        ((o.current = !0), c.disconnect(), t.target.scrollIntoView(n));
                 }),
-                o = performance.now(),
-                c = () => {
-                    if (i || performance.now() - o > 5e3) return;
-                    let t = (() => document.getElementById(e))();
+                d = performance.now(),
+                u = () => {
+                    if (s || performance.now() - d > 5e3) return;
+                    let t = e();
                     null != t
                         ? t.offsetHeight > 0
-                            ? ((r.current = !0), t.scrollIntoView({ behavior: l ? "auto" : "smooth" }))
-                            : a.observe(t)
-                        : (s = requestAnimationFrame(c));
+                            ? ((o.current = !0), t.scrollIntoView(n))
+                            : c.observe(t)
+                        : (a = requestAnimationFrame(u));
                 };
             return (
-                c(),
+                u(),
                 () => {
-                    (i = !0), null != s && cancelAnimationFrame(s), a.disconnect();
+                    (s = !0), null != a && cancelAnimationFrame(a), c.disconnect();
                 }
             );
-        }, [t, l, ...n]),
-        i.useEffect(() => {
-            t || (r.current = !1);
-        }, [t]);
+        }, [t, r, l, ...n]),
+            i.useEffect(() => {
+                t || (o.current = !1);
+            }, [t]);
+    })(() => document.getElementById(e), t, [e], n);
 }

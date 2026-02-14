@@ -52,7 +52,7 @@ let A = (e) => {
                 cardType: _.sl2.PRIMARY,
                 hueRotate: 25,
                 glowAmount: 5 * !!C,
-                blurAmount: 10 * !!C,
+                blurAmount: 6 * !!C,
                 cardClassName: l()(E.Nr, e, R, { [E.j8]: N }),
                 cardStyle: {
                     backgroundImage: L ? `url(${T})` : void 0,

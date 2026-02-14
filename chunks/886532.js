@@ -51,7 +51,7 @@ function f(e) {
     });
 }
 function h() {
-    let [e, t] = (0, i.useState)("displayNameStyles"),
+    let [e, t] = (0, i.useState)("customSounds"),
         n = `${d.BVt.NITRO_HOME}?perk=${e}`;
     return (0, r.jsxs)("div", {
         style: { marginTop: 64, display: "flex", flexDirection: "column", gap: 10 },
