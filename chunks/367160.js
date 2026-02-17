@@ -115,7 +115,8 @@ let y = (e) => {
         ed = null;
     if (
         !j &&
-        (ei.type === h.N$.PREMIUM_DEFAULT || ei.type === h.N$.PREMIUM_WITH_TRIAL) &&
+        (h.IJ.has(ei.type) || ei.type === h.N$.PREMIUM_WITH_TRIAL) &&
+        "renewalInvoicePreview" in ei &&
         null != ei.renewalInvoicePreview
     ) {
         let e = (0, A.Gj)(ei.invoicePreview, ei.renewalInvoicePreview, eu);

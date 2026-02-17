@@ -50716,17 +50716,6 @@ div.mobilePushContainer__3d3b0 {
     margin: 12px 0
 }
 
-.renewalInvoiceDate_d313e6 {
-    color: var(--text-default);
-    margin-bottom: 16px
-}
-
-.paymentNote__56a21 {
-    background-color: var(--modal-background);
-    margin: 0;
-    padding: 16px 16px 0
-}
-
 .warningContainer__98bed {
     align-items: center;
     background-color: var(--background-feedback-warning);
@@ -50786,6 +50775,17 @@ div.mobilePushContainer__3d3b0 {
 .totalDueReviewStep_bb5449 {
     margin-bottom: var(--space-12);
     margin-top: 0
+}
+
+.renewalInvoiceDate_d313e6 {
+    color: var(--text-default);
+    margin-bottom: 16px
+}
+
+.paymentNote__56a21 {
+    background-color: var(--modal-background);
+    margin: 0;
+    padding: 16px 16px 0
 }
 
 .offerNoticeContainerShared__005bd {

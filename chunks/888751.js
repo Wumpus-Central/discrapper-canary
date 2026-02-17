@@ -44,7 +44,7 @@ let g = (e, t, n) => ({ id: e.discount_id ?? t, label: n, amount: -e.amount }),
                 subscriptionTrial: a,
             } = t,
             { newPlanInvoiceItem: s, basePlanFullAmount: u, invoiceAdjustmentDisplayItems: c } = (0, o.qi)(e, i),
-            d = r.type === l.N$.PREMIUM_DEFAULT ? u : void 0,
+            d = l.IJ.has(r.type) ? u : void 0,
             {
                 label: _,
                 amount: p,
@@ -61,7 +61,16 @@ let g = (e, t, n) => ({ id: e.discount_id ?? t, label: n, amount: -e.amount }),
             }),
             y = null != A || null != I || null != T,
             S = { id: s.id, label: _, amount: y ? E : p },
-            v = [S, ...c.map((e) => ({ id: e.id, label: e.label, amount: e.amount }))];
+            v = [
+                S,
+                ...c.map((e) => ({
+                    id: e.id,
+                    label: e.label,
+                    amount: e.amount,
+                    tooltip: e.tooltipText,
+                    tooltipAriaLabel: e.tooltipAriaLabel,
+                })),
+            ];
         return (
             null != T
                 ? v.push(g(T, "trial-discount", f.intl.string(h.default["7LeLN4"])))
@@ -104,7 +113,9 @@ let g = (e, t, n) => ({ id: e.discount_id ?? t, label: n, amount: -e.amount }),
             intervalType: i,
             intervalCount: a,
             currency: s,
-            label: f.intl.format(h.default["57B1ks"], { renewalDate: t.subscriptionPeriodEnd }),
+            label: f.intl.format(h.default["57B1ks"], {
+                renewalDate: null != e ? e.subscriptionPeriodEnd : t.subscriptionPeriodStart,
+            }),
             totalLineItemLabel: T(i, a),
         };
     },

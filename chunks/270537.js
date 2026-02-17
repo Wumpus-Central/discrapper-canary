@@ -25,11 +25,11 @@ function f(e) {
                 isDisabled: !c,
                 collapsedContent: (0, r.jsx)(h, { amount: f, currency: s }),
                 children: a.map((e) => {
-                    let { id: t, label: n, amount: i } = e,
-                        a = (0, l.$g)(i, s);
+                    let { id: t, label: n, amount: i, ...a } = e,
+                        o = (0, l.$g)(i, s);
                     return (0, r.jsx)(
                         u.i,
-                        { label: n, value: a, valueColor: i < 0 ? "text-feedback-positive" : "text-muted" },
+                        { label: n, value: o, valueColor: i < 0 ? "text-feedback-positive" : "text-muted", ...a },
                         t,
                     );
                 }),

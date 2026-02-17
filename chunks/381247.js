@@ -43,7 +43,15 @@ function u(e) {
     });
 }
 function c(e) {
-    let { label: t, value: n, color: i = "text-muted", valueColor: o = "text-muted", icon: u, tooltip: c } = e;
+    let {
+        label: t,
+        value: n,
+        color: i = "text-muted",
+        valueColor: o = "text-muted",
+        icon: u,
+        tooltip: c,
+        tooltipAriaLabel: d,
+    } = e;
     return (0, r.jsxs)("div", {
         className: l.Yn,
         children: [
@@ -57,7 +65,7 @@ function c(e) {
                     null != c &&
                         (0, r.jsx)(a.m_, {
                             text: c,
-                            children: (0, r.jsx)(s.cBN, { size: "xs", color: "currentColor" }),
+                            children: (0, r.jsx)(s.cBN, { size: "xs", color: "currentColor", "aria-label": d }),
                         }),
                 ],
             }),

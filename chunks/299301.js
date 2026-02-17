@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { N$: () => d, eb: () => f, yf: () => _ });
+n.d(t, { IJ: () => _, N$: () => d, eb: () => h, yf: () => f });
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -14,11 +14,13 @@ var i = n(397927),
             (e.PREMIUM_GIFT = "PREMIUM_GIFT"),
             (e.PREMIUM_WITH_TRIAL = "PREMIUM_WITH_TRIAL"),
             (e.PREMIUM_DEFAULT = "PREMIUM_DEFAULT"),
+            (e.PREMIUM_SWITCH_PLAN = "PREMIUM_SWITCH_PLAN"),
             (e.LOADING = "LOADING"),
             e
         );
     })({});
-let _ = (e) => {
+let _ = new Set(["PREMIUM_DEFAULT", "PREMIUM_SWITCH_PLAN"]),
+    f = (e) => {
         let {
             error: t,
             isGift: n,
@@ -38,7 +40,7 @@ let _ = (e) => {
                   ? { type: "LOADING", invoicePreview: null }
                   : { type: "PREMIUM_DEFAULT", invoicePreview: a, renewalInvoicePreview: s };
     },
-    f = (e) => {
+    h = (e) => {
         let {
             invoiceSummaryTypeWithPreview: t,
             priceOptions: n,

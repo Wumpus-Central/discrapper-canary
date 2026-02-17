@@ -230,26 +230,28 @@ function G(e) {
             handleClose: Y,
         };
         t = W ? (0, r.jsx)(b._, { ...e }) : (0, r.jsx)(f.A, { ...e });
-    } else
-        s()(null != J, "Expected plan to be selected"),
-            (t = (0, r.jsx)(h.A, {
-                premiumSubscription: K,
-                paymentSources: X,
-                priceOptions: Z,
-                onPaymentSourceChange: eq,
-                onPaymentSourceAdd: eK,
-                planId: J.id,
-                setHasAcceptedTerms: eo,
-                legalTermsNodeRef: eP,
-                hasLegalTermsFlash: ey,
-                onInvoiceError: (e) => ek(e),
-                planGroup: ez,
-                currencies: q,
-                onCurrencyChange: (e) => et(e),
-                hasOpenInvoice: null != G,
-                purchaseState: ea,
-                handleClose: Y,
-            }));
+    } else {
+        s()(null != J, "Expected plan to be selected");
+        let e = {
+            premiumSubscription: K,
+            paymentSources: X,
+            priceOptions: Z,
+            onPaymentSourceChange: eq,
+            onPaymentSourceAdd: eK,
+            planId: J.id,
+            setHasAcceptedTerms: eo,
+            legalTermsNodeRef: eP,
+            hasLegalTermsFlash: ey,
+            onInvoiceError: (e) => ek(e),
+            planGroup: ez,
+            currencies: q,
+            onCurrencyChange: (e) => et(e),
+            hasOpenInvoice: null != G,
+            purchaseState: ea,
+            handleClose: Y,
+        };
+        t = (0, r.jsx)(h.A, { ...e, shouldUseUnifiedCheckoutUI: W });
+    }
     let eX = i.useMemo(
             () =>
                 (0, r.jsxs)(r.Fragment, {
