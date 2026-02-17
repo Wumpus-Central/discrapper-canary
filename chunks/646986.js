@@ -31,7 +31,7 @@ function y(e) {
         }),
         x = (0, a.bG)([d.A], () => d.A.getUserProfile(t.id)?.private === !0),
         { voiceActivityStatusEnabled: P } = (0, s.G)({ location: "UserProfileStackedActivity" }),
-        M = P && null == R && null == D && null != O,
+        M = P && !x && null == R && null == D && null != O,
         k = i.useCallback(
             (e) => {
                 let i = [],
@@ -47,7 +47,7 @@ function y(e) {
             },
             [n, M, N, v, R, t, O],
         );
-    return w || x
+    return w
         ? null
         : (0, r.jsx)(h.A, {
               renderCards: k,
