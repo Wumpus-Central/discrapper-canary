@@ -2,8 +2,8 @@
 n.d(t, { A: () => S });
 var r = n(439372),
     i = n(183636),
-    a = n(927813),
-    s = n(67486),
+    a = n(809733),
+    s = n(927813),
     o = n(723702),
     l = n(829219),
     u = n(859703),
@@ -13,11 +13,11 @@ var r = n(439372),
     f = n(302654),
     h = n(677402),
     p = n(654487);
-let g = a.A.Millis.DAY,
-    E = 30 * a.A.Millis.MINUTE,
-    A = 5 * a.A.Millis.SECOND,
-    I = 5 * a.A.Millis.MINUTE,
-    T = 12 * a.A.Millis.HOUR;
+let g = s.A.Millis.DAY,
+    E = 30 * s.A.Millis.MINUTE,
+    A = 5 * s.A.Millis.SECOND,
+    I = 5 * s.A.Millis.MINUTE,
+    T = 12 * s.A.Millis.HOUR;
 class y extends r.A {
     instantiatedAt = Date.now();
     initialFetchTimerId = null;
@@ -29,7 +29,7 @@ class y extends r.A {
         if (
             !(0, h.s)({ location: p.rE.QUESTS_MANAGER }) ||
             u.A.isFetchingCurrentQuests ||
-            (0, s.I)() ||
+            (0, a.I)() ||
             ((0, l.N1)(), (0, o.isMac)() && "focused" !== i.A.getState())
         )
             return;

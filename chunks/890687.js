@@ -53,15 +53,15 @@ var i = n(735438),
     _ = n(183636),
     f = n(429913);
 n(674658);
-var h = n(773669),
-    p = n(734057),
-    g = n(962173),
-    E = n(287809),
-    A = n(954571),
-    I = n(927813),
-    T = n(975571),
-    y = n(515718),
-    S = n(67486),
+var h = n(809733),
+    p = n(773669),
+    g = n(734057),
+    E = n(962173),
+    A = n(287809),
+    I = n(954571),
+    T = n(927813),
+    y = n(975571),
+    S = n(515718),
     v = n(252424),
     C = n(723702),
     b = n(927578),
@@ -111,7 +111,7 @@ function Q() {
                 l &&
                 !t &&
                 !s &&
-                !(0, S.I)()
+                !(0, h.I)()
             ) {
                 if ((n(!0), (0, N.N1)(), (0, C.isMac)() && "focused" !== _.A.getState())) return;
                 let { enableNewRequestBehavior: t } = L.A.getConfig({ location: "QuestHookUseQuests" });
@@ -131,7 +131,7 @@ function J(e, t, n) {
         l = t.userStatus?.claimedAt != null,
         u = e.userStatus?.enrolledAt != null,
         c = t.userStatus?.enrolledAt != null,
-        d = 20 * I.A.Millis.MINUTE,
+        d = 20 * T.A.Millis.MINUTE,
         _ = e6(e, d),
         f = e6(t, d);
     if (s) {
@@ -351,9 +351,9 @@ function eT(e) {
     return (0, u.bG)([R.A], () => null != e && R.A.isQuestExpired(e.id), [e]);
 }
 function ey(e, t, n) {
-    let r = (0, u.bG)([p.A], () => p.A.getChannel(t?.channelId) ?? null),
+    let r = (0, u.bG)([g.A], () => g.A.getChannel(t?.channelId) ?? null),
         i = (0, u.bG)([R.A], () => null != R.A.questEnrollmentBlockedUntil, []),
-        a = (0, u.bG)([E.default], () => E.default.getCurrentUser()?.id) === n,
+        a = (0, u.bG)([A.default], () => A.default.getCurrentUser()?.id) === n,
         s = (0, u.bG)([R.A], () => null != e && R.A.isQuestExpired(e.id), [e]);
     if (null == e || i || s || a) return !1;
     let o = e.userStatus?.claimedAt != null,
@@ -362,7 +362,7 @@ function ey(e, t, n) {
 }
 function eS(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { dateStyle: "short" },
-        n = (0, u.bG)([h.default], () => h.default.locale);
+        n = (0, u.bG)([p.default], () => p.default.locale);
     return r.useMemo(() => (null == e ? "" : new Date(e).toLocaleDateString(n, t)), [e, t, n]);
 }
 function ev(e) {
@@ -398,7 +398,7 @@ let eR = 1,
                     return void a();
                 let t = window.setInterval(() => {
                     a();
-                }, I.A.Millis.SECOND * eR);
+                }, T.A.Millis.SECOND * eR);
                 return () => {
                     clearInterval(t), a();
                 };
@@ -468,9 +468,9 @@ function eP(e) {
     );
 }
 function eM() {
-    let { fetching: e, accounts: t } = (0, u.cf)([g.A], () => ({
-            fetching: g.A.isFetching(),
-            accounts: g.A.getAccounts(),
+    let { fetching: e, accounts: t } = (0, u.cf)([E.A], () => ({
+            fetching: E.A.isFetching(),
+            accounts: E.A.getAccounts(),
         })),
         {
             xboxAccounts: n,
@@ -489,7 +489,7 @@ let ek = (e) => {
         let { questId: t, preview: n, beforeRequest: i, afterRequest: a } = e,
             [s, l] = r.useState([]),
             [c, d] = r.useState(!1),
-            _ = (0, u.bG)([g.A], () => g.A.getAccounts());
+            _ = (0, u.bG)([E.A], () => E.A.getAccounts());
         return (
             r.useEffect(() => {
                 l((e) => e.filter((e) => e.type !== o._.EXPIRED_CREDENTIAL));
@@ -522,8 +522,8 @@ let ek = (e) => {
             n = e.length > 0,
             r = t.length > 0,
             i = (n && !r) || (!n && r),
-            a = T.A.getArticleURL($.MVz.QUEST_HOW_TO_PLAYSTATION),
-            s = T.A.getArticleURL($.MVz.QUEST_HOW_TO_XBOX),
+            a = y.A.getArticleURL($.MVz.QUEST_HOW_TO_PLAYSTATION),
+            s = y.A.getArticleURL($.MVz.QUEST_HOW_TO_XBOX),
             o = q.intl.format(q.t.beN4DG, { psHelpdeskArticle: a, xboxHelpdeskArticle: s }),
             l = q.intl.format(q.t.HVS7nh, { helpdeskArticle: r ? a : s });
         return { message: i ? l : o, xboxURL: s, playstationURL: a };
@@ -546,7 +546,7 @@ function eV(e) {
     return r ? 4 : n ? 3 : i && t ? 2 : 1 * !!t;
 }
 function eB(e) {
-    let t = (0, u.bG)([h.default], () => h.default.locale),
+    let t = (0, u.bG)([p.default], () => p.default.locale),
         { percentComplete: n } = eO(e),
         r = eD(e),
         i = null != r ? r.percentComplete : n,
@@ -667,7 +667,7 @@ function ez(e) {
         r = (0, j.$5)(e),
         i = (0, j.Y7)(e),
         a = (0, j.JX)(e),
-        s = (0, u.bG)([E.default], () => E.default.getCurrentUser()),
+        s = (0, u.bG)([A.default], () => A.default.getCurrentUser()),
         o = (0, b.TW)(s, z.PremiumTypes.TIER_2);
     if (null == n) return q.intl.formatToPlainString(q.t.l9uXL8, { decorationName: t });
     let l = q.intl.formatToPlainString(q.t.o97tNn, { rewardName: t }),
@@ -718,12 +718,12 @@ function e2(e) {
         a = r.useRef(null),
         s = r.useRef(null);
     r.useEffect(() => {
-        A.default.track($.HAw.QUEST_HOME_SORT_METHOD_CHANGED, { sort_method: t, previous_sort_method: a.current }),
+        I.default.track($.HAw.QUEST_HOME_SORT_METHOD_CHANGED, { sort_method: t, previous_sort_method: a.current }),
             (a.current = t);
     }, [t]),
         r.useEffect(() => {
             let e = n.map((e) => e.filter);
-            A.default.track($.HAw.QUEST_HOME_FILTERS_CHANGED, {
+            I.default.track($.HAw.QUEST_HOME_FILTERS_CHANGED, {
                 filters: e,
                 previous_filters: s.current ?? [],
                 num_quests_visible: i,
@@ -733,7 +733,7 @@ function e2(e) {
 }
 let e3 = (e) => {
         let t = !1,
-            n = r.useMemo(() => E.default.getCurrentUser()?.isStaff() === !0, []);
+            n = r.useMemo(() => A.default.getCurrentUser()?.isStaff() === !0, []);
         return t || n || e.preview;
     },
     e6 = (e, t) => {
@@ -774,7 +774,7 @@ function e4() {
             !(async function () {
                 try {
                     if (null == _) return;
-                    await Promise.all([(0, y.NN)(_.assetHeroImage.url), (0, y.NN)(_.assetSponsorImage.url)]);
+                    await Promise.all([(0, S.NN)(_.assetHeroImage.url), (0, S.NN)(_.assetSponsorImage.url)]);
                 } catch (e) {
                     c(!0);
                 } finally {
