@@ -362,6 +362,23 @@ let eV = {
             });
             eB.receiveMessage(e, { ...n, state: eS.cmJ.SENT }, !0);
         },
+        sendGuildBoostUpsellSystemMessage(e, t) {
+            let n = (0, Y.Ay)({
+                channelId: e,
+                type: eS.lAJ.GUILD_BOOST_UPSELL,
+                content: "",
+                flags: eS.pr7.EPHEMERAL,
+                author: {
+                    id: eS.oIV,
+                    username: "Guild Boost Upsell",
+                    discriminator: eS.h3J,
+                    avatar: "guild_boost_upsell",
+                    bot: !0,
+                },
+                boostingPrompt: t,
+            });
+            eB.receiveMessage(e, { ...n, state: eS.cmJ.SENT }, !0);
+        },
         sendClydeError(e) {
             let t,
                 n,

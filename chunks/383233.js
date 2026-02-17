@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => p, _c: () => f, go: () => c, vF: () => d }), n(938796), n(321073);
+n.d(t, { Ay: () => h, _c: () => f, go: () => c, vF: () => d }), n(938796), n(321073);
 var r = n(485845),
     i = n(665260),
     a = n(315069),
@@ -87,6 +87,7 @@ class _ extends c {
     premiumGroupInviteId;
     giftInfo;
     giftingPrompt;
+    boostingPrompt;
     messageSnapshots;
     isUnsupported;
     changelogId;
@@ -136,6 +137,7 @@ class _ extends c {
             (this.premiumGroupInviteId = e.premiumGroupInviteId || null),
             (this.giftInfo = e.gift_info ?? e.giftInfo),
             (this.giftingPrompt = e.giftingPrompt || null),
+            (this.boostingPrompt = e.boostingPrompt || null),
             (this.messageSnapshots = e.messageSnapshots || []),
             (this.isUnsupported = e.isUnsupported || !1),
             (this.changelogId = e.changelog_id ?? (e.changelogId || null));
@@ -297,4 +299,4 @@ class _ extends c {
 function f(e) {
     return (0, i.Lt)(e.flags, u.pr7.IS_COMPONENTS_V2);
 }
-let p = _;
+let h = _;
