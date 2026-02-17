@@ -318,6 +318,7 @@ function J(e) {
                                                               { isGift: !1 },
                                                               {
                                                                   analyticsLocations: [
+                                                                      ...Z,
                                                                       A.A.SLAYER_STOREFRONT_CARD_PURCHASE_BUTTON,
                                                                   ],
                                                                   guildId: s,
@@ -344,6 +345,7 @@ function J(e) {
                                                               { isGift: !0 },
                                                               {
                                                                   analyticsLocations: [
+                                                                      ...Z,
                                                                       A.A.SLAYER_STOREFRONT_CARD_GIFT_BUTTON,
                                                                   ],
                                                               },

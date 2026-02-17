@@ -30,50 +30,53 @@ var a = n(627968),
     R = n(345938),
     U = n(533406),
     O = n(953590),
-    P = n(204890),
-    w = n(995393),
-    L = n(188275),
+    L = n(204890),
+    P = n(995393),
+    w = n(188275),
     D = n(652215),
     M = n(818348),
     B = n(985018),
     F = n(88465);
 function H(e) {
-    let { sku: t, guildId: n, shouldShowShopLink: s, onClose: r, trackPDPClick: i } = e,
-        o = t?.id,
-        d = (0, u.bG)([j.A], () => (null != o ? j.A.getNormalizedSKUEligibility(o) : void 0), [o]),
-        m = (0, u.bG)([j.A], () => j.A.getConfig()?.promotionEndDatetime, []),
-        h = l.useMemo(() => {
-            if (null == m) return null;
+    let { sku: t, guildId: n, shouldShowShopLink: s, onClose: r, trackPDPClick: i, analyticsLocations: o } = e,
+        d = t?.id,
+        m = (0, u.bG)([j.A], () => (null != d ? j.A.getNormalizedSKUEligibility(d) : void 0), [d]),
+        h = (0, u.bG)([j.A], () => j.A.getConfig()?.promotionEndDatetime, []),
+        b = l.useMemo(() => {
+            if (null == h) return null;
             let e = c()(),
-                t = c()(m).diff(e, "days");
+                t = c()(h).diff(e, "days");
             return t <= 0 ? null : B.intl.formatToPlainString(B.t.BXpdIg, { days: Math.max(t, 1) });
-        }, [m]),
-        b = l.useCallback(() => {
+        }, [h]),
+        g = l.useCallback(() => {
             null != t &&
-                (i(w.Jq.BUY_BUTTON),
+                (i(P.Jq.BUY_BUTTON),
                 (0, U.a)(
                     t,
                     { isGift: !1 },
-                    { analyticsLocations: [p.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_PURCHASE_BUTTON], guildId: n },
+                    {
+                        analyticsLocations: [...o, p.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_PURCHASE_BUTTON],
+                        guildId: n,
+                    },
                 ));
-        }, [t, i, n]),
-        g = l.useCallback(() => {
+        }, [t, i, n, o]),
+        f = l.useCallback(() => {
             (0, k.X)({ guildId: n });
         }, [n]),
-        f = l.useCallback(() => {
-            i(w.Jq.VISIT_SHOP), (0, k.default)({ guildId: n }), r();
-        }, [n, r, i]),
         C = l.useCallback(() => {
+            i(P.Jq.VISIT_SHOP), (0, k.default)({ guildId: n }), r();
+        }, [n, r, i]),
+        x = l.useCallback(() => {
             null != t &&
-                (i(w.Jq.GIFT_BUTTON),
+                (i(P.Jq.GIFT_BUTTON),
                 (0, U.a)(
                     t,
                     { isGift: !0 },
-                    { analyticsLocations: [p.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_GIFT_BUTTON] },
+                    { analyticsLocations: [...o, p.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_GIFT_BUTTON] },
                 ));
-        }, [t, i]);
+        }, [t, i, o]);
     if (null == t) return null;
-    let x = (0, I.$g)(t.price?.amount ?? 0, t.price?.currency ?? M.Yr.USD);
+    let A = (0, I.$g)(t.price?.amount ?? 0, t.price?.currency ?? M.Yr.USD);
     return (0, a.jsxs)("div", {
         className: F.wt,
         children: [
@@ -87,14 +90,14 @@ function H(e) {
             (0, a.jsxs)("div", {
                 className: F.p6,
                 children: [
-                    (0, a.jsx)(_.Heading, { variant: "heading-md/semibold", color: "text-strong", children: x }),
+                    (0, a.jsx)(_.Heading, { variant: "heading-md/semibold", color: "text-strong", children: A }),
                     null != t.orbsReward &&
                         t.orbsReward > 0 &&
-                        (0, a.jsx)(P.Ay, {
+                        (0, a.jsx)(L.Ay, {
                             variant: "standard",
-                            timeRemaining: h ?? void 0,
+                            timeRemaining: b ?? void 0,
                             Icon: _.Cp8,
-                            children: (0, a.jsx)(P.Lb, {
+                            children: (0, a.jsx)(L.Lb, {
                                 children: (0, a.jsx)(_.Text, {
                                     variant: "text-sm/medium",
                                     color: "currentColor",
@@ -109,10 +112,10 @@ function H(e) {
                 children: [
                     (0, a.jsx)(_.Button, {
                         variant: "primary",
-                        onClick: b,
-                        text: d ? B.intl.string(B.t.boqtTA) : B.intl.string(B.t.cg0M2H),
+                        onClick: g,
+                        text: m ? B.intl.string(B.t.boqtTA) : B.intl.string(B.t.cg0M2H),
                         fullWidth: !0,
-                        disabled: !d,
+                        disabled: !m,
                     }),
                     (0, a.jsxs)(_.ButtonGroup, {
                         wrap: !1,
@@ -122,8 +125,8 @@ function H(e) {
                                 ? (0, a.jsx)(_.Button, {
                                       icon: _.U1X,
                                       variant: "secondary",
-                                      onMouseDown: g,
-                                      onClick: f,
+                                      onMouseDown: f,
+                                      onClick: C,
                                       text: B.intl.string(B.t["2QW9nR"]),
                                       fullWidth: !0,
                                   })
@@ -131,7 +134,7 @@ function H(e) {
                             (0, a.jsx)(_.Button, {
                                 icon: _.okO,
                                 variant: "secondary",
-                                onClick: C,
+                                onClick: x,
                                 text: B.intl.string(B.t.QAZA5f),
                                 fullWidth: !0,
                             }),
@@ -220,7 +223,7 @@ function X(e) {
         { analyticsLocations: k } = (0, b.Ay)(p ?? []),
         U = (0, u.bG)([j.A], () => j.A.getStorefrontData(d), [d]),
         O = (0, u.bG)([T.A], () => T.A.isFetchingForSKU(s)),
-        P = (0, _.Mwr)((0, h.Ay)()),
+        L = (0, _.Mwr)((0, h.Ay)()),
         [M, X] = l.useState(!0),
         q = (0, u.bG)([A.A], () => A.A.get(s)),
         [V, $] = l.useState(null),
@@ -235,7 +238,7 @@ function X(e) {
         })(i, V);
     (0, x.pE)(),
         (0, m.Ay)(() => {
-            E.default.track(D.HAw.OPEN_MODAL, { location_stack: k, type: L.Nh, sku_id: s, application_id: i }),
+            E.default.track(D.HAw.OPEN_MODAL, { location_stack: k, type: w.Nh, sku_id: s, application_id: i }),
                 (0, S.Xw)();
         });
     let J = l.useCallback(
@@ -255,7 +258,7 @@ function X(e) {
     }, [d, s]);
     let K = l.useCallback(() => {
             null != q &&
-                (J(w.Jq.FORWARD_BUTTON),
+                (J(P.Jq.FORWARD_BUTTON),
                 (0, R.d)({
                     sku: q,
                     guildId: d,
@@ -265,10 +268,10 @@ function X(e) {
                 }));
         }, [q, d, J, k, I]),
         Q = l.useCallback(() => {
-            J(w.Jq.WISHLIST_BUTTON);
+            J(P.Jq.WISHLIST_BUTTON);
         }, [J]),
         Z = l.useCallback(() => {
-            X(!M), J(w.Jq.MUTE_BUTTON);
+            X(!M), J(P.Jq.MUTE_BUTTON);
         }, [M, J]);
     if (null == q?.tenantMetadata?.socialLayer || U?.storefront == null) return O ? (0, a.jsx)(_.y$y, {}) : null;
     let ee =
@@ -281,7 +284,7 @@ function X(e) {
                 : null,
         en = null;
     return (
-        (en = P ? (ee ?? et) : (et ?? ee)),
+        (en = L ? (ee ?? et) : (et ?? ee)),
         (0, a.jsx)(_.EOs, {
             transitionState: t,
             "hide-shadow": !0,
@@ -301,7 +304,14 @@ function X(e) {
                                 children: null != en ? (0, a.jsx)("img", { className: F.wm, src: en, alt: "" }) : null,
                             }),
                             (0, a.jsx)(W, { applicationId: i, selectedCarouselItem: V }),
-                            (0, a.jsx)(H, { sku: q, guildId: d, shouldShowShopLink: !c, onClose: v, trackPDPClick: J }),
+                            (0, a.jsx)(H, {
+                                sku: q,
+                                guildId: d,
+                                shouldShowShopLink: !c,
+                                onClose: v,
+                                trackPDPClick: J,
+                                analyticsLocations: k,
+                            }),
                         ],
                     }),
                     (0, a.jsxs)("div", {
