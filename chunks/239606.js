@@ -1,4 +1,4 @@
-l.d(t, { A: () => em });
+l.d(t, { A: () => eA });
 var i = l(627968),
     n = l(64700),
     s = l(503698),
@@ -8,8 +8,8 @@ var i = l(627968),
     d = l(397927),
     c = l(80682),
     u = l(793574),
-    m = l(688810),
-    A = l(915089),
+    A = l(688810),
+    m = l(915089),
     x = l(713517),
     p = l(576241),
     g = l(645507),
@@ -62,13 +62,13 @@ var i = l(627968),
     ed = l(996988),
     ec = l(985018),
     eu = l(661388);
-function em(e) {
+function eA(e) {
     let {
             user: t,
             currentUser: l,
             guildId: s,
-            channelId: em,
-            messageId: eA,
+            channelId: eA,
+            messageId: em,
             roleId: ex,
             sessionId: ep,
             initialTabSection: eg,
@@ -82,14 +82,14 @@ function em(e) {
             disableActionsForPreview: eE = !1,
             themeContainerClassName: eT,
         } = e,
-        { analyticsLocations: e_ } = (0, m.Ay)([...ey, u.A.USER_PROFILE_MODAL_V2]),
+        { analyticsLocations: e_ } = (0, A.Ay)([...ey, u.A.USER_PROFILE_MODAL_V2]),
         eC = (0, C.pb)({
             layout: "MODAL_V2",
             userId: t.id,
             sourceSessionId: ep,
             guildId: s,
-            channelId: em,
-            messageId: eA,
+            channelId: eA,
+            messageId: em,
             roleId: ex,
             showGuildProfile: eN,
         }),
@@ -103,7 +103,7 @@ function em(e) {
         eG = n.useMemo(() => (null != s ? { [s]: [t.id] } : {}), [s, t.id]);
     (0, c.E)(eG, "UserProfileModalV2");
     let eU = (0, b.Ay)(t.id, eN ? s : void 0),
-        eM = T.Ay.useName(eU?.guildId, em, t),
+        eM = T.Ay.useName(eU?.guildId, eA, t),
         { relationshipType: eF, originApplicationId: ew } = (0, o.cf)([N.A], () => ({
             relationshipType: N.A.getRelationshipType(t.id),
             originApplicationId: N.A.getOriginApplicationId(t.id),
@@ -117,7 +117,7 @@ function em(e) {
         eB = (0, h.fi)(t.id),
         eH = (0, S.A)(t.id),
         eY = (0, R.A)(t.id),
-        eJ = (0, A.GV)(),
+        eJ = (0, m.GV)(),
         eZ = ec.intl.format(ec.t.KRe1Fk, { name: eM });
     return (
         n.useEffect(() => {
@@ -134,7 +134,7 @@ function em(e) {
                 }
             );
         }, []),
-        (0, i.jsx)(m.f5, {
+        (0, i.jsx)(A.f5, {
             value: e_,
             children: (0, i.jsx)(C.of, {
                 value: eC,
@@ -194,10 +194,7 @@ function em(e) {
                                                 user: t,
                                                 displayProfile: eU,
                                                 themeType: ed.d.MODAL_V2,
-                                                privateBanner:
-                                                    eU?.private === !0
-                                                        ? (0, i.jsx)($.A, { primaryColor: eU?.primaryColor })
-                                                        : void 0,
+                                                privateBanner: eU?.private === !0 ? (0, i.jsx)($.A, {}) : void 0,
                                                 children: [
                                                     null != ek &&
                                                         (0, i.jsx)("div", {
@@ -231,13 +228,13 @@ function em(e) {
                                                                         user: t,
                                                                         displayProfile: eU,
                                                                         guildId: s,
-                                                                        channelId: em,
+                                                                        channelId: eA,
                                                                         themeType: ed.d.MODAL_V2,
                                                                     }),
                                                                     (0, i.jsx)(J.A, {
                                                                         user: t,
                                                                         guildId: s,
-                                                                        channelId: em,
+                                                                        channelId: eA,
                                                                         themeType: ed.d.MODAL_V2,
                                                                         hasEntered: ef === d.ip4.ENTERED,
                                                                         prompt: eW && t.id === l.id ? ez : null,
@@ -254,7 +251,7 @@ function em(e) {
                                                                         user: t,
                                                                         guildId: eU?.guildId ?? void 0,
                                                                         onClose: ev,
-                                                                        nickname: T.Ay.useName(eU?.guildId, em, t),
+                                                                        nickname: T.Ay.useName(eU?.guildId, eA, t),
                                                                         nicknameVariant: "heading-xl/semibold",
                                                                         pronouns: eU?.pronouns,
                                                                         tags: (0, i.jsx)(U.A, {
@@ -270,7 +267,7 @@ function em(e) {
                                                                                 user: t,
                                                                                 applicationId: ew,
                                                                                 guildId: eU?.guildId ?? void 0,
-                                                                                channelId: em,
+                                                                                channelId: eA,
                                                                                 className: eu.CK,
                                                                             }),
                                                                         }),
@@ -283,7 +280,7 @@ function em(e) {
                                                                                 children: (0, i.jsx)(W.A, {
                                                                                     user: t,
                                                                                     guildId: eU?.guildId ?? void 0,
-                                                                                    channelId: em,
+                                                                                    channelId: eA,
                                                                                     isGameRelationship: !0,
                                                                                     applicationId: l,
                                                                                     className: eu.CK,
@@ -321,7 +318,7 @@ function em(e) {
                                                                             user: t,
                                                                             currentUser: l,
                                                                             guildId: s,
-                                                                            channelId: em,
+                                                                            channelId: eA,
                                                                             displayProfile: eU,
                                                                             relationshipType: eF,
                                                                             onClose: ev,
@@ -392,7 +389,7 @@ function em(e) {
                                                         currentUser: l,
                                                         displayProfile: eU,
                                                         guildId: s,
-                                                        channelId: em,
+                                                        channelId: eA,
                                                         items: eK,
                                                         initialSection: eg,
                                                         onClose: ev,

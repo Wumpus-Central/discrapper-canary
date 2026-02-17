@@ -119,8 +119,7 @@ function B(e) {
                             user: t,
                             displayProfile: ea,
                             themeType: G.d.POPOUT,
-                            privateBanner:
-                                ea?.private === !0 ? (0, r.jsx)(R.A, { primaryColor: ea?.primaryColor }) : void 0,
+                            privateBanner: ea?.private === !0 ? (0, r.jsx)(R.A, {}) : void 0,
                             children: [
                                 null != el.interactionType &&
                                     (0, r.jsx)(a.animated.div, { style: eu, className: V.tB }),

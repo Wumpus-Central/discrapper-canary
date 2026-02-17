@@ -39677,6 +39677,10 @@ div.mobilePushContainer__3d3b0 {
     z-index: var(--custom-user-profile-top-layer-z-index)
 }
 
+.custom-user-profile-theme .banner__43147 {
+    background: linear-gradient(color-mix(in oklab, var(--profile-gradient-overlay-color) 65%, var(--profile-gradient-primary-color)), color-mix(in oklab, var(--profile-gradient-overlay-color) 60%, var(--profile-gradient-primary-color)))
+}
+
 .user-profile-popout .banner__43147 {
     margin-bottom: -8px
 }

@@ -70,7 +70,7 @@ function k(e) {
                     displayProfile: B,
                     themeType: U.d.SIDEBAR,
                     themeOverride: H,
-                    privateBanner: B?.private === !0 ? (0, i.jsx)(N.A, { primaryColor: B?.primaryColor }) : void 0,
+                    privateBanner: B?.private === !0 ? (0, i.jsx)(N.A, {}) : void 0,
                     children: [
                         null != X.interactionType && (0, i.jsx)(s.animated.div, { style: J, className: w.tB }),
                         (0, i.jsxs)(a.d_W, {
