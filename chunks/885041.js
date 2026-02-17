@@ -41,8 +41,8 @@ var i = n(627968),
     H = n(293495),
     F = n(811917),
     Y = n(746094),
-    W = n(257402),
-    q = n(216954),
+    q = n(257402),
+    W = n(216954),
     K = n(735831),
     z = n(913953),
     $ = n(142120),
@@ -95,8 +95,8 @@ var i = n(627968),
     eH = n(849823),
     eF = n(840065),
     eY = n(32294),
-    eW = n(639823),
-    eq = n(961350),
+    eq = n(639823),
+    eW = n(961350),
     eK = n(761640),
     ez = n(734057),
     e$ = n(650048),
@@ -128,6 +128,7 @@ n(115036),
     n(162605),
     n(2866),
     n(628965),
+    n(752319),
     n(836602),
     n(555337),
     n(863036),
@@ -190,11 +191,11 @@ let ti = (0, p.z)((e) => {
             })
         );
     }),
-    tl = s.Ay.connectStores([$.A, e$.A, eq.default], () => ({
+    tl = s.Ay.connectStores([$.A, e$.A, eW.default], () => ({
         isConnected: $.A.isConnected(),
         defaultRoute: e$.A.defaultRoute,
         defaultRouteFallback: e$.A.fallbackRoute,
-        token: eq.default.getToken(),
+        token: eW.default.getToken(),
     }))(
         class extends r.Component {
             render() {
@@ -227,8 +228,8 @@ let tc = [
         path: [e4.BVt.ACTIVITY_DETAILS(":applicationId")],
         render: function (e) {
             return (0, e9.wR)() ||
-                eq.default.getLoginStatus() === e4.aUe.LOGGING_IN ||
-                !eq.default.allowLogoutRedirect()
+                eW.default.getLoginStatus() === e4.aUe.LOGGING_IN ||
+                !eW.default.allowLogoutRedirect()
                 ? ta(e)
                 : (0, i.jsx)(N.A, { applicationId: e.match.params.applicationId });
         },
@@ -451,9 +452,9 @@ class th extends r.PureComponent {
             eb.A.init(),
             O.A.initialize(),
             eg.A.initialize(),
-            W.A.initialize(),
-            eW.A.initialize(),
             q.A.initialize(),
+            eq.A.initialize(),
+            W.A.initialize(),
             ef.A.initialize(),
             G.A.initialize(),
             ea.A.initialize(),
@@ -502,7 +503,7 @@ class th extends r.PureComponent {
     }
     componentWillUnmount() {
         eb.A.terminate(),
-            eW.A.terminate(),
+            eq.A.terminate(),
             ef.A.terminate(),
             eg.A.terminate(),
             O.A.terminate(),
@@ -538,7 +539,7 @@ class th extends r.PureComponent {
         let { pathname: n, search: i } = e;
         !(function (e) {
             if ($.A.isConnected() || $.A.isTryingToConnect()) return;
-            let t = eq.default.getToken();
+            let t = eW.default.getToken();
             null == t || ((0, ey.Q)(e) && d.A.startSession(t));
         })(n),
             (function (e, t) {

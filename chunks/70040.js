@@ -1,4 +1,4 @@
-n.d(t, { Ix: () => M, J3: () => D, Q3: () => U });
+n.d(t, { Ix: () => V, J3: () => D, Q3: () => w, mx: () => B });
 var i = n(627968),
     s = n(64700),
     a = n(311907),
@@ -31,93 +31,94 @@ var i = n(627968),
     P = n(985018),
     L = n(21082);
 let D = () => {
-        (0, x.Dr)(l.M.CLIENT_THEMES_SPARKLE_PREVIEW, { dismissAction: R.i.PRIMARY, forceTrack: !0 }),
-            (0, h.nf)(h.HP.CLIENT_THEMES),
-            (0, v.default)();
-    },
-    M = () => {
-        let e,
-            { analyticsLocations: t } = (0, _.Ay)(u.A.USER_SETTINGS),
-            n = (0, a.bG)([m.A], () => m.A.isPreview),
-            l = (0, E.V)()?.subscription_trial?.sku_id === y.pe.TIER_2,
-            r = (0, p.O)(),
-            c = (0, T.U9)(r, y.pe.TIER_2),
-            d = (0, j.dk)("UserSettingsAppearanceClientThemes");
-        s.useEffect(() => {
-            n &&
-                f.default.track(O.HAw.PREMIUM_UPSELL_VIEWED, {
-                    type: y.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
-                    location_stack: t,
-                });
-        }, [n, t]);
-        let h =
-                l &&
-                n &&
-                (0, i.jsxs)("div", {
-                    children: [
-                        (0, i.jsx)("div", {
-                            className: L.c7,
-                            children: (0, i.jsx)(o.Button, {
-                                variant: "secondary",
-                                fullWidth: !0,
-                                text: P.intl.string(P.t["E+COuA"]),
-                                onClick: () => D(),
-                            }),
-                        }),
-                        (0, i.jsx)("div", { className: L.BU }),
-                        (0, i.jsx)(S.Ay, {
-                            type: y.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
-                            subscriptionTier: y.pe.TIER_2,
-                        }),
-                    ],
-                }),
-            x =
-                ((e = (0, i.jsxs)(i.Fragment, {
-                    children: [
-                        (0, i.jsx)(g.Ay.Gradient, {
-                            disabled: !1,
-                            renderCTAButtons: () => {
-                                if (!n || l) return null;
-                                let e = c
-                                    ? P.intl.formatToPlainString(P.t.bkQ4bH, { percent: r?.discount.amount })
-                                    : P.intl.string(P.t.mr4K7D);
-                                return (0, i.jsxs)("div", {
-                                    className: L.gY,
-                                    children: [
-                                        (0, i.jsx)(o.Button, {
-                                            variant: "secondary",
-                                            text: P.intl.string(P.t["E+COuA"]),
-                                            onClick: () => D(),
-                                        }),
-                                        (0, i.jsx)(C.A, {
-                                            subscriptionTier: y.pe.TIER_2,
-                                            defaultTextOverride: e,
-                                            premiumModalAnalyticsLocation: {
-                                                object: O.ZSU.BUTTON_CTA,
-                                                objectType: O.AnalyticsObjectTypes.BUY,
-                                            },
-                                            fullWidth: !0,
-                                        }),
-                                    ],
-                                });
-                            },
-                        }),
-                        h,
-                    ],
-                })),
-                n && (e = (0, i.jsx)("div", { className: L._$, children: e })),
-                e);
-        return (0, i.jsxs)("div", {
-            children: [
-                (0, i.jsxs)(g.Ay, {
-                    type: g.v0.SETTINGS,
-                    children: [(0, i.jsx)(g.Ay.Basic, { className: L.a6 }), (0, i.jsx)(G, {}), (0, i.jsx)(A.A, {}), x],
-                }),
-                !d && (0, i.jsx)(o.cGx, { className: L.yF }),
-            ],
-        });
-    };
+    (0, x.Dr)(l.M.CLIENT_THEMES_SPARKLE_PREVIEW, { dismissAction: R.i.PRIMARY, forceTrack: !0 }),
+        (0, h.nf)(h.HP.CLIENT_THEMES),
+        (0, v.default)();
+};
+function M() {
+    let e = (0, p.O)(),
+        t = (0, T.U9)(e, y.pe.TIER_2)
+            ? P.intl.formatToPlainString(P.t.bkQ4bH, { percent: e?.discount.amount })
+            : P.intl.string(P.t.mr4K7D);
+    return (0, i.jsx)(C.A, {
+        subscriptionTier: y.pe.TIER_2,
+        defaultTextOverride: t,
+        premiumModalAnalyticsLocation: { object: O.ZSU.BUTTON_CTA, objectType: O.AnalyticsObjectTypes.BUY },
+        fullWidth: !0,
+    });
+}
 function G() {
+    let e = (0, a.bG)([m.A], () => m.A.isPreview),
+        t = (0, E.V)()?.subscription_trial?.sku_id === y.pe.TIER_2;
+    return !e || t
+        ? null
+        : (0, i.jsxs)("div", {
+              className: L.gY,
+              children: [
+                  (0, i.jsx)(o.Button, { variant: "secondary", text: P.intl.string(P.t["E+COuA"]), onClick: D }),
+                  (0, i.jsx)(M, {}),
+              ],
+          });
+}
+function U(e) {
+    let { children: t } = e,
+        n = (0, a.bG)([m.A], () => m.A.isPreview),
+        { analyticsLocations: l } = (0, _.Ay)(u.A.USER_SETTINGS);
+    return (s.useEffect(() => {
+        n &&
+            f.default.track(O.HAw.PREMIUM_UPSELL_VIEWED, {
+                type: y.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+                location_stack: l,
+            });
+    }, [n, l]),
+    n)
+        ? (0, i.jsx)("div", { className: L._$, children: t })
+        : t;
+}
+function k() {
+    let e = (0, a.bG)([m.A], () => m.A.isPreview),
+        t = (0, E.V)()?.subscription_trial?.sku_id === y.pe.TIER_2;
+    return e && t
+        ? (0, i.jsxs)("div", {
+              children: [
+                  (0, i.jsx)("div", {
+                      className: L.c7,
+                      children: (0, i.jsx)(o.Button, {
+                          variant: "secondary",
+                          fullWidth: !0,
+                          text: P.intl.string(P.t["E+COuA"]),
+                          onClick: () => D(),
+                      }),
+                  }),
+                  (0, i.jsx)("div", { className: L.BU }),
+                  (0, i.jsx)(S.Ay, { type: y.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL, subscriptionTier: y.pe.TIER_2 }),
+              ],
+          })
+        : null;
+}
+let V = () => {
+    let e = (0, j.dk)("UserSettingsAppearanceClientThemes");
+    return (0, i.jsxs)("div", {
+        children: [
+            (0, i.jsxs)(g.Ay, {
+                type: g.v0.SETTINGS,
+                children: [
+                    (0, i.jsx)(g.Ay.Basic, { className: L.a6 }),
+                    (0, i.jsx)(H, {}),
+                    (0, i.jsx)(A.A, {}),
+                    (0, i.jsxs)(U, {
+                        children: [
+                            (0, i.jsx)(g.Ay.Gradient, { disabled: !1, renderCTAButtons: () => (0, i.jsx)(G, {}) }),
+                            (0, i.jsx)(k, {}),
+                        ],
+                    }),
+                ],
+            }),
+            !e && (0, i.jsx)(o.cGx, { className: L.yF }),
+        ],
+    });
+};
+function H() {
     let e = (0, I.qo)(),
         {
             theme: t,
@@ -144,7 +145,32 @@ function G() {
               ],
           });
 }
-let U = () =>
+let w = () =>
     (0, a.bG)([m.A], () => m.A.isPreview)
         ? null
         : (0, i.jsx)(o.Button, { variant: "primary", text: P.intl.string(P.t.qYXrkX), onClick: D });
+function B() {
+    return (0, i.jsx)(g.Ay, {
+        type: g.v0.SETTINGS,
+        children: (0, i.jsxs)(U, {
+            children: [
+                (0, i.jsx)(g.ew, {
+                    isCoachmark: !1,
+                    renderCTAButtons: () => (0, i.jsx)(G, {}),
+                    headingClassName: L.EK,
+                    titleTextVariant: "text-md/semibold",
+                    titleClassName: L.cI,
+                    titleIconClassName: L.Hq,
+                }),
+                (0, i.jsx)(o.BJc, {
+                    direction: "horizontal",
+                    wrap: !0,
+                    gap: 8,
+                    padding: { top: 24 },
+                    children: (0, i.jsx)(g.Zg, { disabled: !1 }),
+                }),
+                (0, i.jsx)(k, {}),
+            ],
+        }),
+    });
+}
