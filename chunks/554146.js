@@ -531,6 +531,7 @@ var r = (function (e) {
             (e[(e.GAME_CLAIM_COACHMARK = 682)] = "GAME_CLAIM_COACHMARK"),
             (e[(e.COLLECTIBLES_SHOP_MARVEL_RIVALS_ORBS_REWARD = 683)] = "COLLECTIBLES_SHOP_MARVEL_RIVALS_ORBS_REWARD"),
             (e[(e.EXPIRING_POWERUP_COACHMARK = 684)] = "EXPIRING_POWERUP_COACHMARK"),
+            (e[(e.FIRST_BOOSTER_UPSELL = 685)] = "FIRST_BOOSTER_UPSELL"),
             e
         );
     })({}),
