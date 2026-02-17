@@ -14,7 +14,7 @@ function c(e) {
             if (t.id === l.Fw) return void window.open(i.A.getArticleURL(u.MVz.VIRTUAL_CURRENCY_LEARN_MORE));
             if (null != n) {
                 let e = (0, a.Jx)(t.config);
-                (await (0, o.f7)(e)) && n();
+                (await (0, o.f)(e)) && n();
             }
             (0, s.pu)(t, { content: e, ctaContent: r, impressionId: d, sourceQuestContent: c });
         },

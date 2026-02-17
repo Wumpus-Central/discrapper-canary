@@ -7,12 +7,12 @@ var r = n(627968),
     o = n(267548),
     l = n(668824),
     u = n(397927),
-    c = n(341915),
-    d = n(73473),
-    _ = n(717415),
-    f = n(471535),
-    h = n(652215);
-let p = "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4";
+    c = n(104473),
+    d = n(341915),
+    _ = n(73473),
+    f = n(717415),
+    h = n(471535),
+    p = n(652215);
 function g(e) {
     let { url: t, width: n = 640, height: r = 360, target: i = 60, videoTitle: s = "Test Video Quest" } = e;
     return {
@@ -67,11 +67,11 @@ function I(e) {
                     },
                 ],
                 rewardsExpireAt: "2030-01-01T00:00:00+00:00",
-                platforms: [c.pY.CROSS_PLATFORM],
+                platforms: [d.pY.CROSS_PLATFORM],
             },
             assets: {
                 hero: "",
-                heroVideo: p,
+                heroVideo: c.kz,
                 questBarHero: "",
                 questBarHeroVideo: null,
                 questBarHeroBlurhash: null,
@@ -84,7 +84,7 @@ function I(e) {
             ctaConfig: { link: "https://discord.com/", buttonLabel: "Learn More" },
         },
         userStatus: E({ enrolledAt: new Date().toISOString() }),
-        targetedContent: [c.uF.QUEST_HOME_DESKTOP],
+        targetedContent: [d.uF.QUEST_HOME_DESKTOP],
     };
 }
 function T(e) {
@@ -92,22 +92,22 @@ function T(e) {
         s = i.useMemo(
             () => ({
                 quest: t,
-                sourceQuestContent: c.uF.INTERNAL_PREVIEW_TOOL,
+                sourceQuestContent: d.uF.INTERNAL_PREVIEW_TOOL,
                 videoSessionId: "playground-session",
                 isPortrait: n,
-                onClose: h.tEg,
+                onClose: p.tEg,
             }),
             [t, n],
         ),
         o = i.useMemo(() => ({ questConfig: t.config }), [t.config]);
-    return (0, r.jsx)(d.R, {
+    return (0, r.jsx)(_.R, {
         questOrQuests: t,
-        questContent: c.uF.VIDEO_MODAL,
-        sourceQuestContent: c.uF.INTERNAL_PREVIEW_TOOL,
+        questContent: d.uF.VIDEO_MODAL,
+        sourceQuestContent: d.uF.INTERNAL_PREVIEW_TOOL,
         children: (e, t) =>
-            (0, r.jsx)(_.VideoQuestConfigContext.Provider, {
+            (0, r.jsx)(f.VideoQuestConfigContext.Provider, {
                 value: o,
-                children: (0, r.jsx)(_.VideoQuestModalContext.Provider, { value: s, children: a }),
+                children: (0, r.jsx)(f.VideoQuestModalContext.Provider, { value: s, children: a }),
             }),
     });
 }
@@ -142,10 +142,10 @@ function y(e) {
         children: (0, r.jsx)(T, {
             quest: c,
             isPortrait: s,
-            children: (0, r.jsx)(f.A, {
-                videoTask: o,
+            children: (0, r.jsx)(h.A, {
+                targetTimeSec: o.target,
                 parentTransitionState: u.ip4.ENTERED,
-                onOptimisticProgressUpdate: h.tEg,
+                onOptimisticProgressUpdate: p.tEg,
                 autoplay: n,
                 performanceClockStartTime: 0,
                 orientation: t,
@@ -166,19 +166,19 @@ let S = {
         },
         autoplay: { label: "Autoplay", type: "boolean", defaultValue: !1 },
         questCompleted: { label: "Quest Completed", type: "boolean", defaultValue: !1 },
-        videoUrl: { label: "Video URL", type: "text", defaultValue: p },
+        videoUrl: { label: "Video URL", type: "text", defaultValue: c.kz },
     },
     v = {
         title: "Video Player",
         stories: [
             {
-                name: "Landscape Video",
+                name: "Landscape Video (Quests)",
                 id: "landscape-video",
                 component: y,
                 controls: { ...S, orientation: { ...S.orientation, defaultValue: "landscape" } },
             },
             {
-                name: "Portrait Video",
+                name: "Portrait Video (Quests)",
                 id: "portrait-video",
                 component: y,
                 controls: { ...S, orientation: { ...S.orientation, defaultValue: "portrait" } },

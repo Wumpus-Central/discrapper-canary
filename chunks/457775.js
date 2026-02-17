@@ -1,13 +1,12 @@
 "use strict";
-n.d(t, { Ce: () => u, f7: () => d }), n(64700);
+n.d(t, { f: () => c });
 var r = n(846293),
     i = n(167189),
     a = n(833291),
     s = n(299091),
     o = n(711014),
     l = n(998218);
-let u = (e) => null != e.text;
-async function c(e) {
+async function u(e) {
     try {
         let t = (0, a.br)(e);
         if (null == t || t.type !== i.I.INVITE) return !1;
@@ -24,10 +23,10 @@ async function c(e) {
         return !1;
     }
 }
-async function d(e) {
+async function c(e) {
     try {
         if (l.A.isDiscordUrl(e)) return !0;
-        return await c(e);
+        return await u(e);
     } catch (e) {
         return !1;
     }
