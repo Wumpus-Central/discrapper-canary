@@ -43,7 +43,7 @@ function C() {
     }
     return [...e];
 }
-function N(e) {
+function R(e) {
     return e.features.has(f.GuildFeatures.DISCOVERABLE)
         ? I.J.DISCOVERABLE
         : e.features.has(f.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED) &&
@@ -51,7 +51,7 @@ function N(e) {
           ? I.J.APPLY
           : I.J.INVITE;
 }
-function R(e, i) {
+function N(e, i) {
     let t = e.features.has(f.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED),
         l = e.ownerConfiguredContentLevel === f.ftr.AGE_RESTRICTED;
     switch (i) {
@@ -65,7 +65,7 @@ function R(e, i) {
                 settingsView: h(),
                 requireTerms: t,
                 termRules: g(),
-                isAgeRestricted: l,
+                isAgeRestricted: !1,
             };
     }
 }
@@ -88,7 +88,7 @@ function L() {
         T = S;
         return;
     }
-    let i = N(e) !== l.joinType,
+    let i = R(e) !== l.joinType,
         t = (e.ownerConfiguredContentLevel === f.ftr.AGE_RESTRICTED) !== l.isAgeRestricted;
     switch (l.joinType) {
         case I.J.INVITE:
@@ -127,8 +127,8 @@ function p(e) {
     if (i !== f.BEX.ACCESS) return v();
     let n = o.A.getGuild();
     if (null == n) return !1;
-    let r = t === f.nd0.ACCESS_DISCOVERABLE && n.features.has(f.GuildFeatures.COMMUNITY) ? I.J.DISCOVERABLE : N(n);
-    (l = R(n, r)), L();
+    let r = t === f.nd0.ACCESS_DISCOVERABLE && n.features.has(f.GuildFeatures.COMMUNITY) ? I.J.DISCOVERABLE : R(n);
+    (l = N(n, r)), L();
 }
 function v() {
     (l = void 0), (T = S);
@@ -170,13 +170,13 @@ let P = new F(a.h, {
         let { guildId: i, joinType: t } = e,
             n = o.A.getGuild();
         if (i !== n?.id) return !1;
-        (l = R(n, t)), L();
+        (l = N(n, t)), L();
     },
     GUILD_SETTINGS_JOIN_RULES_SET_CONTENT_LEVEL: function (e) {
         let { guildId: i, isAgeRestricted: t } = e,
             n = o.A.getGuild();
         if (i !== n?.id) return !1;
-        (l = { ...(l ?? R(n, N(n))), isAgeRestricted: t }), L();
+        (l = { ...(l ?? N(n, R(n))), isAgeRestricted: t }), L();
     },
     MEMBER_VERIFICATION_FORM_UPDATE: y,
     MEMBER_VERIFICATION_FORM_FETCH_FAIL: y,
