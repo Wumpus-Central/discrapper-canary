@@ -1,4 +1,4 @@
-i.d(t, { Y: () => _ });
+i.d(e, { Y: () => A });
 var n = i(419954),
     l = i(780964),
     s = i(692228),
@@ -7,7 +7,7 @@ var n = i(419954),
     u = i(50960),
     o = i(604434),
     d = i(985018);
-let _ = (0, n.zZ)(l.X.DISPLAY_MESSAGE_COMPOSER_CATEGORY, {
-    useTitle: () => d.intl.string(d.t["y0ItF+"]),
+let A = (0, n.zZ)(l.X.DISPLAY_MESSAGE_COMPOSER_CATEGORY, {
+    useTitle: () => d.intl.string(d.t.WkPNCF),
     buildLayout: () => [o.m, u.W, r.j, a.k, s.g],
 });

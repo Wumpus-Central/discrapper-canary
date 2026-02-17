@@ -1,4 +1,4 @@
-i.d(t, { K: () => c });
+i.d(e, { K: () => I });
 var n = i(311907),
     l = i(775602),
     s = i(502229),
@@ -7,13 +7,15 @@ var n = i(311907),
     u = i(933297),
     o = i(780964),
     d = i(70040),
-    _ = i(840065),
-    T = i(179357),
-    A = i(225216),
-    S = i(652215),
-    E = i(985018);
-let c = (0, a.zZ)(o.X.DISPLAY_THEME_CATEGORY, {
-    useTitle: () => E.intl.string(E.t.Ksh3ik),
+    A = i(840065),
+    T = i(506305),
+    S = i(69551),
+    E = i(225216),
+    g = i(866352),
+    _ = i(652215),
+    c = i(985018);
+let I = (0, a.zZ)(o.X.DISPLAY_THEME_CATEGORY, {
+    useTitle: () => c.intl.string(c.t.Ksh3ik),
     useInlineNotice: function () {
         return (0, n.bG)([l.A], () => l.A.useForcedColors)
             ? {
@@ -21,12 +23,12 @@ let c = (0, a.zZ)(o.X.DISPLAY_THEME_CATEGORY, {
                   noticeType: "info",
                   useText: () =>
                       (0, s.D)()
-                          ? E.intl.format(E.t.Jae48E, {
+                          ? c.intl.format(c.t.Jae48E, {
                                 onClick: () => {
-                                    (0, _.openUserSettings)(o.X.SYNC_FORCED_COLORS, { section: S.nc_.ACCESSIBILITY });
+                                    (0, A.openUserSettings)(o.X.SYNC_FORCED_COLORS, { section: _.nc_.ACCESSIBILITY });
                                 },
                             })
-                          : E.intl.string(E.t.AUMSZP),
+                          : c.intl.string(c.t.AUMSZP),
               }
             : null;
     },
@@ -39,11 +41,11 @@ let c = (0, a.zZ)(o.X.DISPLAY_THEME_CATEGORY, {
                       {
                           id: "open-client-themes-button",
                           type: u.UV.BUTTON,
-                          useText: () => E.intl.string(E.t["E+COuA"]),
+                          useText: () => c.intl.string(c.t["E+COuA"]),
                           onClick: d.J3,
                       },
                   ],
               };
     },
-    buildLayout: () => [A.k, T.x],
+    buildLayout: () => [E.k, S.l, T.p, g.W],
 });
