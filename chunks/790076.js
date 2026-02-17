@@ -801,7 +801,7 @@ function eM(e) {
         }),
     });
 }
-function eG(e) {
+function eG(e, t) {
     return [
         {
             title: eh.t.eVE4LX,
@@ -833,6 +833,19 @@ function eG(e) {
             disabledSetting: D.M.NOW_PLAYING,
             key: eu.X.OVERLAY_NOTIFICATIONS_NOW_PLAYING,
         },
+        t && {
+            title: eh.t.giM9fA,
+            description: eh.t.EhAfWj,
+            disabledSetting: D.M.NOW_PLAYING_DIFFERENT_GAMES,
+            key: eu.X.OVERLAY_NOTIFICATIONS_NOW_PLAYING_DIFFERENT_GAMES,
+            usePredicate: () => {
+                let { showNowPlayingForDifferentGames: e } = (0, G.M8)(
+                        "OverlayV3NowPlayingDifferentGamesNotificationSetting",
+                    ),
+                    t = (0, m.bG)([V.A], () => V.A.isNotificationDisabledBySetting(D.M.NOW_PLAYING));
+                return !!e && !t;
+            },
+        },
         e && {
             title: eh.t["5/21FT"],
             description: eh.t.EIzwfA,
@@ -849,8 +862,9 @@ function eG(e) {
 }
 function eU() {
     let { enabled: e } = (0, G.QC)("OverlayV3StreamWatchNudge"),
-        t = eG(e),
-        n = (0, m.bG)([V.A], () => V.A.getDisabledNotifications());
+        { showNowPlayingForDifferentGames: t } = (0, G.M8)("OverlayV3NowPlayingDifferentGamesNotificationSetting"),
+        n = (0, m.bG)([V.A], () => V.A.getDisabledNotifications()),
+        s = eG(e, t && !n.has(D.M.NOW_PLAYING));
     return (0, i.jsxs)("div", {
         className: ex.AO,
         children: [
@@ -859,7 +873,7 @@ function eU() {
                 color: "text-strong",
                 children: eh.intl.string(eh.t.xOE5bA),
             }),
-            t.map((e) => {
+            s.map((e) => {
                 let t;
                 return (0, i.jsxs)(
                     "div",

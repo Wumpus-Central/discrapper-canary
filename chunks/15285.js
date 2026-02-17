@@ -742,6 +742,9 @@ class e7 extends l.Ay.Store {
     isGamesSeenLoaded() {
         return 0 === H.length;
     }
+    isGameSeen(e) {
+        return eV().some((t) => t.id === e);
+    }
     getGamesSeen(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = eV();
