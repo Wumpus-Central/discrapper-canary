@@ -300,6 +300,8 @@ class O extends f.A {
                                 e.activity,
                                 e.goLiveCameraFrames,
                                 e.screenCaptureKitFrames,
+                                e.hdrFramesCapable,
+                                e.hdrFrames,
                             )
                           : "video_state" === e.type
                             ? this.emit(p.yq.VideoState, e.state)

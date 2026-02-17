@@ -250,19 +250,19 @@ class V extends u.A {
                 e === x.S7L.RTC_CONNECTED &&
                     (this._connection?.on(
                         a.yq.ScreenshareFinish,
-                        (e, t, n, r, i, a, s, o, l, u, c, d, _, f, h, g, E, A, I) => {
-                            let T = this.analyticsContext.getStreamApplicationFromHistory(
+                        (e, t, n, r, i, a, s, o, l, u, c, d, _, f, h, g, E, A, I, T, y) => {
+                            let S = this.analyticsContext.getStreamApplicationFromHistory(
                                 this.screenshareFinishedCount,
                             );
                             this.screenshareFinishedCount++;
-                            let { gameName: y, gameId: S, exe: v, distributor: N } = (0, p.wH)(T),
-                                R = this.getMediaSessionId(),
-                                O = this.getRTCConnectionId();
+                            let { gameName: v, gameId: N, exe: R, distributor: O } = (0, p.wH)(S),
+                                D = this.getMediaSessionId(),
+                                L = this.getRTCConnectionId();
                             (0, C.w)().then((p) => {
-                                let T = null;
+                                let S = null;
                                 if (null != p) {
                                     let { cpu_brand: e, cpu_vendor: t, cpu_memory: n, gpu_brand: r, gpu_memory: i } = p;
-                                    T = { cpu_brand: e, cpu_vendor: t, cpu_memory: n, gpu_brand: r, gpu_memory: i };
+                                    S = { cpu_brand: e, cpu_vendor: t, cpu_memory: n, gpu_brand: r, gpu_memory: i };
                                 }
                                 let C =
                                         (e ?? 0) +
@@ -274,7 +274,7 @@ class V extends u.A {
                                         (h ?? 0) +
                                         (I ?? 0) +
                                         (A ?? 0),
-                                    D = (u ?? 0) + (c ?? 0) + (d ?? 0) + (_ ?? 0) + (f ?? 0);
+                                    w = (u ?? 0) + (c ?? 0) + (d ?? 0) + (_ ?? 0) + (f ?? 0);
                                 b.default.track(x.HAw.SCREENSHARE_FINISHED, {
                                     screenshare_frames: e,
                                     videohook_frames: t,
@@ -294,21 +294,23 @@ class V extends u.A {
                                     screencapturekit_frames: I,
                                     go_live_camera_frames: A,
                                     total_frames: C,
-                                    total_frames_unique: D,
+                                    total_frames_unique: w,
                                     desktop_capturer_type: g,
-                                    media_session_id: R,
-                                    rtc_connection_id: O,
+                                    media_session_id: D,
+                                    rtc_connection_id: L,
                                     context: P.x.STREAM,
                                     activity: E,
                                     soundshare_session: this.soundshareStats.getStats().soundshare_last_session,
                                     picker_type_used:
                                         null != this.analyticsContext.nativePickerStyleUsed ? "native" : "internal",
                                     duration: this.analyticsContext.getDuration(),
-                                    share_game_name: y,
-                                    share_game_id: S,
-                                    share_game_exe: v,
-                                    share_game_distributor: N,
-                                    ...T,
+                                    share_game_name: v,
+                                    share_game_id: N,
+                                    share_game_exe: R,
+                                    share_game_distributor: O,
+                                    hdr_frames_capable: T,
+                                    hdr_frames: y,
+                                    ...S,
                                 });
                             });
                         },
