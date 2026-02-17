@@ -55,6 +55,21 @@ let m = r.memo(function (e) {
                         renderGuildHeaderDropdownButton: r,
                     });
                 }
+                case l.M.EXPIRING_POWERUP_COACHMARK: {
+                    let e = m?.featuredExpiringPowerup;
+                    if (null == e) return r();
+                    return (0, i.jsx)(_, {
+                        renderPopout: (t) =>
+                            (0, i.jsx)(A.Mr, {
+                                type: u.o.EXPIRING_PERK,
+                                guildId: n.id,
+                                featuredExpiringPowerup: e,
+                                markAsDismissed: p,
+                                channelRowRef: t,
+                            }),
+                        renderGuildHeaderDropdownButton: r,
+                    });
+                }
                 case l.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL:
                     return (0, i.jsx)(_, {
                         renderPopout: (e) =>

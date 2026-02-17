@@ -1,16 +1,18 @@
-n.d(t, { bW: () => l, cD: () => r, lE: () => i, o: () => o });
+n.d(t, { bW: () => l, cD: () => o, lE: () => i, mD: () => s, o: () => d });
 let i = 216e5,
-    l = 432e6;
-var s,
-    a,
-    r = (((s = {}).WARNING = "warning"), (s.UNREAD = "unread"), s),
-    o =
-        (((a = {})[(a.LEVEL_REACHED = 0)] = "LEVEL_REACHED"),
-        (a[(a.PERKS_PURCHASABLE = 1)] = "PERKS_PURCHASABLE"),
-        (a[(a.PERKS_AVAILABLE = 2)] = "PERKS_AVAILABLE"),
-        (a[(a.NEW_PERK_AVAILABLE = 3)] = "NEW_PERK_AVAILABLE"),
-        (a[(a.BOOST_TO_UNLOCK = 4)] = "BOOST_TO_UNLOCK"),
-        (a[(a.GAME_SERVER_HOSTING_AVAILABLE = 5)] = "GAME_SERVER_HOSTING_AVAILABLE"),
-        (a[(a.GAME_SERVER_HOSTING_GUILD_ELIGIBLE = 6)] = "GAME_SERVER_HOSTING_GUILD_ELIGIBLE"),
-        (a[(a.GAME_SERVER_HOSTING_ENABLED = 7)] = "GAME_SERVER_HOSTING_ENABLED"),
-        a);
+    l = 864e6,
+    s = 2592e5;
+var a,
+    r,
+    o = (((a = {}).WARNING = "warning"), (a.UNREAD = "unread"), a),
+    d =
+        (((r = {})[(r.LEVEL_REACHED = 0)] = "LEVEL_REACHED"),
+        (r[(r.PERKS_PURCHASABLE = 1)] = "PERKS_PURCHASABLE"),
+        (r[(r.PERKS_AVAILABLE = 2)] = "PERKS_AVAILABLE"),
+        (r[(r.NEW_PERK_AVAILABLE = 3)] = "NEW_PERK_AVAILABLE"),
+        (r[(r.BOOST_TO_UNLOCK = 4)] = "BOOST_TO_UNLOCK"),
+        (r[(r.EXPIRING_PERK = 5)] = "EXPIRING_PERK"),
+        (r[(r.GAME_SERVER_HOSTING_AVAILABLE = 6)] = "GAME_SERVER_HOSTING_AVAILABLE"),
+        (r[(r.GAME_SERVER_HOSTING_GUILD_ELIGIBLE = 7)] = "GAME_SERVER_HOSTING_GUILD_ELIGIBLE"),
+        (r[(r.GAME_SERVER_HOSTING_ENABLED = 8)] = "GAME_SERVER_HOSTING_ENABLED"),
+        r);

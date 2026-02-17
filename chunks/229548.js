@@ -1,4 +1,4 @@
-n.d(t, { FC: () => r, ru: () => o, ty: () => a, ww: () => d });
+n.d(t, { FC: () => r, W2: () => c, ru: () => o, ty: () => a, ww: () => d });
 var i = n(554146),
     l = n(379848),
     s = n(379229);
@@ -13,4 +13,7 @@ function o(e) {
 }
 function d(e, t) {
     return (0, l.D8)(e ? i.M.BOOST_TO_UNLOCK_COACHMARK : null, t, { cooldownDurationMs: s.bW });
+}
+function c(e, t) {
+    return (0, l.D8)(e ? i.M.EXPIRING_POWERUP_COACHMARK : null, t, { cooldownDurationMs: s.mD });
 }

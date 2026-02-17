@@ -1,4 +1,4 @@
-n.d(t, { A: () => ec }), n(321073);
+n.d(t, { A: () => eA }), n(321073);
 var i = n(627968),
     r = n(64700),
     l = n(522160),
@@ -30,36 +30,38 @@ var i = n(627968),
     R = n(488803),
     P = n(379229),
     j = n(139032),
-    D = n(363487),
-    M = n(77509),
-    w = n(728321),
-    U = n(482361),
-    G = n(734057),
-    k = n(72314),
-    V = n(919638),
-    B = n(808728),
-    H = n(71393),
-    F = n(186111),
-    Y = n(576705),
-    q = n(584569),
-    W = n(383501),
-    K = n(287809),
-    z = n(927578),
-    $ = n(885631),
-    Q = n(487401),
-    X = n(952790),
-    Z = n(718996),
-    J = n(64084),
-    ee = n(846930),
-    et = n(652215),
-    en = n(946960),
-    ei = n(49999),
-    er = n(349828),
-    el = n(985018),
-    ea = n(484241);
-let es = "server-settings",
-    eo = { origin: { x: -8, y: -48 }, targetWidth: 40, targetHeight: 40, offset: { x: 0, y: 0 } };
-class ed extends r.PureComponent {
+    D = n(52260),
+    M = n(363487),
+    w = n(804756),
+    U = n(77509),
+    G = n(728321),
+    k = n(482361),
+    V = n(734057),
+    B = n(72314),
+    H = n(919638),
+    F = n(808728),
+    Y = n(71393),
+    q = n(186111),
+    W = n(576705),
+    K = n(584569),
+    z = n(383501),
+    $ = n(287809),
+    Q = n(927578),
+    X = n(885631),
+    Z = n(487401),
+    J = n(952790),
+    ee = n(718996),
+    et = n(64084),
+    en = n(846930),
+    ei = n(652215),
+    er = n(946960),
+    el = n(49999),
+    ea = n(349828),
+    es = n(985018),
+    eo = n(484241);
+let ed = "server-settings",
+    ec = { origin: { x: -8, y: -48 }, targetWidth: 40, targetHeight: 40, offset: { x: 0, y: 0 } };
+class eu extends r.PureComponent {
     historyUnlisten = () => {};
     guildHeaderRef = r.createRef();
     guildHeaderDropdownButtonRef = r.createRef();
@@ -80,8 +82,8 @@ class ed extends r.PureComponent {
     componentDidMount() {
         this.setAnimatedValue(0),
             A.h.subscribe("LAYER_PUSH", this.closeAllHeaderNotices),
-            (this.historyUnlisten = M.A.addRouteChangeListener(this.handleHistoryChange));
-        let { location: e } = M.A.getHistory();
+            (this.historyUnlisten = U.A.addRouteChangeListener(this.handleHistoryChange));
+        let { location: e } = U.A.getHistory();
         e.state?.shouldShowSubscribeTooltip &&
             this.showTimeout.start(1e3, () => this.setState({ shouldShowSubscribeTooltip: !0 }));
     }
@@ -143,8 +145,8 @@ class ed extends r.PureComponent {
     };
     handleCloseStudentHubPrivacySettingsTooltip = () => {
         let e = (0, I.k8)(o.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
-            t = this.props.guild?.features.has(et.GuildFeatures.HUB);
-        !e && t && (0, I.Dr)(o.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, { dismissAction: ei.i.AUTO });
+            t = this.props.guild?.features.has(ei.GuildFeatures.HUB);
+        !e && t && (0, I.Dr)(o.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, { dismissAction: el.i.AUTO });
     };
     handleCloseSubscribeTooltip = () => {
         this.showTimeout.stop(),
@@ -166,7 +168,7 @@ class ed extends r.PureComponent {
         let { guild: t, guildHeaderContentDescriptor: n } = this.props;
         return null == t || null == n
             ? this.renderGuildHeaderDropdownButton(e)
-            : (0, i.jsx)(Z.A, {
+            : (0, i.jsx)(ee.A, {
                   contentDescriptor: n,
                   guild: t,
                   renderGuildHeaderDropdownButton: () => this.renderGuildHeaderDropdownButton(e),
@@ -182,10 +184,10 @@ class ed extends r.PureComponent {
         return n
             ? (0, i.jsx)("div", {
                   onClick: (t) => (e ? null : t.stopPropagation()),
-                  children: (0, i.jsx)(w.A, {
-                      tutorialId: es,
+                  children: (0, i.jsx)(G.A, {
+                      tutorialId: ed,
                       position: "bottom",
-                      inlineSpecs: eo,
+                      inlineSpecs: ec,
                       children: this.renderGuildHeaderDropdownButton(e),
                   }),
               })
@@ -197,8 +199,8 @@ class ed extends r.PureComponent {
                             !r &&
                             (0, i.jsx)(c.AM, {
                                 targetElementRef: this.guildHeaderDropdownButtonRef,
-                                title: el.intl.string(el.t.Rk2RJk),
-                                body: el.intl.string(el.t.sFSrFH),
+                                title: es.intl.string(es.t.Rk2RJk),
+                                body: es.intl.string(es.t.sFSrFH),
                                 onRequestClose: this.handleCloseTemplateDirtyTooltip,
                                 position: "bottom",
                                 caretConfig: { align: "center" },
@@ -213,8 +215,8 @@ class ed extends r.PureComponent {
                             this.renderGuildHeaderDropdownButton(e),
                             (0, i.jsx)(c.AM, {
                                 targetElementRef: this.guildHeaderDropdownButtonRef,
-                                title: el.intl.string(el.t.Q3qa4x),
-                                body: el.intl.string(el.t.UyHD4O),
+                                title: es.intl.string(es.t.Q3qa4x),
+                                body: es.intl.string(es.t.UyHD4O),
                                 onRequestClose: this.handleCloseSubscribeTooltip,
                                 position: "bottom",
                                 caretConfig: { align: "center" },
@@ -257,7 +259,7 @@ class ed extends r.PureComponent {
                       spacing: 4,
                       children: (r) => {
                           let { onClick: l, ...a } = r;
-                          return (0, i.jsx)(X.Ay, {
+                          return (0, i.jsx)(J.Ay, {
                               ref: this.guildHeaderRef,
                               guild: t,
                               controller: o,
@@ -280,7 +282,7 @@ class ed extends r.PureComponent {
     setAnimatedValue(e) {
         let { guild: t } = this.props,
             n = null != this.getGuildBannerHash(),
-            i = null != t && (0, $.A)(t);
+            i = null != t && (0, X.A)(t);
         null != t && (n || i) && (n ? this.setAnimatedValueForBanner(e) : this.setAnimatedValueForGuildInfo(e));
     }
     setAnimatedValueForBanner = (e) => {
@@ -315,140 +317,151 @@ class ed extends r.PureComponent {
     renderChannelList() {
         let { isUnavailable: e, guild: t, selectedChannel: n, enableStudyGroup: r, ...l } = this.props;
         if (e || null == t)
-            return (0, i.jsx)(ee.A, { withBannerPadding: null != t && null != this.getGuildBannerHash() });
+            return (0, i.jsx)(en.A, { withBannerPadding: null != t && null != this.getGuildBannerHash() });
         {
-            if (t.features.has(et.GuildFeatures.HUB) && !r)
+            if (t.features.has(ei.GuildFeatures.HUB) && !r)
                 return (0, i.jsx)("div", {
-                    className: ea.r0,
-                    children: (0, i.jsx)(O.A, { guild: t, channel: n ?? B.Ay.getDefaultChannel(t.id) }),
+                    className: eo.r0,
+                    children: (0, i.jsx)(O.A, { guild: t, channel: n ?? F.Ay.getDefaultChannel(t.id) }),
                 });
-            let e = t.id === er.Vc ? Q.T : Q.B;
+            let e = t.id === ea.Vc ? Z.T : Z.B;
             return (0, i.jsx)(e, {
                 guild: t,
                 ...l,
                 guildBanner: this.getGuildBannerHash(),
                 hasGuildSubheader: this.state.hasGuildSubheader,
                 onScroll:
-                    null != t && (null != this.getGuildBannerHash() || (0, $.A)(t)) ? this.pinBannerOrGuildInfo : null,
+                    null != t && (null != this.getGuildBannerHash() || (0, X.A)(t)) ? this.pinBannerOrGuildInfo : null,
             });
         }
     }
     render() {
         let { guild: e } = this.props;
         return (0, i.jsxs)("nav", {
-            className: ea.kL,
+            className: eo.kL,
             onContextMenu: this.handleContextMenu,
-            "aria-label": el.intl.formatToPlainString(el.t.nj5gAZ, { guildName: e?.name ?? "" }),
+            "aria-label": es.intl.formatToPlainString(es.t.nj5gAZ, { guildName: e?.name ?? "" }),
             children: [
                 null != e && this.renderGuildHeader(this.state.hasGuildSubheader),
                 null != e &&
-                    (0, i.jsx)(J.A, { guild: e, setHasSubheader: (e) => this.setState({ hasGuildSubheader: e }) }),
+                    (0, i.jsx)(et.A, { guild: e, setHasSubheader: (e) => this.setState({ hasGuildSubheader: e }) }),
                 this.renderChannelList(),
             ],
         });
     }
 }
-function ec(e) {
+function eA(e) {
     let { guildId: t, hideSelectedChannel: n, selectedChannelId: l } = e,
-        d = (0, s.bG)([H.A], () => H.A.getGuild(t)),
+        d = (0, s.bG)([Y.A], () => Y.A.getGuild(t)),
         c = (0, C.A)(t),
-        A = (0, s.bG)([k.A], () => k.A.getGuildDimensions(t).scrollTo),
-        h = (0, s.bG)([W.A], () => W.A.getChannelId()),
-        v = (0, s.bG)([Y.A], () => Y.A.can(et.xBc.MANAGE_GUILD, d)),
-        O = (0, s.bG)([V.A], () => V.A.isUnavailable(t)),
-        M = (0, s.bG)([K.default], () => K.default.getCurrentUser()),
-        { enableStudyGroup: w } = (0, b.y)(d),
-        B = (0, E.Ay)((e) => e.currentlyShown.has(o.M.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
-        [$, Q] = r.useState(!B),
-        X = (0, _.A)(t),
-        { analyticsLocations: Z } = (0, p.Ay)(m.A.GUILD_HEADER);
+        A = (0, s.bG)([B.A], () => B.A.getGuildDimensions(t).scrollTo),
+        h = (0, s.bG)([z.A], () => z.A.getChannelId()),
+        v = (0, s.bG)([W.A], () => W.A.can(ei.xBc.MANAGE_GUILD, d)),
+        O = (0, s.bG)([H.A], () => H.A.isUnavailable(t)),
+        U = (0, s.bG)([$.default], () => $.default.getCurrentUser()),
+        { enableStudyGroup: G } = (0, b.y)(d),
+        F = (0, E.Ay)((e) => e.currentlyShown.has(o.M.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
+        [X, Z] = r.useState(!F),
+        J = (0, _.A)(t),
+        { analyticsLocations: ee } = (0, p.Ay)(m.A.GUILD_HEADER);
     r.useEffect(() => {
-        t !== X && Q(!B);
-    }, [t, X, B]);
-    let [J, ee] = (0, E.Ay)(
+        t !== J && Z(!F);
+    }, [t, J, F]);
+    let [et, en] = (0, E.Ay)(
             (e) => [
-                en.cA.some((t) => e.currentlyShown.has(t.dismissibleContentType)),
-                e.currentlyShownGroup.has(ei.m.GUILD_HEADER_TOOLTIPS),
+                er.cA.some((t) => e.currentlyShown.has(t.dismissibleContentType)),
+                e.currentlyShownGroup.has(el.m.GUILD_HEADER_TOOLTIPS),
             ],
             a.x,
         ),
-        er = (0, g.A)(d),
-        el = (0, u.red)(u.DXt),
-        ea = (0, s.bG)([F.A], () => F.A.hasLayers()),
-        eo = (0, s.bG)([U.A], () => U.A.shouldShow(es)),
-        ec = (0, x.A)(t),
-        eu = d?.features.has(et.GuildFeatures.HUB) === !0,
-        eA = v && d?.features.has(et.GuildFeatures.DISCOVERABLE) === !0,
-        eh = (0, s.bG)(
-            [y.A, F.A],
-            () => null != d && null != M && v && !F.A.hasLayers() && y.A.shouldShowGuildTemplateDirtyTooltip(t),
+        ea = (0, g.A)(d),
+        es = (0, u.red)(u.DXt),
+        eo = (0, s.bG)([q.A], () => q.A.hasLayers()),
+        ec = (0, s.bG)([k.A], () => k.A.shouldShow(ed)),
+        eA = (0, x.A)(t),
+        eh = d?.features.has(ei.GuildFeatures.HUB) === !0,
+        e_ = v && d?.features.has(ei.GuildFeatures.DISCOVERABLE) === !0,
+        em = (0, s.bG)(
+            [y.A, q.A],
+            () => null != d && null != U && v && !q.A.hasLayers() && y.A.shouldShowGuildTemplateDirtyTooltip(t),
         ),
-        e_ = (0, s.bG)([G.A], () => G.A.getChannel(l)),
-        { isPopoutOpen: em } = (0, T.S)(),
-        ep = d?.features.has(et.GuildFeatures.COMMUNITY) ?? !1,
-        eg = z.Ay.isNewUser(M),
-        eE = $ && !eg;
+        ep = (0, s.bG)([V.A], () => V.A.getChannel(l)),
+        { isPopoutOpen: eg } = (0, T.S)(),
+        eE = d?.features.has(ei.GuildFeatures.COMMUNITY) ?? !1,
+        eI = Q.Ay.isNewUser(U),
+        ef = X && !eI;
     (0, N.A)(d);
-    let eI = (0, I.JZ)(o.M.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
-        ef = (0, L.A)(t),
-        eC = (0, S.A)(t),
-        eT = (0, s.bG)([W.A], () => W.A.getChannelId()),
-        eN = (0, s.bG)([q.A], () => q.A.desyncedVoiceStatesCount),
-        eS = (0, D.A)(t),
-        ex = (0, R.C$)(t, "GuildSidebar"),
-        ev = (0, s.bG)([H.A], () => H.A.getGuild(t)?.features.has(et.GuildFeatures.GAME_SERVERS) ?? !1, [t]),
-        ey = (0, j.A)(t),
-        eb = !1 === eS && null != ey,
-        eO = [];
-    eu && eO.push(o.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
-        ec && eO.push(o.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
-        eA && eO.push(o.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
-        !1 === eS && eO.push(o.M.GUILD_POWERUP_PERKS_COACHMARK),
-        ex && !ev && !1 === eS && eO.push(o.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
-        ef && eO.push(o.M.MEDIA_CHANNEL_UPSELL),
-        eC && eO.push(o.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL);
-    let [eL, eR] = (0, f.kn)(eO, ei.m.GUILD_HEADER_TOOLTIPS),
-        eP = null == eL,
-        [ej, eD] = (0, f.D8)(
-            eP && eb ? o.M.BOOST_TO_UNLOCK_COACHMARK : null,
+    let eC = (0, I.JZ)(o.M.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
+        eT = (0, L.A)(t),
+        eN = (0, S.A)(t),
+        eS = (0, s.bG)([z.A], () => z.A.getChannelId()),
+        ex = (0, s.bG)([K.A], () => K.A.desyncedVoiceStatesCount),
+        ev = (0, M.A)(t),
+        ey = (0, R.C$)(t, "GuildSidebar"),
+        eb = (0, s.bG)([Y.A], () => Y.A.getGuild(t)?.features.has(ei.GuildFeatures.GAME_SERVERS) ?? !1, [t]),
+        eO = (0, w.A)(t),
+        eL = (0, j.A)(t),
+        eR = !1 === ev && eO && null != eL,
+        eP = (0, D.A)(t),
+        ej = !1 === ev && eO && null != eP,
+        eD = [];
+    eh && eD.push(o.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
+        eA && eD.push(o.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
+        e_ && eD.push(o.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
+        !1 === ev && eD.push(o.M.GUILD_POWERUP_PERKS_COACHMARK),
+        ey && !eb && !1 === ev && eD.push(o.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
+        eT && eD.push(o.M.MEDIA_CHANNEL_UPSELL),
+        eN && eD.push(o.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL);
+    let [eM, ew] = (0, f.kn)(eD, el.m.GUILD_HEADER_TOOLTIPS),
+        eU = null == eM,
+        [eG, ek] = (0, f.D8)(
+            eU && eR ? o.M.BOOST_TO_UNLOCK_COACHMARK : null,
             t,
             { cooldownDurationMs: P.bW },
-            ei.m.GUILD_HEADER_TOOLTIPS,
+            el.m.GUILD_HEADER_TOOLTIPS,
         ),
-        eM = r.useMemo(
+        [eV, eB] = (0, f.D8)(
+            eU && eG !== o.M.BOOST_TO_UNLOCK_COACHMARK && ej ? o.M.EXPIRING_POWERUP_COACHMARK : null,
+            t,
+            { cooldownDurationMs: P.mD },
+            el.m.GUILD_HEADER_TOOLTIPS,
+        ),
+        eH = r.useMemo(
             () =>
-                null != eL
-                    ? { contentType: eL, data: null, markAsDismissed: eR }
-                    : ej === o.M.BOOST_TO_UNLOCK_COACHMARK && null != ey
-                      ? { contentType: ej, data: { featuredPowerup: ey }, markAsDismissed: eD }
-                      : null,
-            [eL, ej, ey, eR, eD],
+                null != eM
+                    ? { contentType: eM, data: null, markAsDismissed: ew }
+                    : eG === o.M.BOOST_TO_UNLOCK_COACHMARK && null != eL
+                      ? { contentType: eG, data: { featuredPowerup: eL }, markAsDismissed: ek }
+                      : eV === o.M.EXPIRING_POWERUP_COACHMARK && null != eP
+                        ? { contentType: eV, data: { featuredExpiringPowerup: eP }, markAsDismissed: eB }
+                        : null,
+            [eM, eG, eV, eL, eP, ew, ek, eB],
         );
-    return (0, i.jsx)(ed, {
+    return (0, i.jsx)(eu, {
         guildId: t,
         hideSelectedChannel: n,
         guild: d,
         scrollToChannel: A,
         selectedChannelId: n ? null : l,
-        selectedChannel: e_,
+        selectedChannel: ep,
         selectedVoiceChannelId: h,
         voiceStates: c,
-        rtcConnectedChannelId: eT,
-        rtcDesyncedVoiceStatesCount: eN,
+        rtcConnectedChannelId: eS,
+        rtcDesyncedVoiceStatesCount: ex,
         isUnavailable: O,
-        user: M,
-        hasChannelNotice: null != er || J,
-        anyLayerOpen: el || ea,
-        showGuildHeaderTutorial: eo,
-        showGuildTemplateDirtyTooltip: eh,
-        showNewUnreadsBar: ep,
-        isHeaderPopoutOpen: em,
-        enableStudyGroup: w,
-        isGuildHeaderDismissibleTooltipShown: ee,
-        canShowCoachMarkAtBottom: $,
-        headerAnalyticsLocations: Z,
-        isTutorialHighlightDismissed: eI,
-        shouldRenderBurstCoachmark: eE,
-        guildHeaderContentDescriptor: eM,
+        user: U,
+        hasChannelNotice: null != ea || et,
+        anyLayerOpen: es || eo,
+        showGuildHeaderTutorial: ec,
+        showGuildTemplateDirtyTooltip: em,
+        showNewUnreadsBar: eE,
+        isHeaderPopoutOpen: eg,
+        enableStudyGroup: G,
+        isGuildHeaderDismissibleTooltipShown: en,
+        canShowCoachMarkAtBottom: X,
+        headerAnalyticsLocations: ee,
+        isTutorialHighlightDismissed: eC,
+        shouldRenderBurstCoachmark: ef,
+        guildHeaderContentDescriptor: eH,
     });
 }

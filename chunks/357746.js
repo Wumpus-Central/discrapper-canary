@@ -10,8 +10,8 @@ var i = n(627968),
     u = n(186111),
     h = n(942975),
     A = n(379229),
-    m = n(489306),
-    p = n(828162),
+    p = n(489306),
+    m = n(828162),
     g = n(249584),
     _ = n(49999),
     f = n(333354),
@@ -32,10 +32,10 @@ function E(e) {
 let I = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
     b = l.memo(function (e) {
         let { guildId: t, selected: s } = e,
-            b = (0, m.Ay)(t),
+            b = (0, p.Ay)(t),
             N = l.useCallback(() => {
                 (0, h.Zm)(t),
-                    (0, p.A)(t, d.A.GUILD_POWERUPS_CHANNEL_LIST_ROW),
+                    (0, m.A)(t, d.A.GUILD_POWERUPS_CHANNEL_LIST_ROW),
                     b?.popout?.markAsDismissed(_.i.INDIRECT_ACTION);
             }, [t, b]),
             S = l.useRef(null),
@@ -55,6 +55,8 @@ let I = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
                         return (0, i.jsx)(g.bo, { guildId: t, channelRowRef: S, ...b.popout });
                     case A.o.BOOST_TO_UNLOCK:
                         return (0, i.jsx)(g.Gw, { guildId: t, channelRowRef: S, ...b.popout });
+                    case A.o.EXPIRING_PERK:
+                        return (0, i.jsx)(g.Mr, { guildId: t, channelRowRef: S, ...b.popout });
                     case A.o.GAME_SERVER_HOSTING_AVAILABLE:
                     case A.o.GAME_SERVER_HOSTING_GUILD_ELIGIBLE:
                         return (0, i.jsx)(g.jz, { guildId: t, channelRowRef: S, ...b.popout });
