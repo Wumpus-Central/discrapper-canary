@@ -107,7 +107,7 @@ function ep(e) {
         a = t;
     null != t && (a = eh(t));
     let s = n;
-    return null != n && (s = eh(n)), (0, r.jsx)(w.A, { ...i, onPrimary: a, onBack: s });
+    return null != n && (s = eh(n)), (0, r.jsx)(w.Ay, { ...i, onPrimary: a, onBack: s });
 }
 function em(e) {
     let t,
@@ -134,7 +134,7 @@ function em(e) {
             toastContent: ea,
             continueSessionToInitialStep: eh,
             overwriteSubscriptionPaymentSource: em = !1,
-            shouldUseManaModal: eg = !1,
+            shouldUseManaModal: eg = !0,
         } = e,
         { stripe: eE, contextMetadata: eA, activitySessionId: eI, paymentElementsEnabled: eT } = (0, O.P5)(),
         ey = i.useMemo(() => {
@@ -346,7 +346,7 @@ function em(e) {
                 })),
                     (n = (0, r.jsx)(ep, {
                         onBack: () => eW(D.pn.PAYMENT_TYPE),
-                        primaryCTA: w.A.CTAType.CONTINUE,
+                        primaryCTA: w.Ay.CTAType.CONTINUE,
                         primaryText: i,
                         onPrimary: () => th(),
                         primaryDisabled: !td,
@@ -392,7 +392,7 @@ function em(e) {
                     onBack: () => {
                         tA(), A?.();
                     },
-                    primaryCTA: w.A.CTAType.CONTINUE,
+                    primaryCTA: w.Ay.CTAType.CONTINUE,
                     primaryType: "submit",
                     primaryText: ee.intl.string(ee.t.PDTjLN),
                     primarySubmitting: e0,
@@ -427,7 +427,7 @@ function em(e) {
                     let { elements: t } = e;
                     return (0, r.jsx)(ep, {
                         onBack: tP,
-                        primaryCTA: w.A.CTAType.CONTINUE,
+                        primaryCTA: w.Ay.CTAType.CONTINUE,
                         primaryType: "submit",
                         primaryText: ee.intl.string(ee.t.PDTjLN),
                         primarySubmitting: e0,
@@ -464,7 +464,7 @@ function em(e) {
             let tU = tb(J.he.EPS, tg);
             n = (0, r.jsx)(ep, {
                 onBack: tU,
-                primaryCTA: w.A.CTAType.CONTINUE,
+                primaryCTA: w.Ay.CTAType.CONTINUE,
                 primaryText: ee.intl.string(ee.t.PDTjLN),
                 primaryDisabled: void 0 === tt || "" === tt || "" === e1.info.name,
                 onPrimary: () => eW(D.pn.ADDRESS),
@@ -479,7 +479,7 @@ function em(e) {
             })),
                 (n = (0, r.jsx)(ep, {
                     onBack: () => eW(D.pn.PAYMENT_TYPE),
-                    primaryCTA: w.A.CTAType.CONTINUE,
+                    primaryCTA: w.Ay.CTAType.CONTINUE,
                     primaryText: ee.intl.string(ee.t.PDTjLN),
                     primaryDisabled: "" === e1.info.name,
                     onPrimary: () => eW(D.pn.ADDRESS),
@@ -500,7 +500,7 @@ function em(e) {
             let tG = tb(J.he.PRZELEWY24, tg);
             n = (0, r.jsx)(ep, {
                 onBack: tG,
-                primaryCTA: w.A.CTAType.CONTINUE,
+                primaryCTA: w.Ay.CTAType.CONTINUE,
                 primaryText: ee.intl.string(ee.t.PDTjLN),
                 primaryDisabled:
                     void 0 === e1.info.name ||
@@ -519,7 +519,7 @@ function em(e) {
             let tV = tb(J.he.PAYPAL, tg);
             n = (0, r.jsx)(ep, {
                 onBack: tV,
-                primaryCTA: w.A.CTAType.CONTINUE,
+                primaryCTA: w.Ay.CTAType.CONTINUE,
                 primaryText: tF ? ee.intl.string(ee.t.PDTjLN) : ee.intl.string(ee.t.Djzd7L),
                 onPrimary: () => (tF ? eW(D.pn.ADDRESS) : (0, _.$e)()),
                 shouldUseManaModal: eg,
@@ -531,7 +531,7 @@ function em(e) {
             let tj = tb(J.he.VENMO, tg);
             n = (0, r.jsx)(ep, {
                 onBack: tj,
-                primaryCTA: w.A.CTAType.CONTINUE,
+                primaryCTA: w.Ay.CTAType.CONTINUE,
                 primaryText: tB ? ee.intl.string(ee.t.PDTjLN) : ee.intl.string(ee.t["4KoTLM"]),
                 onPrimary: () => (tB ? eW(D.pn.ADDRESS) : (0, _.jR)()),
                 shouldUseManaModal: eg,
@@ -548,7 +548,7 @@ function em(e) {
             let tW = tb(J.he.CASH_APP, tg);
             n = (0, r.jsx)(ep, {
                 onBack: tW,
-                primaryCTA: w.A.CTAType.CONTINUE,
+                primaryCTA: w.Ay.CTAType.CONTINUE,
                 primaryText: tH ? ee.intl.string(ee.t.PDTjLN) : ee.intl.string(ee.t["9ALP8w"]),
                 onPrimary: () => (tH ? eW(D.pn.ADDRESS) : (0, X.uy)()),
                 primaryDisabled: !tY,
@@ -705,7 +705,7 @@ function em(e) {
                       })),
                 (n = (0, r.jsx)(ep, {
                     onBack: () => eW(c),
-                    primaryCTA: w.A.CTAType.CONTINUE,
+                    primaryCTA: w.Ay.CTAType.CONTINUE,
                     primaryText: ee.intl.string(ee.t.PDTjLN),
                     primarySubmitting: e0,
                     primaryDisabled: !e1.isValid || te,

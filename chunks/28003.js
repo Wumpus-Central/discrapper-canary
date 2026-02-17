@@ -89,7 +89,7 @@ let R = (e, t) => (t ? (0, p.DP)() : e ? g.intl.string(g.t.lG6a5x) : g.intl.stri
                 return !p || (p && (t || n));
             })).find((e) => e.id === x),
             F = G?.sectionHeaderText?.() ?? G?.label,
-            V = !L && null != F && null != x,
+            V = !(L && x === u.pn.REVIEW) && null != F && null != x,
             B = S && V && x === u.pn.REVIEW,
             j = y ? "nitro-pink" : "nitro-green",
             H = R(y, T);

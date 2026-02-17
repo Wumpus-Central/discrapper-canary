@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ed: () => T, Pw: () => I, rg: () => v });
+n.d(t, { Ed: () => C, Pw: () => v, rg: () => R });
 var r = n(627968),
     i = n(64700),
     a = n(158954),
@@ -11,11 +11,15 @@ var r = n(627968),
     d = n(427262),
     _ = n(866485),
     f = n(981036),
-    h = n(147422),
-    p = n(93159),
-    g = n(954848);
-let E = (e) => (0, r.jsx)(A, { ...e }),
-    A = (e) => {
+    h = n(725836),
+    p = n(147422),
+    g = n(93159),
+    E = n(270537),
+    A = n(756366),
+    I = n(985018),
+    T = n(954848);
+let y = (e) => (0, r.jsx)(S, { ...e }),
+    S = (e) => {
         let { unifiedStepProps: t } = e,
             {
                 isStepLoading: n,
@@ -27,7 +31,7 @@ let E = (e) => (0, r.jsx)(A, { ...e }),
             } = t,
             p = i.useMemo(() => ({ variant: "active", type: "submit", "data-testid": "submitButton", ...h }), [h]);
         return n
-            ? (0, r.jsx)("div", { className: g.y3, children: (0, r.jsx)(s.y$y, { type: s.y$y.Type.WANDERING_CUBES }) })
+            ? (0, r.jsx)("div", { className: T.y3, children: (0, r.jsx)(s.y$y, { type: s.y$y.Type.WANDERING_CUBES }) })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)(l.A, {}),
@@ -41,39 +45,39 @@ let E = (e) => (0, r.jsx)(A, { ...e }),
                                       null != _ ? (0, r.jsx)(c.A, { message: _ }) : null,
                                   ],
                               }),
-                              (0, r.jsxs)("div", { className: g.y3, children: [a, o] }),
+                              (0, r.jsxs)("div", { className: T.y3, children: [a, o] }),
                           ],
                       }),
                       (0, r.jsx)(u.UX, { children: (0, r.jsx)(f.cy, { primaryCTAButtonProps: p, showLockIcon: !0 }) }),
                   ],
               });
     },
-    I = (0, _.R)({ step: o.pn.REVIEW, renderStep: E, DirectStepComponent: A }),
-    T = () =>
-        (0, r.jsx)("div", { className: g.g4, children: (0, r.jsx)(s.y$y, { type: s.y$y.Type.PULSING_ELLIPSIS }) }),
-    y = (e) => null == e || "" === e,
-    S = (e) => {
+    v = (0, _.R)({ step: o.pn.REVIEW, renderStep: y, DirectStepComponent: S }),
+    C = () =>
+        (0, r.jsx)("div", { className: T.g4, children: (0, r.jsx)(s.y$y, { type: s.y$y.Type.PULSING_ELLIPSIS }) }),
+    b = (e) => null == e || "" === e,
+    N = (e) => {
         let { children: t } = e,
-            { errorMessage: n, notificationMessage: s, warningMessage: o } = (0, h.u)();
+            { errorMessage: n, notificationMessage: s, warningMessage: o } = (0, p.u)();
         return i.useMemo(
             () =>
-                y(n) && y(s) && y(o)
+                b(n) && b(s) && b(o)
                     ? null != t
-                        ? (0, r.jsx)("div", { className: g.dD, children: t })
+                        ? (0, r.jsx)("div", { className: T.dD, children: t })
                         : null
                     : (0, r.jsxs)("div", {
-                          className: g.dD,
+                          className: T.dD,
                           children: [
-                              y(n) ? null : (0, r.jsx)(a.wx6, { type: "critical", children: n }),
-                              y(s) ? null : (0, r.jsx)(a.wx6, { type: "info", children: s }),
-                              y(o) ? null : (0, r.jsx)(a.wx6, { type: "warning", children: o }),
+                              b(n) ? null : (0, r.jsx)(a.wx6, { type: "critical", children: n }),
+                              b(s) ? null : (0, r.jsx)(a.wx6, { type: "info", children: s }),
+                              b(o) ? null : (0, r.jsx)(a.wx6, { type: "warning", children: o }),
                               t,
                           ],
                       }),
             [n, s, o, t],
         );
     },
-    v = (e) => {
+    R = (e) => {
         let {
                 upperInlineNoticeProps: t,
                 upperInlineNoticeContent: n,
@@ -84,9 +88,11 @@ let E = (e) => (0, r.jsx)(A, { ...e }),
                 paymentSelectContent: c,
                 invoiceSummaryContent: _,
                 legalContent: f,
-                shouldShowGlobalNotices: h,
+                invoiceTotalDueLabel: p = I.intl.string(A.default.R0cZsM),
+                invoiceTotalDueValue: y,
+                shouldShowGlobalNotices: S,
             } = e,
-            E = i.useMemo(
+            v = i.useMemo(
                 () =>
                     null == t && null == n
                         ? null
@@ -107,34 +113,40 @@ let E = (e) => (0, r.jsx)(A, { ...e }),
                               : null,
                 [t, n],
             ),
-            A = i.useMemo(
+            b = i.useMemo(
                 () =>
-                    null != E || h
-                        ? h
-                            ? null != E
-                                ? (0, r.jsx)(S, { children: E })
-                                : (0, r.jsx)(S, {})
-                            : (0, r.jsx)("div", { className: g.dD, children: E })
+                    null != v || S
+                        ? S
+                            ? null != v
+                                ? (0, r.jsx)(N, { children: v })
+                                : (0, r.jsx)(N, {})
+                            : (0, r.jsx)("div", { className: T.dD, children: v })
                         : null,
-                [h, E],
+                [S, v],
             ),
-            I = i.useMemo(() => (0, d.Gn)(), []);
+            R = i.useMemo(() => (0, d.Gn)(), []);
         return u
-            ? (0, r.jsx)(T, {})
-            : (0, r.jsxs)("div", {
-                  className: g.db,
+            ? (0, r.jsx)(C, {})
+            : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      A,
-                      s,
-                      null != s && null != o && (0, r.jsx)("div", { className: g.GG }),
-                      o,
-                      null != l && (0, r.jsx)("div", { className: g.P3, children: l }),
                       (0, r.jsxs)("div", {
-                          className: g.Jv,
-                          children: [c, I ? (0, r.jsx)(p.Z4, { className: g.KX }) : null],
+                          className: T.db,
+                          children: [
+                              b,
+                              s,
+                              null != s && null != o && (0, r.jsx)("div", { className: T.ls }),
+                              o,
+                              null != l && (0, r.jsx)("div", { className: T.P3, children: l }),
+                              (0, r.jsxs)("div", {
+                                  className: T.Jv,
+                                  children: [c, R ? (0, r.jsx)(g.Z4, { className: T.KX }) : null],
+                              }),
+                              (0, r.jsx)("div", { className: T.ZF, children: _ }),
+                          ],
                       }),
-                      (0, r.jsx)("div", { className: g.ZF, children: _ }),
-                      f,
+                      (0, r.jsxs)(h.bx, {
+                          children: [(0, r.jsx)(E.Qf, { className: T.NR, label: p, value: y ?? "--" }), f],
+                      }),
                   ],
               });
     };

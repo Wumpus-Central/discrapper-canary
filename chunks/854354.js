@@ -1,34 +1,35 @@
 "use strict";
-n.d(t, { Nc: () => c, YR: () => u, lp: () => d, xk: () => _ }), n(321073);
+n.d(t, { Nc: () => d, YR: () => c, kw: () => h, lp: () => _, xk: () => f }), n(321073);
 var r = n(252424),
     i = n(927578),
-    a = n(427262),
-    s = n(788868),
-    o = n(756366),
-    l = n(985018);
-function u(e, t) {
+    a = n(580630),
+    s = n(427262),
+    o = n(788868),
+    l = n(756366),
+    u = n(985018);
+function c(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     switch (e) {
-        case s.WT.MONTH:
+        case o.WT.MONTH:
             if (1 !== t)
-                return l.intl.formatToPlainString(n ? o.default.AcRCMp : o.default.OBVcgO, { intervalCount: t });
-            return l.intl.string(n ? o.default["8gVLB3"] : o.default.FVzt1W);
-        case s.WT.YEAR:
-            return l.intl.string(n ? o.default.M2mY1J : o.default.NEHhLR);
+                return u.intl.formatToPlainString(n ? l.default.AcRCMp : l.default.OBVcgO, { intervalCount: t });
+            return u.intl.string(n ? l.default["8gVLB3"] : l.default.FVzt1W);
+        case o.WT.YEAR:
+            return u.intl.string(n ? l.default.M2mY1J : l.default.NEHhLR);
         default:
             throw Error("Unexpected interval");
     }
 }
-let c = (e) => {
+let d = (e) => {
         let { subscriptionPlan: t, userLocale: n, discountOffer: i, yearlyPercentSavings: a } = e;
-        if (null != a && t.interval === s.WT.YEAR)
-            return l.intl.formatToPlainString(o.default.nsG1jw, { savingsText: (0, r.l9)(n, a / 100) });
-        let u = null != i ? i.discount.amount : null;
-        return null != i && i.discount.plan_ids.includes(t.id) && null != u
-            ? l.intl.formatToPlainString(o.default.MSB4E4, { amountOrPercentOffText: (0, r.l9)(n, parseInt(u) / 100) })
+        if (null != a && t.interval === o.WT.YEAR)
+            return u.intl.formatToPlainString(l.default.nsG1jw, { savingsText: (0, r.l9)(n, a / 100) });
+        let s = null != i ? i.discount.amount : null;
+        return null != i && i.discount.plan_ids.includes(t.id) && null != s
+            ? u.intl.formatToPlainString(l.default.MSB4E4, { amountOrPercentOffText: (0, r.l9)(n, parseInt(s) / 100) })
             : null;
     },
-    d = function (e) {
+    _ = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { addTaxLineItem: !0 },
             { manualLineItems: n, addTaxLineItem: r } = t,
             a = [];
@@ -41,12 +42,16 @@ let c = (e) => {
                           label: (0, i.Mn)(e.subscriptionPlanId),
                           amount: e.amount * e.quantity,
                       }))),
-            !1 !== r && a.push({ id: "tax", label: l.intl.string(l.t.jiRvC7), amount: e.tax }),
+            !1 !== r && a.push({ id: "tax", label: u.intl.string(u.t.jiRvC7), amount: e.tax }),
             a
         );
     },
-    _ = (e) => ({
-        username: a.Ay.getUserTag(e, { identifiable: "auto" }),
+    f = (e) => ({
+        username: s.Ay.getUserTag(e, { identifiable: "always" }),
         avatarUrl: e.getAvatarURL(void 0, 16),
-        nickname: a.Ay.getName(e),
-    });
+        nickname: s.Ay.getName(e),
+    }),
+    h = (e) => {
+        let { subscriptionInvoiceRecord: t } = e;
+        return (0, a.$g)(t.total, t.currency);
+    };

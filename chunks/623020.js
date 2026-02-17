@@ -250,21 +250,29 @@ function G(e) {
                 purchaseState: ea,
                 handleClose: Y,
             }));
+    let eX = i.useMemo(
+            () =>
+                (0, r.jsxs)(r.Fragment, {
+                    children: [
+                        (0, r.jsx)(T.Z, { giftMessage: eE }),
+                        !eF && (0, r.jsx)(D.A, { isEligibleForTrial: eC }),
+                    ],
+                }),
+            [eE, eF, eC],
+        ),
+        eZ = i.useMemo(
+            () =>
+                (0, r.jsxs)(o.BJc, {
+                    direction: "vertical",
+                    gap: 8,
+                    children: [(0, r.jsx)(S.A, {}), (0, r.jsx)(y.A, {}), (0, r.jsx)(v.A, {})],
+                }),
+            [],
+        );
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            !W && (0, r.jsx)(T.Z, { giftMessage: eE }),
-            !W && !eF && (0, r.jsx)(D.A, { isEligibleForTrial: eC }),
-            (0, r.jsxs)(w.dZ, {
-                children: [
-                    !W &&
-                        (0, r.jsxs)(o.BJc, {
-                            direction: "vertical",
-                            gap: 8,
-                            children: [(0, r.jsx)(S.A, {}), (0, r.jsx)(y.A, {}), (0, r.jsx)(v.A, {})],
-                        }),
-                    t,
-                ],
-            }),
+            !W && eX,
+            (0, r.jsxs)(w.dZ, { children: [!W && eZ, t] }),
             (0, r.jsx)(w.UX, {
                 children: (0, r.jsx)(L.A, {
                     premiumSubscription: K ?? null,

@@ -1,7 +1,7 @@
 "use strict";
 e.exports = {
     y3: "stepBodyV1_bb5449",
-    GG: "topSpacer_bb5449",
+    ls: "topInBetweenSpacer_bb5449",
     P3: "subscriptionDetailsContainer_bb5449",
     ZF: "invoiceSummaryContainer_bb5449",
     Jv: "paymentMethodContainer_bb5449",
@@ -9,4 +9,5 @@ e.exports = {
     dD: "checkoutInlineNoticeContainer_bb5449",
     g4: "loadingContainer_bb5449",
     KX: "giftRedemptionLink_bb5449",
+    NR: "totalDueReviewStep_bb5449",
 };

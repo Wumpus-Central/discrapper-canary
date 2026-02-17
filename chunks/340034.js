@@ -38,12 +38,7 @@ let S = (e) => {
                           subscriptionTrial: a,
                       }).lineItems,
             u = (0, c.lp)(o, { manualLineItems: l, addTaxLineItem: !0 });
-        return (0, r.jsx)(_.V, {
-            label: T.intl.string(y.default.eoXh7B),
-            lineItems: u,
-            currency: o.currency,
-            totalDueLabel: T.intl.string(y.default.R0cZsM),
-        });
+        return (0, r.jsx)(_.Vm, { label: T.intl.string(y.default.eoXh7B), lineItems: u, currency: o.currency });
     },
     v = (e) => {
         let {

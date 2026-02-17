@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Uf: () => m, XG: () => g, fs: () => h });
+n.d(t, { Uf: () => g, XG: () => E, fs: () => p });
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -12,8 +12,8 @@ var i = n(397927),
     d = n(985018),
     _ = n(123346),
     f = n(938430),
-    p = n(234275);
-let h = (e) => {
+    h = n(234275);
+let p = (e) => {
         let { step: t, onClose: n } = e,
             o = (0, a.A)(c.T);
         return t === s.pn.CONFIRM || t === s.pn.BENEFITS
@@ -25,7 +25,7 @@ let h = (e) => {
                           (0, r.jsx)("div", {
                               className: _.oZ,
                               "aria-hidden": "true",
-                              children: (0, r.jsx)("img", { src: p, alt: "", className: _.F0 }),
+                              children: (0, r.jsx)("img", { src: h, alt: "", className: _.F0 }),
                           }),
                       (0, r.jsx)(i.DUT, {
                           className: _.G3,
@@ -36,7 +36,7 @@ let h = (e) => {
                   ],
               });
     },
-    m = (e) => {
+    g = (e) => {
         let {
             icon: t,
             storeListingBenefits: n,
@@ -61,7 +61,7 @@ let h = (e) => {
                   }),
               });
     };
-function g(e) {
+function E(e) {
     let { tierName: t, onConfirm: n, subscription: a } = e;
     return (0, r.jsxs)("div", {
         className: _.NV,
@@ -80,9 +80,9 @@ function g(e) {
                 children: d.intl.format(d.t.OsAK9h, { timestamp: a?.currentPeriodEnd }),
             }),
             (0, r.jsx)(l.UX, {
-                children: (0, r.jsx)(o.A, {
+                children: (0, r.jsx)(o.Ay, {
                     onPrimary: n,
-                    primaryCTA: o.t.CONTINUE,
+                    primaryCTA: o.ti.CONTINUE,
                     primaryText: d.intl.string(d.t["JtWl+a"]),
                 }),
             }),

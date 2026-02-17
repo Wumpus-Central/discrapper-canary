@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $: () => p });
+n.d(t, { $: () => h });
 var r = n(627968),
     i = n(64700),
     a = n(397927),
@@ -34,8 +34,8 @@ function f(e) {
             null != n.current && n.current.show();
         };
     return (0, r.jsx)(c.e_, {
-        footer: (0, r.jsx)(l.A, {
-            primaryCTA: l.A.CTAType.CONTINUE,
+        footer: (0, r.jsx)(l.Ay, {
+            primaryCTA: l.Ay.CTAType.CONTINUE,
             primaryText: d.intl.string("applePay" === t ? d.t.WoXvJL : d.t.wnVVr0),
             primaryDisabled: !a,
             onPrimary: () => o(),
@@ -50,7 +50,7 @@ function f(e) {
         }),
     });
 }
-let p = {
+let h = {
     name: "Payment Request",
     component: function (e) {
         let { paymentRequestWallet: t } = e;
