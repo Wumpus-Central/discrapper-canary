@@ -2,6 +2,7 @@
 e.exports = {
     iE: "wrapper__83a0c",
     zr: "root__83a0c",
+    wx: "header__83a0c",
     DD: "title__83a0c",
     C5: "location__83a0c",
     NR: "locationIcon__83a0c",
@@ -11,8 +12,10 @@ e.exports = {
     $r: "acronymContainer__83a0c",
     q9: "acronym__83a0c",
     XG: "scroller__83a0c",
+    bi: "scrollerTitle__83a0c",
     Xk: "voiceUsers__83a0c",
     q7: "voiceUser__83a0c",
+    G7: "voiceUserInfo__83a0c",
     o1: "actions__83a0c",
     gX: "center__83a0c",
 };

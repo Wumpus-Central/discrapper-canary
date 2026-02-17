@@ -50,12 +50,17 @@ function W(e) {
     return (0, r.jsxs)("div", {
         className: V.q7,
         children: [
-            (0, r.jsx)(u.euF, {
-                "aria-label": n.username,
-                src: n.getAvatarURL(i.guild_id, Y, !1, !1),
-                size: u._3J.SIZE_32,
+            (0, r.jsxs)("div", {
+                className: V.G7,
+                children: [
+                    (0, r.jsx)(u.euF, {
+                        "aria-label": n.username,
+                        src: n.getAvatarURL(i.guild_id, Y, !1, !1),
+                        size: u._3J.SIZE_32,
+                    }),
+                    (0, r.jsx)(u.Text, { variant: "text-sm/medium", children: c }),
+                ],
             }),
-            (0, r.jsx)(u.Text, { variant: "text-sm/medium", children: c }),
             (0, r.jsx)(v.Kc, {
                 user: n,
                 channelId: i.id,
@@ -128,71 +133,76 @@ function K(e) {
                         className: s()(V.zr, B.a8, e),
                         style: { ...t },
                         children: [
-                            (0, r.jsx)(u.euF, {
-                                className: V.gX,
-                                "aria-label": "user",
-                                src: q?.getAvatarURL(y.guild_id, j, !1, !1),
-                                size: u._3J.SIZE_80,
-                            }),
-                            (0, r.jsx)(u.Heading, {
-                                variant: "heading-lg/semibold",
-                                className: s()(V.gX, V.DD),
-                                children: F.intl.format(F.t.M3F6cv, { username: X }),
-                            }),
                             (0, r.jsxs)("div", {
-                                className: V.C5,
+                                className: V.wx,
                                 children: [
-                                    (null != b || null != K) &&
-                                        (0, r.jsx)(T.Ay, {
-                                            mask: T.hW.SQUIRCLE,
-                                            width: H,
-                                            height: H,
-                                            className: V.NR,
-                                            children:
-                                                null != K
-                                                    ? (0, r.jsx)("img", {
-                                                          alt: b?.name ?? $ ?? "",
-                                                          src: K,
-                                                          width: H,
-                                                          height: H,
-                                                      })
-                                                    : null != b
-                                                      ? (0, r.jsx)("div", {
-                                                            className: V.$r,
-                                                            children: (0, r.jsx)("div", {
-                                                                className: V.q9,
-                                                                children: (0, C.Rb)(b),
-                                                            }),
-                                                        })
-                                                      : null,
-                                        }),
+                                    (0, r.jsx)(u.euF, {
+                                        className: V.gX,
+                                        "aria-label": "user",
+                                        src: q?.getAvatarURL(y.guild_id, j, !1, !1),
+                                        size: u._3J.SIZE_80,
+                                    }),
+                                    (0, r.jsx)(u.Heading, {
+                                        variant: "heading-lg/semibold",
+                                        className: s()(V.gX, V.DD),
+                                        children: F.intl.format(F.t.M3F6cv, { username: X }),
+                                    }),
                                     (0, r.jsxs)("div", {
-                                        className: V.Ug,
+                                        className: V.C5,
                                         children: [
+                                            (null != b || null != K) &&
+                                                (0, r.jsx)(T.Ay, {
+                                                    mask: T.hW.SQUIRCLE,
+                                                    width: H,
+                                                    height: H,
+                                                    className: V.NR,
+                                                    children:
+                                                        null != K
+                                                            ? (0, r.jsx)("img", {
+                                                                  alt: b?.name ?? $ ?? "",
+                                                                  src: K,
+                                                                  width: H,
+                                                                  height: H,
+                                                              })
+                                                            : null != b
+                                                              ? (0, r.jsx)("div", {
+                                                                    className: V.$r,
+                                                                    children: (0, r.jsx)("div", {
+                                                                        className: V.q9,
+                                                                        children: (0, C.Rb)(b),
+                                                                    }),
+                                                                })
+                                                              : null,
+                                                }),
                                             (0, r.jsxs)("div", {
-                                                className: V.HA,
+                                                className: V.Ug,
                                                 children: [
-                                                    null != ee &&
-                                                        (0, r.jsx)(ee, {
-                                                            size: "xs",
-                                                            color: u.LU0.colors.TEXT_DEFAULT,
-                                                            className: V.NR,
-                                                        }),
-                                                    (0, r.jsx)(u.Text, {
-                                                        variant: "text-md/semibold",
-                                                        color: "text-default",
-                                                        className: V.zb,
-                                                        children: $,
+                                                    (0, r.jsxs)("div", {
+                                                        className: V.HA,
+                                                        children: [
+                                                            null != ee &&
+                                                                (0, r.jsx)(ee, {
+                                                                    size: "xs",
+                                                                    color: u.LU0.colors.TEXT_DEFAULT,
+                                                                    className: V.NR,
+                                                                }),
+                                                            (0, r.jsx)(u.Text, {
+                                                                variant: "text-md/semibold",
+                                                                color: "text-default",
+                                                                className: V.zb,
+                                                                children: $,
+                                                            }),
+                                                        ],
                                                     }),
+                                                    b?.name != null &&
+                                                        (0, r.jsx)(u.Text, {
+                                                            variant: "text-sm/medium",
+                                                            color: "text-muted",
+                                                            className: V.zb,
+                                                            children: b.name,
+                                                        }),
                                                 ],
                                             }),
-                                            b?.name != null &&
-                                                (0, r.jsx)(u.Text, {
-                                                    variant: "text-sm/medium",
-                                                    color: "text-muted",
-                                                    className: V.zb,
-                                                    children: b.name,
-                                                }),
                                         ],
                                     }),
                                 ],
@@ -203,6 +213,7 @@ function K(e) {
                                     (0, r.jsx)(u.Text, {
                                         variant: "text-sm/medium",
                                         color: "text-muted",
+                                        className: V.bi,
                                         children: F.intl.format(F.t.e95u3C, { count: z.length }),
                                     }),
                                     (0, r.jsx)("div", {
