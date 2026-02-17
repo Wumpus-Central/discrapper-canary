@@ -1,49 +1,46 @@
 "use strict";
-n.d(t, { E: () => p });
+n.d(t, { E: () => h });
 var r = n(627968),
     i = n(64700),
-    a = n(235986),
-    s = n(156312),
-    o = n(166532),
-    l = n(482132),
-    u = n(866485),
-    c = n(981036),
-    d = n(985018),
-    _ = n(34873);
-let f = (e) => (0, r.jsx)(h, { ...e }),
-    h = (e) => {
+    a = n(156312),
+    s = n(166532),
+    o = n(482132),
+    l = n(866485),
+    u = n(981036),
+    c = n(985018),
+    d = n(34873);
+let _ = (e) => (0, r.jsx)(f, { ...e }),
+    f = (e) => {
         let {
                 paymentModalStepProps: { handleStepChange: t },
                 unifiedStepProps: n,
             } = e,
             {
-                layout: u,
-                renderStepBody: f,
-                renderLeftColumn: h,
-                renderRightColumn: p,
-                primaryCTAButtonProps: g,
-                onBackClick: E,
+                layout: l,
+                renderStepBody: _,
+                renderLeftColumn: f,
+                renderRightColumn: h,
+                primaryCTAButtonProps: p,
+                onBackClick: g,
             } = n,
-            { hasPaymentSources: A } = (0, s.P5)(),
-            I = A ? o.pn.REVIEW : o.pn.ADD_PAYMENT_STEPS,
-            T = i.useCallback(() => t(I), [t, I]),
-            y = i.useMemo(
+            { hasPaymentSources: E } = (0, a.P5)(),
+            A = E ? s.pn.REVIEW : s.pn.ADD_PAYMENT_STEPS,
+            I = i.useCallback(() => t(A), [t, A]),
+            T = i.useMemo(
                 () =>
-                    "custom-step-body" === u
-                        ? f()
-                        : "two-column" === u
-                          ? (0, r.jsxs)("div", { className: _.D, children: [h(), p()] })
+                    "custom-step-body" === l
+                        ? _()
+                        : "two-column" === l
+                          ? (0, r.jsxs)("div", { className: d.D, children: [f(), h()] })
                           : null,
-                [u, f, h, p],
+                [l, _, f, h],
             ),
-            S = i.useMemo(() => ({ ...g, onClick: T, text: d.intl.string(d.t.XiOHRX) }), [g, T]);
+            y = i.useMemo(() => ({ ...p, onClick: I, text: c.intl.string(c.t.XiOHRX) }), [p, I]);
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(l.dZ, { children: y }),
-                (0, r.jsx)(l.UX, {
-                    children: (0, r.jsx)(c.cy, { onBackClick: E, primaryCTAButtonProps: S, align: a.A.Align.CENTER }),
-                }),
+                (0, r.jsx)(o.dZ, { children: T }),
+                (0, r.jsx)(o.UX, { children: (0, r.jsx)(u.cy, { onBackClick: g, primaryCTAButtonProps: y }) }),
             ],
         });
     },
-    p = (0, u.R)({ step: o.pn.GIFT_CUSTOMIZATION, renderStep: f, DirectStepComponent: h });
+    h = (0, l.R)({ step: s.pn.GIFT_CUSTOMIZATION, renderStep: _, DirectStepComponent: f });

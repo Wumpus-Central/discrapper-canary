@@ -1,40 +1,43 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => E });
 var r = n(627968);
 n(64700);
-var i = n(582754),
-    a = n(397927),
-    s = n(736653),
-    o = n(854627),
-    l = n(427262),
-    u = n(236834),
-    c = n(243809),
-    d = n(165856),
-    _ = n(778712),
-    f = n(985018),
-    p = n(617705);
-let h = () => {
-    let e = (0, u.A)(),
-        { avatarSrc: t, eventHandlers: n } = (0, o.A)({ userId: e?.id, size: _._3.SIZE_32, animateOnHover: !0 }),
-        h = (0, s.DP)(),
-        m = (0, i.qB)(h),
-        g = l.Ay.getName(e),
-        E = m ? c.A : d.A;
-    return null == e
+var i = n(503698),
+    a = n.n(i),
+    s = n(582754),
+    o = n(397927),
+    l = n(736653),
+    u = n(854627),
+    c = n(427262),
+    d = n(236834),
+    _ = n(243809),
+    f = n(165856),
+    h = n(778712),
+    p = n(985018),
+    g = n(617705);
+let E = (e) => {
+    let { className: t } = e,
+        n = (0, d.A)(),
+        { avatarSrc: i, eventHandlers: E } = (0, u.A)({ userId: n?.id, size: h._3.SIZE_32, animateOnHover: !0 }),
+        A = (0, l.DP)(),
+        I = (0, s.qB)(A),
+        T = c.Ay.getName(n),
+        y = I ? _.A : f.A;
+    return null == n
         ? null
         : (0, r.jsxs)("div", {
-              className: p.$6,
+              className: a()(g.$6, t),
               children: [
                   (0, r.jsx)("div", {
-                      className: p.H,
-                      children: (0, r.jsx)(a.euF, { src: t, "aria-label": e.username, size: _._3.SIZE_32, ...n }),
+                      className: g.H,
+                      children: (0, r.jsx)(o.euF, { src: i, "aria-label": n.username, size: h._3.SIZE_32, ...E }),
                   }),
-                  (0, r.jsx)(a.Text, {
+                  (0, r.jsx)(o.Text, {
                       variant: "text-xs/bold",
-                      className: p.U_,
-                      children: f.intl.format(f.t.oxhCOl, { userName: g }),
+                      className: g.U_,
+                      children: p.intl.format(p.t.oxhCOl, { userName: T }),
                   }),
-                  (0, r.jsx)(E, { className: p.q3 }),
+                  (0, r.jsx)(y, { className: g.q3 }),
               ],
           });
 };

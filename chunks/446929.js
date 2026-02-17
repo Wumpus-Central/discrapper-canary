@@ -509,7 +509,6 @@ function Q(e) {
     let el = !C && !L && et && l,
         eu = !(C && es);
     return (0, r.jsxs)("div", {
-        className: j.Du,
         children: [
             es &&
                 (0, r.jsx)(x.vi, {

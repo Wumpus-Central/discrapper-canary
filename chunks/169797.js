@@ -37,8 +37,8 @@ function d(e) {
     });
 }
 function _(e) {
-    let { children: t, size: n = "md", ...i } = e;
-    return (0, r.jsx)(a.dWK, { size: n, ...i, children: t });
+    let { children: t, size: n = "md", maxHeight: i = "viewport", ...s } = e;
+    return (0, r.jsx)(a.dWK, { size: n, ...s, maxHeight: i, children: t });
 }
 function f(e) {
     let {

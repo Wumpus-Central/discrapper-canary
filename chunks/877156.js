@@ -11,51 +11,48 @@ var i = t(627968),
     p = t(898461),
     m = t(837015),
     E = t(61750),
-    g = t(235986),
-    x = t(369496),
-    _ = t(550111),
-    h = t(287809),
-    T = t(482132),
-    P = t(758836),
-    A = t(985018),
+    _ = t(369496),
+    P = t(550111),
+    T = t(287809),
+    h = t(482132),
+    x = t(758836),
+    g = t(985018),
     I = t(401506);
 function S(e) {
     let { rewardSkuId: n, onClose: t } = e,
-        S = (0, r.bG)([h.default], () => h.default.getCurrentUser()),
-        j = (0, r.bG)([o.A], () => o.A.useReducedMotion),
+        S = (0, r.bG)([T.default], () => T.default.getCurrentUser()),
+        A = (0, r.bG)([o.A], () => o.A.useReducedMotion),
         { analyticsLocations: f } = (0, u.Ay)(),
-        R = a._3J.SIZE_32,
-        { product: C, isFetching: M } = (0, c.q)(n),
-        [N, y] = l.useState(!1),
-        b = C?.items[0],
+        j = a._3J.SIZE_32,
+        { product: M, isFetching: R } = (0, c.q)(n),
+        [C, y] = l.useState(!1),
+        N = M?.items[0],
         {
             isNameplateReward: O,
             nameplateData: v,
-            rewardDeco: k,
+            rewardDeco: b,
         } = l.useMemo(
             () =>
-                null == b
+                null == N
                     ? { isNameplateReward: !1, nameplateData: null, rewardDeco: void 0 }
-                    : (0, m.F)(b)
+                    : (0, m.F)(N)
                       ? {
                             isNameplateReward: !0,
                             nameplateData: {
-                                skuId: b.skuId,
-                                src: b.asset,
-                                palette: (0, x.H6)(b.palette ?? "sky"),
-                                imgAlt: b.label,
+                                skuId: N.skuId,
+                                src: N.asset,
+                                palette: (0, _.H6)(N.palette ?? "sky"),
+                                imgAlt: N.label,
                             },
                             rewardDeco: void 0,
                         }
-                      : (0, p.T)(b)
-                        ? { isNameplateReward: !1, nameplateData: null, rewardDeco: (0, d.A)(b.asset, R, !j) }
+                      : (0, p.T)(N)
+                        ? { isNameplateReward: !1, nameplateData: null, rewardDeco: (0, d.A)(N.asset, j, !A) }
                         : { isNameplateReward: !1, nameplateData: null, rewardDeco: void 0 },
-            [b, R, j],
+            [N, j, A],
         );
-    return (0, i.jsx)(T.UX, {
-        children: (0, i.jsx)(a.jlY, {
-            align: g.A.Align.CENTER,
-            "data-migration-pending": !0,
+    return (0, i.jsx)(h.UX, {
+        children: (0, i.jsx)(s.jlY, {
             children: (0, i.jsxs)("div", {
                 className: I.W,
                 children: [
@@ -64,33 +61,33 @@ function S(e) {
                               className: I.D,
                               onMouseEnter: () => y(!0),
                               onMouseLeave: () => y(!1),
-                              children: (0, i.jsx)(_.a, {
+                              children: (0, i.jsx)(P.a, {
                                   user: S,
                                   nameplate: null,
                                   nameplateData: v,
                                   showPlaceholderUser: !0,
                                   nameplatePreviewSize: "xsmall",
-                                  isHighlighted: N,
+                                  isHighlighted: C,
                               }),
                           })
                         : (0, i.jsx)(a.JsQ, {
                               "aria-label": S?.username,
-                              size: R,
-                              src: S?.getAvatarURL(void 0, (0, a.FT9)(R), !j),
-                              avatarDecoration: k,
+                              size: j,
+                              src: S?.getAvatarURL(void 0, (0, a.FT9)(j), !A),
+                              avatarDecoration: b,
                           }),
                     (0, i.jsx)(s.$nd, {
                         variant: "primary",
-                        text: A.intl.string(A.t.kMYVwv),
-                        loading: M,
+                        text: g.intl.string(g.t.kMYVwv),
+                        loading: R,
                         onClick: () => {
-                            null != C &&
+                            null != M &&
                                 (t(),
                                 (0, E.A)({
-                                    product: C,
+                                    product: M,
                                     shouldShowPromotionalExperience: !0,
                                     analyticsLocations: f,
-                                    purchaseType: P.gs.PROMOTIONAL,
+                                    purchaseType: x.gs.PROMOTIONAL,
                                 }));
                         },
                     }),

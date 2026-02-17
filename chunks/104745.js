@@ -10,18 +10,19 @@ var i = n(877624),
     u = n(937008),
     c = n(788868);
 function d(e) {
-    let { planSkuId: t, referralTrialOfferId: n } = e,
-        { isGift: d } = (0, u.Pv)(),
-        _ = (0, a.V)(n),
-        f = (0, s.c)(i.C.PAYMENT_MODAL_BANNER);
-    return d || t !== c.pe.TIER_2
+    let { planSkuId: t, referralTrialOfferId: n, className: d } = e,
+        { isGift: _ } = (0, u.Pv)(),
+        f = (0, a.V)(n),
+        h = (0, s.c)(i.C.PAYMENT_MODAL_BANNER);
+    return _ || t !== c.pe.TIER_2
         ? null
-        : null != f && "paymentModalBanner" === f.properties.properties.oneofKind
+        : null != h && "paymentModalBanner" === h.properties.properties.oneofKind
           ? (0, r.jsx)(o.f, {
-                componentId: f.id,
-                promotionBannerMarketingComponentFields: f.properties.properties.paymentModalBanner,
+                className: d,
+                componentId: h.id,
+                promotionBannerMarketingComponentFields: h.properties.properties.paymentModalBanner,
             })
-          : _?.referrer_id != null
-            ? (0, r.jsx)(l.A, {})
+          : f?.referrer_id != null
+            ? (0, r.jsx)(l.A, { className: d })
             : null;
 }

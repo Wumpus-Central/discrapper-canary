@@ -1,90 +1,88 @@
 "use strict";
-n.d(t, { q: () => T, t: () => I });
+n.d(t, { q: () => y, t: () => T });
 var r = n(627968),
     i = n(64700),
-    a = n(397927),
-    s = n(384904),
-    o = n(73825),
-    l = n(235986),
+    a = n(732955),
+    s = n(397927),
+    o = n(384904),
+    l = n(73825),
     u = n(683433),
     c = n(36167),
     d = n(937008),
     _ = n(156312),
     f = n(166532),
-    p = n(814626),
-    h = n(652215),
-    m = n(788868),
-    g = n(985018),
-    E = n(926701);
-let A = 1e3,
-    I = (e) => {
+    h = n(814626),
+    p = n(652215),
+    g = n(788868),
+    E = n(985018),
+    A = n(926701);
+let I = 1e3,
+    T = (e) => {
         let t,
-            { step: n, onPurchaseComplete: l, onHandoffFailure: u } = e,
+            { step: n, onPurchaseComplete: a, onHandoffFailure: u } = e,
             {
-                selectedPlan: I,
-                setSelectedPlanId: T,
-                setSelectedSkuId: y,
-                browserCheckoutState: S,
-                browserCheckoutStateLoadId: v,
-                browserCheckoutStateSkuId: C,
-                browserCheckoutStatePlanId: b,
-                contextMetadata: N,
+                selectedPlan: T,
+                setSelectedPlanId: y,
+                setSelectedSkuId: S,
+                browserCheckoutState: v,
+                browserCheckoutStateLoadId: C,
+                browserCheckoutStateSkuId: b,
+                browserCheckoutStatePlanId: N,
+                contextMetadata: R,
             } = (0, _.P5)(),
-            { isGift: R } = (0, d.Pv)(),
-            [O, D] = i.useState(!1);
+            { isGift: O } = (0, d.Pv)(),
+            [D, L] = i.useState(!1);
         switch (n) {
             case f.pn.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
-                t = h.do8.GOOGLE_PAY;
+                t = p.do8.GOOGLE_PAY;
                 break;
             case f.pn.AWAITING_BROWSER_CHECKOUT_APPLE_PAY:
-                t = h.do8.APPLE_PAY;
+                t = p.do8.APPLE_PAY;
         }
         return (
             i.useEffect(() => {
                 let e = setTimeout(() => {
-                    O ||
-                        (D(!0),
-                        (0, s.Ze)(N.loadId),
+                    D ||
+                        (L(!0),
+                        (0, o.Ze)(R.loadId),
                         (0, c.my)(
                             {
-                                planId: I?.id ?? m.gD.PREMIUM_MONTH_TIER_2,
-                                isGift: R,
-                                loadId: N.loadId,
+                                planId: T?.id ?? g.gD.PREMIUM_MONTH_TIER_2,
+                                isGift: O,
+                                loadId: R.loadId,
                                 paymentMethodType: t,
                             },
                             u,
                         ));
-                }, A);
+                }, I);
                 return () => clearTimeout(e);
-            }, [I, R, N, u, D, O, t]),
+            }, [T, O, R, u, L, D, t]),
             i.useEffect(() => {
-                null !== C && (m.oz.includes(C) && ((0, o.ur)(C), (0, s.hP)()), y(C)),
-                    null !== b && T(b),
-                    v === N.loadId && S === p.k.DONE && l();
-            }, [y, T, S, v, C, b, N, l]),
+                null !== b && (g.oz.includes(b) && ((0, l.ur)(b), (0, o.hP)()), S(b)),
+                    null !== N && y(N),
+                    C === R.loadId && v === h.k.DONE && a();
+            }, [S, y, v, C, b, N, R, a]),
             (0, r.jsxs)("div", {
-                className: E.r,
+                className: A.rf,
                 children: [
-                    (0, r.jsx)(a.Heading, { variant: "heading-xl/bold", children: g.intl.string(g.t.C4HYfy) }),
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(s.Heading, { variant: "heading-xl/bold", children: E.intl.string(E.t.C4HYfy) }),
+                    (0, r.jsx)(s.Text, {
                         variant: "text-md/normal",
-                        className: E.h,
-                        children: g.intl.string(g.t.xfG7Jp),
+                        className: A.h_,
+                        children: E.intl.string(E.t.xfG7Jp),
                     }),
                 ],
             })
         );
     },
-    T = (e) => {
+    y = (e) => {
         let { onPrimaryClick: t, onBackClick: n } = e;
-        return (0, r.jsx)("div", {
-            children: (0, r.jsxs)(a.jlY, {
-                justify: l.A.Justify.BETWEEN,
-                align: l.A.Align.CENTER,
-                "data-migration-pending": !0,
+        return (0, r.jsx)(a.jlY, {
+            children: (0, r.jsxs)("div", {
+                className: A.kL,
                 children: [
-                    (0, r.jsx)(u.F, { onClick: t, children: g.intl.string(g.t["4Qvmmj"]) }),
                     (0, r.jsx)(u.A, { onClick: n }),
+                    (0, r.jsx)(u.F, { onClick: t, children: E.intl.string(E.t["4Qvmmj"]) }),
                 ],
             }),
         });

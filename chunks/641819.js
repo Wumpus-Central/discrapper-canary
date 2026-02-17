@@ -1,104 +1,83 @@
-t.d(n, { j: () => A });
+t.d(n, { j: () => I });
 var i = t(627968),
     l = t(64700),
     r = t(284009),
     s = t.n(r),
     a = t(311907),
-    o = t(397927),
-    u = t(447784),
-    d = t(235986),
+    o = t(732955),
+    u = t(397927),
+    d = t(447784),
     c = t(68545),
     p = t(412260),
     m = t(91053),
     E = t(287809),
-    g = t(937008),
-    x = t(156312),
-    _ = t(166532),
+    _ = t(937008),
+    P = t(156312),
+    T = t(166532),
     h = t(482132),
-    T = t(985018),
-    P = t(907);
-function A(e) {
-    let { handleStepChange: n, handleClose: t } = e,
-        { selectedPlan: r, selectedSkuId: A, step: S } = (0, x.P5)(),
-        { setSelectedGiftingPromotionReward: I, selectedGiftingPromotionReward: j, claimableRewards: f } = (0, g.Pv)(),
-        R = (0, a.bG)([E.default], () => E.default.getCurrentUser()),
-        C = (0, a.bG)([p.A], () => p.A.getGiftPromotionRewardSkuIds()),
-        M = (0, c.U)(f, j),
-        [N, y] = l.useState(M),
-        [b, O] = l.useState(!1);
+    x = t(985018),
+    g = t(907);
+function I(e) {
+    let { handleStepChange: n } = e,
+        { selectedPlan: t, selectedSkuId: r, step: I } = (0, P.P5)(),
+        { setSelectedGiftingPromotionReward: S, selectedGiftingPromotionReward: A, claimableRewards: f } = (0, _.Pv)(),
+        j = (0, a.bG)([E.default], () => E.default.getCurrentUser()),
+        M = (0, a.bG)([p.A], () => p.A.getGiftPromotionRewardSkuIds()),
+        R = (0, c.U)(f, A),
+        [C, y] = l.useState(R),
+        [N, O] = l.useState(!1);
     l.useEffect(() => {
-        b || null != j || null == M || (I(M), y(M));
-    }, [M, b, j, I]),
-        s()(null != r, "Expected plan to selected"),
-        s()(null != A, "Expected selectedSkuId"),
-        s()(null != S, "Step should be set");
-    let v = l.useMemo(() => null != N && (f ?? []).includes(N), [N, f]),
-        k = l.useMemo(() => 0 === C.length || null == N || !v, [C, N, v]);
+        N || null != A || null == R || (S(R), y(R));
+    }, [R, N, A, S]),
+        s()(null != t, "Expected plan to selected"),
+        s()(null != r, "Expected selectedSkuId"),
+        s()(null != I, "Step should be set");
+    let v = l.useMemo(() => null != C && (f ?? []).includes(C), [C, f]),
+        b = l.useMemo(() => 0 === M.length || null == C || !v, [M, C, v]);
     l.useEffect(() => {
-        if (0 === C.length) {
-            y(void 0), I(void 0);
+        if (0 === M.length) {
+            y(void 0), S(void 0);
             return;
         }
-        (null != N && v && C.includes(N)) || null == N || (y(void 0), I(void 0));
-    }, [C, v, N, I]);
-    let U = (e) => {
-            I(e), y(e), O(!0);
+        (null != C && v && M.includes(C)) || null == C || (y(void 0), S(void 0));
+    }, [M, v, C, S]);
+    let k = (e) => {
+            S(e), y(e), O(!0);
         },
-        w = C.map((e) =>
+        U = M.map((e) =>
             (0, i.jsx)(
-                u.k,
-                { skuId: e, claimed: null != f && !f.includes(e), user: R, onSelect: U, selectedSkuId: N },
+                d.k,
+                { skuId: e, claimed: null != f && !f.includes(e), user: j, onSelect: k, selectedSkuId: C },
                 e,
             ),
         ),
-        L = (0, i.jsx)(h.UX, {
-            children: (0, i.jsx)(o.jlY, {
-                "data-migration-pending": !0,
-                className: P.Hx,
-                children: (0, i.jsx)(m.Z, {
-                    onStepChange: n,
-                    onBackClick: () => n(_.pn.PLAN_SELECT),
-                    shouldRenderUpdatedPaymentModal: !0,
-                    showBackButton: !0,
-                    planOptions: [r.id],
-                    selectedPlanId: r.id,
-                    isNextDisabled: k,
-                }),
+        w = (0, i.jsx)(h.UX, {
+            children: (0, i.jsx)(m.Z, {
+                onStepChange: n,
+                onBackClick: () => n(T.pn.PLAN_SELECT),
+                shouldRenderUpdatedPaymentModal: !0,
+                showBackButton: !0,
+                planOptions: [t.id],
+                selectedPlanId: t.id,
+                isNextDisabled: b,
             }),
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsxs)(o.rQ0, {
-                "data-migration-pending": !0,
-                className: P.Hc,
-                direction: d.A.Direction.VERTICAL,
-                align: d.A.Align.START,
-                separator: !1,
-                children: [
-                    (0, i.jsx)(o.Heading, {
-                        variant: "heading-lg/semibold",
-                        color: "text-strong",
-                        children: T.intl.string(T.t.OEtqpm),
-                    }),
-                    (0, i.jsx)(o.Text, {
-                        variant: "text-md/medium",
-                        color: "text-subtle",
-                        className: P.GQ,
-                        children: T.intl.string(T.t.h2nMp0),
-                    }),
-                    (0, i.jsx)(o.s_y, { "data-migration-pending": !0, className: P.b, onClick: t }),
-                ],
+            (0, i.jsx)(o.rQ0, {
+                titleTextVariant: "heading-lg/semibold",
+                title: x.intl.string(x.t.OEtqpm),
+                subtitle: x.intl.string(x.t.h2nMp0),
             }),
-            (0, i.jsx)(o.$mQ, {
-                "data-migration-pending": !0,
-                children: (0, i.jsx)(o.BJc, {
+            (0, i.jsx)(o.cwr, {
+                children: (0, i.jsx)(u.BJc, {
                     direction: "vertical",
                     justify: "center",
                     align: "center",
-                    children: (0, i.jsx)("div", { className: P.Dq, children: w }),
+                    children: (0, i.jsx)("div", { className: g.Dq, children: U }),
                 }),
             }),
-            L,
+            w,
         ],
     });
 }

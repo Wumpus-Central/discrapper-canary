@@ -12,9 +12,6 @@ e.exports = {
     FS: "textContainer_d5200e",
     go: "headerTextWrapper_d5200e",
     r9: "oneStepCheckoutTextWrapper_d5200e",
-    AC: "bodyGradientPadding_d5200e",
-    uo: "bodyGradientContainer_d5200e",
-    dQ: "bodyGradient_d5200e",
     cf: "nitroText_d5200e",
     $N: "betaBadgeContainer_d5200e",
 };

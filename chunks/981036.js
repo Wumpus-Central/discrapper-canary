@@ -1,35 +1,39 @@
 "use strict";
-n.d(t, { Wg: () => d, cy: () => f });
+n.d(t, { Wg: () => f, cy: () => p });
 var r = n(627968),
-    i = n(990078),
-    a = n(732955),
-    s = n(397927),
-    o = n(235986),
-    l = n(999784),
-    u = n(683433),
-    c = n(513670);
-let d = (e) => {
+    i = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    o = n(990078),
+    l = n(732955),
+    u = n(397927),
+    c = n(999784),
+    d = n(683433),
+    _ = n(513670);
+let f = (e) => {
         let { message: t } = e;
-        return (0, r.jsx)(s.wx6, { type: "critical", children: t });
+        return (0, r.jsx)(u.wx6, { type: "critical", children: t });
     },
-    _ = (e) => {
-        let { onClick: t, loading: n, disabled: s, text: o, tooltipText: l, ...u } = e,
-            c = { text: o, ...u },
-            d = (0, r.jsx)(a.$nd, { ...c, onClick: t, loading: n, disabled: s, text: o });
-        return null != l ? (0, r.jsx)(i.m, { text: l, asContainer: !0, children: d }) : d;
+    h = (e) => {
+        let { onClick: t, loading: n, disabled: i, text: a, tooltipText: s, ...u } = e,
+            c = { text: a, ...u },
+            d = (0, r.jsx)(l.$nd, { ...c, onClick: t, loading: n, disabled: i, text: a });
+        return null != s ? (0, r.jsx)(o.m, { text: s, asContainer: !0, children: d }) : d;
     },
-    f = (e) => {
-        let { primaryCTAButtonProps: t, showLockIcon: n, onBackClick: i, ...a } = e;
-        return (0, r.jsxs)(s.jlY, {
-            className: c.B,
-            direction: o.A.Direction.HORIZONTAL,
-            justify: null != i ? o.A.Justify.BETWEEN : o.A.Justify.END,
-            "data-migration-pending": !0,
-            ...a,
-            children: [
-                null != i ? (0, r.jsx)(u.A, { onClick: i }) : null,
-                n && (0, r.jsx)(l.A, {}),
-                (0, r.jsx)(_, { ...t }),
-            ],
-        });
+    p = (e) => {
+        let { primaryCTAButtonProps: t, showLockIcon: n, onBackClick: a } = e,
+            o = i.useMemo(() => [t], [t]),
+            u = i.useMemo(() => (null != a ? (0, r.jsx)(d.A, { onClick: a }) : void 0), [a]);
+        return null != t.tooltipText || n
+            ? (0, r.jsx)(l.jlY, {
+                  children: (0, r.jsxs)("div", {
+                      className: s()(_.wm, null != a ? _.LT : _.Ub),
+                      children: [
+                          null != a ? (0, r.jsx)(d.A, { onClick: a }) : null,
+                          n && (0, r.jsx)(c.A, {}),
+                          (0, r.jsx)(h, { ...t }),
+                      ],
+                  }),
+              })
+            : (0, r.jsx)(l.H7u, { leading: u, actions: o });
     };

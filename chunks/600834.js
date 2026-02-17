@@ -16,6 +16,7 @@ e.exports = {
     yF: "divider_fda3e4",
     P_: "negativeMarginTop_fda3e4",
     vy: "negativeMarginBottom_fda3e4",
+    Bw: "dividerInvisible_fda3e4",
     hF: "dividerExtended_fda3e4",
     V$: "totalRow_fda3e4",
     j5: "totalLabel_fda3e4",

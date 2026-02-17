@@ -136,7 +136,6 @@ function $(e) {
                 !ec &&
                 (0, r.jsxs)("div", {
                     children: [
-                        (0, r.jsx)(P.pK, { negativeMarginBottom: !0, negativeMarginTop: !0 }),
                         (0, r.jsx)(v.P, { planSkuId: eh.skuId }),
                         (0, r.jsx)(G.$p, {
                             planOptions: eT,

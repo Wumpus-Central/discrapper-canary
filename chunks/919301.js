@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { WT: () => E });
+n.d(t, { WT: () => A });
 var r = n(627968),
     i = n(64700),
     a = n(688810),
@@ -11,10 +11,10 @@ var r = n(627968),
     d = n(11054),
     _ = n(639149),
     f = n(941673),
-    p = n(818348);
-let h = (0, s.Mz)(),
-    m = { renderStep: (e) => (0, r.jsx)(d.M, { ...e }) },
-    g = (e) => {
+    h = n(818348);
+let p = (0, s.Mz)(),
+    g = { renderStep: (e) => (0, r.jsx)(d.M, { ...e }) },
+    E = (e) => {
         let { renderStep: t, paymentModalStepProps: n } = e,
             { handleStepChange: r, handleClose: a } = n,
             { renderStepBody: s, disabled: o } = (0, f.Z)({ handleStepChange: r, handleClose: a });
@@ -26,7 +26,7 @@ let h = (0, s.Mz)(),
             ),
         });
     },
-    E = {
+    A = {
         CustomPaymentContextProvider: (e) => {
             let { children: t, loadId: n, applicationId: i, isGift: s, skuId: o, analyticsLocations: u = [], ...d } = e,
                 { analyticsLocations: _ } = (0, c.P)({ applicationId: i, skuId: o, analyticsLocations: u, ...d });
@@ -36,7 +36,7 @@ let h = (0, s.Mz)(),
                     loadId: n,
                     applicationId: i,
                     skuIDs: null != o ? [o] : [],
-                    purchaseType: p.VV.ONE_TIME,
+                    purchaseType: h.VV.ONE_TIME,
                     isGift: s,
                     ...d,
                     activeSubscription: null,
@@ -57,16 +57,16 @@ let h = (0, s.Mz)(),
                     children: _,
                 } = e,
                 { analyticsLocations: f } = (0, a.Ay)(),
-                p = l.onClose,
-                m = i.useCallback(
+                h = l.onClose,
+                g = i.useCallback(
                     (e) => {
-                        p(), null != u && u(e);
+                        h(), null != u && u(e);
                     },
-                    [p, u],
+                    [h, u],
                 ),
-                g = i.useMemo(
+                E = i.useMemo(
                     () => ({
-                        onClose: m,
+                        onClose: g,
                         onComplete: c,
                         applicationId: s,
                         skuId: t,
@@ -74,26 +74,26 @@ let h = (0, s.Mz)(),
                         analyticsObject: o,
                         analyticsLocations: f,
                     }),
-                    [m, c, s, t, o, f],
+                    [g, c, s, t, o, f],
                 ),
-                E = i.useMemo(
+                A = i.useMemo(
                     () => ({ skuId: t, loadId: n, flowSpecificOptions: d, analyticsLocations: f }),
                     [t, n, d, f],
                 ),
-                A = i.useMemo(
-                    () => ({ sharedCheckoutContext: E, paymentModalProps: g, renderModalProps: l }),
-                    [E, g, l],
+                I = i.useMemo(
+                    () => ({ sharedCheckoutContext: A, paymentModalProps: E, renderModalProps: l }),
+                    [A, E, l],
                 );
-            return (0, r.jsx)(h.Provider, { value: A, children: _ });
+            return (0, r.jsx)(p.Provider, { value: I, children: _ });
         },
         UnifiedCheckoutCustomHeader: (e) => {
-            let { onClose: t, step: n } = e,
-                { isGift: i } = (0, o.Pv)();
-            return (0, r.jsx)(_.A, { step: n, onClose: () => t(!1), isGift: i });
+            let { step: t } = e,
+                { isGift: n } = (0, o.Pv)();
+            return (0, r.jsx)(_.A, { step: t, isGift: n });
         },
         UnifiedCheckoutStepDefinitions: {
-            [u.pn.GIFT_CUSTOMIZATION]: { StepController: g },
+            [u.pn.GIFT_CUSTOMIZATION]: { StepController: E },
             [u.pn.REVIEW]: { legacyStepConfig: !0 },
         },
-        CUSTOM_CONFIRM_STEP_CONFIG: m,
+        CUSTOM_CONFIRM_STEP_CONFIG: g,
     };

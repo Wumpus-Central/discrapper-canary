@@ -1,88 +1,82 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => E });
 var r = n(627968);
 n(64700);
-var i = n(311907),
-    a = n(397927),
-    s = n(775602),
-    o = n(166532),
-    l = n(45938),
-    u = n(28003),
-    c = n(763795),
-    d = n(602980),
-    _ = n(788868),
-    f = n(985018),
-    p = n(812941);
-function h(e) {
+var i = n(503698),
+    a = n.n(i),
+    s = n(311907),
+    o = n(732955),
+    l = n(775602),
+    u = n(166532),
+    c = n(45938),
+    d = n(28003),
+    _ = n(763795),
+    f = n(602980),
+    h = n(788868),
+    p = n(985018),
+    g = n(812941);
+function E(e) {
     let {
             currentStep: t,
             className: n,
-            purchaseState: h,
-            premiumType: m,
-            onClose: g,
-            hideCloseButton: E,
-            showTrialBadge: A,
-            showDiscountBadge: I,
-            isGift: T,
-            giftRecipient: y,
-            isEligibleForTrial: S,
-            enablePremiumBrandRefresh: v,
-            isDisplayingWowMomentConfirmation: C,
-            isPremiumGroupPurchase: b,
+            purchaseState: i,
+            premiumType: E,
+            onClose: A,
+            hideCloseButton: I,
+            showTrialBadge: T,
+            showDiscountBadge: y,
+            isGift: S,
+            giftRecipient: v,
+            isEligibleForTrial: C,
+            enablePremiumBrandRefresh: b,
+            isDisplayingWowMomentConfirmation: N,
+            isPremiumGroupPurchase: R,
         } = e,
-        N = (0, i.bG)([s.A], () => s.A.useReducedMotion),
-        R = () => {
+        O = (0, s.bG)([l.A], () => l.A.useReducedMotion),
+        D = () => {
             switch (t) {
-                case o.pn.PLAN_SELECT:
-                    return m === _.PremiumTypes.TIER_0 ? f.intl.string(f.t.rk4Uu8) : f.intl.string(f.t["7YWj6+"]);
-                case o.pn.ADD_PAYMENT_STEPS:
-                    return f.intl.string(f.t.vHqbJE);
-                case o.pn.REVIEW:
-                    return f.intl.string(f.t.wKaVLC);
+                case u.pn.PLAN_SELECT:
+                    return E === h.PremiumTypes.TIER_0 ? p.intl.string(p.t.rk4Uu8) : p.intl.string(p.t["7YWj6+"]);
+                case u.pn.ADD_PAYMENT_STEPS:
+                    return p.intl.string(p.t.vHqbJE);
+                case u.pn.REVIEW:
+                    return p.intl.string(p.t.wKaVLC);
                 default:
-                    return f.intl.string(f.t["7YWj6+"]);
+                    return p.intl.string(p.t["7YWj6+"]);
             }
         };
-    return T && (0, l.Ik)(y) && t !== o.pn.CONFIRM
-        ? (0, r.jsxs)(a.rQ0, {
-              className: p.sA,
-              separator: !1,
-              "data-migration-pending": !0,
-              children: [
-                  (0, r.jsx)(a.Heading, { variant: "heading-lg/semibold", children: R() }),
-                  (0, r.jsx)(a.s_y, { onClick: g, className: p.b, innerClassName: p.Dd, "data-migration-pending": !0 }),
-              ],
-          })
-        : v || C
-          ? (0, r.jsx)(u.A, {
+    return S && (0, c.Ik)(v) && t !== u.pn.CONFIRM
+        ? (0, r.jsx)(o.rQ0, { title: D(), titleTextVariant: "heading-lg/semibold" })
+        : b || N
+          ? (0, r.jsx)(d.A, {
                 hideCloseOnFullScreen: !0,
-                hideCloseButton: E,
-                upgradeToPremiumType: m,
-                onClose: g,
-                isEligibleForTrial: S,
-                showTrialBadge: A,
-                showDiscountBadge: I,
-                isPremiumGroupPurchase: b,
+                hideCloseButton: I,
+                upgradeToPremiumType: E,
+                onClose: A,
+                isEligibleForTrial: C,
+                showTrialBadge: T,
+                showDiscountBadge: y,
+                isPremiumGroupPurchase: R,
             })
           : (0, r.jsx)("div", {
-                className: n,
-                children: (0, r.jsx)(c.A, {
+                className: a()(g.Q$, n),
+                children: (0, r.jsx)(_.A, {
                     hideCloseOnFullScreen: !0,
-                    hideCloseButton: E,
+                    hideCloseButton: I,
                     shouldShowPrice: !0,
-                    upgradeToPremiumType: m,
+                    upgradeToPremiumType: E,
                     renderAnimation: () =>
-                        m === _.PremiumTypes.TIER_0
-                            ? (0, r.jsx)(d.Ss, { className: p.mv, currentStep: t, purchaseState: h, pause: N })
-                            : m === _.PremiumTypes.TIER_1
-                              ? (0, r.jsx)(d.LQ, { className: p.mv, currentStep: t, purchaseState: h, pause: N })
-                              : (0, r.jsx)(d.Ec, { className: p.mv, currentStep: t, purchaseState: h, pause: N }),
+                        E === h.PremiumTypes.TIER_0
+                            ? (0, r.jsx)(f.Ss, { className: g.mv, currentStep: t, purchaseState: i, pause: O })
+                            : E === h.PremiumTypes.TIER_1
+                              ? (0, r.jsx)(f.LQ, { className: g.mv, currentStep: t, purchaseState: i, pause: O })
+                              : (0, r.jsx)(f.Ec, { className: g.mv, currentStep: t, purchaseState: i, pause: O }),
                     plan: null,
                     isGift: !1,
-                    className: p.wx,
-                    onClose: g,
-                    showTrialBadge: A,
-                    showDiscountBadge: I,
+                    className: g.wx,
+                    onClose: A,
+                    showTrialBadge: T,
+                    showDiscountBadge: y,
                 }),
             });
 }

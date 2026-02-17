@@ -15,6 +15,5 @@ e.exports = {
     zp: "spinnerWrapper_e4d803",
     KB: "trialHeader_e4d803",
     Os: "giftMainAnimation_e4d803",
-    aw: "selectFreeSku_e4d803",
     Ni: "premiumGroupNotice_e4d803",
 };

@@ -19,7 +19,7 @@ let E = (e) => {
             { analyticsLocations: n } = (0, c.Ay)([...t, u.A.COLLECTIBLES_PAYMENT_MODAL]);
         return { analyticsLocations: n };
     },
-    A = { bodyClassName: g.As, sliderBodyClassName: g.Bz },
+    A = { sliderBodyClassName: g.Bz },
     I = (e) => {
         let { skuId: t } = e,
             n = i.useRef(new o.OH()),
@@ -68,7 +68,5 @@ let E = (e) => {
     },
     v = (e) => {
         let { step: t, onClose: n, isGift: i } = e;
-        return i
-            ? (0, r.jsx)(_.A, { step: t, onClose: () => n(!1) })
-            : (0, r.jsx)(f.A, { step: t, onClose: () => n(!1) });
+        return i ? (0, r.jsx)(_.A, { step: t }) : (0, r.jsx)(f.A, { step: t, onClose: () => n(!1) });
     };

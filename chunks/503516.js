@@ -76,7 +76,6 @@ let N = (e) => {
             });
             return D === v.vQ.USER_PROFILE_WISHLIST || D === v.vQ.DM_CHANNEL_WISHLIST
                 ? (0, r.jsxs)("div", {
-                      className: b.Tc,
                       children: [
                           (0, r.jsx)(g.Z, { giftRecipient: O }),
                           V(),
@@ -99,7 +98,6 @@ let N = (e) => {
                       ],
                   })
                 : (0, r.jsxs)("div", {
-                      className: b.Tc,
                       children: [
                           (0, r.jsx)(_.A, {
                               selectedSkuId: w,

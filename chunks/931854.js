@@ -1,7 +1,6 @@
 "use strict";
 e.exports = {
     qL: "bodyColumnMiddle_bf1b4a",
-    Tc: "bodyColumnRight_bf1b4a",
     uh: "sendTo_bf1b4a",
     iX: "customGiftMessageWrapper_bf1b4a",
     pt: "customGiftMessage_bf1b4a",

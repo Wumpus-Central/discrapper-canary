@@ -289,7 +289,6 @@ function z(e) {
           : (0, w.ys)(ec.id) && (eD = w.Ay.getBillingReviewSubheader(null, ec));
     let eL = null != eo && eo.length > 0 && (es === O.B || null === Q) && ea ? G.f.SELECT_PAYMENT_METHOD : void 0;
     return (0, r.jsxs)("div", {
-        className: K.Du,
         children: [
             (0, r.jsx)(G.j, { paymentRestrictionBannerType: eL }),
             null != b &&
@@ -316,7 +315,6 @@ function z(e) {
             ei &&
                 (0, r.jsxs)("div", {
                     children: [
-                        (0, r.jsx)(M.pK, { negativeMarginTop: !0, negativeMarginBottom: !0 }),
                         (0, r.jsx)(S.P, { planSkuId: ec?.skuId, referralTrialOfferId: P }),
                         (0, r.jsx)(F.$p, {
                             planOptions: er,
