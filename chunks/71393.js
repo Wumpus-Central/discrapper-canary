@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => p });
 var r = n(357758),
     i = n(867051),
     a = n(548965),
@@ -22,14 +22,14 @@ function f(e) {
                 : null,
     });
 }
-class p extends s.yW {
+class h extends s.yW {
     static displayName = "GuildStore";
     database = this.addKVDatabase("guilds", f);
     stateWrapper() {
         return this.database;
     }
     getGuild = (e) => {
-        if (null != e) return e === d.YYv ? _._ : this.database.get(e);
+        if (null != e) return e === d.YYv ? _._z : this.database.get(e);
     };
     getGuilds = this.database.memoized((e) => ({ ...e }));
     getGuildsArray = this.database.memoized((e) => Object.values(e));
@@ -38,7 +38,7 @@ class p extends s.yW {
         return this.database.length();
     }
 }
-let h = new p(
+let p = new h(
     {
         BACKGROUND_SYNC: (e, t) => {
             let { guilds: n } = e;

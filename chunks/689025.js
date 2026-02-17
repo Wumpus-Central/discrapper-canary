@@ -10,8 +10,8 @@ var i = n(627968),
     u = n(367513),
     h = n(442433),
     A = n(676002),
-    m = n(296216),
-    p = n(963027),
+    p = n(296216),
+    m = n(963027),
     g = n(202384),
     _ = n(51758),
     f = n(721592),
@@ -147,7 +147,7 @@ class W extends U.Ay {
                 connectDragPreview: u,
                 canReorderChannel: h,
                 canMoveMembers: A,
-                stageInstance: m,
+                stageInstance: p,
                 isSubscriptionGated: g,
                 needSubscriptionToAccess: _,
                 unread: f,
@@ -173,7 +173,7 @@ class W extends U.Ay {
                                 children: (0, i.jsxs)(w.Ay, {
                                     ref: this.channelItemRef,
                                     className: F.Ki,
-                                    iconClassName: a()({ [K.G]: null != m }),
+                                    iconClassName: a()({ [K.G]: null != p }),
                                     channel: e,
                                     selected: !E && t,
                                     connected: n,
@@ -190,7 +190,7 @@ class W extends U.Ay {
                                     connectDragPreview: u,
                                     subtitle: this.renderSubtitle(),
                                     isFavoriteSuggestion: E,
-                                    "aria-label": (0, p.Ay)({
+                                    "aria-label": (0, m.Ay)({
                                         channel: e,
                                         unread: f,
                                         mentionCount: C,
@@ -215,7 +215,7 @@ class W extends U.Ay {
         return A && (N = o(N)), h && (N = s(r(N))), N;
     }
 }
-let Y = (0, A.a)((0, m.F)(W));
+let Y = (0, A.a)((0, p.F)(W));
 function z(e) {
     let { guild: t, channel: n, disableSorting: l, isFavoriteCategory: s, collapsed: a, voiceStates: o } = e,
         d = (0, r.cf)([L.Ay], () => ({ unread: L.Ay.hasUnread(n.id), mentionCount: L.Ay.getMentionCount(n.id) })),
@@ -227,7 +227,7 @@ function z(e) {
                 canManageChannel: null != t && O.A.can(V.xBc.MANAGE_CHANNELS, n),
                 canReorderChannel:
                     !0 !== l &&
-                    (t.id === B.V ||
+                    (t.id === B.Vc ||
                         (null != e ? O.A.can(V.xBc.MANAGE_CHANNELS, e) : O.A.can(V.xBc.MANAGE_CHANNELS, t))),
                 canMoveMembers: O.A.can(V.xBc.MOVE_MEMBERS, n),
                 locked: !O.A.can(V.xBc.CONNECT, n),
@@ -237,8 +237,8 @@ function z(e) {
         }),
         h = (0, r.bG)([v.A], () => v.A.isCollapsed(n.parent_id)),
         A = (0, T.Ay)(n.id),
-        m = (0, r.bG)([N.A], () => N.A.getStageInstanceByChannel(n.id), [n.id]),
-        p = (0, I.zy)(n.id, b.ip.AUDIENCE),
+        p = (0, r.bG)([N.A], () => N.A.getStageInstanceByChannel(n.id), [n.id]),
+        m = (0, I.zy)(n.id, b.ip.AUDIENCE),
         { isSubscriptionGated: g, needSubscriptionToAccess: _ } = (0, f.A)(n.id),
         x = (0, r.bG)([M.Ay], () => M.Ay.isFavorite(t.id, n.id)),
         C = (0, S.xn)(n.id),
@@ -255,8 +255,8 @@ function z(e) {
     return (0, i.jsx)(Y, {
         categoryCollapsed: h,
         connectAction: A,
-        numAudience: p,
-        stageInstance: m,
+        numAudience: m,
+        stageInstance: p,
         isSubscriptionGated: g,
         needSubscriptionToAccess: _,
         ...d,

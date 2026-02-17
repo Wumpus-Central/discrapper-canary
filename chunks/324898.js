@@ -10,19 +10,19 @@ var s = n(503698),
     d = n(397927),
     c = n(317525),
     u = n(576705),
-    m = n(488926),
-    g = n(349828),
+    g = n(488926),
+    m = n(349828),
     x = n(124759),
     h = n(985018),
     _ = n(690450);
 function A(e) {
-    return x.dR.filter((t) => e?.id !== g.V && m.Ib(t, e));
+    return x.dR.filter((t) => e?.id !== m.Vc && g.Ib(t, e));
 }
 function p(e) {
     let { guild: t } = e,
         s = (0, a.bG)([c.A], () => c.A.getEveryoneRole(t)),
-        m = A(t),
-        g = m.length > 0,
+        g = A(t),
+        m = g.length > 0,
         p = x.dR.some((e) => !u.A.can(e, t, null, { [s.id]: { ...s, permissions: r.TF(s.permissions, e) } })),
         f = (0, i.jsxs)(i.Fragment, {
             children: [
@@ -37,11 +37,11 @@ function p(e) {
                         (0, i.jsx)(d.Text, {
                             variant: "text-sm/medium",
                             color: "text-default",
-                            children: h.intl.format(h.t.RXAtdO, { numPerms: m.length }),
+                            children: h.intl.format(h.t.RXAtdO, { numPerms: g.length }),
                         }),
                     ],
                 }),
-                g
+                m
                     ? (0, i.jsx)(d.EpV, {
                           size: "custom",
                           color: "currentColor",
@@ -60,7 +60,7 @@ function p(e) {
                       }),
             ],
         });
-    return g
+    return m
         ? p
             ? (0, i.jsx)(o.m, {
                   text: h.intl.string(h.t["E5v/a/"]),

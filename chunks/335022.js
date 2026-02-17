@@ -92,7 +92,7 @@ class k extends s.PureComponent {
         let { onDragStart: e, ...t } = this.props,
             { guild: n } = t,
             { controller: s, renderBanner: l, bannerVisible: a, communityInfoVisible: o } = this.state,
-            d = n?.id === w.V ? u.T : u.B;
+            d = n?.id === w.Vc ? u.T : u.B;
         return (0, i.jsxs)(D.A, {
             header:
                 null != n

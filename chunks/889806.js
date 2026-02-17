@@ -10,8 +10,8 @@ var i = n(627968),
     u = n(676002),
     h = n(811024),
     A = n(685399),
-    m = n(323073),
-    p = n(963027),
+    p = n(323073),
+    m = n(963027),
     g = n(5932),
     _ = n(721592),
     f = n(454058),
@@ -101,7 +101,7 @@ class P extends R.Ay {
                         n.e("97262"),
                         n.e("42128"),
                         n.e("39778"),
-                        n.e("54266"),
+                        n.e("31885"),
                     ]).then(n.bind(n, 385913));
                     return (n) => (0, i.jsx)(e, { ...n, user: l, channel: t, showModalItems: !1 });
                 });
@@ -138,7 +138,7 @@ class P extends R.Ay {
                 connectChannelDropTarget: u,
                 connectChannelDragSource: h,
                 connectDragPreview: A,
-                canReorderChannel: m,
+                canReorderChannel: p,
                 isSubscriptionGated: _,
                 isFavoriteSuggestion: f,
                 subtitle: x,
@@ -178,12 +178,12 @@ class P extends R.Ay {
                             subtitleColor: T?.color,
                             onMouseDown: this.handleMouseDown,
                             onContextMenu: this.handleContextMenu,
-                            connectDragPreview: m ? A : null,
+                            connectDragPreview: p ? A : null,
                             isFavoriteSuggestion: f,
                             channelTypeOverride: C ? D.rbe.GUILD_TEXT : void 0,
                             resolvedUnreadSetting: I,
                             withGuildIcon: b,
-                            "aria-label": (0, p.Ay)({ channel: e, unread: s, mentionCount: c, isSubscriptionGated: _ }),
+                            "aria-label": (0, m.Ay)({ channel: e, unread: s, mentionCount: c, isSubscriptionGated: _ }),
                             children: [
                                 f &&
                                     (0, i.jsxs)(i.Fragment, {
@@ -204,7 +204,7 @@ class P extends R.Ay {
                         }),
                 }),
             });
-        return m ? u(h(j)) : j;
+        return p ? u(h(j)) : j;
     }
 }
 let w = (0, u.a)(P);
@@ -216,21 +216,21 @@ function k(e) {
             ackMessageId: S.Ay.ackMessageId(t.id),
             isLowImportanceMention: S.Ay.getIsMentionLowImportance(t.id),
         })),
-        p = (0, r.bG)([T.Ay], () => T.Ay.resolveUnreadSetting(t)),
+        m = (0, r.bG)([T.Ay], () => T.Ay.resolveUnreadSetting(t)),
         g = (0, r.cf)([C.A, b.A], () => {
             let e = C.A.getChannel(t.parent_id);
             return {
                 canManageChannel: b.A.can(D.xBc.MANAGE_CHANNELS, t),
                 canReorderChannel:
                     !0 !== l &&
-                    (n.id === G.V ||
+                    (n.id === G.Vc ||
                         (null != e ? b.A.can(D.xBc.MANAGE_CHANNELS, e) : b.A.can(D.xBc.MANAGE_CHANNELS, n))),
             };
         }),
         I = (0, r.bG)([f.A], () => f.A.shouldIndicateNewChannel(n.id, t.id)),
         { needSubscriptionToAccess: v, isSubscriptionGated: y } = (0, _.A)(t.id),
         j = (0, r.bG)([T.Ay], () => T.Ay.isFavorite(n.id, t.id)),
-        R = (0, m.vL)(t),
+        R = (0, p.vL)(t),
         L = (0, h.Gp)(t.id),
         M = (0, O.A)({
             channel: t,
@@ -241,7 +241,7 @@ function k(e) {
             isNewChannel: I,
             muted: a,
             enableActivities: L,
-            resolvedUnreadSetting: p,
+            resolvedUnreadSetting: m,
         }),
         U = (0, A.Ay)(t);
     return (0, r.bG)([N.A, E.Ay], () => N.A.getChannelId() !== t.id && E.Ay.isCurrentUserGuest(t.getGuildId()))
@@ -259,7 +259,7 @@ function k(e) {
               channelIsContentGated: R,
               channelInfo: M,
               embeddedApps: U,
-              resolvedUnreadSetting: p,
+              resolvedUnreadSetting: m,
               hasChannelInfo: null != M,
               enableActivities: L,
           });

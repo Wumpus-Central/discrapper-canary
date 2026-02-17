@@ -84,7 +84,7 @@ function y(e) {
     let { guild: t } = e;
     return (0, i.jsx)(u.Heading, { variant: "text-md/semibold", lineClamp: 1, className: N.UU, children: t.name });
 }
-let j = [I.V, E.gNP];
+let j = [I.Vc, E.gNP];
 function R(e) {
     let { bannerVisible: t, guild: s, onClick: a, onContextMenu: r, ariaControls: o, ariaExpanded: h, children: m } = e,
         g = (0, d.bG)([_.A], () => (0, A.K)(_.A, s)),
@@ -113,7 +113,7 @@ function R(e) {
                         className: N.LO,
                         children: [
                             (0, i.jsx)(C.A, { guild: s, isBannerVisible: t }),
-                            s.id === I.V && (0, i.jsx)(v, {}),
+                            s.id === I.Vc && (0, i.jsx)(v, {}),
                             (0, i.jsx)(y, { guild: s }),
                         ],
                     }),

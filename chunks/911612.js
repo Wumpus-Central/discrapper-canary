@@ -11,7 +11,7 @@ function c(e) {
     let t = (0, l.bG)([r.A], () => r.A.can(a.xBc.MANAGE_CHANNELS, e));
     return __OVERLAY__
         ? null
-        : e.id === d.V
+        : e.id === d.Vc
           ? (0, n.jsx)(s.Drp, {
                 id: "create-category",
                 label: o.intl.string(o.t["ISN+NM"]),

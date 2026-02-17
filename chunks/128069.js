@@ -11,7 +11,7 @@ let s = (0, r.C)({
     treatments: [{ id: 1, label: "Enable Guild Tag Badge Packs Wave 2", config: { enabled: !0 } }],
 });
 function o(e) {
-    return null != e && e !== a.V && e !== i.YYv;
+    return null != e && e !== a.Vc && e !== i.YYv;
 }
 function l(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],

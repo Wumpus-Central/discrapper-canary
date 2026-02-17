@@ -10,8 +10,8 @@ var i = n(627968),
     u = n(367513),
     h = n(442433),
     A = n(676002),
-    m = n(296216),
-    p = n(685399),
+    p = n(296216),
+    m = n(685399),
     g = n(271683),
     _ = n(186369),
     f = n(725613),
@@ -19,8 +19,8 @@ var i = n(627968),
     C = n(844262),
     E = n(47167),
     I = n(262763),
-    N = n(5932),
-    b = n(857253),
+    b = n(5932),
+    N = n(857253),
     S = n(202384),
     T = n(51758),
     v = n(721592),
@@ -142,7 +142,7 @@ class et extends W.Ay {
     };
     renderSubtitle() {
         let { channel: e, connected: t, showEmptyChannelTopic: n } = this.props,
-            l = (0, N.M)(this.props.subtitle)?.subtitle,
+            l = (0, b.M)(this.props.subtitle)?.subtitle,
             { hovered: s } = this.state;
         return (0, i.jsx)(X.A, {
             onClick: this.handleVoiceStatusClick,
@@ -226,15 +226,15 @@ class et extends W.Ay {
                 sorting: u,
                 isUserOver: h,
                 connectChannelDropTarget: A,
-                connectChannelDragSource: m,
-                connectUserDropTarget: p,
+                connectChannelDragSource: p,
+                connectUserDropTarget: m,
                 connectDragPreview: g,
                 canReorderChannel: _,
                 canMoveMembers: f,
                 showTutorial: E,
                 hasActiveEvent: I,
-                embeddedApps: N,
-                isSubscriptionGated: b,
+                embeddedApps: b,
+                isSubscriptionGated: N,
                 isFavoriteSuggestion: S,
                 withGuildIcon: T,
                 hasStartTime: v,
@@ -297,10 +297,10 @@ class et extends W.Ay {
                                             unread: l,
                                             mentionCount: r,
                                             userCount: G,
-                                            embeddedActivitiesCount: N.length,
-                                            isSubscriptionGated: b,
+                                            embeddedActivitiesCount: b.length,
+                                            isSubscriptionGated: N,
                                         }),
-                                        "aria-describedby": (0, C.A)({ channel: e, embeddedApps: N }),
+                                        "aria-describedby": (0, C.A)({ channel: e, embeddedApps: b }),
                                         withGuildIcon: T,
                                         children: [
                                             S &&
@@ -328,8 +328,8 @@ class et extends W.Ay {
                 ],
             });
         return (
-            f && (U = p(U)),
-            _ && (U = A(m(U))),
+            f && (U = m(U)),
+            _ && (U = A(p(U))),
             E &&
                 (U = (0, i.jsx)(M.A, {
                     childRef: this.ref,
@@ -342,7 +342,7 @@ class et extends W.Ay {
         );
     }
 }
-let en = (0, A.a)((0, m.F)(et));
+let en = (0, A.a)((0, p.F)(et));
 function ei(e) {
     let {
             guild: t,
@@ -362,7 +362,7 @@ function ei(e) {
                 canManageChannel: w.A.can(Q.xBc.MANAGE_CHANNELS, n),
                 canReorderChannel:
                     !0 !== l &&
-                    (t.id === $.V ||
+                    (t.id === $.Vc ||
                         (null != e ? w.A.can(Q.xBc.MANAGE_CHANNELS, e) : w.A.can(Q.xBc.MANAGE_CHANNELS, t))),
                 canMoveMembers: w.A.can(Q.xBc.MOVE_MEMBERS, n),
                 locked: !w.A.can(Q.xBc.CONNECT, n),
@@ -371,12 +371,12 @@ function ei(e) {
             };
         }),
         A = (0, r.bG)([B.A], () => B.A.hasVideo(n.id)),
-        m = (0, p.Ay)(n),
+        p = (0, m.Ay)(n),
         g = (0, E.Ay)(n),
         x = (0, y.Qs)(n.id),
         C = (0, r.bG)([f.A], () => null != f.A.getStartTime(n), [n]),
-        { isSubscriptionGated: I, needSubscriptionToAccess: N } = (0, v.A)(n.id),
-        S = (0, b.A)(),
+        { isSubscriptionGated: I, needSubscriptionToAccess: b } = (0, v.A)(n.id),
+        S = (0, N.A)(),
         T = (0, r.bG)([V.Ay], () => V.Ay.isFavorite(t.id, n.id)),
         j = e.connected || S?.channelId === n.id,
         { enableHangStatus: L, showEmptyChannelTopic: M } = (0, R.$j)({
@@ -397,19 +397,19 @@ function ei(e) {
             isChannelCollapsed: o,
             voiceStates: d,
             isSubscriptionGated: I,
-            needSubscriptionToAccess: N,
+            needSubscriptionToAccess: b,
             enableConnectedUserLimit: !0,
             enableActivities: !0,
         }),
         q = j && null == z;
     return (0, i.jsx)(en, {
         channelName: g,
-        embeddedApps: m,
+        embeddedApps: p,
         embeddedActivityType: Q.$pd.PLAYING,
         video: A,
         hasActiveEvent: null != x,
         isSubscriptionGated: I,
-        needSubscriptionToAccess: N,
+        needSubscriptionToAccess: b,
         ...c,
         ...h,
         ...e,

@@ -72,7 +72,7 @@ let B = l.memo(function (e) {
             icon: s.R2l,
         }),
         ei = i.features.has(w.GuildFeatures.HUB),
-        en = i.id === R.V,
+        en = i.id === R.Vc,
         et = i.id === w.gNP,
         el = (0, _.A)(i.id, !0),
         ea = (0, A.A)(i),

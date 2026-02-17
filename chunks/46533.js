@@ -322,7 +322,7 @@ class ed extends r.PureComponent {
                     className: ea.r0,
                     children: (0, i.jsx)(O.A, { guild: t, channel: n ?? B.Ay.getDefaultChannel(t.id) }),
                 });
-            let e = t.id === er.V ? Q.T : Q.B;
+            let e = t.id === er.Vc ? Q.T : Q.B;
             return (0, i.jsx)(e, {
                 guild: t,
                 ...l,
