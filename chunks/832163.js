@@ -21,21 +21,21 @@ function g() {
 }
 function E(e) {
     let { skuId: t } = e;
-    f = { ...f, [t]: "checking" };
+    f = { ...f, [t]: { state: "checking" } };
 }
 function A(e) {
     let { skuId: t, interactionId: n } = e;
-    if ("checking" !== f[t]) return !1;
+    if (f[t]?.state !== "checking") return !1;
     h[n] = t;
 }
 function I(e) {
-    let { skuId: t } = e;
-    f = { ...f, [t]: "error" };
+    let { skuId: t, httpStatus: n } = e;
+    f = { ...f, [t]: { state: "error", reason: "http_error", httpStatus: n } };
 }
 function T(e) {
     let { skuId: t, recipientId: n, eligible: r } = e;
     if (o.default.getId() !== n) return !1;
-    f = { ...f, [t]: r ? "eligible" : "ineligible" };
+    f = { ...f, [t]: { state: r ? "eligible" : "ineligible" } };
 }
 function y(e) {
     let { entitlement: t } = e;
@@ -52,7 +52,7 @@ function v(e) {
     if (null == t) return !1;
     let n = h[t];
     if (null == n) return !1;
-    (f = { ...f, [n]: "error" }), delete h[t];
+    (f = { ...f, [n]: { state: "error", reason: "interaction_failure" } }), delete h[t];
 }
 function C() {
     (f = {}), (h = {});
@@ -156,10 +156,13 @@ class B extends i.Ay.Store {
         return p;
     }
     getSKUEligibility(e) {
+        return f[e]?.state;
+    }
+    getSKUEligibilityEntry(e) {
         return f[e];
     }
     getNormalizedSKUEligibility(e) {
-        return "ineligible" !== f[e];
+        return f[e]?.state !== "ineligible";
     }
 }
 let j = new B(a.h, {

@@ -152,7 +152,11 @@ function S(e, t, n) {
                     interactionId: e.body.interaction_id,
                 });
             })
-            .catch(() => {
-                i.h.dispatch({ type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE", skuId: t });
+            .catch((e) => {
+                i.h.dispatch({
+                    type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE",
+                    skuId: t,
+                    httpStatus: e?.status,
+                });
             }));
 }
