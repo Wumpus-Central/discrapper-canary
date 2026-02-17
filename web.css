@@ -53776,6 +53776,12 @@ div.mobilePushContainer__3d3b0 {
     text-align: center
 }
 
+.newPerkCardsEnabled__3af27 .heading__3af27 {
+    font-style: italic;
+    margin: 0 0 16px;
+    text-transform: uppercase
+}
+
 .sectionHeader__3af27 {
     display: flex;
     justify-content: space-between;
@@ -53808,6 +53814,10 @@ div.mobilePushContainer__3d3b0 {
 .subtitle__3af27 {
     margin: 0 24px 24px;
     max-width: 544px
+}
+
+.newPerkCardsEnabled__3af27 .subtitle__3af27 {
+    margin: 0 0 16px
 }
 
 .subtitleWithButton__3af27 {

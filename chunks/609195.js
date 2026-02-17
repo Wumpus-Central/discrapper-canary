@@ -2,6 +2,7 @@
 e.exports = {
     uW: "section__3af27",
     R_: "heading__3af27",
+    J4: "newPerkCardsEnabled__3af27",
     bV: "sectionHeader__3af27",
     pr: "sectionHeaderSeeAll__3af27",
     kL: "container__3af27",
