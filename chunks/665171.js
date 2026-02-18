@@ -1,16 +1,17 @@
 "use strict";
 n.d(t, {
-    Jr: () => S,
-    KH: () => E,
-    QK: () => A,
-    Wp: () => g,
-    as: () => v,
-    cq: () => h,
-    e_: () => y,
-    jL: () => I,
-    pj: () => T,
-    tT: () => m,
-    z9: () => p,
+    Jr: () => C,
+    K: () => p,
+    KH: () => I,
+    QK: () => T,
+    Wp: () => A,
+    as: () => b,
+    cq: () => g,
+    e_: () => v,
+    jL: () => y,
+    pj: () => S,
+    tT: () => E,
+    z9: () => h,
 });
 var r = n(562465),
     i = n(73153),
@@ -23,7 +24,7 @@ var r = n(562465),
     d = n(760321),
     _ = n(800007),
     f = n(652215);
-function p(e) {
+function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (t)
         return void setTimeout(() => {
@@ -48,7 +49,23 @@ function p(e) {
         i.h.dispatch({ type: "GAME_SERVER_FETCH_CATALOG_SUCCESS", guildId: e, catalog: n });
     });
 }
-function h(e) {
+function p() {
+    let e = a.default.getCurrentUser()?.isStaff() ?? !1;
+    return (0, o.aP)({
+        url: f.Rsh.COLLECTION_PUBLISHED_LISTINGS_SKU(_.q4),
+        query: { include_unpublished_products: e, include_unpublished_collection: e },
+        oldFormErrors: !0,
+        rejectWithError: !1,
+        retries: 2,
+    }).then((e) => {
+        let t = e.body.products.reduce((e, t) => {
+            let n = (0, c.o)(t);
+            return (e[n.id] = n), e;
+        }, {});
+        i.h.dispatch({ type: "GAME_SERVER_FETCH_GLOBAL_CATALOG_SUCCESS", catalog: t });
+    });
+}
+function g(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 ? arguments[2] : void 0;
     return t
@@ -67,7 +84,7 @@ function h(e) {
               }
           });
 }
-function m(e, t) {
+function E(e, t) {
     return r.Bo.get({ url: f.Rsh.PRODUCT_FOR_SKU(t), rejectWithError: !0, retries: 3 }).then((n) => {
         if (null != n.body) {
             let r = n.body.tenant_metadata?.guild_monetization?.game_server?.instructions.pc ?? [];
@@ -80,20 +97,20 @@ function m(e, t) {
         }
     });
 }
-function g(e, t) {
+function A(e, t) {
     e &&
         s.default.track(f.HAw.GAME_SERVER_HOSTING_THIRD_PARTY_CONSENT_ACCEPTED, {
             user_id: a.default.getCurrentUser()?.id,
             provider: t,
         });
 }
-function E() {
+function I() {
     i.h.dispatch({ type: "GAME_SERVER_REGION_PING_STATE_RESET" });
 }
-function A(e, t) {
+function T(e, t) {
     i.h.dispatch({ type: "GAME_SERVER_REGION_PING_STATE_UPDATE", pingUrl: e, state: t });
 }
-function I(e, t, n, i) {
+function y(e, t, n, i) {
     return r.Bo.post({
         url: f.Rsh.GUILD_POWERUP_TOGGLE(e, t),
         body: { game_server_name: n, game_server_region: i },
@@ -101,7 +118,7 @@ function I(e, t, n, i) {
         oldFormErrors: !0,
     });
 }
-function T(e, t, n, i) {
+function S(e, t, n, i) {
     return r.Bo.patch({
         url: f.Rsh.GUILD_POWERUP_UPDATE(e, t),
         body: { game_server_name: i, sku_id: n },
@@ -109,7 +126,7 @@ function T(e, t, n, i) {
         oldFormErrors: !0,
     });
 }
-function y(e, t, n) {
+function v(e, t, n) {
     return r.Bo.del({
         url: f.Rsh.GUILD_POWERUP_TOGGLE(e, t),
         query: { entitlement_id: n },
@@ -117,7 +134,7 @@ function y(e, t, n) {
         oldFormErrors: !0,
     });
 }
-function S(e) {
+function C(e) {
     return r.Bo.get({ url: f.Rsh.GAME_SERVER_REGIONS(e), rejectWithError: !0, oldFormErrors: !0, retries: 3 }).then(
         (e) => {
             i.h.dispatch({
@@ -127,7 +144,7 @@ function S(e) {
         },
     );
 }
-function v(e, t) {
+function b(e, t) {
     return r.Bo.post({ url: f.Rsh.GAME_SERVER_WAKE(e, t), rejectWithError: !0 }).then((t) => {
         i.h.dispatch({ type: "GAME_SERVER_UPDATE_INSTANCE_SUCCESS", guildId: e, instance: (0, u.A)(t.body) });
     });
