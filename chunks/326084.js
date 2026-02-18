@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { P7: () => p, aK: () => c, kZ: () => g, o: () => d, xM: () => h, xm: () => m }), n(321073);
+n.d(t, { P7: () => p, aK: () => c, kZ: () => E, o: () => d, xM: () => h, xm: () => m }), n(321073);
 var r = n(562465),
     i = n(73153);
 n(843472);
-var a = n(427157);
+var s = n(427157);
 n(309010);
-var s = n(728458),
+var a = n(728458),
     o = n(652215);
 let l = 10,
     u = 6e5;
@@ -43,7 +43,7 @@ let f = new _();
 async function p(e, t, n) {
     let i = JSON.stringify({ index: e, searchQuery: t });
     if (f.has(i)) return f.get(i);
-    let { users: s, next_index: u } = (
+    let { users: a, next_index: u } = (
             await r.Bo.post({
                 url: o.Rsh.GET_REFERRAL_ELIGIBLE_USERS,
                 body: { index: e, limit: n ?? l, search_query: t },
@@ -51,7 +51,7 @@ async function p(e, t, n) {
                 rejectWithError: !1,
             })
         ).body,
-        c = { users: s.map((e) => new a.A(e)), nextIndex: u };
+        c = { users: a.map((e) => new s.A(e)), nextIndex: u };
     return f.set(i, c), c;
 }
 let h = () => (
@@ -72,6 +72,7 @@ let h = () => (
                 refresh_at: e.body?.refresh_at ?? null,
                 recipient_status: t,
                 has_eligible_friends: e.body?.has_eligible_friends ?? !1,
+                reminder_state_id: e.body?.reminder_state_id ?? null,
             });
         },
         (e) => {
@@ -89,11 +90,11 @@ async function m(e) {
                 null;
             null != e && t.push(e), n.set(i, 1);
         } catch (e) {
-            s.A.captureException(e), n.set(i, 2);
+            a.A.captureException(e), n.set(i, 2);
         }
     return i.h.dispatch({ type: "CREATE_REFERRALS_SUCCESS", userTrialOffers: t }), n;
 }
-async function g(e) {
+async function E(e) {
     try {
         let t =
             (await r.Bo.get({ url: o.Rsh.REFERRAL_OFFER_ID_RESOLVE(e), oldFormErrors: !0, rejectWithError: !1 }))

@@ -1,46 +1,58 @@
-n.d(t, { V: () => A });
+n.d(t, { V: () => p });
 var i = n(627968);
 n(64700);
-var r = n(342494),
-    a = n(397927),
-    l = n(793574),
-    s = n(954571),
-    o = n(727949),
-    d = n(652215),
-    c = n(985018),
-    u = n(954457);
-let A = (e) => {
+var r = n(311907),
+    l = n(554146),
+    a = n(342494),
+    s = n(397927),
+    o = n(793574),
+    d = n(617617),
+    c = n(954571),
+    u = n(851746),
+    A = n(727949),
+    h = n(652215),
+    _ = n(985018),
+    m = n(954457);
+let p = (e) => {
     let { targetElementRef: t } = e,
-        A = (0, o.Tp)(),
-        h = () => {
-            (0, o.ne)();
+        p = (0, A.Tp)(),
+        g = (0, r.bG)([u.A], () => u.A.getReminderStateId()),
+        E = (0, r.bG)([u.A], () => u.A.getReferralsRemaining()),
+        I = (0, r.bG)([d.A], () => {
+            let e = d.A.settings.userContent?.recurringDismissibleContentStates[l.M.REFERRAL_PROGRAM_POPOVER];
+            return e?.numTimesDismissed ?? 0;
+        }),
+        f = () => {
+            (0, A.ne)(g);
         };
-    return (0, i.jsx)(r.AM, {
+    return (0, i.jsx)(a.AM, {
         targetElementRef: t,
-        title: c.intl.string(c.t.K2DyeS),
-        body: c.intl.string(c.t["JICo+3"]),
-        graphic: { type: "image", src: u.A },
+        title: _.intl.string(_.t.K2DyeS),
+        body: _.intl.string(_.t["JICo+3"]),
+        graphic: { type: "image", src: m.A },
         size: "md",
-        shouldShow: A,
+        shouldShow: p,
         align: "top",
         position: "right",
         gradientColor: "nitro-pink",
         caretConfig: { align: "start" },
         actions: [
             {
-                text: c.intl.string(c.t.t2N81y),
+                text: _.intl.string(_.t.t2N81y),
                 onClick: () => {
-                    s.default.track(d.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
-                        location_stack: [l.A.HOME_PAGE_PREMIUM_TAB],
+                    c.default.track(h.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
+                        location_stack: [o.A.HOME_PAGE_PREMIUM_TAB],
+                        times_dismissed: I + 1,
+                        referrals_remaining: E,
                     }),
-                        h(),
-                        (0, a.mMO)(async () => {
+                        f(),
+                        (0, s.mMO)(async () => {
                             let { default: e } = await Promise.resolve().then(n.bind(n, 303682));
                             return (t) => (0, i.jsx)(e, { ...t });
                         });
                 },
             },
         ],
-        onRequestClose: h,
+        onRequestClose: f,
     });
 };

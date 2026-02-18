@@ -1,15 +1,15 @@
 "use strict";
 n.d(t, {
     IL: () => _,
-    Jq: () => h,
+    Jq: () => p,
     L0: () => d,
     PN: () => E,
-    XQ: () => g,
+    XQ: () => m,
     Zm: () => f,
-    ef: () => p,
+    ef: () => h,
     ki: () => c,
-    vf: () => A,
-    zd: () => I,
+    vf: () => g,
+    zd: () => A,
 });
 var r = n(554146);
 let i = [
@@ -24,7 +24,7 @@ let i = [
         r.M.GAME_SHOP_ANNOUNCEMENT_MODAL,
         r.M.COLLECTIBLES_SHOP_MARVEL_RIVALS_ORBS_REWARD,
     ],
-    a = [
+    s = [
         r.M.GIFTING_INTENT_FRIENDS_TAB_BADGE,
         r.M.FRACTIONAL_NITRO_DURATION_LEFT_PILL,
         r.M.GUILD_TAG_AVAILABLE_COACHMARK,
@@ -41,7 +41,7 @@ let i = [
         r.M.NOTIFICATION_NUDGE_APP_START_BOTTOM_SHEET,
         r.M.GUILD_TAG_UPDATED_COACHMARK,
     ],
-    s = [
+    a = [
         r.M.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR,
         r.M.GOOGLE_PLAY_PRICE_CHANGE_ACTION_SHEET,
         r.M.PREMIUM_MARKETING_MOMENT_ANNOUNCEMENT_UPSELL,
@@ -50,6 +50,7 @@ let i = [
         r.M.MOBILE_PREMIUM_TRIAL_OFFER_ACTION_SHEET,
         r.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER,
         r.M.QUEST_HOME_ENTRYPOINT_TAKEOVER_BADGE,
+        r.M.REFERRAL_PROGRAM_POPOVER_V2,
     ],
     o = [r.M.GAME_SHOP_NEW_BADGE],
     l = [
@@ -64,33 +65,33 @@ let i = [
     ],
     u = [r.M.BOOST_TO_UNLOCK_COACHMARK, r.M.EXPIRING_POWERUP_COACHMARK];
 function c(e) {
-    return a.includes(e);
+    return s.includes(e);
 }
 function d(e) {
     return i.includes(e);
 }
 function _(e) {
-    return s.includes(e);
+    return a.includes(e);
 }
 function f(e) {
     return c(e) || d(e) || _(e);
 }
-function h(e) {
+function p(e) {
     return !f(e);
 }
-function p(e) {
+function h(e) {
     return l.includes(e);
 }
-function g(e) {
+function m(e) {
     return u.includes(e);
 }
 function E(e) {
     return o.includes(e);
 }
-function A(e) {
-    return p(e) || g(e) || E(e);
+function g(e) {
+    return h(e) || m(e) || E(e);
 }
-let I = Object.keys(r.M)
+let A = Object.keys(r.M)
     .map((e) => parseInt(e))
     .filter((e) => !isNaN(e));
-I.filter(h);
+A.filter(p);

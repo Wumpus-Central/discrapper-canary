@@ -532,6 +532,7 @@ var r = (function (e) {
             (e[(e.COLLECTIBLES_SHOP_MARVEL_RIVALS_ORBS_REWARD = 683)] = "COLLECTIBLES_SHOP_MARVEL_RIVALS_ORBS_REWARD"),
             (e[(e.EXPIRING_POWERUP_COACHMARK = 684)] = "EXPIRING_POWERUP_COACHMARK"),
             (e[(e.FIRST_BOOSTER_UPSELL = 685)] = "FIRST_BOOSTER_UPSELL"),
+            (e[(e.REFERRAL_PROGRAM_POPOVER_V2 = 686)] = "REFERRAL_PROGRAM_POPOVER_V2"),
             e
         );
     })({}),
