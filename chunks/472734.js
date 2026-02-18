@@ -121,7 +121,7 @@ function T(t) {
                             L > 0 &&
                             (0, n.jsx)("div", {
                                 className: S.I,
-                                children: (0, n.jsx)(A.J8, {
+                                children: (0, n.jsx)(A.J, {
                                     Icon: l.Cp8,
                                     text: k.intl.format(k.t["0StwHe"], { orbCount: L }),
                                 }),

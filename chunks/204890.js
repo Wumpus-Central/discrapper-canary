@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => c, J8: () => _, Lb: () => d });
+n.d(t, { A: () => c, J: () => d });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -9,7 +9,7 @@ var i = n(503698),
     l = n(974132);
 let u = { standard: l.mQ };
 function c(e) {
-    let { timeRemaining: t, variant: n, children: i, Icon: c = s.gqV } = e;
+    let { timeRemaining: t, variant: n, text: i, Icon: c = s.gqV } = e;
     return (0, r.jsxs)("div", {
         className: a()(l.jt, l.qw, u[n]),
         children: [
@@ -22,17 +22,16 @@ function c(e) {
                         color: "currentColor",
                         children: [o.intl.string(o.t.yYEZGi), null != t && ` (${t})`],
                     }),
-                    i,
+                    (0, r.jsx)("div", {
+                        className: l.fb,
+                        children: (0, r.jsx)(s.EYj, { variant: "text-sm/medium", color: "currentColor", children: i }),
+                    }),
                 ],
             }),
         ],
     });
 }
 function d(e) {
-    let { children: t, className: n } = e;
-    return (0, r.jsx)("div", { className: a()(l.fb, n), children: t });
-}
-function _(e) {
     let { text: t, Icon: n = s.gqV } = e;
     return (0, r.jsxs)("div", {
         className: a()(l.jt, l.Cu),

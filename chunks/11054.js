@@ -59,7 +59,7 @@ function y(e) {
                     D &&
                         (0, r.jsx)("div", {
                             className: T.Is,
-                            children: (0, r.jsx)(E.J8, {
+                            children: (0, r.jsx)(E.J, {
                                 Icon: l.Cp8,
                                 text: I.intl.format(I.t["ZV+aS9"], { orbCount: O }),
                             }),

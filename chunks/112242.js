@@ -255,7 +255,7 @@ let B = (e) => {
     return (0, r.jsx)(u.D0$, {
         children: (0, r.jsx)("div", {
             className: U.o7,
-            children: (0, r.jsx)(S.J8, { Icon: u.Cp8, text: k.intl.format(i, { orbCount: t }) }),
+            children: (0, r.jsx)(S.J, { Icon: u.Cp8, text: k.intl.format(i, { orbCount: t }) }),
         }),
     });
 };

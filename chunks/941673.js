@@ -187,7 +187,7 @@ let V = (e) => {
                     X(),
                     null != e &&
                         e > 0 &&
-                        (0, r.jsx)(O.J8, { Icon: l.Cp8, text: M.intl.format(M.t["ZV+aS9"], { orbCount: e }) }),
+                        (0, r.jsx)(O.J, { Icon: l.Cp8, text: M.intl.format(M.t["ZV+aS9"], { orbCount: e }) }),
                     null != Y && null != B && (0, r.jsx)(F, { handleClose: n, sku: B, guild: Y }),
                 ],
             });
