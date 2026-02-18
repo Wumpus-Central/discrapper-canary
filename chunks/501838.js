@@ -1,12 +1,13 @@
 "use strict";
-n.d(t, { K6: () => u, gT: () => d, hJ: () => f, l1: () => c, ok: () => _ });
+n.d(t, { K6: () => c, gT: () => _, hJ: () => h, l1: () => d, ok: () => f });
 var r = n(311907),
     i = n(517164),
     a = n(20805),
     s = n(15285),
     o = n(622543),
-    l = n(290863);
-function u(e) {
+    l = n(290863),
+    u = n(533562);
+function c(e) {
     let { userIds: t, gameIds: n } = e;
     return (0, r.bG)(
         [i.A],
@@ -17,7 +18,7 @@ function u(e) {
         [n, t],
     );
 }
-function c(e) {
+function d(e) {
     let { userIds: t, guildIdsWithGameStores: n } = e;
     return (0, r.bG)([o.A], () => {
         for (let e of t) {
@@ -29,19 +30,21 @@ function c(e) {
         return !1;
     }, [n, t]);
 }
-function d(e) {
-    let { userIds: t, gameIds: n } = e;
-    return (0, r.bG)([l.A], () => {
-        for (let e of t)
-            for (let t of l.A.getActivities(e)) if (null != t.application_id && n.has(t.application_id)) return !0;
-        return !1;
-    }, [n, t]);
-}
 function _(e) {
+    let { userIds: t, gameIds: n } = e,
+        i = (0, r.bG)([l.A], () => {
+            for (let e of t)
+                for (let t of l.A.getActivities(e)) if (null != t.application_id && n.has(t.application_id)) return !0;
+            return !1;
+        }, [n, t]),
+        a = (0, u.W)();
+    return i || null != a;
+}
+function f(e) {
     let { gameIds: t } = e;
     return (0, r.bG)([s.Ay], () => s.Ay.getGamesSeen(!1, !1).some((e) => null != e.id && t.has(e.id)), [t]);
 }
-function f(e) {
+function h(e) {
     let { gameIds: t } = e;
     return (0, r.bG)(
         [s.Ay],
