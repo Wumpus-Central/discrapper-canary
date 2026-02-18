@@ -1,49 +1,45 @@
 "use strict";
-n.d(t, { A: () => L });
+n.d(t, { A: () => R });
 var r = n(607399),
     i = n(923408),
-    a = n(843472),
-    s = n(155718),
+    s = n(843472),
+    a = n(155718),
     o = n(439372),
     l = n(95701),
     u = n(734057),
-    c = n(696451),
-    d = n(71393),
-    _ = n(320501),
-    f = n(576705),
-    h = n(309010),
+    c = n(71393),
+    d = n(320501),
+    _ = n(576705),
+    f = n(309010),
     p = n(967198),
-    g = n(287809),
-    E = n(488803),
-    A = n(942975),
-    I = n(645619),
-    T = n(832547),
-    y = n(103821),
-    S = n(302909),
-    v = n(128069),
-    C = n(840120),
-    b = n(363487),
-    N = n(804756),
-    R = n(652215),
-    O = n(349828);
-class D extends o.A {
+    h = n(488803),
+    m = n(942975),
+    E = n(645619),
+    g = n(832547),
+    A = n(103821),
+    I = n(302909),
+    T = n(128069),
+    S = n(840120),
+    y = n(363487),
+    v = n(342220),
+    N = n(652215),
+    C = n(349828);
+class b extends o.A {
     handleSelectedGuildChange() {
         let e = p.A.getGuildId();
-        if (null == e || e === O.Vc || e === R.YYv) return;
-        let t = d.A.getGuild(e);
+        if (null == e || e === C.Vc || e === N.YYv) return;
+        let t = c.A.getGuild(e);
         if (null == t) return;
-        C.Qb.trackExposure({ guildId: t.id, location: "GuildPowerupsManager" }),
-            E.x1.trackExposure({ guildId: t.id, location: "GuildPowerupsManager" }),
-            v.vu.trackExposure({ guildId: t.id, location: "GuildPowerupsManager" });
-        let n = T.A.getConfig({ location: "GuildPowerupsManager" }).enabled,
-            i = y.A.getConfig({ location: "GuildPowerupsManager" }).enabled;
-        if (!(0, b.G)(f.A, t)) {
-            let t = g.default.getCurrentUser(),
-                a = t?.id != null ? c.Ay.getMember(e, t.id) : void 0,
-                s = (n || i) && (0, N.X)(t, a);
-            if (r.Fr || !s) return;
+        S.Qb.trackExposure({ guildId: t.id, location: "GuildPowerupsManager" }),
+            h.x1.trackExposure({ guildId: t.id, location: "GuildPowerupsManager" }),
+            T.vu.trackExposure({ guildId: t.id, location: "GuildPowerupsManager" });
+        let n = g.A.getConfig({ location: "GuildPowerupsManager" }).enabled,
+            i = A.A.getConfig({ location: "GuildPowerupsManager" }).enabled;
+        if (!(0, y.G)(_.A, t)) {
+            let e = (n || i) && (0, v.X)();
+            if (r.Fr || !e) return;
         }
-        I.A.shouldFetchCatalogForGuild(e) && (0, A.AK)(e), I.A.shouldFetchPowerupsForGuild(e) && (0, A.Xd)(e);
+        E.A.shouldFetchCatalogForGuild(e) && (0, m.AK)(e), E.A.shouldFetchPowerupsForGuild(e) && (0, m.Xd)(e);
     }
     handleEntitlementUpdate(e) {
         let { guildId: t } = e;
@@ -54,34 +50,34 @@ class D extends o.A {
         this.refreshGuildPowerups(t);
     }
     refreshGuildPowerups(e) {
-        !0 === (0, b.G)(f.A, d.A.getGuild(e)) && ((0, A.Xd)(e), (0, i.VU)(e));
+        !0 === (0, y.G)(_.A, c.A.getGuild(e)) && ((0, m.Xd)(e), (0, i.VU)(e));
     }
     isEligibleForFirstBoosterUpsell() {
-        return S.A.getConfig({ location: "GuildPowerupsManager" }).enabled;
+        return I.A.getConfig({ location: "GuildPowerupsManager" }).enabled;
     }
     getBoostingPrompt() {
-        return this.isEligibleForFirstBoosterUpsell() ? { guildBoostUpsellType: s.Mk.FIRST_BOOSTER } : null;
+        return this.isEligibleForFirstBoosterUpsell() ? { guildBoostUpsellType: a.Mk.FIRST_BOOSTER } : null;
     }
     maybeSendGuildBoostUpsellSystemMessage(e, t) {
-        if (!(0, l.pQ)(e.type) || t.id === O.Vc || t.id === R.YYv) return;
+        if (!(0, l.pQ)(e.type) || t.id === C.Vc || t.id === N.YYv) return;
         let n = this.getBoostingPrompt();
         null != n &&
-            (_.A.isReady(e.id)
-                ? a.A.sendGuildBoostUpsellSystemMessage(e.id, n)
-                : _.A.whenReady(e.id, () => {
-                      h.A.getChannelId() === e.id && a.A.sendGuildBoostUpsellSystemMessage(e.id, n);
+            (d.A.isReady(e.id)
+                ? s.A.sendGuildBoostUpsellSystemMessage(e.id, n)
+                : d.A.whenReady(e.id, () => {
+                      f.A.getChannelId() === e.id && s.A.sendGuildBoostUpsellSystemMessage(e.id, n);
                   }));
     }
     handleChannelSelect(e) {
         let { channelId: t, guildId: n } = e,
             r = u.A.getChannel(t),
-            i = d.A.getGuild(n);
+            i = c.A.getGuild(n);
         null != r && null != i && this.maybeSendGuildBoostUpsellSystemMessage(r, i);
     }
     onPostConnectionOpen() {
-        let e = h.A.getChannelId(),
+        let e = f.A.getChannelId(),
             t = u.A.getChannel(e),
-            n = d.A.getGuild(t?.guild_id);
+            n = c.A.getGuild(t?.guild_id);
         null != t && null != n && this.maybeSendGuildBoostUpsellSystemMessage(t, n);
     }
     stores = new Map().set(p.A, this.handleSelectedGuildChange);
@@ -93,4 +89,4 @@ class D extends o.A {
         GUILD_APPLIED_BOOSTS_UPDATE: this.handleAppliedBoostUpdate.bind(this),
     };
 }
-let L = new D();
+let R = new b();

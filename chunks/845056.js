@@ -19,9 +19,8 @@ function c(e, t) {
                         (e) =>
                             !(0, r.A)(e) &&
                             (null == t ||
-                                null == e.application_id ||
-                                null == t.application_id ||
-                                e.application_id !== t.application_id),
+                                ((null == t.application_id || e.application_id !== t.application_id) &&
+                                    (null == t.name || e.name !== t.name))),
                     ),
                 i = new Map();
             for (let e of n) {
