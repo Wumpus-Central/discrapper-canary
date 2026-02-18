@@ -34,8 +34,8 @@ var i = n(627968),
     G = n(626262),
     b = n(813803),
     j = n(487329),
-    B = n(102609),
-    v = n(49463),
+    v = n(102609),
+    B = n(49463),
     q = n(322223),
     X = n(137207),
     F = n(619029),
@@ -44,8 +44,8 @@ var i = n(627968),
     H = n(571139),
     W = n(527012),
     K = n(997509),
-    Y = n(475723),
-    $ = n(598733),
+    $ = n(475723),
+    Y = n(598733),
     z = n(801644),
     J = n(37770),
     Q = n(74848),
@@ -207,8 +207,8 @@ let eG = l.memo(function () {
         l.useEffect(() => {
             if (null != r && r.type === em.kqX.SURVEY && null != r.metadata) {
                 let { metadata: e } = r,
-                    t = v.A.getUserExperimentDescriptor(e.id);
-                null != t && (0, B.LQ)(e.id, t),
+                    t = B.A.getUserExperimentDescriptor(e.id);
+                null != t && (0, v.LQ)(e.id, t),
                     (async () => {
                         r.metadata?.id != null && (await (0, p.oX)(r.metadata?.id));
                     })();
@@ -230,7 +230,7 @@ let eG = l.memo(function () {
         case em.kqX.PTT_NO_KEYBIND_WARNING:
             return (0, i.jsx)(e_.A, {});
         case em.kqX.LURKING_GUILD:
-            return (0, i.jsx)($.A, {});
+            return (0, i.jsx)(Y.A, {});
         case em.kqX.PENDING_MEMBER:
             return (0, i.jsx)(H.A, {});
         case em.kqX.INVITED_TO_SPEAK:
@@ -481,7 +481,7 @@ let eG = l.memo(function () {
                 eb = eN.A.get(eL),
                 ej = y.A.getApplication(eG);
             if (null == eb || null == ej) return null;
-            let eB = { page: em.liQ.IN_APP };
+            let ev = { page: em.liQ.IN_APP };
             return (0, i.jsxs)(E.$Td, {
                 color: E.Hv$.PREMIUM_TIER_1,
                 children: [
@@ -502,11 +502,11 @@ let eG = l.memo(function () {
                                         initialPlanId: null,
                                         subscriptionTier: eP.pe.TIER_2,
                                         analyticsLocations: a,
-                                        analyticsObject: eB,
+                                        analyticsObject: ev,
                                     });
                                 },
                                 analyticsLocations: a,
-                                analyticsLocationObject: eB,
+                                analyticsLocationObject: ev,
                                 context: __OVERLAY__ ? em.BRT.OVERLAY : em.BRT.APP,
                             }).then(() => T.X(eb.id)),
                         children: eU.intl.string(eU.t.KEwPYx),
@@ -600,12 +600,12 @@ let eG = l.memo(function () {
             });
         case em.kqX.DISPATCH_ERROR:
             if (null == r.metadata) return null;
-            let { error: ev } = r.metadata;
+            let { error: eB } = r.metadata;
             return (0, i.jsxs)(E.$Td, {
                 color: E.Hv$.DANGER,
                 children: [
                     (0, i.jsx)(E.PMB, { onClick: () => ex(), noticeType: em.kqX.DISPATCH_ERROR }),
-                    ev?.displayMessage,
+                    eB?.displayMessage,
                     (0, i.jsx)(E.Z_L, {
                         noticeType: em.kqX.DISPATCH_ERROR,
                         onClick: () =>
@@ -688,7 +688,7 @@ let eG = l.memo(function () {
                 }),
             });
         case em.kqX.VIEWING_ROLES:
-            return (0, i.jsx)(Y.A, {});
+            return (0, i.jsx)($.A, {});
         case em.kqX.PREMIUM_UNCANCEL:
             return (0, i.jsxs)(E.$Td, {
                 color:
@@ -860,19 +860,6 @@ let eG = l.memo(function () {
                         className: eM.yw,
                         children: eU.intl.string(eU.t.hvVgAZ),
                     }),
-                ],
-            });
-        case em.kqX.BLOCKED_BY_PROXY:
-            return (0, i.jsxs)(E.$Td, {
-                color: E.Hv$.WARNING,
-                children: [
-                    eU.intl.string(eU.t.Ugijzi),
-                    (0, i.jsx)(E.eCN, {
-                        href: `${em.qF7.STATUS}`,
-                        noticeType: r.type,
-                        children: eU.intl.string(eU.t.hvVgAZ),
-                    }),
-                    (0, i.jsx)(E.PMB, { onClick: () => ex(), noticeType: em.kqX.BLOCKED_BY_PROXY }),
                 ],
             });
         case em.kqX.AUTO_MODERATION_MENTION_RAID_DETECTION:

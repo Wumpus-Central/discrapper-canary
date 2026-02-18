@@ -2,81 +2,80 @@
 n(323874), n(14289), n(35956), n(321073), n(333405);
 var r = n(562465),
     i = n(618651),
-    a = n(53943),
-    s = n(873044),
-    o = n(232946),
-    l = n(30076),
-    u = n(209489);
+    s = n(53943),
+    a = n(873044),
+    o = n(30076),
+    l = n(209489);
 n(723702);
-var c = n(728458),
-    d = n(998218),
-    _ = n(368626),
-    f = n(472229),
-    p = n(230172),
-    h = n(652215);
-let m = [
+var u = n(728458),
+    c = n(998218),
+    d = n(368626),
+    _ = n(472229),
+    f = n(230172),
+    p = n(652215);
+let h = [
         "https://cdn.discordapp.com/bad-domains/updated_hashes.json",
         "https://cdn.discordapp.com/bad-domains/hashes.json",
     ],
-    g = new _.n();
+    m = new d.n();
 function E(e) {
     let t = new URLSearchParams();
     t.append("query", `@http.x_client_trace_id:"${e}"`), t.append("showAllSpans", "true");
-    let n = d.A.toURLSafe(`traces?${t.toString()}`, "https://datadog.discord.tools/apm/");
+    let n = c.A.toURLSafe(`traces?${t.toString()}`, "https://datadog.discord.tools/apm/");
     return null == n ? null : n.toString();
 }
-let A = /\/api(\/v\d+)?\/science/;
-function I(e) {
+let g = /\/api(\/v\d+)?\/science/;
+function A(e) {
     let t = 10;
     return e
         .reduce((e, n) => (10 === t ? e.push(n) : e.push(`${n};q=0.${t}`), (t = Math.max(t - 1, 1)), e), [])
         .join(",");
 }
-function T(e) {
+function I(e) {
     try {
         let t = new URL(e).pathname;
-        return A.test(t);
+        return g.test(t);
     } catch {
-        return A.test(e);
+        return g.test(e);
     }
 }
-function y(e, t) {
+function T(e, t) {
     return !1;
 }
 (0, r.IA)({
     prepareRequest(e) {
         let { default: t } = n(961350),
-            { default: s } = n(111162),
+            { default: a } = n(111162),
             { default: o } = n(773669),
             { default: l } = n(287809),
-            { default: u } = n(954571),
+            { default: c } = n(954571),
             { isPlatformEmbedded: d } = n(723702);
         if ("/" === e.url[0]) {
             (e.url = (0, r.TP)() + e.url),
                 "Authorization" in e.header || "authorization" in e.header || e.set("Authorization", t.getToken()),
                 (0, i.D)();
-            let n = u.getSuperPropertiesBase64();
+            let n = c.getSuperPropertiesBase64();
             null != n && e.set("X-Super-Properties", n);
-            let a = t.getFingerprint();
-            null != a && "" !== a && e.set("X-Fingerprint", a);
-            let c = t.getInstallationForTracking();
-            if ((null != c && "" !== c && e.set("X-Installation-ID", c), d)) {
+            let s = t.getFingerprint();
+            null != s && "" !== s && e.set("X-Fingerprint", s);
+            let u = t.getInstallationForTracking();
+            if ((null != u && "" !== u && e.set("X-Installation-ID", u), d)) {
                 let t = [];
                 null != navigator && (t = [...navigator.languages] ?? []);
-                let n = I(t);
+                let n = A(t);
                 e.set("Accept-Language", n);
             }
             e.set("X-Discord-Locale", o.locale);
-            let _ = (0, f.A)();
-            null != _ && e.set("X-Discord-Timezone", _);
-            let p = s.getDebugOptionsHeaderValue();
-            if ((null != p && "" !== p && e.set("X-Debug-Options", p), s.isTracingRequests)) {
+            let f = (0, _.A)();
+            null != f && e.set("X-Discord-Timezone", f);
+            let p = a.getDebugOptionsHeaderValue();
+            if ((null != p && "" !== p && e.set("X-Debug-Options", p), a.isTracingRequests)) {
                 let t = l.getCurrentUser(),
-                    n = g.generate(t?.id ?? "0");
+                    n = m.generate(t?.id ?? "0");
                 e.set("x-client-trace-id", n);
                 try {
                     let t = new URL(e.url).pathname;
-                    if (!T(t)) {
+                    if (!I(t)) {
                         let r = E(n);
                         null !== r && console.debug("%c[tracing]%c %s %s\n%s", "font-weight: bold", "", e.method, t, r);
                     }
@@ -85,23 +84,23 @@ function y(e, t) {
                 }
             }
         }
-        let _ = e.url,
-            h = e.method;
-        y(_, h) && (0, p.R)(_, h),
-            a.z8("Network", `Sending ${e.method} to ${e.url}`),
+        let p = e.url,
+            g = e.method;
+        T(p, g) && (0, f.R)(p, g),
+            s.z8("Network", `Sending ${e.method} to ${e.url}`),
             e.on("response", (t) => {
                 let n = null != t && t.status >= 400 ? t.text : null,
                     r = null == n ? "" : `and body: ${n}`;
-                a.z8("Network", `Completed ${e.method} to ${e.url} with status: ${t?.status} ${r}`);
+                s.z8("Network", `Completed ${e.method} to ${e.url} with status: ${t?.status} ${r}`);
             }),
             e.on("error", (t, n) => {
                 if (
-                    (a.z8("Network", `Failed ${e.method} to ${e.url} with status ${t?.status} and body: ${n?.text}`),
+                    (s.z8("Network", `Failed ${e.method} to ${e.url} with status ${t?.status} and body: ${n?.text}`),
                     null != t && "parse" in t && t.parse)
                 ) {
                     let n = "[FILTERED]";
-                    m.includes(e.url) && (n = e.xhr?.responseText?.slice(0, 1e3)),
-                        c.A.addBreadcrumb({
+                    h.includes(e.url) && (n = e.xhr?.responseText?.slice(0, 1e3)),
+                        u.A.addBreadcrumb({
                             category: "superagent",
                             message: "Failed to parse HTTP response.",
                             data: { method: e.method, url: e.url, responseText: n, status: t.status },
@@ -118,12 +117,12 @@ function y(e, t) {
                   })
                   .then((e) => {
                       let { captcha_key: n, captcha_rqtoken: r, captcha_session_id: i } = e,
-                          a = { "X-Captcha-Key": n };
-                      null != r && (a["X-Captcha-Rqtoken"] = r), null != i && (a["X-Captcha-Session-Id"] = i), t(a);
+                          s = { "X-Captcha-Key": n };
+                      null != r && (s["X-Captcha-Rqtoken"] = r), null != i && (s["X-Captcha-Session-Id"] = i), t(s);
                   })
                   .catch(r),
               !0)
-            : 401 === e.statusCode && e.body?.code === h.t02.MFA_REQUIRED && e.body?.mfa
+            : 401 === e.statusCode && e.body?.code === p.t02.MFA_REQUIRED && e.body?.mfa
               ? (Promise.all([n.e("88890"), n.e("66663")])
                     .then(n.bind(n, 522238))
                     .then((n) => {
@@ -132,32 +131,24 @@ function y(e, t) {
                     })
                     .catch(r),
                 !0)
-              : ((0, l.O)(e.statusCode, e.body?.code)
+              : ((0, o.O)(e.statusCode, e.body?.code)
                     ? Promise.resolve()
                           .then(n.bind(n, 700241))
                           .then((e) => {
                               let { default: t } = e;
                               t();
                           })
-                    : (0, s.O)(e.statusCode, e.body?.code)
-                      ? n
-                            .e("52729")
-                            .then(n.bind(n, 116960))
-                            .then((t) => {
-                                let { default: n } = t;
-                                n(e.body?.guild_id);
-                            })
-                      : (0, o.f)(e) &&
-                        n
-                            .e("75880")
-                            .then(n.bind(n, 129435))
-                            .then((e) => {
-                                let { handleBlockedByProxy: t } = e;
-                                t();
-                            }),
+                    : (0, a.O)(e.statusCode, e.body?.code) &&
+                      n
+                          .e("52729")
+                          .then(n.bind(n, 116960))
+                          .then((t) => {
+                              let { default: n } = t;
+                              n(e.body?.guild_id);
+                          }),
                 !1),
 }),
     (0, r.Cu)(async (e) => {
-        a.z8("Network", `Request to ${e} failed, will retry.`),
-            u.A.isOnline() || (await u.A.awaitOnline(), a.z8("Network", `Network detected online, retrying ${e}`));
+        s.z8("Network", `Request to ${e} failed, will retry.`),
+            l.A.isOnline() || (await l.A.awaitOnline(), s.z8("Network", `Network detected online, retrying ${e}`));
     });
