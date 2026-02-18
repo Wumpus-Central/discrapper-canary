@@ -1,23 +1,22 @@
-"use strict";
-n.d(t, { s: () => s });
-var r = n(627968),
-    i = n(397927),
-    a = n(267475);
-let s = {
+a.d(l, { s: () => i });
+var t = a(627968),
+    o = a(397927),
+    n = a(267475);
+let i = {
     title: "Forms",
     stories: [
         {
             name: "FieldSet",
             id: "fieldset",
             component: function (e) {
-                let { label: t } = e;
-                return (0, r.jsx)("div", {
-                    children: (0, r.jsxs)(i.nVY, {
-                        label: "" === t ? void 0 : t,
+                let { label: l } = e;
+                return (0, t.jsx)("div", {
+                    children: (0, t.jsxs)(o.nVY, {
+                        label: "" === l ? void 0 : l,
                         children: [
-                            (0, r.jsx)(i.ksK, { label: "First Name" }),
-                            (0, r.jsx)(i.ksK, { label: "Last Name" }),
-                            (0, r.jsx)(i.ksK, { label: "Address" }),
+                            (0, t.jsx)(o.ksK, { label: "First Name" }),
+                            (0, t.jsx)(o.ksK, { label: "Last Name" }),
+                            (0, t.jsx)(o.ksK, { label: "Address" }),
                         ],
                     }),
                 });
@@ -28,15 +27,15 @@ let s = {
             name: "Field",
             id: "formcontrol",
             component: function (e) {
-                let { description: t, ...n } = e;
-                return (0, r.jsx)("div", {
-                    children: (0, r.jsx)(i.D0$, {
-                        ...n,
-                        description: "" === t ? void 0 : t,
-                        icon: n.showIcon ? i.XAi : void 0,
-                        children: (0, r.jsx)("div", {
-                            className: a.q,
-                            children: (0, r.jsx)(i.Text, {
+                let { description: l, ...a } = e;
+                return (0, t.jsx)("div", {
+                    children: (0, t.jsx)(o.D0$, {
+                        ...a,
+                        description: "" === l ? void 0 : l,
+                        icon: a.showIcon ? o.XAi : void 0,
+                        children: (0, t.jsx)("div", {
+                            className: n.q,
+                            children: (0, t.jsx)(o.Text, {
                                 color: "text-subtle",
                                 variant: "text-md/medium",
                                 children: "Field",

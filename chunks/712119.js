@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     jD: "cont_e5e85f",
     KF: "hitboxArea_e5e85f",

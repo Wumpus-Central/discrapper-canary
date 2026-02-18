@@ -1,13 +1,12 @@
-"use strict";
-n.d(t, { A: () => a });
-var r = n(64700),
-    i = n(599941);
+i.d(t, { A: () => a });
+var l = i(64700),
+    n = i(599941);
 function a(e, t) {
-    let n = (0, i.dL)(t);
-    return r.useMemo(
+    let i = (0, n.dL)(t);
+    return l.useMemo(
         () =>
-            null != n &&
-            (null == n.max_num_active_trial_users || n.max_num_active_trial_users > (n.num_active_trial_users ?? 0)),
-        [n],
+            null != i &&
+            (null == i.max_num_active_trial_users || i.max_num_active_trial_users > (i.num_active_trial_users ?? 0)),
+        [i],
     );
 }

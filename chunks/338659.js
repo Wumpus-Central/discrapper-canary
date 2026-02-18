@@ -1,9 +1,9 @@
 "use strict";
 n.d(t, { s: () => l }), n(321073);
-var r = n(265486);
+var r = n(43105);
 let i = 1.5,
-    a = 5,
-    s = 1,
+    s = 5,
+    a = 1,
     o = 1e3;
 class l {
     videoElement;
@@ -88,10 +88,10 @@ class l {
             else {
                 let e = f - this.baselineFrames,
                     t = r.currentTime - this.baselineTime;
-                if (t >= s && e > 0) {
+                if (t >= a && e > 0) {
                     let n = e / t;
                     this.recentFrameRates.push(n),
-                        this.recentFrameRates.length > a && this.recentFrameRates.shift(),
+                        this.recentFrameRates.length > s && this.recentFrameRates.shift(),
                         (h = Math.round(
                             this.recentFrameRates.reduce((e, t) => e + t, 0) / this.recentFrameRates.length,
                         )),
@@ -101,7 +101,7 @@ class l {
             this.lastCurrentTime = r.currentTime;
         }
         let m = r.error?.code ?? null,
-            g = r.error?.message ?? null;
+            E = r.error?.message ?? null;
         return (
             null == this.codecInfoPromise && this.fetchCodecInfo(),
             {
@@ -122,7 +122,7 @@ class l {
                 fileSizeBytes: this.fileSizeBytes,
                 codecInfo: this.cachedCodecInfo,
                 errorCode: m,
-                errorMessage: g,
+                errorMessage: E,
             }
         );
     }

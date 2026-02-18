@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var r = n(627968),
     i = n(397927);
-let a = (e) => `gift-option-select-modal-${e.id}`;
-function s(e) {
+let s = (e) => `gift-option-select-modal-${e.id}`;
+function a(e) {
     let {
         giftRecipient: t,
-        onClose: s,
+        onClose: a,
         analyticsLocations: o,
         analyticsLocation: l,
         analyticsObject: u,
@@ -14,7 +14,7 @@ function s(e) {
     } = e;
     return (0, i.mMO)(
         async () => {
-            let { default: e } = await Promise.all([n.e("2292"), n.e("95320"), n.e("29716"), n.e("3581")]).then(
+            let { default: e } = await Promise.all([n.e("2292"), n.e("95320"), n.e("29716"), n.e("78790")]).then(
                 n.bind(n, 653813),
             );
             return (n) =>
@@ -27,6 +27,6 @@ function s(e) {
                     giftMessage: c,
                 });
         },
-        { modalKey: a(t), onCloseCallback: s },
+        { modalKey: s(t), onCloseCallback: a },
     );
 }

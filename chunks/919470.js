@@ -1,75 +1,74 @@
-"use strict";
-n.d(t, { A: () => f });
-var r = n(627968),
-    i = n(64700),
-    a = n(827734),
-    s = n(116833),
-    o = n(397927),
-    l = n(301679),
-    u = n(149757),
-    c = n(788868),
-    d = n(985018);
-let _ = {
+l.d(t, { A: () => m });
+var a = l(627968),
+    n = l(64700),
+    r = l(827734),
+    i = l(116833),
+    s = l(397927),
+    o = l(301679),
+    u = l(149757),
+    c = l(788868),
+    d = l(985018);
+let p = {
         bronze: {
             type: "custom",
-            start: a.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_BRONZE_START,
-            end: a.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_BRONZE_END,
+            start: r.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_BRONZE_START,
+            end: r.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_BRONZE_END,
         },
         silver: {
             type: "custom",
-            start: a.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_SILVER_START,
-            end: a.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_SILVER_END,
+            start: r.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_SILVER_START,
+            end: r.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_SILVER_END,
         },
         gold: {
             type: "custom",
-            start: a.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_GOLD_START,
-            end: a.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_GOLD_END,
+            start: r.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_GOLD_START,
+            end: r.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_GOLD_END,
         },
         platinum: {
             type: "custom",
-            start: a.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_PLATINUM_START,
-            end: a.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_PLATINUM_END,
+            start: r.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_PLATINUM_START,
+            end: r.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_PLATINUM_END,
         },
         diamond: {
             type: "custom",
-            start: a.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_DIAMOND_START,
-            end: a.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_DIAMOND_END,
+            start: r.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_DIAMOND_START,
+            end: r.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_DIAMOND_END,
         },
         emerald: {
             type: "custom",
-            start: a.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_EMERALD_START,
-            end: a.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_EMERALD_END,
+            start: r.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_EMERALD_START,
+            end: r.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_EMERALD_END,
         },
         ruby: {
             type: "custom",
-            start: a.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_RUBY_START,
-            end: a.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_RUBY_END,
+            start: r.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_RUBY_START,
+            end: r.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_RUBY_END,
         },
         opal: {
             type: "custom",
-            start: a.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_OPAL_START,
-            end: a.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_OPAL_END,
+            start: r.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_OPAL_START,
+            end: r.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_OPAL_END,
         },
     },
-    f = (e) => {
+    m = (e) => {
         let {
                 title: t,
-                body: n,
-                showGraphic: a,
-                showActions: f,
-                badgeId: p,
-                showProgress: h,
-                progressCircleText: m,
+                body: l,
+                showGraphic: r,
+                showActions: m,
+                badgeId: h,
+                showProgress: x,
+                progressCircleText: b,
                 progressCirclePercent: g,
-                progressCircleUrgency: E,
-                delay: A,
-                size: I,
-                gradientColor: T,
-                estimatedTooltipHeight: y,
+                progressCircleUrgency: y,
+                delay: E,
+                size: f,
+                gradientColor: v,
+                estimatedTooltipHeight: S,
             } = e,
-            S = i.useRef(null),
-            v = i.useRef(null),
-            C = i.useMemo(
+            j = n.useRef(null),
+            T = n.useRef(null),
+            C = n.useMemo(
                 () =>
                     ({
                         bronze: c.Ac.PREMIUM_TENURE_1_MONTH,
@@ -80,45 +79,45 @@ let _ = {
                         emerald: c.Ac.PREMIUM_TENURE_36_MONTH,
                         ruby: c.Ac.PREMIUM_TENURE_60_MONTH,
                         opal: c.Ac.PREMIUM_TENURE_72_MONTH,
-                    })[p],
-                [p],
+                    })[h],
+                [h],
             ),
-            b = null != C ? (0, u.I)(C) : null,
-            N = i.useMemo(() => {
+            P = null != C ? (0, u.I)(C) : null,
+            R = n.useMemo(() => {
                 if (null == C) return "";
                 let e = c.VD[C];
                 return (d.intl.string(d.t.lG6a5x) + " " + d.intl.string(e.nameUnformatted)).toLocaleUpperCase();
             }, [C]),
-            R = i.useMemo(() => {
-                if (!a || null == b) return;
-                let e = h ? { progressCircleText: m, progressCirclePercent: g, progressCircleUrgency: E } : {};
+            A = n.useMemo(() => {
+                if (!r || null == P) return;
+                let e = x ? { progressCircleText: b, progressCirclePercent: g, progressCircleUrgency: y } : {};
                 return {
                     type: "dynamic",
-                    component: s.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE,
+                    component: i.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE,
                     aspectRatio: "6/4",
-                    props: { src: b, alt: N, ...e },
+                    props: { src: P, alt: R, ...e },
                 };
-            }, [a, b, N, h, m, g, E]),
-            O = {
+            }, [r, P, R, x, b, g, y]),
+            _ = {
                 title: t,
-                body: n,
-                graphic: R,
-                actions: i.useMemo(() => {
-                    if (f) return [{ text: "Got it", variant: "primary" }];
-                }, [f]),
-                delay: A,
-                size: I,
-                gradientColor: i.useMemo(() => ("string" == typeof T && T in _ ? _[T] : T), [T]),
-                estimatedTooltipHeight: y,
+                body: l,
+                graphic: A,
+                actions: n.useMemo(() => {
+                    if (m) return [{ text: "Got it", variant: "primary" }];
+                }, [m]),
+                delay: E,
+                size: f,
+                gradientColor: n.useMemo(() => ("string" == typeof v && v in p ? p[v] : v), [v]),
+                estimatedTooltipHeight: S,
             };
-        return (0, r.jsxs)("div", {
+        return (0, a.jsxs)("div", {
             children: [
-                (0, r.jsx)(o.Text, {
+                (0, a.jsx)(s.Text, {
                     variant: "text-md/normal",
                     color: "text-muted",
                     children: "Hover or focus these buttons.",
                 }),
-                (0, r.jsxs)("div", {
+                (0, a.jsxs)("div", {
                     style: {
                         display: "flex",
                         justifyContent: "space-between",
@@ -128,15 +127,15 @@ let _ = {
                         marginTop: "200px",
                     },
                     children: [
-                        (0, r.jsx)(l.L, {
-                            targetElementRef: S,
-                            ...O,
-                            children: (0, r.jsx)(o.Button, { buttonRef: S, variant: "primary", text: "Left" }),
+                        (0, a.jsx)(o.L, {
+                            targetElementRef: j,
+                            ..._,
+                            children: (0, a.jsx)(s.Button, { buttonRef: j, variant: "primary", text: "Left" }),
                         }),
-                        (0, r.jsx)(l.L, {
-                            targetElementRef: v,
-                            ...O,
-                            children: (0, r.jsx)(o.Button, { buttonRef: v, variant: "primary", text: "Right" }),
+                        (0, a.jsx)(o.L, {
+                            targetElementRef: T,
+                            ..._,
+                            children: (0, a.jsx)(s.Button, { buttonRef: T, variant: "primary", text: "Right" }),
                         }),
                     ],
                 }),

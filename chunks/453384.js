@@ -1,89 +1,84 @@
-"use strict";
-n.d(t, { A: () => E });
-var r = n(627968),
+n.d(t, { A: () => h });
+var a = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(522160),
-    l = n(397927),
-    u = n(398025),
+    s = n(503698),
+    l = n.n(s),
+    r = n(522160),
+    o = n(397927),
+    d = n(398025),
     c = n(419367),
-    d = n(638322);
-let _ = "rgba(98, 196, 101, 1)",
-    f = "var(--background-mod-strong)",
-    h = 2,
-    p = (e) => ("small" === e ? { strokeWidth: 3 } : { strokeWidth: 4 }),
-    g = (e, t) => {
+    u = n(638322);
+let m = "var(--background-mod-strong)",
+    h = i.forwardRef((e, t) => {
         let {
                 percentComplete: n,
-                size: a = 42,
-                style: g = "default",
-                percentCompleteText: E,
-                percentCompleteTextVariant: A = "text-lg/medium",
-                children: I,
+                size: s = 42,
+                style: h = "default",
+                percentCompleteText: p,
+                percentCompleteTextVariant: x = "text-lg/medium",
+                children: g,
             } = e,
-            { strokeWidth: T } = p(g),
-            y = a / 2,
-            S = a / 2 - T / 2,
-            v = 2 * Math.PI * S,
-            C = v - n * v,
-            b = i.useMemo(() => ({ strokeDasharray: `${v} ${v}`, strokeDashoffset: C }), [v, C]),
-            { progressTextAnimation: N } = (0, l.zhh)({ progressTextAnimation: +(null != E && 1 !== n), config: c.N });
-        return (0, r.jsxs)("div", {
-            className: d.A7,
+            { strokeWidth: _ } = "small" === h ? { strokeWidth: 3 } : { strokeWidth: 4 },
+            f = s / 2,
+            b = s / 2 - _ / 2,
+            v = 2 * Math.PI * b,
+            j = v - n * v,
+            C = i.useMemo(() => ({ strokeDasharray: `${v} ${v}`, strokeDashoffset: j }), [v, j]),
+            { progressTextAnimation: A } = (0, o.zhh)({ progressTextAnimation: +(null != p && 1 !== n), config: c.N });
+        return (0, a.jsxs)("div", {
+            className: u.A7,
             ref: t,
-            style: { width: a, height: a, padding: T + h },
+            style: { width: s, height: s, padding: _ + 2 },
             children: [
-                (0, r.jsxs)("div", {
-                    className: d.vW,
+                (0, a.jsxs)("div", {
+                    className: u.vW,
                     children: [
-                        I,
-                        (0, r.jsxs)(o.animated.div, {
-                            style: { opacity: (0, u.a)(N), inset: T },
-                            className: s()(d.rD, d.qk),
+                        g,
+                        (0, a.jsxs)(r.animated.div, {
+                            style: { opacity: (0, d.a)(A), inset: _ },
+                            className: l()(u.rD, u.qk),
                             children: [
-                                (0, r.jsx)("div", { className: s()(d.rD, d.LU) }),
-                                (0, r.jsx)(l.Text, { variant: A, color: "text-strong", className: d.l_, children: E }),
+                                (0, a.jsx)("div", { className: l()(u.rD, u.LU) }),
+                                (0, a.jsx)(o.Text, { variant: x, color: "text-strong", className: u.l_, children: p }),
                             ],
                         }),
                     ],
                 }),
-                (0, r.jsxs)("svg", {
-                    className: d.hr,
-                    height: a,
-                    width: a,
+                (0, a.jsxs)("svg", {
+                    className: u.hr,
+                    height: s,
+                    width: s,
                     children: [
-                        (0, r.jsx)("circle", {
-                            className: d.qB,
-                            strokeWidth: T,
+                        (0, a.jsx)("circle", {
+                            className: u.qB,
+                            strokeWidth: _,
                             fill: "transparent",
-                            r: S,
-                            cx: y,
-                            cy: y,
-                            stroke: f,
+                            r: b,
+                            cx: f,
+                            cy: f,
+                            stroke: m,
                         }),
-                        (0, r.jsx)("circle", {
-                            className: d.qB,
-                            strokeWidth: T,
+                        (0, a.jsx)("circle", {
+                            className: u.qB,
+                            strokeWidth: _,
                             fill: "transparent",
-                            r: S,
-                            cx: y,
-                            cy: y,
-                            stroke: f,
+                            r: b,
+                            cx: f,
+                            cy: f,
+                            stroke: m,
                         }),
-                        (0, r.jsx)("circle", {
-                            className: d.qB,
-                            strokeWidth: T,
+                        (0, a.jsx)("circle", {
+                            className: u.qB,
+                            strokeWidth: _,
                             fill: "transparent",
-                            r: S,
-                            cx: y,
-                            cy: y,
-                            stroke: _,
-                            style: b,
+                            r: b,
+                            cx: f,
+                            cy: f,
+                            stroke: "rgba(98, 196, 101, 1)",
+                            style: C,
                         }),
                     ],
                 }),
             ],
         });
-    },
-    E = i.forwardRef(g);
+    });

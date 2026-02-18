@@ -1,21 +1,20 @@
-"use strict";
-n.d(t, { A: () => u });
-var r = n(64700),
-    i = n(554146),
-    a = n(73153),
-    s = n(20439),
-    o = n(890687),
-    l = n(654487);
+l.d(t, { A: () => u });
+var a = l(64700),
+    n = l(554146),
+    r = l(73153),
+    i = l(20439),
+    s = l(890687),
+    o = l(654487);
 let u = () => {
-    let e = (0, s.A)(i.M.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL),
-        t = (0, s.A)(i.M.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK),
-        n = (0, s.A)(i.M.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK),
-        u = r.useCallback(() => {
+    let e = (0, i.A)(n.M.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL),
+        t = (0, i.A)(n.M.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK),
+        l = (0, i.A)(n.M.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK),
+        u = a.useCallback(() => {
             e.isDismissed && e.handleToggleDismissState(),
                 t.isDismissed && t.handleToggleDismissState(),
-                n.isDismissed && n.handleToggleDismissState(),
-                a.h.dispatch({ type: "VIRTUAL_CURRENCY_ONBOARDING_MODAL_RESET" });
-        }, [t, n, e]),
-        { handleResetStatusClick: c } = (0, o.j$)(l.Fw);
+                l.isDismissed && l.handleToggleDismissState(),
+                r.h.dispatch({ type: "VIRTUAL_CURRENCY_ONBOARDING_MODAL_RESET" });
+        }, [t, l, e]),
+        { handleResetStatusClick: c } = (0, s.j$)(o.Fw);
     return { resetOnboardingExperience: u, resetQuestStatus: c };
 };

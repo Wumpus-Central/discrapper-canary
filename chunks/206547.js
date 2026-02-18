@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { A: () => a });
-var r = n(311907),
-    i = n(508675);
-let a = function (e, t) {
-    return (0, r.bG)([i.Ay], () => {
+n.d(t, { A: () => r });
+var i = n(311907),
+    l = n(508675);
+let r = function (e, t) {
+    return (0, i.bG)([l.Ay], () => {
         if (null == t) return null;
-        let n = i.Ay.getDisambiguatedEmojiContext(e);
+        let n = l.Ay.getDisambiguatedEmojiContext(e);
         return n.getById(t) ?? n.getByName(t);
     }, [e, t]);
 };

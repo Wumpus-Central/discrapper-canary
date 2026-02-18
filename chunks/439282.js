@@ -10,8 +10,8 @@ var i = n(627968),
     u = n(685399),
     h = n(833349),
     A = n(765379),
-    m = n(713654),
-    p = n(565688),
+    p = n(713654),
+    m = n(565688),
     g = n(93879),
     _ = n(961350),
     f = n(71393),
@@ -19,8 +19,8 @@ var i = n(627968),
     C = n(290863),
     E = n(461213),
     I = n(977997),
-    b = n(954571),
-    N = n(403362),
+    N = n(954571),
+    b = n(403362),
     S = n(246084),
     T = n(667936),
     v = n(879349),
@@ -35,7 +35,7 @@ function G(e) {
     let t,
         {
             channel: s,
-            guild: m,
+            guild: p,
             onAction: f,
             voiceStates: x,
             isChannelSelected: I,
@@ -58,7 +58,7 @@ function G(e) {
         (0, d.E)(t, "VoiceChannelActivities");
     let y = (0, u.Ay)(s),
         j = Array.from((0, u.Rz)(y).values()),
-        D = x?.filter(N.Vq) ?? [],
+        D = x?.filter(b.Vq) ?? [],
         G = (0, r.bG)(
             [E.A, C.A, _.default],
             () => {
@@ -81,10 +81,10 @@ function G(e) {
             [D],
             r.My,
         ),
-        P = (0, p.m)({ location: "voice_channel_activities" }),
+        P = (0, m.m)({ location: "voice_channel_activities" }),
         w = G.length + j.length > 0;
     return (l.useEffect(() => {
-        w && b.default.track(R.HAw.OPEN_POPOUT, { type: "Voice Channel Activities", channel_id: s.id });
+        w && N.default.track(R.HAw.OPEN_POPOUT, { type: "Voice Channel Activities", channel_id: s.id });
     }, [w, s.id]),
     w)
         ? (0, i.jsxs)(o.HOs, {
@@ -141,15 +141,17 @@ function G(e) {
                                                       n.e("83518"),
                                                       n.e("12664"),
                                                       n.e("34749"),
+                                                      n.e("94604"),
                                                       n.e("44667"),
                                                       n.e("7803"),
+                                                      n.e("55090"),
                                                       n.e("84704"),
                                                       n.e("67646"),
-                                                      n.e("15207"),
+                                                      n.e("45641"),
                                                       n.e("96800"),
                                                       n.e("24667"),
                                                   ]).then(n.bind(n, 585265));
-                                                  return (t) => (0, i.jsx)(e, { ...t, guild: m });
+                                                  return (t) => (0, i.jsx)(e, { ...t, guild: p });
                                               });
                                           },
                                       }),
@@ -167,7 +169,7 @@ function U(e) {
         o = (0, r.bG)([I.A], () => I.A.hasVideo(t.id)),
         d = (0, S.Ay)({ channel: t, locked: s, video: o, selected: n }),
         c = (0, r.bG)([f.A], () => f.A.getGuild(t.guild_id));
-    return null == (0, m.gU)(t, c)
+    return null == (0, p.gU)(t, c)
         ? null
         : (0, i.jsxs)("div", {
               className: a()(M.oT, D.oT),

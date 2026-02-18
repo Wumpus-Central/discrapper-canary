@@ -1,38 +1,39 @@
 "use strict";
-n.d(t, { D: () => o });
-var r = n(627968);
-n(64700);
-var i = n(720462),
-    a = n(528226);
-let s = () => (0, r.jsx)("div", { style: { height: 250, width: 250, background: "pink", borderRadius: 6 } }),
-    o = {
+a.d(t, { D: () => i });
+var l = a(627968);
+a(64700);
+var r = a(720462),
+    n = a(528226);
+let s = () => (0, l.jsx)("div", { style: { height: 250, width: 250, background: "pink", borderRadius: 6 } }),
+    i = {
         title: "Contained Hero",
         stories: [
             {
                 name: "ContainedHero",
                 id: "contained-hero",
                 component: (e) => {
-                    let { containerHeight: t, showChildren: n, ...o } = e,
-                        l = () =>
-                            n
-                                ? (0, r.jsxs)(i.A, {
+                    let { containerHeight: t, showChildren: a, ...i } = e;
+                    return (0, l.jsx)("div", {
+                        style: { height: a ? void 0 : t },
+                        children: (0, l.jsx)(n.A, {
+                            ...i,
+                            children: a
+                                ? (0, l.jsxs)(r.A, {
                                       children: [
-                                          (0, r.jsx)(s, {}),
-                                          (0, r.jsx)(s, {}),
-                                          (0, r.jsx)(s, {}),
-                                          (0, r.jsx)(s, {}),
-                                          (0, r.jsx)(s, {}),
-                                          (0, r.jsx)(s, {}),
-                                          (0, r.jsx)(s, {}),
-                                          (0, r.jsx)(s, {}),
-                                          (0, r.jsx)(s, {}),
-                                          (0, r.jsx)(s, {}),
+                                          (0, l.jsx)(s, {}),
+                                          (0, l.jsx)(s, {}),
+                                          (0, l.jsx)(s, {}),
+                                          (0, l.jsx)(s, {}),
+                                          (0, l.jsx)(s, {}),
+                                          (0, l.jsx)(s, {}),
+                                          (0, l.jsx)(s, {}),
+                                          (0, l.jsx)(s, {}),
+                                          (0, l.jsx)(s, {}),
+                                          (0, l.jsx)(s, {}),
                                       ],
                                   })
-                                : null;
-                    return (0, r.jsx)("div", {
-                        style: { height: n ? void 0 : t },
-                        children: (0, r.jsx)(a.A, { ...o, children: l() }),
+                                : null,
+                        }),
                     });
                 },
                 controls: {

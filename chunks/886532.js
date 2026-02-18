@@ -1,20 +1,32 @@
-"use strict";
-n.d(t, { H: () => _ });
-var r = n(627968),
-    i = n(64700),
-    a = n(292666),
-    s = n(732955),
-    o = n(397927),
-    l = n(398590),
-    u = n(102815),
-    c = n(976860),
-    d = n(652215);
-let _ = {
+l.d(t, { H: () => p });
+var a = l(627968),
+    n = l(64700),
+    r = l(292666),
+    i = l(732955),
+    s = l(397927),
+    o = l(398590),
+    u = l(102815),
+    c = l(976860),
+    d = l(652215);
+let p = {
     title: "Perks",
     stories: [
         {
             name: "Perk Card",
-            component: f,
+            component: function (e) {
+                let { ...t } = e;
+                return (0, a.jsxs)("div", {
+                    style: { maxWidth: "100%", width: t.featured ? 752 : 364 },
+                    children: [
+                        (0, a.jsx)(u.S, {
+                            ...t,
+                            progress: null != t.progress && t.progress > 0 ? t.progress : void 0,
+                            onCtaClick: () => (0, s.showToast)((0, s.createToast)("CTA Clicked!", s.ToastType.SUCCESS)),
+                        }),
+                        (0, a.jsx)(m, {}),
+                    ],
+                });
+            },
             id: "perk-card",
             controls: {
                 title: { label: "Title", type: "text", defaultValue: "Perk Title" },
@@ -36,33 +48,19 @@ let _ = {
         },
     ],
 };
-function f(e) {
-    let { ...t } = e;
-    return (0, r.jsxs)("div", {
-        style: { maxWidth: "100%", width: t.featured ? 752 : 364 },
-        children: [
-            (0, r.jsx)(u.S, {
-                ...t,
-                progress: null != t.progress && t.progress > 0 ? t.progress : void 0,
-                onCtaClick: () => (0, o.showToast)((0, o.createToast)("CTA Clicked!", o.ToastType.SUCCESS)),
-            }),
-            (0, r.jsx)(h, {}),
-        ],
-    });
-}
-function h() {
-    let [e, t] = (0, i.useState)("customSounds"),
-        n = `${d.BVt.NITRO_HOME}?perk=${e}`;
-    return (0, r.jsxs)("div", {
+function m() {
+    let [e, t] = (0, n.useState)("customSounds"),
+        l = `${d.BVt.NITRO_HOME}?perk=${e}`;
+    return (0, a.jsxs)("div", {
         style: { marginTop: 64, display: "flex", flexDirection: "column", gap: 10 },
         children: [
-            (0, r.jsx)(a.k, { label: "Deep Linking", value: e, onChange: (e) => t(e), placeholder: "Perk ID" }),
-            (0, r.jsx)(s.$nd, {
+            (0, a.jsx)(r.k, { label: "Deep Linking", value: e, onChange: (e) => t(e), placeholder: "Perk ID" }),
+            (0, a.jsx)(i.$nd, {
                 text: "Test Deep Link",
                 variant: "primary",
                 size: "sm",
                 onClick: () => {
-                    (0, l.jH)(), (0, c.pX)(n);
+                    (0, o.jH)(), (0, c.pX)(l);
                 },
             }),
         ],

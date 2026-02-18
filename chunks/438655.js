@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     nR: "contentFooter__45776",
     NY: "contentFooterButtonCont__45776",

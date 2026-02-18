@@ -1,3 +1,4 @@
+"use strict";
 i.d(t, { T: () => s });
 let n = (0, i(945810).mj)({
     name: "2026-01-wishlist-new-recommendations",

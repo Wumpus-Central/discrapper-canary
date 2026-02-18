@@ -1,5 +1,4 @@
-"use strict";
-n.d(t, { A: () => r });
+t.d(a, { A: () => r });
 var r = {};
 r = {
     dateRange: (e) => `De la ${e.startDate} p\xe2n\u{103} la ${e.endDate}`,

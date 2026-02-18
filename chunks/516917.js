@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { K: () => a });
-var r = n(9865),
-    i = n(652215);
-let a = (0, r.np)({
+n.d(t, { K: () => r });
+var i = n(9865),
+    l = n(652215);
+let r = (0, i.np)({
     id: "0",
     guildId: "0",
     name: "",
@@ -10,7 +9,7 @@ let a = (0, r.np)({
     managed: !1,
     position: 0,
     hoist: !1,
-    permissions: i.xBc.SEND_MESSAGES,
+    permissions: l.xBc.SEND_MESSAGES,
     color: 0,
     colors: { primary_color: 0, secondary_color: null, tertiary_color: null },
     colorString: "0",

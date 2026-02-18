@@ -1,42 +1,40 @@
-"use strict";
-n.d(t, { Ay: () => h });
-var r = n(627968),
-    i = n(64700),
-    a = n(475922),
-    s = n(534149),
-    o = n(582754),
-    l = n(736653),
-    u = n(796688);
+l.d(t, { Ay: () => h });
+var a = l(627968),
+    n = l(64700),
+    r = l(475922),
+    i = l(534149),
+    s = l(582754),
+    o = l(736653),
+    u = l(796688);
 let c = { width: 60, height: 60 },
-    d = 3e3,
-    _ = (e) => {
-        let { currentAnimationType: t, animationTypeRef: n, onSetAnimationDurationMS: r, play: a, getDuration: s } = e,
-            o = s(),
-            l = null != o ? 1e3 * o : d;
-        (0, i.useEffect)(() => {
-            null !== t && t !== n.current && ((n.current = t), a());
-        }, [t, a, n]),
-            (0, i.useEffect)(() => {
-                r(l);
-            }, [r, l]);
-    },
-    f = (e) => {
-        let { currentAnimationType: t, ...n } = e,
-            { Component: i, ...a } = (0, s.N)(t ?? "earn");
-        return (
-            _({ currentAnimationType: t, ...n, ...a }),
-            (0, r.jsx)(i, { ...c, size: "custom", className: u.E$, useLottieDefaultColors: !0 })
-        );
+    d = (e) => {
+        let { currentAnimationType: t, animationTypeRef: l, onSetAnimationDurationMS: a, play: r, getDuration: i } = e,
+            s = i(),
+            o = null != s ? 1e3 * s : 3e3;
+        (0, n.useEffect)(() => {
+            null !== t && t !== l.current && ((l.current = t), r());
+        }, [t, r, l]),
+            (0, n.useEffect)(() => {
+                a(o);
+            }, [a, o]);
     },
     p = (e) => {
-        let { currentAnimationType: t, ...n } = e,
-            { Component: i, ...s } = (0, a.q)(t ?? "earn");
+        let { currentAnimationType: t, ...l } = e,
+            { Component: n, ...r } = (0, i.N)(t ?? "earn");
         return (
-            _({ currentAnimationType: t, ...n, ...s }),
-            (0, r.jsx)(i, { ...c, size: "custom", className: u.E$, useLottieDefaultColors: !0 })
+            d({ currentAnimationType: t, ...l, ...r }),
+            (0, a.jsx)(n, { ...c, size: "custom", className: u.E$, useLottieDefaultColors: !0 })
+        );
+    },
+    m = (e) => {
+        let { currentAnimationType: t, ...l } = e,
+            { Component: n, ...i } = (0, r.q)(t ?? "earn");
+        return (
+            d({ currentAnimationType: t, ...l, ...i }),
+            (0, a.jsx)(n, { ...c, size: "custom", className: u.E$, useLottieDefaultColors: !0 })
         );
     },
     h = (e) => {
-        let t = (0, l.Ay)();
-        return (0, o.qB)(t) ? (0, r.jsx)(p, { ...e }) : (0, r.jsx)(f, { ...e });
+        let t = (0, o.Ay)();
+        return (0, s.qB)(t) ? (0, a.jsx)(m, { ...e }) : (0, a.jsx)(p, { ...e });
     };

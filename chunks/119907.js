@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     M1: "ephemeral__5126c",
     SH: "nitroMessage__5126c",

@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { A: () => i });
-var r = n(627968);
-n(64700);
-let i = (e) => {
-    let { verticalMargin: t = 16, padding: n = 0, children: i } = e;
-    return (0, r.jsx)("section", { style: { marginTop: t, marginBottom: t, padding: n }, children: i });
+t.d(r, { A: () => l });
+var d = t(627968);
+t(64700);
+let l = (e) => {
+    let { verticalMargin: r = 16, padding: t = 0, children: l } = e;
+    return (0, d.jsx)("section", { style: { marginTop: r, marginBottom: r, padding: t }, children: l });
 };

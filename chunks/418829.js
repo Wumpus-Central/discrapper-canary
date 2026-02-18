@@ -1,70 +1,71 @@
-n.d(t, { A: () => g });
+"use strict";
+n.d(t, { A: () => b });
 var r = n(627968),
-    a = n(64700),
-    o = n(942381),
-    i = n(964486),
+    i = n(64700),
+    a = n(942381),
+    s = n(964486),
     l = n(250703),
-    s = n(877260),
+    o = n(877260),
     c = n(823092),
-    _ = n(199966),
-    u = n(669550),
-    d = n(894858),
-    b = n(500425);
+    u = n(199966),
+    d = n(669550),
+    _ = n(894858),
+    g = n(500425);
 function m(e) {
     let {
             partialRoot: t,
             target: n,
             defaultTarget: m,
-            onClose: g,
-            sidebarFooter: p,
-            onPanelChange: f,
-            emptyState: x,
-            searchQuery: h,
-            onSearchChange: y,
+            onClose: b,
+            sidebarFooter: f,
+            onPanelChange: p,
+            emptyState: h,
+            searchQuery: y,
+            onSearchChange: x,
         } = e,
-        C = d.A.useField("currentPanelKey"),
-        { node: S, visibleDirectory: v, accessibleDirectory: j } = (0, u.Ay)(t, h ?? ""),
-        A = null != n && v.entry(n)?.parentPanelKey != null ? n : m,
-        T = a.useMemo(() => {
-            let e = j.entry(C ?? A)?.parentPanelKey;
-            if (null != e) return j.getPanelOrThrow(e);
-        }, [C, j, A]),
-        { navigateWithValidation: k } = (0, c.L_)();
-    (0, i.Ay)(() => {
-        let e = v.entry(A).parentPanelKey,
-            t = v.entry(A)?.parentTabKey,
-            r = v.entry(A)?.parentCategoryKey,
-            a = v.entry(A)?.parentAccordionKey;
+        A = _.A.useField("currentPanelKey"),
+        { node: C, visibleDirectory: S, accessibleDirectory: v } = (0, d.Ay)(t, y ?? ""),
+        T = null != n && S.entry(n)?.parentPanelKey != null ? n : m,
+        k = i.useMemo(() => {
+            let e = v.entry(A ?? T)?.parentPanelKey;
+            if (null != e) return v.getPanelOrThrow(e);
+        }, [A, v, T]),
+        { navigateWithValidation: j } = (0, c.L_)();
+    (0, s.Ay)(() => {
+        let e = S.entry(T).parentPanelKey,
+            t = S.entry(T)?.parentTabKey,
+            r = S.entry(T)?.parentCategoryKey,
+            i = S.entry(T)?.parentAccordionKey;
         return (
-            d.A.setState({
+            _.A.setState({
                 currentPanelKey: e,
                 currentTabKeys: null != t ? new Map([[e, t]]) : new Map(),
                 currentCategoryKey: r,
-                navTransition: { targetKey: A, targetAccordionKey: a, animateScroll: !1 },
+                navTransition: { targetKey: T, targetAccordionKey: i, animateScroll: !1 },
                 showNavigationMobile: null == n,
             }),
-            () => d.A.resetState()
+            () => _.A.resetState()
         );
     }),
-        a.useEffect(
+        i.useEffect(
             () =>
-                d.A.subscribe(
+                _.A.subscribe(
                     (e) => ({ requestedTargetKey: e.requestedTargetKey, currentPanelKey: e.currentPanelKey }),
                     (e) => {
                         let { requestedTargetKey: t, currentPanelKey: n } = e;
                         if (null == t) return;
-                        let r = v.entry(t);
-                        if (null == r) return void y?.("");
-                        let a = r.parentPanelKey;
-                        if (null == a) return void d.A.setState({ requestedTargetKey: void 0 });
-                        let o = d.A.getField("currentTabKeys"),
-                            i = null != r.parentTabKey ? new Map(o).set(a, r.parentTabKey) : o,
-                            l = r.parentPanelKey === n && (null == r.parentTabKey || r.parentTabKey === o.get(a)),
-                            s = () => {
-                                d.A.setState({
+                        let r = S.entry(t);
+                        if (null == r) return void x?.("");
+                        let i = r.parentPanelKey;
+                        if (null == i) return void _.A.setState({ requestedTargetKey: void 0 });
+                        let a = _.A.getField("currentTabKeys"),
+                            s = null != r.parentTabKey ? new Map(a).set(i, r.parentTabKey) : a,
+                            l = r.parentPanelKey === n && (null == r.parentTabKey || r.parentTabKey === a.get(i)),
+                            o = () => {
+                                _.A.setState({
                                     requestedTargetKey: void 0,
                                     currentPanelKey: r.parentPanelKey,
-                                    currentTabKeys: i,
+                                    currentTabKeys: s,
                                     currentCategoryKey: r.parentCategoryKey,
                                     navTransition: {
                                         targetKey: t,
@@ -74,29 +75,29 @@ function m(e) {
                                 });
                             };
                         r.parentPanelKey !== n
-                            ? k(() => {
-                                  s(), f?.(a);
+                            ? j(() => {
+                                  o(), p?.(i);
                               })
-                            : s();
+                            : o();
                     },
-                    { equalityFn: o.x },
+                    { equalityFn: a.x },
                 ),
-            [v, k, f, y],
+            [S, j, p, x],
         );
-    let N = a.useMemo(() => ({ visibleDirectory: v, accessibleDirectory: j }), [v, j]),
-        E = a.useMemo(() => () => k(g), [k, g]),
-        I = null != C ? v.get(C) : void 0;
-    return (0, r.jsx)(_.x.Provider, {
-        value: N,
+    let I = i.useMemo(() => ({ visibleDirectory: S, accessibleDirectory: v }), [S, v]),
+        N = i.useMemo(() => () => j(b), [j, b]),
+        E = null != A ? S.get(A) : void 0;
+    return (0, r.jsx)(u.x.Provider, {
+        value: I,
         children: (0, r.jsxs)("div", {
-            className: b.k,
+            className: g.k,
             children: [
-                (0, r.jsx)(s.L, { root: S, footer: p, onClose: E, emptyState: x, searchQuery: h, onSearchChange: y }),
-                (0, r.jsx)(l.A, { onClose: E, setting: I ?? T }),
+                (0, r.jsx)(o.L, { root: C, footer: f, onClose: N, emptyState: h, searchQuery: y, onSearchChange: x }),
+                (0, r.jsx)(l.A, { onClose: N, setting: E ?? k }),
             ],
         }),
     });
 }
-function g(e) {
+function b(e) {
     return (0, r.jsx)(c.ms, { children: (0, r.jsx)(m, { ...e }) });
 }

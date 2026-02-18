@@ -1,14 +1,13 @@
-"use strict";
-n.d(t, { Y: () => d });
-var r = n(627968),
-    i = n(64700),
-    a = n(933832),
-    s = n(176781),
-    o = n(173936),
-    l = n(625903),
-    u = n(972213),
-    c = n(421380);
-let d = {
+a.d(l, { Y: () => c });
+var t = a(627968),
+    o = a(64700),
+    n = a(933832),
+    i = a(176781),
+    s = a(173936),
+    r = a(625903),
+    d = a(972213),
+    u = a(421380);
+let c = {
     title: "VoidRadioGroup",
     stories: [
         {
@@ -16,40 +15,40 @@ let d = {
             name: "VoidRadioGroup",
             component: function (e) {
                 let {
-                        optionCount: t,
-                        size: n,
-                        disabled: d,
-                        orientation: _,
-                        radioPosition: f,
-                        withTransparentBackground: p,
-                        label: h,
-                        description: m,
-                        withDescriptions: g,
-                        withIcons: E,
+                        optionCount: l,
+                        size: a,
+                        disabled: c,
+                        orientation: b,
+                        radioPosition: p,
+                        withTransparentBackground: m,
+                        label: x,
+                        description: v,
+                        withDescriptions: h,
+                        withIcons: y,
                     } = e,
-                    [A, I] = i.useState("option1"),
-                    T = [a.A, s.x, o.q, l.Z, u.d],
-                    y = Array.from({ length: t }, (e, t) => ({
-                        value: `option${t + 1}`,
-                        name: `Option ${t + 1}`,
-                        description: g ? `This is a description for option ${t + 1}` : void 0,
-                        icon: E ? T[t % T.length] : void 0,
+                    [f, g] = o.useState("option1"),
+                    V = [n.A, i.x, s.q, r.Z, d.d],
+                    C = Array.from({ length: l }, (e, l) => ({
+                        value: `option${l + 1}`,
+                        name: `Option ${l + 1}`,
+                        description: h ? `This is a description for option ${l + 1}` : void 0,
+                        icon: y ? V[l % V.length] : void 0,
                     }));
-                return (0, r.jsx)(c.$d, {
+                return (0, t.jsx)(u.$d, {
                     "data-migration-pending": !0,
-                    value: A,
+                    value: f,
                     onChange: (e) => {
-                        let { value: t } = e;
-                        return I(t);
+                        let { value: l } = e;
+                        return g(l);
                     },
-                    options: y,
-                    size: n,
-                    disabled: d,
-                    orientation: _,
-                    radioPosition: f,
-                    withTransparentBackground: p,
-                    label: h,
-                    description: m,
+                    options: C,
+                    size: a,
+                    disabled: c,
+                    orientation: b,
+                    radioPosition: p,
+                    withTransparentBackground: m,
+                    label: x,
+                    description: v,
                 });
             },
             controls: {

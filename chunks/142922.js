@@ -1,59 +1,55 @@
-"use strict";
-n.d(t, { FG: () => d, LA: () => l, U_: () => o, f5: () => u, rG: () => s });
-var r = n(99478),
-    i = n(526531);
-let a = 1721426;
-function s(e, t, n, r) {
-    let i = (t = l(e, t)) - 1,
-        s = -2;
+t.d(a, { FG: () => d, LA: () => u, U_: () => o, f5: () => l, rG: () => i });
+var r = t(99478),
+    n = t(526531);
+function i(e, a, t, r) {
+    let n = (a = u(e, a)) - 1,
+        i = -2;
     return (
-        n <= 2 ? (s = 0) : o(t) && (s = -1),
-        a -
-            1 +
-            365 * i +
-            Math.floor(i / 4) -
-            Math.floor(i / 100) +
-            Math.floor(i / 400) +
-            Math.floor((367 * n - 362) / 12 + s + r)
+        t <= 2 ? (i = 0) : o(a) && (i = -1),
+        1721425 +
+            365 * n +
+            Math.floor(n / 4) -
+            Math.floor(n / 100) +
+            Math.floor(n / 400) +
+            Math.floor((367 * t - 362) / 12 + i + r)
     );
 }
 function o(e) {
     return e % 4 == 0 && (e % 100 != 0 || e % 400 == 0);
 }
-function l(e, t) {
-    return "BC" === e ? 1 - t : t;
+function u(e, a) {
+    return "BC" === e ? 1 - a : a;
 }
-function u(e) {
-    let t = "AD";
-    return e <= 0 && ((t = "BC"), (e = 1 - e)), [t, e];
+function l(e) {
+    let a = "AD";
+    return e <= 0 && ((a = "BC"), (e = 1 - e)), [a, e];
 }
-let c = {
+let s = {
     standard: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
     leapyear: [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
 };
 class d {
     fromJulianDay(e) {
-        let t = e,
-            n = t - a,
-            l = Math.floor(n / 146097),
-            c = (0, i.z)(n, 146097),
-            d = Math.floor(c / 36524),
-            _ = (0, i.z)(c, 36524),
-            f = Math.floor(_ / 1461),
-            p = Math.floor((0, i.z)(_, 1461) / 365),
-            [h, m] = u(400 * l + 100 * d + 4 * f + p + +(4 !== d && 4 !== p)),
-            g = t - s(h, m, 1, 1),
-            E = 2;
-        t < s(h, m, 3, 1) ? (E = 0) : o(m) && (E = 1);
-        let A = Math.floor(((g + E) * 12 + 373) / 367),
-            I = t - s(h, m, A, 1) + 1;
-        return new (0, r.ng)(h, m, A, I);
+        let a = e - 1721426,
+            t = Math.floor(a / 146097),
+            u = (0, n.z)(a, 146097),
+            s = Math.floor(u / 36524),
+            d = (0, n.z)(u, 36524),
+            c = Math.floor(d / 1461),
+            m = Math.floor((0, n.z)(d, 1461) / 365),
+            [h, D] = l(400 * t + 100 * s + 4 * c + m + +(4 !== s && 4 !== m)),
+            y = e - i(h, D, 1, 1),
+            p = 2;
+        e < i(h, D, 3, 1) ? (p = 0) : o(D) && (p = 1);
+        let g = Math.floor(((y + p) * 12 + 373) / 367),
+            f = e - i(h, D, g, 1) + 1;
+        return new (0, r.ng)(h, D, g, f);
     }
     toJulianDay(e) {
-        return s(e.era, e.year, e.month, e.day);
+        return i(e.era, e.year, e.month, e.day);
     }
     getDaysInMonth(e) {
-        return c[o(e.year) ? "leapyear" : "standard"][e.month - 1];
+        return s[o(e.year) ? "leapyear" : "standard"][e.month - 1];
     }
     getMonthsInYear(e) {
         return 12;

@@ -1,26 +1,25 @@
-"use strict";
-n.d(t, { M: () => s });
-var r = n(627968),
-    i = n(64700),
-    a = n(158954);
-let s = {
+a.d(l, { M: () => i });
+var t = a(627968),
+    o = a(64700),
+    n = a(158954);
+let i = {
     title: "Switch",
     stories: [
         {
             id: "baseSwitch",
             name: "BaseSwitch",
             component: function (e) {
-                let { disabled: t, hasIcon: n, label: s, description: o, required: l, errorMessage: u } = e,
-                    [c, d] = i.useState(!1);
-                return (0, r.jsx)(a.Ad5, {
-                    label: s,
-                    description: o,
-                    required: l,
-                    errorMessage: u,
-                    hasIcon: n,
-                    onChange: d,
-                    disabled: t,
-                    checked: c,
+                let { disabled: l, hasIcon: a, label: i, description: s, required: r, errorMessage: d } = e,
+                    [u, c] = o.useState(!1);
+                return (0, t.jsx)(n.Ad5, {
+                    label: i,
+                    description: s,
+                    required: r,
+                    errorMessage: d,
+                    hasIcon: a,
+                    onChange: c,
+                    disabled: l,
+                    checked: u,
                 });
             },
             controls: {

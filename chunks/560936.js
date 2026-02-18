@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { A: () => o });
-var r = n(64700),
-    i = n(473193),
-    a = n(203982),
-    s = n(652215);
-function o(e) {
-    let { shouldSubscribe: t, subscribeToGroupId: n, authorId: o } = e,
-        l = r.useContext(i.C);
-    r.useEffect(() => {
-        if (!t || null == l || null == n || null == o) return;
-        let { setAnimate: e } = l;
+n.d(t, { A: () => s });
+var i = n(64700),
+    l = n(473193),
+    r = n(203982),
+    a = n(652215);
+function s(e) {
+    let { shouldSubscribe: t, subscribeToGroupId: n, authorId: s } = e,
+        o = i.useContext(l.C);
+    i.useEffect(() => {
+        if (!t || null == o || null == n || null == s) return;
+        let { setAnimate: e } = o;
         return (
-            a._.subscribeKeyed(s.zOV.ANIMATE_CHAT_AVATAR, `${n}:${o}`, e),
-            () => void a._.unsubscribeKeyed(s.zOV.ANIMATE_CHAT_AVATAR, `${n}:${o}`, e)
+            r._.subscribeKeyed(a.zOV.ANIMATE_CHAT_AVATAR, `${n}:${s}`, e),
+            () => void r._.unsubscribeKeyed(a.zOV.ANIMATE_CHAT_AVATAR, `${n}:${s}`, e)
         );
-    }, [t, o, n, l]);
+    }, [t, s, n, o]);
 }

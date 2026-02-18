@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { A: () => i });
-var r = n(652215);
-function i(e) {
-    return e.type === r.lAJ.DEFAULT && null != e.messageReference && e.messageReference.type !== r.SH7.FORWARD;
+n.d(t, { A: () => l });
+var i = n(652215);
+function l(e) {
+    return e.type === i.lAJ.DEFAULT && null != e.messageReference && e.messageReference.type !== i.SH7.FORWARD;
 }

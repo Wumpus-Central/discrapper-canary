@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     o8: "subnav_e4d939",
     AS: "item_e4d939",

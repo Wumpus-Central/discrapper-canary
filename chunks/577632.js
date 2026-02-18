@@ -2,44 +2,44 @@
 n.d(t, { A: () => _ });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(572808),
     l = n(9045),
     u = n(944766),
     c = n(489990);
 let d = 1080,
     _ = (e) => {
-        let { seats: t, participant: n, participants: a, channel: _, idle: f, enableAnimations: h = !0 } = e,
-            p = t.find((e) => e.claimedBy === n.userId),
-            g = null != p,
-            [E, A] = i.useState(!1),
-            I = (0, l.A)(n),
-            { x: T, y } = i.useMemo(() => {
+        let { seats: t, participant: n, participants: s, channel: _, idle: f, enableAnimations: p = !0 } = e,
+            h = t.find((e) => e.claimedBy === n.userId),
+            m = null != h,
+            [E, g] = i.useState(!1),
+            A = (0, l.A)(n),
+            { x: I, y: T } = i.useMemo(() => {
                 let e = { ...n.position };
-                if (g) {
-                    let t = o.dG[p.id - 1];
-                    null != t && ((e.x = t.x + t.player.x), (e.y = t.y + t.player.y - I.height));
+                if (m) {
+                    let t = o.dG[h.id - 1];
+                    null != t && ((e.x = t.x + t.player.x), (e.y = t.y + t.player.y - A.height));
                 }
                 return e;
-            }, [n.position, p, g, I]);
+            }, [n.position, h, m, A]);
         return (0, r.jsx)("div", {
-            className: s()(c.Wp, { [c.lv]: E }),
-            style: { transform: `translate3d(${T}px, ${y}px, 0)`, zIndex: y },
+            className: a()(c.Wp, { [c.lv]: E }),
+            style: { transform: `translate3d(${I}px, ${T}px, 0)`, zIndex: T },
             children:
-                g &&
+                m &&
                 (0, r.jsx)("div", {
                     className: c.my,
                     children: (0, r.jsx)(u.A, {
                         seats: t,
-                        claimedSeat: p,
+                        claimedSeat: h,
                         participant: n,
-                        participants: a,
+                        participants: s,
                         channel: _,
                         idle: f,
-                        flip: T > d,
-                        handleHover: (e) => A(e),
-                        enableAnimations: h,
+                        flip: I > d,
+                        handleHover: (e) => g(e),
+                        enableAnimations: p,
                     }),
                 }),
         });

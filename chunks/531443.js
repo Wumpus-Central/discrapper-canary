@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { G: () => l });
+n.d(t, { G: () => o });
 var r = n(141711),
-    i = n(118356),
-    a = n(740644),
+    l = n(118356),
+    i = n(740644),
     s = n(497329);
-let o = new i.Vy("SimpleMuxWrapper");
-class l {
+let a = new l.Vy("SimpleMuxWrapper");
+class o {
     isMonitoring = !1;
     videoElement;
     config;
@@ -22,13 +21,13 @@ class l {
             debug: this.config.debug ?? !1,
             disableCookies: !0,
             respectDoNotTrack: !0,
-            data: a.H.mapDiscordToMuxMetadata(this.config, this.sessionId),
+            data: i.H.mapDiscordToMuxMetadata(this.config, this.sessionId),
         };
         null != this.hlsInstance && ((e.hlsjs = this.hlsInstance), (e.Hls = this.hlsInstance.constructor));
         try {
             r.A.monitor(this.videoElement, e), (this.isMonitoring = !0);
         } catch (e) {
-            o.error("Error creating Mux monitor", e), (this.isMonitoring = !1);
+            a.error("Error creating Mux monitor", e), (this.isMonitoring = !1);
         }
     }
     endSession() {
@@ -37,7 +36,7 @@ class l {
                 "function" == typeof r.A.destroyMonitor && r.A.destroyMonitor(this.videoElement),
                     (this.isMonitoring = !1);
             } catch (e) {
-                o.error("Error ending Mux session", e);
+                a.error("Error ending Mux session", e);
             }
     }
     destroy() {
@@ -46,7 +45,7 @@ class l {
                 "function" == typeof r.A.destroyMonitor && r.A.destroyMonitor(this.videoElement),
                     (this.isMonitoring = !1);
             } catch (e) {
-                o.error("Error destroying Mux monitor", e);
+                a.error("Error destroying Mux monitor", e);
             }
     }
     getSessionId() {

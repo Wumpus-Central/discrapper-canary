@@ -1,85 +1,85 @@
-"use strict";
-n.d(t, { Gy: () => h, k7: () => l.k });
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(397927);
-n(14115);
-var l = n(305003),
-    u = n(626031),
-    c = n(339763),
-    d = n(796688);
-let _ = () => (0, r.jsx)("img", { className: d.V8, src: n(324292), alt: "" }),
-    f = "balance-widget-pill",
-    p = (e, t) => (e === l.k.SELECTED ? d.wH : t ? d.mr : d.Ay),
-    h = (0, i.forwardRef)(function (e, t) {
+l.d(t, { Gy: () => m, k7: () => o.k });
+var a = l(627968),
+    n = l(64700),
+    r = l(503698),
+    i = l.n(r),
+    s = l(397927);
+l(14115);
+var o = l(305003),
+    u = l(626031),
+    c = l(339763),
+    d = l(796688);
+let p = () => (0, a.jsx)("img", { className: d.V8, src: l(324292), alt: "" }),
+    m = (0, n.forwardRef)(function (e, t) {
         let {
-                id: n,
-                balance: a,
-                balanceWidgetMode: h = l.k.DEFAULT,
-                showNotificationBadge: m,
-                onClick: g,
-                onMouseDown: E,
-                disabled: A,
-                isInModalOverlay: I,
-                className: T,
+                id: l,
+                balance: r,
+                balanceWidgetMode: m = o.k.DEFAULT,
+                showNotificationBadge: h,
+                onClick: x,
+                onMouseDown: b,
+                disabled: g,
+                isInModalOverlay: y,
+                className: E,
             } = e,
-            [y, S] = (0, i.useState)(!1),
-            v = (0, i.useMemo)(() => p(h, y), [h, y]),
-            [C, b] = (0, i.useState)(!1),
-            [N, R] = (0, i.useState)(!1),
-            [O, D] = (0, i.useState)(2700),
-            L = null === a;
-        (0, i.useEffect)(() => {
-            L &&
-                !C &&
-                (b(!0),
+            [f, v] = (0, n.useState)(!1),
+            S = (0, n.useMemo)(() => (m === o.k.SELECTED ? d.wH : f ? d.mr : d.Ay), [m, f]),
+            [j, T] = (0, n.useState)(!1),
+            [C, P] = (0, n.useState)(!1),
+            [R, A] = (0, n.useState)(2700),
+            _ = null === r;
+        (0, n.useEffect)(() => {
+            _ &&
+                !j &&
+                (T(!0),
                 setTimeout(() => {
-                    R(!0);
+                    P(!0);
                 }, 500));
-        }, [L, b, C]),
-            (0, i.useEffect)(() => {
-                N && !L && b(!1);
-            }, [L, N]);
-        let w = L || C,
-            x = C ? null : a,
-            [P, M] = (0, i.useState)(null),
-            k = (0, i.useRef)(null),
-            U = (0, i.useCallback)(() => {
-                (k.current = null), M(null);
+        }, [_, T, j]),
+            (0, n.useEffect)(() => {
+                C && !_ && T(!1);
+            }, [_, C]);
+        let N = _ || j,
+            I = j ? null : r,
+            [k, D] = (0, n.useState)(null),
+            M = (0, n.useRef)(null),
+            O = (0, n.useCallback)(() => {
+                (M.current = null), D(null);
             }, []),
-            G = (0, i.useCallback)(
+            B = (0, n.useCallback)(
                 (e) => {
-                    let t = P === k.current;
-                    e > 0 && ("earn" !== P || !t) && M("earn");
+                    let t = k === M.current;
+                    e > 0 && ("earn" !== k || !t) && D("earn");
                 },
-                [M, P],
-            ),
-            V = { currentAnimationType: P, animationTypeRef: k, onSetAnimationDurationMS: D };
-        return (0, r.jsx)(o.DUT, {
-            onClick: w ? void 0 : g,
-            className: s()(d.vk, { [d.r9]: A }),
-            id: n ?? f,
-            children: (0, r.jsxs)("span", {
-                onMouseDown: E,
-                onMouseEnter: A ? void 0 : () => S(!0),
-                onMouseLeave: A ? void 0 : () => S(!1),
+                [D, k],
+            );
+        return (0, a.jsx)(s.DUT, {
+            onClick: N ? void 0 : x,
+            className: i()(d.vk, { [d.r9]: g }),
+            id: l ?? "balance-widget-pill",
+            children: (0, a.jsxs)("span", {
+                onMouseDown: b,
+                onMouseEnter: g ? void 0 : () => v(!0),
+                onMouseLeave: g ? void 0 : () => v(!1),
                 ref: t,
-                className: s()(d.kL, v, T, { [d.En]: w, [d.dA]: I, [d.r9]: A }),
+                className: i()(d.kL, S, E, { [d.En]: N, [d.dA]: y, [d.r9]: g }),
                 children: [
-                    (0, r.jsx)("div", {
-                        className: s()(d.hr, w ? d.nr : void 0),
-                        children: (0, r.jsx)(c.Ay, { ...V }),
+                    (0, a.jsx)("div", {
+                        className: i()(d.hr, N ? d.nr : void 0),
+                        children: (0, a.jsx)(c.Ay, {
+                            currentAnimationType: k,
+                            animationTypeRef: M,
+                            onSetAnimationDurationMS: A,
+                        }),
                     }),
-                    (0, r.jsx)(u.A, {
-                        value: x,
-                        onValueChange: G,
-                        onValueReached: U,
-                        targetTotalCounterTime: O,
-                        className: w ? d.F : void 0,
+                    (0, a.jsx)(u.A, {
+                        value: I,
+                        onValueChange: B,
+                        onValueReached: O,
+                        targetTotalCounterTime: R,
+                        className: N ? d.F : void 0,
                     }),
-                    m && (0, r.jsx)(_, {}),
+                    h && (0, a.jsx)(p, {}),
                 ],
             }),
         });

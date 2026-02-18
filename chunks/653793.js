@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { A: () => o });
-var r = n(627968),
-    i = n(503698),
-    a = n.n(i),
-    s = n(634517);
-let o = (e) => {
-    let { children: t, overflowable: n = !1 } = e;
-    return (0, r.jsx)("div", { className: a()(s.N, { [s.L]: n }), children: t });
+t.d(r, { A: () => a });
+var d = t(627968),
+    l = t(503698),
+    c = t.n(l),
+    o = t(634517);
+let a = (e) => {
+    let { children: r, overflowable: t = !1 } = e;
+    return (0, d.jsx)("div", { className: c()(o.N, { [o.L]: t }), children: r });
 };

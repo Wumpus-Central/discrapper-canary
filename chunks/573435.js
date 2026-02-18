@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { Al: () => eo, Ay: () => es, hW: () => c });
+n.d(t, { Al: () => ea, Ay: () => es, hW: () => c });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a);
+    s = n(503698),
+    a = n.n(s);
 n(883392);
 var o = n(398094),
     l = n(778712),
@@ -190,54 +190,54 @@ function f(e) {
     let t = 80,
         n = 0,
         i = 4,
-        a = 12;
+        s = 12;
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
         viewBox: "0 0 1 1",
         children: [
             (0, r.jsx)("circle", { fill: "white", cx: t / 2 / t, cy: t / 2 / t, r: t / 2 / t }),
-            (0, r.jsx)("circle", { fill: "black", cx: (t - a - n) / t, cy: (t - a - n) / t, r: (a + i) / t }),
+            (0, r.jsx)("circle", { fill: "black", cx: (t - s - n) / t, cy: (t - s - n) / t, r: (s + i) / t }),
         ],
     });
 }
-function h(e, t, n) {
+function p(e, t, n) {
     let i = (0, l.Kj)(t),
-        a = 80,
-        s = 32 === i.size,
-        o = 8 * !!s,
-        u = s ? 2 : 4,
-        c = s ? 24 : 12;
+        s = 80,
+        a = 32 === i.size,
+        o = 8 * !!a,
+        u = a ? 2 : 4,
+        c = a ? 24 : 12;
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
         viewBox: "0 0 1 1",
         children: [
-            (0, r.jsx)("circle", { fill: "white", cx: a / 2 / a, cy: a / 2 / a, r: a / 2 / a, opacity: n }),
-            (0, r.jsx)("circle", { fill: "black", cx: (a - c + o) / a, cy: (c - o / 2) / a, r: (c + u) / a }),
+            (0, r.jsx)("circle", { fill: "white", cx: s / 2 / s, cy: s / 2 / s, r: s / 2 / s, opacity: n }),
+            (0, r.jsx)("circle", { fill: "black", cx: (s - c + o) / s, cy: (c - o / 2) / s, r: (c + u) / s }),
         ],
     });
 }
-function p(e) {
+function h(e) {
     let t = 56,
         n = 0,
         i = 4,
-        a = 10;
+        s = 10;
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
         viewBox: "0 0 1 1",
         children: [
             (0, r.jsx)("circle", { fill: "white", cx: t / 2 / t, cy: t / 2 / t, r: t / 2 / t }),
-            (0, r.jsx)("circle", { fill: "black", cx: (t - a - n) / t, cy: (t - a - n) / t, r: (a + i) / t }),
+            (0, r.jsx)("circle", { fill: "black", cx: (t - s - n) / t, cy: (t - s - n) / t, r: (s + i) / t }),
         ],
     });
 }
-function g(e, t) {
+function m(e, t) {
     let n = 56,
         i = 0,
-        a = 4,
-        s = 16;
+        s = 4,
+        a = 16;
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -246,12 +246,12 @@ function g(e, t) {
             (0, r.jsx)("circle", { fill: "white", cx: n / 2 / n, cy: n / 2 / n, r: n / 2 / n }),
             (0, r.jsx)("rect", {
                 fill: "black",
-                x: (n - t - a - i) / n,
-                y: (-a - i) / n,
-                width: (t + 2 * a) / n,
-                height: (s + 2 * a) / n,
-                rx: (s / 2 + a) / n,
-                ry: (s / 2 + a) / n,
+                x: (n - t - s - i) / n,
+                y: (-s - i) / n,
+                width: (t + 2 * s) / n,
+                height: (a + 2 * s) / n,
+                rx: (a / 2 + s) / n,
+                ry: (a / 2 + s) / n,
             }),
         ],
     });
@@ -268,7 +268,7 @@ function E(e, t) {
         ],
     });
 }
-function A(e) {
+function g(e) {
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -279,7 +279,7 @@ function A(e) {
         ],
     });
 }
-function I(e) {
+function A(e) {
     let t = 48;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -291,110 +291,110 @@ function I(e) {
         ],
     });
 }
-function T(e) {
+function I(e) {
     let t = e.size,
         n = e.size / 1.5,
         r = +n,
         i = n / 2 / t,
-        a = (0.5 * n) / t + r / 2 / t,
-        s = (3 + r / 2) / t;
+        s = (0.5 * n) / t + r / 2 / t,
+        a = (3 + r / 2) / t;
     return {
         totalSize: t,
         backAvatarSize: n,
         frontAvatarSize: r,
         backAvatarCenter: i,
-        frontAvatarCenter: a,
-        strokeMaskRadius: s,
+        frontAvatarCenter: s,
+        strokeMaskRadius: a,
     };
+}
+function T(e) {
+    let {
+        totalSize: t,
+        backAvatarSize: n,
+        frontAvatarSize: i,
+        backAvatarCenter: s,
+        frontAvatarCenter: a,
+        strokeMaskRadius: o,
+    } = e;
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            (0, r.jsx)("circle", { fill: "white", cx: s, cy: s, r: n / 2 / t }),
+            (0, r.jsx)("circle", { fill: "black", cx: a, cy: a, r: o }),
+            (0, r.jsx)("circle", { fill: "black", cx: a, cy: a, r: i / 2 / t }),
+        ],
+    });
+}
+function S(e, t) {
+    let n = I((0, l.Kj)(t));
+    return (0, r.jsx)("mask", { id: e, maskContentUnits: "objectBoundingBox", viewBox: "0 0 1 1", children: T(n) });
 }
 function y(e) {
     let {
         totalSize: t,
         backAvatarSize: n,
         frontAvatarSize: i,
-        backAvatarCenter: a,
-        frontAvatarCenter: s,
+        backAvatarCenter: s,
+        frontAvatarCenter: a,
         strokeMaskRadius: o,
     } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)("circle", { fill: "white", cx: a, cy: a, r: n / 2 / t }),
-            (0, r.jsx)("circle", { fill: "black", cx: s, cy: s, r: o }),
-            (0, r.jsx)("circle", { fill: "black", cx: s, cy: s, r: i / 2 / t }),
+            (0, r.jsx)("circle", { fill: "white", cx: s, cy: s, r: n / 2 / t }),
+            (0, r.jsx)("circle", { fill: "black", cx: a, cy: a, r: o }),
+            (0, r.jsx)("circle", { fill: "white", cx: a, cy: a, r: i / 2 / t }),
         ],
     });
 }
-function S(e, t) {
-    let n = T((0, l.Kj)(t));
+function v(e, t) {
+    let n = I((0, l.Kj)(t));
     return (0, r.jsx)("mask", { id: e, maskContentUnits: "objectBoundingBox", viewBox: "0 0 1 1", children: y(n) });
 }
-function v(e) {
-    let {
-        totalSize: t,
-        backAvatarSize: n,
-        frontAvatarSize: i,
-        backAvatarCenter: a,
-        frontAvatarCenter: s,
-        strokeMaskRadius: o,
-    } = e;
-    return (0, r.jsxs)(r.Fragment, {
-        children: [
-            (0, r.jsx)("circle", { fill: "white", cx: a, cy: a, r: n / 2 / t }),
-            (0, r.jsx)("circle", { fill: "black", cx: s, cy: s, r: o }),
-            (0, r.jsx)("circle", { fill: "white", cx: s, cy: s, r: i / 2 / t }),
-        ],
-    });
-}
-function C(e, t) {
-    let n = T((0, l.Kj)(t));
-    return (0, r.jsx)("mask", { id: e, maskContentUnits: "objectBoundingBox", viewBox: "0 0 1 1", children: v(n) });
-}
-function b(e, t) {
+function N(e, t) {
     let n = (0, l.Kj)(t),
-        i = T(n),
-        a = i.totalSize,
-        s = n.status / 2;
+        i = I(n),
+        s = i.totalSize,
+        a = n.status / 2;
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
         viewBox: "0 0 1 1",
         children: [
-            v(i),
+            y(i),
             (0, r.jsx)("circle", {
                 fill: "black",
-                cx: (a - s - n.offset) / a,
-                cy: (a - s - n.offset) / a,
-                r: (s + n.stroke) / a,
+                cx: (s - a - n.offset) / s,
+                cy: (s - a - n.offset) / s,
+                r: (a + n.stroke) / s,
             }),
         ],
     });
 }
-function N(e, t) {
+function C(e, t) {
     let n = (0, l.Kj)(t),
-        i = T(n),
-        a = i.totalSize,
-        s = (2.5 * n.status - n.status + 2 * n.stroke) / 2,
-        o = n.size - n.status - s - n.offset,
+        i = I(n),
+        s = i.totalSize,
+        a = (2.5 * n.status - n.status + 2 * n.stroke) / 2,
+        o = n.size - n.status - a - n.offset,
         u = n.status + 2 * n.stroke;
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
         viewBox: "0 0 1 1",
         children: [
-            v(i),
+            y(i),
             (0, r.jsx)("rect", {
                 fill: "black",
-                x: o / a,
-                y: (a - n.status - n.stroke - n.offset) / a,
-                width: (2.5 * n.status + 2 * n.stroke) / a,
-                height: u / a,
-                rx: u / 2 / a,
-                ry: u / 2 / a,
+                x: o / s,
+                y: (s - n.status - n.stroke - n.offset) / s,
+                width: (2.5 * n.status + 2 * n.stroke) / s,
+                height: u / s,
+                rx: u / 2 / s,
+                ry: u / 2 / s,
             }),
         ],
     });
 }
-function R(e) {
+function b(e) {
     return (0, r.jsx)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -405,7 +405,7 @@ function R(e) {
         }),
     });
 }
-function O(e) {
+function R(e) {
     let t = `${e}-gradient`;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -428,7 +428,7 @@ function O(e) {
         ],
     });
 }
-function D(e) {
+function O(e) {
     return (0, r.jsx)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -436,7 +436,7 @@ function D(e) {
         children: (0, r.jsx)("circle", { fill: "white", cx: 0.5, cy: 0.5, r: 0.5 }),
     });
 }
-function L(e, t) {
+function D(e, t) {
     let n = (0, l.Kj)(t),
         i = n.status / 2;
     return (0, r.jsxs)("mask", {
@@ -459,26 +459,26 @@ function L(e, t) {
         ],
     });
 }
-function w(e, t) {
+function L(e, t) {
     let n = (0, l.Kj)(t),
         i = n.status / 2,
-        a = (i + n.stroke) / n.size / o.Xq,
-        s = _((n.size - i - n.offset) / n.size);
+        s = (i + n.stroke) / n.size / o.Xq,
+        a = _((n.size - i - n.offset) / n.size);
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
         viewBox: "0 0 1 1",
         children: [
             (0, r.jsx)("rect", { fill: "white", x: 0, y: 0, width: "100%", height: "100%" }),
-            (0, r.jsx)("circle", { fill: "black", cx: s, cy: s, r: a }),
+            (0, r.jsx)("circle", { fill: "black", cx: a, cy: a, r: s }),
         ],
     });
 }
-function x(e, t) {
+function w(e, t) {
     let n = (0, l.Kj)(t),
         i = (2.5 * n.status - n.status + 2 * n.stroke) / 2,
-        a = n.size - n.status - i - n.offset,
-        s = n.status + 2 * n.stroke;
+        s = n.size - n.status - i - n.offset,
+        a = n.status + 2 * n.stroke;
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -492,21 +492,21 @@ function x(e, t) {
             }),
             (0, r.jsx)("rect", {
                 fill: "black",
-                x: a / n.size,
+                x: s / n.size,
                 y: (n.size - n.status - n.stroke - n.offset) / n.size,
                 width: (2.5 * n.status + 2 * n.stroke) / n.size,
-                height: s / n.size,
-                rx: s / 2 / n.size,
-                ry: s / 2 / n.size,
+                height: a / n.size,
+                rx: a / 2 / n.size,
+                ry: a / 2 / n.size,
             }),
         ],
     });
 }
-function P(e, t) {
+function x(e, t) {
     let n = (0, l.Kj)(t),
         i = (2.5 * n.status - n.status + 2 * n.stroke) / 2,
-        a = _((n.size - n.status - n.stroke - n.offset) / n.size),
-        s = _((n.size - n.status - i - n.offset) / n.size),
+        s = _((n.size - n.status - n.stroke - n.offset) / n.size),
+        a = _((n.size - n.status - i - n.offset) / n.size),
         u = (2.5 * n.status + 2 * n.stroke) / n.size / o.Xq,
         c = (n.status + 2 * n.stroke) / n.size / o.Xq,
         d = _(c / 2 / n.size);
@@ -516,7 +516,7 @@ function P(e, t) {
         viewBox: "0 0 1 1",
         children: [
             (0, r.jsx)("rect", { fill: "white", x: 0, y: 0, width: "100%", height: "100%" }),
-            (0, r.jsx)("rect", { fill: "black", x: s, y: a, width: u, height: c, rx: d, ry: d }),
+            (0, r.jsx)("rect", { fill: "black", x: a, y: s, width: u, height: c, rx: d, ry: d }),
         ],
     });
 }
@@ -545,11 +545,11 @@ function M(e, t) {
         ],
     });
 }
-function k(e, t) {
+function P(e, t) {
     let n = (0, l.Kj)(t),
         i = _((n.size - n.status - n.stroke - n.offset) / n.size),
-        a = _((n.size - 1.5 * n.status - n.stroke - n.offset) / n.size),
-        s = (n.status + 2 * n.stroke) / n.size / o.Xq,
+        s = _((n.size - 1.5 * n.status - n.stroke - n.offset) / n.size),
+        a = (n.status + 2 * n.stroke) / n.size / o.Xq,
         u = (1.5 * n.status + 2 * n.stroke) / n.size / o.Xq;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -560,8 +560,8 @@ function k(e, t) {
             (0, r.jsx)("rect", {
                 fill: "black",
                 x: i,
-                y: a,
-                width: s,
+                y: s,
+                width: a,
                 height: u,
                 rx: ((1.5 * n.status + 2 * n.stroke) * 0.2) / n.size,
                 ry: ((1.5 * n.status + 2 * n.stroke) * 0.2) / n.size,
@@ -569,7 +569,7 @@ function k(e, t) {
         ],
     });
 }
-function U(e) {
+function k(e) {
     let t = 8,
         n = 12;
     return (0, r.jsxs)("mask", {
@@ -591,7 +591,7 @@ function U(e) {
         ],
     });
 }
-function G(e) {
+function U(e) {
     return (0, r.jsx)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -615,7 +615,7 @@ function G(e) {
         }),
     });
 }
-function F(e) {
+function G(e) {
     let t = 8;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -627,7 +627,7 @@ function F(e) {
         ],
     });
 }
-function V(e) {
+function F(e) {
     let t = 8;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -647,7 +647,7 @@ function V(e) {
         ],
     });
 }
-function B(e) {
+function V(e) {
     let t = 8;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -659,7 +659,7 @@ function B(e) {
         ],
     });
 }
-function j(e) {
+function B(e) {
     let t = 8;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -691,7 +691,7 @@ function H(e) {
         }),
     });
 }
-function Y(e) {
+function j(e) {
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -705,7 +705,7 @@ function Y(e) {
         ],
     });
 }
-function W(e) {
+function Y(e) {
     return (0, r.jsx)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -716,7 +716,7 @@ function W(e) {
         }),
     });
 }
-function K(e) {
+function W(e) {
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -727,7 +727,7 @@ function K(e) {
         ],
     });
 }
-function $(e) {
+function K(e) {
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -750,7 +750,7 @@ function z(e) {
         ],
     });
 }
-function q(e) {
+function $(e) {
     return (0, r.jsx)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -761,7 +761,7 @@ function q(e) {
         }),
     });
 }
-function X(e) {
+function q(e) {
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -793,7 +793,7 @@ function Z(e) {
         ],
     });
 }
-function Q(e) {
+function X(e) {
     let t = 16;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -805,8 +805,8 @@ function Q(e) {
         ],
     });
 }
-function J(e, t, n, i) {
-    let a = 4;
+function Q(e, t, n, i) {
+    let s = 4;
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -815,14 +815,14 @@ function J(e, t, n, i) {
             (0, r.jsx)("rect", { fill: "white", x: 0, y: 0, width: "100%", height: "100%" }),
             (0, r.jsx)("circle", {
                 fill: "black",
-                cx: (t - n / 2 + a) / t,
-                cy: (t - n / 2 + a) / t,
+                cx: (t - n / 2 + s) / t,
+                cy: (t - n / 2 + s) / t,
                 r: (n / 2 + i) / t,
             }),
         ],
     });
 }
-function ee(e) {
+function J(e) {
     let t = 24;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -834,6 +834,14 @@ function ee(e) {
         ],
     });
 }
+function ee(e) {
+    return (0, r.jsx)("mask", {
+        id: e,
+        maskContentUnits: "objectBoundingBox",
+        viewBox: "0 0 1 1",
+        children: (0, r.jsx)("rect", { fill: "white", rx: 0.3, ry: 0.3, width: 1, height: 1 }),
+    });
+}
 function et(e) {
     return (0, r.jsx)("mask", {
         id: e,
@@ -843,14 +851,6 @@ function et(e) {
     });
 }
 function en(e) {
-    return (0, r.jsx)("mask", {
-        id: e,
-        maskContentUnits: "objectBoundingBox",
-        viewBox: "0 0 1 1",
-        children: (0, r.jsx)("rect", { fill: "white", rx: 0.3, ry: 0.3, width: 1, height: 1 }),
-    });
-}
-function er(e) {
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -861,7 +861,7 @@ function er(e) {
         ],
     });
 }
-function ei(e) {
+function er(e) {
     return (0, r.jsx)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -872,27 +872,27 @@ function ei(e) {
         }),
     });
 }
-function ea(e) {
+function ei(e) {
     let {
         mask: t,
         width: n = d,
         height: i = d,
-        rightOverhang: a = 0,
+        rightOverhang: s = 0,
         bottomOverhang: o = 0,
         children: l,
         className: c,
         style: _,
         "aria-label": f,
-        ...h
+        ...p
     } = e;
     return (0, r.jsx)("svg", {
-        width: n + a,
+        width: n + s,
         height: i + o,
-        className: s()(u.J, c),
-        viewBox: `0 0 ${n + a} ${i + o}`,
+        className: a()(u.J, c),
+        viewBox: `0 0 ${n + s} ${i + o}`,
         style: _,
         "aria-label": f,
-        ...h,
+        ...p,
         children: (0, r.jsx)("foreignObject", {
             x: 0,
             y: 0,
@@ -904,170 +904,170 @@ function ea(e) {
         }),
     });
 }
-ea.Masks = c;
-let es = ea,
-    eo = i.memo(
+ei.Masks = c;
+let es = ei,
+    ea = i.memo(
         function () {
             return (0, r.jsxs)("svg", {
                 viewBox: "0 0 1 1",
                 style: { position: "absolute", pointerEvents: "none", top: -1, left: -1, width: 1, height: 1 },
                 "aria-hidden": !0,
                 children: [
-                    R("svg-mask-squircle"),
+                    b("svg-mask-squircle"),
                     E("svg-mask-header-bar-badge-top", 0.25),
                     E("svg-mask-header-bar-badge-bottom", 0.75),
-                    I("svg-mask-voice-user-summary-item"),
-                    O("svg-mask-vertical-fade"),
-                    A("svg-mask-panel-button"),
-                    p("svg-mask-channel-call-control-button"),
-                    g("svg-mask-channel-call-control-button-badge-16", 16),
-                    g("svg-mask-channel-call-control-button-badge-22", 22),
-                    g("svg-mask-channel-call-control-button-badge-29", 29),
-                    D("svg-mask-avatar-default"),
-                    L("svg-mask-avatar-status-round-16", l._3.SIZE_16),
-                    w("svg-mask-avatar-decoration-status-round-16", l._3.SIZE_16),
+                    A("svg-mask-voice-user-summary-item"),
+                    R("svg-mask-vertical-fade"),
+                    g("svg-mask-panel-button"),
+                    h("svg-mask-channel-call-control-button"),
+                    m("svg-mask-channel-call-control-button-badge-16", 16),
+                    m("svg-mask-channel-call-control-button-badge-22", 22),
+                    m("svg-mask-channel-call-control-button-badge-29", 29),
+                    O("svg-mask-avatar-default"),
+                    D("svg-mask-avatar-status-round-16", l._3.SIZE_16),
+                    L("svg-mask-avatar-decoration-status-round-16", l._3.SIZE_16),
                     M("svg-mask-avatar-status-mobile-16", l._3.SIZE_16),
-                    k("svg-mask-avatar-decoration-status-mobile-16", l._3.SIZE_16),
-                    x("svg-mask-avatar-status-typing-16", l._3.SIZE_16),
-                    P("svg-mask-avatar-decoration-status-typing-16", l._3.SIZE_16),
-                    L("svg-mask-avatar-status-round-20", l._3.SIZE_20),
-                    w("svg-mask-avatar-decoration-status-round-20", l._3.SIZE_20),
+                    P("svg-mask-avatar-decoration-status-mobile-16", l._3.SIZE_16),
+                    w("svg-mask-avatar-status-typing-16", l._3.SIZE_16),
+                    x("svg-mask-avatar-decoration-status-typing-16", l._3.SIZE_16),
+                    D("svg-mask-avatar-status-round-20", l._3.SIZE_20),
+                    L("svg-mask-avatar-decoration-status-round-20", l._3.SIZE_20),
                     M("svg-mask-avatar-status-mobile-20", l._3.SIZE_20),
-                    k("svg-mask-avatar-decoration-status-mobile-20", l._3.SIZE_20),
-                    x("svg-mask-avatar-status-typing-20", l._3.SIZE_20),
-                    P("svg-mask-avatar-decoration-status-typing-20", l._3.SIZE_20),
-                    L("svg-mask-avatar-status-round-24", l._3.SIZE_24),
-                    w("svg-mask-avatar-decoration-status-round-24", l._3.SIZE_24),
+                    P("svg-mask-avatar-decoration-status-mobile-20", l._3.SIZE_20),
+                    w("svg-mask-avatar-status-typing-20", l._3.SIZE_20),
+                    x("svg-mask-avatar-decoration-status-typing-20", l._3.SIZE_20),
+                    D("svg-mask-avatar-status-round-24", l._3.SIZE_24),
+                    L("svg-mask-avatar-decoration-status-round-24", l._3.SIZE_24),
                     M("svg-mask-avatar-status-mobile-24", l._3.SIZE_24),
-                    k("svg-mask-avatar-decoration-status-mobile-24", l._3.SIZE_24),
-                    x("svg-mask-avatar-status-typing-24", l._3.SIZE_24),
-                    P("svg-mask-avatar-decoration-status-typing-24", l._3.SIZE_24),
-                    L("svg-mask-avatar-status-round-32", l._3.SIZE_32),
-                    w("svg-mask-avatar-decoration-status-round-32", l._3.SIZE_32),
+                    P("svg-mask-avatar-decoration-status-mobile-24", l._3.SIZE_24),
+                    w("svg-mask-avatar-status-typing-24", l._3.SIZE_24),
+                    x("svg-mask-avatar-decoration-status-typing-24", l._3.SIZE_24),
+                    D("svg-mask-avatar-status-round-32", l._3.SIZE_32),
+                    L("svg-mask-avatar-decoration-status-round-32", l._3.SIZE_32),
                     M("svg-mask-avatar-status-mobile-32", l._3.SIZE_32),
-                    k("svg-mask-avatar-decoration-status-mobile-32", l._3.SIZE_32),
-                    x("svg-mask-avatar-status-typing-32", l._3.SIZE_32),
-                    P("svg-mask-avatar-decoration-status-typing-32", l._3.SIZE_32),
-                    L("svg-mask-avatar-status-round-40", l._3.SIZE_40),
-                    w("svg-mask-avatar-decoration-status-round-40", l._3.SIZE_40),
+                    P("svg-mask-avatar-decoration-status-mobile-32", l._3.SIZE_32),
+                    w("svg-mask-avatar-status-typing-32", l._3.SIZE_32),
+                    x("svg-mask-avatar-decoration-status-typing-32", l._3.SIZE_32),
+                    D("svg-mask-avatar-status-round-40", l._3.SIZE_40),
+                    L("svg-mask-avatar-decoration-status-round-40", l._3.SIZE_40),
                     M("svg-mask-avatar-status-mobile-40", l._3.SIZE_40),
-                    k("svg-mask-avatar-decoration-status-mobile-40", l._3.SIZE_40),
-                    x("svg-mask-avatar-status-typing-40", l._3.SIZE_40),
-                    P("svg-mask-avatar-decoration-status-typing-40", l._3.SIZE_40),
-                    L("svg-mask-avatar-status-round-44", l._3.SIZE_44),
-                    w("svg-mask-avatar-decoration-status-round-44", l._3.SIZE_44),
+                    P("svg-mask-avatar-decoration-status-mobile-40", l._3.SIZE_40),
+                    w("svg-mask-avatar-status-typing-40", l._3.SIZE_40),
+                    x("svg-mask-avatar-decoration-status-typing-40", l._3.SIZE_40),
+                    D("svg-mask-avatar-status-round-44", l._3.SIZE_44),
+                    L("svg-mask-avatar-decoration-status-round-44", l._3.SIZE_44),
                     M("svg-mask-avatar-status-mobile-44", l._3.SIZE_44),
-                    k("svg-mask-avatar-decoration-status-mobile-44", l._3.SIZE_44),
-                    x("svg-mask-avatar-status-typing-44", l._3.SIZE_44),
-                    P("svg-mask-avatar-decoration-status-typing-44", l._3.SIZE_44),
-                    L("svg-mask-avatar-status-round-48", l._3.SIZE_48),
-                    w("svg-mask-avatar-decoration-status-round-48", l._3.SIZE_48),
+                    P("svg-mask-avatar-decoration-status-mobile-44", l._3.SIZE_44),
+                    w("svg-mask-avatar-status-typing-44", l._3.SIZE_44),
+                    x("svg-mask-avatar-decoration-status-typing-44", l._3.SIZE_44),
+                    D("svg-mask-avatar-status-round-48", l._3.SIZE_48),
+                    L("svg-mask-avatar-decoration-status-round-48", l._3.SIZE_48),
                     M("svg-mask-avatar-status-mobile-48", l._3.SIZE_48),
-                    k("svg-mask-avatar-decoration-status-mobile-48", l._3.SIZE_48),
-                    x("svg-mask-avatar-status-typing-48", l._3.SIZE_48),
-                    P("svg-mask-avatar-decoration-status-typing-48", l._3.SIZE_48),
-                    L("svg-mask-avatar-status-round-56", l._3.SIZE_56),
-                    w("svg-mask-avatar-decoration-status-round-56", l._3.SIZE_56),
+                    P("svg-mask-avatar-decoration-status-mobile-48", l._3.SIZE_48),
+                    w("svg-mask-avatar-status-typing-48", l._3.SIZE_48),
+                    x("svg-mask-avatar-decoration-status-typing-48", l._3.SIZE_48),
+                    D("svg-mask-avatar-status-round-56", l._3.SIZE_56),
+                    L("svg-mask-avatar-decoration-status-round-56", l._3.SIZE_56),
                     M("svg-mask-avatar-status-mobile-56", l._3.SIZE_56),
-                    k("svg-mask-avatar-decoration-status-mobile-56", l._3.SIZE_56),
-                    x("svg-mask-avatar-status-typing-56", l._3.SIZE_56),
-                    P("svg-mask-avatar-decoration-status-typing-56", l._3.SIZE_56),
-                    L("svg-mask-avatar-status-round-72", l._3.SIZE_72),
-                    w("svg-mask-avatar-decoration-status-round-72", l._3.SIZE_72),
+                    P("svg-mask-avatar-decoration-status-mobile-56", l._3.SIZE_56),
+                    w("svg-mask-avatar-status-typing-56", l._3.SIZE_56),
+                    x("svg-mask-avatar-decoration-status-typing-56", l._3.SIZE_56),
+                    D("svg-mask-avatar-status-round-72", l._3.SIZE_72),
+                    L("svg-mask-avatar-decoration-status-round-72", l._3.SIZE_72),
                     M("svg-mask-avatar-status-mobile-72", l._3.SIZE_72),
-                    k("svg-mask-avatar-decoration-status-mobile-72", l._3.SIZE_72),
-                    x("svg-mask-avatar-status-typing-72", l._3.SIZE_72),
-                    P("svg-mask-avatar-decoration-status-typing-72", l._3.SIZE_72),
-                    L("svg-mask-avatar-status-round-80", l._3.SIZE_80),
-                    w("svg-mask-avatar-decoration-status-round-80", l._3.SIZE_80),
+                    P("svg-mask-avatar-decoration-status-mobile-72", l._3.SIZE_72),
+                    w("svg-mask-avatar-status-typing-72", l._3.SIZE_72),
+                    x("svg-mask-avatar-decoration-status-typing-72", l._3.SIZE_72),
+                    D("svg-mask-avatar-status-round-80", l._3.SIZE_80),
+                    L("svg-mask-avatar-decoration-status-round-80", l._3.SIZE_80),
                     M("svg-mask-avatar-status-mobile-80", l._3.SIZE_80),
-                    k("svg-mask-avatar-decoration-status-mobile-80", l._3.SIZE_80),
-                    x("svg-mask-avatar-status-typing-80", l._3.SIZE_80),
-                    P("svg-mask-avatar-decoration-status-typing-80", l._3.SIZE_80),
-                    L("svg-mask-avatar-status-round-96", l._3.SIZE_96),
-                    w("svg-mask-avatar-decoration-status-round-96", l._3.SIZE_96),
+                    P("svg-mask-avatar-decoration-status-mobile-80", l._3.SIZE_80),
+                    w("svg-mask-avatar-status-typing-80", l._3.SIZE_80),
+                    x("svg-mask-avatar-decoration-status-typing-80", l._3.SIZE_80),
+                    D("svg-mask-avatar-status-round-96", l._3.SIZE_96),
+                    L("svg-mask-avatar-decoration-status-round-96", l._3.SIZE_96),
                     M("svg-mask-avatar-status-mobile-96", l._3.SIZE_96),
-                    k("svg-mask-avatar-decoration-status-mobile-96", l._3.SIZE_96),
-                    x("svg-mask-avatar-status-typing-96", l._3.SIZE_96),
-                    P("svg-mask-avatar-decoration-status-typing-96", l._3.SIZE_96),
-                    L("svg-mask-avatar-status-round-120", l._3.SIZE_120),
-                    w("svg-mask-avatar-decoration-status-round-120", l._3.SIZE_120),
+                    P("svg-mask-avatar-decoration-status-mobile-96", l._3.SIZE_96),
+                    w("svg-mask-avatar-status-typing-96", l._3.SIZE_96),
+                    x("svg-mask-avatar-decoration-status-typing-96", l._3.SIZE_96),
+                    D("svg-mask-avatar-status-round-120", l._3.SIZE_120),
+                    L("svg-mask-avatar-decoration-status-round-120", l._3.SIZE_120),
                     M("svg-mask-avatar-status-mobile-120", l._3.SIZE_120),
-                    k("svg-mask-avatar-decoration-status-mobile-120", l._3.SIZE_120),
-                    x("svg-mask-avatar-status-typing-120", l._3.SIZE_120),
-                    P("svg-mask-avatar-decoration-status-typing-120", l._3.SIZE_120),
-                    C("svg-mask-diagonal-facepile-16", l._3.SIZE_16),
+                    P("svg-mask-avatar-decoration-status-mobile-120", l._3.SIZE_120),
+                    w("svg-mask-avatar-status-typing-120", l._3.SIZE_120),
+                    x("svg-mask-avatar-decoration-status-typing-120", l._3.SIZE_120),
+                    v("svg-mask-diagonal-facepile-16", l._3.SIZE_16),
                     S("svg-mask-diagonal-facepile-back-16", l._3.SIZE_16),
-                    b("svg-mask-diagonal-facepile-status-16", l._3.SIZE_16),
-                    N("svg-mask-diagonal-facepile-typing-16", l._3.SIZE_16),
-                    C("svg-mask-diagonal-facepile-20", l._3.SIZE_20),
+                    N("svg-mask-diagonal-facepile-status-16", l._3.SIZE_16),
+                    C("svg-mask-diagonal-facepile-typing-16", l._3.SIZE_16),
+                    v("svg-mask-diagonal-facepile-20", l._3.SIZE_20),
                     S("svg-mask-diagonal-facepile-back-20", l._3.SIZE_20),
-                    b("svg-mask-diagonal-facepile-status-20", l._3.SIZE_20),
-                    N("svg-mask-diagonal-facepile-typing-20", l._3.SIZE_20),
-                    C("svg-mask-diagonal-facepile-24", l._3.SIZE_24),
+                    N("svg-mask-diagonal-facepile-status-20", l._3.SIZE_20),
+                    C("svg-mask-diagonal-facepile-typing-20", l._3.SIZE_20),
+                    v("svg-mask-diagonal-facepile-24", l._3.SIZE_24),
                     S("svg-mask-diagonal-facepile-back-24", l._3.SIZE_24),
-                    b("svg-mask-diagonal-facepile-status-24", l._3.SIZE_24),
-                    N("svg-mask-diagonal-facepile-typing-24", l._3.SIZE_24),
-                    C("svg-mask-diagonal-facepile-32", l._3.SIZE_32),
+                    N("svg-mask-diagonal-facepile-status-24", l._3.SIZE_24),
+                    C("svg-mask-diagonal-facepile-typing-24", l._3.SIZE_24),
+                    v("svg-mask-diagonal-facepile-32", l._3.SIZE_32),
                     S("svg-mask-diagonal-facepile-back-32", l._3.SIZE_32),
-                    b("svg-mask-diagonal-facepile-status-32", l._3.SIZE_32),
-                    N("svg-mask-diagonal-facepile-typing-32", l._3.SIZE_32),
-                    C("svg-mask-diagonal-facepile-40", l._3.SIZE_40),
+                    N("svg-mask-diagonal-facepile-status-32", l._3.SIZE_32),
+                    C("svg-mask-diagonal-facepile-typing-32", l._3.SIZE_32),
+                    v("svg-mask-diagonal-facepile-40", l._3.SIZE_40),
                     S("svg-mask-diagonal-facepile-back-40", l._3.SIZE_40),
-                    b("svg-mask-diagonal-facepile-status-40", l._3.SIZE_40),
-                    N("svg-mask-diagonal-facepile-typing-40", l._3.SIZE_40),
-                    C("svg-mask-diagonal-facepile-48", l._3.SIZE_48),
+                    N("svg-mask-diagonal-facepile-status-40", l._3.SIZE_40),
+                    C("svg-mask-diagonal-facepile-typing-40", l._3.SIZE_40),
+                    v("svg-mask-diagonal-facepile-48", l._3.SIZE_48),
                     S("svg-mask-diagonal-facepile-back-48", l._3.SIZE_48),
-                    b("svg-mask-diagonal-facepile-status-48", l._3.SIZE_48),
-                    N("svg-mask-diagonal-facepile-typing-48", l._3.SIZE_48),
-                    C("svg-mask-diagonal-facepile-56", l._3.SIZE_56),
+                    N("svg-mask-diagonal-facepile-status-48", l._3.SIZE_48),
+                    C("svg-mask-diagonal-facepile-typing-48", l._3.SIZE_48),
+                    v("svg-mask-diagonal-facepile-56", l._3.SIZE_56),
                     S("svg-mask-diagonal-facepile-back-56", l._3.SIZE_56),
-                    b("svg-mask-diagonal-facepile-status-56", l._3.SIZE_56),
-                    N("svg-mask-diagonal-facepile-typing-56", l._3.SIZE_56),
-                    C("svg-mask-diagonal-facepile-72", l._3.SIZE_72),
+                    N("svg-mask-diagonal-facepile-status-56", l._3.SIZE_56),
+                    C("svg-mask-diagonal-facepile-typing-56", l._3.SIZE_56),
+                    v("svg-mask-diagonal-facepile-72", l._3.SIZE_72),
                     S("svg-mask-diagonal-facepile-back-72", l._3.SIZE_72),
-                    b("svg-mask-diagonal-facepile-status-72", l._3.SIZE_72),
-                    N("svg-mask-diagonal-facepile-typing-72", l._3.SIZE_72),
-                    C("svg-mask-diagonal-facepile-80", l._3.SIZE_80),
+                    N("svg-mask-diagonal-facepile-status-72", l._3.SIZE_72),
+                    C("svg-mask-diagonal-facepile-typing-72", l._3.SIZE_72),
+                    v("svg-mask-diagonal-facepile-80", l._3.SIZE_80),
                     S("svg-mask-diagonal-facepile-back-80", l._3.SIZE_80),
-                    b("svg-mask-diagonal-facepile-status-80", l._3.SIZE_80),
-                    N("svg-mask-diagonal-facepile-typing-80", l._3.SIZE_80),
-                    C("svg-mask-diagonal-facepile-96", l._3.SIZE_96),
+                    N("svg-mask-diagonal-facepile-status-80", l._3.SIZE_80),
+                    C("svg-mask-diagonal-facepile-typing-80", l._3.SIZE_80),
+                    v("svg-mask-diagonal-facepile-96", l._3.SIZE_96),
                     S("svg-mask-diagonal-facepile-back-96", l._3.SIZE_96),
-                    b("svg-mask-diagonal-facepile-status-96", l._3.SIZE_96),
-                    N("svg-mask-diagonal-facepile-typing-96", l._3.SIZE_96),
-                    C("svg-mask-diagonal-facepile-120", l._3.SIZE_120),
+                    N("svg-mask-diagonal-facepile-status-96", l._3.SIZE_96),
+                    C("svg-mask-diagonal-facepile-typing-96", l._3.SIZE_96),
+                    v("svg-mask-diagonal-facepile-120", l._3.SIZE_120),
                     S("svg-mask-diagonal-facepile-back-120", l._3.SIZE_120),
-                    b("svg-mask-diagonal-facepile-status-120", l._3.SIZE_120),
-                    N("svg-mask-diagonal-facepile-typing-120", l._3.SIZE_120),
-                    U("svg-mask-status-online-mobile"),
-                    G("svg-mask-status-online-vr"),
-                    D("svg-mask-status-online"),
-                    F("svg-mask-status-idle"),
-                    V("svg-mask-status-dnd"),
-                    B("svg-mask-status-offline"),
-                    j("svg-mask-status-streaming"),
+                    N("svg-mask-diagonal-facepile-status-120", l._3.SIZE_120),
+                    C("svg-mask-diagonal-facepile-typing-120", l._3.SIZE_120),
+                    k("svg-mask-status-online-mobile"),
+                    U("svg-mask-status-online-vr"),
+                    O("svg-mask-status-online"),
+                    G("svg-mask-status-idle"),
+                    F("svg-mask-status-dnd"),
+                    V("svg-mask-status-offline"),
+                    B("svg-mask-status-streaming"),
                     H("svg-mask-status-typing"),
-                    Y("svg-mask-status-screenshare"),
+                    j("svg-mask-status-screenshare"),
                     f("svg-mask-avatar-voice-call-80"),
-                    h("svg-mask-avatar-call-icon", l._3.SIZE_56, 1),
-                    h("svg-mask-avatar-call-icon-32", l._3.SIZE_32, 0.5),
-                    W("svg-mask-sticker-rounded-rect"),
-                    K("svg-mask-chat-input-button-notification"),
-                    $("svg-mask-sticker-shop-notification"),
+                    p("svg-mask-avatar-call-icon", l._3.SIZE_56, 1),
+                    p("svg-mask-avatar-call-icon-32", l._3.SIZE_32, 0.5),
+                    Y("svg-mask-sticker-rounded-rect"),
+                    W("svg-mask-chat-input-button-notification"),
+                    K("svg-mask-sticker-shop-notification"),
                     z("svg-mask-autocomplete-emoji-upsell-emoji"),
-                    q("svg-mask-event-ticket"),
-                    X("svg-mask-guild-icon-with-channel-type"),
+                    $("svg-mask-event-ticket"),
+                    q("svg-mask-guild-icon-with-channel-type"),
                     Z("svg-mask-channel-icon-with-guild-icon"),
-                    Q("svg-mask-content-inventory-card-face-pile-avatar"),
-                    ee("svg-mask-guild-popout-activity-icon"),
-                    et("svg-mask-clan-icon"),
-                    er("svg-mask-badged-guild-icon"),
-                    ei("svg-mask-forward-attachment-pile-overflow"),
-                    J("svg-mask-content-image-60", 60, 24, 2),
-                    J("svg-mask-content-image-72", 72, 32, 4),
-                    J("svg-mask-content-image-100", 100, 32, 4),
-                    en("svg-mask-user-avatar-with-game-icon"),
+                    X("svg-mask-content-inventory-card-face-pile-avatar"),
+                    J("svg-mask-guild-popout-activity-icon"),
+                    ee("svg-mask-clan-icon"),
+                    en("svg-mask-badged-guild-icon"),
+                    er("svg-mask-forward-attachment-pile-overflow"),
+                    Q("svg-mask-content-image-60", 60, 24, 2),
+                    Q("svg-mask-content-image-72", 72, 32, 4),
+                    Q("svg-mask-content-image-100", 100, 32, 4),
+                    et("svg-mask-user-avatar-with-game-icon"),
                 ],
             });
         },

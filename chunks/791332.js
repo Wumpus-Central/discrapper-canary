@@ -13,10 +13,10 @@
             if (null != t) for (var r in t) Object.prototype.hasOwnProperty.call(t, r) && (n[r] = t[r]);
             return n;
         },
-        a = 1e3,
-        s = function (e, t) {
+        s = 1e3,
+        a = function (e, t) {
             var n,
-                s = Object.keys(e).filter(function (t) {
+                a = Object.keys(e).filter(function (t) {
                     var n = e[t];
                     if (null == n || null == n.match) return !1;
                     var r = n.order;
@@ -27,18 +27,18 @@
                         !0
                     );
                 });
-            s.sort(function (t, n) {
+            a.sort(function (t, n) {
                 var r = e[t],
                     i = e[n],
-                    a = r.order,
-                    s = i.order;
-                if (a !== s) return a - s;
+                    s = r.order,
+                    a = i.order;
+                if (s !== a) return s - a;
                 var o = +!r.quality,
                     l = +!i.quality;
                 return o !== l ? o - l : t < n ? -1 : 1 * !!(t > n);
             });
-            for (var o = new Map(), l = [], u = 0; u < s.length; u++) {
-                var c = s[u],
+            for (var o = new Map(), l = [], u = 0; u < a.length; u++) {
+                var c = a[u],
                     d = e[c].requiredFirstCharacters;
                 null == d
                     ? l.push(c)
@@ -51,32 +51,32 @@
                     var i = [];
                     n = r = r || n;
                     var u = (r._parseDepth ?? 0) + 1;
-                    if (u > a) return t && i.push({ type: "text", content: t }), i;
+                    if (u > s) return t && i.push({ type: "text", content: t }), i;
                     for (n = r = Object.assign({}, r, { _parseDepth: u }); t; ) {
                         for (
-                            var c = null, d = null, f = null, h = -1e5, p = 1e5, g = [o.get(t.charCodeAt(0)), l], E = 0;
-                            E < g.length;
+                            var c = null, d = null, f = null, p = -1e5, h = 1e5, m = [o.get(t.charCodeAt(0)), l], E = 0;
+                            E < m.length;
                             E++
                         ) {
-                            var A = g[E];
-                            if (null != A)
-                                for (var I = 0; I < A.length; I++) {
-                                    var T = A[I],
-                                        y = e[T],
-                                        S = y.order;
-                                    if (S > p) break;
-                                    var v = null == r.prevCapture ? "" : r.prevCapture[0],
-                                        C = y.match(t, r, v);
-                                    if (C) {
-                                        var b = y.quality ? y.quality(C, r, v) : 0;
-                                        (S < p || b > h) && ((c = T), (d = y), (f = C), (h = b), (p = S));
+                            var g = m[E];
+                            if (null != g)
+                                for (var A = 0; A < g.length; A++) {
+                                    var I = g[A],
+                                        T = e[I],
+                                        S = T.order;
+                                    if (S > h) break;
+                                    var y = null == r.prevCapture ? "" : r.prevCapture[0],
+                                        v = T.match(t, r, y);
+                                    if (v) {
+                                        var N = T.quality ? T.quality(v, r, y) : 0;
+                                        (S < h || N > p) && ((c = I), (d = T), (f = v), (p = N), (h = S));
                                     }
                                 }
                         }
                         if (null == d || null == f)
                             throw Error(
                                 "Could not find a matching rule for the below content. The rule with highest `order` should always match content provided to it. Check the definition of `match` for '" +
-                                    s[s.length - 1] +
+                                    a[a.length - 1] +
                                     "'. It seems to not match the following source:\n" +
                                     t,
                             );
@@ -84,18 +84,18 @@
                             throw Error(
                                 "`match` must return a capture starting at index 0 (the current parse index). Did you forget a ^ at the start of the RegExp?",
                             );
-                        var N = d.parse(f, _, r);
-                        Array.isArray(N)
-                            ? Array.prototype.push.apply(i, N)
-                            : (null == N.type && (N.type = c), i.push(N)),
+                        var C = d.parse(f, _, r);
+                        Array.isArray(C)
+                            ? Array.prototype.push.apply(i, C)
+                            : (null == C.type && (C.type = c), i.push(C)),
                             (r.prevCapture = f),
                             (t = t.substring(r.prevCapture[0].length));
                     }
                     return i;
                 },
-                f = function (e, a) {
+                f = function (e, s) {
                     return (
-                        (n = i(a, t)).inline || n.disableAutoBlockNewlines || (e += "\n\n"),
+                        (n = i(s, t)).inline || n.disableAutoBlockNewlines || (e += "\n\n"),
                         (n.prevCapture = null),
                         _(r(e), n)
                     );
@@ -127,15 +127,15 @@
         _ = function (e, t, n, r) {
             r = void 0 === r || r;
             var i = "";
-            for (var a in (n = n || {})) {
-                var s = n[a];
-                Object.prototype.hasOwnProperty.call(n, a) && s && (i += " " + E(a) + '="' + E(s) + '"');
+            for (var s in (n = n || {})) {
+                var a = n[s];
+                Object.prototype.hasOwnProperty.call(n, s) && a && (i += " " + E(s) + '="' + E(a) + '"');
             }
             var o = "<" + e + i + ">";
             return r ? o + t + "</" + e + ">" : o;
         },
         f = {},
-        h = function (e) {
+        p = function (e) {
             if (null == e) return null;
             try {
                 var t = new URL(e, "https://localhost").protocol;
@@ -146,69 +146,69 @@
             }
             return e;
         },
-        p = /[<>&"']/g,
-        g = { "<": "&lt;", ">": "&gt;", "&": "&amp;", '"': "&quot;", "'": "&#x27;", "/": "&#x2F;", "`": "&#96;" },
+        h = /[<>&"']/g,
+        m = { "<": "&lt;", ">": "&gt;", "&": "&amp;", '"': "&quot;", "'": "&#x27;", "/": "&#x2F;", "`": "&#96;" },
         E = function (e) {
-            return String(e).replace(p, function (e) {
-                return g[e];
+            return String(e).replace(h, function (e) {
+                return m[e];
             });
         },
-        A = /\\([^0-9A-Za-z\s])/g,
-        I = function (e) {
-            return e.replace(A, "$1");
+        g = /\\([^0-9A-Za-z\s])/g,
+        A = function (e) {
+            return e.replace(g, "$1");
         },
-        T = function (e, t, n) {
+        I = function (e, t, n) {
             var r = n.inline || !1;
             n.inline = !0;
             var i = e(t, n);
             return (n.inline = r), i;
         },
-        y = function (e, t, n) {
+        T = function (e, t, n) {
             var r = n.inline || !1;
             n.inline = !1;
             var i = e(t + "\n\n", n);
             return (n.inline = r), i;
         },
         S = function (e, t, n) {
-            return { content: T(t, e[1], n) };
+            return { content: I(t, e[1], n) };
         },
-        v = function () {
+        y = function () {
             return {};
         },
-        C = "(?:[*+-]|\\d+\\.)",
-        b = "( *)(" + C + ") +",
-        N = RegExp("^" + b),
-        R = RegExp(b + "[^\\n]*(?:\\n(?!\\1" + C + " )[^\\n]*)*(\n|$)", "gm"),
-        O = /\n{2,}$/,
-        D = /^ (?= *`)|(` *) $/g,
-        L = O,
-        w = / *\n+$/,
-        x = RegExp("^( *)(" + C + ") [\\s\\S]+?(?:\n{2,}(?! )(?!\\1" + C + " )\\n*|\\s*\n*$)"),
-        P = /(?:^|\n)( *)$/,
+        v = "(?:[*+-]|\\d+\\.)",
+        N = "( *)(" + v + ") +",
+        C = RegExp("^" + N),
+        b = RegExp(N + "[^\\n]*(?:\\n(?!\\1" + v + " )[^\\n]*)*(\n|$)", "gm"),
+        R = /\n{2,}$/,
+        O = /^ (?= *`)|(` *) $/g,
+        D = R,
+        L = / *\n+$/,
+        w = RegExp("^( *)(" + v + ") [\\s\\S]+?(?:\n{2,}(?! )(?!\\1" + v + " )\\n*|\\s*\n*$)"),
+        x = /(?:^|\n)( *)$/,
         M = (function () {
             var e = /^ *\| *| *\| *$/g,
                 t = / *$/,
                 n = /^ *-+: *$/,
                 r = /^ *:-+: *$/,
                 i = /^ *:-+ *$/,
-                a = function (e) {
+                s = function (e) {
                     return n.test(e) ? "right" : r.test(e) ? "center" : i.test(e) ? "left" : null;
                 },
-                s = function (t, n, r, i) {
-                    return i && (t = t.replace(e, "")), t.trim().split("|").map(a);
+                a = function (t, n, r, i) {
+                    return i && (t = t.replace(e, "")), t.trim().split("|").map(s);
                 },
                 o = function (e, n, r, i) {
-                    var a = r.inTable;
+                    var s = r.inTable;
                     r.inTable = !0;
-                    var s = n(e.trim(), r);
-                    r.inTable = a;
+                    var a = n(e.trim(), r);
+                    r.inTable = s;
                     var o = [[]];
                     return (
-                        s.forEach(function (e, n) {
+                        a.forEach(function (e, n) {
                             "tableSeparator" === e.type
-                                ? (i && (0 === n || n === s.length - 1)) || o.push([])
+                                ? (i && (0 === n || n === a.length - 1)) || o.push([])
                                 : ("text" === e.type &&
-                                      (null == s[n + 1] || "tableSeparator" === s[n + 1].type) &&
+                                      (null == a[n + 1] || "tableSeparator" === a[n + 1].type) &&
                                       (e.content = e.content.replace(t, "")),
                                   o[o.length - 1].push(e));
                         }),
@@ -227,9 +227,9 @@
                     return function (t, n, r) {
                         r.inline = !0;
                         var i = o(t[1], n, r, e),
-                            a = s(t[2], n, r, e),
+                            s = a(t[2], n, r, e),
                             u = l(t[3], n, r, e);
-                        return (r.inline = !1), { type: "table", header: i, align: a, cells: u };
+                        return (r.inline = !1), { type: "table", header: i, align: s, cells: u };
                     };
                 };
             return {
@@ -239,10 +239,10 @@
                 NPTABLE_REGEX: /^ *(\S.*\|.*)\n *([-:]+ *\|[-| :]*)\n((?:.*\|.*(?:\n|$))*)\n*/,
             };
         })(),
-        k = "(?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*",
-        U = "\\s*<?((?:\\([^)]*\\)|[^\\s\\\\]|\\\\.)*?)>?(?:\\s+['\"]([\\s\\S]*?)['\"])?\\s*",
-        G = /mailto:/i,
-        F = function (e, t, n) {
+        P = "(?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*",
+        k = "\\s*<?((?:\\([^)]*\\)|[^\\s\\\\]|\\\\.)*?)>?(?:\\s+['\"]([\\s\\S]*?)['\"])?\\s*",
+        U = /mailto:/i,
+        G = function (e, t, n) {
             var r = (e[2] || e[1]).replace(/\s+/g, " ").toLowerCase();
             if (t._defs && t._defs[r]) {
                 var i = t._defs[r];
@@ -250,48 +250,48 @@
             }
             return (t._refs = t._refs || {}), (t._refs[r] = t._refs[r] || []), t._refs[r].push(n), n;
         },
-        V = !1;
+        F = !1;
     try {
-        RegExp("(?<=a)"), RegExp("(?<!a)"), (V = !1);
+        RegExp("(?<=a)"), RegExp("(?<!a)"), (F = !1);
     } catch (e) {}
-    var B = 0,
-        j = {
+    var V = 0,
+        B = {
             Array: {
                 react: function (e, t, n) {
-                    for (var r = n.key, i = [], a = 0, s = 0; a < e.length; a++, s++) {
-                        n.key = "" + a;
-                        var o = e[a];
+                    for (var r = n.key, i = [], s = 0, a = 0; s < e.length; s++, a++) {
+                        n.key = "" + s;
+                        var o = e[s];
                         if ("text" === o.type)
                             for (
                                 o = { type: "text", content: o.content };
-                                a + 1 < e.length && "text" === e[a + 1].type;
-                                a++
+                                s + 1 < e.length && "text" === e[s + 1].type;
+                                s++
                             )
-                                o.content += e[a + 1].content;
+                                o.content += e[s + 1].content;
                         i.push(t(o, n));
                     }
                     return (n.key = r), i;
                 },
                 html: function (e, t, n) {
                     for (var r = "", i = 0; i < e.length; i++) {
-                        var a = e[i];
-                        if ("text" === a.type)
+                        var s = e[i];
+                        if ("text" === s.type)
                             for (
-                                a = { type: "text", content: a.content };
+                                s = { type: "text", content: s.content };
                                 i + 1 < e.length && "text" === e[i + 1].type;
                                 i++
                             )
-                                a.content += e[i + 1].content;
-                        r += t(a, n);
+                                s.content += e[i + 1].content;
+                        r += t(s, n);
                     }
                     return r;
                 },
             },
             heading: {
-                order: B++,
+                order: V++,
                 match: l(/^ *(#{1,6})([^\n]+?)#* *(?:\n *)+\n/),
                 parse: function (e, t, n) {
-                    return { level: e[1].length, content: T(t, e[2].trim(), n) };
+                    return { level: e[1].length, content: I(t, e[2].trim(), n) };
                 },
                 react: function (e, t, n) {
                     return d("h" + e.level, n.key, { children: t(e.content, n) });
@@ -300,20 +300,20 @@
                     return _("h" + e.level, t(e.content, n));
                 },
             },
-            nptable: { order: B++, match: l(M.NPTABLE_REGEX), parse: M.parseNpTable, react: null, html: null },
+            nptable: { order: V++, match: l(M.NPTABLE_REGEX), parse: M.parseNpTable, react: null, html: null },
             lheading: {
-                order: B++,
+                order: V++,
                 match: l(/^([^\n]+)\n *(=|-){3,} *(?:\n *)+\n/),
                 parse: function (e, t, n) {
-                    return { type: "heading", level: "=" === e[2] ? 1 : 2, content: T(t, e[1], n) };
+                    return { type: "heading", level: "=" === e[2] ? 1 : 2, content: I(t, e[1], n) };
                 },
                 react: null,
                 html: null,
             },
             hr: {
-                order: B++,
+                order: V++,
                 match: l(/^( *[-*_]){3,} *(?:\n *)+\n/),
-                parse: v,
+                parse: y,
                 react: function (e, t, n) {
                     return d("hr", n.key, f);
                 },
@@ -322,7 +322,7 @@
                 },
             },
             codeBlock: {
-                order: B++,
+                order: V++,
                 match: l(/^(?:    [^\n]+\n*)+(?:\n *)+\n/),
                 parse: function (e, t, n) {
                     return { lang: void 0, content: e[0].replace(/^    /gm, "").replace(/\n+$/, "") };
@@ -338,7 +338,7 @@
                 },
             },
             fence: {
-                order: B++,
+                order: V++,
                 match: l(/^ *(`{3,}|~{3,}) *(?:(\S+) *)?\n([\s\S]+?)\n?\1 *(?:\n *)+\n/),
                 parse: function (e, t, n) {
                     return { type: "codeBlock", lang: e[2] || void 0, content: e[3] };
@@ -347,7 +347,7 @@
                 html: null,
             },
             blockQuote: {
-                order: B++,
+                order: V++,
                 match: l(/^( *>[^\n]+(\n[^\n]+)*\n*)+\n{2,}/),
                 parse: function (e, t, n) {
                     return { content: t(e[0].replace(/^ *> ?/gm, ""), n) };
@@ -360,38 +360,38 @@
                 },
             },
             list: {
-                order: B++,
+                order: V++,
                 match: function (e, t) {
                     var n = null == t.prevCapture ? "" : t.prevCapture[0],
-                        r = P.exec(n),
+                        r = x.exec(n),
                         i = t._list || !t.inline;
-                    return r && i ? ((e = r[1] + e), x.exec(e)) : null;
+                    return r && i ? ((e = r[1] + e), w.exec(e)) : null;
                 },
                 parse: function (e, t, n) {
                     var r = e[2],
                         i = r.length > 1,
-                        a = i ? +r : void 0,
-                        s = e[0].replace(L, "\n").match(R),
+                        s = i ? +r : void 0,
+                        a = e[0].replace(D, "\n").match(b),
                         o = !1;
                     return {
                         ordered: i,
-                        start: a,
-                        items: s.map(function (e, r) {
+                        start: s,
+                        items: a.map(function (e, r) {
                             var i,
-                                a = N.exec(e),
-                                l = RegExp("^ {1," + (a ? a[0].length : 0) + "}", "gm"),
-                                u = e.replace(l, "").replace(N, ""),
-                                c = r === s.length - 1,
+                                s = C.exec(e),
+                                l = RegExp("^ {1," + (s ? s[0].length : 0) + "}", "gm"),
+                                u = e.replace(l, "").replace(C, ""),
+                                c = r === a.length - 1,
                                 d = -1 !== u.indexOf("\n\n") || (c && o);
                             o = d;
                             var _ = n.inline,
                                 f = n._list;
                             (n._list = !0),
                                 d
-                                    ? ((n.inline = !1), (i = u.replace(w, "\n\n")))
-                                    : ((n.inline = !0), (i = u.replace(w, "")));
-                            var h = t(i, n);
-                            return (n.inline = _), (n._list = f), h;
+                                    ? ((n.inline = !1), (i = u.replace(L, "\n\n")))
+                                    : ((n.inline = !0), (i = u.replace(L, "")));
+                            var p = t(i, n);
+                            return (n.inline = _), (n._list = f), p;
                         }),
                     };
                 },
@@ -413,21 +413,21 @@
                 },
             },
             def: {
-                order: B++,
+                order: V++,
                 match: l(/^ *\[([^\]]+)\]: *<?([^\s>]*)>?(?: +["(]([^\n]+)[")])? *\n(?: *\n)*/),
                 parse: function (e, t, n) {
                     var r = e[1].replace(/\s+/g, " ").toLowerCase(),
                         i = e[2],
-                        a = e[3];
+                        s = e[3];
                     return (
                         n._refs &&
                             n._refs[r] &&
                             n._refs[r].forEach(function (e) {
-                                (e.target = i), (e.title = a);
+                                (e.target = i), (e.title = s);
                             }),
                         (n._defs = n._defs || {}),
-                        (n._defs[r] = { target: i, title: a }),
-                        { def: r, target: i, title: a }
+                        (n._defs[r] = { target: i, title: s }),
+                        { def: r, target: i, title: s }
                     );
                 },
                 react: function () {
@@ -438,7 +438,7 @@
                 },
             },
             table: {
-                order: B++,
+                order: V++,
                 match: l(M.TABLE_REGEX),
                 parse: M.parseTable,
                 react: function (e, t, n) {
@@ -448,7 +448,7 @@
                         i = e.header.map(function (e, i) {
                             return d("th", "" + i, { style: r(i), scope: "col", children: t(e, n) });
                         }),
-                        a = e.cells.map(function (e, i) {
+                        s = e.cells.map(function (e, i) {
                             return d("tr", "" + i, {
                                 children: e.map(function (e, i) {
                                     return d("td", "" + i, { style: r(i), children: t(e, n) });
@@ -458,7 +458,7 @@
                     return d("table", n.key, {
                         children: [
                             d("thead", "thead", { children: d("tr", null, { children: i }) }),
-                            d("tbody", "tbody", { children: a }),
+                            d("tbody", "tbody", { children: s }),
                         ],
                     });
                 },
@@ -471,7 +471,7 @@
                                 return _("th", t(e, n), { style: r(i), scope: "col" });
                             })
                             .join(""),
-                        a = e.cells
+                        s = e.cells
                             .map(function (e) {
                                 var i = e
                                     .map(function (e, i) {
@@ -481,16 +481,16 @@
                                 return _("tr", i);
                             })
                             .join(""),
-                        s = _("thead", _("tr", i)),
-                        o = _("tbody", a);
-                    return _("table", s + o);
+                        a = _("thead", _("tr", i)),
+                        o = _("tbody", s);
+                    return _("table", a + o);
                 },
             },
             newline: {
-                order: B++,
+                order: V++,
                 requiredFirstCharacters: ["\n"],
                 match: l(/^(?:\n *)*\n/),
-                parse: v,
+                parse: y,
                 react: function (e, t, n) {
                     return "\n";
                 },
@@ -499,7 +499,7 @@
                 },
             },
             paragraph: {
-                order: B++,
+                order: V++,
                 match: l(/^((?:[^\n]|\n(?! *\n))+)(?:\n *)+\n/),
                 parse: S,
                 react: function (e, t, n) {
@@ -511,7 +511,7 @@
                 },
             },
             escape: {
-                order: B++,
+                order: V++,
                 requiredFirstCharacters: ["\\"],
                 match: o(/^\\([^0-9A-Za-z\s])/),
                 parse: function (e, t, n) {
@@ -521,7 +521,7 @@
                 html: null,
             },
             tableSeparator: {
-                order: B++,
+                order: V++,
                 match: function (e, t) {
                     return t.inTable ? /^ *\| */.exec(e) : null;
                 },
@@ -536,7 +536,7 @@
                 },
             },
             autolink: {
-                order: B++,
+                order: V++,
                 requiredFirstCharacters: ["<"],
                 match: o(/^<([^: >]+:\/[^ >]+)>/),
                 parse: function (e, t, n) {
@@ -546,13 +546,13 @@
                 html: null,
             },
             mailto: {
-                order: B++,
+                order: V++,
                 match: o(/^<([^ >]+@[^ >]+)>/),
                 parse: function (e, t, n) {
                     var r = e[1],
                         i = e[1];
                     return (
-                        G.test(i) || (i = "mailto:" + i),
+                        U.test(i) || (i = "mailto:" + i),
                         { type: "link", content: [{ type: "text", content: r }], target: i }
                     );
                 },
@@ -560,7 +560,7 @@
                 html: null,
             },
             url: {
-                order: B++,
+                order: V++,
                 requiredFirstCharacters: ["h"],
                 match: o(/^(https?:\/\/[^\s<]+[^<.,:;"')\]\s])/),
                 parse: function (e, t, n) {
@@ -570,56 +570,56 @@
                 html: null,
             },
             link: {
-                order: B++,
+                order: V++,
                 requiredFirstCharacters: ["["],
-                match: o(RegExp("^\\[(" + k + ")\\]\\(" + U + "\\)")),
+                match: o(RegExp("^\\[(" + P + ")\\]\\(" + k + "\\)")),
                 parse: function (e, t, n) {
-                    return { content: t(e[1], n), target: I(e[2]), title: e[3] };
+                    return { content: t(e[1], n), target: A(e[2]), title: e[3] };
                 },
                 react: function (e, t, n) {
-                    return d("a", n.key, { href: h(e.target), title: e.title, children: t(e.content, n) });
+                    return d("a", n.key, { href: p(e.target), title: e.title, children: t(e.content, n) });
                 },
                 html: function (e, t, n) {
-                    var r = { href: h(e.target), title: e.title };
+                    var r = { href: p(e.target), title: e.title };
                     return _("a", t(e.content, n), r);
                 },
             },
             image: {
-                order: B++,
-                match: o(RegExp("^!\\[(" + k + ")\\]\\(" + U + "\\)")),
+                order: V++,
+                match: o(RegExp("^!\\[(" + P + ")\\]\\(" + k + "\\)")),
                 parse: function (e, t, n) {
-                    return { alt: e[1], target: I(e[2]), title: e[3] };
+                    return { alt: e[1], target: A(e[2]), title: e[3] };
                 },
                 react: function (e, t, n) {
-                    return d("img", n.key, { src: h(e.target), alt: e.alt, title: e.title });
+                    return d("img", n.key, { src: p(e.target), alt: e.alt, title: e.title });
                 },
                 html: function (e, t, n) {
-                    return _("img", "", { src: h(e.target), alt: e.alt, title: e.title }, !1);
+                    return _("img", "", { src: p(e.target), alt: e.alt, title: e.title }, !1);
                 },
             },
             reflink: {
-                order: B++,
-                match: o(RegExp("^\\[(" + k + ")\\]\\s*\\[([^\\]]*)\\]")),
+                order: V++,
+                match: o(RegExp("^\\[(" + P + ")\\]\\s*\\[([^\\]]*)\\]")),
                 parse: function (e, t, n) {
-                    return F(e, n, { type: "link", content: t(e[1], n) });
+                    return G(e, n, { type: "link", content: t(e[1], n) });
                 },
                 react: null,
                 html: null,
             },
             refimage: {
-                order: B++,
-                match: o(RegExp("^!\\[(" + k + ")\\]\\s*\\[([^\\]]*)\\]")),
+                order: V++,
+                match: o(RegExp("^!\\[(" + P + ")\\]\\s*\\[([^\\]]*)\\]")),
                 parse: function (e, t, n) {
-                    return F(e, n, { type: "image", alt: e[1] });
+                    return G(e, n, { type: "image", alt: e[1] });
                 },
                 react: null,
                 html: null,
             },
             em: {
-                order: B,
+                order: V,
                 match: o(
                     RegExp(
-                        (V
+                        (F
                             ? "^\\b_((?:_[_(]|\\\\[\\s\\S]|(?<!_)\\B_\\B|[^\\\\_])+?)_(?![(])\\b"
                             : "^\\b_((?:__|\\\\[\\s\\S]|[^\\\\_])+?)_\\b") +
                             "|^\\*(?=\\S)((?:\\*\\*|\\\\[\\s\\S]|\\s+(?:\\\\[\\s\\S]|[^\\s\\*\\\\]|\\*\\*)|[^\\s\\*\\\\])+?)\\*(?!\\*)",
@@ -639,7 +639,7 @@
                 },
             },
             strong: {
-                order: B,
+                order: V,
                 requiredFirstCharacters: ["*"],
                 match: o(/^\*\*((?:\\[\s\S]|[^\\])+?)\*\*(?!\*)/),
                 quality: function (e) {
@@ -654,7 +654,7 @@
                 },
             },
             u: {
-                order: B++,
+                order: V++,
                 requiredFirstCharacters: ["_"],
                 match: o(/^__((?:\\[\s\S]|[^\\])+?)__(?!_)/),
                 quality: function (e) {
@@ -669,7 +669,7 @@
                 },
             },
             del: {
-                order: B++,
+                order: V++,
                 requiredFirstCharacters: ["~"],
                 match: o(/^~~(?=\S)((?:\\[\s\S]|~(?!~)|[^\s~]|\s(?!~~))+?)~~/),
                 parse: S,
@@ -681,11 +681,11 @@
                 },
             },
             inlineCode: {
-                order: B++,
+                order: V++,
                 requiredFirstCharacters: ["`"],
                 match: o(/^(`+)([\s\S]*?[^`])\1(?!`)/),
                 parse: function (e, t, n) {
-                    return { content: e[2].replace(D, "$1") };
+                    return { content: e[2].replace(O, "$1") };
                 },
                 react: function (e, t, n) {
                     return d("code", n.key, { children: e.content });
@@ -695,10 +695,10 @@
                 },
             },
             br: {
-                order: B++,
+                order: V++,
                 requiredFirstCharacters: [" "],
                 match: u(/^ {2,}\n/),
-                parse: v,
+                parse: y,
                 react: function (e, t, n) {
                     return d("br", n.key, f);
                 },
@@ -707,7 +707,7 @@
                 },
             },
             text: {
-                order: B++,
+                order: V++,
                 match: u(/^[\s\S]+?(?=[^0-9A-Za-z\s\u00c0-\uffff]|\n\n| {2,}\n|\w+:\S|$)/),
                 parse: function (e, t, n) {
                     return { content: e[0] };
@@ -730,21 +730,21 @@
                 }
             );
         },
-        Y = function (e) {
+        j = function (e) {
             var t = function (n, r) {
                 if (((r = r || {}), !Array.isArray(n))) return e(n, t, r);
-                for (var i = r.key, a = [], s = null, o = 0; o < n.length; o++) {
+                for (var i = r.key, s = [], a = null, o = 0; o < n.length; o++) {
                     r.key = "" + o;
                     var l = t(n[o], r);
-                    "string" == typeof l && "string" == typeof s
-                        ? ((s += l), (a[a.length - 1] = s))
-                        : (a.push(l), (s = l));
+                    "string" == typeof l && "string" == typeof a
+                        ? ((a += l), (s[s.length - 1] = a))
+                        : (s.push(l), (a = l));
                 }
-                return (r.key = i), a;
+                return (r.key = i), s;
             };
             return t;
         },
-        W = function (e) {
+        Y = function (e) {
             var t = function (n, r) {
                 return ((r = r || {}), Array.isArray(n))
                     ? n
@@ -756,81 +756,81 @@
             };
             return t;
         },
-        K = function (e, t, n) {
+        W = function (e, t, n) {
             if (!t)
                 throw Error(
                     "simple-markdown: outputFor: `property` must be defined. if you just upgraded, you probably need to replace `outputFor` with `reactFor`",
                 );
             var r,
-                a = (e.Array || j.Array)[t];
-            if (!a)
+                s = (e.Array || B.Array)[t];
+            if (!s)
                 throw Error(
                     "simple-markdown: outputFor: to join nodes of type `" +
                         t +
                         "` you must provide an `Array:` joiner rule with that type, Please see the docs for details on specifying an Array rule.",
                 );
-            var s = a,
+            var a = s,
                 o = function (n, i) {
-                    return ((r = i = i || r), Array.isArray(n)) ? s(n, o, i) : e[n.type][t](n, o, i);
+                    return ((r = i = i || r), Array.isArray(n)) ? a(n, o, i) : e[n.type][t](n, o, i);
                 };
             return function (e, t) {
                 return o(e, (r = i(t, n)));
             };
         },
-        $ = s(j),
+        K = a(B),
         z = function (e, t) {
-            return ((t = t || {}).inline = !1), $(e, t);
+            return ((t = t || {}).inline = !1), K(e, t);
+        },
+        $ = function (e, t) {
+            return ((t = t || {}).inline = !0), K(e, t);
         },
         q = function (e, t) {
-            return ((t = t || {}).inline = !0), $(e, t);
+            var n = R.test(e);
+            return ((t = t || {}).inline = !n), K(e, t);
         },
-        X = function (e, t) {
-            var n = O.test(e);
-            return ((t = t || {}).inline = !n), $(e, t);
-        },
-        Z = K(j, "react"),
-        Q = K(j, "html"),
-        J = function (e, t) {
+        Z = W(B, "react"),
+        X = W(B, "html"),
+        Q = function (e, t) {
             return Z(z(e, t), t);
         },
-        ee = function (e) {
+        J = function (e) {
             var t = {};
             for (var n in e) "source" !== n && Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
-            return (t.children = J(e.source)), d("div", null, t);
+            return (t.children = Q(e.source)), d("div", null, t);
         };
     return {
-        defaultRules: j,
-        parserFor: s,
-        outputFor: K,
+        defaultRules: B,
+        parserFor: a,
+        outputFor: W,
         inlineRegex: o,
         blockRegex: l,
         anyScopeRegex: u,
-        parseInline: T,
-        parseBlock: y,
-        markdownToReact: J,
+        parseInline: I,
+        parseBlock: T,
+        markdownToReact: Q,
         markdownToHtml: function (e, t) {
-            return Q(z(e, t), t);
+            return X(z(e, t), t);
         },
-        ReactMarkdown: ee,
+        ReactMarkdown: J,
         defaultBlockParse: z,
-        defaultInlineParse: q,
-        defaultImplicitParse: X,
+        defaultInlineParse: $,
+        defaultImplicitParse: q,
         defaultReactOutput: Z,
-        defaultHtmlOutput: Q,
+        defaultHtmlOutput: X,
         preprocess: r,
         sanitizeText: E,
-        sanitizeUrl: h,
-        unescapeUrl: I,
+        sanitizeUrl: p,
+        unescapeUrl: A,
         htmlTag: _,
         reactElement: d,
-        defaultRawParse: $,
+        defaultRawParse: K,
         ruleOutput: H,
-        reactFor: Y,
-        htmlFor: W,
+        reactFor: j,
+        htmlFor: Y,
         defaultParse: function () {
             return (
                 "u" > typeof console && console.warn("defaultParse is deprecated, please use `defaultImplicitParse`"),
-                X.apply(null, arguments)
+                q.apply(null, arguments)
             );
         },
         defaultOutput: function () {

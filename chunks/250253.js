@@ -1,107 +1,100 @@
-"use strict";
-n.d(t, { A: () => V, x: () => G });
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(311907),
-    l = n(435371),
-    u = n(397927),
-    c = n(241524),
-    d = n(915089),
-    _ = n(164956),
-    f = n(615405),
-    h = n(486020),
-    p = n(500345),
-    g = n(599941),
-    E = n(922975),
-    A = n(700206),
-    I = n(218597),
-    T = n(320137),
-    y = n(881288),
-    S = n(417360),
-    v = n(792105),
-    C = n(35275),
-    b = n(366334),
-    N = n(237867),
-    R = n(98211),
-    O = n(700974),
-    D = n(2242),
-    L = n(652215),
-    w = n(985018),
-    x = n(541757);
-let P = 24,
-    M = 5,
-    k = (e) => {
-        let { benefits: t, header: n, guildId: a } = e,
-            [s, o] = i.useState(!1),
-            l = s ? t : t.slice(0, M),
-            c = t.length > M,
-            _ = t.length - M,
-            f = w.intl.formatToPlainString(w.t.XSdy72, { numTruncated: _ }),
-            h = () => o((e) => !e),
-            g = (0, d.GV)();
+i.d(t, { A: () => O, x: () => U });
+var l = i(627968),
+    n = i(64700),
+    a = i(503698),
+    s = i.n(a),
+    r = i(311907),
+    c = i(435371),
+    d = i(397927),
+    o = i(241524),
+    u = i(915089),
+    m = i(164956),
+    x = i(615405),
+    h = i(486020),
+    g = i(500345),
+    v = i(599941),
+    j = i(922975),
+    A = i(700206),
+    f = i(218597),
+    p = i(320137),
+    _ = i(881288),
+    N = i(417360),
+    b = i(792105),
+    I = i(35275),
+    T = i(366334),
+    C = i(237867),
+    S = i(98211),
+    E = i(700974),
+    y = i(2242),
+    L = i(652215),
+    k = i(985018),
+    R = i(541757);
+let G = (e) => {
+        let { benefits: t, header: i, guildId: a } = e,
+            [s, r] = n.useState(!1),
+            c = s ? t : t.slice(0, 5),
+            o = t.length > 5,
+            m = t.length - 5,
+            x = k.intl.formatToPlainString(k.t.XSdy72, { numTruncated: m }),
+            h = (0, u.GV)();
         return 0 === t.length
             ? null
-            : (0, r.jsxs)("div", {
-                  className: x.uO,
+            : (0, l.jsxs)("div", {
+                  className: R.uO,
                   children: [
-                      (0, r.jsx)(u.Heading, {
+                      (0, l.jsx)(d.Heading, {
                           variant: "text-xs/bold",
                           color: "text-default",
-                          className: x.bV,
-                          id: g,
-                          children: n,
+                          className: R.bV,
+                          id: h,
+                          children: i,
                       }),
-                      (0, r.jsx)(u.hKd, { size: 12 }),
-                      (0, r.jsx)("ul", {
-                          className: x.Pp,
-                          "aria-labelledby": g,
-                          children: l.map((e, t) =>
-                              (0, r.jsx)(
+                      (0, l.jsx)(d.hKd, { size: 12 }),
+                      (0, l.jsx)("ul", {
+                          className: R.Pp,
+                          "aria-labelledby": h,
+                          children: c.map((e, t) =>
+                              (0, l.jsx)(
                                   "li",
-                                  { children: (0, r.jsx)(b.A, { guildId: a, benefit: e }, (0, p.nh)(e)) },
+                                  { children: (0, l.jsx)(T.A, { guildId: a, benefit: e }, (0, g.nh)(e)) },
                                   t,
                               ),
                           ),
                       }),
-                      c && (0, r.jsx)(F, { isViewAll: s, onToggle: h, showMoreText: f }),
+                      o && (0, l.jsx)(M, { isViewAll: s, onToggle: () => r((e) => !e), showMoreText: x }),
                   ],
               });
     },
-    U = (e) => {
-        let { guildId: t, listingId: n } = e,
-            i = (0, T.A)(t),
-            [a] = E.UN(n, t),
-            s = i.filter((e) => a.has(e.id));
-        function o(e) {
-            return h.Ay.getEmojiURL({ id: e.id, animated: e.animated, size: P });
-        }
+    P = (e) => {
+        let { guildId: t, listingId: i } = e,
+            n = (0, p.A)(t),
+            [a] = j.UN(i, t),
+            s = n.filter((e) => a.has(e.id));
         return 0 === s.length
             ? null
-            : (0, r.jsxs)("div", {
-                  className: x.uO,
+            : (0, l.jsxs)("div", {
+                  className: R.uO,
                   children: [
-                      (0, r.jsx)(u.Heading, {
+                      (0, l.jsx)(d.Heading, {
                           variant: "text-xs/bold",
                           color: "text-default",
-                          className: x.bV,
-                          children: w.intl.format(w.t.NAnXEo, { count: s.length }),
+                          className: R.bV,
+                          children: k.intl.format(k.t.NAnXEo, { count: s.length }),
                       }),
-                      (0, r.jsx)(u.hKd, { size: 12 }),
-                      (0, r.jsx)("div", {
-                          className: x.vX,
+                      (0, l.jsx)(d.hKd, { size: 12 }),
+                      (0, l.jsx)("div", {
+                          className: R.vX,
                           children: s.map((e, t) =>
-                              (0, r.jsx)(
-                                  l.m_,
+                              (0, l.jsx)(
+                                  c.m_,
                                   {
                                       text: e.name,
                                       "aria-label": !1,
-                                      children: (0, r.jsx)("img", {
-                                          className: x.x6,
-                                          src: o(e),
-                                          width: P,
-                                          height: P,
+                                      children: (0, l.jsx)("img", {
+                                          className: R.x6,
+                                          src: h.Ay.getEmojiURL({ id: e.id, animated: e.animated, size: 24 }),
+                                          width: 24,
+                                          height: 24,
                                           alt: e.name,
                                       }),
                                   },
@@ -112,165 +105,163 @@ let P = 24,
                   ],
               });
     },
-    G = (e) => {
-        let { listingId: t, guildId: n, className: i } = e,
-            a = (0, y.A)(n, t),
-            [o] = E.lZ(t),
-            l = (0, S.A)(o),
-            [c] = E.$O(t),
-            d = E.It(t, n),
-            [_] = E.UN(t, n);
-        return null == a && 0 === l.length && 0 === c.length && 0 === _.size
+    U = (e) => {
+        let { listingId: t, guildId: i, className: n } = e,
+            a = (0, _.A)(i, t),
+            [r] = j.lZ(t),
+            c = (0, N.A)(r),
+            [o] = j.$O(t),
+            u = j.It(t, i),
+            [m] = j.UN(t, i);
+        return null == a && 0 === c.length && 0 === o.length && 0 === m.size
             ? null
-            : (0, r.jsxs)("div", {
-                  className: s()(x.bp, i),
+            : (0, l.jsxs)("div", {
+                  className: s()(R.bp, n),
                   children: [
                       null != a &&
-                          (0, r.jsxs)(u.Fmo, {
-                              component: (0, r.jsx)(u.Heading, {
+                          (0, l.jsxs)(d.Fmo, {
+                              component: (0, l.jsx)(d.Heading, {
                                   variant: "text-xs/bold",
                                   color: "text-default",
-                                  className: x.bV,
-                                  children: w.intl.string(w.t.FJZmYx),
+                                  className: R.bV,
+                                  children: k.intl.string(k.t.FJZmYx),
                               }),
                               children: [
-                                  (0, r.jsx)(u.hKd, { size: 8 }),
-                                  (0, r.jsx)(v.A, { role: d, guildId: n, className: x.gP }),
+                                  (0, l.jsx)(d.hKd, { size: 8 }),
+                                  (0, l.jsx)(b.A, { role: u, guildId: i, className: R.gP }),
                               ],
                           }),
-                      (0, r.jsx)(k, { header: w.intl.string(w.t.LtfhAj), benefits: l, guildId: n }),
-                      (0, r.jsx)(k, { header: w.intl.string(w.t["8oxWpO"]), benefits: c, guildId: n }),
-                      (0, r.jsx)(U, { guildId: n, listingId: t }),
+                      (0, l.jsx)(G, { header: k.intl.string(k.t.LtfhAj), benefits: c, guildId: i }),
+                      (0, l.jsx)(G, { header: k.intl.string(k.t["8oxWpO"]), benefits: o, guildId: i }),
+                      (0, l.jsx)(P, { guildId: i, listingId: t }),
                   ],
               });
     },
-    F = (e) => {
-        let { onToggle: t, isViewAll: n, showMoreText: i } = e,
-            a = n ? w.intl.string(w.t["r/xxPU"]) : i;
-        return (0, r.jsx)(u.QWc, { text: a, onClick: t, textVariant: "text-xs/medium", variant: "secondary" });
+    M = (e) => {
+        let { onToggle: t, isViewAll: i, showMoreText: n } = e,
+            a = i ? k.intl.string(k.t["r/xxPU"]) : n;
+        return (0, l.jsx)(d.QWc, { text: a, onClick: t, textVariant: "text-xs/medium", variant: "secondary" });
     },
-    V = (e) => {
-        let { listingId: t, guildId: n, groupListingId: a, analyticsLocation: d } = e,
-            h = (0, g.dB)(t),
+    O = (e) => {
+        let { listingId: t, guildId: i, groupListingId: a, analyticsLocation: u } = e,
+            h = (0, v.dB)(t),
             {
-                openModal: T,
-                canOpenModal: y,
-                cannotOpenReason: S,
-                isCheckingTrialEligibility: v,
-            } = (0, O.A)(h, n, a, d),
-            b = (0, o.bG)([f.A], () => f.A.isSyncing),
-            { activeSubscription: P, activeSubscriptionListing: M } = (0, A.A)(a),
-            k = M?.id === t,
-            U = P?.status === L.Dmq.CANCELED,
-            [V, B] = i.useState(!1),
-            [j, H] = i.useState(!1),
-            Y = i.useCallback((e) => {
+                openModal: p,
+                canOpenModal: _,
+                cannotOpenReason: N,
+                isCheckingTrialEligibility: b,
+            } = (0, E.A)(h, i, a, u),
+            T = (0, r.bG)([x.A], () => x.A.isSyncing),
+            { activeSubscription: G, activeSubscriptionListing: P } = (0, A.A)(a),
+            O = P?.id === t,
+            D = G?.status === L.Dmq.CANCELED,
+            [F, w] = n.useState(!1),
+            [H, B] = n.useState(!1),
+            V = n.useCallback((e) => {
                 let t = !1;
-                null != e && (t = e.scrollHeight - e.clientHeight > 1), H(t);
+                null != e && (t = e.scrollHeight - e.clientHeight > 1), B(t);
             }, []),
-            [W] = E.tx(t),
-            [K] = E.I8(t),
-            [$] = E.V_(t),
-            [z] = E.hh(t),
-            q = (0, I.A)(n, t),
-            X = null != $ && null == P && q,
-            Z = () => B((e) => !e),
-            Q = (0, c.A)(D.Yl),
-            [J, ee] = i.useState(!1),
-            et = J || !Q,
-            en = () => ee((e) => !e),
-            er = (0, o.bG)([_.A], () => _.A.isViewingServerShop(n)),
-            ei = h?.published === !0,
-            ea = h?.soft_deleted === !0,
-            es = w.intl.string(w.t.KzmEA9);
-        return (ei || er) && !ea
-            ? (0, r.jsxs)("article", {
-                  className: x.kL,
-                  "aria-label": W,
+            [Y] = j.tx(t),
+            [z] = j.I8(t),
+            [K] = j.V_(t),
+            [X] = j.hh(t),
+            W = (0, f.A)(i, t),
+            q = null != K && null == G && W,
+            $ = (0, o.A)(y.Yl),
+            [Q, Z] = n.useState(!1),
+            J = Q || !$,
+            ee = (0, r.bG)([m.A], () => m.A.isViewingServerShop(i)),
+            et = h?.published === !0,
+            ei = h?.soft_deleted === !0,
+            el = k.intl.string(k.t.KzmEA9);
+        return (et || ee) && !ei
+            ? (0, l.jsxs)("article", {
+                  className: R.kL,
+                  "aria-label": Y,
                   children: [
-                      X &&
-                          (0, r.jsxs)("div", {
-                              className: s()(x.G_, x.rF),
+                      q &&
+                          (0, l.jsxs)("div", {
+                              className: s()(R.G_, R.rF),
                               children: [
-                                  w.intl.format(w.t.L2ouip, {
-                                      trialPeriodDuration: (0, p.Gg)({
-                                          interval: $.interval,
-                                          interval_count: $.interval_count,
+                                  k.intl.format(k.t.L2ouip, {
+                                      trialPeriodDuration: (0, g.Gg)({
+                                          interval: K.interval,
+                                          interval_count: K.interval_count,
                                       }),
                                   }),
-                                  (0, r.jsx)(l.m_, {
-                                      text: w.intl.formatToPlainString(w.t.FYyR4o, { activeTrialUserLimit: z ?? 0 }),
-                                      children: (0, r.jsx)(u.mir, {
+                                  (0, l.jsx)(c.m_, {
+                                      text: k.intl.formatToPlainString(k.t.FYyR4o, { activeTrialUserLimit: X ?? 0 }),
+                                      children: (0, l.jsx)(d.mir, {
                                           size: "xs",
                                           color: "currentColor",
-                                          className: x.Xz,
+                                          className: R.Xz,
                                       }),
                                   }),
                               ],
                           }),
-                      (0, r.jsxs)("div", {
-                          className: X ? void 0 : x.e1,
+                      (0, l.jsxs)("div", {
+                          className: q ? void 0 : R.e1,
                           children: [
-                              (0, r.jsxs)("div", {
-                                  className: x.Og,
+                              (0, l.jsxs)("div", {
+                                  className: R.Og,
                                   children: [
-                                      Q
-                                          ? (0, r.jsx)(R.$, {
+                                      $
+                                          ? (0, l.jsx)(S.$, {
                                                 listingId: t,
-                                                isListingPublished: ei,
-                                                expanded: et,
-                                                onToggleExpanded: en,
+                                                isListingPublished: et,
+                                                expanded: J,
+                                                onToggleExpanded: () => Z((e) => !e),
                                             })
-                                          : (0, r.jsx)(N.Hs, { listingId: t, isListingPublished: ei }),
-                                      et &&
-                                          (0, r.jsxs)(u.BJc, {
+                                          : (0, l.jsx)(C.Hs, { listingId: t, isListingPublished: et }),
+                                      J &&
+                                          (0, l.jsxs)(d.BJc, {
                                               gap: 16,
                                               children: [
-                                                  Q && (0, r.jsx)("div", { className: x.yF }),
-                                                  k
-                                                      ? (0, r.jsx)(u.Button, {
+                                                  $ && (0, l.jsx)("div", { className: R.yF }),
+                                                  O
+                                                      ? (0, l.jsx)(d.Button, {
                                                             disabled: !0,
                                                             fullWidth: !0,
-                                                            variant: U ? "secondary" : "primary",
-                                                            text: U
-                                                                ? w.intl.string(w.t.iKHmu0)
-                                                                : w.intl.string(w.t.XvAuMo),
+                                                            variant: D ? "secondary" : "primary",
+                                                            text: D
+                                                                ? k.intl.string(k.t.iKHmu0)
+                                                                : k.intl.string(k.t.XvAuMo),
                                                         })
-                                                      : (0, r.jsxs)(r.Fragment, {
+                                                      : (0, l.jsxs)(l.Fragment, {
                                                             children: [
-                                                                y
+                                                                _
                                                                     ? null
-                                                                    : (0, r.jsx)(u.po8, {
-                                                                          className: x.Ht,
-                                                                          messageType: u.YCn.INFO,
-                                                                          children: S,
+                                                                    : (0, l.jsx)(d.po8, {
+                                                                          className: R.Ht,
+                                                                          messageType: d.YCn.INFO,
+                                                                          children: N,
                                                                       }),
-                                                                (0, r.jsx)(u.Button, {
+                                                                (0, l.jsx)(d.Button, {
                                                                     fullWidth: !0,
-                                                                    text: w.intl.string(w.t.fM5ZsX),
-                                                                    disabled: !y || b,
-                                                                    loading: v,
-                                                                    onClick: T,
-                                                                    icon: C.A,
+                                                                    text: k.intl.string(k.t.fM5ZsX),
+                                                                    disabled: !_ || T,
+                                                                    loading: b,
+                                                                    onClick: p,
+                                                                    icon: I.A,
                                                                     variant: "primary",
                                                                 }),
                                                             ],
                                                         }),
-                                                  (0, r.jsxs)(u.BJc, {
+                                                  (0, l.jsxs)(d.BJc, {
                                                       gap: 8,
                                                       align: "center",
                                                       children: [
-                                                          (0, r.jsx)(u.Text, {
+                                                          (0, l.jsx)(d.Text, {
                                                               variant: "text-sm/normal",
                                                               color: "text-default",
-                                                              className: s()((!j || !V) && x.Zp),
-                                                              children: (0, r.jsx)("div", { ref: Y, children: K }),
+                                                              className: s()((!H || !F) && R.Zp),
+                                                              children: (0, l.jsx)("div", { ref: V, children: z }),
                                                           }),
-                                                          j &&
-                                                              (0, r.jsx)(F, {
-                                                                  isViewAll: V,
-                                                                  onToggle: Z,
-                                                                  showMoreText: es,
+                                                          H &&
+                                                              (0, l.jsx)(M, {
+                                                                  isViewAll: F,
+                                                                  onToggle: () => w((e) => !e),
+                                                                  showMoreText: el,
                                                               }),
                                                       ],
                                                   }),
@@ -278,7 +269,7 @@ let P = 24,
                                           }),
                                   ],
                               }),
-                              et && (0, r.jsx)(u.Fmo, { children: (0, r.jsx)(G, { listingId: t, guildId: n }) }),
+                              J && (0, l.jsx)(d.Fmo, { children: (0, l.jsx)(U, { listingId: t, guildId: i }) }),
                           ],
                       }),
                   ],

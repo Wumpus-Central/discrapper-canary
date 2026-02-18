@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { A: () => i });
-var r = n(627968);
-let i = (e) => {
-    let { skuIds: t = [], skuBlock: n, componentMap: i } = e,
-        a = i[n];
-    return null == a ? null : t.map((e, t) => (0, r.jsx)(a, { skuId: e }, `${e}-${t}`));
+t.d(r, { A: () => l });
+var d = t(627968);
+let l = (e) => {
+    let { skuIds: r = [], skuBlock: t, componentMap: l } = e,
+        c = l[t];
+    return null == c ? null : r.map((e, r) => (0, d.jsx)(c, { skuId: e }, `${e}-${r}`));
 };

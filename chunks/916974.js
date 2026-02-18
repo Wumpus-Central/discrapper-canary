@@ -1,13 +1,12 @@
-"use strict";
-n.d(t, { CancellationContext: () => s, X: () => o });
-var r = n(64700),
-    i = n(158954),
-    a = n(788868);
-let s = r.createContext({
+i.d(e, { CancellationContext: () => a, X: () => s });
+var n = i(64700),
+    r = i(158954),
+    l = i(788868);
+let a = n.createContext({
         setStep: () => {},
-        premiumType: a.PremiumTypes.TIER_0,
+        premiumType: l.PremiumTypes.TIER_0,
         onClose: () => {},
-        transitionState: i.ip4.ENTERING,
+        transitionState: r.ip4.ENTERING,
         premiumSubscription: {},
         analyticsLocations: [],
         analyticsLocation: void 0,
@@ -22,4 +21,4 @@ let s = r.createContext({
         pauseDuration: null,
         setPauseDuration: () => {},
     }),
-    o = () => r.useContext(s);
+    s = () => n.useContext(a);

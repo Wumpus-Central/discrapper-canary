@@ -1,54 +1,52 @@
-"use strict";
-n.d(t, { Z: () => f });
-var r = n(64700),
-    i = n(311907),
-    a = n(954571),
-    s = n(927578),
-    o = n(440938),
-    l = n(590180),
-    u = n(993408),
-    c = n(331884),
-    d = n(652215);
-let _ = 1e3;
-function f(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "product",
-        f = (0, o.uM)(),
-        p = (0, i.bG)([l.A], () => l.A.getProduct(e)),
-        h = (0, c.i)(),
-        m = s.Ay.canUseCollectibles(h),
-        g = r.useRef(null),
-        E = r.useCallback(() => {
-            let r = null != p ? (0, u.Br)(p, m, !1) : null,
-                i = null != p ? (0, u.c7)(p, m, !1) : void 0;
-            a.default.track(d.HAw.COLLECTIBLES_TILE_IMPRESSION, {
-                collectibles_shop_session_id: f?.sessionId,
-                sku_id: e,
-                display_price: r?.amount,
-                display_price_currency: r?.currency.toString(),
-                display_price_strikethrough: i,
-                position: f?.tilePosition,
-                page_type: t,
-                page_category: f?.pageCategory,
-                page_section: f?.pageSection,
-                type: n,
-                category_position: f?.categoryPosition,
+r.d(e, { Z: () => m });
+var i = r(64700),
+    l = r(311907),
+    n = r(954571),
+    s = r(927578),
+    a = r(440938),
+    u = r(590180),
+    o = r(993408),
+    d = r(331884),
+    c = r(652215);
+function m(t, e) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "product",
+        m = (0, a.uM)(),
+        x = (0, l.bG)([u.A], () => u.A.getProduct(t)),
+        p = (0, d.i)(),
+        g = s.Ay.canUseCollectibles(p),
+        h = i.useRef(null),
+        C = i.useCallback(() => {
+            let i = null != x ? (0, o.Br)(x, g, !1) : null,
+                l = null != x ? (0, o.c7)(x, g, !1) : void 0;
+            n.default.track(c.HAw.COLLECTIBLES_TILE_IMPRESSION, {
+                collectibles_shop_session_id: m?.sessionId,
+                sku_id: t,
+                display_price: i?.amount,
+                display_price_currency: i?.currency.toString(),
+                display_price_strikethrough: l,
+                position: m?.tilePosition,
+                page_type: e,
+                page_category: m?.pageCategory,
+                page_section: m?.pageSection,
+                type: r,
+                category_position: m?.categoryPosition,
             });
-        }, [f?.sessionId, f?.categoryPosition, f?.pageCategory, f?.pageSection, f?.tilePosition, m, t, p, e, n]),
-        A = r.useCallback(
-            (e) => {
-                e
-                    ? null === g.current &&
-                      (g.current = setTimeout(() => {
-                          E(), (g.current = null);
-                      }, _))
-                    : null !== g.current && (clearTimeout(g.current), (g.current = null));
+        }, [m?.sessionId, m?.categoryPosition, m?.pageCategory, m?.pageSection, m?.tilePosition, g, e, x, t, r]),
+        A = i.useCallback(
+            (t) => {
+                t
+                    ? null === h.current &&
+                      (h.current = setTimeout(() => {
+                          C(), (h.current = null);
+                      }, 1e3))
+                    : null !== h.current && (clearTimeout(h.current), (h.current = null));
             },
-            [E],
+            [C],
         );
     return (
-        r.useEffect(
+        i.useEffect(
             () => () => {
-                null !== g.current && (clearTimeout(g.current), (g.current = null));
+                null !== h.current && (clearTimeout(h.current), (h.current = null));
             },
             [],
         ),

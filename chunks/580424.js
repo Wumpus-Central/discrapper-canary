@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { Ay: () => er, Sz: () => k, aI: () => M });
+n.d(t, { Ay: () => en, Sz: () => P, aI: () => M });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(735438),
     l = n.n(o),
     u = n(837381),
@@ -11,37 +11,37 @@ var r = n(627968),
     d = n(397927),
     _ = n(775602),
     f = n(392054),
-    h = n(41329),
-    p = n(746388),
-    g = n(47167),
+    p = n(41329),
+    h = n(746388),
+    m = n(47167),
     E = n(713654),
-    A = n(921661),
-    I = n(678473),
-    T = n(967144),
-    y = n(733509),
+    g = n(921661),
+    A = n(678473),
+    I = n(967144),
+    T = n(733509),
     S = n(679382),
-    v = n(378058),
-    C = n(253932),
-    b = n(71393),
-    N = n(994500),
-    R = n(287809),
-    O = n(486020),
-    D = n(427262),
-    L = n(557158),
-    w = n(652215);
+    y = n(378058),
+    v = n(253932),
+    N = n(71393),
+    C = n(994500),
+    b = n(287809),
+    R = n(486020),
+    O = n(427262),
+    D = n(557158),
+    L = n(652215);
 n(307731);
-var x = n(985018),
-    P = n(395410);
+var w = n(985018),
+    x = n(395410);
 function M(e) {
     return null != e ? `autocomplete-${e}` : null;
 }
-function k(e) {
+function P(e) {
     return `autocomplete-${e}-title`;
 }
-let U = i.createContext(null);
-class G extends i.PureComponent {
+let k = i.createContext(null);
+class U extends i.PureComponent {
     selectable = !0;
-    layoutClass = P.rT;
+    layoutClass = x.rT;
     constructor(e) {
         super(e), (this.state = { hovered: !1 });
     }
@@ -54,12 +54,12 @@ class G extends i.PureComponent {
     renderClickable(e) {
         let {
                 layoutClass: t,
-                props: { className: n, index: i, selected: a },
+                props: { className: n, index: i, selected: s },
             } = this,
             o = this.isSelectable();
         return (0, r.jsx)(d.DUT, {
             ...e,
-            className: s()(P.vk, n, t),
+            className: a()(x.vk, n, t),
             id: M(i) ?? void 0,
             onClick: o ? this.handleClick : void 0,
             onMouseMove: o
@@ -70,8 +70,8 @@ class G extends i.PureComponent {
             onMouseLeave: o ? () => this.setState({ hovered: !1 }) : void 0,
             role: "option",
             "aria-disabled": !o,
-            "aria-selected": o && a,
-            children: (0, r.jsx)("div", { className: P.E3, children: this.renderContent() }),
+            "aria-selected": o && s,
+            children: (0, r.jsx)("div", { className: x.E3, children: this.renderContent() }),
         });
     }
     render() {
@@ -89,100 +89,100 @@ class G extends i.PureComponent {
         null != t && "number" == typeof n && t(n, e);
     };
 }
-class F extends G {
+class G extends U {
     renderContent() {
         let { text: e, description: t, badge: n } = this.props;
-        return (0, r.jsxs)(L.Mr, {
+        return (0, r.jsxs)(D.Mr, {
             children: [
-                (0, r.jsx)(L.oC, {
-                    children: (0, r.jsxs)(L.dB, {
+                (0, r.jsx)(D.oC, {
+                    children: (0, r.jsxs)(D.dB, {
                         children: [e, " ", null != n && (0, r.jsx)(c.E, { type: n, variant: "brand" })],
                     }),
                 }),
-                null != t ? (0, r.jsx)(L.Aq, { children: t }) : null,
+                null != t ? (0, r.jsx)(D.Aq, { children: t }) : null,
             ],
         });
     }
 }
-function V(e) {
+function F(e) {
     let t = i.useMemo(() => l().random(60, 120), []);
     return (0, r.jsx)("div", {
-        className: P.E3,
+        className: x.E3,
         "aria-busy": !0,
-        children: (0, r.jsx)(L.Mr, {
-            children: (0, r.jsx)(L.oC, {
-                children: (0, r.jsx)(L.dB, { children: (0, r.jsx)("div", { className: P.M, style: { width: t } }) }),
+        children: (0, r.jsx)(D.Mr, {
+            children: (0, r.jsx)(D.oC, {
+                children: (0, r.jsx)(D.dB, { children: (0, r.jsx)("div", { className: x.M, style: { width: t } }) }),
             }),
         }),
     });
 }
-function B(e) {
-    let { title: t, className: n, children: a } = e,
-        o = i.useContext(U);
+function V(e) {
+    let { title: t, className: n, children: s } = e,
+        o = i.useContext(k);
     return (0, r.jsx)("div", {
-        className: P.E3,
+        className: x.E3,
         children: (0, r.jsxs)(d.Heading, {
-            id: k(o.id),
-            className: s()(P.eu, n),
+            id: P(o.id),
+            className: a()(x.eu, n),
             variant: "heading-deprecated-12/semibold",
-            children: [t, a],
+            children: [t, s],
         }),
     });
 }
-class j extends G {
-    layoutClass = P.fF;
+class B extends U {
+    layoutClass = x.fF;
     selectable = !1;
     renderContent() {
         let { className: e } = this.props;
-        return (0, r.jsx)("div", { className: s()(e, P.yF) });
+        return (0, r.jsx)("div", { className: a()(e, x.yF) });
     }
 }
-class H extends G {
+class H extends U {
     renderContent() {
-        let { user: e, nick: t, status: n, hidePersonalInformation: i, guildId: a } = this.props,
-            s = null == a ? N.A.getNickname(e.id) : null;
-        return (0, r.jsxs)(L.Mr, {
+        let { user: e, nick: t, status: n, hidePersonalInformation: i, guildId: s } = this.props,
+            a = null == s ? C.A.getNickname(e.id) : null;
+        return (0, r.jsxs)(D.Mr, {
             children: [
-                (0, r.jsx)(L.Ch, {
+                (0, r.jsx)(D.Ch, {
                     children: (0, r.jsx)(d.euF, {
                         size: d._3J.SIZE_24,
-                        src: e.getAvatarURL(a, 24),
+                        src: e.getAvatarURL(s, 24),
                         "aria-hidden": !0,
                         status: n,
                     }),
                 }),
-                (0, r.jsx)(L.oC, { children: (0, r.jsx)(L.dB, { children: t ?? s ?? D.Ay.getName(e) }) }),
-                (0, r.jsxs)(L.Aq, {
+                (0, r.jsx)(D.oC, { children: (0, r.jsx)(D.dB, { children: t ?? a ?? O.Ay.getName(e) }) }),
+                (0, r.jsxs)(D.Aq, {
                     children: [
-                        D.Ay.getUserTag(e, { mode: "username", identifiable: i ? "never" : "always" }),
+                        O.Ay.getUserTag(e, { mode: "username", identifiable: i ? "never" : "always" }),
                         i || e.hasUniqueUsername()
                             ? null
-                            : (0, r.jsxs)("span", { className: P.T, children: ["#", e.discriminator] }),
+                            : (0, r.jsxs)("span", { className: x.T, children: ["#", e.discriminator] }),
                     ],
                 }),
             ],
         });
     }
 }
-class Y extends G {
-    layoutClass = P.xF;
+class j extends U {
+    layoutClass = x.xF;
     renderContent() {
         let {
                 user: e,
                 nick: t,
                 comparator: n,
                 status: i,
-                hidePersonalInformation: a,
+                hidePersonalInformation: s,
                 guildId: o,
                 selected: l,
                 layout: u = "horizontal",
             } = this.props,
-            c = null == o ? N.A.getNickname(e.id) : null,
-            _ = t ?? c ?? D.Ay.getName(e);
-        return (0, r.jsxs)(L.Mr, {
-            className: s()({ [P.DH]: "vertical-suggestion" === u }),
+            c = null == o ? C.A.getNickname(e.id) : null,
+            _ = t ?? c ?? O.Ay.getName(e);
+        return (0, r.jsxs)(D.Mr, {
+            className: a()({ [x.DH]: "vertical-suggestion" === u }),
             children: [
-                (0, r.jsx)(L.Ch, {
+                (0, r.jsx)(D.Ch, {
                     children: (0, r.jsx)(d.euF, {
                         size: d._3J.SIZE_32,
                         src: e.getAvatarURL(o, 32),
@@ -191,30 +191,30 @@ class Y extends G {
                     }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: P.H5,
-                    "aria-label": x.intl.formatToPlainString(x.t["9v/R+j"], { name: _ }),
+                    className: x.H5,
+                    "aria-label": w.intl.formatToPlainString(w.t["9v/R+j"], { name: _ }),
                     children: [
-                        (0, r.jsx)(L.oC, {
+                        (0, r.jsx)(D.oC, {
                             children: (0, r.jsx)(d.Text, {
-                                className: P.hf,
+                                className: x.hf,
                                 color: "interactive-text-active",
                                 variant: "text-sm/medium",
                                 children: _,
                             }),
                         }),
-                        (0, r.jsx)(L.Aq, {
+                        (0, r.jsx)(D.Aq, {
                             children:
                                 null == n || n === _.toLocaleLowerCase() || n === e.username.toLocaleLowerCase()
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              D.Ay.getUserTag(e, {
+                                              O.Ay.getUserTag(e, {
                                                   mode: "username",
-                                                  identifiable: a ? "never" : "always",
+                                                  identifiable: s ? "never" : "always",
                                               }),
-                                              a || e.hasUniqueUsername()
+                                              s || e.hasUniqueUsername()
                                                   ? null
                                                   : (0, r.jsxs)("span", {
-                                                        className: P.T,
+                                                        className: x.T,
                                                         children: ["#", e.discriminator],
                                                     }),
                                           ],
@@ -224,226 +224,226 @@ class Y extends G {
                     ],
                 }),
                 (0, r.jsx)("div", {
-                    className: P.ti,
+                    className: x.ti,
                     children: l ? (0, r.jsx)(d.e7I, { shortcut: "tab", dim: !0 }) : null,
                 }),
             ],
         });
     }
 }
-class W extends G {
+class Y extends U {
     renderContent() {
         let { role: e, hideDescription: t, guildId: n } = this.props,
-            { colorString: i, colorStrings: a } = e,
+            { colorString: i, colorStrings: s } = e,
             o = "dot" === _.A.roleStyle,
-            l = "username" === _.A.roleStyle && (null != i || null != a),
-            u = (0, T.hH)(n, e, a),
+            l = "username" === _.A.roleStyle && (null != i || null != s),
+            u = (0, I.hH)(n, e, s),
             c = null != u && l,
-            { gradientStyle: f, gradientClassname: h } = (0, d.WqX)({
-                colorStrings: a,
+            { gradientStyle: f, gradientClassname: p } = (0, d.WqX)({
+                colorStrings: s,
                 useReducedMotion: _.A.useReducedMotion,
                 roleStyle: "username",
                 includeConvenienceGlow: !0,
             }),
-            p = l ? { ...(c ? f : { color: null != i ? i : void 0 }) } : void 0;
-        return (0, r.jsxs)(L.Mr, {
+            h = l ? { ...(c ? f : { color: null != i ? i : void 0 }) } : void 0;
+        return (0, r.jsxs)(D.Mr, {
             children: [
-                (0, r.jsx)(L.oC, {
-                    children: (0, r.jsxs)(L.dB, {
+                (0, r.jsx)(D.oC, {
+                    children: (0, r.jsxs)(D.dB, {
                         children: [
-                            o && (0, r.jsx)(d.WYI, { className: P.m4, color: i, colors: u, tooltip: !1 }),
+                            o && (0, r.jsx)(d.WYI, { className: x.m4, color: i, colors: u, tooltip: !1 }),
                             (0, r.jsxs)("span", {
-                                className: s()({ [h]: c }),
-                                style: p,
+                                className: a()({ [p]: c }),
+                                style: h,
                                 "data-text": c ? `@${e.name}` : void 0,
                                 children: ["@", e.name],
                             }),
                         ],
                     }),
                 }),
-                t ? null : (0, r.jsx)(L.Aq, { children: x.intl.string(x.t["/91tbr"]) }),
+                t ? null : (0, r.jsx)(D.Aq, { children: w.intl.string(w.t["/91tbr"]) }),
             ],
         });
     }
 }
-class K extends G {
+class W extends U {
     renderContent() {
         let { timestamp: e, description: t } = this.props;
-        return (0, r.jsxs)(L.Mr, {
+        return (0, r.jsxs)(D.Mr, {
             children: [
-                (0, r.jsx)(L.oC, {
-                    children: (0, r.jsx)(L.dB, { children: (0, r.jsx)(I.A, { node: e, showTooltip: !1 }) }),
+                (0, r.jsx)(D.oC, {
+                    children: (0, r.jsx)(D.dB, { children: (0, r.jsx)(A.A, { node: e, showTooltip: !1 }) }),
                 }),
-                null != t ? (0, r.jsx)(L.Aq, { children: t }) : null,
+                null != t ? (0, r.jsx)(D.Aq, { children: t }) : null,
             ],
         });
     }
 }
-class $ extends G {
+class K extends U {
     renderContent() {
         let { channel: e, category: t } = this.props,
-            n = e.type === w.rbe.GUILD_CATEGORY ? d.sjq : (0, E.gU)(e);
-        return (0, r.jsxs)(L.Mr, {
+            n = e.type === L.rbe.GUILD_CATEGORY ? d.sjq : (0, E.gU)(e);
+        return (0, r.jsxs)(D.Mr, {
             children: [
-                null != n && (0, r.jsx)(L.Ch, { children: (0, r.jsx)(n, { className: P.Kk }) }),
-                (0, r.jsx)(L.oC, { children: (0, r.jsx)(L.dB, { children: (0, g.m1)(e, R.default, N.A) }) }),
-                null != t ? (0, r.jsx)(L.Aq, { children: t.name }) : null,
+                null != n && (0, r.jsx)(D.Ch, { children: (0, r.jsx)(n, { className: x.Kk }) }),
+                (0, r.jsx)(D.oC, { children: (0, r.jsx)(D.dB, { children: (0, m.m1)(e, b.default, C.A) }) }),
+                null != t ? (0, r.jsx)(D.Aq, { children: t.name }) : null,
             ],
         });
     }
 }
-class z extends G {
+class z extends U {
     renderContent() {
         let { command: e } = this.props;
-        return (0, r.jsxs)(L.Mr, {
+        return (0, r.jsxs)(D.Mr, {
             children: [
-                (0, r.jsx)(L.Ch, {
+                (0, r.jsx)(D.Ch, {
                     children: (0, r.jsx)(d.Fb4, {
                         size: "xs",
                         color: "currentColor",
-                        className: P.Kk,
-                        colorClass: P.t4,
+                        className: x.Kk,
+                        colorClass: x.t4,
                     }),
                 }),
-                (0, r.jsx)(L.oC, { children: (0, r.jsx)(L.dB, { children: e.displayName }) }),
-                (0, r.jsx)(L.Aq, { children: e.displayDescription }),
+                (0, r.jsx)(D.oC, { children: (0, r.jsx)(D.dB, { children: e.displayName }) }),
+                (0, r.jsx)(D.Aq, { children: e.displayDescription }),
             ],
         });
     }
 }
-class q extends G {
+class $ extends U {
     isSelectable() {
         return this.props.command.inputType !== f.y$.PLACEHOLDER;
     }
     renderContent() {
-        let { command: e, channel: t, showImage: n, section: i, selected: a } = this.props,
-            { hovered: s } = this.state,
+        let { command: e, channel: t, showImage: n, section: i, selected: s } = this.props,
+            { hovered: a } = this.state,
             o = this.isSelectable();
         return e.inputType === f.y$.PLACEHOLDER
-            ? (0, r.jsx)(p.A, {})
-            : (0, r.jsx)(h.A, {
+            ? (0, r.jsx)(h.A, {})
+            : (0, r.jsx)(p.A, {
                   command: e,
                   channel: t,
                   showImage: n,
-                  showOptions: s || (o && a),
+                  showOptions: a || (o && s),
                   section: i,
                   isSelectable: o,
               });
     }
 }
-class X extends G {
-    layoutClass = s()(P.rT, P.Mf);
+class q extends U {
+    layoutClass = a()(x.rT, x.Mf);
     renderContent() {
         let { emoji: e, sentinel: t, guild: n } = this.props,
-            i = C.Sf.getSetting(),
-            a =
+            i = v.Sf.getSetting(),
+            s =
                 null != e.id || "" !== e.url
                     ? (0, r.jsx)("img", {
                           alt: "",
-                          className: P.mp,
+                          className: x.mp,
                           src:
                               null != e.id
-                                  ? O.Ay.getEmojiURL({ id: e.id, animated: e.animated && i, size: 48 })
+                                  ? R.Ay.getEmojiURL({ id: e.id, animated: e.animated && i, size: 48 })
                                   : e.url,
                       })
-                    : (0, r.jsx)("span", { className: P.nT, children: e.surrogates }),
-            s = null != n ? (0, r.jsx)(L.Aq, { children: n.name }) : null;
-        return (0, r.jsxs)(L.Mr, {
+                    : (0, r.jsx)("span", { className: x.nT, children: e.surrogates }),
+            a = null != n ? (0, r.jsx)(D.Aq, { children: n.name }) : null;
+        return (0, r.jsxs)(D.Mr, {
             children: [
-                (0, r.jsx)(L.Ch, { children: a }),
-                (0, r.jsx)(L.oC, { children: (0, r.jsxs)(L.dB, { children: [t, e.name, t] }) }),
-                s,
+                (0, r.jsx)(D.Ch, { children: s }),
+                (0, r.jsx)(D.oC, { children: (0, r.jsxs)(D.dB, { children: [t, e.name, t] }) }),
+                a,
             ],
         });
     }
 }
-class Z extends G {
-    layoutClass = s()(P.rT, P.Mf);
+class Z extends U {
+    layoutClass = a()(x.rT, x.Mf);
     renderContent() {
         let e,
-            { queryMatch: t, renderSticker: n, selected: i, sticker: a } = this.props,
-            { hovered: s } = this.state;
+            { queryMatch: t, renderSticker: n, selected: i, sticker: s } = this.props,
+            { hovered: a } = this.state;
         return (
-            (0, v.FD)(a)
-                ? (e = S.A.getStickerPack(a.pack_id)?.name)
-                : (0, v.Xw)(a) && (e = b.A.getGuild(a.guild_id)?.name),
-            (0, r.jsxs)(L.Mr, {
+            (0, y.FD)(s)
+                ? (e = S.A.getStickerPack(s.pack_id)?.name)
+                : (0, y.Xw)(s) && (e = N.A.getGuild(s.guild_id)?.name),
+            (0, r.jsxs)(D.Mr, {
                 children: [
-                    (0, r.jsx)(L.Ch, { children: n(a, s || !0 === i) }),
-                    (0, r.jsxs)(L.oC, {
+                    (0, r.jsx)(D.Ch, { children: n(s, a || !0 === i) }),
+                    (0, r.jsxs)(D.oC, {
                         children: [
-                            (0, r.jsx)(L.dB, { children: a.name }),
-                            null != t && (0, r.jsx)(L.Nd, { children: x.intl.format(x.t.PAutaQ, { queryMatch: t }) }),
+                            (0, r.jsx)(D.dB, { children: s.name }),
+                            null != t && (0, r.jsx)(D.Nd, { children: w.intl.format(w.t.PAutaQ, { queryMatch: t }) }),
                         ],
                     }),
-                    null != e && (0, r.jsx)(L.Aq, { children: e }),
+                    null != e && (0, r.jsx)(D.Aq, { children: e }),
                 ],
             })
         );
     }
 }
-class Q extends G {
-    layoutClass = P.ju;
+class X extends U {
+    layoutClass = x.ju;
     renderContent() {
         let { width: e, height: t, src: n } = this.props;
         return (0, r.jsx)("img", { alt: "", src: n, width: e, height: t });
     }
 }
-class J extends G {
+class Q extends U {
     renderContent() {
-        return (0, r.jsx)(A.A, { emojis: this.props.emojis });
+        return (0, r.jsx)(g.A, { emojis: this.props.emojis });
     }
 }
-class ee extends G {
+class J extends U {
     renderContent() {
-        return (0, r.jsx)(y.A, { ...this.props });
+        return (0, r.jsx)(T.A, { ...this.props });
     }
 }
-class et extends G {
+class ee extends U {
     renderContent() {
         let { game: e } = this.props,
             t = (0, r.jsx)("img", {
                 alt: "",
-                className: P.Kk,
-                src: O.Ay.getApplicationIconURL({ id: e.id, icon: e.icon, size: 32 }),
+                className: x.Kk,
+                src: R.Ay.getApplicationIconURL({ id: e.id, icon: e.icon, size: 32 }),
             });
-        return (0, r.jsxs)(L.Mr, {
+        return (0, r.jsxs)(D.Mr, {
             children: [
-                (0, r.jsx)(L.Ch, { children: t }),
-                (0, r.jsx)(L.oC, { children: (0, r.jsx)(L.dB, { children: e.name }) }),
+                (0, r.jsx)(D.Ch, { children: t }),
+                (0, r.jsx)(D.oC, { children: (0, r.jsx)(D.dB, { children: e.name }) }),
             ],
         });
     }
 }
-class en extends i.PureComponent {
-    static Generic = F;
-    static Loading = V;
-    static Title = B;
-    static Divider = j;
+class et extends i.PureComponent {
+    static Generic = G;
+    static Loading = F;
+    static Title = V;
+    static Divider = B;
     static User = H;
-    static UserSuggestion = Y;
-    static Role = W;
-    static Channel = $;
+    static UserSuggestion = j;
+    static Role = Y;
+    static Channel = K;
     static Command = z;
-    static NewCommand = q;
-    static Emoji = X;
-    static GIFIntegration = Q;
+    static NewCommand = $;
+    static Emoji = q;
+    static GIFIntegration = X;
     static Sticker = Z;
-    static EmojiUpsell = J;
-    static Soundmoji = ee;
-    static Game = et;
-    static Timestamp = K;
+    static EmojiUpsell = Q;
+    static Soundmoji = J;
+    static Game = ee;
+    static Timestamp = W;
     render() {
-        let { children: e, className: t, innerClassName: n, id: a, ...o } = this.props;
+        let { children: e, className: t, innerClassName: n, id: s, ...o } = this.props;
         return i.Children.count(e) > 0
-            ? (0, r.jsx)(U.Provider, {
-                  value: { id: a ?? "" },
+            ? (0, r.jsx)(k.Provider, {
+                  value: { id: s ?? "" },
                   children: (0, r.jsx)("div", {
-                      className: s()(P.nx, t),
-                      children: (0, r.jsx)("div", { className: s()(P.Fv, n), ...o, children: e }),
+                      className: a()(x.nx, t),
+                      children: (0, r.jsx)("div", { className: a()(x.Fv, n), ...o, children: e }),
                   }),
               })
             : null;
     }
 }
-let er = en;
+let en = et;

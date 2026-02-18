@@ -1,3 +1,4 @@
+"use strict";
 i.d(t, { r: () => g });
 var n = i(64700),
     s = i(311907),
@@ -11,8 +12,8 @@ var n = i(64700),
     _ = i(310209),
     m = i(594832),
     I = i(652215),
-    p = i(188275);
-let f = 30 * o.A.Millis.MINUTE;
+    f = i(188275);
+let p = 30 * o.A.Millis.MINUTE;
 function g(e) {
     let { userId: t, numItems: i = m.pl, source: o = m.B5.USER_PROFILE, location: g } = e,
         h = (0, a.Ay)(t),
@@ -20,8 +21,8 @@ function g(e) {
         A = (0, r.A)({ displayProfile: h, location: g }),
         {
             wishlistAndRecommendations: T,
-            skusToUserAndReason: L,
-            status: b,
+            skusToUserAndReason: b,
+            status: L,
         } = (function (e) {
             let { userIdsAndWishlistIds: t, numItems: i = m.pl, applicationIds: r, source: l = m.B5.USER_PROFILE } = e,
                 a = (function (e) {
@@ -30,7 +31,7 @@ function g(e) {
                     return (
                         n.useEffect(() => {
                             let e = u.A.getRecommendations(t, r);
-                            (null != e && ("loading" === e.state || e.fetchedAt >= Date.now() - f)) ||
+                            (null != e && ("loading" === e.state || e.fetchedAt >= Date.now() - p)) ||
                                 c.A.fetchWishlistRecommendations(r, t, i);
                         }, [t, r, i]),
                         l
@@ -50,7 +51,7 @@ function g(e) {
                 {
                     sortedWishlistSkus: o,
                     wishlistSkuIdToSku: I,
-                    wishlistSkusToUserAndReasonMap: p,
+                    wishlistSkusToUserAndReasonMap: f,
                     wishlistsAreFetching: g,
                     wishlistErrors: h,
                 } = (function (e) {
@@ -104,14 +105,14 @@ function g(e) {
                               },
                     [a, I],
                 ),
-                { combinedSkus: T, combinedSkusToUserAndReason: L } = n.useMemo(() => {
+                { combinedSkus: T, combinedSkusToUserAndReason: b } = n.useMemo(() => {
                     let e = { ...A };
-                    for (let [t, i] of Object.entries(p)) e[t] = { ...e[t], ...i };
+                    for (let [t, i] of Object.entries(f)) e[t] = { ...e[t], ...i };
                     return { combinedSkus: [...o, ...S], combinedSkusToUserAndReason: e };
-                }, [o, S, p, A]);
+                }, [o, S, f, A]);
             return {
                 wishlistAndRecommendations: T,
-                skusToUserAndReason: L,
+                skusToUserAndReason: b,
                 status: n.useMemo(
                     () =>
                         g || null == a || (null != a && "loading" === a.state)
@@ -124,15 +125,15 @@ function g(e) {
             };
         })({
             userIdsAndWishlistIds: n.useMemo(() => [{ userId: t, wishlistId: S }], [t, S]),
-            applicationIds: n.useMemo(() => (A ? [I.FYj, p.XR] : [I.FYj]), [A]),
+            applicationIds: n.useMemo(() => (A ? [I.FYj, f.XR] : [I.FYj]), [A]),
             numItems: i,
             source: o,
         }),
-        C = n.useMemo(() => T.filter((e) => null != L[e.id] && L[e.id][t] === _.j.WISHLIST).length, [T, t, L]);
+        C = n.useMemo(() => T.filter((e) => null != b[e.id] && b[e.id][t] === _.j.WISHLIST).length, [T, t, b]);
     return {
         wishlistAndRecommendations: n.useMemo(() => T.slice(0, i), [T, i]),
-        skusToUserAndReason: L,
-        status: b,
+        skusToUserAndReason: b,
+        status: L,
         defaultWishlistId: S,
         totalUnownedWishlistItemCount: C,
     };

@@ -3,14 +3,14 @@ n.r(t),
     n.d(t, {
         USER_SETTINGS_MODAL_KEY: () => _,
         getUserSettingsSectionsByWebUserSettings: () => E,
-        getWebUserSettingsByUserSettingsSections: () => g,
+        getWebUserSettingsByUserSettingsSections: () => m,
         openUserSettings: () => f,
-        openUserSettingsFromParsedUrl: () => A,
+        openUserSettingsFromParsedUrl: () => g,
     });
 var r = n(627968),
     i = n(397927),
-    a = n(73153),
-    s = n(894858),
+    s = n(73153),
+    a = n(894858),
     o = n(954571),
     l = n(780964),
     u = n(358776),
@@ -24,9 +24,9 @@ async function f(e) {
             ...l
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { section: d.nc_.ACCOUNT },
         u = arguments.length > 2 ? arguments[2] : void 0;
-    a.h.dispatch({ type: "USER_SETTINGS_MODAL_OPEN", subsection: t ?? null, ...l }),
+    s.h.dispatch({ type: "USER_SETTINGS_MODAL_OPEN", subsection: t ?? null, ...l }),
         (0, c.f)()
-            ? s.A.setState({ requestedTargetKey: e })
+            ? a.A.setState({ requestedTargetKey: e })
             : await (0, i.mMO)(
                   async () => {
                       let { default: t } = await Promise.all([
@@ -34,43 +34,53 @@ async function f(e) {
                           n.e("38939"),
                           n.e("84511"),
                           n.e("3795"),
+                          n.e("68859"),
+                          n.e("8555"),
                           n.e("28936"),
                           n.e("40396"),
-                          n.e("48330"),
                           n.e("13088"),
+                          n.e("48330"),
                           n.e("92414"),
-                          n.e("94857"),
-                          n.e("7034"),
-                          n.e("49559"),
-                          n.e("37372"),
                           n.e("62175"),
                           n.e("97283"),
-                          n.e("3183"),
-                          n.e("9753"),
+                          n.e("94857"),
+                          n.e("2419"),
+                          n.e("7034"),
+                          n.e("49559"),
                           n.e("2292"),
+                          n.e("37372"),
+                          n.e("99970"),
+                          n.e("54695"),
+                          n.e("3183"),
+                          n.e("11583"),
                           n.e("45586"),
                           n.e("67231"),
+                          n.e("41606"),
                           n.e("84127"),
                           n.e("62733"),
                           n.e("83518"),
                           n.e("69733"),
                           n.e("69946"),
                           n.e("86713"),
+                          n.e("64190"),
                           n.e("12664"),
                           n.e("34749"),
+                          n.e("94604"),
                           n.e("44667"),
+                          n.e("81562"),
                           n.e("7803"),
+                          n.e("55090"),
                           n.e("84704"),
                           n.e("67646"),
-                          n.e("15207"),
-                          n.e("34348"),
-                          n.e("26320"),
-                          n.e("36059"),
+                          n.e("45641"),
+                          n.e("74378"),
+                          n.e("82566"),
+                          n.e("13522"),
                           n.e("95782"),
                           n.e("16558"),
                           n.e("30485"),
                           n.e("98082"),
-                          n.e("70733"),
+                          n.e("82045"),
                       ]).then(n.bind(n, 796150));
                       return (n) => (0, r.jsx)(t, { ...n, target: e });
                   },
@@ -78,7 +88,7 @@ async function f(e) {
               ),
         u?.();
 }
-function h(e) {
+function p(e) {
     let { section: t, subsection: n, urlOrigin: r } = e;
     o.default.track(d.HAw.USER_SETTINGS_URL_PARSED, {
         user_settings_section: t,
@@ -86,7 +96,7 @@ function h(e) {
         user_settings_url_origin: r,
     });
 }
-function p(e) {
+function h(e) {
     let { section: t, subsection: n, urlOrigin: r } = e;
     o.default.track(d.HAw.USER_SETTINGS_URL_PARSING_FAILED, {
         user_settings_section: t,
@@ -94,7 +104,7 @@ function p(e) {
         user_settings_url_origin: r,
     });
 }
-function g() {
+function m() {
     let e = (0, u.WJ)("getWebUserSettingFromSection"),
         t = new Map([
             [d.nc_.ACCOUNT, l.X.ACCOUNT_PANEL],
@@ -137,21 +147,21 @@ function g() {
     return e || t.delete(d.nc_.CONNECTED_GAMES), t;
 }
 function E() {
-    let e = g(),
+    let e = m(),
         t = new Map();
     for (let [n, r] of e.entries()) t.set(r, n);
     return t;
 }
-function A(e) {
+function g(e) {
     let { match: t, urlOrigin: n, analyticsLocations: r } = e;
-    h({ section: t.section, subsection: t.subsection, urlOrigin: n });
-    let i = g(),
-        a = i.get(t.section);
-    if (null == a) {
-        p({ section: t.section, subsection: t.subsection, urlOrigin: n }), f();
+    p({ section: t.section, subsection: t.subsection, urlOrigin: n });
+    let i = m(),
+        s = i.get(t.section);
+    if (null == s) {
+        h({ section: t.section, subsection: t.subsection, urlOrigin: n }), f();
         return;
     }
-    f((null != t.subsection && "" !== t.subsection ? i.get(d.nc_[t.subsection]) : null) ?? a, {
+    f((null != t.subsection && "" !== t.subsection ? i.get(d.nc_[t.subsection]) : null) ?? s, {
         section: t.section,
         subsection: t.subsection,
         analyticsLocations: r,

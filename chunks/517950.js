@@ -1,6 +1,7 @@
-i.d(t, { a: () => r });
+"use strict";
+i.d(t, { a: () => s });
 var n,
-    r =
+    s =
         (((n = {}).SEASONAL_GIFTING_2024_BALLOONS_REWARD_SKU_ID = "1301993378484850769"),
         (n.SEASONAL_GIFTING_2024_CAT_EARS_REWARD_SKU_ID = "1301993378484850771"),
         (n.SEASONAL_GIFTING_2024_SNOWFLAKES_REWARD_SKU_ID = "1301993378484850773"),

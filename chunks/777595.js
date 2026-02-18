@@ -1,28 +1,27 @@
-"use strict";
-n.d(t, { v: () => f });
-var r = n(627968),
-    i = n(64700),
-    a = n(835245),
-    s = n(793574),
-    o = n(688810),
-    l = n(166532),
-    u = n(735305),
-    c = n(412463),
-    d = n(652215);
-let _ = [
+l.d(t, { v: () => m });
+var a = l(627968),
+    n = l(64700),
+    r = l(835245),
+    i = l(793574),
+    s = l(688810),
+    o = l(166532),
+    u = l(735305),
+    c = l(412463),
+    d = l(652215);
+let p = [
         {
-            key: l.pn.ADD_PAYMENT_STEPS,
-            renderStep: (e) => (0, r.jsx)(u.x, { ...e, breadcrumbSteps: [l.pn.ADD_PAYMENT_STEPS], onReturn: () => {} }),
+            key: o.pn.ADD_PAYMENT_STEPS,
+            renderStep: (e) => (0, a.jsx)(u.x, { ...e, breadcrumbSteps: [o.pn.ADD_PAYMENT_STEPS], onReturn: () => {} }),
             options: { renderHeader: !0 },
         },
         {
-            key: l.pn.REVIEW,
+            key: o.pn.REVIEW,
             renderStep: (e) =>
-                (0, r.jsx)(c.eO, { ...e, originStep: l.pn.ADD_PAYMENT_STEPS, text: "Review Step Placeholder" }),
+                (0, a.jsx)(c.eO, { ...e, originStep: o.pn.ADD_PAYMENT_STEPS, text: "Review Step Placeholder" }),
             options: {},
         },
     ],
-    f = {
+    m = {
         title: "Add Payment (Legacy Checkout)",
         stories: [
             {
@@ -30,20 +29,20 @@ let _ = [
                 id: "add-payment-step",
                 component: (e) => {
                     let { useStripeElements: t } = e,
-                        { analyticsLocations: n } = (0, o.Ay)(s.A.PAYMENT_FLOW_TEST_PAGE),
-                        l = i.useMemo(() => (0, a.A)(), []),
-                        u = i.useCallback(() => {}, []);
-                    return (0, r.jsx)(
+                        { analyticsLocations: l } = (0, s.Ay)(i.A.PAYMENT_FLOW_TEST_PAGE),
+                        o = n.useMemo(() => (0, r.A)(), []),
+                        u = n.useCallback(() => {}, []);
+                    return (0, a.jsx)(
                         c.dL,
                         {
-                            stepConfigs: _,
-                            analyticsLocations: n,
+                            stepConfigs: p,
+                            analyticsLocations: l,
                             applicationId: d.FYj,
                             initialPlanId: void 0,
                             skuId: null,
                             isGift: !1,
                             hideErrors: !1,
-                            loadId: l,
+                            loadId: o,
                             purchaseType: d.VVm.ONE_TIME,
                             disablePurchases: !0,
                             excludeSubscriptionPlansBySKU: !0,
@@ -52,7 +51,7 @@ let _ = [
                             onComplete: () => {},
                             paymentContextOverrides: { paymentElementsEnabled: t },
                         },
-                        `${l}-${t}`,
+                        `${o}-${t}`,
                     );
                 },
                 controls: { useStripeElements: { label: "Use Stripe Elements", type: "boolean", defaultValue: !1 } },

@@ -1,49 +1,74 @@
-"use strict";
-n.d(t, { K: () => o });
+t.d(a, { K: () => u });
 let r = new Map(),
-    i = !1;
+    n = !1;
 try {
-    i = "exceptZero" === new Intl.NumberFormat("de-DE", { signDisplay: "exceptZero" }).resolvedOptions().signDisplay;
+    n = "exceptZero" === new Intl.NumberFormat("de-DE", { signDisplay: "exceptZero" }).resolvedOptions().signDisplay;
 } catch {}
-let a = !1;
+let i = !1;
 try {
-    a = "unit" === new Intl.NumberFormat("de-DE", { style: "unit", unit: "degree" }).resolvedOptions().style;
+    i = "unit" === new Intl.NumberFormat("de-DE", { style: "unit", unit: "degree" }).resolvedOptions().style;
 } catch {}
-let s = { degree: { narrow: { default: "\xb0", "ja-JP": " 度", "zh-TW": "度", "sl-SI": " \xb0" } } };
-class o {
+let o = { degree: { narrow: { default: "\xb0", "ja-JP": " 度", "zh-TW": "度", "sl-SI": " \xb0" } } };
+class u {
     format(e) {
-        let t = "";
+        let a = "";
         if (
-            ((t =
-                i || null == this.options.signDisplay
+            ((a =
+                n || null == this.options.signDisplay
                     ? this.numberFormatter.format(e)
-                    : u(this.numberFormatter, this.options.signDisplay, e)),
-            "unit" === this.options.style && !a)
+                    : (function (e, a, t) {
+                          if ("auto" === a) return e.format(t);
+                          {
+                              if ("never" === a) return e.format(Math.abs(t));
+                              let r = !1;
+                              if (
+                                  ("always" === a
+                                      ? (r = t > 0 || Object.is(t, 0))
+                                      : "exceptZero" === a &&
+                                        (Object.is(t, -0) || Object.is(t, 0) ? (t = Math.abs(t)) : (r = t > 0)),
+                                  !r)
+                              )
+                                  return e.format(t);
+                              {
+                                  let a = e.format(-t),
+                                      r = e.format(t),
+                                      n = a.replace(r, "").replace(/\u200e|\u061C/, "");
+                                  return (
+                                      1 != [...n].length &&
+                                          console.warn(
+                                              "@react-aria/i18n polyfill for NumberFormat signDisplay: Unsupported case",
+                                          ),
+                                      a.replace(r, "!!!").replace(n, "+").replace("!!!", r)
+                                  );
+                              }
+                          }
+                      })(this.numberFormatter, this.options.signDisplay, e)),
+            "unit" === this.options.style && !i)
         ) {
-            var n;
-            let { unit: e, unitDisplay: r = "short", locale: i } = this.resolvedOptions();
-            if (!e) return t;
-            let a = null == (n = s[e]) ? void 0 : n[r];
-            t += a[i] || a.default;
+            var t;
+            let { unit: e, unitDisplay: r = "short", locale: n } = this.resolvedOptions();
+            if (!e) return a;
+            let i = null == (t = o[e]) ? void 0 : t[r];
+            a += i[n] || i.default;
         }
-        return t;
+        return a;
     }
     formatToParts(e) {
         return this.numberFormatter.formatToParts(e);
     }
-    formatRange(e, t) {
-        if ("function" == typeof this.numberFormatter.formatRange) return this.numberFormatter.formatRange(e, t);
-        if (t < e) throw RangeError("End date must be >= start date");
-        return `${this.format(e)} \u{2013} ${this.format(t)}`;
+    formatRange(e, a) {
+        if ("function" == typeof this.numberFormatter.formatRange) return this.numberFormatter.formatRange(e, a);
+        if (a < e) throw RangeError("End date must be >= start date");
+        return `${this.format(e)} \u{2013} ${this.format(a)}`;
     }
-    formatRangeToParts(e, t) {
+    formatRangeToParts(e, a) {
         if ("function" == typeof this.numberFormatter.formatRangeToParts)
-            return this.numberFormatter.formatRangeToParts(e, t);
-        if (t < e) throw RangeError("End date must be >= start date");
-        let n = this.numberFormatter.formatToParts(e),
-            r = this.numberFormatter.formatToParts(t);
+            return this.numberFormatter.formatRangeToParts(e, a);
+        if (a < e) throw RangeError("End date must be >= start date");
+        let t = this.numberFormatter.formatToParts(e),
+            r = this.numberFormatter.formatToParts(a);
         return [
-            ...n.map((e) => ({ ...e, source: "startRange" })),
+            ...t.map((e) => ({ ...e, source: "startRange" })),
             { type: "literal", value: " – ", source: "shared" },
             ...r.map((e) => ({ ...e, source: "endRange" })),
         ];
@@ -51,58 +76,37 @@ class o {
     resolvedOptions() {
         let e = this.numberFormatter.resolvedOptions();
         return (
-            i || null == this.options.signDisplay || (e = { ...e, signDisplay: this.options.signDisplay }),
-            a ||
+            n || null == this.options.signDisplay || (e = { ...e, signDisplay: this.options.signDisplay }),
+            i ||
                 "unit" !== this.options.style ||
                 (e = { ...e, style: "unit", unit: this.options.unit, unitDisplay: this.options.unitDisplay }),
             e
         );
     }
-    constructor(e, t = {}) {
-        (this.numberFormatter = l(e, t)), (this.options = t);
-    }
-}
-function l(e, t = {}) {
-    let { numberingSystem: n } = t;
-    if ((n && e.includes("-nu-") && (e.includes("-u-") || (e += "-u-"), (e += `-nu-${n}`)), "unit" === t.style && !a)) {
-        var i;
-        let { unit: e, unitDisplay: n = "short" } = t;
-        if (!e) throw Error('unit option must be provided with style: "unit"');
-        if (!(null == (i = s[e]) ? void 0 : i[n])) throw Error(`Unsupported unit ${e} with unitDisplay = ${n}`);
-        t = { ...t, style: "decimal" };
-    }
-    let o =
-        e +
-        (t
-            ? Object.entries(t)
-                  .sort((e, t) => (e[0] < t[0] ? -1 : 1))
-                  .join()
-            : "");
-    if (r.has(o)) return r.get(o);
-    let u = new Intl.NumberFormat(e, t);
-    return r.set(o, u), u;
-}
-function u(e, t, n) {
-    if ("auto" === t) return e.format(n);
-    {
-        if ("never" === t) return e.format(Math.abs(n));
-        let r = !1;
-        if (
-            ("always" === t
-                ? (r = n > 0 || Object.is(n, 0))
-                : "exceptZero" === t && (Object.is(n, -0) || Object.is(n, 0) ? (n = Math.abs(n)) : (r = n > 0)),
-            !r)
-        )
-            return e.format(n);
-        {
-            let t = e.format(-n),
-                r = e.format(n),
-                i = t.replace(r, "").replace(/\u200e|\u061C/, "");
-            return (
-                1 != [...i].length &&
-                    console.warn("@react-aria/i18n polyfill for NumberFormat signDisplay: Unsupported case"),
-                t.replace(r, "!!!").replace(i, "+").replace("!!!", r)
-            );
-        }
+    constructor(e, a = {}) {
+        (this.numberFormatter = (function (e, a = {}) {
+            let { numberingSystem: t } = a;
+            if (
+                (t && e.includes("-nu-") && (e.includes("-u-") || (e += "-u-"), (e += `-nu-${t}`)),
+                "unit" === a.style && !i)
+            ) {
+                var n;
+                let { unit: e, unitDisplay: t = "short" } = a;
+                if (!e) throw Error('unit option must be provided with style: "unit"');
+                if (!(null == (n = o[e]) ? void 0 : n[t])) throw Error(`Unsupported unit ${e} with unitDisplay = ${t}`);
+                a = { ...a, style: "decimal" };
+            }
+            let u =
+                e +
+                (a
+                    ? Object.entries(a)
+                          .sort((e, a) => (e[0] < a[0] ? -1 : 1))
+                          .join()
+                    : "");
+            if (r.has(u)) return r.get(u);
+            let l = new Intl.NumberFormat(e, a);
+            return r.set(u, l), l;
+        })(e, a)),
+            (this.options = a);
     }
 }

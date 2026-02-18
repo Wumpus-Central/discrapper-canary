@@ -1,126 +1,125 @@
-"use strict";
-n.d(t, { dL: () => v, eO: () => S, n1: () => y, ud: () => T });
-var r = n(627968),
-    i = n(64700),
-    a = n(835245),
-    s = n(635358),
-    o = n(417597),
-    l = n(397927),
-    u = n(73153),
-    c = n(830382),
-    d = n(73825),
-    _ = n(793574),
-    f = n(688810),
-    p = n(937008),
-    h = n(156312),
-    m = n(491057),
-    g = n(546042),
-    E = n(97352),
-    A = n(67480),
-    I = n(582658);
-let T = (e) => {
-        let { skuId: t, isGift: n, applicationId: r } = e,
-            { analyticsLocations: l } = (0, f.Ay)(_.A.PAYMENT_FLOW_TEST_PAGE),
-            u = i.useRef(null),
-            d = i.useRef(null),
-            [p, h] = i.useState(() => (0, a.A)());
-        i.useEffect(() => {
-            (u.current !== t || d.current !== n) && (h((0, a.A)()), (u.current = t), (d.current = n));
-        }, [t, n]);
-        let [m, g] = (0, o.yK)([A.A], () => [A.A.isFetching(t), A.A.get(t)]);
+l.d(t, { dL: () => T, eO: () => j, n1: () => S, ud: () => v });
+var a = l(627968),
+    n = l(64700),
+    r = l(835245),
+    i = l(635358),
+    s = l(417597),
+    o = l(397927),
+    u = l(73153),
+    c = l(830382),
+    d = l(73825),
+    p = l(793574),
+    m = l(688810),
+    h = l(937008),
+    x = l(156312),
+    b = l(491057),
+    g = l(546042),
+    y = l(97352),
+    E = l(67480),
+    f = l(582658);
+let v = (e) => {
+        let { skuId: t, isGift: l, applicationId: a } = e,
+            { analyticsLocations: o } = (0, m.Ay)(p.A.PAYMENT_FLOW_TEST_PAGE),
+            u = n.useRef(null),
+            d = n.useRef(null),
+            [h, x] = n.useState(() => (0, r.A)());
+        n.useEffect(() => {
+            (u.current !== t || d.current !== l) && (x((0, r.A)()), (u.current = t), (d.current = l));
+        }, [t, l]);
+        let [b, g] = (0, s.yK)([E.A], () => [E.A.isFetching(t), E.A.get(t)]);
         return (
-            i.useEffect(() => {
-                null != g || m || (0, c.EX)(r, t, s.g.VARIANTS_GROUP).catch((e) => {});
-            }, [r, t, g, m]),
+            n.useEffect(() => {
+                null != g || b || (0, c.EX)(a, t, i.g.VARIANTS_GROUP).catch((e) => {});
+            }, [a, t, g, b]),
             {
-                loadId: p,
-                analyticsLocations: l,
-                handleClose: i.useCallback((e) => {}, []),
-                handleComplete: i.useCallback(() => {}, []),
-                isFetching: m,
+                loadId: h,
+                analyticsLocations: o,
+                handleClose: n.useCallback((e) => {}, []),
+                handleComplete: n.useCallback(() => {}, []),
+                isFetching: b,
                 sku: g,
                 skuId: t,
-                isGift: n,
+                isGift: l,
             }
         );
     },
-    y = (e) => {
+    S = (e) => {
         let { subscriptionPlanId: t } = e;
-        i.useEffect(() => {
-            E.A.isLoadedForPremiumSKUs() || u.h.wait(() => (0, d.zS)());
+        n.useEffect(() => {
+            y.A.isLoadedForPremiumSKUs() || u.h.wait(() => (0, d.zS)());
         }, []);
-        let n = (0, o.bG)([E.A], () => (null != t ? E.A.get(t) : null));
-        return { isLoadedForPremiumSKUs: (0, o.bG)([E.A], () => E.A.isLoadedForPremiumSKUs()), selectedPlan: n };
+        let l = (0, s.bG)([y.A], () => (null != t ? y.A.get(t) : null));
+        return { isLoadedForPremiumSKUs: (0, s.bG)([y.A], () => y.A.isLoadedForPremiumSKUs()), selectedPlan: l };
     },
-    S = (e) =>
-        (0, r.jsxs)("div", {
+    j = (e) =>
+        (0, a.jsxs)("div", {
             style: { padding: 20 },
             children: [
-                (0, r.jsx)(l.Text, { variant: "text-md/normal", children: e.text }),
-                (0, r.jsx)("div", {
+                (0, a.jsx)(o.Text, { variant: "text-md/normal", children: e.text }),
+                (0, a.jsx)("div", {
                     style: { marginTop: 16 },
-                    children: (0, r.jsx)(l.MzZ, {
+                    children: (0, a.jsx)(o.MzZ, {
                         onClick: () => e.handleStepChange(e.originStep),
                         children: "← Go Back",
                     }),
                 }),
             ],
         }),
-    v = (e) => {
+    T = (e) => {
         let {
                 analyticsLocations: t,
-                applicationId: n,
-                skuId: i,
-                isGift: a,
-                onClose: s,
-                onComplete: o,
+                applicationId: l,
+                skuId: n,
+                isGift: r,
+                onClose: i,
+                onComplete: s,
                 initialPlanId: u,
                 purchaseType: c,
                 stepConfigs: d,
-                loadId: _,
-                excludeSubscriptionPlansBySKU: f,
-                renderHeader: E,
-                hideErrors: A,
-                disablePurchases: T,
-                paymentContextOverrides: y,
+                loadId: p,
+                excludeSubscriptionPlansBySKU: m,
+                renderHeader: y,
+                hideErrors: E,
+                disablePurchases: v,
+                paymentContextOverrides: S,
             } = e,
-            S = A ? { purchasePreviewError: null, purchaseError: null, ...y } : { ...y };
-        T && (S.disablePurchasesForStorybook = !0);
-        let v = `${i}-${a}-${_}`;
-        return (0, r.jsx)(
-            h.PaymentContextProvider,
+            j = E ? { purchasePreviewError: null, purchaseError: null, ...S } : { ...S };
+        v && (j.disablePurchasesForStorybook = !0);
+        let T = `${n}-${r}-${p}`;
+        return (0, a.jsx)(
+            x.PaymentContextProvider,
             {
                 stepConfigs: d,
-                applicationId: n,
-                skuIDs: null != i ? [i] : [],
-                isGift: a,
+                applicationId: l,
+                skuIDs: null != n ? [n] : [],
+                isGift: r,
                 activeSubscription: null,
                 purchaseType: c,
-                excludeSubscriptionPlansBySKU: f,
-                children: (0, r.jsx)(I.Y, {
-                    ...S,
-                    children: (0, r.jsx)(m.Qt, {
-                        children: (0, r.jsx)(p.dX, {
-                            isGift: a,
-                            children: (0, r.jsx)(
+                excludeSubscriptionPlansBySKU: m,
+                children: (0, a.jsx)(f.Y, {
+                    ...j,
+                    children: (0, a.jsx)(b.Qt, {
+                        children: (0, a.jsx)(h.dX, {
+                            isGift: r,
+                            children: (0, a.jsx)(
                                 g.PaymentModal,
                                 {
-                                    transitionState: l.ip4.ENTERED,
-                                    onClose: s,
-                                    onComplete: o,
-                                    applicationId: n,
-                                    skuId: i,
+                                    transitionState: o.ip4.ENTERED,
+                                    onClose: i,
+                                    onComplete: s,
+                                    applicationId: l,
+                                    skuId: n,
                                     initialPlanId: u,
                                     analyticsLocations: t,
                                     hideShadow: !0,
-                                    renderHeader: E,
+                                    renderHeader: y,
                                 },
-                                v,
+                                T,
                             ),
                         }),
                     }),
                 }),
             },
-            v,
+            T,
         );
     };

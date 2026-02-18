@@ -1,14 +1,13 @@
-"use strict";
-n.d(t, { t: () => _ });
-var r = n(627968),
-    i = n(64700),
-    a = n(582306),
-    s = n(292666),
-    o = n(335310),
-    l = n(444550),
-    u = n(843282),
-    c = n(397927);
-let d = [
+a.d(l, { t: () => b });
+var t = a(627968),
+    o = a(64700),
+    n = a(582306),
+    i = a(292666),
+    s = a(335310),
+    r = a(444550),
+    d = a(843282),
+    u = a(397927);
+let c = [
         { value: "red", label: "Red" },
         { value: "green", label: "Green" },
         { value: "blue", label: "Blue" },
@@ -18,25 +17,25 @@ let d = [
         { value: "pink", label: "Pink" },
         { value: "brown", label: "Brown" },
     ],
-    _ = {
+    b = {
         title: "VoidInputs",
         stories: [
             {
                 name: "VoidInputs",
                 id: "void-inputs",
                 component: function (e) {
-                    let { disabled: t, placeholder: n } = e,
-                        [_, f] = i.useState(void 0),
-                        [p, h] = i.useState(void 0),
-                        [m, g] = i.useState(void 0);
-                    return (0, r.jsxs)(c.BJc, {
+                    let { disabled: l, placeholder: a } = e,
+                        [b, p] = o.useState(void 0),
+                        [m, x] = o.useState(void 0),
+                        [v, h] = o.useState(void 0);
+                    return (0, t.jsxs)(u.BJc, {
                         gap: 8,
                         children: [
-                            (0, r.jsx)(u.Te, { value: _, onChange: f, options: d, placeholder: n, isDisabled: t }),
-                            (0, r.jsx)(s.k, { placeholder: n, disabled: t }),
-                            (0, r.jsx)(l.p, { value: _, onChange: f, options: d, placeholder: n, isDisabled: t }),
-                            (0, r.jsx)(a.J, { onSelect: h, value: p, disabled: t }),
-                            (0, r.jsx)(o.c, { onChange: g, value: m, disabled: t }),
+                            (0, t.jsx)(d.Te, { value: b, onChange: p, options: c, placeholder: a, isDisabled: l }),
+                            (0, t.jsx)(i.k, { placeholder: a, disabled: l }),
+                            (0, t.jsx)(r.p, { value: b, onChange: p, options: c, placeholder: a, isDisabled: l }),
+                            (0, t.jsx)(n.J, { onSelect: x, value: m, disabled: l }),
+                            (0, t.jsx)(s.c, { onChange: h, value: v, disabled: l }),
                         ],
                     });
                 },

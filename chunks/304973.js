@@ -1,16 +1,15 @@
-"use strict";
-n.d(t, { A: () => o });
-var r = n(627968),
-    i = n(397927),
-    a = n(653793),
-    s = n(494213);
-let o = (e) => {
-    let { backgroundImage: t, href: n, ctaText: o } = e;
-    return (0, r.jsx)(a.A, {
-        children: (0, r.jsx)("div", {
-            className: s.j,
-            style: { backgroundImage: `url(${t})` },
-            children: (0, r.jsx)(i.Text, { variant: "text-lg/bold", color: "always-white", children: o }),
+t.d(r, { A: () => a });
+var d = t(627968),
+    l = t(397927),
+    c = t(653793),
+    o = t(494213);
+let a = (e) => {
+    let { backgroundImage: r, href: t, ctaText: a } = e;
+    return (0, d.jsx)(c.A, {
+        children: (0, d.jsx)("div", {
+            className: o.j,
+            style: { backgroundImage: `url(${r})` },
+            children: (0, d.jsx)(l.Text, { variant: "text-lg/bold", color: "always-white", children: a }),
         }),
     });
 };

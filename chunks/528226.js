@@ -1,16 +1,15 @@
-"use strict";
-n.d(t, { A: () => a });
-var r = n(627968);
-n(64700);
-var i = n(988064);
-let a = (e) => {
-    let { bannerSrc: t, logoSrc: n, backgroundColor: a, children: s } = e;
-    return (0, r.jsxs)("div", {
-        className: i.ZK,
-        style: { backgroundImage: `url(${t})`, backgroundColor: a },
+t.d(r, { A: () => c });
+var d = t(627968);
+t(64700);
+var l = t(988064);
+let c = (e) => {
+    let { bannerSrc: r, logoSrc: t, backgroundColor: c, children: o } = e;
+    return (0, d.jsxs)("div", {
+        className: l.ZK,
+        style: { backgroundImage: `url(${r})`, backgroundColor: c },
         children: [
-            null != n && (0, r.jsx)("img", { src: n, className: i.wm, alt: "" }),
-            null != s && (0, r.jsx)("div", { className: i.Y_, children: s }),
+            null != t && (0, d.jsx)("img", { src: t, className: l.wm, alt: "" }),
+            null != o && (0, d.jsx)("div", { className: l.Y_, children: o }),
         ],
     });
 };

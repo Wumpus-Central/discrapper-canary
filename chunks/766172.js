@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { Y: () => i });
-var r = n(575593);
-let i = (e) => {
-    let { product: t, selectedVariantIndex: n } = e;
-    return t.type === r.R.VARIANTS_GROUP && null != n ? (t.variants?.[n]?.skuId ?? t.skuId) : t.skuId;
+a.d(e, { Y: () => l });
+var n = a(575593);
+let l = (t) => {
+    let { product: e, selectedVariantIndex: a } = t;
+    return e.type === n.R.VARIANTS_GROUP && null != a ? (e.variants?.[a]?.skuId ?? e.skuId) : e.skuId;
 };

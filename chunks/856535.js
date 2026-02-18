@@ -1,22 +1,21 @@
-"use strict";
-n.d(t, { A: () => l });
-var r = n(64700),
-    i = n(311907),
-    a = n(49463),
-    s = n(409013),
-    o = n(972441);
-let l = (e, t, n) => {
-    let l = (0, i.bG)([a.A], () => a.A.hasLoadedExperiments),
-        [u, c, d] = (0, i.yK)([o.A], () => [o.A.getLayout(e), o.A.isFetchingLayout(e), o.A.getFetchError(e)]);
+t.d(r, { A: () => n });
+var d = t(64700),
+    l = t(311907),
+    c = t(49463),
+    o = t(409013),
+    a = t(972441);
+let n = (e, r, t) => {
+    let n = (0, l.bG)([c.A], () => c.A.hasLoadedExperiments),
+        [s, u, i] = (0, l.yK)([a.A], () => [a.A.getLayout(e), a.A.isFetchingLayout(e), a.A.getFetchError(e)]);
     return (
-        r.useEffect(() => {
-            null == u &&
+        d.useEffect(() => {
+            null == s &&
                 null != e &&
-                l &&
-                !c &&
-                null == d &&
-                (0, s.v)({ tenantId: t, layoutId: e, requestParams: n }).catch(() => {});
-        }, [u, e, t, n, c, l, d]),
-        { layout: u, loading: c, error: d }
+                n &&
+                !u &&
+                null == i &&
+                (0, o.v)({ tenantId: r, layoutId: e, requestParams: t }).catch(() => {});
+        }, [s, e, r, t, u, n, i]),
+        { layout: s, loading: u, error: i }
     );
 };

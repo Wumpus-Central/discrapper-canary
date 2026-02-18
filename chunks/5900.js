@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { V: () => u });
-var r = n(627968),
-    i = n(64700),
-    a = n(397927),
-    s = n(459192),
-    o = n(990078),
-    l = n(710617);
-let u = {
+a.d(l, { V: () => d });
+var t = a(627968),
+    o = a(64700),
+    n = a(397927),
+    i = a(459192),
+    s = a(990078),
+    r = a(710617);
+let d = {
     title: "Tooltip",
     stories: [
         {
@@ -15,30 +14,30 @@ let u = {
             docs: "https://design.discord.tools/components/web/tooltip",
             component: function (e) {
                 let {
-                        text: t,
-                        position: n,
-                        align: s,
-                        caretAlign: l,
-                        customOffset: u,
-                        delay: c,
-                        spacing: d,
-                        ariaHidden: _,
-                        ...f
+                        text: l,
+                        position: a,
+                        align: i,
+                        caretAlign: r,
+                        customOffset: d,
+                        delay: u,
+                        spacing: c,
+                        ariaHidden: b,
+                        ...p
                     } = e,
-                    p = i.useMemo(() => {
-                        if ("center" !== l && null != l)
-                            return "custom" === l ? { align: l, customOffset: u } : { align: l };
-                    }, [l, u]);
-                return (0, r.jsx)(o.m, {
-                    text: t,
-                    position: n,
-                    align: s,
-                    delay: c,
-                    spacing: d,
-                    caretConfig: p,
-                    ariaHidden: _,
-                    ...f,
-                    children: (0, r.jsx)(a.Button, { variant: "primary", text: "Hover me" }),
+                    m = o.useMemo(() => {
+                        if ("center" !== r && null != r)
+                            return "custom" === r ? { align: r, customOffset: d } : { align: r };
+                    }, [r, d]);
+                return (0, t.jsx)(s.m, {
+                    text: l,
+                    position: a,
+                    align: i,
+                    delay: u,
+                    spacing: c,
+                    caretConfig: m,
+                    ariaHidden: b,
+                    ...p,
+                    children: (0, t.jsx)(n.Button, { variant: "primary", text: "Hover me" }),
                 });
             },
             controls: {
@@ -90,37 +89,37 @@ let u = {
             docs: "https://design.discord.tools/components/web/tooltip",
             component: function (e) {
                 let {
-                        title: t,
-                        body: n,
-                        showAsset: o,
-                        assetSize: u,
-                        position: c,
-                        align: d,
-                        caretAlign: _,
-                        customOffset: f,
-                        delay: p,
-                        spacing: h,
-                        forceOpen: m,
-                        ...g
+                        title: l,
+                        body: a,
+                        showAsset: s,
+                        assetSize: d,
+                        position: u,
+                        align: c,
+                        caretAlign: b,
+                        customOffset: p,
+                        delay: m,
+                        spacing: x,
+                        forceOpen: v,
+                        ...h
                     } = e,
-                    E = i.useMemo(() => {
-                        if ("center" !== _ && null != _)
-                            return "custom" === _ ? { align: _, customOffset: f } : { align: _ };
-                    }, [_, f]),
-                    A = i.useMemo(() => (o ? { type: "image", src: l.A, aspectRatio: "1/1" } : void 0), [o]);
-                return (0, r.jsx)(s.u, {
-                    title: t,
-                    body: n,
-                    position: c,
-                    align: d,
-                    delay: p,
-                    spacing: h,
-                    caretConfig: E,
-                    asset: A,
-                    assetSize: u,
-                    forceOpen: m,
-                    ...g,
-                    children: (0, r.jsx)(a.Button, { variant: "primary", text: "Hover me (rich)" }),
+                    y = o.useMemo(() => {
+                        if ("center" !== b && null != b)
+                            return "custom" === b ? { align: b, customOffset: p } : { align: b };
+                    }, [b, p]),
+                    f = o.useMemo(() => (s ? { type: "image", src: r.A, aspectRatio: "1/1" } : void 0), [s]);
+                return (0, t.jsx)(i.u, {
+                    title: l,
+                    body: a,
+                    position: u,
+                    align: c,
+                    delay: m,
+                    spacing: x,
+                    caretConfig: y,
+                    asset: f,
+                    assetSize: d,
+                    forceOpen: v,
+                    ...h,
+                    children: (0, t.jsx)(n.Button, { variant: "primary", text: "Hover me (rich)" }),
                 });
             },
             controls: {

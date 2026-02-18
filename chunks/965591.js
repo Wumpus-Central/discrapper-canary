@@ -53,9 +53,11 @@ let g = function (e) {
                     text: _.intl.string(_.t.zrCzVB),
                     onClick: () =>
                         void (0, r.mMO)(async () => {
-                            let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await n
-                                .e("72820")
-                                .then(n.bind(n, 281439));
+                            let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await Promise.all([
+                                n.e("41353"),
+                                n.e("35432"),
+                                n.e("46409"),
+                            ]).then(n.bind(n, 281439));
                             return (t) =>
                                 (0, i.jsx)(e, {
                                     ...t,

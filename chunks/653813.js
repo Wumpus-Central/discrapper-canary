@@ -1,76 +1,77 @@
+"use strict";
 i.d(t, { default: () => f });
 var n = i(627968),
-    r = i(64700),
-    l = i(397927),
-    s = i(937008),
+    s = i(64700),
+    r = i(397927),
+    l = i(937008),
     a = i(156312),
     o = i(532794),
-    u = i(232516),
-    d = i(788868),
-    c = i(652215),
-    m = i(985018),
-    p = i(431389);
-function _(e) {
+    d = i(232516),
+    c = i(788868),
+    u = i(652215),
+    _ = i(985018),
+    m = i(431389);
+function I(e) {
     let {
             giftRecipient: t,
             onClose: i,
-            transitionState: s,
-            analyticsLocations: _,
+            transitionState: l,
+            analyticsLocations: I,
             analyticsLocation: f,
-            analyticsObject: h,
+            analyticsObject: p,
             giftMessage: g,
         } = e,
-        { priceOptions: I } = (0, a.P5)(),
-        S = r.useCallback(
+        { priceOptions: h } = (0, a.P5)(),
+        S = s.useCallback(
             (e) => {
                 (0, o.A)({
                     isGift: !0,
                     giftRecipient: t,
                     subscriptionTier: e,
-                    giftingOrigin: d.vQ.DM_CHANNEL,
-                    analyticsLocations: _ ?? [],
+                    giftingOrigin: c.vQ.DM_CHANNEL,
+                    analyticsLocations: I ?? [],
                     analyticsLocation: f,
-                    analyticsObject: h ?? {
-                        page: c.liQ.DM_CHANNEL,
-                        section: c.JJy.CHANNEL_TEXT_AREA,
-                        object: c.ZSU.BUTTON_ICON,
-                        objectType: c.AnalyticsObjectTypes.GIFT,
+                    analyticsObject: p ?? {
+                        page: u.liQ.DM_CHANNEL,
+                        section: u.JJy.CHANNEL_TEXT_AREA,
+                        object: u.ZSU.BUTTON_ICON,
+                        objectType: u.AnalyticsObjectTypes.GIFT,
                     },
                     giftMessage: g,
                 }),
                     i();
             },
-            [t, _, f, h, g, i],
+            [t, I, f, p, g, i],
         );
-    return (0, n.jsxs)(l.EOs, {
-        transitionState: s,
-        size: l.rIJ.DYNAMIC,
-        className: p.jT,
+    return (0, n.jsxs)(r.EOs, {
+        transitionState: l,
+        size: r.rIJ.DYNAMIC,
+        className: m.jT,
         parentComponent: "GiftOptionSelectModal",
         "data-migration-pending": !0,
         children: [
-            (0, n.jsx)(l.rQ0, {
-                className: p.Hc,
+            (0, n.jsx)(r.rQ0, {
+                className: m.Hc,
                 "data-migration-pending": !0,
-                children: (0, n.jsxs)(l.BJc, {
+                children: (0, n.jsxs)(r.BJc, {
                     direction: "horizontal",
                     justify: "space-between",
                     children: [
-                        (0, n.jsx)(l.Heading, {
+                        (0, n.jsx)(r.Heading, {
                             variant: "heading-md/semibold",
-                            children: m.intl.string(m.t["wg/30i"]),
+                            children: _.intl.string(_.t["wg/30i"]),
                         }),
-                        (0, n.jsx)(l.s_y, { onClick: i, "data-migration-pending": !0 }),
+                        (0, n.jsx)(r.s_y, { onClick: i, "data-migration-pending": !0 }),
                     ],
                 }),
             }),
-            (0, n.jsx)(l.$mQ, {
-                className: p.S3,
+            (0, n.jsx)(r.$mQ, {
+                className: m.S3,
                 "data-migration-pending": !0,
-                children: (0, n.jsx)(u.A, {
+                children: (0, n.jsx)(d.A, {
                     onSelectSku: S,
                     giftRecipient: t,
-                    priceOptions: I,
+                    priceOptions: h,
                     onWishlistItemClick: i,
                 }),
             }),
@@ -81,29 +82,29 @@ function f(e) {
     let {
         giftRecipient: t,
         onClose: i,
-        transitionState: r,
-        analyticsLocations: l,
+        transitionState: s,
+        analyticsLocations: r,
         analyticsLocation: o,
-        analyticsObject: u,
-        giftMessage: c,
+        analyticsObject: d,
+        giftMessage: u,
     } = e;
     return (0, n.jsx)(a.PaymentContextProvider, {
         activeSubscription: null,
         stepConfigs: [],
-        skuIDs: d.T7,
+        skuIDs: c.T7,
         isGift: !0,
-        children: (0, n.jsx)(s.dX, {
+        children: (0, n.jsx)(l.dX, {
             isGift: !0,
             giftRecipient: t,
-            giftingOrigin: d.vQ.DM_CHANNEL,
-            children: (0, n.jsx)(_, {
+            giftingOrigin: c.vQ.DM_CHANNEL,
+            children: (0, n.jsx)(I, {
                 giftRecipient: t,
                 onClose: i,
-                transitionState: r,
-                analyticsLocations: l,
+                transitionState: s,
+                analyticsLocations: r,
                 analyticsLocation: o,
-                analyticsObject: u,
-                giftMessage: c,
+                analyticsObject: d,
+                giftMessage: u,
             }),
         }),
     });

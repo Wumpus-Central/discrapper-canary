@@ -1,47 +1,45 @@
-"use strict";
 n.d(t, { A: () => p });
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(384231),
-    l = n(903369),
-    u = n(491182),
-    c = n(538355),
-    d = n(715628),
-    _ = n(752636),
-    f = n(119907);
-function h(e) {
+var a = n(627968),
+    r = n(64700),
+    i = n(503698),
+    l = n.n(i),
+    s = n(384231),
+    o = n(903369),
+    c = n(491182),
+    d = n(538355),
+    u = n(715628),
+    m = n(752636),
+    _ = n(119907);
+let p = r.memo(function (e) {
     let {
             message: t,
             channel: n,
-            compact: a,
-            className: h,
-            isGroupStart: p,
-            hideSimpleEmbedContent: g = !0,
-            disableInteraction: E,
-            previewGuildId: A,
-            preview: I,
-            author: T,
+            compact: i,
+            className: p,
+            isGroupStart: g,
+            hideSimpleEmbedContent: h = !0,
+            disableInteraction: A,
+            previewGuildId: f,
+            preview: v,
+            author: x,
         } = e,
-        y = A ?? (0, l.U)(t),
-        S = (0, o.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
-        { content: v } = (0, c.A)(t, {
-            hideSimpleEmbedContent: g,
-            allowList: S,
-            allowHeading: S,
+        b = f ?? (0, o.U)(t),
+        I = (0, s.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
+        { content: C } = (0, d.A)(t, {
+            hideSimpleEmbedContent: h,
+            allowList: I,
+            allowHeading: I,
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
-        C = i.useMemo(() => (0, _.A)({ ...e, channel: n, guildId: y }), [e, n, y]);
-    return (0, r.jsx)(u.A, {
-        compact: a,
-        className: s()(h, { [f.iU]: !0, [f.HJ]: !a, [f._A]: p }),
-        childrenHeader: C,
-        childrenMessageContent: (0, d.A)(e, v),
-        disableInteraction: E,
-        author: T,
-        preview: I,
+        y = r.useMemo(() => (0, m.A)({ ...e, channel: n, guildId: b }), [e, n, b]);
+    return (0, a.jsx)(c.A, {
+        compact: i,
+        className: l()(p, { [_.iU]: !0, [_.HJ]: !i, [_._A]: g }),
+        childrenHeader: y,
+        childrenMessageContent: (0, u.A)(e, C),
+        disableInteraction: A,
+        author: x,
+        preview: v,
     });
-}
-let p = i.memo(h);
+});

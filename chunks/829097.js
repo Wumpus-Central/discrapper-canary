@@ -1,8 +1,7 @@
-"use strict";
 n.d(t, { _: () => s });
 var r = n(945810),
-    i = n(332628);
-let a = (0, r.mj)({
+    l = n(332628);
+let i = (0, r.mj)({
     name: "2025-09-video-qoe-metrics-tracking",
     kind: "user",
     defaultConfig: { externalAnalyticsEnabled: !1 },
@@ -10,6 +9,6 @@ let a = (0, r.mj)({
 });
 function s(e) {
     let { location: t } = e,
-        { isInHoldout: n } = i.i.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
-    return n ? { externalAnalyticsEnabled: !1 } : a.getConfig({ location: t });
+        { isInHoldout: n } = l.i.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
+    return n ? { externalAnalyticsEnabled: !1 } : i.getConfig({ location: t });
 }

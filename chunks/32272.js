@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { V: () => l });
-var r = n(627968),
-    i = n(64700),
-    a = n(508382),
-    s = n(158954),
-    o = n(868249);
-let l = {
+a.d(l, { V: () => r });
+var t = a(627968),
+    o = a(64700),
+    n = a(508382),
+    i = a(158954),
+    s = a(868249);
+let r = {
     title: "FloatingLayer",
     stories: [
         {
@@ -13,41 +12,41 @@ let l = {
             id: "popover-layer",
             component: function (e) {
                 let {
-                        placement: t,
-                        spacing: n,
-                        autoFlip: l,
-                        autoShift: u,
-                        strategy: c,
-                        portal: d,
-                        blockPointerEvents: _,
+                        placement: l,
+                        spacing: a,
+                        autoFlip: r,
+                        autoShift: d,
+                        strategy: u,
+                        portal: c,
+                        blockPointerEvents: b,
                     } = e,
-                    [f, p] = i.useState(!1);
-                return (0, r.jsx)(a.Ow, {
-                    open: f,
-                    onOpenChange: p,
-                    placement: t,
-                    spacing: n,
-                    autoFlip: l,
-                    autoShift: u,
-                    strategy: c,
-                    portal: d,
-                    blockPointerEvents: _,
+                    [p, m] = o.useState(!1);
+                return (0, t.jsx)(n.Ow, {
+                    open: p,
+                    onOpenChange: m,
+                    placement: l,
+                    spacing: a,
+                    autoFlip: r,
+                    autoShift: d,
+                    strategy: u,
+                    portal: c,
+                    blockPointerEvents: b,
                     renderLayer: () =>
-                        (0, r.jsx)("div", {
-                            className: o.q,
-                            children: (0, r.jsx)(s.EYj, {
+                        (0, t.jsx)("div", {
+                            className: s.q,
+                            children: (0, t.jsx)(i.EYj, {
                                 variant: "text-sm/medium",
                                 children: "FloatingLayer Content",
                             }),
                         }),
                     children: (e) => {
-                        let { ref: t, props: n } = e;
-                        return (0, r.jsx)(s.$nd, {
+                        let { ref: l, props: a } = e;
+                        return (0, t.jsx)(i.$nd, {
                             variant: "primary",
                             text: "Target Element",
-                            onClick: () => p(!f),
-                            ...n,
-                            buttonRef: t,
+                            onClick: () => m(!p),
+                            ...a,
+                            buttonRef: l,
                         });
                     },
                 });

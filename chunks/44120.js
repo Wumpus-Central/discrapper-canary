@@ -1,121 +1,115 @@
 "use strict";
-n.d(t, { A: () => A });
-var r = n(627968);
+n.d(t, { A: () => _ });
+var i = n(627968);
 n(64700);
-var i = n(835245),
-    a = n(397927),
-    s = n(73153),
-    o = n(391048),
-    l = n(636099),
-    u = n(589078),
+var s = n(835245),
+    l = n(397927),
+    a = n(73153),
+    r = n(391048),
+    o = n(636099),
+    d = n(589078),
     c = n(979286),
-    d = n(287809),
-    _ = n(954571),
-    f = n(166532),
-    p = n(301518),
-    h = n(652215);
-let m = "payment-modal",
-    g = "gift-payment-modal",
-    E = new Set([f.pn.REVIEW, f.pn.CONFIRM, f.pn.GIFT_CUSTOMIZATION]);
-function A(e) {
+    u = n(287809),
+    h = n(954571),
+    p = n(166532),
+    A = n(301518),
+    f = n(652215);
+let g = new Set([p.pn.REVIEW, p.pn.CONFIRM, p.pn.GIFT_CUSTOMIZATION]);
+function _(e) {
     let t,
         {
-            skuId: u,
-            analyticsLocations: f,
-            analyticsObject: A,
-            isGift: T = !1,
-            giftMessage: y,
-            giftingOrigin: S,
+            skuId: d,
+            analyticsLocations: p,
+            analyticsObject: _,
+            isGift: x = !1,
+            giftMessage: E,
+            giftingOrigin: y,
             giftRecipient: v,
-            onClose: C,
-            onComplete: b,
-            variantsReturnStyle: N,
+            onClose: S,
+            onComplete: C,
+            variantsReturnStyle: I,
         } = e,
-        R = !1,
-        O = (0, i.A)(),
-        D = (e) => {
-            t = e;
-        },
-        L = T ? g : m,
-        w = d.default.getCurrentUser();
-    if (!w?.verified)
-        return void (0, a.mMO)(async () => {
-            let { default: e } = await Promise.all([n.e("12206"), n.e("90406")]).then(n.bind(n, 661925));
-            return (t) => {
-                let { onClose: n, ...i } = t;
-                return (0, r.jsx)(e, {
-                    ...i,
-                    onClose: () => {
-                        n(), C?.(!1);
-                    },
-                });
-            };
-        });
-    s.h.wait(() => {
-        s.h.dispatch({ type: "PAYMENT_MODAL_OPEN" });
-    });
-    let x = () => {
-            (0, p.S)({ checkoutSucceeded: R }),
-                R ||
-                    _.default.track(h.HAw.PAYMENT_FLOW_CANCELED, {
-                        load_id: O,
-                        payment_type: h.frM[h.VVm.ONE_TIME],
-                        location: A,
-                        is_gift: T,
-                        sku_id: u,
-                        location_stack: f,
-                    }),
-                (0, o.ET)(),
-                (0, l.z)(),
-                C?.(R),
-                R && (0, c.gB)({ variantsReturnStyle: N });
-        },
-        P = () => {
-            null != t && E.has(t) && (0, a.OoC)(L);
-        },
-        M = {
-            loadId: O,
-            skuId: u,
-            analyticsLocations: f,
-            onStepChange: D,
-            modalKey: L,
-            isGift: T,
-            giftMessage: y,
-            giftingOrigin: S,
-            giftRecipient: v,
-            onClose: C,
-            onCloseCallback: x,
-            onCloseRequest: P,
-            onComplete: () => {
-                (R = !0), b?.();
-            },
-        };
-    I(M);
+        N = !1,
+        T = (0, s.A)(),
+        O = x ? "gift-payment-modal" : "payment-modal",
+        j = u.default.getCurrentUser();
+    j?.verified
+        ? (a.h.wait(() => {
+              a.h.dispatch({ type: "PAYMENT_MODAL_OPEN" });
+          }),
+          m({
+              loadId: T,
+              skuId: d,
+              analyticsLocations: p,
+              onStepChange: (e) => {
+                  t = e;
+              },
+              modalKey: O,
+              isGift: x,
+              giftMessage: E,
+              giftingOrigin: y,
+              giftRecipient: v,
+              onClose: S,
+              onCloseCallback: () => {
+                  (0, A.S)({ checkoutSucceeded: N }),
+                      N ||
+                          h.default.track(f.HAw.PAYMENT_FLOW_CANCELED, {
+                              load_id: T,
+                              payment_type: f.frM[f.VVm.ONE_TIME],
+                              location: _,
+                              is_gift: x,
+                              sku_id: d,
+                              location_stack: p,
+                          }),
+                      (0, r.ET)(),
+                      (0, o.z)(),
+                      S?.(N),
+                      N && (0, c.gB)({ variantsReturnStyle: I });
+              },
+              onCloseRequest: () => {
+                  null != t && g.has(t) && (0, l.OoC)(O);
+              },
+              onComplete: () => {
+                  (N = !0), C?.();
+              },
+          }))
+        : (0, l.mMO)(async () => {
+              let { default: e } = await Promise.all([n.e("12206"), n.e("90406")]).then(n.bind(n, 661925));
+              return (t) => {
+                  let { onClose: n, ...s } = t;
+                  return (0, i.jsx)(e, {
+                      ...s,
+                      onClose: () => {
+                          n(), S?.(!1);
+                      },
+                  });
+              };
+          });
 }
-let I = (e) => {
+let m = (e) => {
     let {
         loadId: t,
         skuId: n,
-        analyticsLocations: r,
-        onStepChange: i,
-        modalKey: a,
-        isGift: s = !1,
-        giftMessage: o,
-        giftingOrigin: l,
+        analyticsLocations: i,
+        onStepChange: s,
+        modalKey: l,
+        isGift: a = !1,
+        giftMessage: r,
+        giftingOrigin: o,
         giftRecipient: c,
-        onClose: d,
-        onCloseCallback: _,
-        onCloseRequest: f,
-        onComplete: p,
+        onClose: u,
+        onCloseCallback: h,
+        onCloseRequest: p,
+        onComplete: A,
     } = e;
-    return (0, u.Tx)().openCheckoutModal({
+    return (0, d.Tx)().openCheckoutModal({
         loadId: t,
         skuId: n,
-        analyticsLocations: r,
-        giftContextProps: { isGift: s, giftMessage: o, giftingOrigin: l, giftRecipient: c },
-        onClose: d,
-        onComplete: p,
-        flowSpecificOptions: { onStepChange: i },
-        openModalOptions: { modalKey: a, onCloseCallback: _, onCloseRequest: f },
+        analyticsLocations: i,
+        giftContextProps: { isGift: a, giftMessage: r, giftingOrigin: o, giftRecipient: c },
+        onClose: u,
+        onComplete: A,
+        flowSpecificOptions: { onStepChange: s },
+        openModalOptions: { modalKey: l, onCloseCallback: h, onCloseRequest: p },
     });
 };

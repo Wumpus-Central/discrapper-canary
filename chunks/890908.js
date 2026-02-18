@@ -1,39 +1,34 @@
-"use strict";
-n.d(t, { UO: () => E, lB: () => m });
-var r = n(397927),
-    i = n(777595),
-    a = n(527518),
-    s = n(270727),
-    o = n(473106),
-    l = n(423396),
-    u = n(987274),
-    c = n(886532),
-    d = n(931433),
-    _ = n(391622),
-    f = n(203484),
-    p = n(445736),
-    h = n(504312),
-    m = (function (e) {
-        return (e.PAYMENTS = "payments"), (e.VIRTUAL_CURRENCY = "virtual-currency"), (e.NITRO = "nitro"), e;
-    })({});
-let g = ["Revenue Storybook", "Revenue Playground"],
-    E = {
-        playgroundBaseUrl: "revenue",
-        collections: [
-            {
-                id: "payments",
-                name: "Payments",
-                groups: [o._, h.Y, p.Wo, i.v, l.Gu, f.O],
-                tags: g,
-                IconComponent: r.d2Y,
-            },
-            {
-                id: "virtual-currency",
-                name: "Virtual Currency",
-                groups: [s.h2, a.c$, d.V, _.e],
-                tags: g,
-                IconComponent: r.Cp8,
-            },
-            { id: "nitro", name: "Nitro", groups: [u.I7, c.H], tags: g, IconComponent: r.tvc },
-        ],
-    };
+l.r(t),
+    l.d(t, {
+        RevenuePlaygroundCollectionId: () => g,
+        nitroCollection: () => v,
+        paymentsCollection: () => E,
+        playgroundConfig: () => S,
+        virtualCurrencyCollection: () => f,
+    });
+var a,
+    n = l(397927),
+    r = l(777595),
+    i = l(527518),
+    s = l(270727),
+    o = l(473106),
+    u = l(423396),
+    c = l(987274),
+    d = l(886532),
+    p = l(931433),
+    m = l(391622),
+    h = l(203484),
+    x = l(445736),
+    b = l(504312),
+    g = (((a = {}).PAYMENTS = "payments"), (a.VIRTUAL_CURRENCY = "virtual-currency"), (a.NITRO = "nitro"), a);
+let y = ["Revenue Storybook", "Revenue Playground"],
+    E = { id: "payments", name: "Payments", groups: [o._, b.Y, x.Wo, r.v, u.Gu, h.O], tags: y, IconComponent: n.d2Y },
+    f = {
+        id: "virtual-currency",
+        name: "Virtual Currency",
+        groups: [s.h2, i.c$, p.V, m.e],
+        tags: y,
+        IconComponent: n.Cp8,
+    },
+    v = { id: "nitro", name: "Nitro", groups: [c.I7, d.H], tags: y, IconComponent: n.tvc },
+    S = { playgroundBaseUrl: "revenue", collections: [E, f, v] };

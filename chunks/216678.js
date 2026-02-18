@@ -1,66 +1,65 @@
-"use strict";
-n.d(t, { A: () => c });
-var r = n(627968);
-n(64700);
-var i = n(835245),
-    a = n(397927),
-    s = n(391048),
-    o = n(636099),
-    l = n(954571),
-    u = n(652215);
-function c(e) {
+i.d(e, { A: () => c });
+var n = i(627968);
+i(64700);
+var l = i(835245),
+    s = i(397927),
+    r = i(391048),
+    a = i(636099),
+    u = i(954571),
+    o = i(652215);
+function c(t) {
     let {
-            applicationId: t,
+            applicationId: e,
             skuId: c,
             onClose: d,
-            onComplete: _,
-            analyticsLocations: f,
-            analyticsLocationObject: p,
-            contextKey: h,
-            isGift: m = !1,
-        } = e,
-        g = !1,
-        E = (0, i.A)();
-    (0, a.mMO)(
+            onComplete: p,
+            analyticsLocations: S,
+            analyticsLocationObject: I,
+            contextKey: A,
+            isGift: _ = !1,
+        } = t,
+        T = !1,
+        E = (0, l.A)();
+    (0, s.mMO)(
         async () => {
-            let { default: e } = await n.e("53068").then(n.bind(n, 226151));
-            return (n) => {
-                let { onClose: i, ...a } = n;
-                return (0, r.jsx)(e, {
-                    ...a,
+            let { default: t } = await i.e("53068").then(i.bind(i, 226151));
+            return (i) => {
+                let { onClose: l, ...s } = i;
+                return (0, n.jsx)(t, {
+                    ...s,
                     loadId: E,
-                    applicationId: t,
+                    applicationId: e,
                     skuId: c,
-                    analyticsLocations: f,
-                    analyticsLocationObject: p,
-                    isGift: m,
-                    onClose: (e) => {
-                        i(), d?.(e);
+                    analyticsLocations: S,
+                    analyticsLocationObject: I,
+                    isGift: _,
+                    onClose: (t) => {
+                        l(), d?.(t);
                     },
-                    onComplete: (e) => {
-                        (g = !0), _?.(e);
+                    onComplete: (t) => {
+                        (T = !0), p?.(t);
                     },
                 });
             };
         },
         {
-            contextKey: h,
+            contextKey: A,
             onCloseCallback: () => {
-                g ||
-                    l.default.track(u.HAw.PAYMENT_FLOW_CANCELED, {
+                T ||
+                    u.default.track(o.HAw.PAYMENT_FLOW_CANCELED, {
                         load_id: E,
-                        payment_type: u.frM[u.VVm.ONE_TIME],
-                        location: p,
-                        is_gift: m,
+                        payment_type: o.frM[o.VVm.ONE_TIME],
+                        location: I,
+                        is_gift: _,
                         sku_id: c,
-                        application_id: t,
-                        location_stack: f,
+                        application_id: e,
+                        location_stack: S,
                     }),
-                    (0, s.ET)(),
-                    (0, o.z)(),
-                    d?.(g);
+                    (0, r.ET)(),
+                    (0, a.z)(),
+                    d?.(T);
             },
-            onCloseRequest: u.tEg,
+            onCloseRequest: o.tEg,
         },
     );
 }

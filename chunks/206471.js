@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { O: () => r });
-let r = [
+a.d(l, { O: () => t });
+let t = [
     "heading-sm/normal",
     "heading-sm/medium",
     "heading-sm/semibold",

@@ -123,9 +123,12 @@ let A = (t) => {
             {
                 onClick: () => {
                     (0, c.mMO)(async () => {
-                        let { default: t } = await Promise.all([s.e("92414"), s.e("9407"), s.e("14787")]).then(
-                            s.bind(s, 956450),
-                        );
+                        let { default: t } = await Promise.all([
+                            s.e("68859"),
+                            s.e("92414"),
+                            s.e("9407"),
+                            s.e("21218"),
+                        ]).then(s.bind(s, 956450));
                         return (e) => (0, i.jsx)(t, { classificationId: l, source: f.XN.StandingTab, ...e });
                     });
                 },

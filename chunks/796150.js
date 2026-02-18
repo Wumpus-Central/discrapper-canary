@@ -1,24 +1,25 @@
-n.d(t, { default: () => C });
+"use strict";
+n.d(t, { default: () => A });
 var r = n(627968),
-    a = n(64700),
-    i = n(397927),
-    o = n(964486),
+    i = n(64700),
+    a = n(397927),
+    s = n(964486),
     l = n(883662),
-    s = n(961350),
+    o = n(961350),
     c = n(628965),
-    _ = n(287809),
-    u = n(115063),
-    d = n(152056),
+    u = n(287809),
+    d = n(115063),
+    _ = n(152056),
     g = n(780964),
-    b = n(162396),
-    m = n(12901),
+    m = n(162396),
+    b = n(12901),
     f = n(921854),
     p = n(840065),
-    x = n(985018),
-    h = n(249316);
-function y(e) {
+    h = n(985018),
+    y = n(249316);
+function x(e) {
     let { destinationPanel: t, originPanel: n } = e;
-    (0, u.iY)({
+    (0, d.iY)({
         destinationPane: t,
         originPane: n,
         subsection: c.A.getSubsection(),
@@ -26,54 +27,54 @@ function y(e) {
         locationStack: c.A.getAnalyticsLocations(),
     });
 }
-function C(e) {
+function A(e) {
     let { target: t, ...n } = e,
-        i = d.A.useField("query"),
-        u = a.useRef(null);
-    (0, o.Ay)(() => {
+        a = _.A.useField("query"),
+        d = i.useRef(null);
+    (0, s.Ay)(() => {
         let e = c.A.getSection();
-        null != e && (y({ destinationPanel: e, originPanel: null }), (u.current = e));
+        null != e && (x({ destinationPanel: e, originPanel: null }), (d.current = e));
     });
-    let x = a.useCallback((e) => {
-            d.A.setState({ query: e });
+    let h = i.useCallback((e) => {
+            _.A.setState({ query: e });
         }, []),
-        [h, C] = a.useState(!1);
-    return (a.useLayoutEffect(() => {
+        [y, A] = i.useState(!1);
+    return (i.useLayoutEffect(() => {
         let e = () => {
-            null == _.default.getCurrentUser() && (C(!0), (0, m.default)());
+            null == u.default.getCurrentUser() && (A(!0), (0, b.default)());
         };
-        return s.default.addChangeListener(e), () => s.default.removeChangeListener(e);
+        return o.default.addChangeListener(e), () => o.default.removeChangeListener(e);
     }, []),
-    h)
+    y)
         ? null
         : (0, r.jsx)(l.A, {
               partialRoot: f.D,
-              emptyState: A,
-              sidebarFooter: b.A,
+              emptyState: C,
+              sidebarFooter: m.A,
               onPanelChange: (e) => {
                   let t = (0, p.getUserSettingsSectionsByWebUserSettings)().get(e);
-                  null != t && (y({ destinationPanel: t, originPanel: u.current }), (u.current = t));
+                  null != t && (x({ destinationPanel: t, originPanel: d.current }), (d.current = t));
               },
               target: t,
               defaultTarget: g.X.ACCOUNT_PANEL,
-              searchQuery: i,
-              onSearchChange: x,
+              searchQuery: a,
+              onSearchChange: h,
               ...n,
           });
 }
-function A() {
+function C() {
     return (0, r.jsxs)("div", {
-        className: h.t,
+        className: y.t,
         children: [
-            (0, r.jsx)(i.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: "text-sm/semibold",
                 color: "text-strong",
-                children: x.intl.string(x.t.zihbmv),
+                children: h.intl.string(h.t.zihbmv),
             }),
-            (0, r.jsx)(i.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: "text-sm/normal",
                 color: "text-subtle",
-                children: x.intl.string(x.t.XclvsB),
+                children: h.intl.string(h.t.XclvsB),
             }),
         ],
     });

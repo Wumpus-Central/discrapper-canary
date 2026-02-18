@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { A: () => a });
-var r = n(627968);
-n(64700);
-var i = n(732955);
-let a = (e) => (0, r.jsx)(i.BJc, { ...e });
+t.d(r, { A: () => c });
+var d = t(627968);
+t(64700);
+var l = t(732955);
+let c = (e) => (0, d.jsx)(l.BJc, { ...e });

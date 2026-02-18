@@ -1,54 +1,53 @@
-"use strict";
-n.d(t, { N: () => u });
-var r = n(928231),
-    i = n(64700),
-    a = n(126031);
-let s = ["day", "month", "year"],
-    o = { hour: 1, minute: 2, second: 3 };
-function l(e, t) {
-    let { autoComplete: n, isDisabled: i, name: l } = e,
-        { visuallyHiddenProps: u } = (0, a.B)({ style: { position: "fixed", top: 0, left: 0 } }),
-        c = 60;
-    "second" === t.granularity ? (c = 1) : "hour" === t.granularity && (c = 3600);
-    let d = null == t.value ? "" : t.value.toString(),
-        _ = "day" === t.granularity ? "date" : "datetime-local",
-        f = ["hour", "minute", "second"],
-        p = 0;
-    return (
-        f.includes(t.granularity) && ((p = o[t.granularity]), (f = f.slice(0, p))),
-        {
-            containerProps: {
-                ...u,
-                "aria-hidden": !0,
-                "data-react-aria-prevent-focus": !0,
-                "data-a11y-ignore": "aria-hidden-focus",
-            },
-            inputProps: {
-                tabIndex: -1,
-                autoComplete: n,
-                disabled: i,
-                type: _,
-                form: "",
-                name: l,
-                step: c,
-                value: d,
-                onChange: (e) => {
-                    let n = e.target.value.toString();
-                    if (n)
-                        try {
-                            let e = (0, r.DP)(n);
-                            if (("day" === t.granularity && (e = (0, r._U)(n)), "setSegment" in t))
-                                for (let n in e)
-                                    s.includes(n) && t.setSegment(n, e[n]), f.includes(n) && t.setSegment(n, e[n]);
-                            t.setValue(e);
-                        } catch {}
-                },
-            },
-        }
-    );
-}
-function u(e) {
-    let { state: t } = e,
-        { containerProps: n, inputProps: r } = l({ ...e }, t);
-    return i.createElement("div", { ...n, "data-testid": "hidden-dateinput-container" }, i.createElement("input", r));
+t.d(a, { N: () => l });
+var r = t(928231),
+    n = t(64700),
+    i = t(126031);
+let o = ["day", "month", "year"],
+    u = { hour: 1, minute: 2, second: 3 };
+function l(e) {
+    let { state: a } = e,
+        { containerProps: t, inputProps: l } = (function (e, a) {
+            let { autoComplete: t, isDisabled: n, name: l } = e,
+                { visuallyHiddenProps: s } = (0, i.B)({ style: { position: "fixed", top: 0, left: 0 } }),
+                d = 60;
+            "second" === a.granularity ? (d = 1) : "hour" === a.granularity && (d = 3600);
+            let c = null == a.value ? "" : a.value.toString(),
+                m = "day" === a.granularity ? "date" : "datetime-local",
+                h = ["hour", "minute", "second"],
+                D = 0;
+            return (
+                h.includes(a.granularity) && ((D = u[a.granularity]), (h = h.slice(0, D))),
+                {
+                    containerProps: {
+                        ...s,
+                        "aria-hidden": !0,
+                        "data-react-aria-prevent-focus": !0,
+                        "data-a11y-ignore": "aria-hidden-focus",
+                    },
+                    inputProps: {
+                        tabIndex: -1,
+                        autoComplete: t,
+                        disabled: n,
+                        type: m,
+                        form: "",
+                        name: l,
+                        step: d,
+                        value: c,
+                        onChange: (e) => {
+                            let t = e.target.value.toString();
+                            if (t)
+                                try {
+                                    let e = (0, r.DP)(t);
+                                    if (("day" === a.granularity && (e = (0, r._U)(t)), "setSegment" in a))
+                                        for (let t in e)
+                                            o.includes(t) && a.setSegment(t, e[t]),
+                                                h.includes(t) && a.setSegment(t, e[t]);
+                                    a.setValue(e);
+                                } catch {}
+                        },
+                    },
+                }
+            );
+        })({ ...e }, a);
+    return n.createElement("div", { ...t, "data-testid": "hidden-dateinput-container" }, n.createElement("input", l));
 }

@@ -1,5 +1,4 @@
-"use strict";
-n.d(t, { A: () => r });
+t.d(a, { A: () => r });
 var r = {};
 r = {
     dateRange: (e) => `\u{421} ${e.startDate} \u{43F}\u{43E} ${e.endDate}`,

@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { D: () => a });
-var r = n(575593),
-    i = n(298072);
-let a = (e, t) => {
-    let n = (0, i.Q)(e),
-        a = null != t ? t : n;
-    return e?.type === r.R.VARIANTS_GROUP && null != e.variants && e.variants.length > a
-        ? e.variants[a].items[0]
-        : e.items[0];
+r.d(e, { D: () => n });
+var i = r(575593),
+    l = r(298072);
+let n = (t, e) => {
+    let r = (0, l.Q)(t),
+        n = null != e ? e : r;
+    return t?.type === i.R.VARIANTS_GROUP && null != t.variants && t.variants.length > n
+        ? t.variants[n].items[0]
+        : t.items[0];
 };

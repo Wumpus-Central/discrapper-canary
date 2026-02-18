@@ -1,84 +1,81 @@
-"use strict";
-n.d(t, { j: () => c });
-var r = n(22299),
-    i = n(376472),
-    a = n(515702),
-    s = n(339241),
-    o = n(636478),
-    l = n(492313),
-    u = n(64700);
-function c(e) {
-    var t, n;
-    let c = (0, o.T)(e),
-        [d, _] = (0, l.P)(e.value, e.defaultValue || null, e.onChange),
-        [f] = (0, u.useState)(d),
-        p = d || e.placeholderValue || null,
-        [h, m] = (0, r.bf)(p, e.granularity),
-        g = null != d ? d.toDate(null != m ? m : "UTC") : null,
-        E = "hour" === h || "minute" === h || "second" === h,
-        A = null == (t = e.shouldCloseOnSelect) || t,
-        [I, T] = (0, u.useState)(null),
-        [y, S] = (0, u.useState)(null);
-    if ((d && ((I = d), "hour" in d && (y = d)), p && !(h in p)))
-        throw Error("Invalid granularity " + h + " for value " + p.toString());
-    let v = (null == d ? void 0 : d.calendar.identifier) === "gregory" && "BC" === d.era,
-        C = (0, u.useMemo)(
+t.d(a, { j: () => d });
+var r = t(22299),
+    n = t(376472),
+    i = t(515702),
+    o = t(339241),
+    u = t(636478),
+    l = t(492313),
+    s = t(64700);
+function d(e) {
+    var a, t;
+    let d = (0, u.T)(e),
+        [c, m] = (0, l.P)(e.value, e.defaultValue || null, e.onChange),
+        [h] = (0, s.useState)(c),
+        D = c || e.placeholderValue || null,
+        [y, p] = (0, r.bf)(D, e.granularity),
+        g = null != c ? c.toDate(null != p ? p : "UTC") : null,
+        f = "hour" === y || "minute" === y || "second" === y,
+        v = null == (a = e.shouldCloseOnSelect) || a,
+        [b, A] = (0, s.useState)(null),
+        [$, w] = (0, s.useState)(null);
+    if ((c && ((b = c), "hour" in c && ($ = c)), D && !(y in D)))
+        throw Error("Invalid granularity " + y + " for value " + D.toString());
+    let R = (null == c ? void 0 : c.calendar.identifier) === "gregory" && "BC" === c.era,
+        P = (0, s.useMemo)(
             () => ({
-                granularity: h,
-                timeZone: m,
+                granularity: y,
+                timeZone: p,
                 hideTimeZone: e.hideTimeZone,
                 hourCycle: e.hourCycle,
                 shouldForceLeadingZeros: e.shouldForceLeadingZeros,
-                showEra: v,
+                showEra: R,
             }),
-            [h, e.hourCycle, e.shouldForceLeadingZeros, m, e.hideTimeZone, v],
+            [y, e.hourCycle, e.shouldForceLeadingZeros, p, e.hideTimeZone, R],
         ),
-        { minValue: b, maxValue: N, isDateUnavailable: R } = e,
-        O = (0, u.useMemo)(() => (0, r.nz)(d, b, N, R, C), [d, b, N, R, C]),
-        D = (0, s.KZ)({ ...e, value: d, builtinValidation: O }),
-        L = D.displayValidation.isInvalid,
-        w = e.validationState || (L ? "invalid" : null),
-        x = (e, t) => {
-            _("timeZone" in t ? t.set((0, i.gw)(e)) : (0, i.tR)(e, t)), T(null), S(null), D.commitValidation();
-        },
-        P = (t) => {
-            let n = "function" == typeof A ? A() : A;
-            E
-                ? y || n
-                    ? x(t, y || (0, r.$l)(e.defaultValue || e.placeholderValue))
-                    : T(t)
-                : (_(t), D.commitValidation()),
-                n && c.setOpen(!1);
-        },
-        M = (e) => {
-            I && e ? x(I, e) : S(e);
+        { minValue: k, maxValue: x, isDateUnavailable: C } = e,
+        E = (0, s.useMemo)(() => (0, r.nz)(c, k, x, C, P), [c, k, x, C, P]),
+        S = (0, o.KZ)({ ...e, value: c, builtinValidation: E }),
+        F = S.displayValidation.isInvalid,
+        B = e.validationState || (F ? "invalid" : null),
+        V = (e, a) => {
+            m("timeZone" in a ? a.set((0, n.gw)(e)) : (0, n.tR)(e, a)), A(null), w(null), S.commitValidation();
         };
     return {
-        ...D,
-        value: d,
-        defaultValue: null != (n = e.defaultValue) ? n : f,
-        setValue: _,
-        dateValue: I,
-        timeValue: y,
-        setDateValue: P,
-        setTimeValue: M,
-        granularity: h,
-        hasTime: E,
-        ...c,
-        setOpen(t) {
-            !t && !d && I && E && x(I, y || (0, r.$l)(e.defaultValue || e.placeholderValue)), c.setOpen(t);
+        ...S,
+        value: c,
+        defaultValue: null != (t = e.defaultValue) ? t : h,
+        setValue: m,
+        dateValue: b,
+        timeValue: $,
+        setDateValue: (a) => {
+            let t = "function" == typeof v ? v() : v;
+            f
+                ? $ || t
+                    ? V(a, $ || (0, r.$l)(e.defaultValue || e.placeholderValue))
+                    : A(a)
+                : (m(a), S.commitValidation()),
+                t && d.setOpen(!1);
         },
-        validationState: w,
-        isInvalid: L,
-        formatValue(e, t) {
+        setTimeValue: (e) => {
+            b && e ? V(b, e) : w(e);
+        },
+        granularity: y,
+        hasTime: f,
+        ...d,
+        setOpen(a) {
+            !a && !c && b && f && V(b, $ || (0, r.$l)(e.defaultValue || e.placeholderValue)), d.setOpen(a);
+        },
+        validationState: B,
+        isInvalid: F,
+        formatValue(e, a) {
             if (!g) return "";
-            let n = (0, r.id)(t, C);
-            return new (0, a.p)(e, n).format(g);
+            let t = (0, r.id)(a, P);
+            return new (0, i.p)(e, t).format(g);
         },
-        getDateFormatter(e, t) {
-            let n = { ...C, ...t },
-                i = (0, r.id)({}, n);
-            return new (0, a.p)(e, i);
+        getDateFormatter(e, a) {
+            let t = { ...P, ...a },
+                n = (0, r.id)({}, t);
+            return new (0, i.p)(e, n);
         },
     };
 }

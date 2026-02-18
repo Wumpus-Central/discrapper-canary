@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { i: () => i });
-let r = (0, n(250105).Ay)({
+a.d(l, { i: () => o });
+let t = (0, a(250105).Ay)({
     kind: "user",
     name: "2025-10-mana-date-inputs",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-function i(e) {
-    return r.useConfig({ location: e }).enabled;
+function o(e) {
+    return t.useConfig({ location: e }).enabled;
 }

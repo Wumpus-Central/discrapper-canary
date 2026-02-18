@@ -1,50 +1,49 @@
-"use strict";
-n.d(t, { A: () => h, U: () => p });
-var r = n(627968);
-n(64700);
-var i = n(503698),
-    a = n.n(i),
-    s = n(582754),
-    o = n(421380),
-    l = n(397927),
-    u = n(736653),
-    c = n(783420),
-    d = n(788868),
-    _ = n(985018),
-    f = n(194597);
-let p = (e) => (e === d.pe.TIER_0 ? _.intl.string(_.t.rk4Uu8) : _.intl.string(_.t.Ve9Ge6)),
-    h = (e) => {
+r.d(t, { A: () => g, U: () => h });
+var n = r(627968);
+r(64700);
+var a = r(503698),
+    l = r.n(a),
+    s = r(582754),
+    i = r(421380),
+    d = r(397927),
+    u = r(736653),
+    o = r(783420),
+    c = r(788868),
+    m = r(985018),
+    p = r(194597);
+let h = (e) => (e === c.pe.TIER_0 ? m.intl.string(m.t.rk4Uu8) : m.intl.string(m.t.Ve9Ge6)),
+    g = (e) => {
         let {
                 className: t,
-                textOptions: n,
-                color: i,
-                look: d,
-                hideIcon: _,
-                subscriptionTier: h,
-                premiumModalAnalyticsLocation: m,
-                giftMessage: g,
-                onClick: E,
+                textOptions: r,
+                color: a,
+                look: c,
+                hideIcon: m,
+                subscriptionTier: g,
+                premiumModalAnalyticsLocation: x,
+                giftMessage: b,
+                onClick: f,
             } = e,
-            A = (0, u.Ay)(),
-            I = p(h);
-        return (0, r.jsx)(c.A, {
+            _ = (0, u.Ay)(),
+            R = h(g);
+        return (0, n.jsx)(o.A, {
             isGift: !0,
-            subscriptionTier: h,
-            premiumModalAnalyticsLocation: m,
-            giftMessage: g,
-            onClick: E,
+            subscriptionTier: g,
+            premiumModalAnalyticsLocation: x,
+            giftMessage: b,
+            onClick: f,
             children: (e) => {
                 let { onClick: u } = e;
-                return (0, r.jsxs)(o.$n, {
+                return (0, n.jsxs)(i.$n, {
                     "data-migration-pending": !0,
-                    innerClassName: f.Nq,
-                    color: i ?? ((0, s.Mw)(A) ? o.XD.WHITE : o.XD.BRAND),
-                    look: d ?? o.pR.OUTLINED,
-                    className: a()(t, f.xP),
+                    innerClassName: p.Nq,
+                    color: a ?? ((0, s.Mw)(_) ? i.XD.WHITE : i.XD.BRAND),
+                    look: c ?? i.pR.OUTLINED,
+                    className: l()(t, p.xP),
                     onClick: u,
                     children: [
-                        !_ && (0, r.jsx)(l.okO, { size: "md", color: "currentColor", className: f.ez }),
-                        (0, r.jsx)("span", { className: a()(f._d, n?.textClassName), children: n?.textOverride ?? I }),
+                        !m && (0, n.jsx)(d.okO, { size: "md", color: "currentColor", className: p.ez }),
+                        (0, n.jsx)("span", { className: l()(p._d, r?.textClassName), children: r?.textOverride ?? R }),
                     ],
                 });
             },

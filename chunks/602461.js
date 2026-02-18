@@ -1,25 +1,24 @@
-"use strict";
-n.d(t, { A: () => l }), n(321073);
-var r = n(64700),
-    i = n(805739),
-    a = n(500345),
-    s = n(320137),
-    o = n(985018);
-function l(e) {
-    let { includeFlairAsBenefit: t, listing: n, guildId: l } = e,
-        u = 0,
-        c = 0;
-    for (let e of n.role_benefits.benefits) (0, a.B1)(e) ? (u += 1) : (0, a.b1)(e) && (c += 1);
-    let d = n.role_id,
-        _ = (0, s.A)(l).filter((e) => e.roles.includes(d)).length;
-    return r.useMemo(() => {
+i.d(t, { A: () => c }), i(321073);
+var l = i(64700),
+    n = i(805739),
+    a = i(500345),
+    s = i(320137),
+    r = i(985018);
+function c(e) {
+    let { includeFlairAsBenefit: t, listing: i, guildId: c } = e,
+        d = 0,
+        o = 0;
+    for (let e of i.role_benefits.benefits) (0, a.B1)(e) ? (d += 1) : (0, a.b1)(e) && (o += 1);
+    let u = i.role_id,
+        m = (0, s.A)(c).filter((e) => e.roles.includes(u)).length;
+    return l.useMemo(() => {
         let e = [];
         return (
-            !0 === t && e.push(o.intl.string(o.t.EhdV2x)),
-            0 !== u && e.push(o.intl.formatToPlainString(o.t["p/l+BI"], { channelCount: u })),
-            0 !== c && e.push(o.intl.formatToPlainString(o.t.eXP5vt, { benefitCount: c })),
-            0 !== _ && e.push(o.intl.formatToPlainString(o.t.YjmQwW, { emojiCount: _ })),
-            new i.A(e)
+            !0 === t && e.push(r.intl.string(r.t.EhdV2x)),
+            0 !== d && e.push(r.intl.formatToPlainString(r.t["p/l+BI"], { channelCount: d })),
+            0 !== o && e.push(r.intl.formatToPlainString(r.t.eXP5vt, { benefitCount: o })),
+            0 !== m && e.push(r.intl.formatToPlainString(r.t.YjmQwW, { emojiCount: m })),
+            new n.A(e)
         );
-    }, [u, c, _, t]);
+    }, [d, o, m, t]);
 }

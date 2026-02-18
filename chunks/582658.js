@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { Y: () => s });
-var r = n(627968),
-    i = n(64700),
-    a = n(156312);
-function s(e) {
-    let { children: t, ...n } = e,
-        s = i.useContext(a.Qv);
-    return null == s ? null : (0, r.jsx)(a.Qv.Provider, { value: { ...s, ...n }, children: t });
+l.d(t, { Y: () => i });
+var a = l(627968),
+    n = l(64700),
+    r = l(156312);
+function i(e) {
+    let { children: t, ...l } = e,
+        i = n.useContext(r.Qv);
+    return null == i ? null : (0, a.jsx)(r.Qv.Provider, { value: { ...i, ...l }, children: t });
 }

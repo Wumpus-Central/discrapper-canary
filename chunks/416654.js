@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { v: () => s });
-var r = n(311907),
-    i = n(439174),
-    a = n(622543);
+r.d(t, { v: () => s });
+var n = r(311907),
+    a = r(439174),
+    l = r(622543);
 function s(e) {
-    return (0, r.bG)([a.A], () => {
+    return (0, n.bG)([l.A], () => {
         let t,
-            n = null != e ? a.A.getUserProfile(e) : null,
-            r = n?.premiumSince;
-        return null == n || null == r
+            r = null != e ? l.A.getUserProfile(e) : null,
+            n = r?.premiumSince;
+        return null == r || null == n
             ? null
-            : (n?.badges?.forEach((e) => {
-                  let n = (0, i.cZ)(e.id);
-                  null != n && (t = n);
+            : (r?.badges?.forEach((e) => {
+                  let r = (0, a.cZ)(e.id);
+                  null != r && (t = r);
               }),
               t);
     });

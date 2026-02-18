@@ -1,33 +1,32 @@
-"use strict";
-n.d(t, { s: () => l });
-var r = n(627968),
-    i = n(359778),
-    a = n(397927),
-    s = n(465430),
-    o = n(742158);
-let l = {
+a.d(l, { s: () => r });
+var t = a(627968),
+    o = a(359778),
+    n = a(397927),
+    i = a(465430),
+    s = a(742158);
+let r = {
     title: "Form Components",
     stories: [
         {
             id: "formnotice",
             name: "FormNotice",
             component: function (e) {
-                let { type: t, title: n, body: i, hasButton: o } = e,
-                    l = o ? (0, r.jsx)(a.Button, { text: "Action" }) : void 0;
-                return (0, r.jsx)(s.Nz, { "data-migration-pending": !0, type: t, title: n, body: i, button: l });
+                let { type: l, title: a, body: o, hasButton: s } = e,
+                    r = s ? (0, t.jsx)(n.Button, { text: "Action" }) : void 0;
+                return (0, t.jsx)(i.Nz, { "data-migration-pending": !0, type: l, title: a, body: o, button: r });
             },
             controls: {
                 type: {
                     type: "select",
                     label: "Type",
-                    defaultValue: i.Z.Types.DANGER,
+                    defaultValue: o.Z.Types.DANGER,
                     options: [
-                        { label: "Primary", value: i.Z.Types.PRIMARY },
-                        { label: "Danger", value: i.Z.Types.DANGER },
-                        { label: "Warning", value: i.Z.Types.WARNING },
-                        { label: "Success", value: i.Z.Types.SUCCESS },
-                        { label: "Brand", value: i.Z.Types.BRAND },
-                        { label: "Custom", value: i.Z.Types.CUSTOM },
+                        { label: "Primary", value: o.Z.Types.PRIMARY },
+                        { label: "Danger", value: o.Z.Types.DANGER },
+                        { label: "Warning", value: o.Z.Types.WARNING },
+                        { label: "Success", value: o.Z.Types.SUCCESS },
+                        { label: "Brand", value: o.Z.Types.BRAND },
+                        { label: "Custom", value: o.Z.Types.CUSTOM },
                     ],
                 },
                 title: { type: "text", label: "Title", defaultValue: "Important Notice" },
@@ -43,29 +42,28 @@ let l = {
             id: "formtitle",
             name: "FormTitle",
             component: function (e) {
-                let { children: t, disabled: n, required: i, errorMessage: a } = e,
-                    s = a?.trim() === "" ? void 0 : a,
-                    l = ["h1", "h2", "h3", "h4", "h5", "legend"];
-                return (0, r.jsx)("div", {
+                let { children: l, disabled: a, required: o, errorMessage: n } = e,
+                    i = n?.trim() === "" ? void 0 : n;
+                return (0, t.jsx)("div", {
                     style: { display: "flex", flexDirection: "column", gap: "16px" },
-                    children: l.map((e) =>
-                        (0, r.jsxs)(
+                    children: ["h1", "h2", "h3", "h4", "h5", "legend"].map((e) =>
+                        (0, t.jsxs)(
                             "div",
                             {
                                 style: { display: "flex", alignItems: "center", gap: "8px" },
                                 children: [
-                                    (0, r.jsxs)("code", {
+                                    (0, t.jsxs)("code", {
                                         style: { minWidth: "60px", fontSize: "12px", color: "#666" },
                                         children: [e, ":"],
                                     }),
-                                    (0, r.jsx)(o.z, {
+                                    (0, t.jsx)(s.z, {
                                         "data-migration-pending": !0,
                                         tag: e,
-                                        disabled: n,
-                                        required: i,
-                                        error: s,
-                                        errorId: null != s ? `error-id-${e}` : void 0,
-                                        children: t,
+                                        disabled: a,
+                                        required: o,
+                                        error: i,
+                                        errorId: null != i ? `error-id-${e}` : void 0,
+                                        children: l,
                                     }),
                                 ],
                             },

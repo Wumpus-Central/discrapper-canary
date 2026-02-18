@@ -1,83 +1,83 @@
 "use strict";
-n.d(t, { A: () => u });
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(752238),
-    l = n(781992);
-function u(e) {
-    let { value: t, onChange: n } = e,
-        a = "json",
-        u = i.useRef(null),
-        [c, d] = i.useState("");
-    i.useEffect(() => {
-        if (null != t && o.default.hasLanguage(a)) {
-            let e = o.default.highlight(a, t, !0);
-            null != e ? d(e.value + "\n") : d(t + "\n");
-        } else d(t + "\n");
-    }, [t, a]);
-    let _ = (e) => {
-            n(e.target.value);
-        },
-        f = (e) => {
-            let t = e.target,
-                n = t.previousElementSibling;
-            null != n && ((n.scrollTop = t.scrollTop), (n.scrollLeft = t.scrollLeft));
-        },
-        p = (e) => {
-            if ("Tab" === e.key) {
-                e.preventDefault();
-                let r = e.target,
-                    i = r.selectionStart,
-                    a = r.selectionEnd;
-                if (e.shiftKey) {
-                    let e = t.lastIndexOf("\n", i - 1) + 1,
-                        r = t.indexOf("\n", i),
-                        a = t.substring(e, -1 === r ? t.length : r),
-                        s = 0;
-                    for (let e = 0; e < Math.min(2, a.length); e++)
-                        if (" " === a[e]) s++;
-                        else break;
-                    s > 0 &&
-                        (n(t.substring(0, e) + t.substring(e + s)),
-                        setTimeout(() => {
-                            if (null != u.current) {
-                                let t = Math.max(e, i - s);
-                                u.current.selectionStart = u.current.selectionEnd = t;
-                            }
-                        }, 0));
-                } else
-                    n(t.substring(0, i) + "  " + t.substring(a)),
-                        setTimeout(() => {
-                            null != u.current && (u.current.selectionStart = u.current.selectionEnd = i + 2);
-                        }, 0);
-            }
-        };
-    return (0, r.jsxs)("div", {
-        className: l.t,
-        children: [
-            (0, r.jsx)("pre", {
-                className: l.c5,
-                "aria-hidden": "true",
-                children: (0, r.jsx)("code", {
-                    className: s()("hljs", a),
-                    dangerouslySetInnerHTML: { __html: c ?? "" },
+a.d(t, { A: () => d });
+var l = a(627968),
+    r = a(64700),
+    n = a(503698),
+    s = a.n(n),
+    i = a(752238),
+    o = a(781992);
+function d(e) {
+    let { value: t, onChange: a } = e,
+        n = "json",
+        d = r.useRef(null),
+        [c, u] = r.useState("");
+    return (
+        r.useEffect(() => {
+            if (null != t && i.default.hasLanguage(n)) {
+                let e = i.default.highlight(n, t, !0);
+                null != e ? u(e.value + "\n") : u(t + "\n");
+            } else u(t + "\n");
+        }, [t, n]),
+        (0, l.jsxs)("div", {
+            className: o.t,
+            children: [
+                (0, l.jsx)("pre", {
+                    className: o.c5,
+                    "aria-hidden": "true",
+                    children: (0, l.jsx)("code", {
+                        className: s()("hljs", n),
+                        dangerouslySetInnerHTML: { __html: c ?? "" },
+                    }),
                 }),
-            }),
-            (0, r.jsx)("textarea", {
-                ref: u,
-                className: l.mW,
-                value: t,
-                onChange: _,
-                onScroll: f,
-                onKeyDown: p,
-                spellCheck: !1,
-                autoCapitalize: "off",
-                autoComplete: "off",
-                autoCorrect: "off",
-                rows: 30,
-            }),
-        ],
-    });
+                (0, l.jsx)("textarea", {
+                    ref: d,
+                    className: o.mW,
+                    value: t,
+                    onChange: (e) => {
+                        a(e.target.value);
+                    },
+                    onScroll: (e) => {
+                        let t = e.target,
+                            a = t.previousElementSibling;
+                        null != a && ((a.scrollTop = t.scrollTop), (a.scrollLeft = t.scrollLeft));
+                    },
+                    onKeyDown: (e) => {
+                        if ("Tab" === e.key) {
+                            e.preventDefault();
+                            let l = e.target,
+                                r = l.selectionStart,
+                                n = l.selectionEnd;
+                            if (e.shiftKey) {
+                                let e = t.lastIndexOf("\n", r - 1) + 1,
+                                    l = t.indexOf("\n", r),
+                                    n = t.substring(e, -1 === l ? t.length : l),
+                                    s = 0;
+                                for (let e = 0; e < Math.min(2, n.length); e++)
+                                    if (" " === n[e]) s++;
+                                    else break;
+                                s > 0 &&
+                                    (a(t.substring(0, e) + t.substring(e + s)),
+                                    setTimeout(() => {
+                                        if (null != d.current) {
+                                            let t = Math.max(e, r - s);
+                                            d.current.selectionStart = d.current.selectionEnd = t;
+                                        }
+                                    }, 0));
+                            } else
+                                a(t.substring(0, r) + "  " + t.substring(n)),
+                                    setTimeout(() => {
+                                        null != d.current &&
+                                            (d.current.selectionStart = d.current.selectionEnd = r + 2);
+                                    }, 0);
+                        }
+                    },
+                    spellCheck: !1,
+                    autoCapitalize: "off",
+                    autoComplete: "off",
+                    autoCorrect: "off",
+                    rows: 30,
+                }),
+            ],
+        })
+    );
 }

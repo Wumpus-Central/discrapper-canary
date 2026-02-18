@@ -1,70 +1,69 @@
-"use strict";
-n.d(t, { b: () => T });
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(311907),
-    l = n(732955),
-    u = n(397927),
-    c = n(775602),
-    d = n(607470),
-    _ = n(975571),
-    f = n(318346),
-    p = n(652215),
-    h = n(985018),
-    m = n(186541),
-    g = n(266770),
-    E = n(268920),
-    A = n(633217);
-let I = () => {
-        let e = (0, o.bG)([c.A], () => c.A.useReducedMotion);
-        return (0, r.jsx)("div", {
-            className: m.s,
+l.d(t, { b: () => v });
+var a = l(627968),
+    n = l(64700),
+    r = l(503698),
+    i = l.n(r),
+    s = l(311907),
+    o = l(732955),
+    u = l(397927),
+    c = l(775602),
+    d = l(607470),
+    p = l(975571),
+    m = l(318346),
+    h = l(652215),
+    x = l(985018),
+    b = l(186541),
+    g = l(266770),
+    y = l(268920),
+    E = l(633217);
+let f = () => {
+        let e = (0, s.bG)([c.A], () => c.A.useReducedMotion);
+        return (0, a.jsx)("div", {
+            className: b.s,
             children: e
-                ? (0, r.jsx)("img", { src: E.A, className: m.Cb, alt: "Orb" })
-                : (0, r.jsxs)(d.A, {
+                ? (0, a.jsx)("img", { src: y.A, className: b.Cb, alt: "Orb" })
+                : (0, a.jsxs)(d.A, {
                       autoPlay: !0,
                       loop: !0,
-                      className: m.Cb,
+                      className: b.Cb,
                       children: [
-                          (0, r.jsx)("source", { src: A.A, type: "video/webm" }),
-                          (0, r.jsx)("img", { src: E.A, className: m.Cb, alt: "Orb" }),
+                          (0, a.jsx)("source", { src: E.A, type: "video/webm" }),
+                          (0, a.jsx)("img", { src: y.A, className: b.Cb, alt: "Orb" }),
                       ],
                   }),
         });
     },
-    T = (e) => {
+    v = (e) => {
         let {
                 ctaText: t,
-                ctaOnClick: n,
-                analyticsPage: a,
-                linkPreText: o = h.intl.string(h.t["5qZv9E"]),
-                linkText: c = h.intl.string(h.t.XRdyjz),
+                ctaOnClick: l,
+                analyticsPage: r,
+                linkPreText: s = x.intl.string(x.t["5qZv9E"]),
+                linkText: c = x.intl.string(x.t.XRdyjz),
             } = e,
-            d = i.useCallback(() => {
-                null != a &&
-                    (0, f.Y)({
-                        pageType: a,
-                        sectionType: p.JJy.ORBS_BALANCE_MENU,
-                        ctaObject: p.ZSU.ORBS_LEARN_MORE_LINK,
+            d = n.useCallback(() => {
+                null != r &&
+                    (0, m.Y)({
+                        pageType: r,
+                        sectionType: h.JJy.ORBS_BALANCE_MENU,
+                        ctaObject: h.ZSU.ORBS_LEARN_MORE_LINK,
                     });
-            }, [a]);
-        return (0, r.jsxs)("div", {
-            className: s()(m.kL, g.O),
+            }, [r]);
+        return (0, a.jsxs)("div", {
+            className: i()(b.kL, g.O),
             children: [
-                (0, r.jsx)(I, {}),
-                (0, r.jsx)(l.$nd, { text: t, variant: "primary", size: "sm", onClick: n, fullWidth: !0 }),
-                (0, r.jsxs)("div", {
-                    className: m.kx,
+                (0, a.jsx)(f, {}),
+                (0, a.jsx)(o.$nd, { text: t, variant: "primary", size: "sm", onClick: l, fullWidth: !0 }),
+                (0, a.jsxs)("div", {
+                    className: b.kx,
                     children: [
-                        void 0 !== o &&
-                            (0, r.jsxs)(u.Text, { variant: "text-xs/normal", className: m.D5, children: [o, "\xa0"] }),
-                        (0, r.jsx)(u.MzZ, {
+                        void 0 !== s &&
+                            (0, a.jsxs)(u.Text, { variant: "text-xs/normal", className: b.D5, children: [s, "\xa0"] }),
+                        (0, a.jsx)(u.MzZ, {
                             target: "_blank",
                             rel: "author",
-                            href: _.A.getArticleURL(p.MVz.ORBS_FAQ),
-                            className: m.CU,
+                            href: p.A.getArticleURL(h.MVz.ORBS_FAQ),
+                            className: b.CU,
                             onClick: d,
                             children: c,
                         }),

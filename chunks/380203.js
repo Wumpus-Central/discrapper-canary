@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { A: () => u });
-var r = n(23339),
-    i = n(319060),
-    a = n(241524),
-    s = n(2242);
-let o = (0, r.xI)(i.A.GUILD_ROLE_SUBSCRIPTION_CARD_BASIC_INFO_TIER_IMAGE_SIZE),
-    l = (0, r.xI)(i.A.GUILD_ROLE_SUBSCRIPTION_CARD_BASIC_INFO_TIER_IMAGE_SIZE_MOBILE);
-function u() {
-    return (0, a.A)(s.Yl) ? l : o;
+i.d(t, { A: () => d });
+var l = i(23339),
+    n = i(319060),
+    a = i(241524),
+    s = i(2242);
+let r = (0, l.xI)(n.A.GUILD_ROLE_SUBSCRIPTION_CARD_BASIC_INFO_TIER_IMAGE_SIZE),
+    c = (0, l.xI)(n.A.GUILD_ROLE_SUBSCRIPTION_CARD_BASIC_INFO_TIER_IMAGE_SIZE_MOBILE);
+function d() {
+    return (0, a.A)(s.Yl) ? c : r;
 }

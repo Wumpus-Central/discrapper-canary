@@ -1,83 +1,82 @@
-"use strict";
-n.d(t, { OX: () => u, ZI: () => d, ZR: () => _, cf: () => c });
-var r = n(701366),
-    i = n(352404),
-    a = n(47276),
-    s = n(849352),
-    o = n(64700);
+t.d(a, { OX: () => s, ZI: () => c, ZR: () => m, cf: () => d });
+var r = t(701366),
+    n = t(352404),
+    i = t(47276),
+    o = t(849352),
+    u = t(64700);
 function l(e) {
     return e && e.__esModule ? e.default : e;
 }
-let u = new WeakMap();
-function c(e) {
+let s = new WeakMap();
+function d(e) {
     return (null == e ? void 0 : e.calendar.identifier) === "gregory" && "BC" === e.era ? "short" : void 0;
 }
-function d(e) {
-    var t;
-    let n,
-        u,
-        d = (0, a.o)(l(r.A), "@react-aria/calendar");
+function c(e) {
+    var a;
+    let t,
+        s,
+        c = (0, i.o)(l(r.A), "@react-aria/calendar");
     "highlightedRange" in e
-        ? ({ start: n, end: u } = e.highlightedRange || {})
-        : (n = u = null != (t = e.value) ? t : void 0);
-    let _ = (0, s.i)({
+        ? ({ start: t, end: s } = e.highlightedRange || {})
+        : (t = s = null != (a = e.value) ? a : void 0);
+    let m = (0, o.i)({
             weekday: "long",
             month: "long",
             year: "numeric",
             day: "numeric",
-            era: c(n) || c(u),
+            era: d(t) || d(s),
             timeZone: e.timeZone,
         }),
-        p = "anchorDate" in e ? e.anchorDate : null;
-    return (0, o.useMemo)(() => {
-        if (!p && n && u)
-            if ((0, i.ro)(n, u)) {
-                let t = _.format(n.toDate(e.timeZone));
-                return d.format("selectedDateDescription", { date: t });
+        D = "anchorDate" in e ? e.anchorDate : null;
+    return (0, u.useMemo)(() => {
+        if (!D && t && s)
+            if ((0, n.ro)(t, s)) {
+                let a = m.format(t.toDate(e.timeZone));
+                return c.format("selectedDateDescription", { date: a });
             } else {
-                let t = f(_, d, n, u, e.timeZone);
-                return d.format("selectedRangeDescription", { dateRange: t });
+                let a = h(m, c, t, s, e.timeZone);
+                return c.format("selectedRangeDescription", { dateRange: a });
             }
         return "";
-    }, [n, u, p, e.timeZone, d, _]);
+    }, [t, s, D, e.timeZone, c, m]);
 }
-function _(e, t, n, u) {
-    let d = (0, a.o)(l(r.A), "@react-aria/calendar"),
-        _ = c(e) || c(t),
-        p = (0, s.i)({ month: "long", year: "numeric", era: _, calendar: e.calendar.identifier, timeZone: n }),
-        h = (0, s.i)({
+function m(e, a, t, s) {
+    let c = (0, i.o)(l(r.A), "@react-aria/calendar"),
+        m = d(e) || d(a),
+        D = (0, o.i)({ month: "long", year: "numeric", era: m, calendar: e.calendar.identifier, timeZone: t }),
+        y = (0, o.i)({
             month: "long",
             year: "numeric",
             day: "numeric",
-            era: _,
+            era: m,
             calendar: e.calendar.identifier,
-            timeZone: n,
+            timeZone: t,
         });
-    return (0, o.useMemo)(() => {
-        if ((0, i.ro)(e, (0, i.wH)(e))) {
+    return (0, u.useMemo)(() => {
+        if ((0, n.ro)(e, (0, n.wH)(e))) {
             let r = e,
-                a = t;
+                i = a;
             if (
                 (e.calendar.getFormattableMonth && (r = e.calendar.getFormattableMonth(e)),
-                t.calendar.getFormattableMonth && (a = t.calendar.getFormattableMonth(t)),
-                (0, i.ro)(t, (0, i.p9)(e)))
+                a.calendar.getFormattableMonth && (i = a.calendar.getFormattableMonth(a)),
+                (0, n.ro)(a, (0, n.p9)(e)))
             )
-                return p.format(r.toDate(n));
-            if ((0, i.ro)(t, (0, i.p9)(t))) return u ? f(p, d, r, a, n) : p.formatRange(r.toDate(n), a.toDate(n));
+                return D.format(r.toDate(t));
+            if ((0, n.ro)(a, (0, n.p9)(a))) return s ? h(D, c, r, i, t) : D.formatRange(r.toDate(t), i.toDate(t));
         }
-        return u ? f(h, d, e, t, n) : h.formatRange(e.toDate(n), t.toDate(n));
-    }, [e, t, p, h, d, n, u]);
+        return s ? h(y, c, e, a, t) : y.formatRange(e.toDate(t), a.toDate(t));
+    }, [e, a, D, y, c, t, s]);
 }
-function f(e, t, n, r, i) {
-    let a = e.formatRangeToParts(n.toDate(i), r.toDate(i)),
-        s = -1;
-    for (let e = 0; e < a.length; e++) {
-        let t = a[e];
-        if ("shared" === t.source && "literal" === t.type) s = e;
-        else if ("endRange" === t.source) break;
+function h(e, a, t, r, n) {
+    let i = e.formatRangeToParts(t.toDate(n), r.toDate(n)),
+        o = -1;
+    for (let e = 0; e < i.length; e++) {
+        let a = i[e];
+        if ("shared" === a.source && "literal" === a.type) o = e;
+        else if ("endRange" === a.source) break;
     }
-    let o = "",
+    let u = "",
         l = "";
-    for (let e = 0; e < a.length; e++) e < s ? (o += a[e].value) : e > s && (l += a[e].value);
-    return t.format("dateRange", { startDate: o, endDate: l });
+    for (let e = 0; e < i.length; e++) e < o ? (u += i[e].value) : e > o && (l += i[e].value);
+    return a.format("dateRange", { startDate: u, endDate: l });
 }

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     m7: "breadcrumbsNav__6989f",
     vk: "clickable__6989f",

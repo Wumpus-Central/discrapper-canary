@@ -1,23 +1,10 @@
-"use strict";
-n.d(t, { V: () => u });
-var r = n(627968),
-    i = n(732955),
-    a = n(652165),
-    s = n(749226);
-let o = (e) => {
-        (0, a.B4)({
-            skuId: e,
-            onCheckoutSuccess: (e) => {
-                let { skuId: t, entitlements: n } = e;
-                console.log(`Orb Checkout Success for SKU: ${t}. Entitlement(s): `, n, Date.now());
-            },
-            onCloseCallback: () => {
-                console.log("Orb Checkout Closed");
-            },
-        });
-    },
-    l = "1271174907081789524",
-    u = {
+l.d(t, { V: () => o });
+var a = l(627968),
+    n = l(732955),
+    r = l(652165),
+    i = l(749226);
+let s = "1271174907081789524",
+    o = {
         title: "Orb Checkout",
         stories: [
             {
@@ -25,11 +12,24 @@ let o = (e) => {
                 id: "orb-checkout-modal",
                 component: (e) => {
                     let { skuId: t } = e;
-                    return (0, r.jsx)("div", {
-                        className: s.YG,
-                        children: (0, r.jsx)(i.$nd, {
+                    return (0, a.jsx)("div", {
+                        className: i.YG,
+                        children: (0, a.jsx)(n.$nd, {
                             onClick: () => {
-                                o(t);
+                                (0, r.B4)({
+                                    skuId: t,
+                                    onCheckoutSuccess: (e) => {
+                                        let { skuId: t, entitlements: l } = e;
+                                        console.log(
+                                            `Orb Checkout Success for SKU: ${t}. Entitlement(s): `,
+                                            l,
+                                            Date.now(),
+                                        );
+                                    },
+                                    onCloseCallback: () => {
+                                        console.log("Orb Checkout Closed");
+                                    },
+                                });
                             },
                             text: `Open Orb Checkout for Custom SKU: ${t}`,
                         }),
@@ -43,12 +43,12 @@ let o = (e) => {
                             { skuId: "1342211853484429445", skuName: "Orb Profile Badge" },
                             { skuId: "1427463138634109026", skuName: "Magic Mists (Deco)" },
                             { skuId: "1332505467980873728", skuName: "Pondering Portal (Deco)" },
-                            { skuId: l, skuName: "Oni's Curse (Deco)" },
+                            { skuId: s, skuName: "Oni's Curse (Deco)" },
                         ].map((e) => {
-                            let { skuId: t, skuName: n } = e;
-                            return { label: n, value: t };
+                            let { skuId: t, skuName: l } = e;
+                            return { label: l, value: t };
                         }),
-                        defaultValue: l,
+                        defaultValue: s,
                     },
                 },
             },

@@ -1,72 +1,71 @@
 "use strict";
-n.d(t, { Ay: () => T, PS: () => g, S0: () => A });
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(27867),
-    l = n(311907),
+n.d(t, { Ay: () => v, PS: () => f, S0: () => x });
+var l = n(627968),
+    s = n(64700),
+    i = n(503698),
+    r = n.n(i),
+    a = n(27867),
+    o = n(311907),
     u = n(397927),
     c = n(814890),
     d = n(436283),
-    _ = n(296043),
-    f = n(652215),
-    p = n(985018),
-    h = n(133898);
-function m(e) {
-    return { text: e, icon: (0, r.jsx)(u.nvX, { className: h.Kk, dotRadius: 3.5, themed: !0 }) };
+    m = n(296043),
+    h = n(652215),
+    g = n(985018),
+    p = n(133898);
+function A(e) {
+    return { text: e, icon: (0, l.jsx)(u.nvX, { className: p.Kk, dotRadius: 3.5, themed: !0 }) };
 }
-function g(e) {
+function f(e) {
     return {
-        text: e ?? p.intl.string(p.t.VCsUJu),
+        text: e ?? g.intl.string(g.t.VCsUJu),
         color: "text-feedback-critical",
-        icon: (0, r.jsx)(u.EpV, { size: "xs", color: "currentColor", className: s()(h.Kk, h.ik) }),
+        icon: (0, l.jsx)(u.EpV, { size: "xs", color: "currentColor", className: r()(p.Kk, p.ik) }),
     };
 }
-function E(e, t) {
-    switch ((0, _.fK)(t, e)) {
-        case _.h0.SENDING:
-            return m(p.intl.string(p.t.RiLfBY));
-        case _.h0.CREATED:
-            return m(p.intl.formatToPlainString(p.t["7ePV4t"], { applicationName: t.author.username }));
-        case _.h0.TIMED_OUT:
-            return g(p.intl.string(p.t.h8hzPd));
-        case _.h0.FAILED:
-            return g(t.interactionError);
-    }
-}
-function A(e) {
-    let { className: t, icon: n, text: i, color: a } = e;
-    return (0, r.jsxs)("div", {
-        className: s()(h.iE, t),
+function x(e) {
+    let { className: t, icon: n, text: s, color: i } = e;
+    return (0, l.jsxs)("div", {
+        className: r()(p.iE, t),
         children: [
             n,
-            (0, r.jsx)(u.Text, { variant: "text-md/normal", color: a, scaleFontToUserSetting: !0, children: i }),
+            (0, l.jsx)(u.Text, { variant: "text-md/normal", color: i, scaleFontToUserSetting: !0, children: s }),
         ],
     });
 }
-function I(e) {
-    let { message: t, className: n, component: a } = e,
-        s = (0, o.A)(),
-        u = (0, l.bG)([d.Ay], () => d.Ay.getInteraction(t), [t]);
-    i.useEffect(() => {
+let v = s.memo(function (e) {
+    let { message: t, className: n, component: i } = e,
+        r = (0, a.A)(),
+        u = (0, o.bG)([d.Ay], () => d.Ay.getInteraction(t), [t]);
+    s.useEffect(() => {
         let e = null;
-        if (t.hasFlag(f.pr7.LOADING) && null != u) {
-            let n = (0, _.I5)(t.id) - Date.now();
-            n > 0 && (e = setTimeout(() => s(), 1e3 + n));
+        if (t.hasFlag(h.pr7.LOADING) && null != u) {
+            let n = (0, m.I5)(t.id) - Date.now();
+            n > 0 && (e = setTimeout(() => r(), 1e3 + n));
         }
         return () => {
             clearTimeout(e);
         };
-    }, [s, u, t]);
+    }, [r, u, t]);
     let p = null;
-    if (null == a) p = E(u, t);
+    if (null == i)
+        p = (function (e, t) {
+            switch ((0, m.fK)(t, e)) {
+                case m.h0.SENDING:
+                    return A(g.intl.string(g.t.RiLfBY));
+                case m.h0.CREATED:
+                    return A(g.intl.formatToPlainString(g.t["7ePV4t"], { applicationName: t.author.username }));
+                case m.h0.TIMED_OUT:
+                    return f(g.intl.string(g.t.h8hzPd));
+                case m.h0.FAILED:
+                    return f(t.interactionError);
+            }
+        })(u, t);
     else {
-        let e = (0, c.zv)(u, t, a);
-        null != e && (p = g(e));
+        let e = (0, c.zv)(u, t, i);
+        null != e && (p = f(e));
     }
     if (null == p) return null;
-    let { text: h, icon: m, color: I } = p;
-    return (0, r.jsx)(A, { icon: m, text: h, className: n, color: I });
-}
-let T = i.memo(I);
+    let { text: v, icon: N, color: b } = p;
+    return (0, l.jsx)(x, { icon: N, text: v, className: n, color: b });
+});

@@ -1,28 +1,27 @@
-"use strict";
-n.d(t, { d: () => _ });
-var r = n(765325),
-    i = n(787709),
-    a = n(142922),
-    s = n(248759),
-    o = n(929959),
-    l = n(879452),
-    u = n(260043),
-    c = n(236230),
-    d = n(287998);
-function _(e) {
+t.d(a, { d: () => m });
+var r = t(765325),
+    n = t(787709),
+    i = t(142922),
+    o = t(248759),
+    u = t(929959),
+    l = t(879452),
+    s = t(260043),
+    d = t(236230),
+    c = t(287998);
+function m(e) {
     switch (e) {
         case "buddhist":
             return new (0, r.K)();
         case "ethiopic":
-            return new (0, i.yB)();
+            return new (0, n.yB)();
         case "ethioaa":
-            return new (0, i.lf)();
+            return new (0, n.lf)();
         case "coptic":
-            return new (0, i.pG)();
+            return new (0, n.pG)();
         case "hebrew":
-            return new (0, s.Y)();
+            return new (0, o.Y)();
         case "indian":
-            return new (0, o.a)();
+            return new (0, u.a)();
         case "islamic-civil":
             return new (0, l.Yk)();
         case "islamic-tbla":
@@ -30,12 +29,12 @@ function _(e) {
         case "islamic-umalqura":
             return new (0, l.ZN)();
         case "japanese":
-            return new (0, u.u)();
+            return new (0, s.u)();
         case "persian":
-            return new (0, c.p)();
+            return new (0, d.p)();
         case "roc":
-            return new (0, d.b)();
+            return new (0, c.b)();
         default:
-            return new (0, a.FG)();
+            return new (0, i.FG)();
     }
 }

@@ -1,17 +1,16 @@
-"use strict";
-n.d(t, { U: () => s });
-var r = n(627968),
-    i = n(64700),
-    a = n(158954);
-let s = {
+a.d(l, { U: () => i });
+var t = a(627968),
+    o = a(64700),
+    n = a(158954);
+let i = {
     title: "VoidSwitch",
     stories: [
         {
             id: "switch",
             name: "Switch",
             component: function (e) {
-                let [t, n] = i.useState(!1);
-                return (0, r.jsx)(a.TOt, { "data-migration-pending": !0, ...e, onChange: n, checked: t });
+                let [l, a] = o.useState(!1);
+                return (0, t.jsx)(n.TOt, { "data-migration-pending": !0, ...e, onChange: a, checked: l });
             },
             controls: {
                 disabled: { type: "boolean", label: "Disabled", defaultValue: !1 },

@@ -1,28 +1,25 @@
-"use strict";
-n.d(t, { k: () => l });
-var r = n(908909),
-    i = n(853590),
-    a = n(47276),
-    s = n(64700);
-function o(e) {
-    return e && e.__esModule ? e.default : e;
-}
-function l() {
-    let { locale: e } = (0, i.Y)(),
-        t = (0, a.e)(o(r.A), "@react-aria/datepicker");
-    return (0, s.useMemo)(() => {
+t.d(a, { k: () => u });
+var r = t(908909),
+    n = t(853590),
+    i = t(47276),
+    o = t(64700);
+function u() {
+    var e;
+    let { locale: a } = (0, n.Y)(),
+        t = (0, i.e)((e = r.A) && e.__esModule ? e.default : e, "@react-aria/datepicker");
+    return (0, o.useMemo)(() => {
         try {
-            return new Intl.DisplayNames(e, { type: "dateTimeField" });
+            return new Intl.DisplayNames(a, { type: "dateTimeField" });
         } catch {
-            return new u(e, t);
+            return new l(a, t);
         }
-    }, [e, t]);
+    }, [a, t]);
 }
-class u {
+class l {
     of(e) {
         return this.dictionary.getStringForLocale(e, this.locale);
     }
-    constructor(e, t) {
-        (this.locale = e), (this.dictionary = t);
+    constructor(e, a) {
+        (this.locale = e), (this.dictionary = a);
     }
 }

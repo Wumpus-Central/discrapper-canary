@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { Qt: () => s, cG: () => a });
-var r = n(627968);
-n(64700);
-let [i, a] = (0, n(786300).A)();
-function s(e) {
-    let { children: t, ...n } = e;
-    return (0, r.jsx)(i.Provider, { value: n, children: t });
+i.d(e, { Qt: () => r, cG: () => s });
+var n = i(627968);
+i(64700);
+let [l, s] = (0, i(786300).A)();
+function r(t) {
+    let { children: e, ...i } = t;
+    return (0, n.jsx)(l.Provider, { value: i, children: e });
 }

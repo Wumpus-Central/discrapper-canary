@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { F: () => a });
-var r = n(627968);
-n(64700);
-var i = n(106236);
-let a = {
+a.d(l, { F: () => n });
+var t = a(627968);
+a(64700);
+var o = a(106236);
+let n = {
     title: "Slider",
     stories: [
         {
@@ -11,32 +10,32 @@ let a = {
             name: "Slider",
             component: function (e) {
                 let {
-                        minValue: t,
-                        maxValue: n,
-                        initialValue: a,
-                        markerCount: s,
-                        stickToMarkers: o,
-                        disabled: l,
-                        equidistant: u,
-                        label: c,
-                        description: d,
+                        minValue: l,
+                        maxValue: a,
+                        initialValue: n,
+                        markerCount: i,
+                        stickToMarkers: s,
+                        disabled: r,
+                        equidistant: d,
+                        label: u,
+                        description: c,
                     } = e,
-                    _ = s > 0 ? Array.from({ length: s }, (e, r) => Math.floor(t + (r / (s - 1)) * (n - t))) : void 0;
-                return (0, r.jsx)(
-                    i.A,
+                    b = i > 0 ? Array.from({ length: i }, (e, t) => Math.floor(l + (t / (i - 1)) * (a - l))) : void 0;
+                return (0, t.jsx)(
+                    o.A,
                     {
-                        label: c,
-                        description: d,
+                        label: u,
+                        description: c,
                         layout: "horizontal-responsive",
-                        minValue: t,
-                        maxValue: n,
-                        initialValue: a,
-                        markers: _,
-                        stickToMarkers: o,
-                        disabled: l,
-                        equidistant: u,
+                        minValue: l,
+                        maxValue: a,
+                        initialValue: n,
+                        markers: b,
+                        stickToMarkers: s,
+                        disabled: r,
+                        equidistant: d,
                     },
-                    s,
+                    i,
                 );
             },
             controls: {

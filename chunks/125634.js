@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     hQ: "contentContainer__58471",
     s: "assetContainer__58471",

@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { C: () => r });
 class r {
     static generateSessionId() {

@@ -1,36 +1,26 @@
-"use strict";
-n.d(t, { cs: () => v });
-var r = n(627968),
-    i = n(64700),
-    a = n(412703),
-    s = n(440703),
-    o = n(267548),
-    l = n(668824),
-    u = n(397927),
-    c = n(104473),
-    d = n(341915),
-    _ = n(73473),
-    f = n(717415),
-    h = n(471535),
-    p = n(652215);
-function g(e) {
-    let { url: t, width: n = 640, height: r = 360, target: i = 60, videoTitle: s = "Test Video Quest" } = e;
-    return {
-        type: a.n.WATCH_VIDEO,
-        target: i,
-        assets: { video: { url: t, width: n, height: r } },
-        messages: { videoTitle: s },
-    };
-}
-function E() {
+r.d(t, { cs: () => y });
+var o = r(627968),
+    a = r(64700),
+    n = r(412703),
+    i = r(440703),
+    s = r(267548),
+    l = r(668824),
+    d = r(397927),
+    _ = r(104473),
+    c = r(341915),
+    p = r(73473),
+    u = r(717415),
+    f = r(471535),
+    b = r(652215);
+function m() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        { streamProgressSeconds: t = 0, completedAt: n = null, enrolledAt: r = null, claimedAt: i = null } = e;
+        { streamProgressSeconds: t = 0, completedAt: r = null, enrolledAt: o = null, claimedAt: a = null } = e;
     return {
         userId: "123",
-        questId: A,
-        enrolledAt: r,
-        completedAt: n,
-        claimedAt: i,
+        questId: C,
+        enrolledAt: o,
+        completedAt: r,
+        claimedAt: a,
         claimedTier: null,
         lastStreamHeartbeatAt: null,
         streamProgressSeconds: t,
@@ -38,123 +28,128 @@ function E() {
         progress: {},
     };
 }
-let A = `playground-video-quest-${Date.now()}`;
-function I(e) {
-    return {
-        id: A,
-        preview: !0,
-        config: {
-            id: A,
-            configVersion: 2,
-            startsAt: "2024-01-01T00:00:00+00:00",
-            expiresAt: "2030-01-01T00:00:00+00:00",
-            application: { id: "123", name: "Video Quest Playground" },
-            messages: { questName: "Video Quest Playground", gameTitle: "Test Game", gamePublisher: "Discord" },
-            colors: { primary: "#5865F2", secondary: "#3BA55C" },
-            rewardsConfig: {
-                assignmentMethod: 1,
-                rewards: [
-                    {
-                        skuId: "",
-                        asset: "",
-                        assetVideo: null,
-                        type: s.l.REWARD_CODE,
-                        messages: {
-                            name: "Test Reward",
-                            nameWithArticle: "a Test Reward",
-                            redemptionInstructionsByPlatform: {},
-                        },
-                    },
-                ],
-                rewardsExpireAt: "2030-01-01T00:00:00+00:00",
-                platforms: [d.pY.CROSS_PLATFORM],
-            },
-            assets: {
-                hero: "",
-                heroVideo: c.kz,
-                questBarHero: "",
-                questBarHeroVideo: null,
-                questBarHeroBlurhash: null,
-                gameTile: "",
-                logotype: "",
-            },
-            taskConfigV2: { joinOperator: l.K.AND, tasks: { [a.n.WATCH_VIDEO]: e } },
-            features: [],
-            sharePolicy: o.i.SHAREABLE_EVERYWHERE,
-            ctaConfig: { link: "https://discord.com/", buttonLabel: "Learn More" },
-        },
-        userStatus: E({ enrolledAt: new Date().toISOString() }),
-        targetedContent: [d.uF.QUEST_HOME_DESKTOP],
-    };
-}
-function T(e) {
-    let { quest: t, isPortrait: n, children: a } = e,
-        s = i.useMemo(
+let C = `playground-video-quest-${Date.now()}`;
+function g(e) {
+    let { quest: t, isPortrait: r, children: n } = e,
+        i = a.useMemo(
             () => ({
                 quest: t,
-                sourceQuestContent: d.uF.INTERNAL_PREVIEW_TOOL,
+                sourceQuestContent: c.uF.INTERNAL_PREVIEW_TOOL,
                 videoSessionId: "playground-session",
-                isPortrait: n,
-                onClose: p.tEg,
+                isPortrait: r,
+                onClose: b.tEg,
             }),
-            [t, n],
+            [t, r],
         ),
-        o = i.useMemo(() => ({ questConfig: t.config }), [t.config]);
-    return (0, r.jsx)(_.R, {
+        s = a.useMemo(() => ({ questConfig: t.config }), [t.config]);
+    return (0, o.jsx)(p.R, {
         questOrQuests: t,
-        questContent: d.uF.VIDEO_MODAL,
-        sourceQuestContent: d.uF.INTERNAL_PREVIEW_TOOL,
+        questContent: c.uF.VIDEO_MODAL,
+        sourceQuestContent: c.uF.INTERNAL_PREVIEW_TOOL,
         children: (e, t) =>
-            (0, r.jsx)(f.VideoQuestConfigContext.Provider, {
-                value: o,
-                children: (0, r.jsx)(f.VideoQuestModalContext.Provider, { value: s, children: a }),
+            (0, o.jsx)(u.VideoQuestConfigContext.Provider, {
+                value: s,
+                children: (0, o.jsx)(u.VideoQuestModalContext.Provider, { value: i, children: n }),
             }),
     });
 }
-function y(e) {
-    let { orientation: t, autoplay: n, questCompleted: i, videoUrl: a } = e,
-        s = "portrait" === t,
-        o = g({
-            url: a,
-            width: s ? 360 : 640,
-            height: s ? 640 : 360,
-            videoTitle: s ? "Test Portrait Video" : "Test Landscape Video",
+function v(e) {
+    let { orientation: t, autoplay: r, questCompleted: a, videoUrl: p } = e,
+        u = "portrait" === t,
+        v = (function (e) {
+            let { url: t, width: r = 640, height: o = 360, target: a = 60, videoTitle: i = "Test Video Quest" } = e;
+            return {
+                type: n.n.WATCH_VIDEO,
+                target: a,
+                assets: { video: { url: t, width: r, height: o } },
+                messages: { videoTitle: i },
+            };
+        })({
+            url: p,
+            width: u ? 360 : 640,
+            height: u ? 640 : 360,
+            videoTitle: u ? "Test Portrait Video" : "Test Landscape Video",
         }),
-        l = I(o),
-        c = i
+        h = {
+            id: C,
+            preview: !0,
+            config: {
+                id: C,
+                configVersion: 2,
+                startsAt: "2024-01-01T00:00:00+00:00",
+                expiresAt: "2030-01-01T00:00:00+00:00",
+                application: { id: "123", name: "Video Quest Playground" },
+                messages: { questName: "Video Quest Playground", gameTitle: "Test Game", gamePublisher: "Discord" },
+                colors: { primary: "#5865F2", secondary: "#3BA55C" },
+                rewardsConfig: {
+                    assignmentMethod: 1,
+                    rewards: [
+                        {
+                            skuId: "",
+                            asset: "",
+                            assetVideo: null,
+                            type: i.l.REWARD_CODE,
+                            messages: {
+                                name: "Test Reward",
+                                nameWithArticle: "a Test Reward",
+                                redemptionInstructionsByPlatform: {},
+                            },
+                        },
+                    ],
+                    rewardsExpireAt: "2030-01-01T00:00:00+00:00",
+                    platforms: [c.pY.CROSS_PLATFORM],
+                },
+                assets: {
+                    hero: "",
+                    heroVideo: _.kz,
+                    questBarHero: "",
+                    questBarHeroVideo: null,
+                    questBarHeroBlurhash: null,
+                    gameTile: "",
+                    logotype: "",
+                },
+                taskConfigV2: { joinOperator: l.K.AND, tasks: { [n.n.WATCH_VIDEO]: v } },
+                features: [],
+                sharePolicy: s.i.SHAREABLE_EVERYWHERE,
+                ctaConfig: { link: "https://discord.com/", buttonLabel: "Learn More" },
+            },
+            userStatus: m({ enrolledAt: new Date().toISOString() }),
+            targetedContent: [c.uF.QUEST_HOME_DESKTOP],
+        },
+        y = a
             ? {
-                  ...l,
-                  userStatus: E({
-                      enrolledAt: l.userStatus?.enrolledAt ?? null,
-                      completedAt: l.userStatus?.enrolledAt ?? null,
-                      streamProgressSeconds: o.target,
+                  ...h,
+                  userStatus: m({
+                      enrolledAt: h.userStatus?.enrolledAt ?? null,
+                      completedAt: h.userStatus?.enrolledAt ?? null,
+                      streamProgressSeconds: v.target,
                   }),
               }
-            : l;
-    return (0, r.jsx)("div", {
+            : h;
+    return (0, o.jsx)("div", {
         style: {
-            width: s ? "400px" : "800px",
-            height: s ? "700px" : "500px",
+            width: u ? "400px" : "800px",
+            height: u ? "700px" : "500px",
             backgroundColor: "#1e1f22",
             borderRadius: "8px",
             overflow: "hidden",
         },
-        children: (0, r.jsx)(T, {
-            quest: c,
-            isPortrait: s,
-            children: (0, r.jsx)(h.A, {
-                targetTimeSec: o.target,
-                parentTransitionState: u.ip4.ENTERED,
-                onOptimisticProgressUpdate: p.tEg,
-                autoplay: n,
+        children: (0, o.jsx)(g, {
+            quest: y,
+            isPortrait: u,
+            children: (0, o.jsx)(f.A, {
+                targetTimeSec: v.target,
+                parentTransitionState: d.ip4.ENTERED,
+                onOptimisticProgressUpdate: b.tEg,
+                autoplay: r,
                 performanceClockStartTime: 0,
                 orientation: t,
-                videoUrlOverride: a,
+                videoUrlOverride: p,
             }),
         }),
     });
 }
-let S = {
+let h = {
         orientation: {
             label: "Orientation",
             type: "select",
@@ -166,22 +161,22 @@ let S = {
         },
         autoplay: { label: "Autoplay", type: "boolean", defaultValue: !1 },
         questCompleted: { label: "Quest Completed", type: "boolean", defaultValue: !1 },
-        videoUrl: { label: "Video URL", type: "text", defaultValue: c.kz },
+        videoUrl: { label: "Video URL", type: "text", defaultValue: _.kz },
     },
-    v = {
+    y = {
         title: "Video Player",
         stories: [
             {
                 name: "Landscape Video (Quests)",
                 id: "landscape-video",
-                component: y,
-                controls: { ...S, orientation: { ...S.orientation, defaultValue: "landscape" } },
+                component: v,
+                controls: { ...h, orientation: { ...h.orientation, defaultValue: "landscape" } },
             },
             {
                 name: "Portrait Video (Quests)",
                 id: "portrait-video",
-                component: y,
-                controls: { ...S, orientation: { ...S.orientation, defaultValue: "portrait" } },
+                component: v,
+                controls: { ...h, orientation: { ...h.orientation, defaultValue: "portrait" } },
             },
         ],
     };

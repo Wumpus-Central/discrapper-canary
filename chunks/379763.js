@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Qs: "content_e9e3ed",
     Hw: "mobile_e9e3ed",

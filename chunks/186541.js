@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container_b4f99f",
     s: "assetContainer_b4f99f",

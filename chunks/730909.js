@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     BJ: "calendar__2ffbd",
     I4: "calendarHeader__2ffbd",

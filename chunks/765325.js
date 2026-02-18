@@ -1,13 +1,11 @@
-"use strict";
-n.d(t, { K: () => s });
-var r = n(99478),
-    i = n(142922);
-let a = -543;
-class s extends i.FG {
+t.d(a, { K: () => i });
+var r = t(99478),
+    n = t(142922);
+class i extends n.FG {
     fromJulianDay(e) {
-        let t = super.fromJulianDay(e),
-            n = (0, i.LA)(t.era, t.year);
-        return new (0, r.ng)(this, n - a, t.month, t.day);
+        let a = super.fromJulianDay(e),
+            t = (0, n.LA)(a.era, a.year);
+        return new (0, r.ng)(this, t - -543, a.month, a.day);
     }
     toJulianDay(e) {
         return super.toJulianDay(o(e));
@@ -24,6 +22,6 @@ class s extends i.FG {
     }
 }
 function o(e) {
-    let [t, n] = (0, i.f5)(e.year + a);
-    return new (0, r.ng)(t, n, e.month, e.day);
+    let [a, t] = (0, n.f5)(e.year + -543);
+    return new (0, r.ng)(a, t, e.month, e.day);
 }

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     A7: "outer__146e2",
     hr: "progressBar__146e2",

@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { G: () => i });
-let r = new (0, n(731692).B)(
+t.d(a, { G: () => n });
+let r = new (0, t(731692).B)(
     {
         ach: { year: "mwaka", month: "dwe", day: "nino" },
         af: { year: "jjjj", month: "mm", day: "dd" },
@@ -81,10 +80,10 @@ let r = new (0, n(731692).B)(
     },
     "en",
 );
-function i(e, t, n) {
+function n(e, a, t) {
     return "era" === e || "dayPeriod" === e
-        ? t
+        ? a
         : "year" === e || "month" === e || "day" === e
-          ? r.getStringForLocale(e, n)
+          ? r.getStringForLocale(e, t)
           : "––";
 }

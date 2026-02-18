@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     ty: "productCardContainer_fcbddd",
     qt: "productCardContentContainer_fcbddd",

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Nr: "card_cf5b44",
     Io: "pill_cf5b44",

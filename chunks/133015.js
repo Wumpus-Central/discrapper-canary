@@ -1,3 +1,4 @@
+"use strict";
 i.d(t, { n: () => s });
 let n = (0, i(945810).mj)({
     name: "2025-01-slayer-storefront-orbs-reward",

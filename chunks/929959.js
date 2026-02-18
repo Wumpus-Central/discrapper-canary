@@ -1,44 +1,41 @@
-"use strict";
-n.d(t, { a: () => o });
-var r = n(99478),
-    i = n(142922);
-let a = 78,
-    s = 80;
-class o extends i.FG {
+t.d(a, { a: () => i });
+var r = t(99478),
+    n = t(142922);
+class i extends n.FG {
     fromJulianDay(e) {
-        let t,
-            n,
-            o,
-            l = super.fromJulianDay(e),
-            u = l.year - a,
-            c = e - (0, i.rG)(l.era, l.year, 1, 1);
+        let a,
+            t,
+            i,
+            o = super.fromJulianDay(e),
+            u = o.year - 78,
+            l = e - (0, n.rG)(o.era, o.year, 1, 1);
         if (
-            (c < s
-                ? (u--, (c += (t = (0, i.U_)(l.year - 1) ? 31 : 30) + 155 + 90 + 10))
-                : ((t = (0, i.U_)(l.year) ? 31 : 30), (c -= s)),
-            c < t)
+            (l < 80
+                ? (u--, (l += (a = (0, n.U_)(o.year - 1) ? 31 : 30) + 155 + 90 + 10))
+                : ((a = (0, n.U_)(o.year) ? 31 : 30), (l -= 80)),
+            l < a)
         )
-            (n = 1), (o = c + 1);
+            (t = 1), (i = l + 1);
         else {
-            let e = c - t;
+            let e = l - a;
             e < 155
-                ? ((n = Math.floor(e / 31) + 2), (o = (e % 31) + 1))
-                : ((e -= 155), (n = Math.floor(e / 30) + 7), (o = (e % 30) + 1));
+                ? ((t = Math.floor(e / 31) + 2), (i = (e % 31) + 1))
+                : ((e -= 155), (t = Math.floor(e / 30) + 7), (i = (e % 30) + 1));
         }
-        return new (0, r.ng)(this, u, n, o);
+        return new (0, r.ng)(this, u, t, i);
     }
     toJulianDay(e) {
-        let t,
-            n,
-            r = e.year + a,
-            [s, o] = (0, i.f5)(r);
-        return ((0, i.U_)(o) ? ((t = 31), (n = (0, i.rG)(s, o, 3, 21))) : ((t = 30), (n = (0, i.rG)(s, o, 3, 22))),
+        let a,
+            t,
+            r = e.year + 78,
+            [i, o] = (0, n.f5)(r);
+        return ((0, n.U_)(o) ? ((a = 31), (t = (0, n.rG)(i, o, 3, 21))) : ((a = 30), (t = (0, n.rG)(i, o, 3, 22))),
         1 === e.month)
-            ? n + e.day - 1
-            : ((n += t + 31 * Math.min(e.month - 2, 5)), e.month >= 8 && (n += (e.month - 7) * 30), (n += e.day - 1));
+            ? t + e.day - 1
+            : ((t += a + 31 * Math.min(e.month - 2, 5)), e.month >= 8 && (t += (e.month - 7) * 30), (t += e.day - 1));
     }
     getDaysInMonth(e) {
-        return (1 === e.month && (0, i.U_)(e.year + a)) || (e.month >= 2 && e.month <= 6) ? 31 : 30;
+        return (1 === e.month && (0, n.U_)(e.year + 78)) || (e.month >= 2 && e.month <= 6) ? 31 : 30;
     }
     getYearsInEra() {
         return 9919;

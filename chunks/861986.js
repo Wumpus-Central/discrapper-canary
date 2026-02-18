@@ -1,32 +1,29 @@
-"use strict";
-n.d(t, { A: () => u, O: () => o });
-var r = n(627968);
+n.d(t, { A: () => c, O: () => s });
+var a,
+    i = n(627968);
 n(64700);
-var i = n(449859),
-    a = n(985018),
-    s = n(679740),
-    o = (function (e) {
-        return (e[(e.WITH_CONTENT = 0)] = "WITH_CONTENT"), (e[(e.AFTER_ACCESSORIES = 1)] = "AFTER_ACCESSORIES"), e;
-    })({});
-function l(e, t) {
-    return t || (null != e.content && 0 !== e.content.length) ? 0 : 1;
-}
-function u(e) {
-    let { message: t, compact: n, location: o } = e;
-    return t.isEdited() && null != t.editedTimestamp && o === l(t, n)
-        ? (0, r.jsxs)(r.Fragment, {
-              children: [
-                  " ",
-                  (0, r.jsx)(i.A, {
-                      timestamp: t.editedTimestamp,
-                      isEdited: !0,
-                      isInline: !1,
-                      children: (0, r.jsxs)("span", {
-                          className: s.oh,
-                          children: ["(", a.intl.string(a.t.C8sXIM), ")"],
+var l = n(449859),
+    o = n(985018),
+    r = n(679740),
+    s = (((a = {})[(a.WITH_CONTENT = 0)] = "WITH_CONTENT"), (a[(a.AFTER_ACCESSORIES = 1)] = "AFTER_ACCESSORIES"), a);
+function c(e) {
+    let { message: t, compact: n, location: a } = e;
+    return t.isEdited() && null != t.editedTimestamp
+        ? a !== (n || (null != t.content && 0 !== t.content.length) ? 0 : 1)
+            ? null
+            : (0, i.jsxs)(i.Fragment, {
+                  children: [
+                      " ",
+                      (0, i.jsx)(l.A, {
+                          timestamp: t.editedTimestamp,
+                          isEdited: !0,
+                          isInline: !1,
+                          children: (0, i.jsxs)("span", {
+                              className: r.oh,
+                              children: ["(", o.intl.string(o.t.C8sXIM), ")"],
+                          }),
                       }),
-                  }),
-              ],
-          })
+                  ],
+              })
         : null;
 }

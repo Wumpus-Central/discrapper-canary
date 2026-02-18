@@ -1,75 +1,74 @@
-"use strict";
-n.d(t, { N: () => o });
-var r = n(627968),
-    i = n(64700),
-    a = n(421380),
-    s = n(397927);
-let o = {
+a.d(l, { N: () => s });
+var t = a(627968),
+    o = a(64700),
+    n = a(421380),
+    i = a(397927);
+let s = {
     title: "Checkbox",
     stories: [
         {
             id: "void-checkbox",
             name: "Checkbox",
             component: function (e) {
-                let { disabled: t, readOnly: n, displayOnly: o, type: l, size: u, align: c, shape: d, label: _ } = e,
-                    [f, p] = i.useState(!1),
-                    h = i.useCallback((e, t) => {
-                        p(t);
+                let { disabled: l, readOnly: a, displayOnly: s, type: r, size: d, align: u, shape: c, label: b } = e,
+                    [p, m] = o.useState(!1),
+                    x = o.useCallback((e, l) => {
+                        m(l);
                     }, []),
-                    m = i.useCallback(() => {
-                        p(!0);
+                    v = o.useCallback(() => {
+                        m(!0);
                     }, []),
-                    g = i.useCallback(() => {
-                        p(!1);
+                    h = o.useCallback(() => {
+                        m(!1);
                     }, []),
-                    E = i.useCallback(() => {
-                        p((e) => !e);
+                    y = o.useCallback(() => {
+                        m((e) => !e);
                     }, []);
-                return (0, r.jsxs)(s.BJc, {
+                return (0, t.jsxs)(i.BJc, {
                     direction: "vertical",
                     gap: "md",
                     children: [
-                        (0, r.jsx)(a.Kj, {
+                        (0, t.jsx)(n.Kj, {
                             "data-migration-pending": !0,
-                            value: f,
-                            onChange: h,
-                            disabled: t,
-                            readOnly: n,
-                            displayOnly: o,
-                            type: l,
-                            size: u,
-                            align: c,
-                            shape: d,
-                            children: (0, r.jsx)(s.Text, { variant: "text-md/normal", children: _ }),
+                            value: p,
+                            onChange: x,
+                            disabled: l,
+                            readOnly: a,
+                            displayOnly: s,
+                            type: r,
+                            size: d,
+                            align: u,
+                            shape: c,
+                            children: (0, t.jsx)(i.Text, { variant: "text-md/normal", children: b }),
                         }),
-                        (0, r.jsxs)(s.Text, {
+                        (0, t.jsxs)(i.Text, {
                             variant: "text-sm/normal",
-                            children: ["Current state: ", f ? "Checked" : "Unchecked"],
+                            children: ["Current state: ", p ? "Checked" : "Unchecked"],
                         }),
-                        (0, r.jsxs)(s.BJc, {
+                        (0, t.jsxs)(i.BJc, {
                             direction: "horizontal",
                             gap: "sm",
                             children: [
-                                (0, r.jsx)(s.Button, {
+                                (0, t.jsx)(i.Button, {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Check",
-                                    onClick: m,
-                                    disabled: t || n,
+                                    onClick: v,
+                                    disabled: l || a,
                                 }),
-                                (0, r.jsx)(s.Button, {
+                                (0, t.jsx)(i.Button, {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Uncheck",
-                                    onClick: g,
-                                    disabled: t || n,
+                                    onClick: h,
+                                    disabled: l || a,
                                 }),
-                                (0, r.jsx)(s.Button, {
+                                (0, t.jsx)(i.Button, {
                                     variant: "primary",
                                     size: "sm",
                                     text: "Toggle",
-                                    onClick: E,
-                                    disabled: t || n,
+                                    onClick: y,
+                                    disabled: l || a,
                                 }),
                             ],
                         }),
@@ -84,32 +83,32 @@ let o = {
                 type: {
                     type: "select",
                     label: "Type",
-                    defaultValue: a.Xo.DEFAULT,
+                    defaultValue: n.Xo.DEFAULT,
                     options: [
-                        { label: "Default", value: a.Xo.DEFAULT },
-                        { label: "Inverted", value: a.Xo.INVERTED },
-                        { label: "Ghost", value: a.Xo.GHOST },
-                        { label: "Row", value: a.Xo.ROW },
+                        { label: "Default", value: n.Xo.DEFAULT },
+                        { label: "Inverted", value: n.Xo.INVERTED },
+                        { label: "Ghost", value: n.Xo.GHOST },
+                        { label: "Row", value: n.Xo.ROW },
                     ],
                 },
                 size: { type: "number", label: "Size", defaultValue: 24 },
                 align: {
                     type: "select",
                     label: "Alignment",
-                    defaultValue: a.ov.CENTER,
+                    defaultValue: n.ov.CENTER,
                     options: [
-                        { label: "Center", value: a.ov.CENTER },
-                        { label: "Top", value: a.ov.TOP },
+                        { label: "Center", value: n.ov.CENTER },
+                        { label: "Top", value: n.ov.TOP },
                     ],
                 },
                 shape: {
                     type: "select",
                     label: "Shape",
-                    defaultValue: a.Ib.BOX,
+                    defaultValue: n.Ib.BOX,
                     options: [
-                        { label: "Box", value: a.Ib.BOX },
-                        { label: "Small Box", value: a.Ib.SMALL_BOX },
-                        { label: "Round", value: a.Ib.ROUND },
+                        { label: "Box", value: n.Ib.BOX },
+                        { label: "Small Box", value: n.Ib.SMALL_BOX },
+                        { label: "Round", value: n.Ib.ROUND },
                     ],
                 },
             },

@@ -1,107 +1,97 @@
-"use strict";
-n.d(t, { t: () => E }), n(321073);
-var r = n(627968),
-    i = n(64700),
-    a = n(18051),
-    s = n(158954),
-    o = n(116833),
-    l = n(521489),
-    u = n(397927),
-    c = n(314116),
-    d = n(67576),
-    _ = n(293804);
-function f(e) {
-    let t,
-        n = [],
-        i = 0,
-        a = /\*\*(.+?)\*\*/g,
-        s = 0;
-    for (; null !== (t = a.exec(e)); )
-        t.index > i && n.push(e.substring(i, t.index)),
-            n.push((0, r.jsx)("strong", { children: t[1] }, s++)),
-            (i = a.lastIndex);
-    return i < e.length && n.push(e.substring(i)), n.length > 0 ? n : e;
-}
+a.d(l, { t: () => h }), a(321073);
+var t = a(627968),
+    o = a(64700),
+    n = a(18051),
+    i = a(158954),
+    s = a(116833),
+    r = a(521489),
+    d = a(397927),
+    u = a(314116),
+    c = a(67576),
+    b = a(293804);
 function p() {
-    return (0, r.jsx)(u.Text, {
+    return (0, t.jsx)(d.Text, {
         variant: "text-sm/normal",
         color: "text-subtle",
         children: "Lost access to your radness? Talk to your radness provider to refresh your aura.",
     });
 }
-function h(e) {
-    let { setIsSafetyAccepted: t, setIsHelmetSelected: n } = e,
-        [a, o] = i.useState([]),
-        l = [
+function m(e) {
+    let { setIsSafetyAccepted: l, setIsHelmetSelected: a } = e,
+        [n, s] = o.useState([]),
+        r = [
             { label: "I am wearing a helmet", value: "helmet" },
             { label: "I know where to find my personal flotation device", value: "pfd" },
             { label: "I completed the safety training", value: "training" },
         ];
     return (
-        i.useEffect(() => {
-            t(a.length === l.length), n(a.includes("helmet"));
-        }, [a, l.length, t, n]),
-        (0, r.jsx)(s.$QX, { label: "Safety checklist", options: l, selectedValues: a, onChange: o })
+        o.useEffect(() => {
+            l(n.length === r.length), a(n.includes("helmet"));
+        }, [n, r.length, l, a]),
+        (0, t.jsx)(i.$QX, { label: "Safety checklist", options: r, selectedValues: n, onChange: s })
     );
 }
-function m(e) {
-    let { setIsPasscodeValid: t } = e,
-        [n, a] = i.useState(""),
-        s = (e) => {
-            a(e), t(e.length > 0);
-        };
-    return (0, r.jsx)(u.ksK, { placeholder: "Enter your passcode...", value: n, onChange: s });
+function x(e) {
+    let { setIsPasscodeValid: l } = e,
+        [a, n] = o.useState("");
+    return (0, t.jsx)(d.ksK, {
+        placeholder: "Enter your passcode...",
+        value: a,
+        onChange: (e) => {
+            n(e), l(e.length > 0);
+        },
+    });
 }
-function g(e) {
+function v(e) {
     let {
-            callbackDelay: t,
-            failOnNext: n,
-            failOnComplete: a,
-            onCompleteAlert: o,
-            onNextAlert: l,
-            customErrorNotice: u,
-            errorNoticeType: c,
-            ...d
+            callbackDelay: l,
+            failOnNext: a,
+            failOnComplete: n,
+            onCompleteAlert: s,
+            onNextAlert: r,
+            customErrorNotice: d,
+            errorNoticeType: u,
+            ...c
         } = e,
-        [_, f] = i.useState("intro"),
-        [g, E] = i.useState(!1),
-        [A, I] = i.useState(!1),
-        [T, S] = i.useState(!1),
-        [y, v] = i.useState(null),
-        C = i.useCallback(async () => {
+        [b, v] = o.useState("intro"),
+        [h, y] = o.useState(!1),
+        [f, g] = o.useState(!1),
+        [V, C] = o.useState(!1),
+        [S, j] = o.useState(null),
+        k = o.useCallback(async () => {
             if (
-                (v(null),
-                t > 0 && (await new Promise((e) => setTimeout(e, 1e3 * t))),
-                l && alert("onNext callback fired"),
-                n)
+                (j(null),
+                l > 0 && (await new Promise((e) => setTimeout(e, 1e3 * l))),
+                r && alert("onNext callback fired"),
+                a)
             ) {
-                if ("" !== u.trim()) return v({ message: u, type: c }), !1;
+                if ("" !== d.trim()) return j({ message: d, type: u }), !1;
                 throw Error("onNext failed");
             }
             return !0;
-        }, [t, n, l, u, c]),
-        N = i.useCallback(async () => {
+        }, [l, a, r, d, u]),
+        w = o.useCallback(async () => {
             if (
-                (v(null),
-                t > 0 && (await new Promise((e) => setTimeout(e, 1e3 * t))),
-                o && alert("onComplete callback fired"),
-                a)
+                (j(null),
+                l > 0 && (await new Promise((e) => setTimeout(e, 1e3 * l))),
+                s && alert("onComplete callback fired"),
+                n)
             ) {
-                if ("" !== u.trim()) throw (v({ message: u, type: c }), Error("Custom error"));
+                if ("" !== d.trim()) throw (j({ message: d, type: u }), Error("Custom error"));
                 throw Error("onComplete failed");
             }
-        }, [t, a, o, u, c]),
-        b = [
+        }, [l, n, s, d, u]),
+        T = [
             {
                 stepKey: "intro",
                 modalProps: {
                     title: "Verify radness",
                     subtitle: "To verify your radness, we need to ask you a few deep and personal questions.",
-                    notice: null != y ? { message: y.message, type: y.type } : void 0,
+                    notice: null != S ? { message: S.message, type: S.type } : void 0,
                 },
-                body: (0, r.jsx)(p, {}),
+                body: (0, t.jsx)(p, {}),
                 nextButtonProps: { text: "Verify" },
-                onNext: C,
+                onNext: k,
             },
             {
                 stepKey: "safety",
@@ -110,35 +100,35 @@ function g(e) {
                     subtitle:
                         "Before we get started verifying your radness, we need to make sure you're safe and sound.",
                     notice:
-                        null != y
-                            ? { message: y.message, type: y.type }
-                            : T
+                        null != S
+                            ? { message: S.message, type: S.type }
+                            : V
                               ? {
                                     message: "Great job, helmets are important for protecting your brain!",
                                     type: "warning",
                                 }
                               : void 0,
                 },
-                body: (0, r.jsx)(h, { setIsSafetyAccepted: E, setIsHelmetSelected: S }),
-                nextEnabled: g,
-                onNext: C,
+                body: (0, t.jsx)(m, { setIsSafetyAccepted: y, setIsHelmetSelected: C }),
+                nextEnabled: h,
+                onNext: k,
             },
             {
                 stepKey: "passcode",
                 modalProps: {
                     title: "Enter passcode",
                     subtitle: "Enter your passcode to complete the radness verification process.",
-                    notice: null != y ? { message: y.message, type: y.type } : void 0,
+                    notice: null != S ? { message: S.message, type: S.type } : void 0,
                 },
-                body: (0, r.jsx)(m, { setIsPasscodeValid: I }),
+                body: (0, t.jsx)(x, { setIsPasscodeValid: g }),
                 nextButtonProps: { text: "Verify passcode" },
-                nextEnabled: A,
+                nextEnabled: f,
             },
         ],
-        R = b.slice(1).map((e) => e.stepKey);
-    return (0, r.jsx)(s.t04, { steps: b, currentStepKey: _, numberedSteps: R, onStepChange: f, onComplete: N, ...d });
+        M = T.slice(1).map((e) => e.stepKey);
+    return (0, t.jsx)(i.t04, { steps: T, currentStepKey: b, numberedSteps: M, onStepChange: v, onComplete: w, ...c });
 }
-let E = {
+let h = {
     title: "Modal",
     stories: [
         {
@@ -146,43 +136,43 @@ let E = {
             id: "modal",
             docs: "https://design.discord.tools/components/web/modals/modal",
             component: function (e) {
-                let { showPreview: t, showInput: n, subtitleIcon: i, ...a } = e,
-                    o = i ? { text: a.subtitle ?? "Default subtitle", leadingIcon: s.N$i } : a.subtitle;
-                return (0, r.jsxs)(u.BJc, {
+                let { showPreview: l, showInput: a, subtitleIcon: o, ...n } = e,
+                    s = o ? { text: n.subtitle ?? "Default subtitle", leadingIcon: i.N$i } : n.subtitle;
+                return (0, t.jsxs)(d.BJc, {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, r.jsx)(u.Text, {
+                        (0, t.jsx)(d.Text, {
                             variant: "text-md/normal",
                             children: "Click the button below to open the modal",
                         }),
-                        (0, r.jsx)(u.Button, {
+                        (0, t.jsx)(d.Button, {
                             variant: "primary",
                             text: "Open Modal",
                             onClick: () =>
-                                (0, u.qfG)(
+                                (0, d.qfG)(
                                     (e) =>
-                                        (0, r.jsx)(s.Modal, {
+                                        (0, t.jsx)(i.Modal, {
                                             ...e,
-                                            ...a,
-                                            title: a.title,
-                                            subtitle: o,
-                                            input: n
-                                                ? (0, r.jsx)(u.IWV, {
+                                            ...n,
+                                            title: n.title,
+                                            subtitle: s,
+                                            input: a
+                                                ? (0, t.jsx)(d.IWV, {
                                                       placeholder: "Search...",
                                                       onChange: () => {},
                                                       query: "",
                                                   })
                                                 : void 0,
-                                            preview: t
-                                                ? (0, r.jsxs)(u.BJc, {
+                                            preview: l
+                                                ? (0, t.jsxs)(d.BJc, {
                                                       gap: 8,
                                                       children: [
-                                                          (0, r.jsx)(u.Text, {
+                                                          (0, t.jsx)(d.Text, {
                                                               variant: "text-lg/semibold",
                                                               children: "Preview Content",
                                                           }),
-                                                          (0, r.jsx)(u.Text, {
+                                                          (0, t.jsx)(d.Text, {
                                                               variant: "text-md/normal",
                                                               color: "text-subtle",
                                                               children:
@@ -195,10 +185,10 @@ let E = {
                                                 { variant: "secondary", text: "Cancel", onClick: e.onClose },
                                                 { variant: "primary", text: "Submit", onClick: e.onClose },
                                             ],
-                                            children: (0, r.jsxs)(u.BJc, {
+                                            children: (0, t.jsxs)(d.BJc, {
                                                 gap: 16,
                                                 children: [
-                                                    (0, r.jsx)(u.ZiE, {
+                                                    (0, t.jsx)(d.ZiE, {
                                                         maxOptionsVisible: 10,
                                                         label: "Example Select",
                                                         selectionMode: "multiple",
@@ -214,11 +204,11 @@ let E = {
                                                         ],
                                                         onSelectionChange: () => {},
                                                     }),
-                                                    (0, r.jsx)(u.ksK, {
+                                                    (0, t.jsx)(d.ksK, {
                                                         label: "Example Input",
                                                         placeholder: "Enter some text...",
                                                     }),
-                                                    (0, r.jsx)(u.Text, {
+                                                    (0, t.jsx)(d.Text, {
                                                         variant: "text-md/normal",
                                                         children:
                                                             "This is the main content area of the modal. You can place any content here.",
@@ -226,7 +216,7 @@ let E = {
                                                 ],
                                             }),
                                         }),
-                                    { dismissable: a.dismissable },
+                                    { dismissable: n.dismissable },
                                 ),
                         }),
                     ],
@@ -254,34 +244,51 @@ let E = {
             name: "ConfirmModal [Alpha]",
             id: "confirm-modal",
             component: function (e) {
-                let { cancelText: t, confirmDelay: n, confirmError: a, subtitle: s, formatSubtitle: o, ...l } = e,
-                    d = i.useMemo(() => (o ? f(s) : s), [s, o]);
-                return (0, r.jsxs)(u.BJc, {
+                let { cancelText: l, confirmDelay: a, confirmError: n, subtitle: i, formatSubtitle: s, ...r } = e,
+                    c = o.useMemo(
+                        () =>
+                            s
+                                ? (function (e) {
+                                      let l,
+                                          a = [],
+                                          o = 0,
+                                          n = /\*\*(.+?)\*\*/g,
+                                          i = 0;
+                                      for (; null !== (l = n.exec(e)); )
+                                          l.index > o && a.push(e.substring(o, l.index)),
+                                              a.push((0, t.jsx)("strong", { children: l[1] }, i++)),
+                                              (o = n.lastIndex);
+                                      return o < e.length && a.push(e.substring(o)), a.length > 0 ? a : e;
+                                  })(i)
+                                : i,
+                        [i, s],
+                    );
+                return (0, t.jsxs)(d.BJc, {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, r.jsx)(u.Text, {
+                        (0, t.jsx)(d.Text, {
                             variant: "text-md/normal",
                             children: "Click the button below to open the confirm modal",
                         }),
-                        (0, r.jsx)(u.Button, {
+                        (0, t.jsx)(d.Button, {
                             variant: "primary",
                             text: "Open Confirm Modal",
                             onClick: () =>
-                                (0, c.A)({
-                                    ...l,
-                                    subtitle: d,
-                                    cancelText: "" === t ? void 0 : t,
+                                (0, u.A)({
+                                    ...r,
+                                    subtitle: c,
+                                    cancelText: "" === l ? void 0 : l,
                                     onConfirm: async (e) => {
                                         try {
-                                            if ((await new Promise((e) => setTimeout(e, 1e3 * n)), a))
+                                            if ((await new Promise((e) => setTimeout(e, 1e3 * a)), n))
                                                 throw Error("Confirm error");
-                                        } catch (t) {
+                                        } catch (l) {
                                             throw (
                                                 (e(
                                                     "Something went wrong reticulating splines. Please try again later.",
                                                 ),
-                                                t)
+                                                l)
                                             );
                                         }
                                     },
@@ -318,66 +325,66 @@ let E = {
             id: "expressive-modal",
             docs: "https://design.discord.tools/components/web/modals/expressive-modal",
             component: function (e) {
-                let { graphic: t, subtitleIcon: l, ...c } = e,
-                    f = l ? { text: c.subtitle ?? "Default subtitle", leadingIcon: s.N$i } : c.subtitle,
-                    p = i.useMemo(
+                let { graphic: l, subtitleIcon: r, ...u } = e,
+                    p = r ? { text: u.subtitle ?? "Default subtitle", leadingIcon: i.N$i } : u.subtitle,
+                    m = o.useMemo(
                         () =>
-                            0 === t
-                                ? { type: "image", src: d }
-                                : 1 === t
+                            0 === l
+                                ? { type: "image", src: c }
+                                : 1 === l
                                   ? {
                                         type: "lottie",
-                                        lottie: () => n.e("95947").then(n.t.bind(n, 604902, 19)),
+                                        lottie: () => a.e("95947").then(a.t.bind(a, 604902, 19)),
                                         aspectRatio: "6/4",
                                     }
-                                  : 2 === t
-                                    ? { type: "rive", rive: a.PerfTestRive }
-                                    : 3 === t
-                                      ? { type: "video", src: _.A, fallbackImageSrc: d, loop: !0, loopAt: 2.5 }
-                                      : 4 === t
+                                  : 2 === l
+                                    ? { type: "rive", rive: n.PerfTestRive }
+                                    : 3 === l
+                                      ? { type: "video", src: b.A, fallbackImageSrc: c, loop: !0, loopAt: 2.5 }
+                                      : 4 === l
                                         ? {
                                               type: "dynamic",
-                                              component: o.DynamicGraphicComponent.DEMO,
+                                              component: s.DynamicGraphicComponent.DEMO,
                                               aspectRatio: "6/4",
                                               props: { text: "Dynamic Content" },
                                           }
                                         : void 0,
-                        [t],
+                        [l],
                     );
-                return (0, r.jsxs)(u.BJc, {
+                return (0, t.jsxs)(d.BJc, {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, r.jsx)(u.Text, {
+                        (0, t.jsx)(d.Text, {
                             variant: "text-md/normal",
                             children: "Click the button below to open the expressive modal",
                         }),
-                        (0, r.jsx)(u.Button, {
+                        (0, t.jsx)(d.Button, {
                             variant: "primary",
                             text: "Open ExpressiveModal",
                             onClick: () =>
-                                (0, u.qfG)(
+                                (0, d.qfG)(
                                     (e) =>
-                                        (0, r.jsx)(s.ExpressiveModal, {
+                                        (0, t.jsx)(i.ExpressiveModal, {
                                             ...e,
-                                            ...c,
-                                            title: c.title,
-                                            subtitle: f,
-                                            graphic: p,
+                                            ...u,
+                                            title: u.title,
+                                            subtitle: p,
+                                            graphic: m,
                                             actions: [
                                                 { variant: "secondary", text: "Cancel", onClick: e.onClose },
                                                 { variant: "primary", text: "Submit", onClick: e.onClose },
                                             ],
-                                            children: (0, r.jsx)(u.BJc, {
+                                            children: (0, t.jsx)(d.BJc, {
                                                 gap: 16,
-                                                children: (0, r.jsx)(u.Text, {
+                                                children: (0, t.jsx)(d.Text, {
                                                     variant: "text-md/normal",
                                                     children:
                                                         "This is an expressive modal with a gradient background and optional badge.",
                                                 }),
                                             }),
                                         }),
-                                    { dismissable: c.dismissable },
+                                    { dismissable: u.dismissable },
                                 ),
                         }),
                     ],
@@ -427,43 +434,43 @@ let E = {
             name: "Dynamic Graphic Modal",
             id: "dynamic-graphic-modal",
             component: function (e) {
-                let { dynamicText: t, ...i } = e,
-                    a = {
+                let { dynamicText: l, ...o } = e,
+                    n = {
                         type: "dynamic",
-                        component: o.DynamicGraphicComponent.DEMO,
+                        component: s.DynamicGraphicComponent.DEMO,
                         aspectRatio: "6/4",
-                        props: { text: t },
+                        props: { text: l },
                     };
-                return (0, r.jsxs)(u.BJc, {
+                return (0, t.jsxs)(d.BJc, {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, r.jsx)(u.Text, {
+                        (0, t.jsx)(d.Text, {
                             variant: "text-md/normal",
                             children:
                                 "This example demonstrates the DynamicGraphic component rendering a React component inside the modal header.",
                         }),
-                        (0, r.jsx)(u.Button, {
+                        (0, t.jsx)(d.Button, {
                             variant: "primary",
                             text: "Open Dynamic Graphic Modal",
                             onClick: () =>
-                                (0, u.mMO)(
+                                (0, d.mMO)(
                                     async () => {
-                                        let { ExpressiveModal: e } = await Promise.resolve().then(n.bind(n, 158954));
-                                        return (t) =>
-                                            (0, r.jsx)(e, {
-                                                ...t,
-                                                ...i,
-                                                title: i.title,
-                                                subtitle: i.subtitle,
-                                                graphic: a,
+                                        let { ExpressiveModal: e } = await Promise.resolve().then(a.bind(a, 158954));
+                                        return (l) =>
+                                            (0, t.jsx)(e, {
+                                                ...l,
+                                                ...o,
+                                                title: o.title,
+                                                subtitle: o.subtitle,
+                                                graphic: n,
                                                 actions: [
-                                                    { variant: "secondary", text: "Cancel", onClick: t.onClose },
-                                                    { variant: "primary", text: "Submit", onClick: t.onClose },
+                                                    { variant: "secondary", text: "Cancel", onClick: l.onClose },
+                                                    { variant: "primary", text: "Submit", onClick: l.onClose },
                                                 ],
-                                                children: (0, r.jsx)(u.BJc, {
+                                                children: (0, t.jsx)(d.BJc, {
                                                     gap: 16,
-                                                    children: (0, r.jsx)(u.Text, {
+                                                    children: (0, t.jsx)(d.Text, {
                                                         variant: "text-md/normal",
                                                         children:
                                                             "The header above is rendered using a React component via DynamicGraphic, allowing for dynamic, interactive content in the modal header.",
@@ -471,7 +478,7 @@ let E = {
                                                 }),
                                             });
                                     },
-                                    { dismissable: i.dismissable },
+                                    { dismissable: o.dismissable },
                                 ),
                         }),
                     ],
@@ -513,26 +520,26 @@ let E = {
             name: "LayerModal",
             id: "layer-modal",
             component: function (e) {
-                let { ...t } = e;
-                return (0, r.jsxs)(u.BJc, {
+                let { ...l } = e;
+                return (0, t.jsxs)(d.BJc, {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, r.jsx)(u.Text, {
+                        (0, t.jsx)(d.Text, {
                             variant: "text-md/normal",
                             children: "Click the button below to open the layer modal",
                         }),
-                        (0, r.jsx)(u.Button, {
+                        (0, t.jsx)(d.Button, {
                             variant: "primary",
                             text: "Open Layer Modal",
                             onClick: () =>
-                                (0, u.qfG)((e) =>
-                                    (0, r.jsx)(l.N, {
+                                (0, d.qfG)((e) =>
+                                    (0, t.jsx)(r.N, {
                                         ...e,
-                                        ...t,
-                                        children: (0, r.jsx)(u.BJc, {
+                                        ...l,
+                                        children: (0, t.jsx)(d.BJc, {
                                             gap: 16,
-                                            children: (0, r.jsx)(u.Text, {
+                                            children: (0, t.jsx)(d.Text, {
                                                 variant: "text-md/normal",
                                                 children: "This is the layer modal content",
                                             }),
@@ -549,36 +556,36 @@ let E = {
             id: "multi-step-modal",
             component: function (e) {
                 let {
-                    callbackDelay: t,
-                    failOnNext: n,
-                    failOnComplete: i,
-                    onCompleteAlert: a,
-                    onNextAlert: s,
-                    customErrorNotice: o,
-                    errorNoticeType: l,
+                    callbackDelay: l,
+                    failOnNext: a,
+                    failOnComplete: o,
+                    onCompleteAlert: n,
+                    onNextAlert: i,
+                    customErrorNotice: s,
+                    errorNoticeType: r,
                 } = e;
-                return (0, r.jsxs)(u.BJc, {
+                return (0, t.jsxs)(d.BJc, {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, r.jsx)(u.Text, {
+                        (0, t.jsx)(d.Text, {
                             variant: "text-md/normal",
                             children: "Click the button below to open the multi-step modal",
                         }),
-                        (0, r.jsx)(u.Button, {
+                        (0, t.jsx)(d.Button, {
                             variant: "primary",
                             text: "Open MultiStepModal",
                             onClick: () =>
-                                (0, u.qfG)((e) =>
-                                    (0, r.jsx)(g, {
+                                (0, d.qfG)((e) =>
+                                    (0, t.jsx)(v, {
                                         ...e,
-                                        callbackDelay: t,
-                                        failOnNext: n,
-                                        failOnComplete: i,
-                                        onCompleteAlert: a,
-                                        onNextAlert: s,
-                                        customErrorNotice: o,
-                                        errorNoticeType: l,
+                                        callbackDelay: l,
+                                        failOnNext: a,
+                                        failOnComplete: o,
+                                        onCompleteAlert: n,
+                                        onNextAlert: i,
+                                        customErrorNotice: s,
+                                        errorNoticeType: r,
                                     }),
                                 ),
                         }),
@@ -609,51 +616,51 @@ let E = {
             name: "BaseModal",
             id: "base-modal",
             component: function (e) {
-                let { dismissable: t, tallContent: n, ...i } = e;
-                return (0, r.jsxs)(u.BJc, {
+                let { dismissable: l, tallContent: a, ...o } = e;
+                return (0, t.jsxs)(d.BJc, {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, r.jsx)(u.Text, {
+                        (0, t.jsx)(d.Text, {
                             variant: "text-md/normal",
                             children: "Click the button below to open the base modal",
                         }),
-                        (0, r.jsx)(u.Button, {
+                        (0, t.jsx)(d.Button, {
                             variant: "primary",
                             text: "Open BaseModal",
                             onClick: () =>
-                                (0, u.qfG)(
+                                (0, d.qfG)(
                                     (e) =>
-                                        (0, r.jsx)(s.dWK, {
+                                        (0, t.jsx)(i.dWK, {
                                             ...e,
-                                            ...i,
+                                            ...o,
                                             "aria-label": "Base Modal Example",
-                                            children: (0, r.jsx)(s.cwr, {
-                                                children: (0, r.jsxs)(u.BJc, {
+                                            children: (0, t.jsx)(i.cwr, {
+                                                children: (0, t.jsxs)(d.BJc, {
                                                     gap: 16,
                                                     children: [
-                                                        (0, r.jsx)(u.Text, {
+                                                        (0, t.jsx)(d.Text, {
                                                             variant: "text-lg/semibold",
                                                             children: "BaseModal Content",
                                                         }),
-                                                        (0, r.jsx)(u.Text, {
+                                                        (0, t.jsx)(d.Text, {
                                                             variant: "text-md/normal",
                                                             children:
                                                                 "This is the raw BaseModal container. It provides the modal chrome (animation, sizing, padding, focus management) without any opinionated header, body, or action bar layout.",
                                                         }),
-                                                        n
-                                                            ? Array.from({ length: 20 }, (e, t) =>
-                                                                  (0, r.jsxs)(
-                                                                      u.Text,
+                                                        a
+                                                            ? Array.from({ length: 20 }, (e, l) =>
+                                                                  (0, t.jsxs)(
+                                                                      d.Text,
                                                                       {
                                                                           variant: "text-md/normal",
                                                                           children: [
                                                                               "Item ",
-                                                                              t + 1,
+                                                                              l + 1,
                                                                               " — This is filler content to demonstrate overflow and scrolling behavior.",
                                                                           ],
                                                                       },
-                                                                      t,
+                                                                      l,
                                                                   ),
                                                               )
                                                             : null,
@@ -661,7 +668,7 @@ let E = {
                                                 }),
                                             }),
                                         }),
-                                    { dismissable: t },
+                                    { dismissable: l },
                                 ),
                         }),
                     ],

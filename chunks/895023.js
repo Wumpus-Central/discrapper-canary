@@ -1,25 +1,24 @@
-"use strict";
-n.d(t, { _: () => a });
-var r = n(627968);
-n(64700);
-var i = n(417098);
-let a = {
+a.d(l, { _: () => n });
+var t = a(627968);
+a(64700);
+var o = a(417098);
+let n = {
     title: "Notice",
     stories: [
         {
             id: "notice",
             name: "Notice",
             component: function (e) {
-                let { color: t, message: n } = e,
-                    a = {
-                        BRAND: i.Hv.BRAND,
-                        INFO: i.Hv.INFO,
-                        WARNING: i.Hv.WARNING,
-                        DANGER: i.Hv.DANGER,
-                        DEFAULT: i.Hv.DEFAULT,
-                        NEUTRAL: i.Hv.NEUTRAL,
+                let { color: l, message: a } = e,
+                    n = {
+                        BRAND: o.Hv.BRAND,
+                        INFO: o.Hv.INFO,
+                        WARNING: o.Hv.WARNING,
+                        DANGER: o.Hv.DANGER,
+                        DEFAULT: o.Hv.DEFAULT,
+                        NEUTRAL: o.Hv.NEUTRAL,
                     };
-                return (0, r.jsx)(i.$T, { color: a[t], children: n });
+                return (0, t.jsx)(o.$T, { color: n[l], children: a });
             },
             controls: {
                 color: {

@@ -1,124 +1,118 @@
-"use strict";
-n.d(t, { V: () => y });
-var r = n(974111),
-    i = n(294819),
-    a = n(376472),
-    s = n(99478),
-    o = n(408713),
-    l = n(400606),
-    u = n(150047),
-    c = n(248215),
-    d = n(3388),
-    _ = n(723906),
-    f = n(48284),
-    h = n(803082),
-    p = n(318192),
-    g = n(64700),
-    E = n(853590),
-    A = n(849352),
-    I = n(670184),
-    T = n(73733);
-function y(e, t, n) {
-    let y = (0, g.useRef)(""),
-        { locale: v, direction: C } = (0, E.Y)(),
-        b = (0, i.k)(),
-        { ariaLabel: N, ariaLabelledBy: R, ariaDescribedBy: O, focusManager: D } = r.OX.get(t),
-        L = e.isPlaceholder ? "" : e.text,
-        w = (0, g.useMemo)(() => t.dateFormatter.resolvedOptions(), [t.dateFormatter]),
-        x = (0, A.i)({ month: "long", timeZone: w.timeZone }),
-        P = (0, A.i)({ hour: "numeric", hour12: w.hour12, timeZone: w.timeZone });
-    if ("month" !== e.type || e.isPlaceholder) "hour" !== e.type || e.isPlaceholder || (L = P.format(t.dateValue));
+t.d(a, { V: () => A });
+var r = t(974111),
+    n = t(294819),
+    i = t(376472),
+    o = t(99478),
+    u = t(408713),
+    l = t(400606),
+    s = t(150047),
+    d = t(248215),
+    c = t(3388),
+    m = t(723906),
+    h = t(48284),
+    D = t(803082),
+    y = t(318192),
+    p = t(64700),
+    g = t(853590),
+    f = t(849352),
+    v = t(670184),
+    b = t(73733);
+function A(e, a, t) {
+    let A = (0, p.useRef)(""),
+        { locale: $, direction: w } = (0, g.Y)(),
+        R = (0, n.k)(),
+        { ariaLabel: P, ariaLabelledBy: k, ariaDescribedBy: x, focusManager: C } = r.OX.get(a),
+        E = e.isPlaceholder ? "" : e.text,
+        S = (0, p.useMemo)(() => a.dateFormatter.resolvedOptions(), [a.dateFormatter]),
+        F = (0, f.i)({ month: "long", timeZone: S.timeZone }),
+        B = (0, f.i)({ hour: "numeric", hour12: S.hour12, timeZone: S.timeZone });
+    if ("month" !== e.type || e.isPlaceholder) "hour" !== e.type || e.isPlaceholder || (E = B.format(a.dateValue));
     else {
-        let e = x.format(t.dateValue);
-        L = e !== L ? `${L} \u{2013} ${e}` : e;
+        let e = F.format(a.dateValue);
+        E = e !== E ? `${E} \u{2013} ${e}` : e;
     }
-    let { spinButtonProps: M } = (0, T.y)({
+    let { spinButtonProps: V } = (0, b.y)({
             value: e.value,
-            textValue: L,
+            textValue: E,
             minValue: e.minValue,
             maxValue: e.maxValue,
-            isDisabled: t.isDisabled,
-            isReadOnly: t.isReadOnly || !e.isEditable,
-            isRequired: t.isRequired,
+            isDisabled: a.isDisabled,
+            isReadOnly: a.isReadOnly || !e.isEditable,
+            isRequired: a.isRequired,
             onIncrement: () => {
-                (y.current = ""), t.increment(e.type);
+                (A.current = ""), a.increment(e.type);
             },
             onDecrement: () => {
-                (y.current = ""), t.decrement(e.type);
+                (A.current = ""), a.decrement(e.type);
             },
             onIncrementPage: () => {
-                (y.current = ""), t.incrementPage(e.type);
+                (A.current = ""), a.incrementPage(e.type);
             },
             onDecrementPage: () => {
-                (y.current = ""), t.decrementPage(e.type);
+                (A.current = ""), a.decrementPage(e.type);
             },
             onIncrementToMax: () => {
-                (y.current = ""), void 0 !== e.maxValue && t.setSegment(e.type, e.maxValue);
+                (A.current = ""), void 0 !== e.maxValue && a.setSegment(e.type, e.maxValue);
             },
             onDecrementToMin: () => {
-                (y.current = ""), void 0 !== e.minValue && t.setSegment(e.type, e.minValue);
+                (A.current = ""), void 0 !== e.minValue && a.setSegment(e.type, e.minValue);
             },
         }),
-        k = (0, g.useMemo)(() => new (0, p.d)(v, { maximumFractionDigits: 0 }), [v]),
-        U = () => {
+        M = (0, p.useMemo)(() => new (0, y.d)($, { maximumFractionDigits: 0 }), [$]),
+        I = () => {
             if (
-                (e.text === e.placeholder && D.focusPrevious(),
-                !k.isValidPartialNumber(e.text) || t.isReadOnly || e.isPlaceholder)
+                (e.text === e.placeholder && C.focusPrevious(),
+                !M.isValidPartialNumber(e.text) || a.isReadOnly || e.isPlaceholder)
             )
-                "dayPeriod" === e.type && t.clearSegment(e.type);
+                "dayPeriod" === e.type && a.clearSegment(e.type);
             else {
-                let n = e.text.slice(0, -1),
-                    r = k.parse(n);
-                0 === (n = 0 === r ? "" : n).length || 0 === r ? t.clearSegment(e.type) : t.setSegment(e.type, r),
-                    (y.current = n);
+                let t = e.text.slice(0, -1),
+                    r = M.parse(t);
+                0 === (t = 0 === r ? "" : t).length || 0 === r ? a.clearSegment(e.type) : a.setSegment(e.type, r),
+                    (A.current = t);
             }
         },
-        G = (e) => {
-            if (
-                ("a" === e.key && ((0, o.cX)() ? e.metaKey : e.ctrlKey) && e.preventDefault(),
-                !e.ctrlKey && !e.metaKey && !e.shiftKey && !e.altKey)
-            )
-                switch (e.key) {
-                    case "Backspace":
-                    case "Delete":
-                        e.preventDefault(), e.stopPropagation(), U();
-                }
-        },
-        { startsWith: F } = (0, I.U)({ sensitivity: "base" }),
-        V = (0, A.i)({ hour: "numeric", hour12: !0 }),
-        B = (0, g.useMemo)(() => {
+        { startsWith: T } = (0, v.U)({ sensitivity: "base" }),
+        O = (0, f.i)({ hour: "numeric", hour12: !0 }),
+        N = (0, p.useMemo)(() => {
             let e = new Date();
-            return e.setHours(0), V.formatToParts(e).find((e) => "dayPeriod" === e.type).value;
-        }, [V]),
-        j = (0, g.useMemo)(() => {
+            return e.setHours(0), O.formatToParts(e).find((e) => "dayPeriod" === e.type).value;
+        }, [O]),
+        z = (0, p.useMemo)(() => {
             let e = new Date();
-            return e.setHours(12), V.formatToParts(e).find((e) => "dayPeriod" === e.type).value;
-        }, [V]),
-        H = (0, A.i)({ year: "numeric", era: "narrow", timeZone: "UTC" }),
-        Y = (0, g.useMemo)(() => {
+            return e.setHours(12), O.formatToParts(e).find((e) => "dayPeriod" === e.type).value;
+        }, [O]),
+        j = (0, f.i)({ year: "numeric", era: "narrow", timeZone: "UTC" }),
+        Z = (0, p.useMemo)(() => {
             if ("era" !== e.type) return [];
-            let n = (0, a.yP)(new (0, s.ng)(1, 1, 1), t.calendar),
-                r = t.calendar.getEras().map((e) => {
-                    let t = n.set({ year: 1, month: 1, day: 1, era: e }).toDate("UTC");
-                    return { era: e, formatted: H.formatToParts(t).find((e) => "era" === e.type).value };
+            let t = (0, i.yP)(new (0, o.ng)(1, 1, 1), a.calendar),
+                r = a.calendar.getEras().map((e) => {
+                    let a = t.set({ year: 1, month: 1, day: 1, era: e }).toDate("UTC");
+                    return { era: e, formatted: j.formatToParts(a).find((e) => "era" === e.type).value };
                 }),
-                i = S(r.map((e) => e.formatted));
-            if (i) for (let e of r) e.formatted = e.formatted.slice(i);
+                n = (function (e) {
+                    e.sort();
+                    let a = e[0],
+                        t = e[e.length - 1];
+                    for (let e = 0; e < a.length; e++) if (a[e] !== t[e]) return e;
+                    return 0;
+                })(r.map((e) => e.formatted));
+            if (n) for (let e of r) e.formatted = e.formatted.slice(n);
             return r;
-        }, [H, t.calendar, e.type]),
-        W = (n) => {
-            if (t.isDisabled || t.isReadOnly) return;
-            let r = y.current + n;
+        }, [j, a.calendar, e.type]),
+        U = (t) => {
+            if (a.isDisabled || a.isReadOnly) return;
+            let r = A.current + t;
             switch (e.type) {
                 case "dayPeriod":
-                    if (F(B, n)) t.setSegment("dayPeriod", 0);
-                    else if (F(j, n)) t.setSegment("dayPeriod", 12);
+                    if (T(N, t)) a.setSegment("dayPeriod", 0);
+                    else if (T(z, t)) a.setSegment("dayPeriod", 12);
                     else break;
-                    D.focusNext();
+                    C.focusNext();
                     break;
                 case "era": {
-                    let e = Y.find((e) => F(e.formatted, n));
-                    e && (t.setSegment("era", e.era), D.focusNext());
+                    let e = Z.find((e) => T(e.formatted, t));
+                    e && (a.setSegment("era", e.era), C.focusNext());
                     break;
                 }
                 case "day":
@@ -127,70 +121,65 @@ function y(e, t, n) {
                 case "second":
                 case "month":
                 case "year": {
-                    if (!k.isValidPartialNumber(r)) return;
-                    let i = k.parse(r),
-                        a = i,
-                        s = 0 === e.minValue;
-                    if ("hour" === e.type && t.dateFormatter.resolvedOptions().hour12) {
-                        switch (t.dateFormatter.resolvedOptions().hourCycle) {
+                    if (!M.isValidPartialNumber(r)) return;
+                    let n = M.parse(r),
+                        i = n,
+                        o = 0 === e.minValue;
+                    if ("hour" === e.type && a.dateFormatter.resolvedOptions().hour12) {
+                        switch (a.dateFormatter.resolvedOptions().hourCycle) {
                             case "h11":
-                                i > 11 && (a = k.parse(n));
+                                n > 11 && (i = M.parse(t));
                                 break;
                             case "h12":
-                                (s = !1), i > 12 && (a = k.parse(n));
+                                (o = !1), n > 12 && (i = M.parse(t));
                         }
-                        void 0 !== e.value && e.value >= 12 && i > 1 && (i += 12);
-                    } else void 0 !== e.maxValue && i > e.maxValue && (a = k.parse(n));
-                    if (isNaN(i)) return;
-                    let o = 0 !== a || s;
-                    o && t.setSegment(e.type, a),
-                        void 0 !== e.maxValue && (Number(i + "0") > e.maxValue || r.length >= String(e.maxValue).length)
-                            ? ((y.current = ""), o && D.focusNext())
-                            : (y.current = r);
+                        void 0 !== e.value && e.value >= 12 && n > 1 && (n += 12);
+                    } else void 0 !== e.maxValue && n > e.maxValue && (i = M.parse(t));
+                    if (isNaN(n)) return;
+                    let u = 0 !== i || o;
+                    u && a.setSegment(e.type, i),
+                        void 0 !== e.maxValue && (Number(n + "0") > e.maxValue || r.length >= String(e.maxValue).length)
+                            ? ((A.current = ""), u && C.focusNext())
+                            : (A.current = r);
                 }
             }
         },
-        K = () => {
-            (y.current = ""), n.current && (0, l.o)(n.current, { containingElement: (0, u.m)(n.current) });
-            let e = window.getSelection();
-            null == e || e.collapse(n.current);
-        },
-        $ = (0, g.useRef)("u" > typeof document ? document : null);
-    (0, c._)($, "selectionchange", () => {
+        K = (0, p.useRef)("u" > typeof document ? document : null);
+    (0, d._)(K, "selectionchange", () => {
         var e;
-        let t = window.getSelection();
-        (null == t ? void 0 : t.anchorNode) &&
-            (null == (e = n.current) ? void 0 : e.contains(null == t ? void 0 : t.anchorNode)) &&
-            t.collapse(n.current);
+        let a = window.getSelection();
+        (null == a ? void 0 : a.anchorNode) &&
+            (null == (e = t.current) ? void 0 : e.contains(null == a ? void 0 : a.anchorNode)) &&
+            a.collapse(t.current);
     });
-    let z = (0, g.useRef)("");
-    (0, c._)(n, "beforeinput", (r) => {
-        if (n.current)
+    let L = (0, p.useRef)("");
+    (0, d._)(t, "beforeinput", (r) => {
+        if (t.current)
             switch ((r.preventDefault(), r.inputType)) {
                 case "deleteContentBackward":
                 case "deleteContentForward":
-                    k.isValidPartialNumber(e.text) && !t.isReadOnly && U();
+                    M.isValidPartialNumber(e.text) && !a.isReadOnly && I();
                     break;
                 case "insertCompositionText":
-                    (z.current = n.current.textContent), (n.current.textContent = n.current.textContent);
+                    (L.current = t.current.textContent), (t.current.textContent = t.current.textContent);
                     break;
                 default:
-                    null != r.data && W(r.data);
+                    null != r.data && U(r.data);
             }
     }),
-        (0, c._)(n, "input", (e) => {
-            let { inputType: t, data: r } = e;
-            "insertCompositionText" === t &&
-                (n.current && (n.current.textContent = z.current), null != r && (F(B, r) || F(j, r)) && W(r));
+        (0, d._)(t, "input", (e) => {
+            let { inputType: a, data: r } = e;
+            "insertCompositionText" === a &&
+                (t.current && (t.current.textContent = L.current), null != r && (T(N, r) || T(z, r)) && U(r));
         }),
-        (0, d.N)(() => {
-            let e = n.current;
+        (0, c.N)(() => {
+            let e = t.current;
             return () => {
-                document.activeElement === e && (D.focusPrevious() || D.focusNext());
+                document.activeElement === e && (C.focusPrevious() || C.focusNext());
             };
-        }, [n, D]);
-    let q =
-        (0, o.un)() || "timeZoneName" === e.type
+        }, [t, C]);
+    let J =
+        (0, u.un)() || "timeZoneName" === e.type
             ? {
                   role: "textbox",
                   "aria-valuemax": null,
@@ -199,36 +188,50 @@ function y(e, t, n) {
                   "aria-valuenow": null,
               }
             : {};
-    e === (0, g.useMemo)(() => t.segments.find((e) => e.isEditable), [t.segments]) || t.isInvalid || (O = void 0);
-    let X = (0, _.Bi)(),
-        Z = !t.isDisabled && !t.isReadOnly && e.isEditable,
-        Q = "literal" === e.type ? "" : b.of(e.type),
-        J = (0, f.b)({ "aria-label": `${Q}${N ? `, ${N}` : ""}${R ? ", " : ""}`, "aria-labelledby": R });
+    e === (0, p.useMemo)(() => a.segments.find((e) => e.isEditable), [a.segments]) || a.isInvalid || (x = void 0);
+    let Y = (0, m.Bi)(),
+        W = !a.isDisabled && !a.isReadOnly && e.isEditable,
+        G = "literal" === e.type ? "" : R.of(e.type),
+        H = (0, h.b)({ "aria-label": `${G}${P ? `, ${P}` : ""}${k ? ", " : ""}`, "aria-labelledby": k });
     if ("literal" === e.type) return { segmentProps: { "aria-hidden": !0 } };
-    let ee = { caretColor: "transparent" };
-    if ("rtl" === C) {
-        ee.unicodeBidi = "embed";
-        let t = w[e.type];
-        ("numeric" === t || "2-digit" === t) && (ee.direction = "ltr");
+    let _ = { caretColor: "transparent" };
+    if ("rtl" === w) {
+        _.unicodeBidi = "embed";
+        let a = S[e.type];
+        ("numeric" === a || "2-digit" === a) && (_.direction = "ltr");
     }
     return {
-        segmentProps: (0, h.v)(M, J, {
-            id: X,
-            ...q,
-            "aria-invalid": t.isInvalid ? "true" : void 0,
-            "aria-describedby": O,
-            "aria-readonly": t.isReadOnly || !e.isEditable ? "true" : void 0,
+        segmentProps: (0, D.v)(V, H, {
+            id: Y,
+            ...J,
+            "aria-invalid": a.isInvalid ? "true" : void 0,
+            "aria-describedby": x,
+            "aria-readonly": a.isReadOnly || !e.isEditable ? "true" : void 0,
             "data-placeholder": e.isPlaceholder || void 0,
-            contentEditable: Z,
-            suppressContentEditableWarning: Z,
-            spellCheck: Z ? "false" : void 0,
-            autoCorrect: Z ? "off" : void 0,
-            [parseInt(g.version, 10) >= 17 ? "enterKeyHint" : "enterkeyhint"]: Z ? "next" : void 0,
-            inputMode: t.isDisabled || "dayPeriod" === e.type || "era" === e.type || !Z ? void 0 : "numeric",
-            tabIndex: t.isDisabled ? void 0 : 0,
-            onKeyDown: G,
-            onFocus: K,
-            style: ee,
+            contentEditable: W,
+            suppressContentEditableWarning: W,
+            spellCheck: W ? "false" : void 0,
+            autoCorrect: W ? "off" : void 0,
+            [parseInt(p.version, 10) >= 17 ? "enterKeyHint" : "enterkeyhint"]: W ? "next" : void 0,
+            inputMode: a.isDisabled || "dayPeriod" === e.type || "era" === e.type || !W ? void 0 : "numeric",
+            tabIndex: a.isDisabled ? void 0 : 0,
+            onKeyDown: (e) => {
+                if (
+                    ("a" === e.key && ((0, u.cX)() ? e.metaKey : e.ctrlKey) && e.preventDefault(),
+                    !e.ctrlKey && !e.metaKey && !e.shiftKey && !e.altKey)
+                )
+                    switch (e.key) {
+                        case "Backspace":
+                        case "Delete":
+                            e.preventDefault(), e.stopPropagation(), I();
+                    }
+            },
+            onFocus: () => {
+                (A.current = ""), t.current && (0, l.o)(t.current, { containingElement: (0, s.m)(t.current) });
+                let e = window.getSelection();
+                null == e || e.collapse(t.current);
+            },
+            style: _,
             onPointerDown(e) {
                 e.stopPropagation();
             },
@@ -237,11 +240,4 @@ function y(e, t, n) {
             },
         }),
     };
-}
-function S(e) {
-    e.sort();
-    let t = e[0],
-        n = e[e.length - 1];
-    for (let e = 0; e < t.length; e++) if (t[e] !== n[e]) return e;
-    return 0;
 }

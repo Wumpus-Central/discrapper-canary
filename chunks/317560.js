@@ -2,8 +2,8 @@
 n.d(t, { R: () => o, j: () => l });
 var r = n(627968),
     i = n(397927),
-    a = n(733391);
-let s = "social-layer-storefront-product-details-modal",
+    s = n(733391);
+let a = "social-layer-storefront-product-details-modal",
     o = (e) => {
         let {
             skuId: t,
@@ -14,10 +14,12 @@ let s = "social-layer-storefront-product-details-modal",
             analyticsContext: d,
             onClose: _,
         } = e;
-        (0, a.iR)(l, t, "openSocialLayerStorefrontProductDetailsModal"),
+        (0, s.iR)(l, t, "openSocialLayerStorefrontProductDetailsModal"),
             (0, i.mMO)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e("40396"), n.e("67851")]).then(n.bind(n, 108105));
+                    let { default: e } = await Promise.all([n.e("40396"), n.e("99970"), n.e("46762")]).then(
+                        n.bind(n, 108105),
+                    );
                     return (n) =>
                         (0, r.jsx)(e, {
                             ...n,
@@ -30,7 +32,7 @@ let s = "social-layer-storefront-product-details-modal",
                         });
                 },
                 {
-                    modalKey: s,
+                    modalKey: a,
                     allowsNavigation: u,
                     onCloseCallback: () => {
                         _?.();
@@ -39,5 +41,5 @@ let s = "social-layer-storefront-product-details-modal",
             );
     };
 function l() {
-    (0, i.kBI)(s) && (0, i.OoC)(s);
+    (0, i.kBI)(a) && (0, i.OoC)(a);
 }

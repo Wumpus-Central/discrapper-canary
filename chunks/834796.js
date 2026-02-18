@@ -1,9 +1,10 @@
-i.d(t, { A: () => s });
+"use strict";
+i.d(t, { A: () => l });
 var n = i(627968);
 i(64700);
-var r = i(804870),
-    l = i(242640);
-function s(e) {
-    let { cardSize: t = l.Y.MEDIUM } = e;
-    return (0, n.jsx)(r.Zu, { cardSize: t });
+var s = i(804870),
+    r = i(798048);
+function l(e) {
+    let { cardSize: t = r.Y.MEDIUM } = e;
+    return (0, n.jsx)(s.Zu, { cardSize: t });
 }

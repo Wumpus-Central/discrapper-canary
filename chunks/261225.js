@@ -1,13 +1,12 @@
-"use strict";
-n.d(t, { A: () => l, M: () => o });
-var r = n(627968);
-n(64700);
-var i = n(503698),
-    a = n.n(i),
-    s = n(266341);
-let o = 6,
-    l = (e) => {
-        let { columns: t = 3, children: n } = e,
-            i = Math.max(1, Math.min(o, Math.floor(t)));
-        return (0, r.jsx)("div", { className: a()(s.grid, s[`columns${i}`]), children: n });
+t.d(r, { A: () => n, M: () => a });
+var d = t(627968);
+t(64700);
+var l = t(503698),
+    c = t.n(l),
+    o = t(266341);
+let a = 6,
+    n = (e) => {
+        let { columns: r = 3, children: t } = e,
+            l = Math.max(1, Math.min(a, Math.floor(r)));
+        return (0, d.jsx)("div", { className: c()(o.grid, o[`columns${l}`]), children: t });
     };

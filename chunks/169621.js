@@ -1,10 +1,11 @@
-"use strict";
-n.d(t, { U: () => o });
-var r = n(397927),
-    i = n(104473),
-    a = n(762168);
-let s = ["Video Quest", "Quests", "Video Player"],
-    o = {
-        playgroundBaseUrl: "video-quest",
-        collections: [{ id: "video-quest", name: "Video Quest", groups: [a.cs, i.AZ], tags: s, IconComponent: r.udU }],
-    };
+r.r(t), r.d(t, { playgroundConfig: () => i, videoQuestCollection: () => n });
+var o = r(397927),
+    a = r(104473);
+let n = {
+        id: "video-quest",
+        name: "Video Quest",
+        groups: [r(762168).cs, a.AZ],
+        tags: ["Video Quest", "Quests", "Video Player"],
+        IconComponent: o.udU,
+    },
+    i = { playgroundBaseUrl: "video-quest", collections: [n] };

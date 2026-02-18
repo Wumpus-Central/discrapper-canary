@@ -1,70 +1,69 @@
-"use strict";
-n.d(t, { A: () => _ });
-var r = n(627968);
-n(64700);
-var i = n(582754),
-    a = n(421380),
-    s = n(397927),
-    o = n(736653),
-    l = n(985018),
-    u = n(250277),
-    c = n(492735),
-    d = n(350045);
-let _ = function (e) {
-    let { churnUserDiscountOffer: t, onDiscountClaim: n, onContinue: _ } = e,
-        f = (0, o.Ay)(),
-        p = (0, i.Mw)(f) ? c : d;
-    return null == t
+t.d(s, { A: () => d });
+var i = t(627968);
+t(64700);
+var r = t(582754),
+    a = t(421380),
+    l = t(397927),
+    n = t(736653),
+    o = t(985018),
+    c = t(250277),
+    m = t(492735),
+    u = t(350045);
+let d = function (e) {
+    let { churnUserDiscountOffer: s, onDiscountClaim: t, onContinue: d } = e,
+        x = (0, n.Ay)(),
+        p = (0, r.Mw)(x) ? m : u;
+    return null == s
         ? null
-        : (0, r.jsxs)("div", {
-              className: u.bR,
+        : (0, i.jsxs)("div", {
+              className: c.bR,
               children: [
-                  (0, r.jsx)("div", { className: u.v0 }),
-                  (0, r.jsx)("div", { className: u.X2 }),
-                  (0, r.jsx)("div", {
-                      className: u.Dg,
-                      children: (0, r.jsxs)("div", {
-                          className: u.xt,
+                  (0, i.jsx)("div", { className: c.v0 }),
+                  (0, i.jsx)("div", { className: c.X2 }),
+                  (0, i.jsx)("div", {
+                      className: c.Dg,
+                      children: (0, i.jsxs)("div", {
+                          className: c.xt,
                           children: [
-                              (0, r.jsx)("img", { alt: "", src: p, className: u.lR }),
-                              (0, r.jsxs)("div", {
-                                  className: u.t2,
+                              (0, i.jsx)("img", { alt: "", src: p, className: c.lR }),
+                              (0, i.jsxs)("div", {
+                                  className: c.t2,
                                   children: [
-                                      (0, r.jsx)(s.Text, {
+                                      (0, i.jsx)(l.Text, {
                                           variant: "text-md/medium",
-                                          className: u.PU,
-                                          children: l.intl.format(l.t["2gem05"], {
-                                              percent: t.discount.amount,
-                                              numMonths: t.discount.user_usage_limit,
+                                          className: c.PU,
+                                          children: o.intl.format(o.t["2gem05"], {
+                                              percent: s.discount.amount,
+                                              numMonths: s.discount.user_usage_limit,
                                           }),
                                       }),
-                                      (0, r.jsxs)("div", {
-                                          className: u.$t,
+                                      (0, i.jsxs)("div", {
+                                          className: c.$t,
                                           children: [
-                                              (0, r.jsxs)(s.wLn, {
+                                              (0, i.jsxs)(l.wLn, {
                                                   "data-migration-pending": !0,
-                                                  className: u.Oy,
-                                                  innerClassName: u.iO,
+                                                  className: c.Oy,
+                                                  innerClassName: c.iO,
                                                   look: a.pR.OUTLINED,
                                                   color: a.XD.CUSTOM,
-                                                  onClick: () => n?.(),
+                                                  onClick: () => t?.(),
                                                   children: [
-                                                      (0, r.jsx)(s.tvc, {
+                                                      (0, i.jsx)(l.tvc, {
                                                           size: "xs",
                                                           color: "currentColor",
-                                                          className: u.Fl,
+                                                          className: c.Fl,
                                                       }),
-                                                      (0, r.jsx)(s.Text, {
+                                                      (0, i.jsx)(l.Text, {
                                                           variant: "text-sm/semibold",
-                                                          className: u.H0,
-                                                          children: l.intl.string(l.t.zrCzVB),
+                                                          className: c.H0,
+                                                          children: o.intl.string(o.t.zrCzVB),
                                                       }),
                                                   ],
                                               }),
-                                              (0, r.jsx)(s.Button, {
+                                              (0, i.jsx)(l.Button, {
                                                   variant: "primary",
-                                                  text: l.intl.string(l.t["3PatSz"]),
-                                                  onClick: () => _?.(),
+                                                  text: o.intl.string(o.t["3PatSz"]),
+                                                  onClick: () => d?.(),
                                               }),
                                           ],
                                       }),

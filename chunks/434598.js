@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     ny: "paymentElementStoryContainer__1f918",
     u1: "paymentElementStepModalBody__1f918",

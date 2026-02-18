@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { q: () => c });
-var r = n(627968);
-n(64700);
-var i = n(397927),
-    a = n(73079),
-    s = n(156312),
-    o = n(252561),
-    l = n(818348),
-    u = n(825057);
+l.d(t, { q: () => c });
+var a = l(627968);
+l(64700);
+var n = l(397927),
+    r = l(73079),
+    i = l(156312),
+    s = l(252561),
+    o = l(818348),
+    u = l(825057);
 let c = {
     name: "Choose Payment Source Type",
     id: "choose-payment-source-type",
     component: function (e) {
-        let { isEligibleForTrial: t, onlyStripeCardEnabled: n, paymentRequestWalletsEnabled: c } = e,
+        let { isEligibleForTrial: t, onlyStripeCardEnabled: l, paymentRequestWalletsEnabled: c } = e,
             d = {
                 onChooseType: () => {},
                 onStripePaymentMethodReceived: (e) => {
@@ -20,18 +19,18 @@ let c = {
                 },
                 isEligibleForTrial: t,
                 paymentRequestWallets: c ? ["googlePay", "applePay"] : [],
-                paymentSourceTypeRestrictions: n ? [l.he.CARD.valueOf()] : null,
+                paymentSourceTypeRestrictions: l ? [o.he.CARD.valueOf()] : null,
             };
-        return (0, r.jsx)(s.PaymentContextProvider, {
+        return (0, a.jsx)(i.PaymentContextProvider, {
             stepConfigs: [],
             skuIDs: [],
             activeSubscription: null,
-            children: (0, r.jsxs)(o.wn, {
+            children: (0, a.jsxs)(s.wn, {
                 children: [
-                    (0, r.jsx)(i.Heading, { variant: "heading-xl/semibold", children: "Choose Payment Source Type" }),
-                    (0, r.jsx)(o.e_, {
+                    (0, a.jsx)(n.Heading, { variant: "heading-xl/semibold", children: "Choose Payment Source Type" }),
+                    (0, a.jsx)(s.e_, {
                         className: u.Bt,
-                        children: (0, r.jsx)("div", { className: u.VS, children: (0, r.jsx)(a.A, { ...d }) }),
+                        children: (0, a.jsx)("div", { className: u.VS, children: (0, a.jsx)(r.A, { ...d }) }),
                     }),
                 ],
             }),

@@ -1,53 +1,52 @@
-"use strict";
-n.d(t, { A: () => d });
-var r = n(627968);
-n(64700);
-var i = n(503698),
-    a = n.n(i),
-    s = n(397927),
-    o = n(659612),
-    l = n(898612),
-    u = n(232492),
-    c = n(53605);
-function d(e) {
-    let { benefit: t, guildId: n } = e,
-        i = (0, u.A)(n, t.ref_id),
-        d = (0, r.jsx)(o.A, { guildId: n, emojiId: t.emoji_id, emojiName: t.emoji_name }),
-        _ =
-            null != i
-                ? (0, r.jsx)(s.DUT, {
-                      className: c.__invalid_channelLink,
-                      onClick: i.navigateToChannel,
-                      "aria-label": i.ariaLabel,
+i.d(t, { A: () => u });
+var l = i(627968);
+i(64700);
+var n = i(503698),
+    a = i.n(n),
+    s = i(397927),
+    r = i(659612),
+    c = i(898612),
+    d = i(232492),
+    o = i(53605);
+function u(e) {
+    let { benefit: t, guildId: i } = e,
+        n = (0, d.A)(i, t.ref_id),
+        u = (0, l.jsx)(r.A, { guildId: i, emojiId: t.emoji_id, emojiName: t.emoji_name }),
+        m =
+            null != n
+                ? (0, l.jsx)(s.DUT, {
+                      className: o.__invalid_channelLink,
+                      onClick: n.navigateToChannel,
+                      "aria-label": n.ariaLabel,
                       role: "link",
-                      children: (0, r.jsx)(s.Text, {
+                      children: (0, l.jsx)(s.Text, {
                           variant: "text-md/medium",
                           color: "text-strong",
-                          className: a()(c.UU, c.F$),
-                          children: (0, l.A)(t),
+                          className: a()(o.UU, o.F$),
+                          children: (0, c.A)(t),
                       }),
                   })
-                : (0, r.jsx)(s.Text, {
+                : (0, l.jsx)(s.Text, {
                       variant: "text-md/medium",
                       color: "text-strong",
-                      className: c.UU,
-                      children: (0, l.A)(t),
+                      className: o.UU,
+                      children: (0, c.A)(t),
                   });
-    return (0, r.jsxs)("div", {
-        className: c.kL,
+    return (0, l.jsxs)("div", {
+        className: o.kL,
         children: [
-            (0, r.jsxs)("div", {
-                className: c.op,
+            (0, l.jsxs)("div", {
+                className: o.op,
                 children: [
-                    _,
-                    (0, r.jsx)(s.Text, {
+                    m,
+                    (0, l.jsx)(s.Text, {
                         color: "interactive-text-default",
                         variant: "text-sm/normal",
                         children: t.description,
                     }),
                 ],
             }),
-            (0, r.jsx)("div", { className: c.qq, children: d }),
+            (0, l.jsx)("div", { className: o.qq, children: u }),
         ],
     });
 }

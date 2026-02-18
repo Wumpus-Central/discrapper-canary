@@ -1,44 +1,42 @@
-"use strict";
-n.d(t, { A: () => c });
-var r = n(627968);
-n(64700);
-var i = n(397927),
-    a = n(147925),
-    s = n(659612),
-    o = n(898612),
-    l = n(232492),
-    u = n(974105);
-function c(e) {
-    let { benefit: t, guildId: n, onClick: c } = e,
-        d = (0, l.A)(n, t.ref_id),
-        _ = () => {
-            d?.navigateToChannel(), c();
+i.d(t, { A: () => o });
+var l = i(627968);
+i(64700);
+var n = i(397927),
+    a = i(147925),
+    s = i(659612),
+    r = i(898612),
+    c = i(232492),
+    d = i(974105);
+function o(e) {
+    let { benefit: t, guildId: i, onClick: o } = e,
+        u = (0, c.A)(i, t.ref_id),
+        m = (0, l.jsx)(s.A, { guildId: i, emojiId: t.emoji_id, emojiName: t.emoji_name });
+    return (0, l.jsxs)(n.DUT, {
+        className: d.kL,
+        onClick: () => {
+            u?.navigateToChannel(), o();
         },
-        f = (0, r.jsx)(s.A, { guildId: n, emojiId: t.emoji_id, emojiName: t.emoji_name });
-    return (0, r.jsxs)(i.DUT, {
-        className: u.kL,
-        onClick: _,
-        "aria-label": d?.ariaLabel,
+        "aria-label": u?.ariaLabel,
         role: "link",
         children: [
-            (0, r.jsx)("div", { className: u.qq, children: f }),
-            (0, r.jsxs)("div", {
-                className: u.op,
+            (0, l.jsx)("div", { className: d.qq, children: m }),
+            (0, l.jsxs)("div", {
+                className: d.op,
                 children: [
-                    (0, r.jsx)(i.Text, {
+                    (0, l.jsx)(n.Text, {
                         variant: "text-md/medium",
                         color: "text-strong",
-                        className: u.UU,
-                        children: (0, o.A)(t),
+                        className: d.UU,
+                        children: (0, r.A)(t),
                     }),
-                    (0, r.jsx)(i.Text, {
+                    (0, l.jsx)(n.Text, {
                         color: "interactive-text-default",
                         variant: "text-sm/normal",
                         children: t.description,
                     }),
                 ],
             }),
-            (0, r.jsx)(a.A, { direction: a.A.Directions.RIGHT, className: u.OW }),
+            (0, l.jsx)(a.A, { direction: a.A.Directions.RIGHT, className: d.OW }),
         ],
     });
 }

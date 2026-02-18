@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A0: () => K, BF: () => Q, VP: () => q, XI: () => B, fI: () => ee, fh: () => en });
+n.d(t, { A0: () => W, BF: () => X, VP: () => $, XI: () => V, fI: () => J, fh: () => et });
 var r = n(650682),
     i = n(257537),
-    a = n(241634),
-    s = n(825913),
+    s = n(241634),
+    a = n(825913),
     o = n(20280),
     l = n(123375),
     u = n(357710),
@@ -11,29 +11,29 @@ var r = n(650682),
     d = n(59845),
     _ = n(183590),
     f = n(136193),
-    h = n(36310),
-    p = n(634107),
-    g = n(872219),
+    p = n(36310),
+    h = n(634107),
+    m = n(872219),
     E = n(138026),
-    A = n(498430),
-    I = n(13163),
-    T = n(803082),
-    y = n(173547),
+    g = n(498430),
+    A = n(13163),
+    I = n(803082),
+    T = n(173547),
     S = n(967158),
-    v = n(134584),
-    C = n(625736),
-    b = n(481638),
-    N = n(298377),
-    R = n(126031),
-    O = n(982439),
-    D = n(533715),
-    L = n(561514),
-    w = n(290424),
-    x = n(6494),
-    P = n(216055),
+    y = n(134584),
+    v = n(625736),
+    N = n(481638),
+    C = n(298377),
+    b = n(126031),
+    R = n(982439),
+    O = n(533715),
+    D = n(561514),
+    L = n(290424),
+    w = n(6494),
+    x = n(216055),
     M = n(64700);
 n(340287);
-class k extends c.Wk {
+class P extends c.Wk {
     addNode(e) {
         super.addNode(e),
             this.columnsDirty || (this.columnsDirty = "column" === e.type),
@@ -46,10 +46,10 @@ class k extends c.Wk {
             if (null != t) {
                 var r, i;
                 let e = this.getItem(t),
-                    a = (null != (r = e.colIndex) ? r : e.index) + (null != (i = e.colSpan) ? i : 1);
-                if (a !== this.columns.length && !n)
+                    s = (null != (r = e.colIndex) ? r : e.index) + (null != (i = e.colSpan) ? i : 1);
+                if (s !== this.columns.length && !n)
                     throw Error(
-                        `Cell count must match column count. Found ${a} cells and ${this.columns.length} columns.`,
+                        `Cell count must match column count. Found ${s} cells and ${this.columns.length} columns.`,
                     );
             }
             this.rows.push(e);
@@ -137,162 +137,162 @@ class k extends c.Wk {
             (this.columns = []),
             (this.rows = []),
             (this.rowHeaderColumnKeys = new Set()),
-            (this.head = new W(-1)),
+            (this.head = new Y(-1)),
             (this.body = new Z(-2)),
             (this.columnsDirty = !0);
     }
 }
-let U = (0, M.createContext)(null),
+let k = (0, M.createContext)(null),
+    U = (0, M.createContext)(null),
     G = (0, M.createContext)(null),
     F = (0, M.createContext)(null),
-    V = (0, M.createContext)(null),
-    B = (0, M.forwardRef)(function (e, t) {
+    V = (0, M.forwardRef)(function (e, t) {
         var n;
-        [e, t] = (0, s.JT)(e, t, G);
-        let r = (0, h.R)(e),
-            { selectionBehavior: i, selectionMode: a, disallowEmptySelection: o } = r,
+        [e, t] = (0, a.JT)(e, t, U);
+        let r = (0, p.R)(e),
+            { selectionBehavior: i, selectionMode: s, disallowEmptySelection: o } = r,
             l = !!(null == (n = e.dragAndDropHooks) ? void 0 : n.useDraggableCollectionState),
             u = (0, M.useMemo)(
                 () => ({
-                    selectionBehavior: "none" === a ? null : i,
-                    selectionMode: a,
+                    selectionBehavior: "none" === s ? null : i,
+                    selectionMode: s,
                     disallowEmptySelection: o,
                     allowsDragging: l,
                 }),
-                [i, a, o, l],
+                [i, s, o, l],
             ),
-            c = M.createElement(Y.Provider, { value: u }, M.createElement(d.pM, e));
-        return M.createElement(d.GQ, { content: c, createCollection: () => new k() }, (n) =>
-            M.createElement(j, { props: e, forwardedRef: t, selectionState: r, collection: n }),
+            c = M.createElement(j.Provider, { value: u }, M.createElement(d.pM, e));
+        return M.createElement(d.GQ, { content: c, createCollection: () => new P() }, (n) =>
+            M.createElement(B, { props: e, forwardedRef: t, selectionState: r, collection: n }),
         );
     });
-function j({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
+function B({ props: e, forwardedRef: t, selectionState: n, collection: r }) {
     var l;
     let c, d, _;
-    [e, t] = (0, s.JT)(e, t, i.Co);
-    let { shouldUseVirtualFocus: f, disallowTypeAhead: h, filter: y, ...S } = e,
-        v = (0, M.useContext)(U);
-    t = (0, D.U)(
-        (0, M.useMemo)(() => (0, L.P)(t, null == v ? void 0 : v.tableRef), [t, null == v ? void 0 : v.tableRef]),
+    [e, t] = (0, a.JT)(e, t, i.Co);
+    let { shouldUseVirtualFocus: f, disallowTypeAhead: p, filter: T, ...S } = e,
+        y = (0, M.useContext)(k);
+    t = (0, O.U)(
+        (0, M.useMemo)(() => (0, D.P)(t, null == y ? void 0 : y.tableRef), [t, null == y ? void 0 : y.tableRef]),
     );
-    let C = (0, p.j)({ ...S, collection: r, children: void 0, UNSAFE_selectionState: n }),
-        b = (0, p.B)(C, y),
-        { isVirtualized: N, layoutDelegate: R, dropTargetDelegate: O, CollectionRoot: x } = (0, M.useContext)(a.zL),
-        { dragAndDropHooks: P } = e,
-        { gridProps: k } = (0, g.K)({ ...S, layoutDelegate: R, isVirtualized: N }, b, t),
-        G = b.selectionManager,
-        B = !!(null == P ? void 0 : P.useDraggableCollectionState),
-        j = !!(null == P ? void 0 : P.useDroppableCollectionState);
-    (0, M.useRef)(B), (0, M.useRef)(j), (0, M.useEffect)(() => {}, [B, j]);
-    let Y = !1,
-        W = null,
-        K = (0, M.useRef)(null);
-    if (B && P) {
-        (c = P.useDraggableCollectionState({
-            collection: b.collection,
-            selectionManager: G,
-            preview: P.renderDragPreview ? K : void 0,
+    let v = (0, h.j)({ ...S, collection: r, children: void 0, UNSAFE_selectionState: n }),
+        N = (0, h.B)(v, T),
+        { isVirtualized: C, layoutDelegate: b, dropTargetDelegate: R, CollectionRoot: w } = (0, M.useContext)(s.zL),
+        { dragAndDropHooks: x } = e,
+        { gridProps: P } = (0, m.K)({ ...S, layoutDelegate: b, isVirtualized: C }, N, t),
+        U = N.selectionManager,
+        V = !!(null == x ? void 0 : x.useDraggableCollectionState),
+        B = !!(null == x ? void 0 : x.useDroppableCollectionState);
+    (0, M.useRef)(V), (0, M.useRef)(B), (0, M.useEffect)(() => {}, [V, B]);
+    let j = !1,
+        Y = null,
+        W = (0, M.useRef)(null);
+    if (V && x) {
+        (c = x.useDraggableCollectionState({
+            collection: N.collection,
+            selectionManager: U,
+            preview: x.renderDragPreview ? W : void 0,
         })),
-            P.useDraggableCollection({}, c, t);
-        let e = P.DragPreview;
-        W = P.renderDragPreview ? M.createElement(e, { ref: K }, P.renderDragPreview) : null;
+            x.useDraggableCollection({}, c, t);
+        let e = x.DragPreview;
+        Y = x.renderDragPreview ? M.createElement(e, { ref: W }, x.renderDragPreview) : null;
     }
-    if (j && P) {
-        d = P.useDroppableCollectionState({ collection: b.collection, selectionManager: G });
+    if (B && x) {
+        d = x.useDroppableCollectionState({ collection: N.collection, selectionManager: U });
         let e = new (0, E.n)({
-                collection: b.collection,
-                disabledKeys: G.disabledKeys,
-                disabledBehavior: G.disabledBehavior,
+                collection: N.collection,
+                disabledKeys: U.disabledKeys,
+                disabledBehavior: U.disabledBehavior,
                 ref: t,
-                layoutDelegate: R,
+                layoutDelegate: b,
             }),
-            n = P.dropTargetDelegate || O || new P.ListDropTargetDelegate(r.rows, t);
-        (_ = P.useDroppableCollection({ keyboardDelegate: e, dropTargetDelegate: n }, d, t)),
-            (Y = d.isDropTarget({ type: "root" }));
+            n = x.dropTargetDelegate || R || new x.ListDropTargetDelegate(r.rows, t);
+        (_ = x.useDroppableCollection({ keyboardDelegate: e, dropTargetDelegate: n }, d, t)),
+            (j = d.isDropTarget({ type: "root" }));
     }
-    let { focusProps: $, isFocused: z, isFocusVisible: q } = (0, A.o)(),
-        X = (0, s.Sl)({
+    let { focusProps: K, isFocused: z, isFocusVisible: $ } = (0, g.o)(),
+        q = (0, a.Sl)({
             className: e.className,
             style: e.style,
             defaultClassName: "react-aria-Table",
-            values: { isDropTarget: Y, isFocused: z, isFocusVisible: q, state: b },
+            values: { isDropTarget: j, isFocused: z, isFocusVisible: $, state: N },
         }),
-        Z = !!(B && !(null == c ? void 0 : c.isDisabled)),
-        Q = X.style,
-        J = null;
-    v &&
-        ((J = v.useTableColumnResizeState({ tableWidth: v.tableWidth }, b)),
-        N || (Q = { ...Q, tableLayout: "fixed", width: "fit-content" }));
-    let ee = H("table"),
-        et = (0, w.$)(e, { global: !0 });
+        Z = !!(V && !(null == c ? void 0 : c.isDisabled)),
+        X = q.style,
+        Q = null;
+    y &&
+        ((Q = y.useTableColumnResizeState({ tableWidth: y.tableWidth }, N)),
+        C || (X = { ...X, tableLayout: "fixed", width: "fit-content" }));
+    let J = H("table"),
+        ee = (0, L.$)(e, { global: !0 });
     return M.createElement(
-        s.Kq,
+        a.Kq,
         {
             values: [
-                [F, b],
-                [V, J],
-                [o.Ux, { dragAndDropHooks: P, dragState: c, dropState: d }],
-                [o.U5, { render: er }],
+                [G, N],
+                [F, Q],
+                [o.Ux, { dragAndDropHooks: x, dragState: c, dropState: d }],
+                [o.U5, { render: en }],
                 [i.Co, null],
                 [i.wv, null],
             ],
         },
         M.createElement(
-            I.n1,
+            A.n1,
             null,
             M.createElement(
-                ee,
+                J,
                 {
-                    ...(0, T.v)(et, X, k, $, null == _ ? void 0 : _.collectionProps),
-                    style: Q,
+                    ...(0, I.v)(ee, q, P, K, null == _ ? void 0 : _.collectionProps),
+                    style: X,
                     ref: t,
                     slot: e.slot || void 0,
                     onScroll: e.onScroll,
                     "data-allows-dragging": Z || void 0,
-                    "data-drop-target": Y || void 0,
+                    "data-drop-target": j || void 0,
                     "data-focused": z || void 0,
-                    "data-focus-visible": q || void 0,
+                    "data-focus-visible": $ || void 0,
                 },
                 M.createElement(
                     u.D,
                     null,
-                    M.createElement(x, {
-                        collection: b.collection,
-                        scrollRef: null != (l = null == v ? void 0 : v.scrollRef) ? l : t,
-                        persistedKeys: (0, o.XW)(G, P, d),
+                    M.createElement(w, {
+                        collection: N.collection,
+                        scrollRef: null != (l = null == y ? void 0 : y.scrollRef) ? l : t,
+                        persistedKeys: (0, o.XW)(U, x, d),
                     }),
                 ),
             ),
         ),
-        W,
+        Y,
     );
 }
 function H(e) {
-    let { isVirtualized: t } = (0, M.useContext)(a.zL);
+    let { isVirtualized: t } = (0, M.useContext)(s.zL);
     return t ? "div" : e;
 }
-let Y = (0, M.createContext)(null);
-class W extends c.Pt {}
-W.type = "tableheader";
-let K = (0, d.yq)(
-    W,
+let j = (0, M.createContext)(null);
+class Y extends c.Pt {}
+Y.type = "tableheader";
+let W = (0, d.yq)(
+    Y,
     (e, t) => {
-        let n = (0, M.useContext)(F).collection,
+        let n = (0, M.useContext)(G).collection,
             r = (0, _.p)({
                 items: n.headerRows,
                 children: (0, M.useCallback)((e) => {
-                    if ("headerrow" === e.type) return M.createElement($, { item: e });
+                    if ("headerrow" === e.type) return M.createElement(K, { item: e });
                     throw Error("Unsupported node type in TableHeader: " + e.type);
                 }, []),
             }),
             i = H("thead"),
-            { rowGroupProps: a } = (0, y.rs)(),
+            { rowGroupProps: s } = (0, T.rs)(),
             { hoverProps: o, isHovered: l } = (0, S.M)({
                 onHoverStart: e.onHoverStart,
                 onHoverChange: e.onHoverChange,
                 onHoverEnd: e.onHoverEnd,
             }),
-            u = (0, s.Sl)({
+            u = (0, a.Sl)({
                 className: e.className,
                 style: e.style,
                 defaultClassName: "react-aria-TableHeader",
@@ -300,24 +300,24 @@ let K = (0, d.yq)(
             });
         return M.createElement(
             i,
-            { ...(0, T.v)((0, w.$)(e, { global: !0 }), a, o), ...u, ref: t, "data-hovered": l || void 0 },
+            { ...(0, I.v)((0, L.$)(e, { global: !0 }), s, o), ...u, ref: t, "data-hovered": l || void 0 },
             r,
         );
     },
     (e) => M.createElement(d.pM, { dependencies: e.dependencies, items: e.columns }, e.children),
 );
-function $({ item: e }) {
+function K({ item: e }) {
     let t = (0, M.useRef)(null),
-        n = (0, M.useContext)(F),
-        { isVirtualized: r, CollectionBranch: o } = (0, M.useContext)(a.zL),
-        { rowProps: l } = (0, v.x)({ node: e, isVirtualized: r }, n, t),
-        { checkboxProps: u } = (0, C.q)(n),
+        n = (0, M.useContext)(G),
+        { isVirtualized: r, CollectionBranch: o } = (0, M.useContext)(s.zL),
+        { rowProps: l } = (0, y.x)({ node: e, isVirtualized: r }, n, t),
+        { checkboxProps: u } = (0, v.q)(n),
         c = H("tr");
     return M.createElement(
         c,
         { ...l, ref: t },
         M.createElement(
-            s.Kq,
+            a.Kq,
             { values: [[i.BP, { slots: { selection: u } }]] },
             M.createElement(o, { collection: n.collection, parent: e }),
         ),
@@ -325,18 +325,18 @@ function $({ item: e }) {
 }
 class z extends c.Pt {}
 z.type = "column";
-let q = (0, d.KU)(z, (e, t, n) => {
+let $ = (0, d.KU)(z, (e, t, n) => {
         var r, i;
-        let o = (0, D.U)(t),
-            l = (0, M.useContext)(F),
-            { isVirtualized: u } = (0, M.useContext)(a.zL),
-            { columnHeaderProps: c } = (0, b.f)({ node: n, isVirtualized: u }, l, o),
-            { isFocused: d, isFocusVisible: _, focusProps: f } = (0, A.o)(),
-            h = (0, M.useContext)(V),
-            p = !1;
-        h && (p = h.resizingColumn === n.key);
-        let { hoverProps: g, isHovered: E } = (0, S.M)({ isDisabled: !e.allowsSorting }),
-            I = (0, s.Sl)({
+        let o = (0, O.U)(t),
+            l = (0, M.useContext)(G),
+            { isVirtualized: u } = (0, M.useContext)(s.zL),
+            { columnHeaderProps: c } = (0, N.f)({ node: n, isVirtualized: u }, l, o),
+            { isFocused: d, isFocusVisible: _, focusProps: f } = (0, g.o)(),
+            p = (0, M.useContext)(F),
+            h = !1;
+        p && (h = p.resizingColumn === n.key);
+        let { hoverProps: m, isHovered: E } = (0, S.M)({ isDisabled: !e.allowsSorting }),
+            A = (0, a.Sl)({
                 ...e,
                 id: void 0,
                 children: n.rendered,
@@ -350,9 +350,9 @@ let q = (0, d.KU)(z, (e, t, n) => {
                         (null == (r = l.sortDescriptor) ? void 0 : r.column) === n.key
                             ? l.sortDescriptor.direction
                             : void 0,
-                    isResizing: p,
+                    isResizing: h,
                     startResize: () => {
-                        if (h) h.startResize(n.key), l.setKeyboardNavigationDisabled(!0);
+                        if (p) p.startResize(n.key), l.setKeyboardNavigationDisabled(!0);
                         else throw Error("Wrap your <Table> in a <ResizableTableContainer> to enable column resizing");
                     },
                     sort: (e) => {
@@ -360,23 +360,23 @@ let q = (0, d.KU)(z, (e, t, n) => {
                     },
                 },
             }),
-            y = I.style;
-        h && (y = { ...y, width: h.getColumnWidth(n.key) });
-        let v = H("th"),
-            C = (0, w.$)(e, { global: !0 });
+            T = A.style;
+        p && (T = { ...T, width: p.getColumnWidth(n.key) });
+        let y = H("th"),
+            v = (0, L.$)(e, { global: !0 });
         return (
-            delete C.id,
+            delete v.id,
             M.createElement(
-                v,
+                y,
                 {
-                    ...(0, T.v)(C, c, f, g),
-                    ...I,
-                    style: y,
+                    ...(0, I.v)(v, c, f, m),
+                    ...A,
+                    style: T,
                     ref: o,
                     "data-hovered": E || void 0,
                     "data-focused": d || void 0,
                     "data-focus-visible": _ || void 0,
-                    "data-resizing": p || void 0,
+                    "data-resizing": h || void 0,
                     "data-allows-sorting": n.props.allowsSorting || void 0,
                     "data-sort-direction":
                         (null == (i = l.sortDescriptor) ? void 0 : i.column) === n.key
@@ -384,60 +384,60 @@ let q = (0, d.KU)(z, (e, t, n) => {
                             : void 0,
                 },
                 M.createElement(
-                    s.Kq,
+                    a.Kq,
                     {
                         values: [
-                            [X, { column: n, triggerRef: o }],
-                            [a.zL, a.N],
+                            [q, { column: n, triggerRef: o }],
+                            [s.zL, s.N],
                         ],
                     },
-                    I.children,
+                    A.children,
                 ),
             )
         );
     }),
-    X = (0, M.createContext)(null);
+    q = (0, M.createContext)(null);
 class Z extends c.ru {}
 Z.type = "tablebody";
-let Q = (0, d.yq)(Z, (e, t) => {
+let X = (0, d.yq)(Z, (e, t) => {
     var n;
     let r,
-        i = (0, M.useContext)(F),
-        { isVirtualized: l } = (0, M.useContext)(a.zL),
+        i = (0, M.useContext)(G),
+        { isVirtualized: l } = (0, M.useContext)(s.zL),
         u = i.collection,
-        { CollectionBranch: c } = (0, M.useContext)(a.zL),
+        { CollectionBranch: c } = (0, M.useContext)(s.zL),
         { dragAndDropHooks: d, dropState: _ } = (0, M.useContext)(o.Ux),
         f = !!(null == d ? void 0 : d.useDroppableCollectionState) && !(null == _ ? void 0 : _.isDisabled),
-        h = f && !!_ && null != (n = _.isDropTarget({ type: "root" })) && n,
-        p = 0 === u.size,
-        g = { isDropTarget: h, isEmpty: p },
-        E = (0, s.Sl)({ ...e, id: void 0, children: void 0, defaultClassName: "react-aria-TableBody", values: g }),
-        A = H("tr"),
-        I = H("td"),
+        p = f && !!_ && null != (n = _.isDropTarget({ type: "root" })) && n,
+        h = 0 === u.size,
+        m = { isDropTarget: p, isEmpty: h },
+        E = (0, a.Sl)({ ...e, id: void 0, children: void 0, defaultClassName: "react-aria-TableBody", values: m }),
+        g = H("tr"),
+        A = H("td"),
         S = u.columnCount;
-    if (p && e.renderEmptyState && i) {
+    if (h && e.renderEmptyState && i) {
         let t = {},
             n = {},
             i = {};
         l ? ((n["aria-colspan"] = S), (i = { display: "contents" })) : (n.colSpan = S),
             (r = M.createElement(
-                A,
+                g,
                 { role: "row", ...t, style: i },
-                M.createElement(I, { role: "rowheader", ...n, style: i }, e.renderEmptyState(g)),
+                M.createElement(A, { role: "rowheader", ...n, style: i }, e.renderEmptyState(m)),
             ));
     }
-    let { rowGroupProps: v } = (0, y.rs)(),
-        C = H("tbody"),
-        b = (0, w.$)(e, { global: !0 });
+    let { rowGroupProps: y } = (0, T.rs)(),
+        v = H("tbody"),
+        N = (0, L.$)(e, { global: !0 });
     return M.createElement(
-        C,
-        { ...(0, T.v)(b, E, v), ref: t, "data-empty": p || void 0 },
+        v,
+        { ...(0, I.v)(N, E, y), ref: t, "data-empty": h || void 0 },
         f && M.createElement(es, null),
         M.createElement(c, { collection: u, parent: u.body, renderDropIndicator: (0, o.oC)(d, _) }),
         r,
     );
 });
-class J extends c.Pt {
+class Q extends c.Pt {
     filter(e, t, n) {
         for (let r of e.getChildren(this.key))
             if (n(r.textValue, r)) {
@@ -447,109 +447,109 @@ class J extends c.Pt {
         return null;
     }
 }
-J.type = "item";
-let ee = (0, d.yq)(
-    J,
+Q.type = "item";
+let J = (0, d.yq)(
+    Q,
     (e, t, n) => {
         let u,
             c,
-            d = (0, D.U)(t),
-            _ = (0, M.useContext)(F),
-            { dragAndDropHooks: f, dragState: h, dropState: p } = (0, M.useContext)(o.Ux),
-            { isVirtualized: g, CollectionBranch: E } = (0, M.useContext)(a.zL),
-            { rowProps: I, ...y } = (0, N.A)({ node: n, shouldSelectOnPressUp: !!h, isVirtualized: g }, _, d),
-            { isFocused: v, isFocusVisible: b, focusProps: O } = (0, A.o)(),
-            { isFocusVisible: L, focusProps: x } = (0, A.o)({ within: !0 }),
-            { hoverProps: P, isHovered: k } = (0, S.M)({
-                isDisabled: !y.allowsSelection && !y.hasAction,
+            d = (0, O.U)(t),
+            _ = (0, M.useContext)(G),
+            { dragAndDropHooks: f, dragState: p, dropState: h } = (0, M.useContext)(o.Ux),
+            { isVirtualized: m, CollectionBranch: E } = (0, M.useContext)(s.zL),
+            { rowProps: A, ...T } = (0, C.A)({ node: n, shouldSelectOnPressUp: !!p, isVirtualized: m }, _, d),
+            { isFocused: y, isFocusVisible: N, focusProps: R } = (0, g.o)(),
+            { isFocusVisible: D, focusProps: w } = (0, g.o)({ within: !0 }),
+            { hoverProps: x, isHovered: P } = (0, S.M)({
+                isDisabled: !T.allowsSelection && !T.hasAction,
                 onHoverStart: e.onHoverStart,
                 onHoverChange: e.onHoverChange,
                 onHoverEnd: e.onHoverEnd,
             }),
-            { checkboxProps: U } = (0, C.B)({ key: n.key }, _);
-        h && f && (u = f.useDraggableItem({ key: n.key, hasDragButton: !0 }, h));
-        let G = (0, M.useRef)(null),
-            { visuallyHiddenProps: V } = (0, R.B)();
-        p && f && (c = f.useDropIndicator({ target: { type: "item", key: n.key, dropPosition: "on" } }, p, G));
-        let B = (0, M.useRef)(null);
+            { checkboxProps: k } = (0, v.B)({ key: n.key }, _);
+        p && f && (u = f.useDraggableItem({ key: n.key, hasDragButton: !0 }, p));
+        let U = (0, M.useRef)(null),
+            { visuallyHiddenProps: F } = (0, b.B)();
+        h && f && (c = f.useDropIndicator({ target: { type: "item", key: n.key, dropPosition: "on" } }, h, U));
+        let V = (0, M.useRef)(null);
         (0, M.useEffect)(() => {
-            h && B.current;
+            p && V.current;
         }, []);
-        let j = h && h.isDragging(n.key),
-            { children: Y, ...W } = e,
-            K = (0, s.Sl)({
-                ...W,
+        let B = p && p.isDragging(n.key),
+            { children: j, ...Y } = e,
+            W = (0, a.Sl)({
+                ...Y,
                 id: void 0,
                 defaultClassName: "react-aria-Row",
                 values: {
-                    ...y,
-                    isHovered: k,
-                    isFocused: v,
-                    isFocusVisible: b,
+                    ...T,
+                    isHovered: P,
+                    isFocused: y,
+                    isFocusVisible: N,
                     selectionMode: _.selectionManager.selectionMode,
                     selectionBehavior: _.selectionManager.selectionBehavior,
-                    isDragging: j,
+                    isDragging: B,
                     isDropTarget: null == c ? void 0 : c.isDropTarget,
-                    isFocusVisibleWithin: L,
+                    isFocusVisibleWithin: D,
                     id: n.key,
                 },
             }),
-            $ = H("tr"),
+            K = H("tr"),
             z = H("td"),
-            q = (0, w.$)(e, { global: !0 });
+            $ = (0, L.$)(e, { global: !0 });
         return (
-            delete q.id,
-            delete q.onClick,
+            delete $.id,
+            delete $.onClick,
             M.createElement(
                 M.Fragment,
                 null,
                 c &&
                     !c.isHidden &&
                     M.createElement(
-                        $,
+                        K,
                         { role: "row", style: { height: 0 } },
                         M.createElement(
                             z,
                             { role: "gridcell", colSpan: _.collection.columnCount, style: { padding: 0 } },
-                            M.createElement("div", { role: "button", ...V, ...c.dropIndicatorProps, ref: G }),
+                            M.createElement("div", { role: "button", ...F, ...c.dropIndicatorProps, ref: U }),
                         ),
                     ),
                 M.createElement(
-                    $,
+                    K,
                     {
-                        ...(0, T.v)(q, K, I, O, P, null == u ? void 0 : u.dragProps, x),
+                        ...(0, I.v)($, W, A, R, x, null == u ? void 0 : u.dragProps, w),
                         ref: d,
-                        "data-disabled": y.isDisabled || void 0,
-                        "data-selected": y.isSelected || void 0,
-                        "data-hovered": k || void 0,
-                        "data-focused": y.isFocused || void 0,
-                        "data-focus-visible": b || void 0,
-                        "data-pressed": y.isPressed || void 0,
-                        "data-dragging": j || void 0,
+                        "data-disabled": T.isDisabled || void 0,
+                        "data-selected": T.isSelected || void 0,
+                        "data-hovered": P || void 0,
+                        "data-focused": T.isFocused || void 0,
+                        "data-focus-visible": N || void 0,
+                        "data-pressed": T.isPressed || void 0,
+                        "data-dragging": B || void 0,
                         "data-drop-target": (null == c ? void 0 : c.isDropTarget) || void 0,
                         "data-selection-mode":
                             "none" === _.selectionManager.selectionMode ? void 0 : _.selectionManager.selectionMode,
-                        "data-focus-visible-within": L || void 0,
+                        "data-focus-visible-within": D || void 0,
                     },
                     M.createElement(
-                        s.Kq,
+                        a.Kq,
                         {
                             values: [
-                                [i.BP, { slots: { [s.P_]: {}, selection: U } }],
+                                [i.BP, { slots: { [a.P_]: {}, selection: k } }],
                                 [
                                     r.k,
                                     {
                                         slots: {
-                                            [s.P_]: {},
+                                            [a.P_]: {},
                                             drag: {
                                                 ...(null == u ? void 0 : u.dragButtonProps),
-                                                ref: B,
+                                                ref: V,
                                                 style: { pointerEvents: "none" },
                                             },
                                         },
                                     },
                                 ],
-                                [l.r, { isSelected: y.isSelected }],
+                                [l.r, { isSelected: T.isSelected }],
                             ],
                         },
                         M.createElement(E, { collection: _.collection, parent: n }),
@@ -567,57 +567,57 @@ let ee = (0, d.yq)(
         return M.createElement(d.pM, { dependencies: t, items: e.columns, idScope: e.id }, e.children);
     },
 );
-class et extends c.Pt {}
-et.type = "cell";
-let en = (0, d.KU)(et, (e, t, n) => {
-    let r = (0, D.U)(t),
-        i = (0, M.useContext)(F),
+class ee extends c.Pt {}
+ee.type = "cell";
+let et = (0, d.KU)(ee, (e, t, n) => {
+    let r = (0, O.U)(t),
+        i = (0, M.useContext)(G),
         { dragState: l } = (0, M.useContext)(o.Ux),
-        { isVirtualized: u } = (0, M.useContext)(a.zL);
+        { isVirtualized: u } = (0, M.useContext)(s.zL);
     n.column = i.collection.columns[n.index];
-    let { gridCellProps: c, isPressed: d } = (0, O.a)({ node: n, shouldSelectOnPressUp: !!l, isVirtualized: u }, i, r),
-        { isFocused: _, isFocusVisible: f, focusProps: h } = (0, A.o)(),
-        { hoverProps: p, isHovered: g } = (0, S.M)({}),
-        E = (0, s.Sl)({
+    let { gridCellProps: c, isPressed: d } = (0, R.a)({ node: n, shouldSelectOnPressUp: !!l, isVirtualized: u }, i, r),
+        { isFocused: _, isFocusVisible: f, focusProps: p } = (0, g.o)(),
+        { hoverProps: h, isHovered: m } = (0, S.M)({}),
+        E = (0, a.Sl)({
             ...e,
             id: void 0,
             defaultClassName: "react-aria-Cell",
-            values: { isFocused: _, isFocusVisible: f, isPressed: d, isHovered: g, id: n.key },
+            values: { isFocused: _, isFocusVisible: f, isPressed: d, isHovered: m, id: n.key },
         }),
-        I = H("td"),
-        y = (0, w.$)(e, { global: !0 });
+        A = H("td"),
+        T = (0, L.$)(e, { global: !0 });
     return (
-        delete y.id,
+        delete T.id,
         M.createElement(
-            I,
+            A,
             {
-                ...(0, T.v)(y, E, c, h, p),
+                ...(0, I.v)(T, E, c, p, h),
                 ref: r,
                 "data-focused": _ || void 0,
                 "data-focus-visible": f || void 0,
                 "data-pressed": d || void 0,
             },
-            M.createElement(a.zL.Provider, { value: a.N }, E.children),
+            M.createElement(s.zL.Provider, { value: s.N }, E.children),
         )
     );
 });
-function er(e, t) {
-    t = (0, D.U)(t);
+function en(e, t) {
+    t = (0, O.U)(t);
     let { dragAndDropHooks: n, dropState: r } = (0, M.useContext)(o.Ux),
         i = (0, M.useRef)(null),
-        { dropIndicatorProps: a, isHidden: s, isDropTarget: l } = n.useDropIndicator(e, r, i);
-    return s ? null : M.createElement(ea, { ...e, dropIndicatorProps: a, isDropTarget: l, buttonRef: i, ref: t });
+        { dropIndicatorProps: s, isHidden: a, isDropTarget: l } = n.useDropIndicator(e, r, i);
+    return a ? null : M.createElement(ei, { ...e, dropIndicatorProps: s, isDropTarget: l, buttonRef: i, ref: t });
 }
-function ei(e, t) {
-    let { dropIndicatorProps: n, isDropTarget: r, buttonRef: i, ...a } = e,
-        o = (0, M.useContext)(F),
-        { visuallyHiddenProps: l } = (0, R.B)(),
-        u = (0, s.Sl)({ ...a, defaultClassName: "react-aria-DropIndicator", values: { isDropTarget: r } }),
+function er(e, t) {
+    let { dropIndicatorProps: n, isDropTarget: r, buttonRef: i, ...s } = e,
+        o = (0, M.useContext)(G),
+        { visuallyHiddenProps: l } = (0, b.B)(),
+        u = (0, a.Sl)({ ...s, defaultClassName: "react-aria-DropIndicator", values: { isDropTarget: r } }),
         c = H("tr"),
         d = H("td");
     return M.createElement(
         c,
-        { ...(0, w.$)(e, { global: !0 }), ...u, role: "row", ref: t, "data-drop-target": r || void 0 },
+        { ...(0, L.$)(e, { global: !0 }), ...u, role: "row", ref: t, "data-drop-target": r || void 0 },
         M.createElement(
             d,
             { role: "gridcell", colSpan: o.collection.columnCount, style: { padding: 0 } },
@@ -626,17 +626,17 @@ function ei(e, t) {
         ),
     );
 }
-let ea = (0, M.forwardRef)(ei);
+let ei = (0, M.forwardRef)(er);
 function es() {
-    let e = (0, M.useContext)(F),
+    let e = (0, M.useContext)(G),
         { dragAndDropHooks: t, dropState: n } = (0, M.useContext)(o.Ux),
         r = (0, M.useRef)(null),
         { dropIndicatorProps: i } = t.useDropIndicator({ target: { type: "root" } }, n, r),
-        a = n.isDropTarget({ type: "root" }),
-        { visuallyHiddenProps: s } = (0, R.B)(),
+        s = n.isDropTarget({ type: "root" }),
+        { visuallyHiddenProps: a } = (0, b.B)(),
         l = H("tr"),
         u = H("td");
-    return !a && i["aria-hidden"]
+    return !s && i["aria-hidden"]
         ? null
         : M.createElement(
               l,
@@ -644,13 +644,13 @@ function es() {
               M.createElement(
                   u,
                   { role: "gridcell", colSpan: e.collection.columnCount, style: { padding: 0 } },
-                  M.createElement("div", { role: "button", ...s, ...i, ref: r }),
+                  M.createElement("div", { role: "button", ...a, ...i, ref: r }),
               ),
           );
 }
 (0, d.KU)(c.OJ, function (e, t, n) {
-    let r = (0, M.useContext)(F),
-        { isVirtualized: i } = (0, M.useContext)(a.zL),
+    let r = (0, M.useContext)(G),
+        { isVirtualized: i } = (0, M.useContext)(s.zL),
         { isLoading: o, onLoadMore: l, scrollOffset: u, ...c } = e,
         d = r.collection.columns.length,
         _ = (0, M.useRef)(null),
@@ -658,29 +658,29 @@ function es() {
             () => ({ onLoadMore: l, collection: null == r ? void 0 : r.collection, sentinelRef: _, scrollOffset: u }),
             [l, u, null == r ? void 0 : r.collection],
         );
-    (0, x.n)(f, _);
-    let h = (0, s.Sl)({
+    (0, w.n)(f, _);
+    let p = (0, a.Sl)({
             ...c,
             id: void 0,
             children: n.rendered,
             defaultClassName: "react-aria-TableLoadingIndicator",
             values: null,
         }),
-        p = H("tr"),
-        g = H("td"),
+        h = H("tr"),
+        m = H("td"),
         E = {},
-        A = {},
-        I = {};
+        g = {},
+        A = {};
     return (
-        i ? ((A["aria-colspan"] = d), (I = { display: "contents" })) : (A.colSpan = d),
+        i ? ((g["aria-colspan"] = d), (A = { display: "contents" })) : (g.colSpan = d),
         M.createElement(
             M.Fragment,
             null,
             M.createElement(
-                p,
-                { style: { height: 0 }, inert: (0, P.Y)(!0) },
+                h,
+                { style: { height: 0 }, inert: (0, x.Y)(!0) },
                 M.createElement(
-                    g,
+                    m,
                     { style: { padding: 0, border: 0 } },
                     M.createElement("div", {
                         "data-testid": "loadMoreSentinel",
@@ -690,11 +690,11 @@ function es() {
                 ),
             ),
             o &&
-                h.children &&
+                p.children &&
                 M.createElement(
-                    p,
-                    { ...(0, T.v)((0, w.$)(e, { global: !0 }), E), ...h, role: "row", ref: t },
-                    M.createElement(g, { role: "rowheader", ...A, style: I }, h.children),
+                    h,
+                    { ...(0, I.v)((0, L.$)(e, { global: !0 }), E), ...p, role: "row", ref: t },
+                    M.createElement(m, { role: "rowheader", ...g, style: A }, p.children),
                 ),
         )
     );

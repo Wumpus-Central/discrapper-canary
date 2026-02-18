@@ -1,8 +1,8 @@
 "use strict";
 let r, i;
-n.d(t, { A: () => et });
-var a = n(506774),
-    s = n(73153),
+n.d(t, { A: () => ee });
+var s = n(506774),
+    a = n(73153),
     o = n(157559),
     l = n(843472),
     u = n(56562),
@@ -10,98 +10,98 @@ var a = n(506774),
     d = n(128265),
     _ = n(343328),
     f = n(626584),
-    h = n(142120),
-    p = n(491001),
-    g = n(334465),
+    p = n(142120),
+    h = n(491001),
+    m = n(334465),
     E = n(940382),
-    A = n(95701),
-    I = n(761640),
-    T = n(734057),
-    y = n(71393),
+    g = n(95701),
+    A = n(761640),
+    I = n(734057),
+    T = n(71393),
     S = n(222823),
-    v = n(309010),
-    C = n(967198),
-    b = n(927813),
-    N = n(202803),
-    R = n(662433),
-    O = n(652215),
-    D = n(746080),
-    L = n(985018);
-let w = 10 * b.A.Millis.SECOND,
-    x = new f.A("MessageManager");
-function P(e) {
+    y = n(309010),
+    v = n(967198),
+    N = n(927813),
+    C = n(202803),
+    b = n(662433),
+    R = n(652215),
+    O = n(746080),
+    D = n(985018);
+let L = 10 * N.A.Millis.SECOND,
+    w = new f.A("MessageManager");
+function x(e) {
     let {
         guildId: t,
         channelId: n,
         messageId: r,
         forceFetch: i,
-        isPreload: a,
-        jumpType: s,
+        isPreload: s,
+        jumpType: a,
         skipLocalFetch: o,
         avoidInitialScroll: c,
         fetchKey: f,
     } = e;
-    if (null == n || (0, D.jq)(n)) return;
-    let p = T.A.getChannel(n);
-    if (p?.type === O.rbe.GUILD_STORE || (p?.type != null && O.kvI.GUILD_THREADS_ONLY.has(p.type))) return;
-    let g = d.A.getOrCreate(n);
-    g.some(N.$r) && (x.log("Found expired attachment link, clearing messages"), d.A.clear(n), (g = d.A.getOrCreate(n))),
-        null != g.jumpTargetId &&
+    if (null == n || (0, O.jq)(n)) return;
+    let h = I.A.getChannel(n);
+    if (h?.type === R.rbe.GUILD_STORE || (h?.type != null && R.kvI.GUILD_THREADS_ONLY.has(h.type))) return;
+    let m = d.A.getOrCreate(n);
+    m.some(C.$r) && (w.log("Found expired attachment link, clearing messages"), d.A.clear(n), (m = d.A.getOrCreate(n))),
+        null != m.jumpTargetId &&
             null == r &&
-            ((g = g.mutate({ jumpTargetId: null, jumped: !1, jumpType: u.US.ANIMATED })), d.A.commit(g)),
-        null != g.focusTargetId && null == r && ((g = g.mutate({ focusTargetId: null })), d.A.commit(g));
+            ((m = m.mutate({ jumpTargetId: null, jumped: !1, jumpType: u.US.ANIMATED })), d.A.commit(m)),
+        null != m.focusTargetId && null == r && ((m = m.mutate({ focusTargetId: null })), d.A.commit(m));
     let E = i;
     if (
-        (!a || h.A.isConnected() || g.loadingMore
-            ? g.loadingMore || (g.ready && !g.cached)
+        (!s || p.A.isConnected() || m.loadingMore
+            ? m.loadingMore || (m.ready && !m.cached)
                 ? null != r && (E = !0)
-                : (null == t || null != y.A.getGuild(t)) && (E = !0)
+                : (null == t || null != T.A.getGuild(t)) && (E = !0)
             : (E = !0),
         (0, _.A)(n) && S.Ay.hasUnread(n) && (E = !0),
         E)
     )
-        if ((d.A.commit(g.mutate({ loadingMore: !0 })), null != r))
+        if ((d.A.commit(m.mutate({ loadingMore: !0 })), null != r))
             l.A.jumpToMessage({
                 channelId: n,
                 messageId: r,
                 flash: !0,
-                isPreload: a,
+                isPreload: s,
                 skipLocalFetch: o,
-                jumpType: s,
+                jumpType: a,
                 avoidInitialScroll: c,
             });
         else {
-            if (p?.isThread() && U(n))
+            if (h?.isThread() && k(n))
                 return (
-                    x.log(`Jumping to start of thread ${p.id}`),
+                    w.log(`Jumping to start of thread ${h.id}`),
                     l.A.fetchMessages({
                         channelId: n,
-                        limit: (0, R.h)("MessageManager.threadStart"),
+                        limit: (0, b.h)("MessageManager.threadStart"),
                         jump: { messageId: n, flash: !1 },
-                        isPreload: a,
+                        isPreload: s,
                         skipLocalFetch: o,
                         avoidInitialScroll: c,
                         fetchKey: f,
                     })
                 );
-            if (!(p?.isThread() && S.Ay.hasTrackedUnread(p.id)) || g.ready)
+            if (!(h?.isThread() && S.Ay.hasTrackedUnread(h.id)) || m.ready)
                 return l.A.fetchMessages({
                     channelId: n,
-                    limit: (0, R.h)("MessageManager.initialFetch"),
-                    isPreload: a,
+                    limit: (0, b.h)("MessageManager.initialFetch"),
+                    isPreload: s,
                     skipLocalFetch: o,
                     jump: { jumpType: u.US.ANIMATED },
                     avoidInitialScroll: c,
                     fetchKey: f,
                 });
-            let e = S.Ay.getTrackedAckMessageId(p.id);
+            let e = S.Ay.getTrackedAckMessageId(h.id);
             return (
-                x.log(`Jumping to most recent message in thread ${p.id} - ${e}`),
+                w.log(`Jumping to most recent message in thread ${h.id} - ${e}`),
                 l.A.fetchMessages({
                     channelId: n,
-                    limit: (0, R.h)("MessageManager.threadUnread"),
+                    limit: (0, b.h)("MessageManager.threadUnread"),
                     jump: { messageId: e, flash: !1, offset: 1 },
-                    isPreload: a,
+                    isPreload: s,
                     skipLocalFetch: o,
                     avoidInitialScroll: c,
                     fetchKey: f,
@@ -109,117 +109,117 @@ function P(e) {
             );
         }
 }
-let M = 90 * b.A.Millis.DAY,
-    k = "viewedThreadIds";
-function U(e) {
-    if (S.Ay.hasOpenedThread(e) || (null == i && (i = a.w.get(k, {}) ?? {}), e in i)) return !1;
+let M = 90 * N.A.Millis.DAY,
+    P = "viewedThreadIds";
+function k(e) {
+    if (S.Ay.hasOpenedThread(e) || (null == i && (i = s.w.get(P, {}) ?? {}), e in i)) return !1;
     i[e] = Date.now();
     let t = Date.now() - M;
     for (let e in i) i[e] < t && delete i[e];
-    return a.w.set(k, i), !0;
+    return s.w.set(P, i), !0;
 }
-function G(e) {
+function U(e) {
     if (null != r && r.channelId === e) return r;
-    let t = (0, g.B)(location.pathname, { path: O.BVt.CHANNEL(":guild", ":channel", ":message"), exact: !0 });
+    let t = (0, m.B)(location.pathname, { path: R.BVt.CHANNEL(":guild", ":channel", ":message"), exact: !0 });
     return { channelId: e, messageId: t?.params?.message };
 }
-function F() {
-    let e = v.A.getChannelId();
+function G() {
+    let e = y.A.getChannelId();
     if (null == e) return;
-    let t = T.A.getChannel(e);
+    let t = I.A.getChannel(e);
     if (null == t) return;
-    let n = G(t.id);
+    let n = U(t.id);
     (r = void 0),
-        P({
+        x({
             guildId: t.getGuildId(),
             channelId: t.id,
             messageId: n.messageId,
             jumpType: n.jumpType,
             avoidInitialScroll: null != n.messageId,
         }),
-        W(t.getGuildId(), t.id);
+        Y(t.getGuildId(), t.id);
+}
+function F() {
+    if (!(0, h.K)()) return;
+    let e = y.A.getChannelId();
+    if (null == e) return;
+    let t = I.A.getChannel(e);
+    null != t && x({ guildId: t.getGuildId(), channelId: t.id });
 }
 function V() {
-    if (!(0, p.K)()) return;
-    let e = v.A.getChannelId();
+    let e = y.A.getChannelId();
     if (null == e) return;
-    let t = T.A.getChannel(e);
-    null != t && P({ guildId: t.getGuildId(), channelId: t.id });
-}
-function B() {
-    let e = v.A.getChannelId();
-    if (null == e) return;
-    let t = T.A.getChannel(e);
+    let t = I.A.getChannel(e);
     if (null == t) return;
-    if (!(0, A.pQ)(t.type)) return void W(t.getGuildId(), t.id);
+    if (!(0, g.pQ)(t.type)) return void Y(t.getGuildId(), t.id);
     let n = d.A.getOrCreate(e);
-    (n.ready && n.hasFetched) || P({ guildId: t.getGuildId(), channelId: t.id }), W(t.getGuildId(), t.id);
+    (n.ready && n.hasFetched) || x({ guildId: t.getGuildId(), channelId: t.id }), Y(t.getGuildId(), t.id);
 }
-function j(e) {
-    let { guildId: t, channelId: n, messageId: i, jumpType: a, isInitialSetup: s } = e;
-    if (s) return null != n && (r = { channelId: n, messageId: i ?? void 0, jumpType: a }), !1;
-    P({ guildId: t, channelId: n, messageId: i, jumpType: a }), W(t, n);
+function B(e) {
+    let { guildId: t, channelId: n, messageId: i, jumpType: s, isInitialSetup: a } = e;
+    if (a) return null != n && (r = { channelId: n, messageId: i ?? void 0, jumpType: s }), !1;
+    x({ guildId: t, channelId: n, messageId: i, jumpType: s }), Y(t, n);
 }
 function H(e) {
     let { guildId: t, channelId: n } = e;
-    P({ guildId: t, channelId: n });
+    x({ guildId: t, channelId: n });
 }
-function Y(e) {
+function j(e) {
     let { guildId: t, channelId: n, messageId: r, jumpType: i } = e;
-    P({ guildId: t, channelId: n, messageId: r, jumpType: i });
+    x({ guildId: t, channelId: n, messageId: r, jumpType: i });
 }
-function W(e, t) {
-    let n = I.Ay.getCurrentSidebarChannelId(t);
-    null == n || P({ guildId: e, channelId: n, messageId: I.Ay.getCurrentSidebarMessageId(t) });
+function Y(e, t) {
+    let n = A.Ay.getCurrentSidebarChannelId(t);
+    null == n || x({ guildId: e, channelId: n, messageId: A.Ay.getCurrentSidebarMessageId(t) });
 }
-function K() {
-    let e = v.A.getChannelId(),
-        t = C.A.getGuildId();
+function W() {
+    let e = y.A.getChannelId(),
+        t = v.A.getGuildId();
     if (null == t || null == e) return;
-    let n = I.Ay.getSidebarState(e);
-    n?.type !== E.PE.VIEW_CHANNEL && W(t, e);
+    let n = A.Ay.getSidebarState(e);
+    n?.type !== E.PE.VIEW_CHANNEL && Y(t, e);
 }
-function $(e) {
+function K(e) {
     let { guildId: t, channelId: n, context: r } = e;
-    r === O.QCW && (P({ guildId: t, channelId: n }), W(t, n));
+    r === R.QCW && (x({ guildId: t, channelId: n }), Y(t, n));
 }
 function z(e) {
     let { channel: t, messageId: n } = e,
         r = t.guild_id;
-    null != r && v.A.getChannelId(r) === t.id && P({ guildId: r, channelId: t.id, messageId: n });
+    null != r && y.A.getChannelId(r) === t.id && x({ guildId: r, channelId: t.id, messageId: n });
 }
-function q(e) {
+function $(e) {
     let { response: t } = e;
     if (null == t || null == t.body) return null;
-    if (t.body.code === O.t02.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED) {
+    if (t.body.code === R.t02.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED) {
         let e = t.body.retry_after;
         null != e &&
             o.A.show({
-                title: L.intl.string(L.t.Whhv4w),
-                body: L.intl.formatToPlainString(L.t.qoxdQB, { retryAfterMinutes: Math.ceil(e / 60) }),
+                title: D.intl.string(D.t.Whhv4w),
+                body: D.intl.formatToPlainString(D.t.qoxdQB, { retryAfterMinutes: Math.ceil(e / 60) }),
             });
     }
 }
-let X = {};
+let q = {};
 function Z(e) {
     let { channelId: t, jump: n, isStale: r, isPreview: i = !1 } = e;
     if (i) return;
-    let a = X[t] ?? 0;
-    if (Date.now() - a < w) return;
-    X[t] = Date.now();
-    let s = v.A.getChannelId(),
-        o = I.Ay.getCurrentSidebarChannelId(s),
-        u = t === s || t === o;
+    let s = q[t] ?? 0;
+    if (Date.now() - s < L) return;
+    q[t] = Date.now();
+    let a = y.A.getChannelId(),
+        o = A.Ay.getCurrentSidebarChannelId(a),
+        u = t === a || t === o;
     r &&
-        h.A.isConnected() &&
+        p.A.isConnected() &&
         u &&
-        l.A.fetchMessages({ channelId: t, limit: (0, R.h)("MessageManager.staleFetch"), jump: n });
+        l.A.fetchMessages({ channelId: t, limit: (0, b.h)("MessageManager.staleFetch"), jump: n });
 }
-function Q(e) {
-    let { channelId: t, messageId: n, reason: r, noSendFailed: i, shouldSendNotification: a } = e;
+function X(e) {
+    let { channelId: t, messageId: n, reason: r, noSendFailed: i, shouldSendNotification: s } = e;
     null == n ||
         (!0 !== i &&
-            s.h.dispatch({
+            a.h.dispatch({
                 type: "MESSAGE_SEND_FAILED",
                 channelId: t,
                 messageId: n,
@@ -227,40 +227,40 @@ function Q(e) {
                 shouldNotify: !1,
             }));
 }
-function J(e) {
+function Q(e) {
     let { state: t } = e;
     if ("active" !== t) return !1;
-    let n = v.A.getChannelId();
+    let n = y.A.getChannelId();
     if (null == n) return !1;
-    l.A.fetchNewLocalMessages(n, O.EMb);
+    l.A.fetchNewLocalMessages(n, R.EMb);
 }
-class ee extends c.A {
-    fetchMessages = P;
-    loadSelectedChannelIfNecessary = B;
-    stores = new Map().set(I.Ay, K);
+class J extends c.A {
+    fetchMessages = x;
+    loadSelectedChannelIfNecessary = V;
+    stores = new Map().set(A.Ay, W);
     actions = {
-        APP_STATE_UPDATE: J,
-        OVERLAY_INITIALIZE: F,
-        CONNECTION_RESUMED: V,
-        CHANNEL_SELECT: j,
+        APP_STATE_UPDATE: Q,
+        OVERLAY_INITIALIZE: G,
+        CONNECTION_RESUMED: F,
+        CHANNEL_SELECT: B,
         VOICE_CHANNEL_SELECT: H,
         THREAD_CREATE: z,
-        THREAD_LIST_SYNC: () => B(),
+        THREAD_LIST_SYNC: () => V(),
         CHANNEL_CREATE: z,
-        CHANNEL_PRELOAD: $,
-        GUILD_CREATE: () => B(),
-        MESSAGE_END_EDIT: q,
+        CHANNEL_PRELOAD: K,
+        GUILD_CREATE: () => V(),
+        MESSAGE_END_EDIT: $,
         LOAD_MESSAGES_SUCCESS: Z,
-        UPLOAD_FAIL: Q,
-        CHANNEL_DELETE: () => B(),
-        THREAD_DELETE: () => B(),
-        CHANNEL_RTC_JUMP_TO_VOICE_CHANNEL_MESSAGE: Y,
+        UPLOAD_FAIL: X,
+        CHANNEL_DELETE: () => V(),
+        THREAD_DELETE: () => V(),
+        CHANNEL_RTC_JUMP_TO_VOICE_CHANNEL_MESSAGE: j,
     };
     _initialize() {
-        s.h.subscribe("CONNECTION_OPEN", F);
+        a.h.subscribe("CONNECTION_OPEN", G);
     }
     _terminate() {
-        s.h.unsubscribe("CONNECTION_OPEN", F);
+        a.h.unsubscribe("CONNECTION_OPEN", G);
     }
 }
-let et = new ee();
+let ee = new J();

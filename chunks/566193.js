@@ -1,57 +1,56 @@
-"use strict";
-n.d(t, { f: () => u });
-var r = n(627968),
-    i = n(64700),
-    a = n(158954),
-    s = n(311907),
-    o = n(397927),
-    l = n(287809);
-let u = {
+a.d(l, { f: () => d });
+var t = a(627968),
+    o = a(64700),
+    n = a(158954),
+    i = a(311907),
+    s = a(397927),
+    r = a(287809);
+let d = {
     title: "TagGroup",
     stories: [
         {
             name: "TagGroup",
             id: "tag-group",
             component: function (e) {
-                let { selectionMode: t, removeable: n, layout: u } = e,
-                    c = (0, s.bG)([l.default], () => l.default.getCurrentUser()),
-                    d = i.useMemo(
+                let { selectionMode: l, removeable: a, layout: d } = e,
+                    u = (0, i.bG)([r.default], () => r.default.getCurrentUser()),
+                    c = o.useMemo(
                         () => [
-                            { id: "strength", label: "Strength", icon: o.rYc },
+                            { id: "strength", label: "Strength", icon: s.rYc },
                             { id: "dexterity", label: "Dexterity", icon: { type: "role", color: "#ff44aa" } },
                             {
                                 id: "wisdom",
                                 label: "Wisdom",
-                                icon: { type: "avatar", src: c?.getAvatarURL(void 0, 16) ?? "" },
+                                icon: { type: "avatar", src: u?.getAvatarURL(void 0, 16) ?? "" },
                             },
                             { id: "charisma", label: "Charisma" },
                         ],
-                        [c],
+                        [u],
                     ),
-                    [_, f] = i.useState(d),
-                    p = i.useCallback(
+                    [b, p] = o.useState(c),
+                    m = o.useCallback(
                         (e) => {
-                            f(_.filter((t) => !e.has(t.id)));
+                            p(b.filter((l) => !e.has(l.id)));
                         },
-                        [_],
+                        [b],
                     ),
-                    h = i.useCallback(() => {
-                        f(d);
-                    }, [d]),
-                    m = (0, r.jsx)(a.CR_, {
+                    x = o.useCallback(() => {
+                        p(c);
+                    }, [c]),
+                    v = (0, t.jsx)(n.CR_, {
                         label: "Categories",
-                        selectionMode: t,
-                        layout: u,
-                        items: _,
-                        onRemove: n ? p : void 0,
+                        selectionMode: l,
+                        layout: d,
+                        items: b,
+                        onRemove: a ? m : void 0,
                     }),
-                    g = n && (0, r.jsx)(o.Button, { disabled: _.length === d.length, text: "Reset", onClick: h });
-                return "inline" === u
-                    ? (0, r.jsxs)(o.BJc, {
+                    h = a && (0, t.jsx)(s.Button, { disabled: b.length === c.length, text: "Reset", onClick: x });
+                return "inline" === d
+                    ? (0, t.jsxs)(s.BJc, {
                           gap: 24,
-                          children: [(0, r.jsx)("div", { style: { display: "flex", gap: 4 }, children: m }), g],
+                          children: [(0, t.jsx)("div", { style: { display: "flex", gap: 4 }, children: v }), h],
                       })
-                    : (0, r.jsxs)(o.BJc, { gap: 24, children: [m, g] });
+                    : (0, t.jsxs)(s.BJc, { gap: 24, children: [v, h] });
             },
             controls: {
                 selectionMode: {

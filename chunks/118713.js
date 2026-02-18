@@ -1,82 +1,88 @@
-"use strict";
-n.d(t, { A: () => f });
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(713517),
-    l = n(949317);
-let u = 5e3,
-    c = (e) => null != e && "object" == typeof e && e.$$typeof === Symbol.for("react.portal"),
-    d = (e, t, n) =>
-        e === t
-            ? "center"
-            : e < t
-              ? t === n - 1 && 0 === e
-                  ? "right"
-                  : "left"
-              : 0 === t && e === n - 1
-                ? "left"
-                : "right",
-    _ = (e) => {
-        let { position: t, children: n } = e;
-        return (0, r.jsx)("div", { className: s()(l.child, l[t]), children: n });
+t.d(r, { A: () => u });
+var d = t(627968),
+    l = t(64700),
+    c = t(503698),
+    o = t.n(c),
+    a = t(713517),
+    n = t(949317);
+let s = (e) => {
+        let { position: r, children: t } = e;
+        return (0, d.jsx)("div", { className: o()(n.child, n[r]), children: t });
     },
-    f = (e) => {
-        let { children: t, paused: n = !1, slideDuration: a = u } = e,
-            [s, f] = i.useState(0),
-            h = i.useRef(null),
-            p = (0, o.M)(h),
-            g = i.useRef(void 0),
-            E = i.useMemo(
+    u = (e) => {
+        let { children: r, paused: t = !1, slideDuration: c = 5e3 } = e,
+            [o, u] = l.useState(0),
+            i = l.useRef(null),
+            h = (0, a.M)(i),
+            k = l.useRef(void 0),
+            p = l.useMemo(
                 () =>
-                    i.Children.map(t, (e) => (!i.isValidElement(e) || c(e) ? e : i.cloneElement(e, { tabIndex: -1 }))),
-                [t],
+                    l.Children.map(r, (e) =>
+                        l.isValidElement(e)
+                            ? null != e && "object" == typeof e && e.$$typeof === Symbol.for("react.portal")
+                                ? e
+                                : l.cloneElement(e, { tabIndex: -1 })
+                            : e,
+                    ),
+                [r],
             );
-        i.useEffect(() => {
-            Array.isArray(E) ? f(s >= E?.length ? Math.max(E?.length - 1, 0) : s) : f(0);
-        }, [E, s]);
-        let A = n || p;
-        return (i.useEffect(() => {
-            if (A) {
-                null != g.current && (window.clearTimeout(g.current), (g.current = void 0));
+        l.useEffect(() => {
+            Array.isArray(p) ? u(o >= p?.length ? Math.max(p?.length - 1, 0) : o) : u(0);
+        }, [p, o]);
+        let b = t || h;
+        return (l.useEffect(() => {
+            if (b) {
+                null != k.current && (window.clearTimeout(k.current), (k.current = void 0));
                 return;
             }
             let e = () => {
-                f((e) => {
-                    let t = e + 1;
-                    return t >= (E?.length ?? 1) ? 0 : t;
+                u((e) => {
+                    let r = e + 1;
+                    return r >= (p?.length ?? 1) ? 0 : r;
                 }),
-                    (g.current = window.setTimeout(e, a));
+                    (k.current = window.setTimeout(e, c));
             };
-            window.clearTimeout(g.current), (g.current = window.setTimeout(e, a));
-        }, [A, a, E]),
-        i.useEffect(
+            window.clearTimeout(k.current), (k.current = window.setTimeout(e, c));
+        }, [b, c, p]),
+        l.useEffect(
             () => () => {
-                window.clearTimeout(g.current);
+                window.clearTimeout(k.current);
             },
             [],
         ),
-        null == E)
+        null == p)
             ? null
-            : Array.isArray(E)
-              ? (0, r.jsx)("div", {
-                    ref: h,
-                    className: l.carousel,
-                    children: (0, r.jsx)("div", {
-                        className: l.children,
-                        children: E?.map((e, t) => {
-                            let n = d(t, s, E.length);
-                            return (0, r.jsx)(_, { position: n, children: e }, t);
+            : Array.isArray(p)
+              ? (0, d.jsx)("div", {
+                    ref: i,
+                    className: n.carousel,
+                    children: (0, d.jsx)("div", {
+                        className: n.children,
+                        children: p?.map((e, r) => {
+                            var t, l, c;
+                            let a =
+                                ((t = r),
+                                (l = o),
+                                (c = p.length),
+                                t === l
+                                    ? "center"
+                                    : t < l
+                                      ? l === c - 1 && 0 === t
+                                          ? "right"
+                                          : "left"
+                                      : 0 === l && t === c - 1
+                                        ? "left"
+                                        : "right");
+                            return (0, d.jsx)(s, { position: a, children: e }, r);
                         }),
                     }),
                 })
-              : (0, r.jsx)("div", {
-                    ref: h,
-                    className: l.carousel,
-                    children: (0, r.jsx)("div", {
-                        className: l.children,
-                        children: (0, r.jsx)(_, { position: "center", children: t }),
+              : (0, d.jsx)("div", {
+                    ref: i,
+                    className: n.carousel,
+                    children: (0, d.jsx)("div", {
+                        className: n.children,
+                        children: (0, d.jsx)(s, { position: "center", children: r }),
                     }),
                 });
     };

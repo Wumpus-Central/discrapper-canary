@@ -1,61 +1,62 @@
-n.d(t, { A: () => b });
+"use strict";
+n.d(t, { A: () => g });
 var r = n(627968),
-    a = n(64700),
-    o = n(311907),
-    i = n(521489),
+    i = n(64700),
+    a = n(311907),
+    s = n(521489),
     l = n(397927),
-    s = n(775602),
+    o = n(775602),
     c = n(531685),
-    _ = n(203982),
-    u = n(418829),
-    d = n(652215);
-function b(e) {
+    u = n(203982),
+    d = n(418829),
+    _ = n(652215);
+function g(e) {
     let {
             partialRoot: t,
             target: n,
-            defaultTarget: b,
+            defaultTarget: g,
             onPanelChange: m,
-            sidebarFooter: g,
-            emptyState: p,
-            searchQuery: f,
-            onSearchChange: x,
-            ...h
+            sidebarFooter: b,
+            emptyState: f,
+            searchQuery: p,
+            onSearchChange: h,
+            ...y
         } = e,
-        [y, C] = a.useState(!1),
-        [S, v] = a.useState(1.4),
-        j = a.useRef(null),
-        A = (0, o.bG)([s.A], () => s.A.useReducedMotion),
-        T = (0, o.bG)([c.A], () => c.A.isFocused());
+        [x, A] = i.useState(!1),
+        [C, S] = i.useState(1.4),
+        v = i.useRef(null),
+        T = (0, a.bG)([o.A], () => o.A.useReducedMotion),
+        k = (0, a.bG)([c.A], () => c.A.isFocused());
     return (
-        a.useEffect(() => {
+        i.useEffect(() => {
             let e = (e) => {
                 let { intensity: t, duration: n } = e;
-                !A &&
-                    T &&
-                    (C(!0), v(t ?? 1.4), clearTimeout(j.current), (j.current = setTimeout(() => C(!1), n ?? 1e3)));
+                !T &&
+                    k &&
+                    (A(!0), S(t ?? 1.4), clearTimeout(v.current), (v.current = setTimeout(() => A(!1), n ?? 1e3)));
             };
             return (
-                _._.subscribe(d.jej.SHAKE_SETTINGS_MODAL, e),
+                u._.subscribe(_.jej.SHAKE_SETTINGS_MODAL, e),
                 () => {
-                    _._.unsubscribe(d.jej.SHAKE_SETTINGS_MODAL, e), clearTimeout(j.current);
+                    u._.unsubscribe(_.jej.SHAKE_SETTINGS_MODAL, e), clearTimeout(v.current);
                 }
             );
-        }, [A, T]),
+        }, [T, k]),
         (0, r.jsx)(l.bfh, {
-            isShaking: y,
-            intensity: S,
-            children: (0, r.jsx)(i.N, {
-                ...h,
-                children: (0, r.jsx)(u.A, {
-                    onClose: h.onClose,
+            isShaking: x,
+            intensity: C,
+            children: (0, r.jsx)(s.N, {
+                ...y,
+                children: (0, r.jsx)(d.A, {
+                    onClose: y.onClose,
                     partialRoot: t,
                     target: n,
-                    defaultTarget: b,
+                    defaultTarget: g,
                     onPanelChange: m,
-                    emptyState: p,
-                    sidebarFooter: g,
-                    searchQuery: f,
-                    onSearchChange: x,
+                    emptyState: f,
+                    sidebarFooter: b,
+                    searchQuery: p,
+                    onSearchChange: h,
                 }),
             }),
         })

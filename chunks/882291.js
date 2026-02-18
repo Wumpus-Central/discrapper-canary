@@ -1,139 +1,134 @@
-"use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => E });
 var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(61491),
-    l = n(397927),
+    l = n(64700),
+    i = n(503698),
+    s = n.n(i),
+    a = n(61491),
+    o = n(397927),
     u = n(770178),
     c = n(765548),
     d = n(261331),
-    _ = n(650583),
-    f = n(712119);
-function h(e) {
+    m = n(650583),
+    p = n(712119);
+function E(e) {
     let {
             isFullyVisible: t,
             percent: n,
-            animate: a,
-            interactionEnabled: h,
-            backgroundColor: p,
-            playerState: g,
-            preloadedBuffers: E,
-            duration: A,
-            maxSeekableTime: I,
-            onClick: T,
-            onScrubBack: y,
-            onScrubForward: S,
-            "data-testid": v,
+            animate: i,
+            interactionEnabled: E,
+            backgroundColor: f,
+            playerState: v,
+            preloadedBuffers: h,
+            duration: g,
+            maxSeekableTime: S,
+            onClick: C,
+            onScrubBack: A,
+            onScrubForward: x,
+            "data-testid": _,
         } = e,
-        [C, b] = i.useState(null),
-        [N, R] = i.useState(null),
-        [O, D] = i.useState(null),
-        [L, w] = i.useState(!1),
-        x = i.useRef(null),
-        P = (e) => {
-            (x.current = e), b(e);
+        [b, T] = l.useState(null),
+        [y, N] = l.useState(null),
+        [D, L] = l.useState(null),
+        [I, j] = l.useState(!1),
+        R = l.useRef(null),
+        k = (e) => {
+            (R.current = e), T(e);
         };
-    i.useEffect(() => {
-        null != C && (null == I ? D(null) : D((0, o.DX)(I, A, C)));
-    }, [C, I, A]);
-    let M = (0, c.A)((e) => {
-            P(e.contentRect);
+    l.useEffect(() => {
+        null != b && (null == S ? L(null) : L((0, a.DX)(S, g, b)));
+    }, [b, S, g]);
+    let w = (0, c.A)((e) => {
+            k(e.contentRect);
         }),
-        k = (0, u.w)(M);
-    i.useLayoutEffect(() => {
-        null != k.current && P(k.current.getBoundingClientRect());
-    }, [k]),
-        i.useEffect(() => {
+        M = (0, u.w)(w);
+    l.useLayoutEffect(() => {
+        null != M.current && k(M.current.getBoundingClientRect());
+    }, [M]),
+        l.useEffect(() => {
             let e = () => {
-                null != k.current && P(k.current.getBoundingClientRect());
+                null != M.current && k(M.current.getBoundingClientRect());
             };
             return window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
-        }, [k]);
-    let U = (e) => {
-            R(e.clientX);
+        }, [M]);
+    let O = (e) => {
+            N(e.clientX);
         },
-        G = (e) => {
-            h && (null != k.current && P(k.current.getBoundingClientRect()), w(!0), U(e));
-        },
-        F = (e) => {
-            h && (w(!1), R(null));
-        },
-        V = (e) => {
-            h && L && U(e);
-        },
-        B = i.useCallback(
+        P = l.useCallback(
             (e) => {
                 let { key: t } = e;
-                t === _.N$.ArrowLeft && null != y
-                    ? (e.preventDefault(), e.stopPropagation(), y())
-                    : t === _.N$.ArrowRight && null != S && (e.preventDefault(), e.stopPropagation(), S());
+                t === m.N$.ArrowLeft && null != A
+                    ? (e.preventDefault(), e.stopPropagation(), A())
+                    : t === m.N$.ArrowRight && null != x && (e.preventDefault(), e.stopPropagation(), x());
             },
-            [y, S],
+            [A, x],
         ),
-        j = (e) => {
-            h && null != T && T((0, o.hc)(e.clientX, e.currentTarget.getBoundingClientRect(), A));
-        },
-        H = null != N && null != C ? (0, o.hc)(N, C, A) : 0,
-        Y = (0, o.rB)(H),
-        W = null != C ? C.right - (0, o.DX)((n / 100) * A, A, C) : null,
-        K = null != N && null != C ? C.right - N : null,
-        $ = null != O && null != C ? C.right - O : null;
+        V = null != y && null != b ? (0, a.hc)(y, b, g) : 0,
+        Q = (0, a.rB)(V),
+        U = null != b ? b.right - (0, a.DX)((n / 100) * g, g, b) : null,
+        B = null != y && null != b ? b.right - y : null,
+        F = null != D && null != b ? b.right - D : null;
     return (0, r.jsxs)("div", {
-        className: f.jD,
-        ref: k,
-        "data-testid": v,
+        className: p.jD,
+        ref: M,
+        "data-testid": _,
         children: [
-            (0, r.jsxs)(l.DUT, {
-                className: s()(f.KF, { [f.uc]: h }),
+            (0, r.jsxs)(o.DUT, {
+                className: s()(p.KF, { [p.uc]: E }),
                 ignoreKeyPress: !0,
-                onClick: j,
-                onMouseEnter: G,
-                onMouseLeave: F,
-                onMouseMove: V,
-                onKeyDown: B,
-                tabIndex: h ? void 0 : -1,
+                onClick: (e) => {
+                    E && null != C && C((0, a.hc)(e.clientX, e.currentTarget.getBoundingClientRect(), g));
+                },
+                onMouseEnter: (e) => {
+                    E && (null != M.current && k(M.current.getBoundingClientRect()), j(!0), O(e));
+                },
+                onMouseLeave: (e) => {
+                    E && (j(!1), N(null));
+                },
+                onMouseMove: (e) => {
+                    E && I && O(e);
+                },
+                onKeyDown: P,
+                tabIndex: E ? void 0 : -1,
                 focusProps: { offset: { top: 12, bottom: 12 } },
                 children: [
-                    E?.map((e) =>
+                    h?.map((e) =>
                         (0, r.jsx)(
                             "div",
                             {
-                                className: s()(f.r, f.Wf, { [f.yz]: L }),
+                                className: s()(p.r, p.Wf, { [p.yz]: I }),
                                 style: { width: `${100 * e.size}%`, left: `${100 * e.start}%` },
                             },
                             `${e.start}:${e.size}`,
                         ),
                     ),
-                    !h &&
-                        null != $ &&
-                        $ > 0 &&
+                    !E &&
+                        null != F &&
+                        F > 0 &&
                         (0, r.jsx)("div", {
-                            className: s()(f.YK, f.Wf),
-                            style: { right: null != $ ? `${$}px` : "auto", opacity: +(null != $) },
+                            className: s()(p.YK, p.Wf),
+                            style: { right: null != F ? `${F}px` : "auto", opacity: +(null != F) },
                         }),
-                    (0, r.jsx)(l.iCB, {
-                        className: s()(f.qB, f.Wf),
+                    (0, r.jsx)(o.iCB, {
+                        className: s()(p.qB, p.Wf),
                         percent: n,
                         foregroundColor: "#FFFFFF",
-                        backgroundColor: p ?? void 0,
-                        size: L ? l.iCB.Sizes.XSMALL : l.iCB.Sizes.XXSMALL,
-                        animate: a,
+                        backgroundColor: f ?? void 0,
+                        size: I ? o.iCB.Sizes.XSMALL : o.iCB.Sizes.XXSMALL,
+                        animate: i,
                     }),
-                    L &&
-                        null != Y &&
+                    I &&
+                        null != Q &&
                         t &&
-                        (0, r.jsx)(l.Text, {
-                            className: f.Ey,
+                        (0, r.jsx)(o.Text, {
+                            className: p.Ey,
                             variant: "text-xs/normal",
-                            style: { right: null != K ? `${K - 10}px` : "auto", color: "#FFFFFF" },
-                            children: Y,
+                            style: { right: null != B ? `${B - 10}px` : "auto", color: "#FFFFFF" },
+                            children: Q,
                         }),
-                    L && h && null != W && (0, r.jsx)("div", { className: f.Ub, style: { right: `${W - 6}px` } }),
+                    I && E && null != U && (0, r.jsx)("div", { className: p.Ub, style: { right: `${U - 6}px` } }),
                 ],
             }),
-            g !== d.Q6.ENDED && (0, r.jsx)("div", { className: f.pN, style: { width: `${n}%` } }),
+            v !== d.Q6.ENDED && (0, r.jsx)("div", { className: p.pN, style: { width: `${n}%` } }),
         ],
     });
 }

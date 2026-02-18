@@ -1,25 +1,24 @@
-"use strict";
-n.d(t, { p: () => i });
+t.d(a, { p: () => n });
 let r = new Map();
-class i {
+class n {
     format(e) {
         return this.formatter.format(e);
     }
     formatToParts(e) {
         return this.formatter.formatToParts(e);
     }
-    formatRange(e, t) {
-        if ("function" == typeof this.formatter.formatRange) return this.formatter.formatRange(e, t);
-        if (t < e) throw RangeError("End date must be >= start date");
-        return `${this.formatter.format(e)} \u{2013} ${this.formatter.format(t)}`;
+    formatRange(e, a) {
+        if ("function" == typeof this.formatter.formatRange) return this.formatter.formatRange(e, a);
+        if (a < e) throw RangeError("End date must be >= start date");
+        return `${this.formatter.format(e)} \u{2013} ${this.formatter.format(a)}`;
     }
-    formatRangeToParts(e, t) {
-        if ("function" == typeof this.formatter.formatRangeToParts) return this.formatter.formatRangeToParts(e, t);
-        if (t < e) throw RangeError("End date must be >= start date");
-        let n = this.formatter.formatToParts(e),
-            r = this.formatter.formatToParts(t);
+    formatRangeToParts(e, a) {
+        if ("function" == typeof this.formatter.formatRangeToParts) return this.formatter.formatRangeToParts(e, a);
+        if (a < e) throw RangeError("End date must be >= start date");
+        let t = this.formatter.formatToParts(e),
+            r = this.formatter.formatToParts(a);
         return [
-            ...n.map((e) => ({ ...e, source: "startRange" })),
+            ...t.map((e) => ({ ...e, source: "startRange" })),
             { type: "literal", value: " – ", source: "shared" },
             ...r.map((e) => ({ ...e, source: "endRange" })),
         ];
@@ -27,63 +26,64 @@ class i {
     resolvedOptions() {
         let e = this.formatter.resolvedOptions();
         return (
-            c() &&
-                (this.resolvedHourCycle || (this.resolvedHourCycle = d(e.locale, this.options)),
+            null == l &&
+                (l =
+                    "h12" ===
+                    new Intl.DateTimeFormat("fr", { hour: "numeric", hour12: !1 }).resolvedOptions().hourCycle),
+            l &&
+                (this.resolvedHourCycle ||
+                    (this.resolvedHourCycle = (function (e, a) {
+                        if (!a.timeStyle && !a.hour) return;
+                        e = e.replace(/(-u-)?-nu-[a-zA-Z0-9]+/, "");
+                        let t = o((e += (e.includes("-u-") ? "" : "-u") + "-nu-latn"), { ...a, timeZone: void 0 }),
+                            r = parseInt(
+                                t.formatToParts(new Date(2020, 2, 3, 0)).find((e) => "hour" === e.type).value,
+                                10,
+                            ),
+                            n = parseInt(
+                                t.formatToParts(new Date(2020, 2, 3, 23)).find((e) => "hour" === e.type).value,
+                                10,
+                            );
+                        if (0 === r && 23 === n) return "h23";
+                        if (24 === r && 23 === n) return "h24";
+                        if (0 === r && 11 === n) return "h11";
+                        if (12 === r && 11 === n) return "h12";
+                        throw Error("Unexpected hour cycle result");
+                    })(e.locale, this.options)),
                 (e.hourCycle = this.resolvedHourCycle),
                 (e.hour12 = "h11" === this.resolvedHourCycle || "h12" === this.resolvedHourCycle)),
             "ethiopic-amete-alem" === e.calendar && (e.calendar = "ethioaa"),
             e
         );
     }
-    constructor(e, t = {}) {
-        (this.formatter = s(e, t)), (this.options = t);
+    constructor(e, a = {}) {
+        (this.formatter = o(e, a)), (this.options = a);
     }
 }
-let a = { true: { ja: "h11" }, false: {} };
-function s(e, t = {}) {
-    if ("boolean" == typeof t.hour12 && l()) {
-        let n = a[String((t = { ...t }).hour12)][e.split("-")[0]],
-            r = t.hour12 ? "h12" : "h23";
-        (t.hourCycle = null != n ? n : r), delete t.hour12;
-    }
-    let n =
-        e +
-        (t
-            ? Object.entries(t)
-                  .sort((e, t) => (e[0] < t[0] ? -1 : 1))
-                  .join()
-            : "");
-    if (r.has(n)) return r.get(n);
-    let i = new Intl.DateTimeFormat(e, t);
-    return r.set(n, i), i;
-}
-let o = null;
-function l() {
-    return (
-        null == o &&
-            (o =
+let i = { true: { ja: "h11" }, false: {} };
+function o(e, a = {}) {
+    if (
+        "boolean" == typeof a.hour12 &&
+        (null == u &&
+            (u =
                 "24" ===
                 new Intl.DateTimeFormat("en-US", { hour: "numeric", hour12: !1 }).format(new Date(2020, 2, 3, 0))),
-        o
-    );
+        u)
+    ) {
+        let t = i[String((a = { ...a }).hour12)][e.split("-")[0]],
+            r = a.hour12 ? "h12" : "h23";
+        (a.hourCycle = null != t ? t : r), delete a.hour12;
+    }
+    let t =
+        e +
+        (a
+            ? Object.entries(a)
+                  .sort((e, a) => (e[0] < a[0] ? -1 : 1))
+                  .join()
+            : "");
+    if (r.has(t)) return r.get(t);
+    let n = new Intl.DateTimeFormat(e, a);
+    return r.set(t, n), n;
 }
-let u = null;
-function c() {
-    return (
-        null == u &&
-            (u = "h12" === new Intl.DateTimeFormat("fr", { hour: "numeric", hour12: !1 }).resolvedOptions().hourCycle),
-        u
-    );
-}
-function d(e, t) {
-    if (!t.timeStyle && !t.hour) return;
-    e = e.replace(/(-u-)?-nu-[a-zA-Z0-9]+/, "");
-    let n = s((e += (e.includes("-u-") ? "" : "-u") + "-nu-latn"), { ...t, timeZone: void 0 }),
-        r = parseInt(n.formatToParts(new Date(2020, 2, 3, 0)).find((e) => "hour" === e.type).value, 10),
-        i = parseInt(n.formatToParts(new Date(2020, 2, 3, 23)).find((e) => "hour" === e.type).value, 10);
-    if (0 === r && 23 === i) return "h23";
-    if (24 === r && 23 === i) return "h24";
-    if (0 === r && 11 === i) return "h11";
-    if (12 === r && 11 === i) return "h12";
-    throw Error("Unexpected hour cycle result");
-}
+let u = null,
+    l = null;

@@ -1,75 +1,69 @@
-"use strict";
-n.d(t, { B4: () => f, o6: () => d });
-var r = n(835245);
+n.d(t, { B4: () => p, o6: () => d });
+var a = n(835245);
 n(192308);
-var i = n(397927),
-    a = n(73153),
-    s = n(589078),
-    o = n(301518),
-    l = n(373856),
-    u = n(652215);
+var o = n(397927),
+    i = n(73153),
+    _ = n(589078),
+    r = n(301518),
+    c = n(373856),
+    s = n(652215);
 n(231723);
-let c = "orb-checkout-payment-modal-key",
-    d = () => (0, i.Ry6)(c);
-function _() {
-    a.h.wait(() => {
-        a.h.dispatch({ type: "PAYMENT_MODAL_OPEN" });
-    });
-}
-let f = (e) => {
+let l = "orb-checkout-payment-modal-key",
+    d = () => (0, o.Ry6)(l),
+    p = (e) => {
         let {
                 skuId: t,
                 onCheckoutSuccess: n,
-                analyticsLocations: a = [],
-                analyticsSourceLocation: s,
+                analyticsLocations: i = [],
+                analyticsSourceLocation: _,
                 onCloseCallback: d,
             } = e,
-            _ = (0, r.A)(),
-            f = !1,
-            p = () => {
-                f ||
-                    (0, l.g)(u.HAw.PAYMENT_FLOW_CANCELED, {
-                        loadId: _,
-                        skuId: t,
-                        analyticsLocations: a,
-                        analyticsSourceLocation: s,
-                    }),
-                    (0, i.OoC)(c);
+            p = (0, a.A)(),
+            m = !1;
+        return u({
+            loadId: p,
+            skuId: t,
+            onCheckoutSuccess: (e) => {
+                m || n(e), (m = !0);
             },
-            g = {
-                loadId: _,
-                skuId: t,
-                onCheckoutSuccess: (e) => {
-                    f || n(e), (f = !0);
-                },
-                analyticsLocations: a,
-                analyticsSourceLocation: s,
-                onCloseCallback: () => {
-                    (0, o.S)({ checkoutSucceeded: f }), d?.();
-                },
-                onCloseRequest: p,
-            };
-        return h(g);
+            analyticsLocations: i,
+            analyticsSourceLocation: _,
+            onCloseCallback: () => {
+                (0, r.S)({ checkoutSucceeded: m }), d?.();
+            },
+            onCloseRequest: () => {
+                m ||
+                    (0, c.g)(s.HAw.PAYMENT_FLOW_CANCELED, {
+                        loadId: p,
+                        skuId: t,
+                        analyticsLocations: i,
+                        analyticsSourceLocation: _,
+                    }),
+                    (0, o.OoC)(l);
+            },
+        });
     },
-    h = (e) => {
+    u = (e) => {
         let {
             loadId: t,
             skuId: n,
-            onCheckoutSuccess: r,
-            analyticsLocations: i = [],
-            analyticsSourceLocation: a,
-            onCloseCallback: o,
-            onCloseRequest: l,
+            onCheckoutSuccess: a,
+            analyticsLocations: o = [],
+            analyticsSourceLocation: r,
+            onCloseCallback: c,
+            onCloseRequest: s,
         } = e;
         return (
-            _(),
-            (0, s.Tt)().openCheckoutModal({
+            i.h.wait(() => {
+                i.h.dispatch({ type: "PAYMENT_MODAL_OPEN" });
+            }),
+            (0, _.Tt)().openCheckoutModal({
                 loadId: t,
                 skuId: n,
-                analyticsLocations: i,
-                analyticsSourceLocation: a,
-                flowSpecificOptions: { onCheckoutSuccess: r },
-                openModalOptions: { onCloseCallback: o, modalKey: c, onCloseRequest: l },
+                analyticsLocations: o,
+                analyticsSourceLocation: r,
+                flowSpecificOptions: { onCheckoutSuccess: a },
+                openModalOptions: { onCloseCallback: c, modalKey: l, onCloseRequest: s },
             })
         );
     };

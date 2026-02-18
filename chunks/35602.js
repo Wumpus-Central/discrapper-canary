@@ -1,19 +1,18 @@
-"use strict";
-n.d(t, { I: () => s }), n(321073);
-var r = n(627968);
-n(64700);
-var i = n(397927);
-let a = new (n(626584).A)("MFAPlayground"),
-    s = {
+l.d(a, { I: () => n }), l(321073);
+var t = l(627968);
+l(64700);
+var o = l(397927);
+let s = new (l(626584).A)("MFAPlayground"),
+    n = {
         title: "MFA",
         stories: [
             {
                 name: "Challenge Modal",
                 id: "mfa-modal",
                 component: function (e) {
-                    let { hasPassword: t, hasTotp: s, hasSms: o, hasWebauthn: l, hasBackup: u, simulateError: c } = e,
+                    let { hasPassword: a, hasTotp: n, hasSms: r, hasWebauthn: i, hasBackup: u, simulateError: p } = e,
                         d = [];
-                    l &&
+                    i &&
                         d.push({
                             type: "webauthn",
                             challenge: JSON.stringify({
@@ -26,45 +25,45 @@ let a = new (n(626584).A)("MFAPlayground"),
                                 },
                             }),
                         }),
-                        s && d.push({ type: "totp" }),
-                        o && d.push({ type: "sms" }),
+                        n && d.push({ type: "totp" }),
+                        r && d.push({ type: "sms" }),
                         u && d.push({ type: "backup" }),
-                        t && d.push({ type: "password" });
-                    let _ = d.length > 0 ? d : [{ type: "password" }];
-                    return (0, r.jsxs)(i.BJc, {
+                        a && d.push({ type: "password" });
+                    let c = d.length > 0 ? d : [{ type: "password" }];
+                    return (0, t.jsxs)(o.BJc, {
                         align: "center",
                         children: [
-                            l &&
-                                (0, r.jsx)(i.Text, {
+                            i &&
+                                (0, t.jsx)(o.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
                                     children: "Note: WebAuthn UI will appear but will always error",
                                 }),
-                            (0, r.jsx)(i.Button, {
+                            (0, t.jsx)(o.Button, {
                                 variant: "primary",
                                 text: "Open MFA Modal",
                                 onClick: () => {
                                     let e = {
                                             ticket: `mock-ticket-${Math.random().toString(36).substring(7)}`,
-                                            methods: _,
+                                            methods: c,
                                         },
-                                        t = (e) =>
-                                            new Promise((t, n) => {
-                                                (a.info(`Type: ${e.mfaType}`),
-                                                a.info(`Data: ${e.data}`),
-                                                a.info(`Ticket: ${e.ticket}`),
-                                                c)
-                                                    ? n(Error("simulated error"))
-                                                    : t();
+                                        a = (e) =>
+                                            new Promise((a, l) => {
+                                                (s.info(`Type: ${e.mfaType}`),
+                                                s.info(`Data: ${e.data}`),
+                                                s.info(`Ticket: ${e.ticket}`),
+                                                p)
+                                                    ? l(Error("simulated error"))
+                                                    : a();
                                             });
-                                    (0, i.mMO)(
+                                    (0, o.mMO)(
                                         async () => {
-                                            let { MFAModal: i } = await Promise.all([n.e("88890"), n.e("62564")]).then(
-                                                n.bind(n, 720353),
+                                            let { MFAModal: o } = await Promise.all([l.e("88890"), l.e("62564")]).then(
+                                                l.bind(l, 720353),
                                             );
-                                            return (n) => (0, r.jsx)(i, { ...n, finish: t, mfaChallenge: e });
+                                            return (l) => (0, t.jsx)(o, { ...l, finish: a, mfaChallenge: e });
                                         },
-                                        { onCloseCallback: () => a.info("Modal closed") },
+                                        { onCloseCallback: () => s.info("Modal closed") },
                                     );
                                 },
                             }),

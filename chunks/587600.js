@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { C5: () => s, Sk: () => a, yX: () => i, yg: () => o }), n(321073);
-var r = n(392107);
-function i(e) {
+n.d(t, { C5: () => l, Sk: () => i, yX: () => r, yg: () => s }), n(321073);
+var a = n(392107);
+function r(e) {
     let t = {};
     return (
         void 0 !== e.pendingBanner && (t.banner = e.pendingBanner),
@@ -15,7 +14,7 @@ function i(e) {
         t
     );
 }
-function a(e) {
+function i(e) {
     let t = {};
     if (
         (void 0 !== e.pendingGlobalName && (t.globalName = e.pendingGlobalName),
@@ -25,7 +24,7 @@ function a(e) {
         let { pendingAvatar: n } = e;
         null === n
             ? (t.avatar = null)
-            : n.assetOrigin === r.E.ARCHIVED_ASSET
+            : n.assetOrigin === a.E.ARCHIVED_ASSET
               ? (t.avatarId = n.originalAsset.id)
               : ((t.avatar = n.imageUri), (t.avatarDescription = n.description));
     }
@@ -35,13 +34,13 @@ function a(e) {
         t
     );
 }
-function s(e) {
+function l(e) {
     let t = {};
     if (void 0 !== e.pendingAvatar) {
         let { pendingAvatar: n } = e;
         null === n
             ? (t.avatar = null)
-            : n.assetOrigin === r.E.ARCHIVED_ASSET
+            : n.assetOrigin === a.E.ARCHIVED_ASSET
               ? (t.avatarId = n.originalAsset.id)
               : ((t.avatar = n.imageUri), (t.avatarDescription = n.description));
     }
@@ -53,7 +52,7 @@ function s(e) {
         t
     );
 }
-function o(e) {
+function s(e) {
     let t = {};
     return void 0 !== e.pendingPrimaryGuildId && (t.primaryGuildId = e.pendingPrimaryGuildId), t;
 }

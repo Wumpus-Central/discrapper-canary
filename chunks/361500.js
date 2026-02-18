@@ -1,13 +1,12 @@
-"use strict";
-n.d(t, { t: () => c });
-var r = n(627968),
-    i = n(64700),
-    a = n(397927),
-    s = n(342494),
-    o = n(217838),
-    l = n(972687),
-    u = n(89608);
-let c = {
+a.d(l, { t: () => u });
+var t = a(627968),
+    o = a(64700),
+    n = a(397927),
+    i = a(342494),
+    s = a(217838),
+    r = a(972687),
+    d = a(89608);
+let u = {
     title: "Popover",
     stories: [
         {
@@ -16,46 +15,46 @@ let c = {
             docs: "https://design.discord.tools/components/web/popover",
             component: function (e) {
                 let {
-                        showAsset: t,
-                        showActions: n,
-                        showTextLink: u,
-                        caretAlign: c,
-                        alignmentStrategy: d,
-                        align: _,
-                        size: f,
-                        position: p,
-                        ...h
+                        showAsset: l,
+                        showActions: a,
+                        showTextLink: d,
+                        caretAlign: u,
+                        alignmentStrategy: c,
+                        align: b,
+                        size: p,
+                        position: m,
+                        ...x
                     } = e,
-                    [m, g] = i.useState(!1),
-                    E = i.useRef(null);
-                return (0, r.jsxs)("div", {
+                    [v, h] = o.useState(!1),
+                    y = o.useRef(null);
+                return (0, t.jsxs)("div", {
                     style: { display: "flex", justifyContent: "center", alignItems: "center", minHeight: "400px" },
                     children: [
-                        (0, r.jsx)(
-                            s.AM,
+                        (0, t.jsx)(
+                            i.AM,
                             {
-                                ...h,
-                                position: p,
-                                size: f,
-                                align: _,
-                                alignmentStrategy: d,
-                                targetElementRef: E,
-                                shouldShow: m,
-                                onRequestClose: () => g(!1),
-                                graphic: t ? { type: "image", src: "sm" === f ? l.A : o.A } : void 0,
-                                caretConfig: { align: c },
-                                actions: n ? [{ text: "Close", onClick: () => g(!1) }] : void 0,
-                                textLink: u
+                                ...x,
+                                position: m,
+                                size: p,
+                                align: b,
+                                alignmentStrategy: c,
+                                targetElementRef: y,
+                                shouldShow: v,
+                                onRequestClose: () => h(!1),
+                                graphic: l ? { type: "image", src: "sm" === p ? r.A : s.A } : void 0,
+                                caretConfig: { align: u },
+                                actions: a ? [{ text: "Close", onClick: () => h(!1) }] : void 0,
+                                textLink: d
                                     ? { text: "Learn More", link: "https://discord.com", external: !0 }
                                     : void 0,
                             },
-                            p,
+                            m,
                         ),
-                        (0, r.jsx)(a.Button, {
+                        (0, t.jsx)(n.Button, {
                             variant: "primary",
                             text: "Toggle Popover",
-                            buttonRef: E,
-                            onClick: () => g(!m),
+                            buttonRef: y,
+                            onClick: () => h(!v),
                         }),
                     ],
                 });
@@ -151,32 +150,32 @@ let c = {
             id: "video-popover",
             docs: "https://design.discord.tools/components/web/popover",
             component: function (e) {
-                let { showActions: t, ...n } = e,
-                    [o, l] = i.useState(!1),
-                    u = i.useRef(null);
-                return (0, r.jsxs)("div", {
+                let { showActions: l, ...a } = e,
+                    [s, r] = o.useState(!1),
+                    d = o.useRef(null);
+                return (0, t.jsxs)("div", {
                     children: [
-                        (0, r.jsx)(
-                            s.HZ,
+                        (0, t.jsx)(
+                            i.HZ,
                             {
-                                ...n,
-                                targetElementRef: u,
-                                shouldShow: o,
-                                onRequestClose: () => l(!1),
+                                ...a,
+                                targetElementRef: d,
+                                shouldShow: s,
+                                onRequestClose: () => r(!1),
                                 title: "Video Popover Demo",
                                 body: "Click the video to view it in the media viewer!",
                                 assetUrl:
                                     "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov",
                                 badge: "new",
-                                action: t ? { text: "Learn More", onClick: () => l(!1) } : void 0,
+                                action: l ? { text: "Learn More", onClick: () => r(!1) } : void 0,
                             },
-                            n.position,
+                            a.position,
                         ),
-                        (0, r.jsx)(a.Button, {
+                        (0, t.jsx)(n.Button, {
                             variant: "primary",
                             text: "Show Video Popover",
-                            buttonRef: u,
-                            onClick: () => l(!o),
+                            buttonRef: d,
+                            onClick: () => r(!s),
                         }),
                     ],
                 });
@@ -188,14 +187,14 @@ let c = {
             id: "multi-step-popover",
             docs: "https://design.discord.tools/components/web/popover",
             component: function (e) {
-                let { showExpressive: t, ...n } = e,
-                    [l, c] = i.useState(!1),
-                    d = i.useRef(null),
-                    _ = [
+                let { showExpressive: l, ...a } = e,
+                    [r, u] = o.useState(!1),
+                    c = o.useRef(null),
+                    b = [
                         {
                             title: "Welcome to the Feature!",
                             body: "This is the first step of our multi-step introduction.",
-                            asset: (0, r.jsx)("img", { src: o.A, alt: "Step 1" }),
+                            asset: (0, t.jsx)("img", { src: s.A, alt: "Step 1" }),
                             badge: "new",
                             action: { text: "Next" },
                             gradientColor: "blue",
@@ -203,39 +202,39 @@ let c = {
                         {
                             title: "Learn the Benefits",
                             body: "Here are the amazing benefits you can enjoy with this feature.",
-                            asset: (0, r.jsx)("img", { src: u.A, alt: "Step 2" }),
+                            asset: (0, t.jsx)("img", { src: d.A, alt: "Step 2" }),
                             action: { text: "Continue" },
                             gradientColor: "purple",
                         },
                         {
                             title: "Get Started!",
                             body: "You're all set to begin using this awesome feature.",
-                            asset: (0, r.jsx)("img", { src: o.A, alt: "Step 3" }),
-                            action: { text: "Get Started", variant: t ? "expressive" : void 0 },
+                            asset: (0, t.jsx)("img", { src: s.A, alt: "Step 3" }),
+                            action: { text: "Get Started", variant: l ? "expressive" : void 0 },
                             gradientColor: "nitro-pink",
                             textLink: { text: "Learn More", link: "https://discord.com", external: !0 },
                         },
                     ];
-                return (0, r.jsxs)("div", {
+                return (0, t.jsxs)("div", {
                     children: [
-                        (0, r.jsx)(
-                            s.pu,
+                        (0, t.jsx)(
+                            i.pu,
                             {
-                                ...n,
-                                targetElementRef: d,
-                                shouldShow: l,
-                                onRequestClose: () => c(!1),
-                                steps: _,
+                                ...a,
+                                targetElementRef: c,
+                                shouldShow: r,
+                                onRequestClose: () => u(!1),
+                                steps: b,
                                 caretConfig: { align: "center" },
                                 onStepChange: () => {},
                             },
-                            n.position,
+                            a.position,
                         ),
-                        (0, r.jsx)(a.Button, {
+                        (0, t.jsx)(n.Button, {
                             variant: "primary",
                             text: "Show Multi-Step",
-                            buttonRef: d,
-                            onClick: () => c(!l),
+                            buttonRef: c,
+                            onClick: () => u(!r),
                         }),
                     ],
                 });

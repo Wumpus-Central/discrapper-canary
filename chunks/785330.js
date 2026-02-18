@@ -1,46 +1,46 @@
-"use strict";
-n.d(t, { Ay: () => h, F2: () => d, Qs: () => f });
-var r = n(627968),
-    i = n(64700),
-    a = n(835245),
-    s = n(204990),
-    o = n(604238),
-    l = n(856535);
-function u(e, t) {
-    if ("string" == typeof e) return e;
-    let { block: n, ...i } = e,
-        o = t[n];
-    if (null == o) return null;
-    let l = (() => {
-            if ("children" in e) {
-                if (!Array.isArray(e.children) && null != e.children) return u(e.children, t);
-                if (null != e.children && e.children.length > 0) return e.children.map((e) => u(e, t));
-            }
-            return null;
-        })(),
-        c = s.E.has(n) ? { ...i, componentMap: t } : i;
-    return (0, r.jsx)(o, { ...c, children: l }, (0, a.A)());
+t.d(r, { Ay: () => k, F2: () => u, Qs: () => h });
+var d = t(627968),
+    l = t(64700),
+    c = t(835245),
+    o = t(204990),
+    a = t(604238),
+    n = t(856535);
+function s(e, r) {
+    return e.children.map((e) =>
+        (function e(r, t) {
+            if ("string" == typeof r) return r;
+            let { block: l, ...a } = r,
+                n = t[l];
+            if (null == n) return null;
+            let s = (() => {
+                    if ("children" in r) {
+                        if (!Array.isArray(r.children) && null != r.children) return e(r.children, t);
+                        if (null != r.children && r.children.length > 0) return r.children.map((r) => e(r, t));
+                    }
+                    return null;
+                })(),
+                u = o.E.has(l) ? { ...a, componentMap: t } : a;
+            return (0, d.jsx)(n, { ...u, children: s }, (0, c.A)());
+        })(e, r),
+    );
 }
-function c(e, t) {
-    return e.children.map((e) => u(e, t));
-}
-function d(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.E;
+function u(e) {
+    let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.E;
     try {
-        return c(e, t), !0;
+        return s(e, r), !0;
     } catch (e) {
         return !1;
     }
 }
-let _ = (e) => {
-        let { layout: t, overrides: n } = e,
-            a = (0, o.e)({ overrides: n }),
-            s = i.useMemo(() => c(t, a), [t, a]);
-        return (0, r.jsx)("div", { children: s });
+let i = (e) => {
+        let { layout: r, overrides: t } = e,
+            c = (0, a.e)({ overrides: t }),
+            o = l.useMemo(() => s(r, c), [r, c]);
+        return (0, d.jsx)("div", { children: o });
     },
-    f = (e) => {
-        let { layoutId: t, tenantId: n, overrides: i, requestParams: a } = e,
-            { layout: s } = (0, l.A)(t, n, a);
-        return null == s ? null : (0, r.jsx)(_, { layout: s, overrides: i });
+    h = (e) => {
+        let { layoutId: r, tenantId: t, overrides: l, requestParams: c } = e,
+            { layout: o } = (0, n.A)(r, t, c);
+        return null == o ? null : (0, d.jsx)(i, { layout: o, overrides: l });
     },
-    h = _;
+    k = i;

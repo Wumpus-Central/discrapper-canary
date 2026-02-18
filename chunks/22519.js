@@ -1,14 +1,13 @@
-"use strict";
-n.d(t, { A: () => s });
-var r = n(627968),
-    i = n(856535),
-    a = n(785330);
-let s = (e) => {
-    let { layoutId: t, tenantId: n, skeleton: s, requestParams: o, componentMap: l } = e,
-        { layout: u, loading: c } = (0, i.A)(t, n, o);
-    return c && null != s
-        ? (0, r.jsx)(a.Ay, { overrides: l, layout: { id: "skeleton", children: s } })
-        : null == u
+t.d(r, { A: () => o });
+var d = t(627968),
+    l = t(856535),
+    c = t(785330);
+let o = (e) => {
+    let { layoutId: r, tenantId: t, skeleton: o, requestParams: a, componentMap: n } = e,
+        { layout: s, loading: u } = (0, l.A)(r, t, a);
+    return u && null != o
+        ? (0, d.jsx)(c.Ay, { overrides: n, layout: { id: "skeleton", children: o } })
+        : null == s
           ? null
-          : (0, r.jsx)(a.Ay, { layout: u, overrides: l });
+          : (0, d.jsx)(c.Ay, { layout: s, overrides: n });
 };

@@ -3,7 +3,7 @@ var i = n(627968);
 n(64700);
 var l = n(554146),
     s = n(116833),
-    a = n(43105),
+    a = n(265486),
     r = n(942857),
     o = n(793574),
     d = n(379848),
@@ -11,8 +11,8 @@ var l = n(554146),
     u = n(997509),
     h = n(757036),
     A = n(363487),
-    m = n(828162),
-    p = n(652215),
+    p = n(828162),
+    m = n(652215),
     g = n(49999),
     _ = n(985018);
 function f(e) {
@@ -56,7 +56,7 @@ function f(e) {
                                       d(g.i.TAKE_ACTION),
                                           u.A.open(
                                               t,
-                                              p.BEX.BOOST_PERKS,
+                                              m.BEX.BOOST_PERKS,
                                               o.A.GUILD_BOOSTING_PROGRESS_BAR_ADMIN_COACHMARK,
                                           );
                                   },
@@ -88,7 +88,7 @@ function f(e) {
                                     variant: "primary",
                                     onClick: () => {
                                         d(g.i.TAKE_ACTION),
-                                            (0, m.A)(t, o.A.GUILD_BOOSTING_PROGRESS_BAR_MEMBER_COACHMARK);
+                                            (0, p.A)(t, o.A.GUILD_BOOSTING_PROGRESS_BAR_MEMBER_COACHMARK);
                                     },
                                 },
                             ],

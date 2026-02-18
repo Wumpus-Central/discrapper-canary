@@ -1,49 +1,50 @@
-l.d(t, { default: () => b });
-var n = l(627968),
-    d = l(64700),
-    a = l(158954),
-    r = l(450507),
-    o = l(397927),
-    i = l(256311),
-    s = l(954571),
+"use strict";
+l.d(t, { default: () => g });
+var a = l(627968),
+    n = l(64700),
+    r = l(158954),
+    s = l(450507),
+    i = l(397927),
+    o = l(256311),
+    d = l(954571),
     c = l(824611),
-    _ = l(45813),
-    m = l(559868),
-    h = l(652215),
-    u = l(985018);
-class g extends d.PureComponent {
+    u = l(45813),
+    _ = l(559868),
+    m = l(652215),
+    h = l(985018);
+class p extends n.PureComponent {
     maxScrolledPercentage = 0;
     mountedAt = 0;
     componentDidMount() {
-        (this.mountedAt = Date.now()), (this.maxScrolledPercentage = 0), this.track(h.HAw.CHANGE_LOG_OPENED, {}, !0);
+        (this.mountedAt = Date.now()), (this.maxScrolledPercentage = 0), this.track(m.HAw.CHANGE_LOG_OPENED, {}, !0);
     }
-    close = () => ((0, o.OoC)(m.lb), Promise.resolve());
+    close = () => ((0, i.OoC)(_.lb), Promise.resolve());
     handleScroll = (e) => {
-        let { offsetHeight: t, scrollHeight: l, scrollTop: n } = e.getScrollerState();
-        this.maxScrolledPercentage = Math.min(Math.max(this.maxScrolledPercentage, n / (l - t)), 1);
+        let { offsetHeight: t, scrollHeight: l, scrollTop: a } = e.getScrollerState();
+        this.maxScrolledPercentage = Math.min(Math.max(this.maxScrolledPercentage, a / (l - t)), 1);
     };
     track = (() => {
         var e = this;
         return function (t) {
             let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                { changeLog: d } = e.props,
-                { date: a, revision: r } = d,
-                o = { change_log_id: `${a}:${r}`, ...l };
-            n ||
-                (o = {
+                a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                { changeLog: n } = e.props,
+                { date: r, revision: s } = n,
+                i = { change_log_id: `${r}:${s}`, ...l };
+            a ||
+                (i = {
                     seconds_open: Math.round((Date.now() - e.mountedAt) / 1e3),
                     max_scrolled_percentage: 100 * parseInt(e.maxScrolledPercentage.toPrecision(4), 10),
-                    ...o,
+                    ...i,
                 }),
-                s.default.track(t, o);
+                d.default.track(t, i);
         };
     })();
     componentWillUnmount() {
-        this.track(h.HAw.CHANGE_LOG_CLOSED);
+        this.track(m.HAw.CHANGE_LOG_CLOSED);
     }
     render() {
-        return (0, n.jsx)(_.A, {
+        return (0, a.jsx)(u.A, {
             ...this.props,
             changeLog: this.props.changeLog,
             onClose: this.close,
@@ -52,26 +53,26 @@ class g extends d.PureComponent {
         });
     }
 }
-function b(e) {
-    let { changelog: t, loaded: l, clientTooOld: o } = (0, c.J)();
+function g(e) {
+    let { changelog: t, loaded: l, clientTooOld: i } = (0, c.J)();
     if (
-        (d.useEffect(() => {
-            if (l && null != t) return () => i.A.markChangelogAsSeen(t.id, t.date);
+        (n.useEffect(() => {
+            if (l && null != t) return () => o.A.markChangelogAsSeen(t.id, t.date);
         }, [l, t]),
-        o)
+        i)
     )
-        return (0, n.jsx)(a.Modal, {
-            title: u.intl.string(u.t.V9ospk),
-            actions: [{ text: u.intl.string(u.t.BddRzS), onClick: e.onClose }],
+        return (0, a.jsx)(r.Modal, {
+            title: h.intl.string(h.t.V9ospk),
+            actions: [{ text: h.intl.string(h.t.BddRzS), onClick: e.onClose }],
             ...e,
         });
     if (null == t)
         if (l)
-            return (0, n.jsx)(a.Modal, {
-                title: u.intl.string(u.t.O1iRT8),
-                actions: [{ text: u.intl.string(u.t.BddRzS), onClick: e.onClose }],
+            return (0, a.jsx)(r.Modal, {
+                title: h.intl.string(h.t.O1iRT8),
+                actions: [{ text: h.intl.string(h.t.BddRzS), onClick: e.onClose }],
                 ...e,
             });
-        else return (0, r.A)(e);
-    return (0, n.jsx)(g, { ...e, changeLog: t });
+        else return (0, s.A)(e);
+    return (0, a.jsx)(p, { ...e, changeLog: t });
 }

@@ -1,5 +1,4 @@
-"use strict";
-function r(e, t) {
-    return e - t * Math.floor(e / t);
+t.d(a, { z: () => r });
+function r(e, a) {
+    return e - a * Math.floor(e / a);
 }
-n.d(t, { z: () => r });

@@ -1,61 +1,60 @@
-"use strict";
-n.d(t, { A: () => y, L: () => T });
-var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(311907),
-    l = n(230109),
-    u = n(732955),
-    c = n(688810),
-    d = n(895944),
-    _ = n(649032),
-    f = n(954571),
-    h = n(570627),
-    p = n(128620),
-    g = n(652215),
-    E = n(49370),
-    A = n(985018),
-    I = n(609195);
-let T = "orbs",
-    y = (e) => {
-        let { className: t, location: n } = e,
-            a = h.m.useConfig({ location: "PremiumTenureRewardsOrbsSection" }).enabled,
-            { analyticsLocations: y } = (0, c.Ay)(n),
-            S = i.useRef(null),
-            v = i.useRef(!1),
-            C = (0, o.bG)([d.A], () => d.A.getRewardForProgram(_.W.NITRO));
-        return (0, o.bG)([d.A], () => d.A.passesGeneralUIInvariant(_.W.NITRO))
-            ? (0, r.jsx)(c.f5, {
-                  value: y,
-                  children: (0, r.jsx)(l.L, {
-                      innerRef: S,
+r.d(t, { A: () => v, L: () => R });
+var n = r(627968),
+    a = r(64700),
+    l = r(503698),
+    s = r.n(l),
+    i = r(311907),
+    d = r(230109),
+    u = r(732955),
+    o = r(688810),
+    c = r(895944),
+    m = r(649032),
+    p = r(954571),
+    h = r(570627),
+    g = r(128620),
+    x = r(652215),
+    b = r(49370),
+    f = r(985018),
+    _ = r(609195);
+let R = "orbs",
+    v = (e) => {
+        let { className: t, location: r } = e,
+            l = h.m.useConfig({ location: "PremiumTenureRewardsOrbsSection" }).enabled,
+            { analyticsLocations: v } = (0, o.Ay)(r),
+            N = a.useRef(null),
+            A = a.useRef(!1),
+            E = (0, i.bG)([c.A], () => c.A.getRewardForProgram(m.W.NITRO));
+        return (0, i.bG)([c.A], () => c.A.passesGeneralUIInvariant(m.W.NITRO))
+            ? (0, n.jsx)(o.f5, {
+                  value: v,
+                  children: (0, n.jsx)(d.L, {
+                      innerRef: N,
                       onChange: (e) => {
                           e &&
-                              !v.current &&
-                              ((v.current = !0),
-                              f.default.track(g.HAw.PREMIUM_TENURE_REWARDS_ORBS_SECTION_IMPRESSION, {
-                                  program_state: C?.program_current_state,
+                              !A.current &&
+                              ((A.current = !0),
+                              p.default.track(x.HAw.PREMIUM_TENURE_REWARDS_ORBS_SECTION_IMPRESSION, {
+                                  program_state: E?.program_current_state,
                               }));
                       },
                       threshold: 0.5,
-                      children: (0, r.jsxs)("div", {
-                          ref: S,
-                          id: T,
-                          className: s()(I.uW, I.Uv, I.qr, t, { [I.J4]: a }),
+                      children: (0, n.jsxs)("div", {
+                          ref: N,
+                          id: R,
+                          className: s()(_.uW, _.Uv, _.qr, t, { [_.J4]: l }),
                           children: [
-                              (0, r.jsx)(u.DZT, {
-                                  variant: a ? "display-sm" : "heading-xxl/extrabold",
-                                  className: I.R_,
+                              (0, n.jsx)(u.DZT, {
+                                  variant: l ? "display-sm" : "heading-xxl/extrabold",
+                                  className: _.R_,
                                   style: { textAlign: "start" },
-                                  children: A.intl.string(E.default.EdGvBM),
+                                  children: f.intl.string(b.default.EdGvBM),
                               }),
-                              (0, r.jsx)(u.EYj, {
+                              (0, n.jsx)(u.EYj, {
                                   variant: "text-lg/normal",
-                                  className: s()(I.VA, I.dO),
-                                  children: A.intl.string(E.default["2KoHRF"]),
+                                  className: s()(_.VA, _.dO),
+                                  children: f.intl.string(b.default["2KoHRF"]),
                               }),
-                              (0, r.jsx)(p.A, {}),
+                              (0, n.jsx)(g.A, {}),
                           ],
                       }),
                   }),

@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container_b27fdc",
     nj: "tierTextInfoContainer_b27fdc",

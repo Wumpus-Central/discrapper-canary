@@ -1,9 +1,10 @@
-i.d(t, { A: () => s });
+"use strict";
+i.d(t, { A: () => a });
 var n = i(64700),
-    r = i(607399),
-    a = i(437852),
+    s = i(607399),
+    r = i(437852),
     l = i(657515);
-function s() {
-    let { enabled: e } = a.Ay.useConfig({ location: "useGiftingPromotionConfig" });
-    return n.useMemo(() => (r.Fr || r.v1 ? null : e ? l.zH : null), [e]);
+function a() {
+    let { enabled: e } = r.Ay.useConfig({ location: "useGiftingPromotionConfig" });
+    return n.useMemo(() => (s.Fr || s.v1 ? null : e ? l.zH : null), [e]);
 }

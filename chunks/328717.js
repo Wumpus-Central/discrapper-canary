@@ -1,9 +1,9 @@
 n.d(t, { A: () => m });
 var i = n(627968);
 n(64700);
-var r = n(43105),
-    a = n(397927),
-    l = n(793574),
+var r = n(265486),
+    l = n(397927),
+    a = n(793574),
     s = n(688810),
     o = n(927578),
     d = n(511484),
@@ -14,8 +14,8 @@ var r = n(43105),
     _ = n(398932);
 let m = (e) => {
     let { targetElementRef: t, discountOffer: m, premiumSubscription: p, dismissCoachmark: g, children: E } = e,
-        { analyticsLocations: f } = (0, s.Ay)(l.A.CHURN_DISCOUNT_POPOVER),
-        I = (0, d.iU)(u.gD.PREMIUM_MONTH_TIER_2, m, p),
+        { analyticsLocations: I } = (0, s.Ay)(a.A.CHURN_DISCOUNT_POPOVER),
+        f = (0, d.iU)(u.gD.PREMIUM_MONTH_TIER_2, m, p),
         C = (0, i.jsx)(r.h, {
             targetElementRef: t,
             position: "right",
@@ -24,7 +24,7 @@ let m = (e) => {
             caretConfig: { align: "start" },
             title: h.intl.format(h.t["3yZP0G"], { percent: m.discount.amount }).toString(),
             body: h.intl.format(h.t["3Q4wCy"], {
-                discountedPrice: I,
+                discountedPrice: f,
                 billingPeriod: (0, o.Ke)(m.discount.user_usage_limit_interval),
                 numMonths: m.discount.user_usage_limit,
             }),
@@ -36,7 +36,7 @@ let m = (e) => {
                     variant: "expressive",
                     onClick: () => {
                         g(A.i.TAKE_ACTION),
-                            (0, a.mMO)(async () => {
+                            (0, l.mMO)(async () => {
                                 let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await n
                                     .e("72820")
                                     .then(n.bind(n, 281439));
@@ -44,12 +44,12 @@ let m = (e) => {
                                     (0, i.jsx)(e, {
                                         ...t,
                                         premiumSubscription: p,
-                                        analyticsLocations: f,
+                                        analyticsLocations: I,
                                         initialStep: c.g.CONFIRM_DISCOUNT,
                                     });
                             });
                     },
-                    icon: a.tvc,
+                    icon: l.tvc,
                 },
             ],
             onRequestClose: () => {

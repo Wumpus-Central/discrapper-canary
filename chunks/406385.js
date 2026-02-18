@@ -1,81 +1,80 @@
-"use strict";
-n.d(t, { AU: () => A, Ey: () => y, QF: () => T, do: () => g, eC: () => E });
+n.d(t, { AU: () => g, Ey: () => A, QF: () => C, do: () => v, eC: () => h });
 var r = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(522160),
-    l = n(827734),
+    l = n(64700),
+    i = n(503698),
+    s = n.n(i),
+    a = n(522160),
+    o = n(827734),
     u = n(876230),
     c = n(61491),
     d = n(435371),
-    _ = n(397927),
-    f = n(985018),
-    h = n(681636);
-let p = "-:--",
-    g = 1500,
-    E = {
-        [u.Q6.PLAYING]: { icon: _.E$n, label: f.intl.string(f.t.ZcgDJX) },
-        [u.Q6.PAUSED]: { icon: _.udU, label: f.intl.string(f.t.RscU7I) },
-        [u.Q6.ENDED]: { icon: _.mqY, label: f.intl.string(f.t.hsvh0i) },
+    m = n(397927),
+    p = n(985018),
+    E = n(681636);
+let f = "-:--",
+    v = 1500,
+    h = {
+        [u.Q6.PLAYING]: { icon: m.E$n, label: p.intl.string(p.t.ZcgDJX) },
+        [u.Q6.PAUSED]: { icon: m.udU, label: p.intl.string(p.t.RscU7I) },
+        [u.Q6.ENDED]: { icon: m.mqY, label: p.intl.string(p.t.hsvh0i) },
     },
-    A = { [u.oA.MD]: u.n4.MD, [u.oA.LG]: u.n4.LG },
-    I = { [u.n4.MD]: "md", [u.n4.LG]: "lg" };
-function T(e) {
+    g = { [u.oA.MD]: u.n4.MD, [u.oA.LG]: u.n4.LG },
+    S = { [u.n4.MD]: "md", [u.n4.LG]: "lg" };
+function C(e) {
     let { current: t, duration: n } = e,
-        i = null != t ? (0, c.rB)(t) : p,
-        a = null != n ? (0, c.rB)(n) : p;
+        l = null != t ? (0, c.rB)(t) : f,
+        i = null != n ? (0, c.rB)(n) : f;
     return (0, r.jsxs)("div", {
-        className: s()(h.d$, h.jk),
+        className: s()(E.d$, E.jk),
         "data-testid": "discord-web-video-player-duration",
         children: [
-            (0, r.jsx)(_.Text, { variant: "text-xs/normal", className: h.Ue, children: i }),
-            (0, r.jsx)(_.Text, { variant: "text-xs/normal", className: h.zO, children: "/" }),
-            (0, r.jsx)(_.Text, { variant: "text-xs/normal", className: h.Ue, children: a }),
+            (0, r.jsx)(m.Text, { variant: "text-xs/normal", className: E.Ue, children: l }),
+            (0, r.jsx)(m.Text, { variant: "text-xs/normal", className: E.zO, children: "/" }),
+            (0, r.jsx)(m.Text, { variant: "text-xs/normal", className: E.Ue, children: i }),
         ],
     });
 }
-let y = i.forwardRef(function (e, t) {
+let A = l.forwardRef(function (e, t) {
     let {
             iconComponent: n,
-            animationTime: i,
-            visible: a,
+            animationTime: l,
+            visible: i,
             ariaLabel: c,
-            active: f,
-            disabled: p,
-            tooltipLabel: E,
-            tooltipDelayMs: A = g,
-            shortcut: T,
-            onClick: y,
-            buttonSize: S = u.n4.MD,
-            "data-testid": v,
+            active: p,
+            disabled: f,
+            tooltipLabel: h,
+            tooltipDelayMs: g = v,
+            shortcut: C,
+            onClick: A,
+            buttonSize: x = u.n4.MD,
+            "data-testid": _,
         } = e,
-        C = (e) =>
-            (0, r.jsx)(_.DUT, {
+        b = (e) =>
+            (0, r.jsx)(m.DUT, {
                 ...e,
-                onClick: !0 === p ? void 0 : y,
-                className: s()(h.K5, { [h.Iy]: p }),
+                onClick: !0 === f ? void 0 : A,
+                className: s()(E.K5, { [E.Iy]: f }),
                 "aria-label": c,
-                "aria-disabled": p,
-                "data-testid": v,
+                "aria-disabled": f,
+                "data-testid": _,
                 innerRef: t,
-                children: (0, r.jsx)(o.animated.div, {
-                    className: h.K5,
+                children: (0, r.jsx)(a.animated.div, {
+                    className: E.K5,
                     style: {
-                        opacity: (0, o.to)(
-                            [i.to({ range: [0, 1], output: [0, 1] })],
-                            (e) => `${a ? e : Math.pow(e, 8)}`,
+                        opacity: (0, a.to)(
+                            [l.to({ range: [0, 1], output: [0, 1] })],
+                            (e) => `${i ? e : Math.pow(e, 8)}`,
                         ),
-                        height: { [u.n4.LG]: "32px", [u.n4.MD]: "24px" }[S],
+                        height: { [u.n4.LG]: "32px", [u.n4.MD]: "24px" }[x],
                     },
                     children: (0, r.jsx)(n, {
-                        size: I[S],
-                        color: !0 !== p ? l.A.colors.WHITE : l.A.colors.TEXT_MUTED,
-                        className: s()(h.jk, { [h.x2]: f, [h.Wr]: !p }),
+                        size: S[x],
+                        color: !0 !== f ? o.A.colors.WHITE : o.A.colors.TEXT_MUTED,
+                        className: s()(E.jk, { [E.x2]: p, [E.Wr]: !f }),
                     }),
                 }),
             });
-    return null != E && a
-        ? (0, r.jsx)(d.m_, { text: E, keyboardShortcut: "" !== (T ?? "").trim() ? T : void 0, delay: A, children: C() })
-        : C();
+    return null != h && i
+        ? (0, r.jsx)(d.m_, { text: h, keyboardShortcut: "" !== (C ?? "").trim() ? C : void 0, delay: g, children: b() })
+        : b();
 });

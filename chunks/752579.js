@@ -1,31 +1,27 @@
-"use strict";
-n.d(t, { w: () => a });
-var r = n(64700);
-function i() {
-    return void 0 !== window.ResizeObserver;
-}
-function a(e) {
-    let { ref: t, box: n, onResize: a } = e;
+t.d(a, { w: () => n });
+var r = t(64700);
+function n(e) {
+    let { ref: a, box: t, onResize: n } = e;
     (0, r.useEffect)(() => {
-        let e = null == t ? void 0 : t.current;
+        let e = null == a ? void 0 : a.current;
         if (e)
-            if (!i())
+            if (void 0 === window.ResizeObserver)
                 return (
-                    window.addEventListener("resize", a, !1),
+                    window.addEventListener("resize", n, !1),
                     () => {
-                        window.removeEventListener("resize", a, !1);
+                        window.removeEventListener("resize", n, !1);
                     }
                 );
             else {
-                let t = new window.ResizeObserver((e) => {
-                    e.length && a();
+                let a = new window.ResizeObserver((e) => {
+                    e.length && n();
                 });
                 return (
-                    t.observe(e, { box: n }),
+                    a.observe(e, { box: t }),
                     () => {
-                        e && t.unobserve(e);
+                        e && a.unobserve(e);
                     }
                 );
             }
-    }, [a, t, n]);
+    }, [n, a, t]);
 }

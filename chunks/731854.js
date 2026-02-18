@@ -2,68 +2,68 @@
 n.d(t, {
     $I: () => o,
     Al: () => u,
-    Bb: () => k,
-    CO: () => ei,
-    Cl: () => P,
+    Bb: () => P,
+    CO: () => er,
+    Cl: () => x,
     Cn: () => _,
-    Dk: () => K,
+    Dk: () => W,
     Hz: () => d,
-    K3: () => er,
-    KR: () => b,
-    Ku: () => q,
-    ME: () => Q,
+    K3: () => en,
+    KR: () => N,
+    Ku: () => $,
+    ME: () => X,
     O5: () => z,
     PR: () => f,
-    QP: () => v,
-    TB: () => s,
-    U9: () => et,
+    QP: () => y,
+    TB: () => a,
+    U9: () => ee,
     UK: () => Z,
-    X1: () => W,
-    XA: () => w,
-    Xg: () => T,
-    Xk: () => U,
-    Y4: () => x,
-    YU: () => Y,
-    Zi: () => I,
+    X1: () => Y,
+    XA: () => L,
+    Xg: () => I,
+    Xk: () => k,
+    Y4: () => w,
+    YU: () => j,
+    Zi: () => A,
     aE: () => M,
-    d_: () => y,
-    dx: () => p,
+    d_: () => T,
+    dx: () => h,
     eQ: () => H,
-    ei: () => ee,
+    ei: () => J,
     fS: () => r.fS,
-    fd: () => en,
-    kO: () => h,
-    kc: () => L,
-    l2: () => C,
-    lo: () => V,
-    mI: () => J,
-    n8: () => R,
-    nJ: () => j,
+    fd: () => et,
+    kO: () => p,
+    kc: () => D,
+    l2: () => v,
+    lo: () => F,
+    mI: () => Q,
+    n8: () => b,
+    nJ: () => B,
     nO: () => S,
-    oL: () => B,
-    oh: () => a,
-    q5: () => G,
+    oL: () => V,
+    oh: () => s,
+    q5: () => U,
     qe: () => E,
-    qm: () => O,
+    qm: () => R,
     r8: () => c,
-    rB: () => X,
-    sG: () => D,
-    tl: () => $,
-    us: () => N,
-    vt: () => g,
+    rB: () => q,
+    sG: () => O,
+    tl: () => K,
+    us: () => C,
+    vt: () => m,
     x: () => i,
-    yS: () => F,
+    yS: () => G,
     yt: () => l,
-    zt: () => A,
+    zt: () => g,
 });
 var r = n(141931),
     i = (function (e) {
         return (e.DEFAULT = "default"), (e.STREAM = "stream"), e;
     })({}),
-    a = (function (e) {
+    s = (function (e) {
         return (e.AUDIO_INPUT = "audioinput"), (e.AUDIO_OUTPUT = "audiooutput"), (e.VIDEO_INPUT = "videoinput"), e;
     })({}),
-    s = (function (e) {
+    a = (function (e) {
         return (e.PUSH_TO_TALK = "PUSH_TO_TALK"), (e.VOICE_ACTIVITY = "VOICE_ACTIVITY"), e;
     })({}),
     o = (function (e) {
@@ -104,34 +104,34 @@ var r = n(141931),
 let d = 100,
     _ = 18,
     f = 64e3,
-    h = 128e3,
-    p = "default",
-    g = /^Default/,
+    p = 128e3,
+    h = "default",
+    m = /^Default/,
     E = "disabled",
-    A = 0.1,
-    I = -40,
-    T = -25,
-    y = 1 / 15,
+    g = 0.1,
+    A = -40,
+    I = -25,
+    T = 1 / 15,
     S = 0.8,
-    v = 0.4,
-    C = 6e5,
-    b = 16e3,
-    N = 1e7,
-    R = 5e3,
-    O = 15e3,
-    D = 30,
-    L = 20,
-    w = 12,
-    x = 100,
-    P = 50,
+    y = 0.4,
+    v = 6e5,
+    N = 16e3,
+    C = 1e7,
+    b = 5e3,
+    R = 15e3,
+    O = 30,
+    D = 20,
+    L = 12,
+    w = 100,
+    x = 50,
     M = 1280,
-    k = 720,
-    U = 30,
-    G = 15e5,
-    F = 5e5,
-    V = 35e5,
-    B = 9e6,
-    j = [
+    P = 720,
+    k = 30,
+    U = 15e5,
+    G = 5e5,
+    F = 35e5,
+    V = 9e6,
+    B = [
         "remoteSinkWantsPixelCount",
         "remoteSinkWantsMaxFramerate",
         "encodingVideoMinBitRate",
@@ -146,10 +146,10 @@ let d = 100,
         desktopBitrate: { min: 5e5, max: 35e5, target: 6e5 },
         videoBitrateFloor: 15e4,
     },
-    Y = 0.02,
-    W = 6e4,
-    K = ">=22.0.0",
-    $ = 9e5;
+    j = 0.02,
+    Y = 6e4,
+    W = ">=22.0.0",
+    K = 9e5;
 var z = (function (e) {
         return (
             (e.AUTO_ENABLE = "AUTO_ENABLE"),
@@ -216,10 +216,10 @@ var z = (function (e) {
             e
         );
     })({}),
-    q = (function (e) {
+    $ = (function (e) {
         return (e.NATIVE = "NATIVE"), (e.WEBRTC = "WEBRTC"), (e.DUMMY = "DUMMY"), e;
     })({}),
-    X = (function (e) {
+    q = (function (e) {
         return (
             (e.LEGACY = "legacy"),
             (e.STANDARD = "standard"),
@@ -240,7 +240,7 @@ var z = (function (e) {
             e
         );
     })({}),
-    Q = (function (e) {
+    X = (function (e) {
         return (
             (e[(e.NONE = 0)] = "NONE"),
             (e[(e.VOICE = 1)] = "VOICE"),
@@ -250,16 +250,16 @@ var z = (function (e) {
             e
         );
     })({}),
-    J = (function (e) {
+    Q = (function (e) {
         return (e.AUDIO = "audio"), (e.VIDEO = "video"), (e.SCREEN = "screen"), (e.TEST = "test"), e;
     })({}),
-    ee = (function (e) {
+    J = (function (e) {
         return (e.FIXED = "fixed"), (e.SOURCE = "source"), e;
     })({}),
-    et = (function (e) {
+    ee = (function (e) {
         return (e.REMB = "remb"), e;
     })({}),
-    en = (function (e) {
+    et = (function (e) {
         return (
             (e.VIDEOTOOLBOX_RATE_CONTROL = "videotoolbox_rate_control"),
             (e.SIGNAL_AV1 = "signal_av1"),
@@ -281,10 +281,10 @@ var z = (function (e) {
             e
         );
     })({}),
-    er = (function (e) {
+    en = (function (e) {
         return (e[(e.AUTO = 1)] = "AUTO"), (e[(e.FULL = 2)] = "FULL"), e;
     })({}),
-    ei = (function (e) {
+    er = (function (e) {
         return (
             (e[(e.CPU_OVERUSE = 1)] = "CPU_OVERUSE"),
             (e[(e.FAILED = 2)] = "FAILED"),

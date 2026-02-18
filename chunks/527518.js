@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { c$: () => c });
-var r = n(627968),
-    i = n(162097),
-    a = n(142270),
-    s = n(240248),
-    o = n(652215),
-    l = n(985018),
-    u = n(749226);
+l.d(t, { c$: () => c });
+var a = l(627968),
+    n = l(162097),
+    r = l(142270),
+    i = l(240248),
+    s = l(652215),
+    o = l(985018),
+    u = l(749226);
 let c = {
     title: "Balance Widget",
     stories: [
@@ -14,12 +13,12 @@ let c = {
             name: "Balance Widget Card",
             id: "balance-widget-card",
             component: (e) => {
-                let { ctaText: t, linkText: n, linkPreText: a } = e;
-                return (0, r.jsx)(i.b, {
-                    ctaText: (0, s.uJ)(t) ? l.intl.string(l.t.H57f41) : t,
-                    linkText: (0, s.uJ)(n) ? l.intl.string(l.t["7f4H7D"]) : n,
-                    linkPreText: (0, s.uJ)(a) ? void 0 : a,
-                    ctaOnClick: o.tEg,
+                let { ctaText: t, linkText: l, linkPreText: r } = e;
+                return (0, a.jsx)(n.b, {
+                    ctaText: (0, i.uJ)(t) ? o.intl.string(o.t.H57f41) : t,
+                    linkText: (0, i.uJ)(l) ? o.intl.string(o.t["7f4H7D"]) : l,
+                    linkPreText: (0, i.uJ)(r) ? void 0 : r,
+                    ctaOnClick: s.tEg,
                 });
             },
             controls: {
@@ -32,16 +31,16 @@ let c = {
             name: "Balance Widget Menu",
             id: "balance-widget-menu",
             component: (e) => {
-                let { ctaText: t, linkText: n, showNotificationBadge: i, cardAlignment: c } = e;
-                return (0, r.jsx)("div", {
+                let { ctaText: t, linkText: l, showNotificationBadge: n, cardAlignment: c } = e;
+                return (0, a.jsx)("div", {
                     className: u.tH,
-                    children: (0, r.jsx)(a.SS, {
+                    children: (0, a.jsx)(r.SS, {
                         className: u.oz,
-                        ctaText: (0, s.uJ)(t) ? l.intl.string(l.t["J+vlIR"]) : t,
-                        ctaOnClick: o.tEg,
-                        showNotificationBadge: i,
+                        ctaText: (0, i.uJ)(t) ? o.intl.string(o.t["J+vlIR"]) : t,
+                        ctaOnClick: s.tEg,
+                        showNotificationBadge: n,
                         cardAlignment: c,
-                        linkText: (0, s.uJ)(n) ? l.intl.string(l.t.XRdyjz) : n,
+                        linkText: (0, i.uJ)(l) ? o.intl.string(o.t.XRdyjz) : l,
                     }),
                 });
             },
@@ -52,10 +51,10 @@ let c = {
                     label: "Card Alignment",
                     type: "select",
                     options: [
-                        { label: "Start", value: a.cP.START },
-                        { label: "End", value: a.cP.END },
+                        { label: "Start", value: r.cP.START },
+                        { label: "End", value: r.cP.END },
                     ],
-                    defaultValue: a.cP.START,
+                    defaultValue: r.cP.START,
                 },
                 linkText: { label: "Link Text", type: "text", defaultValue: "" },
             },
