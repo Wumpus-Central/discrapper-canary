@@ -2,7 +2,7 @@
 n.d(t, {
     $Q: () => K,
     $k: () => eR,
-    Ay: () => tB,
+    Ay: () => tH,
     CC: () => C.CC,
     D8: () => X,
     Dd: () => ei,
@@ -17,6 +17,7 @@ n.d(t, {
     JM: () => B,
     Ke: () => Z,
     LE: () => eW,
+    L_: () => tG,
     Mn: () => ee,
     Nc: () => ey,
     OU: () => eo,
@@ -28,7 +29,7 @@ n.d(t, {
     RH: () => en,
     TW: () => C.ki,
     Tm: () => eu,
-    To: () => tF,
+    To: () => tV,
     U8: () => $,
     UC: () => z,
     Uf: () => eO,
@@ -45,7 +46,6 @@ n.d(t, {
     iv: () => tk,
     jh: () => eL,
     ji: () => eA,
-    k8: () => tG,
     kX: () => eS,
     ki: () => eM,
     m6: () => J,
@@ -1342,11 +1342,16 @@ function tk(e) {
     }, 0);
 }
 let tU = (e) => {
-    let { subscriptionPlan: t, isGift: n = !1, priceOptions: r = {} } = e,
-        i = D.En[t.skuId];
-    return null == i ? null : H(i, !1, n, r);
-};
-function tG(e) {
+        let { subscriptionPlan: t, isGift: n = !1, priceOptions: r = {} } = e,
+            i = D.En[t.skuId];
+        return null == i ? null : H(i, !1, n, r);
+    },
+    tG = (e) => {
+        let { planId: t, shouldUseCalculatedDiscount: n, isGift: r, priceOptions: i, subscriptionPlan: s } = e,
+            a = D.XE[t];
+        return n && (a = tF(s, r, i)), a;
+    };
+function tF(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     if (e.interval !== D.WT.YEAR) return;
@@ -1355,13 +1360,13 @@ function tG(e) {
     let i = H(e.id, !1, t, n);
     if (0 !== r.amount) return Math.floor(100 * (1 - i.amount / (12 * r.amount)));
 }
-function tF(e) {
+function tV(e) {
     return null == e ? 0 : Math.max((0, T.m_)(new Date(), new Date(e)), 0);
 }
-function tV(e) {
+function tB(e) {
     return Math.max(1, Math.ceil((0, T.c_)(new Date(e.currentPeriodEnd), new Date())));
 }
-let tB = Object.freeze({
+let tH = Object.freeze({
     isNewUser: e7,
     isPremiumAtLeast: C.CC,
     isPremium: C.ki,
@@ -1407,9 +1412,9 @@ let tB = Object.freeze({
     getPremiumGradientColor: e5,
     getUnactivatedFractionalPremiumHours: tP,
     castPremiumSubscriptionAsSkuId: tv,
-    calculateDiscountPercentageForYearlyPlan: tG,
-    getDaysSincePremium: tF,
-    getDaysRemainingUntilSubscriptionCurrentPeriodEnds: tV,
+    calculateDiscountPercentageForYearlyPlan: tF,
+    getDaysSincePremium: tV,
+    getDaysRemainingUntilSubscriptionCurrentPeriodEnds: tB,
     canUseAnimatedEmojis: e8,
     canUseEmojisEverywhere: e9,
     canUseSoundboardEverywhere: te,

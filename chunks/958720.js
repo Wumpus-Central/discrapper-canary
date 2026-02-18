@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => v, R: () => S });
+n.d(t, { A: () => S, g: () => T });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(284009),
     l = n.n(o),
     u = n(311907),
@@ -11,198 +11,189 @@ var r = n(627968),
     d = n(854354),
     _ = n(93159),
     f = n(937008),
-    h = n(97352),
-    p = n(252424),
-    g = n(927578),
+    p = n(97352),
+    h = n(252424),
+    m = n(927578),
     E = n(580630),
-    A = n(788868),
-    I = n(985018),
-    T = n(371894);
-let y = (e) => {
-        let { planId: t, shouldUseCalculatedDiscount: n, isGift: r, priceOptions: i, subscriptionPlan: a } = e,
-            s = A.XE[t];
-        return n && (s = (0, g.k8)(a, r, i)), s;
-    },
-    S = (e) => {
-        let {
-                planId: t,
-                disabled: n,
-                userLocale: r,
-                discountOffer: i,
-                priceOptions: a,
-                shouldUseCalculatedDiscount: s,
-                isGift: o,
-            } = e,
-            u = h.A.get(t);
-        l()(null != u, "Missing subscriptionPlan");
-        let c = y({ planId: t, shouldUseCalculatedDiscount: s, isGift: o, priceOptions: a, subscriptionPlan: u }),
-            _ = (0, g.y8)(t, !1, o, a),
-            f = (0, d.Nc)({ subscriptionPlan: u, userLocale: r, discountOffer: i, yearlyPercentSavings: c });
-        return {
-            id: t,
-            planName: (0, d.YR)(u.interval, u.intervalCount, !0),
-            priceText: (0, E.$g)(_.amount, _.currency),
-            promoText: f,
-            isDisabled: n,
-        };
-    };
-function v(e) {
+    g = n(788868),
+    A = n(985018),
+    I = n(371894);
+let T = (e, t, n) => {
+    let {
+            userLocale: r,
+            isEligibleForBOGOPromotion: i,
+            shouldShowDiscount: s,
+            isGift: a,
+            planId: o,
+            savingsPercent: l,
+        } = n,
+        u = null != e && (e.planId === o || (null != t && e.planId === t.id));
+    return i
+        ? a || o !== g.gD.PREMIUM_MONTH_TIER_2
+            ? null
+            : { type: "badge", textBadgeVariant: "eyebrow", text: A.intl.string(A.t.iQTfWx) }
+        : null == t || (t.interval === g.WT.YEAR && null != e) || (s && !u)
+          ? null != t && t.interval === g.WT.YEAR && null != e
+              ? A.intl.string(A.t["122kWB"])
+              : s && !u
+                ? null == l || i
+                    ? null
+                    : {
+                          type: "badge",
+                          textBadgeVariant: "eyebrow",
+                          text: A.intl.format(A.t.IAybsG, { discount: (0, h.l9)(r, l / 100) }),
+                      }
+                : null
+          : null;
+};
+function S(e) {
     let {
             userLocale: t,
             premiumSubscription: n,
-            planId: a,
+            planId: s,
             selectPlan: o,
-            selected: S,
-            priceOptions: v,
-            isPrepaid: C,
-            isCustomGift: b,
+            selected: h,
+            priceOptions: S,
+            isPrepaid: y,
+            isCustomGift: v,
             shouldUseUnifiedCheckoutUI: N,
-            shouldUseCalculatedDiscount: R,
-            shouldShowUpdatedPaymentModal: O,
-            discountOffer: D,
-            discountAmountOff: L,
-            isEligibleForDiscount: w,
-            isEligibleForBOGOPromotion: x,
-            isEligibleForTrial: P,
-            isCurrentPlan: M,
-            disabled: k,
+            shouldUseCalculatedDiscount: C,
+            shouldShowUpdatedPaymentModal: b,
+            discountOffer: R,
+            discountAmountOff: O,
+            isEligibleForDiscount: D,
+            isEligibleForBOGOPromotion: L,
+            isEligibleForTrial: w,
+            isCurrentPlan: x,
+            disabled: M,
         } = e,
-        { isGift: U } = (0, f.Pv)(),
-        G = (0, u.bG)([h.A], () => h.A.get(a));
-    l()(null != G, "Missing subscriptionPlan");
-    let F = y({ planId: a, shouldUseCalculatedDiscount: R, isGift: U, priceOptions: v, subscriptionPlan: G }),
-        V = (0, g.y8)(a, !1, U, v),
-        B = null != F && !O,
-        j = G.interval === A.WT.YEAR ? I.t.ECT4A5 : I.t.v9QeON,
-        H = () =>
-            x && !U && a === A.gD.PREMIUM_MONTH_TIER_2
-                ? (0, r.jsx)(c.Text, {
-                      tag: "span",
-                      variant: "eyebrow",
-                      color: "always-white",
-                      className: T.kP,
-                      children: I.intl.string(I.t.iQTfWx),
-                  })
-                : null,
-        Y = () =>
-            null != F &&
-            !x &&
-            (0, r.jsx)(c.Text, {
-                tag: "span",
-                variant: "eyebrow",
-                color: "always-white",
-                className: T.kP,
-                children: I.intl.format(I.t.IAybsG, { discount: (0, p.l9)(t, F / 100) }),
-            }),
-        W = () =>
-            x
-                ? H()
-                : (G.interval === A.WT.YEAR && null != n) || (B && !M)
-                  ? G.interval === A.WT.YEAR && null != n
-                      ? (0, r.jsxs)("span", { className: T.IS, children: ["(", I.intl.string(I.t["122kWB"]), ")"] })
-                      : B && !M
-                        ? Y()
-                        : void 0
-                  : null,
-        K = (0, g.m6)(G.id),
-        $ = i.useMemo(
-            () => (0, g.D8)(G.interval, U, C, G.intervalCount, b, K),
-            [G.interval, G.intervalCount, U, C, b, K],
+        { isGift: P } = (0, f.Pv)(),
+        k = (0, u.bG)([p.A], () => p.A.get(s));
+    l()(null != k, "Missing subscriptionPlan");
+    let U = (0, m.L_)({ planId: s, shouldUseCalculatedDiscount: C, isGift: P, priceOptions: S, subscriptionPlan: k }),
+        G = (0, m.y8)(s, !1, P, S),
+        F = null != U && !b,
+        V = k.interval === g.WT.YEAR ? A.t.ECT4A5 : A.t.v9QeON,
+        B = i.useCallback(() => {
+            let e = T(n, k, {
+                userLocale: t,
+                isEligibleForBOGOPromotion: L,
+                shouldShowDiscount: F,
+                isGift: P,
+                planId: s,
+                savingsPercent: U,
+            });
+            return "string" == typeof e
+                ? (0, r.jsxs)("span", { className: I.IS, children: ["(", e, ")"] })
+                : null != e && "badge" === e.type
+                  ? (0, r.jsx)(c.Text, {
+                        tag: "span",
+                        variant: e.textBadgeVariant,
+                        color: "always-white",
+                        className: I.kP,
+                        children: e.text,
+                    })
+                  : null;
+        }, [t, L, k, n, F, P, s, U]),
+        H = (0, m.m6)(k.id),
+        j = i.useMemo(
+            () => (0, m.D8)(k.interval, P, y, k.intervalCount, v, H),
+            [k.interval, k.intervalCount, P, y, v, H],
         ),
-        z = () =>
+        Y = () =>
             (0, r.jsxs)("div", {
                 children: [
                     (0, r.jsxs)("div", {
-                        className: s()(T.Gl, { [T.h4]: S || b, [T.ox]: O && (S || b) }),
-                        children: [$, b && W()],
+                        className: a()(I.Gl, { [I.h4]: h || v, [I.ox]: b && (h || v) }),
+                        children: [j, v && B()],
                     }),
-                    b &&
+                    v &&
                         (0, r.jsx)("div", {
-                            className: T._R,
-                            children: I.intl.format(I.t.ori2Jm, { currencyAmount: (0, E.$g)(V.amount, V.currency) }),
+                            className: I._R,
+                            children: A.intl.format(A.t.ori2Jm, { currencyAmount: (0, E.$g)(G.amount, G.currency) }),
                         }),
                 ],
             }),
-        q = () =>
-            w && null != L && G.interval === A.WT.MONTH
-                ? (0, E.$g)(V.amount - L, V.currency)
-                : P
-                  ? (0, E.$g)(0, V.currency, { minimumFractionDigits: 0, maximumFractionDigits: 0 })
-                  : (0, E.$g)(V.amount, V.currency),
-        X = () =>
-            w && null != L && G.interval === A.WT.MONTH
-                ? I.intl.format(I.t["VeE/4E"], {
-                      numMonths: D?.discount.user_usage_limit ?? A.OJ,
-                      discountedPrice: (0, E.$g)(V.amount - L, V.currency),
-                      regularPrice: (0, E.$g)(V.amount, V.currency),
+        W = () =>
+            D && null != O && k.interval === g.WT.MONTH
+                ? (0, E.$g)(G.amount - O, G.currency)
+                : w
+                  ? (0, E.$g)(0, G.currency, { minimumFractionDigits: 0, maximumFractionDigits: 0 })
+                  : (0, E.$g)(G.amount, G.currency),
+        K = () =>
+            D && null != O && k.interval === g.WT.MONTH
+                ? A.intl.format(A.t["VeE/4E"], {
+                      numMonths: R?.discount.user_usage_limit ?? g.OJ,
+                      discountedPrice: (0, E.$g)(G.amount - O, G.currency),
+                      regularPrice: (0, E.$g)(G.amount, G.currency),
                   })
-                : P
-                  ? I.intl.format(j, { price: (0, E.$g)(V.amount, V.currency) })
-                  : G.interval === A.WT.YEAR
-                    ? I.intl.formatToPlainString(I.t.rtLTJP, { percent: F ?? "" })
+                : w
+                  ? A.intl.format(V, { price: (0, E.$g)(G.amount, G.currency) })
+                  : k.interval === g.WT.YEAR
+                    ? A.intl.formatToPlainString(A.t.rtLTJP, { percent: U ?? "" })
                     : null,
-        Z = () => {
-            k || o(a);
+        z = () => {
+            M || o(s);
         },
-        Q = O ? I.intl.format(I.t.hXcaLT, { price: q() }) : (0, E.$g)(V.amount, V.currency);
+        $ = b ? A.intl.format(A.t.hXcaLT, { price: W() }) : (0, E.$g)(G.amount, G.currency);
     if (N) {
-        let e = (0, d.Nc)({ subscriptionPlan: G, userLocale: t, discountOffer: D, yearlyPercentSavings: F });
+        let e = (0, d.Nc)({ subscriptionPlan: k, userLocale: t, discountOffer: R, yearlyPercentSavings: U });
         return (0, r.jsx)(_.ZA, {
-            id: a,
+            id: s,
             title: null,
-            titleDescriber: (0, d.YR)(G.interval, G.intervalCount),
-            primaryText: (0, E.$g)(V.amount, V.currency),
+            titleDescriber: (0, d.YR)(k.interval, k.intervalCount),
+            primaryText: (0, E.$g)(G.amount, G.currency),
             subtext: null != e ? (0, r.jsx)(_.Lo, { price: e }) : null,
-            isDisabled: k,
+            isDisabled: M,
         });
     }
     return (0, r.jsxs)(c.DUT, {
-        role: b ? "menuitem" : "radio",
-        "aria-checked": S,
-        tabIndex: S ? 0 : -1,
+        role: v ? "menuitem" : "radio",
+        "aria-checked": h,
+        tabIndex: h ? 0 : -1,
         focusProps: { offset: { left: -4, right: -4, top: 0, bottom: 0 } },
-        onClick: Z,
-        className: s()(T.G_, { [T.vW]: b && S, [T.Gb]: b }),
+        onClick: z,
+        className: a()(I.G_, { [I.vW]: v && h, [I.Gb]: v }),
         children: [
             (0, r.jsxs)("div", {
-                className: s()(T.XM, { [T.PA]: k }),
+                className: a()(I.XM, { [I.PA]: M }),
                 children: [
                     (0, r.jsxs)("div", {
-                        className: T.l,
+                        className: I.l,
                         children: [
-                            !b &&
+                            !v &&
                                 (0, r.jsx)("div", {
-                                    className: T.E2,
+                                    className: I.E2,
                                     children: (0, r.jsx)(c.Checkbox, {
-                                        checked: S,
-                                        value: S,
+                                        checked: h,
+                                        value: h,
                                         label: "",
                                         description: "",
-                                        onChange: Z,
+                                        onChange: z,
                                     }),
                                 }),
-                            z(),
-                            M &&
+                            Y(),
+                            x &&
                                 (0, r.jsxs)("span", {
-                                    className: T.bq,
-                                    children: ["(", I.intl.string(I.t.ymSxhy), ")"],
+                                    className: I.bq,
+                                    children: ["(", A.intl.string(A.t.ymSxhy), ")"],
                                 }),
-                            !b && W(),
+                            !v && B(),
                         ],
                     }),
-                    O
-                        ? (0, r.jsx)("div", { className: s()({ [T.kb]: S }), children: Q })
-                        : (0, r.jsx)("div", { className: s()({ [T.h4]: S || b }), children: Q }),
+                    b
+                        ? (0, r.jsx)("div", { className: a()({ [I.kb]: h }), children: $ })
+                        : (0, r.jsx)("div", { className: a()({ [I.h4]: h || v }), children: $ }),
                 ],
             }),
-            O &&
+            b &&
                 (0, r.jsx)("div", {
-                    className: T.hB,
+                    className: I.hB,
                     children: (0, r.jsx)(c.Text, {
                         variant: "text-md/normal",
-                        color: S ? "text-default" : "interactive-text-default",
-                        className: s()(T.Ub, { [T.sw]: w || P }),
-                        children: X(),
+                        color: h ? "text-default" : "interactive-text-default",
+                        className: a()(I.Ub, { [I.sw]: D || w }),
+                        children: K(),
                     }),
                 }),
         ],

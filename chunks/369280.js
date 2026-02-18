@@ -62,165 +62,168 @@ function X(e) {
             planId: g,
             setHasAcceptedTerms: P,
             legalTermsNodeRef: U,
-            hasLegalTermsFlash: B,
-            onInvoiceError: H,
-            planGroup: j,
-            currencies: $,
-            onCurrencyChange: Z,
-            hasOpenInvoice: X,
-            purchaseState: er,
-            handleClose: ei,
-            shouldUseUnifiedCheckoutUI: es,
+            hasLegalTermsFlash: H,
+            onInvoiceError: j,
+            planGroup: $,
+            currencies: Z,
+            onCurrencyChange: X,
+            hasOpenInvoice: er,
+            purchaseState: ei,
+            handleClose: es,
+            shouldUseUnifiedCheckoutUI: ea,
         } = e,
         {
-            selectedSkuId: ea,
-            defaultPlanId: eo,
-            isPremium: el,
-            startedPaymentFlowWithPaymentSourcesRef: eu,
-            hasPaymentSources: ec,
-            enablePremiumBrandRefresh: ed,
-            isPremiumGroupPurchase: e_,
+            selectedSkuId: eo,
+            defaultPlanId: el,
+            isPremium: eu,
+            startedPaymentFlowWithPaymentSourcesRef: ec,
+            hasPaymentSources: ed,
+            enablePremiumBrandRefresh: e_,
+            isPremiumGroupPurchase: ef,
+            invoicePreview: ep,
         } = (0, S.P5)(),
-        { isGift: ef } = (0, T.Pv)(),
-        ep = o.paymentSourceId,
-        eh = (0, R.g)(s, ep),
-        em = (0, d.bG)([L.A], () => L.A.get(g));
-    l()(null != em, "Missing newPlan");
-    let eE = (0, d.bG)([O.A], () => O.A.hidePersonalInformation),
-        eg = (0, A.A)(),
-        eA = c.M.EEA_COUNTRIES.has(D.A.ipCountryCodeWithFallback),
-        eI = er === y.h.PURCHASING || er === y.h.COMPLETED,
-        eT = (0, v.vT)({
+        { isGift: eh } = (0, T.Pv)(),
+        em = o.paymentSourceId,
+        eE = (0, R.g)(s, em),
+        eg = (0, d.bG)([L.A], () => L.A.get(g));
+    l()(null != eg, "Missing newPlan");
+    let eA = (0, d.bG)([O.A], () => O.A.hidePersonalInformation),
+        eI = (0, A.A)(),
+        eT = c.M.EEA_COUNTRIES.has(D.A.ipCountryCodeWithFallback),
+        eS = ei === y.h.PURCHASING || ei === y.h.COMPLETED,
+        ey = (0, v.vT)({
             isTrial: !1,
-            isGift: ef,
-            selectedSkuId: ea,
-            startedPaymentFlowWithPaymentSources: eu.current,
+            isGift: eh,
+            selectedSkuId: eo,
+            startedPaymentFlowWithPaymentSources: ec.current,
         }),
-        eS = n?.isPausedAllowsResumeButNotUpdates,
-        ey = i.useMemo(
+        ev = n?.isPausedAllowsResumeButNotUpdates,
+        eN = i.useMemo(
             () =>
-                (0, x.Tm)({ skuId: ea, isPremium: el, multiMonthPlans: [], currentSubscription: n, defaultPlanId: eo }),
-            [ea, n, eo, el],
+                (0, x.Tm)({ skuId: eo, isPremium: eu, multiMonthPlans: [], currentSubscription: n, defaultPlanId: el }),
+            [eo, n, el, eu],
         );
     t =
-        X || eS
+        er || ev
             ? z.intl.string(z.t.nyzoFb)
-            : e_
+            : ef
               ? z.intl.formatToPlainString(K.default["3m9DJK"], { premiumGroupProductName: (0, Y.DP)() })
               : (0, x.ys)(g)
-                ? (0, x.ff)(n, em)
-                : z.intl.formatToPlainString(z.t["sBpy9/"], { planName: em.name });
-    let ev = i.useRef(null),
-        eN = null;
+                ? (0, x.ff)(n, eg)
+                : z.intl.formatToPlainString(z.t["sBpy9/"], { planName: eg.name });
+    let eC = i.useRef(null),
+        eb = null;
     null != n &&
-        (eN = X
-            ? (0, r.jsx)(Q, { premiumSubscription: n, onInvoiceError: H, priceOptions: o, preventFetch: !1 })
-            : eS
-              ? (0, r.jsx)(et, { premiumSubscription: n, onInvoiceError: H, priceOptions: o, preventFetch: eI })
-              : (0, M.Ge)(n, g, j)
+        (eb = er
+            ? (0, r.jsx)(Q, { premiumSubscription: n, onInvoiceError: j, priceOptions: o, preventFetch: !1 })
+            : ev
+              ? (0, r.jsx)(et, { premiumSubscription: n, onInvoiceError: j, priceOptions: o, preventFetch: eS })
+              : (0, M.Ge)(n, g, $)
                 ? (0, r.jsx)(J, {
                       premiumSubscription: n,
-                      newPlan: em,
-                      onInvoiceError: H,
-                      planGroup: j,
+                      newPlan: eg,
+                      onInvoiceError: j,
+                      planGroup: $,
                       priceOptions: o,
-                      fractionalPremiumInfo: eg,
-                      preventFetch: eI,
-                      shouldUseUnifiedCheckoutUI: es,
-                      unifiedSubscriptionDetailsNode: ev,
+                      fractionalPremiumInfo: eI,
+                      preventFetch: eS,
+                      shouldUseUnifiedCheckoutUI: ea,
+                      unifiedSubscriptionDetailsNode: eC,
                   })
                 : (0, r.jsx)(en, {
                       premiumSubscription: n,
-                      newPlan: em,
-                      planGroup: j,
-                      fractionalPremiumInfo: eg,
+                      newPlan: eg,
+                      planGroup: $,
+                      fractionalPremiumInfo: eI,
                       priceOptions: o,
-                      preventFetch: eI,
+                      preventFetch: eS,
                   }));
-    let eC = n?.eligiblePaymentGateways,
-        eb = null != eC && eC.length > 0 && (ep === w.B || null === eh) && ec ? F.f.SELECT_PAYMENT_METHOD : void 0,
-        eR = (0, r.jsx)(h.A, {
+    let eR = n?.eligiblePaymentGateways,
+        eO = null != eR && eR.length > 0 && (em === w.B || null === eE) && ed ? F.f.SELECT_PAYMENT_METHOD : void 0,
+        eD = (0, r.jsx)(h.A, {
             label: z.intl.string(z.t["mmDvV+"]),
             paymentSources: Object.values(s),
-            selectedPaymentSourceId: ep,
+            selectedPaymentSourceId: em,
             onChange: u,
             onPaymentSourceAdd: E,
-            hidePersonalInformation: eE,
-            disabled: eI,
+            hidePersonalInformation: eA,
+            disabled: eS,
             paymentGatewayRestrictions: n?.eligiblePaymentGateways,
-            className: a()({ [q.E4]: ed }),
-            shouldUseUnifiedCheckoutUI: es,
+            className: a()({ [q.E4]: e_ }),
+            shouldUseUnifiedCheckoutUI: ea,
         }),
-        eO = (0, r.jsx)(G.A, {
-            isActive: B,
+        eL = (0, r.jsx)(G.A, {
+            isActive: H,
             ref: U,
             children:
-                null != n && (0, M.Ge)(n, g, j)
+                null != n && (0, M.Ge)(n, g, $)
                     ? (0, r.jsx)(ee, {
                           premiumSubscription: n,
-                          newPlan: em,
-                          onInvoiceError: H,
-                          planGroup: j,
+                          newPlan: eg,
+                          onInvoiceError: j,
+                          planGroup: $,
                           priceOptions: o,
-                          preventFetch: eI,
-                          disabled: eI,
-                          isEEA: eA,
+                          preventFetch: eS,
+                          disabled: eS,
+                          isEEA: eT,
                           paymentSources: s,
                           setHasAcceptedTerms: P,
                       })
                     : (0, r.jsx)(m.A, {
                           onChange: P,
                           finePrint: (0, r.jsx)(p.A, {
-                              subscriptionPlan: em,
-                              paymentSourceType: eh,
-                              basePrice: (0, x.y8)(em.id, !1, ef, o),
+                              subscriptionPlan: eg,
+                              paymentSourceType: eE,
+                              basePrice: (0, x.y8)(eg.id, !1, eh, o),
                               currentSubscription: n,
-                              planGroup: j,
+                              planGroup: $,
                           }),
                           forceShow: !0,
-                          showPricingLink: em.currency !== W.Yri.USD,
-                          showWithdrawalWaiver: eA,
-                          disabled: eI,
-                          subscriptionPlan: em,
+                          showPricingLink: eg.currency !== W.Yri.USD,
+                          showWithdrawalWaiver: eT,
+                          disabled: eS,
+                          subscriptionPlan: eg,
                           currentSubscription: n,
-                          planGroup: j,
+                          planGroup: $,
                       }),
         });
-    return es
+    return ea
         ? (0, r.jsx)(I.rg, {
               shouldShowGlobalNotices: !0,
-              paymentSelectContent: eR,
-              subscriptionDetailsContent: (0, r.jsx)("div", { ref: ev }),
+              paymentSelectContent: eD,
+              subscriptionDetailsContent: (0, r.jsx)("div", { ref: eC }),
               planSelectContent: (0, r.jsx)(b.XH, {
-                  planOptions: ey,
+                  planOptions: eN,
                   eligibleForMultiMonthPlans: !1,
                   selectedPlanId: g,
+                  showSecondarySubTexts: !0,
               }),
-              invoiceSummaryContent: eN,
-              legalContent: eO,
+              invoiceSummaryContent: eb,
+              legalContent: eL,
+              invoiceTotalDueValue: null != ep ? (0, B.U5)(ep) : void 0,
           })
         : (0, r.jsxs)("div", {
               className: q.Du,
               children: [
-                  (0, r.jsx)(F.j, { paymentRestrictionBannerType: eb }),
-                  !eS &&
-                      eT &&
-                      !e_ &&
+                  (0, r.jsx)(F.j, { paymentRestrictionBannerType: eO }),
+                  !ev &&
+                      ey &&
+                      !ef &&
                       (0, r.jsxs)("div", {
                           children: [
-                              (0, r.jsx)(N.P, { planSkuId: em.skuId }),
+                              (0, r.jsx)(N.P, { planSkuId: eg.skuId }),
                               (0, r.jsx)(V.$p, {
-                                  planOptions: ey,
+                                  planOptions: eN,
                                   eligibleForMultiMonthPlans: !1,
                                   selectedPlanId: g,
-                                  planGroup: j,
+                                  planGroup: $,
                                   showTotal: !1,
-                                  handleClose: ei,
+                                  handleClose: es,
                               }),
                               (0, r.jsx)(k.pK, {}),
                           ],
                       }),
-                  e_ &&
+                  ef &&
                       (0, r.jsx)("div", {
                           className: q.Ni,
                           children: (0, r.jsx)(_.wx6, {
@@ -228,20 +231,20 @@ function X(e) {
                               children: (0, r.jsx)(_.Text, { variant: "text-sm/medium", children: (0, C.Nn)() }),
                           }),
                       }),
-                  (0, r.jsx)(_.D0$, { label: t, children: eN }),
-                  (0, r.jsx)("div", { className: q.LC, children: eR }),
+                  (0, r.jsx)(_.D0$, { label: t, children: eb }),
+                  (0, r.jsx)("div", { className: q.LC, children: eD }),
                   (0, r.jsx)(f.f, {
-                      currencies: $,
+                      currencies: Z,
                       className: q.p2,
                       children: (0, r.jsx)(f.A, {
                           label: z.intl.string(z.t["/AAR02"]),
                           selectedCurrency: o.currency,
-                          currencies: $,
-                          onChange: Z,
-                          disabled: eI,
+                          currencies: Z,
+                          onChange: X,
+                          disabled: eS,
                       }),
                   }),
-                  eO,
+                  eL,
               ],
           });
 }
