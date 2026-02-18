@@ -14,14 +14,16 @@ let u = {
             id: "avatar",
             name: "Avatar",
             component: function (e) {
-                let { size: t = l._3.SIZE_48, status: n } = e,
-                    { user: o } = (0, i.cf)([a.default], () => ({ user: a.default.getCurrentUser() })),
-                    u = Number(t.split("_")[1]);
+                let { size: t = l._3.SIZE_48, status: n, isVR: o = !1, isMobile: u = !1 } = e,
+                    { user: c } = (0, i.cf)([a.default], () => ({ user: a.default.getCurrentUser() })),
+                    d = Number(t.split("_")[1]);
                 return (0, r.jsx)(s.eu, {
-                    src: o?.getAvatarURL(void 0, u),
+                    src: c?.getAvatarURL(void 0, d),
                     size: t,
                     "aria-label": "Sample User",
                     status: n,
+                    isVR: o,
+                    isMobile: u,
                 });
             },
             controls: {
@@ -39,6 +41,8 @@ let u = {
                         Object.keys(o.cl).map((e) => ({ label: e, value: o.cl[e] })),
                     ),
                 },
+                isVR: { type: "boolean", label: "VR", defaultValue: !1 },
+                isMobile: { type: "boolean", label: "Mobile", defaultValue: !1 },
             },
         },
     ],
