@@ -1,4 +1,4 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => j });
 var i = n(627968),
     l = n(64700),
     s = n(735438),
@@ -10,135 +10,147 @@ var i = n(627968),
     u = n(313961),
     h = n(246356),
     A = n(178213),
-    g = n(594832),
+    p = n(594832),
     m = n(290863),
-    p = n(954571),
+    g = n(954571),
     _ = n(403362),
-    x = n(79871),
-    f = n(592356),
-    E = n(568751),
-    C = n(620406),
-    I = n(188275),
-    S = n(652215),
-    b = n(806931),
-    N = n(985018),
-    T = n(877409);
-let j = `vc-gifting-${(0, a.A)()}`;
-function v(e) {
-    let { isHovered: t, closePopout: n, onMouseEnter: a, onMouseLeave: v, channel: y } = e;
+    f = n(79871),
+    x = n(592356),
+    C = n(568751),
+    E = n(620406),
+    I = n(84511),
+    b = n(188275),
+    N = n(652215),
+    S = n(806931),
+    T = n(985018),
+    v = n(877409);
+let y = `vc-gifting-${(0, a.A)()}`;
+function j(e) {
+    let { isHovered: t, closePopout: n, onMouseEnter: a, onMouseLeave: j, channel: R } = e;
     l.useEffect(() => {
         t || n();
     }, [n, t]);
-    let R = (0, A.G)("social_layer_storefront_gifting_mini_shelf"),
-        O = (0, o.bG)([d.A], () => d.A.getApplication(I.XR)),
-        [L] = (0, o.bG)(
+    let O = (0, A.G)("social_layer_storefront_gifting_mini_shelf"),
+        L = (0, o.bG)([d.A], () => d.A.getApplication(b.XR)),
+        [M] = (0, o.bG)(
             [u.A],
-            () => (null != y.id ? [u.A.getParticipants(y.id), u.A.getParticipantsVersion(y.id)] : [[], 0]),
-            [y.id],
+            () => (null != R.id ? [u.A.getParticipants(R.id), u.A.getParticipantsVersion(R.id)] : [[], 0]),
+            [R.id],
             c.hS,
         ),
         D = (0, o.yK)([m.A], () => {
             let e = new Set();
-            for (let t of L)
-                if ((0, b.Xw)(t) || (0, b.Ay)(t)) {
+            for (let t of M)
+                if ((0, S.Xw)(t) || (0, S.Ay)(t)) {
                     for (let n of m.A.getActivities(t.user.id))
                         if (
-                            n.application_id === O?.id ||
-                            O?.linkedGames?.some((e) => e.id === n.application_id) === !0
+                            n.application_id === L?.id ||
+                            L?.linkedGames?.some((e) => e.id === n.application_id) === !0
                         ) {
                             e.add(t.user.id);
                             break;
                         }
                 }
             return Array.from(e).sort();
-        }, [L, O]),
-        M = l.useMemo(() => {
-            let e = L.map((e) => ((0, b.Xw)(e) || (0, b.Ay)(e) ? e.user.id : null)).filter(_.Vq);
+        }, [M, L]),
+        G = l.useMemo(() => {
+            let e = M.map((e) => ((0, S.Xw)(e) || (0, S.Ay)(e) ? e.user.id : null)).filter(_.Vq);
             return (0, s.uniq)([...D, ...e]);
-        }, [L, D]),
+        }, [M, D]),
         {
-            state: G,
-            recommendations: U,
-            skuIdToUserIdsReasons: P,
-        } = (0, f.A)({
-            applicationId: I.XR,
-            numWishlistItems: f.o,
-            userIds: M,
+            state: U,
+            recommendations: P,
+            skuIdToUserIdsReasons: w,
+        } = (0, x.A)({
+            applicationId: b.XR,
+            numWishlistItems: x.o,
+            userIds: G,
             location: "Social Layer Gifting Mini Shelf",
             includeWishlists: !0,
         }),
         k = l.useMemo(() => {
-            let e = new Set(M);
-            return U.map((t) => {
+            let e = new Set(G);
+            return P.map((t) => {
                 let n =
-                    P[t.skuId]
-                        ?.filter((t) => t.reason === x.G.WISHLIST && e.has(t.userId))
+                    w[t.skuId]
+                        ?.filter((t) => t.reason === f.G.WISHLIST && e.has(t.userId))
                         .map((e) => e.userId)
                         .filter(_.Vq) ?? [];
-                return R
+                return O
                     ? (0, i.jsx)(
-                          E.A,
+                          C.A,
                           {
                               sku: t.sku,
-                              source: n.length > 0 ? g.uS.WISHLIST : g.uS.POPULAR,
-                              guildId: y.guild_id,
-                              channelId: y.id,
-                              contextContainerClassName: T.RL,
-                              userIdsForGifting: M,
+                              source: n.length > 0 ? p.uS.WISHLIST : p.uS.POPULAR,
+                              guildId: R.guild_id,
+                              channelId: R.id,
+                              contextContainerClassName: v.RL,
+                              userIdsForGifting: G,
                               userIdsForRecommendation: n,
                           },
                           t.skuId,
                       )
                     : (0, i.jsx)(
-                          C.A,
+                          E.A,
                           {
-                              variant: n.length > 0 ? C.$.WISHLIST : C.$.POPULAR,
+                              variant: n.length > 0 ? E.$.WISHLIST : E.$.POPULAR,
                               wishlistItem: t,
                               userIdsForRecommendation: n,
-                              userIdsForGifting: M,
-                              guildId: y.guild_id,
-                              channelId: y.id,
-                              contextContainerClassName: T.RL,
+                              userIdsForGifting: G,
+                              guildId: R.guild_id,
+                              channelId: R.id,
+                              contextContainerClassName: v.RL,
                           },
                           t.skuId,
                       );
             });
-        }, [y.guild_id, y.id, U, P, M, R]);
+        }, [R.guild_id, R.id, P, w, G, O]);
     return (
         l.useEffect(() => {
-            0 !== U.length &&
-                p.default.track(S.HAw.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED, {
-                    guild_id: y.guild_id,
-                    channel_id: y.id,
-                    sku_ids: U.map((e) => e.skuId),
+            0 !== P.length &&
+                g.default.track(N.HAw.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED, {
+                    guild_id: R.guild_id,
+                    channel_id: R.id,
+                    sku_ids: P.map((e) => e.skuId),
                 });
-        }, [y.id, y.guild_id, U]),
+        }, [R.id, R.guild_id, P]),
         (0, i.jsx)(h.A, {
             children: (0, i.jsx)(r.lGe, {
-                "aria-labelledby": j,
+                "aria-labelledby": y,
                 modal: !1,
                 children: (0, i.jsxs)("div", {
-                    className: T.kL,
+                    className: v.kL,
                     onMouseEnter: a,
-                    onMouseLeave: v,
+                    onMouseLeave: j,
                     children: [
-                        (0, i.jsx)(r.DZT, {
-                            className: T.DD,
-                            variant: "text-lg/bold",
-                            color: "text-strong",
-                            children: N.intl.string(N.t.xLP3bi),
-                        }),
-                        (0, i.jsx)(r.EYj, {
-                            className: T.VA,
-                            variant: "text-sm/medium",
-                            color: "text-subtle",
-                            children: N.intl.format(N.t["+SqhBF"], {
-                                applicationName: O?.name ?? N.intl.string(N.t["/1hhto"]),
-                            }),
+                        (0, i.jsxs)("div", {
+                            className: v.wx,
+                            children: [
+                                (0, i.jsxs)("div", {
+                                    children: [
+                                        (0, i.jsx)(r.DZT, {
+                                            className: v.DD,
+                                            variant: "text-lg/bold",
+                                            color: "text-strong",
+                                            children: T.intl.string(T.t.xLP3bi),
+                                        }),
+                                        (0, i.jsx)(r.EYj, {
+                                            variant: "text-sm/medium",
+                                            color: "text-subtle",
+                                            children: T.intl.format(T.t["+SqhBF"], {
+                                                applicationName: L?.name ?? T.intl.string(T.t["/1hhto"]),
+                                            }),
+                                        }),
+                                    ],
+                                }),
+                                (0, i.jsx)("div", {
+                                    children: (0, i.jsx)(I.A, { location: "social_layer_gifting_mini_shelf" }),
+                                }),
+                            ],
                         }),
                         (0, i.jsx)("div", {
-                            className: T.Xb,
-                            children: "loading" === G || 0 === U.length ? (0, i.jsx)(r.y$y, { className: T.Lq }) : k,
+                            className: v.Xb,
+                            children: "loading" === U || 0 === P.length ? (0, i.jsx)(r.y$y, { className: v.Lq }) : k,
                         }),
                     ],
                 }),
