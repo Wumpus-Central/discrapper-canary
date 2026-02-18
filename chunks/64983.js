@@ -1,8 +1,8 @@
 n.d(t, { A: () => E });
 var i = n(627968),
     r = n(64700),
-    a = n(735438),
-    l = n.n(a),
+    l = n(735438),
+    a = n.n(l),
     s = n(421380),
     o = n(397927),
     d = n(58149),
@@ -12,30 +12,30 @@ var i = n(627968),
     h = n(652215),
     _ = n(985018),
     m = n(978927);
-let p = l().debounce(d.Ay.trackWithMetadata, 500),
+let p = a().debounce(d.Ay.trackWithMetadata, 500),
     g = (e) => {
         let {
             guild: t,
             title: n,
-            message: a,
-            image: l,
+            message: l,
+            image: a,
             type: u,
             imageMarginX: A,
             imageMarginTop: g,
             trackingSource: E,
-            undismissable: f,
-            onDismissed: I,
+            undismissable: I,
+            onDismissed: f,
             onClick: C,
-            cta: N,
-            ctaColor: T,
+            cta: T,
+            ctaColor: N,
         } = e;
         r.useEffect(() => {
             p(h.HAw.CHANNEL_NOTICE_VIEWED, { notice_type: u, guild_id: t.id });
         }, [t.id, u]);
         let S = null;
-        "function" == typeof N
-            ? (S = N())
-            : null != N &&
+        "function" == typeof T
+            ? (S = T())
+            : null != T &&
               (S = (0, i.jsx)(s.$n, {
                   "data-migration-pending": !0,
                   className: m.HM,
@@ -50,35 +50,36 @@ let p = l().debounce(d.Ay.trackWithMetadata, 500),
                           C?.();
                   },
                   fullWidth: !0,
-                  color: T,
-                  children: N,
+                  color: N,
+                  children: T,
               }));
         let x = null != A ? `${A}px` : "16px";
         return (0, i.jsxs)("div", {
             className: m.kX,
             children: [
-                !0 === f
+                !0 === I
                     ? null
                     : (0, i.jsx)(o.DUT, {
                           onClick: () => {
-                              d.Ay.trackWithMetadata(h.HAw.CHANNEL_NOTICE_CLOSED, { notice_type: u }), I?.();
+                              d.Ay.trackWithMetadata(h.HAw.CHANNEL_NOTICE_CLOSED, { notice_type: u }), f?.();
                           },
                           className: m.VN,
                           "aria-label": _.intl.string(_.t.WAI6xu),
                           children: (0, i.jsx)(o.PGe, { size: "md", color: "currentColor", className: m.ut }),
                       }),
-                (0, i.jsx)("div", {
-                    className: m.ZS,
-                    style: { marginTop: `${g}px`, marginLeft: x, marginRight: x },
-                    children: (0, i.jsx)("img", { className: m.Sl, src: l, alt: "" }),
-                }),
+                null != a &&
+                    (0, i.jsx)("div", {
+                        className: m.ZS,
+                        style: { marginTop: `${g}px`, marginLeft: x, marginRight: x },
+                        children: "string" == typeof a ? (0, i.jsx)("img", { className: m.Sl, src: a, alt: "" }) : a,
+                    }),
                 (0, i.jsxs)("div", {
                     className: m.iU,
                     children: [
                         null != n
                             ? (0, i.jsx)(o.Heading, { variant: "heading-md/semibold", className: m.DD, children: n })
                             : null,
-                        (0, i.jsx)(o.Text, { variant: "text-sm/normal", children: a }),
+                        (0, i.jsx)(o.Text, { variant: "text-sm/normal", children: l }),
                         S,
                     ],
                 }),
