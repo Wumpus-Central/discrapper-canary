@@ -16,6 +16,7 @@ e.exports = {
     xZ: "rowLabel__1a4ef",
     oN: "rowBotTag__1a4ef",
     Gq: "rowLabelSubText__1a4ef",
+    HI: "removeIconContainer__1a4ef",
     Yz: "removeIcon__1a4ef",
     _2: "disabledRemoveIcon__1a4ef",
 };

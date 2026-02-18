@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { Ab: () => s, IR: () => u, SE: () => o, U$: () => l, Xw: () => a, rF: () => i });
+n.d(t, { Ab: () => a, IR: () => u, SE: () => o, U$: () => l, Xw: () => s, rF: () => i });
 var r = n(73153);
 let i = (e, t) => {
         r.h.dispatch({ type: "DCF_HANDLE_DC_SHOWN", dismissibleContent: e, guildId: t });
     },
-    a = (e) => {
-        r.h.dispatch({ type: "DCF_HANDLE_DC_DISMISSED", dismissibleContent: e });
+    s = (e, t) => {
+        r.h.dispatch({ type: "DCF_HANDLE_DC_DISMISSED", dismissibleContent: e, guildId: t });
     },
-    s = () => {
+    a = () => {
         r.h.dispatch({ type: "DCF_RESET" });
     },
     o = (e) => {
@@ -16,6 +16,6 @@ let i = (e, t) => {
     l = (e) => {
         r.h.dispatch({ type: "DCF_NEW_USER_MIN_AGE_REQUIRED_OVERRIDE", value: e });
     },
-    u = (e) => {
-        r.h.dispatch({ type: "DCF_OVERRIDE_LAST_DC_DISMISSED", dismissibleContent: e });
+    u = (e, t) => {
+        r.h.dispatch({ type: "DCF_OVERRIDE_LAST_DC_DISMISSED", dismissibleContent: e, guildId: t });
     };

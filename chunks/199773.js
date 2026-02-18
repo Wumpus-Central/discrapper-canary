@@ -2,8 +2,8 @@
 n.d(t, { A: () => T });
 var r = n(311907),
     i = n(73153),
-    a = n(954571),
-    s = n(787925),
+    s = n(954571),
+    a = n(787925),
     o = n(256787),
     l = n(652215);
 let u = "daily_cap",
@@ -15,7 +15,7 @@ let u = "daily_cap",
         dailyCapOverridden: !1,
         newUserMinAgeRequiredOverridden: !1,
         renderedAtTimestamps: new Map(),
-        lastDCDismissed: null,
+        lastDismissed: null,
         seenForGuildId: new Map(),
     };
 function _() {
@@ -41,7 +41,7 @@ function h(e, t) {
 function m(e) {
     let { dismissibleContent: t, guildId: n } = e,
         r = new Date();
-    if ((d.renderedAtTimestamps.set(t, r.getTime()), s.C.has(t) || d.dailyCapOverridden)) return;
+    if ((d.renderedAtTimestamps.set(t, r.getTime()), a.C.has(t) || d.dailyCapOverridden)) return;
     let i = (0, o.vf)(t) && null != n;
     if (!(!i && d.dismissibleContentSeenDuringSession.has(t))) {
         if (!(i && h(t, n))) {
@@ -55,7 +55,7 @@ function m(e) {
             }
             (d.numberOfDCsShownToday += 1),
                 d.numberOfDCsShownToday > c &&
-                    a.default.track(l.HAw.DCF_CAP_EXCEEDED, {
+                    s.default.track(l.HAw.DCF_CAP_EXCEEDED, {
                         cap_type: u,
                         dismissible_content: t,
                         shown_dcs: d.numberOfDCsShownToday,
@@ -63,20 +63,20 @@ function m(e) {
         }
     }
 }
-function g(e) {
-    let { dismissibleContent: t } = e;
-    (d.lastDCDismissed = t), d.renderedAtTimestamps.delete(t);
-}
 function E(e) {
-    let { dismissibleContent: t } = e;
-    d.lastDCDismissed = t ?? null;
+    let { dismissibleContent: t, guildId: n } = e;
+    (d.lastDismissed = { content: t, guildId: n ?? null }), d.renderedAtTimestamps.delete(t);
+}
+function g(e) {
+    let { dismissibleContent: t, guildId: n } = e;
+    d.lastDismissed = null != t ? { content: t, guildId: n ?? null } : null;
 }
 function A() {
     (d.dailyCapPeriodStart = null),
         (d.numberOfDCsShownToday = 0),
         (d.dismissibleContentSeenDuringSession = new Set()),
         (d.seenForGuildId = new Map()),
-        (d.lastDCDismissed = null);
+        (d.lastDismissed = null);
 }
 class I extends r.Ay.PersistedStore {
     static displayName = "DismissibleContentFrameworkStore";
@@ -90,7 +90,7 @@ class I extends r.Ay.PersistedStore {
             (d.newUserMinAgeRequiredOverridden = e.newUserMinAgeRequiredOverridden ?? !1)),
             (d.dismissibleContentSeenDuringSession = new Set()),
             (d.seenForGuildId = new Map()),
-            (d.lastDCDismissed = null);
+            (d.lastDismissed = null);
     }
     getState() {
         return d;
@@ -101,14 +101,14 @@ class I extends r.Ay.PersistedStore {
     get newUserMinAgeRequiredOverridden() {
         return d.newUserMinAgeRequiredOverridden;
     }
-    get lastDCDismissed() {
-        return d.lastDCDismissed;
+    get lastDismissed() {
+        return d.lastDismissed;
     }
     getRenderedAtTimestamp(e) {
         return d.renderedAtTimestamps.get(e);
     }
     hasUserHitDCCap(e, t) {
-        if (null != e && (s.C.has(e) || d.dailyCapOverridden)) return !1;
+        if (null != e && (a.C.has(e) || d.dailyCapOverridden)) return !1;
         if (null != e) {
             let n = null != t && (0, o.vf)(e);
             if ((n && null != t && h(e, t)) || (!n && d.dismissibleContentSeenDuringSession.has(e))) return !1;
@@ -128,7 +128,7 @@ let T = new I(i.h, {
     DCF_DAILY_CAP_OVERRIDE: f,
     DCF_NEW_USER_MIN_AGE_REQUIRED_OVERRIDE: p,
     DCF_HANDLE_DC_SHOWN: m,
-    DCF_HANDLE_DC_DISMISSED: g,
-    DCF_OVERRIDE_LAST_DC_DISMISSED: E,
+    DCF_HANDLE_DC_DISMISSED: E,
+    DCF_OVERRIDE_LAST_DC_DISMISSED: g,
     DCF_RESET: A,
 });

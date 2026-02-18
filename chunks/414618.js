@@ -27,8 +27,8 @@ var l = n(627968),
     S = n(71393),
     T = n(576705),
     M = n(287809),
-    R = n(396465),
-    I = n(488926),
+    I = n(396465),
+    R = n(488926),
     L = n(495273),
     w = n(270486),
     O = n(80686),
@@ -114,6 +114,7 @@ function V(e) {
                                 asContainer: !0,
                                 text: s ?? r(p.rowType, p.disabled),
                                 children: (0, l.jsx)(d.DUT, {
+                                    className: U.HI,
                                     onClick: () => {
                                         var e, n, l;
                                         return (
@@ -232,8 +233,8 @@ function H(e) {
 function F(e) {
     let { guild: t, channel: i, isPrivateGuildChannel: s, roles: o, members: c } = e,
         u = (0, r.bG)([T.A], () => T.A.can(B.xB.ADMINISTRATOR, t)),
-        h = I.MJ(B.xB.VIEW_CHANNEL, t),
-        g = I.MJ(B.xB.ADMINISTRATOR, t);
+        h = R.MJ(B.xB.VIEW_CHANNEL, t),
+        g = R.MJ(B.xB.ADMINISTRATOR, t);
     async function m() {
         let e = i.accessPermissions,
             a = M.default.getCurrentUser();
@@ -395,7 +396,7 @@ let Y = r.Ay.connectStores([_.A, T.A, E.Ay, S.A, y.A], () => {
             locked: g,
             permissionUpdates: m,
         } = e,
-        [x, A] = i.useState(!I.MJ(B.xB.SEND_MESSAGES, a));
+        [x, A] = i.useState(!R.MJ(B.xB.SEND_MESSAGES, a));
     if (null == a || null == c) return null;
     let f = { title: P.intl.string(P.t.BAZMBn), subtitle: P.intl.string(P.t.XLrZyp) };
     return (
@@ -414,7 +415,7 @@ let Y = r.Ay.connectStores([_.A, T.A, E.Ay, S.A, y.A], () => {
                         : (0, l.jsx)(G.A, {
                               buttonText: P.intl.string(P.t.NVwuHq),
                               canSync: !0,
-                              icon: (0, d.kHD)(R.A),
+                              icon: (0, d.kHD)(I.A),
                               noticeText: P.intl.format(P.t.OIhm0M, { categoryName: s.name }),
                               onClick: function () {
                                   null != s &&
@@ -428,7 +429,7 @@ let Y = r.Ay.connectStores([_.A, T.A, E.Ay, S.A, y.A], () => {
                                                   onConfirm: async () => {
                                                       let { guild_id: e } = s,
                                                           t = { ...s.permissionOverwrites };
-                                                      null != e && null == t[e] && (t[e] = I.xT(e)),
+                                                      null != e && null == t[e] && (t[e] = R.xT(e)),
                                                           (await (0, p.n)(a, t[e].deny, t[e].allow)) &&
                                                               (0, h.RT)(a.id, {
                                                                   permissionOverwrites: Object.values(t),
