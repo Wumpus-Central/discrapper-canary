@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => W });
+n.d(t, { A: () => z });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -32,30 +32,32 @@ var r = n(627968),
     w = n(203982),
     x = n(427262),
     M = n(313961),
-    P = n(384059),
-    k = n(652215),
-    U = n(650583),
-    G = n(985018),
-    F = n(293390),
-    V = n(976092);
-let B = 80,
-    H = 40,
-    j = 32;
-function Y(e) {
+    P = n(850226),
+    k = n(717319),
+    U = n(384059),
+    G = n(652215),
+    F = n(650583),
+    V = n(985018),
+    B = n(293390),
+    H = n(976092);
+let j = 80,
+    Y = 40,
+    W = 32;
+function K(e) {
     let { voiceState: t, user: n, channel: i } = e,
         s = (0, l.bG)([N.A], () => N.A.getStreamForUser(n.id, i.guild_id)),
         { enableHangStatus: a } = (0, T.$j)({ guildId: i.guild_id, location: "IncomingCallModalV2" }),
         o = (0, S.h)(n.id),
         c = (0, x.tx)(n);
     return (0, r.jsxs)("div", {
-        className: F.q7,
+        className: B.q7,
         children: [
             (0, r.jsxs)("div", {
-                className: F.G7,
+                className: B.G7,
                 children: [
                     (0, r.jsx)(u.euF, {
                         "aria-label": n.username,
-                        src: n.getAvatarURL(i.guild_id, j, !1, !1),
+                        src: n.getAvatarURL(i.guild_id, W, !1, !1),
                         size: u._3J.SIZE_32,
                     }),
                     (0, r.jsx)(u.Text, { variant: "text-sm/medium", children: c }),
@@ -75,131 +77,132 @@ function Y(e) {
         ],
     });
 }
-function W(e) {
+function z(e) {
     let { animatedStyle: t, x: n, y: s, channel: T } = e,
         { analyticsLocations: S } = (0, m.Ay)(p.A.INCOMING_CALL_MODAL),
-        y = (0, l.bG)([O.A], () => O.A.windowSize()),
-        N = (0, l.bG)([C.A], () => C.A.getGuild(T.guild_id)),
-        j = null != N ? L.Ay.getGuildIconURL({ id: N.id, icon: N.icon, size: H }) : null,
-        W = (0, E.Y)(T, H, !0) ?? j,
-        K = (0, g.Ay)(T),
-        z = (0, l.yK)([R.Ay, M.A], () =>
+        y = i.useRef(null),
+        N = (0, l.bG)([O.A], () => O.A.windowSize()),
+        W = (0, l.bG)([C.A], () => C.A.getGuild(T.guild_id)),
+        z = null != W ? L.Ay.getGuildIconURL({ id: W.id, icon: W.icon, size: Y }) : null,
+        $ = (0, E.Y)(T, Y, !0) ?? z,
+        q = (0, g.Ay)(T),
+        Z = (0, l.yK)([R.Ay, M.A], () =>
             R.Ay.getVoiceStatesForChannel(T).filter((e) => !M.A.getGuildRingingUsers(T.id).has(e.user.id)),
         ),
-        $ = (0, l.bG)([b.default], () => b.default.getCurrentUser()),
-        q = (0, x.tx)($),
-        Z = i.useCallback((e) => {
+        X = (0, l.bG)([b.default], () => b.default.getCurrentUser()),
+        Q = (0, x.tx)(X),
+        J = i.useCallback((e) => {
             null != e.top && null != e.left && d.A.move(e.left, e.top);
         }, []),
-        X = i.useCallback(() => {
-            (0, P.X)(S[0], P.O.DISCONNECT),
-                D.default.track(k.HAw.RING_CALL_DECLINED, { location: S[0], guild_id: T.guild_id, ...(0, h.dI)(T) }),
+        ee = i.useCallback(() => {
+            (0, U.X)(S[0], U.O.DISCONNECT),
+                D.default.track(G.HAw.RING_CALL_DECLINED, { location: S[0], guild_id: T.guild_id, ...(0, h.dI)(T) }),
                 c.A.stopRinging(T.id);
         }, [T, S]),
-        Q = i.useCallback(() => {
-            (0, P.X)(S[0], P.O.JOIN_CALL),
-                D.default.track(k.HAw.RING_CALL_ACCEPTED, { location: S[0], guild_id: T.guild_id, ...(0, h.dI)(T) }),
+        et = i.useCallback(() => {
+            (0, U.X)(S[0], U.O.JOIN_CALL),
+                D.default.track(G.HAw.RING_CALL_ACCEPTED, { location: S[0], guild_id: T.guild_id, ...(0, h.dI)(T) }),
                 _.default.selectVoiceChannel(T.id);
         }, [T, S]);
     i.useEffect(() => {
         let e = (e) => {
-            e.key === U.dh.ESCAPE && c.A.stopRinging(T.id);
+            e.key === F.dh.ESCAPE && c.A.stopRinging(T.id);
         };
         return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
     }, [T]),
         i.useEffect(
             () => (
-                w._.subscribe(k.jej.CALL_ACCEPT, Q),
+                w._.subscribe(G.jej.CALL_ACCEPT, et),
                 () => {
-                    w._.unsubscribe(k.jej.CALL_ACCEPT, Q);
+                    w._.unsubscribe(G.jej.CALL_ACCEPT, et);
                 }
             ),
-            [Q],
+            [et],
         );
-    let J = (0, A.gU)(T);
+    let en = (0, A.gU)(T);
     return (0, r.jsx)(m.f5, {
         value: S,
         children: (0, r.jsx)(f.A, {
-            className: F.iE,
-            selector: `.${F.zr}`,
+            className: B.iE,
+            selector: `.${B.zr}`,
             initialPosition: { left: n, top: s },
-            maxX: y.width,
-            maxY: y.height,
-            onDragEnd: Z,
+            maxX: N.width,
+            maxY: N.height,
+            onDragEnd: J,
             dragAnywhere: !0,
             children: (0, r.jsx)(u.NPJ, {
                 children: (e) =>
                     (0, r.jsxs)(o.animated.div, {
-                        className: a()(F.zr, V.a8, e),
+                        className: a()(B.zr, H.a8, e),
                         style: { ...t },
                         children: [
                             (0, r.jsxs)("div", {
-                                className: F.wx,
+                                className: B.wx,
                                 children: [
                                     (0, r.jsx)(u.euF, {
-                                        className: F.gX,
+                                        className: B.gX,
                                         "aria-label": "user",
-                                        src: $?.getAvatarURL(T.guild_id, B, !1, !1),
+                                        src: X?.getAvatarURL(T.guild_id, j, !1, !1),
                                         size: u._3J.SIZE_80,
                                     }),
                                     (0, r.jsx)(u.Heading, {
                                         variant: "heading-lg/semibold",
-                                        className: a()(F.gX, F.DD),
-                                        children: G.intl.format(G.t.M3F6cv, { username: q }),
+                                        className: a()(B.gX, B.DD),
+                                        children: V.intl.format(V.t.M3F6cv, { username: Q }),
                                     }),
                                     (0, r.jsxs)("div", {
-                                        className: F.C5,
+                                        className: B.C5,
                                         children: [
-                                            (null != N || null != W) &&
+                                            (null != W || null != $) &&
                                                 (0, r.jsx)(I.Ay, {
                                                     mask: I.hW.SQUIRCLE,
-                                                    width: H,
-                                                    height: H,
-                                                    className: F.NR,
+                                                    width: Y,
+                                                    height: Y,
+                                                    className: B.NR,
                                                     children:
-                                                        null != W
+                                                        null != $
                                                             ? (0, r.jsx)("img", {
-                                                                  alt: N?.name ?? K ?? "",
-                                                                  src: W,
-                                                                  width: H,
-                                                                  height: H,
+                                                                  alt: W?.name ?? q ?? "",
+                                                                  src: $,
+                                                                  width: Y,
+                                                                  height: Y,
                                                               })
-                                                            : null != N
+                                                            : null != W
                                                               ? (0, r.jsx)("div", {
-                                                                    className: F.$r,
+                                                                    className: B.$r,
                                                                     children: (0, r.jsx)("div", {
-                                                                        className: F.q9,
-                                                                        children: (0, v.Rb)(N),
+                                                                        className: B.q9,
+                                                                        children: (0, v.Rb)(W),
                                                                     }),
                                                                 })
                                                               : null,
                                                 }),
                                             (0, r.jsxs)("div", {
-                                                className: F.Ug,
+                                                className: B.Ug,
                                                 children: [
                                                     (0, r.jsxs)("div", {
-                                                        className: F.HA,
+                                                        className: B.HA,
                                                         children: [
-                                                            null != J &&
-                                                                (0, r.jsx)(J, {
+                                                            null != en &&
+                                                                (0, r.jsx)(en, {
                                                                     size: "xs",
                                                                     color: u.LU0.colors.TEXT_DEFAULT,
-                                                                    className: F.NR,
+                                                                    className: B.NR,
                                                                 }),
                                                             (0, r.jsx)(u.Text, {
                                                                 variant: "text-md/semibold",
                                                                 color: "text-default",
-                                                                className: F.zb,
-                                                                children: K,
+                                                                className: B.zb,
+                                                                children: q,
                                                             }),
                                                         ],
                                                     }),
-                                                    N?.name != null &&
+                                                    W?.name != null &&
                                                         (0, r.jsx)(u.Text, {
                                                             variant: "text-sm/medium",
                                                             color: "text-muted",
-                                                            className: F.zb,
-                                                            children: N.name,
+                                                            className: B.zb,
+                                                            children: W.name,
                                                         }),
                                                 ],
                                             }),
@@ -208,37 +211,51 @@ function W(e) {
                                 ],
                             }),
                             (0, r.jsxs)(u.HOs, {
-                                className: F.XG,
+                                className: B.XG,
                                 children: [
                                     (0, r.jsx)(u.Text, {
                                         variant: "text-sm/medium",
                                         color: "text-muted",
-                                        className: F.bi,
-                                        children: G.intl.format(G.t.e95u3C, { count: z.length }),
+                                        className: B.bi,
+                                        children: V.intl.format(V.t.e95u3C, { count: Z.length }),
                                     }),
                                     (0, r.jsx)("div", {
-                                        className: F.Xk,
-                                        children: z.map((e) => {
+                                        className: B.Xk,
+                                        children: Z.map((e) => {
                                             let { voiceState: t, user: n } = e;
-                                            return (0, r.jsx)(Y, { voiceState: t, user: n, channel: T }, n.id);
+                                            return (0, r.jsx)(K, { voiceState: t, user: n, channel: T }, n.id);
                                         }),
                                     }),
                                 ],
                             }),
                             (0, r.jsxs)("div", {
-                                className: F.o1,
+                                className: B.o1,
                                 children: [
                                     (0, r.jsx)(u.Button, {
-                                        text: G.intl.string(G.t.L5eIZ2),
+                                        text: V.intl.string(V.t.L5eIZ2),
                                         fullWidth: !0,
                                         variant: "secondary",
-                                        onClick: X,
+                                        onClick: ee,
                                     }),
-                                    (0, r.jsx)(u.Button, {
-                                        text: G.intl.string(G.t["96ANUN"]),
-                                        fullWidth: !0,
-                                        variant: "active",
-                                        onClick: Q,
+                                    (0, r.jsx)(u.YNO, {
+                                        targetElementRef: y,
+                                        renderPopout: (e) => {
+                                            let { closePopout: t } = e;
+                                            return (0, r.jsx)(P.A, { onClose: t, channel: T });
+                                        },
+                                        position: "bottom",
+                                        children: (e) => {
+                                            let { onClick: t } = e;
+                                            return (0, r.jsx)(k.A, {
+                                                ref: y,
+                                                text: V.intl.string(V.t["96ANUN"]),
+                                                fullWidth: !0,
+                                                variant: "active",
+                                                onClick: et,
+                                                caretTooltipText: V.intl.string(V.t["+1H47t"]),
+                                                onContextMenu: t,
+                                            });
+                                        },
                                     }),
                                 ],
                             }),
