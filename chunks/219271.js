@@ -1,22 +1,15 @@
 "use strict";
-n.d(t, { u: () => u });
+n.d(t, { u: () => l });
 var r = n(562465),
     i = n(73153),
     a = n(153488),
-    s = n(318295),
-    o = n(21119),
-    l = n(652215);
-function u() {
+    s = n(21119),
+    o = n(652215);
+function l() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return o.A.shouldFetch() && a.A.hasConsented(l.YAq.PERSONALIZATION)
+    return s.A.shouldFetch() && a.A.hasConsented(o.YAq.PERSONALIZATION)
         ? (i.h.dispatch({ type: "LOAD_USER_AFFINITIES_V2" }),
-          r.Bo.get({
-              url: l.Rsh.USER_AFFINITIES_V2,
-              retries: 3 * !!e,
-              oldFormErrors: !0,
-              rejectWithError: !1,
-              query: { user_flags: s.b.RECENTLY_RETURNED },
-          }).then(
+          r.Bo.get({ url: o.Rsh.USER_AFFINITIES_V2, retries: 3 * !!e, oldFormErrors: !0, rejectWithError: !1 }).then(
               (e) => {
                   let { body: t } = e;
                   i.h.dispatch({
@@ -35,7 +28,6 @@ function u() {
                           communicationProbability: e.communication_probability ?? 0,
                           communicationRank: e.communication_rank ?? 0,
                       })),
-                      userFlags: t.user_flags ?? {},
                   });
               },
               () => {
