@@ -1,21 +1,20 @@
 "use strict";
-n.d(t, { A: () => K, _: () => f });
+n.d(t, { A: () => W, _: () => _ });
 var r = n(311907),
     i = n(506774),
-    a = n(582754),
-    s = n(73153),
-    o = n(802124),
-    l = n(253932),
-    u = n(617617),
-    c = n(353835),
-    d = n(652215),
-    _ = n(381941),
-    f = (function (e) {
+    s = n(582754),
+    a = n(73153),
+    o = n(253932),
+    l = n(617617),
+    u = n(353835),
+    c = n(652215),
+    d = n(381941),
+    _ = (function (e) {
         return (e.DEFAULT = "default"), (e.HIGH = "high"), e;
     })({});
-let p = {
-        fontSize: d.hH7.FONT_SIZE_DEFAULT,
-        zoom: d.hH7.ZOOM_DEFAULT,
+let f = {
+        fontSize: c.hH7.FONT_SIZE_DEFAULT,
+        zoom: c.hH7.ZOOM_DEFAULT,
         keyboardModeEnabled: !1,
         contrastMode: "default",
         colorblindMode: !1,
@@ -40,8 +39,8 @@ let p = {
         enableCustomCursor: !0,
         switchIconsEnabled: !1,
     },
-    h = p,
-    m = {
+    p = f,
+    h = {
         12: "font-size-12",
         14: "font-size-14",
         15: "font-size-15",
@@ -50,107 +49,107 @@ let p = {
         20: "font-size-20",
         24: "font-size-24",
     };
-function g(e) {
-    return d.hH7.FONT_SIZES.indexOf(e) >= 0 ? e : d.hH7.FONT_SIZE_DEFAULT;
+function m(e) {
+    return c.hH7.FONT_SIZES.indexOf(e) >= 0 ? e : c.hH7.FONT_SIZE_DEFAULT;
 }
 function E(e) {
-    let t = g(e.fontSize);
-    if (t > d.hH7.FONT_SIZE_MAX || t < d.hH7.FONT_SIZE_MIN || h.fontSize === t) return !1;
-    (h = { ...h }).fontSize = t;
+    let t = m(e.fontSize);
+    if (t > c.hH7.FONT_SIZE_MAX || t < c.hH7.FONT_SIZE_MIN || p.fontSize === t) return !1;
+    (p = { ...p }).fontSize = t;
 }
-function A(e) {
-    if (e.zoom < d.hH7.ZOOM_MIN || e.zoom > d.hH7.ZOOM_MAX || h.zoom === e.zoom) return !1;
-    ((h = { ...h }).zoom = e.zoom), c.A.setZoomFactor(h.zoom);
+function g(e) {
+    if (e.zoom < c.hH7.ZOOM_MIN || e.zoom > c.hH7.ZOOM_MAX || p.zoom === e.zoom) return !1;
+    ((p = { ...p }).zoom = e.zoom), u.A.setZoomFactor(p.zoom);
+}
+function A() {
+    let e = p.fontSize !== c.hH7.FONT_SIZE_DEFAULT,
+        t = p.zoom !== c.hH7.ZOOM_DEFAULT;
+    if (!e && !t) return !1;
+    (p = { ...p }).fontSize !== c.hH7.FONT_SIZE_DEFAULT && (p.fontSize = c.hH7.FONT_SIZE_DEFAULT),
+        p.zoom !== c.hH7.ZOOM_DEFAULT && ((p.zoom = c.hH7.ZOOM_DEFAULT), u.A.setZoomFactor(p.zoom));
 }
 function I() {
-    let e = h.fontSize !== d.hH7.FONT_SIZE_DEFAULT,
-        t = h.zoom !== d.hH7.ZOOM_DEFAULT;
-    if (!e && !t) return !1;
-    (h = { ...h }).fontSize !== d.hH7.FONT_SIZE_DEFAULT && (h.fontSize = d.hH7.FONT_SIZE_DEFAULT),
-        h.zoom !== d.hH7.ZOOM_DEFAULT && ((h.zoom = d.hH7.ZOOM_DEFAULT), c.A.setZoomFactor(h.zoom));
+    if (p.keyboardModeEnabled) return !1;
+    (p = { ...p }).keyboardModeEnabled = !0;
 }
 function T() {
-    if (h.keyboardModeEnabled) return !1;
-    (h = { ...h }).keyboardModeEnabled = !0;
-}
-function y() {
-    if (!h.keyboardModeEnabled) return !1;
-    (h = { ...h }).keyboardModeEnabled = !1;
+    if (!p.keyboardModeEnabled) return !1;
+    (p = { ...p }).keyboardModeEnabled = !1;
 }
 function S() {
-    (h = { ...h }).colorblindMode = !h.colorblindMode;
+    (p = { ...p }).colorblindMode = !p.colorblindMode;
 }
-function v() {
-    (h = { ...h }).lowContrastMode = !h.lowContrastMode;
+function y() {
+    (p = { ...p }).lowContrastMode = !p.lowContrastMode;
 }
-function C(e) {
-    h.syncForcedColors = e.syncForcedColors;
+function v(e) {
+    p.syncForcedColors = e.syncForcedColors;
+}
+function N(e) {
+    (p = { ...p }).saturation = e.saturation;
+}
+function C() {
+    (p = { ...p }).desaturateUserColors = !p.desaturateUserColors;
 }
 function b(e) {
-    (h = { ...h }).saturation = e.saturation;
-}
-function N() {
-    (h = { ...h }).desaturateUserColors = !h.desaturateUserColors;
+    p.roleStyle = e.roleStyle;
 }
 function R(e) {
-    h.roleStyle = e.roleStyle;
+    p.displayNameStylesEnabled = e.enabled;
 }
-function O(e) {
-    h.displayNameStylesEnabled = e.enabled;
+function O() {
+    (p = { ...p }).submitButtonEnabled = !p.submitButtonEnabled;
 }
 function D() {
-    (h = { ...h }).submitButtonEnabled = !h.submitButtonEnabled;
+    (p = { ...p }).syncProfileThemeWithUserTheme = !p.syncProfileThemeWithUserTheme;
 }
-function L() {
-    (h = { ...h }).syncProfileThemeWithUserTheme = !h.syncProfileThemeWithUserTheme;
+function L(e) {
+    if (p.systemPrefersReducedMotion === e.systemPrefersReducedMotion) return !1;
+    p = { ...p, systemPrefersReducedMotion: e.systemPrefersReducedMotion };
 }
 function w(e) {
-    if (h.systemPrefersReducedMotion === e.systemPrefersReducedMotion) return !1;
-    h = { ...h, systemPrefersReducedMotion: e.systemPrefersReducedMotion };
+    if (p.systemPrefersCrossfades === e.systemPrefersCrossfades) return !1;
+    p = { ...p, systemPrefersCrossfades: e.systemPrefersCrossfades };
 }
 function x(e) {
-    if (h.systemPrefersCrossfades === e.systemPrefersCrossfades) return !1;
-    h = { ...h, systemPrefersCrossfades: e.systemPrefersCrossfades };
-}
-function P(e) {
-    if (h.prefersReducedMotion === e.prefersReducedMotion) return !1;
-    h = { ...h, prefersReducedMotion: e.prefersReducedMotion };
+    if (p.prefersReducedMotion === e.prefersReducedMotion) return !1;
+    p = { ...p, prefersReducedMotion: e.prefersReducedMotion };
 }
 function M(e) {
-    if (h.systemPrefersContrast === e.systemPrefersContrast) return !1;
-    h = { ...h, systemPrefersContrast: e.systemPrefersContrast };
+    if (p.systemPrefersContrast === e.systemPrefersContrast) return !1;
+    p = { ...p, systemPrefersContrast: e.systemPrefersContrast };
+}
+function P(e) {
+    p = { ...p, alwaysShowLinkDecorations: e.alwaysShowLinkDecorations };
 }
 function k(e) {
-    h = { ...h, alwaysShowLinkDecorations: e.alwaysShowLinkDecorations };
+    p = { ...p, enableCustomCursor: e.enableCustomCursor };
 }
 function U(e) {
-    h = { ...h, enableCustomCursor: e.enableCustomCursor };
+    return (p = { ...p, systemForcedColors: e.systemForcedColors ?? "none" }), !0;
 }
-function G(e) {
-    return (h = { ...h, systemForcedColors: e.systemForcedColors ?? "none" }), !0;
-}
-function V() {
-    h.forcedColorsModalSeen = !0;
+function G() {
+    p.forcedColorsModalSeen = !0;
 }
 function F() {
-    h = { ...h, keyboardNavigationExplainerModalSeen: !0 };
+    p = { ...p, keyboardNavigationExplainerModalSeen: !0 };
+}
+function V(e) {
+    let { messageGroupSpacing: t } = e;
+    p = { ...p, messageGroupSpacing: t };
 }
 function B(e) {
-    let { messageGroupSpacing: t } = e;
-    h = { ...h, messageGroupSpacing: t };
-}
-function j(e) {
     let { contrast: t } = e;
-    h = { ...h, contrast: t };
+    p = { ...p, contrast: t };
 }
 function H(e) {
     let { contrastMode: t } = e;
-    h = { ...h, contrastMode: t };
+    p = { ...p, contrastMode: t };
 }
-function Y(e) {
-    h = { ...h, switchIconsEnabled: e.switchIconsEnabled };
+function j(e) {
+    p = { ...p, switchIconsEnabled: e.switchIconsEnabled };
 }
-class W extends r.Ay.DeviceSettingsStore {
+class Y extends r.Ay.DeviceSettingsStore {
     static displayName = "AccessibilityStore";
     static persistKey = "AccessibilityStore";
     static migrations = [
@@ -159,13 +158,13 @@ class W extends r.Ay.DeviceSettingsStore {
                 t = "a11yZoom",
                 n = "a11yColorblindMode",
                 r = i.w.get(e) || 100,
-                a = i.w.get(t) || d.hH7.ZOOM_DEFAULT,
-                s = i.w.get(n) || !1;
+                s = i.w.get(t) || c.hH7.ZOOM_DEFAULT,
+                a = i.w.get(n) || !1;
             return (
                 i.w.remove(e),
                 i.w.remove(t),
                 i.w.remove(n),
-                { fontScale: r, zoom: a, colorblindMode: s, keyboardModeEnabled: !1 }
+                { fontScale: r, zoom: s, colorblindMode: a, keyboardModeEnabled: !1 }
             );
         },
         (e) => {
@@ -195,7 +194,7 @@ class W extends r.Ay.DeviceSettingsStore {
         (e) => ({ ...e, darkSidebar: !1 }),
         (e) => ({ ...e, messageGroupSpacing: null }),
         (e) => ({ ...e, systemPrefersReducedMotion: "no-preference", prefersReducedMotion: "auto" }),
-        (e) => ({ ...e, alwaysShowLinkDecorations: e.saturation <= a.yv }),
+        (e) => ({ ...e, alwaysShowLinkDecorations: e.saturation <= s.yv }),
         (e) => ({ ...e, disableVoiceBackgrounds: !1 }),
         (e) => {
             try {
@@ -212,26 +211,25 @@ class W extends r.Ay.DeviceSettingsStore {
         (e) => ({ ...e, enableCustomCursor: !0 }),
     ];
     initialize(e) {
-        this.waitFor(u.A),
-            this.waitFor(o.A),
-            isNaN((h = { ...p, ...(e ?? null) }).fontSize) && (h.fontSize = d.hH7.FONT_SIZE_DEFAULT),
-            0 > _.qh.indexOf(null != h.messageGroupSpacing ? h.messageGroupSpacing : -1) &&
-                (h.messageGroupSpacing = null);
+        this.waitFor(l.A),
+            isNaN((p = { ...f, ...(e ?? null) }).fontSize) && (p.fontSize = c.hH7.FONT_SIZE_DEFAULT),
+            0 > d.qh.indexOf(null != p.messageGroupSpacing ? p.messageGroupSpacing : -1) &&
+                (p.messageGroupSpacing = null);
     }
     get fontScale() {
-        return (h.fontSize / d.hH7.FONT_SIZE_DEFAULT) * 100;
+        return (p.fontSize / c.hH7.FONT_SIZE_DEFAULT) * 100;
     }
     get fontSize() {
-        return h.fontSize;
+        return p.fontSize;
     }
     get isFontScaledUp() {
-        return h.fontSize > d.hH7.FONT_SIZE_DEFAULT;
+        return p.fontSize > c.hH7.FONT_SIZE_DEFAULT;
     }
     get isFontScaledDown() {
-        return h.fontSize < d.hH7.FONT_SIZE_DEFAULT;
+        return p.fontSize < c.hH7.FONT_SIZE_DEFAULT;
     }
     get fontScaleClass() {
-        let e = m[this.fontSize] ?? "";
+        let e = h[this.fontSize] ?? "";
         return this.isFontScaledUp
             ? `a11y-font-scaled-up ${e}`
             : this.isFontScaledDown
@@ -239,135 +237,134 @@ class W extends r.Ay.DeviceSettingsStore {
               : `${e}`;
     }
     get zoom() {
-        return h.zoom;
+        return p.zoom;
     }
     get isZoomedIn() {
-        return h.zoom > d.hH7.ZOOM_DEFAULT;
+        return p.zoom > c.hH7.ZOOM_DEFAULT;
     }
     get isZoomedOut() {
-        return h.zoom < d.hH7.ZOOM_DEFAULT;
+        return p.zoom < c.hH7.ZOOM_DEFAULT;
     }
     get keyboardModeEnabled() {
-        return h.keyboardModeEnabled;
+        return p.keyboardModeEnabled;
     }
     get colorblindMode() {
-        return h.colorblindMode;
+        return p.colorblindMode;
     }
     get lowContrastMode() {
-        return h.lowContrastMode;
+        return p.lowContrastMode;
     }
     get saturation() {
-        return h.saturation;
+        return p.saturation;
     }
     get contrast() {
-        return h.contrast;
+        return p.contrast;
     }
     get desaturateUserColors() {
-        return h.desaturateUserColors;
+        return p.desaturateUserColors;
     }
     get forcedColorsModalSeen() {
-        return h.forcedColorsModalSeen;
+        return p.forcedColorsModalSeen;
     }
     get keyboardNavigationExplainerModalSeen() {
-        return h.keyboardNavigationExplainerModalSeen;
+        return p.keyboardNavigationExplainerModalSeen;
     }
     get messageGroupSpacing() {
-        return null != h.messageGroupSpacing ? h.messageGroupSpacing : l.hH.getSetting() ? _.y5 : _.ES;
+        return null != p.messageGroupSpacing ? p.messageGroupSpacing : o.hH.getSetting() ? d.y5 : d.ES;
     }
     get isMessageGroupSpacingIncreased() {
-        let e = l.hH.getSetting() ? _.y5 : _.ES;
+        let e = o.hH.getSetting() ? d.y5 : d.ES;
         return this.messageGroupSpacing > e;
     }
     get isMessageGroupSpacingDecreased() {
-        let e = l.hH.getSetting() ? _.y5 : _.ES;
+        let e = o.hH.getSetting() ? d.y5 : d.ES;
         return this.messageGroupSpacing < e;
     }
     get isSubmitButtonEnabled() {
-        return h.submitButtonEnabled;
+        return p.submitButtonEnabled;
     }
     get syncProfileThemeWithUserTheme() {
-        return h.syncProfileThemeWithUserTheme;
+        return p.syncProfileThemeWithUserTheme;
     }
     get systemPrefersReducedMotion() {
-        return h.systemPrefersReducedMotion;
+        return p.systemPrefersReducedMotion;
     }
     get rawPrefersReducedMotion() {
-        return h.prefersReducedMotion;
+        return p.prefersReducedMotion;
     }
     get useReducedMotion() {
-        if (o.A.active) return !0;
-        switch (h.prefersReducedMotion) {
+        switch (p.prefersReducedMotion) {
             case "no-preference":
                 return !1;
             case "reduce":
                 return !0;
             default:
-                return "reduce" === h.systemPrefersReducedMotion;
+                return "reduce" === p.systemPrefersReducedMotion;
         }
     }
     get systemForcedColors() {
-        return h.systemForcedColors;
+        return p.systemForcedColors;
     }
     get syncForcedColors() {
-        return h.syncForcedColors;
+        return p.syncForcedColors;
     }
     get useForcedColors() {
-        return !!h.syncForcedColors && "active" === h.systemForcedColors;
+        return !!p.syncForcedColors && "active" === p.systemForcedColors;
     }
     get systemPrefersContrast() {
-        return h.systemPrefersContrast;
+        return p.systemPrefersContrast;
     }
     get systemPrefersCrossfades() {
-        return h.systemPrefersCrossfades;
+        return p.systemPrefersCrossfades;
     }
     get alwaysShowLinkDecorations() {
-        return h.alwaysShowLinkDecorations;
+        return p.alwaysShowLinkDecorations;
     }
     get enableCustomCursor() {
-        return h.enableCustomCursor;
+        return p.enableCustomCursor;
     }
     get roleStyle() {
-        return h.roleStyle;
+        return p.roleStyle;
     }
     get displayNameStylesEnabled() {
-        return h.displayNameStylesEnabled;
+        return p.displayNameStylesEnabled;
     }
     get isHighContrastModeEnabled() {
-        return "high" === h.contrastMode;
+        return "high" === p.contrastMode;
     }
     get isSwitchIconsEnabled() {
-        return h.switchIconsEnabled;
+        return p.switchIconsEnabled;
     }
     getUserAgnosticState() {
-        return h;
+        return p;
     }
 }
-let K = new W(s.h, {
+let W = new Y(a.h, {
     ACCESSIBILITY_SET_FONT_SIZE: E,
-    ACCESSIBILITY_SET_ZOOM: A,
-    ACCESSIBILITY_RESET_TO_DEFAULT: I,
-    ACCESSIBILITY_KEYBOARD_MODE_ENABLE: T,
-    ACCESSIBILITY_KEYBOARD_MODE_DISABLE: y,
+    ACCESSIBILITY_SET_ZOOM: g,
+    ACCESSIBILITY_RESET_TO_DEFAULT: A,
+    ACCESSIBILITY_KEYBOARD_MODE_ENABLE: I,
+    ACCESSIBILITY_KEYBOARD_MODE_DISABLE: T,
     ACCESSIBILITY_COLORBLIND_TOGGLE: S,
-    ACCESSIBILITY_LOW_CONTRAST_TOGGLE: v,
-    ACCESSIBILITY_SET_SATURATION: b,
-    ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: N,
-    ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: G,
+    ACCESSIBILITY_LOW_CONTRAST_TOGGLE: y,
+    ACCESSIBILITY_SET_SATURATION: N,
+    ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: C,
+    ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: U,
     ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED: M,
-    ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: w,
-    ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: x,
-    ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: P,
-    ACCESSIBILITY_SET_SYNC_FORCED_COLORS: C,
-    ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: k,
-    ACCESSIBILITY_SET_ENABLE_CUSTOM_CURSOR: U,
-    ACCESSIBILITY_SET_ROLE_STYLE: R,
-    ACCESSIBILITY_SET_DISPLAY_NAME_STYLES_ENABLED: O,
-    ACCESSIBILITY_FORCED_COLORS_MODAL_SEEN: V,
+    ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: L,
+    ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: w,
+    ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: x,
+    ACCESSIBILITY_SET_SYNC_FORCED_COLORS: v,
+    ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: P,
+    ACCESSIBILITY_SET_ENABLE_CUSTOM_CURSOR: k,
+    ACCESSIBILITY_SET_ROLE_STYLE: b,
+    ACCESSIBILITY_SET_DISPLAY_NAME_STYLES_ENABLED: R,
+    ACCESSIBILITY_FORCED_COLORS_MODAL_SEEN: G,
     KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN: F,
-    ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: B,
-    ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: D,
-    ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: L,
-    ACCESSIBILITY_SET_CONTRAST: j,
+    ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: V,
+    ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: O,
+    ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: D,
+    ACCESSIBILITY_SET_CONTRAST: B,
     ACCESSIBILITY_SET_CONTRAST_MODE: H,
-    ACCESSIBILITY_SET_SWITCH_ICONS_ENABLED: Y,
+    ACCESSIBILITY_SET_SWITCH_ICONS_ENABLED: j,
 });
