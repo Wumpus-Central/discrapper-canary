@@ -7,13 +7,13 @@ var l = n(627968),
     d = n(738876),
     c = n(323073),
     o = n(58149),
-    u = n(237774),
+    u = n(973854),
     _ = n(355622),
     h = n(225142),
     x = n(701785),
     m = n(265869),
-    A = n(58736),
-    g = n(187360),
+    g = n(58736),
+    A = n(187360),
     C = n(353428),
     f = n(857071),
     p = n(976860),
@@ -44,16 +44,16 @@ function L(e) {
                 V.current ||
                 ((V.current = !0),
                 (0, o.zV)(y.HAw.CHANNEL_OPENED, { ...(0, o.qL)(H.id), channel_view: R }),
-                (0, u.k)(y.HAw.CHANNEL_OPENED_CLICKSTREAM, { channelId: H.id }));
+                (0, u.A)({ channelId: H.id }));
         }, [H, R]),
         null == H || null == M)
     )
         return null;
     let F = [];
-    return (B || F.push((0, l.jsx)(g.A, { channel: H }, "notifications")),
+    return (B || F.push((0, l.jsx)(A.A, { channel: H }, "notifications")),
     F.push(
         (0, l.jsx)(
-            A.Ay.Icon,
+            g.Ay.Icon,
             { icon: a.PGe, tooltip: O.intl.string(O.t.cpT0Cq), onClick: () => N.A.closeChannelSidebar(L) },
             "close",
         ),
@@ -63,7 +63,7 @@ function L(e) {
         : (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsx)(d.A, { channel: H, draftType: b.C.ChannelMessage }),
-                  (0, l.jsx)(A.Ay, {
+                  (0, l.jsx)(g.Ay, {
                       toolbar: F,
                       "aria-label": O.intl.string(O.t.BIYAqa),
                       children: (0, C.zF)({

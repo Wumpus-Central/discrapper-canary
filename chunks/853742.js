@@ -1,25 +1,25 @@
 "use strict";
 n.d(t, {
     Bd: () => D,
-    Cd: () => b,
-    El: () => P,
-    Lj: () => y,
+    Cd: () => C,
+    El: () => M,
+    Lj: () => S,
     Md: () => w,
-    Ml: () => C,
+    Ml: () => N,
     OG: () => G,
-    Q_: () => M,
+    Q_: () => P,
     Sc: () => h,
-    UA: () => g,
+    UA: () => E,
     Z_: () => p,
     _4: () => I,
     _Z: () => v,
-    ad: () => N,
+    ad: () => b,
     bh: () => O,
     hT: () => m,
     jC: () => R,
     jh: () => L,
-    jr: () => E,
-    pO: () => S,
+    jr: () => g,
+    pO: () => y,
     py: () => T,
     rH: () => k,
     ri: () => x,
@@ -28,8 +28,8 @@ n.d(t, {
 });
 var r = n(58149),
     i = n(332456),
-    a = n(237774),
-    s = n(734057),
+    s = n(973854),
+    a = n(734057),
     o = n(31717),
     l = n(954571),
     u = n(723702),
@@ -38,13 +38,13 @@ var r = n(58149),
     _ = n(759735),
     f = n(652215);
 function p(e) {
-    let { guildId: t, channelId: n, sessionId: i, postIds: a, additionalTimes: s } = e;
+    let { guildId: t, channelId: n, sessionId: i, postIds: s, additionalTimes: a } = e;
     r.Ay.trackWithMetadata(f.HAw.FORUM_CHANNEL_SEEN_BATCH, {
         ...(0, _.fO)({ channelId: n, sessionId: i }),
         guild_id: t,
         channel_id: n,
-        post_ids: a,
-        additional_seen_time_millis: s,
+        post_ids: s,
+        additional_seen_time_millis: a,
     });
 }
 function h(e) {
@@ -64,19 +64,19 @@ function m(e) {
         channel_id: n,
     });
 }
-function g(e) {
-    let { guildId: t, channelId: n, tagId: i, filterTagIds: a, added: s, location: o } = e;
+function E(e) {
+    let { guildId: t, channelId: n, tagId: i, filterTagIds: s, added: a, location: o } = e;
     r.Ay.trackWithMetadata(f.HAw.FORUM_CHANNEL_TAG_FILTER_CLICKED, {
         ...(0, _.fO)({ channelId: n }),
         guild_id: t,
         channel_id: n,
         tag_id: i,
-        filter_tag_ids: a,
-        added: s,
+        filter_tag_ids: s,
+        added: a,
         location: o,
     });
 }
-function E(e) {
+function g(e) {
     let { guildId: t, channelId: n } = e;
     r.Ay.trackWithMetadata(f.HAw.FORUM_CHANNEL_CREATE_NEW_POST_CLICKED, {
         ...(0, _.fO)({ channelId: n }),
@@ -94,14 +94,14 @@ function A(e) {
 }
 function I(e) {
     let { guildId: t, channelId: n } = e,
-        i = s.A.getChannel(n);
+        i = a.A.getChannel(n);
     if (null == i) return;
-    let a = o.A.getThreadSettings(n),
+    let s = o.A.getThreadSettings(n),
         l = i.template?.trim(),
         u = o.A.getDraft(n, o.C.FirstThreadMessage),
         c = null == u || 0 === u.length || u?.trim() === l,
-        d = a?.appliedTags == null || a?.appliedTags?.size === 0,
-        p = a?.name == null || a?.name?.trim()?.length === 0;
+        d = s?.appliedTags == null || s?.appliedTags?.size === 0,
+        p = s?.name == null || s?.name?.trim()?.length === 0;
     (c && d && p) ||
         r.Ay.trackWithMetadata(f.HAw.FORUM_CHANNEL_NEW_POST_DRAFT_CREATED, {
             ...(0, _.fO)({ channelId: n }),
@@ -119,18 +119,18 @@ function T(e) {
         channel_id: n,
     });
 }
-function y(e) {
+function S(e) {
     let { guildId: t, channelId: n, postId: i } = e;
-    function a() {
+    function s() {
         r.Ay.trackWithMetadata(f.HAw.FORUM_CHANNEL_POST_CREATED, {
             ...(0, _.$L)({ channelId: i }),
             guild_id: t,
             channel_id: n,
         });
     }
-    c.A.isLoading(i) ? c.A.addConditionalChangeListener(() => !!c.A.isLoading(i) || (a(), !1)) : a();
+    c.A.isLoading(i) ? c.A.addConditionalChangeListener(() => !!c.A.isLoading(i) || (s(), !1)) : s();
 }
-function S(e) {
+function y(e) {
     let { guildId: t, channelId: n } = e;
     r.Ay.trackWithMetadata(f.HAw.FORUM_CHANNEL_SCROLLED, {
         ...(0, _.fO)({ channelId: n }),
@@ -139,31 +139,31 @@ function S(e) {
     });
 }
 function v(e) {
-    let { guildId: t, channelId: n, numArchivedThreads: i, hasMoreThreads: a, filterTagIds: o, sortOrder: u } = e;
+    let { guildId: t, channelId: n, numArchivedThreads: i, hasMoreThreads: s, filterTagIds: o, sortOrder: u } = e;
     l.default.track(f.HAw.FORUM_CHANNEL_MORE_POSTS_LOADED, {
         ...(0, r.H$)(t),
-        ...(0, r.dI)(s.A.getChannel(n)),
+        ...(0, r.dI)(a.A.getChannel(n)),
         ...(0, _.fO)({ channelId: n }),
         guild_id: t,
         channel_id: n,
         num_archived_threads: i,
         num_active_threads: (0, _.io)(t, n),
-        has_more_threads: a,
+        has_more_threads: s,
         filter_tag_ids: o,
         sort_order: u,
     });
 }
-function C(e) {
-    let { guildId: t, channelId: n, postId: i, location: a } = e;
+function N(e) {
+    let { guildId: t, channelId: n, postId: i, location: s } = e;
     r.Ay.trackWithMetadata(f.HAw.FORUM_CHANNEL_POST_CLICKED, {
         ...(0, _.$L)({ channelId: i }),
         guild_id: t,
         channel_id: n,
         is_search_result: null != d.A.getSearchResults(n),
-        location: a,
+        location: s,
     });
 }
-function b(e) {
+function C(e) {
     let { guildId: t, channelId: n, sortOrder: i } = e;
     r.Ay.trackWithMetadata(f.HAw.FORUM_CHANNEL_POSTS_SORTED, {
         ...(0, _.fO)({ channelId: n }),
@@ -174,7 +174,7 @@ function b(e) {
         forum_channel_sort_order: i,
     });
 }
-function N(e) {
+function b(e) {
     let { guildId: t, channelId: n, forumLayout: i } = e;
     r.Ay.trackWithMetadata(f.HAw.FORUM_CHANNEL_LAYOUT_UPDATED, {
         ...(0, _.fO)({ channelId: n }),
@@ -207,10 +207,10 @@ function x(e) {
     let { isMobile: t } = e;
     r.Ay.trackWithMetadata(f.HAw.FORUM_CHANNEL_MEDIA_UPLOADER_CLICKED, { is_mobile: t });
 }
-function P() {
+function M() {
     r.Ay.trackWithMetadata(f.HAw.FORUM_CHANNEL_ENABLE_AUTOMOD_CLICKED);
 }
-function M() {
+function P() {
     r.Ay.trackWithMetadata(f.HAw.FORUM_CHANNEL_ENABLE_PREVIEW_CLICKED);
 }
 function k(e) {
@@ -222,7 +222,7 @@ function k(e) {
         channel_view: "Split View",
         platform: (0, u.getPlatform)(),
     }),
-        (0, a.k)(f.HAw.CHANNEL_OPENED_CLICKSTREAM, { channelId: e.id });
+        (0, s.A)({ channelId: e.id });
 }
 function U() {
     r.Ay.trackWithMetadata(f.HAw.OPEN_MODAL, {
@@ -233,7 +233,7 @@ function U() {
 function G(e) {
     let { guildId: t, channelId: n } = e;
     r.Ay.trackWithMetadata(f.HAw.THREAD_CREATION_STARTED, {
-        ...(0, i.C)(s.A.getChannel(n)),
+        ...(0, i.C)(a.A.getChannel(n)),
         channel_id: n,
         guild_id: t,
     });

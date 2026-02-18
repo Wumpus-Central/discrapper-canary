@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Lw: "overlay__18000",
     AI: "checkmark__18000",

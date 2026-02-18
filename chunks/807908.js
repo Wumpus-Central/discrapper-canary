@@ -4,7 +4,7 @@ var r = n(752163);
 function i(e) {
     return e / 32768;
 }
-function a(e) {
+function s(e) {
     let t = (e?.headerBytes ?? 0) + (e?.payloadBytes ?? 0) + (e?.paddingBytes ?? 0);
     return (
         (e?.fec?.headerBytes ?? 0) +
@@ -19,7 +19,7 @@ function a(e) {
         t
     );
 }
-function s(e) {
+function a(e) {
     let t = e?.packets ?? 0;
     return (e?.fec?.packets ?? 0) + (e?.retransmitted?.packets ?? 0) + (e?.transmitted?.packets ?? 0) + t;
 }
@@ -43,8 +43,8 @@ function l(e) {
 function u(e, t) {
     let n = e.substreams.find((e) => !e.isRTX && !e.isFlexFEC);
     if (null == n) return;
-    let i = e.substreams.reduce((e, t) => e + a(t.rtpStats), 0),
-        o = e.substreams.reduce((e, t) => e + s(t.rtpStats), 0);
+    let i = e.substreams.reduce((e, t) => e + s(t.rtpStats), 0),
+        o = e.substreams.reduce((e, t) => e + a(t.rtpStats), 0);
     return {
         type: "video",
         ssrc: n.ssrc,
@@ -99,11 +99,13 @@ function u(e, t) {
         totalFreezesDuration: n.encoderQualityStats?.totalFreezesDuration,
         totalFramesDuration: n.encoderQualityStats?.totalFramesDuration,
         videoEntropy: n.encoderQualityStats?.interFrameEntropy,
+        minResolutionWidth: n.encoderQualityStats?.minResolutionWidth,
+        minResolutionHeight: n.encoderQualityStats?.minResolutionHeight,
     };
 }
 function c(e, t, n, i) {
-    let o = a(e.rtpStats),
-        u = s(e.rtpStats);
+    let o = s(e.rtpStats),
+        u = a(e.rtpStats);
     return {
         type: "video",
         ssrc: e.ssrc,
@@ -151,6 +153,8 @@ function c(e, t, n, i) {
         decryptAttempts: e.decryptAttempts,
         decryptMissingKeyCount: e.decryptMissingKeyCount,
         decryptInvalidNonceCount: e.decryptInvalidNonceCount,
+        minResolutionWidth: e.minResolutionWidth,
+        minResolutionHeight: e.minResolutionHeight,
         ...(null != i
             ? l({
                   videoJitterBuffer: i.videoJitterBuffer,
@@ -160,13 +164,13 @@ function c(e, t, n, i) {
             : {}),
     };
 }
-function d(e, t, n, s) {
+function d(e, t, n, a) {
     let o = null,
         d = null,
         _ = "string" == typeof t ? JSON.parse(t) : t,
         f = [];
     if (null != _.outbound) {
-        let { audio: e, video: t, videos: a } = _.outbound;
+        let { audio: e, video: t, videos: s } = _.outbound;
         if (
             (null != e &&
                 ((d = (d ?? 0) + e.bytesSent),
@@ -200,9 +204,9 @@ function d(e, t, n, s) {
                     sampleRateMismatchPercent: e.sampleRateMismatchPercent,
                     currentSampleRate: e.currentSampleRate,
                 })),
-            null != a)
+            null != s)
         )
-            a.forEach((e) => {
+            s.forEach((e) => {
                 let t = u(e, n);
                 null != t && ((d = (d ?? 0) + t.bytesSent), f.push(t));
             });
@@ -277,44 +281,44 @@ function d(e, t, n, s) {
                 null != _)
             )
                 _.forEach((e) => {
-                    let r = c(e, n, s, f);
+                    let r = c(e, n, a, f);
                     if (null != r) {
-                        let n = a(e.rtpStats);
+                        let n = s(e.rtpStats);
                         (o = (o ?? 0) + n), p[t].push(r);
                     }
                 });
             else if (null != d) {
-                let e = c(d, n, s, f);
+                let e = c(d, n, a, f);
                 if (null != e) {
-                    let n = a(d.rtpStats);
+                    let n = s(d.rtpStats);
                     (o = (o ?? 0) + n), p[t].push(e);
                 }
             }
         });
     let { transport: h, clips: m } = _,
-        g = {};
+        E = {};
     null != h &&
-        ((g.availableOutgoingBitrate = h.sendBandwidth),
-        (g.ping = h.rtt),
-        (g.decryptionFailures = h.decryptionFailures),
-        null != h.routingFailures && (g.routingFailures = h.routingFailures),
-        (g.localAddress = h.localAddress),
-        (g.pacerDelay = h.pacerDelay),
-        null != h.receiverReports && (g.receiverReports = h.receiverReports),
-        (g.receiverBitrateEstimate = h.receiverBitrateEstimate),
-        (g.outboundBitrateEstimate = h.outboundBitrateEstimate),
-        (g.inboundBitrateEstimate = h.inboundBitrateEstimate ?? 0),
-        (g.packetsReceived = h.packetsReceived),
-        (g.packetsSent = h.packetsSent),
-        null != h.secureFramesProtocolVersion && (g.secureFramesProtocolVersion = h.secureFramesProtocolVersion)),
+        ((E.availableOutgoingBitrate = h.sendBandwidth),
+        (E.ping = h.rtt),
+        (E.decryptionFailures = h.decryptionFailures),
+        null != h.routingFailures && (E.routingFailures = h.routingFailures),
+        (E.localAddress = h.localAddress),
+        (E.pacerDelay = h.pacerDelay),
+        null != h.receiverReports && (E.receiverReports = h.receiverReports),
+        (E.receiverBitrateEstimate = h.receiverBitrateEstimate),
+        (E.outboundBitrateEstimate = h.outboundBitrateEstimate),
+        (E.inboundBitrateEstimate = h.inboundBitrateEstimate ?? 0),
+        (E.packetsReceived = h.packetsReceived),
+        (E.packetsSent = h.packetsSent),
+        null != h.secureFramesProtocolVersion && (E.secureFramesProtocolVersion = h.secureFramesProtocolVersion)),
         (h?.bytesReceived == null && (null == o || Number.isNaN(o))) ||
-            (g.bytesReceived = h?.bytesReceived ?? o ?? void 0),
-        (h?.bytesSent == null && (null == d || Number.isNaN(d))) || (g.bytesSent = h?.bytesSent ?? d ?? void 0);
-    let { screenshare: E, camera: A, audioDevice: I } = _;
+            (E.bytesReceived = h?.bytesReceived ?? o ?? void 0),
+        (h?.bytesSent == null && (null == d || Number.isNaN(d))) || (E.bytesSent = h?.bytesSent ?? d ?? void 0);
+    let { screenshare: g, camera: A, audioDevice: I } = _;
     return {
         mediaEngineConnectionId: e,
-        transport: g,
-        screenshare: E,
+        transport: E,
+        screenshare: g,
         camera:
             null != A
                 ? {

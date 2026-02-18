@@ -2,20 +2,20 @@
 n.d(t, {
     ET: () => T,
     Wn: () => c,
-    aV: () => E,
+    aV: () => g,
     dg: () => I,
     eq: () => _,
     iF: () => h,
     kZ: () => m,
-    s7: () => g,
+    s7: () => E,
     tH: () => A,
     yo: () => d,
 }),
     n(321073);
 var r = n(499979),
     i = n(687658),
-    a = n(499954);
-let s = [0, 5e5, 1e6, 15e5, 2e6, 3e6, 4e6, 5e6, 6e6, 7e6, 8e6],
+    s = n(499954);
+let a = [0, 5e5, 1e6, 15e5, 2e6, 3e6, 4e6, 5e6, 6e6, 7e6, 8e6],
     o = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60],
     l = [720, 480, 360],
     u = [
@@ -144,12 +144,12 @@ function m(e) {
     for (let t of Object.keys(f)) if (e.toLowerCase().includes(t)) return f[t];
     return "uncategorized";
 }
-function g(e) {
+function E(e) {
     if (null == e) return "unknown";
     for (let t of Object.keys(p)) if (e.toLowerCase().includes(t)) return p[t];
     return "uncategorized";
 }
-function E(e) {
+function g(e) {
     if (null == e) return "UNKNOWN";
     if ("H264" === (e = e.toUpperCase())) return "H264";
     if ("H265" === e) return "H265";
@@ -220,8 +220,8 @@ class A {
                 (n.timestamp = t),
                 (n.nackCount = e.nackCount),
                 (n.pliCount = e.pliCount),
-                (n.decoder = g(e.decoderImplementationName)),
-                (n.codecType = E(e.codec.name)),
+                (n.decoder = E(e.decoderImplementationName)),
+                (n.codecType = g(e.codec.name)),
                 (n.qpSum = 0),
                 (n.freezeCount = e.freezeCount),
                 (n.pauseCount = e.pauseCount),
@@ -258,7 +258,7 @@ class A {
                   timestamp: t,
                   encoder: m(e.encoderImplementationName),
                   decoder: null,
-                  codecType: E(e.codec.name),
+                  codecType: g(e.codec.name),
                   nackCount: e.nackCount,
                   pliCount: e.pliCount,
                   qpSum: e.qpSum,
@@ -301,7 +301,7 @@ class I {
     inboundBitrateEstimateHistogram = new i.d();
     resolutionHistogram = new i.d();
     localWantHistogram = new i.d();
-    systemResources = new a.A();
+    systemResources = new s.A();
     decoderCodec = "UNKNOWN";
     startTime;
     timeToFirstFrame;
@@ -345,6 +345,8 @@ class I {
     intervalTotal = 0;
     cryptorMaxAttempts = 0;
     cryptorFailureBeforeSuccessCount;
+    minWidth = null;
+    minHeight = null;
     videoStoppedWatch;
     videoStoppedReason = 0;
     get isVideoStopped() {
@@ -356,7 +358,7 @@ class I {
     constructor(e) {
         (this.startTime = e.now()),
             (this.videoStoppedWatch = new r.W0(e)),
-            s.forEach((e) => {
+            a.forEach((e) => {
                 this.bitrateBuckets[e] = 0;
             }),
             o.forEach((e) => {
@@ -394,7 +396,7 @@ class I {
         let {
                 bytes: r,
                 framesCodec: i,
-                timestamp: a,
+                timestamp: s,
                 resolution: u,
                 minorResolution: c,
                 majorResolution: d,
@@ -404,18 +406,18 @@ class I {
                 localWant: h,
             } = t,
             { timestamp: m } = n,
-            g = (a - m) / 1e3;
+            E = (s - m) / 1e3;
         if (
-            ((this.intervalTotal += g),
-            (this.resolutionTotal += u * g),
-            (this.minorResolutionTotal += c * g),
-            (this.majorResolutionTotal += d * g),
+            ((this.intervalTotal += E),
+            (this.resolutionTotal += u * E),
+            (this.minorResolutionTotal += c * E),
+            (this.majorResolutionTotal += d * E),
             (this.cryptorMaxAttempts = Math.max(this.cryptorMaxAttempts, t.cryptorMaxAttempts)),
             null != _ && null != p && "encoderBuckets" in this)
         ) {
             let n = this;
-            (n.encoderBuckets[_] += g),
-                (n.codecBuckets[p] += g),
+            (n.encoderBuckets[_] += E),
+                (n.codecBuckets[p] += E),
                 null != t.codecType && "UNKNOWN" !== t.codecType && (n.encoderCodec = t.codecType),
                 null != e.vmafScore &&
                     e.vmafScore >= 0 &&
@@ -429,27 +431,27 @@ class I {
         }
         if (null != f && null != p && "decoderBuckets" in this) {
             let e = this;
-            (e.decoderBuckets[f] += g),
-                (e.codecBuckets[p] += g),
+            (e.decoderBuckets[f] += E),
+                (e.codecBuckets[p] += E),
                 null != t.codecType && "UNKNOWN" !== t.codecType && (e.decoderCodec = t.codecType);
         }
         if (this.statsWindow.length < 6) return;
-        let { bytes: E, framesCodec: A, timestamp: I } = this.statsWindow[this.statsWindow.length - 3];
+        let { bytes: g, framesCodec: A, timestamp: I } = this.statsWindow[this.statsWindow.length - 3];
         l.forEach((e) => {
-            u <= e && (this.resolutionBuckets[e] += g);
+            u <= e && (this.resolutionBuckets[e] += E);
         });
-        let T = (a - I) / 1e3,
-            y = ((r - E) * 8) / T,
-            S = (i - A) / T;
-        s.forEach((e) => {
-            y <= e && (this.bitrateBuckets[e] += g);
+        let T = (s - I) / 1e3,
+            S = ((r - g) * 8) / T,
+            y = (i - A) / T;
+        a.forEach((e) => {
+            S <= e && (this.bitrateBuckets[e] += E);
         }),
             o.forEach((e) => {
-                S <= e && (this.fpsBuckets[e] += g);
+                y <= e && (this.fpsBuckets[e] += E);
             }),
             this.resolutionHistogram.addSample(u),
-            this.bitrateHistogram.addSample(y),
-            this.fpsHistogram.addSample(S),
+            this.bitrateHistogram.addSample(S),
+            this.fpsHistogram.addSample(y),
             this.localWantHistogram.addSample(h),
             this.statsWindow.shift();
     }
