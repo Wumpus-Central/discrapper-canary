@@ -533,6 +533,7 @@ var r = (function (e) {
             (e[(e.EXPIRING_POWERUP_COACHMARK = 684)] = "EXPIRING_POWERUP_COACHMARK"),
             (e[(e.FIRST_BOOSTER_UPSELL = 685)] = "FIRST_BOOSTER_UPSELL"),
             (e[(e.REFERRAL_PROGRAM_POPOVER_V2 = 686)] = "REFERRAL_PROGRAM_POPOVER_V2"),
+            (e[(e.QUEST_HOME_ENTRYPOINT_HERO_BADGE = 687)] = "QUEST_HOME_ENTRYPOINT_HERO_BADGE"),
             e
         );
     })({}),

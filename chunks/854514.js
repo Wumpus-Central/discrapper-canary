@@ -89,8 +89,8 @@ function b(e) {
         (0, i.jsx)(f.R, {
             adContentId: t.campaignId,
             adCreativeType: o.p.QUEST_HOME_HEROES,
-            questContent: m.uF.QUEST_HOME_TAKEOVER,
-            sourceQuestContent: m.uF.QUEST_HOME_TAKEOVER,
+            questContent: m.uF.QUEST_HOME_HERO,
+            sourceQuestContent: m.uF.QUEST_HOME_HERO,
             children: (e) =>
                 (0, i.jsx)("div", {
                     className: a()(v.iE, "theme-midnight", { [v.Qx]: !I }),
@@ -152,9 +152,9 @@ function b(e) {
                                                                 (0, g.vK)({
                                                                     adContentId: t.campaignId,
                                                                     adCreativeType: o.p.QUEST_HOME_HEROES,
-                                                                    questContent: m.uF.QUEST_HOME_TAKEOVER,
+                                                                    questContent: m.uF.QUEST_HOME_HERO,
                                                                     questContentCTA: E.Cy.OPEN_GAME_LINK,
-                                                                    sourceQuestContent: m.uF.QUEST_HOME_TAKEOVER,
+                                                                    sourceQuestContent: m.uF.QUEST_HOME_HERO,
                                                                 });
                                                         },
                                                         size: "md",
@@ -177,11 +177,10 @@ function b(e) {
                                                                               (0, g.vK)({
                                                                                   adContentId: t.campaignId,
                                                                                   adCreativeType: o.p.QUEST_HOME_HEROES,
-                                                                                  questContent:
-                                                                                      m.uF.QUEST_HOME_TAKEOVER,
+                                                                                  questContent: m.uF.QUEST_HOME_HERO,
                                                                                   questContentCTA: E.Cy.VIEW_QUESTS,
                                                                                   sourceQuestContent:
-                                                                                      m.uF.QUEST_HOME_TAKEOVER,
+                                                                                      m.uF.QUEST_HOME_HERO,
                                                                               });
                                                                       },
                                                                       size: "md",
