@@ -45066,9 +45066,10 @@ screen and (max-width:485px) {
     align-self: stretch;
     display: flex;
     flex-direction: column;
+    max-width: 394px;
     padding-bottom: 16px;
     text-align: center;
-    width: 394px
+    width: 100%
 }
 
 .confirmationHeader__9baa5 {
