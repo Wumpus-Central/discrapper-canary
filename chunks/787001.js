@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => S });
+n.d(t, { A: () => v });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -11,111 +11,111 @@ var r = n(627968),
     d = n(263063),
     _ = n(532794),
     f = n(864310),
-    p = n(338548),
-    h = n(287809),
-    m = n(178368),
-    g = n(927578),
-    E = n(987144),
-    A = n(652215),
-    I = n(788868),
-    T = n(985018),
-    y = n(127397);
-let S = function (e) {
-    let { closeLayer: t, guild: n, onCtaVisibilityChange: a } = e,
-        S = i.useRef(null),
-        v = (0, o.bG)([h.default], () => h.default.getCurrentUser()),
-        C = (0, o.bG)([m.A], () => m.A.boostSlots),
-        b = v?.isPremiumGroupMember(),
-        { analyticsLocations: N } = (0, c.Ay)(),
-        [R, O] = i.useState(!1),
-        D = i.useMemo(
+    h = n(338548),
+    p = n(287809),
+    g = n(178368),
+    E = n(927578),
+    A = n(987144),
+    I = n(652215),
+    T = n(788868),
+    y = n(985018),
+    S = n(127397);
+let v = function (e) {
+    let { className: t, closeLayer: n, guild: a, onCtaVisibilityChange: v } = e,
+        C = i.useRef(null),
+        b = (0, o.bG)([p.default], () => p.default.getCurrentUser()),
+        N = (0, o.bG)([g.A], () => g.A.boostSlots),
+        R = b?.isPremiumGroupMember(),
+        { analyticsLocations: O } = (0, c.Ay)(),
+        [D, L] = i.useState(!1),
+        w = i.useMemo(
             () =>
-                Object.keys(C).filter((e) => {
-                    let t = C[e];
-                    return null != t.premiumGuildSubscription && t.premiumGuildSubscription.guildId === n.id;
+                Object.keys(N).filter((e) => {
+                    let t = N[e];
+                    return null != t.premiumGuildSubscription && t.premiumGuildSubscription.guildId === a.id;
                 }).length,
-            [C, n.id],
+            [N, a.id],
         ),
-        L = (0, f.A)(e.guild.id).total;
-    async function w() {
-        O(!0),
-            await (0, E.g)({
-                analyticsLocations: N,
+        x = (0, f.A)(e.guild.id).total;
+    async function P() {
+        L(!0),
+            await (0, A.g)({
+                analyticsLocations: O,
                 analyticsLocation: {
-                    page: A.liQ.PREMIUM_GUILD_USER_MODAL,
-                    section: A.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                    object: A.ZSU.BUTTON_CTA,
-                    objectType: A.AnalyticsObjectTypes.BUY,
+                    page: I.liQ.PREMIUM_GUILD_USER_MODAL,
+                    section: I.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                    object: I.ZSU.BUTTON_CTA,
+                    objectType: I.AnalyticsObjectTypes.BUY,
                 },
-                guild: n,
-                closeLayer: t,
+                guild: a,
+                closeLayer: n,
             }),
-            O(!1);
+            L(!1);
     }
-    function x() {
+    function M() {
         (0, _.A)({
             initialPlanId: null,
-            subscriptionTier: I.pe.TIER_2,
-            analyticsLocations: N,
+            subscriptionTier: T.pe.TIER_2,
+            analyticsLocations: O,
             analyticsObject: {
-                page: A.liQ.PREMIUM_GUILD_USER_MODAL,
-                section: A.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                object: A.ZSU.BUTTON_ICON,
-                objectType: A.AnalyticsObjectTypes.BUY,
+                page: I.liQ.PREMIUM_GUILD_USER_MODAL,
+                section: I.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                object: I.ZSU.BUTTON_ICON,
+                objectType: I.AnalyticsObjectTypes.BUY,
             },
-            onClose: (e) => e && t(),
+            onClose: (e) => e && n(),
         });
     }
-    function P() {
+    function k() {
         (0, _.A)({
             initialPlanId: null,
-            subscriptionTier: I.pe.TIER_2,
+            subscriptionTier: T.pe.TIER_2,
             isGift: !0,
-            analyticsLocations: N,
+            analyticsLocations: O,
             analyticsObject: {
-                page: A.liQ.PREMIUM_GUILD_USER_MODAL,
-                section: A.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                object: A.ZSU.BUTTON_ICON,
-                objectType: A.AnalyticsObjectTypes.GIFT,
+                page: I.liQ.PREMIUM_GUILD_USER_MODAL,
+                section: I.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                object: I.ZSU.BUTTON_ICON,
+                objectType: I.AnalyticsObjectTypes.GIFT,
             },
-            onClose: (e) => e && t(),
+            onClose: (e) => e && n(),
         });
     }
     return (0, r.jsxs)("div", {
-        className: y.kL,
+        className: s()(S.kL, t),
         children: [
             (0, r.jsxs)("div", {
-                className: y.$R,
+                className: S.$R,
                 children: [
-                    (0, r.jsx)(d.A, { className: y.$f, guild: n, size: d.A.Sizes.LARGER, iconSize: 70, active: !0 }),
+                    (0, r.jsx)(d.A, { className: S.$f, guild: a, size: d.A.Sizes.LARGER, iconSize: 70, active: !0 }),
                     (0, r.jsxs)("div", {
-                        className: y.CR,
+                        className: S.CR,
                         children: [
                             (0, r.jsx)(u.Heading, {
-                                className: y.J5,
+                                className: S.J5,
                                 variant: "heading-lg/semibold",
-                                children: n.name,
+                                children: a.name,
                             }),
                             (0, r.jsxs)("div", {
-                                className: y.SJ,
+                                className: S.SJ,
                                 children: [
                                     (0, r.jsx)(u._Jp, {
                                         color:
-                                            L > 0 ? u.LU0.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH : "currentColor",
-                                        className: s()(y.Me, { [y.S3]: L > 0 }),
+                                            x > 0 ? u.LU0.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH : "currentColor",
+                                        className: s()(S.Me, { [S.S3]: x > 0 }),
                                     }),
                                     (0, r.jsx)(u.Text, {
-                                        className: y.n,
+                                        className: S.n,
                                         variant: "text-md/semibold",
-                                        children: T.intl.format(T.t["pob/cL"], { subscriptions: L }),
+                                        children: y.intl.format(y.t["pob/cL"], { subscriptions: x }),
                                     }),
                                 ],
                             }),
-                            D > 0
+                            w > 0
                                 ? (0, r.jsx)(u.Text, {
-                                      className: y.EV,
+                                      className: S.EV,
                                       variant: "text-sm/normal",
-                                      children: T.intl.format(T.t.Jeto2u, { numSubscriptions: D }),
+                                      children: y.intl.format(y.t.Jeto2u, { numSubscriptions: w }),
                                   })
                                 : null,
                         ],
@@ -123,45 +123,45 @@ let S = function (e) {
                 ],
             }),
             (0, r.jsxs)("div", {
-                className: y.mY,
+                className: S.mY,
                 children: [
-                    (0, r.jsx)("h1", { className: y.R_, children: T.intl.string(T.t.N4sqzL) }),
-                    b ? (0, r.jsx)(p.A, { alwaysWhite: !0 }) : null,
+                    (0, r.jsx)("h1", { className: S.R_, children: y.intl.string(y.t.N4sqzL) }),
+                    R ? (0, r.jsx)(h.A, { alwaysWhite: !0 }) : null,
                     (0, r.jsxs)("div", {
-                        className: y.Sq,
+                        className: S.Sq,
                         children: [
                             (0, r.jsx)(l.L, {
-                                innerRef: S,
-                                onChange: a,
+                                innerRef: C,
+                                onChange: v,
                                 threshold: 0.9,
                                 children: (0, r.jsx)("div", {
-                                    ref: S,
-                                    className: y.dp,
+                                    ref: C,
+                                    className: S.dp,
                                     children: (0, r.jsx)(u.Button, {
                                         variant: "expressive",
                                         size: "md",
                                         icon: u._Jp,
-                                        text: T.intl.string(T.t.gKmQ1G),
-                                        onClick: w,
-                                        loading: R,
-                                        disabled: b,
+                                        text: y.intl.string(y.t.gKmQ1G),
+                                        onClick: P,
+                                        loading: D,
+                                        disabled: R,
                                     }),
                                 }),
                             }),
-                            g.Ay.hasFreeBoosts(v) || g.Ay.isPremium(v, I.PremiumTypes.TIER_2)
+                            E.Ay.hasFreeBoosts(b) || E.Ay.isPremium(b, T.PremiumTypes.TIER_2)
                                 ? (0, r.jsx)(u.Button, {
                                       variant: "secondary",
                                       size: "md",
                                       icon: u.okO,
-                                      text: T.intl.string(T.t["8MYSQw"]),
-                                      onClick: P,
+                                      text: y.intl.string(y.t["8MYSQw"]),
+                                      onClick: k,
                                   })
                                 : (0, r.jsx)(u.Button, {
                                       variant: "secondary",
                                       size: "md",
-                                      text: T.intl.string(T.t.Q43TvC),
-                                      onClick: x,
-                                      disabled: b,
+                                      text: y.intl.string(y.t.Q43TvC),
+                                      onClick: M,
+                                      disabled: R,
                                   }),
                         ],
                     }),

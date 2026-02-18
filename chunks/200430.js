@@ -11,6 +11,8 @@ e.exports = {
     uE: "middleBodyContentWrapper__00843 content__00843",
     o6: "lowerBody__00843",
     y$: "lowerBodyContentWrapper__00843 content__00843",
+    Oh: "ctaBarReducedMargin__00843",
     mR: "persistentCtaSpacer__00843",
     Q: "perksTable__00843",
+    Qc: "videoHeading__00843",
 };

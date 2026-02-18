@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => b });
+n.d(t, { A: () => D });
 var r = n(627968),
     i = n(64700),
     a = n(311907),
@@ -11,74 +11,76 @@ var r = n(627968),
     d = n(488803),
     _ = n(522055),
     f = n(645619),
+    h = n(927581),
     p = n(954571),
-    h = n(917064),
-    m = n(787001),
-    g = n(232122),
-    E = n(340195),
-    A = n(244027),
-    I = n(286188),
-    T = n(278115),
-    S = n(527113),
-    y = n(250493),
-    v = n(652215),
-    C = n(985018),
-    N = n(200430);
-function b(e) {
-    let { analyticsLocation: t, guild: n, onClose: b, scrollToPowerupCards: R } = e,
-        [O, D] = i.useState(!0),
-        L = i.useRef(!1),
-        w = (0, l.A)(() => Date.now()),
-        { analyticsLocations: x } = (0, u.Ay)(),
-        M = i.useRef(null),
-        P = i.useRef(null),
-        k = i.useRef(null),
-        U = i.useCallback(() => {
-            null != k.current &&
-                null != P.current &&
-                P.current.scrollIntoViewNode({ node: k.current, animate: !0, shouldScrollToStart: !0 });
+    g = n(917064),
+    E = n(787001),
+    A = n(232122),
+    I = n(340195),
+    T = n(244027),
+    y = n(286188),
+    S = n(278115),
+    v = n(527113),
+    C = n(250493),
+    b = n(436083),
+    N = n(652215),
+    R = n(985018),
+    O = n(200430);
+function D(e) {
+    let { analyticsLocation: t, guild: n, onClose: D, scrollToPowerupCards: L } = e,
+        [w, x] = i.useState(!0),
+        P = i.useRef(!1),
+        M = (0, l.A)(() => Date.now()),
+        { analyticsLocations: k } = (0, u.Ay)(),
+        U = i.useRef(null),
+        G = i.useRef(null),
+        F = i.useRef(null),
+        V = i.useCallback(() => {
+            null != F.current &&
+                null != G.current &&
+                G.current.scrollIntoViewNode({ node: F.current, animate: !0, shouldScrollToStart: !0 });
         }, []),
-        G = i.useCallback(() => {
-            U();
-        }, [U]),
-        F = i.useCallback(() => {
-            b?.(),
-                p.default.track(v.HAw.MODAL_DISMISSED, {
-                    type: v.liQ.PREMIUM_GUILD_USER_MODAL,
-                    location_stack: x,
+        B = i.useCallback(() => {
+            V();
+        }, [V]),
+        j = i.useCallback(() => {
+            D?.(),
+                p.default.track(N.HAw.MODAL_DISMISSED, {
+                    type: N.liQ.PREMIUM_GUILD_USER_MODAL,
+                    location_stack: k,
                     location_section: t.section,
                     location_object: t.object,
                     guild_id: n.id,
-                    duration_open_ms: Date.now() - w,
+                    duration_open_ms: Date.now() - M,
                 });
-        }, [b, t, x, w, n.id]),
-        V = i.useCallback(
+        }, [D, t, k, M, n.id]),
+        H = i.useCallback(
             (e) => {
                 e &&
-                    !L.current &&
-                    (p.default.track(v.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-                        type: v.liQ.PREMIUM_GUILD_USER_MODAL,
-                        location_stack: x,
+                    !P.current &&
+                    (p.default.track(N.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                        type: N.liQ.PREMIUM_GUILD_USER_MODAL,
+                        location_stack: k,
                         location_section: t.section,
                         location_object: t.object,
                         guild_id: n.id,
                     }),
-                    (L.current = !0));
+                    (P.current = !0));
             },
-            [t, x, n.id],
+            [t, k, n.id],
         );
     i.useEffect(() => {
-        p.default.track(v.HAw.OPEN_MODAL, {
-            type: v.liQ.PREMIUM_GUILD_USER_MODAL,
-            location_stack: x,
+        p.default.track(N.HAw.OPEN_MODAL, {
+            type: N.liQ.PREMIUM_GUILD_USER_MODAL,
+            location_stack: k,
             location_section: t.section,
             location_object: t.object,
             guild_id: n.id,
         });
-    }, [n.id, t, x]),
+    }, [n.id, t, k]),
         i.useEffect(() => {
             function e(e) {
-                "Escape" === e.key && F();
+                "Escape" === e.key && j();
             }
             return (
                 window.addEventListener("keydown", e),
@@ -86,75 +88,93 @@ function b(e) {
                     window.removeEventListener("keydown", e);
                 }
             );
-        }, [F]);
-    let B = (0, d.C$)(n.id, "GuildBoostingMarketingRefresh"),
-        j = (0, a.bG)([_.A], () => _.A.shouldFetchCatalogForGuild(n.id));
+        }, [j]);
+    let Y = (0, h.u)("GuildBoostingMarketingRefresh"),
+        W = (0, d.C$)(n.id, "GuildBoostingMarketingRefresh"),
+        K = (0, a.bG)([_.A], () => _.A.shouldFetchCatalogForGuild(n.id));
     i.useEffect(() => {
-        B && j && (0, c.z9)(n.id);
-    }, [n.id, B, j]);
-    let H = (0, a.bG)([f.A], () => f.A.hasFetchedPowerupCatalog(n.id));
+        W && K && (0, c.z9)(n.id);
+    }, [n.id, W, K]);
+    let $ = (0, a.bG)([f.A], () => f.A.hasFetchedPowerupCatalog(n.id));
     return (
         i.useEffect(() => {
-            if (R && H) {
+            if (L && $) {
                 let e = setTimeout(() => {
-                    U();
+                    V();
                 }, 100);
                 return () => clearTimeout(e);
             }
-        }, [R, U, H]),
+        }, [L, V, $]),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                null != b &&
+                null != D &&
                     (0, r.jsx)("div", {
-                        className: N.Yk,
+                        className: O.Yk,
                         children: (0, r.jsx)(o.DUT, {
-                            className: N.b,
-                            onClick: F,
-                            "aria-label": C.intl.string(C.t.cpT0Cq),
+                            className: O.b,
+                            onClick: j,
+                            "aria-label": R.intl.string(R.t.cpT0Cq),
                             children: (0, r.jsx)(o.PGe, { size: "md", color: "currentColor" }),
                         }),
                     }),
                 (0, r.jsxs)(o.GtU, {
-                    ref: P,
-                    className: N.XG,
+                    ref: G,
+                    className: O.XG,
                     children: [
                         (0, r.jsxs)("div", {
-                            className: N.wx,
+                            className: O.wx,
                             children: [
-                                (0, r.jsx)(E.A, { className: N.y2 }),
+                                (0, r.jsx)(I.A, { className: O.y2 }),
                                 (0, r.jsxs)("div", {
-                                    className: N.AZ,
+                                    className: O.AZ,
                                     children: [
-                                        (0, r.jsx)(I.A, { guildId: e.guild.id, onButtonClick: G }),
-                                        (0, r.jsx)(m.A, { guild: n, closeLayer: F, onCtaVisibilityChange: D }),
-                                        (0, r.jsx)(A.A, { guild: n }),
+                                        "top" !== Y && (0, r.jsx)(y.A, { guildId: e.guild.id, onButtonClick: B }),
+                                        (0, r.jsx)(E.A, {
+                                            guild: n,
+                                            closeLayer: j,
+                                            onCtaVisibilityChange: x,
+                                            className: "top" === Y ? O.Oh : void 0,
+                                        }),
+                                        "top" === Y && (0, r.jsx)(b.A, { guild: n }),
+                                        (0, r.jsx)(T.A, { guild: n }),
                                     ],
                                 }),
                             ],
                         }),
                         (0, r.jsx)("div", {
-                            className: N.uE,
-                            children: (0, r.jsx)(T.A, { ref: k, guild: e.guild, onClose: F }),
+                            className: O.uE,
+                            children: (0, r.jsx)(S.A, { ref: F, guild: e.guild, onClose: j }),
                         }),
                         (0, r.jsx)("div", {
-                            className: N.o6,
+                            className: O.o6,
                             children: (0, r.jsxs)("div", {
-                                className: N.y$,
+                                className: O.y$,
                                 children: [
-                                    (0, r.jsx)(S.A, { className: N.Q, guild: n }),
-                                    (0, r.jsx)(h.A, {}),
+                                    (0, r.jsx)(v.A, { className: O.Q, guild: n }),
                                     (0, r.jsx)(g.A, {}),
+                                    "bottom" === Y &&
+                                        (0, r.jsxs)(r.Fragment, {
+                                            children: [
+                                                (0, r.jsx)(o.Heading, {
+                                                    className: O.Qc,
+                                                    variant: "heading-xxl/semibold",
+                                                    children: R.intl.string(R.t["0f1VCH"]),
+                                                }),
+                                                (0, r.jsx)(b.A, { guild: n }),
+                                            ],
+                                        }),
+                                    (0, r.jsx)(A.A, {}),
                                 ],
                             }),
                         }),
                         (0, r.jsx)(s.L, {
-                            innerRef: M,
-                            onChange: V,
-                            children: (0, r.jsx)("div", { ref: M, className: N.mR }),
+                            innerRef: U,
+                            onChange: H,
+                            children: (0, r.jsx)("div", { ref: U, className: O.mR }),
                         }),
                     ],
                 }),
-                (0, r.jsx)(y.A, { guild: n, isVisible: !O, closeLayer: F }),
+                (0, r.jsx)(C.A, { guild: n, isVisible: !w, closeLayer: j }),
             ],
         })
     );
