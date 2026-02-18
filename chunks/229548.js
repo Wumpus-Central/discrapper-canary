@@ -12,7 +12,7 @@ function o(e) {
     return (0, l.Wl)(e ? i.M.GUILD_POWERUP_NOTIFICATION : null, { cooldownDurationMs: s.lE });
 }
 function d(e, t) {
-    return (0, l.D8)(e ? i.M.BOOST_TO_UNLOCK_COACHMARK : null, t, { cooldownDurationMs: s.bW });
+    return (0, l.D8)(e ? i.M.BOOST_TO_UNLOCK_COACHMARK : null, t, { cooldownDurationMs: s.bW, numTimesToRecur: 5 });
 }
 function c(e, t) {
     return (0, l.D8)(e ? i.M.EXPIRING_POWERUP_COACHMARK : null, t, { cooldownDurationMs: s.mD });

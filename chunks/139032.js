@@ -1,4 +1,4 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => A }), n(321073);
 var i = n(64700),
     l = n(512750),
     s = n(311907),
@@ -21,16 +21,22 @@ function A(e) {
     let t = (0, s.bG)([r.A], () => r.A.getStateForGuild(e)),
         { available: n } = (0, d.A)(e),
         l = (0, s.bG)([a.A], () => a.A.getGuild(e)?.features.has(u.GuildFeatures.PREMIUM_TIER_3_OVERRIDE) === !0),
-        A = (0, o.M)("useBoostToUnlockFeaturedPowerup");
+        A = (0, o.M)("useBoostToUnlockFeaturedPowerup"),
+        [p] = i.useState(() => Math.random());
     return i.useMemo(() => {
         if (null == t || !A) return;
-        let { allPowerups: e, unlockedPowerups: i } = t;
+        let { allPowerups: e, unlockedPowerups: i } = t,
+            s = [];
         for (let t of h) {
-            let { skuId: s, threshold: a } = t,
-                r = e[s];
-            if (null == r || (l && c.o2.has(s)) || null != i[s] || !r.dependencies.every((e) => null != i[e])) continue;
-            let o = r.cost - n;
-            if (o > 0 && o <= a) return r;
+            let { skuId: a, threshold: r } = t,
+                o = e[a];
+            if (null == o || (l && c.o2.has(a)) || null != i[a] || !o.dependencies.every((e) => null != i[e])) continue;
+            let d = o.cost - n;
+            d > 0 && d <= r && s.push(o);
         }
-    }, [t, n, l, A]);
+        if (s.length > 0) {
+            let e = Math.floor(p * s.length);
+            return s[e];
+        }
+    }, [t, n, l, A, p]);
 }

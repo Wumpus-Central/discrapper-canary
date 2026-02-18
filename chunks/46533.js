@@ -414,7 +414,7 @@ function eu(e) {
         [ew, eU] = (0, f.D8)(
             eM && eO ? o.M.BOOST_TO_UNLOCK_COACHMARK : null,
             t,
-            { cooldownDurationMs: R.bW },
+            { cooldownDurationMs: R.bW, numTimesToRecur: 5 },
             er.m.GUILD_HEADER_TOOLTIPS,
         ),
         [eG, ek] = (0, f.D8)(
