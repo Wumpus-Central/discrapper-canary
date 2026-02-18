@@ -1,28 +1,28 @@
 "use strict";
 n.d(t, {
-    Gp: () => N,
+    Gp: () => b,
     HN: () => I,
     Ic: () => h,
-    Kc: () => S,
-    L4: () => C,
+    Kc: () => y,
+    L4: () => N,
     Li: () => v,
     RF: () => O,
-    ZG: () => E,
+    ZG: () => g,
     gO: () => p,
     if: () => m,
     r$: () => D,
     t6: () => A,
-    v1: () => g,
+    v1: () => E,
     vZ: () => R,
     vc: () => _,
     vy: () => f,
     xn: () => T,
-    yI: () => b,
+    yI: () => C,
 });
 var r = n(665260),
     i = n(773669),
-    a = n(728458),
-    s = n(859703),
+    s = n(728458),
+    a = n(859703),
     o = n(341915),
     l = n(302654),
     u = n(654487),
@@ -31,10 +31,10 @@ let d = 2592e6;
 function _(e, t, n) {
     let r = Array.isArray(t) ? new Map(t.map((e) => [e.id, e])) : t,
         i = Array.isArray(n) ? new Map(n.map((e) => [e.id, e])) : n,
-        a = r.get(e);
-    if (null != a) return a;
-    let s = i.get(e)?.replacementId;
-    if (null != s) return r.get(s);
+        s = r.get(e);
+    if (null != s) return s;
+    let a = i.get(e)?.replacementId;
+    if (null != a) return r.get(a);
 }
 function f(e) {
     return Object.keys(u.TY).includes(o.uF[e]);
@@ -53,7 +53,7 @@ function m(e) {
         n = new Date(e.config.expiresAt).valueOf();
     return null != e.config.expiresAt && !(n <= t);
 }
-function g(e) {
+function E(e) {
     let t = null,
         n = Date.now();
     for (let r of e) {
@@ -62,7 +62,7 @@ function g(e) {
     }
     return t;
 }
-function E(e) {
+function g(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { dateStyle: "short" };
     return null == e ? "" : new Date(e).toLocaleDateString(i.default.locale, t);
 }
@@ -83,10 +83,10 @@ function T(e) {
     let t = I(e);
     return null != t && u.J6.has(t);
 }
-function y(e) {
+function S(e) {
     let { enableNewRequestBehavior: t } = l.A.getConfig({ location: "getQuestDeliveryDataForPlacement" });
     if (t) {
-        let t = s.A.questAdDecisionByPlacement.get(e);
+        let t = a.A.questAdDecisionByPlacement.get(e);
         return null == t
             ? null
             : {
@@ -100,7 +100,7 @@ function y(e) {
               };
     }
     {
-        let t = s.A.questToDeliverForPlacement.get(e);
+        let t = a.A.questToDeliverForPlacement.get(e);
         return null == t
             ? null
             : {
@@ -114,46 +114,48 @@ function y(e) {
               };
     }
 }
-function S(e, t) {
+function y(e, t) {
     let n = I(t);
     if (null == n) return u.K3;
-    let { adDecisionData: r, questId: i } = y(n) ?? {};
+    let { adDecisionData: r, questId: i } = S(n) ?? {};
     return null != r && i === e ? r : u.K3;
 }
 function v(e) {
     let t = I(e);
-    if (null != t) return y(t)?.metadataRaw;
+    if (null != t) return S(t)?.metadataRaw;
 }
-function C(e) {
+function N(e) {
     let t = I(e);
-    if (null != t) return y(t)?.metadataSealed;
+    if (null != t) return S(t)?.metadataSealed;
 }
-function b(e, t) {
+function C(e, t) {
     let n = I(e);
-    if (null == n) return;
-    let { trafficMetadataRaw: r, questId: i } = y(n) ?? {};
-    if (null != r && i === t) return r;
+    if (null != n) {
+        let { trafficMetadataRaw: e, questId: r } = S(n) ?? {};
+        if (null != e && r === t) return e;
+    }
     if (null != t) {
-        let e = s.A.getQuest(t);
+        let e = a.A.getQuest(t);
         return e?.trafficMetadataRaw;
     }
 }
-function N(e, t) {
+function b(e, t) {
     let n = I(e);
-    if (null == n) return;
-    let { trafficMetadataSealed: r, questId: i } = y(n) ?? {};
-    if (null != r && i === t) return r;
+    if (null != n) {
+        let { trafficMetadataSealed: e, questId: r } = S(n) ?? {};
+        if (null != e && r === t) return e;
+    }
     if (null != t) {
-        let e = s.A.getQuest(t);
+        let e = a.A.getQuest(t);
         return e?.trafficMetadataSealed;
     }
 }
 function R(e) {
     let t = I(e);
-    if (null != t) return y(t)?.adContext;
+    if (null != t) return S(t)?.adContext;
 }
 function O(e, t) {
-    a.A.captureException(e, { ...t, tags: { ...t?.tags, app_context: "quests" } });
+    s.A.captureException(e, { ...t, tags: { ...t?.tags, app_context: "quests" } });
 }
 function D() {
     return window.location.pathname.startsWith(c.BVt.QUEST_HOME);
