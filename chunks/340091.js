@@ -4,6 +4,7 @@ e.exports = {
     h_: "description_cf5b44",
     j8: "featured_cf5b44",
     lI: "ctaButton_cf5b44",
+    d_: "subscriptionRequired_cf5b44",
     OU: "captionWrapper_cf5b44",
     qh: "primaryAssetWrapper_cf5b44",
     eq: "primaryAssetImage_cf5b44",
