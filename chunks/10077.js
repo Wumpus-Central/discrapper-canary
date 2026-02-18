@@ -1,9 +1,9 @@
 n.d(t, { M: () => u, c: () => c });
 var i,
     s = n(64700),
-    r = n(311907),
-    a = n(253932),
-    l = n(71393),
+    a = n(311907),
+    l = n(253932),
+    r = n(71393),
     o = n(711014),
     c =
         (((i = {}).SERVER_ORDER = "server-order"),
@@ -41,39 +41,42 @@ let d = {
 function u() {
     let [e, t] = (0, s.useState)(""),
         [n, i] = (0, s.useState)("server-order"),
-        c = (0, r.bG)([o.Ay], () => o.Ay.getFlattenedGuildIds()),
-        u = (0, r.bG)([l.A], () => l.A.getGuilds()),
+        c = (0, a.bG)([o.Ay], () => o.Ay.getFlattenedGuildIds()),
+        u = (0, a.bG)([r.A], () => r.A.getGuilds()),
         _ = c.map((e) => u[e]),
-        m = a.Pw.useSetting(),
-        [A, g] = (0, s.useState)(m),
-        E = async (e) => {
+        m = l.Pw.useSetting(),
+        [A, g] = (0, s.useState)(m);
+    (0, s.useEffect)(() => {
+        g(m);
+    }, [m]);
+    let h = async (e) => {
             g(e);
             try {
-                await a.Pw.updateSetting(e);
+                await l.Pw.updateSetting(e);
             } catch (e) {
                 g(m);
             }
         },
-        h = 0 !== A.length,
-        [p, C] = (0, s.useState)(() => d[n](_, m)),
-        x = p.map((e) => u[e.id]).filter(Boolean);
+        x = 0 !== A.length,
+        [p, E] = (0, s.useState)(() => d[n](_, m)),
+        C = p.map((e) => u[e.id]).filter(Boolean);
     return {
-        guilds: "" === e ? x : x.filter((t) => t.name.toLowerCase().includes(e.toLowerCase())),
+        guilds: "" === e ? C : C.filter((t) => t.name.toLowerCase().includes(e.toLowerCase())),
         sortOrder: n,
         searchQuery: e,
         setSortOrder: (e) => {
-            C(d[e](_, m)), i(e);
+            E(d[e](_, m)), i(e);
         },
         setSearchQuery: t,
         onToggleActivityRestrictedGuild: (e) => {
             let { checked: t, guildId: n } = e,
                 i = new Set(A);
-            t ? i.delete(n) : i.add(n), E([...i]);
+            t ? i.delete(n) : i.add(n), h([...i]);
         },
         isActivityRestricted: (e) => A.includes(e),
-        hasActivityRestrictedGuilds: h,
+        hasActivityRestrictedGuilds: x,
         onToggleAllActivityRestrictedGuilds: () => {
-            h ? E([]) : E(c);
+            x ? h([]) : h(c);
         },
         numTotalGuilds: c.length,
         numActivityRestrictedGuilds: A.length,
