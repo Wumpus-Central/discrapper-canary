@@ -1,85 +1,54 @@
-n.d(t, { L7: () => p, Z0: () => m, kt: () => g }), n(839272);
+n.d(t, { Z: () => p, k: () => A }), n(839272);
 var i = n(64700),
     l = n(311907),
-    s = n(775602),
-    a = n(394577),
-    r = n(21119),
-    o = n(696451),
-    d = n(287809),
-    c = n(607567),
-    u = n(403362),
-    h = n(605431),
-    A = n(366251);
-function g(e) {
+    s = n(394577),
+    a = n(21119),
+    r = n(696451),
+    o = n(287809),
+    d = n(607567),
+    c = n(403362),
+    u = n(605431),
+    h = n(366251);
+function A(e) {
     let { channel: t } = e,
         n = t?.guild_id,
-        { totalSuggestions: s } = a.A.useExperiment(
+        { totalSuggestions: u } = s.A.useExperiment(
             { guildId: n, location: "useVoiceInviteSuggestions" },
             { autoTrackExposure: !1 },
         ),
-        h = (0, l.bG)([r.A], () => r.A.getUserAffinitiesMap(), []),
+        h = (0, l.bG)([a.A], () => a.A.getUserAffinitiesMap(), []),
         A = new Set(
-            (0, l.bG)([c.Ay], () => (null == t ? [] : c.Ay.getVoiceStatesForChannel(t).map((e) => e.user.id)), [t]),
+            (0, l.bG)([d.Ay], () => (null == t ? [] : d.Ay.getVoiceStatesForChannel(t).map((e) => e.user.id)), [t]),
         ),
-        g = (0, l.yK)(
-            [o.Ay, d.default],
+        p = (0, l.yK)(
+            [r.Ay, o.default],
             () =>
-                o.Ay.getMembers(n)
-                    .map((e) => d.default.getUser(e.userId))
-                    .filter(u.Vq)
+                r.Ay.getMembers(n)
+                    .map((e) => o.default.getUser(e.userId))
+                    .filter(c.Vq)
                     .filter((e) => !A.has(e.id)),
             [n, A],
         );
     return i
         .useMemo(
             () =>
-                g.toSorted((e, t) => {
+                p.toSorted((e, t) => {
                     let { id: n } = e,
                         { id: i } = t;
                     return (h.get(i)?.vcProbability ?? 0) - (h.get(n)?.vcProbability ?? 0);
                 }),
-            [g, h],
+            [p, h],
         )
-        .slice(0, s);
+        .slice(0, u);
 }
-function m(e) {
+function p(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { collapsed: n = !1 } = t,
-        s = (0, l.bG)([A.A], () => A.A.getShouldShowPopover(e.id), [e.id]);
+        s = (0, l.bG)([h.A], () => h.A.getShouldShowPopover(e.id), [e.id]);
     return {
         shouldShow: s && !n,
         dismiss: i.useCallback(() => {
-            (0, h.w)(e.id);
+            (0, u.w)(e.id);
         }, [e]),
     };
-}
-function p(e) {
-    let [t, n] = i.useState(!1),
-        [a, r] = i.useState(!1),
-        o = (0, l.bG)([s.A], () => s.A.keyboardModeEnabled);
-    i.useEffect(() => {
-        let t = e.current;
-        if (null == t) return;
-        n(!1), r(!1);
-        let i = () => n(!0),
-            l = () => n(!1),
-            s = () => r(!0),
-            a = (e) => {
-                t.contains(e.relatedTarget) || r(!1);
-            };
-        return (
-            t.addEventListener("mouseenter", i),
-            t.addEventListener("mouseleave", l),
-            t.addEventListener("focusin", s),
-            t.addEventListener("focusout", a),
-            () => {
-                t.removeEventListener("mouseenter", i),
-                    t.removeEventListener("mouseleave", l),
-                    t.removeEventListener("focusin", s),
-                    t.removeEventListener("focusout", a);
-            }
-        );
-    }, [e]);
-    let d = o && a;
-    return { isHovering: t, isFocusing: d, isHoveringOrFocusing: t || d };
 }
