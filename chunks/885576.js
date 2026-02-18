@@ -1,19 +1,18 @@
 "use strict";
 let r;
-n.d(t, { A: () => k });
+n.d(t, { A: () => M });
 var i = n(111956),
     a = n.n(i),
     s = n(311907),
     o = n(73153),
     l = n(956793),
     u = n(77729),
-    c = n(253168),
-    d = n(253932),
-    _ = n(927813),
-    f = n(723702),
-    p = n(961350),
+    c = n(253932),
+    d = n(927813),
+    _ = n(723702),
+    f = n(961350),
     h = n(652215),
-    m = n(731854);
+    p = n(731854);
 let g = Date.now(),
     E = !1,
     A = !1,
@@ -21,11 +20,11 @@ let g = Date.now(),
     T = !1,
     y = !1;
 function S() {
-    return I || T || ((0, f.isAndroid)() && y);
+    return I || T || ((0, _.isAndroid)() && y);
 }
 function v() {
-    let e = d.cU.getSetting();
-    0 === e || null != r || Date.now() - g > Math.min(e * _.A.Millis.SECOND, h.sdF) || S()
+    let e = c.cU.getSetting();
+    0 === e || null != r || Date.now() - g > Math.min(e * d.A.Millis.SECOND, h.sdF) || S()
         ? A || o.h.dispatch({ type: "AFK", afk: !0 })
         : A && o.h.dispatch({ type: "AFK", afk: !1 });
 }
@@ -39,11 +38,8 @@ function b() {
 }
 function N() {
     let e = (e) => {
-        if (c.A.getConfig({ location: "checkNativeIdle" }).system_wide_input) {
-            let t = Date.now() - e;
-            (null == r || t > r) && ((g = Math.max(t, g)), (r = null));
-        }
-        b(), setTimeout(N, 10 * _.A.Millis.SECOND);
+        let t = Date.now() - e;
+        (null == r || t > r) && ((g = Math.max(t, g)), (r = null)), b(), setTimeout(N, 10 * d.A.Millis.SECOND);
     };
     if (u.A?.remotePowerMonitor?.getSystemIdleTimeMs != null) {
         let t = u.A.remotePowerMonitor.getSystemIdleTimeMs();
@@ -51,10 +47,10 @@ function N() {
     }
 }
 function R(e) {
-    c.A.getConfig({ location: "handlePowerEvent" }).power_events ? x({}) : (e && (r = Date.now()), b());
+    e && (r = Date.now()), b();
 }
 if (!__OVERLAY__) {
-    f.isPlatformEmbedded && u.A?.remotePowerMonitor != null
+    _.isPlatformEmbedded && u.A?.remotePowerMonitor != null
         ? (N(),
           u.A.remotePowerMonitor.on("resume", () => {
               (I = !1), R(!1);
@@ -68,9 +64,9 @@ if (!__OVERLAY__) {
           u.A.remotePowerMonitor.on("unlock-screen", () => {
               (T = !1), R(!1);
           }))
-        : setInterval(b, 30 * _.A.Millis.SECOND);
+        : setInterval(b, 30 * d.A.Millis.SECOND);
     let e = a()(() => {
-        c.A.getConfig({ location: "handleGenericInput" }).generic_inputs && x({});
+        x({});
     }, 500);
     window.addEventListener("mouseup", e), window.addEventListener("wheel", e), window.addEventListener("keypress", e);
 }
@@ -82,7 +78,7 @@ function D(e) {
 }
 function L(e) {
     let { userId: t, speakingFlags: n } = e;
-    return n !== m.ME.NONE && t === p.default.getId() && x({}), !1;
+    return n !== p.ME.NONE && t === f.default.getId() && x({}), !1;
 }
 function w(e) {
     let { state: t } = e;
@@ -100,13 +96,9 @@ function x(e) {
         !1)
     );
 }
-function P() {
-    if (!c.A.getConfig({ location: "handleSettingsProtoUpdate" }).settings_updates) return !1;
-    x({});
-}
-class M extends s.Ay.Store {
+class P extends s.Ay.Store {
     initialize() {
-        this.waitFor(p.default);
+        this.waitFor(f.default);
     }
     static displayName = "IdleStore";
     isIdle() {
@@ -125,7 +117,7 @@ class M extends s.Ay.Store {
         return T;
     }
 }
-let k = new M(o.h, {
+let M = new P(o.h, {
     IDLE: O,
     AFK: D,
     SPEAKING: L,
@@ -136,5 +128,4 @@ let k = new M(o.h, {
     WINDOW_FOCUS: x,
     OVERLAY_INITIALIZE: x,
     OVERLAY_SET_INPUT_LOCKED: x,
-    USER_SETTINGS_PROTO_UPDATE: P,
 });
