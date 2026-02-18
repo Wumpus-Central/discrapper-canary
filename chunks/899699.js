@@ -2,8 +2,8 @@
 let r;
 n.d(t, { R: () => u, m: () => c });
 var i = n(626584),
-    a = n(837921),
-    s = n(672396);
+    a = n(206885),
+    s = n(837921);
 let o = new i.A("OverlayModuleUtils"),
     l = null;
 function u() {
@@ -15,13 +15,13 @@ function u() {
         return e;
     }
     async function t() {
-        if (!s.OX)
+        if (!a.O)
             throw (
                 (o.error("Attempted to load overlay on an unsupported platform."),
                 Error("Overlay is not supported on this platform."))
             );
         try {
-            return await a.Ay.ensureModule("discord_overlay2"), (r = e(a.Ay.requireModule("discord_overlay2")));
+            return await s.Ay.ensureModule("discord_overlay2"), (r = e(s.Ay.requireModule("discord_overlay2")));
         } catch (e) {
             o.error("failed ensuring discord_overlay2", e);
             return;
@@ -32,7 +32,7 @@ function u() {
 function c() {
     if (null == r)
         try {
-            r = a.Ay.requireModule("discord_overlay2");
+            r = s.Ay.requireModule("discord_overlay2");
         } catch (e) {
             o.error("failed ensuring discord_overlay2", e);
             return;

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { x: () => s });
 var r = n(506774),
-    i = n(672396),
+    i = n(206885),
     a = (function (e) {
         return (
             (e.Version1 = "OverlayStore"),
@@ -58,32 +58,32 @@ class s {
     static loadInternal() {
         let e = r.w.get("OverlayStore");
         if (null != e) {
-            let t = new s("boolean" == typeof e.enabled ? e.enabled : i.OX, i.OX);
+            let t = new s("boolean" == typeof e.enabled ? e.enabled : i.O, i.O);
             return t.save(), r.w.remove("OverlayStore"), t;
         }
         let t = r.w.get("overlayEnabled");
         if (null != t) {
-            let e = new s("boolean" == typeof t ? t : i.OX, i.OX);
+            let e = new s("boolean" == typeof t ? t : i.O, i.O);
             return e.save(), r.w.remove("overlayEnabled"), e;
         }
         let n = r.w.get("OverlayStore3");
         if (null != n) {
-            let e = new s((n.enabled || n.legacyEnabled) ?? i.OX, i.OX);
+            let e = new s((n.enabled || n.legacyEnabled) ?? i.O, i.O);
             return e.save(), r.w.remove("OverlayStore3"), e;
         }
         let a = r.w.get("OverlayStore4");
         if (null != a) {
-            let e = new s(a.legacyEnabled || i.OX, a.oopEnabled ?? i.OX);
+            let e = new s(a.legacyEnabled || i.O, a.oopEnabled ?? i.O);
             return e.save(), r.w.remove("OverlayStore4"), e;
         }
         let o = r.w.get("OverlayStore5");
         if (null != o) {
-            let e = new s(o.legacyEnabled ?? i.OX, o.oopEnabled || i.OX);
+            let e = new s(o.legacyEnabled ?? i.O, o.oopEnabled || i.O);
             return e.save(), r.w.remove("OverlayStore5"), e;
         }
         let l = r.w.get("OverlayStore6");
-        if (null != l) return new s(l.legacyEnabled ?? i.OX, l.oopEnabled ?? i.OX);
-        let u = new s(i.OX, i.OX);
+        if (null != l) return new s(l.legacyEnabled ?? i.O, l.oopEnabled ?? i.O);
+        let u = new s(i.O, i.O);
         return u.save(), u;
     }
 }

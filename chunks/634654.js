@@ -8,11 +8,9 @@ var i,
         (i.DISMISS_CHANNEL_ROW = "dismiss_channel_row"),
         i),
     s =
-        21552 == n.j
-            ? (((l = {}).CHANNEL_ROW_CONTEXT_MENU = "channel_row_context_menu"),
-              (l.SHOP_HEADER_BUTTON = "shop_header_button"),
-              l)
-            : null;
+        (((l = {}).CHANNEL_ROW_CONTEXT_MENU = "channel_row_context_menu"),
+        (l.SHOP_HEADER_BUTTON = "shop_header_button"),
+        l);
 let a = "hasClickedGuildShopProductPreviewTab",
     o = "hasClickedGuildShopChannelRow",
     E = "https://discord.com/servershop";

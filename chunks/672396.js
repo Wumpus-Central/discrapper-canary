@@ -1,19 +1,8 @@
 "use strict";
-n.d(t, {
-    BR: () => l,
-    Jr: () => s,
-    KS: () => u,
-    Kv: () => d,
-    Li: () => _,
-    OX: () => i,
-    Vo: () => o,
-    ed: () => a,
-    uj: () => c,
-});
-var r = n(723702);
-let i = r.isPlatformEmbedded && ((0, r.isWindows)() || !1),
-    a = !1;
-var s = (function (e) {
+n.d(t, { BR: () => s, Jr: () => i, KS: () => o, Kv: () => u, Li: () => c, Vo: () => a, ed: () => r, uj: () => l }),
+    n(723702);
+let r = !1;
+var i = (function (e) {
     return (
         (e[(e.WELCOME = 0)] = "WELCOME"),
         (e[(e.NEWS = 1)] = "NEWS"),
@@ -23,7 +12,7 @@ var s = (function (e) {
         e
     );
 })({});
-function o(e) {
+function a(e) {
     switch (e) {
         case "News Nudge":
         case "Welcome Nudge":
@@ -44,7 +33,7 @@ function o(e) {
             return 5;
     }
 }
-var l = (function (e) {
+var s = (function (e) {
         return (
             (e[(e.Nudge = 0)] = "Nudge"),
             (e[(e.TextChat = 1)] = "TextChat"),
@@ -55,7 +44,7 @@ var l = (function (e) {
             e
         );
     })({}),
-    u = (function (e) {
+    o = (function (e) {
         return (
             (e.NewsNudge = "News Nudge"),
             (e.WelcomeNudge = "Welcome Nudge"),
@@ -75,14 +64,14 @@ var l = (function (e) {
             e
         );
     })({}),
-    c = (function (e) {
+    l = (function (e) {
         return (e[(e.Viewed = 0)] = "Viewed"), (e[(e.Clicked = 1)] = "Clicked"), e;
     })({});
-let d = Object.freeze({
+let u = Object.freeze({
         LOW: "background-opacity-low",
         MEDIUM: "background-opacity-medium",
         HIGH: "background-opacity-high",
         FULL: "background-opacity-full",
         DISABLED: null,
     }),
-    _ = Object.freeze({ BOTTOM: 0, LOWER: 0.25, UPPER: 0.75, TOP: 1 });
+    c = Object.freeze({ BOTTOM: 0, LOWER: 0.25, UPPER: 0.75, TOP: 1 });
