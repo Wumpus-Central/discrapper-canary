@@ -1,13 +1,13 @@
-n.d(t, { A: () => c }), n(508300), n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162);
+n.d(t, { A: () => c });
 var a = n(627968),
-    s = n(64700),
-    i = n(18051),
+    i = n(64700),
+    s = n(18051),
     l = n(158954),
     r = n(827734),
     o = n(732955),
     d = n(397927);
 function c() {
-    let e = Object.keys(i).map((e) => (0, a.jsx)(h, { riveName: e }, e));
+    let e = Object.keys(s).map((e) => (0, a.jsx)(h, { riveName: e }, e));
     return (0, a.jsx)(l.ArX, {
         style: { maxHeight: "100%" },
         children: (0, a.jsxs)(l.BJc, {
@@ -34,26 +34,26 @@ function c() {
     });
 }
 function u() {
-    let [e, t] = s.useState(null),
-        [n, i] = s.useState(null),
-        [r, o] = s.useState(null),
-        [c, u] = s.useState([]),
-        x = s.useRef(null),
-        [p, g] = s.useState(400),
-        [_, f] = s.useState(400),
-        v = s.useCallback(() => {
+    let [e, t] = i.useState(null),
+        [n, s] = i.useState(null),
+        [r, o] = i.useState(null),
+        [c, u] = i.useState([]),
+        x = i.useRef(null),
+        [p, g] = i.useState(400),
+        [_, f] = i.useState(400),
+        b = i.useCallback(() => {
             setTimeout(() => {
-                o(x.current?.getProperties() ?? {}), u(x.current?.getArtboards() ?? []), i({});
+                o(x.current?.getProperties() ?? {}), u(x.current?.getArtboards() ?? []), s({});
             }, 1e3);
         }, []),
-        b = s.useCallback(
+        v = i.useCallback(
             (e, t) => {
-                null != n && i((n) => ({ ...n, [e]: { type: r?.[e]?.type, value: t } }));
+                null != n && s((n) => ({ ...n, [e]: { type: r?.[e]?.type, value: t } }));
             },
             [r, n],
         ),
-        j = s.useCallback((e) => {
-            o(null), i(null), t(e);
+        j = i.useCallback((e) => {
+            o(null), s(null), t(e);
         }, []);
     return (0, a.jsxs)(l.BJc, {
         gap: 16,
@@ -62,7 +62,7 @@ function u() {
             null != e &&
                 (0, a.jsx)("div", {
                     style: { width: p, height: _ },
-                    children: (0, a.jsx)(d._7m, { src: e, ref: x, onLoad: v, dynamicDataBinding: n ?? {} }),
+                    children: (0, a.jsx)(d._7m, { src: e, ref: x, onLoad: b, dynamicDataBinding: n ?? {} }),
                 }),
             null != e && null == n ? (0, a.jsx)(l.y$y, {}) : null,
             null != n &&
@@ -97,7 +97,7 @@ function u() {
                                             property: e,
                                             type: r?.[e]?.type,
                                             value: n?.[e]?.value ?? r?.[e]?.value,
-                                            onChange: (t) => b(e, t),
+                                            onChange: (t) => v(e, t),
                                             artboards: c,
                                         },
                                         e,
@@ -111,23 +111,23 @@ function u() {
     });
 }
 function m(e) {
-    let { property: t, type: n, value: s, onChange: i, artboards: o } = e;
+    let { property: t, type: n, value: i, onChange: s, artboards: o } = e;
     return "string" === n
-        ? (0, a.jsx)(d.ksK, { label: t, value: s, onChange: (e) => i(e) })
+        ? (0, a.jsx)(d.ksK, { label: t, value: i, onChange: (e) => s(e) })
         : "number" === n
-          ? (0, a.jsx)(d.ksK, { type: "number", label: t, value: s, onChange: (e) => i(parseInt(e)) })
+          ? (0, a.jsx)(d.ksK, { type: "number", label: t, value: i, onChange: (e) => s(parseInt(e)) })
           : "boolean" === n
-            ? (0, a.jsx)(l.dOG, { label: t, checked: s, onChange: (e) => i(e) })
+            ? (0, a.jsx)(l.dOG, { label: t, checked: i, onChange: (e) => s(e) })
             : "trigger" === n
-              ? (0, a.jsx)(l.$nd, { text: `Trigger ${t}`, onClick: () => i(Number.isSafeInteger(s) ? s + 1 : 1) })
+              ? (0, a.jsx)(l.$nd, { text: `Trigger ${t}`, onClick: () => s(Number.isSafeInteger(i) ? i + 1 : 1) })
               : "image" === n
-                ? (0, a.jsx)(d.ksK, { label: t, value: s, onChange: (e) => i(e) })
+                ? (0, a.jsx)(d.ksK, { label: t, value: i, onChange: (e) => s(e) })
                 : "color" === n
                   ? (0, a.jsx)(d.ZiE, {
                         selectionMode: "single",
                         label: t,
-                        value: s,
-                        onSelectionChange: (e) => i(e),
+                        value: i,
+                        onSelectionChange: (e) => s(e),
                         closeOnSelect: !0,
                         placeholder: "Select a color...",
                         options: Object.entries(r.A.colors).map((e) => {
@@ -139,8 +139,8 @@ function m(e) {
                     ? (0, a.jsx)(d.ZiE, {
                           selectionMode: "single",
                           label: t,
-                          value: s,
-                          onSelectionChange: (e) => i(e),
+                          value: i,
+                          onSelectionChange: (e) => s(e),
                           closeOnSelect: !0,
                           placeholder: "Select an artboard...",
                           options: o.map((e) => ({ label: e, value: e, id: e })),
@@ -149,9 +149,9 @@ function m(e) {
 }
 function h(e) {
     let { riveName: t, onRiveLoad: n } = e,
-        r = i[t]?.riveSrc,
+        r = s[t]?.riveSrc,
         c = null == r,
-        u = s.useRef(null),
+        u = i.useRef(null),
         m = (0, d.GyQ)(r);
     return (0, a.jsxs)(
         l.BJc,
@@ -173,10 +173,7 @@ function h(e) {
                                 let a = new FileReader();
                                 (a.onload = (e) => {
                                     let t = e.target?.result;
-                                    null != r && (0, d.DSP)(r, t),
-                                        n?.(
-                                            `data:application/octet-stream;base64,${btoa(new Uint8Array(t).reduce((e, t) => e + String.fromCharCode(t), ""))}`,
-                                        );
+                                    null != r && (0, d.DSP)(r, t), n?.(t);
                                 }),
                                     a.readAsArrayBuffer(t);
                             },

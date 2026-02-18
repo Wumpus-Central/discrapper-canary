@@ -9,26 +9,30 @@ var r = n(64700),
     })({});
 let l = (0, a.v)(() => ({ riveAssetCache: new Map(), riveOverrideCache: {} }));
 function u(e) {
-    let t = d(e),
-        n = l((t) => (null == e ? null : t.riveAssetCache.get(e)));
+    let t = e instanceof ArrayBuffer ? e.byteLength.toString() : e?.toString(),
+        n = "object" == typeof e && e instanceof ArrayBuffer,
+        a = d(t),
+        o = l((e) => (null == t ? null : e.riveAssetCache.get(t)));
     return ((0, r.useEffect)(() => {
-        if (null == e || null != t || l.getState().riveAssetCache.has(e)) return;
-        let n = new i.RiveFile({ src: e }),
+        if (null == t || null != a || n || l.getState().riveAssetCache.has(t)) return;
+        let e = new i.RiveFile({ src: t }),
             r = () => {
-                n.init(),
-                    n.on(i.EventType.Load, () => {
-                        let t = { status: "loaded", buffer: n.buffer };
-                        l.setState((n) => ({ riveAssetCache: n.riveAssetCache.set(e, t) }));
+                e.init(),
+                    e.on(i.EventType.Load, () => {
+                        let n = { status: "loaded", buffer: e.buffer };
+                        l.setState((e) => ({ riveAssetCache: e.riveAssetCache.set(t, n) }));
                     }),
-                    n.on(i.EventType.LoadError, (t) => {
-                        console.error("Rive file load error", e, t);
+                    e.on(i.EventType.LoadError, (e) => {
+                        console.error("Rive file load error", t, e);
                     });
             };
         (0, s.O)(r);
-    }, [e, t]),
-    null != t)
-        ? { status: "loaded", buffer: t }
-        : (n ?? { status: "loading", buffer: null });
+    }, [t, a, n]),
+    null != a)
+        ? { status: "loaded", buffer: a }
+        : n
+          ? { status: "loaded", buffer: e }
+          : (o ?? { status: "loading", buffer: null });
 }
 function c(e, t) {
     let n = l.getState().riveOverrideCache;
