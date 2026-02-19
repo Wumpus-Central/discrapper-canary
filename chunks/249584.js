@@ -304,7 +304,7 @@ function q(e) {
                         numberOfBoostsToAdd: o,
                         analyticsLocation: i,
                         analyticsLocations: c,
-                        intent: n.type === R.o9.LEVEL ? R.Pn.LEVEL : R.Pn.PERK,
+                        intent: n.type === R.o9.PERK ? R.Pn.PERK : void 0,
                     }),
                         a(M.i.TAKE_ACTION);
                 },
@@ -359,7 +359,7 @@ function J(e) {
                         numberOfBoostsToAdd: n.numExpiringBoosts,
                         analyticsLocation: i,
                         analyticsLocations: c,
-                        intent: m?.type === R.o9.LEVEL ? R.Pn.LEVEL : R.Pn.PERK,
+                        intent: m?.type === R.o9.PERK || n.isGameServer ? R.Pn.PERK : void 0,
                     }),
                         a(M.i.TAKE_ACTION);
                 },
