@@ -42,10 +42,9 @@ let p = () => (0, a.k8)(l.M.REFERRAL_PROGRAM_NITRO_TAB_BADGE),
             n = (0, i.bG)([d.A], () => d.A.getReferralsRemaining()),
             r = (0, i.bG)([d.A], () => d.A.getReminderStateId());
         return (
-            (e =
-                (0, c.A)({ location: "ReferralProgramUtils" }) && null != r
-                    ? (0, a.u$)(l.M.REFERRAL_PROGRAM_POPOVER_V2, r).isDismissed
-                    : (0, a.k8)(l.M.REFERRAL_PROGRAM_POPOVER)),
-            t && !e && null != n && n > 0
+            (e = (0, c.A)({ location: "ReferralProgramUtils" })
+                ? null != r && !(0, a.u$)(l.M.REFERRAL_PROGRAM_POPOVER_V2, r).isDismissed
+                : !(0, a.k8)(l.M.REFERRAL_PROGRAM_POPOVER)),
+            t && e && null != n && n > 0
         );
     };

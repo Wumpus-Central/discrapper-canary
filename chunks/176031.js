@@ -43,8 +43,8 @@ var i = n(627968),
     Y = n(727949),
     W = n(466336),
     q = n(615003),
-    K = n(442802),
-    z = n(67173),
+    z = n(442802),
+    K = n(67173),
     $ = n(793322),
     Q = n(366811),
     X = n(728321),
@@ -150,7 +150,7 @@ let e_ = (e) => {
                               children: R(),
                           }),
                           !c &&
-                              (0, i.jsx)(K.A, {
+                              (0, i.jsx)(z.A, {
                                   className: eh.t_,
                                   wind: 0,
                                   sprites: eo.uI,
@@ -407,7 +407,7 @@ let eN = r.memo(function (e) {
                               )
                             : null,
                         (0, i.jsx)(
-                            z.A,
+                            K.A,
                             {
                                 selected:
                                     null == m
@@ -450,10 +450,8 @@ function ex() {
         g = (0, F.c7)(),
         E = [],
         I = (0, V.A)({ location: "Private Channels" });
-    (0, b.Tc)() &&
-        (m && (I ? [].push(A.M.REFERRAL_PROGRAM_POPOVER_V2) : E.push(A.M.REFERRAL_PROGRAM_POPOVER)),
-        g && E.push(A.M.RECURRING_3P_PROMOTION_POPOVER));
-    let [f] = (0, O.Cc)(A.M.REFERRAL_PROGRAM_POPOVER_V2, p ?? "", void 0, !0),
+    (0, b.Tc)() && (m && !I && E.push(A.M.REFERRAL_PROGRAM_POPOVER), g && E.push(A.M.RECURRING_3P_PROMOTION_POPOVER));
+    let [f] = (0, O.Cc)(m && I ? A.M.REFERRAL_PROGRAM_POPOVER_V2 : null, p ?? "", void 0, !0),
         [C, T] = (0, O.kn)(E, void 0, !0),
         N = null == f && C === A.M.RECURRING_3P_PROMOTION_POPOVER,
         S = I ? f === A.M.REFERRAL_PROGRAM_POPOVER_V2 : C === A.M.REFERRAL_PROGRAM_POPOVER,

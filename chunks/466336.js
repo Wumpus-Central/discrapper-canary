@@ -19,7 +19,7 @@ let p = (e) => {
         g = (0, r.bG)([u.A], () => u.A.getReminderStateId()),
         E = (0, r.bG)([u.A], () => u.A.getReferralsRemaining()),
         I = (0, r.bG)([d.A], () => {
-            let e = d.A.settings.userContent?.recurringDismissibleContentStates[l.M.REFERRAL_PROGRAM_POPOVER];
+            let e = d.A.settings.userContent?.recurringDismissibleContentStates[l.M.REFERRAL_PROGRAM_POPOVER_V2];
             return e?.numTimesDismissed ?? 0;
         }),
         f = () => {
@@ -42,7 +42,7 @@ let p = (e) => {
                 onClick: () => {
                     c.default.track(h.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, {
                         location_stack: [o.A.HOME_PAGE_PREMIUM_TAB],
-                        times_dismissed: I + 1,
+                        times_dismissed: null != g ? I + 1 : null,
                         referrals_remaining: E,
                     }),
                         f(),
