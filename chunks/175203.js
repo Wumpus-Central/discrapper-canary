@@ -253,7 +253,7 @@ let ec = [es.lp.ACTIVITY],
             te = u.type === es.lp.STREAM && ep;
         return (0, i.jsx)(p.A, {
             section: el.JJy.VOICE_CHANNEL_TILE,
-            children: (0, i.jsx)(T.A, {
+            children: (0, i.jsx)(T.Ay, {
                 streamKey: u.id,
                 enableZoom: te,
                 children: (0, i.jsx)("div", {
