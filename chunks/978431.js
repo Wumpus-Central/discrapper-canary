@@ -7,15 +7,16 @@ var n = i(419954),
     u = i(360055),
     o = i(319436),
     d = i(317014),
-    T = i(39218),
-    A = i(985018);
+    A = i(39218),
+    T = i(985018);
 let S = (0, n.zZ)(l.X.CONTENT_AND_SOCIAL_CONTENT_CATEGORY, {
-    useTitle: () => A.intl.string(A.t.xVRG4P),
+    useTitle: () => T.intl.string(T.t.xVRG4P),
     useInlineNotice: function () {
         let t = (0, r.I)(),
             e = (0, s.aK)(),
-            i = (0, s.m3)();
-        return t ?? e ?? i;
+            i = (0, s.m3)(),
+            n = (0, s.Xj)();
+        return t ?? n ?? i ?? e;
     },
-    buildLayout: () => [o.v, T.x, d.t, a.u, u.a],
+    buildLayout: () => [o.v, A.x, d.t, a.u, u.a],
 });
