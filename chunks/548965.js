@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { ML: () => o, P4: () => f, iQ: () => p, pd: () => h }), n(321073);
+n.d(t, { ML: () => o, P4: () => f, iQ: () => h, pd: () => p }), n(321073);
 var r = n(284009),
     i = n.n(r),
-    a = n(306173),
-    s = n(723426);
+    s = n(306173),
+    a = n(723426);
 let o = [],
     l = Symbol("unknown");
 class u {
@@ -20,7 +20,7 @@ class u {
     getCachedConfig() {
         return (
             this.cachedConfig === l &&
-                ((0, a.xd)() ? (this.cachedConfig = (0, a.Ih)().getConfig(this.id)) : (this.cachedConfig = void 0)),
+                ((0, s.xd)() ? (this.cachedConfig = (0, s.Ih)().getConfig(this.id)) : (this.cachedConfig = void 0)),
             this.cachedConfig
         );
     }
@@ -68,7 +68,7 @@ class d extends u {
                         return "typescript";
                 }
             })();
-        return (0, s.E)(t);
+        return (0, a.E)(t);
     }
     getEnabledFeatureName() {
         let e = this.getCachedBridgedStoreMode();
@@ -114,9 +114,9 @@ class _ extends u {
     }
 }
 let f = new d("2026-01-libdiscore-batch-store-refactor", "batch-store-refactor"),
-    h = new _("2025-09-libdiscore-telemetry"),
-    p = new c("2025-11-defer-load-late-lazy-cache", "Allow react to render before lazy cache is loaded");
-class g extends u {
+    p = new _("2025-09-libdiscore-telemetry"),
+    h = new c("2025-11-defer-load-late-lazy-cache", "Allow react to render before lazy cache is loaded");
+class m extends u {
     label;
     getLabel() {
         return this.label;
@@ -128,4 +128,17 @@ class g extends u {
         super(e), (this.label = t);
     }
 }
-new g("2026-01-android-rmle", "Android Pull Mode Rendering");
+class E extends u {
+    label;
+    getLabel() {
+        return this.label;
+    }
+    getTreatments() {
+        return [{ treatmentId: 0 }, { treatmentId: 1 }, { treatmentId: 2 }];
+    }
+    constructor(e, t) {
+        super(e), (this.label = t);
+    }
+}
+new m("2026-01-android-rmle", "Android Pull Mode Rendering"),
+    new E("2026-02-android-fresco-cache", "Android Fresco Cache");
