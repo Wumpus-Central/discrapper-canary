@@ -34303,19 +34303,22 @@ html:not(.chat-input) .inputInner_b1f01d {
 }
 
 .usernameRow__63ed3 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
     gap: 8px
 }
 
-.tags__63ed3,
-.usernameRow__63ed3 {
-    align-items: center;
-    display: flex;
-    flex-direction: row
+.usernameRow__63ed3 .botTag__63ed3 {
+    vertical-align: middle
 }
 
 .tags__63ed3 {
+    align-items: center;
     -moz-column-gap: 9.33px;
     column-gap: 9.33px;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap
 }
 

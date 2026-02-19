@@ -8,6 +8,7 @@ e.exports = {
     iA: "nicknameWithDisplayNameStyles__63ed3",
     t4: "nicknameIcons__63ed3",
     Fj: "usernameRow__63ed3",
+    AO: "botTag__63ed3",
     _A: "tags__63ed3",
     hI: "pronouns__63ed3",
     a1: "userTag__63ed3",
