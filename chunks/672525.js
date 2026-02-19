@@ -8,7 +8,15 @@ var i = n(503698),
     o = n(788868),
     u = n(271057);
 function d(e) {
-    let { onClick: t, isGift: n, priceOptions: i, showPromotionalGiftBanner: o, narrowLayout: d } = e;
+    let {
+        onClick: t,
+        isGift: n,
+        priceOptions: i,
+        showPromotionalGiftBanner: o,
+        narrowLayout: d,
+        wumpusPosition: c,
+        className: p,
+    } = e;
     return (0, l.jsx)(r.DUT, {
         onClick: t,
         style: { cursor: "pointer" },
@@ -19,19 +27,20 @@ function d(e) {
             isGift: n,
             isModal: !0,
             priceOptions: i,
-            className: s()({ [u.gH]: d }),
+            className: s()(p, { [u.gH]: d }),
             showWumpus: !d,
             showPill: !d,
+            wumpusPosition: c,
         }),
     });
 }
 function c(e) {
-    let { onClick: t, isGift: n, priceOptions: i, removeTopMargin: o, narrowLayout: d } = e;
+    let { onClick: t, isGift: n, priceOptions: i, removeTopMargin: o, narrowLayout: d, className: c } = e;
     return (0, l.jsx)(r.DUT, {
         onClick: t,
         style: { cursor: "pointer" },
         children: (0, l.jsx)(a.AP, {
-            className: s()({ [u.ym]: !o, [u.gH]: d }),
+            className: s()(c, { [u.ym]: !o, [u.gH]: d }),
             ctaButton: null,
             showYearlyPrice: !0,
             isGift: n,
