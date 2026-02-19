@@ -11,6 +11,7 @@ var r = n(852015),
             (e[(e.EXCLUDE = 1)] = "EXCLUDE"),
             (e[(e.OVERRIDE = 2)] = "OVERRIDE"),
             (e[(e.REQUIRE = 3)] = "REQUIRE"),
+            (e[(e.ASSIGNMENT = 4)] = "ASSIGNMENT"),
             e
         );
     })({}),
