@@ -160,15 +160,28 @@ let x = {
             dismissable: { label: "Dismissable", type: "boolean", defaultValue: !0 },
         },
     },
-    E = {
+    f = {
         purchaseButtonText: "Subscribe",
         totalDue: 999,
         renewalPrice: 1099,
         currency: p.Yri.USD,
-        period: "month",
+        interval: m.WT.MONTH,
+        intervalCount: 1,
         startDate: new Date(),
     },
-    f = { type: c.I0.Subscription, props: E },
+    E = {
+        [c.I0.Subscription]: { type: c.I0.Subscription, ...f },
+        [c.I0.SubscriptionTrial]: { type: c.I0.SubscriptionTrial, ...f },
+        [c.I0.OrbsRedemption]: { type: c.I0.OrbsRedemption, purchaseButtonText: "Redeem" },
+        [c.I0.Shop]: { type: c.I0.Shop, purchaseButtonText: "Purchase" },
+        [c.I0.GiftNitro]: { type: c.I0.GiftNitro, purchaseButtonText: "Buy Gift" },
+        [c.I0.GiftShop]: { type: c.I0.GiftShop, purchaseButtonText: "Buy Gift" },
+        [c.I0.GiftGameShop]: {
+            type: c.I0.GiftGameShop,
+            purchaseButtonText: "Buy Gift",
+            applicationName: "Marvel Rivals",
+        },
+    },
     v = {
         title: "Unified Checkout",
         stories: [
@@ -343,29 +356,31 @@ let x = {
                 name: "Primitive: Legal Copy",
                 id: "unified-checkout-legal-copy",
                 component: function (e) {
-                    let { variant: t = f, immediateDelivery: l } = e,
-                        [r, i] = n.useState(!1);
-                    return (0, a.jsx)(c._P, { ...t, immediateDelivery: l ? { value: r, onChange: i } : void 0 });
+                    let { type: t, immediateDelivery: l, paysafecard: r } = e,
+                        [i, s] = n.useState(!1);
+                    return (0, a.jsx)(c._P, {
+                        variant: E[t],
+                        immediateDelivery: l ? { value: i, onChange: s } : void 0,
+                        paymentSourceType: r ? p.hes.PAYSAFE_CARD : p.hes.CARD,
+                    });
                 },
                 controls: {
-                    variant: {
-                        label: "Variant",
+                    type: {
+                        label: "Type",
                         type: "select",
-                        defaultValue: f,
+                        defaultValue: c.I0.Subscription,
                         options: [
-                            { label: "Subscription", value: f },
-                            { label: "Subscription Trial", value: { type: c.I0.SubscriptionTrial, props: E } },
-                            {
-                                label: "Orbs Redemption",
-                                value: { type: c.I0.OrbsRedemption, props: { purchaseButtonText: "Redeem" } },
-                            },
-                            {
-                                label: "One-time Purchase",
-                                value: { type: c.I0.OTP, props: { purchaseButtonText: "Purchase" } },
-                            },
+                            { label: "Subscription", value: c.I0.Subscription },
+                            { label: "Subscription Trial", value: c.I0.SubscriptionTrial },
+                            { label: "Orbs Redemption", value: c.I0.OrbsRedemption },
+                            { label: "Shop", value: c.I0.Shop },
+                            { label: "Nitro Gift", value: c.I0.GiftNitro },
+                            { label: "Shop Gift", value: c.I0.GiftShop },
+                            { label: "Game Shop Gift", value: c.I0.GiftGameShop },
                         ],
                     },
                     immediateDelivery: { label: "Immediate Delivery", type: "boolean", defaultValue: !1 },
+                    paysafecard: { label: "Paysafecard", type: "boolean", defaultValue: !1 },
                 },
             },
             {
