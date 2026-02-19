@@ -1,14 +1,15 @@
-n.d(t, { e: () => r });
+"use strict";
+n.d(t, { e: () => a });
 var i = n(311907),
-    l = n(287809),
-    s = n(616075),
-    a = n(996568);
-function r(e) {
-    let t = (0, i.bG)([l.default], () => l.default.getCurrentUser()),
-        n = s.w.useConfig({ location: e }),
-        r = (0, a.l)(e);
+    s = n(287809),
+    l = n(616075),
+    r = n(996568);
+function a(e) {
+    let t = (0, i.bG)([s.default], () => s.default.getCurrentUser()),
+        n = l.w.useConfig({ location: e }),
+        a = (0, r.l)(e);
     return {
-        isEnabled: n.enabled || r.favoritesEnabled,
+        isEnabled: n.enabled || a.favoritesEnabled,
         hasStaffPrivileges: null != t && (t.hasAnyStaffLevel() || t.isStaffPersonal()),
     };
 }

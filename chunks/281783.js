@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     zr: "root__92958",
     Ci: "activityList__92958",

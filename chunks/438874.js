@@ -1,12 +1,13 @@
-n.d(t, { A: () => a });
+"use strict";
+n.d(t, { A: () => r });
 var i = n(294384),
-    l = n(998418),
-    s = n(568065);
-function a(e, t) {
-    let n = (0, l.Ay)(e, t),
-        a = n.type !== s.b_.INACTIVE,
-        r = n.type === s.b_.TIER_OVERRIDE_ACTIVATED,
+    s = n(998418),
+    l = n(568065);
+function r(e, t) {
+    let n = (0, s.Ay)(e, t),
+        r = n.type !== l.b_.INACTIVE,
+        a = n.type === l.b_.TIER_OVERRIDE_ACTIVATED,
         o = (0, i.A)(e, t, "GuildPowerupCardFooterAdmin"),
-        d = s.HO;
-    return { showToggleButton: (a || !o) && !r, showConfigureButton: a && d.has(t.skuId), isPowerupActive: a };
+        c = l.HO;
+    return { showToggleButton: (r || !o) && !a, showConfigureButton: r && c.has(t.skuId), isPowerupActive: r };
 }

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     rN: "blobContainer_e5445c",
     Io: "pill_e5445c",

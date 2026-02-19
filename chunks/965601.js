@@ -1,91 +1,92 @@
+"use strict";
 n.d(t, { C: () => A });
 var i = n(627968),
-    l = n(64700),
-    s = n(562465),
-    a = n(990078),
-    r = n(397927),
+    s = n(64700),
+    l = n(562465),
+    r = n(990078),
+    a = n(397927),
     o = n(147087),
-    d = n(320501),
-    c = n(652215),
+    c = n(320501),
+    d = n(652215),
     u = n(985018);
 async function h(e) {
     try {
-        let t = await s.Bo.post({ url: c.Rsh.AI_TITLE, body: { content: e }, oldFormErrors: !0, rejectWithError: !1 });
+        let t = await l.Bo.post({ url: d.Rsh.AI_TITLE, body: { content: e }, oldFormErrors: !0, rejectWithError: !1 });
         return t.ok ? (t.body?.title ?? null) : null;
     } catch (e) {
         return null;
     }
 }
 function A(e) {
-    let { parentChannel: t, parentMessageId: n, updateThreadSettings: s, threadSettings: c, textAreaState: A } = e,
-        [g, m] = l.useState(!1),
-        [p, _] = l.useState(!1),
-        x = (0, o.b)(),
-        f = l.useCallback(async () => {
-            if (x) {
-                m(!0);
+    let { parentChannel: t, parentMessageId: n, updateThreadSettings: l, threadSettings: d, textAreaState: A } = e,
+        [p, g] = s.useState(!1),
+        [m, _] = s.useState(!1),
+        f = (0, o.b)(),
+        x = s.useCallback(async () => {
+            if (f) {
+                g(!0);
                 try {
                     let e = null;
                     if (null != n) {
-                        let i = d.A.getMessage(t.id, n);
+                        let i = c.A.getMessage(t.id, n);
                         e = i?.content ?? null;
                     } else A.textValue.trim().length >= 10 && (e = A.textValue);
                     if (null != e) {
                         let t = await h(e);
-                        null != t && "" !== t.trim() && s({ name: t });
+                        null != t && "" !== t.trim() && l({ name: t });
                     }
                 } finally {
-                    m(!1);
+                    g(!1);
                 }
             }
-        }, [t.id, n, s, x, A.textValue]);
-    l.useEffect(() => {
-        _(!1), m(!1), t.id === c.parentChannelId && n !== c.parentMessageId && s({ name: "" });
-    }, [n, s, t.id, c.parentChannelId, c.parentMessageId]),
-        l.useEffect(() => {
-            (null != c.name && "" !== c.name.trim()) || p || (x && null != n && (_(!0), f()));
-        }, [t.id, n, s, c.name, p, x, f]);
-    let E = l.useCallback(
+        }, [t.id, n, l, f, A.textValue]);
+    s.useEffect(() => {
+        _(!1), g(!1), t.id === d.parentChannelId && n !== d.parentMessageId && l({ name: "" });
+    }, [n, l, t.id, d.parentChannelId, d.parentMessageId]),
+        s.useEffect(() => {
+            (null != d.name && "" !== d.name.trim()) || m || (f && null != n && (_(!0), x()));
+        }, [t.id, n, l, d.name, m, f, x]);
+    let C = s.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                if (x)
+                if (f)
                     return {
-                        icon: r.Dud,
-                        onClick: f,
+                        icon: a.Dud,
+                        onClick: x,
                         "aria-label": u.intl.string(u.t.ZF2oBs),
-                        disabled: e || g || (null == n && A.textValue.trim().length < 10),
+                        disabled: e || p || (null == n && A.textValue.trim().length < 10),
                         tooltip: u.intl.string(u.t.ZF2oBs),
-                        loading: g,
+                        loading: p,
                     };
             },
-            [x, f, g, n, A.textValue],
+            [f, x, p, n, A.textValue],
         ),
-        C = l.useCallback(
+        E = s.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                return x
-                    ? (0, i.jsx)(a.m, {
+                return f
+                    ? (0, i.jsx)(r.m, {
                           text: u.intl.string(u.t.ZF2oBs),
-                          children: (0, i.jsx)(r.K0, {
-                              icon: r.Dud,
+                          children: (0, i.jsx)(a.K0, {
+                              icon: a.Dud,
                               variant: "secondary",
                               size: "sm",
                               "aria-label": u.intl.string(u.t.ZF2oBs),
-                              onClick: f,
-                              disabled: e || g || (null == n && A.textValue.trim().length < 10),
-                              loading: g,
+                              onClick: x,
+                              disabled: e || p || (null == n && A.textValue.trim().length < 10),
+                              loading: p,
                               type: "button",
                           }),
                       })
                     : null;
             },
-            [x, g, n, A.textValue, f],
+            [f, p, n, A.textValue, x],
         );
     return {
-        isGeneratingAI: g,
-        generateAIName: f,
-        enableAIFeatures: x,
-        renderAiGenerateButton: C,
-        getThreadNameInputAccessory: E,
+        isGeneratingAI: p,
+        generateAIName: x,
+        enableAIFeatures: f,
+        renderAiGenerateButton: E,
+        getThreadNameInputAccessory: C,
     };
 }

@@ -1,69 +1,70 @@
-n.d(t, { A: () => x });
+"use strict";
+n.d(t, { A: () => f });
 var i = n(627968);
 n(64700);
-var l = n(397927),
-    s = n(73153),
-    a = n(272355),
-    r = n(793574),
+var s = n(397927),
+    l = n(73153),
+    r = n(272355),
+    a = n(793574),
     o = n(532794),
-    d = n(219271),
-    c = n(287809),
+    c = n(219271),
+    d = n(287809),
     u = n(816733),
     h = n(927578),
     A = n(882442),
-    g = n(869968),
-    m = n(694080),
-    p = n(70730);
-class _ extends a.A {
+    p = n(869968),
+    g = n(694080),
+    m = n(70730);
+class _ extends r.A {
     _premiumPaymentModalCloseResolve = null;
     _premiumPaymentModalCloseReject = null;
     _initialize() {
         __OVERLAY__
-            ? s.h.subscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen)
-            : (s.h.subscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose),
-              s.h.subscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell),
-              s.h.subscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer),
-              s.h.subscribe("POST_CONNECTION_OPEN", this._maybeFetchCheckoutRecovery),
-              s.h.subscribe("POST_CONNECTION_OPEN", this._maybeFetchUserAffinities));
+            ? l.h.subscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen)
+            : (l.h.subscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose),
+              l.h.subscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell),
+              l.h.subscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer),
+              l.h.subscribe("POST_CONNECTION_OPEN", this._maybeFetchCheckoutRecovery),
+              l.h.subscribe("POST_CONNECTION_OPEN", this._maybeFetchUserAffinities));
     }
     _terminate() {
         __OVERLAY__
-            ? s.h.unsubscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen)
-            : (s.h.unsubscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose),
-              s.h.unsubscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell),
-              s.h.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer),
-              s.h.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchCheckoutRecovery),
-              s.h.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchUserAffinities));
+            ? l.h.unsubscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen)
+            : (l.h.unsubscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose),
+              l.h.unsubscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell),
+              l.h.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer),
+              l.h.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchCheckoutRecovery),
+              l.h.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchUserAffinities));
     }
     handleMessageLengthUpsell(e) {
-        let { channel: t, content: s } = e;
-        (0, l.mMO)(async () => {
+        let { channel: t, content: l } = e;
+        (0, s.mMO)(async () => {
             let { default: e } = await n.e("76725").then(n.bind(n, 798612));
-            return (n) => (0, i.jsx)(e, { channel: t, content: s, ...n });
+            return (n) => (0, i.jsx)(e, { channel: t, content: l, ...n });
         });
     }
     _maybeFetchPremiumOffer = async () => {
-        let e = c.default.getCurrentUser();
+        let e = d.default.getCurrentUser();
         if (null != e && e.verified) {
             let t = (u.A.canFractionalPremiumUserUseOffer() || !(0, h.TW)(e)) && !u.A.isFetchingOffer();
-            await (0, m._D)("PremiumManager", t);
+            await (0, g._D)("PremiumManager", t);
         }
-        s.h.dispatch({ type: "PREMIUM_MARKETING_DATA_READY" });
+        l.h.dispatch({ type: "PREMIUM_MARKETING_DATA_READY" });
     };
     _maybeFetchCheckoutRecovery = async () => {
-        let e = c.default.getCurrentUser();
-        null != e && e.verified && !(0, h.TW)(e) && g.A.shouldFetchCheckoutRecovery() && (await (0, A.c)());
+        let e = d.default.getCurrentUser();
+        null != e && e.verified && !(0, h.TW)(e) && p.A.shouldFetchCheckoutRecovery() && (await (0, A.c)());
     };
     _maybeFetchUserAffinities = () => {
-        let { enabled: e } = p.u.getConfig({ location: "PremiumManager" });
-        e && (0, d.u)();
+        let { enabled: e } = m.u.getConfig({ location: "PremiumManager" });
+        e && (0, c.u)();
     };
     _handlePremiumPaymentModalOpen = (e) => {
         (0, o.A)({
             ...e,
-            analyticsLocations: [r.A.OVERLAY],
+            analyticsLocations: [a.A.OVERLAY],
             onClose: (e) => {
-                s.h.dispatch({ type: "PREMIUM_PAYMENT_MODAL_CLOSE", didSucceed: e });
+                l.h.dispatch({ type: "PREMIUM_PAYMENT_MODAL_CLOSE", didSucceed: e });
             },
         });
     };
@@ -88,18 +89,18 @@ class _ extends a.A {
     }
     openPremiumPaymentModalInOverlay(e) {
         if (__OVERLAY__) throw Error("Should not use this function from the overlay, use ModalAPI.openModal instead");
-        let { initialPlanId: t, subscriptionTier: n, followupSKUInfo: i, analyticsObject: l } = e ?? {};
-        return new Promise((e, a) => {
+        let { initialPlanId: t, subscriptionTier: n, followupSKUInfo: i, analyticsObject: s } = e ?? {};
+        return new Promise((e, r) => {
             (this._premiumPaymentModalCloseResolve = e),
-                (this._premiumPaymentModalCloseReject = a),
-                s.h.dispatch({
+                (this._premiumPaymentModalCloseReject = r),
+                l.h.dispatch({
                     type: "PREMIUM_PAYMENT_MODAL_OPEN",
                     initialPlanId: t,
                     subscriptionTier: n,
                     followupSKUInfo: i,
-                    analyticsObject: l,
+                    analyticsObject: s,
                 });
         });
     }
 }
-let x = new _();
+let f = new _();

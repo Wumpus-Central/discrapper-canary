@@ -1,70 +1,71 @@
-n.d(t, { A: () => b });
+"use strict";
+n.d(t, { A: () => N });
 var i = n(627968),
-    l = n(64700),
-    s = n(311907),
-    a = n(397927),
-    r = n(442433),
+    s = n(64700),
+    l = n(311907),
+    r = n(397927),
+    a = n(442433),
     o = n(688810),
-    d = n(272613),
-    c = n(398884),
+    c = n(272613),
+    d = n(398884),
     u = n(772366),
     h = n(728321),
     A = n(260509),
-    g = n(71393),
-    m = n(287809),
-    p = n(531053),
+    p = n(71393),
+    g = n(287809),
+    m = n(531053),
     _ = n(606256),
-    x = n(652215),
-    f = n(819638),
-    E = n(985018),
-    C = n(283237);
+    f = n(652215),
+    x = n(819638),
+    C = n(985018),
+    E = n(283237);
 let I = { origin: { x: -16, y: 0 }, targetWidth: 48, targetHeight: 48, offset: { x: 0, y: 0 } };
-function S(e) {
-    (0, r.L3)(e, async () => {
+function b(e) {
+    (0, a.L3)(e, async () => {
         let { default: e } = await n.e("17288").then(n.bind(n, 4571));
         return (t) => (0, i.jsx)(e, { ...t });
     });
 }
-function b(e) {
+function N(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
-        r = (0, s.yK)([g.A], () => g.A.getGuildsArray()),
-        b = (0, s.bG)([m.default], () => m.default.getCurrentUser()),
-        N = l.useMemo(() => r.some((e) => (0, A.bM)(e, b)), [r, b]),
-        T = (0, a.red)((e) => (0, a.fDT)(e, f.fc)),
-        { analyticsLocations: j } = (0, o.Ay)(),
-        v = (0, i.jsx)(_.A, {
+        a = (0, l.yK)([p.A], () => p.A.getGuildsArray()),
+        N = (0, l.bG)([g.default], () => g.default.getCurrentUser()),
+        S = s.useMemo(() => a.some((e) => (0, A.bM)(e, N)), [a, N]),
+        T = (0, r.red)((e) => (0, r.fDT)(e, x.fc)),
+        { analyticsLocations: v } = (0, o.Ay)(),
+        y = (0, i.jsx)(_.A, {
             showPill: !1,
             id: "create-join-button",
             onClick: () => {
-                (0, c.Sn)()
+                (0, d.Sn)()
                     ? (0, u.A)({
-                          analyticsSource: { page: x.ThZ.CREATE_JOIN_GUILD_MODAL },
+                          analyticsSource: { page: f.ThZ.CREATE_JOIN_GUILD_MODAL },
                           analyticsLocation: {
-                              page: x.ThZ.CREATE_JOIN_GUILD_MODAL,
-                              section: x.JJy.GUILD_CAP_UPSELL_MODAL,
+                              page: f.ThZ.CREATE_JOIN_GUILD_MODAL,
+                              section: f.JJy.GUILD_CAP_UPSELL_MODAL,
                           },
-                          analyticsLocations: j,
+                          analyticsLocations: v,
                       })
-                    : d.A.openCreateGuildModal({ location: "Guild List" });
+                    : c.A.openCreateGuildModal({ location: "Guild List" });
             },
             selected: T,
-            onContextMenu: S,
-            tooltip: E.intl.string(E.t.l5WIbf),
-            icon: a.U1e,
+            onContextMenu: b,
+            tooltip: C.intl.string(C.t.l5WIbf),
+            icon: r.U1e,
         });
     return t
-        ? v
+        ? y
         : (0, i.jsx)("div", {
-              className: C.Uq,
+              className: E.Uq,
               children: (0, i.jsxs)(h.A, {
-                  tutorialId: N ? "create-more-servers" : "create-first-server",
+                  tutorialId: S ? "create-more-servers" : "create-first-server",
                   inlineSpecs: I,
                   position: "right",
                   children: [
-                      v,
+                      y,
                       null != n &&
-                          (0, i.jsx)(p.Ay, {
-                              name: E.intl.string(E.t["45xjM5"]),
+                          (0, i.jsx)(m.Ay, {
+                              name: C.intl.string(C.t["45xjM5"]),
                               targetNode: n,
                               below: !0,
                               noCombine: !0,

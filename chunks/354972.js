@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     iE: "wrapper_cb9592",
     qb: "normal_cb9592",

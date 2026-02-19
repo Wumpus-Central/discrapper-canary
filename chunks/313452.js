@@ -1,18 +1,19 @@
+"use strict";
 n.d(t, { A: () => D }), n(321073);
 var i = n(627968),
-    l = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(735438),
-    o = n.n(r),
-    d = n(837381),
-    c = n(311907),
+    s = n(64700),
+    l = n(503698),
+    r = n.n(l),
+    a = n(735438),
+    o = n.n(a),
+    c = n(837381),
+    d = n(311907),
     u = n(397927),
     h = n(928039),
     A = n(793574),
-    m = n(688810),
-    p = n(222823),
-    g = n(203982),
+    p = n(688810),
+    g = n(222823),
+    m = n(203982),
     _ = n(661191),
     f = n(851109),
     x = n(932883),
@@ -30,11 +31,11 @@ function R(e) {
     e.stopPropagation();
 }
 function O(e) {
-    let { group: t, isOpen: n, toggleOpenedState: l } = e;
+    let { group: t, isOpen: n, toggleOpenedState: s } = e;
     return (0, i.jsx)(u.DUT, {
         "aria-expanded": n,
-        onClick: l,
-        className: a()(j.TP, { [j.yZ]: !n }),
+        onClick: s,
+        className: r()(j.TP, { [j.yZ]: !n }),
         children: (0, i.jsxs)(u.BJc, {
             gap: 4,
             direction: "horizontal",
@@ -44,7 +45,7 @@ function O(e) {
                     variant: "text-sm/medium",
                     color: "text-subtle",
                     className: j.P7,
-                    children: (0, r.capitalize)(y.intl.string(S.v7[t]).toLowerCase()),
+                    children: (0, a.capitalize)(y.intl.string(S.v7[t]).toLowerCase()),
                 }),
                 (0, i.jsx)(u.abt, { size: "xxs", className: j.ai }),
             ],
@@ -53,7 +54,7 @@ function O(e) {
 }
 let L = [S.Ur.UNREAD, S.Ur.TODAY, S.Ur.YESTERDAY, S.Ur.OLDER];
 function M() {
-    let { analyticsLocations: e } = (0, m.Ay)(A.A.NOTIFICATIONS_INBOX);
+    let { analyticsLocations: e } = (0, p.Ay)(A.A.NOTIFICATIONS_INBOX);
     return (0, i.jsx)("div", {
         className: j.y7,
         children: (0, i.jsxs)(u.BJc, {
@@ -91,24 +92,24 @@ function D(e) {
     let t,
         {
             messages: n,
-            unreadMessages: s,
-            loadMore: r,
+            unreadMessages: l,
+            loadMore: a,
             renderLoadingState: A,
-            renderMessageGroup: m,
+            renderMessageGroup: p,
             scrollerClassName: v,
             className: y,
             listName: D,
             ignoreGrouping: G = !1,
         } = e,
         U = (0, x.op)(),
-        P = l.useRef(null),
+        P = s.useRef(null),
         w = (0, h.A)(D, P),
         { entrypoint: k, notificationCenterVariant: V } = (0, f.X8)({ location: "NotificationsInboxSidebarList" }),
         {
             isLoading: B,
             isLoadingComplete: H,
             hasLoadedEver: F,
-        } = (0, c.cf)([E.A], () => ({
+        } = (0, d.cf)([E.A], () => ({
             isLoading: E.A.isLoading,
             isLoadingComplete: E.A.isLoadingComplete,
             hasLoadedEver: E.A.hasLoadedEver,
@@ -116,16 +117,16 @@ function D(e) {
         K = !F && B,
         { messageCategoryOpenStates: W, toggleOpenState: Y } = (0, C.A)(),
         z =
-            ((t = (0, c.yK)([E.A], () => E.A.getNotifyingChannelIds() ?? [])),
-            (0, c.bG)([E.A, p.Ay], () => {
+            ((t = (0, d.yK)([E.A], () => E.A.getNotifyingChannelIds() ?? [])),
+            (0, d.bG)([E.A, g.Ay], () => {
                 let e = E.A.getChannelInfoMap();
                 for (let n of t) {
                     let t = e[n];
-                    if ((null == t || t.loadState === S.Ve.UNLOADED) && p.Ay.hasUnread(n)) return !0;
+                    if ((null == t || t.loadState === S.Ve.UNLOADED) && g.Ay.hasUnread(n)) return !0;
                 }
                 return !1;
             }, [t]));
-    l.useEffect(() => {
+    s.useEffect(() => {
         function e() {
             P.current?.scrollPageUp({ animate: !0 });
         }
@@ -133,26 +134,26 @@ function D(e) {
             P.current?.scrollPageDown({ animate: !0 });
         }
         return (
-            g._.subscribe(T.jej.SCROLL_PAGE_DOWN, t),
-            g._.subscribe(T.jej.SCROLL_PAGE_UP, e),
+            m._.subscribe(T.jej.SCROLL_PAGE_DOWN, t),
+            m._.subscribe(T.jej.SCROLL_PAGE_UP, e),
             () => {
-                g._.unsubscribe(T.jej.SCROLL_PAGE_DOWN, t), g._.unsubscribe(T.jej.SCROLL_PAGE_UP, e);
+                m._.unsubscribe(T.jej.SCROLL_PAGE_DOWN, t), m._.unsubscribe(T.jej.SCROLL_PAGE_UP, e);
             }
         );
     }, []);
-    let q = l.useCallback(() => {
+    let X = s.useCallback(() => {
             let e = P.current?.getScrollerState();
             if (null == e) return;
             let t = 0.5 * e.offsetHeight;
-            e.scrollHeight - (e.scrollTop + e.offsetHeight) <= t && r?.(S.VA.USER_SCROLL);
-        }, [r]),
-        X = l.useMemo(() => {
+            e.scrollHeight - (e.scrollTop + e.offsetHeight) <= t && a?.(S.VA.USER_SCROLL);
+        }, [a]),
+        q = s.useMemo(() => {
             let e = { [S.Ur.UNREAD]: [], [S.Ur.TODAY]: [], [S.Ur.YESTERDAY]: [], [S.Ur.OLDER]: [] },
                 t = { [S.Ur.UNREAD]: [], [S.Ur.TODAY]: [], [S.Ur.YESTERDAY]: [], [S.Ur.OLDER]: [] },
                 i = { [S.Ur.UNREAD]: {}, [S.Ur.TODAY]: {}, [S.Ur.YESTERDAY]: {}, [S.Ur.OLDER]: {} };
             return (
-                (n.length > 0 || s.length > 0) &&
-                    (o().each(s, (e) => {
+                (n.length > 0 || l.length > 0) &&
+                    (o().each(l, (e) => {
                         e.kind === S.yL.MENTION
                             ? t[S.Ur.UNREAD].push(e)
                             : e.channelId in i[S.Ur.UNREAD]
@@ -176,10 +177,10 @@ function D(e) {
                     })),
                 e
             );
-        }, [n, s]),
-        J = 0 === n.length && 0 === s.length && H,
-        Q = 0 === n.length && 0 === s.length && !F && B,
-        $ = l.useMemo(() => {
+        }, [n, l]),
+        J = 0 === n.length && 0 === l.length && H,
+        Q = 0 === n.length && 0 === l.length && !F && B,
+        $ = s.useMemo(() => {
             let e = [];
             return (
                 Q
@@ -187,9 +188,9 @@ function D(e) {
                     : J
                       ? e.push((0, i.jsx)(M, {}, "empty-state"))
                       : G
-                        ? (e.push(...s.map((e) => m([e], !0))), e.push(...n.map((e) => m([e], !1))))
+                        ? (e.push(...l.map((e) => p([e], !0))), e.push(...n.map((e) => p([e], !1))))
                         : o().each(L, (t) => {
-                              0 !== X[t].length &&
+                              0 !== q[t].length &&
                                   (e.push(
                                       (0, i.jsx)(
                                           O,
@@ -204,36 +205,36 @@ function D(e) {
                                           t,
                                       ),
                                   ),
-                                  W[t] && e.push(...X[t].map((e) => m(e, t === S.Ur.UNREAD))));
+                                  W[t] && e.push(...q[t].map((e) => p(e, t === S.Ur.UNREAD))));
                           }),
                 e
             );
-        }, [n, s, A, W, Y, X, G, m, J, Q, U]),
+        }, [n, l, A, W, Y, q, G, p, J, Q, U]),
         Z = $[$.length - 1],
-        ee = l.isValidElement(Z) && Z.type === O,
+        ee = s.isValidElement(Z) && Z.type === O,
         et = (0, b.S)((e) => e.setInboxReadState);
-    l.useEffect(() => {
-        Q || et(0 === X.UNREAD.length);
-    }, [X, Q, et]);
-    let en = (n.length > 0 || s.length > 0) && null != r && B;
+    s.useEffect(() => {
+        Q || et(0 === q.UNREAD.length);
+    }, [q, Q, et]);
+    let en = (n.length > 0 || l.length > 0) && null != a && B;
     !(function (e) {
         let { loadingInitial: t, messagesByCategory: n } = e,
-            i = l.useRef(!1),
-            s = n.UNREAD.length > 0,
-            { setOpenStateFromUnreads: a } = (0, C.A)();
-        l.useEffect(() => {
-            t || i.current || (a(s), (i.current = !0));
-        }, [a, s, t]);
-    })({ messagesByCategory: X, loadingInitial: K });
-    let ei = l.useCallback(() => {
-        let e = L.filter((e) => W[e]).reduce((e, t) => e + X[t].length, 0),
+            i = s.useRef(!1),
+            l = n.UNREAD.length > 0,
+            { setOpenStateFromUnreads: r } = (0, C.A)();
+        s.useEffect(() => {
+            t || i.current || (r(l), (i.current = !0));
+        }, [r, l, t]);
+    })({ messagesByCategory: q, loadingInitial: K });
+    let ei = s.useCallback(() => {
+        let e = L.filter((e) => W[e]).reduce((e, t) => e + q[t].length, 0),
             t = P.current?.getScrollerState();
         return null == t ? 0 : Math.max(0, Math.ceil(t.offsetHeight / 64) - e);
-    }, [W, X]);
-    l.useEffect(() => {
-        Q || B || 0 >= ei() || ((!ee || z) && r?.(S.VA.FILL_SCROLLER));
-    }, [ei, r, Q, B, ee, z]);
-    let el = l.useMemo(() => {
+    }, [W, q]);
+    s.useEffect(() => {
+        Q || B || 0 >= ei() || ((!ee || z) && a?.(S.VA.FILL_SCROLLER));
+    }, [ei, a, Q, B, ee, z]);
+    let es = s.useMemo(() => {
         let e = Math.min(Math.max(2, ei()), 20);
         return (0, i.jsx)(N.A, { withHeader: !1, size: e });
     }, [ei]);
@@ -242,29 +243,29 @@ function D(e) {
             notificationCenterVariant: V,
             entrypoint: k,
             messages: n,
-            unreadMessages: s,
-            messagesByCategory: X,
+            unreadMessages: l,
+            messagesByCategory: q,
             viewId: U,
         }),
         (0, i.jsx)("div", {
-            className: a()(y, j.KQ),
+            className: r()(y, j.KQ),
             onClick: R,
             onDoubleClick: R,
             "aria-label": e["aria-label"],
-            children: (0, i.jsx)(d.hD, {
+            children: (0, i.jsx)(c.hD, {
                 navigator: w,
-                children: (0, i.jsx)(d.PR, {
+                children: (0, i.jsx)(c.PR, {
                     children: (e) => {
                         let { ref: t, ...n } = e;
                         return (0, i.jsxs)(u.T7Y, {
                             ref: (e) => {
                                 (P.current = e), (t.current = e?.getScrollerNode() ?? null);
                             },
-                            className: a()(j.m4, v),
-                            onScroll: q,
+                            className: r()(j.m4, v),
+                            onScroll: X,
                             fade: !0,
                             ...n,
-                            children: [$, en && !ee ? el : null],
+                            children: [$, en && !ee ? es : null],
                         });
                     },
                 }),

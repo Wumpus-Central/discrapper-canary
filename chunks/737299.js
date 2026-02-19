@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     zt: "searchResultsWrap_a98f3b",
     XG: "scroller_a98f3b",

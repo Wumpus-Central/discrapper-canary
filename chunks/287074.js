@@ -1,65 +1,66 @@
-n.d(t, { A: () => m });
+"use strict";
+n.d(t, { A: () => g });
 var i = n(627968),
-    l = n(64700),
-    s = n(311907),
-    a = n(397927),
-    r = n(945830),
+    s = n(64700),
+    l = n(311907),
+    r = n(397927),
+    a = n(945830),
     o = n(323073),
-    d = n(267102),
-    c = n(222823),
+    c = n(267102),
+    d = n(222823),
     u = n(203982),
     h = n(58736),
     A = n(652215),
-    g = n(985018);
-let m = function (e) {
+    p = n(985018);
+let g = function (e) {
     let { channel: t } = e,
         n = (0, o.vL)(t),
-        [m, p] = l.useState(!1),
-        _ = (0, s.bG)([c.Ay], () => c.Ay.hasUnreadPins(t.id), [t]),
-        x = (0, d.aL)(),
-        f = l.useRef(null),
-        E = l.useCallback(() => {
-            n || p((e) => !e);
+        [g, m] = s.useState(!1),
+        _ = (0, l.bG)([d.Ay], () => d.Ay.hasUnreadPins(t.id), [t]),
+        f = (0, c.aL)(),
+        x = s.useRef(null),
+        C = s.useCallback(() => {
+            n || m((e) => !e);
         }, [n]);
-    function C(e) {
-        e?.shiftKey || x.dispatch(A.jej.POPOUT_CLOSE);
+    function E(e) {
+        e?.shiftKey || f.dispatch(A.jej.POPOUT_CLOSE);
     }
     return (
-        l.useEffect(
+        s.useEffect(
             () => (
-                u._.subscribe(A.jej.TOGGLE_CHANNEL_PINS, E),
+                u._.subscribe(A.jej.TOGGLE_CHANNEL_PINS, C),
                 () => {
-                    u._.unsubscribe(A.jej.TOGGLE_CHANNEL_PINS, E);
+                    u._.unsubscribe(A.jej.TOGGLE_CHANNEL_PINS, C);
                 }
             ),
-            [E],
+            [C],
         ),
-        (0, i.jsx)(a.YNO, {
-            targetElementRef: f,
-            shouldShow: m,
-            animation: a.YNO.Animation.NONE,
+        (0, i.jsx)(r.YNO, {
+            targetElementRef: x,
+            shouldShow: g,
+            animation: r.YNO.Animation.NONE,
             position: "bottom",
             align: "right",
             autoInvert: !1,
             ignoreModalClicks: !0,
-            onRequestClose: () => p(!1),
+            onRequestClose: () => m(!1),
             renderPopout: function (e) {
-                return (0, i.jsx)(r.A, { ...e, onJump: C, channel: t });
+                return (0, i.jsx)(a.A, { ...e, onJump: E, channel: t });
             },
             clickTrap: !0,
             children: (e, t) => {
-                let { isShown: l } = t;
+                let { isShown: s } = t;
                 return (0, i.jsx)(h.In, {
                     ...e,
-                    ref: f,
-                    onClick: E,
-                    tooltip: l ? null : g.intl.string(g.t["mp1N/2"]),
-                    icon: a.tsw,
+                    ref: x,
+                    onClick: C,
+                    tooltip: s ? null : p.intl.string(p.t["mp1N/2"]),
+                    icon: r.tsw,
                     iconSize: 20,
-                    "aria-label": g.intl.string(g.t["mp1N/2"]),
+                    "aria-label": p.intl.string(p.t["mp1N/2"]),
                     disabled: n,
                     showBadge: _,
-                    selected: l,
+                    selected: s,
                 });
             },
         })

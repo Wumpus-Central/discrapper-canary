@@ -1,50 +1,51 @@
-n.d(t, { A: () => p });
+"use strict";
+n.d(t, { A: () => m });
 var i = n(627968),
-    l = n(64700),
-    s = n(311907),
-    a = n(397927),
-    r = n(287809),
+    s = n(64700),
+    l = n(311907),
+    r = n(397927),
+    a = n(287809),
     o = n(562153),
-    d = n(215530),
-    c = n(168015),
+    c = n(215530),
+    d = n(168015),
     u = n(454719),
     h = n(10635),
     A = n(318162),
-    g = n(762561),
-    m = n(985018);
-function p(e) {
+    p = n(762561),
+    g = n(985018);
+function m(e) {
     let { channel: t } = e,
         [n] = t.recipients,
-        p = (0, s.bG)([r.default], () => r.default.getUser(n)),
-        _ = (0, s.bG)([r.default], () => r.default.getCurrentUser()),
-        x = (0, c.A)(),
-        [f, E] = (0, d.A)(n);
+        m = (0, l.bG)([a.default], () => a.default.getUser(n)),
+        _ = (0, l.bG)([a.default], () => a.default.getCurrentUser()),
+        f = (0, d.A)(),
+        [x, C] = (0, c.A)(n);
     if (
-        (l.useEffect(() => {
-            (0, u.A)(p ?? n, {
+        (s.useEffect(() => {
+            (0, u.A)(m ?? n, {
                 type: "sidebar",
-                withMutualFriendsCount: p?.bot !== !0,
+                withMutualFriendsCount: m?.bot !== !0,
                 withMutualFriends: !1,
                 withMutualGuilds: !0,
                 channelId: t.id,
             });
-        }, [p, n, t.id]),
-        null == p || null == _ || !x)
+        }, [m, n, t.id]),
+        null == m || null == _ || !f)
     )
         return null;
-    let C = `user-profile-sidebar-heading-${p.id}`,
-        I = o.Ay.getName(null, t.id, p);
+    let E = `user-profile-sidebar-heading-${m.id}`,
+        I = o.Ay.getName(null, t.id, m);
     return (0, i.jsx)("aside", {
-        "aria-labelledby": C,
-        children: (0, i.jsx)(a.Fmo, {
-            component: (0, i.jsx)(a.AC4, {
-                children: (0, i.jsx)(a.H, { id: C, children: m.intl.format(m.t.KRe1Fk, { name: I }) }),
+        "aria-labelledby": E,
+        children: (0, i.jsx)(r.Fmo, {
+            component: (0, i.jsx)(r.AC4, {
+                children: (0, i.jsx)(r.H, { id: E, children: g.intl.format(g.t.KRe1Fk, { name: I }) }),
             }),
-            children: f
-                ? (0, i.jsx)(A.A, { user: p, currentUser: _, onHide: E, ...e })
-                : p.isNonUserBot()
-                  ? (0, i.jsx)(h.A, { user: p, currentUser: _, ...e })
-                  : (0, i.jsx)(g.A, { user: p, currentUser: _, ...e }),
+            children: x
+                ? (0, i.jsx)(A.A, { user: m, currentUser: _, onHide: C, ...e })
+                : m.isNonUserBot()
+                  ? (0, i.jsx)(h.A, { user: m, currentUser: _, ...e })
+                  : (0, i.jsx)(p.A, { user: m, currentUser: _, ...e }),
         }),
     });
 }

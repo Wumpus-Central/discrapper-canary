@@ -1,63 +1,64 @@
-n.d(t, { A: () => C });
+"use strict";
+n.d(t, { A: () => E });
 var i = n(627968),
-    l = n(64700),
-    s = n(311907),
-    a = n(442433),
-    r = n(738876),
+    s = n(64700),
+    l = n(311907),
+    r = n(442433),
+    a = n(738876),
     o = n(47167),
-    d = n(698718),
-    c = n(355622),
+    c = n(698718),
+    d = n(355622),
     u = n(58736),
     h = n(353428),
     A = n(976860),
-    g = n(823471),
-    m = n(734057),
-    p = n(31717),
+    p = n(823471),
+    g = n(734057),
+    m = n(31717),
     _ = n(71393),
-    x = n(853742),
-    f = n(985018),
-    E = n(388552);
-function C(e) {
+    f = n(853742),
+    x = n(985018),
+    C = n(388552);
+function E(e) {
     let { channelId: t } = e,
-        C = (0, s.bG)([m.A], () => m.A.getChannel(t)),
-        I = (0, s.bG)([m.A], () => m.A.getChannel(C?.parent_id)),
-        S = (0, s.bG)([_.A], () => _.A.getGuild(C?.getGuildId())),
-        b = (0, o.Ay)(C),
-        N = l.useRef(!1);
+        E = (0, l.bG)([g.A], () => g.A.getChannel(t)),
+        I = (0, l.bG)([g.A], () => g.A.getChannel(E?.parent_id)),
+        b = (0, l.bG)([_.A], () => _.A.getGuild(E?.getGuildId())),
+        N = (0, o.Ay)(E),
+        S = s.useRef(!1);
     if (
-        (l.useEffect(() => {
-            null == C || N.current || ((N.current = !0), (0, x.rH)(C));
-        }, [C]),
-        null == C || null == S)
+        (s.useEffect(() => {
+            null == E || S.current || ((S.current = !0), (0, f.rH)(E));
+        }, [E]),
+        null == E || null == b)
     )
         return null;
-    let T = (0, i.jsx)(g.A, { channel: C });
+    let T = (0, i.jsx)(p.A, { channel: E });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(r.A, { channel: C, draftType: p.C.ChannelMessage }),
+            (0, i.jsx)(a.A, { channel: E, draftType: m.C.ChannelMessage }),
             (0, i.jsx)(u.Ay, {
                 toolbar: T,
-                "aria-label": f.intl.string(f.t.Pwe8tN),
+                "aria-label": x.intl.string(x.t.Pwe8tN),
                 children: (0, h.zF)({
-                    channel: C,
+                    channel: E,
                     parentChannel: I,
-                    channelName: b,
-                    guild: S,
+                    channelName: N,
+                    guild: b,
                     inSidebar: !0,
                     handleContextMenu: function (e) {
-                        (0, a.L3)(e, async () => {
+                        (0, r.L3)(e, async () => {
                             let { default: e } = await n.e("33").then(n.bind(n, 44536));
-                            return (t) => (0, i.jsx)(e, { ...t, channel: C });
+                            return (t) => (0, i.jsx)(e, { ...t, channel: E });
                         });
                     },
                     handleClick: function () {
-                        null != C && (0, A.uh)(C.guild_id, C.id);
+                        null != E && (0, A.uh)(E.guild_id, E.id);
                     },
                 }),
             }),
             (0, i.jsx)("div", {
-                className: E.T,
-                children: (0, i.jsx)(d.A, { channel: C, guild: S, chatInputType: c.oU.SIDEBAR }, t),
+                className: C.T,
+                children: (0, i.jsx)(c.A, { channel: E, guild: b, chatInputType: d.oU.SIDEBAR }, t),
             }),
         ],
     });

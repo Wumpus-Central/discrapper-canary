@@ -1,18 +1,19 @@
-n.d(t, { A: () => a });
+"use strict";
+n.d(t, { A: () => r });
 var i = n(627968),
-    l = n(837921),
-    s = n(651761);
-let a = l.Ay.getEnableHardwareAcceleration()
+    s = n(837921),
+    l = n(651761);
+let r = s.Ay.getEnableHardwareAcceleration()
     ? function () {
           return (0, i.jsx)("div", {
               children: (0, i.jsxs)("div", {
-                  className: s.pm,
+                  className: l.pm,
                   children: [
-                      (0, i.jsx)("div", { className: s.M }),
-                      (0, i.jsx)("div", { className: s.CB }),
-                      (0, i.jsx)("div", { className: s.d4 }),
-                      (0, i.jsx)("div", { className: s.Vh }),
-                      (0, i.jsx)("div", { className: s.KF }),
+                      (0, i.jsx)("div", { className: l.M }),
+                      (0, i.jsx)("div", { className: l.CB }),
+                      (0, i.jsx)("div", { className: l.d4 }),
+                      (0, i.jsx)("div", { className: l.Vh }),
+                      (0, i.jsx)("div", { className: l.KF }),
                   ],
               }),
           });

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     XG: "scroller__629e4",
     gy: "unread__629e4 " + n(473134).kL,

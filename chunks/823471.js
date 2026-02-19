@@ -1,99 +1,100 @@
+"use strict";
 n.d(t, { A: () => R });
 var i = n(627968),
-    l = n(64700),
-    s = n(397927),
-    a = n(182061),
-    r = n(886393),
+    s = n(64700),
+    l = n(397927),
+    r = n(182061),
+    a = n(886393),
     o = n(307623),
-    d = n(660273),
-    c = n(707792),
+    c = n(660273),
+    d = n(707792),
     u = n(41402),
     h = n(271456),
     A = n(200273),
-    g = n(565846),
-    m = n(57907),
-    p = n(375500),
+    p = n(565846),
+    g = n(57907),
+    m = n(375500),
     _ = n(707653),
-    x = n(50268),
-    f = n(584682),
-    E = n(58736),
-    C = n(378570),
+    f = n(50268),
+    x = n(584682),
+    C = n(58736),
+    E = n(378570),
     I = n(203982),
-    S = n(170428),
-    b = n(933057),
-    N = n(747926),
+    b = n(170428),
+    N = n(933057),
+    S = n(747926),
     T = n(652215),
-    j = n(985018);
-function v(e) {
+    v = n(985018);
+function y(e) {
     let { channel: t } = e,
-        [n, a] = l.useState(!1),
-        r = l.useRef(null);
+        [n, r] = s.useState(!1),
+        a = s.useRef(null);
     function o() {
-        a((e) => !e);
+        r((e) => !e);
     }
-    let d = j.intl.string(j.t["UKOtz+"]);
-    return (0, i.jsx)(s.YNO, {
-        targetElementRef: r,
+    let c = v.intl.string(v.t["UKOtz+"]);
+    return (0, i.jsx)(l.YNO, {
+        targetElementRef: a,
         shouldShow: n,
-        animation: s.YNO.Animation.NONE,
+        animation: l.YNO.Animation.NONE,
         position: "bottom",
         align: "right",
         autoInvert: !1,
-        onRequestClose: () => a(!1),
+        onRequestClose: () => r(!1),
         renderPopout: function (e) {
-            return (0, i.jsx)(y, { ...e, channel: t });
+            return (0, i.jsx)(j, { ...e, channel: t });
         },
         children: (e, t) => {
             let { isShown: n } = t;
-            return (0, i.jsx)(E.Ay.Icon, {
+            return (0, i.jsx)(C.Ay.Icon, {
                 ...e,
-                ref: r,
+                ref: a,
                 onClick: o,
-                tooltip: n ? null : d,
-                icon: s.jNK,
-                "aria-label": d,
+                tooltip: n ? null : c,
+                icon: l.jNK,
+                "aria-label": c,
                 selected: n,
             });
         },
     });
 }
-function y(e) {
-    let { channel: t, closePopout: n, onSelect: l } = e,
-        f = (0, d.A)(t, "Sidebar Overflow"),
-        E = (0, u.A)(t),
-        S = (0, m.A)(t),
-        b = (0, p.A)(t),
-        N = (0, a.A)(t),
-        v = (0, c.A)(t),
-        y = (0, g.A)(t.id),
+function j(e) {
+    let { channel: t, closePopout: n, onSelect: s } = e,
+        x = (0, c.A)(t, "Sidebar Overflow"),
+        C = (0, u.A)(t),
+        b = (0, g.A)(t),
+        N = (0, m.A)(t),
+        S = (0, r.A)(t),
+        y = (0, d.A)(t),
+        j = (0, p.A)(t.id),
         R = (0, A.A)(t),
         O = (0, o.A)(t),
-        L = (0, r.A)(t),
-        D = (0, x.A)({ id: t.id, label: j.intl.string(j.t.DQ797g) }),
-        M = (0, _.A)(t),
+        L = (0, a.A)(t),
+        M = (0, f.A)({ id: t.id, label: v.intl.string(v.t.DQ797g) }),
+        D = (0, _.A)(t),
         G = (0, h.A)(t);
     function U() {
-        (0, C.iN)(t.id);
+        (0, E.iN)(t.id);
     }
-    return (0, i.jsxs)(s.W1t, {
+    return (0, i.jsxs)(l.W1t, {
         "data-menu-migrated": !0,
         navId: "thread-context",
         onClose: n,
-        "aria-label": j.intl.string(j.t["1NBjqb"]),
-        onSelect: l,
+        "aria-label": v.intl.string(v.t["1NBjqb"]),
+        onSelect: s,
         children: [
-            (0, i.jsxs)(s.rXV, {
-                children: [f, (0, i.jsx)(s.Drp, { id: "open", label: j.intl.string(j.t.IxVmZi), action: U })],
+            (0, i.jsxs)(l.rXV, {
+                children: [x, (0, i.jsx)(l.Drp, { id: "open", label: v.intl.string(v.t.IxVmZi), action: U })],
             }),
-            (0, i.jsxs)(s.rXV, { children: [S, b] }),
-            (0, i.jsxs)(s.rXV, { children: [R, E, y, G] }),
-            (0, i.jsxs)(s.rXV, {
+            (0, i.jsxs)(l.rXV, { children: [b, N] }),
+            (0, i.jsxs)(l.rXV, { children: [R, C, j, G] }),
+            (0, i.jsxs)(l.rXV, {
                 children: [
-                    (0, i.jsx)(s.Drp, {
+                    (0, i.jsx)(l.Drp, {
                         id: "search",
-                        label: j.intl.string(j.t["5h0QOP"]),
-                        icon: s.tfB,
-                        trailingIndicator: { type: "icon", icon: s.tfB },
+                        label: v.intl.string(v.t["5h0QOP"]),
+                        icon: l.tfB,
+                        trailingIndicator: { type: "icon", icon: l.tfB },
                         action: function () {
                             U(),
                                 setTimeout(() => {
@@ -101,19 +102,19 @@ function y(e) {
                                 }, 2e3);
                         },
                     }),
-                    (0, i.jsx)(s.Drp, {
+                    (0, i.jsx)(l.Drp, {
                         id: "pins",
-                        label: j.intl.string(j.t["2BSH7n"]),
-                        icon: s.tfB,
-                        trailingIndicator: { type: "icon", icon: s.tfB },
+                        label: v.intl.string(v.t["2BSH7n"]),
+                        icon: l.tfB,
+                        trailingIndicator: { type: "icon", icon: l.tfB },
                         action: function () {
                             U(), I._.dispatch(T.jej.TOGGLE_CHANNEL_PINS);
                         },
                     }),
                 ],
             }),
-            (0, i.jsxs)(s.rXV, { children: [M, N, v, O] }),
-            (0, i.jsxs)(s.rXV, { children: [L, D] }),
+            (0, i.jsxs)(l.rXV, { children: [D, S, y, O] }),
+            (0, i.jsxs)(l.rXV, { children: [L, M] }),
         ],
     });
 }
@@ -121,13 +122,13 @@ function R(e) {
     let { channel: t, baseChannelId: n } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            t.isForumPost() ? null : (0, i.jsx)(b.A, { channel: t }),
-            t.isModeratorReportChannel() ? (0, i.jsx)(S.A, { channel: t }) : null,
-            (0, i.jsx)(v, { channel: t }),
-            (0, i.jsx)(E.Ay.Icon, {
-                icon: s.PGe,
-                tooltip: j.intl.string(j.t.cpT0Cq),
-                onClick: () => (0, N.xu)((0, f.j)(t), n ?? t.parent_id),
+            t.isForumPost() ? null : (0, i.jsx)(N.A, { channel: t }),
+            t.isModeratorReportChannel() ? (0, i.jsx)(b.A, { channel: t }) : null,
+            (0, i.jsx)(y, { channel: t }),
+            (0, i.jsx)(C.Ay.Icon, {
+                icon: l.PGe,
+                tooltip: v.intl.string(v.t.cpT0Cq),
+                onClick: () => (0, S.xu)((0, x.j)(t), n ?? t.parent_id),
             }),
         ],
     });

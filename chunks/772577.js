@@ -1,47 +1,48 @@
+"use strict";
 n.d(t, { A: () => h });
 var i = n(627968),
-    l = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(397927),
+    s = n(64700),
+    l = n(503698),
+    r = n.n(l),
+    a = n(397927),
     o = n(567305),
-    d = n(985018),
-    c = n(801985);
+    c = n(985018),
+    d = n(801985);
 function u(e) {
     let { text: t, hasScrolled: n } = e;
     return (0, i.jsxs)("div", {
-        className: a()(c.kL, { [c.sz]: n }),
+        className: r()(d.kL, { [d.sz]: n }),
         children: [
             (0, i.jsx)("div", {
-                className: c.lm,
-                children: (0, i.jsx)(r.Text, {
-                    className: c.__invalid_label,
+                className: d.lm,
+                children: (0, i.jsx)(a.Text, {
+                    className: d.__invalid_label,
                     variant: "text-md/medium",
                     color: "text-strong",
                     children: t,
                 }),
             }),
-            (0, i.jsx)("div", { className: c._p }),
+            (0, i.jsx)("div", { className: d._p }),
         ],
     });
 }
 function h(e) {
-    let [t, n] = l.useState(),
-        [s, a] = l.useState(),
-        [r, c] = l.useState(!1),
-        [h, A] = l.useState(!1),
-        { enabled: m } = (0, o.DN)(e);
+    let [t, n] = s.useState(),
+        [l, r] = s.useState(),
+        [a, d] = s.useState(!1),
+        [h, A] = s.useState(!1),
+        { enabled: p } = (0, o.DN)(e);
     return (
-        l.useEffect(() => {
-            m && null != t && null != s ? c(t < s) : c(!1);
-        }, [m, t, s]),
+        s.useEffect(() => {
+            p && null != t && null != l ? d(t < l) : d(!1);
+        }, [p, t, l]),
         {
-            horizontalScrollNotice: l.useMemo(
-                () => (r ? (0, i.jsx)(u, { text: d.intl.string(d.t.RfAAH9), hasScrolled: h }) : null),
-                [r, h],
+            horizontalScrollNotice: s.useMemo(
+                () => (a ? (0, i.jsx)(u, { text: c.intl.string(c.t.RfAAH9), hasScrolled: h }) : null),
+                [a, h],
             ),
             handleScroll: () => A(!0),
-            handleSetScrollerRef: (e) => a(e?.getScrollerState()?.scrollWidth),
+            handleSetScrollerRef: (e) => r(e?.getScrollerState()?.scrollWidth),
             handleSetContainerRef: (e) => n(e?.clientWidth),
         }
     );

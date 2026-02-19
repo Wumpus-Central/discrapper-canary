@@ -1,48 +1,49 @@
-n.d(t, { n: () => x });
+"use strict";
+n.d(t, { n: () => f });
 var i = n(627968),
-    l = n(64700),
-    s = n(990078),
-    a = n(397927),
-    r = n(442433),
+    s = n(64700),
+    l = n(990078),
+    r = n(397927),
+    a = n(442433),
     o = n(793574),
-    d = n(47167),
-    c = n(598104),
+    c = n(47167),
+    d = n(598104),
     u = n(73028),
     h = n(665691),
     A = n(954571),
-    g = n(652215),
-    m = n(985018),
-    p = n(202115);
+    p = n(652215),
+    g = n(985018),
+    m = n(202115);
 let _ = (e) => {
         let { channel: t } = e;
         return (0, h.bG)({ channelId: t.id })
-            ? (0, i.jsx)(s.m, {
-                  text: m.intl.string(m.t.QyZ4Td),
-                  children: (0, i.jsx)(a.m5V, {
+            ? (0, i.jsx)(l.m, {
+                  text: g.intl.string(g.t.QyZ4Td),
+                  children: (0, i.jsx)(r.m5V, {
                       size: "xs",
-                      "aria-label": m.intl.string(m.t.VHXh8a),
-                      color: a.LU0.colors.INTERACTIVE_TEXT_DEFAULT,
+                      "aria-label": g.intl.string(g.t.VHXh8a),
+                      color: r.LU0.colors.INTERACTIVE_TEXT_DEFAULT,
                   }),
               })
             : null;
     },
-    x = l.memo(function (e) {
+    f = s.memo(function (e) {
         let { channel: t } = e,
-            l = t.id,
-            h = (0, d.Ay)(t);
+            s = t.id,
+            h = (0, c.Ay)(t);
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(s.m, {
+                (0, i.jsx)(l.m, {
                     asContainer: !0,
-                    text: m.intl.string(m.t["5Q9+/L"]),
+                    text: g.intl.string(g.t["5Q9+/L"]),
                     position: "bottom",
-                    children: (0, i.jsxs)(a.DUT, {
-                        className: p.cD,
+                    children: (0, i.jsxs)(r.DUT, {
+                        className: m.cD,
                         onClick: () => {
-                            (0, u.U)(l, o.A.HEADER_BAR);
+                            (0, u.U)(s, o.A.HEADER_BAR);
                         },
                         onContextMenu: (e) =>
-                            (0, r.L3)(
+                            (0, a.L3)(
                                 e,
                                 () =>
                                     Promise.all([n.e("97262"), n.e("37819")])
@@ -55,23 +56,23 @@ let _ = (e) => {
                             ),
                         onDoubleClick: (e) => e.stopPropagation(),
                         onMouseEnter: () => {
-                            A.default.track(g.HAw.GDM_EDIT_INTERACTED, {
+                            A.default.track(p.HAw.GDM_EDIT_INTERACTED, {
                                 channel_id: t.id,
                                 action: "entry_point_hovered",
                                 location: o.A.HEADER_BAR,
                             });
                         },
-                        "aria-label": m.intl.string(m.t["5Q9+/L"]),
+                        "aria-label": g.intl.string(g.t["5Q9+/L"]),
                         children: [
-                            (0, i.jsx)(c.A, {
-                                className: p.gn,
+                            (0, i.jsx)(d.A, {
+                                className: m.gn,
                                 "aria-hidden": !0,
                                 channel: t,
-                                size: a._3J.SIZE_20,
-                                facepileSizeOverride: a._3J.SIZE_24,
+                                size: r._3J.SIZE_20,
+                                facepileSizeOverride: r._3J.SIZE_24,
                             }),
-                            (0, i.jsx)(a.Text, { variant: "text-md/medium", color: "text-strong", children: h ?? "" }),
-                            (0, i.jsx)(a.R2l, { className: p.IZ, size: "xs", color: "currentColor" }),
+                            (0, i.jsx)(r.Text, { variant: "text-md/medium", color: "text-strong", children: h ?? "" }),
+                            (0, i.jsx)(r.R2l, { className: m.IZ, size: "xs", color: "currentColor" }),
                         ],
                     }),
                 }),

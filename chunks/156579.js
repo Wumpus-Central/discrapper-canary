@@ -1,34 +1,35 @@
+"use strict";
 n.d(t, { A: () => A });
 var i = n(627968);
 n(64700);
-var l = n(417597),
-    s = n(87001),
-    a = n(811024),
-    r = n(933958),
+var s = n(417597),
+    l = n(87001),
+    r = n(811024),
+    a = n(933958),
     o = n(969151),
-    d = n(108959),
-    c = n(829861),
+    c = n(108959),
+    d = n(829861),
     u = n(5867),
     h = n(652215);
 function A(e) {
     let { maxHeight: t, renderExternalHeader: n } = e,
         {
             connectedChannelId: A,
-            connectedActivity: g,
-            activityPanelMode: m,
-        } = (0, l.cf)([r.Ay], () => {
-            let e = r.Ay.getConnectedActivityLocation(),
-                t = r.Ay.getSelfEmbeddedActivityForLocation(e);
+            connectedActivity: p,
+            activityPanelMode: g,
+        } = (0, s.cf)([a.Ay], () => {
+            let e = a.Ay.getConnectedActivityLocation(),
+                t = a.Ay.getSelfEmbeddedActivityForLocation(e);
             return {
                 connectedChannelId: (0, o.H)(e),
                 connectedActivity: t,
-                activityPanelMode: r.Ay.getActivityPanelMode(),
+                activityPanelMode: a.Ay.getActivityPanelMode(),
             };
         }),
-        p = (0, l.bG)([s.A], () => s.A.getWindowOpen(h.MLl.ACTIVITY_POPOUT));
-    if (!(0, a.Gp)(A)) return null;
-    let _ = g?.applicationId;
-    return m !== u.Gd.PANEL || null == _ || p || null == A || null == g || (0, d.A)(A)
+        m = (0, s.bG)([l.A], () => l.A.getWindowOpen(h.MLl.ACTIVITY_POPOUT));
+    if (!(0, r.Gp)(A)) return null;
+    let _ = p?.applicationId;
+    return g !== u.Gd.PANEL || null == _ || m || null == A || null == p || (0, c.A)(A)
         ? null
-        : (0, i.jsx)(c.A, { maxHeight: t, connectedLocation: g.location, renderExternalHeader: n });
+        : (0, i.jsx)(d.A, { maxHeight: t, connectedLocation: p.location, renderExternalHeader: n });
 }

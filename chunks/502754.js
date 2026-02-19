@@ -1,38 +1,39 @@
+"use strict";
 n.d(t, { A: () => T }), n(321073);
 var i = n(627968),
-    l = n(64700),
-    s = n(989349),
-    a = n.n(s),
-    r = n(837381),
+    s = n(64700),
+    l = n(989349),
+    r = n.n(l),
+    a = n(837381),
     o = n(397927),
-    d = n(559149),
-    c = n(857069),
+    c = n(559149),
+    d = n(857069),
     u = n(694318),
     h = n(813516),
     A = n(906141),
-    g = n(253932),
-    m = n(961350),
-    p = n(287809),
+    p = n(253932),
+    g = n(961350),
+    m = n(287809),
     _ = n(405269),
-    x = n(576456),
-    f = n(712209),
-    E = n(652215),
-    C = n(985018),
+    f = n(576456),
+    x = n(712209),
+    C = n(652215),
+    E = n(985018),
     I = n(359884);
-let S = { left: 4, right: -12 },
-    b = [E.lAJ.THREAD_CREATED];
-function N(e) {
-    let { channel: t, message: n, compact: s, isGroupStart: a, treatSpam: d, gotoChannel: c } = e,
-        u = (0, r.rm)(n.id ?? ""),
-        h = l.useCallback(
+let b = { left: 4, right: -12 },
+    N = [C.lAJ.THREAD_CREATED];
+function S(e) {
+    let { channel: t, message: n, compact: l, isGroupStart: r, treatSpam: c, gotoChannel: d } = e,
+        u = (0, a.rm)(n.id ?? ""),
+        h = s.useCallback(
             (e) => {
                 "ArrowLeft" === e.key && document.querySelector(`[data-recents-channel="${t.id}"]`)?.focus();
             },
             [t.id],
         ),
-        g = b.includes(n.type);
+        p = N.includes(n.type);
     return (0, i.jsx)(o.vN3, {
-        offset: S,
+        offset: b,
         children: (0, i.jsxs)(
             "div",
             {
@@ -40,17 +41,17 @@ function N(e) {
                 onKeyDown: h,
                 ...u,
                 children: [
-                    !g && (0, i.jsx)(x.A, { className: I.nn, onJump: (e) => c(e, n.id) }),
+                    !p && (0, i.jsx)(f.A, { className: I.nn, onJump: (e) => d(e, n.id) }),
                     (0, i.jsx)(A.A, {
                         id: n.id,
                         message: n,
                         channel: t,
                         className: I.iU,
-                        compact: s,
+                        compact: l,
                         animateAvatar: !1,
-                        isGroupStart: a,
+                        isGroupStart: r,
                         onKeyDown: h,
-                        treatSpam: d,
+                        treatSpam: c,
                     }),
                 ],
             },
@@ -59,42 +60,42 @@ function N(e) {
     });
 }
 function T(e) {
-    let { channel: t, channelRecord: n, gotoChannel: l } = e,
-        { enabled: s } = d.A.useExperiment({ location: "20e3b0_1" }, { autoTrackExposure: !1 }),
-        r = g.hH.useSetting(),
+    let { channel: t, channelRecord: n, gotoChannel: s } = e,
+        { enabled: l } = c.A.useExperiment({ location: "20e3b0_1" }, { autoTrackExposure: !1 }),
+        a = p.hH.useSetting(),
         A = (0, u.iJ)(n),
-        x = !1,
-        S = 0 === t.messages.length || a()(t.messages[0].timestamp).isSame(a()(), "day"),
-        b = p.default.getUser(m.default.getId())?.hasFlag(E.nhx.SPAMMER) ?? !1,
+        f = !1,
+        b = 0 === t.messages.length || r()(t.messages[0].timestamp).isSame(r()(), "day"),
+        N = m.default.getUser(g.default.getId())?.hasFlag(C.nhx.SPAMMER) ?? !1,
         T = [];
     if (!t.collapsed) {
         let e = null,
-            d = null,
-            g = t.messages.slice(0, f.sz);
-        g.forEach((t) => {
-            if (!S && (null == e || !e.isSame(t.timestamp, "day"))) {
+            c = null,
+            p = t.messages.slice(0, x.sz);
+        p.forEach((t) => {
+            if (!b && (null == e || !e.isSame(t.timestamp, "day"))) {
                 let n = (0, _.i$)(t.timestamp, "LL");
-                T.push((0, i.jsx)(h.A, { className: I.yF, children: n }, n)), (e = a()(t.timestamp));
+                T.push((0, i.jsx)(h.A, { className: I.yF, children: n }, n)), (e = r()(t.timestamp));
             }
-            let o = null == d || (0, c.A)(n, d, t);
-            (d = t),
-                (x = x || (0, u.kf)(t)),
+            let o = null == c || (0, d.A)(n, c, t);
+            (c = t),
+                (f = f || (0, u.kf)(t)),
                 T.push(
                     (0, i.jsx)(
-                        N,
+                        S,
                         {
                             channel: n,
                             message: t,
-                            compact: r,
+                            compact: a,
                             isGroupStart: o,
-                            treatSpam: !b && s && (0, u.kf)(t) && A,
-                            gotoChannel: l,
+                            treatSpam: !N && l && (0, u.kf)(t) && A,
+                            gotoChannel: s,
                         },
                         t.id,
                     ),
                 );
         }),
-            t.messages.length >= f.sz &&
+            t.messages.length >= x.sz &&
                 T.push(
                     (0, i.jsx)(
                         "div",
@@ -102,8 +103,8 @@ function T(e) {
                             className: I.Gr,
                             children: (0, i.jsx)(o.QWc, {
                                 variant: "primary",
-                                text: `${C.intl.string(C.t["9OB9hq"])} \u203A`,
-                                onClick: (e) => l(e, g[g.length - 1].id),
+                                text: `${E.intl.string(E.t["9OB9hq"])} \u203A`,
+                                onClick: (e) => s(e, p[p.length - 1].id),
                             }),
                         },
                         "view-all",
@@ -111,5 +112,5 @@ function T(e) {
                 ),
             0 === T.length && (T = [(0, i.jsx)(o.y$y, {}, "spinner")]);
     }
-    return x && A && d.A.trackExposure({ location: "20e3b0_2" }), (0, i.jsx)("div", { className: I.DZ, children: T });
+    return f && A && c.A.trackExposure({ location: "20e3b0_2" }), (0, i.jsx)("div", { className: I.DZ, children: T });
 }

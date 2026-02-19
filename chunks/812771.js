@@ -1,18 +1,19 @@
-n.d(t, { A: () => f, X: () => g });
+"use strict";
+n.d(t, { A: () => f, X: () => m });
 var i,
-    l = n(627968),
-    s = n(64700),
-    a = n(503698),
-    r = n.n(a),
+    s = n(627968),
+    l = n(64700),
+    r = n(503698),
+    a = n.n(r),
     o = n(735438),
-    d = n(827734),
-    c = n(397927),
+    c = n(827734),
+    d = n(397927),
     u = n(817281),
     h = n(761929),
     A = n(964404),
-    m = n(743898),
-    p = n(3651),
-    g =
+    p = n(743898),
+    g = n(3651),
+    m =
         (((i = {})[(i.PostSidebar = 0)] = "PostSidebar"),
         (i[(i.ThreadSidebar = 1)] = "ThreadSidebar"),
         (i[(i.CallChatSidebar = 2)] = "CallChatSidebar"),
@@ -20,21 +21,21 @@ var i,
         (i[(i.HomeSidebar = 4)] = "HomeSidebar"),
         i);
 function _(e) {
-    let { resizableNode: t, onResize: n, onResizeEnd: i, maxWidth: s, minWidth: a } = e,
-        r = (0, h.A)({
-            minDimension: a,
-            maxDimension: s,
+    let { resizableNode: t, onResize: n, onResizeEnd: i, maxWidth: l, minWidth: r } = e,
+        a = (0, h.A)({
+            minDimension: r,
+            maxDimension: l,
             resizableDomNodeRef: t,
             onElementResize: n,
             onElementResizeEnd: i,
             orientation: h.R.HORIZONTAL_LEFT,
             throttleDuration: 16,
         });
-    return (0, l.jsx)("div", { onMouseDown: r, className: p.Di });
+    return (0, s.jsx)("div", { onMouseDown: a, className: g.Di });
 }
 function f(e) {
-    let { sidebarType: t, maxWidth: n, onWidthChange: i, children: a, floatingLayer: h } = e,
-        g = s.useRef(null),
+    let { sidebarType: t, maxWidth: n, onWidthChange: i, children: r, floatingLayer: h } = e,
+        m = l.useRef(null),
         f = (function (e) {
             switch (e) {
                 case 0:
@@ -49,42 +50,42 @@ function f(e) {
                     return "homeSidebarWidth";
             }
         })(t),
-        [x, C] = s.useState(A.Ay[f]),
-        E = s.useCallback(
+        [x, C] = l.useState(A.Ay[f]),
+        E = l.useCallback(
             (e) => {
                 u.Ay.updatedUnsyncedSettings({ [f]: e });
             },
             [f],
         ),
-        I = (0, m.P)({ maxWidth: n, minWidth: 450 }),
-        b = (0, c.rdh)(d.A.modules.chat.RESIZE_HANDLE_WIDTH),
+        I = (0, p.P)({ maxWidth: n, minWidth: 450 }),
+        b = (0, d.rdh)(c.A.modules.chat.RESIZE_HANDLE_WIDTH),
         N = (0, o.clamp)(x, 450, n),
         S = I ? N : N + b;
-    s.useEffect(() => {
+    l.useEffect(() => {
         i?.(N, I);
     }, [N, i, I]);
-    let T = h ?? s.Fragment;
-    return (0, l.jsxs)(l.Fragment, {
+    let T = h ?? l.Fragment;
+    return (0, s.jsxs)(s.Fragment, {
         children: [
-            !I && (0, l.jsx)("div", { style: { minWidth: S } }),
-            (0, l.jsx)(T, {
-                children: (0, l.jsxs)("div", {
-                    className: r()(p.PA, { [p.R]: !1 }),
+            !I && (0, s.jsx)("div", { style: { minWidth: S } }),
+            (0, s.jsx)(T, {
+                children: (0, s.jsxs)("div", {
+                    className: a()(g.PA, { [g.R]: !1 }),
                     children: [
-                        (0, l.jsx)("div", { className: r()(p.Uc, { [p.DU]: I, [p.iK]: !I }), style: { width: S } }),
+                        (0, s.jsx)("div", { className: a()(g.Uc, { [g.DU]: I, [g.iK]: !I }), style: { width: S } }),
                         !I &&
-                            (0, l.jsx)(_, {
+                            (0, s.jsx)(_, {
                                 minWidth: 450,
                                 maxWidth: n,
-                                resizableNode: g,
+                                resizableNode: m,
                                 onResize: C,
                                 onResizeEnd: E,
                             }),
-                        (0, l.jsx)("div", {
-                            ref: g,
-                            className: r()(p.kL, { [p.DU]: I }),
+                        (0, s.jsx)("div", {
+                            ref: m,
+                            className: a()(g.kL, { [g.DU]: I }),
                             style: { width: N },
-                            children: a,
+                            children: r,
                         }),
                     ],
                 }),

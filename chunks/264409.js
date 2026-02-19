@@ -1,48 +1,49 @@
+"use strict";
 n.d(t, { A: () => u });
 var i = n(627968);
 n(64700);
-var l = n(503698),
-    s = n.n(l),
-    a = n(522160),
-    r = n(827734),
+var s = n(503698),
+    l = n.n(s),
+    r = n(475539),
+    a = n(827734),
     o = n(397927),
-    d = n(263063),
-    c = n(211170);
+    c = n(263063),
+    d = n(211170);
 function u(e) {
-    let { guild: t, show: n, active: l, onAnimationStart: u, onAnimationRest: h } = e,
+    let { guild: t, show: n, active: s, onAnimationStart: u, onAnimationRest: h } = e,
         A = {},
         p = {};
     (A.transform = "translate3d(10px, 10px, 0) scale3d(3, 3, 1)"),
         (p.transform = "translate3d(0, 0, 0) scale3d(1, 1, 1)");
-    let m = (0, o.rdh)(r.A.unsafe_rawColors.BRAND_500).hex(),
-        g = (0, o.rdh)(r.A.unsafe_rawColors.PRIMARY_630).hex();
-    l && null == t.icon && ((A.backgroundColor = m), (p.backgroundColor = g));
+    let g = (0, o.rdh)(a.A.unsafe_rawColors.BRAND_500).hex(),
+        m = (0, o.rdh)(a.A.unsafe_rawColors.PRIMARY_630).hex();
+    s && null == t.icon && ((A.backgroundColor = g), (p.backgroundColor = m));
     let _ = (0, o.pnh)(n, { from: A, enter: p, leave: A, config: { duration: 100 }, onStart: u, onRest: h });
     return (0, i.jsx)(i.Fragment, {
         children: _(
-            (e, n, l) =>
+            (e, n, s) =>
                 n &&
                 (0, i.jsx)(
                     "div",
                     {
-                        className: c.qc,
+                        className: d.qc,
                         children: (0, i.jsx)("div", {
-                            className: s()(c.MJ, c.L0),
+                            className: l()(d.MJ, d.L0),
                             style: { margin: 0 },
-                            children: (0, i.jsx)(a.animated.div, {
-                                className: c.NG,
+                            children: (0, i.jsx)(r.animated.div, {
+                                className: d.NG,
                                 style: e,
                                 children: (0, i.jsx)("div", {
-                                    className: c.qJ,
+                                    className: d.qJ,
                                     children: (0, i.jsx)("div", {
-                                        className: c.jg,
-                                        children: (0, i.jsx)(d.A, { guild: t, size: d.A.Sizes.SMOL, className: c.VL }),
+                                        className: d.jg,
+                                        children: (0, i.jsx)(c.A, { guild: t, size: c.A.Sizes.SMOL, className: d.VL }),
                                     }),
                                 }),
                             }),
                         }),
                     },
-                    l.key,
+                    s.key,
                 ),
         ),
     });

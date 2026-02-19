@@ -1,16 +1,17 @@
+"use strict";
 n.d(t, { A: () => o });
 var i = n(627968);
 n(64700);
-var l = n(397927),
-    s = n(387755),
-    a = n(709562),
-    r = n(985018);
+var s = n(397927),
+    l = n(387755),
+    r = n(709562),
+    a = n(985018);
 function o(e) {
     let { channel: t, ...n } = e;
-    return (0, i.jsx)(a.l, {
+    return (0, i.jsx)(r.l, {
         ...n,
-        iconComponent: l.PGe,
-        label: r.intl.string(r.t.WAI6xu),
-        onClick: () => s.A.stopRinging(t.id),
+        iconComponent: s.PGe,
+        label: a.intl.string(a.t.WAI6xu),
+        onClick: () => l.A.stopRinging(t.id),
     });
 }

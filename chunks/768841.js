@@ -1,25 +1,26 @@
-n.d(t, { A: () => c });
+"use strict";
+n.d(t, { A: () => d });
 var i = n(627968);
 n(64700);
-var l = n(397927),
-    s = n(73153),
-    a = n(272355),
-    r = n(296838),
+var s = n(397927),
+    l = n(73153),
+    r = n(272355),
+    a = n(296838),
     o = n(946974);
-class d extends a.A {
+class c extends r.A {
     _initialize() {
-        s.h.subscribe("SHOW_KEYBOARD_SHORTCUTS", this.showKeyboardShortcuts),
-            s.h.subscribe("HIDE_KEYBOARD_SHORTCUTS", this.hideKeyboardShortcuts);
+        l.h.subscribe("SHOW_KEYBOARD_SHORTCUTS", this.showKeyboardShortcuts),
+            l.h.subscribe("HIDE_KEYBOARD_SHORTCUTS", this.hideKeyboardShortcuts);
     }
     _terminate() {
-        s.h.unsubscribe("SHOW_KEYBOARD_SHORTCUTS", this.showKeyboardShortcuts),
-            s.h.unsubscribe("HIDE_KEYBOARD_SHORTCUTS", this.hideKeyboardShortcuts);
+        l.h.unsubscribe("SHOW_KEYBOARD_SHORTCUTS", this.showKeyboardShortcuts),
+            l.h.unsubscribe("HIDE_KEYBOARD_SHORTCUTS", this.hideKeyboardShortcuts);
     }
     showKeyboardShortcuts() {
-        (0, l.qfG)((e) => (0, i.jsx)(r.A, { ...e }), { modalKey: o.P });
+        (0, s.qfG)((e) => (0, i.jsx)(a.A, { ...e }), { modalKey: o.P });
     }
     hideKeyboardShortcuts() {
-        (0, l.OoC)(o.P);
+        (0, s.OoC)(o.P);
     }
 }
-let c = new d();
+let d = new c();

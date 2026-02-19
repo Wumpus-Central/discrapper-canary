@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     ZO: "channelHeader__35a7e",
     b4: "showCollapseButton__35a7e",

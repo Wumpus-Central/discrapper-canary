@@ -1,18 +1,19 @@
+"use strict";
 n.d(t, { A: () => L });
 var i = n(627968),
-    l = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(311907),
+    s = n(64700),
+    l = n(503698),
+    r = n.n(l),
+    a = n(311907),
     o = n(554146),
-    d = n(827734),
-    c = n(192308),
+    c = n(827734),
+    d = n(192308),
     u = n(397927),
     h = n(442433),
     A = n(379848),
     p = n(361158),
-    m = n(976860),
-    g = n(871123),
+    g = n(976860),
+    m = n(871123),
     _ = n(733391),
     f = n(832163),
     x = n(938289),
@@ -28,41 +29,41 @@ var i = n(627968),
     j = n(49999),
     R = n(985018),
     O = n(811094);
-let L = l.memo(function (e) {
-    let { guild: t, selected: s } = e,
-        L = l.useRef(null),
-        M = l.useRef(null),
-        D = (0, c.useHasAnyModalOpen)(),
-        G = (0, r.bG)([N.A], () => N.A.hasLayers()),
+let L = s.memo(function (e) {
+    let { guild: t, selected: l } = e,
+        L = s.useRef(null),
+        M = s.useRef(null),
+        D = (0, d.useHasAnyModalOpen)(),
+        G = (0, a.bG)([N.A], () => N.A.hasLayers()),
         U = (0, p.xr)((e) => e.fullScreenLayers.length > 0),
         P = (0, x.n)({ location: "game_shop_channel_row" });
-    l.useEffect(() => {
+    s.useEffect(() => {
         (0, _.Kh)(t.id);
     }, [t.id]);
-    let w = (0, r.bG)([f.A], () => f.A.getAnnouncement(t.id)),
+    let w = (0, a.bG)([f.A], () => f.A.getAnnouncement(t.id)),
         k = w?.state === "success" ? w.announcement : void 0,
         [V, B] = (0, A.x_)(o.M.GAME_SHOP_NEW_BADGE, t.id, k?.id ?? ""),
         H = V === o.M.GAME_SHOP_NEW_BADGE && null != k,
-        F = !P || null == w || "loading" === w.state || H || t.id !== (0, g.zf)(),
+        F = !P || null == w || "loading" === w.state || H || t.id !== (0, m.zf)(),
         [K, W] = (0, A.kn)(F ? [] : [o.M.SLAYER_STOREFRONT_XBOX_ANNOUNCEMENT]),
         Y = K === o.M.SLAYER_STOREFRONT_XBOX_ANNOUNCEMENT,
         z = H || Y,
-        X = l.useMemo(() => (H ? B : W), [H, B, W]);
-    l.useEffect(() => {
-        s && z && X(j.i.INDIRECT_ACTION);
-    }, [X, s, z]);
-    let q = l.useCallback(() => {
+        X = s.useMemo(() => (H ? B : W), [H, B, W]);
+    s.useEffect(() => {
+        l && z && X(j.i.INDIRECT_ACTION);
+    }, [X, l, z]);
+    let q = s.useCallback(() => {
             X(j.i.TAKE_ACTION);
             let e = f.A.getStorefrontState(t.id)?.activePage ?? 0;
-            (0, m.pX)(y.BVt.CHANNELS_GAME_SHOP(t.id, e));
+            (0, g.pX)(y.BVt.CHANNELS_GAME_SHOP(t.id, e));
         }, [t.id, X]),
-        J = l.useCallback(() => {
+        J = s.useCallback(() => {
             (0, C.X)({ guildId: t.id, forceFetch: H });
         }, [t.id, H]),
-        Q = l.useCallback(() => {
+        Q = s.useCallback(() => {
             X(j.i.USER_DISMISS);
         }, [X]),
-        $ = l.useCallback(
+        $ = s.useCallback(
             (e) => {
                 null != t &&
                     (0, h.L3)(e, async () => {
@@ -72,11 +73,11 @@ let L = l.memo(function (e) {
             },
             [t],
         ),
-        Z = l.useCallback(() => {
+        Z = s.useCallback(() => {
             L.current?.onMouseEnter(null, 500);
         }, [L]),
-        ee = l.useCallback(
-            (e, n, l, r) =>
+        ee = s.useCallback(
+            (e, n, s, a) =>
                 (0, i.jsx)(v.G, {
                     innerClassName: e,
                     ref: M,
@@ -87,14 +88,14 @@ let L = l.memo(function (e) {
                             color: "currentColor",
                             width: 20,
                             height: 20,
-                            className: a()(e, l),
+                            className: r()(e, s),
                         }),
                     text: (0, i.jsx)(u.Text, {
                         variant: "text-md/medium",
-                        className: a()(O.UU, n),
-                        children: t?.id === (0, g.zf)() ? R.intl.string(R.t.xFQAPs) : R.intl.string(R.t.vyaWs7),
+                        className: r()(O.UU, n),
+                        children: t?.id === (0, m.zf)() ? R.intl.string(R.t.xFQAPs) : R.intl.string(R.t.vyaWs7),
                     }),
-                    selected: s,
+                    selected: l,
                     onMouseDown: J,
                     onClick: q,
                     onContextMenu: $,
@@ -103,15 +104,15 @@ let L = l.memo(function (e) {
                             H &&
                                 (0, i.jsx)(u.LpS, {
                                     text: R.intl.string(R.t.y2b7CA),
-                                    color: d.A.colors.BACKGROUND_BRAND.css,
+                                    color: c.A.colors.BACKGROUND_BRAND.css,
                                 }),
-                            r,
+                            a,
                         ],
                     }),
                 }),
-            [t.id, s, J, q, $, H],
+            [t.id, l, J, q, $, H],
         ),
-        et = l.useMemo(() => {
+        et = s.useMemo(() => {
             if (null == k) return;
             let e = null != k.assetId ? T.A.toURLSafe((0, S.YE)(k.applicationId, k.assetId, 128, "webp")) : void 0,
                 t =
@@ -120,7 +121,7 @@ let L = l.memo(function (e) {
                         : void 0;
             if (null != e) return { imageUrl: e, backgroundImageUrl: t };
         }, [k]),
-        en = l.useCallback(
+        en = s.useCallback(
             () =>
                 H
                     ? (0, i.jsx)(E.A, {

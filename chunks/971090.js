@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     rH: "pendingFolderButtonIcon__93fc9",
     kL: "container__93fc9",

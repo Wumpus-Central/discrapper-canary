@@ -1,45 +1,44 @@
-"use strict";
 n.d(t, { A: () => d });
-var s = n(311907),
-    i = n(73153);
-let r = {
+var i = n(311907),
+    s = n(73153);
+let l = {
         enable_recently_active: "Enable recently active channels",
         theme_setting_in_account_sheet: "Show theme settings in the Account action sheet",
         nav_experiment_server_drawer_enabled: "[NavI] Enable expandable server drawer",
         show_icymi_debug_scores: "Show ICYMI debug scores",
         channel_list_scrim: "Dim the channel list when chat appears",
     },
-    l = {};
-class a extends s.Ay.DeviceSettingsStore {
+    r = {};
+class a extends i.Ay.DeviceSettingsStore {
     static displayName = "DevToolsDesignTogglesStore";
     static persistKey = "DevToolsDesignTogglesStore";
     getUserAgnosticState() {
-        return { toggleStates: l };
+        return { toggleStates: r };
     }
     initialize(e) {
-        for (var t in r) {
+        for (var t in l) {
             let n = e?.toggleStates?.[t] ?? !1;
-            l[t] = n;
+            r[t] = n;
         }
     }
     get(e) {
-        return l[e] ?? !1;
+        return r[e] ?? !1;
     }
     set(e, t) {
-        return (l[e] = t), t;
+        return (r[e] = t), t;
     }
     all() {
-        return l;
+        return r;
     }
     allWithDescriptions() {
-        return Object.entries(l).map((e) => {
+        return Object.entries(r).map((e) => {
             let [t, n] = e;
-            return [t, n, r[t]];
+            return [t, n, l[t]];
         });
     }
 }
-let d = new a(i.h, {
+let d = new a(s.h, {
     DEV_TOOLS_DESIGN_TOGGLE_SET: function (e) {
-        l[e.toggle] = e.value;
+        r[e.toggle] = e.value;
     },
 });

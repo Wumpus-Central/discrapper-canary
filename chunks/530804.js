@@ -1,26 +1,27 @@
-i.d(t, { $n: () => f, uy: () => S, vp: () => p }), i(321073);
-var n = i(64700),
-    a = i(735438),
-    l = i(311907),
-    r = i(568598),
-    s = i(313961),
-    o = i(288737),
-    d = i(961350),
-    c = i(734057),
-    u = i(696451),
-    m = i(584569),
-    _ = i(383501),
-    A = i(287809),
-    g = i(977997),
-    h = i(403362);
-function f(e, t) {
-    let i = (0, l.bG)([m.A, _.A], () => (e === _.A.getChannelId() ? m.A.getDesyncedVoiceStates() : null)),
-        r = (0, l.yK)([s.A], () => (null == e ? [] : [...s.A.getGuildRingingUsers(e)])),
-        d = (0, l.yK)([A.default], () => r.map((e) => A.default.getUser(e)).filter(h.Vq)),
-        g = (0, l.bG)([c.A], () => c.A.getBasicChannel(e)),
-        f = n.useMemo(
+"use strict";
+n.d(t, { $n: () => _, uy: () => x, vp: () => f }), n(321073);
+var i = n(64700),
+    s = n(735438),
+    l = n(311907),
+    r = n(568598),
+    a = n(313961),
+    o = n(288737),
+    c = n(961350),
+    d = n(734057),
+    u = n(696451),
+    h = n(584569),
+    A = n(383501),
+    p = n(287809),
+    g = n(977997),
+    m = n(403362);
+function _(e, t) {
+    let n = (0, l.bG)([h.A, A.A], () => (e === A.A.getChannelId() ? h.A.getDesyncedVoiceStates() : null)),
+        r = (0, l.yK)([a.A], () => (null == e ? [] : [...a.A.getGuildRingingUsers(e)])),
+        c = (0, l.yK)([p.default], () => r.map((e) => p.default.getUser(e)).filter(m.Vq)),
+        g = (0, l.bG)([d.A], () => d.A.getBasicChannel(e)),
+        _ = i.useMemo(
             () =>
-                d.map((e) => ({
+                c.map((e) => ({
                     voiceState: new o.A(e.id),
                     user: e,
                     member: g?.guild_id != null ? u.Ay.getMember(g?.guild_id, e.id) : null,
@@ -28,19 +29,19 @@ function f(e, t) {
                     comparator: e.globalName,
                     _isPlaceholder: !1,
                 })),
-            [d, g?.guild_id],
+            [c, g?.guild_id],
         );
-    return n.useMemo(
+    return i.useMemo(
         () =>
-            (function (e, t, i) {
-                if ((null == e || 0 === e.length) && 0 === i.length) return t;
-                let n = [],
+            (function (e, t, n) {
+                if ((null == e || 0 === e.length) && 0 === n.length) return t;
+                let i = [],
                     l = new Set();
-                for (let e of t) n.push(e), l.add(e.user.id);
+                for (let e of t) i.push(e), l.add(e.user.id);
                 return (
                     e?.forEach((e) => {
-                        n.splice(
-                            (0, a.sortedIndexBy)(n, e, (e) => {
+                        i.splice(
+                            (0, s.sortedIndexBy)(i, e, (e) => {
                                 let { comparator: t } = e;
                                 return t;
                             }),
@@ -48,11 +49,11 @@ function f(e, t) {
                             e,
                         );
                     }),
-                    i.length > 0 &&
-                        i.forEach((e) => {
+                    n.length > 0 &&
+                        n.forEach((e) => {
                             l.has(e.user.id) ||
-                                n.splice(
-                                    (0, a.sortedIndexBy)(n, e, (e) => {
+                                i.splice(
+                                    (0, s.sortedIndexBy)(i, e, (e) => {
                                         let { comparator: t } = e;
                                         return t;
                                     }),
@@ -60,67 +61,67 @@ function f(e, t) {
                                     e,
                                 );
                         }),
-                    n
+                    i
                 );
-            })(i, t, f),
-        [i, t, f],
+            })(n, t, _),
+        [n, t, _],
     );
 }
-function p(e, t) {
-    let i = (0, l.bG)([m.A, _.A], () => (e === _.A.getChannelId() ? m.A.getDesyncedParticipants() : null));
-    return n.useMemo(
+function f(e, t) {
+    let n = (0, l.bG)([h.A, A.A], () => (e === A.A.getChannelId() ? h.A.getDesyncedParticipants() : null));
+    return i.useMemo(
         () =>
             (function (e, t) {
                 if (null == e || 0 === e.length) return t;
-                let i = [...t];
+                let n = [...t];
                 return (
                     e.forEach((e) => {
-                        i.splice(
-                            (0, a.sortedIndexBy)(i, e, (e) => (0, r.KU)(e)),
+                        n.splice(
+                            (0, s.sortedIndexBy)(n, e, (e) => (0, r.KU)(e)),
                             0,
                             e,
                         );
                     }),
-                    i
+                    n
                 );
-            })(i, t),
-        [i, t],
+            })(n, t),
+        [n, t],
     );
 }
-function S(e, t) {
-    let i = (0, l.bG)([d.default], () => d.default.getId() === t),
-        a = (0, l.bG)([_.A], () => _.A.getChannelId()),
-        r = n.useRef(null),
-        [s, o] = n.useState(!1),
-        [c, u] = n.useState(!1),
-        m = (0, l.bG)(
-            [_.A, g.A],
+function x(e, t) {
+    let n = (0, l.bG)([c.default], () => c.default.getId() === t),
+        s = (0, l.bG)([A.A], () => A.A.getChannelId()),
+        r = i.useRef(null),
+        [a, o] = i.useState(!1),
+        [d, u] = i.useState(!1),
+        h = (0, l.bG)(
+            [A.A, g.A],
             () =>
                 null != t &&
                 null != e &&
-                _.A.getChannelId() === e &&
+                A.A.getChannelId() === e &&
                 null != g.A.isInChannel(e, t) &&
-                _.A.isUserConnected(t),
+                A.A.isUserConnected(t),
         ),
-        A = (0, l.bG)(
-            [_.A, g.A],
+        p = (0, l.bG)(
+            [A.A, g.A],
             () =>
                 null != t &&
                 null != e &&
-                _.A.getChannelId() === e &&
+                A.A.getChannelId() === e &&
                 null != g.A.isInChannel(e, t) &&
-                !_.A.isUserConnected(t),
+                !A.A.isUserConnected(t),
         );
     return (
-        n.useEffect(() => {
-            m && u(!0);
-        }, [m]),
-        n.useEffect(() => {
-            a !== e && u(!1);
-        }, [e, a]),
-        n.useEffect(
+        i.useEffect(() => {
+            h && u(!0);
+        }, [h]),
+        i.useEffect(() => {
+            s !== e && u(!1);
+        }, [e, s]),
+        i.useEffect(
             () => (
-                A && null == r.current
+                p && null == r.current
                     ? (r.current = setTimeout(() => {
                           (r.current = null), o(!0);
                       }, 250))
@@ -129,8 +130,8 @@ function S(e, t) {
                     clearTimeout(r.current), (r.current = null);
                 }
             ),
-            [A],
+            [p],
         ),
-        !i && c && s
+        !n && d && a
     );
 }

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     zr: "root_c8dbe9",
     _y: "sprite_c8dbe9",

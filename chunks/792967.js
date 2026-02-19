@@ -1,55 +1,56 @@
+"use strict";
 n.d(t, { A: () => u }), n(321073);
 var i = n(627968);
 n(64700);
-var l = n(735438),
-    s = n.n(l),
-    a = n(813516),
-    r = n(5658),
+var s = n(735438),
+    l = n.n(s),
+    r = n(813516),
+    a = n(5658),
     o = n(712209),
-    d = n(985018),
-    c = n(48355);
+    c = n(985018),
+    d = n(48355);
 function u(e, t, n) {
-    let { markChannelRead: l, markGuildRead: u, deleteChannel: h, toggle: A, getNumUnreadChannels: m } = t,
-        p = null;
-    return s().flatMap(e, (e) => {
-        let t = e.sortOrder !== p;
-        p = e.sortOrder;
-        let s = [];
+    let { markChannelRead: s, markGuildRead: u, deleteChannel: h, toggle: A, getNumUnreadChannels: p } = t,
+        g = null;
+    return l().flatMap(e, (e) => {
+        let t = e.sortOrder !== g;
+        g = e.sortOrder;
+        let l = [];
         return (
             t &&
                 (e.hasLoadedAnything && e.sortOrder === o.xB.ReallyOldChannel
-                    ? s.push(
+                    ? l.push(
                           (0, i.jsx)(
-                              a.A,
-                              { className: c.y, contentClassName: c.$, children: d.intl.string(d.t.roBMzj) },
+                              r.A,
+                              { className: d.y, contentClassName: d.$, children: c.intl.string(c.t.roBMzj) },
                               "old-divider",
                           ),
                       )
                     : e.hasLoadedAnything &&
                       e.sortOrder === o.xB.NoNotifications &&
-                      s.push(
+                      l.push(
                           (0, i.jsx)(
-                              a.A,
-                              { className: c.y, contentClassName: c.$, children: d.intl.string(d.t["2Ys7nu"]) },
+                              r.A,
+                              { className: d.y, contentClassName: d.$, children: c.intl.string(c.t["2Ys7nu"]) },
                               "disabled-divider",
                           ),
                       )),
-            s.push(
+            l.push(
                 (0, i.jsx)(
-                    r.A,
+                    a.A,
                     {
                         channel: e,
-                        markChannelRead: l,
+                        markChannelRead: s,
                         markGuildRead: u,
                         toggle: A,
                         deleteChannel: h,
                         onJump: n,
-                        getNumUnreadChannels: m,
+                        getNumUnreadChannels: p,
                     },
                     e.channelId,
                 ),
             ),
-            s
+            l
         );
     });
 }

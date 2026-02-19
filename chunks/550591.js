@@ -1,32 +1,33 @@
-n.d(t, { A: () => d });
+"use strict";
+n.d(t, { A: () => c });
 var i = n(627968),
-    l = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(435371),
+    s = n(64700),
+    l = n(503698),
+    r = n.n(l),
+    a = n(435371),
     o = n(354071);
-function d(e) {
+function c(e) {
     let {
             children: t,
             text: n,
-            disableWrapper: s = !1,
-            disabled: d = !1,
-            hideOnClick: c = !0,
+            disableWrapper: l = !1,
+            disabled: c = !1,
+            hideOnClick: d = !0,
             shouldShow: u,
             forceOpen: h,
             selected: A = !1,
         } = e,
-        g = l.useMemo(() => (null == n || d ? null : (0, i.jsx)("div", { className: o.SH, children: n })), [n, d]),
-        m = s ? t : (0, i.jsx)("div", { className: a()(o.pm, { [o.wH]: A }), children: t });
-    return (0, i.jsx)(r.m_, {
-        __unsupportedReactNodeAsText: g,
+        p = s.useMemo(() => (null == n || c ? null : (0, i.jsx)("div", { className: o.SH, children: n })), [n, c]),
+        g = l ? t : (0, i.jsx)("div", { className: r()(o.pm, { [o.wH]: A }), children: t });
+    return (0, i.jsx)(a.m_, {
+        __unsupportedReactNodeAsText: p,
         position: "right",
         spacing: 12,
-        hideOnClick: c,
+        hideOnClick: d,
         shouldShow: u,
         forceOpen: h,
         ariaHidden: !0,
-        asContainer: !s,
-        children: m,
+        asContainer: !l,
+        children: g,
     });
 }

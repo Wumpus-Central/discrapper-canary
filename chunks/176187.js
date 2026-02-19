@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__9fa5a",
     gn: "titleContainer__9fa5a",

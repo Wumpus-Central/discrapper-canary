@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     t7: "upsellPage_d204dc",
     Zj: "upsellContainer_d204dc",

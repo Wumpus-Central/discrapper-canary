@@ -1,15 +1,16 @@
+"use strict";
 n.d(t, { A: () => h });
 var i = n(627968),
-    l = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(835245),
+    s = n(64700),
+    l = n(503698),
+    r = n.n(l),
+    a = n(835245),
     o = n(397927),
-    d = n(315502),
-    c = n(545290);
+    c = n(315502),
+    d = n(545290);
 function u(e) {
-    let { width: t = 24, height: n = 24, isBadged: s = !1, isTyping: a = !1 } = e,
-        [d] = l.useState(() => (0, r.A)());
+    let { width: t = 24, height: n = 24, isBadged: l = !1, isTyping: r = !1 } = e,
+        [c] = s.useState(() => (0, a.A)());
     return (0, i.jsxs)("svg", {
         width: t,
         height: n,
@@ -17,36 +18,36 @@ function u(e) {
         children: [
             (0, i.jsx)("defs", {
                 children: (0, i.jsxs)("mask", {
-                    id: d,
+                    id: c,
                     children: [
                         (0, i.jsx)("rect", { fill: "white", width: "100%", height: "100%" }),
-                        a &&
+                        r &&
                             (0, i.jsx)("g", {
                                 fill: "black",
                                 transform: `translate(5.5, 10.5) scale(${11 / 24})`,
                                 children: (0, i.jsx)(o.UBN, { dotRadius: 3.5, spacing: 3, fill: "black" }),
                             }),
-                        s && (0, i.jsx)("circle", { cx: "20", cy: "19", r: "10", fill: "red" }),
+                        l && (0, i.jsx)("circle", { cx: "20", cy: "19", r: "10", fill: "red" }),
                     ],
                 }),
             }),
             (0, i.jsx)("g", {
-                mask: `url(#${d})`,
+                mask: `url(#${c})`,
                 children: (0, i.jsx)(o.oyn, { size: "custom", width: t, height: n, color: "currentColor" }),
             }),
         ],
     });
 }
 function h(e) {
-    let { className: t, unreadCount: n, mentionCount: l, isTyping: s, canBadge: r } = e,
-        o = null != l && l > 0,
-        h = (o ? l : n) ?? 0,
-        A = r && null != n && n > 0;
+    let { className: t, unreadCount: n, mentionCount: s, isTyping: l, canBadge: a } = e,
+        o = null != s && s > 0,
+        h = (o ? s : n) ?? 0,
+        A = a && null != n && n > 0;
     return (0, i.jsxs)("div", {
-        className: a()(c.Or, t),
+        className: r()(d.Or, t),
         children: [
-            (0, i.jsx)(u, { isBadged: A, isTyping: s }),
-            A && (0, i.jsx)(d.A, { hasMentions: o, truncatedCount: h > 99 ? "99+" : h, className: c.qS }),
+            (0, i.jsx)(u, { isBadged: A, isTyping: l }),
+            A && (0, i.jsx)(c.A, { hasMentions: o, truncatedCount: h > 99 ? "99+" : h, className: d.qS }),
         ],
     });
 }

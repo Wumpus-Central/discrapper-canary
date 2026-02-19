@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container_db811b",
     dK: "mask_db811b",

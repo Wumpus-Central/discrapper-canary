@@ -1,46 +1,47 @@
-n.d(t, { B3: () => o, Bo: () => d });
+"use strict";
+n.d(t, { B3: () => o, Bo: () => c });
 var i = n(924985),
-    l = n(576705),
-    s = n(32603),
-    a = n(281405),
-    r = n(652215);
+    s = n(576705),
+    l = n(32603),
+    r = n(281405),
+    a = n(652215);
 function o(e, t, n) {
     return {
         hasDivider:
             !(function (e, t) {
-                if (t === s.PU) {
+                if (t === l.PU) {
                     let t = e.getGuildActionSection().getRows();
                     return (
-                        (1 === t.length && t[0] === a.n.GUILD_PREMIUM_PROGRESS_BAR) ||
+                        (1 === t.length && t[0] === r.n.GUILD_PREMIUM_PROGRESS_BAR) ||
                         e.getGuildActionSection().isEmpty()
                     );
                 }
                 return 0 === e.getSections(!1)[t];
             })(e, n) &&
-            (n === s.PU ||
+            (n === l.PU ||
                 (!!t &&
-                    (n === s.HP ||
-                        (n !== s.bK && (n === e.recentsSectionNumber || (e.voiceChannelsSectionNumber, !1)))))),
+                    (n === l.HP ||
+                        (n !== l.bK && (n === e.recentsSectionNumber || (e.voiceChannelsSectionNumber, !1)))))),
         canHaveVoiceSummary:
-            n !== s.PU &&
-            n !== s.HP &&
-            n !== s.bK &&
+            n !== l.PU &&
+            n !== l.HP &&
+            n !== l.bK &&
             n !== e.recentsSectionNumber &&
             n !== e.voiceChannelsSectionNumber,
     };
 }
-function d(e) {
-    let { category: t, voiceStates: n, selectedChannelId: s, selectedVoiceChannelId: a } = e;
+function c(e) {
+    let { category: t, voiceStates: n, selectedChannelId: l, selectedVoiceChannelId: r } = e;
     return (
         (function (e) {
-            let { category: t, voiceStates: n, selectedChannelId: s, selectedVoiceChannelId: a } = e;
+            let { category: t, voiceStates: n, selectedChannelId: l, selectedVoiceChannelId: r } = e;
             return !0 !== i.A.isCollapsed(t.record.id)
                 ? []
                 : t.getChannelRecords().filter((e) => {
-                      if (!l.A.can(r.xBc.VIEW_CHANNEL, e)) return !1;
+                      if (!s.A.can(a.xBc.VIEW_CHANNEL, e)) return !1;
                       let t = n[e.id] ?? [];
-                      return e.id !== a && e.id !== s && t.length > 0;
+                      return e.id !== r && e.id !== l && t.length > 0;
                   });
-        })({ category: t, selectedChannelId: s, selectedVoiceChannelId: a, voiceStates: n }).length > 0
+        })({ category: t, selectedChannelId: l, selectedVoiceChannelId: r, voiceStates: n }).length > 0
     );
 }

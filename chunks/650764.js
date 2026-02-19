@@ -1,5 +1,6 @@
-n.d(t, { u: () => l });
+"use strict";
+n.d(t, { u: () => s });
 var i = n(85526);
-function l(e) {
+function s(e) {
     return i.fromByteArray(e);
 }

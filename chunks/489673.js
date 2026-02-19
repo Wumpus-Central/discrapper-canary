@@ -1,20 +1,21 @@
-n.d(t, { A: () => c });
+"use strict";
+n.d(t, { A: () => d });
 var i = n(627968);
 n(64700);
-var l = n(503698),
-    s = n.n(l),
-    a = n(985018),
-    r = n(220121),
+var s = n(503698),
+    l = n.n(s),
+    r = n(985018),
+    a = n(220121),
     o = n(346554),
-    d = n(856682);
-function c(e) {
+    c = n(856682);
+function d(e) {
     let { className: t, children: n } = e;
     return (0, i.jsxs)("div", {
-        className: s()(r.kL, t),
+        className: l()(a.kL, t),
         children: [
-            (0, i.jsx)("img", { alt: a.intl.string(a.t.VoB8Oc), src: d, className: s()(r.ot, r.Q_) }),
+            (0, i.jsx)("img", { alt: r.intl.string(r.t.VoB8Oc), src: c, className: l()(a.ot, a.Q_) }),
             n,
-            (0, i.jsx)("img", { alt: a.intl.string(a.t.VoB8Oc), src: o, className: s()(r.ot, r.st) }),
+            (0, i.jsx)("img", { alt: r.intl.string(r.t.VoB8Oc), src: o, className: l()(a.ot, a.st) }),
         ],
     });
 }

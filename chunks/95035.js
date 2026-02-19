@@ -1,29 +1,30 @@
+"use strict";
 n.d(t, { A: () => o });
 var i = n(627968),
-    l = n(64700),
-    s = n(397927),
-    a = n(976860),
-    r = n(652215);
-let o = l.forwardRef(function (e, t) {
-    let { href: n, children: o, onClick: d, onKeyPress: c, focusProps: u, ...h } = e,
-        A = l.useCallback(
+    s = n(64700),
+    l = n(397927),
+    r = n(976860),
+    a = n(652215);
+let o = s.forwardRef(function (e, t) {
+    let { href: n, children: o, onClick: c, onKeyPress: d, focusProps: u, ...h } = e,
+        A = s.useCallback(
             (e) => {
                 e.repeat ||
-                    ((e.charCode === r.Ks6.SPACE || e.charCode === r.Ks6.ENTER) &&
-                        (e.preventDefault(), null != n && (0, a.pX)(n), d?.()),
-                    c?.(e));
+                    ((e.charCode === a.Ks6.SPACE || e.charCode === a.Ks6.ENTER) &&
+                        (e.preventDefault(), null != n && (0, r.pX)(n), c?.()),
+                    d?.(e));
             },
-            [n, c, d],
+            [n, d, c],
         ),
-        g = l.useCallback(
+        p = s.useCallback(
             (e) => {
                 e.metaKey ||
                     e.shiftKey ||
                     0 !== e.button ||
-                    (e.preventDefault(), e.stopPropagation(), null != n && (0, a.pX)(n), d?.());
+                    (e.preventDefault(), e.stopPropagation(), null != n && (0, r.pX)(n), c?.());
             },
-            [n, d],
+            [n, c],
         ),
-        m = (0, i.jsx)("a", { ref: t, href: n, onClick: g, onKeyPress: A, ...h, children: o });
-    return (0, i.jsx)(s.vN3, { ...u, children: m });
+        g = (0, i.jsx)("a", { ref: t, href: n, onClick: p, onKeyPress: A, ...h, children: o });
+    return (0, i.jsx)(l.vN3, { ...u, children: g });
 });

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__01290",
     vB: "participantItem__01290",

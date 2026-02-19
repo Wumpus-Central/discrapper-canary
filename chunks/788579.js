@@ -1,50 +1,51 @@
-n.d(t, { A: () => f });
+"use strict";
+n.d(t, { A: () => x });
 var i = n(627968),
-    l = n(64700),
-    s = n(735438),
-    a = n.n(s),
-    r = n(311907),
+    s = n(64700),
+    l = n(735438),
+    r = n.n(l),
+    a = n(311907),
     o = n(397927),
-    d = n(262763),
-    c = n(753727),
+    c = n(262763),
+    d = n(753727),
     u = n(721592),
     h = n(406704),
     A = n(576705),
-    g = n(977997),
-    m = n(203982),
-    p = n(58736),
+    p = n(977997),
+    g = n(203982),
+    m = n(58736),
     _ = n(652215),
-    x = n(985018);
-let f = l.memo(function (e) {
+    f = n(985018);
+let x = s.memo(function (e) {
     let { channel: t } = e,
-        n = (0, c.A)(),
-        s = (0, r.bG)([g.A], () => g.A.isInChannel(t.id)),
-        f = (0, r.bG)([g.A], () => !a().isEmpty(g.A.getVoiceStatesForChannel(t.id))),
-        E = (0, r.bG)([A.A], () => A.A.can(_.xBc.CONNECT, t)),
-        { needSubscriptionToAccess: C } = (0, u.A)(t.id),
+        n = (0, d.A)(),
+        l = (0, a.bG)([p.A], () => p.A.isInChannel(t.id)),
+        x = (0, a.bG)([p.A], () => !r().isEmpty(p.A.getVoiceStatesForChannel(t.id))),
+        C = (0, a.bG)([A.A], () => A.A.can(_.xBc.CONNECT, t)),
+        { needSubscriptionToAccess: E } = (0, u.A)(t.id),
         I = (0, h.Id)(t),
-        S = l.useCallback(() => {
-            d.A.handleVoiceConnect({ channel: t, connected: s, needSubscriptionToAccess: C, locked: !1 });
-        }, [t, s, C]);
-    return (l.useEffect(
+        b = s.useCallback(() => {
+            c.A.handleVoiceConnect({ channel: t, connected: l, needSubscriptionToAccess: E, locked: !1 });
+        }, [t, l, E]);
+    return (s.useEffect(
         () => (
-            m._.subscribe(_.jej.CALL_START, S),
+            g._.subscribe(_.jej.CALL_START, b),
             () => {
-                m._.unsubscribe(_.jej.CALL_START, S);
+                g._.unsubscribe(_.jej.CALL_START, b);
             }
         ),
-        [S],
+        [b],
     ),
     h.io.useExperiment({ guildId: t.guild_id, location: "63250c_1" }, { autoTrackExposure: !1 }).enabled &&
         !n &&
-        !s &&
-        E &&
+        !l &&
+        C &&
         I &&
         t.isVocalThread())
-        ? (0, i.jsx)(p.Ay.Icon, {
+        ? (0, i.jsx)(m.Ay.Icon, {
               icon: o._jp,
-              onClick: S,
-              tooltip: f ? x.intl.string(x.t.fdEeb5) : x.intl.string(x.t.focH1t),
+              onClick: b,
+              tooltip: x ? f.intl.string(f.t.fdEeb5) : f.intl.string(f.t.focH1t),
           })
         : null;
 });

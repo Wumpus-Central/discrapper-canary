@@ -1,47 +1,48 @@
-n.d(t, { L7: () => p, qA: () => x });
+"use strict";
+n.d(t, { L7: () => m, qA: () => f });
 var i = n(627968),
-    l = n(311907),
-    s = n(397927),
-    a = n(253932),
-    r = n(780964),
+    s = n(311907),
+    l = n(397927),
+    r = n(253932),
+    a = n(780964),
     o = n(840065),
-    d = n(711014),
-    c = n(115063),
+    c = n(711014),
+    d = n(115063),
     u = n(704037),
     h = n(652215),
     A = n(536482),
-    g = n(985018),
-    m = n(259533);
-let p = () => {
-    (0, o.openUserSettings)(r.X.ACTIVITY_PRIVACY_PANEL, { section: h.nc_.ACTIVITY_PRIVACY });
+    p = n(985018),
+    g = n(259533);
+let m = () => {
+    (0, o.openUserSettings)(a.X.ACTIVITY_PRIVACY_PANEL, { section: h.nc_.ACTIVITY_PRIVACY });
 };
 function _(e) {
     let { children: t, onClick: n } = e;
-    return (0, i.jsxs)(s.DUT, {
-        className: m.E1,
+    return (0, i.jsxs)(l.DUT, {
+        className: g.E1,
         onClick: n,
         children: [
-            (0, i.jsx)("div", { className: m.j3, children: t }),
-            (0, i.jsx)(s._BQ, { color: s.LU0.colors.TEXT_SUBTLE, size: "xs" }),
+            (0, i.jsx)("div", { className: g.j3, children: t }),
+            (0, i.jsx)(l._BQ, { color: l.LU0.colors.TEXT_SUBTLE, size: "xs" }),
         ],
     });
 }
-function x(e) {
+function f(e) {
     let { onClosePopout: t } = e,
-        n = a.tz.useSetting(),
-        r = (0, l.bG)([d.Ay], () => d.Ay.getFlattenedGuildIds()),
-        o = (0, c.Kk)(),
-        h = r.filter((e) => !o.has(e));
-    return 0 === r.length
+        n = r.tz.useSetting(),
+        a = (0, s.bG)([c.Ay], () => c.Ay.getFlattenedGuildIds()),
+        o = (0, d.Kk)(),
+        h = a.filter((e) => !o.has(e));
+    return 0 === a.length
         ? null
         : (0, i.jsxs)(_, {
               onClick: () => {
-                  t(), p();
+                  t(), m();
               },
               children: [
-                  (0, i.jsx)(s.Text, {
+                  (0, i.jsx)(l.Text, {
                       variant: "text-sm/semibold",
-                      children: g.intl.string(n ? A.default["3GrhnF"] : A.default["54ycKJ"]),
+                      children: p.intl.string(n ? A.default["3GrhnF"] : A.default["54ycKJ"]),
                   }),
                   (0, i.jsx)(u.l, { guildIds: h }),
               ],

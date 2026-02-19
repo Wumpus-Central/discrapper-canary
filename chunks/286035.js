@@ -1,4 +1,5 @@
-n.d(t, { Zp: () => i, k: () => l, l0: () => s });
+"use strict";
+n.d(t, { Zp: () => i, k: () => s, l0: () => l });
 let i = "#83DDC5",
-    l = "#F47FFF",
-    s = "#FFDE4D";
+    s = "#F47FFF",
+    l = "#FFDE4D";

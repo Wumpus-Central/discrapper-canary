@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     N1: "headerContainer__0b34e",
     fN: "eventPrompt__0b34e",

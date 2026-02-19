@@ -1,12 +1,13 @@
-n.d(t, { A: () => a });
+"use strict";
+n.d(t, { A: () => r });
 var i = n(627968),
-    l = n(64700),
-    s = n(397927);
-function a(e, t) {
-    return l.useCallback(() => {
-        (0, s.mMO)(async () => {
-            let { default: l } = await n.e("74488").then(n.bind(n, 285899));
-            return (n) => (0, i.jsx)(l, { guildId: e, powerup: t, ...n });
+    s = n(64700),
+    l = n(397927);
+function r(e, t) {
+    return s.useCallback(() => {
+        (0, l.mMO)(async () => {
+            let { default: s } = await n.e("74488").then(n.bind(n, 285899));
+            return (n) => (0, i.jsx)(s, { guildId: e, powerup: t, ...n });
         });
     }, [e, t]);
 }

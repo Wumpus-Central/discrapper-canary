@@ -1,18 +1,19 @@
+"use strict";
 n.d(t, { C: () => I });
 var i,
-    l = n(627968),
-    s = n(64700),
-    a = n(503698),
-    r = n.n(a),
-    o = n(522160),
-    d = n(696292),
-    c = n(397927),
+    s = n(627968),
+    l = n(64700),
+    r = n(503698),
+    a = n.n(r),
+    o = n(475539),
+    c = n(696292),
+    d = n(397927),
     u = n(753845),
     h = n(849269),
     A = n(881343),
     p = n(697675),
-    m = n(869003),
-    g = n(652215),
+    g = n(869003),
+    m = n(652215),
     _ = n(985018),
     f = n(279240);
 let x = ["embedded_cover"],
@@ -22,7 +23,7 @@ var E =
     (i[(i.SIXTEEN_BY_NINE = 1)] = "SIXTEEN_BY_NINE"),
     i);
 function I(e) {
-    let { context: t, activityItem: n, onClick: i, aspectRatio: a = 0, animatedDivClass: E, commandOrigin: I } = e,
+    let { context: t, activityItem: n, onClick: i, aspectRatio: r = 0, animatedDivClass: E, commandOrigin: I } = e,
         {
             onActivityItemSelected: b,
             imageBackground: N,
@@ -34,33 +35,33 @@ function I(e) {
             guildId: t.channel.getGuildId() ?? void 0,
             locationObject: {},
             onActivityItemSelected: i,
-            embeddedActivitiesManager: m.A,
+            embeddedActivitiesManager: g.A,
             assetNames: x,
             commandOrigin: I,
         }),
-        [v, y] = s.useState(!1),
-        j = s.useCallback(() => {
+        [v, y] = l.useState(!1),
+        j = l.useCallback(() => {
             y(!0);
         }, [y]),
-        R = s.useCallback(() => {
+        R = l.useCallback(() => {
             y(!1);
         }, [y]),
-        O = s.useMemo(
+        O = l.useMemo(
             () =>
-                (0, l.jsx)("div", {
+                (0, s.jsx)("div", {
                     className: f.Gz,
-                    children: (0, l.jsx)("div", { className: f.fC, children: (0, l.jsx)(p.A, { labelType: T }) }),
+                    children: (0, s.jsx)("div", { className: f.fC, children: (0, s.jsx)(p.A, { labelType: T }) }),
                 }),
             [T],
         ),
-        L = s.useMemo(() => {
+        L = l.useMemo(() => {
             switch (S) {
                 case h.o6.JOIN:
-                    return (0, l.jsx)("div", {
+                    return (0, s.jsx)("div", {
                         className: f.m9,
-                        children: (0, l.jsx)("div", {
+                        children: (0, s.jsx)("div", {
                             className: f.aF,
-                            children: (0, l.jsx)(c.Text, {
+                            children: (0, s.jsx)(d.Text, {
                                 variant: "text-sm/medium",
                                 color: "always-white",
                                 children: _.intl.string(_.t.VJlc0S),
@@ -68,11 +69,11 @@ function I(e) {
                         }),
                     });
                 case h.o6.LEAVE:
-                    return (0, l.jsx)("div", {
+                    return (0, s.jsx)("div", {
                         className: f.m9,
-                        children: (0, l.jsx)("div", {
-                            className: r()(f.aF, f.pS),
-                            children: (0, l.jsx)(c.Text, {
+                        children: (0, s.jsx)("div", {
+                            className: a()(f.aF, f.pS),
+                            children: (0, s.jsx)(d.Text, {
                                 variant: "text-sm/medium",
                                 color: "always-white",
                                 children: _.intl.string(_.t["wH/wDO"]),
@@ -84,32 +85,32 @@ function I(e) {
                     return null;
             }
         }, [S]);
-    return (0, l.jsx)(c.DUT, {
+    return (0, s.jsx)(d.DUT, {
         onClick: b,
         onFocus: j,
         onBlur: R,
         onMouseEnter: j,
         onMouseLeave: R,
         className: f.XA,
-        children: (0, l.jsx)(c.c7X, {
+        children: (0, s.jsx)(d.c7X, {
             config: C,
             from: { value: 0 },
             to: { value: +!!v },
             children: (e) => {
                 let { value: t } = e;
-                return (0, l.jsx)(c.NPJ, {
-                    theme: g.NJ8.DARK,
+                return (0, s.jsx)(d.NPJ, {
+                    theme: m.NJ8.DARK,
                     children: (e) =>
-                        (0, l.jsx)(u.A, {
+                        (0, s.jsx)(u.A, {
                             applicationId: n.application.id,
-                            questContent: d.u.ACTIVITY_SUGGESTION,
+                            questContent: c.u.ACTIVITY_SUGGESTION,
                             children: (i) =>
-                                (0, l.jsxs)(o.animated.div, {
+                                (0, s.jsxs)(o.animated.div, {
                                     ref: i,
-                                    className: r()(e, f.LM, E, { [f.$g]: 0 === a, [f.J3]: 1 === a }),
+                                    className: a()(e, f.LM, E, { [f.$g]: 0 === r, [f.J3]: 1 === r }),
                                     style: { transform: t.to([0, 1], [1, 1.05]).to((e) => `scale(${e})`) },
                                     children: [
-                                        (0, l.jsx)(A.A, {
+                                        (0, s.jsx)(A.A, {
                                             imageBackground: N,
                                             applicationName: n.application.name,
                                             imageClassName: f.jj,

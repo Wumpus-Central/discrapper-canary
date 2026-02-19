@@ -1,9 +1,10 @@
-n.d(t, { N: () => s });
+"use strict";
+n.d(t, { N: () => l });
 var i = n(353640),
-    l = n(121894);
-let s = (0, i.v)((e) => ({
+    s = n(121894);
+let l = (0, i.v)((e) => ({
     canCloseModal: !0,
     onUpdateCanCloseModal(t) {
-        (0, l.r)(() => e({ canCloseModal: t }));
+        (0, s.r)(() => e({ canCloseModal: t }));
     },
 }));

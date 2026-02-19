@@ -1,15 +1,16 @@
+"use strict";
 n.d(t, { A: () => A });
 var i = n(627968),
-    l = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(317097),
+    s = n(64700),
+    l = n(503698),
+    r = n.n(l),
+    a = n(317097),
     o = n(397927),
-    d = n(573435),
-    c = n(143245);
+    c = n(573435),
+    d = n(143245);
 let u = [1752220, 3066993, 3447003, 0x9b59b6, 0xe91e63, 0xf1c40f];
 function h(e) {
-    return (0, r.Hl)(
+    return (0, a.Hl)(
         u[
             (function (e) {
                 let t = 5381,
@@ -21,29 +22,29 @@ function h(e) {
     );
 }
 function A(e) {
-    let { title: t, className: n, icon: s } = e,
-        [r, u] = l.useState(h(t));
+    let { title: t, className: n, icon: l } = e,
+        [a, u] = s.useState(h(t));
     return (
-        l.useEffect(() => {
+        s.useEffect(() => {
             u(h(t));
         }, [t]),
         (0, i.jsxs)("div", {
-            className: a()(c.iE, n),
+            className: r()(d.iE, n),
             children: [
-                (0, i.jsx)(d.Ay, {
-                    mask: d.Ay.Masks.STATUS_SCREENSHARE,
+                (0, i.jsx)(c.Ay, {
+                    mask: c.Ay.Masks.STATUS_SCREENSHARE,
                     width: 32,
                     height: 32,
                     children:
-                        null == s || 0 === s.length
+                        null == l || 0 === l.length
                             ? (0, i.jsx)("div", {
-                                  className: c.Kk,
-                                  style: { backgroundColor: r },
+                                  className: d.Kk,
+                                  style: { backgroundColor: a },
                                   children: t[0] ?? "?",
                               })
-                            : (0, i.jsx)("img", { alt: "", src: s, className: c.Kk }),
+                            : (0, i.jsx)("img", { alt: "", src: l, className: d.Kk }),
                 }),
-                (0, i.jsx)(o.npA, { size: "md", color: "currentColor", className: c.qS }),
+                (0, i.jsx)(o.npA, { size: "md", color: "currentColor", className: d.qS }),
             ],
         })
     );

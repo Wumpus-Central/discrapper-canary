@@ -1,36 +1,37 @@
-n.d(t, { A: () => c });
+"use strict";
+n.d(t, { A: () => d });
 var i = n(627968);
 n(64700);
-var l = n(397927),
-    s = n(660273),
-    a = n(57907),
-    r = n(867455),
+var s = n(397927),
+    l = n(660273),
+    r = n(57907),
+    a = n(867455),
     o = n(607508),
-    d = n(37411);
-function c(e) {
-    let { channel: t, closePopout: n, onSelect: c, navId: u, label: h } = e,
-        A = (0, s.A)(t, "Notifications Bell"),
-        g = (0, a.A)(t),
-        m = (0, o.X)(t);
-    return (0, i.jsxs)(l.W1t, {
+    c = n(37411);
+function d(e) {
+    let { channel: t, closePopout: n, onSelect: d, navId: u, label: h } = e,
+        A = (0, l.A)(t, "Notifications Bell"),
+        p = (0, r.A)(t),
+        g = (0, o.X)(t);
+    return (0, i.jsxs)(s.W1t, {
         "data-menu-migrated-auto": !0,
         navId: u,
         onClose: n,
         "aria-label": h,
-        onSelect: c,
+        onSelect: d,
         children: [
-            (0, i.jsxs)(l.rXV, { children: [t.isForumPost() ? A : null, g] }),
-            (0, i.jsx)(l.rXV, {
-                children: (0, d.EU)().map((e) => {
-                    let { setting: n, label: s } = e;
+            (0, i.jsxs)(s.rXV, { children: [t.isForumPost() ? A : null, p] }),
+            (0, i.jsx)(s.rXV, {
+                children: (0, c.EU)().map((e) => {
+                    let { setting: n, label: l } = e;
                     return (0, i.jsx)(
-                        l.iDA,
+                        s.iDA,
                         {
                             group: "thread-notifications",
                             id: `${n}`,
-                            label: s,
-                            action: () => r.A.setNotificationSettings(t, { flags: n }),
-                            checked: n === m,
+                            label: l,
+                            action: () => a.A.setNotificationSettings(t, { flags: n }),
+                            checked: n === g,
                         },
                         n,
                     );

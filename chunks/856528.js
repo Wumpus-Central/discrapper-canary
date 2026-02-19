@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Nr: "card__0c0bf",
     Eo: "addEntryCard__0c0bf card__0c0bf",

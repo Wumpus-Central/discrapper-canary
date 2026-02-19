@@ -1,18 +1,19 @@
+"use strict";
 n.d(t, { A: () => j });
 var i = n(627968),
-    l = n(64700),
-    s = n(735438),
-    a = n(835245),
-    r = n(158954),
+    s = n(64700),
+    l = n(735438),
+    r = n(835245),
+    a = n(158954),
     o = n(311907),
-    d = n(587895),
-    c = n(568598),
+    c = n(587895),
+    d = n(568598),
     u = n(313961),
     h = n(246356),
     A = n(178213),
     p = n(594832),
-    m = n(290863),
-    g = n(954571),
+    g = n(290863),
+    m = n(954571),
     _ = n(403362),
     f = n(79871),
     x = n(592356),
@@ -24,25 +25,25 @@ var i = n(627968),
     S = n(806931),
     T = n(985018),
     v = n(877409);
-let y = `vc-gifting-${(0, a.A)()}`;
+let y = `vc-gifting-${(0, r.A)()}`;
 function j(e) {
-    let { isHovered: t, closePopout: n, onMouseEnter: a, onMouseLeave: j, channel: R } = e;
-    l.useEffect(() => {
+    let { isHovered: t, closePopout: n, onMouseEnter: r, onMouseLeave: j, channel: R } = e;
+    s.useEffect(() => {
         t || n();
     }, [n, t]);
     let O = (0, A.G)("social_layer_storefront_gifting_mini_shelf"),
-        L = (0, o.bG)([d.A], () => d.A.getApplication(b.XR)),
+        L = (0, o.bG)([c.A], () => c.A.getApplication(b.XR)),
         [M] = (0, o.bG)(
             [u.A],
             () => (null != R.id ? [u.A.getParticipants(R.id), u.A.getParticipantsVersion(R.id)] : [[], 0]),
             [R.id],
-            c.hS,
+            d.hS,
         ),
-        D = (0, o.yK)([m.A], () => {
+        D = (0, o.yK)([g.A], () => {
             let e = new Set();
             for (let t of M)
                 if ((0, S.Xw)(t) || (0, S.Ay)(t)) {
-                    for (let n of m.A.getActivities(t.user.id))
+                    for (let n of g.A.getActivities(t.user.id))
                         if (
                             n.application_id === L?.id ||
                             L?.linkedGames?.some((e) => e.id === n.application_id) === !0
@@ -53,9 +54,9 @@ function j(e) {
                 }
             return Array.from(e).sort();
         }, [M, L]),
-        G = l.useMemo(() => {
+        G = s.useMemo(() => {
             let e = M.map((e) => ((0, S.Xw)(e) || (0, S.Ay)(e) ? e.user.id : null)).filter(_.Vq);
-            return (0, s.uniq)([...D, ...e]);
+            return (0, l.uniq)([...D, ...e]);
         }, [M, D]),
         {
             state: U,
@@ -68,7 +69,7 @@ function j(e) {
             location: "Social Layer Gifting Mini Shelf",
             includeWishlists: !0,
         }),
-        k = l.useMemo(() => {
+        k = s.useMemo(() => {
             let e = new Set(G);
             return P.map((t) => {
                 let n =
@@ -106,21 +107,21 @@ function j(e) {
             });
         }, [R.guild_id, R.id, P, w, G, O]);
     return (
-        l.useEffect(() => {
+        s.useEffect(() => {
             0 !== P.length &&
-                g.default.track(N.HAw.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED, {
+                m.default.track(N.HAw.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED, {
                     guild_id: R.guild_id,
                     channel_id: R.id,
                     sku_ids: P.map((e) => e.skuId),
                 });
         }, [R.id, R.guild_id, P]),
         (0, i.jsx)(h.A, {
-            children: (0, i.jsx)(r.lGe, {
+            children: (0, i.jsx)(a.lGe, {
                 "aria-labelledby": y,
                 modal: !1,
                 children: (0, i.jsxs)("div", {
                     className: v.kL,
-                    onMouseEnter: a,
+                    onMouseEnter: r,
                     onMouseLeave: j,
                     children: [
                         (0, i.jsxs)("div", {
@@ -128,13 +129,13 @@ function j(e) {
                             children: [
                                 (0, i.jsxs)("div", {
                                     children: [
-                                        (0, i.jsx)(r.DZT, {
+                                        (0, i.jsx)(a.DZT, {
                                             className: v.DD,
                                             variant: "text-lg/bold",
                                             color: "text-strong",
                                             children: T.intl.string(T.t.xLP3bi),
                                         }),
-                                        (0, i.jsx)(r.EYj, {
+                                        (0, i.jsx)(a.EYj, {
                                             variant: "text-sm/medium",
                                             color: "text-subtle",
                                             children: T.intl.format(T.t["+SqhBF"], {
@@ -150,7 +151,7 @@ function j(e) {
                         }),
                         (0, i.jsx)("div", {
                             className: v.Xb,
-                            children: "loading" === U || 0 === P.length ? (0, i.jsx)(r.y$y, { className: v.Lq }) : k,
+                            children: "loading" === U || 0 === P.length ? (0, i.jsx)(a.y$y, { className: v.Lq }) : k,
                         }),
                     ],
                 }),

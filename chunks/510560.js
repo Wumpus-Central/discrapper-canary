@@ -1,19 +1,20 @@
+"use strict";
 n.d(t, { A: () => u });
 var i = n(627968),
-    l = n(64700),
-    s = n(435371),
-    a = n(397927),
-    r = n(461678),
+    s = n(64700),
+    l = n(435371),
+    r = n(397927),
+    a = n(461678),
     o = n(914703),
-    d = n(652215),
-    c = n(985018);
+    c = n(652215),
+    d = n(985018);
 function u(e) {
     let { channel: t } = e,
-        n = l.useRef(null);
-    return (0, i.jsx)(a.YNO, {
+        n = s.useRef(null);
+    return (0, i.jsx)(r.YNO, {
         targetElementRef: n,
         align: "right",
-        animation: a.YNO.Animation.NONE,
+        animation: r.YNO.Animation.NONE,
         position: "bottom",
         renderPopout: (e) =>
             t.isThread()
@@ -21,24 +22,24 @@ function u(e) {
                       ...e,
                       channel: t,
                       navId: "recents-thread-notifications",
-                      label: c.intl.string(c.t.ljs3Oe),
+                      label: d.intl.string(d.t.ljs3Oe),
                   })
-                : (0, i.jsx)(r.A, {
+                : (0, i.jsx)(a.A, {
                       ...e,
                       channel: t,
                       navId: "recents-notifications",
-                      label: c.intl.string(c.t.ljs3Oe),
-                      location: { section: d.JJy.INBOX },
+                      label: d.intl.string(d.t.ljs3Oe),
+                      location: { section: c.JJy.INBOX },
                       includeGuildMute: !0,
                   }),
         children: (e) => {
             let { onClick: t } = e;
-            return (0, i.jsx)(s.m_, {
-                text: c.intl.string(c.t.h850Ss),
+            return (0, i.jsx)(l.m_, {
+                text: d.intl.string(d.t.h850Ss),
                 targetElementRef: n,
-                children: (0, i.jsx)(a.K0, {
-                    "aria-label": c.intl.string(c.t.h850Ss),
-                    icon: a.XFE,
+                children: (0, i.jsx)(r.K0, {
+                    "aria-label": d.intl.string(d.t.h850Ss),
+                    icon: r.XFE,
                     variant: "secondary",
                     size: "sm",
                     onClick: t,

@@ -1,18 +1,19 @@
+"use strict";
 n.d(t, { Z: () => b });
 var i = n(627968),
-    l = n(64700),
-    s = n(311907),
-    a = n(3026),
-    r = n(435371),
+    s = n(64700),
+    l = n(311907),
+    r = n(3026),
+    a = n(435371),
     o = n(397927),
-    d = n(956793),
-    c = n(576705),
+    c = n(956793),
+    d = n(576705),
     u = n(309010),
     h = n(954571),
     A = n(69555),
-    m = n(886019),
-    p = n(846218),
-    g = n(806246),
+    p = n(886019),
+    g = n(846218),
+    m = n(806246),
     _ = n(358957),
     f = n(559405),
     x = n(708455),
@@ -31,25 +32,25 @@ function b(e) {
             iconClassName: y,
             textClassName: j,
         } = e,
-        R = (0, s.bG)([u.A], () => u.A.getVoiceChannelId() === n.id, [n]),
-        O = (0, s.bG)([c.A], () => c.A.can(C.xBc.CONNECT, n), [n]),
-        L = null == t.emoji || (0, p.n)(t.emoji, n);
-    l.useEffect(() => {
-        h.default.track(C.HAw.VIEW_HANG_STATUS, { source: S, other_user_id: b, ...(0, g.A)(n.id) });
+        R = (0, l.bG)([u.A], () => u.A.getVoiceChannelId() === n.id, [n]),
+        O = (0, l.bG)([d.A], () => d.A.can(C.xBc.CONNECT, n), [n]),
+        L = null == t.emoji || (0, g.n)(t.emoji, n);
+    s.useEffect(() => {
+        h.default.track(C.HAw.VIEW_HANG_STATUS, { source: S, other_user_id: b, ...(0, m.A)(n.id) });
     }, [S, n.id, b]);
-    let M = l.useCallback(() => {
+    let M = s.useCallback(() => {
             !R &&
                 O &&
-                (d.default.selectVoiceChannel(n.id),
+                (c.default.selectVoiceChannel(n.id),
                 T?.(),
                 h.default.track(C.HAw.HANG_STATUS_CTA_CLICKED, {
                     source: S,
-                    ...(0, g.A)(n.id),
+                    ...(0, m.A)(n.id),
                     other_user_id: b,
                     cta_type: "join",
                 }));
         }, [R, O, n.id, b, S, T]),
-        D = l.useCallback(() => {
+        D = s.useCallback(() => {
             if (!R || !L || null == t.state) return;
             let [e] = (0, _.e)(b, t.state);
             if (null != e) {
@@ -60,13 +61,13 @@ function b(e) {
                 T?.(),
                     h.default.track(C.HAw.HANG_STATUS_CTA_CLICKED, {
                         source: S,
-                        ...(0, g.A)(n.id),
+                        ...(0, m.A)(n.id),
                         other_user_id: b,
                         cta_type: "swipe",
                     });
             }
         }, [R, L, t, n.id, b, S, T]),
-        G = (0, m.Au)(b, t);
+        G = (0, p.Au)(b, t);
     return (0, i.jsxs)("div", {
         className: v ?? I.kL,
         children: [
@@ -74,10 +75,10 @@ function b(e) {
             (0, i.jsx)(o.Text, {
                 variant: "text-md/medium",
                 className: j ?? I.qS,
-                children: (0, i.jsx)(a.A, { delay: 0, children: G }),
+                children: (0, i.jsx)(r.A, { delay: 0, children: G }),
             }),
             R && !N
-                ? (0, i.jsx)(r.m_, {
+                ? (0, i.jsx)(a.m_, {
                       text: L ? void 0 : E.intl.string(E.t["0LMpW+"]),
                       children: (0, i.jsx)("div", {
                           children: (0, i.jsx)(o.Button, {

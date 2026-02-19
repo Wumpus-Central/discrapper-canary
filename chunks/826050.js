@@ -1,26 +1,27 @@
-n.d(t, { A: () => p });
+"use strict";
+n.d(t, { A: () => m });
 var i = n(627968),
-    l = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(615300),
+    s = n(64700),
+    l = n(503698),
+    r = n.n(l),
+    a = n(615300),
     o = n(451988),
-    d = n(397927),
-    c = n(203982),
+    c = n(397927),
+    d = n(203982),
     u = n(652215),
     h = n(985018),
     A = n(792728);
-let g = { friction: 15, tension: 100 };
-class m extends l.PureComponent {
-    state = { shown: !1, translateY: new r.A.Value(0) };
-    static contextType = d.CZY;
-    rootRef = l.createRef();
+let p = { friction: 15, tension: 100 };
+class g extends s.PureComponent {
+    state = { shown: !1, translateY: new a.A.Value(0) };
+    static contextType = c.CZY;
+    rootRef = s.createRef();
     focusTimeout = new o.Ep();
     componentDidMount() {
-        this.setState({ shown: !0 }), c._.subscribe(u.jej.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        this.setState({ shown: !0 }), d._.subscribe(u.jej.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
     componentWillUnmount() {
-        this.focusTimeout.stop(), c._.unsubscribe(u.jej.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        this.focusTimeout.stop(), d._.unsubscribe(u.jej.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
     componentDidUpdate() {
         let { hasQuery: e } = this.props;
@@ -39,23 +40,23 @@ class m extends l.PureComponent {
     };
     springTo(e) {
         let { reducedMotion: t } = this.context;
-        !0 !== t.enabled && r.A.spring(this.state.translateY, { toValue: Math.min(e, 250), ...g }).start();
+        !0 !== t.enabled && a.A.spring(this.state.translateY, { toValue: Math.min(e, 250), ...p }).start();
     }
     renderArrowGroup(e) {
         return (0, i.jsxs)("div", {
-            className: a()(A.XN, e),
+            className: r()(A.XN, e),
             children: [
-                (0, i.jsx)(r.A.div, {
-                    className: a()(A.Hf, A.xM),
+                (0, i.jsx)(a.A.div, {
+                    className: r()(A.Hf, A.xM),
                     style: this.getStyle(),
                     children: (0, i.jsx)("img", { alt: "", src: n(824829), className: A.D6 }),
                 }),
                 (0, i.jsx)("div", {
-                    className: a()(A.Hf, A.JM),
+                    className: r()(A.Hf, A.JM),
                     children: (0, i.jsx)("img", { alt: "", src: n(162206), className: A.D6 }),
                 }),
                 (0, i.jsx)("div", {
-                    className: a()(A.Hf, A.QJ),
+                    className: r()(A.Hf, A.QJ),
                     children: (0, i.jsx)("img", { alt: "", src: n(298607), className: A.D6 }),
                 }),
             ],
@@ -75,7 +76,7 @@ class m extends l.PureComponent {
             { shown: t } = this.state;
         return (0, i.jsxs)("div", {
             ref: this.rootRef,
-            className: a()(A.d$, { [A.SP]: t, [A.tG]: e }),
+            className: r()(A.d$, { [A.SP]: t, [A.tG]: e }),
             children: [this.renderContent(), this.renderArrowGroup(A.__invalid_left), this.renderArrowGroup(A.pG)],
         });
     }
@@ -97,4 +98,4 @@ class m extends l.PureComponent {
               };
     }
 }
-let p = m;
+let m = g;

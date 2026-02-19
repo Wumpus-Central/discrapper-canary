@@ -1,12 +1,13 @@
+"use strict";
 n.d(t, { A: () => u });
 var i = n(627968),
-    l = n(64700),
-    s = n(397927),
-    a = n(688810),
-    r = n(980923),
+    s = n(64700),
+    l = n(397927),
+    r = n(688810),
+    a = n(980923),
     o = n(384059),
-    d = n(277342),
-    c = n(709562);
+    c = n(277342),
+    d = n(709562);
 function u(e) {
     let {
             selfMute: t,
@@ -14,33 +15,33 @@ function u(e) {
             suppress: u,
             centerButton: h = !1,
             awaitingRemote: A,
-            onMouseEnter: g,
-            onMouseLeave: m,
-            onClick: p,
+            onMouseEnter: p,
+            onMouseLeave: g,
+            onClick: m,
             ..._
         } = e,
-        { parentAnalyticsLocation: x } = (0, a.Ay)(),
-        f = t || n || u,
-        E = h ? c.l : c.A,
-        C = (0, r.A)(t, n, u, A),
-        { events: I, play: S, Component: b } = (0, d.q)(f),
-        N = n || u ? s.O1p : b;
+        { parentAnalyticsLocation: f } = (0, r.Ay)(),
+        x = t || n || u,
+        C = h ? d.l : d.A,
+        E = (0, a.A)(t, n, u, A),
+        { events: I, play: b, Component: N } = (0, c.q)(x),
+        S = n || u ? l.O1p : N;
     return (
-        l.useEffect(() => () => S(), [S, f]),
-        (0, i.jsx)(E, {
-            iconComponent: N,
+        s.useEffect(() => () => b(), [b, x]),
+        (0, i.jsx)(C, {
+            iconComponent: S,
             isTrayButton: !0,
-            caretColor: f ? "red" : "primaryDark",
-            color: f ? "red" : void 0,
-            label: C,
+            caretColor: x ? "red" : "primaryDark",
+            color: x ? "red" : void 0,
+            label: E,
             onMouseEnter: (e) => {
-                g?.(e), I.onMouseEnter();
+                p?.(e), I.onMouseEnter();
             },
             onMouseLeave: (e) => {
-                m?.(e), I.onMouseLeave();
+                g?.(e), I.onMouseLeave();
             },
             onClick: (e) => {
-                p?.(e), (0, o.X)(x, o.O.MIC, t);
+                m?.(e), (0, o.X)(f, o.O.MIC, t);
             },
             ..._,
         })

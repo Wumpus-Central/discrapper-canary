@@ -1,51 +1,52 @@
+"use strict";
 n.d(t, { J: () => h });
 var i = n(627968),
-    l = n(64700),
-    s = n(311907),
-    a = n(573435),
-    r = n(427157),
+    s = n(64700),
+    l = n(311907),
+    r = n(573435),
+    a = n(427157),
     o = n(71393),
-    d = n(961291),
-    c = n(192849);
+    c = n(961291),
+    d = n(192849);
 let u = (e) => {
         let { mask: t } = e;
         return null == t
             ? null
             : (0, i.jsx)("div", {
-                  className: c.tK,
+                  className: d.tK,
                   style: { backgroundColor: t.color.css },
-                  children: (0, i.jsx)("img", { className: c.QR, alt: "", src: t.icon }),
+                  children: (0, i.jsx)("img", { className: d.QR, alt: "", src: t.icon }),
               });
     },
-    h = l.memo(function (e) {
+    h = s.memo(function (e) {
         let { item: t } = e,
             n = null,
-            l = !1,
-            h = (0, s.bG)([o.A], () => o.A.getGuild(t.guild_id));
-        if (null != t.icon_name) n = (0, i.jsx)("img", { alt: "", src: d.rr[(0, d.yI)(t.icon_name)] });
+            s = !1,
+            h = (0, l.bG)([o.A], () => o.A.getGuild(t.guild_id));
+        if (null != t.icon_name) n = (0, i.jsx)("img", { alt: "", src: c.rr[(0, c.yI)(t.icon_name)] });
         else if (null != t.other_user) {
-            let e = t.other_user instanceof r.A ? t.other_user : new r.A(t.other_user),
-                s = e.globalName ?? e.username;
-            (n = (0, i.jsx)("img", { alt: s, className: c.Sl, src: e.getAvatarURL(void 0, 40) })), (l = !0);
+            let e = t.other_user instanceof a.A ? t.other_user : new a.A(t.other_user),
+                l = e.globalName ?? e.username;
+            (n = (0, i.jsx)("img", { alt: l, className: d.Sl, src: e.getAvatarURL(void 0, 40) })), (s = !0);
         } else
             n =
                 null != t.icon_url
-                    ? (0, i.jsx)("img", { alt: h?.name ?? "", className: c.Sl, src: t.icon_url })
-                    : (0, i.jsx)("img", { alt: "", src: d.rr[(0, d.sW)(t)] });
-        let A = (0, d.rS)(t.type);
+                    ? (0, i.jsx)("img", { alt: h?.name ?? "", className: d.Sl, src: t.icon_url })
+                    : (0, i.jsx)("img", { alt: "", src: c.rr[(0, c.sW)(t)] });
+        let A = (0, c.rS)(t.type);
         return (0, i.jsxs)("div", {
-            className: c.kL,
+            className: d.kL,
             children: [
-                (0, i.jsx)(a.Ay, {
-                    mask: null == A ? a.hW.AVATAR_DEFAULT : a.hW.AVATAR_STATUS_ROUND_16,
+                (0, i.jsx)(r.Ay, {
+                    mask: null == A ? r.hW.AVATAR_DEFAULT : r.hW.AVATAR_STATUS_ROUND_16,
                     width: 40,
                     height: 40,
                     rightOverhang: 3,
                     bottomOverhang: 3,
-                    className: c.dK,
+                    className: d.dK,
                     children: (0, i.jsx)("div", {
-                        className: c.ZS,
-                        style: l ? void 0 : { backgroundColor: (0, d.Pm)(t) },
+                        className: d.ZS,
+                        style: s ? void 0 : { backgroundColor: (0, c.Pm)(t) },
                         children: n,
                     }),
                 }),

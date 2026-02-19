@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Ix: "channel__972a0",
     Ij: "fullWidth__972a0",

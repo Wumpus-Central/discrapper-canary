@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     h2: "emptyWrapper_f12222",
     hd: "emptyImage_f12222",

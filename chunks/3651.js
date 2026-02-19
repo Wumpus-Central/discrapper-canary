@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__01ae2",
     DU: "floating__01ae2",

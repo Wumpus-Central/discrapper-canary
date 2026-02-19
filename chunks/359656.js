@@ -1,37 +1,38 @@
-n.d(t, { A: () => c });
+"use strict";
+n.d(t, { A: () => d });
 var i = n(627968),
-    l = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(397927),
+    s = n(64700),
+    l = n(503698),
+    r = n.n(l),
+    a = n(397927),
     o = n(183555),
-    d = n(752458);
-function c(e) {
-    let { section: t, header: n, items: s, listClassName: c, onExpand: u } = e,
+    c = n(752458);
+function d(e) {
+    let { section: t, header: n, items: l, listClassName: d, onExpand: u } = e,
         { trackUserProfileAction: h } = (0, o.NJ)(),
-        A = l.useId(),
-        [g, m] = l.useState(!1),
-        p = g ? r.abt : r._BQ;
+        A = s.useId(),
+        [p, g] = s.useState(!1),
+        m = p ? a.abt : a._BQ;
     return (0, i.jsxs)("section", {
-        className: d.uW,
+        className: c.uW,
         children: [
-            (0, i.jsxs)(r.DUT, {
-                className: a()(d.wx, d.vk),
+            (0, i.jsxs)(a.DUT, {
+                className: r()(c.wx, c.vk),
                 "aria-controls": A,
-                "aria-expanded": g,
+                "aria-expanded": p,
                 onClick: () => {
-                    m(!g), g || (h({ action: "PRESS_SECTION", section: t }), u?.());
+                    g(!p), p || (h({ action: "PRESS_SECTION", section: t }), u?.());
                 },
                 children: [
-                    (0, i.jsxs)(r.Heading, {
+                    (0, i.jsxs)(a.Heading, {
                         variant: "text-sm/medium",
                         color: "text-default",
-                        children: [n, " — ", s.length],
+                        children: [n, " — ", l.length],
                     }),
-                    (0, i.jsx)(p, { size: "md" }),
+                    (0, i.jsx)(m, { size: "md" }),
                 ],
             }),
-            s.length > 0 && (0, i.jsx)("ul", { id: A, hidden: !g, className: a()(d.p_, c), children: s }),
+            l.length > 0 && (0, i.jsx)("ul", { id: A, hidden: !p, className: r()(c.p_, d), children: l }),
         ],
     });
 }

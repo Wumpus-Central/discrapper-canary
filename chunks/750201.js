@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     j8: "tileBaseContainer__71eb2",
     iA: "tileContainer__71eb2 tileBaseContainer__71eb2",

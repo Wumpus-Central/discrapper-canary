@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     wL: "searchHeader__83bd4",
     Dr: "headerTitleWrapper__83bd4",

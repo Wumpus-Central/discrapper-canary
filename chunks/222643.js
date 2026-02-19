@@ -1,12 +1,13 @@
+"use strict";
 n.d(t, { x: () => u });
 var i = n(627968),
-    l = n(64700),
-    s = n(311907),
-    a = n(397927),
-    r = n(43189),
+    s = n(64700),
+    l = n(311907),
+    r = n(397927),
+    a = n(43189),
     o = n(964404),
-    d = n(461782),
-    c = n(447404);
+    c = n(461782),
+    d = n(447404);
 function u(e) {
     let {
             buttonRef: t,
@@ -14,40 +15,40 @@ function u(e) {
             onDismiss: u,
             renderComponent: h,
             nudgeAlignIntoViewport: A = !1,
-            skipForceHide: g = !1,
+            skipForceHide: p = !1,
         } = e,
-        m = l.useContext(d.vG),
-        [p, _] = l.useState(""),
-        [x, f] = l.useState(!1),
-        E = (0, s.bG)([o.Ay], () => o.Ay.callHeaderHeight),
-        C = l.useRef(null),
-        I = l.useRef(0);
-    l.useEffect(() => {
+        g = s.useContext(c.vG),
+        [m, _] = s.useState(""),
+        [f, x] = s.useState(!1),
+        C = (0, l.bG)([o.Ay], () => o.Ay.callHeaderHeight),
+        E = s.useRef(null),
+        I = s.useRef(0);
+    s.useEffect(() => {
         let e = t.current;
         if (null != e) return e.addEventListener("click", u), () => e.removeEventListener("click", u);
     }),
-        l.useEffect(() => {
-            g || (_(String(I.current)), f(void 0 !== E && E < (C.current?.clientHeight ?? 300) + 24), (I.current += 1));
-        }, [E, C, g]);
-    let { preventIdle: S, allowIdle: b } = (0, c.o)("popup");
+        s.useEffect(() => {
+            p || (_(String(I.current)), x(void 0 !== C && C < (E.current?.clientHeight ?? 300) + 24), (I.current += 1));
+        }, [C, E, p]);
+    let { preventIdle: b, allowIdle: N } = (0, d.o)("popup");
     return t?.current == null
         ? null
-        : (0, i.jsx)(r.Ay, {
-              children: (0, i.jsx)(a.QCO, {
+        : (0, i.jsx)(a.Ay, {
+              children: (0, i.jsx)(r.QCO, {
                   targetRef: t,
                   position: "top",
                   align: "center",
                   spacing: 0,
-                  positionKey: p,
+                  positionKey: m,
                   nudgeAlignIntoViewport: A,
                   children: () =>
                       (0, i.jsx)("div", {
-                          ref: C,
-                          onMouseOver: S,
-                          onFocus: S,
-                          onBlur: b,
-                          onMouseLeave: b,
-                          children: h({ hidden: x || m || n, onDismiss: u }),
+                          ref: E,
+                          onMouseOver: b,
+                          onFocus: b,
+                          onBlur: N,
+                          onMouseLeave: N,
+                          children: h({ hidden: f || g || n, onDismiss: u }),
                       }),
               }),
           });

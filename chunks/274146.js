@@ -1,18 +1,19 @@
+"use strict";
 n.d(t, { A: () => b });
 var i = n(627968),
-    l = n(64700),
-    s = n(311907),
-    a = n(397927),
-    r = n(73153),
+    s = n(64700),
+    l = n(311907),
+    r = n(397927),
+    a = n(73153),
     o = n(334738),
-    d = n(222823),
-    c = n(954571),
+    c = n(222823),
+    d = n(954571),
     u = n(208882),
     h = n(938764),
     A = n(519480),
-    m = n(352123),
-    p = n(372536),
-    g = n(268965),
+    p = n(352123),
+    g = n(372536),
+    m = n(268965),
     _ = n(667369),
     f = n(647026),
     x = n(946116),
@@ -27,7 +28,7 @@ let b = (e) => {
             categoryCounts: T,
             allEntriesCount: v,
             isLoading: y,
-        } = (0, s.cf)([A.A], () => {
+        } = (0, l.cf)([A.A], () => {
             let e = A.A.getCurrentCategoryId(t.id),
                 n = A.A.getDirectoryEntries(t.id, e === x.mU.ALL ? null : e),
                 i = A.A.getDirectoryCategoryCounts(t.id);
@@ -39,11 +40,11 @@ let b = (e) => {
                 isLoading: A.A.isFetching(),
             };
         });
-    l.useEffect(
+    s.useEffect(
         () => () => {
-            let e = d.Ay.lastMessageId(t.id);
+            let e = c.Ay.lastMessageId(t.id);
             null != e &&
-                r.h.wait(() => {
+                a.h.wait(() => {
                     (0, o.ack)(
                         t.id,
                         {
@@ -58,39 +59,39 @@ let b = (e) => {
         },
         [t.id],
     );
-    let j = l.useMemo(() => (null != S ? (0, _._)(Object.values(S), N) : null), [S, N]),
+    let j = s.useMemo(() => (null != S ? (0, _._)(Object.values(S), N) : null), [S, N]),
         {
             mostRecentQuery: R,
             searchFetching: O,
             searchResults: L,
-        } = (0, s.cf)([h.A], () => {
+        } = (0, l.cf)([h.A], () => {
             let { mostRecentQuery: e, fetching: n } = h.A.getSearchState(t.id);
             return { mostRecentQuery: e, searchFetching: n, searchResults: h.A.getSearchResults(t.id, e) };
         }),
-        [M, D] = l.useState(R),
+        [M, D] = s.useState(R),
         G = "" !== R,
         U = { mostRecentQuery: R },
-        P = l.useRef(U);
-    l.useEffect(() => {
+        P = s.useRef(U);
+    s.useEffect(() => {
         P.current = U;
     }),
-        l.useEffect(() => {
+        s.useEffect(() => {
             let { mostRecentQuery: e } = P.current;
             u.Yc(t.id), u.YS(t.id), D(e);
         }, [t.id]),
-        l.useEffect(() => {
-            c.default.track(C.HAw.GUILD_DIRECTORY_CHANNEL_VIEWED, {
+        s.useEffect(() => {
+            d.default.track(C.HAw.GUILD_DIRECTORY_CHANNEL_VIEWED, {
                 directory_channel_id: t.id,
                 directory_guild_id: b.id,
                 primary_category_id: N,
             });
         }, [t.id, b.id, N]);
-    let w = (0, m.b)(t),
-        k = l.useMemo(
+    let w = (0, p.b)(t),
+        k = s.useMemo(
             () =>
                 w
                     ? () => {
-                          (0, a.mMO)(async () => {
+                          (0, r.mMO)(async () => {
                               let { default: e } = await n.e("6759").then(n.bind(n, 953722));
                               return (n) =>
                                   (0, i.jsx)(e, {
@@ -109,7 +110,7 @@ let b = (e) => {
             0 !== M.trim().length &&
                 e.key === E.dh.ENTER &&
                 (u.Se(t.id, M),
-                c.default.track(C.HAw.GUILD_DIRECTORY_SEARCH, {
+                d.default.track(C.HAw.GUILD_DIRECTORY_SEARCH, {
                     directory_channel_id: t.id,
                     directory_guild_id: b.id,
                 }));
@@ -129,10 +130,10 @@ let b = (e) => {
               searchFetching: O,
           })
         : null == j && null == N
-          ? (0, i.jsx)("div", { className: I.$$, children: (0, i.jsx)(a.y$y, { className: I.u1 }) })
+          ? (0, i.jsx)("div", { className: I.$$, children: (0, i.jsx)(r.y$y, { className: I.u1 }) })
           : j?.length === 0 && null == N
-            ? (0, i.jsx)("div", { className: I.$$, children: (0, i.jsx)(p.A, { guild: b, onAddGuild: k }) })
-            : (0, i.jsx)(g.A, {
+            ? (0, i.jsx)("div", { className: I.$$, children: (0, i.jsx)(g.A, { guild: b, onAddGuild: k }) })
+            : (0, i.jsx)(m.A, {
                   channel: t,
                   searchQuery: M,
                   setSearchQuery: D,

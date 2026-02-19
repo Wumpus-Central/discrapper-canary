@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     ec: "flexColumn__16b66",
     Wh: "flexRow__16b66",

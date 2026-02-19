@@ -1,23 +1,24 @@
-n.d(t, { N: () => d, m: () => c });
+"use strict";
+n.d(t, { N: () => c, m: () => d });
 var i = n(311907),
-    l = n(961350),
-    s = n(290863),
-    a = n(461213),
-    r = n(765379),
+    s = n(961350),
+    l = n(290863),
+    r = n(461213),
+    a = n(765379),
     o = n(652215);
-let d = (e) =>
+let c = (e) =>
     ([o.$pd.PLAYING, o.$pd.WATCHING].includes(e.type) &&
         [e.name, e.application_id, e.assets, e.state, e.details, e.party].some((e) => null != e)) ||
     e.type === o.$pd.LISTENING;
-function c(e, t) {
+function d(e, t) {
     return (0, i.bG)(
-        [a.A, s.A, l.default],
+        [r.A, l.A, s.default],
         () => {
-            let n = (e.id === l.default.getId() ? a.A.getActivities() : s.A.getActivities(e.id))
-                    .filter(d)
+            let n = (e.id === s.default.getId() ? r.A.getActivities() : l.A.getActivities(e.id))
+                    .filter(c)
                     .filter(
                         (e) =>
-                            !(0, r.A)(e) &&
+                            !(0, a.A)(e) &&
                             (null == t ||
                                 ((null == t.application_id || e.application_id !== t.application_id) &&
                                     (null == t.name || e.name !== t.name))),

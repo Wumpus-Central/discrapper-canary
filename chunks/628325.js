@@ -1,12 +1,13 @@
-n.d(t, { S: () => s });
+"use strict";
+n.d(t, { S: () => l });
 var i = n(353640),
-    l = n(121894);
-let s = (0, i.v)((e, t) => ({
+    s = n(121894);
+let l = (0, i.v)((e, t) => ({
     hasNoUnreads: !1,
     shouldHide: () => !t().hasNoUnreads,
     setInboxReadState: (n) => {
         n !== t().hasNoUnreads &&
-            (0, l.r)(() => {
+            (0, s.r)(() => {
                 e({ hasNoUnreads: n });
             });
     },

@@ -1,18 +1,19 @@
+"use strict";
 n.d(t, { A: () => b });
 var i = n(627968),
-    l = n(64700),
-    s = n(735438),
-    a = n(110259),
-    r = n(417597),
+    s = n(64700),
+    l = n(735438),
+    r = n(110259),
+    a = n(417597),
     o = n(397927),
-    d = n(308368),
-    c = n(139286),
+    c = n(308368),
+    d = n(139286),
     u = n(627363),
     h = n(386467),
     A = n(760751),
-    m = n(383501),
-    p = n(287809),
-    g = n(762370),
+    p = n(383501),
+    g = n(287809),
+    m = n(762370),
     _ = n(25528),
     f = n(652215),
     x = n(426127),
@@ -20,30 +21,30 @@ var i = n(627968),
     E = n(281783);
 function I(e) {
     let t,
-        { activity: n, channel: s, userId: a } = e,
-        c = (0, u.YY)(n.application_id).data,
-        [h, A] = l.useState(!1),
-        [p, g] = l.useState(0),
-        _ = (0, r.bG)([m.A], () => m.A.getChannelId() !== s.id);
+        { activity: n, channel: l, userId: r } = e,
+        d = (0, u.YY)(n.application_id).data,
+        [h, A] = s.useState(!1),
+        [g, m] = s.useState(0),
+        _ = (0, a.bG)([p.A], () => p.A.getChannelId() !== l.id);
     async function I() {
-        g(1);
+        m(1);
         try {
-            await d.A.sendActivityInvite({
+            await c.A.sendActivityInvite({
                 type: f.xL.STREAM_REQUEST,
-                channelId: s.id,
+                channelId: l.id,
                 activity: n,
-                content: `<@${a}>`,
+                content: `<@${r}>`,
                 location: "request to stream hover",
-                targetUserId: a,
+                targetUserId: r,
             });
         } catch (e) {
-            g(0);
+            m(0);
             return;
         }
-        g(2);
+        m(2);
     }
     if ((_ && (t = C.intl.string(x.default.qRXats)), n.type === f.$pd.PLAYING)) {
-        let e = c?.getIconURL(46);
+        let e = d?.getIconURL(46);
         return (0, i.jsxs)("div", {
             className: E.gd,
             children: [
@@ -66,11 +67,11 @@ function I(e) {
                     ],
                 }),
                 (0, i.jsx)(o.Button, {
-                    loading: 1 === p,
-                    disabled: _ || 2 === p,
+                    loading: 1 === g,
+                    disabled: _ || 2 === g,
                     fullWidth: !0,
                     size: "sm",
-                    text: 2 === p ? C.intl.string(x.default["8HU1M2"]) : C.intl.string(x.default.DKHhec),
+                    text: 2 === g ? C.intl.string(x.default["8HU1M2"]) : C.intl.string(x.default.DKHhec),
                     onClick: I,
                 }),
                 null != t &&
@@ -86,22 +87,22 @@ function I(e) {
 }
 function b(e) {
     let { userId: t, channel: n } = e,
-        o = (0, r.bG)([p.default], () => p.default.getUser(t)),
-        d = (0, _.Ay)(t, n.guild_id),
-        u = (0, g.A)(t, n.id),
-        m = l.useMemo(
+        o = (0, a.bG)([g.default], () => g.default.getUser(t)),
+        c = (0, _.Ay)(t, n.guild_id),
+        u = (0, m.A)(t, n.id),
+        p = s.useMemo(
             () =>
-                s.uniqWith(d, (e, t) => {
+                l.uniqWith(c, (e, t) => {
                     if (e.application_id === t.application_id) return !0;
                     let n = A.A.getGameByName(e.name),
                         i = A.A.getGameByName(t.name);
                     return (null != n && n === i) || e.name === t.name;
                 }),
-            [d],
+            [c],
         ),
-        f = null == o || !u || 0 === m.length;
-    return ((0, c.A)(
-        { type: a.ImpressionTypes.POPOUT, name: a.ImpressionNames.VOICE_USER_ACTIVITY_POPOUT, properties: {} },
+        f = null == o || !u || 0 === p.length;
+    return ((0, d.A)(
+        { type: r.ImpressionTypes.POPOUT, name: r.ImpressionNames.VOICE_USER_ACTIVITY_POPOUT, properties: {} },
         { disableTrack: f },
     ),
     f)
@@ -112,7 +113,7 @@ function b(e) {
                   className: E.zr,
                   children: (0, i.jsx)("div", {
                       className: E.Ci,
-                      children: m.map((e) =>
+                      children: p.map((e) =>
                           (0, i.jsx)(
                               I,
                               { activity: e, channel: n, userId: t },

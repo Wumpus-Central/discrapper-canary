@@ -1,90 +1,91 @@
-n.d(t, { A: () => f });
+"use strict";
+n.d(t, { A: () => x });
 var i = n(627968),
-    l = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(311907),
+    s = n(64700),
+    l = n(503698),
+    r = n.n(l),
+    a = n(311907),
     o = n(506774),
-    d = n(31728),
-    c = n(164617),
+    c = n(31728),
+    d = n(164617),
     u = n(205297),
     h = n(334463),
     A = n(175203),
-    g = n(652215),
-    m = n(806931),
-    p = n(697166),
+    p = n(652215),
+    g = n(806931),
+    m = n(697166),
     _ = n(976092);
-let x = "CameraPreviewPosition";
-function f(e) {
-    let { width: t, onContextMenuParticipant: n, height: s, channel: f, participants: E, onSelectParticipant: C } = e,
-        [I, S] = (function () {
-            let [e, t] = l.useState(() => o.w.get(x, g.CUs.BOTTOM_RIGHT));
+let f = "CameraPreviewPosition";
+function x(e) {
+    let { width: t, onContextMenuParticipant: n, height: l, channel: x, participants: C, onSelectParticipant: E } = e,
+        [I, b] = (function () {
+            let [e, t] = s.useState(() => o.w.get(f, p.CUs.BOTTOM_RIGHT));
             return [
                 e,
-                l.useCallback((e) => {
-                    o.w.set(x, e), t(e);
+                s.useCallback((e) => {
+                    o.w.set(f, e), t(e);
                 }, []),
             ];
         })(),
-        b = l.useRef(null),
-        N = null == f.getGuildId() ? 70 : 50,
-        T = (0, r.bG)([h.A], () => h.A.pipWidth(m.R8.CAMERA_PREVIEW)),
-        j = E.length,
-        v = T * j + 8 * (j - 1),
-        y = l.useMemo(
+        N = s.useRef(null),
+        S = null == x.getGuildId() ? 70 : 50,
+        T = (0, a.bG)([h.A], () => h.A.pipWidth(g.R8.CAMERA_PREVIEW)),
+        v = C.length,
+        y = T * v + 8 * (v - 1),
+        j = s.useMemo(
             () => ({
-                minWidth: m.mn[m.R8.CAMERA_PREVIEW] * j + 8 * (j - 1),
-                maxWidth: m.cF[m.R8.CAMERA_PREVIEW] * j + 8 * (j - 1),
+                minWidth: g.mn[g.R8.CAMERA_PREVIEW] * v + 8 * (v - 1),
+                maxWidth: g.cF[g.R8.CAMERA_PREVIEW] * v + 8 * (v - 1),
             }),
-            [j],
+            [v],
         );
-    l.useLayoutEffect(() => {
-        b.current?.ensureIsInPosition();
-    }, [E.length]);
-    let R = l.useCallback(
+    s.useLayoutEffect(() => {
+        N.current?.ensureIsInPosition();
+    }, [C.length]);
+    let R = s.useCallback(
             (e) => {
-                let t = 0 === j ? e : (e - 8 * (j - 1)) / j;
-                d.EB(t, m.R8.CAMERA_PREVIEW);
+                let t = 0 === v ? e : (e - 8 * (v - 1)) / v;
+                c.EB(t, g.R8.CAMERA_PREVIEW);
             },
-            [j],
+            [v],
         ),
-        O = l.useCallback(
+        O = s.useCallback(
             (e, t) => {
-                S(t);
+                b(t);
             },
-            [S],
+            [b],
         );
     return (0, i.jsx)("div", {
-        className: p.kL,
+        className: m.kL,
         children: (0, i.jsx)(u.S, {
             position: I,
             id: 0,
-            width: v,
-            ref: b,
+            width: y,
+            ref: N,
             onMove: O,
             onResize: R,
             maxX: t,
-            maxY: s,
-            edgeOffsetTop: N,
+            maxY: l,
+            edgeOffsetTop: S,
             edgeOffsetBottom: 70,
             edgeOffsetLeft: 16,
             edgeOffsetRight: 16,
-            resizeConfig: y,
+            resizeConfig: j,
             children: (0, i.jsx)("div", {
-                className: p.iA,
-                children: E.map((e) =>
+                className: m.iA,
+                children: C.map((e) =>
                     (0, i.jsx)(
                         A.Ay,
                         {
                             participant: e,
-                            channel: f,
+                            channel: x,
                             onContextMenu: n,
-                            className: a()(p.Vs, _.a8),
+                            className: r()(m.Vs, _.a8),
                             fit: A.Yl.COVER,
                             inCall: !0,
-                            popoutType: c.N.NO_POPOUT,
+                            popoutType: d.N.NO_POPOUT,
                             width: 160,
-                            onClick: C,
+                            onClick: E,
                         },
                         e.id,
                     ),

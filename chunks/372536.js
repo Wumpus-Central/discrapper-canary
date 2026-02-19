@@ -1,46 +1,47 @@
-n.d(t, { A: () => c });
+"use strict";
+n.d(t, { A: () => d });
 var i = n(627968),
-    l = n(64700),
-    s = n(397927),
-    a = n(825244),
-    r = n(652215),
+    s = n(64700),
+    l = n(397927),
+    r = n(825244),
+    a = n(652215),
     o = n(985018),
-    d = n(729934);
-let c = (e) => {
-    let { guild: t, onAddGuild: c } = e,
-        u = l.useCallback(() => {
-            (0, s.mMO)(async () => {
-                let { default: e } = await Promise.all([n.e("43600"), n.e("42821")]).then(n.bind(n, 234355));
+    c = n(729934);
+let d = (e) => {
+    let { guild: t, onAddGuild: d } = e,
+        u = s.useCallback(() => {
+            (0, l.mMO)(async () => {
+                let { default: e } = await Promise.all([n.e("43600"), n.e("52537")]).then(n.bind(n, 234355));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,
                         guild: t,
-                        source: r.PE1.HUB_DIRECTORY,
-                        analyticsLocation: { section: r.JJy.HUB_WELCOME_CTA },
+                        source: a.PE1.HUB_DIRECTORY,
+                        analyticsLocation: { section: a.JJy.HUB_WELCOME_CTA },
                     });
             });
         }, [t]);
     return (0, i.jsxs)("div", {
-        className: d.h2,
+        className: c.h2,
         children: [
-            (0, i.jsx)("img", { className: d.hd, alt: "", src: n(668778) }),
-            (0, i.jsx)(s.Heading, {
-                className: d._U,
+            (0, i.jsx)("img", { className: c.hd, alt: "", src: n(668778) }),
+            (0, i.jsx)(l.Heading, {
+                className: c._U,
                 variant: "heading-xl/semibold",
                 children: o.intl.format(o.t.vyvrpC, { guildName: t.name }),
             }),
-            (0, i.jsx)(s.Text, { variant: "text-md/normal", className: d.YI, children: o.intl.string(o.t.WypE0i) }),
-            null != c
-                ? (0, i.jsx)(a.E, {
-                      className: d.c5,
+            (0, i.jsx)(l.Text, { variant: "text-md/normal", className: c.YI, children: o.intl.string(o.t.WypE0i) }),
+            null != d
+                ? (0, i.jsx)(r.E, {
+                      className: c.c5,
                       iconUrl: n(928202),
                       header: o.intl.string(o.t.hyK15i),
                       completed: !1,
-                      onClick: c,
+                      onClick: d,
                   })
                 : null,
-            (0, i.jsx)(a.E, {
-                className: d.c5,
+            (0, i.jsx)(r.E, {
+                className: c.c5,
                 iconUrl: n(576877),
                 header: o.intl.string(o.t.L4bwJ9),
                 completed: !1,

@@ -1,23 +1,24 @@
+"use strict";
 n.d(t, { A: () => o });
 var i = n(627968);
 n(64700);
-var l = n(503698),
-    s = n.n(l),
-    a = n(397927),
-    r = n(335419);
+var s = n(503698),
+    l = n.n(s),
+    r = n(397927),
+    a = n(335419);
 function o(e) {
-    let { total: t, users: n, videoLimit: l } = e;
+    let { total: t, users: n, videoLimit: s } = e;
     return (0, i.jsxs)("div", {
-        className: r.iE,
+        className: a.iE,
         children: [
             (0, i.jsxs)("span", {
-                className: s()(r.VV, { [r.Ki]: l, [r.$G]: n >= 100 }),
+                className: l()(a.VV, { [a.Ki]: s, [a.$G]: n >= 100 }),
                 children: [
-                    l ? (0, i.jsx)(a.npA, { size: "md", color: "currentColor", className: r.LB }) : null,
+                    s ? (0, i.jsx)(r.npA, { size: "md", color: "currentColor", className: a.LB }) : null,
                     n.toString().padStart(2, "0"),
                 ],
             }),
-            (0, i.jsx)("span", { className: s()(r.X5, { [r.$G]: t >= 100 }), children: t.toString().padStart(2, "0") }),
+            (0, i.jsx)("span", { className: l()(a.X5, { [a.$G]: t >= 100 }), children: t.toString().padStart(2, "0") }),
         ],
     });
 }

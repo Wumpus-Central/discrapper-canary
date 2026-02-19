@@ -1,34 +1,35 @@
+"use strict";
 n.d(t, { A: () => h });
 var i = n(627968);
 n(64700);
-var l = n(397927),
-    s = n(58736),
-    a = n(722260),
-    r = n(563312),
+var s = n(397927),
+    l = n(58736),
+    r = n(722260),
+    a = n(563312),
     o = n(974930),
-    d = n(103355),
-    c = n(985018),
+    c = n(103355),
+    d = n(985018),
     u = n(234944);
 function h(e) {
     let { guildEvent: t, recurrenceId: n } = e,
-        h = (0, r.Ay)(t, n),
-        A = (0, a.A)(n, t.id);
+        h = (0, a.Ay)(t, n),
+        A = (0, r.A)(n, t.id);
     if (null == t) return null;
-    let g = t?.scheduled_start_time != null ? (0, o.j)(A, h.startTime, new Date(t?.scheduled_start_time)) : null;
+    let p = t?.scheduled_start_time != null ? (0, o.j)(A, h.startTime, new Date(t?.scheduled_start_time)) : null;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(s.Ay.Divider, { className: u.yF }),
-            (0, i.jsx)(d.L, {
+            (0, i.jsx)(l.Ay.Divider, { className: u.yF }),
+            (0, i.jsx)(c.L, {
                 startTime: h.startTime.toISOString(),
-                status: g ?? t.status,
-                liveText: c.intl.string(c.t.kM6e4G),
+                status: p ?? t.status,
+                liveText: d.intl.string(d.t.kM6e4G),
                 className: u.aF,
                 textVariant: "text-lg/semibold",
                 eventType: t.entity_type,
                 guildEventId: t?.id,
                 recurrenceId: n,
             }),
-            (0, i.jsx)(l.Text, { color: "text-default", variant: "text-md/normal", className: u.eq, children: t.name }),
+            (0, i.jsx)(s.Text, { color: "text-default", variant: "text-md/normal", className: u.eq, children: t.name }),
         ],
     });
 }

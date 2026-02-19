@@ -1,42 +1,43 @@
+"use strict";
 n.d(t, { f: () => u });
 var i = n(627968),
-    l = n(64700),
-    s = n(311907),
-    a = n(397927),
-    r = n(534963),
+    s = n(64700),
+    l = n(311907),
+    r = n(397927),
+    a = n(534963),
     o = n(470710),
-    d = n(717518),
-    c = n(985018);
+    c = n(717518),
+    d = n(985018);
 function u(e) {
-    let t = (0, s.bG)([o.A], () => o.A.getCall(e), [e]),
-        n = (0, s.bG)([d.A], () => d.A.getRegions(null));
-    l.useEffect(() => {
-        null == n && r.A.fetchRegions(null);
+    let t = (0, l.bG)([o.A], () => o.A.getCall(e), [e]),
+        n = (0, l.bG)([c.A], () => c.A.getRegions(null));
+    s.useEffect(() => {
+        null == n && a.A.fetchRegions(null);
     }, [n]);
-    let u = l.useMemo(
+    let u = s.useMemo(
             () =>
                 null != t && t.regionUpdated && null != n && null != t.region
                     ? (n.find((e) => {
                           let { id: n } = e;
                           return n === t.region;
                       }) ?? { name: t.region, id: t.region })
-                    : { id: "automatic", name: c.intl.string(c.t.JEmsap) },
+                    : { id: "automatic", name: d.intl.string(d.t.JEmsap) },
             [t, n],
         ),
-        h = l.useCallback(
+        h = s.useCallback(
             (e) => {
-                null != t && r.A.changeCallRegion(t.channelId, e.id);
+                null != t && a.A.changeCallRegion(t.channelId, e.id);
             },
             [t],
         ),
-        A = l.useMemo(
+        A = s.useMemo(
             () =>
                 null == n || 0 === n.length
                     ? null
                     : n.map((e) => {
                           let { id: t, name: n } = e;
                           return (0, i.jsx)(
-                              a.iDA,
+                              r.iDA,
                               {
                                   id: `region-${t}`,
                                   group: "region-select",
@@ -49,5 +50,5 @@ function u(e) {
                       }),
             [n, u, h],
         );
-    return (0, i.jsx)(a.Drp, { id: "region-select", label: c.intl.string(c.t.w8gMqh), subtext: u.name, children: A });
+    return (0, i.jsx)(r.Drp, { id: "region-select", label: d.intl.string(d.t.w8gMqh), subtext: u.name, children: A });
 }

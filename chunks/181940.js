@@ -1,25 +1,26 @@
-n.d(t, { A: () => s });
+"use strict";
+n.d(t, { A: () => l });
 var i = n(64700),
-    l = n(942975);
-function s(e, t) {
-    let [n, s] = i.useState(!1),
-        [a, r] = i.useState(void 0);
+    s = n(942975);
+function l(e, t) {
+    let [n, l] = i.useState(!1),
+        [r, a] = i.useState(void 0);
     return {
         isLoading: n,
-        error: a,
+        error: r,
         onToggle: i.useCallback(
             (n) => {
                 if (null == t) return Promise.resolve();
-                let i = n ? l.Qh : l.pz;
+                let i = n ? s.Qh : s.pz;
                 return (
-                    s(!0),
-                    r(void 0),
+                    l(!0),
+                    a(void 0),
                     i(e, t.skuId)
                         .catch((e) => {
-                            throw (r(e.body?.message ?? void 0), e);
+                            throw (a(e.body?.message ?? void 0), e);
                         })
                         .finally(() => {
-                            s(!1);
+                            l(!1);
                         })
                 );
             },

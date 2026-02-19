@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     pU: "iframe__49094",
     iE: "wrapper__49094",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__6764b",
     kb: "left__6764b",

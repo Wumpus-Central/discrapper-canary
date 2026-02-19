@@ -1,14 +1,15 @@
-n.d(t, { A: () => r });
+"use strict";
+n.d(t, { A: () => a });
 var i = n(627968),
-    l = n(64700),
-    s = n(763793),
-    a = n(532485);
-let r = l.memo(function (e) {
-    let { channel: t, participants: n, tileWidth: l, selectedParticipant: r, popoutType: o } = e;
+    s = n(64700),
+    l = n(763793),
+    r = n(532485);
+let a = s.memo(function (e) {
+    let { channel: t, participants: n, tileWidth: s, selectedParticipant: a, popoutType: o } = e;
     return (0, i.jsx)("div", {
-        className: a.q,
+        className: r.q,
         children: n.map((e) =>
-            e.id === r?.id ? null : (0, i.jsx)(s.A, { channel: t, participant: e, width: l, popoutType: o }, e.id),
+            e.id === a?.id ? null : (0, i.jsx)(l.A, { channel: t, participant: e, width: s, popoutType: o }, e.id),
         ),
     });
 });

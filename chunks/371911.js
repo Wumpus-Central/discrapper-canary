@@ -1,18 +1,19 @@
+"use strict";
 n.d(t, { C: () => y });
 var i = n(627968),
-    l = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(484030),
+    s = n(64700),
+    l = n(503698),
+    r = n.n(l),
+    a = n(484030),
     o = n(311907),
-    d = n(873298),
-    c = n(397927),
+    c = n(873298),
+    d = n(397927),
     u = n(793574),
     h = n(688810),
     A = n(966597),
-    m = n(85109),
-    p = n(44022),
-    g = n(566908),
+    p = n(85109),
+    g = n(44022),
+    m = n(566908),
     _ = n(594061),
     f = n(617617),
     x = n(203982),
@@ -28,7 +29,7 @@ function y(e) {
     let t,
         n,
         {
-            onOpen: s,
+            onOpen: l,
             onClose: y,
             children: j,
             badgeState: R,
@@ -39,10 +40,10 @@ function y(e) {
             dialogClassName: G,
         } = e,
         { analyticsLocations: U } = (0, h.Ay)(u.A.NOTIFICATION_CENTER),
-        [P, w] = l.useState(!1),
+        [P, w] = s.useState(!1),
         [k, V] = [
-            (0, o.bG)([f.A], () => f.A.settings.inbox?.currentTab ?? d.Y2.UNREADS),
-            l.useCallback((e) => {
+            (0, o.bG)([f.A], () => f.A.settings.inbox?.currentTab ?? c.Y2.UNREADS),
+            s.useCallback((e) => {
                 _.wc.updateAsync(
                     "inbox",
                     (t) => {
@@ -55,7 +56,7 @@ function y(e) {
         ],
         { showTutorial: B, setSeenTutorial: H } =
             ((t = (0, o.bG)([f.A], () => f.A.settings.inbox?.viewedTutorial ?? !1)),
-            (n = l.useCallback(() => {
+            (n = s.useCallback(() => {
                 _.wc.updateAsync(
                     "inbox",
                     (e) => {
@@ -64,57 +65,57 @@ function y(e) {
                     _.Sb.INFREQUENT_USER_ACTION,
                 );
             }, [])),
-            { showTutorial: !t && k === d.Y2.UNREADS, setSeenTutorial: n }),
-        F = l.useCallback(() => {
+            { showTutorial: !t && k === c.Y2.UNREADS, setSeenTutorial: n }),
+        F = s.useCallback(() => {
             w(!1), P && y?.();
         }, [y, P]),
-        K = l.useCallback(() => {
-            w(!P), P ? y?.() : s?.();
-        }, [y, s, P]);
-    l.useEffect(() => (x._.subscribe(S.jej.TOGGLE_INBOX, K), () => void x._.unsubscribe(S.jej.TOGGLE_INBOX, K)), [K]);
+        K = s.useCallback(() => {
+            w(!P), P ? y?.() : l?.();
+        }, [y, l, P]);
+    s.useEffect(() => (x._.subscribe(S.jej.TOGGLE_INBOX, K), () => void x._.unsubscribe(S.jej.TOGGLE_INBOX, K)), [K]);
     let { enabled: W, inInbox: Y } = A.A.useExperiment({ location: "RecentsPopout" }),
-        z = (0, o.bG)([m.A], () => m.A.hasOverdueReminder(), []) && W && Y;
-    l.useEffect(() => {
-        k !== d.Y2.BOOKMARKS || W || Y || V(d.Y2.MENTIONS), k === d.Y2.GAME_INVITES && V(d.Y2.MENTIONS);
+        z = (0, o.bG)([p.A], () => p.A.hasOverdueReminder(), []) && W && Y;
+    s.useEffect(() => {
+        k !== c.Y2.BOOKMARKS || W || Y || V(c.Y2.MENTIONS), k === c.Y2.GAME_INVITES && V(c.Y2.MENTIONS);
     });
-    let q = l.useCallback(
+    let X = s.useCallback(
             (e) => {
                 e.shiftKey || F();
             },
             [F],
         ),
-        X = (0, g.Sc)({ location: "ForYou" });
+        q = (0, m.Sc)({ location: "ForYou" });
     return (0, i.jsx)(h.f5, {
         value: U,
-        children: (0, i.jsx)(c.YNO, {
+        children: (0, i.jsx)(d.YNO, {
             targetElementRef: M,
-            animation: c.YNO.Animation.NONE,
+            animation: d.YNO.Animation.NONE,
             position: O,
             align: L,
             autoInvert: !1,
             shouldShow: P,
             onRequestClose: F,
             renderPopout: function () {
-                return (0, i.jsx)(c.lGe, {
+                return (0, i.jsx)(d.lGe, {
                     "aria-label": T.intl.string(T.t.GSmTKJ),
                     className: G,
                     children: (0, i.jsx)("div", {
-                        className: a()(v.k, { [v.q]: X }),
-                        children: (0, i.jsx)(c.Fmo, {
+                        className: r()(v.k, { [v.q]: q }),
+                        children: (0, i.jsx)(d.Fmo, {
                             component: (0, i.jsx)(I.A, { tab: k, setTab: V, badgeState: R, closePopout: F }),
                             children:
-                                k === d.Y2.FOR_YOU
+                                k === c.Y2.FOR_YOU
                                     ? (0, i.jsx)(C.Ay, {})
-                                    : k === d.Y2.MENTIONS
-                                      ? (0, i.jsx)(E.A, { onJump: q })
-                                      : W && Y && k === d.Y2.BOOKMARKS
-                                        ? (0, i.jsx)(p.J, { closePopout: F })
-                                        : k === d.Y2.SCHEDULED
+                                    : k === c.Y2.MENTIONS
+                                      ? (0, i.jsx)(E.A, { onJump: X })
+                                      : W && Y && k === c.Y2.BOOKMARKS
+                                        ? (0, i.jsx)(g.J, { closePopout: F })
+                                        : k === c.Y2.SCHEDULED
                                           ? (0, i.jsx)(b.w, {})
-                                          : (0, i.jsx)(r.tH, {
+                                          : (0, i.jsx)(a.tH, {
                                                 fallback: (0, i.jsx)(N.T, {}),
                                                 children: (0, i.jsx)(N.Ay, {
-                                                    onJump: q,
+                                                    onJump: X,
                                                     showTutorial: B,
                                                     setSeenTutorial: H,
                                                     closePopout: F,

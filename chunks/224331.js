@@ -1,8 +1,9 @@
-n.d(t, { A: () => s });
+"use strict";
+n.d(t, { A: () => l });
 var i = n(64700),
-    l = n(915667);
-function s(e, t) {
+    s = n(915667);
+function l(e, t) {
     return i.useCallback(() => {
-        (0, l.A)(e, t);
+        (0, s.A)(e, t);
     }, [e, t]);
 }

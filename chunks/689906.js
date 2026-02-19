@@ -1,34 +1,35 @@
-n.d(t, { A: () => d });
+"use strict";
+n.d(t, { A: () => c });
 var i = n(64700),
-    l = n(512750),
-    s = n(397927),
-    a = n(997509),
-    r = n(568065),
+    s = n(512750),
+    l = n(397927),
+    r = n(997509),
+    a = n(568065),
     o = n(652215);
-function d(e, t) {
+function c(e, t) {
     let n = i.useCallback(
         (n) => {
-            if ((n.stopPropagation(), t.type !== r.o9.LEVEL))
-                switch (((0, s.OoC)(r.Fq), t.skuId)) {
-                    case l.SL:
-                        a.A.open(e, o.BEX.TAG, o.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
+            if ((n.stopPropagation(), t.type !== a.o9.LEVEL))
+                switch (((0, l.OoC)(a.Fq), t.skuId)) {
+                    case s.SL:
+                        r.A.open(e, o.BEX.TAG, o.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
-                    case l.aN:
-                        a.A.open(e, o.BEX.ROLES, o.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
+                    case s.aN:
+                        r.A.open(e, o.BEX.ROLES, o.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
-                    case l.FB:
-                        a.A.open(
+                    case s.FB:
+                        r.A.open(
                             e,
                             o.BEX.BOOST_PERKS,
                             o.JJy.GUILD_POWERUPS_OVERVIEW_CARD,
                             o.nd0.BOOST_PERKS_VANITY_URL,
                         );
                         return;
-                    case l.jF:
-                    case l.OJ:
-                    case l.Ht:
-                    case l.tv:
-                        (0, s.s7G)(), a.A.open(e, o.BEX.TAG, o.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
+                    case s.jF:
+                    case s.OJ:
+                    case s.Ht:
+                    case s.tv:
+                        (0, l.s7G)(), r.A.open(e, o.BEX.TAG, o.JJy.GUILD_POWERUPS_OVERVIEW_CARD);
                         return;
                     default:
                         return;
@@ -36,5 +37,5 @@ function d(e, t) {
         },
         [e, t],
     );
-    return t.type === r.o9.PERK ? n : void 0;
+    return t.type === a.o9.PERK ? n : void 0;
 }

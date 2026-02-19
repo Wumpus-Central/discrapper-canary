@@ -1,6 +1,7 @@
-n.d(t, { W: () => s });
+"use strict";
+n.d(t, { W: () => l });
 var i = n(311907),
-    l = n(380335);
-function s() {
-    return (0, i.bG)([l.A], () => l.A.getMessageRequestsCount());
+    s = n(380335);
+function l() {
+    return (0, i.bG)([s.A], () => s.A.getMessageRequestsCount());
 }

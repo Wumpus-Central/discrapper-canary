@@ -1,83 +1,84 @@
-n.d(t, { A: () => p });
+"use strict";
+n.d(t, { A: () => m });
 var i = n(627968);
 n(64700);
-var l = n(417597),
-    s = n(397927),
-    a = n(882997),
-    r = n(731474),
+var s = n(417597),
+    l = n(397927),
+    r = n(882997),
+    a = n(731474),
     o = n(383501),
-    d = n(977997),
-    c = n(458829),
+    c = n(977997),
+    d = n(458829),
     u = n(857253),
     h = n(694967),
     A = n(431516),
-    g = n(652215),
-    m = n(985018);
-function p(e) {
-    let t = (0, l.bG)([o.A], () => o.A.getChannelId() === e.id),
-        p = (0, u.A)(),
-        _ = p?.channelId === e.id,
-        x = (0, r.J)(e) && !e.isPrivate(),
-        f = (0, r.A)(e),
-        E = (!(0, l.bG)([d.A], () => d.A.isInChannel(e.id)) && f) || x,
-        C = (0, h.A)();
-    if (!_ && 0 === C.length) return null;
+    p = n(652215),
+    g = n(985018);
+function m(e) {
+    let t = (0, s.bG)([o.A], () => o.A.getChannelId() === e.id),
+        m = (0, u.A)(),
+        _ = m?.channelId === e.id,
+        f = (0, a.J)(e) && !e.isPrivate(),
+        x = (0, a.A)(e),
+        C = (!(0, s.bG)([c.A], () => c.A.isInChannel(e.id)) && x) || f,
+        E = (0, h.A)();
+    if (!_ && 0 === E.length) return null;
     let I = (0, A.A)(void 0);
     return _
-        ? (0, i.jsx)(s.Drp, {
-              label: m.intl.string(m.t.PlwgdU),
+        ? (0, i.jsx)(l.Drp, {
+              label: g.intl.string(g.t.PlwgdU),
               id: "handoff",
               action: () => {
-                  (0, c.x)(p);
+                  (0, d.x)(m);
               },
               icon: I,
               leadingAccessory: { type: "icon", icon: I },
-              disabled: E,
+              disabled: C,
           })
-        : C.map((l) => {
-              var r, o;
-              let d = (0, A.A)(l.type);
+        : E.map((s) => {
+              var a, o;
+              let c = (0, A.A)(s.type);
               return (0, i.jsx)(
-                  s.Drp,
+                  l.Drp,
                   {
-                      id: `transfer-${l.type}-${l.id}`,
+                      id: `transfer-${s.type}-${s.id}`,
                       label:
-                          ((r = l.type),
+                          ((a = s.type),
                           (o = t),
-                          r === g.fg2.XBOX
+                          a === p.fg2.XBOX
                               ? o
-                                  ? m.intl.string(m.t["qVE/VF"])
-                                  : m.intl.string(m.t.E8euSk)
-                              : r === g.fg2.PLAYSTATION
+                                  ? g.intl.string(g.t["qVE/VF"])
+                                  : g.intl.string(g.t.E8euSk)
+                              : a === p.fg2.PLAYSTATION
                                 ? o
-                                    ? m.intl.string(m.t.vzfxmY)
-                                    : m.intl.string(m.t.QxEYDj)
-                                : r === g.fg2.PLAYSTATION_STAGING
+                                    ? g.intl.string(g.t.vzfxmY)
+                                    : g.intl.string(g.t.QxEYDj)
+                                : a === p.fg2.PLAYSTATION_STAGING
                                   ? o
-                                      ? m.intl.string(m.t.BDiXtV)
-                                      : m.intl.string(m.t["bhdB9+"])
+                                      ? g.intl.string(g.t.BDiXtV)
+                                      : g.intl.string(g.t["bhdB9+"])
                                   : void 0),
                       action: () => {
-                          !l.twoWayLink || l.revoked
-                              ? (0, a.A)({ platformType: l.type, location: "Console Transfer Item" })
-                              : l.type === g.fg2.XBOX
-                                ? (0, s.mMO)(async () => {
-                                      let { default: t } = await Promise.all([n.e("50906"), n.e("67670")]).then(
+                          !s.twoWayLink || s.revoked
+                              ? (0, r.A)({ platformType: s.type, location: "Console Transfer Item" })
+                              : s.type === p.fg2.XBOX
+                                ? (0, l.mMO)(async () => {
+                                      let { default: t } = await Promise.all([n.e("97484"), n.e("67670")]).then(
                                           n.bind(n, 188072),
                                       );
                                       return (n) => (0, i.jsx)(t, { ...n, channel: e });
                                   })
-                                : (l.type === g.fg2.PLAYSTATION || l.type === g.fg2.PLAYSTATION_STAGING) &&
-                                  (0, s.mMO)(async () => {
+                                : (s.type === p.fg2.PLAYSTATION || s.type === p.fg2.PLAYSTATION_STAGING) &&
+                                  (0, l.mMO)(async () => {
                                       let { default: t } = await n.e("71282").then(n.bind(n, 315337));
-                                      return (n) => (0, i.jsx)(t, { ...n, platform: l.type, channel: e });
+                                      return (n) => (0, i.jsx)(t, { ...n, platform: s.type, channel: e });
                                   });
                       },
-                      icon: d,
-                      leadingAccessory: { type: "icon", icon: d },
-                      disabled: E,
+                      icon: c,
+                      leadingAccessory: { type: "icon", icon: c },
+                      disabled: C,
                   },
-                  l.id,
+                  s.id,
               );
           });
 }

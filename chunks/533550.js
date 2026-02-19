@@ -1,16 +1,17 @@
-n.d(t, { RX: () => o, q8: () => c });
+"use strict";
+n.d(t, { RX: () => o, q8: () => d });
 var i = n(64700),
-    l = n(942381),
-    s = n(265690),
-    a = n(121894);
-let r = (0, s.h)((e) => ({ upsellsByGuildId: {} }));
+    s = n(942381),
+    l = n(265690),
+    r = n(121894);
+let a = (0, l.h)((e) => ({ upsellsByGuildId: {} }));
 function o(e) {
-    return r((t) => {
+    return a((t) => {
         let n = {};
         return null == e ? n : (t.upsellsByGuildId[e] ?? n);
-    }, l.x);
+    }, s.x);
 }
-function d(e) {
+function c(e) {
     if (null == e) return !1;
     try {
         return window.getComputedStyle(e).overflow.includes("scroll");
@@ -18,23 +19,23 @@ function d(e) {
         return !1;
     }
 }
-function c(e, t) {
+function d(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        l = i.useRef(null);
+        s = i.useRef(null);
     return (
         i.useLayoutEffect(() => {
-            let i = l.current,
-                s = () => {
+            let i = s.current,
+                l = () => {
                     requestAnimationFrame(() => {
                         var i;
                         (i = {
                             name: t,
                             guildId: e,
                             disabled: n,
-                            boundingRect: l.current?.getBoundingClientRect() ?? null ?? null,
+                            boundingRect: s.current?.getBoundingClientRect() ?? null ?? null,
                         }),
-                            (0, a.r)(() => {
-                                r.setState((e) => ({
+                            (0, r.r)(() => {
+                                a.setState((e) => ({
                                     upsellsByGuildId: {
                                         ...(e.upsellsByGuildId ?? {}),
                                         [i.guildId]: { ...(e.upsellsByGuildId[i.guildId] ?? {}), [i.name]: i },
@@ -43,20 +44,20 @@ function c(e, t) {
                             });
                     });
                 };
-            if (null == i) return s(), () => {};
+            if (null == i) return l(), () => {};
             let o = (function (e) {
                 let t = e.parentNode;
-                for (; null != t && t !== document.body && !d(t); ) t = t.parentNode;
-                return d(t) ? t : null;
+                for (; null != t && t !== document.body && !c(t); ) t = t.parentNode;
+                return c(t) ? t : null;
             })(i);
             return (
-                s(),
-                o?.addEventListener("scroll", s, { passive: !0 }),
+                l(),
+                o?.addEventListener("scroll", l, { passive: !0 }),
                 () => {
-                    o?.removeEventListener("scroll", s);
+                    o?.removeEventListener("scroll", l);
                 }
             );
         }, [e, t, n]),
-        l
+        s
     );
 }

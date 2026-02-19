@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__5aa3a",
     os: "tiles__5aa3a",

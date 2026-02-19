@@ -22,9 +22,24 @@ let i = "collectibles shop product details modal",
         }
         (0, r.mMO)(
             async () => {
-                let { default: e } = await Promise.all([a.e("68859"), a.e("93612"), a.e("91290")]).then(
-                    a.bind(a, 929400),
-                );
+                let { default: e } = await Promise.all([
+                    a.e("8555"),
+                    a.e("28936"),
+                    a.e("68859"),
+                    a.e("40396"),
+                    a.e("13088"),
+                    a.e("48330"),
+                    a.e("92414"),
+                    a.e("94857"),
+                    a.e("48840"),
+                    a.e("49559"),
+                    a.e("37372"),
+                    a.e("99970"),
+                    a.e("95095"),
+                    a.e("41595"),
+                    a.e("93612"),
+                    a.e("16289"),
+                ]).then(a.bind(a, 929400));
                 return (a) =>
                     (0, l.jsx)(e, {
                         ...a,

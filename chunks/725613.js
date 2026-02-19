@@ -1,43 +1,44 @@
-n.d(t, { A: () => p });
+"use strict";
+n.d(t, { A: () => m });
 var i = n(478437),
-    l = n(574381),
-    s = n(311907),
-    a = n(73153),
-    r = n(142120),
+    s = n(574381),
+    l = n(311907),
+    r = n(73153),
+    a = n(142120),
     o = n(927813),
-    d = n(661470);
-let c = new Set(),
+    c = n(661470);
+let d = new Set(),
     u = {};
 function h(e) {
     return new Date(e * o.A.Millis.SECOND).getTime();
 }
 function A() {
-    c.clear();
+    d.clear();
 }
-function g(e) {
-    c.delete(e.guild.id);
+function p(e) {
+    d.delete(e.guild.id);
 }
-class m extends s.Ay.Store {
+class g extends l.Ay.Store {
     initialize() {
-        this.waitFor(r.A);
+        this.waitFor(a.A);
     }
     static displayName = "VoiceChannelStartTimeStore";
     getStartTime(e) {
         if (null != e && null != e.guild_id && e.type === i.r.GUILD_VOICE) return u[e.guild_id]?.[e.id];
     }
     hasRequestedStartTimes(e) {
-        return c.has(e);
+        return d.has(e);
     }
 }
-let p = new m(a.h, {
-    GUILD_CREATE: g,
-    GUILD_DELETE: g,
+let m = new g(r.h, {
+    GUILD_CREATE: p,
+    GUILD_DELETE: p,
     CONNECTION_RESUMED: A,
     CONNECTION_OPEN: A,
     VOICE_CHANNEL_START_TIME_UPDATE: function (e) {
         let { guildId: t, id: n, voiceStartTime: i } = e,
-            s = d.L.getCurrentConfig({ guildId: t, location: "VoiceChannelStartTimeStore" }).enabled;
-        if (((0, l.un)() || (0, l.m0)()) && !s) return !1;
+            l = c.L.getCurrentConfig({ guildId: t, location: "VoiceChannelStartTimeStore" }).enabled;
+        if (((0, s.un)() || (0, s.m0)()) && !l) return !1;
         null == u[t] && (u[t] = {}), (u[t][n] = null != i ? h(i) : void 0);
     },
     CHANNEL_INFO: function (e) {
@@ -46,6 +47,6 @@ let p = new m(a.h, {
     },
     FETCH_CHANNEL_INFO: function (e) {
         let { guildId: t } = e;
-        c.add(t), r.A.getSocket().requestChannelInfo(t, ["status", "voice_start_time"]);
+        d.add(t), a.A.getSocket().requestChannelInfo(t, ["status", "voice_start_time"]);
     },
 });

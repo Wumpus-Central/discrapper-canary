@@ -1,29 +1,30 @@
+"use strict";
 n.d(t, { A: () => u });
 var i = n(627968);
 n(64700);
-var l = n(503698),
-    s = n.n(l),
-    a = n(397927),
-    r = n(685399),
+var s = n(503698),
+    l = n.n(s),
+    r = n(397927),
+    a = n(685399),
     o = n(667936),
-    d = n(879349),
-    c = n(439792);
+    c = n(879349),
+    d = n(439792);
 function u(e) {
-    let { channel: t, onAction: n, isStandardGap: l } = e,
-        u = (0, r.Ay)(t),
-        h = Array.from((0, r.Rz)(u).values());
+    let { channel: t, onAction: n, isStandardGap: s } = e,
+        u = (0, a.Ay)(t),
+        h = Array.from((0, a.Rz)(u).values());
     return 0 === h.length
         ? null
-        : (0, i.jsxs)(a.HOs, {
-              className: s()(c.kL, { [c.iA]: l }),
+        : (0, i.jsxs)(r.HOs, {
+              className: l()(d.kL, { [d.iA]: s }),
               children: [
-                  (0, i.jsx)("div", { className: c.oT, children: (0, i.jsx)(d.A, { channel: t }) }),
-                  (0, i.jsx)("div", { className: c.zN }),
-                  h.map((e, l) =>
+                  (0, i.jsx)("div", { className: d.oT, children: (0, i.jsx)(c.A, { channel: t }) }),
+                  (0, i.jsx)("div", { className: d.zN }),
+                  h.map((e, s) =>
                       (0, i.jsx)(
                           o.A,
                           { embeddedApp: e, presenceActivity: e.presenceActivity ?? void 0, channel: t, onAction: n },
-                          l,
+                          s,
                       ),
                   ),
               ],

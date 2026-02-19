@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     nM: "row_d6271c",
     Vs: "tile_d6271c",

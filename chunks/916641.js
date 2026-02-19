@@ -1,11 +1,12 @@
-n.d(t, { A: () => s });
+"use strict";
+n.d(t, { A: () => l });
 var i = n(544105),
-    l = n(985018);
-function s(e) {
+    s = n(985018);
+function l(e) {
     switch (e) {
         case i.f$.XBOX:
-            return l.intl.string(l.t.T0uYK9);
+            return s.intl.string(s.t.T0uYK9);
         case i.f$.PLAYSTATION:
-            return l.intl.string(l.t.FWAzS6);
+            return s.intl.string(s.t.FWAzS6);
     }
 }

@@ -1,94 +1,95 @@
+"use strict";
 n.d(t, { A: () => R });
 var i = n(627968),
-    l = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(311907),
+    s = n(64700),
+    l = n(503698),
+    r = n.n(l),
+    a = n(311907),
     o = n(397927),
-    d = n(378939),
-    c = n(964486),
+    c = n(378939),
+    d = n(964486),
     u = n(475743),
     h = n(323073),
     A = n(202803),
-    g = n(636922),
-    m = n(835835),
-    p = n(566908),
+    p = n(636922),
+    g = n(835835),
+    m = n(566908),
     _ = n(253932),
-    x = n(734057),
-    f = n(517019),
-    E = n(309010),
-    C = n(187508),
+    f = n(734057),
+    x = n(517019),
+    C = n(309010),
+    E = n(187508),
     I = n(576456),
-    S = n(572448),
-    b = n(963702),
-    N = n(652215),
+    b = n(572448),
+    N = n(963702),
+    S = n(652215),
     T = n(985018),
-    j = n(318136);
-let v = { offset: { left: 4, right: -12 } };
-function y(e, t, n) {
-    let i = t ? C.Ay.guildFilter : null,
-        l = t ? C.Ay.roleFilter : null,
-        s = t ? C.Ay.everyoneFilter : null,
-        a = null;
-    null != e && null != i && (a = i === N.KE7.ALL_SERVERS ? null : e.getGuildId()),
-        d.A.fetchRecentMentions({ before: n, limit: N.Ue3, guildId: a, roles: l, everyone: s });
+    v = n(318136);
+let y = { offset: { left: 4, right: -12 } };
+function j(e, t, n) {
+    let i = t ? E.Ay.guildFilter : null,
+        s = t ? E.Ay.roleFilter : null,
+        l = t ? E.Ay.everyoneFilter : null,
+        r = null;
+    null != e && null != i && (r = i === S.KE7.ALL_SERVERS ? null : e.getGuildId()),
+        c.A.fetchRecentMentions({ before: n, limit: S.Ue3, guildId: r, roles: s, everyone: l });
 }
 function R(e) {
     let { onJump: t } = e,
-        n = (0, r.bG)([x.A, E.A], () => x.A.getChannel(E.A.getChannelId())),
+        n = (0, a.bG)([f.A, C.A], () => f.A.getChannel(C.A.getChannelId())),
         {
-            messages: s,
+            messages: l,
             hasMore: o,
             loading: h,
-            guildFilter: g,
+            guildFilter: p,
             roleFilter: _,
-            everyoneFilter: f,
-        } = (0, r.cf)([C.Ay], () => ({
-            messages: C.Ay.getMentions(),
-            hasMore: C.Ay.hasMore,
-            loading: C.Ay.loading,
-            guildFilter: C.Ay.guildFilter,
-            roleFilter: C.Ay.roleFilter,
-            everyoneFilter: C.Ay.everyoneFilter,
+            everyoneFilter: x,
+        } = (0, a.cf)([E.Ay], () => ({
+            messages: E.Ay.getMentions(),
+            hasMore: E.Ay.hasMore,
+            loading: E.Ay.loading,
+            guildFilter: E.Ay.guildFilter,
+            roleFilter: E.Ay.roleFilter,
+            everyoneFilter: E.Ay.everyoneFilter,
         })),
-        I = (0, p.Sc)({ location: "RecentMentions" }),
-        S = (0, u.A)(g),
-        b = (0, u.A)(_),
-        v = (0, u.A)(f);
-    l.useEffect(() => {
-        C.Ay.hasLoadedEver
-            ? ((null != S && g !== S) || (null != b && _ !== b) || (null != v && f !== v)) && y(n, !0)
-            : y(n, !0);
-    }, [S, g, b, _, v, f, n, !0]),
-        (0, c.Ay)(() => {
-            s?.some(A.$r) && (d.A.clearMentions(), y(n, !0));
+        I = (0, m.Sc)({ location: "RecentMentions" }),
+        b = (0, u.A)(p),
+        N = (0, u.A)(_),
+        y = (0, u.A)(x);
+    s.useEffect(() => {
+        E.Ay.hasLoadedEver
+            ? ((null != b && p !== b) || (null != N && _ !== N) || (null != y && x !== y)) && j(n, !0)
+            : j(n, !0);
+    }, [b, p, N, _, y, x, n, !0]),
+        (0, d.Ay)(() => {
+            l?.some(A.$r) && (c.A.clearMentions(), j(n, !0));
         }),
-        l.useEffect(
+        s.useEffect(
             () => () => {
-                d.A.truncateMentions(N.Ue3);
+                c.A.truncateMentions(S.Ue3);
             },
             [],
         );
-    let R = l.useCallback(() => null, []);
-    return (0, i.jsx)(m.Ay, {
-        className: a()(j.sH, { [j.qC]: I }),
-        scrollerClassName: j.XG,
+    let R = s.useCallback(() => null, []);
+    return (0, i.jsx)(g.Ay, {
+        className: r()(v.sH, { [v.qC]: I }),
+        scrollerClassName: v.XG,
         onFetch: () => null,
         onJump: t,
         onCloseMessage: function (e) {
-            d.A.deleteRecentMention(e.id);
+            c.A.deleteRecentMention(e.id);
         },
         channel: n,
-        messages: s,
+        messages: l,
         loading: h,
         hasMore: o,
         analyticsName: "Recent Mentions",
         loadMore: function () {
-            y(n, !0, null != s && s.length > 0 ? s[s.length - 1].id : null);
+            j(n, !0, null != l && l.length > 0 ? l[l.length - 1].id : null);
         },
         canCloseAllMessages: !0,
         renderHeader: R,
-        renderEmptyState: D,
+        renderEmptyState: M,
         renderMessage: O,
         "aria-label": T.intl.string(T.t.jbV6MM),
         listName: "recents",
@@ -98,35 +99,35 @@ function O(e, t) {
     return [(0, i.jsx)(L, { message: e, gotoMessage: t, dismissible: !0 }, e.id)];
 }
 function L(e) {
-    let { message: t, gotoMessage: n, dismissible: l } = e;
+    let { message: t, gotoMessage: n, dismissible: s } = e;
     if (null == t) return null;
-    let s = x.A.getChannel(t.channel_id);
-    if (null == s || (0, h.Jm)(s) || (0, h.$v)(s)) return null;
-    let a = f.A.didAgree(s.getGuildId()),
-        r = !!(0, h.Gc)(s) && !a;
+    let l = f.A.getChannel(t.channel_id);
+    if (null == l || (0, h.Jm)(l) || (0, h.$v)(l)) return null;
+    let r = x.A.didAgree(l.getGuildId()),
+        a = !!(0, h.Gc)(l) && !r;
     return (0, i.jsxs)("div", {
-        className: j.kL,
+        className: v.kL,
         children: [
-            (0, i.jsx)(S.A, {
-                channel: s,
+            (0, i.jsx)(b.A, {
+                channel: l,
                 gotoChannel: n,
                 children:
-                    null != l ? (0, i.jsx)(o.JnF, { size: "sm", onClick: () => d.A.deleteRecentMention(t.id) }) : null,
+                    null != s ? (0, i.jsx)(o.JnF, { size: "sm", onClick: () => c.A.deleteRecentMention(t.id) }) : null,
             }),
             (0, i.jsxs)("div", {
-                className: j.zC,
+                className: v.zC,
                 children: [
-                    (0, i.jsx)(I.A, { className: j.QT, onJump: n }),
+                    (0, i.jsx)(I.A, { className: v.QT, onJump: n }),
                     (0, i.jsx)(
-                        g.A,
+                        p.A,
                         {
                             message: t,
-                            channel: s,
-                            className: j.iU,
-                            hideAccessories: r,
+                            channel: l,
+                            className: v.iU,
+                            hideAccessories: a,
                             compact: _.hH.getSetting(),
                             animateAvatar: !1,
-                            focusProps: v,
+                            focusProps: y,
                             trackAnnouncementViews: !0,
                         },
                         t.id,
@@ -136,6 +137,6 @@ function L(e) {
         ],
     });
 }
-function D() {
-    return (0, i.jsx)(b.A, { Icon: o.XxR, header: T.intl.string(T.t.bgDz74), tip: T.intl.string(T.t.NS15vk) });
+function M() {
+    return (0, i.jsx)(N.A, { Icon: o.XxR, header: T.intl.string(T.t.bgDz74), tip: T.intl.string(T.t.NS15vk) });
 }

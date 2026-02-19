@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Io: "pill__4f4b6",
     iZ: "notificationsIcon__4f4b6",

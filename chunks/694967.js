@@ -1,14 +1,15 @@
-n.d(t, { A: () => r });
+"use strict";
+n.d(t, { A: () => a });
 var i = n(311907),
-    l = n(962173),
-    s = n(403362),
-    a = n(652215);
-function r() {
-    return (0, i.yK)([l.A], () =>
+    s = n(962173),
+    l = n(403362),
+    r = n(652215);
+function a() {
+    return (0, i.yK)([s.A], () =>
         [
-            l.A.getAccount(null, a.fg2.XBOX),
-            l.A.getAccount(null, a.fg2.PLAYSTATION),
-            l.A.getAccount(null, a.fg2.PLAYSTATION_STAGING),
-        ].filter(s.Vq),
+            s.A.getAccount(null, r.fg2.XBOX),
+            s.A.getAccount(null, r.fg2.PLAYSTATION),
+            s.A.getAccount(null, r.fg2.PLAYSTATION_STAGING),
+        ].filter(l.Vq),
     );
 }

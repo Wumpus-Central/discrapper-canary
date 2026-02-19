@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     mO: "gameName__8c6c2",
     On: "clickableGameName__8c6c2",

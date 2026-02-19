@@ -1,13 +1,14 @@
-n.d(t, { u: () => a });
+"use strict";
+n.d(t, { u: () => r });
 var i = n(617641),
-    l = n(168447),
-    s = n(546140);
-function a(e) {
+    s = n(168447),
+    l = n(546140);
+function r(e) {
     let t = (0, i.Lc)({ location: "safety-tools-button" }),
-        n = (0, s.L)(),
-        a = (0, l.Y)(e);
+        n = (0, l.L)(),
+        r = (0, s.Y)(e);
     if (!t || !n) return;
-    let r = a.filter((e) => null != e.dismiss_timestamp);
-    if (0 !== r.length)
-        return r.sort((e, t) => (e.type > t.type || e.dismiss_timestamp < t.dismiss_timestamp ? 1 : -1))[0];
+    let a = r.filter((e) => null != e.dismiss_timestamp);
+    if (0 !== a.length)
+        return a.sort((e, t) => (e.type > t.type || e.dismiss_timestamp < t.dismiss_timestamp ? 1 : -1))[0];
 }

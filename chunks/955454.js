@@ -1,53 +1,54 @@
-n.d(t, { A: () => E });
+"use strict";
+n.d(t, { A: () => C });
 var i = n(627968),
-    l = n(64700),
-    s = n(735438),
-    a = n.n(s),
-    r = n(311907),
+    s = n(64700),
+    l = n(735438),
+    r = n.n(l),
+    a = n(311907),
     o = n(73153),
-    d = n(334738),
-    c = n(835369),
+    c = n(334738),
+    d = n(835369),
     u = n(218152),
     h = n(970278),
     A = n(747926),
-    g = n(734057),
-    m = n(403362),
-    p = n(661191),
+    p = n(734057),
+    g = n(403362),
+    m = n(661191),
     _ = n(652215),
-    x = n(37411),
-    f = n(357976);
-function E(e) {
-    let { channel: t, channelRecord: n, deleteChannel: s } = e,
-        E = (0, r.yK)(
-            [h.A, g.A],
+    f = n(37411),
+    x = n(357976);
+function C(e) {
+    let { channel: t, channelRecord: n, deleteChannel: l } = e,
+        C = (0, a.yK)(
+            [h.A, p.A],
             () =>
-                a()(h.A.getThreadsForParent(n.guild_id, n.id))
+                r()(h.A.getThreadsForParent(n.guild_id, n.id))
                     .values()
                     .filter((e) => {
                         let { id: n } = e;
-                        return p.default.compare(n, t.oldestReadMessageId) > 0;
+                        return m.default.compare(n, t.oldestReadMessageId) > 0;
                     })
                     .map((e) => {
                         let { id: t } = e;
-                        return g.A.getChannel(t);
+                        return p.A.getChannel(t);
                     })
-                    .filter(m.Vq)
-                    .sort((e, t) => p.default.compare(e.id, t.id))
+                    .filter(g.Vq)
+                    .sort((e, t) => m.default.compare(e.id, t.id))
                     .value(),
             [t.oldestReadMessageId, n.guild_id, n.id],
         ),
-        C = l.useCallback((e, t) => {
-            (0, A.JA)(e, t, x.H9.INBOX);
+        E = s.useCallback((e, t) => {
+            (0, A.JA)(e, t, f.H9.INBOX);
         }, []);
     return (
-        l.useEffect(() => {
+        s.useEffect(() => {
             null == n ||
                 !t.isFullyLoaded ||
                 t.hasError ||
                 t.collapsed ||
-                0 !== E.length ||
+                0 !== C.length ||
                 o.h.wait(() => {
-                    (0, d.ack)(
+                    (0, c.ack)(
                         t.channelId,
                         {
                             section: _.JJy.INBOX,
@@ -56,15 +57,15 @@ function E(e) {
                         },
                         !0,
                     ),
-                        s(t.channelId);
+                        l(t.channelId);
                 });
         }),
         (0, i.jsx)("div", {
-            className: f.k,
-            children: E.map((e) =>
+            className: x.k,
+            children: C.map((e) =>
                 (0, i.jsx)(
                     u.Cp,
-                    { channel: n, children: (0, i.jsx)(c.Ay, { className: f.u, threadId: e.id, goToThread: C }) },
+                    { channel: n, children: (0, i.jsx)(d.Ay, { className: x.u, threadId: e.id, goToThread: E }) },
                     e.id,
                 ),
             ),

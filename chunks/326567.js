@@ -1,11 +1,12 @@
-n.d(t, { r: () => s });
+"use strict";
+n.d(t, { r: () => l });
 var i = n(627968);
 n(64700);
-var l = n(442433);
-function s(e, t, s, a, r) {
-    let o = s.getGuildId();
+var s = n(442433);
+function l(e, t, l, r, a) {
+    let o = l.getGuildId();
     return null != o
-        ? (0, l.L3)(
+        ? (0, s.L3)(
               e,
               async () => {
                   let { default: e } = await n.e("52502").then(n.bind(n, 335253));
@@ -13,14 +14,14 @@ function s(e, t, s, a, r) {
                       (0, i.jsx)(e, {
                           ...n,
                           user: t,
-                          channel: s,
+                          channel: l,
                           guildId: o,
-                          onInteraction: (e) => r("GuildVoiceUserContextMenu", e),
+                          onInteraction: (e) => a("GuildVoiceUserContextMenu", e),
                       });
               },
-              a,
+              r,
           )
-        : (0, l.L3)(
+        : (0, s.L3)(
               e,
               async () => {
                   let { default: e } = await n.e("43076").then(n.bind(n, 661455));
@@ -28,10 +29,10 @@ function s(e, t, s, a, r) {
                       (0, i.jsx)(e, {
                           ...n,
                           user: t,
-                          channel: s,
-                          onInteraction: (e) => r("BaseVoiceUserContextMenu", e),
+                          channel: l,
+                          onInteraction: (e) => a("BaseVoiceUserContextMenu", e),
                       });
               },
-              a,
+              r,
           );
 }

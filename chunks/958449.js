@@ -1,49 +1,50 @@
+"use strict";
 n.d(t, { h: () => o });
 var i = n(627968),
-    l = n(64700),
-    s = n(416696),
-    a = n(709562),
-    r = n(985018);
+    s = n(64700),
+    l = n(416696),
+    r = n(709562),
+    a = n(985018);
 function o(e) {
     let t,
         n,
         {
             hasPermission: o,
-            streamActive: d,
-            isSelfStream: c,
+            streamActive: c,
+            isSelfStream: d,
             centerButton: u,
             onMouseEnter: h,
             onMouseLeave: A,
-            renderNUXHighlight: g,
-            buttonRef: m,
-            ...p
+            renderNUXHighlight: p,
+            buttonRef: g,
+            ...m
         } = e,
-        _ = u ? a.l : a.A;
-    n = d
-        ? c
-            ? r.intl.string(r.t.S5anIc)
-            : r.intl.string(r.t.q3O3J8)
+        _ = u ? r.l : r.A;
+    n = c
+        ? d
+            ? a.intl.string(a.t.S5anIc)
+            : a.intl.string(a.t.q3O3J8)
         : o
-          ? r.intl.string(r.t.fjBNo1)
-          : r.intl.string(r.t.uQn9B8);
-    let { Component: x, events: f, play: E } = (0, s.c)(d ? "disable" : "enable");
+          ? a.intl.string(a.t.fjBNo1)
+          : a.intl.string(a.t.uQn9B8);
+    let { Component: f, events: x, play: C } = (0, l.c)(c ? "disable" : "enable");
     return (
-        l.useEffect(() => () => E(), [d, E]),
+        s.useEffect(() => () => C(), [c, C]),
         (0, i.jsx)(_, {
-            buttonRef: m,
+            buttonRef: g,
             isTrayButton: !0,
             label: n,
             disabled: !o,
-            iconComponent: x,
-            isActive: d,
-            color: (g ? (t = "premiumGradient") : d && (t = "green"), t),
+            iconComponent: f,
+            isActive: c,
+            color: (p ? (t = "premiumGradient") : c && (t = "green"), t),
             onMouseEnter: (e) => {
-                h?.(e), f.onMouseEnter();
+                h?.(e), x.onMouseEnter();
             },
             onMouseLeave: (e) => {
-                A?.(e), f.onMouseLeave();
+                A?.(e), x.onMouseLeave();
             },
-            ...p,
+            ...m,
         })
     );
 }

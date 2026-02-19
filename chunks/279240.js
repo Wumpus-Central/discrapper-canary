@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     XA: "activityItemButtonInnerClass__8a940",
     LM: "activityItem__8a940",

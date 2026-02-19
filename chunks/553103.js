@@ -1,29 +1,30 @@
-n.d(t, { A: () => g });
+"use strict";
+n.d(t, { A: () => p });
 var i = n(512750),
-    l = n(311907),
-    s = n(71393),
-    a = n(645619),
-    r = n(840120),
+    s = n(311907),
+    l = n(71393),
+    r = n(645619),
+    a = n(840120),
     o = n(162362),
-    d = n(998418),
-    c = n(568065),
+    c = n(998418),
+    d = n(568065),
     u = n(652215),
     h = n(333354),
     A = n(985018);
-function g(e, t) {
-    let n = (0, l.bG)([s.A], () => s.A.getGuild(e)?.features),
-        g = (0, l.bG)([a.A], () => a.A.getStateForGuild(e)),
-        m = g?.allPowerups[i.FB],
-        p = (0, d.Ay)(e, m),
-        _ = (0, r.j$)(e, t),
-        x = m?.storeRemovalDate,
-        f = n?.has(u.GuildFeatures.PARTNERED) ?? !1,
-        E = _ && null != x && !f && p.type === c.b_.POWERUP_ACTIVATED,
-        C = E
+function p(e, t) {
+    let n = (0, s.bG)([l.A], () => l.A.getGuild(e)?.features),
+        p = (0, s.bG)([r.A], () => r.A.getStateForGuild(e)),
+        g = p?.allPowerups[i.FB],
+        m = (0, c.Ay)(e, g),
+        _ = (0, a.j$)(e, t),
+        f = g?.storeRemovalDate,
+        x = n?.has(u.GuildFeatures.PARTNERED) ?? !1,
+        C = _ && null != f && !x && m.type === d.b_.POWERUP_ACTIVATED,
+        E = C
             ? {
-                  title: A.intl.formatToPlainString(h.default.mgoPkU, { perkName: m?.title }),
-                  description: A.intl.formatToPlainString(h.default.UT9pkI, { dateString: (0, o.A)(x) }),
+                  title: A.intl.formatToPlainString(h.default.mgoPkU, { perkName: g?.title }),
+                  description: A.intl.formatToPlainString(h.default.UT9pkI, { dateString: (0, o.A)(f) }),
               }
             : null;
-    return { shouldShow: E, notificationConfig: C };
+    return { shouldShow: C, notificationConfig: E };
 }

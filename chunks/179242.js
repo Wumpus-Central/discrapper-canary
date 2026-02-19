@@ -1,82 +1,83 @@
-n.d(t, { A: () => f });
+"use strict";
+n.d(t, { A: () => x });
 var i = n(627968);
 n(64700);
-var l = n(163126),
-    s = n(688810),
-    a = n(114212),
-    r = n(345942),
+var s = n(163126),
+    l = n(688810),
+    r = n(114212),
+    a = n(345942),
     o = n(183555),
-    d = n(913453),
-    c = n(229187),
+    c = n(913453),
+    d = n(229187),
     u = n(657331),
     h = n(21241),
     A = n(503062),
-    g = n(51943),
-    m = n(946356),
-    p = n(359656),
+    p = n(51943),
+    g = n(946356),
+    m = n(359656),
     _ = n(985018),
-    x = n(576968);
-function f(e) {
+    f = n(576968);
+function x(e) {
     let { user: t, channelId: n } = e,
-        { analyticsLocations: f } = (0, s.Ay)(),
-        { context: E } = (0, o.NJ)(),
-        C = (0, l.A)(),
-        { mutualFriendsCount: I, mutualFriends: S, mutualGuilds: b } = (0, d.A)(t),
-        N = !t.bot && null != I && I > 0,
-        T = null != b && b.length > 0;
-    return N || T
-        ? (0, i.jsxs)(m.A.Overlay, {
-              className: x.Lw,
+        { analyticsLocations: x } = (0, l.Ay)(),
+        { context: C } = (0, o.NJ)(),
+        E = (0, s.A)(),
+        { mutualFriendsCount: I, mutualFriends: b, mutualGuilds: N } = (0, c.A)(t),
+        S = !t.bot && null != I && I > 0,
+        T = null != N && N.length > 0;
+    return S || T
+        ? (0, i.jsxs)(g.A.Overlay, {
+              className: f.Lw,
               children: [
                   T &&
-                      (0, i.jsx)(p.A, {
+                      (0, i.jsx)(m.A, {
                           section: "MUTUAL_GUILDS",
                           header: _.intl.string(_.t["4lTDZq"]),
-                          listClassName: x.p_,
-                          items: b.map((e) => {
-                              let { guild: n, nick: l } = e;
+                          listClassName: f.p_,
+                          items: N.map((e) => {
+                              let { guild: n, nick: s } = e;
                               return (0, i.jsx)(
-                                  g.A,
-                                  { user: t, guild: n, nick: l, onSelect: () => (0, r.u)(n.id) },
+                                  p.A,
+                                  { user: t, guild: n, nick: s, onSelect: () => (0, a.u)(n.id) },
                                   n.id,
                               );
                           }),
                       }),
-                  T && N && (0, i.jsx)(h.A, { className: x.yF }),
-                  N &&
-                      (0, i.jsx)(p.A, {
+                  T && S && (0, i.jsx)(h.A, { className: f.yF }),
+                  S &&
+                      (0, i.jsx)(m.A, {
                           section: "MUTUAL_FRIENDS",
                           header: _.intl.string(_.t["0mTJ3j"]),
-                          listClassName: x.p_,
-                          onExpand: () => (0, c.A)(t.id, C),
+                          listClassName: f.p_,
+                          onExpand: () => (0, d.A)(t.id, E),
                           items:
-                              null == S
+                              null == b
                                   ? Array.from({ length: I }).map((e, t) =>
                                         (0, i.jsxs)(
                                             "div",
                                             {
-                                                className: x.nC,
+                                                className: f.nC,
                                                 children: [
-                                                    (0, i.jsx)(a.FQ, { width: 40, opacity: 0.08 }),
-                                                    (0, i.jsx)(a.FQ, { width: 135, opacity: 0.08 }),
+                                                    (0, i.jsx)(r.FQ, { width: 40, opacity: 0.08 }),
+                                                    (0, i.jsx)(r.FQ, { width: 135, opacity: 0.08 }),
                                                 ],
                                             },
                                             t,
                                         ),
                                     )
-                                  : S.map((e) => {
-                                        let { key: t, user: l, status: s } = e;
+                                  : b.map((e) => {
+                                        let { key: t, user: s, status: l } = e;
                                         return (0, i.jsx)(
                                             A.A,
                                             {
-                                                user: l,
-                                                status: s,
+                                                user: s,
+                                                status: l,
                                                 channelId: n,
                                                 onSelect: () => {
                                                     (0, u.openUserProfileModal)({
-                                                        ...E,
-                                                        userId: l.id,
-                                                        sourceAnalyticsLocations: f,
+                                                        ...C,
+                                                        userId: s.id,
+                                                        sourceAnalyticsLocations: x,
                                                     });
                                                 },
                                             },

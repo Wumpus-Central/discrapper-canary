@@ -1,6 +1,7 @@
-n.d(t, { M: () => l });
+"use strict";
+n.d(t, { M: () => s });
 var i = n(985018);
-function l(e) {
+function s(e) {
     if (null == e) return null;
     switch (e.type) {
         case "embedded-activities":

@@ -1,45 +1,46 @@
-n.d(t, { A: () => p });
+"use strict";
+n.d(t, { A: () => g });
 var i = n(627968);
 n(64700);
-var l = n(503698),
-    s = n.n(l),
-    a = n(311907),
-    r = n(827343),
+var s = n(503698),
+    l = n.n(s),
+    r = n(311907),
+    a = n(827343),
     o = n(384059),
-    d = n(20504),
-    c = n(430452),
+    c = n(20504),
+    d = n(430452),
     u = n(824744),
     h = n(723702),
     A = n(447404),
-    m = n(35204);
-function p(e) {
+    p = n(35204);
+function g(e) {
     let {
             className: t,
             iconClassName: n,
-            sliderClassName: l,
-            userId: p,
-            context: g,
+            sliderClassName: s,
+            userId: g,
+            context: m,
             currentWindow: _ = window,
             location: f,
         } = e,
-        { currentVolume: x, muted: C } = (0, a.cf)([c.Ay], () => ({
-            currentVolume: c.Ay.getLocalVolume(p, g),
-            muted: c.Ay.isLocalMute(p, g),
+        { currentVolume: x, muted: C } = (0, r.cf)([d.Ay], () => ({
+            currentVolume: d.Ay.getLocalVolume(g, m),
+            muted: d.Ay.isLocalMute(g, m),
         }));
     return (0, i.jsx)(A.A, {
-        children: (0, i.jsx)(d.A, {
+        children: (0, i.jsx)(c.A, {
             currentWindow: _,
-            iconClassName: s()(n, m.pd),
-            sliderClassName: l,
+            iconClassName: l()(n, p.pd),
+            sliderClassName: s,
             className: t,
             value: (0, u.M)(x),
             muted: C,
             maxValue: h.isPlatformEmbedded ? 200 : 100,
             onValueChange: (e) => {
-                e > 0 && C && r.A.toggleLocalMute(p, g), r.A.setLocalVolume(p, (0, u.w)(e), g);
+                e > 0 && C && a.A.toggleLocalMute(g, m), a.A.setLocalVolume(g, (0, u.w)(e), m);
             },
             onToggleMute: () => {
-                null != f && (0, o.X)(f, o.O.VOLUME, C), r.A.toggleLocalMute(p, g);
+                null != f && (0, o.X)(f, o.O.VOLUME, C), a.A.toggleLocalMute(g, m);
             },
         }),
     });

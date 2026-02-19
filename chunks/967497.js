@@ -1,3 +1,4 @@
-n.d(t, { R: () => l });
+"use strict";
+n.d(t, { R: () => s });
 var i = n(793322);
-let l = { binds: ["mod+k", "mod+t"], comboKeysBindGlobal: !0, action: () => ((0, i.WU)("KEYBIND", ""), !1) };
+let s = { binds: ["mod+k", "mod+t"], comboKeysBindGlobal: !0, action: () => ((0, i.WU)("KEYBIND", ""), !1) };
