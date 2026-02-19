@@ -1,24 +1,25 @@
 "use strict";
 n.d(t, {
-    $8: () => k,
-    I7: () => X,
-    NI: () => M,
-    Q9: () => j,
-    ST: () => $,
-    Sr: () => z,
-    Wv: () => B,
-    Y2: () => F,
-    YU: () => H,
-    b8: () => Y,
-    dZ: () => K,
-    i2: () => x,
+    $8: () => G,
+    I7: () => J,
+    NI: () => k,
+    Q9: () => W,
+    ST: () => Z,
+    Sr: () => q,
+    Wv: () => j,
+    Y2: () => B,
+    YU: () => Y,
+    b8: () => K,
+    dZ: () => $,
+    i2: () => P,
     lU: () => L,
-    mK: () => q,
-    nn: () => W,
-    p9: () => w,
-    uE: () => U,
-    uN: () => V,
-    yM: () => P,
+    mK: () => X,
+    nn: () => z,
+    p9: () => M,
+    tC: () => et,
+    uE: () => F,
+    uN: () => H,
+    yM: () => U,
 });
 var r = n(64700),
     i = n(687123),
@@ -57,43 +58,53 @@ let O = new Set([g.q1.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT, g.q1.START_STAGE_PR
     ]),
     L = (e) => D.has(e);
 function w() {
-    let e = m.default.getCurrentUser();
-    return e?.ageVerificationStatus !== o.Tk.VERIFIED_ADULT;
+    return u.A.isFeatureAgeGated(i.t.REACTIVE_CHECK);
 }
 function x() {
-    let e = (0, s.bG)([m.default], () => m.default.getCurrentUser());
-    return e?.ageVerificationStatus !== o.Tk.VERIFIED_ADULT;
+    return (0, c.aX)(i.t.REACTIVE_CHECK);
 }
 function M() {
-    let e = m.default.getCurrentUser();
-    return e?.ageVerificationStatus === o.Tk.VERIFIED_TEEN;
+    let e = m.default.getCurrentUser(),
+        t = e?.ageVerificationStatus;
+    return !(t === o.Tk.VERIFIED_ADULT || (w() && t === o.Tk.INFERRED_ADULT));
 }
 function P() {
-    let e = (0, s.bG)([m.default], () => m.default.getCurrentUser());
-    return e?.ageVerificationStatus === o.Tk.VERIFIED_TEEN;
+    let e = (0, s.bG)([m.default], () => m.default.getCurrentUser()),
+        t = x() && e?.ageVerificationStatus === o.Tk.INFERRED_ADULT;
+    return e?.ageVerificationStatus !== o.Tk.VERIFIED_ADULT && !t;
 }
 function k() {
     let e = m.default.getCurrentUser();
-    return e?.ageVerificationStatus === o.Tk.VERIFIED_ADULT;
+    return e?.ageVerificationStatus === o.Tk.VERIFIED_TEEN;
 }
 function U() {
     let e = (0, s.bG)([m.default], () => m.default.getCurrentUser());
-    return e?.ageVerificationStatus === o.Tk.VERIFIED_ADULT;
+    return e?.ageVerificationStatus === o.Tk.VERIFIED_TEEN;
 }
 function G() {
-    return (0, s.bG)([m.default], () => m.default.getCurrentUser()?.ageVerificationStatus === o.Tk.INFERRED_ADULT);
+    let e = m.default.getCurrentUser(),
+        t = e?.ageVerificationStatus;
+    return t === o.Tk.VERIFIED_ADULT || (w() && t === o.Tk.INFERRED_ADULT);
 }
 function F() {
-    let e = G();
+    let e = (0, s.bG)([m.default], () => m.default.getCurrentUser()),
+        t = x() && e?.ageVerificationStatus === o.Tk.INFERRED_ADULT;
+    return e?.ageVerificationStatus === o.Tk.VERIFIED_ADULT || t;
+}
+function V() {
+    return (0, s.bG)([m.default], () => m.default.getCurrentUser()?.ageVerificationStatus === o.Tk.INFERRED_ADULT);
+}
+function B() {
+    let e = V();
     return (0, c.aX)(i.t.REACTIVE_CHECK) && e;
 }
-var V = (function (e) {
+var H = (function (e) {
         return (e.CTAS = "ctas"), (e.CONTENT_TYPE = "content_type"), e;
     })({}),
-    B = (function (e) {
+    j = (function (e) {
         return (e.VERIFIED_ADULT = "verified_adult"), (e.VERIFIED_TEEN = "verified_teen"), (e.ERROR = "error"), e;
     })({});
-function H(e, t) {
+function Y(e, t) {
     let n = h.A.getMessage(e, t);
     if (
         null == n ||
@@ -106,15 +117,15 @@ function H(e, t) {
     let r = n.embeds[0].fields.find((e) => "ctas" === e.rawName);
     return r?.rawValue.split(",").includes("retry");
 }
-function j() {
+function W() {
     let e = m.default.getCurrentUser();
     return e?.ageVerificationStatus !== o.Tk.UNVERIFIED && e?.ageVerificationStatus !== o.Tk.CLIENT_ONLY_PENDING;
 }
-function Y() {
+function K() {
     let e = (0, s.bG)([m.default], () => m.default.getCurrentUser());
     return e?.ageVerificationStatus !== o.Tk.UNVERIFIED && e?.ageVerificationStatus !== o.Tk.CLIENT_ONLY_PENDING;
 }
-function W(e) {
+function z(e) {
     let {
             onComplete: t,
             entryPoint: n,
@@ -162,7 +173,7 @@ function W(e) {
         );
     return { loading: c, initiateAgeVerification: S };
 }
-function K(e) {
+function $(e) {
     let t = (0, s.bG)([m.default], () => m.default.getCurrentUser()?.ageVerificationStatus),
         n = (0, l.A)(t),
         i = (0, s.bG)([p.default], () => null != p.default.getSuspendedUserToken()),
@@ -173,13 +184,13 @@ function K(e) {
         (o || u) && e();
     }, [e, o, u]);
 }
-function z(e) {
+function q(e) {
     return null != e && y.zn.has(e);
 }
-function $(e) {
+function Z(e) {
     return O.has(e) ? R.intl.string(R.t.lSWVTM) : (0, A.H)(R.intl.string(R.t.JHNunj), R.intl.string(R.t.xYXsr6));
 }
-function q(e, t) {
+function X(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return O.has(e)
         ? R.intl.string(R.t["S/xS/w"])
@@ -189,17 +200,20 @@ function q(e, t) {
             ? R.intl.format(b.default.RpMIT0, { handleOnHelpUrlHook: t })
             : (0, A.H)(R.intl.string(R.t["+BLIGh"]), R.intl.string(R.t.HxS3oQ));
 }
-function Z() {
-    let e = Y();
-    return (0, s.bG)(
-        [I.A, u.A],
-        () => !e && u.A.isFeatureAgeGated(i.t.REACTIVE_CHECK) && I.A.shouldCallReactiveCheck(),
-        [e],
-    );
+function Q() {
+    let e = K(),
+        t = (0, c.aX)(i.t.REACTIVE_CHECK);
+    return (0, s.bG)([I.A], () => !e && t && I.A.shouldCallReactiveCheck(), [e, t]);
 }
-function X(e) {
-    let t = Z();
+function J(e) {
+    let t = Q();
     r.useEffect(() => {
         t && N.Qx.has(e) && (0, S.z)();
     }, [t, e]);
+}
+function ee() {
+    return !W() && w() && I.A.shouldCallReactiveCheck();
+}
+async function et() {
+    return ee() ? await (0, S.z)() : null;
 }
