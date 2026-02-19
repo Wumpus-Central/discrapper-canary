@@ -23,8 +23,6 @@ function d(e) {
         activities: [],
         applicationStream: void 0,
         userTag: "",
-        hidePrivateData: !1,
-        premiumSubscription: void 0,
         speakingWhileMuted: !1,
         speakingWhilePTTInactive: !1,
         occluded: !1,
@@ -34,7 +32,6 @@ function d(e) {
         voiceChannel: null,
         voiceActivityStatusEnabled: !1,
         isQuestBarEmpty: !0,
-        hasLoadedQuestBar: !0,
         isListenAlongVisible: !1,
     });
 }

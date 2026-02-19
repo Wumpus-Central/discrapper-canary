@@ -79,9 +79,7 @@ let h = {
         UserSettingsCogContextMenu: async () => {
             let { default: e } = await n.e("95153").then(n.bind(n, 50120)),
                 t = c.default.getCurrentUser();
-            return null == t
-                ? () => null
-                : (n) => (0, a.jsx)(e, { ...n, user: t, webBuildOverride: null, premiumSubscription: null });
+            return null == t ? () => null : (n) => (0, a.jsx)(e, { ...n, user: t, webBuildOverride: null });
         },
         ExpressionPickerContextMenu: async () => {
             let { default: e } = await n.e("46132").then(n.bind(n, 233503));
