@@ -2,10 +2,10 @@
 n.d(t, {
     AQ: () => f,
     In: () => i,
-    KM: () => a,
+    KM: () => s,
     L7: () => d,
     Mq: () => c,
-    RP: () => s,
+    RP: () => a,
     bk: () => o,
     d6: () => l,
     dS: () => _,
@@ -14,8 +14,8 @@ n.d(t, {
 });
 var r = n(652215);
 let i = 300,
-    a = "user-profile-popout";
-var s = (function (e) {
+    s = "user-profile-popout";
+var a = (function (e) {
         return (
             (e.FEATURED = "FEATURED"),
             (e.USER_INFO = "USER_INFO"),
@@ -109,6 +109,7 @@ var s = (function (e) {
             (e.JOIN_ACTIVITY = "JOIN_ACTIVITY"),
             (e.SET_NOTE = "SET_NOTE"),
             (e.SET_VOLUME = "SET_VOLUME"),
+            (e.SET_STREAM_VOLUME = "SET_STREAM_VOLUME"),
             (e.EDIT_PROFILE = "EDIT_PROFILE"),
             (e.EDIT_GUILD_PROFILE = "EDIT_GUILD_PROFILE"),
             (e.VOICE_CALL = "VOICE_CALL"),

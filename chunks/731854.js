@@ -2,59 +2,61 @@
 n.d(t, {
     $I: () => o,
     Al: () => u,
-    Bb: () => P,
-    CO: () => er,
-    Cl: () => x,
+    Bb: () => U,
+    CO: () => es,
+    Cl: () => P,
     Cn: () => _,
-    Dk: () => W,
+    Dk: () => z,
+    HE: () => p,
     Hz: () => d,
-    K3: () => en,
-    KR: () => N,
-    Ku: () => $,
-    ME: () => X,
-    O5: () => z,
-    PR: () => f,
-    QP: () => y,
+    K3: () => ei,
+    KR: () => b,
+    Ku: () => Z,
+    ME: () => J,
+    O5: () => q,
+    PR: () => h,
+    QP: () => N,
+    Rv: () => f,
     TB: () => a,
-    U9: () => ee,
-    UK: () => Z,
-    X1: () => Y,
-    XA: () => L,
-    Xg: () => I,
-    Xk: () => k,
-    Y4: () => w,
-    YU: () => j,
-    Zi: () => A,
-    aE: () => M,
-    d_: () => T,
-    dx: () => h,
-    eQ: () => H,
-    ei: () => J,
+    U9: () => en,
+    UK: () => Q,
+    X1: () => K,
+    XA: () => x,
+    Xg: () => S,
+    Xk: () => G,
+    Y4: () => M,
+    YU: () => W,
+    Zi: () => T,
+    aE: () => k,
+    d_: () => y,
+    dx: () => E,
+    eQ: () => Y,
+    ei: () => et,
     fS: () => r.fS,
-    fd: () => et,
-    kO: () => p,
-    kc: () => D,
-    l2: () => v,
-    lo: () => F,
-    mI: () => Q,
-    n8: () => b,
-    nJ: () => B,
-    nO: () => S,
-    oL: () => V,
+    fd: () => er,
+    kO: () => m,
+    kc: () => w,
+    l2: () => C,
+    lo: () => B,
+    mI: () => ee,
+    n8: () => O,
+    nJ: () => j,
+    nO: () => v,
+    oL: () => H,
     oh: () => s,
-    q5: () => U,
-    qe: () => E,
-    qm: () => R,
+    q5: () => F,
+    qe: () => A,
+    qm: () => D,
     r8: () => c,
-    rB: () => q,
-    sG: () => O,
-    tl: () => K,
-    us: () => C,
-    vt: () => m,
+    rB: () => X,
+    sG: () => L,
+    tl: () => $,
+    us: () => R,
+    vt: () => g,
     x: () => i,
-    yS: () => G,
+    yS: () => V,
     yt: () => l,
-    zt: () => g,
+    zt: () => I,
 });
 var r = n(141931),
     i = (function (e) {
@@ -103,35 +105,37 @@ var r = n(141931),
     })({});
 let d = 100,
     _ = 18,
-    f = 64e3,
-    p = 128e3,
-    h = "default",
-    m = /^Default/,
-    E = "disabled",
-    g = 0.1,
-    A = -40,
-    I = -25,
-    T = 1 / 15,
-    S = 0.8,
-    y = 0.4,
-    v = 6e5,
-    N = 16e3,
-    C = 1e7,
-    b = 5e3,
-    R = 15e3,
-    O = 30,
-    D = 20,
-    L = 12,
-    w = 100,
-    x = 50,
-    M = 1280,
-    P = 720,
-    k = 30,
-    U = 15e5,
-    G = 5e5,
-    F = 35e5,
-    V = 9e6,
-    B = [
+    f = 200,
+    p = 100,
+    h = 64e3,
+    m = 128e3,
+    E = "default",
+    g = /^Default/,
+    A = "disabled",
+    I = 0.1,
+    T = -40,
+    S = -25,
+    y = 1 / 15,
+    v = 0.8,
+    N = 0.4,
+    C = 6e5,
+    b = 16e3,
+    R = 1e7,
+    O = 5e3,
+    D = 15e3,
+    L = 30,
+    w = 20,
+    x = 12,
+    M = 100,
+    P = 50,
+    k = 1280,
+    U = 720,
+    G = 30,
+    F = 15e5,
+    V = 5e5,
+    B = 35e5,
+    H = 9e6,
+    j = [
         "remoteSinkWantsPixelCount",
         "remoteSinkWantsMaxFramerate",
         "encodingVideoMinBitRate",
@@ -139,18 +143,18 @@ let d = 100,
         "encodingVideoBitRate",
         "streamParameters",
     ],
-    H = {
+    Y = {
         videoBudget: { width: 1280, height: 720, framerate: 30 },
         videoCapture: { width: 1280, height: 720, framerate: 30 },
         videoBitrate: { min: 15e4, max: 25e5 },
         desktopBitrate: { min: 5e5, max: 35e5, target: 6e5 },
         videoBitrateFloor: 15e4,
     },
-    j = 0.02,
-    Y = 6e4,
-    W = ">=22.0.0",
-    K = 9e5;
-var z = (function (e) {
+    W = 0.02,
+    K = 6e4,
+    z = ">=22.0.0",
+    $ = 9e5;
+var q = (function (e) {
         return (
             (e.AUTO_ENABLE = "AUTO_ENABLE"),
             (e.ATTENUATION = "ATTENUATION"),
@@ -216,10 +220,10 @@ var z = (function (e) {
             e
         );
     })({}),
-    $ = (function (e) {
+    Z = (function (e) {
         return (e.NATIVE = "NATIVE"), (e.WEBRTC = "WEBRTC"), (e.DUMMY = "DUMMY"), e;
     })({}),
-    q = (function (e) {
+    X = (function (e) {
         return (
             (e.LEGACY = "legacy"),
             (e.STANDARD = "standard"),
@@ -228,7 +232,7 @@ var z = (function (e) {
             e
         );
     })({}),
-    Z = (function (e) {
+    Q = (function (e) {
         return (
             (e.OPUS = "opus"),
             (e.VP8 = "VP8"),
@@ -240,7 +244,7 @@ var z = (function (e) {
             e
         );
     })({}),
-    X = (function (e) {
+    J = (function (e) {
         return (
             (e[(e.NONE = 0)] = "NONE"),
             (e[(e.VOICE = 1)] = "VOICE"),
@@ -250,16 +254,16 @@ var z = (function (e) {
             e
         );
     })({}),
-    Q = (function (e) {
+    ee = (function (e) {
         return (e.AUDIO = "audio"), (e.VIDEO = "video"), (e.SCREEN = "screen"), (e.TEST = "test"), e;
     })({}),
-    J = (function (e) {
+    et = (function (e) {
         return (e.FIXED = "fixed"), (e.SOURCE = "source"), e;
     })({}),
-    ee = (function (e) {
+    en = (function (e) {
         return (e.REMB = "remb"), e;
     })({}),
-    et = (function (e) {
+    er = (function (e) {
         return (
             (e.VIDEOTOOLBOX_RATE_CONTROL = "videotoolbox_rate_control"),
             (e.SIGNAL_AV1 = "signal_av1"),
@@ -281,10 +285,10 @@ var z = (function (e) {
             e
         );
     })({}),
-    en = (function (e) {
+    ei = (function (e) {
         return (e[(e.AUTO = 1)] = "AUTO"), (e[(e.FULL = 2)] = "FULL"), e;
     })({}),
-    er = (function (e) {
+    es = (function (e) {
         return (
             (e[(e.CPU_OVERUSE = 1)] = "CPU_OVERUSE"),
             (e[(e.FAILED = 2)] = "FAILED"),
