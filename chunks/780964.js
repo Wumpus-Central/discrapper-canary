@@ -278,7 +278,6 @@ var r = (function (e) {
         (e.VOICE_PUSH_TO_TALK_SETTING = "voice_push_to_talk_setting"),
         (e.VOICE_PUSH_TO_TALK_KEYBIND_SETTING = "voice_push_to_talk_keybind_setting"),
         (e.VOICE_PUSH_TO_TALK_RELEASE_DELAY_SETTING = "voice_push_to_talk_release_delay_setting"),
-        (e.VOICE_PUSH_TO_TALK_LATCHING_SETTING = "voice_push_to_talk_latching_setting"),
         (e.VOICE_NOISE_SUPPRESSION_SETTING = "voice_noise_suppression_setting"),
         (e.INPUT_PROFILE_VOICE_ADVANCED_ACCORDION = "input_profile_voice_advanced_accordion"),
         (e.VOICE_INPUT_SENSITIVITY_FIELD_SET = "voice_input_sensitivity_field_set"),

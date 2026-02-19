@@ -11,9 +11,9 @@ var a = n(311907),
 function d(e) {
     let { enabledInputProfiles: t } = (0, s.d)({ location: "useInputProfileItems" }),
         n = {
-            [o.my.VOICE_ISOLATION]: c.intl.string(c.t.cjPbpT),
-            [o.my.STUDIO]: c.intl.string(c.t.VZPR0R),
-            [o.my.CUSTOM]: c.intl.string(c.t["N/PQjv"]),
+            [o.m.VOICE_ISOLATION]: c.intl.string(c.t.cjPbpT),
+            [o.m.STUDIO]: c.intl.string(c.t.VZPR0R),
+            [o.m.CUSTOM]: c.intl.string(c.t["N/PQjv"]),
         },
         d = (0, a.bG)([u.Ay], () => u.Ay.getActiveInputProfile()),
         m = t.map((t) =>
@@ -23,7 +23,7 @@ function d(e) {
                     id: t,
                     group: "input-profiles",
                     label: n[t],
-                    checked: t === (d ?? o.my.CUSTOM),
+                    checked: t === (d ?? o.m.CUSTOM),
                     action: () => i.A.setActiveInputProfile(t, { analyticsLocations: e }),
                 },
                 t,
@@ -32,7 +32,7 @@ function d(e) {
     return (0, r.jsx)(l.Drp, {
         id: "input-profiles",
         label: c.intl.string(c.t.LM3U3k),
-        subtext: n[d ?? o.my.CUSTOM],
+        subtext: n[d ?? o.m.CUSTOM],
         children: m,
     });
 }

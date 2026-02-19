@@ -218,103 +218,102 @@ let G = function (e) {
             onMouseDown: b,
             priority: D,
             speaking: L = !1,
-            latched: M,
-            collapsed: P,
-            mute: k,
-            serverMute: G,
-            guildId: F,
-            nick: V,
-            isGuest: B,
-            flipped: H,
-            className: j,
-            overlap: Y,
-            "aria-label": W,
-            ringing: K,
-            user: z,
+            collapsed: M,
+            mute: P,
+            serverMute: k,
+            guildId: G,
+            nick: F,
+            isGuest: V,
+            flipped: B,
+            className: H,
+            overlap: j,
+            "aria-label": Y,
+            ringing: W,
+            user: K,
         } = f,
-        $ = (0, g.A)({ userId: z.id, guildId: F }),
-        q = (0, A.a)({ displayNameStyles: $ }),
-        Z = (0, m.A)(z.id),
-        X = (0, h.v)({ isSpeaking: L, isLatched: M && !k && !G, voiceDb: Z }),
-        Q = (0, u.bG)([v.A], () => v.A.getProgressForUserId(z.id), [z.id]),
-        J = (0, y.Uk)("VoiceUser") && null != Q,
+        z = (0, g.A)({ userId: K.id, guildId: G }),
+        $ = (0, A.a)({ displayNameStyles: z }),
+        q = (0, m.A)(K.id),
+        Z = (0, h.v)({ isSpeaking: L, voiceDb: q }),
+        X = (0, u.bG)([v.A], () => v.A.getProgressForUserId(K.id), [K.id]),
+        Q = (0, y.Uk)("VoiceUser") && null != X,
+        J = (e) => {
+            p?.(e, K);
+        },
         ee = (e) => {
-            p?.(e, z);
+            I?.(e, K);
         },
         et = (e) => {
-            I?.(e, z);
+            S?.(e, K);
         },
         en = (e) => {
-            S?.(e, z);
+            C?.(e, K);
         },
         er = (e) => {
-            C?.(e, z);
-        },
-        ei = (e) => {
-            b?.(e, z);
+            b?.(e, K);
         };
-    function es() {
-        return D && !P
+    function ei() {
+        return D && !M
             ? (0, r.jsx)(c.m, {
                   text: w.intl.string(w.t.BVK71i),
-                  children: (0, r.jsx)("div", { className: a()(x.G, { [x.g4]: !k && !G && L }) }),
+                  children: (0, r.jsx)("div", { className: a()(x.G, { [x.g4]: !P && !k && L }) }),
               })
             : null;
     }
-    function ea() {
+    function es() {
         let e = a()(x.my, { [x.Jb]: i === O.OSZ.LARGE, [x.dT]: i === O.OSZ.SMALL }),
-            n = { backgroundImage: `url(${z.getAvatarURL(F, i === O.OSZ.LARGE ? 38 : 24)})`, ...X };
-        return J
+            n = { backgroundImage: `url(${K.getAvatarURL(G, i === O.OSZ.LARGE ? 38 : 24)})`, ...Z };
+        return Q
             ? (0, r.jsx)(N.A, {
-                  userId: z.id,
+                  userId: K.id,
                   wrapperClassName: t,
                   children: (0, r.jsx)("div", { className: e, style: n }),
               })
             : (0, r.jsx)("div", { className: a()(t, e), style: n });
     }
-    function eo() {
+    function ea() {
         let e = (0, r.jsxs)("div", {
-                className: a()(n, x.Xh, q, { [x.Pi]: !k && !G && L }),
+                className: a()(n, x.Xh, $, { [x.Pi]: !P && !k && L }),
                 children: [
-                    V ?? R.Ay.getName(z),
-                    B ? (0, r.jsxs)("span", { className: x.IW, children: ["\xa0", w.intl.string(w.t["pFO/Ph"])] }) : "",
+                    F ?? R.Ay.getName(K),
+                    V ? (0, r.jsxs)("span", { className: x.IW, children: ["\xa0", w.intl.string(w.t["pFO/Ph"])] }) : "",
                 ],
             }),
             t = {
-                primaryGuild: z.primaryGuild,
-                userId: z.id,
-                contextGuildId: F,
+                primaryGuild: K.primaryGuild,
+                userId: K.id,
+                contextGuildId: G,
                 isOverlay: l,
                 disableTooltip: !0,
                 className: a()(x.fc, l && x.zW),
                 profileViewedAnalytics: { source: l ? O.JJy.OVERLAY : O.ThZ.VOICE_PANEL },
             };
-        return !P || l ? (0, r.jsx)(T.A, { ...t, children: e }) : null;
+        return !M || l ? (0, r.jsx)(T.A, { ...t, children: e }) : null;
     }
-    function el() {
+    function eo() {
         return (0, r.jsx)(U, { disabled: o, ...f });
     }
     return (0, r.jsx)(d.sqX, {
         ref: _,
-        className: a()(j, {
+        className: a()(H, {
             [x.q7]: !0,
-            [x.EF]: Y,
+            [x.EF]: j,
             [x.wH]: s,
             [x.vk]: null != p,
             [x.L9]: i === O.OSZ.SMALL,
             [x.p8]: i === O.OSZ.LARGE,
             [x.r9]: !s && o,
-            [x.DF]: K,
+            [x.DF]: W,
         }),
-        onClick: ee,
-        onDoubleClick: et,
-        onContextMenu: en,
-        onMouseLeave: er,
-        onMouseDown: ei,
+        onClick: J,
+        onDoubleClick: ee,
+        onContextMenu: et,
+        onMouseLeave: en,
+        onMouseDown: er,
         onKeyDown: E,
-        "aria-label": W ?? V ?? z.username,
+        "aria-label": Y ?? F ?? K.username,
         focusProps: { offset: { right: 4 } },
-        children: (0, r.jsxs)("div", { className: a()(x.Qs, { [x.zq]: H }), children: [es(), ea(), eo(), el()] }),
+        children: (0, r.jsxs)("div", { className: a()(x.Qs, { [x.zq]: B }), children: [ei(), es(), ea(), eo()] }),
     });
 };
 function F(e) {

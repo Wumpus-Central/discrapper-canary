@@ -1,1 +1,1 @@
-e.exports = { Ur: "pttIndicator_a18ea4", zY: "speaking_a18ea4", yM: "latched_a18ea4" };
+e.exports = { U: "pttIndicator_a18ea4", z: "speaking_a18ea4" };

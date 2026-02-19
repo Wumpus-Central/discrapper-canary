@@ -1,17 +1,10 @@
 "use strict";
-n.d(t, { N: () => l });
+n.d(t, { N: () => a });
 var r = n(73153),
-    i = n(555444),
-    a = n(430452),
-    s = n(652215),
-    o = n(731854);
-function l(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    r.h.dispatch({ type: "PUSH_TO_TALK_STATE_CHANGE", isActive: e, isPriority: t, isLatched: n });
-    let l = a.Ay.getMode() === s.TBI.PUSH_TO_TALK,
-        u =
-            (0, i.H)({ location: "doPTT", autoTrackExposure: !1 }).enableLatching &&
-            !0 === a.Ay.getModeOptions().pttLatchingEnabled;
-    a.Ay.getMediaEngine().eachConnection((r) => r.setForceAudioInput(e, t, l && u && !n && !e), o.x.DEFAULT);
+    i = n(430452),
+    s = n(731854);
+function a(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    r.h.dispatch({ type: "PUSH_TO_TALK_STATE_CHANGE", isActive: e, isPriority: t }),
+        i.Ay.getMediaEngine().eachConnection((n) => n.setForceAudioInput(e, t, !1), s.x.DEFAULT);
 }

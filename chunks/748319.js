@@ -93,26 +93,25 @@ function eB(e) {
     let {
             ref: t,
             speaking: n,
-            latched: s,
-            voiceDb: r = -1 / 0,
-            streaming: o,
-            currentUser: d,
-            status: c,
-            handleClick: u,
-            handleMouseLeave: m,
-            renderNameTag: x,
-            nameplate: g,
-            avatarDecoration: _,
-            "data-jump-section": b,
+            voiceDb: s = -1 / 0,
+            streaming: r,
+            currentUser: o,
+            status: d,
+            handleClick: c,
+            handleMouseLeave: u,
+            renderNameTag: m,
+            nameplate: x,
+            avatarDecoration: g,
+            "data-jump-section": _,
         } = e,
-        v = i.useRef(null),
-        j = t ?? v,
-        C = (0, eg.F_)({ avatarDecoration: _, size: (0, E.Te)(h._3J.SIZE_32) }),
-        A = (0, P.A)(),
+        b = i.useRef(null),
+        v = t ?? b,
+        j = (0, eg.F_)({ avatarDecoration: g, size: (0, E.Te)(h._3J.SIZE_32) }),
+        C = (0, P.A)(),
         {
-            updateOpenPopoutRef: T,
-            highlightBadge: y,
-            setHighlightBadge: S,
+            updateOpenPopoutRef: A,
+            highlightBadge: T,
+            setHighlightBadge: y,
         } = (function () {
             let e = i.useRef(null),
                 t = i.useCallback((t) => {
@@ -139,17 +138,17 @@ function eB(e) {
                 { updateOpenPopoutRef: t, highlightBadge: s ? n : void 0, setHighlightBadge: a }
             );
         })(),
-        N = (0, H.K)(g);
-    return null == d
+        S = (0, H.K)(x);
+    return null == o
         ? null
         : (0, a.jsx)(p.A, {
               object: eI.ZSU.AVATAR,
               children: (0, a.jsx)(J.A, {
-                  user: d,
-                  targetElementRef: j,
+                  user: o,
+                  targetElementRef: v,
                   clickTrap: !0,
                   preload: () =>
-                      (0, Y.A)(d.id, d.getAvatarURL(void 0, J.S), {
+                      (0, Y.A)(o.id, o.getAvatarURL(void 0, J.S), {
                           type: "account_popout",
                           withMutualGuilds: !1,
                           withMutualFriends: !1,
@@ -158,8 +157,8 @@ function eB(e) {
                   renderPopout: (e, t) => {
                       let { closePopout: n, setPopoutRef: i } = e;
                       return (0, a.jsx)(V.A, {
-                          currentUser: d,
-                          highlightBadge: y,
+                          currentUser: o,
+                          highlightBadge: T,
                           openedAt: t,
                           onClose: () => {
                               n?.();
@@ -175,43 +174,42 @@ function eB(e) {
                   fixed: !0,
                   ignoreModalClicks: !0,
                   onRequestClose: () => {
-                      m(), S(void 0);
+                      u(), y(void 0);
                   },
                   children: (e) => {
-                      T(e);
-                      let { onMouseEnter: t, onMouseDown: i, ...m } = e;
+                      A(e);
+                      let { onMouseEnter: t, onMouseDown: i, ...u } = e;
                       return (0, a.jsxs)("div", {
-                          ref: j,
-                          style: N,
+                          ref: v,
+                          style: S,
                           onMouseEnter: t,
                           onMouseDown: i,
                           onClick: (t) => {
-                              e.onClick?.(t), u?.(t);
+                              e.onClick?.(t), c?.(t);
                           },
-                          className: l()(ew.Q9, { [ew.ZQ]: null != g }),
+                          className: l()(ew.Q9, { [ew.ZQ]: null != x }),
                           children: [
                               (0, a.jsx)(h.DUT, {
-                                  ...m,
+                                  ...u,
                                   onClick: (t) => {
-                                      t.stopPropagation(), e.onClick?.(t), u?.(t);
+                                      t.stopPropagation(), e.onClick?.(t), c?.(t);
                                   },
                                   "aria-label": eO.intl.string(eO.t["5fWB8U"]),
-                                  focusProps: { ringTarget: j },
+                                  focusProps: { ringTarget: v },
                                   className: ew.$n,
-                                  "data-jump-section": b,
+                                  "data-jump-section": _,
                               }),
                               (0, a.jsx)(eD, {
                                   size: h._3J.SIZE_32,
-                                  src: d.getAvatarURL(void 0, 28, !1),
-                                  avatarDecoration: C,
-                                  status: o ? eI.clD.STREAMING : c,
+                                  src: o.getAvatarURL(void 0, 28, !1),
+                                  avatarDecoration: j,
+                                  status: r ? eI.clD.STREAMING : d,
                                   isSpeaking: n,
-                                  isLatched: s,
-                                  voiceDb: r,
+                                  voiceDb: s,
                                   className: ew.my,
                                   "aria-hidden": !0,
                               }),
-                              (0, a.jsx)("div", { className: ew.oM, children: x(A) }),
+                              (0, a.jsx)("div", { className: ew.oM, children: m(C) }),
                           ],
                       });
                   },
@@ -571,12 +569,11 @@ function eF(e) {
             shouldShowPTTJoinTooltip: A = !1,
             dismissTooltips: T,
             speaking: y,
-            latched: S,
         } = e,
-        E = (0, H.K)(v);
+        S = (0, H.K)(v);
     return (0, a.jsxs)("div", {
         className: ew.Uo,
-        style: E,
+        style: S,
         children: [
             (0, a.jsx)(eE.A, {
                 accountContainerRef: j,
@@ -596,7 +593,6 @@ function eF(e) {
                 shouldShowPTTJoinTooltip: A,
                 dismissTooltips: T,
                 speaking: y,
-                latched: S,
             }),
             (0, a.jsx)(eS.A, {
                 selfDeaf: t,
@@ -665,31 +661,30 @@ function eW() {
         }),
         r = (0, c.bG)([es.A], () => es.A.getAnyStreamForUser(t)),
         d = (0, g.A)({ userId: t }),
-        m = (0, c.bG)([ex.A], () => ex.A.isCurrentUserPTTLatched()),
-        x = (0, c.bG)([ex.A], () => ex.A.getVoiceVolume(t)),
-        p = ej.Ay.useUserTag(e, { decoration: "never" }),
-        _ = (0, c.bG)([eu.A, er.A], () => {
+        m = (0, c.bG)([ex.A], () => ex.A.getVoiceVolume(t)),
+        x = ej.Ay.useUserTag(e, { decoration: "never" }),
+        p = (0, c.bG)([eu.A, er.A], () => {
             let e = eu.A.getChannelId();
             return null != e ? er.A.getChannel(e) : null;
         }),
-        { mute: f, selfMute: v, suppress: j } = (0, en.A)(_),
-        { selfDeaf: C, deaf: A } = (0, et.A)(_),
-        E = (0, c.bG)([N.A], () => ((0, I.kK)() ? N.A.getCurrentBuildOverride().overrides?.discord_web : null)),
-        R = (0, c.bG)([ec.Ay], () => ec.Ay.getSpeakingWhileMuted()),
-        O = (0, c.bG)([k.A], () => k.A.isFullscreenInContext()),
-        w = (0, c.bG)([ed.A], () => ed.A.hasLayers()),
-        D = (0, h.red)(h.DXt) || w || ev.P.isDisallowPopupsSet() || O,
-        M = (0, c.bG)([B.default], () => null != B.default.getAwaitingRemoteSessionInfo()),
-        P = (0, c.bG)([em.A], () => em.A.getGuildId()),
-        L = e?.avatarDecoration,
-        U = (0, S.A)(L),
-        G = ej.Ay.useName(e) ?? "",
-        { voiceActivityStatusEnabled: F } = (0, b.G)({ location: "Account" }),
-        V = (0, $.lM)("Account"),
-        { analyticsLocations: H } = (0, y.Ay)(T.A.ACCOUNT),
-        K = (0, W.r)({ user: e, guildId: void 0 }),
-        { isQuestBarEmpty: z } = (0, q.c9)({ location: ek.rE.CONFLICT_CHECKS }),
-        Y = (0, c.bG)([Q.A, ep.default, eo.A], () => {
+        { mute: _, selfMute: f, suppress: v } = (0, en.A)(p),
+        { selfDeaf: j, deaf: C } = (0, et.A)(p),
+        A = (0, c.bG)([N.A], () => ((0, I.kK)() ? N.A.getCurrentBuildOverride().overrides?.discord_web : null)),
+        E = (0, c.bG)([ec.Ay], () => ec.Ay.getSpeakingWhileMuted()),
+        R = (0, c.bG)([k.A], () => k.A.isFullscreenInContext()),
+        O = (0, c.bG)([ed.A], () => ed.A.hasLayers()),
+        w = (0, h.red)(h.DXt) || O || ev.P.isDisallowPopupsSet() || R,
+        D = (0, c.bG)([B.default], () => null != B.default.getAwaitingRemoteSessionInfo()),
+        M = (0, c.bG)([em.A], () => em.A.getGuildId()),
+        P = e?.avatarDecoration,
+        L = (0, S.A)(P),
+        U = ej.Ay.useName(e) ?? "",
+        { voiceActivityStatusEnabled: G } = (0, b.G)({ location: "Account" }),
+        F = (0, $.lM)("Account"),
+        { analyticsLocations: V } = (0, y.Ay)(T.A.ACCOUNT),
+        H = (0, W.r)({ user: e, guildId: void 0 }),
+        { isQuestBarEmpty: K } = (0, q.c9)({ location: ek.rE.CONFLICT_CHECKS }),
+        z = (0, c.bG)([Q.A, ep.default, eo.A], () => {
             let e,
                 t = Q.A.getSyncingWith(),
                 n = Q.A.getActivity(),
@@ -704,63 +699,62 @@ function eW() {
                 a.length > 1
             );
         }),
-        J = { avatar: [], settings: [] };
-    !D &&
-        (J.avatar.push(u.M.DISPLAY_NAME_STYLES_COACHMARK),
-        J.avatar.push(u.M.WIDGETS_RTC_UPSELL_COACHMARK),
-        V && J.settings.push(u.M.NITRO_PRIVACY_PERK_BETA_COACHMARK));
-    let { shouldShowTooltip: X, dismissTooltip: Z } = eV(eR.oh.AUDIO_INPUT),
-        { shouldShowTooltip: ee, dismissTooltip: eg } = eV(eR.oh.AUDIO_OUTPUT),
-        { shouldShowTooltip: e_, dismissTooltip: ef } = (0, ea.A)(),
-        eC = (0, ei.A)(),
-        eA = i.useMemo(() => (X ? "input" : ee ? "output" : void 0), [X, ee]),
-        eT = i.useCallback(
+        Y = { avatar: [], settings: [] };
+    !w &&
+        (Y.avatar.push(u.M.DISPLAY_NAME_STYLES_COACHMARK),
+        Y.avatar.push(u.M.WIDGETS_RTC_UPSELL_COACHMARK),
+        F && Y.settings.push(u.M.NITRO_PRIVACY_PERK_BETA_COACHMARK));
+    let { shouldShowTooltip: J, dismissTooltip: X } = eV(eR.oh.AUDIO_INPUT),
+        { shouldShowTooltip: Z, dismissTooltip: ee } = eV(eR.oh.AUDIO_OUTPUT),
+        { shouldShowTooltip: eg, dismissTooltip: e_ } = (0, ea.A)(),
+        ef = (0, ei.A)(),
+        eC = i.useMemo(() => (J ? "input" : Z ? "output" : void 0), [J, Z]),
+        eA = i.useCallback(
             (e) => {
                 switch (e) {
                     case "input":
-                        Z();
+                        X();
                         break;
                     case "output":
-                        eg();
+                        ee();
                 }
             },
-            [Z, eg],
+            [X, ee],
         );
     return (0, a.jsx)(y.f5, {
-        value: H,
+        value: V,
         children: (0, a.jsx)(eG, {
             currentUser: e,
-            username: G,
+            username: U,
             activities: n,
             applicationStream: r,
-            voiceChannel: _,
-            dismissibleContents: J,
-            userTag: p,
-            occluded: D,
-            selfDeaf: C,
-            selfMute: v,
-            serverDeaf: A,
-            serverMute: f,
+            voiceChannel: p,
+            dismissibleContents: Y,
+            userTag: x,
+            occluded: w,
+            selfDeaf: j,
+            selfMute: f,
+            serverDeaf: C,
+            serverMute: _,
             speaking: d,
-            voiceDb: x,
-            speakingWhileMuted: R,
-            speakingWhilePTTInactive: eC,
-            latched: m && null != _ && !f && !v,
+            voiceDb: m,
+            speakingWhileMuted: E,
+            speakingWhilePTTInactive: ef,
             status: l,
             streaming: s,
-            suppress: j,
-            webBuildOverride: E,
-            awaitingRemote: M,
-            voiceActivityStatusEnabled: F,
-            nameplate: K,
-            selectedGuildId: P,
-            avatarDecoration: U,
-            isQuestBarEmpty: z,
-            isListenAlongVisible: Y,
-            deviceChangedTooltipType: eA,
-            onDismissDeviceChangedTooltip: () => eT(eA),
-            shouldShowPTTJoinTooltip: e_,
-            dismissPTTJoinTooltip: ef,
+            suppress: v,
+            webBuildOverride: A,
+            awaitingRemote: D,
+            voiceActivityStatusEnabled: G,
+            nameplate: H,
+            selectedGuildId: M,
+            avatarDecoration: L,
+            isQuestBarEmpty: K,
+            isListenAlongVisible: z,
+            deviceChangedTooltipType: eC,
+            onDismissDeviceChangedTooltip: () => eA(eC),
+            shouldShowPTTJoinTooltip: eg,
+            dismissPTTJoinTooltip: e_,
         }),
     });
 }

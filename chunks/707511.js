@@ -8,7 +8,6 @@ e.exports = {
     lG: "tileChild__2f4f7",
     PQ: "border__2f4f7",
     pU: "voiceChannelEffect__2f4f7",
-    JB: "latchedNotSpeaking__2f4f7",
     E7: "noBorder__2f4f7",
     MU: "overlayContainer__2f4f7",
     oE: "compact__2f4f7",

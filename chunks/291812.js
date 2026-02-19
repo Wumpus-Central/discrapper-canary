@@ -1,57 +1,56 @@
-"use strict";
-n.d(t, { Ay: () => x, _A: () => A, sP: () => f });
-var l = n(627968),
-    s = n(64700),
-    i = n(503698),
-    r = n.n(i),
-    a = n(877413),
-    o = n.n(a),
-    u = n(52133),
-    c = n(860227),
-    d = n(861986),
+n.d(t, { Ay: () => g, _A: () => h, sP: () => b });
+var a = n(627968),
+    i = n(64700),
+    l = n(503698),
+    o = n.n(l),
+    r = n(877413),
+    s = n.n(r),
+    c = n(52133),
+    d = n(860227),
+    u = n(861986),
     m = n(652215),
-    h = n(985018),
-    g = n(679740),
-    p = n(206314);
-function A(e, t) {
+    _ = n(985018),
+    p = n(679740),
+    f = n(206314);
+function h(e, t) {
     return e.type === m.lAJ.VOICE_HANGOUT_INVITE
         ? ""
         : e.hasFlag(m.pr7.SOURCE_MESSAGE_DELETED)
-          ? h.intl.string(h.t.JOtgSw)
+          ? _.intl.string(_.t.JOtgSw)
           : t;
 }
-function f(e, t) {
+function b(e, t) {
     let { message: n } = t,
-        { message: l } = e;
+        { message: a } = e;
     return (
-        (0, u.A)(e, t, ["message"]) &&
-        n.content === l.content &&
-        n.state === l.state &&
-        n.editedTimestamp?.toString() === l.editedTimestamp?.toString()
+        (0, c.A)(e, t, ["message"]) &&
+        n.content === a.content &&
+        n.state === a.state &&
+        n.editedTimestamp?.toString() === a.editedTimestamp?.toString()
     );
 }
-let x = s.memo(function (e) {
-    let { className: t, message: n, children: i, content: a, onUpdate: u, contentRef: h, compact: f } = e,
-        x = n.state === m.cmJ.SEND_FAILED,
-        v = n.state === m.cmJ.SENDING,
-        N = n.isCommandType(),
-        b = n.editedTimestamp?.toString(),
-        j = s.useRef(!1);
+let g = i.memo(function (e) {
+    let { className: t, message: n, children: l, content: r, onUpdate: c, contentRef: _, compact: b } = e,
+        g = n.state === m.cmJ.SEND_FAILED,
+        A = n.state === m.cmJ.SENDING,
+        I = n.isCommandType(),
+        y = n.editedTimestamp?.toString(),
+        T = i.useRef(!1);
     return (
-        s.useLayoutEffect(() => {
-            j.current ? null != u && u() : (j.current = !0);
-        }, [u, n.content, a, b, i]),
-        (0, l.jsxs)("div", {
-            id: (0, c.CJ)(n),
-            ref: h,
-            className: r()(t, p.PT, {
-                [g.BK]: !0,
-                [g.Tn]: v && !N,
-                [g.nB]: "rtl" === o()(n.content),
-                [g.Ix]: x,
-                [g.w3]: n.isUnsupported,
+        i.useLayoutEffect(() => {
+            T.current ? null != c && c() : (T.current = !0);
+        }, [c, n.content, r, y, l]),
+        (0, a.jsxs)("div", {
+            id: (0, d.CJ)(n),
+            ref: _,
+            className: o()(t, f.PT, {
+                [p.BK]: !0,
+                [p.Tn]: A && !I,
+                [p.nB]: "rtl" === s()(n.content),
+                [p.Ix]: g,
+                [p.w3]: n.isUnsupported,
             }),
-            children: [i ?? A(n, a), (0, l.jsx)(d.A, { message: n, compact: f, location: d.O.WITH_CONTENT })],
+            children: [l ?? h(n, r), (0, a.jsx)(u.A, { message: n, compact: b, location: u.O.WITH_CONTENT })],
         })
     );
-}, f);
+}, b);

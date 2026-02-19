@@ -19,8 +19,8 @@ var i = n(627968),
     C = n(551826),
     E = n(159426),
     I = n(25528),
-    N = n(530804),
-    b = n(481947),
+    b = n(530804),
+    N = n(481947),
     S = n(616356),
     T = n(961350),
     v = n(696451),
@@ -39,7 +39,7 @@ let k = l.memo((e) => {
     let { mute: t, deaf: n, user: l, channel: s, sessionId: a, nick: o } = e,
         f = l.id,
         x = (0, r.bG)([T.default], () => T.default.getId() === f, [f]),
-        [b, j, R] = (0, r.yK)(
+        [N, j, R] = (0, r.yK)(
             [y.Ay],
             () =>
                 x
@@ -49,11 +49,9 @@ let k = l.memo((e) => {
         ),
         w = (0, r.bG)([L.A], () => L.A.isPrioritySpeaker(f)),
         k = (0, d.A)({ userId: f, checkSoundSharing: !0 }),
-        V = (0, r.bG)([L.A], () => L.A.isCurrentUserPTTLatched()),
-        B = x && V,
-        H = (0, r.bG)([v.Ay], () => v.Ay.isGuestOrLurker(s.guild_id, f)),
-        F = (0, r.bG)([A.A], () => A.A.getGuildRingingUsers(s.id).has(f)),
-        K = (0, r.bG)(
+        V = (0, r.bG)([v.Ay], () => v.Ay.isGuestOrLurker(s.guild_id, f)),
+        B = (0, r.bG)([A.A], () => A.A.getGuildRingingUsers(s.id).has(f)),
+        H = (0, r.bG)(
             [c.Ay],
             () =>
                 c.Ay.getEmbeddedActivitiesForChannel(s.id).find((e) => {
@@ -62,54 +60,53 @@ let k = l.memo((e) => {
                 }),
             [f, s.id],
         ),
-        W = (0, h.A)(null != K ? [K.applicationId] : []),
-        Y = (0, I.Ay)(f, s.guild_id)[0],
-        z = (0, u.YY)(Y?.application_id).data ?? void 0,
-        [X, q] = (0, r.yK)(
+        F = (0, h.A)(null != H ? [H.applicationId] : []),
+        K = (0, I.Ay)(f, s.guild_id)[0],
+        W = (0, u.YY)(K?.application_id).data ?? void 0,
+        [Y, z] = (0, r.yK)(
             [S.A],
             () => [S.A.getStreamForUser(f, s.getGuildId()), S.A.getActiveStreamForUser(f, s.getGuildId())],
             [s, f],
         ),
-        J = (0, r.bG)([O.A], () => O.A.getSessionById(a)),
-        Q = D.Ay.useName(l),
-        $ = (0, r.bG)([M.A], () => M.A.getVoicePlatformForChannel(s.id, f), [s.id, f]),
-        { enableHangStatus: Z } = (0, m.$j)({ guildId: s.guild_id, location: "VoiceUsers" }),
-        ee = (0, p.Ay)(s, !0, l),
-        et = (0, r.bG)([g.A], () => (x ? g.A.getHangStatusActivity() : null), [x]),
-        en = (0, _.h)(f),
-        ei = (0, N.uy)(s.id, f),
-        { enableVCStatusIcons: el, enableRequestToStream: es } = E.m.useExperiment(
+        X = (0, r.bG)([O.A], () => O.A.getSessionById(a)),
+        q = D.Ay.useName(l),
+        J = (0, r.bG)([M.A], () => M.A.getVoicePlatformForChannel(s.id, f), [s.id, f]),
+        { enableHangStatus: Q } = (0, m.$j)({ guildId: s.guild_id, location: "VoiceUsers" }),
+        $ = (0, p.Ay)(s, !0, l),
+        Z = (0, r.bG)([g.A], () => (x ? g.A.getHangStatusActivity() : null), [x]),
+        ee = (0, _.h)(f),
+        et = (0, b.uy)(s.id, f),
+        { enableVCStatusIcons: en, enableRequestToStream: ei } = E.m.useExperiment(
             { guildId: s.guild_id, location: "VoiceUsers" },
-            { autoTrackExposure: Y?.session_id != null },
+            { autoTrackExposure: K?.session_id != null },
         ),
-        ea = el || Z;
+        el = en || Q;
     return (0, i.jsx)(C.A, {
         shakeLocation: P.uD.VOICE_USER,
         isShaking: k,
         children: (0, i.jsx)(G.Ay, {
             ...e,
-            nick: o ?? Q,
-            canDrag: e.canDrag && !H,
-            disconnected: ei,
-            otherClientSessionType: J?.clientInfo?.os,
-            voicePlatform: $,
-            localMute: b && !x,
+            nick: o ?? q,
+            canDrag: e.canDrag && !V,
+            disconnected: et,
+            otherClientSessionType: X?.clientInfo?.os,
+            voicePlatform: J,
+            localMute: N && !x,
             localVideoDisabled: R,
-            mute: t || b,
+            mute: t || N,
             deaf: n || j,
             speaking: k,
-            latched: B,
-            ringing: F,
+            ringing: B,
             priority: w,
-            embeddedApplication: W[0],
-            isStreaming: null != X && X.channelId === s.id,
-            isWatching: null != q && q.state !== U.XYD.ENDED,
-            isGuest: H,
+            embeddedApplication: F[0],
+            isStreaming: null != Y && Y.channelId === s.id,
+            isWatching: null != z && z.state !== U.XYD.ENDED,
+            isGuest: V,
             isSelf: x,
-            requestToStreamActivity: es ? Y : void 0,
-            application: ea && Y?.session_id != null ? z : void 0,
-            showHangStatus: ee && Z && (x || null != en),
-            hangStatusActivity: x ? et : en,
+            requestToStreamActivity: ei ? K : void 0,
+            application: el && K?.session_id != null ? W : void 0,
+            showHangStatus: $ && Q && (x || null != ee),
+            hangStatusActivity: x ? Z : ee,
         }),
     });
 });
@@ -134,7 +131,7 @@ let V = [],
             [S, v] = l.useState(null),
             [y, O] = l.useState(!1),
             L = l.useRef(null),
-            M = (0, N.$n)(s.id, d ?? V),
+            M = (0, b.$n)(s.id, d ?? V),
             { shouldShow: D, dismiss: P } = (0, x.Z)(s, { collapsed: c }),
             B = l.useRef(
                 new o.J_(50, () => {
@@ -214,7 +211,7 @@ let V = [],
         })();
         return null == Y && null == E
             ? null
-            : (0, i.jsxs)(b.Wr, {
+            : (0, i.jsxs)(N.Wr, {
                   className: a()(C, w.p_, { [w.yZ]: c, [w.lY]: _, [w.fT]: I }),
                   collapsed: c,
                   children: [Y, E],

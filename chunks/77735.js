@@ -1,11 +1,11 @@
 i.d(t, { _: () => l, d: () => a });
-var n = i(509381);
-let s = [n.my.VOICE_ISOLATION, n.my.STUDIO, n.my.CUSTOM];
+var s = i(509381);
+let n = [s.m.VOICE_ISOLATION, s.m.STUDIO, s.m.CUSTOM];
 function l(e) {
     let { location: t } = e;
-    return { enabledInputProfiles: s };
+    return { enabledInputProfiles: n };
 }
 function a(e) {
     let { location: t } = e;
-    return { enabledInputProfiles: s };
+    return { enabledInputProfiles: n };
 }

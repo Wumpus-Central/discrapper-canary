@@ -408,8 +408,7 @@ class eo extends o.Ay.DeviceSettingsStore {
             ),
     ];
     initialize(e) {
-        for (let t in (__OVERLAY__ || this.waitFor(_.Ay, g.default), (x = e ?? {})))
-            delete x[t].latched, delete x[t].pressedTime;
+        __OVERLAY__ || this.waitFor(_.Ay, g.default), (x = e ?? {});
     }
     getUserAgnosticState() {
         return x;

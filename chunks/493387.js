@@ -10,8 +10,8 @@ var i = n(627968),
     u = n(397927),
     h = n(736653),
     A = n(531685),
-    m = n(85448),
-    p = n(806931),
+    p = n(85448),
+    m = n(806931),
     g = n(254187),
     _ = n(20976),
     f = n(162253);
@@ -99,8 +99,8 @@ function E(e) {
         x = ((t = n.length), ((0, u.FT9)(u._3J.SIZE_80) + 16) * t > c ? u._3J.SIZE_40 : u._3J.SIZE_80),
         E = (0, o.bG)([A.A], () => A.A.isFocused()),
         I = n.map((e) => {
-            if (e.type !== p.lp.USER) return null;
-            let { user: t, voiceState: n, speaking: s, latched: a, ringing: o } = e;
+            if (e.type !== m.lp.USER) return null;
+            let { user: t, voiceState: n, speaking: s, ringing: a } = e;
             return (0, i.jsx)(
                 C,
                 {
@@ -112,7 +112,7 @@ function E(e) {
                         onClick: (t) => r?.(e, t),
                         onContextMenu: (t) => l?.(e, t),
                         children: (0, i.jsx)(
-                            m.A,
+                            p.A,
                             {
                                 userId: t.id,
                                 src: t.getAvatarURL(_, (0, u.FT9)(x), s && E),
@@ -120,8 +120,7 @@ function E(e) {
                                 muted: n?.isVoiceMuted() ?? !1,
                                 deafen: n?.isVoiceDeafened() ?? !1,
                                 speaking: s,
-                                latched: a,
-                                ringing: o,
+                                ringing: a,
                             },
                             e.id,
                         ),
