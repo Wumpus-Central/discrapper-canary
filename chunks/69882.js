@@ -58,7 +58,7 @@ let y = (e) => (0, r.jsx)(v, { ...e }),
     C = (e) => {
         let { className: t } = e;
         return (0, r.jsx)("div", {
-            className: a()(S.g4, t),
+            className: a()(S.sy, S.g4, t),
             children: (0, r.jsx)(l.y$y, { type: l.y$y.Type.PULSING_ELLIPSIS }),
         });
     },
@@ -137,7 +137,7 @@ let y = (e) => (0, r.jsx)(v, { ...e }),
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsxs)("div", {
-                          className: S.db,
+                          className: S.sy,
                           children: [
                               v,
                               s,

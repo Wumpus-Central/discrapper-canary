@@ -1,43 +1,49 @@
 "use strict";
-n.d(t, { Jg: () => p, lo: () => h, oH: () => g, s3: () => _ });
+n.d(t, { Jg: () => h, lo: () => p, oH: () => m, s3: () => _ });
 var r = n(627968),
     i = n(64700),
-    a = n(158954),
-    s = n(500380),
+    s = n(158954),
+    a = n(500380),
     o = n(518977),
     l = n(683433),
     u = n(981036),
     c = n(725836),
     d = n(996541);
 function _(e) {
-    let { gradientColor: t, title: n, headerBadgeText: l, headerBadgeIcon: u, countryCode: c, ..._ } = e,
-        f = i.useCallback(
-            () => (null == c ? null : (0, r.jsx)("img", { alt: "", className: d.bI, src: (0, s.t)(c) })),
-            [c],
+    let { gradientColor: t, title: n, headerBadgeText: l, headerBadgeIcon: u, countryCode: _, ...f } = e,
+        { checkoutHeaderConfigs: p } = (0, c.ck)(),
+        h = i.useCallback(
+            () => (null == _ ? null : (0, r.jsx)("img", { alt: "", className: d.bI, src: (0, a.t)(_) })),
+            [_],
         ),
-        h = i.useMemo(() => {
-            if (null != l) return { icon: u, type: { text: l }, variant: "expressive" };
-        }, [l, u]);
-    return (0, r.jsx)(a.rQ0, {
-        ..._,
-        badge: h,
+        m = i.useMemo(() => {
+            if (null != l || null != p.headerBadgeText)
+                return {
+                    icon: p.headerBadgeIcon ?? u,
+                    type: { text: p.headerBadgeText ?? l ?? "" },
+                    variant: "expressive",
+                };
+        }, [l, u, p.headerBadgeText, p.headerBadgeIcon]);
+    return (0, r.jsx)(s.rQ0, {
+        ...f,
+        badge: m,
         badgePosition: "end",
         gradientColor: t,
         titleTextVariant: "heading-lg/semibold",
         alignCenter: !1,
         title: n,
-        subtitle: null != c ? { text: (0, o.Gw)((0, o.ni)(c)), leadingIcon: f } : void 0,
+        subtitle: null != _ ? { text: (0, o.Gw)((0, o.ni)(_)), leadingIcon: h } : void 0,
     });
 }
 let f = { top: 16, bottom: 8 };
-function h(e) {
+function p(e) {
     let { onBackClick: t, primaryButtonProps: n } = e,
         { variant: i } = n,
-        { setCheckoutFooterContentNode: s } = (0, c.ck)();
-    return (0, r.jsxs)(a.jlY, {
+        { setCheckoutFooterContentNode: a } = (0, c.ck)();
+    return (0, r.jsxs)(s.jlY, {
         children: [
-            (0, r.jsx)("div", { ref: s }),
-            (0, r.jsxs)(a.BJc, {
+            (0, r.jsx)("div", { ref: a }),
+            (0, r.jsxs)(s.BJc, {
                 direction: "horizontal",
                 align: "center",
                 justify: null != t ? "space-between" : "end",
@@ -51,16 +57,16 @@ function h(e) {
         ],
     });
 }
-function p(e) {
-    let { children: t, size: n = "md", maxHeight: i = "viewport", ...s } = e;
-    return (0, r.jsx)(a.dWK, { size: n, ...s, maxHeight: i, children: t });
+function h(e) {
+    let { children: t, size: n = "md", maxHeight: i = "viewport", ...a } = e;
+    return (0, r.jsx)(s.dWK, { size: n, ...a, maxHeight: i, children: t });
 }
-function g(e) {
+function m(e) {
     let {
         title: t,
         gradientColor: n = "purple",
         countryCode: i,
-        headerBadgeText: s,
+        headerBadgeText: a,
         headerBadgeIcon: o,
         onBackClick: l,
         primaryButtonProps: u,
@@ -68,12 +74,12 @@ function g(e) {
         ...f
     } = e;
     return (0, r.jsx)(c.e0, {
-        children: (0, r.jsxs)(a.dWK, {
+        children: (0, r.jsxs)(s.dWK, {
             ...f,
             children: [
-                (0, r.jsx)(_, { gradientColor: n, title: t, countryCode: i, headerBadgeText: s, headerBadgeIcon: o }),
-                (0, r.jsx)(a.cwr, { children: d }),
-                (0, r.jsx)(h, { onBackClick: l, primaryButtonProps: u }),
+                (0, r.jsx)(_, { gradientColor: n, title: t, countryCode: i, headerBadgeText: a, headerBadgeIcon: o }),
+                (0, r.jsx)(s.cwr, { children: d }),
+                (0, r.jsx)(p, { onBackClick: l, primaryButtonProps: u }),
             ],
         }),
     });

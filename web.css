@@ -44247,7 +44247,7 @@ screen and (max-width:485px) {
     margin-bottom: var(--space-12)
 }
 
-.reviewStepBody_bb5449 {
+.stepBodyMinHeight_bb5449 {
     min-height: 300px
 }
 
@@ -44261,8 +44261,7 @@ screen and (max-width:485px) {
 .loadingContainer_bb5449 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    min-height: 300px
+    justify-content: center
 }
 
 .giftRedemptionLink_bb5449 {
