@@ -16,47 +16,48 @@ var i = n(627968),
     A = n(529942),
     f = n(164956),
     x = n(209700),
-    E = n(652215),
-    C = n(985018),
+    C = n(652215),
+    E = n(985018),
     I = n(110927);
 function T(e) {
     let { guildId: t } = e,
         n = (0, s.bG)([h.default], () => h.default.getCurrentUser()),
         T = (0, s.bG)([_.A], () => _.A.getGuild(t)),
         N = (0, s.bG)([m.A], () => m.A.getRolesSnapshot(t)),
-        S = (0, s.bG)([m.A], () => m.A.getSortedRoles(t)),
-        { impersonateType: b, viewingRoles: y } = (0, s.cf)([f.A], () => ({
+        b = (0, s.bG)([m.A], () => m.A.getSortedRoles(t)),
+        { impersonateType: S, viewingRoles: j } = (0, s.cf)([f.A], () => ({
             impersonateType: f.A.getImpersonateType(t),
             viewingRoles: f.A.getViewingRoles(t),
         })),
-        j = b === x._.SERVER_SHOP,
+        y = S === x._.SERVER_SHOP,
         R = (0, s.bG)([u.Ay], () => (null != n ? u.Ay.getTrueMember(t, n.id) : null)),
         L = null != T ? N[(0, d.af)(T)] : null,
         [M, O] = l.useState(() => {
-            let e = null == y ? [] : g.default.keys(y);
+            let e = null == j ? [] : g.default.keys(j);
             return null != L && e.push(L.id), e;
         }),
-        P = l.useRef(T);
+        D = l.useRef(T);
     l.useEffect(() => {
         let e = {},
-            t = P.current;
-        if (null != t && null != b) {
+            t = D.current;
+        if (null != t && null != S) {
             for (let t of M) {
                 let n = N[t];
                 null != n && (e[t] = n);
             }
-            (0, A.IA)(t.id, { type: b, roles: e });
+            (0, A.IA)(t.id, { type: S, roles: e });
         }
-    }, [M, b, N]);
-    let D = null != T && null != n && null != R ? S.find((e) => R.roles.includes(e.id)) : void 0,
+    }, [M, S, N]);
+    let P = null != T && null != n && null != R ? b.find((e) => R.roles.includes(e.id)) : void 0,
         k = l.useMemo(
             () =>
                 null != T && null != n
-                    ? S.filter((e) => !(0, c.Oy)(e))
-                          .filter((e) => !j || e.tags?.subscription_listing_id != null)
-                          .filter((e) => D?.id === e.id || p.wO(T, n.id, D, e))
+                    ? b
+                          .filter((e) => !(0, c.Oy)(e))
+                          .filter((e) => !y || e.tags?.subscription_listing_id != null)
+                          .filter((e) => P?.id === e.id || p.wO(T, n.id, P, e))
                     : [],
-            [T, n, j, D, S],
+            [T, n, y, P, b],
         ),
         U = l.useMemo(() => {
             let e = Array.from(k).map((e) => ({
@@ -79,7 +80,7 @@ function T(e) {
         let t = N[e];
         null != t && (w[t.id] = t);
     }),
-    a.zy(p.aH({ forceRoles: w, context: T }), a.kg(E.xBc.MANAGE_GUILD, E.xBc.MANAGE_ROLES)) || (0, d.bM)(T, n))
+    a.zy(p.aH({ forceRoles: w, context: T }), a.kg(C.xBc.MANAGE_GUILD, C.xBc.MANAGE_ROLES)) || (0, d.bM)(T, n))
         ? (0, i.jsx)("div", {
               className: I.kL,
               children: (0, i.jsxs)(o.iS7, {
@@ -90,12 +91,12 @@ function T(e) {
                       O(e);
                   },
                   children: [
-                      (0, i.jsx)(o.a32, { hideTags: !0, autoFocus: !0, placeholder: C.intl.string(C.t.Sojqsr) }),
+                      (0, i.jsx)(o.a32, { hideTags: !0, autoFocus: !0, placeholder: E.intl.string(E.t.Sojqsr) }),
                       (0, i.jsx)(o.X2W, { renderListItem: (e) => (0, i.jsx)(r.c$x, { ...e }) }),
                   ],
               }),
           })
-        : (0, i.jsx)(o.Text, { variant: "text-md/medium", children: C.intl.string(C.t.MNSTbY) });
+        : (0, i.jsx)(o.Text, { variant: "text-md/medium", children: E.intl.string(E.t.MNSTbY) });
 }
 function v(e) {
     return () =>

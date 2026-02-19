@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     pN: "videoDev_eb35c5",
     Lw: "overlay_eb35c5",

@@ -1,7 +1,8 @@
-e.d(i, { F: () => l });
-var n = e(311907),
-    r = e(87001),
-    s = e(652215);
-function l() {
-    return !(0, n.bG)([r.A], () => r.A.getWindowVisible(s.MLl.ACTIVITY_POPOUT));
+"use strict";
+n.d(t, { F: () => a });
+var r = n(311907),
+    i = n(87001),
+    s = n(652215);
+function a() {
+    return !(0, r.bG)([i.A], () => i.A.getWindowVisible(s.MLl.ACTIVITY_POPOUT));
 }

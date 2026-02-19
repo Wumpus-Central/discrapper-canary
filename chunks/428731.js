@@ -1,32 +1,33 @@
-n.d(t, { A: () => d });
-var i = n(486020),
-    l = n(592598),
-    a = n(581730),
-    s = n(672396),
-    r = n(652215),
-    o = n(985018);
-function d(e, t) {
-    if (l.A.isNotificationDisabled(s.KS.ActivityUserJoin)) return null;
+"use strict";
+n.d(t, { A: () => u });
+var r = n(486020),
+    i = n(592598),
+    s = n(581730),
+    a = n(672396),
+    o = n(652215),
+    l = n(985018);
+function u(e, t) {
+    if (i.A.isNotificationDisabled(a.KS.ActivityUserJoin)) return null;
     let n = e.username,
-        d = o.intl.format(o.t["Yk+uYG"], { username: "" }),
-        u = (0, i.ku)(e),
-        c = o.intl.string(o.t.WRj1Wn),
-        { trackView: h, trackClick: A } = (0, a.Y9)(s.KS.ActivityUserJoin, {
-            notif_type: s.KS.ActivityUserJoin,
+        u = l.intl.format(l.t["Yk+uYG"], { username: "" }),
+        c = (0, r.ku)(e),
+        d = l.intl.string(l.t.WRj1Wn),
+        { trackView: _, trackClick: f } = (0, s.Y9)(a.KS.ActivityUserJoin, {
+            notif_type: a.KS.ActivityUserJoin,
             notif_user_id: e.id,
-            activity_type: r.xL.JOIN,
+            activity_type: o.xL.JOIN,
             activity_name: t.name,
         });
     return {
-        icon: u,
+        icon: c,
         title: n,
-        body: d,
-        hint: c,
+        body: u,
+        hint: d,
         onNotificationShow: () => {
-            h();
+            _();
         },
         onDismissClick: () => {
-            A("dismiss");
+            f("dismiss");
         },
     };
 }

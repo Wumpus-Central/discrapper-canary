@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__32c39",
     Wz: "containerFaint__32c39",

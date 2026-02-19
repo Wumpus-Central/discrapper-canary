@@ -5,7 +5,7 @@ var n = s(627968),
     a = s.n(i),
     r = s(284009),
     u = s.n(r),
-    o = s(758879),
+    o = s(936504),
     c = s(110259),
     d = s(837381),
     m = s(607399),
@@ -204,7 +204,7 @@ function ea(e) {
                     ? (0, f.L3)(
                           e,
                           async () => {
-                              let { default: e } = await Promise.all([s.e("97262"), s.e("99011"), s.e("60200")]).then(
+                              let { default: e } = await Promise.all([s.e("97262"), s.e("60200")]).then(
                                   s.bind(s, 4027),
                               );
                               return (s) => (0, n.jsx)(e, { ...s, channel: t, selected: i });
@@ -216,11 +216,10 @@ function ea(e) {
                           async () => {
                               let { default: e } = await Promise.all([
                                   s.e("97262"),
-                                  s.e("99011"),
                                   s.e("42128"),
-                                  s.e("55150"),
+                                  s.e("67353"),
                                   s.e("39778"),
-                                  s.e("92617"),
+                                  s.e("57096"),
                               ]).then(s.bind(s, 385913));
                               return (s) => (0, n.jsx)(e, { ...s, user: r, channel: t, channelSelected: i });
                           },

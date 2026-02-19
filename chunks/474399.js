@@ -1,62 +1,69 @@
-n.d(t, { A: () => f });
+"use strict";
+n.d(t, { A: () => A });
 var r = n(284009),
-    u = n.n(r),
-    i = n(311907),
-    l = n(73153),
-    a = n(970278),
-    d = n(734057),
-    o = n(222823);
-let s = {},
-    A = new Set();
-class c extends i.Ay.Store {
+    i = n.n(r),
+    s = n(311907),
+    a = n(73153),
+    o = n(970278),
+    l = n(734057),
+    u = n(222823);
+let c = {},
+    d = new Set();
+function _() {
+    (c = {}), (d = new Set());
+}
+function f(e) {
+    let { channel: t, isNewlyCreated: n } = e;
+    if (!n || !o.A.hasLoaded(t.guild_id)) return !1;
+    c[t.id] = 0;
+}
+function p(e) {
+    let { channelId: t, optimistic: n, isPushNotification: r } = e;
+    if (n || r || !(t in c)) return !1;
+    c[t]++;
+}
+function h(e) {
+    let { threads: t } = e;
+    t.forEach((e) => {
+        null != e.count && (c[e.threadId] = e.count);
+    });
+}
+function m(e) {
+    let { channelId: t } = e;
+    if (!(t in c)) {
+        let e = l.A.getChannel(t),
+            n = l.A.getChannel(e?.parent_id);
+        if (!n?.isForumLikeChannel()) return !1;
+    }
+    c[t] = u.Ay.getUnreadCount(t);
+}
+function E(e) {
+    let { threads: t } = e;
+    t.forEach((e) => {
+        let { threadId: t } = e;
+        return d.add(t);
+    });
+}
+class g extends s.Ay.Store {
     static displayName = "ForumPostUnreadCountStore";
     initialize() {
-        this.waitFor(a.A, d.A, o.Ay);
+        this.waitFor(o.A, l.A, u.Ay);
     }
     getCount(e) {
-        return s[e];
+        return c[e];
     }
     getThreadIdsMissingCounts(e, t) {
         return (
-            u()(a.A.hasLoaded(e), "must wait for THREAD_LIST_SYNC before calling this"),
-            t.filter((e) => !(e in s) && !A.has(e))
+            i()(o.A.hasLoaded(e), "must wait for THREAD_LIST_SYNC before calling this"),
+            t.filter((e) => !(e in c) && !d.has(e))
         );
     }
 }
-let f = new c(l.h, {
-    CONNECTION_OPEN: function () {
-        (s = {}), (A = new Set());
-    },
-    THREAD_CREATE: function (e) {
-        let { channel: t, isNewlyCreated: n } = e;
-        if (!n || !a.A.hasLoaded(t.guild_id)) return !1;
-        s[t.id] = 0;
-    },
-    MESSAGE_CREATE: function (e) {
-        let { channelId: t, optimistic: n, isPushNotification: r } = e;
-        if (n || r || !(t in s)) return !1;
-        s[t]++;
-    },
-    FORUM_UNREADS: function (e) {
-        let { threads: t } = e;
-        t.forEach((e) => {
-            null != e.count && (s[e.threadId] = e.count);
-        });
-    },
-    MESSAGE_ACK: function (e) {
-        let { channelId: t } = e;
-        if (!(t in s)) {
-            let e = d.A.getChannel(t),
-                n = d.A.getChannel(e?.parent_id);
-            if (!n?.isForumLikeChannel()) return !1;
-        }
-        s[t] = o.Ay.getUnreadCount(t);
-    },
-    REQUEST_FORUM_UNREADS: function (e) {
-        let { threads: t } = e;
-        t.forEach((e) => {
-            let { threadId: t } = e;
-            return A.add(t);
-        });
-    },
+let A = new g(a.h, {
+    CONNECTION_OPEN: _,
+    THREAD_CREATE: f,
+    MESSAGE_CREATE: p,
+    FORUM_UNREADS: h,
+    MESSAGE_ACK: m,
+    REQUEST_FORUM_UNREADS: E,
 });

@@ -1,97 +1,104 @@
-n.d(e, {
-    $h: () => g,
-    Is: () => S,
-    Mo: () => I,
-    VE: () => p,
-    aq: () => c,
-    cV: () => E,
-    fq: () => h,
-    hO: () => f,
-    i6: () => _,
-    jp: () => u,
-    k5: () => C,
-    kN: () => N,
-    mV: () => T,
-    u7: () => A,
+"use strict";
+n.d(t, {
+    $h: () => R,
+    Is: () => I,
+    Mo: () => y,
+    VE: () => C,
+    aq: () => A,
+    cV: () => m,
+    fq: () => O,
+    hO: () => N,
+    i6: () => E,
+    jp: () => h,
+    k5: () => S,
+    kN: () => v,
+    mV: () => g,
+    u7: () => T,
 });
-var i = n(989349),
-    r = n.n(i),
-    l = n(899847),
+var r = n(989349),
+    i = n.n(r),
+    s = n(899847),
     a = n(695515),
-    s = n(191627),
-    o = n(842130),
-    d = n(985018);
-let u = () => ({
-        today: d.intl.string(o.default.VjIAQQ),
-        yesterday: d.intl.string(o.default["2a8xHY"]),
-        days: o.default.Xt6oND,
+    o = n(191627),
+    l = n(842130),
+    u = n(985018);
+let c = 60,
+    d = 3600,
+    _ = 86400,
+    f = 172800,
+    p = 604800,
+    h = () => ({
+        today: u.intl.string(l.default.VjIAQQ),
+        yesterday: u.intl.string(l.default["2a8xHY"]),
+        days: l.default.Xt6oND,
     }),
-    E = (t) =>
-        t
+    m = (e) =>
+        e
             ? {
-                  today: d.intl.string(o.default["2AtcIs"]),
-                  yesterday: d.intl.string(o.default.stOECr),
-                  days: o.default.n8n5Ba,
+                  today: u.intl.string(l.default["2AtcIs"]),
+                  yesterday: u.intl.string(l.default.stOECr),
+                  days: l.default.n8n5Ba,
               }
             : {
-                  today: d.intl.string(o.default.g1ZX6m),
-                  yesterday: d.intl.string(o.default.s3qSVt),
-                  days: o.default.f1UJiC,
+                  today: u.intl.string(l.default.g1ZX6m),
+                  yesterday: u.intl.string(l.default.s3qSVt),
+                  days: l.default.f1UJiC,
               },
-    _ = (t, e, n) => {
-        let i = r()().diff(r()(t), "s"),
-            l = e(),
-            a = r()(t).format("LL");
-        return i < 86400
-            ? l.today
-            : i < 172800
-              ? l.yesterday
-              : d.intl.formatToPlainString(l.days, { days: Math.min(Math.floor(i / 86400), n ?? 999) });
+    E = (e, t, n) => {
+        let r = i()().diff(i()(e), "s"),
+            s = t(),
+            a = i()(e).format("LL");
+        return r < _
+            ? s.today
+            : r < f
+              ? s.yesterday
+              : u.intl.formatToPlainString(s.days, { days: Math.min(Math.floor(r / _), n ?? 999) });
     },
-    T = (t, e) => {
-        let n = r()().diff(r()(t), "s"),
-            i = e(),
-            l = r()(t).format("LL");
-        return n < 60
-            ? i.seconds
-            : n < 3600
-              ? d.intl.formatToPlainString(i.minutes, { count: Math.floor(n / 60) })
-              : n < 86400
-                ? d.intl.formatToPlainString(i.hours, { count: Math.floor(n / 3600) })
-                : n < 172800
-                  ? i.yesterday
-                  : n < 604800
-                    ? d.intl.formatToPlainString(i.days, { count: Math.floor(n / 86400) })
-                    : d.intl.formatToPlainString(i.date, { date: l });
+    g = (e, t) => {
+        let n = i()().diff(i()(e), "s"),
+            r = t(),
+            s = i()(e).format("LL");
+        return n < c
+            ? r.seconds
+            : n < d
+              ? u.intl.formatToPlainString(r.minutes, { count: Math.floor(n / c) })
+              : n < _
+                ? u.intl.formatToPlainString(r.hours, { count: Math.floor(n / d) })
+                : n < f
+                  ? r.yesterday
+                  : n < p
+                    ? u.intl.formatToPlainString(r.days, { count: Math.floor(n / _) })
+                    : u.intl.formatToPlainString(r.date, { date: s });
     },
-    c = (t) =>
-        t.display_type === s.NV.USER_ADD ||
-        t.display_type === s.NV.USER_INTERACTION ||
-        t.display_type === s.NV.USER_CALLED,
-    S = (t) => t.display_type === s.NV.GUILD_ADD || t.display_type === s.NV.GUILD_INTERACTION,
-    A = (t) => t.display_type === s.NV.PURCHASES,
-    C = (t) => {
-        for (let e of Object.values(s.NV)) if (e.toString() === t) return e;
+    A = (e) =>
+        e.display_type === o.NV.USER_ADD ||
+        e.display_type === o.NV.USER_INTERACTION ||
+        e.display_type === o.NV.USER_CALLED,
+    I = (e) => e.display_type === o.NV.GUILD_ADD || e.display_type === o.NV.GUILD_INTERACTION,
+    T = (e) => e.display_type === o.NV.PURCHASES,
+    S = (e) => {
+        for (let t of Object.values(o.NV)) if (t.toString() === e) return t;
     },
-    I = () => {
-        let t = N();
-        return 0 === t.size ? [] : Array.from(t.entries()).sort((t, e) => t[1].priority - e[1].priority);
+    y = () => {
+        let e = v();
+        return 0 === e.size ? [] : Array.from(e.entries()).sort((e, t) => e[1].priority - t[1].priority);
     },
-    N = () => new Map(s.ly),
-    f = (t) => {
-        let e = Math.floor(t / 60),
-            n = t % 60;
-        return e > 0 ? `${e}h ${n}m` : `${n}m`;
+    v = () => new Map(o.ly),
+    N = (e) => {
+        let t = Math.floor(e / 60),
+            n = e % 60;
+        return t > 0 ? `${t}h ${n}m` : `${n}m`;
     },
-    p = () => {
+    C = () => {
         if (a.A.getAreLinkedUsersProcessed()) return a.A.getLinkedUsers();
-        l.Ay.fetchLinkedUsers();
+        s.Ay.fetchLinkedUsers();
     },
-    g = () =>
-        Object.values(a.A.getLinkedUsers()).some((t) => t.link_status === s.Ef.ACTIVE && t.link_type === s.QM.PARENT),
-    h = (t, e) =>
-        e > 0 && 0 === t
-            ? d.intl.formatToPlainString(o.default["L/Cj7S"], { callCount: e })
-            : t > 0 && 0 === e
-              ? d.intl.formatToPlainString(o.default["6X1F0i"], { messageCount: t })
-              : d.intl.formatToPlainString(o.default.IYqGMG, { messageCount: t, callCount: e });
+    b = () =>
+        Object.values(a.A.getLinkedUsers()).some((e) => e.link_status === o.Ef.ACTIVE && e.link_type === o.QM.PARENT),
+    R = () => b(),
+    O = (e, t) =>
+        t > 0 && 0 === e
+            ? u.intl.formatToPlainString(l.default["L/Cj7S"], { callCount: t })
+            : e > 0 && 0 === t
+              ? u.intl.formatToPlainString(l.default["6X1F0i"], { messageCount: e })
+              : u.intl.formatToPlainString(l.default.IYqGMG, { messageCount: e, callCount: t });

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     iE: "wrapper__58ece",
     YR: "unlocked__58ece",

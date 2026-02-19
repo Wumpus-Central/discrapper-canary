@@ -1,33 +1,34 @@
-n.d(t, { V: () => p, t: () => g });
-var i = n(627968);
+"use strict";
+n.d(t, { V: () => m, t: () => h });
+var r = n(627968);
 n(64700);
-var l = n(397927),
-    a = n(572164),
-    s = n(87001),
-    r = n(532624),
-    o = n(350535),
-    d = n(22802),
-    u = n(592598),
-    c = n(581730),
-    h = n(672396),
-    A = n(652215),
-    m = n(985018);
-function g() {
-    if (u.A.isNotificationDisabled(h.KS.ClipsReminderNotification) || s.A.getWindowOpen(A.MLl.ACTIVITY_POPOUT))
+var i = n(397927),
+    s = n(572164),
+    a = n(87001),
+    o = n(532624),
+    l = n(350535),
+    u = n(22802),
+    c = n(592598),
+    d = n(581730),
+    _ = n(672396),
+    f = n(652215),
+    p = n(985018);
+function h() {
+    if (c.A.isNotificationDisabled(_.KS.ClipsReminderNotification) || a.A.getWindowOpen(f.MLl.ACTIVITY_POPOUT))
         return null;
-    let { trackView: e, trackClick: t } = (0, c.Y9)(h.KS.ClipsReminderNotification, {
-            notif_type: h.KS.ClipsReminderNotification,
+    let { trackView: e, trackClick: t } = (0, d.Y9)(_.KS.ClipsReminderNotification, {
+            notif_type: _.KS.ClipsReminderNotification,
         }),
-        n = r.Ay.getKeybindForAction(A.hCu.SAVE_CLIP),
-        g = (0, a.TD)();
-    if (null == n || !g) return null;
-    let p = o.dI(n.shortcut, !0);
+        n = o.Ay.getKeybindForAction(f.hCu.SAVE_CLIP),
+        h = (0, s.TD)();
+    if (null == n || !h) return null;
+    let m = l.dI(n.shortcut, !0);
     return {
-        title: m.intl.format(m.t.S5uhCN, {
-            keybind: p,
-            keybindHook: (e, t) => (0, i.jsx)(d.b, { keybind: p.split("+") }, t),
+        title: p.intl.format(p.t.S5uhCN, {
+            keybind: m,
+            keybindHook: (e, t) => (0, r.jsx)(u.b, { keybind: m.split("+") }, t),
         }),
-        icon: (0, i.jsx)(l.xgA, { size: "lg", color: "currentColor" }),
+        icon: (0, r.jsx)(i.xgA, { size: "lg", color: "currentColor" }),
         onNotificationShow: () => {
             e();
         },
@@ -36,11 +37,11 @@ function g() {
         },
     };
 }
-function p(e) {
-    let { trackView: t, trackClick: n } = (0, c.Y9)(h.KS.ClipsNotification, { notif_type: h.KS.ClipsNotification });
+function m(e) {
+    let { trackView: t, trackClick: n } = (0, d.Y9)(_.KS.ClipsNotification, { notif_type: _.KS.ClipsNotification });
     return {
         title: e,
-        icon: (0, i.jsx)(l.xgA, { size: "lg", color: "currentColor" }),
+        icon: (0, r.jsx)(i.xgA, { size: "lg", color: "currentColor" }),
         onNotificationShow: () => {
             t();
         },

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     KE: "panelContainer_a83780",
     xt: "locked_a83780",

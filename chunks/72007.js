@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     kL: "container__2af41",
     M4: "activityCard__2af41",

@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     Ql: "nowPlayingNotification__81a05",
     VG: "nowPlayingNotificationAnimationWrapper__81a05",

@@ -135,7 +135,7 @@ let h = {
                       });
         },
         ChannelListThreadContextMenu: async () => {
-            let { default: e } = await Promise.all([n.e("99011"), n.e("78441"), n.e("91225")]).then(n.bind(n, 44536)),
+            let { default: e } = await Promise.all([n.e("74192"), n.e("35604")]).then(n.bind(n, 44536)),
                 t = d.A.getGuilds(),
                 i = null;
             for (let e of Object.values(t)) {

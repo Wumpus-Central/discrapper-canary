@@ -19,8 +19,8 @@ var i = n(627968),
     C = n(290863),
     E = n(461213),
     I = n(977997),
-    N = n(954571),
-    b = n(403362),
+    b = n(954571),
+    N = n(403362),
     S = n(246084),
     T = n(667936),
     v = n(879349),
@@ -58,7 +58,7 @@ function G(e) {
         (0, d.E)(t, "VoiceChannelActivities");
     let y = (0, u.Ay)(s),
         j = Array.from((0, u.Rz)(y).values()),
-        D = x?.filter(b.Vq) ?? [],
+        D = x?.filter(N.Vq) ?? [],
         G = (0, r.bG)(
             [E.A, C.A, _.default],
             () => {
@@ -84,7 +84,7 @@ function G(e) {
         P = (0, m.m)({ location: "voice_channel_activities" }),
         w = G.length + j.length > 0;
     return (l.useEffect(() => {
-        w && N.default.track(R.HAw.OPEN_POPOUT, { type: "Voice Channel Activities", channel_id: s.id });
+        w && b.default.track(R.HAw.OPEN_POPOUT, { type: "Voice Channel Activities", channel_id: s.id });
     }, [w, s.id]),
     w)
         ? (0, i.jsxs)(o.HOs, {
@@ -139,17 +139,17 @@ function G(e) {
                                                       n.e("67231"),
                                                       n.e("62733"),
                                                       n.e("83518"),
-                                                      n.e("12664"),
-                                                      n.e("34749"),
                                                       n.e("94604"),
+                                                      n.e("34749"),
+                                                      n.e("12664"),
                                                       n.e("44667"),
                                                       n.e("7803"),
                                                       n.e("55090"),
                                                       n.e("84704"),
                                                       n.e("67646"),
-                                                      n.e("45641"),
-                                                      n.e("96800"),
-                                                      n.e("24667"),
+                                                      n.e("50224"),
+                                                      n.e("7525"),
+                                                      n.e("75049"),
                                                   ]).then(n.bind(n, 585265));
                                                   return (t) => (0, i.jsx)(e, { ...t, guild: p });
                                               });

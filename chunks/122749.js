@@ -1,45 +1,46 @@
-n.d(t, { A: () => g });
-var i = n(387755),
-    l = n(684013),
-    a = n(956793),
-    s = n(571694),
-    r = n(47167),
-    o = n(994500),
-    d = n(287809),
-    u = n(621436),
-    c = n(581730),
-    h = n(672396),
-    A = n(652215),
-    m = n(985018);
-function g(e) {
-    let t = (0, r.m1)(e, d.default, o.A),
-        n = m.intl.string(m.t.ssrVzG),
-        g = (0, s.Y)(e),
-        p = (0, u.A)(e),
-        { trackView: f, trackClick: _ } = (0, c.Y9)(h.KS.IncomingCall, {
-            notif_type: h.KS.IncomingCall,
-            notif_user_id: p,
+"use strict";
+n.d(t, { A: () => h });
+var r = n(387755),
+    i = n(684013),
+    s = n(956793),
+    a = n(571694),
+    o = n(47167),
+    l = n(994500),
+    u = n(287809),
+    c = n(621436),
+    d = n(581730),
+    _ = n(672396),
+    f = n(652215),
+    p = n(985018);
+function h(e) {
+    let t = (0, o.m1)(e, u.default, l.A),
+        n = p.intl.string(p.t.ssrVzG),
+        h = (0, a.Y)(e),
+        m = (0, c.A)(e),
+        { trackView: E, trackClick: g } = (0, d.Y9)(_.KS.IncomingCall, {
+            notif_type: _.KS.IncomingCall,
+            notif_user_id: m,
             guild_id: e.guild_id,
             channel_id: e.id,
             channel_type: e.type,
         });
     return {
-        icon: g,
+        icon: h,
         title: t,
         body: n,
-        confirmText: m.intl.string(m.t["0D/6Rz"]),
-        cancelText: m.intl.string(m.t.BVN4pL),
+        confirmText: p.intl.string(p.t["0D/6Rz"]),
+        cancelText: p.intl.string(p.t.BVN4pL),
         onNotificationShow: () => {
-            f();
+            E();
         },
         onConfirmClick: (t, n) => {
-            if ((_("join"), A.kvI.CALLABLE.has(e.type))) i.A.call(e.id, !1, !1);
+            if ((g("join"), f.kvI.CALLABLE.has(e.type))) r.A.call(e.id, !1, !1);
             else {
-                if (e.type !== A.rbe.GUILD_VOICE) return;
-                a.default.selectVoiceChannel(e.id);
+                if (e.type !== f.rbe.GUILD_VOICE) return;
+                s.default.selectVoiceChannel(e.id);
             }
-            l.A.updateNotificationStatus(n),
-                l.A.track(A.HAw.VOICE_CHANNEL_SELECTED, {
+            i.A.updateNotificationStatus(n),
+                i.A.track(f.HAw.VOICE_CHANNEL_SELECTED, {
                     location: "Overlay Notificaiton",
                     guild_id: e.guild_id,
                     channel_id: e.id,
@@ -47,10 +48,10 @@ function g(e) {
                 });
         },
         onCancelClick: () => {
-            _("decline"), i.A.stopRinging(e.id);
+            g("decline"), r.A.stopRinging(e.id);
         },
         onDismissClick: () => {
-            _("dismiss");
+            g("dismiss");
         },
     };
 }

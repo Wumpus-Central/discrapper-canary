@@ -9,8 +9,8 @@ var i = n(627968),
     d = n(397927),
     c = n(442433),
     u = n(112389),
-    m = n(166444),
-    g = n(637248),
+    g = n(166444),
+    m = n(637248),
     x = n(418448),
     h = n(561321),
     _ = n(82566),
@@ -35,12 +35,9 @@ function j(e) {
               className: r()(f.Fv, { [f.d0]: "null" === s.id }),
               onContextMenu: (e) => {
                   (0, c.L3)(e, async () => {
-                      let { default: e } = await Promise.all([
-                          n.e("99011"),
-                          n.e("21420"),
-                          n.e("75149"),
-                          n.e("21875"),
-                      ]).then(n.bind(n, 725756));
+                      let { default: e } = await Promise.all([n.e("21420"), n.e("75149"), n.e("21875")]).then(
+                          n.bind(n, 725756),
+                      );
                       return (n) => (0, i.jsx)(e, { ...n, channel: s, guild: t });
                   });
               },
@@ -78,7 +75,7 @@ let N = s.memo(function () {
                 channel: t,
                 category: s,
                 guild: l,
-                isFirstChannel: g,
+                isFirstChannel: m,
                 isLastChannel: j,
                 tooltipDirection: b = "right",
             } = e,
@@ -95,7 +92,7 @@ let N = s.memo(function () {
                     delay: 500,
                     position: b,
                     children: (0, i.jsxs)(d.DUT, {
-                        className: r()(f.WG, { [f.Qn]: g, [f.wp]: j, [f.r9]: C }),
+                        className: r()(f.WG, { [f.Qn]: m, [f.wp]: j, [f.r9]: C }),
                         onClick: (e) => {
                             if (!C)
                                 return (
@@ -115,7 +112,6 @@ let N = s.memo(function () {
                                 ? (0, c.L3)(e, async () => {
                                       let { default: e } = await Promise.all([
                                           n.e("97262"),
-                                          n.e("99011"),
                                           n.e("21420"),
                                           n.e("57287"),
                                           n.e("40394"),
@@ -126,7 +122,6 @@ let N = s.memo(function () {
                                 : (0, c.L3)(e, async () => {
                                       let { default: e } = await Promise.all([
                                           n.e("97262"),
-                                          n.e("99011"),
                                           n.e("21420"),
                                           n.e("57287"),
                                           n.e("24664"),
@@ -140,7 +135,7 @@ let N = s.memo(function () {
                                 children: (0, i.jsxs)("div", {
                                     className: f.HA,
                                     children: [
-                                        (0, i.jsx)(m.gm, { channel: t, guild: l }),
+                                        (0, i.jsx)(g.gm, { channel: t, guild: l }),
                                         (0, i.jsx)(a.A, {
                                             className: f.__invalid_name,
                                             children: (0, i.jsx)(d.Text, {
@@ -216,7 +211,7 @@ function T(e) {
             },
             [t, n, r],
         ),
-        d = (0, g.zH)(n.id, t, 64);
+        d = (0, m.zH)(n.id, t, 64);
     return (0, i.jsx)("div", {
         className: l,
         children: d.map((e, t) => {

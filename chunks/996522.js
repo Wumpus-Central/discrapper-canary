@@ -1,4 +1,4 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => C });
 var i = n(627968);
 n(64700);
 var l = n(503698),
@@ -17,17 +17,17 @@ var l = n(503698),
     A = n(652215),
     f = n(985018),
     x = n(868320);
-function E(e) {
+function C(e) {
     let { message: t, compact: n } = e,
         l = (0, r.bG)([c.A], () => c.A.getChannel(u.default.castMessageIdAsChannelId(t.id)));
-    return null == l ? null : (0, i.jsx)(C, { channel: l, compact: n, isSystemMessage: (0, d.A)(t) });
+    return null == l ? null : (0, i.jsx)(E, { channel: l, compact: n, isSystemMessage: (0, d.A)(t) });
 }
-function C(e) {
+function E(e) {
     var t;
     let l,
         d,
         c,
-        { channel: u, compact: E, isSystemMessage: C } = e,
+        { channel: u, compact: C, isSystemMessage: E } = e,
         I = (0, r.bG)([_.A], () => _.A.getCount(u.id)),
         T =
             ((t = u),
@@ -54,7 +54,7 @@ function C(e) {
         v = null != I && I > 0;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)("div", { className: a()(x.GI, { [x.E]: !E, [x.E_]: C }) }),
+            (0, i.jsx)("div", { className: a()(x.GI, { [x.E]: !C, [x.E_]: E }) }),
             (0, i.jsx)(s.DUT, {
                 onClick: function (e) {
                     e.stopPropagation(), (0, g.JA)(u, e.shiftKey);
@@ -68,14 +68,12 @@ function C(e) {
                 },
                 onContextMenu: function (e) {
                     (0, o.L3)(e, async () => {
-                        let { default: e } = await Promise.all([n.e("99011"), n.e("78441"), n.e("55266")]).then(
-                            n.bind(n, 44536),
-                        );
+                        let { default: e } = await Promise.all([n.e("74192"), n.e("13223")]).then(n.bind(n, 44536));
                         return (t) => (0, i.jsx)(e, { channel: u, ...t });
                     });
                 },
                 "aria-roledescription": f.intl.string(f.t["8ipxiY"]),
-                className: a()(x.kL, { [x.og]: C }),
+                className: a()(x.kL, { [x.og]: E }),
                 children: (0, i.jsxs)(s.RDc, {
                     children: [
                         (0, i.jsxs)("div", {

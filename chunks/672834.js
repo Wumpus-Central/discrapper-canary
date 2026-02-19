@@ -16,14 +16,14 @@ var i = n(627968),
     A = n(615179),
     f = n(120120),
     x = n(379114),
-    E = n(698441),
-    C = n(484724),
+    C = n(698441),
+    E = n(484724),
     I = n(997509),
     T = n(850131),
     v = n(31051),
     N = n(659203),
-    S = n(446028),
-    b = n(302291),
+    b = n(446028),
+    S = n(302291),
     j = n(282224),
     y = n(976860),
     R = n(849736),
@@ -70,14 +70,14 @@ var i = n(627968),
     eA = n(640289),
     ef = n(293657),
     ex = n(269802),
-    eE = n(576471),
-    eC = n(808821),
+    eC = n(576471),
+    eE = n(808821),
     eI = n(933762),
     eT = n(840233),
     ev = n(536030),
     eN = n(912746),
-    eS = n(817253),
-    eb = n(911726),
+    eb = n(817253),
+    eS = n(911726),
     ej = n(904854),
     ey = n(652215),
     eR = n(502075),
@@ -96,7 +96,7 @@ function eM(e) {
                 });
         }, [c]),
         m = (0, $.P)({ user: s, channelId: d, guildId: n.guild_id, messageId: t.id, stopPropagation: !0 });
-    return (0, i.jsx)(eb.Ay, { message: t, compact: r, guild: c, usernameHook: m, onClickMessage: u });
+    return (0, i.jsx)(eS.Ay, { message: t, compact: r, guild: c, usernameHook: m, onClickMessage: u });
 }
 function eO(e) {
     let { message: t, compact: n, channel: l } = e,
@@ -215,7 +215,7 @@ let eD = Object.freeze({
                 s = (0, $.P)({ user: a, channelId: r, guildId: l.guild_id, messageId: t.id });
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(eS.A, { message: t, compact: n, usernameHook: s }),
+                    (0, i.jsx)(eb.A, { message: t, compact: n, usernameHook: s }),
                     (0, i.jsx)(P.I, { channel: l, message: t }),
                 ],
             });
@@ -300,7 +300,7 @@ let eD = Object.freeze({
                         let l = w.A.getChannel(t.messageReference?.channel_id);
                         null != l &&
                             (0, s.L3)(e, async () => {
-                                let { default: e } = await Promise.all([n.e("99011"), n.e("78441"), n.e("43098")]).then(
+                                let { default: e } = await Promise.all([n.e("74192"), n.e("13223")]).then(
                                     n.bind(n, 44536),
                                 );
                                 return (t) => (0, i.jsx)(e, { ...t, channel: l });
@@ -346,11 +346,11 @@ let eD = Object.freeze({
         [ey.lAJ.STAGE_START]: function (e) {
             let { message: t, channel: n, compact: l } = e,
                 r = (0, $.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id }),
-                s = (0, a.bG)([E.Ay], () => E.Ay.getActiveEventByChannel(n.id), [n.id]);
+                s = (0, a.bG)([C.Ay], () => C.Ay.getActiveEventByChannel(n.id), [n.id]);
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(ex.A, { message: t, compact: l, usernameHook: r }),
-                    null != s && s.name === t.content ? (0, i.jsx)(C.A, { code: `${n.guild_id}-${s.id}` }) : null,
+                    null != s && s.name === t.content ? (0, i.jsx)(E.A, { code: `${n.guild_id}-${s.id}` }) : null,
                 ],
             });
         },
@@ -392,11 +392,11 @@ let eD = Object.freeze({
         [ey.lAJ.STAGE_TOPIC]: function (e) {
             let { message: t, channel: n, compact: l } = e,
                 a = (0, $.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id });
-            return (0, i.jsx)(eE.A, { message: t, compact: l, usernameHook: a });
+            return (0, i.jsx)(eC.A, { message: t, compact: l, usernameHook: a });
         },
-        [ey.lAJ.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: S.A,
-        [ey.lAJ.PRIVATE_CHANNEL_INTEGRATION_ADDED]: b.R,
-        [ey.lAJ.PRIVATE_CHANNEL_INTEGRATION_REMOVED]: b.d,
+        [ey.lAJ.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: b.A,
+        [ey.lAJ.PRIVATE_CHANNEL_INTEGRATION_ADDED]: S.R,
+        [ey.lAJ.PRIVATE_CHANNEL_INTEGRATION_REMOVED]: S.d,
         [ey.lAJ.PREMIUM_REFERRAL]: function (e) {
             let { message: t, compact: n } = e;
             return (0, i.jsx)(N.A, {
@@ -466,7 +466,7 @@ let eD = Object.freeze({
         },
         67: function (e) {
             let { message: t, compact: n } = e;
-            return (0, i.jsx)(eC.A, { message: t, compact: n });
+            return (0, i.jsx)(eE.A, { message: t, compact: n });
         },
     }),
     eP = l.memo(function (e) {

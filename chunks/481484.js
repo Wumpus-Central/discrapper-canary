@@ -1,11 +1,12 @@
-i.d(t, { A: () => o, y: () => s });
-var n = i(311907),
-    a = i(256415),
-    l = i(395011),
-    r = i(222506);
-function s() {
-    return a.default.isLocked(l.A.getTargetPID());
-}
+"use strict";
+n.d(t, { A: () => l, y: () => o });
+var r = n(311907),
+    i = n(256415),
+    s = n(395011),
+    a = n(222506);
 function o() {
-    return (0, n.bG)([r.A, l.A], () => r.A.isInputLocked(l.A.getTargetPID()));
+    return i.default.isLocked(s.A.getTargetPID());
+}
+function l() {
+    return (0, r.bG)([a.A, s.A], () => a.A.isInputLocked(s.A.getTargetPID()));
 }

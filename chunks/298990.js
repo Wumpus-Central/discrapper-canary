@@ -1,18 +1,19 @@
-n.d(t, { Jb: () => r, b4: () => a, oR: () => s, qf: () => l });
-var i = n(73153);
-function l(e, t, n) {
-    return new Promise((l) => {
+"use strict";
+n.d(t, { Jb: () => o, b4: () => a, oR: () => s, qf: () => i });
+var r = n(73153);
+function i(e, t, n) {
+    return new Promise((i) => {
         setTimeout(() => {
-            i.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_OPEN", activity: e, isPrivate: t, context: n, resolve: l });
+            r.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_OPEN", activity: e, isPrivate: t, context: n, resolve: i });
         }, 0);
     });
 }
 function s(e) {
-    i.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_QUERY", query: e });
+    r.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_QUERY", query: e });
 }
 function a(e) {
-    i.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_SEND", channelId: e });
+    r.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_SEND", channelId: e });
 }
-function r(e) {
-    i.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_SEND", userId: e });
+function o(e) {
+    r.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_SEND", userId: e });
 }
