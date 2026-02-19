@@ -184,6 +184,7 @@ let b = {
         noiseCancellerProcessTime: !0,
         sinkWantAsInt: !0,
         sinkWantLocalAsInt: !0,
+        skipHistoryJson: !0,
         sumOfSquaredFramesDurations: !0,
         timestamp: !0,
         type: !0,
