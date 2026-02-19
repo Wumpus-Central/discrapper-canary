@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => c });
 var r = n(810531),
     i = n(548965),
-    a = n(942269),
-    s = n(770335);
+    s = n(942269),
+    a = n(770335);
 function o(e, t) {
     let n = {};
     for (let i of t)
@@ -18,11 +18,11 @@ function o(e, t) {
             roles: i.roles,
             managed: i.managed,
             version: i.version,
-            type: s.i.GUILD,
+            type: a.i.GUILD,
         };
     return n;
 }
-class l extends a.yW {
+class l extends s.yW {
     static displayName = "RawGuildEmojiStore";
     database = this.addKKVDatabase("guild_emojis");
     stateWrapper() {
@@ -32,13 +32,29 @@ class l extends a.yW {
         return this.database.getNullablePartition(e);
     }
 }
-let u = new l(
+function u(e, t, n) {
+    if ("full_sync" === t.op) n.setPartition(e, o(e, t.items));
+    else {
+        let r = n.getNullablePartition(e);
+        if (null == r) n.setPartition(e, o(e, t.writes));
+        else if (t.writes.length > 0 || t.deletes.length > 0) {
+            let i = { ...r };
+            for (let e of t.deletes) delete i[e];
+            for (let n of t.writes) Object.assign(i, o(e, [n]));
+            n.setPartition(e, i);
+        }
+    }
+}
+let c = new l(
     {
         LOGOUT: (e, t) => t.clear(),
         BACKGROUND_SYNC: (e, t) => t.clear(),
         CONNECTION_OPEN: (e, t) => {
-            for (let n of (t.clear(), e.guilds))
-                null != n.emojis.items && t.setPartition(n.id, o(n.id, n.emojis.items));
+            let { guilds: n, unavailableGuilds: r } = e,
+                i = new Set(n.map((e) => e.id));
+            for (let e of r) i.add(e);
+            for (let e of t.getPartitionKeys()) i.has(e) || t.removePartition(e);
+            for (let e of n) u(e.id, e.emojis, t);
         },
         OVERLAY_INITIALIZE: (e, t) => {
             t.clear(),
@@ -51,7 +67,7 @@ let u = new l(
             for (let [n, r] of e.emojis) t.setPartition(n, o(n, r));
         },
         GUILD_CREATE: (e, t) => {
-            t.setPartition(e.guild.id, o(e.guild.id, e.guild.emojis.items ?? []));
+            u(e.guild.id, e.guild.emojis, t);
         },
         GUILD_UPDATE: (e, t) => {
             t.setPartition(e.guild.id, o(e.guild.id, e.guild.emojis));

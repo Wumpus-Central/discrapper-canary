@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => eF, o2: () => e_ }), n(321073), n(205816);
+n.d(t, { Ay: () => eF, o2: () => e_ }), n(321073);
 var r = n(284009),
     i = n.n(r),
     s = n(735438),
@@ -104,7 +104,7 @@ let $ = 42,
     Z = [],
     X = [],
     Q = new Set(),
-    J = 3,
+    J = 2,
     ee = [...W],
     et = {},
     en = {},
@@ -125,15 +125,15 @@ async function eo() {
     if (0 !== J) return;
     let e = f.A.database();
     if (null == e) return;
-    J = 2;
+    J = 1;
     let t = await (0, p.ES)("EmojiStore.loadSavedEmojis", () =>
         u.A.timeAsync("\uD83D\uDCBE", "loadSavedEmojis", () => h.A.getAsync(e)),
     );
-    (J = 3), null != t && d.h.dispatch({ type: "CACHED_EMOJIS_LOADED", emojis: t });
+    (J = 2), null != t && d.h.dispatch({ type: "CACHED_EMOJIS_LOADED", emojis: t });
 }
 function el(e) {
     let { emojis: t } = e;
-    for (let [e] of t) !Object.hasOwn(et, e) && N.A.isMember(e) && eg(e);
+    for (let [e] of t) N.A.isMember(e) && eg(e);
     eE();
 }
 let eu = (e) => ({
@@ -375,13 +375,13 @@ class e_ {
 let ef = ec(e_.resetFrequentlyUsed),
     ep = ed(e_.resetFrequentlyUsedReactionEmojis);
 function eh() {
-    (et = {}), (en = {}), e_.reset(), er.clear(), (J = 3);
+    (et = {}), (en = {}), e_.reset(), er.clear(), (J = 2);
 }
 function em(e) {
     null != et[e] && delete et[e];
 }
 function eE() {
-    (en = null), e_.reset(), (3 === J || 1 === J) && (ef.compute(), ep.compute());
+    (en = null), e_.reset(), 2 === J && (ef.compute(), ep.compute());
 }
 function eg(e) {
     em(e), e_.clear(e);
@@ -394,11 +394,11 @@ function eg(e) {
 }
 function eA(e) {
     for (let t of (eh(), e.guilds)) eg(t.id);
-    (J = +!!e.guilds.every((e) => null != e.emojis.items)), eE();
+    (J = 0 === e.unavailableGuilds.length && e.guilds.every((e) => "full_sync" === e.emojis.op) ? 2 : 0), eE();
 }
 function eI(e) {
     for (let t in (eh(), e.emojis)) eg(t);
-    (J = 1), eE();
+    (J = 2), eE();
 }
 function eT() {
     (K.pendingUsages = []), (K.emojiReactionPendingUsages = []);
@@ -407,7 +407,7 @@ function eS() {
     eh();
 }
 function ey(e) {
-    1 === J && "update" === e.guild.emojis.op && null == e.guild.emojis.items && (J = 0), eg(e.guild.id), eE();
+    eg(e.guild.id), eE();
 }
 function ev(e) {
     eg(e.guild.id), eE();
@@ -506,7 +506,7 @@ function ex(e) {
         null != e && (ef.track(e), K.pendingUsages.push({ key: e, timestamp: Date.now() }));
     }
     let t = e.length > 0;
-    return t && (3 === J || 1 === J) && ef.compute(), t;
+    return t && 2 === J && ef.compute(), t;
 }
 function eM(e) {
     if (null == e) return !1;
@@ -515,7 +515,7 @@ function eM(e) {
         null != e && (ep.track(e), K.emojiReactionPendingUsages.push({ key: e, timestamp: Date.now() }));
     }
     let t = e.length > 0;
-    return t && (3 === J || 1 === J) && ep.compute(), t;
+    return t && 2 === J && ep.compute(), t;
 }
 function eP(e) {
     let {

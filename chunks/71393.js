@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => h });
 var r = n(357758),
     i = n(867051),
-    a = n(548965),
-    s = n(942269),
+    s = n(548965),
+    a = n(942269),
     o = n(260509),
     l = n(860689),
     u = n(661191),
@@ -22,7 +22,7 @@ function f(e) {
                 : null,
     });
 }
-class h extends s.yW {
+class p extends a.yW {
     static displayName = "GuildStore";
     database = this.addKVDatabase("guilds", f);
     stateWrapper() {
@@ -38,7 +38,7 @@ class h extends s.yW {
         return this.database.length();
     }
 }
-let p = new h(
+let h = new p(
     {
         BACKGROUND_SYNC: (e, t) => {
             let { guilds: n } = e;
@@ -48,13 +48,16 @@ let p = new h(
             }
         },
         CONNECTION_OPEN: (e, t) => {
-            let { guilds: n } = e,
-                r = {};
+            let { guilds: n, unavailableGuilds: r } = e,
+                i = t.getAllRecords(),
+                s = new Set(Object.keys(i));
             for (let e of n) {
-                let n = t.get(e.id);
-                null != n && (r[e.id] = n);
+                if ((s.delete(e.id), null == e.properties && null == i[e.id]))
+                    throw Error("Guild data was missing from store, but hash was still available.");
+                t.set(e.id, l.Wj(e, i[e.id]));
             }
-            for (let e of (t.clear(), n)) t.set(e.id, l.Wj(e, r[e.id]));
+            for (let e of r) s.delete(e);
+            for (let e of s) t.remove(e);
         },
         OVERLAY_INITIALIZE: (e, t) => {
             let { guilds: n } = e;
@@ -79,6 +82,8 @@ let p = new h(
         GUILD_CREATE: (e, t) => {
             let { guild: n } = e,
                 r = t.get(n.id);
+            if (null == n.properties && null == r)
+                throw Error("Guild data was missing from store, but hash was still available.");
             t.set(n.id, l.Wj(n, r));
         },
         GUILD_UPDATE: (e, t) => {
@@ -92,12 +97,12 @@ let p = new h(
         },
         GUILD_MEMBER_ADD: (e, t) => {
             let { guildId: n, joinedAt: r, user: i } = e,
-                a = c.default.getId(),
-                s = t.get(n);
-            if (a !== i.id || null == s) return;
+                s = c.default.getId(),
+                a = t.get(n);
+            if (s !== i.id || null == a) return;
             let l = "string" == typeof r ? new Date(r) : r;
-            l !== s.joinedAt && null != l && t.set(n, (0, o.kn)(s, l));
+            l !== a.joinedAt && null != l && t.set(n, (0, o.kn)(a, l));
         },
     },
-    a.P4.getCachedBridgedStoreMode(),
+    s.P4.getCachedBridgedStoreMode(),
 );

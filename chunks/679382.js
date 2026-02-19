@@ -1,41 +1,37 @@
 "use strict";
-n.d(t, { A: () => I });
+n.d(t, { A: () => A });
 var r = n(61090),
     i = n(311907),
-    a = n(73153),
-    s = n(723176),
+    s = n(73153),
+    a = n(723176),
     o = n(154049),
     l = n(351697),
     u = n(184989),
     c = n(71393),
     d = n(41237),
     _ = n(514983);
-let f = 2,
+let f = 1,
     p = async () => {
         if (0 !== f) return;
-        let e = s.A.database();
+        let e = a.A.database();
         if (null == e) return;
-        f = 2;
+        f = 1;
         let t = await (0, o.ES)("StickerStore.loadSavedGuildStickers", () =>
             r.A.timeAsync("\uD83D\uDCBE", "loadSavedGuildStickers", () => l.A.getAsync(e)),
         );
-        null != t && a.h.dispatch({ type: "CACHED_STICKERS_LOADED", stickers: t });
+        null != t && s.h.dispatch({ type: "CACHED_STICKERS_LOADED", stickers: t });
     },
     h = (e) => {
-        let { guilds: t } = e;
-        f = +!!t.every((e) => null != e.stickers.items);
+        let { guilds: t, unavailableGuilds: n } = e;
+        f = 0 === n.length && t.every((e) => "full_sync" === e.stickers.op) ? 1 : 0;
     },
     m = () => {
         f = 0;
+    },
+    E = () => {
+        f = 0;
     };
-function g(e) {
-    let { guild: t } = e;
-    1 === f && "update" === t.stickers.op && null == t.stickers.items && (f = 0);
-}
-let E = () => {
-    f = 0;
-};
-class A extends i.Ay.Store {
+class g extends i.Ay.Store {
     static displayName = "StickersStore";
     initialize() {
         this.waitFor(u.A, d.A, c.A, _.A), this.syncWith([d.A, _.A], () => !0);
@@ -80,4 +76,4 @@ class A extends i.Ay.Store {
         return p(), d.A.getStickersByGuildId(e);
     }
 }
-let I = new A(a.h, { BACKGROUND_SYNC: m, CONNECTION_OPEN: h, GUILD_CREATE: g, LOGOUT: E });
+let A = new g(s.h, { BACKGROUND_SYNC: m, CONNECTION_OPEN: h, LOGOUT: E });

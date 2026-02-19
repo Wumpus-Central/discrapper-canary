@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => f }), n(321073);
+n.d(t, { A: () => p }), n(321073);
 var r = n(810531),
     i = n(7584),
-    a = n(548965),
-    s = n(942269),
+    s = n(548965),
+    a = n(942269),
     o = n(71393),
     l = n(842086);
 function u(e) {
@@ -29,23 +29,23 @@ function c(e) {
 function d(e, t) {
     let n = [],
         { tags: r } = t,
-        a = { type: l.cG.STICKER_NAME, value: t.name.trim().toLocaleLowerCase() };
-    if ((n.push(a), null != r)) {
+        s = { type: l.cG.STICKER_NAME, value: t.name.trim().toLocaleLowerCase() };
+    if ((n.push(s), null != r)) {
         let t = { type: l.cG.TAG, value: r.trim().toLocaleLowerCase() };
         n.push(t);
-        let a = o.A.getGuild(e);
-        if (null != a) {
-            let e = a.name.trim().toLocaleLowerCase();
+        let s = o.A.getGuild(e);
+        if (null != s) {
+            let e = s.name.trim().toLocaleLowerCase();
             null != e && "" !== e && n.push({ type: l.cG.GUILD_NAME, value: e });
         }
-        let s = i.Ay.getByName(r);
-        null != s &&
-            (n.push({ type: l.cG.CORRELATED_EMOJI, value: s.surrogates }),
-            s.forEachDiversity((e) => n.push({ type: l.cG.CORRELATED_EMOJI, value: e.surrogates })));
+        let a = i.Ay.getByName(r);
+        null != a &&
+            (n.push({ type: l.cG.CORRELATED_EMOJI, value: a.surrogates }),
+            a.forEachDiversity((e) => n.push({ type: l.cG.CORRELATED_EMOJI, value: e.surrogates })));
     }
     return n;
 }
-class _ extends s.yW {
+class _ extends a.yW {
     static displayName = "GuildStickersStore";
     database = this.addKKVDatabase("guildStickers");
     stickerByIdIndex = this.database.addSecondaryKVIndex("id");
@@ -73,20 +73,33 @@ class _ extends s.yW {
         return this.database;
     }
 }
-let f = new _(
+function f(e, t, n) {
+    if ("full_sync" === t.op) n.setPartition(e, c(t.items));
+    else {
+        let r = n.getNullablePartition(e);
+        if (null == r) n.setPartition(e, c(t.writes));
+        else if (t.writes.length > 0 || t.deletes.length > 0) {
+            let i = { ...r };
+            for (let e of t.deletes) delete i[e];
+            for (let e of t.writes) i[e.id] = u(e);
+            n.setPartition(e, i);
+        }
+    }
+}
+let p = new _(
     {
         LOGOUT: (e, t) => t.clear(),
         BACKGROUND_SYNC: (e, t) => t.clear(),
         CONNECTION_OPEN: (e, t) => {
-            let n = new Set(t.getPartitionKeys());
-            for (let r of e.guilds)
-                n.delete(r.id), null != r.stickers.items && t.setPartition(r.id, c(r.stickers.items));
-            for (let t of e.unavailableGuilds) n.delete(t);
-            for (let e of n) t.removePartition(e);
+            let { guilds: n, unavailableGuilds: r } = e,
+                i = new Set(n.map((e) => e.id));
+            for (let e of r) i.add(e);
+            for (let e of t.getPartitionKeys()) i.has(e) || t.removePartition(e);
+            for (let e of n) f(e.id, e.stickers, t);
         },
         GUILD_CREATE: (e, t) => {
-            if (null == e.guild.joined_at || null == e.guild.stickers.items) return !1;
-            t.setPartition(e.guild.id, c(e.guild.stickers.items ?? []));
+            if (null == e.guild.joined_at) return !1;
+            f(e.guild.id, e.guild.stickers, t);
         },
         GUILD_DELETE: (e, t) => {
             t.removePartition(e.guild.id);
@@ -115,5 +128,5 @@ let f = new _(
             t.setPartition(e.guildId, c(e.stickers));
         },
     },
-    a.P4.getCachedBridgedStoreMode(),
+    s.P4.getCachedBridgedStoreMode(),
 );

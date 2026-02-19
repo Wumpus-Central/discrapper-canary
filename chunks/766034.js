@@ -2,15 +2,15 @@
 n.d(t, { A: () => u });
 var r = n(626584),
     i = n(71393),
-    a = n(403362),
-    s = n(723176);
+    s = n(403362),
+    a = n(723176);
 let o = new r.A("GuildVersions");
 class l {
     pending = new Map();
     committed = new Map();
     async getCommittedVersions() {
         try {
-            let e = s.A.guildVersions();
+            let e = a.A.guildVersions();
             if (null == e) return {};
             let t = (await e.getMany()).map((e) => [e.id, e.version]);
             return Object.fromEntries(t ?? []);
@@ -56,14 +56,14 @@ class l {
                 case "update":
                     return e.writes;
                 default:
-                    (0, a.xb)(e);
+                    (0, s.xb)(e);
             }
         }
         this.updateWith(r, [n]),
             this.updateWith(r, i(n.emojis)),
             this.updateWith(r, i(n.stickers)),
             this.updateWith(r, i(n.channels)),
-            this.updateWith(r, Array.isArray(n.roles) ? n.roles : Object.values(n.roles)),
+            this.updateWith(r, i(n.roles)),
             this.commit(t);
     }
     handleGuildUpdate(e, t) {
@@ -72,7 +72,7 @@ class l {
         this.updateWith(r, [n]),
             this.updateWith(r, n.emojis),
             this.updateWith(r, n.stickers),
-            this.updateWith(r, Array.isArray(n.roles) ? n.roles : Object.values(n.roles)),
+            this.updateWith(r, n.roles),
             this.commit(t);
     }
     handleGuildDelete(e, t) {
@@ -122,7 +122,7 @@ class l {
     }
     commit(e) {
         if (this.pending.size > 0) {
-            let t = s.A.guildVersionsTransaction(e);
+            let t = a.A.guildVersionsTransaction(e);
             for (let [e, n] of this.pending)
                 null != n
                     ? (t.put({ id: e, version: n }), this.committed.set(e, n))

@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => p });
 var r = n(136722),
     i = n(867051),
-    a = n(548965),
-    s = n(942269),
+    s = n(548965),
+    a = n(942269),
     o = n(260509),
     l = n(34457),
     u = n(9865),
@@ -12,7 +12,7 @@ function d(e) {
     let t = e;
     return (0, i.yE)(l.xh, { ...t, permissions: r.iu(t.permissions) });
 }
-class _ extends s.yW {
+class _ extends a.yW {
     static displayName = "GuildRoleStore";
     database = this.addKKVDatabase("guild_roles", d);
     stateWrapper() {
@@ -45,7 +45,11 @@ class _ extends s.yW {
         return this.database.partitionVersion(e);
     }
 }
-let f = new _(
+function f(e, t, n) {
+    ("update" !== t.op || 0 !== t.writes.length || 0 !== t.deletes.length) &&
+        n.setPartition(e, u.j_(e, t, n.getPartition(e)));
+}
+let p = new _(
     {
         BACKGROUND_SYNC: (e, t) => {
             let { guilds: n } = e;
@@ -66,8 +70,11 @@ let f = new _(
                 t.setPartition(n, u.lj(n, r));
         },
         CONNECTION_OPEN: (e, t) => {
-            let { guilds: n } = e;
-            for (let { id: e, roles: r } of (t.clear(), n)) t.setPartition(e, Array.isArray(r) ? u.hd(e, r) : r);
+            let { guilds: n, unavailableGuilds: r } = e,
+                i = new Set(n.map((e) => e.id));
+            for (let e of r) i.add(e);
+            for (let e of t.getPartitionKeys()) i.has(e) || t.removePartition(e);
+            for (let { id: e, roles: r } of n) f(e, r, t);
         },
         CACHE_LOADED: (e, t) => {
             let { guilds: n } = e;
@@ -81,7 +88,7 @@ let f = new _(
             let {
                 guild: { id: n, roles: r },
             } = e;
-            t.setPartition(n, Array.isArray(r) ? u.hd(n, r) : r);
+            f(n, r, t);
         },
         GUILD_UPDATE: (e, t) => {
             let {
@@ -106,5 +113,5 @@ let f = new _(
             t.removeRecord(n, r);
         },
     },
-    a.P4.getCachedBridgedStoreMode(),
+    s.P4.getCachedBridgedStoreMode(),
 );

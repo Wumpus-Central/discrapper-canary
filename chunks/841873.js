@@ -34,7 +34,7 @@ n.d(t, {
     Oy: () => q,
     PJ: () => tn,
     PR: () => tw,
-    Ph: () => v,
+    Ph: () => S,
     Py: () => tG,
     QH: () => ef,
     QR: () => tx,
@@ -47,6 +47,7 @@ n.d(t, {
     Rj: () => tO,
     Ry: () => eD,
     SJ: () => eN,
+    Sz: () => tC,
     Tb: () => Q,
     Tp: () => tE,
     U8: () => tU,
@@ -64,7 +65,6 @@ n.d(t, {
     _m: () => eQ,
     aI: () => eP,
     bL: () => tL,
-    bO: () => tN,
     c6: () => ex,
     cV: () => $,
     ce: () => tT,
@@ -76,10 +76,10 @@ n.d(t, {
     eT: () => G,
     eW: () => eR,
     fb: () => td,
+    fg: () => tN,
     gG: () => eS,
     gM: () => X,
     gR: () => ep,
-    ge: () => tb,
     hI: () => eB,
     he: () => ej,
     iA: () => e8,
@@ -93,21 +93,21 @@ n.d(t, {
     l0: () => ta,
     lI: () => i,
     n8: () => Z,
-    nS: () => tC,
+    nQ: () => tb,
     nx: () => k,
     o: () => ec,
     p8: () => e4,
     pD: () => ez,
     qN: () => tB,
     qv: () => tM,
-    rf: () => S,
+    rf: () => N,
     rk: () => tr,
     rl: () => tR,
     s5: () => em,
     sQ: () => ed,
     sW: () => tF,
     ss: () => to,
-    t7: () => C,
+    t7: () => v,
     tZ: () => eZ,
     uo: () => eb,
     uw: () => tt,
@@ -116,7 +116,7 @@ n.d(t, {
     vF: () => eC,
     vU: () => tk,
     vV: () => eU,
-    vb: () => N,
+    vb: () => y,
     w2: () => e9,
     w6: () => tc,
     w9: () => eo,
@@ -126,7 +126,7 @@ n.d(t, {
     x0: () => t_,
     x6: () => er,
     xV: () => tm,
-    xy: () => y,
+    xy: () => C,
     yc: () => tH,
     yq: () => eW,
     zE: () => tD,
@@ -271,10 +271,19 @@ function T(e) {
 ${e.stack}`
         : t;
 }
-function S(e, t, n, i, s) {
+function S() {
+    return r.initLibdiscore();
+}
+function y() {
+    r.crash();
+}
+function v(e, t) {
+    return r.rustMultiply(e, t);
+}
+function N(e, t, n, i, s) {
     r.installLogCallback(e, t, n, i, s);
 }
-function y(e) {
+function C(e) {
     let t, n;
     try {
         let i = r.generateLaunchSignature(e);
@@ -282,15 +291,6 @@ function y(e) {
     } finally {
         r.__wbindgen_free(t, n, 1);
     }
-}
-function v() {
-    return r.initLibdiscore();
-}
-function N() {
-    r.crash();
-}
-function C(e, t) {
-    return r.rustMultiply(e, t);
 }
 function b(e) {
     let t = r.__wbindgen_export_4.get(e);
@@ -309,10 +309,10 @@ function O(e, t) {
     );
 }
 function D(e, t, n) {
-    r.closure739_externref_shim(e, t, n);
+    r.closure710_externref_shim(e, t, n);
 }
 function L(e, t, n, i) {
-    r.closure775_externref_shim(e, t, n, i);
+    r.closure746_externref_shim(e, t, n, i);
 }
 let w = ["bytes"],
     x = ["omit", "same-origin", "include"],
@@ -892,13 +892,13 @@ function tv(e) {
     return 1 == t.cnt-- && ((t.a = 0), !0);
 }
 function tN(e, t, n) {
-    return I(e, t, 553, R);
+    return I(e, t, 524, R);
 }
 function tC(e, t, n) {
-    return I(e, t, 593, O);
+    return I(e, t, 564, O);
 }
 function tb(e, t, n) {
-    return I(e, t, 740, D);
+    return I(e, t, 711, D);
 }
 function tR(e, t) {
     let n = c(T(t), r.__wbindgen_malloc, r.__wbindgen_realloc),
