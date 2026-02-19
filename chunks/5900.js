@@ -4,7 +4,7 @@ var t = a(627968),
     n = a(397927),
     i = a(459192),
     s = a(990078),
-    r = a(710617);
+    r = a(557464);
 let d = {
     title: "Tooltip",
     stories: [
@@ -93,32 +93,34 @@ let d = {
                         body: a,
                         showAsset: s,
                         assetSize: d,
-                        position: u,
-                        align: c,
-                        caretAlign: b,
-                        customOffset: p,
-                        delay: m,
-                        spacing: x,
-                        forceOpen: v,
-                        ...h
+                        padding: u,
+                        position: c,
+                        align: b,
+                        caretAlign: p,
+                        customOffset: m,
+                        delay: x,
+                        spacing: v,
+                        forceOpen: h,
+                        ...y
                     } = e,
-                    y = o.useMemo(() => {
-                        if ("center" !== b && null != b)
-                            return "custom" === b ? { align: b, customOffset: p } : { align: b };
-                    }, [b, p]),
-                    f = o.useMemo(() => (s ? { type: "image", src: r.A, aspectRatio: "1/1" } : void 0), [s]);
+                    f = o.useMemo(() => {
+                        if ("center" !== p && null != p)
+                            return "custom" === p ? { align: p, customOffset: m } : { align: p };
+                    }, [p, m]),
+                    g = o.useMemo(() => (s ? { type: "image", src: r.A, aspectRatio: "1/1" } : void 0), [s]);
                 return (0, t.jsx)(i.u, {
                     title: l,
                     body: a,
-                    position: u,
-                    align: c,
-                    delay: m,
-                    spacing: x,
-                    caretConfig: y,
-                    asset: f,
+                    position: c,
+                    align: b,
+                    padding: u,
+                    delay: x,
+                    spacing: v,
+                    caretConfig: f,
+                    asset: g,
                     assetSize: d,
-                    forceOpen: v,
-                    ...h,
+                    forceOpen: h,
+                    ...y,
                     children: (0, t.jsx)(n.Button, { variant: "primary", text: "Hover me (rich)" }),
                 });
             },
@@ -135,6 +137,16 @@ let d = {
                         { label: "24px", value: 24 },
                         { label: "32px", value: 32 },
                         { label: "48px", value: 48 },
+                        { label: "80px", value: 80 },
+                    ],
+                },
+                padding: {
+                    label: "Padding",
+                    type: "select",
+                    defaultValue: "default",
+                    options: [
+                        { label: "Default", value: "default" },
+                        { label: "Large", value: "lg" },
                     ],
                 },
                 position: {
