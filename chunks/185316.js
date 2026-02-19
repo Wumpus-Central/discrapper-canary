@@ -1,4 +1,6 @@
 e.exports = {
+    FO: "guildRowIcon__7db08",
+    QH: "guildRowSwitch__7db08",
     X1: "guildsList__7db08",
     im: "infoDot__7db08",
     gO: "controlsContainer__7db08",
