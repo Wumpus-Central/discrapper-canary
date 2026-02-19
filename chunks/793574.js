@@ -109,6 +109,7 @@ var r = (function (e) {
         (e.GUILD_POWERUPS_COACHMARK_BOOST_TO_UNLOCK = "guild powerups - coachmark - boost to unlock"),
         (e.GUILD_POWERUPS_COACHMARK_EXPIRING_PERK = "guild powerups - coachmark - expiring perk"),
         (e.GUILD_POWERUPS_MARKETING = "guild powerups - marketing"),
+        (e.GUILD_POWERUPS_MARKETING_VIDEO_MODAL = "guild powerups - marketing video modal"),
         (e.GUILD_BOOSTING_PREMIUM_UPSELL = "guild boosting premium upsell"),
         (e.RPC = "rpc"),
         (e.BILLING_STANDALONE = "billing standalone"),

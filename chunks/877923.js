@@ -26,16 +26,26 @@ function p(e) {
     return (
         l.useEffect(() => {
             if (g) return;
-            let e = A.current?.getBoundingClientRect();
+            let e = A.current;
             if (null == e) return;
-            let t = x({ confettiSize: 8 }),
-                n = new r.J_(1e3, () => {
-                    f(e.left + e.width / 2, e.top + e.height / 2, t, 60);
-                });
+            let t = null,
+                n = new IntersectionObserver(
+                    (i) => {
+                        let [l] = i;
+                        l.intersectionRatio < 0.5 ||
+                            (n.disconnect(),
+                            (t = new r.J_(1e3, () => {
+                                let t = e.getBoundingClientRect(),
+                                    n = x({ confettiSize: 8 });
+                                f(t.left + t.width / 2, t.top + t.height / 2, n, 60);
+                            })).delay());
+                    },
+                    { threshold: 0.5 },
+                );
             return (
-                n.delay(),
+                n.observe(e),
                 () => {
-                    n.cancel();
+                    n.disconnect(), t?.cancel();
                 }
             );
         }, [f, A, g, x]),

@@ -1,72 +1,120 @@
-c.d(e, { default: () => x });
-var n = c(627968),
-    s = c(64700),
-    i = c(158954),
-    a = c(311907),
-    o = c(397927),
-    l = c(688810),
-    r = c(607470),
-    d = c(509536),
-    p = c(987144),
-    _ = c(71393),
-    A = c(652215),
-    u = c(985018),
-    b = c(937660),
-    U = c(773055),
-    y = c(519636);
-function x(t) {
-    let { guildId: e, transitionState: c, onClose: x, showLearnMore: f = !0 } = t,
-        M = (0, a.bG)([_.A], () => _.A.getGuild(e)),
-        { analyticsLocations: R } = (0, l.Ay)(),
-        [g, h] = s.useState(!1);
-    async function j() {
-        null != M &&
-            (h(!0),
-            await (0, p.g)({
-                analyticsLocations: R,
-                analyticsLocation: {
-                    page: A.liQ.PREMIUM_GUILD_USER_MODAL,
-                    section: A.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                    object: A.ZSU.BUTTON_CTA,
-                    objectType: A.AnalyticsObjectTypes.BUY,
-                },
-                guild: M,
-                onClose: x,
+i.d(e, { default: () => O });
+var c = i(627968),
+    n = i(64700),
+    a = i(158954),
+    o = i(311907),
+    s = i(397927),
+    r = i(793574),
+    l = i(688810),
+    _ = i(607470),
+    d = i(509536),
+    u = i(987144),
+    A = i(71393),
+    p = i(954571),
+    b = i(652215),
+    E = i(985018),
+    M = i(937660),
+    I = i(773055),
+    U = i(519636);
+function O(t) {
+    let {
+            guildId: e,
+            transitionState: i,
+            onClose: O,
+            showLearnMore: R = !0,
+            analyticsLocation: T,
+            sourceAnalyticsLocations: y,
+            videoPlacement: D,
+        } = t,
+        L = (0, o.bG)([A.A], () => A.A.getGuild(e)),
+        { analyticsLocations: f } = (0, l.Ay)(y, r.A.GUILD_POWERUPS_MARKETING_VIDEO_MODAL),
+        [g, k] = n.useState(!1),
+        m = n.useRef(!1),
+        G = n.useMemo(
+            () => ({
+                guild_id: e,
+                type: b.liQ.PREMIUM_GUILD_USER_MODAL,
+                location_stack: f,
+                location_section: T.section,
+                location_object: T.object,
+                video_placement: D,
             }),
-            h(!1));
+            [T.object, T.section, f, e, D],
+        ),
+        j = n.useCallback(
+            (t) => {
+                let e = t.currentTarget.duration;
+                m.current ||
+                    ((m.current = !0),
+                    p.default.track(b.HAw.BOOSTING_MARKETING_VIDEO_PLAYED, {
+                        ...G,
+                        ...(Number.isFinite(e) ? { video_duration_sec: e } : {}),
+                    }));
+            },
+            [G],
+        ),
+        C = n.useCallback(
+            (t) => {
+                let e = t.currentTarget.currentTime,
+                    i = t.currentTarget.duration;
+                p.default.track(b.HAw.BOOSTING_MARKETING_VIDEO_COMPLETED, {
+                    ...G,
+                    ...(Number.isFinite(e) ? { seconds_played: e } : {}),
+                    ...(Number.isFinite(i) ? { video_duration_sec: i } : {}),
+                });
+            },
+            [G],
+        );
+    async function P() {
+        null != L &&
+            (k(!0),
+            await (0, u.g)({
+                analyticsLocations: f,
+                analyticsLocation: {
+                    page: b.liQ.PREMIUM_GUILD_USER_MODAL,
+                    section: b.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                    object: b.ZSU.BUTTON_CTA,
+                    objectType: b.AnalyticsObjectTypes.BUY,
+                },
+                guild: L,
+                onClose: O,
+            }),
+            k(!1));
     }
-    return (0, n.jsxs)(i.dWK, {
+    return (0, c.jsxs)(a.dWK, {
         size: "xxl",
-        transitionState: c,
-        onClose: x,
+        transitionState: i,
+        onClose: O,
         children: [
-            (0, n.jsx)(i.rQ0, { title: u.intl.string(u.t["0f1VCH"]) }),
-            (0, n.jsx)(i.cwr, {
-                children: (0, n.jsx)(r.A, {
-                    className: b.K,
-                    src: U.A,
-                    poster: y.A,
+            (0, c.jsx)(a.rQ0, { title: E.intl.string(E.t["0f1VCH"]) }),
+            (0, c.jsx)(a.cwr, {
+                children: (0, c.jsx)(_.A, {
+                    className: M.K,
+                    src: I.A,
+                    poster: U.A,
                     controls: !0,
                     autoPlay: !0,
                     controlsList: "nodownload noremoteplayback noplaybackrate",
+                    onPlay: j,
+                    onEnded: C,
                     disablePictureInPicture: !0,
                 }),
             }),
-            (0, n.jsx)(i.H7u, {
+            (0, c.jsx)(a.H7u, {
                 actions: [
-                    ...(f
+                    ...(R
                         ? [
                               {
                                   variant: "secondary",
                                   size: "md",
-                                  text: u.intl.string(u.t.hvVgAZ),
+                                  text: E.intl.string(E.t.hvVgAZ),
                                   onClick: function () {
-                                      x(),
+                                      O(),
                                           (0, d.K)({
                                               guildId: e,
                                               location: {
-                                                  section: A.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                                                  object: A.ZSU.LEARN_MORE,
+                                                  section: b.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                                                  object: b.ZSU.LEARN_MORE,
                                               },
                                           });
                                   },
@@ -76,9 +124,9 @@ function x(t) {
                     {
                         variant: "expressive",
                         size: "md",
-                        icon: o._Jp,
-                        text: u.intl.string(u.t.gKmQ1G),
-                        onClick: j,
+                        icon: s._Jp,
+                        text: E.intl.string(E.t.gKmQ1G),
+                        onClick: P,
                         loading: g,
                     },
                 ],
