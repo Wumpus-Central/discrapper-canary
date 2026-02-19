@@ -500,7 +500,9 @@ function eN(e) {
         { entry: I } = f,
         T = (0, ee.zD)(I),
         S = T ? I.extra?.application_id : void 0,
-        y = (0, R.A)(
+        y = (0, P.W)();
+    null != y && (S = y);
+    let v = (0, R.A)(
             {
                 location: "ContentPopout",
                 applicationId: S,
@@ -510,17 +512,17 @@ function eN(e) {
             },
             { onOpened: () => _?.(ed.PA.OPENED_GAME_PROFILE) },
         ),
-        v = T ? y : void 0,
-        { activity: N, activityApplication: L, fallbackApplication: w } = (0, ei.A)(I),
-        { largeImage: x, smallImage: P } = (0, J.D8)(N, L ?? w),
-        { largeImage: G } = (0, J.nO)({ entry: I }),
-        F = (0, M.w)({ location: "content_inventory" });
+        N = T ? v : void 0,
+        { activity: L, activityApplication: w, fallbackApplication: x } = (0, ei.A)(I),
+        { largeImage: G, smallImage: F } = (0, J.D8)(L, w ?? x),
+        { largeImage: B } = (0, J.nO)({ entry: I }),
+        W = (0, M.w)({ location: "content_inventory" });
     return (0, r.jsxs)("div", {
         className: em.au,
         children: [
             (0, r.jsx)(eS, { ...f, onUserPopoutClosed: d }),
             (0, r.jsxs)(eg, {
-                backgroundImgSrc: G?.src,
+                backgroundImgSrc: B?.src,
                 className: em.uR,
                 children: [
                     (0, r.jsx)(ey, {
@@ -548,13 +550,13 @@ function eN(e) {
                     (0, r.jsxs)("div", {
                         className: em.$6,
                         children: [
-                            null != x &&
+                            null != G &&
                                 (0, r.jsx)("div", {
                                     className: em.Fb,
                                     children: (0, r.jsx)(en.d, {
-                                        image: x,
-                                        smallImage: P,
-                                        onClick: o ?? v,
+                                        image: G,
+                                        smallImage: F,
+                                        onClick: o ?? N,
                                         size: en.w.SIZE_72,
                                     }),
                                 }),
@@ -562,7 +564,7 @@ function eN(e) {
                                 className: em.gv,
                                 children: [
                                     (0, r.jsx)(ey, {
-                                        onClick: l ?? v,
+                                        onClick: l ?? N,
                                         children: (0, r.jsx)(p.Heading, {
                                             variant: "heading-md/semibold",
                                             className: em.nk,
@@ -572,7 +574,7 @@ function eN(e) {
                                     }),
                                     null != n
                                         ? (0, r.jsx)(ey, {
-                                              onClick: c ?? v,
+                                              onClick: c ?? N,
                                               children: (0, r.jsx)(p.Text, {
                                                   variant: "text-sm/normal",
                                                   className: em.zA,
@@ -588,7 +590,7 @@ function eN(e) {
                     }),
                 ],
             }),
-            F && null != S && ep.sQ.has(S)
+            W && null != S && ep.sQ.has(S)
                 ? (0, r.jsx)(k.A, {
                       className: em.zu,
                       applicationId: S,

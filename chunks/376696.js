@@ -145,6 +145,7 @@ function G(e) {
                                       enableUserHoverActivities: ee,
                                   }),
                                   (0, i.jsx)(C.A, {
+                                      className: D.L,
                                       applicationId: a,
                                       userIds: [n.id],
                                       location: "voice_channel",
