@@ -16,7 +16,7 @@ function s(e, t) {
                     r(void 0),
                     i(e, t.skuId)
                         .catch((e) => {
-                            throw (r(e.body.message ?? void 0), e);
+                            throw (r(e.body?.message ?? void 0), e);
                         })
                         .finally(() => {
                             s(!1);
