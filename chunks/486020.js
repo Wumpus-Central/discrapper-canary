@@ -175,7 +175,7 @@ function L(e) {
     if (/^blob:https?:\/\/[^\/]+\//i.test(i)) return i;
     let c = new URL(null != s ? `https://${s}${u}` : `${location.protocol}${a}${u}`);
     return (
-        c.searchParams.set("size", `${(0, l.kr)(n * (0, l.mZ)(), T)}`),
+        c.searchParams.set("size", `${(0, l.kr)(n * (0, l.mZ)())}`),
         c.searchParams.set("passthrough", `${r}`),
         c.toString()
     );
