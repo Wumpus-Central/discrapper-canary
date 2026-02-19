@@ -31,8 +31,8 @@ var i = n(627968),
     P = n(965591),
     L = n(495022),
     D = n(157839),
-    M = n(382694),
-    G = n(60508),
+    G = n(382694),
+    M = n(60508),
     U = n(821158),
     k = n(235365),
     V = n(994763),
@@ -100,7 +100,7 @@ let z = (e) => {
                       children: [
                           (0, i.jsx)(d.hLv, {
                               color: "nitro-pink",
-                              className: l()(Y.kL, Y.Gd, { [Y.fv]: !eg }),
+                              className: l()(Y.kL, Y.Gd, { [Y.J4]: n, [Y.fv]: !eg }),
                               children: (0, i.jsxs)(m.f5, {
                                   value: eu,
                                   children: [
@@ -117,7 +117,7 @@ let z = (e) => {
                                               discountedPrice: ec,
                                           }),
                                       }),
-                                      n && (0, i.jsx)(M.A, { glowingPerkId: Q }),
+                                      n && (0, i.jsx)(G.A, { glowingPerkId: Q }),
                                       !n &&
                                           (0, i.jsx)(D.A, {
                                               variant: v.cJ.WHATS_NEW,
@@ -178,7 +178,7 @@ let z = (e) => {
                               }),
                       ],
                   }),
-                  (0, i.jsx)(G.A, {
+                  (0, i.jsx)(M.A, {
                       isAllPerksVisible: es,
                       setIsAllPerksVisible: ea,
                       previousComponent: v.A2.HOME,

@@ -1,5 +1,6 @@
 e.exports = {
     kL: "container__80907",
+    J4: "newPerkCardsEnabled__80907",
     Gd: "responsiveContainer__80907",
     fv: "hiddenGradient__80907",
     xU: "perksDiscoverability__80907",

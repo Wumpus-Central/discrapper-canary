@@ -211,6 +211,7 @@ function v(e) {
             (0, i.jsx)(
                 c.A,
                 {
+                    gap: 20,
                     children: k.map((e) => {
                         if (null != e)
                             return (0, i.jsx)(

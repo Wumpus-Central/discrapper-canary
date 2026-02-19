@@ -1,4 +1,4 @@
-r.d(t, { S: () => N });
+r.d(t, { S: () => R });
 var n = r(627968),
     a = r(64700),
     l = r(310784),
@@ -17,51 +17,52 @@ var n = r(627968),
     _ = r(788868),
     b = r(652215),
     v = r(985018),
-    R = r(340091);
-let N = (e) => {
+    N = r(340091);
+let R = (e) => {
     let {
             title: t,
             description: r,
             caption: l,
             pillText: i,
-            primaryAsset: N,
-            primaryAssetClassName: A,
-            backgroundAssetUrl: E,
-            progress: C,
-            ctaText: I,
-            onCtaClick: T,
-            subscriptionRequired: j,
-            glowing: y,
-            progressGlowing: P = !1,
-            featured: S,
-            className: O,
-            blurTint: L,
+            primaryAsset: R,
+            primaryAssetClassName: E,
+            backgroundAssetUrl: C,
+            progress: j,
+            ctaText: T,
+            onCtaClick: I,
+            subscriptionRequired: y,
+            glowing: P,
+            progressGlowing: S = !1,
+            featured: O,
+            className: L,
+            blurTint: U,
         } = e,
         w = (0, h.DP)(),
-        { fractionalState: U } = (0, p.A)(),
-        D = j && U === _.xc.FP_ONLY,
-        B = !(0, u.isEmpty)(E),
-        M = B && (0, c.q)(w),
-        k = a.useMemo(() => {
-            if (null != L && "" !== L)
+        { fractionalState: D } = (0, p.A)(),
+        B = y && D === _.xc.FP_ONLY,
+        M = !(0, u.isEmpty)(C),
+        k = M && (0, c.q)(w),
+        G = a.useMemo(() => {
+            if (null != U && "" !== U)
                 try {
-                    let e = s()(L);
+                    let e = s()(U);
                     return 1 === e.alpha() ? e.alpha(0.25).css() : e.css();
                 } catch {
                     return;
                 }
-        }, [L]);
+        }, [U]);
     return (0, n.jsx)(o.NPJ, {
-        theme: M ? b.NJ8.DARKER : void 0,
+        theme: k ? b.NJ8.DARKER : void 0,
         children: (e) =>
             (0, n.jsxs)(g.A, {
                 cardType: m.sl2.PRIMARY,
                 hueRotate: 25,
-                glowAmount: 5 * !!y,
-                blurAmount: 6 * !!y,
-                cardClassName: d()(R.Nr, e, O, { [R.j8]: S }),
+                glowAmount: 5 * !!P,
+                blurAmount: 6 * !!P,
+                className: N.Ui,
+                cardClassName: d()(N.Nr, e, L, { [N.j8]: O, [N.Tn]: M }),
                 cardStyle: {
-                    backgroundImage: B ? `url(${E})` : void 0,
+                    backgroundImage: M ? `url(${C})` : void 0,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundOrigin: "padding-box",
@@ -72,33 +73,36 @@ let N = (e) => {
                         (0, n.jsx)(m.Text, {
                             variant: "text-xs/bold",
                             color: "badge-expressive-text-default",
-                            className: R.Io,
+                            className: N.Io,
                             children: i,
                         }),
-                    (0, n.jsx)("div", {
-                        className: R.qh,
-                        children:
-                            null != N &&
-                            "" !== N &&
-                            ("string" == typeof N
-                                ? (0, n.jsx)("img", { src: N, alt: "", className: d()(R.eq, A) })
-                                : N),
+                    (0, n.jsxs)("div", {
+                        className: N.qh,
+                        children: [
+                            O &&
+                                (0, n.jsx)("div", {
+                                    className: N.gW,
+                                    "aria-hidden": "true",
+                                    children: (0, n.jsx)(A, { asset: R, className: E }),
+                                }),
+                            (0, n.jsx)(A, { asset: R, className: E }),
+                        ],
                     }),
                     (0, n.jsxs)("div", {
-                        className: R.hQ,
+                        className: N.hQ,
                         children: [
                             (0, n.jsx)("div", {
-                                className: R.u_,
-                                style: { backgroundColor: k },
+                                className: N.u_,
+                                style: { backgroundColor: G },
                                 "aria-hidden": "true",
                             }),
                             (0, n.jsxs)("div", {
-                                className: R.P_,
-                                tabIndex: (0, u.isEmpty)(I) ? 0 : void 0,
+                                className: N.P_,
+                                tabIndex: (0, u.isEmpty)(T) ? 0 : void 0,
                                 children: [
-                                    D &&
+                                    B &&
                                         (0, n.jsxs)("div", {
-                                            className: R.d_,
+                                            className: N.d_,
                                             children: [
                                                 (0, n.jsx)(m.tvc, { size: "sm", color: "text-muted" }),
                                                 (0, n.jsx)(m.Text, {
@@ -110,7 +114,7 @@ let N = (e) => {
                                         }),
                                     !(0, u.isEmpty)(l) &&
                                         (0, n.jsx)("div", {
-                                            className: R.OU,
+                                            className: N.OU,
                                             children:
                                                 "string" == typeof l
                                                     ? (0, n.jsx)(m.Text, {
@@ -125,34 +129,34 @@ let N = (e) => {
                                         (0, n.jsx)(m.Text, {
                                             variant: "text-sm/normal",
                                             color: "text-default",
-                                            className: R.h_,
+                                            className: N.h_,
                                             children: r,
                                         }),
-                                    null != C &&
+                                    null != j &&
                                         (0, n.jsx)("div", {
-                                            className: R.oU,
+                                            className: N.oU,
                                             children: (0, n.jsx)(x.Ay, {
                                                 variant: x.qP.BLUE,
-                                                progress: (0, u.clamp)(C, 0, 1),
+                                                progress: (0, u.clamp)(j, 0, 1),
                                                 maximum: 1,
-                                                glowing: P,
+                                                glowing: S,
                                             }),
                                         }),
-                                    D &&
+                                    B &&
                                         (0, n.jsx)("div", {
-                                            className: R.lI,
+                                            className: N.lI,
                                             children: (0, n.jsx)(f.A, {
                                                 defaultTextOverride: v.intl.string(v.t.sEAnVH),
                                             }),
                                         }),
-                                    !D &&
-                                        !(0, u.isEmpty)(I) &&
+                                    !B &&
+                                        !(0, u.isEmpty)(T) &&
                                         (0, n.jsx)("div", {
-                                            className: R.lI,
+                                            className: N.lI,
                                             children: (0, n.jsx)(o.$nd, {
-                                                text: I,
-                                                variant: !B && (0, c.q)(w) ? "primary" : "overlay-primary",
-                                                onClick: T,
+                                                text: T,
+                                                variant: !M && (0, c.q)(w) ? "primary" : "overlay-primary",
+                                                onClick: I,
                                             }),
                                         }),
                                 ],
@@ -163,3 +167,11 @@ let N = (e) => {
             }),
     });
 };
+function A(e) {
+    let { asset: t, className: r } = e;
+    return null == t || "" === t
+        ? null
+        : "string" == typeof t
+          ? (0, n.jsx)("img", { src: t, alt: "", className: d()(N.eq, r) })
+          : t;
+}
