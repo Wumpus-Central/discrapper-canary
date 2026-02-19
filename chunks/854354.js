@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { Nc: () => d, YR: () => c, kw: () => h, lp: () => _, xk: () => f }), n(321073);
+n.d(t, { Nc: () => d, YR: () => c, kw: () => p, lp: () => _, xk: () => f }), n(321073);
 var r = n(252424),
     i = n(927578),
-    a = n(580630),
-    s = n(427262),
+    s = n(580630),
+    a = n(427262),
     o = n(788868),
     l = n(756366),
     u = n(985018);
@@ -21,20 +21,20 @@ function c(e, t) {
     }
 }
 let d = (e) => {
-        let { subscriptionPlan: t, userLocale: n, discountOffer: i, yearlyPercentSavings: a } = e;
-        if (null != a && t.interval === o.WT.YEAR)
-            return u.intl.formatToPlainString(l.default.nsG1jw, { savingsText: (0, r.l9)(n, a / 100) });
-        let s = null != i ? i.discount.amount : null;
-        return null != i && i.discount.plan_ids.includes(t.id) && null != s
-            ? u.intl.formatToPlainString(l.default.MSB4E4, { amountOrPercentOffText: (0, r.l9)(n, parseInt(s) / 100) })
+        let { subscriptionPlan: t, userLocale: n, discountOffer: i, yearlyPercentSavings: s } = e;
+        if (null != s && t.interval === o.WT.YEAR)
+            return u.intl.formatToPlainString(l.default.nsG1jw, { savingsText: (0, r.l9)(n, s / 100) });
+        let a = null != i ? i.discount.amount : null;
+        return null != i && i.discount.plan_ids.includes(t.id) && null != a
+            ? u.intl.formatToPlainString(l.default.MSB4E4, { amountOrPercentOffText: (0, r.l9)(n, parseInt(a) / 100) })
             : null;
     },
     _ = function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { addTaxLineItem: !0 },
-            { manualLineItems: n, addTaxLineItem: r } = t,
-            a = [];
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { includeTaxLineItem: !0 },
+            { manualLineItems: n, includeTaxLineItem: r } = t,
+            s = [];
         return (
-            (a =
+            (s =
                 null != n
                     ? [...n]
                     : e.invoiceItems.map((e) => ({
@@ -42,16 +42,16 @@ let d = (e) => {
                           label: (0, i.Mn)(e.subscriptionPlanId),
                           amount: e.amount * e.quantity,
                       }))),
-            !1 !== r && a.push({ id: "tax", label: u.intl.string(u.t.jiRvC7), amount: e.tax }),
-            a
+            !1 !== r && s.push({ id: "tax", label: u.intl.string(u.t.jiRvC7), amount: e.tax }),
+            s
         );
     },
     f = (e) => ({
-        username: s.Ay.getUserTag(e, { identifiable: "always" }),
+        username: a.Ay.getUserTag(e, { identifiable: "always" }),
         avatarUrl: e.getAvatarURL(void 0, 16),
-        nickname: s.Ay.getName(e),
+        nickname: a.Ay.getName(e),
     }),
-    h = (e) => {
+    p = (e) => {
         let { subscriptionInvoiceRecord: t } = e;
-        return (0, a.$g)(t.total, t.currency);
+        return (0, s.$g)(t.total, t.currency);
     };

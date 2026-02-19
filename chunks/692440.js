@@ -21,7 +21,7 @@ var r = n(627968),
     d = n(397927),
     _ = n(793574),
     f = n(688810),
-    p = n(669510),
+    p = n(93159),
     h = n(888751),
     m = n(97352),
     E = n(147925),
@@ -56,8 +56,9 @@ function L(e) {
             subscriptionPlan: E,
             label: g,
             value: A,
-            subscriptionDiscount: I,
-            entitlementDiscount: T,
+            originalAmount: I,
+            subscriptionDiscount: T,
+            entitlementDiscount: S,
         } = (0, C.Ae)(t, {
             subscriptionPlan: p,
             subscriptionTrial: h,
@@ -65,13 +66,13 @@ function L(e) {
             isPrepaidPaymentSource: o,
             currency: s,
         }),
-        S = g;
+        N = g;
     return (
         !0 === i &&
-            (S = (0, r.jsxs)("div", {
+            (N = (0, r.jsxs)("div", {
                 className: D._H,
                 children: [
-                    (0, r.jsxs)("div", { children: [S, " "] }),
+                    (0, r.jsxs)("div", { children: [N, " "] }),
                     (0, r.jsx)(c.m_, {
                         text: O.intl.format(O.t.UDop9c, {}),
                         ariaHidden: !0,
@@ -85,11 +86,11 @@ function L(e) {
                 ],
             })),
         (0, r.jsx)(v.f0, {
-            label: S,
+            label: N,
             value: A,
-            originalAmount: t.subscriptionPlanPrice * t.quantity,
-            subscriptionDiscount: I,
-            entitlementDiscount: T,
+            originalAmount: I,
+            subscriptionDiscount: T,
+            entitlementDiscount: S,
             interval: E.interval,
             intervalCount: E.intervalCount,
             currency: s,
@@ -114,26 +115,28 @@ function w(e) {
 }
 let x = (e) => (e.currency === R.Yri.USD ? (0, I.$g)(e.total, e.currency) : `${(0, I.$g)(e.total, e.currency)}*`);
 function M(e) {
-    let { invoice: t, isPrepaidPaymentSource: n } = e,
-        i = (0, S.Z)(t.invoiceItems),
-        s = i.find((e) => !(0, A.z4)(e.subscriptionPlanId) && e.amount >= 0),
-        a = i.find((e) => (0, A.z4)(e.subscriptionPlanId) && e.amount >= 0),
-        o = (0, u.bG)([m.A], () => (null != a ? m.A.get(a.subscriptionPlanId) : null)),
-        l = null != a ? a.amount : 0,
-        c = (0, I.$g)(l, t.currency),
-        d = null != o ? (0, I.CE)(c, o.interval, o.intervalCount) : 0;
+    let { invoice: t, isPrepaidPaymentSource: n, shouldUseUnifiedCheckoutUI: i } = e,
+        {
+            guildSubscriptionPlan: s,
+            basePlanInvoiceItem: a,
+            guildSubscriptionInvoiceItem: o,
+            guildSubscriptionAmount: l,
+            formattedGuildBoostPrice: u,
+            formattedGuildBoostRate: c,
+            guildBoostItemLabel: d,
+        } = (0, C.rc)(t, { isPrepaidPaymentSource: n });
+    if (i) {
+        let { lineItems: e } = (0, h.Ig)(t, {
+            subscriptionTrial: null,
+            includeTaxLineItem: !0,
+            isPrepaidPaymentSource: n,
+        });
+        return (0, r.jsx)(p.Vm, { label: O.intl.string(O.t["2eh+Co"]), lineItems: e, currency: t.currency });
+    }
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            null != s ? (0, r.jsx)(L, { invoiceItem: s, currency: t.currency, isPrepaidPaymentSource: n }) : null,
-            0 !== l && null != a && null != o
-                ? (0, r.jsx)(v.oR, {
-                      label: O.intl.formatToPlainString(O.t.a3cAOg, {
-                          numGuildSubscriptions: a.quantity,
-                          planName: (0, A.Mn)(o.id, !1, n),
-                      }),
-                      value: n ? c : d,
-                  })
-                : null,
+            null != a ? (0, r.jsx)(L, { invoiceItem: a, currency: t.currency, isPrepaidPaymentSource: n }) : null,
+            0 !== l && null != o && null != s ? (0, r.jsx)(v.oR, { label: d, value: n ? u : c }) : null,
             (0, r.jsx)(N.A, { invoice: t }),
             (0, r.jsx)(v.pK, {}),
             (0, r.jsx)(v.Sd, {
@@ -145,7 +148,7 @@ function M(e) {
 }
 function P(e) {
     let { invoice: t, newPlan: n, isPrepaidPaymentSource: i, referralTrialOfferId: s } = e,
-        { newPlanInvoiceItem: a, basePlanFullAmount: o, invoiceAdjustmentDisplayItems: l } = (0, C.Zw)(t, n);
+        { newPlanInvoiceItem: a, basePlanFullAmount: o, invoiceAdjustmentDisplayItems: l } = (0, C.SA)(t, n);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(L, {
@@ -280,21 +283,22 @@ function F(e) {
             trialFooterMessageOverride: m,
             hideSubscriptionDetails: g = !1,
             shouldUseUnifiedCheckoutUI: A,
+            unifiedCheckoutDefaultExpanded: I,
         } = e,
-        { analyticsLocations: I } = (0, f.Ay)(),
-        S = {
+        { analyticsLocations: S } = (0, f.Ay)(),
+        y = {
             subscriptionId: t?.id,
             renewal: !0,
             preventFetch: !o,
-            analyticsLocatinons: I,
+            analyticsLocatinons: S,
             analyticsLocation: _.A.SUBSCRIPTION_INVOICE_FOOTER,
             ...u,
         },
-        [y] = (0, T.Kq)(S),
-        [N, C] = i.useState(!1);
+        [N] = (0, T.Kq)(y),
+        [C, b] = i.useState(!1);
     if (A) {
         let e = (0, h.Gj)(n ?? null, s, null);
-        return (0, r.jsx)(p._, { ...e });
+        return (0, r.jsx)(p._D, { ...e, defaultExpanded: I });
     }
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -314,17 +318,17 @@ function F(e) {
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)(d.DUT, {
-                            onClick: () => C((e) => !e),
+                            onClick: () => b((e) => !e),
                             className: D.K3,
                             children: [
-                                N ? O.intl.string(O.t.aBcRbK) : O.intl.string(O.t.X6duqp),
+                                C ? O.intl.string(O.t.aBcRbK) : O.intl.string(O.t.X6duqp),
                                 (0, r.jsx)(E.A, {
-                                    direction: N ? E.A.Directions.UP : E.A.Directions.DOWN,
+                                    direction: C ? E.A.Directions.UP : E.A.Directions.DOWN,
                                     className: D.ts,
                                 }),
                             ],
                         }),
-                        N ? (0, r.jsx)(U, { isUpdate: o, currentInvoice: y, newInvoice: s, inTrialPeriod: l }) : null,
+                        C ? (0, r.jsx)(U, { isUpdate: o, currentInvoice: N, newInvoice: s, inTrialPeriod: l }) : null,
                     ],
                 }),
         ],

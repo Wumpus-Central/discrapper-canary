@@ -44320,6 +44320,10 @@ screen and (max-width:485px) {
     margin-bottom: 16px
 }
 
+.unifiedCheckoutInvoicePreviewLoader_d313e6 {
+    margin-top: 60px
+}
+
 .paymentNote__56a21 {
     background-color: var(--modal-background);
     margin: 0;

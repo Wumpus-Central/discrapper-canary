@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { PI: () => R, XH: () => N, Z$: () => v, l$: () => b });
+n.d(t, { PI: () => R, W9: () => v, XH: () => N, l$: () => b });
 var r = n(627968),
     i = n(64700),
     s = n(997101),
@@ -23,23 +23,23 @@ var r = n(627968),
     y = n(772992);
 let v = (e) => {
         let {
-                isPrepaidPaymentSource: t,
-                invoiceSummaryTypeWithPreview: n,
-                subscriptionPlan: i,
-                subscriptionTrial: s,
+                invoiceSummaryTypeWithPreview: t,
+                subscriptionPlan: n,
+                subscriptionTrial: i,
+                isPrepaidPaymentSource: s,
                 isCustomGift: a,
             } = e,
-            { invoicePreview: o } = n,
+            { invoicePreview: o } = t,
             u =
-                n.type === p.N$.PREMIUM_GIFT
-                    ? (0, g.fk)(o, { isCustomGift: a, isPrepaidPaymentSource: t, subscriptionPlan: i })
-                    : (0, g.iQ)(o, {
-                          isPrepaidPaymentSource: t,
-                          invoiceSummaryTypeWithPreview: n,
-                          subscriptionPlan: i,
-                          subscriptionTrial: s,
+                t.type === p.N$.PREMIUM_GIFT
+                    ? (0, g.fk)(o, { isCustomGift: a, isPrepaidPaymentSource: s, subscriptionPlan: n })
+                    : (0, g.IY)(o, {
+                          isPrepaidPaymentSource: s,
+                          invoiceSummaryTypeWithPreview: t,
+                          subscriptionPlan: n,
+                          subscriptionTrial: i,
                       }).lineItems,
-            d = (0, l.lp)(o, { manualLineItems: u, addTaxLineItem: !0 });
+            d = (0, l.lp)(o, { manualLineItems: u, includeTaxLineItem: !0 });
         return (0, r.jsx)(c.Vm, { label: T.intl.string(S.default.eoXh7B), lineItems: d, currency: o.currency });
     },
     N = (e) => {
