@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     yt: "streamPreviewWrapper__0489e",
     Rh: "streamPreview__0489e",
