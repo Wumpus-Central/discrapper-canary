@@ -647,28 +647,29 @@ async function e_(e) {
         return ep(t.body, n);
     }
 }
-async function ef(e, t, n, r) {
-    let i = null;
+async function ef(e, t, n, r, i) {
+    let s = null;
     if (null != n && C.AD.has(n.type)) {
         let e = await ew(n.type);
-        i = (0, l.TP)() + y.Rsh.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(n.type, e ?? "", "success");
+        s = (0, l.TP)() + y.Rsh.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(n.type, e ?? "", "success");
     }
     try {
-        let s = await l.Bo.post({
+        let a = await l.Bo.post({
             url: y.Rsh.BILLING_INVOICE_MANUAL_PAYMENT(e.id, t),
             body: {
                 payment_source_id: null != n ? n.id : null,
                 payment_source_token: null != n ? await er(n) : null,
-                return_url: i,
+                return_url: s,
                 currency: r,
                 purchase_token: (0, T.r)(),
+                load_id: i,
             },
             oldFormErrors: !0,
             rejectWithError: !1,
         });
         return (
-            u.h.dispatch({ type: "BILLING_SUBSCRIPTION_UPDATE_SUCCESS", subscription: s.body }),
-            { subscription: s.body, redirectConfirmation: y.CmT.has(n.type) }
+            u.h.dispatch({ type: "BILLING_SUBSCRIPTION_UPDATE_SUCCESS", subscription: a.body }),
+            { subscription: a.body, redirectConfirmation: y.CmT.has(n.type) }
         );
     } catch (t) {
         let e = t instanceof c.Ey ? t : new c.Ey(t);
