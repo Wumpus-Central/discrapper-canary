@@ -3944,6 +3944,7 @@
   "19lt24": "Control volume",
   "79qal8": "Automatically convert emoticons in your messages to emoji",
   "20dvuQ": "For example, when you type :) Discord will convert it to 🙂",
+  "GejoQK": "For example, when you type :) Discord will convert it to $[🙂]({{emojiHook}})",
   "t5VZ88": "Copied",
   "bhUpvC": "Image Copied!",
   "L/PwZf": "Link Copied!",
