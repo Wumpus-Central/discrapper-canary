@@ -3,16 +3,16 @@ var n = i(627968),
     e = i(64700),
     l = i(158954),
     r = i(397927),
-    s = i(964486),
-    c = i(793574),
-    o = i(688810),
-    d = i(362490),
-    u = i(954571),
-    _ = i(25171),
-    x = i(938289),
-    p = i(690493),
-    m = i(844815),
-    A = i(204890),
+    s = i(262427),
+    c = i(964486),
+    o = i(793574),
+    d = i(688810),
+    u = i(362490),
+    _ = i(954571),
+    x = i(25171),
+    p = i(938289),
+    m = i(690493),
+    A = i(844815),
     f = i(383089),
     C = i(41032),
     j = i(188275),
@@ -21,11 +21,11 @@ var n = i(627968),
     S = i(778560);
 function T(t) {
     let { transitionState: a, onClose: i, sku: T, application: b, analyticsLocations: v, orbsReward: L } = t,
-        N = (0, m.j)(b),
-        { fetched: g, hasAlreadyLinked: E, canStartAuthorization: I, startAuthorization: y } = (0, d.RD)(b),
-        R = (0, p.J)(b),
-        { analyticsLocations: O } = (0, o.Ay)(v ?? [], c.A.SOCIAL_LAYER_CLAIM_PURCHASED_ITEM_MODAL),
-        w = (0, x.n)({ location: "SocialLayerStorefrontItemClaimedSuccessfullyModal" }),
+        N = (0, A.j)(b),
+        { fetched: g, hasAlreadyLinked: E, canStartAuthorization: I, startAuthorization: y } = (0, u.RD)(b),
+        R = (0, m.J)(b),
+        { analyticsLocations: O } = (0, d.Ay)(v ?? [], o.A.SOCIAL_LAYER_CLAIM_PURCHASED_ITEM_MODAL),
+        w = (0, p.n)({ location: "SocialLayerStorefrontItemClaimedSuccessfullyModal" }),
         D = !g || null == N,
         M = e.useRef({
             analyticsLocations: O,
@@ -38,13 +38,13 @@ function T(t) {
     e.useEffect(() => {
         (M.current.isLaunchable = N), (M.current.isApplicationConnected = R), (M.current.canStartAuthorization = I);
     }, [N, R, I]),
-        (0, s.Ay)(() => {
-            u.default.track(h.HAw.OPEN_MODAL, { location_stack: O, type: j.e2, sku_id: T.id, application_id: b.id });
+        (0, c.Ay)(() => {
+            _.default.track(h.HAw.OPEN_MODAL, { location_stack: O, type: j.e2, sku_id: T.id, application_id: b.id });
         }),
         e.useEffect(() => {
             if (D) return;
             let { analyticsLocations: t, skuId: a, applicationId: i, canStartAuthorization: n } = M.current;
-            u.default.track(h.HAw.SLAYER_STOREFRONT_LINK_ACCOUNT_STEP_VIEWED, {
+            _.default.track(h.HAw.SLAYER_STOREFRONT_LINK_ACCOUNT_STEP_VIEWED, {
                 location_stack: t,
                 sku_id: a,
                 application_id: i,
@@ -55,7 +55,7 @@ function T(t) {
         }, [D, E]);
     let W = e.useCallback(() => {
             let { analyticsLocations: t, skuId: a, applicationId: i } = M.current;
-            u.default.track(h.HAw.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED, {
+            _.default.track(h.HAw.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED, {
                 location_stack: t,
                 sku_id: a,
                 application_id: i,
@@ -65,13 +65,13 @@ function T(t) {
         }, [y]),
         z = e.useCallback(() => {
             let { analyticsLocations: t, skuId: a } = M.current;
-            u.default.track(h.HAw.SLAYER_STOREFRONT_GAME_LAUNCH_CLICKED, {
+            _.default.track(h.HAw.SLAYER_STOREFRONT_GAME_LAUNCH_CLICKED, {
                 location_stack: t,
                 sku_id: a,
                 application_id: b.id,
                 is_gift: !1,
             }),
-                _.A.launchGame(b.id);
+                x.A.launchGame(b.id);
         }, [b.id]),
         H = e.useCallback(() => {
             let {
@@ -81,7 +81,7 @@ function T(t) {
                 isLaunchable: e,
                 isApplicationConnected: l,
             } = M.current;
-            u.default.track(h.HAw.SLAYER_STOREFRONT_CLAIM_MODAL_CLOSE_BUTTON_CLICKED, {
+            _.default.track(h.HAw.SLAYER_STOREFRONT_CLAIM_MODAL_CLOSE_BUTTON_CLICKED, {
                 location_stack: t,
                 sku_id: a,
                 application_id: n,
@@ -121,7 +121,7 @@ function T(t) {
                             L > 0 &&
                             (0, n.jsx)("div", {
                                 className: S.I,
-                                children: (0, n.jsx)(A.J, {
+                                children: (0, n.jsx)(s.J, {
                                     Icon: l.Cp8,
                                     text: k.intl.format(k.t["0StwHe"], { orbCount: L }),
                                 }),

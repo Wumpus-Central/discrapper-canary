@@ -1,174 +1,174 @@
 "use strict";
-n.d(t, { Z: () => V }), n(321073);
+n.d(t, { Z: () => F }), n(321073);
 var r = n(627968),
     i = n(64700),
-    a = n(735438),
-    s = n.n(a),
+    s = n(735438),
+    a = n.n(s),
     o = n(311907),
     l = n(397927),
-    u = n(313961),
-    c = n(734925),
-    d = n(765441),
-    _ = n(937008),
-    f = n(156312),
+    u = n(262427),
+    c = n(313961),
+    d = n(734925),
+    _ = n(765441),
+    f = n(937008),
+    p = n(156312),
     h = n(871181),
-    p = n(238017),
-    g = n(285719),
-    E = n(650588),
+    m = n(238017),
+    E = n(285719),
+    g = n(650588),
     A = n(383501),
     I = n(287809),
     T = n(67480),
-    y = n(403362),
-    S = n(580630),
+    S = n(403362),
+    y = n(580630),
     v = n(871123),
-    C = n(832163),
-    b = n(44724),
-    N = n(980094),
+    N = n(832163),
+    C = n(44724),
+    b = n(980094),
     R = n(421161),
-    O = n(204890),
-    D = n(366523),
-    L = n(652215),
-    w = n(806931),
-    x = n(788868),
-    P = n(818348),
+    O = n(366523),
+    D = n(652215),
+    L = n(806931),
+    w = n(788868),
+    x = n(818348),
     M = n(985018),
-    k = n(490669);
-function U(e) {
+    P = n(490669);
+function k(e) {
     let t = (0, o.bG)([A.A], () => (A.A.isConnected() ? A.A.getChannelId() : null)),
         [n, r] = i.useState([]);
     return (
         i.useEffect(() => {
-            let n = null != t ? u.A.getParticipants(t) : [],
+            let n = null != t ? c.A.getParticipants(t) : [],
                 i = [],
-                a = new Set();
+                s = new Set();
             for (let t of n)
-                (!(0, w.Xw)(t) && !(0, w.Ay)(t)) ||
+                (!(0, L.Xw)(t) && !(0, L.Ay)(t)) ||
                     t.user.id === e ||
-                    a.has(t.user.id) ||
-                    (a.add(t.user.id), i.push(t));
-            i.sort((e, t) => ((0, w.Ay)(e) && !(0, w.Ay)(t) ? -1 : (0, w.Ay)(t) && !(0, w.Ay)(e) ? 1 : 0)),
+                    s.has(t.user.id) ||
+                    (s.add(t.user.id), i.push(t));
+            i.sort((e, t) => ((0, L.Ay)(e) && !(0, L.Ay)(t) ? -1 : (0, L.Ay)(t) && !(0, L.Ay)(e) ? 1 : 0)),
                 r(i.map((e) => e.user));
         }, [t, e]),
         n
     );
 }
-function G(e, t, n) {
-    let r = (0, d.A)(),
-        a = U(e),
-        l = (0, o.yK)([I.default], () => n?.map(I.default.getUser).filter(y.Vq) ?? [], [n]);
+function U(e, t, n) {
+    let r = (0, _.A)(),
+        s = k(e),
+        l = (0, o.yK)([I.default], () => n?.map(I.default.getUser).filter(S.Vq) ?? [], [n]);
     return i.useMemo(
-        () => s().uniqWith([...(null != t ? [t] : []), ...l, ...a, ...r], (e, t) => e.id === t.id),
-        [t, l, a, r],
+        () => a().uniqWith([...(null != t ? [t] : []), ...l, ...s, ...r], (e, t) => e.id === t.id),
+        [t, l, s, r],
     );
 }
-function F(e) {
-    let { handleClose: t, guild: n, sku: a } = e,
-        s = i.useCallback(() => {
-            (0, b.X)({ guildId: n.id });
+function G(e) {
+    let { handleClose: t, guild: n, sku: s } = e,
+        a = i.useCallback(() => {
+            (0, C.X)({ guildId: n.id });
         }, [n.id]),
         o = i.useCallback(() => {
             t();
-            let e = C.A.getStorefrontState(n.id)?.activePage;
-            window.location.pathname.includes(L.BVt.CHANNELS_GAME_SHOP(n.id, e ?? 0, a.id)) ||
-                ((0, l.s7G)(), (0, b.default)({ guildId: n.id, pageIndex: e ?? 0, skuId: a.id, slug: a.slug }));
-        }, [n.id, a.id, a.slug, t]);
+            let e = N.A.getStorefrontState(n.id)?.activePage;
+            window.location.pathname.includes(D.BVt.CHANNELS_GAME_SHOP(n.id, e ?? 0, s.id)) ||
+                ((0, l.s7G)(), (0, C.default)({ guildId: n.id, pageIndex: e ?? 0, skuId: s.id, slug: s.slug }));
+        }, [n.id, s.id, s.slug, t]);
     return (0, r.jsx)("div", {
-        className: k.$O,
+        className: P.$O,
         children: (0, r.jsx)(l.QWc, {
             text: n.id === (0, v.zf)() ? M.intl.string(M.t.nyIcya) : M.intl.string(M.t.ImioFL),
-            onMouseDown: s,
+            onMouseDown: a,
             onClick: o,
             textVariant: "text-sm/medium",
             lineClamp: void 0,
         }),
     });
 }
-let V = (e) => {
+let F = (e) => {
     let { handleStepChange: t, handleClose: n } = e,
         {
             customGiftMessage: i = "",
-            setCustomGiftMessage: a,
-            giftRecipient: s,
-            emojiConfetti: u,
-            soundEffect: d,
+            setCustomGiftMessage: s,
+            giftRecipient: a,
+            emojiConfetti: c,
+            soundEffect: _,
             setEmojiConfetti: A,
-            setSoundEffect: y,
-            giftingOrigin: C,
-            additionalUserIds: b,
-        } = (0, _.Pv)(),
-        { selectedSkuId: L, application: w } = (0, f.P5)(),
-        U = (0, o.bG)([I.default], () => I.default.getCurrentUser()),
-        V = G(U?.id, s, b),
-        B = (0, o.bG)([T.A], () => (null != L ? T.A.get(L) : null), [L]),
-        j = (0, v.fq)(B),
-        H = (0, v.xf)(B),
-        Y = (0, R.j)(B, { shouldFetchIfMissing: !0 }),
-        W = async (e, t) => {},
-        K = () =>
+            setSoundEffect: S,
+            giftingOrigin: N,
+            additionalUserIds: C,
+        } = (0, f.Pv)(),
+        { selectedSkuId: D, application: L } = (0, p.P5)(),
+        k = (0, o.bG)([I.default], () => I.default.getCurrentUser()),
+        F = U(k?.id, a, C),
+        V = (0, o.bG)([T.A], () => (null != D ? T.A.get(D) : null), [D]),
+        B = (0, v.fq)(V),
+        H = (0, v.xf)(V),
+        j = (0, R.j)(V, { shouldFetchIfMissing: !0 }),
+        Y = async (e, t) => {},
+        W = () =>
             (0, r.jsx)(h.A, {
-                onTextChange: (e) => a?.(e),
+                onTextChange: (e) => s?.(e),
                 pendingText: i,
                 currentText: i,
                 disableThemedBackground: !0,
-                className: k.iX,
-                innerClassName: k.pt,
+                className: P.iX,
+                innerClassName: P.pt,
             }),
-        $ = () =>
-            null != s && (C === x.vQ.USER_PROFILE_WISHLIST || C === x.vQ.DM_CHANNEL_WISHLIST)
-                ? (0, r.jsx)(g.Z, { giftRecipient: s })
-                : (0, r.jsx)(c.A, { selectedSkuId: L, validateSelectedGift: W, recipients: V }),
+        K = () =>
+            null != a && (N === w.vQ.USER_PROFILE_WISHLIST || N === w.vQ.DM_CHANNEL_WISHLIST)
+                ? (0, r.jsx)(E.Z, { giftRecipient: a })
+                : (0, r.jsx)(d.A, { selectedSkuId: D, validateSelectedGift: Y, recipients: F }),
         z = (e) => {
-            null != y && y(null == e ? void 0 : e);
+            null != S && S(null == e ? void 0 : e);
         },
-        q = () =>
+        $ = () =>
             (0, r.jsxs)("div", {
-                className: k.mT,
+                className: P.mT,
                 children: [
-                    null != j &&
-                        (0, r.jsx)(D.A, {
-                            containerClassName: k.T3,
-                            cardImage: j,
+                    null != B &&
+                        (0, r.jsx)(O.A, {
+                            containerClassName: P.T3,
+                            cardImage: B,
                             cardBackgroundImage: H,
-                            altText: B?.name ?? "",
+                            altText: V?.name ?? "",
                             shape: "square",
                         }),
                     (0, r.jsxs)("div", {
-                        className: k._T,
+                        className: P._T,
                         children: [
-                            (0, r.jsx)(E.A, { sound: d, onSelect: z }),
-                            (0, r.jsx)(p.A, { setEmojiConfetti: A, emojiConfetti: null == u ? void 0 : u }),
+                            (0, r.jsx)(g.A, { sound: _, onSelect: z }),
+                            (0, r.jsx)(m.A, { setEmojiConfetti: A, emojiConfetti: null == c ? void 0 : c }),
                         ],
                     }),
                 ],
             }),
-        X = () => {
-            if (null == B) return null;
-            let e = (0, S.$g)(B.price?.amount ?? 0, B.price?.currency ?? P.Yr.USD);
+        q = () => {
+            if (null == V) return null;
+            let e = (0, y.$g)(V.price?.amount ?? 0, V.price?.currency ?? x.Yr.USD);
             return (0, r.jsxs)("div", {
-                className: k.AN,
+                className: P.AN,
                 children: [
-                    (0, r.jsx)(l.zEo, { className: k.jr, children: M.intl.string(M.t.PpoJzt) }),
+                    (0, r.jsx)(l.zEo, { className: P.jr, children: M.intl.string(M.t.PpoJzt) }),
                     (0, r.jsxs)("div", {
-                        className: k.Wx,
+                        className: P.Wx,
                         children: [
                             (0, r.jsx)("div", {
-                                className: k.Xb,
+                                className: P.Xb,
                                 children:
+                                    null != V &&
                                     null != B &&
-                                    null != j &&
-                                    (0, r.jsx)(D.A, {
-                                        containerClassName: k.Iy,
-                                        cardImage: j,
+                                    (0, r.jsx)(O.A, {
+                                        containerClassName: P.Iy,
+                                        cardImage: B,
                                         cardBackgroundImage: H,
-                                        altText: B.name,
+                                        altText: V.name,
                                         shape: "square",
                                     }),
                             }),
                             (0, r.jsxs)("div", {
-                                className: k.vz,
+                                className: P.vz,
                                 children: [
-                                    null != w && (0, r.jsx)(N.Q, { application: w }),
-                                    (0, r.jsx)(l.Text, { variant: "text-sm/semibold", children: B.name }),
+                                    null != L && (0, r.jsx)(b.Q, { application: L }),
+                                    (0, r.jsx)(l.Text, { variant: "text-sm/semibold", children: V.name }),
                                 ],
                             }),
                             (0, r.jsx)(l.Text, { variant: "text-md/semibold", children: e }),
@@ -178,26 +178,26 @@ let V = (e) => {
             });
         },
         Z = () => {
-            let e = B?.orbsReward;
+            let e = V?.orbsReward;
             return (0, r.jsxs)("div", {
-                className: k.Tc,
+                className: P.Tc,
                 children: [
-                    $(),
                     K(),
-                    X(),
+                    W(),
+                    q(),
                     null != e &&
                         e > 0 &&
-                        (0, r.jsx)(O.J, { Icon: l.Cp8, text: M.intl.format(M.t["ZV+aS9"], { orbCount: e }) }),
-                    null != Y && null != B && (0, r.jsx)(F, { handleClose: n, sku: B, guild: Y }),
+                        (0, r.jsx)(u.J, { Icon: l.Cp8, text: M.intl.format(M.t["ZV+aS9"], { orbCount: e }) }),
+                    null != j && null != V && (0, r.jsx)(G, { handleClose: n, sku: V, guild: j }),
                 ],
             });
         };
     return {
-        renderStepBody: () => (0, r.jsxs)("div", { className: k.Du, children: [q(), Z()] }),
-        getLeftColumnComponent: q,
+        renderStepBody: () => (0, r.jsxs)("div", { className: P.Du, children: [$(), Z()] }),
+        getLeftColumnComponent: $,
         getRightColumnComponent: Z,
         onStepChange: t,
         onBackClick: n,
-        disabled: null == s || s.id === U?.id || i.length > x.Jo,
+        disabled: null == a || a.id === k?.id || i.length > w.Jo,
     };
 };

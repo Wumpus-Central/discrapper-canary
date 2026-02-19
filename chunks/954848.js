@@ -10,4 +10,5 @@ e.exports = {
     g4: "loadingContainer_bb5449",
     KX: "giftRedemptionLink_bb5449",
     NR: "totalDueReviewStep_bb5449",
+    uh: "promotionalNoticeContainer_bb5449",
 };

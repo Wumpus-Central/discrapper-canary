@@ -200,7 +200,7 @@ function U(e) {
             onPaymentSourceChange: e$,
             handlePaymentSourceAdd: () => n(A.pn.ADD_PAYMENT_STEPS),
         };
-        t = Y ? (0, r.jsx)(b.A, { ...e }) : (0, r.jsx)(C.A, { ...e });
+        t = Y ? (0, r.jsx)(b.A, { ...e }) : (0, r.jsx)(C.Ay, { ...e });
     } else if (null == W || ed || em) {
         a()(null != Q, "Expected plan to be selected");
         let e = {

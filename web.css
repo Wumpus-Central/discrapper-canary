@@ -44307,8 +44307,12 @@ screen and (max-width:485px) {
 }
 
 .totalDueReviewStep_bb5449 {
-    margin-bottom: var(--space-12);
     margin-top: 0
+}
+
+.promotionalNoticeContainer_bb5449,
+.totalDueReviewStep_bb5449 {
+    margin-bottom: var(--space-12)
 }
 
 .previewTotalSectionContainer_b41cc5 {
@@ -44330,37 +44334,37 @@ screen and (max-width:485px) {
     padding: 16px 16px 0
 }
 
-.offerNoticeContainerShared__005bd {
+.offerNoticeContainerShared__3e43f {
     background: linear-gradient(90deg, rgba(88, 101, 242, .24), rgba(88, 101, 242, .12));
     box-sizing: border-box;
     color: var(--text-strong)
 }
 
-.offerNoticeContainer__005bd {
+.offerNoticeContainer__3e43f {
     align-items: center;
     border-radius: var(--radius-md);
     display: flex;
     gap: var(--space-8)
 }
 
-.offerNoticeContainer__005bd.standard__005bd {
+.offerNoticeContainer__3e43f.standard__3e43f {
     min-width: 200px;
     padding: var(--space-8) var(--space-12);
     width: 100%
 }
 
-.offerNoticeContent__005bd {
+.offerNoticeContent__3e43f {
     display: flex;
     flex-direction: column
 }
 
-.offerNoticeBody__005bd {
+.offerNoticeBody__3e43f {
     align-items: center;
     display: flex;
     gap: var(--space-4)
 }
 
-.offerNoticeOneLineContainer__005bd {
+.offerNoticeOneLineContainer__3e43f {
     align-items: center;
     align-self: stretch;
     border-radius: var(--radius-md);
@@ -44370,7 +44374,7 @@ screen and (max-width:485px) {
     width: 100%
 }
 
-.offerNoticeOneLineText__005bd {
+.offerNoticeOneLineText__3e43f {
     text-align: start
 }
 
@@ -44631,7 +44635,7 @@ screen and (max-width:485px) {
     margin-top: 16px
 }
 
-.orbsRewardNotice_b44961 {
+.oneTimePurchaseRewardNotice_b44961 {
     margin-top: var(--space-16)
 }
 
