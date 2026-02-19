@@ -35,7 +35,7 @@ class I extends i.Component {
                     ...(i ? { is_pending: i, preview_enabled: l } : {}),
                     postable_channels: a,
                 }),
-                (0, o.k)(S.HAw.GUILD_VIEWED_CLICKSTREAM, { guildId: t })),
+                (0, o.k)(S.HAw.GUILD_VIEWED_CLICKSTREAM, { guild_id: t })),
             null != n && n !== e.selectedChannel)
         ) {
             let e = (0, r.C)(c.A.getChannel(n), !0);

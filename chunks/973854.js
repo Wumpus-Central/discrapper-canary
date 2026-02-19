@@ -19,5 +19,8 @@ function o(e) {
         case a.VV.GUILD_BOOSTS:
             return;
     }
-    (0, i.k)(s.HAw.CHANNEL_OPENED_CLICKSTREAM, { channelId: t, channelType: r.A.getChannel(t)?.type ?? s.rbe.UNKNOWN });
+    (0, i.k)(s.HAw.CHANNEL_OPENED_CLICKSTREAM, {
+        channel_id: t,
+        channel_type: r.A.getChannel(t)?.type ?? s.rbe.UNKNOWN,
+    });
 }

@@ -1,17 +1,15 @@
 "use strict";
-n.d(t, { k: () => s, p: () => o }), n(321073);
-var r = n(954571),
-    i = n(359171);
-let a = new Map();
-function s(e, t) {
-    a.has(e) || a.set(e, []);
-    let { default: r } = n(315935),
-        i = r(e, t);
-    null != i && a.get(e)?.push(i);
+n.d(t, { k: () => l, p: () => u }), n(321073);
+var r = n(383501),
+    i = n(954571),
+    s = n(85277),
+    a = n(359171);
+let o = new Map();
+function l(e, t) {
+    o.has(e) || o.set(e, []), o.get(e)?.push({ timestamp: new Date(), rtc_state: r.A.getState(), ...t });
 }
-function o() {
-    if (!(0, i.j)()) return void a.clear();
-    let { default: e } = n(968862);
-    for (let [t, n] of a) r.default.track(t, e(t, n));
-    a.clear();
+function u() {
+    if (!(0, a.j)()) return void o.clear();
+    for (let [e, t] of o) i.default.track(e, (0, s.z)(e, t));
+    o.clear();
 }

@@ -390,7 +390,7 @@ function el() {
                                 viewing_all_channels: !K.Ay.isOptInEnabled(o),
                                 num_recent_channels: O.A.recentsChannelCount(o),
                             };
-                        (0, h.zV)(et.HAw.GUILD_VIEWED, i), (0, m.k)(et.HAw.GUILD_VIEWED_CLICKSTREAM, { guildId: o });
+                        (0, h.zV)(et.HAw.GUILD_VIEWED, i), (0, m.k)(et.HAw.GUILD_VIEWED_CLICKSTREAM, { guild_id: o });
                     }
                 }, [n, o, a]);
             let d = r.useRef(!1);
