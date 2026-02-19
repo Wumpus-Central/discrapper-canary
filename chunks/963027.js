@@ -1,98 +1,102 @@
-n.d(t, { Ay: () => d, r2: () => m }), n(321073);
+n.d(t, { Ay: () => m, r2: () => f }), n(321073);
 var i = n(95701),
     l = n(994500),
     r = n(287809),
     o = n(427262),
-    a = n(47167),
-    s = n(652215),
-    u = n(985018);
-function c(e) {
+    a = n(148719),
+    s = n(47167),
+    u = n(652215),
+    c = n(985018);
+function d(e) {
     let { isSubscriptionGated: t, needSubscriptionToAccess: n } = e;
     if (t)
-        if (n) return u.intl.string(u.t["oj+HOs"]);
-        else return u.intl.string(u.t.xI3TQQ);
+        if (n) return c.intl.string(c.t["oj+HOs"]);
+        else return c.intl.string(c.t.xI3TQQ);
 }
-function d(e) {
+function m(e) {
     let t,
         {
             channel: n,
             unread: o = !1,
-            mentionCount: d = 0,
-            userCount: m,
-            embeddedActivitiesCount: f,
-            isSubscriptionGated: g,
-            needSubscriptionToAccess: p,
+            mentionCount: m = 0,
+            userCount: f,
+            embeddedActivitiesCount: g,
+            isSubscriptionGated: p,
+            needSubscriptionToAccess: A,
         } = e,
-        A = (0, a.m1)(n, r.default, l.A);
+        _ = (0, s.m1)(n, r.default, l.A),
+        v = (function (e) {
+            if (e) return c.intl.string(c.t["4qvAtn"]);
+        })((0, a.A)(n));
     switch (n.type) {
-        case s.rbe.DM:
-            t = o ? u.t.F2MZsu : u.t.fYqXVY;
+        case u.rbe.DM:
+            t = o ? c.t.F2MZsu : c.t.fYqXVY;
             break;
-        case s.rbe.GROUP_DM:
-            t = o ? u.t["fxxUo/"] : u.t.lts3Ld;
+        case u.rbe.GROUP_DM:
+            t = o ? c.t["fxxUo/"] : c.t.lts3Ld;
             break;
-        case s.rbe.GUILD_STORE:
-            t = u.t.Bo4msg;
+        case u.rbe.GUILD_STORE:
+            t = c.t.Bo4msg;
             break;
-        case s.rbe.GUILD_DIRECTORY:
-            t = u.t["92EAF2"];
+        case u.rbe.GUILD_DIRECTORY:
+            t = c.t["92EAF2"];
             break;
-        case s.rbe.GUILD_ANNOUNCEMENT:
-            t = d > 0 ? u.t.sDKIpm : o ? u.t.VM7z8f : u.t.WJ3MPt;
+        case u.rbe.GUILD_ANNOUNCEMENT:
+            t = m > 0 ? c.t.sDKIpm : o ? c.t.VM7z8f : c.t.WJ3MPt;
             break;
-        case s.rbe.GUILD_VOICE:
-            let _ = [u.intl.formatToPlainString(u.t.bkpadO, { channelName: A })];
+        case u.rbe.GUILD_VOICE:
+            let S = [c.intl.formatToPlainString(c.t.bkpadO, { channelName: _ })];
             if (
-                (d > 0 && _.push(u.intl.formatToPlainString(u.t["3l1GOx"], { mentionCount: d })),
-                o && _.push(u.intl.string(u.t.x5zAGZ)),
-                null != m)
+                (m > 0 && S.push(c.intl.formatToPlainString(c.t["3l1GOx"], { mentionCount: m })),
+                o && S.push(c.intl.string(c.t.x5zAGZ)),
+                null != f)
             ) {
                 let e = n.userLimit;
                 null != e && e > 0
-                    ? _.push(u.intl.formatToPlainString(u.t["6qgTOF"], { userCount: m, limit: e }))
-                    : _.push(u.intl.formatToPlainString(u.t.GNIiAA, { userCount: m }));
+                    ? S.push(c.intl.formatToPlainString(c.t["6qgTOF"], { userCount: f, limit: e }))
+                    : S.push(c.intl.formatToPlainString(c.t.GNIiAA, { userCount: f }));
             }
-            null != f && f > 0 && _.push(u.intl.formatToPlainString(u.t.O6PLYd, { activitiesCount: f }));
-            let v = c({ isSubscriptionGated: g, needSubscriptionToAccess: p });
-            return null != v && _.push(v), _.join(", ");
-        case s.rbe.GUILD_STAGE_VOICE:
-            t = u.t.TPPk2T;
+            null != g && g > 0 && S.push(c.intl.formatToPlainString(c.t.O6PLYd, { activitiesCount: g }));
+            let E = d({ isSubscriptionGated: p, needSubscriptionToAccess: A });
+            return null != E && S.push(E), null != v && S.push(v), S.join(", ");
+        case u.rbe.GUILD_STAGE_VOICE:
+            t = c.t.TPPk2T;
             break;
         default:
             t = i.Le.has(n.type)
-                ? d > 0
-                    ? u.t["ZL7+I6"]
+                ? m > 0
+                    ? c.t["ZL7+I6"]
                     : o
-                      ? u.t.YlVvmc
-                      : u.t["0nZpiF"]
-                : d > 0
-                  ? u.t.g8ONM0
+                      ? c.t.YlVvmc
+                      : c.t["0nZpiF"]
+                : m > 0
+                  ? c.t.g8ONM0
                   : o
-                    ? u.t.smf1CZ
-                    : u.t.s0JADj;
+                    ? c.t.smf1CZ
+                    : c.t.s0JADj;
     }
-    let S = [u.intl.formatToPlainString(t, { channelName: A, mentionCount: d })],
-        E = c({ isSubscriptionGated: g, needSubscriptionToAccess: p });
-    return null != E && S.push(E), S.join(", ");
+    let b = [c.intl.formatToPlainString(t, { channelName: _, mentionCount: m })],
+        h = d({ isSubscriptionGated: p, needSubscriptionToAccess: A });
+    return null != h && b.push(h), null != v && b.push(v), b.join(", ");
 }
-function m(e) {
+function f(e) {
     let { channel: t, muted: n, userStatus: i } = e;
-    if (!0 === n) return u.intl.string(u.t.C4zCMb);
+    if (!0 === n) return c.intl.string(c.t.C4zCMb);
     let l = [];
     return (
-        t.type === s.rbe.DM &&
+        t.type === u.rbe.DM &&
             null != i &&
             l.push(
                 (function (e) {
                     switch (e) {
-                        case s.clD.ONLINE:
-                            return (0, o.MU)(s.clD.ONLINE);
-                        case s.clD.IDLE:
-                            return (0, o.MU)(s.clD.IDLE);
-                        case s.clD.DND:
-                            return (0, o.MU)(s.clD.DND);
-                        case s.clD.INVISIBLE:
-                            return (0, o.MU)(s.clD.INVISIBLE);
+                        case u.clD.ONLINE:
+                            return (0, o.MU)(u.clD.ONLINE);
+                        case u.clD.IDLE:
+                            return (0, o.MU)(u.clD.IDLE);
+                        case u.clD.DND:
+                            return (0, o.MU)(u.clD.DND);
+                        case u.clD.INVISIBLE:
+                            return (0, o.MU)(u.clD.INVISIBLE);
                         default:
                             return "";
                     }
