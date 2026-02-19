@@ -11,8 +11,8 @@ var i = n(627968),
     h = n(964486),
     m = n(684339),
     A = n(164617),
-    p = n(402216),
-    g = n(626584),
+    g = n(402216),
+    p = n(626584),
     f = n(525505),
     _ = n(753727),
     E = n(315606),
@@ -20,10 +20,10 @@ var i = n(627968),
     x = n(607407),
     S = n(872363),
     T = n(901690),
-    N = n(919706),
-    I = n(616356),
-    y = n(961350),
-    v = n(734057),
+    I = n(919706),
+    N = n(616356),
+    v = n(961350),
+    y = n(734057),
     b = n(430452),
     j = n(531685),
     R = n(200749),
@@ -39,10 +39,10 @@ var i = n(627968),
     F = n(731854),
     H = n(985018),
     B = n(707511);
-let V = new g.A("StreamTile");
+let V = new p.A("StreamTile");
 function K(e) {
     let { participant: t, selected: n, focused: l, idle: s, width: a, premiumIndicator: o } = e,
-        c = (0, r.bG)([I.A], () => I.A.getActiveStreamForUser(t.user.id, t.stream.guildId)),
+        c = (0, r.bG)([N.A], () => N.A.getActiveStreamForUser(t.user.id, t.stream.guildId)),
         d = (0, k.V)(a);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -50,7 +50,7 @@ function K(e) {
             l || null == c || c.state === U.XYD.ENDED || c.state === U.XYD.FAILED
                 ? null
                 : (0, i.jsx)(S.A, {
-                      size: p.Ay.Sizes.SMALL,
+                      size: g.Ay.Sizes.SMALL,
                       className: B.Ok,
                       participant: t,
                       showQuality: !d && !s,
@@ -65,53 +65,50 @@ function W(e) {
             participant: t,
             selected: n,
             onVideoResize: s,
-            fit: p,
-            popoutType: g,
+            fit: g,
+            popoutType: p,
             width: S,
-            focused: w,
-            wrapperClassName: k,
-            paused: K = !1,
-            idle: W = !1,
-            controlsBottom: z,
+            wrapperClassName: w,
+            paused: k = !1,
         } = e,
-        Y = b.Ay.getVideoComponent(),
-        q = (0, r.bG)([y.default], () => y.default.getId()),
-        J = (0, _.A)(),
-        { stream: $, user: Z, streamId: X } = t,
-        Q = (0, r.bG)([v.A], () => v.A.getChannel($.channelId)),
-        ee = (0, r.bG)([I.A], () => I.A.getActiveStreamForUser(Z.id, $.guildId), [Z.id, $.guildId]),
-        { defaultWatchMultipleStreams: et } = (0, E.W)({ location: "StreamTile" }),
-        en = (0, r.bG)([I.A], () => I.A.getAllActiveStreams().length > 0),
-        ei = (0, r.bG)([j.A], () => j.A.isFocused()),
-        el = ee?.ownerId === q,
-        es = el && !ei && g === A.N.NO_POPOUT,
-        ea = null != ee ? (0, C.A)(ee, Z, Z.id === q, es) : null,
-        er = S < 195;
+        K = b.Ay.getVideoComponent(),
+        W = (0, r.bG)([v.default], () => v.default.getId()),
+        z = (0, _.A)(),
+        { stream: Y, user: q, streamId: J } = t,
+        $ = (0, r.bG)([y.A], () => y.A.getChannel(Y.channelId)),
+        Z = (0, r.bG)([N.A], () => N.A.getActiveStreamForUser(q.id, Y.guildId), [q.id, Y.guildId]),
+        { defaultWatchMultipleStreams: X } = (0, E.W)({ location: "StreamTile" }),
+        Q = (0, r.bG)([N.A], () => N.A.getAllActiveStreams().length > 0),
+        ee = (0, r.bG)([j.A], () => j.A.isFocused()),
+        et = Z?.ownerId === W,
+        en = et && !ee && p === A.N.NO_POPOUT,
+        ei = null != Z ? (0, C.A)(Z, q, q.id === W, en) : null,
+        el = S < 195;
     (0, h.Ay)(() => {
-        !en && Q?.isGuildStageVoice() && !el && ((0, u.A9)($), d.A.updateStageStreamSize($.channelId, !1));
+        !Q && $?.isGuildStageVoice() && !et && ((0, u.A9)(Y), d.A.updateStageStreamSize(Y.channelId, !1));
     });
-    let eo = (0, f.u)(F.x.STREAM, t.user.id);
+    let es = (0, f.u)(F.x.STREAM, t.user.id);
     if (
         (l.useEffect(() => {
             V.info(
-                `Stream Tile State - activeStream: ${null != ee} | selected: ${n} | Video: ${null != Y} | MediaEngine: ${b.Ay.supports(F.O5.VIDEO)}`,
+                `Stream Tile State - activeStream: ${null != Z} | selected: ${n} | Video: ${null != K} | MediaEngine: ${b.Ay.supports(F.O5.VIDEO)}`,
             );
-        }, [Y, ee, n]),
-        J)
+        }, [K, Z, n]),
+        z)
     )
-        return (0, i.jsx)(P.A, { stream: t.stream, isSmall: er, selected: n, isSelfStream: Z.id === q });
-    if (ee?.state === U.XYD.ENDED) return (0, i.jsx)(D.A, { selected: n, stream: ee, width: S });
-    if (null != eo || ee?.state === U.XYD.FAILED)
-        return (0, i.jsx)(O.A, { avError: eo?.type, avErrorContext: eo, selected: n, stream: t.stream, width: S });
+        return (0, i.jsx)(P.A, { stream: t.stream, isSmall: el, selected: n, isSelfStream: q.id === W });
+    if (Z?.state === U.XYD.ENDED) return (0, i.jsx)(D.A, { selected: n, stream: Z, width: S });
+    if (null != es || Z?.state === U.XYD.FAILED)
+        return (0, i.jsx)(O.A, { avError: es?.type, avErrorContext: es, selected: n, stream: t.stream, width: S });
     if (t.type === G.lp.HIDDEN_STREAM) return (0, i.jsx)(L.A, { selected: n, participant: t, width: S });
-    if (!(null != ee && !n && null != Y && b.Ay.supports(F.O5.VIDEO)))
+    if (!(null != Z && !n && null != K && b.Ay.supports(F.O5.VIDEO)))
         return (0, i.jsxs)("div", {
-            className: a()(B.Qs, B.Rh, { [B.EX]: er }),
+            className: a()(B.Qs, B.Rh, { [B.EX]: el }),
             children: [
                 (0, i.jsx)(x.A, {
                     noImage: !0,
                     noText: !0,
-                    className: a()(B.HL, { [B.gH]: null == ee }),
+                    className: a()(B.HL, { [B.gH]: null == Z }),
                     stream: t.stream,
                 }),
                 n
@@ -122,18 +119,18 @@ function W(e) {
                                   className: B.lO,
                                   children: (0, i.jsx)(c.Button, {
                                       variant: "secondary",
-                                      size: er ? "sm" : "md",
+                                      size: el ? "sm" : "md",
                                       text: S < 175 ? H.intl.string(H.t.I6JG46) : H.intl.string(H.t["7Xq/nV"]),
                                   }),
                               }),
-                              en && !et
+                              Q && !X
                                   ? (0, i.jsx)("div", {
                                         className: a()(B.lO, B.EU),
                                         children: (0, i.jsx)(o.m_, {
                                             text: H.intl.string(H.t.wCrzut),
                                             children: (0, i.jsx)(c.K0, {
                                                 variant: "secondary",
-                                                size: er ? "sm" : "md",
+                                                size: el ? "sm" : "md",
                                                 icon: c.vAm,
                                                 "aria-label": H.intl.string(H.t.wCrzut),
                                                 onClick: (e) => {
@@ -153,24 +150,21 @@ function W(e) {
                 (0, i.jsx)(
                     T.A,
                     {
-                        enableZoom: w,
                         onResize: s,
-                        wrapperClassName: a()(g !== A.N.CALL_TILE ? B.tN : void 0, k),
+                        wrapperClassName: a()(p !== A.N.CALL_TILE ? B.tN : void 0, w),
                         className: B.Qs,
-                        streamId: X,
-                        videoComponent: Y,
-                        fit: p,
-                        paused: K || ee?.state === U.XYD.PAUSED || es,
-                        videoSpinnerContext: el ? m.u.SELF_STREAM : m.u.REMOTE_STREAM,
-                        userId: Z.id,
+                        streamId: J,
+                        videoComponent: K,
+                        fit: g,
+                        paused: k || Z?.state === U.XYD.PAUSED || en,
+                        videoSpinnerContext: et ? m.u.SELF_STREAM : m.u.REMOTE_STREAM,
+                        userId: q.id,
                         streamKey: t.id,
-                        controlsBottom: z,
-                        idle: W,
                     },
-                    X,
+                    J,
                 ),
-                null != ea ? (0, i.jsx)(N.A, { size: (0, R.J)(S), ...ea }) : null,
-                (0, i.jsx)(M.A, { stream: $, popoutType: g }),
+                null != ei ? (0, i.jsx)(I.A, { size: (0, R.J)(S), ...ei }) : null,
+                (0, i.jsx)(M.A, { stream: Y, popoutType: p }),
             ],
         });
 }

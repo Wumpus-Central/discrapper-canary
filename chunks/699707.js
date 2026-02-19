@@ -47,28 +47,28 @@ function T(e) {
         F = (0, d.A)(B),
         [K, W] = l.useState(!0),
         [Y, z] = l.useState(!1),
-        q = L.type === E.lp.ACTIVITY,
-        X = (0, c.A)(q ? L.applicationId : void 0),
-        J = !q && null != L.streamId,
+        X = L.type === E.lp.ACTIVITY,
+        q = (0, c.A)(X ? L.applicationId : void 0),
+        J = !X && null != L.streamId,
         Q = U <= 2 * S + 144,
         $ = M && !Q,
         Z = (0, d.A)($),
         ee = P === C.DUB.MINIMUM || P === C.DUB.NORMAL,
-        et = !Q && (!ee || q),
+        et = !Q && (!ee || X),
         en = (0, m.A)(et, 100),
         ei = ((0, d.A)(L.id) ?? L.id) !== L.id,
         el = 0;
-    (q || $) && (el += 72), q && !$ && (et ? (el += 48) : (el += 8)), $ && (el += 0.5 * S + 8);
+    (X || $) && (el += 72), X && !$ && (et ? (el += 48) : (el += 8)), $ && (el += 0.5 * S + 8);
     let es = l.useMemo(
-            () => (q && X ? G / (U - 2 * el) : J && null != B && B.width > 0 && B.height > 0 ? B.width / B.height : N),
-            [J, B, q, G, U, el, X],
+            () => (X && q ? G / (U - 2 * el) : J && null != B && B.width > 0 && B.height > 0 ? B.width / B.height : N),
+            [J, B, X, G, U, el, q],
         ),
         ea = U - 2 * el,
-        er = q && X ? G : ea * es,
+        er = X && q ? G : ea * es,
         eo = Math.floor(Math.min(G, er) / es),
         ed = U > G / es + 72 + S + 8;
-    t = $ || q ? ($ ? -16 : -8) : 40 + Math.max(0, 72 - (U - eo) / 2);
-    let ec = 8 + Math.max(0, 72 - (U - eo) / 2);
+    t = $ || X ? ($ ? -16 : -8) : 40 + Math.max(0, 72 - (U - eo) / 2);
+    let ec = Math.max(0, 72 - (U - eo) / 2);
     l.useEffect(() => {
         let e = setTimeout(() => {
             W(!1);

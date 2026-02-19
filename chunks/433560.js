@@ -11,8 +11,8 @@ var i = n(627968),
     h = n(442433),
     A = n(391973),
     m = n(401843),
-    g = n(520698),
-    p = n(164617),
+    p = n(520698),
+    g = n(164617),
     f = n(402216),
     _ = n(652896),
     E = n(607407),
@@ -20,13 +20,13 @@ var i = n(627968),
     S = n(267102),
     I = n(401901),
     T = n(203355),
-    C = n(110234),
-    y = n(616356),
+    y = n(110234),
+    C = n(616356),
     v = n(961350),
     N = n(430452),
     O = n(287809),
-    j = n(562153),
-    b = n(810412),
+    b = n(562153),
+    j = n(810412),
     w = n(589051),
     L = n(761661),
     R = n(652215),
@@ -41,7 +41,7 @@ function k(e) {
             onClick: (e) => {
                 (0, m.vN)((0, _._z)(t.stream), !1),
                     e.stopPropagation(),
-                    (0, b.YX)(R.uss.GO_LIVE, { type: b.Z5.SCREEN_SHARE, value: b.IP.DISABLED, userId: t.user.id });
+                    (0, j.YX)(R.uss.GO_LIVE, { type: j.Z5.SCREEN_SHARE, value: j.IP.DISABLED, userId: t.user.id });
             },
             children: (0, i.jsx)(u.GT3, { size: "sm", color: u.LU0.colors.WHITE }),
         }),
@@ -51,11 +51,11 @@ function z(e) {
     let { participant: t } = e,
         n = t.user.id,
         a = (0, r.bG)([N.Ay], () => {
-            let e = (0, g.A)(t.type);
+            let e = (0, p.A)(t.type);
             return N.Ay.isLocalMute(t.user.id, e);
         }, [t]),
         s = (0, r.bG)([v.default], () => v.default.getId()),
-        { hasVideo: h } = (0, C.A)(t, s),
+        { hasVideo: h } = (0, y.A)(t, s),
         A = a && h,
         m = l.useCallback(() => {
             c.A.toggleLocalMute(n, o.x.STREAM);
@@ -66,9 +66,9 @@ function z(e) {
             className: M.IF,
             onClick: (e) => {
                 e.stopPropagation(),
-                    (0, b.YX)(R.uss.GO_LIVE, {
-                        type: b.Z5.AUDIO,
-                        value: A ? b.IP.ENABLED : b.IP.DISABLED,
+                    (0, j.YX)(R.uss.GO_LIVE, {
+                        type: j.Z5.AUDIO,
+                        value: A ? j.IP.ENABLED : j.IP.DISABLED,
                         userId: t.user.id,
                     }),
                     m();
@@ -81,7 +81,7 @@ function z(e) {
 }
 function V(e, t) {
     return (l) => {
-        (0, b.YX)(R.uss.GO_LIVE, { type: b.Z5.GO_LIVE, value: b.IP.SETTINGS_OPENED, userId: e.user.id }),
+        (0, j.YX)(R.uss.GO_LIVE, { type: j.Z5.GO_LIVE, value: j.IP.SETTINGS_OPENED, userId: e.user.id }),
             l.stopPropagation(),
             (0, h.L3)(l, async () => {
                 let { default: l } = await n.e("61361").then(n.bind(n, 663912));
@@ -109,9 +109,9 @@ function P(e) {
                             onClick: () => {
                                 (0, m.A9)(n.stream, { forceMultiple: !0, noFocus: !0 }),
                                     l(),
-                                    (0, b.YX)(R.uss.GO_LIVE, {
-                                        type: b.Z5.GO_LIVE,
-                                        value: b.IP.ENABLED,
+                                    (0, j.YX)(R.uss.GO_LIVE, {
+                                        type: j.Z5.GO_LIVE,
+                                        value: j.IP.ENABLED,
                                         userId: n.user.id,
                                     });
                             },
@@ -138,7 +138,7 @@ function P(e) {
                                     variant: "text-md/medium",
                                     color: "always-white",
                                     className: M.yb,
-                                    children: j.Ay.getName(n.stream.guildId, n.stream.channelId, o),
+                                    children: b.Ay.getName(n.stream.guildId, n.stream.channelId, o),
                                 }),
                                 (0, i.jsx)(x.Ay, {
                                     primaryGuild: c.primaryGuild,
@@ -146,9 +146,9 @@ function P(e) {
                                     containerClassName: M.Mp,
                                     inline: !1,
                                     onShowProfile: () => {
-                                        (0, b.YX)(R.uss.GO_LIVE, {
-                                            type: b.Z5.GO_LIVE,
-                                            value: b.IP.GUILD_PROFILE_OPENED,
+                                        (0, j.YX)(R.uss.GO_LIVE, {
+                                            type: j.Z5.GO_LIVE,
+                                            value: j.IP.GUILD_PROFILE_OPENED,
                                             userId: n.user.id,
                                         });
                                     },
@@ -183,7 +183,7 @@ function P(e) {
 let U = new Set([R.XYD.ENDED, R.XYD.FAILED, R.XYD.PAUSED]),
     G = l.memo(function (e) {
         let { participant: t, width: n, locked: l, widgetId: a, pinned: s } = e,
-            o = (0, r.bG)([y.A], () => y.A.getActiveStreamForUser(t.user.id, t.stream.guildId), [
+            o = (0, r.bG)([C.A], () => C.A.getActiveStreamForUser(t.user.id, t.stream.guildId), [
                 t.user.id,
                 t.stream.guildId,
             ]),
@@ -191,7 +191,7 @@ let U = new Set([R.XYD.ENDED, R.XYD.FAILED, R.XYD.PAUSED]),
             c = null != o && U.has(o.state),
             h = null != o,
             m = (0, L.dh)(t.stream),
-            g = (0, L.XG)(t.stream);
+            p = (0, L.XG)(t.stream);
         return (!h && l) || c
             ? null
             : (0, i.jsxs)("div", {
@@ -212,9 +212,8 @@ let U = new Set([R.XYD.ENDED, R.XYD.FAILED, R.XYD.PAUSED]),
                                     children: (0, i.jsx)(T.A, {
                                         participant: t,
                                         width: n,
-                                        fit: g ?? I.$.CONTAIN,
-                                        popoutType: p.N.OVERLAY,
-                                        focused: !l,
+                                        fit: p ?? I.$.CONTAIN,
+                                        popoutType: g.N.OVERLAY,
                                         selected: !1,
                                         wrapperClassName: l ? M.Gq : void 0,
                                     }),
