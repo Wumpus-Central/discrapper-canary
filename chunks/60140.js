@@ -1,65 +1,42 @@
 "use strict";
-s.d(t, { A: () => v });
-var n = s(627968),
-    r = s(64700),
-    l = s(397927),
-    a = s(770178),
-    i = s(765548),
-    o = s(720462),
-    c = s(440938),
-    d = s(590180),
-    u = s(511265),
-    g = s(313276),
-    _ = s(206077),
-    m = s(751304),
-    h = s(561769),
-    p = s(484469),
-    f = s(940622),
-    x = s(758836),
-    E = s(201073);
-let C = (e) => {
-        let { cardContainerRef: t, totalCards: s } = (() => {
-            let [e, t] = r.useState(1),
-                s = (0, l.rdh)(l.LU0.space.SPACE_XL),
-                n = (0, i.A)(() => {
-                    o?.current == null || t(Math.max(1, Math.floor((o.current.offsetWidth + s) / (246 + s))));
-                }),
-                o = (0, a.w)(n, [s], { fireOnMount: !0, fireOnDepsChange: !0 });
-            return {
-                cardContainerRef: r.useCallback(
-                    (e) => {
-                        (o.current = e), null != e && n();
-                    },
-                    [n, o],
-                ),
-                totalCards: e,
-            };
-        })();
-        return (0, n.jsx)("div", { className: E.nM, ref: t, children: (0, n.jsx)(S, { ...e, totalCards: s }) });
-    },
-    A = (e) => (0, n.jsx)("div", { className: E.hm, children: (0, n.jsx)(S, { ...e }) }),
-    b = (e) => (0, n.jsx)(o.A, { gap: "xl", children: (0, n.jsx)(S, { ...e }) }),
-    S = (e) => {
-        let { isLoading: t, products: s, tab: r, totalCards: l } = e,
-            a = (0, c.uM)();
-        if (t) return (0, n.jsx)(n.Fragment, { children: [...Array(l ?? 4)].map((e, t) => (0, n.jsx)(p.A, {}, t)) });
-        let i = null != l ? s.slice(0, l) : s;
-        return (0, n.jsx)(h.v3.Provider, {
+n.d(t, { A: () => C });
+var s = n(627968),
+    l = n(64700),
+    r = n(720462),
+    a = n(440938),
+    i = n(590180),
+    o = n(511265),
+    c = n(313276),
+    d = n(206077),
+    u = n(751304),
+    g = n(561769),
+    _ = n(484469),
+    m = n(940622),
+    h = n(758836),
+    p = n(201073);
+let f = (e) => (0, s.jsx)("div", { className: p.hm, children: (0, s.jsx)(E, { ...e }) }),
+    x = (e) => (0, s.jsx)(r.A, { gap: "xl", children: (0, s.jsx)(E, { ...e }) }),
+    E = (e) => {
+        let { isLoading: t, products: n, tab: l, totalCards: r } = e,
+            o = (0, a.uM)();
+        if (t) return (0, s.jsx)(s.Fragment, { children: [...Array(r ?? 4)].map((e, t) => (0, s.jsx)(_.A, {}, t)) });
+        let c = null != r ? n.slice(0, r) : n;
+        return (0, s.jsx)(g.v3.Provider, {
             value: { flattenProductVariants: !1 },
-            children: i.map((e, t) => {
-                let s = d.A.getCategoryForProduct(e.skuId);
-                return null == e || null == s
+            children: c.map((e, t) => {
+                let n = i.A.getCategoryForProduct(e.skuId);
+                return null == e || null == n
                     ? null
-                    : (0, n.jsx)(
-                          c.R9,
+                    : (0, s.jsx)(
+                          a.R9,
                           {
                               newValue: { tilePosition: t, pageSection: "top 4", categoryPosition: 0 },
-                              children: (0, n.jsx)(
-                                  m.A,
+                              children: (0, s.jsx)(
+                                  u.A,
                                   {
                                       skuId: e?.skuId,
-                                      prioritizedCurrency: r === x.G2.ORBS ? h.Hi.ORBS : void 0,
-                                      onClickAnalytics: (0, h.UU)(e, r, a),
+                                      prioritizedCurrency: l === h.G2.ORBS ? g.Hi.ORBS : void 0,
+                                      onClickAnalytics: (0, g.UU)(e, l, o),
                                   },
                                   e.skuId,
                               ),
@@ -69,33 +46,31 @@ let C = (e) => {
             }),
         });
     },
-    v = (e) => {
+    C = (e) => {
         let t,
-            s,
-            l,
+            n,
+            r,
             a,
-            { heroBlockRecord: i, layout: o, tab: c, isBlockLoading: m = !1 } = e,
-            { products: h } =
-                ((t = (0, g.A)()),
-                (s = r.useMemo(() => (m ? [] : t(i.rankedSkuIds)), [m, t, i.rankedSkuIds])),
-                (l = (0, u.p)()(s)),
-                (a = (0, _.X)(l)),
-                { products: (0, f.od)(a) }),
-            p = r.useMemo(
+            { heroBlockRecord: u, layout: g, tab: _, isBlockLoading: h = !1 } = e,
+            { products: p } =
+                ((t = (0, c.A)()),
+                (n = l.useMemo(() => (h ? [] : t(u.rankedSkuIds)), [h, t, u.rankedSkuIds])),
+                (r = (0, o.p)()(n)),
+                (a = (0, d.X)(r)),
+                { products: (0, m.od)(a) }),
+            E = l.useMemo(
                 () =>
-                    !m &&
-                    0 !== i.rankedSkuIds.length &&
-                    !(h.length > 0) &&
-                    i.rankedSkuIds.every((e) => d.A.getProduct(e)?.variantGroupStoreListingId != null),
-                [m, i.rankedSkuIds, h.length],
+                    !h &&
+                    0 !== u.rankedSkuIds.length &&
+                    !(p.length > 0) &&
+                    u.rankedSkuIds.every((e) => i.A.getProduct(e)?.variantGroupStoreListingId != null),
+                [h, u.rankedSkuIds, p.length],
             ),
-            x = m || p;
-        switch (o) {
-            case "row":
-                return (0, n.jsx)(C, { heroBlockRecord: i, isLoading: x, products: h, tab: c });
+            C = h || E;
+        switch (g) {
             case "feed":
-                return (0, n.jsx)(A, { heroBlockRecord: i, isLoading: x, products: h, tab: c });
+                return (0, s.jsx)(f, { heroBlockRecord: u, isLoading: C, products: p, tab: _ });
             case "hscroll":
-                return (0, n.jsx)(b, { heroBlockRecord: i, isLoading: x, products: h, tab: c });
+                return (0, s.jsx)(x, { heroBlockRecord: u, isLoading: C, products: p, tab: _ });
         }
     };
