@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { PI: () => b, XH: () => v, Z$: () => y, l$: () => C });
+n.d(t, { PI: () => R, XH: () => N, Z$: () => v, l$: () => b });
 var r = n(627968),
     i = n(64700),
     s = n(997101),
@@ -19,8 +19,9 @@ var r = n(627968),
     A = n(888751),
     I = n(788868),
     T = n(985018),
-    S = n(756366);
-let y = (e) => {
+    S = n(756366),
+    y = n(772992);
+let v = (e) => {
         let {
                 isPrepaidPaymentSource: t,
                 invoiceSummaryTypeWithPreview: n,
@@ -41,7 +42,7 @@ let y = (e) => {
             u = (0, c.lp)(o, { manualLineItems: l, addTaxLineItem: !0 });
         return (0, r.jsx)(_.Vm, { label: T.intl.string(S.default.eoXh7B), lineItems: u, currency: o.currency });
     },
-    v = (e) => {
+    N = (e) => {
         let {
                 selectedPlanId: t,
                 priceOptions: n,
@@ -50,48 +51,66 @@ let y = (e) => {
                 subscriptionPeriodEnd: o,
                 discountInvoiceItems: l,
                 showSecondarySubTexts: u,
+                isInPlanSelectStep: c,
             } = e,
-            c = (0, p.RO)({
+            _ = (0, p.RO)({
                 selectedPlanId: t,
                 priceOptions: n,
                 planOptions: s,
                 eligibleForMultiMonthPlans: a,
                 subscriptionPeriodEnd: o,
                 discountInvoiceItems: l,
+                showTotal: c,
             }),
-            { selectedPlan: _ } = c,
             {
-                selectPlan: f,
-                premiumSubscription: h,
-                userLocale: m,
-                discountOffer: E,
-                priceOptions: g,
-                isGift: T,
-                shouldUseCalculatedDiscount: S,
-                isEligibleForBOGOPromotion: y,
-            } = (0, p.Rx)(c),
-            v = i.useMemo(() => (s.length > 0 ? I.hd[s[0]].premiumType : void 0), [s]),
-            N = i.useCallback(
-                (e) => {
-                    f(e.value);
-                },
-                [f],
-            ),
+                selectedPlan: f,
+                selectedPlanPrice: h,
+                isPrepaid: m,
+                shouldShowHRKEuroWarning: E,
+                shouldShowTotalInSubscriptionFlow: g,
+                shouldShowUpdatedPaymentModal: T,
+                userTrialOffer: S,
+                trialPeriodCopy: v,
+                isEligibleForTrial: N,
+            } = _,
             C = i.useMemo(
+                () => (c && N ? (0, p.Ct)(S, { subscriptionPeriodEnd: o, trialPeriodCopy: v }) : void 0),
+                [c, N, S, o, v],
+            ),
+            {
+                selectPlan: b,
+                premiumSubscription: R,
+                userLocale: O,
+                priceOptions: D,
+                isGift: L,
+                shouldUseCalculatedDiscount: w,
+                isEligibleForBOGOPromotion: x,
+                discountOffer: M,
+            } = (0, p.Rx)(_),
+            P = i.useMemo(() => (s.length > 0 ? I.hd[s[0]].premiumType : void 0), [s]),
+            k = i.useCallback(
+                (e) => {
+                    b(e.value);
+                },
+                [b],
+            ),
+            U = i.useMemo(
                 () =>
                     s.map((e) => {
-                        let { isCurrentPlan: t, disabled: n } = (0, p.cD)(h, e),
-                            r = (0, A.Rs)(h, {
+                        let { isCurrentPlan: t, disabled: n } = (0, p.cD)(R, e),
+                            r = (0, A.Rs)(R, {
                                 planId: e,
-                                disabled: n,
-                                userLocale: m,
-                                discountOffer: E,
-                                priceOptions: g,
-                                isGift: T,
                                 isCurrentPlan: t,
-                                shouldUseCalculatedDiscount: S,
-                                isEligibleForBOGOPromotion: y,
+                                disabled: n,
+                                userLocale: O,
                                 showSecondarySubTexts: u,
+                                isInPlanSelectStep: c,
+                                discountOffer: M,
+                                priceOptions: D,
+                                isGift: L,
+                                shouldUseCalculatedDiscount: w,
+                                isEligibleForTrial: N,
+                                isEligibleForBOGOPromotion: x,
                             });
                         return {
                             value: r.id,
@@ -102,25 +121,42 @@ let y = (e) => {
                             isDisabled: r.isDisabled,
                         };
                     }),
-                [u, s, m, E, g, T, S, y, h],
+                [u, s, O, M, D, L, w, N, x, R, c],
             );
-        return null == v
+        return null == P
             ? null
-            : (0, r.jsx)(d.me, {
-                  headingComponent: (0, r.jsx)(d.ec, { size: "sm", color: "text-strong", premiumType: v }),
-                  planRadioOptions: C,
-                  value: _?.id ?? "",
-                  onChange: N,
+            : (0, r.jsxs)(r.Fragment, {
+                  children: [
+                      (0, r.jsx)(d.me, {
+                          headingComponent: (0, r.jsx)(d.ec, { size: "sm", color: "text-strong", premiumType: P }),
+                          headingSubText: C,
+                          planRadioOptions: U,
+                          value: f?.id ?? "",
+                          onChange: k,
+                      }),
+                      c
+                          ? (0, p.LR)({
+                                selectedPlan: f,
+                                selectedPlanPrice: h,
+                                isPrepaid: m,
+                                shouldShowHRKEuroWarning: E,
+                                shouldShowUpdatedPaymentModal: T,
+                                showTotal: c,
+                                shouldShowTotalInSubscriptionFlow: g,
+                                previewTotalSectionClassName: y.$,
+                            })
+                          : null,
+                  ],
               });
     },
-    N = (e) => {
+    C = (e) => {
         let { fractionalPremiumInfo: t, isEligibleForTrial: n, trialPeriodCopy: r, subscriptionPeriodEnd: i } = e,
             s = n ? { variant: f.uA.TRIAL, trialPeriod: r, trialEnd: i } : {};
         return { fractionalPremiumBannerMessage: (0, f.NQ)({ fractionalPremiumInfo: t, ...s }) };
     },
-    C = (e) => {
+    b = (e) => {
         let { fractionalPremiumInfo: t, isEligibleForTrial: n, trialPeriodCopy: i, subscriptionPeriodEnd: s } = e,
-            { fractionalPremiumBannerMessage: o } = N({
+            { fractionalPremiumBannerMessage: o } = C({
                 fractionalPremiumInfo: t,
                 isEligibleForTrial: n,
                 trialPeriodCopy: i,
@@ -128,7 +164,7 @@ let y = (e) => {
             });
         return null != o && "" !== o ? (0, r.jsx)(a.wx6, { type: "info", children: o }) : null;
     };
-function b(e) {
+function R(e) {
     let {
             setHasAcceptedTerms: t,
             isTrial: n,

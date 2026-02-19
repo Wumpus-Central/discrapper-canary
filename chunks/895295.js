@@ -11,14 +11,14 @@ let u = (e) => {
     return (0, r.jsx)(o.Text, { tag: "span", variant: "eyebrow", color: "always-white", className: l.Fi, children: t });
 };
 function c(e) {
-    let { headingComponent: t, value: n, planRadioOptions: s, ...c } = e,
-        d = i.useMemo(
+    let { headingComponent: t, headingSubText: n, value: s, planRadioOptions: c, ...d } = e,
+        _ = i.useMemo(
             () =>
-                null == s
+                null == c
                     ? []
-                    : s.map((e) => {
-                          let t = e.value === n,
-                              i = t ? "text-strong" : "text-subtle";
+                    : c.map((e) => {
+                          let t = e.value === s,
+                              n = t ? "text-strong" : "text-subtle";
                           return {
                               name: (0, r.jsxs)("div", {
                                   className: l.VH,
@@ -28,7 +28,7 @@ function c(e) {
                                           children: [
                                               (0, r.jsx)(o.Text, {
                                                   variant: "text-md/medium",
-                                                  color: i,
+                                                  color: n,
                                                   children: e.primaryText,
                                               }),
                                               null != e.badgeText && (0, r.jsx)(u, { text: e.badgeText }),
@@ -39,7 +39,7 @@ function c(e) {
                                           children: [
                                               (0, r.jsx)(o.Text, {
                                                   variant: "text-md/medium",
-                                                  color: i,
+                                                  color: n,
                                                   children: e.subText,
                                               }),
                                               null != e.secondarySubText &&
@@ -57,7 +57,14 @@ function c(e) {
                               radioBarClassName: a()(l.tG, { [l.uA]: t }),
                           };
                       }),
-            [s, n],
+            [c, s],
         );
-    return (0, r.jsxs)("div", { children: [t, (0, r.jsx)(o.$dE, { ...c, options: d, value: n, className: l.ul })] });
+    return (0, r.jsxs)("div", {
+        children: [
+            t,
+            null != n &&
+                (0, r.jsx)(o.Text, { variant: "text-sm/medium", color: "text-subtle", className: l.cm, children: n }),
+            (0, r.jsx)(o.$dE, { ...d, options: _, value: s, className: l.ul }),
+        ],
+    });
 }

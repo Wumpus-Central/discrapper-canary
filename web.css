@@ -43493,11 +43493,15 @@ screen and (max-width:485px) {
     top: var(--space-8)
 }
 
+.headingSubText__220d4,
+.radioGroupContainer__220d4 {
+    margin-top: var(--space-12)
+}
+
 .radioGroupContainer__220d4 {
     display: flex;
     flex-direction: column;
-    gap: var(--space-4);
-    margin-top: var(--space-12)
+    gap: var(--space-4)
 }
 
 .radioItemNameContainer__220d4 {
@@ -44244,7 +44248,7 @@ screen and (max-width:485px) {
 }
 
 .reviewStepBody_bb5449 {
-    min-height: 440px
+    min-height: 300px
 }
 
 .checkoutInlineNoticeContainer_bb5449 {
@@ -44258,7 +44262,7 @@ screen and (max-width:485px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 440px
+    min-height: 300px
 }
 
 .giftRedemptionLink_bb5449 {
@@ -44268,6 +44272,10 @@ screen and (max-width:485px) {
 .totalDueReviewStep_bb5449 {
     margin-bottom: var(--space-12);
     margin-top: 0
+}
+
+.previewTotalSectionContainer_b41cc5 {
+    margin-top: var(--space-16)
 }
 
 .renewalInvoiceDate_d313e6 {
