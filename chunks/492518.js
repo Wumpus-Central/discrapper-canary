@@ -1,5 +1,4 @@
-"use strict";
-n.d(t, { k: () => a });
-var r = n(627968),
-    i = n(397927);
-let a = () => (0, r.jsx)("div", { children: (0, r.jsx)(i.y$y, { type: i.tVU.SPINNING_CIRCLE }) });
+a.d(t, { k: () => o });
+var _ = a(627968),
+    n = a(397927);
+let o = () => (0, _.jsx)("div", { children: (0, _.jsx)(n.y$y, { type: n.tVU.SPINNING_CIRCLE }) });

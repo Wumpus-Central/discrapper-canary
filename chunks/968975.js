@@ -1,4 +1,4 @@
-n.d(t, { A: () => f }), n(321073);
+n.d(t, { A: () => C }), n(321073);
 var i = n(627968),
     l = n(64700),
     s = n(397927),
@@ -10,57 +10,58 @@ var i = n(627968),
     u = n(721932),
     h = n(35092),
     A = n(183555),
-    g = n(535089),
+    p = n(535089),
     m = n(946356),
-    p = n(173678);
-n(524380);
-var _ = n(985018),
+    g = n(173678),
+    _ = n(524380),
+    f = n(985018),
     x = n(250783);
-function f(e) {
-    let { unownedWishlistItems: t = [], profileOwner: n, onClick: f, wishlistId: E, cardSize: C, title: I } = e,
-        { analyticsLocations: S } = (0, a.Ay)(),
-        { trackUserProfileWishlistAction: b } = (0, A.NJ)(),
-        N = (0, d.G)("user_profile_sidebar_wishlist_breadcrumb"),
-        T = (0, l.useCallback)(
+function C(e) {
+    let { unownedWishlistItems: t = [], profileOwner: n, onClick: C, wishlistId: E, cardSize: I, title: b } = e,
+        { analyticsLocations: N } = (0, a.Ay)(),
+        { trackUserProfileWishlistAction: S } = (0, A.NJ)(),
+        T = (0, d.G)("user_profile_sidebar_wishlist_breadcrumb"),
+        v = (0, _.Q)(T),
+        y = (0, l.useCallback)(
             (e) => {
                 let { wishlistId: t, action: n, productLines: i } = e;
-                null != t && b({ wishlistId: t, action: n, productLines: i });
+                null != t && S({ wishlistId: t, action: n, productLines: i });
             },
-            [b],
+            [S],
         ),
-        { visibleItems: j, showTypeTooltip: v } = (0, l.useMemo)(() => {
+        { visibleItems: j, showTypeTooltip: R } = (0, l.useMemo)(() => {
             let e = [],
                 n = !1,
                 i = !1;
-            for (let l = 0; l < t.length && e.length < 4; l++) {
+            for (let l = 0; l < t.length && e.length < v; l++) {
                 let s = t[l];
                 e.push(s), (0, u.$)(s) && (0, r.bF)(s.sku) ? (n = !0) : (0, c.L)(s) && (i = !0);
             }
             return { visibleItems: e, showTypeTooltip: n && i };
-        }, [t]),
+        }, [v, t]),
         {
-            cards: y,
-            singleItem: R,
-            productLines: O,
+            cards: O,
+            singleItem: L,
+            productLines: M,
         } = (0, l.useMemo)(() => {
             let e = [],
                 i = null,
                 l = new Set();
             for (let i = 0; i < j.length; i++) {
                 let s = j[i],
-                    a = 3 === i && t.length > 4;
+                    a = i === v - 1 && t.length > v;
                 (0, c.L)(s)
                     ? (l.add(s.skuProductLine),
                       e.push(
-                          (0, p.M)(s, {
+                          (0, g.M)(s, {
                               index: i,
-                              moreCount: a ? t.length - 4 + 1 : void 0,
+                              moreCount: a ? t.length - v + 1 : void 0,
                               profileOwner: n,
-                              analyticsLocations: S,
-                              onViewWishlist: f,
+                              analyticsLocations: N,
+                              onViewWishlist: C,
                               wishlistId: E,
-                              showTypeTooltip: v,
-                              cardSize: C,
+                              showTypeTooltip: R,
+                              cardSize: I,
                           }),
                       ))
                     : (0, u.$)(s) &&
@@ -68,63 +69,72 @@ function f(e) {
                       e.push(
                           (0, o.Z)(s, {
                               index: i,
-                              moreCount: a ? t.length - 4 + 1 : void 0,
+                              moreCount: a ? t.length - v + 1 : void 0,
                               profileOwner: n,
-                              analyticsLocations: S,
-                              onViewWishlist: f,
+                              analyticsLocations: N,
+                              onViewWishlist: C,
                               wishlistId: E,
-                              showTypeTooltip: v,
-                              cardSize: C,
+                              showTypeTooltip: R,
+                              cardSize: I,
                           }),
                       ));
             }
             return 1 === j.length && (i = j[0]), { cards: e, singleItem: i, productLines: l };
-        }, [t, n, S, f, E, C, j, v]),
-        L = (0, g.A)({ wishlistId: E ?? null, onAction: T, productLines: O }),
-        D = (0, l.useMemo)(
+        }, [t, n, N, C, E, I, j, R, v]),
+        D = (0, p.A)({ wishlistId: E ?? null, onAction: y, productLines: M }),
+        G = (0, l.useMemo)(
             () =>
-                N
-                    ? j.map((e, l) =>
+                T
+                    ? j.map((e, t) =>
                           null == e.sku
                               ? null
                               : (0, i.jsx)(
-                                    h.Ay,
+                                    h.A,
                                     {
                                         sku: e.sku,
-                                        index: l,
-                                        totalUnownedWishlistItems: t.length,
+                                        index: t,
                                         wishlistOwner: n,
                                         wishlistId: E,
-                                        analyticsLocations: S,
-                                        onViewWishlist: f,
-                                        showTypeTooltip: v,
+                                        analyticsLocations: N,
+                                        onViewWishlist: C,
+                                        showTypeTooltip: R,
                                     },
                                     e.skuId,
                                 ),
                       )
                     : null,
-            [S, N, f, n, v, t.length, j, E],
+            [N, T, C, n, R, j, E],
         );
-    if (0 === y.length) return null;
-    let M = y;
+    if (0 === O.length) return null;
+    let U = O;
     return (
-        null != R &&
-            ((0, c.L)(R)
-                ? (M = (0, p.z)(R, { profileOwner: n, analyticsLocations: S, wishlistId: E, onViewWishlist: f }))
-                : (0, u.$)(R) &&
-                  (M = (0, o.A)(R, { profileOwner: n, analyticsLocations: S, wishlistId: E, onViewWishlist: f }))),
+        null != L &&
+            ((0, c.L)(L)
+                ? (U = (0, g.z)(L, { profileOwner: n, analyticsLocations: N, wishlistId: E, onViewWishlist: C }))
+                : (0, u.$)(L) &&
+                  (U = (0, o.A)(L, { profileOwner: n, analyticsLocations: N, wishlistId: E, onViewWishlist: C }))),
         (0, i.jsxs)(m.A.Overlay, {
-            ref: L,
+            ref: D,
             className: x.kL,
             children: [
-                (0, i.jsx)("div", {
-                    className: x.wx,
-                    children: (0, i.jsx)(s.Text, {
-                        variant: "text-sm/medium",
-                        children: I ?? _.intl.string(_.t["7lZ31J"]),
-                    }),
-                }),
-                (0, i.jsx)("div", { className: x.vY, children: N ? D : M }),
+                T
+                    ? (0, i.jsxs)("div", {
+                          className: x.wx,
+                          children: [
+                              (0, i.jsx)(s.Text, {
+                                  variant: "text-xs/medium",
+                                  children: b ?? f.intl.string(f.t["7lZ31J"]),
+                              }),
+                              (0, i.jsx)(s.QWc, {
+                                  variant: "secondary",
+                                  textVariant: "text-xs/medium",
+                                  onClick: C,
+                                  text: f.intl.string(f.t.y6PSA3),
+                              }),
+                          ],
+                      })
+                    : (0, i.jsx)(s.Text, { variant: "text-sm/medium", children: b ?? f.intl.string(f.t["7lZ31J"]) }),
+                (0, i.jsx)("div", { className: x.vY, children: T ? G : U }),
             ],
         })
     );
