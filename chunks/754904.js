@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { s: () => s });
+n.d(t, { s: () => a });
 var r = n(627968);
 n(64700);
 var i = n(996682),
-    a = n(27989);
-let s = (e) => {
-    let { size: t = "md", width: n, height: s, ...o } = e,
-        l = (0, a.J)(t),
+    s = n(27989);
+let a = (e) => {
+    let { size: t = "md", width: n, height: a, ...o } = e,
+        l = (0, s.J)(t),
         u = l?.width ?? n,
-        c = l?.height ?? s;
+        c = l?.height ?? a;
     return (0, r.jsxs)("svg", {
         ...(0, i.A)(o),
         xmlns: "http://www.w3.org/2000/svg",
@@ -63,7 +63,7 @@ let s = (e) => {
             (0, r.jsx)("defs", {
                 children: (0, r.jsx)("clipPath", {
                     id: "a",
-                    children: (0, r.jsx)("path", { fill: "#fff", d: "M2 5.3h19.97v13.9H2z" }),
+                    children: (0, r.jsx)("path", { fill: "#fff", d: "M2 9h20v7H2z" }),
                 }),
             }),
         ],
