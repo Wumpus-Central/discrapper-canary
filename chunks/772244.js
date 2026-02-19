@@ -10,6 +10,7 @@ function s() {
         }, [t]),
     };
 }
+n(272111);
 let l = () => {
     let e = document.body.style.getPropertyValue("--custom-guild-sidebar-width").slice(0, -2);
     return parseInt("" !== e ? e : "375");
@@ -26,7 +27,7 @@ function r() {
                     return (
                         e.observe(document.body, { attributes: !0, attributeFilter: ["style"] }), () => e.disconnect()
                     );
-                }, [270]),
+                }, []),
                 e
             );
         })(),

@@ -3,7 +3,7 @@ var a = n(627968),
     i = n(64700),
     s = n(503698),
     l = n.n(s),
-    r = n(522160),
+    r = n(475539),
     o = n(341915),
     d = n(890687),
     c = n(398025),
@@ -18,23 +18,23 @@ var a = n(627968),
 let b = i.forwardRef(function (e, t) {
     let { className: n, overlayRef: s } = e,
         { expansionSpring: b } = i.useContext(u.PW),
-        { quest: v, taskDetails: j, isExpanded: A, isExpansionAnimationComplete: C } = i.useContext(x.T),
+        { quest: v, taskDetails: j, isExpanded: C, isExpansionAnimationComplete: A } = i.useContext(x.T),
         T = v.userStatus?.completedAt != null,
-        S = (0, d.I3)(v),
-        y = i.useRef(null),
+        y = (0, d.I3)(v),
+        S = i.useRef(null),
         E = v.userStatus?.enrolledAt != null,
-        N = null != S ? S.percentComplete : j.percentComplete,
+        N = null != y ? y.percentComplete : j.percentComplete,
         [I, k] = i.useState(!1);
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            T && (0, a.jsx)(h.A, { overlayRef: s, progressBarRef: y, isHovered: I }),
+            T && (0, a.jsx)(h.A, { overlayRef: s, progressBarRef: S, isHovered: I }),
             (0, a.jsx)(r.animated.div, {
                 ref: t,
-                "aria-hidden": A && C,
-                className: l()(n, f.hR, { [f.Ag]: A, [f.s]: E }),
+                "aria-hidden": C && A,
+                className: l()(n, f.hR, { [f.Ag]: C, [f.s]: E }),
                 style: {
                     opacity: (0, c.a)(b.to({ range: [0, 1], output: [1, 0] })),
-                    backgroundImage: T ? `linear-gradient(90deg, ${_.V}, ${_.u})` : void 0,
+                    backgroundImage: T ? `linear-gradient(90deg, ${_.V1}, ${_.us})` : void 0,
                 },
                 onMouseEnter: () => k(!0),
                 onMouseLeave: () => k(!1),
@@ -48,7 +48,7 @@ let b = i.forwardRef(function (e, t) {
                         E
                             ? (0, a.jsx)(p.A, {
                                   contentLocation: "collapsed",
-                                  progressBarRef: y,
+                                  progressBarRef: S,
                                   isExpanded: !1,
                                   percentComplete: N,
                               })

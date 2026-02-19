@@ -3,7 +3,7 @@ var a = n(627968),
     i = n(64700),
     s = n(503698),
     l = n.n(s),
-    r = n(522160),
+    r = n(475539),
     o = n(889137),
     d = n(311907),
     c = n(827734),
@@ -18,11 +18,11 @@ var a = n(627968),
     b = n(341915),
     v = n(405670),
     j = n(33621),
-    A = n(714510),
-    C = n(890687),
+    C = n(714510),
+    A = n(890687),
     T = n(579473),
-    S = n(590202),
-    y = n(901406),
+    y = n(590202),
+    S = n(901406),
     E = n(792620),
     N = n(814793),
     I = n(241124),
@@ -33,8 +33,8 @@ var a = n(627968),
     D = n(545986),
     M = n(568329),
     P = n(207869),
-    U = n(158265),
-    L = n(933378),
+    L = n(158265),
+    U = n(933378),
     B = n(783569),
     G = n(963713),
     F = n(883035),
@@ -131,22 +131,22 @@ function X(e) {
     let { preferImageHeroAsset: t, isInteractable: n, containerRef: s, onAcceptQuest: o } = e,
         { quest: c, onGameSheetOpen: x, onGameSheetClose: p, taskDetails: _ } = i.useContext(G.T),
         { expansionSpring: v } = i.useContext(M.PW),
-        C = i.useRef(null),
-        S = (0, d.bG)([f.A], () => f.A.isEnrolling(c.id), [c]),
-        y = i.useMemo(() => (0, T.tW)(c, t ? T.fY.QUEST_BAR_HERO_IMAGE : T.fY.QUEST_BAR_HERO), [c, t]),
-        E = (0, A.NA)({ quest: c }),
+        A = i.useRef(null),
+        y = (0, d.bG)([f.A], () => f.A.isEnrolling(c.id), [c]),
+        S = i.useMemo(() => (0, T.tW)(c, t ? T.fY.QUEST_BAR_HERO_IMAGE : T.fY.QUEST_BAR_HERO), [c, t]),
+        E = (0, C.NA)({ quest: c }),
         N = i.useMemo(() => (0, T.tW)(c, T.fY.HERO_IMAGE), [c]),
         O = i.useMemo(() => (null == N ? {} : { backgroundImage: `url(${N.url})` }), [N]),
         P = (0, h.Ay)(),
-        U = (0, u.Mw)(P),
-        L = j.t.useConfig({ location: K.rE.QUESTS_BAR }),
-        B = (0, A.mU)({
+        L = (0, u.Mw)(P),
+        U = j.t.useConfig({ location: K.rE.QUESTS_BAR }),
+        B = (0, C.mU)({
             quest: c,
             location: K.rE.QUESTS_BAR,
             questContent: b.uF.QUEST_BAR_V2,
             taskDetails: _,
             sourceQuestContent: b.uF.QUEST_BAR_V2,
-            popoutTargetElementRef: C,
+            popoutTargetElementRef: A,
             onGameSheetOpened: x,
             onGameSheetClosed: p,
             gameProfileSource: g.Ob.QuestBar,
@@ -155,7 +155,7 @@ function X(e) {
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)("div", {
-                ref: C,
+                ref: A,
                 children: (0, a.jsxs)("div", {
                     className: q.do,
                     ref: s,
@@ -176,7 +176,7 @@ function X(e) {
                         (0, a.jsx)("div", {
                             className: q.lO,
                             children:
-                                L.enabled && F === R.UA.UNENROLLED && L.enabledQuestStates.has(R.UA.UNENROLLED)
+                                U.enabled && F === R.UA.UNENROLLED && U.enabledQuestStates.has(R.UA.UNENROLLED)
                                     ? (0, a.jsx)(k.A, {
                                           quest: c,
                                           surface: R.V3.QUEST_BAR_FOOTER,
@@ -187,7 +187,7 @@ function X(e) {
                                     : (0, a.jsx)(m.Button, {
                                           variant: "primary",
                                           onClick: n ? o : void 0,
-                                          loading: S,
+                                          loading: y,
                                           text: E,
                                           size: "sm",
                                           icon: (0, D.Oz)(c),
@@ -210,16 +210,16 @@ function X(e) {
                     filter: (0, w.Q)(v.to([0, 1], [0.8, 1]).to((e) => `brightness(${e})`)),
                 },
                 children: [
-                    y.isAnimated
+                    S.isAnimated
                         ? (0, a.jsx)(I.Sn, {
                               id: "QuestBarContentExpanded_heroAnimated",
-                              children: (e) => (0, a.jsx)(Q, { ref: e, autoPlay: !0, asset: y, className: q.LO }),
+                              children: (e) => (0, a.jsx)(Q, { ref: e, autoPlay: !0, asset: S, className: q.LO }),
                           })
                         : (0, a.jsx)(I.Sn, {
                               id: "QuestBarContentExpanded_heroStatic",
-                              children: (e) => (0, a.jsx)("img", { ref: e, alt: "", className: q.LO, src: y.url }),
+                              children: (e) => (0, a.jsx)("img", { ref: e, alt: "", className: q.LO, src: S.url }),
                           }),
-                    (0, a.jsx)("div", { className: l()(q.tV, { [q.tt]: U }) }),
+                    (0, a.jsx)("div", { className: l()(q.tV, { [q.tt]: L }) }),
                 ],
             }),
         ],
@@ -231,28 +231,28 @@ function Z(e) {
         { expansionSpring: c } = i.useContext(M.PW),
         u = s.userStatus?.completedAt != null,
         m = d.percentComplete > 0,
-        h = (0, C.Vn)(s),
-        [x, p, g] = (0, C.Qo)(s, d),
+        h = (0, A.Vn)(s),
+        [x, p, g] = (0, A.Qo)(s, d),
         _ = i.useRef(null),
         f = i.useRef(null),
-        v = (0, C.RR)({ quest: s }),
+        v = (0, A.RR)({ quest: s }),
         j = (0, E.vv)(s),
-        A = (0, C.I3)(s),
+        C = (0, A.I3)(s),
         T = i.useCallback(() => {
             (0, D.d5)({
                 quest: s,
                 questContent: b.uF.QUEST_BAR_V2,
                 sourceQuestContent: b.uF.QUEST_BAR_V2,
-                sourceQuestContentCTA: S.Cy.QUEST_BAR_VIDEO_QUEST_PREVIEW,
+                sourceQuestContentCTA: y.Cy.QUEST_BAR_VIDEO_QUEST_PREVIEW,
             });
         }, [s]),
-        N = null != A ? A.percentComplete : d.percentComplete;
+        N = null != C ? C.percentComplete : d.percentComplete;
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(r.animated.div, {
                 className: l()(q.tv, q.ag),
                 style: {
-                    backgroundImage: `linear-gradient(90deg, ${z.V}, ${z.u})`,
+                    backgroundImage: `linear-gradient(90deg, ${z.V1}, ${z.us})`,
                     opacity: (0, w.a)(c.to({ range: [0, 1], output: [1, 0] })),
                 },
             }),
@@ -264,7 +264,7 @@ function Z(e) {
                 children: [
                     (0, a.jsx)(W.A, {}),
                     (0, a.jsx)("div", { className: q.yF }),
-                    (0, a.jsx)(U.A, { overlayRef: t, progressBarRef: _, isHovered: !1 }),
+                    (0, a.jsx)(L.A, { overlayRef: t, progressBarRef: _, isHovered: !1 }),
                     (0, a.jsx)(V.A, {
                         contentLocation: "expanded",
                         progressBarRef: _,
@@ -276,7 +276,7 @@ function Z(e) {
                     (0, a.jsx)(B.T, {
                         children:
                             !u &&
-                            !(0, y.W1)(s) &&
+                            !(0, S.W1)(s) &&
                             (0, o.YW)(x)
                                 .with(b.X0.SELECT, () =>
                                     (0, a.jsx)(H.A, {
@@ -285,7 +285,7 @@ function Z(e) {
                                     }),
                                 )
                                 .with(b.X0.DESKTOP, () => (0, a.jsx)(F.A, { quest: s }))
-                                .with(b.X0.CONSOLE, () => (0, a.jsx)(L.A, { quest: s, taskDetails: d }))
+                                .with(b.X0.CONSOLE, () => (0, a.jsx)(U.A, { quest: s, taskDetails: d }))
                                 .exhaustive(),
                     }),
                     (0, a.jsxs)(B.T, {
@@ -306,7 +306,7 @@ function Z(e) {
             }),
             (0, a.jsx)("div", {
                 className: l()(q.tv, q.Sx),
-                style: { backgroundImage: `linear-gradient(90deg, ${z.V}, ${z.u})` },
+                style: { backgroundImage: `linear-gradient(90deg, ${z.V1}, ${z.us})` },
             }),
         ],
     });
@@ -322,10 +322,10 @@ let et = i.forwardRef(function (e, t) {
     let { children: n, className: s, overlayRef: o, isUnfurl: d } = e,
         { collapsedHeight: c, isExpanded: u, isExpansionAnimationComplete: m, quest: h } = i.useContext(G.T),
         { expansionSpring: x } = i.useContext(M.PW),
-        { launchInGameActivity: p } = (0, C.zW)(h),
+        { launchInGameActivity: p } = (0, A.zW)(h),
         g = (0, N.vA)(h),
         _ = i.useCallback(async () => {
-            let e = g ? S.Cy.START_QUEST : S.Cy.ACCEPT_QUEST;
+            let e = g ? y.Cy.START_QUEST : y.Cy.ACCEPT_QUEST;
             await ee(h, b.uF.QUEST_BAR_V2, e, b.uF.QUEST_BAR_V2), g && p();
         }, [h, p, g]),
         f = h.userStatus?.enrolledAt != null,

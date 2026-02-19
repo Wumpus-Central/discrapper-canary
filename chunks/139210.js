@@ -3,7 +3,7 @@ var a = n(627968),
     i = n(64700),
     s = n(503698),
     l = n.n(s),
-    r = n(522160),
+    r = n(475539),
     o = n(397927),
     d = n(341915),
     c = n(590202),
@@ -16,17 +16,18 @@ var a = n(627968),
     _ = n(568329),
     f = n(963713),
     b = n(223352),
-    v = n(152515),
-    j = n(985018),
-    A = n(116224);
-let C = (0, r.animated)(x.Ay),
+    v = n(152515);
+n(272111);
+var j = n(985018),
+    C = n(116224);
+let A = (0, r.animated)(x.Ay),
     T = (e) => {
         let { withUnfurlTimeout: t, unfurlTimeoutDurationInMilliseconds: n, onUnfurlTimeoutComplete: s } = e,
             x = (0, u.go)(),
             { expansionSpring: T } = i.useContext(_.PW),
             {
-                onCtxMenuOpen: S,
-                onCtxMenuClose: y,
+                onCtxMenuOpen: y,
+                onCtxMenuClose: S,
                 onCtxMenuSelect: E,
                 isExpanded: N,
                 isExpansionAnimationComplete: I,
@@ -50,11 +51,11 @@ let C = (0, r.animated)(x.Ay),
             w = N && I,
             D = (0, a.jsx)(o.DUT, {
                 onClick: O,
-                className: l()(A.vk, { [A.wm]: w }),
-                children: (0, a.jsx)(C, {
+                className: l()(C.vk, { [C.wm]: w }),
+                children: (0, a.jsx)(A, {
                     quest: k,
                     withGameTile: !1,
-                    logotypeClassName: A.Iu,
+                    logotypeClassName: C.Iu,
                     logotypeStyle: {
                         height: 24,
                         maxWidth: 92,
@@ -63,20 +64,20 @@ let C = (0, r.animated)(x.Ay),
                 }),
             });
         return (0, a.jsxs)(r.animated.div, {
-            className: l()(A.iE, A.Ht, { [A.tT]: w }),
+            className: l()(C.iE, C.Ht, { [C.tT]: w }),
             style: { transform: (0, r.to)([T.to({ range: [0, 1], output: [6, 0] })], (e) => `translateY(${e}px)`) },
             children: [
                 (0, a.jsx)(r.animated.div, {
-                    className: A.Tu,
+                    className: C.Tu,
                     style: { opacity: (0, p.a)(T.to({ range: [0, 1], output: [0, 1] })) },
                 }),
                 (0, a.jsx)(b.A, { isFullyExpanded: w, partnerBranding: D }),
                 (0, a.jsxs)(r.animated.div, {
-                    className: A.P0,
+                    className: C.P0,
                     style: { opacity: (0, p.a)(T.to({ range: [0, 1], output: [0, 1] })) },
                     children: [
                         (0, a.jsxs)(o.DUT, {
-                            className: A.y8,
+                            className: C.y8,
                             onClick: R,
                             children: [
                                 (0, a.jsx)(o.Text, {
@@ -84,17 +85,17 @@ let C = (0, r.animated)(x.Ay),
                                     variant: "text-xs/normal",
                                     children: j.intl.string(j.t.o6FLcF),
                                 }),
-                                (0, a.jsx)(o.cBN, { color: o.LU0.colors.WHITE, className: A.P$ }),
+                                (0, a.jsx)(o.cBN, { color: o.LU0.colors.WHITE, className: C.P$ }),
                             ],
                         }),
                         t
                             ? (0, a.jsx)("div", {
-                                  className: A.uJ,
+                                  className: C.uJ,
                                   children: (0, a.jsx)(v.n, { timeoutDurationInMilliseconds: n, onTimeoutComplete: s }),
                               })
                             : (0, a.jsx)(h.C, {
-                                  onOpen: S,
-                                  onClose: y,
+                                  onOpen: y,
+                                  onClose: S,
                                   onSelect: E,
                                   questContent: d.uF.QUEST_BAR_V2,
                                   quest: k,
@@ -104,12 +105,12 @@ let C = (0, r.animated)(x.Ay),
                                   children: (e) =>
                                       (0, a.jsx)(o.DUT, {
                                           ...e,
-                                          className: l()(A.uJ, A.rb),
+                                          className: l()(C.uJ, C.rb),
                                           "aria-label": j.intl.string(j.t.DEoVWZ),
                                           children: (0, a.jsx)(o.jNK, {
                                               size: "md",
                                               color: "currentColor",
-                                              className: l()(A.Bx, A.ON),
+                                              className: l()(C.Bx, C.ON),
                                           }),
                                       }),
                               }),

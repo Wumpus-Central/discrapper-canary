@@ -1,7 +1,7 @@
 n.d(t, { w: () => o });
 var a = n(64700),
-    s = n(311907),
-    i = n(397927),
+    i = n(311907),
+    s = n(397927),
     l = n(775602),
     r = n(654487);
 function o(e) {
@@ -15,38 +15,38 @@ function o(e) {
         } = e,
         m = d && !t && !c,
         [h, x] = a.useState(m ? "unfurledWithTimeout" : "none"),
-        p = (0, s.bG)([l.A], () => l.A.useReducedMotion),
-        [g, f] = a.useState(m),
-        [_, v] = a.useState(!g),
-        [b, j] = a.useState(!0),
-        A = a.useRef(o),
-        C = a.useCallback(
+        p = (0, i.bG)([l.A], () => l.A.useReducedMotion),
+        [g, _] = a.useState(m),
+        [f, b] = a.useState(!g),
+        [v, j] = a.useState(!0),
+        C = a.useRef(o),
+        A = a.useCallback(
             (e) => {
-                n || (v(!1), f(e));
+                n || (b(!1), _(e));
             },
             [n],
         ),
-        S = a.useCallback(() => {
-            C(!0);
-        }, [C]),
         T = a.useCallback(() => {
-            C(!1);
-        }, [C]),
-        y = t ? r.ZV : r.Ko,
-        [{ expansionSpring: N }, E] = (0, i.zhh)(() => ({
+            A(!0);
+        }, [A]),
+        y = a.useCallback(() => {
+            A(!1);
+        }, [A]),
+        S = t ? r.ZV : r.Ko,
+        [{ expansionSpring: E }, N] = (0, s.zhh)(() => ({
             from: { expansionSpring: 0 },
-            config: y,
+            config: S,
             onRest: (e) => {
-                v(!0), 0 === e.value && x("none");
+                b(!0), 0 === e.value && x("none");
             },
             onStart: () => {
-                v(!1);
+                b(!1);
             },
         }));
     a.useEffect(() => {
-        E({ expansionSpring: +!!g, immediate: p });
-    }, [g, E, p]);
-    let { visibilitySpring: I } = (0, i.zhh)({
+        N({ expansionSpring: +!!g, immediate: p });
+    }, [g, N, p]);
+    let { visibilitySpring: I } = (0, s.zhh)({
         from: { visibilitySpring: 0 },
         to: { visibilitySpring: +!!o },
         config: { tension: 250, friction: 10, clamp: !0 },
@@ -58,27 +58,28 @@ function o(e) {
         },
     });
     a.useLayoutEffect(() => {
-        o !== A.current && j(!1), (A.current = o);
+        o !== C.current && j(!1), (C.current = o);
     }, [o]);
     let k = a.useCallback(() => {
             "unfurledWithTimeout" === h && (x("unfurledWithTimeoutCanceled"), u());
         }, [u, h]),
         R = a.useCallback(() => {
-            C(!1), u();
-        }, [C, u]);
+            A(!1), u();
+        }, [A, u]);
     return {
         isExpanded: g,
-        setIsExpanded: C,
-        expandQuestBar: S,
-        collapseQuestBar: T,
-        isExpansionAnimationComplete: _,
-        isVisibilityAnimationAtRest: b,
-        expansionSpring: N,
+        setIsExpanded: A,
+        expandQuestBar: T,
+        collapseQuestBar: y,
+        isExpansionAnimationComplete: f,
+        isVisibilityAnimationAtRest: v,
+        expansionSpring: E,
         visibilitySpring: I,
-        springConfig: y,
+        springConfig: S,
         onQuestBarFocus: k,
         onUnfurlTimeoutComplete: R,
         isUnfurl: "none" !== h,
         isUnfurlTimeoutActive: "unfurledWithTimeout" === h,
     };
 }
+n(272111);

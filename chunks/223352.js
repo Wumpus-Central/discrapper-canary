@@ -3,7 +3,7 @@ var a = n(627968),
     i = n(64700),
     s = n(503698),
     l = n.n(s),
-    r = n(522160),
+    r = n(475539),
     o = n(311907),
     d = n(397927),
     c = n(775602),
@@ -12,8 +12,9 @@ var a = n(627968),
     h = n(398025),
     x = n(568329),
     p = n(963713),
-    g = n(772244),
-    _ = n(985018),
+    g = n(772244);
+n(272111);
+var _ = n(985018),
     f = n(355862);
 let b = (e) => {
     let { isFullyExpanded: t, partnerBranding: n } = e,
@@ -21,7 +22,7 @@ let b = (e) => {
         b = (0, o.bG)([c.A], () => c.A.useReducedMotion),
         { quest: v } = i.useContext(p.T),
         { expansionSpring: j } = i.useContext(x.PW),
-        A = s ? -4 : 6;
+        C = s ? -4 : 6;
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(r.animated.div, {
@@ -31,7 +32,7 @@ let b = (e) => {
                         [
                             j.to({ range: [0, 1], output: [0, 0] }),
                             j.to({ range: [0, 1], output: [0, 82] }),
-                            j.to({ range: [0, 1], output: [1, 64 / 48] }),
+                            j.to({ range: [0, 1], output: [1, 1.3333333333333333] }),
                         ],
                         (e, t, n) => `translate(${e}px, ${t}px) scale(${n})`,
                     ),
@@ -50,7 +51,7 @@ let b = (e) => {
                 className: l()(f.pm, { [f.nd]: s }),
                 style: {
                     transform: (0, r.to)(
-                        [j.to({ range: [0, 1], output: [0, -48] }), j.to({ range: [0, 1], output: [0, A] })],
+                        [j.to({ range: [0, 1], output: [0, -48] }), j.to({ range: [0, 1], output: [0, C] })],
                         (e, t) => `translate(${e}px, ${t}px)`,
                     ),
                 },
