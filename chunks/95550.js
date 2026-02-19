@@ -20,8 +20,8 @@ var i = n(627968),
     x = n(793574),
     S = n(58149),
     T = n(688810),
-    N = n(571694),
-    I = n(47167),
+    I = n(571694),
+    N = n(47167),
     v = n(915089),
     y = n(66442),
     b = n(279208),
@@ -58,7 +58,7 @@ var i = n(627968),
 let es = (0, v.Ld)(),
     ea = (e) => {
         let { channel: t, onClose: n } = e,
-            l = (0, I.Ay)(t) ?? "",
+            l = (0, N.Ay)(t) ?? "",
             s = (0, c.bG)([G.Ay], () => G.Ay.lastMessageId(t.id) ?? t.id);
         return (0, i.jsx)(u.DUT, {
             onClick: () => {
@@ -67,7 +67,7 @@ let es = (0, v.Ld)(),
             children: (0, i.jsxs)("div", {
                 className: el.us,
                 children: [
-                    (0, i.jsx)(u.euF, { src: (0, N.Y)(t), size: u._3J.SIZE_24, "aria-label": l }),
+                    (0, i.jsx)(u.euF, { src: (0, I.Y)(t), size: u._3J.SIZE_24, "aria-label": l }),
                     (0, i.jsx)("span", { className: el.J2, children: l }),
                     (0, i.jsx)("span", { className: el.Pd, children: r()(q.default.extractTimestamp(s)).fromNow() }),
                 ],
@@ -371,7 +371,8 @@ class eo extends l.PureComponent {
             isGdmCopyExperimentEnabled: o,
         } = this.props;
         if (this.isNotFriends() || this.isPartyFull() || (!l && !t) || (l && !t && !a)) return;
-        if (l && null == r && a && 0 === n.length && "" === e)
+        let c = l ? (s[k.A.FRIENDS]?.length ?? 0) + (s[k.A.GUILD_MEMBERS]?.length ?? 0) : n.length;
+        if (l && null == r && a && 0 === c && "" === e)
             return {
                 sections: [1],
                 sectionHeight: 0,
@@ -394,7 +395,7 @@ class eo extends l.PureComponent {
                         ],
                     }),
             };
-        if (0 === n.length)
+        if (0 === c)
             return {
                 sections: [1],
                 sectionHeight: 0,
@@ -413,7 +414,7 @@ class eo extends l.PureComponent {
                         }),
                     }),
             };
-        let c = {
+        let d = {
             ref: this.scrollerRef,
             className: el.XG,
             innerClassName: el.bv,
@@ -435,14 +436,14 @@ class eo extends l.PureComponent {
                   rowHeight: this.getImprovedDMRowHeight,
                   renderSection: this.renderImprovedDMSection,
                   sectionHeight: this.getImprovedDMSectionHeight,
-                  ...c,
+                  ...d,
               }
             : {
                   sections: [n.length],
                   rowHeight: this.getRowHeight,
                   renderSection: this.renderSection,
                   sectionHeight: 0,
-                  ...c,
+                  ...d,
               };
     }
     getRowHeight = (e, t) => {
@@ -520,7 +521,7 @@ class eo extends l.PureComponent {
                     onMessageClick: this.handleMessageClick,
                     onMouseEnter: this.focusResult,
                     "aria-posinset": l + 1,
-                    "aria-setsize": r.length,
+                    "aria-setsize": s ? a[n].length : r.length,
                     disabledTooltipText: t,
                     inImprovedDMExperiment: s,
                     handleTrackAction: this.handleTrackUserRowInteraction,
@@ -842,7 +843,7 @@ class eo extends l.PureComponent {
 function ec(e) {
     let { selectedUsers: t, channelName: n, previewIcon: l, onIconChange: s, onIconRemove: a, onChange: r } = e,
         { analyticsLocations: o } = (0, T.Ay)(x.A.NEW_GROUP_DM_INVITE_MODAL),
-        c = (0, I.Jo)(Array.from(t), B.default, F.A);
+        c = (0, N.Jo)(Array.from(t), B.default, F.A);
     return (0, i.jsxs)("div", {
         className: el.zj,
         children: [
