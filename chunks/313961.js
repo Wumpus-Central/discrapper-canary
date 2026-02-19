@@ -303,10 +303,10 @@ function eb(e) {
     return j((e) => e.updateParticipantQuality(n, r, i), [t]);
 }
 function eR(e) {
-    let { channelId: t, guildId: n, ringing: r } = e;
+    let { channelId: t, guildId: n, ongoingRings: r } = e;
     if (!f.A.getCurrentConfig({ guildId: n, location: "guild_ring_start" }).enabled) return !1;
     let i = V(t);
-    return r.forEach((e) => i.updateGuildRingingUsers(e, !0)), j((e) => e.rebuild(), [t]);
+    return Object.keys(r).forEach((e) => i.updateGuildRingingUsers(e, !0)), j((e) => e.rebuild(), [t]);
 }
 function eO(e) {
     let { channelId: t, guildId: n, ringing: r } = e;

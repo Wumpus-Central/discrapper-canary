@@ -215,9 +215,9 @@ function ex() {
     return i;
 }
 function eS(e) {
-    let { channelId: t, ringing: n } = e,
+    let { channelId: t, ongoingRings: n } = e,
         i = ef(t);
-    if (!n.includes(E.default.getId())) return eg(i);
+    if (!Object.keys(n).includes(E.default.getId())) return eg(i);
     if (null != i) return !1;
     let l = x.A.getChannel(t);
     if (

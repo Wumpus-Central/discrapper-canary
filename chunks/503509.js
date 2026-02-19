@@ -1,9 +1,9 @@
 "use strict";
 let r;
-n.d(t, { A: () => M });
+n.d(t, { A: () => P });
 var i = n(311907),
-    a = n(506774),
-    s = n(73153),
+    s = n(506774),
+    a = n(73153),
     o = n(313961),
     l = n(253932),
     u = n(617617),
@@ -14,40 +14,41 @@ var i = n(311907),
     p = n(531685),
     h = n(652215);
 let m = "IncomingCallStore",
-    g = 232,
-    E = 315,
+    E = 232,
+    g = 315,
     A = 10,
     I = new Set(),
     T = [],
-    y = new Map(),
-    S = new Set(),
+    S = new Map(),
+    y = new Set(),
     v = !1;
-function C() {
+function N() {
     let e = p.A.windowSize();
-    return null != r && r.x + g < e.width && r.y + E < e.height
+    return null != r && r.x + E < e.width && r.y + g < e.height
         ? r
-        : { x: e.width / 2 - g / 2, y: e.height / 2 - E / 2 };
+        : { x: e.width / 2 - E / 2, y: e.height / 2 - g / 2 };
+}
+function C(e) {
+    if (null == e || null == S.get(e)) return !1;
+    S.delete(e), (y = new Set(y)).delete(e);
 }
 function b(e) {
-    if (null == e || null == y.get(e)) return !1;
-    y.delete(e), (S = new Set(S)).delete(e);
-}
-function N(e) {
-    let { channelId: t, ringing: n } = e;
+    let { channelId: t, ongoingRings: n } = e;
     if (
         "GUILD_RING_START" === e.type &&
         !c.A.getCurrentConfig({ guildId: e.guildId, location: "IncomingCallCreate" }).enabled
     )
         return !1;
-    let r = n.includes(d.default.getId());
-    if (!S.has(t) && r) {
+    let r = d.default.getId(),
+        i = r in n && null != n[r];
+    if (!y.has(t) && i) {
         let e = _.A.getChannel(t);
         if (null == e) return !1;
-        let n = A * S.size,
-            { x: r, y: i } = C();
-        return y.set(t, { channel: e, x: r + n, y: i + n }), void (S = new Set(S)).add(t);
+        let i = A * y.size,
+            { x: s, y: a } = N();
+        return S.set(t, { channel: e, senderId: n[r], x: s + i, y: a + i }), void (y = new Set(y)).add(t);
     }
-    return !!S.has(t) && !r && b(t);
+    return !!y.has(t) && !i && C(t);
 }
 function R(e) {
     let { channelId: t } = e;
@@ -55,32 +56,32 @@ function R(e) {
         ("GUILD_RING_STOP" !== e.type ||
             (!!c.A.getCurrentConfig({ guildId: e.guildId, location: "IncomingCallDelete" }).enabled &&
                 !!e.ringing.includes(d.default.getId()))) &&
-        b(t)
+        C(t)
     );
 }
 function O(e) {
     let { channelId: t } = e;
-    return b(t);
+    return C(t);
 }
 function D(e) {
     let { x: t, y: n } = e;
-    return (r = { x: t, y: n }), a.w.set(m, r), !1;
+    return (r = { x: t, y: n }), s.w.set(m, r), !1;
 }
 function L(e) {
     let { channel: t } = e;
-    return b(t.id);
+    return C(t.id);
 }
 function w() {
     v = f.A.getStatus() === h.clD.DND || l.NO.getSetting();
 }
 function x() {
     let e = d.default.getId();
-    S.forEach((t) => {
+    y.forEach((t) => {
         let n = t;
-        null == _.A.getChannel(n)?.guild_id || o.A.getGuildRingingUsers(n).has(e) || b(n);
+        null == _.A.getChannel(n)?.guild_id || o.A.getGuildRingingUsers(n).has(e) || C(n);
     });
 }
-class P extends i.Ay.Store {
+class M extends i.Ay.Store {
     static displayName = "IncomingCallStore";
     initialize() {
         this.waitFor(d.default, o.A, _.A, f.A, u.A, p.A),
@@ -89,23 +90,23 @@ class P extends i.Ay.Store {
             this.syncWith([o.A], x);
     }
     getIncomingCalls() {
-        return v ? T : Array.from(y.values());
+        return v ? T : Array.from(S.values());
     }
     getIncomingCallChannelIds() {
-        return v ? I : S;
+        return v ? I : y;
     }
     getFirstIncomingCallId() {
-        return v ? null : S.values().next().value;
+        return v ? null : y.values().next().value;
     }
     hasIncomingCalls() {
-        return !v && S.size > 0;
+        return !v && y.size > 0;
     }
 }
-let M = new P(s.h, {
-    CALL_CREATE: N,
-    CALL_UPDATE: N,
+let P = new M(a.h, {
+    CALL_CREATE: b,
+    CALL_UPDATE: b,
     CALL_DELETE: R,
-    GUILD_RING_START: N,
+    GUILD_RING_START: b,
     GUILD_RING_STOP: R,
     VOICE_CHANNEL_SELECT: O,
     INCOMING_CALL_MOVE: D,

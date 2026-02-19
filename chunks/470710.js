@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => N });
+n.d(t, { A: () => b });
 var r = n(735438),
     i = n.n(r),
-    a = n(311907),
-    s = n(562465),
+    s = n(311907),
+    a = n(562465),
     o = n(73153),
     l = n(734057),
     u = n(309010),
@@ -30,10 +30,10 @@ function m(e) {
     let { callStoreInternalState: t } = e;
     (_ = { ...t.calls }), (f = { ...t.enqueuedRings });
 }
-function g() {
+function E() {
     (_ = {}), (f = {});
 }
-function E() {
+function g() {
     return p(!0);
 }
 function A(e) {
@@ -46,26 +46,33 @@ function I(e) {
     delete _[t.id];
 }
 function T(e) {
-    let { channelId: t, messageId: n, region: r, ringing: i } = e;
+    let { channelId: t, messageId: n, region: r, ongoingRings: i } = e;
     if (
-        ((_[t] = { channelId: t, messageId: n, region: r, ringing: i, unavailable: !1, regionUpdated: !1 }),
+        ((_[t] = {
+            channelId: t,
+            messageId: n,
+            region: r,
+            ringing: Object.keys(i),
+            unavailable: !1,
+            regionUpdated: !1,
+        }),
         null != f[t])
     ) {
         let e = f[t];
         delete f[t],
             1 !== e.indexOf("all") && (e = null),
-            s.Bo.post({ url: d.Rsh.CALL_RING(t), body: { recipients: e }, oldFormErrors: !0, rejectWithError: !0 });
+            a.Bo.post({ url: d.Rsh.CALL_RING(t), body: { recipients: e }, oldFormErrors: !0, rejectWithError: !0 });
     }
 }
-function y(e) {
+function S(e) {
     let { channelId: t, recipients: n } = e;
     f[t] = i().union(f[t] ?? [], n ?? ["all"]);
 }
-function S(e) {
-    let { channelId: t, messageId: n, region: r, ringing: i } = e,
-        a = _[t],
-        s = null != a && (a.regionUpdated || a.region !== r);
-    _[t] = { ..._[t], messageId: n, region: r, ringing: i, regionUpdated: s };
+function y(e) {
+    let { channelId: t, messageId: n, region: r, ongoingRings: i } = e,
+        s = _[t],
+        a = null != s && (s.regionUpdated || s.region !== r);
+    _[t] = { ..._[t], messageId: n, region: r, ringing: Object.keys(i), regionUpdated: a };
 }
 function v(e) {
     let { channelId: t, unavailable: n } = e,
@@ -75,11 +82,11 @@ function v(e) {
         : (_[t] = { channelId: t, ringing: [], messageId: null, region: null, regionUpdated: !1, unavailable: n }),
         null != f[t] && delete f[t];
 }
-function C(e) {
+function N(e) {
     let { channelId: t } = e;
     null == t && (f = {});
 }
-class b extends a.Ay.Store {
+class C extends s.Ay.Store {
     static displayName = "CallStore";
     initialize() {
         this.waitFor(l.A, u.A, c.A);
@@ -106,16 +113,16 @@ class b extends a.Ay.Store {
         return { calls: _, enqueuedRings: f };
     }
 }
-let N = new b(o.h, {
+let b = new C(o.h, {
     CONNECTION_OPEN: h,
-    CONNECTION_CLOSED: g,
+    CONNECTION_CLOSED: E,
     OVERLAY_INITIALIZE: m,
-    CONNECTION_RESUMED: E,
+    CONNECTION_RESUMED: g,
     CHANNEL_SELECT: A,
     CHANNEL_DELETE: I,
     CALL_CREATE: T,
-    CALL_UPDATE: S,
+    CALL_UPDATE: y,
     CALL_DELETE: v,
-    CALL_ENQUEUE_RING: y,
-    VOICE_CHANNEL_SELECT: C,
+    CALL_ENQUEUE_RING: S,
+    VOICE_CHANNEL_SELECT: N,
 });
