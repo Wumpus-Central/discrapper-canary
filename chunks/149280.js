@@ -1,21 +1,20 @@
-"use strict";
-n.d(t, { A: () => _ });
-var i = n(311907),
-    r = n(554146),
+n.d(i, { A: () => o });
+var t = n(311907),
+    l = n(554146),
     a = n(367727),
-    s = n(317525),
-    o = n(576705),
-    l = n(937161),
+    r = n(317525),
+    d = n(576705),
+    s = n(937161),
     c = n(652215);
-function _(e) {
-    let t = (0, i.bG)([o.A], () => o.A.can(c.xBc.ADMINISTRATOR, e)),
-        n = (0, i.bG)([s.A], () => null != e && s.A.getNumRoles(e.id) > 1),
-        { enabled: _ } = l.A.useExperiment({
+function o(e) {
+    let i = (0, t.bG)([d.A], () => d.A.can(c.xBc.ADMINISTRATOR, e)),
+        n = (0, t.bG)([r.A], () => null != e && r.A.getNumRoles(e.id) > 1),
+        { enabled: o } = s.A.useExperiment({
             guildId: e?.id,
             location: "useIsPermissionMigrationNotificationAvailable",
         }),
-        d = e?.features.has(c.GuildFeatures.PIN_PERMISSION_MIGRATION_COMPLETE) ?? !1,
-        u = e?.features.has(c.GuildFeatures.BYPASS_SLOWMODE_PERMISSION_MIGRATION_COMPLETE) ?? !1,
-        b = (0, a.cN)(r.M.GUILD_JOINT_PERMISSION_MIGRATION_NOTIFICATION, e?.id ?? c.dJq);
-    return n && t && (!d || !u) && !b && !_;
+        u = e?.features.has(c.GuildFeatures.PIN_PERMISSION_MIGRATION_COMPLETE) ?? !1,
+        g = e?.features.has(c.GuildFeatures.BYPASS_SLOWMODE_PERMISSION_MIGRATION_COMPLETE) ?? !1,
+        A = (0, a.cN)(l.M.GUILD_JOINT_PERMISSION_MIGRATION_NOTIFICATION, e?.id ?? c.dJq);
+    return n && i && (!u || !g) && !A && !o;
 }
