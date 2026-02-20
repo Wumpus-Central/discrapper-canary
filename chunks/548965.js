@@ -141,4 +141,5 @@ class E extends u {
     }
 }
 new m("2026-01-android-rmle", "Android Pull Mode Rendering"),
-    new E("2026-02-android-fresco-cache", "Android Fresco Cache");
+    new E("2026-02-android-fresco-cache", "Android Fresco Cache"),
+    new c("2026-02-android-chat-mosaic-shared-pool", "Android Chat Mosaic Shared Pool");
