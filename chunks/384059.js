@@ -2,8 +2,8 @@
 n.d(t, { O: () => o, X: () => l });
 var r = n(734057),
     i = n(383501),
-    a = n(954571),
-    s = n(652215),
+    s = n(954571),
+    a = n(652215),
     o = (function (e) {
         return (
             (e.MIC = "Mic"),
@@ -18,6 +18,7 @@ var r = n(734057),
             (e.LEAVE_ACTIVITY = "Leave Activity"),
             (e.STOP_WATCHING = "Stop Watching"),
             (e.POPOUT = "Popout"),
+            (e.POPOUT_RETURN = "Popout Return"),
             (e.STAY_ON_TOP = "Stay On Top"),
             (e.FULL_SCREEN = "Full Screen"),
             (e.JOIN_CALL = "Join Call"),
@@ -48,7 +49,7 @@ function l(e, t, n) {
     let o = i.A.getChannelId(),
         l = i.A.getGuildId(),
         u = r.A.getChannel(o)?.type;
-    a.default.track(s.HAw.CALL_BUTTON_CLICKED, {
+    s.default.track(a.HAw.CALL_BUTTON_CLICKED, {
         location: e,
         button_name: t,
         toggled_active: n,
