@@ -185,7 +185,7 @@ function ee(e) {
                     className: a()({ [Q.E4]: em }),
                     shouldUseUnifiedCheckoutUI: ec,
                 }),
-                eG,
+                ec ? eG : null,
             ],
         }),
         eV = (0, r.jsx)(V.A, {
