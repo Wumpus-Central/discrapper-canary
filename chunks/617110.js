@@ -7,7 +7,7 @@ var n = i(311907),
     u = i(985018);
 let o = (0, r.Hn)(a.X.ROLE_STYLE, {
         useTitle: () => u.intl.string(u.t.uSOPWm),
-        useSubtitle: () => u.intl.string(u.t["86hjzQ"]),
+        useSubtitle: () => u.intl.string(u.t.u7fFKS),
         useOptions: () => [
             { id: "username", label: u.intl.string(u.t.eDdMzJ), value: "username" },
             { id: "dot", label: u.intl.string(u.t.rdmJp0), value: "dot" },

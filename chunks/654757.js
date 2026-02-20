@@ -12,6 +12,8 @@ var n = i(419954),
     S = i(985018);
 let E = (0, n.zZ)(s.X.MOTION_CATEGORY, {
     useTitle: () => S.intl.string(S.t.e3TR1b),
-    useSubtitle: () => S.intl.format(S.t["2l9U2j"], { helpdeskArticle: l.A.getArticleURL(T.MVz.REDUCED_MOTION) }),
+    useSubtitle: (0, r.Ci)("Motion")
+        ? void 0
+        : () => S.intl.format(S.t["2l9U2j"], { helpdeskArticle: l.A.getArticleURL(T.MVz.REDUCED_MOTION) }),
     buildLayout: () => ((0, r.Ci)("Motion") ? [d.z, A.W, u.R, a.b, o.S] : [A.W, d.z, u.R, a.b, o.S]),
 });
