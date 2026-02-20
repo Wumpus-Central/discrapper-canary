@@ -2,8 +2,8 @@
 n.d(t, { A: () => o }), n(938796);
 var r = n(665260),
     i = n(315069),
-    a = n(852218),
-    s = n(788868);
+    s = n(852218),
+    a = n(788868);
 class o extends i.A {
     id;
     trialId;
@@ -21,6 +21,8 @@ class o extends i.A {
     flags;
     inboundRestrictedCountries;
     outboundRestrictedCountries;
+    allowedCountries;
+    countryListMode;
     promotionType;
     partnerId;
     marketingComponents;
@@ -44,6 +46,8 @@ class o extends i.A {
             flags: e.flags,
             inboundRestrictedCountries: e.inbound_restricted_countries,
             outboundRestrictedCountries: e.outbound_restricted_countries,
+            allowedCountries: e.allowed_countries ?? [],
+            countryListMode: e.country_list_mode ?? s.qn.BLOCKLIST,
             promotionType: e.promotion_type,
             partnerId: e.partner_id ?? null,
             marketingComponents: e.marketing_components ?? [],
@@ -68,32 +72,35 @@ class o extends i.A {
             (this.flags = e.flags ?? 0),
             (this.inboundRestrictedCountries = e.inboundRestrictedCountries ?? []),
             (this.outboundRestrictedCountries = e.outboundRestrictedCountries ?? []),
+            (this.allowedCountries = e.allowedCountries ?? []),
+            (this.countryListMode = e.countryListMode ?? s.qn.BLOCKLIST),
             (this.promotionType = e.promotionType),
             (this.partnerId = e.partnerId),
             (this.marketingComponents = e.marketingComponents),
             (this.rewardSkuIds = e.rewardSkuIds);
     }
     get isBogo() {
-        return this.promotionType === a.pt.BOGO;
+        return this.promotionType === s.pt.BOGO;
     }
     get isMarketingMoment() {
-        return this.promotionType === a.pt.MARKETING_MOMENT;
+        return this.promotionType === s.pt.MARKETING_MOMENT;
     }
     hasFlag(e) {
         return (0, r.Lt)(this.flags, e);
     }
     isCountryRestricted(e) {
+        if (this.countryListMode === s.qn.ALLOWLIST) return !this.allowedCountries.includes(e);
         switch (this.promotionType) {
-            case a.pt.THIRD_PARTY_INBOUND:
+            case s.pt.THIRD_PARTY_INBOUND:
                 return this.inboundRestrictedCountries.includes(e);
-            case a.pt.THIRD_PARTY_OUTBOUND:
-            case a.pt.THIRD_PARTY_OUTBOUND_RECURRING:
+            case s.pt.THIRD_PARTY_OUTBOUND:
+            case s.pt.THIRD_PARTY_OUTBOUND_RECURRING:
                 return this.outboundRestrictedCountries.includes(e);
             default:
                 return !1;
         }
     }
     isRedeemableByTrialUsers() {
-        return this.hasFlag(s.$3.IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS);
+        return this.hasFlag(a.$3.IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS);
     }
 }
