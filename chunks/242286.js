@@ -493,9 +493,11 @@ function eI(e) {
     d.A.setFocusedPID(0 === e ? null : e, null);
 }
 function eT(e, t, n) {
-    let r = g.Ay.getGameForPID(e)?.name,
-        i = L.A.getGameByName_DEPRECATED_DO_NOT_USE(r);
-    es(e, { ...{ game_name: r, game_id: null == i ? null : i.id, success: t, overlay_method: S.Ue[S.Ue.Hook], ...n } }),
+    let r = g.Ay.getGameForPID(e),
+        i = null != r ? L.A.findGame(r) : null;
+    es(e, {
+        ...{ game_name: r?.name, game_id: null == i ? null : i.id, success: t, overlay_method: S.Ue[S.Ue.Hook], ...n },
+    }),
         (0, c.Vz)(U.OVERLAY_LAYOUT_ID, w.A.getDefaultLayout(U.OVERLAY_LAYOUT_ID), 0, {
             width: n.graphics_width,
             height: n.graphics_height,
@@ -590,7 +592,7 @@ function eL(e) {
     let { port: t } = e;
     q = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams();
-    n.append("build_id", "bd8421945a0e55bae5b45edd3b37649b82fe7870"),
+    n.append("build_id", "2001c8ad41c59c38cb59d0917b66555f957ac551"),
         n.append("rpc", String(t)),
         n.append("rpc_auth_token", q),
         (r = `${location.protocol}//${location.host}/overlay?${n.toString()}`);

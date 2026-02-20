@@ -196,7 +196,7 @@ function eb(e) {
     let t = null;
     if ("id" in e) t = e.id ?? null;
     else {
-        let n = v.A.getGameByName_DEPRECATED_DO_NOT_USE(e.name);
+        let n = v.A.findGame(e);
         if (null == n) return !1;
         t = n.id;
     }
@@ -222,7 +222,7 @@ function eR(e) {
             overlayMethod: I.Ue.Disabled,
             reason: "Another Discord instance running overlay for this pid",
         };
-    let s = n.getGameByName_DEPRECATED_DO_NOT_USE(i.name);
+    let s = n.findGame(i);
     if (null != s) {
         let e = r.getActiveLibraryApplication(s.id);
         if (null != e)
@@ -617,8 +617,8 @@ function e4(e) {
                 if (e.length === t.length)
                     for (let [n, r] of e.entries()) {
                         let e = t[n],
-                            i = v.A.getGameByName_DEPRECATED_DO_NOT_USE(r.name),
-                            s = v.A.getGameByName_DEPRECATED_DO_NOT_USE(e.name),
+                            i = v.A.findGame(r),
+                            s = v.A.findGame(e),
                             a = (e?.id !== B ? e?.id : s?.id) ?? "";
                         R.default.track(U.HAw.GAME_DETECTION_COMPARISON, {
                             game_platform: U.yTV.DESKTOP,
@@ -708,7 +708,7 @@ class e5 extends l.Ay.Store {
     }
     getRunningVerifiedApplicationIds() {
         return this.getRunningGames()
-            .map((e) => v.A.getGameByName_DEPRECATED_DO_NOT_USE(e.name))
+            .map((e) => v.A.findGame(e))
             .filter(L.Vq)
             .map((e) => e.id);
     }

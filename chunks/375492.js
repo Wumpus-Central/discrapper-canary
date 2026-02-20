@@ -50,7 +50,7 @@ function w() {
         c = null != y.A.getCurrentUserActiveStream(),
         d = l || (u && !c);
     if (null != o && null != o.name && !d) {
-        let t = N.A.getGameByName_DEPRECATED_DO_NOT_USE(o.name);
+        let t = N.A.findGame(o);
         e.push({
             type: O.$pd.PLAYING,
             name: o.name,

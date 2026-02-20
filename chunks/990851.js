@@ -7,7 +7,7 @@ var r = n(439372),
 function o(e) {
     let { game: t } = e,
         n = i.Ay.isDetectionEnabled(t),
-        r = t.id ?? s.A.getGameByName_DEPRECATED_DO_NOT_USE(t.name)?.id;
+        r = t.id ?? s.A.findGame(t)?.id;
     null != r && (0, a.J)(r, n);
 }
 class l extends r.A {

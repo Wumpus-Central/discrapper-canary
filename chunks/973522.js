@@ -20,16 +20,17 @@ function l(e) {
             gameMetadata: void 0,
             rawExePath: void 0,
         };
-    let t = i.A.getGameByName_DEPRECATED_DO_NOT_USE(e.name),
-        n = "exePath" in e ? e.exePath : e.exe;
+    let t = "exePath" in e ? e.exePath : e.exe,
+        n = { id: e.id ?? void 0, name: e.name ?? void 0, exePath: t ?? "", cmdLine: t ?? "", lastFocused: 0 },
+        s = i.A.findGame(n);
     return {
         gameName: e.name ?? void 0,
-        gameId: e.id ?? t?.id ?? void 0,
-        exe: null != n ? o(n) : void 0,
+        gameId: e.id ?? s?.id ?? void 0,
+        exe: null != t ? o(t) : void 0,
         distributor: e.distributor ?? void 0,
         sku: e.sku ?? void 0,
         gameMetadata: null != e ? (0, r.MT)(e) : void 0,
-        rawExePath: n,
+        rawExePath: t,
     };
 }
 function u(e, t) {

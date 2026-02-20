@@ -100,7 +100,7 @@ async function ee(e) {
         r = Date.now();
     if (null == n) return R.error(`Tried to track game ${e} but it was not found in RunningGameStore`), null;
     let { enabledOOP: i, enabledLegacy: s, ...a } = (0, d.hw)(n),
-        o = p.A.getGameByName_DEPRECATED_DO_NOT_USE(n.name),
+        o = p.A.findGame(n),
         l = (await (0, S.E1)(e, 0)) ?? n.fullscreenType,
         u = Date.now();
     R.verbose(`Tracking game ${e} for overlay`);
@@ -197,7 +197,7 @@ function et(e, t) {
         return j()
             ? { ...(0, S.O4)(n), source: A.yp.LEGACY_ENABLED, reason: "Legacy overlay enabled only" }
             : { ...r, overlayMethod: A.Ue.Disabled, source: A.yp.LEGACY_ENABLED, reason: "Legacy overlay disabled" };
-    let i = p.A.getGameByName_DEPRECATED_DO_NOT_USE(n.name)?.id,
+    let i = p.A.findGame(n)?.id,
         s = (0, S.zi)(n) || y.A.isLimitedInteractionOverrideEnabled(n.id ?? i);
     switch (t) {
         case o.aI.MINIMIZED:

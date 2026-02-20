@@ -47,7 +47,7 @@ class E extends s.A {
         let r = e.runningGame,
             i = performance.now(),
             s = t ? 0 : Math.round(i - e.lastHeartbeatTime),
-            c = r.id ?? o.A.getGameByName_DEPRECATED_DO_NOT_USE(r.name)?.id;
+            c = r.id ?? o.A.findGame(r)?.id;
         u.default.track(f.HAw.RUNNING_GAME_HEARTBEAT, {
             game_id: c,
             game_name: r.name,

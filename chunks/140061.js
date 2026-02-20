@@ -56,12 +56,17 @@ function y() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = d.Ay.getVisibleRunningGames(),
         n = new Set();
-    for (let { name: e, distributor: i, exePath: r } of t) {
-        let t = _.A.getGameByName_DEPRECATED_DO_NOT_USE(e);
+    for (let e of t) {
+        let t = _.A.findGame(e);
         null != t &&
             (n.add(t.id),
             t.id in T ||
-                v({ applicationId: t.id, updatedAt: Date.now(), distributor: i, exePath: (0, o.Ic)(r ?? "") }));
+                v({
+                    applicationId: t.id,
+                    updatedAt: Date.now(),
+                    distributor: e.distributor,
+                    exePath: (0, o.Ic)(e.exePath ?? ""),
+                }));
     }
     for (let t of Object.keys(T)) n.has(t) || x(T[t], e);
 }

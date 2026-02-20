@@ -160,7 +160,7 @@ class P extends s.A {
             }
             let t = o.Ay.getOverrideForGame(e);
             if (null == e.distributor && null != t) continue;
-            let n = _.A.getGameByName_DEPRECATED_DO_NOT_USE(e.name);
+            let n = _.A.findGame(e);
             if (n?.id != null) {
                 i[n.id] = e;
                 continue;

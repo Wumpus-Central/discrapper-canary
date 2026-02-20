@@ -19,7 +19,7 @@ class c extends i.Ay.Store {
     getGameForPID(e) {
         if (__OVERLAY__ || null == e) return null;
         let t = a.Ay.getGameOrTransformedSubgameForPID(e);
-        return o.A.getGameByName_DEPRECATED_DO_NOT_USE(t?.name);
+        return null != t ? o.A.findGame(t) : null;
     }
     getGame() {
         return r;

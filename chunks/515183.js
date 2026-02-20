@@ -85,13 +85,13 @@ async function T(e) {
         n = await f(e, t),
         r = s.Ay.getGameOrTransformedSubgameForPID(e);
     if (null == r || null == r.name) return n;
-    let i = a.A.getGameByName_DEPRECATED_DO_NOT_USE(r.name)?.id;
+    let i = a.A.findGame(r)?.id;
     if (null == i) return n;
     let o = E[i];
     return null != o ? o(e, r, n) : n;
 }
 function S(e) {
-    let t = a.A.getGameByName_DEPRECATED_DO_NOT_USE(e.name)?.id;
+    let t = a.A.findGame(e)?.id;
     return null != t && g.has(t);
 }
 function y(e) {

@@ -163,7 +163,7 @@ let V = {
     },
     toggleOverlay(e, t, n) {
         let r = (0, g.Zh)(e),
-            i = T.A.getGameByName_DEPRECATED_DO_NOT_USE(r.name);
+            i = T.A.findGame(r);
         if (null != i) {
             let e = S.A.getActiveLibraryApplication(i.id);
             if (null != e) {
