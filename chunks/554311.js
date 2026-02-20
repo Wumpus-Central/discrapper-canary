@@ -53,7 +53,7 @@ function h(e) {
         if (null != e) return e;
     }
     if (null != e.gameName) {
-        let n = t.getGameByName(e.gameName);
+        let n = t.getGameByName_DEPRECATED_DO_NOT_USE(e.gameName);
         if (null != n) return n;
     }
     if (null == e.gameName) return null;

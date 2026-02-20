@@ -2,8 +2,8 @@
 n.d(t, { A: () => W }), n(321073), n(938796);
 var r = n(812729),
     i = n.n(r),
-    a = n(735438),
-    s = n.n(a),
+    s = n(735438),
+    a = n.n(s),
     o = n(665260),
     l = n(311907),
     u = n(73153),
@@ -14,107 +14,107 @@ var r = n(812729),
     p = n(674378),
     h = n(760751),
     m = n(885576),
-    g = n(189081),
-    E = n(375492),
+    E = n(189081),
+    g = n(375492),
     A = n(290863),
     I = n(528767),
     T = n(652215);
-let y = !1,
-    S = T.clD.ONLINE,
+let S = !1,
+    y = T.clD.ONLINE,
     v = T.clD.UNKNOWN,
-    C = 0,
+    N = 0,
+    C = [],
     b = [],
-    N = [],
     R = !1,
     O = !0,
     D = Object.freeze([]),
     L = Object.freeze([]),
     w = [],
     x = [];
-function P(e) {
+function M(e) {
     if (0 === e.length) return e;
     let t = [],
         n = [];
     for (let r of e) r.type === T.$pd.PLAYING ? n.push(r) : t.push(r);
     return 0 === n.length || 1 === n.length ? e : [...t, [...n].sort(A.m)[0]].sort(A.m);
 }
-function M(e) {
-    return (0, p.kv)(e, g.A);
+function P(e) {
+    return (0, p.kv)(e, E.A);
 }
 function k(e) {
-    let t = h.A.getGameByName(e);
-    return null != t ? M(t.id) : _.tz.getSetting();
+    let t = h.A.getGameByName_DEPRECATED_DO_NOT_USE(e);
+    return null != t ? P(t.id) : _.tz.getSetting();
 }
 function U(e) {
     if ((0, o.Lt)(e.flags ?? 0, T.jUm.CONTEXTLESS)) return !0;
     switch (e.type) {
         case T.$pd.LISTENING:
             if ((0, c.A)(e)) return d.A.shouldShowActivity();
-            if (null != e.application_id) return M(e.application_id);
+            if (null != e.application_id) return P(e.application_id);
             return !1;
         case T.$pd.PLAYING:
-            return null != e.application_id ? M(e.application_id) : k(e.name);
+            return null != e.application_id ? P(e.application_id) : k(e.name);
         case T.$pd.STREAMING:
         case T.$pd.WATCHING:
         default:
-            return null == e.application_id || M(e.application_id);
+            return null == e.application_id || P(e.application_id);
     }
 }
 function G() {
-    (O = !0), (v = S), V();
+    (O = !0), (v = y), F();
 }
-function V() {
-    if (((C = m.A.getIdleSince() ?? 0), (R = m.A.isAFK()), O)) S = v;
-    else if (y) S = T.clD.INVISIBLE;
+function F() {
+    if (((N = m.A.getIdleSince() ?? 0), (R = m.A.isAFK()), O)) y = v;
+    else if (S) y = T.clD.INVISIBLE;
     else {
         let e = _.jP.getSetting();
-        S = e !== T.clD.UNKNOWN ? e : T.clD.ONLINE;
+        y = e !== T.clD.UNKNOWN ? e : T.clD.ONLINE;
     }
-    S === T.clD.ONLINE && C > 0 && (S = T.clD.IDLE);
+    y === T.clD.ONLINE && N > 0 && (y = T.clD.IDLE);
     let e = !1,
-        t = O || S === T.clD.INVISIBLE ? [] : E.A.getActivities().filter(U);
-    i()(b, t) || ((b = t), (N = P(t)), (e = !0));
+        t = O || y === T.clD.INVISIBLE ? [] : g.A.getActivities().filter(U);
+    i()(C, t) || ((C = t), (b = M(t)), (e = !0));
     let n = I.A.getRemoteActivities();
     D !== n && ((D = n), (e = !0));
     let r = I.A.getHiddenActivities();
     L !== r && (L = r),
         e &&
-            (x = P(
-                (w = s()([...b, ...D.filter((e) => e.type !== T.$pd.CUSTOM_STATUS)].sort(A.m))
+            (x = M(
+                (w = a()([...C, ...D.filter((e) => e.type !== T.$pd.CUSTOM_STATUS)].sort(A.m))
                     .uniqBy((e) => `${e.type}:${e.application_id}:${e.name}`)
                     .value()),
             ));
 }
-function F(e) {
-    return (y = e.invisible), V();
+function V(e) {
+    return (S = e.invisible), F();
 }
 function B() {
-    return (y = !1), V();
-}
-function j() {
-    (O = !1), (v = T.clD.UNKNOWN), V(), A.A.setCurrentUserOnConnectionOpen(S, w);
+    return (S = !1), F();
 }
 function H() {
-    j();
+    (O = !1), (v = T.clD.UNKNOWN), F(), A.A.setCurrentUserOnConnectionOpen(y, w);
+}
+function j() {
+    H();
 }
 class Y extends l.Ay.Store {
     static displayName = "SelfPresenceStore";
     initialize() {
-        this.waitFor(h.A, m.A, g.A, E.A, A.A, I.A, d.A, f.A), this.syncWith([E.A], V);
+        this.waitFor(h.A, m.A, E.A, g.A, A.A, I.A, d.A, f.A), this.syncWith([g.A], F);
     }
     getLocalPresence() {
-        return { status: S, since: C, activities: N, afk: R };
+        return { status: y, since: N, activities: b, afk: R };
     }
     getStatus() {
-        return S;
+        return y;
     }
     getActivities() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return e ? x : N;
+        return e ? x : b;
     }
     getUnfilteredActivities() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return e ? w : b;
+        return e ? w : C;
     }
     getHiddenActivities() {
         return L;
@@ -133,25 +133,25 @@ class Y extends l.Ay.Store {
     }
 }
 let W = new Y(u.h, {
-    START_SESSION: V,
-    CONNECTION_OPEN: H,
-    CONNECTION_OPEN_SUPPLEMENTAL: j,
-    OVERLAY_INITIALIZE: j,
-    CONNECTION_CLOSED: V,
-    IDLE: V,
-    AFK: V,
-    RUNNING_GAMES_CHANGE: V,
-    STREAMING_UPDATE: V,
-    USER_SETTINGS_PROTO_UPDATE: V,
-    LOCAL_ACTIVITY_UPDATE: V,
-    SPOTIFY_PLAYER_STATE: V,
-    SPOTIFY_PLAYER_PLAY: V,
-    USER_CONNECTIONS_UPDATE: V,
-    SESSIONS_REPLACE: V,
-    RPC_APP_DISCONNECTED: V,
-    LIBRARY_FETCH_SUCCESS: V,
-    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: V,
+    START_SESSION: F,
+    CONNECTION_OPEN: j,
+    CONNECTION_OPEN_SUPPLEMENTAL: H,
+    OVERLAY_INITIALIZE: H,
+    CONNECTION_CLOSED: F,
+    IDLE: F,
+    AFK: F,
+    RUNNING_GAMES_CHANGE: F,
+    STREAMING_UPDATE: F,
+    USER_SETTINGS_PROTO_UPDATE: F,
+    LOCAL_ACTIVITY_UPDATE: F,
+    SPOTIFY_PLAYER_STATE: F,
+    SPOTIFY_PLAYER_PLAY: F,
+    USER_CONNECTIONS_UPDATE: F,
+    SESSIONS_REPLACE: F,
+    RPC_APP_DISCONNECTED: F,
+    LIBRARY_FETCH_SUCCESS: F,
+    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: F,
     LOGOUT: G,
-    FORCE_INVISIBLE: F,
+    FORCE_INVISIBLE: V,
     WINDOW_FOCUS: B,
 });

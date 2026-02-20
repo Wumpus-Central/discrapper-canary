@@ -1,27 +1,27 @@
 "use strict";
 n.d(t, {
-    E1: () => y,
-    O4: () => O,
+    E1: () => T,
+    O4: () => R,
     T$: () => d,
-    Zj: () => N,
-    e3: () => R,
-    gK: () => p,
+    Zj: () => C,
+    e3: () => b,
+    gK: () => h,
     ph: () => _,
-    qJ: () => v,
-    wR: () => h,
+    qJ: () => y,
+    wR: () => p,
     zi: () => S,
 });
 var r = n(56562),
     i = n(626584),
-    a = n(15285),
-    s = n(760751),
+    s = n(15285),
+    a = n(760751),
     o = n(837921),
     l = n(777334),
     u = n(41984);
 let c = new i.A("OverlayRenderUtils"),
     d = 5e3;
 function _(e) {
-    let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.Ay],
+    let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.Ay],
         n = t.getGameOrTransformedSubgameForPID(e);
     try {
         return null == n
@@ -37,14 +37,14 @@ function _(e) {
 }
 function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-        [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [a.Ay];
+        [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [s.Ay];
     return new Promise((r) => {
         setTimeout(() => {
             r(_(e, [n]));
         }, t);
     });
 }
-function h(e) {
+function p(e) {
     switch (e) {
         case r.aI.BORDERLESS_FULLSCREEN:
             return "Borderless Fullscreen";
@@ -60,7 +60,7 @@ function h(e) {
             return "Unknown";
     }
 }
-function p(e) {
+function h(e) {
     switch (e) {
         case u.Ue.OutOfProcess:
             return "Out of Process";
@@ -72,51 +72,51 @@ function p(e) {
             return "Disabled";
     }
 }
-function g(e, t) {
+function m(e, t) {
     let { quns: n } = o.Ay.GetWindowFullscreenTypeExtraByPid(e, t.name);
     return c.info(`QUNS for ${t.name}: ${n}`), n === r.YL.QUNS_RUNNING_D3D_FULL_SCREEN;
 }
-let E = { "1314682894106497096": (e, t, n) => (g(e, t) ? r.aI.FULLSCREEN : n) },
-    A = new Set(["762434991303950386", "1402418239342120960", "1124351860376096858"]),
-    I = 16,
-    T = !0;
-async function y(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I,
+let E = { "1314682894106497096": (e, t, n) => (m(e, t) ? r.aI.FULLSCREEN : n) },
+    g = new Set(["762434991303950386", "1402418239342120960", "1124351860376096858"]),
+    A = 16,
+    I = !0;
+async function T(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : A,
         n = await f(e, t),
-        r = a.Ay.getGameOrTransformedSubgameForPID(e);
+        r = s.Ay.getGameOrTransformedSubgameForPID(e);
     if (null == r || null == r.name) return n;
-    let i = s.A.getGameByName(r.name)?.id;
+    let i = a.A.getGameByName_DEPRECATED_DO_NOT_USE(r.name)?.id;
     if (null == i) return n;
     let o = E[i];
     return null != o ? o(e, r, n) : n;
 }
 function S(e) {
-    let t = s.A.getGameByName(e.name)?.id;
-    return null != t && A.has(t);
+    let t = a.A.getGameByName_DEPRECATED_DO_NOT_USE(e.name)?.id;
+    return null != t && g.has(t);
 }
-function v(e) {
-    let t = a.Ay.getGameOrTransformedSubgameForPID(e);
+function y(e) {
+    let t = s.Ay.getGameOrTransformedSubgameForPID(e);
     return null != t && null != t.name && S(t);
 }
-let C = new Set([r.aI.UNKNOWN, r.aI.FULLSCREEN]);
-function b(e) {
+let v = new Set([r.aI.UNKNOWN, r.aI.FULLSCREEN]);
+function N(e) {
     let t = Object.keys(e)
         .map(Number)
         .sort((e, t) => t - e);
     return 0 === t.length ? r.aI.UNKNOWN : e[t.length > 1 ? t[1] : t[0]];
 }
-function N(e, t, n) {
+function C(e, t, n) {
     if (e.overlayMethod !== u.Ue.OutOfProcess && e.overlayMethod !== u.Ue.OutOfProcessLimitedInteraction) return !1;
     if (!n) return !0;
     switch (t) {
         case r.aI.UNKNOWN:
-            return C.has(b(e.fullscreenHistory));
+            return v.has(N(e.fullscreenHistory));
         case r.aI.FULLSCREEN:
             return !0;
     }
     return !1;
 }
-function R(e, t) {
+function b(e, t) {
     if (!t) return !1;
     switch (e) {
         case r.aI.UNKNOWN:
@@ -126,8 +126,8 @@ function R(e, t) {
     }
     return !0;
 }
-function O(e) {
+function R(e) {
     return null == e
         ? { source: u.yp.DEFAULT, enabledOOP: !1, enabledLegacy: !1, overlayMethod: u.Ue.Disabled }
-        : (0, a.hw)(e, T);
+        : (0, s.hw)(e, I);
 }

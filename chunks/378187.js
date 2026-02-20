@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => U });
+n.d(t, { A: () => k });
 var r = n(412703),
     i = n(902173),
-    a = n(439372),
-    s = n(933958),
+    s = n(439372),
+    a = n(933958),
     o = n(15285),
     l = n(652896),
     u = n(227309),
@@ -11,44 +11,44 @@ var r = n(412703),
     d = n(616356),
     _ = n(760751),
     f = n(607567),
-    h = n(927813),
-    p = n(403362),
-    g = n(829219),
+    p = n(927813),
+    h = n(403362),
+    m = n(829219),
     E = n(859703),
-    A = n(341915),
-    I = n(759366),
-    T = n(943849),
-    y = n(590202),
+    g = n(341915),
+    A = n(759366),
+    I = n(943849),
+    T = n(590202),
     S = n(710969),
-    v = n(639214),
-    C = n(792620),
-    b = n(814793),
-    N = n(654487);
-let R = +h.A.Millis.MINUTE,
-    O = 2,
-    D = +h.A.Millis.SECOND,
-    L = (0, T.L)({ location: N.rE.QUESTS_MANAGER });
-function w(e) {
+    y = n(639214),
+    v = n(792620),
+    N = n(814793),
+    C = n(654487);
+let b = +p.A.Millis.MINUTE,
+    R = 2,
+    O = +p.A.Millis.SECOND,
+    D = (0, I.L)({ location: C.rE.QUESTS_MANAGER });
+function L(e) {
     return !(0, S.Ic)(e) && null != e.userStatus && null != e.userStatus.enrolledAt && null == e.userStatus.completedAt;
 }
-function x(e) {
-    let t = I.A.getState().autoEnroll,
+function w(e) {
+    let t = A.A.getState().autoEnroll,
         n = E.A.quests;
-    for (let r of (0, v.jm)(n, e))
+    for (let r of (0, y.jm)(n, e))
         if (r.config.features.includes(i.L.ACTIVITY_QUEST_AUTO_ENROLLMENT) || (t && 1))
-            return void (0, g.Oy)(r.id, {
-                questContent: A.uF.RUNNING_ACTIVITY,
-                questContentCTA: y.Cy.START_QUEST,
-                sourceQuestContent: A.uF.RUNNING_ACTIVITY,
+            return void (0, m.Oy)(r.id, {
+                questContent: g.uF.RUNNING_ACTIVITY,
+                questContentCTA: T.Cy.START_QUEST,
+                sourceQuestContent: g.uF.RUNNING_ACTIVITY,
             });
 }
-function P(e, t) {
+function x(e, t) {
     return null != t && e.some((e) => e === u.a7) && (0, c.n1)(t);
 }
 function M(e) {
     return null != e && e.config.features.includes(i.L.MANUAL_HEARTBEAT_INITIALIZATION);
 }
-class k extends a.A {
+class P extends s.A {
     heartbeats = {
         [r.n.PLAY_ON_DESKTOP]: new Map(),
         [r.n.STREAM_ON_DESKTOP]: new Map(),
@@ -56,62 +56,62 @@ class k extends a.A {
     };
     calculateHeartbeatDurationMs = (e) => {
         let t = E.A.quests.get(e);
-        if (null == t || null == t.config || null == t.userStatus) return R;
-        let { progressSeconds: n, targetSeconds: i } = (0, C.Yh)(t, r.o.DESKTOP),
-            a = Math.max(0, (i - n) * h.A.Millis.SECOND);
-        return a <= R ? a + D : R;
+        if (null == t || null == t.config || null == t.userStatus) return b;
+        let { progressSeconds: n, targetSeconds: i } = (0, v.Yh)(t, r.o.DESKTOP),
+            s = Math.max(0, (i - n) * p.A.Millis.SECOND);
+        return s <= b ? s + O : b;
     };
     initiateHeartbeat = (e, t, n) => {
         let i = this.heartbeats[t];
-        if (i.has(e)) return void L.log(`~ initiateHeartbeat -> Heartbeat already initiated for questId: ${e}`);
-        let a = () => {
-            let s = this.getActivelyProgressingQuests(t);
-            if (s.has(e)) {
-                let o = s.get(e),
+        if (i.has(e)) return void D.log(`~ initiateHeartbeat -> Heartbeat already initiated for questId: ${e}`);
+        let s = () => {
+            let a = this.getActivelyProgressingQuests(t);
+            if (a.has(e)) {
+                let o = a.get(e),
                     u = o?.applicationId ?? n;
                 if (t === r.n.STREAM_ON_DESKTOP) {
                     let n = d.A.getCurrentUserActiveStream();
                     if (null == n) {
-                        L.log(
+                        D.log(
                             `~ initiateHeartbeat -> Attempted to beat for stream quest but no active stream, terminating heartbeat for questId: ${e}`,
                         ),
                             this.terminateHeartbeat(e, t);
                         return;
                     }
                     let r = (0, l._z)(n);
-                    L.log(`~ initiateHeartbeat -> Sending heartbeat for questId: ${e}`),
-                        (0, g.R2)({ questId: e, streamKey: r, applicationId: u });
+                    D.log(`~ initiateHeartbeat -> Sending heartbeat for questId: ${e}`),
+                        (0, m.R2)({ questId: e, streamKey: r, applicationId: u });
                 } else
-                    L.log(`~ initiateHeartbeat -> Sending heartbeat for questId: ${e}`),
-                        (0, g.R2)({ questId: e, applicationId: u });
+                    D.log(`~ initiateHeartbeat -> Sending heartbeat for questId: ${e}`),
+                        (0, m.R2)({ questId: e, applicationId: u });
                 let c = this.calculateHeartbeatDurationMs(e),
-                    _ = window.setTimeout(a, c);
+                    _ = window.setTimeout(s, c);
                 i.set(e, _);
             } else
-                L.log(`~ initiateHeartbeat -> Quest ${e} is no longer actively progressing, terminating heartbeat`),
+                D.log(`~ initiateHeartbeat -> Quest ${e} is no longer actively progressing, terminating heartbeat`),
                     this.terminateHeartbeat(e, t);
         };
-        L.log(`~ initiateHeartbeat -> Initiating heartbeat for Quest ${e}`), a();
+        D.log(`~ initiateHeartbeat -> Initiating heartbeat for Quest ${e}`), s();
     };
     terminateHeartbeat = (e, t) => {
         let n = this.heartbeats[t],
             r = E.A.quests,
             i = n.get(e);
         if (null != i) {
-            L.log(`~ terminateHeartbeat -> Terminating heartbeat for questId: ${e}`),
+            D.log(`~ terminateHeartbeat -> Terminating heartbeat for questId: ${e}`),
                 window.clearTimeout(i),
                 n.delete(e);
             let t = r.get(e);
             null != t &&
-                w(t) &&
-                (L.log(`~ terminateHeartbeat -> Sending terminal heartbeat for questId: ${e}`),
-                (0, g.R2)({ questId: e, terminal: !0 }));
+                L(t) &&
+                (D.log(`~ terminateHeartbeat -> Sending terminal heartbeat for questId: ${e}`),
+                (0, m.R2)({ questId: e, terminal: !0 }));
         }
     };
     handleSendHeartbeatSuccess = (e) => {
         let { questId: t, userStatus: n } = e;
-        if ((L.log(`~ handleSendHeartbeatSuccess -> Heartbeat succeeded for questId: ${t})`), null != n.completedAt))
-            for (let e of (L.log(
+        if ((D.log(`~ handleSendHeartbeatSuccess -> Heartbeat succeeded for questId: ${t})`), null != n.completedAt))
+            for (let e of (D.log(
                 `~ handleSendHeartbeatSuccess -> Quest ${t} completed, terminating any heartbeats for it`,
             ),
             Object.keys(this.heartbeats)))
@@ -119,18 +119,18 @@ class k extends a.A {
     };
     handleSendHeartbeatFailure = (e) => {
         let { questId: t } = e;
-        L.log(`~ handleSendHeartbeatFailure -> Heartbeat failed for questId: ${t}`);
+        D.log(`~ handleSendHeartbeatFailure -> Heartbeat failed for questId: ${t}`);
     };
     syncHeartbeats(e, t, n) {
         for (let r of ("VOICE_STATE_UPDATES" !== t &&
             "PASSIVE_UPDATE_V2" !== t &&
-            L.log(`~ syncHeartbeats -> syncing heartbeats for taskTypes: ${e.join(", ")} (triggered by: ${t})`),
+            D.log(`~ syncHeartbeats -> syncing heartbeats for taskTypes: ${e.join(", ")} (triggered by: ${t})`),
         e)) {
             let e = this.heartbeats[r],
                 t = this.getActivelyProgressingQuests(r);
             for (let n of new Set(e.keys())) t.has(n) || this.terminateHeartbeat(n, r);
-            for (let [i, a] of t.entries())
-                !e.has(i) && (null == n || n(E.A.quests.get(i))) && this.initiateHeartbeat(i, r, a.applicationId);
+            for (let [i, s] of t.entries())
+                !e.has(i) && (null == n || n(E.A.quests.get(i))) && this.initiateHeartbeat(i, r, s.applicationId);
         }
     }
     getActivelyProgressingQuests(e) {
@@ -142,7 +142,7 @@ class k extends a.A {
             case r.n.PLAY_ACTIVITY:
                 return this.getActivelyProgressingActivityQuests();
             default:
-                (0, p.xb)(e);
+                (0, h.xb)(e);
         }
     }
     getActivelyProgressingPlayOnDesktopQuests() {
@@ -150,7 +150,7 @@ class k extends a.A {
             t = o.Ay.getRunningGames(),
             n = o.Ay.getRunningNonGames(),
             r = E.A.quests;
-        L.log("~ getActivelyProgressingPlayOnDesktopQuestIds -> Running games: ", t, "Running non-games: ", n);
+        D.log("~ getActivelyProgressingPlayOnDesktopQuestIds -> Running games: ", t, "Running non-games: ", n);
         let i = {};
         for (let e of t) {
             if (e.isLauncher) continue;
@@ -160,7 +160,7 @@ class k extends a.A {
             }
             let t = o.Ay.getOverrideForGame(e);
             if (null == e.distributor && null != t) continue;
-            let n = _.A.getGameByName(e.name);
+            let n = _.A.getGameByName_DEPRECATED_DO_NOT_USE(e.name);
             if (n?.id != null) {
                 i[n.id] = e;
                 continue;
@@ -170,14 +170,14 @@ class k extends a.A {
         for (let t of Object.keys(i)) {
             let n = i[t];
             for (let i of r.values()) {
-                let r = (0, C.pU)(i);
-                if (!w(i) || null == r) continue;
-                let a = r.find((e) => e === t);
-                null != a ? e.set(i.id, { applicationId: a }) : P(r, n) && e.set(i.id, { applicationId: u.a7 });
+                let r = (0, v.pU)(i);
+                if (!L(i) || null == r) continue;
+                let s = r.find((e) => e === t);
+                null != s ? e.set(i.id, { applicationId: s }) : x(r, n) && e.set(i.id, { applicationId: u.a7 });
             }
         }
         return (
-            L.log(
+            D.log(
                 "~ getActivelyProgressingPlayOnDesktopQuestIds -> Actively progressing questIds: ",
                 Array.from(e.keys()),
             ),
@@ -187,18 +187,18 @@ class k extends a.A {
     getActivelyProgressingStreamOnDesktopQuests() {
         let e = new Map(),
             t = d.A.getCurrentUserActiveStream();
-        if (null == t || f.Ay.countVoiceStatesForChannel(t.channelId) < O) return e;
+        if (null == t || f.Ay.countVoiceStatesForChannel(t.channelId) < R) return e;
         let n = d.A.getStreamerActiveStreamMetadata();
         if (null == n) return e;
-        L.log("~ getActivelyProgressingStreamOnDesktopQuestIds -> Active stream metadata: ", n);
+        D.log("~ getActivelyProgressingStreamOnDesktopQuestIds -> Active stream metadata: ", n);
         let r = n.id;
         if (null == r) return e;
         for (let t of E.A.quests.values()) {
-            let n = (0, C.a2)(t);
-            w(t) && null != n && n === r && e.set(t.id, { applicationId: r });
+            let n = (0, v.a2)(t);
+            L(t) && null != n && n === r && e.set(t.id, { applicationId: r });
         }
         return (
-            L.log(
+            D.log(
                 "~ getActivelyProgressingStreamOnDesktopQuestIds -> Actively progressing questIds: ",
                 Array.from(e.keys()),
             ),
@@ -207,18 +207,18 @@ class k extends a.A {
     }
     getActivelyProgressingActivityQuests() {
         let e = new Map(),
-            t = s.Ay.getSelfEmbeddedActivities(),
+            t = a.Ay.getSelfEmbeddedActivities(),
             n = t.size > 0;
-        if ((L.log("~ getActivelyProgressingActivityQuestIds -> Embedded activities: ", t), !n)) return e;
+        if ((D.log("~ getActivelyProgressingActivityQuestIds -> Embedded activities: ", t), !n)) return e;
         let r = E.A.quests;
         for (let n of t.keys())
             for (let t of r.values()) {
-                let r = (0, C.vS)(t);
-                w(t) && null != r && r === n && e.set(t.id, { applicationId: n });
+                let r = (0, v.vS)(t);
+                L(t) && null != r && r === n && e.set(t.id, { applicationId: n });
             }
-        for (let t of r.values()) w(t) && (0, b._e)(t) && n && e.set(t.id, { applicationId: N.ej });
+        for (let t of r.values()) L(t) && (0, N._e)(t) && n && e.set(t.id, { applicationId: C.ej });
         return (
-            L.log("~ getActivelyProgressingActivityQuestIds -> Actively progressing questIds: ", Array.from(e.keys())),
+            D.log("~ getActivelyProgressingActivityQuestIds -> Actively progressing questIds: ", Array.from(e.keys())),
             e
         );
     }
@@ -247,11 +247,11 @@ class k extends a.A {
         VOICE_STATE_UPDATES: () => this.syncHeartbeats([r.n.STREAM_ON_DESKTOP], "VOICE_STATE_UPDATES"),
         EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: (e) => {
             let { applicationId: t } = e;
-            x(t);
+            w(t);
         },
         FRAME_LAUNCH: (e) => {
             let { applicationId: t } = e;
-            x(t);
+            w(t);
         },
         EMBEDDED_ACTIVITY_UPDATE_V2: () =>
             this.syncHeartbeats([r.n.PLAY_ACTIVITY], "EMBEDDED_ACTIVITY_UPDATE_V2", (e) => !M(e)),
@@ -265,4 +265,4 @@ class k extends a.A {
         },
     };
 }
-let U = new k();
+let k = new P();

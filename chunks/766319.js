@@ -94,8 +94,8 @@ function b(e) {
             () =>
                 l.uniqWith(c, (e, t) => {
                     if (e.application_id === t.application_id) return !0;
-                    let n = A.A.getGameByName(e.name),
-                        i = A.A.getGameByName(t.name);
+                    let n = A.A.getGameByName_DEPRECATED_DO_NOT_USE(e.name),
+                        i = A.A.getGameByName_DEPRECATED_DO_NOT_USE(t.name);
                     return (null != n && n === i) || e.name === t.name;
                 }),
             [c],

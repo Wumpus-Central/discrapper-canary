@@ -1,8 +1,8 @@
 n.d(t, { A: () => w });
 var a = n(627968),
-    s = n(64700),
-    i = n(503698),
-    l = n.n(i),
+    i = n(64700),
+    s = n(503698),
+    l = n.n(s),
     r = n(735438),
     o = n.n(r),
     d = n(681154),
@@ -15,16 +15,16 @@ var a = n(627968),
     g = n(429913),
     _ = n(303054),
     f = n(409626),
-    v = n(692969),
-    b = n(760751),
+    b = n(692969),
+    v = n(760751),
     j = n(403362),
-    A = n(603047),
-    C = n(435738),
-    S = n(99753),
-    T = n(868068),
-    y = n(476398),
-    N = n(405311),
-    E = n(424994),
+    C = n(603047),
+    A = n(435738),
+    T = n(99753),
+    y = n(868068),
+    S = n(476398),
+    E = n(405311),
+    N = n(424994),
     I = n(750100),
     k = n(661251);
 let R = [
@@ -57,12 +57,12 @@ let R = [
 ];
 function O(e) {
     let { type: t } = e,
-        n = (0, u.bG)([S.A], () => S.A.getFilters()),
-        s = n?.types?.has(t) ?? !1;
+        n = (0, u.bG)([T.A], () => T.A.getFilters()),
+        i = n?.types?.has(t) ?? !1;
     return (0, a.jsx)(h.dOG, {
-        checked: s,
+        checked: i,
         onChange: function () {
-            s
+            i
                 ? x.h.dispatch({ type: "CONTENT_INVENTORY_SET_FILTERS", filters: void 0 })
                 : x.h.dispatch({ type: "CONTENT_INVENTORY_SET_FILTERS", filters: { types: new Set([t]) } });
         },
@@ -71,23 +71,26 @@ function O(e) {
 function w() {
     var e;
     let t,
-        n = (0, u.bG)([S.A], () => S.A.getFeed(E.X1.GLOBAL_FEED)),
-        i = (0, u.bG)([S.A], () => S.A.getDebugImpressionCappingDisabled()),
-        l = (0, u.bG)([C.A], () => C.A.getDebugFastImpressionCappingEnabled()),
+        n = (0, u.bG)([T.A], () => T.A.getFeed(N.X1.GLOBAL_FEED)),
+        s = (0, u.bG)([T.A], () => T.A.getDebugImpressionCappingDisabled()),
+        l = (0, u.bG)([A.A], () => A.A.getDebugFastImpressionCappingEnabled()),
         r =
             ((e = n?.entries?.map((e) => e.content)),
             Object.keys((t = o().groupBy(e, (e) => e.content_type))).map((e) => {
                 let n = t[e];
                 return { key: `${e}`, type: n[0].content_type, entries: n };
             })),
-        d = (0, u.bG)([S.A], () => S.A.getFeedState(E.X1.GLOBAL_FEED)?.loading === !0),
-        [O, w] = s.useState(""),
+        d = (0, u.bG)([T.A], () => T.A.getFeedState(N.X1.GLOBAL_FEED)?.loading === !0),
+        [O, w] = i.useState(""),
         M = (0, u.bG)(
-            [b.A, p.A],
-            () => (parseInt(O) > 0 ? O : (b.A.getGameByName(O)?.id ?? p.A.getApplicationByName(O)?.id)),
+            [v.A, p.A],
+            () =>
+                parseInt(O) > 0
+                    ? O
+                    : (v.A.getGameByName_DEPRECATED_DO_NOT_USE(O)?.id ?? p.A.getApplicationByName(O)?.id),
             [O],
         ),
-        P = (0, v.A)({ applicationId: M, location: "DevToolsContentInventory", source: f.Ob.DevTools }),
+        P = (0, b.A)({ applicationId: M, location: "DevToolsContentInventory", source: f.Ob.DevTools }),
         L = Object.entries(m.w.get("GameProfileModal") ?? {})
             .filter((e) => {
                 let [t, n] = e;
@@ -98,7 +101,7 @@ function w() {
                 return t;
             }),
         U = (0, g.A)(L).filter(j.Vq),
-        B = (0, u.bG)([A.A], () => A.A.getFakeGameToShow());
+        B = (0, u.bG)([C.A], () => C.A.getFakeGameToShow());
     return (0, a.jsx)("div", {
         className: k.nd,
         children: (0, a.jsxs)(h.IpV, {
@@ -109,7 +112,7 @@ function w() {
                     children: [
                         (0, a.jsx)(h.Text, { variant: "text-md/semibold", children: "Inventory" }),
                         r.length > 0 && (0, a.jsx)(_.A, { columns: R, data: r }),
-                        (0, a.jsx)(N.A, {}),
+                        (0, a.jsx)(E.A, {}),
                         (0, a.jsx)(h.Button, {
                             variant: "primary",
                             text: "Refresh Now",
@@ -117,7 +120,7 @@ function w() {
                             onClick: function () {
                                 x.h.dispatch({
                                     type: "CONTENT_INVENTORY_MANUAL_REFRESH",
-                                    feedId: E.X1.GLOBAL_FEED,
+                                    feedId: N.X1.GLOBAL_FEED,
                                     feature: c.M.INBOX,
                                 });
                             },
@@ -147,7 +150,7 @@ function w() {
                         }),
                         (0, a.jsx)(h.Button, {
                             variant: "primary",
-                            text: i ? "Enable Impression Capping" : "Disable Impression Capping",
+                            text: s ? "Enable Impression Capping" : "Disable Impression Capping",
                             fullWidth: !0,
                             onClick: function () {
                                 x.h.dispatch({ type: "CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING" });
@@ -164,7 +167,7 @@ function w() {
                     ],
                 }),
                 !1,
-                (0, a.jsx)(y.A, {}),
+                (0, a.jsx)(S.A, {}),
                 (0, a.jsxs)(h.BJc, {
                     gap: 8,
                     children: [
@@ -196,7 +199,7 @@ function w() {
                         (0, a.jsx)(h.Text, { variant: "text-md/semibold", children: "Activity Sharing" }),
                         (0, a.jsx)(h.l6P, {
                             label: "Force show game",
-                            options: T.K.map((e) => ({ label: e, value: e, id: e })),
+                            options: y.K.map((e) => ({ label: e, value: e, id: e })),
                             value: B,
                             onSelectionChange: function (e) {
                                 x.h.dispatch({ type: "CONTENT_INVENTORY_FORCE_SHOW_GAME_SHARING", gameToShow: e });
@@ -212,7 +215,7 @@ function w() {
 }
 let D = (e) => {
     let { application: t } = e,
-        n = (0, v.A)({ applicationId: t.id, location: "DevToolsContentInventory", source: f.Ob.DevTools });
+        n = (0, b.A)({ applicationId: t.id, location: "DevToolsContentInventory", source: f.Ob.DevTools });
     return (0, a.jsx)(h.DUT, {
         onClick: n,
         children: (0, a.jsx)(h.Text, { variant: "text-xs/normal", color: "text-muted", children: t.name }),

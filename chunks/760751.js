@@ -1,9 +1,9 @@
 "use strict";
 let r;
-n.d(t, { A: () => z });
+n.d(t, { A: () => q }), n(321073);
 var i = n(311907),
-    a = n(506774),
-    s = n(73153),
+    s = n(506774),
+    a = n(73153),
     o = n(155718),
     l = n(194862),
     u = n(690511),
@@ -12,28 +12,29 @@ var i = n(311907),
     _ = n(611010),
     f = n(954571),
     p = n(927813),
-    h = n(723702),
-    m = n(661191),
+    h = n(403362),
+    m = n(723702),
+    E = n(661191),
     g = n(652215),
-    E = n(705751);
-let A = "GameStoreReportedGames",
-    I = 0x80000000,
-    T = p.A.Millis.DAY,
+    A = n(705751);
+let I = "GameStoreReportedGames",
+    T = 0x80000000,
+    S = p.A.Millis.DAY,
     y = new l.A(),
-    S = {},
-    v = {},
-    C = a.w.get(A) ?? {},
+    v = Object.create(null),
+    N = Object.create(null),
+    C = s.w.get(I) ?? Object.create(null),
     b = "",
-    N = null,
-    R = !1,
-    O = null,
-    D = !1,
-    L = "",
-    w = [],
+    R = null,
+    O = !1,
+    D = null,
+    L = !1,
+    w = "",
     x = [],
+    M = [],
     P = new Map(),
-    M = p.A.Millis.HOUR;
-function k(e) {
+    k = p.A.Millis.HOUR;
+function U(e) {
     return {
         id: e.id,
         name: e.name,
@@ -50,7 +51,7 @@ function k(e) {
         cover_image_hash: e.cover_image_hash ?? void 0,
     };
 }
-function U(e) {
+function G(e) {
     return {
         id: e.id,
         name: e.name,
@@ -67,39 +68,44 @@ function U(e) {
         cover_image_hash: e.cover_image_hash ?? void 0,
     };
 }
-function G(e) {
-    let t = e instanceof c.Ay ? U(e) : e;
-    for (let n of (y.set(e.id, t), (S[e.name.toLowerCase()] = t), e.aliases)) S[n.toLowerCase()] = t;
-    if ((0, h.isDesktop)()) for (let n of e.executables) v[n.name] = t;
+function F(e, t) {
+    null == v[t] && (v[t] = []), v[t].push(e);
 }
 function V(e) {
+    let t = e instanceof c.Ay ? G(e) : e;
+    for (let n of (y.set(e.id, t), F(t.id, t.name.toLowerCase()), e.aliases)) F(t.id, n.toLowerCase());
+    if ((0, m.isDesktop)()) for (let n of e.executables) N[n.name] = t.id;
+}
+function B(e) {
     let { detectableApplications: t } = e;
-    for (let e of (y.clear(), (S = {}), (v = {}), t)) G(e);
-}
-function F() {
-    r = !0;
-}
-function B() {
-    (r = !1), (R = !0);
-}
-function j(e) {
-    let { games: t, etag: n } = e;
-    for (let e of (null != n && b !== n && (y.clear(), (S = {}), (v = {}), (b = n)), t)) G(k(e));
-    (r = void 0), (N = Date.now()), (R = !0);
+    for (let e of (y.clear(), (v = Object.create(null)), (N = Object.create(null)), t)) V(e);
 }
 function H() {
-    D = !0;
+    r = !0;
 }
-function Y() {
-    D = !1;
+function j() {
+    (r = !1), (O = !0);
 }
-function W(e) {
+function Y(e) {
+    let { games: t, etag: n } = e;
+    for (let e of (null != n && b !== n && (y.clear(), (v = Object.create(null)), (N = Object.create(null)), (b = n)),
+    t))
+        V(U(e));
+    (r = void 0), (R = Date.now()), (O = !0);
+}
+function W() {
+    L = !0;
+}
+function K() {
+    L = !1;
+}
+function z(e) {
     let { executables: t, patterns: n, etag: r } = e;
-    null != r && L !== r && ((L = r), (w = t.map((e) => e.toLowerCase())), (x = n.map((e) => RegExp(e, "i")))),
-        (D = !1),
-        (O = Date.now());
+    null != r && w !== r && ((w = r), (x = t.map((e) => e.toLowerCase())), (M = n.map((e) => RegExp(e, "i")))),
+        (L = !1),
+        (D = Date.now());
 }
-class K extends i.Ay.PersistedStore {
+class $ extends i.Ay.PersistedStore {
     static displayName = "GameStore";
     static persistKey = "GameStore";
     static migrations = [
@@ -107,10 +113,10 @@ class K extends i.Ay.PersistedStore {
             null != e
                 ? {
                       detectableGamesEtag: e.detectableGamesEtag,
-                      detectableGames: e.detectableGames?.map((e) => U(new c.Ay(e))) ?? [],
+                      detectableGames: e.detectableGames?.map((e) => G(new c.Ay(e))) ?? [],
                   }
                 : { detectableGamesEtag: "", detectableGames: [] },
-        (e) => ((0, h.isDesktop)() ? e : { detectableGamesEtag: "", detectableGames: [] }),
+        (e) => ((0, m.isDesktop)() ? e : { detectableGamesEtag: "", detectableGames: [] }),
         () => ({ detectableGamesEtag: "", detectableGames: [] }),
         (e) => ({
             ...e,
@@ -122,19 +128,19 @@ class K extends i.Ay.PersistedStore {
     initialize(e) {
         null != e &&
             (null != e.detectableGamesEtag && (b = e.detectableGamesEtag),
-            null != e.blocklistEtag && (L = e.blocklistEtag),
-            null != e.blocklistExecutables && (w = e.blocklistExecutables),
-            null != e.blocklistPatterns && (x = e.blocklistPatterns.map((e) => RegExp(e, "i"))),
-            e.detectableGames?.forEach((e) => G(e)));
+            null != e.blocklistEtag && (w = e.blocklistEtag),
+            null != e.blocklistExecutables && (x = e.blocklistExecutables),
+            null != e.blocklistPatterns && (M = e.blocklistPatterns.map((e) => RegExp(e, "i"))),
+            e.detectableGames?.forEach((e) => V(e)));
     }
     getState() {
-        return (0, h.isDesktop)()
+        return (0, m.isDesktop)()
             ? {
                   detectableGamesEtag: b,
                   detectableGames: y.values(),
-                  blocklistEtag: L,
-                  blocklistExecutables: w,
-                  blocklistPatterns: x.map((e) => e.source),
+                  blocklistEtag: w,
+                  blocklistExecutables: x,
+                  blocklistPatterns: M.map((e) => e.source),
               }
             : {
                   detectableGamesEtag: "",
@@ -148,17 +154,49 @@ class K extends i.Ay.PersistedStore {
         return y.values();
     }
     getDetectableGame(e) {
-        return y.get(m.default.cast(e));
+        return y.get(E.default.cast(e));
     }
-    getGameByName(e) {
-        if (null == e) return null;
+    getGameByName_DEPRECATED_DO_NOT_USE(e) {
+        return this.getDetectableGame([...this.searchGamesByName(e)].reverse()[0]);
+    }
+    searchGamesByName(e) {
+        if (null == e) return [];
         let t = e.toLowerCase();
-        return Object.prototype.hasOwnProperty.call(S, t) ? S[t] : null;
+        return Object.prototype.hasOwnProperty.call(v, t) ? v[t] : [];
+    }
+    findGame(e, t) {
+        let n,
+            r = this.getDetectableGame(e.id);
+        if (null != r) return r;
+        if (null != e.name)
+            for (let r of this.searchGamesByName(e.name)) {
+                let i = this.getDetectableGame(r);
+                if (null != i) {
+                    if (null != t) {
+                        t(i);
+                        continue;
+                    }
+                    if (null != e.exePath && null != i.executables) {
+                        let t = e.exePath.split("/").filter(h.Vq).pop();
+                        if (i.executables.some((e) => e.name === t)) return i;
+                    }
+                    n = i;
+                }
+            }
+        if (null != e.exePath) {
+            let t = e.exePath.split("/").filter(h.Vq).pop(),
+                n = this.getGameByExecutable(t);
+            if (null != n) return n;
+            let r = e.exePath.split("/").filter(h.Vq).slice(-2).join("/"),
+                i = this.getGameByExecutable(r);
+            if (null != i) return i;
+        }
+        return n;
     }
     getOfficialGame(e) {
         let t;
         return null == e ||
-            null == (t = e.type === E.S7.GAME ? e.id : e.linkedGames?.find((e) => e.type === o.Mh.OFFICIAL)?.id)
+            null == (t = e.type === A.S7.GAME ? e.id : e.linkedGames?.find((e) => e.type === o.Mh.OFFICIAL)?.id)
             ? null
             : this.getDetectableGame(t);
     }
@@ -168,12 +206,13 @@ class K extends i.Ay.PersistedStore {
         if (null != e.linkedGames) {
             for (let n of e.linkedGames) if (null != (t = this.getDetectableGame(n.id))) return t;
         }
-        return this.getGameByName(e.name);
+        return this.searchGamesByName(e.name)
+            .map((e) => this.getDetectableGame(e))
+            .reverse()[0];
     }
     isGameInDatabase(e) {
         return (
-            null != this.getGameByName(e.name) ||
-            (void 0 !== e.nativeProcessObserverId && (e.nativeProcessObserverId & I) == 0)
+            null != this.findGame(e) || (void 0 !== e.nativeProcessObserverId && (e.nativeProcessObserverId & T) == 0)
         );
     }
     get fetching() {
@@ -183,56 +222,63 @@ class K extends i.Ay.PersistedStore {
         return b;
     }
     get blocklistEtag() {
-        return L;
+        return w;
     }
     get lastFetched() {
-        return N;
-    }
-    get hasAttemptedFetch() {
         return R;
     }
+    get hasAttemptedFetch() {
+        return O;
+    }
     get detectableGamesTtl() {
-        return T;
+        return S;
     }
     canFetchDetectableGames() {
-        return !0 !== r && (null == N || Date.now() >= N + T);
+        return !0 !== r && (null == R || Date.now() >= R + S);
     }
     canFetchExecutableBlocklist() {
         return (
-            !!u.n.getConfig({ location: "GameStore.shouldBlock" }).enabled && !D && (null == O || Date.now() >= O + T)
+            !!u.n.getConfig({ location: "GameStore.shouldBlock" }).enabled && !L && (null == D || Date.now() >= D + S)
         );
     }
     getGameByExecutable(e) {
-        return v[e];
+        if (null == e) return;
+        let t = N[e];
+        return this.getDetectableGame(t);
     }
     getGameByGameData(e) {
-        let t;
+        let t = this.getDetectableGame(e.id);
+        if (null != t) return t;
         if (null == e.exePath) return null;
         let n = e.exePath.split("/").pop(),
             r = e.exePath.split("/").slice(-2).join("/");
         if (null != e.name) {
-            if (null != (t = this.getGameByName(e.name)) && null != t.executables) {
-                let e = t.executables.map((e) => e.name);
-                if (e.includes(n) || e.includes(r)) return t;
-            } else if (null != t) return null;
+            let t = this.searchGamesByName(e.name)
+                .map((e) => this.getDetectableGame(e))
+                .find((e) => {
+                    if (null == e || null == e.executables) return !1;
+                    let t = e.executables.map((e) => e.name);
+                    if (t.includes(n) || t.includes(r)) return !0;
+                });
+            if (null != t) return t;
         }
-        return this.getGameByExecutable(n) ?? this.getGameByExecutable(r) ?? t;
+        return this.getGameByExecutable(n) ?? this.getGameByExecutable(r);
     }
     shouldBlock(e) {
         if (!u.n.getConfig({ location: "GameStore.shouldBlock" }).enabled || null == e.exePath || "" === e.exePath)
             return !1;
         let t = e.exePath.toLowerCase(),
-            n = w.find((e) => t.includes(e));
+            n = x.find((e) => t.includes(e));
         if (null != n) return this.maybeTrackBlock(e, "explicit_list", n), !0;
-        let r = x.find((t) => t.test(e.exePath));
+        let r = M.find((t) => t.test(e.exePath));
         return null != r && (this.maybeTrackBlock(e, "pattern_match", r.source), !0);
     }
     maybeTrackBlock(e, t, n) {
         let r = e.exePath.split(/[/\\]/).pop() ?? "unknown",
             i = P.get(r),
-            a = Date.now();
-        (null == i || a - i >= M) &&
-            (P.set(r, a),
+            s = Date.now();
+        (null == i || s - i >= k) &&
+            (P.set(r, s),
             f.default.track(g.HAw.GAME_BLOCKLIST_TRIGGERED, {
                 block_type: t,
                 matched_entry: n,
@@ -242,20 +288,20 @@ class K extends i.Ay.PersistedStore {
     }
     shouldReport(e) {
         if (this.shouldBlock(e)) return !1;
-        let t = null != this.getGameByName(e.name),
+        let t = null != this.findGame(e),
             n = null != e.name && null != C[e.name];
         return d.tz.getSetting() && !r && !(t || n);
     }
     markGameReported(e) {
-        (C[e] = !0), a.w.set(A, C);
+        (C[e] = !0), s.w.set(I, C);
     }
 }
-let z = new K(s.h, {
-    OVERLAY_INITIALIZE: V,
-    GAMES_DATABASE_FETCH: F,
-    GAMES_DATABASE_FETCH_FAIL: B,
-    GAMES_DATABASE_UPDATE: j,
-    GAMES_BLOCKLIST_FETCH: H,
-    GAMES_BLOCKLIST_FETCH_FAIL: Y,
-    GAMES_BLOCKLIST_UPDATE: W,
+let q = new $(a.h, {
+    OVERLAY_INITIALIZE: B,
+    GAMES_DATABASE_FETCH: H,
+    GAMES_DATABASE_FETCH_FAIL: j,
+    GAMES_DATABASE_UPDATE: Y,
+    GAMES_BLOCKLIST_FETCH: W,
+    GAMES_BLOCKLIST_FETCH_FAIL: K,
+    GAMES_BLOCKLIST_UPDATE: z,
 });

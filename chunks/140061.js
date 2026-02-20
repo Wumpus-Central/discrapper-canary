@@ -17,14 +17,14 @@ var i = n(311907),
 let I = "ActivityTrackingStore",
     f = 30 * u.A.Millis.MINUTE,
     C = 5 * u.A.Millis.MINUTE,
-    N = r.w.get(I) ?? {},
-    T = {},
+    T = r.w.get(I) ?? {},
+    N = {},
     S = !1;
 function x(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     t && v(e, !0);
-    let n = T[e.applicationId];
-    null != n && (n.stop(), delete T[e.applicationId]), delete N[e.applicationId], r.w.set(I, N);
+    let n = N[e.applicationId];
+    null != n && (n.stop(), delete N[e.applicationId]), delete T[e.applicationId], r.w.set(I, T);
 }
 function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -48,41 +48,41 @@ function v(e) {
         mediaSessionId: c,
     }),
         (e.updatedAt = n);
-    let u = T[e.applicationId];
-    null == u && (u = T[e.applicationId] = new l.IX()).start(f, () => v(e)),
-        t || ((N[e.applicationId] = e), r.w.set(I, N));
+    let u = N[e.applicationId];
+    null == u && (u = N[e.applicationId] = new l.IX()).start(f, () => v(e)),
+        t || ((T[e.applicationId] = e), r.w.set(I, T));
 }
 function y() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = d.Ay.getVisibleRunningGames(),
         n = new Set();
     for (let { name: e, distributor: i, exePath: r } of t) {
-        let t = _.A.getGameByName(e);
+        let t = _.A.getGameByName_DEPRECATED_DO_NOT_USE(e);
         null != t &&
             (n.add(t.id),
-            t.id in N ||
+            t.id in T ||
                 v({ applicationId: t.id, updatedAt: Date.now(), distributor: i, exePath: (0, o.Ic)(r ?? "") }));
     }
-    for (let t of Object.keys(N)) n.has(t) || x(N[t], e);
+    for (let t of Object.keys(T)) n.has(t) || x(T[t], e);
 }
 function b() {
-    for (let e of Object.keys(N)) x(N[e]);
+    for (let e of Object.keys(T)) x(T[e]);
     S = !1;
 }
-class L extends i.Ay.Store {
+class O extends i.Ay.Store {
     static displayName = "ActivityTrackingStore";
     initialize() {
         this.waitFor(h.default, _.A, m.A, p.A, d.Ay, g.A, c.A), this.syncWith([c.A], y);
     }
     getActivities() {
-        return N;
+        return T;
     }
 }
-new L(a.h, {
+new O(a.h, {
     RUNNING_GAMES_CHANGE: () => y(),
     CONNECTION_OPEN: function () {
         if (S) return !1;
-        for (let e of Object.keys(N)) v(N[e]);
+        for (let e of Object.keys(T)) v(T[e]);
         y(!1), (S = !0);
     },
     CONNECTION_CLOSED: function (e) {
@@ -92,14 +92,14 @@ new L(a.h, {
     LOGOUT: b,
     ACTIVITY_UPDATE_SUCCESS: function (e) {
         let { applicationId: t, token: n } = e,
-            i = N[t];
+            i = T[t];
         if (null == i) return !1;
-        (i.token = n), r.w.set(I, N);
+        (i.token = n), r.w.set(I, T);
     },
     ACTIVITY_UPDATE_FAIL: function (e) {
         let { applicationId: t } = e,
-            n = N[t];
+            n = T[t];
         if (null == n) return !1;
-        (n.token = null), (n.updatedAt = null), r.w.set(I, N);
+        (n.token = null), (n.updatedAt = null), r.w.set(I, T);
     },
 });

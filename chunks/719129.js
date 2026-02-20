@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { GH: () => I, Zi: () => h, c1: () => T, r6: () => y });
+n.d(t, { GH: () => I, Zi: () => h, c1: () => T, r6: () => S });
 var r = n(73153),
     i = n(386406),
-    a = n(56562),
-    s = n(15285),
+    s = n(56562),
+    a = n(15285),
     o = n(760751),
     l = n(287809),
     u = n(954571),
@@ -16,15 +16,15 @@ function h() {
     return !d.Ay?.isModuleVersionAtLeast?.("discord_hook", p);
 }
 let m = null;
-async function g() {
+async function E() {
     if (!(0, c.isWindows)()) return Promise.reject(Error("Hook is only available on Windows"));
     if (h()) return Promise.reject(Error("Hook module is too old"));
     await d.Ay.ensureModule("discord_hook");
     let e = await d.Ay.requireModule("discord_hook");
     return A(e), e;
 }
-async function E() {
-    return null != m ? m : (m = await g());
+async function g() {
+    return null != m ? m : (m = await E());
 }
 function A(e) {
     if (null == e.setFlags) return;
@@ -36,9 +36,9 @@ function A(e) {
         e.setFlags(t);
 }
 function I(e, t) {
-    return g().then((n) => {
-        let l = s.Ay.getGameForPID(e)?.name,
-            c = o.A.getGameByName(l),
+    return E().then((n) => {
+        let l = a.Ay.getGameForPID(e)?.name,
+            c = o.A.getGameByName_DEPRECATED_DO_NOT_USE(l),
             d = null;
         return new Promise((o) => {
             let _ = (e, n) => {
@@ -52,8 +52,8 @@ function I(e, t) {
                         null != d && (clearTimeout(d), (d = null)),
                         n ? o() : o((e = e ?? "Unknown hook error"));
                 },
-                p = s.Ay.getOverlayOptionsForPID(e),
-                h = { ...a.gH, ...p, elevate: s.Ay.shouldElevateProcessForPID(e) };
+                p = a.Ay.getOverlayOptionsForPID(e),
+                h = { ...s.gH, ...p, elevate: a.Ay.shouldElevateProcessForPID(e) };
             null == h.allowHook || h.allowHook
                 ? ((d = setTimeout(() => {
                       n.cancelAttachToProcess(e), _("Timed out waiting for hook response", !1);
@@ -65,12 +65,12 @@ function I(e, t) {
     });
 }
 function T(e) {
-    return g().then((t) => {
+    return E().then((t) => {
         t.cancelAttachToProcess(e);
     });
 }
-function y() {
-    return E()
+function S() {
+    return g()
         .then((e) => (null != e.findSteamProcess ? e.findSteamProcess() : null))
         .catch(() => null);
 }

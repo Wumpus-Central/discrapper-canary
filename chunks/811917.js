@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => g });
 var r = n(835245),
     i = n(451988),
-    a = n(439372),
-    s = n(847521),
+    s = n(439372),
+    a = n(847521),
     o = n(760751),
     l = n(383501),
     u = n(954571),
@@ -13,7 +13,7 @@ var r = n(835245),
     f = n(652215);
 let p = 5 * c.A.Millis.MINUTE;
 function h(e) {
-    return e.distributor === f.d3x.ROBLOX ? (0, s.hD)(e) : null;
+    return e.distributor === f.d3x.ROBLOX ? (0, a.hD)(e) : null;
 }
 function m(e) {
     let t = null != e.name ? e.name : "",
@@ -21,7 +21,7 @@ function m(e) {
         r = h(e);
     return null != r && (n += `:${r}`), n;
 }
-class g extends a.A {
+class E extends s.A {
     heartbeatInterval = new i.IX();
     gameSessions = new Map();
     actions = {
@@ -46,20 +46,20 @@ class g extends a.A {
     logHeartbeat(e, t, n) {
         let r = e.runningGame,
             i = performance.now(),
-            a = t ? 0 : Math.round(i - e.lastHeartbeatTime),
-            c = r.id ?? o.A.getGameByName(r.name)?.id;
+            s = t ? 0 : Math.round(i - e.lastHeartbeatTime),
+            c = r.id ?? o.A.getGameByName_DEPRECATED_DO_NOT_USE(r.name)?.id;
         u.default.track(f.HAw.RUNNING_GAME_HEARTBEAT, {
             game_id: c,
             game_name: r.name,
             game_distributor: r.distributor,
             game_distributor_game_id: r.sku,
-            game_metadata: (0, s.MT)(r),
+            game_metadata: (0, a.MT)(r),
             game_executable: (0, d.Ic)(r.exePath),
             game_detection_enabled: (0, _.Xr)(r),
             initial_heartbeat: t,
             final_heartbeat: n,
             game_session_id: e.sessionId,
-            duration_tracked_ms: a,
+            duration_tracked_ms: s,
             rtc_connection_id: l.A.getRTCConnectionId(),
             media_session_id: l.A.getMediaSessionId(),
         }),
@@ -83,4 +83,4 @@ class g extends a.A {
         for (let e of this.gameSessions.values()) this.logHeartbeat(e, !1, !1);
     };
 }
-let E = new g();
+let g = new E();
