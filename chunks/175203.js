@@ -389,16 +389,16 @@ function ep(e) {
     }
 }
 function eg(e) {
-    let { icon: t, tooltipText: n, hideWhenInactive: s, onClick: l } = e;
+    let { icon: t, tooltipText: n, hideWhenInactive: s, idle: l, onClick: a } = e;
     return (0, i.jsx)(u.m, {
         text: n,
         children: (0, i.jsx)("div", {
-            className: r()(eu.V7, { [eu.kl]: s }),
+            className: r()(eu.V7, { [eu.kl]: s, [eu.N7]: l }),
             children: (0, i.jsx)(h.K0, {
                 size: "sm",
                 variant: "overlay-secondary",
                 onClick: (e) => {
-                    e.stopPropagation(), l(e);
+                    e.stopPropagation(), a(e);
                 },
                 "aria-label": n,
                 icon: t,
@@ -407,18 +407,19 @@ function eg(e) {
     });
 }
 function em(e) {
-    let { channelId: t, participantId: n, hideWhenInactive: l } = e,
-        r = s.useMemo(() => (0, I.A)(t, n), [t, n]),
-        a = (0, c.bG)([L.A], () => L.A.getIsAlwaysOnTop(r)),
-        o = s.useCallback(() => {
-            (0, b.X)(g.A.CALL_TILE_POPOUT, b.O.STAY_ON_TOP, !a), M.setAlwaysOnTop(r, !a);
-        }, [r, a]);
+    let { channelId: t, participantId: n, hideWhenInactive: l, idle: r } = e,
+        a = s.useMemo(() => (0, I.A)(t, n), [t, n]),
+        o = (0, c.bG)([L.A], () => L.A.getIsAlwaysOnTop(a)),
+        d = s.useCallback(() => {
+            (0, b.X)(g.A.CALL_TILE_POPOUT, b.O.STAY_ON_TOP, !o), M.setAlwaysOnTop(a, !o);
+        }, [a, o]);
     return J.isPlatformEmbedded && Q.Ay.supportsFeature(er.BYE.POPOUT_WINDOWS)
         ? (0, i.jsx)(eg, {
-              onClick: o,
-              tooltipText: a ? ed.intl.string(ed.t.YdyDM9) : ed.intl.string(ed.t.ZVGHwP),
-              icon: a ? h.hl9 : h.qgw,
+              onClick: d,
+              tooltipText: o ? ed.intl.string(ed.t.YdyDM9) : ed.intl.string(ed.t.ZVGHwP),
+              icon: o ? h.hl9 : h.qgw,
               hideWhenInactive: l,
+              idle: r,
           })
         : null;
 }
@@ -476,7 +477,9 @@ let e_ = s.memo((e) => {
         A && E === ea.lp.STREAM && ei.push((0, i.jsx)(j.A, { streamId: W, paused: H }, "zoom-controls")),
         A
             ? B === C.N.CALL_TILE &&
-              (ei.push((0, i.jsx)(em, { channelId: v.id, participantId: x, hideWhenInactive: !1 }, "stay-on-top")),
+              (ei.push(
+                  (0, i.jsx)(em, { channelId: v.id, participantId: x, hideWhenInactive: !1, idle: t }, "stay-on-top"),
+              ),
               ei.push(
                   (0, i.jsx)(
                       eg,
@@ -487,6 +490,7 @@ let e_ = s.memo((e) => {
                           tooltipText: ed.intl.string(ed.t["7Dwcnj"]),
                           icon: o.WindowReturnIcon,
                           hideWhenInactive: !1,
+                          idle: t,
                       },
                       "close",
                   ),
@@ -501,6 +505,7 @@ let e_ = s.memo((e) => {
                           tooltipText: ed.intl.string(ed.t["+1H47t"]),
                           icon: h.jNK,
                           hideWhenInactive: !$,
+                          idle: t,
                       },
                       "options",
                   ),
@@ -514,6 +519,7 @@ let e_ = s.memo((e) => {
                               tooltipText: G ? ed.intl.string(ed.t.YqAjXy) : ed.intl.string(ed.t.w4m945),
                               icon: G ? h._RO : h.HKD,
                               hideWhenInactive: !G && !$,
+                              idle: t,
                           },
                           "mute",
                       ),
@@ -551,7 +557,7 @@ let e_ = s.memo((e) => {
                         className: r()(eu.Qp, { [eu.EX]: l < 195 }),
                         children: [
                             (0, i.jsxs)(h.Text, {
-                                className: eu.ac,
+                                className: r()(eu.ac, { [eu.N7]: t }),
                                 color: "none",
                                 variant: Q ? "text-sm/normal" : "text-md/normal",
                                 children: [
@@ -578,16 +584,14 @@ let e_ = s.memo((e) => {
                                               children: (0, i.jsx)(h.G3N, { size: "lg", className: eu.Q6 }),
                                           })
                                         : null,
-                                    t
-                                        ? null
-                                        : (0, i.jsx)(ep, {
-                                              participantType: E,
-                                              platform: y,
-                                              className: r()(eu.fh, { [eu.oE]: Q }),
-                                          }),
-                                    null == n || "" === n || t
-                                        ? null
-                                        : (0, i.jsx)("span", { className: r()(eu.Wk, q), children: n }),
+                                    (0, i.jsx)(ep, {
+                                        participantType: E,
+                                        platform: y,
+                                        className: r()(eu.fh, { [eu.oE]: Q }),
+                                    }),
+                                    null != n && "" !== n
+                                        ? (0, i.jsx)("span", { className: r()(eu.Wk, q), children: n })
+                                        : null,
                                     R &&
                                         (0, i.jsx)(u.m, {
                                             text: ed.intl.string(ed.t.ZEem6O),
@@ -600,9 +604,9 @@ let e_ = s.memo((e) => {
                                         }),
                                 ],
                             }),
-                            !t && ei.length > 0
+                            ei.length > 0
                                 ? (0, i.jsx)(a.animated.div, {
-                                      className: eu._v,
+                                      className: r()(eu._v, { [eu.N7]: t }),
                                       style: { marginBottom: en.value },
                                       children: ei,
                                   })
