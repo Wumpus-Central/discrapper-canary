@@ -1,15 +1,15 @@
 n.d(t, { A: () => A });
 var i = n(627968),
     l = n(412703),
-    a = n(311907),
-    r = n(397927),
+    r = n(311907),
+    a = n(397927),
     s = n(829219),
     o = n(859703),
     d = n(868031),
     c = n(890687),
     u = n(590202),
-    m = n(792620),
-    _ = n(545986),
+    _ = n(792620),
+    m = n(545986),
     h = n(654487),
     p = n(985018);
 function g(e) {
@@ -29,27 +29,28 @@ let A = function (e) {
             quest: n,
             taskType: u,
             size: A = "sm",
+            variant: x = "primary",
             preClickCallback: f,
-            analyticsCtxQuestContent: x,
+            analyticsCtxQuestContent: C,
             analyticsCtxSourceQuestContent: E,
-            analyticsCtxQuestContentPosition: C,
-            analyticsCtxQuestContentRowIndex: I,
+            analyticsCtxQuestContentPosition: I,
+            analyticsCtxQuestContentRowIndex: b,
         } = e,
         T = {
-            questContent: x,
+            questContent: C,
             questContentCTA: g(u),
             sourceQuestContent: E,
-            questContentPosition: C,
-            questContentRowIndex: I,
+            questContentPosition: I,
+            questContentRowIndex: b,
         },
         v = n.id,
-        { isEnrolling: N } = (0, a.cf)([o.A], () => ({ isEnrolling: o.A.isEnrolling(v) }), [v]),
-        S = (0, _.Oz)(n),
-        b = (function (e, t) {
+        { isEnrolling: S } = (0, r.cf)([o.A], () => ({ isEnrolling: o.A.isEnrolling(v) }), [v]),
+        y = (0, m.Oz)(n),
+        N = (function (e, t) {
             let { launchInGameActivity: n } = (0, c.zW)(t);
-            if ((0, m.BS)(t))
+            if ((0, _.BS)(t))
                 return () => {
-                    (0, _.Fy)(t);
+                    (0, m.Fy)(t);
                 };
             switch (e) {
                 case l.n.ACHIEVEMENT_IN_GAME:
@@ -64,7 +65,7 @@ let A = function (e) {
                     return null;
             }
         })(u, n),
-        y = (function (e, t) {
+        j = (function (e, t) {
             let { features: n } = t.config;
             switch (e) {
                 case l.n.WATCH_VIDEO:
@@ -80,11 +81,11 @@ let A = function (e) {
                     return p.intl.string(p.t.kUQLMJ);
             }
         })(u, n),
-        j =
-            ((t = b ?? void 0),
+        L =
+            ((t = N ?? void 0),
             u === l.n.WATCH_VIDEO
                 ? async () => {
-                      await (0, _.e0)(n, {
+                      await (0, m.e0)(n, {
                           questContent: T.questContent,
                           questContentCTA: T.questContentCTA,
                           sourceQuestContent: T.sourceQuestContent,
@@ -103,15 +104,15 @@ let A = function (e) {
                       }),
                           t?.();
                   });
-    return (0, i.jsx)(r.Button, {
+    return (0, i.jsx)(a.Button, {
         size: A,
-        loading: N,
-        variant: "primary",
+        loading: S,
+        variant: x,
         onClick: () => {
-            f?.(), j();
+            f?.(), L();
         },
-        text: y,
-        icon: S,
+        text: j,
+        icon: y,
         fullWidth: !0,
     });
 };
