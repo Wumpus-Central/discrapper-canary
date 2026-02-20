@@ -1,10 +1,11 @@
-n.d(t, { Ay: () => m, r2: () => f }), n(321073);
-var i = n(95701),
-    l = n(994500),
-    r = n(287809),
-    o = n(427262),
-    a = n(148719),
-    s = n(47167),
+"use strict";
+n.d(t, { Ay: () => f, r2: () => h }), n(321073);
+var r = n(95701),
+    i = n(994500),
+    s = n(287809),
+    a = n(427262),
+    o = n(148719),
+    l = n(47167),
     u = n(652215),
     c = n(985018);
 function d(e) {
@@ -13,27 +14,28 @@ function d(e) {
         if (n) return c.intl.string(c.t["oj+HOs"]);
         else return c.intl.string(c.t.xI3TQQ);
 }
-function m(e) {
+function _(e) {
+    if (e) return c.intl.string(c.t["4qvAtn"]);
+}
+function f(e) {
     let t,
         {
             channel: n,
-            unread: o = !1,
-            mentionCount: m = 0,
-            userCount: f,
-            embeddedActivitiesCount: g,
-            isSubscriptionGated: p,
-            needSubscriptionToAccess: A,
+            unread: a = !1,
+            mentionCount: f = 0,
+            userCount: p,
+            embeddedActivitiesCount: h,
+            isSubscriptionGated: m,
+            needSubscriptionToAccess: E,
         } = e,
-        _ = (0, s.m1)(n, r.default, l.A),
-        v = (function (e) {
-            if (e) return c.intl.string(c.t["4qvAtn"]);
-        })((0, a.A)(n));
+        g = (0, l.m1)(n, s.default, i.A),
+        A = _((0, o.A)(n));
     switch (n.type) {
         case u.rbe.DM:
-            t = o ? c.t.F2MZsu : c.t.fYqXVY;
+            t = a ? c.t.F2MZsu : c.t.fYqXVY;
             break;
         case u.rbe.GROUP_DM:
-            t = o ? c.t["fxxUo/"] : c.t.lts3Ld;
+            t = a ? c.t["fxxUo/"] : c.t.lts3Ld;
             break;
         case u.rbe.GUILD_STORE:
             t = c.t.Bo4msg;
@@ -42,66 +44,60 @@ function m(e) {
             t = c.t["92EAF2"];
             break;
         case u.rbe.GUILD_ANNOUNCEMENT:
-            t = m > 0 ? c.t.sDKIpm : o ? c.t.VM7z8f : c.t.WJ3MPt;
+            t = f > 0 ? c.t.sDKIpm : a ? c.t.VM7z8f : c.t.WJ3MPt;
             break;
         case u.rbe.GUILD_VOICE:
-            let S = [c.intl.formatToPlainString(c.t.bkpadO, { channelName: _ })];
+            let I = [c.intl.formatToPlainString(c.t.bkpadO, { channelName: g })];
             if (
-                (m > 0 && S.push(c.intl.formatToPlainString(c.t["3l1GOx"], { mentionCount: m })),
-                o && S.push(c.intl.string(c.t.x5zAGZ)),
-                null != f)
+                (f > 0 && I.push(c.intl.formatToPlainString(c.t["3l1GOx"], { mentionCount: f })),
+                a && I.push(c.intl.string(c.t.x5zAGZ)),
+                null != p)
             ) {
                 let e = n.userLimit;
                 null != e && e > 0
-                    ? S.push(c.intl.formatToPlainString(c.t["6qgTOF"], { userCount: f, limit: e }))
-                    : S.push(c.intl.formatToPlainString(c.t.GNIiAA, { userCount: f }));
+                    ? I.push(c.intl.formatToPlainString(c.t["6qgTOF"], { userCount: p, limit: e }))
+                    : I.push(c.intl.formatToPlainString(c.t.GNIiAA, { userCount: p }));
             }
-            null != g && g > 0 && S.push(c.intl.formatToPlainString(c.t.O6PLYd, { activitiesCount: g }));
-            let E = d({ isSubscriptionGated: p, needSubscriptionToAccess: A });
-            return null != E && S.push(E), null != v && S.push(v), S.join(", ");
+            null != h && h > 0 && I.push(c.intl.formatToPlainString(c.t.O6PLYd, { activitiesCount: h }));
+            let T = d({ isSubscriptionGated: m, needSubscriptionToAccess: E });
+            return null != T && I.push(T), null != A && I.push(A), I.join(", ");
         case u.rbe.GUILD_STAGE_VOICE:
             t = c.t.TPPk2T;
             break;
         default:
-            t = i.Le.has(n.type)
-                ? m > 0
+            t = r.Le.has(n.type)
+                ? f > 0
                     ? c.t["ZL7+I6"]
-                    : o
+                    : a
                       ? c.t.YlVvmc
                       : c.t["0nZpiF"]
-                : m > 0
+                : f > 0
                   ? c.t.g8ONM0
-                  : o
+                  : a
                     ? c.t.smf1CZ
                     : c.t.s0JADj;
     }
-    let b = [c.intl.formatToPlainString(t, { channelName: _, mentionCount: m })],
-        h = d({ isSubscriptionGated: p, needSubscriptionToAccess: A });
-    return null != h && b.push(h), null != v && b.push(v), b.join(", ");
+    let S = [c.intl.formatToPlainString(t, { channelName: g, mentionCount: f })],
+        y = d({ isSubscriptionGated: m, needSubscriptionToAccess: E });
+    return null != y && S.push(y), null != A && S.push(A), S.join(", ");
 }
-function f(e) {
-    let { channel: t, muted: n, userStatus: i } = e;
+function p(e) {
+    switch (e) {
+        case u.clD.ONLINE:
+            return (0, a.MU)(u.clD.ONLINE);
+        case u.clD.IDLE:
+            return (0, a.MU)(u.clD.IDLE);
+        case u.clD.DND:
+            return (0, a.MU)(u.clD.DND);
+        case u.clD.INVISIBLE:
+            return (0, a.MU)(u.clD.INVISIBLE);
+        default:
+            return "";
+    }
+}
+function h(e) {
+    let { channel: t, muted: n, userStatus: r } = e;
     if (!0 === n) return c.intl.string(c.t.C4zCMb);
-    let l = [];
-    return (
-        t.type === u.rbe.DM &&
-            null != i &&
-            l.push(
-                (function (e) {
-                    switch (e) {
-                        case u.clD.ONLINE:
-                            return (0, o.MU)(u.clD.ONLINE);
-                        case u.clD.IDLE:
-                            return (0, o.MU)(u.clD.IDLE);
-                        case u.clD.DND:
-                            return (0, o.MU)(u.clD.DND);
-                        case u.clD.INVISIBLE:
-                            return (0, o.MU)(u.clD.INVISIBLE);
-                        default:
-                            return "";
-                    }
-                })(i),
-            ),
-        l.length > 0 ? l.join(", ") : void 0
-    );
+    let i = [];
+    return t.type === u.rbe.DM && null != r && i.push(p(r)), i.length > 0 ? i.join(", ") : void 0;
 }
