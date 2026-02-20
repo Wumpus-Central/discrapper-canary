@@ -96,7 +96,7 @@ function H(e) {
                                     children: (0, i.jsx)(h.nFg, { size: "xs", className: w.Kk }),
                                 }),
                                 (0, i.jsx)(h.Text, {
-                                    variant: "text-md/medium",
+                                    variant: g ? "text-sm/medium" : "text-md/medium",
                                     className: w.UU,
                                     lineClamp: 1,
                                     children: P.intl.string(P.t.NOP3Ry),
