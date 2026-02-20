@@ -481,6 +481,7 @@ var r = (function (e) {
         (e.USER_PROFILE_ACTIVITY_BUTTONS = "user profile activity buttons"),
         (e.USER_PROFILE_ACTIVITY_CLOUD_PLAY_SECTION = "user profile cloud play section"),
         (e.USER_PROFILE_WISHLIST = "user profile wishlist"),
+        (e.USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET = "user profile edit wishlist action sheet"),
         (e.WISHLIST_BANNER = "wishlist banner"),
         (e.BLOCKED_PROFILE_MODAL = "blocked profile modal"),
         (e.IGNORED_PROFILE_MODAL = "ignored profile modal"),
