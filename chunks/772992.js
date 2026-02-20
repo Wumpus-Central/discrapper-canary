@@ -1,2 +1,2 @@
 "use strict";
-e.exports = { $: "previewTotalSectionContainer_b41cc5" };
+e.exports = { p: "currencyWrapper_b41cc5", $: "previewTotalSectionContainer_b41cc5" };

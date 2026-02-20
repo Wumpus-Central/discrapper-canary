@@ -3,8 +3,8 @@ n.d(t, { DH: () => f, JW: () => _, a6: () => p, f7: () => c, jw: () => h, oo: ()
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    s = n(397927),
+    s = n.n(i),
+    a = n(397927),
     o = n(756366),
     l = n(985018),
     u = n(559485);
@@ -17,27 +17,28 @@ function c(e) {
             graphic: d,
             price: _,
             PriceIcon: f,
-            strikethroughPrice: p,
-            gift: h,
-            className: m,
+            priceSubText: p,
+            priceSubTextHasStrikethrough: h = !0,
+            gift: m,
+            className: E,
         } = e,
         g =
-            null != h
+            null != m
                 ? l.intl.format(o.default["2PiTTi"], {
-                      username: h.username,
-                      nickname: h.nickname ?? h.username,
-                      avatar: () => (0, r.jsx)("img", { alt: "", src: h.avatarUrl, className: u.s }),
+                      username: m.username,
+                      nickname: m.nickname ?? m.username,
+                      avatar: () => (0, r.jsx)("img", { alt: "", src: m.avatarUrl, className: u.s }),
                   })
                 : null;
     return (0, r.jsxs)("div", {
-        className: a()(u.kL, m),
+        className: s()(u.kL, E),
         children: [
             null != d && (0, r.jsx)("div", { className: u.Kk, children: d }),
             (0, r.jsxs)("div", {
                 className: u.Qs,
                 children: [
                     null != t &&
-                        (0, r.jsxs)(s.Text, {
+                        (0, r.jsxs)(a.Text, {
                             variant: "text-sm/semibold",
                             color: "text-muted",
                             lineClamp: 1,
@@ -50,20 +51,20 @@ function c(e) {
                             (0, r.jsxs)("div", {
                                 className: u.Qq,
                                 children: [
-                                    (0, r.jsx)(s.Text, {
+                                    (0, r.jsx)(a.Text, {
                                         variant: "text-md/normal",
                                         color: "text-default",
                                         lineClamp: 1,
                                         children: i,
                                     }),
-                                    (0, r.jsx)(s.Text, {
+                                    (0, r.jsx)(a.Text, {
                                         variant: "text-sm/normal",
                                         color: "text-muted",
                                         lineClamp: 2,
                                         children: c,
                                     }),
                                     null != g &&
-                                        (0, r.jsx)(s.Text, {
+                                        (0, r.jsx)(a.Text, {
                                             variant: "text-sm/normal",
                                             color: "text-muted",
                                             lineClamp: 1,
@@ -75,17 +76,17 @@ function c(e) {
                             (0, r.jsxs)("div", {
                                 className: u.p6,
                                 children: [
-                                    (0, r.jsxs)(s.Text, {
+                                    (0, r.jsxs)(a.Text, {
                                         variant: "text-md/medium",
                                         color: "text-default",
                                         className: u.nw,
                                         children: [null != f && (0, r.jsx)(f, { size: "xs" }), _],
                                     }),
                                     null != p &&
-                                        (0, r.jsx)(s.Text, {
-                                            variant: "text-xs/medium",
+                                        (0, r.jsx)(a.Text, {
+                                            variant: h ? "text-xs/medium" : "text-sm/normal",
                                             color: "text-muted",
-                                            className: u.Jb,
+                                            className: s()(u.Jb, { [u.Nc]: h }),
                                             children: p,
                                         }),
                                 ],
@@ -99,27 +100,27 @@ function c(e) {
 }
 function d(e) {
     let { color: t, Icon: n } = e;
-    return (0, r.jsx)(s.hLv, {
+    return (0, r.jsx)(a.hLv, {
         color: t,
         className: u.nC,
         children: (0, r.jsx)(n, { size: "lg", color: "var(--icon-strong)" }),
     });
 }
 function _() {
-    return (0, r.jsx)(d, { color: "nitro-pink", Icon: s.tvc });
+    return (0, r.jsx)(d, { color: "nitro-pink", Icon: a.tvc });
 }
 function f() {
-    return (0, r.jsx)(d, { color: "nitro-green", Icon: s.tvc });
+    return (0, r.jsx)(d, { color: "nitro-green", Icon: a.tvc });
 }
 function p() {
-    return (0, r.jsx)(d, { color: "pink", Icon: s._Jp });
+    return (0, r.jsx)(d, { color: "pink", Icon: a._Jp });
 }
 function h() {
-    return (0, r.jsx)(s.k9F, { size: "lg", color: "var(--icon-muted)" });
+    return (0, r.jsx)(a.k9F, { size: "lg", color: "var(--icon-muted)" });
 }
 function m() {
     return (0, r.jsx)("div", {
         className: u.CX,
-        children: (0, r.jsx)(s.tvc, { size: "lg", color: "var(--neutral-1)" }),
+        children: (0, r.jsx)(a.tvc, { size: "lg", color: "var(--neutral-1)" }),
     });
 }

@@ -275,7 +275,8 @@ let x = {
                             description: r,
                             price: i,
                             PriceIcon: s ? o.tvc : void 0,
-                            strikethroughPrice: u ? d : void 0,
+                            priceSubText: u ? d : void 0,
+                            priceSubTextHasStrikethrough: u,
                             graphic: (0, a.jsx)(e, {}),
                             gift: p
                                 ? {

@@ -160,19 +160,35 @@ function ee(e) {
                   }))));
     let eP = n?.eligiblePaymentGateways,
         ek = null != eP && eP.length > 0 && (eI === M.B || null === eT) && eh ? B.f.SELECT_PAYMENT_METHOD : void 0,
-        eU = (0, r.jsx)(h.A, {
-            label: q.intl.string(q.t["mmDvV+"]),
-            paymentSources: Object.values(s),
-            selectedPaymentSourceId: eI,
-            onChange: u,
-            onPaymentSourceAdd: E,
-            hidePersonalInformation: ey,
-            disabled: eC,
-            paymentGatewayRestrictions: n?.eligiblePaymentGateways,
-            className: a()({ [Q.E4]: em }),
-            shouldUseUnifiedCheckoutUI: ec,
+        eU = i.useMemo(
+            () => ({
+                label: q.intl.string(q.t["/AAR02"]),
+                selectedCurrency: o.currency,
+                currencies: ee,
+                onChange: ei,
+                disabled: eC,
+            }),
+            [ee, ei, o, eC],
+        ),
+        eG = i.useMemo(() => (0, r.jsx)(R.rk, { ...eU }), [eU]),
+        eF = (0, r.jsxs)(r.Fragment, {
+            children: [
+                (0, r.jsx)(h.A, {
+                    label: q.intl.string(q.t["mmDvV+"]),
+                    paymentSources: Object.values(s),
+                    selectedPaymentSourceId: eI,
+                    onChange: u,
+                    onPaymentSourceAdd: E,
+                    hidePersonalInformation: ey,
+                    disabled: eC,
+                    paymentGatewayRestrictions: n?.eligiblePaymentGateways,
+                    className: a()({ [Q.E4]: em }),
+                    shouldUseUnifiedCheckoutUI: ec,
+                }),
+                eG,
+            ],
         }),
-        eG = (0, r.jsx)(V.A, {
+        eV = (0, r.jsx)(V.A, {
             isActive: W,
             ref: F,
             children:
@@ -207,12 +223,12 @@ function ee(e) {
                           planGroup: J,
                       }),
         }),
-        eF = !eR && eb && !eE;
+        eB = !eR && eb && !eE;
     if (ec) {
         let e = (0, P.J$)(o.paymentSourceId),
             t = null,
             n = null;
-        if (eF)
+        if (eB)
             n = (0, r.jsx)(R.XH, {
                 planOptions: eO,
                 eligibleForMultiMonthPlans: !1,
@@ -228,12 +244,12 @@ function ee(e) {
         }
         return (0, r.jsx)(I.rg, {
             shouldShowGlobalNotices: !0,
-            paymentSelectContent: eU,
+            paymentSelectContent: eF,
             subscriptionDetailsContent: eM ? ew : (0, r.jsx)("div", { ref: eD }),
             purchaseItemContent: t,
             planSelectContent: n,
             invoiceSummaryContent: eM ? null : ew,
-            legalContent: eG,
+            legalContent: eV,
             invoiceTotalDueLabel: ex ? q.intl.string(Z.default.R0cZsM) : q.intl.string(Z.default["11g67A"]),
             invoiceTotalDueValue: null != eg ? (0, j.U5)(eg) : void 0,
         });
@@ -242,7 +258,7 @@ function ee(e) {
         className: Q.Du,
         children: [
             (0, r.jsx)(B.j, { paymentRestrictionBannerType: ek }),
-            eF &&
+            eB &&
                 (0, r.jsxs)("div", {
                     children: [
                         (0, r.jsx)(C.P, { planSkuId: eS.skuId }),
@@ -266,19 +282,9 @@ function ee(e) {
                     }),
                 }),
             (0, r.jsx)(_.D0$, { label: t, children: ew }),
-            (0, r.jsx)("div", { className: Q.LC, children: eU }),
-            (0, r.jsx)(f.f, {
-                currencies: ee,
-                className: Q.p2,
-                children: (0, r.jsx)(f.A, {
-                    label: q.intl.string(q.t["/AAR02"]),
-                    selectedCurrency: o.currency,
-                    currencies: ee,
-                    onChange: ei,
-                    disabled: eC,
-                }),
-            }),
-            eG,
+            (0, r.jsx)("div", { className: Q.LC, children: eF }),
+            (0, r.jsx)(f.f, { currencies: ee, className: Q.p2, children: (0, r.jsx)(f.A, { ...eU }) }),
+            eV,
         ],
     });
 }
@@ -311,18 +317,7 @@ function et(e) {
             n = (0, r.jsx)(j._J, { invoice: c, isPrepaidPaymentSource: _, shouldUseUnifiedCheckoutUI: o });
         return o
             ? (0, r.jsxs)(r.Fragment, { children: [n, (0, r.jsx)(J, { containerNode: l.current, children: e })] })
-            : (0, r.jsxs)(G.Yx, {
-                  className: X.__invalid_invoice,
-                  children: [
-                      (0, r.jsx)(j._J, { invoice: c, isPrepaidPaymentSource: _ }),
-                      (0, r.jsx)(j.m0, {
-                          premiumSubscription: t,
-                          renewalInvoice: c,
-                          isUpdate: !0,
-                          isPrepaidPaymentSource: _,
-                      }),
-                  ],
-              });
+            : (0, r.jsxs)(G.Yx, { className: X.__invalid_invoice, children: [n, e] });
     }
     return (0, r.jsx)(ei, { shouldUseUnifiedCheckoutUI: o });
 }

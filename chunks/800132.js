@@ -32,7 +32,8 @@ let N = (e) => e.name,
             ? {}
             : {
                   PriceIcon: i.showNitroPrice ? a.tvc : void 0,
-                  strikethroughPrice:
+                  priceSubTextHasStrikethrough: !0,
+                  priceSubText:
                       !s && i.finalPriceIsDifferent
                           ? (0, I.$g)(i.originalPrice.amount, i.originalPrice.currency)
                           : void 0,

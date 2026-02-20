@@ -43667,20 +43667,27 @@ screen and (max-width:485px) {
 
 .priceContainer_da8ac7 {
     align-items: flex-end;
-    display: flex;
     flex-direction: column;
-    flex-shrink: 0
+    flex-shrink: 0;
+    justify-content: space-between
+}
+
+.currentPrice_da8ac7,
+.priceContainer_da8ac7 {
+    display: flex;
+    gap: var(--space-4)
 }
 
 .currentPrice_da8ac7 {
     align-items: center;
-    display: flex;
-    gap: var(--space-4);
     white-space: nowrap
 }
 
+.strikethroughPrice_da8ac7 {
+    text-decoration: line-through
+}
+
 .originalPrice_da8ac7 {
-    text-decoration: line-through;
     -webkit-text-decoration-skip-ink: none;
     text-decoration-skip-ink: none;
     white-space: nowrap
@@ -44007,6 +44014,11 @@ screen and (max-width:485px) {
     margin-top: 16px
 }
 
+.currencyWrapper_b41cc5,
+.previewTotalSectionContainer_b41cc5 {
+    margin-top: var(--space-16)
+}
+
 .subscriptionCostRowAmount__3d62f {
     font-weight: var(--font-weight-medium)
 }
@@ -44313,10 +44325,6 @@ screen and (max-width:485px) {
 .promotionalNoticeContainer_bb5449,
 .totalDueReviewStep_bb5449 {
     margin-bottom: var(--space-12)
-}
-
-.previewTotalSectionContainer_b41cc5 {
-    margin-top: var(--space-16)
 }
 
 .renewalInvoiceDate_d313e6 {

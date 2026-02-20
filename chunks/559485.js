@@ -10,6 +10,7 @@ e.exports = {
     s: "giftAvatar_da8ac7",
     p6: "priceContainer_da8ac7",
     nw: "currentPrice_da8ac7",
+    Nc: "strikethroughPrice_da8ac7",
     Jb: "originalPrice_da8ac7",
     Kk: "icon_da8ac7",
     nC: "expressiveGradient_da8ac7",
