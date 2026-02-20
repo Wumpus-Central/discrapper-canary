@@ -120,23 +120,19 @@ function I(e) {
             ref: U,
             className: E.kL,
             children: [
-                y
-                    ? (0, i.jsxs)("div", {
-                          className: E.wx,
-                          children: [
-                              (0, i.jsx)(l.Text, {
-                                  variant: "text-xs/medium",
-                                  children: S ?? C.intl.string(C.t["7lZ31J"]),
-                              }),
-                              (0, i.jsx)(l.QWc, {
-                                  variant: "secondary",
-                                  textVariant: "text-xs/medium",
-                                  onClick: I,
-                                  text: C.intl.string(C.t.y6PSA3),
-                              }),
-                          ],
-                      })
-                    : (0, i.jsx)(l.Text, { variant: "text-sm/medium", children: S ?? C.intl.string(C.t["7lZ31J"]) }),
+                (0, i.jsxs)("div", {
+                    className: E.wx,
+                    children: [
+                        (0, i.jsx)(l.Text, { variant: "text-sm/medium", children: S ?? C.intl.string(C.t["7lZ31J"]) }),
+                        y &&
+                            (0, i.jsx)(l.QWc, {
+                                variant: "secondary",
+                                textVariant: "text-sm/medium",
+                                onClick: I,
+                                text: C.intl.string(C.t.y6PSA3),
+                            }),
+                    ],
+                }),
                 G.has(x.EZt.SOCIAL_LAYER_GAME_ITEM) &&
                     (0, i.jsx)(o.A, { location: "user_profile_sidebar_wishlist_breadcrumb" }),
                 (0, i.jsx)("div", { className: E.vY, children: y ? P : w }),
