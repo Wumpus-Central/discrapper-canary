@@ -1,6 +1,6 @@
 n.d(t, {
-    Ae: () => x,
-    B4: () => m,
+    Ae: () => z,
+    B4: () => h,
     C$: () => C,
     D4: () => W,
     Lq: () => L,
@@ -9,14 +9,14 @@ n.d(t, {
     Vl: () => _,
     Wi: () => b,
     es: () => P,
-    ld: () => H,
-    n0: () => z,
+    ld: () => k,
+    n0: () => H,
     rT: () => M,
     ro: () => U,
-    tP: () => k,
+    tP: () => x,
     uB: () => V,
     uX: () => R,
-    uh: () => h,
+    uh: () => m,
     vV: () => B,
 }),
     n(321073);
@@ -30,8 +30,8 @@ var r = n(136722),
     d = n(287809),
     c = n(147036),
     E = n(403362),
-    f = n(7864),
-    T = n(488926),
+    T = n(7864),
+    f = n(488926),
     S = n(661191),
     A = n(427262),
     g = n(737045),
@@ -40,7 +40,7 @@ var r = n(136722),
 function I(e) {
     return (0, s._m)(e, N.xBc.ADMINISTRATOR);
 }
-function m(e) {
+function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = I(e) ? g.T6.ADMINISTRATOR : g.T6.ROLE;
     return {
@@ -53,10 +53,10 @@ function m(e) {
         tags: e.tags,
     };
 }
-function h(e, t) {
+function m(e, t) {
     let n = +!I(e),
         r = +!I(t);
-    return n !== r ? n - r : (0, f.AT)(e, t);
+    return n !== r ? n - r : (0, T.AT)(e, t);
 }
 function _() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : p.intl.string(p.t["gnsna/"]);
@@ -76,23 +76,23 @@ function M(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
     return t
         .filter((e) => !I(e) && O(n, e.id, r) && !(0, s.Oy)(e) && i(e.name))
-        .sort(h)
-        .map((e) => m(e));
+        .sort(m)
+        .map((e) => h(e));
 }
 function w(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
     return t
         .filter((e) => !I(e) && O(n, e.id, r) && !(0, s.Oy)(e) && i(e.name))
-        .sort(h)
-        .map((e) => m(e, (0, s._m)(e, r)));
+        .sort(m)
+        .map((e) => h(e, (0, s._m)(e, r)));
 }
 function R(e, t, n, r, i) {
     let l = [];
     return 0 ===
         (l = t
             .filter((e) => I(e) || (!O(n, e.id, r, i) && !(0, s.Oy)(e)))
-            .sort(h)
-            .map((e) => m(e))).length
+            .sort(m)
+            .map((e) => h(e))).length
         ? _(p.intl.string(p.t.nZfHsf))
         : l;
 }
@@ -106,8 +106,8 @@ function C(e, t, n, i, l) {
                     (!O(n, e.id, i, l) && !(0, s.Oy)(e)) ||
                     r.zy(r.kg(e.permissions, n.permissionOverwrites[e.id]?.allow), i),
             )
-            .sort(h)
-            .map((e) => m(e, (0, s._m)(e, i)))).length
+            .sort(m)
+            .map((e) => h(e, (0, s._m)(e, i)))).length
         ? _(p.intl.string(p.t.nZfHsf))
         : u;
 }
@@ -119,8 +119,7 @@ function v(e, t) {
     return {
         rowType: n,
         name: G(e, t),
-        nickname: a.Ay.getNick(t.id, e.id) ?? null,
-        username: A.Ay.getName(e),
+        username: A.Ay.getUserTag(e),
         id: e.id,
         avatarURL: e.getAvatarURL(t.id, 24),
         bot: e.bot,
@@ -186,7 +185,7 @@ function U(e) {
 }
 function P(e, t, n) {
     let i = e.permissionOverwrites[e.guild_id];
-    null == i && (i = T.xT(e.guild_id));
+    null == i && (i = f.xT(e.guild_id));
     let l = { ...i };
     return (l.deny = r.TF(l.deny, t)), (l.allow = r.TF(l.allow, t)), n || (l.deny = r.WQ(l.deny, t)), l;
 }
@@ -194,12 +193,12 @@ function V(e, t, n) {
     let r = P(e, t, n);
     (0, i.LA)(e, r.id, r.allow, r.deny);
 }
-function k(e, t) {
+function x(e, t) {
     let n = d.default.getCurrentUser();
     if (null == n) return;
     let u = e.permissionOverwrites[n.id];
     if (null == u) {
-        let u = { id: n.id, type: l.r2.MEMBER, allow: r.WQ(T.x3, t), deny: T.x3 };
+        let u = { id: n.id, type: l.r2.MEMBER, allow: r.WQ(f.x3, t), deny: f.x3 };
         return (0, i.R$)(e.id, [u], !0);
     }
     {
@@ -207,17 +206,17 @@ function k(e, t) {
         return (n = r.WQ(n, t)), (0, i.LA)(e, u.id, n, l);
     }
 }
-function x(e, t) {
+function z(e, t) {
     if (null == e) return !1;
     let n = e.permissionOverwrites[e.guild_id];
     return t?.[e.guild_id] != null && (n = t[e.guild_id]), null != n && r.zy(n.deny, e.accessPermissions);
 }
-function z(e, t, n) {
+function H(e, t, n) {
     return e === N.rbe.GUILD_TEXT || e === N.rbe.GUILD_ANNOUNCEMENT
         ? t
         : (!(0, u.ay)(e) && e !== N.rbe.GUILD_CATEGORY) || (t && n);
 }
-function H(e) {
+function k(e) {
     switch (e) {
         case N.rbe.GUILD_TEXT:
         case N.rbe.GUILD_ANNOUNCEMENT:

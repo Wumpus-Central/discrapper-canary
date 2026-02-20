@@ -146,15 +146,13 @@ let p = (e) => {
                   children: [
                       (0, l.jsx)(c.euF, { src: s.avatarURL, size: c._3J.SIZE_24, "aria-label": "" }),
                       (0, l.jsx)(c.Text, { className: R.xZ, variant: "text-sm/normal", children: s.name }),
-                      null != s.nickname
-                          ? (0, l.jsx)(c.Text, {
-                                color: "text-muted",
-                                className: R.Gq,
-                                variant: "text-sm/normal",
-                                "aria-hidden": !0,
-                                children: s.username,
-                            })
-                          : null,
+                      (0, l.jsx)(c.Text, {
+                          color: "text-muted",
+                          className: R.Gq,
+                          variant: "text-sm/normal",
+                          "aria-hidden": !0,
+                          children: s.username,
+                      }),
                       s.bot && (0, l.jsx)(u.A, { verified: s.verifiedBot }),
                   ],
               });
