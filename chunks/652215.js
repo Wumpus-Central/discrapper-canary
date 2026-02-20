@@ -4508,6 +4508,7 @@ var na = (function (e) {
             (e.VOICE_AND_VIDEO_SETTINGS_UPDATED = "voice_and_video_settings_updated"),
             (e.CALL_BUTTON_CLICKED = "call_button_clicked"),
             (e.CALL_MENU_ITEM_INTERACTED = "call_menu_item_interacted"),
+            (e.CALL_TILE_POPPED_OUT = "call_tile_popped_out"),
             (e.USER_VOLUME_SETTING_UPDATED = "user_volume_setting_updated"),
             (e.VIDEO_OPENH264_DOWNLOADED = "video_openh264_downloaded"),
             (e.CLIP_SAVE_KEYBIND_PRESSED = "clip_save_keybind_pressed"),
