@@ -426,89 +426,103 @@ let eg = s.memo((e) => {
             idle: t,
             title: n,
             width: l,
-            focused: o,
-            videoToggleState: A,
-            blocked: p,
-            ignored: g,
-            participantId: m,
-            participantType: f,
-            participantUserId: C,
-            channel: E,
-            platform: N,
-            secureFramesVerified: S,
-            onContextMenu: T,
-            muted: y,
-            deafened: j,
-            localMuted: R,
-            serverMuted: O,
-            serverDeafened: L,
-            hasVideo: M,
-            hideAudioIcon: D,
-            onToggleMute: G,
-            popoutType: U,
-            paused: P,
-            controlsBottom: w,
-            streamId: k,
+            focused: A,
+            videoToggleState: p,
+            blocked: g,
+            ignored: m,
+            participantId: f,
+            participantType: C,
+            participantUserId: N,
+            channel: S,
+            platform: T,
+            secureFramesVerified: y,
+            onContextMenu: j,
+            muted: R,
+            deafened: L,
+            localMuted: M,
+            serverMuted: D,
+            serverDeafened: G,
+            hasVideo: U,
+            hideAudioIcon: P,
+            onToggleMute: w,
+            popoutType: k,
+            paused: V,
+            controlsBottom: H,
+            streamId: F,
         } = e,
-        V = (0, c.bG)([B.Ay], () => null != C && B.Ay.isLocalVideoAutoDisabled(C, (0, _.A)(f)), [C, f]),
-        H = (0, I.A)({ userId: C, guildId: E.getGuildId() }),
-        F = (0, b.a)({ displayNameStyles: H }),
-        K = (0, en.Y)(l),
-        Y = (0, en.V)(l),
-        [z, X] = s.useState(!1);
+        K = (0, c.bG)([B.Ay], () => null != N && B.Ay.isLocalVideoAutoDisabled(N, (0, _.A)(C)), [N, C]),
+        Y = (0, I.A)({ userId: N, guildId: S.getGuildId() }),
+        z = (0, b.a)({ displayNameStyles: Y }),
+        X = (0, en.Y)(l),
+        q = (0, en.V)(l),
+        [J, Q] = s.useState(!1);
     s.useEffect(() => {
         let e = !1,
             t = () => {
-                e !== W.A.isOpen() && ((e = W.A.isOpen()) || X(!1));
+                e !== W.A.isOpen() && ((e = W.A.isOpen()) || Q(!1));
             };
         return W.A.addChangeListener(t), () => W.A.removeChangeListener(t);
     }, []);
-    let q = !D && f === el.lp.STREAM && M && (!Y || R),
-        J = (function (e) {
+    let $ = !P && C === el.lp.STREAM && U && (!q || M),
+        Z = (function (e) {
             let { localMuted: t, serverMuted: n, serverDeafened: i, deafened: s, muted: l } = e;
             return i ? h.TJE : n ? h.O1p : s ? h.cQT : t ? h.O1p : l ? h.z0P : null;
-        })({ localMuted: R, serverMuted: O, serverDeafened: L, deafened: j, muted: y }),
-        Q = (0, h.zhh)({ value: null != w ? w : 0, config: { ...a.config.stiff, clamp: !0 } }, "animate-always"),
-        $ = [];
+        })({ localMuted: M, serverMuted: D, serverDeafened: G, deafened: L, muted: R }),
+        ee = (0, h.zhh)({ value: null != H ? H : 0, config: { ...a.config.stiff, clamp: !0 } }, "animate-always"),
+        et = [];
     return (
-        o && f === el.lp.STREAM && $.push((0, i.jsx)(v.A, { streamId: k, paused: P }, "zoom-controls")),
-        o
-            ? U === x.N.CALL_TILE &&
-              $.push((0, i.jsx)(ep, { channelId: E.id, participantId: m, hideWhenInactive: !z }, "stay-on-top"))
-            : ($.push(
+        A && C === el.lp.STREAM && et.push((0, i.jsx)(v.A, { streamId: F, paused: V }, "zoom-controls")),
+        A
+            ? k === x.N.CALL_TILE &&
+              (et.push((0, i.jsx)(ep, { channelId: S.id, participantId: f, hideWhenInactive: !1 }, "stay-on-top")),
+              et.push(
+                  (0, i.jsx)(
+                      eA,
+                      {
+                          onClick: () => {
+                              O.close((0, E.A)(S.id, f));
+                          },
+                          tooltipText: eo.intl.string(eo.t["7Dwcnj"]),
+                          icon: o.WindowReturnIcon,
+                          hideWhenInactive: !1,
+                      },
+                      "close",
+                  ),
+              ))
+            : (et.push(
                   (0, i.jsx)(
                       eA,
                       {
                           onClick: (e) => {
-                              e.stopPropagation(), X(!0), T(e, !0, el.GK.THREE_DOT);
+                              e.stopPropagation(), Q(!0), j(e, !0, el.GK.THREE_DOT);
                           },
                           tooltipText: eo.intl.string(eo.t["+1H47t"]),
                           icon: h.jNK,
-                          hideWhenInactive: !z,
+                          hideWhenInactive: !J,
                       },
                       "options",
                   ),
               ),
-              q &&
-                  $.push(
+              $ &&
+                  et.push(
                       (0, i.jsx)(
                           eA,
                           {
-                              onClick: G,
-                              tooltipText: R ? eo.intl.string(eo.t.YqAjXy) : eo.intl.string(eo.t.w4m945),
-                              icon: R ? h._RO : h.HKD,
-                              hideWhenInactive: !R && !z,
+                              onClick: w,
+                              tooltipText: M ? eo.intl.string(eo.t.YqAjXy) : eo.intl.string(eo.t.w4m945),
+                              icon: M ? h._RO : h.HKD,
+                              hideWhenInactive: !M && !J,
                           },
                           "mute",
                       ),
                   )),
         (0, i.jsxs)("div", {
-            className: r()(ec.MU, { [ec.oE]: Y, [ec.Ol]: o }),
+            className: r()(ec.MU, { [ec.oE]: q, [ec.Ol]: A }),
             children: [
                 (0, i.jsx)("div", {
                     className: r()(ec.Ik, { [ec.EX]: l < 195 }),
                     children:
-                        V || A === es.bb8.AUTO_PROBING
+                        K || p === es.bb8.AUTO_PROBING
                             ? t
                                 ? (0, i.jsx)("div", {
                                       className: ec.h5,
@@ -530,23 +544,23 @@ let eg = s.memo((e) => {
                                   })
                             : null,
                 }),
-                !K &&
+                !X &&
                     (0, i.jsxs)("div", {
                         className: r()(ec.Qp, { [ec.EX]: l < 195 }),
                         children: [
                             (0, i.jsxs)(h.Text, {
                                 className: ec.ac,
                                 color: "none",
-                                variant: Y ? "text-sm/normal" : "text-md/normal",
+                                variant: q ? "text-sm/normal" : "text-md/normal",
                                 children: [
-                                    null != J &&
-                                        f === el.lp.USER &&
-                                        (0, i.jsx)(J, {
-                                            className: r()(ec.fh, { [ec.oE]: Y }),
+                                    null != Z &&
+                                        C === el.lp.USER &&
+                                        (0, i.jsx)(Z, {
+                                            className: r()(ec.fh, { [ec.oE]: q }),
                                             size: "xs",
                                             color: "currentColor",
                                         }),
-                                    p
+                                    g
                                         ? (0, i.jsx)("div", {
                                               className: ec.Z5,
                                               children: (0, i.jsx)(h.KTN, {
@@ -556,7 +570,7 @@ let eg = s.memo((e) => {
                                               }),
                                           })
                                         : null,
-                                    g
+                                    m
                                         ? (0, i.jsx)("div", {
                                               className: ec.PP,
                                               children: (0, i.jsx)(h.G3N, { size: "lg", className: ec.Q6 }),
@@ -565,14 +579,14 @@ let eg = s.memo((e) => {
                                     t
                                         ? null
                                         : (0, i.jsx)(eh, {
-                                              participantType: f,
-                                              platform: N,
-                                              className: r()(ec.fh, { [ec.oE]: Y }),
+                                              participantType: C,
+                                              platform: T,
+                                              className: r()(ec.fh, { [ec.oE]: q }),
                                           }),
                                     null == n || "" === n || t
                                         ? null
-                                        : (0, i.jsx)("span", { className: r()(ec.Wk, F), children: n }),
-                                    S &&
+                                        : (0, i.jsx)("span", { className: r()(ec.Wk, z), children: n }),
+                                    y &&
                                         (0, i.jsx)(u.m, {
                                             text: eo.intl.string(eo.t.ZEem6O),
                                             children: (0, i.jsx)(h.m5V, {
@@ -584,11 +598,11 @@ let eg = s.memo((e) => {
                                         }),
                                 ],
                             }),
-                            !t && $.length > 0
+                            !t && et.length > 0
                                 ? (0, i.jsx)(a.animated.div, {
                                       className: ec._v,
-                                      style: { marginBottom: Q.value },
-                                      children: $,
+                                      style: { marginBottom: ee.value },
+                                      children: et,
                                   })
                                 : null,
                         ],
