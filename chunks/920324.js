@@ -1,31 +1,31 @@
 "use strict";
-n.d(t, { t: () => u });
-var r = n(627968),
-    i = n(64700),
-    a = n(295918),
-    s = n(41770),
-    o = n(148702),
-    l = n(785330);
-let u = {
+a.d(t, { t: () => d });
+var l = a(627968),
+    r = a(64700),
+    n = a(179262),
+    s = a(41770),
+    i = a(148702),
+    o = a(785330);
+let d = {
     title: "Layout Builder",
     stories: [
         {
             name: "Layout Builder",
             id: "layout-builder",
             component: () => {
-                let [e, t] = i.useState(JSON.stringify(s.u, null, 2)),
-                    [n, a] = i.useState(e);
+                let [e, t] = r.useState(JSON.stringify(s.u, null, 2)),
+                    [a, n] = r.useState(e);
                 return (
-                    i.useEffect(() => {
+                    r.useEffect(() => {
                         try {
-                            (0, l.F2)(JSON.parse(e)) && a(e);
+                            (0, o.F2)(JSON.parse(e)) && n(e);
                         } catch {}
                     }, [e]),
-                    (0, r.jsxs)("div", {
+                    (0, l.jsxs)("div", {
                         children: [
-                            (0, r.jsx)(o.A, { value: e, onChange: (e) => t(e) }),
-                            (0, r.jsx)("hr", {}),
-                            (0, r.jsx)(l.Ay, { layout: JSON.parse(n) }),
+                            (0, l.jsx)(i.A, { value: e, onChange: (e) => t(e) }),
+                            (0, l.jsx)("hr", {}),
+                            (0, l.jsx)(o.Ay, { layout: JSON.parse(a) }),
                         ],
                     })
                 );
@@ -37,9 +37,9 @@ let u = {
             id: "shop-index-page",
             component: (e) => {
                 let { collectionId: t } = e,
-                    { isFetching: n, category: s } = (0, a.U)(t),
-                    o = i.useMemo(() => {
-                        let e = s?.styles?.backgroundColors?.[0];
+                    { collection: a, isFetching: s } = (0, n.A)(t),
+                    i = r.useMemo(() => {
+                        let e = a?.styles?.backgroundColors?.[0];
                         return {
                             id: "shop-index-page",
                             children: [
@@ -48,7 +48,7 @@ let u = {
                                     children: [
                                         {
                                             block: "ContainedHero",
-                                            bannerSrc: s?.catalogBannerUrl ?? "",
+                                            bannerSrc: a?.catalogBannerUrl ?? "",
                                             backgroundColor: e?.toHexString() ?? "red",
                                         },
                                     ],
@@ -60,30 +60,30 @@ let u = {
                                             block: "Grid",
                                             columns: 3,
                                             children:
-                                                s?.products.map((e) => ({
+                                                a?.products.map((e) => ({
                                                     block: "ShopProductCard",
-                                                    skuId: e.skuId,
+                                                    skuId: e.skuIds[0],
                                                 })) ?? [],
                                         },
                                     ],
                                 },
                             ],
                         };
-                    }, [s]);
-                return n ? (0, r.jsx)("div", { children: "Loading..." }) : (0, r.jsx)(l.Ay, { layout: o });
+                    }, [a?.styles?.backgroundColors, a?.catalogBannerUrl, a?.products]);
+                return s ? (0, l.jsx)("div", { children: "Loading..." }) : (0, l.jsx)(o.Ay, { layout: i });
             },
-            controls: { collectionId: { label: "Collection Id", type: "text", defaultValue: "1458472704079434020" } },
+            controls: { collectionId: { label: "Collection Id", type: "text", defaultValue: "1458472704809111646" } },
         },
         {
             name: "Remote Layouts",
             id: "remote-layouts",
             component: (e) => {
-                let { layoutId: t, tenantId: n } = e;
-                return (0, r.jsx)(l.Qs, { layoutId: t, tenantId: n });
+                let { layoutId: t, tenantId: a } = e;
+                return (0, l.jsx)(o.Qs, { layoutId: t, tenantId: a });
             },
             controls: {
                 layoutId: { label: "Layout Id", type: "text", defaultValue: "1465939725649973269" },
-                tenantId: { label: "Tenant Id", type: "text", defaultValue: n(652215).FYj },
+                tenantId: { label: "Tenant Id", type: "text", defaultValue: a(652215).FYj },
             },
         },
     ],

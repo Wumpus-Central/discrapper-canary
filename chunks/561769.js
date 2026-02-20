@@ -15,7 +15,7 @@ var l,
     b = a(940622),
     p = a(758836),
     g = a(652215);
-let f = n.createContext({ flattenProductVariants: !1 });
+let f = n.createContext({ flattenProductVariants: !1, productOverride: void 0 });
 function j() {
     return n.useContext(f).flattenProductVariants;
 }
@@ -67,9 +67,13 @@ let _ = (e, t, a) => (l) => {
         )(t);
     },
     k = (e) => {
-        let t = j(),
-            a = (0, i.bG)([u.A], () =>
-                t ? u.A.getProduct(e) : u.A.getCategoryForProduct(e)?.products.find((t) => t.skuId === e),
+        let { flattenProductVariants: t, productOverride: a } = n.useContext(f),
+            l = (0, i.bG)([u.A], () =>
+                null != a
+                    ? a
+                    : t
+                      ? u.A.getProduct(e)
+                      : u.A.getCategoryForProduct(e)?.products.find((t) => t.skuId === e),
             );
-        return (0, b.Iv)(a);
+        return (0, b.Iv)(l);
     };
