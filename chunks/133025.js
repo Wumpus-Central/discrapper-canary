@@ -1,5 +1,4 @@
-"use strict";
-i.d(t, { A: () => o });
+i.d(t, { A: () => a });
 var n = i(311907),
     s = i(73153);
 function r(e, t) {
@@ -7,12 +6,12 @@ function r(e, t) {
     return [...e, ...t].join(",");
 }
 let l = {};
-class a extends n.Ay.Store {
+class o extends n.Ay.Store {
     getRecommendations(e, t) {
         if (0 !== e.length && 0 !== t.length) return l[r(e, t)];
     }
 }
-let o = new a(s.h, {
+let a = new o(s.h, {
     LOGOUT: function () {
         l = {};
     },

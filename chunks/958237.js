@@ -9,5 +9,4 @@ e.exports = {
     nM: "wishlistHeader__19a29",
     Uf: "wishlistTitle__19a29",
     KN: "wishlistGrid__19a29",
-    lV: "wishlistPlaceholder__19a29",
 };

@@ -21,7 +21,12 @@ function u(e) {
         case s.R.AVATAR_DECORATION:
             return (0, i.jsx)("div", {
                 className: c._P,
-                children: (0, i.jsx)(a.i, { item: p, user: n, isHighlighted: u, avatarSize: l._3J.SIZE_80 }),
+                children: (0, i.jsx)(a.i, {
+                    item: p,
+                    user: n,
+                    isHighlighted: u,
+                    avatarSize: h === d.Y.MEDIUM_SQUARE ? l._3J.SIZE_96 : l._3J.SIZE_80,
+                }),
             });
         case s.R.NAMEPLATE:
             return (0, i.jsxs)("div", {
@@ -35,8 +40,9 @@ function u(e) {
                             isHighlighted: u,
                             showPlaceholderUser: !0,
                             showStatus: !0,
-                            nameplatePreviewSize: "default",
-                            width: h === d.Y.SMALL ? 136 : 200,
+                            nameplatePreviewSize: h === d.Y.MEDIUM_SQUARE ? "small" : "default",
+                            width:
+                                h === d.Y.MEDIUM_SQUARE ? 171 : h === d.Y.SMALL || h === d.Y.SMALL_SQUARE ? 136 : 200,
                         }),
                     }),
                     (0, i.jsx)("div", {
@@ -48,8 +54,9 @@ function u(e) {
                             isHighlighted: u,
                             showPlaceholderUser: !0,
                             showStatus: !0,
-                            nameplatePreviewSize: "default",
-                            width: h === d.Y.SMALL ? 136 : 200,
+                            nameplatePreviewSize: h === d.Y.MEDIUM_SQUARE ? "small" : "default",
+                            width:
+                                h === d.Y.MEDIUM_SQUARE ? 171 : h === d.Y.SMALL || h === d.Y.SMALL_SQUARE ? 136 : 200,
                         }),
                     }),
                 ],

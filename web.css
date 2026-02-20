@@ -35730,6 +35730,13 @@ html:not(.chat-input) .inputInner_b1f01d {
     width: 136px
 }
 
+.mediumSquareCard__39b32 {
+    background-color: var(--background-mod-normal);
+    border-radius: 8px;
+    height: 150px;
+    width: 150px
+}
+
 .largeCard__39b32 {
     height: 173px;
     width: 133px
@@ -35844,6 +35851,17 @@ html:not(.chat-input) .inputInner_b1f01d {
     transform: scale(.5)
 }
 
+.mediumSquareCard__39b32 .bundlePreview__39b32 {
+    height: 175px;
+    transform: scale(.7);
+    width: 300px
+}
+
+.card__39b32.mediumSquareCard__39b32:focus-within .bundlePreview__39b32,
+.card__39b32.mediumSquareCard__39b32:hover .bundlePreview__39b32 {
+    transform: scale(.7)
+}
+
 .avatarDecorationPreview__39b32 {
     align-items: center;
     display: flex;
@@ -35866,6 +35884,11 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .card__39b32.smallSquareCard__39b32:focus-within .avatarDecorationPreview__39b32,
 .card__39b32.smallSquareCard__39b32:hover .avatarDecorationPreview__39b32 {
+    transform: none
+}
+
+.card__39b32.mediumSquareCard__39b32:focus-within .cardPreview__39b32 .avatarDecorationPreview__39b32,
+.card__39b32.mediumSquareCard__39b32:hover .cardPreview__39b32 .avatarDecorationPreview__39b32 {
     transform: none
 }
 
@@ -35894,6 +35917,11 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .card__39b32.smallSquareCard__39b32:focus-within .nameplatePreview__39b32,
 .card__39b32.smallSquareCard__39b32:hover .nameplatePreview__39b32 {
+    transform: none
+}
+
+.card__39b32.mediumSquareCard__39b32:focus-within .nameplatePreview__39b32,
+.card__39b32.mediumSquareCard__39b32:hover .nameplatePreview__39b32 {
     transform: none
 }
 
@@ -35927,6 +35955,16 @@ html:not(.chat-input) .inputInner_b1f01d {
 .smallSquareCard__39b32 .nameplateBottomRight__39b32 {
     bottom: 22px;
     inset-inline-end: 22px
+}
+
+.mediumSquareCard__39b32 .nameplateTopLeft__39b32 {
+    inset-inline-start: 30px;
+    top: 40px
+}
+
+.mediumSquareCard__39b32 .nameplateBottomRight__39b32 {
+    bottom: 37px;
+    inset-inline-end: 30px
 }
 
 .removeItemButton__39b32 {
@@ -36005,6 +36043,10 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .itemIconHeart__39b32 {
     fill: var(--control-critical-primary-background-default)
+}
+
+.itemIconHeartWhite__39b32 {
+    fill: var(--white)
 }
 
 .itemIconShop__39b32 {
@@ -45444,6 +45486,10 @@ screen and (max-width:485px) {
 
 .itemIconHeart__20585 {
     fill: var(--control-critical-primary-background-default)
+}
+
+.itemIconHeartWhite__20585 {
+    fill: var(--white)
 }
 
 .itemIconShop__20585 {

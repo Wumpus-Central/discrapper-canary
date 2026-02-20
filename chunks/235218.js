@@ -1,143 +1,148 @@
 "use strict";
-n.d(t, { A: () => v });
+n.d(t, { A: () => C });
 var r = n(627968),
     i = n(64700),
-    a = n(311907),
-    s = n(397927),
-    o = n(793574),
-    l = n(688810),
-    u = n(429913),
-    c = n(657331),
-    d = n(242640),
-    _ = n(111085),
-    f = n(594832),
-    p = n(580630),
-    h = n(44724),
-    m = n(317560),
-    g = n(533406),
-    E = n(366523),
-    A = n(788868),
-    I = n(818348),
-    T = n(985018),
-    y = n(125908);
-let S = 20;
-function v(e) {
+    s = n(503698),
+    a = n.n(s),
+    o = n(311907),
+    l = n(397927),
+    u = n(793574),
+    c = n(688810),
+    d = n(429913),
+    _ = n(657331),
+    f = n(798048),
+    p = n(111085),
+    h = n(594832),
+    m = n(580630),
+    E = n(44724),
+    g = n(317560),
+    A = n(533406),
+    I = n(366523),
+    T = n(788868),
+    S = n(818348),
+    y = n(985018),
+    v = n(125908);
+let N = 20;
+function C(e) {
     let {
             profileOwner: t,
             additionalUserIds: n,
-            hideButtonIcon: v = !1,
+            hideButtonIcon: s = !1,
             showPrice: C = !1,
             showIcons: b = !1,
-            source: N = f.uS.WISHLIST,
-            analyticsLocations: R,
-            ...O
+            source: R = h.uS.WISHLIST,
+            heartColor: O = "red",
+            onWishlistItemClick: D,
+            analyticsLocations: L,
+            ...w
         } = e,
-        { item: D, isOwner: L, giftingOrigin: w = A.vQ.USER_PROFILE_WISHLIST } = O,
-        x = D.sku,
-        P = x.applicationId,
-        M = (0, u.h)(P),
-        k = i.useRef(null),
-        { analyticsLocations: U } = (0, l.Ay)(...(R ?? []), o.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD),
-        G = (0, a.bG)([_.A], () => null != t && _.A.hasSentGift(D.skuId, t.id), [D.skuId, t]),
-        V = G || !0 === D.isOwned,
-        F = D.skuName,
+        { item: x, isOwner: M, giftingOrigin: P = T.vQ.USER_PROFILE_WISHLIST } = w,
+        k = x.sku,
+        U = k.applicationId,
+        G = (0, d.h)(U),
+        F = i.useRef(null),
+        { analyticsLocations: V } = (0, c.Ay)(...(L ?? []), u.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD),
+        B = (0, o.bG)([p.A], () => null != t && p.A.hasSentGift(x.skuId, t.id), [x.skuId, t]),
+        H = B || !0 === x.isOwned,
+        j = x.skuName,
         {
-            buttonCTALabel: B,
-            buttonIcon: j,
-            handleCardClick: H,
+            buttonCTALabel: Y,
+            buttonIcon: W,
+            handleCardClick: K,
         } = i.useMemo(
             () =>
-                L || V
+                M || H
                     ? {
                           buttonCTALabel: C
-                              ? (0, p.$g)(x.price?.amount ?? 0, x.price?.currency ?? I.Yr.USD)
-                              : T.intl.string(T.t.FdGl5A),
+                              ? (0, m.$g)(k.price?.amount ?? 0, k.price?.currency ?? S.Yr.USD)
+                              : y.intl.string(y.t.FdGl5A),
                           buttonIcon: void 0,
                           handleCardClick: () => {
-                              M?.guildId != null &&
-                                  (L
-                                      ? ((0, c.closeUserProfileModal)(),
-                                        (0, h.default)({ guildId: M.guildId, skuId: x.id, slug: x.slug }))
-                                      : (0, m.R)({
-                                            skuId: x.id,
-                                            applicationId: M.id,
-                                            guildId: M.guildId,
+                              G?.guildId != null &&
+                                  (M
+                                      ? ((0, _.closeUserProfileModal)(),
+                                        (0, E.default)({ guildId: G.guildId, skuId: k.id, slug: k.slug }))
+                                      : (0, g.R)({
+                                            skuId: k.id,
+                                            applicationId: G.id,
+                                            guildId: G.guildId,
                                             isStorefront: !1,
-                                            analyticsLocations: U,
+                                            analyticsLocations: V,
                                         }));
                           },
                       }
                     : {
                           buttonCTALabel: C
-                              ? (0, p.$g)(x.price?.amount ?? 0, x.price?.currency ?? I.Yr.USD)
-                              : T.intl.string(T.t.ilhtIa),
-                          buttonIcon: v ? void 0 : s.okO,
+                              ? (0, m.$g)(k.price?.amount ?? 0, k.price?.currency ?? S.Yr.USD)
+                              : y.intl.string(y.t.ilhtIa),
+                          buttonIcon: s ? void 0 : l.okO,
                           handleCardClick: () => {
-                              G ||
-                                  (0, g.a)(
-                                      x,
-                                      { isGift: !0, giftRecipient: t, additionalUserIds: n, giftingOrigin: w },
+                              B ||
+                                  (D?.(),
+                                  (0, A.a)(
+                                      k,
+                                      { isGift: !0, giftRecipient: t, additionalUserIds: n, giftingOrigin: P },
                                       {
                                           analyticsLocations: [
-                                              ...U,
-                                              o.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON,
+                                              ...V,
+                                              u.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON,
                                           ],
                                       },
-                                  );
+                                  ));
                           },
                       },
-            [L, V, C, x, v, M, G, t, n, w, U],
+            [M, H, C, k, s, G, B, t, n, P, D, V],
         ),
-        Y = i.useCallback(
+        z = i.useCallback(
             () =>
                 b
-                    ? N === f.uS.WISHLIST
+                    ? R === h.uS.WISHLIST
                         ? (0, r.jsx)("div", {
-                              className: y.Fx,
-                              children: (0, r.jsx)(s.C3E, {
+                              className: v.Fx,
+                              children: (0, r.jsx)(l.C3E, {
                                   size: "custom",
-                                  width: S,
-                                  height: S,
+                                  width: N,
+                                  height: N,
                                   color: "currentColor",
-                                  colorClass: y.Be,
+                                  colorClass: a()({ [v.aP]: "white" === O, [v.Be]: "red" === O }),
                               }),
                           })
-                        : N === f.uS.POPULAR
+                        : R === h.uS.POPULAR
                           ? (0, r.jsx)("div", {
-                                className: y.Fx,
-                                children: (0, r.jsx)(s.Y3C, {
+                                className: v.Fx,
+                                children: (0, r.jsx)(l.Y3C, {
                                     size: "custom",
-                                    width: S,
-                                    height: S,
+                                    width: N,
+                                    height: N,
                                     color: "currentColor",
-                                    colorClass: y.rY,
+                                    colorClass: v.rY,
                                 }),
                             })
                           : null
                     : null,
-            [b, N],
+            [b, R, O],
         ),
-        W = i.useCallback(
+        $ = i.useCallback(
             () =>
-                (0, r.jsx)(E.e, {
+                (0, r.jsx)(I.e, {
                     shape: "custom",
-                    containerClassName: y.Nr,
-                    backgroundImageClassName: y.GC,
-                    foregroundImageClassName: y.wP,
-                    sku: x,
+                    containerClassName: v.Nr,
+                    backgroundImageClassName: v.GC,
+                    foregroundImageClassName: v.wP,
+                    sku: k,
                 }),
-            [x],
+            [k],
         );
-    return (0, r.jsx)(d.A, {
-        ...O,
-        source: N,
-        cardRef: k,
-        accessibleLabel: F,
-        onCardClick: H,
-        buttonCTALabel: B,
-        buttonIcon: j,
-        isOwned: V,
-        renderItemPreview: W,
-        renderSourceIcon: Y,
+    return (0, r.jsx)(f.A, {
+        ...w,
+        source: R,
+        cardRef: F,
+        accessibleLabel: j,
+        onCardClick: K,
+        buttonCTALabel: Y,
+        buttonIcon: W,
+        isOwned: H,
+        renderItemPreview: $,
+        renderSourceIcon: z,
     });
 }

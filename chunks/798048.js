@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => E, Y: () => g });
+n.d(t, { A: () => g, Y: () => E });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(397927),
     l = n(594832),
     u = n(954571),
@@ -14,32 +14,33 @@ var r = n(627968),
     p = n(788868),
     h = n(985018),
     m = n(752276),
-    g = (function (e) {
+    E = (function (e) {
         return (
             (e.SMALL = "small"),
             (e.SMALL_SQUARE = "small-square"),
+            (e.MEDIUM_SQUARE = "medium-square"),
             (e.MEDIUM = "medium"),
             (e.LARGE = "large"),
             (e.FLEX = "flex"),
             e
         );
     })({});
-function E(e) {
+function g(e) {
     let {
             item: t,
             wishlistId: n,
-            isOwner: a,
-            cardSize: g = "medium",
-            showOverlayButton: E = !0,
+            isOwner: s,
+            cardSize: E = "medium",
+            showOverlayButton: g = !0,
             cardRef: A,
             renderItemPreview: I,
             accessibleLabel: T,
-            onCardClick: y,
-            buttonCTALabel: S,
+            onCardClick: S,
+            buttonCTALabel: y,
             buttonIcon: v,
-            isOwned: C = !1,
-            renderSourceIcon: b,
-            dragHandle: N,
+            isOwned: N = !1,
+            renderSourceIcon: C,
+            dragHandle: b,
             giftingOrigin: R,
             source: O,
         } = e,
@@ -47,24 +48,24 @@ function E(e) {
         L = i.useRef(null),
         w = null != A ? A : L,
         { trackUserProfileWishlistAction: x } = (0, c.NJ)(),
-        P = (0, r.jsx)("div", {
+        M = (0, r.jsx)("div", {
             className: m.Af,
             children: (0, r.jsx)(o.rOg, {
                 size: "custom",
                 color: o.LU0.colors.WHITE,
                 width: 38,
                 height: 38,
-                className: s()(m.x6, m.AI),
+                className: a()(m.x6, m.AI),
                 "aria-label": h.intl.string(h.t.L5Pt9L),
             }),
         }),
-        M = (0, r.jsx)("div", {
+        P = (0, r.jsx)("div", {
             className: m.Lw,
             children: (0, r.jsx)(o.Button, {
                 focusProps: { ringTarget: w },
                 variant: "primary",
                 size: "sm",
-                text: S,
+                text: y,
                 icon: v,
                 onClick: (e) => {
                     e.stopPropagation(), k();
@@ -89,7 +90,7 @@ function E(e) {
                         skuId: t.skuId,
                         productLines: new Set([t.skuProductLine]),
                     });
-            y();
+            S();
         };
     return (0, r.jsxs)("div", {
         ref: D,
@@ -97,22 +98,23 @@ function E(e) {
         children: [
             (0, r.jsxs)("div", {
                 ref: w,
-                className: s()(m.Nr, {
-                    [m.go]: C,
-                    [m.tM]: "small-square" === g,
-                    [m.IU]: "small" === g,
-                    [m.Sd]: "large" === g,
-                    [m.uE]: "flex" === g,
+                className: a()(m.Nr, {
+                    [m.go]: N,
+                    [m.tM]: "small-square" === E,
+                    [m.D]: "medium-square" === E,
+                    [m.IU]: "small" === E,
+                    [m.Sd]: "large" === E,
+                    [m.uE]: "flex" === E,
                 }),
                 onClick: k,
                 children: [
                     (0, r.jsx)(o.AC4, { children: (0, r.jsx)(o.H, { children: T }) }),
                     (0, r.jsx)("div", { className: m.ho, children: I() }),
-                    C && P,
-                    E
-                        ? M
+                    N && M,
+                    g
+                        ? P
                         : (0, r.jsx)(o.DUT, {
-                              "aria-label": S,
+                              "aria-label": y,
                               focusProps: { ringTarget: w },
                               onClick: (e) => {
                                   e.stopPropagation(), k();
@@ -120,9 +122,9 @@ function E(e) {
                           }),
                 ],
             }),
-            null != b && b(),
-            N,
-            a && null != n && (0, r.jsx)(d.A, { iconSize: "sm", item: t, wishlistId: n, className: m.eP }),
+            null != C && C(),
+            b,
+            s && null != n && (0, r.jsx)(d.A, { iconSize: "sm", item: t, wishlistId: n, className: m.eP }),
         ],
     });
 }

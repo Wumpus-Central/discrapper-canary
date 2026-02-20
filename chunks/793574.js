@@ -70,6 +70,7 @@ var r = (function (e) {
         (e.GIFT_CATEGORY_SELECT_MODAL = "gift category select modal"),
         (e.PREMIUM_GIFT_INTENT_CARD = "premium gift intent card"),
         (e.PREMIUM_GIFT_INTENT_FRIEND_ROW = "premium gift intent friend row"),
+        (e.GIFT_SELECTION_MODAL_WISHLIST = "gift selection modal wishlist"),
         (e.EXPRESSION_SUGGESTIONS = "expression suggestions"),
         (e.EMOJI_PICKER = "emoji picker"),
         (e.STICKER_PICKER = "sticker picker"),

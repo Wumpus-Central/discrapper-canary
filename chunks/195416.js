@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     A1: "wishlistBanner_b05cb4",
     $R: "wishlistBannerHeader_b05cb4",

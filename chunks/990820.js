@@ -15,9 +15,13 @@ function a(e) {
     } = e;
     return (0, i.mMO)(
         async () => {
-            let { default: e } = await Promise.all([n.e("2292"), n.e("29716"), n.e("25791"), n.e("35779")]).then(
-                n.bind(n, 806677),
-            );
+            let { default: e } = await Promise.all([
+                n.e("2292"),
+                n.e("13696"),
+                n.e("29716"),
+                n.e("41586"),
+                n.e("66121"),
+            ]).then(n.bind(n, 806677));
             return (n) =>
                 (0, r.jsx)(e, {
                     ...n,
