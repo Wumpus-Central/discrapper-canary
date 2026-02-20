@@ -95,6 +95,7 @@ var r = (function (e) {
         (e.GAME_SERVER_GAME = "game server game"),
         (e.GAME_SERVER_INSTRUCTIONS_MODAL = "game server instructions modal"),
         (e.GAME_SERVER_SETUP_MODAL = "game server setup modal"),
+        (e.GAME_SERVER_GUILD_SELECT_MODAL = "game server guild select modal"),
         (e.GUILD_POWERUPS_OVERVIEW = "guild powerups - overview"),
         (e.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT = "guild powerups - guild settings role edit"),
         (e.GUILD_POWERUPS_GUILD_SETTINGS_PREMIUM = "guild powerups - guild settings premium"),

@@ -117,31 +117,36 @@ let k = s.memo(function (e) {
                         });
                 });
             }, [C, J]),
-            ec = s.useRef(null),
-            [ed, eu] = s.useState(!1);
+            ec = k?.name ?? C?.name ?? "",
+            ed = s.useCallback(() => {
+                (0, u.mMO)(async () => {
+                    let { default: e } = await n.e("74132").then(n.bind(n, 279871));
+                    return (t) => (0, i.jsx)(e, { gameName: ec, gameApplicationId: C?.id, ...t });
+                });
+            }, [ec, C?.id]),
+            eu = s.useRef(null),
+            [eh, eA] = s.useState(!1);
         s.useEffect(
             () => () => {
-                null != ec.current && clearTimeout(ec.current);
+                null != eu.current && clearTimeout(eu.current);
             },
             [],
         ),
             s.useEffect(() => {
-                z && (eu(!1), null != ec.current && (clearTimeout(ec.current), (ec.current = null)));
+                z && (eA(!1), null != eu.current && (clearTimeout(eu.current), (eu.current = null)));
             }, [z]);
-        let eh = Q?.guildId == null || null == k ? null : (0, i.jsx)(B, { guildId: Q.guildId, applicationId: Q.id }),
-            eA = (function () {
-                if (!ei) return null;
-                let e = k?.name ?? C?.name ?? "";
-                return (0, i.jsx)("div", {
-                    className: P.IF,
-                    children: (0, i.jsx)(L.A, {
-                        tooltipText: G.intl.formatToPlainString(U.default.YhnUVO, { gameName: e }),
-                        onClick: () => {},
-                        icon: u._xR,
-                    }),
-                });
-            })(),
-            ep = (function () {
+        let ep = Q?.guildId == null || null == k ? null : (0, i.jsx)(B, { guildId: Q.guildId, applicationId: Q.id }),
+            eg = ei
+                ? (0, i.jsx)("div", {
+                      className: P.IF,
+                      children: (0, i.jsx)(L.A, {
+                          tooltipText: G.intl.formatToPlainString(U.default.YhnUVO, { gameName: ec }),
+                          onClick: ed,
+                          icon: u._xR,
+                      }),
+                  })
+                : null,
+            em = (function () {
                 let e, t, n;
                 if ((null == C && null != T && !(0, A.f)()) || (!a && !l)) return null;
                 let s = null;
@@ -173,11 +178,11 @@ let k = s.memo(function (e) {
                     })
                 );
             })(),
-            eg =
+            e_ =
                 $ && null == T
                     ? (0, i.jsx)(L.A, { ref: F, tooltipText: G.intl.string(G.t["hC/Zey"]), onClick: es, icon: u.DpX })
                     : null,
-            em =
+            ef =
                 null == T
                     ? null
                     : (0, i.jsx)(L.A, {
@@ -185,7 +190,7 @@ let k = s.memo(function (e) {
                           onClick: el(T.applicationId, T.location),
                           icon: u.oLl,
                       }),
-            e_ =
+            ex =
                 null == v
                     ? null
                     : (0, i.jsx)(L.A, {
@@ -193,24 +198,24 @@ let k = s.memo(function (e) {
                           onClick: er(v.applicationId),
                           icon: u.oLl,
                       }),
-            ef = null == t ? null : (0, i.jsx)(x.A, {}),
-            ex =
+            eC = null == t ? null : (0, i.jsx)(x.A, {}),
+            eE =
                 !Y || z
                     ? null
                     : (0, i.jsx)(V, {
                           runningGame: C,
                           startAuthorization: () => {
                               W({ analyticsLocations: J }) === _._M.RPC &&
-                                  (eu(!0),
-                                  null != ec.current && clearTimeout(ec.current),
-                                  (ec.current = setTimeout(() => {
-                                      eu(!1);
+                                  (eA(!0),
+                                  null != eu.current && clearTimeout(eu.current),
+                                  (eu.current = setTimeout(() => {
+                                      eA(!1);
                                   }, 9e4)));
                           },
                           connectionApp: X,
                           ref: K,
                       }),
-            eC =
+            eI =
                 !Y || z
                     ? null
                     : (0, i.jsx)(d.AM, {
@@ -220,14 +225,14 @@ let k = s.memo(function (e) {
                           position: "top",
                           align: "center",
                           caretConfig: { align: "center" },
-                          shouldShow: ed,
+                          shouldShow: eh,
                           onRequestClose: () => {
-                              eu(!1), null != ec.current && (clearTimeout(ec.current), (ec.current = null));
+                              eA(!1), null != eu.current && (clearTimeout(eu.current), (eu.current = null));
                           },
                       });
-        return null == ep && null == eg && null == em && null == e_ && null == ex && null == eh && null == eA
+        return null == em && null == e_ && null == ef && null == ex && null == eE && null == ep && null == eg
             ? null
-            : (0, i.jsxs)("div", { className: P.o1, children: [eh ?? ex ?? eg, eA, ep, em ?? e_ ?? ef, eC] });
+            : (0, i.jsxs)("div", { className: P.o1, children: [ep ?? eE ?? e_, eg, em, ef ?? ex ?? eC, eI] });
     }),
     V = s.forwardRef(function (e, t) {
         let { runningGame: n, startAuthorization: s, connectionApp: l } = e;
