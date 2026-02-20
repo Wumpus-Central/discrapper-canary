@@ -86,7 +86,7 @@ function O(e) {
                         O?.bio != null &&
                         O?.bio !== "" &&
                         (0, i.jsx)(I.A, {
-                            heading: j.intl.string(j.t["61W33d"]),
+                            heading: j.intl.string(j.t.ZzAR2Y),
                             headingColor: "text-strong",
                             children: (0, i.jsx)(m.A, {
                                 userId: t.id,

@@ -93,7 +93,7 @@ function L(e) {
                                         className: O.Lw,
                                         children: [
                                             (0, i.jsx)(b.A, {
-                                                heading: j.intl.string(j.t["61W33d"]),
+                                                heading: j.intl.string(j.t.ZzAR2Y),
                                                 headingColor: "text-strong",
                                                 children: (0, i.jsx)(E.A, {
                                                     userBio: M?.bio,
