@@ -6,4 +6,5 @@ e.exports = {
     lI: "detailsTitleDescription_e95ba0",
     PB: "detailsDescription_e95ba0",
     ye: "iconAsset_e95ba0",
+    e$: "purchaseButtonFauxDisabled_e95ba0",
 };

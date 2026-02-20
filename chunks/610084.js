@@ -29,4 +29,5 @@ e.exports = {
     Yf: "placeholderCard_abfd90",
     RC: "placeholderText_abfd90",
     pt: "orbsEarnedContainer_abfd90",
+    e$: "purchaseButtonFauxDisabled_abfd90",
 };

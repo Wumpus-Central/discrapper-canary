@@ -1,140 +1,146 @@
-n.d(t, { A: () => j });
+n.d(t, { A: () => R });
 var i = n(627968),
     l = n(64700),
-    a = n(158954),
-    r = n(311907),
-    s = n(397927),
-    o = n(793574),
-    d = n(688810),
-    c = n(587895),
-    u = n(875444),
-    m = n(429913),
-    _ = n(594832),
-    h = n(287809),
-    p = n(67480),
-    g = n(328968),
-    A = n(580630),
-    f = n(871123),
-    x = n(733391),
-    E = n(832163),
-    C = n(317560),
-    I = n(533406),
-    T = n(300182),
-    v = n(183802),
+    r = n(503698),
+    a = n.n(r),
+    s = n(158954),
+    o = n(311907),
+    d = n(990078),
+    c = n(397927),
+    u = n(793574),
+    _ = n(688810),
+    m = n(587895),
+    h = n(875444),
+    p = n(429913),
+    g = n(594832),
+    A = n(287809),
+    x = n(67480),
+    f = n(328968),
+    C = n(580630),
+    E = n(871123),
+    I = n(733391),
+    b = n(832163),
+    T = n(317560),
+    v = n(533406),
+    S = n(300182),
+    y = n(183802),
     N = n(818348),
-    S = n(985018),
-    b = n(928625);
-function j(e) {
-    let { guildId: t, skuId: n, channel: j } = e,
-        y = (0, r.bG)([g.A], () => g.A.isFetchingForSKU(n)),
-        R = (0, r.bG)([p.A], () => p.A.get(n)),
-        L = R?.applicationId,
-        M = (0, r.bG)([c.A], () => null != L && c.A.isFetchingApplication(L)),
-        O = (0, r.bG)([c.A], () => null != L && c.A.didFetchingApplicationFail(L)),
-        D = (0, m.h)(L),
-        { analyticsLocations: P } = (0, d.Ay)(o.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED);
-    (0, _.pE)();
-    let k = (0, r.bG)([h.default], () =>
-            j.isDM() && null != j.recipients && 0 !== j.recipients.length ? h.default.getUser(j.recipients[0]) : null,
+    j = n(985018),
+    L = n(928625);
+function R(e) {
+    let { guildId: t, skuId: n, channel: r } = e,
+        R = (0, o.bG)([f.A], () => f.A.isFetchingForSKU(n)),
+        P = (0, o.bG)([x.A], () => x.A.get(n)),
+        M = P?.applicationId,
+        w = (0, o.bG)([m.A], () => null != M && m.A.isFetchingApplication(M)),
+        D = (0, o.bG)([m.A], () => null != M && m.A.didFetchingApplicationFail(M)),
+        k = (0, p.h)(M),
+        { analyticsLocations: O } = (0, _.Ay)(u.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED);
+    (0, g.pE)();
+    let U = (0, o.bG)([A.default], () =>
+            r.isDM() && null != r.recipients && 0 !== r.recipients.length ? A.default.getUser(r.recipients[0]) : null,
         ),
-        U = (0, r.bG)([E.A], () => (null != n ? E.A.getNormalizedSKUEligibility(n) : void 0), [n]),
-        { primaryIconAsset: w, primaryIconLabel: G } = l.useMemo(() => (0, f.Cv)(R, L), [R, L]);
+        G = (0, o.bG)([b.A], () => (null != n ? b.A.getNormalizedSKUEligibility(n) : void 0), [n]),
+        { primaryIconAsset: B, primaryIconLabel: F } = l.useMemo(() => (0, E.Cv)(P, M), [P, M]);
     l.useEffect(() => {
-        null == t || null == n || g.A.isFetchingForSKU(n) || (0, x.qf)(t, n);
+        null == t || null == n || f.A.isFetchingForSKU(n) || (0, I.qf)(t, n);
     }, [t, n]);
-    let B = l.useCallback(
+    let H = l.useCallback(
             (e) => {
                 e.stopPropagation(),
-                    R?.applicationId != null &&
+                    P?.applicationId != null &&
                         null != t &&
-                        (0, C.R)({
+                        (0, T.R)({
                             skuId: n,
-                            applicationId: R.applicationId,
+                            applicationId: P.applicationId,
                             guildId: t,
                             isStorefront: !1,
-                            analyticsLocations: P,
+                            analyticsLocations: O,
                         });
             },
-            [n, R?.applicationId, t, P],
+            [n, P?.applicationId, t, O],
         ),
-        F = l.useCallback(() => {
-            null != R &&
-                (0, I.a)(
-                    R,
+        V = l.useCallback(() => {
+            null != P &&
+                G &&
+                (0, v.a)(
+                    P,
                     { isGift: !1 },
-                    { analyticsLocations: [o.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_PURCHASE_BUTTON], guildId: t },
+                    { analyticsLocations: [u.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_PURCHASE_BUTTON], guildId: t },
                 );
-        }, [R, t]),
-        H = l.useCallback(() => {
-            null != R &&
-                (0, I.a)(
-                    R,
-                    { isGift: !0, giftRecipient: k ?? void 0 },
-                    { analyticsLocations: [o.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_GIFT_BUTTON] },
+        }, [P, t, G]),
+        W = l.useCallback(() => {
+            null != P &&
+                (0, v.a)(
+                    P,
+                    { isGift: !0, giftRecipient: U ?? void 0 },
+                    { analyticsLocations: [u.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_GIFT_BUTTON] },
                 );
-        }, [R, k]),
-        V = null != L && null == D && !O;
-    return (y || M || V) && (null == R || null == D)
-        ? (0, i.jsx)("div", { className: b.kL, children: (0, i.jsx)(s.y$y, { className: b.u1 }) })
-        : null != R && null != D && (0, u.A)(D) && D.guildId === t
+        }, [P, U]),
+        q = null != M && null == k && !D;
+    return (R || w || q) && (null == P || null == k)
+        ? (0, i.jsx)("div", { className: L.kL, children: (0, i.jsx)(c.y$y, { className: L.u1 }) })
+        : null != P && null != k && (0, h.A)(k) && k.guildId === t
           ? (0, i.jsxs)("div", {
-                className: b.kL,
+                className: L.kL,
                 children: [
-                    (0, i.jsx)(v.A, {
-                        className: b.Nr,
-                        applicationId: R.applicationId,
+                    (0, i.jsx)(y.A, {
+                        className: L.Nr,
+                        applicationId: P.applicationId,
                         skuId: n,
                         guildId: t,
-                        variant: v.s.EMBEDDED,
-                        onClick: B,
-                        analyticsLocations: P,
+                        variant: y.s.EMBEDDED,
+                        onClick: H,
+                        analyticsLocations: O,
                     }),
                     (0, i.jsxs)("div", {
-                        className: b.zH,
+                        className: L.zH,
                         children: [
                             (0, i.jsxs)("div", {
-                                className: b.lI,
+                                className: L.lI,
                                 children: [
-                                    (0, i.jsx)(s.Text, { variant: "text-md/medium", lineClamp: 1, children: R.name }),
+                                    (0, i.jsx)(c.Text, { variant: "text-md/medium", lineClamp: 1, children: P.name }),
                                     (0, i.jsxs)("div", {
-                                        className: b.PB,
+                                        className: L.PB,
                                         children: [
-                                            null != w &&
-                                                (0, i.jsx)("img", { src: w.toString(), alt: G, className: b.ye }),
-                                            (0, i.jsx)(s.Text, {
+                                            null != B &&
+                                                (0, i.jsx)("img", { src: B.toString(), alt: F, className: L.ye }),
+                                            (0, i.jsx)(c.Text, {
                                                 variant: "text-md/bold",
                                                 lineClamp: 1,
-                                                children: (0, A.$g)(
-                                                    R.price?.amount ?? 0,
-                                                    R.price?.currency ?? N.Yr.USD,
+                                                children: (0, C.$g)(
+                                                    P.price?.amount ?? 0,
+                                                    P.price?.currency ?? N.Yr.USD,
                                                 ),
                                             }),
                                         ],
                                     }),
                                 ],
                             }),
-                            (0, i.jsxs)(a.e2v, {
+                            (0, i.jsxs)(s.e2v, {
                                 wrap: !1,
                                 fullWidth: !0,
+                                className: a()({ [L.e$]: !G }),
                                 children: [
-                                    (0, i.jsx)(a.$nd, {
+                                    (0, i.jsx)(s.$nd, {
                                         variant: "secondary",
-                                        onClick: B,
-                                        text: S.intl.string(S.t.KLBTgF),
+                                        onClick: H,
+                                        text: j.intl.string(j.t.KLBTgF),
                                         fullWidth: !0,
                                     }),
-                                    (0, i.jsx)(a.$nd, {
-                                        variant: "primary",
-                                        onClick: F,
-                                        text: U
-                                            ? S.intl.format(S.t.Xp5WTn, {
-                                                  price: (0, A.$g)(R.price?.amount ?? 0, R.price?.currency ?? N.Yr.USD),
-                                              })
-                                            : S.intl.string(S.t.cg0M2H),
-                                        fullWidth: !0,
-                                        disabled: !U,
+                                    (0, i.jsx)(d.m, {
+                                        text: G ? null : j.intl.string(j.t.IqlPbQ),
+                                        children: (0, i.jsx)(s.$nd, {
+                                            variant: "primary",
+                                            onClick: V,
+                                            text: j.intl.format(j.t.Xp5WTn, {
+                                                price: (0, C.$g)(P.price?.amount ?? 0, P.price?.currency ?? N.Yr.USD),
+                                            }),
+                                            fullWidth: !0,
+                                            "aria-disabled": !G,
+                                        }),
                                     }),
-                                    (0, i.jsx)(T.A, { onGift: H }),
+                                    (0, i.jsx)(S.A, { onGift: W }),
                                 ],
                             }),
                         ],
