@@ -130,7 +130,7 @@ let N = (e) => e.name,
                 [s],
             ),
             x = i.useMemo(() => {
-                let e = (0, T.PN)(null != s ? { ...s, orbs_reward: 200 } : null, { isGift: u });
+                let e = (0, T.PN)(s, { isGift: u });
                 return null != e ? (0, r.jsx)(l.J, { ...e }) : null;
             }, [s, u]),
             { setCheckoutHeaderConfigs: M, checkoutHeaderConfigs: P } = (0, c.ck)();
