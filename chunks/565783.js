@@ -1,12 +1,11 @@
 "use strict";
 n.d(t, { $: () => i });
-let r = (0, n(600975).C)({
+let r = (0, n(945810).mj)({
+    name: "2026-02-client-heartbeat-skipped",
     kind: "user",
-    id: "2025-06_client_heartbeat_skipped",
-    label: "Client Heartbeat Skipped Tracking",
     defaultConfig: { logHeartbeatSkipped: !1 },
-    treatments: [{ id: 1, label: "Logging enabled", config: { logHeartbeatSkipped: !0 } }],
+    variations: { 1: { logHeartbeatSkipped: !0 } },
 });
 function i() {
-    return r.getCurrentConfig({ location: "shouldLogClientHeartbeatSkipped" }).logHeartbeatSkipped;
+    return r.getConfig({ location: "shouldLogClientHeartbeatSkipped" }).logHeartbeatSkipped;
 }
