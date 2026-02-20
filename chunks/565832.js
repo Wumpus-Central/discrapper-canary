@@ -30,7 +30,6 @@ function d(e) {
         awaitingRemote: !1,
         nameplate: t,
         voiceChannel: null,
-        voiceActivityStatusEnabled: !1,
         isQuestBarEmpty: !0,
         isListenAlongVisible: !1,
     });
