@@ -1,9 +1,9 @@
 "use strict";
 n.d(t, { cd: () => l });
-var r = n(550505),
-    i = n(318503),
-    a = n(869922),
-    s = n(587100);
+var r = n(875565),
+    i = n(314875),
+    s = n(690094),
+    a = n(968072);
 function o(e, t = 100, n = Infinity) {
     try {
         return u("", e, t, n);
@@ -15,9 +15,9 @@ function l(e, t = 3, n = 102400) {
     let r = o(e, t);
     return f(r) > n ? l(e, t - 1, n) : r;
 }
-function u(e, t, n = Infinity, r = Infinity, s = (0, i.s)()) {
-    let [o, l] = s;
-    if (null == t || (["number", "boolean", "string"].includes(typeof t) && !Number.isNaN(t))) return t;
+function u(e, t, n = Infinity, r = Infinity, a = (0, i.s)()) {
+    let [o, l] = a;
+    if (null == t || ["boolean", "string"].includes(typeof t) || ("number" == typeof t && Number.isFinite(t))) return t;
     let d = c(e, t);
     if (!d.startsWith("[object ")) return d;
     if (t.__sentry_skip_normalization__) return t;
@@ -29,11 +29,11 @@ function u(e, t, n = Infinity, r = Infinity, s = (0, i.s)()) {
     if (f && "function" == typeof f.toJSON)
         try {
             let e = f.toJSON();
-            return u("", e, _ - 1, r, s);
+            return u("", e, _ - 1, r, a);
         } catch (e) {}
     let p = Array.isArray(t) ? [] : {},
         h = 0,
-        m = (0, a.W4)(t);
+        m = (0, s.W4)(t);
     for (let e in m) {
         if (!Object.prototype.hasOwnProperty.call(m, e)) continue;
         if (h >= r) {
@@ -41,7 +41,7 @@ function u(e, t, n = Infinity, r = Infinity, s = (0, i.s)()) {
             break;
         }
         let t = m[e];
-        (p[e] = u(e, t, _ - 1, r, s)), h++;
+        (p[e] = u(e, t, _ - 1, r, a)), h++;
     }
     return l(t), p;
 }
@@ -54,8 +54,8 @@ function c(e, t) {
         if ("u" > typeof document && t === document) return "[Document]";
         if ((0, r.L2)(t)) return "[VueViewModel]";
         if ((0, r.mE)(t)) return "[SyntheticEvent]";
-        if ("number" == typeof t && t != t) return "[NaN]";
-        if ("function" == typeof t) return `[Function: ${(0, s.qQ)(t)}]`;
+        if ("number" == typeof t && !Number.isFinite(t)) return `[${t}]`;
+        if ("function" == typeof t) return `[Function: ${(0, a.qQ)(t)}]`;
         if ("symbol" == typeof t) return `[${String(t)}]`;
         if ("bigint" == typeof t) return `[BigInt: ${String(t)}]`;
         let n = d(t);

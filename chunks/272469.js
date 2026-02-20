@@ -1,9 +1,9 @@
 "use strict";
 n.d(t, { pq: () => l, vF: () => c });
-var r = n(919015),
-    i = n(588522);
-let a = "Sentry Logger ",
-    s = ["debug", "info", "warn", "error", "log", "assert", "trace"],
+var r = n(780755),
+    i = n(978862);
+let s = "Sentry Logger ",
+    a = ["debug", "info", "warn", "error", "log", "assert", "trace"],
     o = {};
 function l(e) {
     if (!("console" in i.O)) return e();
@@ -35,15 +35,15 @@ function u() {
         };
     return (
         r.T
-            ? s.forEach((n) => {
+            ? a.forEach((n) => {
                   t[n] = (...t) => {
                       e &&
                           l(() => {
-                              i.O.console[n](`${a}[${n}]:`, ...t);
+                              i.O.console[n](`${s}[${n}]:`, ...t);
                           });
                   };
               })
-            : s.forEach((e) => {
+            : a.forEach((e) => {
                   t[e] = () => void 0;
               }),
         t
