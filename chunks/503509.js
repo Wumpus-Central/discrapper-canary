@@ -1,6 +1,6 @@
 "use strict";
 let r;
-n.d(t, { A: () => P });
+n.d(t, { A: () => V, c: () => A });
 var i = n(311907),
     s = n(506774),
     a = n(73153),
@@ -11,104 +11,114 @@ var i = n(311907),
     d = n(961350),
     _ = n(734057),
     f = n(461213),
-    p = n(531685),
-    h = n(652215);
-let m = "IncomingCallStore",
-    E = 232,
-    g = 315,
-    A = 10,
-    I = new Set(),
-    T = [],
-    S = new Map(),
-    y = new Set(),
-    v = !1;
-function N() {
-    let e = p.A.windowSize();
-    return null != r && r.x + E < e.width && r.y + g < e.height
+    p = n(607567),
+    h = n(531685),
+    m = n(652215);
+let E = "IncomingCallStore",
+    g = { width: 232, height: 315 },
+    A = { width: 400, height: 374 },
+    I = 48,
+    T = 22,
+    S = 2,
+    y = 10,
+    v = new Set(),
+    N = [],
+    C = new Map(),
+    b = new Set(),
+    R = !1;
+function O(e) {
+    let { enabled: t } = c.A.getCurrentConfig({ guildId: e?.guild_id, location: "IncomingCallStore" });
+    if (e?.guild_id == null || !t) return g;
+    let n = p.Ay.getVoiceStatesForChannel(e).filter((t) => !o.A.getGuildRingingUsers(e.id).has(t.user.id)),
+        r = n.length > S,
+        i = Math.min(n.length, S) * I + (r ? T : 0);
+    return { ...A, height: A.height + i };
+}
+function D(e) {
+    let t = h.A.windowSize(),
+        n = O(e);
+    return null != r && r.x + n.width < t.width && r.y + n.height < t.height
         ? r
-        : { x: e.width / 2 - E / 2, y: e.height / 2 - g / 2 };
+        : { x: t.width / 2 - n.width / 2, y: t.height / 2 - n.height / 2 };
 }
-function C(e) {
-    if (null == e || null == S.get(e)) return !1;
-    S.delete(e), (y = new Set(y)).delete(e);
+function L(e) {
+    if (null == e || null == C.get(e)) return !1;
+    C.delete(e), (b = new Set(b)).delete(e);
 }
-function b(e) {
-    let { channelId: t, ongoingRings: n } = e;
-    if (
-        "GUILD_RING_START" === e.type &&
-        !c.A.getCurrentConfig({ guildId: e.guildId, location: "IncomingCallCreate" }).enabled
-    )
-        return !1;
-    let r = d.default.getId(),
-        i = r in n && null != n[r];
-    if (!y.has(t) && i) {
+function w(e) {
+    let { channelId: t, ongoingRings: n } = e,
+        r = "GUILD_RING_START" === e.type;
+    if (r && !c.A.getCurrentConfig({ guildId: e.guildId, location: "IncomingCallCreate" }).enabled) return !1;
+    let i = d.default.getId(),
+        s = i in n && null != n[i];
+    if (!b.has(t) && s) {
         let e = _.A.getChannel(t);
         if (null == e) return !1;
-        let i = A * y.size,
-            { x: s, y: a } = N();
-        return S.set(t, { channel: e, senderId: n[r], x: s + i, y: a + i }), void (y = new Set(y)).add(t);
+        let s = y * b.size,
+            { x: a, y: o } = D(r ? e : void 0);
+        return C.set(t, { channel: e, senderId: n[i], x: a + s, y: o + s }), void (b = new Set(b)).add(t);
     }
-    return !!y.has(t) && !i && C(t);
+    return !!b.has(t) && !s && L(t);
 }
-function R(e) {
+function x(e) {
     let { channelId: t } = e;
     return (
         ("GUILD_RING_STOP" !== e.type ||
             (!!c.A.getCurrentConfig({ guildId: e.guildId, location: "IncomingCallDelete" }).enabled &&
                 !!e.ringing.includes(d.default.getId()))) &&
-        C(t)
+        L(t)
     );
 }
-function O(e) {
+function M(e) {
     let { channelId: t } = e;
-    return C(t);
+    return L(t);
 }
-function D(e) {
+function P(e) {
     let { x: t, y: n } = e;
-    return (r = { x: t, y: n }), s.w.set(m, r), !1;
+    return (r = { x: t, y: n }), s.w.set(E, r), !1;
 }
-function L(e) {
+function k(e) {
     let { channel: t } = e;
-    return C(t.id);
+    return L(t.id);
 }
-function w() {
-    v = f.A.getStatus() === h.clD.DND || l.NO.getSetting();
+function U() {
+    R = f.A.getStatus() === m.clD.DND || l.NO.getSetting();
 }
-function x() {
+function G() {
     let e = d.default.getId();
-    y.forEach((t) => {
+    b.forEach((t) => {
         let n = t;
-        null == _.A.getChannel(n)?.guild_id || o.A.getGuildRingingUsers(n).has(e) || C(n);
+        null == _.A.getChannel(n)?.guild_id || o.A.getGuildRingingUsers(n).has(e) || L(n);
     });
 }
-class M extends i.Ay.Store {
+class F extends i.Ay.Store {
     static displayName = "IncomingCallStore";
     initialize() {
-        this.waitFor(d.default, o.A, _.A, f.A, u.A, p.A),
-            this.syncWith([f.A], w),
-            this.syncWith([u.A], w),
-            this.syncWith([o.A], x);
+        this.waitFor(d.default, o.A, _.A, f.A, p.Ay, u.A, h.A),
+            this.syncWith([f.A], U),
+            this.syncWith([u.A], U),
+            this.syncWith([o.A], G);
     }
     getIncomingCalls() {
-        return v ? T : Array.from(S.values());
+        return R ? N : Array.from(C.values());
     }
     getIncomingCallChannelIds() {
-        return v ? I : y;
+        return R ? v : b;
     }
     getFirstIncomingCallId() {
-        return v ? null : y.values().next().value;
+        return R ? null : b.values().next().value;
     }
     hasIncomingCalls() {
-        return !v && y.size > 0;
+        return !R && b.size > 0;
     }
 }
-let P = new M(a.h, {
-    CALL_CREATE: b,
-    CALL_UPDATE: b,
-    CALL_DELETE: R,
-    GUILD_RING_START: b,
-    GUILD_RING_STOP: R,
-    VOICE_CHANNEL_SELECT: O,
-    INCOMING_CALL_MOVE: D,
-    CHANNEL_DELETE: L,
+let V = new F(a.h, {
+    CALL_CREATE: w,
+    CALL_UPDATE: w,
+    CALL_DELETE: x,
+    GUILD_RING_START: w,
+    GUILD_RING_STOP: x,
+    VOICE_CHANNEL_SELECT: M,
+    INCOMING_CALL_MOVE: P,
+    CHANNEL_DELETE: k,
 });

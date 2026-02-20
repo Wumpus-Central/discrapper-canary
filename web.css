@@ -58731,8 +58731,8 @@ span.clanTag__07f91.isOverlay__07f91 {
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-high);
     box-sizing: border-box;
-    max-width: 475px;
-    position: relative
+    position: relative;
+    width: var(--custom-modal-width)
 }
 
 .header__83a0c,
