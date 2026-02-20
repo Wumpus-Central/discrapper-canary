@@ -1,19 +1,20 @@
 "use strict";
-a.d(t, { t: () => d });
+a.d(t, { t: () => c });
 var l = a(627968),
     r = a(64700),
     n = a(179262),
     s = a(41770),
     i = a(148702),
-    o = a(785330);
-let d = {
+    o = a(785330),
+    d = a(652215);
+let c = {
     title: "Layout Builder",
     stories: [
         {
             name: "Layout Builder",
             id: "layout-builder",
             component: () => {
-                let [e, t] = r.useState(JSON.stringify(s.u, null, 2)),
+                let [e, t] = r.useState(JSON.stringify(s.uG, null, 2)),
                     [a, n] = r.useState(e);
                 return (
                     r.useEffect(() => {
@@ -83,7 +84,19 @@ let d = {
             },
             controls: {
                 layoutId: { label: "Layout Id", type: "text", defaultValue: "1465939725649973269" },
-                tenantId: { label: "Tenant Id", type: "text", defaultValue: a(652215).FYj },
+                tenantId: { label: "Tenant Id", type: "text", defaultValue: d.FYj },
+            },
+        },
+        {
+            name: "Remote Templates",
+            id: "remote-templates",
+            component: (e) => {
+                let { templateId: t, tenantId: a } = e;
+                return (0, l.jsx)(o.Z_, { templateId: t, tenantId: a });
+            },
+            controls: {
+                templateId: { label: "Template Id", type: "text", defaultValue: "popular-picks" },
+                tenantId: { label: "Tenant Id", type: "text", defaultValue: d.FYj },
             },
         },
     ],

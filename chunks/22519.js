@@ -1,13 +1,13 @@
-t.d(r, { A: () => o });
-var d = t(627968),
-    l = t(856535),
-    c = t(785330);
-let o = (e) => {
-    let { layoutId: r, tenantId: t, skeleton: o, requestParams: a, componentMap: n } = e,
-        { layout: s, loading: u } = (0, l.A)(r, t, a);
-    return u && null != o
-        ? (0, d.jsx)(c.Ay, { overrides: n, layout: { id: "skeleton", children: o } })
-        : null == s
+t.d(l, { A: () => n });
+var r = t(627968),
+    o = t(856535),
+    i = t(785330);
+let n = (e) => {
+    let { layoutId: l, tenantId: t, skeleton: n, componentMap: a } = e,
+        { layout: c, loading: d } = (0, o.A)(t, l);
+    return d && null != n
+        ? (0, r.jsx)(i.Ay, { overrides: a, layout: { id: "skeleton", children: n } })
+        : null == c
           ? null
-          : (0, d.jsx)(c.Ay, { layout: s, overrides: n });
+          : (0, r.jsx)(i.Ay, { layout: c, overrides: a });
 };

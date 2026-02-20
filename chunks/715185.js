@@ -87,7 +87,7 @@ let i = {
                     (0, l.jsx)("br", {}),
                     (0, l.jsx)("hr", {}),
                     (0, l.jsx)("br", {}),
-                    (0, l.jsx)(s.Ay, { layout: n.u }),
+                    (0, l.jsx)(s.Ay, { layout: n.uG }),
                 ],
             }),
         controls: {},

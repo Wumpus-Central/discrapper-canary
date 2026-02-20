@@ -1,54 +1,56 @@
-t.d(r, { E: () => C, e: () => A });
-var d = t(64700),
-    l = t(735438),
-    c = t(528226),
-    o = t(653793),
+t.d(l, { E: () => S, e: () => g });
+var r = t(64700),
+    o = t(735438),
+    i = t(528226),
+    n = t(653793),
     a = t(118713),
-    n = t(261225),
-    s = t(970488),
-    u = t(720462),
-    i = t(673277),
+    c = t(261225),
+    d = t(970488),
+    s = t(720462),
+    u = t(673277),
     h = t(700263),
-    k = t(304973),
-    p = t(18769),
+    p = t(304973),
+    m = t(18769),
     b = t(458306),
-    m = t(282203),
-    S = t(22519),
-    f = t(954644),
-    v = t(634791);
-let C = {
-        ContainedHero: c.A,
+    C = t(282203),
+    _ = t(22519),
+    y = t(607795),
+    k = t(954644),
+    A = t(634791);
+let S = {
+        ContainedHero: i.A,
         BasicHero: (e) => {
-            let { bannerSrc: r } = e;
+            let { bannerSrc: l } = e;
             return null;
         },
         PromotionalHero: () => null,
-        InteractiveHScroll: u.A,
+        InteractiveHScroll: s.A,
         Carousel: a.A,
-        Grid: n.A,
-        GridItem: s.A,
-        Section: i.A,
-        Card: o.A,
+        Grid: c.A,
+        GridItem: d.A,
+        Section: u.A,
+        Card: n.A,
         Skeleton: h.A,
-        FeaturedChip: k.A,
-        FeaturedCollection: p.A,
+        FeaturedChip: p.A,
+        FeaturedCollection: m.A,
         FeaturedProduct: () => null,
-        ShopProductCard: f.A,
-        SkuList: m.A,
-        SubLayout: S.A,
+        ShopProductCard: k.A,
+        SkuList: C.A,
+        SubLayout: _.A,
+        SubTemplate: y.A,
         Button: b.ar,
         Heading: b.Oo,
         Stack: b.Kp,
         Text: b.t,
-        Any1: v.A,
-        Any2: v.A,
-        Any3: v.A,
+        Any1: A.A,
+        Any2: A.A,
+        Any3: A.A,
     },
-    A = function () {
+    g = function () {
         let { overrides: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        return d.useMemo(() => {
-            let r = (0, l.cloneDeep)(C);
-            if (null != e) for (let [t, d] of Object.entries(e)) null != d && (r[t] = d);
-            return r;
+        return r.useMemo(() => {
+            let l = (0, o.cloneDeep)(S);
+            if (null != e) for (let [t, r] of Object.entries(e)) null != r && (l[t] = r);
+            return l;
         }, [e]);
     };

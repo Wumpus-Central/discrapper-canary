@@ -1224,6 +1224,7 @@ let e_ = "",
             return `/avatar-decoration-presets/${e}.${t}`;
         },
         CMS_LAYOUT: (e, t) => `/layouts/${e}/${t}`,
+        CMS_TEMPLATE: (e, t) => `/templates/${e}/${t}`,
         COLLECTIBLES_CATEGORIES: "/collectibles-categories",
         COLLECTIBLES_CATEGORIES_V2: "/collectibles-categories/v2",
         COLLECTIBLES_SEARCH: "/shop/search",

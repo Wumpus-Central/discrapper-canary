@@ -1,5 +1,6 @@
-t.d(r, { O: () => l, u: () => d });
-let d = {
+t.d(l, { C8: () => r, Ej: () => a, Ot: () => i, oP: () => n, uG: () => o });
+let r = "dummy-tenant",
+    o = {
         id: "dummy-shop-home",
         children: [
             {
@@ -12,16 +13,7 @@ let d = {
                 children: [
                     {
                         block: "InteractiveHScroll",
-                        children: [
-                            { block: "ShopProductCard", skuId: "1458472704079434020" },
-                            { block: "ShopProductCard", skuId: "1458472704167379109" },
-                            { block: "ShopProductCard", skuId: "1458472704192811088" },
-                            { block: "ShopProductCard", skuId: "1458472704222171347" },
-                            { block: "ShopProductCard", skuId: "1458472704272498709" },
-                            { block: "ShopProductCard", skuId: "1458472704306053202" },
-                            { block: "ShopProductCard", skuId: "1458472704087818312" },
-                            { block: "ShopProductCard", skuId: "1458472704096075816" },
-                        ],
+                        children: [{ block: "SubLayout", tenantId: "dummy-tenant", layoutId: "dummy-sku-list" }],
                     },
                 ],
             },
@@ -60,47 +52,11 @@ let d = {
                     },
                 ],
             },
-            {
-                block: "Section",
-                verticalMargin: 8,
-                padding: 0,
-                children: [
-                    {
-                        block: "Stack",
-                        direction: "horizontal",
-                        justify: "space-between",
-                        children: [
-                            { block: "Heading", content: "Discord Orb Exclusives", variant: "heading-lg/semibold" },
-                            {
-                                block: "Button",
-                                ctaText: "Shop All Discord Orb Exclusives",
-                                href: "",
-                                variant: "secondary",
-                            },
-                        ],
-                    },
-                ],
-            },
-            {
-                block: "Section",
-                verticalMargin: 8,
-                padding: 0,
-                children: [
-                    {
-                        block: "InteractiveHScroll",
-                        children: [
-                            { block: "ShopProductCard", skuId: "1458472704079434020" },
-                            { block: "ShopProductCard", skuId: "1458472704167379109" },
-                            { block: "ShopProductCard", skuId: "1458472704192811088" },
-                            { block: "ShopProductCard", skuId: "1458472704222171347" },
-                        ],
-                    },
-                ],
-            },
-            { block: "SubLayout", tenantId: "dummy-tenant", layoutId: "dummy-popular-picks" },
+            { block: "SubLayout", tenantId: "dummy-tenant", layoutId: "dummy-orb-shelf" },
+            { block: "SubTemplate", tenantId: "dummy-tenant", templateId: "dummy-popular-picks" },
         ],
     },
-    l = {
+    i = {
         id: "dummy-popular-picks",
         children: [
             {
@@ -160,6 +116,71 @@ let d = {
                             { block: "ShopProductCard", skuId: "1458472704222171347" },
                         ],
                     },
+                ],
+            },
+        ],
+    },
+    n = {
+        id: "dummy-orb-shelf",
+        children: [
+            {
+                block: "Section",
+                verticalMargin: 8,
+                padding: 0,
+                children: [
+                    {
+                        block: "Stack",
+                        direction: "horizontal",
+                        justify: "space-between",
+                        children: [
+                            { block: "Heading", content: "Discord Orb Exclusives", variant: "heading-lg/semibold" },
+                            {
+                                block: "Button",
+                                ctaText: "Shop All Discord Orb Exclusives",
+                                href: "",
+                                variant: "secondary",
+                            },
+                        ],
+                    },
+                ],
+            },
+            {
+                block: "Section",
+                verticalMargin: 8,
+                padding: 0,
+                children: [
+                    {
+                        block: "InteractiveHScroll",
+                        children: [
+                            { block: "ShopProductCard", skuId: "1458472704079434020" },
+                            { block: "ShopProductCard", skuId: "1458472704167379109" },
+                            { block: "ShopProductCard", skuId: "1458472704192811088" },
+                            { block: "ShopProductCard", skuId: "1458472704222171347" },
+                        ],
+                    },
+                ],
+            },
+        ],
+    },
+    a = {
+        id: "dummy-sku-list",
+        children: [
+            {
+                block: "SkuList",
+                skuBlock: "ShopProductCard",
+                skuIds: [
+                    "1458472704079434020",
+                    "1458472704167379109",
+                    "1458472704251396148",
+                    "1458472704192811088",
+                    "1458472704222171347",
+                    "1458472704272498709",
+                    "1458472704306053202",
+                    "1458472704087818312",
+                    "1458472704096075816",
+                    "1458472704104599666",
+                    "1458472704112984085",
+                    "1458472704142217441",
                 ],
             },
         ],
