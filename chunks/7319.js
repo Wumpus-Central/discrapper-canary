@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     nM: "row__0a95c",
     Kk: "icon__0a95c",
