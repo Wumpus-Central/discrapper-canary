@@ -1,60 +1,60 @@
-r.d(t, { A: () => v, L: () => R });
+r.d(t, { A: () => N, L: () => v });
 var n = r(627968),
     a = r(64700),
-    l = r(503698),
-    s = r.n(l),
+    s = r(503698),
+    l = r.n(s),
     i = r(311907),
     d = r(230109),
-    u = r(732955),
-    o = r(688810),
+    o = r(732955),
+    u = r(688810),
     c = r(895944),
     m = r(649032),
-    p = r(954571),
-    h = r(570627),
-    g = r(128620),
-    x = r(652215),
-    b = r(49370),
+    h = r(954571),
+    p = r(570627),
+    x = r(128620),
+    g = r(652215),
+    _ = r(49370),
     f = r(985018),
-    _ = r(609195);
-let R = "orbs",
-    v = (e) => {
+    b = r(609195);
+let v = "orbs",
+    N = (e) => {
         let { className: t, location: r } = e,
-            l = h.m.useConfig({ location: "PremiumTenureRewardsOrbsSection" }).enabled,
-            { analyticsLocations: v } = (0, o.Ay)(r),
-            N = a.useRef(null),
+            s = p.m.useConfig({ location: "PremiumTenureRewardsOrbsSection" }).enabled,
+            { analyticsLocations: N } = (0, u.Ay)(r),
+            R = a.useRef(null),
             A = a.useRef(!1),
             E = (0, i.bG)([c.A], () => c.A.getRewardForProgram(m.W.NITRO));
         return (0, i.bG)([c.A], () => c.A.passesGeneralUIInvariant(m.W.NITRO))
-            ? (0, n.jsx)(o.f5, {
-                  value: v,
+            ? (0, n.jsx)(u.f5, {
+                  value: N,
                   children: (0, n.jsx)(d.L, {
-                      innerRef: N,
+                      innerRef: R,
                       onChange: (e) => {
                           e &&
                               !A.current &&
                               ((A.current = !0),
-                              p.default.track(x.HAw.PREMIUM_TENURE_REWARDS_ORBS_SECTION_IMPRESSION, {
+                              h.default.track(g.HAw.PREMIUM_TENURE_REWARDS_ORBS_SECTION_IMPRESSION, {
                                   program_state: E?.program_current_state,
                               }));
                       },
                       threshold: 0.5,
                       children: (0, n.jsxs)("div", {
-                          ref: N,
-                          id: R,
-                          className: s()(_.uW, _.Uv, _.qr, t, { [_.J4]: l }),
+                          ref: R,
+                          id: v,
+                          className: l()(b.uW, b.Uv, b.qr, t, { [b.J4]: s }),
                           children: [
-                              (0, n.jsx)(u.DZT, {
-                                  variant: l ? "display-sm" : "heading-xxl/extrabold",
-                                  className: _.R_,
+                              (0, n.jsx)(o.DZT, {
+                                  variant: s ? "display-sm" : "heading-xxl/extrabold",
+                                  className: b.R_,
                                   style: { textAlign: "start" },
-                                  children: f.intl.string(b.default.EdGvBM),
+                                  children: f.intl.string(_.default.EdGvBM),
                               }),
-                              (0, n.jsx)(u.EYj, {
-                                  variant: "text-lg/normal",
-                                  className: s()(_.VA, _.dO),
-                                  children: f.intl.string(b.default["2KoHRF"]),
+                              (0, n.jsx)(o.EYj, {
+                                  variant: s ? "text-md/medium" : "text-lg/normal",
+                                  className: l()(b.VA, b.dO),
+                                  children: f.intl.string(_.default["2KoHRF"]),
                               }),
-                              (0, n.jsx)(g.A, {}),
+                              (0, n.jsx)(x.A, {}),
                           ],
                       }),
                   }),

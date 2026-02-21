@@ -36,8 +36,8 @@ var i = n(627968),
     U = n(821158),
     k = n(235365),
     V = n(994763),
-    H = n(788868),
-    w = n(652215),
+    w = n(788868),
+    H = n(652215),
     B = n(985018),
     Y = n(520089),
     F = n(288894);
@@ -65,8 +65,8 @@ let z = (e) => {
         })),
         X = (0, E.DK)(p.W.NITRO, "PremiumSubscriberHome"),
         {
-            scrollTargetId: J,
-            glowingPerkId: Q,
+            scrollTargetId: Q,
+            glowingPerkId: J,
             scrollBlock: $,
         } = s.useMemo(() => {
             let e = new URLSearchParams(a.search),
@@ -78,14 +78,14 @@ let z = (e) => {
                   ? { scrollTargetId: n, scrollBlock: "start" }
                   : {};
         }, [a.search]);
-    (0, V.z)(J ?? "", null != J, $);
+    (0, V.z)(Q ?? "", null != Q, $);
     let [ee, et] = s.useState(!1),
         en = (0, N.p)(),
         ei = s.useRef(null),
         [es, ea] = s.useState(!1),
         [el, er] = s.useState(!1),
-        eo = null != en && null != K && K.status === w.Dmq.CANCELED,
-        ec = (0, j.iU)(H.gD.PREMIUM_MONTH_TIER_2, en, K),
+        eo = null != en && null != K && K.status === H.Dmq.CANCELED,
+        ec = (0, j.iU)(w.gD.PREMIUM_MONTH_TIER_2, en, K),
         ed = !el && eo,
         { analyticsLocations: eu } = (0, m.Ay)(_.A.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [e_, em] = s.useState(!1),
@@ -95,12 +95,13 @@ let z = (e) => {
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsxs)(d.GtU, {
-                      className: Y.xW,
+                      className: l()(Y.xW, { [Y.J4]: n }),
                       ref: z,
                       children: [
                           (0, i.jsx)(d.hLv, {
                               color: "nitro-pink",
-                              className: l()(Y.kL, Y.Gd, { [Y.J4]: n, [Y.fv]: !eg }),
+                              className: l()(Y.kL, Y.Gd, { [Y.fv]: !eg }),
+                              offsetBottom: 0.8 * !!n,
                               children: (0, i.jsxs)(m.f5, {
                                   value: eu,
                                   children: [
@@ -117,7 +118,7 @@ let z = (e) => {
                                               discountedPrice: ec,
                                           }),
                                       }),
-                                      n && (0, i.jsx)(G.A, { glowingPerkId: Q }),
+                                      n && (0, i.jsx)(G.A, { glowingPerkId: J }),
                                       !n &&
                                           (0, i.jsx)(D.A, {
                                               variant: v.cJ.WHATS_NEW,
@@ -128,7 +129,7 @@ let z = (e) => {
                                       null != q &&
                                           X &&
                                           (0, i.jsx)(k.A, { location: _.A.PREMIUM_MARKETING_NITRO_HOME_ORBS_SECTION }),
-                                      n && (0, i.jsx)(L.A, { glowingPerkId: Q }),
+                                      n && (0, i.jsx)(L.A, { glowingPerkId: J }),
                                       !n &&
                                           (0, i.jsx)(D.A, {
                                               className: Y.xU,
@@ -143,7 +144,7 @@ let z = (e) => {
                                       (0, i.jsx)(R.A, {
                                           className: Y.Zy,
                                           location: _.A.PREMIUM_MARKETING_GIFT_SECTION,
-                                          analyticsLocation: { page: w.liQ.NITRO_HOME, section: w.JJy.GIFT_BANNER },
+                                          analyticsLocation: { page: H.liQ.NITRO_HOME, section: H.JJy.GIFT_BANNER },
                                       }),
                                       (0, i.jsx)("div", { className: Y.hz }),
                                       (0, i.jsx)(c.L, {
@@ -151,7 +152,7 @@ let z = (e) => {
                                           onChange: (e) => {
                                               e &&
                                                   !e_ &&
-                                                  (I.default.track(w.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                                                  (I.default.track(H.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                                                       location_stack: eu,
                                                   }),
                                                   em(!0));
