@@ -1,84 +1,56 @@
 "use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => _ });
 var r = n(627968);
 n(64700);
-var i = n(551907),
-    a = n(397927),
+var i = n(397927),
     s = n(80556),
-    o = n(207560),
-    l = n(662502),
-    u = n(64313),
-    c = n(666176),
-    d = n(81091),
-    _ = n(36149),
-    f = n(40449),
-    p = n(835002);
-function h(e) {
-    if (null != e) return (0, _.Sr)(e) ? a.F2Z.LIGHTBOX : void 0;
+    a = n(207560),
+    o = n(64313),
+    l = n(666176),
+    u = n(36149),
+    c = n(40449);
+function d(e) {
+    if (null != e) return (0, u.Sr)(e) ? i.F2Z.LIGHTBOX : void 0;
 }
-let m = {
+let _ = {
     showAgeVerification: (e) => {
-        let {
-            onClose: t,
-            entryPoint: o,
-            shouldShowExpressiveModal: u = !1,
-            verificationVendorName: _,
-            verificationRequestId: m,
-            webviewUrl: g,
-            ...E
-        } = e;
-        if (_ === f.XM.PERSONA) {
-            if (!(0, d.g)("AgeVerificationActionCreators") || null == m) return;
-            new i.Client({
-                inquiryId: m,
-                onComplete: () => {
-                    E.onComplete(), null != t && t();
-                },
-                onError: (e) => {
-                    l.A.showFailedToast(p.OB.TIGGER_PAWTECT_ERROR), null != t && t();
-                },
-                onCancel: () => {
-                    null != t && t();
-                },
-            }).open();
-            return;
-        }
-        if (null == g) return;
-        let A = { modalKey: f.SW, onCloseCallback: t, backdropStyle: h(o), Layer: s.Ay };
-        u || (0, c.v)(o)
-            ? (0, a.mMO)(async () => {
+        let { onClose: t, entryPoint: a, shouldShowExpressiveModal: o = !1, webviewUrl: u, ..._ } = e;
+        if (null == u) return;
+        let f = { modalKey: c.SW, onCloseCallback: t, backdropStyle: d(a), Layer: s.Ay };
+        o || (0, l.v)(a)
+            ? (0, i.mMO)(async () => {
                   let { default: e } = await n.e("24947").then(n.bind(n, 662558));
-                  return (t) => (0, r.jsx)(e, { webviewUrl: g, ...E, ...t });
-              }, A)
-            : (0, a.mMO)(async () => {
+                  return (t) => (0, r.jsx)(e, { webviewUrl: u, ..._, ...t });
+              }, f)
+            : (0, i.mMO)(async () => {
                   let { default: e } = await n.e("23425").then(n.bind(n, 745336));
-                  return (t) => (0, r.jsx)(e, { webviewUrl: g, ...E, ...t });
-              }, A);
+                  return (t) => (0, r.jsx)(e, { webviewUrl: u, ..._, ...t });
+              }, f);
     },
     showAgeVerificationGetStartedModal: (e) => {
-        let { onClose: t, entryPoint: i } = e;
-        (0, _.Q9)() && ((0, o.u0)() || (0, u.o)("age_verification_utils"))
-            ? (0, a.mMO)(
+        let { onClose: t, entryPoint: _ } = e;
+        (0, u.Q9)() && ((0, a.u0)() || (0, o.o)("age_verification_utils"))
+            ? (0, i.mMO)(
                   async () => {
                       let { default: e } = await n.e("18467").then(n.bind(n, 297102));
-                      return (t) => (0, r.jsx)(e, { ...t, entryPoint: i });
+                      return (t) => (0, r.jsx)(e, { ...t, entryPoint: _ });
                   },
-                  { modalKey: f.NC, backdropStyle: h(i), Layer: s.Ay, onCloseCallback: t },
+                  { modalKey: c.NC, backdropStyle: d(_), Layer: s.Ay, onCloseCallback: t },
               )
-            : (0, c.v)(i)
-              ? (0, a.mMO)(
+            : (0, l.v)(_)
+              ? (0, i.mMO)(
                     async () => {
                         let { default: e } = await n.e("18128").then(n.bind(n, 767379));
-                        return (t) => (0, r.jsx)(e, { ...t, entryPoint: i });
+                        return (t) => (0, r.jsx)(e, { ...t, entryPoint: _ });
                     },
-                    { modalKey: f.NC, backdropStyle: h(i), Layer: s.Ay, onCloseCallback: t },
+                    { modalKey: c.NC, backdropStyle: d(_), Layer: s.Ay, onCloseCallback: t },
                 )
-              : (0, a.mMO)(
+              : (0, i.mMO)(
                     async () => {
                         let { default: e } = await n.e("42978").then(n.bind(n, 654041));
-                        return (t) => (0, r.jsx)(e, { ...t, entryPoint: i });
+                        return (t) => (0, r.jsx)(e, { ...t, entryPoint: _ });
                     },
-                    { modalKey: f.NC, backdropStyle: h(i), Layer: s.Ay, onCloseCallback: t },
+                    { modalKey: c.NC, backdropStyle: d(_), Layer: s.Ay, onCloseCallback: t },
                 );
     },
     openUrl: (e) => {

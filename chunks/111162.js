@@ -1,9 +1,9 @@
 "use strict";
-n.r(t), n.d(t, { default: () => y }), n(938796);
+n.r(t), n.d(t, { default: () => S }), n(938796);
 var r = n(158390),
     i = n(247775),
-    a = n(311907),
-    s = n(562465),
+    s = n(311907),
+    a = n(562465),
     o = n(506774),
     l = n(73153),
     u = n(926919),
@@ -14,8 +14,8 @@ let f = (() => {
         let e = `${location.protocol}//${location.host}/__development/source_maps`,
             t = null,
             n = new r.A(5 * c.A.Millis.SECOND, +c.A.Millis.MINUTE, !0),
-            a = () => {
-                s.Bo.put({
+            s = () => {
+                a.Bo.put({
                     url: e,
                     headers: { Authorization: i.getToken() },
                     oldFormErrors: !0,
@@ -25,12 +25,12 @@ let f = (() => {
                         401 === e.status || 403 === e.status
                             ? ((t = null), (0, u.x)({ sourceMapsEnabled: !1 }))
                             : 200 !== e.status
-                              ? (t = setTimeout(a, n.fail()))
+                              ? (t = setTimeout(s, n.fail()))
                               : (n.succeed(),
-                                (t = setTimeout(a, e.body.sourceMapCookieTTLSeconds * c.A.Millis.SECOND * 0.75)));
+                                (t = setTimeout(s, e.body.sourceMapCookieTTLSeconds * c.A.Millis.SECOND * 0.75)));
                     },
                     () => {
-                        t = setTimeout(a, n.fail());
+                        t = setTimeout(s, n.fail());
                     },
                 );
             };
@@ -38,10 +38,10 @@ let f = (() => {
             set: (n) => {
                 n !== (null != t) &&
                     (n
-                        ? (t = setTimeout(a, 0))
+                        ? (t = setTimeout(s, 0))
                         : (clearTimeout(t),
                           (t = null),
-                          s.Bo.del({
+                          a.Bo.del({
                               url: e,
                               headers: { Authorization: i.getToken() },
                               oldFormErrors: !0,
@@ -69,27 +69,24 @@ let f = (() => {
         preventPopoutClose: !1,
         logKeyboardMismatches: !1,
         alertStartupMetrics: !1,
-        personaForceFaeFail: !1,
-        personaForceIdVerificationFail: !1,
-        personaDisableModularPilotTestTemplate: !1,
     },
     m = { ...h };
-function g(e) {
+function E(e) {
     (m = { ...h, ...m, ...e }), f.set(m.sourceMapsEnabled), o.w.set(p, m);
 }
-function E(e) {
+function g(e) {
     let { settings: t } = e;
-    g(t);
+    E(t);
 }
 function A(e) {
-    g(h);
+    E(h);
 }
 function I(e) {
     let t = ((e.user.flags ?? 0) & _.nhx.STAFF) === _.nhx.STAFF,
         n = t || null != e.user.personal_connection_id;
     t && f.set(m.sourceMapsEnabled), d.A.setTags({ isStaff: n.toString() });
 }
-class T extends a.Ay.Store {
+class T extends s.Ay.Store {
     static displayName = "DeveloperOptionsStore";
     initialize() {
         let e = o.w.get(p);
@@ -146,15 +143,6 @@ class T extends a.Ay.Store {
     get alertStartupMetrics() {
         return m.alertStartupMetrics;
     }
-    get personaForceFaeFail() {
-        return m.personaForceFaeFail;
-    }
-    get personaForceIdVerificationFail() {
-        return m.personaForceIdVerificationFail;
-    }
-    get personaDisableModularPilotTestTemplate() {
-        return m.personaDisableModularPilotTestTemplate;
-    }
     getDebugOptionsHeaderValue() {
         return (
             Object.keys(m).map((e) => m[e]),
@@ -164,4 +152,4 @@ class T extends a.Ay.Store {
         );
     }
 }
-let y = new T(l.h, { LOGOUT: A, CONNECTION_OPEN: I, DEVELOPER_OPTIONS_UPDATE_SETTINGS: E });
+let S = new T(l.h, { LOGOUT: A, CONNECTION_OPEN: I, DEVELOPER_OPTIONS_UPDATE_SETTINGS: g });
