@@ -17,17 +17,19 @@ var s = n(554146),
     m = n(49999),
     _ = n(985018);
 function f(e) {
-    let { guildId: t, targetElementRef: n } = e,
-        f = (0, A.A)(t),
+    let { guild: t, targetElementRef: n } = e,
+        f = (0, A.A)(t.id),
         x = (0, h.L)(),
-        { enabled: C } = d.Ay.useExperiment({ guildId: t, location: "progress-bar-coachmark" }),
+        { enabled: C } = d.Ay.useExperiment({ guildId: t.id, location: "progress-bar-coachmark" }),
         E = (0, a.A)(),
-        I = [];
+        I = (0, d._E)(t, C),
+        b = C && I && !E,
+        N = [];
     return (
-        null != f && f && C && !E && I.push(s.M.BOOST_PROGRESS_BAR_ADMIN_COACHMARK),
-        x && null != f && !f && C && !E && I.push(s.M.BOOST_PROGRESS_BAR_MEMBER_COACHMARK),
+        null != f && f && b && N.push(s.M.BOOST_PROGRESS_BAR_ADMIN_COACHMARK),
+        x && null != f && !f && b && N.push(s.M.BOOST_PROGRESS_BAR_MEMBER_COACHMARK),
         (0, i.jsx)(c.Ay, {
-            contentTypes: I,
+            contentTypes: N,
             children: (e) => {
                 let { visibleContent: a, markAsDismissed: c } = e;
                 return a === s.M.BOOST_PROGRESS_BAR_ADMIN_COACHMARK
@@ -56,7 +58,7 @@ function f(e) {
                                   onClick: () => {
                                       c(m.i.TAKE_ACTION),
                                           u.A.open(
-                                              t,
+                                              t.id,
                                               g.BEX.BOOST_PERKS,
                                               o.A.GUILD_BOOSTING_PROGRESS_BAR_ADMIN_COACHMARK,
                                           );
@@ -89,7 +91,7 @@ function f(e) {
                                     variant: "primary",
                                     onClick: () => {
                                         c(m.i.TAKE_ACTION),
-                                            (0, p.A)(t, o.A.GUILD_BOOSTING_PROGRESS_BAR_MEMBER_COACHMARK);
+                                            (0, p.A)(t.id, o.A.GUILD_BOOSTING_PROGRESS_BAR_MEMBER_COACHMARK);
                                     },
                                 },
                             ],

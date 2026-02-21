@@ -123,7 +123,7 @@ function N(e) {
                     premiumSubscriberCount: t.premiumSubscriberCount,
                 }),
             }),
-            (0, i.jsx)(x.a, { guildId: t.id, targetElementRef: a }),
+            (0, i.jsx)(x.a, { guild: t, targetElementRef: a }),
         ],
     });
 }
