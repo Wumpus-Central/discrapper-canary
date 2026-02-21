@@ -1,20 +1,19 @@
-"use strict";
-n.d(t, { A: () => _, F: () => f }), n(321073);
+n.d(t, { A: () => p, F: () => C }), n(321073);
 var r = n(855104),
-    i = n(151252),
+    l = n(151252),
     a = n(287809),
-    s = n(927578),
-    o = n(623373),
-    l = n(561769),
-    u = n(652215);
+    i = n(927578),
+    u = n(623373),
+    o = n(561769),
+    s = n(652215);
 let c = (e) => {
         let { product: t, isPremiumUser: n } = e,
-            { enabled: r } = (0, i.m)({ location: "getShopBasePricingData" }),
-            a = r ? (0, o.CW)({ product: t, isPremiumUser: n }) : void 0;
+            { enabled: r } = (0, l.m)({ location: "getShopBasePricingData" }),
+            a = r ? (0, u.CW)({ product: t, isPremiumUser: n }) : void 0;
         return {
             orbPrice: a,
-            fiatPrice: (0, o.$K)({ product: t, isPremiumUser: n }) ?? void 0,
-            isOrbExclusive: !!r && (0, o.Ab)(t),
+            fiatPrice: (0, u.$K)({ product: t, isPremiumUser: n }) ?? void 0,
+            isOrbExclusive: !!r && (0, u.Ab)(t),
         };
     },
     d = (e) => {
@@ -22,45 +21,45 @@ let c = (e) => {
                 hasSufficientOrbs: t,
                 orbPrice: n,
                 fiatPrice: r,
-                isOrbExclusive: i,
+                isOrbExclusive: l,
                 hasDiscountOffer: a = !1,
-                prioritizedCurrency: s = null,
+                prioritizedCurrency: i = null,
             } = e,
-            o = [],
-            c = s === l.Hi.ORBS;
+            u = [],
+            c = i === o.Hi.ORBS;
         null != n && null != r
             ? c || (t && !a)
-                ? o.push(n, r)
-                : o.push(r, n)
+                ? u.push(n, r)
+                : u.push(r, n)
             : null != n
-              ? o.push(n)
-              : null != r && o.push(r);
-        let d = o.length > 0 && o[0]?.currency === u.Yri.DISCORD_ORB;
-        return { checkoutEligiblePrices: o, isOrbExclusive: i, hasSufficientOrbs: t, shouldCheckoutWithOrbs: d };
+              ? u.push(n)
+              : null != r && u.push(r);
+        let d = u.length > 0 && u[0]?.currency === s.Yri.DISCORD_ORB;
+        return { checkoutEligiblePrices: u, isOrbExclusive: l, hasSufficientOrbs: t, shouldCheckoutWithOrbs: d };
     },
-    _ = (e) => {
+    p = (e) => {
         let { product: t } = e,
             n = (0, r.r_)(),
-            i = a.default.getCurrentUser(),
+            l = a.default.getCurrentUser(),
             {
-                orbPrice: o,
-                fiatPrice: l,
-                isOrbExclusive: u,
-            } = c({ product: t, isPremiumUser: s.Ay.canUseCollectibles(i) }),
-            _ = null != o && null != n && n >= o.amount,
-            { shouldCheckoutWithOrbs: f } = d({ orbPrice: o, fiatPrice: l, isOrbExclusive: u, hasSufficientOrbs: _ });
-        return f;
+                orbPrice: u,
+                fiatPrice: o,
+                isOrbExclusive: s,
+            } = c({ product: t, isPremiumUser: i.Ay.canUseCollectibles(l) }),
+            p = null != u && null != n && n >= u.amount,
+            { shouldCheckoutWithOrbs: C } = d({ orbPrice: u, fiatPrice: o, isOrbExclusive: s, hasSufficientOrbs: p });
+        return C;
     };
-function f(e) {
-    let { product: t, isPremiumUser: n, prioritizedCurrency: i, hasDiscountOffer: a = !1 } = e,
-        { orbPrice: s, fiatPrice: o, isOrbExclusive: l } = c({ product: t, isPremiumUser: n }),
-        u = (0, r.kj)(null != s ? s.amount : null);
+function C(e) {
+    let { product: t, isPremiumUser: n, prioritizedCurrency: l, hasDiscountOffer: a = !1 } = e,
+        { orbPrice: i, fiatPrice: u, isOrbExclusive: o } = c({ product: t, isPremiumUser: n }),
+        s = (0, r.kj)(null != i ? i.amount : null);
     return d({
-        orbPrice: s,
-        fiatPrice: o,
-        isOrbExclusive: l,
-        hasSufficientOrbs: u,
+        orbPrice: i,
+        fiatPrice: u,
+        isOrbExclusive: o,
+        hasSufficientOrbs: s,
         hasDiscountOffer: a,
-        prioritizedCurrency: i,
+        prioritizedCurrency: l,
     });
 }
