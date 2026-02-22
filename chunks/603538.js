@@ -2,17 +2,17 @@
 n.d(t, { A: () => c });
 var r = n(627968),
     i = n(158954),
-    a = n(206418),
-    s = n(224016),
+    s = n(206418),
+    a = n(224016),
     o = n(149757),
     l = n(985018),
     u = n(916e3);
 let c = (e) => {
     let { profileBadge: t, tenureBadge: n } = e,
-        c = (0, o.I)(n.id);
-    return (0, r.jsxs)(a.A, {
+        c = (0, o.I)(n.id).standard;
+    return (0, r.jsxs)(s.A, {
         assetComponent: (0, r.jsx)("img", { src: c, alt: "" }),
-        tooltipWordmarkComponent: (0, r.jsx)(s.A, { width: 56, className: u.R }),
+        tooltipWordmarkComponent: (0, r.jsx)(a.A, { width: 56, className: u.R }),
         children: [
             (0, r.jsx)(i.DZT, { variant: "heading-xl/extrabold", children: l.intl.string(n.nameUnformatted) }),
             (0, r.jsx)(i.EYj, {

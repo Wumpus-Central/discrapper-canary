@@ -2,8 +2,8 @@ n.d(t, { A: () => m });
 var i = n(627968);
 n(64700);
 var s = n(503698),
-    r = n.n(s),
-    a = n(158954),
+    a = n.n(s),
+    r = n(158954),
     l = n(998304),
     o = n(764231),
     c = n(112848),
@@ -16,8 +16,8 @@ let m = () => {
         n = (0, d.N)(e?.id);
     if (null == e || null == n) return null;
     let { id: s, nameUnformatted: m, tenureReqNumMonths: A, hasWideArt: g } = e,
-        E = u.intl.string(m),
-        h = (0, o.T)(s, A),
+        h = u.intl.string(m),
+        x = (0, o.T)(s, A),
         p = { "--custom-badge-glow-color": (0, l.KU)(e.glowColor, 0.5) };
     return (0, i.jsxs)("div", {
         className: _.kL,
@@ -26,16 +26,16 @@ let m = () => {
             (0, i.jsx)("div", {}),
             " ",
             (0, i.jsx)("img", {
-                src: n,
-                alt: E,
-                className: r()(_.pq, { [_.kQ]: e.status === c.Wo.UPCOMING, [_.U]: g }),
+                src: n.standard,
+                alt: h,
+                className: a()(_.pq, { [_.kQ]: e.status === c.Wo.UPCOMING, [_.U]: g }),
             }),
             (0, i.jsxs)("div", {
                 className: _._u,
                 children: [
-                    (0, i.jsx)(a.EYj, { variant: "text-lg/semibold", className: _.Vv, children: E }),
-                    (0, i.jsx)(a.EYj, { variant: "text-md/normal", className: _.Vv, children: h }),
-                    (0, i.jsx)(a.EYj, {
+                    (0, i.jsx)(r.EYj, { variant: "text-lg/semibold", className: _.Vv, children: h }),
+                    (0, i.jsx)(r.EYj, { variant: "text-md/normal", className: _.Vv, children: x }),
+                    (0, i.jsx)(r.EYj, {
                         variant: "text-xs/normal",
                         children:
                             e?.status === c.Wo.EARNED

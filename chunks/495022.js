@@ -2,8 +2,8 @@ n.d(t, { A: () => P });
 var i = n(627968),
     s = n(64700),
     a = n(367622),
-    l = n(827734),
-    r = n(582754),
+    r = n(827734),
+    l = n(582754),
     o = n(397927),
     c = n(736653),
     d = n(793574),
@@ -37,7 +37,7 @@ function P(e) {
     let { glowingPerkId: t = null } = e,
         n = (0, c.DP)(),
         P = (0, E.Lh)(),
-        L = (0, C.N)(P),
+        L = (0, C.N)(P)?.standard ?? null,
         { analyticsLocations: D } = (0, u.Ay)(d.A.PREMIUM_MARKETING_PERK_CARD),
         G = (0, m.A)({ scrollPosition: S._F.TRY_IT_OUT, analyticsLocations: D }),
         M = (0, s.useCallback)(() => {
@@ -161,7 +161,7 @@ function P(e) {
                     id: "videoBackgrounds",
                     title: I.intl.string(I.t.ssVDYQ),
                     description: I.intl.string(I.t.aUSRMa),
-                    primaryAsset: (0, r.Mw)(n) ? N : b,
+                    primaryAsset: (0, l.Mw)(n) ? N : b,
                     categories: ["upgrades"],
                 },
                 {
@@ -179,7 +179,7 @@ function P(e) {
                     primaryAsset:
                         null != L
                             ? (0, i.jsx)("img", { src: L, alt: "", width: 160 })
-                            : (0, i.jsx)(a.vXC, { color: l.A.colors.ICON_MUTED, "aria-hidden": !0 }),
+                            : (0, i.jsx)(a.vXC, { color: r.A.colors.ICON_MUTED, "aria-hidden": !0 }),
                     categories: ["vip"],
                 },
                 {

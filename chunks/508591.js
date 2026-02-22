@@ -2,8 +2,8 @@
 n.d(t, { A: () => f });
 var r = n(627968),
     i = n(64700),
-    a = n(116833),
-    s = n(704640),
+    s = n(116833),
+    a = n(704640),
     o = n(149757),
     l = n(642481),
     u = n(301679),
@@ -18,39 +18,39 @@ let f = (e) => {
             mode: p = "popover",
             tooltipDelay: h = 300,
             targetElementRef: m,
-            body: g,
-            progressCircleText: E,
+            body: E,
+            progressCircleText: g,
             progressCirclePercent: A,
             progressCircleUrgency: I,
             actions: T,
-            onShow: y,
-            estimatedTooltipHeight: S = 300,
+            onShow: S,
+            estimatedTooltipHeight: y = 300,
         } = e,
         v = c.VD[t].nameUnformattedNitro,
-        C = _.intl.string(v).toLocaleUpperCase(),
-        b = (0, s.A)(t),
-        N = (0, o.I)(t);
+        N = _.intl.string(v).toLocaleUpperCase(),
+        C = (0, a.A)(t),
+        b = (0, o.I)(t).standard;
     (0, i.useEffect)(() => {
-        a.m[a.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE](), (new Image().src = N);
-    }, [N]);
+        s.m[s.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE](), (new Image().src = b);
+    }, [b]);
     let R = (0, i.useCallback)(() => {
             n?.(d.i.USER_DISMISS);
         }, [n]),
         O = {
-            gradientColor: b,
+            gradientColor: C,
             size: "lg",
             graphic: {
                 type: "dynamic",
-                component: a.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE,
+                component: s.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE,
                 aspectRatio: "6/4",
-                props: { src: N, alt: C, progressCircleText: E, progressCirclePercent: A, progressCircleUrgency: I },
+                props: { src: b, alt: N, progressCircleText: g, progressCirclePercent: A, progressCircleUrgency: I },
             },
-            title: C,
-            body: g,
+            title: N,
+            body: E,
             actions: T,
         };
     return "tooltip" === p
-        ? (0, r.jsx)(u.A, { targetElementRef: m, estimatedTooltipHeight: S, delay: h, onShow: y, ...O, children: f })
+        ? (0, r.jsx)(u.A, { targetElementRef: m, estimatedTooltipHeight: y, delay: h, onShow: S, ...O, children: f })
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   f,

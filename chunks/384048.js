@@ -1,137 +1,137 @@
-t.d(e, { default: () => M });
-var s = t(627968);
-t(64700);
-var i = t(503698),
-    n = t.n(i),
-    r = t(158954),
-    d = t(421380),
-    l = t(397927),
-    c = t(793574),
-    o = t(688810),
-    _ = t(915089),
-    m = t(976860),
-    E = t(287809),
-    u = t(474090),
-    N = t(396375),
-    x = t(764231),
-    T = t(112848),
-    g = t(149757),
-    A = t(788868),
-    h = t(652215),
-    j = t(985018),
-    p = t(830786);
-let M = (a) => {
-    let { transitionState: e, onClose: t, displayProfile: i } = a,
-        { analyticsLocations: M } = (0, o.Ay)(c.A.TIERED_TENURE_BADGES_MODAL),
-        R = (0, _.GV)(),
-        I = Object.values(A.VD),
-        v = (0, T.p3)(i?.userId),
-        b = (0, T.$F)(),
-        O = E.default.getCurrentUser(),
-        U = (0, T.rG)(i?.userId ?? O?.id) ?? new Date(),
-        D = (0, u.CC)(O?.premiumType, A.PremiumTypes.TIER_2),
-        P = I.map((a) => {
-            let { id: e, nameUnformatted: t, tenureReqNumMonths: d } = a,
-                l = j.intl.string(t),
-                c = (0, g.I)(e),
-                o = (0, x.T)(e, d),
-                _ = null == i,
-                m = _ && b?.id === e,
-                E = !_ && v?.id === e,
-                u = m && b?.status === T.Wo.EARNED,
-                N = m && b?.status === T.Wo.UPCOMING,
-                A = E || u;
-            return (0, s.jsxs)(
+n.d(t, { default: () => f });
+var r = n(627968);
+n(64700);
+var a = n(503698),
+    l = n.n(a),
+    i = n(158954),
+    s = n(421380),
+    u = n(397927),
+    d = n(793574),
+    c = n(688810),
+    m = n(915089),
+    o = n(976860),
+    E = n(287809),
+    _ = n(474090),
+    p = n(396375),
+    N = n(764231),
+    T = n(112848),
+    g = n(149757),
+    x = n(788868),
+    A = n(652215),
+    b = n(985018),
+    h = n(830786);
+let f = (e) => {
+    let { transitionState: t, onClose: n, displayProfile: a } = e,
+        { analyticsLocations: f } = (0, c.Ay)(d.A.TIERED_TENURE_BADGES_MODAL),
+        j = (0, m.GV)(),
+        R = Object.values(x.VD),
+        M = (0, T.p3)(a?.userId),
+        v = (0, T.$F)(),
+        I = E.default.getCurrentUser(),
+        U = (0, T.rG)(a?.userId ?? I?.id) ?? new Date(),
+        S = (0, _.CC)(I?.premiumType, x.PremiumTypes.TIER_2),
+        P = R.map((e) => {
+            let { id: t, nameUnformatted: n, tenureReqNumMonths: s } = e,
+                u = b.intl.string(n),
+                d = (0, g.I)(t).standard,
+                c = (0, N.T)(t, s),
+                m = null == a,
+                o = m && v?.id === t,
+                E = !m && M?.id === t,
+                _ = o && v?.status === T.Wo.EARNED,
+                p = o && v?.status === T.Wo.UPCOMING,
+                x = E || _;
+            return (0, r.jsxs)(
                 "div",
                 {
-                    className: n()(p.qS, { [p.Ny]: A || N }),
+                    className: l()(h.qS, { [h.Ny]: x || p }),
                     children: [
-                        (0, s.jsx)("img", { src: c, alt: l, className: p.pq }),
-                        (0, s.jsxs)("div", {
-                            className: p.Vv,
+                        (0, r.jsx)("img", { src: d, alt: u, className: h.pq }),
+                        (0, r.jsxs)("div", {
+                            className: h.Vv,
                             children: [
-                                (0, s.jsx)(r.EYj, { variant: "text-md/semibold", className: p.Vd, children: l }),
-                                (0, s.jsx)(r.EYj, { variant: "text-xs/normal", children: o }),
-                                A &&
-                                    (0, s.jsx)(r.EYj, {
+                                (0, r.jsx)(i.EYj, { variant: "text-md/semibold", className: h.Vd, children: u }),
+                                (0, r.jsx)(i.EYj, { variant: "text-xs/normal", children: c }),
+                                x &&
+                                    (0, r.jsx)(i.EYj, {
                                         variant: "text-xs/normal",
                                         color: "text-muted",
-                                        className: p.h8,
-                                        children: j.intl.formatToPlainString(j.t.Hu4jfi, { date: U }),
+                                        className: h.h8,
+                                        children: b.intl.formatToPlainString(b.t.Hu4jfi, { date: U }),
                                     }),
-                                N &&
-                                    (0, s.jsx)(r.EYj, {
+                                p &&
+                                    (0, r.jsx)(i.EYj, {
                                         variant: "text-xs/normal",
                                         color: "text-muted",
-                                        className: p.h8,
-                                        children: j.intl.formatToPlainString(j.t.PPL1Il, { days: b?.daysLeft }),
+                                        className: h.h8,
+                                        children: b.intl.formatToPlainString(b.t.PPL1Il, { days: v?.daysLeft }),
                                     }),
                             ],
                         }),
                     ],
                 },
-                e,
+                t,
             );
         }),
-        S = () => {
-            (0, m.pX)(h.BVt.APPLICATION_STORE, { source: c.A.TIERED_TENURE_BADGES_MODAL, sourceLocationStack: M }),
-                t?.();
+        O = () => {
+            (0, o.pX)(A.BVt.APPLICATION_STORE, { source: d.A.TIERED_TENURE_BADGES_MODAL, sourceLocationStack: f }),
+                n?.();
         };
-    return (0, s.jsxs)(l.EOs, {
+    return (0, r.jsxs)(u.EOs, {
         "data-migration-pending": !0,
-        transitionState: e,
-        "aria-labelledby": R,
-        className: n()(p.kL, "theme-dark"),
+        transitionState: t,
+        "aria-labelledby": j,
+        className: l()(h.kL, "theme-dark"),
         parentComponent: "EvolvingTenureBadgeModal",
         children: [
-            (0, s.jsx)(l.s_y, { "data-migration-pending": !0, onClick: t, className: p.b }),
-            (0, s.jsx)(l.$mQ, {
+            (0, r.jsx)(u.s_y, { "data-migration-pending": !0, onClick: n, className: h.b }),
+            (0, r.jsx)(u.$mQ, {
                 "data-migration-pending": !0,
-                className: p.Qs,
-                children: D
-                    ? (0, s.jsxs)(s.Fragment, {
+                className: h.Qs,
+                children: S
+                    ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, s.jsx)(r.EYj, {
+                              (0, r.jsx)(i.EYj, {
                                   variant: "display-md",
-                                  className: p.wx,
-                                  children: j.intl.string(j.t.Og62j7),
+                                  className: h.wx,
+                                  children: b.intl.string(b.t.Og62j7),
                               }),
-                              (0, s.jsx)(r.EYj, {
+                              (0, r.jsx)(i.EYj, {
                                   variant: "text-md/medium",
-                                  className: p.uI,
-                                  children: j.intl.string(j.t.IdAP91),
+                                  className: h.uI,
+                                  children: b.intl.string(b.t.IdAP91),
                               }),
-                              (0, s.jsx)("div", { className: p.C_, children: P }),
-                              null != i &&
-                                  i.userId !== O?.id &&
-                                  (0, s.jsx)(l.wLn, {
+                              (0, r.jsx)("div", { className: h.C_, children: P }),
+                              null != a &&
+                                  a.userId !== I?.id &&
+                                  (0, r.jsx)(u.wLn, {
                                       "data-migration-pending": !0,
-                                      className: p.AJ,
-                                      onClick: S,
-                                      children: j.intl.string(j.t.hvVgAZ),
+                                      className: h.AJ,
+                                      onClick: O,
+                                      children: b.intl.string(b.t.hvVgAZ),
                                   }),
                           ],
                       })
-                    : (0, s.jsxs)(s.Fragment, {
+                    : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, s.jsx)(r.EYj, {
+                              (0, r.jsx)(i.EYj, {
                                   variant: "display-md",
-                                  className: p.wx,
-                                  children: j.intl.string(j.t.RtGeFS),
+                                  className: h.wx,
+                                  children: b.intl.string(b.t.RtGeFS),
                               }),
-                              (0, s.jsx)(r.EYj, {
+                              (0, r.jsx)(i.EYj, {
                                   variant: "text-md/medium",
-                                  className: p.uI,
-                                  children: j.intl.format(j.t.ffatnT, { onClick: S }),
+                                  className: h.uI,
+                                  children: b.intl.format(b.t.ffatnT, { onClick: O }),
                               }),
-                              (0, s.jsx)("div", { className: p.C_, children: P }),
-                              (0, s.jsx)(N.A, {
-                                  className: p.xF,
-                                  premiumModalAnalyticsLocation: { page: h.liQ.TIERED_TENURE_BADGES_MODAL },
-                                  textOptions: { subscribeText: j.intl.string(j.t.JST6jl) },
-                                  subscriptionTier: A.pe.TIER_2,
+                              (0, r.jsx)("div", { className: h.C_, children: P }),
+                              (0, r.jsx)(p.A, {
+                                  className: h.xF,
+                                  premiumModalAnalyticsLocation: { page: A.liQ.TIERED_TENURE_BADGES_MODAL },
+                                  textOptions: { subscribeText: b.intl.string(b.t.JST6jl) },
+                                  subscriptionTier: x.pe.TIER_2,
                                   showGradient: !0,
-                                  color: d.XD.BRAND,
+                                  color: s.XD.BRAND,
                               }),
                           ],
                       }),

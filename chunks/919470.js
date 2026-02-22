@@ -61,8 +61,8 @@ let p = {
                 progressCircleText: b,
                 progressCirclePercent: g,
                 progressCircleUrgency: y,
-                delay: E,
-                size: f,
+                delay: f,
+                size: E,
                 gradientColor: v,
                 estimatedTooltipHeight: S,
             } = e,
@@ -82,7 +82,7 @@ let p = {
                     })[h],
                 [h],
             ),
-            P = null != C ? (0, u.I)(C) : null,
+            P = null != C ? (0, u.I)(C).standard : null,
             R = n.useMemo(() => {
                 if (null == C) return "";
                 let e = c.VD[C];
@@ -105,8 +105,8 @@ let p = {
                 actions: n.useMemo(() => {
                     if (m) return [{ text: "Got it", variant: "primary" }];
                 }, [m]),
-                delay: E,
-                size: f,
+                delay: f,
+                size: E,
                 gradientColor: n.useMemo(() => ("string" == typeof v && v in p ? p[v] : v), [v]),
                 estimatedTooltipHeight: S,
             };

@@ -2,8 +2,8 @@ n.d(t, { A: () => k });
 var i = n(627968),
     s = n(64700),
     a = n(503698),
-    l = n.n(a),
-    r = n(397927),
+    r = n.n(a),
+    l = n(397927),
     o = n(793574),
     c = n(688810),
     d = n(793943),
@@ -39,8 +39,8 @@ function k(e) {
         { analyticsLocations: a } = (0, c.Ay)(o.A.PREMIUM_MARKETING_PERK_CARD),
         k = (0, p.O9)(),
         V = h.A.useExperiment({ location: "PremiumWhatsNewSection" }).enabled,
-        H = (0, _.A)({ scrollPosition: j._F.TRY_IT_OUT, analyticsLocations: a }),
-        w = (0, s.useCallback)(() => {
+        w = (0, _.A)({ scrollPosition: j._F.TRY_IT_OUT, analyticsLocations: a }),
+        H = (0, s.useCallback)(() => {
             (0, g.openUserSettings)(
                 m.X.PROFILE_PANEL,
                 { section: b.nc_.PROFILE_CUSTOMIZATION, analyticsLocations: a },
@@ -57,7 +57,7 @@ function k(e) {
         Y = (0, S.$F)(),
         F = (0, S.Xb)(),
         z = Y?.status === S.Wo.UPCOMING,
-        W = (0, I.N)(Y?.id, { ambient: !z }),
+        W = (0, I.N)(Y?.id),
         K = (0, C.z)(),
         { currentDate: Z, nDaysInMonth: q } = (0, s.useMemo)(() => {
             let e = new Date();
@@ -68,8 +68,8 @@ function k(e) {
                     id: "tenureBadge",
                     title: null != Y ? O.intl.string(Y.nameUnformattedNitro) : "",
                     pillText: O.intl.string(O.t["jyYgZ+"]),
-                    primaryAsset: W ?? void 0,
-                    primaryAssetClassName: z ? R.DC : void 0,
+                    primaryAsset: null != W ? (z ? W.standard : W.ambientLarge) : null,
+                    primaryAssetClassName: r()(R.pq, { [R.n6]: z }),
                     caption: null != F ? O.intl.formatToPlainString(O.t.Hu4jfi, { date: new Date(F) }) : void 0,
                     description:
                         null != Y
@@ -94,7 +94,7 @@ function k(e) {
                               primaryAsset: P,
                               ctaText: O.intl.string(O.t.jVcuVY),
                               onCtaClick: () => {
-                                  (0, r.mMO)(async () => {
+                                  (0, l.mMO)(async () => {
                                       let { default: e } = await n.e("69595").then(n.bind(n, 526710));
                                       return (t) => (0, i.jsx)(e, { ...t });
                                   });
@@ -119,7 +119,7 @@ function k(e) {
                         id: "displayNameStyles",
                         title: O.intl.string(O.t.OLtTrt),
                         description: O.intl.string(O.t["di/pXR"]),
-                        onCtaClick: w,
+                        onCtaClick: H,
                         primaryAsset: D.A,
                         ctaText: O.intl.string(O.t.jVcuVY),
                         pillText: O.intl.string(O.t.y2b7CA),
@@ -140,7 +140,7 @@ function k(e) {
                         description: O.intl.string(O.t.eCZkAI),
                         primaryAsset: U.A,
                         ctaText: O.intl.string(O.t.jVcuVY),
-                        onCtaClick: H,
+                        onCtaClick: w,
                     },
                     {
                         id: "newAppStylesUpdateJune2024",
@@ -152,13 +152,13 @@ function k(e) {
                     },
                 ],
                 s = (t = t.filter((e) => null != e))[0].featured,
-                l = s ? 5 : 6;
-            return t.splice(+!!s, 0, e), t.length > l && t.splice(l, t.length - l), t;
-        }, [Y, W, z, F, k, V, q, Z, a, w, B, H, K]);
+                o = s ? 5 : 6;
+            return t.splice(+!!s, 0, e), t.length > o && t.splice(o, t.length - o), t;
+        }, [Y, W, z, F, k, V, q, Z, a, H, B, w, K]);
     return (0, i.jsxs)("div", {
         className: R.uW,
         children: [
-            (0, i.jsx)(r.Heading, { variant: "display-sm", className: R.R_, children: O.intl.string(O.t.Aw5DRm) }),
+            (0, i.jsx)(l.Heading, { variant: "display-sm", className: R.R_, children: O.intl.string(O.t.Aw5DRm) }),
             (0, i.jsx)("div", {
                 className: R.Ui,
                 children: X.map((e, n) => {
@@ -168,7 +168,7 @@ function k(e) {
                         "div",
                         {
                             id: e.id,
-                            className: l()({ [R.Nq]: s }),
+                            className: r()({ [R.Nq]: s }),
                             style: { scrollMarginTop: 30 },
                             children: (0, i.jsx)(x.S, { ...e, glowing: t === e.id, featured: s }),
                         },
