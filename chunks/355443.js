@@ -1,7 +1,7 @@
-n.d(t, { H: () => a });
+n.d(t, { H: () => l });
 var i = n(179771),
     r = n(672162);
-let a = {
+let l = {
         [r.vd.INITIATE_IMAGE_UPLOAD]: { request: void 0, response: (e) => ({ image_url: e.string().required() }) },
         [r.vd.OPEN_SHARE_MOMENT_DIALOG]: {
             response: void 0,
@@ -88,7 +88,7 @@ let a = {
                         e.object({
                             type: e.number().required(),
                             user: s(e).required(),
-                            presence: e.object({ status: e.string().required(), activity: l(e).allow(null) }),
+                            presence: e.object({ status: e.string().required(), activity: a(e).allow(null) }),
                         }),
                     ),
             }),
@@ -110,8 +110,9 @@ let a = {
             request: (e) => ({ quest_id: e.string().required() }),
             response: (e) => ({ success: e.boolean().required() }),
         },
+        [r.vd.REQUEST_PROXY_TICKET_REFRESH]: { request: void 0, response: (e) => ({ ticket: e.string().required() }) },
     },
-    l = (e) =>
+    a = (e) =>
         e.object({
             session_id: e.string().optional(),
             type: e.number().optional(),
