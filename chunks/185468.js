@@ -4,8 +4,6 @@ e.exports = {
     nT: "headerAssets__0f50c",
     y2: "headerBackground__0f50c",
     nu: "headerLogo__0f50c",
-    nf: "link__0f50c",
-    wP: "linkIcon__0f50c",
     u1: "spinner__0f50c",
     RR: "listing__0f50c",
     uR: "gatedListing__0f50c",
