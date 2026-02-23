@@ -6,8 +6,8 @@ var i = n(627968),
     s = n(506774),
     o = n(108722),
     d = n(379848),
-    c = n(67602),
-    u = n(878227),
+    c = n(975076),
+    u = n(67602),
     A = n(571616),
     h = n(541041),
     _ = n(289357),
@@ -48,7 +48,7 @@ function R(e) {
         [I, f] = (0, d.kn)(E, y.m.CHANNEL_NOTICES),
         C =
             ((t = _.id),
-            (n = (0, u.I)(t)),
+            (n = (0, c.I)(t)),
             r.useMemo(() => {
                 let e = [];
                 return n && e.push(a.M.GAME_CLAIM_COACHMARK), e.length > 0 ? e : L;
@@ -75,7 +75,7 @@ function R(e) {
                 case a.M.LINKED_ROLE_ADMIN_GUILD:
                     return (0, i.jsx)(o.A, { guild: _, markAsDismissed: () => P(y.i.UNKNOWN) });
                 case a.M.GAME_CLAIM_COACHMARK:
-                    return (0, i.jsx)(c.A, { guild: _, markAsDismissed: P });
+                    return (0, i.jsx)(u.A, { guild: _, markAsDismissed: P });
                 default:
                     return null;
             }
