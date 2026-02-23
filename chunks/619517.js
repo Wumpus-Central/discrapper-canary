@@ -27,7 +27,23 @@ let T = /\.gif($|\?|#)/i,
     b = 300;
 class R extends i.Component {
     static visibilityObserver = new o.j({ threshold: 0.6 });
-    static lazyLoadObserver = new o.j({ threshold: 0, rootMargin: `${b}px` });
+    static _lazyLoadTargets = new WeakMap();
+    static _lazyLoadIO =
+        "u" > typeof IntersectionObserver
+            ? new IntersectionObserver(
+                  (e) => {
+                      for (let t of e)
+                          if (t.isIntersecting) {
+                              let e = R._lazyLoadTargets.get(t.target);
+                              null != e &&
+                                  (R._lazyLoadIO?.unobserve(t.target),
+                                  R._lazyLoadTargets.delete(t.target),
+                                  e._triggerLazyLoad());
+                          }
+                  },
+                  { threshold: 0, rootMargin: `${b}px` },
+              )
+            : null;
     static defaultProps = {
         shouldLink: !1,
         autoPlay: !1,
@@ -150,6 +166,7 @@ class R extends i.Component {
     state = { readyState: A.Rv1.LOADING, hasMouseOver: !1, hasFocus: !1 };
     startLoadingTime = Date.now();
     _cancellers = new Set();
+    _unmounted = !1;
     _imageRef = i.createRef();
     constructor(e) {
         super(e),
@@ -157,23 +174,23 @@ class R extends i.Component {
     }
     componentDidMount() {
         let { readyState: e } = this.state;
-        e === A.Rv1.LOADING &&
-            (D.getConfig({ location: "LazyImage_componentDidMount" }).enabled
-                ? R.lazyLoadObserver.observe(this, this._imageRef)
-                : this.loadImage(this.getSrc(this.getRatio(), R.isAnimated(this.props)), this.handleImageLoad)),
-            R.isAnimated(this.props) && this.observeVisibility();
+        if (e === A.Rv1.LOADING)
+            if (D.getConfig({ location: "LazyImage_componentDidMount" }).enabled) {
+                let e = this._imageRef.current;
+                null != e && null != R._lazyLoadIO
+                    ? (R._lazyLoadTargets.set(e, this), R._lazyLoadIO.observe(e))
+                    : this.loadImage(this.getSrc(this.getRatio(), R.isAnimated(this.props)), this.handleImageLoad);
+            } else this.loadImage(this.getSrc(this.getRatio(), R.isAnimated(this.props)), this.handleImageLoad);
+        R.isAnimated(this.props) && this.observeVisibility();
     }
     componentDidUpdate(e) {
-        D.getConfig({ location: "LazyImage_componentDidUpdate" }).enabled &&
-            this.state.readyState === A.Rv1.LOADING &&
-            R.lazyLoadObserver.isVisible(this) &&
-            (R.lazyLoadObserver.unobserve(this),
-            this.loadImage(this.getSrc(this.getRatio(), R.isAnimated(this.props)), this.handleImageLoad));
         let t = R.isAnimated(this.props);
         R.isAnimated(e) !== t && (t ? this.observeVisibility() : this.unobserveVisibility());
     }
     componentWillUnmount() {
-        D.getConfig({ location: "LazyImage_componentWillUnmount" }).enabled && R.lazyLoadObserver.unobserve(this),
+        this._unmounted = !0;
+        let e = this._imageRef.current;
+        null != e && (R._lazyLoadIO?.unobserve(e), R._lazyLoadTargets.delete(e)),
             R.isAnimated(this.props) && this.unobserveVisibility(),
             this._cancellers.forEach((e) => e()),
             this._cancellers.clear();
@@ -218,6 +235,11 @@ class R extends i.Component {
         let { mediaLayoutType: e, responsive: t } = this.props;
         return e ?? (t ? I.dG.RESPONSIVE : I.dG.STATIC);
     }
+    _triggerLazyLoad() {
+        this._unmounted ||
+            this.state.readyState !== A.Rv1.LOADING ||
+            this.loadImage(this.getSrc(this.getRatio(), R.isAnimated(this.props)), this.handleImageLoad);
+    }
     loadImage(e, t) {
         let { width: n, height: r } = this.props;
         if (((this.startLoadingTime = Date.now()), 1 === n && 1 === r)) return;
@@ -227,19 +249,20 @@ class R extends i.Component {
         null != i && this._cancellers.add(i);
     }
     handleImageLoad = (e, t) => {
-        this.setState({ readyState: e ? A.Rv1.ERROR : A.Rv1.READY }, () => {
-            let { format: n, quality: r } = R.getFormatQuality(this.props);
-            R.trackLoadingCompleted({
-                error: e,
-                imageData: t,
-                trigger: this.props.trigger ?? "LOAD",
-                startLoadingTime: this.startLoadingTime,
-                readyState: this.state.readyState,
-                format: n,
-                quality: r,
-                imageProps: this.props,
+        this._unmounted ||
+            this.setState({ readyState: e ? A.Rv1.ERROR : A.Rv1.READY }, () => {
+                let { format: n, quality: r } = R.getFormatQuality(this.props);
+                R.trackLoadingCompleted({
+                    error: e,
+                    imageData: t,
+                    trigger: this.props.trigger ?? "LOAD",
+                    startLoadingTime: this.startLoadingTime,
+                    readyState: this.state.readyState,
+                    format: n,
+                    quality: r,
+                    imageProps: this.props,
+                });
             });
-        });
     };
     onMouseEnter = (e) => {
         R.isAnimated(this.props) && this.setState({ hasMouseOver: !0 });
