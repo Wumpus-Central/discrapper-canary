@@ -538,6 +538,7 @@ var r = (function (e) {
             (e[(e.GAME_DETECTION_CREATE_GAME_SERVER_NEW_BADGE = 689)] = "GAME_DETECTION_CREATE_GAME_SERVER_NEW_BADGE"),
             (e[(e.JOIN_GAME_COMMUNITY_RTC_CTA = 690)] = "JOIN_GAME_COMMUNITY_RTC_CTA"),
             (e[(e.NAGBAR_QUEST_APP_UPSELL = 691)] = "NAGBAR_QUEST_APP_UPSELL"),
+            (e[(e.GAME_SHOP_ORBS_REWARD_BANNER = 692)] = "GAME_SHOP_ORBS_REWARD_BANNER"),
             e
         );
     })({}),

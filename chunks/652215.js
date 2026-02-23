@@ -5,7 +5,7 @@ n.d(t, {
     $OG: () => tL,
     $aF: () => ta,
     $jw: () => ny,
-    $pd: () => eX,
+    $pd: () => eZ,
     AD1: () => p.AD,
     AKn: () => rO,
     AMi: () => tq,
@@ -19,7 +19,7 @@ n.d(t, {
     BBH: () => tS,
     BEX: () => S,
     BIo: () => nl,
-    BRT: () => nX,
+    BRT: () => nZ,
     BVt: () => _.BV,
     BYE: () => tJ,
     CS1: () => eD,
@@ -116,17 +116,17 @@ n.d(t, {
     T7x: () => eP,
     TBI: () => L,
     TGd: () => p.TG,
-    TGz: () => tZ,
+    TGz: () => tX,
     TLS: () => t6,
     TVA: () => t4,
     TZK: () => eq,
     T_y: () => tE,
     TbF: () => ej,
     ThZ: () => tv,
-    TpD: () => tX,
+    TpD: () => tZ,
     U2_: () => p.U2,
     UNo: () => eC,
-    UVF: () => X,
+    UVF: () => Z,
     Ue3: () => eN,
     Umv: () => ed,
     UqL: () => tN,
@@ -166,7 +166,7 @@ n.d(t, {
     _4N: () => ry,
     _Ak: () => p._A,
     _Ee: () => eh,
-    _Of: () => eZ,
+    _Of: () => eX,
     __0: () => p.__,
     _i_: () => tn,
     _tK: () => tQ,
@@ -266,7 +266,7 @@ n.d(t, {
     meB: () => p.me,
     mu: () => eY,
     n5X: () => nd,
-    n83: () => nZ,
+    n83: () => nX,
     nRU: () => R,
     nc_: () => tw,
     nd0: () => y,
@@ -312,7 +312,7 @@ n.d(t, {
     ugG: () => tH,
     uje: () => n4,
     ump: () => t3,
-    uss: () => Z,
+    uss: () => X,
     uvi: () => eO,
     uw8: () => rC,
     vkP: () => F,
@@ -699,6 +699,7 @@ var r = n(478437),
             (e.PTT_NO_KEYBIND_WARNING = "PTT_NO_KEYBIND_WARNING"),
             (e.E2EE_UPDATE_REQUIRED = "E2EE_UPDATE_REQUIRED"),
             (e.WINDOWS_MEDIA_PACK_REQUIRED = "WINDOWS_MEDIA_PACK_REQUIRED"),
+            (e.GAME_SHOP_ORBS_REWARD_BANNER = "GAME_SHOP_ORBS_REWARD_BANNER"),
             e
         );
     })({}),
@@ -936,7 +937,7 @@ var Y = (function (e) {
     q = (function (e) {
         return (e.ALWAYS = "ALWAYS"), (e.ONLY_WHILE_SPEAKING = "ONLY_WHILE_SPEAKING"), e;
     })({}),
-    Z = (function (e) {
+    X = (function (e) {
         return (
             (e.GUILDS = "GUILDS"),
             (e.VOICE = "VOICE"),
@@ -955,7 +956,7 @@ var Y = (function (e) {
             e
         );
     })({}),
-    X = (function (e) {
+    Z = (function (e) {
         return (
             (e.DEFAULT = "DEFAULT"),
             (e.PINNED = "PINNED"),
@@ -2000,10 +2001,10 @@ var eq = (function (e) {
             e
         );
     })({}),
-    eZ = (function (e) {
+    eX = (function (e) {
         return (e.VIDEO = "video"), (e.VOICE = "voice"), e;
     })({}),
-    eX = (function (e) {
+    eZ = (function (e) {
         return (
             (e[(e.PLAYING = 0)] = "PLAYING"),
             (e[(e.STREAMING = 1)] = "STREAMING"),
@@ -2068,7 +2069,7 @@ let e0 = 128,
         TERMS_SUMMARY: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/safety/important-policy-updates`,
         PAID_TERMS: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/terms/paid-services-terms`,
         PAID_TERMS_VIRTUAL_GOODS: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/terms/paid-services-terms#6`,
-        PAID_TERMS_ORBS: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/terms/paid-services-terms#13`,
+        PAID_TERMS_ORBS: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/terms/paid-services-terms#14`,
         PRIVACY: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/privacy`,
         GUIDELINES: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/guidelines`,
         ACKNOWLEDGEMENTS: `${window.GLOBAL_ENV.MARKETING_ENDPOINT}/acknowledgements`,
@@ -3484,8 +3485,8 @@ let tK = Object.freeze({ GAME_INVITE_FRAGMENT: "/_discord/join?secret=" }),
         ANDROID: "https://play.google.com/store/apps/details?id=com.discord",
         META_QUEST: "https://www.meta.com/experiences/discord-talk-play-hang-out/25956082250713643/?require_login=true",
     }),
-    tZ = 0x99aab5,
-    tX = (0, u.Hl)(tZ),
+    tX = 0x99aab5,
+    tZ = (0, u.Hl)(tX),
     tQ = [
         1752220, 3066993, 3447003, 0x9b59b6, 0xe91e63, 0xf1c40f, 0xe67e22, 0xe74c3c, 9807270, 6323595, 1146986, 2067276,
         2123412, 7419530, 0xad1457, 0xc27c0e, 0xa84300, 0x992d22, 9936031, 5533306,
@@ -5970,8 +5971,8 @@ var nz = (function (e) {
         );
     })({});
 let nq = 14,
-    nZ = 30;
-var nX = (function (e) {
+    nX = 30;
+var nZ = (function (e) {
     return (
         (e.OVERLAY = "OVERLAY"), (e.APP = "APP"), (e.POPOUT = "POPOUT"), (e.CALL_TILE_POPOUT = "CALL_TILE_POPOUT"), e
     );

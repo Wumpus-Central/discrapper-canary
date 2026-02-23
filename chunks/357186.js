@@ -2,8 +2,8 @@
 n.d(t, { c: () => f });
 var r = n(379197),
     i = n(554146),
-    a = n(933681),
-    s = n(155718),
+    s = n(933681),
+    a = n(155718),
     o = n(933958),
     l = n(476370),
     u = n(457421),
@@ -20,7 +20,7 @@ function f(e) {
         case i.M.GIFTING_PROMOTION_REMINDER:
             return (0, d.p)();
         case i.M.ACTIVITIES_VOICE_LAUNCHER_BADGE:
-            return (0, l.C)({ storeState: o.Ay.getState(), surface: s.YI.VOICE_LAUNCHER });
+            return (0, l.C)({ storeState: o.Ay.getState(), surface: a.YI.VOICE_LAUNCHER });
         case i.M.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK:
             return 0;
         case i.M.COLLECTIBLES_SHOP_WIDE_BANNER:
@@ -29,7 +29,9 @@ function f(e) {
             return _.Lo;
         case i.M.COLLECTIBLES_SHOP_MARVEL_RIVALS_ORBS_REWARD:
             return 1;
+        case i.M.GAME_SHOP_ORBS_REWARD_BANNER:
+            return 0;
         default:
-            return (0, a.dr)(e, { andFail: !1 }), 0;
+            return (0, s.dr)(e, { andFail: !1 }), 0;
     }
 }
