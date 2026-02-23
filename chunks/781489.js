@@ -1,15 +1,12 @@
 "use strict";
-n.d(t, { e: () => a });
+n.d(t, { e: () => r });
 var i = n(311907),
     s = n(287809),
-    l = n(616075),
-    r = n(996568);
-function a(e) {
-    let t = (0, i.bG)([s.default], () => s.default.getCurrentUser()),
-        n = l.w.useConfig({ location: e }),
-        a = (0, r.l)(e);
+    l = n(616075);
+function r(e) {
+    let t = (0, i.bG)([s.default], () => s.default.getCurrentUser());
     return {
-        isEnabled: n.enabled || a.favoritesEnabled,
+        isEnabled: l.w.useConfig({ location: e }).enabled,
         hasStaffPrivileges: null != t && (t.hasAnyStaffLevel() || t.isStaffPersonal()),
     };
 }
