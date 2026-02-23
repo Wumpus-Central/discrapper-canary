@@ -7,4 +7,5 @@ e.exports = {
     PB: "detailsDescription_e95ba0",
     ye: "iconAsset_e95ba0",
     e$: "purchaseButtonFauxDisabled_e95ba0",
+    pt: "orbsEarnedContainer_e95ba0",
 };

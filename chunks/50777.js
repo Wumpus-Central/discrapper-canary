@@ -99,12 +99,21 @@ function R(e) {
                             (0, i.jsxs)("div", {
                                 className: L.lI,
                                 children: [
-                                    (0, i.jsx)(c.Text, { variant: "text-md/medium", lineClamp: 1, children: P.name }),
                                     (0, i.jsxs)("div", {
                                         className: L.PB,
                                         children: [
                                             null != B &&
                                                 (0, i.jsx)("img", { src: B.toString(), alt: F, className: L.ye }),
+                                            (0, i.jsx)(c.Text, {
+                                                variant: "text-md/medium",
+                                                lineClamp: 1,
+                                                children: P.name,
+                                            }),
+                                        ],
+                                    }),
+                                    (0, i.jsxs)("div", {
+                                        className: L.PB,
+                                        children: [
                                             (0, i.jsx)(c.Text, {
                                                 variant: "text-md/bold",
                                                 lineClamp: 1,
@@ -113,6 +122,24 @@ function R(e) {
                                                     P.price?.currency ?? N.Yr.USD,
                                                 ),
                                             }),
+                                            null != P.orbsReward &&
+                                                P.orbsReward > 0 &&
+                                                (0, i.jsx)("div", {
+                                                    className: L.pt,
+                                                    children: (0, i.jsx)(c.Text, {
+                                                        variant: "text-sm/semibold",
+                                                        color: "currentColor",
+                                                        children: j.intl.format(j.t.GiVd2Q, {
+                                                            orbCount: P.orbsReward,
+                                                            orbIconHook: () =>
+                                                                (0, i.jsx)(
+                                                                    s.Cp8,
+                                                                    { size: "xs", color: "currentColor" },
+                                                                    "orbs-icon",
+                                                                ),
+                                                        }),
+                                                    }),
+                                                }),
                                         ],
                                     }),
                                 ],
