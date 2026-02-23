@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => H }), n(321073);
+n.d(t, { A: () => j }), n(321073);
 var r = n(311907),
     i = n(73153),
-    a = n(49463),
-    s = n(698441),
+    s = n(49463),
+    a = n(698441),
     o = n(141468),
     l = n(383233),
     u = n(994500),
@@ -29,7 +29,7 @@ let h = {
 function m(e) {
     return null != e.id && null != e.type;
 }
-function g() {
+function E() {
     let { keepLocalItems: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     h = {
         loading: !1,
@@ -46,8 +46,8 @@ function g() {
         notifCenterTabFocused: !1,
     };
 }
-function E() {
-    g({ keepLocalItems: !0 });
+function g() {
+    E({ keepLocalItems: !0 });
 }
 function A() {
     h.loading = !0;
@@ -63,32 +63,32 @@ function T(e) {
         applicationId: null != e.application ? e.application.id : void 0,
     };
 }
-function y(e) {
+function S(e) {
     let { unknownApplicationIds: t } = e;
     if (null == t) return;
     let n = new Set(t);
     h.notifCenterLocalItems = h.notifCenterLocalItems.filter((e) => null == e.applicationId || !n.has(e.applicationId));
 }
-function S(e) {
-    g();
+function y(e) {
+    E();
     let t = [],
         n = new Set();
     e.relationships.forEach((e) => {
-        let { type: r, user: i, since: a, is_spam_request: s, user_ignored: o, origin_application_id: l } = e;
-        if (null == i || (o && n.add(i.id), r !== p.eA$.PENDING_INCOMING || s || o || null == a)) return null;
-        let u = c.default.getUser(i.id);
+        let { id: r, type: i, since: s, is_spam_request: a, user_ignored: o, origin_application_id: l } = e;
+        if ((o && n.add(r), i !== p.eA$.PENDING_INCOMING || a || o || null == s)) return null;
+        let u = c.default.getUser(r);
         if (null == u) return null;
-        t.push((0, f.Qi)(u, a, l));
+        t.push((0, f.Qi)(u, s, l));
     }),
         e.gameRelationships.forEach((e) => {
-            let { type: r, id: i, application_id: a, since: s } = e;
+            let { type: r, id: i, application_id: s, since: a } = e;
             if (r !== p.eA$.PENDING_INCOMING || n.has(i)) return;
             let o = c.default.getUser(i);
-            null != o && t.push((0, f.KS)(o, s, a));
+            null != o && t.push((0, f.KS)(o, a, s));
         }),
         e.guilds.forEach((e) => {
             e.guild_scheduled_events.forEach((e) => {
-                F(e);
+                V(e);
             });
         }),
         (h.notifCenterLocalItems = t);
@@ -106,28 +106,28 @@ function v(e) {
         h.notifCenterItems.sort((e, t) => d.default.compare(t.id, e.id)),
         t.forEach((e) => h.notifCenterIds.add(e.id)));
 }
-function C(e) {
+function N(e) {
     let t = "NOTIFICATION_CENTER_ITEM_CREATE" === e.type ? T(e.item) : e.item;
     if (!h.initialized || !m(t) || h.notifCenterIds.has(t.id)) return !1;
     h.notifCenterIds.add(t.id),
         (h.notifCenterItems = [t, ...h.notifCenterItems]),
         h.notifCenterItems.sort((e, t) => d.default.compare(t.id, e.id));
 }
-function b(e) {
+function C(e) {
     let { id: t } = e;
     if (!h.notifCenterIds.has(t)) return !1;
     h.notifCenterIds.delete(t), (h.notifCenterItems = h.notifCenterItems.filter((e) => e.id !== t));
 }
-function N(e, t) {
+function b(e, t) {
     h.notifCenterItems = h.notifCenterItems.map((n) => (e.includes(n.id) ? { ...n, acked: t } : n)).filter(m);
 }
 function R(e) {
     let { ids: t } = e;
-    N(t, !0);
+    b(t, !0);
 }
 function O(e) {
     let { ids: t } = e;
-    N(t, !1);
+    b(t, !1);
 }
 function D(e) {
     let { active: t } = e;
@@ -143,31 +143,31 @@ function w(e, t, n) {
 function x(e, t, n, r) {
     return w(e, t, n) && e.applicationId === r;
 }
-function P(e) {
+function M(e) {
     let { relationship: t } = e,
-        { id: n, type: r, isSpamRequest: i, userIgnored: a, user: s, since: o, originApplicationId: l } = t;
-    if (r === p.eA$.PENDING_INCOMING && !i && !a) {
+        { id: n, type: r, isSpamRequest: i, userIgnored: s, user: a, since: o, originApplicationId: l } = t;
+    if (r === p.eA$.PENDING_INCOMING && !i && !s) {
         if (null == o) return null;
-        if (null != s) {
-            let e = c.default.getUser(s.id);
+        if (null != a) {
+            let e = c.default.getUser(a.id);
             null != e && (h.notifCenterLocalItems = [...h.notifCenterLocalItems, (0, f.Qi)(e, o, l)]);
         }
     }
     r !== p.eA$.FRIEND ||
         null == t.user ||
-        a ||
+        s ||
         (h.notifCenterLocalItems = h.notifCenterLocalItems.map((e) =>
             w(e, _.Uo.INCOMING_FRIEND_REQUESTS, t.user.id)
                 ? {
                       ...e,
                       acked: !0,
                       forceUnacked: !1,
-                      local_id: `incoming_friend_requests_accepted_${s.id}_${e.id}`,
+                      local_id: `incoming_friend_requests_accepted_${a.id}_${e.id}`,
                       type: _.Uo.INCOMING_FRIEND_REQUESTS_ACCEPTED,
                   }
                 : e,
         )),
-        (r === p.eA$.BLOCKED || a) &&
+        (r === p.eA$.BLOCKED || s) &&
             (h.notifCenterLocalItems = h.notifCenterLocalItems.filter(
                 (e) =>
                     !w(e, _.Uo.INCOMING_FRIEND_REQUESTS, n) &&
@@ -176,7 +176,7 @@ function P(e) {
                     !w(e, _.Uo.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED, n),
             ));
 }
-function M(e) {
+function P(e) {
     h.notifCenterLocalItems = h.notifCenterLocalItems.filter(
         (t) =>
             !w(t, _.Uo.INCOMING_FRIEND_REQUESTS, e.relationship.id) &&
@@ -185,15 +185,15 @@ function M(e) {
 }
 function k(e) {
     let { gameRelationship: t } = e,
-        { id: n, type: r, since: i, applicationId: a } = t;
+        { id: n, type: r, since: i, applicationId: s } = t;
     if (u.A.isBlockedOrIgnored(n)) return !1;
     if (r === p.eA$.PENDING_INCOMING) {
         let e = c.default.getUser(n);
-        null != i && null != e && (h.notifCenterLocalItems = [...h.notifCenterLocalItems, (0, f.KS)(e, i, a)]);
+        null != i && null != e && (h.notifCenterLocalItems = [...h.notifCenterLocalItems, (0, f.KS)(e, i, s)]);
     } else {
         if (r !== p.eA$.FRIEND) return !1;
         h.notifCenterLocalItems = h.notifCenterLocalItems.map((e) =>
-            x(e, _.Uo.INCOMING_GAME_FRIEND_REQUESTS, n, a)
+            x(e, _.Uo.INCOMING_GAME_FRIEND_REQUESTS, n, s)
                 ? {
                       ...e,
                       acked: !0,
@@ -218,12 +218,12 @@ function G(e) {
         .map((e) => (e.item_enum === t ? { ...e, completed: !0, acked: !0 } : e))
         .filter(m);
 }
-function V(e) {
-    let { guildScheduledEvent: t } = e;
-    F(t);
-}
 function F(e) {
-    (0, s.AZ)(e) &&
+    let { guildScheduledEvent: t } = e;
+    V(t);
+}
+function V(e) {
+    (0, a.AZ)(e) &&
         (h.notifCenterItems = h.notifCenterItems.map((t) =>
             t.type === _.hW.GUILD_SCHEDULED_EVENT_STARTED && t.guild_scheduled_event_id === e.id
                 ? { ...t, disable_action: !0 }
@@ -238,11 +238,11 @@ function B(e) {
             (h.notifCenterLocalItems = [...h.notifCenterLocalItems.filter((t) => t.kind !== e.kind), e]);
     }
 }
-class j extends r.Ay.PersistedStore {
+class H extends r.Ay.PersistedStore {
     static displayName = "NotificationCenterItemsStore";
     static persistKey = "NotificationCenterItemsStore_v2";
     initialize(e) {
-        if ((this.waitFor(c.default, u.A, a.A), null != e)) {
+        if ((this.waitFor(c.default, u.A, s.A), null != e)) {
             let t = (e) => ({ ...e, message: null != e.message ? new l.Ay(e.message) : void 0 }),
                 n = e.notifCenterItems.map(t);
             n.length > 0 &&
@@ -285,28 +285,28 @@ class j extends r.Ay.PersistedStore {
         return h.notifCenterTabFocused;
     }
 }
-let H = new j(i.h, {
-    CONNECTION_OPEN: S,
-    LOGOUT: () => g(),
+let j = new H(i.h, {
+    CONNECTION_OPEN: y,
+    LOGOUT: () => E(),
     NOTIFICATION_CENTER_ITEMS_ACK: R,
     NOTIFICATION_CENTER_ITEMS_ACK_FAILURE: O,
-    GUILD_SCHEDULED_EVENT_UPDATE: V,
-    NOTIFICATION_CENTER_ITEM_CREATE: C,
-    NOTIFICATION_CENTER_ITEM_DELETE: b,
-    NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: C,
+    GUILD_SCHEDULED_EVENT_UPDATE: F,
+    NOTIFICATION_CENTER_ITEM_CREATE: N,
+    NOTIFICATION_CENTER_ITEM_DELETE: C,
+    NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: N,
     LOAD_NOTIFICATION_CENTER_ITEMS: A,
     LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: I,
     LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: v,
-    RESET_NOTIFICATION_CENTER: () => E(),
+    RESET_NOTIFICATION_CENTER: () => g(),
     NOTIFICATION_CENTER_SET_ACTIVE: D,
     NOTIFICATION_CENTER_TAB_FOCUSED: L,
-    RELATIONSHIP_ADD: P,
-    RELATIONSHIP_UPDATE: P,
-    RELATIONSHIP_REMOVE: M,
+    RELATIONSHIP_ADD: M,
+    RELATIONSHIP_UPDATE: M,
+    RELATIONSHIP_REMOVE: P,
     GAME_RELATIONSHIP_ADD: k,
     GAME_RELATIONSHIP_REMOVE: U,
     NOTIFICATION_CENTER_ITEM_COMPLETED: G,
-    SET_RECENT_MENTIONS_FILTER: () => E(),
+    SET_RECENT_MENTIONS_FILTER: () => g(),
     MOBILE_NATIVE_UPDATE_CHECK_FINISHED: B,
-    APPLICATIONS_FETCH_SUCCESS: y,
+    APPLICATIONS_FETCH_SUCCESS: S,
 });
