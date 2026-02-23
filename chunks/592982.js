@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => S });
+n.d(t, { A: () => N });
 var i = n(627968);
 n(64700);
 var s = n(311907),
@@ -21,51 +21,49 @@ var s = n(311907),
     C = n(470743),
     E = n(806931),
     I = n(652215),
-    b = n(985018),
-    N = n(220636);
-function S(e) {
-    let { onClose: t, onSelect: n, channel: S, remoteMode: T, onInteraction: v } = e,
+    b = n(985018);
+function N(e) {
+    let { onClose: t, onSelect: n, channel: N, remoteMode: S, onInteraction: T } = e,
         y = (0, o.Us)(),
-        { id: j, type: R } = S,
-        O = (0, s.bG)([d.A], () => d.A.getGuild(S.guild_id), [S.guild_id]),
-        L = (0, s.bG)([u.A], () => u.A.getSelectedParticipant(j)),
-        M = L?.type === E.lp.STREAM ? L.stream : null,
-        D = (0, s.bG)([r.A], () => (L?.type === E.lp.ACTIVITY ? r.A.getApplication(L.applicationId) : void 0)),
-        G = (0, p.A)(j),
-        U = (0, x.A)(j),
-        P = (0, m.A)(S, O, M?.ownerId, D?.id),
-        w = (0, A.A)(j),
-        k = (0, C.A)(),
-        V = (0, c.RQ)(j),
-        B = (0, c.dA)(j),
-        H = (0, f.A)(M, y),
-        F = (0, _.A)(D, j),
-        K = (0, g.A)(),
-        W = (0, a.A)(S),
-        Y = (0, h.f)(j);
+        { id: v, type: j } = N,
+        R = (0, s.bG)([d.A], () => d.A.getGuild(N.guild_id), [N.guild_id]),
+        O = (0, s.bG)([u.A], () => u.A.getSelectedParticipant(v)),
+        L = O?.type === E.lp.STREAM ? O.stream : null,
+        M = (0, s.bG)([r.A], () => (O?.type === E.lp.ACTIVITY ? r.A.getApplication(O.applicationId) : void 0)),
+        D = (0, p.A)(v),
+        G = (0, x.A)(v),
+        U = (0, m.A)(N, R, L?.ownerId, M?.id),
+        P = (0, A.A)(v),
+        w = (0, C.A)(),
+        k = (0, c.RQ)(v),
+        V = (0, c.dA)(v),
+        B = (0, f.A)(L, y),
+        H = (0, _.A)(M, v),
+        F = (0, g.A)(),
+        K = (0, a.A)(N),
+        W = (0, h.f)(v);
     return (0, i.jsxs)(l.W1t, {
-        "data-menu-needs-review": !0,
-        className: N.MK,
+        "data-menu-migrated": !0,
         onClose: t,
         onSelect: n,
-        onInteraction: v,
+        onInteraction: T,
         navId: "more-settings-context",
         "aria-label": b.intl.string(b.t.FTLzdR),
         children: [
-            (0, i.jsx)(l.rXV, { children: R !== I.rbe.GUILD_STAGE_VOICE ? P : null }),
+            (0, i.jsx)(l.rXV, { children: j !== I.rbe.GUILD_STAGE_VOICE ? U : null }),
             (0, i.jsxs)(l.rXV, {
                 children: [
-                    R === I.rbe.GUILD_STAGE_VOICE ? V : null,
-                    R === I.rbe.GUILD_STAGE_VOICE ? B : null,
-                    T || R === I.rbe.GUILD_STAGE_VOICE ? null : w,
-                    K,
-                    R !== I.rbe.GUILD_STAGE_VOICE ? G : null,
-                    R === I.rbe.GUILD_STAGE_VOICE || R === I.rbe.GUILD_VOICE ? U : null,
+                    j === I.rbe.GUILD_STAGE_VOICE ? k : null,
+                    j === I.rbe.GUILD_STAGE_VOICE ? V : null,
+                    S || j === I.rbe.GUILD_STAGE_VOICE ? null : P,
+                    F,
+                    j !== I.rbe.GUILD_STAGE_VOICE ? D : null,
+                    j === I.rbe.GUILD_STAGE_VOICE || j === I.rbe.GUILD_VOICE ? G : null,
                 ],
             }),
-            (0, i.jsx)(l.rXV, { children: W }),
-            (0, i.jsxs)(l.rXV, { children: [k, !S.isManaged() && S.isPrivate() ? Y : null] }),
-            (0, i.jsxs)(l.rXV, { children: [null != M ? H : null, null != D ? F : null] }),
+            (0, i.jsx)(l.rXV, { children: K }),
+            (0, i.jsxs)(l.rXV, { children: [w, !N.isManaged() && N.isPrivate() ? W : null] }),
+            (0, i.jsxs)(l.rXV, { children: [null != L ? B : null, null != M ? H : null] }),
         ],
     });
 }

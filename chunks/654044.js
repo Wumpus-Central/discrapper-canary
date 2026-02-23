@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { A: () => a });
+n.d(t, { A: () => s });
 var r = n(315069),
     i = n(874638);
-class a extends r.A {
+class s extends r.A {
     id;
     invoiceItems;
     total;
@@ -14,8 +14,9 @@ class a extends r.A {
     subscriptionPeriodEnd;
     status;
     orbsReward;
+    checkoutContext;
     static createInvoiceFromServer(e) {
-        return new a({
+        return new s({
             id: e.id,
             invoiceItems: e.invoice_items?.map(i.c),
             total: e.total,
@@ -27,6 +28,7 @@ class a extends r.A {
             subscriptionPeriodEnd: new Date(e.subscription_period_end),
             status: e.status,
             orbsReward: e.orbs_reward,
+            checkoutContext: e.checkout_context,
         });
     }
     constructor(e) {
@@ -41,7 +43,8 @@ class a extends r.A {
             (this.subscriptionPeriodStart = e.subscriptionPeriodStart),
             (this.subscriptionPeriodEnd = e.subscriptionPeriodEnd),
             (this.status = e.status),
-            (this.orbsReward = e.orbsReward);
+            (this.orbsReward = e.orbsReward),
+            (this.checkoutContext = e.checkoutContext);
     }
     findInvoiceItemByPlanId(e) {
         return this.invoiceItems.find((t) => t.subscriptionPlanId === e) ?? null;
