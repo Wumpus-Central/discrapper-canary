@@ -34,7 +34,7 @@ let C = [
     },
     { key: u.pn.AWAITING_PURCHASE_TOKEN_AUTH, renderStep: () => (0, r.jsx)(p.A, {}) },
     { key: u.pn.AWAITING_AUTHENTICATION, renderStep: () => (0, r.jsx)(A.A, {}) },
-    { key: u.pn.REVIEW, renderStep: (e) => (0, r.jsx)(x._M, { ...e }) },
+    { key: u.pn.REVIEW, renderStep: (e) => (0, r.jsx)(x._, { ...e }) },
     { key: u.pn.CONFIRM, renderStep: (e) => (0, r.jsx)(j.A, { ...e }) },
 ];
 function v(e) {

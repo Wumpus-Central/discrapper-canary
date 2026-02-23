@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => D }), n(321073);
+n.d(t, { Ay: () => x, ZM: () => b, dL: () => N, oO: () => O }), n(321073);
 var r = n(627968),
     i = n(64700),
     s = n(575593),
@@ -40,39 +40,45 @@ let N = (e) => e.name,
               };
     },
     b = (e) => {
+        let { sku: t, product: n } = e;
+        return null != n && n.type === s.R.BUNDLE
+            ? (0, r.jsx)(h.a, { product: n, fallbackLabel: null })
+            : (0, r.jsx)(S.r$, { sku: t });
+    },
+    R = {
+        [s.R.BUNDLE]: () => y.intl.string(v.default["jM8/71"]),
+        [s.R.AVATAR_DECORATION]: () => y.intl.string(v.default.r29Oel),
+        [s.R.PROFILE_EFFECT]: () => y.intl.string(v.default.eTYAvF),
+        [s.R.NAMEPLATE]: () => y.intl.string(v.default.of9bom),
+    },
+    O = (e) => {
+        let t = y.intl.string(v.default.iZe9Wy);
+        if (null == e);
+        else if (e.type in R) return (0, R[e.type])();
+        return t;
+    },
+    D = (e) => {
         let {
                 sku: t,
                 product: n,
-                application: i,
-                isSocialLayerGameItem: a,
-                giftRecipient: o,
-                discountOfferAmount: l,
+                application: r,
+                isSocialLayerGameItem: i,
+                giftRecipient: s,
+                discountOfferAmount: a,
             } = e,
-            c = y.intl.string(v.default.iZe9Wy);
-        a
-            ? (c = y.intl.string(v.default.qwSlCO))
-            : null != n &&
-              (n.type === s.R.BUNDLE
-                  ? (c = y.intl.string(v.default["jM8/71"]))
-                  : n.type === s.R.AVATAR_DECORATION
-                    ? (c = y.intl.string(v.default.r29Oel))
-                    : n.type === s.R.PROFILE_EFFECT
-                      ? (c = y.intl.string(v.default.eTYAvF))
-                      : n.type === s.R.NAMEPLATE && (c = y.intl.string(v.default.of9bom)));
-        let d = a
-                ? { header: i.name, headerIconSrc: g.Ay.getApplicationIconURL({ id: i.id, icon: i.icon, size: 16 }) }
+            o = y.intl.string(v.default.iZe9Wy);
+        i ? (o = y.intl.string(v.default.qwSlCO)) : null != n && (o = O(n));
+        let l = i
+                ? { header: r.name, headerIconSrc: g.Ay.getApplicationIconURL({ id: r.id, icon: r.icon, size: 16 }) }
                 : {},
-            _ =
-                null != n && n.type === s.R.BUNDLE
-                    ? (0, r.jsx)(h.a, { product: n, fallbackLabel: null })
-                    : (0, r.jsx)(S.r$, { sku: t }),
-            f = {};
+            c = b({ sku: t, product: n }),
+            d = {};
         return (
-            null != n && (f = C(n, l)),
-            { ...d, ...f, label: N(t), description: c, graphic: _, gift: null != o ? (0, u.xk)(o) : void 0 }
+            null != n && (d = C(n, a)),
+            { ...l, ...d, label: N(t), description: o, graphic: c, gift: null != s ? (0, u.xk)(s) : void 0 }
         );
     },
-    R = (e) => {
+    L = (e) => {
         let { sku: t, skuPricePreview: n } = e,
             r = [];
         if (null != n) {
@@ -95,7 +101,7 @@ let N = (e) => e.name,
         }
         return { unifiedInvoiceSummaryProps: null, priceText: "", discount: null };
     },
-    O = (e) => {
+    w = (e) => {
         let {
                 application: t,
                 sku: n,
@@ -108,24 +114,24 @@ let N = (e) => e.name,
             } = e,
             { product: E, isSocialLayerGameItem: g } = (0, S.AO)({ sku: n }),
             { unifiedInvoiceSummaryProps: A, priceText: N } = i.useMemo(
-                () => R({ sku: n, skuPricePreview: s }),
+                () => L({ sku: n, skuPricePreview: s }),
                 [n, s],
             ),
             C = i.useMemo(() => (null != A ? (0, r.jsx)(_.Vm, { ...A }) : null), [A]),
-            O = (0, m.V_)(E),
-            D = i.useMemo(
+            b = (0, m.V_)(E),
+            R = i.useMemo(
                 () =>
-                    b({
+                    D({
                         sku: n,
                         product: E,
                         application: t,
                         isSocialLayerGameItem: g,
                         giftRecipient: p,
-                        discountOfferAmount: O,
+                        discountOfferAmount: b,
                     }),
-                [n, E, t, g, p, O],
+                [n, E, t, g, p, b],
             ),
-            [L, w] = i.useMemo(
+            [O, w] = i.useMemo(
                 () => [y.intl.string(v.default.Zxav97), null != s ? (0, I.$g)(s.amount, s.currency) : void 0],
                 [s],
             ),
@@ -140,18 +146,18 @@ let N = (e) => e.name,
             }, [x, M, P]),
             (0, r.jsx)(d.rg, {
                 shouldShowGlobalNotices: !0,
-                purchaseItemContent: (0, r.jsx)(f.f7, { ...D, price: N }),
+                purchaseItemContent: (0, r.jsx)(f.f7, { ...R, price: N }),
                 invoiceSummaryContent: C,
                 paymentSelectContent: a,
                 legalContent: o,
                 promotionalNoticeContent: x,
                 upperInlineNoticeProps: h,
-                invoiceTotalDueLabel: L,
+                invoiceTotalDueLabel: O,
                 invoiceTotalDueValue: w,
             })
         );
     };
-function D(e) {
+function x(e) {
     let { hasLegalTermsFlash: t, legalTermsNodeRef: n, onPaymentSourceChange: s, handlePaymentSourceAdd: a } = e,
         {
             sku: l,
@@ -182,7 +188,7 @@ function D(e) {
         }, [E.testModeWarning, E.devShelfError]);
     return h
         ? (0, r.jsx)(d.Ed, {})
-        : (0, r.jsx)(O, {
+        : (0, r.jsx)(w, {
               application: u,
               giftRecipient: m,
               isGift: _,

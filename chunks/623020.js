@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { _M: () => U });
+n.d(t, { _: () => U });
 var r = n(627968),
     i = n(64700),
     s = n(284009),
@@ -16,9 +16,8 @@ var r = n(627968),
     m = n(927578),
     E = n(937008),
     g = n(156312),
-    A = n(166532);
-n(566980);
-var I = n(50956),
+    A = n(166532),
+    I = n(50956),
     T = n(921925),
     S = n(592362),
     y = n(520796),
@@ -121,8 +120,8 @@ function U(e) {
             contextMetadata: z,
             currencies: $,
             paymentSources: q,
-            priceOptions: Z,
-            purchaseError: X,
+            priceOptions: X,
+            purchaseError: Z,
             selectedPlan: Q,
             selectedSkuId: J,
             setCurrency: ee,
@@ -151,8 +150,8 @@ function U(e) {
         eO = null != eR && (!es || w.TP[eR].skus.includes(J)) ? eR : null,
         eD = { user_trial_offer_id: eb?.id };
     i.useEffect(() => {
-        null != X && null != eI.current && eI.current.scrollIntoView({ behavior: "smooth" });
-    }, [X]);
+        null != Z && null != eI.current && eI.current.scrollIntoView({ behavior: "smooth" });
+    }, [Z]);
     let eL = i.useCallback(
             (e, t, r) => {
                 K(e),
@@ -200,7 +199,7 @@ function U(e) {
             onPaymentSourceChange: e$,
             handlePaymentSourceAdd: () => n(A.pn.ADD_PAYMENT_STEPS),
         };
-        t = Y ? (0, r.jsx)(b.A, { ...e }) : (0, r.jsx)(C.Ay, { ...e });
+        t = Y ? (0, r.jsx)(b.Ay, { ...e }) : (0, r.jsx)(C.Ay, { ...e });
     } else if (null == W || ed || em) {
         a()(null != Q, "Expected plan to be selected");
         let e = {
@@ -208,7 +207,7 @@ function U(e) {
             planGroup: ez,
             paymentSources: q,
             onPaymentSourceChange: e$,
-            priceOptions: Z,
+            priceOptions: X,
             currencies: $,
             onCurrencyChange: (e) => ee(e),
             handlePaymentSourceAdd: () => n(A.pn.ADD_PAYMENT_STEPS),
@@ -230,7 +229,7 @@ function U(e) {
         let e = {
             premiumSubscription: W,
             paymentSources: q,
-            priceOptions: Z,
+            priceOptions: X,
             onPaymentSourceChange: e$,
             onPaymentSourceAdd: eW,
             planId: Q.id,
@@ -257,7 +256,7 @@ function U(e) {
                 }),
             [eE, eG, ev],
         ),
-        eZ = i.useMemo(
+        eX = i.useMemo(
             () =>
                 (0, r.jsxs)(o.BJc, {
                     direction: "vertical",
@@ -269,7 +268,7 @@ function U(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             !Y && eq,
-            (0, r.jsxs)(L.dZ, { children: [!Y && eZ, t] }),
+            (0, r.jsxs)(L.dZ, { children: [!Y && eX, t] }),
             (0, r.jsx)(L.UX, {
                 children: (0, r.jsx)(D.A, {
                     premiumSubscription: W ?? null,

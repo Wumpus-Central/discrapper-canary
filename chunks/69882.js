@@ -89,18 +89,19 @@ let y = (e) => (0, r.jsx)(v, { ...e }),
                 upperInlineNoticeProps: t,
                 upperInlineNoticeContent: n,
                 planSelectContent: s,
-                purchaseItemContent: a,
-                subscriptionDetailsContent: l,
-                isStepLoading: u,
-                paymentSelectContent: c,
-                invoiceSummaryContent: d,
-                promotionalNoticeContent: _,
-                legalContent: p,
-                invoiceTotalDueLabel: h = T.intl.string(I.default.R0cZsM),
-                invoiceTotalDueValue: E,
-                shouldShowGlobalNotices: y,
+                purchaseItemContent: l,
+                subscriptionDetailsContent: u,
+                isStepLoading: c,
+                paymentSelectContent: d,
+                invoiceSummaryContent: _,
+                promotionalNoticeContent: p,
+                legalContent: h,
+                invoiceTotalDueLabel: E = T.intl.string(I.default.R0cZsM),
+                invoiceTotalDueValue: y,
+                shouldShowGlobalNotices: v,
+                className: N,
             } = e,
-            v = i.useMemo(
+            b = i.useMemo(
                 () =>
                     null == t && null == n
                         ? null
@@ -121,42 +122,42 @@ let y = (e) => (0, r.jsx)(v, { ...e }),
                               : null,
                 [t, n],
             ),
-            N = i.useMemo(
+            O = i.useMemo(
                 () =>
-                    null != v || y
-                        ? y
-                            ? null != v
-                                ? (0, r.jsx)(R, { children: v })
+                    null != b || v
+                        ? v
+                            ? null != b
+                                ? (0, r.jsx)(R, { children: b })
                                 : (0, r.jsx)(R, {})
-                            : (0, r.jsx)("div", { className: S.dD, children: v })
+                            : (0, r.jsx)("div", { className: S.dD, children: b })
                         : null,
-                [y, v],
+                [v, b],
             ),
-            b = i.useMemo(() => (0, f.Gn)(), []);
-        return u
-            ? (0, r.jsx)(C, {})
+            D = i.useMemo(() => (0, f.Gn)(), []);
+        return c
+            ? (0, r.jsx)(C, { className: N })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsxs)("div", {
-                          className: S.sy,
+                          className: a()(S.sy, N),
                           children: [
-                              N,
+                              O,
                               s,
-                              null != s && null != a && (0, r.jsx)("div", { className: S.ls }),
-                              a,
-                              null != l && (0, r.jsx)("div", { className: S.P3, children: l }),
+                              null != s && null != l && (0, r.jsx)("div", { className: S.ls }),
+                              l,
+                              null != u && (0, r.jsx)("div", { className: S.P3, children: u }),
                               (0, r.jsxs)("div", {
                                   className: S.Jv,
-                                  children: [c, b ? (0, r.jsx)(g.Z4, { className: S.KX }) : null],
+                                  children: [d, D ? (0, r.jsx)(g.Z4, { className: S.KX }) : null],
                               }),
-                              (0, r.jsx)("div", { className: S.ZF, children: d }),
+                              (0, r.jsx)("div", { className: S.ZF, children: _ }),
                           ],
                       }),
                       (0, r.jsxs)(m.bx, {
                           children: [
-                              (0, r.jsx)(A.Qf, { className: S.NR, label: h, value: E ?? "--" }),
-                              null != _ ? (0, r.jsx)("div", { className: S.uh, children: _ }) : null,
-                              p,
+                              null != E && (0, r.jsx)(A.Qf, { className: S.NR, label: E, value: y ?? "--" }),
+                              null != p ? (0, r.jsx)("div", { className: S.uh, children: p }) : null,
+                              h,
                           ],
                       }),
                   ],
