@@ -1,5 +1,6 @@
 "use strict";
-n.d(t, { j: () => a });
-var r = n(823074),
-    i = n(204094);
-let a = { title: "Sku", stories: [r.t, i.r] };
+l.d(t, { j: () => i });
+var r = l(556810),
+    a = l(204094),
+    n = l(506273);
+let i = { title: "Sku", stories: [r.l, n.P, a.r] };
