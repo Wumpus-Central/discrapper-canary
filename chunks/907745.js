@@ -68,7 +68,7 @@ class q extends n.PureComponent {
     };
     componentDidUpdate(e) {
         let { editorState: t, searchContext: r } = this.props;
-        if ((r !== e.searchContext && I.A.initializeAutocomplete(r), t !== e.editorState)) {
+        if (t !== e.editorState) {
             let e = y.pe(t),
                 s = (0, L._o)(y.pe(t)),
                 n = T.zZ(s, t);
@@ -392,23 +392,26 @@ function Q(e) {
     let { searchContext: t, className: r } = e,
         l = (0, L.bS)(t),
         a = (0, c.bG)([E.A], () => E.A.keyboardModeEnabled),
-        i = (0, c.bG)([O.A], () => O.A.getEditorState(l));
-    n.useEffect(
-        () => (
-            f.A.setSelectedSearchContext(l),
-            () => {
-                f.A.setSelectedSearchContext(null);
-            }
-        ),
-        [l],
-    );
-    let o = (0, c.bG)([O.A], () => O.A.getIsSearchTokensInitialized()),
-        u = n.useRef(o);
+        i = (0, c.bG)([O.A], () => O.A.getEditorState(l)),
+        o = n.useMemo(() => (null != i ? i : y.e_(T.ys(N.Ay))), [i]);
     n.useEffect(() => {
-        o && u.current !== o && ((u.current = o), v.A.ensureSearchInputDecorators(t));
-    }, [o, t]);
-    let h = n.useMemo(() => (null != i ? i : y.e_(T.ys(N.Ay))), [i]),
-        { isSearching: _, hasResults: S } = (0, c.cf)([x.A], () => {
+        I.A.initializeAutocomplete(t);
+    }, [t]);
+    let u = (0, c.bG)([O.A], () => O.A.getIsSearchTokensInitialized()),
+        h = n.useRef(u);
+    n.useEffect(() => {
+        u && h.current !== u && ((h.current = u), v.A.ensureSearchInputDecorators(t));
+    }, [u, t]),
+        n.useEffect(
+            () => (
+                f.A.setSelectedSearchContext(l),
+                () => {
+                    f.A.setSelectedSearchContext(null);
+                }
+            ),
+            [l],
+        );
+    let { isSearching: _, hasResults: S } = (0, c.cf)([x.A], () => {
             let e = x.A.getTotalCount(l);
             return { hasResults: null != e && e > 0, isSearching: x.A.getIsFetching(l) };
         }),
@@ -420,11 +423,11 @@ function Q(e) {
     n.useEffect(() => {
         b.A.setSidebarOpen(t, m);
     }, [t, m]);
-    let I = (0, d.Ry6)(M.b);
+    let F = (0, d.Ry6)(M.b);
     n.useEffect(() => {
-        b.A.setFiltersModalOpen(t, I);
-    }, [t, I]);
-    let F = n.useCallback(
+        b.A.setFiltersModalOpen(t, F);
+    }, [t, F]);
+    let k = n.useCallback(
             (e) => {
                 let { queryString: r, query: s, searchEverywhere: n, searchQuerySource: l } = e;
                 b.A.refreshQueryId(t),
@@ -434,7 +437,7 @@ function Q(e) {
             },
             [t],
         ),
-        k = (0, c.bG)([p.A, A.A], () => {
+        W = (0, c.bG)([p.A, A.A], () => {
             let e = (0, L._B)(t) ? t.guildId : null;
             if (null != e) {
                 let t = p.A.getGuild(e);
@@ -447,25 +450,25 @@ function Q(e) {
             }
             return null;
         }),
-        W = n.useMemo(() => {
+        H = n.useMemo(() => {
             switch (t.type) {
                 case w.I4_.DMS:
                     return D.intl.string(D.t.m7OrlR);
                 case w.I4_.FAVORITES:
                     return D.intl.string(D.t["5h0QOP"]);
                 default:
-                    return D.intl.formatToPlainString(D.t.LDZtFO, { name: k });
+                    return D.intl.formatToPlainString(D.t.LDZtFO, { name: W });
             }
-        }, [t.type, k]);
+        }, [t.type, W]);
     return (0, s.jsx)(q, {
         className: r,
         searchContext: t,
         isSearching: _,
-        editorState: h,
+        editorState: o,
         hasResults: S,
         keyboardModeEnabled: a,
-        onSearch: F,
-        placeholder: W,
+        onSearch: k,
+        placeholder: H,
     });
 }
 function z(e) {
