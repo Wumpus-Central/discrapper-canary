@@ -100,12 +100,15 @@ let L = n.forwardRef(function (e, t) {
                 let t;
                 (t = u + e) > g.length - 1 ? (t = 0) : t < 0 && (t = g.length - 1), h(t);
             },
-            R = n.useRef({ itemsData: [], selectedIndex: -1, modeType: a.mode.type });
+            R = n.useRef({ itemsData: [], selectedIndex: -1, modeType: a.mode.type, query: a.query });
         return (
             n.useEffect(() => {
-                let { itemsData: e, selectedIndex: t, modeType: r } = R.current,
-                    s = a.mode.type;
-                if (s !== r) s === y.o$q.FILTER ? h(0) : h(-1);
+                let { itemsData: e, selectedIndex: t, modeType: r, query: s } = R.current,
+                    n = a.mode.type,
+                    l = a.query;
+                if (n !== r) n === y.o$q.FILTER ? h(0) : h(-1);
+                else if (n === y.o$q.FILTER && a.query !== s && g.length > 0) h(0);
+                else if (n === y.o$q.FILTER && 0 === e.length && g.length > 0) h(0);
                 else if (t >= 0 && (t === u || e.length !== g.length)) {
                     let r = e[t],
                         s = r?.data.resultText;
@@ -114,8 +117,8 @@ let L = n.forwardRef(function (e, t) {
                         -1 !== e ? h(e) : t >= g.length && h(Math.max(0, g.length - 1));
                     } else t >= g.length && h(Math.max(0, g.length - 1));
                 }
-                R.current = { itemsData: g, selectedIndex: u, modeType: s };
-            }, [g, u, a.mode.type, h]),
+                R.current = { itemsData: g, selectedIndex: u, modeType: n, query: l };
+            }, [g, u, a.mode.type, a.query, h]),
             n.useImperativeHandle(t, () => ({
                 selectedIndex: u,
                 focusNextOption: () => {
