@@ -27,148 +27,146 @@ let T = (e) => {
             handlePaymentSourceAdd: y,
             isTrial: v,
             planGroup: N,
-            setHasAcceptedTerms: C,
-            isDiscount: b,
+            isDiscount: C,
         } = e,
-        R = (0, f.L)(e),
-        { isEligibleForTrial: O } = (0, h.P5)(),
+        b = (0, f.L)(e),
+        { isEligibleForTrial: R } = (0, h.P5)(),
         {
-            error: D,
-            isGift: L,
-            giftRecipient: w,
-            oneTimePurchaseNitroGiftInvoicePreview: x,
-            subscriptionPeriodEnd: M,
-            trialInvoicePreview: P,
-            proratedInvoicePreview: k,
-            renewalInvoicePreview: U,
-            planSwitchLoading: G,
-            plan: F,
-            isPrepaid: V,
-            discountInvoiceItems: B,
-            premiumPlanOptions: H,
-            shouldAllowPlanSelect: j,
-            isCustomGift: Y,
-            hidePersonalInformation: W,
-            hasEntitlements: K,
-            paymentSourceId: z,
-            paymentSourceType: $,
-            eligiblePaymentGateways: q,
-            activeSubscription: Z,
+            error: O,
+            isGift: D,
+            giftRecipient: L,
+            oneTimePurchaseNitroGiftInvoicePreview: w,
+            subscriptionPeriodEnd: x,
+            trialInvoicePreview: M,
+            proratedInvoicePreview: P,
+            renewalInvoicePreview: k,
+            planSwitchLoading: U,
+            plan: G,
+            isPrepaid: F,
+            discountInvoiceItems: V,
+            premiumPlanOptions: B,
+            shouldAllowPlanSelect: H,
+            isCustomGift: j,
+            hidePersonalInformation: Y,
+            hasEntitlements: W,
+            paymentSourceId: K,
+            paymentSourceType: z,
+            eligiblePaymentGateways: $,
+            activeSubscription: q,
             fractionalPremiumInfo: X,
-            isPremiumGroupPurchase: Q,
-            currencyDropdownProps: J,
-            paymentSourcesForDropdown: ee,
-            defaultPaymentSourceId: et,
-        } = R,
-        en = i.useMemo(() => (b ? null : (0, r.jsx)(E.rk, { ...J })), [b, J]),
-        er = (0, r.jsxs)(r.Fragment, {
+            isPremiumGroupPurchase: Z,
+            currencyDropdownProps: Q,
+            paymentSourcesForDropdown: J,
+            defaultPaymentSourceId: ee,
+        } = b,
+        et = i.useMemo(() => (C ? null : (0, r.jsx)(E.rk, { ...Q })), [C, Q]),
+        en = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(a.A, {
                     shouldUseUnifiedCheckoutUI: !0,
-                    paymentSources: ee,
-                    selectedPaymentSourceId: z,
-                    defaultPaymentSourceId: et,
-                    newPaymentMethodOptionLabel: K && !v ? A.intl.string(A.t.IGU7El) : null,
+                    paymentSources: J,
+                    selectedPaymentSourceId: K,
+                    defaultPaymentSourceId: ee,
+                    newPaymentMethodOptionLabel: W && !v ? A.intl.string(A.t.IGU7El) : null,
                     onChange: S,
                     onPaymentSourceAdd: y,
-                    hidePersonalInformation: W,
+                    hidePersonalInformation: Y,
                     isTrial: v,
-                    paymentGatewayRestrictions: q,
+                    paymentGatewayRestrictions: $,
                 }),
-                en,
+                et,
             ],
         }),
-        ei = (0, p.yf)({
-            error: D,
-            isGift: L,
-            oneTimePurchaseNitroGiftInvoicePreview: x,
-            trialInvoicePreview: P,
-            proratedInvoicePreview: k,
-            renewalInvoicePreview: U,
-            planSwitchLoading: G,
+        er = (0, p.yf)({
+            error: O,
+            isGift: D,
+            oneTimePurchaseNitroGiftInvoicePreview: w,
+            trialInvoicePreview: M,
+            proratedInvoicePreview: P,
+            renewalInvoicePreview: k,
+            planSwitchLoading: U,
         }),
-        es = (0, d.V)(t),
-        ea = (0, _.O8)(),
-        eo = (0, m.pt)({
+        ei = (0, d.V)(t),
+        es = (0, _.O8)(),
+        ea = (0, m.pt)({
             fractionalPremiumInfo: X,
             selectedPlanId: n,
             planGroup: N,
-            premiumSubscription: Z,
-            isGift: L,
+            premiumSubscription: q,
+            isGift: D,
         }),
-        el = i.useMemo(
+        eo = i.useMemo(
             () =>
-                eo
+                ea
                     ? (0, r.jsx)(E.l$, {
                           fractionalPremiumInfo: X,
-                          isEligibleForTrial: O,
-                          trialPeriodCopy: ea,
-                          subscriptionPeriodEnd: M,
+                          isEligibleForTrial: R,
+                          trialPeriodCopy: es,
+                          subscriptionPeriodEnd: x,
                       })
-                    : Q
+                    : Z
                       ? (0, r.jsx)(s.wx6, { type: "info", children: (0, m.Nn)() })
                       : null,
-            [eo, X, O, ea, M, Q],
+            [ea, X, R, es, x, Z],
         );
-    if (null == ei || ei.type === p.N$.LOADING) return (0, r.jsx)(l.Ed, {});
-    let eu = null != es ? es.subscription_trial : void 0,
-        ec =
-            ei.type === p.N$.PREMIUM_WITH_TRIAL
+    if (null == er || er.type === p.N$.LOADING) return (0, r.jsx)(l.Ed, {});
+    let el = null != ei ? ei.subscription_trial : void 0,
+        eu =
+            er.type === p.N$.PREMIUM_WITH_TRIAL
                 ? null
                 : (0, r.jsx)(E.W9, {
-                      invoiceSummaryTypeWithPreview: ei,
-                      subscriptionPlan: F,
-                      isPrepaidPaymentSource: V,
-                      subscriptionTrial: eu,
-                      isCustomGift: Y,
+                      invoiceSummaryTypeWithPreview: er,
+                      subscriptionPlan: G,
+                      isPrepaidPaymentSource: F,
+                      subscriptionTrial: el,
+                      isCustomGift: j,
                   }),
-        ed = null;
+        ec = null;
     if (
-        !V &&
-        (p.IJ.has(ei.type) || ei.type === p.N$.PREMIUM_WITH_TRIAL) &&
-        "renewalInvoicePreview" in ei &&
-        null != ei.renewalInvoicePreview
+        !F &&
+        (p.IJ.has(er.type) || er.type === p.N$.PREMIUM_WITH_TRIAL) &&
+        "renewalInvoicePreview" in er &&
+        null != er.renewalInvoicePreview
     ) {
-        let e = (0, g.Gj)(ei.invoicePreview, ei.renewalInvoicePreview, eu);
-        ed = (0, r.jsx)(c._, { ...e });
+        let e = (0, g.Gj)(er.invoicePreview, er.renewalInvoicePreview, el);
+        ec = (0, r.jsx)(c._, { ...e });
     }
-    let e_ = (0, g.BZ)(ei, F, { isPrepaidPaymentSource: V, giftRecipient: w, isPremiumGroupPurchase: Q }),
-        ef = j
+    let ed = (0, g.BZ)(er, G, { isPrepaidPaymentSource: F, giftRecipient: L, isPremiumGroupPurchase: Z }),
+        e_ = H
             ? (0, r.jsx)(E.XH, {
                   selectedPlanId: n,
                   priceOptions: T,
-                  planOptions: H,
+                  planOptions: B,
                   eligibleForMultiMonthPlans: !1,
-                  subscriptionPeriodEnd: M,
-                  discountInvoiceItems: B,
+                  subscriptionPeriodEnd: x,
+                  discountInvoiceItems: V,
               })
             : void 0,
-        ep = j ? void 0 : (0, r.jsx)(u.f7, { ...e_ }),
-        eh = (0, r.jsx)(E.PI, {
+        ef = H ? void 0 : (0, r.jsx)(u.f7, { ...ed }),
+        ep = (0, r.jsx)(E.PI, {
             planGroup: N,
-            activeSubscription: Z,
-            setHasAcceptedTerms: C,
+            activeSubscription: q,
             isTrial: v,
-            plan: F,
-            isGift: L,
+            plan: G,
+            isGift: D,
             priceOptions: T,
-            renewalInvoicePreview: U,
-            paymentSourceType: $,
+            renewalInvoicePreview: k,
+            paymentSourceType: z,
         }),
-        em =
-            ei.type === p.N$.PREMIUM_WITH_TRIAL
-                ? (0, g.MT)(ei.invoicePreview.currency)
-                : (0, o.kw)({ subscriptionInvoiceRecord: ei.invoicePreview });
+        eh =
+            er.type === p.N$.PREMIUM_WITH_TRIAL
+                ? (0, g.MT)(er.invoicePreview.currency)
+                : (0, o.kw)({ subscriptionInvoiceRecord: er.invoicePreview });
     return (0, r.jsx)(l.rg, {
         shouldShowGlobalNotices: !0,
-        upperInlineNoticeContent: el,
-        planSelectContent: ef,
-        purchaseItemContent: ep,
-        subscriptionDetailsContent: ed,
-        paymentSelectContent: er,
-        invoiceSummaryContent: ec,
-        legalContent: eh,
-        invoiceTotalDueValue: em,
+        upperInlineNoticeContent: eo,
+        planSelectContent: e_,
+        purchaseItemContent: ef,
+        subscriptionDetailsContent: ec,
+        paymentSelectContent: en,
+        invoiceSummaryContent: eu,
+        legalContent: ep,
+        invoiceTotalDueValue: eh,
         invoiceTotalDueLabel: A.intl.string(I.default.R0cZsM),
     });
 };
