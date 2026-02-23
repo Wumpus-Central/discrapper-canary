@@ -38033,7 +38033,11 @@ screen and (max-width:485px) {
 }
 
 .errorBlockWrapper_a8c622 {
-    padding: 16px 16px 0
+    padding-bottom: 16px
+}
+
+.errorBlockWrapperLegacy_a8c622 {
+    padding: 16px
 }
 
 .paymentNote_a8c622 {
@@ -42092,10 +42096,6 @@ screen and (max-width:485px) {
 .connectionInstructions_d2b05e {
     margin-top: 8px;
     text-align: center
-}
-
-.body_b25217 {
-    margin: var(--space-16) 0
 }
 
 .flexColumn_b25217 {

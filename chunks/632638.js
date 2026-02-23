@@ -94,7 +94,7 @@ function T(e) {
                         null == k
                             ? null
                             : (0, r.jsx)("div", {
-                                  className: A.Nk,
+                                  className: P ? A.Nk : A.YU,
                                   ref: D,
                                   children: (0, r.jsx)(u.wx6, { type: "critical", children: U }),
                               }),

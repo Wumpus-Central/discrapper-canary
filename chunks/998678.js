@@ -59,45 +59,36 @@ let en = new b.A("AddPaymentStep.tsx"),
 function es(e) {
     let { paymentSourceTypeRestrictions: t } = e,
         n = null != t && t.length > 0 ? $.f.ADD_NEW_PAYMENT_METHOD : void 0;
-    return (0, r.jsxs)("div", {
-        className: ee.rf,
+    return (0, r.jsxs)(r.Fragment, {
         children: [(0, r.jsx)($.j, { paymentRestrictionBannerType: n }), (0, r.jsx)(p.A, { ...e })],
     });
 }
 function ea(e) {
     let { onCardInfoChange: t } = e,
         n = (0, l.bG)([U.A], () => U.A.error);
-    return (0, r.jsx)("div", { className: ee.rf, children: (0, r.jsx)(A.A, { billingError: n, onCardInfoChange: t }) });
+    return (0, r.jsx)(A.A, { billingError: n, onCardInfoChange: t });
 }
 function eo() {
-    return (0, r.jsx)("div", { className: ee.rf, children: (0, r.jsx)(h.A, {}) });
+    return (0, r.jsx)(h.A, {});
 }
 function el() {
-    return (0, r.jsx)("div", { className: ee.rf, children: (0, r.jsx)(m.A, {}) });
+    return (0, r.jsx)(m.A, {});
 }
 function eu() {
-    return (0, r.jsx)("div", { className: ee.rf, children: (0, r.jsx)(X.A, {}) });
+    return (0, r.jsx)(X.A, {});
 }
 function ec() {
     let e = (0, l.bG)([k.A], () => k.A.isBusy),
         t = (0, l.bG)([U.A], () => U.A.stripePaymentMethod);
-    return (0, r.jsx)(I.y, { className: ee.rf, stripePaymentMethod: t, submitting: e });
+    return (0, r.jsx)(I.y, { stripePaymentMethod: t, submitting: e });
 }
 function ed(e) {
     let { billingAddressInfo: t, onBillingAddressChange: n, paymentSourceType: i } = e,
         s = (0, l.bG)([U.A], () => U.A.error);
-    return (0, r.jsx)("div", {
-        className: ee.rf,
-        children: (0, r.jsx)(E.n, {
-            billingAddressInfo: t,
-            billingError: s,
-            onBillingAddressChange: n,
-            paymentSourceType: i,
-        }),
-    });
+    return (0, r.jsx)(E.n, { billingAddressInfo: t, billingError: s, onBillingAddressChange: n, paymentSourceType: i });
 }
 function e_() {
-    return (0, r.jsx)(g.N, { className: ee.rf });
+    return (0, r.jsx)(g.N, {});
 }
 function ef(e) {
     return () => (null != U.A.error && (0, f.ET)(), e());
@@ -447,10 +438,7 @@ function eh(e) {
                 tP = () => {
                     eI ? (tg(), g?.()) : (eF(eR), eY(O.pn.PAYMENT_TYPE));
                 };
-            (t = (0, r.jsx)("div", {
-                className: ee.rf,
-                children: (0, r.jsx)(x.t, { step: eM, onPurchaseComplete: () => A(eM), onHandoffFailure: tM }),
-            })),
+            (t = (0, r.jsx)(x.t, { step: eM, onPurchaseComplete: () => A(eM), onHandoffFailure: tM })),
                 (n = (0, r.jsx)(x.q, { onPrimaryClick: tM, onBackClick: tP }));
             break;
         case O.pn.EPS_INFORMATION:
@@ -764,6 +752,7 @@ function eh(e) {
               ],
           })
         : (0, r.jsx)(z.A, {
+              shouldUseManaModal: em,
               steps: T ?? eG.steps,
               currentStep: b ?? eM,
               overrideKey: t$,

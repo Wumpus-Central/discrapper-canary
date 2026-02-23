@@ -6,6 +6,7 @@ e.exports = {
     uK: "bodyWrapper_a8c622",
     XG: "scroller_a8c622",
     Nk: "errorBlockWrapper_a8c622",
+    YU: "errorBlockWrapperLegacy_a8c622",
     zJ: "paymentNote_a8c622",
     CI: "loadingBlock_a8c622",
     C9: "sequencer_a8c622",
