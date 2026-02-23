@@ -12,44 +12,45 @@ function d(t) {
     let { user: e, numItems: n, location: d } = t,
         I = (0, c.G)("use_unowned_wishlist_items_and_recommendations"),
         g = (0, r.Ay)(e.id),
+        A = Math.max(n, (0, _.KQ)(I)),
         {
-            defaultWishlistId: A,
-            wishlist: u,
-            popularCollectiblesProducts: T,
-            isFetchingWishlist: S,
-            isValidatingPopularProducts: p,
+            defaultWishlistId: u,
+            wishlist: T,
+            popularCollectiblesProducts: S,
+            isFetchingWishlist: p,
+            isValidatingPopularProducts: m,
             isFetchingPopularProducts: E,
             wishlistError: N,
-        } = (0, _.eT)({ giftRecipient: e, minNumItems: n, source: _.B5.USER_PROFILE }),
+        } = (0, _.eT)({ giftRecipient: e, minNumItems: A, source: _.B5.USER_PROFILE }),
         f = (0, a.A)({ displayProfile: g, location: d }),
-        m = i.useMemo(() => [e.id], [e.id]),
-        { recommendations: G } = (0, s.A)({
-            numWishlistItems: Math.max(n, (0, _.Yu)(I)),
+        G = i.useMemo(() => [e.id], [e.id]),
+        { recommendations: L } = (0, s.A)({
+            numWishlistItems: A,
             location: d,
             applicationId: o.XR,
-            userIds: m,
+            userIds: G,
             includeWishlists: !0,
         }),
-        L = i.useMemo(
-            () => ((u?.items ?? []).filter((t) => !0 !== t.isOwned && (0, l.$)(t)).length > 0 || f ? G : []),
-            [u?.items, f, G],
+        b = i.useMemo(
+            () => ((T?.items ?? []).filter((t) => !0 !== t.isOwned && (0, l.$)(t)).length > 0 || f ? L : []),
+            [T?.items, f, L],
         ),
-        { displayItems: b, totalUnownedWishlistItemCount: O } = (0, _.mk)({
-            wishlist: u,
-            popularCollectiblesProducts: T,
-            popularSocialLayerStorefrontItems: L,
+        { displayItems: O, totalUnownedWishlistItemCount: R } = (0, _.mk)({
+            wishlist: T,
+            popularCollectiblesProducts: S,
+            popularSocialLayerStorefrontItems: b,
             wishlistError: N,
-            numItems: n,
+            numItems: A,
         });
     return {
-        displayItems: b,
-        totalUnownedWishlistItemCount: O,
+        displayItems: O,
+        totalUnownedWishlistItemCount: R,
         fetchState: i.useMemo(
             () =>
-                S || p || E ? { status: "loading" } : null != N ? { status: "error", error: N } : { status: "success" },
-            [S, p, E, N],
+                p || m || E ? { status: "loading" } : null != N ? { status: "error", error: N } : { status: "success" },
+            [p, m, E, N],
         ),
-        defaultWishlistId: A,
-        wishlist: u,
+        defaultWishlistId: u,
+        wishlist: T,
     };
 }
