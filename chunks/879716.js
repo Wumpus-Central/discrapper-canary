@@ -1,6 +1,7 @@
 "use strict";
 e.exports = {
     k$: "animationWrapper_e8d31f",
+    fF: "animationWrapperStacked_e8d31f",
     VC: "clickZone_e8d31f",
     vk: "clickable_e8d31f",
     af: "overflowWrapper_e8d31f",

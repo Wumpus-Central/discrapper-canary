@@ -4,7 +4,11 @@ var l = n(311907),
     r = n(914853),
     s = n(956753);
 let a = new Set(Object.values(r.x)),
-    u = { [r.x.FRIENDS]: { FAVORITES: !0, FRIEND_REQUESTS: !0, OFFLINE: !0 }, [r.x.MESSAGES]: {}, [r.x.VOICE]: {} },
+    u = {
+        [r.x.FRIENDS]: { FAVORITES: !0, FRIEND_REQUESTS: !0, OFFLINE: !0 },
+        [r.x.MESSAGES]: { FAVORITES: !0 },
+        [r.x.VOICE]: {},
+    },
     o = { ...u };
 function d(e, t) {
     return !!(e === r.x.FRIENDS && t.startsWith("GROUP:")) || u[e]?.[t] === !0;

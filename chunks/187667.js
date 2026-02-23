@@ -37,7 +37,7 @@ let v = new i.J(T, y),
     b = !1,
     R = null,
     O = 3,
-    D = 2 * p.A.Millis.HOUR;
+    D = 30 * p.A.Millis.MINUTE;
 function L(e) {
     let t = o.A.getChannel(e),
         n = t?.lastMessageId;

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => R });
+n.d(t, { A: () => O });
 var r = n(627968);
 n(64700);
 var i = n(684013),
@@ -18,45 +18,48 @@ var i = n(684013),
     E = n(395011),
     g = n(222506),
     A = n(145567),
-    I = n(378702),
-    T = n(119191),
-    S = n(581730),
-    y = n(672396),
-    v = n(652215),
-    N = n(895867),
-    C = n(985018);
-let b = 2;
-function R(e, t, n, R) {
-    if (m.A.isNotificationDisabled(y.KS.TextChat)) return (0, u.Ak)(c.cH, c.pD), null;
-    let { icon: O, title: D, body: L } = (0, o.TB)(e, t, n),
-        { trackView: w, trackClick: x } = (0, S.Y9)(y.KS.TextChat, {
-            notif_type: y.KS.TextChat,
+    I = n(187667),
+    T = n(378702),
+    S = n(119191),
+    y = n(581730),
+    v = n(672396),
+    N = n(652215),
+    C = n(895867),
+    b = n(985018);
+let R = 2;
+function O(e, t, n, O) {
+    let { hasChat: D } = (0, h.NI)("textChatNotification");
+    if (m.A.isNotificationDisabled(v.KS.TextChat)) return (0, u.Ak)(c.cH, c.pD), null;
+    let L = !g.A.isInputLocked(E.A.getTargetPID());
+    if (I.A.getSelectedChannelId() === e.id && L) return null;
+    let { icon: w, title: x, body: M } = (0, o.TB)(e, t, n),
+        { trackView: P, trackClick: k } = (0, y.Y9)(v.KS.TextChat, {
+            notif_type: v.KS.TextChat,
             notif_user_id: t.author?.id,
             message_id: t.id,
             message_type: t.type,
             guild_id: e.guild_id,
             channel_id: e.id,
             channel_type: e.type,
-        }),
-        { hasChat: M } = (0, h.NI)("textChatNotification");
+        });
     return {
-        icon: O,
-        title: D,
+        icon: w,
+        title: x,
         body:
             t.content.length > 0
                 ? (0, a.Ay)(t, { noStyleAndInteraction: !0, formatInline: !0, hideSimpleEmbedContent: !1 }).content
-                : L,
+                : M,
         hint: (e, t) =>
-            e || !t ? null : (0, T.sI)((0, S.Jn)(), M ? N.default.VMcw8s : C.t.ykjOAJ, C.intl.string(C.t.jZkzVJ)),
-        maxBodyLines: b,
+            e || !t ? null : (0, S.sI)((0, y.Jn)(), D ? C.default.VMcw8s : b.t.ykjOAJ, b.intl.string(b.t.jZkzVJ)),
+        maxBodyLines: R,
         renderFooter: (n, i, s) =>
-            M
+            D
                 ? null
                 : n && !s
-                  ? (0, r.jsx)(I.A, { id: i, replyToMessageId: t.id, channel: e, onSend: () => x("send") })
+                  ? (0, r.jsx)(T.A, { id: i, replyToMessageId: t.id, channel: e, onSend: () => k("send") })
                   : null,
         onNotificationShow: () => {
-            R && (0, u.Ak)(c.cH, c.pD), w();
+            O && (0, u.Ak)(c.cH, c.pD), P();
         },
         onNotificationClick: (n, r) => {
             let a = E.A.getTargetPID();
@@ -64,34 +67,34 @@ function R(e, t, n, R) {
                 ((0, s.ack)(
                     e.id,
                     {
-                        section: v.JJy.OVERLAY,
-                        object: v.ZSU.ACK_TEXT_CHAT_NOTIFICATION,
-                        objectType: v.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
+                        section: N.JJy.OVERLAY,
+                        object: N.ZSU.ACK_TEXT_CHAT_NOTIFICATION,
+                        objectType: N.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
                     },
                     !0,
                     !0,
                     t.id,
                 ),
-                M)
+                D)
             ) {
                 (0, A.D$)({
                     target: { kind: A.bB.CHANNEL, channelId: e.id, guildId: e.guild_id ?? null, messageId: t.id },
                     source: p.B9.NOTIFICATION_CLICK,
-                    widgetType: v.uss.NOTIFICATIONS,
+                    widgetType: N.uss.NOTIFICATIONS,
                 }),
-                    g.A.isInputLocked(a) ? (x("unlock"), i.A.setInputLocked(!1, a)) : x("jump"),
+                    g.A.isInputLocked(a) ? (k("unlock"), i.A.setInputLocked(!1, a)) : k("jump"),
                     requestAnimationFrame(() => {
-                        d._.dispatchToLastSubscribed(v.jej.TEXTAREA_FOCUS, { channelId: e.id });
+                        d._.dispatchToLastSubscribed(N.jej.TEXTAREA_FOCUS, { channelId: e.id });
                     }),
-                    i.A.updateNotificationStatus(r, v.yFH.DISMISSED);
+                    i.A.updateNotificationStatus(r, N.yFH.DISMISSED);
                 return;
             }
             g.A.isInputLocked(a)
-                ? (x("unlock"), i.A.setInputLocked(!1, a))
-                : (x("jump"), (0, l.pX)(v.BVt.CHANNEL(e.guild_id, e.id, t.id)), _.isPlatformEmbedded && f.Ay.focus());
+                ? (k("unlock"), i.A.setInputLocked(!1, a))
+                : (k("jump"), (0, l.pX)(N.BVt.CHANNEL(e.guild_id, e.id, t.id)), _.isPlatformEmbedded && f.Ay.focus());
         },
         onDismissClick: () => {
-            x("dismiss");
+            k("dismiss");
         },
     };
 }
