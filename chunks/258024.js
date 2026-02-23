@@ -133,8 +133,10 @@ class T {
             ((this.offsetHeightCache = i),
             (this.scrollHeightCache = l),
             (this.loading = e.messages.loadingMore),
-            t.loadingMore && !e.messages.loadingMore)
-        ) {
+            t.channelId !== e.messages.channelId)
+        )
+            this.loadMorePausedUntilUserScroll = !1;
+        else if (t.loadingMore && !e.messages.loadingMore) {
             let e = Math.abs(l - this.scrollHeightBeforeLoad);
             this.loadMorePausedUntilUserScroll = e < 100;
         }
