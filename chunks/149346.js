@@ -2,37 +2,28 @@
 n.d(t, { Z: () => f, y: () => _ });
 var r = n(627968),
     i = n(503698),
-    a = n.n(i),
-    s = n(158954),
-    o = n(314116),
-    l = n(397927),
+    s = n.n(i),
+    a = n(158954),
+    o = n(397927),
+    l = n(99696),
     u = n(756366),
     c = n(985018),
     d = n(754316);
 let _ = (e) => {
         let { text: t = c.intl.string(u.default["/JKmHB"]), onClick: n, className: i } = e;
-        return (0, r.jsxs)(s.DUT, {
-            className: a()(d.U, i),
+        return (0, r.jsxs)(a.DUT, {
+            className: s()(d.U, i),
             onClick: n,
             children: [
-                (0, r.jsx)(s.j96, { color: l.LU0.colors.TEXT_BRAND }),
-                (0, r.jsx)(l.Text, { variant: "text-sm/medium", color: "text-brand", children: t }),
+                (0, r.jsx)(a.j96, { color: o.LU0.colors.TEXT_BRAND }),
+                (0, r.jsx)(o.Text, { variant: "text-sm/medium", color: "text-brand", children: t }),
             ],
         });
     },
     f = (e) => {
-        let {
-                onComplete: t,
-                onClose: n,
-                text: i,
-                className: a,
-                modalTitle: s = "Modal Title",
-                modalConfirmText: l = "Confirm Text",
-                modalCancelText: u = "Cancel Text",
-                modalSubtitle: c = "Modal Subtitle",
-            } = e,
-            d = () => {
-                (0, o.A)({ title: s, subtitle: c, confirmText: l, cancelText: u, onConfirm: t, onCancel: n });
+        let { onComplete: t, onClose: n, text: i, className: s, initialCode: a } = e,
+            o = () => {
+                (0, l.HF)({ initialCode: a ?? "", onComplete: t, onClose: n });
             };
-        return (0, r.jsx)(_, { text: i, onClick: d, className: a });
+        return (0, r.jsx)(_, { text: i, onClick: o, className: s });
     };
