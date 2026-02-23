@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { A: () => I }), n(667532);
+n.d(t, { A: () => T }), n(667532);
 var r = n(311907),
     i = n(73153),
-    a = n(463347),
-    s = n(824865),
+    s = n(463347),
+    a = n(824865),
     o = n(334465),
     l = n(545167),
     u = n(652215);
 let c = 20,
     d = [
-        u.BVt.CHANNEL_THREAD_VIEW(a.pv.guildId(), a.pv.channelId({ optional: !0 }), ":threadId", ":messageId?"),
-        u.BVt.CHANNEL(a.pv.guildId(), a.pv.channelId({ optional: !0 }), ":messageId?"),
-        u.BVt.VOICE_CHAT_CHANNEL_PARTIAL(a.pv.guildId(), a.pv.channelId({ optional: !0 }), ":messageId?"),
-        u.BVt.CHANNELS_GAME_SHOP(a.pv.guildId(), ":pageIndex", ":skuId?", ":slug?"),
+        u.BVt.CHANNEL_THREAD_VIEW(s.pv.guildId(), s.pv.channelId({ optional: !0 }), ":threadId", ":messageId?"),
+        u.BVt.CHANNEL(s.pv.guildId(), s.pv.channelId({ optional: !0 }), ":messageId?"),
+        u.BVt.VOICE_CHAT_CHANNEL_PARTIAL(s.pv.guildId(), s.pv.channelId({ optional: !0 }), ":messageId?"),
+        u.BVt.CHANNELS_GAME_SHOP(s.pv.guildId(), ":pageIndex", ":skuId?", ":slug?"),
         u.BVt.NOTIFICATIONS,
         u.BVt.FRIENDS,
         u.BVt.ME,
@@ -30,42 +30,44 @@ let c = 20,
     ],
     _ = [],
     f = 0,
-    h = !!(null != window && "navigation" in window) && (window.navigation.canGoBack ?? !1),
-    p = !!(null != window && "navigation" in window) && (window.navigation.canGoForward ?? !1);
-function g(e, t) {
+    p = !!(null != window && "navigation" in window) && (window.navigation.canGoBack ?? !1),
+    h = !!(null != window && "navigation" in window) && (window.navigation.canGoForward ?? !1);
+function m(e, t) {
     if (t < 0 || t >= e.length) throw RangeError("index out of bounds");
     let n = 0,
         r = t;
     for (; n < r; ) ([e[n], e[r]] = [e[r], e[n]]), n++, r--;
     return e;
 }
-function E(e) {
+function E() {
+    "navigation" in window && ((p = window.navigation.canGoBack ?? !1), (h = window.navigation.canGoForward ?? !1));
+}
+function g() {
+    (_ = []), (f = 0), E();
+}
+function A(e) {
     let { location: t, action: n } = e;
-    if (
-        ("navigation" in window &&
-            ((h = window.navigation.canGoBack ?? !1), (p = window.navigation.canGoForward ?? !1)),
-        "POP" === n)
-    ) {
+    if ((E(), "POP" === n)) {
         let e = _.findIndex((e) => e.path === t.pathname);
         if (-1 !== e) {
             f = e;
             return;
         }
     }
-    if (t.source === s.A.USER_NAVIGATED_BACK) {
+    if (t.source === a.A.USER_NAVIGATED_BACK) {
         f < _.length - 1 && f++;
         return;
     }
-    if (t.source === s.A.USER_NAVIGATED_FORWARD) {
+    if (t.source === a.A.USER_NAVIGATED_FORWARD) {
         f > 0 && f--;
         return;
     }
     let { pathname: r } = t,
         i = "REPLACE" === n,
-        a = (0, o.B)(r, d);
-    if (null != a) {
+        s = (0, o.B)(r, d);
+    if (null != s) {
         if (i && _.length > 0) {
-            _[f] = { path: r, params: a.params };
+            _[f] = { path: r, params: s.params };
             return;
         }
         if (_.length > 0) {
@@ -73,11 +75,11 @@ function E(e) {
             let e = _.findIndex((e) => e.path === r);
             -1 !== e && (_.splice(e, 1), f >= e && (f -= 1));
         }
-        for (f > 0 && g(_, f), f = 0; _.length > c; ) _.pop();
-        _.unshift({ path: r, params: a.params });
+        for (f > 0 && m(_, f), f = 0; _.length > c; ) _.pop();
+        _.unshift({ path: r, params: s.params });
     }
 }
-class A extends r.Ay.Store {
+class I extends r.Ay.Store {
     static displayName = "BackForwardNavStore";
     initialize() {
         (_ = []), (f = 0);
@@ -86,10 +88,10 @@ class A extends r.Ay.Store {
         return _;
     }
     get canGoBack() {
-        return (0, l.vY)({ location: "canGoBackForward" }) ? f < _.length - 1 : h;
+        return (0, l.vY)({ location: "canGoBackForward" }) ? f < _.length - 1 : p;
     }
     get canGoForward() {
-        return (0, l.vY)({ location: "canGoBackForward" }) ? f > 0 : p;
+        return (0, l.vY)({ location: "canGoBackForward" }) ? f > 0 : h;
     }
     get backDestination() {
         return this.canGoBack ? _[f + 1] : null;
@@ -98,4 +100,4 @@ class A extends r.Ay.Store {
         return this.canGoForward ? _[f - 1] : null;
     }
 }
-let I = new A(i.h, { ROUTE_CHANGED: E });
+let T = new I(i.h, { ROUTE_CHANGED: A, LOGOUT: g });

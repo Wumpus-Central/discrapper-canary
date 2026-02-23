@@ -25,6 +25,7 @@ var v = (function (e) {
     return (e.MFA = "MFA"), (e.SUCCESS = "SUCCESS"), e;
 })({});
 function N(e) {
+    window.DiscordNative?.ipc?.send?.("NAVIGATION_HISTORY_CLEAR");
     let t = { type: "LOGOUT", ...e };
     l.h.dispatch(t).catch((e) => {
         throw (T.error("Error while dispatching LOGOUT", e), window.DiscordErrors?.softCrash(e), e);
