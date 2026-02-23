@@ -78,14 +78,14 @@ let z = (e) => {
         $ = (0, c.bG)([R.A], () => R.A.get(t));
     l()(null != $, "Missing plan");
     let q = [{ planId: $.id, quantity: 1 }],
-        Z = o === T.h.PURCHASING || o === T.h.COMPLETED,
-        X = h ?? "",
-        Q = (0, c.bG)([D.A], () => D.A.get(X), [X]),
+        X = o === T.h.PURCHASING || o === T.h.COMPLETED,
+        Z = h ?? "",
+        Q = (0, c.bG)([D.A], () => D.A.get(Z), [Z]),
         J = Q?.eligiblePaymentGateways,
         [ee, et] = (0, M.Kq)({
             items: q,
             renewal: !1,
-            preventFetch: x || Y || Z,
+            preventFetch: x || Y || X,
             applyEntitlements: !0,
             paymentSourceId: r.paymentSourceId,
             currency: r.currency,
@@ -96,7 +96,7 @@ let z = (e) => {
             subscriptionId: p?.id,
             items: q,
             renewal: !0,
-            preventFetch: Y || Z,
+            preventFetch: Y || X,
             trialId: s,
             paymentSourceId: r.paymentSourceId,
             currency: r.currency,
@@ -116,24 +116,21 @@ let z = (e) => {
             skuId: h,
             subscriptionPlanId: t,
             currency: r.currency,
-            preventFetch: !Y || Z,
+            preventFetch: !Y || X,
             loadId: O.loadId,
         }),
         el = i.useMemo(() => {
-            let e = ee?.checkoutContext;
+            let e = Y ? ea?.checkoutContext : ee?.checkoutContext;
             return null == e || null == e.payment_sources ? [] : e.payment_sources.map(g.A.createFromCheckoutContext);
-        }, [ee?.checkoutContext]),
+        }, [Y, ee?.checkoutContext, ea?.checkoutContext]),
         eu = i.useRef(!1);
     i.useEffect(() => {
         if (el.length > 0 && !eu.current) {
             eu.current = !0;
-            let e = el.find((e) => e.id === r.paymentSourceId);
-            if (null != e && !e.enabled) {
-                let e = el.find((e) => e.enabled) ?? null;
-                H(null != e ? e.id : null);
-            }
+            let e = el.find((e) => e.enabled) ?? null;
+            null != e ? H(e.id) : H(null);
         }
-    }, [el, H, r.paymentSourceId]);
+    }, [el, H]);
     let ec = Y && (0, L.Ik)(K),
         ed = et ?? er ?? es ?? eo;
     i.useEffect(() => {
@@ -171,7 +168,7 @@ let z = (e) => {
         [r.currency, u, d],
     );
     return {
-        disabled: Z,
+        disabled: X,
         activeSubscription: p,
         subscriptionPeriodEnd: eA,
         plan: $,
@@ -239,8 +236,8 @@ function $(e) {
         {
             activeSubscription: $,
             disabled: q,
-            isEmbeddedIAP: Z,
-            paymentSourceType: X,
+            isEmbeddedIAP: X,
+            paymentSourceType: Z,
             hidePersonalInformation: Q,
             giftRecipient: J,
             selectedGiftStyle: ee,
@@ -317,7 +314,7 @@ function $(e) {
         : ed && eA
           ? (ew = "")
           : (0, w.ys)(eu.id) && (ew = w.Ay.getBillingReviewSubheader(null, eu));
-    let ex = null != ea && ea.length > 0 && (es === O.B || null === X) && ei ? G.f.SELECT_PAYMENT_METHOD : void 0;
+    let ex = null != ea && ea.length > 0 && (es === O.B || null === Z) && ei ? G.f.SELECT_PAYMENT_METHOD : void 0;
     return (0, r.jsxs)("div", {
         children: [
             (0, r.jsx)(G.j, { paymentRestrictionBannerType: ex }),
@@ -425,8 +422,8 @@ function $(e) {
                             subscriptionPlan: eu,
                             renewalInvoice: eh,
                             isGift: ed,
-                            paymentSourceType: X,
-                            isEmbeddedIAP: Z,
+                            paymentSourceType: Z,
+                            isEmbeddedIAP: X,
                             basePrice: (0, w.y8)(eu.id, !1, ed, s),
                         }),
                     showPricingLink: eu.currency !== Y.Yr.USD,
