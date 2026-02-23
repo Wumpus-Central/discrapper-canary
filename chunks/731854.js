@@ -11,7 +11,7 @@ n.d(t, {
     Hz: () => d,
     K3: () => ei,
     KR: () => b,
-    Ku: () => Z,
+    Ku: () => X,
     ME: () => J,
     O5: () => q,
     PR: () => h,
@@ -48,7 +48,7 @@ n.d(t, {
     qe: () => A,
     qm: () => D,
     r8: () => c,
-    rB: () => X,
+    rB: () => Z,
     sG: () => L,
     tl: () => $,
     us: () => R,
@@ -220,10 +220,10 @@ var q = (function (e) {
             e
         );
     })({}),
-    Z = (function (e) {
+    X = (function (e) {
         return (e.NATIVE = "NATIVE"), (e.WEBRTC = "WEBRTC"), (e.DUMMY = "DUMMY"), e;
     })({}),
-    X = (function (e) {
+    Z = (function (e) {
         return (
             (e.LEGACY = "legacy"),
             (e.STANDARD = "standard"),
@@ -282,6 +282,7 @@ var q = (function (e) {
             (e.H265_HARDWARE_DECODE_AVAILABLE = "h265_hardware_decode_available"),
             (e.WMF_GPU_ENCODE = "wmf_gpu_encode"),
             (e.USE_H264_MF_DECODER = "use_h264_mf_decoder"),
+            (e.USE_LIBOPENH264_DECODER = "use_libopenh264_decoder"),
             e
         );
     })({}),

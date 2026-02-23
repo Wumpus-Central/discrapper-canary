@@ -894,7 +894,8 @@ class R extends f.A {
                 rtxType: r?.rtxPayloadType ?? 0,
                 params: this.getCodecParams(r.name, !0),
             };
-            this.experimentFlags.has(I.fd.RESET_DECODER_ON_ERRORS) && (n.params["reset-on-errors"] = "1"),
+            if (
+                (this.experimentFlags.has(I.fd.RESET_DECODER_ON_ERRORS) && (n.params["reset-on-errors"] = "1"),
                 this.experimentFlags.has(I.fd.SOFTWARE_FALLBACK_ON_ERRORS) && (n.params["fallback-after-errors"] = "3"),
                 this.experimentFlags.has(I.fd.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS) &&
                     (n.params["fallback-on-consecutive-errors"] = "1"),
@@ -903,7 +904,12 @@ class R extends f.A {
                     (n.params["software-h265"] = this.experimentFlags.has(I.fd.H265_HARDWARE_ONLY) ? "0" : "1"),
                 (n.params["hardware-h264"] = this.useElectronVideo ? "1" : "0"),
                 this.experimentFlags.has(I.fd.USE_H264_MF_DECODER) && (n.params["h264-mf"] = "1"),
-                a.push(n),
+                this.experimentFlags.has(I.fd.USE_LIBOPENH264_DECODER))
+            ) {
+                let e = (0, g.XH)();
+                null != e && ((n.params.libopenh264 = "1"), (n.params["libopenh264-path"] = e));
+            }
+            a.push(n),
                 r.name === t &&
                     ((o = { ...n, params: this.getCodecParams(r.name, !1) }),
                     this.experimentFlags.has(I.fd.VIDEOTOOLBOX_RATE_CONTROL) &&

@@ -406,6 +406,9 @@ let B = {
             );
         },
         cleanupUnusedOpenH264Files: async (e) => await h.fileManager.cleanupUnusedOpenH264Files(e),
+        getOpenH264LibraryPath() {
+            if (d.isPlatformEmbedded) return h.fileManager.getOpenH264LibraryPathSync?.();
+        },
         canCopyImage() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0;
             if (!d.isPlatformEmbedded || "function" != typeof h.clipboard.copyImage) return !1;

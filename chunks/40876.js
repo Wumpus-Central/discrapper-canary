@@ -545,6 +545,11 @@ let i = {
         inlineRequire: () => n(219678).A,
         hasStoreChangeListeners: !0,
     },
+    LibOpenH264ExperimentManager: {
+        actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
+        inlineRequire: () => n(271282).A,
+        hasStoreChangeListeners: !0,
+    },
     NativeCrashManager: {
         actions: ["RTC_CONNECTION_STATE", "RTC_CONNECTION_VIDEO", "MEDIA_SESSION_JOINED"],
         inlineRequire: () => n(583534).A,
