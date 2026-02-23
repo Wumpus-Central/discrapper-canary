@@ -45531,12 +45531,9 @@ screen and (max-width:485px) {
 }
 
 .container__3a590 {
-    background: var(--background-surface-highest);
-    border-radius: 12px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    padding: 12px
+    gap: 8px
 }
 
 .header__3a590 {
@@ -46102,6 +46099,8 @@ screen and (max-width:485px) {
 }
 
 .popoutGiftingBreadcrumb_af3b89 {
+    background: var(--background-surface-highest);
+    border-radius: 12px;
     margin-top: 16px;
     padding: 16px
 }
