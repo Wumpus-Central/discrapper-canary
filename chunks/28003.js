@@ -63,50 +63,50 @@ let R = (e, t) => (t ? (0, m.DP)() : e ? E.intl.string(E.t.lG6a5x) : E.intl.stri
                 showTrialBadge: E = !1,
                 showDiscountBadge: I = !1,
                 isPremiumGroupPurchase: T = !1,
+                forceBrandRefreshHeader: S = !1,
             } = e,
-            S = _ === h.PremiumTypes.TIER_2,
-            y = (0, d.lp)(m),
-            O = (0, f.O)(),
-            D = O?.discount?.amount,
-            { enabled: L } = (0, o.T0)({ location: "PremiumBrandRefreshPaymentHeader" }),
-            w = S ? N : v,
+            y = _ === h.PremiumTypes.TIER_2,
+            O = (0, d.lp)(m),
+            D = (0, f.O)(),
+            L = D?.discount?.amount,
+            { enabled: w } = (0, o.T0)({ location: "PremiumBrandRefreshPaymentHeader" }),
+            x = y ? N : v,
             {
-                step: x,
-                breadcrumbs: M,
-                startedPaymentFlowWithPaymentSourcesRef: P,
-                isDisplayingWowMomentConfirmation: k,
+                step: M,
+                breadcrumbs: P,
+                startedPaymentFlowWithPaymentSourcesRef: k,
+                isDisplayingWowMomentConfirmation: U,
             } = (0, u.P5)();
-        if (null == M || 0 === M.length) return null;
-        let U = M.flatMap((e) => {
+        if (!S && (null == P || 0 === P.length)) return null;
+        let G = (P ?? []).flatMap((e) => {
             let t = e.useBreadcrumbLabel(m),
                 n = e.sectionHeaderText;
             return null != t ? { id: e.id, label: t, sectionHeaderText: n } : [];
         });
-        if (0 === U.length) return null;
-        let G = (U = U.filter((e) => {
+        if (!S && 0 === G.length) return null;
+        let F = (G = G.filter((e) => {
                 if (T && e.id === c.pn.PLAN_SELECT) return !1;
                 let t = e.id !== c.pn.ADD_PAYMENT_STEPS,
-                    n = e.id === c.pn.ADD_PAYMENT_STEPS && !P.current;
+                    n = e.id === c.pn.ADD_PAYMENT_STEPS && !k.current;
                 return !m || (m && (t || n));
-            })).find((e) => e.id === x),
-            F = G?.sectionHeaderText?.() ?? G?.label,
-            V = !(L && null != x && l.M.includes(x)) && null != F && null != x,
-            B = y && V && x === c.pn.REVIEW,
-            H = S ? "nitro-pink" : "nitro-green",
-            j = R(S, T);
-        return k
-            ? (0, r.jsx)("div", {
-                  className: g.kL,
-                  children: (0, r.jsx)(a.hLv, { color: H, className: s()(g.N1, A.headerGradient) }),
-              })
+            })).find((e) => e.id === M),
+            V = F?.sectionHeaderText?.() ?? F?.label,
+            B = !(w && null != M && l.M.includes(M)) && null != V && null != M,
+            H = O && B && M === c.pn.REVIEW,
+            j = y ? "nitro-pink" : "nitro-green",
+            Y = R(y, T),
+            W = g.kL,
+            K = s()(g.N1, A.headerGradient);
+        return U
+            ? (0, r.jsx)("div", { className: W, children: (0, r.jsx)(a.hLv, { color: j, className: K }) })
             : (0, r.jsxs)("div", {
-                  className: g.kL,
+                  className: W,
                   children: [
                       (0, r.jsxs)(a.hLv, {
-                          color: H,
-                          className: s()(g.N1, A.headerGradient, { [g.s1]: !V }),
+                          color: j,
+                          className: s()(K, { [g.s1]: !B }),
                           children: [
-                              (0, r.jsx)(b, { isTier2: S }),
+                              (0, r.jsx)(b, { isTier2: y }),
                               !t &&
                                   (0, r.jsx)(a.s_y, {
                                       "data-migration-pending": !0,
@@ -114,7 +114,7 @@ let R = (e, t) => (t ? (0, m.DP)() : e ? E.intl.string(E.t.lG6a5x) : E.intl.stri
                                       onClick: i,
                                       className: g.Ep,
                                   }),
-                              (0, r.jsx)("img", { src: w, alt: "", className: B ? g.i_ : g.kX }),
+                              (0, r.jsx)("img", { src: x, alt: "", className: H ? g.i_ : g.kX }),
                               (0, r.jsxs)("div", {
                                   className: g.FS,
                                   children: [
@@ -127,14 +127,14 @@ let R = (e, t) => (t ? (0, m.DP)() : e ? E.intl.string(E.t.lG6a5x) : E.intl.stri
                                           variant: "display-md",
                                           color: "text-strong",
                                           className: g.cf,
-                                          children: j,
+                                          children: Y,
                                       }),
                                   ],
                               }),
                           ],
                       }),
-                      (E || I) && (0, r.jsx)(p.A, { discountAmount: D }),
-                      V && (0, r.jsx)(C, { isOneStepCheckout: y, headerText: F, step: x, filteredBreadcrumbs: U }),
+                      (E || I) && (0, r.jsx)(p.A, { discountAmount: L }),
+                      B && (0, r.jsx)(C, { isOneStepCheckout: O, headerText: V, step: M, filteredBreadcrumbs: G }),
                   ],
               });
     };

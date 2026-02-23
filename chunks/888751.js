@@ -155,29 +155,31 @@ let I = (e) => E.intl.format(g.default.U2CmMW, { priceAmount: (0, p.$g)(0, e) })
         return E.intl.string(g.default.jxUJkZ);
     },
     R = function (e, t, n) {
-        let { includeTaxLineItem: r } =
-                arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { includeTaxLineItem: !0 },
-            i = (0, u.Q8)(t, e),
-            { intervalType: s, intervalCount: a } = (0, f.Ge)(t),
-            o = t.currency,
-            l = i.map((e) => {
+        let { includeTaxLineItem: r, overrideRenewalDate: i } =
+                arguments.length > 3 && void 0 !== arguments[3]
+                    ? arguments[3]
+                    : { includeTaxLineItem: !0, overrideRenewalDate: void 0 },
+            s = (0, u.Q8)(t, e),
+            { intervalType: a, intervalCount: o } = (0, f.Ge)(t),
+            l = t.currency,
+            c = s.map((e) => {
                 let { amount: t, showGuildSubscriptionAdjustmentTooltip: r } = e,
-                    { label: i } = (0, u.Ae)(e, { subscriptionTrial: n, currency: o }),
+                    { label: i } = (0, u.Ae)(e, { subscriptionTrial: n, currency: l }),
                     s = r ? E.intl.format(E.t.UDop9c, {}) : void 0;
                 return { id: e.id, label: i, amount: t, tooltip: s };
             }),
-            c = t.tax;
+            d = t.tax;
+        d > 0 && r && c.push({ id: "tax", label: E.intl.string(E.t.jiRvC7), amount: d, formatWithoutRate: !0 });
+        let _ = i;
         return (
-            c > 0 && r && l.push({ id: "tax", label: E.intl.string(E.t.jiRvC7), amount: c, formatWithoutRate: !0 }),
+            null == _ && (_ = null != e ? e.subscriptionPeriodEnd : t.subscriptionPeriodStart),
             {
-                lineItems: l,
-                intervalType: s,
-                intervalCount: a,
-                currency: o,
-                label: E.intl.format(g.default["57B1ks"], {
-                    renewalDate: null != e ? e.subscriptionPeriodEnd : t.subscriptionPeriodStart,
-                }),
-                totalLineItemLabel: b(s, a),
+                lineItems: c,
+                intervalType: a,
+                intervalCount: o,
+                currency: l,
+                label: E.intl.format(g.default["57B1ks"], { renewalDate: _ }),
+                totalLineItemLabel: b(a, o),
             }
         );
     },

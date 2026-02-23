@@ -50,7 +50,7 @@ let $ = 2,
     q = "billing",
     Z = { [o.rIJ.SMALL]: "sm", [o.rIJ.MEDIUM]: "md", [o.rIJ.LARGE]: "xl", [o.rIJ.DYNAMIC]: "md" },
     X = (e, t) => {
-        let { isGift: n, canPurchasePremiumGroup: r, legacyModalSize: i } = t,
+        let { isGift: n, canPurchasePremiumGroupNow: r, legacyModalSize: i } = t,
             s = Z[i];
         if (null == e) return s;
         let a = {
@@ -73,8 +73,8 @@ let $ = 2,
                 returnRef: o,
                 children: l,
             } = e,
-            u = (0, y.PA)() && !s,
-            c = X(t, { isGift: s, canPurchasePremiumGroup: u, legacyModalSize: a });
+            u = (0, y.FY)({ isGift: s }),
+            c = X(t, { isGift: s, canPurchasePremiumGroupNow: u, legacyModalSize: a });
         return (0, r.jsx)(m.Jg, {
             transitionState: n,
             size: c,
