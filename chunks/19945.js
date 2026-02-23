@@ -1,6 +1,7 @@
-l.d(r, { A: () => o });
-var t = l(263791);
-class o {
+"use strict";
+l.d(t, { A: () => a });
+var r = l(263791);
+class a {
     id;
     skuIds;
     name;
@@ -22,15 +23,15 @@ class o {
             (this.primaryCollectionId = e.primaryCollectionId);
     }
     static fromServer(e) {
-        let { sku_ids: r, options: l, created_at: i, updated_at: n, skus: a, tenant_metadata: c, ...d } = e;
-        return new o({
+        let { sku_ids: t, options: l, created_at: n, updated_at: i, skus: s, tenant_metadata: o, ...d } = e;
+        return new a({
             ...d,
-            skuIds: r,
+            skuIds: t,
             options: l.map((e) => ({ name: e.name, optionValues: e.option_values })),
-            createdAt: new Date(i),
-            updatedAt: new Date(n),
-            skus: a.map((e) => t.A.fromServer(e)),
-            primaryCollectionId: c.collectibles.primary_collection_id,
+            createdAt: new Date(n),
+            updatedAt: new Date(i),
+            skus: s.map((e) => r.A.fromServer(e)),
+            primaryCollectionId: o.collectibles.primary_collection_id,
         });
     }
 }

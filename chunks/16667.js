@@ -1,60 +1,61 @@
-l.d(r, { A: () => s });
-var t = l(311907),
-    o = l(73153);
-let i = {},
-    n = {},
-    a = new Set(),
-    c = {};
-class d extends t.Ay.Store {
+"use strict";
+l.d(t, { A: () => c });
+var r = l(311907),
+    a = l(73153);
+let n = {},
+    i = {},
+    s = new Set(),
+    o = {};
+class d extends r.Ay.Store {
     static displayName = "CollectiblesStore";
     getCollection(e) {
-        return null != e ? i[e] : null;
-    }
-    getProductForSku(e) {
         return null != e ? n[e] : null;
     }
+    getProductForSku(e) {
+        return null != e ? i[e] : null;
+    }
     isFetching(e) {
-        return null != e && a.has(e);
+        return null != e && s.has(e);
     }
     getApiError(e) {
-        return null != e ? c[e] : null;
+        return null != e ? o[e] : null;
     }
 }
-let s = new d(o.h, {
+let c = new d(a.h, {
     COLLECTIBLES_COLLECTION_FETCH: (e) => {
-        let { collectionId: r } = e;
-        a.add(r);
+        let { collectionId: t } = e;
+        s.add(t);
     },
     COLLECTIBLES_COLLECTION_FETCH_SUCCESS: (e) => {
-        let { collection: r } = e;
-        (i[r.id] = r),
-            r.products?.forEach((e) => {
-                e.skus.forEach((r) => {
-                    (n[r.id] = e), delete c[r.id], a.delete(r.id);
+        let { collection: t } = e;
+        (n[t.id] = t),
+            t.products?.forEach((e) => {
+                e.skus.forEach((t) => {
+                    (i[t.id] = e), delete o[t.id], s.delete(t.id);
                 });
             }),
-            delete c[r.id],
-            a.delete(r.id);
+            delete o[t.id],
+            s.delete(t.id);
     },
     COLLECTIBLES_COLLECTION_FETCH_FAILURE: (e) => {
-        let { collectionId: r, apiError: l } = e;
-        (c[r] = l), a.delete(r);
+        let { collectionId: t, apiError: l } = e;
+        (o[t] = l), s.delete(t);
     },
     COLLECTIBLES_PRODUCT_FOR_SKU_FETCH: (e) => {
-        let { skuId: r } = e;
-        a.add(r);
+        let { skuId: t } = e;
+        s.add(t);
     },
     COLLECTIBLES_PRODUCT_FOR_SKU_FETCH_SUCCESS: (e) => {
-        let { product: r } = e;
-        r.skuIds.forEach((e) => {
-            (n[e] = r), delete c[e], a.delete(e);
+        let { product: t } = e;
+        t.skuIds.forEach((e) => {
+            (i[e] = t), delete o[e], s.delete(e);
         });
     },
     COLLECTIBLES_PRODUCT_FOR_SKU_FETCH_FAILURE: (e) => {
-        let { skuId: r, apiError: l } = e;
-        (c[r] = l), a.delete(r);
+        let { skuId: t, apiError: l } = e;
+        (o[t] = l), s.delete(t);
     },
     LOGOUT: (e) => {
-        (i = {}), (n = {}), (a = new Set()), (c = {});
+        (n = {}), (i = {}), (s = new Set()), (o = {});
     },
 });

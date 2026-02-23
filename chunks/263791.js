@@ -1,6 +1,7 @@
-l.d(r, { A: () => o });
-var t = l(474012);
-class o {
+"use strict";
+l.d(t, { A: () => a });
+var r = l(474012);
+class a {
     id;
     applicationId;
     type;
@@ -32,17 +33,17 @@ class o {
             (this.optionSelectorDisplayValue = e.optionSelectorDisplayValue);
     }
     static fromServer(e) {
-        let { application_id: r, selected_options: l, product_id: i, tenant_metadata: n, ...a } = e;
-        return new o({
-            ...a,
-            applicationId: r,
+        let { application_id: t, selected_options: l, product_id: n, tenant_metadata: i, ...s } = e;
+        return new a({
+            ...s,
+            applicationId: t,
             selectedOptions: l.map((e) => ({ optionName: e.option_name, optionValue: e.option_value })),
-            productId: i,
-            itemType: n.collectibles.type,
-            premiumType: n.collectibles.premium_type,
-            item: null != n.collectibles.item ? (0, t.K)([n.collectibles.item])[0] : void 0,
-            expiresAt: null != n.collectibles.expires_at ? new Date(n.collectibles.expires_at) : void 0,
-            optionSelectorDisplayValue: n.collectibles.option_selector_display_value,
+            productId: n,
+            itemType: i.collectibles.type,
+            premiumType: i.collectibles.premium_type,
+            item: null != i.collectibles.item ? (0, r.K)([i.collectibles.item])[0] : void 0,
+            expiresAt: null != i.collectibles.expires_at ? new Date(i.collectibles.expires_at) : void 0,
+            optionSelectorDisplayValue: i.collectibles.option_selector_display_value,
         });
     }
 }

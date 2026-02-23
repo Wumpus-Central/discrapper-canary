@@ -1,9 +1,10 @@
-l.d(r, { A: () => a });
-var t = l(440745),
-    o = l.n(t),
-    i = l(317097),
-    n = l(315069);
-class a extends n.A {
+"use strict";
+l.d(t, { A: () => s });
+var r = l(440745),
+    a = l.n(r),
+    n = l(317097),
+    i = l(315069);
+class s extends i.A {
     backgroundColors;
     buttonColors;
     confettiColors;
@@ -14,11 +15,11 @@ class a extends n.A {
             (this.confettiColors = e.confettiColors);
     }
     static fromServer(e) {
-        let { background_colors: r, button_colors: l, confetti_colors: t } = e;
-        return new a({
-            backgroundColors: r.map((e) => o()((0, i.Hl)(e))),
-            buttonColors: l.map((e) => o()((0, i.Hl)(e))),
-            confettiColors: t.map((e) => o()((0, i.Hl)(e))),
+        let { background_colors: t, button_colors: l, confetti_colors: r } = e;
+        return new s({
+            backgroundColors: t.map((e) => a()((0, n.Hl)(e))),
+            buttonColors: l.map((e) => a()((0, n.Hl)(e))),
+            confettiColors: r.map((e) => a()((0, n.Hl)(e))),
         });
     }
 }
