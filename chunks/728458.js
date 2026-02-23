@@ -2,12 +2,12 @@
 n.d(t, { A: () => l });
 var r = n(668279),
     i = n(761296),
-    a = n(723702),
-    s = n(837921);
+    s = n(723702),
+    a = n(837921);
 function o() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    a.isPlatformEmbedded &&
-        s.Ay.updateCrashReporter({
+    s.isPlatformEmbedded &&
+        a.Ay.updateCrashReporter({
             user_id: e.id ?? "",
             username: e.username ?? "",
             email: e.email ?? "",
@@ -56,6 +56,11 @@ let l = {
         window.DiscordSentry?.withScope((t) => {
             null != n.tags && t.setTags(n.tags), t.setExtras(n.extra), window.DiscordSentry?.captureMessage(e);
         });
+    },
+    addFeatureFlag(e, t) {
+        let n = window.DiscordSentry?.getClient?.(),
+            r = n?.getIntegrationByName?.("FeatureFlags");
+        r?.addFeatureFlag?.(e, t);
     },
     addBreadcrumb(e) {
         (0, r.A)(e);
