@@ -37,7 +37,7 @@ function h(e) {
         } = e,
         _ = (0, o.$g)(n, i),
         f = (0, o.$g)(r, i),
-        h = l.qF7.PAID_SERVICES_TERMS,
+        h = l.X7G.PAID_TERMS,
         m = l.qF7.CONTACT_US,
         E = a.A.getArticleURL(l.MVz.BILLING);
     return {
@@ -64,8 +64,8 @@ var m = (function (e) {
     );
 })({});
 function E(e) {
-    let t = l.qF7.PAID_SERVICES_TERMS,
-        n = l.qF7.VIRTUAL_GOODS_TERMS;
+    let t = l.X7G.PAID_TERMS,
+        n = l.X7G.PAID_TERMS_VIRTUAL_GOODS;
     switch (e.type) {
         case 0:
             return d.intl.format(c.default.OH1Evm, h(e));

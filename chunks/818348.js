@@ -23,7 +23,7 @@ n.d(t, {
     VV: () => M,
     Wz: () => ef,
     Xl: () => u,
-    YI: () => Z,
+    YI: () => X,
     Yr: () => e_,
     ZE: () => $,
     _A: () => h,
@@ -53,7 +53,7 @@ n.d(t, {
     rz: () => L,
     sE: () => eu,
     sJ: () => W,
-    sh: () => X,
+    sh: () => Z,
     tE: () => G,
     tF: () => x,
     w7: () => el,
@@ -493,7 +493,7 @@ var z = (function (e) {
             e
         );
     })({}),
-    Z = (function (e) {
+    X = (function (e) {
         return (
             (e[(e.CLOSE_NORMAL = 1e3)] = "CLOSE_NORMAL"),
             (e[(e.CLOSE_UNSUPPORTED = 1003)] = "CLOSE_UNSUPPORTED"),
@@ -507,7 +507,7 @@ var z = (function (e) {
             e
         );
     })({});
-let X = 250,
+let Z = 250,
     Q = "token",
     J = "tokens",
     ee = "status.discord.com",
@@ -542,9 +542,6 @@ let X = 250,
         COMMUNITY: "/community",
         TWITTER_SUPPORT: "https://twitter.com/discord_support",
         QUESTS: "/quests",
-        PAID_SERVICES_TERMS: "/terms/paid-services-terms",
-        VIRTUAL_GOODS_TERMS:
-            "/terms/paid-services-terms#:~:text=one%2Dtime%20purchases.-,VIRTUAL%20GOODS,-You%20may%20be",
     },
     er = Object.freeze({
         TWITTER: Object.freeze({ default: "https://twitter.com/discord", ja: "https://twitter.com/discord_jp" }),
