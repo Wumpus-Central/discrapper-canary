@@ -1,60 +1,60 @@
-r.d(t, { A: () => N, L: () => v });
+r.d(t, { A: () => N, L: () => _ });
 var n = r(627968),
     a = r(64700),
-    s = r(503698),
-    l = r.n(s),
-    i = r(311907),
-    d = r(230109),
-    o = r(732955),
+    l = r(503698),
+    s = r.n(l),
+    i = r(230109),
+    d = r(732955),
     u = r(688810),
-    c = r(895944),
-    m = r(649032),
-    h = r(954571),
-    p = r(570627),
-    x = r(128620),
-    g = r(652215),
-    _ = r(49370),
+    o = r(320118),
+    c = r(954571),
+    m = r(570627),
+    h = r(128620),
+    p = r(652215),
+    x = r(49370),
     f = r(985018),
-    b = r(609195);
-let v = "orbs",
+    g = r(609195);
+let _ = "orbs",
     N = (e) => {
         let { className: t, location: r } = e,
-            s = p.m.useConfig({ location: "PremiumTenureRewardsOrbsSection" }).enabled,
+            l = m.m.useConfig({ location: "PremiumTenureRewardsOrbsSection" }).enabled,
             { analyticsLocations: N } = (0, u.Ay)(r),
-            R = a.useRef(null),
-            A = a.useRef(!1),
-            E = (0, i.bG)([c.A], () => c.A.getRewardForProgram(m.W.NITRO));
-        return (0, i.bG)([c.A], () => c.A.passesGeneralUIInvariant(m.W.NITRO))
+            b = a.useRef(null),
+            v = a.useRef(!1),
+            { passesGeneralUIInvariant: R, programReward: E } = (0, o.F)({
+                location: "PremiumTenureRewardsOrbsSection",
+            });
+        return R
             ? (0, n.jsx)(u.f5, {
                   value: N,
-                  children: (0, n.jsx)(d.L, {
-                      innerRef: R,
+                  children: (0, n.jsx)(i.L, {
+                      innerRef: b,
                       onChange: (e) => {
                           e &&
-                              !A.current &&
-                              ((A.current = !0),
-                              h.default.track(g.HAw.PREMIUM_TENURE_REWARDS_ORBS_SECTION_IMPRESSION, {
+                              !v.current &&
+                              ((v.current = !0),
+                              c.default.track(p.HAw.PREMIUM_TENURE_REWARDS_ORBS_SECTION_IMPRESSION, {
                                   program_state: E?.program_current_state,
                               }));
                       },
                       threshold: 0.5,
                       children: (0, n.jsxs)("div", {
-                          ref: R,
-                          id: v,
-                          className: l()(b.uW, b.Uv, b.qr, t, { [b.J4]: s }),
+                          ref: b,
+                          id: _,
+                          className: s()(g.uW, g.Uv, g.qr, t, { [g.J4]: l }),
                           children: [
-                              (0, n.jsx)(o.DZT, {
-                                  variant: s ? "display-sm" : "heading-xxl/extrabold",
-                                  className: b.R_,
+                              (0, n.jsx)(d.DZT, {
+                                  variant: l ? "display-sm" : "heading-xxl/extrabold",
+                                  className: g.R_,
                                   style: { textAlign: "start" },
-                                  children: f.intl.string(_.default.EdGvBM),
+                                  children: f.intl.string(x.default.EdGvBM),
                               }),
-                              (0, n.jsx)(o.EYj, {
-                                  variant: s ? "text-md/medium" : "text-lg/normal",
-                                  className: l()(b.VA, b.dO),
-                                  children: f.intl.string(_.default["2KoHRF"]),
+                              (0, n.jsx)(d.EYj, {
+                                  variant: l ? "text-md/medium" : "text-lg/normal",
+                                  className: s()(g.VA, g.dO),
+                                  children: f.intl.string(x.default["2KoHRF"]),
                               }),
-                              (0, n.jsx)(x.A, {}),
+                              (0, n.jsx)(h.A, {}),
                           ],
                       }),
                   }),

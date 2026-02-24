@@ -1,19 +1,18 @@
 "use strict";
-n.d(t, { A: () => C });
+n.d(t, { A: () => y });
 var r = n(410530),
-    i = n(892227),
-    a = n(582972),
+    i = n(582972),
     s = n(311907),
-    o = n(73153),
-    l = n(431560),
-    u = n(287809),
-    c = n(927813),
-    d = n(649032),
-    _ = n(26508),
-    f = n(880403);
-let h = 864e5,
-    p = new l.Z({ ttlMs: h });
-function g() {
+    a = n(73153),
+    o = n(431560),
+    l = n(287809),
+    u = n(927813),
+    c = n(649032),
+    d = n(26508),
+    _ = n(880403);
+let f = 864e5,
+    p = new o.Z({ ttlMs: f });
+function h() {
     let e = p.getValue();
     if (null == e) return { state: "MORE_THAN_24H_BEFORE_REWARD" };
     let t = new Date();
@@ -22,22 +21,22 @@ function g() {
         if (!isNaN(e.getTime())) {
             if (t >= e) return { state: "PAST_REWARD_DATE" };
             if (t >= (0, r.default)(e, -1))
-                return { state: "LESS_THAN_24H_BEFORE_REWARD", msUntilReward: (0, a.A)(e, t) };
+                return { state: "LESS_THAN_24H_BEFORE_REWARD", msUntilReward: (0, i.A)(e, t) };
         }
     }
     return { state: "MORE_THAN_24H_BEFORE_REWARD" };
 }
-function E(e, t) {
-    return "LESS_THAN_24H_BEFORE_REWARD" === e ? (t ?? h) : h;
+function m(e, t) {
+    return "LESS_THAN_24H_BEFORE_REWARD" === e ? (t ?? f) : f;
 }
-function A() {
-    let { state: e, msUntilReward: t } = g();
-    p.setTtl(E(e, t));
+function E() {
+    let { state: e, msUntilReward: t } = h();
+    p.setTtl(m(e, t));
 }
-function I() {
+function g() {
     p.setLoading();
 }
-function T(e) {
+function A(e) {
     let { programRewards: t } = e;
     if (!p.isLoading()) return !1;
     let n = new Map();
@@ -45,65 +44,34 @@ function T(e) {
         n.set(e.reward_program, e);
     }),
         p.setValue(n),
-        A();
+        E();
 }
-function y() {
+function I() {
     if (!p.isLoading()) return !1;
     p.setError();
 }
-function S() {
+function T() {
     p.clear();
 }
-class v extends s.Ay.PersistedStore {
+class S extends s.Ay.PersistedStore {
     static displayName = "ProgramRewardsStore";
     static persistKey = "ProgramRewardsStore";
     initialize(e) {
-        if ((this.waitFor(u.default), e?.cache != null)) {
+        if ((this.waitFor(l.default), e?.cache != null)) {
             let t = new Map(e.cache.value);
             p.restore({ value: t, fetchedAt: e.cache.fetchedAt });
         }
-        A();
+        E();
     }
     getState() {
         let e = p.serialize();
         return { cache: null != e ? { value: Array.from(e.value.entries()), fetchedAt: e.fetchedAt } : null };
     }
-    passesGeneralUIInvariant(e) {
-        if (!(0, _.O7)(e, "ProgramRewardsStore.passesGeneralUIInvariant")) return !1;
-        if (e === d.W.NITRO) {
-            let t = this.getRewardForProgram(e);
-            if (null == t) return !1;
-            let n = t.next_reward_date,
-                r = t.program_current_state;
-            if (null == r) return !1;
-            if (null == n || "" === n) {
-                if (![d.L.PAYMENT_PROCESSING, d.L.PAYMENT_ERROR].includes(r)) return !1;
-            } else {
-                let e = new Date(n).getTime();
-                if (Number.isNaN(e) || e < Date.now()) return !1;
-            }
-        }
-        return !0;
-    }
-    passesProgressBarInvariant(e) {
-        if (!(0, _.O7)(e, "ProgramRewardsStore.passesProgressBarInvariant")) return !1;
-        if (e === d.W.NITRO) {
-            let t = this.getRewardForProgram(e);
-            if (null == t) return !1;
-            let n = this.getTotalDaysInDuration(e);
-            if (null == n) return !1;
-            let r = t.next_reward_date;
-            if (null == r || "" === r) return !1;
-            let a = new Date(r).getTime();
-            if (Number.isNaN(a) || a <= Date.now() || (0, i.default)(new Date(r), new Date()) > n) return !1;
-        }
-        return !0;
-    }
     getTotalDaysInDuration(e) {
         let t = this.getRewardForProgram(e);
         if (null == t) return null;
         let n = t.total_countdown_duration_ms;
-        return null == n || n <= 0 ? null : Math.ceil(n / c.A.Millis.DAY);
+        return null == n || n <= 0 ? null : Math.ceil(n / u.A.Millis.DAY);
     }
     isFetching() {
         return p.isLoading();
@@ -117,14 +85,14 @@ class v extends s.Ay.PersistedStore {
     isReady() {
         return (
             !this.isFetching() &&
-            (this.hasCachedValue() || !(0, _.g_)("ProgramRewardsStore") || this.isError() || !(0, _.mY)())
+            (this.hasCachedValue() || !(0, d.g_)("ProgramRewardsStore") || this.isError() || !(0, d.mY)())
         );
     }
     shouldFetch() {
         return (
-            !!(0, _.g_)("ProgramRewardsStore.shouldFetch") &&
-            !!(0, _.mY)() &&
-            (p.shouldFetch() || (0, f.A)(this.getRewardForProgram(d.W.NITRO)))
+            !!(0, d.g_)("ProgramRewardsStore.shouldFetch") &&
+            !!(0, d.mY)() &&
+            (p.shouldFetch() || (0, _.A)(this.getRewardForProgram(c.W.NITRO)))
         );
     }
     isError() {
@@ -140,11 +108,11 @@ class v extends s.Ay.PersistedStore {
         p.forceExpire();
     }
 }
-let C = new v(o.h, {
-    LOGOUT: S,
-    PROGRAM_REWARDS_FETCH: I,
-    PROGRAM_REWARDS_FETCH_SUCCESS: T,
-    PROGRAM_REWARDS_FETCH_FAILURE: y,
-    CURRENT_USER_UPDATE: A,
-    CONNECTION_OPEN: A,
+let y = new S(a.h, {
+    LOGOUT: T,
+    PROGRAM_REWARDS_FETCH: g,
+    PROGRAM_REWARDS_FETCH_SUCCESS: A,
+    PROGRAM_REWARDS_FETCH_FAILURE: I,
+    CURRENT_USER_UPDATE: E,
+    CONNECTION_OPEN: E,
 });
