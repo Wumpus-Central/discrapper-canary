@@ -26,9 +26,9 @@ var i = n(627968),
     j = n(768985),
     v = n(191627),
     O = n(652215),
-    R = n(842130),
+    R = n(870236),
     y = n(985018),
-    P = n(914280);
+    P = n(41742);
 let L = {
         [v.u9.REQUESTS]: N.A,
         [v.u9.ACTIVITY]: f.A,
@@ -37,10 +37,10 @@ let L = {
         [v.u9.DATA_AND_PRIVACY]: I.A,
     },
     D = { [v.u9.REQUESTS]: N.A, [v.u9.ACTIVITY]: f.A, [v.u9.CONTENT_AND_SOCIAL]: S.A, [v.u9.DATA_AND_PRIVACY]: I.A };
-function M() {
+function G() {
     return (0, i.jsx)(c.BJc, { justify: "center", align: "center", className: P.g4, children: (0, i.jsx)(c.y$y, {}) });
 }
-function G(e) {
+function M(e) {
     let { section: t, handleItemSelect: n } = e,
         s = (0, T.VT)(),
         a = (0, C.A)();
@@ -141,7 +141,7 @@ function k() {
         "aria-label": y.intl.string(R.default.RZqaJn),
         children: [
             (0, i.jsx)(m.HI, { location: y.intl.string(R.default.RZqaJn) }),
-            (0, i.jsx)(G, {
+            (0, i.jsx)(M, {
                 section: n,
                 handleItemSelect: (e) => {
                     s(e);
@@ -151,7 +151,7 @@ function k() {
                 id: n,
                 "aria-labelledby": e,
                 className: P.Us,
-                children: t ? (0, i.jsx)(M, {}) : (0, i.jsx)(l, {}),
+                children: t ? (0, i.jsx)(G, {}) : (0, i.jsx)(l, {}),
             }),
         ],
     });
@@ -204,7 +204,7 @@ function V() {
                     children: (0, i.jsx)(c.HOs, {
                         children: (0, i.jsx)("div", {
                             className: P.O4,
-                            children: g ? (0, i.jsx)(M, {}) : (0, i.jsx)(N, {}),
+                            children: g ? (0, i.jsx)(G, {}) : (0, i.jsx)(N, {}),
                         }),
                     }),
                 }),

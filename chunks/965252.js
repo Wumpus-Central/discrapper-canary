@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var i = n(627968);
 n(64700);
 var s = n(397927),
@@ -7,15 +7,15 @@ var s = n(397927),
     l = n(975571),
     a = n(652215),
     o = n(985018),
-    c = n(193266);
-let d = () =>
+    d = n(86368);
+let c = () =>
     (0, i.jsx)(r.Ay, {
         children: (0, i.jsxs)("div", {
-            className: c.hQ,
+            className: d.hQ,
             children: [
-                (0, i.jsx)(r.hE, { className: c.DD, children: o.intl.string(o.t.nCB6Ga) }),
+                (0, i.jsx)(r.hE, { className: d.DD, children: o.intl.string(o.t.nCB6Ga) }),
                 (0, i.jsx)(r.tK, {
-                    className: c.VA,
+                    className: d.VA,
                     children: o.intl.format(o.t.KQgoxG, { underageMessage: o.intl.string(o.t.WqEH4D) }),
                 }),
                 (0, i.jsx)(s.Button, {

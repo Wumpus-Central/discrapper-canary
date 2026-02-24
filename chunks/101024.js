@@ -2,60 +2,60 @@
 n.d(t, { A: () => d });
 var r = n(627968),
     i = n(64700),
-    a = n(942381),
-    s = n(602034),
+    s = n(942381),
+    a = n(602034),
     o = n(397927),
     l = n(850992),
     u = n(151271),
-    c = n(64306);
+    c = n(968324);
 let d = i.forwardRef(function (e, t) {
     let {
             store: n,
             hasSendableExpressions: d,
             onKeyDown: _,
             gridNavigatorId: f,
-            expressionsListRef: h,
-            defaultSearchPlaceholder: p,
-            emptySearchPlaceholder: g,
+            expressionsListRef: p,
+            defaultSearchPlaceholder: h,
+            emptySearchPlaceholder: m,
         } = e,
         E = i.useRef(null),
-        [A, I] = (0, u.RQ)((e) => [e.searchQuery, e.isSearchSuggestion], a.x),
-        T = n.useStore((e) => e.searchPlaceholder),
-        y = n.useStore((e) => e.inspectedExpressionPosition, a.x),
+        [g, A] = (0, u.RQ)((e) => [e.searchQuery, e.isSearchSuggestion], s.x),
+        I = n.useStore((e) => e.searchPlaceholder),
+        T = n.useStore((e) => e.inspectedExpressionPosition, s.x),
         S = i.useCallback(
             (e) => {
                 n.setActiveCategoryIndex("" === e ? 0 : l.Uk),
                     n.setInspectedExpressionPosition(0, 0),
                     n.setSearchPlaceholder(null),
                     (0, u.Ri)(e),
-                    h.current?.scrollTo(0);
+                    p.current?.scrollTo(0);
             },
-            [h, n],
+            [p, n],
         ),
-        v = i.useCallback(() => {
+        y = i.useCallback(() => {
             (0, u.Ri)("");
         }, []);
     i.useImperativeHandle(t, () => ({ focus: () => E.current?.focus() })),
         i.useLayoutEffect(() => {
-            I && E.current?.focus();
-        }, [I]);
-    let C = () => (null != T ? T : d || null == g ? p : g);
+            A && E.current?.focus();
+        }, [A]);
+    let v = () => (null != I ? I : d || null == m ? h : m);
     return (0, r.jsx)("div", {
         className: c.i,
         children: (0, r.jsx)(o.IWV, {
             autoFocus: d,
             disabled: !d,
-            query: A,
+            query: g,
             ref: E,
-            placeholder: C(),
-            onClear: v,
+            placeholder: v(),
+            onClear: y,
             onKeyDown: _,
             onChange: S,
             inputProps: {
                 "aria-haspopup": "grid",
                 "aria-controls": f,
                 "aria-expanded": !0,
-                "aria-activedescendant": (0, s.Aq)(f, y.columnIndex, y.rowIndex),
+                "aria-activedescendant": (0, a.Aq)(f, T.columnIndex, T.rowIndex),
             },
         }),
     });

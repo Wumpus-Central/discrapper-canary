@@ -1,13 +1,13 @@
-i.d(e, { F: () => T });
+i.d(e, { F: () => A });
 var n = i(627968),
     l = i(64700),
     s = i(158954),
     r = i(602450),
     a = i(557571),
     u = i(985018),
-    o = i(895431),
-    d = i(372476);
-let T = () => {
+    o = i(215765),
+    d = i(32538);
+let A = () => {
         let { isWeb: t, installationStatus: e, perkAvailableToUser: i } = (0, a.lV)(),
             d = (0, l.useMemo)(() => {
                 if (t || !i) return u.intl.string(o.default.jV0wEC);
@@ -29,12 +29,12 @@ let T = () => {
                     case r.Lk.ZERO_TRUST:
                         return u.intl.string(o.default["7zgDRR"]);
                     case r.Lk.INSTALLED:
-                        return (0, n.jsx)(A, {});
+                        return (0, n.jsx)(T, {});
                 }
             }, [t, e, i]);
         return (0, n.jsx)(s.DZT, { variant: "heading-md/semibold", children: d });
     },
-    A = () => {
+    T = () => {
         switch ((0, a.lV)((t) => t.connectionStatus)) {
             case r.l7.INITIALIZING:
                 return (0, n.jsxs)("span", {

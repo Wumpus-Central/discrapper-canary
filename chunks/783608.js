@@ -2,9 +2,9 @@
 n.d(t, { A: () => u });
 var r = n(627968),
     i = n(64700),
-    a = n(397927),
-    s = n(985018),
-    o = n(6646),
+    s = n(397927),
+    a = n(985018),
+    o = n(73628),
     l = (function (e) {
         return (e[(e.VIEW_MORE = 0)] = "VIEW_MORE"), (e[(e.VIEW_LESS = 1)] = "VIEW_LESS"), e;
     })(l || {});
@@ -13,17 +13,17 @@ function u(e) {
     return (0, r.jsxs)("div", {
         className: o.wx,
         children: [
-            (0, r.jsx)(a.Text, { variant: "text-md/medium", color: "text-strong", children: t }),
+            (0, r.jsx)(s.Text, { variant: "text-md/medium", color: "text-strong", children: t }),
             null != n &&
                 null != i &&
-                (0, r.jsx)(a.DUT, {
+                (0, r.jsx)(s.DUT, {
                     className: o.Vc,
                     onClick: i,
-                    "aria-label": s.intl.formatToPlainString(s.t["bj/2kV"], { title: t }),
-                    children: (0, r.jsx)(a.Text, {
+                    "aria-label": a.intl.formatToPlainString(a.t["bj/2kV"], { title: t }),
+                    children: (0, r.jsx)(s.Text, {
                         variant: "text-md/medium",
                         color: "text-brand",
-                        children: 0 === n ? s.intl.format(s.t.gVw57p, {}) : s.intl.string(s.t.nPGLFQ),
+                        children: 0 === n ? a.intl.format(a.t.gVw57p, {}) : a.intl.string(a.t.nPGLFQ),
                     }),
                 }),
         ],
@@ -35,7 +35,7 @@ function u(e) {
         return (0, r.jsx)("div", {
             className: o.uH,
             style: e,
-            children: (0, r.jsx)(a.Text, {
+            children: (0, r.jsx)(s.Text, {
                 className: o.R,
                 variant: "text-md/medium",
                 color: "text-strong",

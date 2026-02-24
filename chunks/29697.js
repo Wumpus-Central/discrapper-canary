@@ -26,7 +26,7 @@ var r = n(627968),
     R = n(260197),
     F = n(652215),
     y = n(985018),
-    P = n(70645),
+    P = n(684335),
     O = n(596831),
     S = n(764293);
 let T = (e) => {
@@ -223,7 +223,7 @@ let T = (e) => {
         let eC = async () => {
                 q(!0), en(null), es(null);
                 try {
-                    await (0, d.gt)({ email: K, password: Z }), q(!1), em(E.Qg.EMAIL_CONFIRMATION);
+                    await (0, d.KD)({ email: K, password: Z }), q(!1), em(E.Qg.EMAIL_CONFIRMATION);
                 } catch (e) {
                     en(e?.body?.email), es(e?.body?.password);
                 } finally {

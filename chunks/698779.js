@@ -2,12 +2,12 @@
 n.d(t, { A: () => d });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(311907),
     l = n(397927),
     u = n(775602),
-    c = n(22423);
+    c = n(404981);
 function d() {
     let e = (0, o.bG)([u.A], () => u.A.useReducedMotion),
         { styleLarge: t, styleSmall: n } = i.useMemo(
@@ -18,7 +18,7 @@ function d() {
             [],
         );
     return (0, r.jsxs)("div", {
-        className: s()(c.kL, { [c.cb]: e }),
+        className: a()(c.kL, { [c.cb]: e }),
         children: [
             (0, r.jsx)("div", { className: c.Pz }),
             (0, r.jsxs)("div", {

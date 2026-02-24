@@ -9,8 +9,8 @@ var i = n(627968),
     d = n(591552),
     c = n(961973),
     u = n(555337),
-    g = n(863694),
-    m = n(527678),
+    m = n(863694),
+    g = n(527678),
     x = n(923121),
     h = n(352821),
     _ = n(107795),
@@ -21,15 +21,15 @@ var i = n(627968),
     N = n(652215),
     E = n(539916),
     b = n(985018),
-    T = n(42483);
+    T = n(981317);
 function C(e) {
     let { guildId: t, prompts: n } = e,
-        r = (0, l.bG)([g.A], () => g.A.editedDefaultChannelIds),
+        r = (0, l.bG)([m.A], () => m.A.editedDefaultChannelIds),
         [d, u] = (0, c.Lx)(t, n, [...r]),
-        m = d.length,
+        g = d.length,
         x = d.length + u.length,
-        h = (m / x) * 100,
-        _ = Math.max(Math.ceil((85 * x) / 100) - m, 0),
+        h = (g / x) * 100,
+        _ = Math.max(Math.ceil((85 * x) / 100) - g, 0),
         [A, p] = s.useState(!1),
         f = A ? a.abt : a.tN5;
     return (0, i.jsxs)("div", {
@@ -47,7 +47,7 @@ function C(e) {
                                 className: T.XG,
                                 variant: "text-xs/medium",
                                 color: "text-muted",
-                                children: b.intl.format(b.t.nMVKCX, { numChannelsMissing: x - m }),
+                                children: b.intl.format(b.t.nMVKCX, { numChannelsMissing: x - g }),
                             }),
                         ],
                     }),
@@ -132,15 +132,15 @@ function v(e) {
     s.useEffect(() => {
         r || u.current || ((u.current = !0), c || 0 !== o.length || (0, _.WC)(t, [(0, E.Mc)()], !1));
     });
-    let g = s.useRef(t);
+    let m = s.useRef(t);
     if (
         (s.useEffect(() => {
-            g.current = t;
+            m.current = t;
         }),
         s.useEffect(() => {
             if (n)
                 return () => {
-                    let e = g.current;
+                    let e = m.current;
                     null != e &&
                         (0, _.dm)(e, { ignoreDefaultPrompt: !0 })
                             .then(() => (0, x.fH)(e.id))
@@ -152,7 +152,7 @@ function v(e) {
         return null;
     let h = async () => {
         try {
-            await (0, _.dm)(t), await (0, m.X$)(t.id);
+            await (0, _.dm)(t), await (0, g.X$)(t.id);
         } catch {}
     };
     return (0, i.jsxs)(i.Fragment, {

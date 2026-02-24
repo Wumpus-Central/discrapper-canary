@@ -1,98 +1,98 @@
-n.d(t, { A: () => U }), n(321073);
+n.d(t, { A: () => O }), n(321073);
 var i = n(627968),
     l = n(64700),
-    a = n(379834),
-    r = n(934551),
+    r = n(379834),
+    a = n(934551),
     s = n(27989),
     o = n(311907),
     d = n(397927),
     c = n(308368),
     u = n(544420),
-    m = n(729937),
-    _ = n(572211),
+    _ = n(729937),
+    m = n(572211),
     h = n(354287),
     p = n(693879),
     g = n(583846),
     A = n(207371),
-    f = n(205184),
-    x = n(689168),
-    E = n(403362),
-    C = n(456060),
+    x = n(205184),
+    f = n(689168),
+    C = n(403362),
+    E = n(456060),
     I = n(131724),
-    T = n(987709),
-    v = n(850670),
-    N = n(206589),
+    b = n(987709),
+    T = n(850670),
+    v = n(206589),
     S = n(154297),
-    b = n(833349),
-    j = n(946255),
-    y = n(755420),
-    R = n(877044),
-    L = n(878831),
-    M = n(652215),
-    O = n(768349),
-    D = n(985018),
-    P = n(609653);
-function k(e) {
+    y = n(833349),
+    N = n(946255),
+    j = n(755420),
+    L = n(877044),
+    R = n(878831),
+    P = n(652215),
+    M = n(768349),
+    w = n(985018),
+    k = n(62323);
+function D(e) {
     let { presenceActivity: t, remoteJoinPlatform: n } = e,
-        a = (0, y.z4)({ platforms: t?.supported_platforms, currentPlatform: M.yTV.DESKTOP }),
+        r = (0, j.z4)({ platforms: t?.supported_platforms, currentPlatform: P.yTV.DESKTOP }),
         o = l.useMemo(
             () =>
-                a
+                r
                     .map((e) => {
                         switch (e) {
-                            case y.FL.MOBILE:
+                            case j.FL.MOBILE:
                                 return (0, i.jsx)(d.u6o, { size: "xxs", color: "currentColor" });
-                            case y.FL.ANDROID:
-                                return (0, i.jsx)(R.x, { width: s.E.xxs, height: s.E.xxs, color: "currentColor" });
-                            case y.FL.IOS:
+                            case j.FL.ANDROID:
+                                return (0, i.jsx)(L.x, { width: s.E.xxs, height: s.E.xxs, color: "currentColor" });
+                            case j.FL.IOS:
                                 return (0, i.jsx)(d.z0, { size: "xxs", color: "currentColor" });
-                            case y.FL.PLAYSTATION:
+                            case j.FL.PLAYSTATION:
                                 return (0, i.jsx)(d.Xj, { size: "xxs", color: "currentColor" });
-                            case y.FL.XBOX:
+                            case j.FL.XBOX:
                                 return (0, i.jsx)(d.YWd, { size: "xxs", color: "currentColor" });
-                            case y.FL.VR:
-                                return (0, i.jsx)(r.VrHeadsetIcon, { size: "xxs", color: "currentColor" });
+                            case j.FL.VR:
+                                return (0, i.jsx)(a.VrHeadsetIcon, { size: "xxs", color: "currentColor" });
                             default:
                                 return null;
                         }
                     })
-                    .filter(E.Vq),
-            [a],
+                    .filter(C.Vq),
+            [r],
         );
     if (!(null != n || o.length > 0)) return null;
-    let c = null != n ? (0, S.C)(n) : D.intl.string(D.t["4dGUP0"]);
+    let c = null != n ? (0, S.C)(n) : w.intl.string(w.t["4dGUP0"]);
     return (0, i.jsxs)("div", {
-        className: P.qr,
+        className: k.qr,
         children: [
             (0, i.jsx)("div", {
-                className: P.E6,
-                children: o.map((e, t) => (0, i.jsx)("div", { className: P.F2, children: e }, t)),
+                className: k.E6,
+                children: o.map((e, t) => (0, i.jsx)("div", { className: k.F2, children: e }, t)),
             }),
-            (0, i.jsx)(d.Text, { variant: "text-sm/medium", color: "currentColor", className: P.kB, children: c }),
+            (0, i.jsx)(d.Text, { variant: "text-sm/medium", color: "currentColor", className: k.kB, children: c }),
         ],
     });
 }
-function U(e) {
+function O(e) {
     let {
             message: t,
             application: n,
-            applicationName: r,
+            applicationName: a,
             channel: s,
-            header: E,
+            header: C,
             currentUserId: S,
-            launchableAppId: y,
-            isEmbeddedApplication: R,
-            tryWithGdnAction: U,
-            staticBannerSrc: w,
+            launchableAppId: j,
+            isEmbeddedApplication: L,
+            tryWithGdnAction: O,
+            staticBannerSrc: U,
             onClickContent: G,
             iconSrc: B,
             onView: F,
             presenceActivity: H,
             currentUserPresenceActivity: V,
-            hideParty: z,
-            partyStatusElement: W,
+            hideParty: W,
+            partyStatusElement: q,
             analyticsLocations: Y,
-            showAuthButton: q,
+            showAuthButton: z,
             startAuthorization: K,
             accountLinkButtonRef: Q,
             renderAccountLinkUpsell: J,
@@ -102,7 +102,7 @@ function U(e) {
             () =>
                 null != X
                     ? (0, i.jsxs)("div", {
-                          className: P.Ym,
+                          className: k.Ym,
                           children: [
                               (0, i.jsx)(d._xR, { size: "xxs", color: "currentColor" }),
                               (0, i.jsx)(p.z, {
@@ -116,15 +116,15 @@ function U(e) {
                     : null,
             [X, H?.timestamps?.end],
         ),
-        $ = (0, v.v)(t),
-        ee = (0, f.s)(n.id),
+        $ = (0, T.v)(t),
+        ee = (0, x.s)(n.id),
         et = l.useMemo(
             () =>
-                ee.some((e) => (0, g.CZ)(e) === a.m.GLOBAL)
+                ee.some((e) => (0, g.CZ)(e) === r.m.GLOBAL)
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)(d.Y3C, { size: "xxs", color: "currentColor" }),
-                              D.intl.string(D.t.TsWCdW),
+                              w.intl.string(w.t.TsWCdW),
                           ],
                       })
                     : null,
@@ -134,39 +134,39 @@ function U(e) {
             () =>
                 (0, i.jsxs)(d.Text, {
                     variant: "text-xs/normal",
-                    className: P.dS,
+                    className: k.dS,
                     color: "none",
                     lineClamp: 2,
-                    children: [$ ? (0, C.YC)(t, r, s, S, !1) : Z, $ ? null : et],
+                    children: [$ ? (0, E.YC)(t, a, s, S, !1) : Z, $ ? null : et],
                 }),
-            [$, t, r, s, S, Z, et],
+            [$, t, a, s, S, Z, et],
         ),
-        ei = l.useMemo(() => (0, i.jsxs)("div", { className: P.pq, children: [en, z || $ ? null : W] }), [en, z, $, W]),
+        ei = l.useMemo(() => (0, i.jsxs)("div", { className: k.pq, children: [en, W || $ ? null : q] }), [en, W, $, q]),
         el = (0, A.e)(n),
-        { canJoin: ea, remoteJoinPlatform: er } = (0, I.D)({
+        { canJoin: er, remoteJoinPlatform: ea } = (0, I.D)({
             presenceActivity: H,
             currentUserPresenceActivity: V,
             currentUserId: S,
             message: t,
             application: n,
-            isEmbeddedApplication: R,
+            isEmbeddedApplication: L,
             isFrameApplication: el,
-            isGameLaunchable: !!y,
+            isGameLaunchable: !!j,
         }),
         es = (0, I.M)(H, V, t, n),
-        eo = (0, T.E)(H, t, n, S),
-        ed = (0, N.w)(V, H),
+        eo = (0, b.E)(H, t, n, S),
+        ed = (0, v.w)(V, H),
         ec = (0, o.bG)(
-            [x.A],
-            () => null != H && null != H.application_id && x.A.getState(H.application_id, M.xL.JOIN) === M.eAD.LOADING,
+            [f.A],
+            () => null != H && null != H.application_id && f.A.getState(H.application_id, P.xL.JOIN) === P.eAD.LOADING,
         ),
-        { actions: eu, hasAccountLinkButton: em } = l.useMemo(() => {
+        { actions: eu, hasAccountLinkButton: e_ } = l.useMemo(() => {
             let e = null,
                 n = !0,
                 i = !1;
-            ea
+            er
                 ? (e = {
-                      label: D.intl.string(D.t.VJlc0S),
+                      label: w.intl.string(w.t.VJlc0S),
                       trackingArea: h.kY.JOIN,
                       submitting: ec,
                       onClick: () => {
@@ -176,14 +176,14 @@ function U(e) {
                               applicationId: H.application_id,
                               channelId: s.id,
                               messageId: t.id,
-                              source: M.ThZ.MESSAGE_EMBED,
+                              source: P.ThZ.MESSAGE_EMBED,
                               analyticsLocations: Y,
-                              embedded: (0, b.A)(H, M.jUm.EMBEDDED),
-                              remotePartyId: null != er ? H.party?.id : void 0,
+                              embedded: (0, y.A)(H, P.jUm.EMBEDDED),
+                              remotePartyId: null != ea ? H.party?.id : void 0,
                           }),
-                              (0, j.A)({
-                                  type: M.UqL.JOIN,
-                                  source: M.ThZ.MESSAGE_EMBED,
+                              (0, N.A)({
+                                  type: P.UqL.JOIN,
+                                  source: P.ThZ.MESSAGE_EMBED,
                                   userId: t.author.id,
                                   guildId: s.guild_id,
                                   channelId: s.id,
@@ -191,51 +191,51 @@ function U(e) {
                                   partyId: H.party?.id,
                                   messageId: t.id,
                                   analyticsLocations: Y,
-                                  remoteJoinPlatform: er,
+                                  remoteJoinPlatform: ea,
                               });
                       },
                   })
                 : es
                   ? ((e = {
-                        label: D.intl.string(D.t.VJlc0S),
+                        label: w.intl.string(w.t.VJlc0S),
                         trackingArea: h.kY.SYNC,
                         onClick: () => {
-                            null != H && m.OH(H, t.author.id);
+                            null != H && _.OH(H, t.author.id);
                         },
                     }),
                     (n = !1))
                   : eo
                     ? (e = {
-                          label: D.intl.string(D.t["hC/Zey"]),
+                          label: w.intl.string(w.t["hC/Zey"]),
                           trackingArea: h.kY.INVITE,
                           onClick: () => {
                               null != H &&
                                   c.A.sendActivityInvite({
-                                      type: M.xL.JOIN,
+                                      type: P.xL.JOIN,
                                       channelId: s.id,
                                       activity: H,
-                                      location: M.ThZ.MESSAGE_EMBED,
+                                      location: P.ThZ.MESSAGE_EMBED,
                                   });
                           },
                           disabled: t.author.id === S,
-                          disabledReason: t.author.id === S ? D.intl.string(D.t.IBl8ID) : void 0,
+                          disabledReason: t.author.id === S ? w.intl.string(w.t.IBl8ID) : void 0,
                       })
                     : ed
                       ? (e = {
-                            label: D.intl.string(D.t.KC26NR),
+                            label: w.intl.string(w.t.KC26NR),
                             trackingArea: h.kY.PLAY,
                             onClick: () => {},
                             disabled: !0,
                         })
-                      : null != U && ((e = U), (n = !1));
+                      : null != O && ((e = O), (n = !1));
             let l = [];
             return (
                 null != e &&
                     (l.push(e),
-                    q &&
+                    z &&
                         n &&
                         (l.push({
-                            label: D.intl.string(D.t.lw71Nf),
+                            label: w.intl.string(w.t.lw71Nf),
                             trackingArea: h.kY.CONNECT_ACCOUNT,
                             onClick: () => {
                                 K({ analyticsLocations: Y });
@@ -247,18 +247,18 @@ function U(e) {
                         (i = !0))),
                 { actions: l, hasAccountLinkButton: i }
             );
-        }, [ea, es, eo, ed, U, t.author.id, t.id, H, s.id, s.guild_id, Y, er, S, ec, q, K, Q]),
-        e_ = eu.some((e) => e.trackingArea === h.kY.CLOUD_PLAY);
-    (0, L.A)(e_, Y);
-    let eh = l.useMemo(() => (ed ? null : (0, i.jsx)(k, { presenceActivity: H, remoteJoinPlatform: er })), [ed, H, er]);
+        }, [er, es, eo, ed, O, t.author.id, t.id, H, s.id, s.guild_id, Y, ea, S, ec, z, K, Q]),
+        em = eu.some((e) => e.trackingArea === h.kY.CLOUD_PLAY);
+    (0, R.A)(em, Y);
+    let eh = l.useMemo(() => (ed ? null : (0, i.jsx)(D, { presenceActivity: H, remoteJoinPlatform: ea })), [ed, H, ea]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(_.h, {
-                header: E,
-                title: r,
-                staticBannerSrc: w,
+            (0, i.jsx)(m.h, {
+                header: C,
+                title: a,
+                staticBannerSrc: U,
                 onClickBanner: G,
-                bannerAspectRatio: _.u.ACTIVITY,
+                bannerAspectRatio: m.u.ACTIVITY,
                 iconSrc: B ?? void 0,
                 info: ei,
                 actions: eu,
@@ -266,7 +266,7 @@ function U(e) {
                 onClickContent: G,
                 trackingConfig: {
                     id: n.id,
-                    linkType: O.J.RICH_PRESENCE_INVITE,
+                    linkType: M.J.RICH_PRESENCE_INVITE,
                     onView: F,
                     referrerId: t.author.id,
                     guildId: s.guild_id,
@@ -275,7 +275,7 @@ function U(e) {
                 },
                 footer: eh,
             }),
-            em ? J() : null,
+            e_ ? J() : null,
         ],
     });
 }

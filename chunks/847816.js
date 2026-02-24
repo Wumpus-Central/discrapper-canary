@@ -1,43 +1,43 @@
-n.d(t, { A: () => T });
-var i = n(627968),
-    a = n(64700),
-    s = n(503698),
-    l = n.n(s),
-    r = n(311907),
-    o = n(397927),
-    c = n(966327),
-    d = n(386467),
-    u = n(449859),
-    m = n(943220),
-    _ = n(734057),
-    p = n(572855),
-    E = n(358731),
-    A = n(597351),
-    f = n(985018),
-    S = n(70438);
-let h = a.memo(function (e) {
+a.d(t, { A: () => S });
+var n = a(627968),
+    i = a(64700),
+    l = a(503698),
+    s = a.n(l),
+    r = a(311907),
+    o = a(397927),
+    c = a(966327),
+    d = a(386467),
+    u = a(449859),
+    m = a(943220),
+    _ = a(734057),
+    p = a(572855),
+    A = a(358731),
+    h = a(597351),
+    g = a(985018),
+    E = a(100204);
+let T = i.memo(function (e) {
     let { message: t } = e,
-        n = (0, r.bG)([_.A], () => _.A.getChannel(t.channel_id));
-    return null == n
+        a = (0, r.bG)([_.A], () => _.A.getChannel(t.channel_id));
+    return null == a
         ? null
-        : (0, i.jsx)(E.Ay, {
+        : (0, n.jsx)(A.Ay, {
               children: (e) =>
-                  (0, i.jsxs)(d.A.Provider, {
-                      value: n.guild_id,
+                  (0, n.jsxs)(d.A.Provider, {
+                      value: a.guild_id,
                       children: [
-                          (0, i.jsx)(c.A, { user: t.author, size: o._3J.SIZE_40, className: l()(S.Du, e) }),
-                          (0, i.jsxs)("div", {
-                              className: l()(S.cy, e),
+                          (0, n.jsx)(c.A, { user: t.author, size: o._3J.SIZE_40, className: s()(E.Du, e) }),
+                          (0, n.jsxs)("div", {
+                              className: s()(E.cy, e),
                               children: [
-                                  (0, i.jsx)(o.M1G, {
-                                      children: (0, i.jsx)("div", {
-                                          className: S.mG,
-                                          children: (0, i.jsx)(m.A, { className: S.fh, message: t, channel: n }),
+                                  (0, n.jsx)(o.M1G, {
+                                      children: (0, n.jsx)("div", {
+                                          className: E.mG,
+                                          children: (0, n.jsx)(m.A, { className: E.fh, message: t, channel: a }),
                                       }),
                                   }),
-                                  (0, i.jsx)(u.A, {
+                                  (0, n.jsx)(u.A, {
                                       timestamp: t.timestamp,
-                                      className: S.vE,
+                                      className: E.vE,
                                       tooltipPosition: "bottom",
                                   }),
                               ],
@@ -46,22 +46,22 @@ let h = a.memo(function (e) {
                   }),
           });
 });
-function T(e) {
-    let { item: t, hideMediaOptions: n, onClose: a } = e,
-        s = t.sourceMetadata?.message;
-    return (0, i.jsxs)("div", {
-        className: S.XV,
+function S(e) {
+    let { item: t, hideMediaOptions: a, onClose: i } = e,
+        l = t.sourceMetadata?.message;
+    return (0, n.jsxs)("div", {
+        className: E.XV,
         children: [
-            null != s && (0, i.jsx)(h, { message: s }),
-            (0, i.jsx)(p.A, { item: t, hideMediaOptions: n }),
-            (0, i.jsx)(E.Ay, {
-                mode: E.nY.PINNED,
+            null != l && (0, n.jsx)(T, { message: l }),
+            (0, n.jsx)(p.A, { item: t, hideMediaOptions: a }),
+            (0, n.jsx)(A.Ay, {
+                mode: A.nY.PINNED,
                 children: (e) =>
-                    (0, i.jsx)(A.A, {
-                        onClick: a,
+                    (0, n.jsx)(h.A, {
+                        onClick: i,
                         icon: o.PGe,
-                        tooltip: f.intl.string(f.t.cpT0Cq),
-                        className: l()(S.b, e),
+                        tooltip: g.intl.string(g.t.cpT0Cq),
+                        className: s()(E.b, e),
                     }),
             }),
         ],

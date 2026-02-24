@@ -1,7 +1,7 @@
 n.d(t, { A: () => g });
 var i = n(627968),
     r = n(64700),
-    l = n(960488),
+    l = n(873263),
     a = n(311907),
     s = n(308528),
     o = n(456412),
@@ -11,7 +11,7 @@ var i = n(627968),
     A = n(341338),
     h = n(998515),
     _ = n(652215),
-    m = n(58682);
+    m = n(881640);
 class p extends r.Component {
     componentDidMount() {
         this.fetchStoreListing(), (0, d.d)("channel_store_listing");

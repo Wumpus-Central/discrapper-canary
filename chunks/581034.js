@@ -2,19 +2,19 @@ n.d(t, { l: () => A });
 var i = n(627968);
 n(64700);
 var l = n(989349),
-    a = n.n(l),
-    r = n(827734),
+    r = n.n(l),
+    a = n(827734),
     s = n(397927),
     o = n(393033),
     d = n(239093),
     c = n(985018),
-    u = n(617184);
-function m(e) {
+    u = n(682402);
+function _(e) {
     let { classificationId: t } = e;
     return (0, i.jsx)(s.MzZ, {
         onClick: () => {
             (0, s.mMO)(async () => {
-                let { default: e } = await Promise.all([n.e("83518"), n.e("9407"), n.e("1708")]).then(
+                let { default: e } = await Promise.all([n.e("83518"), n.e("9407"), n.e("70660")]).then(
                     n.bind(n, 956450),
                 );
                 return (n) =>
@@ -30,7 +30,7 @@ function m(e) {
         children: c.intl.string(c.t.QsqdXC),
     });
 }
-function _(e) {
+function m(e) {
     let { learnMoreLink: t } = e;
     return (0, i.jsx)(s.MzZ, { className: u.zh, href: t, children: c.intl.string(c.t["8/GdRB"]) });
 }
@@ -39,10 +39,10 @@ function h(e) {
     switch (t) {
         case d.xw.POLICY_VIOLATION_DETAIL:
             if (null == n) return null;
-            return (0, i.jsx)(m, { classificationId: n });
+            return (0, i.jsx)(_, { classificationId: n });
         case d.xw.LEARN_MORE_LINK:
             if (null == l) return null;
-            return (0, i.jsx)(_, { learnMoreLink: l });
+            return (0, i.jsx)(m, { learnMoreLink: l });
         default:
             return null;
     }
@@ -50,8 +50,8 @@ function h(e) {
 function p(e) {
     let { iconType: t } = e,
         n = {
-            default: (0, i.jsx)(s.koX, { size: "xs", color: r.A.colors.TEXT_LINK.css }),
-            danger: (0, i.jsx)(s.id, { color: r.A.colors.ICON_FEEDBACK_CRITICAL }),
+            default: (0, i.jsx)(s.koX, { size: "xs", color: a.A.colors.TEXT_LINK.css }),
+            danger: (0, i.jsx)(s.id, { color: a.A.colors.ICON_FEEDBACK_CRITICAL }),
         };
     return null != t && t in n ? (0, i.jsx)("div", { className: u.Kk, children: n[t] }) : null;
 }
@@ -84,7 +84,7 @@ function A(e) {
                               children: (0, i.jsx)(s.Text, {
                                   variant: "text-xs/medium",
                                   children: c.intl.format(c.t.eevFb6, {
-                                      daysAgo: ((t = n.timestamp ?? 0), a()().diff(a().unix(t), "days")),
+                                      daysAgo: ((t = n.timestamp ?? 0), r()().diff(r().unix(t), "days")),
                                   }),
                               }),
                           }),

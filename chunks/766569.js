@@ -27,7 +27,7 @@ var i = n(627968),
     v = n(687021),
     O = n(652215),
     R = n(985018),
-    y = n(764121);
+    y = n(61687);
 function P(e) {
     (0, o.mMO)(async () => {
         let { default: t } = await n.e("65281").then(n.bind(n, 547352));
@@ -42,20 +42,20 @@ function L(e) {
             return l()(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e;
         }),
         D = (0, r.bG)([C.Ay], () => (null != t ? C.Ay.getMember(t.id, L.id) : null)),
-        M = (0, r.bG)([E.A], () => !E.A.isFetchingProfile(L.id, t?.id)),
-        G = (0, r.bG)([T.A], () => T.A.hidePersonalInformation),
+        G = (0, r.bG)([E.A], () => !E.A.isFetchingProfile(L.id, t?.id)),
+        M = (0, r.bG)([T.A], () => T.A.hidePersonalInformation),
         { pendingAvatar: U, pendingNameplate: k, ...V } = (0, r.cf)([p.A], () => p.A.getPendingChanges(t?.id)),
-        H = (0, x.V7)({ userId: L.id, image: U }),
-        w = (0, A.lw)({
+        w = (0, x.V7)({ userId: L.id, image: U }),
+        H = (0, A.lw)({
             pendingValue: k,
             userValue: L?.collectibles?.nameplate,
             guildValue: D?.collectibles?.nameplate,
             guildId: t?.id,
         }),
         { pendingDisplayNameStyles: B } = (0, A.B0)(L, t?.id);
-    return (s.useEffect(() => () => c.h.wait(N.IM), []), G)
+    return (s.useEffect(() => () => c.h.wait(N.IM), []), M)
         ? (0, i.jsx)(d.A, {})
-        : M
+        : G
           ? (0, i.jsxs)(_.f5, {
                 value: a,
                 children: [
@@ -77,7 +77,7 @@ function L(e) {
                                       }),
                                       profilePreview: (0, i.jsx)(h.A, {
                                           ...V,
-                                          pendingAvatar: H,
+                                          pendingAvatar: w,
                                           pendingDisplayNameStyles: B,
                                           user: L,
                                           guild: t,
@@ -89,8 +89,8 @@ function L(e) {
                                           pendingDisplayNameStyles: B,
                                           user: L,
                                           guildId: t?.id,
-                                          nameplate: w,
-                                          className: null == w ? y.t : void 0,
+                                          nameplate: H,
+                                          className: null == H ? y.t : void 0,
                                           isHighlighted: !0,
                                       }),
                                       children: (0, i.jsx)(j.A, {}),

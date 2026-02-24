@@ -2,8 +2,8 @@
 n.d(t, { l: () => o });
 var r = n(64700),
     i = n(267102),
-    a = n(374803),
-    s = n(562650);
+    s = n(374803),
+    a = n(40672);
 function o(e) {
     let { editorHeight: t, type: n, state: o } = e,
         [l, u] = r.useState(void 0),
@@ -12,8 +12,8 @@ function o(e) {
         { renderWindow: _ } = r.useContext(i.Ay),
         f = r.useCallback(() => {
             if (null != o && (null == c || !d)) return void u(void 0);
-            if (c?.type === a.DB.MENTION_SUGGESTIONS) {
-                let e = _.document.getElementsByClassName(s.Z2)[0];
+            if (c?.type === s.DB.MENTION_SUGGESTIONS) {
+                let e = _.document.getElementsByClassName(a.Z2)[0];
                 if (null == e) return void u(void 0);
                 {
                     let t = e.getBoundingClientRect();
@@ -21,7 +21,7 @@ function o(e) {
                     return;
                 }
             }
-            if (c?.type === a.DB.GIFS || (null != n && !n.autocomplete?.alwaysUseLayer)) return void u(null);
+            if (c?.type === s.DB.GIFS || (null != n && !n.autocomplete?.alwaysUseLayer)) return void u(null);
             let e = _.document.getSelection(),
                 t = null != e && e.rangeCount > 0 ? e.getRangeAt(0) : null;
             if (null == t) return;

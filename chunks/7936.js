@@ -6,38 +6,38 @@ var i = n(627968),
     l = n.n(r),
     a = n(311907),
     o = n(397927),
-    c = n(557722),
-    d = n(628387),
+    d = n(557722),
+    c = n(628387),
     u = n(148864),
     h = n(146571),
     _ = n(854378);
 n(53516);
 var p = n(985018),
-    g = n(20976),
-    m = n(473169);
+    g = n(641254),
+    m = n(522759);
 let f = () => {
     let [e, t] = s.useState(""),
         [r, f] = s.useState(""),
         [A, E] = s.useState(!1),
-        [x, v] = s.useState(!1),
-        [I, N] = s.useState(null),
-        [S, j] = s.useState(null),
+        [x, I] = s.useState(!1),
+        [N, v] = s.useState(null),
+        [j, S] = s.useState(null),
         C = (0, a.bG)([u.A], () => u.A.getCountryCode()),
         T = C.code.split(" ")[0],
         y = async () => {
             try {
-                await c.A.resendCode(e);
+                await d.A.resendCode(e);
             } catch (e) {
-                j(e.body.message);
+                S(e.body.message);
             }
         },
         b = async () => {
             E(!0);
             try {
-                let { token: t } = await c.A.verifyPhone(T + e, r);
-                N(null), j(null), v(!0), c.A.validatePhoneForSupport(t);
+                let { token: t } = await d.A.verifyPhone(T + e, r);
+                v(null), S(null), I(!0), d.A.validatePhoneForSupport(t);
             } catch (e) {
-                e.body.message ? (N(null), j(e.body.message)) : (N(e.body.phone), j(e.body.code));
+                e.body.message ? (v(null), S(e.body.message)) : (v(e.body.phone), S(e.body.code));
             } finally {
                 E(!1);
             }
@@ -71,8 +71,8 @@ let f = () => {
                               autoComplete: "off",
                               spellCheck: "false",
                               onChange: t,
-                              forceMode: d.Pd.PHONE,
-                              error: I,
+                              forceMode: c.Pd.PHONE,
+                              error: N,
                           }),
                           (0, i.jsx)(_.pd, {
                               className: m.QX,
@@ -80,7 +80,7 @@ let f = () => {
                               value: r,
                               onChange: f,
                               maxLength: 6,
-                              error: S,
+                              error: j,
                           }),
                           (0, i.jsx)(o.QWc, { text: p.intl.string(p.t["5b60gi"]), onClick: y }),
                           (0, i.jsx)("div", {

@@ -7,16 +7,16 @@ var n = i(627968),
     u = i(462887),
     o = i(890138),
     d = i(736653),
-    T = i(793574),
-    A = i(688810),
+    A = i(793574),
+    T = i(688810),
     S = i(857586),
     E = i(757036),
     g = i(602450),
     _ = i(144605),
     c = i(927766),
     I = i(557571),
-    N = i(18640),
-    C = i(236698),
+    C = i(18640),
+    N = i(236698),
     O = i(976860),
     L = i(392943),
     b = i(954571),
@@ -28,14 +28,14 @@ var n = i(627968),
     P = i(652215),
     v = i(788868),
     G = i(985018),
-    f = i(895431),
-    V = i(458017),
+    f = i(215765),
+    V = i(42299),
     h = i(120499),
     U = i(684399),
     M = i(446115);
 let X = () => {
         let t = (0, u.q)((0, d.Ay)()),
-            { analyticsLocations: e } = (0, A.Ay)(T.A.CF_WARP_SETTINGS);
+            { analyticsLocations: e } = (0, T.Ay)(A.A.CF_WARP_SETTINGS);
         return (
             (0, l.useEffect)(() => {
                 b.default.track(P.HAw.PREMIUM_UPSELL_VIEWED, { type: v.e.PRIVACY_PERK_SETTINGS, location_stack: e });
@@ -95,7 +95,7 @@ let X = () => {
             ((0, l.useEffect)(
                 () => () => {
                     d.current ||
-                        C.Ay.fireSurveyAction(
+                        N.Ay.fireSurveyAction(
                             u ? s.w.WARP_VPN_SETTINGS_BOUNCE_NITRO : s.w.WARP_VPN_SETTINGS_BOUNCE_NON_NITRO,
                         );
                 },
@@ -117,7 +117,7 @@ let X = () => {
                         subscriptionTier: v.pe.TIER_2,
                         fullWidth: !0,
                         size: "sm",
-                        premiumModalAnalyticsLocation: { page: T.A.CF_WARP_SETTINGS },
+                        premiumModalAnalyticsLocation: { page: A.A.CF_WARP_SETTINGS },
                         onClick: () => {
                             d.current = !0;
                         },
@@ -137,7 +137,7 @@ let X = () => {
             case g.Lk.NOT_INSTALLED:
                 return (0, n.jsx)(p.y, { onClick: () => (d.current = !0) });
             case g.Lk.INSTALLED:
-                return (0, n.jsx)(N.X, {});
+                return (0, n.jsx)(C.X, {});
             case g.Lk.ZERO_TRUST:
                 break;
             case g.Lk.EXISTING_INSTALLATION:

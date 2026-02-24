@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -9,13 +9,13 @@ var i = n(627968),
     d = n(147925),
     c = n(863913),
     u = n(985018),
-    g = n(209248);
-let m = function (e) {
+    m = n(20222);
+let g = function (e) {
     let {
             items: t,
             carouselClassName: n,
             paginationCaretClassName: l,
-            intervalBetweenAutomaticItemRotations: m,
+            intervalBetweenAutomaticItemRotations: g,
             renderItem: x,
         } = e,
         h = s.useMemo(() => new a.IX(), []),
@@ -40,15 +40,15 @@ let m = function (e) {
         }, [T, t, E]);
     return (
         s.useEffect(() => {
-            null != m && (j ? j && h.stop() : h.start(m, C));
-        }, [j, h, m, C]),
+            null != g && (j ? j && h.stop() : h.start(g, C));
+        }, [j, h, g, C]),
         (0, i.jsxs)("div", {
-            className: g.zr,
+            className: m.zr,
             onMouseEnter: () => N(!0),
             onMouseLeave: () => N(!1),
             children: [
                 (0, i.jsx)(o.DUT, {
-                    className: r()(g.Sx, l),
+                    className: r()(m.Sx, l),
                     onClick: I,
                     onMouseEnter: () => A(c.f.RIGHT),
                     ignoreKeyPress: E,
@@ -64,11 +64,11 @@ let m = function (e) {
                     direction: _,
                     onAnimationStart: () => b(!0),
                     onAnimationEnd: () => b(!1),
-                    className: r()(g.Dk, n),
+                    className: r()(m.Dk, n),
                     children: x(t[p]),
                 }),
                 (0, i.jsx)(o.DUT, {
-                    className: r()(g.Sx, l),
+                    className: r()(m.Sx, l),
                     onClick: C,
                     onMouseEnter: () => A(c.f.LEFT),
                     ignoreKeyPress: E,

@@ -20,13 +20,13 @@ var i = n(627968),
     C = n(39324),
     E = n(320697),
     I = n(394953),
-    b = n(628325),
-    N = n(524628),
+    N = n(628325),
+    b = n(524628),
     S = n(849077),
     T = n(652215),
-    v = n(228160),
-    y = n(985018),
-    j = n(128354);
+    y = n(21786),
+    v = n(985018),
+    j = n(19e3);
 function R(e) {
     e.stopPropagation();
 }
@@ -45,7 +45,7 @@ function O(e) {
                     variant: "text-sm/medium",
                     color: "text-subtle",
                     className: j.P7,
-                    children: (0, a.capitalize)(y.intl.string(S.v7[t]).toLowerCase()),
+                    children: (0, a.capitalize)(v.intl.string(S.v7[t]).toLowerCase()),
                 }),
                 (0, i.jsx)(u.abt, { size: "xxs", className: j.ai }),
             ],
@@ -75,14 +75,14 @@ function M() {
                             variant: "text-sm/medium",
                             color: "text-muted",
                             style: { textAlign: "center" },
-                            children: y.intl.string(v.default["O+racd"]),
+                            children: v.intl.string(y.default["O+racd"]),
                         }),
                     ],
                 }),
                 (0, i.jsx)(u.Button, {
                     variant: "secondary",
                     onClick: () => (0, I.tZ)(e),
-                    text: y.intl.string(v.default.klSpfs),
+                    text: v.intl.string(y.default.klSpfs),
                 }),
             ],
         }),
@@ -96,8 +96,8 @@ function D(e) {
             loadMore: a,
             renderLoadingState: A,
             renderMessageGroup: p,
-            scrollerClassName: v,
-            className: y,
+            scrollerClassName: y,
+            className: v,
             listName: D,
             ignoreGrouping: G = !1,
         } = e,
@@ -212,7 +212,7 @@ function D(e) {
         }, [n, l, A, W, Y, q, G, p, J, Q, U]),
         Z = $[$.length - 1],
         ee = s.isValidElement(Z) && Z.type === O,
-        et = (0, b.S)((e) => e.setInboxReadState);
+        et = (0, N.S)((e) => e.setInboxReadState);
     s.useEffect(() => {
         Q || et(0 === q.UNREAD.length);
     }, [q, Q, et]);
@@ -236,7 +236,7 @@ function D(e) {
     }, [ei, a, Q, B, ee, z]);
     let es = s.useMemo(() => {
         let e = Math.min(Math.max(2, ei()), 20);
-        return (0, i.jsx)(N.A, { withHeader: !1, size: e });
+        return (0, i.jsx)(b.A, { withHeader: !1, size: e });
     }, [ei]);
     return (
         (0, x.Hi)({
@@ -248,7 +248,7 @@ function D(e) {
             viewId: U,
         }),
         (0, i.jsx)("div", {
-            className: r()(y, j.KQ),
+            className: r()(v, j.KQ),
             onClick: R,
             onDoubleClick: R,
             "aria-label": e["aria-label"],
@@ -261,7 +261,7 @@ function D(e) {
                             ref: (e) => {
                                 (P.current = e), (t.current = e?.getScrollerNode() ?? null);
                             },
-                            className: r()(j.m4, v),
+                            className: r()(j.m4, y),
                             onScroll: X,
                             fade: !0,
                             ...n,

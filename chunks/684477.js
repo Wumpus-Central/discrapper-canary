@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { E: () => h });
+n.d(t, { E: () => p });
 var r = n(627968),
     i = n(64700),
-    a = n(156312),
-    s = n(166532),
+    s = n(156312),
+    a = n(166532),
     o = n(482132),
     l = n(866485),
     u = n(981036),
     c = n(985018),
-    d = n(34873);
+    d = n(228131);
 let _ = (e) => (0, r.jsx)(f, { ...e }),
     f = (e) => {
         let {
@@ -19,28 +19,28 @@ let _ = (e) => (0, r.jsx)(f, { ...e }),
                 layout: l,
                 renderStepBody: _,
                 renderLeftColumn: f,
-                renderRightColumn: h,
-                primaryCTAButtonProps: p,
-                onBackClick: g,
+                renderRightColumn: p,
+                primaryCTAButtonProps: h,
+                onBackClick: m,
             } = n,
-            { hasPaymentSources: E } = (0, a.P5)(),
-            A = E ? s.pn.REVIEW : s.pn.ADD_PAYMENT_STEPS,
-            I = i.useCallback(() => t(A), [t, A]),
-            T = i.useMemo(
+            { hasPaymentSources: E } = (0, s.P5)(),
+            g = E ? a.pn.REVIEW : a.pn.ADD_PAYMENT_STEPS,
+            A = i.useCallback(() => t(g), [t, g]),
+            I = i.useMemo(
                 () =>
                     "custom-step-body" === l
                         ? _()
                         : "two-column" === l
-                          ? (0, r.jsxs)("div", { className: d.D, children: [f(), h()] })
+                          ? (0, r.jsxs)("div", { className: d.D, children: [f(), p()] })
                           : null,
-                [l, _, f, h],
+                [l, _, f, p],
             ),
-            y = i.useMemo(() => ({ ...p, onClick: I, text: c.intl.string(c.t.XiOHRX) }), [p, I]);
+            T = i.useMemo(() => ({ ...h, onClick: A, text: c.intl.string(c.t.XiOHRX) }), [h, A]);
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(o.dZ, { children: T }),
-                (0, r.jsx)(o.UX, { children: (0, r.jsx)(u.cy, { onBackClick: g, primaryCTAButtonProps: y }) }),
+                (0, r.jsx)(o.dZ, { children: I }),
+                (0, r.jsx)(o.UX, { children: (0, r.jsx)(u.cy, { onBackClick: m, primaryCTAButtonProps: T }) }),
             ],
         });
     },
-    h = (0, l.R)({ step: s.pn.GIFT_CUSTOMIZATION, renderStep: _, DirectStepComponent: f });
+    p = (0, l.R)({ step: a.pn.GIFT_CUSTOMIZATION, renderStep: _, DirectStepComponent: f });

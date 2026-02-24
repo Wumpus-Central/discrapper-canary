@@ -2,44 +2,44 @@ n.d(t, { A: () => u });
 var i = n(627968),
     l = n(64700),
     a = n(397927),
-    r = n(429913),
-    s = n(486020),
+    s = n(429913),
+    r = n(486020),
     o = n(188275),
-    d = n(985018),
-    c = n(416e3);
+    c = n(985018),
+    d = n(126854);
 function u(e) {
     let { title: t, handleOpenCollectiblesShop: n, handleOpenGameShop: u, socialLayerStorefrontApplicationId: g } = e,
         m = l.useRef(null),
         [x, f] = l.useState(!1),
-        h = (0, r.h)(g),
-        p = l.useMemo(
-            () => (null == h || h.id !== o.XR ? d.intl.string(d.t.apFNLU) : d.intl.string(d.t["kq/75v"])),
-            [h],
+        p = (0, s.h)(g),
+        h = l.useMemo(
+            () => (null == p || p.id !== o.XR ? c.intl.string(c.t.apFNLU) : c.intl.string(c.t["kq/75v"])),
+            [p],
         ),
-        _ = l.useMemo(() => (null == h ? null : s.Ay.getApplicationIconURL({ id: h.id, icon: h.icon, size: 20 })), [h]),
-        A = l.useMemo(() => (null == _ ? a.U1X : () => (0, i.jsx)("img", { className: c.I, src: _, alt: "" })), [_]),
+        _ = l.useMemo(() => (null == p ? null : r.Ay.getApplicationIconURL({ id: p.id, icon: p.icon, size: 20 })), [p]),
+        A = l.useMemo(() => (null == _ ? a.U1X : () => (0, i.jsx)("img", { className: d.I, src: _, alt: "" })), [_]),
         I = l.useMemo(() => (null == _ ? { type: "icon", icon: a.U1X } : { type: "image", src: _ }), [_]),
-        v = l.useMemo(
+        j = l.useMemo(
             () =>
                 (0, i.jsxs)(a.rXV, {
                     children: [
                         (0, i.jsx)(a.Drp, {
                             id: "browse-collectibles-shop",
-                            label: d.intl.string(d.t["5upuqx"]),
+                            label: c.intl.string(c.t["5upuqx"]),
                             iconLeft: a.U1X,
                             leadingAccessory: { type: "icon", icon: a.U1X },
                             action: n,
                         }),
                         (0, i.jsx)(a.Drp, {
                             id: "browse-social-layer-storefront",
-                            label: p,
+                            label: h,
                             iconLeft: A,
                             leadingAccessory: I,
                             action: u,
                         }),
                     ],
                 }),
-            [n, u, p, A, I],
+            [n, u, h, A, I],
         );
     return (0, i.jsx)(a.YNO, {
         targetElementRef: m,
@@ -53,8 +53,8 @@ function u(e) {
                 navId: "wishlist-overflow-menu",
                 onSelect: void 0,
                 onClose: t,
-                "aria-label": d.intl.string(d.t.GdNkvG),
-                children: v,
+                "aria-label": c.intl.string(c.t.GdNkvG),
+                children: j,
             });
         },
         children: (e) =>

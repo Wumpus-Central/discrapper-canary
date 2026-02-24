@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { Ay: () => h, ed: () => d, gv: () => c, u1: () => _ });
+n.d(t, { Ay: () => p, ed: () => d, gv: () => c, u1: () => _ });
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    s = n(827734),
+    s = n.n(i),
+    a = n(827734),
     o = n(397927),
     l = n(985018),
-    u = n(188618),
+    u = n(60716),
     c = (function (e) {
         return (e.RED = "RED"), (e.GRAY = "GRAY"), e;
     })({});
@@ -18,18 +18,18 @@ function f(e) {
     return "RED" === c
         ? (0, r.jsx)(o.LpS, {
               text: l.intl.string(l.t.dI3q4h),
-              className: a()(t, u.VD, f),
-              color: s.A.unsafe_rawColors.RED_400.css,
+              className: s()(t, u.VD, f),
+              color: a.A.unsafe_rawColors.RED_400.css,
               shape: _[i],
               style: n,
           })
         : (0, r.jsx)(o.LpS, {
               text: l.intl.string(l.t.dI3q4h),
-              className: a()(t, u.VD, f, u.Oh),
+              className: s()(t, u.VD, f, u.Oh),
               disableColor: !0,
               shape: _[i],
               style: n,
           });
 }
 (f.Looks = c), (f.Sizes = d);
-let h = f;
+let p = f;

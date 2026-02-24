@@ -2,22 +2,22 @@
 n.d(t, { A: () => _ });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(442433),
     l = n(927057),
     u = n(721768);
 n(827669);
 var c = n(985018),
-    d = n(947941);
+    d = n(58275);
 function _(e) {
     let t,
-        a,
+        s,
         _,
-        { className: f, activeCommand: h, activeOption: p, optionStates: g, channelId: E } = e,
-        A = i.useCallback(
+        { className: f, activeCommand: p, activeOption: h, optionStates: m, channelId: E } = e,
+        g = i.useCallback(
             (e) => {
-                let t = h?.rootCommand?.id;
+                let t = p?.rootCommand?.id;
                 null == t
                     ? e.preventDefault()
                     : (0, o.L3)(e, async () => {
@@ -25,19 +25,19 @@ function _(e) {
                           return (n) => (0, r.jsx)(e, { ...n, id: t, label: c.intl.string(c.t.oJ1Muw) });
                       });
             },
-            [h?.rootCommand?.id],
+            [p?.rootCommand?.id],
         ),
-        I = i.useCallback(() => {
+        A = i.useCallback(() => {
             u.Gf({ channelId: E, command: null, section: null });
         }, [E]);
-    if (null == h) return null;
-    if (null != p) {
-        let e = g[p.name].lastValidationResult;
-        (t = p.displayName), (a = p.displayDescription), (_ = e?.success ? null : e?.error);
-    } else (t = `/${h.displayName}`), (a = h.displayDescription), (_ = null);
+    if (null == p) return null;
+    if (null != h) {
+        let e = m[h.name].lastValidationResult;
+        (t = h.displayName), (s = h.displayDescription), (_ = e?.success ? null : e?.error);
+    } else (t = `/${p.displayName}`), (s = p.displayDescription), (_ = null);
     return (0, r.jsxs)("div", {
-        className: s()(f, d.M0),
-        onContextMenu: A,
+        className: a()(f, d.M0),
+        onContextMenu: g,
         children: [
             (0, r.jsxs)("div", {
                 className: d.iz,
@@ -45,10 +45,10 @@ function _(e) {
                     (0, r.jsx)("span", { className: d.UU, children: t }),
                     null != _
                         ? (0, r.jsx)("span", { className: d.z3, children: _ })
-                        : (0, r.jsx)("span", { className: d.h_, children: a }),
+                        : (0, r.jsx)("span", { className: d.h_, children: s }),
                 ],
             }),
-            (0, r.jsx)("div", { className: d.o1, children: (0, r.jsx)(l.x, { onClick: I }) }),
+            (0, r.jsx)("div", { className: d.o1, children: (0, r.jsx)(l.x, { onClick: A }) }),
         ],
     });
 }

@@ -6,20 +6,20 @@ var a = n(991660),
     s = n(311907),
     i = n(397927),
     o = n(587895),
-    d = n(212534),
-    c = n(272859),
+    c = n(212534),
+    d = n(272859),
     u = n(957565),
     m = n(943775),
     p = n(997997),
     A = n(816709),
     h = n(652215),
     C = n(985018),
-    E = n(356426),
-    x = n(22789);
+    E = n(23928),
+    x = n(52379);
 function N(e) {
     let { appId: t, skuId: n, transitionState: N, onClose: I, children: _, footer: f } = e,
-        g = (0, s.bG)([o.A, d.A], () => o.A.getApplication(t) ?? d.A.getApplicationRecord(t), [t]),
-        { data: T } = (0, c.d)(n);
+        g = (0, s.bG)([o.A, c.A], () => o.A.getApplication(t) ?? c.A.getApplicationRecord(t), [t]),
+        { data: T } = (0, d.d)(n);
     if (null == g) return null;
     let v = (0, m.A)(g, 25),
         { termsOfServiceUrl: j, privacyPolicyUrl: S } = g;

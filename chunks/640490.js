@@ -11,8 +11,8 @@ var l = n(627968),
     h = n(803306),
     g = n(928039),
     I = n(485947),
-    f = n(545059),
-    A = n(290863),
+    A = n(545059),
+    f = n(290863),
     E = n(994500),
     m = n(287809),
     S = n(256415),
@@ -30,11 +30,11 @@ var l = n(627968),
     U = n(557404),
     O = n(535973),
     G = n(125117),
-    b = n(652215),
-    w = n(895867),
-    F = n(985018),
-    L = n(488494),
-    k = n(416001);
+    w = n(652215),
+    F = n(822889),
+    L = n(985018),
+    b = n(817120),
+    k = n(77347);
 function P(e) {
     let {
             groupId: t,
@@ -47,16 +47,16 @@ function P(e) {
             draggedGroupId: d,
             dropTargetGroupId: h,
             dropTargetPosition: g,
-            getDragHandleProps: f,
+            getDragHandleProps: A,
         } = e,
-        A = !o,
+        f = !o,
         E = null != h && h === t,
         m = E && g === O.I.BEFORE,
         S = E && g === O.I.AFTER;
     return (0, l.jsx)(I.A, {
-        className: s()(k.uW, { [L.EU]: A, [L.Me]: null != d && d === t, [L.hV]: E, [L.nH]: m, [L._M]: S }),
+        className: s()(k.uW, { [b.EU]: f, [b.Me]: null != d && d === t, [b.hV]: E, [b.nH]: m, [b._M]: S }),
         children: (0, l.jsx)("div", {
-            ...f(t, A),
+            ...A(t, f),
             onContextMenu: u,
             children: (0, l.jsxs)(c.DUT, {
                 onClick: a,
@@ -72,7 +72,7 @@ function j(e) {
 }
 let V = (0, a.throttle)(
     (e) => {
-        (0, N.Y)(b.uss.FRIENDS, {
+        (0, N.Y)(w.uss.FRIENDS, {
             locked: S.default.isInstanceLocked(),
             shownUserIds: e.shownUserIds,
             liveUserIds: e.liveUserIds,
@@ -87,7 +87,7 @@ function Y(e) {
     let { onPrimaryAction: t, onContextMenu: n, onFriendVisible: r } = e,
         [s, I] = i.useState(new Set()),
         [S, _] = i.useState(new Set()),
-        L = i.useCallback(
+        b = i.useCallback(
             (e, t, n) => {
                 I((n) => {
                     if (t) {
@@ -129,13 +129,13 @@ function Y(e) {
             dropTargetGroupId: en,
             dropTargetPosition: el,
             getDragHandleProps: ei,
-        } = (0, O.s)({ groupIds: ee, isDisabled: J, onCommitNewOrder: f.A.reorderGroups }),
+        } = (0, O.s)({ groupIds: ee, isDisabled: J, onCommitNewOrder: A.A.reorderGroups }),
         [er, es] = (0, o.bG)([R.A], () => R.A.getFavoriteTargetIdsForTab(T.x.FRIENDS), [], p.D),
-        ea = (0, o.bG)([m.default, A.A, E.A], () => {
+        ea = (0, o.bG)([m.default, f.A, E.A], () => {
             let e = [];
             for (let t of er) {
                 let n = m.default.getUser(t);
-                null != n && e.push({ user: n, activities: A.A.getActivities(t), nickname: E.A.getNickname(t) });
+                null != n && e.push({ user: n, activities: f.A.getActivities(t), nickname: E.A.getNickname(t) });
             }
             return e;
         }, [er]),
@@ -174,10 +174,10 @@ function Y(e) {
         eh = (0, o.bG)([M.A], () => M.A.getCollapsedSectionOverridesForTab(T.x.FRIENDS), []),
         eg = i.useRef(null),
         eI = (0, g.A)("friends-popout", eg),
-        ef = i.useCallback((e) => {
+        eA = i.useCallback((e) => {
             (0, D.G)({ tab: T.x.FRIENDS, sectionKey: e });
         }, []),
-        eA = i.useCallback((e) => eh[e] ?? M.A.isSectionCollapsedByDefault(T.x.FRIENDS, e), [eh]),
+        ef = i.useCallback((e) => eh[e] ?? M.A.isSectionCollapsedByDefault(T.x.FRIENDS, e), [eh]),
         eE = i.useCallback(
             (e) => {
                 e.stopPropagation(), Q(!1);
@@ -205,17 +205,17 @@ function Y(e) {
         }, [K, em]),
         eN = i.useMemo(() => {
             let e = (e) => {
-                let t = A.A.getStatus(e);
-                return t !== b.clD.ONLINE && t !== b.clD.IDLE && t !== b.clD.DND;
+                let t = f.A.getStatus(e);
+                return t !== w.clD.ONLINE && t !== w.clD.IDLE && t !== w.clD.DND;
             };
             if (ec) return [{ kind: "EMPTY_STATE", key: "EMPTY_STATE", title: "", count: 0, length: 1, rows: [] }];
             let t = [];
             if (ed) {
-                let n = eA("FAVORITES") ? eo.filter((t) => !e(t.user.id)) : eo;
+                let n = ef("FAVORITES") ? eo.filter((t) => !e(t.user.id)) : eo;
                 t.push({
                     kind: "FAVORITES",
                     key: "FAVORITES",
-                    title: F.intl.string(w.default.GKTlS6),
+                    title: L.intl.string(F.default.GKTlS6),
                     count: eo.length,
                     rows: n,
                     length: Math.max(n.length, 1),
@@ -223,11 +223,11 @@ function Y(e) {
             }
             if (X.friendRequests.length > 0) {
                 let e = X.friendRequests,
-                    n = eA("FRIEND_REQUESTS") ? [] : e;
+                    n = ef("FRIEND_REQUESTS") ? [] : e;
                 t.push({
                     kind: "FRIEND_REQUESTS",
                     key: "FRIEND_REQUESTS",
-                    title: F.intl.formatToPlainString(F.t.xxFCW8, { count: e.length }),
+                    title: L.intl.formatToPlainString(L.t.xxFCW8, { count: e.length }),
                     count: e.length,
                     rows: n,
                     length: Math.max(n.length, 1),
@@ -236,7 +236,7 @@ function Y(e) {
             for (let n of q) {
                 let l = `GROUP:${n.id}`,
                     i = n.users,
-                    r = eA(l) ? i.filter((t) => !e(t.user.id)) : i;
+                    r = ef(l) ? i.filter((t) => !e(t.user.id)) : i;
                 t.push({
                     kind: "GROUP",
                     key: l,
@@ -249,7 +249,7 @@ function Y(e) {
             }
             if (X.sameActivity.length > 0) {
                 let e = X.sameActivity,
-                    n = eA("SAME_ACTIVITY") ? [] : e;
+                    n = ef("SAME_ACTIVITY") ? [] : e;
                 t.push({
                     kind: "SAME_ACTIVITY",
                     key: "SAME_ACTIVITY",
@@ -261,11 +261,11 @@ function Y(e) {
             }
             if (X.inGame.length > 0) {
                 let e = X.inGame,
-                    n = eA("IN_GAME") ? [] : e;
+                    n = ef("IN_GAME") ? [] : e;
                 t.push({
                     kind: "IN_GAME",
                     key: "IN_GAME",
-                    title: F.intl.string(w.default.trKJoT),
+                    title: L.intl.string(F.default.trKJoT),
                     count: e.length,
                     rows: n,
                     length: Math.max(n.length, 1),
@@ -273,11 +273,11 @@ function Y(e) {
             }
             if (X.activities.length > 0) {
                 let e = X.activities,
-                    n = eA("ACTIVITIES") ? [] : e;
+                    n = ef("ACTIVITIES") ? [] : e;
                 t.push({
                     kind: "ACTIVITIES",
                     key: "ACTIVITIES",
-                    title: F.intl.string(F.t.TxqPQR),
+                    title: L.intl.string(L.t.TxqPQR),
                     count: e.length,
                     rows: n,
                     length: Math.max(n.length, 1),
@@ -285,11 +285,11 @@ function Y(e) {
             }
             if (Z && X.suggestions.length > 0) {
                 let e = X.suggestions,
-                    n = eA("SUGGESTIONS") ? [] : e;
+                    n = ef("SUGGESTIONS") ? [] : e;
                 t.push({
                     kind: "SUGGESTIONS",
                     key: "SUGGESTIONS",
-                    title: F.intl.string(F.t.qm9dSj),
+                    title: L.intl.string(L.t.qm9dSj),
                     count: e.length,
                     rows: n,
                     length: Math.max(n.length, 1),
@@ -297,11 +297,11 @@ function Y(e) {
             }
             if (X.online.length > 0) {
                 let e = X.online,
-                    n = eA("ONLINE") ? [] : e;
+                    n = ef("ONLINE") ? [] : e;
                 t.push({
                     kind: "ONLINE",
                     key: "ONLINE",
-                    title: F.intl.string(F.t.WbGtnH),
+                    title: L.intl.string(L.t.WbGtnH),
                     count: e.length,
                     rows: n,
                     length: Math.max(n.length, 1),
@@ -309,11 +309,11 @@ function Y(e) {
             }
             if (X.offline.length > 0) {
                 let e = X.offline,
-                    n = eA("OFFLINE") ? [] : e;
+                    n = ef("OFFLINE") ? [] : e;
                 t.push({
                     kind: "OFFLINE",
                     key: "OFFLINE",
-                    title: F.intl.string(F.t.Vv0abJ),
+                    title: L.intl.string(L.t.Vv0abJ),
                     count: e.length,
                     rows: n,
                     length: Math.max(n.length, 1),
@@ -321,7 +321,7 @@ function Y(e) {
             }
             return t;
         }, [
-            eA,
+            ef,
             X.friendRequests,
             q,
             X.sameActivity,
@@ -342,7 +342,7 @@ function Y(e) {
                 let { section: t } = e,
                     i = eT(t);
                 if (null == i || "EMPTY_STATE" === i.kind) return null;
-                let r = eA(i.key),
+                let r = ef(i.key),
                     s = i.title,
                     a = i.count,
                     u = "GROUP" === i.kind,
@@ -355,14 +355,14 @@ function Y(e) {
                             : void 0;
                 return (0, l.jsxs)(l.Fragment, {
                     children: [
-                        (0, l.jsx)(c.AC4, { children: F.intl.format(F.t.Uaqbke, { title: s, count: a }) }),
+                        (0, l.jsx)(c.AC4, { children: L.intl.format(L.t.Uaqbke, { title: s, count: a }) }),
                         u
                             ? (0, l.jsx)(P, {
                                   groupId: i.group?.id ?? "",
                                   groupName: s,
                                   displayText: o,
                                   isCollapsed: r,
-                                  onToggle: () => ef(i.key),
+                                  onToggle: () => eA(i.key),
                                   onContextMenu: h,
                                   isReorderDisabled: J,
                                   draggedGroupId: et,
@@ -375,14 +375,14 @@ function Y(e) {
                                   count: "FRIEND_REQUESTS" === i.kind ? void 0 : a,
                                   isCollapsed: r,
                                   canCollapse: !0,
-                                  onToggle: () => ef(i.key),
+                                  onToggle: () => eA(i.key),
                                   rightAccessory:
                                       "SUGGESTIONS" === i.kind
                                           ? (0, l.jsx)(d.m_, {
-                                                text: F.intl.string(F.t.N86XcP),
+                                                text: L.intl.string(L.t.N86XcP),
                                                 children: (0, l.jsx)(c.DUT, {
                                                     className: k.LQ,
-                                                    "aria-label": F.intl.string(F.t.N86XcP),
+                                                    "aria-label": L.intl.string(L.t.N86XcP),
                                                     onClick: eE,
                                                     children: (0, l.jsx)(c.aXh, { size: "xs", color: "currentColor" }),
                                                 }),
@@ -392,7 +392,7 @@ function Y(e) {
                     ],
                 });
             },
-            [eT, eA, ef, J, et, en, el, ei, eE, n],
+            [eT, ef, eA, J, et, en, el, ei, eE, n],
         ),
         eC = i.useCallback(
             (e) => {
@@ -405,7 +405,7 @@ function Y(e) {
                             children: (0, l.jsx)(c.Text, {
                                 variant: "text-md/normal",
                                 color: "text-muted",
-                                children: F.intl.string(F.t["7sW4h1"]),
+                                children: L.intl.string(L.t["7sW4h1"]),
                             }),
                         },
                         "friends-popout-empty",
@@ -424,17 +424,17 @@ function Y(e) {
                                   closeParentPopout: H,
                                   isSuggestion: "SUGGESTIONS" === r.kind,
                                   shouldHighlightIfRecentlyAdded: "FAVORITES" === r.kind,
-                                  appContext: b.BRT.OVERLAY,
+                                  appContext: w.BRT.OVERLAY,
                                   onPrimaryAction: t,
                                   onContextMenu: n,
-                                  onFriendVisible: L,
+                                  onFriendVisible: b,
                                   friendGroupId: i,
                               }),
                           },
                           `${e.section}:${s.user.id}`,
                       );
             },
-            [eT, ec, H, t, n, L],
+            [eT, ec, H, t, n, b],
         ),
         ey = i.useMemo(() => eN.map((e) => e.length), [eN]),
         ex = i.useCallback(
@@ -477,7 +477,7 @@ function Y(e) {
                     query: $,
                     onChange: eS,
                     onClear: ep,
-                    placeholder: F.intl.string(F.t.lLDtTK),
+                    placeholder: L.intl.string(L.t.lLDtTK),
                     size: "md",
                 }),
             }),
@@ -490,7 +490,7 @@ function Y(e) {
                             children: (e) =>
                                 (0, l.jsx)(c.B8B, {
                                     innerRole: n,
-                                    innerAriaLabel: F.intl.string(F.t.TdEu5X),
+                                    innerAriaLabel: L.intl.string(L.t.TdEu5X),
                                     ref: (e) => {
                                         (eg.current = e), (t.current = e?.getScrollerNode() ?? null);
                                     },

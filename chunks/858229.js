@@ -5,10 +5,10 @@ var i = n(627968),
     l = n(397927),
     r = n(391958),
     a = n(985018),
-    o = n(816925);
+    o = n(25643);
 function d(e) {
     let { onChange: t, initialValue: n, maxWordCount: d, collapsed: c = !1 } = e,
-        [u, g] = s.useState(!c);
+        [u, m] = s.useState(!c);
     return (0, i.jsx)(l.Nt8, {
         isExpanded: u,
         collapsibleContent: (0, i.jsx)(r.A, {
@@ -24,7 +24,7 @@ function d(e) {
             let { onClick: t } = e;
             return (0, i.jsx)(l.DUT, {
                 onClick: (e) => {
-                    g(!u), t(e);
+                    m(!u), t(e);
                 },
                 children: (0, i.jsxs)("div", {
                     className: o.wx,

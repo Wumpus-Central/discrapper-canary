@@ -12,8 +12,8 @@ var i = n(627968),
     m = n(888675),
     A = n(652215),
     g = n(985018),
-    p = n(410132),
-    f = n(119907);
+    p = n(785186),
+    f = n(50397);
 function _(e) {
     let { expanded: t, onClick: n, count: l, compact: s, collapsedReason: a, canUncollapse: c = !0 } = e,
         u = (0, r.YW)({ collapsedReason: a })
@@ -57,18 +57,18 @@ let E = l.memo(function (e) {
     let { messages: t, channel: n, compact: s = !1, unreadId: r, collapsedReason: o, canUncollapse: d = !0 } = e,
         { hasJumpTarget: m = !1 } = t,
         [g, E] = l.useState(m && d),
-        [C, x] = l.useState(!1),
+        [x, C] = l.useState(!1),
         S = l.useCallback(() => {
-            d ? E((e) => !e) : x(!0);
+            d ? E((e) => !e) : C(!0);
         }, [d]);
     if (
         (l.useEffect(() => {
             m && d && E(!0);
         }, [m, d]),
-        C)
+        x)
     )
         return null;
-    let T = t.hasUnread ? t.content.length - 1 : t.content.length;
+    let I = t.hasUnread ? t.content.length - 1 : t.content.length;
     return (0, i.jsxs)("div", {
         className: a()({ [f._A]: !0, [p.sz]: g }),
         children: [
@@ -77,7 +77,7 @@ let E = l.memo(function (e) {
                 : null,
             (0, i.jsx)(
                 _,
-                { count: T, compact: s, expanded: g, onClick: S, collapsedReason: o, canUncollapse: d },
+                { count: I, compact: s, expanded: g, onClick: S, collapsedReason: o, canUncollapse: d },
                 "collapsed-message-item",
             ),
             g

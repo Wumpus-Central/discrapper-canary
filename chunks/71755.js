@@ -1,62 +1,62 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => m });
 var i = n(627968);
 n(64700);
 var l = n(311907),
-    a = n(397927),
-    r = n(529200),
+    r = n(397927),
+    a = n(529200),
     s = n(635491),
     o = n(122906),
     d = n(401755),
     c = n(985018),
-    u = n(687563),
-    m = n(563111);
-function _(e) {
+    u = n(131317),
+    _ = n(42441);
+function m(e) {
     let { code: t } = e,
-        _ = (0, l.bG)([o.A], () => o.A.getGuildTemplate(t));
-    if (null == _ || _.state === d.QB.RESOLVING)
-        return (0, i.jsxs)(r.A, {
+        m = (0, l.bG)([o.A], () => o.A.getGuildTemplate(t));
+    if (null == m || m.state === d.QB.RESOLVING)
+        return (0, i.jsxs)(a.A, {
             children: [
-                (0, i.jsx)(r.A.Header, { text: c.intl.string(c.t.Xj87Yf) }),
-                (0, i.jsx)(r.A.Body, { resolving: !0 }),
+                (0, i.jsx)(a.A.Header, { text: c.intl.string(c.t.Xj87Yf) }),
+                (0, i.jsx)(a.A.Body, { resolving: !0 }),
             ],
         });
-    if (_.state === d.QB.EXPIRED)
-        return (0, i.jsxs)(r.A, {
+    if (m.state === d.QB.EXPIRED)
+        return (0, i.jsxs)(a.A, {
             children: [
-                (0, i.jsx)(r.A.Header, { text: c.intl.string(c.t.C7ZRNw) }),
-                (0, i.jsxs)(r.A.Body, {
+                (0, i.jsx)(a.A.Header, { text: c.intl.string(c.t.C7ZRNw) }),
+                (0, i.jsxs)(a.A.Body, {
                     children: [
-                        (0, i.jsx)(r.A.Icon, { expired: !0 }),
-                        (0, i.jsx)(r.A.Info, { expired: !0, title: c.intl.string(c.t.A6MwXE) }),
+                        (0, i.jsx)(a.A.Icon, { expired: !0 }),
+                        (0, i.jsx)(a.A.Info, { expired: !0, title: c.intl.string(c.t.A6MwXE) }),
                     ],
                 }),
             ],
         });
     let h = __OVERLAY__
-        ? (0, i.jsx)(a.Button, { disabled: !0, variant: "secondary", text: c.intl.string(c.t.W7NTWm) })
-        : (0, i.jsx)(a.Button, {
+        ? (0, i.jsx)(r.Button, { disabled: !0, variant: "secondary", text: c.intl.string(c.t.W7NTWm) })
+        : (0, i.jsx)(r.Button, {
               onClick: () => {
-                  (0, a.mMO)(async () => {
-                      let { default: e } = await Promise.all([n.e("7726"), n.e("4042")]).then(n.bind(n, 72715));
-                      return (t) => (0, i.jsx)(e, { ...t, guildTemplate: _ });
+                  (0, r.mMO)(async () => {
+                      let { default: e } = await Promise.all([n.e("7726"), n.e("58938")]).then(n.bind(n, 72715));
+                      return (t) => (0, i.jsx)(e, { ...t, guildTemplate: m });
                   });
               },
-              loading: _.state === d.QB.ACCEPTING,
+              loading: m.state === d.QB.ACCEPTING,
               variant: "active",
               text: c.intl.string(c.t["a3Gl+e"]),
           });
-    return (0, i.jsxs)(r.A, {
+    return (0, i.jsxs)(a.A, {
         children: [
-            (0, i.jsx)(r.A.Header, { text: c.intl.string(c.t.kAvFkO) }),
-            (0, i.jsxs)(r.A.Body, {
+            (0, i.jsx)(a.A.Header, { text: c.intl.string(c.t.kAvFkO) }),
+            (0, i.jsxs)(a.A.Body, {
                 children: [
                     (0, i.jsxs)("div", {
-                        className: m.iH,
+                        className: _.iH,
                         children: [
                             (0, i.jsx)(s.A, { className: u.K }),
-                            (0, i.jsx)(r.A.Info, {
-                                title: _.name,
-                                children: c.intl.format(c.t.cGXXHL, { usageCount: String(_.usageCount ?? 0) }),
+                            (0, i.jsx)(a.A.Info, {
+                                title: m.name,
+                                children: c.intl.format(c.t.cGXXHL, { usageCount: String(m.usageCount ?? 0) }),
                             }),
                         ],
                     }),

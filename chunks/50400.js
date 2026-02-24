@@ -2,7 +2,7 @@
 n.d(t, { A: () => O });
 var i = n(627968),
     s = n(64700),
-    l = n(475539),
+    l = n(442215),
     r = n(837381),
     a = n(311907),
     o = n(397927),
@@ -20,19 +20,19 @@ var i = n(627968),
     C = n(531685),
     E = n(941971),
     I = n(375855),
-    b = n(900848),
-    N = n(65611),
+    N = n(900848),
+    b = n(65611),
     S = n(652215),
     T = n(985018),
-    v = n(308294);
-let y = { friction: 28, tension: 600 };
+    y = n(2724);
+let v = { friction: 28, tension: 600 };
 function j(e) {
     switch (e) {
         case "height":
         case "opacity":
-            return { duration: 150, ...y };
+            return { duration: 150, ...v };
         case "scale":
-            return { ...y };
+            return { ...v };
         default:
             throw Error(`DirectMessage: getSpringConfigs() - Invalid spring ${String(e)}`);
     }
@@ -81,7 +81,7 @@ class R extends s.PureComponent {
             s = t.type === S.rbe.DM ? f.default.getUser(t.getRecipientId()) : null;
         null != s
             ? (0, c.L3)(e, async () => {
-                  let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("39778"), n.e("31885")]).then(
+                  let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("39778"), n.e("16141")]).then(
                       n.bind(n, 385913),
                   );
                   return (n) => (0, i.jsx)(e, { ...n, channel: t, user: s });
@@ -128,16 +128,16 @@ class R extends s.PureComponent {
                 });
         return (0, i.jsx)(l.animated.div, {
             style: this.getAnimatedStyle(),
-            children: (0, i.jsxs)(b.c, {
+            children: (0, i.jsxs)(N.c, {
                 children: [
-                    (0, i.jsx)(E.A, { hovered: !g && p, selected: !g && n, unread: !g && u, className: v.I }),
+                    (0, i.jsx)(E.A, { hovered: !g && p, selected: !g && n, unread: !g && u, className: y.I }),
                     (0, i.jsx)(I.A, {
                         channel: e,
                         children: (0, i.jsx)(o.Qk9, {
                             rounded: !0,
                             selected: !1,
-                            lowerBadge: s > 0 ? (0, N.wN)(s, void 0, !0) : null,
-                            upperBadge: (0, N.oi)({ audio: r, video: a, screenshare: c, isCurrentUserConnected: d }),
+                            lowerBadge: s > 0 ? (0, b.wN)(s, void 0, !0) : null,
+                            upperBadge: (0, b.oi)({ audio: r, video: a, screenshare: c, isCurrentUserConnected: d }),
                             lowerBadgeSize: { width: (0, o.o6S)(s) },
                             children: _(),
                         }),
@@ -158,9 +158,9 @@ let O = s.forwardRef(function (e, t) {
         C = (0, a.bG)([_.A], () => _.A.getChannelId(), []),
         E = (0, a.bG)([m.Ay], () => m.Ay.getMentionCount(n), [n]),
         I = c === n,
-        b = !1,
-        N = !1;
-    (I || f) && ((b = u === S._Of.VOICE), (N = u === S._Of.VIDEO));
+        N = !1,
+        b = !1;
+    (I || f) && ((N = u === S._Of.VOICE), (b = u === S._Of.VIDEO));
     let T = (0, o.rdh)(o.LU0.modules.guildbar.AVATAR_SIZE);
     return (0, i.jsx)(R, {
         ...e,
@@ -169,8 +169,8 @@ let O = s.forwardRef(function (e, t) {
         unread: E > 0,
         selected: C === n,
         badge: E,
-        audio: b,
-        video: N,
+        audio: N,
+        video: b,
         stream: A,
         isCurrentUserInThisDMCall: I,
         size: T,

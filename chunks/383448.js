@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => h });
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    s = n(158954),
+    s = n.n(i),
+    a = n(158954),
     o = n(311907),
     l = n(397927),
     u = n(49229),
@@ -12,44 +12,44 @@ var i = n(503698),
     d = n(946356),
     _ = n(652215),
     f = n(985018),
-    h = n(842218);
-function p(e) {
+    p = n(20508);
+function h(e) {
     let { user: t, className: n } = e,
         {
             isPendingIncoming: i,
-            isBlocked: p,
-            isIgnored: g,
+            isBlocked: h,
+            isIgnored: m,
         } = (0, o.cf)([c.A], () => ({
             isPendingIncoming: c.A.getRelationshipType(t.id) === _.eA$.PENDING_INCOMING,
             isBlocked: c.A.isBlocked(t.id),
             isIgnored: c.A.isIgnored(t.id),
         }));
-    return p || (g && !i)
+    return h || (m && !i)
         ? (0, r.jsxs)(d.A.Overlay, {
-              className: a()(h.k, n),
+              className: s()(p.k, n),
               children: [
-                  p &&
-                      (0, r.jsx)(s.EYj, {
+                  h &&
+                      (0, r.jsx)(a.EYj, {
                           variant: "text-sm/semibold",
                           color: "text-default",
                           children: f.intl.string(f.t["oC/fU6"]),
                       }),
-                  g &&
+                  m &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(s.EYj, {
+                              (0, r.jsx)(a.EYj, {
                                   variant: "text-sm/semibold",
                                   color: "text-default",
                                   children: f.intl.string(f.t.HXz5An),
                               }),
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
-                                      (0, r.jsx)(s.EYj, {
+                                      (0, r.jsx)(a.EYj, {
                                           variant: "text-sm/semibold",
                                           color: "text-default",
                                           children: "•",
                                       }),
-                                      (0, r.jsx)(s.EYj, {
+                                      (0, r.jsx)(a.EYj, {
                                           variant: "text-sm/semibold",
                                           color: "text-default",
                                           children: f.intl.format(f.t.PrtAqy, {

@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => Y, T: () => B, Wx: () => w, cH: () => H }), n(321073);
+n.d(t, { Ay: () => Y, T: () => B, Wx: () => H, cH: () => w }), n(321073);
 var i = n(627968),
     s = n(64700),
     a = n(503698),
@@ -25,13 +25,13 @@ var i = n(627968),
     b = n(652215),
     j = n(650583),
     v = n(985018),
-    O = n(900506),
-    R = n(976092),
-    y = n(20976),
-    P = n(473169);
+    O = n(38872),
+    R = n(754694),
+    y = n(641254),
+    P = n(522759);
 let L = r.Ay.connectStores([f.A], () => ({ theme: f.A.theme }))(d.ppr),
     D = (0, I.isWindows)();
-function M(e) {
+function G(e) {
     let { onClose: t } = e,
         n = (0, r.bG)([A.Ay], () => A.Ay.getCandidateGames()),
         [a, o] = s.useState(null),
@@ -67,7 +67,7 @@ function M(e) {
         ],
     });
 }
-function G(e) {
+function M(e) {
     let { rawGame: t, nowPlaying: a = !1, isOverride: g, subgames: x, isSubgame: S = !1, parentGame: I } = e,
         f = (0, r.cf)([A.Ay, E.A, C.A], () => (0, A.xU)(t, A.Ay, E.A, C.A)),
         { canToggleDetection: N, isCurrentGameDetectionEnabled: R } = (0, r.cf)([A.Ay], () => ({
@@ -75,7 +75,7 @@ function G(e) {
             isCurrentGameDetectionEnabled: A.Ay.isDetectionEnabled(f),
         })),
         P = (0, r.bG)([A.Ay], () => A.Ay.getVisibleGame()),
-        [L, M] = s.useState(!1),
+        [L, G] = s.useState(!1),
         U = s.useMemo(
             () =>
                 (0, p.n1)(f)
@@ -86,8 +86,8 @@ function G(e) {
             [f, S],
         ),
         [k, V] = s.useState(U ?? "???"),
-        H = l()(y.tR, { [O.LO]: !a, [O.Rw]: a, [O.FB]: null != f && a, [O.xL]: S, [O.fG]: null != x && x.length > 0 });
-    function w() {
+        w = l()(y.tR, { [O.LO]: !a, [O.Rw]: a, [O.FB]: null != f && a, [O.xL]: S, [O.fG]: null != x && x.length > 0 });
+    function H() {
         null != x && x.length > 0 && R
             ? (0, d.mMO)(async () => {
                   let { Modal: e } = await Promise.resolve().then(n.bind(n, 158954));
@@ -115,7 +115,7 @@ function G(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
-                className: H,
+                className: w,
                 children: [
                     (0, i.jsxs)("div", {
                         className: l()(O.$K, y.Vd),
@@ -188,7 +188,7 @@ function G(e) {
                                               application_id: e?.id,
                                               game_name: (0, p.n1)(f) ? f.gameName : f.name,
                                           }),
-                                              M(!0),
+                                              G(!0),
                                               (0, d.mMO)(async () => {
                                                   let { default: t } = await n.e("27495").then(n.bind(n, 651930));
                                                   return (n) =>
@@ -236,7 +236,7 @@ function G(e) {
                                     ? (0, i.jsx)(d.DUT, {
                                           "aria-label": v.intl.string(v.t.QmitzM),
                                           className: O.ym,
-                                          onClick: w,
+                                          onClick: H,
                                           children: t,
                                       })
                                     : t,
@@ -307,7 +307,7 @@ function G(e) {
                             s.Fragment,
                             {
                                 children: [
-                                    (0, i.jsx)(G, { rawGame: e, isOverride: !1, isSubgame: !0, parentGame: f }),
+                                    (0, i.jsx)(M, { rawGame: e, isOverride: !1, isSubgame: !0, parentGame: f }),
                                     t !== x.length - 1 && (0, i.jsx)("div", { className: O.PQ }),
                                 ],
                             },
@@ -341,7 +341,7 @@ let V = (0, S.L_)(function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
         return new Set(t.map((e) => e.exePath));
     }),
-    H = () => {
+    w = () => {
         let e = (0, r.yK)([A.Ay], () => A.Ay.getGamesSeen(!1)),
             { runningGame: t, overrideExePaths: n } = (0, r.cf)([A.Ay], () => ({
                 runningGame: A.Ay.getVisibleGame(),
@@ -351,13 +351,13 @@ let V = (0, S.L_)(function () {
         let a = s.useMemo(() => e.reduce((e, t) => ((0, p.n1)(t) && e.push(t), e), []), [e]);
         return null != t
             ? (0, i.jsx)(
-                  G,
+                  M,
                   { rawGame: t, isOverride: n.has(t.exePath), nowPlaying: !0, subgames: t.id === x.a7 ? a : void 0 },
                   (0, A.Es)(t),
               )
             : (0, i.jsx)(U, {});
     },
-    w = () => {
+    H = () => {
         let e = s.useRef(null);
         return (0, i.jsxs)("div", {
             className: l()(O.ax, P.Gf),
@@ -367,7 +367,7 @@ let V = (0, S.L_)(function () {
                     targetElementRef: e,
                     renderPopout: (e) => {
                         let { closePopout: t } = e;
-                        return (0, i.jsx)(M, { onClose: t });
+                        return (0, i.jsx)(G, { onClose: t });
                     },
                     align: "center",
                     position: "bottom",
@@ -404,7 +404,7 @@ let V = (0, S.L_)(function () {
                   children: (0, i.jsx)("div", {
                       children: l.map((e) =>
                           (0, i.jsx)(
-                              G,
+                              M,
                               { rawGame: e, isOverride: a.has(e.exePath), subgames: e.id === x.a7 ? o : void 0 },
                               (0, A.Es)(e),
                           ),
@@ -417,6 +417,6 @@ let V = (0, S.L_)(function () {
         return (0, i.jsxs)(N.A, {
             title: n ? v.intl.string(v.t.AVDyEj) : null,
             className: t,
-            children: [(0, i.jsx)(H, {}), (0, i.jsx)(w, {}), (0, i.jsx)(d.cGx, { gap: 20 }), (0, i.jsx)(B, {})],
+            children: [(0, i.jsx)(w, {}), (0, i.jsx)(H, {}), (0, i.jsx)(d.cGx, { gap: 20 }), (0, i.jsx)(B, {})],
         });
     };

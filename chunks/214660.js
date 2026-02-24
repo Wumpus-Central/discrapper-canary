@@ -15,7 +15,7 @@ var l = n(311907),
     p = n(652215),
     g = n(53516),
     m = n(985018),
-    _ = n(43310),
+    _ = n(178768),
     f = (((i = {})[(i.VOICE = 0)] = "VOICE"), i);
 let x = (e) => {
     let { type: t, guildId: i, closePopout: f } = e,
@@ -24,25 +24,25 @@ let x = (e) => {
             notClaimed: C,
             notEmailVerified: E,
             notPhoneVerified: I,
-            newAccount: b,
-            newMember: N,
+            newAccount: N,
+            newMember: b,
         } = (0, l.bG)([h.A], () => h.A.getCheck(i), [i]),
         S = 0 === t ? m.intl.string(m.t["6zY8BI"]) : null,
         T = null,
-        v = null;
+        y = null;
     return (0 === t &&
         (C
-            ? ((T = m.intl.string(m.t.IRxUlG)), (v = m.intl.string(m.t.fiNVin)))
+            ? ((T = m.intl.string(m.t.IRxUlG)), (y = m.intl.string(m.t.fiNVin)))
             : I
-              ? ((T = m.intl.string(m.t.vW8iUF)), (v = m.intl.string(m.t["50gfOv"])))
+              ? ((T = m.intl.string(m.t.vW8iUF)), (y = m.intl.string(m.t["50gfOv"])))
               : E
-                ? ((T = m.intl.string(m.t.vdSOpz)), (v = m.intl.string(m.t.lm1UKt)))
-                : N
+                ? ((T = m.intl.string(m.t.vdSOpz)), (y = m.intl.string(m.t.lm1UKt)))
+                : b
                   ? ((T = m.intl.formatToPlainString(m.t.v1ktYb, { min: p.$8o.MEMBER_AGE })),
-                    (v = m.intl.string(m.t.BddRzS)))
-                  : b &&
+                    (y = m.intl.string(m.t.BddRzS)))
+                  : N &&
                     ((T = m.intl.formatToPlainString(m.t.sncw41, { min: p.$8o.ACCOUNT_AGE })),
-                    (v = m.intl.string(m.t.BddRzS)))),
+                    (y = m.intl.string(m.t.BddRzS)))),
     null == S || null == T)
         ? null
         : (0, s.jsxs)(a.lGe, {
@@ -58,13 +58,13 @@ let x = (e) => {
                           (0, s.jsxs)("div", {
                               className: _.UD,
                               children: [
-                                  null != v
+                                  null != y
                                       ? (0, s.jsx)("div", {
                                             "data-button-hoisted-classname-wrapper": !0,
                                             className: _.FS,
                                             children: (0, s.jsx)(a.Button, {
                                                 variant: "primary",
-                                                text: v,
+                                                text: y,
                                                 onClick: () => {
                                                     C
                                                         ? c.R()
@@ -73,7 +73,7 @@ let x = (e) => {
                                                                 async () => {
                                                                     let { default: e } = await Promise.all([
                                                                         n.e("84704"),
-                                                                        n.e("45668"),
+                                                                        n.e("24676"),
                                                                     ]).then(n.bind(n, 615715));
                                                                     return (t) =>
                                                                         (0, s.jsx)(e, {

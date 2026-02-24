@@ -9,7 +9,7 @@ var i = n(627968),
     c = n(594832),
     d = n(183555),
     u = n(524380),
-    h = n(733557);
+    h = n(55751);
 let A = s.forwardRef(function (e, t) {
     let {
             onCardClick: n,
@@ -25,24 +25,24 @@ let A = s.forwardRef(function (e, t) {
         { skuId: x, skuProductLine: C } = _,
         { trackUserProfileWishlistAction: E } = (0, d.NJ)(),
         I = l ? h.ho : h.C8,
-        b = g ? h.pr : h.Nr,
-        N = null != p && p > 0,
+        N = g ? h.pr : h.Nr,
+        b = null != p && p > 0,
         S = (0, i.jsxs)(o.DUT, {
             onClick: () => {
                 n(),
                     E({
-                        action: N ? "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD" : "PRESS_WISHLIST_BREADCRUMB_CARD",
-                        skuId: N ? null : x,
+                        action: b ? "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD" : "PRESS_WISHLIST_BREADCRUMB_CARD",
+                        skuId: b ? null : x,
                         wishlistId: m,
                         productLines: new Set([C]),
                     });
             },
-            className: r()(b, { [h.ax]: f === u.Y.SMALL }),
+            className: r()(N, { [h.ax]: f === u.Y.SMALL }),
             "aria-label": s.title ?? "",
             innerRef: t,
             children: [
                 (0, i.jsx)("div", { className: I, children: A() }),
-                N &&
+                b &&
                     (0, i.jsx)("div", {
                         className: h.sv,
                         children: (0, i.jsxs)(o.Text, {

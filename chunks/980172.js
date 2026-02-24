@@ -36,15 +36,15 @@ var i = n(627968),
     U = n(780964),
     k = n(192501),
     V = n(840065),
-    H = n(531525),
-    w = n(652215),
+    w = n(531525),
+    H = n(652215),
     B = n(53516),
     Y = n(985018),
-    F = n(536242),
-    z = n(240342);
+    F = n(949268),
+    z = n(72936);
 let W = D.Ay.getEnableHardwareAcceleration() ? d.JsQ : d.euF;
 function K() {
-    (0, V.openUserSettings)(U.X.PROFILE_PANEL, { section: w.nc_.PROFILE_CUSTOMIZATION });
+    (0, V.openUserSettings)(U.X.PROFILE_PANEL, { section: H.nc_.PROFILE_CUSTOMIZATION });
 }
 function Z(e) {
     let { className: t, user: a } = e,
@@ -212,7 +212,7 @@ function X(e) {
         ],
     });
 }
-function J(e) {
+function Q(e) {
     let t,
         { className: s, user: a } = e;
     if (a.isClaimed())
@@ -223,7 +223,7 @@ function J(e) {
                 valueMessage: Y.intl.string(Y.t["8SfTN/"]),
                 handleClick: () =>
                     (0, d.mMO)(async () => {
-                        let { default: e } = await Promise.all([n.e("83269"), n.e("14551")]).then(n.bind(n, 350116));
+                        let { default: e } = await Promise.all([n.e("83269"), n.e("5689")]).then(n.bind(n, 350116));
                         return (t) => (0, i.jsx)(e, { ...t });
                     }),
             };
@@ -240,7 +240,7 @@ function J(e) {
                 }),
                 handleClick: () =>
                     (0, d.mMO)(async () => {
-                        let { default: e } = await Promise.all([n.e("83269"), n.e("14551")]).then(n.bind(n, 350116));
+                        let { default: e } = await Promise.all([n.e("83269"), n.e("5689")]).then(n.bind(n, 350116));
                         return (t) => (0, i.jsx)(e, { ...t });
                     }),
             };
@@ -289,7 +289,7 @@ function J(e) {
         ],
     });
 }
-function Q(e) {
+function J(e) {
     let t,
         { className: s, user: a } = e;
     if (!a.isClaimed()) return null;
@@ -343,7 +343,7 @@ function Q(e) {
                                               (0, i.jsx)(R.default, {
                                                   ...e,
                                                   title: Y.intl.string(Y.t["3CTiKi"]),
-                                                  children: a.hasFlag(w.nhx.MFA_SMS)
+                                                  children: a.hasFlag(H.nhx.MFA_SMS)
                                                       ? Y.intl.string(Y.t.jrhJyo)
                                                       : void 0,
                                                   actionText: Y.intl.string(Y.t.N86XcP),
@@ -419,7 +419,7 @@ function ee(e) {
         h = (0, A.W)(Y.intl.string(Y.t.yNGjyK), Y.intl.string(Y.t.DVywUB)),
         x = (0, A.W)(Y.intl.string(Y.t.UX0Ode), Y.intl.string(Y.t.lKDPGA)),
         p = s.useCallback(() => {
-            window.open(P.A.getArticleURL(w.MVz.TIGGER_PAWTECT_LEARN_MORE), "_blank");
+            window.open(P.A.getArticleURL(H.MVz.TIGGER_PAWTECT_LEARN_MORE), "_blank");
         }, []),
         E = s.useCallback(() => {
             (0, d.mMO)(async () => {
@@ -565,21 +565,21 @@ function et(e) {
                         className: z.FL,
                         children: [
                             (0, i.jsx)(S.x, {
-                                setting: H.H.ACCOUNT_DISPLAY_NAME,
+                                setting: w.H.ACCOUNT_DISPLAY_NAME,
                                 children: (0, i.jsx)(q, { className: z.mS, user: t }),
                             }),
-                            (0, i.jsx)(S.x, { setting: H.H.ACCOUNT_USERNAME, children: (0, i.jsx)(Z, { user: t }) }),
+                            (0, i.jsx)(S.x, { setting: w.H.ACCOUNT_USERNAME, children: (0, i.jsx)(Z, { user: t }) }),
                             (0, i.jsx)(S.x, {
-                                setting: H.H.ACCOUNT_EMAIL,
-                                children: (0, i.jsx)(J, { className: z.Zr, user: t }),
+                                setting: w.H.ACCOUNT_EMAIL,
+                                children: (0, i.jsx)(Q, { className: z.Zr, user: t }),
                             }),
                             (0, i.jsx)(S.x, {
-                                setting: H.H.ACCOUNT_PHONE_NUMBER,
-                                children: (0, i.jsx)(Q, { className: z.Zr, user: t }),
+                                setting: w.H.ACCOUNT_PHONE_NUMBER,
+                                children: (0, i.jsx)(J, { className: z.Zr, user: t }),
                             }),
                             (A || g) &&
                                 (0, i.jsx)(S.x, {
-                                    setting: H.H.ACCOUNT_AGE_GROUP,
+                                    setting: w.H.ACCOUNT_AGE_GROUP,
                                     children: (0, i.jsx)(ee, { className: z.Zr }),
                                 }),
                         ],

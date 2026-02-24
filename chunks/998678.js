@@ -47,12 +47,12 @@ var r = n(627968),
     z = n(632638),
     $ = n(218075),
     q = n(682449),
-    Z = n(490581),
-    X = n(168984),
+    X = n(490581),
+    Z = n(168984),
     Q = n(818348),
     J = n(985018),
-    ee = n(240452),
-    et = n(676032);
+    ee = n(470),
+    et = n(586014);
 let en = new b.A("AddPaymentStep.tsx"),
     er = { name: "", cardNumber: "", expirationDate: "", cvc: "" },
     ei = { email: "", name: "", country: "", line1: "", line2: "", city: "", postalCode: "", state: "" };
@@ -75,7 +75,7 @@ function el() {
     return (0, r.jsx)(m.A, {});
 }
 function eu() {
-    return (0, r.jsx)(X.A, {});
+    return (0, r.jsx)(Z.A, {});
 }
 function ec() {
     let e = (0, l.bG)([k.A], () => k.A.isBusy),
@@ -120,7 +120,7 @@ function eh(e) {
             analyticsLocation: V,
             hideBreadcrumbs: W = !1,
             usePaymentModalStep: $ = !1,
-            isEligibleForTrial: X = !1,
+            isEligibleForTrial: Z = !1,
             allowDesktopRedirectPurchase: er = !1,
             toastContent: ei,
             continueSessionToInitialStep: ef,
@@ -159,7 +159,7 @@ function eh(e) {
         [ek, eU] = i.useState(null),
         [eG, eF] = i.useState(ex(eT)),
         eV = (0, l.bG)([U.A], () => U.A.redirectedPaymentSourceId),
-        eB = (0, l.bG)([Z.A], () => Z.A.cashAppPayComponent),
+        eB = (0, l.bG)([X.A], () => X.A.cashAppPayComponent),
         eH = { completeSteps: tl, setIsSubmittingCurrentStep: p.setIsSubmittingCurrentStep },
         ej = i.useRef(eH);
     i.useEffect(() => {
@@ -194,8 +194,8 @@ function eh(e) {
         {
             setPaymentSourceId: e$,
             creditCardState: eq,
-            setCreditCardState: eZ,
-            tokenState: eX,
+            setCreditCardState: eX,
+            tokenState: eZ,
             setTokenState: eQ,
             isSubmittingCurrentStep: eJ,
             billingAddressState: e0,
@@ -349,7 +349,7 @@ function eh(e) {
                 onChooseType: tC,
                 onStripePaymentMethodReceived: tO,
                 paymentRequestWallets: tu,
-                isEligibleForTrial: X,
+                isEligibleForTrial: Z,
                 paymentRequestPaymentContext: { contextMetadata: eg, activitySessionId: eA },
                 paymentSourceTypeRestrictions: to,
             })),
@@ -406,7 +406,7 @@ function eh(e) {
             };
             t = (0, r.jsx)(ea, {
                 onCardInfoChange: (e, t) => {
-                    eZ({ info: e, isValid: t }), e1((t) => ({ ...t, info: { ...t.info, name: e.name } }));
+                    eX({ info: e, isValid: t }), e1((t) => ({ ...t, info: { ...t.info, name: e.name } }));
                 },
             });
             let tw = !eq.isValid,
@@ -574,7 +574,7 @@ function eh(e) {
                             break;
                         case Q.he.CARD:
                             try {
-                                let e = tW ? await (0, d.im)(...t) : await (0, d.u6)(eE, eX.token, e0.info, V);
+                                let e = tW ? await (0, d.im)(...t) : await (0, d.u6)(eE, eZ.token, e0.info, V);
                                 tl(e);
                             } catch {}
                             break;
@@ -742,13 +742,13 @@ function eh(e) {
                 t,
             ],
         }),
-        tZ = eM === O.pn.PAYMENT_TYPE && 0 === m.length ? null : n;
+        tX = eM === O.pn.PAYMENT_TYPE && 0 === m.length ? null : n;
     return $
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  X && (0, r.jsx)(D.A, { className: ee.At, isEligibleForTrial: X }),
+                  Z && (0, r.jsx)(D.A, { className: ee.At, isEligibleForTrial: Z }),
                   (0, r.jsxs)(w.dZ, { children: [(0, r.jsx)(P.A, { className: ee._8 }), tq] }),
-                  (0, r.jsx)(w.UX, { children: tZ }),
+                  (0, r.jsx)(w.UX, { children: tX }),
               ],
           })
         : (0, r.jsx)(z.A, {
@@ -760,7 +760,7 @@ function eh(e) {
               header: k,
               hideBreadcrumbs: W,
               body: tq,
-              footer: tZ,
+              footer: tX,
           });
 }
 function em(e) {
@@ -774,7 +774,7 @@ function em(e) {
         hasFetchedPaymentSources: F.A.hasFetchedPaymentSources,
     }));
     (0, T.Ay)(() => {
-        null == Z.A.cashAppPayComponent && (0, q.UU)(), (0, _.UU)(), r || (0, d.$o)();
+        null == X.A.cashAppPayComponent && (0, q.UU)(), (0, _.UU)(), r || (0, d.$o)();
     });
     let [s, a] = i.useState(t);
     null != t && null == s && a(t);

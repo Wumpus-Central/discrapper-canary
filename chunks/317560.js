@@ -17,7 +17,7 @@ let a = "social-layer-storefront-product-details-modal",
         (0, s.iR)(l, t, "openSocialLayerStorefrontProductDetailsModal"),
             (0, i.mMO)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e("40396"), n.e("99970"), n.e("46762")]).then(
+                    let { default: e } = await Promise.all([n.e("40396"), n.e("99970"), n.e("855")]).then(
                         n.bind(n, 108105),
                     );
                     return (n) =>

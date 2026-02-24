@@ -4,7 +4,7 @@ var i = n(627968),
     a = n(503698),
     l = n.n(a),
     r = n(235986),
-    o = n(683754);
+    o = n(40388);
 let c = (e) => {
         let { children: t, className: n, splashArtURL: s } = e;
         return (0, i.jsxs)(r.A, {

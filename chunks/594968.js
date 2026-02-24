@@ -17,8 +17,8 @@ var i = n(627968),
     E = n(723690),
     I = n(652215),
     f = n(985018),
-    C = n(615078);
-function N(e) {
+    C = n(79676);
+function T(e) {
     let { user: t, applicationId: n, isGameRelationship: l, active: o } = e,
         d = h.default.getCurrentUser()?.isStaff() && t?.isStaff(),
         { acceptFriendRequest: c, cancelFriendRequest: u } = (0, m.I)({
@@ -66,7 +66,7 @@ function N(e) {
         ],
     });
 }
-function T(e) {
+function N(e) {
     let { userId: t, applicationId: n, isGameRelationship: l, active: a } = e,
         { cancelFriendRequest: o } = (0, m.I)({
             userId: t,
@@ -136,8 +136,8 @@ function v(e) {
                         className: C.o1,
                         children:
                             n === I.eA$.PENDING_INCOMING
-                                ? (0, i.jsx)(N, { user: t, applicationId: s, isGameRelationship: d, active: e })
-                                : (0, i.jsx)(T, { userId: t.id, applicationId: s, isGameRelationship: d, active: e }),
+                                ? (0, i.jsx)(T, { user: t, applicationId: s, isGameRelationship: d, active: e })
+                                : (0, i.jsx)(N, { userId: t.id, applicationId: s, isGameRelationship: d, active: e }),
                     }),
                 ],
             }),

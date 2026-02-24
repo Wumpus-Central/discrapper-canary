@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(627968),
     s = n(110259),
     l = n(397927),
@@ -7,9 +7,9 @@ var i = n(627968),
     a = n(893148),
     o = n(400281),
     d = n(985018),
-    c = n(5164),
+    c = n(774278),
     u = n(584643);
-function g(e) {
+function m(e) {
     let { config: t } = e,
         { noticeText: n, ctaLabel: s, ctaClickable: r, onCtaClicked: a } = t;
     return (0, i.jsxs)("div", {
@@ -46,9 +46,9 @@ function g(e) {
         ],
     });
 }
-function m(e) {
+function g(e) {
     let { guild: t, config: n } = e,
-        { isLoading: d, error: u, creatorMonetizationOnboardingMarketing: m } = (0, a.A)(t.id);
+        { isLoading: d, error: u, creatorMonetizationOnboardingMarketing: g } = (0, a.A)(t.id);
     return ((0, r.A)({
         type: s.ImpressionTypes.PANE,
         name: s.ImpressionNames.ENABLE_CREATOR_MONETIZATION_WAITLIST_LANDING,
@@ -59,8 +59,8 @@ function m(e) {
         : (0, i.jsxs)("div", {
               className: c.__invalid_container,
               children: [
-                  (0, i.jsx)(g, { config: n }),
-                  (0, i.jsx)(o.j, { onboardingMarketing: m, onboardingMarketingError: u }),
+                  (0, i.jsx)(m, { config: n }),
+                  (0, i.jsx)(o.j, { onboardingMarketing: g, onboardingMarketingError: u }),
               ],
           });
 }

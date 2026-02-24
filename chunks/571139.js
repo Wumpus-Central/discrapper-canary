@@ -1,74 +1,74 @@
-n.d(t, { A: () => D }), n(321073);
+n.d(t, { A: () => m }), n(321073);
 var i = n(627968);
 n(64700);
 var l = n(503698),
     r = n.n(l),
-    s = n(873263),
-    a = n(311907),
+    a = n(873263),
+    s = n(311907),
     o = n(314116),
-    E = n(397927),
+    c = n(397927),
     _ = n(334465),
-    c = n(71393),
+    E = n(71393),
     d = n(967198),
-    A = n(624458),
-    u = n(202384),
+    u = n(624458),
+    A = n(202384),
     T = n(513461),
     I = n(709977),
     N = n(212455),
     R = n(652215),
     S = n(746080),
-    O = n(985018),
-    C = n(121615),
-    P = n(1624);
-let D = () => {
-    let e = (0, a.bG)([d.A], () => d.A.getGuildId(), []),
-        t = (0, a.bG)([c.A], () => c.A.getGuild(e), [e]),
-        l = (0, a.bG)([N.A], () => (null != e ? N.A.getRequest(e) : null), [e]),
-        D = (0, s.zy)(),
-        p = (0, _.B)(D.pathname, R.BVt.CHANNEL(t?.id, S.VV.GUILD_ONBOARDING))?.isExact === !0;
-    if (null == t || !(0, I.Qd)(t) || p) return null;
-    let m = l?.applicationStatus ?? T.B5.STARTED,
+    C = n(985018),
+    O = n(463149),
+    p = n(504226);
+let m = () => {
+    let e = (0, s.bG)([d.A], () => d.A.getGuildId(), []),
+        t = (0, s.bG)([E.A], () => E.A.getGuild(e), [e]),
+        l = (0, s.bG)([N.A], () => (null != e ? N.A.getRequest(e) : null), [e]),
+        m = (0, a.zy)(),
+        P = (0, _.B)(m.pathname, R.BVt.CHANNEL(t?.id, S.VV.GUILD_ONBOARDING))?.isExact === !0;
+    if (null == t || !(0, I.Qd)(t) || P) return null;
+    let D = l?.applicationStatus ?? T.B5.STARTED,
+        g = null,
         U = null,
-        M = null,
         h = null,
-        g = [C.lm, P.lm];
-    switch (m) {
+        M = [O.lm, p.lm];
+    switch (D) {
         case T.B5.SUBMITTED:
-            (U = O.intl.string(O.t["5iLvSx"])),
-                (M = O.intl.string(O.t.mqtdmQ)),
+            (g = C.intl.string(C.t["5iLvSx"])),
+                (U = C.intl.string(C.t.mqtdmQ)),
                 (h = () => {
                     (0, o.A)({
-                        title: O.intl.string(O.t.aIz1oV),
-                        subtitle: O.intl.string(O.t["13tjTU"]),
+                        title: C.intl.string(C.t.aIz1oV),
+                        subtitle: C.intl.string(C.t["13tjTU"]),
                         variant: "primary",
-                        confirmText: O.intl.string(O.t["cY+Oob"]),
-                        onConfirm: () => A.A.removeGuildJoinRequest(t.id),
+                        confirmText: C.intl.string(C.t["cY+Oob"]),
+                        onConfirm: () => u.A.removeGuildJoinRequest(t.id),
                     });
                 });
             break;
         case T.B5.REJECTED:
-            (U = O.intl.string(O.t.lk30cY)),
-                (M = O.intl.string(O.t["8RrsHr"])),
+            (g = C.intl.string(C.t.lk30cY)),
+                (U = C.intl.string(C.t["8RrsHr"])),
                 (h = () => {
-                    (0, E.mMO)(async () => {
+                    (0, c.mMO)(async () => {
                         let { default: e } = await n.e("37548").then(n.bind(n, 856103));
                         return (n) => (0, i.jsx)(e, { guildId: t.id, ...n });
                     });
                 }),
-                g.push(C.z3);
+                M.push(O.z3);
             break;
         default:
-            (U = O.intl.string(O.t.G5YKXP)),
-                (M = O.intl.string(O.t["r8/DT+"])),
+            (g = C.intl.string(C.t.G5YKXP)),
+                (U = C.intl.string(C.t["r8/DT+"])),
                 (h = () => {
-                    (0, u.Ze)(t.id);
+                    (0, A.Ze)(t.id);
                 });
     }
     return (0, i.jsxs)("div", {
-        className: r()(...g),
+        className: r()(...M),
         children: [
-            (0, i.jsx)(E.Text, { className: C.wx, variant: "text-sm/normal", children: U }),
-            (0, i.jsx)(E.Button, { variant: "overlay-primary", size: "sm", onClick: h, text: M }),
+            (0, i.jsx)(c.Text, { className: O.wx, variant: "text-sm/normal", children: g }),
+            (0, i.jsx)(c.Button, { variant: "overlay-primary", size: "sm", onClick: h, text: U }),
         ],
     });
 };

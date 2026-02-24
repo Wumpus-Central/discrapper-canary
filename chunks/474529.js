@@ -1,19 +1,19 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => h });
 var r = n(627968);
 n(64700);
 var i = n(110259),
-    a = n(732955),
-    s = n(397927),
+    s = n(732955),
+    a = n(397927),
     o = n(688810),
     l = n(139286),
     u = n(793943),
     c = n(738419),
-    d = n(520650),
+    d = n(674547),
     _ = n(985018),
-    f = n(61305),
-    h = n(114149);
-function p() {
+    f = n(214783),
+    p = n(114149);
+function h() {
     let { analyticsLocations: e } = (0, o.Ay)();
     (0, l.A)({
         name: i.ImpressionNames.CUSTOM_THEMES_PREVIEW_THEMES_BANNER,
@@ -29,16 +29,16 @@ function p() {
             (0, r.jsxs)("div", {
                 className: f.r$,
                 children: [
-                    (0, r.jsx)("img", { src: h.A, className: f._e, alt: "" }),
+                    (0, r.jsx)("img", { src: p.A, className: f._e, alt: "" }),
                     (0, r.jsxs)("div", {
                         className: f.P_,
                         children: [
-                            (0, r.jsx)(s.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: "text-md/semibold",
                                 color: "text-strong",
                                 children: _.intl.string(d.default.XP4jzJ),
                             }),
-                            (0, r.jsx)(s.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-muted",
                                 children: _.intl.string(d.default.MJYvmG),
@@ -47,7 +47,7 @@ function p() {
                     }),
                 ],
             }),
-            (0, r.jsx)(a.$nd, {
+            (0, r.jsx)(s.$nd, {
                 variant: "secondary",
                 size: "sm",
                 text: _.intl.string(d.default.eGxkmm),

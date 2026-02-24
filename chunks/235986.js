@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => p });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(538640),
-    l = n(20976);
+    s = n(503698),
+    a = n.n(s),
+    o = n(573162),
+    l = n(641254);
 let u = { VERTICAL: l.Vd, HORIZONTAL: o.xM, HORIZONTAL_REVERSE: o.XB },
     c = { START: l.LF, END: l.Ub, CENTER: l.wq, BETWEEN: l.LT, AROUND: l.aD },
     d = { START: l.CT, END: l.ZT, CENTER: l.Hu, STRETCH: l.hx, BASELINE: l.Ju },
@@ -15,30 +15,30 @@ let u = { VERTICAL: l.Vd, HORIZONTAL: o.xM, HORIZONTAL_REVERSE: o.XB },
             children: t,
             className: n,
             direction: i = u.HORIZONTAL,
-            justify: a = c.START,
+            justify: s = c.START,
             align: l = d.STRETCH,
             wrap: f = _.NO_WRAP,
-            shrink: h = 1,
-            grow: p = 1,
-            basis: g = "auto",
+            shrink: p = 1,
+            grow: h = 1,
+            basis: m = "auto",
             style: E,
-            ...A
+            ...g
         } = e;
         return (0, r.jsx)("div", {
-            style: { flexShrink: h, flexGrow: p, flexBasis: g, ...E },
-            className: s()(o.Uu, i, a, l, f, n),
-            ...A,
+            style: { flexShrink: p, flexGrow: h, flexBasis: m, ...E },
+            className: a()(o.Uu, i, s, l, f, n),
+            ...g,
             children: t,
         });
     };
 (f.Child = (e) => {
-    let { children: t, className: n, shrink: a = 1, grow: l = 1, basis: u = "auto", style: c, wrap: d = !1, ..._ } = e,
-        f = { className: (n = n ?? o.Gu), style: { flexGrow: l, flexShrink: a, flexBasis: u, ...c }, ..._ };
+    let { children: t, className: n, shrink: s = 1, grow: l = 1, basis: u = "auto", style: c, wrap: d = !1, ..._ } = e,
+        f = { className: (n = n ?? o.Gu), style: { flexGrow: l, flexShrink: s, flexBasis: u, ...c }, ..._ };
     if (!d && "string" != typeof t && 1 === i.Children.count(t)) {
         let e = i.Children.only(t);
         return (
             (f.style = { ...f.style, ...e.props.style }),
-            (f.className = s()(e.props.className, n)),
+            (f.className = a()(e.props.className, n)),
             i.cloneElement(e, f)
         );
     }
@@ -48,4 +48,4 @@ let u = { VERTICAL: l.Vd, HORIZONTAL: o.xM, HORIZONTAL_REVERSE: o.XB },
     (f.Align = d),
     (f.Justify = c),
     (f.Wrap = _);
-let h = f;
+let p = f;

@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => I });
 var i = n(627968),
     l = n(64700),
     s = n(735438),
@@ -16,26 +16,26 @@ var i = n(627968),
     f = n(427262),
     _ = n(143413),
     E = n(652215),
-    C = n(985018),
-    x = n(455683);
+    x = n(985018),
+    C = n(989);
 let S = "749054660769218631";
-function T(e) {
+function I(e) {
     let { channel: t } = e,
         [n, s] = l.useState("");
     l.useEffect(() => {
         (0, d.zk)("847199849233514549", !0);
     }, []);
-    let T = (0, r.bG)(
+    let I = (0, r.bG)(
             [A.A, m.default],
             () =>
                 !!a()(A.A.getMessages(t.id).toArray())
                     .reverse()
                     .find((e) => e.author.id !== m.default.getId() && e.state === E.cmJ.SENT && !(0, _.A)(e)),
         ),
-        N = (0, r.bG)([g.default], () => g.default.getUser(t.isPrivate() ? t.getRecipientId() : null)),
-        I = f.Ay.useName(N) ?? C.intl.string(C.t.y1Wu2f),
-        v = (0, r.bG)([u.A], () => u.A.getStickerById(S)),
-        y = l.useCallback(async () => {
+        T = (0, r.bG)([g.default], () => g.default.getUser(t.isPrivate() ? t.getRecipientId() : null)),
+        N = f.Ay.useName(T) ?? x.intl.string(x.t.y1Wu2f),
+        y = (0, r.bG)([u.A], () => u.A.getStickerById(S)),
+        b = l.useCallback(async () => {
             if (null == n || "" === n)
                 try {
                     await c.A.sendGreetMessage(t.id, S),
@@ -46,46 +46,46 @@ function T(e) {
                             type: "Send wave",
                         });
                 } catch (e) {
-                    e.ok || 429 !== e.status || s(C.intl.string(C.t.Whhv4w));
+                    e.ok || 429 !== e.status || s(x.intl.string(x.t.Whhv4w));
                 }
         }, [t.id, t.type, n]),
-        b = C.intl.formatToPlainString(C.t.m0zYbV, { username: I }),
+        v = x.intl.formatToPlainString(x.t.m0zYbV, { username: N }),
         j =
             null != n && "" !== n
                 ? (0, i.jsx)(o.Text, {
-                      className: x.z3,
+                      className: C.z3,
                       color: "text-feedback-critical",
                       variant: "text-sm/normal",
                       children: n,
                   })
                 : null;
-    return T
+    return I
         ? (0, i.jsxs)("div", {
-              className: x.ft,
+              className: C.ft,
               children: [
                   (0, i.jsxs)(o.DUT, {
-                      className: null != n && "" !== n ? x.AO : x.Iq,
-                      "aria-label": C.intl.string(C.t.pJObYI),
-                      onClick: y,
+                      className: null != n && "" !== n ? C.AO : C.Iq,
+                      "aria-label": x.intl.string(x.t.pJObYI),
+                      onClick: b,
                       children: [
-                          (0, i.jsx)(h.A, { sticker: v, size: 24 }),
-                          (0, i.jsx)(o.Text, { className: x.Qq, variant: "text-md/medium", children: b }),
+                          (0, i.jsx)(h.A, { sticker: y, size: 24 }),
+                          (0, i.jsx)(o.Text, { className: C.Qq, variant: "text-md/medium", children: v }),
                       ],
                   }),
                   j,
               ],
           })
         : (0, i.jsxs)("div", {
-              className: x.nj,
+              className: C.nj,
               children: [
-                  (0, i.jsx)(h.A, { sticker: v, size: 160, className: x.Xr }),
+                  (0, i.jsx)(h.A, { sticker: y, size: 160, className: C.Xr }),
                   (0, i.jsx)(o.Button, {
                       fullWidth: !0,
                       variant: "primary",
                       size: "md",
-                      onClick: y,
+                      onClick: b,
                       disabled: !!n,
-                      text: b,
+                      text: v,
                   }),
                   j,
               ],

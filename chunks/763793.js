@@ -20,19 +20,19 @@ var i = n(627968),
     C = n(279250),
     E = n(267102),
     I = n(401901),
-    b = n(326567),
-    N = n(342296),
+    N = n(326567),
+    b = n(342296),
     S = n(616356),
     T = n(961350),
-    v = n(71393),
-    y = n(576705),
+    y = n(71393),
+    v = n(576705),
     j = n(977997),
     R = n(312006),
     O = n(704384),
     L = n(289105),
     M = n(652215),
     D = n(806931),
-    G = n(742149);
+    G = n(55039);
 let U = 16 / 9,
     P = (e) => {
         let {
@@ -49,7 +49,7 @@ let U = 16 / 9,
             A = s.useRef(null),
             { reducedMotion: p } = s.useContext(c.CZY),
             { blocked: g, ignored: m, id: _ } = t;
-        return (0, i.jsx)(N.A, {
+        return (0, i.jsx)(b.A, {
             targetElementRef: A,
             user: a,
             guildId: r,
@@ -93,8 +93,8 @@ let U = 16 / 9,
             } = e,
             { reducedMotion: p } = s.useContext(c.CZY),
             { id: g, blocked: _, ignored: E } = t,
-            b = (0, o.yK)([S.A], () => S.A.getAllActiveStreams(), []),
-            { selectedParticipant: N, largeStream: T } = (0, o.cf)([m.A], () => ({
+            N = (0, o.yK)([S.A], () => S.A.getAllActiveStreams(), []),
+            { selectedParticipant: b, largeStream: T } = (0, o.cf)([m.A], () => ({
                 selectedParticipant: null != l ? m.A.getSelectedParticipant(l.id) : null,
                 largeStream: null != l && m.A.getStageStreamSize(l.id),
             })),
@@ -102,18 +102,18 @@ let U = 16 / 9,
                 (e, t) => {
                     if (
                         e.type === D.lp.STREAM &&
-                        0 === b.filter((t) => (0, x._z)(t) === e.id && t.state !== M.XYD.ENDED).length
+                        0 === N.filter((t) => (0, x._z)(t) === e.id && t.state !== M.XYD.ENDED).length
                     ) {
-                        if (!(0, C.eo)(l, j.A, v.A, y.A, f.default)[0]) return;
+                        if (!(0, C.eo)(l, j.A, y.A, v.A, f.default)[0]) return;
                         (0, h.A9)((0, x.Iy)(e.id), { forceMultiple: t.shiftKey });
                     }
-                    N?.id === e.id
+                    b?.id === e.id
                         ? T
                             ? (d.A.selectParticipant(l.id, null), d.A.updateStageStreamSize(l.id, !1))
                             : d.A.updateStageStreamSize(l.id, !0)
                         : (d.A.updateStageStreamSize(l.id, !1), d.A.selectParticipant(l.id, e.id));
                 },
-                [b, l, N, T],
+                [N, l, b, T],
             );
         return (0, i.jsx)(
             O.A,
@@ -145,7 +145,7 @@ let U = 16 / 9,
         r()(null != f, "Channel cannot be guildless");
         let { user: C } = t,
             I = (0, o.bG)([m.A], () => m.A.getParticipant(s.id, t.id), [s.id, t.id]),
-            N = (0, o.bG)([R.Ay], () => R.Ay.isModerator(C.id, s.id), [s.id, C.id]);
+            b = (0, o.bG)([R.Ay], () => R.Ay.isModerator(C.id, s.id), [s.id, C.id]);
         if (null == I || I.type === D.lp.ACTIVITY) return null;
         let S = (e) => {
                 (0, g.x)({
@@ -154,7 +154,7 @@ let U = 16 / 9,
                     properties: { location: "StageTile", is_tile_owner: C.id === x, tile_type: e },
                 });
             },
-            v = (e, t, l, r) => {
+            y = (e, t, l, r) => {
                 switch (e.type) {
                     case D.lp.HIDDEN_STREAM:
                     case D.lp.STREAM:
@@ -182,7 +182,7 @@ let U = 16 / 9,
                     case D.lp.USER:
                     default:
                         if ((S(D.qs.USER), l))
-                            return (0, b.r)(t, C, s, { context: h }, (e, t) =>
+                            return (0, N.r)(t, C, s, { context: h }, (e, t) =>
                                 (0, _.Y)({
                                     menuName: e,
                                     menuItemProps: t,
@@ -199,7 +199,7 @@ let U = 16 / 9,
                                     n.e("97262"),
                                     n.e("42128"),
                                     n.e("84841"),
-                                    n.e("54266"),
+                                    n.e("38522"),
                                 ]).then(n.bind(n, 107632));
                                 return (t) =>
                                     (0, i.jsx)(e, {
@@ -228,8 +228,8 @@ let U = 16 / 9,
                   guildId: f,
                   user: C,
                   width: l,
-                  isModerator: N,
-                  onContextMenu: v,
+                  isModerator: b,
+                  onContextMenu: y,
                   popoutType: c,
               })
             : (0, i.jsx)(P, {
@@ -239,8 +239,8 @@ let U = 16 / 9,
                   guildId: f,
                   user: C,
                   width: l,
-                  isModerator: N,
-                  onContextMenu: v,
+                  isModerator: b,
+                  onContextMenu: y,
                   popoutType: c,
               });
     });

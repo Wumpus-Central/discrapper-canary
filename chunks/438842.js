@@ -2,32 +2,32 @@
 n.d(t, { A: () => E });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(47762),
     l = n(990078),
     u = n(397927),
     c = n(573435),
-    d = n(14532);
+    d = n(355330);
 let _ = 10,
     f = 2;
-function h(e) {
+function p(e) {
     let { game: t, activityLevel: n, hideTooltip: i } = e,
-        a = t.getIconURL(24);
-    if (null == a) return null;
-    let s = !i,
-        h = n?.level === o._.HIGH,
-        p = (0, r.jsx)(u.Text, { variant: "text-sm/medium", color: "interactive-text-active", children: t.name });
+        s = t.getIconURL(24);
+    if (null == s) return null;
+    let a = !i,
+        p = n?.level === o._.HIGH,
+        h = (0, r.jsx)(u.Text, { variant: "text-sm/medium", color: "interactive-text-active", children: t.name });
     return (0, r.jsx)(l.m, {
-        __unsupportedReactNodeAsText: p,
+        __unsupportedReactNodeAsText: h,
         position: "bottom",
         "aria-label": t.name,
-        shouldShow: s,
+        shouldShow: a,
         children: (0, r.jsxs)("div", {
             className: d.Gt,
             children: [
-                (0, r.jsx)("img", { className: d.T_, src: a, alt: t.name }),
-                h &&
+                (0, r.jsx)("img", { className: d.T_, src: s, alt: t.name }),
+                p &&
                     (0, r.jsx)(c.Ay, {
                         mask: c.hW.GAMEPLAY_HIGH_ACTIVITY_ICON,
                         width: _ + 2 * f,
@@ -47,7 +47,7 @@ function h(e) {
         }),
     });
 }
-function p(e) {
+function h(e) {
     let { games: t, activity: n } = e;
     return (0, r.jsx)("div", {
         className: d.Fz,
@@ -57,7 +57,7 @@ function p(e) {
                 {
                     className: d.ZS,
                     children: [
-                        (0, r.jsx)(h, { game: e, activityLevel: n[e.id] }),
+                        (0, r.jsx)(p, { game: e, activityLevel: n[e.id] }),
                         (0, r.jsx)(u.Text, {
                             variant: "text-xs/medium",
                             color: "interactive-text-active",
@@ -70,32 +70,32 @@ function p(e) {
         ),
     });
 }
-function g(e) {
+function m(e) {
     let { game: t, activityLevel: n } = e;
     return (0, r.jsxs)("div", {
         className: d.E,
         children: [
-            (0, r.jsx)(h, { game: t, activityLevel: n, hideTooltip: !0 }),
+            (0, r.jsx)(p, { game: t, activityLevel: n, hideTooltip: !0 }),
             (0, r.jsx)(u.Text, { variant: "text-sm/medium", color: "text-default", children: t.name }),
         ],
     });
 }
 function E(e) {
-    let { gamesToDisplay: t, lastGameToDisplay: n, remainingGames: a, activity: o } = e,
+    let { gamesToDisplay: t, lastGameToDisplay: n, remainingGames: s, activity: o } = e,
         c = i.useMemo(() => {
             if (null == n) return null;
             let e = n.getIconURL(24);
             if (null == e) return null;
-            if (0 === a.length) return (0, r.jsx)(h, { game: n, activityLevel: o[n.id] });
-            let t = a;
+            if (0 === s.length) return (0, r.jsx)(p, { game: n, activityLevel: o[n.id] });
+            let t = s;
             return (0, r.jsx)(l.m, {
                 "aria-label": "",
                 position: "bottom",
-                __unsupportedReactNodeAsText: (0, r.jsx)(p, { games: t, activity: o }),
+                __unsupportedReactNodeAsText: (0, r.jsx)(h, { games: t, activity: o }),
                 children: (0, r.jsxs)("div", {
-                    className: s()(d.Gt, d.oL),
+                    className: a()(d.Gt, d.oL),
                     children: [
-                        (0, r.jsx)("img", { className: s()(d.T_, d.tJ), src: e, alt: n.name }),
+                        (0, r.jsx)("img", { className: a()(d.T_, d.tJ), src: e, alt: n.name }),
                         (0, r.jsx)("div", { className: d.Fg }),
                         (0, r.jsx)("div", {
                             className: d.AZ,
@@ -108,13 +108,13 @@ function E(e) {
                     ],
                 }),
             });
-        }, [n, a, o]);
+        }, [n, s, o]);
     return null == t || 0 === t.length
         ? null
         : 1 === t.length
-          ? (0, r.jsx)("div", { className: d.kL, children: (0, r.jsx)(g, { game: t[0], activityLevel: o[t[0].id] }) })
+          ? (0, r.jsx)("div", { className: d.kL, children: (0, r.jsx)(m, { game: t[0], activityLevel: o[t[0].id] }) })
           : (0, r.jsxs)("div", {
                 className: d.kL,
-                children: [t.map((e) => (0, r.jsx)(h, { game: e, activityLevel: o[e.id] }, e.id)), c],
+                children: [t.map((e) => (0, r.jsx)(p, { game: e, activityLevel: o[e.id] }, e.id)), c],
             });
 }

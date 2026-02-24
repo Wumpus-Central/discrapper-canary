@@ -3,11 +3,11 @@ n.d(t, { A: () => d, Y: () => c });
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    s = n(711371),
-    o = n(675841),
-    l = n(562650),
-    u = n(388963);
+    s = n.n(i),
+    a = n(711371),
+    o = n(104355),
+    l = n(40672),
+    u = n(960209);
 let c = {
     strong: o.bold,
     em: o.italics,
@@ -18,7 +18,7 @@ let c = {
     url: o.fakeLink,
     autolink: o.fakeLink,
     silentPrefix: o.fakeLink,
-    spoiler: a()(u.ur, u.F0, u.kx, o.spoiler),
+    spoiler: s()(u.ur, u.F0, u.kx, o.spoiler),
     staticRouteLink: o.fakeLink,
     syntaxBefore: o.syntaxBefore,
     syntaxAfter: o.syntaxAfter,
@@ -33,8 +33,8 @@ function d(e, t) {
     let n,
         { attributes: i, children: u, leaf: d, text: _ } = t,
         f = !1,
-        [h] = s.VW.node(e, s.PW.parent(s.VW.findPath(e, _)));
-    switch (s.VW.isEditor(h) ? "editor" : h.type) {
+        [p] = a.VW.node(e, a.PW.parent(a.VW.findPath(e, _)));
+    switch (a.VW.isEditor(p) ? "editor" : p.type) {
         case "line":
         case "blockQuote": {
             f = void 0;
@@ -58,10 +58,10 @@ function d(e, t) {
                 })
                 .filter((e) => null != e)
                 .join(" ");
-            n = a()(e, { [o.syntaxOverride]: "||" === d.text || "\\" === d.text });
+            n = s()(e, { [o.syntaxOverride]: "||" === d.text || "\\" === d.text });
         }
     }
     return (
-        (n = a()(n, { [l.BI]: "" === _.text })), (0, r.jsx)("span", { ...i, className: n, spellCheck: f, children: u })
+        (n = s()(n, { [l.BI]: "" === _.text })), (0, r.jsx)("span", { ...i, className: n, spellCheck: f, children: u })
     );
 }

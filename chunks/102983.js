@@ -6,7 +6,7 @@ var l = n(627968),
     a = n(954376),
     u = n(576692),
     o = n(652215),
-    d = n(75379);
+    d = n(674825);
 let c = i.memo(function (e) {
     let {
             channel: t,
@@ -15,8 +15,8 @@ let c = i.memo(function (e) {
             isMentionLowImportance: h,
             size: g = r._3J.SIZE_32,
             status: I,
-            isMobile: f,
-            isTyping: A = !1,
+            isMobile: A,
+            isTyping: f = !1,
             "aria-hidden": E = !1,
         } = e,
         m = (0, r.FT9)(g),
@@ -29,8 +29,8 @@ let c = i.memo(function (e) {
                           "aria-hidden": E,
                           "aria-label": E ? void 0 : n.username,
                           status: I,
-                          isMobile: !(c > 0) && f,
-                          isTyping: A,
+                          isMobile: !(c > 0) && A,
+                          isTyping: f,
                       })
                     : t?.isMultiUserDM()
                       ? t?.recipients.length >= 2 && null == t.icon
@@ -56,18 +56,18 @@ let c = i.memo(function (e) {
                                             return r._3J.SIZE_32;
                                     }
                                 })(g),
-                                isTyping: A,
-                                status: A ? o.clD.ONLINE : null,
+                                isTyping: f,
+                                status: f ? o.clD.ONLINE : null,
                             })
                           : (0, l.jsx)(r.euF, {
                                 src: (0, s.Y)(t) ?? void 0,
                                 "aria-hidden": E,
                                 size: g,
-                                status: A ? o.clD.ONLINE : null,
-                                isTyping: A,
+                                status: f ? o.clD.ONLINE : null,
+                                isTyping: f,
                             })
                       : (0, l.jsx)(r.euF, { src: void 0, "aria-hidden": E, size: g }),
-            [E, t, f, A, c, g, I, n],
+            [E, t, A, f, c, g, I, n],
         );
     return c <= 0
         ? S

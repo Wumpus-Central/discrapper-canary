@@ -1,9 +1,9 @@
 "use strict";
 n.d(t, { Ay: () => f, fR: () => c });
 var r = n(698351),
-    i = n(86675),
-    a = n(97191);
-let s = [" ", "Enter"],
+    i = n(309056),
+    s = n(97191);
+let a = [" ", "Enter"],
     o = ["Escape"];
 function l(e) {
     e.preventDefault(), e.stopImmediatePropagation();
@@ -111,7 +111,7 @@ class _ {
         l(t);
         let n = this.sourceNodes.get(e);
         null != n &&
-            ((this._navigator = new a.c(n, this.targetNodes, this.manager, this._previewer, this._announcer)),
+            ((this._navigator = new s.c(n, this.targetNodes, this.manager, this._previewer, this._announcer)),
             this._previewer.createDragPreview(this.sourcePreviewNodes.get(e) ?? n),
             this.actions.beginDrag([e], {
                 clientOffset: this.getSourceClientOffset(e),
@@ -123,7 +123,7 @@ class _ {
             this._announcer.announceDrag(n, e));
     };
     handleDrop = (e) => {
-        u(e, s) && (this.actions.drop(), this.endDrag(e), this._announcer.announceDrop());
+        u(e, a) && (this.actions.drop(), this.endDrag(e), this._announcer.announceDrop());
     };
     endDrag(e) {
         null != e && l(e),

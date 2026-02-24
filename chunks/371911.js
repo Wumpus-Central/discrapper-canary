@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { C: () => y });
+n.d(t, { C: () => v });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -20,17 +20,17 @@ var i = n(627968),
     C = n(646468),
     E = n(492498),
     I = n(765627),
-    b = n(547945),
-    N = n(412484),
+    N = n(547945),
+    b = n(412484),
     S = n(652215),
     T = n(985018),
-    v = n(98938);
-function y(e) {
+    y = n(868192);
+function v(e) {
     let t,
         n,
         {
             onOpen: l,
-            onClose: y,
+            onClose: v,
             children: j,
             badgeState: R,
             popoutPosition: O,
@@ -67,11 +67,11 @@ function y(e) {
             }, [])),
             { showTutorial: !t && k === c.Y2.UNREADS, setSeenTutorial: n }),
         F = s.useCallback(() => {
-            w(!1), P && y?.();
-        }, [y, P]),
+            w(!1), P && v?.();
+        }, [v, P]),
         K = s.useCallback(() => {
-            w(!P), P ? y?.() : l?.();
-        }, [y, l, P]);
+            w(!P), P ? v?.() : l?.();
+        }, [v, l, P]);
     s.useEffect(() => (x._.subscribe(S.jej.TOGGLE_INBOX, K), () => void x._.unsubscribe(S.jej.TOGGLE_INBOX, K)), [K]);
     let { enabled: W, inInbox: Y } = A.A.useExperiment({ location: "RecentsPopout" }),
         z = (0, o.bG)([p.A], () => p.A.hasOverdueReminder(), []) && W && Y;
@@ -100,7 +100,7 @@ function y(e) {
                     "aria-label": T.intl.string(T.t.GSmTKJ),
                     className: G,
                     children: (0, i.jsx)("div", {
-                        className: r()(v.k, { [v.q]: q }),
+                        className: r()(y.k, { [y.q]: q }),
                         children: (0, i.jsx)(d.Fmo, {
                             component: (0, i.jsx)(I.A, { tab: k, setTab: V, badgeState: R, closePopout: F }),
                             children:
@@ -111,10 +111,10 @@ function y(e) {
                                       : W && Y && k === c.Y2.BOOKMARKS
                                         ? (0, i.jsx)(g.J, { closePopout: F })
                                         : k === c.Y2.SCHEDULED
-                                          ? (0, i.jsx)(b.w, {})
+                                          ? (0, i.jsx)(N.w, {})
                                           : (0, i.jsx)(a.tH, {
-                                                fallback: (0, i.jsx)(N.T, {}),
-                                                children: (0, i.jsx)(N.Ay, {
+                                                fallback: (0, i.jsx)(b.T, {}),
+                                                children: (0, i.jsx)(b.Ay, {
                                                     onJump: X,
                                                     showTutorial: B,
                                                     setSeenTutorial: H,

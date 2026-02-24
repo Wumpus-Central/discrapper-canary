@@ -5,10 +5,10 @@ var l = n(627968),
     s = n.n(r),
     i = n(718468),
     o = n(338717),
-    d = n(96782),
-    c = n(302031),
+    c = n(96782),
+    d = n(302031),
     u = n(985018),
-    m = n(71433);
+    m = n(747967);
 function p(e) {
     let { file: t, name: n, size: r, spoiler: p } = e,
         A = a.useMemo(
@@ -22,7 +22,7 @@ function p(e) {
         [E, x] = a.useState(p);
     p !== h && (C(p), x(p));
     let N = a.useMemo(
-            () => () => (0, l.jsx)(d.zB, { mimeType: A, downloadURL: t.url, showDownload: !0, isVisualMediaType: !1 }),
+            () => () => (0, l.jsx)(c.zB, { mimeType: A, downloadURL: t.url, showDownload: !0, isVisualMediaType: !1 }),
             [t, A],
         ),
         I = (e) =>
@@ -36,8 +36,8 @@ function p(e) {
     return (0, l.jsx)("div", {
         className: m.O,
         children: p
-            ? (0, l.jsx)(c.Ay, {
-                  type: c.Ay.Types.ATTACHMENT,
+            ? (0, l.jsx)(d.Ay, {
+                  type: d.Ay.Types.ATTACHMENT,
                   reason: o.Oc.SPOILER,
                   obscured: E,
                   onToggleObscurity: () => x((e) => !e),

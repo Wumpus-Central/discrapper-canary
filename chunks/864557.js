@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(627968);
 n(64700);
 var s = n(397927),
@@ -8,18 +8,18 @@ var s = n(397927),
     a = n(741207),
     o = n(437242),
     d = n(411335),
-    c = n(86181);
+    c = n(434499);
 function u(e) {
     let { action: t, triggerType: n, toggled: r, onToggleAction: a } = e,
         o = (0, l.x)(t.type, t, n);
     if (null == o) return null;
-    let { headerText: d, descriptionText: u, icon: g } = o;
+    let { headerText: d, descriptionText: u, icon: m } = o;
     return (0, i.jsxs)("div", {
         className: c.Ik,
         children: [
             (0, i.jsx)("div", {
                 className: c.TV,
-                children: (0, i.jsx)(g, { size: "md", color: "currentColor", className: c.gE }),
+                children: (0, i.jsx)(m, { size: "md", color: "currentColor", className: c.gE }),
             }),
             (0, i.jsxs)("div", {
                 className: c.xj,
@@ -37,7 +37,7 @@ function u(e) {
         ],
     });
 }
-function g(e) {
+function m(e) {
     let { action: t, guildId: n, triggerType: s, toggled: l, onToggleAction: c } = e;
     switch (t.type) {
         case d.AH.FLAG_TO_CHANNEL:

@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => R });
+n.d(t, { A: () => b });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(735438),
     l = n.n(o),
     u = n(311907),
@@ -11,30 +11,30 @@ var r = n(627968),
     d = n(827734),
     _ = n(397927),
     f = n(497685),
-    h = n(25277),
-    p = n(821102),
-    g = n(583613),
+    p = n(25277),
+    h = n(821102),
+    m = n(583613),
     E = n(996566),
-    A = n(327143),
-    I = n(453212),
-    T = n(247683),
-    y = n(652215),
+    g = n(327143),
+    A = n(453212),
+    I = n(247683),
+    T = n(652215),
     S = n(985018),
-    v = n(17697);
-let C = (e, t) => (0, r.jsx)(I.XW, { columns: e }, t);
-function b(e) {
+    y = n(364515);
+let v = (e, t) => (0, r.jsx)(A.XW, { columns: e }, t);
+function N(e) {
     let t = l().sample(l().values(e));
     return {
-        type: y.dD.FAVORITES,
+        type: T.dD.FAVORITES,
         name: S.intl.string(S.t.y3LQCG),
         icon: _.Gg5,
         src: null != t ? t.src : "https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif",
         format: t?.format ?? c.TL.IMAGE,
     };
 }
-class N extends i.PureComponent {
+class C extends i.PureComponent {
     _masonryRef = i.createRef();
-    state = { favoritesTile: b(this.props.favorites), selectedIndex: { column: 0, row: 0 }, focusedId: null };
+    state = { favoritesTile: N(this.props.favorites), selectedIndex: { column: 0, row: 0 }, focusedId: null };
     componentDidMount() {
         0 === this.props.trendingCategories.length && (0, f.k8)();
     }
@@ -55,7 +55,7 @@ class N extends i.PureComponent {
         let n = this.getData()[t];
         return null != n ? n.name : null;
     };
-    memoizedData = (0, g.L_)(function (e, t) {
+    memoizedData = (0, m.L_)(function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         return n ? [...t] : [e, ...t];
     });
@@ -66,12 +66,12 @@ class N extends i.PureComponent {
         let { name: t, type: n } = e;
         return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)("div", { className: n === y.dD.FAVORITES ? v.H7 : v.FP }),
+                (0, r.jsx)("div", { className: n === T.dD.FAVORITES ? y.H7 : y.FP }),
                 (0, r.jsxs)("div", {
-                    className: v.O1,
+                    className: y.O1,
                     children: [
-                        n === y.dD.TRENDING_GIFS ? (0, r.jsx)(_.Uy2, { className: v.Yl, color: "currentColor" }) : null,
-                        (0, r.jsx)("span", { className: v.yb, children: t }),
+                        n === T.dD.TRENDING_GIFS ? (0, r.jsx)(_.Uy2, { className: y.Yl, color: "currentColor" }) : null,
+                        (0, r.jsx)("span", { className: y.yb, children: t }),
                     ],
                 }),
             ],
@@ -79,22 +79,22 @@ class N extends i.PureComponent {
     }
     renderItem = (e, t, n, i) => {
         if (e > 0) return null;
-        let a = this.getData()[t];
-        if (null == a) return;
-        let { onSelectItem: s, imagePool: o, videoPool: l } = this.props,
+        let s = this.getData()[t];
+        if (null == s) return;
+        let { onSelectItem: a, imagePool: o, videoPool: l } = this.props,
             { focusedId: u } = this.state;
         return (0, r.jsx)(
-            T.uG,
+            I.uG,
             {
-                format: a.format,
+                format: s.format,
                 color: d.A.unsafe_rawColors.PRIMARY_800.css,
-                src: a.src,
-                item: a,
+                src: s.src,
+                item: s,
                 index: t,
                 coords: n,
-                onClick: () => s(a.type, a.name),
+                onClick: () => a(s.type, s.name),
                 renderExtras: this.renderCategoryExtras,
-                focused: a.name === u,
+                focused: s.name === u,
                 imagePool: o,
                 videoPool: l,
             },
@@ -102,13 +102,13 @@ class N extends i.PureComponent {
         );
     };
     renderContent = (e, t, n) => {
-        let { className: i, trendingCategories: a } = this.props;
-        return 0 === a.length
-            ? (0, r.jsx)(I.oK, { columns: e, width: t, renderColumn: C })
+        let { className: i, trendingCategories: s } = this.props;
+        return 0 === s.length
+            ? (0, r.jsx)(A.oK, { columns: e, width: t, renderColumn: v })
             : (0, r.jsx)(_.a0_, {
                   ref: this._masonryRef,
                   fade: !0,
-                  className: s()(v.kL, i),
+                  className: a()(y.kL, i),
                   itemGutter: 12,
                   getItemKey: this.getItemKey,
                   columns: e,
@@ -127,18 +127,18 @@ class N extends i.PureComponent {
         return null != e ? e.getCoordsMap() : {};
     };
     render() {
-        return (0, r.jsx)(h.A, {
+        return (0, r.jsx)(p.A, {
             getItemGrid: this.getItemGrid,
             getCoordsMap: this.getCoordsMap,
             onFocus: this.handleFocus,
             onSelect: this.handleSelect,
-            children: (0, r.jsx)(A.A, { desiredItemWidth: 200, maxColumns: 6, children: this.renderContent }),
+            children: (0, r.jsx)(g.A, { desiredItemWidth: 200, maxColumns: 6, children: this.renderContent }),
         });
     }
 }
-function R(e) {
-    let t = (0, u.bG)([p.A], () => p.A.getTrendingCategories()),
+function b(e) {
+    let t = (0, u.bG)([h.A], () => h.A.getTrendingCategories()),
         n = (0, E.rM)(),
-        i = (0, T.d5)();
-    return (0, r.jsx)(N, { ...e, ...i, trendingCategories: t, favorites: n });
+        i = (0, I.d5)();
+    return (0, r.jsx)(C, { ...e, ...i, trendingCategories: t, favorites: n });
 }

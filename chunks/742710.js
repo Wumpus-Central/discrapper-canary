@@ -1,157 +1,157 @@
-n.d(t, { A: () => R });
+n.d(t, { A: () => O });
 var i = n(627968),
     l = n(64700),
     a = n(503698),
-    r = n.n(a);
+    s = n.n(a);
 n(926675);
-var s = n(397927),
+var r = n(397927),
     o = n(915089),
+    c = n(152621),
     d = n(409626),
-    c = n(692969),
-    u = n(287809),
-    g = n(562153),
-    m = n(183555),
-    x = n(735321),
-    f = n(451395),
+    u = n(692969),
+    g = n(287809),
+    m = n(562153),
+    x = n(183555),
+    f = n(735321),
+    p = n(451395),
     h = n(823016),
-    p = n(788593),
-    _ = n(492280),
-    A = n(946599),
-    I = n(858808),
+    _ = n(788593),
+    A = n(492280),
+    I = n(946599),
+    j = n(858808),
     v = n(685049),
-    j = n(973397),
-    T = n(985018),
-    b = n(461349),
-    E = n(8208);
+    E = n(985018),
+    T = n(966271),
+    b = n(695510);
 function y(e) {
     let { index: t, widgetType: n, game: l, children: a } = e,
-        { manageFocusOnReorder: r } = (0, h.r)();
-    return (0, i.jsx)(f.mG, {
+        { manageFocusOnReorder: s } = (0, h.r)();
+    return (0, i.jsx)(p.mG, {
         index: t,
         itemId: l.applicationId,
         listType: n,
         itemType: "GAME_DETAILS_CARD",
         itemPreviewProps: { game: l, widgetType: n },
-        "aria-label": T.intl.formatToPlainString(T.t["0dR3gw"], { positionNumber: t + 1 }),
-        onReorder: (e, t) => (0, x.Un)(n, e, t),
-        onEnd: () => r(l.applicationId),
-        className: E.vF,
-        dropBeforeClassName: E.A,
-        dropAfterClassName: E.Ze,
-        draggingClassName: E.Id,
+        "aria-label": E.intl.formatToPlainString(E.t["0dR3gw"], { positionNumber: t + 1 }),
+        onReorder: (e, t) => (0, f.Un)(n, e, t),
+        onEnd: () => s(l.applicationId),
+        className: b.vF,
+        dropBeforeClassName: b.A,
+        dropAfterClassName: b.Ze,
+        draggingClassName: b.Id,
         children: a,
     });
 }
-function C(e) {
+function N(e) {
     let { applicationId: t, userId: n, gameName: l, ...a } = e,
-        r = (0, c.A)({
+        s = (0, u.A)({
             location: "UserProfileWidgetGameDetailsCard",
             applicationId: t,
             source: d.Ob.UserProfile,
             sourceUserId: n,
             trackEntryPointImpression: !0,
         });
-    return null == r
-        ? (0, i.jsx)(s.Heading, { ...a, children: l })
-        : (0, i.jsx)(s.Heading, { ...a, children: (0, i.jsx)(s.DUT, { onClick: r, className: E.sd, children: l }) });
-}
-function N(e) {
-    let { user: t, guildId: n, channelId: l, id: a } = e;
-    return (0, i.jsx)(s.AC4, { id: a, children: T.intl.format(T.t.TM0XDY, { name: g.Ay.getName(n, l, t) }) });
+    return null == s
+        ? (0, i.jsx)(r.Heading, { ...a, children: l })
+        : (0, i.jsx)(r.Heading, { ...a, children: (0, i.jsx)(r.DUT, { onClick: s, className: b.sd, children: l }) });
 }
 function S(e) {
-    let { text: t, className: n } = e;
-    return (0, i.jsx)(s.Text, { variant: "text-sm/normal", color: "text-muted", className: n, children: t });
+    let { user: t, guildId: n, channelId: l, id: a } = e;
+    return (0, i.jsx)(r.AC4, { id: a, children: E.intl.format(E.t.TM0XDY, { name: m.Ay.getName(n, l, t) }) });
 }
-function w(e) {
+function C(e) {
+    let { text: t, className: n } = e;
+    return (0, i.jsx)(r.Text, { variant: "text-sm/normal", color: "text-muted", className: n, children: t });
+}
+function k(e) {
     let { text: t, user: n, guildId: l, channelId: a } = e,
-        r = (0, o.GV)();
+        s = (0, o.GV)();
     return null == t || "" === t.trim()
         ? null
         : (0, i.jsxs)("div", {
               role: "group",
-              "aria-labelledby": r,
+              "aria-labelledby": s,
               children: [
-                  (0, i.jsx)(s.cyi, { size: "xxs", color: s.LU0.colors.ICON_MUTED, className: E.Ls }),
-                  (0, i.jsx)(N, { user: n, guildId: l, channelId: a, id: r }),
-                  (0, i.jsx)(S, { text: t }),
+                  (0, i.jsx)(r.cyi, { size: "xxs", color: r.LU0.colors.ICON_MUTED, className: b.Ls }),
+                  (0, i.jsx)(S, { user: n, guildId: l, channelId: a, id: s }),
+                  (0, i.jsx)(C, { text: t }),
               ],
           });
 }
-function k(e) {
-    let { text: t, user: n, guildId: a, channelId: d, widgetType: c, applicationId: u } = e,
+function R(e) {
+    let { text: t, user: n, guildId: a, channelId: c, widgetType: d, applicationId: u } = e,
         g = (0, o.GV)(),
-        f = (0, o.GV)(),
-        { trackUserProfileEditAction: h } = (0, m.NJ)(),
-        [p, _] = l.useState("idle"),
+        m = (0, o.GV)(),
+        { trackUserProfileEditAction: p } = (0, x.NJ)(),
+        [h, _] = l.useState("idle"),
         [A, I] = l.useState(t ?? ""),
-        v = l.useRef(null),
         j = l.useRef(null),
-        b = T.intl.string(T.t.xKSfBT),
+        v = l.useRef(null),
+        T = E.intl.string(E.t.xKSfBT),
         y = null != t && "" !== t.trim(),
-        C = l.useCallback(() => {
-            h({ action: "PRESS_ADD_COMMENTARY", widgetEdited: c }), _("editing");
-        }, [c, h]),
-        w = l.useCallback(() => {
+        N = l.useCallback(() => {
+            p({ action: "PRESS_ADD_COMMENTARY", widgetEdited: d }), _("editing");
+        }, [d, p]),
+        k = l.useCallback(() => {
             let e = A.trim(),
                 n = e !== (t ?? "").trim();
-            (0, x.oc)(c, u, "" !== e ? e : void 0),
+            (0, f.oc)(d, u, "" !== e ? e : void 0),
                 _("completed"),
-                n && h({ action: "COMMENTARY_EDITED", widgetEdited: c, gameId: u });
-        }, [c, u, A, t, h]),
-        k = l.useCallback((e) => {
+                n && p({ action: "COMMENTARY_EDITED", widgetEdited: d, gameId: u });
+        }, [d, u, A, t, p]),
+        R = l.useCallback((e) => {
             I(e);
         }, []);
     return (
         l.useEffect(() => {
-            "editing" === p && I(t ?? "");
-        }, [t, p]),
+            "editing" === h && I(t ?? "");
+        }, [t, h]),
         l.useEffect(() => {
-            "completed" === p && v.current?.focus();
-        }, [p]),
-        "editing" === p
+            "completed" === h && j.current?.focus();
+        }, [h]),
+        "editing" === h
             ? (0, i.jsxs)("div", {
-                  className: E.kS,
+                  className: b.kS,
                   children: [
-                      (0, i.jsx)(s.AC4, { tag: "label", htmlFor: g, children: T.intl.string(T.t.JxKXeT) }),
-                      (0, i.jsx)(s.fs1, {
+                      (0, i.jsx)(r.AC4, { tag: "label", htmlFor: g, children: E.intl.string(E.t.JxKXeT) }),
+                      (0, i.jsx)(r.fs1, {
                           id: g,
                           value: A,
-                          placeholder: b,
-                          onChange: k,
-                          onBlur: w,
+                          placeholder: T,
+                          onChange: R,
+                          onBlur: k,
                           rows: 3,
-                          autoFocus: "editing" === p,
+                          autoFocus: "editing" === h,
                           onKeyDown: (e) => {
-                              "Enter" !== e.key || e.shiftKey || (e.preventDefault(), w());
+                              "Enter" !== e.key || e.shiftKey || (e.preventDefault(), k());
                           },
                           maxLength: 200,
                       }),
                   ],
               })
             : (0, i.jsxs)("div", {
-                  ref: j,
+                  ref: v,
                   role: "group",
-                  "aria-labelledby": f,
-                  onClick: C,
-                  className: E.Vg,
+                  "aria-labelledby": m,
+                  onClick: N,
+                  className: b.Vg,
                   children: [
-                      (0, i.jsx)(s.R2l, { size: "xxs", color: s.LU0.colors.ICON_MUTED, className: E.Ls }),
-                      (0, i.jsx)(N, { user: n, guildId: a, channelId: d, id: f }),
-                      (0, i.jsx)(S, { text: t ?? b, className: r()(E.qC, !y && E.qf) }),
-                      (0, i.jsx)(s.DUT, {
-                          innerRef: v,
-                          "aria-label": T.intl.string(T.t.ppb9MJ),
+                      (0, i.jsx)(r.R2l, { size: "xxs", color: r.LU0.colors.ICON_MUTED, className: b.Ls }),
+                      (0, i.jsx)(S, { user: n, guildId: a, channelId: c, id: m }),
+                      (0, i.jsx)(C, { text: t ?? T, className: s()(b.qC, !y && b.qf) }),
+                      (0, i.jsx)(r.DUT, {
+                          innerRef: j,
+                          "aria-label": E.intl.string(E.t.ppb9MJ),
                           onClick: (e) => {
-                              e.stopPropagation(), C();
+                              e.stopPropagation(), N();
                           },
-                          focusProps: { ringTarget: j },
+                          focusProps: { ringTarget: v },
                       }),
                   ],
               })
     );
 }
-function R(e) {
+function O(e) {
     let {
             user: t,
             guildId: n,
@@ -159,79 +159,79 @@ function R(e) {
             game: a,
             widgetType: o,
             disableInteraction: d = !1,
-            index: c,
-            onRemoveGame: g,
-            coverRef: m,
-            className: T,
+            index: u,
+            onRemoveGame: m,
+            coverRef: x,
+            className: E,
         } = e,
-        { applicationId: N, comment: S, tags: R } = a,
-        { coverImageUrl: O, gameName: L, isLoading: P } = (0, j.A)(N),
+        { applicationId: S, comment: C, tags: O } = a,
+        { coverImageUrl: L, gameName: w, isLoading: P } = (0, c.A)(S),
         D = { variant: "heading-sm/medium", color: "text-default" },
-        G = u.default.getCurrentUser(),
-        M = G?.id === t.id,
-        U = 1 === (0, x.cv)(o),
-        F = !d && M,
-        W = F && (0, x.y9)(o),
-        H = F && !U,
+        G = g.default.getCurrentUser(),
+        U = G?.id === t.id,
+        M = 1 === (0, f.cv)(o),
+        F = !d && U,
+        W = F && (0, f.y9)(o),
+        H = F && !M,
         { registerDragHandleRef: B } = (0, h.r)();
-    if (P) return (0, i.jsx)(_.E, {});
+    if (P) return (0, i.jsx)(A.E, {});
     let X = () =>
-            (0, i.jsx)(p.A, {
-                coverRef: m,
-                className: null == O || d ? void 0 : b.iL,
-                imageSrc: O,
-                gameName: L,
-                applicationId: N,
+            (0, i.jsx)(_.A, {
+                coverRef: x,
+                className: null == L || d ? void 0 : T.iL,
+                imageSrc: L,
+                gameName: w,
+                applicationId: S,
                 userId: t.id,
                 disableInteraction: d,
                 hideTooltip: !0,
             }),
         z = () =>
             (0, i.jsxs)("div", {
-                className: r()(E.Nr, T),
+                className: s()(b.Nr, E),
                 children: [
                     H
                         ? (0, i.jsxs)("div", {
-                              className: E.An,
-                              children: [X(), (0, i.jsx)(f.jV, { buttonRef: B(a.applicationId), className: E.BU })],
+                              className: b.An,
+                              children: [X(), (0, i.jsx)(p.jV, { buttonRef: B(a.applicationId), className: b.BU })],
                           })
                         : X(),
                     (0, i.jsxs)("div", {
-                        className: E.zH,
+                        className: b.zH,
                         children: [
                             d
-                                ? (0, i.jsx)(s.Heading, { ...D, children: L })
-                                : (0, i.jsx)(C, { applicationId: N, userId: t.id, gameName: L, ...D }),
+                                ? (0, i.jsx)(r.Heading, { ...D, children: w })
+                                : (0, i.jsx)(N, { applicationId: S, userId: t.id, gameName: w, ...D }),
                             W
-                                ? (0, i.jsx)(k, {
-                                      text: S,
+                                ? (0, i.jsx)(R, {
+                                      text: C,
                                       user: t,
                                       guildId: n,
                                       channelId: l,
                                       widgetType: o,
-                                      applicationId: N,
+                                      applicationId: S,
                                   })
-                                : (0, i.jsx)(w, { text: S, user: t, guildId: n, channelId: l }),
-                            (0, i.jsx)(A.A, {
-                                tags: R,
-                                isCurrentUser: M,
+                                : (0, i.jsx)(k, { text: C, user: t, guildId: n, channelId: l }),
+                            (0, i.jsx)(I.A, {
+                                tags: O,
+                                isCurrentUser: U,
                                 widgetType: o,
-                                applicationId: N,
+                                applicationId: S,
                                 disableInteraction: d,
-                                className: E._A,
+                                className: b._A,
                             }),
-                            !d && (0, i.jsx)(v.o, { className: E.Ez, applicationId: N, guildId: n, channelId: l }),
+                            !d && (0, i.jsx)(v.o, { className: b.Ez, applicationId: S, guildId: n, channelId: l }),
                         ],
                     }),
                     !d &&
-                        M &&
-                        (0, i.jsx)(I.A, {
+                        U &&
+                        (0, i.jsx)(j.A, {
                             game: a,
                             widgetType: o,
-                            className: E.vS,
-                            onRemove: () => g?.(a.applicationId),
+                            className: b.vS,
+                            onRemove: () => m?.(a.applicationId),
                         }),
                 ],
             });
-    return H ? (0, i.jsx)(y, { index: c ?? 0, widgetType: o, game: a, children: z() }) : z();
+    return H ? (0, i.jsx)(y, { index: u ?? 0, widgetType: o, game: a, children: z() }) : z();
 }

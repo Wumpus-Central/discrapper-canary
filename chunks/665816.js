@@ -1,18 +1,18 @@
-n.d(t, { i: () => f });
+n.d(t, { i: () => x });
 var i = n(627968);
 n(64700);
 var l = n(503698),
-    a = n.n(l),
-    r = n(835245),
+    r = n.n(l),
+    a = n(835245),
     s = n(397927),
     o = n(954571),
     d = n(18437),
     c = n(590202),
     u = n(545986),
-    m = n(394900),
-    _ = n(652215),
+    _ = n(394900),
+    m = n(652215),
     h = n(985018),
-    p = n(933674),
+    p = n(31020),
     g = n(956324);
 function A(e) {
     let { questId: t, questContent: n, fullWidth: l } = e;
@@ -23,9 +23,9 @@ function A(e) {
             variant: "primary",
             onClick: () => {
                 (0, u.navigateToQuestHome)({ fromContent: n }),
-                    o.default.track(_.HAw.QUEST_CONTENT_CLICKED, {
+                    o.default.track(m.HAw.QUEST_CONTENT_CLICKED, {
                         quest_id: t,
-                        click_id: (0, r.A)(),
+                        click_id: (0, a.A)(),
                         cta_name: c.Cy.VIEW_QUESTS,
                         is_targeted: !1,
                         ...(0, c.fF)(n),
@@ -35,16 +35,16 @@ function A(e) {
         }),
     });
 }
-function f(e) {
-    let { questId: t, fallbackReason: n, bodyText: l, questContent: r } = e,
-        { containerRef: o, size: c } = (0, m.L)();
+function x(e) {
+    let { questId: t, fallbackReason: n, bodyText: l, questContent: a } = e,
+        { containerRef: o, size: c } = (0, _.L)();
     return (
         (0, d.Ii)(n, t),
         (0, i.jsxs)("div", {
             ref: (e) => {
                 o.current = e;
             },
-            className: a()(p.kL, { [p.U]: "lg" === c, [p.SP]: "lg" !== c }),
+            className: r()(p.kL, { [p.U]: "lg" === c, [p.SP]: "lg" !== c }),
             children: [
                 (0, i.jsxs)("div", {
                     className: p.hQ,
@@ -60,7 +60,7 @@ function f(e) {
                             className: p.__invalid_mobileWebCopy,
                             children: l,
                         }),
-                        (0, i.jsx)(A, { questId: t, questContent: r, fullWidth: "lg" !== c }),
+                        (0, i.jsx)(A, { questId: t, questContent: a, fullWidth: "lg" !== c }),
                     ],
                 }),
                 (0, i.jsx)("div", {

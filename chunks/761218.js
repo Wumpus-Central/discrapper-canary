@@ -19,7 +19,7 @@ var s = n(627968),
     E = n(652215),
     C = n(188275),
     A = n(985018),
-    b = n(27112);
+    b = n(413194);
 let S = { pageSection: "marvel-rivals-promotional-banner" },
     v = (e) => {
         let { onDismiss: t, skuIds: n, endTime: r, tab: v } = e,
@@ -27,8 +27,8 @@ let S = { pageSection: "marvel-rivals-promotional-banner" },
             I = (0, x.uM)(),
             { analyticsLocations: j } = (0, d.Ay)(),
             k = l.useRef(null),
-            O = l.useRef(!1),
-            T = l.useRef(null);
+            T = l.useRef(!1),
+            O = l.useRef(null);
         l.useEffect(() => {
             for (let e of n) (0, u.qf)(C.Kf, e);
         }, [n]);
@@ -75,12 +75,12 @@ let S = { pageSection: "marvel-rivals-promotional-banner" },
             }, [y, t]),
             D = l.useCallback(
                 (e) => {
-                    O.current ||
+                    T.current ||
                         (e
-                            ? null === T.current &&
-                              (T.current = setTimeout(() => {
-                                  (O.current = !0),
-                                      (T.current = null),
+                            ? null === O.current &&
+                              (O.current = setTimeout(() => {
+                                  (T.current = !0),
+                                      (O.current = null),
                                       f.default.track(E.HAw.COLLECTIBLES_TILE_IMPRESSION, {
                                           collectibles_shop_session_id: I?.sessionId,
                                           page_type: v,
@@ -89,13 +89,13 @@ let S = { pageSection: "marvel-rivals-promotional-banner" },
                                           type: "marvel_rivals_promotional_banner",
                                       });
                               }, 1e3))
-                            : null !== T.current && (clearTimeout(T.current), (T.current = null)));
+                            : null !== O.current && (clearTimeout(O.current), (O.current = null)));
                 },
                 [I?.sessionId, I?.pageCategory, I?.pageSection, v],
             );
         return (l.useEffect(
             () => () => {
-                null !== T.current && (clearTimeout(T.current), (T.current = null));
+                null !== O.current && (clearTimeout(O.current), (O.current = null));
             },
             [],
         ),

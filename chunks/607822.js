@@ -3,7 +3,7 @@ var i = n(627968);
 n(64700);
 var s = n(397927),
     a = n(400641),
-    l = n(140536);
+    l = n(73422);
 let r = (e) => {
     let { header: t, displayType: n } = e,
         r = (0, a.Gn)(n),

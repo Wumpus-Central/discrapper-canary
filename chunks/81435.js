@@ -20,12 +20,12 @@ var i = n(627968),
     C = n(449859),
     E = n(812299),
     I = n(943220),
-    b = n(538355),
-    N = n(995273),
+    N = n(538355),
+    b = n(995273),
     S = n(854627),
     T = n(95701),
-    v = n(260509),
-    y = n(734057),
+    y = n(260509),
+    v = n(734057),
     j = n(256587),
     R = n(71393),
     O = n(851109),
@@ -35,23 +35,23 @@ var i = n(627968),
     G = n(559873),
     U = n(346061),
     P = n(652215),
-    w = n(228160),
+    w = n(21786),
     k = n(985018),
-    V = n(471135);
+    V = n(823221);
 function B(e) {
     let { message: t, channel: n, focusProps: l, isSelected: a, isUnread: o, groupedMessages: h } = e,
         A = n.type === P.rbe.UNKNOWN ? u.N$i : (0, g.gU)(n, null),
         m = (0, p.Ay)(n, !1),
         _ = (0, c.bG)([R.A], () => R.A.getGuild(n.getGuildId())),
         { nick: x, colorString: C } = (0, f.Ay)(t),
-        { avatarSrc: b, eventHandlers: N } = (0, S.A)({
+        { avatarSrc: N, eventHandlers: b } = (0, S.A)({
             userId: t.author.id,
             size: u._3J.SIZE_32,
             guildId: _?.id,
             animateOnHover: !0,
         }),
         T = n.type !== P.rbe.GUILD_ANNOUNCEMENT || null == _,
-        y = (0, E.y)({ channel: n, message: t, user: t.author, compact: !0, isRepliedMessage: !0 }),
+        v = (0, E.y)({ channel: n, message: t, user: t.author, compact: !0, isRepliedMessage: !0 }),
         O = (0, i.jsx)("div", {
             className: V.Ys,
             inert: !0,
@@ -64,8 +64,8 @@ function B(e) {
         (0, i.jsx)(u.vN3, {
             ...l,
             children: (0, i.jsxs)("div", {
-                onMouseLeave: N.onMouseLeave,
-                onMouseEnter: N.onMouseEnter,
+                onMouseLeave: b.onMouseLeave,
+                onMouseEnter: b.onMouseEnter,
                 className: V.zC,
                 children: [
                     o && !a && (0, i.jsx)("div", { className: V.Zm }),
@@ -75,15 +75,15 @@ function B(e) {
                         children: T
                             ? (0, i.jsx)(U.e, {
                                   "aria-label": "User Avatar",
-                                  src: b,
+                                  src: N,
                                   size: u._3J.SIZE_32,
-                                  cornerIconUrl: null != _ ? (0, v.Iv)(_, 24) : void 0,
+                                  cornerIconUrl: null != _ ? (0, y.Iv)(_, 24) : void 0,
                                   cornerIconOffsetX: 4,
                                   cornerIconOffsetY: 3,
                               })
                             : (0, i.jsx)(U.h, {
                                   "aria-label": "Guild Icon",
-                                  src: (0, v.Iv)(_, 32),
+                                  src: (0, y.Iv)(_, 32),
                                   size: u._3J.SIZE_32,
                                   cornerIconUrl: t.author.getAvatarURL(_.id, 24),
                                   cornerIconOffsetX: 4,
@@ -108,7 +108,7 @@ function B(e) {
                                                       style: { color: C ?? void 0 },
                                                       children: (0, i.jsx)(d.A, { children: O }),
                                                   }),
-                                                  y,
+                                                  v,
                                               ],
                                           })
                                         : (0, i.jsx)(d.A, {
@@ -185,7 +185,7 @@ function H(e) {
 }
 function F(e) {
     let { message: t } = e,
-        n = (0, N.jb)(t.timestamp.getTime());
+        n = (0, b.jb)(t.timestamp.getTime());
     return (0, i.jsx)(C.A, {
         timestamp: t.timestamp,
         className: V.vE,
@@ -198,7 +198,7 @@ function K(e) {
     let { message: t, channel: n, isUnread: l, isSelected: a } = e,
         { previewContent: o, Icon: c } = (function (e) {
             let { message: t, isUnread: n, isSelected: l } = e,
-                { content: a } = (0, b.A)(t, {
+                { content: a } = (0, N.A)(t, {
                     hideSimpleEmbedContent: !0,
                     allowList: !1,
                     allowHeading: !0,
@@ -286,9 +286,9 @@ let W = (0, s.memo)(
             d = t.message,
             A = (0, M.op)(),
             { params: p } = (0, o.W5)(),
-            g = (0, c.bG)([y.A], () => {
+            g = (0, c.bG)([v.A], () => {
                 if (null == d) return null;
-                let e = y.A.getChannel(t.channelId);
+                let e = v.A.getChannel(t.channelId);
                 return null != e
                     ? e
                     : new T.jb({

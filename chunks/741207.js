@@ -10,15 +10,15 @@ var s = n(311907),
     d = n(239705),
     c = n(411335),
     u = n(652215),
-    g = n(200700),
-    m = n(985018),
-    x = n(86181);
+    m = n(200700),
+    g = n(985018),
+    x = n(434499);
 function h(e) {
     let { action: t, triggerType: n, guildId: h, toggled: _, onToggleAction: A } = e,
         p = (e) => () => A(e),
         f = (0, d.x)(t.type, t, n),
         j = t.metadata?.durationSeconds,
-        N = null != j ? (0, g.getFriendlyDurationString)(j) : null,
+        N = null != j ? (0, m.getFriendlyDurationString)(j) : null,
         E = (0, s.bG)([o.A, a.A], () => o.A.can(u.xBc.MODERATE_MEMBERS, a.A.getGuild(h)), [h]);
     if (null == f) return null;
     let { headerText: b, descriptionText: T, icon: C } = f;
@@ -42,23 +42,23 @@ function h(e) {
                                 null === N
                                     ? null
                                     : n === c.uh.MENTION_SPAM
-                                      ? m.intl.format(m.t.i3lsKD, { friendlyDurationString: N })
-                                      : m.intl.format(m.t.mvHxze, { friendlyDurationString: N }),
+                                      ? g.intl.format(g.t.i3lsKD, { friendlyDurationString: N })
+                                      : g.intl.format(g.t.mvHxze, { friendlyDurationString: N }),
                                 E &&
                                     (0, i.jsx)(r.DUT, {
                                         onClick: p(!0),
                                         className: x._2,
                                         tag: "span",
                                         role: "link",
-                                        children: m.intl.string(m.t["0B95RJ"]),
+                                        children: g.intl.string(g.t["0B95RJ"]),
                                     }),
                             ],
                         }),
                 ],
             }),
             (0, i.jsx)(l.m, {
-                text: m.intl.format(m.t.wx6Vb9, {}),
-                "aria-label": m.intl.formatToMarkdownString(m.t.wx6Vb9, {}),
+                text: g.intl.format(g.t.wx6Vb9, {}),
+                "aria-label": g.intl.formatToMarkdownString(g.t.wx6Vb9, {}),
                 shouldShow: !E,
                 children: (0, i.jsx)("div", {
                     children: (0, i.jsx)(r.DUT, {

@@ -30,16 +30,16 @@ var s = r(627968),
     F = r(775427),
     O = r(65600),
     j = r(145331),
-    k = r(19801),
+    k = r(242182),
     W = r(768570),
     M = r(921242),
     w = r(652215),
     D = r(985018),
-    H = r(607205);
+    H = r(534207);
 let P = 512,
     U = (0, S.Ld)(),
-    $ = u()(v.A.fetchMessages, 500);
-class q extends n.PureComponent {
+    q = u()(v.A.fetchMessages, 500);
+class $ extends n.PureComponent {
     state = { focused: !1, selectedIndex: void 0 };
     _editorRef;
     _containerRef = n.createRef();
@@ -433,7 +433,7 @@ function Q(e) {
                 b.A.refreshQueryId(t),
                     (0, j.fd)({ searchContext: t, query: s, queryString: r, searchQuerySource: l }),
                     C.A.updateSearchMode(t, w.BBH.NEWEST),
-                    $({ searchContext: t, searchQueryString: r, searchEverywhere: n, offset: 0 });
+                    q({ searchContext: t, searchQueryString: r, searchEverywhere: n, offset: 0 });
             },
             [t],
         ),
@@ -460,7 +460,7 @@ function Q(e) {
                     return D.intl.formatToPlainString(D.t.LDZtFO, { name: W });
             }
         }, [t.type, W]);
-    return (0, s.jsx)(q, {
+    return (0, s.jsx)($, {
         className: r,
         searchContext: t,
         isSearching: _,

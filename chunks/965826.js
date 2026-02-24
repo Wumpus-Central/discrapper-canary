@@ -2,16 +2,16 @@
 n.d(t, { A: () => d });
 var r = n(627968);
 n(64700);
-var i = n(522160),
-    a = n(421380),
-    s = n(397927),
+var i = n(442215),
+    s = n(421380),
+    a = n(397927),
     o = n(263063),
     l = n(721923),
     u = n(652215),
-    c = n(48913);
+    c = n(217947);
 let d = function (e) {
     let { closeLayer: t, guild: n, isVisible: d } = e,
-        _ = (0, s.zhh)({
+        _ = (0, a.zhh)({
             transform: d ? "translateY(-100%)" : "translateY(0%)",
             opacity: +!!d,
             config: { tension: 120, friction: 12 },
@@ -26,7 +26,7 @@ let d = function (e) {
                     className: c.OA,
                     children: [
                         (0, r.jsx)(o.A, { className: c.$f, guild: n, size: o.A.Sizes.LARGER }),
-                        (0, r.jsx)(s.Heading, { className: c.J5, variant: "text-lg/bold", children: n.name }),
+                        (0, r.jsx)(a.Heading, { className: c.J5, variant: "text-lg/bold", children: n.name }),
                     ],
                 }),
                 (0, r.jsx)(l.A, {
@@ -40,7 +40,7 @@ let d = function (e) {
                     },
                     closeLayer: t,
                     pauseAnimation: !d,
-                    size: a.$n.Sizes.LARGE,
+                    size: s.$n.Sizes.LARGE,
                 }),
             ],
         }),

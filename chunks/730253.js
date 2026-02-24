@@ -20,15 +20,15 @@ var i = n(627968),
     C = n(734057),
     E = n(309010),
     I = n(977997),
-    b = n(661191),
-    N = n(181079),
+    N = n(661191),
+    b = n(181079),
     S = n(93055),
     T = n(210082),
-    v = n(595567),
-    y = n(332396),
+    y = n(595567),
+    v = n(332396),
     j = n(652215),
     R = n(985018),
-    O = n(299446);
+    O = n(4720);
 let L = { analyticsSource: { page: j.liQ.GUILD_CHANNEL, section: j.JJy.CHANNEL_LIST, object: j.ZSU.CHANNEL } };
 function M() {
     let e,
@@ -46,9 +46,9 @@ function M() {
         H = (0, a.Vd)("favorites"),
         { favoriteAdded: F, clearFavoriteAdded: K } = (0, S.CJ)(),
         [W, Y] = s.useState(!1),
-        { favoriteServerMuted: z, favoriteChannels: X } = (0, o.cf)([N.A], () => ({
-            favoriteChannels: N.A.getFavoriteChannels(),
-            favoriteServerMuted: N.A.favoriteServerMuted,
+        { favoriteServerMuted: z, favoriteChannels: X } = (0, o.cf)([b.A], () => ({
+            favoriteChannels: b.A.getFavoriteChannels(),
+            favoriteServerMuted: b.A.favoriteServerMuted,
         })),
         q = (0, o.bG)([E.A], () => E.A.getChannelId(j.YYv)),
         J = (0, o.bG)([C.A], () => C.A.getChannel(q)),
@@ -64,7 +64,7 @@ function M() {
             (M = (0, o.bG)([x.A], () => x.A.getAllApplicationStreams().some((e) => null != X[e.channelId]))),
             (D = (0, o.bG)([I.A], () => t && null != e && I.A.hasVideo(e), [t, e])),
             (G = (0, o.yK)([h.Ay], () =>
-                b.default.keys(X).reduce((e, t) => (e.push(...h.Ay.getEmbeddedActivitiesForChannel(t)), e), []),
+                N.default.keys(X).reduce((e, t) => (e.push(...h.Ay.getEmbeddedActivitiesForChannel(t)), e), []),
             )),
             (U = (0, o.bG)([h.Ay], () =>
                 Array.from(h.Ay.getSelfEmbeddedActivities().values()).some((e) => {
@@ -87,9 +87,9 @@ function M() {
     return (0, i.jsxs)(g.c, {
         children: [
             (0, i.jsx)(p.A, { selected: Q, hovered: W, unread: Z && !z, className: O.Io }),
-            (0, i.jsx)(y.A, {
+            (0, i.jsx)(v.A, {
                 onShow: en,
-                children: (0, i.jsx)(v.Q, {
+                children: (0, i.jsx)(y.Q, {
                     children: (0, i.jsx)(c.Qk9, {
                         selected: !0,
                         upperBadge: ee,

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
     Df: () => G,
-    Fy: () => X,
+    Fy: () => Z,
     Oz: () => J,
     QA: () => $,
     Zc: () => B,
@@ -12,7 +12,7 @@ n.d(t, {
     l9: () => W,
     m6: () => V,
     navigateToQuestHome: () => H,
-    q$: () => Z,
+    q$: () => X,
     rx: () => k,
     z6: () => Y,
 });
@@ -121,7 +121,7 @@ function Y(e) {
     t.log(`Showing survey ${r.id}`), (0, R.m)({ questId: e.id, survey: r });
 }
 function W() {
-    return Promise.all([n.e("35584"), n.e("23628"), n.e("35896")]).then(n.bind(n, 717415));
+    return Promise.all([n.e("35584"), n.e("23628"), n.e("5344")]).then(n.bind(n, 717415));
 }
 function K(e) {
     let {
@@ -132,7 +132,7 @@ function K(e) {
         autoplay: l = !0,
         skipEnrollmentCheck: u = !1,
     } = e;
-    if ((0, N.BS)(t)) return void X(t);
+    if ((0, N.BS)(t)) return void Z(t);
     let c = (0, i.A)();
     if (!u && t.userStatus?.enrolledAt == null && !(0, v.Ic)(t)) {
         m.A.isEnrolling(t.id) ||
@@ -203,7 +203,7 @@ function q(e) {
     }
     return "discord://";
 }
-function Z(e) {
+function X(e) {
     let t = q(e),
         n = (0, s.X7)(t);
     null != n &&
@@ -216,9 +216,9 @@ function Z(e) {
             t || (0, c.bG)({ pathname: L.BVt.QUEST_HOME_V2, hash: e });
         });
 }
-function X(e) {
+function Z(e) {
     (0, o.mMO)(async () => {
-        let { default: t } = await Promise.all([n.e("57861"), n.e("77828")]).then(n.bind(n, 491390));
+        let { default: t } = await Promise.all([n.e("45563"), n.e("77828")]).then(n.bind(n, 491390));
         return (n) => (0, r.jsx)(t, { ...n, questId: e.id });
     });
 }

@@ -12,7 +12,7 @@ var l = t(627968),
     I = t(486020),
     _ = t(240248),
     f = t(985018),
-    A = t(531338),
+    A = t(97472),
     S = t(937495),
     T = t(517061);
 let h = [16, 16, 14, 14, 12, 10, 8],
@@ -24,12 +24,12 @@ let h = [16, 16, 14, 14, 12, 10, 8],
                 loading: m = !1,
                 description: g,
                 memberCount: C,
-                presenceCount: N,
-                className: R,
+                presenceCount: R,
+                className: N,
             } = e,
             D = (0, d.Ay)(),
             [L, y] = n.useState(!1);
-        if (null == i || m) return (0, l.jsx)("div", { className: s()(R, A.Nr, A.En, { [A.ax]: r, [A.HI]: t }) });
+        if (null == i || m) return (0, l.jsx)("div", { className: s()(N, A.Nr, A.En, { [A.ax]: r, [A.HI]: t }) });
         let { name: p } = i,
             v =
                 null != i.discoverySplash && /^data:/.test(i.discoverySplash)
@@ -39,7 +39,7 @@ let h = [16, 16, 14, 14, 12, 10, 8],
             F = I.Ay.getGuildIconURL({ id: i.id, icon: i.icon, size: 40 }) ?? void 0,
             P = null != i.description ? i.description : g,
             O = null != C ? C : i?.memberCount,
-            V = null != N ? N : i?.presenceCount,
+            V = null != R ? R : i?.presenceCount,
             x = null;
         if (null != F) x = (0, l.jsx)("img", { src: F, alt: "", className: A.my });
         else {
@@ -55,7 +55,7 @@ let h = [16, 16, 14, 14, 12, 10, 8],
             });
         }
         return (0, l.jsxs)("div", {
-            className: s()(R, A.Nr, { [A.ax]: r, [A.HI]: t, [A.TS]: L }),
+            className: s()(N, A.Nr, { [A.ax]: r, [A.HI]: t, [A.TS]: L }),
             children: [
                 (0, l.jsxs)("div", {
                     className: A.MY,

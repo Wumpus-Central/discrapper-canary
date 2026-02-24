@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { d: () => m });
+n.d(t, { d: () => g });
 var i = n(627968);
 n(64700);
 var s = n(503698),
@@ -9,8 +9,8 @@ var s = n(503698),
     o = n(11351),
     d = n(320137),
     c = n(985018),
-    u = n(86045);
-function g(e) {
+    u = n(410083);
+function m(e) {
     let { emoji: t, onRemoveEmoji: n, disabled: s = !1 } = e,
         o = a.Ay.getEmojiURL({ id: t.id, animated: t.animated, size: 32 });
     return (0, i.jsxs)("div", {
@@ -31,13 +31,13 @@ function g(e) {
         ],
     });
 }
-function m(e) {
+function g(e) {
     let { tierEmojiIds: t, guildId: n, onRemoveEmoji: s } = e,
         l = (0, d.A)(n),
         r = null != t ? l.filter((e) => t.has(e.id)) : [],
         a = (0, o.gN)();
     return (0, i.jsx)("div", {
         className: u.kL,
-        children: r.map((e) => (0, i.jsx)(g, { emoji: e, onRemoveEmoji: () => s(e), disabled: a }, e.id)),
+        children: r.map((e) => (0, i.jsx)(m, { emoji: e, onRemoveEmoji: () => s(e), disabled: a }, e.id)),
     });
 }

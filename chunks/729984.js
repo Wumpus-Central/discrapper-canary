@@ -9,8 +9,8 @@ var i = n(627968),
     d = n(112389),
     c = n(591552),
     u = n(166444),
-    g = n(46054),
-    m = n(12773),
+    m = n(46054),
+    g = n(12773),
     x = n(777705),
     h = n(769765),
     _ = n(808728),
@@ -26,8 +26,8 @@ var i = n(627968),
     I = n(561108),
     v = n(191117),
     S = n(985018),
-    y = n(894958),
-    R = n(206314);
+    y = n(91284),
+    R = n(830412);
 function O(e) {
     let { guild: t } = e,
         r = (0, l.bG)([c.A], () => c.A.getEnabled(t.id)),
@@ -37,7 +37,7 @@ function O(e) {
         p = _.filter((e) => !A.has(e.id)),
         [N, E] = s.useState(!1);
     return (s.useEffect(() => {
-        h || r || (0, m.A)(t.id);
+        h || r || (0, g.A)(t.id);
     }, [t.id, h, r]),
     N || 0 === p.length)
         ? null
@@ -107,7 +107,7 @@ function O(e) {
                                                                 children: (0, i.jsx)(o.Text, {
                                                                     className: y.At,
                                                                     variant: "text-xs/normal",
-                                                                    children: g.A.parseTopic(e.topic, !0, {
+                                                                    children: m.A.parseTopic(e.topic, !0, {
                                                                         channelId: e.id,
                                                                     }),
                                                                 }),
@@ -166,8 +166,8 @@ function G(e) {
         a = (0, l.bG)([_.Ay], () => _.Ay.getChannels(n?.id)),
         d = (0, l.bG)([h.A], () => h.A.getCategories(n?.id)),
         u = (0, l.bG)([E.A], () => E.A.advancedMode),
-        g = s.useRef(null),
-        [m, x] = s.useState(!1),
+        m = s.useRef(null),
+        [g, x] = s.useState(!1),
         j = s.useRef(n);
     return (s.useEffect(() => {
         j.current = n;
@@ -199,7 +199,7 @@ function G(e) {
                                 className: y.cS,
                                 onClick: () => x((e) => !e),
                                 children: (0, i.jsx)(A.A, {
-                                    direction: m ? A.A.Directions.DOWN : A.A.Directions.UP,
+                                    direction: g ? A.A.Directions.DOWN : A.A.Directions.UP,
                                     height: 16,
                                     width: 16,
                                 }),
@@ -215,7 +215,7 @@ function G(e) {
                                 children: S.intl.string(S.t.Kq7FAS),
                             }),
                             (0, i.jsx)(T.mU, { className: y.kr, guildId: n.id }),
-                            m
+                            g
                                 ? null
                                 : (0, i.jsxs)(i.Fragment, {
                                       children: [
@@ -245,7 +245,7 @@ function G(e) {
                                             children: S.intl.string(S.t.bLDQ1Q),
                                         }),
                                         (0, i.jsx)("div", {
-                                            ref: g,
+                                            ref: m,
                                             className: y.di,
                                             children: (0, i.jsx)(v.A, {
                                                 guildId: n.id,
@@ -261,7 +261,7 @@ function G(e) {
                     (0, i.jsx)(I.A, {
                         guild: n,
                         scrollToQuestions: () => {
-                            null != g.current && g.current.scrollIntoView({ behavior: "smooth" });
+                            null != m.current && m.current.scrollIntoView({ behavior: "smooth" });
                         },
                     }),
                 ],

@@ -1,20 +1,20 @@
-n.d(t, { E: () => r, T: () => s }), n(801541);
+n.d(t, { E: () => a, T: () => s }), n(801541);
 var i = n(889137),
     l = n(966974),
-    a = n(48693);
-function r(e, t) {
+    r = n(851763);
+function a(e, t) {
     let n = (0, i.YW)(t)
-        .with(l.Z.IMAGE_ONLY_ANSWERS, () => a.EK)
-        .otherwise(() => a.fD);
+        .with(l.Z.IMAGE_ONLY_ANSWERS, () => r.EK)
+        .otherwise(() => r.fD);
     return {
         styles: {
             loserSelected: n,
             normal: n,
             notVoted: n,
             selected: n,
-            voted: a.pq,
-            victorSelected: a.iu,
-            victorNotSelected: a.iu,
+            voted: r.pq,
+            victorSelected: r.iu,
+            victorNotSelected: r.iu,
             normalVote: n,
         },
     };

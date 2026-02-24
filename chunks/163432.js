@@ -8,7 +8,7 @@ var i = n(627968),
     c = n(403362),
     d = n(175203),
     u = n(806931),
-    h = n(107826);
+    h = n(79932);
 let m = 112,
     A = (16 / 9) * 112 + 8,
     g = 10 * o.A.Millis.SECOND;
@@ -32,7 +32,7 @@ function f(e, t) {
         };
     }, [t]);
     let E = l.useRef({}),
-        { visibleParticipants: C, participantTileWidth: x } = l.useMemo(() => {
+        { visibleParticipants: x, participantTileWidth: C } = l.useMemo(() => {
             let n = Date.now(),
                 l = (0, s.sortBy)(t, (e) =>
                     (function (e) {
@@ -62,35 +62,35 @@ function f(e, t) {
                 f = m.findIndex(p),
                 _ = null;
             -1 !== f && ((_ = m[f]), m.splice(f, 1));
-            let C = null == _ || h ? e : e - i - o,
-                x = Math.max(0, Math.min(Math.floor((C - o) / (r + o)), d, t.length)),
-                S = Math.min((C - o) / x - o, i),
-                T = Math.max(0, x - A.length),
-                N = A.slice(0, x),
-                I = m.slice(0, T),
-                v = Array(T);
-            if (T > 0) {
+            let x = null == _ || h ? e : e - i - o,
+                C = Math.max(0, Math.min(Math.floor((x - o) / (r + o)), d, t.length)),
+                S = Math.min((x - o) / C - o, i),
+                I = Math.max(0, C - A.length),
+                T = A.slice(0, C),
+                N = m.slice(0, I),
+                y = Array(I);
+            if (I > 0) {
                 let e = [];
-                for (let t of I) {
+                for (let t of N) {
                     let n = E.current[t.id];
-                    null != n && n < T ? (v[n] = t) : e.push(t);
+                    null != n && n < I ? (y[n] = t) : e.push(t);
                 }
-                for (let t = 0; t < v.length; t++) {
-                    if (null != v[t]) continue;
+                for (let t = 0; t < y.length; t++) {
+                    if (null != y[t]) continue;
                     let n = e.shift();
                     if (null == n) break;
-                    v[t] = n;
+                    y[t] = n;
                 }
             }
-            let y = v.filter(c.Vq);
-            E.current = (0, s.keyBy)((0, s.range)(y.length), (e) => y[e].id);
-            let b = [...N, ...y];
+            let b = y.filter(c.Vq);
+            E.current = (0, s.keyBy)((0, s.range)(b.length), (e) => b[e].id);
+            let v = [...T, ...b];
             return (
-                null != _ && (h && b.length >= x ? (b[Math.max(0, b.length - 1)] = _) : b.push(_)),
-                { visibleParticipants: b, participantTileWidth: S }
+                null != _ && (h && v.length >= C ? (v[Math.max(0, v.length - 1)] = _) : v.push(_)),
+                { visibleParticipants: v, participantTileWidth: S }
             );
         }, [e, t, f, m, h, d, o, r, i]);
-    return { visibleParticipants: C, participantTileWidth: x };
+    return { visibleParticipants: x, participantTileWidth: C };
 }
 function _(e) {
     let {

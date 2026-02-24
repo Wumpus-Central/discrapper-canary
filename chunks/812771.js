@@ -12,7 +12,7 @@ var i,
     h = n(761929),
     A = n(964404),
     p = n(743898),
-    g = n(3651),
+    g = n(83181),
     m =
         (((i = {})[(i.PostSidebar = 0)] = "PostSidebar"),
         (i[(i.ThreadSidebar = 1)] = "ThreadSidebar"),
@@ -58,12 +58,12 @@ function f(e) {
             [f],
         ),
         I = (0, p.P)({ maxWidth: n, minWidth: 450 }),
-        b = (0, d.rdh)(c.A.modules.chat.RESIZE_HANDLE_WIDTH),
-        N = (0, o.clamp)(x, 450, n),
-        S = I ? N : N + b;
+        N = (0, d.rdh)(c.A.modules.chat.RESIZE_HANDLE_WIDTH),
+        b = (0, o.clamp)(x, 450, n),
+        S = I ? b : b + N;
     l.useEffect(() => {
-        i?.(N, I);
-    }, [N, i, I]);
+        i?.(b, I);
+    }, [b, i, I]);
     let T = h ?? l.Fragment;
     return (0, s.jsxs)(s.Fragment, {
         children: [
@@ -84,7 +84,7 @@ function f(e) {
                         (0, s.jsx)("div", {
                             ref: m,
                             className: a()(g.kL, { [g.DU]: I }),
-                            style: { width: N },
+                            style: { width: b },
                             children: r,
                         }),
                     ],

@@ -3,11 +3,11 @@ n.d(t, { L: () => d });
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    s = n(575087),
-    o = n.n(s),
+    s = n.n(i),
+    a = n(575087),
+    o = n.n(a),
     l = n(827734),
-    u = n(500804),
+    u = n(6346),
     c = (function (e) {
         return (e.XSMALL = "xsmall"), (e.SMALL = "small"), (e.LARGE = "large"), e;
     })(c || {});
@@ -16,14 +16,14 @@ function d(e) {
             className: t,
             percents: n,
             size: i = "small",
-            foregroundColors: s = [l.A.unsafe_rawColors.BRAND_500.css],
+            foregroundColors: a = [l.A.unsafe_rawColors.BRAND_500.css],
             backgroundColor: c = "var(--interactive-background-active)",
             animate: d = !0,
         } = e,
-        _ = o()(n ?? [], s)
+        _ = o()(n ?? [], a)
             .map((e, t) => {
                 let n,
-                    [s, o] = e;
+                    [a, o] = e;
                 return (
                     (n = Array.isArray(o)
                         ? { background: `linear-gradient(to right, ${o[0]}, ${o[1]})` }
@@ -31,9 +31,9 @@ function d(e) {
                     (0, r.jsx)(
                         "div",
                         {
-                            className: a()(u.progressBar, u[i], { [u.animating]: d }),
+                            className: s()(u.progressBar, u[i], { [u.animating]: d }),
                             style: {
-                                transform: `translate3d(${Math.min(Math.max(0, s ?? 0), 100) - 100}%, 0, 0)`,
+                                transform: `translate3d(${Math.min(Math.max(0, a ?? 0), 100) - 100}%, 0, 0)`,
                                 ...n,
                             },
                         },
@@ -42,6 +42,6 @@ function d(e) {
                 );
             })
             .reverse();
-    return (0, r.jsx)("div", { className: a()(t, u.progress, u[i]), style: { backgroundColor: c }, children: _ });
+    return (0, r.jsx)("div", { className: s()(t, u.progress, u[i]), style: { backgroundColor: c }, children: _ });
 }
 d.Sizes = c;

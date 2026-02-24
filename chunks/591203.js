@@ -7,19 +7,19 @@ var n = i(627968),
     u = i(688810),
     o = i(687021),
     d = i(128450),
-    T = i(419954),
-    A = i(796774),
+    A = i(419954),
+    T = i(796774),
     S = i(209932),
     E = i(536432),
     g = i(984813),
     _ = i(595953),
     c = i(975571),
     I = i(780964),
-    N = i(617617),
-    C = i(652215);
+    C = i(617617),
+    N = i(652215);
 i(980504);
 var O = i(985018),
-    L = i(17786);
+    L = i(972628);
 function b(t) {
     return (0, s.bG)([S.A], () => {
         if (null == t) return null;
@@ -29,7 +29,7 @@ function b(t) {
 }
 function D(t) {
     let { guildId: e } = t,
-        i = (0, s.bG)([N.A], () => N.A.settings.guilds?.guilds?.[e]?.joinSound),
+        i = (0, s.bG)([C.A], () => C.A.settings.guilds?.guilds?.[e]?.joinSound),
         l = b(i);
     if (null == i || null == l) return null;
     let { emojiId: u, emojiName: o } = l,
@@ -44,20 +44,20 @@ function D(t) {
         ],
     });
 }
-let R = (0, T.E2)(I.X.ENTRANCE_SOUNDS_SETTING, {
+let R = (0, A.E2)(I.X.ENTRANCE_SOUNDS_SETTING, {
     useSearchTerms: () => [O.intl.string(O.t.nzUc3B)],
     Component: function () {
         let { analyticsLocations: t } = (0, u.Ay)(),
             [e, i] = l.useState("0"),
             a = (0, g.mz)(e),
-            T = b(a),
+            A = b(a),
             I = a?.type === g.PP.GLOBAL,
-            N = (0, s.bG)([S.A], () => S.A.hasFetchedAllSounds()) && null != a && null == T;
+            C = (0, s.bG)([S.A], () => S.A.hasFetchedAllSounds()) && null != a && null == A;
         l.useEffect(() => {
-            N && (0, E.ND)({ location: t });
-        }, [N, t]),
+            C && (0, E.ND)({ location: t });
+        }, [C, t]),
             l.useEffect(() => {
-                (0, A.E7)();
+                (0, T.E7)();
             }, []);
         let R = l.useCallback((t, e) => {
             let { inDropdown: i } = e;
@@ -65,7 +65,7 @@ let R = (0, T.E2)(I.X.ENTRANCE_SOUNDS_SETTING, {
         }, []);
         return (0, n.jsxs)(r.nVY, {
             label: O.intl.string(O.t.nzUc3B),
-            description: O.intl.format(O.t.u9RWmv, { helpdeskArticle: c.A.getArticleURL(C.MVz.SOUNDBOARD) }),
+            description: O.intl.format(O.t.u9RWmv, { helpdeskArticle: c.A.getArticleURL(N.MVz.SOUNDBOARD) }),
             children: [
                 (0, n.jsx)(o.A, {
                     guildId: e,
@@ -83,13 +83,13 @@ let R = (0, T.E2)(I.X.ENTRANCE_SOUNDS_SETTING, {
                     }),
                     children: [
                         (0, n.jsx)(_.A, {
-                            sound: T,
+                            sound: A,
                             isGlobal: I,
                             onSelect: (i) => {
                                 null == i ? (0, E.Dv)(e, t) : (0, E.un)(e, i, t);
                             },
                         }),
-                        N &&
+                        C &&
                             (0, n.jsx)(r.po8, {
                                 className: L.lm,
                                 messageType: r.YCn.WARNING,

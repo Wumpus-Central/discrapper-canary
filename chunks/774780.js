@@ -9,8 +9,8 @@ var i = n(627968),
     d = n(403362),
     c = n(975571),
     u = n(928348),
-    g = n(53594),
-    m = n(24043),
+    m = n(53594),
+    g = n(24043),
     x = n(268749),
     h = n(86933),
     _ = n(390715),
@@ -18,7 +18,7 @@ var i = n(627968),
     p = n(411335),
     f = n(652215),
     j = n(985018),
-    N = n(64638);
+    N = n(130408);
 function E(e) {
     let { guildId: t, setPreventNavigation: n = () => {} } = e,
         { editingRule: E, setEditingRule: b } = (0, x.U)(),
@@ -27,7 +27,7 @@ function E(e) {
         v = null != E,
         [S] = (0, u.qv)(I),
         { rulesByTriggerType: y } = (0, u.wP)(I),
-        R = { [g.yT.MEMBERS]: j.intl.string(j.t.sx4E5v), [g.yT.CONTENT]: j.intl.string(j.t.fphZb0) },
+        R = { [m.yT.MEMBERS]: j.intl.string(j.t.sx4E5v), [m.yT.CONTENT]: j.intl.string(j.t.fphZb0) },
         O = s.useMemo(
             () =>
                 Object.values(y ?? {})
@@ -52,7 +52,7 @@ function E(e) {
                           return n === e;
                       })?.name ?? null)
                     : null != t
-                      ? g.i$[t].getDefaultRuleName()
+                      ? m.i$[t].getDefaultRuleName()
                       : null,
             [O],
         ),
@@ -60,7 +60,7 @@ function E(e) {
     s.useEffect(() => {
         n(v, (0, A.cT)(M));
     }, [n, v, M]);
-    let k = (0, g.ws)(I);
+    let k = (0, m.ws)(I);
     return (0, i.jsxs)("div", {
         children: [
             (0, i.jsx)(r.Heading, {
@@ -89,7 +89,7 @@ function E(e) {
                 }),
             }),
             S
-                ? (0, i.jsx)(m.A, {})
+                ? (0, i.jsx)(g.A, {})
                 : Object.entries(k).map((e) => {
                       let [t, n] = e;
                       if (0 === n.length) return (0, i.jsx)(s.Fragment, {}, t);

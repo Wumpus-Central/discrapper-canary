@@ -1,63 +1,63 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => C });
 var i = n(627968),
     l = n(64700),
-    a = n(158954),
-    r = n(311907),
+    r = n(158954),
+    a = n(311907),
     s = n(308528),
     o = n(846293),
     d = n(793574),
     c = n(688810),
     u = n(529200),
-    m = n(427157),
-    _ = n(961350),
+    _ = n(427157),
+    m = n(961350),
     h = n(734057),
     p = n(994500),
     g = n(427262),
     A = n(652215),
-    f = n(985018),
-    x = n(563111);
-function E(e) {
-    let { invite: t, message: n, getAcceptInviteContext: E } = e,
-        C = (0, r.bG)([_.default], () => _.default.getId()),
-        I = t.inviter?.id === C,
-        T = t.state === A.elq.ACCEPTING,
-        { analyticsLocations: v } = (0, c.Ay)(d.A.INVITE_EMBED),
-        N = (0, r.bG)([p.A], () => null != t.inviter && p.A.isFriend(t.inviter?.id)),
+    x = n(985018),
+    f = n(42441);
+function C(e) {
+    let { invite: t, message: n, getAcceptInviteContext: C } = e,
+        E = (0, a.bG)([m.default], () => m.default.getId()),
+        I = t.inviter?.id === E,
+        b = t.state === A.elq.ACCEPTING,
+        { analyticsLocations: T } = (0, c.Ay)(d.A.INVITE_EMBED),
+        v = (0, a.bG)([p.A], () => null != t.inviter && p.A.isFriend(t.inviter?.id)),
         S = l.useCallback(() => {
             let e = "noop";
             null != t.inviter &&
                 null != h.A.getDMFromUserId(t.inviter.id) &&
                 ((e = "transition"), s.A.openPrivateChannel({ recipientIds: [t.inviter.id] })),
-                (0, o.he)({ invite: t, action: e, inviter_id: n.author.id, invite_message_id: n.id }, v);
-        }, [t, n, v]),
-        b = l.useCallback(() => {
-            (0, o.he)({ invite: t, action: "accept", inviter_id: n.author.id, invite_message_id: n.id }, v);
-            let e = E("Invite Button Embed");
+                (0, o.he)({ invite: t, action: e, inviter_id: n.author.id, invite_message_id: n.id }, T);
+        }, [t, n, T]),
+        y = l.useCallback(() => {
+            (0, o.he)({ invite: t, action: "accept", inviter_id: n.author.id, invite_message_id: n.id }, T);
+            let e = C("Invite Button Embed");
             o.Ay.acceptInviteAndTransitionToInviteChannel({ inviteKey: t.code, context: e });
-        }, [t, n, v, E]);
+        }, [t, n, T, C]);
     if (null == t.inviter) return null;
-    let j = N ? S : b,
-        y = f.intl.string(f.t.ib7Ng1),
-        R = "active";
-    N
-        ? ((y = f.intl.string(f.t.xhxnPn)), (R = "secondary"))
-        : I && ((y = f.intl.string(f.t.ib7Ng1)), (R = "secondary"));
-    let L = I ? f.intl.string(f.t.eQyu1F) : f.intl.string(f.t.PYJHW6),
-        M = null != t.inviter ? `${t.inviter.username}` : "",
-        O = null != t.inviter ? g.Ay.getUserTag(t.inviter) : "";
+    let N = v ? S : y,
+        j = x.intl.string(x.t.ib7Ng1),
+        L = "active";
+    v
+        ? ((j = x.intl.string(x.t.xhxnPn)), (L = "secondary"))
+        : I && ((j = x.intl.string(x.t.ib7Ng1)), (L = "secondary"));
+    let R = I ? x.intl.string(x.t.eQyu1F) : x.intl.string(x.t.PYJHW6),
+        P = null != t.inviter ? `${t.inviter.username}` : "",
+        M = null != t.inviter ? g.Ay.getUserTag(t.inviter) : "";
     return (0, i.jsxs)(u.A, {
         children: [
-            (0, i.jsx)(u.A.Header, { text: L }),
+            (0, i.jsx)(u.A.Header, { text: R }),
             (0, i.jsxs)(u.A.Body, {
                 children: [
                     (0, i.jsxs)("div", {
-                        className: x.iH,
+                        className: f.iH,
                         children: [
-                            (0, i.jsx)(u.A.Icon, { user: new m.A(t.inviter), onClick: N ? j : void 0 }),
-                            (0, i.jsx)(u.A.Info, { title: M, onClick: N ? j : void 0, children: O }),
+                            (0, i.jsx)(u.A.Icon, { user: new _.A(t.inviter), onClick: v ? N : void 0 }),
+                            (0, i.jsx)(u.A.Info, { title: P, onClick: v ? N : void 0, children: M }),
                         ],
                     }),
-                    (0, i.jsx)(a.$nd, { onClick: j, text: y, loading: T, disabled: I, variant: R }),
+                    (0, i.jsx)(r.$nd, { onClick: N, text: j, loading: b, disabled: I, variant: L }),
                 ],
             }),
         ],

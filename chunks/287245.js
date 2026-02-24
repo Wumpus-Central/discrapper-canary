@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => v });
+n.d(t, { A: () => y });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -20,9 +20,9 @@ var i = n(627968),
     C = n(320501),
     E = n(203982),
     I = n(427262),
-    b = n(652215),
-    N = n(985018),
-    S = n(65309);
+    N = n(652215),
+    b = n(985018),
+    S = n(739699);
 let T = (e) => {
         let { channel: t, message: n, out: s = !1, noAnimate: l = !1 } = e,
             o = (0, _.A)(n, {
@@ -64,7 +64,7 @@ let T = (e) => {
                                     .map((e) =>
                                         (0, i.jsx)(
                                             "img",
-                                            { src: e.url, width: 128, className: S.oh, alt: N.intl.string(N.t.X4IxWL) },
+                                            { src: e.url, width: 128, className: S.oh, alt: b.intl.string(b.t.X4IxWL) },
                                             e.id,
                                         ),
                                     ),
@@ -74,14 +74,14 @@ let T = (e) => {
             ],
         });
     },
-    v = (e) => {
+    y = (e) => {
         let { channel: t, idle: n, showChat: l } = e,
             A = s.useRef(new Set()),
             [p, g] = s.useState([]),
             [_, f] = s.useState(0),
             I = s.useRef(null),
-            N = s.useRef(!1),
-            [v, y] = s.useState(!0),
+            b = s.useRef(!1),
+            [y, v] = s.useState(!0),
             [j, R] = s.useState(""),
             [O, L] = s.useState((0, u.x7)(j));
         s.useEffect(() => {
@@ -91,13 +91,13 @@ let T = (e) => {
             };
         }, []),
             s.useEffect(() => {
-                let e = () => y(!0),
-                    t = () => y(!1);
+                let e = () => v(!0),
+                    t = () => v(!1);
                 return (
-                    E._.subscribe(b.jej.TEXTAREA_FOCUS, e),
-                    E._.subscribe(b.jej.TEXTAREA_BLUR, t),
+                    E._.subscribe(N.jej.TEXTAREA_FOCUS, e),
+                    E._.subscribe(N.jej.TEXTAREA_BLUR, t),
                     () => {
-                        E._.unsubscribe(b.jej.TEXTAREA_FOCUS, e), E._.unsubscribe(b.jej.TEXTAREA_BLUR, t);
+                        E._.unsubscribe(N.jej.TEXTAREA_FOCUS, e), E._.unsubscribe(N.jej.TEXTAREA_BLUR, t);
                     }
                 );
             }, []),
@@ -154,8 +154,8 @@ let T = (e) => {
             }, []),
             (0, i.jsxs)("div", {
                 className: r()(S.X2, { [S.R]: !l }),
-                onMouseEnter: () => (N.current = !0),
-                onMouseLeave: () => (N.current = !1),
+                onMouseEnter: () => (b.current = !0),
+                onMouseLeave: () => (b.current = !1),
                 onWheel: (e) => {
                     e.preventDefault(), e.stopPropagation();
                 },
@@ -181,9 +181,9 @@ let T = (e) => {
                         textValue: j,
                         richValue: O,
                         placeholder: "Send message",
-                        onFocus: () => y(!0),
-                        onBlur: () => y(!1),
-                        focused: v,
+                        onFocus: () => v(!0),
+                        onBlur: () => v(!1),
+                        focused: y,
                         disabled: !l,
                         showValueWhenDisabled: !0,
                         onChange: (e, t, n) => {

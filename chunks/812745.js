@@ -2,9 +2,9 @@
 n.d(t, { Ay: () => _, Be: () => l, Nj: () => u, y3: () => c });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(666817),
+    s = n(503698),
+    a = n.n(s),
+    o = n(21159),
     l = (function (e) {
         return (
             (e.UNKNOWN = "unknown"),
@@ -104,7 +104,7 @@ class d extends i.PureComponent {
     static defaultProps = { size: c.SMALL, flipped: !1 };
     render() {
         let { flipped: e, type: t, className: n, size: i } = this.props;
-        return (0, r.jsx)("div", { className: s()(i, o[t], n, { [o.flipped]: e }), children: t });
+        return (0, r.jsx)("div", { className: a()(i, o[t], n, { [o.flipped]: e }), children: t });
     }
 }
 let _ = d;

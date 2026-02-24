@@ -5,13 +5,13 @@ n(64700);
 var s = n(397927),
     l = n(239705),
     r = n(985018),
-    a = n(86181);
+    a = n(434499);
 function o(e) {
     let { action: t, triggerType: n, toggled: o, onToggleAction: d } = e,
         c = (e) => () => d(e),
         u = (0, l.x)(t.type, t, n);
     if (null == u) return null;
-    let { headerText: g, descriptionText: m, icon: x } = u;
+    let { headerText: m, descriptionText: g, icon: x } = u;
     return (0, i.jsxs)("div", {
         className: a.Ik,
         children: [
@@ -22,8 +22,8 @@ function o(e) {
             (0, i.jsxs)("div", {
                 className: a.xj,
                 children: [
-                    (0, i.jsx)(s.Heading, { variant: "heading-sm/semibold", children: g }),
-                    (0, i.jsx)(s.Text, { color: "interactive-text-default", variant: "text-xs/medium", children: m }),
+                    (0, i.jsx)(s.Heading, { variant: "heading-sm/semibold", children: m }),
+                    (0, i.jsx)(s.Text, { color: "interactive-text-default", variant: "text-xs/medium", children: g }),
                     o
                         ? (0, i.jsxs)(s.Text, {
                               color: "text-muted",

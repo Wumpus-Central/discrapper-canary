@@ -18,21 +18,21 @@ var i = n(627968),
     I = n(854627),
     f = n(734057),
     C = n(153488),
-    N = n(290863),
-    T = n(994500),
+    T = n(290863),
+    N = n(994500),
     S = n(741961),
     x = n(287809),
     v = n(615405),
     y = n(403362),
     b = n(344917),
-    L = n(652215),
-    O = n(985018),
-    R = n(68e4);
+    O = n(652215),
+    L = n(985018),
+    R = n(790870);
 function P(e) {
     let { user: t, index: n, isCompetitive: r } = e,
-        { status: l, isMobile: a } = (0, o.cf)([N.A], () => ({
-            status: N.A.getStatus(t.id),
-            isMobile: N.A.isMobileOnline(t.id),
+        { status: l, isMobile: a } = (0, o.cf)([T.A], () => ({
+            status: T.A.getStatus(t.id),
+            isMobile: T.A.isMobileOnline(t.id),
         })),
         s = (0, o.bG)([S.A, f.A], () => {
             let e = f.A.getDMFromUserId(t.id);
@@ -43,17 +43,17 @@ function P(e) {
             await A.A.openPrivateChannel({ recipientIds: [t.id], location: m.A.FREQUENT_FRIENDS_ROW });
             let e = f.A.getDMFromUserId(t.id);
             null != e &&
-                (0, p.zV)(L.HAw.CHANNEL_OPENED, { ...(0, p.qL)(e), location: `${m.A.FREQUENT_FRIENDS_ROW} ${n + 1}` });
+                (0, p.zV)(O.HAw.CHANNEL_OPENED, { ...(0, p.qL)(e), location: `${m.A.FREQUENT_FRIENDS_ROW} ${n + 1}` });
         },
         _ = 0 === n,
         g = _ ? c.Y3C : r ? c.Y5K : void 0,
-        E = _ ? O.intl.string(O.t.aI4VOL) : r ? O.intl.string(O.t.kABl2x) : void 0;
+        E = _ ? L.intl.string(L.t.aI4VOL) : r ? L.intl.string(L.t.kABl2x) : void 0;
     return (0, i.jsx)(c.DUT, {
         className: R.it,
         onClick: h,
         onMouseEnter: u.onMouseEnter,
         onMouseLeave: u.onMouseLeave,
-        "aria-label": O.intl.formatToPlainString(O.t.M5FjCr, { username: t.username }),
+        "aria-label": L.intl.formatToPlainString(L.t.M5FjCr, { username: t.username }),
         children: (0, i.jsx)(c.euF, {
             src: d,
             "aria-label": t.globalName ?? t.username,
@@ -79,13 +79,13 @@ function j() {
             ((e = (0, o.yK)([E.A], () =>
                 [...E.A.getUserAffinities()].sort((e, t) => E.A.compare(e.otherUserId, t.otherUserId)),
             )),
-            (t = (0, o.yK)([x.default, T.A], () => {
+            (t = (0, o.yK)([x.default, N.A], () => {
                 let t = e.map((e) => e.otherUserId),
                     n = [];
                 for (let e of t)
                     if (n.length < 5) {
                         let t = x.default.getUser(e);
-                        !(0, y.Vq)(t) || T.A.isIgnored(t.id) || T.A.isBlocked(t.id) || n.push(t);
+                        !(0, y.Vq)(t) || N.A.isIgnored(t.id) || N.A.isBlocked(t.id) || n.push(t);
                     } else break;
                 return n;
             }, [e])),
@@ -97,21 +97,21 @@ function j() {
                 );
             }, [e, t])),
             t.length < 3 ? null : { frequentFriends: t, showCompetitiveSpot: n }),
-        m = (0, o.bG)([C.A], () => C.A.hasConsented(L.YAq.PERSONALIZATION)),
+        m = (0, o.bG)([C.A], () => C.A.hasConsented(O.YAq.PERSONALIZATION)),
         p = (0, o.bG)([x.default], () => x.default.getCurrentUser()?.nsfwAllowed ?? !1),
         [I, f] = r.useState({ scrollLeft: 0, scrollWidth: 0, clientWidth: 0 }),
-        N = r.useRef(null),
+        T = r.useRef(null),
         S = (0, o.bG)([v.A], () => v.A.ipCountryCode),
         j = (0, _.uE)(),
         D = r.useCallback(() => {
-            let e = N.current?.getScrollerNode();
+            let e = T.current?.getScrollerNode();
             null != e && f({ scrollLeft: e.scrollLeft, scrollWidth: e.scrollWidth, clientWidth: e.clientWidth });
         }, []);
     r.useEffect(() => {
         A?.frequentFriends.length != null && D();
     }, [A?.frequentFriends.length, A?.showCompetitiveSpot, D]);
-    let w = (0, h.w)(D, []),
-        M = r.useCallback(
+    let M = (0, h.w)(D, []),
+        w = r.useCallback(
             (e) => {
                 let t = e.currentTarget;
                 f({ scrollLeft: t.scrollLeft, scrollWidth: t.scrollWidth, clientWidth: t.clientWidth });
@@ -143,21 +143,21 @@ function j() {
                             (0, i.jsx)(c.Text, {
                                 variant: "text-sm/semibold",
                                 className: R.Uq,
-                                children: O.intl.string(O.t.QEh90H),
+                                children: L.intl.string(L.t.QEh90H),
                             }),
                             (0, i.jsx)(d.m_, {
-                                text: O.intl.string(O.t.tqCMcU),
+                                text: L.intl.string(L.t.tqCMcU),
                                 children: (0, i.jsx)(c.mir, { className: R.BK }),
                             }),
                         ],
                     }),
                     (0, i.jsx)(c.zCo, {
                         ref: (e) => {
-                            (N.current = e), (w.current = e?.getScrollerNode() != null ? e.getScrollerNode() : null);
+                            (T.current = e), (M.current = e?.getScrollerNode() != null ? e.getScrollerNode() : null);
                         },
                         className: a()(R.i9, { [R.BI]: H && F, [R.E2]: H && Y }),
                         orientation: "horizontal",
-                        onScroll: M,
+                        onScroll: w,
                         children: U.map((e, t) =>
                             (0, i.jsx)(P, { user: e, index: t, isCompetitive: B && t === U.length - 1 }, e.id),
                         ),

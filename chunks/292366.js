@@ -6,8 +6,8 @@ var a = n(503698),
     s = n(735438),
     i = n(421380),
     o = n(397927),
-    d = n(442433),
-    c = n(565645),
+    c = n(442433),
+    d = n(565645),
     u = n(155718),
     m = n(30008),
     p = n(957565),
@@ -15,14 +15,14 @@ var a = n(503698),
     h = n(207963),
     C = n(489414),
     E = n(985018),
-    x = n(592392);
+    x = n(20910);
 function N(e) {
     let { url: t, onSelect: n } = e;
     return p.p5 && null != t
         ? (0, l.jsx)(o.W1t, {
               "data-menu-migrated-auto": !0,
               navId: "component-button",
-              onClose: d.Z_,
+              onClose: c.Z_,
               "aria-label": E.intl.string(E.t.tvTXy8),
               onSelect: n,
               children: (0, l.jsx)(o.rXV, {
@@ -76,7 +76,7 @@ function I(e) {
             disabled: p || g === C.BB.DISABLED || T || S,
             onClick: t,
             onContextMenu: (e) => {
-                b && (0, d.jA)(e, (e) => (0, l.jsx)(N, { ...e, url: I }));
+                b && (0, c.jA)(e, (e) => (0, l.jsx)(N, { ...e, url: I }));
             },
             role: b ? "link" : "button",
             children: [
@@ -91,7 +91,7 @@ function I(e) {
                               })
                             : null,
                         R
-                            ? (0, l.jsx)(c.A, {
+                            ? (0, l.jsx)(d.A, {
                                   className: r()({ [x.MR]: y }),
                                   src: E.src,
                                   emojiId: E.id,

@@ -9,25 +9,25 @@ var i = n(627968),
     d = n(199940),
     c = n(132514),
     u = n(987957),
-    g = n(985018),
-    m = n(659233);
+    m = n(985018),
+    g = n(499323);
 let x = [];
 function h() {
     return (0, i.jsx)("div", {
-        className: m.L8,
+        className: g.L8,
         children: (0, i.jsxs)("div", {
-            className: m.kv,
+            className: g.kv,
             children: [
                 (0, i.jsx)("div", {
-                    className: m.zV,
+                    className: g.zV,
                     children: (0, i.jsx)(r.B8Q, { size: "custom", color: "currentColor", height: 20, width: 22 }),
                 }),
                 (0, i.jsx)("div", {
-                    className: m.tV,
+                    className: g.tV,
                     children: (0, i.jsx)(r.Text, {
                         variant: "text-md/semibold",
                         color: "text-strong",
-                        children: g.intl.string(g.t["K/i3iQ"]),
+                        children: m.intl.string(m.t["K/i3iQ"]),
                     }),
                 }),
             ],
@@ -39,16 +39,16 @@ function _(e) {
         a = s.useCallback(() => {
             if (null != t)
                 return (0, r.mMO)(async () => {
-                    let { default: e } = await Promise.all([n.e("54569"), n.e("76945")]).then(n.bind(n, 251632));
+                    let { default: e } = await Promise.all([n.e("54569"), n.e("4593")]).then(n.bind(n, 251632));
                     return (n) => (0, i.jsx)(e, { ...n, guildId: t, onSave: l });
                 });
         }, [t, l]);
     return (0, i.jsxs)(r.DUT, {
-        className: m.Bw,
+        className: g.Bw,
         onClick: a,
         children: [
             (0, i.jsx)(r.U1e, { size: "xs", color: "currentColor" }),
-            (0, i.jsx)(r.Text, { variant: "text-md/normal", color: "none", children: g.intl.string(g.t.qce3EM) }),
+            (0, i.jsx)(r.Text, { variant: "text-md/normal", color: "none", children: m.intl.string(m.t.qce3EM) }),
         ],
     });
 }
@@ -58,7 +58,7 @@ let A = function (e) {
         r = s.useCallback((e, t) => {
             (0, d.G$)(e, t);
         }, []),
-        g = s.useCallback(
+        m = s.useCallback(
             (e, i, s, l) => {
                 let r = n[e]?.channelId,
                     a = i.channelId;
@@ -81,7 +81,7 @@ let A = function (e) {
         }, []),
         { handleDragStart: j, handleDragReset: N, handleDragComplete: E } = (0, a.A)(p, f);
     return (0, i.jsxs)("div", {
-        className: m.uW,
+        className: g.uW,
         children: [
             n.map((e, n) =>
                 (0, i.jsx)(
@@ -90,7 +90,7 @@ let A = function (e) {
                         guildId: t,
                         action: e,
                         actionIndex: n,
-                        onChange: g,
+                        onChange: m,
                         onDelete: A,
                         onDragStart: j,
                         onDragReset: N,

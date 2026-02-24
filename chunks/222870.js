@@ -11,8 +11,8 @@ var l = n(627968),
     h = n(704554),
     g = n(594831),
     I = n(734057),
-    f = n(71393),
-    A = n(222823),
+    A = n(71393),
+    f = n(222823),
     E = n(994500),
     m = n(287809),
     S = n(645959),
@@ -29,13 +29,13 @@ var l = n(627968),
     R = n(406595),
     U = n(557404),
     O = n(652215),
-    G = n(895867),
-    b = n(985018),
-    w = n(416001);
-function F(e) {
+    G = n(822889),
+    w = n(985018),
+    F = n(77347);
+function L(e) {
     return Array.from(e).sort();
 }
-let L = (0, r.throttle)(
+let b = (0, r.throttle)(
         (e) => {
             (0, _.Y)(O.uss.FRIENDS, {
                 locked: p.default.isInstanceLocked(),
@@ -64,7 +64,7 @@ let L = (0, r.throttle)(
                         l = E.A.getNickname(e);
                     n.push(t?.username, t?.globalName, l);
                 }
-            let l = null != t.guild_id ? (f.A.getGuild(t.guild_id)?.name ?? null) : null;
+            let l = null != t.guild_id ? (A.A.getGuild(t.guild_id)?.name ?? null) : null;
             return null != l && n.push(l), n.filter(N.Vq);
         },
         throttleMs: 100,
@@ -74,7 +74,7 @@ function P() {
         { onPrimaryAction: t, onContextMenu: n } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         [r, d] = i.useState(""),
         c = r.trim().toLowerCase(),
-        f =
+        A =
             ((e = (0, g.Dz)()),
             (0, a.yK)([S.default, I.A], () => {
                 let t = [];
@@ -86,7 +86,7 @@ function P() {
                 return t;
             }, [e])),
         [E, m] = i.useState([]);
-    (0, h.RT)(r, f, m, k);
+    (0, h.RT)(r, A, m, k);
     let p = i.useRef(null),
         N = (0, o.A)("friends-widget-messages", p),
         [O, P] = (0, a.bG)([R.A], () => R.A.getFavoriteTargetIdsForTab(C.x.MESSAGES), [], T.D),
@@ -115,12 +115,12 @@ function P() {
             for (let t of j.recentTextRows) e.add(t.channelId);
             return Array.from(e);
         }, [O, j.activeNowRows, j.dmRows, j.recentTextRows]),
-        { unreadOrMentionChannels: z } = (0, a.cf)([A.Ay], () => {
+        { unreadOrMentionChannels: z } = (0, a.cf)([f.Ay], () => {
             let e = new Set();
             for (let t of W) {
-                let n = A.Ay.hasUnread(t),
-                    l = A.Ay.getMentionCount(t),
-                    i = A.Ay.getIsMentionLowImportance(t),
+                let n = f.Ay.hasUnread(t),
+                    l = f.Ay.getMentionCount(t),
+                    i = f.Ay.getIsMentionLowImportance(t),
                     r = l > 0 && !i;
                 (n || r) && e.add(t);
             }
@@ -136,7 +136,7 @@ function P() {
                     n.push({
                         kind: "SEARCH_RESULTS",
                         key: "SEARCH_RESULTS",
-                        title: b.intl.string(G.default.HGimIS),
+                        title: w.intl.string(G.default.HGimIS),
                         count: E.length,
                         channelIds: E.map((e) => e.channel.id),
                         length: E.length,
@@ -148,7 +148,7 @@ function P() {
                 n.push({
                     kind: "FAVORITES",
                     key: "FAVORITES",
-                    title: b.intl.string(G.default.GKTlS6),
+                    title: w.intl.string(G.default.GKTlS6),
                     count: O.length,
                     channelIds: l,
                     length: Math.max(l.length, 1),
@@ -160,7 +160,7 @@ function P() {
                 n.push({
                     kind: "ACTIVE_NOW",
                     key: "ACTIVE_NOW",
-                    title: b.intl.string(G.default.d3yO98),
+                    title: w.intl.string(G.default.d3yO98),
                     count: t.length,
                     channelIds: l,
                     length: Math.max(l.length, 1),
@@ -172,7 +172,7 @@ function P() {
                 n.push({
                     kind: "DMS",
                     key: "DMS",
-                    title: b.intl.string(b.t.YUU0RF),
+                    title: w.intl.string(w.t.YUU0RF),
                     count: l.length,
                     channelIds: i,
                     length: Math.max(i.length, 1),
@@ -184,7 +184,7 @@ function P() {
                 n.push({
                     kind: "TEXT_CHANNELS",
                     key: "TEXT_CHANNELS",
-                    title: b.intl.string(G.default.uC6Lhg),
+                    title: w.intl.string(G.default.uC6Lhg),
                     count: l.length,
                     channelIds: i,
                     length: Math.max(i.length, 1),
@@ -254,7 +254,7 @@ function P() {
         q = (0, _.Dk)(() => Q, [Q]),
         ee = (0, _.Dk)(() => J, [J]);
     i.useEffect(() => {
-        (0 !== q.size || 0 !== ee.size) && L({ shownUserIds: F(q), contentInventoryIds: F(ee) });
+        (0 !== q.size || 0 !== ee.size) && b({ shownUserIds: L(q), contentInventoryIds: L(ee) });
     }, [q, ee]);
     let et = i.useCallback((e) => $[e], [$]),
         en = i.useCallback(
@@ -312,15 +312,15 @@ function P() {
             d(e), p.current?.scrollToTop();
         }, []);
     return (0, l.jsxs)("div", {
-        className: w.kL,
+        className: F.kL,
         children: [
             (0, l.jsx)("div", {
-                className: w.MT,
+                className: F.MT,
                 children: (0, l.jsx)(u.IWV, {
                     query: r,
                     onChange: es,
                     onClear: () => d(""),
-                    placeholder: b.intl.string(G.default["xB/0Z9"]),
+                    placeholder: w.intl.string(G.default["xB/0Z9"]),
                     size: "md",
                 }),
             }),
@@ -333,11 +333,11 @@ function P() {
                             children: (e) =>
                                 (0, l.jsx)(u.B8B, {
                                     innerRole: n,
-                                    innerAriaLabel: b.intl.string(b.t.OIgYlQ),
+                                    innerAriaLabel: w.intl.string(w.t.OIgYlQ),
                                     ref: (e) => {
                                         (p.current = e), (t.current = e?.getScrollerNode() ?? null);
                                     },
-                                    className: w.p_,
+                                    className: F.p_,
                                     sectionHeight: ei,
                                     rowHeight: er,
                                     sidebarHeight: 0,

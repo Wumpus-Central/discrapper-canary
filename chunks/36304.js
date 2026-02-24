@@ -1,26 +1,26 @@
-e.d(n, { default: () => c });
-var i = e(627968);
-e(64700);
-var a = e(158954),
-    d = e(993719),
-    s = e(362823),
-    l = e(807880),
-    r = e(985018);
-function c(t) {
-    let { onClose: n, transitionState: e } = t;
-    return (0, i.jsx)(a.Modal, {
-        title: r.intl.string(l.default["5wYjyW"]),
-        transitionState: e,
+n.d(e, { default: () => s });
+var i = n(627968);
+n(64700);
+var d = n(158954),
+    h = n(993719),
+    b = n(362823),
+    a = n(83214),
+    r = n(985018);
+function s(t) {
+    let { onClose: e, transitionState: n } = t;
+    return (0, i.jsx)(d.Modal, {
+        title: r.intl.string(a.default["5wYjyW"]),
+        transitionState: n,
         actions: [
-            { text: r.intl.string(l.default["01Jl9Z"]), onClick: n, variant: "secondary" },
+            { text: r.intl.string(a.default["01Jl9Z"]), onClick: e, variant: "secondary" },
             {
-                text: r.intl.string(l.default.DxcYYG),
+                text: r.intl.string(a.default.DxcYYG),
                 onClick: () => {
-                    d.O(s.v.MUTE_TUTORIAL), n();
+                    h.O(b.v.MUTE_TUTORIAL), e();
                 },
             },
         ],
-        onClose: n,
-        children: r.intl.string(l.default.bGygJZ),
+        onClose: e,
+        children: r.intl.string(a.default.bGygJZ),
     });
 }

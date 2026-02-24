@@ -1,4 +1,4 @@
-n.d(t, { A: () => L }), n(321073);
+n.d(t, { A: () => O }), n(321073);
 var i = n(627968),
     r = n(64700),
     l = n(503698),
@@ -18,12 +18,12 @@ var i = n(627968),
     I = n(773669),
     f = n(437959),
     C = n(828184),
-    N = n(723702),
-    T = n(837921),
+    T = n(723702),
+    N = n(837921),
     S = n(902811),
     x = n(652215),
     v = n(985018),
-    y = n(281733);
+    y = n(55607);
 class b extends r.PureComponent {
     videoRef = null;
     _noProblemsTimeout = null;
@@ -147,8 +147,8 @@ class b extends r.PureComponent {
     }
     handleReady = () => {
         this.setState({ ready: !0 }),
-            (0, N.isDesktop)() &&
-                (T.Ay.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), T.Ay.send("UPDATE_OPEN_ON_STARTUP"));
+            (0, T.isDesktop)() &&
+                (N.Ay.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), N.Ay.send("UPDATE_OPEN_ON_STARTUP"));
     };
     setVideoRef = (e) => {
         this.videoRef = e;
@@ -238,7 +238,7 @@ class b extends r.PureComponent {
         }
     }
 }
-let L = d.Ay.connectStores([_.A, f.A, g.A, h.A], () => ({
+let O = d.Ay.connectStores([_.A, f.A, g.A, h.A], () => ({
     isTryingToConnect: _.A.isTryingToConnect(),
     connected: _.A.isConnected(),
     incident: f.A.getIncident(),

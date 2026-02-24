@@ -11,8 +11,8 @@ var i = n(627968),
     u = n(957785),
     h = n(788868),
     A = n(985018),
-    p = n(733557),
-    g = n(101616);
+    p = n(55751),
+    g = n(754558);
 function m(e, t, n) {
     (0, c.A)({
         skuId: e.skuId,
@@ -38,21 +38,21 @@ function _(e, t) {
         C = null != n && n > 0,
         E = _ && !C,
         I = C ? A.intl.string(A.t.TxBQzD) : A.intl.string(A.t.pLPjsb),
-        b = {
+        N = {
             title: E ? A.intl.string(A.t.HFhcqh) : I,
             body: E ? A.intl.string(A.t.ilhtIa) : void 0,
             renderIcon: E ? a.GM : void 0,
             shouldShow: !0,
         },
-        N = !x && e.collectiblesItem.type === s.R.PROFILE_EFFECT;
+        b = !x && e.collectiblesItem.type === s.R.PROFILE_EFFECT;
     return (0, i.jsx)(
         u.A,
         {
             onCardClick: () => {
                 C ? c() : m(e, l, r);
             },
-            tooltipConfig: b,
-            shouldScalePreview: x || !N,
+            tooltipConfig: N,
+            shouldScalePreview: x || !b,
             renderPreview: () => {
                 if (x) {
                     let t = { items: e.bundleItems };

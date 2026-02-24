@@ -13,7 +13,7 @@ var i = n(627968),
     A = n(250253),
     p = n(652215),
     g = n(985018),
-    m = n(18318);
+    m = n(449515);
 function _(e) {
     let { guildId: t, channelId: n } = e,
         _ = (0, d.e)({ guildId: t, channelId: n }),
@@ -22,7 +22,7 @@ function _(e) {
         C = (0, l.bG)([o.A], () => o.A.getGuild(t), [t]),
         E = C?.name,
         I = (0, l.bG)([a.A], () => a.A.getChannel(n)),
-        b = s.useMemo(() => {
+        N = s.useMemo(() => {
             let e = {};
             for (let t of f) for (let n of t.subscription_listings_ids) e[n] = t.id;
             return e;
@@ -53,13 +53,13 @@ function _(e) {
                   }),
                   (0, i.jsx)(h.A, {
                       guildId: t,
-                      children: _.filter((e) => null != b[e.id]).map((e) =>
+                      children: _.filter((e) => null != N[e.id]).map((e) =>
                           (0, i.jsx)(
                               A.A,
                               {
                                   guildId: t,
                                   listingId: e.id,
-                                  groupListingId: b[e.id],
+                                  groupListingId: N[e.id],
                                   analyticsLocation: p.ThZ.ROLE_SUBSCRIPTION_GATED_CHANNEL,
                               },
                               e.id,

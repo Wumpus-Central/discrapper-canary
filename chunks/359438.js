@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { X: () => c });
+n.d(t, { X: () => d });
 var i = n(627968);
 n(64700);
 var s = n(397927),
     r = n(713654),
     l = n(557582),
-    a = n(88860);
+    a = n(553630);
 function o(e) {
     let { channel: t } = e,
         n = (0, r._U)(t.type);
@@ -17,7 +17,7 @@ function o(e) {
         ],
     });
 }
-function c(e) {
+function d(e) {
     let { channel: t, guildScheduledEvent: n } = e;
     return (0, i.jsxs)("div", {
         className: a.kL,

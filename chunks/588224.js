@@ -20,12 +20,12 @@ var i = n(627968),
     C = n(551826),
     E = n(159426),
     I = n(25528),
-    b = n(530804),
-    N = n(481947),
+    N = n(530804),
+    b = n(481947),
     S = n(616356),
     T = n(961350),
-    v = n(696451),
-    y = n(430452),
+    y = n(696451),
+    v = n(430452),
     j = n(576705),
     R = n(290863),
     O = n(528767),
@@ -35,22 +35,22 @@ var i = n(627968),
     G = n(340851),
     U = n(652215),
     P = n(31408),
-    w = n(50314);
+    w = n(665076);
 let k = s.memo((e) => {
     let { mute: t, deaf: n, user: s, channel: l, sessionId: r, nick: o } = e,
         f = s.id,
         x = (0, a.bG)([T.default], () => T.default.getId() === f, [f]),
-        [N, j, R] = (0, a.yK)(
-            [y.Ay],
+        [b, j, R] = (0, a.yK)(
+            [v.Ay],
             () =>
                 x
-                    ? [!y.Ay.isSupported() || y.Ay.isSelfMute() || y.Ay.isSelfMutedTemporarily(), y.Ay.isSelfDeaf(), !1]
-                    : [!y.Ay.isSupported() || y.Ay.isLocalMute(f), !1, y.Ay.isLocalVideoDisabled(f)],
+                    ? [!v.Ay.isSupported() || v.Ay.isSelfMute() || v.Ay.isSelfMutedTemporarily(), v.Ay.isSelfDeaf(), !1]
+                    : [!v.Ay.isSupported() || v.Ay.isLocalMute(f), !1, v.Ay.isLocalVideoDisabled(f)],
             [x, f],
         ),
         w = (0, a.bG)([L.A], () => L.A.isPrioritySpeaker(f)),
         k = (0, c.A)({ userId: f, checkSoundSharing: !0 }),
-        V = (0, a.bG)([v.Ay], () => v.Ay.isGuestOrLurker(l.guild_id, f)),
+        V = (0, a.bG)([y.Ay], () => y.Ay.isGuestOrLurker(l.guild_id, f)),
         B = (0, a.bG)([A.A], () => A.A.getGuildRingingUsers(l.id).has(f)),
         H = (0, a.bG)(
             [d.Ay],
@@ -76,7 +76,7 @@ let k = s.memo((e) => {
         $ = (0, p.Ay)(l, !0, s),
         Z = (0, a.bG)([m.A], () => (x ? m.A.getHangStatusActivity() : null), [x]),
         ee = (0, _.h)(f),
-        et = (0, b.uy)(l.id, f),
+        et = (0, N.uy)(l.id, f),
         { enableVCStatusIcons: en, enableRequestToStream: ei } = E.m.useExperiment(
             { guildId: l.guild_id, location: "VoiceUsers" },
             { autoTrackExposure: K?.session_id != null },
@@ -92,9 +92,9 @@ let k = s.memo((e) => {
             disconnected: et,
             otherClientSessionType: X?.clientInfo?.os,
             voicePlatform: J,
-            localMute: N && !x,
+            localMute: b && !x,
             localVideoDisabled: R,
-            mute: t || N,
+            mute: t || b,
             deaf: n || j,
             speaking: k,
             ringing: B,
@@ -129,19 +129,19 @@ let V = [],
                 children: E,
                 isThread: I = !1,
             } = e,
-            [S, v] = s.useState(null),
-            [y, O] = s.useState(!1),
+            [S, y] = s.useState(null),
+            [v, O] = s.useState(!1),
             L = s.useRef(null),
-            M = (0, b.$n)(l.id, c ?? V),
+            M = (0, N.$n)(l.id, c ?? V),
             { shouldShow: D, dismiss: P } = (0, x.Z)(l, { collapsed: d }),
             B = s.useRef(
                 new o.J_(50, () => {
-                    v(L.current), (L.current = null);
+                    y(L.current), (L.current = null);
                 }),
             ),
             H = s.useRef(
                 new o.J_(175, () => {
-                    v(null);
+                    y(null);
                 }),
             ),
             F = s.useCallback(
@@ -194,7 +194,7 @@ let V = [],
                             canDrag: n && j.A.can(U.xBc.MOVE_MEMBERS, l),
                             showPreview: F,
                             hidePreview: K,
-                            previewIsOpen: y,
+                            previewIsOpen: v,
                             shouldShowHoverPopout: S === s.id,
                             tabIndex: p,
                             location: g,
@@ -212,7 +212,7 @@ let V = [],
         })();
         return null == Y && null == E
             ? null
-            : (0, i.jsxs)(N.Wr, {
+            : (0, i.jsxs)(b.Wr, {
                   className: r()(C, w.p_, { [w.yZ]: d, [w.lY]: _, [w.fT]: I }),
                   collapsed: d,
                   children: [Y, E],

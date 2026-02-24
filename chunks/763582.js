@@ -9,9 +9,9 @@ var i = n(627968),
     d = n(361739),
     c = n(775602),
     u = n(50249),
-    g = n(652215),
-    m = n(985018),
-    x = n(389612);
+    m = n(652215),
+    g = n(985018),
+    x = n(91582);
 function h(e) {
     let { color: t, children: n } = e;
     return (0, i.jsxs)("div", {
@@ -48,7 +48,7 @@ function _(e) {
                         (0, i.jsx)(a.euF, {
                             size: a._3J.SIZE_56,
                             "aria-hidden": !0,
-                            status: g.clD.ONLINE,
+                            status: m.clD.ONLINE,
                             src: t.avatar,
                         }),
                         (0, i.jsx)(a.Text, {
@@ -72,14 +72,14 @@ function A() {
                     avatar: n(75169),
                     roles: [
                         [
-                            { name: m.intl.string(m.t["7oaPPo"]), color: "#7e00fc" },
-                            { name: m.intl.string(m.t["Z/HN61"]), color: "#faa61a" },
-                            { name: m.intl.string(m.t.lvHTg0), color: "#f06ea8" },
+                            { name: g.intl.string(g.t["7oaPPo"]), color: "#7e00fc" },
+                            { name: g.intl.string(g.t["Z/HN61"]), color: "#faa61a" },
+                            { name: g.intl.string(g.t.lvHTg0), color: "#f06ea8" },
                         ],
                         [
-                            { name: m.intl.string(m.t["6yECkg"]), color: "#45ddc0" },
-                            { name: m.intl.string(m.t["5DabCV"]), color: "#00b0f4" },
-                            { name: m.intl.string(m.t.bB900T), color: "#ba1616" },
+                            { name: g.intl.string(g.t["6yECkg"]), color: "#45ddc0" },
+                            { name: g.intl.string(g.t["5DabCV"]), color: "#00b0f4" },
+                            { name: g.intl.string(g.t.bB900T), color: "#ba1616" },
                         ],
                     ],
                 },
@@ -89,14 +89,14 @@ function A() {
                     avatar: n(818573),
                     roles: [
                         [
-                            { name: m.intl.string(m.t["xz/Vfn"]), color: "#4a76e6" },
-                            { name: m.intl.string(m.t.Bceruw), color: "#ad87ff" },
-                            { name: m.intl.string(m.t.W51slj), color: "#6defcf" },
+                            { name: g.intl.string(g.t["xz/Vfn"]), color: "#4a76e6" },
+                            { name: g.intl.string(g.t.Bceruw), color: "#ad87ff" },
+                            { name: g.intl.string(g.t.W51slj), color: "#6defcf" },
                         ],
                         [
-                            { name: m.intl.string(m.t.y9gTiX), color: "#ff73fa" },
-                            { name: m.intl.string(m.t.HslvdS), color: "#3ba55c" },
-                            { name: m.intl.string(m.t.ipL1AG), color: "#ff1b66" },
+                            { name: g.intl.string(g.t.y9gTiX), color: "#ff73fa" },
+                            { name: g.intl.string(g.t.HslvdS), color: "#3ba55c" },
+                            { name: g.intl.string(g.t.ipL1AG), color: "#ff1b66" },
                         ],
                     ],
                 },
@@ -106,14 +106,14 @@ function A() {
                     avatar: n(516574),
                     roles: [
                         [
-                            { name: m.intl.string(m.t.pAFEbr), color: "#20d6b8" },
-                            { name: m.intl.string(m.t["p/HZEE"]), color: "#236136" },
-                            { name: m.intl.string(m.t["9Qp/JQ"]), color: "#ff9a15" },
+                            { name: g.intl.string(g.t.pAFEbr), color: "#20d6b8" },
+                            { name: g.intl.string(g.t["p/HZEE"]), color: "#236136" },
+                            { name: g.intl.string(g.t["9Qp/JQ"]), color: "#ff9a15" },
                         ],
                         [
-                            { name: m.intl.string(m.t.craF5a), color: "#ff78b9" },
-                            { name: m.intl.string(m.t.L1TvXF), color: "#00b0f4" },
-                            { name: m.intl.string(m.t.lqKz9F), color: "#6f52e4" },
+                            { name: g.intl.string(g.t.craF5a), color: "#ff78b9" },
+                            { name: g.intl.string(g.t.L1TvXF), color: "#00b0f4" },
+                            { name: g.intl.string(g.t.lqKz9F), color: "#6f52e4" },
                         ],
                     ],
                 },
@@ -141,7 +141,7 @@ function A() {
 function p(e) {
     let { guild: t, everyoneRole: n, setEditRoleId: l } = e,
         [r, c] = s.useState(!1),
-        g = async () => {
+        m = async () => {
             c(!0), await o.A.createRole(t.id), c(!1);
         },
         h = s.useCallback(() => {
@@ -151,25 +151,25 @@ function p(e) {
         children: (0, i.jsxs)("div", {
             className: x.uW,
             children: [
-                (0, i.jsx)(a.Heading, { variant: "heading-lg/semibold", children: m.intl.string(m.t["LPJmL/"]) }),
+                (0, i.jsx)(a.Heading, { variant: "heading-lg/semibold", children: g.intl.string(g.t["LPJmL/"]) }),
                 (0, i.jsxs)("div", {
                     className: x.kL,
                     children: [
                         (0, i.jsx)(A, {}),
-                        (0, i.jsx)(a.Heading, { variant: "heading-xl/semibold", children: m.intl.string(m.t.ALlnbi) }),
+                        (0, i.jsx)(a.Heading, { variant: "heading-xl/semibold", children: g.intl.string(g.t.ALlnbi) }),
                         (0, i.jsx)(a.Text, {
                             color: "text-default",
                             variant: "text-md/normal",
                             className: x.NQ,
-                            children: m.intl.string(m.t["1ydhVp"]),
+                            children: g.intl.string(g.t["1ydhVp"]),
                         }),
                         (0, i.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: x.x6,
                             children: (0, i.jsx)(a.Button, {
                                 variant: "primary",
-                                text: m.intl.string(m.t.JZZjQK),
-                                onClick: g,
+                                text: g.intl.string(g.t.JZZjQK),
+                                onClick: m,
                                 loading: r,
                             }),
                         }),

@@ -1,4 +1,4 @@
-n.d(t, { A: () => M }), n(323874), n(14289), n(35956);
+n.d(t, { A: () => w }), n(323874), n(14289), n(35956);
 var i = n(627968);
 n(64700);
 var r = n(835245),
@@ -19,20 +19,20 @@ var r = n(835245),
     I = n(200330),
     f = n(708281),
     C = n(807876),
-    N = n(890687),
-    T = n(976860),
+    T = n(890687),
+    N = n(976860),
     S = n(962173),
     x = n(287809),
     v = n(954571),
     y = n(203982),
     b = n(998218),
-    L = n(837921),
-    O = n(636401),
+    O = n(837921),
+    L = n(636401),
     R = n(43203),
     P = n(613057),
     j = n(652215),
     D = n(654487);
-function w(e, t) {
+function M(e, t) {
     null != e &&
         v.default.track(j.HAw.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
             invite_code: null,
@@ -42,7 +42,7 @@ function w(e, t) {
             link_type: t,
         });
 }
-let M = {
+let w = {
     [j.e$_.INVITE_BROWSER]: {
         scope: P.LQ,
         async handler(e) {
@@ -61,11 +61,11 @@ let M = {
             if (null == x.default.getCurrentUser()) return;
             let { guildTemplate: r } = await E.A.resolveGuildTemplate(t);
             if (null == r)
-                throw new O.A({ errorCode: j.Lw6.INVALID_GUILD_TEMPLATE }, `Invalid guild template id: ${t}`);
+                throw new L.A({ errorCode: j.Lw6.INVALID_GUILD_TEMPLATE }, `Invalid guild template id: ${t}`);
             return (
-                L.Ay.focus(),
+                O.Ay.focus(),
                 (0, a.mMO)(async () => {
-                    let { default: e } = await Promise.all([n.e("7726"), n.e("4042")]).then(n.bind(n, 72715));
+                    let { default: e } = await Promise.all([n.e("7726"), n.e("58938")]).then(n.bind(n, 72715));
                     return (t) => (0, i.jsx)(e, { ...t, guildTemplate: r });
                 }),
                 { guildTemplate: r, code: t }
@@ -83,15 +83,15 @@ let M = {
                     A.A.resolveGiftCode(t, !0, !0)
                         .then((r) => {
                             let { giftCode: l } = r;
-                            L.Ay.focus(),
+                            O.Ay.focus(),
                                 v.default.track(j.HAw.OPEN_MODAL, { type: "gift_accept", location: j.$OG }),
                                 (0, a.mMO)(async () => {
-                                    let { default: e } = await n.e("14439").then(n.bind(n, 67327));
+                                    let { default: e } = await n.e("36820").then(n.bind(n, 67327));
                                     return (n) => (0, i.jsx)(e, { code: t, ...n });
                                 }),
                                 e({ giftCode: l });
                         })
-                        .catch(() => r(new O.A({ errorCode: j.Lw6.INVALID_GIFT_CODE }, `Invalid gift code: ${t}`)));
+                        .catch(() => r(new L.A({ errorCode: j.Lw6.INVALID_GIFT_CODE }, `Invalid gift code: ${t}`)));
                 });
             });
         },
@@ -102,66 +102,66 @@ let M = {
             let {
                 args: { type: t, params: i },
             } = e;
-            switch ((L.Ay.focus(), t)) {
+            switch ((O.Ay.focus(), t)) {
                 case P.XK.USER_SETTINGS:
                     null != i &&
-                        ((0, T.bG)({ pathname: j.BVt.SETTINGS(i.section, i.subsection), search: i.search }),
-                        w(i.fingerprint, (0, P.OE)(t)));
+                        ((0, N.bG)({ pathname: j.BVt.SETTINGS(i.section, i.subsection), search: i.search }),
+                        M(i.fingerprint, (0, P.OE)(t)));
                     break;
                 case P.XK.CHANGELOG:
                     null != i &&
-                        ((0, T.bG)(b.A.formatPathWithQuery(j.BVt.CHANGELOGS(i.date), i.query)),
-                        w(i.fingerprint, (0, P.OE)(t)));
+                        ((0, N.bG)(b.A.formatPathWithQuery(j.BVt.CHANGELOGS(i.date), i.query)),
+                        M(i.fingerprint, (0, P.OE)(t)));
                     break;
                 case P.XK.LIBRARY:
-                    (0, T.bG)(j.BVt.APPLICATION_LIBRARY), null != i && w(i.fingerprint, (0, P.OE)(t));
+                    (0, N.bG)(j.BVt.APPLICATION_LIBRARY), null != i && M(i.fingerprint, (0, P.OE)(t));
                     break;
                 case P.XK.STORE_HOME:
-                    (0, T.bG)(j.BVt.APPLICATION_STORE), null != i && w(i.fingerprint, (0, P.OE)(t));
+                    (0, N.bG)(j.BVt.APPLICATION_STORE), null != i && M(i.fingerprint, (0, P.OE)(t));
                     break;
                 case P.XK.STORE_LISTING:
                     null != i &&
-                        ((0, T.bG)(j.BVt.APPLICATION_STORE_LISTING_SKU(i.skuId, i.slug)),
-                        w(i.fingerprint, (0, P.OE)(t)));
+                        ((0, N.bG)(j.BVt.APPLICATION_STORE_LISTING_SKU(i.skuId, i.slug)),
+                        M(i.fingerprint, (0, P.OE)(t)));
                     break;
                 case P.XK.PICK_GUILD_SETTINGS:
                     null != i &&
-                        ((0, T.bG)({ pathname: j.BVt.PICK_GUILD_SETTINGS(i.section, i.subsection), search: i.search }),
-                        w(i.fingerprint, (0, P.OE)(t)));
+                        ((0, N.bG)({ pathname: j.BVt.PICK_GUILD_SETTINGS(i.section, i.subsection), search: i.search }),
+                        M(i.fingerprint, (0, P.OE)(t)));
                     break;
                 case P.XK.CHANNEL:
                     null != i &&
-                        ((0, T.bG)({ pathname: j.BVt.CHANNEL(i.guildId, i.channelId, i.messageId), search: i.search }),
-                        w(i.fingerprint, (0, P.OE)(t)));
+                        ((0, N.bG)({ pathname: j.BVt.CHANNEL(i.guildId, i.channelId, i.messageId), search: i.search }),
+                        M(i.fingerprint, (0, P.OE)(t)));
                     break;
                 case P.XK.GAME_SHOP:
                     null != i &&
-                        ((0, T.bG)({ pathname: j.BVt.CHANNELS_GAME_SHOP(i.guildId, i.pageIndex, i.skuId, i.slug) }),
-                        w(i.fingerprint, (0, P.OE)(t)));
+                        ((0, N.bG)({ pathname: j.BVt.CHANNELS_GAME_SHOP(i.guildId, i.pageIndex, i.skuId, i.slug) }),
+                        M(i.fingerprint, (0, P.OE)(t)));
                     break;
                 case P.XK.QUEST_HOME:
                     if (null != i) {
                         let e = new URLSearchParams();
-                        null != i.sort && e.set(N.L1.SORT, i.sort),
-                            null != i.filter && e.set(N.L1.FILTER, i.filter),
-                            null != i.tab && e.set(N.L1.TAB, i.tab),
-                            (0, T.bG)({ pathname: j.BVt.QUEST_HOME_V2, hash: i.questId, search: `?${e.toString()}` }),
-                            w(i.fingerprint, (0, P.OE)(t));
-                    } else (0, T.bG)(j.BVt.QUEST_HOME_V2);
+                        null != i.sort && e.set(T.L1.SORT, i.sort),
+                            null != i.filter && e.set(T.L1.FILTER, i.filter),
+                            null != i.tab && e.set(T.L1.TAB, i.tab),
+                            (0, N.bG)({ pathname: j.BVt.QUEST_HOME_V2, hash: i.questId, search: `?${e.toString()}` }),
+                            M(i.fingerprint, (0, P.OE)(t));
+                    } else (0, N.bG)(j.BVt.QUEST_HOME_V2);
                     break;
                 case P.XK.QUEST_PREVIEW_TOOL:
                     if ((0, C.U)({ location: D.rE.QUEST_PREVIEW_TOOL_2 }) && null != i) {
                         let e = new URLSearchParams();
-                        e.set(N.L1.TAB, N.NC.PREVIEW_TOOL),
-                            null != i.questId && e.set(N.L1.QUEST_ID, i.questId),
-                            (0, T.bG)({ pathname: j.BVt.QUEST_HOME_V2, search: `?${e.toString()}` }),
-                            w(i.fingerprint, (0, P.OE)(t));
+                        e.set(T.L1.TAB, T.NC.PREVIEW_TOOL),
+                            null != i.questId && e.set(T.L1.QUEST_ID, i.questId),
+                            (0, N.bG)({ pathname: j.BVt.QUEST_HOME_V2, search: `?${e.toString()}` }),
+                            M(i.fingerprint, (0, P.OE)(t));
                     }
                     break;
                 case P.XK.DISCOVERY_GAME_RESULTS:
                     null != i &&
-                        ((0, T.bG)({ pathname: j.BVt.GLOBAL_DISCOVERY_SERVERS, search: `?game=${i.gameId}` }),
-                        w(i.fingerprint, (0, P.OE)(t)));
+                        ((0, N.bG)({ pathname: j.BVt.GLOBAL_DISCOVERY_SERVERS, search: `?game=${i.gameId}` }),
+                        M(i.fingerprint, (0, P.OE)(t)));
                     break;
                 case P.XK.OAUTH2:
                     let l = new URL(j.BVt.OAUTH2_AUTHORIZE, window.location.origin);
@@ -170,15 +170,15 @@ let M = {
                     if (null != a) return (0, I.openOAuth2ModalWithCreateGuildModal)(a), !0;
                     return !1;
                 case P.XK.ONE_TIME_LOGIN:
-                    if (null != i) return (0, f.N)({ token: i.token }), w(i.fingerprint, (0, P.OE)(t)), !0;
+                    if (null != i) return (0, f.N)({ token: i.token }), M(i.fingerprint, (0, P.OE)(t)), !0;
                     return !1;
                 case P.XK.SHOP:
                     null != i &&
-                        ((0, T.bG)({ pathname: j.BVt.COLLECTIBLES_SHOP, search: i.search }),
-                        w(i.fingerprint, (0, P.OE)(t)));
+                        ((0, N.bG)({ pathname: j.BVt.COLLECTIBLES_SHOP, search: i.search }),
+                        M(i.fingerprint, (0, P.OE)(t)));
                     break;
                 case P.XK.FEATURES:
-                    i?.path != null && ((0, T.bG)({ pathname: i.path }), w(i.fingerprint, (0, P.OE)(t)));
+                    i?.path != null && ((0, N.bG)({ pathname: i.path }), M(i.fingerprint, (0, P.OE)(t)));
                     break;
                 case P.XK.ACTIVITIES:
                     if (null != i) {
@@ -233,7 +233,7 @@ let M = {
                                     });
                                 }
                             })(i.applicationId, i.url, e),
-                            w(i.fingerprint, (0, P.OE)(t)),
+                            M(i.fingerprint, (0, P.OE)(t)),
                             !0
                         );
                     }
@@ -241,7 +241,7 @@ let M = {
                 case P.XK.PLAYGROUND:
                     if (null != i) {
                         let { openPlayground: e } = n(965042);
-                        e(i.collection, i.story), w(i.fingerprint, (0, P.OE)(t));
+                        e(i.collection, i.story), M(i.fingerprint, (0, P.OE)(t));
                     }
             }
         },
@@ -252,7 +252,7 @@ let M = {
             let {
                 args: { handoffToken: t, fingerprint: n },
             } = e;
-            L.Ay.focus(null, !0), (0, d.mZ)(t, n);
+            O.Ay.focus(null, !0), (0, d.mZ)(t, n);
         },
     },
     [j.e$_.CONNECTIONS_CALLBACK]: {
@@ -262,7 +262,7 @@ let M = {
                 args: { providerType: t, code: n, openid_params: i, iss: r, state: l },
             } = e;
             if (!S.A.hasPendingAuthorizedState(l))
-                throw new O.A(
+                throw new L.A(
                     { errorCode: j.Lw6.INVALID_CONNECTION_CALLBACK_STATE },
                     "Provider authorization did not originate from this discord client",
                 );
@@ -273,7 +273,7 @@ let M = {
                 );
             } catch (e) {
                 if (e?.status === 400)
-                    throw new O.A({ errorCode: j.Lw6.BAD_REQUEST_FOR_PROVIDER }, "Bad request for provider");
+                    throw new L.A({ errorCode: j.Lw6.BAD_REQUEST_FOR_PROVIDER }, "Bad request for provider");
                 throw (y._.dispatch(j.jej.CONNECTIONS_CALLBACK_ERROR), e);
             }
         },

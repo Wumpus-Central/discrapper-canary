@@ -9,13 +9,13 @@ var i = n(627968),
     d = n(60175),
     c = n(90084),
     u = n(42780),
-    g = n(997509),
-    m = n(555337),
+    m = n(997509),
+    g = n(555337),
     x = n(583047),
     h = n(501381),
     _ = n(652215),
     A = n(985018),
-    p = n(5425);
+    p = n(551511);
 let f = {
     id: "0",
     name: "",
@@ -37,9 +37,9 @@ let f = {
 };
 function j(e) {
     let { pendingFields: t } = e,
-        { guild: n, guildProfile: j } = (0, a.cf)([m.A], () => ({
-            guild: m.A.getGuild(),
-            guildProfile: m.A.getGuildProfile(),
+        { guild: n, guildProfile: j } = (0, a.cf)([g.A], () => ({
+            guild: g.A.getGuild(),
+            guildProfile: g.A.getGuildProfile(),
         })),
         N = n?.id,
         E = (0, a.bG)([d.A], () => d.A.get(N)),
@@ -53,11 +53,11 @@ function j(e) {
         v = s.useCallback(() => {
             n?.id != null &&
                 (C
-                    ? g.A.updateGuildProfile(n.id, { visibility: l.n.PUBLIC })
-                    : g.A.updateGuildProfile(n.id, { visibility: l.n.PUBLIC_WITH_RECRUITMENT }));
+                    ? m.A.updateGuildProfile(n.id, { visibility: l.n.PUBLIC })
+                    : m.A.updateGuildProfile(n.id, { visibility: l.n.PUBLIC_WITH_RECRUITMENT }));
         }, [n?.id, C]),
         S = s.useCallback(() => {
-            g.A.setSection(_.BEX.PROFILE);
+            m.A.setSection(_.BEX.PROFILE);
         }, []);
     if (null == n) return null;
     let y = t ?? E?.formFields;

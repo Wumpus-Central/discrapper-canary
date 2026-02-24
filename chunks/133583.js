@@ -28,13 +28,13 @@ var i = n(627968),
     C = n(300131),
     k = n(518477),
     R = n(188275),
-    w = n(985018),
-    O = n(39427);
-function L(e) {
+    O = n(985018),
+    L = n(376721);
+function w(e) {
     let { isSocialLayerStorefrontEnabled: t, handleOpenShop: n, handleOpenGameShop: l } = e;
     return t
         ? (0, i.jsx)(S.A, {
-              title: w.intl.string(w.t["i/yzHs"]),
+              title: O.intl.string(O.t["i/yzHs"]),
               handleOpenCollectiblesShop: n,
               handleOpenGameShop: l,
               socialLayerStorefrontApplicationId: R.XR,
@@ -43,7 +43,7 @@ function L(e) {
               variant: "secondary",
               size: "sm",
               icon: c.U1X,
-              text: w.intl.string(w.t["i/yzHs"]),
+              text: O.intl.string(O.t["i/yzHs"]),
               onClick: n,
           });
 }
@@ -57,11 +57,11 @@ function P(e) {
         socialLayerStorefrontApplicationId: r,
     } = e;
     return (0, i.jsxs)("div", {
-        className: O.$s,
+        className: L.$s,
         children: [
             t
                 ? (0, i.jsx)(S.A, {
-                      title: w.intl.string(w.t.SDUwM0),
+                      title: O.intl.string(O.t.SDUwM0),
                       handleOpenCollectiblesShop: l,
                       handleOpenGameShop: a,
                       socialLayerStorefrontApplicationId: r,
@@ -70,7 +70,7 @@ function P(e) {
                       variant: "secondary",
                       size: "sm",
                       icon: c.j96,
-                      text: w.intl.string(w.t.SDUwM0),
+                      text: O.intl.string(O.t.SDUwM0),
                       onClick: l,
                   }),
             (0, i.jsx)(C.A, { isOwner: !0, isWishlistPublic: n, onToggleVisibility: s }),
@@ -141,20 +141,20 @@ function D(e) {
                 fade: !0,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: O.y7,
+                        className: L.y7,
                         children: [
                             (0, i.jsxs)("div", {
-                                className: O.q6,
+                                className: L.q6,
                                 children: [
                                     (0, i.jsx)(c.Heading, {
                                         variant: "heading-md/medium",
                                         color: "text-strong",
-                                        children: w.intl.string(w.t.HGnLLT),
+                                        children: O.intl.string(O.t.HGnLLT),
                                     }),
                                     (0, i.jsx)(c.Text, {
                                         variant: "text-sm/normal",
                                         color: "text-default",
-                                        children: w.intl.string(w.t["/X1ny6"]),
+                                        children: O.intl.string(O.t["/X1ny6"]),
                                     }),
                                 ],
                             }),
@@ -166,7 +166,7 @@ function D(e) {
                                             variant: "primary",
                                             size: "sm",
                                             icon: c.U1X,
-                                            text: w.intl.string(w.t.ZbS4QB),
+                                            text: O.intl.string(O.t.ZbS4QB),
                                             onClick: Z,
                                         }),
                                     V &&
@@ -174,7 +174,7 @@ function D(e) {
                                             variant: "primary",
                                             size: "sm",
                                             icon: c.U1X,
-                                            text: W === R.XR ? w.intl.string(w.t["kq/75v"]) : w.intl.string(w.t.apFNLU),
+                                            text: W === R.XR ? O.intl.string(O.t["kq/75v"]) : O.intl.string(O.t.apFNLU),
                                             onMouseDown: $,
                                             onClick: ee,
                                         }),
@@ -182,30 +182,30 @@ function D(e) {
                             }),
                         ],
                     }),
-                    K && (0, i.jsx)(h.A, { user: t, isOwner: M, wishlist: X, analyticsLocations: G, className: O._E }),
+                    K && (0, i.jsx)(h.A, { user: t, isOwner: M, wishlist: X, analyticsLocations: G, className: L._E }),
                 ],
             })
           : (0, i.jsxs)(y.K, {
                 scrollerRef: n,
-                className: O.XG,
+                className: L.XG,
                 fade: !0,
                 children: [
                     (0, i.jsx)(b.A, { scrollerRef: n }),
                     (0, i.jsxs)("div", {
                         ref: J,
-                        className: O.U1,
+                        className: L.U1,
                         children: [
                             (0, i.jsxs)("div", {
-                                className: O.Us,
+                                className: L.Us,
                                 children: [
                                     (0, i.jsx)(c.Text, {
                                         variant: "text-xs/semibold",
                                         color: "text-subtle",
-                                        children: w.intl.format(w.t.r6Y1Lg, { count: X.items.length }),
+                                        children: O.intl.format(O.t.r6Y1Lg, { count: X.items.length }),
                                     }),
                                     !H &&
                                         (0, i.jsx)(o.m, {
-                                            text: w.intl.string(w.t.RX7D9h),
+                                            text: O.intl.string(O.t.RX7D9h),
                                             asContainer: !0,
                                             children: (0, i.jsx)(c.vN3, {
                                                 children: (0, i.jsx)("div", {
@@ -222,7 +222,7 @@ function D(e) {
                                     H &&
                                         F &&
                                         (0, i.jsx)(o.m, {
-                                            text: w.intl.string(w.t.d78ChW),
+                                            text: O.intl.string(O.t.d78ChW),
                                             asContainer: !0,
                                             children: (0, i.jsx)(c.vN3, {
                                                 children: (0, i.jsx)("div", {
@@ -247,7 +247,7 @@ function D(e) {
                                       handleToggleWishlistVisibility: Q,
                                       socialLayerStorefrontApplicationId: W,
                                   })
-                                : (0, i.jsx)(L, {
+                                : (0, i.jsx)(w, {
                                       isSocialLayerStorefrontEnabled: V,
                                       handleOpenShop: Z,
                                       handleOpenGameShop: ee,
@@ -255,7 +255,7 @@ function D(e) {
                         ],
                     }),
                     (0, i.jsx)(N.A, { items: X.items, profileOwner: t, isOwner: M }),
-                    K && (0, i.jsx)(h.A, { user: t, isOwner: M, wishlist: X, analyticsLocations: G, className: O.HZ }),
+                    K && (0, i.jsx)(h.A, { user: t, isOwner: M, wishlist: X, analyticsLocations: G, className: L.HZ }),
                 ],
             });
 }

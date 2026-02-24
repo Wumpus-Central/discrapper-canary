@@ -20,12 +20,12 @@ var i = n(627968),
     C = n(694318),
     E = n(143413),
     I = n(763754),
-    b = n(467073),
-    N = n(491182),
+    N = n(467073),
+    b = n(491182),
     S = n(860227),
     T = n(756369),
-    v = n(538355),
-    y = n(522871),
+    y = n(538355),
+    v = n(522871),
     j = n(715628),
     R = n(752636),
     O = n(675722),
@@ -34,8 +34,8 @@ var i = n(627968),
     D = n(888675),
     G = n(652215),
     U = n(985018),
-    P = n(410132),
-    w = n(119907);
+    P = n(785186),
+    w = n(50397);
 let k = s.memo(function e(t) {
     let n,
         {
@@ -62,12 +62,12 @@ let k = s.memo(function e(t) {
         J = p.kt.useSetting(),
         Q = (0, d.S)((l.editedTimestamp ?? l.timestamp).valueOf()),
         $ = (0, u.A)(s?.id),
-        { disableReactionCreates: Z } = (0, b.A)(s),
+        { disableReactionCreates: Z } = (0, N.A)(s),
         {
             content: ee,
             hasSpoilerEmbeds: et,
             hasBailedAst: en,
-        } = (0, v.A)(l, {
+        } = (0, y.A)(l, {
             hideSimpleEmbedContent: X && q,
             allowList: Q,
             allowHeading: Q,
@@ -81,7 +81,7 @@ let k = s.memo(function e(t) {
         ),
         el = l.type === G.lAJ.THREAD_STARTER_MESSAGE && W.state === A.a.LOADED && null != Y,
         er = !el && void 0 === n,
-        ea = (0, y.A)({ message: l, channel: s, enabled: er }),
+        ea = (0, v.A)({ message: l, channel: s, enabled: er }),
         eo = (0, c.P)(l),
         ec = (0, f._f)(l.id, l.channel_id),
         ed = (0, h.A)(l),
@@ -95,7 +95,7 @@ let k = s.memo(function e(t) {
                   : (0, C.kf)(l) && F && (n = U.t.xfkfTK),
             void 0 !== n)
           ? (0, i.jsx)(V, { className: D, compact: o, count: 1, collapsedReason: n })
-          : (0, i.jsx)(N.A, {
+          : (0, i.jsx)(b.A, {
                 compact: o,
                 className: r()(D, { [w.M1]: (0, x.ec)(l), [w.XN]: B, [w._A]: t.isGroupStart }),
                 childrenRepliedMessage: (0, M.A)(l, s, K, W, o),
@@ -140,7 +140,7 @@ let k = s.memo(function e(t) {
 });
 function V(e) {
     let { className: t, count: n, compact: s, collapsedReason: l } = e;
-    return (0, i.jsx)(N.A, {
+    return (0, i.jsx)(b.A, {
         className: t,
         compact: s,
         role: "group",

@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { p: () => v });
+n.d(t, { p: () => y });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
     r = n.n(l),
-    a = n(475539),
+    a = n(442215),
     o = n(110259),
     c = n(311907),
     d = n(435371),
@@ -20,14 +20,14 @@ var i = n(627968),
     C = n(954571),
     E = n(778768),
     I = n(652215),
-    b = n(985018),
-    N = n(430023),
-    S = n(77615);
+    N = n(985018),
+    b = n(314957),
+    S = n(377157);
 let T = (e) => 1 - Math.pow(1 - e, 4);
-function v(e) {
+function y(e) {
     let { channel: t, onClose: l } = e,
-        v = s.useRef(null),
-        [y, j] = s.useState(!1),
+        y = s.useRef(null),
+        [v, j] = s.useState(!1),
         R = s.useRef(null),
         O = s.useRef(null),
         [L, M] = s.useState(0),
@@ -42,7 +42,7 @@ function v(e) {
         P = (0, c.bG)([f.A], () => f.A.getGuild(t.guild_id)),
         [w, k] = s.useState(!1),
         V = s.useRef(null),
-        { isHoveringOrFocusing: B } = (0, m.A)(G ? v : V),
+        { isHoveringOrFocusing: B } = (0, m.A)(G ? y : V),
         [H, F] = s.useState(!1),
         K = B || H,
         W = s.useCallback(
@@ -62,7 +62,7 @@ function v(e) {
         Y = s.useCallback(() => {
             null != P &&
                 (0, u.mMO)(async () => {
-                    let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("74918")]).then(
+                    let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("97710")]).then(
                         n.bind(n, 234355),
                     );
                     return (n) => (0, i.jsx)(e, { ...n, guild: P, channel: t, source: I.PE1.VOICE_INVITE_SUGGESTIONS });
@@ -118,8 +118,8 @@ function v(e) {
         }, []);
     return G
         ? (0, i.jsx)(u.YNO, {
-              targetElementRef: v,
-              shouldShow: y,
+              targetElementRef: y,
+              shouldShow: v,
               position: "right",
               align: "top",
               spacing: U ?? 8,
@@ -130,31 +130,31 @@ function v(e) {
               children: (e) => {
                   let { onClick: t, ...n } = e;
                   return (0, i.jsx)(a.animated.div, {
-                      className: N.lY,
+                      className: b.lY,
                       style: z,
                       children: (0, i.jsx)(u.DUT, {
-                          innerRef: v,
-                          className: r()({ [N.vk]: !w }, S.q7, S.L9, S.vk),
+                          innerRef: y,
+                          className: r()({ [b.vk]: !w }, S.q7, S.L9, S.vk),
                           "aria-disabled": w,
-                          "aria-label": b.intl.string(b.t.F3qiJr),
+                          "aria-label": N.intl.string(N.t.F3qiJr),
                           onClick: Y,
                           ...n,
                           children: (0, i.jsxs)("div", {
-                              className: r()(N.Qs, S.Qs),
+                              className: r()(b.Qs, S.Qs),
                               children: [
                                   (0, i.jsxs)("div", {
-                                      className: N.R4,
+                                      className: b.R4,
                                       style: { "--custom-voice-invite-suggestions-timer-size": 24 },
                                       children: [
                                           (0, i.jsxs)(
                                               "svg",
                                               {
-                                                  className: r()(N.O1, { [N.Ft]: K }),
+                                                  className: r()(b.O1, { [b.Ft]: K }),
                                                   viewBox: "0 0 24 24",
                                                   style: { "--custom-voice-invite-suggestions-timer-duration": 1e4 },
                                                   children: [
-                                                      (0, i.jsx)("circle", { className: N.qB }),
-                                                      (0, i.jsx)("circle", { className: N.hN }),
+                                                      (0, i.jsx)("circle", { className: b.qB }),
+                                                      (0, i.jsx)("circle", { className: b.hN }),
                                                   ],
                                               },
                                               `voice-invite-suggestions-timer-${L}`,
@@ -164,34 +164,34 @@ function v(e) {
                                               width: 14,
                                               height: 14,
                                               color: "currentColor",
-                                              className: r()(N.Hk, N.Kk),
+                                              className: r()(b.Hk, b.Kk),
                                           }),
                                       ],
                                   }),
                                   (0, i.jsx)(d.m_, {
-                                      text: b.intl.string(b.t["EE+P0H"]),
+                                      text: N.intl.string(N.t["EE+P0H"]),
                                       overflowOnly: !0,
                                       children: (0, i.jsx)(u.Text, {
                                           variant: "text-sm/medium",
-                                          className: N.Pf,
+                                          className: b.Pf,
                                           lineClamp: 1,
-                                          children: b.intl.string(b.t["EE+P0H"]),
+                                          children: N.intl.string(N.t["EE+P0H"]),
                                       }),
                                   }),
                                   B
                                       ? (0, i.jsx)(u.DUT, {
-                                            className: N.VN,
+                                            className: b.VN,
                                             onClick: (e) => {
                                                 e.stopPropagation(), q("user_explicit");
                                             },
-                                            "aria-label": b.intl.string(b.t.cpT0Cq),
+                                            "aria-label": N.intl.string(N.t.cpT0Cq),
                                             children: (0, i.jsx)(u.PGe, {
                                                 size: "xs",
                                                 color: "currentColor",
-                                                className: N.Kk,
+                                                className: b.Kk,
                                             }),
                                         })
-                                      : (0, i.jsx)(u._BQ, { size: "xs", color: "currentColor", className: N.Kk }),
+                                      : (0, i.jsx)(u._BQ, { size: "xs", color: "currentColor", className: b.Kk }),
                               ],
                           }),
                       }),

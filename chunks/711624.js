@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { A: () => S, p: () => y });
+n.d(t, { A: () => S, p: () => T });
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    s = n(522160),
+    s = n.n(i),
+    a = n(442215),
     o = n(435371),
     l = n(397927),
     u = n(688810),
@@ -12,115 +12,115 @@ var i = n(503698),
     d = n(313375),
     _ = n(473145),
     f = n(987144),
-    h = n(963894),
-    p = n(652215),
-    g = n(788868),
+    p = n(963894),
+    h = n(652215),
+    m = n(788868),
     E = n(985018),
-    A = n(333354),
-    I = n(195450);
-function T(e) {
+    g = n(136708),
+    A = n(68748);
+function I(e) {
     switch (e) {
-        case p.TVA.TIER_3:
-            return p.AnalyticsObjectTypes.TIER_3;
-        case p.TVA.TIER_2:
-            return p.AnalyticsObjectTypes.TIER_2;
-        case p.TVA.TIER_1:
-            return p.AnalyticsObjectTypes.TIER_1;
+        case h.TVA.TIER_3:
+            return h.AnalyticsObjectTypes.TIER_3;
+        case h.TVA.TIER_2:
+            return h.AnalyticsObjectTypes.TIER_2;
+        case h.TVA.TIER_1:
+            return h.AnalyticsObjectTypes.TIER_1;
         default:
             throw Error(`Unsupported Boosting tier: ${e}`);
     }
 }
-let y = { [p.TVA.NONE]: 0, [p.TVA.TIER_1]: 1 / 3, [p.TVA.TIER_2]: 2 / 3, [p.TVA.TIER_3]: 1 },
+let T = { [h.TVA.NONE]: 0, [h.TVA.TIER_1]: 1 / 3, [h.TVA.TIER_2]: 2 / 3, [h.TVA.TIER_3]: 1 },
     S = function (e) {
         let {
                 children: t,
                 confettiTriggerRef: n,
                 guild: i,
                 isProgressBarAnimationComplete: S,
-                setConfettiCount: v,
-                setShouldFireConfetti: C,
-                tier: b,
-                tierMarkerAnimationPosition: N,
-                totalAvailableBoostsCount: R,
+                setConfettiCount: y,
+                setShouldFireConfetti: v,
+                tier: N,
+                tierMarkerAnimationPosition: C,
+                totalAvailableBoostsCount: b,
             } = e,
-            { analyticsLocations: O } = (0, u.Ay)(),
-            D = (0, c.A)(),
-            L = p.M2T[b],
-            w = L - R,
-            x = b <= N || S,
-            P = x && b <= i.premiumTier,
-            M = x && b < i.premiumTier,
-            k = x && b === i.premiumTier,
-            U = i.premiumTier < b && R >= L,
-            { scaleFactor: G } = (0, l.zhh)({
+            { analyticsLocations: R } = (0, u.Ay)(),
+            O = (0, c.A)(),
+            D = h.M2T[N],
+            L = D - b,
+            w = N <= C || S,
+            x = w && N <= i.premiumTier,
+            M = w && N < i.premiumTier,
+            P = w && N === i.premiumTier,
+            k = i.premiumTier < N && b >= D,
+            { scaleFactor: U } = (0, l.zhh)({
                 from: { scaleFactor: 0 },
-                to: { scaleFactor: N >= b || (S && N + 1 === b) || (S && -1 === N && b === p.TVA.NONE) ? 1 : 0 },
+                to: { scaleFactor: C >= N || (S && C + 1 === N) || (S && -1 === C && N === h.TVA.NONE) ? 1 : 0 },
                 config: { tension: 360, friction: 12 },
             }),
-            F = (0, r.jsxs)(r.Fragment, {
+            G = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(s.animated.div, {
-                        className: I.sO,
-                        style: { transform: G.to((e) => `translate(-50%, -50%) scale(${e})`) },
+                    (0, r.jsx)(a.animated.div, {
+                        className: A.sO,
+                        style: { transform: U.to((e) => `translate(-50%, -50%) scale(${e})`) },
                     }),
-                    b !== p.TVA.NONE
-                        ? U
-                            ? (0, r.jsx)(l.x8N, { className: a()(I.Wo, I.GV), size: "xxs", color: "currentColor" })
-                            : (0, r.jsx)(d.A, { tier: b, color: "currentColor", className: I.Wo })
+                    N !== h.TVA.NONE
+                        ? k
+                            ? (0, r.jsx)(l.x8N, { className: s()(A.Wo, A.GV), size: "xxs", color: "currentColor" })
+                            : (0, r.jsx)(d.A, { tier: N, color: "currentColor", className: A.Wo })
                         : void 0,
                 ],
             });
-        function V() {
-            !x ||
-                U ||
+        function F() {
+            !w ||
+                k ||
                 (0, f.g)({
-                    analyticsLocations: O,
+                    analyticsLocations: R,
                     analyticsLocation: {
-                        page: p.liQ.PREMIUM_GUILD_USER_MODAL,
-                        section: p.JJy.PREMIUM_GUILD_USER_MODAL_PROGRESS_BAR,
-                        object: p.ZSU.SUBSCRIBE_TO_TIER_BUTTON,
-                        objectType: T(b),
+                        page: h.liQ.PREMIUM_GUILD_USER_MODAL,
+                        section: h.JJy.PREMIUM_GUILD_USER_MODAL_PROGRESS_BAR,
+                        object: h.ZSU.SUBSCRIBE_TO_TIER_BUTTON,
+                        objectType: I(N),
                     },
-                    numberOfBoostsToAdd: w,
+                    numberOfBoostsToAdd: L,
                     guild: i,
                 });
         }
-        let B = !P && D.fractionalState === g.xc.NONE,
-            j = B ? l.DUT : "div",
-            H = B ? { onClick: V } : {},
-            Y = P
-                ? E.intl.formatToPlainString(E.t["1o48ki"], { tierName: (0, _.gb)(b, { useLevels: !1 }) })
-                : U
-                  ? E.intl.formatToPlainString(A.default["9CtPjt"], { perk: (0, _.gb)(b, { useLevels: !1 }) })
+        let V = !x && O.fractionalState === m.xc.NONE,
+            B = V ? l.DUT : "div",
+            H = V ? { onClick: F } : {},
+            j = x
+                ? E.intl.formatToPlainString(E.t["1o48ki"], { tierName: (0, _.gb)(N, { useLevels: !1 }) })
+                : k
+                  ? E.intl.formatToPlainString(g.default["9CtPjt"], { perk: (0, _.gb)(N, { useLevels: !1 }) })
                   : E.intl.formatToPlainString(E.t.r6NN6Q, {
-                        numBoostsRequired: w,
-                        tierName: (0, _.gb)(b, { useLevels: !1 }),
+                        numBoostsRequired: L,
+                        tierName: (0, _.gb)(N, { useLevels: !1 }),
                     }),
-            W = (0, r.jsxs)(j, {
-                className: a()(I.Ll, { [I.kZ]: P, [I.ng]: B, [I.uZ]: M, [I.Ue]: k }),
-                style: { left: `${100 * y[b]}%` },
+            Y = (0, r.jsxs)(B, {
+                className: s()(A.Ll, { [A.kZ]: x, [A.ng]: V, [A.uZ]: M, [A.Ue]: P }),
+                style: { left: `${100 * T[N]}%` },
                 ...H,
                 children: [
-                    !P && (0, r.jsx)("div", { className: I.cj }),
-                    P && b === p.TVA.TIER_3
-                        ? (0, r.jsx)(h.H, {
+                    !x && (0, r.jsx)("div", { className: A.cj }),
+                    x && N === h.TVA.TIER_3
+                        ? (0, r.jsx)(p.H, {
                               confettiTriggerRef: n,
-                              setConfettiCount: v,
-                              setShouldFireConfetti: C,
-                              children: F,
+                              setConfettiCount: y,
+                              setShouldFireConfetti: v,
+                              children: G,
                           })
-                        : F,
+                        : G,
                     (0, r.jsxs)(l.Text, {
-                        className: I.Td,
+                        className: A.Td,
                         variant: "text-md/normal",
                         children: [
-                            P &&
-                                b !== p.TVA.NONE &&
-                                (0, r.jsx)(l.A9s, { size: "md", color: "currentColor", className: I.ZI }),
+                            x &&
+                                N !== h.TVA.NONE &&
+                                (0, r.jsx)(l.A9s, { size: "md", color: "currentColor", className: A.ZI }),
                             t,
                         ],
                     }),
                 ],
             });
-        return b !== p.TVA.NONE ? (0, r.jsx)(o.m_, { text: Y, children: W }) : W;
+        return N !== h.TVA.NONE ? (0, r.jsx)(o.m_, { text: j, children: Y }) : Y;
     };

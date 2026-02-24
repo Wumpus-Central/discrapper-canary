@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => K });
+n.d(t, { A: () => W });
 var r = n(627968),
     i = n(64700),
-    a = n(311907),
-    s = n(453903),
+    s = n(311907),
+    a = n(453903),
     o = n(990078),
     l = n(582754),
     u = n(397927),
@@ -11,107 +11,107 @@ var r = n(627968),
     d = n(775602),
     _ = n(587895),
     f = n(429913),
-    h = n(524799),
-    p = n(409626),
-    g = n(611656),
+    p = n(524799),
+    h = n(409626),
+    m = n(611656),
     E = n(459746),
-    A = n(544028),
-    I = n(760751),
-    T = n(954571),
-    y = n(486020),
+    g = n(544028),
+    A = n(760751),
+    I = n(954571),
+    T = n(486020),
     S = n(341915),
-    v = n(579473),
-    C = n(18437),
-    b = n(590202),
-    N = n(73473),
-    R = n(811500),
-    O = n(654487),
-    D = n(652215),
-    L = n(985018),
-    w = n(72011);
-let x = 10,
-    P = 20,
+    y = n(579473),
+    v = n(18437),
+    N = n(590202),
+    C = n(73473),
+    b = n(811500),
+    R = n(654487),
+    O = n(652215),
+    D = n(985018),
+    L = n(433397);
+let w = 10,
+    x = 20,
     M = 15,
-    k = 4,
-    U = 5,
-    G = 8,
-    F = 10;
-function V(e) {
+    P = 4,
+    k = 5,
+    U = 8,
+    G = 10;
+function F(e) {
     let t = {
-            [O.Li.PACKAGE_ACTION_ADVENTURE]: L.t.PYFVdf,
-            [O.Li.PACKAGE_RPG_MMO]: L.t.rFQo2F,
-            [O.Li.PACKAGE_RACING_SPORTS]: L.t.zDRa6g,
-            [O.Li.PACKAGE_SANDBOX_CREATIVE]: L.t.vz9U2Q,
-            [O.Li.PACKAGE_FAMILY_FRIENDLY]: L.t.IOiAE0,
-            [O.Li.PACKAGE_HOLIDAY_SEASON]: L.t.cJPqvD,
-            [O.Li.PACKAGE_NEW_YEARS]: L.t.S0w2mv,
+            [R.Li.PACKAGE_ACTION_ADVENTURE]: D.t.PYFVdf,
+            [R.Li.PACKAGE_RPG_MMO]: D.t.rFQo2F,
+            [R.Li.PACKAGE_RACING_SPORTS]: D.t.zDRa6g,
+            [R.Li.PACKAGE_SANDBOX_CREATIVE]: D.t.vz9U2Q,
+            [R.Li.PACKAGE_FAMILY_FRIENDLY]: D.t.IOiAE0,
+            [R.Li.PACKAGE_HOLIDAY_SEASON]: D.t.cJPqvD,
+            [R.Li.PACKAGE_NEW_YEARS]: D.t.S0w2mv,
         },
         n = e.config.features.find((e) => e in t),
-        r = (null != n ? t[n] : null) ?? L.t["D+DkEH"];
-    return L.intl.string(r);
+        r = (null != n ? t[n] : null) ?? D.t["D+DkEH"];
+    return D.intl.string(r);
 }
-let B = (e) => {
+let V = (e) => {
         let { quest: t, onClose: n } = e,
-            i = (0, a.bG)([A.A], () => A.A.getState().theme),
-            s = (0, l.Mw)(i) ? D.NJ8.DARK : D.NJ8.LIGHT;
+            i = (0, s.bG)([g.A], () => g.A.getState().theme),
+            a = (0, l.Mw)(i) ? O.NJ8.DARK : O.NJ8.LIGHT;
         return (0, r.jsxs)("div", {
-            className: w.N1,
+            className: L.N1,
             children: [
                 (0, r.jsxs)("div", {
-                    className: w.VW,
+                    className: L.VW,
                     children: [
                         (0, r.jsx)("img", {
-                            className: w.rC,
+                            className: L.rC,
                             alt: t.config.messages.gameTitle,
-                            src: (0, v.tW)(t, v.fY.GAME_TILE, s).url,
+                            src: (0, y.tW)(t, y.fY.GAME_TILE, a).url,
                         }),
                         (0, r.jsxs)("div", {
-                            className: w.if,
+                            className: L.if,
                             children: [
                                 (0, r.jsx)(u.Text, {
                                     variant: "text-sm/semibold",
                                     color: "text-strong",
-                                    children: V(t),
+                                    children: F(t),
                                 }),
                                 (0, r.jsx)(u.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    children: L.intl.string(L.t.VgN1Bn),
+                                    children: D.intl.string(D.t.VgN1Bn),
                                 }),
                             ],
                         }),
                     ],
                 }),
                 (0, r.jsx)(u.DUT, {
-                    className: w.b,
-                    "aria-label": L.intl.string(L.t.cpT0Cq),
+                    className: L.b,
+                    "aria-label": D.intl.string(D.t.cpT0Cq),
                     onClick: n,
                     children: (0, r.jsx)(u.PGe, { size: "md", color: "currentColor" }),
                 }),
             ],
         });
     },
-    j = (e) => {
-        let { quest: t, game: s, sourceQuestContent: l, onGameProfileModalOpen: c, onGameProfileModalClose: f } = e,
-            h = (0, C.Ut)(),
-            g = (0, a.bG)([_.A], () => _.A.getApplication(s.applicationId)),
-            A = (0, a.bG)([d.A], () => d.A.useReducedMotion),
-            I = i.useRef(null),
-            T = null != s.supplementalData,
-            y = () => {
-                h({
+    B = (e) => {
+        let { quest: t, game: a, sourceQuestContent: l, onGameProfileModalOpen: c, onGameProfileModalClose: f } = e,
+            p = (0, v.Ut)(),
+            m = (0, s.bG)([_.A], () => _.A.getApplication(a.applicationId)),
+            g = (0, s.bG)([d.A], () => d.A.useReducedMotion),
+            A = i.useRef(null),
+            I = null != a.supplementalData,
+            T = () => {
+                p({
                     questId: t.id,
                     questContent: S.uF.SPONSORED_QUEST_SHEET,
-                    questContentCTA: b.Cy.GAME_STORE_OPEN_GAME_LINK,
+                    questContentCTA: N.Cy.GAME_STORE_OPEN_GAME_LINK,
                     sourceQuestContent: l,
                 });
             },
-            v = async () => {
-                T &&
-                    (h({
+            y = async () => {
+                I &&
+                    (p({
                         questId: t.id,
                         questContent: S.uF.SPONSORED_QUEST_SHEET,
-                        questContentCTA: b.Cy.GAME_PROFILE_OPEN,
+                        questContentCTA: N.Cy.GAME_PROFILE_OPEN,
                         sourceQuestContent: l,
                     }),
                     await (0, u.mMO)(
@@ -119,9 +119,9 @@ let B = (e) => {
                             let { default: e } = await n.e("13530").then(n.bind(n, 225732));
                             return (t) =>
                                 (0, r.jsx)(e, {
-                                    applicationId: s.applicationId,
-                                    source: p.Ob.GameSheet,
-                                    trackExternalAction: y,
+                                    applicationId: a.applicationId,
+                                    source: h.Ob.GameSheet,
+                                    trackExternalAction: T,
                                     ...t,
                                 });
                         },
@@ -129,37 +129,37 @@ let B = (e) => {
                     ),
                     c());
             },
-            N = i.useCallback(
+            C = i.useCallback(
                 (e) => {
-                    if (null == I.current || A) return;
-                    let t = I.current.getBoundingClientRect(),
+                    if (null == A.current || g) return;
+                    let t = A.current.getBoundingClientRect(),
                         n = e.clientX - t.left,
                         r = e.clientY - t.top,
                         i = t.width / 2,
-                        a = t.height / 2,
-                        s = -(((r - a) / a) * M),
+                        s = t.height / 2,
+                        a = -(((r - s) / s) * M),
                         o = ((n - i) / i) * M;
-                    I.current.style.transform = `rotateX(${s}deg) rotateY(${o}deg)`;
+                    A.current.style.transform = `rotateX(${a}deg) rotateY(${o}deg)`;
                 },
-                [A],
+                [g],
             ),
-            R = i.useCallback(() => {
-                null == I.current || A || (I.current.style.transform = "rotateX(0deg) rotateY(0deg)");
-            }, [A]),
-            O = () =>
-                null != s.supplementalData
-                    ? (0, r.jsx)(E.A, { game: s.supplementalData, application: g, className: w.xe, size: E.w.SMALL })
-                    : null != s.fallbackCoverImageUrl
-                      ? (0, r.jsx)("img", { src: s.fallbackCoverImageUrl, alt: s.name, className: w.xe })
+            b = i.useCallback(() => {
+                null == A.current || g || (A.current.style.transform = "rotateX(0deg) rotateY(0deg)");
+            }, [g]),
+            R = () =>
+                null != a.supplementalData
+                    ? (0, r.jsx)(E.A, { game: a.supplementalData, application: m, className: L.xe, size: E.w.SMALL })
+                    : null != a.fallbackCoverImageUrl
+                      ? (0, r.jsx)("img", { src: a.fallbackCoverImageUrl, alt: a.name, className: L.xe })
                       : null;
         return (0, r.jsx)(o.m, {
-            text: s.name,
+            text: a.name,
             children: (0, r.jsx)(u.DUT, {
-                className: w.zR,
-                onClick: v,
-                onMouseMove: N,
-                onMouseLeave: R,
-                children: (0, r.jsx)("div", { ref: I, className: w._M, children: O() }),
+                className: L.zR,
+                onClick: y,
+                onMouseMove: C,
+                onMouseLeave: b,
+                children: (0, r.jsx)("div", { ref: A, className: L._M, children: R() }),
             }),
         });
     },
@@ -195,38 +195,38 @@ let B = (e) => {
                 }),
             ],
         });
-function Y(e) {
+function j(e) {
     let {
         quest: t,
-        applications: s,
+        applications: a,
         onClose: o,
         sourceQuestContent: l,
         impressionRef: d,
         onGameProfileModalOpen: _,
-        onGameProfileModalClose: p,
+        onGameProfileModalClose: h,
     } = e;
-    (0, f.A)(s),
+    (0, f.A)(a),
         i.useEffect(() => {
-            s.length > 1 && c.A.getDetectableGamesSupplemental(s);
-        }, [s]);
-    let E = (0, a.bG)([h.A], () => s.some((e) => h.A.isFetching(e))),
-        A = (0, a.bG)([h.A], () => s.some((e) => h.A.didFetchingFail(e))),
-        S = (0, a.yK)([h.A], () =>
-            s
-                .map((e) => h.A.getGame(e))
+            a.length > 1 && c.A.getDetectableGamesSupplemental(a);
+        }, [a]);
+    let E = (0, s.bG)([p.A], () => a.some((e) => p.A.isFetching(e))),
+        g = (0, s.bG)([p.A], () => a.some((e) => p.A.didFetchingFail(e))),
+        S = (0, s.yK)([p.A], () =>
+            a
+                .map((e) => p.A.getGame(e))
                 .filter((e) => null != e)
-                .filter((e) => (0, g.oS)(e.applicationId))
-                .slice(0, x),
+                .filter((e) => (0, m.oS)(e.applicationId))
+                .slice(0, w),
         ),
-        v = (0, a.bG)([I.A, h.A], () => {
+        y = (0, s.bG)([A.A, p.A], () => {
             let e = new Set(S.map((e) => e.applicationId));
-            return s
+            return a
                 .filter((t) => !e.has(t))
-                .filter((e) => null == h.A.getGame(e))
+                .filter((e) => null == p.A.getGame(e))
                 .map((e) => {
-                    let t = I.A.getDetectableGame(e);
+                    let t = A.A.getDetectableGame(e);
                     if (t?.cover_image_hash == null) return null;
-                    let n = y.Ay.getApplicationIconURL({
+                    let n = T.Ay.getApplicationIconURL({
                         id: e,
                         icon: t.cover_image_hash,
                         size: 256,
@@ -235,9 +235,9 @@ function Y(e) {
                     return null == n ? null : { applicationId: e, name: t.name, coverImageUrl: n };
                 })
                 .filter((e) => null != e)
-                .slice(0, x);
+                .slice(0, w);
         }),
-        C = i.useMemo(
+        v = i.useMemo(
             () =>
                 [
                     ...S.map((e) => ({
@@ -246,147 +246,147 @@ function Y(e) {
                         supplementalData: e,
                         fallbackCoverImageUrl: null,
                     })),
-                    ...v.map((e) => ({
+                    ...y.map((e) => ({
                         applicationId: e.applicationId,
                         name: e.name,
                         supplementalData: null,
                         fallbackCoverImageUrl: e.coverImageUrl,
                     })),
-                ].slice(0, x),
-            [S, v],
+                ].slice(0, w),
+            [S, y],
         ),
-        b = i.useMemo(() => {
-            let e = C.length;
-            return e <= k ? k - e : e === U ? 0 : e <= G ? G - e : F - e;
-        }, [C.length]),
-        N = !E && 0 === C.length,
-        O = A || N;
+        N = i.useMemo(() => {
+            let e = v.length;
+            return e <= P ? P - e : e === k ? 0 : e <= U ? U - e : G - e;
+        }, [v.length]),
+        C = !E && 0 === v.length,
+        R = g || C;
     if (
         (i.useEffect(() => {
-            if (O) {
-                let e = A ? R.W.FETCH_FAILED : R.W.NO_GAMES_AVAILABLE;
-                T.default.track(D.HAw.QUEST_GAME_SHEET_ERROR, { quest_id: t.id, error_type: e }),
+            if (R) {
+                let e = g ? b.W.FETCH_FAILED : b.W.NO_GAMES_AVAILABLE;
+                I.default.track(O.HAw.QUEST_GAME_SHEET_ERROR, { quest_id: t.id, error_type: e }),
                     o(),
                     (0, u.mMO)(async () => {
                         let { default: e } = await n.e("91646").then(n.bind(n, 659309));
                         return (t) => (0, r.jsx)(e, { ...t });
                     });
             }
-        }, [O, A, t.id, o]),
-        E && !O)
+        }, [R, g, t.id, o]),
+        E && !R)
     ) {
-        let e = Math.min(s.length, x);
+        let e = Math.min(a.length, w);
         return (0, r.jsxs)("div", {
-            className: w.kL,
+            className: L.kL,
             children: [
-                (0, r.jsx)(B, { quest: t, onClose: o }),
+                (0, r.jsx)(V, { quest: t, onClose: o }),
                 (0, r.jsx)("div", {
-                    className: w.LA,
-                    children: s.slice(0, e).map((e) => (0, r.jsx)("div", { className: w.Vj }, e)),
+                    className: L.LA,
+                    children: a.slice(0, e).map((e) => (0, r.jsx)("div", { className: L.Vj }, e)),
                 }),
             ],
         });
     }
-    return O
+    return R
         ? null
         : (0, r.jsxs)("div", {
               ref: (e) => {
                   d.current = e;
               },
-              className: w.kL,
+              className: L.kL,
               children: [
-                  (0, r.jsx)(B, { quest: t, onClose: o }),
+                  (0, r.jsx)(V, { quest: t, onClose: o }),
                   (0, r.jsxs)("div", {
-                      className: w.LA,
+                      className: L.LA,
                       children: [
-                          C.map((e) =>
+                          v.map((e) =>
                               (0, r.jsx)(
-                                  j,
+                                  B,
                                   {
                                       quest: t,
                                       game: e,
                                       sourceQuestContent: l,
                                       onGameProfileModalOpen: _,
-                                      onGameProfileModalClose: p,
+                                      onGameProfileModalClose: h,
                                   },
                                   e.applicationId,
                               ),
                           ),
-                          Array.from({ length: b }, (e, t) => (0, r.jsx)(H, {}, `placeholder-${t}`)),
+                          Array.from({ length: N }, (e, t) => (0, r.jsx)(H, {}, `placeholder-${t}`)),
                       ],
                   }),
               ],
           });
 }
-function W(e) {
+function Y(e) {
     let {
             targetElementRef: t,
             applications: n,
-            children: a,
+            children: s,
             onGameSheetOpened: o,
             onGameSheetClosed: l,
             quest: c,
             sourceQuestContent: d,
             impressionRef: _,
         } = e,
-        [f, h] = i.useState(!1),
-        p = (0, C.Ut)(),
-        g = i.useRef(null),
+        [f, p] = i.useState(!1),
+        h = (0, v.Ut)(),
+        m = i.useRef(null),
         E = t?.current != null,
-        A = E ? t : g,
-        I = E ? "right" : "top",
-        T = E ? "bottom" : void 0,
-        y = () => {
+        g = E ? t : m,
+        A = E ? "right" : "top",
+        I = E ? "bottom" : void 0,
+        T = () => {
             o?.(),
-                p({
+                h({
                     questId: c.id,
                     questContent: d,
-                    questContentCTA: b.Cy.SPONSORED_QUEST_SHEET,
+                    questContentCTA: N.Cy.SPONSORED_QUEST_SHEET,
                     sourceQuestContent: d,
                 });
         },
         S = () => {
-            if (f) return s.o;
+            if (f) return a.o;
             l?.();
         },
-        v = () => {
-            h(!0);
+        y = () => {
+            p(!0);
         },
-        N = () => {
-            h(!1);
+        C = () => {
+            p(!1);
         };
     return (0, r.jsx)(u.YNO, {
-        targetElementRef: A,
+        targetElementRef: g,
         clickTrap: !0,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(Y, {
+            return (0, r.jsx)(j, {
                 quest: c,
                 applications: n,
                 onClose: t,
                 sourceQuestContent: d,
                 impressionRef: _,
-                onGameProfileModalOpen: v,
-                onGameProfileModalClose: N,
+                onGameProfileModalOpen: y,
+                onGameProfileModalClose: C,
             });
         },
-        onRequestOpen: y,
+        onRequestOpen: T,
         onRequestClose: S,
-        position: I,
-        align: T,
-        spacing: P,
+        position: A,
+        align: I,
+        spacing: x,
         scrollBehavior: "close",
         ignoreModalClicks: !0,
-        children: (e) => a(e, g),
+        children: (e) => s(e, m),
     });
 }
-let K = function (e) {
+let W = function (e) {
     return null == e.quest || e.applications.length <= 1
         ? null
-        : (0, r.jsx)(N.R, {
+        : (0, r.jsx)(C.R, {
               questOrQuests: e.quest,
               questContent: S.uF.SPONSORED_QUEST_SHEET,
               sourceQuestContent: e.sourceQuestContent,
-              children: (t) => (0, r.jsx)(W, { ...e, impressionRef: t }),
+              children: (t) => (0, r.jsx)(Y, { ...e, impressionRef: t }),
           });
 };

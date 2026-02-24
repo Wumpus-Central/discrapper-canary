@@ -1,4 +1,4 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => C });
 var a = n(627968),
     i = n(64700),
     s = n(397927),
@@ -13,10 +13,10 @@ var a = n(627968),
     x = n(870341),
     p = n(686267),
     g = n(818348),
-    _ = n(646284),
+    _ = n(774630),
     f = n(985018),
-    v = n(36303);
-let b = n(843020);
+    b = n(248065);
+let v = n(843020);
 function j(e) {
     let { task: t, handleSubmit: n, disabled: s } = e,
         [l, r] = i.useState(t),
@@ -31,14 +31,14 @@ function j(e) {
         })
     );
 }
-let A = function (e) {
+let C = function (e) {
     let { onClose: t } = e,
         [n, u] = i.useState(null),
         [x, p] = i.useState(!0),
-        [A, C] = i.useState(null),
-        [S, T] = i.useState(!1),
+        [C, A] = i.useState(null),
+        [T, S] = i.useState(!1),
         y = i.useCallback(async () => {
-            p(!0), C(null);
+            p(!0), A(null);
             try {
                 let e = await (0, c.$R)();
                 if (null == e) return void t();
@@ -52,7 +52,7 @@ let A = function (e) {
                           flow_context: { tasks: [], flow_id: e.flow_context.flow_id },
                       });
             } catch {
-                C(f.intl.string(_.default["/f++3g"]));
+                A(f.intl.string(_.default["/f++3g"]));
             } finally {
                 p(!1);
             }
@@ -60,14 +60,14 @@ let A = function (e) {
         E = i.useCallback(
             async (e) => {
                 if (null !== n) {
-                    T(!0);
+                    S(!0);
                     try {
                         let t = { task_id: n.task_id, flow_id: n.flow_context.flow_id, data: e };
                         await (0, c.Rt)(t), y();
                     } catch (e) {
-                        C(f.intl.string(_.default["+QRSxc"]));
+                        A(f.intl.string(_.default["+QRSxc"]));
                     } finally {
-                        T(!1);
+                        S(!1);
                     }
                 }
             },
@@ -78,9 +78,9 @@ let A = function (e) {
     });
     let N = i.useMemo(() => n?.task_type === m.wP.AGE_VERIFICATION, [n]);
     return (0, a.jsxs)("div", {
-        className: v.Tp,
+        className: b.Tp,
         children: [
-            (0, a.jsx)("img", { className: v.xX, src: b, alt: "" }),
+            (0, a.jsx)("img", { className: b.xX, src: v, alt: "" }),
             N
                 ? (0, a.jsx)(o.default, {
                       transitionState: s.ip4.ENTERED,
@@ -92,22 +92,22 @@ let A = function (e) {
                       dismissable: !1,
                   })
                 : (0, a.jsx)("div", {
-                      className: v.nA,
+                      className: b.nA,
                       children: x
                           ? (0, a.jsx)(s.y$y, { type: s.y$y.Type.SPINNING_CIRCLE })
                           : (0, a.jsx)("div", {
-                                className: v.kL,
+                                className: b.kL,
                                 children: (0, a.jsxs)(s.BJc, {
                                     direction: "horizontal",
                                     justify: "start",
-                                    className: v.rf,
+                                    className: b.rf,
                                     children: [
-                                        null !== A &&
+                                        null !== C &&
                                             (0, a.jsxs)(s.BJc, {
                                                 direction: "vertical",
                                                 justify: "space-between",
                                                 align: "center",
-                                                className: v.Nj,
+                                                className: b.Nj,
                                                 padding: 16,
                                                 children: [
                                                     (0, a.jsxs)(s.BJc, {
@@ -149,9 +149,9 @@ let A = function (e) {
                                                     }),
                                                 ],
                                             }),
-                                        null === A &&
+                                        null === C &&
                                             null != n &&
-                                            (0, a.jsx)(j, { task: n, handleSubmit: E, disabled: S }),
+                                            (0, a.jsx)(j, { task: n, handleSubmit: E, disabled: T }),
                                     ],
                                 }),
                             }),

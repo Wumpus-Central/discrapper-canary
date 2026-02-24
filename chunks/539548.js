@@ -6,8 +6,8 @@ var s = t(311907),
     a = t(517164),
     r = t(290863),
     d = t(461213),
-    o = t(975571),
-    c = t(622543),
+    c = t(975571),
+    o = t(622543),
     u = t(146655),
     A = t(489379),
     x = t(900179),
@@ -18,22 +18,22 @@ var s = t(311907),
     h = t(518477),
     I = t(652215),
     j = t(985018),
-    g = t(78702),
-    b = t(781425);
+    g = t(278792),
+    b = t(230836);
 function N(e) {
     let { user: n, currentUser: t, guildId: N, onClose: v } = e,
         { live: T, recent: E, stream: C } = (0, u.A)(n.id),
         { voiceChannel: y, voiceActivity: L } = (0, A.A)({ userId: n.id, guildId: N }),
         S = (0, s.bG)([a.A], () => a.A.isFetchingUserOutbox(n.id)),
-        P = n.id === t.id,
-        O = (0, s.bG)([d.A, r.A], () => {
-            let e = P ? d.A.getStatus() : r.A.getStatus(n.id);
+        O = n.id === t.id,
+        P = (0, s.bG)([d.A, r.A], () => {
+            let e = O ? d.A.getStatus() : r.A.getStatus(n.id);
             return e === l.clD.OFFLINE || e === l.clD.INVISIBLE;
         }),
-        R = (0, s.bG)([c.A], () => c.A.getUserProfile(n.id)?.private === !0),
+        R = (0, s.bG)([o.A], () => o.A.getUserProfile(n.id)?.private === !0),
         M = T.length > 0 || null != C,
         G = !R && null == C && null == L && null != y,
-        D = !O && (M || G),
+        D = !P && (M || G),
         U = E.length > 0;
     return D || U || !S
         ? (0, i.jsxs)(l.IpV, {
@@ -85,12 +85,12 @@ function N(e) {
                   U
                       ? (0, i.jsx)(x.A, {
                             heading: j.intl.string(j.t.M0zgnT),
-                            introText: P
+                            introText: O
                                 ? j.intl.format(j.t["4bk9Ak"], {
                                       learnMoreHook: (e, n) =>
                                           (0, i.jsx)(
                                               l.MzZ,
-                                              { href: o.A.getArticleURL(I.MVz.ACTIVITY_STATUS_SETTINGS), children: e },
+                                              { href: c.A.getArticleURL(I.MVz.ACTIVITY_STATUS_SETTINGS), children: e },
                                               n,
                                           ),
                                   })

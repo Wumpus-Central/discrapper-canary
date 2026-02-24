@@ -6,10 +6,10 @@ var i = n(627968),
     l = n(17372),
     a = n(975571),
     o = n(843376),
-    c = n(652215),
-    d = n(985018),
-    u = n(188335);
-let h = { [l.tY.MESSAGE]: d.t.fuqnBC, [l.tY.USER]: d.t.F4jrRW, [l.tY.GUILD]: d.t.gH3aMs },
+    d = n(652215),
+    c = n(985018),
+    u = n(77457);
+let h = { [l.tY.MESSAGE]: c.t.fuqnBC, [l.tY.USER]: c.t.F4jrRW, [l.tY.GUILD]: c.t.gH3aMs },
     _ = (e) => {
         let { title: t, menuType: n, onReopen: l } = e,
             a = s.useCallback(() => {
@@ -32,7 +32,7 @@ let h = { [l.tY.MESSAGE]: d.t.fuqnBC, [l.tY.USER]: d.t.F4jrRW, [l.tY.GUILD]: d.t
                           className: u.Hq,
                           children: (0, i.jsx)(r.Button, {
                               variant: "secondary",
-                              text: d.intl.string(d.t["13/7kX"]),
+                              text: c.intl.string(c.t["13/7kX"]),
                               onClick: n,
                           }),
                       })
@@ -40,11 +40,11 @@ let h = { [l.tY.MESSAGE]: d.t.fuqnBC, [l.tY.USER]: d.t.F4jrRW, [l.tY.GUILD]: d.t
         return (0, i.jsxs)(r.BJc, {
             gap: 16,
             children: [
-                (0, i.jsx)(r.Heading, { variant: "heading-xl/semibold", children: d.intl.string(d.t.Z11w18) }),
+                (0, i.jsx)(r.Heading, { variant: "heading-xl/semibold", children: c.intl.string(c.t.Z11w18) }),
                 (0, i.jsx)(r.Text, {
                     variant: "text-md/normal",
-                    children: d.intl.format(d.t["532l+q"], {
-                        supportURL: a.A.getArticleURL(c.MVz.COPYRIGHT_AND_IP_POLICY),
+                    children: c.intl.format(c.t["532l+q"], {
+                        supportURL: a.A.getArticleURL(d.MVz.COPYRIGHT_AND_IP_POLICY),
                     }),
                 }),
                 (0, i.jsx)("div", {
@@ -52,7 +52,7 @@ let h = { [l.tY.MESSAGE]: d.t.fuqnBC, [l.tY.USER]: d.t.F4jrRW, [l.tY.GUILD]: d.t
                     children: s.map((e) =>
                         e === l.tY.MEDIA_TAKEDOWN || null == h[e]
                             ? null
-                            : (0, i.jsx)(_, { title: d.intl.string(h[e]), menuType: e, onClose: p, onReopen: g }, e),
+                            : (0, i.jsx)(_, { title: c.intl.string(h[e]), menuType: e, onClose: p, onReopen: g }, e),
                     ),
                 }),
                 o?.(m),

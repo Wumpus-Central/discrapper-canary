@@ -15,19 +15,19 @@ var a = n(627968),
     g = n(847599),
     _ = n(295972),
     f = n(36149),
-    v = n(807734),
-    b = n(652215),
+    b = n(807734),
+    v = n(652215),
     j = n(239093),
-    A = n(536242),
-    C = n(985018),
-    S = n(62959),
-    T = n(700129);
+    C = n(949268),
+    A = n(985018),
+    T = n(499453),
+    S = n(700129);
 function y(e) {
     let { modalSessionId: t, entryPoint: n } = e;
     return (0, m.W$)()
         ? (0, a.jsx)(o.Text, {
               variant: "text-xs/medium",
-              children: C.intl.format(A.default.htWh1G, {
+              children: A.intl.format(C.default.htWh1G, {
                   handleOnHelpUrlHook: () => {
                       p.A.openUrl(j.d$.LEARN_MORE_UU_APPEAL_LINK),
                           (0, g.St)(t, g.WU.EXPRESSIVE_PRIMARY, g._7.LEARN_MORE);
@@ -38,7 +38,7 @@ function y(e) {
           ? (0, a.jsx)(o.QWc, {
                 size: "sm",
                 textVariant: "text-sm/medium",
-                text: C.intl.string(C.t["2jxGer"]),
+                text: A.intl.string(A.t["2jxGer"]),
                 onClick: () => {
                     (0, g.St)(t, g.WU.EXPRESSIVE_PRIMARY, g._7.LOG_OUT), (0, u.k)("age_verification_get_started_modal");
                 },
@@ -56,7 +56,7 @@ let E = function (e) {
     i.useEffect(() => {
         R.current = O;
     }, [O]);
-    let { loading: L, ageVerificationMethods: U } = (0, v.A)({
+    let { loading: L, ageVerificationMethods: U } = (0, b.A)({
         onClose: () => {
             j?.(), u();
         },
@@ -87,12 +87,12 @@ let E = function (e) {
             onClose: u,
             gradientColor: "blue",
             dismissable: E,
-            graphic: { type: "image", src: T.A },
+            graphic: { type: "image", src: S.A },
             title: (0, f.ST)(n),
             subtitle: (0, f.mK)(
                 n,
                 () => {
-                    p.A.openUrl(x.A.getArticleURL(b.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                    p.A.openUrl(x.A.getArticleURL(v.MVz.TIGGER_PAWTECT_LEARN_MORE)),
                         (0, g.St)(D, g.WU.EXPRESSIVE_PRIMARY, g._7.LEARN_MORE);
                 },
                 P,
@@ -108,13 +108,13 @@ let E = function (e) {
                         gap: 8,
                         padding: { top: 8, bottom: 8, left: 12, right: 12 },
                         align: "center",
-                        className: S.W,
+                        className: T.W,
                         children: [
                             (0, a.jsx)(o.mir, { size: "lg", color: "currentColor" }),
                             (0, a.jsx)(o.Text, {
                                 variant: "text-sm/medium",
                                 color: "text-feedback-info",
-                                children: C.intl.string(A.default.ar3a3q),
+                                children: A.intl.string(C.default.ar3a3q),
                             }),
                         ],
                     }),
@@ -127,12 +127,12 @@ let E = function (e) {
                                   (0, a.jsx)(o.Text, {
                                       variant: "text-xs/medium",
                                       color: "text-subtle",
-                                      children: C.intl.string(A.default.cR6336),
+                                      children: A.intl.string(C.default.cR6336),
                                   }),
                                   (0, a.jsx)(o.Button, {
                                       variant: "primary",
                                       size: "sm",
-                                      text: C.intl.string(A.default.hDvmYP),
+                                      text: A.intl.string(C.default.hDvmYP),
                                       onClick: () => {
                                           (0, _.DJ)();
                                       },

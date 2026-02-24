@@ -6,7 +6,7 @@ var r = n(627968),
     a = n(887695),
     o = n(770171),
     l = n(101024),
-    u = n(990675);
+    u = n(76269);
 function c(e) {
     let {
             categories: t,
@@ -62,8 +62,8 @@ function c(e) {
             itemNodeMargin: w,
         }),
         {
-            getItemProps: Z,
-            getRowProps: X,
+            getItemProps: X,
+            getRowProps: Z,
             gridContainerProps: Q,
             handleGridContainerKeyDown: J,
             isUsingKeyboardNavigation: ee,
@@ -79,7 +79,7 @@ function c(e) {
             (e, t) =>
                 A(
                     W[e],
-                    X(e),
+                    Z(e),
                     {
                         isUsingKeyboardNavigation: ee.current,
                         gutterWidth: q,
@@ -87,10 +87,10 @@ function c(e) {
                         totalRowCount: K,
                         sectionIndex: t.sectionIndex,
                     },
-                    (t) => Z(e, t),
+                    (t) => X(e, t),
                     (t) => d.setInspectedExpressionPosition(t, e),
                 ),
-            [W, Z, X, q, ee, A, d, K],
+            [W, X, Z, q, ee, A, d, K],
         ),
         en = i.useCallback((e) => T?.(t[e], e), [t, T]),
         er = i.useCallback((e) => S?.(t[e], e), [t, S]),

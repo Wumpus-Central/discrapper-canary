@@ -2,22 +2,22 @@
 n.d(t, { K: () => d });
 var r = n(627968),
     i = n(503698),
-    a = n.n(i),
-    s = n(311907),
+    s = n.n(i),
+    a = n(311907),
     o = n(582754),
     l = n(607470),
     u = n(544028),
-    c = n(515648);
+    c = n(62946);
 let d = (e) => {
     let { className: t, options: n } = e,
-        i = (0, s.bG)([u.A], () => (0, o.Mw)(u.A.theme));
+        i = (0, a.bG)([u.A], () => (0, o.Mw)(u.A.theme));
     return null == n
         ? null
         : null != n
           ? n.animated
               ? (0, r.jsx)(l.A, {
                     src: n.getSrc(i),
-                    className: a()(c.O, t),
+                    className: s()(c.O, t),
                     style: n.style,
                     loop: !1,
                     muted: !0,
@@ -25,7 +25,7 @@ let d = (e) => {
                 })
               : (0, r.jsx)("img", {
                     src: n.getSrc(i),
-                    className: a()(c.O, t),
+                    className: s()(c.O, t),
                     style: n.style,
                     alt: "",
                     "aria-hidden": "true",

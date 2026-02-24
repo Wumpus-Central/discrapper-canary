@@ -14,7 +14,7 @@ var r = n(397927),
     _ = n(652215),
     m = n(339984),
     p = n(985018),
-    g = n(698290);
+    g = n(94184);
 function E(e) {
     let { uploadType: t, imageSrc: l, analyticsSource: a } = e,
         s = o.default.getCurrentUser();
@@ -48,7 +48,7 @@ function I(e) {
             ...f
         } = e,
         C = (0, a.Ay)(t.id),
-        { primaryColor: N, secondaryColor: T } = (0, s.A)({
+        { primaryColor: T, secondaryColor: N } = (0, s.A)({
             user: t,
             displayProfile: C,
             pendingAvatarSrc: n === m.HL.AVATAR ? r : void 0,
@@ -99,7 +99,7 @@ function I(e) {
                                 disabledInputs: !0,
                                 pendingAvatar: n === m.HL.AVATAR ? r : void 0,
                                 pendingBanner: n === m.HL.BANNER ? r : void 0,
-                                pendingThemeColors: [N, T],
+                                pendingThemeColors: [T, N],
                                 hideExampleButton: !0,
                             }),
                         })

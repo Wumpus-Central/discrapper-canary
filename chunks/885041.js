@@ -21,7 +21,7 @@ var i = n(627968),
     T = n(315206),
     N = n(844358),
     S = n(828430),
-    x = n(79746),
+    x = n(857365),
     v = n(861638),
     y = n(793574),
     b = n(114716),
@@ -41,10 +41,10 @@ var i = n(627968),
     H = n(293495),
     F = n(811917),
     Y = n(746094),
-    q = n(257402),
-    W = n(216954),
+    W = n(257402),
+    q = n(216954),
     K = n(735831),
-    z = n(913953),
+    z = n(136334),
     $ = n(142120),
     Q = n(507263),
     X = n(998345),
@@ -95,8 +95,8 @@ var i = n(627968),
     eH = n(849823),
     eF = n(840065),
     eY = n(32294),
-    eq = n(639823),
-    eW = n(961350),
+    eW = n(639823),
+    eq = n(961350),
     eK = n(761640),
     ez = n(734057),
     e$ = n(650048),
@@ -107,8 +107,8 @@ var i = n(627968),
     e0 = n(147964),
     e1 = n(237631),
     e7 = n(194871),
-    e6 = n(856588),
-    e9 = n(612181),
+    e9 = n(856588),
+    e6 = n(612181),
     e5 = n(723702),
     e2 = n(837921),
     e3 = n(715671),
@@ -191,11 +191,11 @@ let ti = (0, p.z)((e) => {
             })
         );
     }),
-    tl = s.Ay.connectStores([$.A, e$.A, eW.default], () => ({
+    tl = s.Ay.connectStores([$.A, e$.A, eq.default], () => ({
         isConnected: $.A.isConnected(),
         defaultRoute: e$.A.defaultRoute,
         defaultRouteFallback: e$.A.fallbackRoute,
-        token: eW.default.getToken(),
+        token: eq.default.getToken(),
     }))(
         class extends r.Component {
             render() {
@@ -227,9 +227,9 @@ let tc = [
     {
         path: [e4.BVt.ACTIVITY_DETAILS(":applicationId")],
         render: function (e) {
-            return (0, e9.wR)() ||
-                eW.default.getLoginStatus() === e4.aUe.LOGGING_IN ||
-                !eW.default.allowLogoutRedirect()
+            return (0, e6.wR)() ||
+                eq.default.getLoginStatus() === e4.aUe.LOGGING_IN ||
+                !eq.default.allowLogoutRedirect()
                 ? ta(e)
                 : (0, i.jsx)(N.A, { applicationId: e.match.params.applicationId });
         },
@@ -338,7 +338,7 @@ let tc = [
             return (
                 (0, Q.B)(() => {
                     (0, o.mMO)(async () => {
-                        let { default: e } = await Promise.all([n.e("64992"), n.e("67208")]).then(n.bind(n, 401539));
+                        let { default: e } = await Promise.all([n.e("64992"), n.e("6356")]).then(n.bind(n, 401539));
                         return (t) => (0, i.jsx)(e, { ...t, guildId: r });
                     });
                 }),
@@ -452,9 +452,9 @@ class th extends r.PureComponent {
             eb.A.init(),
             O.A.initialize(),
             eg.A.initialize(),
-            q.A.initialize(),
-            eq.A.initialize(),
             W.A.initialize(),
+            eW.A.initialize(),
+            q.A.initialize(),
             ef.A.initialize(),
             G.A.initialize(),
             ea.A.initialize(),
@@ -473,7 +473,7 @@ class th extends r.PureComponent {
             C.A.initialize(),
             er.A.init(),
             P.A.init(),
-            e6.A.init(),
+            e9.A.init(),
             f.A.initialize(),
             ew.A.init(),
             e1.A.init(),
@@ -503,7 +503,7 @@ class th extends r.PureComponent {
     }
     componentWillUnmount() {
         eb.A.terminate(),
-            eq.A.terminate(),
+            eW.A.terminate(),
             ef.A.terminate(),
             eg.A.terminate(),
             O.A.terminate(),
@@ -539,7 +539,7 @@ class th extends r.PureComponent {
         let { pathname: n, search: i } = e;
         !(function (e) {
             if ($.A.isConnected() || $.A.isTryingToConnect()) return;
-            let t = eW.default.getToken();
+            let t = eq.default.getToken();
             null == t || ((0, ey.Q)(e) && d.A.startSession(t));
         })(n),
             (function (e, t) {

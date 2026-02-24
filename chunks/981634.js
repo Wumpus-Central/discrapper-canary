@@ -8,9 +8,9 @@ var s = n(503698),
     a = n(397927),
     o = n(709066),
     d = n(351906),
-    c = n(89200);
+    c = n(564458);
 function u(e) {
-    let { className: t, avatarURL: n, name: s, bot: u, verifiedBot: g, userTag: m } = e,
+    let { className: t, avatarURL: n, name: s, bot: u, verifiedBot: m, userTag: g } = e,
         x = (0, r.bG)([d.A], () => d.A.hidePersonalInformation);
     return (0, i.jsxs)("div", {
         className: l()(c.kL, t),
@@ -26,7 +26,7 @@ function u(e) {
                         variant: "text-sm/semibold",
                         children: s,
                     }),
-                    u ? (0, i.jsx)(o.A, { className: c.AO, verified: g }) : null,
+                    u ? (0, i.jsx)(o.A, { className: c.AO, verified: m }) : null,
                     x
                         ? null
                         : (0, i.jsx)(a.Text, {
@@ -34,7 +34,7 @@ function u(e) {
                               color: "interactive-text-default",
                               className: c.a1,
                               variant: "text-sm/normal",
-                              children: m,
+                              children: g,
                           }),
                 ],
             }),

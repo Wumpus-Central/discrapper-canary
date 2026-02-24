@@ -22,14 +22,14 @@ var a = l(627968),
     C = l(531685),
     p = l(486020),
     v = l(225142),
-    E = l(248019),
-    G = l(639245),
+    G = l(248019),
+    y = l(639245),
     M = l(652215),
-    y = l(985018),
-    T = l(446964),
-    L = l(206314),
-    H = l(296997);
-function w(e) {
+    E = l(985018),
+    T = l(84942),
+    L = l(830412),
+    w = l(296997);
+function H(e) {
     let n,
         l,
         { firstMedia: s, channelId: t } = e,
@@ -69,7 +69,7 @@ function R(e) {
         t = (0, r.bG)([I.A], () => I.A.getMessages(n.channelId)),
         u = (0, r.bG)([N.A], () => N.A.can(M.xBc.VIEW_CHANNEL, l)),
         m = t.first(),
-        x = (0, E.A)(m),
+        x = (0, G.A)(m),
         g = (0, o.yC)(m, !1),
         A = g?.length > 0 ? g[0] : null,
         f = null != l && null == t.first() && !t.loadingMore && !t.ready && !t.hasFetched && u;
@@ -132,13 +132,13 @@ function R(e) {
                       }),
                   })
                 : null,
-            null == b && null != A ? (0, a.jsx)(w, { firstMedia: A, channelId: n.channelId }) : null,
+            null == b && null != A ? (0, a.jsx)(H, { firstMedia: A, channelId: n.channelId }) : null,
         ],
     });
 }
 function k(e) {
     let { guild: n, isNewMember: l } = e,
-        s = (0, G.A)(n.id);
+        s = (0, y.A)(n.id);
     return 0 === s.length
         ? l
             ? null
@@ -148,9 +148,9 @@ function k(e) {
                       (0, a.jsx)(d.Heading, {
                           variant: "heading-xl/bold",
                           color: "text-strong",
-                          children: y.intl.string(y.t.owvC9U),
+                          children: E.intl.string(E.t.owvC9U),
                       }),
-                      (0, a.jsx)("img", { className: T.QT, src: H, alt: "" }),
+                      (0, a.jsx)("img", { className: T.QT, src: w, alt: "" }),
                       (0, a.jsx)("div", {
                           className: T.nM,
                           children: (0, a.jsx)(d.Button, {
@@ -161,7 +161,7 @@ function k(e) {
                                   null != e && (0, A.pX)(M.BVt.CHANNEL(n.id, e.id));
                               },
                               fullWidth: !0,
-                              text: y.intl.string(y.t["3iCBUn"]),
+                              text: E.intl.string(E.t["3iCBUn"]),
                           }),
                       }),
                   ],
@@ -172,7 +172,7 @@ function k(e) {
                   (0, a.jsx)(d.Heading, {
                       variant: "heading-lg/bold",
                       color: "text-strong",
-                      children: y.intl.string(y.t.xwY4La),
+                      children: E.intl.string(E.t.xwY4La),
                   }),
                   s.map((e) => (0, a.jsx)(R, { resource: e }, e.channelId)),
               ],

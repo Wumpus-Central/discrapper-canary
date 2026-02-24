@@ -2,19 +2,19 @@ n.d(t, { A: () => o });
 var i = n(627968);
 n(64700);
 var l = n(503698),
-    a = n.n(l),
-    r = n(397927),
-    s = n(233645);
+    r = n.n(l),
+    a = n(397927),
+    s = n(1683);
 let o = (e) => {
     let { renderTitle: t, renderTagline: n, renderActions: l, renderMedia: o, className: d, isHorizontal: c = !1 } = e;
     return (0, i.jsxs)("div", {
-        className: a()(s.Vs, { [s.ZQ]: c }, d),
+        className: r()(s.Vs, { [s.ZQ]: c }, d),
         children: [
-            (0, i.jsx)("div", { className: a()(s.$_, { [s.rO]: c }), children: o?.() }),
+            (0, i.jsx)("div", { className: r()(s.$_, { [s.rO]: c }), children: o?.() }),
             (0, i.jsxs)("div", {
                 className: s.h_,
                 children: [
-                    (0, i.jsx)(r.H, { className: s.DD, children: t?.() }),
+                    (0, i.jsx)(a.H, { className: s.DD, children: t?.() }),
                     (0, i.jsx)("div", { className: s.dS, children: n?.() }),
                     (0, i.jsx)("div", { className: s.o1, children: l?.() }),
                 ],

@@ -1,16 +1,16 @@
 n.d(t, { A: () => p }), n(321073);
 var i = n(627968),
     l = n(64700),
-    a = n(397927),
-    r = n(572211),
+    r = n(397927),
+    a = n(572211),
     s = n(354287),
     o = n(693879),
     d = n(353411),
     c = n(882171),
     u = n(206589),
-    m = n(768349),
-    _ = n(985018),
-    h = n(609653);
+    _ = n(768349),
+    m = n(985018),
+    h = n(62323);
 function p(e) {
     let {
             application: t,
@@ -18,44 +18,44 @@ function p(e) {
             header: p,
             presenceActivity: g,
             hideParty: A,
-            partyStatusElement: f,
-            currentUserPresenceActivity: x,
-            onClickContent: E,
-            onView: C,
+            partyStatusElement: x,
+            currentUserPresenceActivity: f,
+            onClickContent: C,
+            onView: E,
             guildId: I,
         } = e,
-        T = (0, u.w)(x, g),
-        v = (0, d.Gq)(g, n.author, "Invite Embed"),
-        N = l.useMemo(() => {
+        b = (0, u.w)(f, g),
+        T = (0, d.Gq)(g, n.author, "Invite Embed"),
+        v = l.useMemo(() => {
             let e = [];
             return (
-                T ||
+                b ||
                     e.push({
-                        label: v.label ?? _.intl.string(_.t.VJlc0S),
+                        label: T.label ?? m.intl.string(m.t.VJlc0S),
                         trackingArea: s.kY.SYNC,
                         onClick: () => {
-                            v.onClick();
+                            T.onClick();
                         },
-                        disabled: v.disabled,
-                        disabledReason: v.disabled ? v.tooltip : void 0,
+                        disabled: T.disabled,
+                        disabledReason: T.disabled ? T.tooltip : void 0,
                     }),
                 e
             );
-        }, [T, v]),
+        }, [b, T]),
         S =
             null != g && null != g.details && null != g.state
-                ? _.intl.formatToPlainString(_.t.JCvHtx, { track: g.details, artist: g.state })
+                ? m.intl.formatToPlainString(m.t.JCvHtx, { track: g.details, artist: g.state })
                 : t.name,
-        b = g?.timestamps?.start ?? g?.created_at,
-        j = l.useMemo(
+        y = g?.timestamps?.start ?? g?.created_at,
+        N = l.useMemo(
             () =>
-                null != b
+                null != y
                     ? (0, i.jsxs)("div", {
                           className: h.Ym,
                           children: [
-                              (0, i.jsx)(a.T7G, { size: "xxs", color: "currentColor" }),
+                              (0, i.jsx)(r.T7G, { size: "xxs", color: "currentColor" }),
                               (0, i.jsx)(o.z, {
-                                  entry: { start: b, end: g?.timestamps?.end },
+                                  entry: { start: y, end: g?.timestamps?.end },
                                   textColor: "currentColor",
                                   textTabularNumbers: !1,
                                   textFontCode: !1,
@@ -63,36 +63,36 @@ function p(e) {
                           ],
                       })
                     : null,
-            [b, g?.timestamps?.end],
+            [y, g?.timestamps?.end],
         ),
-        y = l.useMemo(
+        j = l.useMemo(
             () =>
                 (0, i.jsxs)("div", {
                     className: h.pq,
                     children: [
-                        (0, i.jsx)(a.Text, {
+                        (0, i.jsx)(r.Text, {
                             variant: "text-xs/normal",
                             className: h.dS,
                             color: "none",
                             lineClamp: 1,
-                            children: j,
+                            children: N,
                         }),
-                        A ? null : f,
+                        A ? null : x,
                     ],
                 }),
-            [j, A, f],
+            [N, A, x],
         );
-    return (0, i.jsx)(r.h, {
+    return (0, i.jsx)(a.h, {
         header: p,
         title: S,
         iconSrc: (0, c.A)(g, t.id) ?? void 0,
-        info: y,
-        actions: N,
-        onClickContent: E,
+        info: j,
+        actions: v,
+        onClickContent: C,
         trackingConfig: {
             id: t.id,
-            linkType: m.J.RICH_PRESENCE_INVITE,
-            onView: C,
+            linkType: _.J.RICH_PRESENCE_INVITE,
+            onView: E,
             referrerId: n.author.id,
             guildId: I,
             channelId: n.channel_id,

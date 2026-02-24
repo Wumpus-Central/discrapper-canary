@@ -1,169 +1,169 @@
-n.d(e, { $V: () => P, $k: () => S, aG: () => v, mO: () => B, v8: () => g }), n(321073);
+n.d(e, { $V: () => D, $k: () => C, aG: () => N, mO: () => L, v8: () => T }), n(321073);
 var i = n(64700),
-    r = n(106778),
-    a = n(284009),
-    l = n.n(a),
-    s = n(575593),
-    d = n(398590),
-    u = n(954921),
+    a = n(106778),
+    l = n(284009),
+    r = n.n(l),
+    d = n(575593),
+    s = n(398590),
+    o = n(954921),
     p = n(590547),
-    o = n(87719),
+    u = n(87719),
     c = n(309635),
-    h = n(545986),
-    E = n(780964),
-    O = n(840065),
+    g = n(545986),
+    A = n(780964),
+    h = n(840065),
     f = n(318346),
-    A = n(954571),
+    m = n(954571),
     y = n(203982),
-    _ = n(975571),
-    I = n(993408),
-    R = n(442759),
-    C = n(158216),
-    L = n(758836),
-    m = n(652215),
-    T = n(22104),
-    b = n(985018);
-let k = (t) => (null != t ? b.intl.format(b.t["4kp0AB"], { itemName: t }) : null),
-    S = (t) => {
+    E = n(975571),
+    v = n(993408),
+    I = n(442759),
+    _ = n(158216),
+    O = n(758836),
+    R = n(652215),
+    b = n(839358),
+    S = n(985018);
+let k = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null),
+    C = (t) => {
         let {
             product: e,
             overrideTitle: n,
             isVariantsGroupEnabled: i,
-            shouldShowPromotionalExperience: r,
-            productName: a,
-            itemConsumed: l,
+            shouldShowPromotionalExperience: a,
+            productName: l,
+            itemConsumed: r,
         } = t;
         if (null != n) return n;
-        if (L.Dp.ORB_PROFILE_BADGE === e.skuId) return b.intl.string(T.default.nvaTQq);
-        if (L.Dp.FRACTIONAL_PREMIUM === e.skuId)
-            if (l) return b.intl.string(b.t.t0xkSB);
-            else return b.intl.string(b.t.g5W1g8);
-        if (i && !r) return b.intl.string(b.t.IMffmm);
-        return b.intl.formatToPlainString(b.t.YNaxMp, { itemName: a });
+        if (O.Dp.ORB_PROFILE_BADGE === e.skuId) return S.intl.string(b.default.nvaTQq);
+        if (O.Dp.FRACTIONAL_PREMIUM === e.skuId)
+            if (r) return S.intl.string(S.t.t0xkSB);
+            else return S.intl.string(S.t.g5W1g8);
+        if (i && !a) return S.intl.string(S.t.IMffmm);
+        return S.intl.formatToPlainString(S.t.YNaxMp, { itemName: l });
     },
-    g = (t) => {
+    T = (t) => {
         let {
             product: e,
             overrideDescription: n,
             productName: i,
-            shouldShowPromotionalExperience: r,
-            promotionalRewardCollectedText: a,
-            itemConsumed: l,
-            isFractionalPremiumActive: d,
-            expiresAt: u,
+            shouldShowPromotionalExperience: a,
+            promotionalRewardCollectedText: l,
+            itemConsumed: r,
+            isFractionalPremiumActive: s,
+            expiresAt: o,
         } = t;
         if (null != n) return n;
-        if (L.Dp.ORB_PROFILE_BADGE === e.skuId) return b.intl.string(T.default.UnPGii);
-        if (L.Dp.FRACTIONAL_PREMIUM === e.skuId) {
-            let t = b.intl.formatToPlainString(b.t.Cz1G97, { days: 3 });
-            return l
-                ? b.intl.format(b.t.bhLChO, {
-                      helpCenterLink: _.A.getArticleURL(m.MVz.FRACTIONAL_PREMIUM_ABOUT),
+        if (O.Dp.ORB_PROFILE_BADGE === e.skuId) return S.intl.string(b.default.UnPGii);
+        if (O.Dp.FRACTIONAL_PREMIUM === e.skuId) {
+            let t = S.intl.formatToPlainString(S.t.Cz1G97, { days: 3 });
+            return r
+                ? S.intl.format(S.t.bhLChO, {
+                      helpCenterLink: E.A.getArticleURL(R.MVz.FRACTIONAL_PREMIUM_ABOUT),
                       duration: t,
-                      expirationDate: u,
+                      expirationDate: o,
                   })
-                : d
-                  ? b.intl.string(b.t.fBmhE9)
-                  : b.intl.format(b.t["1ZBX4E"], {
-                        helpCenterLink: _.A.getArticleURL(m.MVz.FRACTIONAL_PREMIUM_ABOUT),
+                : s
+                  ? S.intl.string(S.t.fBmhE9)
+                  : S.intl.format(S.t["1ZBX4E"], {
+                        helpCenterLink: E.A.getArticleURL(R.MVz.FRACTIONAL_PREMIUM_ABOUT),
                         duration: t,
                     });
         }
-        if (e.type === s.R.BUNDLE) {
-            let { itemOneName: t, itemTwoName: n } = (0, R.yW)(e);
-            return b.intl.format(b.t.fXw44U, { itemOneName: t, itemTwoName: n });
+        if (e.type === d.R.BUNDLE) {
+            let { itemOneName: t, itemTwoName: n } = (0, I.yW)(e);
+            return S.intl.format(S.t.fXw44U, { itemOneName: t, itemTwoName: n });
         }
-        return e.type === s.R.AVATAR_DECORATION && r && null != a ? a : k(i);
+        return e.type === d.R.AVATAR_DECORATION && a && null != l ? l : k(i);
     },
-    v = (t) => {
+    N = (t) => {
         let {
                 product: e,
                 onClose: n,
                 analyticsLocations: i,
-                hasRequiredProductItems: r,
-                handleUseNow: a,
-                isApplying: A,
-                openProfileSettings: _,
-                itemConsumed: I,
+                hasRequiredProductItems: a,
+                handleUseNow: l,
+                isApplying: m,
+                openProfileSettings: E,
+                itemConsumed: v,
             } = t,
-            R = [];
-        if (L.Dp.ORB_PROFILE_BADGE === e.skuId)
-            R.push(
+            I = [];
+        if (O.Dp.ORB_PROFILE_BADGE === e.skuId)
+            I.push(
                 {
-                    text: b.intl.string(T.default.yfwZuy),
+                    text: S.intl.string(b.default.yfwZuy),
                     variant: "primary",
                     onClick: () => {
-                        n(), y._.dispatch(m.jej.SHOW_ACCOUNT_PROFILE_POPOUT, {});
+                        n(), y._.dispatch(R.jej.SHOW_ACCOUNT_PROFILE_POPOUT, {});
                     },
                 },
                 {
-                    text: b.intl.string(b.t.H57f41),
+                    text: S.intl.string(S.t.H57f41),
                     variant: "secondary",
                     onClick: () => {
                         n(),
                             (0, f.Y)({
-                                pageType: m.liQ.SHOP_ORBS_TAB,
-                                sectionType: m.JJy.ORBS_BADGE_REDEMPTION_MODAL,
-                                ctaObject: m.ZSU.CTA_TO_QUEST_HOME,
+                                pageType: R.liQ.SHOP_ORBS_TAB,
+                                sectionType: R.JJy.ORBS_BADGE_REDEMPTION_MODAL,
+                                ctaObject: R.ZSU.CTA_TO_QUEST_HOME,
                             }),
-                            (0, h.navigateToQuestHome)();
+                            (0, g.navigateToQuestHome)();
                     },
                 },
             );
-        else if (L.Dp.FRACTIONAL_PREMIUM === e.skuId)
-            I
-                ? R.push(
-                      { text: b.intl.string(b.t.cpT0Cq), variant: "secondary", onClick: n },
+        else if (O.Dp.FRACTIONAL_PREMIUM === e.skuId)
+            v
+                ? I.push(
+                      { text: S.intl.string(S.t.cpT0Cq), variant: "secondary", onClick: n },
                       {
-                          text: b.intl.string(b.t.ERKK6v),
+                          text: S.intl.string(S.t.ERKK6v),
                           variant: "primary",
                           onClick: () => {
-                              (0, o.x)(n);
+                              (0, u.x)(n);
                           },
                       },
                   )
-                : R.push(
-                      { text: b.intl.string(b.t.cpT0Cq), variant: "secondary", onClick: n },
+                : I.push(
+                      { text: S.intl.string(S.t.cpT0Cq), variant: "secondary", onClick: n },
                       {
-                          text: b.intl.string(b.t["Jr6N+s"]),
+                          text: S.intl.string(S.t["Jr6N+s"]),
                           variant: "primary",
                           onClick: () => {
-                              (0, O.openUserSettings)(E.X.SUBSCRIPTIONS_PANEL, { section: m.nc_.SUBSCRIPTIONS }), n();
+                              (0, h.openUserSettings)(A.X.SUBSCRIPTIONS_PANEL, { section: R.nc_.SUBSCRIPTIONS }), n();
                           },
                       },
                   );
         else {
             let [t] = e.items;
-            R.push({
-                text: b.intl.string(b.t["2p2aYz"]),
-                variant: r ? "secondary" : "primary",
+            I.push({
+                text: S.intl.string(S.t["2p2aYz"]),
+                variant: a ? "secondary" : "primary",
                 onClick: () => {
-                    if ((n(), (0, d.jH)(), _?.(), e.type === s.R.AVATAR_DECORATION)) {
-                        l()(t.type === s.R.AVATAR_DECORATION, "product type and item type are the same"),
-                            (0, u.L)({ initialSelectedDecoration: t, analyticsLocations: i });
+                    if ((n(), (0, s.jH)(), E?.(), e.type === d.R.AVATAR_DECORATION)) {
+                        r()(t.type === d.R.AVATAR_DECORATION, "product type and item type are the same"),
+                            (0, o.L)({ initialSelectedDecoration: t, analyticsLocations: i });
                         return;
                     }
-                    if (e.type === s.R.PROFILE_EFFECT) {
-                        l()(t.type === s.R.PROFILE_EFFECT, "product type and item type are the same"),
+                    if (e.type === d.R.PROFILE_EFFECT) {
+                        r()(t.type === d.R.PROFILE_EFFECT, "product type and item type are the same"),
                             (0, c.W)({ initialSelectedEffect: t, analyticsLocations: i });
                         return;
                     }
-                    if (e.type === s.R.NAMEPLATE) {
-                        l()(t.type === s.R.NAMEPLATE, "product type and item type are the same"),
+                    if (e.type === d.R.NAMEPLATE) {
+                        r()(t.type === d.R.NAMEPLATE, "product type and item type are the same"),
                             (0, p.p)({ initialSelectedNameplate: t, analyticsLocations: i });
                         return;
                     }
                 },
             });
         }
-        return r && R.push({ text: b.intl.string(b.t.MAS7uK), variant: "primary", onClick: a, loading: A }), R;
+        return a && I.push({ text: S.intl.string(S.t.MAS7uK), variant: "primary", onClick: l, loading: m }), I;
     },
-    P = (t, e) => {
-        let n = i.useMemo(() => (0, I.V6)(t.type, t.skuId), [t.type, t.skuId]);
+    D = (t, e) => {
+        let n = i.useMemo(() => (0, v.V6)(t.type, t.skuId), [t.type, t.skuId]);
         return (
             i.useEffect(() => {
-                A.default.track(m.HAw.OPEN_MODAL, {
-                    type: m.JJy.COLLECTIBLES_SHOP_COLLECTED_MODAL,
+                m.default.track(R.HAw.OPEN_MODAL, {
+                    type: R.JJy.COLLECTIBLES_SHOP_COLLECTED_MODAL,
                     location_stack: e,
                     sku_id: t.skuId,
                     product_type: n,
@@ -172,16 +172,16 @@ let k = (t) => (null != t ? b.intl.format(b.t["4kp0AB"], { itemName: t }) : null
             { productType: n }
         );
     },
-    B = (t, e) => {
-        let n = i.useRef(new r.OH()),
-            a = (0, i.useRef)(null),
-            [l, s] = i.useState(null),
-            d = (0, C.AB)({ purchaseType: e, skuId: t.skuId });
+    L = (t, e) => {
+        let n = i.useRef(new a.OH()),
+            l = (0, i.useRef)(null),
+            [r, d] = i.useState(null),
+            s = (0, _.AB)({ purchaseType: e, skuId: t.skuId });
         return {
             environment: n.current,
-            modalRef: a,
-            confettiCanvas: l,
-            setConfettiCanvas: s,
-            customConfettiDisplayOptions: d,
+            modalRef: l,
+            confettiCanvas: r,
+            setConfettiCanvas: d,
+            customConfettiDisplayOptions: s,
         };
     };

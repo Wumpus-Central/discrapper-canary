@@ -8,7 +8,7 @@ var n = a(627968),
     c = a(770178),
     d = a(124589),
     u = a(985018),
-    h = a(55092);
+    h = a(326046);
 function m(e) {
     let { onTabSelect: t, tabs: a, selectedTab: s } = e,
         r = i.useMemo(
@@ -77,9 +77,9 @@ function p(e) {
             lastVisibleIndex: x,
             onItemLayout: A,
             overflowItemsRef: C,
-            itemWidthsRef: b,
+            itemWidthsRef: v,
         } = (0, r.Wv)({ items: s, itemGapPx: 20, maxLines: 1, containerWidth: p }),
-        v = i.useMemo(() => s.slice(0, x + 1), [x, s]),
+        b = i.useMemo(() => s.slice(0, x + 1), [x, s]),
         f = i.useMemo(() => s.slice(x + 1), [x, s]),
         j = i.useRef(null),
         I = i.useCallback(
@@ -87,10 +87,10 @@ function p(e) {
                 let t = e.contentRect.width;
                 if (null == t || g.current === t) return;
                 _(t), (g.current = t);
-                let a = t - b.current.reduce((e, t, a) => e + t + 20 * (0 !== a));
+                let a = t - v.current.reduce((e, t, a) => e + t + 20 * (0 !== a));
                 u?.(a);
             },
-            [b, u],
+            [v, u],
         );
     (0, c.g)(j, I);
     let E = 0 !== p;
@@ -128,7 +128,7 @@ function p(e) {
                     onItemSelect: d,
                     className: h.vR,
                     children: [
-                        v.map((e) =>
+                        b.map((e) =>
                             (0, n.jsx)(
                                 o.VQ0.Item,
                                 { id: e.id, look: "brand", "aria-label": e.label, className: h.Mf, children: e.label },

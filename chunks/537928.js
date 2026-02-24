@@ -3,8 +3,8 @@ n.d(t, { z: () => o });
 var r = n(627968);
 n(64700);
 var i = n(397927),
-    a = n(194267),
-    s = n(72011);
+    s = n(194267),
+    a = n(433397);
 function o(e) {
     let {
         quest: t,
@@ -16,7 +16,7 @@ function o(e) {
     } = e;
     return (e) =>
         (0, r.jsx)(
-            a.A,
+            s.A,
             {
                 quest: t,
                 sourceQuestContent: n,
@@ -32,7 +32,7 @@ function o(e) {
                         children: (0, r.jsx)(i.Text, {
                             variant: "text-xs/normal",
                             color: "text-link",
-                            className: s.s3,
+                            className: a.s3,
                             children: e,
                         }),
                     }),

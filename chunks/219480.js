@@ -13,20 +13,20 @@ var i = l(627968),
     h = l(714973),
     x = l(696016),
     C = l(985018),
-    v = l(430494);
+    v = l(178428);
 let g = 16 / 9,
-    f = [0, 16, 0, 16],
-    j = f[1] + f[3];
+    j = [0, 16, 0, 16],
+    f = j[1] + j[3];
 function y(e, t) {
     return Math.ceil(t / e);
 }
 function A(e) {
-    let { channelId: t, filteredClips: A, totalClipCount: I, onClipClick: N } = e,
+    let { channelId: t, filteredClips: A, totalClipCount: N, onClipClick: I } = e,
         [b, E] = s.useState(!0),
         [k, M] = s.useState({ width: 0, height: 0 }),
         w = (0, n.bG)([u.A], () => u.A.getSettings().storageLocation),
         L = (0, n.yK)([u.A], () => u.A.getNewClipIds()),
-        H = (0, n.bG)([u.A], () => u.A.getExportingClipIds().length > 0);
+        S = (0, n.bG)([u.A], () => u.A.getExportingClipIds().length > 0);
     (0, d.A)(
         {
             type: a.ImpressionTypes.MODAL,
@@ -45,7 +45,7 @@ function A(e) {
             ),
             [],
         );
-    let S = s.useMemo(() => {
+    let H = s.useMemo(() => {
             let e = [],
                 t = new Map(),
                 l = [],
@@ -87,7 +87,7 @@ function A(e) {
             let t, l, i, s, a;
             return (
                 (e = A.length),
-                (i = 16 * ((l = Math.max(1, Math.floor(((t = T - j) + 16) / 336))) - 1)),
+                (i = 16 * ((l = Math.max(1, Math.floor(((t = T - f) + 16) / 336))) - 1)),
                 (s = Math.max(320, (t - i) / l)),
                 (a = y(l, e)),
                 { tileWidth: s, columns: l, rows: a }
@@ -107,7 +107,7 @@ function A(e) {
             (e) => {
                 (0, r.mMO)(
                     async () => {
-                        let { default: s } = await Promise.all([l.e("19632"), l.e("95987")]).then(l.bind(l, 723028));
+                        let { default: s } = await Promise.all([l.e("19632"), l.e("1487")]).then(l.bind(l, 723028));
                         return (l) => (0, i.jsx)(s, { ...l, channelId: t, clip: e });
                     },
                     { modalKey: x.DQ, stackingBehavior: "stack" },
@@ -115,13 +115,13 @@ function A(e) {
             },
             [t],
         ),
-        R = s.useMemo(() => S.map((e) => y(V, e.clips.length)), [S, V]),
+        R = s.useMemo(() => H.map((e) => y(V, e.clips.length)), [H, V]),
         G = s.useMemo(() => R.reduce((e, t) => e + t, 0), [R]),
         _ = Math.floor(P / g),
-        z = s.useCallback(
+        O = s.useCallback(
             (e, t) => {
                 let { sectionIndex: l, sectionRowIndex: s } = t,
-                    a = S[l];
+                    a = H[l];
                 if (null == a) return null;
                 let n = s * V,
                     r = a.clips.slice(n, n + V);
@@ -135,9 +135,9 @@ function A(e) {
                                 {
                                     style: { width: P },
                                     children: (0, i.jsx)(p.A, {
-                                        actionsDisabled: H,
+                                        actionsDisabled: S,
                                         isNew: L.includes(e.id),
-                                        onClick: N ?? D,
+                                        onClick: I ?? D,
                                         clip: e,
                                     }),
                                 },
@@ -148,18 +148,18 @@ function A(e) {
                     `row-${l}-${s}`,
                 );
             },
-            [S, V, P, H, L, D, N],
+            [H, V, P, S, L, D, I],
         ),
-        O = s.useCallback(
+        z = s.useCallback(
             (e) => {
-                let t = S[e];
+                let t = H[e];
                 return t?.description != null ? 66 : 44;
             },
-            [S],
+            [H],
         ),
         K = s.useCallback(
             (e) => {
-                let t = S[e];
+                let t = H[e];
                 return null == t
                     ? null
                     : (0, i.jsxs)(
@@ -184,20 +184,20 @@ function A(e) {
                           `header-${e}`,
                       );
             },
-            [S],
+            [H],
         );
-    return b || 0 !== S.length
+    return b || 0 !== H.length
         ? b
             ? (0, i.jsx)("div", { className: v.dc, children: (0, i.jsx)(r.y$y, {}) })
             : (0, i.jsx)(c.A, {
-                  listPadding: f,
-                  renderRow: z,
+                  listPadding: j,
+                  renderRow: O,
                   renderSectionHeader: K,
                   rowCount: G,
                   rowCountBySection: R,
                   rowHeight: _ + 68 + 16,
-                  sectionHeaderHeight: O,
+                  sectionHeaderHeight: z,
                   onResize: M,
               })
-        : (0, i.jsx)(h.A, { isEmptyBecauseQuery: I > 0 });
+        : (0, i.jsx)(h.A, { isEmptyBecauseQuery: N > 0 });
 }

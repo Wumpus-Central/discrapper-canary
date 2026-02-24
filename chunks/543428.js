@@ -1,4 +1,4 @@
-l.d(t, { $: () => f, default: () => j });
+l.d(t, { $: () => j, default: () => f });
 var i = l(627968),
     s = l(64700),
     a = l(311907),
@@ -14,29 +14,29 @@ var i = l(627968),
     x = l(792852),
     C = l(409067),
     v = l(985018),
-    g = l(144894);
-let f = s.createContext({
+    g = l(45968);
+let j = s.createContext({
     selectedClipIds: new Set(),
     toggleClipSelection: () => {},
     clearSelection: () => {},
     isMultiSelectMode: !1,
 });
-function j(e) {
-    let { channelId: t, onClose: j, onClipClick: y, ...A } = e,
-        { analyticsLocations: I } = (0, o.Ay)(c.A.CLIPS_GALLERY),
-        [N, b] = s.useState(new Set()),
+function f(e) {
+    let { channelId: t, onClose: f, onClipClick: y, ...A } = e,
+        { analyticsLocations: N } = (0, o.Ay)(c.A.CLIPS_GALLERY),
+        [I, b] = s.useState(new Set()),
         { clipsByGame: E, filteredClips: k, favoriteClips: M, allClips: w } = (0, C.a)(),
         { onShareClick: L } = (0, m.A)(t),
-        H = (0, a.bG)([u.A], () => u.A.getExportingClipIds().length > 0),
-        S = (0, x.P)((e) => e.selectedGameId),
+        S = (0, a.bG)([u.A], () => u.A.getExportingClipIds().length > 0),
+        H = (0, x.P)((e) => e.selectedGameId),
         T = s.useMemo(
-            () => (null == S || "favorites" === S ? null : (E.find((e) => e.applicationId === S) ?? null)),
-            [S, E],
+            () => (null == H || "favorites" === H ? null : (E.find((e) => e.applicationId === H) ?? null)),
+            [H, E],
         ),
-        P = s.useMemo(() => ("favorites" === S ? M : (T?.filteredClips ?? k)), [S, T, k, M]),
+        P = s.useMemo(() => ("favorites" === H ? M : (T?.filteredClips ?? k)), [H, T, k, M]),
         V = s.useMemo(
-            () => ("favorites" === S ? v.intl.string(v.t["9rlCk1"]) : (T?.name ?? v.intl.string(v.t.dPVrEv))),
-            [S, T],
+            () => ("favorites" === H ? v.intl.string(v.t["9rlCk1"]) : (T?.name ?? v.intl.string(v.t.dPVrEv))),
+            [H, T],
         ),
         D = s.useCallback((e) => {
             b((t) => {
@@ -47,9 +47,9 @@ function j(e) {
         R = s.useCallback(() => {
             b(new Set());
         }, []),
-        G = N.size > 0,
+        G = I.size > 0,
         _ = s.useCallback(() => {
-            let e = w.filter((e) => N.has(e.id));
+            let e = w.filter((e) => I.has(e.id));
             (0, d.mMO)(
                 async () => {
                     let { default: t } = await l.e("13367").then(l.bind(l, 223818));
@@ -64,21 +64,21 @@ function j(e) {
                 },
                 { stackingBehavior: "stack" },
             );
-        }, [w, N, R]),
-        z = s.useCallback(async () => {
-            let e = w.filter((e) => N.has(e.id));
+        }, [w, I, R]),
+        O = s.useCallback(async () => {
+            let e = w.filter((e) => I.has(e.id));
             await L({ clips: e }), R();
-        }, [w, N, L, R]),
-        O = s.useMemo(
-            () => ({ selectedClipIds: N, toggleClipSelection: D, clearSelection: R, isMultiSelectMode: G }),
-            [N, D, R, G],
+        }, [w, I, L, R]),
+        z = s.useMemo(
+            () => ({ selectedClipIds: I, toggleClipSelection: D, clearSelection: R, isMultiSelectMode: G }),
+            [I, D, R, G],
         );
     return (0, i.jsx)(o.f5, {
-        value: I,
-        children: (0, i.jsx)(f.Provider, {
-            value: O,
+        value: N,
+        children: (0, i.jsx)(j.Provider, {
+            value: z,
             children: (0, i.jsx)(r.N, {
-                onClose: j,
+                onClose: f,
                 ...A,
                 children: (0, i.jsxs)("div", {
                     className: g.jT,
@@ -104,12 +104,12 @@ function j(e) {
                                                             (0, i.jsx)(n.m, {
                                                                 text: v.intl.string(v.t.RDE0Sc),
                                                                 children: (0, i.jsx)(d.K0, {
-                                                                    onClick: z,
+                                                                    onClick: O,
                                                                     icon: d.liv,
                                                                     size: "sm",
                                                                     variant: "icon-only",
                                                                     "aria-label": v.intl.string(v.t.RDE0Sc),
-                                                                    loading: H,
+                                                                    loading: S,
                                                                 }),
                                                             }),
                                                             (0, i.jsx)(n.m, {
@@ -125,7 +125,7 @@ function j(e) {
                                                         ],
                                                     }),
                                                 (0, i.jsx)(d.K0, {
-                                                    onClick: j,
+                                                    onClick: f,
                                                     icon: d.d$L,
                                                     size: "sm",
                                                     variant: "icon-only",

@@ -12,11 +12,11 @@ var l = n(627968),
     h = n(576705),
     x = n(954571),
     m = n(637248),
-    A = n(743015),
-    g = n(652215),
+    g = n(743015),
+    A = n(652215),
     C = n(746080),
     f = n(985018),
-    p = n(896743);
+    p = n(775921);
 function N(e) {
     let { channelId: t } = e;
     return (0, l.jsx)(r.A, {
@@ -32,12 +32,12 @@ function j(e) {
         j = (0, s.bG)([u.Ay], () => u.Ay.getChannels(t)),
         v = (0, s.bG)([o.A], () => o.A.getCategories(t)),
         b = (0, m.vh)(t, v, j, r),
-        I = (0, s.bG)([h.A], () => h.A.canWithPartialContext(g.xBc.MANAGE_CHANNELS, { guildId: t })),
+        I = (0, s.bG)([h.A], () => h.A.canWithPartialContext(A.xBc.MANAGE_CHANNELS, { guildId: t })),
         E = (0, s.bG)([c.Ay], () => null != c.Ay.getCurrentSidebarChannelId(C.VV.CHANNEL_BROWSER)),
         S = i.useCallback(() => d(""), [d]),
         w = i.useCallback(() => {
             (0, a.mMO)(async () => {
-                let { default: e } = await Promise.all([n.e("64233"), n.e("9743")]).then(n.bind(n, 409200));
+                let { default: e } = await Promise.all([n.e("64233"), n.e("10923")]).then(n.bind(n, 409200));
                 return (n) => (0, l.jsx)(e, { ...n, channelType: null, guildId: t });
             });
         }, [t]);
@@ -54,7 +54,7 @@ function j(e) {
                               onChange: (e) => {
                                   "" === r &&
                                       "" !== e &&
-                                      x.default.track(g.HAw.SEARCH_STARTED, { search_type: "channel browser" }),
+                                      x.default.track(A.HAw.SEARCH_STARTED, { search_type: "channel browser" }),
                                       d(e.toLowerCase());
                               },
                               onClear: S,
@@ -63,7 +63,7 @@ function j(e) {
                           I ? (0, l.jsx)(a.Button, { icon: a.j96, onClick: w, text: f.intl.string(f.t.CumH4u) }) : null,
                       ],
                   }),
-                  (0, l.jsx)(A.A, { className: p.T, channels: j, categories: b, guild: N, hasSidebar: E }),
+                  (0, l.jsx)(g.A, { className: p.T, channels: j, categories: b, guild: N, hasSidebar: E }),
               ],
           });
 }

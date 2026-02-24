@@ -15,17 +15,17 @@ var i = n(627968),
     p = n(342887),
     f = n(973947),
     _ = n(985018),
-    E = n(32425);
-let C = [51],
-    x = [_.t.OpqAok];
+    E = n(361499);
+let x = [51],
+    C = [_.t.OpqAok];
 function S(e) {
     let { columns: t, handleScroll: n, voiceListRef: l, showSectionHeaders: s = !1, query: a } = e,
-        r = N(),
+        r = T(),
         S = (0, o.bG)([h.default], () => (0, m.ki)(h.default.getCurrentUser())),
-        v = I(a, S),
-        y = Math.ceil(v.length / t),
+        y = N(a, S),
+        b = Math.ceil(y.length / t),
         {
-            isNativeModuleLoaded: b,
+            isNativeModuleLoaded: v,
             isNativeModuleLoading: j,
             catalogLastFetchTime: R,
         } = (0, o.cf)([g.A], () => ({
@@ -33,7 +33,7 @@ function S(e) {
             isNativeModuleLoading: g.A.isNativeModuleLoading(),
             catalogLastFetchTime: g.A.getCatalogLastFetchTime(),
         }));
-    return a && 0 === v.length
+    return a && 0 === y.length
         ? (0, i.jsxs)("div", {
               className: E.nm,
               children: [
@@ -58,7 +58,7 @@ function S(e) {
                     (0, i.jsx)(d.Text, {
                         variant: "text-sm/normal",
                         color: "text-muted",
-                        children: _.intl.format(_.t["5afO9U"], { onClick: b ? p.st : p.md }),
+                        children: _.intl.format(_.t["5afO9U"], { onClick: v ? p.st : p.md }),
                     }),
                 ],
             })
@@ -72,9 +72,9 @@ function S(e) {
                   className: E.kL,
                   renderRow: (e) => {
                       let n = e * t,
-                          l = v.slice(n, n + t);
+                          l = y.slice(n, n + t);
                       return (0, i.jsx)(
-                          T,
+                          I,
                           {
                               children: l.map((n, l) =>
                                   (0, i.jsx)(
@@ -84,7 +84,7 @@ function S(e) {
                                           hasNitro: S,
                                           analyticsContext: {
                                               reason: A.O.USER_SELECTION,
-                                              gridRows: y,
+                                              gridRows: b,
                                               gridColumns: t,
                                               interactedRow: e,
                                               interactedColumn: l,
@@ -105,17 +105,17 @@ function S(e) {
                                     variant: "text-sm/medium",
                                     color: "text-muted",
                                     className: E.wx,
-                                    children: _.intl.string(x[e]),
+                                    children: _.intl.string(C[e]),
                                 }),
-                  sectionHeaderHeight: !1 === s ? void 0 : (e) => C[e],
-                  rowCount: y,
+                  sectionHeaderHeight: !1 === s ? void 0 : (e) => x[e],
+                  rowCount: b,
                   rowHeight: 130,
                   onScroll: n,
                   ref: l,
                   sectionFooterHeight: 40 * !S,
               });
 }
-function T(e) {
+function I(e) {
     let { children: t } = e,
         n = l.useRef(null);
     return (0, i.jsx)("div", {
@@ -124,14 +124,14 @@ function T(e) {
         children: (0, i.jsx)(d.xpW, { containerRef: n, children: t }),
     });
 }
-let N = () =>
+let T = () =>
         (0, o.bG)(
             [g.A],
             () =>
                 !Object.keys(g.A.getVoiceFilterModels() ?? {}).length &&
                 (g.A.getCatalogFetchFailed() || g.A.hasNativeModuleFailed()),
         ),
-    I = (e, t) =>
+    N = (e, t) =>
         (0, o.yK)([g.A], () => {
             var n;
             let i,

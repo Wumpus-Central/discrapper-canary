@@ -2,10 +2,10 @@
 n.d(t, { E: () => d, U: () => c });
 var r = n(627968),
     i = n(503698),
-    a = n.n(i),
-    s = n(460890),
+    s = n.n(i),
+    a = n(460890),
     o = n(834730),
-    l = n(769796);
+    l = n(62022);
 let u = (e, t) => {
     switch (e) {
         case "new":
@@ -25,10 +25,10 @@ function c(e) {
 }
 function d(e) {
     let { type: t, variant: n = "default", icon: i } = e,
-        { i18n: c } = (0, s.G9)();
+        { i18n: c } = (0, a.G9)();
     return (0, r.jsxs)(o.E, {
         variant: "eyebrow",
-        className: a()(l.badge, l[n]),
+        className: s()(l.badge, l[n]),
         children: [null != i && (0, r.jsx)(i, { size: "xxs", color: "currentColor" }), u(t, c)],
     });
 }

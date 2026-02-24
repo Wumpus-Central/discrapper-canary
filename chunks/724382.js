@@ -6,23 +6,23 @@ var l = n(397927),
     r = n(763754),
     s = n(447215),
     o = n(888675),
-    d = n(985018),
-    c = n(893112);
+    c = n(985018),
+    d = n(58350);
 function u(e) {
     let { message: t, channel: n, compact: u } = e,
         m = (0, r.Ay)(t),
         _ = (0, s.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id })(m),
-        h = (0, a.h)(t.applicationId);
-    if (null == h) return null;
-    let p = d.intl.format(d.t.mAtJTC, {
+        A = (0, a.h)(t.applicationId);
+    if (null == A) return null;
+    let h = c.intl.format(c.t.mAtJTC, {
         username: t.author.username,
         usernameHook: _,
-        applicationName: h.name,
+        applicationName: A.name,
         applicationNameHook: () =>
             (0, i.jsx)(
                 l.Text,
-                { className: c.S, variant: "text-md/semibold", color: "text-strong", children: h.name },
-                h.name,
+                { className: d.S, variant: "text-md/semibold", color: "text-strong", children: A.name },
+                A.name,
             ),
         helpdeskArticle: "#",
     });
@@ -30,7 +30,7 @@ function u(e) {
         iconNode: (0, i.jsx)(l.fNY, { size: "sm", color: l.LU0.colors.STATUS_POSITIVE }),
         timestamp: t.timestamp,
         compact: u,
-        contentClassName: c.H,
-        children: p,
+        contentClassName: d.H,
+        children: h,
     });
 }

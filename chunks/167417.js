@@ -2,17 +2,17 @@
 n.d(t, { $: () => d });
 var r = n(627968),
     i = n(64700),
-    a = n(974213),
-    s = n(568385),
+    s = n(974213),
+    a = n(568385),
     o = n(150934),
     l = n(452027),
     u = n(460890),
-    c = n(2441);
+    c = n(313975);
 function d(e) {
     let { onChange: t, options: n, selectedValues: d, disabled: _ = !1, ...f } = e,
-        h = i.useContext(u.VO),
-        p = h?.experiments?.enabledExperiments?.includes("mana-toggle-inputs"),
-        g = (e) => {
+        p = i.useContext(u.VO),
+        h = p?.experiments?.enabledExperiments?.includes("mana-toggle-inputs"),
+        m = (e) => {
             t?.(e);
         },
         E = (e, n) => {
@@ -22,16 +22,16 @@ function d(e) {
     return (0, r.jsx)(l.D, {
         ...f,
         role: "group",
-        children: p
-            ? (0, r.jsx)(a.$Q, {
+        children: h
+            ? (0, r.jsx)(s.$Q, {
                   className: c.O,
                   value: d.map(String),
-                  onChange: g,
+                  onChange: m,
                   "data-mana-component": "checkbox-group",
                   isDisabled: _,
                   children: n.map((e) =>
                       (0, r.jsx)(
-                          s.J,
+                          a.J,
                           {
                               disabled: _ || e.disabled,
                               checked: d.includes(e.value),

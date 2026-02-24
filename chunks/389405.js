@@ -11,14 +11,14 @@ var i = n(627968),
     A = n(652215),
     h = n(613057),
     _ = n(985018),
-    m = n(742249);
+    m = n(9043);
 function p(e) {
     let { applicationId: t } = e.match.params,
         [p, g] = r.useState(!1),
         E = r.useRef(!1),
         [I, f] = r.useState(null),
         C = !c.isPlatformEmbedded && !a.Fr && !p,
-        N = r.useMemo(() => (0, l.A)(), []);
+        T = r.useMemo(() => (0, l.A)(), []);
     return (r.useEffect(() => {
         C &&
             !0 !== E.current &&
@@ -28,7 +28,7 @@ function p(e) {
                     let { default: n } = e;
                     n.request(A.e$_.DEEP_LINK, {
                         type: h.XK.ACTIVITIES,
-                        params: { applicationId: t, url: location.href, attemptId: N },
+                        params: { applicationId: t, url: location.href, attemptId: T },
                     })
                         .then((e) => {
                             let n = e ?? !1;
@@ -36,7 +36,7 @@ function p(e) {
                                 d.default.track(A.HAw.ACTIVITY_DEEP_LINK_ATTEMPTED, {
                                     application_id: t,
                                     source_url: location.href,
-                                    attempt_id: N,
+                                    attempt_id: T,
                                     rpc_success: n,
                                 });
                         })
@@ -45,14 +45,14 @@ function p(e) {
                                 d.default.track(A.HAw.ACTIVITY_DEEP_LINK_ATTEMPTED, {
                                     application_id: t,
                                     source_url: location.href,
-                                    attempt_id: N,
+                                    attempt_id: T,
                                     rpc_success: !1,
                                 });
                         })
                         .then(() => n.disconnect());
                 }),
             (E.current = !0));
-    }, [t, C, N]),
+    }, [t, C, T]),
     C && !1 !== I)
         ? !0 === I
             ? (0, i.jsxs)("div", {

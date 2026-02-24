@@ -1,9 +1,9 @@
-n.d(t, { A: () => N }), n(142703);
+n.d(t, { A: () => T }), n(142703);
 var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(522160),
+    r = n(442215),
     o = n(311907),
     c = n(397927),
     d = n(765671),
@@ -16,8 +16,8 @@ var i = n(627968),
     f = n(559908),
     _ = n(103640),
     E = n(924177),
-    C = n(985018),
-    x = n(733313);
+    x = n(985018),
+    C = n(11239);
 let S = l.memo(function (e) {
         let { channelId: t, width: n } = e,
             s = (0, o.bG)([u.A], () => u.A.useReducedMotion),
@@ -48,101 +48,101 @@ let S = l.memo(function (e) {
         return (
             null != a &&
             (0, i.jsx)(r.animated.div, {
-                className: x.Gi,
+                className: C.Gi,
                 style: A,
                 children: (0, i.jsx)(c.Text, {
-                    className: x.fX,
+                    className: C.fX,
                     variant: "text-sm/bold",
                     children: (0, _.RL)(a.combo),
                 }),
             })
         );
     }),
-    T = l.memo(function (e) {
+    I = l.memo(function (e) {
         let { value: t, multiplier: n } = e,
             { color: s, square: r, flair: o } = l.useMemo(() => (0, _.HN)(n), [n]);
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(c.Text, { className: x.iR, variant: "text-sm/bold", children: t }),
+                (0, i.jsx)(c.Text, { className: C.iR, variant: "text-sm/bold", children: t }),
                 (0, i.jsxs)("div", {
-                    className: x._Z,
+                    className: C._Z,
                     style: { color: s },
                     children: [
                         (0, i.jsx)(c.Text, {
-                            className: x.On,
+                            className: C.On,
                             style: { color: s },
                             variant: "text-sm/bold",
-                            children: C.intl.format(C.t["6bgVlq"], { multiplier: n }),
+                            children: x.intl.format(x.t["6bgVlq"], { multiplier: n }),
                         }),
                         r &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    (0, i.jsx)("div", { className: a()(x.QA, x.kb), style: { backgroundColor: s } }),
-                                    (0, i.jsx)("div", { className: a()(x.QA, x.pG), style: { backgroundColor: s } }),
+                                    (0, i.jsx)("div", { className: a()(C.QA, C.kb), style: { backgroundColor: s } }),
+                                    (0, i.jsx)("div", { className: a()(C.QA, C.pG), style: { backgroundColor: s } }),
                                 ],
                             }),
                         o &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)("div", {
-                                        className: a()(x.ox, x.kb),
+                                        className: a()(C.ox, C.kb),
                                         children: (0, i.jsx)(A.A, { width: 24, height: 24 }),
                                     }),
                                     (0, i.jsx)("div", {
-                                        className: a()(x.ox, x.pG),
+                                        className: a()(C.ox, C.pG),
                                         children: (0, i.jsx)(A.A, { width: 24, height: 24 }),
                                     }),
                                 ],
                             }),
                         1 === n &&
                             (0, i.jsx)(c.Text, {
-                                className: x.uN,
+                                className: C.uN,
                                 variant: "text-sm/bold",
-                                children: C.intl.string(C.t.b5Cpof),
+                                children: x.intl.string(x.t.b5Cpof),
                             }),
                     ],
                 }),
             ],
         });
     }),
-    N = l.memo(function (e) {
+    T = l.memo(function (e) {
         let { channelId: t } = e,
             n = (0, o.bG)([h.default], () => h.default.getId()),
             s = (0, o.bG)([m.A], () => m.A.isTyping(t, n), [t, n]),
             a = (0, o.bG)([p.A], () => p.A.isEnabled()),
             u = (0, o.bG)([f.Ay], () => f.Ay.isComboing(n, t), [t, n]),
             { ref: A, width: g = 0 } = (0, d.Ay)(),
-            [_, C] = l.useState(!1),
-            N = (0, E.A)(t),
-            I = a && u && s;
+            [_, x] = l.useState(!1),
+            T = (0, E.A)(t),
+            N = a && u && s;
         l.useEffect(() => {
-            I && C(!0);
-            let e = setTimeout(() => C(I), 1e3);
+            N && x(!0);
+            let e = setTimeout(() => x(N), 1e3);
             return () => clearTimeout(e);
-        }, [I]);
-        let v = (0, c.zhh)({
+        }, [N]);
+        let y = (0, c.zhh)({
                 opacity: +!!_,
                 transform: _ ? "translateY(0)" : "translateY(100%)",
                 pointerEvents: "none",
                 config: r.config.stiff,
             }),
-            y = l.useMemo(() => N ?? { value: 0, multiplier: 1 }, [N]),
-            b = l.useRef(y);
+            b = l.useMemo(() => T ?? { value: 0, multiplier: 1 }, [T]),
+            v = l.useRef(b);
         l.useEffect(() => {
-            (y.multiplier > 1 || y.value > 0) && (b.current = y);
-        }, [y]);
+            (b.multiplier > 1 || b.value > 0) && (v.current = b);
+        }, [b]);
         let { multiplier: j, value: R } = l.useMemo(
-            () => ({ value: I ? y.value : b.current.value, multiplier: I ? y.multiplier : b.current.multiplier }),
-            [I, y, b],
+            () => ({ value: N ? b.value : v.current.value, multiplier: N ? b.multiplier : v.current.multiplier }),
+            [N, b, v],
         );
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(S, { channelId: t, width: g }),
                 (0, i.jsx)(r.animated.div, {
                     ref: A,
-                    className: x.p_,
-                    style: v,
-                    children: (0, i.jsx)(T, { value: R, multiplier: j }),
+                    className: C.p_,
+                    style: y,
+                    children: (0, i.jsx)(I, { value: R, multiplier: j }),
                 }),
             ],
         });

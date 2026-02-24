@@ -15,15 +15,15 @@ var a = n(627968),
     g = n(287809),
     _ = n(957565),
     f = n(405269),
-    v = n(967954),
-    b = n(538064),
+    b = n(967954),
+    v = n(538064),
     j = n(708403),
-    A = n(260880),
-    C = n(303054),
-    S = n(231643),
-    T = n(985018),
-    y = n(76584),
-    E = n(661251);
+    C = n(260880),
+    A = n(303054),
+    T = n(231643),
+    S = n(985018),
+    y = n(891026),
+    E = n(930821);
 let N = [
     {
         key: "event",
@@ -78,7 +78,7 @@ let R = new Set(["client_performance_cpu", "client_performance_memory"]),
         {
             id: "details",
             name: "Details",
-            group: S.fu.NONE,
+            group: T.fu.NONE,
             render: (e) => {
                 let {
                         loggedEvent: { event: t, properties: n, timestamp: i, fingerprint: s },
@@ -236,20 +236,20 @@ let R = new Set(["client_performance_cpu", "client_performance_memory"]),
 function M() {
     let e = i.useRef(null),
         [t, n] = i.useState(""),
-        s = (0, d.bG)([v.A], () => v.A.loggedEventsVersion),
+        s = (0, d.bG)([b.A], () => b.A.loggedEventsVersion),
         [r, o] = i.useState(() => Object.keys(w)),
-        [m, h] = i.useState(v.A.loggedEvents),
+        [m, h] = i.useState(b.A.loggedEvents),
         x = i.useCallback((e) => {
             h(e);
         }, []);
-    (0, p.RT)(t, v.A.loggedEvents, x, D, [s]);
+    (0, p.RT)(t, b.A.loggedEvents, x, D, [s]);
     let g = m.filter((e) => {
             for (let t of r) if (w[t].filter(e)) return !0;
             return !1;
         }),
         [_, f] = i.useState(void 0),
         j = g.find((e) => e.key === _),
-        { TabBar: I, renderSelectedTab: k } = (0, S.Ay)({ tabs: O }, []);
+        { TabBar: I, renderSelectedTab: k } = (0, T.Ay)({ tabs: O }, []);
     return (0, a.jsxs)("div", {
         ref: e,
         className: l()(E.nd, y.nd),
@@ -261,13 +261,13 @@ function M() {
                         className: y.Q$,
                         look: c.$n.Looks.BLANK,
                         size: c.$n.Sizes.ICON,
-                        onClick: b.eY,
+                        onClick: v.eY,
                         children: (0, a.jsx)("span", {
-                            title: T.intl.string(T.t.VkKicb),
+                            title: S.intl.string(S.t.VkKicb),
                             children: (0, a.jsx)(u.ucK, {
                                 size: "md",
                                 color: "currentColor",
-                                "aria-label": T.intl.string(T.t.VkKicb),
+                                "aria-label": S.intl.string(S.t.VkKicb),
                             }),
                         }),
                     }),
@@ -301,9 +301,9 @@ function M() {
                     placeholder: "Search by event name",
                 }),
             }),
-            (0, a.jsx)(C.A, { columns: N, data: g, selectedRowKey: _, onClickRow: (e) => f(e.key) }),
+            (0, a.jsx)(A.A, { columns: N, data: g, selectedRowKey: _, onClickRow: (e) => f(e.key) }),
             null != j &&
-                (0, a.jsxs)(A.A, {
+                (0, a.jsxs)(C.A, {
                     className: y.rf,
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,

@@ -18,11 +18,11 @@ var i = n(627968),
     I = n(284306),
     f = n(790499),
     C = n(514426),
-    N = n(977524),
-    T = n(687599),
+    T = n(977524),
+    N = n(687599),
     S = n(652215),
     x = n(985018),
-    v = n(843284);
+    v = n(38702);
 function y() {
     let e = r.useRef(null),
         t = (0, I.A)(),
@@ -30,11 +30,11 @@ function y() {
         l = (0, p.r)(),
         y = (0, c.w)(),
         b = (0, A.A)("message-requests-spam-list"),
-        { channelId: L } = (0, E.N)(),
-        O = r.useCallback(() => {
+        { channelId: O } = (0, E.N)(),
+        L = r.useCallback(() => {
             (0, d.showToast)((0, d.createToast)(x.intl.string(x.t["EDYbS+"]), d.ToastType.FAILURE));
         }, []),
-        { rejectAll: R } = (0, g.t)({ onError: O }),
+        { rejectAll: R } = (0, g.t)({ onError: L }),
         P = r.useCallback(() => {
             R(t.map((e) => e.channel.id));
         }, [t, R]);
@@ -49,10 +49,10 @@ function y() {
                     s = t[n + 1]?.channel?.id,
                     o = r.channel.id;
                 return (0, i.jsx)(
-                    N.A,
+                    T.A,
                     {
                         index: n,
-                        className: a()({ [v.wH]: null != L && L === o, [v.wZ]: null != L && L === s }),
+                        className: a()({ [v.wH]: null != O && O === o, [v.wZ]: null != O && O === s }),
                         channel: r.channel,
                         user: r.user,
                         hasSingleMessageRequest: l,
@@ -60,7 +60,7 @@ function y() {
                     o,
                 );
             },
-            [t, l, L],
+            [t, l, O],
         ),
         D = r.useCallback(
             () =>
@@ -96,7 +96,7 @@ function y() {
             [n, P, y],
         );
     return 0 === t.length
-        ? (0, i.jsx)(C.A, { section: T.zz.SPAM })
+        ? (0, i.jsx)(C.A, { section: N.zz.SPAM })
         : (0, i.jsx)(s.hD, {
               navigator: b,
               children: (0, i.jsx)(s.PR, {

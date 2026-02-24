@@ -9,8 +9,8 @@ var i = n(627968),
     d = n(397927),
     c = n(336934),
     u = n(212245),
-    g = n(688810),
-    m = n(721923),
+    m = n(688810),
+    g = n(721923),
     x = n(212637),
     h = n(931991),
     _ = n(942975),
@@ -25,7 +25,7 @@ var i = n(627968),
     C = n(652215),
     I = n(568065),
     v = n(985018),
-    S = n(65146);
+    S = n(500736);
 let y = (e) => {
         let { children: t, currentGuildTier: n, guildStickers: s, tier: l } = e,
             r = n < l,
@@ -59,7 +59,7 @@ let y = (e) => {
                     ((e) => {
                         let { guildId: t } = e;
                         (0, d.mMO)(async () => {
-                            let { default: e } = await Promise.all([n.e("29143"), n.e("27382")]).then(
+                            let { default: e } = await Promise.all([n.e("29143"), n.e("37176")]).then(
                                 n.bind(n, 445002),
                             );
                             return (n) => (0, i.jsx)(e, { guildId: t, ...n });
@@ -72,7 +72,7 @@ let y = (e) => {
     G = (e) => {
         let { guild: t } = e,
             l = (0, N.A)(t.id),
-            { analyticsLocations: u } = (0, g.Ay)(),
+            { analyticsLocations: u } = (0, m.Ay)(),
             f = (0, A.A)(t.id),
             G = t.features.has(C.GuildFeatures.MORE_STICKERS) ? C.TVA.TIER_3 : t.premiumTier,
             L = t.features.has(C.GuildFeatures.MORE_STICKERS) ? C.M2T[C.TVA.TIER_3] : f,
@@ -128,7 +128,7 @@ let y = (e) => {
             renderTier: (e) => {
                 var s;
                 let l,
-                    g,
+                    m,
                     { isAnimatedTo: A, onSetRef: p, tier: N, tiers: b, tierIndex: y } = e,
                     { canCreateExpressions: k, canManageGuildExpression: U } = (0, h.ie)(t),
                     P = b[y - 1],
@@ -152,12 +152,12 @@ let y = (e) => {
                                         s < c.K.MAX_STICKER_SLOTS)
                                   ? C.TVA.TIER_3
                                   : C.TVA.NONE),
-                    K = k && !z && W === N.tier && B !== H.length,
-                    Y = K || H.length > 0,
+                    Y = k && !z && W === N.tier && B !== H.length,
+                    K = Y || H.length > 0,
                     X = B - w,
                     J = n(415358),
                     Z = F - H.length,
-                    Q = K ? Math.min(5 - ((H.length + 0) % 5), Z) : 0,
+                    Q = Y ? Math.min(5 - ((H.length + 0) % 5), Z) : 0,
                     q = [];
                 for (let e = 0; e < Q; e++) q.push((0, i.jsx)(R, {}, `placeholder-${e}`));
                 let $ = t.premiumTier < N.tier && f >= C.M2T[N.tier],
@@ -198,10 +198,10 @@ let y = (e) => {
                           t.premiumTier + 1 !== N.tier && ((en = !0), (l = v.intl.string(v.t.mTMkY2))))
                         : ((en = !0), (l = v.intl.string(v.t.hwPEJR))));
                 let ei = W === y + 1 && W > G,
-                    es = K || ei || y > G;
+                    es = Y || ei || y > G;
                 return (
                     ei
-                        ? (g = (0, i.jsx)(m.A, {
+                        ? (m = (0, i.jsx)(g.A, {
                               guild: t,
                               size: o.$n.Sizes.SMALL,
                               color: o.$n.Colors.GREEN,
@@ -214,7 +214,7 @@ let y = (e) => {
                                   objectType: (0, j.k1)(N.tier),
                               },
                           }))
-                        : K && (g = (0, i.jsx)(O, { guild: t })),
+                        : Y && (m = (0, i.jsx)(O, { guild: t })),
                     (0, i.jsxs)(
                         T.A,
                         {
@@ -223,12 +223,12 @@ let y = (e) => {
                             onSetRef: p,
                             isAnimatedTo: A,
                             hasBottomMargin: y !== b.length - 1,
-                            withCardBody: !Y,
-                            headerButton: g,
+                            withCardBody: !K,
+                            headerButton: m,
                             showHeaderLockStatus: es,
                             guildId: t.id,
                             children: [
-                                Y &&
+                                K &&
                                     (0, i.jsxs)("div", {
                                         className: S.Vg,
                                         children: [
@@ -243,7 +243,7 @@ let y = (e) => {
                                         ],
                                     }),
                                 !z &&
-                                    !K &&
+                                    !Y &&
                                     0 === H.length &&
                                     (0, i.jsx)("div", {
                                         className: r()(S.Rm, S.MC),

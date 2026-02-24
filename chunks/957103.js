@@ -6,7 +6,7 @@ var i = n(627968),
     r = n(442433),
     o = n(950072),
     d = n(985018),
-    c = n(560927);
+    c = n(38801);
 function u(e) {
     let { roles: t, guildId: u } = e,
         m = t[0] ?? null,

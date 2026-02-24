@@ -9,18 +9,18 @@ var i = n(627968),
     d = n(157559),
     c = n(599119),
     u = n(219504),
-    g = n(71393),
-    m = n(107795),
+    m = n(71393),
+    g = n(107795),
     x = n(655943),
     h = n(726862),
     _ = n(539916),
     A = n(985018),
-    p = n(42483);
+    p = n(981317);
 function f(e) {
     let { guild: t, prejoinOnly: n, postjoinOnly: l } = e,
         d = (0, a.bG)([x.A], () => x.A.editedOnboardingPrompts),
         u = d.filter((e) => e.inOnboarding),
-        g = u.length,
+        m = u.length,
         {
             drag: h,
             drop: f,
@@ -28,7 +28,7 @@ function f(e) {
             setIsDraggable: N,
         } = (0, c.A)({
             type: "ONBOARDING_PROMPT_CARD",
-            index: g,
+            index: m,
             optionId: "separator",
             onDragStart: () => {},
             onDragComplete: () => {},
@@ -44,12 +44,12 @@ function f(e) {
         }, [h, f, E]),
         (0, i.jsxs)("div", {
             ref: E,
-            className: r()(p.fY, { [p.A]: null != j && g < j, [p.Ze]: null != j && g > j }),
+            className: r()(p.fY, { [p.A]: null != j && m < j, [p.Ze]: null != j && m > j }),
             children: [
                 !l && u.length < _.D1
                     ? (0, i.jsxs)(o.DUT, {
                           className: p.Wz,
-                          onClick: () => (0, m.WC)(t, [...d, (0, _.a5)(!0)], !1),
+                          onClick: () => (0, g.WC)(t, [...d, (0, _.a5)(!0)], !1),
                           children: [
                               (0, i.jsx)(o.U1e, {
                                   size: "custom",
@@ -89,7 +89,7 @@ function f(e) {
 }
 function j(e) {
     let { guildId: t, prejoinOnly: n, postjoinOnly: s, includeCount: l, singleColumn: r } = e,
-        c = (0, a.bG)([g.A], () => g.A.getGuild(t)),
+        c = (0, a.bG)([m.A], () => m.A.getGuild(t)),
         j = (0, a.bG)([x.A], () => x.A.editedOnboardingPrompts),
         N = j.filter((e) => e.inOnboarding),
         E = j.filter((e) => !0 !== e.inOnboarding),
@@ -111,7 +111,7 @@ function j(e) {
                       title: A.intl.string(A.t.Cxtq5x),
                       body: A.intl.formatToPlainString(A.t["pkbZ+U"], { numQuestions: _.D1 }),
                   })
-                : (0, m.WC)(c, [...n, ...i]);
+                : (0, g.WC)(c, [...n, ...i]);
         });
     return null == c
         ? null
@@ -180,7 +180,7 @@ function j(e) {
                                 j.length < _.iD
                                     ? (0, i.jsxs)(o.DUT, {
                                           className: p.Wz,
-                                          onClick: () => (0, m.WC)(c, [...j, (0, _.a5)(!1)], !1),
+                                          onClick: () => (0, g.WC)(c, [...j, (0, _.a5)(!1)], !1),
                                           children: [
                                               (0, i.jsx)(o.U1e, {
                                                   size: "custom",

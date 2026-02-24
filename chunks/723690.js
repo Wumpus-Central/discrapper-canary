@@ -8,7 +8,7 @@ var n = s(503698),
     o = s(966327),
     u = s(994500);
 s(427262);
-var h = s(156528);
+var h = s(30626);
 let c = function (e) {
     let {
             user: t,
@@ -32,7 +32,7 @@ let c = function (e) {
                         user: t,
                         nick: N,
                         botClass: h.AO,
-                        className: a()(h.xK, { [h.ID]: t.hasUniqueUsername() }),
+                        className: a()(h.xK, { [h.Nu]: t.hasUniqueUsername() }),
                         usernameClass: h.Xh,
                         discriminatorClass: h.D2,
                         showAccountIdentifier: c,

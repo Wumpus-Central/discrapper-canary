@@ -15,16 +15,16 @@ var a = n(627968),
     g = n(379078),
     _ = n(704554),
     f = n(603349),
-    v = n(957565),
-    b = n(405269),
+    b = n(957565),
+    v = n(405269),
     j = n(231545),
-    A = n(708403),
-    C = n(260880),
-    S = n(303054),
-    T = n(231643),
+    C = n(708403),
+    A = n(260880),
+    T = n(303054),
+    S = n(231643),
     y = n(652215),
-    E = n(84113),
-    N = n(661251);
+    E = n(704623),
+    N = n(930821);
 function I(e) {
     return parseFloat(e.toFixed(3));
 }
@@ -49,30 +49,30 @@ let k = [
 function R(e) {
     let { actionLog: t } = e,
         n = i.useMemo(() => t.traces.map((e) => ({ key: e.name, trace: e })), [t]);
-    return (0, a.jsx)(h.IpV, { children: (0, a.jsx)(S.A, { columns: k, data: n }) });
+    return (0, a.jsx)(h.IpV, { children: (0, a.jsx)(T.A, { columns: k, data: n }) });
 }
 let O = [
     {
         id: "action",
         name: "Action",
-        group: T.fu.NONE,
+        group: S.fu.NONE,
         render(e) {
             let { actionLog: t } = e,
                 n = c()(t.createdAt);
             return (0, a.jsxs)(a.Fragment, {
                 children: [
-                    (0, a.jsxs)(A.OA, {
+                    (0, a.jsxs)(C.OA, {
                         className: E.mP,
                         children: [
-                            (0, a.jsx)(A.mA, {
+                            (0, a.jsx)(C.mA, {
                                 name: "Created at",
                                 children: (0, a.jsx)("time", {
                                     dateTime: t.createdAt?.toISOString(),
-                                    title: (0, b.i$)(n, "LLLL"),
-                                    children: (0, b.mk)(n),
+                                    title: (0, v.i$)(n, "LLLL"),
+                                    children: (0, v.mk)(n),
                                 }),
                             }),
-                            (0, a.jsxs)(A.mA, { name: "Total Time", children: [I(t.totalTime), " ms"] }),
+                            (0, a.jsxs)(C.mA, { name: "Total Time", children: [I(t.totalTime), " ms"] }),
                         ],
                     }),
                     (0, a.jsx)(h.IpV, { className: E.Dx, children: (0, a.jsx)(j.A, { data: t.action }) }),
@@ -83,7 +83,7 @@ let O = [
     {
         id: "traces",
         name: "Store Handlers",
-        group: T.fu.NONE,
+        group: S.fu.NONE,
         render(e) {
             let { actionLog: t } = e;
             return (0, a.jsx)(R, { actionLog: t });
@@ -102,7 +102,7 @@ function w(e) {
                               name: (0, a.jsxs)(a.Fragment, {
                                   children: [(0, a.jsx)(f.A, { className: E.ik }), "Error"],
                               }),
-                              group: T.fu.NONE,
+                              group: S.fu.NONE,
                               render(e) {
                                   let { actionLog: t } = e;
                                   return (0, a.jsxs)(a.Fragment, {
@@ -131,8 +131,8 @@ function w(e) {
                     : O,
             [t],
         ),
-        { TabBar: r, renderSelectedTab: o } = (0, T.Ay)({ tabs: s }, [s]);
-    return (0, a.jsxs)(C.A, {
+        { TabBar: r, renderSelectedTab: o } = (0, S.Ay)({ tabs: s }, [s]);
+    return (0, a.jsxs)(A.A, {
         className: E.rf,
         minHeight: 100,
         initialHeight: n,
@@ -156,7 +156,7 @@ function w(e) {
                                 null,
                                 2,
                             );
-                            (0, v.C)(n, () =>
+                            (0, b.C)(n, () =>
                                 (0, h.showToast)({
                                     id: "copy-action-log-name",
                                     type: h.ToastType.SUCCESS,
@@ -229,19 +229,19 @@ function P() {
         [d, c] = i.useState(r),
         [m, p] = i.useState(r),
         [g, f] = i.useState(!1),
-        [v, b] = i.useState(),
+        [b, v] = i.useState(),
         j = i.useCallback((e) => {
             p(e);
         }, []);
     (0, _.RT)(t, g ? d : r, j, M);
-    let A = i.useCallback(
+    let C = i.useCallback(
             (e) => {
                 c(r), f(e);
             },
             [r],
         ),
-        C = t.trim().length > 0,
-        T = i.useMemo(() => (C ? m : g ? d : r), [r, m, C, g, d]),
+        A = t.trim().length > 0,
+        S = i.useMemo(() => (A ? m : g ? d : r), [r, m, A, g, d]),
         y = g ? "Enable Event Tracking" : "Pause Event Tracking";
     return (0, a.jsxs)("div", {
         ref: e,
@@ -257,7 +257,7 @@ function P() {
                             variant: g ? "primary" : "active",
                             icon: g ? h.udU : h.E$n,
                             "aria-label": y,
-                            onClick: () => A(!g),
+                            onClick: () => C(!g),
                         }),
                     }),
                     (0, a.jsx)(h.IWV, {
@@ -269,14 +269,14 @@ function P() {
                     }),
                 ],
             }),
-            (0, a.jsx)(S.A, {
+            (0, a.jsx)(T.A, {
                 columns: D,
-                data: T,
-                selectedRowKey: v?.id.toString(),
-                onClickRow: (e) => b(e.actionLog),
+                data: S,
+                selectedRowKey: b?.id.toString(),
+                onClickRow: (e) => v(e.actionLog),
             }),
-            null != v &&
-                (0, a.jsx)(w, { actionLog: v, initialHeight: null != e.current ? e.current.clientHeight / 2 : 300 }),
+            null != b &&
+                (0, a.jsx)(w, { actionLog: b, initialHeight: null != e.current ? e.current.clientHeight / 2 : 300 }),
         ],
     });
 }

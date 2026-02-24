@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { v: () => T });
+n.d(t, { v: () => I });
 var r = n(627968);
 n(64700);
 var i = n(646865),
-    a = n(795816),
-    s = n(47294),
+    s = n(795816),
+    a = n(47294),
     o = n(688810),
     l = n(429913),
     u = n(384059),
@@ -12,57 +12,57 @@ var i = n(646865),
     d = n(267102),
     _ = n(447404),
     f = n(271195),
-    h = n(128286),
-    p = n(625180),
-    g = n(262579),
+    p = n(128286),
+    h = n(625180),
+    m = n(262579),
     E = n(652215),
-    A = n(31545),
-    I = n(319567);
-function T(e) {
-    let { applicationId: t, onMouseDown: n, onMouseMove: T, onMouseLeave: y, onFocus: S, idle: v } = e,
-        C = (0, l.h)(t),
-        b = (0, d.Us)() === E.BRT.POPOUT,
-        { parentAnalyticsLocation: N } = (0, o.Ay)(),
-        R = () => {
-            (0, u.X)(N, u.O.POPOUT, !0),
-                (0, s.A)({
+    g = n(700063),
+    A = n(299973);
+function I(e) {
+    let { applicationId: t, onMouseDown: n, onMouseMove: I, onMouseLeave: T, onFocus: S, idle: y } = e,
+        v = (0, l.h)(t),
+        N = (0, d.Us)() === E.BRT.POPOUT,
+        { parentAnalyticsLocation: C } = (0, o.Ay)(),
+        b = () => {
+            (0, u.X)(C, u.O.POPOUT, !0),
+                (0, a.A)({
                     onConfirm: async () => {
-                        await p.A.refreshProxyTicket({ applicationId: t }), (0, a.jp)();
+                        await h.A.refreshProxyTicket({ applicationId: t }), (0, s.jp)();
                     },
                 });
         };
     return (0, r.jsxs)("div", {
-        className: I._v,
-        onMouseMove: T,
+        className: A._v,
+        onMouseMove: I,
         onMouseDown: n,
-        onMouseLeave: y,
+        onMouseLeave: T,
         children: [
             (0, r.jsx)("div", {
-                className: I.K1,
+                className: A.K1,
                 children: (0, r.jsx)(f.X, {
-                    idle: v,
-                    title: C?.name ?? "",
+                    idle: y,
+                    title: v?.name ?? "",
                     onJumpToChannel: S,
                     preventIdleComponent: _.A,
                 }),
             }),
             (0, r.jsx)("div", {
-                className: I.q6,
+                className: A.q6,
                 children: (0, r.jsxs)(c.A, {
                     grow: 1,
                     shrink: 1,
                     justify: c.A.Justify.END,
                     align: c.A.Align.CENTER,
                     children: [
-                        b || (0, i.f)()
+                        N || (0, i.f)()
                             ? null
-                            : (0, r.jsx)(h.A, {
-                                  className: A.BD,
+                            : (0, r.jsx)(p.A, {
+                                  className: g.BD,
                                   popoutOpen: !1,
-                                  onOpenPopout: R,
+                                  onOpenPopout: b,
                                   onClosePopout: E.FXj,
                               }),
-                        (0, r.jsx)(g.A, { applicationId: t, className: A.BD }),
+                        (0, r.jsx)(m.A, { applicationId: t, className: g.BD }),
                     ],
                 }),
             }),

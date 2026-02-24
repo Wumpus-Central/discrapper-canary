@@ -14,7 +14,7 @@ var n = a(627968),
     _ = a(590858),
     g = a(652215),
     x = a(985018),
-    A = a(60370);
+    A = a(707892);
 let C = (e) => {
         let { className: t, ...a } = e;
         return (0, n.jsx)(m.A, {
@@ -24,11 +24,11 @@ let C = (e) => {
             renderLinkComponent: p.bU,
         });
     },
-    b = (e) => {
+    v = (e) => {
         let { containerClassName: t, className: a, ...i } = e;
         return (0, n.jsx)(h.Ay, { ...i, className: l()(a, t) });
     },
-    v = { width: 1280, height: 720 },
+    b = { width: 1280, height: 720 },
     f = { width: 640, height: 360 },
     j = `rel=0&iv_load_policy=3&showinfo=0&modestbranding=1&pageType=${g.NzX}`,
     I = (e) => {
@@ -37,7 +37,7 @@ let C = (e) => {
             i,
             { item: s, onPlay: l, volume: r, onVolumeChange: u, onMute: h, isMuted: m, autoPlay: x } = e;
         if (s.type === g.geh.YOUTUBE_VIDEO)
-            (t = { url: (0, g.PE$)(s.youtubeVideoId), ...v }),
+            (t = { url: (0, g.PE$)(s.youtubeVideoId), ...b }),
                 (a = { url: `${(0, g.uJ2)(s.youtubeVideoId)}?${j}`, ...f }),
                 (i = d.mt.YOUTUBE);
         else {
@@ -64,7 +64,7 @@ let C = (e) => {
                 autoMute: m,
                 onMute: h,
                 autoPlay: x,
-                renderImageComponent: b,
+                renderImageComponent: v,
                 renderVideoComponent: C,
                 renderLinkComponent: p.bU,
             }),

@@ -1,11 +1,11 @@
 n.d(t, { A: () => o });
 var l = n(627968);
 n(64700);
-var i = n(397927),
-    a = n(263063),
+var a = n(397927),
+    i = n(263063),
     r = n(71393),
     s = n(985018),
-    d = n(75271);
+    d = n(992177);
 let o = (e) => {
     let { stageInstance: t } = e,
         n = r.A.getGuild(t.guild_id);
@@ -14,7 +14,7 @@ let o = (e) => {
         : (0, l.jsxs)("div", {
               className: d.kL,
               children: [
-                  (0, l.jsx)(i.Heading, {
+                  (0, l.jsx)(a.Heading, {
                       className: d.wx,
                       variant: "heading-sm/semibold",
                       children: s.intl.string(s.t.InbJ8x),
@@ -25,15 +25,15 @@ let o = (e) => {
                           (0, l.jsxs)("div", {
                               className: d.OA,
                               children: [
-                                  (0, l.jsx)(a.A, { guild: n, size: a.A.Sizes.MINI, className: d.$f }),
-                                  (0, l.jsx)(i.Text, {
+                                  (0, l.jsx)(i.A, { guild: n, size: i.A.Sizes.MINI, className: d.$f }),
+                                  (0, l.jsx)(a.Text, {
                                       color: "text-default",
                                       variant: "text-sm/normal",
                                       children: n.name,
                                   }),
                               ],
                           }),
-                          (0, l.jsx)(i.Text, { variant: "text-md/semibold", color: "text-strong", children: t.topic }),
+                          (0, l.jsx)(a.Text, { variant: "text-md/semibold", color: "text-strong", children: t.topic }),
                       ],
                   }),
               ],

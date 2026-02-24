@@ -1,8 +1,8 @@
 l.d(t, { Ay: () => w, eW: () => I, th: () => S });
 var n = l(627968),
     i = l(64700),
-    s = l(503698),
-    a = l.n(s),
+    a = l(503698),
+    s = l.n(a),
     r = l(91871),
     o = l.n(r),
     C = l(158954),
@@ -18,11 +18,11 @@ var n = l(627968),
     p = l(963307),
     f = l(734057),
     j = l(317525),
-    v = l(994500),
-    b = l(287809),
+    b = l(994500),
+    v = l(287809),
     A = l(985018),
-    L = l(457325);
-let N = (0, h.Ld)(),
+    N = l(66163);
+let L = (0, h.Ld)(),
     V = (0, h.Ld)(),
     R = "text-sm/medium";
 function M(e) {
@@ -36,35 +36,35 @@ function S(e) {
     return { tag: { type: u._.ROLE, label: t }, row: { id: e.id, display: t, type: 1, record: e } };
 }
 function I(e) {
-    let t = (0, m.m1)(e, b.default, v.A);
+    let t = (0, m.m1)(e, v.default, b.A);
     return { tag: { type: u._.CHANNEL, label: t }, row: { id: e.id, display: t, type: 0, record: e } };
 }
 let E = i.memo(function (e) {
     let { row: t, guildId: l, className: i } = e,
-        { id: s, name: r } = t.record,
-        o = (0, g.$7)({ guildId: l, roleId: s, size: 16 }),
-        C = (0, d.bG)([j.A], () => j.A.getRole(l, s)),
+        { id: a, name: r } = t.record,
+        o = (0, g.$7)({ guildId: l, roleId: a, size: 16 }),
+        C = (0, d.bG)([j.A], () => j.A.getRole(l, a)),
         u = r.includes(p.QP) ? "" : "@",
         m = (0, c.rdh)(c.LU0.unsafe_rawColors.PRIMARY_300).hsl(),
         x = C?.colorString ?? m,
         h = (0, _.X_)(l, C, C?.colorStrings);
     return (0, n.jsxs)("div", {
-        className: a()(L.xZ, L.ex, i),
+        className: s()(N.xZ, N.ex, i),
         children: [
-            (0, n.jsx)(c.WYI, { className: L.__invalid_roleDot, color: x, colors: h, background: !1, tooltip: !1 }),
-            null != o ? (0, n.jsx)(H.A, { className: L.YS, ...o, enableTooltip: !1 }) : u,
-            (0, n.jsx)(c.Text, { variant: R, className: L.pP, children: r }),
+            (0, n.jsx)(c.WYI, { className: N.__invalid_roleDot, color: x, colors: h, background: !1, tooltip: !1 }),
+            null != o ? (0, n.jsx)(H.A, { className: N.YS, ...o, enableTooltip: !1 }) : u,
+            (0, n.jsx)(c.Text, { variant: R, className: N.pP, children: r }),
         ],
     });
 });
 function y(e) {
     let { channel: t, row: l, className: i } = e,
-        s = null != t.parent_id,
+        a = null != t.parent_id,
         r = (0, x.gU)(t);
     return (0, n.jsxs)("div", {
-        className: a()(L.xZ, L.sM, { [L.p7]: s }, i),
+        className: s()(N.xZ, N.sM, { [N.p7]: a }, i),
         children: [
-            null != r && (0, n.jsx)(r, { size: "xs", color: "currentColor", className: L.p }),
+            null != r && (0, n.jsx)(r, { size: "xs", color: "currentColor", className: N.p }),
             (0, n.jsx)(c.Text, { variant: t.isCategory() ? "eyebrow" : R, children: l.display }),
         ],
     });
@@ -80,7 +80,7 @@ function w(e) {
     let {
             guildId: t,
             roleRows: l = [],
-            channelRows: s = [],
+            channelRows: a = [],
             selectedChannelIds: r = new Set(),
             selectedRoleIds: m = new Set(),
             onChange: x,
@@ -107,20 +107,20 @@ function w(e) {
                 })(r, m, H),
             [r, m, H],
         ),
-        v = i.useMemo(() => Object.keys(p), [p]),
-        [b, R] = i.useState(""),
+        b = i.useMemo(() => Object.keys(p), [p]),
+        [v, R] = i.useState(""),
         [E, y] = i.useState(!1),
         [w, Z] = i.useState(!1),
         [U, O] = i.useState(!1),
         k = i.useRef(null),
         { refs: F, floatingStyles: B } = (0, C.uaw)({ placement: "bottom-start", offset: 0, matchReferenceWidth: !0 }),
         { sections: P, sectionCounts: G } = i.useMemo(() => {
-            let e = "" !== b ? s.filter((e) => o()(b, e.display.toLocaleLowerCase())) : s,
-                t = "" !== b ? l.filter((e) => o()(b, e.display.toLocaleLowerCase())) : l,
+            let e = "" !== v ? a.filter((e) => o()(v, e.display.toLocaleLowerCase())) : a,
+                t = "" !== v ? l.filter((e) => o()(v, e.display.toLocaleLowerCase())) : l,
                 n = [],
                 i = [];
             return (n[0] = e), (i[0] = e.length), (n[1] = t), (i[1] = t.length), { sections: n, sectionCounts: i };
-        }, [b, s, l]),
+        }, [v, a, l]),
         q = i.useCallback(
             (e) => {
                 let t = Object.values(e),
@@ -172,44 +172,44 @@ function w(e) {
         Q = i.useCallback(
             (e) => {
                 let { section: l, row: i } = e,
-                    s = P[l][i];
+                    a = P[l][i];
                 return (0, n.jsx)(
                     c.DUT,
                     {
-                        className: a()(L.Xs, L.iw),
+                        className: s()(N.Xs, N.iw),
                         onClick: (e) => {
-                            e.stopPropagation(), K(s);
+                            e.stopPropagation(), K(a);
                         },
-                        children: (0, n.jsx)("div", { className: L.qd, children: T(s, t, L.Dq) }),
+                        children: (0, n.jsx)("div", { className: N.qd, children: T(a, t, N.Dq) }),
                     },
-                    s.id,
+                    a.id,
                 );
             },
             [t, K, P],
         ),
         W = i.useMemo(
             () =>
-                v.map((e) => {
+                b.map((e) => {
                     var l;
-                    return (l = p[e]), { ...l.tag, label: T(l.row, t, L.yS) };
+                    return (l = p[e]), { ...l.tag, label: T(l.row, t, N.yS) };
                 }),
-            [p, v, t],
+            [p, b, t],
         );
     return (0, n.jsxs)("div", {
-        className: a()(L.MT, _),
+        className: s()(N.MT, _),
         children: [
             (0, n.jsxs)("div", {
-                className: L.M6,
+                className: N.M6,
                 ref: F.setReference,
                 children: [
                     (0, n.jsx)(u.A, {
                         tags: W,
                         maxHeight: 98,
                         size: u.A.Sizes.MEDIUM,
-                        query: b,
+                        query: v,
                         ref: k,
                         onRemoveTag: (e) => {
-                            let t = v[e],
+                            let t = b[e],
                                 { [t]: l, ...n } = p;
                             q(n), R(""), z();
                         },
@@ -217,9 +217,9 @@ function w(e) {
                             R(e.trim().toLocaleLowerCase());
                         },
                         placeholder: h ?? A.intl.string(A.t.uqHLzW),
-                        sections: [v.length],
+                        sections: [b.length],
                         inputProps: {
-                            "aria-labelledby": N,
+                            "aria-labelledby": L,
                             "aria-controls": V,
                             "aria-expanded": U,
                             onFocus: (e) => Y(!0, 2, e),
@@ -230,13 +230,13 @@ function w(e) {
                         (0, n.jsx)("div", {
                             ref: F.setFloating,
                             style: B,
-                            className: L.Dr,
+                            className: N.Dr,
                             onFocus: (e) => Y(!0, 1, e),
                             onBlur: (e) => Y(!1, 1, e),
                             tabIndex: -1,
                             children: (0, n.jsx)(c.Eie, {
-                                className: L.ac,
-                                innerClassName: L.bB,
+                                className: N.ac,
+                                innerClassName: N.bB,
                                 sections: G,
                                 renderRow: Q,
                                 rowHeight: 34,
@@ -247,7 +247,7 @@ function w(e) {
                                               c.Heading,
                                               {
                                                   variant: "heading-sm/semibold",
-                                                  className: a()(L.Gf, L.r6),
+                                                  className: s()(N.Gf, N.r6),
                                                   children: A.intl.string(A.t.OGiMXJ),
                                               },
                                               A.intl.string(A.t.OGiMXJ),
@@ -257,7 +257,7 @@ function w(e) {
                                                 c.Heading,
                                                 {
                                                     variant: "heading-sm/semibold",
-                                                    className: a()(L.Gf, L.r6),
+                                                    className: s()(N.Gf, N.r6),
                                                     children: A.intl.string(A.t["LPJmL/"]),
                                                 },
                                                 A.intl.string(A.t["LPJmL/"]),
@@ -269,7 +269,7 @@ function w(e) {
                                     return 0 === t
                                         ? 0 === G[1] && G[0] > 0
                                             ? null
-                                            : (0, n.jsx)("div", { className: L.Nf, children: (0, n.jsx)(c.cGx, {}) })
+                                            : (0, n.jsx)("div", { className: N.Nf, children: (0, n.jsx)(c.cGx, {}) })
                                         : null;
                                 },
                                 sectionHeight: 24,
@@ -283,7 +283,7 @@ function w(e) {
                 ],
             }),
             null != g &&
-                (0, n.jsx)(c.Text, { variant: "text-xs/normal", color: "text-muted", className: L.cy, children: g }),
+                (0, n.jsx)(c.Text, { variant: "text-xs/normal", color: "text-muted", className: N.cy, children: g }),
         ],
     });
 }

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => b });
+n.d(t, { A: () => N });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
@@ -13,21 +13,21 @@ var i = n(627968),
     A = n(519480),
     p = n(352123),
     g = n(372536),
-    m = n(268965),
+    m = n(491346),
     _ = n(667369),
     f = n(647026),
     x = n(946116),
     C = n(652215),
     E = n(650583),
-    I = n(10544);
-let b = (e) => {
-    let { channel: t, guild: b } = e,
+    I = n(875514);
+let N = (e) => {
+    let { channel: t, guild: N } = e,
         {
-            currentCategoryId: N,
+            currentCategoryId: b,
             directoryEntries: S,
             categoryCounts: T,
-            allEntriesCount: v,
-            isLoading: y,
+            allEntriesCount: y,
+            isLoading: v,
         } = (0, l.cf)([A.A], () => {
             let e = A.A.getCurrentCategoryId(t.id),
                 n = A.A.getDirectoryEntries(t.id, e === x.mU.ALL ? null : e),
@@ -59,7 +59,7 @@ let b = (e) => {
         },
         [t.id],
     );
-    let j = s.useMemo(() => (null != S ? (0, _._)(Object.values(S), N) : null), [S, N]),
+    let j = s.useMemo(() => (null != S ? (0, _._)(Object.values(S), b) : null), [S, b]),
         {
             mostRecentQuery: R,
             searchFetching: O,
@@ -82,10 +82,10 @@ let b = (e) => {
         s.useEffect(() => {
             d.default.track(C.HAw.GUILD_DIRECTORY_CHANNEL_VIEWED, {
                 directory_channel_id: t.id,
-                directory_guild_id: b.id,
-                primary_category_id: N,
+                directory_guild_id: N.id,
+                primary_category_id: b,
             });
-        }, [t.id, b.id, N]);
+        }, [t.id, N.id, b]);
     let w = (0, p.b)(t),
         k = s.useMemo(
             () =>
@@ -96,15 +96,15 @@ let b = (e) => {
                               return (n) =>
                                   (0, i.jsx)(e, {
                                       ...n,
-                                      directoryGuildName: b.name,
-                                      directoryGuildId: b.id,
+                                      directoryGuildName: N.name,
+                                      directoryGuildId: N.id,
                                       directoryChannelId: t.id,
-                                      currentCategoryId: N === x.mU.ALL ? null : N,
+                                      currentCategoryId: b === x.mU.ALL ? null : b,
                                   });
                           });
                       }
                     : void 0,
-            [w, b.name, b.id, t.id, N],
+            [w, N.name, N.id, t.id, b],
         ),
         V = (e) => {
             0 !== M.trim().length &&
@@ -112,7 +112,7 @@ let b = (e) => {
                 (u.Se(t.id, M),
                 d.default.track(C.HAw.GUILD_DIRECTORY_SEARCH, {
                     directory_channel_id: t.id,
-                    directory_guild_id: b.id,
+                    directory_guild_id: N.id,
                 }));
         },
         B = () => {
@@ -129,10 +129,10 @@ let b = (e) => {
               searchResults: L,
               searchFetching: O,
           })
-        : null == j && null == N
+        : null == j && null == b
           ? (0, i.jsx)("div", { className: I.$$, children: (0, i.jsx)(r.y$y, { className: I.u1 }) })
-          : j?.length === 0 && null == N
-            ? (0, i.jsx)("div", { className: I.$$, children: (0, i.jsx)(g.A, { guild: b, onAddGuild: k }) })
+          : j?.length === 0 && null == b
+            ? (0, i.jsx)("div", { className: I.$$, children: (0, i.jsx)(g.A, { guild: N, onAddGuild: k }) })
             : (0, i.jsx)(m.A, {
                   channel: t,
                   searchQuery: M,
@@ -140,13 +140,13 @@ let b = (e) => {
                   handleSearchKeyPress: V,
                   handleClearSearch: B,
                   handleCreateOrAddGuild: k,
-                  currentCategoryId: N,
+                  currentCategoryId: b,
                   handleSelectCategory: (e) => {
                       u.uU(t.id, e);
                   },
                   directoryEntries: j,
                   categoryCounts: T,
-                  allEntriesCount: v,
-                  isLoading: y,
+                  allEntriesCount: y,
+                  isLoading: v,
               });
 };

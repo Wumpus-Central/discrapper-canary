@@ -2,11 +2,11 @@
 n.d(t, { A: () => f });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(397927),
     l = n(235986),
-    u = n(31582),
+    u = n(357868),
     c = (function (e) {
         return (e.SINGLE_AVATAR = "1"), (e.MULTIPLE_AVATAR = "2"), e;
     })(c || {});
@@ -16,28 +16,28 @@ class _ extends i.Component {
     static defaultProps = { type: "1" };
     static Types = c;
     render() {
-        let { type: e, avatarSize: t, className: n, childrenClassName: i, doNotAnimate: a } = this.props;
+        let { type: e, avatarSize: t, className: n, childrenClassName: i, doNotAnimate: s } = this.props;
         return "2" === e
             ? (0, r.jsxs)("div", {
-                  className: s()(u.ce, u.jO, n),
+                  className: a()(u.ce, u.jO, n),
                   children: [
                       (0, r.jsxs)(l.A, {
                           children: [
-                              (0, r.jsx)("div", { className: s()(u.RH, d[t], u.hC) }),
-                              (0, r.jsx)("div", { className: s()(u.RH, d[t], u.hC) }),
-                              (0, r.jsx)("div", { className: s()(u.RH, d[t]) }),
+                              (0, r.jsx)("div", { className: a()(u.RH, d[t], u.hC) }),
+                              (0, r.jsx)("div", { className: a()(u.RH, d[t], u.hC) }),
+                              (0, r.jsx)("div", { className: a()(u.RH, d[t]) }),
                           ],
                       }),
                       (0, r.jsx)(l.A, { grow: 1, className: u.eC, style: { maxWidth: this.placeholderMaxWidth } }),
                   ],
               })
             : (0, r.jsxs)(l.A, {
-                  className: s()(u.qf, !a && u.lN, n),
+                  className: a()(u.qf, !s && u.lN, n),
                   children: [
-                      (0, r.jsx)("div", { className: s()(u.RH, d[t], i) }),
+                      (0, r.jsx)("div", { className: a()(u.RH, d[t], i) }),
                       (0, r.jsx)(l.A, {
                           grow: 1,
-                          className: s()(u.gM, i),
+                          className: a()(u.gM, i),
                           style: { maxWidth: this.placeholderMaxWidth },
                       }),
                   ],

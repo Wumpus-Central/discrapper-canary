@@ -2,8 +2,8 @@
 n.d(t, { A: () => S });
 var r = n(627968),
     i = n(64700),
-    a = n(311907),
-    s = n(397927),
+    s = n(311907),
+    a = n(397927),
     o = n(793574),
     l = n(688810),
     u = n(994500),
@@ -11,94 +11,94 @@ var r = n(627968),
     d = n(183555),
     _ = n(672385),
     f = n(950191),
-    h = n(249790),
-    p = n(946356),
-    g = n(254828),
+    p = n(249790),
+    h = n(946356),
+    m = n(254828),
     E = n(783123),
-    A = n(996988),
-    I = n(985018),
-    T = n(612704),
-    y = n(911850);
+    g = n(996988),
+    A = n(985018),
+    I = n(54578),
+    T = n(911850);
 function S(e) {
     let {
             user: t,
             guildId: n,
             setPopoutRef: S,
-            channelId: v,
-            messageId: C,
-            roleId: b,
-            openedAt: N,
-            onHide: R,
-            newAnalyticsLocations: O = [],
-            disableAutoFocus: D = !1,
-            onClickContainer: L,
+            channelId: y,
+            messageId: v,
+            roleId: N,
+            openedAt: C,
+            onHide: b,
+            newAnalyticsLocations: R = [],
+            disableAutoFocus: O = !1,
+            onClickContainer: D,
         } = e,
-        w = (0, a.bG)([u.A], () => u.A.isBlocked(t.id)),
-        { analyticsLocations: x } = (0, l.Ay)([...O, w ? o.A.BLOCKED_PROFILE_POPOUT : o.A.IGNORED_PROFILE_POPOUT]),
-        P = (0, d.pb)({ layout: "POPOUT", userId: t.id, guildId: n, channelId: v, messageId: C, roleId: b }),
+        L = (0, s.bG)([u.A], () => u.A.isBlocked(t.id)),
+        { analyticsLocations: w } = (0, l.Ay)([...R, L ? o.A.BLOCKED_PROFILE_POPOUT : o.A.IGNORED_PROFILE_POPOUT]),
+        x = (0, d.pb)({ layout: "POPOUT", userId: t.id, guildId: n, channelId: y, messageId: v, roleId: N }),
         M = i.useRef(null),
-        k = (0, f.Ay)(t.id, n);
+        P = (0, f.Ay)(t.id, n);
     i.useEffect(() => {
         S?.(M?.current);
     }, [M, S]);
-    let U = w ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
-        G = D ? "div" : s.lGe;
+    let k = L ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
+        U = O ? "div" : a.lGe;
     return (0, r.jsx)(l.f5, {
-        value: x,
+        value: w,
         children: (0, r.jsx)(d.of, {
-            value: P,
-            openedAt: N,
-            fetchStartedAt: k?.fetchStartedAt,
-            fetchEndedAt: k?.fetchEndedAt,
-            isLoaded: k?.isLoaded,
-            children: (0, r.jsx)(G, {
+            value: x,
+            openedAt: C,
+            fetchStartedAt: P?.fetchStartedAt,
+            fetchEndedAt: P?.fetchEndedAt,
+            isLoaded: P?.isLoaded,
+            children: (0, r.jsx)(U, {
                 ref: M,
                 "aria-label": t.username,
-                onClick: L,
-                children: (0, r.jsx)(p.A, {
+                onClick: D,
+                children: (0, r.jsx)(h.A, {
                     user: t,
-                    displayProfile: k,
-                    themeType: A.d.POPOUT,
+                    displayProfile: P,
+                    themeType: g.d.POPOUT,
                     children: (0, r.jsxs)("div", {
-                        className: T.kL,
+                        className: I.kL,
                         children: [
-                            (0, r.jsx)("img", { alt: "", src: y, className: T.VH, "aria-hidden": !0 }),
+                            (0, r.jsx)("img", { alt: "", src: T, className: I.VH, "aria-hidden": !0 }),
                             (0, r.jsxs)("div", {
-                                className: T.rf,
+                                className: I.rf,
                                 children: [
                                     (0, r.jsxs)("div", {
-                                        className: T.N1,
+                                        className: I.N1,
                                         children: [
-                                            (0, r.jsx)(h.A, { user: t, guildId: n }),
-                                            (0, r.jsx)(s.Heading, {
+                                            (0, r.jsx)(p.A, { user: t, guildId: n }),
+                                            (0, r.jsx)(a.Heading, {
                                                 variant: "heading-lg/bold",
-                                                children: I.intl.string(I.t.b33pLD),
+                                                children: A.intl.string(A.t.b33pLD),
                                             }),
-                                            (0, r.jsx)(s.Text, {
+                                            (0, r.jsx)(a.Text, {
                                                 variant: "text-sm/medium",
-                                                children: I.intl.format(w ? I.t["8F+WNz"] : I.t["/cZp5s"], {
-                                                    username: c.Ay.getName(n, v, t),
+                                                children: A.intl.format(L ? A.t["8F+WNz"] : A.t["/cZp5s"], {
+                                                    username: c.Ay.getName(n, y, t),
                                                 }),
                                             }),
                                         ],
                                     }),
-                                    (0, r.jsxs)(s.BJc, {
+                                    (0, r.jsxs)(a.BJc, {
                                         align: "center",
                                         children: [
                                             (0, r.jsx)(E.A, {
-                                                isBlocked: w,
+                                                isBlocked: L,
                                                 onClick: () => {
-                                                    R(), (0, _.Wn)({ action: U, analyticsLocations: x, ...P });
+                                                    b(), (0, _.Wn)({ action: k, analyticsLocations: w, ...x });
                                                 },
                                             }),
-                                            (0, r.jsx)(g.A, {
+                                            (0, r.jsx)(m.A, {
                                                 userId: t.id,
                                                 onClick: () => {
-                                                    R(),
+                                                    b(),
                                                         (0, _.Wn)({
                                                             action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
-                                                            analyticsLocations: x,
-                                                            ...P,
+                                                            analyticsLocations: w,
+                                                            ...x,
                                                         });
                                                 },
                                             }),

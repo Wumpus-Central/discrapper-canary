@@ -2,7 +2,7 @@ n.d(t, { R: () => r });
 var i = n(627968),
     s = n(397927),
     a = n(790114),
-    l = n(295057);
+    l = n(32063);
 let r = (e) => {
     let { children: t, header: n, notice: r } = e,
         o = (0, a.A)();

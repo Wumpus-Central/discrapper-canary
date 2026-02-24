@@ -7,7 +7,7 @@ var s = n(814278),
     r = n(871930),
     o = n(531525),
     c = n(985018),
-    d = n(290960);
+    d = n(72690);
 function u() {
     let e = (0, a.G)();
     return (0, i.jsxs)(r.h, {

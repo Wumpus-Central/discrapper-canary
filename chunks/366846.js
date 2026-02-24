@@ -9,10 +9,10 @@ var i = n(627968),
     d = n(397927),
     c = n(241499),
     u = n(555337),
-    g = n(564864),
-    m = n(501381),
+    m = n(564864),
+    g = n(501381),
     x = n(985018),
-    h = n(82196);
+    h = n(899086);
 function _(e) {
     let { requireTerms: t, rules: n } = e,
         l = (0, o.bG)([u.A], () => u.A.getProps().guild),
@@ -20,14 +20,14 @@ function _(e) {
         A = s.useCallback(
             (e) => {
                 if (null == _ || null == n) return null;
-                g.A.setPendingInviteRules(_, e, [...n]);
+                m.A.setPendingInviteRules(_, e, [...n]);
             },
             [_, n],
         ),
         p = s.useCallback(
             (e) => {
                 if (null == _) return null;
-                g.A.setPendingInviteRules(_, t, e);
+                m.A.setPendingInviteRules(_, t, e);
             },
             [_, t],
         );
@@ -43,7 +43,7 @@ function _(e) {
                         onChange: A,
                         checked: t,
                     }),
-                    t && (0, i.jsx)(m.o, { guildId: l.id }),
+                    t && (0, i.jsx)(g.o, { guildId: l.id }),
                     (0, i.jsx)("div", {
                         className: r()(h.aO, { [h.r9]: !t }),
                         children: (0, i.jsxs)("div", {

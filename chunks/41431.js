@@ -19,7 +19,7 @@ var r = n(627968),
     A = n(518950),
     I = n(652215),
     T = n(985018),
-    S = n(97051);
+    S = n(945689);
 let y = i.lazy(() => n.e("94436").then(n.bind(n, 660207)));
 function v(e) {
     let t = (A.CA.indexOf(e) + 1) % A.CA.length,
@@ -87,12 +87,12 @@ let R = i.memo(function (e) {
         [j, Y] = i.useState(!1),
         [W, K] = i.useState(!1),
         [z, $] = i.useState(!1),
-        [q, Z] = i.useState(!1),
-        [X, Q] = i.useState("none"),
+        [q, X] = i.useState(!1),
+        [Z, Q] = i.useState("none"),
         [J, ee] = i.useState(() => ("function" == typeof s ? s() : s)),
         et = i.useRef(void 0),
         en = i.useCallback(() => {
-            K((e) => !e), Z(!0);
+            K((e) => !e), X(!0);
         }, []),
         er = i.useCallback(() => {
             Q("metadata");
@@ -111,7 +111,7 @@ let R = i.memo(function (e) {
             K(!1),
                 null == et.current &&
                     (et.current = setTimeout(() => {
-                        G(!1), Z(!1), (et.current = void 0);
+                        G(!1), X(!1), (et.current = void 0);
                     }, 500));
         }, []),
         eo = i.useCallback(() => {
@@ -199,7 +199,7 @@ let R = i.memo(function (e) {
                       ref: M,
                       className: S.Zn,
                       src: n,
-                      preload: X,
+                      preload: Z,
                       playing: W && !z,
                       onEnded: eo,
                       onLoadedMetadata: ei,
@@ -213,7 +213,7 @@ let R = i.memo(function (e) {
                   ref: M,
                   className: S.Zn,
                   controls: !1,
-                  preload: X,
+                  preload: Z,
                   onEnded: eo,
                   onLoadedMetadata: ei,
                   onError: eu,

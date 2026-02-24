@@ -25,15 +25,15 @@ var i = n(627968),
     v = n(544028),
     y = n(189081),
     b = n(194871),
-    L = n(966846),
-    O = n(531685),
+    O = n(966846),
+    L = n(531685),
     R = n(255438),
     P = n(674378),
     j = n(505806),
     D = n(250632),
-    w = n(652215),
-    M = n(985018),
-    U = n(59790);
+    M = n(652215),
+    w = n(985018),
+    U = n(532439);
 let G = (e) => {
         let { className: t, children: n, onContextMenu: r, item: l } = e;
         return (0, i.jsx)("div", { className: t, onContextMenu: (e) => r(e, l), children: n });
@@ -48,42 +48,42 @@ let G = (e) => {
     };
 function B(e, t) {
     switch (t) {
-        case w.OQC.POST_INSTALL_SCRIPTS:
-        case w.OQC.PLANNING:
-        case w.OQC.FINALIZING:
-        case w.OQC.ALLOCATING_DISK:
+        case M.OQC.POST_INSTALL_SCRIPTS:
+        case M.OQC.PLANNING:
+        case M.OQC.FINALIZING:
+        case M.OQC.ALLOCATING_DISK:
             return `${e}`;
         default:
             return (0, R.Xq)(e, { useKibibytes: !0 });
     }
 }
 let H = {
-    [w.WTw.INSTALLING]: {
-        [x.pJ.NONE]: (e, t, n, i) => M.intl.formatToPlainString(M.t.JfJt9d, { percent: e, progress: t, total: n }),
+    [M.WTw.INSTALLING]: {
+        [x.pJ.NONE]: (e, t, n, i) => w.intl.formatToPlainString(w.t.JfJt9d, { percent: e, progress: t, total: n }),
         [x.pJ.SECONDS]: (e, t, n, i) =>
-            M.intl.formatToPlainString(M.t["1z3c6e"], { percent: e, progress: t, total: n, timeRemaining: i }),
+            w.intl.formatToPlainString(w.t["1z3c6e"], { percent: e, progress: t, total: n, timeRemaining: i }),
         [x.pJ.MINUTES]: (e, t, n, i) =>
-            M.intl.formatToPlainString(M.t.PCX506, { percent: e, progress: t, total: n, timeRemaining: i }),
+            w.intl.formatToPlainString(w.t.PCX506, { percent: e, progress: t, total: n, timeRemaining: i }),
         [x.pJ.HOURS]: (e, t, n, i) =>
-            M.intl.formatToPlainString(M.t["3VG9s1"], { percent: e, progress: t, total: n, timeRemaining: i }),
+            w.intl.formatToPlainString(w.t["3VG9s1"], { percent: e, progress: t, total: n, timeRemaining: i }),
     },
-    [w.WTw.UPDATING]: {
-        [x.pJ.NONE]: (e, t, n, i) => M.intl.formatToPlainString(M.t.JsqXXL, { percent: e, progress: t, total: n }),
+    [M.WTw.UPDATING]: {
+        [x.pJ.NONE]: (e, t, n, i) => w.intl.formatToPlainString(w.t.JsqXXL, { percent: e, progress: t, total: n }),
         [x.pJ.SECONDS]: (e, t, n, i) =>
-            M.intl.formatToPlainString(M.t["3BvVec"], { percent: e, progress: t, total: n, timeRemaining: i }),
+            w.intl.formatToPlainString(w.t["3BvVec"], { percent: e, progress: t, total: n, timeRemaining: i }),
         [x.pJ.MINUTES]: (e, t, n, i) =>
-            M.intl.formatToPlainString(M.t["rwULn+"], { percent: e, progress: t, total: n, timeRemaining: i }),
+            w.intl.formatToPlainString(w.t["rwULn+"], { percent: e, progress: t, total: n, timeRemaining: i }),
         [x.pJ.HOURS]: (e, t, n, i) =>
-            M.intl.formatToPlainString(M.t.adcitP, { percent: e, progress: t, total: n, timeRemaining: i }),
+            w.intl.formatToPlainString(w.t.adcitP, { percent: e, progress: t, total: n, timeRemaining: i }),
     },
-    [w.WTw.REPAIRING]: {
-        [x.pJ.NONE]: (e, t, n, i) => M.intl.formatToPlainString(M.t.JfJt9d, { percent: e, progress: t, total: n }),
+    [M.WTw.REPAIRING]: {
+        [x.pJ.NONE]: (e, t, n, i) => w.intl.formatToPlainString(w.t.JfJt9d, { percent: e, progress: t, total: n }),
         [x.pJ.SECONDS]: (e, t, n, i) =>
-            M.intl.formatToPlainString(M.t["1z3c6e"], { percent: e, progress: t, total: n, timeRemaining: i }),
+            w.intl.formatToPlainString(w.t["1z3c6e"], { percent: e, progress: t, total: n, timeRemaining: i }),
         [x.pJ.MINUTES]: (e, t, n, i) =>
-            M.intl.formatToPlainString(M.t.PCX506, { percent: e, progress: t, total: n, timeRemaining: i }),
+            w.intl.formatToPlainString(w.t.PCX506, { percent: e, progress: t, total: n, timeRemaining: i }),
         [x.pJ.HOURS]: (e, t, n, i) =>
-            M.intl.formatToPlainString(M.t["3VG9s1"], { percent: e, progress: t, total: n, timeRemaining: i }),
+            w.intl.formatToPlainString(w.t["3VG9s1"], { percent: e, progress: t, total: n, timeRemaining: i }),
     },
 };
 function F(e, t, n, i, r) {
@@ -101,26 +101,26 @@ function Y(e) {
         s = B(l, n),
         o = B(r, n);
     switch (n) {
-        case w.OQC.QUEUED:
-            if (0 === r) return M.intl.string(M.t.RpfBqd);
-            return M.intl.formatToPlainString(M.t.uNjCXZ, { percent: i, progress: o, total: s });
-        case w.OQC.PLANNING:
-            return M.intl.formatToPlainString(M.t.sfuCUb, { percent: i });
-        case w.OQC.ALLOCATING_DISK:
-            return M.intl.formatToPlainString(M.t.XigoJ9, { percent: i });
-        case w.OQC.PATCHING:
+        case M.OQC.QUEUED:
+            if (0 === r) return w.intl.string(w.t.RpfBqd);
+            return w.intl.formatToPlainString(w.t.uNjCXZ, { percent: i, progress: o, total: s });
+        case M.OQC.PLANNING:
+            return w.intl.formatToPlainString(w.t.sfuCUb, { percent: i });
+        case M.OQC.ALLOCATING_DISK:
+            return w.intl.formatToPlainString(w.t.XigoJ9, { percent: i });
+        case M.OQC.PATCHING:
             return F(a, t, i, o, s);
-        case w.OQC.FINALIZING:
-            return M.intl.formatToPlainString(M.t["6PHDUN"], { percent: i });
-        case w.OQC.PAUSING:
-            return M.intl.formatToPlainString(M.t.vjxhWo, { percent: i, progress: o, total: s });
-        case w.OQC.VERIFYING:
-            return M.intl.formatToPlainString(M.t.bbilvq, { percent: i, progress: o, total: s });
-        case w.OQC.POST_INSTALL_SCRIPTS:
-            return M.intl.formatToPlainString(M.t.c5vRUo, { percent: i, progress: o, total: s });
-        case w.OQC.REPAIRING:
-            if (t === w.WTw.REPAIRING) return F(a, t, i, o, s);
-            return M.intl.formatToPlainString(M.t.OCzETT, { percent: i, progress: o, total: s });
+        case M.OQC.FINALIZING:
+            return w.intl.formatToPlainString(w.t["6PHDUN"], { percent: i });
+        case M.OQC.PAUSING:
+            return w.intl.formatToPlainString(w.t.vjxhWo, { percent: i, progress: o, total: s });
+        case M.OQC.VERIFYING:
+            return w.intl.formatToPlainString(w.t.bbilvq, { percent: i, progress: o, total: s });
+        case M.OQC.POST_INSTALL_SCRIPTS:
+            return w.intl.formatToPlainString(w.t.c5vRUo, { percent: i, progress: o, total: s });
+        case M.OQC.REPAIRING:
+            if (t === M.WTw.REPAIRING) return F(a, t, i, o, s);
+            return w.intl.formatToPlainString(w.t.OCzETT, { percent: i, progress: o, total: s });
     }
     throw Error("Invalid Dispatch stage");
 }
@@ -163,7 +163,7 @@ class W extends r.PureComponent {
     renderFinished() {
         let { item: e } = this.props;
         return this.renderBody({
-            message: M.intl.format(M.t.z1oxGO, { remove: () => g.Vt(e.applicationId, e.branchId) }),
+            message: w.intl.format(w.t.z1oxGO, { remove: () => g.Vt(e.applicationId, e.branchId) }),
             foregroundColor: (0, h.qB)(e.theme)
                 ? u.A.unsafe_rawColors.PRIMARY_300.css
                 : u.A.unsafe_rawColors.PRIMARY_500.css,
@@ -183,13 +183,13 @@ class W extends r.PureComponent {
                     a = B(i, l),
                     s = Math.floor((t = P.uA(i, r)));
                 e =
-                    l === w.OQC.PAUSING
-                        ? M.intl.formatToPlainString(M.t.vjxhWo, { percent: s, progress: a, total: n })
-                        : M.intl.formatToPlainString(M.t.voT3Bi, { percent: s, progress: a, total: n });
+                    l === M.OQC.PAUSING
+                        ? w.intl.formatToPlainString(w.t.vjxhWo, { percent: s, progress: a, total: n })
+                        : w.intl.formatToPlainString(w.t.voT3Bi, { percent: s, progress: a, total: n });
             }
         }
         return (
-            (null == t || null == e) && ((t = 0), (e = M.intl.string(M.t["qS+iKY"]))),
+            (null == t || null == e) && ((t = 0), (e = w.intl.string(w.t["qS+iKY"]))),
             this.renderBody({
                 percent: t,
                 foregroundColor: (0, h.qB)(i)
@@ -210,8 +210,8 @@ class W extends r.PureComponent {
             l = Math.floor(r),
             a =
                 0 === n && 1 === i
-                    ? M.intl.string(M.t["+pfsFX"])
-                    : M.intl.formatToPlainString(M.t["+feX8S"], {
+                    ? w.intl.string(w.t["+pfsFX"])
+                    : w.intl.formatToPlainString(w.t["+feX8S"], {
                           percent: l,
                           progress: (0, R.Xq)(n),
                           total: (0, R.Xq)(i),
@@ -266,8 +266,8 @@ class W extends r.PureComponent {
     renderProgress() {
         let { state: e } = this.props.item;
         switch (null != e ? e.stage : null) {
-            case w.OQC.PATCHING:
-            case w.OQC.REPAIRING:
+            case M.OQC.PATCHING:
+            case M.OQC.REPAIRING:
                 return this.renderProgressPatching();
             default:
                 return this.renderProgressDefault();
@@ -279,20 +279,20 @@ class W extends r.PureComponent {
         if (e.index > 0) return this.renderQueued();
         if (
             null != e.state &&
-            (e.state.type === w.WTw.UPDATING || e.state.type === w.WTw.REPAIRING || e.state.type === w.WTw.INSTALLING)
+            (e.state.type === M.WTw.UPDATING || e.state.type === M.WTw.REPAIRING || e.state.type === M.WTw.INSTALLING)
         )
             if (null != t && t.paused) return this.renderPaused();
             else return this.renderProgress();
         return null;
     }
 }
-let q = () => (0, i.jsx)(V, { icon: _.udU, tooltip: M.intl.string(M.t.YGm6SZ), onClick: () => g.U() }),
-    z = () => (0, i.jsx)(V, { icon: _.E$n, tooltip: M.intl.string(M.t.TVAd5J), onClick: () => g.v7() }),
-    K = (e) => {
+let q = () => (0, i.jsx)(V, { icon: _.udU, tooltip: w.intl.string(w.t.YGm6SZ), onClick: () => g.U() }),
+    K = () => (0, i.jsx)(V, { icon: _.E$n, tooltip: w.intl.string(w.t.TVAd5J), onClick: () => g.v7() }),
+    z = (e) => {
         let { item: t } = e;
         return (0, i.jsx)(V, {
             icon: _.z$m,
-            tooltip: M.intl.string(M.t["Eqb+LN"]),
+            tooltip: w.intl.string(w.t["Eqb+LN"]),
             onClick: () => g.BO(t.applicationId, t.branchId),
         });
     },
@@ -300,7 +300,7 @@ let q = () => (0, i.jsx)(V, { icon: _.udU, tooltip: M.intl.string(M.t.YGm6SZ), o
         let { item: t } = e;
         return (0, i.jsx)(V, {
             icon: _.PGe,
-            tooltip: M.intl.string(M.t["0lFmC9"]),
+            tooltip: w.intl.string(w.t["0lFmC9"]),
             onClick: () => g.ZT(t.applicationId, t.branchId),
         });
     },
@@ -336,17 +336,17 @@ let q = () => (0, i.jsx)(V, { icon: _.udU, tooltip: M.intl.string(M.t.YGm6SZ), o
                                   ? (0, i.jsx)(E.A, {
                                         libraryApplication: e.libraryApplication,
                                         size: "sm",
-                                        source: w.ThZ.APPLICATION_LIBRARY_UPDATES,
+                                        source: M.ThZ.APPLICATION_LIBRARY_UPDATES,
                                     })
                                   : null)
                         : null != e.state
-                          ? e.state.type !== w.WTw.UP_TO_DATE &&
+                          ? e.state.type !== M.WTw.UP_TO_DATE &&
                             ((n =
                                 e.index > 0
-                                    ? (0, i.jsx)(K, { item: e })
+                                    ? (0, i.jsx)(z, { item: e })
                                     : null != t && t.paused
                                       ? (0, i.jsx)(q, {})
-                                      : (0, i.jsx)(z, { item: e })),
+                                      : (0, i.jsx)(K, { item: e })),
                             (r = (0, i.jsx)($, { item: e })))
                           : (r = (0, i.jsx)($, { item: e })),
                     (0, i.jsxs)("div", { className: U.sG, children: [n, r] })
@@ -392,14 +392,14 @@ class X extends r.PureComponent {
                           children: [
                               (0, i.jsx)(D.A, {
                                   className: a()(U.e4, U.Eg),
-                                  title: M.intl.string(M.t.ytoXKr),
+                                  title: w.intl.string(w.t.ytoXKr),
                                   getHistoricalTotalBytes: b.A.getHistoricalTotalBytesDownloaded,
                                   color: u.A.unsafe_rawColors.GREEN_360.resolve({ saturation: 1 }).hex(),
                                   animate: r,
                               }),
                               (0, i.jsx)(D.A, {
                                   className: a()(U.e4, U.pn),
-                                  title: M.intl.string(M.t.SjohhI),
+                                  title: w.intl.string(w.t.SjohhI),
                                   getHistoricalTotalBytes: b.A.getHistoricalTotalBytesWritten,
                                   color: u.A.unsafe_rawColors.BLUE_345.resolve({ saturation: 1 }).hex(),
                                   animate: r,
@@ -456,10 +456,10 @@ function Z(e, t, n, i) {
     }, []);
 }
 let J = (0, f.A)(
-    c.Ay.connectStores([C.A, b.A, L.A, v.A, O.A], () => ({
-        applications: [...Z(L.A.activeItems, !1, C.A, b.A), ...Z(L.A.finishedItems, !0, C.A, b.A)],
-        paused: L.A.paused,
-        isFocused: O.A.isFocused(),
+    c.Ay.connectStores([C.A, b.A, O.A, v.A, L.A], () => ({
+        applications: [...Z(O.A.activeItems, !1, C.A, b.A), ...Z(O.A.finishedItems, !0, C.A, b.A)],
+        paused: O.A.paused,
+        isFocused: L.A.isFocused(),
         theme: v.A.theme,
     }))((0, I.A)(X)),
 );

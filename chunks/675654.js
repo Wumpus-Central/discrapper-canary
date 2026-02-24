@@ -9,18 +9,18 @@ var i = n(627968),
     d = n(974544),
     c = n(416052),
     u = n(837011),
-    g = n(90084),
-    m = n(351906),
+    m = n(90084),
+    g = n(351906),
     x = n(794967),
     h = n(555337),
     _ = n(875331),
     A = n(545055),
     p = n(966394),
     f = n(985018),
-    j = n(93100);
+    j = n(603478);
 function N(e) {
     let { guildId: t } = e,
-        { guildProfile: d, fetchGuildProfile: m, fetchStatus: N } = (0, g.u)(t),
+        { guildProfile: d, fetchGuildProfile: g, fetchStatus: N } = (0, m.u)(t),
         E = N !== u.X.FETCHED,
         {
             fetchedEmbed: b,
@@ -39,8 +39,8 @@ function N(e) {
         b || (0, x.D)(t);
     }, [b, t]),
         s.useEffect(() => {
-            m();
-        }, [t, m]);
+            g();
+        }, [t, g]);
     let G = s.useCallback(
         async (e) => {
             y(!0), await (0, _.E)(t, e, C), y(!1);
@@ -118,7 +118,7 @@ function N(e) {
 }
 function E(e) {
     let { guildId: t } = e,
-        n = (0, a.bG)([m.A], () => m.A.enabled);
+        n = (0, a.bG)([g.A], () => g.A.enabled);
     return (0, i.jsx)(o.nVY, {
         label: f.intl.string(f.t["qlhNb+"]),
         description: f.intl.string(f.t["dNn/1i"]),

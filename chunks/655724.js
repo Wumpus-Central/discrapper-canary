@@ -5,24 +5,24 @@ var i = n(627968),
     a = n(990078),
     s = n(309010),
     o = n(235052),
-    d = n(426127),
+    d = n(55705),
     u = n(985018);
 function c(t) {
     let { userId: e, channel: n, onAction: c, variant: A = "primary" } = t,
-        m = (0, o.u)(e, n, "useRequestToStreamButton"),
-        p = (0, r.bG)([s.A], () => s.A.getVoiceChannelId() === n.id, [n.id]);
-    if (null == m) return null;
+        p = (0, o.u)(e, n, "useRequestToStreamButton"),
+        m = (0, r.bG)([s.A], () => s.A.getVoiceChannelId() === n.id, [n.id]);
+    if (null == p) return null;
     let h = (0, i.jsx)(l.$nd, {
         text: u.intl.string(d.default.DKHhec),
         variant: A,
         size: "sm",
         onClick: () => {
-            m.handleRequestToStream("request to stream button"), c?.();
+            p.handleRequestToStream("request to stream button"), c?.();
         },
         fullWidth: !0,
-        disabled: !p,
+        disabled: !m,
     });
-    return p
+    return m
         ? h
         : (0, i.jsx)(a.m, { position: "top", text: u.intl.string(d.default.qRXats), asContainer: !0, children: h });
 }

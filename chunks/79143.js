@@ -9,12 +9,12 @@ var i = n(627968),
     d = n(915089),
     c = n(500345),
     u = n(11351),
-    g = n(659612),
-    m = n(898612),
+    m = n(659612),
+    g = n(898612),
     x = n(327325),
     h = n(935206),
     _ = n(985018),
-    A = n(221611);
+    A = n(37289);
 function p(e) {
     let {
             guildId: t,
@@ -24,7 +24,7 @@ function p(e) {
             description: d,
             targetType: c,
             index: u,
-            dndName: m,
+            dndName: g,
             onEdit: x,
             onMove: p,
             disabled: f = !1,
@@ -42,12 +42,12 @@ function p(e) {
                 (0, i.jsxs)("div", {
                     className: A.kV,
                     children: [
-                        (0, i.jsx)(g.A, { guildId: t, emojiId: n, emojiName: l, className: A.Zg }),
+                        (0, i.jsx)(m.A, { guildId: t, emojiId: n, emojiName: l, className: A.Zg }),
                         !f &&
                             (0, i.jsx)("div", {
                                 ref: N,
                                 className: A.$p,
-                                "data-dnd-name": m,
+                                "data-dnd-name": g,
                                 children: (0, i.jsx)(o.WP0, { size: "xs", color: "currentColor", className: A.co }),
                             }),
                     ],
@@ -81,8 +81,8 @@ function p(e) {
 }
 function f(e) {
     let { benefits: t, onEdit: n, onMove: l, guildId: o } = e,
-        g = (0, d.GV)(),
-        { isDragging: h } = (0, a.V)((e) => ({ isDragging: e.getItemType() === g })),
+        m = (0, d.GV)(),
+        { isDragging: h } = (0, a.V)((e) => ({ isDragging: e.getItemType() === m })),
         _ = (0, u.gN)();
     return 0 === t.length
         ? null
@@ -98,9 +98,9 @@ function f(e) {
                                   guildId: o,
                                   emojiId: e.emoji_id,
                                   emojiName: e.emoji_name,
-                                  title: (0, m.A)(e),
+                                  title: (0, g.A)(e),
                                   description: e.description,
-                                  targetType: g,
+                                  targetType: m,
                                   index: t,
                                   dndName: (0, x.A)(e),
                                   onEdit: () => n(t),

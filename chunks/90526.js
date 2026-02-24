@@ -17,7 +17,7 @@ var n = i(503698),
     T = i(156601),
     h = i(788868),
     I = i(985018),
-    f = i(26212);
+    f = i(371214);
 function j(e) {
     let { defaultPriceString: t, subscriptionPlan: i, discountOffer: n } = e,
         s = (0, p.N1)(i);
@@ -39,29 +39,29 @@ function A(e) {
             priceOptions: A,
             textVariant: v,
             className: _,
-            isApplicationHome: P,
-            enablePremiumBrandRefresh: R,
-            headerClassName: N,
-            headingVariant: M = "heading-md/normal",
-            headingColor: E,
+            isApplicationHome: R,
+            enablePremiumBrandRefresh: N,
+            headerClassName: P,
+            headingVariant: E = "heading-md/normal",
+            headingColor: M,
         } = e,
         y = (0, o.bG)([m.A], () => m.A.getPremiumTypeSubscription()),
         L = (0, o.bG)([d.default], () => d.default.getCurrentUser()),
         b = (0, x.k5)(),
         w = (0, x.nf)(),
         H = i === h.PremiumTypes.TIER_0 ? h.pe.TIER_0 : h.pe.TIER_2,
-        U = y?.hasActiveTrial ? L?.premiumType : b ? h.PremiumTypes.TIER_2 : null,
-        S = (0, g.V)(),
+        S = y?.hasActiveTrial ? L?.premiumType : b ? h.PremiumTypes.TIER_2 : null,
+        U = (0, g.V)(),
         O = (0, C.O)(),
-        G = S?.subscription_trial;
-    if (!P && !t && null != U && i === U && null != y && null != y.planIdFromItems) {
+        G = U?.subscription_trial;
+    if (!R && !t && null != S && i === S && null != y && null != y.planIdFromItems) {
         let e = null != y.trialEndsAt ? l()(y?.trialEndsAt).diff(l()(), "d") : 0,
             t = h.hd[y.planIdFromItems],
             i = u.Ay.formatPriceString(u.Ay.getDefaultPrice(t.id), t.interval);
         return (0, r.jsx)(c.Heading, {
-            variant: M,
-            color: E,
-            className: s()(f.K, N),
+            variant: E,
+            color: M,
+            className: s()(f.K, P),
             children:
                 a === h.Vk.PREMIUM_TRIAL
                     ? I.intl.format(I.t["2CGBri"], { remainingTime: e, price: i })
@@ -74,16 +74,16 @@ function A(e) {
                         }),
         });
     }
-    if (!P && !t && n) {
+    if (!R && !t && n) {
         let e = u.Ay.formatPriceString(
             u.Ay.getDefaultPrice(i === h.PremiumTypes.TIER_0 ? h.gD.PREMIUM_MONTH_TIER_0 : h.gD.PREMIUM_MONTH_TIER_2),
             h.WT.MONTH,
         );
         if (a === h.Vk.PREMIUM_TRIAL)
             return (0, r.jsx)(c.Heading, {
-                variant: M,
-                color: E,
-                className: s()(f.K, N),
+                variant: E,
+                color: M,
+                className: s()(f.K, P),
                 children: I.intl.format(I.t["9vyovu"], {
                     planName: (0, u.RH)(h.En[G?.sku_id ?? h.pe.NONE] ?? h.gD.PREMIUM_MONTH_TIER_2),
                     duration: (0, u.re)({
@@ -96,9 +96,9 @@ function A(e) {
             });
         if (null != O)
             return (0, r.jsx)(c.Heading, {
-                variant: M,
-                color: E,
-                className: s()(f.K, N),
+                variant: E,
+                color: M,
+                className: s()(f.K, P),
                 children: (0, r.jsx)(j, {
                     defaultPriceString: e,
                     subscriptionPlan: h.gD.PREMIUM_MONTH_TIER_2,
@@ -114,8 +114,8 @@ function A(e) {
                 className: null != _ ? _ : f.q,
                 priceOptions: A,
                 variant: v,
-                isApplicationHome: P,
-                enablePremiumBrandRefresh: R,
+                isApplicationHome: R,
+                enablePremiumBrandRefresh: N,
             }),
             p &&
                 (0, r.jsx)(T.A, {
@@ -125,8 +125,8 @@ function A(e) {
                     isGift: t,
                     priceOptions: A,
                     variant: v,
-                    isApplicationHome: P,
-                    enablePremiumBrandRefresh: R,
+                    isApplicationHome: R,
+                    enablePremiumBrandRefresh: N,
                 }),
         ],
     });

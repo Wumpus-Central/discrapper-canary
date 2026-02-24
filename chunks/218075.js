@@ -3,8 +3,8 @@ n.d(t, { f: () => o, j: () => l });
 var r = n(627968);
 n(64700);
 var i = n(397927),
-    a = n(985018),
-    s = n(39919),
+    s = n(985018),
+    a = n(550453),
     o = (function (e) {
         return (
             (e.SELECT_PAYMENT_METHOD = "SELECT_PAYMENT_METHOD"),
@@ -18,23 +18,23 @@ function l(e) {
     if (!t) return null;
     switch (t) {
         case "SELECT_PAYMENT_METHOD":
-            n = a.intl.string(a.t.Tdb5qb);
+            n = s.intl.string(s.t.Tdb5qb);
             break;
         case "ADD_NEW_PAYMENT_METHOD":
-            n = a.intl.string(a.t["6d44F5"]);
+            n = s.intl.string(s.t["6d44F5"]);
     }
     return (0, r.jsxs)("div", {
-        className: s.Y4,
+        className: a.Y4,
         children: [
             (0, r.jsxs)("div", {
-                className: s.NX,
+                className: a.NX,
                 children: [
-                    (0, r.jsx)(i.k9F, { size: "md", color: "white", className: s.Kk }),
-                    (0, r.jsx)(i.k9F, { size: "md", color: "currentColor", className: s.kV }),
+                    (0, r.jsx)(i.k9F, { size: "md", color: "white", className: a.Kk }),
+                    (0, r.jsx)(i.k9F, { size: "md", color: "currentColor", className: a.kV }),
                 ],
             }),
             (0, r.jsx)(i.Text, { variant: "text-sm/normal", children: n }),
-            (0, r.jsx)("div", { className: s.u }),
+            (0, r.jsx)("div", { className: a.u }),
         ],
     });
 }
