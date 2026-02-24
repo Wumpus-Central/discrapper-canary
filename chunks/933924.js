@@ -1,48 +1,58 @@
-s.d(t, { a: () => p }), s(508300);
+s.d(t, { a: () => A }), s(508300);
 var r = s(73153),
     n = s(830215),
-    a = s(77729),
-    i = s(626584),
-    l = s(954571),
-    o = s(464477),
-    h = s(917136),
-    c = s(293731),
-    d = s(652215);
-let u = new i.A("ConditionalMediation");
-async function p(e) {
-    let { abortController: t, loginSource: s, giftCodeSKUId: i } = e;
-    if (null == a.A && null != window.PublicKeyCredential) {
+    a = s(198982),
+    i = s(77729),
+    l = s(626584),
+    o = s(954571),
+    c = s(464477),
+    h = s(321168),
+    d = s(917136),
+    u = s(191986),
+    p = s(293731),
+    m = s(652215);
+let C = new l.A("ConditionalMediation");
+async function A(e) {
+    let { abortController: t, loginSource: s, giftCodeSKUId: l } = e;
+    if (null == i.A && null != window.PublicKeyCredential) {
         let e,
-            a = await PublicKeyCredential.isConditionalMediationAvailable?.(),
-            p = (await PublicKeyCredential.getClientCapabilities?.())?.conditionalGet;
-        if (!a && !p) return;
-        let { challenge: m, ticket: C } = await (0, h.Ud)();
+            i = await PublicKeyCredential.isConditionalMediationAvailable?.(),
+            A = (await PublicKeyCredential.getClientCapabilities?.())?.conditionalGet;
+        if (!i && !A) return;
+        let { challenge: g, ticket: S } = await (0, d.Ud)();
         try {
-            e = await (0, c.J)(m, t.signal);
+            e = await (0, p.J)(g, t.signal);
         } catch (e) {
             if (!(e instanceof DOMException)) throw e;
             switch (e.name) {
                 case "AbortError":
                 case "SecurityError":
                 case "NotAllowedError":
-                    u.warn(e.name, e.message);
+                    C.warn(e.name, e.message);
                     break;
                 default:
-                    (0, o.Os)(e), u.error(e.name, e.message);
+                    (0, c.Os)(e), C.error(e.name, e.message);
             }
             return;
         }
         r.h.dispatch({ type: "PASSWORDLESS_START" }),
-            l.default.track(d.HAw.LOGIN_ATTEMPTED, {
-                source: d.mdB.PASSWORDLESS_CONDITIONAL_UI,
+            o.default.track(m.HAw.LOGIN_ATTEMPTED, {
+                source: m.mdB.PASSWORDLESS_CONDITIONAL_UI,
                 login_method: "passwordless",
                 login_source: s,
-                gift_code_sku_id: i,
+                gift_code_sku_id: l,
             });
         try {
-            await n.A.loginWebAuthn({ ticket: C, credential: e, source: s, giftCodeSKUId: i });
-        } catch (e) {
-            throw (r.h.dispatch({ type: "PASSWORDLESS_FAILURE", error: e }), e);
+            await n.A.loginWebAuthn({ ticket: S, credential: e, source: s, giftCodeSKUId: l });
+        } catch (t) {
+            if (
+                (r.h.dispatch({ type: "PASSWORDLESS_FAILURE", error: t }),
+                t instanceof a.LG && null != t.status && t.status >= 400 && t.status < 500)
+            ) {
+                let { enabled: t } = u.V.getConfig({ location: "conditional" });
+                t && (await h.A.signalUnknownCredential(e));
+            }
+            throw t;
         }
     }
 }

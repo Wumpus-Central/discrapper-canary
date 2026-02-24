@@ -24,7 +24,8 @@ if (
         null == window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT &&
         null == window.GLOBAL_ENV.ACTIVITY_APPLICATION_HOST &&
         null == window.GLOBAL_ENV.PUBLIC_PATH &&
-        null == window.GLOBAL_ENV.MUX_ENV_KEY)
+        null == window.GLOBAL_ENV.MUX_ENV_KEY &&
+        null == window.GLOBAL_ENV.WEBAUTHN_ORIGIN)
 )
     throw (
         (window.alert("Global environment variables not set!"),
