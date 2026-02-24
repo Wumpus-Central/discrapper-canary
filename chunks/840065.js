@@ -61,7 +61,7 @@ async function f(e) {
                           n.e("73368"),
                           n.e("69733"),
                           n.e("86713"),
-                          n.e("54792"),
+                          n.e("49546"),
                           n.e("64190"),
                           n.e("94604"),
                           n.e("34749"),
@@ -103,7 +103,8 @@ function h(e) {
 }
 function m() {
     let e = (0, u.WJ)("getWebUserSettingFromSection"),
-        t = new Map([
+        t = (0, u.Ci)("getWebUserSettingFromSection"),
+        n = new Map([
             [d.nc_.ACCOUNT, l.X.ACCOUNT_PANEL],
             [d.nc_.PROFILE_CUSTOMIZATION, l.X.PROFILE_PANEL],
             [d.nc_.CONTENT_AND_SOCIAL, l.X.CONTENT_AND_SOCIAL_PANEL],
@@ -120,18 +121,18 @@ function m() {
             [d.nc_.SUBSCRIPTIONS, l.X.SUBSCRIPTIONS_PANEL],
             [d.nc_.INVENTORY, l.X.GIFT_PANEL],
             [d.nc_.BILLING, l.X.BILLING_PANEL],
-            [d.nc_.APPEARANCE, l.X.APPEARANCE_PANEL],
+            [d.nc_.APPEARANCE, t ? l.X.DISPLAY_PANEL : l.X.APPEARANCE_PANEL],
             [d.nc_.ACCESSIBILITY, l.X.ACCESSIBILITY_PANEL],
             [d.nc_.VOICE, l.X.VOICE_AND_VIDEO_PANEL],
             [d.nc_.POGGERMODE, l.X.POGGERMODE_PANEL],
-            [d.nc_.TEXT, l.X.CHAT_PANEL],
+            [d.nc_.TEXT, t ? l.X.DISPLAY_CHAT_CATEGORY : l.X.CHAT_PANEL],
             [d.nc_.NOTIFICATIONS, l.X.NOTIFICATIONS_PANEL],
             [d.nc_.KEYBINDS, l.X.KEYBINDS_PANEL],
             [d.nc_.LANGUAGE, l.X.LANGUAGE_AND_TIME_PANEL],
-            [d.nc_.WINDOWS, l.X.WINDOWS_PANEL],
-            [d.nc_.LINUX, l.X.LINUX_PANEL],
-            [d.nc_.STREAMER_MODE, l.X.STREAMER_MODE_PANEL],
-            [d.nc_.ADVANCED, l.X.ADVANCED_PANEL],
+            [d.nc_.WINDOWS, t ? l.X.ADVANCED_CATEGORY : l.X.WINDOWS_PANEL],
+            [d.nc_.LINUX, t ? l.X.ADVANCED_CATEGORY : l.X.LINUX_PANEL],
+            [d.nc_.STREAMER_MODE, t ? l.X.STREAMER_MODE_CATEGORY : l.X.STREAMER_MODE_PANEL],
+            [d.nc_.ADVANCED, t ? l.X.ADVANCED_CATEGORY : l.X.ADVANCED_PANEL],
             [d.nc_.ACTIVITY_PRIVACY, l.X.ACTIVITY_PRIVACY_PANEL],
             [d.nc_.REGISTERED_GAMES, l.X.REGISTERED_GAMES_PANEL],
             [d.nc_.OVERLAY, l.X.OVERLAY_PANEL],
@@ -141,7 +142,7 @@ function m() {
             [d.nc_.CONNECTED_GAMES, l.X.CONTENT_AND_SOCIAL_CONNECTED_GAMES_CATEGORY],
             [d.nc_.EMAILS, l.X.NOTIFICATIONS_EMAIL_CATEGORY],
         ]);
-    return e || t.delete(d.nc_.CONNECTED_GAMES), t;
+    return e || n.delete(d.nc_.CONNECTED_GAMES), n;
 }
 function E() {
     let e = m(),

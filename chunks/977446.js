@@ -45,7 +45,11 @@ function P() {
         { analyticsLocations: i } = (0, u.Ay)(d.A.PREMIUM_MARKETING_PERK_CARD),
         R = (0, _.A)({ scrollPosition: S._F.TRY_IT_OUT, analyticsLocations: i }),
         y = (0, a.useCallback)(() => {
-            (0, h.openUserSettings)(A.X.APPEARANCE_PANEL, { section: T.nc_.APPEARANCE, analyticsLocations: i });
+            let e = (0, g.Ci)("openClientThemes");
+            (0, h.openUserSettings)(e ? A.X.DISPLAY_THEME_CATEGORY : A.X.APPEARANCE_PANEL, {
+                section: T.nc_.APPEARANCE,
+                analyticsLocations: i,
+            });
         }, [i]),
         P = (0, a.useCallback)(() => {
             (0, h.openUserSettings)(A.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, {
@@ -54,12 +58,14 @@ function P() {
             });
         }, [i]),
         L = (0, a.useCallback)(() => {
-            let e = (0, g.WJ)("openCustomAppSettings");
-            (0, h.openUserSettings)(e ? A.X.APPEARANCE_IN_APP_ICON : A.X.APPEARANCE_PANEL, {
-                section: T.nc_.APPEARANCE,
-                scrollPosition: e ? void 0 : S.kq.CUSTOM_APP_ICONS,
-                analyticsLocations: i,
-            });
+            let e = (0, g.Ci)("openCustomAppSettings"),
+                t = (0, g.WJ)("openCustomAppSettings"),
+                n = A.X.APPEARANCE_PANEL,
+                s = S.kq.CUSTOM_APP_ICONS;
+            e
+                ? ((n = A.X.DISPLAY_IN_APP_ICON_CATEGORY), (s = void 0))
+                : t && ((n = A.X.APPEARANCE_IN_APP_ICON), (s = void 0)),
+                (0, h.openUserSettings)(n, { section: T.nc_.APPEARANCE, scrollPosition: s, analyticsLocations: i });
         }, [i]),
         D = (0, a.useCallback)(() => {
             (0, m.pX)(T.BVt.COLLECTIBLES_SHOP);

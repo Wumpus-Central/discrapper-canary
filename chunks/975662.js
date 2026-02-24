@@ -31,8 +31,8 @@ var i,
     P = n(322631),
     L = n(17307),
     D = n(788868),
-    M = n(652215),
-    G = n(49999),
+    G = n(652215),
+    M = n(49999),
     U = n(355097),
     k = n(985018),
     V = n(520650),
@@ -47,8 +47,8 @@ var i,
     Z = n(554452),
     q = n(992186),
     X = n(380529),
-    J = n(159312),
-    Q = n(629139),
+    Q = n(159312),
+    J = n(629139),
     $ = n(2908),
     ee = n(499309),
     et = n(866223),
@@ -115,25 +115,28 @@ let eh = () => {
         ef = (0, h.A)({ scrollPosition: U._F.TRY_IT_OUT, analyticsLocations: e }),
         eN = () => {
             (0, C.openUserSettings)(p.X.SOUNDBOARD_CATEGORY, {
-                section: M.nc_.VOICE,
+                section: G.nc_.VOICE,
                 subsection: U.MJ,
                 analyticsLocations: e,
             });
         },
         eb = () => {
-            (0, x.pX)(M.BVt.COLLECTIBLES_SHOP);
+            (0, x.pX)(G.BVt.COLLECTIBLES_SHOP);
         },
         ej = () => {
-            let e = (0, E.WJ)("openCustomAppSettings");
-            (0, C.openUserSettings)(e ? p.X.APPEARANCE_IN_APP_ICON : p.X.APPEARANCE_PANEL, {
-                section: M.nc_.APPEARANCE,
-                scrollPosition: e ? void 0 : U.kq.CUSTOM_APP_ICONS,
-            });
+            let e = (0, E.Ci)("openCustomAppSettings"),
+                t = (0, E.WJ)("openCustomAppSettings"),
+                n = p.X.APPEARANCE_PANEL,
+                i = U.kq.CUSTOM_APP_ICONS;
+            e
+                ? ((n = p.X.DISPLAY_IN_APP_ICON_CATEGORY), (i = void 0))
+                : t && ((n = p.X.APPEARANCE_IN_APP_ICON), (i = void 0)),
+                (0, C.openUserSettings)(n, { section: G.nc_.APPEARANCE, scrollPosition: i });
         },
         ev = a.useCallback(() => {
             (0, C.openUserSettings)(
                 p.X.PROFILE_PANEL,
-                { section: M.nc_.PROFILE_CUSTOMIZATION, analyticsLocations: e },
+                { section: G.nc_.PROFILE_CUSTOMIZATION, analyticsLocations: e },
                 () => (0, g.L)({ analyticsLocations: e }),
             );
         }, [e]),
@@ -148,7 +151,11 @@ let eh = () => {
                 description: k.intl.string(k.t.jBTTws),
                 descriptionCta: k.intl.string(k.t.jVcuVY),
                 onCtaClick: () => {
-                    (0, C.openUserSettings)(p.X.APPEARANCE_PANEL, { section: M.nc_.APPEARANCE, analyticsLocations: e });
+                    let t = (0, E.Ci)("openClientThemes");
+                    (0, C.openUserSettings)(t ? p.X.DISPLAY_THEME_CATEGORY : p.X.APPEARANCE_PANEL, {
+                        section: G.nc_.APPEARANCE,
+                        analyticsLocations: e,
+                    });
                 },
                 perkImage: z,
             },
@@ -163,12 +170,12 @@ let eh = () => {
                       onCtaClick: eC
                           ? () => {
                                 (0, C.openUserSettings)(p.X.CLIPS_PANEL, {
-                                    section: M.nc_.CLIPS,
+                                    section: G.nc_.CLIPS,
                                     analyticsLocations: e,
                                 });
                             }
                           : () => {
-                                window.open(N.A.getArticleURL(M.MVz.CLIPS), "_blank");
+                                window.open(N.A.getArticleURL(G.MVz.CLIPS), "_blank");
                             },
                       perkImage: Z,
                   }
@@ -202,7 +209,7 @@ let eh = () => {
                       title: k.intl.string(k.t.UkLVeJ),
                       subtitle: k.intl.string(k.t.xf9ePm),
                       description: k.intl.string(k.t["+r4vdg"]),
-                      perkImage: J,
+                      perkImage: Q,
                   }
                 : {
                       name: "earlyAccess",
@@ -210,7 +217,7 @@ let eh = () => {
                       subtitle: k.intl.string(k.t.xf9ePm),
                       description: k.intl.string(k.t["6+xTci"]),
                       isPremiumGetCta: !0,
-                      perkImage: J,
+                      perkImage: Q,
                   },
             entranceSounds: ep
                 ? {
@@ -265,7 +272,7 @@ let eh = () => {
                     ? void 0
                     : () => {
                           (0, C.openUserSettings)(p.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, {
-                              section: M.nc_.GUILD_BOOSTING,
+                              section: G.nc_.GUILD_BOOSTING,
                               analyticsLocations: e,
                           });
                       },
@@ -349,7 +356,7 @@ let eh = () => {
                 name: "moreEmojiPower",
                 title: k.intl.string(k.t["R2IV/Q"]),
                 subtitle: k.intl.string(k.t.R5Xag2),
-                perkImage: Q,
+                perkImage: J,
                 description: k.intl.string(k.t["8lsjSw"]),
             },
             customSoundsEverywhere: {
@@ -395,7 +402,7 @@ let eh = () => {
                 title: k.intl.string(k.t.tPY4o9),
                 subtitle: k.intl.string(k.t.JY0grC),
                 description: k.intl.format(k.t["2JqTF6"], {
-                    helpdeskArticle: N.A.getArticleURL(M.MVz.REFERRAL_PROGRAM),
+                    helpdeskArticle: N.A.getArticleURL(G.MVz.REFERRAL_PROGRAM),
                 }),
                 descriptionCta: k.intl.string(k.t.JST6jl),
                 isPremiumGetCta: !eh || void 0,
@@ -414,12 +421,12 @@ let eh = () => {
                 name: "permadecos",
                 title: k.intl.string(k.t["57ngoo"]),
                 subtitle: k.intl.string(k.t.piFFjd),
-                description: k.intl.format(k.t.Pd7olh, { learnMoreLink: N.A.getArticleURL(M.MVz.PERMADECOS) }),
+                description: k.intl.format(k.t.Pd7olh, { learnMoreLink: N.A.getArticleURL(G.MVz.PERMADECOS) }),
                 descriptionCta: ep ? k.intl.string(k.t.jVcuVY) : k.intl.string(k.t.JST6jl),
                 isPremiumGetCta: !ep,
                 onCtaClick: ep
                     ? () => {
-                          eI || (0, A.Dr)(r.M.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE, { dismissAction: G.i.TAKE_ACTION }),
+                          eI || (0, A.Dr)(r.M.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE, { dismissAction: M.i.TAKE_ACTION }),
                               ef();
                       }
                     : void 0,
