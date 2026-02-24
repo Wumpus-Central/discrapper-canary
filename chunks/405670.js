@@ -2,8 +2,8 @@
 n.d(t, { Ay: () => c, K2: () => o, Kr: () => u, Lx: () => l });
 var r = n(499867),
     i = n(265690),
-    a = n(121894),
-    s = n(506774);
+    s = n(121894),
+    a = n(506774);
 n(876230);
 var o = (function (e) {
         return (
@@ -24,34 +24,30 @@ let u = (0, i.h)()(
                 muted: !1,
                 transcriptEnabled: !1,
                 captionEnabled: !1,
-                fullScreenEnabled: !1,
                 videoProgress: {},
                 transcript: null,
                 setVolume: (t) => {
-                    (0, a.r)(() => e({ volume: t }));
+                    (0, s.r)(() => e({ volume: t }));
                 },
                 setMuted: (t) => {
-                    (0, a.r)(() => e({ muted: t }));
+                    (0, s.r)(() => e({ muted: t }));
                 },
                 setVideoProgress: (n, r, i) => {
-                    let s = Math.max(t().videoProgress[n]?.maxTimestampSec ?? 0, Math.floor(r));
-                    (0, a.r)(() =>
+                    let a = Math.max(t().videoProgress[n]?.maxTimestampSec ?? 0, Math.floor(r));
+                    (0, s.r)(() =>
                         e({
                             videoProgress: {
                                 ...t().videoProgress,
-                                [n]: { timestampSec: r, duration: i, maxTimestampSec: s },
+                                [n]: { timestampSec: r, duration: i, maxTimestampSec: a },
                             },
                         }),
                     );
                 },
                 setTranscriptEnabled: (t) => {
-                    (0, a.r)(() => e({ transcriptEnabled: t }));
+                    (0, s.r)(() => e({ transcriptEnabled: t }));
                 },
                 setCaptionEnabled: (t) => {
-                    (0, a.r)(() => e({ captionEnabled: t }));
-                },
-                setFullScreenEnabled: (t) => {
-                    (0, a.r)(() => e({ fullScreenEnabled: t }));
+                    (0, s.r)(() => e({ captionEnabled: t }));
                 },
                 getVideoProgress: (e) => t().videoProgress[e],
                 getVideoProgressState: (e) => {
@@ -65,18 +61,18 @@ let u = (0, i.h)()(
                             : "IN_PROGRESS";
                 },
                 resetQuest: (n) => {
-                    (0, a.r)(() => {
+                    (0, s.r)(() => {
                         let { [n]: r, ...i } = t().videoProgress;
                         e({ videoProgress: i });
                     });
                 },
                 clearState: () => {
-                    (0, a.r)(() => {
+                    (0, s.r)(() => {
                         e({ videoProgress: {} });
                     });
                 },
                 setTranscriptAsset: (t) => {
-                    (0, a.r)(() => {
+                    (0, s.r)(() => {
                         e({ transcript: t });
                     });
                 },
@@ -84,9 +80,9 @@ let u = (0, i.h)()(
             {
                 name: "videoQuestUIState",
                 storage: (0, r.KU)(() => ({
-                    getItem: (e) => s.w.get(e) ?? null,
-                    setItem: (e, t) => s.w.set(e, t),
-                    removeItem: (e) => s.w.remove(e),
+                    getItem: (e) => a.w.get(e) ?? null,
+                    setItem: (e, t) => a.w.set(e, t),
+                    removeItem: (e) => a.w.remove(e),
                 })),
                 partialize: (e) => ({ volume: e.volume, muted: e.muted, videoProgress: e.videoProgress }),
                 version: 0,

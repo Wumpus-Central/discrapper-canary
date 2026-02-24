@@ -4,7 +4,6 @@ e.exports = {
     VX: "modalRootLandscape__8fb25",
     S3: "modalBody__8fb25",
     NE: "modalBg__8fb25",
-    en: "modalBgPortrait__8fb25",
     jE: "modalContent__8fb25",
     W6: "videoCont__8fb25",
     NS: "videoContInnerRelative__8fb25",

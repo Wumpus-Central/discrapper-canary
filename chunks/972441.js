@@ -1,66 +1,51 @@
-t.d(l, { A: () => k });
-var r = t(311907),
-    o = t(73153),
-    i = t(403362),
-    n = t(41770);
-let a = (0, i.m6)() ? { [n.C8]: { "dummy-shop-home": n.uG, "dummy-orb-shelf": n.oP, "dummy-sku-list": n.Ej } } : {},
-    c = (0, i.m6)() ? ["dummy-skeleton"] : [],
-    d = (0, i.m6)() ? { [n.C8]: { "dummy-popular-picks": n.Ot } } : {},
-    s = (0, i.m6)() ? ["dummy-skeleton-template"] : [],
-    u = (e, l) => `${e}/${l}`,
-    h = a,
-    p = new Set(c),
-    m = {},
-    b = d,
-    C = new Set(s),
-    _ = {};
-class y extends r.Ay.Store {
-    static displayName = "CmsLayoutStore";
-    getLayout(e, l) {
-        return null == e || null == l ? null : (h[e]?.[l] ?? null);
-    }
-    isFetchingLayout(e, l) {
-        return null != e && null != l && p.has(u(e, l));
-    }
-    getFetchError(e, l) {
-        return null == e || null == l ? null : (m[u(e, l)] ?? null);
-    }
-    getTemplateLayout(e, l) {
-        return null == e || null == l ? null : (b[e]?.[l] ?? null);
-    }
-    isFetchingTemplate(e, l) {
-        return null != e && null != l && C.has(u(e, l));
-    }
-    getTemplateFetchError(e, l) {
-        return null == e || null == l ? null : (_[u(e, l)] ?? null);
-    }
+n.d(t, { A: () => o });
+var r = n(64700),
+    i = n(61491),
+    s = n(770178),
+    l = n(765548),
+    a = n(650583);
+function o(e) {
+    let { onScrubBack: t, onScrubForward: n, maxSeekableTime: o, interactionEnabled: u, duration: c, onClick: d } = e,
+        [m, p] = r.useState(null),
+        [E, f] = r.useState(null),
+        [v, h] = r.useState(!1),
+        x = r.useMemo(() => (null == m || null == o ? null : (0, i.DX)(o, c, m)), [m, o, c]),
+        g = (0, l.A)((e) => {
+            p(e.contentRect);
+        }),
+        S = (0, s.w)(g),
+        C = (e) => {
+            null != S.current && f(e.clientX - S.current.getBoundingClientRect().left);
+        };
+    return {
+        contRef: S,
+        boundingRect: m,
+        handleMouseEnter: (e) => {
+            u && (h(!0), C(e));
+        },
+        handleMouseLeave: (e) => {
+            u && (h(!1), f(null));
+        },
+        handleMouseMove: (e) => {
+            u && v && C(e);
+        },
+        handleKeyDown: r.useCallback(
+            (e) => {
+                let { key: r } = e;
+                r === a.N$.ArrowLeft && null != t
+                    ? (e.preventDefault(), e.stopPropagation(), t())
+                    : r === a.N$.ArrowRight && null != n && (e.preventDefault(), e.stopPropagation(), n());
+            },
+            [t, n],
+        ),
+        hoveredAtX: E,
+        maxSeekableX: x,
+        isHovering: v,
+        handleClick: (e) => {
+            if (!u || null == d) return;
+            let t = e.currentTarget.getBoundingClientRect(),
+                n = e.clientX - t.left;
+            d((0, i.hc)(n, t, c));
+        },
+    };
 }
-let k = new y(o.h, {
-    CMS_LAYOUT_FETCH: (e) => {
-        let { tenantId: l, layoutId: t } = e;
-        p.add(u(l, t));
-    },
-    CMS_LAYOUT_FETCH_SUCCESS: (e) => {
-        let { tenantId: l, layout: t } = e;
-        ((h[l] ??= {})[t.id] = t), delete m[u(l, t.id)], p.delete(u(l, t.id));
-    },
-    CMS_LAYOUT_FETCH_FAILURE: (e) => {
-        let { tenantId: l, layoutId: t, apiError: r } = e;
-        (m[u(l, t)] = r), p.delete(u(l, t));
-    },
-    CMS_TEMPLATE_FETCH: (e) => {
-        let { tenantId: l, templateId: t } = e;
-        C.add(u(l, t));
-    },
-    CMS_TEMPLATE_FETCH_SUCCESS: (e) => {
-        let { tenantId: l, templateId: t, layout: r } = e;
-        ((b[l] ??= {})[t] = r), delete _[u(l, t)], C.delete(u(l, t));
-    },
-    CMS_TEMPLATE_FETCH_FAILURE: (e) => {
-        let { tenantId: l, templateId: t, apiError: r } = e;
-        (_[u(l, t)] = r), C.delete(u(l, t));
-    },
-    LOGOUT: function () {
-        (h = {}), (p = new Set()), (m = {}), (b = {}), (C = new Set()), (_ = {});
-    },
-});

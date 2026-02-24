@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Iq: () => l, LO: () => s, dF: () => u, qd: () => a, sn: () => i, uK: () => o, wK: () => c });
+n.d(t, { Iq: () => l, LO: () => s, dF: () => u, jS: () => d, qd: () => a, sn: () => i, uK: () => o, wK: () => c });
 var r = n(945810);
 let i = (0, r.mj)({
     name: "2025-11-quest-home-takeover-client-rollout",
@@ -45,8 +45,14 @@ var u = (function (e) {
     );
 })({});
 let c = (0, r.mj)({
-    name: "2026-02-quest-card-learn-more-cta",
-    kind: "user",
-    defaultConfig: { enabled: !1, variant: 0 },
-    variations: { 2: { enabled: !0, variant: 1 }, 3: { enabled: !0, variant: 2 } },
-});
+        name: "2026-02-quest-card-learn-more-cta",
+        kind: "user",
+        defaultConfig: { enabled: !1, variant: 0 },
+        variations: { 2: { enabled: !0, variant: 1 }, 3: { enabled: !0, variant: 2 } },
+    }),
+    d = (0, r.mj)({
+        name: "2026-02-new-video-quest-progress-bar-styling",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+    });
