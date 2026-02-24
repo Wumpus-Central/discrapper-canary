@@ -49,7 +49,7 @@ class u {
         (await l("signalUnknownCredential")) &&
             (await s.signalUnknownCredential({
                 rpId: window.GLOBAL_ENV.WEBAUTHN_ORIGIN,
-                credentialId: JSON.parse(e).id,
+                credentialId: "string" == typeof e ? JSON.parse(e).id : e.id,
             }));
     }
 }
