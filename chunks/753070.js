@@ -2,19 +2,18 @@
 n.d(t, {
     AC: () => c,
     F0: () => o,
-    Jk: () => h,
-    ZV: () => _,
-    ce: () => m,
+    Jk: () => p,
+    ZV: () => d,
+    ce: () => h,
     jQ: () => u,
     kn: () => l,
-    on: () => s,
-    yw: () => d,
-    zr: () => p,
+    on: () => a,
+    zr: () => f,
 });
 var r = n(652215),
     i = n(788868),
-    a = n(985018),
-    s = (function (e) {
+    s = n(985018),
+    a = (function (e) {
         return (
             (e[(e.RESOLUTION_480 = 480)] = "RESOLUTION_480"),
             (e[(e.RESOLUTION_720 = 720)] = "RESOLUTION_720"),
@@ -72,41 +71,27 @@ function c(e) {
             throw Error(`Unknown frame rate: ${e}`);
     }
 }
-let d = {
-        2: [
-            { resolution: 0, fps: 15 },
-            { resolution: 0, fps: 5 },
-        ],
-        1: [
-            { resolution: 1440, fps: 60 },
-            { resolution: 1080, fps: 60 },
-            { resolution: 720, fps: 60 },
-            { resolution: 720, fps: 30 },
-        ],
-        4: [],
-        3: [],
-    },
-    _ = [
-        { resolution: 0, fps: 60, quality: i.uP.HIGH_STREAMING_QUALITY },
-        { resolution: 0, fps: 30, quality: i.uP.HIGH_STREAMING_QUALITY },
-        { resolution: 0, fps: 15, quality: i.uP.HIGH_STREAMING_QUALITY },
-        { resolution: 0, fps: 5, preset: 2 },
-        { resolution: 1440, fps: 60, guildPremiumTier: r.TVA.TIER_2, quality: i.uP.MID_STREAMING_QUALITY },
-        { resolution: 1440, fps: 30, guildPremiumTier: r.TVA.TIER_2, quality: i.uP.MID_STREAMING_QUALITY },
-        { resolution: 1440, fps: 15, guildPremiumTier: r.TVA.TIER_2, quality: i.uP.MID_STREAMING_QUALITY },
-        { resolution: 1080, fps: 60, guildPremiumTier: r.TVA.TIER_2, quality: i.uP.MID_STREAMING_QUALITY },
-        { resolution: 1080, fps: 30, guildPremiumTier: r.TVA.TIER_2, quality: i.uP.MID_STREAMING_QUALITY },
-        { resolution: 1080, fps: 15, guildPremiumTier: r.TVA.TIER_2, quality: i.uP.MID_STREAMING_QUALITY },
-        { resolution: 720, fps: 60, guildPremiumTier: r.TVA.TIER_1, quality: i.uP.MID_STREAMING_QUALITY },
-        { resolution: 720, fps: 30 },
-        { resolution: 720, fps: 15 },
-        { resolution: 720, fps: 5 },
-        { resolution: 480, fps: 60, guildPremiumTier: r.TVA.TIER_1, quality: i.uP.MID_STREAMING_QUALITY },
-        { resolution: 480, fps: 30 },
-        { resolution: 480, fps: 15 },
-        { resolution: 480, fps: 5 },
-    ];
-function f(e, t, n) {
+let d = [
+    { resolution: 0, fps: 60, quality: i.uP.HIGH_STREAMING_QUALITY },
+    { resolution: 0, fps: 30, quality: i.uP.HIGH_STREAMING_QUALITY },
+    { resolution: 0, fps: 15, quality: i.uP.HIGH_STREAMING_QUALITY },
+    { resolution: 0, fps: 5, preset: 2 },
+    { resolution: 1440, fps: 60, guildPremiumTier: r.TVA.TIER_2, quality: i.uP.MID_STREAMING_QUALITY },
+    { resolution: 1440, fps: 30, guildPremiumTier: r.TVA.TIER_2, quality: i.uP.MID_STREAMING_QUALITY },
+    { resolution: 1440, fps: 15, guildPremiumTier: r.TVA.TIER_2, quality: i.uP.MID_STREAMING_QUALITY },
+    { resolution: 1080, fps: 60, guildPremiumTier: r.TVA.TIER_2, quality: i.uP.MID_STREAMING_QUALITY },
+    { resolution: 1080, fps: 30, guildPremiumTier: r.TVA.TIER_2, quality: i.uP.MID_STREAMING_QUALITY },
+    { resolution: 1080, fps: 15, guildPremiumTier: r.TVA.TIER_2, quality: i.uP.MID_STREAMING_QUALITY },
+    { resolution: 720, fps: 60, guildPremiumTier: r.TVA.TIER_1, quality: i.uP.MID_STREAMING_QUALITY },
+    { resolution: 720, fps: 30 },
+    { resolution: 720, fps: 15 },
+    { resolution: 720, fps: 5 },
+    { resolution: 480, fps: 60, guildPremiumTier: r.TVA.TIER_1, quality: i.uP.MID_STREAMING_QUALITY },
+    { resolution: 480, fps: 30 },
+    { resolution: 480, fps: 15 },
+    { resolution: 480, fps: 5 },
+];
+function _(e, t, n) {
     return {
         value: e,
         get label() {
@@ -117,12 +102,12 @@ function f(e, t, n) {
         },
     };
 }
-f(720), f(1080), f(1440), f(0, () => a.intl.string(a.t.XjXqzh)), f(720), f(1080), f(1440);
-let p = (e) => (0 === e ? a.intl.string(a.t.XjXqzh) : a.intl.formatToPlainString(a.t.TEOC0I, { resolution: e })),
-    h = [f(480, () => p(480)), f(720, () => p(720)), f(1080, () => p(1080)), f(1440, () => p(1440)), f(0, () => p(0))];
-f(15), f(30), f(60);
-let m = [
-    f(15, () => a.intl.formatToPlainString(a.t["bW+JCW"], { value: 15 })),
-    f(30, () => a.intl.formatToPlainString(a.t["bW+JCW"], { value: 30 })),
-    f(60, () => a.intl.formatToPlainString(a.t["bW+JCW"], { value: 60 })),
+_(720), _(1080), _(1440), _(0, () => s.intl.string(s.t.XjXqzh)), _(720), _(1080), _(1440);
+let f = (e) => (0 === e ? s.intl.string(s.t.XjXqzh) : s.intl.formatToPlainString(s.t.TEOC0I, { resolution: e })),
+    p = [_(480, () => f(480)), _(720, () => f(720)), _(1080, () => f(1080)), _(1440, () => f(1440)), _(0, () => f(0))];
+_(15), _(30), _(60);
+let h = [
+    _(15, () => s.intl.formatToPlainString(s.t["bW+JCW"], { value: 15 })),
+    _(30, () => s.intl.formatToPlainString(s.t["bW+JCW"], { value: 30 })),
+    _(60, () => s.intl.formatToPlainString(s.t["bW+JCW"], { value: 60 })),
 ];
