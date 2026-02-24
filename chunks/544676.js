@@ -5,8 +5,8 @@ var n = i(627968),
     r = i(311907),
     a = i(397927),
     d = i(442433),
-    o = i(793574),
-    c = i(688810),
+    c = i(793574),
+    o = i(688810),
     u = i(359047),
     A = i(769591),
     g = i(36942),
@@ -28,14 +28,14 @@ var n = i(627968),
     j = i(652215),
     O = i(985018);
 function m(e) {
-    let { guild: t, onSelect: l, hideSettings: o } = e,
-        c = t.id,
+    let { guild: t, onSelect: l, hideSettings: c } = e,
+        o = t.id,
         m = (0, r.bG)([p.default], () => {
             let e = p.default.getCurrentUser();
             return s()(null != e, "GuildContextMenu: user cannot be undefined"), (0, E.bM)(t, e);
         }, [t]),
         I = (0, D.A)({ guild: t, source: j.PE1.GUILD_CONTEXT_MENU, channel: null }),
-        U = (0, v.A)(c),
+        U = (0, v.A)(o),
         T = (0, G.A)(t),
         R = (0, L.A)(t),
         C = (0, x.A)(t),
@@ -49,14 +49,14 @@ function m(e) {
             },
         }),
         k = (0, b.A)(t),
-        X = (0, u.A)(t.id),
-        B = (0, S.A)(t),
+        B = (0, u.A)(t.id),
+        X = (0, S.A)(t),
         V = (0, f.A)(t, { section: j.JJy.GUILD_LIST }),
         w = (0, g.A)(t.id),
         H = (0, y.A)(t.id),
         Y = (0, N.A)(t),
-        W = (0, A.os)("GuildContextMenu"),
-        F = (0, M.c)(t);
+        F = (0, A.os)("GuildContextMenu"),
+        W = (0, M.c)(t);
     function J() {
         (0, a.mMO)(async () => {
             let { default: e } = await i.e("53485").then(i.bind(i, 798127));
@@ -65,7 +65,7 @@ function m(e) {
     }
     return t.features.has(j.GuildFeatures.HUB)
         ? (0, n.jsxs)(a.W1t, {
-              "data-menu-needs-migration": !0,
+              "data-menu-migrated": !0,
               navId: "guild-context",
               onClose: d.Z_,
               "aria-label": O.intl.string(O.t.HpQykc),
@@ -121,11 +121,11 @@ function m(e) {
                                 color: "danger",
                             }),
                         }),
-                  (0, n.jsx)(a.rXV, { children: B }),
+                  (0, n.jsx)(a.rXV, { children: X }),
               ],
           })
         : (0, n.jsxs)(a.W1t, {
-              "data-menu-needs-migration": !0,
+              "data-menu-migrated": !0,
               navId: "guild-context",
               onClose: d.Z_,
               "aria-label": O.intl.string(O.t.HpQykc),
@@ -134,11 +134,11 @@ function m(e) {
                   (0, n.jsx)(a.rXV, { children: V }),
                   (0, n.jsx)(a.rXV, { children: I }),
                   (0, n.jsxs)(a.rXV, {
-                      children: [T, W || __OVERLAY__ ? null : R, W && !__OVERLAY__ ? H : null, U, w],
+                      children: [T, F || __OVERLAY__ ? null : R, F && !__OVERLAY__ ? H : null, U, w],
                   }),
                   (0, n.jsxs)(a.rXV, {
                       children: [
-                          o ? null : C,
+                          c ? null : C,
                           __OVERLAY__
                               ? null
                               : (0, n.jsx)(a.Drp, {
@@ -178,7 +178,7 @@ function m(e) {
                           P,
                       ],
                   }),
-                  (0, n.jsxs)(a.rXV, { children: [k, X] }),
+                  (0, n.jsxs)(a.rXV, { children: [k, B] }),
                   (0, n.jsxs)(a.rXV, {
                       children: [
                           Y,
@@ -191,12 +191,12 @@ function m(e) {
                               }),
                       ],
                   }),
-                  (0, n.jsx)(a.rXV, { children: F }),
-                  (0, n.jsx)(a.rXV, { children: B }),
+                  (0, n.jsx)(a.rXV, { children: W }),
+                  (0, n.jsx)(a.rXV, { children: X }),
               ],
           });
 }
 function I(e) {
-    let { analyticsLocations: t } = (0, c.Ay)(o.A.CONTEXT_MENU);
-    return (0, n.jsx)(c.f5, { value: t, children: (0, n.jsx)(m, { ...e }) });
+    let { analyticsLocations: t } = (0, o.Ay)(c.A.CONTEXT_MENU);
+    return (0, n.jsx)(o.f5, { value: t, children: (0, n.jsx)(m, { ...e }) });
 }
