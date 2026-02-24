@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => T }), n(667532);
+n.d(t, { A: () => A }), n(667532);
 var r = n(311907),
     i = n(73153),
     s = n(463347),
@@ -39,15 +39,13 @@ function m(e, t) {
     for (; n < r; ) ([e[n], e[r]] = [e[r], e[n]]), n++, r--;
     return e;
 }
-function E() {
-    "navigation" in window && ((p = window.navigation.canGoBack ?? !1), (h = window.navigation.canGoForward ?? !1));
-}
-function g() {
-    (_ = []), (f = 0), E();
-}
-function A(e) {
+function E(e) {
     let { location: t, action: n } = e;
-    if ((E(), "POP" === n)) {
+    if (
+        ("navigation" in window &&
+            ((p = window.navigation.canGoBack ?? !1), (h = window.navigation.canGoForward ?? !1)),
+        "POP" === n)
+    ) {
         let e = _.findIndex((e) => e.path === t.pathname);
         if (-1 !== e) {
             f = e;
@@ -79,7 +77,7 @@ function A(e) {
         _.unshift({ path: r, params: s.params });
     }
 }
-class I extends r.Ay.Store {
+class g extends r.Ay.Store {
     static displayName = "BackForwardNavStore";
     initialize() {
         (_ = []), (f = 0);
@@ -100,4 +98,4 @@ class I extends r.Ay.Store {
         return this.canGoForward ? _[f - 1] : null;
     }
 }
-let T = new I(i.h, { ROUTE_CHANGED: A, LOGOUT: g });
+let A = new g(i.h, { ROUTE_CHANGED: E });
