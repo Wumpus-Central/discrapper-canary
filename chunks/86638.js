@@ -1,4 +1,4 @@
-n.d(t, { A: () => k });
+n.d(t, { A: () => R });
 var i = n(627968),
     l = n(64700),
     a = n(503698),
@@ -42,16 +42,16 @@ function S(e) {
             isItemOwned: S,
         } = e,
         C = l.useRef(null),
-        R = l.useRef(f),
-        [k, O] = l.useState(!1);
+        k = l.useRef(f),
+        [R, O] = l.useState(!1);
     l.useEffect(() => {
-        R.current = f;
+        k.current = f;
     }, [f]),
         l.useEffect(() => {
             let e = C.current;
             if (null == e) return;
             let t = () => {
-                R.current(!1);
+                k.current(!1);
             };
             return (
                 e.addEventListener("focusin", t),
@@ -60,19 +60,26 @@ function S(e) {
                 }
             );
         }, []);
-    let { trackUserProfileWishlistAction: w } = (0, m.NJ)(),
-        L = l.useCallback(() => {
+    let { trackUserProfileWishlistAction: L } = (0, m.NJ)(),
+        w = l.useCallback(() => {
             null != t.sku &&
-                (w({
+                (L({
                     wishlistId: T,
                     action: y.Mq.WISHLIST_ITEM_CLICKED,
                     skuId: t.sku.id,
                     productLines: new Set([t.sku.productLine]),
                 }),
                 v());
-        }, [v, t.sku, T, w]),
+        }, [v, t.sku, T, L]),
         P = null != d ? (0, i.jsx)("div", { ref: C, className: N.BU, children: d }) : null,
-        D = l.useMemo(() => {
+        { label: D, icon: G } = (0, j.hB)({
+            sku: t.sku,
+            wishlistOwner: n,
+            currentUser: a,
+            isOwned: S,
+            location: "User Profile Wishlist Item Card",
+        }),
+        U = l.useMemo(() => {
             if (null == t.sku) return null;
             let e = (0, i.jsxs)(_.A, {
                     sku: t.sku,
@@ -82,15 +89,9 @@ function S(e) {
                     skuPreviewStyle: s()(N.ev, { [N.go]: S && !x }, g),
                     disableHoverOrFocus: o,
                     onHoverOrFocusChange: f,
-                    onClick: L,
+                    onClick: w,
                     children: [
-                        (0, i.jsx)(j.A, {
-                            onClick: L,
-                            isHoveringOrFocusing: x,
-                            currentUser: a,
-                            wishlistOwner: n,
-                            isOwned: S,
-                        }),
+                        (0, i.jsx)(j.AJ, { onClick: w, isHoveringOrFocusing: x, label: D, icon: G }),
                         S && (0, i.jsx)(I.gS, { isHoveringOrFocusing: x }),
                     ],
                 }),
@@ -117,13 +118,13 @@ function S(e) {
                           })),
                 l
             );
-        }, [u, t, o, x, S, L, f, g, r, n, a]);
+        }, [t, n, r, S, x, g, o, f, w, D, G, u]);
     return null == t.sku
         ? null
         : (0, i.jsxs)("div", {
               className: N.kL,
               children: [
-                  (0, i.jsx)("div", { className: k ? N.B8 : void 0, children: D }),
+                  (0, i.jsx)("div", { className: R ? N.B8 : void 0, children: U }),
                   P,
                   n.id === a.id &&
                       (0, i.jsx)(A.A, {
@@ -165,7 +166,7 @@ function C(e) {
         ...o,
     });
 }
-function R(e) {
+function k(e) {
     let {
             item: t,
             wishlistOwner: n,
@@ -211,7 +212,7 @@ function R(e) {
         ...d,
     });
 }
-function k(e) {
+function R(e) {
     let { item: t, wishlistOwner: n, wishlistId: a, analyticsLocations: s, ...r } = e,
         { analyticsLocations: c } = (0, u.Ay)(
             ...(s ?? []),
@@ -236,7 +237,7 @@ function k(e) {
                 ...r,
             });
         case T.EZt.COLLECTIBLES:
-            return (0, i.jsx)(R, {
+            return (0, i.jsx)(k, {
                 item: t,
                 analyticsLocations: c,
                 isHoveringOrFocusing: m,

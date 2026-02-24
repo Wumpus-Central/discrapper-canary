@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => E }), n(938796);
+n.d(t, { A: () => g }), n(938796);
 var r = n(989349),
     i = n.n(r),
-    a = n(575593),
-    s = n(665260),
+    s = n(575593),
+    a = n(665260),
     o = n(315069),
     l = n(871123),
     u = n(611010),
@@ -33,7 +33,7 @@ function f(e) {
 }
 function p(e) {
     if (null != e) {
-        if (e.type === a.R.AVATAR_DECORATION)
+        if (e.type === s.R.AVATAR_DECORATION)
             return {
                 id: e.id,
                 type: e.type,
@@ -42,7 +42,7 @@ function p(e) {
                 label: e.label,
                 labelLocalized: e.label_localized,
             };
-        if (e.type === a.R.NAMEPLATE)
+        if (e.type === s.R.NAMEPLATE)
             return {
                 id: e.id,
                 type: e.type,
@@ -52,7 +52,7 @@ function p(e) {
                 labelLocalized: e.label_localized,
                 palette: e.palette,
             };
-        if (e.type === a.R.PROFILE_EFFECT)
+        if (e.type === s.R.PROFILE_EFFECT)
             return {
                 id: e.id,
                 type: e.type,
@@ -94,10 +94,10 @@ function m(e) {
             optionSelectorDisplayValue: e.option_selector_display_value,
         };
 }
-function g(e) {
+function E(e) {
     if (null != e) return { socialLayer: (0, l.M$)(e.social_layer), collectibles: m(e.collectibles) };
 }
-class E extends o.A {
+class g extends o.A {
     id;
     type;
     applicationId;
@@ -135,9 +135,10 @@ class E extends o.A {
     thumbnailAssetId;
     description;
     orbsReward;
+    eligibleOffers;
     static createFromServer(e) {
         let { price: t } = e;
-        return new E({
+        return new g({
             id: e.id,
             type: e.type,
             applicationId: e.application_id,
@@ -179,11 +180,12 @@ class E extends o.A {
             externalPurchaseUrl: e.external_purchase_url,
             deleted: e.deleted ?? !1,
             bundledSkuIds: e.bundled_sku_ids ?? [],
-            bundledSkus: e.bundled_skus?.map((e) => E.createFromServer(e)) ?? [],
-            tenantMetadata: g(e.tenant_metadata),
+            bundledSkus: e.bundled_skus?.map((e) => g.createFromServer(e)) ?? [],
+            tenantMetadata: E(e.tenant_metadata),
             thumbnailAssetId: e.thumbnail_asset_id,
             description: e.description,
             orbsReward: e.orbs_reward,
+            eligibleOffers: e.eligible_offers ?? [],
         });
     }
     constructor(e) {
@@ -224,7 +226,8 @@ class E extends o.A {
             (this.tenantMetadata = e.tenantMetadata),
             (this.thumbnailAssetId = e.thumbnailAssetId),
             (this.description = e.description),
-            (this.orbsReward = e.orbsReward);
+            (this.orbsReward = e.orbsReward),
+            (this.eligibleOffers = e.eligibleOffers);
     }
     get supportedOperatingSystems() {
         let e = null != this.systemRequirements ? Object.keys(this.systemRequirements) : [];
@@ -268,23 +271,23 @@ class E extends o.A {
         return d.includes(this.id);
     }
     get available() {
-        return (0, s.Lt)(this.flags, c.d68.AVAILABLE) || null != this.externalPurchaseUrl;
+        return (0, a.Lt)(this.flags, c.d68.AVAILABLE) || null != this.externalPurchaseUrl;
     }
     isAvailableForDistribution() {
         return (
             this.available &&
             null != this.getPrice() &&
             null == this.externalPurchaseUrl &&
-            (!this.premium || (0, s.Lt)(this.flags, c.d68.PREMIUM_AND_DISTRIBUTION))
+            (!this.premium || (0, a.Lt)(this.flags, c.d68.PREMIUM_AND_DISTRIBUTION))
         );
     }
     isAvailable() {
-        return (0, s.Lt)(this.flags, c.d68.AVAILABLE);
+        return (0, a.Lt)(this.flags, c.d68.AVAILABLE);
     }
     isPremiumPerk() {
         return (
             this.premium &&
-            ((0, s.Lt)(this.flags, c.d68.PREMIUM_PURCHASE) || (0, s.Lt)(this.flags, c.d68.PREMIUM_AND_DISTRIBUTION))
+            ((0, a.Lt)(this.flags, c.d68.PREMIUM_PURCHASE) || (0, a.Lt)(this.flags, c.d68.PREMIUM_AND_DISTRIBUTION))
         );
     }
     hasFeature(e) {

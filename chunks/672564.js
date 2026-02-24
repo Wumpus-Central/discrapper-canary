@@ -1,4 +1,4 @@
-n.d(t, { D: () => U, J: () => L });
+n.d(t, { D: () => U, J: () => w });
 var i = n(627968),
     l = n(64700),
     a = n(503698),
@@ -26,7 +26,7 @@ var i = n(627968),
     N = n(518477),
     S = n(985018),
     C = n(614094);
-function R(e) {
+function k(e) {
     let {
             sku: t,
             wishlistOwner: n,
@@ -58,7 +58,7 @@ function R(e) {
         children: u,
     });
 }
-function k(e) {
+function R(e) {
     let {
             sku: t,
             analyticsLocations: n,
@@ -92,7 +92,7 @@ function k(e) {
         children: (0, i.jsx)(u.sqX, {
             "aria-label": t.name,
             onClick: p,
-            children: (0, i.jsx)(R, {
+            children: (0, i.jsx)(k, {
                 sku: t,
                 wishlistOwner: g,
                 skuPreviewStyle: h,
@@ -109,33 +109,40 @@ function O(e) {
         s = (0, c.bG)([x.A], () => x.A.getApplication(t.applicationId)),
         { analyticsLocations: r } = (0, m.Ay)(...(n ?? []), g.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD),
         o = l.useMemo(() => (0, i.jsx)(f.mW, { application: s }), [s]);
-    return (0, i.jsx)(k, { sku: t, analyticsLocations: r, tooltipIcon: o, ...a });
-}
-function w(e) {
-    return (0, i.jsx)(k, { ...e });
+    return (0, i.jsx)(R, { sku: t, analyticsLocations: r, tooltipIcon: o, ...a });
 }
 function L(e) {
+    return (0, i.jsx)(R, { ...e });
+}
+function w(e) {
     let { sku: t, ...n } = e,
         [a, s] = l.useState(!1);
     switch (t.productLine) {
         case b.EZt.SOCIAL_LAYER_GAME_ITEM:
             return (0, i.jsx)(O, { sku: t, isHoveringOrFocusing: a, setIsHoveringOrFocusing: s, ...n });
         case b.EZt.COLLECTIBLES:
-            return (0, i.jsx)(w, { sku: t, isHoveringOrFocusing: a, setIsHoveringOrFocusing: s, ...n });
+            return (0, i.jsx)(L, { sku: t, isHoveringOrFocusing: a, setIsHoveringOrFocusing: s, ...n });
         default:
             return null;
     }
 }
 function P(e) {
-    let { sku: t, wishlistOwner: n, isHoveringOrFocusing: l, onClick: a, skuPreviewStyle: s, ...r } = e;
-    return (0, i.jsx)(R, {
+    let { sku: t, wishlistOwner: n, isHoveringOrFocusing: l, onClick: a, skuPreviewStyle: s, ...r } = e,
+        { label: o, icon: c } = (0, E.hB)({
+            sku: t,
+            wishlistOwner: n,
+            isOwned: !1,
+            hideIcon: !0,
+            location: "Other User Profile Wishlist Item Card",
+        });
+    return (0, i.jsx)(k, {
         sku: t,
         wishlistOwner: n,
         skuPreviewStyle: s,
         onClick: a,
         isHoveringOrFocusing: l,
         ...r,
-        children: (0, i.jsx)(E.A, { onClick: a, isHoveringOrFocusing: l, wishlistOwner: n, isOwned: !1, hideIcon: !0 }),
+        children: (0, i.jsx)(E.AJ, { onClick: a, isHoveringOrFocusing: l, label: o, icon: c }),
     });
 }
 function D(e) {

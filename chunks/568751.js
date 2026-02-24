@@ -80,7 +80,7 @@ function R(e) {
                 onClick: H,
                 cardStyle: C.Ui,
                 onHoverOrFocusChange: k,
-                children: (0, r.jsx)(g.l, { sku: t, onClick: H, isHoveringOrFocusing: P }),
+                children: (0, r.jsx)(g.lQ, { sku: t, onClick: H, isHoveringOrFocusing: P }),
             }),
             !s &&
                 (0, r.jsx)(f.m_, {
