@@ -539,6 +539,7 @@ var r = (function (e) {
             (e[(e.JOIN_GAME_COMMUNITY_RTC_CTA = 690)] = "JOIN_GAME_COMMUNITY_RTC_CTA"),
             (e[(e.NAGBAR_QUEST_APP_UPSELL = 691)] = "NAGBAR_QUEST_APP_UPSELL"),
             (e[(e.GAME_SHOP_ORBS_REWARD_BANNER = 692)] = "GAME_SHOP_ORBS_REWARD_BANNER"),
+            (e[(e.SLAYER_STOREFRONT_ORBS_REWARDS_ANNOUNCEMENT = 693)] = "SLAYER_STOREFRONT_ORBS_REWARDS_ANNOUNCEMENT"),
             e
         );
     })({}),

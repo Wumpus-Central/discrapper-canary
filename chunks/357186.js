@@ -31,6 +31,8 @@ function f(e) {
             return 1;
         case i.M.GAME_SHOP_ORBS_REWARD_BANNER:
             return 0;
+        case i.M.SLAYER_STOREFRONT_ORBS_REWARDS_ANNOUNCEMENT:
+            return 1;
         default:
             return (0, s.dr)(e, { andFail: !1 }), 0;
     }
