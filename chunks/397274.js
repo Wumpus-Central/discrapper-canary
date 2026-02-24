@@ -23,27 +23,41 @@ let s = new (class {
     scroll(e) {
         let { scrollerNode: t, target: n, scrollBehavior: i, scrollBlock: s } = e;
         return new Promise((e) => {
-            let r = null,
-                a = () => {
-                    clearTimeout(r), e(!0);
+            let a = null,
+                l = () => {
+                    clearTimeout(a), e(!0);
                 };
             requestAnimationFrame(() => {
-                t.addEventListener("scroll", a, { once: !0 }),
+                t.addEventListener("scroll", l, { once: !0 }),
                     n.scrollIntoView({ behavior: i, block: s }),
-                    (r = setTimeout(() => {
-                        t.removeEventListener("scroll", a), e(!1);
+                    (a = setTimeout(() => {
+                        t.removeEventListener("scroll", l), e(!1);
                     }, 50));
             });
         });
     }
+    updateScrollPaddingForStickyDecoration(e) {
+        let t = e.querySelector("[data-settings-panel-sticky-decoration]");
+        if (null == t) return;
+        let n = Math.max(0, t.getBoundingClientRect().bottom - e.getBoundingClientRect().top);
+        e.style.scrollPaddingTop = `${n}px`;
+    }
     async scrollIntoView(e, t) {
         let n = this.getPanelScrollerNode();
         if (null == n) return;
+        this.updateScrollPaddingForStickyDecoration(n);
         let s = t.animate && !i.A.useReducedMotion,
-            r = t.block ?? "start";
-        (await this.scroll({ scrollerNode: n, target: e, scrollBehavior: s ? "smooth" : "auto", scrollBlock: r })) &&
-            (await new Promise((e) => {
-                n.addEventListener("scrollend", () => e(), { once: !0 });
-            }));
+            a = t.block ?? "start";
+        (await this.scroll({ scrollerNode: n, target: e, scrollBehavior: s ? "smooth" : "auto", scrollBlock: a }))
+            ? await new Promise((e) => {
+                  n.addEventListener(
+                      "scrollend",
+                      () => {
+                          (n.style.scrollPaddingTop = ""), e();
+                      },
+                      { once: !0 },
+                  );
+              })
+            : (n.style.scrollPaddingTop = "");
     }
 })();

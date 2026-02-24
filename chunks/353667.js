@@ -15,7 +15,7 @@ var i = n(627968),
     h = n(641324),
     x = n(46373),
     p = n(49999),
-    E = n(872175);
+    E = n(639485);
 function C(e) {
     let { notice: t, children: n } = e,
         { showNotice: a, handleStoreUpdate: l } = (0, m.L_)(),
@@ -44,7 +44,11 @@ function C(e) {
 function T(e) {
     let { decoration: t } = e,
         n = t.component;
-    return (0, i.jsx)("div", { className: l()(E.oK, t.sticky && E.qf), children: (0, i.jsx)(n, {}) });
+    return (0, i.jsx)("div", {
+        className: l()(E.oK, { [E.qf]: t.sticky }),
+        "data-settings-panel-sticky-decoration": t.sticky || void 0,
+        children: (0, i.jsx)(n, {}),
+    });
 }
 function S(e) {
     let { scrollerRef: t, panelKey: n, notice: a, children: l } = e,
