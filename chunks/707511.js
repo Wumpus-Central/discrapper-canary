@@ -20,7 +20,7 @@ e.exports = {
     V7: "overlayButton__2f4f7",
     _v: "overlayButtonContainer__2f4f7",
     kl: "hideWhenInactive__2f4f7",
-    fh: "experimentTitleIcon__2f4f7",
+    gr: "titleIcon__2f4f7",
     vW: "secureFramesIcon__2f4f7",
     h5: "status__2f4f7",
     bG: "interactive__2f4f7",

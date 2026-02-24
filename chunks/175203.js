@@ -24,8 +24,8 @@ var i = n(627968),
     N = n(609425),
     S = n(73392),
     T = n(529020),
-    v = n(401901),
-    y = n(40056),
+    y = n(401901),
+    v = n(40056),
     j = n(117029),
     R = n(612258),
     O = n(551826),
@@ -90,7 +90,7 @@ let eh = [ea.lp.ACTIVITY],
                 focused: ep = !1,
                 blocked: eg = !1,
                 ignored: em = !1,
-                fit: ef = v.$.CONTAIN,
+                fit: ef = y.$.CONTAIN,
                 paused: ex = !1,
                 pulseSpeakingIndicator: eC = !1,
                 forceIdle: eE = !1,
@@ -99,8 +99,8 @@ let eh = [ea.lp.ACTIVITY],
             eb = s.useContext(P.vG) || eE,
             [eN, eS] = s.useState(!1),
             eT = U.Q_.useSetting(),
-            ev = (0, c.bG)([H.default], () => H.default.isStreamInfoOverlayEnabled),
-            [ey, ej] = s.useState(!1),
+            ey = (0, c.bG)([H.default], () => H.default.isStreamInfoOverlayEnabled),
+            [ev, ej] = s.useState(!1),
             eR = (0, c.bG)([V.default], () => V.default.getId()),
             eO = u.type === ea.lp.ACTIVITY ? null : u.user,
             eL = eO?.id ?? null,
@@ -256,7 +256,7 @@ let eh = [ea.lp.ACTIVITY],
             e4 = u.type === ea.lp.STREAM && ep;
         return (0, i.jsx)(p.A, {
             section: er.JJy.VOICE_CHANNEL_TILE,
-            children: (0, i.jsx)(y.Ay, {
+            children: (0, i.jsx)(v.Ay, {
                 streamKey: u.id,
                 enableZoom: e4,
                 children: (0, i.jsx)("div", {
@@ -346,7 +346,7 @@ let eh = [ea.lp.ACTIVITY],
                                                   channel: z,
                                                   application: eX,
                                                   secureFramesVerified: eQ,
-                                                  isHovered: ey,
+                                                  isHovered: ev,
                                                   popoutType: g,
                                                   paused: ex,
                                                   controlsBottom: eI,
@@ -361,7 +361,7 @@ let eh = [ea.lp.ACTIVITY],
                                     ],
                                 }),
                             }),
-                            eT && ev && ey && (0, i.jsx)(Z.A, { currentUserId: eR, participant: u }),
+                            eT && ey && ev && (0, i.jsx)(Z.A, { currentUserId: eR, participant: u }),
                             (0, i.jsx)(R.A, { isFiring: eN, callTileRef: e2.current }),
                         ],
                     }),
@@ -436,8 +436,8 @@ let e_ = s.memo((e) => {
             participantId: x,
             participantType: E,
             participantUserId: T,
-            channel: v,
-            platform: y,
+            channel: y,
+            platform: v,
             secureFramesVerified: R,
             onContextMenu: O,
             muted: L,
@@ -454,7 +454,7 @@ let e_ = s.memo((e) => {
             streamId: W,
         } = e,
         Y = (0, c.bG)([F.Ay], () => null != T && F.Ay.isLocalVideoAutoDisabled(T, (0, f.A)(E)), [T, E]),
-        X = (0, N.A)({ userId: T, guildId: v.getGuildId() }),
+        X = (0, N.A)({ userId: T, guildId: y.getGuildId() }),
         q = (0, S.a)({ displayNameStyles: X }),
         J = (0, es.Y)(l),
         Q = (0, es.V)(l),
@@ -478,14 +478,14 @@ let e_ = s.memo((e) => {
         A
             ? B === C.N.CALL_TILE &&
               (ei.push(
-                  (0, i.jsx)(em, { channelId: v.id, participantId: x, hideWhenInactive: !1, idle: t }, "stay-on-top"),
+                  (0, i.jsx)(em, { channelId: y.id, participantId: x, hideWhenInactive: !1, idle: t }, "stay-on-top"),
               ),
               ei.push(
                   (0, i.jsx)(
                       eg,
                       {
                           onClick: () => {
-                              (0, b.X)(g.A.CALL_TILE_POPOUT, b.O.POPOUT_RETURN), M.close((0, I.A)(v.id, x));
+                              (0, b.X)(g.A.CALL_TILE_POPOUT, b.O.POPOUT_RETURN), M.close((0, I.A)(y.id, x));
                           },
                           tooltipText: ed.intl.string(ed.t["7Dwcnj"]),
                           icon: o.WindowReturnIcon,
@@ -557,17 +557,13 @@ let e_ = s.memo((e) => {
                         className: r()(eu.Qp, { [eu.EX]: l < 195 }),
                         children: [
                             (0, i.jsxs)(h.Text, {
-                                className: r()(eu.ac, { [eu.N7]: t }),
+                                className: eu.ac,
                                 color: "none",
                                 variant: Q ? "text-sm/normal" : "text-md/normal",
                                 children: [
                                     null != et &&
                                         E === ea.lp.USER &&
-                                        (0, i.jsx)(et, {
-                                            className: r()(eu.fh, { [eu.oE]: Q }),
-                                            size: "xs",
-                                            color: "currentColor",
-                                        }),
+                                        (0, i.jsx)(et, { className: eu.gr, size: "xs", color: "currentColor" }),
                                     m
                                         ? (0, i.jsx)("div", {
                                               className: eu.Z5,
@@ -584,14 +580,10 @@ let e_ = s.memo((e) => {
                                               children: (0, i.jsx)(h.G3N, { size: "lg", className: eu.Q6 }),
                                           })
                                         : null,
-                                    (0, i.jsx)(ep, {
-                                        participantType: E,
-                                        platform: y,
-                                        className: r()(eu.fh, { [eu.oE]: Q }),
-                                    }),
-                                    null != n && "" !== n
-                                        ? (0, i.jsx)("span", { className: r()(eu.Wk, q), children: n })
-                                        : null,
+                                    t ? null : (0, i.jsx)(ep, { participantType: E, platform: v, className: eu.gr }),
+                                    null == n || "" === n || t
+                                        ? null
+                                        : (0, i.jsx)("span", { className: r()(eu.Wk, q), children: n }),
                                     R &&
                                         (0, i.jsx)(u.m, {
                                             text: ed.intl.string(ed.t.ZEem6O),
@@ -618,5 +610,5 @@ let e_ = s.memo((e) => {
     );
 });
 e_.displayName = "CallTileOverlay";
-let ef = v.$,
+let ef = y.$,
     ex = eA;
