@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     U0: "draftBadgeContainer_ea81a9",
     KR: "tierName_ea81a9",

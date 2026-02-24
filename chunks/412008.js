@@ -1,1 +1,3 @@
-s.exports = JSON.parse('{"01Jl9Z":["K\xf6sz\xf6n\xf6m, nem"]}');
+a.exports = JSON.parse(
+    '{"bGygJZ":["Lehets\xe9ges, hogy az eg\xe9sz h\xedv\xe1s alatt n\xe9m\xedtva volt\xe1l. Szeretn\xe9d megtudni, hogyan kapcsolhatod ki a n\xe9m\xedt\xe1st, hogy \xfajra halljanak m\xe1sok?"],"8VIRzR":["Ha szeretn\xe9d, hogy m\xe1sok halljanak, nyomd meg ezt a gombot a mikrofonod n\xe9m\xedt\xe1s\xe1nak kikapcsol\xe1s\xe1hoz. Ezt k\xf6vetően \xfajra megnyomhatod, \xe9s ism\xe9t n\xe9m\xedthatod a mikrofonodat."],"VG4zAf":["A mikrofonod n\xe9m\xedt\xe1s\xe1nak kikapcsol\xe1sa"],"5wYjyW":["N\xe9m\xedt\xe1si oktat\xf3anyag"],"01Jl9Z":["K\xf6sz\xf6n\xf6m, nem"],"DxcYYG":["L\xe1tni szeretn\xe9m!"]}',
+);
