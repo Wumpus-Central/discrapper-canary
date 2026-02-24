@@ -5,29 +5,24 @@ var i = n(627968),
     r = n(397927),
     s = n(688810),
     o = n(287809),
-    d = n(987144),
-    c = n(652215),
+    c = n(987144),
+    d = n(652215),
     u = n(985018);
 function m(e) {
-    let { guild: t, closeLayer: n } = e,
-        [m, _] = l.useState(!1),
-        { analyticsLocations: h } = (0, s.Ay)(),
-        p = (0, a.bG)([o.default], () => o.default.getCurrentUser()),
-        g = p?.isPremiumGroupMember();
-    async function A() {
-        _(!0),
-            await (0, d.g)({
-                analyticsLocations: h,
-                analyticsLocation: {
-                    page: c.liQ.PREMIUM_GUILD_USER_MODAL,
-                    section: c.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                    object: c.ZSU.BUTTON_CTA,
-                    objectType: c.AnalyticsObjectTypes.BUY,
-                },
+    let { guild: t, analyticsLocation: n, analyticsLocations: m, closeLayer: _ } = e,
+        [A, h] = l.useState(!1),
+        { analyticsLocations: f } = (0, s.Ay)(m ?? []),
+        E = (0, a.bG)([o.default], () => o.default.getCurrentUser()),
+        g = E?.isPremiumGroupMember();
+    async function p() {
+        h(!0),
+            await (0, c.g)({
+                analyticsLocations: f,
+                analyticsLocation: { object: d.ZSU.BUTTON_CTA, objectType: d.AnalyticsObjectTypes.BUY, ...n },
                 guild: t,
-                closeLayer: n,
+                closeLayer: _,
                 onClose: () => {
-                    _(!1);
+                    h(!1);
                 },
             });
     }
@@ -36,8 +31,8 @@ function m(e) {
         size: "md",
         icon: r._Jp,
         text: u.intl.string(u.t.gKmQ1G),
-        onClick: A,
-        loading: m,
+        onClick: p,
+        loading: A,
         disabled: g,
     });
 }

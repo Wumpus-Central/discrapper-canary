@@ -190,30 +190,19 @@ function G(e, t) {
 let F = new Set([i.M.ACCOUNT_LINK_INVITE_FRIENDS, i.M.POST_ACCOUNT_CONNECTION_RTC_POPOVER, i.M.ACCOUNT_LINK_PROMPT]);
 function V(e, t, n, r) {
     if ((0, h.dD)(e) || p.A.hasUserHitDCCap(e, t?.guildId)) return;
-    let a = d.A.getConfig({ location: "requestMarkDismissibleContentAsShown" }).enabled && null == r && F.has(e);
-    (!n || a) &&
+    let i = d.A.getConfig({ location: "requestMarkDismissibleContentAsShown" }).enabled && null == r && F.has(e);
+    (!n || i) &&
         (s.h.dispatch({ type: "DCF_EVENT_LOGGED", eventType: c.r.DC_SHOW_REQUEST, dismissibleContent: e }),
         (0, h.oo)({
             content: e,
             groupName: t?.groupName,
             onAdded: () => {
-                let [n, r] = (0, h.oF)();
-                (0, f.rF)(e, t?.guildId),
-                    l.default.track(I.HAw.DISMISSIBLE_CONTENT_SHOWN, {
-                        type: i.M[e],
-                        content_count: n,
-                        fatigable_content_count: r,
-                        group_name: t?.groupName,
-                        bypass_fatigue: _.C.has(e),
-                        guild_id: t?.guildId,
-                        version: t?.version,
-                    }),
-                    t?.onShown?.();
+                (0, f.rF)(e, t?.guildId), q(e, t), t?.onShown?.();
             },
         }));
 }
 function B(e, t) {
-    ((0, h.dD)(e) || t.forceTrack) && q(e, t), (0, f.Xw)(e, t.guildId);
+    ((0, h.dD)(e) || t.forceTrack) && X(e, t), (0, f.Xw)(e, t.guildId);
 }
 function H(e, t) {
     let n = !p.A.hasUserHitDCCap();
@@ -245,6 +234,18 @@ async function $(e, t) {
     B(e, t), await v(e, n), H(e, t);
 }
 function q(e, t) {
+    let [n, r] = (0, h.oF)();
+    l.default.track(I.HAw.DISMISSIBLE_CONTENT_SHOWN, {
+        type: i.M[e],
+        content_count: n,
+        fatigable_content_count: r,
+        group_name: t?.groupName,
+        bypass_fatigue: _.C.has(e),
+        guild_id: t?.guildId,
+        version: t?.version,
+    });
+}
+function X(e, t) {
     let [n] = (0, h.oF)(),
         r = p.A.getRenderedAtTimestamp(e),
         s = new Date(),

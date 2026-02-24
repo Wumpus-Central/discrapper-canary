@@ -711,8 +711,6 @@ let i = {
     },
     GuildPowerupsManager: {
         actions: [
-            "POST_CONNECTION_OPEN",
-            "CHANNEL_SELECT",
             "GUILD_POWERUP_ENTITLEMENTS_CREATE",
             "GUILD_POWERUP_ENTITLEMENTS_DELETE",
             "GUILD_APPLIED_BOOSTS_UPDATE",
