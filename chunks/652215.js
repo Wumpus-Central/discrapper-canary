@@ -3212,6 +3212,7 @@ var tx = (function (e) {
             (e.ICYMI = "ICYMI"),
             (e.GUILD_EVENT_EMBED = "Guild Event Embed"),
             (e.GAME_COMMUNITY_UPSELL = "Game Community Upsell"),
+            (e.ACTIVITY_PANEL_GAME_COMMUNITY_UPSELL = "Activity Panel Game Community Upsell"),
             e
         );
     })({}),
