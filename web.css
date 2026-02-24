@@ -27727,8 +27727,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 }
 
 .sticker_c6367b {
-    border-radius: var(--custom-stickers-constants-sticker-picker-preview-border-radius);
-    padding: var(--custom-stickers-constants-sticker-picker-preview-padding)
+    border-radius: var(--custom-stickers-constants-sticker-picker-preview-border-radius)
 }
 
 .sticker_c6367b:after {
@@ -68937,7 +68936,6 @@ code {
     --custom-stickers-constants-stickers-shop-list-section-footer-stacked-margin: 8px;
     --custom-stickers-constants-sticker-picker-preview-dimensions: 96px;
     --custom-stickers-constants-sticker-picker-preview-dimensions-small: 80px;
-    --custom-stickers-constants-sticker-picker-preview-padding: 2px;
     --custom-stickers-constants-sticker-shop-modal-preview-dimensions: 72px;
     --custom-stickers-constants-sticker-picker-preview-margin: 12px;
     --custom-stickers-constants-sticker-picker-preview-margin-small: 4px;
