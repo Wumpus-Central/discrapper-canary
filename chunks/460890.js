@@ -2,8 +2,8 @@
 n.d(t, { G9: () => l, GE: () => c, VO: () => o, y6: () => u });
 var r = n(627968),
     i = n(64700),
-    a = n(853590);
-let s = {
+    s = n(853590);
+let a = {
         i18n: {
             CANCEL: "Cancel",
             BACK: "Back",
@@ -60,11 +60,12 @@ let s = {
         trackImpression: void 0,
         isWindowFocused: void 0,
         dynamicGraphicComponents: void 0,
+        gradientThemeId: void 0,
     },
-    o = i.createContext(s);
+    o = i.createContext(a);
 function l() {
     let e = i.useContext(o);
-    return e === s && console.warn("useManaContext must be used within a ManaContext.Provider"), e;
+    return e === a && console.warn("useManaContext must be used within a ManaContext.Provider"), e;
 }
 function u(e) {
     let t = l();
@@ -72,5 +73,5 @@ function u(e) {
 }
 function c(e) {
     let { children: t, value: n } = e;
-    return (0, r.jsx)(o.Provider, { value: n, children: (0, r.jsx)(a.C, { locale: n.locale, children: t }) });
+    return (0, r.jsx)(o.Provider, { value: n, children: (0, r.jsx)(s.C, { locale: n.locale, children: t }) });
 }

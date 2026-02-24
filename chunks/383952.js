@@ -1,4 +1,4 @@
-n.d(t, { A: () => D });
+n.d(t, { A: () => w });
 var a = n(627968),
     i = n(64700),
     s = n(503698),
@@ -19,81 +19,76 @@ var a = n(627968),
     v = n(74848),
     j = n(77735),
     C = n(340913),
-    A = n(277342),
-    T = n(430452),
-    y = n(383501),
+    A = n(430452),
+    T = n(383501),
     S = n(350535),
-    E = n(42473),
-    N = n(731854),
-    I = n(985018),
-    k = n(807880),
-    R = n(368149),
-    O = n(709502),
-    w = n(973324);
-function D(e) {
+    y = n(42473),
+    E = n(731854),
+    N = n(985018),
+    I = n(807880),
+    k = n(368149),
+    R = n(709502),
+    O = n(973324);
+function w(e) {
     let t,
         {
             selfMute: n,
             serverMute: s,
-            suppress: D,
-            awaitingRemote: M,
-            iconForeground: P,
-            onMouseEnter: L,
-            onMouseLeave: U,
-            onClick: B,
-            nameplate: G,
-            shouldShowSpeakingWhileMutedTooltip: F,
-            shouldShowSpeakingWhilePTTTooltip: V,
-            shouldShowInputDeviceChangedTooltip: W,
-            shouldShowPTTJoinTooltip: H,
-            dismissTooltips: K,
-            speaking: z,
+            suppress: w,
+            awaitingRemote: D,
+            iconForeground: M,
+            onMouseEnter: P,
+            onMouseLeave: L,
+            onClick: U,
+            nameplate: B,
+            shouldShowSpeakingWhileMutedTooltip: G,
+            shouldShowSpeakingWhilePTTTooltip: F,
+            shouldShowInputDeviceChangedTooltip: V,
+            shouldShowPTTJoinTooltip: W,
+            dismissTooltips: H,
+            speaking: K,
         } = e,
-        { showPTTIconIndicator: $ } = C.A.useConfig({ location: "MicrophoneButton" }),
-        q = (0, o.bG)([T.Ay], () => T.Ay.getMode() === N.TB.PUSH_TO_TALK),
-        Q = (0, o.bG)([T.Ay], () => T.Ay.getSettings().modeOptions.shortcut),
-        Y = (0, o.bG)([p.A], () => p.A.getIsTutorialActive(g.v.MUTE_TUTORIAL)),
-        J = (0, o.bG)([y.A], () => null != y.A.getChannelId()),
-        { name: X } = (0, v.x5)(N.oh.AUDIO_INPUT),
-        { enabledInputProfiles: Z } = (0, j.d)({ location: "MicrophoneButton" }),
-        ee = i.useRef(null),
-        et = n || D || s,
-        en = (0, A.q)(et),
-        { analyticsLocations: ea } = (0, h.Ay)(m.A.AUDIO_INPUT_BUTTON),
-        { Component: ei, events: es, play: el } = en,
-        er = s || D ? r.O1p : ei;
-    i.useEffect(() => () => el(), [et, el]);
-    let eo = (0, _.A)(n, s, D, M);
-    t = F
-        ? { tooltipType: "green_void_do_not_use", tooltipText: I.intl.string(I.t["29gnR4"]), tooltipForceOpen: !0 }
-        : H || V
+        { showPTTIconIndicator: z } = C.A.useConfig({ location: "MicrophoneButton" }),
+        $ = (0, o.bG)([A.Ay], () => A.Ay.getMode() === E.TB.PUSH_TO_TALK),
+        q = (0, o.bG)([A.Ay], () => A.Ay.getSettings().modeOptions.shortcut),
+        Q = (0, o.bG)([p.A], () => p.A.getIsTutorialActive(g.v.MUTE_TUTORIAL)),
+        Y = (0, o.bG)([T.A], () => null != T.A.getChannelId()),
+        { name: J } = (0, v.x5)(E.oh.AUDIO_INPUT),
+        { enabledInputProfiles: X } = (0, j.d)({ location: "MicrophoneButton" }),
+        Z = i.useRef(null),
+        ee = n || w || s,
+        { analyticsLocations: et } = (0, h.Ay)(m.A.AUDIO_INPUT_BUTTON),
+        en = (0, _.A)(n, s, w, D);
+    t = G
+        ? { tooltipType: "green_void_do_not_use", tooltipText: N.intl.string(N.t["29gnR4"]), tooltipForceOpen: !0 }
+        : W || F
           ? {
                 tooltipType: "green_void_do_not_use",
-                tooltipText: I.intl.format(I.t.c1qUOQ, { keybind: S.dI(Q).toLocaleUpperCase() }),
+                tooltipText: N.intl.format(N.t.c1qUOQ, { keybind: S.dI(q).toLocaleUpperCase() }),
                 tooltipForceOpen: !0,
             }
-          : { tooltipText: eo };
-    let ed = $ && q && J,
-        ec = et ? d.A.colors.ICON_VOICE_MUTED : "currentColor",
-        eu = i.useCallback(() => {
-            B(), Y && x.N(g.v.MUTE_TUTORIAL);
-        }, [B, Y]);
+          : { tooltipText: en };
+    let ea = z && $ && Y,
+        ei = ee ? d.A.colors.ICON_VOICE_MUTED : "currentColor",
+        es = i.useCallback(() => {
+            U(), Q && x.N(g.v.MUTE_TUTORIAL);
+        }, [U, Q]);
     return (0, a.jsxs)(h.f5, {
-        value: ea,
+        value: et,
         children: [
             (0, a.jsx)(u.YNO, {
-                targetElementRef: ee,
+                targetElementRef: Z,
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (
-                        K(),
+                        H(),
                         (0, a.jsx)(h.f5, {
-                            value: ea,
+                            value: et,
                             children: (0, a.jsx)(f.A, {
                                 onInteraction: (0, b.s)("AudioDeviceMenu", m.A.ACCOUNT),
                                 onClose: t,
                                 maybeRenderPTTCheckbox: !0,
-                                renderInputProfiles: Z.length > 0,
+                                renderInputProfiles: X.length > 0,
                                 renderInputDevices: !0,
                                 maybeRenderInputMeter: !0,
                                 renderInputVolume: !0,
@@ -108,81 +103,84 @@ function D(e) {
                 spacing: 4,
                 children: (e, n) => {
                     let { onClick: i } = e,
-                        { isShown: s } = n,
-                        o = s ? r.tN5 : r.abt;
+                        { isShown: o } = n,
+                        d = o ? r.tN5 : r.abt;
                     return (0, a.jsxs)("div", {
-                        ref: ee,
-                        className: l()(R.Lh, { [R.v8]: et, [R.q6]: s }),
+                        ref: Z,
+                        className: l()(k.Lh, { [k.v8]: ee, [k.q6]: o }),
                         children: [
-                            (0, a.jsx)(E.A, {
-                                "aria-checked": et,
-                                "aria-label": I.intl.string(I.t.w4m945),
-                                className: R.eT,
-                                disabled: M,
-                                icon: (0, a.jsx)(er, {
-                                    size: "custom",
-                                    width: 20,
-                                    height: 20,
-                                    color: ec,
-                                    className: P,
-                                }),
-                                onClick: eu,
+                            (0, a.jsx)(y.A, {
+                                "aria-checked": ee,
+                                "aria-label": N.intl.string(N.t.w4m945),
+                                className: k.eT,
+                                disabled: D,
+                                icon:
+                                    s || w
+                                        ? (0, a.jsx)(r.O1p, { size: "refresh_sm", color: ei, className: M })
+                                        : (0, a.jsx)(r.F0F, {
+                                              allowAnimationWhileUnfocused: !0,
+                                              defaultViewModelInstance: ee ? "Off" : "On",
+                                              dataBinding: { on: !ee, fill: ei },
+                                              eventTargetRef: Z,
+                                              className: r.d5l.refresh_sm,
+                                          }),
+                                onClick: es,
                                 onContextMenu: i,
                                 onMouseEnter: () => {
-                                    L(), es.onMouseEnter();
+                                    P();
                                 },
                                 onMouseLeave: () => {
-                                    U(), es.onMouseLeave();
+                                    L();
                                 },
-                                plated: null != G,
-                                redGlow: et,
+                                plated: null != B,
+                                redGlow: ee,
                                 role: "switch",
                                 ...t,
-                                children: ed ? (0, a.jsx)("div", { className: l()(O.U, { [O.z]: z }) }) : null,
+                                children: ea ? (0, a.jsx)("div", { className: l()(R.U, { [R.z]: K }) }) : null,
                             }),
-                            (0, a.jsx)(E.A, {
-                                "aria-label": W
-                                    ? I.intl.formatToPlainString(I.t["18wnuD"], { inputDeviceName: X })
-                                    : I.intl.string(I.t.fRzCbB),
-                                className: l()(R.UT, { [R.q6]: s }),
-                                disabled: M,
-                                icon: (0, a.jsx)(o, {
-                                    className: R.$$,
+                            (0, a.jsx)(y.A, {
+                                "aria-label": V
+                                    ? N.intl.formatToPlainString(N.t["18wnuD"], { inputDeviceName: J })
+                                    : N.intl.string(N.t.fRzCbB),
+                                className: l()(k.UT, { [k.q6]: o }),
+                                disabled: D,
+                                icon: (0, a.jsx)(d, {
+                                    className: k.$$,
                                     size: "custom",
                                     width: 12,
                                     height: 12,
-                                    color: ec,
+                                    color: ei,
                                 }),
                                 onClick: i,
                                 onContextMenu: i,
-                                onMouseEnter: L,
-                                onMouseLeave: U,
-                                plated: null != G,
-                                redGlow: et,
-                                tooltipType: W ? "green_void_do_not_use" : void 0,
-                                tooltipForceOpen: W,
-                                tooltipPositionKey: W
-                                    ? I.intl.formatToPlainString(I.t["18wnuD"], { inputDeviceName: X })
+                                onMouseEnter: P,
+                                onMouseLeave: L,
+                                plated: null != B,
+                                redGlow: ee,
+                                tooltipType: V ? "green_void_do_not_use" : void 0,
+                                tooltipForceOpen: V,
+                                tooltipPositionKey: V
+                                    ? N.intl.formatToPlainString(N.t["18wnuD"], { inputDeviceName: J })
                                     : void 0,
-                                tooltipShouldShow: !s,
-                                tooltipText: W
-                                    ? I.intl.format(I.t["18wnuD"], { inputDeviceName: X })
-                                    : I.intl.string(I.t.fRzCbB),
+                                tooltipShouldShow: !o,
+                                tooltipText: V
+                                    ? N.intl.format(N.t["18wnuD"], { inputDeviceName: J })
+                                    : N.intl.string(N.t.fRzCbB),
                             }),
                         ],
                     });
                 },
             }),
             (0, a.jsx)(c.AM, {
-                targetElementRef: ee,
-                shouldShow: Y,
-                graphic: { type: "image", src: w.A },
+                targetElementRef: Z,
+                shouldShow: Q,
+                graphic: { type: "image", src: O.A },
                 onRequestClose: () => {
                     x.N(g.v.MUTE_TUTORIAL);
                 },
                 position: "top",
-                title: I.intl.string(k.default.VG4zAf),
-                body: I.intl.string(k.default["8VIRzR"]),
+                title: N.intl.string(I.default.VG4zAf),
+                body: N.intl.string(I.default["8VIRzR"]),
             }),
         ],
     });

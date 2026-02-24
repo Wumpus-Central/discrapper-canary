@@ -14,7 +14,7 @@ var i = n(397927),
 function f(e, t, f) {
     if (d.isPlatformEmbedded)
         (0, i.mMO)(async () => {
-            let { default: e } = await Promise.all([n.e("96811"), n.e("48697")]).then(n.bind(n, 648230));
+            let { default: e } = await Promise.all([n.e("96811"), n.e("6802")]).then(n.bind(n, 648230));
             return (t) => (0, r.jsx)(e, { ...t, analyticsLocations: f });
         });
     else {

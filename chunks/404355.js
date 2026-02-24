@@ -1,11 +1,17 @@
 "use strict";
-n.d(t, { A: () => s });
-var r = n(627968);
-n(64700);
-var i = n(377802),
+n.d(t, { A: () => o });
+var r = n(627968),
+    i = n(64700),
+    s = n(397927),
     a = n(709562);
-let s = function (e) {
+let o = function (e) {
     let { iconComponent: t, ...n } = e,
-        { Component: s, events: o } = (0, i.O)();
-    return (0, r.jsx)(a.l, { isTrayButton: !1, color: "disconnect", iconComponent: t ?? s, ...o, ...n });
+        o = i.useRef(null);
+    return (0, r.jsx)(a.l, {
+        ref: o,
+        isTrayButton: !1,
+        color: "disconnect",
+        iconComponent: t ?? (0, r.jsx)(s.AYu, { eventTargetRef: o, className: s.d5l.md }),
+        ...n,
+    });
 };
