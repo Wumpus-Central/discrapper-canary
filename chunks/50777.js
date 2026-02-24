@@ -1,139 +1,137 @@
-n.d(t, { A: () => R });
+n.d(t, { A: () => j });
 var i = n(627968),
     l = n(64700),
-    r = n(503698),
-    a = n.n(r),
-    s = n(158954),
-    o = n(311907),
-    d = n(990078),
-    c = n(397927),
-    u = n(793574),
-    _ = n(688810),
-    m = n(587895),
-    h = n(875444),
-    p = n(429913),
-    g = n(594832),
-    A = n(287809),
-    x = n(67480),
-    f = n(328968),
-    C = n(580630),
-    E = n(871123),
-    I = n(733391),
-    b = n(832163),
-    T = n(317560),
-    v = n(533406),
-    S = n(300182),
-    y = n(183802),
-    N = n(818348),
-    j = n(985018),
-    L = n(928625);
-function R(e) {
-    let { guildId: t, skuId: n, channel: r } = e,
-        R = (0, o.bG)([f.A], () => f.A.isFetchingForSKU(n)),
-        P = (0, o.bG)([x.A], () => x.A.get(n)),
-        M = P?.applicationId,
-        w = (0, o.bG)([m.A], () => null != M && m.A.isFetchingApplication(M)),
-        D = (0, o.bG)([m.A], () => null != M && m.A.didFetchingApplicationFail(M)),
-        k = (0, p.h)(M),
-        { analyticsLocations: O } = (0, _.Ay)(u.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED);
-    (0, g.pE)();
-    let U = (0, o.bG)([A.default], () =>
-            r.isDM() && null != r.recipients && 0 !== r.recipients.length ? A.default.getUser(r.recipients[0]) : null,
+    r = n(158954),
+    a = n(311907),
+    s = n(990078),
+    o = n(397927),
+    d = n(793574),
+    c = n(688810),
+    u = n(587895),
+    _ = n(875444),
+    m = n(429913),
+    h = n(594832),
+    p = n(287809),
+    g = n(67480),
+    A = n(328968),
+    x = n(580630),
+    f = n(871123),
+    C = n(733391),
+    E = n(832163),
+    I = n(317560),
+    b = n(533406),
+    T = n(300182),
+    v = n(183802),
+    S = n(818348),
+    y = n(985018),
+    N = n(928625);
+function j(e) {
+    let { guildId: t, skuId: n, channel: j } = e,
+        L = (0, a.bG)([A.A], () => A.A.isFetchingForSKU(n)),
+        R = (0, a.bG)([g.A], () => g.A.get(n)),
+        P = R?.applicationId,
+        M = (0, a.bG)([u.A], () => null != P && u.A.isFetchingApplication(P)),
+        w = (0, a.bG)([u.A], () => null != P && u.A.didFetchingApplicationFail(P)),
+        k = (0, m.h)(P),
+        { analyticsLocations: D } = (0, c.Ay)(d.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED);
+    (0, h.pE)();
+    let O = (0, a.bG)([p.default], () =>
+            j.isDM() && null != j.recipients && 0 !== j.recipients.length ? p.default.getUser(j.recipients[0]) : null,
         ),
-        G = (0, o.bG)([b.A], () => (null != n ? b.A.getNormalizedSKUEligibility(n) : void 0), [n]),
-        { primaryIconAsset: B, primaryIconLabel: F } = l.useMemo(() => (0, E.Cv)(P, M), [P, M]);
+        U = (0, a.bG)([E.A], () => (null != n ? E.A.getNormalizedSKUEligibility(n) : void 0), [n]),
+        { primaryIconAsset: G, primaryIconLabel: B } = l.useMemo(() => (0, f.Cv)(R, P), [R, P]);
     l.useEffect(() => {
-        null == t || null == n || f.A.isFetchingForSKU(n) || (0, I.qf)(t, n);
+        null == t || null == n || A.A.isFetchingForSKU(n) || (0, C.qf)(t, n);
     }, [t, n]);
-    let H = l.useCallback(
+    let F = l.useCallback(
             (e) => {
                 e.stopPropagation(),
-                    P?.applicationId != null &&
+                    R?.applicationId != null &&
                         null != t &&
-                        (0, T.R)({
+                        (0, I.R)({
                             skuId: n,
-                            applicationId: P.applicationId,
+                            applicationId: R.applicationId,
                             guildId: t,
                             isStorefront: !1,
-                            analyticsLocations: O,
+                            analyticsLocations: D,
                         });
             },
-            [n, P?.applicationId, t, O],
+            [n, R?.applicationId, t, D],
         ),
-        V = l.useCallback(() => {
-            null != P &&
-                G &&
-                (0, v.a)(
-                    P,
+        H = l.useCallback(() => {
+            null != R &&
+                U &&
+                (0, b.a)(
+                    R,
                     { isGift: !1 },
-                    { analyticsLocations: [u.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_PURCHASE_BUTTON], guildId: t },
+                    { analyticsLocations: [d.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_PURCHASE_BUTTON], guildId: t },
                 );
-        }, [P, t, G]),
-        W = l.useCallback(() => {
-            null != P &&
-                (0, v.a)(
-                    P,
-                    { isGift: !0, giftRecipient: U ?? void 0 },
-                    { analyticsLocations: [u.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_GIFT_BUTTON] },
+        }, [R, t, U]),
+        V = l.useCallback(() => {
+            null != R &&
+                (0, b.a)(
+                    R,
+                    { isGift: !0, giftRecipient: O ?? void 0 },
+                    { analyticsLocations: [d.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_GIFT_BUTTON] },
                 );
-        }, [P, U]),
-        q = null != M && null == k && !D;
-    return (R || w || q) && (null == P || null == k)
-        ? (0, i.jsx)("div", { className: L.kL, children: (0, i.jsx)(c.y$y, { className: L.u1 }) })
-        : null != P && null != k && (0, h.A)(k) && k.guildId === t
+        }, [R, O]),
+        W = null != P && null == k && !w;
+    return (L || M || W) && (null == R || null == k)
+        ? (0, i.jsx)("div", { className: N.kL, children: (0, i.jsx)(o.y$y, { className: N.u1 }) })
+        : null != R && null != k && (0, _.A)(k) && k.guildId === t
           ? (0, i.jsxs)("div", {
-                className: L.kL,
+                className: N.kL,
                 children: [
-                    (0, i.jsx)(y.A, {
-                        className: L.Nr,
-                        applicationId: P.applicationId,
+                    (0, i.jsx)(v.A, {
+                        className: N.Nr,
+                        applicationId: R.applicationId,
                         skuId: n,
                         guildId: t,
-                        variant: y.s.EMBEDDED,
-                        onClick: H,
-                        analyticsLocations: O,
+                        variant: v.s.EMBEDDED,
+                        onClick: F,
+                        analyticsLocations: D,
                     }),
                     (0, i.jsxs)("div", {
-                        className: L.zH,
+                        className: N.zH,
                         children: [
                             (0, i.jsxs)("div", {
-                                className: L.lI,
+                                className: N.lI,
                                 children: [
                                     (0, i.jsxs)("div", {
-                                        className: L.PB,
+                                        className: N.PB,
                                         children: [
-                                            null != B &&
-                                                (0, i.jsx)("img", { src: B.toString(), alt: F, className: L.ye }),
-                                            (0, i.jsx)(c.Text, {
+                                            null != G &&
+                                                (0, i.jsx)("img", { src: G.toString(), alt: B, className: N.ye }),
+                                            (0, i.jsx)(o.Text, {
                                                 variant: "text-md/medium",
                                                 lineClamp: 1,
-                                                children: P.name,
+                                                children: R.name,
                                             }),
                                         ],
                                     }),
                                     (0, i.jsxs)("div", {
-                                        className: L.PB,
+                                        className: N.PB,
                                         children: [
-                                            (0, i.jsx)(c.Text, {
+                                            (0, i.jsx)(o.Text, {
                                                 variant: "text-md/bold",
                                                 lineClamp: 1,
-                                                children: (0, C.$g)(
-                                                    P.price?.amount ?? 0,
-                                                    P.price?.currency ?? N.Yr.USD,
+                                                children: (0, x.$g)(
+                                                    R.price?.amount ?? 0,
+                                                    R.price?.currency ?? S.Yr.USD,
                                                 ),
                                             }),
-                                            null != P.orbsReward &&
-                                                P.orbsReward > 0 &&
+                                            null != R.orbsReward &&
+                                                R.orbsReward > 0 &&
                                                 (0, i.jsx)("div", {
-                                                    className: L.pt,
-                                                    children: (0, i.jsx)(c.Text, {
+                                                    className: N.pt,
+                                                    children: (0, i.jsx)(o.Text, {
                                                         variant: "text-sm/semibold",
                                                         color: "currentColor",
-                                                        children: j.intl.format(j.t.GiVd2Q, {
-                                                            orbCount: P.orbsReward,
+                                                        children: y.intl.format(y.t.GiVd2Q, {
+                                                            orbCount: R.orbsReward,
                                                             orbIconHook: () =>
                                                                 (0, i.jsx)(
-                                                                    s.Cp8,
+                                                                    r.Cp8,
                                                                     { size: "xs", color: "currentColor" },
                                                                     "orbs-icon",
                                                                 ),
@@ -144,30 +142,29 @@ function R(e) {
                                     }),
                                 ],
                             }),
-                            (0, i.jsxs)(s.e2v, {
+                            (0, i.jsxs)(r.e2v, {
                                 wrap: !1,
                                 fullWidth: !0,
-                                className: a()({ [L.e$]: !G }),
                                 children: [
-                                    (0, i.jsx)(s.$nd, {
-                                        variant: "secondary",
-                                        onClick: H,
-                                        text: j.intl.string(j.t.KLBTgF),
-                                        fullWidth: !0,
-                                    }),
-                                    (0, i.jsx)(d.m, {
-                                        text: G ? null : j.intl.string(j.t.IqlPbQ),
-                                        children: (0, i.jsx)(s.$nd, {
-                                            variant: "primary",
-                                            onClick: V,
-                                            text: j.intl.format(j.t.Xp5WTn, {
-                                                price: (0, C.$g)(P.price?.amount ?? 0, P.price?.currency ?? N.Yr.USD),
-                                            }),
+                                    (0, i.jsx)(s.m, {
+                                        text: U ? void 0 : y.intl.string(y.t.IqlPbQ),
+                                        children: (0, i.jsx)(r.$nd, {
+                                            variant: U ? "secondary" : "primary",
+                                            onClick: F,
+                                            text: y.intl.string(y.t.KLBTgF),
                                             fullWidth: !0,
-                                            "aria-disabled": !G,
                                         }),
                                     }),
-                                    (0, i.jsx)(S.A, { onGift: W }),
+                                    U &&
+                                        (0, i.jsx)(r.$nd, {
+                                            variant: "primary",
+                                            onClick: H,
+                                            text: y.intl.format(y.t.Xp5WTn, {
+                                                price: (0, x.$g)(R.price?.amount ?? 0, R.price?.currency ?? S.Yr.USD),
+                                            }),
+                                            fullWidth: !0,
+                                        }),
+                                    (0, i.jsx)(T.A, { onGift: V }),
                                 ],
                             }),
                         ],
