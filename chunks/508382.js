@@ -37,9 +37,10 @@ function m(e) {
             maxHeight: w,
             trigger: x = "click",
             hoverDelay: M = p,
+            autoUpdate: P = !1,
         } = e,
-        P = i.useRef(null),
-        k = i.useMemo(() => {
+        k = i.useRef(null),
+        U = i.useMemo(() => {
             let e = [(0, s.cY)(S)];
             return (
                 y && e.push((0, s.UU)({ crossAxis: v, padding: L, boundary: n.body })),
@@ -62,36 +63,31 @@ function m(e) {
         }, [S, y, N, L, v, n, w]);
     null != I ? (t = { reference: { getBoundingClientRect: () => I } }) : null != A && (t = { reference: A });
     let {
-            refs: U,
-            floatingStyles: G,
-            placement: F,
-            middlewareData: V,
-            update: B,
-            context: H,
+            refs: G,
+            floatingStyles: F,
+            placement: V,
+            middlewareData: B,
+            update: H,
+            context: j,
         } = (0, a.we)({
             placement: T,
             open: l,
             onOpenChange: m,
             strategy: C,
-            middleware: k,
-            whileElementsMounted: o.ll,
+            middleware: U,
+            whileElementsMounted: P ? o.ll : void 0,
             elements: t,
         }),
-        j = (0, a.s9)(H),
-        Y = (0, a.Mk)(H, {
-            restMs: M,
-            delay: { open: M, close: 0 },
-            enabled: "hover" === x,
-            handleClose: (0, a.iB)({ blockPointerEvents: !0 }),
-        }),
-        { getReferenceProps: W, getFloatingProps: K } = (0, a.bv)([j, Y]),
-        z = V.hide?.referenceHidden ? "hidden" : "visible",
-        $ = b ? d.sM : i.Fragment;
+        Y = (0, a.s9)(j),
+        W = (0, a.Mk)(j, { restMs: M, delay: { open: M, close: 0 }, enabled: "hover" === x, handleClose: (0, a.iB)() }),
+        { getReferenceProps: K, getFloatingProps: z } = (0, a.bv)([Y, W]),
+        $ = B.hide?.referenceHidden ? "hidden" : "visible",
+        q = b ? d.sM : i.Fragment;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            O({ ref: U.setReference, props: W() }),
+            O({ ref: G.setReference, props: K() }),
             l &&
-                (0, r.jsxs)($, {
+                (0, r.jsxs)(q, {
                     ownerDocument: n,
                     children: [
                         R ? (0, r.jsx)(a.zR, {}) : null,
@@ -99,12 +95,12 @@ function m(e) {
                             id: E,
                             className: u()(g, _.q),
                             [h]: !0,
-                            style: { ...G, visibility: z },
-                            ref: U.setFloating,
-                            ...K(),
+                            style: { ...F, visibility: $ },
+                            ref: G.setFloating,
+                            ...z(),
                             children: (0, r.jsx)(c.xp, {
-                                containerRef: P,
-                                children: D({ placement: F, update: B, hidden: "hidden" === z, shift: V.shift }),
+                                containerRef: k,
+                                children: D({ placement: V, update: H, hidden: "hidden" === $, shift: B.shift }),
                             }),
                         }),
                     ],
