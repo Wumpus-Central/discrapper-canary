@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Eq: () => i });
+n.d(t, { Eq: () => i, Vh: () => s });
 let r = (0, n(945810).mj)({
     kind: "user",
     name: "2026-01-family-center-v3",
@@ -9,4 +9,8 @@ let r = (0, n(945810).mj)({
 function i(e) {
     let { location: t } = e;
     return r.getConfig({ location: t }).enabled;
+}
+function s(e) {
+    let { location: t } = e;
+    return r.useConfig({ location: t }).enabled;
 }
