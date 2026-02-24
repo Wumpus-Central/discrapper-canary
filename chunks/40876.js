@@ -848,5 +848,6 @@ let i = {
         hasStoreChangeListeners: !0,
         loadRightBeforeConnectionOpen: !0,
     },
+    SocialLayerStorefrontConfigManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(49431).A },
 };
 (0, r.n)(i);
