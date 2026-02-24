@@ -22,22 +22,22 @@ let b = (e) => {
             description: r,
             caption: a,
             pillText: b,
-            primaryAsset: N,
+            primaryAsset: v,
             primaryAssetClassName: R,
             backgroundAssetUrl: A,
             progress: E,
             ctaText: C,
-            onCtaClick: j,
-            subscriptionRequired: T,
+            onCtaClick: T,
+            subscriptionRequired: j,
             glowing: I,
             progressGlowing: y = !1,
             featured: P,
-            className: S,
-            blurTint: O,
+            className: O,
+            blurTint: S,
         } = e,
         L = (0, u.DP)(),
         { fractionalState: U } = (0, c.A)(),
-        w = T && U === x.xc.FP_ONLY,
+        w = j && U === x.xc.FP_ONLY,
         D = !(0, s.isEmpty)(A),
         B = D && (0, d.q)(L),
         M = (0, o.rdh)(o.LU0.colors.BACKGROUND_BASE_LOW).hex(),
@@ -51,7 +51,7 @@ let b = (e) => {
                 glowAmount: 5 * !!I,
                 blurAmount: 6 * !!I,
                 className: f.Ui,
-                cardClassName: l()(f.Nr, e, S, { [f.j8]: P, [f.Tn]: D }),
+                cardClassName: l()(f.Nr, e, O, { [f.j8]: P, [f.Tn]: D }),
                 cardStyle: {
                     backgroundImage: D ? `url(${A})` : void 0,
                     backgroundSize: "cover",
@@ -74,9 +74,9 @@ let b = (e) => {
                                 (0, n.jsx)("div", {
                                     className: f.gW,
                                     "aria-hidden": "true",
-                                    children: (0, n.jsx)(v, { asset: N, className: R }),
+                                    children: (0, n.jsx)(N, { asset: v, className: R }),
                                 }),
-                            (0, n.jsx)(v, { asset: N, className: R }),
+                            (0, n.jsx)(N, { asset: v, className: R }),
                         ],
                     }),
                     (0, n.jsxs)("div", {
@@ -84,7 +84,7 @@ let b = (e) => {
                         children: [
                             (0, n.jsx)("div", {
                                 className: f.u_,
-                                style: { "--custom-tint-color": O ?? M },
+                                style: { "--custom-tint-color": S ?? M },
                                 "aria-hidden": !0,
                             }),
                             (0, n.jsxs)("div", {
@@ -95,7 +95,7 @@ let b = (e) => {
                                         (0, n.jsxs)("div", {
                                             className: f.d_,
                                             children: [
-                                                (0, n.jsx)(o.tvc, { size: "sm", color: "text-muted" }),
+                                                (0, n.jsx)(o.tvc, { size: "sm", color: o.LU0.colors.ICON_MUTED }),
                                                 (0, n.jsx)(o.Text, {
                                                     variant: "text-sm/normal",
                                                     color: "text-muted",
@@ -140,12 +140,16 @@ let b = (e) => {
                                 (0, n.jsxs)("div", {
                                     className: f.yk,
                                     children: [
-                                        w && (0, n.jsx)(p.A, { defaultTextOverride: _.intl.string(_.t.sEAnVH) }),
+                                        w &&
+                                            (0, n.jsx)(p.A, {
+                                                fullWidth: !0,
+                                                defaultTextOverride: _.intl.string(_.t.sEAnVH),
+                                            }),
                                         !w &&
                                             (0, n.jsx)(i.$nd, {
                                                 text: C,
                                                 variant: !D && (0, d.q)(L) ? "primary" : "overlay-primary",
-                                                onClick: j,
+                                                onClick: T,
                                             }),
                                     ],
                                 }),
@@ -155,7 +159,7 @@ let b = (e) => {
             }),
     });
 };
-function v(e) {
+function N(e) {
     let { asset: t, className: r } = e;
     return null == t || "" === t
         ? null

@@ -50,8 +50,8 @@ function h(t) {
     );
     return (
         n.useEffect(() => {
-            (0, u.iR)(x, f, "SocialLayerStorefrontEligibilityCheckModal");
-        }, [x, f]),
+            null == A && (0, u.iR)(x, f, "SocialLayerStorefrontEligibilityCheckModal");
+        }, [x, f, A]),
         n.useEffect(() => {
             if (null != A && "checking" !== A) {
                 if ("ineligible" === A) return void S("ineligible");
