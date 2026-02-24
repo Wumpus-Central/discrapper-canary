@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => A, l: () => y });
+n.d(t, { A: () => A, l: () => S });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -22,14 +22,14 @@ function A(e) {
             onClick: n,
             onKeyDown: i,
             onMouseEnter: s,
-            onMouseLeave: o,
-            onContextMenu: d,
-            className: _,
-            wrapperClassName: f,
-            iconClassName: p,
-            iconColor: m = "currentColor",
-            iconComponent: E,
-            themeable: A = !1,
+            onMouseLeave: d,
+            onContextMenu: _,
+            className: f,
+            wrapperClassName: p,
+            iconClassName: m,
+            iconColor: E = "currentColor",
+            iconComponent: A,
+            themeable: I = !1,
             disabled: T = !1,
             isActive: S = !1,
             tooltipPosition: y = "top",
@@ -64,27 +64,24 @@ function A(e) {
                 },
                 onClick: n,
                 onMouseEnter: s,
-                onMouseLeave: o,
-                onContextMenu: d ?? void 0,
+                onMouseLeave: d,
+                onContextMenu: _ ?? void 0,
                 onFocus: (e) => {
                     s?.(e);
                 },
-                onBlur: o,
+                onBlur: d,
                 disabled: T,
                 innerClassName: a()(g.NL, { [g.eq]: null != D }),
-                className: a()({ [g.vu]: S }, _),
-                wrapperClassName: f,
+                className: a()({ [g.vu]: S }, f),
+                wrapperClassName: p,
                 buttonRef: C,
                 grow: b,
                 "aria-label": R ?? x,
                 children: [
-                    (0, r.jsx)(I, {
-                        iconComponent: E,
-                        iconClassName: p,
-                        themeable: A,
-                        isActive: S,
-                        iconColor: m,
-                        buttonText: D,
+                    (0, r.jsx)(A, {
+                        size: o.E.md,
+                        className: a()(m, { [g.pd]: null == D, [g.IW]: I, [g.vu]: S }),
+                        color: E,
                     }),
                     D,
                 ],
@@ -92,15 +89,7 @@ function A(e) {
         }),
     });
 }
-function I(e) {
-    let { iconComponent: t, iconClassName: n, themeable: s, isActive: l, iconColor: u, buttonText: c } = e,
-        d = i.useMemo(
-            () => ({ size: o.E.md, className: a()(n, { [g.pd]: null == c, [g.IW]: s, [g.vu]: l }) }),
-            [n, s, l, c],
-        );
-    return "function" == typeof t ? (0, r.jsx)(t, { ...d, color: u }) : (0, r.jsx)("div", { ...d, children: t });
-}
-let T = {
+let I = {
         disconnect: g.Zf,
         join: g.fj,
         red: g.wv,
@@ -112,7 +101,7 @@ let T = {
         activeLight: g.H3,
         premiumGradient: g.ck,
     },
-    S = {
+    T = {
         disconnect: g.Zf,
         join: g.fj,
         red: g.Xr,
@@ -124,7 +113,7 @@ let T = {
         activeLight: g.H3,
         premiumGradient: g.ck,
     };
-function y(e) {
+function S(e) {
     let {
             ref: t,
             color: n,
@@ -133,7 +122,7 @@ function y(e) {
             className: l,
             iconClassName: u,
             onPopoutClick: c,
-            popoutOpen: I = !1,
+            popoutOpen: S = !1,
             popoutDisabled: y = !1,
             isTrayButton: v,
             applyStyles: N = !1,
@@ -156,13 +145,13 @@ function y(e) {
             grow: !1,
             onContextMenu: w,
             iconClassName: a()(u, g.LF, x && g.Ns),
-            className: a()(O || N ? l : null, o && g.vu, g.wh, S[b], x && g.Sy, P && g.hA),
+            className: a()(O || N ? l : null, o && g.vu, g.wh, T[b], x && g.Sy, P && g.hA),
         });
     return O
         ? k
         : (0, r.jsxs)("div", {
               ref: t,
-              className: a()(g.re, I && g.q6, l, M && [g.TD, T[b]]),
+              className: a()(g.re, S && g.q6, l, M && [g.TD, I[b]]),
               children: [
                   k,
                   null != c
@@ -170,8 +159,8 @@ function y(e) {
                             children: (0, r.jsx)(d.DUT, {
                                 "aria-label": E.intl.string(E.t.PdRCRg),
                                 onClick: y ? void 0 : c,
-                                className: a()(g.cd, v && g.Ml, S[R], I && [g.q6, g.vu], y && g.r9),
-                                children: (0, r.jsx)(f.A, { className: a()(g.gG, I && g.ho, y && g.r9) }),
+                                className: a()(g.cd, v && g.Ml, T[R], S && [g.q6, g.vu], y && g.r9),
+                                children: (0, r.jsx)(f.A, { className: a()(g.gG, S && g.ho, y && g.r9) }),
                             }),
                         })
                       : null,

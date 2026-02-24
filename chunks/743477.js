@@ -2,8 +2,8 @@
 n.d(t, { A: () => m });
 var r = n(627968),
     i = n(64700),
-    s = n(990078),
-    a = n(397927),
+    s = n(533781),
+    a = n(990078),
     o = n(793574),
     l = n(688810),
     u = n(979474),
@@ -14,16 +14,16 @@ var r = n(627968),
     p = n(111314);
 function h(e) {
     let { disabled: t, channel: n } = e,
-        { analyticsLocations: h } = (0, l.Ay)(o.A.GIFT_BUTTON),
-        m = (0, c.R1)(n),
-        E = i.useRef(null),
+        { analyticsLocations: i } = (0, l.Ay)(o.A.GIFT_BUTTON),
+        h = (0, c.R1)(n),
+        { Component: m, events: E, play: g } = (0, s.T)(),
         {
-            openGiftModal: g,
-            shouldShowWishlistModal: A,
-            shouldShowGiftSelectionModal: I,
+            openGiftModal: A,
+            shouldShowWishlistModal: I,
+            shouldShowGiftSelectionModal: T,
         } = (0, u.$)({
-            giftRecipient: m,
-            analyticsLocations: h,
+            giftRecipient: h,
+            analyticsLocations: i,
             analyticsObject: {
                 page: n.isPrivate() ? _.liQ.DM_CHANNEL : _.liQ.GUILD_CHANNEL,
                 section: _.JJy.CHANNEL_TEXT_AREA,
@@ -35,23 +35,19 @@ function h(e) {
         });
     return t
         ? null
-        : (0, r.jsx)(s.m, {
-              ariaHidden: A || I,
-              text: f.intl.string(A || I ? f.t.TW4JV0 : f.t.sWtWDX),
+        : (0, r.jsx)(a.m, {
+              ariaHidden: I || T,
+              text: f.intl.string(I || T ? f.t.TW4JV0 : f.t.sWtWDX),
               children: (0, r.jsx)(d.A, {
                   className: p.x6,
                   isActive: !1,
-                  "aria-label": f.intl.string(A || I ? f.t.TW4JV0 : f.t.Z1RnTk),
+                  "aria-label": f.intl.string(I || T ? f.t.TW4JV0 : f.t.Z1RnTk),
                   "aria-haspopup": "dialog",
                   onClick: () => {
-                      g();
+                      A(), g();
                   },
-                  ref: E,
-                  children: (0, r.jsx)(a.xBs, {
-                      eventTargetRef: E,
-                      dataBinding: { fill: "currentColor" },
-                      className: a.d5l.refresh_sm,
-                  }),
+                  ...E,
+                  children: (0, r.jsx)(m, { size: "refresh_sm", color: "currentColor" }),
               }),
           });
 }

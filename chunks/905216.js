@@ -1,29 +1,30 @@
 "use strict";
-n.d(t, { A: () => u });
-var r = n(627968),
-    i = n(64700),
-    s = n(397927),
-    a = n(956793),
-    o = n(709562),
-    l = n(985018);
-function u(e) {
-    let { centerButton: t = !1, onClick: n, ...u } = e,
-        c = t ? o.l : o.A,
-        d = () => {
-            n?.(), a.default.disconnect();
+n.d(t, { A: () => l });
+var r = n(627968);
+n(64700);
+var i = n(377802),
+    s = n(956793),
+    a = n(709562),
+    o = n(985018);
+function l(e) {
+    let { centerButton: t = !1, onClick: n, onMouseEnter: l, onMouseLeave: u, ...c } = e,
+        d = t ? a.l : a.A,
+        _ = () => {
+            n?.(), s.default.disconnect();
         },
-        _ = () => l.intl.string(l.t["6vrfgt"]),
-        f = i.useRef(null);
-    return (0, r.jsx)(c, {
-        ...u,
+        f = () => o.intl.string(o.t["6vrfgt"]),
+        { Component: p, events: h } = (0, i.O)();
+    return (0, r.jsx)(d, {
+        ...c,
         isTrayButton: !1,
-        onClick: d,
-        ref: f,
-        iconComponent: (0, r.jsx)(s.AYu, {
-            eventTargetRef: f,
-            className: s.d5l.refresh_sm,
-            dataBinding: { fill: "currentColor" },
-        }),
-        label: _(),
+        onClick: _,
+        iconComponent: p,
+        onMouseEnter: (e) => {
+            l?.(e), h.onMouseEnter();
+        },
+        onMouseLeave: (e) => {
+            u?.(e), h.onMouseLeave();
+        },
+        label: f(),
     });
 }
