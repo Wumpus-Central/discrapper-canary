@@ -22,7 +22,7 @@ e.exports = {
     Lw: "overlay__39b32",
     Fx: "itemIcon__39b32",
     Be: "itemIconHeart__39b32",
-    aP: "itemIconHeartWhite__39b32",
+    e_: "itemIconHeartGreyscale__39b32",
     rY: "itemIconShop__39b32",
     Do: "placeholderPulse__39b32",
     Yf: "placeholderCard__39b32",

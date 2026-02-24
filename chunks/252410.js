@@ -5,6 +5,6 @@ e.exports = {
     wP: "cardImage__20585",
     Fx: "itemIcon__20585",
     Be: "itemIconHeart__20585",
-    aP: "itemIconHeartWhite__20585",
+    e_: "itemIconHeartGreyscale__20585",
     rY: "itemIconShop__20585",
 };

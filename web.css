@@ -36044,10 +36044,7 @@ html:not(.chat-input) .inputInner_b1f01d {
     fill: var(--control-critical-primary-background-default)
 }
 
-.itemIconHeartWhite__39b32 {
-    fill: var(--white)
-}
-
+.itemIconHeartGreyscale__39b32,
 .itemIconShop__39b32 {
     fill: var(--icon-strong)
 }
@@ -45509,10 +45506,7 @@ screen and (max-width:485px) {
     fill: var(--control-critical-primary-background-default)
 }
 
-.itemIconHeartWhite__20585 {
-    fill: var(--white)
-}
-
+.itemIconHeartGreyscale__20585,
 .itemIconShop__20585 {
     fill: var(--icon-strong)
 }
