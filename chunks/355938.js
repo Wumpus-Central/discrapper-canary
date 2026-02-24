@@ -1,26 +1,27 @@
-n.d(t, { A: () => d });
-var a = n(627968);
+"use strict";
+n.d(t, { A: () => c });
+var l = n(627968);
 n(64700);
-var i = n(435371),
-    r = n(397927),
-    l = n(769015),
-    s = n(985018),
+var s = n(435371),
+    i = n(397927),
+    r = n(769015),
+    a = n(985018),
     o = n(999584);
-function c(e) {
+function u(e) {
     let { application: t, children: n } = e;
-    return (0, a.jsx)(i.un, {
-        asset: (0, a.jsx)(l.A, { size: l.M.MEDIUM_LARGE, game: t }),
-        body: s.intl.format(s.t.J3s8JP, { applicationName: t.name }),
+    return (0, l.jsx)(s.un, {
+        asset: (0, l.jsx)(r.A, { size: r.M.MEDIUM_LARGE, game: t }),
+        body: a.intl.format(a.t.J3s8JP, { applicationName: t.name }),
         position: "top",
         asContainer: !0,
-        "aria-label": s.intl.string(s.t["5nMcv1"]),
-        children: (0, a.jsx)(r.DUT, { tag: "span", children: n }),
+        "aria-label": a.intl.string(a.t["5nMcv1"]),
+        children: (0, l.jsx)(i.DUT, { tag: "span", children: n }),
     });
 }
-function d(e) {
-    let { application: t, compact: n, children: i } = e;
-    return (0, a.jsxs)(c, {
+function c(e) {
+    let { application: t, compact: n, children: s } = e;
+    return (0, l.jsxs)(u, {
         application: t,
-        children: [n ? null : (0, a.jsx)(r._xR, { className: o.Gt, size: "custom", width: 14, height: 14 }), i],
+        children: [n ? null : (0, l.jsx)(i._xR, { className: o.Gt, size: "custom", width: 14, height: 14 }), s],
     });
 }
