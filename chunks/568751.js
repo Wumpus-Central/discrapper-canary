@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => b });
+n.d(t, { A: () => R });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -20,89 +20,90 @@ var r = n(627968),
     I = n(403362),
     T = n(533406),
     S = n(788868),
-    y = n(778712),
-    v = n(985018),
-    N = n(526295);
-let C = 3;
-function b(e) {
+    y = n(699976),
+    v = n(778712),
+    N = n(985018),
+    C = n(526295);
+let b = 3;
+function R(e) {
     let {
             sku: t,
             source: n,
             hideIcon: s,
             guildId: o,
-            channelId: b,
-            userIdsForGifting: R,
-            userIdsForRecommendation: O,
-            style: D,
-            contextContainerClassName: L,
+            channelId: R,
+            userIdsForGifting: O,
+            userIdsForRecommendation: D,
+            style: L,
+            contextContainerClassName: w,
         } = e,
-        [w, x] = i.useState(l().uniq(R)),
-        [M, P] = i.useState(!1),
-        [k, U] = i.useState(l().uniq(O)),
-        { analyticsLocations: G } = (0, h.Ay)(
+        [x, M] = i.useState(l().uniq(O)),
+        [P, k] = i.useState(!1),
+        [U, G] = i.useState(l().uniq(D)),
+        { analyticsLocations: F } = (0, h.Ay)(
             p.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD,
             p.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON,
         );
     i.useEffect(() => {
-        U((e) => {
-            let t = l().uniq(O);
+        G((e) => {
+            let t = l().uniq(D);
             return (0, d.v)(e, t) ? e : t;
         });
-    }, [O]),
+    }, [D]),
         i.useEffect(() => {
-            x((e) => {
-                let t = l().uniq(R);
+            M((e) => {
+                let t = l().uniq(O);
                 return (0, d.v)(e, t) ? e : t;
             });
-        }, [R]);
-    let F = (0, c.bG)([A.default], () => (1 === w.length ? A.default.getUser(w[0]) : void 0), [w]),
-        V = (0, c.yK)([A.default], () => k.map((e) => A.default.getUser(e)).filter(I.Vq), [k]),
-        B = i.useCallback(() => {
+        }, [O]);
+    let V = (0, c.bG)([A.default], () => (1 === x.length ? A.default.getUser(x[0]) : void 0), [x]),
+        B = (0, c.yK)([A.default], () => U.map((e) => A.default.getUser(e)).filter(I.Vq), [U]),
+        H = i.useCallback(() => {
             (0, T.a)(
                 t,
                 {
                     isGift: !0,
-                    giftRecipient: F,
-                    additionalUserIds: w.length > 1 ? w : void 0,
+                    giftRecipient: V,
+                    additionalUserIds: x.length > 1 ? x : void 0,
                     giftingOrigin: S.vQ.SHOP_PAGE,
                 },
-                { analyticsLocations: G },
+                { analyticsLocations: F },
             );
-        }, [t, F, w, G]);
+        }, [t, V, x, F]);
     return (0, r.jsxs)("div", {
-        className: a()(N.kL, D),
+        className: a()(C.kL, L),
         children: [
-            (0, r.jsx)(E.Ay, {
+            (0, r.jsx)(E.A, {
                 sku: t,
-                user: F,
-                size: E.yU.SMALL,
-                onClick: B,
-                cardStyle: N.Ui,
-                onHoverOrFocusChange: P,
-                children: (0, r.jsx)(g.l, { sku: t, onClick: B, isHoveringOrFocusing: M }),
+                user: V,
+                spec: y.Z.SIZE_90,
+                onClick: H,
+                cardStyle: C.Ui,
+                onHoverOrFocusChange: k,
+                children: (0, r.jsx)(g.l, { sku: t, onClick: H, isHoveringOrFocusing: P }),
             }),
             !s &&
                 (0, r.jsx)(f.m_, {
-                    text: n === m.uS.POPULAR ? v.intl.string(v.t["DP0o+u"]) : v.intl.string(v.t["OnWY3/"]),
+                    text: n === m.uS.POPULAR ? N.intl.string(N.t["DP0o+u"]) : N.intl.string(N.t["OnWY3/"]),
                     position: "top",
                     children: (0, r.jsx)("div", {
-                        className: a()(N.RL, L),
+                        className: a()(C.RL, w),
                         children:
-                            n === m.uS.POPULAR || 0 === V.length
+                            n === m.uS.POPULAR || 0 === B.length
                                 ? (0, r.jsx)("div", {
-                                      className: N.fd,
+                                      className: C.fd,
                                       children: (0, r.jsx)(u.Y3C, {
                                           size: "sm",
                                           color: "currentColor",
-                                          className: N.I$,
+                                          className: C.I$,
                                       }),
                                   })
                                 : (0, r.jsx)(_.I, {
-                                      users: V,
+                                      users: B,
                                       guildId: o ?? void 0,
-                                      channelId: b ?? void 0,
-                                      maxUsers: C,
-                                      size: y._3.SIZE_20,
+                                      channelId: R ?? void 0,
+                                      maxUsers: b,
+                                      size: v._3.SIZE_20,
                                   }),
                     }),
                 }),
