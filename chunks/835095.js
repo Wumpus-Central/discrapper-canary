@@ -92,6 +92,7 @@ class o extends i.A {
         if (this.countryListMode === s.qn.ALLOWLIST) return !this.allowedCountries.includes(e);
         switch (this.promotionType) {
             case s.pt.THIRD_PARTY_INBOUND:
+            case s.pt.THIRD_PARTY_DIRECT_FULFILLMENT:
                 return this.inboundRestrictedCountries.includes(e);
             case s.pt.THIRD_PARTY_OUTBOUND:
             case s.pt.THIRD_PARTY_OUTBOUND_RECURRING:
