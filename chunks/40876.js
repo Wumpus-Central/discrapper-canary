@@ -829,7 +829,10 @@ let i = {
         neverLoadBeforeConnectionOpen: !0,
         hasStoreChangeListeners: !0,
     },
-    WebAuthnSignalManager: { actions: ["AUTHENTICATOR_DELETE"], inlineRequire: () => n(386355).A },
+    WebAuthnSignalManager: {
+        actions: ["AUTHENTICATOR_DELETE", "MFA_WEBAUTHN_CREDENTIALS_LOADED"],
+        inlineRequire: () => n(386355).A,
+    },
     HavenManager: { actions: ["HAVEN_DISCONNECT"], inlineRequire: () => n(63446).A },
     RestrictedHoursManager: { inlineRequire: () => n(425116).A, hasStoreChangeListeners: !0 },
     SentryExperimentFeatureFlagManager: {
