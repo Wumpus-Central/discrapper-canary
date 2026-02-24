@@ -18,21 +18,21 @@ var i = n(627968),
     I = n(219271),
     f = n(21119),
     C = n(287809),
-    N = n(943577),
-    T = n(954571),
+    T = n(943577),
+    N = n(954571),
     S = n(927813),
     x = n(279877),
     v = n(112273),
     y = n(666290),
     b = n(928636),
-    L = n(502696),
-    O = n(282447),
+    O = n(502696),
+    L = n(282447),
     R = n(652215),
     P = n(654487),
     j = n(985018),
     D = n(23729);
-let w = 15 * S.A.Millis.MINUTE,
-    M = (0, O.A)(function (e) {
+let M = 15 * S.A.Millis.MINUTE,
+    w = (0, L.A)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
             s = r.useRef(null),
             d = (0, i.jsx)(y.A, { party: t, onUserContextMenu: n }),
@@ -43,10 +43,10 @@ let w = 15 * S.A.Millis.MINUTE,
             E = _.length,
             I = m.length > 0,
             f = r.useCallback(() => {
-                let e = _.filter((e) => e.game?.name != null && (0, T.isGameApplicationType)(e.game?.type)).map(
+                let e = _.filter((e) => e.game?.name != null && (0, N.isGameApplicationType)(e.game?.type)).map(
                     (e) => e.game.name,
                 );
-                T.default.track(R.HAw.NOW_PLAYING_CARD_HOVERED, {
+                N.default.track(R.HAw.NOW_PLAYING_CARD_HOVERED, {
                     num_users: p,
                     num_streams: g,
                     num_activities: E,
@@ -54,14 +54,14 @@ let w = 15 * S.A.Millis.MINUTE,
                     games_detected: e,
                 });
             }, [p, g, E, I, _]),
-            C = r.useMemo(() => o()(f, w), [f]);
+            C = r.useMemo(() => o()(f, M), [f]);
         return null != d || null != u
             ? (0, i.jsx)(c.YNO, {
                   targetElementRef: s,
                   position: "left",
                   renderPopout: (e) => {
                       let { closePopout: n } = e;
-                      return (0, i.jsx)(L.A, { party: t, close: n });
+                      return (0, i.jsx)(O.A, { party: t, close: n });
                   },
                   spacing: 8,
                   children: (e, t) => {
@@ -87,9 +87,9 @@ function G() {
             needsRefresh: n,
             fetching: l,
             currentUser: a,
-        } = (0, d.cf)([N.A, f.A, C.default], () => ({
-            nowPlayingCards: N.A.nowPlayingCards,
-            loaded: N.A.loaded,
+        } = (0, d.cf)([T.A, f.A, C.default], () => ({
+            nowPlayingCards: T.A.nowPlayingCards,
+            loaded: T.A.loaded,
             needsRefresh: f.A.shouldFetch(),
             fetching: f.A.isFetching(),
             currentUser: C.default.getCurrentUser(),
@@ -109,7 +109,7 @@ function G() {
             n && !l && U();
         }, [n, l]);
     let { use_api_call: I } = m.M.getConfig({ location: "NowPlaying" }),
-        { questsByPartyId: T, questIdsByPartyId: S } = r.useMemo(() => {
+        { questsByPartyId: N, questIdsByPartyId: S } = r.useMemo(() => {
             let t = new Map(),
                 n = new Map(),
                 i = new Set(),
@@ -123,28 +123,36 @@ function G() {
                 });
             return { questsByPartyId: t, questIdsByPartyId: n };
         }, [e, s, o]),
-        v = r.useMemo(() => new Set(Array.from(S.values())), [S]);
-    r.useEffect(() => {
-        I && v.size > 0 && (0, A.yO)(Array.from(v), _.uF.ACTIVITY_PANEL, "NowPlaying");
-    }, [v, I]);
-    let y = (0, d.bG)([h.A], () => h.A.earnedQuestForPlacement.get(_.uF.ACTIVITY_PANEL), []),
+        v = (0, d.bG)([h.A], () => h.A.earnedQuestForPlacement.get(_.uF.ACTIVITY_PANEL), []),
+        y = r.useRef([]),
         b = r.useMemo(() => {
-            if (!I) return T;
-            if (null == y) return new Map();
+            let e = Array.from(S.values()),
+                t = y.current;
+            return t.length === e.length && e.every((e, n) => e === t[n]) ? t : ((y.current = e), e);
+        }, [S]);
+    r.useEffect(() => {
+        if (!I || 0 === b.length) return;
+        let e = v?.quests;
+        (null != e && e.size === b.length && b.every((t) => e.has(t))) ||
+            (0, A.yO)(b, _.uF.ACTIVITY_PANEL, "NowPlaying");
+    }, [b, I, v]);
+    let O = r.useMemo(() => {
+            if (!I) return N;
+            if (null == v) return new Map();
             let e = new Map();
             for (let [t, n] of S.entries()) {
-                let i = y.quests.get(n);
+                let i = v.quests.get(n);
                 null != i && e.set(t, i);
             }
             return e;
-        }, [I, y, T, S]),
+        }, [I, v, N, S]),
         L = null;
     return t
         ? (L =
               e.length > 0
                   ? e.map((e) => {
                         let { party: t } = e;
-                        return (0, i.jsx)(M, { party: t, quest: b.get(t.id) }, t.id);
+                        return (0, i.jsx)(w, { party: t, quest: O.get(t.id) }, t.id);
                     })
                   : (0, i.jsxs)("div", {
                         className: D.aM,

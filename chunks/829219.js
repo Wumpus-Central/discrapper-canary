@@ -4,7 +4,7 @@ n.d(t, {
     Fr: () => et,
     Gn: () => Q,
     Gt: () => $,
-    HA: () => X,
+    HA: () => Z,
     N1: () => U,
     Oq: () => H,
     Ov: () => k,
@@ -20,7 +20,7 @@ n.d(t, {
     g5: () => Y,
     jh: () => j,
     lk: () => W,
-    lx: () => Z,
+    lx: () => X,
     qY: () => ei,
     r8: () => ee,
     uI: () => er,
@@ -313,10 +313,10 @@ async function $(e) {
 function q(e) {
     s.h.dispatch({ type: "QUESTS_DELIVERY_OVERRIDE", questId: e });
 }
-function Z(e, t) {
+function X(e, t) {
     s.h.dispatch({ type: "QUESTS_SELECT_TASK_PLATFORM", questId: e, platform: t });
 }
-async function X() {
+async function Z() {
     if (!S.A.isFetchingClaimedQuests) {
         s.h.dispatch({ type: "QUESTS_FETCH_CLAIMED_QUESTS_BEGIN" });
         try {
@@ -422,6 +422,7 @@ function et(e, t) {
     });
 }
 async function en(e, t, n) {
+    if (S.A.isFetchingEarnedQuestToDeliverByPlacement(t)) return;
     let r = Date.now();
     A.A.recordEarnedRequestAttempt(t, n),
         s.h.dispatch({ type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_BEGIN", content: t });
