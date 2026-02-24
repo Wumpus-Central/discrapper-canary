@@ -76,11 +76,11 @@ let y = (e) => {
             O("open"), I("open"), (0, l.emitCaptchaDistributionMetric)(_), A?.();
         }, [I, A, O, _]),
         N = r.useCallback(() => {
-            O("close"), E?.(), L();
-        }, [E, O, L]),
+            O("close"), I("cancel"), E?.(), L();
+        }, [E, O, I, L]),
         V = r.useCallback(() => {
-            O("chal-expire"), b?.();
-        }, [b, O]);
+            O("chal-expire"), I("chal-expire"), b?.();
+        }, [b, O, I]);
     return ((null == n || "" === n) && (n = f._Ak), t === p.MS.RECAPTCHA)
         ? (0, a.jsx)(c.A, { ...g, onLoad: P, onRender: D, onVerify: T, onError: j, sitekey: n })
         : t === p.MS.RECAPTCHA_ENTERPRISE
