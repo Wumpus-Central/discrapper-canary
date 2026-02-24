@@ -44,20 +44,23 @@ function E() {
     });
 }
 function g(e, t, n) {
-    let { users: r, private_channels: s, merged_members: l, guilds: u, ...c } = e;
+    let { users: r, relationships: s, private_channels: l, merged_members: u, guilds: c, ..._ } = e;
     null != o.A.database() &&
         !1 === n.databaseOk &&
-        d.A.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok"),
-        (h = a().keyBy(r, (e) => e.id)),
-        s?.forEach((e) => {
-            let t = e.recipient_ids;
-            null != t &&
-                (e.recipients = t.map((e) => (i()(null != h[e], "Missing user in compressed ready payload"), h[e]))),
-                delete e.recipient_ids;
-        });
-    let _ = u?.map((e, t) => (!0 === e.unavailable ? e : ((e.members = T(h, l?.[t])), S(e)))) ?? [],
-        f = A(t, u, (e) => S(e));
-    return null != f && _.push(f), { ...c, users: r, presences: [], guilds: _, private_channels: s ?? [] };
+        d.A.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok");
+    let f = T((h = a().keyBy(r, (e) => e.id)), s);
+    l?.forEach((e) => {
+        let t = e.recipient_ids;
+        null != t &&
+            (e.recipients = t.map((e) => (i()(null != h[e], "Missing user in compressed ready payload"), h[e]))),
+            delete e.recipient_ids;
+    });
+    let p = c?.map((e, t) => (!0 === e.unavailable ? e : ((e.members = T(h, u?.[t])), S(e)))) ?? [],
+        m = A(t, c, (e) => S(e));
+    return (
+        null != m && p.push(m),
+        { ..._, users: r, presences: [], relationships: f, guilds: p, private_channels: l ?? [] }
+    );
 }
 function A(e, t, n) {
     return null == p || p.identifyTime !== e || (null != t && t.some((e) => e.id === p.guild.id)) ? null : n(p.guild);
