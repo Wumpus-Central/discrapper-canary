@@ -1,26 +1,27 @@
-n.d(t, { V: () => u, a: () => d });
+n.d(t, { V: () => _, a: () => u });
 var i = n(64700),
     s = n(964486),
-    r = n(839214),
-    a = n(535762),
-    l = n(152056),
-    o = n(360619),
-    c = n(531525);
-let d = (0, r.D)(() => ({ searchResults: c.R, hasSearchResults: !1 }));
-function u() {
-    let e = l.A.useField("query"),
-        t = (0, o.PH)(),
-        n = i.useRef(new a.A((0, o.NI)(t))),
-        r = i.useCallback(async (e) => {
+    a = n(839214),
+    l = n(324593),
+    r = n(535762),
+    o = n(152056),
+    c = n(360619),
+    d = n(531525);
+let u = (0, a.D)(() => ({ searchResults: d.R, hasSearchResults: !1 }));
+function _() {
+    let e = o.A.useField("query"),
+        t = (0, c.PH)(),
+        n = i.useRef(new r.A((0, c.NI)(t))),
+        a = i.useCallback(async (e) => {
             let t = await n.current.search(e.trim());
-            d.setState({ searchResults: t, hasSearchResults: !0 });
+            u.setState({ searchResults: t, hasSearchResults: !0 });
         }, []);
     i.useEffect(() => {
-        "" === e || e.length < 2 ? d.resetState() : r(e);
-    }, [e, r]),
+        "" === e || e.length < 2 ? u.resetState() : (a(e), l.A.maybeTrackQueryEntered());
+    }, [e, a]),
         (0, s.Ay)(() => () => {
-            d.resetState(), l.A.setState({ query: "" });
+            u.resetState(), o.A.setState({ query: "" }), l.A.terminate();
         });
-    let c = d.useField("searchResults");
-    return { hasSearchResults: d.useField("hasSearchResults"), searchResults: c };
+    let d = u.useField("searchResults");
+    return { hasSearchResults: u.useField("hasSearchResults"), searchResults: d };
 }
