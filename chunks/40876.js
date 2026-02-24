@@ -704,17 +704,6 @@ let i = {
         inlineRequire: () => n(158160).Ay,
         neverLoadBeforeConnectionOpen: !0,
     },
-    DispatcherSchedulerManager: {
-        actions: [
-            "POST_CONNECTION_OPEN",
-            "EXPERIMENTS_FETCH_SUCCESS",
-            "CACHE_LOADED",
-            "LOGIN_SUCCESS",
-            "EXPERIMENT_OVERRIDE_BUCKET",
-        ],
-        inlineRequire: () => n(399486).A,
-        neverLoadBeforeConnectionOpen: !0,
-    },
     GlobalDiscoveryServersFeaturedSearchManager: {
         actions: ["POST_CONNECTION_OPEN"],
         inlineRequire: () => n(670412).A,
