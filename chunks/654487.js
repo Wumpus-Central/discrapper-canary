@@ -86,6 +86,7 @@ var r = n(735438),
             (e.QUEST_ACTIVITY_BOTTOM_SHEET = "quest_activity_bottom_sheet"),
             (e.QUEST_PRIMARY_CTA = "quest_primary_cta"),
             (e.QUEST_LEARN_MORE_CTA = "quest_learn_more_cta"),
+            (e.QUEST_ACTIVITY_HEADER = "quest_activity_header"),
             (e.QUEST_ACTIVITY_UNENROLLED_MODAL = "quest_activity_unenrolled_modal"),
             e
         );
