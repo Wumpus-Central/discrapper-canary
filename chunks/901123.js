@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { BV: () => _, Cr: () => c, ME: () => s, YY: () => o, c$: () => u, gN: () => l });
+n.d(t, { BV: () => _, Cr: () => c, ME: () => a, YY: () => o, c$: () => u, gN: () => l });
 var r = n(323125);
 n(436317);
 var i = n(435220),
-    a = n(162157);
-let s = "@me",
+    s = n(162157);
+let a = "@me",
     o = "@favorites",
     l = "@inbox",
     u = "@guilds-empty-nux",
-    c = [s, o, u, l],
+    c = [a, o, u, l],
     d = Object.freeze({
         INDEX: "/",
         APP: "/app",
@@ -35,12 +35,11 @@ let s = "@me",
         BILLING_PROMOTION_REDEMPTION: (e) => `/billing/promotions/${e}`,
         BILLING_PROMOTION_REDEMPTION_GENERIC: "/billing/promotions",
         BILLING_PROMOTION_DIRECT_FULFILLMENT_REDEMPTION: (e, t) => `/billing/partner-promotions/${e}/${t}`,
-        NOTIFICATIONS: "/notifications",
         FRIENDS: "/channels/@me",
         ME: "/channels/@me",
         MESSAGE_REQUESTS: "/message-requests",
         CHANNEL: (e, t, n) => {
-            let r = null == t ? `/channels/${e || s}` : `/channels/${e || s}/${t}`;
+            let r = null == t ? `/channels/${e || a}` : `/channels/${e || a}/${t}`;
             return null == n ? r : `${r}/${n}`;
         },
         CHANNEL_THREAD_VIEW: (e, t, n, r) => {
@@ -64,7 +63,7 @@ let s = "@me",
         GUILD_TEMPLATE_LOGIN: (e) => `/template/${e}/login`,
         GIFT_CODE: (e) => `/gifts/${e}`,
         GIFT_CODE_LOGIN: (e) => `/gifts/${e}/login`,
-        WELCOME: (e, t) => (null != t ? `/welcome/${e ?? s}/${t}` : `/welcome/${e ?? s}`),
+        WELCOME: (e, t) => (null != t ? `/welcome/${e ?? a}/${t}` : `/welcome/${e ?? a}`),
         VERIFY: "/verify",
         VERIFY_REQUEST: "/verify-request",
         RESET: "/reset",
@@ -125,8 +124,8 @@ let s = "@me",
         BILLING_MANAGE_SUBSCRIPTION: "/billing/premium/manage",
         BILLING_MANAGE_SUBSCRIPTION_WITH_DEEP_LINK: (e, t) =>
             `/billing/premium/manage?deep_link_type=${e}${null != t ? `&load_id=${t}` : ""}`,
-        BILLING_STANDALONE_CHECKOUT_PAGE: (e, t, n, r, i, a) =>
-            `/billing/premium/subscribe?plan_id=${e}&gift=${t}&load_id=${n}${null != r ? `&payment_method_type=${r}` : ""}${null != i ? `&deep_link_type=${i}` : ""}${null != a ? `&use_preset_offer=${a}` : ""}`,
+        BILLING_STANDALONE_CHECKOUT_PAGE: (e, t, n, r, i, s) =>
+            `/billing/premium/subscribe?plan_id=${e}&gift=${t}&load_id=${n}${null != r ? `&payment_method_type=${r}` : ""}${null != i ? `&deep_link_type=${i}` : ""}${null != s ? `&use_preset_offer=${s}` : ""}`,
         BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE: (e, t, n) =>
             `/billing/guild-subscriptions/purchase?guild_id=${e}${null != t ? `&deep_link_type=${t}` : ""}${null != n ? `&load_id=${n}` : ""}`,
         GUILD_BOOSTING_MARKETING: (e) => `/guilds/${e}/premium-guild-subscriptions`,
@@ -147,7 +146,7 @@ let s = "@me",
         APPLICATION_DIRECTORY: "/application-directory",
         APPLICATION_DIRECTORY_PROFILE: (e) => `/application-directory/${e}`,
         APPLICATION_DIRECTORY_PROFILE_SECTION: (e, t) => `/application-directory/${e}/${t}`,
-        APPLICATION_DIRECTORY_PROFILE_STORE_SKU: (e, t) => `/application-directory/${e}/${a.h.STORE}/${t}`,
+        APPLICATION_DIRECTORY_PROFILE_STORE_SKU: (e, t) => `/application-directory/${e}/${s.h.STORE}/${t}`,
         APPLICATION_DIRECTORY_SEARCH: "/application-directory/search",
         FAMILY_CENTER: "/family-center",
         SERVER_SHOP: (e) => `/channels/${e}/shop`,
