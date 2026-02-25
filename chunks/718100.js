@@ -2,8 +2,8 @@ r.d(t, { A: () => j });
 var s = r(627968),
     i = r(64700),
     n = r(503698),
-    a = r.n(n),
-    l = r(397927),
+    l = r.n(n),
+    a = r(397927),
     o = r(898461),
     c = r(483968),
     d = r(713517),
@@ -12,19 +12,19 @@ var s = r(627968),
     x = r(196026),
     A = r(278539),
     h = r(985018),
-    g = r(606586);
+    g = r(282912);
 let p = () => 80,
     _ = (e) => {
         let { children: t, className: r, onSelect: i, isSelected: n = !1, ...o } = e;
-        return (0, s.jsx)(l.DUT, { className: a()(g.eA, n ? g.wH : void 0, r), ...o, onClick: i, children: t });
+        return (0, s.jsx)(a.DUT, { className: l()(g.eA, n ? g.wH : void 0, r), ...o, onClick: i, children: t });
     },
     v = (e) => {
         let {
                 user: t,
                 avatarDecoration: r,
                 innerRef: n,
-                section: a,
-                canUsePremiumCollectibles: l,
+                section: l,
+                canUsePremiumCollectibles: a,
                 isSelected: o = !1,
                 ...u
             } = e,
@@ -41,12 +41,12 @@ let p = () => 80,
             isSelected: o,
             ...u,
             children: [
-                (0, s.jsx)("img", { className: g.Pw, src: p, alt: r.label }),
+                null != p && (0, s.jsx)("img", { className: g.Pw, src: p, alt: r.label }),
                 (0, s.jsx)(c.A, {
                     skuId: r.skuId,
-                    canUsePremiumCollectibles: l,
-                    isPurchaseSection: a === x.wn.PURCHASE,
-                    isPremiumSection: a === x.wn.PREMIUM_PURCHASE,
+                    canUsePremiumCollectibles: a,
+                    isPurchaseSection: l === x.wn.PURCHASE,
+                    isPremiumSection: l === x.wn.PREMIUM_PURCHASE,
                 }),
             ],
         });
@@ -57,12 +57,12 @@ let p = () => 80,
                 guild: r,
                 pendingAvatarDecoration: i,
                 selectedAvatarDecorationRef: n,
-                onSelect: a,
+                onSelect: l,
                 onOpenShop: c,
             } = e,
             d = (0, x.Ay)(),
             A = u.Ay.canUseCollectibles(t);
-        return (0, s.jsx)(l.a0_, {
+        return (0, s.jsx)(a.a0_, {
             fade: !0,
             className: g.p_,
             columns: 3,
@@ -84,10 +84,10 @@ let p = () => 80,
                         {
                             style: { ...p },
                             isSelected: null === i,
-                            onSelect: () => a(null),
+                            onSelect: () => l(null),
                             children: [
-                                (0, s.jsx)(l.KTN, { size: "md", color: "currentColor", className: g.Kk }),
-                                (0, s.jsx)(l.Text, {
+                                (0, s.jsx)(a.KTN, { size: "md", color: "currentColor", className: g.Kk }),
+                                (0, s.jsx)(a.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-strong",
                                     children: (0, m.uZ)(t, r) ? h.intl.string(h.t.CHf9iJ) : h.intl.string(h.t.PoWNfe),
@@ -103,14 +103,14 @@ let p = () => 80,
                             style: p,
                             onSelect: c,
                             children: [
-                                (0, s.jsx)(l.U1X, {
+                                (0, s.jsx)(a.U1X, {
                                     size: "custom",
                                     width: 23,
                                     height: 23,
                                     color: "currentColor",
                                     className: g.sV,
                                 }),
-                                (0, s.jsx)(l.Text, {
+                                (0, s.jsx)(a.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-strong",
                                     children: h.intl.string(h.t.pWG4ze),
@@ -131,7 +131,7 @@ let p = () => 80,
                             innerRef: e ? n : void 0,
                             canUsePremiumCollectibles: A,
                             isSelected: e,
-                            onSelect: () => a(f),
+                            onSelect: () => l(f),
                         },
                         j,
                     );
@@ -143,7 +143,7 @@ let p = () => 80,
                 return (0, s.jsx)("div", {
                     className: g.so,
                     style: { ...t, position: "absolute" },
-                    children: (0, s.jsx)(l.Heading, { variant: "heading-md/semibold", children: r }),
+                    children: (0, s.jsx)(a.Heading, { variant: "heading-md/semibold", children: r }),
                 });
             },
             getSectionHeight: (e) => d[e].height,

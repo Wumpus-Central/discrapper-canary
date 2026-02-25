@@ -1,8 +1,8 @@
 n.d(t, { A: () => _ });
 var i = n(64700),
     r = n(379197),
-    a = n(488430),
-    l = n(311907),
+    l = n(488430),
+    a = n(311907),
     s = n(554146),
     o = n(397927),
     d = n(379848),
@@ -11,20 +11,21 @@ var i = n(64700),
     A = n(158216),
     h = n(49999);
 let _ = () => {
-    let e = (0, l.bG)([c.A], () => c.A.getMarketingBySurface(r.R.DESKTOP_SHOP_BUTTON)),
+    let e = (0, a.bG)([c.A], () => c.A.getMarketingBySurface(r.R.DESKTOP_SHOP_BUTTON)),
         t = !(0, o.ueM)(),
         [n, _] = (0, d.RF)(t ? s.M.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, e?.version ?? 0, void 0, !0),
         m = (0, u.bv)(e),
         p =
             null != n
                 ? ((e, t) => {
-                      if (t?.type === a.G.COACHTIP || e.hasPreviewAssets) {
+                      if (t?.type === l.G.COACHTIP || e.hasPreviewAssets) {
                           let n =
                               null != t
                                   ? {
                                         title: () => t.title,
                                         body: () => t.body,
                                         assetIds: t.decorations,
+                                        avatarDecorationSkuIds: t.avatarDecorationSkuIds,
                                         entrypointBackgroundStyle: t.refTargetBackground?.style,
                                     }
                                   : { title: () => "", assetIds: [] };
@@ -42,7 +43,7 @@ let _ = () => {
                               },
                           };
                       }
-                      if (t?.type === a.G.COACHMARK) {
+                      if (t?.type === l.G.COACHMARK) {
                           let e = t.refTargetBackground;
                           return {
                               type: A.FF.COACHMARK,

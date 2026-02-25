@@ -6,6 +6,7 @@ class i {
     body;
     avatar;
     decorations;
+    avatarDecorationSkuIds;
     dismissibleContent;
     version;
     refTargetBackground;
@@ -17,6 +18,7 @@ class i {
             (this.body = e.body),
             (this.avatar = e.avatar),
             (this.decorations = e.decorations),
+            (this.avatarDecorationSkuIds = e.avatarDecorationSkuIds),
             (this.dismissibleContent = e.dismissibleContent),
             (this.version = e.version),
             (this.refTargetBackground = e.refTargetBackground),
@@ -27,6 +29,7 @@ class i {
         return new i({
             ...e,
             dismissibleContent: e.dismissible_content,
+            avatarDecorationSkuIds: e.avatar_decoration_sku_ids,
             refTargetBackground: e.ref_target_background,
             badgeIcon: e.badge_icon,
             badgeText: e.badge_text,

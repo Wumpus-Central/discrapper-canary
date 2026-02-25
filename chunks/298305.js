@@ -4,11 +4,11 @@ i(64700);
 var n = i(311907),
     s = i(397927),
     a = i(775602),
-    l = i(920064),
+    l = i(580314),
     o = i(674658),
     c = i(898461),
     d = i(287809),
-    m = i(504721),
+    m = i(633023),
     u = i(513653),
     x = i(180391);
 function C(e) {
@@ -19,7 +19,7 @@ function C(e) {
     if (p || null == g) return (0, r.jsx)(s.y$y, { type: s.tVU.PULSING_ELLIPSIS });
     let T = g.items[0];
     if (null == T || !(0, c.T)(T)) return null;
-    let h = (0, l.A)(T.asset, i, !C);
+    let h = (0, l.A)({ legacyAssetId: T.asset, skuId: T.skuId, size: i, canAnimate: !C });
     return (0, r.jsx)(s.JsQ, {
         "aria-label": x?.username,
         size: i,
