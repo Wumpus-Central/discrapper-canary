@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { GS: () => I, J6: () => E, cL: () => T });
+n.d(t, { J6: () => g, cL: () => S, z: () => E });
 var r = n(627968),
     i = n(64700),
     s = n(397927),
@@ -12,7 +12,7 @@ var r = n(627968),
     _ = n(106799),
     f = n(652215),
     p = n(985018),
-    h = n(725682);
+    h = n(929655);
 let m = (e) => {
         let { orbAmount: t } = e;
         return (0, r.jsxs)(s.Text, {
@@ -21,7 +21,8 @@ let m = (e) => {
             children: [(0, r.jsx)(_.A, { shouldUseThemeColor: !0, customSize: 14 }), null === t ? "--" : t],
         });
     },
-    E = (e) => {
+    E = () => p.intl.string(p.t.wmcDyu),
+    g = (e) => {
         let { orbBalance: t, orbPriceAmount: n } = e,
             { disabled: r, tooltipText: s } = (0, i.useMemo)(
                 () =>
@@ -32,9 +33,9 @@ let m = (e) => {
                           : { disabled: !1, tooltipText: null },
                 [n, t],
             );
-        return { disabled: r, tooltipText: s, text: p.intl.string(p.t.wmcDyu) };
+        return { disabled: r, tooltipText: s, text: E() };
     },
-    g = (e) => {
+    A = (e) => {
         let { orbPriceAmount: t, skuId: n } = e,
             { skusById: i } = (0, l.A)({
                 applicationId: (0, d.p)(n),
@@ -48,7 +49,7 @@ let m = (e) => {
             ? (0, r.jsx)(c.Yx, { children: (0, r.jsx)(s.y$y, { type: s.y$y.Type.PULSING_ELLIPSIS, className: h.nJ }) })
             : (0, r.jsx)(u.Uw, { sku: a, value: (0, r.jsx)(m, { orbAmount: t }) });
     },
-    A = (e) => {
+    I = (e) => {
         let { orbBalance: t } = e;
         return (0, r.jsx)(s.D0$, {
             label: p.intl.string(p.t["mmDvV+"]),
@@ -69,7 +70,7 @@ let m = (e) => {
             }),
         });
     },
-    I = (e) => {
+    T = (e) => {
         let { skuId: t } = e;
         return (0, r.jsx)(o.A, {
             forceShow: !0,
@@ -77,16 +78,16 @@ let m = (e) => {
             finePrint: (0, r.jsx)(a.A, { isOrbCheckout: !0, skuId: t, purchaseType: f.VVm.ONE_TIME }),
         });
     },
-    T = (e) => {
+    S = (e) => {
         let { skuId: t, orbPriceAmount: n, orbBalance: i, renderWithoutContainer: a } = e,
             o = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(s.D0$, {
                         label: p.intl.string(p.t.sail9P),
-                        children: (0, r.jsx)(g, { skuId: t, orbPriceAmount: n }),
+                        children: (0, r.jsx)(A, { skuId: t, orbPriceAmount: n }),
                     }),
-                    (0, r.jsx)(A, { orbBalance: i }),
-                    (0, r.jsx)(I, { skuId: t }),
+                    (0, r.jsx)(I, { orbBalance: i }),
+                    (0, r.jsx)(T, { skuId: t }),
                 ],
             });
         return a ? o : (0, r.jsx)("div", { className: h.Du, children: o });
