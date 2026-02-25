@@ -55,6 +55,7 @@ function E(e) {
                                         centered: !1,
                                         onSlideReady: (e) => A(e),
                                         width: N,
+                                        disableDefaultTransformStyling: b,
                                         overflow: I ? "visible" : void 0,
                                         children: o
                                             .filter((e) => null != e.key)
