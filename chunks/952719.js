@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => f });
 var r = n(439372),
     i = n(49463),
     s = n(217222),
@@ -11,23 +11,32 @@ function l() {
     for (let n in e) t[s.A.getHash(n)] = n;
     return t;
 }
-function u() {
+let u = new Set();
+function c() {
+    for (let e of u) o.A.addFeatureFlag(e, !1);
+    u.clear();
     let e = a.A.getGuildId();
     if (null == e) return;
-    let { evaluatedExperiments: t } = s.A.getState(),
-        n = t?.guild?.[e];
-    if (null == n) return;
-    let r = l();
-    for (let e in n.assignments) {
-        let t = r[e];
+    let t = i.A.getAllExperimentAssignments();
+    for (let n in t)
+        if (n.startsWith(`${e}:`)) {
+            let e = n.split(":")[1];
+            o.A.addFeatureFlag(e, t[n] > 0), u.add(e);
+        }
+    let { evaluatedExperiments: n } = s.A.getState(),
+        r = n?.guild?.[e];
+    if (null == r) return;
+    let c = l();
+    for (let e in r.assignments) {
+        let t = c[e];
         if (null == t) continue;
-        let i = n.assignments[e];
-        o.A.addFeatureFlag(t, 0 !== i.variantId);
+        let n = r.assignments[e];
+        o.A.addFeatureFlag(t, 0 !== n.variantId), u.add(t);
     }
 }
-function c() {
+function d() {
     let e = i.A.getAllExperimentAssignments();
-    for (let t in e) o.A.addFeatureFlag(t, e[t] > 0);
+    for (let t in e) t.includes(":") || o.A.addFeatureFlag(t, e[t] > 0);
     let t = l(),
         { evaluatedExperiments: n } = s.A.getState();
     for (let e of ["user", "installation"])
@@ -40,9 +49,9 @@ function c() {
                 o.A.addFeatureFlag(n, 0 !== r.variantId);
             }
         }
-    u();
+    c();
 }
-class d extends r.A {
-    stores = new Map().set(i.A, c).set(s.A, c).set(a.A, u);
+class _ extends r.A {
+    stores = new Map().set(i.A, d).set(s.A, d).set(a.A, c);
 }
-let _ = new d();
+let f = new _();
