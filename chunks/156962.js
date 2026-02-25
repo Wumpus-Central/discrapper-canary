@@ -6,7 +6,7 @@ var i = n(397927),
     s = n(709917),
     a = n(788868),
     o = n(985018),
-    l = n(857365),
+    l = n(710232),
     u = n(694414),
     c = (function (e) {
         return (e.TRIAL = "trial"), (e.DEFAULT = "default"), e;
@@ -31,8 +31,7 @@ let d = (e) => {
                   }))
                 : u.days > 0
                   ? (c = o.intl.format(d.trial.days, { days: u.days, trialPeriod: r, trialEnd: i }))
-                  : u.hours > 0 &&
-                    (c = o.intl.format(d.trial.hours, { days: u.days, hours: u.hours, trialPeriod: r, trialEnd: i }))
+                  : u.hours > 0 && (c = o.intl.format(d.trial.hours, { hours: u.hours, trialPeriod: r, trialEnd: i }))
             : u.days > 0 && u.hours > 0
               ? (c = o.intl.format(d.default.days_and_hours, { days: u.days, hours: u.hours }))
               : u.days > 0
