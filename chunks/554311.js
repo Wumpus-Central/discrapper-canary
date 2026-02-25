@@ -49,12 +49,12 @@ function h(e) {
     }
     let n = e.runningGame ?? e.persistentGame;
     if (null != n) {
-        let e = t.getGameByGameData(n);
+        let e = t.findGame(n);
         if (null != e) return e;
     }
     if (null != e.gameName) {
-        let n = t.getGameByName_DEPRECATED_DO_NOT_USE(e.gameName);
-        if (null != n) return n;
+        let n = t.searchGamesByName(e.gameName);
+        if (1 === n.length) return t.getDetectableGame(n[0]) ?? null;
     }
     if (null == e.gameName) return null;
     let a =

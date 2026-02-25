@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => N });
+n.d(t, { A: () => b });
 var i = n(627968),
     s = n(64700),
     l = n(735438),
@@ -85,7 +85,7 @@ function I(e) {
         });
     }
 }
-function N(e) {
+function b(e) {
     let { userId: t, channel: n } = e,
         o = (0, a.bG)([g.default], () => g.default.getUser(t)),
         c = (0, _.Ay)(t, n.guild_id),
@@ -94,9 +94,9 @@ function N(e) {
             () =>
                 l.uniqWith(c, (e, t) => {
                     if (e.application_id === t.application_id) return !0;
-                    let n = A.A.getGameByName_DEPRECATED_DO_NOT_USE(e.name),
-                        i = A.A.getGameByName_DEPRECATED_DO_NOT_USE(t.name);
-                    return (null != n && n === i) || e.name === t.name;
+                    let n = A.A.searchGamesByName(e.name),
+                        i = new Set(A.A.searchGamesByName(t.name));
+                    return !!(n.length > 0 && n.length === i.size && n.every((e) => i.has(e))) || e.name === t.name;
                 }),
             [c],
         ),

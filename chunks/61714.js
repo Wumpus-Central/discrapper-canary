@@ -27,17 +27,17 @@ var i = n(627968),
     T = n(994314),
     O = n(63995),
     b = n(69407),
-    D = n(520006),
-    j = n(352018),
+    j = n(520006),
+    D = n(352018),
     R = n(481947),
-    L = n(616356),
-    w = n(734057),
-    k = n(760751),
-    M = n(430452),
+    w = n(616356),
+    L = n(734057),
+    M = n(760751),
+    k = n(430452),
     P = n(309010),
     G = n(485296),
-    V = n(157257),
-    U = n(607567),
+    U = n(157257),
+    V = n(607567),
     z = n(256415),
     H = n(996439),
     W = n(427262),
@@ -46,9 +46,9 @@ var i = n(627968),
     Y = n(799808),
     F = n(855790),
     Z = n(652215),
-    X = n(731854),
-    J = n(985018),
-    Q = n(279952);
+    J = n(731854),
+    X = n(985018),
+    Q = n(262554);
 function q(e) {
     let {
             flipped: t = !1,
@@ -64,12 +64,12 @@ function q(e) {
             guildId: f,
             voiceState: _,
         } = e,
-        m = (0, r.bG)([M.Ay], () => M.Ay.isLocalMute(l.id)),
-        E = (0, r.bG)([L.A], () => L.A.getCurrentUserActiveStream()),
-        x = (0, r.yK)([L.A], () => (null != E ? L.A.getViewerIds(E) : [])),
+        m = (0, r.bG)([k.Ay], () => k.Ay.isLocalMute(l.id)),
+        E = (0, r.bG)([w.A], () => w.A.getCurrentUserActiveStream()),
+        x = (0, r.yK)([w.A], () => (null != E ? w.A.getViewerIds(E) : [])),
         y = (0, g.A)({ userId: l.id, context: A }),
         v = (0, r.bG)([G.A], () => G.A.isPrioritySpeaker(l.id, A)),
-        S = (0, r.bG)([L.A], () => null != L.A.getStreamForUser(l.id, f)),
+        S = (0, r.bG)([w.A], () => null != w.A.getStreamForUser(l.id, f)),
         C = s.useMemo(() => null != E && E.ownerId !== l.id && x.includes(l.id), [E, l.id, x]);
     if (c === Z.f5z.ONLY_WHILE_SPEAKING && n && !y) return null;
     let { mute: I, selfMute: N, suppress: T, deaf: O, selfDeaf: b } = _;
@@ -100,11 +100,11 @@ function q(e) {
     });
 }
 class $ extends s.PureComponent {
-    static defaultProps = { context: X.x.DEFAULT };
+    static defaultProps = { context: J.x.DEFAULT };
     handleUserContextMenu = (e, t) => {
         let { context: s } = this.props;
         (0, h.L3)(e, async () => {
-            let { default: e } = await Promise.all([n.e("97262"), n.e("32418"), n.e("22252")]).then(n.bind(n, 668569));
+            let { default: e } = await Promise.all([n.e("97262"), n.e("32418"), n.e("93382")]).then(n.bind(n, 668569));
             return (n) => (0, i.jsx)(e, { ...n, user: t, showMediaItems: !0, mediaEngineContext: s });
         });
     };
@@ -207,7 +207,7 @@ class $ extends s.PureComponent {
                     ? null
                     : (0, i.jsx)(F.Ay.Icon, {
                           icon: u.Zes,
-                          label: J.intl.string(J.t.NiTd0e),
+                          label: X.intl.string(X.t.NiTd0e),
                           onClick: this.handleOpenVoiceSettings,
                           tooltipPosition: "left",
                           size: 18,
@@ -216,7 +216,7 @@ class $ extends s.PureComponent {
                     ? null
                     : (0, i.jsx)(F.Ay.Icon, {
                           icon: e ? u.hl9 : u.qgw,
-                          label: e ? J.intl.string(J.t.cSu80j) : J.intl.string(J.t.cM8Vnm),
+                          label: e ? X.intl.string(X.t.cSu80j) : X.intl.string(X.t.cM8Vnm),
                           onClick: this.handlePin,
                           tooltipPosition: "left",
                           size: 18,
@@ -258,7 +258,7 @@ class $ extends s.PureComponent {
                                     (0, i.jsx)(u.Text, {
                                         className: Q.$A,
                                         variant: "text-sm/normal",
-                                        children: J.intl.string(J.t.XKYej5),
+                                        children: X.intl.string(X.t.XKYej5),
                                     }),
                                     (0, i.jsx)(T.A, { children: o?.name ?? p }),
                                 ],
@@ -270,7 +270,7 @@ class $ extends s.PureComponent {
                         children: [
                             (0, i.jsx)("div", {
                                 className: Q.yf,
-                                children: (0, i.jsx)(D.A, {
+                                children: (0, i.jsx)(j.A, {
                                     stream: c,
                                     iconClassName: Q.Nd,
                                     appContext: Z.BRT.OVERLAY,
@@ -278,16 +278,16 @@ class $ extends s.PureComponent {
                             }),
                             (0, i.jsx)("div", {
                                 className: Q.yf,
-                                children: (0, i.jsx)(j.A, { stream: c, appContext: Z.BRT.OVERLAY }),
+                                children: (0, i.jsx)(D.A, { stream: c, appContext: Z.BRT.OVERLAY }),
                             }),
                             (0, i.jsx)("div", {
                                 className: Q.yf,
                                 children: (0, i.jsx)(d.m, {
                                     asContainer: !0,
-                                    text: J.intl.string(J.t.S5anIc),
+                                    text: X.intl.string(X.t.S5anIc),
                                     children: (0, i.jsx)(u.DUT, {
                                         onClick: this.handleStopStream,
-                                        "aria-label": J.intl.string(J.t.S5anIc),
+                                        "aria-label": X.intl.string(X.t.S5anIc),
                                         children: (0, i.jsx)(u.GT3, {
                                             size: "md",
                                             color: "currentColor",
@@ -344,33 +344,33 @@ class $ extends s.PureComponent {
     }
 }
 function ee(e) {
-    let t = (0, r.bG)([P.A, w.A], () => w.A.getChannel(P.A.getVoiceChannelId())),
+    let t = (0, r.bG)([P.A, L.A], () => L.A.getChannel(P.A.getVoiceChannelId())),
         n = (0, m.Ay)(t),
         s = (function () {
             let [e] = (0, r.bG)(
-                [U.Ay, O.A, P.A, w.A],
+                [V.Ay, O.A, P.A, L.A],
                 () => {
-                    let e = w.A.getChannel(P.A.getVoiceChannelId());
+                    let e = L.A.getChannel(P.A.getVoiceChannelId());
                     return null == e
                         ? [[], -1]
                         : e.isGuildStageVoice()
                           ? [O.A.getMutableParticipants(e.id, b.ip.SPEAKER), O.A.getParticipantsVersion(e.id)]
-                          : [U.Ay.getVoiceStatesForChannel(e), U.Ay.getVoiceStateVersion(e.getGuildId())];
+                          : [V.Ay.getVoiceStatesForChannel(e), V.Ay.getVoiceStateVersion(e.getGuildId())];
                 },
                 [],
                 H.D,
             );
             return e;
         })(),
-        l = (0, r.bG)([L.A], () => L.A.getStreamerActiveStreamMetadata()),
-        a = (0, r.bG)([x.Ay, V.A, k.A], () => {
-            let e = (0, I.A)(x.Ay, V.A);
-            return null != e ? k.A.getGameByGameData(e)?.id : null;
+        l = (0, r.bG)([w.A], () => w.A.getStreamerActiveStreamMetadata()),
+        a = (0, r.bG)([x.Ay, U.A, M.A], () => {
+            let e = (0, I.A)(x.Ay, U.A);
+            return null != e ? M.A.findGame(e)?.id : null;
         }),
         o = (0, _.h)(a),
-        d = (0, r.cf)([x.Ay, V.A, L.A, z.default], () => {
-            let e = (0, I.A)(x.Ay, V.A),
-                t = L.A.getCurrentUserActiveStream();
+        d = (0, r.cf)([x.Ay, U.A, w.A, z.default], () => {
+            let e = (0, I.A)(x.Ay, U.A),
+                t = w.A.getCurrentUserActiveStream();
             return {
                 displayUserMode: z.default.getDisplayUserMode(),
                 displayNameMode: z.default.getDisplayNameMode(),

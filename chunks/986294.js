@@ -21,12 +21,12 @@ var a = n(627968),
     C = n(603047),
     A = n(435738),
     T = n(99753),
-    y = n(868068),
-    S = n(476398),
+    S = n(868068),
+    y = n(476398),
     E = n(405311),
     N = n(424994),
-    I = n(750100),
-    k = n(661251);
+    I = n(973350),
+    k = n(930821);
 let R = [
     {
         key: "type",
@@ -84,10 +84,7 @@ function w() {
         [O, w] = i.useState(""),
         M = (0, u.bG)(
             [v.A, p.A],
-            () =>
-                parseInt(O) > 0
-                    ? O
-                    : (v.A.getGameByName_DEPRECATED_DO_NOT_USE(O)?.id ?? p.A.getApplicationByName(O)?.id),
+            () => (parseInt(O) > 0 ? O : (v.A.searchGamesByName(O)[0] ?? p.A.getApplicationByName(O)?.id)),
             [O],
         ),
         P = (0, b.A)({ applicationId: M, location: "DevToolsContentInventory", source: f.Ob.DevTools }),
@@ -167,7 +164,7 @@ function w() {
                     ],
                 }),
                 !1,
-                (0, a.jsx)(S.A, {}),
+                (0, a.jsx)(y.A, {}),
                 (0, a.jsxs)(h.BJc, {
                     gap: 8,
                     children: [
@@ -199,7 +196,7 @@ function w() {
                         (0, a.jsx)(h.Text, { variant: "text-md/semibold", children: "Activity Sharing" }),
                         (0, a.jsx)(h.l6P, {
                             label: "Force show game",
-                            options: y.K.map((e) => ({ label: e, value: e, id: e })),
+                            options: S.K.map((e) => ({ label: e, value: e, id: e })),
                             value: B,
                             onSelectionChange: function (e) {
                                 x.h.dispatch({ type: "CONTENT_INVENTORY_FORCE_SHOW_GAME_SHARING", gameToShow: e });

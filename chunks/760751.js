@@ -156,9 +156,6 @@ class $ extends i.Ay.PersistedStore {
     getDetectableGame(e) {
         return y.get(E.default.cast(e));
     }
-    getGameByName_DEPRECATED_DO_NOT_USE(e) {
-        return this.getDetectableGame([...this.searchGamesByName(e)].reverse()[0]);
-    }
     searchGamesByName(e) {
         if (null == e) return [];
         let t = e.toLowerCase();
@@ -245,24 +242,6 @@ class $ extends i.Ay.PersistedStore {
         if (null == e) return;
         let t = N[e];
         return this.getDetectableGame(t);
-    }
-    getGameByGameData(e) {
-        let t = this.getDetectableGame(e.id);
-        if (null != t) return t;
-        if (null == e.exePath) return null;
-        let n = e.exePath.split("/").pop(),
-            r = e.exePath.split("/").slice(-2).join("/");
-        if (null != e.name) {
-            let t = this.searchGamesByName(e.name)
-                .map((e) => this.getDetectableGame(e))
-                .find((e) => {
-                    if (null == e || null == e.executables) return !1;
-                    let t = e.executables.map((e) => e.name);
-                    if (t.includes(n) || t.includes(r)) return !0;
-                });
-            if (null != t) return t;
-        }
-        return this.getGameByExecutable(n) ?? this.getGameByExecutable(r);
     }
     shouldBlock(e) {
         if (!u.n.getConfig({ location: "GameStore.shouldBlock" }).enabled || null == e.exePath || "" === e.exePath)

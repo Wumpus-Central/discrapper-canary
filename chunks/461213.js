@@ -42,8 +42,8 @@ function P(e) {
     return (0, p.kv)(e, E.A);
 }
 function k(e) {
-    let t = h.A.getGameByName_DEPRECATED_DO_NOT_USE(e);
-    return null != t ? P(t.id) : _.tz.getSetting();
+    let t = h.A.searchGamesByName(e);
+    return 1 === t.length ? P(t[0]) : _.tz.getSetting();
 }
 function U(e) {
     if ((0, o.Lt)(e.flags ?? 0, T.jUm.CONTEXTLESS)) return !0;

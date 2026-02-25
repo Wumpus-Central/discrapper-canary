@@ -37,28 +37,29 @@ function A(e) {
 }
 function I(e, t) {
     return E().then((n) => {
-        let l = a.Ay.getGameForPID(e)?.name,
-            c = o.A.getGameByName_DEPRECATED_DO_NOT_USE(l),
-            d = null;
+        let l = a.Ay.getGameForPID(e),
+            c = l?.name,
+            d = null != l ? o.A.findGame(l) : null,
+            _ = null;
         return new Promise((o) => {
-            let _ = (e, n) => {
+            let l = (e, n) => {
                     u.default.track(f.HAw.HOOK_RESULT, {
-                        game_name: l,
-                        game_id: null == c ? null : c.id,
+                        game_name: c,
+                        game_id: null == d ? null : d.id,
                         success: n,
                         error: e,
                         ...t,
                     }),
-                        null != d && (clearTimeout(d), (d = null)),
+                        null != _ && (clearTimeout(_), (_ = null)),
                         n ? o() : o((e = e ?? "Unknown hook error"));
                 },
                 p = a.Ay.getOverlayOptionsForPID(e),
                 h = { ...s.gH, ...p, elevate: a.Ay.shouldElevateProcessForPID(e) };
             null == h.allowHook || h.allowHook
-                ? ((d = setTimeout(() => {
-                      n.cancelAttachToProcess(e), _("Timed out waiting for hook response", !1);
+                ? ((_ = setTimeout(() => {
+                      n.cancelAttachToProcess(e), l("Timed out waiting for hook response", !1);
                   }, 12e4)),
-                  n.attachToProcess(e, h, _),
+                  n.attachToProcess(e, h, l),
                   r.h.wait(() => i.A.clearElevatedProcess()))
                 : o("Hook is disabled for this game");
         });
