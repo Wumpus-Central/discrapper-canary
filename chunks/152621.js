@@ -5,13 +5,14 @@ var i = n(417597),
     s = n(524799),
     r = n(585958),
     o = n(985018);
-function c(e) {
-    let { coverImageUrl: t, localizedName: n, isFetching: c } = (0, r.n)(e),
-        d = (0, i.bG)([l.A], () => l.A.getDetectableGame(e)),
-        u = (0, i.bG)([s.A], () => s.A.canFetch(e));
+function c(e, t) {
+    let { coverImageUrl: n, localizedName: c, isFetching: d } = (0, r.n)(e),
+        u = (0, i.bG)([l.A], () => l.A.getDetectableGame(e), [e]),
+        g = (0, i.bG)([s.A], () => null != e && s.A.canFetch(e), [e]);
     return {
-        coverImageUrl: t ?? a.Ay.getGameAssetURL({ id: e, hash: d?.cover_image_hash, keepAspectRatio: !0 }),
-        gameName: n ?? d?.name ?? o.intl.string(o.t.GIWFlF),
-        isLoading: u || c,
+        coverImageUrl:
+            null != e ? (n ?? a.Ay.getGameAssetURL({ id: e, hash: u?.cover_image_hash, keepAspectRatio: !0 })) : void 0,
+        gameName: c ?? u?.name ?? t ?? o.intl.string(o.t.GIWFlF),
+        isLoading: g || d,
     };
 }

@@ -1,43 +1,38 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => p });
 var i = n(627968),
     r = n(311907),
     l = n(397927),
     a = n(975807),
-    s = n(429913),
-    o = n(64983),
+    s = n(64983),
+    o = n(152621),
     d = n(194362),
-    c = n(486020),
-    u = n(125022),
-    A = n(261425),
-    h = n(652215),
-    _ = n(49999),
-    m = n(985018),
-    p = n(318624);
-function g(e) {
+    c = n(125022),
+    u = n(261425),
+    A = n(652215),
+    h = n(49999),
+    _ = n(985018),
+    m = n(709450);
+function p(e) {
     let { guild: t, markAsDismissed: n } = e,
-        g = (0, r.bG)([u.A], () => u.A.getUnclaimedGameIdsForGuild(t.id), [t.id]) ?? [],
-        E = g[0],
-        I = (0, s.h)(E);
-    if (0 === g.length || null == E || null == I) return null;
-    let f = c.Ay.getGameAssetURL({ id: E, hash: I.coverImage, keepAspectRatio: !0 });
-    if (null == f) return null;
-    let C = I.name ?? m.intl.string(m.t.VQq92a),
-        T = t.features.has(h.GuildFeatures.VERIFIED) ? m.intl.string(m.t.uUARXe) : m.intl.string(m.t["0Dx29f"]);
-    return (0, i.jsx)(o.A, {
+        p = ((0, r.bG)([c.A], () => c.A.getUnclaimedGameIdsForGuild(t.id), [t.id]) ?? [])[0] ?? null,
+        { coverImageUrl: g, gameName: E } = (0, o.A)(p, _.intl.string(_.t.VQq92a));
+    if (null == g) return null;
+    let I = t.features.has(A.GuildFeatures.VERIFIED) ? _.intl.string(_.t.uUARXe) : _.intl.string(_.t["0Dx29f"]);
+    return (0, i.jsx)(s.A, {
         guild: t,
-        onDismissed: () => n(_.i.USER_DISMISS),
-        title: m.intl.format(m.t.Q11WTQ, { gameName: C }),
-        message: T,
+        onDismissed: () => n(h.i.USER_DISMISS),
+        title: _.intl.format(_.t.Q11WTQ, { gameName: E }),
+        message: I,
         cta: (0, i.jsxs)("span", {
-            className: p.m,
-            children: [m.intl.string(m.t["2u6ZlY"]), (0, i.jsx)(l.I9m, { size: "xs", color: "currentColor" })],
+            className: m.m,
+            children: [_.intl.string(_.t["2u6ZlY"]), (0, i.jsx)(l.I9m, { size: "xs", color: "currentColor" })],
         }),
-        type: h.n5X.GAME_CLAIM,
-        image: (0, i.jsx)(A.A, { imageSrc: f }),
+        type: A.n5X.GAME_CLAIM,
+        image: (0, i.jsx)(u.A, { imageSrc: g }),
         imageMarginX: 60,
         onClick: async () => {
-            n(_.i.TAKE_ACTION);
-            let e = await (0, d.a)(h.dSh.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY);
+            n(h.i.TAKE_ACTION);
+            let e = await (0, d.a)(A.dSh.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY);
             (0, a.A)(e);
         },
     });
