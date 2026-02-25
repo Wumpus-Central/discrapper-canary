@@ -1,4 +1,4 @@
-n.d(t, { A: () => H });
+n.d(t, { A: () => w });
 var i = n(627968),
     s = n(64700),
     a = n(503698),
@@ -31,17 +31,17 @@ var i = n(627968),
     P = n(985018),
     L = n(15830),
     D = n(998663),
-    G = n(817577),
-    M = n(714206),
+    M = n(817577),
+    G = n(714206),
     U = n(641836),
     k = n(288604),
-    V = n(174872),
-    w = n(509442);
-function H() {
+    V = n(893160),
+    H = n(509442);
+function w() {
     let { analyticsLocations: e } = (0, d.Ay)(c.A.PREMIUM_MARKETING_PERK_CARD),
         t = (0, E.O9)(),
         a = p.A.useExperiment({ location: "PremiumWhatsNewSection" }).enabled,
-        H = (0, s.useCallback)(() => {
+        w = (0, s.useCallback)(() => {
             (0, x.openUserSettings)(
                 g.X.PROFILE_PANEL,
                 { section: O.nc_.PROFILE_CUSTOMIZATION, analyticsLocations: e },
@@ -81,7 +81,7 @@ function H() {
                 id: b.vc,
                 title: null != W ? P.intl.string(W.nameUnformattedNitro) : z ? P.intl.string(P.t.tx9Fvw) : "",
                 pillText: P.intl.string(P.t["jyYgZ+"]),
-                primaryAsset: null != q ? (Z ? q.standard : q.ambientLarge) : z ? M : null,
+                primaryAsset: null != q ? (Z ? q.standard : q.ambientLarge) : z ? G : null,
                 primaryAssetClassName: l()(L.pq, { [L.n6]: Z }),
                 caption: null != K ? P.intl.formatToPlainString(P.t.Hu4jfi, { date: new Date(K) }) : void 0,
                 description:
@@ -107,7 +107,7 @@ function H() {
                               premiumGroupProductName: (0, v.DP)(),
                           }),
                           pillText: P.intl.string(P.t.oW0eUd),
-                          primaryAsset: G,
+                          primaryAsset: M,
                           ctaText: P.intl.string(P.t.jVcuVY),
                           onCtaClick: () => {
                               (0, o.mMO)(async () => {
@@ -121,22 +121,22 @@ function H() {
                     ? {
                           id: "3p",
                           title: P.intl.string(P.t.m7PucM),
-                          description: P.intl.formatToPlainString(P.t["43kZKL"], { days: J - Q.getDate() + 1 }),
+                          description: P.intl.format(P.t.zh1X7u, {}),
                           subscriptionRequired: !0,
                           pillText: P.intl.string(P.t.oW0eUd),
                           caption: (0, i.jsx)("img", { src: D, alt: "SteelSeries" }),
                           backgroundAssetUrl: V.A,
-                          progress: (Q.getDate() - 1) / J,
+                          progress: Q.getDate() / J,
                           ctaText: P.intl.string(P.t.w7s5Qr),
                           onCtaClick: () => (0, C.uE)({ analyticsLocations: e }),
-                          blurTint: "#0c1b55",
+                          blurTint: "#2E213D",
                       }
                     : null,
                 {
                     id: b.vl,
                     title: P.intl.string(P.t.OLtTrt),
                     description: P.intl.string(P.t["di/pXR"]),
-                    onCtaClick: H,
+                    onCtaClick: w,
                     primaryAsset: U.A,
                     ctaText: P.intl.string(P.t.jVcuVY),
                     pillText: P.intl.string(P.t.y2b7CA),
@@ -145,7 +145,7 @@ function H() {
                     id: b.kd,
                     title: P.intl.string(P.t.acc6h6),
                     description: P.intl.formatToPlainString(P.t.WQazjs, { themeCount: 20 }),
-                    primaryAsset: w.A,
+                    primaryAsset: H.A,
                     ctaText: P.intl.string(P.t.jVcuVY),
                     onCtaClick: () => {
                         (0, m.nf)(m.HP.CUSTOM_THEME);
@@ -171,5 +171,5 @@ function H() {
             d = (c = c.filter((e) => null != e))[0].featured,
             u = d ? 5 : 6;
         return c.splice(+!!d, 0, s), c.length > u && c.splice(u, c.length - u), c;
-    }, [W, q, Z, K, t, a, J, Q, e, H, Y, B, X, z]);
+    }, [W, q, Z, K, t, a, J, Q, e, w, Y, B, X, z]);
 }
