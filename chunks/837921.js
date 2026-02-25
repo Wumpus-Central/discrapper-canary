@@ -82,8 +82,9 @@ var U = (function (e) {
         return (e.VIDEO = "VIDEO"), (e.MUTE = "MUTE"), (e.DEAFEN = "DEAFEN"), (e.DISCONNECT = "DISCONNECT"), e;
     })({});
 function F(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : v;
     return {
-        id: v[e.id ?? ""],
+        id: t[e.id ?? ""],
         nativeProcessObserverId: parseInt(e.id ?? "", 10),
         name: e.gameName ?? e.name,
         origGameName: e.origGameName,
@@ -181,15 +182,21 @@ let H = {
                         let t = ++i;
                         return null != e.id && (v[t] = e.id), { ...e, cmdline: e.cmdLine, id: t };
                     }),
-                    o = (e) => n(e.map(F));
+                    o = v,
+                    l = (e) => n(e.map((e) => F(e, o)));
                 null != r && null != s.setProcessObserverUserId && s.setProcessObserverUserId(r),
                     t && null != s.setObservedGamesCallback2
-                        ? s.setObservedGamesCallback2(a, o)
-                        : s.setObservedGamesCallback(a, o);
+                        ? s.setObservedGamesCallback2(a, l)
+                        : s.setObservedGamesCallback(a, l);
             } catch (e) {}
         },
         setGameDetectionCallback(e) {
-            this.getDiscordUtils().setGameDetectionCallback?.((t, n) => e(t.map(F), n.map(F)));
+            this.getDiscordUtils().setGameDetectionCallback?.((t, n) =>
+                e(
+                    t.map((e) => F(e)),
+                    n.map((e) => F(e)),
+                ),
+            );
         },
         setGameDetectionErrorCallback(e) {
             this.getDiscordUtils().setGameDetectionErrorCallback?.(e);
@@ -202,7 +209,7 @@ let H = {
         },
         setCandidateGamesCallback(e) {
             this.getDiscordUtils().setCandidateGamesCallback((t) => {
-                e(t.map(F));
+                e(t.map((e) => F(e)));
             });
         },
         clearCandidateGamesCallback() {
