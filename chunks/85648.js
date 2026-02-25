@@ -1,23 +1,26 @@
-i.d(e, { S: () => _ });
+i.d(e, { S: () => I });
 var n = i(934551),
     l = i(419954),
-    s = i(780964),
-    r = i(358776),
-    a = i(274835),
-    u = i(777135),
-    o = i(163944),
-    d = i(147878),
-    A = i(28161),
-    T = i(114074),
-    S = i(413336),
-    E = i(985018);
-let g = (0, l.t_)(s.X.DISPLAY_PANEL, {
-        useTitle: () => E.intl.string(E.t.DVatCa),
-        buildLayout: () => [T.K, o.S, u.V, d.Y, A.f, (0, S.$)(!0), a.J],
+    s = i(933297),
+    r = i(780964),
+    a = i(358776),
+    u = i(368631),
+    o = i(274835),
+    d = i(777135),
+    A = i(163944),
+    T = i(147878),
+    S = i(28161),
+    E = i(114074),
+    g = i(413336),
+    _ = i(985018);
+let c = (0, l.t_)(r.X.DISPLAY_PANEL, {
+        useTitle: () => _.intl.string(_.t.DVatCa),
+        buildLayout: () => [E.K, A.S, d.V, T.Y, S.f, (0, g.$)(!0), o.J],
     }),
-    _ = (0, l.i4)(s.X.DISPLAY_SIDEBAR_ITEM, {
-        useTitle: () => E.intl.string(E.t.DVatCa),
+    I = (0, l.i4)(r.X.DISPLAY_SIDEBAR_ITEM, {
+        useTitle: () => _.intl.string(_.t.DVatCa),
         icon: n.PaintPaletteIcon,
-        usePredicate: () => (0, r.bp)("DisplaySidebarItem"),
-        buildLayout: () => [g],
+        trailing: { type: s.Si.BADGE_NEW, getDismissibleContentTypes: u.p_, stronglyDiscouragedBadgeComponent: u.AW },
+        usePredicate: () => (0, a.bp)("DisplaySidebarItem"),
+        buildLayout: () => [c],
     });
