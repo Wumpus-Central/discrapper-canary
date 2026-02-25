@@ -17,7 +17,7 @@ function c(e) {
 function d(e) {
     let { wishlistId: t, wishlistData: n, updatedAt: r } = e,
         i = u(t);
-    (i.data = n), (i.status = "success"), (i.error = void 0), (i.updatedAt = r);
+    (i.data = n), (i.status = "success"), (i.error = void 0), (i.updatedAt = r), (i.lastFetchedAt = Date.now());
 }
 function _(e) {
     let { wishlistId: t, error: n } = e,
@@ -27,7 +27,7 @@ function _(e) {
 function f(e) {
     let { wishlistId: t, wishlistData: n } = e,
         r = u(t);
-    (r.data = n), (r.status = "success"), (r.error = void 0);
+    (r.data = n), (r.status = "success"), (r.error = void 0), (r.lastFetchedAt = Date.now());
 }
 function p(e) {
     let { error: t } = e;
@@ -47,7 +47,7 @@ function h(e) {
 function m(e) {
     let { wishlistId: t, wishlistData: n } = e,
         r = u(t);
-    (r.data = n), (r.status = "success"), (r.error = void 0);
+    (r.data = n), (r.status = "success"), (r.error = void 0), (r.lastFetchedAt = Date.now());
 }
 function E(e) {
     let { wishlistId: t, error: n } = e;
@@ -56,7 +56,7 @@ function E(e) {
 function g(e) {
     let { wishlistId: t } = e,
         n = u(t);
-    (n.status = "success"), (n.error = void 0);
+    (n.status = "success"), (n.error = void 0), (n.lastFetchedAt = Date.now());
 }
 function A(e) {
     let { error: t } = e;
@@ -69,7 +69,7 @@ function I(e) {
 function T(e) {
     let { wishlistId: t, wishlistData: n } = e,
         r = u(t);
-    (r.data = n), (r.status = "success"), (r.error = void 0);
+    (r.data = n), (r.status = "success"), (r.error = void 0), (r.lastFetchedAt = Date.now());
 }
 function S(e) {
     let { wishlistId: t, error: n } = e;
@@ -107,6 +107,9 @@ class v extends r.Ay.Store {
     }
     getUpdatedAt(e) {
         return this.get(e).updatedAt;
+    }
+    getLastFetchedAt(e) {
+        return this.get(e).lastFetchedAt;
     }
 }
 let N = new v(i.h, {
