@@ -487,7 +487,10 @@ var r = (function (e) {
         (e.HIGHLIGHT_MANA_COMPONENTS = "highlight_mana_components"),
         (e.HIGHLIGHT_VOID_COMPONENTS = "highlight_void_components"),
         (e.AXE_AUDITING = "axe_auditing"),
-        (e.LOGOUT_SECTION = "logout_section"),
+        (e.UTILITY_SECTION = "utility_section"),
+        (e.DEVELOPER_SIDEBAR_ITEM = "developer_sidebar_item"),
+        (e.DEVELOPER_PANEL = "developer_panel"),
+        (e.DEVELOPER_CATEGORY = "developer_category"),
         (e.LOGOUT_SIDEBAR_ITEM = "logout_sidebar_item"),
         e
     );
