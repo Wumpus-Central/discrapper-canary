@@ -1,46 +1,46 @@
 n.d(t, { A: () => O });
 var i = n(627968),
-    l = n(64700),
-    a = n(311907),
-    s = n(397927),
-    r = n(47167),
+    s = n(64700),
+    l = n(311907),
+    r = n(397927),
+    a = n(47167),
     o = n(734057),
     d = n(71393),
     u = n(383501),
     c = n(994500),
     h = n(287809),
-    A = n(256415),
+    g = n(256415),
     m = n(810412),
-    p = n(129537),
-    g = n(412477),
-    f = n(187667),
-    _ = n(651813),
-    E = n(320165),
-    x = n(121914),
-    S = n(197043),
-    I = n(919843),
-    T = n(652215),
-    y = n(895867),
-    C = n(985018),
-    v = n(141223);
-function N(e) {
+    p = n(1193),
+    A = n(129537),
+    x = n(412477),
+    E = n(651813),
+    f = n(320165),
+    S = n(121914),
+    I = n(197043),
+    T = n(919843),
+    v = n(652215),
+    C = n(822889),
+    j = n(985018),
+    y = n(902877);
+function w(e) {
     let { dragStart: t, dragging: n } = e,
-        [N, O] = (0, a.bG)([f.A], () => f.A.getSessionEntries()),
-        b = (0, a.bG)([f.A], () => f.A.getSelectedChannelId()),
-        j = (0, a.bG)([f.A], () => f.A.getVoiceChatMinimized()),
-        w = (0, a.bG)([o.A], () => (null != b ? (o.A.getChannel(b) ?? null) : null), [b]);
-    l.useEffect(() => {
-        null == b || (null == w && (0, I.b)(b));
-    }, [w, b]);
-    let L = (0, a.bG)([d.A], () => (0, _.P)(w, d.A), [w]),
-        R = (0, a.bG)([u.A], () => u.A.getChannelId(), []),
-        D = l.useMemo(() => (null == R || 0 === O ? N : N.filter((e) => e.channelId !== R)), [N, O, R]),
-        M = (0, m.Dk)(() => {
+        [w, O] = (0, l.bG)([p.A], () => p.A.getSessionEntries()),
+        _ = (0, l.bG)([p.A], () => p.A.getSelectedChannelId()),
+        N = (0, l.bG)([p.A], () => p.A.getVoiceChatMinimized()),
+        b = (0, l.bG)([o.A], () => (null != _ ? (o.A.getChannel(_) ?? null) : null), [_]);
+    s.useEffect(() => {
+        null == _ || (null == b && (0, T.b)(_));
+    }, [b, _]);
+    let R = (0, l.bG)([d.A], () => (0, E.P)(b, d.A), [b]),
+        M = (0, l.bG)([u.A], () => u.A.getChannelId(), []),
+        L = s.useMemo(() => (null == M || 0 === O ? w : w.filter((e) => e.channelId !== M)), [w, O, M]),
+        z = (0, m.Dk)(() => {
             let e = new Set();
-            for (let t of (null != R && e.add(R), D)) e.add(t.channelId);
+            for (let t of (null != M && e.add(M), L)) e.add(t.channelId);
             return e;
-        }, [D, R, O]),
-        { shownUserIds: k, contentInventoryIds: z } = (0, a.bG)(
+        }, [L, M, O]),
+        { shownUserIds: D, contentInventoryIds: k } = (0, l.bG)(
             [],
             () =>
                 (function (e) {
@@ -62,81 +62,81 @@ function N(e) {
                         }
                     }
                     return { shownUserIds: t, contentInventoryIds: n };
-                })(M),
-            [M],
+                })(z),
+            [z],
         ),
-        V = (0, m.Dk)(() => k, [k]),
-        P = (0, m.Dk)(() => z, [z]);
-    l.useEffect(() => {
-        (0 !== V.size || 0 !== P.size) &&
-            (0, m.Y)(T.uss.TEXT_CHAT_V3, {
-                locked: A.default.isInstanceLocked(),
-                shownUserIds: Array.from(V),
+        P = (0, m.Dk)(() => D, [D]),
+        G = (0, m.Dk)(() => k, [k]);
+    s.useEffect(() => {
+        (0 !== P.size || 0 !== G.size) &&
+            (0, m.Y)(v.uss.TEXT_CHAT_V3, {
+                locked: g.default.isInstanceLocked(),
+                shownUserIds: Array.from(P),
                 liveUserIds: [],
-                contentInventoryIds: Array.from(P),
+                contentInventoryIds: Array.from(G),
             });
-    }, [V, P]);
-    let U = (0, a.bG)([h.default], () => (0, _.j)(w, h.default)),
-        G = (0, a.bG)(
+    }, [P, G]);
+    let V = (0, l.bG)([h.default], () => (0, E.j)(b, h.default)),
+        U = (0, l.bG)(
             [h.default, c.A],
-            () => (null == w ? C.intl.string(y.default.uhJexs) : (0, r.m1)(w, h.default, c.A)),
-            [w],
+            () => (null == b ? j.intl.string(C.default.uhJexs) : (0, a.m1)(b, h.default, c.A)),
+            [b],
         ),
-        H = (0, a.bG)([o.A], () => {
-            if (null != R && null != o.A.getChannel(R)) return !0;
+        H = (0, l.bG)([o.A], () => {
+            if (null != M && null != o.A.getChannel(M)) return !0;
             if (0 === O) return !1;
-            for (let e of N) if (null != o.A.getChannel(e.channelId)) return !0;
+            for (let e of w) if (null != o.A.getChannel(e.channelId)) return !0;
             return !1;
-        }, [N, R, O]),
-        Y = null != b && !(j && b === R);
+        }, [w, M, O]),
+        Y = null != _ && !(N && _ === M);
     return H
         ? (0, i.jsxs)("div", {
-              className: v.kL,
+              className: y.kL,
               children: [
                   (0, i.jsx)("nav", {
-                      className: v.pz,
-                      "aria-label": C.intl.string(y.default["2yFtJ1"]),
+                      className: y.pz,
+                      "aria-label": j.intl.string(C.default["2yFtJ1"]),
                       onMouseDown: (e) => {
-                          0 === e.button && t(p.P.MOVE, e.clientX, e.clientY);
+                          0 === e.button && t(A.P.MOVE, e.clientX, e.clientY);
                       },
-                      children: (0, i.jsxs)(s.d_W, {
+                      children: (0, i.jsxs)(r.d_W, {
                           children: [
-                              null != R
+                              null != M
                                   ? (0, i.jsxs)(i.Fragment, {
                                         children: [
                                             (0, i.jsx)(
-                                                x.g,
+                                                S.g,
                                                 {
-                                                    channelId: R,
-                                                    selectedVoiceChannelId: R,
-                                                    iconVariant: x._.CHANNEL_TYPE,
+                                                    channelId: M,
+                                                    selectedVoiceChannelId: M,
+                                                    iconVariant: S._.CHANNEL_TYPE,
                                                 },
-                                                `tiv-${R}`,
+                                                `tiv-${M}`,
                                             ),
-                                            D.length > 0 ? (0, i.jsx)("hr", { className: v.mF }) : null,
+                                            L.length > 0 ? (0, i.jsx)("hr", { className: y.mF }) : null,
                                         ],
                                     })
                                   : null,
-                              D.map((e) =>
-                                  (0, i.jsx)(x.g, { channelId: e.channelId, selectedVoiceChannelId: R }, e.channelId),
+                              L.map((e) =>
+                                  (0, i.jsx)(S.g, { channelId: e.channelId, selectedVoiceChannelId: M }, e.channelId),
                               ),
                           ],
                       }),
                   }),
                   Y
                       ? (0, i.jsxs)("div", {
-                            className: v.oM,
+                            className: y.oM,
                             children: [
-                                (0, i.jsx)(E.A, { channel: w, user: U, guild: L, title: G, dragStart: t, dragging: n }),
-                                (0, i.jsx)(S.A, { selectedChannelId: b }),
+                                (0, i.jsx)(f.A, { channel: b, user: V, guild: R, title: U, dragStart: t, dragging: n }),
+                                (0, i.jsx)(I.A, { selectedChannelId: _ }),
                             ],
                         })
                       : null,
               ],
           })
-        : (0, i.jsx)(g.g, { emptyText: C.intl.string(y.default["xpv/t5"]), icon: s.oyn });
+        : (0, i.jsx)(x.g, { emptyText: j.intl.string(C.default["xpv/t5"]), icon: r.oyn });
 }
-let O = l.memo(function (e) {
-    let { locked: t, dragStart: n, dragging: l } = e;
-    return t ? null : (0, i.jsx)(N, { dragStart: n, dragging: l });
+let O = s.memo(function (e) {
+    let { locked: t, dragStart: n, dragging: s } = e;
+    return t ? null : (0, i.jsx)(w, { dragStart: n, dragging: s });
 });

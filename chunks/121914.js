@@ -17,8 +17,8 @@ var i,
     E = n(485296),
     f = n(741961),
     S = n(287809),
-    I = n(145567),
-    T = n(187667),
+    I = n(1193),
+    T = n(145567),
     v = n(922611),
     C = n(651813),
     j = n(919843),
@@ -31,8 +31,8 @@ var i,
 let R = l.memo(function (e) {
     let { channelId: t, selectedVoiceChannelId: n, iconVariant: i = "DEFAULT" } = e,
         r = null != n && t === n,
-        b = (0, o.bG)([T.A], () => T.A.getSelectedChannelId() === t, [t]),
-        R = (0, o.bG)([T.A], () => T.A.getVoiceChatMinimized()),
+        b = (0, o.bG)([I.A], () => I.A.getSelectedChannelId() === t, [t]),
+        R = (0, o.bG)([I.A], () => I.A.getVoiceChatMinimized()),
         M = (0, u.rdh)(u.LU0.colors.ICON_STATUS_ONLINE),
         L = (0, o.bG)([E.A], () => !!r && !!(E.A.isAnyoneElseSpeaking() || E.A.isCurrentUserSpeaking()), [r]),
         [z, D] = l.useState(!1),
@@ -129,9 +129,9 @@ let R = l.memo(function (e) {
               children: (0, s.jsxs)(u.DUT, {
                   className: N.pc,
                   onClick: () => {
-                      r && (0, I.S$)({ minimized: !1 }),
-                          (0, I.D$)({
-                              target: { kind: I.bB.CHANNEL, channelId: t, guildId: U?.id ?? null, messageId: null },
+                      r && (0, T.S$)({ minimized: !1 }),
+                          (0, T.D$)({
+                              target: { kind: T.bB.CHANNEL, channelId: t, guildId: U?.id ?? null, messageId: null },
                               source: w.B.MANUAL,
                               widgetType: O.uss.TEXT_CHAT_V3,
                           });

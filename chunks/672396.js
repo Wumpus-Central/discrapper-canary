@@ -1,8 +1,6 @@
 "use strict";
-n.d(t, { BR: () => s, Jr: () => i, KS: () => o, Kv: () => u, Li: () => c, Vo: () => a, ed: () => r, uj: () => l }),
-    n(723702);
-let r = !1;
-var i = (function (e) {
+n.d(t, { BR: () => s, Jr: () => r, KS: () => a, Kv: () => l, Li: () => u, Vo: () => i, uj: () => o });
+var r = (function (e) {
     return (
         (e[(e.WELCOME = 0)] = "WELCOME"),
         (e[(e.NEWS = 1)] = "NEWS"),
@@ -12,7 +10,7 @@ var i = (function (e) {
         e
     );
 })({});
-function a(e) {
+function i(e) {
     switch (e) {
         case "News Nudge":
         case "Welcome Nudge":
@@ -44,7 +42,7 @@ var s = (function (e) {
             e
         );
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return (
             (e.NewsNudge = "News Nudge"),
             (e.WelcomeNudge = "Welcome Nudge"),
@@ -64,14 +62,14 @@ var s = (function (e) {
             e
         );
     })({}),
-    l = (function (e) {
+    o = (function (e) {
         return (e[(e.Viewed = 0)] = "Viewed"), (e[(e.Clicked = 1)] = "Clicked"), e;
     })({});
-let u = Object.freeze({
+let l = Object.freeze({
         LOW: "background-opacity-low",
         MEDIUM: "background-opacity-medium",
         HIGH: "background-opacity-high",
         FULL: "background-opacity-full",
         DISABLED: null,
     }),
-    c = Object.freeze({ BOTTOM: 0, LOWER: 0.25, UPPER: 0.75, TOP: 1 });
+    u = Object.freeze({ BOTTOM: 0, LOWER: 0.25, UPPER: 0.75, TOP: 1 });
