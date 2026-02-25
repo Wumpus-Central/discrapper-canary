@@ -2737,6 +2737,7 @@
   "3x6NGw": "Download VAT Credit Note",
   "18NC4l": "You cannot add new payment sources while in Streamer Mode.",
   "MvAJyr": "Try again or contact your payment source provider for help.",
+  "ckFebQ": "The selected currency is not available for your country. Please try a different payment method or currency.",
   "p0UBvU": "This payment method was declined by issuer. Please try a different payment method.",
   "5mlOCW": "Something went wrong while processing your request, please try again!",
   "yX8s2v": "The card was declined due to insufficient funds.",

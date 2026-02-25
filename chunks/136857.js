@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { Ay: () => h, Wd: () => f, tG: () => s });
+n.d(t, { Ay: () => h, Wd: () => f, tG: () => a });
 var r = n(562465),
     i = n(178253),
-    a = n(985018),
-    s = (function (e) {
+    s = n(985018),
+    a = (function (e) {
         return (
             (e[(e.UNKNOWN = 0)] = "UNKNOWN"),
             (e[(e.UNKNOWN_BILLING_PROFILE = 100001)] = "UNKNOWN_BILLING_PROFILE"),
@@ -41,6 +41,7 @@ var r = n(562465),
             (e[(e.BILLING_BUNDLE_PARTIALLY_OWNED = 100097)] = "BILLING_BUNDLE_PARTIALLY_OWNED"),
             (e[(e.BILLING_INSUFFICIENT_FUNDS = 100107)] = "BILLING_INSUFFICIENT_FUNDS"),
             (e[(e.BILLING_OUTDATED_REQUEST_PARAMETERS = 100111)] = "BILLING_OUTDATED_REQUEST_PARAMETERS"),
+            (e[(e.BILLING_CURRENCY_NOT_ALLOWED_FOR_COUNTRY = 100144)] = "BILLING_CURRENCY_NOT_ALLOWED_FOR_COUNTRY"),
             (e[(e.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE = 590001)] = "VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE"),
             e
         );
@@ -94,7 +95,7 @@ function f(e) {
 }
 class p extends i.A {
     paymentId = null;
-    static ErrorCodes = s;
+    static ErrorCodes = a;
     static Fields = o;
     static Sections = c;
     static CARD_ERRORS = d;
@@ -102,32 +103,34 @@ class p extends i.A {
     constructor(e, t) {
         for (const n in (super(e, t),
         100027 === this.code
-            ? (this.message = a.intl.string(a.t["+4Empk"]))
+            ? (this.message = s.intl.string(s.t["+4Empk"]))
             : 50048 === this.code
-              ? (this.message = a.intl.string(a.t.DtFqEI))
+              ? (this.message = s.intl.string(s.t.DtFqEI))
               : 100002 === this.code
-                ? (this.message = a.intl.string(a.t.yNYvK1))
+                ? (this.message = s.intl.string(s.t.yNYvK1))
                 : 100042 === this.code
-                  ? (this.message = a.intl.string(a.t["3jprCb"]))
+                  ? (this.message = s.intl.string(s.t["3jprCb"]))
                   : 100078 === this.code
-                    ? (this.message = a.intl.string(a.t.MHlpoJ))
+                    ? (this.message = s.intl.string(s.t.MHlpoJ))
                     : 100096 === this.code
-                      ? (this.message = a.intl.string(a.t.Hiwqua))
+                      ? (this.message = s.intl.string(s.t.Hiwqua))
                       : 100097 === this.code
-                        ? (this.message = a.intl.string(a.t.c5zDr3))
+                        ? (this.message = s.intl.string(s.t.c5zDr3))
                         : 100107 === this.code
-                          ? (this.message = a.intl.string(a.t.yX8s2v))
+                          ? (this.message = s.intl.string(s.t.yX8s2v))
                           : 100054 === this.code
-                            ? (this.message = a.intl.string(a.t.p0UBvU))
+                            ? (this.message = s.intl.string(s.t.p0UBvU))
                             : 100111 === this.code
-                              ? (this.message = a.intl.string(a.t.uhPY5p))
-                              : 429 === this.status
-                                ? (this.message = a.intl.string(a.t.sUWxgR))
-                                : 0 === this.code
-                                  ? (this.message = a.intl.string(a.t["5mlOCW"]))
-                                  : 400 === this.status &&
-                                    null != this.fields.captcha_key &&
-                                    (this.message = a.intl.string(a.t["3s/vDN"])),
+                              ? (this.message = s.intl.string(s.t.uhPY5p))
+                              : 100144 === this.code
+                                ? (this.message = s.intl.string(s.t.ckFebQ))
+                                : 429 === this.status
+                                  ? (this.message = s.intl.string(s.t.sUWxgR))
+                                  : 0 === this.code
+                                    ? (this.message = s.intl.string(s.t["5mlOCW"]))
+                                    : 400 === this.status &&
+                                      null != this.fields.captcha_key &&
+                                      (this.message = s.intl.string(s.t["3s/vDN"])),
         this.fields)) {
             const e = l[n] || u[n];
             if (null != e) {
