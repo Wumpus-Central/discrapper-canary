@@ -9,7 +9,6 @@ let o = {
     Game_Server_Hosting_Main: { reducedMotion: "boolean" },
     c_chara_5: {},
     hytale_gameplay: { reducedMotion: "boolean" },
-    gameplay_palworld_nozoom: {},
     c_chara_1: {},
     c_chara_4: {},
     c_chara_2: {},
