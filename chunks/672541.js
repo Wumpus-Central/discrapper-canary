@@ -14,7 +14,7 @@ var r = n(627968),
     p = n(324384),
     h = n(459750),
     m = n(985018),
-    E = n(829449);
+    E = n(281491);
 let g = (e) => {
         let {
                 skuId: t,
@@ -110,7 +110,7 @@ let g = (e) => {
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(d.dZ, { children: (0, r.jsx)(o.rg, { ...t, className: E.k }) }),
-                    (0, r.jsx)(d.UX, { children: (0, r.jsx)(l.lo, { primaryButtonProps: e, onBackClick: u }) }),
+                    (0, r.jsx)(d.UX, { children: (0, r.jsx)(l.lo, { primaryButtonProps: e }) }),
                 ],
             });
         }
