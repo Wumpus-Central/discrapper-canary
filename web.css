@@ -36844,6 +36844,10 @@ html:not(.chat-input) .inputInner_b1f01d {
     padding: var(--space-16) var(--space-24) var(--space-24)
 }
 
+.checkoutFooterPortal_ebbc17 {
+    margin-top: calc(var(--space-12)*-1)
+}
+
 .headerSubtitle_ebbc17,
 .headerTitle_ebbc17 {
     overflow-wrap: break-word;
@@ -37381,6 +37385,10 @@ body .headerAnimation_b54a5b {
         flex-direction: column;
         flex-grow: 1
     }
+}
+
+.sliderBodyUnifiedReviewStep_c6f1a4 {
+    padding-bottom: 0
 }
 
 .body_c6f1a4.reviewStep_c6f1a4 {
@@ -44403,14 +44411,6 @@ screen and (max-width:485px) {
     margin-top: var(--space-24)
 }
 
-.invoiceSummaryContainer_bb5449 {
-    margin-bottom: var(--space-12)
-}
-
-.stepBodyMinHeight_bb5449 {
-    min-height: 300px
-}
-
 .checkoutInlineNoticeContainer_bb5449 {
     display: flex;
     flex-direction: column;
@@ -44421,11 +44421,16 @@ screen and (max-width:485px) {
 .loadingContainer_bb5449 {
     display: flex;
     flex-direction: column;
-    justify-content: center
+    justify-content: center;
+    min-height: 200px
 }
 
 .giftRedemptionLink_bb5449 {
     margin-top: var(--space-8)
+}
+
+.spinnerColor_bb5449 {
+    background-color: var(--interactive-text-default) !important
 }
 
 .totalDueReviewStep_bb5449 {
@@ -44755,6 +44760,11 @@ screen and (max-width:485px) {
 
 .oneTimePurchaseRewardNotice_b44961 {
     margin-top: var(--space-16)
+}
+
+.slayerProductPreview_a9f4c8 {
+    height: 64px;
+    width: 64px
 }
 
 .back_e125f1 {
@@ -45435,8 +45445,9 @@ screen and (max-width:485px) {
     display: flex
 }
 
-.orbUnifiedReviewStepBody_a22556 {
-    min-height: 200px
+.purchaseItemGraphic__2455b {
+    height: 64px;
+    width: 64px
 }
 
 .stepBody_a3d32e {

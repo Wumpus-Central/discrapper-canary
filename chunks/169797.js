@@ -1,85 +1,87 @@
 "use strict";
-n.d(t, { Jg: () => h, lo: () => p, oH: () => m, s3: () => _ });
+n.d(t, { Jg: () => E, lo: () => m, oH: () => g, s3: () => p });
 var r = n(627968),
     i = n(64700),
-    s = n(158954),
-    a = n(500380),
-    o = n(518977),
-    l = n(683433),
-    u = n(981036),
-    c = n(725836),
-    d = n(13499);
-function _(e) {
-    let { gradientColor: t, title: n, headerBadgeText: l, headerBadgeIcon: u, countryCode: _, ...f } = e,
-        { checkoutHeaderConfigs: p } = (0, c.ck)(),
+    s = n(503698),
+    a = n.n(s),
+    o = n(158954),
+    l = n(500380),
+    u = n(518977),
+    c = n(683433),
+    d = n(981036),
+    _ = n(725836),
+    f = n(13499);
+function p(e) {
+    let { gradientColor: t, title: n, headerBadgeText: s, headerBadgeIcon: a, countryCode: c, ...d } = e,
+        { checkoutHeaderConfigs: p } = (0, _.ck)(),
         h = i.useCallback(
-            () => (null == _ ? null : (0, r.jsx)("img", { alt: "", className: d.bI, src: (0, a.t)(_) })),
-            [_],
+            () => (null == c ? null : (0, r.jsx)("img", { alt: "", className: f.bI, src: (0, l.t)(c) })),
+            [c],
         ),
         m = i.useMemo(() => {
-            if (null != l || null != p.headerBadgeText)
+            if (null != s || null != p.headerBadgeText)
                 return {
-                    icon: p.headerBadgeIcon ?? u,
-                    type: { text: p.headerBadgeText ?? l ?? "" },
+                    icon: p.headerBadgeIcon ?? a,
+                    type: { text: p.headerBadgeText ?? s ?? "" },
                     variant: "expressive",
                 };
-        }, [l, u, p.headerBadgeText, p.headerBadgeIcon]);
-    return (0, r.jsx)(s.rQ0, {
-        ...f,
+        }, [s, a, p.headerBadgeText, p.headerBadgeIcon]);
+    return (0, r.jsx)(o.rQ0, {
+        ...d,
         badge: m,
         badgePosition: "end",
         gradientColor: t,
         titleTextVariant: "heading-lg/semibold",
         alignCenter: !1,
         title: n,
-        subtitle: null != _ ? { text: (0, o.Gw)((0, o.ni)(_)), leadingIcon: h } : void 0,
+        subtitle: null != c ? { text: (0, u.Gw)((0, u.ni)(c)), leadingIcon: h } : void 0,
     });
 }
-let f = { top: 16, bottom: 8 };
-function p(e) {
-    let { onBackClick: t, primaryButtonProps: n } = e,
-        { variant: i } = n,
-        { setCheckoutFooterContentNode: a } = (0, c.ck)();
-    return (0, r.jsxs)(s.jlY, {
+let h = { top: 16, bottom: 8 };
+function m(e) {
+    let { onBackClick: t, primaryButtonProps: n, portalClassName: i } = e,
+        { variant: s } = n,
+        { setCheckoutFooterContentNode: l } = (0, _.ck)();
+    return (0, r.jsxs)(o.jlY, {
         children: [
-            (0, r.jsx)("div", { ref: a }),
-            (0, r.jsxs)(s.BJc, {
+            (0, r.jsx)("div", { ref: l, className: a()(f.K4, i) }),
+            (0, r.jsxs)(o.BJc, {
                 direction: "horizontal",
                 align: "center",
                 justify: null != t ? "space-between" : "end",
                 fullWidth: !0,
-                padding: f,
+                padding: h,
                 children: [
-                    null != t ? (0, r.jsx)(l.A, { onClick: t }) : null,
-                    (0, r.jsx)(u.p, { ...n, variant: i ?? "active" }),
+                    null != t ? (0, r.jsx)(c.A, { onClick: t }) : null,
+                    (0, r.jsx)(d.p, { ...n, variant: s ?? "active" }),
                 ],
             }),
         ],
     });
 }
-function h(e) {
-    let { children: t, size: n = "md", maxHeight: i = "viewport", ...a } = e;
-    return (0, r.jsx)(s.dWK, { size: n, ...a, maxHeight: i, children: t });
+function E(e) {
+    let { children: t, size: n = "md", maxHeight: i = "viewport", ...s } = e;
+    return (0, r.jsx)(o.dWK, { size: n, ...s, maxHeight: i, children: t });
 }
-function m(e) {
+function g(e) {
     let {
         title: t,
         gradientColor: n = "purple",
         countryCode: i,
-        headerBadgeText: a,
-        headerBadgeIcon: o,
+        headerBadgeText: s,
+        headerBadgeIcon: a,
         onBackClick: l,
         primaryButtonProps: u,
-        children: d,
-        ...f
+        children: c,
+        ...d
     } = e;
-    return (0, r.jsx)(c.e0, {
-        children: (0, r.jsxs)(s.dWK, {
-            ...f,
+    return (0, r.jsx)(_.e0, {
+        children: (0, r.jsxs)(o.dWK, {
+            ...d,
             children: [
-                (0, r.jsx)(_, { gradientColor: n, title: t, countryCode: i, headerBadgeText: a, headerBadgeIcon: o }),
-                (0, r.jsx)(s.cwr, { children: d }),
-                (0, r.jsx)(p, { onBackClick: l, primaryButtonProps: u }),
+                (0, r.jsx)(p, { gradientColor: n, title: t, countryCode: i, headerBadgeText: s, headerBadgeIcon: a }),
+                (0, r.jsx)(o.cwr, { children: c }),
+                (0, r.jsx)(m, { onBackClick: l, primaryButtonProps: u }),
             ],
         }),
     });

@@ -1,2 +1,2 @@
 "use strict";
-e.exports = { bI: "countryFlagEmoji_ebbc17" };
+e.exports = { K4: "checkoutFooterPortal_ebbc17", bI: "countryFlagEmoji_ebbc17" };
