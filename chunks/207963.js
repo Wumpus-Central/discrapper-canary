@@ -139,9 +139,9 @@ function v(t, e, n) {
         );
     return (
         (0, o.Ay)(() => {
-            d(n);
+            null == l && d(n);
         }),
-        { state: l, executeStateUpdate: d, isDisabled: !1, visualState: C.BB.NORMAL, error: u }
+        { state: l ?? n ?? null, executeStateUpdate: d, isDisabled: !1, visualState: C.BB.NORMAL, error: u }
     );
 }
 let P = i.createContext(null);
