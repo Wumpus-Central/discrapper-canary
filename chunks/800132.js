@@ -29,16 +29,19 @@ let C = (e) => e.name,
             r = A.Ay.canUseCollectibles(n),
             i = (0, p.WD)(e, { isPremiumUser: r, discount: (0, p.fT)(e, r) }),
             s = !r || null != t;
-        return null == i || i.showDefaultPriceOnly
-            ? {}
-            : {
-                  PriceIcon: i.showNitroPrice ? a.tvc : void 0,
-                  priceSubTextHasStrikethrough: !0,
-                  priceSubText:
-                      !s && i.finalPriceIsDifferent
-                          ? (0, I.$g)(i.originalPrice.amount, i.originalPrice.currency)
-                          : void 0,
-              };
+        if (null != i && !i.showDefaultPriceOnly) {
+            let e = i.originalPrice.amount,
+                t = i.finalPrice.amount;
+            return {
+                PriceIcon: i.showNitroPrice ? a.tvc : void 0,
+                priceSubTextHasStrikethrough: !0,
+                priceTooltip: y.intl.formatToPlainString(v.default.YUNJJa, {
+                    savingsText: (0, I.$g)(e - t, i.originalPrice.currency),
+                }),
+                priceSubText: !s && i.finalPriceIsDifferent ? (0, I.$g)(e, i.originalPrice.currency) : void 0,
+            };
+        }
+        return {};
     },
     R = (e) => {
         let { sku: t, product: n } = e;
