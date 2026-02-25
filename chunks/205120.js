@@ -1,27 +1,17 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => m });
 var i = n(627968),
     l = n(64700),
-    a = n(155718),
-    s = n(751258),
+    s = n(155718),
+    a = n(751258),
     r = n(451909),
     o = n(652215),
     c = n(650583),
     d = n(985018),
-    u = n(921522);
+    u = n(231732);
 function h(e) {
     e.stopPropagation();
 }
-function m() {
-    let e = window.getSelection();
-    if (null == e) return { selection: null, rangeStartContainer: null, rangeStartOffset: null };
-    let t = e.getRangeAt(0);
-    return { selection: e, rangeStartContainer: t.startContainer, rangeStartOffset: t.startOffset };
-}
-function A(e, t, n) {
-    let i = document.createRange();
-    i.setStart(t, n), i.collapse(!0), e.removeAllRanges(), e.addRange(i);
-}
-class p extends l.PureComponent {
+class m extends l.PureComponent {
     node = l.createRef();
     onClickSave = () => {
         let { textValue: e } = this.props;
@@ -34,13 +24,13 @@ class p extends l.PureComponent {
             : d({ value: e, channel: n }).then((i) => {
                   let { valid: d } = i;
                   if (!d) return Promise.resolve({ shouldClear: !1, shouldRefocus: !1 });
-                  let u = (0, s.S)(e, { channel: n, isEdit: !0 });
+                  let u = (0, a.S)(e, { channel: n, isEdit: !0 });
                   if (
                       (u?.content != null && (e = u.content),
                       t.hasFlag(o.pr7.IS_COMPONENTS_V2) && this.props.channel.type === o.rbe.GUILD_ANNOUNCEMENT)
                   ) {
                       let t = r.Ay.parse(this.props.channel, e),
-                          n = this.props.message.components.filter((e) => e.type === a.I5.TEXT_DISPLAY);
+                          n = this.props.message.components.filter((e) => e.type === s.I5.TEXT_DISPLAY);
                       if (1 === n.length) {
                           let i = n[0];
                           e !== i.content && c(this.props.channel.id, this.props.message.id, t);
@@ -61,26 +51,12 @@ class p extends l.PureComponent {
             let { channel: t, onCancel: n } = this.props;
             e.preventDefault(), e.stopPropagation(), n(t.id);
         }
-        if (e.key === c.dh.HOME && !(e.shiftKey || e.ctrlKey)) {
-            e.preventDefault();
-            let { selection: t, rangeStartContainer: n, rangeStartOffset: i } = m();
-            if (null == t || null == n || null == i) return;
-            A(t, n, 0);
-        }
-        if (e.key === c.dh.END && !(e.shiftKey || e.ctrlKey)) {
-            e.preventDefault();
-            let { selection: t, rangeStartContainer: n, rangeStartOffset: i } = m();
-            if (null == t || null == n || null == i) return;
-            let l = n.textContent;
-            if (null == l) return;
-            A(t, n, l.length);
-        }
     };
     render() {
-        let { className: e, textValue: t, richValue: n, message: l, channel: a, onCancel: s, children: r } = this.props,
+        let { className: e, textValue: t, richValue: n, message: l, channel: s, onCancel: a, children: r } = this.props,
             o = (0, i.jsx)("div", {
                 className: u.z,
-                children: d.intl.format(d.t.wDsPXs, { onCancel: () => s(a.id), onSave: this.onClickSave }),
+                children: d.intl.format(d.t.wDsPXs, { onCancel: () => a(s.id), onSave: this.onClickSave }),
             });
         return (0, i.jsxs)("div", {
             className: e,
@@ -91,7 +67,7 @@ class p extends l.PureComponent {
                     textValue: t,
                     richValue: n,
                     message: l,
-                    channel: a,
+                    channel: s,
                     onChange: this.onChange,
                     onSubmit: this.onSubmit,
                     onKeyDown: this.onKeyDown,

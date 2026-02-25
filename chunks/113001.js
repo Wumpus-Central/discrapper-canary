@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => p, j: () => f });
+n.d(t, { A: () => m, j: () => f });
 var r = n(877413),
     i = n.n(r),
-    a = n(284009),
-    s = n.n(a),
+    s = n(284009),
+    a = n.n(s),
     o = n(186306),
     l = n(339871),
     u = n(35277),
@@ -11,15 +11,31 @@ var r = n(877413),
     d = n(652215);
 let _ = "  ";
 function f(e, t) {
-    let { cmd: n = !1, ctrl: r = !1, alt: i = !1, shift: a = !1 } = t;
+    let { cmd: n = !1, ctrl: r = !1, alt: i = !1, shift: s = !1 } = t;
     return (
         (null == n || e.metaKey === n) &&
         (null == r || e.ctrlKey === r) &&
         (null == i || e.altKey === i) &&
-        (null == a || e.shiftKey === a)
+        (null == s || e.shiftKey === s)
     );
 }
-function p(e) {
+let p = (e) => {
+        let t = c.VW.getCurrentBlock(e);
+        if (null != t) {
+            let n = c.VW.start(e, t[1]);
+            return u.b.select(e, { anchor: n, focus: n }), !0;
+        }
+        return !1;
+    },
+    h = (e) => {
+        let t = c.VW.getCurrentBlock(e);
+        if (null != t) {
+            let n = c.VW.end(e, t[1]);
+            return u.b.select(e, { anchor: n, focus: n }), !0;
+        }
+        return !1;
+    };
+function m(e) {
     return (
         (e.onKeyDown = (t) => {
             let n = e.isMac;
@@ -41,23 +57,23 @@ function p(e) {
                     if (null != e.selection && f(t, { shift: null })) {
                         let [n, r] = c.ZF.edges(e.selection),
                             i = c.VW.blocks(e).slice(n.path[0], r.path[0] + 1),
-                            a = !0;
+                            s = !0;
                         for (let [e] of i)
                             if ("line" !== e.type || !e.codeBlockState?.isInCodeBlock) {
-                                a = !1;
+                                s = !1;
                                 break;
                             }
-                        if (a) {
+                        if (s) {
                             if (!t.shiftKey && c.ZF.isCollapsed(e.selection)) return u.b.insertText(e, _), !0;
                             let n = !t.shiftKey;
                             return (
                                 o.o.withSingleEntry(e, () => {
                                     let t = e.selection?.anchor ?? c.VW.start(e, []),
                                         r = e.selection?.focus ?? c.VW.end(e, []);
-                                    for (let [a, s] of i) {
-                                        let i = a.children[0];
+                                    for (let [s, a] of i) {
+                                        let i = s.children[0];
                                         if (!c.l5.isText(i)) continue;
-                                        let o = c.PW.child(s, 0),
+                                        let o = c.PW.child(a, 0),
                                             l = { path: o, offset: 0 };
                                         if (n)
                                             u.b.insertText(e, _, { at: l }),
@@ -68,7 +84,7 @@ function p(e) {
                                                     0 !== r.offset &&
                                                     (r = { path: o, offset: r.offset + _.length });
                                         else if (i.text.startsWith(_)) {
-                                            let n = { path: c.PW.child(s, 0), offset: _.length };
+                                            let n = { path: c.PW.child(a, 0), offset: _.length };
                                             u.b.delete(e, { at: { anchor: l, focus: n } }),
                                                 c.PW.equals(t.path, o) &&
                                                     (t = { path: o, offset: Math.max(0, t.offset - _.length) }),
@@ -90,28 +106,22 @@ function p(e) {
                     else if (f(t, { ctrl: !n, alt: n, shift: null })) r = "word";
                     else if (n && f(t, { cmd: !0, shift: null })) return !1;
                     else return !1;
-                    let a = e.children[e.selection?.focus?.path[0] ?? 0],
-                        s = "rtl" === i()(c.AS.string(a)),
-                        o = (t.which === d.Ks6.ARROW_LEFT) == !s;
+                    let s = e.children[e.selection?.focus?.path[0] ?? 0],
+                        a = "rtl" === i()(c.AS.string(s)),
+                        o = (t.which === d.Ks6.ARROW_LEFT) == !a;
                     return u.b.keyboardMove(e, { reverse: o, unit: r, edge: t.shiftKey ? "focus" : void 0 }), !0;
                 }
                 case d.Ks6.A:
-                    if (n && f(t, { ctrl: !0 })) {
-                        let t = c.VW.getCurrentBlock(e);
-                        if (null != t) {
-                            let n = c.VW.start(e, t[1]);
-                            return u.b.select(e, { anchor: n, focus: n }), !0;
-                        }
-                    }
+                    if (n && f(t, { ctrl: !0 }) && p(e)) return !0;
                     break;
                 case d.Ks6.E:
-                    if (n && f(t, { ctrl: !0 })) {
-                        let t = c.VW.getCurrentBlock(e);
-                        if (null != t) {
-                            let n = c.VW.end(e, t[1]);
-                            return u.b.select(e, { anchor: n, focus: n }), !0;
-                        }
-                    }
+                    if (n && f(t, { ctrl: !0 }) && h(e)) return !0;
+                    break;
+                case d.Ks6.HOME:
+                    if (f(t, { shift: !1, ctrl: !1 }) && p(e)) return !0;
+                    break;
+                case d.Ks6.END:
+                    if (f(t, { shift: !1, ctrl: !1 }) && h(e)) return !0;
                     break;
                 case d.Ks6.BACKSPACE:
                 case d.Ks6.DELETE:
@@ -124,10 +134,10 @@ function p(e) {
                         null != e.selection
                     ) {
                         let [t, n] = c.ZF.edges(e.selection),
-                            [i, a] = c.VW.node(e, [r ? t.path[0] : n.path[0]]);
+                            [i, s] = c.VW.node(e, [r ? t.path[0] : n.path[0]]);
                         if (
-                            (s()(c.VW.isBlock(e, i), "Top-most node of selection is not a block"),
-                            (r && !c.Kh.isAtStart(t, [i, a])) || (!r && !c.Kh.isAtEnd(n, [i, a])))
+                            (a()(c.VW.isBlock(e, i), "Top-most node of selection is not a block"),
+                            (r && !c.Kh.isAtStart(t, [i, s])) || (!r && !c.Kh.isAtEnd(n, [i, s])))
                         )
                             return r ? e.deleteBackward("line") : e.deleteForward("line"), !0;
                     }
