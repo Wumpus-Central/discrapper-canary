@@ -295,9 +295,12 @@ function K(e) {
         }, [o, n]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)("div", {
+            (0, i.jsxs)("div", {
                 className: V.IF,
-                children: (0, i.jsx)(G.A, { ref: r, tooltipText: t, onClick: d, icon: u._xR }),
+                children: [
+                    (0, i.jsx)("div", { className: V.uD, children: (0, i.jsx)("div", { className: V.Z9 }) }),
+                    (0, i.jsx)(G.A, { ref: r, tooltipText: t, onClick: d, icon: u._xR }),
+                ],
             }),
             null != a && l({ targetElementRef: r, markAsDismissed: o }),
         ],
