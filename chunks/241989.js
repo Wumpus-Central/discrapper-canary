@@ -5,9 +5,9 @@ n(64700);
 var i = n(503698),
     s = n.n(i),
     a = n(397927),
-    o = n(756366),
+    o = n(523376),
     l = n(985018),
-    u = n(559485);
+    u = n(547595);
 function c(e) {
     let {
             header: t,
@@ -68,7 +68,6 @@ function c(e) {
                                             variant: "text-sm/normal",
                                             color: "text-muted",
                                             lineClamp: 1,
-                                            className: u.Qy,
                                             children: g,
                                         }),
                                 ],

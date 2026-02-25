@@ -6,7 +6,6 @@ e.exports = {
     nr: "headerIcon_da8ac7",
     zH: "details_da8ac7",
     Qq: "text_da8ac7",
-    Qy: "giftMessage_da8ac7",
     s: "giftAvatar_da8ac7",
     p6: "priceContainer_da8ac7",
     nw: "currentPrice_da8ac7",
