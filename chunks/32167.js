@@ -1,31 +1,30 @@
-i.d(e, { default: () => c });
+i.d(t, { default: () => u });
 var s = i(627968),
     n = i(64700),
-    l = i(158954),
-    a = i(546351),
-    r = i(929120),
-    d = i(985018);
-function c(t) {
-    let { direction: e, affectedGuildIds: i, settingName: c, onClose: u, transitionState: o } = t,
-        m = e === a.AI.RESTRICTING,
-        x = m ? d.intl.string(d.t.jRx1Aa) : d.intl.string(d.t.S0Y0bh),
-        h = m ? d.intl.format(d.t.Fs96LO, { settingName: c }) : d.intl.format(d.t.GcoYX8, { settingName: c }),
-        f = m ? d.intl.string(d.t["4DM5HJ"]) : d.intl.string(d.t.WRrDtI),
-        j = (0, n.useMemo)(
+    a = i(158954),
+    l = i(397927),
+    r = i(365258),
+    d = i(929120),
+    c = i(985018);
+function u(e) {
+    let { direction: t, affectedGuildIds: i, settingName: u, onClose: o, transitionState: m } = e,
+        x = t === r.AI.RESTRICTING,
+        { title: h, subtitle: j, confirmText: f, toastContent: I } = (0, r.ae)(x, u),
+        b = (0, n.useMemo)(
             () => () => {
-                (0, a.gF)(e, i);
+                (0, r.gF)(t, i), (0, l.showToast)((0, l.createToast)(I, l.ToastType.SUCCESS));
             },
-            [e, i],
+            [t, i, I],
         );
-    return (0, s.jsx)(l.ConfirmModal, {
-        title: x,
-        subtitle: h,
+    return (0, s.jsx)(a.ConfirmModal, {
+        title: h,
+        subtitle: j,
         confirmText: f,
-        cancelText: d.intl.string(d.t.X1rGEm),
+        cancelText: c.intl.string(c.t.X1rGEm),
         variant: "primary",
-        onConfirm: j,
-        onClose: u,
-        transitionState: o,
-        children: (0, s.jsx)(r.n, { guildIds: i, direction: e }),
+        onConfirm: b,
+        onClose: o,
+        transitionState: m,
+        children: (0, s.jsx)(d.n, { guildIds: i, direction: t }),
     });
 }

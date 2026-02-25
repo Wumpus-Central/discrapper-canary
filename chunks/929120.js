@@ -1,51 +1,50 @@
-i.d(e, { n: () => o });
+i.d(t, { n: () => m });
 var s = i(627968),
-    n = i(158954),
+    n = i(64700),
+    a = i(158954),
     l = i(311907),
-    a = i(71393),
-    r = i(546351),
-    d = i(704037),
-    c = i(985018),
-    u = i(832974);
-function o(t) {
-    let { guildIds: e, direction: i } = t,
-        o = (0, l.bG)([a.A], () => a.A.getGuild(e[0])),
-        m = i === r.AI.RESTRICTING ? c.intl.string(c.t.e6Kpa7) : c.intl.string(c.t.cy4G4y),
-        x = o?.name ?? "",
-        h =
-            null != o && e.length > 1
-                ? c.intl.format(c.t.UPWFEu, { guildName: x })
-                : c.intl.format(c.t.xYCTVQ, { guildName: x });
+    r = i(71393),
+    d = i(365258),
+    c = i(704037),
+    u = i(985018),
+    o = i(593636);
+function m(e) {
+    let { guildIds: t, direction: i } = e,
+        m = (0, n.useMemo)(() => (0, d.AB)(t), [t]),
+        x = (0, l.bG)([r.A], () => r.A.getGuild(m[0])),
+        h = i === d.AI.RESTRICTING ? u.intl.string(u.t.e6Kpa7) : u.intl.string(u.t.cy4G4y),
+        j = x?.name ?? "",
+        f = null != x && m.length > 1;
     return (0, s.jsxs)("div", {
-        className: u.Nr,
+        className: o.Nr,
         children: [
             (0, s.jsxs)("div", {
-                className: u.Bj,
+                className: o.Bj,
                 children: [
-                    (0, s.jsx)(n.DZT, {
+                    (0, s.jsx)(a.DZT, {
                         variant: "text-md/semibold",
-                        children: c.intl.format(c.t["0fkj8J"], { count: e.length }),
+                        children: u.intl.format(u.t["0fkj8J"], { count: m.length }),
                     }),
                     (0, s.jsxs)("div", {
-                        className: u.jf,
+                        className: o.jf,
                         children: [
-                            (0, s.jsx)(n.EYj, {
+                            (0, s.jsx)(a.EYj, {
                                 variant: "text-sm/medium",
-                                color: i === r.AI.RESTRICTING ? "text-feedback-positive" : "text-muted",
-                                className: u.Rh,
-                                children: m,
+                                color: i === d.AI.RESTRICTING ? "text-feedback-positive" : "text-muted",
+                                className: o.Rh,
+                                children: h,
                             }),
-                            (0, s.jsxs)(n.EYj, {
+                            (0, s.jsx)(a.EYj, {
                                 variant: "text-sm/medium",
                                 color: "text-muted",
-                                className: u.SI,
-                                children: ["\xb7 ", h],
+                                className: o.SI,
+                                children: u.intl.format(f ? u.t["8ZLbvR"] : u.t["+NoTYm"], { guildName: j }),
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, s.jsx)(d.l, { guildIds: e, iconSize: 24 }),
+            (0, s.jsx)(c.l, { guildIds: m, iconSize: 24 }),
         ],
     });
 }

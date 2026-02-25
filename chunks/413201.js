@@ -1,39 +1,37 @@
-i.d(e, { default: () => u });
-var n = i(627968),
-    s = i(64700),
+i.d(t, { default: () => u });
+var s = i(627968),
+    n = i(64700),
     l = i(158954),
     a = i(253932),
-    r = i(546351),
+    r = i(365258),
     d = i(929120),
     c = i(985018);
-function u(t) {
+function u(e) {
     let {
-            direction: e,
+            direction: t,
             affectedGuildIds: i,
             settingName: u,
-            mappedActivityValue: o,
-            onClose: m,
+            mappedActivityValue: m,
+            onClose: o,
             transitionState: x,
-        } = t,
-        h = e === r.AI.RESTRICTING,
-        j = h ? c.intl.string(c.t.eYDA7D) : c.intl.string(c.t["9jYwjo"]),
-        f = h ? c.intl.format(c.t["c5/jDc"], { settingName: u }) : c.intl.format(c.t.ajzh8S, { settingName: u }),
-        I = h ? c.intl.string(c.t["6uPZV1"]) : c.intl.string(c.t.a9PIyD),
-        g = (0, s.useMemo)(
+        } = e,
+        h = t === r.AI.RESTRICTING,
+        { title: j, subtitle: f, confirmText: I } = (0, r.vz)(h, u),
+        b = (0, n.useMemo)(
             () => () => {
-                a._Z.updateSetting(o), (0, r.gF)(e, i);
+                a._Z.updateSetting(m), (0, r.gF)(t, i);
             },
-            [o, e, i],
+            [m, t, i],
         );
-    return (0, n.jsx)(l.ConfirmModal, {
+    return (0, s.jsx)(l.ConfirmModal, {
         title: j,
         subtitle: f,
         confirmText: I,
         cancelText: c.intl.string(c.t.X1rGEm),
         variant: "primary",
-        onConfirm: g,
-        onClose: m,
+        onConfirm: b,
+        onClose: o,
         transitionState: x,
-        children: (0, n.jsx)(d.n, { guildIds: i, direction: e }),
+        children: (0, s.jsx)(d.n, { guildIds: i, direction: t }),
     });
 }
