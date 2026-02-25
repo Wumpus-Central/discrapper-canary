@@ -1,83 +1,83 @@
-t.d(n, { A: () => T });
-var i = t(627968),
-    l = t(64700),
-    r = t(284009),
-    a = t.n(r),
-    s = t(311907),
-    d = t(397927),
-    o = t(842209),
-    c = t(210978),
-    u = t(545152),
-    h = t(664929),
-    A = t(700210),
-    g = t(718676),
-    m = t(71393),
-    p = t(287809),
-    _ = t(822517),
-    E = t(652215),
-    f = t(73510),
-    b = t(985018),
-    x = t(329872);
-let T = (e) => {
-    let n,
+n.d(t, { A: () => b });
+var i = n(627968),
+    l = n(64700),
+    a = n(284009),
+    r = n.n(a),
+    s = n(311907),
+    o = n(397927),
+    d = n(842209),
+    c = n(210978),
+    u = n(545152),
+    g = n(664929),
+    A = n(700210),
+    m = n(718676),
+    p = n(71393),
+    f = n(287809),
+    h = n(822517),
+    y = n(652215),
+    E = n(73510),
+    S = n(985018),
+    _ = n(936790);
+let b = (e) => {
+    let t,
         {
-            commandType: t,
-            commandTargetId: r,
-            channel: T,
-            guildId: v,
-            onHeightUpdate: I,
-            context: j,
-            showIcon: C = !1,
+            commandType: n,
+            commandTargetId: a,
+            channel: b,
+            guildId: I,
+            onHeightUpdate: v,
+            context: x,
+            showIcon: j = !1,
         } = e,
-        S = (0, s.bG)([m.A], () => m.A.getGuild(v ?? T.guild_id)),
-        y = (0, s.bG)([p.default], () => p.default.getUser(r)),
-        O = (0, A.A)({ user: y, guildId: S?.id, context: j }),
-        R = l.useMemo(() => ({ channel: T, type: "channel" }), [T]),
+        T = (0, s.bG)([p.A], () => p.A.getGuild(I ?? b.guild_id)),
+        D = (0, s.bG)([f.default], () => f.default.getUser(a)),
+        M = (0, A.A)({ user: D, guildId: T?.id, context: x }),
+        C = l.useMemo(() => ({ channel: b, type: "channel" }), [b]),
         {
-            newUIEnabled: w,
-            searchEnabled: N,
-            desktopSendIconEnabled: D,
-        } = _.A.useConfig({ location: "useAppsCommandItems" }),
-        [U, G] = l.useState(""),
-        P = "" !== U,
+            newUIEnabled: N,
+            searchEnabled: O,
+            desktopSendIconEnabled: R,
+        } = h.A.useConfig({ location: "useAppsCommandItems" }),
+        [G, L] = l.useState(""),
+        w = "" !== G,
         {
-            commands: M,
-            commandsByActiveSection: V,
+            commands: P,
+            commandsByActiveSection: U,
             sectionDescriptors: k,
-            loading: L,
-        } = o.cu({
-            context: R,
-            filters: { text: P ? U : void 0, commandTypes: [t] },
-            options: { limit: f.YC, includeFrecency: w && !P, scoreMethod: P ? c.M.COMMAND_OR_APPLICATION : void 0 },
+            loading: F,
+        } = d.cu({
+            context: C,
+            filters: { text: w ? G : void 0, commandTypes: [n] },
+            options: { limit: E.YC, includeFrecency: N && !w, scoreMethod: w ? c.M.COMMAND_OR_APPLICATION : void 0 },
             allowFetch: !0,
         }),
-        { sections: B } = l.useMemo(() => {
+        { sections: X } = l.useMemo(() => {
             let e = {};
             return (
-                k.forEach((n) => {
-                    e[n.id] = n;
+                k.forEach((t) => {
+                    e[t.id] = t;
                 }),
                 { sections: e }
             );
         }, [k]),
-        F = l.useRef(L);
+        V = l.useRef(F);
     l.useEffect(() => {
-        L !== F.current && ((F.current = L), I?.());
-    }, [L, I]);
-    let X = l.useCallback(
-            (e, n) => {
-                let { showAppIcon: t } = n;
-                a()(null != T, "menu item should not show if channel is null");
-                let l = B[e.applicationId],
-                    s = t && null != l ? (0, h.Rg)(l) : void 0,
-                    o =
+        F !== V.current && ((V.current = F), v?.());
+    }, [F, v]);
+    let B = l.useCallback(
+            (e, t) => {
+                let { showAppIcon: n } = t;
+                r()(null != b, "menu item should not show if channel is null");
+                let l = X[e.applicationId],
+                    s = n && null != l ? (0, g.Rg)(l) : void 0,
+                    d =
                         null != s && null != l
                             ? (e) => {
-                                  let { className: n } = e;
+                                  let { className: t } = e;
                                   return (0, i.jsx)("span", {
-                                      className: n,
+                                      className: t,
                                       children: (0, i.jsx)(s, {
-                                          channel: T,
+                                          channel: b,
                                           section: l,
                                           width: 20,
                                           height: 20,
@@ -87,52 +87,52 @@ let T = (e) => {
                               }
                             : void 0;
                 return (0, i.jsx)(
-                    d.Drp,
+                    o.Drp,
                     {
                         id: e.id,
                         label: e.displayName,
-                        iconLeft: o,
-                        leadingAccessory: null != o ? { type: "icon", icon: o } : void 0,
-                        trailingIndicator: D ? { type: "icon", icon: d.lX7 } : void 0,
-                        icon: D ? d.lX7 : void 0,
+                        iconLeft: d,
+                        leadingAccessory: null != d ? { type: "icon", icon: d } : void 0,
+                        trailingIndicator: R ? { type: "icon", icon: o.lX7 } : void 0,
+                        icon: R ? o.lX7 : void 0,
                         action: () => {
                             (0, u.A)({
                                 command: e,
                                 optionValues: {},
-                                context: { channel: T, guild: S },
-                                commandTargetId: r,
+                                context: { channel: b, guild: T },
+                                commandTargetId: a,
                             });
                         },
                     },
                     e.id,
                 );
             },
-            [T, B, D, S, r],
-        ),
-        W = l.useCallback(
-            (e) => {
-                let { section: n, data: t } = e;
-                return (0, i.jsx)(
-                    d.rXV,
-                    { label: b.intl.string(b.t.V0w2ap), children: t.map((e) => X(e, { showAppIcon: !0 })) },
-                    n.id,
-                );
-            },
-            [X],
+            [b, X, R, T, a],
         ),
         H = l.useCallback(
             (e) => {
-                let { section: n, data: t } = e,
-                    l = (0, h.Rg)(n),
-                    r =
+                let { section: t, data: n } = e;
+                return (0, i.jsx)(
+                    o.rXV,
+                    { label: S.intl.string(S.t.V0w2ap), children: n.map((e) => B(e, { showAppIcon: !0 })) },
+                    t.id,
+                );
+            },
+            [B],
+        ),
+        K = l.useCallback(
+            (e) => {
+                let { section: t, data: n } = e,
+                    l = (0, g.Rg)(t),
+                    a =
                         null != l
                             ? (e) => {
-                                  let { className: t } = e;
+                                  let { className: n } = e;
                                   return (0, i.jsx)("span", {
-                                      className: t,
+                                      className: n,
                                       children: (0, i.jsx)(l, {
-                                          channel: T,
-                                          section: n,
+                                          channel: b,
+                                          section: t,
                                           selectable: !1,
                                           width: 20,
                                           height: 20,
@@ -141,82 +141,81 @@ let T = (e) => {
                               }
                             : void 0;
                 return (0, i.jsx)(
-                    d.Drp,
+                    o.Drp,
                     {
-                        id: n.id,
-                        label: n.name,
-                        iconLeft: r,
-                        leadingAccessory: null != r ? { type: "icon", icon: r } : void 0,
-                        children: t.map((e) => X(e, { showAppIcon: !1 })),
+                        id: t.id,
+                        label: t.name,
+                        iconLeft: a,
+                        leadingAccessory: null != a ? { type: "icon", icon: a } : void 0,
+                        children: n.map((e) => B(e, { showAppIcon: !1 })),
                     },
-                    n.id,
+                    t.id,
                 );
             },
-            [T, X],
+            [b, B],
         ),
-        Y = (0, i.jsx)(
-            d.aK1,
+        q = (0, i.jsx)(
+            o.aK1,
             {
                 id: "command-search",
-                control: (e, n) =>
-                    (0, i.jsx)(d.VPO, { ...e, query: U, onChange: G, placeholder: b.intl.string(b.t.m1UwbP), ref: n }),
+                control: (e, t) =>
+                    (0, i.jsx)(o.VPO, { ...e, query: G, onChange: L, placeholder: S.intl.string(S.t.m1UwbP), ref: t }),
             },
             "command-search",
         );
-    if (L)
-        n = (0, i.jsx)(
-            d.Drp,
-            { id: "menu-commands-placeholder", render: () => (0, i.jsx)(g.A, {}), disabled: !0 },
+    if (F)
+        t = (0, i.jsx)(
+            o.Drp,
+            { id: "menu-commands-placeholder", render: () => (0, i.jsx)(m.A, {}), disabled: !0 },
             "menu-commands-placeholder",
         );
     else {
-        if (0 === M.length)
-            n = (0, i.jsxs)(i.Fragment, {
+        if (0 === P.length)
+            t = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    P && (0, i.jsxs)(i.Fragment, { children: [Y, (0, i.jsx)(d.bXX, {})] }),
+                    w && (0, i.jsxs)(i.Fragment, { children: [q, (0, i.jsx)(o.bXX, {})] }),
                     (0, i.jsx)(
-                        d.Drp,
-                        { id: "menu-commands-empty", label: b.intl.string(b.t.YSNlV2), disabled: !0 },
+                        o.Drp,
+                        { id: "menu-commands-empty", label: S.intl.string(S.t.YSNlV2), disabled: !0 },
                         "menu-commands-empty",
                     ),
                 ],
             });
-        else if (w)
-            if (P)
-                n = (0, i.jsxs)(i.Fragment, {
-                    children: [Y, (0, i.jsx)(d.bXX, {}), M.map((e) => X(e, { showAppIcon: !0 }))],
+        else if (N)
+            if (w)
+                t = (0, i.jsxs)(i.Fragment, {
+                    children: [q, (0, i.jsx)(o.bXX, {}), P.map((e) => B(e, { showAppIcon: !0 }))],
                 });
             else {
-                let e = V.find((e) => {
-                        let { section: n } = e;
-                        return n.id === f.Ik.FRECENCY;
+                let e = U.find((e) => {
+                        let { section: t } = e;
+                        return t.id === E.Ik.FRECENCY;
                     }),
-                    t = V.filter((e) => {
-                        let { section: n } = e;
-                        return n.id !== f.Ik.FRECENCY;
+                    n = U.filter((e) => {
+                        let { section: t } = e;
+                        return t.id !== E.Ik.FRECENCY;
                     });
-                n = (0, i.jsxs)(i.Fragment, {
+                t = (0, i.jsxs)(i.Fragment, {
                     children: [
-                        N && Y,
-                        null != e && W(e),
-                        (0, i.jsx)(d.rXV, { label: b.intl.string(b.t.PHjkRE), children: t.map((e) => H(e)) }),
+                        O && q,
+                        null != e && H(e),
+                        (0, i.jsx)(o.rXV, { label: S.intl.string(S.t.PHjkRE), children: n.map((e) => K(e)) }),
                     ],
                 });
             }
-        else n = M.map((e) => X(e, { showAppIcon: !0 }));
-        null != O &&
-            O.length > 0 &&
-            (n = (0, i.jsxs)(i.Fragment, { children: [n, (0, i.jsx)(d.bXX, {}, "separator"), O] }));
+        else t = P.map((e) => B(e, { showAppIcon: !0 }));
+        null != M &&
+            M.length > 0 &&
+            (t = (0, i.jsxs)(i.Fragment, { children: [t, (0, i.jsx)(o.bXX, {}, "separator"), M] }));
     }
-    if (!E.kvI.TEXTUAL.has(T.type))
-        if (null == O) return null;
-        else n = O;
-    return (0, i.jsx)(d.Drp, {
+    if (!y.kvI.TEXTUAL.has(b.type))
+        if (null == M) return null;
+        else t = M;
+    return (0, i.jsx)(o.Drp, {
         id: "apps",
-        label: b.intl.string(b.t.PHjkRE),
-        icon: C ? d.k9F : void 0,
-        leadingAccessory: C ? { type: "icon", icon: d.k9F } : void 0,
-        listClassName: x.p,
-        children: n,
+        label: S.intl.string(S.t.PHjkRE),
+        leadingAccessory: j ? { type: "icon", icon: o.k9F } : void 0,
+        listClassName: _.p,
+        children: t,
     });
 };
