@@ -545,6 +545,7 @@ var r = (function (e) {
             (e[(e.GIFT_INTENT_MESSAGE = 696)] = "GIFT_INTENT_MESSAGE"),
             (e[(e.MOBILE_REFERRAL_PROGRAM_BOTTOM_SHEET_ENTRYPOINT = 697)] =
                 "MOBILE_REFERRAL_PROGRAM_BOTTOM_SHEET_ENTRYPOINT"),
+            (e[(e.GAME_ACCOUNT_LINK_RECURRING_UPSELL = 698)] = "GAME_ACCOUNT_LINK_RECURRING_UPSELL"),
             e
         );
     })({}),
