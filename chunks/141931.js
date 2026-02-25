@@ -1,6 +1,12 @@
 "use strict";
-n.d(t, { du: () => r, fS: () => a, qQ: () => i });
-var r = (function (e) {
+n.d(t, { Fh: () => r, du: () => i, fS: () => a, qQ: () => s });
+class r extends Error {
+    name = "SystemServiceNotAvailableError";
+    constructor() {
+        super("System service not available");
+    }
+}
+var i = (function (e) {
         return (
             (e[(e.HasRTCConnection = 0)] = "HasRTCConnection"),
             (e[(e.IsSendingVideo = 1)] = "IsSendingVideo"),
@@ -13,7 +19,7 @@ var r = (function (e) {
             e
         );
     })({}),
-    i = (function (e) {
+    s = (function (e) {
         return (
             (e[(e.RendererProcessDelayed = 0)] = "RendererProcessDelayed"),
             (e[(e.RendererProcess = 1)] = "RendererProcess"),
