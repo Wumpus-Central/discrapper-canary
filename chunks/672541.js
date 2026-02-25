@@ -51,7 +51,7 @@ let I = (e) => {
                 onRedeemVirtualCurrency: c,
             }),
             { disabled: S, tooltipText: y, text: v } = (0, m.J6)({ orbBalance: f, orbPriceAmount: _ }),
-            { enabled: N } = (0, s.T0)({ location: "orb_checkout_review_step" }),
+            N = (0, s.D7)({ location: "orb_checkout_review_step" }),
             C = (0, i.useMemo)(
                 () => ({ onClick: p, loading: l, text: v, disabled: S, tooltipText: y }),
                 [p, l, v, S, y],

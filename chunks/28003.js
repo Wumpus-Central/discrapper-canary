@@ -16,8 +16,8 @@ var i = n(503698),
     h = n(788868),
     m = n(88001),
     E = n(985018),
-    g = n(763979),
-    A = n(22789),
+    g = n(558733),
+    A = n(52379),
     I = n(944496),
     T = n(51148),
     S = n(232266),
@@ -69,16 +69,16 @@ let R = (e, t) => (t ? (0, m.DP)() : e ? E.intl.string(E.t.lG6a5x) : E.intl.stri
             O = (0, d.lp)(m),
             D = (0, f.O)(),
             L = D?.discount?.amount,
-            { enabled: w } = (0, o.T0)({ location: "PremiumBrandRefreshPaymentHeader" }),
-            x = y ? N : v,
+            w = y ? N : v,
             {
-                step: M,
-                breadcrumbs: P,
-                startedPaymentFlowWithPaymentSourcesRef: k,
-                isDisplayingWowMomentConfirmation: U,
-            } = (0, u.P5)();
-        if (!S && (null == P || 0 === P.length)) return null;
-        let G = (P ?? []).flatMap((e) => {
+                step: x,
+                breadcrumbs: M,
+                startedPaymentFlowWithPaymentSourcesRef: P,
+                isDisplayingWowMomentConfirmation: k,
+            } = (0, u.P5)(),
+            U = (0, o.D7)({ location: "PremiumBrandRefreshPaymentHeader" });
+        if (!S && (null == M || 0 === M.length)) return null;
+        let G = (M ?? []).flatMap((e) => {
             let t = e.useBreadcrumbLabel(m),
                 n = e.sectionHeaderText;
             return null != t ? { id: e.id, label: t, sectionHeaderText: n } : [];
@@ -87,17 +87,17 @@ let R = (e, t) => (t ? (0, m.DP)() : e ? E.intl.string(E.t.lG6a5x) : E.intl.stri
         let F = (G = G.filter((e) => {
                 if (T && e.id === c.pn.PLAN_SELECT) return !1;
                 let t = e.id !== c.pn.ADD_PAYMENT_STEPS,
-                    n = e.id === c.pn.ADD_PAYMENT_STEPS && !k.current;
+                    n = e.id === c.pn.ADD_PAYMENT_STEPS && !P.current;
                 return !m || (m && (t || n));
-            })).find((e) => e.id === M),
+            })).find((e) => e.id === x),
             V = F?.sectionHeaderText?.() ?? F?.label,
-            B = !(w && null != M && l.M.includes(M)) && null != V && null != M,
-            H = O && B && M === c.pn.REVIEW,
+            B = !(U && null != x && l.M.includes(x)) && null != V && null != x,
+            H = O && B && x === c.pn.REVIEW,
             j = y ? "nitro-pink" : "nitro-green",
             Y = R(y, T),
             W = g.kL,
             K = s()(g.N1, A.headerGradient);
-        return U
+        return k
             ? (0, r.jsx)("div", { className: W, children: (0, r.jsx)(a.hLv, { color: j, className: K }) })
             : (0, r.jsxs)("div", {
                   className: W,
@@ -114,7 +114,7 @@ let R = (e, t) => (t ? (0, m.DP)() : e ? E.intl.string(E.t.lG6a5x) : E.intl.stri
                                       onClick: i,
                                       className: g.Ep,
                                   }),
-                              (0, r.jsx)("img", { src: x, alt: "", className: H ? g.i_ : g.kX }),
+                              (0, r.jsx)("img", { src: w, alt: "", className: H ? g.i_ : g.kX }),
                               (0, r.jsxs)("div", {
                                   className: g.FS,
                                   children: [
@@ -134,7 +134,7 @@ let R = (e, t) => (t ? (0, m.DP)() : e ? E.intl.string(E.t.lG6a5x) : E.intl.stri
                           ],
                       }),
                       (E || I) && (0, r.jsx)(p.A, { discountAmount: L }),
-                      B && (0, r.jsx)(C, { isOneStepCheckout: O, headerText: V, step: M, filteredBreadcrumbs: G }),
+                      B && (0, r.jsx)(C, { isOneStepCheckout: O, headerText: V, step: x, filteredBreadcrumbs: G }),
                   ],
               });
     };

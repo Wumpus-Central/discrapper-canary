@@ -37,7 +37,7 @@ function E(e) {
         y = T?.options?.hideDefaultModalBody ?? !1,
         v = T?.options?.sliderBodyClassName,
         N = "100%",
-        { enabled: C } = (0, _.T0)({ location: "PaymentModalStep" }),
+        C = (0, _.D7)({ location: "PaymentModalStep" }),
         b = i.useMemo(() => C && s === p.pn.REVIEW, [C, s]);
     return (0, r.jsxs)(r.Fragment, {
         children: [

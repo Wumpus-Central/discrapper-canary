@@ -113,15 +113,15 @@ function U(e) {
             subscriptionTier: H,
             handleClose: j,
         } = e,
-        { enabled: Y } = (0, u.T0)({ location: "payment_modal_review_step" }),
+        Y = (0, u.D7)({ location: "payment_modal_review_step" }),
         {
             activeSubscription: W,
             setUpdatedSubscription: K,
             contextMetadata: z,
             currencies: $,
             paymentSources: q,
-            priceOptions: X,
-            purchaseError: Z,
+            priceOptions: Z,
+            purchaseError: X,
             selectedPlan: Q,
             selectedSkuId: J,
             setCurrency: ee,
@@ -150,8 +150,8 @@ function U(e) {
         eO = null != eR && (!es || w.TP[eR].skus.includes(J)) ? eR : null,
         eD = { user_trial_offer_id: eb?.id };
     i.useEffect(() => {
-        null != Z && null != eI.current && eI.current.scrollIntoView({ behavior: "smooth" });
-    }, [Z]);
+        null != X && null != eI.current && eI.current.scrollIntoView({ behavior: "smooth" });
+    }, [X]);
     let eL = i.useCallback(
             (e, t, r) => {
                 K(e),
@@ -207,7 +207,7 @@ function U(e) {
             planGroup: ez,
             paymentSources: q,
             onPaymentSourceChange: e$,
-            priceOptions: X,
+            priceOptions: Z,
             currencies: $,
             onCurrencyChange: (e) => ee(e),
             handlePaymentSourceAdd: () => n(A.pn.ADD_PAYMENT_STEPS),
@@ -229,7 +229,7 @@ function U(e) {
         let e = {
             premiumSubscription: W,
             paymentSources: q,
-            priceOptions: X,
+            priceOptions: Z,
             onPaymentSourceChange: e$,
             onPaymentSourceAdd: eW,
             planId: Q.id,
@@ -256,7 +256,7 @@ function U(e) {
                 }),
             [eE, eG, ev],
         ),
-        eX = i.useMemo(
+        eZ = i.useMemo(
             () =>
                 (0, r.jsxs)(o.BJc, {
                     direction: "vertical",
@@ -268,7 +268,7 @@ function U(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             !Y && eq,
-            (0, r.jsxs)(L.dZ, { children: [!Y && eX, t] }),
+            (0, r.jsxs)(L.dZ, { children: [!Y && eZ, t] }),
             (0, r.jsx)(L.UX, {
                 children: (0, r.jsx)(D.A, {
                     premiumSubscription: W ?? null,
