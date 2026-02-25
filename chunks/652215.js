@@ -5,7 +5,7 @@ n.d(t, {
     $OG: () => tL,
     $aF: () => ta,
     $jw: () => ny,
-    $pd: () => eZ,
+    $pd: () => eX,
     AD1: () => p.AD,
     AKn: () => rO,
     AMi: () => tq,
@@ -19,7 +19,7 @@ n.d(t, {
     BBH: () => tS,
     BEX: () => S,
     BIo: () => nl,
-    BRT: () => nZ,
+    BRT: () => nX,
     BVt: () => _.BV,
     BYE: () => tJ,
     CS1: () => eD,
@@ -116,17 +116,17 @@ n.d(t, {
     T7x: () => eP,
     TBI: () => L,
     TGd: () => p.TG,
-    TGz: () => tX,
+    TGz: () => tZ,
     TLS: () => t6,
     TVA: () => t4,
     TZK: () => eq,
     T_y: () => tE,
     TbF: () => ej,
     ThZ: () => tv,
-    TpD: () => tZ,
+    TpD: () => tX,
     U2_: () => p.U2,
     UNo: () => eC,
-    UVF: () => Z,
+    UVF: () => X,
     Ue3: () => eN,
     Umv: () => ed,
     UqL: () => tN,
@@ -166,7 +166,7 @@ n.d(t, {
     _4N: () => ry,
     _Ak: () => p._A,
     _Ee: () => eh,
-    _Of: () => eX,
+    _Of: () => eZ,
     __0: () => p.__,
     _i_: () => tn,
     _tK: () => tQ,
@@ -266,7 +266,7 @@ n.d(t, {
     meB: () => p.me,
     mu: () => eY,
     n5X: () => nd,
-    n83: () => nX,
+    n83: () => nZ,
     nRU: () => R,
     nc_: () => tw,
     nd0: () => y,
@@ -312,7 +312,7 @@ n.d(t, {
     ugG: () => tH,
     uje: () => n4,
     ump: () => t3,
-    uss: () => X,
+    uss: () => Z,
     uvi: () => eO,
     uw8: () => rC,
     vkP: () => F,
@@ -937,7 +937,7 @@ var Y = (function (e) {
     q = (function (e) {
         return (e.ALWAYS = "ALWAYS"), (e.ONLY_WHILE_SPEAKING = "ONLY_WHILE_SPEAKING"), e;
     })({}),
-    X = (function (e) {
+    Z = (function (e) {
         return (
             (e.GUILDS = "GUILDS"),
             (e.VOICE = "VOICE"),
@@ -956,7 +956,7 @@ var Y = (function (e) {
             e
         );
     })({}),
-    Z = (function (e) {
+    X = (function (e) {
         return (
             (e.DEFAULT = "DEFAULT"),
             (e.PINNED = "PINNED"),
@@ -2003,10 +2003,10 @@ var eq = (function (e) {
             e
         );
     })({}),
-    eX = (function (e) {
+    eZ = (function (e) {
         return (e.VIDEO = "video"), (e.VOICE = "voice"), e;
     })({}),
-    eZ = (function (e) {
+    eX = (function (e) {
         return (
             (e[(e.PLAYING = 0)] = "PLAYING"),
             (e[(e.STREAMING = 1)] = "STREAMING"),
@@ -2256,6 +2256,7 @@ var tT = (function (e) {
             (e[(e.INVALID_MESSAGE_SEND_GAME_FRIEND_DM = 50251)] = "INVALID_MESSAGE_SEND_GAME_FRIEND_DM"),
             (e[(e.INVALID_MESSAGE_SEND_PROVISIONAL_ACCOUNT_OFFLINE = 50252)] =
                 "INVALID_MESSAGE_SEND_PROVISIONAL_ACCOUNT_OFFLINE"),
+            (e[(e.INVALID_MESSAGE_SEND_NO_MUTUAL_GUILDS = 50278)] = "INVALID_MESSAGE_SEND_NO_MUTUAL_GUILDS"),
             (e[(e.MFA_ENABLED = 60001)] = "MFA_ENABLED"),
             (e[(e.MFA_DISABLED = 60002)] = "MFA_DISABLED"),
             (e[(e.MFA_REQUIRED = 60003)] = "MFA_REQUIRED"),
@@ -3488,8 +3489,8 @@ let tK = Object.freeze({ GAME_INVITE_FRAGMENT: "/_discord/join?secret=" }),
         ANDROID: "https://play.google.com/store/apps/details?id=com.discord",
         META_QUEST: "https://www.meta.com/experiences/discord-talk-play-hang-out/25956082250713643/?require_login=true",
     }),
-    tX = 0x99aab5,
-    tZ = (0, u.Hl)(tX),
+    tZ = 0x99aab5,
+    tX = (0, u.Hl)(tZ),
     tQ = [
         1752220, 3066993, 3447003, 0x9b59b6, 0xe91e63, 0xf1c40f, 0xe67e22, 0xe74c3c, 9807270, 6323595, 1146986, 2067276,
         2123412, 7419530, 0xad1457, 0xc27c0e, 0xa84300, 0x992d22, 9936031, 5533306,
@@ -5974,8 +5975,8 @@ var nz = (function (e) {
         );
     })({});
 let nq = 14,
-    nX = 30;
-var nZ = (function (e) {
+    nZ = 30;
+var nX = (function (e) {
     return (
         (e.OVERLAY = "OVERLAY"), (e.APP = "APP"), (e.POPOUT = "POPOUT"), (e.CALL_TILE_POPOUT = "CALL_TILE_POPOUT"), e
     );
