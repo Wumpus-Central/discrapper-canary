@@ -79,7 +79,7 @@ var i = n(627968),
     eS = n(9626),
     eT = n(654487),
     ey = n(985018),
-    ev = n(176869);
+    ev = n(424795);
 let ej = (0, x.A)(function (e) {
     let { message: t } = e;
     return (0, i.jsx)(e_.A, { children: t });
@@ -129,7 +129,7 @@ class eR extends s.PureComponent {
                     ? I.push(u.M.ACCOUNT_LINK_INVITE_FRIENDS)
                     : I.push(u.M.POST_ACCOUNT_CONNECTION_RTC_POPOVER)
                 : g && null != s && I.push(u.M.ACCOUNT_LINK_PROMPT),
-            null != C && c?.name != null && I.push(u.M.JOIN_GAME_COMMUNITY_RTC_CTA),
+            null != C && c?.id != null && c?.name != null && I.push(u.M.JOIN_GAME_COMMUNITY_RTC_CTA),
             (0, i.jsx)(P.Ay, {
                 contentTypes: I,
                 groupName: eN.m.ACCOUNT_NAME_ZONE,
@@ -213,9 +213,10 @@ class eR extends s.PureComponent {
                                       },
                                   ],
                               })
-                            : n === u.M.JOIN_GAME_COMMUNITY_RTC_CTA && null != C && c?.name != null
+                            : n === u.M.JOIN_GAME_COMMUNITY_RTC_CTA && null != C && c?.id != null && c?.name != null
                               ? (0, i.jsx)(V.A, {
                                     targetElementRef: this.activityPopoutTargetRef,
+                                    gameId: c.id,
                                     gameName: c.name,
                                     gameCommunityGuildId: C,
                                     markAsDismissed: r,
