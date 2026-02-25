@@ -1,4 +1,4 @@
-r.d(t, { cs: () => x });
+r.d(t, { cs: () => y });
 var o = r(627968),
     a = r(64700),
     n = r(412703),
@@ -8,8 +8,8 @@ var o = r(627968),
     d = r(397927),
     _ = r(104473),
     c = r(341915),
-    u = r(73473),
-    p = r(717415),
+    p = r(73473),
+    u = r(717415),
     f = r(471535),
     b = r(652215);
 function m() {
@@ -17,7 +17,7 @@ function m() {
         { streamProgressSeconds: t = 0, completedAt: r = null, enrolledAt: o = null, claimedAt: a = null } = e;
     return {
         userId: "123",
-        questId: C,
+        questId: g,
         enrolledAt: o,
         completedAt: r,
         claimedAt: a,
@@ -28,10 +28,17 @@ function m() {
         progress: {},
     };
 }
-let C = `playground-video-quest-${Date.now()}`;
-function g(e) {
-    let { quest: t, isPortrait: r, children: n, isFullscreenEnabled: i, setIsFullscreenEnabled: s } = e,
-        l = a.useMemo(
+let g = `playground-video-quest-${Date.now()}`;
+function C(e) {
+    let {
+            quest: t,
+            isPortrait: r,
+            children: n,
+            isFullscreenEnabled: i,
+            useNewStyling: s,
+            setIsFullscreenEnabled: l,
+        } = e,
+        d = a.useMemo(
             () => ({
                 quest: t,
                 sourceQuestContent: c.uF.INTERNAL_PREVIEW_TOOL,
@@ -39,27 +46,28 @@ function g(e) {
                 isPortrait: r,
                 onClose: b.tEg,
                 isFullscreenEnabled: i,
-                setIsFullscreenEnabled: s,
+                setIsFullscreenEnabled: l,
+                useNewProgressBarStyling: s,
             }),
-            [t, r, i, s],
+            [t, r, i, l, s],
         ),
-        d = a.useMemo(() => ({ questConfig: t.config }), [t.config]);
-    return (0, o.jsx)(u.R, {
+        _ = a.useMemo(() => ({ questConfig: t.config }), [t.config]);
+    return (0, o.jsx)(p.R, {
         questOrQuests: t,
         questContent: c.uF.VIDEO_MODAL,
         sourceQuestContent: c.uF.INTERNAL_PREVIEW_TOOL,
         children: (e, t) =>
-            (0, o.jsx)(p.VideoQuestConfigContext.Provider, {
-                value: d,
-                children: (0, o.jsx)(p.VideoQuestModalContext.Provider, { value: l, children: n }),
+            (0, o.jsx)(u.VideoQuestConfigContext.Provider, {
+                value: _,
+                children: (0, o.jsx)(u.VideoQuestModalContext.Provider, { value: d, children: n }),
             }),
     });
 }
 function v(e) {
-    let { orientation: t, autoplay: r, questCompleted: u, videoUrl: p } = e,
-        v = "portrait" === t,
-        [h, x] = a.useState(!1),
-        y = (function (e) {
+    let { orientation: t, autoplay: r, questCompleted: p, useNewStyling: u, videoUrl: v } = e,
+        h = "portrait" === t,
+        [y, S] = a.useState(!1),
+        x = (function (e) {
             let { url: t, width: r = 640, height: o = 360, target: a = 60, videoTitle: i = "Test Video Quest" } = e;
             return {
                 type: n.n.WATCH_VIDEO,
@@ -68,16 +76,16 @@ function v(e) {
                 messages: { videoTitle: i },
             };
         })({
-            url: p,
-            width: v ? 360 : 640,
-            height: v ? 640 : 360,
-            videoTitle: v ? "Test Portrait Video" : "Test Landscape Video",
+            url: v,
+            width: h ? 360 : 640,
+            height: h ? 640 : 360,
+            videoTitle: h ? "Test Portrait Video" : "Test Landscape Video",
         }),
-        S = {
-            id: C,
+        T = {
+            id: g,
             preview: !0,
             config: {
-                id: C,
+                id: g,
                 configVersion: 2,
                 startsAt: "2024-01-01T00:00:00+00:00",
                 expiresAt: "2030-01-01T00:00:00+00:00",
@@ -111,7 +119,7 @@ function v(e) {
                     gameTile: "",
                     logotype: "",
                 },
-                taskConfigV2: { joinOperator: l.K.AND, tasks: { [n.n.WATCH_VIDEO]: y } },
+                taskConfigV2: { joinOperator: l.K.AND, tasks: { [n.n.WATCH_VIDEO]: x } },
                 features: [],
                 sharePolicy: s.i.SHAREABLE_EVERYWHERE,
                 ctaConfig: { link: "https://discord.com/", buttonLabel: "Learn More" },
@@ -119,38 +127,39 @@ function v(e) {
             userStatus: m({ enrolledAt: new Date().toISOString() }),
             targetedContent: [c.uF.QUEST_HOME_DESKTOP],
         },
-        P = u
+        P = p
             ? {
-                  ...S,
+                  ...T,
                   userStatus: m({
-                      enrolledAt: S.userStatus?.enrolledAt ?? null,
-                      completedAt: S.userStatus?.enrolledAt ?? null,
-                      streamProgressSeconds: y.target,
+                      enrolledAt: T.userStatus?.enrolledAt ?? null,
+                      completedAt: T.userStatus?.enrolledAt ?? null,
+                      streamProgressSeconds: x.target,
                   }),
               }
-            : S;
+            : T;
     return (0, o.jsx)("div", {
         style: {
-            width: v ? "400px" : "800px",
-            height: v ? "700px" : "500px",
+            width: h ? "400px" : "800px",
+            height: h ? "700px" : "500px",
             backgroundColor: "#1e1f22",
             borderRadius: "8px",
             overflow: "hidden",
             "--custom-footer-horizontal-padding": "20px",
         },
-        children: (0, o.jsx)(g, {
+        children: (0, o.jsx)(C, {
             quest: P,
-            isPortrait: v,
-            isFullscreenEnabled: h,
-            setIsFullscreenEnabled: x,
+            isPortrait: h,
+            isFullscreenEnabled: y,
+            setIsFullscreenEnabled: S,
+            useNewStyling: u,
             children: (0, o.jsx)(f.A, {
-                targetTimeSec: y.target,
+                targetTimeSec: x.target,
                 parentTransitionState: d.ip4.ENTERED,
                 onOptimisticProgressUpdate: b.tEg,
                 autoplay: r,
                 performanceClockStartTime: 0,
                 orientation: t,
-                videoUrlOverride: p,
+                videoUrlOverride: v,
             }),
         }),
     });
@@ -167,9 +176,10 @@ let h = {
         },
         autoplay: { label: "Autoplay", type: "boolean", defaultValue: !1 },
         questCompleted: { label: "Quest Completed", type: "boolean", defaultValue: !1 },
+        useNewStyling: { label: "Use New Styling", type: "boolean", defaultValue: !1 },
         videoUrl: { label: "Video URL", type: "text", defaultValue: _.kz },
     },
-    x = {
+    y = {
         title: "Video Player",
         stories: [
             {

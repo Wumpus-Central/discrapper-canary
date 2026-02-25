@@ -1,8 +1,10 @@
 e.exports = {
+    G9: "progressBarContainer_e5e85f",
+    TN: "fillBar_e5e85f",
+    UA: "fillBarWhite_e5e85f",
     jD: "cont_e5e85f",
     KF: "hitboxArea_e5e85f",
     uc: "interactionEnabled_e5e85f",
-    qB: "progress_e5e85f",
     pN: "progressGlow_e5e85f",
     r: "buffer_e5e85f",
     YK: "seekableBar_e5e85f",
@@ -10,4 +12,8 @@ e.exports = {
     Ub: "grabber_e5e85f",
     Fv: "roundedV1_e5e85f",
     KR: "roundedV2_e5e85f",
+    $v: "segmentWrapper_e5e85f",
+    WJ: "segmentBufferClip_e5e85f",
+    Bw: "segmentBufferContent_e5e85f",
+    DT: "glowBar_e5e85f",
 };

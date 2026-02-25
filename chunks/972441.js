@@ -1,51 +1,74 @@
-n.d(t, { A: () => o });
+n.d(t, { A: () => u });
 var r = n(64700),
+    l = n(158954),
     i = n(61491),
-    s = n(770178),
-    l = n(765548),
-    a = n(650583);
-function o(e) {
-    let { onScrubBack: t, onScrubForward: n, maxSeekableTime: o, interactionEnabled: u, duration: c, onClick: d } = e,
-        [m, p] = r.useState(null),
+    a = n(770178),
+    s = n(765548),
+    o = n(650583);
+function u(e) {
+    let {
+            onScrubBack: t,
+            onScrubForward: n,
+            maxSeekableTime: u,
+            interactionEnabled: c,
+            duration: d,
+            onClick: m,
+            percent: p,
+        } = e,
         [E, f] = r.useState(null),
-        [v, h] = r.useState(!1),
-        x = r.useMemo(() => (null == m || null == o ? null : (0, i.DX)(o, c, m)), [m, o, c]),
-        g = (0, l.A)((e) => {
-            p(e.contentRect);
+        [h, v] = r.useState(null),
+        [x, g] = r.useState(!1),
+        { i18n: S } = (0, l.G98)(),
+        A = r.useMemo(() => {
+            let e = { role: "progressbar", "aria-label": "Progress Bar" };
+            return (
+                null != p &&
+                    "number" == typeof p &&
+                    ((e["aria-valuenow"] = p),
+                    (e["aria-valuemin"] = 0),
+                    (e["aria-valuemax"] = 100),
+                    (e["aria-label"] = S.PERCENT_COMPLETE(Math.round(p)))),
+                e
+            );
+        }, [p, S]),
+        C = r.useMemo(() => (null == E || null == u ? null : (0, i.DX)(u, d, E)), [E, u, d]),
+        _ = (0, s.A)((e) => {
+            f(e.contentRect);
         }),
-        S = (0, s.w)(g),
-        C = (e) => {
-            null != S.current && f(e.clientX - S.current.getBoundingClientRect().left);
+        b = (0, a.w)(_),
+        T = (e) => {
+            null != b.current && v(e.clientX - b.current.getBoundingClientRect().left);
         };
     return {
-        contRef: S,
-        boundingRect: m,
+        contRef: b,
+        boundingRect: E,
         handleMouseEnter: (e) => {
-            u && (h(!0), C(e));
+            c && (g(!0), T(e));
         },
         handleMouseLeave: (e) => {
-            u && (h(!1), f(null));
+            c && (g(!1), v(null));
         },
         handleMouseMove: (e) => {
-            u && v && C(e);
+            c && x && T(e);
         },
         handleKeyDown: r.useCallback(
             (e) => {
                 let { key: r } = e;
-                r === a.N$.ArrowLeft && null != t
+                r === o.N$.ArrowLeft && null != t
                     ? (e.preventDefault(), e.stopPropagation(), t())
-                    : r === a.N$.ArrowRight && null != n && (e.preventDefault(), e.stopPropagation(), n());
+                    : r === o.N$.ArrowRight && null != n && (e.preventDefault(), e.stopPropagation(), n());
             },
             [t, n],
         ),
-        hoveredAtX: E,
-        maxSeekableX: x,
-        isHovering: v,
+        hoveredAtX: h,
+        maxSeekableX: C,
+        isHovering: x,
         handleClick: (e) => {
-            if (!u || null == d) return;
+            if (!c || null == m) return;
             let t = e.currentTarget.getBoundingClientRect(),
                 n = e.clientX - t.left;
-            d((0, i.hc)(n, t, c));
+            m((0, i.hc)(n, t, d));
         },
+        ariaProps: A,
     };
 }
