@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => k });
+n.d(t, { A: () => F });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -25,112 +25,123 @@ var r = n(627968),
     N = n(535229),
     C = n(526162),
     b = n(848971),
-    R = n(652215),
-    O = n(49999),
-    D = n(788868),
-    L = n(985018),
-    w = n(378399);
-let x = () => {
+    R = n(635917),
+    O = n(652215),
+    D = n(49999),
+    L = n(788868),
+    w = n(985018),
+    x = n(870217);
+let M = () => {
         let e = (0, o.bG)([S.default], () => v.Ay.isPremium(S.default.getCurrentUser())),
             t = (0, m.V)(),
-            n = t?.subscription_trial?.sku_id === D.pe.TIER_2;
+            n = t?.subscription_trial?.sku_id === L.pe.TIER_2;
         return (0, r.jsx)(E.A, {
             size: u.$n.Sizes.MEDIUM,
             textOptions: {
                 textOverride: e
-                    ? L.intl.string(L.t.IJI7yk)
+                    ? w.intl.string(w.t.IJI7yk)
                     : n
                       ? (0, v.FY)({
                             intervalType: t?.subscription_trial?.interval,
                             intervalCount: t?.subscription_trial?.interval_count,
                         })
-                      : L.intl.string(L.t.mr4K7D),
+                      : w.intl.string(w.t.mr4K7D),
             },
-            subscriptionTier: D.pe.TIER_2,
+            subscriptionTier: L.pe.TIER_2,
         });
     },
-    M = (e) => {
+    P = (e) => {
         let { markAsDismissed: t } = e,
             n = () => {
-                t?.(O.i.DISMISS), (0, h.Jp)(), (0, N.U)();
+                t?.(D.i.DISMISS), (0, h.Jp)(), (0, N.U)();
             };
         return (0, r.jsxs)("div", {
-            className: w.nV,
+            className: x.nV,
             children: [
                 (0, r.jsx)(c.DUT, {
-                    className: w.VV,
+                    className: x.VV,
                     onClick: () => n(),
-                    children: (0, r.jsx)(c.aXh, { size: "md", color: "currentColor", className: w.P0 }),
+                    children: (0, r.jsx)(c.aXh, { size: "md", color: "currentColor", className: x.P0 }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: w.DD,
+                    className: x.DD,
                     children: [
                         (0, r.jsx)(c.Heading, {
                             variant: "heading-lg/extrabold",
-                            children: L.intl.string(L.t["hb/wE0"]),
+                            children: w.intl.string(w.t["hb/wE0"]),
                         }),
-                        (0, r.jsx)(g.A, { className: w.PC }),
+                        (0, r.jsx)(g.A, { className: x.PC }),
                     ],
                 }),
             ],
         });
     },
-    P = (e) => {
+    k = (e) => {
         let { isCoachmark: t, markAsDismissed: n } = e,
             i = (0, o.bG)([C.A], () => C.A.isUpsellPreview),
             s = () => {
-                if ((n?.(O.i.DISMISS), (0, h.Jp)(), (0, N.U)(), !t)) {
+                if ((n?.(D.i.DISMISS), (0, h.Jp)(), (0, N.U)(), !t)) {
                     let e = (0, I.Ci)("AppIconEditor_handleBack");
                     (0, T.openUserSettings)(e ? A.X.DISPLAY_IN_APP_ICON_CATEGORY : A.X.APPEARANCE_PANEL, {
-                        section: R.nc_.APPEARANCE,
+                        section: O.nc_.APPEARANCE,
                     });
                 }
             };
         return (0, r.jsxs)("div", {
-            className: w.N3,
+            className: x.N3,
             children: [
-                i && (0, r.jsx)(x, {}),
+                i && (0, r.jsx)(M, {}),
                 (0, r.jsx)(l.$nd, {
                     onClick: s,
                     variant: "secondary",
                     fullWidth: !0,
-                    text: i || t ? L.intl.string(L.t["dqH+qr"]) : L.intl.string(L.t.Olc2K3),
+                    text: i || t ? w.intl.string(w.t["dqH+qr"]) : w.intl.string(w.t.Olc2K3),
                 }),
             ],
         });
-    };
-function k(e) {
-    let { isCoachmark: t, markAsDismissed: n } = e,
-        { analyticsLocations: s } = (0, p.Ay)(f.A.APP_ICON_EDITOR),
-        l = (0, o.bG)([S.default], () => S.default.getCurrentUser()),
-        { isUpsellPreview: u, shouldEditorAnimate: m } = (0, o.cf)([C.A, _.A], () => ({
+    },
+    U = 16,
+    G = 24;
+function F(e) {
+    let { isCoachmark: t, markAsDismissed: n, iconSize: s = R.N8.SIZE_60 } = e,
+        { analyticsLocations: l } = (0, p.Ay)(f.A.APP_ICON_EDITOR),
+        u = (0, o.bG)([S.default], () => S.default.getCurrentUser()),
+        { isUpsellPreview: m, shouldEditorAnimate: E } = (0, o.cf)([C.A, _.A], () => ({
             isUpsellPreview: C.A.isUpsellPreview,
             shouldEditorAnimate: t && !_.A.useReducedMotion,
         })),
-        E = h.fy.getState().activePanel === h.HP.APP_ICON;
+        g = h.fy.getState().activePanel === h.HP.APP_ICON;
     i.useEffect(() => {
-        u && y.default.track(R.HAw.PREMIUM_UPSELL_VIEWED, { type: D.e.APP_ICON_UPSELL, location_stack: s });
-    }, [u, s]);
-    let g = (0, d.A)(null, u ? N.U : R.tEg);
-    return (i.useEffect(() => {
-        if (u && !E) return N.U;
-    }, [u, E]),
-    null == l)
+        m && y.default.track(O.HAw.PREMIUM_UPSELL_VIEWED, { type: L.e.APP_ICON_UPSELL, location_stack: l });
+    }, [m, l]);
+    let A = (0, d.A)(null, m ? N.U : O.tEg);
+    i.useEffect(() => {
+        if (m && !g) return N.U;
+    }, [m, g]);
+    let I = i.useMemo(
+        () => ({
+            "--custom-in-app-icon-editor-content-width": `${3 * s + 2 * G}px`,
+            "--custom-in-app-icon-editor-padding": `${U}px`,
+        }),
+        [s],
+    );
+    return null == u
         ? null
         : (0, r.jsx)(p.f5, {
-              value: s,
+              value: l,
               children: (0, r.jsx)("div", {
-                  ref: g,
-                  className: a()(w.EN, m ? w.hP : null),
+                  ref: A,
+                  className: a()(x.EN, E ? x.hP : null),
                   "data-app-right-panel": !0,
+                  style: I,
                   children: (0, r.jsxs)(c.Fmo, {
                       children: [
-                          (0, r.jsx)(M, { markAsDismissed: n }),
+                          (0, r.jsx)(P, { markAsDismissed: n }),
                           (0, r.jsx)(c.HOs, {
-                              className: w.sV,
-                              children: (0, r.jsx)(b.A, { className: w.Gg, isEditor: !0 }),
+                              className: x.sV,
+                              children: (0, r.jsx)(b.A, { className: x.Gg, isEditor: !0, iconSize: s }),
                           }),
-                          (0, r.jsx)(P, { markAsDismissed: n, isCoachmark: t }),
+                          (0, r.jsx)(k, { markAsDismissed: n, isCoachmark: t }),
                       ],
                   }),
               }),

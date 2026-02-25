@@ -1,4 +1,4 @@
-n.d(t, { Ix: () => V, J3: () => D, Q3: () => H, mx: () => B });
+n.d(t, { Ix: () => V, J3: () => D, Q3: () => w, mx: () => B });
 var i = n(627968),
     s = n(64700),
     a = n(311907),
@@ -35,7 +35,7 @@ let D = () => {
         (0, h.nf)(h.HP.CLIENT_THEMES),
         (0, v.default)();
 };
-function G() {
+function M() {
     let e = (0, p.O)(),
         t = (0, T.U9)(e, y.pe.TIER_2)
             ? P.intl.formatToPlainString(P.t.bkQ4bH, { percent: e?.discount.amount })
@@ -47,7 +47,7 @@ function G() {
         fullWidth: !0,
     });
 }
-function M() {
+function G() {
     let e = (0, a.bG)([m.A], () => m.A.isPreview),
         t = (0, E.V)()?.subscription_trial?.sku_id === y.pe.TIER_2;
     return !e || t
@@ -56,7 +56,7 @@ function M() {
               className: L.gY,
               children: [
                   (0, i.jsx)(o.Button, { variant: "secondary", text: P.intl.string(P.t["E+COuA"]), onClick: D }),
-                  (0, i.jsx)(G, {}),
+                  (0, i.jsx)(M, {}),
               ],
           });
 }
@@ -104,11 +104,11 @@ let V = () => {
                 type: g.v0.SETTINGS,
                 children: [
                     (0, i.jsx)(g.Ay.Basic, { className: L.a6 }),
-                    (0, i.jsx)(w, {}),
+                    (0, i.jsx)(H, {}),
                     (0, i.jsx)(A.A, {}),
                     (0, i.jsxs)(U, {
                         children: [
-                            (0, i.jsx)(g.Ay.Gradient, { disabled: !1, renderCTAButtons: () => (0, i.jsx)(M, {}) }),
+                            (0, i.jsx)(g.Ay.Gradient, { disabled: !1, renderCTAButtons: () => (0, i.jsx)(G, {}) }),
                             (0, i.jsx)(k, {}),
                         ],
                     }),
@@ -118,7 +118,7 @@ let V = () => {
         ],
     });
 };
-function w() {
+function H() {
     let e = (0, I.qo)(),
         {
             theme: t,
@@ -145,18 +145,19 @@ function w() {
               ],
           });
 }
-let H = () =>
+let w = () =>
     (0, a.bG)([m.A], () => m.A.isPreview)
         ? null
         : (0, i.jsx)(o.Button, { variant: "primary", text: P.intl.string(P.t.qYXrkX), onClick: D });
-function B() {
+function B(e) {
+    let { size: t } = e;
     return (0, i.jsx)(g.Ay, {
         type: g.v0.SETTINGS,
         children: (0, i.jsxs)(U, {
             children: [
                 (0, i.jsx)(g.ew, {
                     isCoachmark: !1,
-                    renderCTAButtons: () => (0, i.jsx)(M, {}),
+                    renderCTAButtons: () => (0, i.jsx)(G, {}),
                     headingClassName: L.EK,
                     titleTextVariant: "text-md/semibold",
                     titleClassName: L.cI,
@@ -167,7 +168,7 @@ function B() {
                     wrap: !0,
                     gap: 8,
                     padding: { top: 24 },
-                    children: (0, i.jsx)(g.Zg, { disabled: !1 }),
+                    children: (0, i.jsx)(g.Zg, { disabled: !1, size: t }),
                 }),
                 (0, i.jsx)(k, {}),
             ],

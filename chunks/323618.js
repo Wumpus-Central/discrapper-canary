@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => y });
+n.d(t, { A: () => S });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(934551),
     l = n(311907),
     u = n(554146),
@@ -14,10 +14,10 @@ var r = n(627968),
     p = n(617617),
     h = n(74396),
     m = n(653523),
-    g = n(62504),
-    E = n(520650),
+    E = n(62504),
+    g = n(674547),
     A = n(985018),
-    I = n(387376);
+    I = n(866778);
 function T() {
     return (0, r.jsxs)("svg", {
         className: I.JR,
@@ -53,50 +53,51 @@ function T() {
         ],
     });
 }
-function y(e) {
-    let { isDisabled: t, onSelect: n } = e,
-        a = (0, l.bG)([p.A], () => p.A.settings.appearance?.clientThemeSettings?.customUserThemeSettings),
-        { shouldShowNewBadge: y, markNewBadgeAsDismissed: S } = (0, g.L)(),
-        v = (0, f.JZ)(u.M.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
+function S(e) {
+    let { isDisabled: t, onSelect: n, size: s } = e,
+        S = (0, l.bG)([p.A], () => p.A.settings.appearance?.clientThemeSettings?.customUserThemeSettings),
+        { shouldShowNewBadge: y, markNewBadgeAsDismissed: v } = (0, E.L)(),
+        N = (0, f.JZ)(u.M.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
         C = (0, _.Ay)(),
         b = (0, d.Mwr)(C) ? I.Xu : I.VO,
-        N = null != a && null != a.colors && a.colors.length > 0,
-        R = (0, l.bG)([h.A], () => h.A.getSavedCustomTheme()),
-        O = N,
-        D = N || null != R,
-        L = i.useMemo(() => {
+        R = null != S && null != S.colors && S.colors.length > 0,
+        O = (0, l.bG)([h.A], () => h.A.getSavedCustomTheme()),
+        D = R,
+        L = R || null != O,
+        w = i.useMemo(() => {
             let e, t;
-            if (N) (e = a.colors), (t = a.gradientAngle);
+            if (R) (e = S.colors), (t = S.gradientAngle);
             else {
-                if (null === R) return;
-                (e = R.colors), (t = R.gradient_angle);
+                if (null === O) return;
+                (e = O.colors), (t = O.gradient_angle);
             }
             let n = e[0];
             return (
                 e.length > 1 && (n = `linear-gradient(${t}deg, ${e.join(", ")})`),
                 { background: `var(--background-gradient), ${n}` }
             );
-        }, [N, a, R]),
-        w = D ? c.A.unsafe_rawColors.WHITE.css : void 0,
-        x = i.useCallback(() => {
-            y && S(), n?.();
-        }, [y, S, n]);
+        }, [R, S, O]),
+        x = L ? c.A.unsafe_rawColors.WHITE.css : void 0,
+        M = i.useCallback(() => {
+            y && v(), n?.();
+        }, [y, v, n]);
     return (0, r.jsxs)("div", {
         className: I.fC,
         children: [
             (0, r.jsxs)(m.S4, {
-                onSelect: t ? void 0 : x,
+                onSelect: t ? void 0 : M,
                 isSelected: !1,
-                showSelectionCircle: O,
-                name: A.intl.string(E.default.KSBBpC),
-                className: s()(I.kL, D && b, t && I.r9),
+                showSelectionCircle: D,
+                size: s,
+                name: A.intl.string(g.default.KSBBpC),
+                className: a()(I.kL, L && b, t && I.r9),
                 showBadge: !1,
                 showLockedBadge: !1,
-                style: L,
+                style: w,
                 children: [
-                    !v && !D && (0, r.jsx)(T, {}),
+                    !N && !L && (0, r.jsx)(T, {}),
                     (0, r.jsx)("div", { className: I.JU }),
-                    (0, r.jsx)(o.PaintPaletteIcon, { color: w, className: I.vL }),
+                    (0, r.jsx)(o.PaintPaletteIcon, { color: x, className: I.vL }),
                 ],
             }),
             y &&

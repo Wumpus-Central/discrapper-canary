@@ -20,5 +20,5 @@ function A() {
         A = (0, h.gG)(e),
         p = A.id !== c.LW.DEFAULT && (t || n),
         g = (0, i.jsx)(l.pVd, { size: "custom", color: "currentColor", width: 24, height: 24 });
-    return null != A && p ? (0, i.jsx)(d.A, { id: A.id, width: 48 }) : g;
+    return null != A && p ? (0, i.jsx)(d.A, { id: A.id, size: h.N8.SIZE_48 }) : g;
 }
