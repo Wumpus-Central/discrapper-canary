@@ -24,8 +24,9 @@ var r = n(284009),
     v = n(568598),
     N = n(806931),
     C = n(652215);
-let b = new c.A("ChannelRTCStore"),
-    R = Object.freeze([]),
+let b = new c.A("ChannelRTCStore");
+b.enableNativeLogger(!0);
+let R = Object.freeze([]),
     O = [],
     D = {},
     L = {},

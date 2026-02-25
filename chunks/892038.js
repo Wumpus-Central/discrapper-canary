@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => A, j: () => g });
+n.d(t, { A: () => A, j: () => E });
 var r = n(735438),
     i = n.n(r),
-    a = n(972347),
-    s = n(451988),
+    s = n(972347),
+    a = n(451988),
     o = n(626584),
     l = n(94902),
     u = n(961350),
@@ -14,15 +14,15 @@ var r = n(735438),
 let p = 10 * c.A.Millis.SECOND,
     h = 10 * c.A.Millis.SECOND,
     m = 500;
-var g = (function (e) {
+var E = (function (e) {
     return (
         (e.RequestedSSRCsUpdate = "requested-ssrcs-update"), (e.RequestedStreamsUpdate = "requested-streams-update"), e
     );
 })({});
-function E(e, t) {
+function g(e, t) {
     e || _.A.captureMessage("Assert failed in GoLiveQualityManager: " + t);
 }
-class A extends a.A {
+class A extends s.A {
     supportsSeamless;
     logger;
     userId;
@@ -48,7 +48,8 @@ class A extends a.A {
         super(),
             (this.supportsSeamless = e),
             (this.logger = new o.A("GoLiveQualityManager")),
-            (this.delayedCall = new s.J_(m, () => {
+            this.logger.enableNativeLogger(!0),
+            (this.delayedCall = new a.J_(m, () => {
                 this.update();
             }));
     }
@@ -134,7 +135,7 @@ class A extends a.A {
         }
         switch (this.switchState) {
             case 0:
-                E(-1 === this.pendingSSRC, "Ready state should not have a pendingSSRC"),
+                g(-1 === this.pendingSSRC, "Ready state should not have a pendingSSRC"),
                     this.shouldSeamlessTransition(e)
                         ? (this.logger.info(
                               `Starting seamless transition to ${100 === e ? "HQ" : "LQ"} (ssrc ${100 === e ? this.hqSSRC : this.lqSSRC})`,
@@ -150,7 +151,7 @@ class A extends a.A {
                           100 === e ? this.requestHQ() : this.requestLQ());
                 break;
             case 2:
-                E(-1 !== this.pendingSSRC, "PendingSeamless state should have a pendingSSRC"),
+                g(-1 !== this.pendingSSRC, "PendingSeamless state should have a pendingSSRC"),
                     60 === e && this.pendingHQ()
                         ? (this.logger.info(
                               `Cancelling seamless transition from LQ to HQ, re-requesting LQ (ssrc ${this.lqSSRC})`,
@@ -168,7 +169,7 @@ class A extends a.A {
                           this.requestHQ());
                 break;
             case 1:
-                E(-1 !== this.pendingSSRC, "Pending state should have a pendingSSRC"),
+                g(-1 !== this.pendingSSRC, "Pending state should have a pendingSSRC"),
                     60 === e && this.pendingHQ()
                         ? (this.logger.info(
                               `Cancelling seamless transition from LQ to HQ, re-requesting LQ (ssrc ${this.lqSSRC})`,
@@ -184,7 +185,7 @@ class A extends a.A {
                           this.requestHQ());
                 break;
             case 3:
-                E(this.isReceiving(), "Should be receiving a stream in Finalizing state"),
+                g(this.isReceiving(), "Should be receiving a stream in Finalizing state"),
                     this.logger.info(`Finalizing seamless transition to ${100 === e ? "HQ" : "LQ"}`),
                     100 === e ? this.requestHQ() : 60 === e && this.requestLQ(),
                     (this.switchState = 0),
@@ -203,12 +204,12 @@ class A extends a.A {
             60 === e ? this.requestLQ() : this.requestHQ();
     }
     singleCastUpdate() {
-        E(
+        g(
             1 === this.videoStreams.length,
             "singleCastUpdate should only be called when there is exactly one video stream",
         ),
-            E(0 === this.switchState, "Switch state should not be set for non-simulcast streams"),
-            E(-1 === this.pendingSSRC, "Pending SSRC should not be set for non-simulcast streams"),
+            g(0 === this.switchState, "Switch state should not be set for non-simulcast streams"),
+            g(-1 === this.pendingSSRC, "Pending SSRC should not be set for non-simulcast streams"),
             this.incomingVideoEnabled ? this.requestDefaultStream() : this.stopDefaultStream();
     }
     pendingHQ() {
@@ -268,7 +269,7 @@ class A extends a.A {
         }
     }
     requestDefaultStream() {
-        E(
+        g(
             1 === this.videoStreams.length,
             "requestDefaultStream should only be called when there is exactly one video stream",
         );
@@ -278,7 +279,7 @@ class A extends a.A {
         this.request(e, t);
     }
     stopDefaultStream() {
-        E(
+        g(
             1 === this.videoStreams.length,
             "stopDefaultStream should only be called when there is exactly one video stream",
         );
@@ -288,12 +289,12 @@ class A extends a.A {
         this.request(e, t);
     }
     requestBoth() {
-        E(2 === this.videoStreams.length, "requestBoth should only be called when there are two video streams"),
-            E(
+        g(2 === this.videoStreams.length, "requestBoth should only be called when there are two video streams"),
+            g(
                 void 0 !== this.videoStreams.find((e) => e.ssrc === this.hqSSRC),
                 "requestBoth called with invalid hqSSRC",
             ),
-            E(
+            g(
                 void 0 !== this.videoStreams.find((e) => e.ssrc === this.lqSSRC),
                 "requestBoth called with invalid lqSSRC",
             );
@@ -307,34 +308,34 @@ class A extends a.A {
             }, 2e3);
     }
     requestHQ() {
-        E(2 === this.videoStreams.length, "requestHQ should only be called when there are two video streams"),
-            E(void 0 !== this.videoStreams.find((e) => e.ssrc === this.hqSSRC), "requestHQ called with invalid hqSSRC"),
-            E(void 0 !== this.videoStreams.find((e) => e.ssrc === this.lqSSRC), "requestHQ called with invalid lqSSRC");
+        g(2 === this.videoStreams.length, "requestHQ should only be called when there are two video streams"),
+            g(void 0 !== this.videoStreams.find((e) => e.ssrc === this.hqSSRC), "requestHQ called with invalid hqSSRC"),
+            g(void 0 !== this.videoStreams.find((e) => e.ssrc === this.lqSSRC), "requestHQ called with invalid lqSSRC");
         let e = {};
         (e[this.lqSSRC] = 0), (e[this.hqSSRC] = 100);
         let t = [this.hqSSRC];
         this.request(e, t);
     }
     requestLQ() {
-        E(2 === this.videoStreams.length, "requestLQ should only be called when there are two video streams"),
-            E(void 0 !== this.videoStreams.find((e) => e.ssrc === this.hqSSRC), "requestLQ called with invalid hqSSRC"),
-            E(void 0 !== this.videoStreams.find((e) => e.ssrc === this.lqSSRC), "requestLQ called with invalid lqSSRC");
+        g(2 === this.videoStreams.length, "requestLQ should only be called when there are two video streams"),
+            g(void 0 !== this.videoStreams.find((e) => e.ssrc === this.hqSSRC), "requestLQ called with invalid hqSSRC"),
+            g(void 0 !== this.videoStreams.find((e) => e.ssrc === this.lqSSRC), "requestLQ called with invalid lqSSRC");
         let e = {};
         (e[this.lqSSRC] = 60), (e[this.hqSSRC] = 0);
         let t = [this.lqSSRC];
         this.request(e, t);
     }
     stopStreams() {
-        E(2 === this.videoStreams.length, "stopStreams should only be called when there are two video streams"),
-            E(
+        g(2 === this.videoStreams.length, "stopStreams should only be called when there are two video streams"),
+            g(
                 void 0 !== this.videoStreams.find((e) => e.ssrc === this.hqSSRC),
                 "stopStreams called with invalid hqSSRC",
             ),
-            E(
+            g(
                 void 0 !== this.videoStreams.find((e) => e.ssrc === this.lqSSRC),
                 "stopStreams called with invalid lqSSRC",
             ),
-            E(-1 === this.pendingSSRC, "pendingSSRC should be reset before stopping streams");
+            g(-1 === this.pendingSSRC, "pendingSSRC should be reset before stopping streams");
         let e = {};
         (e[this.lqSSRC] = 0), (e[this.hqSSRC] = 0);
         let t = [];

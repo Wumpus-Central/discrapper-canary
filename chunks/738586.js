@@ -2,8 +2,8 @@
 n.d(t, { V: () => f }), n(321073);
 var r = n(607399),
     i = n(499979),
-    a = n(626584),
-    s = n(264644),
+    s = n(626584),
+    a = n(264644),
     o = n(927813),
     l = n(652215);
 let u = 16,
@@ -11,7 +11,7 @@ let u = 16,
     d = 900,
     _ = !1;
 class f {
-    logger = new a.A("VideoHealthManager");
+    logger = new s.A("VideoHealthManager");
     windowLength;
     fpsThreshold;
     fpsWindowBorderlineCount;
@@ -38,6 +38,7 @@ class f {
             (this.fpsThreshold = n),
             (this.fpsWindowBorderlineCount = Math.ceil(e * t)),
             (this.backoffTimeSec = r),
+            this.logger.enableNativeLogger(!0),
             this.logger.info(`constructor with windowLength = ${this.windowLength},
       fpsWindowBorderlineCount = ${this.fpsWindowBorderlineCount},
       fpsThreshold = ${this.fpsThreshold},
@@ -69,14 +70,14 @@ class f {
                             ? (this.logger.info(`${e}: detected poor network quality, turning off video`),
                               this.streamDisabledUsers.add(e),
                               (this.currentVideoAutoToggleState[e] = l.bb8.DISABLED),
-                              (0, s.A)(e, l.bb8.DISABLED),
+                              (0, a.A)(e, l.bb8.DISABLED),
                               this.startReenableBackoffTimer(e))
                             : this.currentVideoAutoToggleState[e] === l.bb8.AUTO_PROBING &&
                               ((this.currentVideoAutoToggleState[e] = l.bb8.AUTO_ENABLED),
                               this.logger.info(
                                   `acceptable conditions reached, will reset and send a AUTO_ENABLED for user ${e}`,
                               ),
-                              (0, s.A)(e, l.bb8.AUTO_ENABLED)),
+                              (0, a.A)(e, l.bb8.AUTO_ENABLED)),
                         this.probingUserId === e && ((this.probingUserId = void 0), this.tryReenableQueue()));
         }
     }
@@ -106,7 +107,7 @@ class f {
             this.stateCleanupBeforeEnable(e),
             (this.currentVideoAutoToggleState[e] = l.bb8.AUTO_PROBING),
             (this.probingUserId = e),
-            (0, s.A)(e, l.bb8.AUTO_PROBING),
+            (0, a.A)(e, l.bb8.AUTO_PROBING),
             !0)
         );
     }
