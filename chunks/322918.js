@@ -1,4 +1,4 @@
-n.d(t, { A: () => j });
+n.d(t, { A: () => D });
 var i = n(627968),
     r = n(64700),
     l = n(503698),
@@ -15,53 +15,54 @@ var i = n(627968),
     p = n(58149),
     g = n(429913),
     E = n(313961),
-    I = n(964404),
-    f = n(709562),
-    C = n(520006),
-    T = n(128286),
-    N = n(309010),
-    S = n(625180),
-    x = n(898879),
-    v = n(293495),
-    y = n(165610),
-    b = n(652215),
-    O = n(5867),
-    L = n(985018),
-    R = n(90103);
-let P = { [O.E8.NO_CHAT]: R.Oo, [O.E8.RESIZABLE]: R.Ig };
-function j(e) {
+    I = n(201805),
+    f = n(964404),
+    C = n(709562),
+    T = n(520006),
+    N = n(128286),
+    S = n(309010),
+    x = n(625180),
+    v = n(898879),
+    y = n(293495),
+    b = n(165610),
+    O = n(652215),
+    L = n(5867),
+    R = n(985018),
+    P = n(90103);
+let j = { [L.E8.NO_CHAT]: P.Oo, [L.E8.RESIZABLE]: P.Ig };
+function D(e) {
     let { frame: t } = e,
         n = (0, g.h)(t.applicationId),
         l = (0, u.A)(),
-        { selectedChannelId: j, selectedVoiceChannelId: D } = (0, s.cf)([N.A], () => ({
-            selectedChannelId: N.A.getChannelId(),
-            selectedVoiceChannelId: N.A.getVoiceChannelId(),
+        { selectedChannelId: D, selectedVoiceChannelId: M } = (0, s.cf)([S.A], () => ({
+            selectedChannelId: S.A.getChannelId(),
+            selectedVoiceChannelId: S.A.getVoiceChannelId(),
         })),
-        M = (0, s.bG)([E.A], () => null != D && j === D && E.A.getChatOpen(D), [j, D]),
-        w = (0, s.bG)([I.Ay], () => I.Ay.callChatSidebarWidth),
-        U = (0, c.rdh)(o.A.modules.chat.RESIZE_HANDLE_WIDTH),
-        G = r.useRef(null),
+        w = (0, s.bG)([E.A], () => null != M && D === M && E.A.getChatOpen(M), [D, M]),
+        U = (0, s.bG)([f.Ay], () => f.Ay.callChatSidebarWidth),
+        G = (0, c.rdh)(o.A.modules.chat.RESIZE_HANDLE_WIDTH),
         k = r.useRef(null),
-        [V, B] = r.useState({ width: 0, height: 0 }),
-        H = r.useCallback(() => {
-            S.A.updateFrameLayoutMode({ applicationId: t.applicationId, layoutMode: y.y.PIP });
-        }, [t.applicationId]),
+        V = r.useRef(null),
+        [B, H] = r.useState({ width: 0, height: 0 }),
         F = r.useCallback(() => {
-            S.A.stopFrame({ applicationId: t.applicationId });
+            x.A.updateFrameLayoutMode({ applicationId: t.applicationId, layoutMode: b.y.PIP });
+        }, [t.applicationId]),
+        Y = r.useCallback(() => {
+            x.A.stopFrame({ applicationId: t.applicationId });
         }, [t.applicationId]);
     r.useLayoutEffect(() => {
-        if (null == k.current) return;
+        if (null == V.current) return;
         let e = new ResizeObserver(() => {
-            B({ width: k.current?.clientWidth ?? 0, height: k.current?.clientHeight ?? 0 });
+            H({ width: V.current?.clientWidth ?? 0, height: V.current?.clientHeight ?? 0 });
         });
-        return e.observe(k.current), () => e.disconnect();
+        return e.observe(V.current), () => e.disconnect();
     }, []),
         r.useEffect(() => {
             let e = (e) => {
-                null == G.current ||
-                    G.current.contains(e.target) ||
+                null == k.current ||
+                    k.current.contains(e.target) ||
                     l ||
-                    S.A.updateFrameLayoutMode({ applicationId: t.applicationId, layoutMode: y.y.PIP });
+                    x.A.updateFrameLayoutMode({ applicationId: t.applicationId, layoutMode: b.y.PIP });
             };
             return (
                 document.addEventListener("mousedown", e),
@@ -70,85 +71,86 @@ function j(e) {
                 }
             );
         }, [t.applicationId, l]);
-    let Y = V.width / Math.max(V.height, 1) < O.B5,
-        W = 0,
+    let W = B.width / Math.max(B.height, 1) < L.B5,
         q = 0,
-        K = (0, h.A)(n?.id);
-    if (!K) {
-        let e = V.width,
-            t = V.height;
-        Y
-            ? ((t = V.width / O.B5) > V.height && (e = (t = V.height) * O.B5), (q = (V.height - t) / 2))
-            : ((e = Math.min(V.height * O.B5, V.width)) > V.width && (t = (e = V.width) / O.B5),
-              (W = (V.width - e) / 2));
+        K = 0,
+        z = (0, h.A)(n?.id);
+    if (!z) {
+        let e = B.width,
+            t = B.height;
+        W
+            ? ((t = B.width / L.B5) > B.height && (e = (t = B.height) * L.B5), (K = (B.height - t) / 2))
+            : ((e = Math.min(B.height * L.B5, B.width)) > B.width && (t = (e = B.width) / L.B5),
+              (q = (B.width - e) / 2));
     }
-    let z = O.E8.NO_CHAT,
-        $ = (0, m.G)();
+    (0, I.ns)(t.applicationId);
+    let $ = L.E8.NO_CHAT,
+        Q = (0, m.G)();
     if (null == n) return null;
-    let Q = (w ?? b.da6) + U,
-        X = (0, v.YY)(t);
+    let X = (U ?? O.da6) + G,
+        Z = (0, y.YY)(t);
     return (0, i.jsx)(c.NPJ, {
-        theme: b.NJ8.DARK,
+        theme: O.NJ8.DARK,
         children: (e) =>
             (0, i.jsxs)("div", {
-                className: a()(R.iE, P[z], e),
-                ref: G,
-                style: { right: M && !Number.isNaN(Q) ? Q : 0 },
+                className: a()(P.iE, j[$], e),
+                ref: k,
+                style: { right: w && !Number.isNaN(X) ? X : 0 },
                 children: [
                     (0, i.jsx)("div", {
-                        className: R.lq,
+                        className: P.lq,
                         children: (0, i.jsx)("div", {
-                            className: a()(R.ht, { [R.kK]: K }),
-                            style: { paddingLeft: W, paddingRight: W, paddingTop: q, paddingBottom: q },
-                            ref: k,
-                            children: (0, i.jsx)(x.A, { className: R.pU, embedId: X }),
+                            className: a()(P.ht, { [P.kK]: z }),
+                            style: { paddingLeft: q, paddingRight: q, paddingTop: K, paddingBottom: K },
+                            ref: V,
+                            children: (0, i.jsx)(v.A, { className: P.pU, embedId: Z }),
                         }),
                     }),
                     (0, i.jsxs)("div", {
-                        className: R.qr,
+                        className: P.qr,
                         children: [
-                            (0, i.jsx)(C.A, {
-                                appContext: b.BRT.APP,
+                            (0, i.jsx)(T.A, {
+                                appContext: O.BRT.APP,
                                 applicationId: n.id,
                                 shouldPrioritizeGroupPlusIcon: !0,
                                 isRichPresenceInvite: !0,
-                                iconClassName: R.NS,
+                                iconClassName: P.NS,
                                 size: d.$n.Sizes.MEDIUM,
                                 look: d.$n.Looks.FILLED,
-                                buttonText: L.intl.string(L.t["6F9ivu"]),
+                                buttonText: R.intl.string(R.t["6F9ivu"]),
                                 color: d.$n.Colors.TRANSPARENT,
                             }),
                             (0, i.jsxs)("div", {
-                                className: R.Hq,
+                                className: P.Hq,
                                 children: [
                                     (0, i.jsx)("div", {
-                                        className: R.qi,
-                                        children: (0, i.jsx)(f.l, {
+                                        className: P.qi,
+                                        children: (0, i.jsx)(C.l, {
                                             isTrayButton: !0,
-                                            label: L.intl.string(L.t.brPQ5U),
-                                            onClick: H,
+                                            label: R.intl.string(R.t.brPQ5U),
+                                            onClick: F,
                                             iconComponent: c.gR,
                                             themeable: !0,
                                         }),
                                     }),
-                                    (0, i.jsx)(f.l, {
+                                    (0, i.jsx)(C.l, {
                                         isTrayButton: !1,
-                                        label: L.intl.string(L.t["R/FK4A"]),
-                                        onClick: F,
+                                        label: R.intl.string(R.t["R/FK4A"]),
+                                        onClick: Y,
                                         iconComponent: c.oLl,
                                         color: "disconnect",
                                     }),
                                 ],
                             }),
-                            $
-                                ? (0, i.jsx)(T.A, {
+                            Q
+                                ? (0, i.jsx)(N.A, {
                                       popoutOpen: !1,
                                       onOpenPopout: () => {
-                                          (0, p.zV)(b.HAw.ACTIVITY_POPOUT_POP_OUT_BUTTON_CLICKED),
+                                          (0, p.zV)(O.HAw.ACTIVITY_POPOUT_POP_OUT_BUTTON_CLICKED),
                                               (0, _.A)({
                                                   onConfirm: async () => {
                                                       n?.id != null &&
-                                                          (await S.A.refreshProxyTicket({ applicationId: n.id })),
+                                                          (await x.A.refreshProxyTicket({ applicationId: n.id })),
                                                           (0, A.jp)();
                                                   },
                                               });

@@ -1,37 +1,37 @@
 "use strict";
 n.d(t, {
-    B3: () => O,
+    B3: () => R,
     BQ: () => M,
-    CI: () => A,
-    Fw: () => v,
+    CI: () => g,
+    Fw: () => y,
     GD: () => E,
-    J6: () => R,
-    K3: () => w,
-    Ko: () => h,
+    J6: () => b,
+    K3: () => L,
+    Ko: () => p,
     Li: () => c.L,
-    Ls: () => D,
-    Pc: () => P,
+    Ls: () => O,
+    Pc: () => x,
     TY: () => u.T,
-    WQ: () => U,
+    WQ: () => k,
     ZV: () => f,
-    aJ: () => C,
+    aJ: () => v,
     eA: () => S,
-    ej: () => T,
-    fO: () => p,
-    fP: () => I,
-    gB: () => b,
-    hK: () => N,
-    kL: () => x,
-    mg: () => y,
-    pc: () => F,
+    ej: () => I,
+    fO: () => h,
+    fP: () => A,
+    gB: () => N,
+    hK: () => C,
+    kL: () => w,
+    mg: () => T,
+    pc: () => G,
     rE: () => d,
     tZ: () => _,
-    zO: () => L,
+    zO: () => D,
 });
 var r = n(735438),
     i = n(412703),
-    a = n(257280),
-    s = n(562465),
+    s = n(257280),
+    a = n(562465),
     o = n(927813),
     l = n(341915),
     u = n(557567),
@@ -86,22 +86,23 @@ var r = n(735438),
             (e.QUEST_ACTIVITY_BOTTOM_SHEET = "quest_activity_bottom_sheet"),
             (e.QUEST_PRIMARY_CTA = "quest_primary_cta"),
             (e.QUEST_LEARN_MORE_CTA = "quest_learn_more_cta"),
+            (e.QUEST_ACTIVITY_UNENROLLED_MODAL = "quest_activity_unenrolled_modal"),
             e
         );
     })({});
-let _ = o.A.Millis.MINUTE * a.K.ConsecutiveHeartbeatPeriodMinutes,
+let _ = o.A.Millis.MINUTE * s.K.ConsecutiveHeartbeatPeriodMinutes,
     f = { tension: 900, friction: 45, clamp: !0 },
-    h = { tension: 360, friction: 30, clamp: !0 };
-var p = (function (e) {
+    p = { tension: 360, friction: 30, clamp: !0 };
+var h = (function (e) {
     return (e.CONSOLE = "CONSOLE"), (e.DESKTOP = "DESKTOP"), e;
 })({});
-let g = (0, s.TP)(),
+let m = (0, a.TP)(),
     E =
-        -1 !== g.indexOf("localhost") || -1 !== g.indexOf("127.0.0.1")
-            ? `${g}/_cdn_storage/`
+        -1 !== m.indexOf("localhost") || -1 !== m.indexOf("127.0.0.1")
+            ? `${m}/_cdn_storage/`
             : "https://cdn.discordapp.com/",
-    A = E + "quests/";
-var I = (function (e) {
+    g = E + "quests/";
+var A = (function (e) {
     return (
         (e.COLLAPSED = "collapsed"),
         (e.EXPANDED = "expanded"),
@@ -111,8 +112,8 @@ var I = (function (e) {
         e
     );
 })({});
-let T = "545364944258990091",
-    y = "{reward_code}";
+let I = "545364944258990091",
+    T = "{reward_code}";
 var S = (function (e) {
     return (
         (e.EXCLUDED_QUEST = "excluded_quest"),
@@ -121,11 +122,19 @@ var S = (function (e) {
         e
     );
 })({});
-let v = "1333839522189938740",
-    C = "1410358070831480904",
-    b = "1420556874629251124",
-    N = "1402418703554842694",
-    R = new Set([l.yW.DESKTOP_ACCOUNT_PANEL_AREA, l.yW.MOBILE_HOME_DOCK_AREA]),
+let y = "1333839522189938740",
+    v = "1410358070831480904",
+    N = "1420556874629251124",
+    C = "1402418703554842694",
+    b = new Set([l.yW.DESKTOP_ACCOUNT_PANEL_AREA, l.yW.MOBILE_HOME_DOCK_AREA]),
+    R = new Set([
+        i.n.STREAM_ON_DESKTOP,
+        i.n.PLAY_ON_DESKTOP,
+        i.n.PLAY_ON_XBOX,
+        i.n.PLAY_ON_PLAYSTATION,
+        i.n.PLAY_ON_DESKTOP_V2,
+        i.n.PLAY_ACTIVITY,
+    ]),
     O = new Set([
         i.n.STREAM_ON_DESKTOP,
         i.n.PLAY_ON_DESKTOP,
@@ -142,16 +151,8 @@ let v = "1333839522189938740",
         i.n.PLAY_ON_DESKTOP_V2,
         i.n.PLAY_ACTIVITY,
     ]),
-    L = new Set([
-        i.n.STREAM_ON_DESKTOP,
-        i.n.PLAY_ON_DESKTOP,
-        i.n.PLAY_ON_XBOX,
-        i.n.PLAY_ON_PLAYSTATION,
-        i.n.PLAY_ON_DESKTOP_V2,
-        i.n.PLAY_ACTIVITY,
-    ]),
-    w = { is_targeted: !1 };
-var x = (function (e) {
+    L = { is_targeted: !1 };
+var w = (function (e) {
         return (
             (e.SUGGESTED = "suggested"),
             (e.MOST_RECENT = "most_recent"),
@@ -160,7 +161,7 @@ var x = (function (e) {
             e
         );
     })({}),
-    P = (function (e) {
+    x = (function (e) {
         return (e.VIDEO = "task_video"), (e.PLAY = "task_play"), e;
     })({}),
     M = (function (e) {
@@ -171,23 +172,23 @@ var x = (function (e) {
             e
         );
     })({});
-let k = [
+let P = [
     { group: "task", filter: "task_play" },
     { group: "task", filter: "task_video" },
     { group: "reward", filter: "reward_virtual_currency" },
     { group: "reward", filter: "reward_collectible" },
     { group: "reward", filter: "reward_in_game" },
 ];
-function U(e) {
-    return Object.values(P).includes(e)
+function k(e) {
+    return Object.values(x).includes(e)
         ? { group: "task", filter: e }
         : Object.values(M).includes(e)
           ? { group: "reward", filter: e }
           : null;
 }
-let G = ["reward", "task"],
-    F = Object.entries((0, r.groupBy)(k, "group")).sort((e, t) => {
-        let n = G.indexOf(e[0]),
-            r = G.indexOf(t[0]);
+let U = ["reward", "task"],
+    G = Object.entries((0, r.groupBy)(P, "group")).sort((e, t) => {
+        let n = U.indexOf(e[0]),
+            r = U.indexOf(t[0]);
         return n < r ? -1 : +(r < n);
     });

@@ -4,7 +4,7 @@ n.d(t, {
     Fr: () => et,
     Gn: () => Q,
     Gt: () => $,
-    HA: () => Z,
+    HA: () => X,
     N1: () => U,
     Oq: () => H,
     Ov: () => k,
@@ -15,12 +15,13 @@ n.d(t, {
     WM: () => V,
     Yb: () => K,
     Yf: () => el,
+    Zb: () => eu,
     d6: () => q,
     dQ: () => ea,
     g5: () => Y,
     jh: () => j,
     lk: () => W,
-    lx: () => X,
+    lx: () => Z,
     qY: () => ei,
     r8: () => ee,
     uI: () => er,
@@ -313,10 +314,10 @@ async function $(e) {
 function q(e) {
     s.h.dispatch({ type: "QUESTS_DELIVERY_OVERRIDE", questId: e });
 }
-function X(e, t) {
+function Z(e, t) {
     s.h.dispatch({ type: "QUESTS_SELECT_TASK_PLATFORM", questId: e, platform: t });
 }
-async function Z() {
+async function X() {
     if (!S.A.isFetchingClaimedQuests) {
         s.h.dispatch({ type: "QUESTS_FETCH_CLAIMED_QUESTS_BEGIN" });
         try {
@@ -509,4 +510,7 @@ async function el() {
             throw (s.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_FAILURE", error: new a.A(e) }), e);
         }
     }
+}
+function eu(e) {
+    s.h.dispatch({ type: "UNENROLLED_ACTIVITY_QUEST_DISMISS", questId: e });
 }

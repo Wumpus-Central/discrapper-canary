@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => K });
+n.d(t, { A: () => W });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -13,92 +13,93 @@ var i = n(627968),
     A = n(775602),
     p = n(58149),
     g = n(587837),
-    m = n(964404),
-    _ = n(709562),
-    f = n(383831),
-    x = n(128286),
-    C = n(734057),
-    E = n(696451),
-    I = n(309010),
+    m = n(201805),
+    _ = n(964404),
+    f = n(709562),
+    x = n(383831),
+    C = n(128286),
+    E = n(734057),
+    I = n(696451),
+    N = n(309010),
     b = n(287809),
-    N = n(203982),
-    S = n(427262),
-    T = n(795816),
+    S = n(203982),
+    T = n(427262),
+    y = n(795816),
     v = n(933958),
-    y = n(685399),
-    j = n(216418),
-    R = n(969151),
-    O = n(620148),
-    L = n(732637),
-    M = n(104171),
-    D = n(47294),
-    G = n(594007),
-    U = n(16961),
-    P = n(716730),
-    w = n(5867),
-    k = n(652215),
-    V = n(985018),
-    B = n(907585);
-let H = M.DN.SIZE_32,
-    F = { [w.E8.NO_CHAT]: B.Oo, [w.E8.RESIZABLE]: B.Ig };
-function K(e) {
+    j = n(685399),
+    R = n(216418),
+    O = n(969151),
+    L = n(620148),
+    M = n(732637),
+    D = n(104171),
+    G = n(47294),
+    U = n(594007),
+    P = n(16961),
+    w = n(716730),
+    k = n(5867),
+    V = n(652215),
+    B = n(985018),
+    H = n(429496);
+let F = D.DN.SIZE_32,
+    K = { [k.E8.NO_CHAT]: H.Oo, [k.E8.RESIZABLE]: H.Ig };
+function W(e) {
     let { maxHeight: t, connectedLocation: n, renderExternalHeader: l } = e,
-        K = (0, O.A)(),
-        W = (0, a.yK)([v.Ay], () => v.Ay.getEmbeddedActivitiesForLocation(n), [n]),
-        Y = (0, R.H)(n),
-        z = (0, a.bG)([C.A], () => C.A.getChannel(Y)),
-        X = (0, y.IQ)(W),
-        q = (0, y.Rz)(X),
-        J = s.useCallback(() => {
-            (0, T.gk)(w.Gd.PIP);
+        W = (0, L.A)(),
+        Y = (0, a.yK)([v.Ay], () => v.Ay.getEmbeddedActivitiesForLocation(n), [n]),
+        z = (0, O.H)(n),
+        X = (0, a.bG)([E.A], () => E.A.getChannel(z)),
+        q = (0, j.IQ)(Y),
+        J = (0, j.Rz)(q),
+        Q = s.useCallback(() => {
+            (0, y.gk)(k.Gd.PIP);
         }, []),
-        Q = s.useRef(null),
-        $ = (0, a.bG)([v.Ay], () => v.Ay.getFocusedLayout()),
-        Z = $ !== w.E8.NO_CHAT,
-        [ee, et] = s.useState(m.Ay.activityPanelHeight ?? t ?? null),
-        en = s.useCallback((e) => {
+        $ = s.useRef(null),
+        Z = (0, a.bG)([v.Ay], () => v.Ay.getFocusedLayout()),
+        ee = Z !== k.E8.NO_CHAT,
+        [et, en] = s.useState(_.Ay.activityPanelHeight ?? t ?? null),
+        ei = s.useCallback((e) => {
             u.Ay.updatedUnsyncedSettings({ activityPanelHeight: e });
         }, []),
-        ei = s.useRef(null),
-        [es, el] = s.useState({ width: 0, height: 0 });
+        es = s.useRef(null),
+        [el, er] = s.useState({ width: 0, height: 0 });
     s.useLayoutEffect(() => {
-        if (null == ei.current) return;
+        if (null == es.current) return;
         let e = new ResizeObserver(() => {
-            el({ width: ei.current?.clientWidth ?? 0, height: ei.current?.clientHeight ?? 0 });
+            er({ width: es.current?.clientWidth ?? 0, height: es.current?.clientHeight ?? 0 });
         });
-        return e.observe(ei.current), () => e.disconnect();
+        return e.observe(es.current), () => e.disconnect();
     }, []);
-    let er = es.width / Math.max(es.height, 1) < w.B5,
-        ea = 0,
+    let ea = el.width / Math.max(el.height, 1) < k.B5,
         eo = 0,
-        ec = (0, j.A)(K?.id);
-    if (!ec) {
-        let e = es.width,
-            t = es.height;
-        er
-            ? ((t = es.width / w.B5) > es.height && (e = (t = es.height) * w.B5), (eo = (es.height - t) / 2))
-            : ((e = Math.min(es.height * w.B5)) > es.width && (t = (e = es.width) / w.B5), (ea = (es.width - e) / 2));
+        ec = 0,
+        ed = (0, R.A)(W?.id);
+    if (!ed) {
+        let e = el.width,
+            t = el.height;
+        ea
+            ? ((t = el.width / k.B5) > el.height && (e = (t = el.height) * k.B5), (ec = (el.height - t) / 2))
+            : ((e = Math.min(el.height * k.B5)) > el.width && (t = (e = el.width) / k.B5), (eo = (el.width - e) / 2));
     }
-    let ed = q.get(K?.id ?? ""),
-        eu = (0, a.bG)([I.A], () => I.A.getChannelId()),
-        eh = (0, a.yK)(
-            [E.Ay],
+    let eu = J.get(W?.id ?? ""),
+        eh = (0, a.bG)([N.A], () => N.A.getChannelId()),
+        eA = (0, a.yK)(
+            [I.Ay],
             () =>
-                null == z
+                null == X
                     ? []
-                    : Array.from(ed?.embeddedActivity.userIds ?? []).map((e) => E.Ay.getMember(z.guild_id, e)),
-            [ed, z],
+                    : Array.from(eu?.embeddedActivity.userIds ?? []).map((e) => I.Ay.getMember(X.guild_id, e)),
+            [eu, X],
         ),
-        eA = s.useMemo(() => {
+        ep = s.useMemo(() => {
             let e = new Map();
             return (
-                eh.forEach((t) => {
+                eA.forEach((t) => {
                     null != t && void 0 !== t && e.set(t.userId, t);
                 }),
                 e
             );
-        }, [eh]),
-        ep = (function (e, t, n) {
+        }, [eA]),
+        eg = (function (e, t, n) {
             let i = (0, h.A)(e),
                 l = e !== i,
                 [r, a] = s.useState(!1);
@@ -118,89 +119,89 @@ function K(e) {
                     : void 0;
                 return e && null != t && null != n ? { ...i, minHeight: 200, maxHeight: n, height: t } : i;
             }, [o, e, n, t]);
-        })(Z, ee, t),
-        eg = (0, U.G)();
-    if (null == K) return null;
-    let em = [];
-    null != ed &&
-        (em = Array.from(ed.embeddedActivity.userIds)
+        })(ee, et, t),
+        em = (0, P.G)();
+    if (((0, m.ns)(W?.id), null == W)) return null;
+    let e_ = [];
+    null != eu &&
+        (e_ = Array.from(eu.embeddedActivity.userIds)
             .map((e) => b.default.getUser(e))
             .filter((e) => null != e && void 0 !== e));
-    let e_ = (e) => {
-        if (null == e || void 0 === e || e === M.mt) return null;
-        let t = eA.get(e.id),
-            n = t?.nick ?? S.Ay.getName(e);
+    let ef = (e) => {
+        if (null == e || void 0 === e || e === D.mt) return null;
+        let t = ep.get(e.id),
+            n = t?.nick ?? T.Ay.getName(e);
         return (0, i.jsx)(
             c.m,
             {
                 asContainer: !0,
                 text: n,
                 position: "bottom",
-                children: (0, i.jsx)("img", { src: e.getAvatarURL(z?.guild_id, H), alt: n, className: B.my }, e.id),
+                children: (0, i.jsx)("img", { src: e.getAvatarURL(X?.guild_id, F), alt: n, className: H.my }, e.id),
             },
             e.id,
         );
     };
     return (0, i.jsx)(d.NPJ, {
-        theme: k.NJ8.DARK,
+        theme: V.NJ8.DARK,
         children: (e) =>
             (0, i.jsxs)("div", {
-                className: r()(B.iE, F[$], e),
-                ref: Q,
-                style: ep,
+                className: r()(H.iE, K[Z], e),
+                ref: $,
+                style: eg,
                 children: [
                     l?.(),
                     (0, i.jsxs)("div", {
-                        className: B.lq,
+                        className: H.lq,
                         children: [
-                            Z
+                            ee
                                 ? null
                                 : (0, i.jsx)("div", {
-                                      className: B.wx,
+                                      className: H.wx,
                                       children: (0, i.jsx)(o.E, {
                                           color: "text-strong",
                                           variant: "text-md/semibold",
-                                          className: B.qd,
-                                          children: K?.name,
+                                          className: H.qd,
+                                          children: W?.name,
                                       }),
                                   }),
                             (0, i.jsx)("div", {
-                                className: r()(B.ht, { [B.kK]: ec }),
-                                style: { paddingLeft: ea, paddingRight: ea, paddingTop: eo, paddingBottom: eo },
-                                ref: ei,
-                                children: (0, i.jsx)(L.A, { className: B.pU, embedId: (0, G.A)(n.id, K.id) }),
+                                className: r()(H.ht, { [H.kK]: ed }),
+                                style: { paddingLeft: eo, paddingRight: eo, paddingTop: ec, paddingBottom: ec },
+                                ref: es,
+                                children: (0, i.jsx)(M.A, { className: H.pU, embedId: (0, U.A)(n.id, W.id) }),
                             }),
-                            null != eu
+                            null != eh
                                 ? (0, i.jsxs)("div", {
-                                      className: B.qr,
+                                      className: H.qr,
                                       children: [
-                                          (0, i.jsx)(M.Ay, {
+                                          (0, i.jsx)(D.Ay, {
                                               renderIcon: !1,
-                                              users: em,
-                                              size: H,
+                                              users: e_,
+                                              size: F,
                                               max: 6,
-                                              renderUser: e_,
+                                              renderUser: ef,
                                           }),
                                           (0, i.jsxs)("div", {
-                                              className: B.Hq,
+                                              className: H.Hq,
                                               children: [
                                                   (0, i.jsxs)("div", {
-                                                      className: B.qi,
+                                                      className: H.qi,
                                                       children: [
-                                                          (0, i.jsx)(P.A, { channelId: eu }),
-                                                          (0, i.jsx)(_.l, {
+                                                          (0, i.jsx)(w.A, { channelId: eh }),
+                                                          (0, i.jsx)(f.l, {
                                                               isTrayButton: !0,
-                                                              label: V.intl.string(V.t.brPQ5U),
-                                                              onClick: J,
+                                                              label: B.intl.string(B.t.brPQ5U),
+                                                              onClick: Q,
                                                               iconComponent: d.gR,
                                                               themeable: !0,
                                                           }),
                                                       ],
                                                   }),
                                                   (0, i.jsx)("div", {
-                                                      className: B.pt,
-                                                      children: (0, i.jsx)(f.A, {
-                                                          applicationId: K.id,
+                                                      className: H.pt,
+                                                      children: (0, i.jsx)(x.A, {
+                                                          applicationId: W.id,
                                                           location: n,
                                                           centerButton: !0,
                                                           color: "disconnect",
@@ -208,17 +209,17 @@ function K(e) {
                                                   }),
                                               ],
                                           }),
-                                          eg
-                                              ? (0, i.jsx)(x.A, {
+                                          em
+                                              ? (0, i.jsx)(C.A, {
                                                     popoutOpen: !1,
                                                     onOpenPopout: () => {
-                                                        (0, p.zV)(k.HAw.ACTIVITY_POPOUT_POP_OUT_BUTTON_CLICKED),
-                                                            (0, D.A)({
+                                                        (0, p.zV)(V.HAw.ACTIVITY_POPOUT_POP_OUT_BUTTON_CLICKED),
+                                                            (0, G.A)({
                                                                 onConfirm: async () => {
-                                                                    K?.id != null &&
-                                                                        null != Y &&
-                                                                        (await (0, T.od)(K.id, Y)),
-                                                                        (0, T.jp)();
+                                                                    W?.id != null &&
+                                                                        null != z &&
+                                                                        (await (0, y.od)(W.id, z)),
+                                                                        (0, y.jp)();
                                                                 },
                                                             });
                                                     },
@@ -230,16 +231,16 @@ function K(e) {
                                 : null,
                         ],
                     }),
-                    Z && null != t
+                    ee && null != t
                         ? (0, i.jsx)(g.A, {
                               minHeight: 480,
                               maxHeight: t,
-                              resizableNode: Q,
+                              resizableNode: $,
                               onResize: (e) => {
-                                  N._.dispatch(k.jej.MANUAL_IFRAME_RESIZING, { resizing: !0 }), et(e);
+                                  S._.dispatch(V.jej.MANUAL_IFRAME_RESIZING, { resizing: !0 }), en(e);
                               },
                               onResizeEnd: (e) => {
-                                  N._.dispatch(k.jej.MANUAL_IFRAME_RESIZING, { resizing: !1 }), en(e);
+                                  S._.dispatch(V.jej.MANUAL_IFRAME_RESIZING, { resizing: !1 }), ei(e);
                               },
                           })
                         : null,
