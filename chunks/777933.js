@@ -5,33 +5,33 @@ var l = n(397927),
     s = n(803316),
     r = n(207133),
     a = n(155078),
-    c = n(954571),
-    o = n(307600),
+    o = n(954571),
+    c = n(307600),
     d = n(723702),
     u = n(837921),
-    A = n(179581),
-    E = n(652215),
+    E = n(179581),
+    A = n(652215),
     m = n(985018);
-let f = /^(tel|sms|mailto):([^?;]+)/;
+let p = /^(tel|sms|mailto):([^?;]+)/;
 function g(e, t, n, g) {
-    let p = (0, r.A)(n?.getChannelId());
-    if (!d.isPlatformEmbedded || null == e || "" === e || p || g?.shouldHideMediaOptions === !0 || !(0, s.fW)(e))
+    let f = (0, r.A)(n?.getChannelId());
+    if (!d.isPlatformEmbedded || null == e || "" === e || f || g?.shouldHideMediaOptions === !0 || !(0, s.fW)(e))
         return null;
     let D = (0, a.E)(e),
         _ = (e) => {
-            c.default.track(E.HAw.CONTEXT_MENU_LINK_COPIED, { hostname: D, ...(0, A.N)() }),
+            o.default.track(A.HAw.CONTEXT_MENU_LINK_COPIED, { hostname: D, ...(0, E.N)() }),
                 u.Ay.copy(e),
                 (0, l.showToast)((0, l.createToast)(m.intl.string(m.t["L/PwZf"]), l.ToastType.SUCCESS));
         },
         I = (n, i) => {
             let l = !0 === i ? e.replace("tel:", "sms:") : e;
-            c.default.track(E.HAw.CONTEXT_MENU_LINK_OPENED, { hostname: D, ...(0, A.N)() }),
-                (0, o.h)({ href: l, trusted: (0, o.m)(e, t), shouldConfirm: !0 }, n);
+            o.default.track(A.HAw.CONTEXT_MENU_LINK_OPENED, { hostname: D, ...(0, E.N)() }),
+                (0, c.h)({ href: l, trusted: (0, c.m)(e, t), shouldConfirm: !0 }, n);
         },
         S = [],
-        N = e.match(f);
-    if (null != N) {
-        let e = m.intl.string("mailto" === N[1] ? m.t.ZYLVKo : m.t["3zozoR"]);
+        h = e.match(p);
+    if (null != h) {
+        let e = m.intl.string("mailto" === h[1] ? m.t.ZYLVKo : m.t["3zozoR"]);
         S.push(
             (0, i.jsx)(
                 l.Drp,
@@ -39,13 +39,13 @@ function g(e, t, n, g) {
                     id: "copy-native-contact",
                     label: e,
                     action: () => {
-                        _(N[2]);
+                        _(h[2]);
                     },
                 },
                 "copy-native-contact",
             ),
         ),
-            "tel" === N[1] &&
+            "tel" === h[1] &&
                 S.push(
                     (0, i.jsx)(
                         l.Drp,
@@ -73,6 +73,7 @@ function g(e, t, n, g) {
             {
                 id: "open-native-link",
                 label: m.intl.string(m.t.wuRE8M),
+                leadingAccessory: { type: "icon", icon: l.WxK },
                 trailingIndicator: { type: "icon", icon: l.I9m },
                 action: (e) => I(e),
             },
