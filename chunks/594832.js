@@ -224,13 +224,13 @@ function M(e) {
     }, [s, t?.items, n, i, a]);
 }
 function P(e) {
-    let { location: t, isGift: n, giftRecipient: s } = e,
-        a = (0, o.c)({ userId: s?.id, location: t }),
-        u = (0, i.bG)([l.A], () => (s?.id == null ? null : l.A.getFirstWishlistId(s.id))),
-        { wishlist: c } = b({ wishlistId: null != u && n && null != s ? u : null, userId: s?.id });
+    let { location: t, isGift: n, giftRecipient: s, isSocialLayerStorefrontEnabled: a = !0 } = e,
+        u = (0, o.c)({ userId: s?.id, location: t }),
+        c = (0, i.bG)([l.A], () => (s?.id == null ? null : l.A.getFirstWishlistId(s.id))),
+        { wishlist: d } = b({ wishlistId: null != c && n && null != s ? c : null, userId: s?.id });
     return r.useMemo(
-        () => !0 === n && null != s && ((c?.items.filter((e) => !0 !== e.isOwned) ?? []).length > 0 || a),
-        [n, s, c, a],
+        () => !0 === n && null != s && ((d?.items.filter((e) => !0 !== e.isOwned) ?? []).length > 0 || (a && u)),
+        [n, s, d, u, a],
     );
 }
 function k() {
