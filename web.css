@@ -4813,6 +4813,10 @@
     width: 0
 }
 
+.listBox__2e223:not(.scrollable__2e223) * {
+    scrollbar-width: none
+}
+
 .listBoxInner__2e223,
 .listBoxItem__2e223 {
     box-sizing: border-box
