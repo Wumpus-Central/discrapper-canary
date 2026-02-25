@@ -39,7 +39,7 @@ var i = n(627968),
     w = n(788868),
     H = n(652215),
     B = n(985018),
-    Y = n(520089),
+    Y = n(865047),
     F = n(288894);
 let z = (e) => {
     let { userId: t } = e,
@@ -179,12 +179,13 @@ let z = (e) => {
                               }),
                       ],
                   }),
-                  (0, i.jsx)(M.A, {
-                      isAllPerksVisible: es,
-                      setIsAllPerksVisible: ea,
-                      previousComponent: v.A2.HOME,
-                      enablePremiumBrandRefresh: eg,
-                  }),
+                  !n &&
+                      (0, i.jsx)(M.A, {
+                          isAllPerksVisible: es,
+                          setIsAllPerksVisible: ea,
+                          previousComponent: v.A2.HOME,
+                          enablePremiumBrandRefresh: eg,
+                      }),
               ],
           })
         : (0, i.jsx)("div", { className: l()(Y.kL, Y.Lq), children: (0, i.jsx)(d.y$y, {}) });
