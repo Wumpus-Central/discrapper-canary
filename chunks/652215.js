@@ -2409,6 +2409,7 @@ var tT = (function (e) {
             (e.VOICE_FILTERS = "Voice Filters Popout"),
             (e.FRIENDS_POPOUT = "Friends Popout"),
             (e.ROBLOX_CONNECTION_ACTION_SHEET = "Roblox Connection Action Sheet"),
+            (e.GIFT_SELECTION_MODAL = "Gift Selection Modal"),
             e
         );
     })({}),
@@ -3974,6 +3975,10 @@ var na = (function (e) {
             (e.PAYMENT_REQUEST_LOADED = "payment_request_loaded"),
             (e.PAYMENT_REQUEST_COMPLETED = "payment_request_completed"),
             (e.GIFT_CATEGORY_SELECT_MODAL_OPENED = "gift_category_select_modal_opened"),
+            (e.GIFT_SELECTION_MODAL_OPENED = "gift_selection_modal_opened"),
+            (e.GIFT_SELECTION_TAB_SELECTED = "gift_selection_tab_selected"),
+            (e.GIFT_SELECTION_SEE_WISHLIST_CTA_CLICKED = "gift_selection_see_wishlist_cta_clicked"),
+            (e.IMPRESSION_GIFT_SELECTION_WISHLIST_SECTION_VIEWED = "impression_gift_selection_wishlist_section_viewed"),
             (e.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED = "collectibles_gifting_shop_item_clicked"),
             (e.GIFTING_ITEM_CLICKED = "gifting_item_clicked"),
             (e.ORBS_ENTRYPOINT_CLICKED = "orbs_entrypoint_clicked"),

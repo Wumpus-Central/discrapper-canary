@@ -88,6 +88,7 @@ var r = (function (e) {
             (e.GIFT_INTENT_UNREAD_NOTIFICATION = "impression_gift_intent_unread_notification"),
             (e.GIFT_INTENT_USER_PROFILE_POPOUT = "impression_gift_intent_user_profile_popout"),
             (e.GIFT_OPTION_WISHLIST_BANNER_VIEWED = "impression_gift_option_wishlist_banner_viewed"),
+            (e.GIFT_SELECTION_WISHLIST_SECTION_VIEWED = "impression_gift_selection_wishlist_section_viewed"),
             (e.GLOBAL_DISCOVERY = "impression_global_discovery"),
             (e.GLOBAL_DISCOVERY_APPS = "impression_global_discovery_apps"),
             (e.GO_LIVE_MODAL = "impression_go_live_modal"),
