@@ -56,11 +56,14 @@ function H() {
             );
         }, [e]),
         Y = (0, s.useCallback)(() => {
-            let e = (0, h.WJ)("openCustomAppSettings");
-            (0, x.openUserSettings)(e ? g.X.APPEARANCE_IN_APP_ICON : g.X.APPEARANCE_PANEL, {
-                section: O.nc_.APPEARANCE,
-                scrollPosition: e ? void 0 : R.kq.CUSTOM_APP_ICONS,
-            });
+            let e = (0, h.Ci)("openCustomAppSettings"),
+                t = (0, h.WJ)("openCustomAppSettings"),
+                n = g.X.APPEARANCE_PANEL,
+                i = R.kq.CUSTOM_APP_ICONS;
+            e
+                ? ((n = g.X.DISPLAY_IN_APP_ICON_CATEGORY), (i = void 0))
+                : t && ((n = g.X.APPEARANCE_IN_APP_ICON), (i = void 0)),
+                (0, x.openUserSettings)(n, { section: O.nc_.APPEARANCE, scrollPosition: i });
         }, []),
         { fractionalState: F } = (0, _.A)(),
         z = F === j.xc.FP_ONLY,
