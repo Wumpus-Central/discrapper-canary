@@ -1,14 +1,17 @@
-n.d(t, { A: () => c }), n(321073);
+n.d(t, { A: () => d }), n(321073);
 var i = n(311907),
     l = n(554146),
     s = n(801667),
     a = n(71393),
-    r = n(379848),
-    o = n(652215);
-function c(e) {
-    let t = [],
-        n = (0, i.bG)([a.A], () => a.A.getGuild(e.guild_id));
-    (0, s.A)(e) && t.push(l.M.FIRST_BOOSTER_UPSELL);
-    let [c, d] = (0, r.ww)(t, n?.id ?? o.eGj, void 0, !0);
-    return [c, d];
+    r = n(320501),
+    o = n(379848),
+    c = n(652215);
+function d(e) {
+    let t = (0, i.bG)([r.A], () => r.A.isReady(e.id), [e.id]),
+        n = [],
+        d = (0, i.bG)([a.A], () => a.A.getGuild(e.guild_id)),
+        u = (0, s.A)(e);
+    t && u && n.push(l.M.FIRST_BOOSTER_UPSELL);
+    let [h, m] = (0, o.ww)(n, d?.id ?? c.eGj);
+    return [h, m];
 }
