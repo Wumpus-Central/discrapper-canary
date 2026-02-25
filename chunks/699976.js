@@ -1,6 +1,7 @@
 "use strict";
-n.d(t, { Z: () => r });
-let r = Object.freeze({
-    SIZE_90: Object.freeze({ size: 90, iconSize: 20, iconInset: 6 }),
-    SIZE_133: Object.freeze({ size: 133, iconSize: 24, iconInset: 8 }),
+n.d(t, { Z: () => i });
+var r = n(778712);
+let i = Object.freeze({
+    SIZE_90: Object.freeze({ size: 90, iconSize: 20, iconInset: 6, buttonInset: 4, avatarSize: r._3.SIZE_20 }),
+    SIZE_133: Object.freeze({ size: 133, iconSize: 24, iconInset: 8, buttonInset: 8, avatarSize: r._3.SIZE_24 }),
 });

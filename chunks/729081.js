@@ -24,8 +24,8 @@ var i = n(627968),
     N = n(652215),
     S = n(806931),
     T = n(985018),
-    v = n(877409);
-let y = `vc-gifting-${(0, r.A)()}`;
+    y = n(430071);
+let v = `vc-gifting-${(0, r.A)()}`;
 function j(e) {
     let { isHovered: t, closePopout: n, onMouseEnter: r, onMouseLeave: j, channel: R } = e;
     s.useEffect(() => {
@@ -85,7 +85,6 @@ function j(e) {
                               source: n.length > 0 ? p.uS.WISHLIST : p.uS.POPULAR,
                               guildId: R.guild_id,
                               channelId: R.id,
-                              contextContainerClassName: v.RL,
                               userIdsForGifting: G,
                               userIdsForRecommendation: n,
                           },
@@ -100,7 +99,7 @@ function j(e) {
                               userIdsForGifting: G,
                               guildId: R.guild_id,
                               channelId: R.id,
-                              contextContainerClassName: v.RL,
+                              contextContainerClassName: y.RL,
                           },
                           t.skuId,
                       );
@@ -117,20 +116,20 @@ function j(e) {
         }, [R.id, R.guild_id, P]),
         (0, i.jsx)(h.A, {
             children: (0, i.jsx)(a.lGe, {
-                "aria-labelledby": y,
+                "aria-labelledby": v,
                 modal: !1,
                 children: (0, i.jsxs)("div", {
-                    className: v.kL,
+                    className: y.kL,
                     onMouseEnter: r,
                     onMouseLeave: j,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: v.wx,
+                            className: y.wx,
                             children: [
                                 (0, i.jsxs)("div", {
                                     children: [
                                         (0, i.jsx)(a.DZT, {
-                                            className: v.DD,
+                                            className: y.DD,
                                             variant: "text-lg/bold",
                                             color: "text-strong",
                                             children: T.intl.string(T.t.xLP3bi),
@@ -150,8 +149,8 @@ function j(e) {
                             ],
                         }),
                         (0, i.jsx)("div", {
-                            className: v.Xb,
-                            children: "loading" === U || 0 === P.length ? (0, i.jsx)(a.y$y, { className: v.Lq }) : k,
+                            className: y.Xb,
+                            children: "loading" === U || 0 === P.length ? (0, i.jsx)(a.y$y, { className: y.Lq }) : k,
                         }),
                     ],
                 }),

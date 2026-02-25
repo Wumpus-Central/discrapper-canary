@@ -1,66 +1,71 @@
 "use strict";
-n.d(t, { $: () => m, A: () => E });
+n.d(t, { $: () => A, A: () => I });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
     o = n(158954),
-    l = n(397927),
-    u = n(713517),
-    c = n(607123),
-    d = n(778712),
-    _ = n(985018),
-    f = n(880313),
-    p = n(476324);
-function h(e) {
+    l = n(311907),
+    u = n(397927),
+    c = n(587895),
+    d = n(713517),
+    _ = n(607123),
+    f = n(627001),
+    p = n(778712),
+    h = n(985018),
+    m = n(880313),
+    E = n(476324);
+function g(e) {
     return { width: e.size, height: e.size };
 }
-function m(e) {
+function A(e) {
     let { spec: t, cardStyle: n } = e;
     return (0, r.jsx)("div", {
-        className: a()(f.Nr, n),
-        style: h(t),
+        className: a()(m.Nr, n),
+        style: g(t),
         children: (0, r.jsx)("div", {
-            className: f.ho,
-            children: (0, r.jsx)(l.euF, { src: p, size: d._3.SIZE_80, "aria-label": _.intl.string(_.t.lqaIxI) }),
+            className: m.ho,
+            children: (0, r.jsx)(u.euF, { src: E, size: p._3.SIZE_80, "aria-label": h.intl.string(h.t.lqaIxI) }),
         }),
     });
 }
-function E(e) {
+function I(e) {
     let {
             sku: t,
             user: n,
             spec: s,
-            children: l,
-            cardStyle: d,
-            skuPreviewStyle: _,
-            disableHoverOrFocus: p,
-            onHoverOrFocusChange: m,
-            onClick: E,
-            options: g,
+            children: u,
+            cardStyle: p,
+            skuPreviewStyle: h,
+            disableHoverOrFocus: E,
+            onHoverOrFocusChange: A,
+            onClick: I,
+            options: T,
         } = e,
-        A = i.useRef(null),
-        { isHoveringOrFocusing: I } = (0, u.A)(A),
-        T = i.useRef(m);
+        S = i.useRef(null),
+        { isHoveringOrFocusing: y } = (0, d.A)(S),
+        v = i.useRef(A),
+        N = (0, l.bG)([c.A], () => c.A.getApplication(t.applicationId));
     return (
         i.useEffect(() => {
-            T.current = m;
-        }, [m]),
+            v.current = A;
+        }, [A]),
         i.useEffect(() => {
-            T.current?.(I);
-        }, [I]),
+            v.current?.(y);
+        }, [y]),
         (0, r.jsxs)(o.DUT, {
-            innerRef: A,
-            className: a()(f.Nr, d),
-            onClick: E,
-            style: h(s),
+            innerRef: S,
+            className: a()(m.Nr, p),
+            onClick: I,
+            style: g(s),
             children: [
                 (0, r.jsx)(o.AC4, { children: (0, r.jsx)(o.H, { children: t.name }) }),
                 (0, r.jsx)("div", {
-                    className: a()(f.ev, _),
-                    children: (0, r.jsx)(c.Ay, { sku: t, isFocused: !p && I, user: n, options: g }),
+                    className: a()(m.ev, h),
+                    children: (0, r.jsx)(_.Ay, { sku: t, isFocused: !E && y, user: n, options: T }),
                 }),
-                l,
+                (0, r.jsx)(f.P, { spec: s, application: N }),
+                u,
             ],
         })
     );

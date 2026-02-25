@@ -1,112 +1,97 @@
 "use strict";
-n.d(t, { A: () => R });
+n.d(t, { A: () => C });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
     o = n(735438),
     l = n.n(o),
-    u = n(158954),
-    c = n(311907),
-    d = n(52133),
-    _ = n(342952),
-    f = n(435371),
-    p = n(793574),
-    h = n(688810),
-    m = n(594832),
-    E = n(146423),
-    g = n(662349),
-    A = n(287809),
-    I = n(403362),
-    T = n(533406),
-    S = n(788868),
-    y = n(699976),
-    v = n(778712),
-    N = n(985018),
-    C = n(526295);
-let b = 3;
-function R(e) {
+    u = n(311907),
+    c = n(52133),
+    d = n(793574),
+    _ = n(688810),
+    f = n(594832),
+    p = n(146423),
+    h = n(662349),
+    m = n(754804),
+    E = n(287809),
+    g = n(403362),
+    A = n(533406),
+    I = n(788868),
+    T = n(699976),
+    S = n(985018),
+    y = n(859457);
+let v = 3,
+    N = T.Z.SIZE_90;
+function C(e) {
     let {
             sku: t,
             source: n,
             hideIcon: s,
             guildId: o,
-            channelId: R,
-            userIdsForGifting: O,
-            userIdsForRecommendation: D,
-            style: L,
-            contextContainerClassName: w,
+            channelId: T,
+            userIdsForGifting: C,
+            userIdsForRecommendation: b,
+            style: R,
         } = e,
-        [x, M] = i.useState(l().uniq(O)),
-        [P, k] = i.useState(!1),
-        [U, G] = i.useState(l().uniq(D)),
-        { analyticsLocations: F } = (0, h.Ay)(
-            p.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD,
-            p.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON,
+        [O, D] = i.useState(l().uniq(C)),
+        [L, w] = i.useState(!1),
+        [x, M] = i.useState(l().uniq(b)),
+        { analyticsLocations: P } = (0, _.Ay)(
+            d.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD,
+            d.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON,
         );
     i.useEffect(() => {
-        G((e) => {
-            let t = l().uniq(D);
-            return (0, d.v)(e, t) ? e : t;
+        M((e) => {
+            let t = l().uniq(b);
+            return (0, c.v)(e, t) ? e : t;
         });
-    }, [D]),
+    }, [b]),
         i.useEffect(() => {
-            M((e) => {
-                let t = l().uniq(O);
-                return (0, d.v)(e, t) ? e : t;
+            D((e) => {
+                let t = l().uniq(C);
+                return (0, c.v)(e, t) ? e : t;
             });
-        }, [O]);
-    let V = (0, c.bG)([A.default], () => (1 === x.length ? A.default.getUser(x[0]) : void 0), [x]),
-        B = (0, c.yK)([A.default], () => U.map((e) => A.default.getUser(e)).filter(I.Vq), [U]),
-        H = i.useCallback(() => {
-            (0, T.a)(
+        }, [C]);
+    let k = (0, u.bG)([E.default], () => (1 === O.length ? E.default.getUser(O[0]) : void 0), [O]),
+        U = (0, u.yK)([E.default], () => x.map((e) => E.default.getUser(e)).filter(g.Vq), [x]),
+        G = i.useCallback(() => {
+            (0, A.a)(
                 t,
                 {
                     isGift: !0,
-                    giftRecipient: V,
-                    additionalUserIds: x.length > 1 ? x : void 0,
-                    giftingOrigin: S.vQ.SHOP_PAGE,
+                    giftRecipient: k,
+                    additionalUserIds: O.length > 1 ? O : void 0,
+                    giftingOrigin: I.vQ.SHOP_PAGE,
                 },
-                { analyticsLocations: F },
+                { analyticsLocations: P },
             );
-        }, [t, V, x, F]);
+        }, [t, k, O, P]);
     return (0, r.jsxs)("div", {
-        className: a()(C.kL, L),
+        className: a()(y.k, R),
         children: [
-            (0, r.jsx)(E.A, {
+            (0, r.jsx)(p.A, {
                 sku: t,
-                user: V,
-                spec: y.Z.SIZE_90,
-                onClick: H,
-                cardStyle: C.Ui,
-                onHoverOrFocusChange: k,
-                children: (0, r.jsx)(g.lQ, { sku: t, onClick: H, isHoveringOrFocusing: P }),
+                user: k,
+                spec: N,
+                onClick: G,
+                cardStyle: y.U,
+                onHoverOrFocusChange: w,
+                children: (0, r.jsx)(h.lQ, { sku: t, spec: N, onClick: G, isHoveringOrFocusing: L }),
             }),
             !s &&
-                (0, r.jsx)(f.m_, {
-                    text: n === m.uS.POPULAR ? N.intl.string(N.t["DP0o+u"]) : N.intl.string(N.t["OnWY3/"]),
-                    position: "top",
-                    children: (0, r.jsx)("div", {
-                        className: a()(C.RL, w),
-                        children:
-                            n === m.uS.POPULAR || 0 === B.length
-                                ? (0, r.jsx)("div", {
-                                      className: C.fd,
-                                      children: (0, r.jsx)(u.Y3C, {
-                                          size: "sm",
-                                          color: "currentColor",
-                                          className: C.I$,
-                                      }),
-                                  })
-                                : (0, r.jsx)(_.I, {
-                                      users: B,
-                                      guildId: o ?? void 0,
-                                      channelId: R ?? void 0,
-                                      maxUsers: b,
-                                      size: v._3.SIZE_20,
-                                  }),
-                    }),
-                }),
+                (n === f.uS.POPULAR
+                    ? (0, r.jsx)(m.oX, { spec: N, tooltipText: S.intl.string(S.t["DP0o+u"]) })
+                    : U.length > 0
+                      ? (0, r.jsx)(m.Xd, {
+                            spec: N,
+                            tooltipText: S.intl.string(S.t["OnWY3/"]),
+                            users: U,
+                            guildId: o ?? void 0,
+                            channelId: T ?? void 0,
+                            maxUsers: v,
+                        })
+                      : null),
         ],
     });
 }

@@ -36612,6 +36612,40 @@ html:not(.chat-input) .inputInner_b1f01d {
     width: 100%
 }
 
+.itemIcon_a647f7 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1
+}
+
+.itemIcon_a647f7.hasTooltip_a647f7 {
+    pointer-events: auto
+}
+
+.applicationIcon_a647f7 {
+    border-radius: 6px;
+    box-shadow: var(--shadow-high);
+    position: relative
+}
+
+.applicationIcon_a647f7>img {
+    border-radius: inherit;
+    height: inherit;
+    width: inherit
+}
+
+.applicationIcon_a647f7:after {
+    border: 1px solid var(--border-normal);
+    border-radius: inherit;
+    content: "";
+    display: inline-block;
+    inset: 0;
+    position: absolute
+}
+
 .card__9ed47 {
     aspect-ratio: 1/1;
     background-color: var(--background-surface-highest);
@@ -36668,7 +36702,6 @@ html:not(.chat-input) .inputInner_b1f01d {
     inset-inline: 0;
     justify-content: center;
     opacity: 0;
-    padding: 12px;
     position: absolute;
     transition: opacity 50ms ease-in;
     z-index: 5
@@ -36677,6 +36710,27 @@ html:not(.chat-input) .inputInner_b1f01d {
 .overlayHoverOrFocus_f5504d {
     opacity: 1;
     transition: opacity .15s ease-out
+}
+
+.itemIcon_d9866f {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1
+}
+
+.itemIcon_d9866f.hasTooltip_d9866f {
+    pointer-events: auto
+}
+
+.itemIconHeart_d9866f {
+    fill: var(--control-critical-primary-background-default)
+}
+
+.itemIconShop_d9866f {
+    fill: var(--icon-strong)
 }
 
 .container_b7b2cf {
@@ -45407,35 +45461,6 @@ screen and (max-width:485px) {
 .cardContainer__96168 {
     height: 100%;
     width: 100%
-}
-
-.contextContainer__96168 {
-    background-color: var(--background-surface-high);
-    border-radius: 12px;
-    color: var(--interactive-text-active);
-    inset-inline-end: -4px;
-    padding: 2px;
-    position: absolute;
-    top: -8px;
-    z-index: 2
-}
-
-.contextContainer__96168,
-.contextIcon__96168 {
-    align-items: center;
-    display: flex;
-    justify-content: center
-}
-
-.contextIcon__96168 {
-    height: 20px;
-    margin-inline-start: -1px;
-    width: 20px
-}
-
-.contextIcon__96168,
-.fireIcon__96168 {
-    margin-top: -1px
 }
 
 .card__20585:focus-within .cardBackgroundImage__20585,

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { AJ: () => m, hB: () => p, lQ: () => E });
+n.d(t, { AJ: () => E, hB: () => h, lQ: () => g });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -10,8 +10,11 @@ var r = n(627968),
     c = n(519421),
     d = n(818348),
     _ = n(985018),
-    f = n(333245);
+    f = n(433107);
 function p(e) {
+    return { margin: e.buttonInset };
+}
+function h(e) {
     let { sku: t, wishlistOwner: n, currentUser: r, isOwned: s, hideIcon: a, location: d } = e,
         f = (0, c.A)(d ?? "User Profile Wishlist Overlay Button"),
         p = (0, l.Xi)(t);
@@ -30,33 +33,34 @@ function p(e) {
             : { label: _.intl.string(_.t.ilhtIa), icon: a ? void 0 : o.okO };
     }, [t, n, r, s, a, f, p]);
 }
-function h(e) {
-    let { label: t, icon: n, onClick: s, isHoveringOrFocusing: l, fullWidth: u = !1 } = e,
-        c = i.useCallback(
+function m(e) {
+    let { spec: t, label: n, icon: s, onClick: l, isHoveringOrFocusing: u, fullWidth: c = !1 } = e,
+        d = i.useCallback(
             (e) => {
-                e.stopPropagation(), s();
+                e.stopPropagation(), l();
             },
-            [s],
+            [l],
         );
     return (0, r.jsx)("div", {
-        className: a()(f.L, { [f.K]: l }),
+        className: a()(f.L, { [f.K]: u }),
+        style: p(t),
         children: (0, r.jsx)(o.Button, {
             variant: "primary",
             size: "sm",
             iconPosition: "start",
-            text: t,
-            icon: n,
-            onClick: c,
-            fullWidth: u,
+            text: n,
+            icon: s,
+            onClick: d,
+            fullWidth: c,
         }),
     });
 }
-function m(e) {
-    let { onClick: t, isHoveringOrFocusing: n, label: i, icon: s } = e;
-    return (0, r.jsx)(h, { label: i, icon: s, onClick: t, isHoveringOrFocusing: n, fullWidth: !0 });
-}
 function E(e) {
-    let { sku: t, onClick: n, isHoveringOrFocusing: s } = e,
-        a = i.useMemo(() => (0, u.$g)(t.price?.amount ?? 0, t.price?.currency ?? d.Yr.USD), [t]);
-    return (0, r.jsx)(h, { label: a, icon: void 0, onClick: n, isHoveringOrFocusing: s });
+    let { spec: t, onClick: n, isHoveringOrFocusing: i, label: s, icon: a } = e;
+    return (0, r.jsx)(m, { spec: t, label: s, icon: a, onClick: n, isHoveringOrFocusing: i, fullWidth: !0 });
+}
+function g(e) {
+    let { sku: t, spec: n, onClick: s, isHoveringOrFocusing: a } = e,
+        o = i.useMemo(() => (0, u.$g)(t.price?.amount ?? 0, t.price?.currency ?? d.Yr.USD), [t]);
+    return (0, r.jsx)(m, { spec: n, label: o, icon: void 0, onClick: s, isHoveringOrFocusing: a, fullWidth: !0 });
 }

@@ -66,7 +66,6 @@ function v(e) {
                               hideIcon: e,
                               guildId: C,
                               channelId: b,
-                              contextContainerClassName: y.RL,
                               userIdsForGifting: s,
                               userIdsForRecommendation: n,
                           },
