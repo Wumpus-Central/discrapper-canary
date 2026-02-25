@@ -37,8 +37,8 @@ class l {
             (await s.signalCurrentUserDetails({
                 rpId: window.GLOBAL_ENV.WEBAUTHN_ORIGIN,
                 userId: a(e.id),
-                name: e.username,
-                displayName: e.global_name ?? e.username,
+                name: e.email ?? e.global_name ?? e.username,
+                displayName: e.username,
             }));
     }
     static async signalUnknownCredential(e) {

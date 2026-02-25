@@ -405,7 +405,7 @@ let i = {
         ],
         inlineRequire: () => n(415202).A,
     },
-    RelationshipManager: { actions: ["RELATIONSHIP_ADD", "FRIEND_REQUEST_ACCEPTED"], inlineRequire: () => n(681245).A },
+    RelationshipManager: { actions: ["RELATIONSHIP_ADD", "FRIEND_REQUEST_ACCEPTED"], inlineRequire: () => n(903626).A },
     RTCLatencyTestManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(222804).A },
     SavedMessagesManager: {
         actions: ["POST_CONNECTION_OPEN"],
@@ -828,7 +828,7 @@ let i = {
         hasStoreChangeListeners: !0,
     },
     WebAuthnSignalManager: {
-        actions: ["AUTHENTICATOR_DELETE", "MFA_WEBAUTHN_CREDENTIALS_LOADED"],
+        actions: ["AUTHENTICATOR_DELETE", "CURRENT_USER_UPDATE", "MFA_WEBAUTHN_CREDENTIALS_LOADED"],
         inlineRequire: () => n(386355).A,
     },
     HavenManager: { actions: ["HAVEN_DISCONNECT"], inlineRequire: () => n(63446).A },
