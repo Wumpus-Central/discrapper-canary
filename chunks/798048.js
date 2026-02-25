@@ -13,7 +13,7 @@ var r = n(627968),
     f = n(652215),
     p = n(788868),
     h = n(985018),
-    m = n(752276),
+    m = n(975462),
     E = (function (e) {
         return (
             (e.SMALL = "small"),
@@ -52,7 +52,7 @@ function g(e) {
             className: m.Af,
             children: (0, r.jsx)(o.rOg, {
                 size: "custom",
-                color: o.LU0.colors.WHITE,
+                color: o.LU0.colors.ICON_DEFAULT,
                 width: 38,
                 height: 38,
                 className: a()(m.x6, m.AI),
