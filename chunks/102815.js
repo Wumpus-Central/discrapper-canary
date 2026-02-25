@@ -176,6 +176,6 @@ function b(e) {
     return null == t || "" === t
         ? null
         : "string" == typeof t
-          ? (0, n.jsx)("img", { src: t, alt: "", className: l()(_.eq, r) })
+          ? (0, n.jsx)("img", { src: t, alt: "", className: l()(_.eq, r), draggable: "false" })
           : t;
 }

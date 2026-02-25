@@ -70,15 +70,15 @@ function P() {
         D = (0, a.useCallback)(() => {
             (0, m.pX)(T.BVt.COLLECTIBLES_SHOP);
         }, []),
-        G = (0, a.useCallback)(() => {
+        M = (0, a.useCallback)(() => {
             (0, h.openUserSettings)(A.X.SOUNDBOARD_CATEGORY, {
                 section: T.nc_.VOICE,
                 subsection: S.MJ,
                 analyticsLocations: i,
             });
         }, [i]),
-        M = (0, C.A)(),
-        U = (0, a.useMemo)(() => M.map((e) => e?.id), [M]),
+        G = (0, C.A)(),
+        U = (0, a.useMemo)(() => G.map((e) => e?.id), [G]),
         k = (0, a.useMemo)(
             () => [
                 {
@@ -144,7 +144,7 @@ function P() {
                     title: I.intl.string(I.t.WJfCPi),
                     description: I.intl.string(I.t.liQKJR),
                     ctaText: I.intl.string(I.t.jVcuVY),
-                    onCtaClick: G,
+                    onCtaClick: M,
                     primaryAsset: j.A,
                     categories: ["appearance"],
                 },
@@ -190,7 +190,7 @@ function P() {
                     subscriptionRequired: !0,
                     primaryAsset:
                         null != n
-                            ? (0, s.jsx)("img", { src: n, alt: "", width: 160 })
+                            ? (0, s.jsx)("img", { src: n, alt: "", width: 160, draggable: "false" })
                             : (0, s.jsx)(l.vXC, { color: r.A.colors.ICON_MUTED, "aria-hidden": !0 }),
                     categories: ["vip"],
                 },
@@ -211,7 +211,7 @@ function P() {
                     categories: ["vip"],
                 },
             ],
-            [e, n, R, y, P, L, D, G],
+            [e, n, R, y, P, L, D, M],
         );
     return (0, a.useMemo)(() => k.filter((e) => null != e && !U.includes(e.id)), [k, U]);
 }

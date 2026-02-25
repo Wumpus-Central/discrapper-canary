@@ -6,7 +6,7 @@ var i = n(627968),
     r = n(102815),
     o = n(977446),
     c = n(985018),
-    d = n(574268);
+    d = n(185902);
 function u(e) {
     let { glowingPerkId: t = null } = e,
         n = (0, o.Ay)(),
@@ -32,6 +32,7 @@ function u(e) {
                 l.A,
                 {
                     gap: 20,
+                    className: d.jG,
                     children: A.map((e) => {
                         if (null != e)
                             return (0, i.jsx)(
