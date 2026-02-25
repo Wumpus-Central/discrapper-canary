@@ -5,7 +5,7 @@ var r = n(252424),
     s = n(580630),
     a = n(427262),
     o = n(788868),
-    l = n(756366),
+    l = n(523376),
     u = n(985018);
 function c(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -46,11 +46,7 @@ let d = (e) => {
             s
         );
     },
-    f = (e) => ({
-        username: a.Ay.getUserTag(e, { identifiable: "always" }),
-        avatarUrl: e.getAvatarURL(void 0, 16),
-        nickname: a.Ay.getName(e),
-    }),
+    f = (e) => ({ username: a.Ay.getUserTag(e), avatarUrl: e.getAvatarURL(void 0, 16), nickname: a.Ay.getName(e) }),
     p = (e) => {
         let { subscriptionInvoiceRecord: t } = e;
         return (0, s.$g)(t.total, t.currency);
