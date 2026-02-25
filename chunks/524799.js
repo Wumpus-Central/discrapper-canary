@@ -8,6 +8,7 @@ function a(e) {
     let { steam: t } = e;
     if (null != t) return { steam: { rating: t.rating, ratingCount: t.rating_count } };
 }
+n(223273);
 let o = new Map(),
     l = new Set(),
     u = new Set(),
