@@ -204,7 +204,7 @@ let X = (e) => {
                                   ((n = (0, i.jsx)(c.Exy, { type: "new", variant: "expressive" })), (C = 2))
                           : ((n = (0, i.jsx)(H.Ag, { trialOffer: eo, isTabSelected: Z })), (C = 4));
         ep &&
-            ((n = (0, i.jsx)(H.MA, { isTabSelected: Z, badgeCopy: Q.intl.string(Q.t.RDE0Sc), offerExpiresAt: null })),
+            ((n = (0, i.jsx)(c.Exy, { type: { text: Q.intl.string(Q.t.RDE0Sc) }, variant: "expressive" })),
             (ez = () => {
                 I.default.track(z.HAw.NITRO_TAB_VISITED, { badge_decorator: C, has_premium: el }), (0, w.ne)(eg);
             }),
