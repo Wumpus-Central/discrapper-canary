@@ -20,18 +20,18 @@ var i = n(627968),
     C = n(290863),
     E = n(461213),
     I = n(977997),
-    b = n(954571),
-    N = n(403362),
+    N = n(954571),
+    b = n(403362),
     S = n(246084),
     T = n(667936),
-    v = n(879349),
-    y = n(884415),
+    y = n(101730),
+    v = n(884415),
     j = n(611330),
     R = n(652215),
     O = n(188275),
     L = n(985018),
-    M = n(439792),
-    D = n(335419);
+    M = n(611422),
+    D = n(386777);
 function G(e) {
     let t,
         {
@@ -41,7 +41,7 @@ function G(e) {
             voiceStates: x,
             isChannelSelected: I,
             shouldShowSettingNudge: S,
-            isStandardGap: v,
+            isStandardGap: y,
         } = e;
     (t = s.useMemo(
         () =>
@@ -57,9 +57,9 @@ function G(e) {
         [l, x],
     )),
         (0, c.E)(t, "VoiceChannelActivities");
-    let y = (0, u.Ay)(l),
-        j = Array.from((0, u.Rz)(y).values()),
-        D = x?.filter(N.Vq) ?? [],
+    let v = (0, u.Ay)(l),
+        j = Array.from((0, u.Rz)(v).values()),
+        D = x?.filter(b.Vq) ?? [],
         G = (0, a.bG)(
             [E.A, C.A, _.default],
             () => {
@@ -85,11 +85,11 @@ function G(e) {
         P = (0, g.m)({ location: "voice_channel_activities" }),
         w = G.length + j.length > 0;
     return (s.useEffect(() => {
-        w && b.default.track(R.HAw.OPEN_POPOUT, { type: "Voice Channel Activities", channel_id: l.id });
+        w && N.default.track(R.HAw.OPEN_POPOUT, { type: "Voice Channel Activities", channel_id: l.id });
     }, [w, l.id]),
     w)
         ? (0, i.jsxs)(o.HOs, {
-              className: r()(M.kL, { [M.iA]: v }),
+              className: r()(M.kL, { [M.iA]: y }),
               children: [
                   (0, i.jsx)(U, { channel: l, isChannelSelected: I, voiceStatesCount: x?.length ?? 0 }),
                   (0, i.jsx)("div", { className: M.zN }),
@@ -144,13 +144,13 @@ function G(e) {
                                                       n.e("34749"),
                                                       n.e("12664"),
                                                       n.e("44667"),
-                                                      n.e("7803"),
                                                       n.e("55090"),
+                                                      n.e("7803"),
                                                       n.e("84704"),
                                                       n.e("67646"),
-                                                      n.e("50224"),
+                                                      n.e("86738"),
                                                       n.e("7525"),
-                                                      n.e("75049"),
+                                                      n.e("94095"),
                                                   ]).then(n.bind(n, 585265));
                                                   return (t) => (0, i.jsx)(e, { ...t, guild: p });
                                               });
@@ -175,8 +175,8 @@ function U(e) {
         : (0, i.jsxs)("div", {
               className: r()(M.oT, D.oT),
               children: [
-                  (0, i.jsx)(v.A, { channel: t }),
-                  c ? (0, i.jsx)(y.A, { userCount: s, video: o, channel: t }) : (0, i.jsx)(j.A, { userCount: s }),
+                  (0, i.jsx)(y.A, { channel: t }),
+                  c ? (0, i.jsx)(v.A, { userCount: s, video: o, channel: t }) : (0, i.jsx)(j.A, { userCount: s }),
               ],
           });
 }
