@@ -1,32 +1,19 @@
-n.d(t, { A: () => _, C: () => c });
+n.d(t, { A: () => o });
 var l = n(627968),
-    r = n(64700),
-    a = n(311907),
-    i = n(397927),
-    s = n(417454),
-    o = n(775602),
-    E = n(967144),
-    u = n(818348);
-function c(e) {
-    let { role: t, guildId: n } = e,
-        r = (0, E.X_)(n, t ?? void 0, t?.colorStrings),
-        s = (0, a.bG)([o.A], () => o.A.roleStyle),
-        u = (0, i.rdh)(i.LU0.unsafe_rawColors.PRIMARY_300).hex(),
-        c = t?.colorString ?? u;
-    return null == t
-        ? null
-        : "dot" === s
-          ? (0, l.jsx)(i.WYI, { color: c ?? void 0, colors: r, background: !1, tooltip: !1 })
-          : (0, l.jsx)(i.RYH, { color: c ?? null, colors: r });
-}
-function _(e) {
-    let { guildId: t, role: n, className: a, canRemove: o = !1, onRemove: E = u.tE } = e,
-        c = (0, i.rdh)(i.LU0.unsafe_rawColors.PRIMARY_300).hex(),
+    r = n(64700);
+n(311907);
+var a = n(397927),
+    i = n(417454);
+n(775602), n(967144);
+var s = n(818348);
+function o(e) {
+    let { guildId: t, role: n, className: o, canRemove: E = !1, onRemove: u = s.tE } = e,
+        c = (0, a.rdh)(a.LU0.unsafe_rawColors.PRIMARY_300).hex(),
         _ = n?.colorString ?? c,
         d = r.useMemo(() => ({ backgroundColor: `${_}27` }), [_]);
     return null == n
         ? null
-        : (0, l.jsx)(i.DUT, {
-              children: (0, l.jsx)(s.b_, { className: a, style: d, role: n, guildId: t, canRemove: o, onRemove: E }),
+        : (0, l.jsx)(a.DUT, {
+              children: (0, l.jsx)(i.b_, { className: o, style: d, role: n, guildId: t, canRemove: E, onRemove: u }),
           });
 }

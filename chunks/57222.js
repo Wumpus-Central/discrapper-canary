@@ -1,39 +1,40 @@
-l.d(t, { A: () => C, H: () => o });
-var n = l(627968);
-l(64700);
-var i = l(311907),
-    s = l(34457),
-    a = l(317525),
-    r = l(64749);
-function o(e, t, l, n) {
-    return (0, i.yK)(
-        [a.A],
+"use strict";
+n.d(t, { A: () => d, H: () => o });
+var i = n(627968);
+n(64700);
+var s = n(311907),
+    l = n(34457),
+    r = n(317525),
+    a = n(64749);
+function o(e, t, n, i) {
+    return (0, s.yK)(
+        [r.A],
         () =>
-            a.A.getSortedRoles(e)
-                .filter((e) => !t.has(e.id) && !(l && (0, s.Oy)(e)) && (null == n || n(e)))
-                .map((e) => (0, r.th)(e).row),
-        [l, e, n, t],
+            r.A.getSortedRoles(e)
+                .filter((e) => !t.has(e.id) && !(n && (0, l.Oy)(e)) && (null == i || i(e)))
+                .map((e) => (0, a.th)(e).row),
+        [n, e, i, t],
     );
 }
-function C(e) {
+function d(e) {
     let {
             guildId: t,
-            selectedRoleIds: l,
-            onChange: i,
-            placeholder: s,
-            disableEveryoneRole: a,
-            helperText: C,
-            className: d,
-            selectableRoleFilter: c,
+            selectedRoleIds: n,
+            onChange: s,
+            placeholder: l,
+            disableEveryoneRole: r,
+            helperText: d,
+            className: c,
+            selectableRoleFilter: u,
         } = e,
-        u = o(t, l, a, c);
-    return (0, n.jsx)(r.Ay, {
-        roleRows: u,
+        m = o(t, n, r, u);
+    return (0, i.jsx)(a.Ay, {
+        roleRows: m,
         guildId: t,
-        selectedRoleIds: l,
-        onChange: (e, t) => i(t),
-        placeholder: s,
-        helperText: C,
-        className: d,
+        selectedRoleIds: n,
+        onChange: (e, t) => s(t),
+        placeholder: l,
+        helperText: d,
+        className: c,
     });
 }
