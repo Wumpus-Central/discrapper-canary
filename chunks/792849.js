@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { g: () => l });
-var r = n(627968);
-n(64700);
-var i = n(397927),
-    a = n(261225),
-    s = n(970488);
-let o = (e) => {
-        let { color: t, children: n } = e;
+l.d(t, { g: () => o });
+var r = l(627968);
+l(64700);
+var a = l(397927),
+    n = l(261225),
+    s = l(970488);
+let i = (e) => {
+        let { color: t, children: l } = e;
         return (0, r.jsx)("div", {
             style: {
                 background: t,
@@ -19,65 +19,73 @@ let o = (e) => {
                 color: "white",
                 fontWeight: "bold",
             },
-            children: n,
+            children: l,
         });
     },
-    l = {
+    o = {
         name: "Grid",
         id: "grid",
         component: (e) => {
-            let { columns: t, gridItemColumns: n, gridItemRows: l } = e;
+            let { columns: t, perPage: l, paginationPosition: o, gridItemColumns: d, gridItemRows: c } = e;
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(i.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: "text-lg/semibold",
                         children:
                             "Grid is used to create a responsive grid layout. It takes a columns prop to define the number of columns (1-6). The grid automatically becomes responsive on smaller screens.",
                     }),
                     (0, r.jsx)("br", {}),
-                    (0, r.jsx)(i.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: "text-lg/semibold",
                         children: "GridItem is (optionally) used to set the size of a grid itme in the grid.",
                     }),
                     (0, r.jsx)("div", {
                         style: { marginTop: 24 },
-                        children: (0, r.jsxs)(a.A, {
+                        children: (0, r.jsxs)(n.A, {
+                            perPage: l,
                             columns: t,
+                            paginationPosition: o,
                             children: [
-                                (0, r.jsx)(o, { color: "red" }),
+                                (0, r.jsx)(i, { color: "red" }),
                                 (0, r.jsx)(s.A, {
-                                    columns: n,
-                                    rows: l,
-                                    children: (0, r.jsx)(o, {
+                                    columns: d,
+                                    rows: c,
+                                    children: (0, r.jsx)(i, {
                                         color: "orange",
-                                        children: (0, r.jsx)(i.Text, {
+                                        children: (0, r.jsx)(a.Text, {
                                             variant: "text-lg/semibold",
                                             children: "GridItem",
                                         }),
                                     }),
                                 }),
-                                (0, r.jsx)(o, { color: "yellow" }),
-                                (0, r.jsx)(o, { color: "green" }),
-                                (0, r.jsx)(o, { color: "blue" }),
-                                (0, r.jsx)(o, { color: "violet" }),
-                                (0, r.jsx)(o, { color: "red" }),
-                                (0, r.jsx)(o, { color: "orange" }),
-                                (0, r.jsx)(o, { color: "yellow" }),
-                                (0, r.jsx)(o, { color: "green" }),
-                                (0, r.jsx)(o, { color: "blue" }),
-                                (0, r.jsx)(o, { color: "violet" }),
-                                (0, r.jsx)(o, { color: "red" }),
-                                (0, r.jsx)(o, { color: "orange" }),
-                                (0, r.jsx)(o, { color: "yellow" }),
-                                (0, r.jsx)(o, { color: "green" }),
-                                (0, r.jsx)(o, { color: "blue" }),
-                                (0, r.jsx)(o, { color: "violet" }),
-                                (0, r.jsx)(o, { color: "red" }),
-                                (0, r.jsx)(o, { color: "orange" }),
-                                (0, r.jsx)(o, { color: "yellow" }),
-                                (0, r.jsx)(o, { color: "green" }),
-                                (0, r.jsx)(o, { color: "blue" }),
-                                (0, r.jsx)(o, { color: "violet" }),
+                                (0, r.jsx)(i, { color: "yellow" }),
+                                (0, r.jsx)(i, { color: "green" }),
+                                (0, r.jsx)(i, { color: "blue" }),
+                                (0, r.jsx)(i, { color: "violet" }),
+                                (0, r.jsx)(i, { color: "red" }),
+                                (0, r.jsx)(i, { color: "orange" }),
+                                (0, r.jsx)(i, { color: "yellow" }),
+                                (0, r.jsx)(i, { color: "green" }),
+                                (0, r.jsx)(i, { color: "blue" }),
+                                (0, r.jsx)(i, { color: "violet" }),
+                                (0, r.jsx)(i, { color: "red" }),
+                                (0, r.jsx)(i, { color: "orange" }),
+                                (0, r.jsx)(i, { color: "yellow" }),
+                                (0, r.jsx)(i, { color: "green" }),
+                                (0, r.jsx)(i, { color: "blue" }),
+                                (0, r.jsx)(i, { color: "violet" }),
+                                (0, r.jsx)(i, { color: "red" }),
+                                (0, r.jsx)(i, { color: "orange" }),
+                                (0, r.jsx)(i, { color: "yellow" }),
+                                (0, r.jsx)(i, { color: "green" }),
+                                (0, r.jsx)(i, { color: "blue" }),
+                                (0, r.jsx)(i, {
+                                    color: "violet",
+                                    children: (0, r.jsx)(a.Text, {
+                                        variant: "text-lg/semibold",
+                                        children: "Last Child",
+                                    }),
+                                }),
                             ],
                         }),
                     }),
@@ -86,6 +94,16 @@ let o = (e) => {
         },
         controls: {
             columns: { label: "Columns", type: "number", defaultValue: 3 },
+            perPage: { label: "Grid Items per Page (default, all)", type: "number", defaultValue: 3 },
+            paginationPosition: {
+                label: "Pagination Position",
+                type: "select",
+                defaultValue: "bottom",
+                options: [
+                    { label: "Top", value: "top" },
+                    { label: "Bottom", value: "bottom" },
+                ],
+            },
             gridItemColumns: { label: "Grid Item Columns", type: "number", defaultValue: 1 },
             gridItemRows: { label: "Grid Item Rows", type: "number", defaultValue: 1 },
         },
