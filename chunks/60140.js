@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => C });
+n.d(t, { A: () => E });
 var s = n(627968),
     l = n(64700),
     r = n(720462),
@@ -11,12 +11,11 @@ var s = n(627968),
     u = n(751304),
     g = n(561769),
     _ = n(484469),
-    m = n(940622),
-    h = n(758836),
-    p = n(201073);
-let f = (e) => (0, s.jsx)("div", { className: p.hm, children: (0, s.jsx)(E, { ...e }) }),
-    x = (e) => (0, s.jsx)(r.A, { gap: "xl", children: (0, s.jsx)(E, { ...e }) }),
-    E = (e) => {
+    m = n(758836),
+    h = n(419447);
+let p = (e) => (0, s.jsx)("div", { className: h.hm, children: (0, s.jsx)(x, { ...e }) }),
+    f = (e) => (0, s.jsx)(r.A, { gap: "xl", children: (0, s.jsx)(x, { ...e }) }),
+    x = (e) => {
         let { isLoading: t, products: n, tab: l, totalCards: r } = e,
             o = (0, a.uM)();
         if (t) return (0, s.jsx)(s.Fragment, { children: [...Array(r ?? 4)].map((e, t) => (0, s.jsx)(_.A, {}, t)) });
@@ -35,7 +34,7 @@ let f = (e) => (0, s.jsx)("div", { className: p.hm, children: (0, s.jsx)(E, { ..
                                   u.A,
                                   {
                                       skuId: e?.skuId,
-                                      prioritizedCurrency: l === h.G2.ORBS ? g.Hi.ORBS : void 0,
+                                      prioritizedCurrency: l === m.G2.ORBS ? g.Hi.ORBS : void 0,
                                       onClickAnalytics: (0, g.UU)(e, l, o),
                                   },
                                   e.skuId,
@@ -46,31 +45,29 @@ let f = (e) => (0, s.jsx)("div", { className: p.hm, children: (0, s.jsx)(E, { ..
             }),
         });
     },
-    C = (e) => {
+    E = (e) => {
         let t,
             n,
             r,
-            a,
-            { heroBlockRecord: u, layout: g, tab: _, isBlockLoading: h = !1 } = e,
-            { products: p } =
+            { heroBlockRecord: a, layout: u, tab: g, isBlockLoading: _ = !1 } = e,
+            { products: m } =
                 ((t = (0, c.A)()),
-                (n = l.useMemo(() => (h ? [] : t(u.rankedSkuIds)), [h, t, u.rankedSkuIds])),
+                (n = l.useMemo(() => (_ ? [] : t(a.rankedSkuIds)), [_, t, a.rankedSkuIds])),
                 (r = (0, o.p)()(n)),
-                (a = (0, d.X)(r)),
-                { products: (0, m.od)(a) }),
-            E = l.useMemo(
+                { products: (0, d.X)(r) }),
+            h = l.useMemo(
                 () =>
-                    !h &&
-                    0 !== u.rankedSkuIds.length &&
-                    !(p.length > 0) &&
-                    u.rankedSkuIds.every((e) => i.A.getProduct(e)?.variantGroupStoreListingId != null),
-                [h, u.rankedSkuIds, p.length],
+                    !_ &&
+                    0 !== a.rankedSkuIds.length &&
+                    !(m.length > 0) &&
+                    a.rankedSkuIds.every((e) => i.A.getProduct(e)?.variantGroupStoreListingId != null),
+                [_, a.rankedSkuIds, m.length],
             ),
-            C = h || E;
-        switch (g) {
+            x = _ || h;
+        switch (u) {
             case "feed":
-                return (0, s.jsx)(f, { heroBlockRecord: u, isLoading: C, products: p, tab: _ });
+                return (0, s.jsx)(p, { heroBlockRecord: a, isLoading: x, products: m, tab: g });
             case "hscroll":
-                return (0, s.jsx)(x, { heroBlockRecord: u, isLoading: C, products: p, tab: _ });
+                return (0, s.jsx)(f, { heroBlockRecord: a, isLoading: x, products: m, tab: g });
         }
     };

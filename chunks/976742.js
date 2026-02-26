@@ -1,46 +1,44 @@
 "use strict";
-s.d(t, { A: () => v });
-var n = s(627968),
-    r = s(64700),
-    l = s(172218),
-    a = s(417597),
-    i = s(397927),
-    o = s(287809),
-    c = s(440938),
-    d = s(511265),
-    u = s(206077),
-    g = s(100057),
-    _ = s(903403),
-    m = s(392183),
-    h = s(751304),
-    p = s(561769),
-    f = s(159439),
-    x = s(998694),
-    E = s(940622),
-    C = s(758836),
-    A = s(157884);
-function b(e) {
+n.d(t, { A: () => S });
+var s = n(627968),
+    l = n(64700),
+    r = n(172218),
+    a = n(417597),
+    i = n(397927),
+    o = n(287809),
+    c = n(440938),
+    d = n(511265),
+    u = n(206077),
+    g = n(100057),
+    _ = n(903403),
+    m = n(392183),
+    h = n(751304),
+    p = n(561769),
+    f = n(159439),
+    x = n(998694),
+    E = n(758836),
+    C = n(892766);
+function A(e) {
     let { category: t } = e,
-        s = (0, a.bG)([o.default], () => o.default.getCurrentUser()),
-        r = (0, u.X)(t.products),
-        l = (0, d.p)()(r),
-        i = (0, E.od)(l),
-        g = (0, c.uM)();
-    return null == s || 0 === i.length
+        n = (0, a.bG)([o.default], () => o.default.getCurrentUser()),
+        l = (0, u.X)(t.products),
+        r = (0, d.p)()(l),
+        i = (0, c.uM)();
+    return null == n || 0 === r.length
         ? null
-        : (0, n.jsx)("div", {
-              className: A.vY,
-              children: i.map((e, t) =>
-                  (0, n.jsx)(
+        : (0, s.jsx)("div", {
+              className: C.vY,
+              children: r.map((e, t) =>
+                  (0, s.jsx)(
                       c.R9,
                       {
                           newValue: { tilePosition: t },
-                          children: (0, n.jsx)(
+                          children: (0, s.jsx)(
                               h.A,
                               {
                                   skuId: e.skuId,
                                   skipLimitedTimeCheck: !0,
-                                  onClickAnalytics: (0, p.UU)(e, C.G2.CATALOG, g),
+                                  onClickAnalytics: (0, p.UU)(e, E.G2.CATALOG, i),
                               },
                               e.skuId,
                           ),
@@ -50,25 +48,25 @@ function b(e) {
               ),
           });
 }
-function S(e) {
+function b(e) {
     let { category: t } = e,
-        [s, a] = r.useState(!1),
-        i = (0, l.K)((e) => {
+        [n, a] = l.useState(!1),
+        i = (0, r.K)((e) => {
             a(e);
         }, 0.15);
-    return (0, n.jsxs)("div", {
-        className: A.EF,
+    return (0, s.jsxs)("div", {
+        className: C.EF,
         ref: i,
-        children: [(0, n.jsx)(_.A, { category: t }), (0, n.jsx)(b, { category: t })],
+        children: [(0, s.jsx)(_.A, { category: t }), (0, s.jsx)(A, { category: t })],
     });
 }
-function v(e) {
-    let { categories: t, setCategoryRef: s, currentPage: l, handlePageChange: a, initialCategoryId: o } = e,
+function S(e) {
+    let { categories: t, setCategoryRef: n, currentPage: r, handlePageChange: a, initialCategoryId: o } = e,
         d = (0, c.uM)(),
         u = (0, f.U)(),
         _ = d?.sessionId ?? "",
         { noCache: h, includeUnpublished: p } = (0, x.A)(),
-        E = r.useMemo(
+        A = l.useMemo(
             () =>
                 t
                     .filter((e) => null == e.unpublishedAt || e.unpublishedAt > new Date())
@@ -78,66 +76,66 @@ function v(e) {
                     }),
             [t],
         ),
-        b = r.useRef(void 0);
-    r.useEffect(() => {
-        if (null == o || 0 === E.length) {
-            b.current = void 0;
+        S = l.useRef(void 0);
+    l.useEffect(() => {
+        if (null == o || 0 === A.length) {
+            S.current = void 0;
             return;
         }
-        if (o === b.current) return;
-        let e = E.findIndex((e) => e.skuId === o);
+        if (o === S.current) return;
+        let e = A.findIndex((e) => e.skuId === o);
         if (-1 === e) return;
-        let t = Math.floor(e / C.l5) + 1;
-        t !== l && a(t), (b.current = o);
-    }, [o, E, a, l]);
-    let v = r.useMemo(() => {
-        let e = (l - 1) * C.l5;
-        return E.slice(e, e + C.l5);
-    }, [E, l]);
-    return (r.useEffect(() => {
+        let t = Math.floor(e / E.l5) + 1;
+        t !== r && a(t), (S.current = o);
+    }, [o, A, a, r]);
+    let v = l.useMemo(() => {
+        let e = (r - 1) * E.l5;
+        return A.slice(e, e + E.l5);
+    }, [A, r]);
+    return (l.useEffect(() => {
         (0, g.z)({
             sessionId: _,
             checkpoint: g.t.SHOP_MOUNTED,
-            tab: C.G2.CATALOG,
+            tab: E.G2.CATALOG,
             unpublishedCategoriesShown: p,
             cacheDisabled: h,
         });
     }, []),
-    r.useEffect(() => {
+    l.useEffect(() => {
         u ||
             0 === v.length ||
             (0, g.z)({
                 sessionId: _,
                 checkpoint: g.t.SHOP_RENDERED,
-                tab: C.G2.CATALOG,
+                tab: E.G2.CATALOG,
                 unpublishedCategoriesShown: p,
                 cacheDisabled: h,
             });
     }, [_, p, h, u, v.length]),
     u)
-        ? (0, n.jsx)(m.A, {})
-        : (0, n.jsxs)("div", {
-              className: A.LZ,
+        ? (0, s.jsx)(m.A, {})
+        : (0, s.jsxs)("div", {
+              className: C.LZ,
               children: [
                   v.map((e, t) =>
-                      (0, n.jsx)(
+                      (0, s.jsx)(
                           "div",
                           {
-                              ref: (t) => s(e.skuId, t),
-                              children: (0, n.jsx)(c.R9, {
+                              ref: (t) => n(e.skuId, t),
+                              children: (0, s.jsx)(c.R9, {
                                   newValue: { categoryPosition: t },
-                                  children: (0, n.jsx)(S, { category: e }),
+                                  children: (0, s.jsx)(b, { category: e }),
                               }),
                           },
                           e.skuId,
                       ),
                   ),
-                  (0, n.jsx)("div", {
-                      className: A.Ej,
-                      children: (0, n.jsx)(i.mgR, {
-                          currentPage: l,
-                          totalCount: E.length,
-                          pageSize: C.l5,
+                  (0, s.jsx)("div", {
+                      className: C.Ej,
+                      children: (0, s.jsx)(i.mgR, {
+                          currentPage: r,
+                          totalCount: A.length,
+                          pageSize: E.l5,
                           onPageChange: a,
                           disablePaginationGap: !0,
                       }),

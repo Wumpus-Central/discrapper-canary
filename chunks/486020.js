@@ -179,9 +179,8 @@ function w(e) {
     let s = t.asset;
     if (null == s) return null;
     let { CDN_HOST: a, API_ENDPOINT: u } = window.GLOBAL_ENV,
-        c = _.Rsh.AVATAR_DECORATION_PRESETS(s);
-    if (/^blob:https?:\/\/[^\/]+\//i.test(s)) return s;
-    let d = new URL(null != a ? `https://${a}${c}` : `${location.protocol}${u}${c}`);
+        c = _.Rsh.AVATAR_DECORATION_PRESETS(s),
+        d = new URL(null != a ? `https://${a}${c}` : `${location.protocol}${u}${c}`);
     return (
         d.searchParams.set("size", `${(0, l.kr)(r * (0, l.mZ)(), S)}`),
         d.searchParams.set("passthrough", `${i}`),
