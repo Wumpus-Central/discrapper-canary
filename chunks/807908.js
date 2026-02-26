@@ -99,6 +99,7 @@ function u(e, t) {
         totalFreezesDuration: n.encoderQualityStats?.totalFreezesDuration,
         totalFramesDuration: n.encoderQualityStats?.totalFramesDuration,
         videoEntropy: n.encoderQualityStats?.interFrameEntropy,
+        consecutiveStaticColorFrames: n.encoderQualityStats?.consecutiveStaticColorFrames,
         minResolutionWidth: n.encoderQualityStats?.minResolutionWidth,
         minResolutionHeight: n.encoderQualityStats?.minResolutionHeight,
     };

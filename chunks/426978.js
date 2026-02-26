@@ -469,7 +469,8 @@ class m extends a.A {
             e instanceof f.ET
                 ? ((m.sender_freeze_count = R),
                   (m.sender_total_freezes_duration = D),
-                  (m.sender_total_frames_duration = L))
+                  (m.sender_total_frames_duration = L),
+                  (m.consecutive_static_color_frames_max = e.consecutiveStaticColorFramesMax))
                 : ((m.receiver_freeze_count = R),
                   (m.receiver_total_freezes_duration = D),
                   (m.receiver_total_frames_duration = L),

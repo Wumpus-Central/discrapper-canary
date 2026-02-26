@@ -203,6 +203,7 @@ class A {
     qualityFrameDrops = 0;
     qualitySizeMismatches = 0;
     localWant = 0;
+    consecutiveStaticColorFrames = 0;
     static parseInboundStats(e, t) {
         let n = new A();
         return (
@@ -289,6 +290,7 @@ class A {
                   cryptorMissingKeyCount: e.encryptMissingKeyCount ?? 0,
                   cryptorInvalidNonceCount: 0,
                   localWant: 0,
+                  consecutiveStaticColorFrames: e.consecutiveStaticColorFrames ?? 0,
               };
     }
 }
@@ -347,6 +349,7 @@ class I {
     cryptorFailureBeforeSuccessCount;
     minWidth = null;
     minHeight = null;
+    maxConsecutiveStaticColorFrames = 0;
     videoStoppedWatch;
     videoStoppedReason = 0;
     get isVideoStopped() {
@@ -427,7 +430,11 @@ class I {
                     ((n.psnrDbNum += 1), (n.psnrDbSum += e.psnrDb), n.psnrHistogram.addSample(e.psnrDb)),
                 null != e.outboundSinkWant &&
                     0 !== e.outboundSinkWant &&
-                    ((n.outboundSinkWantNum += 1), (n.outboundSinkWantSum += e.outboundSinkWant));
+                    ((n.outboundSinkWantNum += 1), (n.outboundSinkWantSum += e.outboundSinkWant)),
+                (n.consecutiveStaticColorFramesMax = Math.max(
+                    n.consecutiveStaticColorFramesMax,
+                    e.consecutiveStaticColorFrames,
+                ));
         }
         if (null != f && null != p && "decoderBuckets" in this) {
             let e = this;
@@ -494,6 +501,7 @@ class T extends I {
     framesDroppedEncoderQueue = null;
     framesDroppedCongestionWindow = null;
     framesDroppedEncoder = null;
+    consecutiveStaticColorFramesMax = 0;
     appendTargetRates(e, t, n, r) {
         if (this.statsWindow.length < 2) return;
         (e = e ?? 0), (t = t ?? 0), (n = n ?? 0), (r = r ?? 0);

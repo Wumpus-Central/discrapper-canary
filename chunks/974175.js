@@ -1,4 +1,4 @@
-r.d(t, { R: () => b, f8: () => u, q7: () => D }), r(321073), r(134528), r(947204);
+r.d(t, { R: () => v, f8: () => u, q7: () => D }), r(321073), r(134528), r(947204);
 var n = r(627968),
     a = r(64700),
     i = r(796873),
@@ -162,7 +162,7 @@ function g(e) {
 function F(e) {
     return e.toFixed(2);
 }
-let b = {
+let v = {
         audioJitterBuffer: !0,
         audioJitterDelay: !0,
         audioJitterTarget: !0,
@@ -192,8 +192,9 @@ let b = {
         videoJitterDelay: !0,
         videoJitterTarget: !0,
         voiceActivityDetectorProcessTime: !0,
+        consecutiveStaticColorFrames: !0,
     },
-    v = {
+    C = {
         accelerateRate: y,
         audioDetected: A,
         audioLevel: function (e) {
@@ -261,7 +262,7 @@ let b = {
             return e < t.length ? t[e] : "Unknown";
         },
     },
-    C = {
+    b = {
         audioLevel: function (e) {
             return Math.max(f(e), -100) + 100;
         },
@@ -277,8 +278,8 @@ let b = {
     };
 function D(e) {
     let { label: t, value: r, section: a } = e,
-        i = v[t] ?? x,
-        s = C[t],
+        i = C[t] ?? x,
+        s = b[t],
         c =
             l.iA[t] &&
             (Array.isArray(r) && r.length > 0 && "number" == typeof r[0].value
