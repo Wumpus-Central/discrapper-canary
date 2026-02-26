@@ -132,7 +132,7 @@ function m() {
             [d.nc_.WINDOWS, t ? l.X.ADVANCED_CATEGORY : l.X.WINDOWS_PANEL],
             [d.nc_.LINUX, t ? l.X.ADVANCED_CATEGORY : l.X.LINUX_PANEL],
             [d.nc_.STREAMER_MODE, t ? l.X.STREAMER_MODE_CATEGORY : l.X.STREAMER_MODE_PANEL],
-            [d.nc_.ADVANCED, t ? l.X.ADVANCED_CATEGORY : l.X.ADVANCED_PANEL],
+            [d.nc_.ADVANCED, t ? l.X.DEVELOPER_PANEL : l.X.ADVANCED_PANEL],
             [d.nc_.ACTIVITY_PRIVACY, l.X.ACTIVITY_PRIVACY_PANEL],
             [d.nc_.REGISTERED_GAMES, l.X.REGISTERED_GAMES_PANEL],
             [d.nc_.OVERLAY, l.X.OVERLAY_PANEL],
