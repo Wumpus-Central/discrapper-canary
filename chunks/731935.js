@@ -134,6 +134,8 @@ class A extends o.A {
     bundledSkuIds;
     bundledSkus;
     tenantMetadata;
+    selectedOptions;
+    productId;
     thumbnailAssetId;
     description;
     orbsReward;
@@ -185,6 +187,12 @@ class A extends o.A {
             bundledSkuIds: e.bundled_sku_ids ?? [],
             bundledSkus: e.bundled_skus?.map((e) => A.createFromServer(e)) ?? [],
             tenantMetadata: g(e.tenant_metadata),
+            selectedOptions:
+                e.selected_options?.map((e) => {
+                    let { option_name: t, option_value: n } = e;
+                    return { optionName: t, optionValue: n };
+                }) ?? [],
+            productId: e.product_id,
             thumbnailAssetId: e.thumbnail_asset_id,
             description: e.description,
             orbsReward: e.orbs_reward,
@@ -228,6 +236,8 @@ class A extends o.A {
             (this.bundledSkuIds = e.bundledSkuIds),
             (this.bundledSkus = e.bundledSkus),
             (this.tenantMetadata = e.tenantMetadata),
+            (this.selectedOptions = e.selectedOptions),
+            (this.productId = e.productId),
             (this.thumbnailAssetId = e.thumbnailAssetId),
             (this.description = e.description),
             (this.orbsReward = e.orbsReward),
