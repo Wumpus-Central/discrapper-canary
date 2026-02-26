@@ -97,25 +97,27 @@ function v(e) {
             });
     }, [C, b, M, N]);
     let F = "loading" === x || 0 === M.length;
-    return (0, r.jsxs)("div", {
-        className: a()(y.kL, t),
-        children: [
-            (0, r.jsxs)("div", {
-                className: y.wx,
-                children: [
-                    (0, r.jsx)(o.EYj, {
-                        variant: "text-xs/medium",
-                        color: "text-muted",
-                        children: U ? S.intl.string(S.t["7lZ31J"]) : S.intl.string(S.t.BCi1gT),
-                    }),
-                    null != w ? w : null,
-                ],
-            }),
-            (0, r.jsx)(A.A, { location: N }),
-            (0, r.jsx)("div", {
-                className: y.ld,
-                children: F ? (0, r.jsx)(o.y$y, { type: o.y$y.Type.SPINNING_CIRCLE, className: y.u1 }) : G,
-            }),
-        ],
-    });
+    return "error" === x && 0 === M.length
+        ? null
+        : (0, r.jsxs)("div", {
+              className: a()(y.kL, t),
+              children: [
+                  (0, r.jsxs)("div", {
+                      className: y.wx,
+                      children: [
+                          (0, r.jsx)(o.EYj, {
+                              variant: "text-xs/medium",
+                              color: "text-muted",
+                              children: U ? S.intl.string(S.t["7lZ31J"]) : S.intl.string(S.t.BCi1gT),
+                          }),
+                          null != w ? w : null,
+                      ],
+                  }),
+                  (0, r.jsx)(A.A, { location: N }),
+                  (0, r.jsx)("div", {
+                      className: y.ld,
+                      children: F ? (0, r.jsx)(o.y$y, { type: o.y$y.Type.SPINNING_CIRCLE, className: y.u1 }) : G,
+                  }),
+              ],
+          });
 }

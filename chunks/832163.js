@@ -83,7 +83,11 @@ function b(e) {
         ...d,
         [i.id]: {
             ...(d[i.id] ?? {}),
-            [l(r)]: { state: "success", data: { skus: t, skusToRecommendationReasons: n, numItemsRequested: s } },
+            [l(r)]: {
+                state: "success",
+                data: { skus: t, skusToRecommendationReasons: n, numItemsRequested: s },
+                fetchedAt: Date.now(),
+            },
         },
     };
 }
@@ -91,7 +95,7 @@ function R(e) {
     let { applicationId: t, userIds: n } = e,
         r = l(n);
     if (null != d[t] && null != d[t][r] && "success" === d[t][r].state) return !1;
-    d = { ...d, [t]: { ...(d[t] ?? {}), [r]: { state: "error" } } };
+    d = { ...d, [t]: { ...(d[t] ?? {}), [r]: { state: "error", fetchedAt: Date.now() } } };
 }
 function O(e) {
     let { guildId: t } = e,
