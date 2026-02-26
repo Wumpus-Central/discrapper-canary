@@ -51347,7 +51347,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-sm\/normal_b717a1 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.2857142857142858
 }
@@ -51358,7 +51358,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-sm\/medium_b717a1 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.2857142857142858
 }
@@ -51369,7 +51369,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-sm\/semibold_b717a1 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
@@ -51380,7 +51380,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-sm\/bold_b717a1 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.2857142857142858
 }
@@ -51391,7 +51391,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-sm\/extrabold_b717a1 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 800;
     line-height: 1.2857142857142858
 }
@@ -51402,7 +51402,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-md\/normal_b717a1 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -51413,7 +51413,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-md\/medium_b717a1 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -51424,7 +51424,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-md\/semibold_b717a1 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -51435,7 +51435,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-md\/bold_b717a1 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -51446,7 +51446,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-md\/extrabold_b717a1 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 800;
     line-height: 1.25
 }
@@ -51457,7 +51457,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-lg\/normal_b717a1 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.2
 }
@@ -51468,7 +51468,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-lg\/medium_b717a1 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.2
 }
@@ -51479,7 +51479,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-lg\/semibold_b717a1 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.2
 }
@@ -51490,7 +51490,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-lg\/bold_b717a1 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -51501,7 +51501,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-lg\/extrabold_b717a1 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 800;
     line-height: 1.2
 }
@@ -51512,7 +51512,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-xl\/normal_b717a1 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -51523,7 +51523,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-xl\/medium_b717a1 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -51534,7 +51534,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-xl\/semibold_b717a1 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -51545,7 +51545,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-xl\/bold_b717a1 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -51556,7 +51556,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-xl\/extrabold_b717a1 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 800;
     line-height: 1.25
 }
@@ -51567,7 +51567,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-xxl\/normal_b717a1 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -51578,7 +51578,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-xxl\/medium_b717a1 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -51589,7 +51589,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-xxl\/semibold_b717a1 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -51600,7 +51600,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-xxl\/bold_b717a1 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -51611,7 +51611,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-xxl\/extrabold_b717a1 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 800;
     line-height: 1.25
 }
@@ -51622,20 +51622,20 @@ svg.radioIcon_c1e9c4 {
 
 .eyebrow_b717a1 {
     font-family: var(--font-display);
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: .02em;
     line-height: 1.3333333333333333;
     text-transform: uppercase
 }
 
-.eyebrow_b717a1,
 .eyebrow_b717a1.fontScaling_b717a1 {
     font-size: .75rem
 }
 
 .heading-deprecated-12\/normal_b717a1 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -51646,7 +51646,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-deprecated-12\/medium_b717a1 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -51657,7 +51657,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-deprecated-12\/semibold_b717a1 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
@@ -51668,7 +51668,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-deprecated-12\/bold_b717a1 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -51679,7 +51679,7 @@ svg.radioIcon_c1e9c4 {
 
 .heading-deprecated-12\/extrabold_b717a1 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 800;
     line-height: 1.3333333333333333
 }
@@ -51690,7 +51690,7 @@ svg.radioIcon_c1e9c4 {
 
 .redesign\/heading-18\/bold_b717a1 {
     font-family: var(--font-display);
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -51701,7 +51701,7 @@ svg.radioIcon_c1e9c4 {
 
 .text-xxs\/normal_b717a1 {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     font-weight: 400;
     line-height: 1.2
 }
@@ -51712,7 +51712,7 @@ svg.radioIcon_c1e9c4 {
 
 .text-xxs\/medium_b717a1 {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     font-weight: 500;
     line-height: 1.2
 }
@@ -51723,18 +51723,18 @@ svg.radioIcon_c1e9c4 {
 
 .text-xxs\/semibold_b717a1 {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     font-weight: 600;
     line-height: 1.2
 }
 
-.text-xxs\/bold_b717a1,
 .text-xxs\/semibold_b717a1.fontScaling_b717a1 {
     font-size: .625rem
 }
 
 .text-xxs\/bold_b717a1 {
     font-family: var(--font-primary);
+    font-size: 10px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -51745,7 +51745,7 @@ svg.radioIcon_c1e9c4 {
 
 .text-xs\/normal_b717a1 {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -51756,7 +51756,7 @@ svg.radioIcon_c1e9c4 {
 
 .text-xs\/medium_b717a1 {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -51767,18 +51767,18 @@ svg.radioIcon_c1e9c4 {
 
 .text-xs\/semibold_b717a1 {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
 
-.text-xs\/bold_b717a1,
 .text-xs\/semibold_b717a1.fontScaling_b717a1 {
     font-size: .75rem
 }
 
 .text-xs\/bold_b717a1 {
     font-family: var(--font-primary);
+    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -51789,18 +51789,18 @@ svg.radioIcon_c1e9c4 {
 
 .text-sm\/normal_b717a1 {
     font-family: var(--font-primary);
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.2857142857142858
 }
 
-.text-sm\/medium_b717a1,
-.text-sm\/normal_b717a1,
 .text-sm\/normal_b717a1.fontScaling_b717a1 {
     font-size: .875rem
 }
 
 .text-sm\/medium_b717a1 {
     font-family: var(--font-primary);
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.2857142857142858
 }
@@ -51811,18 +51811,18 @@ svg.radioIcon_c1e9c4 {
 
 .text-sm\/semibold_b717a1 {
     font-family: var(--font-primary);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
 
-.text-sm\/bold_b717a1,
 .text-sm\/semibold_b717a1.fontScaling_b717a1 {
     font-size: .875rem
 }
 
 .text-sm\/bold_b717a1 {
     font-family: var(--font-primary);
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.2857142857142858
 }
@@ -51833,7 +51833,7 @@ svg.radioIcon_c1e9c4 {
 
 .text-md\/normal_b717a1 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -51844,7 +51844,7 @@ svg.radioIcon_c1e9c4 {
 
 .text-md\/medium_b717a1 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -51855,7 +51855,7 @@ svg.radioIcon_c1e9c4 {
 
 .text-md\/semibold_b717a1 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -51866,7 +51866,7 @@ svg.radioIcon_c1e9c4 {
 
 .text-md\/bold_b717a1 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -51877,18 +51877,18 @@ svg.radioIcon_c1e9c4 {
 
 .text-lg\/normal_b717a1 {
     font-family: var(--font-primary);
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.2
 }
 
-.text-lg\/medium_b717a1,
-.text-lg\/normal_b717a1,
 .text-lg\/normal_b717a1.fontScaling_b717a1 {
     font-size: 1.25rem
 }
 
 .text-lg\/medium_b717a1 {
     font-family: var(--font-primary);
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.2
 }
@@ -51899,18 +51899,18 @@ svg.radioIcon_c1e9c4 {
 
 .text-lg\/semibold_b717a1 {
     font-family: var(--font-primary);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.2
 }
 
-.text-lg\/bold_b717a1,
 .text-lg\/semibold_b717a1.fontScaling_b717a1 {
     font-size: 1.25rem
 }
 
 .text-lg\/bold_b717a1 {
     font-family: var(--font-primary);
+    font-size: 20px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -51921,7 +51921,7 @@ svg.radioIcon_c1e9c4 {
 
 .redesign\/message-preview\/normal_b717a1 {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -51932,7 +51932,7 @@ svg.radioIcon_c1e9c4 {
 
 .redesign\/message-preview\/medium_b717a1 {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -51943,7 +51943,7 @@ svg.radioIcon_c1e9c4 {
 
 .redesign\/message-preview\/semibold_b717a1 {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
@@ -51954,7 +51954,7 @@ svg.radioIcon_c1e9c4 {
 
 .redesign\/message-preview\/bold_b717a1 {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -51965,7 +51965,7 @@ svg.radioIcon_c1e9c4 {
 
 .redesign\/channel-title\/normal_b717a1 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.375
 }
@@ -51976,7 +51976,7 @@ svg.radioIcon_c1e9c4 {
 
 .redesign\/channel-title\/medium_b717a1 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.375
 }
@@ -51987,7 +51987,7 @@ svg.radioIcon_c1e9c4 {
 
 .redesign\/channel-title\/semibold_b717a1 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.375
 }
@@ -51998,7 +51998,7 @@ svg.radioIcon_c1e9c4 {
 
 .redesign\/channel-title\/bold_b717a1 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.375
 }
@@ -52009,44 +52009,44 @@ svg.radioIcon_c1e9c4 {
 
 .display-sm_b717a1 {
     font-family: var(--font-headline);
+    font-size: 20px;
     font-weight: 800;
     line-height: 1
 }
 
-.display-sm_b717a1,
 .display-sm_b717a1.fontScaling_b717a1 {
     font-size: 1.25rem
 }
 
 .display-md_b717a1 {
     font-family: var(--font-headline);
+    font-size: 34px;
     font-weight: 800;
     line-height: 1.0588235294117647
 }
 
-.display-md_b717a1,
 .display-md_b717a1.fontScaling_b717a1 {
     font-size: 2.125rem
 }
 
 .display-lg_b717a1 {
     font-family: var(--font-headline);
+    font-size: 44px;
     font-weight: 800;
     line-height: .9545454545454546
 }
 
-.display-lg_b717a1,
 .display-lg_b717a1.fontScaling_b717a1 {
     font-size: 2.75rem
 }
 
 .code_b717a1 {
     font-family: var(--font-code);
+    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
 
-.code_b717a1,
 .code_b717a1.fontScaling_b717a1 {
     font-size: .75rem
 }
@@ -52058,8 +52058,8 @@ svg.radioIcon_c1e9c4 {
 }
 
 .h1_b717a1 {
-    font-size: 1.25rem;
-    line-height: 1.5rem
+    font-size: 20px;
+    line-height: 24px
 }
 
 .h1_b717a1,
@@ -52068,35 +52068,35 @@ svg.radioIcon_c1e9c4 {
 }
 
 .h2_b717a1 {
-    font-size: 1rem;
-    line-height: 1.25rem
+    font-size: 16px;
+    line-height: 20px
 }
 
 .h3_b717a1 {
     font-weight: var(--font-weight-medium);
-    line-height: 1.5rem
+    line-height: 24px
 }
 
 .h3_b717a1,
 .h4_b717a1 {
-    font-size: 1rem
+    font-size: 16px
 }
 
 .h4_b717a1 {
     font-weight: var(--font-weight-semibold);
-    letter-spacing: .01875rem
+    letter-spacing: .3px
 }
 
 .h4_b717a1,
 .h5_b717a1,
 .legend_b717a1 {
-    line-height: 1.25rem
+    line-height: 20px
 }
 
 .h5_b717a1,
 .legend_b717a1 {
     color: var(--text-strong);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     margin-bottom: 8px;
     text-transform: unset
@@ -52130,7 +52130,7 @@ svg.radioIcon_c1e9c4 {
 }
 
 .errorMessage_b717a1 {
-    font-size: .75rem;
+    font-size: 12px;
     font-style: italic;
     font-weight: var(--font-weight-medium)
 }
@@ -53883,7 +53883,7 @@ screen and (max-width:485px) {
 
 .heading-sm\/normal__2b1f5 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.2857142857142858
 }
@@ -53894,7 +53894,7 @@ screen and (max-width:485px) {
 
 .heading-sm\/medium__2b1f5 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.2857142857142858
 }
@@ -53905,7 +53905,7 @@ screen and (max-width:485px) {
 
 .heading-sm\/semibold__2b1f5 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
@@ -53916,7 +53916,7 @@ screen and (max-width:485px) {
 
 .heading-sm\/bold__2b1f5 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.2857142857142858
 }
@@ -53927,7 +53927,7 @@ screen and (max-width:485px) {
 
 .heading-sm\/extrabold__2b1f5 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 800;
     line-height: 1.2857142857142858
 }
@@ -53938,7 +53938,7 @@ screen and (max-width:485px) {
 
 .heading-md\/normal__2b1f5 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -53949,7 +53949,7 @@ screen and (max-width:485px) {
 
 .heading-md\/medium__2b1f5 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -53960,7 +53960,7 @@ screen and (max-width:485px) {
 
 .heading-md\/semibold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -53971,7 +53971,7 @@ screen and (max-width:485px) {
 
 .heading-md\/bold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -53982,7 +53982,7 @@ screen and (max-width:485px) {
 
 .heading-md\/extrabold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 800;
     line-height: 1.25
 }
@@ -53993,7 +53993,7 @@ screen and (max-width:485px) {
 
 .heading-lg\/normal__2b1f5 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.2
 }
@@ -54004,7 +54004,7 @@ screen and (max-width:485px) {
 
 .heading-lg\/medium__2b1f5 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.2
 }
@@ -54015,7 +54015,7 @@ screen and (max-width:485px) {
 
 .heading-lg\/semibold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.2
 }
@@ -54026,7 +54026,7 @@ screen and (max-width:485px) {
 
 .heading-lg\/bold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -54037,7 +54037,7 @@ screen and (max-width:485px) {
 
 .heading-lg\/extrabold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 800;
     line-height: 1.2
 }
@@ -54048,7 +54048,7 @@ screen and (max-width:485px) {
 
 .heading-xl\/normal__2b1f5 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -54059,7 +54059,7 @@ screen and (max-width:485px) {
 
 .heading-xl\/medium__2b1f5 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -54070,7 +54070,7 @@ screen and (max-width:485px) {
 
 .heading-xl\/semibold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -54081,7 +54081,7 @@ screen and (max-width:485px) {
 
 .heading-xl\/bold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -54092,7 +54092,7 @@ screen and (max-width:485px) {
 
 .heading-xl\/extrabold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 800;
     line-height: 1.25
 }
@@ -54103,7 +54103,7 @@ screen and (max-width:485px) {
 
 .heading-xxl\/normal__2b1f5 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -54114,7 +54114,7 @@ screen and (max-width:485px) {
 
 .heading-xxl\/medium__2b1f5 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -54125,7 +54125,7 @@ screen and (max-width:485px) {
 
 .heading-xxl\/semibold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -54136,7 +54136,7 @@ screen and (max-width:485px) {
 
 .heading-xxl\/bold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -54147,7 +54147,7 @@ screen and (max-width:485px) {
 
 .heading-xxl\/extrabold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 800;
     line-height: 1.25
 }
@@ -54158,20 +54158,20 @@ screen and (max-width:485px) {
 
 .eyebrow__2b1f5 {
     font-family: var(--font-display);
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: .02em;
     line-height: 1.3333333333333333;
     text-transform: uppercase
 }
 
-.eyebrow__2b1f5,
 .eyebrow__2b1f5.fontScaling__2b1f5 {
     font-size: .75rem
 }
 
 .heading-deprecated-12\/normal__2b1f5 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -54182,7 +54182,7 @@ screen and (max-width:485px) {
 
 .heading-deprecated-12\/medium__2b1f5 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -54193,7 +54193,7 @@ screen and (max-width:485px) {
 
 .heading-deprecated-12\/semibold__2b1f5 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
@@ -54204,7 +54204,7 @@ screen and (max-width:485px) {
 
 .heading-deprecated-12\/bold__2b1f5 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -54215,7 +54215,7 @@ screen and (max-width:485px) {
 
 .heading-deprecated-12\/extrabold__2b1f5 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 800;
     line-height: 1.3333333333333333
 }
@@ -54226,7 +54226,7 @@ screen and (max-width:485px) {
 
 .redesign\/heading-18\/bold__2b1f5 {
     font-family: var(--font-display);
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -54237,7 +54237,7 @@ screen and (max-width:485px) {
 
 .text-xxs\/normal__2b1f5 {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     font-weight: 400;
     line-height: 1.2
 }
@@ -54248,7 +54248,7 @@ screen and (max-width:485px) {
 
 .text-xxs\/medium__2b1f5 {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     font-weight: 500;
     line-height: 1.2
 }
@@ -54259,18 +54259,18 @@ screen and (max-width:485px) {
 
 .text-xxs\/semibold__2b1f5 {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     font-weight: 600;
     line-height: 1.2
 }
 
-.text-xxs\/bold__2b1f5,
 .text-xxs\/semibold__2b1f5.fontScaling__2b1f5 {
     font-size: .625rem
 }
 
 .text-xxs\/bold__2b1f5 {
     font-family: var(--font-primary);
+    font-size: 10px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -54281,7 +54281,7 @@ screen and (max-width:485px) {
 
 .text-xs\/normal__2b1f5 {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -54292,7 +54292,7 @@ screen and (max-width:485px) {
 
 .text-xs\/medium__2b1f5 {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -54303,18 +54303,18 @@ screen and (max-width:485px) {
 
 .text-xs\/semibold__2b1f5 {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
 
-.text-xs\/bold__2b1f5,
 .text-xs\/semibold__2b1f5.fontScaling__2b1f5 {
     font-size: .75rem
 }
 
 .text-xs\/bold__2b1f5 {
     font-family: var(--font-primary);
+    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -54325,18 +54325,18 @@ screen and (max-width:485px) {
 
 .text-sm\/normal__2b1f5 {
     font-family: var(--font-primary);
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.2857142857142858
 }
 
-.text-sm\/medium__2b1f5,
-.text-sm\/normal__2b1f5,
 .text-sm\/normal__2b1f5.fontScaling__2b1f5 {
     font-size: .875rem
 }
 
 .text-sm\/medium__2b1f5 {
     font-family: var(--font-primary);
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.2857142857142858
 }
@@ -54347,18 +54347,18 @@ screen and (max-width:485px) {
 
 .text-sm\/semibold__2b1f5 {
     font-family: var(--font-primary);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
 
-.text-sm\/bold__2b1f5,
 .text-sm\/semibold__2b1f5.fontScaling__2b1f5 {
     font-size: .875rem
 }
 
 .text-sm\/bold__2b1f5 {
     font-family: var(--font-primary);
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.2857142857142858
 }
@@ -54369,7 +54369,7 @@ screen and (max-width:485px) {
 
 .text-md\/normal__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -54380,7 +54380,7 @@ screen and (max-width:485px) {
 
 .text-md\/medium__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -54391,7 +54391,7 @@ screen and (max-width:485px) {
 
 .text-md\/semibold__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -54402,7 +54402,7 @@ screen and (max-width:485px) {
 
 .text-md\/bold__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -54413,18 +54413,18 @@ screen and (max-width:485px) {
 
 .text-lg\/normal__2b1f5 {
     font-family: var(--font-primary);
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.2
 }
 
-.text-lg\/medium__2b1f5,
-.text-lg\/normal__2b1f5,
 .text-lg\/normal__2b1f5.fontScaling__2b1f5 {
     font-size: 1.25rem
 }
 
 .text-lg\/medium__2b1f5 {
     font-family: var(--font-primary);
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.2
 }
@@ -54435,18 +54435,18 @@ screen and (max-width:485px) {
 
 .text-lg\/semibold__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.2
 }
 
-.text-lg\/bold__2b1f5,
 .text-lg\/semibold__2b1f5.fontScaling__2b1f5 {
     font-size: 1.25rem
 }
 
 .text-lg\/bold__2b1f5 {
     font-family: var(--font-primary);
+    font-size: 20px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -54457,7 +54457,7 @@ screen and (max-width:485px) {
 
 .redesign\/message-preview\/normal__2b1f5 {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -54468,7 +54468,7 @@ screen and (max-width:485px) {
 
 .redesign\/message-preview\/medium__2b1f5 {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -54479,7 +54479,7 @@ screen and (max-width:485px) {
 
 .redesign\/message-preview\/semibold__2b1f5 {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
@@ -54490,7 +54490,7 @@ screen and (max-width:485px) {
 
 .redesign\/message-preview\/bold__2b1f5 {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -54501,7 +54501,7 @@ screen and (max-width:485px) {
 
 .redesign\/channel-title\/normal__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.375
 }
@@ -54512,7 +54512,7 @@ screen and (max-width:485px) {
 
 .redesign\/channel-title\/medium__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.375
 }
@@ -54523,7 +54523,7 @@ screen and (max-width:485px) {
 
 .redesign\/channel-title\/semibold__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.375
 }
@@ -54534,7 +54534,7 @@ screen and (max-width:485px) {
 
 .redesign\/channel-title\/bold__2b1f5 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.375
 }
@@ -54545,44 +54545,44 @@ screen and (max-width:485px) {
 
 .display-sm__2b1f5 {
     font-family: var(--font-headline);
+    font-size: 20px;
     font-weight: 800;
     line-height: 1
 }
 
-.display-sm__2b1f5,
 .display-sm__2b1f5.fontScaling__2b1f5 {
     font-size: 1.25rem
 }
 
 .display-md__2b1f5 {
     font-family: var(--font-headline);
+    font-size: 34px;
     font-weight: 800;
     line-height: 1.0588235294117647
 }
 
-.display-md__2b1f5,
 .display-md__2b1f5.fontScaling__2b1f5 {
     font-size: 2.125rem
 }
 
 .display-lg__2b1f5 {
     font-family: var(--font-headline);
+    font-size: 44px;
     font-weight: 800;
     line-height: .9545454545454546
 }
 
-.display-lg__2b1f5,
 .display-lg__2b1f5.fontScaling__2b1f5 {
     font-size: 2.75rem
 }
 
 .code__2b1f5 {
     font-family: var(--font-code);
+    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
 
-.code__2b1f5,
 .code__2b1f5.fontScaling__2b1f5 {
     font-size: .75rem
 }
