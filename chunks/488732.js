@@ -32,6 +32,7 @@ var r = {
     separator: "separator_c1e9c4",
     submenuPaddingContainer: "submenuPaddingContainer_c1e9c4",
     submenu: "submenu_c1e9c4 menu_c1e9c4",
+    submenuLayer: "submenuLayer_c1e9c4",
     colorDefault: "colorDefault_c1e9c4",
     checkbox: "checkbox_c1e9c4",
     radioSelection: "radioSelection_c1e9c4",
