@@ -124,8 +124,9 @@ function L(t, e, n, l) {
 }
 function v(t, e, n) {
     let l = (0, r.bG)([f.A], () => f.A.getInteractionComponentState(t.customId, e.id)),
-        { error: u, validate: s } = O(e, l),
-        d = i.useCallback(
+        [u] = i.useState(n),
+        { error: s, validate: d } = O(e, l),
+        c = i.useCallback(
             (n) =>
                 null == n ||
                 (a.h.dispatch({
@@ -134,14 +135,14 @@ function v(t, e, n) {
                     componentId: e.id,
                     state: n,
                 }),
-                !!s(n)),
-            [t.customId, e.id, s],
+                !!d(n)),
+            [t.customId, e.id, d],
         );
     return (
         (0, o.Ay)(() => {
-            null == l && d(n);
+            null == l && c(n);
         }),
-        { state: l ?? n ?? null, executeStateUpdate: d, isDisabled: !1, visualState: C.BB.NORMAL, error: u }
+        { state: l ?? u ?? null, executeStateUpdate: c, isDisabled: !1, visualState: C.BB.NORMAL, error: s }
     );
 }
 let P = i.createContext(null);
