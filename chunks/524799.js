@@ -1,32 +1,32 @@
 "use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => g, j: () => E });
 var r = n(311907),
     i = n(73153),
-    s = n(998218);
-function a(e) {
+    s = n(998218),
+    a = n(223273);
+function o(e) {
     if (null == e) return;
     let { steam: t } = e;
     if (null != t) return { steam: { rating: t.rating, ratingCount: t.rating_count } };
 }
-n(223273);
-let o = new Map(),
-    l = new Set(),
+let l = new Map(),
     u = new Set(),
-    c = new Set();
-function d() {
-    (o = new Map()), (l = new Set()), (u = new Set()), (c = new Set());
-}
-function _(e) {
-    let { applicationIds: t } = e;
-    t.forEach((e) => {
-        l.add(e), u.delete(e);
-    });
+    c = new Set(),
+    d = new Set();
+function _() {
+    (l = new Map()), (u = new Set()), (c = new Set()), (d = new Set());
 }
 function f(e) {
+    let { applicationIds: t } = e;
+    t.forEach((e) => {
+        u.add(e), c.delete(e);
+    });
+}
+function p(e) {
     let { applicationIds: t, supplementalGameData: n } = e,
         r = new Set(t);
     t.forEach((e) => {
-        l.delete(e), u.delete(e);
+        u.delete(e), c.delete(e);
     }),
         n.forEach((e) => {
             let {
@@ -34,7 +34,7 @@ function f(e) {
                 name: n,
                 summary: i,
                 websites: s,
-                themes: l,
+                themes: a,
                 genres: u,
                 platforms: c,
                 artwork_urls: d,
@@ -49,13 +49,13 @@ function f(e) {
                 reviews: I,
             } = e;
             r.delete(t),
-                o.set(t, {
+                l.set(t, {
                     applicationId: t,
                     name: n,
                     summary: i,
                     summaryLocalized: m,
                     websites: s,
-                    themes: l,
+                    themes: a,
                     genres: u,
                     platforms: c,
                     artwork: d,
@@ -66,62 +66,72 @@ function f(e) {
                     publishers: E ?? [],
                     developers: g ?? [],
                     steamReleaseStatus: A,
-                    reviews: a(I),
+                    reviews: o(I),
                 });
         }),
         r.forEach((e) => {
-            o.has(e) || c.add(e);
+            l.has(e) || d.add(e);
         });
 }
-function p(e) {
+function h(e) {
     let { applicationIds: t } = e;
     t.forEach((e) => {
-        l.delete(e), u.add(e);
+        u.delete(e), c.add(e);
     });
 }
-class h extends r.Ay.Store {
+class m extends r.Ay.Store {
     static displayName = "DetectableGameSupplementalStore";
     canFetch(e) {
-        return !l.has(e) && !u.has(e) && !o.has(e) && !c.has(e);
+        return !u.has(e) && !c.has(e) && !l.has(e) && !d.has(e);
     }
     isFetching(e) {
-        return l.has(e);
-    }
-    didFetchingFail(e) {
         return u.has(e);
     }
+    didFetchingFail(e) {
+        return c.has(e);
+    }
     getGame(e) {
-        return o.get(e);
+        return l.get(e);
     }
     getGames(e) {
-        return e.map((e) => o.get(e));
+        return e.map((e) => l.get(e));
     }
     getLocalizedName(e) {
-        return o.get(e)?.name;
+        return l.get(e)?.name;
     }
     getThemes(e) {
-        return o.get(e)?.themes;
+        return l.get(e)?.themes;
     }
     getCoverImageUrl(e, t) {
-        let n = o.get(e)?.coverImageUrl;
+        let n = l.get(e)?.coverImageUrl;
         if (null == n) return null;
         if (null == t) return n;
         let r = s.A.toURLSafe(n);
         return null == r ? n : (r.searchParams.set("size", t.size.toString()), r.toString());
     }
     noDataAvailable(e) {
-        return c.has(e);
+        return d.has(e);
     }
     numNoDataAvailable() {
-        return c.size;
+        return d.size;
     }
     numSupplementalGames() {
-        return o.size;
+        return l.size;
     }
 }
-let m = new h(i.h, {
-    LOGOUT: d,
-    DETECTABLE_GAME_SUPPLEMENTAL_FETCH: _,
-    DETECTABLE_GAME_SUPPLEMENTAL_FETCH_SUCCESS: f,
-    DETECTABLE_GAME_SUPPLEMENTAL_FETCH_FAILURE: p,
+function E(e, t) {
+    if (null == e || null == t || t < 10) return a.vI.NO_USER_REVIEWS;
+    if (e >= 80) return t < 50 ? a.vI.POSITIVE : t < 500 || e < 95 ? a.vI.VERY_POSITIVE : a.vI.OVERWHELMINGLY_POSITIVE;
+    if (e >= 70) return a.vI.MOSTLY_POSITIVE;
+    if (e >= 40) return a.vI.MIXED;
+    if (e >= 20) return a.vI.MOSTLY_NEGATIVE;
+    else if (t < 50) return a.vI.NEGATIVE;
+    else if (t < 500) return a.vI.VERY_NEGATIVE;
+    return a.vI.OVERWHELMINGLY_NEGATIVE;
+}
+let g = new m(i.h, {
+    LOGOUT: _,
+    DETECTABLE_GAME_SUPPLEMENTAL_FETCH: f,
+    DETECTABLE_GAME_SUPPLEMENTAL_FETCH_SUCCESS: p,
+    DETECTABLE_GAME_SUPPLEMENTAL_FETCH_FAILURE: h,
 });
