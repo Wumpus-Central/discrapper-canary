@@ -15,7 +15,7 @@ var a = l(627968),
     A = l(486020),
     _ = l(652215),
     f = l(985018),
-    j = l(574885),
+    j = l(811127),
     b = l(66087),
     I = l(540725);
 function N(e) {
@@ -51,7 +51,7 @@ let C = s.memo(function (e) {
             homeHeaderScroll: 200 * (null != n),
         },
         v = (0, h.A2)(t.id),
-        E = (0, r.bG)([g.A], () => (0, x.K)(g.A, t)),
+        y = (0, r.bG)([g.A], () => (0, x.K)(g.A, t)),
         G = (0, c.Ay)();
     return (0, a.jsxs)("div", {
         className: j.wx,
@@ -71,7 +71,7 @@ let C = s.memo(function (e) {
                 children: (0, a.jsxs)("div", {
                     className: m,
                     children: [
-                        (0, a.jsx)(o.A, { className: j.nr, guild: t, size: o.A.Sizes.XLARGE, active: !0 }),
+                        (0, a.jsx)(o.Ay, { className: j.nr, guild: t, size: o.Ay.Sizes.XLARGE, active: !0 }),
                         (0, a.jsx)(d.Fmo, {
                             children: (0, a.jsxs)("div", {
                                 className: j.Bv,
@@ -87,7 +87,7 @@ let C = s.memo(function (e) {
                                         tooltipPosition: "bottom",
                                         tooltipColor: d.STz.Colors.PRIMARY,
                                     }),
-                                    E &&
+                                    y &&
                                         (0, a.jsx)("div", {
                                             "data-button-hoisted-classname-wrapper": !0,
                                             className: j.ak,
@@ -98,7 +98,7 @@ let C = s.memo(function (e) {
                                                     (0, d.mMO)(async () => {
                                                         let { default: e } = await Promise.all([
                                                             l.e("43600"),
-                                                            l.e("42821"),
+                                                            l.e("75013"),
                                                         ]).then(l.bind(l, 234355));
                                                         return (n) =>
                                                             (0, a.jsx)(e, { ...n, guild: t, source: _.PE1.GUILD_HOME });

@@ -12,7 +12,7 @@ var i = n(627968),
     C = n(808728),
     g = n(71393),
     _ = n(985018),
-    L = n(435631);
+    L = n(124921);
 function u(t) {
     let { createdGuildId: e, hasFooter: n = !0, onClose: u, onChannelPromptCompleted: x, isSlideReady: T } = t,
         [E, G] = a.useState(""),
@@ -67,7 +67,7 @@ function u(t) {
                     direction: o.A.Direction.VERTICAL,
                     separator: !1,
                     children: [
-                        null != U && (0, i.jsx)(p.A, { guild: U }),
+                        null != U && (0, i.jsx)(p.Ay, { guild: U }),
                         (0, i.jsx)(s.Text, {
                             className: L.J5,
                             color: "text-strong",

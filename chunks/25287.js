@@ -10,22 +10,22 @@ var i = n(627968),
     u = n(597929),
     g = n(263063),
     A = n(657331),
-    p = n(260509),
-    m = n(427157),
+    m = n(260509),
+    p = n(427157),
     f = n(734057),
-    y = n(71393),
-    h = n(287809),
+    h = n(71393),
+    y = n(287809),
     E = n(985018);
 function S(e) {
     let { analyticsLocations: t } = (0, c.Ay)(),
         n = e.interactionMetadata?.authorizing_integration_owners[a.b.USER_INSTALL],
         S = e.interactionMetadata?.authorizing_integration_owners[a.b.GUILD_INSTALL],
         _ = e.interactionMetadata?.user.id,
-        b = (0, r.bG)([h.default], () => h.default.getUser(n)),
-        v = (0, r.bG)([y.A], () => y.A.getGuild(S)),
-        I = f.A.getChannel(e.channel_id),
-        T = I?.getGuildId(),
-        x = (0, r.bG)([h.default], () => h.default.getUser(_));
+        b = (0, r.bG)([y.default], () => y.default.getUser(n)),
+        I = (0, r.bG)([h.A], () => h.A.getGuild(S)),
+        v = f.A.getChannel(e.channel_id),
+        x = v?.getGuildId(),
+        j = (0, r.bG)([y.default], () => y.default.getUser(_));
     if (
         (l.useEffect(() => {
             null == b && null != n && (0, o.wz)(n);
@@ -33,29 +33,29 @@ function S(e) {
         !(0, u._)(e))
     )
         return null;
-    null == x && (x = new m.A(e.interactionMetadata?.user));
-    let D = null;
-    if (null != v) {
-        let t = (0, p.Iv)(v, 18, !0);
-        D = (0, i.jsx)(s.Drp, {
+    null == j && (j = new p.A(e.interactionMetadata?.user));
+    let T = null;
+    if (null != I) {
+        let t = (0, m.Iv)(I, 18, !0);
+        T = (0, i.jsx)(s.Drp, {
             disabled: !0,
-            iconLeft: () => (0, i.jsx)(g.A, { guild: v, size: g.A.Sizes.MINI }),
+            iconLeft: () => (0, i.jsx)(g.Ay, { guild: I, size: g.Ay.Sizes.MINI }),
             leadingAccessory: null != t ? { type: "image", src: t } : void 0,
             id: "integration-owner",
-            label: v.name,
+            label: I.name,
             subtext: E.intl.formatToPlainString(E.t.ShLXXB, { application: e.author.username }),
         });
     } else
         null != b &&
-            (D = (0, i.jsx)(s.Drp, {
+            (T = (0, i.jsx)(s.Drp, {
                 action: () =>
                     (0, A.openUserProfileModal)({
                         userId: b.id,
-                        guildId: T,
+                        guildId: x,
                         channelId: e.channel_id,
                         sourceAnalyticsLocations: t,
                     }),
-                leadingAccessory: { type: "avatar", src: b.getAvatarURL(T, 18) },
+                leadingAccessory: { type: "avatar", src: b.getAvatarURL(x, 18) },
                 id: "integration-owner",
                 label: b.username,
                 iconLeft: () => (0, i.jsx)(d.A, { user: b, size: s._3J.SIZE_20 }),
@@ -66,20 +66,20 @@ function S(e) {
         label: E.intl.string(E.t.Rjezbz),
         leadingAccessory: { type: "icon", icon: s.mir },
         children: [
-            D,
-            null != x
+            T,
+            null != j
                 ? (0, i.jsx)(s.Drp, {
                       action: () =>
                           (0, A.openUserProfileModal)({
-                              userId: x.id,
-                              guildId: T,
+                              userId: j.id,
+                              guildId: x,
                               channelId: e.channel_id,
                               sourceAnalyticsLocations: t,
                           }),
-                      leadingAccessory: { type: "avatar", src: x.getAvatarURL(T, 18) },
-                      iconLeft: () => (0, i.jsx)(d.A, { user: x, size: s._3J.SIZE_20 }),
+                      leadingAccessory: { type: "avatar", src: j.getAvatarURL(x, 18) },
+                      iconLeft: () => (0, i.jsx)(d.A, { user: j, size: s._3J.SIZE_20 }),
                       id: "interaction-user",
-                      label: x.username,
+                      label: j.username,
                       subtext: E.intl.string(E.t["04gxNg"]),
                   })
                 : null,

@@ -2,8 +2,8 @@
 n.d(t, { A: () => v });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(311907),
     l = n(230109),
     u = n(421380),
@@ -14,27 +14,27 @@ var r = n(627968),
     p = n(864310),
     h = n(338548),
     m = n(287809),
-    g = n(178368),
-    E = n(927578),
+    E = n(178368),
+    g = n(927578),
     A = n(721923),
     I = n(652215),
     T = n(788868),
-    y = n(985018),
-    S = n(998465);
+    S = n(985018),
+    y = n(162575);
 let v = function (e) {
-    let { closeLayer: t, guild: n, onCtaVisibilityChange: a } = e,
+    let { closeLayer: t, guild: n, onCtaVisibilityChange: s } = e,
         v = i.useRef(null),
-        C = (0, o.bG)([m.default], () => m.default.getCurrentUser()),
-        b = (0, o.bG)([g.A], () => g.A.boostSlots),
-        N = C?.isPremiumGroupMember(),
+        N = (0, o.bG)([m.default], () => m.default.getCurrentUser()),
+        C = (0, o.bG)([E.A], () => E.A.boostSlots),
+        b = N?.isPremiumGroupMember(),
         { analyticsLocations: R } = (0, d.Ay)(),
         O = i.useMemo(
             () =>
-                Object.keys(b).filter((e) => {
-                    let t = b[e];
+                Object.keys(C).filter((e) => {
+                    let t = C[e];
                     return null != t.premiumGuildSubscription && t.premiumGuildSubscription.guildId === n.id;
                 }).length,
-            [b, n.id],
+            [C, n.id],
         ),
         D = (0, p.A)(e.guild.id).total;
     function L() {
@@ -67,56 +67,56 @@ let v = function (e) {
         });
     }
     return (0, r.jsxs)("div", {
-        className: S.yD,
+        className: y.yD,
         children: [
-            (0, r.jsx)(_.A, { className: S.$f, guild: n, size: _.A.Sizes.LARGER }),
+            (0, r.jsx)(_.Ay, { className: y.$f, guild: n, size: _.Ay.Sizes.LARGER }),
             (0, r.jsx)(c.Heading, {
-                className: S.J5,
+                className: y.J5,
                 color: "always-white",
                 variant: "text-lg/bold",
                 children: n.name,
             }),
             (0, r.jsxs)("div", {
-                className: S.nx,
+                className: y.nx,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: S.SJ,
+                        className: y.SJ,
                         children: [
                             (0, r.jsx)(c._Jp, {
                                 color: D > 0 ? c.LU0.unsafe_rawColors.GUILD_BOOSTING_PINK : "currentColor",
-                                className: s()(S.Me, { [S.S3]: D > 0 }),
+                                className: a()(y.Me, { [y.S3]: D > 0 }),
                             }),
                             (0, r.jsx)(c.Text, {
-                                className: S.n,
+                                className: y.n,
                                 variant: "text-md/bold",
-                                children: y.intl.format(y.t["pob/cL"], { subscriptions: D }),
+                                children: S.intl.format(S.t["pob/cL"], { subscriptions: D }),
                             }),
                         ],
                     }),
                     O > 0
                         ? (0, r.jsx)(c.Text, {
-                              className: S.EV,
+                              className: y.EV,
                               variant: "text-sm/normal",
-                              children: y.intl.format(y.t.Jeto2u, { numSubscriptions: O }),
+                              children: S.intl.format(S.t.Jeto2u, { numSubscriptions: O }),
                           })
                         : null,
                 ],
             }),
-            N ? (0, r.jsx)(h.A, { alwaysWhite: !0 }) : null,
+            b ? (0, r.jsx)(h.A, { alwaysWhite: !0 }) : null,
             (0, r.jsxs)("div", {
-                className: S.Sq,
+                className: y.Sq,
                 children: [
                     (0, r.jsx)(l.L, {
                         innerRef: v,
-                        onChange: a,
+                        onChange: s,
                         threshold: 0.9,
                         children: (0, r.jsx)("div", {
                             ref: v,
-                            className: s()(S.J$, S.$F),
+                            className: a()(y.J$, y.$F),
                             children: (0, r.jsx)(A.A, {
-                                className: S.E0,
-                                innerClassName: S.J1,
-                                buttonShineClassName: S.Vi,
+                                className: y.E0,
+                                innerClassName: y.J1,
+                                buttonShineClassName: y.Vi,
                                 guild: n,
                                 analyticsLocation: {
                                     page: I.liQ.PREMIUM_GUILD_USER_MODAL,
@@ -131,29 +131,29 @@ let v = function (e) {
                             }),
                         }),
                     }),
-                    E.Ay.hasFreeBoosts(C) || E.Ay.isPremium(C, T.PremiumTypes.TIER_2)
+                    g.Ay.hasFreeBoosts(N) || g.Ay.isPremium(N, T.PremiumTypes.TIER_2)
                         ? (0, r.jsxs)(u.$n, {
                               "data-migration-pending": !0,
-                              className: s()(S.J$, S.Rr),
-                              innerClassName: S.yN,
+                              className: a()(y.J$, y.Rr),
+                              innerClassName: y.yN,
                               look: u.$n.Looks.OUTLINED,
                               color: u.$n.Colors.WHITE,
                               onClick: w,
                               size: u.$n.Sizes.LARGE,
                               children: [
-                                  (0, r.jsx)(c.okO, { size: "md", color: "currentColor", className: S.MD }),
-                                  y.intl.string(y.t["8MYSQw"]),
+                                  (0, r.jsx)(c.okO, { size: "md", color: "currentColor", className: y.MD }),
+                                  S.intl.string(S.t["8MYSQw"]),
                               ],
                           })
                         : (0, r.jsx)(u.$n, {
                               "data-migration-pending": !0,
-                              className: s()(S.J$, S.Rr),
+                              className: a()(y.J$, y.Rr),
                               look: u.$n.Looks.OUTLINED,
                               color: u.$n.Colors.WHITE,
                               onClick: L,
                               size: u.$n.Sizes.LARGE,
-                              disabled: N,
-                              children: y.intl.string(y.t.Q43TvC),
+                              disabled: b,
+                              children: S.intl.string(S.t.Q43TvC),
                           }),
                 ],
             }),

@@ -13,17 +13,17 @@ var i = a(503698),
     m = a(860689),
     p = a(652215),
     _ = a(985018),
-    g = a(906987),
+    g = a(728989),
     x = a(937495),
     A = a(517061);
 function C(e) {
     let { guild: t, className: a, onClick: i } = e,
         C = (0, r.Ay)(),
-        b = (0, m.dangerouslyConstructGuildRecordFromUntypedObject)({ name: t.name, icon: t.icon }),
-        v = h.Ay.getGuildDiscoverySplashURL({ id: t.id, splash: t.discovery_splash, size: 192 * (0, u.mZ)() }),
+        v = (0, m.dangerouslyConstructGuildRecordFromUntypedObject)({ name: t.name, icon: t.icon }),
+        b = h.Ay.getGuildDiscoverySplashURL({ id: t.id, splash: t.discovery_splash, size: 192 * (0, u.mZ)() }),
         f =
-            null != v
-                ? v
+            null != b
+                ? b
                 : (function (e) {
                       switch (e) {
                           case p.NJ8.DARK:
@@ -50,11 +50,11 @@ function C(e) {
                             height: 58,
                             children: (0, n.jsx)("div", {
                                 className: g.SA,
-                                children: (0, n.jsx)(c.A, {
+                                children: (0, n.jsx)(c.Ay, {
                                     className: g.__invalid_icon,
                                     iconSrc: j,
-                                    guild: b,
-                                    size: c.A.Sizes.LARGE,
+                                    guild: v,
+                                    size: c.Ay.Sizes.LARGE,
                                 }),
                             }),
                         }),

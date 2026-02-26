@@ -13,7 +13,7 @@ var n = i(627968),
     S = i(360966),
     h = i(386936),
     p = i(985018),
-    D = i(818639);
+    D = i(760905);
 function b(t) {
     let { transitionState: e, guildId: i, onClose: b } = t,
         g = (0, r.bG)([m.A], () => m.A.getGuild(i));
@@ -65,7 +65,7 @@ function b(t) {
                         children: (0, n.jsxs)("div", {
                             className: D.OA,
                             children: [
-                                (0, n.jsx)(c.A, { guild: g, size: c.A.Sizes.SMALL }),
+                                (0, n.jsx)(c.Ay, { guild: g, size: c.Ay.Sizes.SMALL }),
                                 (0, n.jsx)(d.Text, { className: D.J5, variant: "text-md/semibold", children: g.name }),
                             ],
                         }),

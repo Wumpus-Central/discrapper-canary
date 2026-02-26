@@ -73,7 +73,7 @@ function p(e) {
             });
         },
         children: [
-            (0, i.jsx)(c.A, {
+            (0, i.jsx)(c.Ay, {
                 tabIndex: -1,
                 guild: p,
                 showBadge: !0,
@@ -81,7 +81,7 @@ function p(e) {
                 badgeStrokeColor: (0, s.Mw)(A) ? l.A.unsafe_rawColors.PRIMARY_600.css : l.A.unsafe_rawColors.WHITE.css,
                 badgeTooltipColor: r.oMw.PRIMARY,
                 badgeTooltipDelay: m.In,
-                size: c.A.Sizes.MEDIUM,
+                size: c.Ay.Sizes.MEDIUM,
                 active: !0,
             }),
             (0, i.jsxs)("div", {

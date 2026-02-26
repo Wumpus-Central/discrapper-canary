@@ -1,16 +1,16 @@
 "use strict";
 n.d(t, {
-    $v: () => y,
+    $v: () => S,
     Ay: () => w,
-    CK: () => N,
-    F4: () => S,
+    CK: () => b,
+    F4: () => y,
     KE: () => L,
-    ME: () => b,
+    ME: () => C,
     R1: () => O,
     _V: () => I,
-    eB: () => C,
+    eB: () => N,
     eu: () => T,
-    hE: () => E,
+    hE: () => g,
     pd: () => v,
     tK: () => A,
     xt: () => D,
@@ -18,8 +18,8 @@ n.d(t, {
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    s = n(397927),
+    s = n.n(i),
+    a = n(397927),
     o = n(571694),
     l = n(902811),
     u = n(235986),
@@ -29,41 +29,41 @@ var i = n(503698),
     f = n(975571),
     p = n(652215),
     h = n(985018),
-    m = n(380172);
-let g = s.euF;
-null == g && (g = () => null);
-let E = (e) => {
+    m = n(334354);
+let E = a.euF;
+null == E && (E = () => null);
+let g = (e) => {
         let { className: t, id: n, children: i, variant: o = "heading-xl/semibold" } = e;
-        return (0, r.jsx)(s.Heading, { variant: o, color: "text-strong", className: a()(m.DD, t), id: n, children: i });
+        return (0, r.jsx)(a.Heading, { variant: o, color: "text-strong", className: s()(m.DD, t), id: n, children: i });
     },
     A = (e) => {
         let { className: t, children: n } = e;
-        return (0, r.jsx)(s.Text, { variant: "text-md/normal", color: "text-default", className: t, children: n });
+        return (0, r.jsx)(a.Text, { variant: "text-md/normal", color: "text-default", className: t, children: n });
     },
     I = (e) => {
         let { className: t, src: n } = e;
-        return (0, r.jsx)("img", { alt: "", src: n, className: a()(m.Sl, t) });
+        return (0, r.jsx)("img", { alt: "", src: n, className: s()(m.Sl, t) });
     },
     T = (e) => {
         let { className: t, src: n, size: i } = e;
-        return (0, r.jsx)(g, { src: n, size: i, className: a()(m.yt, t), "aria-hidden": !0 });
+        return (0, r.jsx)(E, { src: n, size: i, className: s()(m.yt, t), "aria-hidden": !0 });
     },
-    y = (e) => {
-        let { guild: t, size: n, animate: i = !1, className: a } = e;
-        return (0, r.jsx)(d.A, { active: !0, guild: t, size: n, animate: i, className: a });
+    S = (e) => {
+        let { guild: t, size: n, animate: i = !1, className: s } = e;
+        return (0, r.jsx)(d.Ay, { active: !0, guild: t, size: n, animate: i, className: s });
     };
-y.Sizes = d.A.Sizes;
-let S = (e) => {
+S.Sizes = d.Ay.Sizes;
+let y = (e) => {
     let { className: t, channel: n, size: i } = e;
-    return (0, r.jsx)(g, { src: (0, o.Y)(n), size: i, className: a()(m.TP, t), "aria-hidden": !0 });
+    return (0, r.jsx)(E, { src: (0, o.Y)(n), size: i, className: s()(m.TP, t), "aria-hidden": !0 });
 };
-S.Sizes = s._3J;
+y.Sizes = a._3J;
 let v = (e) => {
         let {
                 label: t,
                 error: n,
                 placeholder: i,
-                value: a,
+                value: s,
                 className: o,
                 setRef: l,
                 type: u = "text",
@@ -73,16 +73,16 @@ let v = (e) => {
                 maxLength: p,
                 spellCheck: h,
                 name: m,
-                description: g,
-                required: E,
+                description: E,
+                required: g,
                 onFocus: A,
                 onBlur: I,
             } = e,
             T = (0, c.GV)(),
-            y = (0, r.jsx)(s.ksK, {
+            S = (0, r.jsx)(a.ksK, {
                 name: m,
                 type: u,
-                value: a,
+                value: s,
                 inputRef: l,
                 placeholder: i,
                 "aria-label": t,
@@ -96,20 +96,20 @@ let v = (e) => {
                 onBlur: I,
                 label: t,
                 error: n,
-                required: E,
-                description: g,
+                required: g,
+                description: E,
             });
-        return null != o ? (0, r.jsx)("div", { className: o, children: y }) : y;
+        return null != o ? (0, r.jsx)("div", { className: o, children: S }) : S;
+    },
+    N = (e) => {
+        let { className: t, children: n } = e;
+        return (0, r.jsx)("div", { className: s()(m.om, t), children: n });
     },
     C = (e) => {
         let { className: t, children: n } = e;
-        return (0, r.jsx)("div", { className: a()(m.om, t), children: n });
+        return (0, r.jsx)(a.Text, { variant: "text-xs/normal", className: s()(m.Sv, t), children: n });
     },
     b = (e) => {
-        let { className: t, children: n } = e;
-        return (0, r.jsx)(s.Text, { variant: "text-xs/normal", className: a()(m.Sv, t), children: n });
-    },
-    N = (e) => {
         let { className: t } = e;
         return (0, r.jsx)(u.A, {
             direction: u.A.Direction.VERTICAL,
@@ -119,7 +119,7 @@ let v = (e) => {
         });
     },
     R = (e) =>
-        (0, r.jsx)(s.Text, {
+        (0, r.jsx)(a.Text, {
             tag: "span",
             className: e?.className,
             variant: "text-sm/normal",
@@ -128,13 +128,13 @@ let v = (e) => {
         }),
     O = (e) => {
         let t,
-            { online: n, total: i, className: s, flat: o, textClassName: l, renderText: c = R } = e;
+            { online: n, total: i, className: a, flat: o, textClassName: l, renderText: c = R } = e;
         return null == i
             ? null
             : (null != n &&
                   n > 0 &&
                   (t = (0, r.jsxs)("div", {
-                      className: a()(m.Io, m.L1, o && m.Z6),
+                      className: s()(m.Io, m.L1, o && m.Z6),
                       children: [
                           (0, r.jsx)("i", { className: m._o }),
                           c({ className: l, children: h.intl.format(h.t["LC+S+m"], { membersOnline: n }) }),
@@ -142,11 +142,11 @@ let v = (e) => {
                   })),
               (0, r.jsxs)(u.A, {
                   justify: u.A.Justify.CENTER,
-                  className: s,
+                  className: a,
                   children: [
                       t,
                       (0, r.jsxs)("div", {
-                          className: a()(m.Io, o && m.Z6),
+                          className: s()(m.Io, o && m.Z6),
                           children: [
                               (0, r.jsx)("i", { className: m.jk }),
                               c({ className: l, children: h.intl.format(h.t.zRl6XR, { count: i }) }),
@@ -162,7 +162,7 @@ let v = (e) => {
             : (0, r.jsxs)("div", {
                   className: m.l1,
                   children: [
-                      (0, r.jsx)(s.Text, {
+                      (0, r.jsx)(a.Text, {
                           tag: "span",
                           variant: "text-md/normal",
                           color: "text-default",
@@ -171,10 +171,10 @@ let v = (e) => {
                       (0, r.jsx)(T, {
                           className: m.yj,
                           src: t.getAvatarURL(void 0, 24),
-                          size: s._3J.SIZE_24,
+                          size: a._3J.SIZE_24,
                           "aria-label": t.username,
                       }),
-                      (0, r.jsx)(s.Text, {
+                      (0, r.jsx)(a.Text, {
                           className: m.pp,
                           tag: "span",
                           variant: "text-md/semibold",
@@ -186,16 +186,16 @@ let v = (e) => {
     },
     L = (e) => {
         let { className: t } = e;
-        return (0, r.jsxs)(C, {
+        return (0, r.jsxs)(N, {
             className: t,
             children: [
-                (0, r.jsx)(s.Button, {
+                (0, r.jsx)(a.Button, {
                     text: h.intl.format(h.t.JoS1i3, { platform: (0, _.Vf)() }),
                     variant: "secondary",
                     fullWidth: !0,
                     onClick: () => window.open((0, _.SU)()),
                 }),
-                (0, r.jsx)(b, {
+                (0, r.jsx)(C, {
                     className: m.UM,
                     children: h.intl.format(h.t.wO1VBk, {
                         supportedBrowserURL: f.A.getArticleURL(p.MVz.SUPPORTED_BROWSERS),
@@ -215,7 +215,7 @@ let v = (e) => {
             theme: c = p.NJ8.DARK,
             style: d,
         } = e;
-        return (0, r.jsx)(s.NPJ, {
+        return (0, r.jsx)(a.NPJ, {
             theme: c,
             disableAdaptiveTheme: !0,
             children: (e) =>
@@ -223,10 +223,10 @@ let v = (e) => {
                     "data-theme": c,
                     onSubmit: o,
                     style: d,
-                    className: a()(u ? m.PR : m.sL, e, t),
+                    className: s()(u ? m.PR : m.sL, e, t),
                     children: [
                         (0, r.jsx)("div", { className: m.ie }),
-                        (0, r.jsx)("div", { className: a()(m.f4, n), children: l }),
+                        (0, r.jsx)("div", { className: s()(m.f4, n), children: l }),
                     ],
                 }),
         });

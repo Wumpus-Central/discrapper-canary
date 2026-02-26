@@ -3,8 +3,8 @@ n.d(t, { A: () => h });
 var r = n(627968);
 n(64700);
 var i = n(942381),
-    a = n(311907),
-    s = n(397927),
+    s = n(311907),
+    a = n(397927),
     o = n(571694),
     l = n(263063),
     u = n(366811),
@@ -12,25 +12,25 @@ var i = n(942381),
     d = n(71393),
     _ = n(287809),
     f = n(486020),
-    p = n(375812);
+    p = n(210670);
 function h() {
     let { guildId: e, channelId: t } = (0, u.A)((e) => {
             let { guildId: t, channelId: n } = e;
             return { guildId: t, channelId: n };
         }, i.x),
-        n = (0, a.bG)([d.A], () => d.A.getGuild(e)),
-        h = (0, a.bG)([c.A], () => (null == n ? c.A.getChannel(t) : null)),
-        m = (0, a.bG)([_.default], () => _.default.getCurrentUser()),
-        g = null != h ? (0, o.Y)(h) : null,
-        E = null != m ? m.getAvatarURL(e, 80) : f.vI["0"],
-        A = (0, r.jsx)(s.euF, { src: E, "aria-hidden": !0, size: s._3J.SIZE_80, className: p.HT }),
+        n = (0, s.bG)([d.A], () => d.A.getGuild(e)),
+        h = (0, s.bG)([c.A], () => (null == n ? c.A.getChannel(t) : null)),
+        m = (0, s.bG)([_.default], () => _.default.getCurrentUser()),
+        E = null != h ? (0, o.Y)(h) : null,
+        g = null != m ? m.getAvatarURL(e, 80) : f.vI["0"],
+        A = (0, r.jsx)(a.euF, { src: g, "aria-hidden": !0, size: a._3J.SIZE_80, className: p.HT }),
         I = null;
     return (
         (I =
             null != n
-                ? (0, r.jsx)(l.A, { guild: n })
-                : null != g
-                  ? (0, r.jsx)(s.euF, { "aria-hidden": !0, src: g, size: s._3J.SIZE_80, className: p.HT })
+                ? (0, r.jsx)(l.Ay, { guild: n })
+                : null != E
+                  ? (0, r.jsx)(a.euF, { "aria-hidden": !0, src: E, size: a._3J.SIZE_80, className: p.HT })
                   : A),
         (0, r.jsxs)("div", {
             className: p.kL,

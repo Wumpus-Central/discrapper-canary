@@ -18,11 +18,11 @@ var l = n(627968),
     C = n(994500),
     b = n(309010),
     j = n(287809),
-    N = n(954571),
-    f = n(661191),
-    S = n(652215),
-    y = n(985018),
-    v = n(183759);
+    y = n(954571),
+    N = n(661191),
+    f = n(652215),
+    S = n(985018),
+    v = n(910717);
 class w extends a.PureComponent {
     constructor(e) {
         super(e);
@@ -38,7 +38,7 @@ class w extends a.PureComponent {
         };
     }
     componentDidMount() {
-        N.default.track(S.HAw.OPEN_MODAL, {
+        y.default.track(f.HAw.OPEN_MODAL, {
             type: "Follow Channel Modal",
             num_guild_permissions: Object.keys(this.props.guilds).length,
             location: "Chat Input Blocker - Follow Channel",
@@ -77,9 +77,9 @@ class w extends a.PureComponent {
                         });
                 })
                 .catch((e) => {
-                    e.body.code === S.t02.TOO_MANY_WEBHOOKS
-                        ? this.setState({ errorMessage: y.intl.string(y.t["1eZ4aB"]), submitting: !1 })
-                        : this.setState({ errorMessage: y.intl.string(y.t.LgwhuN), submitting: !1 });
+                    e.body.code === f.t02.TOO_MANY_WEBHOOKS
+                        ? this.setState({ errorMessage: S.intl.string(S.t["1eZ4aB"]), submitting: !1 })
+                        : this.setState({ errorMessage: S.intl.string(S.t.LgwhuN), submitting: !1 });
                 }));
     };
     renderFooter() {
@@ -90,25 +90,25 @@ class w extends a.PureComponent {
             children: [
                 (0, l.jsx)(d.Button, {
                     variant: "primary",
-                    text: y.intl.string(y.t["3aOv+h"]),
+                    text: S.intl.string(S.t["3aOv+h"]),
                     loading: n,
                     onClick: this.handleFollow,
                     disabled: null == e || null == t,
                 }),
-                (0, l.jsx)(d.Button, { variant: "secondary", text: y.intl.string(y.t["ETE/oC"]), onClick: a }),
+                (0, l.jsx)(d.Button, { variant: "secondary", text: S.intl.string(S.t["ETE/oC"]), onClick: a }),
             ],
         });
     }
     renderForm() {
         let { guilds: e } = this.props,
             { channels: t, selectedGuildId: n, selectedChannelId: a, errorMessage: s } = this.state,
-            i = f.default.keys(e).map((t) => {
+            i = N.default.keys(e).map((t) => {
                 let { guild: n } = e[t];
                 return {
                     id: t,
                     value: t,
                     label: n.name,
-                    leading: null == n ? null : (0, l.jsx)(m.A, { guild: n, size: m.A.Sizes.MINI }),
+                    leading: null == n ? null : (0, l.jsx)(m.Ay, { guild: n, size: m.Ay.Sizes.MINI }),
                 };
             }),
             r = t.map((e) => {
@@ -125,13 +125,13 @@ class w extends a.PureComponent {
                 };
             }),
             o = 0 === i.length,
-            c = o ? y.intl.string(y.t["6b6QoF"]) : y.intl.string(y.t.Z0quyN);
+            c = o ? S.intl.string(S.t["6b6QoF"]) : S.intl.string(S.t.Z0quyN);
         return (0, l.jsxs)(d.BJc, {
             gap: 16,
             children: [
                 (0, l.jsx)(d.ZiE, {
                     selectionMode: "single",
-                    label: y.intl.string(y.t.xFn72s),
+                    label: S.intl.string(S.t.xFn72s),
                     value: n,
                     options: i,
                     disabled: o,
@@ -139,7 +139,7 @@ class w extends a.PureComponent {
                 }),
                 (0, l.jsx)(d.ZiE, {
                     selectionMode: "single",
-                    label: y.intl.string(y.t.PDn2fR),
+                    label: S.intl.string(S.t.PDn2fR),
                     value: a,
                     options: r,
                     disabled: 0 === r.length,
@@ -164,20 +164,20 @@ class w extends a.PureComponent {
                 (0, l.jsx)(d.Heading, {
                     variant: "heading-lg/semibold",
                     id: this.state.headerId,
-                    children: y.intl.string(y.t.mvPFbA),
+                    children: S.intl.string(S.t.mvPFbA),
                 }),
                 (0, l.jsx)(d.Text, {
                     color: "text-muted",
                     className: i()(v.O1, { [v.lK]: !e }),
                     variant: "text-sm/normal",
-                    children: y.intl.string(y.t.kbpkxJ),
+                    children: S.intl.string(S.t.kbpkxJ),
                 }),
                 e
                     ? (0, l.jsx)(d.Text, {
                           className: i()(v.lK, v.O1),
                           color: "text-feedback-critical",
                           variant: "text-sm/normal",
-                          children: y.intl.string(y.t["DrNm/5"]),
+                          children: S.intl.string(S.t["DrNm/5"]),
                       })
                     : null,
             ],
@@ -189,7 +189,7 @@ class w extends a.PureComponent {
         return (0, l.jsxs)(d.rQ0, {
             className: v.wx,
             children: [
-                (0, l.jsx)(m.A, { guild: e, size: m.A.Sizes.LARGE }),
+                (0, l.jsx)(m.Ay, { guild: e, size: m.Ay.Sizes.LARGE }),
                 (0, l.jsx)("div", {
                     className: v.nU,
                     children: (0, l.jsxs)("div", {
@@ -231,7 +231,7 @@ let E = r.Ay.connectStores(
             l = _.A.getGuildsArray().reduce((e, t) => {
                 let n = x.Ay.getChannels(t.id)
                     .SELECTABLE.map((e) => e.channel)
-                    .filter((e) => e.type === S.rbe.GUILD_TEXT && A.A.can(S.xBc.MANAGE_WEBHOOKS, e))
+                    .filter((e) => e.type === f.rbe.GUILD_TEXT && A.A.can(f.xBc.MANAGE_WEBHOOKS, e))
                     .map((e) => {
                         let t = p.A.getChannel(e.parent_id);
                         return { channel: e, category: null != t ? t.name : null };

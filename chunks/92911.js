@@ -14,8 +14,8 @@ var i = n(627968),
     x = n(565645),
     h = n(964486),
     _ = n(775602),
-    A = n(47167),
-    p = n(713654),
+    p = n(47167),
+    A = n(713654),
     f = n(508675),
     j = n(263063),
     N = n(714991),
@@ -32,7 +32,7 @@ var i = n(627968),
     G = n(818348),
     L = n(650583),
     D = n(985018),
-    M = n(134599);
+    M = n(514369);
 let k = "WELCOME_CHANNEL",
     U = (e) => {
         let t,
@@ -41,8 +41,8 @@ let k = "WELCOME_CHANNEL",
             E = (0, u.bG)([C.A], () => C.A.getChannel(a.channel_id)),
             b = (0, u.bG)([f.Ay], () => (null != a.emoji_id ? f.Ay.getUsableCustomEmojiById(a.emoji_id) : null)),
             T = null != E && S.MJ(O.xBc.VIEW_CHANNEL, E),
-            v = (0, p.gU)(E) ?? m.N$i,
-            y = (0, A.Ay)(E, !1),
+            v = (0, A.gU)(E) ?? m.N$i,
+            y = (0, p.Ay)(E, !1),
             R = () => {
                 (0, m.mMO)(
                     async () => {
@@ -149,13 +149,13 @@ let k = "WELCOME_CHANNEL",
             a = (0, u.bG)([_.A], () => _.A.useReducedMotion),
             [d, c] = s.useState(null),
             [g, x] = s.useState(!1),
-            [A, p] = s.useState(!1),
+            [p, A] = s.useState(!1),
             { description: f, channels: C, enabled: S } = l,
             G = (e) => {
                 null == t || o()(e, r.channels) || ((0, b.i4)(t.id, { channels: e }), x(!0));
             },
             k = (e) => {
-                null == t || (e !== r.enabled && ((0, b.i4)(t.id, { enabled: e }), p(!a), x(!0)));
+                null == t || (e !== r.enabled && ((0, b.i4)(t.id, { enabled: e }), A(!a), x(!0)));
             },
             P = (e, t, n) => {
                 if (null == C) return;
@@ -229,7 +229,7 @@ let k = "WELCOME_CHANNEL",
                                         k(!S);
                                     }
                                   : void 0,
-                          animateStatus: A,
+                          animateStatus: p,
                           firstLine: S ? D.intl.string(D.t.JbB7Ql) : D.intl.string(D.t["/bd0Qv"]),
                           secondLine: S ? D.intl.string(D.t.TA1g7z) : D.intl.string(D.t.nc6r1B),
                       }),
@@ -239,8 +239,8 @@ let k = "WELCOME_CHANNEL",
                               (0, i.jsxs)("div", {
                                   className: M.eB,
                                   children: [
-                                      (0, i.jsx)(j.A, {
-                                          size: j.A.Sizes.LARGER,
+                                      (0, i.jsx)(j.Ay, {
+                                          size: j.Ay.Sizes.LARGER,
                                           className: M.Kk,
                                           guild: t,
                                           animate: !0,

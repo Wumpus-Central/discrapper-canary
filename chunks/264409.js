@@ -4,11 +4,11 @@ var i = n(627968);
 n(64700);
 var s = n(503698),
     l = n.n(s),
-    r = n(475539),
+    r = n(442215),
     a = n(827734),
     o = n(397927),
     c = n(263063),
-    d = n(211170);
+    d = n(584352);
 function u(e) {
     let { guild: t, show: n, active: s, onAnimationStart: u, onAnimationRest: h } = e,
         A = {},
@@ -37,7 +37,11 @@ function u(e) {
                                     className: d.qJ,
                                     children: (0, i.jsx)("div", {
                                         className: d.jg,
-                                        children: (0, i.jsx)(c.A, { guild: t, size: c.A.Sizes.SMOL, className: d.VL }),
+                                        children: (0, i.jsx)(c.Ay, {
+                                            guild: t,
+                                            size: c.Ay.Sizes.SMOL,
+                                            className: d.VL,
+                                        }),
                                     }),
                                 }),
                             }),

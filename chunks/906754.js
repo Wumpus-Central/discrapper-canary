@@ -3,18 +3,18 @@ n.d(t, { A: () => u });
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    s = n(263063),
+    s = n.n(i),
+    a = n(263063),
     o = n(936755),
-    l = n(746160);
+    l = n(116170);
 let u = function (e) {
     let { guild: t, children: n } = e,
         i =
             null != t
-                ? (0, r.jsx)(s.A, {
+                ? (0, r.jsx)(a.Ay, {
                       guild: t,
-                      size: s.A.Sizes.MEDIUM,
-                      className: a()(l.Kk, null == t.icon ? l.HO : l.FP),
+                      size: a.Ay.Sizes.MEDIUM,
+                      className: s()(l.Kk, null == t.icon ? l.HO : l.FP),
                       active: !0,
                   })
                 : null;

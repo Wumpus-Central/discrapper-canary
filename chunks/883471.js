@@ -25,7 +25,7 @@ let o = (e) => {
                           (0, l.jsxs)("div", {
                               className: d.OA,
                               children: [
-                                  (0, l.jsx)(i.A, { guild: n, size: i.A.Sizes.MINI, className: d.$f }),
+                                  (0, l.jsx)(i.Ay, { guild: n, size: i.Ay.Sizes.MINI, className: d.$f }),
                                   (0, l.jsx)(a.Text, {
                                       color: "text-default",
                                       variant: "text-sm/normal",

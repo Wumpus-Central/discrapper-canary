@@ -19,7 +19,7 @@ function j(e) {
         className: C.y5,
         onClick: l,
         children: [
-            (0, i.jsx)(o.A, { guild: t, size: o.A.Sizes.MEDIUM, active: !0 }),
+            (0, i.jsx)(o.Ay, { guild: t, size: o.Ay.Sizes.MEDIUM, active: !0 }),
             (0, i.jsx)(d.Text, { className: C.J5, variant: "text-md/semibold", children: t.name }),
             (0, i.jsx)("img", { alt: "", src: h }),
         ],
@@ -32,7 +32,7 @@ function L(e) {
     return (0, i.jsxs)("div", {
         className: C._S,
         children: [
-            (0, i.jsx)(o.A, { guild: l, size: o.A.Sizes.MEDIUM, active: !0 }),
+            (0, i.jsx)(o.Ay, { guild: l, size: o.Ay.Sizes.MEDIUM, active: !0 }),
             (0, i.jsx)(d.Text, { className: C.J5, variant: "text-md/normal", children: l.name }),
             (0, i.jsx)(x.A, {
                 entry: a,

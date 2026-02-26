@@ -1,56 +1,56 @@
-l.d(t, { A: () => p });
+l.d(t, { A: () => x });
 var s = l(627968);
 l(64700);
 var n = l(417597),
-    i = l(990078),
-    a = l(397927),
+    a = l(990078),
+    i = l(397927),
     r = l(370480),
-    o = l(263063),
-    u = l(773669),
+    u = l(263063),
+    o = l(773669),
     c = l(696451),
     d = l(71393),
     m = l(661191),
     A = l(985018),
-    x = l(713531);
-function p(e) {
-    let { userId: t, guildId: l, textClassName: p, tooltipDelay: E } = e,
-        f = (0, n.bG)([u.default], () => u.default.locale),
+    p = l(403229);
+function x(e) {
+    let { userId: t, guildId: l, textClassName: x, tooltipDelay: E } = e,
+        f = (0, n.bG)([o.default], () => o.default.locale),
         h = (0, n.bG)([d.A], () => (null != l ? d.A.getGuild(l) : null)),
-        S = (0, n.bG)([c.Ay], () => (null != l ? c.Ay.getMember(l, t) : null)),
-        N = (0, r.An)(m.default.extractTimestamp(t), f),
-        T = (0, r.An)(S?.joinedAt, f);
-    return null == h || null == S
-        ? (0, s.jsx)(a.Text, { variant: "text-sm/normal", className: p, children: N })
+        N = (0, n.bG)([c.Ay], () => (null != l ? c.Ay.getMember(l, t) : null)),
+        S = (0, r.An)(m.default.extractTimestamp(t), f),
+        T = (0, r.An)(N?.joinedAt, f);
+    return null == h || null == N
+        ? (0, s.jsx)(i.Text, { variant: "text-sm/normal", className: x, children: S })
         : (0, s.jsxs)("div", {
-              className: x.y9,
+              className: p.y9,
               children: [
                   (0, s.jsxs)("div", {
-                      className: x.R1,
+                      className: p.R1,
                       children: [
-                          (0, s.jsx)(i.m, {
+                          (0, s.jsx)(a.m, {
                               text: A.intl.string(A.t.uvGmCx),
                               delay: E,
-                              children: (0, s.jsx)(a.pVd, {
+                              children: (0, s.jsx)(i.pVd, {
                                   size: "custom",
                                   width: 28,
                                   height: 28,
                                   color: "currentColor",
-                                  className: x.Mg,
+                                  className: p.Mg,
                               }),
                           }),
-                          (0, s.jsx)(a.Text, { variant: "text-sm/normal", className: p, children: N }),
+                          (0, s.jsx)(i.Text, { variant: "text-sm/normal", className: x, children: S }),
                       ],
                   }),
-                  (0, s.jsx)("div", { className: x.yF }),
+                  (0, s.jsx)("div", { className: p.yF }),
                   (0, s.jsxs)("div", {
-                      className: x.R1,
+                      className: p.R1,
                       children: [
-                          (0, s.jsx)(i.m, {
+                          (0, s.jsx)(a.m, {
                               text: h.name,
                               delay: E,
-                              children: (0, s.jsx)(o.A, { guild: h, size: o.A.Sizes.SMOL, className: x.$f }),
+                              children: (0, s.jsx)(u.Ay, { guild: h, size: u.Ay.Sizes.SMOL, className: p.$f }),
                           }),
-                          (0, s.jsx)(a.Text, { variant: "text-sm/normal", className: p, children: T }),
+                          (0, s.jsx)(i.Text, { variant: "text-sm/normal", className: x, children: T }),
                       ],
                   }),
               ],

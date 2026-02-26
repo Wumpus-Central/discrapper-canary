@@ -21,7 +21,7 @@ var i = n(311907),
     I = n(652215),
     T = n(996988),
     S = n(985018),
-    y = n(380297);
+    y = n(482831);
 let v = 3;
 function N(e) {
     let { user: t, guild: n, channel: N, onAction: C, onClose: b } = e,
@@ -41,7 +41,7 @@ function N(e) {
                 asContainer: !0,
                 text: n.name,
                 "aria-label": !1,
-                children: (0, r.jsx)(_.A, { guild: n, size: _.A.Sizes.SMOL, className: y.$f, onClick: e }),
+                children: (0, r.jsx)(_.Ay, { guild: n, size: _.Ay.Sizes.SMOL, className: y.$f, onClick: e }),
             });
         },
         M = () => {

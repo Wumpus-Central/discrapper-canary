@@ -3,26 +3,26 @@ n.d(t, { A: () => h });
 var r = n(627968);
 n(64700);
 var i = n(342952),
-    a = n(692617),
-    s = n(397927),
+    s = n(692617),
+    a = n(397927),
     o = n(263063),
     l = n(913453),
     u = n(837531),
     c = n(186272),
     d = n(518477),
     _ = n(778712),
-    f = n(252055);
+    f = n(232205);
 let p = 3;
 function h(e) {
     let { user: t, onOpenProfile: n } = e,
         { mutualFriends: h, mutualGuilds: m } = (0, l.A)(t),
-        g = null != h && h.length > 0,
-        E = null != m && m.length > 0,
-        A = g && E ? "text-xs/normal" : "text-sm/normal";
-    if (!g && !E) return null;
+        E = null != h && h.length > 0,
+        g = null != m && m.length > 0,
+        A = E && g ? "text-xs/normal" : "text-sm/normal";
+    if (!E && !g) return null;
     let I = () =>
-            g
-                ? (0, r.jsxs)(s.DUT, {
+            E
+                ? (0, r.jsxs)(a.DUT, {
                       className: f.uW,
                       onClick: () => n?.(d.RP.MUTUAL_FRIENDS),
                       children: [
@@ -37,7 +37,7 @@ function h(e) {
                               disableUsernameTooltip: !0,
                               "aria-hidden": !0,
                           }),
-                          (0, r.jsx)(s.Text, {
+                          (0, r.jsx)(a.Text, {
                               className: f.Qq,
                               variant: A,
                               color: "interactive-text-default",
@@ -46,25 +46,25 @@ function h(e) {
                       ],
                   })
                 : null,
-        T = () => (g && E ? (0, r.jsx)("div", { "aria-hidden": "true", className: f.jH }) : null),
-        y = () =>
-            E
-                ? (0, r.jsxs)(s.DUT, {
+        T = () => (E && g ? (0, r.jsx)("div", { "aria-hidden": "true", className: f.jH }) : null),
+        S = () =>
+            g
+                ? (0, r.jsxs)(a.DUT, {
                       className: f.uW,
                       onClick: () => n?.(d.RP.MUTUAL_GUILDS),
                       children: [
-                          !g &&
-                              (0, r.jsx)(a.A, {
+                          !E &&
+                              (0, r.jsx)(s.A, {
                                   maxGuilds: p,
                                   guilds: m.map((e) => {
                                       let { guild: t } = e;
                                       return t;
                                   }),
-                                  size: o.A.Sizes.SMOL,
+                                  size: o.Ay.Sizes.SMOL,
                                   hideOverflowCount: !0,
                                   disableGuildNameTooltip: !0,
                               }),
-                          (0, r.jsx)(s.Text, {
+                          (0, r.jsx)(a.Text, {
                               className: f.Qq,
                               variant: A,
                               color: "interactive-text-default",
@@ -73,5 +73,5 @@ function h(e) {
                       ],
                   })
                 : null;
-    return (0, r.jsxs)("div", { className: f.I0, children: [I(), T(), y()] });
+    return (0, r.jsxs)("div", { className: f.I0, children: [I(), T(), S()] });
 }

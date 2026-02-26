@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => j, s: () => v });
+n.d(t, { A: () => j, s: () => y });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -20,11 +20,11 @@ var i = n(627968),
     C = n(860689),
     E = n(352123),
     I = n(682557),
-    b = n(652215),
-    N = n(985018),
-    S = n(856528),
+    N = n(652215),
+    b = n(985018),
+    S = n(943110),
     T = n(166382);
-let v = s.memo(function (e) {
+let y = s.memo(function (e) {
     let { onClick: t } = e;
     return (0, i.jsxs)(c.DUT, {
         onClick: t,
@@ -35,12 +35,12 @@ let v = s.memo(function (e) {
                 variant: "text-sm/semibold",
                 color: "text-strong",
                 className: S.Kk,
-                children: N.intl.string(N.t.H9jxS1),
+                children: b.intl.string(b.t.H9jxS1),
             }),
         ],
     });
 });
-function y(e) {
+function v(e) {
     let { entry: t } = e,
         [l, a] = s.useState(!1),
         d = s.useRef(null),
@@ -51,7 +51,7 @@ function y(e) {
             children: [
                 u
                     ? (0, i.jsx)(o.m, {
-                          text: N.intl.string(N.t.XnuOvN),
+                          text: b.intl.string(b.t.XnuOvN),
                           children: (0, i.jsx)(A.$n, {
                               onClick: () => {
                                   (0, c.mMO)(async () => {
@@ -59,7 +59,7 @@ function y(e) {
                                       return (n) => (0, i.jsx)(e, { ...n, entry: t });
                                   });
                               },
-                              "aria-label": N.intl.string(N.t.XnuOvN),
+                              "aria-label": b.intl.string(b.t.XnuOvN),
                               children: (0, i.jsx)(c.R2l, { size: "xs", color: "currentColor", className: S.IQ }),
                           }),
                       })
@@ -73,14 +73,14 @@ function y(e) {
                     children: (e) => {
                         let { onClick: t, ...n } = e;
                         return (0, i.jsx)(o.m, {
-                            text: N.intl.string(N.t["UKOtz+"]),
+                            text: b.intl.string(b.t["UKOtz+"]),
                             children: (0, i.jsx)(A.$n, {
                                 ...n,
                                 onClick: (e) => {
                                     t(e);
                                 },
                                 ref: d,
-                                "aria-label": N.intl.string(N.t["UKOtz+"]),
+                                "aria-label": b.intl.string(b.t["UKOtz+"]),
                                 children: (0, i.jsx)(c.jNK, { size: "md", color: "currentColor", className: S.IQ }),
                             }),
                         });
@@ -97,16 +97,16 @@ let j = s.memo(function (e) {
         A = async () => {
             r(!0);
             try {
-                o ? (0, _.u)(t.guildId) : await u.A.joinGuild(t.guildId, { source: b.Q4z.DIRECTORY_ENTRY });
+                o ? (0, _.u)(t.guildId) : await u.A.joinGuild(t.guildId, { source: N.Q4z.DIRECTORY_ENTRY });
             } finally {
                 r(!1);
             }
         },
         E = x.Ay.getGuildSplashURL({ id: t.guildId, splash: t.splash, size: 300 * (0, m.mZ)() }),
         I = x.Ay.getGuildIconURL({ id: t.guildId, icon: t.icon, size: 40 }) ?? void 0,
-        T = N.intl.string(N.t.VJlc0S);
+        T = b.intl.string(b.t.VJlc0S);
     return (
-        o && (T = N.intl.string(N.t.cqWE2Z)),
+        o && (T = b.intl.string(b.t.cqWE2Z)),
         (0, i.jsxs)("div", {
             className: S.Nr,
             onContextMenu: (e) => {
@@ -131,11 +131,11 @@ let j = s.memo(function (e) {
                                 height: 48,
                                 children: (0, i.jsx)("div", {
                                     className: S.SA,
-                                    children: (0, i.jsx)(p.A, {
+                                    children: (0, i.jsx)(p.Ay, {
                                         className: S.rZ,
                                         iconSrc: I,
                                         guild: (0, C.xi)(t),
-                                        size: p.A.Sizes.MEDIUM,
+                                        size: p.Ay.Sizes.MEDIUM,
                                         active: !0,
                                     }),
                                 }),
@@ -175,7 +175,7 @@ let j = s.memo(function (e) {
                                             (0, i.jsx)(c.Text, {
                                                 variant: "text-xs/normal",
                                                 color: "text-default",
-                                                children: N.intl.format(N.t["LC+S+m"], {
+                                                children: b.intl.format(b.t["LC+S+m"], {
                                                     membersOnline: t.approximatePresenceCount,
                                                 }),
                                             }),
@@ -189,7 +189,7 @@ let j = s.memo(function (e) {
                                             (0, i.jsx)(c.Text, {
                                                 variant: "text-xs/normal",
                                                 color: "text-default",
-                                                children: N.intl.format(N.t.zRl6XR, {
+                                                children: b.intl.format(b.t.zRl6XR, {
                                                     count: t.approximateMemberCount,
                                                 }),
                                             }),
@@ -209,7 +209,7 @@ let j = s.memo(function (e) {
                         }),
                     ],
                 }),
-                (0, i.jsx)(y, { entry: t }),
+                (0, i.jsx)(v, { entry: t }),
             ],
         })
     );

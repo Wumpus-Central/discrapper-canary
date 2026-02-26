@@ -5102,6 +5102,7 @@ var na = (function (e) {
             (e.INVITE_ACCEPT_JOIN_SETTINGS_SET = "invite_accept_join_settings_set"),
             (e.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED = "invite_accept_join_settings_expanded"),
             (e.INVITE_ACCEPT_DISMISSED = "invite_accept_dismissed"),
+            (e.INVITE_ACCEPT_DETAILS_VIEWED = "invite_accept_details_viewed"),
             (e.VOICE_FILTER_LIMITED_TIME_VOICE_SELECTED = "voice_filter_limited_time_voice_selected"),
             (e.VOICE_FILTER_FEEDBACK = "voice_filter_feedback"),
             (e.VOICE_FILTER_PICKER_OPENED = "voice_filter_picker_opened"),

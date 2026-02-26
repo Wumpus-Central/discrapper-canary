@@ -67,7 +67,7 @@ let _ = (e) => ({ label: e.name, value: e.id }),
                             let t = N[e.value];
                             return null == t
                                 ? null
-                                : (0, l.jsx)(u.A, { guild: t, size: u.A.Sizes.SMALLER, active: !0 });
+                                : (0, l.jsx)(u.Ay, { guild: t, size: u.Ay.Sizes.SMALLER, active: !0 });
                         })(e),
                         trailing:
                             null == e.value ? null : f.intl.formatToPlainString(f.t.WkK72v, { count: p[e.value] }),

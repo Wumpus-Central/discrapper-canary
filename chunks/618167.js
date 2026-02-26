@@ -12,7 +12,7 @@ var n = l(627968),
     m = l(942975),
     h = l(645619),
     C = l(434564),
-    g = l(92707);
+    g = l(52953);
 class j extends i.PureComponent {
     render() {
         let { tier: t } = this.props;
@@ -51,7 +51,7 @@ function v(t) {
         (0, n.jsxs)("div", {
             className: r()(g.gP, l),
             children: [
-                (0, n.jsx)(o.A, { guild: e, size: o.A.Sizes.LARGE }),
+                (0, n.jsx)(o.Ay, { guild: e, size: o.Ay.Sizes.LARGE }),
                 (0, n.jsxs)("div", {
                     className: g.EF,
                     children: [

@@ -44,7 +44,7 @@ var r = n(627968),
     Y = n(746080),
     W = n(788868),
     K = n(985018),
-    z = n(767419);
+    z = n(906121);
 let $ = 32,
     q = 12,
     Z = () => ({
@@ -104,7 +104,7 @@ let $ = 32,
                           onClick: p,
                           children: [(0, r.jsx)("img", { src: d, alt: "", className: z.$f }), " :"],
                       })
-                    : (0, r.jsx)(N.A, { size: N.A.Sizes.SMALL, className: z.oi, guild: t }),
+                    : (0, r.jsx)(N.Ay, { size: N.Ay.Sizes.SMALL, className: z.oi, guild: t }),
             m = () =>
                 _
                     ? (0, r.jsx)(f.DUT, {

@@ -15,7 +15,7 @@ var n = l(627968),
     N = l(486020),
     g = l(821589),
     p = l(985018),
-    j = l(485366);
+    j = l(816756);
 let A = (e) => {
         let { text: t, extra: l } = e;
         return (0, n.jsxs)(r.Heading, { variant: "heading-md/semibold", className: j.header, children: [t, l] });
@@ -51,7 +51,7 @@ let A = (e) => {
         return null != t
             ? (0, n.jsx)(m.A, { game: t, onClick: i, size: j.applicationIcon, className: E })
             : null != l
-              ? (0, n.jsx)(x.A, { onClick: i, active: !0, guild: l, className: E, animate: p })
+              ? (0, n.jsx)(x.Ay, { onClick: i, active: !0, guild: l, className: E, animate: p })
               : null != s
                 ? (0, n.jsx)(r.euF, {
                       onClick: i,

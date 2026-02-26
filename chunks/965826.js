@@ -25,7 +25,7 @@ let d = function (e) {
                 (0, r.jsxs)("div", {
                     className: c.OA,
                     children: [
-                        (0, r.jsx)(o.A, { className: c.$f, guild: n, size: o.A.Sizes.LARGER }),
+                        (0, r.jsx)(o.Ay, { className: c.$f, guild: n, size: o.Ay.Sizes.LARGER }),
                         (0, r.jsx)(a.Heading, { className: c.J5, variant: "text-lg/bold", children: n.name }),
                     ],
                 }),

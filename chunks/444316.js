@@ -1,47 +1,50 @@
 "use strict";
-n.d(t, { A: () => c });
+n.d(t, { A: () => h });
 var i = n(627968);
 n(64700);
-var s = n(417597),
-    r = n(397927),
-    l = n(966327),
-    a = n(287809),
-    o = n(985018),
-    d = n(290616);
-function c(e) {
-    let { friendMemberIds: t } = e,
-        n = (0, s.yK)([a.default], () =>
+var s = n(503698),
+    r = n.n(s),
+    l = n(417597),
+    a = n(397927),
+    o = n(966327),
+    d = n(287809),
+    c = n(985018),
+    u = n(290616);
+function h(e) {
+    let { friendMemberIds: t, className: n, avatarSize: s = a._3J.SIZE_16 } = e,
+        h = (0, l.yK)([d.default], () =>
             t
                 .slice(0, 3)
-                .map((e) => a.default.getUser(e))
+                .map((e) => d.default.getUser(e))
                 .filter((e) => null != e),
         );
-    if (0 === n.length) return null;
-    let c = n[0],
-        u = {
+    if (0 === h.length) return null;
+    let _ = h[0],
+        p = {
             count: t.length - 1,
-            username: c.username,
-            username2: 2 === t.length && n.length >= 2 ? n[1].username : "",
+            username: _.username,
+            username2: 2 === t.length && h.length >= 2 ? h[1].username : "",
         },
-        h = o.intl.format(o.t["5NHEPu"], u);
+        g = c.intl.format(c.t["5NHEPu"], p);
     return (0, i.jsxs)("div", {
-        className: d.kL,
+        className: r()(u.kL, n),
         children: [
             (0, i.jsx)("div", {
-                className: d.yA,
-                children: n.map((e, t) =>
+                className: u.yA,
+                style: { maxHeight: `${(0, a.FT9)(s)}px` },
+                children: h.map((e, t) =>
                     (0, i.jsx)(
                         "div",
                         {
-                            className: d.R3,
-                            style: { zIndex: n.length - t },
-                            children: (0, i.jsx)(l.A, { user: e, size: r._3J.SIZE_16 }),
+                            className: u.R3,
+                            style: { zIndex: h.length - t },
+                            children: (0, i.jsx)(o.A, { user: e, size: s }),
                         },
                         e.id,
                     ),
                 ),
             }),
-            (0, i.jsx)(r.Text, { variant: "text-sm/medium", color: "text-subtle", children: h }),
+            (0, i.jsx)(a.Text, { variant: "text-sm/normal", color: "text-subtle", children: g }),
         ],
     });
 }

@@ -14,8 +14,8 @@ var s = n(503698),
     g = n(477470),
     x = n(35275),
     h = n(985018),
-    _ = n(518863);
-function A(e) {
+    _ = n(982169);
+function p(e) {
     let { subscribers: t } = e;
     return (0, i.jsxs)("div", {
         className: _.D$,
@@ -38,18 +38,18 @@ function A(e) {
         ],
     });
 }
-function p(e) {
+function A(e) {
     let { guildName: t, guildIcon: n, guildAvatarUrl: s, subscriberCount: l } = e,
         r = (0, u.dangerouslyConstructGuildRecordFromUntypedObject)({ name: t, icon: n });
     return (0, i.jsxs)("div", {
         className: _.hz,
         children: [
-            (0, i.jsx)(c.A, { className: _.al, iconSrc: s, guild: r, size: c.A.Sizes.LARGE }),
+            (0, i.jsx)(c.Ay, { className: _.al, iconSrc: s, guild: r, size: c.Ay.Sizes.LARGE }),
             (0, i.jsxs)("div", {
                 className: _.PY,
                 children: [
                     (0, i.jsx)(a.Heading, { variant: "heading-lg/semibold", color: "text-strong", children: t }),
-                    null != l && (0, i.jsx)(A, { subscribers: l }),
+                    null != l && (0, i.jsx)(p, { subscribers: l }),
                 ],
             }),
         ],
@@ -156,16 +156,16 @@ function N(e) {
         guildName: g,
         guildAvatarUrl: x,
         subscriberCount: h,
-        emojisToShow: A,
+        emojisToShow: p,
         notShownEmojiCount: N,
         storePageUrl: E,
     } = o.details;
     return (0, i.jsxs)("div", {
         className: _.w_,
         children: [
-            (0, i.jsx)(p, { guildIcon: u, guildName: g, guildAvatarUrl: x, subscriberCount: h }),
+            (0, i.jsx)(A, { guildIcon: u, guildName: g, guildAvatarUrl: x, subscriberCount: h }),
             (0, i.jsx)(f, { quote: s, quoteAttribution: l, quoteAttributionTitle: r }),
-            (0, i.jsx)(j, { emojisToShow: A, notShownEmojiCount: N, storePageUrl: E }),
+            (0, i.jsx)(j, { emojisToShow: p, notShownEmojiCount: N, storePageUrl: E }),
         ],
     });
 }

@@ -15,9 +15,9 @@ var a = i(627968),
     g = i(800007),
     S = i(652215),
     h = i(746080),
-    p = i(294726),
+    p = i(738072),
     A = i(985018),
-    j = i(733039);
+    j = i(635729);
 function N(t) {
     let { guild: e, onClick: i } = t,
         l = (0, n.bG)([m.A], () => m.A.getMemberCount(e.id));
@@ -25,7 +25,7 @@ function N(t) {
         className: j._S,
         onClick: i,
         children: [
-            (0, a.jsx)(o.A, { className: j.$f, guild: e, size: o.A.Sizes.MEDIUM, active: !0 }),
+            (0, a.jsx)(o.Ay, { className: j.$f, guild: e, size: o.Ay.Sizes.MEDIUM, active: !0 }),
             (0, a.jsxs)("div", {
                 className: j.OA,
                 children: [

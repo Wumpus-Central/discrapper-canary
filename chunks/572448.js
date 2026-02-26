@@ -21,25 +21,25 @@ var s = n(503698),
     C = n(616356),
     E = n(734057),
     I = n(71393),
-    b = n(290863),
-    N = n(222823),
+    N = n(290863),
+    b = n(222823),
     S = n(287809),
     T = n(147925),
-    v = n(652215),
-    y = n(985018),
-    j = n(386590);
+    y = n(652215),
+    v = n(985018),
+    j = n(965572);
 let R = { top: 8, bottom: 8, left: -4, right: -4 };
 function O(e) {
     let { channelState: t, toggle: n, getNumUnreadChannels: s } = e;
     return (0, i.jsx)(c.m_, {
-        text: y.intl.string(y.t.iTcuma),
+        text: v.intl.string(v.t.iTcuma),
         children: (0, i.jsx)(d.DUT, {
             className: l()(j.cS, { [j.yZ]: t?.collapsed }),
             onClick: function () {
                 null != t &&
                     null != n &&
                     (n(t),
-                    (0, p.zV)(v.HAw.INBOX_CHANNEL_COLLAPSED, {
+                    (0, p.zV)(y.HAw.INBOX_CHANNEL_COLLAPSED, {
                         channel_id: t.channelId,
                         guild_id: t.guildId,
                         num_unread_channels_remaining: s?.() ?? 0,
@@ -106,11 +106,11 @@ function G(e) {
         s = (0, a.bG)([I.A], () => I.A.getGuild(t.guild_id));
     return null == s
         ? null
-        : (0, i.jsx)(x.A, {
+        : (0, i.jsx)(x.Ay, {
               "aria-hidden": !0,
               className: j.$f,
               guild: s,
-              size: x.A.Sizes.MEDIUM,
+              size: x.Ay.Sizes.MEDIUM,
               active: !0,
               onClick: n,
               tabIndex: -1,
@@ -120,12 +120,12 @@ function U(e) {
     let { channel: t, gotoChannel: n, mentionCount: s } = e,
         r = (0, a.bG)([I.A], () => I.A.getGuild(t.guild_id)),
         c = (0, a.bG)([E.A], () => E.A.getChannel(t.parent_id)),
-        u = (0, a.bG)([N.Ay], () => N.Ay.getIsMentionLowImportance(t.id)),
+        u = (0, a.bG)([b.Ay], () => b.Ay.getIsMentionLowImportance(t.id)),
         h = (0, _.gU)(t, r),
         A = (0, m.Ay)(t, !1),
         p = null == c ? r?.name : `${r?.name} › ${c.name}`,
         g = t.isMultiUserDM()
-            ? y.intl.formatToPlainString(y.t.CxSA5N, { members: t.recipients.length + 1 })
+            ? v.intl.formatToPlainString(v.t.CxSA5N, { members: t.recipients.length + 1 })
             : t.isPrivate()
               ? (0, i.jsx)(P, { channel: t })
               : (0, i.jsx)(d.DUT, { className: l()(j.W$, j.J5), onClick: n, children: p });
@@ -174,12 +174,12 @@ function P(e) {
             status: s,
             activities: l,
             applicationStream: r,
-        } = (0, a.cf)([S.default, b.A, C.A], () => {
+        } = (0, a.cf)([S.default, N.A, C.A], () => {
             let e = S.default.getUser(t.getRecipientId());
             return {
                 user: e,
-                status: null != e ? b.A.getStatus(e.id) : null,
-                activities: null != e ? b.A.getActivities(e.id) : null,
+                status: null != e ? N.A.getStatus(e.id) : null,
+                activities: null != e ? N.A.getActivities(e.id) : null,
                 applicationStream: null != e ? C.A.getAnyStreamForUser(e.id) : null,
             };
         }),

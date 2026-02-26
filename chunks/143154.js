@@ -24,7 +24,7 @@ var i = l(627968),
     y = l(652215),
     I = l(818348),
     k = l(985018),
-    v = l(486856);
+    v = l(451674);
 let T = (e) => {
         let { channelData: a, onClose: l, trackOptionClick: n } = e,
             t = (0, s.bG)([p.A], () => p.A.getChannel(a.channel_id)),
@@ -143,8 +143,8 @@ let T = (e) => {
                                 width: 64,
                                 height: 64,
                                 className: v.$f,
-                                children: (0, i.jsx)(h.A, {
-                                    size: h.A.Sizes.LARGER,
+                                children: (0, i.jsx)(h.Ay, {
+                                    size: h.Ay.Sizes.LARGER,
                                     guild: _,
                                     active: !0,
                                     animate: !0,

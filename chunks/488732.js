@@ -13,6 +13,8 @@ var r = {
     focused: "focused_c1e9c4",
     marqueeText: "marqueeText_c1e9c4",
     switchItem: "switchItem_c1e9c4",
+    textInputItem: "textInputItem_c1e9c4",
+    textInputWrapper: "textInputWrapper_c1e9c4",
     subtext: "subtext_c1e9c4",
     subtextLineClamp: "subtextLineClamp_c1e9c4",
     iconContainer: "iconContainer_c1e9c4",

@@ -10,17 +10,17 @@ var i = n(627968),
     d = n(71393),
     u = n(65611),
     h = n(985018),
-    A = n(211170);
+    A = n(584352);
 function p(e) {
     let { guildId: t, animate: n } = e,
         s = (0, a.bG)([d.A], () => d.A.getGuild(t), [t]),
         l = (0, o.rdh)(o.LU0.modules.guildbar.AVATAR_SIZE);
     return null == s
         ? (0, i.jsx)("div", { className: r()(A.VL, A.zU), children: (0, i.jsx)(o.EpV, { color: "currentColor" }) })
-        : (0, i.jsx)(c.A, {
+        : (0, i.jsx)(c.Ay, {
               guild: s,
               animate: n,
-              size: c.A.Sizes.MINI,
+              size: c.Ay.Sizes.MINI,
               iconSize: l,
               lossless: !0,
               className: A.VL,
@@ -63,14 +63,14 @@ function m(e) {
             onHoverChange: x,
             onKeyDown: C,
             treeItemProps: { onFocus: E, ...I },
-            "aria-setsize": b,
-            "aria-posinset": N,
+            "aria-setsize": N,
+            "aria-posinset": b,
         } = e,
         [S, T] = s.useState(!1),
-        v = s.useCallback(() => {
+        y = s.useCallback(() => {
             l || T(!0), x?.(!0);
         }, [l, x]),
-        y = s.useCallback(() => {
+        v = s.useCallback(() => {
             l || T(!1), x?.(!1);
         }, [l, x]),
         j = n || null == r ? null : (0, u.oi)(r),
@@ -86,15 +86,15 @@ function m(e) {
             className: A.H3,
             onClick: _,
             onContextMenu: f,
-            onMouseEnter: v,
-            onMouseLeave: y,
+            onMouseEnter: y,
+            onMouseLeave: v,
             onKeyDown: C,
             onFocus: E,
             focusProps: { enabled: !1 },
             ...I,
             role: "treeitem",
-            "aria-setsize": b,
-            "aria-posinset": N,
+            "aria-setsize": N,
+            "aria-posinset": b,
             "aria-expanded": n,
             "aria-owns": p,
             children: [

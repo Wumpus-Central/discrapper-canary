@@ -8,7 +8,7 @@ var s = l(284009),
     c = l(263063),
     d = l(976860),
     o = l(985018),
-    u = l(100135);
+    u = l(910925);
 function x(e) {
     let { directoryGuildName: t, guildToAdd: l, isExistingGuildFlow: s, onClose: x } = e;
     return (
@@ -19,7 +19,7 @@ function x(e) {
                     children: (0, i.jsxs)("div", {
                         className: u.Qs,
                         children: [
-                            (0, i.jsx)(c.A, { guild: l, size: c.A.Sizes.XLARGE, active: !0 }),
+                            (0, i.jsx)(c.Ay, { guild: l, size: c.Ay.Sizes.XLARGE, active: !0 }),
                             (0, i.jsx)(r.Heading, {
                                 className: u.DD,
                                 variant: "heading-xl/semibold",

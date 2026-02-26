@@ -28,7 +28,7 @@ var i = t(627968),
     S = t(167630),
     T = t(988794),
     L = t(985018),
-    D = t(888804);
+    D = t(458242);
 function R(e) {
     let { creator: n, guildId: t, channelId: l } = e,
         { analyticsLocations: d } = (0, o.Ay)(),
@@ -86,7 +86,7 @@ function G(e) {
         ),
         c = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(u.A, { guild: n, size: u.A.Sizes.MINI, active: !0, className: r()(D.$f, D.Kk) }),
+                (0, i.jsx)(u.Ay, { guild: n, size: u.Ay.Sizes.MINI, active: !0, className: r()(D.$f, D.Kk) }),
                 (0, i.jsx)(_.A, {
                     guild: n,
                     tooltipPosition: "top",

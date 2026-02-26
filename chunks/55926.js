@@ -31,7 +31,7 @@ var t = e(627968),
     _ = e(311321),
     L = e(652215),
     U = e(985018),
-    F = e(807128);
+    F = e(485862);
 let G = new Intl.DateTimeFormat(U.intl.currentLocale, { month: "short", day: "numeric" });
 function O(n) {
     let { app: i, guildId: e, subscriptions: r, otps: a } = n,
@@ -164,7 +164,7 @@ function C(n) {
             if (D)
                 return (0, t.jsxs)(t.Fragment, {
                     children: [
-                        null != f && (0, t.jsx)(p.A, { guild: f, size: p.A.Sizes.MINI }),
+                        null != f && (0, t.jsx)(p.Ay, { guild: f, size: p.Ay.Sizes.MINI }),
                         U.intl.string(U.t.l8ufqL),
                     ],
                 });

@@ -1,8 +1,8 @@
 n.d(t, { A: () => E });
 var i = n(627968),
     r = n(64700),
-    a = n(681154),
-    l = n(311907),
+    l = n(681154),
+    a = n(311907),
     s = n(713654),
     o = n(263063),
     d = n(698441),
@@ -13,7 +13,7 @@ var i = n(627968),
     _ = n(661191),
     m = n(652215),
     p = n(985018),
-    g = n(310633);
+    g = n(444175);
 function E(e) {
     let { item: t } = e,
         n = r.useMemo(() => {
@@ -41,13 +41,13 @@ function E(e) {
                     return;
             }
         }, [t]),
-        f = r.useMemo(() => {
+        I = r.useMemo(() => {
             if ("guildEvent" === t.data.kind) {
                 let e = d.Ay.getGuildScheduledEvent(t.data.eventId);
                 return e?.guild_id;
             }
         }, [t]),
-        I = r.useMemo(() => {
+        f = r.useMemo(() => {
             if ("contentInventory" === t.data.kind) return t.data.content.author_id;
         }, [t]),
         C = r.useMemo(() => {
@@ -63,10 +63,10 @@ function E(e) {
                     return t.timestamp;
             }
         }, [t]),
-        N = (0, l.bG)([u.A], () => u.A.getChannel(E), [E]),
-        T = N?.guild_id ?? f,
-        S = (0, l.bG)([A.A], () => (null != T ? A.A.getGuild(T) : null), [T]),
-        x = (0, l.bG)([h.default], () => (null != I ? h.default.getUser(I) : null), [I]);
+        T = (0, a.bG)([u.A], () => u.A.getChannel(E), [E]),
+        N = T?.guild_id ?? I,
+        S = (0, a.bG)([A.A], () => (null != N ? A.A.getGuild(N) : null), [N]),
+        x = (0, a.bG)([h.default], () => (null != f ? h.default.getUser(f) : null), [f]);
     return "unknown" === n
         ? null
         : (0, i.jsx)("div", {
@@ -76,7 +76,7 @@ function E(e) {
                   children: [
                       (() => {
                           if ("guild" === n && null != S)
-                              return (0, i.jsx)(o.A, {
+                              return (0, i.jsx)(o.Ay, {
                                   guild: S,
                                   size: "Medium",
                                   active: !1,
@@ -124,10 +124,10 @@ function E(e) {
                                               return p.intl.string(p.t.bYNuVx);
                                           case "contentInventory":
                                               switch (t.data.content.content_type) {
-                                                  case a.ContentInventoryEntryType.CUSTOM_STATUS:
+                                                  case l.ContentInventoryEntryType.CUSTOM_STATUS:
                                                       return p.intl.string(p.t.fxOLPR);
-                                                  case a.ContentInventoryEntryType.TOP_GAME:
-                                                  case a.ContentInventoryEntryType.PLAYED_GAME:
+                                                  case l.ContentInventoryEntryType.TOP_GAME:
+                                                  case l.ContentInventoryEntryType.PLAYED_GAME:
                                                       return p.intl.string(p.t.ktOTRQ);
                                                   default:
                                                       return `${t.data.content.content_type}`;
@@ -141,8 +141,8 @@ function E(e) {
                                           className: g.VA,
                                           children: (0, i.jsx)("span", { className: g.o4, children: e }),
                                       });
-                                  if (null != N && null != e) {
-                                      let t = (0, s.gU)(N, S);
+                                  if (null != T && null != e) {
+                                      let t = (0, s.gU)(T, S);
                                       return (0, i.jsxs)("div", {
                                           className: g.VA,
                                           children: [
@@ -161,7 +161,7 @@ function E(e) {
                                                               height: 16,
                                                               className: g.p,
                                                           }),
-                                                      N.name,
+                                                      T.name,
                                                   ],
                                               }),
                                           ],

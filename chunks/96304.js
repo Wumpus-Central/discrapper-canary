@@ -26,8 +26,8 @@ var r = t(627968),
     U = t(576622),
     M = t(270574),
     L = t(915614),
-    R = t(946356),
-    y = t(939496),
+    y = t(946356),
+    R = t(939496),
     P = t(780964),
     b = t(840065),
     w = t(71393),
@@ -47,7 +47,7 @@ var r = t(627968),
     Z = t(788868),
     X = t(652215),
     Y = t(985018),
-    $ = t(565274),
+    $ = t(667828),
     q = t(324770),
     Q = t(838436),
     ee = t(376038),
@@ -55,7 +55,7 @@ var r = t(627968),
     et = t(578586),
     er = t(955868),
     ea = t(631294),
-    ei = t(751297),
+    ei = t(973678),
     en = t(943298),
     el = t(33487),
     eo = t(581820);
@@ -101,7 +101,7 @@ function ex(e) {
 }
 function ep(e) {
     let { ...s } = e,
-        { theme: t } = (0, y.E)(),
+        { theme: t } = (0, R.E)(),
         a = (0, p.rdh)(p.LU0.colors.INTERACTIVE_TEXT_ACTIVE, t).hex();
     return (0, r.jsx)(p.tvc, { size: "md", ...s, color: a });
 }
@@ -114,7 +114,7 @@ function ej(e) {
     return (
         (s =
             n?.premiumType === Z.PremiumTypes.TIER_2
-                ? (0, r.jsxs)(R.A, {
+                ? (0, r.jsxs)(y.A, {
                       user: t,
                       displayProfile: n,
                       forceShowPremium: !0,
@@ -295,7 +295,7 @@ function e_(e) {
                       children: (0, r.jsxs)("div", {
                           className: $.W5,
                           children: [
-                              (0, r.jsx)(h.A, { guild: l, size: h.A.Sizes.MEDIUM, animate: !i, className: $.Hc }),
+                              (0, r.jsx)(h.Ay, { guild: l, size: h.Ay.Sizes.MEDIUM, animate: !i, className: $.Hc }),
                               (0, r.jsxs)("div", {
                                   className: $.IA,
                                   children: [

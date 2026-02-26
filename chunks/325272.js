@@ -1,4 +1,4 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => c });
 var l = n(627968);
 n(64700);
 var a = n(311907),
@@ -6,8 +6,8 @@ var a = n(311907),
     r = n(263063),
     s = n(71393),
     d = n(985018),
-    o = n(715134);
-let u = (e) => {
+    o = n(536428);
+let c = (e) => {
     let { event: t } = e,
         n = (0, a.bG)([s.A], () => s.A.getGuild(t.guild_id));
     return null == n
@@ -26,7 +26,7 @@ let u = (e) => {
                           (0, l.jsxs)("div", {
                               className: o.OA,
                               children: [
-                                  (0, l.jsx)(r.A, { guild: n, size: r.A.Sizes.MINI, className: o.$f }),
+                                  (0, l.jsx)(r.Ay, { guild: n, size: r.Ay.Sizes.MINI, className: o.$f }),
                                   (0, l.jsx)(i.Text, {
                                       color: "text-default",
                                       variant: "text-sm/normal",

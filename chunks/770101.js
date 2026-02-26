@@ -14,7 +14,7 @@ var n = l(627968),
     C = l(473145),
     g = l(652215),
     j = l(985018),
-    p = l(197161);
+    p = l(489435);
 function v(t) {
     let { setQuery: e, query: l } = t;
     return (0, n.jsx)(d.IWV, {
@@ -67,7 +67,7 @@ function S(t) {
                             s(t);
                         },
                         children: [
-                            (0, n.jsx)(c.A, { className: p.Bq, guild: t, size: c.A.Sizes.SMALL }),
+                            (0, n.jsx)(c.Ay, { className: p.Bq, guild: t, size: c.Ay.Sizes.SMALL }),
                             (0, n.jsxs)("div", {
                                 className: p.Vi,
                                 children: [

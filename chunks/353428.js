@@ -20,24 +20,24 @@ var i = n(627968),
     C = n(576622),
     E = n(994500),
     I = n(967198),
-    b = n(287809),
-    N = n(486020),
+    N = n(287809),
+    b = n(486020),
     S = n(975571),
     T = n(282978),
-    v = n(95655),
-    y = n(565265),
+    y = n(95655),
+    v = n(565265),
     j = n(742589),
     R = n(849205),
     O = n(652215),
     L = n(49999),
     M = n(985018),
-    D = n(638990);
+    D = n(370808);
 function G(e) {
     let { channel: t, children: n } = e,
         s = (0, u.h)(t.linkedLobby?.application_id),
         [l, r] = (0, g.kn)([o.M.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP], void 0, !0);
     if (null == s) return null;
-    let a = N.Ay.getApplicationIconURL({ id: s.id, icon: s.icon, size: 14 }),
+    let a = b.Ay.getApplicationIconURL({ id: s.id, icon: s.icon, size: 14 }),
         [h, A] =
             l !== o.M.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP
                 ? [M.intl.string(M.t["XJVlf/"]), void 0]
@@ -141,7 +141,7 @@ function U(e) {
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(d.AC4, { children: M.intl.string(M.t["e5y+gm"]) }),
-                    (0, i.jsx)(v.n, { channel: t }, `channel-${t.id}`),
+                    (0, i.jsx)(y.n, { channel: t }, `channel-${t.id}`),
                 ],
             });
         case O.rbe.GUILD_ANNOUNCEMENT:
@@ -201,17 +201,17 @@ function U(e) {
                             onContextMenu: g,
                             onClick: h,
                             className: r()(D.rg, D.or),
-                            children: (0, A.m1)(l, b.default, E.A),
+                            children: (0, A.m1)(l, N.default, E.A),
                         }),
                         (0, i.jsx)(j.A.Caret, {}),
                     ],
                 });
             }
-            let N = l?.type != null && O.kvI.GUILD_THREADS_ONLY.has(l.type);
+            let b = l?.type != null && O.kvI.GUILD_THREADS_ONLY.has(l.type);
             return (0, i.jsxs)(s.Fragment, {
                 children: [
                     I,
-                    k(N ? null : _, M.intl.string(M.t["7Xm5QI"])),
+                    k(b ? null : _, M.intl.string(M.t["7Xm5QI"])),
                     (0, i.jsx)(j.A.Title, {
                         level: x,
                         onContextMenu: u,
@@ -240,8 +240,8 @@ function U(e) {
 }
 let P = (e) => {
     let { channel: t } = e,
-        n = (0, a.bG)([b.default], () => b.default.getCurrentUser()),
-        l = (0, a.bG)([b.default], () => b.default.getUser(t.getRecipientId())),
+        n = (0, a.bG)([N.default], () => N.default.getCurrentUser()),
+        l = (0, a.bG)([N.default], () => N.default.getUser(t.getRecipientId())),
         r = (0, a.bG)([x.A], () => (null != l ? x.A.getUserProfile(l.id) : null)),
         o = null != r && (r?.fetchEndedAt ?? 0) > 0;
     return (s.useEffect(() => {
@@ -273,7 +273,7 @@ function w(e, t) {
         case O.rbe.GUILD_VOICE:
         case O.rbe.GUILD_STAGE_VOICE:
         case O.rbe.GROUP_DM:
-            return null != t ? (0, i.jsx)(y.A, { channel: e, guild: t }, e.id) : null;
+            return null != t ? (0, i.jsx)(v.A, { channel: e, guild: t }, e.id) : null;
         default:
             return null;
     }
@@ -306,7 +306,12 @@ function V(e) {
                       "left" === l && (0, i.jsx)(j.A.Caret, { direction: "left" }),
                       (0, i.jsx)("div", {
                           ref: u,
-                          children: (0, i.jsx)(m.A, { guild: t, size: m.A.Sizes.SMALLER, className: D.gL, active: !0 }),
+                          children: (0, i.jsx)(m.Ay, {
+                              guild: t,
+                              size: m.Ay.Sizes.SMALLER,
+                              className: D.gL,
+                              active: !0,
+                          }),
                       }),
                       "right" === l && (0, i.jsx)(j.A.Caret, { direction: "right" }),
                   ],
