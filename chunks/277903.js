@@ -14,12 +14,12 @@ var r = {
     chasingDots: "chasingDots__46696",
     pulsingEllipsis: "pulsingEllipsis__46696",
     lowMotion: "lowMotion__46696",
-    stopAnimation: "stopAnimation__46696",
-    circular: "circular__46696",
-    path: "path__46696",
     spinningCircle: "spinningCircle__46696",
     spinningCircleInner: "spinningCircleInner__46696 inner__46696",
+    circular: "circular__46696",
+    path: "path__46696",
     path2: "path2__46696",
     path3: "path3__46696",
+    stopAnimation: "stopAnimation__46696",
 };
 n.r((e.exports = r));

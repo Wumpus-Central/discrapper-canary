@@ -321,19 +321,20 @@ class R extends i.Component {
                 useFullWidth: C,
                 placeholder: b,
                 placeholderVersion: O,
-                dataSafeSrc: D,
-                srcIsAnimated: L,
+                dataSafeSrc: L,
+                srcIsAnimated: w,
             } = this.props,
-            { readyState: w, hasMouseOver: x, hasFocus: M } = this.state,
-            P = null != n,
-            k = this.getRatio(),
-            U = (0, s.clamp)(Math.round(h * k), E ?? 0, I ?? 1 / 0),
-            G = (0, s.clamp)(Math.round(m * k), g ?? 0, T ?? 1 / 0),
-            F = {
+            { readyState: x, hasMouseOver: M, hasFocus: P } = this.state,
+            k = null != n,
+            U = this.getRatio(),
+            G = (0, s.clamp)(Math.round(h * U), E ?? 0, I ?? 1 / 0),
+            F = (0, s.clamp)(Math.round(m * U), g ?? 0, T ?? 1 / 0),
+            V = D.getConfig({ location: "LazyImage_render" }).enabled,
+            B = {
                 alt: e,
-                readyState: w,
+                readyState: x,
                 onContextMenu: a ?? void 0,
-                zoomable: P,
+                zoomable: k,
                 className: c,
                 imageClassName: d,
                 minWidth: E,
@@ -342,13 +343,13 @@ class R extends i.Component {
                 limitResponsiveWidth: N,
                 useFullWidth: C,
                 tabIndex: v,
-                width: U,
-                height: G,
+                width: G,
+                height: F,
                 src: "",
                 placeholder: b,
                 placeholderVersion: O,
-                dataSafeSrc: D,
-                srcIsAnimated: L,
+                dataSafeSrc: L,
+                srcIsAnimated: w,
                 children:
                     null != _
                         ? (e) => {
@@ -361,28 +362,28 @@ class R extends i.Component {
                 onFocus: this.onFocus,
                 onBlur: this.onBlur,
             };
-        if (1 === F.width && 1 === F.height) return null;
+        if (1 === B.width && 1 === B.height) return null;
         switch (
-            ((P || null != S) && (F.onClick = this.onClick), i && (F.original = null != u && "" !== u ? u : F.src), w)
+            ((k || null != S) && (B.onClick = this.onClick), i && (B.original = null != u && "" !== u ? u : B.src), x)
         ) {
             case A.Rv1.LOADING:
-                null != t && (F.src = t);
+                null != t && (B.src = t);
                 break;
             case A.Rv1.READY:
                 if (R.isAnimated(this.props)) {
-                    F.onMouseLeave = this.onMouseLeave;
-                    let e = (o || x || M) && (null == p || p) && R.visibilityObserver.isVisible(this);
+                    B.onMouseLeave = this.onMouseLeave;
+                    let e = (o || M || P) && (null == p || p) && R.visibilityObserver.isVisible(this);
                     e
-                        ? ((F.src = this.getSrc(k)), (F.renderAccessory = y))
-                        : ((F.src = this.getSrc(k, !f || !o)), (F.renderAccessory = this.renderAccessory)),
+                        ? ((B.src = this.getSrc(U)), (B.renderAccessory = y))
+                        : ((B.src = this.getSrc(U, !f || !o)), (B.renderAccessory = this.renderAccessory)),
                         null != _ &&
-                            (F.children = (t) => {
+                            (B.children = (t) => {
                                 let { src: n, size: r, alt: i, mediaLayoutType: s } = t;
                                 return _({ src: n, size: r, animating: e, alt: i, mediaLayoutType: s });
                             });
-                } else F.src = this.getSrc(k);
+                } else B.src = this.getSrc(U);
         }
-        return (0, r.jsx)(l._, { ref: this._imageRef, ...F });
+        return (0, r.jsx)(l._, { disableLoadingSpinner: V, ref: this._imageRef, ...B });
     }
 }
 let O = (0, u.C)({
