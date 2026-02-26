@@ -403,13 +403,13 @@ function eR(e) {
     });
 }
 function eO(e) {
-    let { icon: t, title: n, body: r, route: i, trackingType: s, message: a } = e;
+    let { icon: t, title: n, body: r, route: i, trackingType: s, message: a, reactorUserId: o } = e;
     if (ep() || null == n || null == r || null == s) return !1;
-    let o = a.channel_id;
-    if (null == o || (F.A.getCurrentlySelectedChannelId() === o && eo)) return !1;
-    let l = w.A.getChannel(o);
-    if (null == l) return !1;
-    if (l.type === q.rbe.GROUP_DM) {
+    let l = a.channel_id;
+    if (null == l || (F.A.getCurrentlySelectedChannelId() === l && eo)) return !1;
+    let u = w.A.getChannel(l);
+    if (null == u) return !1;
+    if (u.type === q.rbe.GROUP_DM) {
         let e = H.default.getCurrentUser();
         if (a.author?.id !== e?.id && !S.A.getConfig({ location: "desktopNotification" }).showSettingsToggle) return !1;
     }
@@ -417,7 +417,7 @@ function eO(e) {
         t,
         n,
         r,
-        { notif_type: s },
+        { notif_type: s, notif_user_id: o, message_id: a.id },
         {
             onClick() {
                 null != i && ((0, E.A)(i), c.default.clickedNotification());
@@ -425,7 +425,7 @@ function eO(e) {
             isUserAvatar: !0,
         },
     ).then((e) => {
-        null != e && null != o && ed.track(o, e.notification, e.trackingProps);
+        null != e && null != l && ed.track(l, e.notification, e.trackingProps);
     });
 }
 function eD(e) {
