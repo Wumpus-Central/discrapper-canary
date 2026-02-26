@@ -1,55 +1,60 @@
 "use strict";
-n.d(t, { n: () => p });
+n.d(t, { n: () => m });
 var r = n(627968),
     i = n(64700),
-    a = n(311907),
-    s = n(397927),
+    s = n(311907),
+    a = n(397927),
     o = n(450233),
-    l = n(773669),
-    u = n(615405),
-    c = n(493822),
-    d = n(652215),
-    _ = n(985018),
-    f = n(182468);
-let p = (e) => {
+    l = n(813077),
+    u = n(773669),
+    c = n(287809),
+    d = n(615405),
+    _ = n(493822),
+    f = n(652215),
+    p = n(985018),
+    h = n(525318);
+let m = (e) => {
     let t,
-        { billingAddressInfo: n, billingError: p, onBillingAddressChange: h, paymentSourceType: m } = e,
-        g = null != p && (null == p.code || (0, c.ou)(p) === c.gj.ADDRESS),
-        E = (0, a.bG)([l.default], () => l.default.locale);
-    switch (m) {
-        case d.hes.GIROPAY:
-        case d.hes.PAYSAFE_CARD:
-        case d.hes.GCASH:
-        case d.hes.GRABPAY_MY:
-        case d.hes.MOMO_WALLET:
-        case d.hes.KAKAOPAY:
-        case d.hes.GOPAY_WALLET:
-        case d.hes.BANCONTACT:
-            t = "en-US" === E ? o.Ay.Layouts.MODAL_US_WITH_NAME : o.Ay.Layouts.MODAL_INTL_WITH_NAME;
+        { billingAddressInfo: n, billingError: m, onBillingAddressChange: E, paymentSourceType: g } = e,
+        A = null != m && (null == m.code || (0, _.ou)(m) === _.gj.ADDRESS),
+        I = (0, s.bG)([u.default], () => u.default.locale);
+    switch (g) {
+        case f.hes.GIROPAY:
+        case f.hes.PAYSAFE_CARD:
+        case f.hes.GCASH:
+        case f.hes.GRABPAY_MY:
+        case f.hes.MOMO_WALLET:
+        case f.hes.KAKAOPAY:
+        case f.hes.GOPAY_WALLET:
+        case f.hes.BANCONTACT:
+            t = "en-US" === I ? o.Ay.Layouts.MODAL_US_WITH_NAME : o.Ay.Layouts.MODAL_INTL_WITH_NAME;
             break;
-        case d.hes.VENMO:
-        case d.hes.CASH_APP:
+        case f.hes.VENMO:
+        case f.hes.CASH_APP:
             t = o.Ay.Layouts.MODAL_US_WITH_NAME;
             break;
         default:
-            t = "en-US" === E ? o.Ay.Layouts.MODAL_US : o.Ay.Layouts.MODAL_INTL;
+            t = "en-US" === I ? o.Ay.Layouts.MODAL_US : o.Ay.Layouts.MODAL_INTL;
     }
-    let A = (0, a.bG)([u.A], () => u.A.ipCountryCode);
+    let T = (0, s.bG)([d.A], () => d.A.ipCountryCode),
+        S = (0, s.bG)([c.default], () => c.default.getCurrentUser()?.storeCountry),
+        y = (0, l.wI)("AddressStep") && S?.isLocked === !0 ? S.country : null;
     return (
-        0 === n.country.length && (n.country = A ?? ""),
+        0 === n.country.length && (n.country = y ?? T ?? ""),
         (0, r.jsxs)(i.Fragment, {
             children: [
-                g
+                A
                     ? (0, r.jsx)("div", {
-                          className: f.QK,
-                          children: (0, r.jsx)(s.wx6, { type: "critical", children: _.intl.string(_.t.vZ8y7l) }),
+                          className: h.QK,
+                          children: (0, r.jsx)(a.wx6, { type: "critical", children: p.intl.string(p.t.vZ8y7l) }),
                       })
                     : null,
                 (0, r.jsx)(o.Ay, {
-                    className: f.__invalid_formItem,
-                    onBillingAddressChange: h,
-                    error: p,
+                    className: h.__invalid_formItem,
+                    onBillingAddressChange: E,
+                    error: m,
                     layout: t,
+                    lockedStoreCountry: y,
                     ...n,
                 }),
             ],
