@@ -7,6 +7,7 @@ n.d(t, {
     EB: () => H,
     Gr: () => es,
     I8: () => ed,
+    IV: () => ek,
     JQ: () => O,
     Ky: () => e_,
     LD: () => ef,
@@ -23,9 +24,9 @@ n.d(t, {
     YP: () => ea,
     Z9: () => B,
     ZK: () => ey,
-    Ze: () => eG,
-    _D: () => eF,
-    bl: () => ek,
+    Ze: () => eV,
+    _D: () => eB,
+    bl: () => eG,
     bw: () => J,
     ey: () => eO,
     ge: () => eC,
@@ -33,7 +34,7 @@ n.d(t, {
     i0: () => F,
     im: () => q,
     jV: () => er,
-    jZ: () => eP,
+    jZ: () => eU,
     jf: () => ew,
     nV: () => ev,
     ne: () => G,
@@ -44,7 +45,7 @@ n.d(t, {
     u1: () => Q,
     u6: () => Z,
     uK: () => eR,
-    uZ: () => eU,
+    uZ: () => eF,
     xG: () => ec,
     xe: () => eM,
 });
@@ -914,7 +915,36 @@ async function eM() {
         return u.h.dispatch({ type: "BILLING_IP_COUNTRY_CODE_FAILURE" }), e;
     }
 }
-async function eP() {
+function eP() {
+    return l.Bo.get({ url: y.Rsh.BILLING_PAYMENT_SOURCE_CREATION_CONTEXT, oldFormErrors: !0, rejectWithError: !1 });
+}
+function ek() {
+    u.h.dispatch({ type: "PAYMENT_SOURCE_CREATION_CONTEXT_FETCH_START" }),
+        eP()
+            .then((e) => {
+                let t = e.body;
+                null == t
+                    ? u.h.dispatch({
+                          type: "PAYMENT_SOURCE_CREATION_CONTEXT_FETCH_FAIL",
+                          error: Error("Missing response body"),
+                      })
+                    : u.h.dispatch({
+                          type: "PAYMENT_SOURCE_CREATION_CONTEXT_FETCH_SUCCESS",
+                          data: {
+                              store_country: t.store_country ?? null,
+                              allowed_payment_source_types: t.allowed_payment_source_types ?? [],
+                              allowed_billing_address_countries: t.allowed_billing_address_countries ?? [],
+                          },
+                      });
+            })
+            .catch((e) => {
+                u.h.dispatch({
+                    type: "PAYMENT_SOURCE_CREATION_CONTEXT_FETCH_FAIL",
+                    error: e instanceof Error ? e : Error(String(e)),
+                });
+            });
+}
+async function eU() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     if (!e && null != m.A.ipLocationRequest) return m.A.ipLocationRequest;
     try {
@@ -937,16 +967,16 @@ async function eP() {
         );
     }
 }
-function ek() {
+function eG() {
     u.h.dispatch({ type: "RESET_PAYMENT_ID" });
 }
-function eU() {
+function eF() {
     u.h.dispatch({ type: "BILLING_SUBSCRIPTION_RESET" });
 }
-function eG(e) {
+function eV(e) {
     u.h.dispatch({ type: "USER_PAYMENT_BROWSER_CHECKOUT_STARTED", loadId: e });
 }
-async function eF(e, t) {
+async function eB(e, t) {
     try {
         let n = await l.Bo.post({ url: y.Rsh.REACTIVATION_OFFER_REDEEM(e.id, t.id), rejectWithError: !1 });
         u.h.dispatch({ type: "BILLING_SUBSCRIPTION_UPDATE_SUCCESS", subscription: n.body });
