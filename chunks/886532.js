@@ -1,15 +1,14 @@
-l.d(t, { H: () => m });
+l.d(t, { H: () => p });
 var a = l(627968),
     n = l(64700),
     r = l(292666),
     i = l(732955),
     s = l(397927),
     o = l(398590),
-    u = l(920050),
-    c = l(102815),
-    d = l(976860),
-    p = l(652215);
-let m = {
+    u = l(102815),
+    c = l(976860),
+    d = l(652215);
+let p = {
     title: "Perks",
     stories: [
         {
@@ -19,13 +18,13 @@ let m = {
                 return (0, a.jsxs)("div", {
                     style: { maxWidth: "100%", width: t.featured ? 752 : 364 },
                     children: [
-                        (0, a.jsx)(c.S, {
+                        (0, a.jsx)(u.S, {
                             ...t,
                             id: "test-id",
                             progress: null != t.progress && t.progress > 0 ? t.progress : void 0,
                             onCtaClick: () => (0, s.showToast)((0, s.createToast)("CTA Clicked!", s.ToastType.SUCCESS)),
                         }),
-                        (0, a.jsx)(h, {}),
+                        (0, a.jsx)(m, {}),
                     ],
                 });
             },
@@ -50,9 +49,9 @@ let m = {
         },
     ],
 };
-function h() {
+function m() {
     let [e, t] = (0, n.useState)("customSounds"),
-        l = `${p.BVt.NITRO_HOME}?perk=${e}`;
+        l = `${d.BVt.NITRO_HOME}?perk=${e}`;
     return (0, a.jsxs)("div", {
         style: { marginTop: 64, display: "flex", flexDirection: "column", gap: 10 },
         children: [
@@ -62,20 +61,8 @@ function h() {
                 variant: "primary",
                 size: "sm",
                 onClick: () => {
-                    (0, o.jH)(), (0, d.pX)(p.BVt.ME), setTimeout(() => (0, d.pX)(l), 200);
+                    (0, o.jH)(), (0, c.pX)(l);
                 },
-            }),
-            (0, a.jsxs)(s.Text, {
-                variant: "text-xs/normal",
-                color: "text-muted",
-                style: { userSelect: "text" },
-                children: [
-                    "IDs from PerkCardIds.tsx:",
-                    (0, a.jsx)("ul", {
-                        style: { margin: "4px 0 0", paddingLeft: 24, listStyleType: "disc", columns: 3, columnGap: 24 },
-                        children: Object.values(u).map((e) => (0, a.jsx)("li", { children: e }, e)),
-                    }),
-                ],
             }),
         ],
     });
