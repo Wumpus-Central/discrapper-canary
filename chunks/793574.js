@@ -548,6 +548,8 @@ var r = (function (e) {
         (e.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED = "slayer storefront product details embed"),
         (e.CF_WARP_SETTINGS = "cloudflare warp settings"),
         (e.AGE_GROUP = "age group"),
+        (e.GAME_COMMUNITY_MULTI_GUILD_UPSELL_GUILDS_BAR_ENTRYPOINT =
+            "game community multi guild upsell guilds bar entrypoint"),
         e
     );
 })(r || {});
