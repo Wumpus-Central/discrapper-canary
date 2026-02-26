@@ -156,7 +156,6 @@ let U = {
     [E.HAw.AD_IDENTIFIER_FETCHED]: { throttlePeriod: L, throttleKeys: () => [] },
     [E.HAw.ACTIVITY_PANEL_SDK_LINK_VIEWED]: { throttlePeriod: L, throttleKeys: (e) => [e.application_id] },
     [E.HAw.LIBDISCORE_SLOW_TIMERS]: { throttlePeriod: D, throttleKeys: () => [] },
-    [E.HAw.DEBUG_MISSING_STRING]: { throttlePeriod: D, throttleKeys: () => [] },
     [E.HAw.VIDEO_STREAM_ZOOM_CHANGED]: { throttlePeriod: v, throttleKeys: () => [] },
     [E.HAw.CACHE_STATS_RECORDED]: { throttlePeriod: O, throttleKeys: () => [] },
 };
