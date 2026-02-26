@@ -22,9 +22,10 @@ var i = n(627968),
     N = n(654487),
     S = n(49999),
     x = n(985018),
-    v = n(437176);
+    v = n(487866);
 function y(e) {
-    let { assetImage: t, assetVideo: n } = e;
+    let { assetImage: t, assetVideo: n } = e,
+        l = r.useMemo(() => (null != n ? (0, p.WV)(n.url) : null) ?? t.url, [n, t]);
     return null == n
         ? (0, i.jsxs)("div", {
               className: v.Tv,
@@ -56,8 +57,8 @@ function y(e) {
                           imageAsset: {
                               alt: n.altText,
                               className: v.LY,
-                              asset: { url: t.url, mimetype: (0, p.vm)(t.url), isAnimated: !1 },
-                              assetId: t.url,
+                              asset: { url: l, mimetype: (0, p.vm)(l), isAnimated: !1 },
+                              assetId: l,
                           },
                           videoAsset: {
                               alt: n.altText,
