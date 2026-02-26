@@ -20,6 +20,7 @@ let p = {
                     children: [
                         (0, a.jsx)(u.S, {
                             ...t,
+                            id: "test-id",
                             progress: null != t.progress && t.progress > 0 ? t.progress : void 0,
                             onCtaClick: () => (0, s.showToast)((0, s.createToast)("CTA Clicked!", s.ToastType.SUCCESS)),
                         }),
