@@ -115,13 +115,14 @@ let w = i.memo(
                 null != z && null != s && null == eo
                     ? C.Ay.getGuildIconURL({ id: s.guild_id, icon: z.icon, size: 32 })
                     : null,
-            eu = er ?? eo ?? ed,
-            ec = ei ?? ea ?? void 0,
-            eg = null != z && null == z.icon ? (0, _.oN)(z.name) : null,
-            eh = null != eu && null != ec;
+            eu = W !== o.clD.OFFLINE ? W : void 0,
+            ec = er ?? eo ?? ed,
+            eg = ei ?? ea ?? void 0,
+            eh = null != z && null == z.icon ? (0, _.oN)(z.name) : null,
+            eA = null != ec && null != eg;
         null != n && (t = es ?? ei);
-        let eA = b.Ay.getUserTag(n, { decoration: "never" }),
-            ep = (0, l.jsx)(o.Button, {
+        let ep = b.Ay.getUserTag(n, { decoration: "never" }),
+            eI = (0, l.jsx)(o.Button, {
                 variant: "secondary",
                 text: H ? R.intl.string(R.t.dVT149) : D ? R.intl.string(R.t.AWLVgR) : R.intl.string(R.t.jYnGPG),
                 size: "sm",
@@ -129,31 +130,31 @@ let w = i.memo(
                 onClick: el,
                 disabled: H,
             }),
-            eI = Q && null != J.text,
-            em = Q && null != X && null != $,
-            ex = em || eI || null != n;
+            em = Q && null != J.text,
+            ex = Q && null != X && null != $,
+            ev = ex || em || null != n;
         return (0, l.jsxs)("div", {
             className: G.Og,
             children: [
                 (0, l.jsxs)("div", {
                     className: G.mQ,
                     children: [
-                        eh
+                        eA
                             ? et
-                                ? (0, l.jsx)(p.A, { size: o._3J.SIZE_32, ringing: et, src: eu, className: G.hO })
+                                ? (0, l.jsx)(p.A, { size: o._3J.SIZE_32, ringing: et, src: ec, className: G.hO })
                                 : (0, l.jsx)(o.euF, {
-                                      src: eu,
-                                      "aria-label": ec,
+                                      src: ec,
+                                      "aria-label": eg,
                                       size: o._3J.SIZE_32,
                                       className: G.hO,
-                                      status: Q && null != n ? W : void 0,
+                                      status: Q && null != n ? eu : void 0,
                                       isMobile: Q && null != n ? q : void 0,
                                   })
                             : (0, l.jsx)(o.Text, {
                                   variant: "text-md/medium",
                                   className: G.q9,
                                   "aria-hidden": !0,
-                                  children: eg,
+                                  children: eh,
                               }),
                         (0, l.jsxs)("div", {
                             className: a()(G.BT, { [G.DF]: et }),
@@ -164,11 +165,11 @@ let w = i.memo(
                                     lineClamp: 1,
                                     children: [t, null != s ? (0, m.m1)(s, T.default, f.A, !0) : null],
                                 }),
-                                ex &&
+                                ev &&
                                     (0, l.jsxs)("div", {
                                         className: a()(G.eq, { [G.DF]: et }),
                                         children: [
-                                            em
+                                            ex
                                                 ? (0, l.jsx)(x.A, {
                                                       size: "custom",
                                                       color: en,
@@ -178,14 +179,14 @@ let w = i.memo(
                                                 : null != Z
                                                   ? (0, l.jsx)(g.A, { icon: Z, className: G.j8 })
                                                   : null,
-                                            em
+                                            ex
                                                 ? (0, l.jsx)(o.Text, {
                                                       variant: "text-xs/medium",
                                                       color: "text-status-online",
                                                       lineClamp: 1,
                                                       children: $,
                                                   })
-                                                : eI
+                                                : em
                                                   ? (0, l.jsx)(o.Text, {
                                                         variant: "text-xs/medium",
                                                         color: "text-status-online",
@@ -196,7 +197,7 @@ let w = i.memo(
                                                         variant: "text-xs/normal",
                                                         color: "text-muted",
                                                         lineClamp: 1,
-                                                        children: eA,
+                                                        children: ep,
                                                     }),
                                             (0, l.jsx)(o.Text, {
                                                 variant: "text-xs/normal",
@@ -214,7 +215,7 @@ let w = i.memo(
                     className: G.t$,
                     children: [
                         P && null != n && null != L && (0, l.jsx)(v.A, { user: n, channel: L, location: "InviteRow" }),
-                        ep,
+                        eI,
                     ],
                 }),
             ],
