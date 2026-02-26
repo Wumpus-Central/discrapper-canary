@@ -16,8 +16,8 @@ var i = n(284009),
     h = n(788868),
     m = n(88001),
     E = n(985018),
-    g = n(756366),
-    A = n(519412);
+    g = n(523376),
+    A = n(518582);
 let I = (e) => E.intl.format(g.default.U2CmMW, { priceAmount: (0, p.$g)(0, e) }),
     T = (e, t, n) => ({ id: e.discount_id ?? t, label: n, amount: -e.amount }),
     S = (e) => {
@@ -113,19 +113,14 @@ let I = (e) => E.intl.format(g.default.U2CmMW, { priceAmount: (0, p.$g)(0, e) })
         );
     },
     N = (e, t) => {
-        let {
-                isPrepaidPaymentSource: n = !1,
-                invoiceSummaryTypeWithPreview: r,
-                subscriptionPlan: i,
-                subscriptionTrial: s,
-            } = t,
+        let { isPrepaidPaymentSource: n = !1, invoiceSummaryType: r, subscriptionPlan: i, subscriptionTrial: s } = t,
             { newPlanInvoiceItem: a, basePlanFullAmount: o, invoiceAdjustmentDisplayItems: l } = (0, u.SA)(e, i),
             {
                 lineItems: c,
                 primaryLineItem: _,
                 entitlementDiscount: f,
             } = y(a, {
-                overrideAmount: d.IJ.has(r.type) ? o : void 0,
+                overrideAmount: d.IJ.has(r) ? o : void 0,
                 subscriptionPlan: i,
                 subscriptionTrial: s,
                 isPrepaidPaymentSource: n,

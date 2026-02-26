@@ -19,8 +19,8 @@ var r = n(627968),
     A = n(652215),
     I = n(788868),
     T = n(985018),
-    S = n(756366),
-    y = n(772992);
+    S = n(523376),
+    y = n(232970);
 let v = (e) => {
         let { className: t, currencies: n, onChange: i, selectedCurrency: s, ...o } = e;
         return (0, r.jsx)(l.f, {
@@ -56,7 +56,7 @@ let v = (e) => {
         else {
             let e = (0, g.IY)(o, {
                 isPrepaidPaymentSource: s,
-                invoiceSummaryTypeWithPreview: t,
+                invoiceSummaryType: t.type,
                 subscriptionPlan: n,
                 subscriptionTrial: i,
             });
