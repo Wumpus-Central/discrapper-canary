@@ -547,6 +547,7 @@ var r = (function (e) {
                 "MOBILE_REFERRAL_PROGRAM_BOTTOM_SHEET_ENTRYPOINT"),
             (e[(e.GAME_ACCOUNT_LINK_RECURRING_UPSELL = 698)] = "GAME_ACCOUNT_LINK_RECURRING_UPSELL"),
             (e[(e.WISHLIST_MOBILE_VIEWER_COACHMARK = 699)] = "WISHLIST_MOBILE_VIEWER_COACHMARK"),
+            (e[(e.EMPTY_GAME_SERVER_TAB = 700)] = "EMPTY_GAME_SERVER_TAB"),
             e
         );
     })({}),
