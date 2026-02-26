@@ -2,8 +2,8 @@
 n.d(t, { a: () => f });
 var r = n(835245),
     i = n(391048),
-    a = n(636099),
-    s = n(589078),
+    s = n(636099),
+    a = n(589078),
     o = n(954571),
     l = n(832163),
     u = n(179935),
@@ -11,51 +11,55 @@ var r = n(835245),
     d = n(652215);
 let _ = "slayer-payment-modal";
 function f(e, t) {
-    let { isGift: n, giftRecipient: s, giftingOrigin: p, additionalUserIds: g } = t,
+    let { isGift: n, giftRecipient: a, giftingOrigin: h, additionalUserIds: m } = t,
         {
             analyticsLocations: E,
-            guildId: A,
-            isEligibilityCheckContinuation: I,
+            guildId: g,
+            isEligibilityCheckContinuation: A,
+            checkoutState: I,
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         T = (0, u.T)({ location: "openSocialLayerStorefrontPaymentModal" }),
-        y = l.A.getSKUEligibilityEntry(e.id),
-        S = y?.state,
-        v = !n && null != A && T && (null == S || "checking" === S || "ineligible" === S);
-    if (T && !v && !I) {
+        S = l.A.getSKUEligibilityEntry(e.id),
+        y = S?.state,
+        v = !n && null != g && T && (null == y || "checking" === y || "ineligible" === y);
+    if (T && !v && !A) {
         let t = "none";
         n
             ? (t = "gift")
-            : null == A
+            : null == g
               ? (t = "no_guild")
-              : "eligible" === S
+              : "eligible" === y
                 ? (t = "already_eligible")
-                : "error" === S && (t = "prior_error"),
+                : "error" === y && (t = "prior_error"),
             o.default.track(d.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_SKIPPED, {
                 sku_id: e.id,
-                guild_id: A ?? null,
+                guild_id: g ?? null,
                 application_id: e.applicationId,
                 is_gift: n,
-                eligibility_state: S ?? "none",
+                eligibility_state: y ?? "none",
                 skip_reason: t,
-                error_http_status: y?.state === "error" ? (y.httpStatus ?? null) : null,
+                error_http_status: S?.state === "error" ? (S.httpStatus ?? null) : null,
                 location_stack: E,
             });
     }
+    let N = I ?? { hasFinished: !1 };
     if (v)
         return void (0, c.L)({
-            guildId: A,
+            guildId: g,
             skuId: e.id,
             analyticsLocations: E ?? [],
-            onContinue: () =>
-                f(
-                    e,
-                    { isGift: n, giftRecipient: s, giftingOrigin: p, additionalUserIds: g },
-                    { analyticsLocations: E, guildId: A, isEligibilityCheckContinuation: !0 },
-                ),
+            onContinue: () => {
+                if (!N.hasFinished)
+                    return f(
+                        e,
+                        { isGift: n, giftRecipient: a, giftingOrigin: h, additionalUserIds: m },
+                        { analyticsLocations: E, guildId: g, isEligibilityCheckContinuation: !0, checkoutState: N },
+                    );
+            },
         });
     let C = !1,
         b = (0, r.A)(),
-        N = () => {
+        R = () => {
             C ||
                 o.default.track(d.HAw.PAYMENT_FLOW_CANCELED, {
                     load_id: b,
@@ -67,34 +71,35 @@ function f(e, t) {
                     sku_product_line: e.productLine,
                 }),
                 (0, i.ET)(),
-                (0, a.z)(),
-                (0, c.l)();
+                (0, s.z)(),
+                (0, c.l)(),
+                (N.hasFinished = !0);
         },
-        R = () => {
-            C = !0;
+        O = () => {
+            (C = !0), (N.hasFinished = !0);
         },
-        O = {
+        D = {
             loadId: b,
             skuId: e.id,
             applicationId: e.applicationId,
             analyticsLocations: E ?? [],
             isGift: n,
-            giftRecipient: s,
-            giftingOrigin: p,
-            additionalUserIds: g,
-            onCloseCallback: N,
-            onComplete: R,
+            giftRecipient: a,
+            giftingOrigin: h,
+            additionalUserIds: m,
+            onCloseCallback: R,
+            onComplete: O,
             modalKey: _,
         };
-    h(O);
+    p(D);
 }
-let h = (e) => {
+let p = (e) => {
     let {
         loadId: t,
         applicationId: n,
         skuId: r,
         analyticsLocations: i,
-        isGift: a,
+        isGift: s,
         giftRecipient: o,
         additionalUserIds: l,
         giftingOrigin: u,
@@ -102,13 +107,13 @@ let h = (e) => {
         onComplete: d,
         modalKey: _,
     } = e;
-    return (0, s.KY)().openCheckoutModal({
+    return (0, a.KY)().openCheckoutModal({
         loadId: t,
         applicationId: n,
         skuId: r,
         analyticsLocations: i,
         onComplete: d,
-        giftContextProps: { isGift: a, giftRecipient: o, giftingOrigin: u, additionalUserIds: l },
+        giftContextProps: { isGift: s, giftRecipient: o, giftingOrigin: u, additionalUserIds: l },
         openModalOptions: { modalKey: _, onCloseCallback: c },
     });
 };
