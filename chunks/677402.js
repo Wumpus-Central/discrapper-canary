@@ -1,6 +1,7 @@
 "use strict";
-n.d(t, { H: () => a, s: () => i });
-let r = (0, n(600975).C)({
+n.d(t, { H: () => a, s: () => s });
+var r = n(809733);
+let i = (0, n(600975).C)({
         id: "2023-12_quests",
         kind: "user",
         label: "Quests",
@@ -10,11 +11,12 @@ let r = (0, n(600975).C)({
             { id: 1, label: "Quests enabled", config: { enabled: !0 } },
         ],
     }),
-    i = (e) => {
+    s = (e) => {
         let { location: t } = e;
-        return r.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
+        return !(0, r.I)() && i.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
     },
     a = (e) => {
-        let { location: t } = e;
-        return r.useExperiment({ location: t }, { autoTrackExposure: !1 }).enabled;
+        let { location: t } = e,
+            n = i.useExperiment({ location: t }, { autoTrackExposure: !1 });
+        return !(0, r.I)() && n.enabled;
     };
