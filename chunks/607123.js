@@ -2,8 +2,8 @@
 n.d(t, { Ay: () => T });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(575593),
     l = n(474012),
     u = n(929283),
@@ -14,52 +14,57 @@ var r = n(627968),
     p = n(403362),
     h = n(652215),
     m = n(778712),
-    g = n(223555);
-let E = 200;
+    E = n(902365);
+let g = 200;
 function A(e) {
-    let { sku: t, isFocused: n, user: a, options: s } = e,
+    let { sku: t, isFocused: n, user: s, options: a } = e,
         f = i.useMemo(() => (0, l.T)(t), [t]);
     if (null == f) return null;
     if ("bundle" === f.type)
         return (0, r.jsx)("div", {
-            className: g.hT,
-            children: (0, r.jsx)(c.X, { product: f, isHighlighted: n, user: a }),
+            className: E.hT,
+            children: (0, r.jsx)(c.X, { product: f, isHighlighted: n, user: s }),
         });
     switch (f.item.type) {
         case o.R.AVATAR_DECORATION:
-            return (0, r.jsx)(u.i, { user: a, avatarSize: m._3.SIZE_80, item: f.item, isHighlighted: n });
+            return (0, r.jsx)(u.i, { user: s, avatarSize: m._3.SIZE_80, item: f.item, isHighlighted: n });
         case o.R.PROFILE_EFFECT:
             return (0, r.jsx)("div", {
-                className: g.xC,
-                children: (0, r.jsx)(_.A, { skuId: f.item.skuId, isHighlighted: n, removeSetHeight: !0 }),
+                className: E.xC,
+                children: (0, r.jsx)(_.A, {
+                    skuId: f.item.skuId,
+                    isHighlighted: n,
+                    removeSetHeight: !0,
+                    hideBackground: !0,
+                }),
             });
         case o.R.NAMEPLATE:
             return (0, r.jsxs)("div", {
-                className: g.M4,
+                className: E.M4,
                 children: [
                     (0, r.jsx)("div", {
-                        className: g.Qt,
+                        className: E.Qt,
                         children: (0, r.jsx)(d.A, {
-                            user: a,
+                            user: s,
                             nameplate: f.item,
                             isHighlighted: n,
                             showPlaceholderUser: !0,
                             showStatus: !0,
                             nameplatePreviewSize: "default",
-                            width: s?.collectibles?.nameplate?.width ?? E,
+                            width: a?.collectibles?.nameplate?.width ?? g,
                         }),
                     }),
                     (0, r.jsx)("div", {
-                        className: g.BM,
+                        className: E.BM,
                         "aria-hidden": !0,
                         children: (0, r.jsx)(d.A, {
-                            user: a,
+                            user: s,
                             nameplate: f.item,
                             isHighlighted: n,
                             showPlaceholderUser: !0,
                             showStatus: !0,
                             nameplatePreviewSize: "default",
-                            width: s?.collectibles?.nameplate?.width ?? E,
+                            width: a?.collectibles?.nameplate?.width ?? g,
                         }),
                     }),
                 ],
@@ -72,17 +77,17 @@ function I(e) {
     let { sku: t, isFocused: n } = e;
     return (0, r.jsx)(f.e, {
         shape: "custom",
-        containerClassName: s()(g.JS, n && g.P3),
-        backgroundImageClassName: g.m1,
-        foregroundImageClassName: g.aF,
+        containerClassName: a()(E.JS, n && E.P3),
+        backgroundImageClassName: E.m1,
+        foregroundImageClassName: E.aF,
         sku: t,
     });
 }
 function T(e) {
-    let { sku: t, isFocused: n, user: i, options: a } = e;
+    let { sku: t, isFocused: n, user: i, options: s } = e;
     switch (t.productLine) {
         case h.EZt.COLLECTIBLES:
-            return (0, r.jsx)(A, { sku: t, isFocused: n, user: i, options: a });
+            return (0, r.jsx)(A, { sku: t, isFocused: n, user: i, options: s });
         case h.EZt.SOCIAL_LAYER_GAME_ITEM:
             return (0, r.jsx)(I, { sku: t, isFocused: n });
         case h.EZt.APPLICATION:

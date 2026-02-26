@@ -1,7 +1,6 @@
 "use strict";
 e.exports = {
     YS: "profileEffectContainer_a84142",
-    Zp: "profileEffectBackground_a84142",
     rz: "nameplateContainer_a84142",
     qF: "nameplate_a84142",
     rk: "giftMainAnimationWrapper_a84142",

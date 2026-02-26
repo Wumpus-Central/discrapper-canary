@@ -1,76 +1,81 @@
-r.r(e), r.d(e, { default: () => R });
+r.r(t), r.d(t, { default: () => S });
 var s = r(627968),
     i = r(64700),
-    a = r(522160),
+    a = r(442215),
     l = r(575593),
     n = r(334279),
-    c = r(417597),
-    d = r(397927),
-    o = r(550111),
-    u = r(170887),
+    d = r(417597),
+    c = r(397927),
+    u = r(550111),
+    o = r(170887),
     h = r(331402),
     f = r(287809),
-    g = r(846957),
-    m = r(929283),
+    m = r(846957),
+    g = r(929283),
     p = r(245068),
     x = r(158216),
     j = r(985018),
-    y = r(243821),
-    _ = r(743102),
-    v = r(497451),
+    v = r(848175),
+    y = r(743102),
+    _ = r(497451),
     E = r(241988);
-let A = (t) => {
-        let { product: e, itemConsumed: r, forCollectedModal: i } = t,
-            a = (0, u.A)({ location: "CollectiblesProductPreview" }),
-            x = (0, c.bG)([f.default], () => f.default.getCurrentUser());
+let N = (e) => {
+        let { product: t, itemConsumed: r, forCollectedModal: i } = e,
+            a = (0, o.A)({ location: "CollectiblesProductPreview" }),
+            x = (0, d.bG)([f.default], () => f.default.getCurrentUser());
         if (null == x) return null;
-        let [A] = e.items;
-        if (e.type === l.R.PROFILE_EFFECT)
+        let [N] = t.items;
+        if (t.type === l.R.PROFILE_EFFECT)
             return (0, s.jsx)("div", {
-                className: y.NM,
-                children: (0, s.jsx)(h.A, { skuId: A.skuId, delayProfileEffectIntro: i, withScaleAnimation: i }),
+                className: v.NM,
+                children: (0, s.jsx)(h.A, {
+                    skuId: N.skuId,
+                    delayProfileEffectIntro: i,
+                    withScaleAnimation: i,
+                    removeSetHeight: !0,
+                }),
             });
-        if (e.type === l.R.AVATAR_DECORATION)
-            return (0, s.jsx)(m.i, { item: A, user: x, avatarSize: d._3J.SIZE_120, isHighlighted: !0 });
-        if (e.type === l.R.NAMEPLATE)
+        if (t.type === l.R.AVATAR_DECORATION)
+            return (0, s.jsx)(g.i, { item: N, user: x, avatarSize: c._3J.SIZE_120, isHighlighted: !0 });
+        if (t.type === l.R.NAMEPLATE)
             return (0, s.jsx)("div", {
-                className: y.qF,
-                children: (0, s.jsx)(o.A, { nameplate: A, user: x, nameplatePreviewSize: "large", isHighlighted: !0 }),
+                className: v.qF,
+                children: (0, s.jsx)(u.A, { nameplate: N, user: x, nameplatePreviewSize: "large", isHighlighted: !0 }),
             });
-        if (e.type === l.R.BUNDLE)
+        if (t.type === l.R.BUNDLE)
             return (0, s.jsx)("div", {
-                className: y.hT,
-                children: (0, s.jsx)(p.X, { product: e, user: x, isHighlighted: !0, forCollectedModal: i }),
+                className: v.hT,
+                children: (0, s.jsx)(p.X, { product: t, user: x, isHighlighted: !0, forCollectedModal: i }),
             });
-        if (e.type === l.R.EXTERNAL_SKU) {
-            if (Object.values(n.j).includes(e.skuId))
+        if (t.type === l.R.EXTERNAL_SKU) {
+            if (Object.values(n.j).includes(t.skuId))
                 if (r)
                     return (0, s.jsx)("img", {
-                        src: a ? E : v,
+                        src: a ? E : _,
                         alt: j.intl.string(j.t.t0xkSB),
                         style: { width: "100%" },
                     });
-                else return (0, s.jsx)("img", { src: _, alt: j.intl.string(j.t.g5W1g8) });
-            return (0, s.jsx)(g.B, { product: e });
+                else return (0, s.jsx)("img", { src: y, alt: j.intl.string(j.t.g5W1g8) });
+            return (0, s.jsx)(m.B, { product: t });
         }
         return null;
     },
-    N = (t) => {
-        let { reducedMotion: e, displayOptions: r } = t,
+    A = (e) => {
+        let { reducedMotion: t, displayOptions: r } = e,
             [l, n] = i.useState(!1),
-            c = (0, d.zhh)({
+            d = (0, c.zhh)({
                 from: { transform: "translateX(100%)", right: "-100%" },
                 to: { transform: "translateX(50%)", right: "50%" },
                 config: { duration: 1550 },
                 onRest: () => setTimeout(() => n(!0), 100),
             }),
-            o = (0, d.zhh)({
+            u = (0, c.zhh)({
                 from: { transform: "translateX(100%)", right: "-100%" },
                 to: { transform: "translateX(50%)", right: "50%" },
                 config: { duration: 1550 },
                 reverse: l,
             }),
-            u = (0, d.zhh)(
+            o = (0, c.zhh)(
                 {
                     from: { transform: "translateX(50%)", right: "50%", opacity: 1 },
                     to: { transform: "translateX(50%)", right: "50%", opacity: 0 },
@@ -81,16 +86,16 @@ let A = (t) => {
             );
         return (0, s.jsxs)(s.Fragment, {
             children: [
-                (0, s.jsx)(a.animated.div, { className: y.VH, style: c, children: (0, s.jsx)(A, { ...t }) }),
+                (0, s.jsx)(a.animated.div, { className: v.VH, style: d, children: (0, s.jsx)(N, { ...e }) }),
                 (0, s.jsx)(a.animated.div, {
-                    className: y.VH,
-                    style: e ? u : o,
+                    className: v.VH,
+                    style: t ? o : u,
                     children: (0, s.jsx)("img", { src: r.getSrc(), style: r.style, alt: "", "aria-hidden": "true" }),
                 }),
             ],
         });
     };
-function R(t) {
-    let e = (0, x.K9)(t.product.categorySkuId);
-    return null != e ? (0, s.jsx)(N, { ...t, displayOptions: e }) : (0, s.jsx)(A, { ...t });
+function S(e) {
+    let t = (0, x.K9)(e.product.categorySkuId);
+    return null != t ? (0, s.jsx)(A, { ...e, displayOptions: t }) : (0, s.jsx)(N, { ...e });
 }

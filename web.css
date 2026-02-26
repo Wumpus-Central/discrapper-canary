@@ -36444,12 +36444,21 @@ html:not(.chat-input) .inputInner_b1f01d {
 }
 
 .previewContainer__1e458 {
+    background-color: var(--background-mod-subtle);
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 1px var(--border-muted);
     display: flex;
+    height: 100%;
     justify-content: center;
     overflow: hidden;
     position: relative;
     width: 100%;
     z-index: 0
+}
+
+.previewContainer__1e458.hideBackground__1e458 {
+    background-color: transparent;
+    box-shadow: unset
 }
 
 .previewContainerSetHeight__1e458 {
@@ -44558,17 +44567,12 @@ screen and (max-width:485px) {
 }
 
 .profileEffectContainer_a84142 {
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-md);
     height: 296px;
-    margin: 16px auto 0;
+    margin: var(--space-16) auto 0;
     overflow: hidden;
     position: relative;
     width: 200px
-}
-
-.profileEffectBackground_a84142 {
-    position: absolute;
-    width: 100%
 }
 
 .nameplateContainer_a84142 {

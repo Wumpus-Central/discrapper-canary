@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { A: () => R }), n(801541);
+n.d(t, { A: () => N }), n(801541);
 var r = n(627968);
 n(64700);
 var i = n(889137),
-    a = n(575593),
-    s = n(397927),
+    s = n(575593),
+    a = n(397927),
     o = n(954921),
     l = n(278539),
     u = n(674658),
@@ -12,83 +12,77 @@ var i = n(889137),
     d = n(550111),
     _ = n(242874),
     f = n(75825),
-    h = n(262737),
-    p = n(182592),
-    g = n(837921),
-    E = n(937008),
-    A = n(652215),
-    I = n(985018),
-    T = n(421514),
-    y = n(306499);
-let S = g.Ay.getEnableHardwareAcceleration() ? s.JsQ : s.euF;
-function v(e) {
+    p = n(331402),
+    h = n(837921),
+    m = n(937008),
+    E = n(652215),
+    g = n(985018),
+    A = n(381084);
+let I = h.Ay.getEnableHardwareAcceleration() ? a.JsQ : a.euF;
+function T(e) {
     let { avatarDecoration: t } = e,
         {
             avatarDecorationSrc: n,
             eventHandlers: i,
-            avatarPlaceholderSrc: a,
-        } = (0, l.A)({ avatarDecorationOverride: t, size: (0, o.Te)(s._3J.SIZE_152) });
+            avatarPlaceholderSrc: s,
+        } = (0, l.A)({ avatarDecorationOverride: t, size: (0, o.Te)(a._3J.SIZE_152) });
     return (0, r.jsx)("div", {
-        className: T.rk,
-        children: (0, r.jsx)(S, {
+        className: A.rk,
+        children: (0, r.jsx)(I, {
             ...i,
             avatarDecoration: n,
-            src: a,
-            className: T.my,
-            size: s._3J.SIZE_152,
-            "aria-label": I.intl.string(I.t.lqaIxI),
+            src: s,
+            className: A.my,
+            size: a._3J.SIZE_152,
+            "aria-label": g.intl.string(g.t.lqaIxI),
         }),
     });
 }
-function C(e) {
-    let { skuId: t } = e,
-        n = (0, h.V)(t)?.config;
-    return (0, r.jsxs)("div", {
-        className: T.YS,
-        children: [
-            (0, r.jsx)("img", { src: y, alt: n?.accessibilityLabel, className: T.Zp }),
-            (0, r.jsx)(p.A, { skuId: t }),
-        ],
+function S(e) {
+    let { skuId: t } = e;
+    return (0, r.jsx)("div", {
+        className: A.YS,
+        children: (0, r.jsx)(p.A, { skuId: t, removeSetHeight: !0, isHighlighted: !0 }),
     });
 }
-function b(e) {
+function y(e) {
     let { nameplate: t } = e;
     return (0, r.jsx)("div", {
-        className: T.rz,
+        className: A.rz,
         children: (0, r.jsx)(d.A, {
             nameplate: t,
-            className: T.qF,
+            className: A.qF,
             nameplatePreviewSize: "xlarge",
             isHighlighted: !0,
             showPlaceholderUser: !0,
         }),
     });
 }
-let N = (e) => {
+let v = (e) => {
     let { sku: t } = e,
-        { selectedGiftStyle: n } = (0, E.Pv)(),
-        { product: s } = (0, u.q)(t?.id);
-    if (s?.type === a.R.BUNDLE)
-        return (0, r.jsx)("div", { className: T.ww, children: (0, r.jsx)(c.X, { product: s, isHighlighted: !1 }) });
-    let o = s?.items[0],
+        { selectedGiftStyle: n } = (0, m.Pv)(),
+        { product: a } = (0, u.q)(t?.id);
+    if (a?.type === s.R.BUNDLE)
+        return (0, r.jsx)("div", { className: A.ww, children: (0, r.jsx)(c.X, { product: a, isHighlighted: !1 }) });
+    let o = a?.items[0],
         l = (0, i.YW)(o)
-            .with({ type: a.R.AVATAR_DECORATION }, (e) => (0, r.jsx)(v, { avatarDecoration: e }))
-            .with({ type: a.R.PROFILE_EFFECT }, (e) => (0, r.jsx)(C, { skuId: e.skuId }))
-            .with({ type: a.R.NAMEPLATE }, (e) => (0, r.jsx)(b, { nameplate: e }))
+            .with({ type: s.R.AVATAR_DECORATION }, (e) => (0, r.jsx)(T, { avatarDecoration: e }))
+            .with({ type: s.R.PROFILE_EFFECT }, (e) => (0, r.jsx)(S, { skuId: e.skuId }))
+            .with({ type: s.R.NAMEPLATE }, (e) => (0, r.jsx)(y, { nameplate: e }))
             .otherwise(() => null);
     return null != n && null == l
         ? (0, r.jsx)("div", {
-              className: T.rk,
+              className: A.rk,
               children: (0, r.jsx)(f.A, {
                   defaultAnimationState: _.oA.LOOP,
                   giftStyle: n,
                   shouldAnimate: !0,
-                  className: T.__invalid_giftMainAnimation,
+                  className: A.__invalid_giftMainAnimation,
               }),
           })
         : l;
 };
-function R(e) {
+function N(e) {
     let { sku: t } = e;
-    return t.productLine === A.EZt.COLLECTIBLES ? (0, r.jsx)(N, { sku: t }) : null;
+    return t.productLine === E.EZt.COLLECTIBLES ? (0, r.jsx)(v, { sku: t }) : null;
 }

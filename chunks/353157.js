@@ -8,7 +8,7 @@ var s = n(575593),
     r = n(550111),
     o = n(331402),
     d = n(798048),
-    c = n(752276);
+    c = n(975462);
 function u(e) {
     let { item: t, profileOwner: n, isHighlighted: u, cardSize: h = d.Y.MEDIUM } = e,
         p = t.collectiblesItem;
@@ -16,7 +16,12 @@ function u(e) {
         case s.R.PROFILE_EFFECT:
             return (0, i.jsx)("div", {
                 className: c.xC,
-                children: (0, i.jsx)(o.A, { skuId: p.skuId, isHighlighted: u, removeSetHeight: !0 }),
+                children: (0, i.jsx)(o.A, {
+                    skuId: p.skuId,
+                    isHighlighted: u,
+                    removeSetHeight: !0,
+                    hideBackground: !0,
+                }),
             });
         case s.R.AVATAR_DECORATION:
             return (0, i.jsx)("div", {

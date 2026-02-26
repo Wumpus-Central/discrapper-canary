@@ -2,27 +2,28 @@
 n.d(t, { A: () => d });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a);
+    s = n(503698),
+    a = n.n(s);
 n(216160);
 var o = n(675100),
     l = n(182592),
-    u = n(347064),
-    c = n(306499);
+    u = n(198434),
+    c = n(727220);
 let d = (e) => {
     let {
             skuId: t,
             isHighlighted: n,
-            removeSetHeight: a = !1,
+            removeSetHeight: s = !1,
             withScaleAnimation: d = !1,
             delayProfileEffectIntro: _ = !1,
+            hideBackground: f = !1,
         } = e,
-        [f, p] = i.useState(!0);
+        [p, h] = i.useState(!0);
     return (i.useEffect(() => {
-        if (!0 !== d) p(!1);
+        if (!0 !== d) h(!1);
         else {
             let e = setTimeout(() => {
-                p(!1);
+                h(!1);
             }, 500);
             return () => {
                 clearTimeout(e);
@@ -32,10 +33,10 @@ let d = (e) => {
     null == t)
         ? null
         : (0, r.jsxs)("div", {
-              className: s()(u.i1, { [u.qy]: d, [u.pE]: !a }),
+              className: a()(u.i1, { [u.qy]: d, [u.pE]: !s, [u.JQ]: f }),
               children: [
-                  (0, r.jsx)("img", { src: c, alt: "", className: u.VH, "aria-hidden": !0, draggable: !1 }),
-                  !f &&
+                  (0, r.jsx)("img", { src: c.A, alt: "", className: u.VH, "aria-hidden": !0, draggable: !1 }),
+                  !p &&
                       (0, r.jsx)(l.A, {
                           skuId: t,
                           useThumbnail: !0,
