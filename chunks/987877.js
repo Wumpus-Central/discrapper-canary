@@ -1,28 +1,32 @@
 "use strict";
-n.d(t, { o: () => _ });
+n.d(t, { o: () => f });
 var r = n(956793),
     i = n(235393),
-    a = n(376943),
-    s = n(22007),
+    s = n(376943),
+    a = n(22007),
     o = n(734057),
-    l = n(71393),
-    u = n(449054),
-    c = n(923257),
-    d = n(652215);
-async function _(e, t, n) {
+    l = n(696451),
+    u = n(71393),
+    c = n(449054),
+    d = n(923257),
+    _ = n(652215);
+async function f(e, t, n) {
     if (null == t) return;
-    if ((i.A.trackDiscordLinkClicked({ guildId: e, channelId: t, messageId: n }), null != e)) {
-        let r = l.A.getGuild(e);
+    if (
+        (i.A.trackDiscordLinkClicked({ guildId: e, channelId: t, messageId: n }),
+        null != e && !l.Ay.isCurrentUserGuest(e))
+    ) {
+        let r = u.A.getGuild(e);
         if (r?.joinedAt == null)
             try {
-                await u.Z2(e, {}, { channelId: t, messageId: n });
+                await c.Z2(e, {}, { channelId: t, messageId: n });
                 return;
             } catch {}
     }
-    let _ = o.A.getChannel(t);
-    if (null != _ && null == n && _.isGuildVocal() && (0, a.nc)(_)) {
-        let { navigateOnly: e } = c.h.getConfig({ location: "channel_mention" });
-        if (!e) return void r.default.selectVoiceChannel(_.id);
+    let f = o.A.getChannel(t);
+    if (null != f && null == n && f.isGuildVocal() && (0, s.nc)(f)) {
+        let { navigateOnly: e } = d.h.getConfig({ location: "channel_mention" });
+        if (!e) return void r.default.selectVoiceChannel(f.id);
     }
-    (0, s.A)(d.BVt.CHANNEL(e, t, n));
+    (0, a.A)(_.BVt.CHANNEL(e, t, n));
 }
