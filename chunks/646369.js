@@ -960,9 +960,11 @@ class R extends f.A {
         this.emit(h.yq.NativeMuteChanged, e);
     };
     handleSpeakingFlags = (e, t, n) => {
+        let r = this.localSpeakingFlags[e] ?? T.ME.NONE;
+        if (this.experimentFlags.has(I.fd.SWALLOW_VOLUME_ONLY_SPEAKING_EVENTS) && r === t) return;
         this.localSpeakingFlags[e] = t;
-        let r = e === this.userId ? this.audioSSRC : this.remoteAudioSSRCs[e];
-        this.emit(h.yq.Speaking, e, t, r, n),
+        let i = e === this.userId ? this.audioSSRC : this.remoteAudioSSRCs[e];
+        this.emit(h.yq.Speaking, e, t, i, n),
             (t & T.ME.SOUNDSHARE) != 0 &&
                 !1 === this.soundshareSentSpeakingEvent &&
                 (this.emit(h.yq.SoundshareSpeaking), (this.soundshareSentSpeakingEvent = !0));

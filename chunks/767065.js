@@ -613,17 +613,18 @@ class eC extends _.A {
             null != e && t.push(e);
         }
         this.context === ec.x.DEFAULT && (0, v.I)("RtcConnection").enabled && t.push("audio_transport_cc");
-        let { enabled: n } = A.A.getConfig({ location: "_chooseExperiments" });
+        let { enabled: n, dontEmitVolumeOnlySpeakingEvents: r } = A.A.getConfig({ location: "_chooseExperiments" });
         n && t.push("should_analyze_user_voice_volume"),
+            r && t.push("dont_emit_volume_only_speaking_events"),
             t.push("keyframe_on_join"),
             D.A.getCurrentConfig({ location: "_chooseExperiments" }, { autoTrackExposure: !0 }).enabled &&
                 t.push("network_aware_socket");
-        let r = C.A.getCurrentConfig(
+        let i = C.A.getCurrentConfig(
             { location: "_chooseExperiments" },
             { disable: !(0, K.isWindows)(), autoTrackExposure: !0 },
         );
-        r.prewarm && t.push("prewarm_cuda_cache"),
-            r.clear && t.push("clear_cuda_cache"),
+        i.prewarm && t.push("prewarm_cuda_cache"),
+            i.clear && t.push("clear_cuda_cache"),
             (this._selectedExperiments = t);
     }
     _handleConnecting(e) {
