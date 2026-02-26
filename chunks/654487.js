@@ -1,32 +1,34 @@
 "use strict";
 n.d(t, {
-    B3: () => R,
-    BQ: () => M,
-    CI: () => g,
-    Fw: () => y,
-    GD: () => E,
-    J6: () => b,
-    K3: () => L,
+    A6: () => m,
+    B3: () => D,
+    BQ: () => k,
+    CI: () => I,
+    Fw: () => N,
+    GD: () => A,
+    J6: () => O,
+    K3: () => x,
     Ko: () => p,
     Li: () => c.L,
-    Ls: () => O,
-    Pc: () => x,
+    Ls: () => L,
+    Pc: () => P,
     TY: () => u.T,
-    WQ: () => k,
+    WQ: () => G,
     ZV: () => f,
-    aJ: () => v,
-    eA: () => S,
-    ej: () => I,
-    fO: () => h,
-    fP: () => A,
-    gB: () => N,
-    hK: () => C,
-    kL: () => w,
-    mg: () => T,
-    pc: () => G,
+    aA: () => h,
+    aJ: () => C,
+    eA: () => v,
+    ej: () => S,
+    fO: () => E,
+    fP: () => T,
+    gB: () => b,
+    hK: () => R,
+    kL: () => M,
+    mg: () => y,
+    pc: () => V,
     rE: () => d,
     tZ: () => _,
-    zO: () => D,
+    zO: () => w,
 });
 var r = n(735438),
     i = n(412703),
@@ -93,17 +95,19 @@ var r = n(735438),
     })({});
 let _ = o.A.Millis.MINUTE * s.K.ConsecutiveHeartbeatPeriodMinutes,
     f = { tension: 900, friction: 45, clamp: !0 },
-    p = { tension: 360, friction: 30, clamp: !0 };
-var h = (function (e) {
+    p = { tension: 360, friction: 30, clamp: !0 },
+    h = 6,
+    m = 2;
+var E = (function (e) {
     return (e.CONSOLE = "CONSOLE"), (e.DESKTOP = "DESKTOP"), e;
 })({});
-let m = (0, a.TP)(),
-    E =
-        -1 !== m.indexOf("localhost") || -1 !== m.indexOf("127.0.0.1")
-            ? `${m}/_cdn_storage/`
+let g = (0, a.TP)(),
+    A =
+        -1 !== g.indexOf("localhost") || -1 !== g.indexOf("127.0.0.1")
+            ? `${g}/_cdn_storage/`
             : "https://cdn.discordapp.com/",
-    g = E + "quests/";
-var A = (function (e) {
+    I = A + "quests/";
+var T = (function (e) {
     return (
         (e.COLLAPSED = "collapsed"),
         (e.EXPANDED = "expanded"),
@@ -113,9 +117,9 @@ var A = (function (e) {
         e
     );
 })({});
-let I = "545364944258990091",
-    T = "{reward_code}";
-var S = (function (e) {
+let S = "545364944258990091",
+    y = "{reward_code}";
+var v = (function (e) {
     return (
         (e.EXCLUDED_QUEST = "excluded_quest"),
         (e.UNKNOWN_QUEST = "unknown_quest"),
@@ -123,27 +127,11 @@ var S = (function (e) {
         e
     );
 })({});
-let y = "1333839522189938740",
-    v = "1410358070831480904",
-    N = "1420556874629251124",
-    C = "1402418703554842694",
-    b = new Set([l.yW.DESKTOP_ACCOUNT_PANEL_AREA, l.yW.MOBILE_HOME_DOCK_AREA]),
-    R = new Set([
-        i.n.STREAM_ON_DESKTOP,
-        i.n.PLAY_ON_DESKTOP,
-        i.n.PLAY_ON_XBOX,
-        i.n.PLAY_ON_PLAYSTATION,
-        i.n.PLAY_ON_DESKTOP_V2,
-        i.n.PLAY_ACTIVITY,
-    ]),
-    O = new Set([
-        i.n.STREAM_ON_DESKTOP,
-        i.n.PLAY_ON_DESKTOP,
-        i.n.PLAY_ON_XBOX,
-        i.n.PLAY_ON_PLAYSTATION,
-        i.n.PLAY_ON_DESKTOP_V2,
-        i.n.PLAY_ACTIVITY,
-    ]),
+let N = "1333839522189938740",
+    C = "1410358070831480904",
+    b = "1420556874629251124",
+    R = "1402418703554842694",
+    O = new Set([l.yW.DESKTOP_ACCOUNT_PANEL_AREA, l.yW.MOBILE_HOME_DOCK_AREA]),
     D = new Set([
         i.n.STREAM_ON_DESKTOP,
         i.n.PLAY_ON_DESKTOP,
@@ -152,8 +140,24 @@ let y = "1333839522189938740",
         i.n.PLAY_ON_DESKTOP_V2,
         i.n.PLAY_ACTIVITY,
     ]),
-    L = { is_targeted: !1 };
-var w = (function (e) {
+    L = new Set([
+        i.n.STREAM_ON_DESKTOP,
+        i.n.PLAY_ON_DESKTOP,
+        i.n.PLAY_ON_XBOX,
+        i.n.PLAY_ON_PLAYSTATION,
+        i.n.PLAY_ON_DESKTOP_V2,
+        i.n.PLAY_ACTIVITY,
+    ]),
+    w = new Set([
+        i.n.STREAM_ON_DESKTOP,
+        i.n.PLAY_ON_DESKTOP,
+        i.n.PLAY_ON_XBOX,
+        i.n.PLAY_ON_PLAYSTATION,
+        i.n.PLAY_ON_DESKTOP_V2,
+        i.n.PLAY_ACTIVITY,
+    ]),
+    x = { is_targeted: !1 };
+var M = (function (e) {
         return (
             (e.SUGGESTED = "suggested"),
             (e.MOST_RECENT = "most_recent"),
@@ -162,10 +166,10 @@ var w = (function (e) {
             e
         );
     })({}),
-    x = (function (e) {
+    P = (function (e) {
         return (e.VIDEO = "task_video"), (e.PLAY = "task_play"), e;
     })({}),
-    M = (function (e) {
+    k = (function (e) {
         return (
             (e.VIRTUAL_CURRENCY = "reward_virtual_currency"),
             (e.COLLECTIBLE = "reward_collectible"),
@@ -173,23 +177,23 @@ var w = (function (e) {
             e
         );
     })({});
-let P = [
+let U = [
     { group: "task", filter: "task_play" },
     { group: "task", filter: "task_video" },
     { group: "reward", filter: "reward_virtual_currency" },
     { group: "reward", filter: "reward_collectible" },
     { group: "reward", filter: "reward_in_game" },
 ];
-function k(e) {
-    return Object.values(x).includes(e)
+function G(e) {
+    return Object.values(P).includes(e)
         ? { group: "task", filter: e }
-        : Object.values(M).includes(e)
+        : Object.values(k).includes(e)
           ? { group: "reward", filter: e }
           : null;
 }
-let U = ["reward", "task"],
-    G = Object.entries((0, r.groupBy)(P, "group")).sort((e, t) => {
-        let n = U.indexOf(e[0]),
-            r = U.indexOf(t[0]);
+let F = ["reward", "task"],
+    V = Object.entries((0, r.groupBy)(U, "group")).sort((e, t) => {
+        let n = F.indexOf(e[0]),
+            r = F.indexOf(t[0]);
         return n < r ? -1 : +(r < n);
     });

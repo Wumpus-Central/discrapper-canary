@@ -1,11 +1,12 @@
 "use strict";
-n.d(t, { Ay: () => c, K2: () => o, Kr: () => u, Lx: () => l });
+n.d(t, { Ay: () => d, K2: () => l, Kr: () => c, Lx: () => u, yc: () => o });
 var r = n(499867),
     i = n(265690),
     s = n(121894),
     a = n(506774);
 n(876230);
-var o = (function (e) {
+let o = { timestampSec: 0, duration: 10, maxTimestampSec: 0 };
+var l = (function (e) {
         return (
             (e.UNKNOWN = "UNKNOWN"),
             (e.NOT_STARTED = "NOT_STARTED"),
@@ -14,10 +15,10 @@ var o = (function (e) {
             e
         );
     })({}),
-    l = (function (e) {
+    u = (function (e) {
         return (e.NONE = "NONE"), (e.FETCHING = "FETCHING"), (e.SUCCESS = "SUCCESS"), (e.FAILURE = "FAILURE"), e;
     })({});
-let u = (0, i.h)()(
+let c = (0, i.h)()(
         (0, r.Zr)(
             (e, t) => ({
                 volume: 0.3,
@@ -89,4 +90,4 @@ let u = (0, i.h)()(
             },
         ),
     ),
-    c = u;
+    d = c;
