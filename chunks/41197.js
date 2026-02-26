@@ -1,4 +1,4 @@
-i.d(e, { V: () => T });
+i.d(e, { X: () => T });
 var n = i(419954),
     l = i(780964),
     s = i(805060),
@@ -8,7 +8,8 @@ var n = i(419954),
     o = i(827315),
     d = i(898560),
     A = i(985018);
-let T = (0, n.zZ)(l.X.DISPLAY_CHAT_CATEGORY, {
-    useTitle: () => A.intl.string(A.t["/VQax8"]),
+let T = (0, n.zZ)(l.X.DISPLAY_MESSAGES_CATEGORY, {
+    useTitle: () => A.intl.string(A.t.OIgYlQ),
+    useSearchTerms: () => [A.intl.string(A.t["/VQax8"])],
     buildLayout: () => [o.g, s.r, r.j, d.z, a.z, u.$],
 });
