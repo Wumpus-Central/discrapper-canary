@@ -20,12 +20,12 @@ var i = n(627968),
     C = n(793574),
     E = n(688810),
     I = n(313961),
-    b = n(832275),
-    N = n(730253),
+    N = n(832275),
+    b = n(730253),
     S = n(633965),
     T = n(857071),
-    v = n(851109),
-    y = n(397938),
+    y = n(851109),
+    v = n(397938),
     j = n(366811),
     R = n(72314),
     O = n(543897),
@@ -51,7 +51,7 @@ var i = n(627968),
     Q = n(343170),
     $ = n(652215),
     Z = n(985018),
-    ee = n(216788);
+    ee = n(266450);
 let et = (0, G.isWindows)() ? 4 : 12 * !(0, G.isMac)();
 function en(e) {
     return e.startsWith($.BVt.GUILD_DISCOVERY) || e.startsWith($.BVt.GLOBAL_DISCOVERY);
@@ -167,15 +167,15 @@ class ei {
 }
 function es(e) {
     let { hideDms: t, scrollToTop: n, lurkingGuildIds: s } = e,
-        l = (0, b.A)(),
+        l = (0, N.A)("TopSection"),
         r = (0, h.yK)([M.A, L.Ay], () => M.A.getGuildIds().filter((e) => L.Ay.isCurrentUserGuest(e))),
         a = s.concat(r),
-        { entrypoint: o } = (0, v.X8)({ location: "GuildsBar" });
+        { entrypoint: o } = (0, y.X8)({ location: "GuildsBar" });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(W.C, {}),
-            o === v.RK.SERVER_RAIL_TOP && (0, i.jsx)(y.A, {}),
-            l ? (0, i.jsx)(N.A, {}) : null,
+            o === y.RK.SERVER_RAIL_TOP && (0, i.jsx)(v.A, {}),
+            l ? (0, i.jsx)(b.A, {}) : null,
             !t && (0, i.jsx)(V.A, {}),
             a.map((e) => (0, i.jsx)(Q.A, { guildId: e }, e)),
             (0, i.jsx)(J.A, { onActivate: n }),
@@ -217,7 +217,7 @@ function er(e) {
         u = (0, h.bG)([T.A], () => T.A.lurkingGuildIds()),
         A = s.useMemo(() => (n ? [] : u), [u, n]),
         _ = (0, h.bG)([I.A], () => I.A.isFullscreenInContext()),
-        { isSorting: x, startSorting: N, stopSorting: S } = (0, U.A)(),
+        { isSorting: x, startSorting: b, stopSorting: S } = (0, U.A)(),
         O = s.useRef(!1),
         [L] = s.useState(() => new p.Ep()),
         M = s.useRef(null),
@@ -227,10 +227,10 @@ function er(e) {
         [W, z] = s.useState(!1),
         J = (0, m.rdh)(g.A.modules.guildbar.AVATAR_SIZE),
         Q = (0, m.rdh)(g.A.space.SPACE_XS),
-        er = (0, b.A)(),
+        er = (0, N.A)("GuildsBar"),
         { pathname: ea } = (0, c.zy)(),
-        { entrypoint: eo } = (0, v.X8)({ location: "GuildsBar" }),
-        ec = +!!er + +(eo === v.RK.SERVER_RAIL_TOP),
+        { entrypoint: eo } = (0, y.X8)({ location: "GuildsBar" }),
+        ec = +!!er + +(eo === y.RK.SERVER_RAIL_TOP),
         ed = s.useMemo(() => {
             let e,
                 t,
@@ -299,7 +299,7 @@ function er(e) {
                                 setNodeRef: ed.setNodeRef,
                                 draggable: !0,
                                 sorting: x,
-                                onDragStart: N,
+                                onDragStart: b,
                                 onDragEnd: S,
                                 renderChildNode: e,
                                 "aria-setsize": s,
@@ -315,7 +315,7 @@ function er(e) {
                                 setRef: ed.setNodeRef,
                                 draggable: !0,
                                 sorting: x,
-                                onDragStart: N,
+                                onDragStart: b,
                                 onDragEnd: S,
                                 "aria-setsize": s,
                                 "aria-posinset": void 0 !== n ? n + 1 : void 0,
@@ -326,10 +326,10 @@ function er(e) {
                         return null;
                 }
             },
-            [N, S, x, ed.setNodeRef],
+            [b, S, x, ed.setNodeRef],
         ),
         eg = (0, i.jsx)(K.A, { selected: eh, className: ee.ai }),
-        em = eo === v.RK.SERVER_RAIL_BOTTOM;
+        em = eo === y.RK.SERVER_RAIL_BOTTOM;
     return (0, i.jsx)(E.f5, {
         value: eu,
         children: (0, i.jsx)(m.NPJ, {
@@ -377,7 +377,7 @@ function er(e) {
                                         (0, i.jsxs)("div", {
                                             children: [
                                                 (0, i.jsx)(Y.A, { fullWidth: !0 }),
-                                                (0, i.jsx)("div", { className: ee.JU, children: (0, i.jsx)(y.A, {}) }),
+                                                (0, i.jsx)("div", { className: ee.JU, children: (0, i.jsx)(v.A, {}) }),
                                             ],
                                         }),
                                 ],

@@ -1,61 +1,70 @@
 "use strict";
-n.d(t, { A: () => p });
-var r = n(311907),
-    i = n(873298),
+n.d(t, { A: () => E });
+var r = n(735438),
+    i = n(311907),
+    s = n(873298),
     a = n(73153),
-    s = n(617617),
-    o = n(95701),
-    l = n(349828),
-    u = n(652215);
-let c = {},
-    d = !1;
-function _(e) {
-    return (0, o.createChannelRecord)({
+    o = n(617617),
+    l = n(95701),
+    u = n(349828),
+    c = n(652215);
+let d = {},
+    _ = !1,
+    f = !1;
+function p(e) {
+    return (0, l.createChannelRecord)({
         id: e.id,
         name: e.nickname ?? "",
-        type: u.rbe.GUILD_CATEGORY,
+        type: c.rbe.GUILD_CATEGORY,
         position: e.order,
-        guild_id: u.YYv,
+        guild_id: c.YYv,
     });
 }
-function f() {
-    (d = s.A.settings.favorites?.muted ?? !1), (c = {});
-    let e = s.A.settings.favorites?.favoriteChannels;
-    if (null == e) return !1;
-    for (let t in e) {
-        let n = e[t];
-        c[t] = {
-            id: t,
-            nickname: "" !== n.nickname ? n.nickname : null,
-            type: n.type,
-            order: n.position,
-            parentId: n.parentId !== l.O8 ? n.parentId : null,
-        };
-    }
+function h() {
+    let e = o.A.settings.favorites,
+        t = e?.muted ?? !1,
+        n = {},
+        i = e?.favoriteChannels;
+    if (null != i)
+        for (let e in i) {
+            let t = i[e];
+            n[e] = {
+                id: e,
+                nickname: "" !== t.nickname ? t.nickname : null,
+                type: t.type,
+                order: t.position,
+                parentId: t.parentId !== u.O8 ? t.parentId : null,
+            };
+        }
+    let s = e?.guildVisible?.value ?? !(0, r.isEmpty)(n);
+    return !(_ === t && f === s && (0, r.isEqual)(d, n)) && ((_ = t), (f = s), (d = n), !0);
 }
-class h extends r.Ay.Store {
+class m extends i.Ay.Store {
     static displayName = "FavoriteStore";
     initialize() {
-        this.waitFor(s.A), f(), this.syncWith([s.A], f);
+        this.waitFor(o.A), h(), this.syncWith([o.A], h);
     }
     getFavoriteChannels() {
-        return c;
-    }
-    get favoriteServerMuted() {
         return d;
     }
+    get favoriteServerMuted() {
+        return _;
+    }
+    get favoriteServerEnabled() {
+        return f;
+    }
     isFavorite(e) {
-        return null != e && null != c[e];
+        return null != e && null != d[e];
     }
     getFavorite(e) {
-        if (null != e) return c[e];
+        if (null != e) return d[e];
     }
     getCategoryRecord(e) {
-        return e in c && c[e].type === i.Ip.CATEGORY ? _(c[e]) : null;
+        return e in d && d[e].type === s.Ip.CATEGORY ? p(d[e]) : null;
     }
     getNickname(e) {
         let t = this.getFavorite(e);
         return t?.nickname ?? void 0;
     }
 }
-let p = new h(a.h, {});
+let E = new m(a.h, {});

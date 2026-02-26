@@ -1,33 +1,36 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => I });
 var i = n(735438),
-    s = n.n(i),
-    r = n(181079),
-    a = n(832275),
-    l = n(366811),
-    o = n(734057),
-    c = n(576705),
-    d = n(309010),
-    u = n(711014),
-    _ = n(619921),
-    m = n(265422),
-    A = n(652215);
-let g = s().throttle(function () {
+    r = n.n(i),
+    a = n(181079),
+    s = n(957300),
+    l = n(616075),
+    o = n(832275),
+    d = n(366811),
+    _ = n(309010),
+    c = n(711014),
+    u = n(287809),
+    A = n(619921),
+    g = n(265422),
+    E = n(652215);
+let I = r().throttle(function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-        t = u.Ay.getFlattenedGuildIds(),
-        n = (function (e) {
-            let t = l.A.getState().guildId;
+        t = c.Ay.getFlattenedGuildIds(),
+        n = s.E.getState().isPreviewMode,
+        { enabled: i, hasHigherPrivileges: r } = l.w.getConfig({ location: "navigateToServer" }),
+        I = (function (e) {
+            let t = d.A.getState().guildId;
             if (null == t) return -2;
-            if (t === A.YYv) return -1;
+            if (t === E.YYv) return -1;
             let n = e.indexOf(t);
             return -1 === n ? -2 : n;
         })(t);
     if (
-        (-1 !== (n += e) || (0, a.J)(r.A, o.A, c.A) || (n += e),
-        -3 === n && (n = t.length - 1),
-        n >= t.length || -2 === n)
+        (-1 !== (I += e) || (0, o.J)(a.A, u.default, n, i, r) || (I += e),
+        -3 === I && (I = t.length - 1),
+        I >= t.length || -2 === I)
     )
-        return void (0, m.a)(_.A.getHomeLink());
-    let i = -1 === n ? A.YYv : t[n],
-        s = d.A.getChannelId(i);
-    (0, m.i)(i, s === i ? null : s, !1);
-}, A.ugG);
+        return void (0, g.a)(A.A.getHomeLink());
+    let h = -1 === I ? E.YYv : t[I],
+        C = _.A.getChannelId(h);
+    (0, g.i)(h, C === h ? null : C, !1);
+}, E.ugG);

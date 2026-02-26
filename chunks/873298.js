@@ -3140,6 +3140,7 @@ class eV extends a.G {
         super("discord_protos.discord_users.v1.Favorites", [
             { no: 1, name: "favorite_channels", kind: "map", K: 6, V: { kind: "message", T: () => ej } },
             { no: 2, name: "muted", kind: "scalar", T: 8 },
+            { no: 3, name: "guild_visible", kind: "message", T: () => o._t },
         ]);
     }
     create(e) {
@@ -3162,12 +3163,15 @@ class eV extends a.G {
                 case 2:
                     s.muted = e.bool();
                     break;
+                case 3:
+                    s.guildVisible = o._t.internalBinaryRead(e, e.uint32(), n, s.guildVisible);
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
-                    let o = e.skip(i);
-                    !1 !== a && (!0 === a ? r.f$.onRead : a)(this.typeName, s, t, i, o);
+                    let l = e.skip(i);
+                    !1 !== a && (!0 === a ? r.f$.onRead : a)(this.typeName, s, t, i, l);
             }
         }
         return s;
@@ -3200,7 +3204,8 @@ class eV extends a.G {
                 t.tag(2, r.O0.LengthDelimited).fork(),
                 ej.internalBinaryWrite(e.favoriteChannels[i], t, n),
                 t.join().join();
-        !1 !== e.muted && t.tag(2, r.O0.Varint).bool(e.muted);
+        !1 !== e.muted && t.tag(2, r.O0.Varint).bool(e.muted),
+            e.guildVisible && o._t.internalBinaryWrite(e.guildVisible, t.tag(3, r.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }

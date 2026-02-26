@@ -1,15 +1,16 @@
 "use strict";
-n.d(t, { J: () => _ }), n(321073);
+n.d(t, { J: () => f }), n(321073);
 var r = n(181079),
-    i = n(832275),
-    a = n(976860),
-    s = n(345942),
-    o = n(734057),
-    l = n(576705),
+    i = n(957300),
+    s = n(616075),
+    a = n(832275),
+    o = n(976860),
+    l = n(345942),
     u = n(967198),
     c = n(711014),
-    d = n(652215);
-let _ = {
+    d = n(287809),
+    _ = n(652215);
+let f = {
     binds: (() => {
         let e = 10,
             t = [];
@@ -19,19 +20,20 @@ let _ = {
     comboKeysBindGlobal: !0,
     action(e, t) {
         let n,
-            _ = parseInt(t.split("+")[1], 10);
-        if (
-            (0 === _ && (_ = 10), !isNaN(_) && 0 !== _) &&
-            null !=
-                (n =
-                    1 === _
-                        ? d.ME
-                        : (0, i.J)(r.A, o.A, l.A)
-                          ? 2 === _
-                              ? d.YYv
-                              : c.Ay.getFlattenedGuildIds()[_ - 3]
-                          : c.Ay.getFlattenedGuildIds()[_ - 2])
-        )
-            return n === d.ME && null == u.A.getGuildId() ? (0, a.pX)(d.BVt.CHANNEL(n)) : (0, s.u)(n), !1;
+            f = parseInt(t.split("+")[1], 10);
+        if ((0 === f && (f = 10), !isNaN(f) && 0 !== f)) {
+            if (1 === f) n = _.ME;
+            else {
+                let e = i.E.getState().isPreviewMode,
+                    { enabled: t, hasHigherPrivileges: o } = s.w.getConfig({ location: "jumpToGuild" });
+                n = (0, a.J)(r.A, d.default, e, t, o)
+                    ? 2 === f
+                        ? _.YYv
+                        : c.Ay.getFlattenedGuildIds()[f - 3]
+                    : c.Ay.getFlattenedGuildIds()[f - 2];
+            }
+            if (null != n)
+                return n === _.ME && null == u.A.getGuildId() ? (0, o.pX)(_.BVt.CHANNEL(n)) : (0, l.u)(n), !1;
+        }
     },
 };
