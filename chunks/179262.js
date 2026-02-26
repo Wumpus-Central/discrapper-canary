@@ -24,7 +24,7 @@ let o = (e) => {
         (0, r.useEffect)(() => {
             f &&
                 j &&
-                (0, s.y)({
+                (0, s.yx)({
                     collectionId: t,
                     includeUnpublishedProducts: l,
                     includeUnpublishedCollection: o,

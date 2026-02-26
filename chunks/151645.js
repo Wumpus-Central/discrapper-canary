@@ -15,7 +15,7 @@ let o = (e) => {
         g = null == c || l !== m || o !== x || d !== b;
     return (
         (0, r.useEffect)(() => {
-            p && g && (0, s.x)({ skuId: t, includePricing: l, includeUnpublished: o, ignoreCache: d });
+            p && g && (0, s.xM)({ skuId: t, includePricing: l, includeUnpublished: o, ignoreCache: d });
         }, [p, g, t, l, o, d]),
         { product: c, isFetching: u, apiError: h }
     );
