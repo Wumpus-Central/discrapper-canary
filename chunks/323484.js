@@ -1,45 +1,44 @@
 "use strict";
-n.d(t, { $: () => d });
-var r = n(870383),
-    i = n(734057),
-    a = n(287809),
+n.d(t, { $: () => c });
+var r = n(734057),
+    i = n(287809),
     s = n(562153),
-    o = n(427262),
-    l = n(835002),
-    u = n(985018),
-    c = n(641131);
-function d(e, t, n) {
-    let d = a.default.getUser(t),
-        _ = i.A.getChannel(n),
-        f = s.Ay.getName(_?.guild_id, _?.id, d) ?? o.Ay.getGlobalName(d);
+    a = n(427262),
+    o = n(835002),
+    l = n(985018),
+    u = n(733045);
+function c(e, t, n) {
+    let c = i.default.getUser(t),
+        d = r.A.getChannel(n),
+        _ = s.Ay.getName(d?.guild_id, d?.id, c) ?? a.Ay.getGlobalName(c);
     switch (e) {
-        case l.OB.IGNORE_SUCCESS:
-            return u.intl.formatToPlainString(u.t["+joqrP"], { username: f });
-        case l.OB.UNIGNORE_SUCCESS:
-            return u.intl.formatToPlainString(u.t.THExKa, { username: f });
-        case l.OB.BLOCK_SUCCESS:
-            return u.intl.formatToPlainString(u.t.XXPrIs, { username: f });
-        case l.OB.UNBLOCK_SUCCESS:
-            return u.intl.formatToPlainString(u.t.uExcGX, { username: f });
-        case l.OB.MUTE_SUCCESS:
-            return u.intl.formatToPlainString(u.t.X4NtYb, { username: f });
-        case l.OB.UNMUTE_SUCCESS:
-            return u.intl.formatToPlainString(u.t.tRaBfY, { username: f });
-        case l.OB.REPORT_SUCCESS:
-            return u.intl.formatToPlainString(u.t.FOptFU, { username: f });
-        case l.OB.TIGGER_PAWTECT_ERROR:
-            return u.intl.string(u.t.c6kn6F);
-        case l.OB.TIGGER_PAWTECT_VERIFIED:
-            return (0, r.H)(u.intl.string(u.t.XwKo1k), u.intl.string(u.t["7nKAXx"]));
-        case l.OB.GENERIC_ERROR:
-            return u.intl.string(u.t.zBpoc7);
-        case l.OB.REPORT_TO_MOD_SUCCESS:
-            return u.intl.string(c.default.iBypeZ);
-        case l.OB.SAFETY_FEEDBACK_SUCCESS:
-            return u.intl.string(u.t.TcFR5k);
-        case l.OB.EXISTING_USER_AGE_GATE_SUCCESS:
-            return u.intl.string(u.t["susqq/"]);
+        case o.OB.IGNORE_SUCCESS:
+            return l.intl.formatToPlainString(l.t["+joqrP"], { username: _ });
+        case o.OB.UNIGNORE_SUCCESS:
+            return l.intl.formatToPlainString(l.t.THExKa, { username: _ });
+        case o.OB.BLOCK_SUCCESS:
+            return l.intl.formatToPlainString(l.t.XXPrIs, { username: _ });
+        case o.OB.UNBLOCK_SUCCESS:
+            return l.intl.formatToPlainString(l.t.uExcGX, { username: _ });
+        case o.OB.MUTE_SUCCESS:
+            return l.intl.formatToPlainString(l.t.X4NtYb, { username: _ });
+        case o.OB.UNMUTE_SUCCESS:
+            return l.intl.formatToPlainString(l.t.tRaBfY, { username: _ });
+        case o.OB.REPORT_SUCCESS:
+            return l.intl.formatToPlainString(l.t.FOptFU, { username: _ });
+        case o.OB.TIGGER_PAWTECT_ERROR:
+            return l.intl.string(l.t.c6kn6F);
+        case o.OB.TIGGER_PAWTECT_VERIFIED:
+            return l.intl.string(l.t["7nKAXx"]);
+        case o.OB.GENERIC_ERROR:
+            return l.intl.string(l.t.zBpoc7);
+        case o.OB.REPORT_TO_MOD_SUCCESS:
+            return l.intl.string(u.default.iBypeZ);
+        case o.OB.SAFETY_FEEDBACK_SUCCESS:
+            return l.intl.string(l.t.TcFR5k);
+        case o.OB.EXISTING_USER_AGE_GATE_SUCCESS:
+            return l.intl.string(l.t["susqq/"]);
         default:
-            return u.intl.string(u.t["+c5xtT"]);
+            return l.intl.string(l.t["+c5xtT"]);
     }
 }

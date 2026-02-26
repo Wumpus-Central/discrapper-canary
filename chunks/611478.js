@@ -10,7 +10,7 @@ var n = i(627968),
     A = i(998252),
     T = i(980172),
     S = i(985018),
-    E = i(536242);
+    E = i(949268);
 let g = (0, a.E2)(d.X.ACCOUNT_PROFILE_SETTING, {
         useSearchTerms: function () {
             let t = [
@@ -28,8 +28,8 @@ let g = (0, a.E2)(d.X.ACCOUNT_PROFILE_SETTING, {
                     (t.push(S.intl.string(S.t["/52UYy"])),
                     t.push(S.intl.string(S.t.sK0dmH)),
                     t.push(S.intl.string(S.t.XxRj7f)),
-                    t.push(S.intl.string(S.t.yNGjyK)),
-                    t.push(S.intl.string(S.t.KPGVWl)),
+                    t.push(S.intl.string(S.t.DVywUB)),
+                    t.push(S.intl.string(S.t["9KiIz6"])),
                     n &&
                         (t.push(S.intl.string(E.default.FTawSP)),
                         t.push(S.intl.string(E.default["bD//cU"])),

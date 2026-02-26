@@ -1,103 +1,100 @@
-n.d(e, { default: () => f });
+n.d(e, { default: () => M });
 var i = n(627968),
     r = n(64700),
     l = n(158954),
     E = n(397927),
     o = n(975807),
-    a = n(935649),
+    _ = n(935649),
     s = n(847599),
-    _ = n(620715),
-    I = n(870383),
-    A = n(36149),
-    d = n(945276),
-    C = n(780964),
-    L = n(358776),
-    c = n(840065),
-    u = n(975571),
-    R = n(390248),
-    M = n(652215),
-    T = n(355097),
-    g = n(985018);
-let f = (t) => {
-    let { channelId: e, messageId: f, transitionState: N, onClose: O } = t,
-        P = (0, d.A)(),
-        h = (0, A.yM)(),
-        S = (0, R._R)(),
-        { enabled: D } = _.Y.useConfig({ location: "ExplicitMediaLearnMoreModal" }),
-        p = (0, I.W)(g.intl.string(g.t.KPGVWl), g.intl.string(g.t["9KiIz6"])),
-        v = r.useMemo(() => h && S, [h, S]),
-        m = r.useCallback(
+    a = n(36149),
+    I = n(945276),
+    A = n(780964),
+    C = n(358776),
+    d = n(840065),
+    L = n(975571),
+    c = n(390248),
+    R = n(652215),
+    u = n(355097),
+    T = n(985018);
+let M = (t) => {
+    let { channelId: e, messageId: M, transitionState: g, onClose: N } = t,
+        O = (0, I.A)(),
+        f = (0, a.yM)(),
+        P = (0, c._R)(),
+        h = T.intl.string(T.t["9KiIz6"]),
+        S = r.useMemo(() => f && P, [f, P]),
+        D = r.useCallback(
             (t) => {
-                (0, R.hv)({ action: t, channelId: e, messageId: f });
+                (0, c.hv)({ action: t, channelId: e, messageId: M });
             },
-            [e, f],
+            [e, M],
         ),
-        X = r.useCallback(() => {
-            O(),
-                m(R.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE),
+        p = r.useCallback(() => {
+            N(),
+                D(c.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE),
                 (0, E.mMO)(async () => {
                     let { default: t } = await n(652442);
-                    return (n) => (0, i.jsx)(t, { channelId: e, messageId: f, ...n });
+                    return (n) => (0, i.jsx)(t, { channelId: e, messageId: M, ...n });
                 });
-        }, [e, f, O, m]);
+        }, [e, M, N, D]);
     return (
         r.useEffect(() => {
-            (0, R.hv)({ action: R.rY.EXPLICIT_MEDIA_LEARN_MORE_VIEWED, channelId: e, messageId: f });
-        }, [e, f]),
+            (0, c.hv)({ action: c.rY.EXPLICIT_MEDIA_LEARN_MORE_VIEWED, channelId: e, messageId: M });
+        }, [e, M]),
         (0, i.jsx)(l.Modal, {
-            title: g.intl.string(g.t.sGW77l),
+            title: T.intl.string(T.t.sGW77l),
             subtitle: (function () {
-                if (v)
-                    return g.intl.format(D ? g.t.KEPOlE : g.t["1L0huf"], {
+                if (S)
+                    return T.intl.format(T.t.KEPOlE, {
                         handleOnHelpUrlHook: () => {
-                            a.A.openUrl(u.A.getArticleURL(M.MVz.TIGGER_PAWTECT_LEARN_MORE)),
-                                m(R.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE);
+                            _.A.openUrl(L.A.getArticleURL(R.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                                D(c.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE);
                         },
                     });
-                let t = g.intl.string(g.t.RUw0ZC),
-                    e = g.intl.string(g.t["E/oQYL"]);
-                return P ? t : e;
+                let t = T.intl.string(T.t.RUw0ZC),
+                    e = T.intl.string(T.t["E/oQYL"]);
+                return O ? t : e;
             })(),
             actions: [
                 (function () {
-                    if (!S && !v) return { text: g.intl.string(g.t.ZH7P2h), onClick: X, variant: "secondary" };
+                    if (!P && !S) return { text: T.intl.string(T.t.ZH7P2h), onClick: p, variant: "secondary" };
                 })(),
-                v
+                S
                     ? {
-                          text: p,
+                          text: h,
                           onClick: function () {
-                              O(),
-                                  m(R.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY),
-                                  a.A.showAgeVerificationGetStartedModal({
+                              N(),
+                                  D(c.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY),
+                                  _.A.showAgeVerificationGetStartedModal({
                                       entryPoint: s.q1.SENSITIVE_MEDIA_LEARN_MORE,
                                   });
                           },
                       }
-                    : P
+                    : O
                       ? {
-                            text: g.intl.string(g.t["9D+zGX"]),
+                            text: T.intl.string(T.t["9D+zGX"]),
                             onClick: function () {
-                                m(R.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS);
-                                let t = (0, L.WJ)("ExplicitMediaLearnMoreModal");
-                                (0, c.openUserSettings)(
-                                    t ? C.X.CONTENT_AND_SOCIAL_CONTENT_FILTERS_SETTING : C.X.CONTENT_AND_SOCIAL_PANEL,
+                                D(c.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS);
+                                let t = (0, C.WJ)("ExplicitMediaLearnMoreModal");
+                                (0, d.openUserSettings)(
+                                    t ? A.X.CONTENT_AND_SOCIAL_CONTENT_FILTERS_SETTING : A.X.CONTENT_AND_SOCIAL_PANEL,
                                     {
-                                        section: M.nc_.CONTENT_AND_SOCIAL,
-                                        scrollPosition: t ? void 0 : T.d1.EXPLICIT_MEDIA_REDACTION_V2,
+                                        section: R.nc_.CONTENT_AND_SOCIAL,
+                                        scrollPosition: t ? void 0 : u.d1.EXPLICIT_MEDIA_REDACTION_V2,
                                     },
                                 ),
-                                    O();
+                                    N();
                             },
                         }
                       : {
-                            text: g.intl.string(g.t.hvVgAZ),
+                            text: T.intl.string(T.t.hvVgAZ),
                             onClick: () => {
-                                (0, o.A)(u.A.getArticleURL(M.MVz.EXPLICIT_MEDIA_REDACTION));
+                                (0, o.A)(L.A.getArticleURL(R.MVz.EXPLICIT_MEDIA_REDACTION));
                             },
                         },
             ].filter((t) => void 0 !== t),
-            onClose: () => (O(), m(R.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS), Promise.resolve()),
-            transitionState: N,
+            onClose: () => (N(), D(c.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS), Promise.resolve()),
+            transitionState: g,
         })
     );
 };

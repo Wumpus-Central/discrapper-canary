@@ -35,10 +35,10 @@ function S(t) {
         [v, D] = a.useState(null),
         [O, U] = a.useState(!1),
         [V, $] = a.useState(0),
+        F = a.useRef(null),
         L = a.useRef(null),
-        j = a.useRef(null),
-        F = s === C.w_.FAMILY_CENTER,
-        P = (0, b.a9)() && !F,
+        j = s === C.w_.FAMILY_CENTER,
+        P = (0, b.a9)() && !j,
         { verifyAgreementButtonText: W, verifyGateDescription: Y, verifyTitle: B } = (0, b.Gn)(s),
         H = (0, b.vL)(w),
         z = b.Bc.has(s);
@@ -81,8 +81,8 @@ function S(t) {
             [M],
         ),
         te = a.useCallback(() => {
-            j.current?.focus();
-        }, [j]),
+            L.current?.focus();
+        }, [L]),
         tn = a.useCallback(() => {
             A.A.showAgeVerificationGetStartedModal({ entryPoint: _.q1.NSFW_AGE_GATE });
         }, []),
@@ -93,7 +93,7 @@ function S(t) {
               subtitle: Y,
               actions: [
                   { text: k.intl.string(k.t.f3Pet9), onClick: Z, variant: "secondary" },
-                  { text: W ?? k.intl.string(k.t["5B+npG"]), onClick: tn },
+                  { text: W ?? k.intl.string(k.t.FDSSia), onClick: tn },
               ],
               trackingProps: {
                   impression: { impressionName: u.ImpressionNames.USER_AGE_GATE_VERIFY },
@@ -101,7 +101,7 @@ function S(t) {
               },
               ...tl,
           })
-        : S?.nsfwAllowed === !1 && (H || z) && !F
+        : S?.nsfwAllowed === !1 && (H || z) && !j
           ? (0, l.jsx)(c.ExpressiveModal, {
                 title: k.intl.string(z ? k.t["H0SG/g"] : k.t.NEabBa),
                 subtitle: k.intl.format(z ? k.t["6++3cX"] : k.t["2kHZes"], {
@@ -154,7 +154,7 @@ function S(t) {
                           onPopulated: te,
                           error: v,
                           value: I,
-                          ref: L,
+                          ref: F,
                           autoFocus: !0,
                       }),
                   }),

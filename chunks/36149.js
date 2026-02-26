@@ -1,25 +1,25 @@
 "use strict";
 n.d(t, {
-    $8: () => G,
-    I7: () => J,
-    NI: () => k,
-    Q9: () => W,
-    ST: () => Z,
-    Sr: () => q,
-    Wv: () => j,
-    Y2: () => B,
-    YU: () => Y,
-    b8: () => K,
-    dZ: () => $,
-    i2: () => P,
-    lU: () => L,
-    mK: () => X,
-    nn: () => z,
-    p9: () => M,
-    tC: () => et,
-    uE: () => F,
-    uN: () => H,
-    yM: () => U,
+    $8: () => U,
+    I7: () => Q,
+    NI: () => P,
+    Q9: () => Y,
+    ST: () => q,
+    Sr: () => $,
+    Wv: () => H,
+    Y2: () => V,
+    YU: () => j,
+    b8: () => W,
+    dZ: () => z,
+    i2: () => M,
+    lU: () => D,
+    mK: () => Z,
+    nn: () => K,
+    p9: () => x,
+    tC: () => ee,
+    uE: () => G,
+    uN: () => B,
+    yM: () => k,
 });
 var r = n(64700),
     i = n(687123),
@@ -37,95 +37,94 @@ var r = n(64700),
     m = n(287809),
     E = n(935649),
     g = n(847599),
-    A = n(870383),
-    I = n(787301),
-    T = n(295972),
-    S = n(96358),
-    y = n(40449),
-    v = n(652215),
-    N = n(204925),
-    C = n(835002),
-    b = n(536242),
-    R = n(985018);
-let O = new Set([g.q1.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT, g.q1.START_STAGE_PROMPT, g.q1.STAGE_CHANNEL_RAISE_HAND]),
-    D = new Set([
-        N.w_.NSFW_SERVER,
-        N.w_.NSFW_SERVER_INVITE,
-        N.w_.NSFW_SERVER_INVITE_EMBED,
-        N.w_.LARGE_GUILD,
-        N.w_.JOIN_LARGE_GUILD_UNDERAGE,
-        N.w_.ACCESS_LARGE_GUILD_UNDERAGE,
+    A = n(787301),
+    I = n(295972),
+    T = n(96358),
+    S = n(40449),
+    y = n(652215),
+    v = n(204925),
+    N = n(835002),
+    C = n(949268),
+    b = n(985018);
+let R = new Set([g.q1.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT, g.q1.START_STAGE_PROMPT, g.q1.STAGE_CHANNEL_RAISE_HAND]),
+    O = new Set([
+        v.w_.NSFW_SERVER,
+        v.w_.NSFW_SERVER_INVITE,
+        v.w_.NSFW_SERVER_INVITE_EMBED,
+        v.w_.LARGE_GUILD,
+        v.w_.JOIN_LARGE_GUILD_UNDERAGE,
+        v.w_.ACCESS_LARGE_GUILD_UNDERAGE,
     ]),
-    L = (e) => D.has(e);
-function w() {
+    D = (e) => O.has(e);
+function L() {
     return u.A.isFeatureAgeGated(i.t.REACTIVE_CHECK);
 }
-function x() {
+function w() {
     return (0, c.aX)(i.t.REACTIVE_CHECK);
 }
-function M() {
+function x() {
     let e = m.default.getCurrentUser(),
         t = e?.ageVerificationStatus;
-    return !(t === o.Tk.VERIFIED_ADULT || (w() && t === o.Tk.INFERRED_ADULT));
+    return !(t === o.Tk.VERIFIED_ADULT || (L() && t === o.Tk.INFERRED_ADULT));
 }
-function P() {
+function M() {
     let e = (0, s.bG)([m.default], () => m.default.getCurrentUser()),
-        t = x() && e?.ageVerificationStatus === o.Tk.INFERRED_ADULT;
+        t = w() && e?.ageVerificationStatus === o.Tk.INFERRED_ADULT;
     return e?.ageVerificationStatus !== o.Tk.VERIFIED_ADULT && !t;
 }
-function k() {
+function P() {
     let e = m.default.getCurrentUser();
     return e?.ageVerificationStatus === o.Tk.VERIFIED_TEEN;
 }
-function U() {
+function k() {
     let e = (0, s.bG)([m.default], () => m.default.getCurrentUser());
     return e?.ageVerificationStatus === o.Tk.VERIFIED_TEEN;
 }
-function G() {
+function U() {
     let e = m.default.getCurrentUser(),
         t = e?.ageVerificationStatus;
-    return t === o.Tk.VERIFIED_ADULT || (w() && t === o.Tk.INFERRED_ADULT);
+    return t === o.Tk.VERIFIED_ADULT || (L() && t === o.Tk.INFERRED_ADULT);
 }
-function F() {
+function G() {
     let e = (0, s.bG)([m.default], () => m.default.getCurrentUser()),
-        t = x() && e?.ageVerificationStatus === o.Tk.INFERRED_ADULT;
+        t = w() && e?.ageVerificationStatus === o.Tk.INFERRED_ADULT;
     return e?.ageVerificationStatus === o.Tk.VERIFIED_ADULT || t;
 }
-function V() {
+function F() {
     return (0, s.bG)([m.default], () => m.default.getCurrentUser()?.ageVerificationStatus === o.Tk.INFERRED_ADULT);
 }
-function B() {
-    let e = V();
+function V() {
+    let e = F();
     return (0, c.aX)(i.t.REACTIVE_CHECK) && e;
 }
-var H = (function (e) {
+var B = (function (e) {
         return (e.CTAS = "ctas"), (e.CONTENT_TYPE = "content_type"), e;
     })({}),
-    j = (function (e) {
+    H = (function (e) {
         return (e.VERIFIED_ADULT = "verified_adult"), (e.VERIFIED_TEEN = "verified_teen"), (e.ERROR = "error"), e;
     })({});
-function Y(e, t) {
+function j(e, t) {
     let n = h.A.getMessage(e, t);
     if (
         null == n ||
         null == n.embeds ||
         0 === n.embeds.length ||
         null == n.embeds[0].fields ||
-        n.embeds[0].type !== v.Auw.AGE_VERIFICATION_SYSTEM_NOTIFICATION
+        n.embeds[0].type !== y.Auw.AGE_VERIFICATION_SYSTEM_NOTIFICATION
     )
         return !1;
     let r = n.embeds[0].fields.find((e) => "ctas" === e.rawName);
     return r?.rawValue.split(",").includes("retry");
 }
-function W() {
+function Y() {
     let e = m.default.getCurrentUser();
     return e?.ageVerificationStatus !== o.Tk.UNVERIFIED && e?.ageVerificationStatus !== o.Tk.CLIENT_ONLY_PENDING;
 }
-function K() {
+function W() {
     let e = (0, s.bG)([m.default], () => m.default.getCurrentUser());
     return e?.ageVerificationStatus !== o.Tk.UNVERIFIED && e?.ageVerificationStatus !== o.Tk.CLIENT_ONLY_PENDING;
 }
-function z(e) {
+function K(e) {
     let {
             onComplete: t,
             entryPoint: n,
@@ -138,7 +137,7 @@ function z(e) {
         h = (0, s.bG)([m.default], () => m.default.getCurrentUser()),
         { current: g } = r.useRef(h?.ageVerificationStatus),
         A = (0, _.W$)(),
-        I = r.useCallback(() => {
+        T = r.useCallback(() => {
             a.h.dispatch({ type: "CLOSE_AGE_VERIFICATION_MODAL", status: g }),
                 i ||
                     A ||
@@ -152,28 +151,28 @@ function z(e) {
                 p(!0);
                 try {
                     a.h.dispatch({ type: "INITIATE_AGE_VERIFICATION" });
-                    let r = await (0, T.uf)({ method: e, classificationId: u ?? void 0 });
+                    let r = await (0, I.uf)({ method: e, classificationId: u ?? void 0 });
                     E.A.showAgeVerification({
                         webviewUrl: r.verification_webview_url,
                         verificationRequestId: r.verification_request_id,
                         verificationVendorName: r.verification_vendor_name,
                         onComplete: t,
-                        onClose: I,
-                        onCancel: I,
+                        onClose: T,
+                        onCancel: T,
                         entryPoint: n,
                         shouldShowExpressiveModal: l,
                     });
                 } catch (e) {
-                    d.A.showFailedToast(C.OB.TIGGER_PAWTECT_ERROR), I();
+                    d.A.showFailedToast(N.OB.TIGGER_PAWTECT_ERROR), T();
                 } finally {
                     p(!1);
                 }
             },
-            [t, I, l, u, n],
+            [t, T, l, u, n],
         );
     return { loading: c, initiateAgeVerification: S };
 }
-function $(e) {
+function z(e) {
     let t = (0, s.bG)([m.default], () => m.default.getCurrentUser()?.ageVerificationStatus),
         n = (0, l.A)(t),
         i = (0, s.bG)([p.default], () => null != p.default.getSuspendedUserToken()),
@@ -184,36 +183,36 @@ function $(e) {
         (o || u) && e();
     }, [e, o, u]);
 }
+function $(e) {
+    return null != e && S.zn.has(e);
+}
 function q(e) {
-    return null != e && y.zn.has(e);
+    return R.has(e) ? b.intl.string(b.t.lSWVTM) : b.intl.string(b.t.xYXsr6);
 }
-function Z(e) {
-    return O.has(e) ? R.intl.string(R.t.lSWVTM) : (0, A.H)(R.intl.string(R.t.JHNunj), R.intl.string(R.t.xYXsr6));
-}
-function X(e, t) {
+function Z(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    return O.has(e)
-        ? R.intl.string(R.t["S/xS/w"])
+    return R.has(e)
+        ? b.intl.string(b.t["S/xS/w"])
         : n
-          ? (0, A.H)(R.intl.string(b.default["1/6wta"]), R.intl.string(b.default.h7qzoa))
+          ? b.intl.string(C.default.h7qzoa)
           : null != t
-            ? R.intl.format(b.default.RpMIT0, { handleOnHelpUrlHook: t })
-            : (0, A.H)(R.intl.string(R.t["+BLIGh"]), R.intl.string(R.t.HxS3oQ));
+            ? b.intl.format(C.default.RpMIT0, { handleOnHelpUrlHook: t })
+            : b.intl.string(b.t.HxS3oQ);
 }
-function Q() {
-    let e = K(),
+function X() {
+    let e = W(),
         t = (0, c.aX)(i.t.REACTIVE_CHECK);
-    return (0, s.bG)([I.A], () => !e && t && I.A.shouldCallReactiveCheck(), [e, t]);
+    return (0, s.bG)([A.A], () => !e && t && A.A.shouldCallReactiveCheck(), [e, t]);
 }
-function J(e) {
-    let t = Q();
+function Q(e) {
+    let t = X();
     r.useEffect(() => {
-        t && N.Qx.has(e) && (0, S.z)();
+        t && v.Qx.has(e) && (0, T.z)();
     }, [t, e]);
 }
-function ee() {
-    return !W() && w() && I.A.shouldCallReactiveCheck();
+function J() {
+    return !Y() && L() && A.A.shouldCallReactiveCheck();
 }
-async function et() {
-    return ee() ? await (0, S.z)() : null;
+async function ee() {
+    return J() ? await (0, T.z)() : null;
 }

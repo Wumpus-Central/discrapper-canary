@@ -1,21 +1,20 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => c });
 var i = n(627968),
     l = n(64700),
-    a = n(397927),
-    r = n(935649),
+    r = n(397927),
+    a = n(935649),
     s = n(847599),
-    o = n(870383),
-    d = n(36149),
-    c = n(985018);
-function u(e) {
+    o = n(36149),
+    d = n(985018);
+function c(e) {
     let { channelId: t } = e,
-        n = (0, d.b8)(),
-        u = (0, d.i2)(),
-        m = (0, o.W)(c.intl.string(c.t.KPGVWl), c.intl.string(c.t["9KiIz6"])),
-        _ = c.intl.string(c.t["/nicWo"]),
-        h = l.useCallback(() => {
-            r.A.showAgeVerificationGetStartedModal({ entryPoint: s.q1.SYSTEM_DM_RETRY_BUTTON }),
+        n = (0, o.b8)(),
+        c = (0, o.i2)(),
+        u = d.intl.string(d.t["9KiIz6"]),
+        _ = d.intl.string(d.t["/nicWo"]),
+        m = l.useCallback(() => {
+            a.A.showAgeVerificationGetStartedModal({ entryPoint: s.q1.SYSTEM_DM_RETRY_BUTTON }),
                 (0, s.UT)(s.Im.RETRY, t);
         }, [t]);
-    return (0, i.jsx)(a.Button, { variant: "primary", text: n ? m : _, onClick: h, disabled: !u });
+    return (0, i.jsx)(r.Button, { variant: "primary", text: n ? u : _, onClick: m, disabled: !c });
 }
