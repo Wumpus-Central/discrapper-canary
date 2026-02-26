@@ -101,7 +101,6 @@ function S(e) {
         );
     return (0, r.jsx)(o.animated.div, {
         style: { position: "relative", minWidth: V, minHeight: B, ...j },
-        className: a()({ [E.f]: T.shouldUseMediaQueriesForSizing }),
         children: k((e, i, s) => {
             let { key: l } = s,
                 u = { opacity: e.value.to((e) => 1 - Math.abs(e)) };

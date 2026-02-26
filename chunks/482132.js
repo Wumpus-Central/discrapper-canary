@@ -51,6 +51,7 @@ function E(e) {
                               ? null
                               : (0, r.jsx)(c.cwr, {
                                     children: (0, r.jsx)(d.tN_, {
+                                        shouldUseMediaQueriesForSizing: !0,
                                         activeSlide: s,
                                         centered: !1,
                                         onSlideReady: (e) => A(e),
