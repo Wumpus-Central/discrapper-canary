@@ -245,17 +245,24 @@ let V = Object.freeze({ EDITOR: P.Sb.SLOW_USER_ACTION, SETTINGS: P.Sb.INFREQUENT
                 (0, b.Py)(),
                     H({ isPersisted: !0, analyticsLocations: o, themeName: `default ${e}` }),
                     (0, _.u_)({ theme: e }, a);
-            };
+            },
+            m = !s && !0 === n;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                !s &&
-                    n &&
-                    (0, r.jsx)(D.zy, { size: t, theme: "system", isSelected: c && d, onSelect: () => f("system") }),
+                m &&
+                    (0, r.jsx)(D.zy, {
+                        size: t,
+                        theme: "system",
+                        isSelected: c && d,
+                        onSelect: () => f("system"),
+                        tabIndex: 0,
+                    }),
                 (0, r.jsx)(D.zy, {
                     size: t,
                     theme: k.NJ.LIGHT,
                     isSelected: c && !d && u === k.NJ.LIGHT,
                     onSelect: () => f(k.NJ.LIGHT),
+                    tabIndex: m ? void 0 : 0,
                 }),
                 (0, r.jsx)(D.zy, {
                     size: t,

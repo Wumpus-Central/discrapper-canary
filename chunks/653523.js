@@ -71,10 +71,10 @@ function T(e) {
     });
 }
 function S(e) {
-    let { theme: t, isSelected: n, onSelect: i, size: s } = e,
-        u = (0, l.bG)([p.A], () => p.A.systemTheme),
-        c = p.A.themePreferenceForSystemTheme(u),
-        d = (0, o.YW)({ theme: t, themePreferenceForSystemTheme: c })
+    let { theme: t, isSelected: n, onSelect: i, size: s, tabIndex: u } = e,
+        c = (0, l.bG)([p.A], () => p.A.systemTheme),
+        d = p.A.themePreferenceForSystemTheme(c),
+        _ = (0, o.YW)({ theme: t, themePreferenceForSystemTheme: d })
             .with({ theme: "system", themePreferenceForSystemTheme: E.NJ8.LIGHT }, () => A.mT)
             .with({ theme: "system", themePreferenceForSystemTheme: E.NJ8.DARK }, () => A.eQ)
             .with({ theme: "system", themePreferenceForSystemTheme: E.NJ8.DARKER }, () => A.xl)
@@ -84,7 +84,7 @@ function S(e) {
             .with({ theme: E.NJ8.DARKER }, () => A.xl)
             .with({ theme: E.NJ8.MIDNIGHT }, () => A.k$)
             .otherwise(() => A.eQ),
-        _ = (0, o.YW)(t)
+        h = (0, o.YW)(t)
             .with(E.NJ8.LIGHT, () => g.intl.string(g.t.K2sFfo))
             .with(E.NJ8.DARK, () => g.intl.string(g.t.SMPT1k))
             .with(E.NJ8.DARKER, () => g.intl.string(g.t.b8Cei3))
@@ -95,13 +95,14 @@ function S(e) {
         size: s,
         onSelect: i,
         isSelected: n,
-        name: _,
-        className: a()(A.r0, d),
+        name: h,
+        tabIndex: u,
+        className: a()(A.r0, _),
         children:
             "system" === t &&
             (0, r.jsx)("div", {
                 className: A.P0,
-                children: (0, r.jsx)(f.NPJ, { theme: c, children: (e) => (0, r.jsx)(f.fNY, { className: e }) }),
+                children: (0, r.jsx)(f.NPJ, { theme: d, children: (e) => (0, r.jsx)(f.fNY, { className: e }) }),
             }),
     });
 }

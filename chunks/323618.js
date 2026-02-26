@@ -91,6 +91,7 @@ function S(e) {
                 size: s,
                 name: A.intl.string(g.default.KSBBpC),
                 className: a()(I.kL, L && b, t && I.r9),
+                tabIndex: 0,
                 showBadge: !1,
                 showLockedBadge: !1,
                 style: w,
