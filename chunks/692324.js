@@ -6,6 +6,7 @@ e.exports = {
     p0: "iconWindows_b68a35 icon_b68a35",
     c9: "iconApple_b68a35 icon_b68a35",
     Vz: "iconAndroid_b68a35 icon_b68a35",
+    TN: "iconMetaQuest_b68a35 icon_b68a35",
     uD: "textLink_b68a35",
     N0: "textLinkSmall_b68a35 textLink_b68a35",
     aV: "testModeSKUSelector_b68a35",

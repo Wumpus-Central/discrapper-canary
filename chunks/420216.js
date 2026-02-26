@@ -21,7 +21,7 @@ var l = n(554146),
     O = n(652215),
     p = n(788868),
     m = n(985018),
-    P = n(237082);
+    P = n(692324);
 let D = (e) => {
     let { dismissibleContent: t, noticeType: D } = e;
     return (0, i.jsx)(S.Ay, {
@@ -59,6 +59,7 @@ let D = (e) => {
                         color: r.Hv$.DEFAULT,
                         children: [
                             (0, i.jsx)(r.PMB, { onClick: () => S(C.i.UNKNOWN), noticeType: D }),
+                            (0, i.jsx)("i", { className: P.TN }),
                             m.intl.string(m.t.lgwX26),
                             (0, i.jsx)(r.Z_L, {
                                 noticeType: D,
@@ -117,7 +118,7 @@ let D = (e) => {
                                         (0, r.mMO)(async () => {
                                             let { RegisterWebAuthnCredentialModal: e } = await Promise.all([
                                                 n.e("44667"),
-                                                n.e("84673"),
+                                                n.e("61435"),
                                             ]).then(n.bind(n, 359990));
                                             return (n) =>
                                                 (0, i.jsx)(e, {
