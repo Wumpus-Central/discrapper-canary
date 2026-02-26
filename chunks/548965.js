@@ -118,28 +118,17 @@ let f = new d("2026-01-libdiscore-batch-store-refactor", "batch-store-refactor")
     h = new c("2025-11-defer-load-late-lazy-cache", "Allow react to render before lazy cache is loaded");
 class m extends u {
     label;
+    treatmentCount;
     getLabel() {
         return this.label;
     }
     getTreatments() {
-        return [{ treatmentId: 0 }, { treatmentId: 1 }, { treatmentId: 2 }, { treatmentId: 3 }];
+        return Array.from({ length: this.treatmentCount }, (e, t) => ({ treatmentId: t }));
     }
-    constructor(e, t) {
-        super(e), (this.label = t);
-    }
-}
-class E extends u {
-    label;
-    getLabel() {
-        return this.label;
-    }
-    getTreatments() {
-        return [{ treatmentId: 0 }, { treatmentId: 1 }, { treatmentId: 2 }];
-    }
-    constructor(e, t) {
-        super(e), (this.label = t);
+    constructor(e, t, n) {
+        super(e), (this.label = t), (this.treatmentCount = n);
     }
 }
-new m("2026-01-android-rmle", "Android Pull Mode Rendering"),
-    new E("2026-02-android-fresco-cache", "Android Fresco Cache"),
+new m("2026-01-android-rmle", "Android Pull Mode Rendering", 4),
+    new m("2026-02-android-fresco-cache", "Android Fresco Cache", 3),
     new c("2026-02-android-chat-mosaic-shared-pool", "Android Chat Mosaic Shared Pool");
