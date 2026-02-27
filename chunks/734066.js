@@ -1,12 +1,11 @@
 "use strict";
-n.d(t, { BW: () => _, J: () => h, L_: () => o, Pm: () => u, Vr: () => f, cx: () => d, sw: () => c });
+n.d(t, { BW: () => d, J: () => f, L_: () => a, Pm: () => l, Vr: () => _, cx: () => c, sw: () => u });
 var r = n(600975),
-    i = n(670470),
-    a = n(430452);
+    i = n(430452);
 n(927578);
 var s = n(915618);
 n(788868);
-let o = (0, r.C)({
+let a = (0, r.C)({
         kind: "user",
         id: "2022-11_clips_experiment",
         label: "Clips Experiment",
@@ -57,7 +56,7 @@ let o = (0, r.C)({
             },
         ],
     }),
-    l = (0, r.C)({
+    o = (0, r.C)({
         kind: "user",
         id: "2023-09_clips_nitro_early_access",
         label: "Clips (Nitro EA)",
@@ -96,43 +95,41 @@ let o = (0, r.C)({
             },
         ],
     });
+function l() {
+    if (!(0, s.A)(i.Ay)) return !1;
+    let { enableClips: e } = o.getCurrentConfig({ location: "areClipsEnabled" }, { autoTrackExposure: !1 }),
+        { enableClips: t } = a.getCurrentConfig({ location: "areClipsEnabled" }, { autoTrackExposure: !1 });
+    return e || t;
+}
 function u() {
-    if (!(0, s.A)(a.Ay)) return !1;
-    let { enableClips: e } = l.getCurrentConfig({ location: "areClipsEnabled" }, { autoTrackExposure: !1 }),
-        { enableClips: t } = o.getCurrentConfig({ location: "areClipsEnabled" }, { autoTrackExposure: !1 }),
-        { enableViewerClipping: n } = i.A.getCurrentConfig({ location: "areClipsEnabled" }, { autoTrackExposure: !1 });
-    return e || t || n;
+    let e = (0, s.A)(i.Ay),
+        { enableClips: t } = o.useExperiment({ location: "useEnableClips" }, { autoTrackExposure: !1 }),
+        { enableClips: n } = a.useExperiment({ location: "useEnableClips" }, { autoTrackExposure: !1 });
+    return (n || t) && e;
 }
 function c() {
-    let e = (0, s.A)(a.Ay),
-        { enableClips: t } = l.useExperiment({ location: "useEnableClips" }, { autoTrackExposure: !1 }),
-        { enableClips: n } = o.useExperiment({ location: "useEnableClips" }, { autoTrackExposure: !1 }),
-        { enableViewerClipping: r } = i.A.useExperiment({ location: "useEnableClips" }, { autoTrackExposure: !1 });
-    return (n || t || r) && e;
-}
-function d() {
-    let { enableScreenshotKeybind: e } = o.getCurrentConfig(
+    let { enableScreenshotKeybind: e } = a.getCurrentConfig(
         { location: "isScreenshotKeybindEnabled" },
         { autoTrackExposure: !1 },
     );
     return e;
 }
-function _() {
-    let { enableScreenshotKeybind: e } = o.useExperiment(
+function d() {
+    let { enableScreenshotKeybind: e } = a.useExperiment(
         { location: "useScreenshotKeybindEnabled" },
         { autoTrackExposure: !1 },
     );
     return e;
 }
-function f() {
-    let { enableVoiceOnlyClips: e } = o.getCurrentConfig(
+function _() {
+    let { enableVoiceOnlyClips: e } = a.getCurrentConfig(
         { location: "areVoiceOnlyClipsEnabled" },
         { autoTrackExposure: !1 },
     );
     return e;
 }
-function h() {
-    let { enableAdvancedSignals: e } = o.getCurrentConfig(
+function f() {
+    let { enableAdvancedSignals: e } = a.getCurrentConfig(
         { location: "areAdvancedSignalsEnabled" },
         { autoTrackExposure: !1 },
     );

@@ -14,7 +14,7 @@ var i = n(627968),
     g = n(569024),
     h = n(212031),
     x = n(652525),
-    p = n(379848),
+    p = n(932001),
     E = n(616075),
     C = n(3137),
     T = n(454292),
@@ -63,10 +63,10 @@ var i = n(627968),
     ed = n(531525),
     eu = n(652215),
     e_ = n(985018),
-    em = n(241015),
-    eA = n(870236),
-    eg = n(215765),
-    eh = n(487631);
+    em = n(927961),
+    eA = n(842130),
+    eg = n(895431),
+    eh = n(945213);
 let ex = () => [
         a.M.CLIENT_THEMES_SETTINGS_BADGE,
         a.M.DEKSTOP_CUSTOM_APP_ICON_BADGE,
@@ -492,7 +492,7 @@ let ex = () => [
             },
             [ed.H.PRIVACY_DATA_CLIPS]: {
                 section: eu.nc_.DATA_AND_PRIVACY,
-                searchableTitles: [e_.intl.string(e_.t.AGDDkH), e_.intl.string(e_.t.NWw7kY)],
+                searchableTitles: [e_.intl.string(e_.t.AGDDkH)],
                 parent: ed.H.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
             },
             [ed.H.PRIVACY_DATA_BASIC_SERVICE_V2]: {

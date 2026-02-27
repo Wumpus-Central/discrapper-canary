@@ -79,7 +79,6 @@ var r = (function (e) {
         (e.USERS_VERIFIED_KEYS_LIST_SETTING = "users_verified_keys_list_setting"),
         (e.CLIPS_PRIVACY_TAB_SETTING = "clips_privacy_tab_setting"),
         (e.CLIPS_ALLOW_VOICE_RECORDING_SETTING = "clips_allow_voice_recording_setting"),
-        (e.CLIPS_VIEWERSIDE_CLIPS_SETTING = "clips_viewerside_clips_setting"),
         (e.FAMILY_CENTER_SIDEBAR_ITEM = "family_center_sidebar_item"),
         (e.FAMILY_CENTER_PANEL = "family_center_panel"),
         (e.FAMILY_CENTER_CATEGORY = "family_center_category"),

@@ -3267,6 +3267,7 @@ var tx = (function (e) {
             (e.STREAM = "Stream"),
             (e.SERVER_PROFILE = "Server Profile"),
             (e.VOICE_INVITE_SUGGESTIONS = "Voice Invite Suggestions"),
+            (e.VOICE_CHANNEL_UI_INVITE_BUTTON = "Voice Channel UI Invite Button"),
             e
         );
     })({}),
