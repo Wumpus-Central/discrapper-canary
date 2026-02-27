@@ -1,37 +1,51 @@
-i.d(t, { A: () => o });
-var l = i(627968);
-i(64700);
-var n = i(397927),
-    s = i(9578),
-    a = i(573648),
-    r = i(652215),
-    d = i(306989);
-let c = {
-    [r.fg2.TWITCH]: n.aWO,
-    [r.fg2.YOUTUBE]: n.CiD,
-    [r.fg2.TWITTER]: n.p3p,
-    [r.fg2.TWITTER_LEGACY]: n.p3p,
-    [r.fg2.FACEBOOK]: n.Zc1,
-    [r.fg2.INSTAGRAM]: n.LyU,
-    [r.fg2.REDDIT]: n.T1e,
-    [r.fg2.TIKTOK]: n.Xsb,
-    [r.fg2.SPOTIFY]: n.L5T,
-    [r.fg2.BLUESKY]: n.akf,
+i.d(t, { A: () => m });
+var l = i(627968),
+    n = i(64700),
+    s = i(397927),
+    a = i(9578),
+    r = i(573648),
+    d = i(954571),
+    c = i(652215),
+    o = i(492171);
+let u = {
+    [c.fg2.TWITCH]: s.aWO,
+    [c.fg2.YOUTUBE]: s.CiD,
+    [c.fg2.TWITTER]: s.p3p,
+    [c.fg2.TWITTER_LEGACY]: s.p3p,
+    [c.fg2.FACEBOOK]: s.Zc1,
+    [c.fg2.INSTAGRAM]: s.LyU,
+    [c.fg2.REDDIT]: s.T1e,
+    [c.fg2.TIKTOK]: s.Xsb,
+    [c.fg2.SPOTIFY]: s.L5T,
+    [c.fg2.BLUESKY]: s.akf,
 };
-function o(e) {
-    let { url: t } = e,
-        i = a.A.getByUrl(t),
-        r = null != i ? c[i.type] : void 0;
-    return (0, l.jsx)(s.A, {
+function m(e) {
+    let { url: t, invite: i } = e,
+        m = r.A.getByUrl(t),
+        x = null != m ? u[m.type] : void 0,
+        _ = n.useCallback(
+            () => (
+                d.default.track(c.HAw.INVITE_ACCEPT_SOCIAL_LINK_CLICKED, {
+                    guild_id: i.guild?.id,
+                    invite_code: i.code,
+                    social_platform: m?.type,
+                    social_platform_url: t,
+                }),
+                null
+            ),
+            [i.code, i.guild?.id, m, t],
+        );
+    return (0, l.jsx)(a.A, {
         href: t,
-        trusted: null != i,
+        trusted: null != m,
         useDefaultUnderlineStyles: !1,
+        onClick: _,
         children:
-            null != r
-                ? (0, l.jsx)(r, { className: d.zg, size: "xs", color: n.LU0.colors.ICON_MUTED, "aria-hidden": !0 })
-                : (0, l.jsx)(n.L_e, {
-                      className: d.zg,
-                      color: n.LU0.colors.ICON_MUTED,
+            null != x
+                ? (0, l.jsx)(x, { className: o.zg, size: "xs", color: s.LU0.colors.ICON_MUTED, "aria-hidden": !0 })
+                : (0, l.jsx)(s.L_e, {
+                      className: o.zg,
+                      color: s.LU0.colors.ICON_MUTED,
                       width: 16,
                       height: 16,
                       size: "custom",

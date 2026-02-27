@@ -10,22 +10,22 @@ var l = i(627968),
     u = i(954571),
     m = i(475720),
     x = i(652215),
-    h = i(985018),
-    _ = i(306989);
+    _ = i(985018),
+    h = i(492171);
 function g(e) {
     let { categoryIds: t } = e,
-        i = (0, a.bG)([o.A], () => t.map((e) => o.A.getCategoryName(e)));
+        i = (0, a.yK)([o.A], () => t.map((e) => o.A.getCategoryName(e)));
     return (0, l.jsxs)("div", {
-        className: _.Ff,
+        className: h.Ff,
         children: [
             (0, l.jsx)(r.Heading, {
-                className: _.Uo,
+                className: h.Uo,
                 variant: "heading-sm/medium",
                 color: "text-default",
-                children: h.intl.string(h.t.ffgJrs),
+                children: _.intl.string(_.t.ffgJrs),
             }),
             (0, l.jsx)(r.Text, {
-                className: _._O,
+                className: h._O,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: (0, l.jsx)("span", { children: i.join(", ") }),
@@ -34,7 +34,7 @@ function g(e) {
     });
 }
 function A(e) {
-    let { discoveryGuild: t } = e;
+    let { discoveryGuild: t, invite: i } = e;
     return (0, l.jsxs)(l.Fragment, {
         children: [
             t?.reasons_to_join != null &&
@@ -42,7 +42,7 @@ function A(e) {
                 (0, l.jsx)(r.BJc, {
                     direction: "vertical",
                     gap: 8,
-                    className: _.$s,
+                    className: h.$s,
                     children: t.reasons_to_join.map((e, t) =>
                         (0, l.jsxs)(
                             r.BJc,
@@ -51,7 +51,7 @@ function A(e) {
                                 gap: 8,
                                 children: [
                                     (0, l.jsx)(d.A, {
-                                        className: _.E2,
+                                        className: h.E2,
                                         size: "reaction",
                                         emojiId: e.emoji_id,
                                         emojiName: e.emoji_name,
@@ -71,20 +71,20 @@ function A(e) {
             t?.about != null &&
                 "" !== t.about &&
                 (0, l.jsxs)("div", {
-                    className: _.lu,
+                    className: h.lu,
                     id: "invite-about-section",
                     children: [
                         (0, l.jsx)(r.Text, {
                             variant: "text-xs/medium",
                             color: "text-subtle",
-                            children: h.intl.string(h.t.xcsPye),
+                            children: _.intl.string(_.t.xcsPye),
                         }),
                         (0, l.jsx)(r.Text, { variant: "text-md/normal", color: "text-default", children: t.about }),
                     ],
                 }),
             null != t &&
                 (0, l.jsxs)("div", {
-                    className: _.xw,
+                    className: h.xw,
                     children: [
                         null != t.social_links &&
                             t.social_links.length > 0 &&
@@ -92,19 +92,21 @@ function A(e) {
                                 children: [
                                     (0, l.jsx)(r.cGx, {}),
                                     (0, l.jsxs)("div", {
-                                        className: _.Ff,
+                                        className: h.Ff,
                                         children: [
                                             (0, l.jsx)(r.Heading, {
-                                                className: _.Uo,
+                                                className: h.Uo,
                                                 variant: "heading-sm/medium",
                                                 color: "text-default",
-                                                children: h.intl.string(h.t.jGVzY5),
+                                                children: _.intl.string(_.t.jGVzY5),
                                             }),
                                             (0, l.jsx)(r.Text, {
-                                                className: _.qv,
+                                                className: h.qv,
                                                 variant: "text-sm/normal",
                                                 color: "text-default",
-                                                children: t.social_links.map((e) => (0, l.jsx)(m.A, { url: e }, e)),
+                                                children: t.social_links.map((e) =>
+                                                    (0, l.jsx)(m.A, { url: e, invite: i }, e),
+                                                ),
                                             }),
                                         ],
                                     }),
@@ -128,16 +130,16 @@ function p(e) {
             u.default.track(x.HAw.INVITE_ACCEPT_DETAILS_VIEWED, { guild_id: t, invite_code: e, action: "scrolled" });
         }, []),
         j = (0, c.I)(E, 3e3, [t.code, i.id], { trailing: !1 }),
-        v = n.useCallback(() => {
+        I = n.useCallback(() => {
             j(t.code, i.id);
         }, [t.code, i.id, j]);
     return p
         ? (0, l.jsx)(s.A, {
               className: d,
-              gradientClassName: _.wH,
-              onScroll: v,
+              gradientClassName: h.wH,
+              onScroll: I,
               children: (0, l.jsxs)("div", {
-                  className: _.Bn,
+                  className: h.Bn,
                   children: [
                       null != i.description &&
                           "" !== i.description &&
@@ -151,10 +153,10 @@ function p(e) {
                           (0, l.jsxs)(r.BJc, {
                               direction: "horizontal",
                               gap: 4,
-                              className: _.qh,
+                              className: h.qh,
                               children: [
                                   (0, l.jsx)(r.QWc, {
-                                      text: h.intl.string(h.t["k+2jmZ"]),
+                                      text: _.intl.string(_.t["k+2jmZ"]),
                                       onClick: () => m?.(!0),
                                       "aria-expanded": o,
                                       "aria-controls": "invite-about-section",
@@ -166,22 +168,22 @@ function p(e) {
                               ],
                           }),
                       (0, l.jsx)("div", {
-                          className: _.y,
+                          className: h.y,
                           "data-expanded": o || !g,
                           "aria-hidden": g && !o,
                           children: (0, l.jsxs)("div", {
-                              className: _.Cz,
+                              className: h.Cz,
                               children: [
-                                  (0, l.jsx)(A, { discoveryGuild: a }),
+                                  (0, l.jsx)(A, { discoveryGuild: a, invite: t }),
                                   o &&
                                       g &&
                                       (0, l.jsxs)(r.BJc, {
                                           direction: "horizontal",
                                           gap: 4,
-                                          className: _.qh,
+                                          className: h.qh,
                                           children: [
                                               (0, l.jsx)(r.QWc, {
-                                                  text: h.intl.string(h.t["3G783D"]),
+                                                  text: _.intl.string(_.t["3G783D"]),
                                                   onClick: () => m?.(!1),
                                                   "aria-expanded": o,
                                                   "aria-controls": "invite-about-section",
@@ -201,7 +203,7 @@ function p(e) {
         : (0, l.jsx)("div", {
               className: d,
               children: (0, l.jsx)("div", {
-                  className: _.Bn,
+                  className: h.Bn,
                   children:
                       null != i.description &&
                       "" !== i.description &&
