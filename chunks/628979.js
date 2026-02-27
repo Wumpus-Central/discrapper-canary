@@ -1,4 +1,4 @@
-s.d(t, { A: () => h });
+s.d(t, { A: () => A });
 var r = s(627968),
     l = s(64700),
     a = s(503698),
@@ -9,91 +9,84 @@ var r = s(627968),
     u = s(954571),
     d = s(440938),
     b = s(365491),
-    S = s(758836),
+    p = s(758836),
     E = s(652215),
-    p = s(985018),
+    S = s(985018),
     f = s(450331);
-function h(e) {
-    let { handleTransition: t, selectedTab: s, isNarrow: a, hasText: h } = e,
-        { searchQuery: m, onSetSearchQuery: A } = (0, b.v)(),
-        [C, g] = l.useState(""),
-        T = (0, d.uM)(),
+function A(e) {
+    let { handleTransition: t, selectedTab: s, isNarrow: a, hasText: A } = e,
+        { searchQuery: h, onSetSearchQuery: m } = (0, b.v)(),
+        [C, T] = l.useState(""),
+        g = (0, d.uM)(),
         y = (0, o.bG)([c.default], () => c.default.locale),
         O = l.useRef(null),
-        [R, L] = l.useState(!1);
+        [L, x] = l.useState(!1);
     l.useEffect(() => {
         let e = setTimeout(() => {
-            A(C);
+            m(C);
         }, 250);
         return () => clearTimeout(e);
-    }, [C, A]),
+    }, [C, m]),
         l.useEffect(() => {
-            g(m);
-        }, [m]),
+            T(h);
+        }, [h]),
         l.useEffect(() => {
-            L(a && h);
-        }, [a, h]);
-    let x = l.useCallback(
+            x(a && A);
+        }, [a, A]);
+    let R = l.useCallback(
             (e) => {
-                "Enter" === e.key && A(C);
+                "Enter" === e.key && m(C);
             },
-            [C, A],
+            [C, m],
         ),
         N = l.useCallback(
             (e) => {
                 u.default.track(E.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                    collectibles_shop_session_id: T?.sessionId,
-                    page_section: T?.pageSection,
-                    page_category: T?.pageCategory,
-                    page_index: T?.pageIndex,
-                    page_size: T?.pageSize,
+                    collectibles_shop_session_id: g?.sessionId,
+                    page_section: g?.pageSection,
+                    page_category: g?.pageCategory,
+                    page_index: g?.pageIndex,
+                    page_size: g?.pageSize,
                     cta_name: e,
                     page_type: s,
                 });
             },
-            [s, T],
+            [s, g],
         ),
         v = l.useCallback(() => {
-            s !== S.G2.CATALOG && t(S.G2.CATALOG), N(S.uY.SEARCH_ICON), L(!0), setTimeout(() => O.current?.focus());
-        }, [s, t, N]),
-        _ = l.useCallback(() => {
-            s !== S.G2.CATALOG && t(S.G2.CATALOG), N(S.uY.SEARCH_BAR);
+            s !== p.G2.CATALOG && t(p.G2.CATALOG), N(p.uY.SEARCH_ICON), x(!0), setTimeout(() => O.current?.focus());
         }, [s, t, N]),
         G = l.useCallback(() => {
-            g(""), A(""), N(S.uY.SEARCH_BAR_CLEAR), a && L(!1);
-        }, [A, N, a]),
+            s !== p.G2.CATALOG && t(p.G2.CATALOG), N(p.uY.SEARCH_BAR);
+        }, [s, t, N]),
         I = l.useCallback(() => {
-            a && "" === C && L(!1);
+            T(""), m(""), N(p.uY.SEARCH_BAR_CLEAR), a && x(!1);
+        }, [m, N, a]),
+        _ = l.useCallback(() => {
+            a && "" === C && x(!1);
         }, [a, C]),
-        j = a && !R,
-        w = (0, r.jsx)(i.DUT, {
+        j = a && !L,
+        F = (0, r.jsx)(i.DUT, {
             className: f.qc,
             onClick: v,
             children: (0, r.jsx)(i.$p$, { size: "sm", color: i.LU0.colors.INTERACTIVE_ICON_DEFAULT }),
         }),
-        D = (0, r.jsx)(i.IWV, {
+        P = (0, r.jsx)(i.IWV, {
             size: "sm",
             ref: O,
-            onKeyDown: x,
+            onKeyDown: R,
             query: C,
-            onChange: g,
-            onClear: G,
-            onBlur: I,
-            placeholder: "en-US" === y ? p.intl.string(p.t.arz34K) : p.intl.string(p.t["hIt/Nm"]),
+            onChange: T,
+            onClear: I,
+            onBlur: _,
+            placeholder: "en-US" === y ? S.intl.string(S.t.arz34K) : S.intl.string(S.t["hIt/Nm"]),
         }),
-        P = { "--custom-search-bar-width": `${S.rr}px`, "--custom-search-bar-icon-width": `${S.Dy}px` };
-    if (j) return (0, r.jsx)("div", { style: P, children: w });
-    let F = n()(f.ON, { [f.Nz]: R });
-    return R
-        ? (0, r.jsxs)(r.Fragment, {
-              children: [
-                  (0, r.jsx)("div", { className: f.j8, style: P, children: w }),
-                  (0, r.jsx)(i.DUT, { className: F, style: P, onClick: _, ignoreKeyPress: !0, children: D }),
-              ],
-          })
+        k = { "--custom-search-bar-width": `${p.rr}px`, "--custom-search-bar-icon-width": `${p.Dy}px` };
+    return j
+        ? (0, r.jsx)("div", { style: k, children: F })
         : (0, r.jsx)("div", {
-              className: F,
-              style: P,
-              children: (0, r.jsx)(i.DUT, { ignoreKeyPress: !0, onClick: _, children: D }),
+              className: n()(f.ON, { [f.Nz]: L }),
+              style: k,
+              children: (0, r.jsx)(i.DUT, { ignoreKeyPress: !0, onClick: G, children: P }),
           });
 }

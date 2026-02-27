@@ -1,110 +1,94 @@
-s.d(t, { G: () => N });
+s.d(t, { G: () => O });
 var r = s(627968),
     l = s(64700),
-    n = s(503698),
-    a = s.n(n),
-    o = s(696292),
-    i = s(311907),
-    c = s(397927),
-    u = s(770178),
-    d = s(736653),
-    b = s(742589),
-    p = s(545986),
-    E = s(657331),
-    S = s(318346),
-    f = s(151252),
-    m = s(142270),
-    h = s(287809),
-    A = s(365491),
-    C = s(628979),
-    T = s(494573),
-    g = s(758836),
-    y = s(652215);
+    a = s(696292),
+    n = s(311907),
+    o = s(397927),
+    i = s(770178),
+    c = s(742589),
+    u = s(545986),
+    d = s(657331),
+    b = s(318346),
+    p = s(151252),
+    E = s(142270),
+    S = s(287809),
+    f = s(365491),
+    A = s(628979),
+    h = s(494573),
+    m = s(758836),
+    C = s(652215);
 s(801416);
-var O = s(518477),
-    x = s(985018),
-    L = s(78716);
-function N(e) {
+var T = s(518477),
+    g = s(985018),
+    y = s(78716);
+function O(e) {
     let { selectedTab: t, handleTransition: s } = e,
-        n = (0, d.Ay)(),
-        N = (0, i.bG)([h.default], () => h.default.getCurrentUser()),
-        { enabled: v } = (0, f.Z)({ location: "collectibles_shop_header_bar" }),
-        { searchQuery: R } = (0, A.v)(),
-        G = l.useRef(null),
-        [j, I] = l.useState(!1);
-    (0, u.g)(
-        G,
+        O = (0, n.bG)([S.default], () => S.default.getCurrentUser()),
+        { enabled: L } = (0, p.Z)({ location: "collectibles_shop_header_bar" }),
+        { searchQuery: x } = (0, f.v)(),
+        R = l.useRef(null),
+        [N, v] = l.useState(!1);
+    (0, i.g)(
+        R,
         l.useCallback((e) => {
-            I(e.contentRect.width < 800);
+            v(e.contentRect.width < 800);
         }, []),
     );
-    let _ = l.useMemo(
+    let G = l.useMemo(
             () => [
-                { tab: g.G2.HOME, label: x.intl.string(x.t["xNiB/O"]) },
-                { tab: g.G2.CATALOG, label: x.intl.string(x.t.Ah5sJo), hasSubmenu: !0 },
-                ...(v ? [{ tab: g.G2.ORBS, label: x.intl.string(x.t.EBYkzk) }] : []),
+                { tab: m.G2.HOME, label: g.intl.string(g.t["xNiB/O"]) },
+                { tab: m.G2.CATALOG, label: g.intl.string(g.t.Ah5sJo), hasSubmenu: !0 },
+                ...(L ? [{ tab: m.G2.ORBS, label: g.intl.string(g.t.EBYkzk) }] : []),
             ],
-            [v],
+            [L],
         ),
-        P = t === g.G2.ORBS ? y.liQ.SHOP_ORBS_TAB : y.liQ.COLLECTIBLES_SHOP,
-        F = l.useCallback(() => {
-            (0, S.Y)({ pageType: P, sectionType: y.JJy.ORBS_BALANCE_MENU, ctaObject: y.ZSU.CTA_TO_QUEST_HOME }),
-                (0, p.navigateToQuestHome)({ fromContent: o.u.ORBS_BALANCE_MENU });
-        }, [P]),
-        k = l.useCallback(() => {
-            N?.id != null &&
-                (0, E.openUserProfileModal)({ userId: N.id, tabSection: O.RP.WISHLIST, showGuildProfile: !1 });
-        }, [N?.id]),
-        $ = l.useCallback(
+        I = t === m.G2.ORBS ? C.liQ.SHOP_ORBS_TAB : C.liQ.COLLECTIBLES_SHOP,
+        _ = l.useCallback(() => {
+            (0, b.Y)({ pageType: I, sectionType: C.JJy.ORBS_BALANCE_MENU, ctaObject: C.ZSU.CTA_TO_QUEST_HOME }),
+                (0, u.navigateToQuestHome)({ fromContent: a.u.ORBS_BALANCE_MENU });
+        }, [I]),
+        j = l.useCallback(() => {
+            O?.id != null &&
+                (0, d.openUserProfileModal)({ userId: O.id, tabSection: T.RP.WISHLIST, showGuildProfile: !1 });
+        }, [O?.id]),
+        F = l.useCallback(
             (e) => {
                 s(e);
             },
             [s],
         );
-    return (0, r.jsx)(c.NPJ, {
-        theme: n,
-        children: (e) =>
-            (0, r.jsx)("div", {
-                ref: G,
-                children: (0, r.jsxs)(b.A, {
-                    disableDoubleClick: !0,
-                    className: a()(e, L.jr),
-                    innerClassname: v ? L.vi : void 0,
-                    children: [
-                        (0, r.jsx)(c.DUT, {
-                            className: L.sU,
-                            onClick: () => s(g.G2.HOME),
-                            "aria-label": x.intl.string(x.t.pWG4ze),
-                            children: (0, r.jsx)(c.U1X, { size: "md", color: c.LU0.colors.TEXT_DEFAULT }),
+    return (0, r.jsx)("div", {
+        ref: R,
+        children: (0, r.jsxs)(c.A, {
+            disableDoubleClick: !0,
+            className: y.jr,
+            toolbar: (0, r.jsxs)(r.Fragment, {
+                children: [
+                    (0, r.jsx)(A.A, { handleTransition: s, selectedTab: t, isNarrow: N, hasText: "" !== x }),
+                    (0, r.jsx)(o.DUT, {
+                        className: y.ij,
+                        onClick: j,
+                        "aria-label": g.intl.string(g.t["7lZ31J"]),
+                        children: (0, r.jsx)(o.C3E, { size: "xs", color: "currentColor" }),
+                    }),
+                    L &&
+                        (0, r.jsx)(E.SS, {
+                            analyticsPage: I,
+                            cardAlignment: E.SS.CardAlignment.END,
+                            ctaText: g.intl.string(g.t.VC4Mq0),
+                            ctaOnClick: _,
                         }),
-                        (0, r.jsx)(T.A, { tabs: _, selectedTab: t, onTabSelect: $ }),
-                        (0, r.jsxs)("div", {
-                            className: L.sZ,
-                            children: [
-                                (0, r.jsx)(C.A, {
-                                    handleTransition: s,
-                                    selectedTab: t,
-                                    isNarrow: j,
-                                    hasText: "" !== R,
-                                }),
-                                (0, r.jsx)(c.DUT, {
-                                    className: L.ij,
-                                    onClick: k,
-                                    "aria-label": x.intl.string(x.t["7lZ31J"]),
-                                    children: (0, r.jsx)(c.C3E, { size: "xs", color: "currentColor" }),
-                                }),
-                                v &&
-                                    (0, r.jsx)(m.SS, {
-                                        analyticsPage: P,
-                                        cardAlignment: m.SS.CardAlignment.END,
-                                        ctaText: x.intl.string(x.t.VC4Mq0),
-                                        ctaOnClick: F,
-                                        className: L.oz,
-                                    }),
-                            ],
-                        }),
-                    ],
-                }),
+                ],
             }),
+            children: [
+                (0, r.jsx)(o.DUT, {
+                    className: y.sU,
+                    onClick: () => s(m.G2.HOME),
+                    "aria-label": g.intl.string(g.t["5upuqx"]),
+                    children: (0, r.jsx)(o.U1X, { size: "md", color: o.LU0.colors.TEXT_DEFAULT }),
+                }),
+                (0, r.jsx)(h.A, { tabs: G, selectedTab: t, onTabSelect: F }),
+            ],
+        }),
     });
 }

@@ -43,8 +43,8 @@ var i = n(627968),
     Y = n(890687),
     q = n(590202),
     W = n(885459),
-    K = n(545986),
-    z = n(419818),
+    z = n(545986),
+    K = n(419818),
     $ = n(203879),
     Q = n(409389),
     X = n(881172),
@@ -166,7 +166,7 @@ let eI = function (e) {
         _ && v === Y.NC.CLAIMED && B.A.setState({ tab: Y.NC.ALL });
     }, [_, v]);
     let { onScroll: U, scrollPosition: H } = (0, S.G)(),
-        W = z.A.getState().getUtmCurrentContext(),
+        W = K.A.getState().getUtmCurrentContext(),
         $ = (0, Z.W)((e) => e.registerAssetLoad),
         Q = r.useRef(W);
     r.useEffect(() => {
@@ -236,7 +236,7 @@ let eI = function (e) {
             t && (0, T.Dr)(u.M.QUEST_HOME_ENTRYPOINT_ONBOARDING);
         }, [t]);
     let eh = r.useCallback(() => {
-            (0, K.navigateToQuestHome)({ fromContent: V.uF.QUEST_HOME_MOVE_CALLOUT_DISCOVER }),
+            (0, z.navigateToQuestHome)({ fromContent: V.uF.QUEST_HOME_MOVE_CALLOUT_DISCOVER }),
                 w.default.track(er.HAw.QUEST_CONTENT_CLICKED, {
                     cta_name: q.Cy.VIEW_QUESTS,
                     click_id: (0, o.A)(),
@@ -332,13 +332,13 @@ let eI = function (e) {
                                 selectedTabId: v,
                                 handleTransition: e_,
                                 tabs: M,
-                                icon: A.r2v,
-                                children: (0, i.jsx)(D.SS, {
+                                endContent: (0, i.jsx)(D.SS, {
                                     analyticsPage: er.liQ.GLOBAL_DISCOVERY_QUESTS,
                                     cardAlignment: D.cP.END,
                                     ctaText: es.intl.string(es.t["J+vlIR"]),
                                     ctaOnClick: eu,
                                 }),
+                                icon: A.r2v,
                             }),
                         })
                       : (0, i.jsx)(eE, {
