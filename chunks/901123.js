@@ -8,7 +8,7 @@ let a = "@me",
     o = "@favorites",
     l = "@inbox",
     u = "@guilds-empty-nux",
-    c = [a, o, u, l],
+    c = [a, o, u, l, "@guild-upsell-list"],
     d = Object.freeze({
         INDEX: "/",
         APP: "/app",
