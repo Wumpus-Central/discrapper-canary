@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => V, useAppSidebarState: () => G });
+n.r(t), n.d(t, { default: () => U, useAppSidebarState: () => w });
 var i = n(627968),
     r = n(64700),
     l = n(353640),
@@ -10,130 +10,105 @@ var i = n(627968),
     u = n(875444),
     A = n(770031),
     h = n(932340),
-    _ = n(420936),
-    m = n(733738),
-    p = n(27169),
-    g = n(871432),
-    E = n(540177),
-    I = n(898642),
-    f = n(558416),
-    C = n(358832),
-    T = n(663111),
-    N = n(851109),
-    S = n(667086),
-    x = n(87001),
-    v = n(52144),
-    y = n(97469),
-    b = n(253932),
-    O = n(430363),
-    L = n(113800),
-    R = n(540999),
-    P = n(147964),
-    j = n(531685),
-    D = n(837921),
-    M = n(475815),
-    w = n(71855);
+    _ = n(733738),
+    m = n(871432),
+    p = n(540177),
+    g = n(898642),
+    E = n(558416),
+    I = n(358832),
+    f = n(663111),
+    C = n(851109),
+    T = n(667086),
+    N = n(87001),
+    S = n(52144),
+    x = n(97469),
+    v = n(253932),
+    y = n(430363),
+    b = n(113800),
+    O = n(540999),
+    L = n(147964),
+    R = n(531685),
+    P = n(837921),
+    j = n(475815),
+    D = n(71855);
 n(801416);
-var U = n(260175);
-let G = (0, l.v)(() => ({ isOpen: !0 }));
-function k(e) {
-    let { withFastTravel: t, quickSwitcherInsteadOfTitle: n, focusSectionProps: r } = e;
-    return n ? (0, i.jsx)(p.F, { focusSectionProps: r }) : (0, i.jsx)(T.M, { withFastTravel: t, focusSectionProps: r });
-}
-let V = r.memo(function () {
-    r.useLayoutEffect(() => {
-        D.Ay.setMinimumSize(800, 500);
-    }, []);
-    let { notificationCenterVariant: e, entrypoint: t } = (0, N.X8)({ location: "AppTitleBar" }),
-        { titlebarFastTravel: n, quickSwitcherInsteadOfTitle: l } = (0, _.t)({ location: "AppTitleBar" }),
-        { hasBugReporterAccess: p } = A.A.useConfig({ location: "HeaderBar" }),
-        T = (0, s.bG)([R.A], () => R.A.isDeveloper),
-        G = (0, O.Uk)("VoiceDareTitleBarButton"),
-        V = (0, s.bG)(
-            [P.A, c.A],
-            () =>
-                b.Q_.getSetting() &&
-                null != P.A.testModeApplicationId &&
-                null != c.A.getApplication(P.A.testModeApplicationId) &&
-                (0, u.A)(c.A.getApplication(P.A.testModeApplicationId)),
-        ),
-        B = null !== e && t === N.RK.TITLE_BAR_LEFT,
-        H = null === e;
-    r.useLayoutEffect(() => {
-        D.Ay.setMinimumSize(800, 500);
-    }, []);
-    let F = (0, y.NC)(),
-        Y = (0, s.bG)([j.A, x.A], () => (0, M._U)()),
-        q = (0, a.xl)(),
-        W = (function (e) {
-            let {
-                showBackForwardButtons: t,
-                showNotificationsInbox: n,
-                titlebarFastTravel: i,
-                showRecentsButton: l,
-            } = e;
-            return r.useMemo(
+var M = n(260175);
+let w = (0, l.v)(() => ({ isOpen: !0 })),
+    U = r.memo(function () {
+        r.useLayoutEffect(() => {
+            P.Ay.setMinimumSize(800, 500);
+        }, []);
+        let { notificationCenterVariant: e, entrypoint: t } = (0, C.X8)({ location: "AppTitleBar" }),
+            { hasBugReporterAccess: n } = A.A.useConfig({ location: "HeaderBar" }),
+            l = (0, s.bG)([O.A], () => O.A.isDeveloper),
+            w = (0, y.Uk)("VoiceDareTitleBarButton"),
+            U = (0, s.bG)(
+                [L.A, c.A],
                 () =>
-                    t
-                        ? "BACK_FORWARD_NAVIGATION"
-                        : n
-                          ? "NOTIFICATIONS_INBOX"
-                          : i
-                            ? "TITLEBAR_FAST_TRAVEL"
-                            : l
-                              ? "RECENTS"
-                              : "HELP",
-                [t, n, i, l],
-            );
-        })({ showBackForwardButtons: q, showNotificationsInbox: B, titlebarFastTravel: n, showRecentsButton: H });
-    return Y
-        ? null
-        : (0, i.jsx)(o.skg, {
-              children: (e) =>
-                  (0, i.jsx)(o.NPJ, {
-                      theme: F,
-                      children: (t) =>
-                          (0, i.jsx)(w.cq, {
-                              className: t,
-                              leading: (0, i.jsxs)(i.Fragment, {
-                                  children: [
-                                      q &&
-                                          (0, i.jsx)(m.A, {
-                                              firstElementFocusJumpSectionProps:
-                                                  "BACK_FORWARD_NAVIGATION" === W ? e : void 0,
-                                          }),
-                                      B &&
-                                          (0, i.jsx)(S.A, {
-                                              focusSectionProps: "NOTIFICATIONS_INBOX" === W ? e : void 0,
-                                          }),
-                                  ],
+                    v.Q_.getSetting() &&
+                    null != L.A.testModeApplicationId &&
+                    null != c.A.getApplication(L.A.testModeApplicationId) &&
+                    (0, u.A)(c.A.getApplication(L.A.testModeApplicationId)),
+            ),
+            G = null !== e && t === C.RK.TITLE_BAR_LEFT,
+            k = null === e;
+        r.useLayoutEffect(() => {
+            P.Ay.setMinimumSize(800, 500);
+        }, []);
+        let V = (0, x.NC)(),
+            B = (0, s.bG)([R.A, N.A], () => (0, j._U)()),
+            H = (0, a.xl)(),
+            F = (function (e) {
+                let { showBackForwardButtons: t, showNotificationsInbox: n, showRecentsButton: i } = e;
+                return r.useMemo(
+                    () => (t ? "BACK_FORWARD_NAVIGATION" : n ? "NOTIFICATIONS_INBOX" : i ? "RECENTS" : "HELP"),
+                    [t, n, i],
+                );
+            })({ showBackForwardButtons: H, showNotificationsInbox: G, showRecentsButton: k });
+        return B
+            ? null
+            : (0, i.jsx)(o.skg, {
+                  children: (e) =>
+                      (0, i.jsx)(o.NPJ, {
+                          theme: V,
+                          children: (t) =>
+                              (0, i.jsx)(D.cq, {
+                                  className: t,
+                                  leading: (0, i.jsxs)(i.Fragment, {
+                                      children: [
+                                          H &&
+                                              (0, i.jsx)(_.A, {
+                                                  firstElementFocusJumpSectionProps:
+                                                      "BACK_FORWARD_NAVIGATION" === F ? e : void 0,
+                                              }),
+                                          G &&
+                                              (0, i.jsx)(T.A, {
+                                                  focusSectionProps: "NOTIFICATIONS_INBOX" === F ? e : void 0,
+                                              }),
+                                      ],
+                                  }),
+                                  title: (0, i.jsx)(f.M, {}),
+                                  trailing: (0, i.jsxs)(i.Fragment, {
+                                      children: [
+                                          (0, i.jsx)(m.A, { className: M.x }),
+                                          w ? (0, i.jsx)(b.A, {}) : null,
+                                          (0, i.jsx)(h.A, { canShowReminder: !0, className: M.x }),
+                                          k && (0, i.jsx)(S.A, { ...("RECENTS" === F ? e : {}), className: M.x }),
+                                          n
+                                              ? (0, i.jsx)(E.w, {
+                                                    focusSectionProps: "HELP" === F ? e : void 0,
+                                                    className: M.x,
+                                                })
+                                              : (0, i.jsx)(g.A, {
+                                                    focusSectionProps: "HELP" === F ? e : void 0,
+                                                    className: M.x,
+                                                }),
+                                          l ? (0, i.jsx)(p.R, { className: M.x }) : null,
+                                          U && (0, i.jsx)(d.A, { className: M.x }),
+                                          (0, i.jsx)(I.A, { className: M.x }),
+                                      ],
+                                  }),
                               }),
-                              title: (0, i.jsx)(k, {
-                                  withFastTravel: n,
-                                  quickSwitcherInsteadOfTitle: l,
-                                  focusSectionProps: "TITLEBAR_FAST_TRAVEL" === W ? e : void 0,
-                              }),
-                              trailing: (0, i.jsxs)(i.Fragment, {
-                                  children: [
-                                      (0, i.jsx)(g.A, { className: U.x }),
-                                      G ? (0, i.jsx)(L.A, {}) : null,
-                                      (0, i.jsx)(h.A, { canShowReminder: !0, className: U.x }),
-                                      H && (0, i.jsx)(v.A, { ...("RECENTS" === W ? e : {}), className: U.x }),
-                                      p
-                                          ? (0, i.jsx)(f.w, {
-                                                focusSectionProps: "HELP" === W ? e : void 0,
-                                                className: U.x,
-                                            })
-                                          : (0, i.jsx)(I.A, {
-                                                focusSectionProps: "HELP" === W ? e : void 0,
-                                                className: U.x,
-                                            }),
-                                      T ? (0, i.jsx)(E.R, { className: U.x }) : null,
-                                      V && (0, i.jsx)(d.A, { className: U.x }),
-                                      (0, i.jsx)(C.A, { className: U.x }),
-                                  ],
-                              }),
-                          }),
-                  }),
-          });
-});
+                      }),
+              });
+    });
