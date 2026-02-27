@@ -13,7 +13,7 @@ var i,
     _ = n(57020),
     m = n(758836),
     p = n(652215);
-let g = l.createContext({ flattenProductVariants: !1, productOverride: void 0, prioritizedCurrency: void 0 });
+let g = l.createContext({ flattenProductVariants: void 0, productOverride: void 0, prioritizedCurrency: void 0 });
 function E() {
     return l.useContext(g).flattenProductVariants;
 }
