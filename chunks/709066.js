@@ -3,8 +3,8 @@ n.d(t, { A: () => _ });
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    s = n(990078),
+    s = n.n(i),
+    a = n(990078),
     o = n(397927),
     l = n(705751),
     u = n(985018),
@@ -21,7 +21,7 @@ let d = (e) => {
         } = e,
         h = null,
         m = u.intl.string(u.t.g76OcH),
-        g = t ? c.i$ : c.GD;
+        E = t ? c.i$ : c.GD;
     switch (n) {
         case l.nu.SYSTEM_DM:
         case l.nu.OFFICIAL:
@@ -37,29 +37,44 @@ let d = (e) => {
             h = u.intl.string(u.t.oMx98L);
             break;
         case l.nu.NOT_STAFF_WARNING:
-            (h = u.intl.string(u.t.UWhXbK)), (g = c.Zi);
+            (h = u.intl.string(u.t.UWhXbK)), (E = c.Zi);
             break;
         case l.nu.BOT:
         default:
             h = u.intl.string(u.t["9RNkeF"]);
     }
-    let E = n === l.nu.ORIGINAL_POSTER,
+    let g = n === l.nu.ORIGINAL_POSTER,
         A = null;
     d &&
-        (A = (0, r.jsx)(s.m, {
+        (A = (0, r.jsx)(a.m, {
             text: m,
             align: "center",
             position: "top",
             children: (0, r.jsx)(o.BNr, { className: c.go, color: o.LU0.colors.WHITE }),
         }));
-    let I = () =>
+    let I = null;
+    if (d) I = m;
+    else if ("string" == typeof h)
+        switch (n) {
+            case l.nu.BOT:
+                I = u.intl.string(u.t.qwJHjo);
+                break;
+            case l.nu.SERVER:
+                I = u.intl.string(u.t["39trQT"]);
+                break;
+            default:
+                I = h;
+        }
+    let T = () =>
         (0, r.jsxs)("span", {
-            className: a()(i, g, f ? c.D0 : c.px, { [c.rV]: E }),
+            role: "img",
+            "aria-label": I ?? void 0,
+            className: s()(i, E, f ? c.D0 : c.px, { [c.rV]: g }),
             children: [_ ? null : A, p, (0, r.jsx)("span", { className: c.lc, children: h })],
         });
     return n === l.nu.ORIGINAL_POSTER
-        ? (0, r.jsx)(s.m, { text: u.intl.string(u.t.uN6Emt), position: "top", asContainer: !0, children: I() })
-        : I();
+        ? (0, r.jsx)(a.m, { text: u.intl.string(u.t.uN6Emt), position: "top", asContainer: !0, children: T() })
+        : T();
 };
 d.Types = l.nu;
 let _ = d;
