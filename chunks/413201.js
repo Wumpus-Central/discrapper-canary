@@ -1,37 +1,38 @@
-i.d(t, { default: () => u });
+i.d(t, { default: () => o });
 var s = i(627968),
     n = i(64700),
     l = i(158954),
-    a = i(253932),
-    r = i(365258),
-    d = i(929120),
-    c = i(985018);
-function u(e) {
+    a = i(397927),
+    r = i(253932),
+    d = i(365258),
+    c = i(929120),
+    u = i(985018);
+function o(e) {
     let {
             direction: t,
             affectedGuildIds: i,
-            settingName: u,
+            settingName: o,
             mappedActivityValue: m,
-            onClose: o,
-            transitionState: x,
+            onClose: x,
+            transitionState: h,
         } = e,
-        h = t === r.AI.RESTRICTING,
-        { title: j, subtitle: f, confirmText: I } = (0, r.vz)(h, u),
-        b = (0, n.useMemo)(
+        j = t === d.AI.RESTRICTING,
+        { title: f, subtitle: I, confirmText: p, toastContent: b } = (0, d.vz)(j, o),
+        g = (0, n.useMemo)(
             () => () => {
-                a._Z.updateSetting(m), (0, r.gF)(t, i);
+                r._Z.updateSetting(m), (0, d.gF)(t, i), (0, a.showToast)((0, a.createToast)(b, a.ToastType.SUCCESS));
             },
-            [m, t, i],
+            [m, t, i, b],
         );
     return (0, s.jsx)(l.ConfirmModal, {
-        title: j,
-        subtitle: f,
-        confirmText: I,
-        cancelText: c.intl.string(c.t.X1rGEm),
+        title: f,
+        subtitle: I,
+        confirmText: p,
+        cancelText: u.intl.string(u.t.X1rGEm),
         variant: "primary",
-        onConfirm: b,
-        onClose: o,
-        transitionState: x,
-        children: (0, s.jsx)(d.n, { guildIds: i, direction: t }),
+        onConfirm: g,
+        onClose: x,
+        transitionState: h,
+        children: (0, s.jsx)(c.n, { guildIds: i, direction: t }),
     });
 }

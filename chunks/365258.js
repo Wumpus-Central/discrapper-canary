@@ -1,19 +1,9 @@
-n.d(t, {
-    AB: () => S,
-    AI: () => u,
-    Xc: () => C,
-    aM: () => E,
-    ae: () => m,
-    g8: () => h,
-    gF: () => T,
-    nm: () => g,
-    vz: () => p,
-});
+n.d(t, { AB: () => m, AI: () => u, Xc: () => C, ae: () => S, g8: () => h, gF: () => T, gS: () => f, vz: () => p });
 var i,
     r = n(873298),
     a = n(253932),
-    s = n(205761),
-    l = n(498642),
+    l = n(205761),
+    s = n(498642),
     o = n(71393),
     d = n(711014),
     _ = n(115063),
@@ -47,7 +37,7 @@ function h(e, t) {
     if (n < 0 || i < 0) return null;
     let r = i < n ? "restricting" : "expanding",
         a = (0, _.Kk)(),
-        s = d.Ay.getFlattenedGuildIds(),
+        l = d.Ay.getFlattenedGuildIds(),
         c =
             (e === A.ACTIVITY_STATUS_OFF && t === A.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS) ||
             (e === A.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS && t === A.ACTIVITY_STATUS_OFF)
@@ -56,12 +46,12 @@ function h(e, t) {
                     (e === A.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS && t === A.ACTIVITY_STATUS_ON)
                   ? "small_only"
                   : "all",
-        u = s.filter((e) => {
+        u = l.filter((e) => {
             if (null == o.A.getGuild(e)) return !1;
             let t = a.has(e);
             if (("restricting" === r && t) || ("expanding" === r && !t)) return !1;
             if ("all" === c) return !0;
-            let n = l.A.getMemberCount(e);
+            let n = s.A.getMemberCount(e);
             return null == n ? "restricting" === r : "large_only" === c ? n > 200 : n <= 200;
         });
     return 0 === u.length
@@ -96,9 +86,10 @@ function p(e, t) {
         title: c.intl.string(e ? c.t.eYDA7D : c.t["9jYwjo"]),
         subtitle: c.intl.format(e ? c.t["c5/jDc"] : c.t.ajzh8S, { settingName: t }),
         confirmText: c.intl.string(e ? c.t["6uPZV1"] : c.t.a9PIyD),
+        toastContent: c.intl.string(e ? c.t.AdpgML : c.t["Q7E+QF"]),
     };
 }
-function m(e, t) {
+function S(e, t) {
     return {
         title: c.intl.string(e ? c.t.jRx1Aa : c.t.S0Y0bh),
         subtitle: c.intl.format(e ? c.t.Fs96LO : c.t.GcoYX8, { settingName: t }),
@@ -106,8 +97,28 @@ function m(e, t) {
         toastContent: c.intl.string(e ? c.t.AdpgML : c.t["Q7E+QF"]),
     };
 }
-function S(e) {
-    return [...e].sort((e, t) => s.A.getScoreWithoutFetchingLatest(t) - s.A.getScoreWithoutFetchingLatest(e));
+function f(e, t) {
+    let n = E(t),
+        i = a._Z.getSetting();
+    if (i === n || g(E(e)) > g(n) != g(i) > g(n)) return null;
+    let l = h(i, n);
+    if (null == l) return null;
+    let s = (function (e) {
+        switch (e) {
+            case r.KP.FRIENDS_AND_ALL_GUILDS:
+                return c.intl.string(c.t.Boxc8R).toLowerCase();
+            case r.KP.FRIENDS_AND_SMALL_GUILDS:
+                return c.intl.string(c.t.YOIKBt).toLowerCase();
+            case r.KP.FRIENDS_ONLY:
+                return c.intl.string(c.t.u0nlJv).toLowerCase();
+            default:
+                return "";
+        }
+    })(t);
+    return { affectedGuildIds: l.affectedGuildIds, direction: l.direction, settingName: s, mappedActivityValue: n };
+}
+function m(e) {
+    return [...e].sort((e, t) => l.A.getScoreWithoutFetchingLatest(t) - l.A.getScoreWithoutFetchingLatest(e));
 }
 function T(e, t) {
     let n = (0, _.Kk)(),
