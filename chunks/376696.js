@@ -20,8 +20,8 @@ var i = n(627968),
     C = n(533562),
     E = n(760716),
     I = n(93879),
-    b = n(178213),
-    N = n(616356),
+    N = n(178213),
+    b = n(616356),
     S = n(961350),
     T = n(71393),
     y = n(576705),
@@ -53,8 +53,8 @@ function P(e) {
         Y = (0, C.W)(),
         z = (0, E.i)((e) => e.showSelfActivity),
         [X, q] = (0, a.yK)(
-            [N.A],
-            () => [N.A.getStreamForUser(n.id, t.getGuildId()), N.A.getActiveStreamForUser(n.id, t.getGuildId())],
+            [b.A],
+            () => [b.A.getStreamForUser(n.id, t.getGuildId()), b.A.getActiveStreamForUser(n.id, t.getGuildId())],
             [t, n.id],
         ),
         [J, Q] = (0, a.yK)([j.A, T.A, y.A, A.default], () => (0, p.eo)(t, j.A, T.A, y.A, A.default)),
@@ -68,7 +68,7 @@ function P(e) {
         en = s.useMemo(() => (null != et ? [et] : []), [et]),
         { enableUserHoverActivities: ei } = (0, L.fC)({ guildId: t.guild_id, location: "VoiceUserActivities" }),
         { enableHangStatus: es } = (0, _.$j)({ guildId: t.guild_id, location: "VoiceUserActivities" }),
-        el = (0, b.G)("voice_channel_activities"),
+        el = (0, N.G)("voice_channel_activities"),
         er = (0, x.m)({ location: "voice_channel_activities" }),
         ea = (0, h.r9)() && (0, h.UK)(t.id),
         eo = null != X && !ea,
@@ -136,8 +136,8 @@ function P(e) {
                 ),
             ),
             ee.map((e) => {
-                let r = e.application_id;
-                return (null != Y && (r = Y), er && null != r && G.sQ.has(r))
+                let a = e.application_id;
+                return (null != Y && (a = Y), er && null != a && G.sQ.has(a))
                     ? (0, i.jsxs)(
                           s.Fragment,
                           {
@@ -150,7 +150,8 @@ function P(e) {
                                       enableUserHoverActivities: ei,
                                   }),
                                   (0, i.jsx)(I.A, {
-                                      applicationId: r,
+                                      className: r()({ [U.SW]: el }),
+                                      applicationId: a,
                                       userIds: [n.id],
                                       location: "voice_channel",
                                       guildId: t.guild_id,

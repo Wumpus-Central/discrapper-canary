@@ -1,45 +1,47 @@
 "use strict";
 n.d(t, {
-    Cv: () => T,
-    M$: () => A,
-    OY: () => v,
+    Cv: () => S,
+    M$: () => I,
+    OY: () => N,
     Q6: () => C,
-    Xg: () => p,
+    Xg: () => h,
     Ye: () => b,
-    bF: () => h,
+    bF: () => m,
     fq: () => y,
     jz: () => g,
-    pV: () => f,
-    sq: () => E,
-    ty: () => I,
-    xf: () => S,
-    zf: () => m,
+    pV: () => p,
+    sq: () => A,
+    ty: () => T,
+    wH: () => R,
+    xf: () => v,
+    zf: () => E,
 });
 var r = n(735438),
     i = n.n(r),
-    a = n(611010),
-    s = n(731935),
+    s = n(611010),
+    a = n(731935),
     o = n(71393),
     l = n(371794),
     u = n(998218),
-    c = n(916023),
-    d = n(188275),
-    _ = n(652215);
-let f = l.QB ? "webp" : "jpg";
-function p(e) {
-    return null != e && d.Pc.has(e.id);
-}
+    c = n(79871),
+    d = n(916023),
+    _ = n(188275),
+    f = n(652215);
+let p = l.QB ? "webp" : "jpg";
 function h(e) {
-    return null != e && e.productLine === _.EZt.SOCIAL_LAYER_GAME_ITEM;
+    return null != e && _.Pc.has(e.id);
 }
-function m() {
-    let e = o.A.getGuild(d.v8);
-    return null != e && e.features.has(_.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ? e.id : d.Kf;
+function m(e) {
+    return null != e && e.productLine === f.EZt.SOCIAL_LAYER_GAME_ITEM;
+}
+function E() {
+    let e = o.A.getGuild(_.v8);
+    return null != e && e.features.has(f.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ? e.id : _.Kf;
 }
 function g(e) {
-    return e.id === m() || (e.features?.has(_.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1);
+    return e.id === E() || (e.features?.has(f.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1);
 }
-function E(e) {
+function A(e) {
     return {
         applicationId: e.application_id,
         title: e.title,
@@ -59,10 +61,10 @@ function E(e) {
             sections: null != e.sections ? e.sections.map((e) => ({ title: e.title, skuIds: e.sku_ids })) : void 0,
         })),
         assets: i().keyBy(e.assets, "id"),
-        application: null != e.application ? a.Ay.createFromServer(e.application) : void 0,
+        application: null != e.application ? s.Ay.createFromServer(e.application) : void 0,
     };
 }
-function A(e) {
+function I(e) {
     if (null != e)
         return {
             carouselItems: e.carousel_items.map((e) => ({
@@ -79,19 +81,19 @@ function A(e) {
             cardBackgroundImageAssetId: e.card_background_image_asset_id,
         };
 }
-function I(e) {
+function T(e) {
     return {
-        skus: e.skus.map((e) => s.A.createFromServer(e)),
+        skus: e.skus.map((e) => a.A.createFromServer(e)),
         skusToRecommendationReasons: Object.fromEntries(
             Object.entries(e.skus_to_user_ids).map((e) => {
                 let [t, n] = e;
                 return [t, n.map((e) => ({ userId: e.user_id, reason: e.reason }))];
             }),
         ),
-        application: a.Ay.createFromServer(e.application),
+        application: s.Ay.createFromServer(e.application),
     };
 }
-function T(e, t) {
+function S(e, t) {
     if (
         null == t ||
         e?.tenantMetadata?.socialLayer?.carouselItems == null ||
@@ -111,21 +113,33 @@ function y(e) {
         n = e?.tenantMetadata?.socialLayer?.cardImageAssetId ?? e?.thumbnailAssetId;
     if (null != n && null != t) return u.A.toURLSafe((0, l.YE)(t, n, 512, "webp"));
 }
-function S(e) {
+function v(e) {
     if (e?.tenantMetadata?.socialLayer?.cardBackgroundImageAssetId != null && e?.applicationId != null)
         return u.A.toURLSafe(
-            (0, l.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, f),
+            (0, l.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, p),
         );
 }
-function v(e, t) {
-    return `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${_.BVt.GAME_SHOP(e, t.id, t.slug)}`;
+function N(e, t) {
+    return `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${f.BVt.GAME_SHOP(e, t.id, t.slug)}`;
 }
 function C(e, t) {
-    return `${v(e, t)}
+    return `${N(e, t)}
 
 `;
 }
 function b(e, t) {
     let n = o.A.getGuild(e);
-    return null != n && g(n) && (0, c.xD)({ location: t });
+    return null != n && g(n) && (0, d.xD)({ location: t });
+}
+function R(e, t, n) {
+    return 0 === e.length
+        ? { hasWishlist: !1, hasPopular: !1 }
+        : {
+              hasWishlist: e.some((e) => t[e.skuId]?.some((e) => e.reason === c.G.WISHLIST && n.has(e.userId))),
+              hasPopular: e.some(
+                  (e) =>
+                      null == t[e.skuId] ||
+                      t[e.skuId].every((e) => (e.reason === c.G.RECOMMENDATION && n.has(e.userId)) || !n.has(e.userId)),
+              ),
+          };
 }

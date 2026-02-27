@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => C });
+n.d(t, { A: () => b });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -16,82 +16,93 @@ var r = n(627968),
     m = n(754804),
     E = n(287809),
     g = n(403362),
-    A = n(533406),
-    I = n(788868),
-    T = n(699976),
-    S = n(985018),
-    y = n(859457);
-let v = 3,
-    N = T.Z.SIZE_90;
-function C(e) {
+    A = n(317560),
+    I = n(533406),
+    T = n(788868),
+    S = n(699976),
+    y = n(985018),
+    v = n(526295);
+let N = 3,
+    C = S.Z.SIZE_90;
+function b(e) {
     let {
             sku: t,
             source: n,
-            hideIcon: s,
+            application: s,
             guildId: o,
-            channelId: T,
-            userIdsForGifting: C,
-            userIdsForRecommendation: b,
-            style: R,
+            showIcons: S,
+            channelId: b,
+            userIdsForGifting: R,
+            userIdsForRecommendation: O,
+            style: D,
         } = e,
-        [O, D] = i.useState(l().uniq(C)),
-        [L, w] = i.useState(!1),
-        [x, M] = i.useState(l().uniq(b)),
-        { analyticsLocations: P } = (0, _.Ay)(
+        [L, w] = i.useState(l().uniq(R)),
+        [x, M] = i.useState(!1),
+        [P, k] = i.useState(l().uniq(O)),
+        { analyticsLocations: U } = (0, _.Ay)(
             d.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD,
             d.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON,
         );
     i.useEffect(() => {
-        M((e) => {
-            let t = l().uniq(b);
+        k((e) => {
+            let t = l().uniq(O);
             return (0, c.v)(e, t) ? e : t;
         });
-    }, [b]),
+    }, [O]),
         i.useEffect(() => {
-            D((e) => {
-                let t = l().uniq(C);
+            w((e) => {
+                let t = l().uniq(R);
                 return (0, c.v)(e, t) ? e : t;
             });
-        }, [C]);
-    let k = (0, u.bG)([E.default], () => (1 === O.length ? E.default.getUser(O[0]) : void 0), [O]),
-        U = (0, u.yK)([E.default], () => x.map((e) => E.default.getUser(e)).filter(g.Vq), [x]),
-        G = i.useCallback(() => {
-            (0, A.a)(
+        }, [R]);
+    let G = (0, u.bG)([E.default], () => (1 === L.length ? E.default.getUser(L[0]) : void 0), [L]),
+        F = (0, u.yK)([E.default], () => P.map((e) => E.default.getUser(e)).filter(g.Vq), [P]),
+        V = i.useCallback(() => {
+            null != s &&
+                null != s.guildId &&
+                (0, A.R)({
+                    skuId: t.id,
+                    applicationId: t.applicationId,
+                    guildId: s.guildId,
+                    isStorefront: !1,
+                    analyticsLocations: U,
+                });
+        }, [t.id, t.applicationId, s, U]),
+        B = i.useCallback(() => {
+            (0, I.a)(
                 t,
                 {
                     isGift: !0,
-                    giftRecipient: k,
-                    additionalUserIds: O.length > 1 ? O : void 0,
-                    giftingOrigin: I.vQ.SHOP_PAGE,
+                    giftRecipient: G,
+                    additionalUserIds: L.length > 1 ? L : void 0,
+                    giftingOrigin: T.vQ.SHOP_PAGE,
                 },
-                { analyticsLocations: P },
+                { analyticsLocations: U },
             );
-        }, [t, k, O, P]);
+        }, [t, G, L, U]);
     return (0, r.jsxs)("div", {
-        className: a()(y.k, R),
+        className: a()(v.k, D),
         children: [
             (0, r.jsx)(p.A, {
                 sku: t,
-                user: k,
-                spec: N,
-                onClick: G,
-                cardStyle: y.U,
-                onHoverOrFocusChange: w,
-                children: (0, r.jsx)(h.lQ, { sku: t, spec: N, onClick: G, isHoveringOrFocusing: L }),
+                user: G,
+                spec: C,
+                onClick: V,
+                cardStyle: v.U,
+                onHoverOrFocusChange: M,
+                children: (0, r.jsx)(h.lQ, { sku: t, spec: C, onClick: B, isHoveringOrFocusing: x }),
             }),
-            !s &&
-                (n === f.uS.POPULAR
-                    ? (0, r.jsx)(m.oX, { spec: N, tooltipText: S.intl.string(S.t["DP0o+u"]) })
-                    : U.length > 0
-                      ? (0, r.jsx)(m.Xd, {
-                            spec: N,
-                            tooltipText: S.intl.string(S.t["OnWY3/"]),
-                            users: U,
-                            guildId: o ?? void 0,
-                            channelId: T ?? void 0,
-                            maxUsers: v,
-                        })
-                      : null),
+            S &&
+                n === f.uS.WISHLIST &&
+                F.length > 0 &&
+                (0, r.jsx)(m.Xd, {
+                    spec: C,
+                    tooltipText: y.intl.string(y.t["OnWY3/"]),
+                    users: F,
+                    guildId: o ?? void 0,
+                    channelId: b ?? void 0,
+                    maxUsers: N,
+                }),
         ],
     });
 }
