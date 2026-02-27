@@ -1,4 +1,4 @@
-n.d(t, { M: () => b });
+n.d(t, { M: () => y });
 var i = n(627968),
     r = n(64700),
     l = n(503698),
@@ -8,95 +8,93 @@ var i = n(627968),
     d = n(435371),
     c = n(397927),
     u = n(587895),
-    A = n(545167),
-    h = n(515610),
-    _ = n(91242),
-    m = n(263063),
-    p = n(394953),
-    g = n(793322),
-    E = n(734057),
-    I = n(71393),
-    f = n(309010),
-    C = n(967198),
-    T = n(486020),
-    N = n(652215),
-    S = n(165610),
-    x = n(985018),
-    v = n(842130),
-    y = n(878251);
-function b(e) {
+    A = n(515610),
+    h = n(91242),
+    _ = n(263063),
+    m = n(394953),
+    p = n(793322),
+    g = n(734057),
+    E = n(71393),
+    I = n(309010),
+    f = n(967198),
+    C = n(486020),
+    T = n(652215),
+    N = n(165610),
+    S = n(985018),
+    x = n(842130),
+    v = n(878251);
+function y(e) {
     let t,
         { withFastTravel: n, focusSectionProps: l } = e,
-        b = (0, s.zy)(),
-        O = (0, o.bG)([C.A], () => C.A.getGuildId()),
-        L = (0, o.bG)([f.A], () => f.A.getChannelId()),
-        R = (0, o.bG)([E.A], () => E.A.getChannel(L), [L]),
-        P = O ?? R?.guild_id,
-        j = (0, o.bG)([I.A], () => I.A.getGuild(P), [P]),
-        D = (0, h.A)(),
-        M = (0, p.lI)(),
-        { guildTitleIconSize: w, guildIconSize: U } = (0, A.pz)({ location: "GuildTitle" }),
-        { application: G, isFrameInFocusedMode: k } = (0, o.cf)([u.A, _.A], () => {
-            let e = _.A.getConnectedFrame();
+        y = (0, s.zy)(),
+        b = (0, o.bG)([f.A], () => f.A.getGuildId()),
+        O = (0, o.bG)([I.A], () => I.A.getChannelId()),
+        L = (0, o.bG)([g.A], () => g.A.getChannel(O), [O]),
+        R = b ?? L?.guild_id,
+        P = (0, o.bG)([E.A], () => E.A.getGuild(R), [R]),
+        j = (0, A.A)(),
+        D = (0, m.lI)(),
+        { application: M, isFrameInFocusedMode: w } = (0, o.cf)([u.A, h.A], () => {
+            let e = h.A.getConnectedFrame();
             return {
                 application: u.A.getApplication(e?.applicationId),
-                isFrameInFocusedMode: _.A.getFrameLayoutMode() === S.y.FOCUSED,
+                isFrameInFocusedMode: h.A.getFrameLayoutMode() === N.y.FOCUSED,
             };
         }),
-        V = null != G ? T.Ay.getApplicationIconURL({ id: G.id, icon: G.icon, bot: G.bot }) : void 0,
-        B = null;
-    null != G && k
-        ? ((t = G.name),
-          (B = (0, i.jsx)("img", {
-              className: y.Z2,
-              alt: x.intl.string(x.t.X4IxWL),
-              src: V,
+        U = null != M ? C.Ay.getApplicationIconURL({ id: M.id, icon: M.icon, bot: M.bot }) : void 0,
+        G = null;
+    null != M && w
+        ? ((t = M.name),
+          (G = (0, i.jsx)("img", {
+              className: v.Z2,
+              alt: S.intl.string(S.t.X4IxWL),
+              src: U,
               "aria-hidden": !0,
               draggable: !1,
           })))
-        : M
-          ? ((t = x.intl.string(x.t.HcoRu0)), (B = (0, i.jsx)(c.XFE, { size: w })))
-          : null != j
-            ? ((B = D
-                  ? (0, i.jsx)(c.Gg5, { size: w })
-                  : (0, i.jsx)(m.Ay, { guild: j, size: U, active: !0, className: y.$f })),
-              (t = j.name))
-            : null != R && (R.isDM() || R.isGroupDM())
-              ? ((t = x.intl.string(x.t.YUU0RF)), (B = (0, i.jsx)(c.pVd, { size: w })))
-              : b.pathname.startsWith(N.BVt.ICYMI)
-                ? ((t = x.intl.string(x.t["jnXV/V"])), (B = (0, i.jsx)(c.gXB, { size: w })))
-                : b.pathname.startsWith(N.BVt.GLOBAL_DISCOVERY)
-                  ? ((t = x.intl.string(x.t["4nEZLk"])), (B = (0, i.jsx)(c.QGJ, { size: w })))
-                  : b.pathname.startsWith(N.BVt.NITRO_HOME)
-                    ? ((t = x.intl.string(x.t.Ipxkog)), (B = (0, i.jsx)(c.tvc, { size: w })))
-                    : b.pathname.startsWith(N.BVt.COLLECTIBLES_SHOP)
-                      ? ((t = x.intl.string(x.t.pWG4ze)), (B = (0, i.jsx)(c.U1X, { size: w })))
-                      : b.pathname.startsWith(N.BVt.FRIENDS)
-                        ? ((t = x.intl.string(x.t.TdEu5X)), (B = (0, i.jsx)(c.$yI, { size: w })))
-                        : b.pathname.startsWith(N.BVt.FAMILY_CENTER)
-                          ? ((t = x.intl.string(v.default.RZqaJn)), (B = (0, i.jsx)(c.nFg, { size: w })))
-                          : b.pathname.startsWith(N.BVt.QUEST_HOME) &&
-                            ((t = x.intl.string(x.t.JALI2K)), (B = (0, i.jsx)(c.r2v, { size: w })));
-    let H = r.useCallback((e) => {
-            (0, g.L$)("fast-travel");
+        : D
+          ? ((t = S.intl.string(S.t.HcoRu0)), (G = (0, i.jsx)(c.XFE, { size: "sm" })))
+          : null != P
+            ? ((G = j
+                  ? (0, i.jsx)(c.Gg5, { size: "sm" })
+                  : (0, i.jsx)(_.Ay, { guild: P, size: _.Ay.Sizes.SMOL, active: !0, className: v.$f })),
+              (t = P.name))
+            : null != L && (L.isDM() || L.isGroupDM())
+              ? ((t = S.intl.string(S.t.YUU0RF)), (G = (0, i.jsx)(c.pVd, { size: "sm" })))
+              : y.pathname.startsWith(T.BVt.ICYMI)
+                ? ((t = S.intl.string(S.t["jnXV/V"])), (G = (0, i.jsx)(c.gXB, { size: "sm" })))
+                : y.pathname.startsWith(T.BVt.GLOBAL_DISCOVERY)
+                  ? ((t = S.intl.string(S.t["4nEZLk"])), (G = (0, i.jsx)(c.QGJ, { size: "sm" })))
+                  : y.pathname.startsWith(T.BVt.NITRO_HOME)
+                    ? ((t = S.intl.string(S.t.Ipxkog)), (G = (0, i.jsx)(c.tvc, { size: "sm" })))
+                    : y.pathname.startsWith(T.BVt.COLLECTIBLES_SHOP)
+                      ? ((t = S.intl.string(S.t.pWG4ze)), (G = (0, i.jsx)(c.U1X, { size: "sm" })))
+                      : y.pathname.startsWith(T.BVt.FRIENDS)
+                        ? ((t = S.intl.string(S.t.TdEu5X)), (G = (0, i.jsx)(c.$yI, { size: "sm" })))
+                        : y.pathname.startsWith(T.BVt.FAMILY_CENTER)
+                          ? ((t = S.intl.string(x.default.RZqaJn)), (G = (0, i.jsx)(c.nFg, { size: "sm" })))
+                          : y.pathname.startsWith(T.BVt.QUEST_HOME) &&
+                            ((t = S.intl.string(S.t.JALI2K)), (G = (0, i.jsx)(c.r2v, { size: "sm" })));
+    let k = r.useCallback((e) => {
+            (0, p.L$)("fast-travel");
         }, []),
-        F = (null == t || "" === t) && n ? x.intl.string(x.t.ZvKwYa) : t;
-    return null == F || "" === F
+        V = (null == t || "" === t) && n ? S.intl.string(S.t.ZvKwYa) : t;
+    return null == V || "" === V
         ? null
         : (0, i.jsx)(d.m_, {
               shouldShow: n,
               ariaHidden: !0,
-              text: x.intl.string(x.t["7P/+qz"]),
+              text: S.intl.string(S.t["7P/+qz"]),
               keyboardShortcut: ["mod", "k"],
               children: (0, i.jsxs)(c.DUT, {
-                  className: a()(y.DD, { [y.Nt]: n }),
-                  "aria-label": x.intl.string(x.t["7P/+qz"]),
+                  className: a()(v.DD, { [v.Nt]: n }),
+                  "aria-label": S.intl.string(S.t["7P/+qz"]),
                   ...l,
-                  onClick: n ? H : void 0,
+                  onClick: n ? k : void 0,
                   children: [
-                      B,
-                      (0, i.jsx)(c.Text, { variant: "text-sm/medium", lineClamp: 1, children: F }),
-                      n && (0, i.jsx)(c._BQ, { className: y.c8, size: "xs" }),
+                      G,
+                      (0, i.jsx)(c.Text, { variant: "text-sm/medium", lineClamp: 1, children: V }),
+                      n && (0, i.jsx)(c._BQ, { className: v.c8, size: "xs" }),
                   ],
               }),
           });

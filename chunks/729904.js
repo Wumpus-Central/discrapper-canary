@@ -85,10 +85,10 @@ class g extends r.Ay.Store {
         return _;
     }
     get canGoBack() {
-        return (0, l.vY)({ location: "canGoBackForward" }) ? f < _.length - 1 : p;
+        return (0, l.v)({ location: "canGoBackForward" }) ? f < _.length - 1 : p;
     }
     get canGoForward() {
-        return (0, l.vY)({ location: "canGoBackForward" }) ? f > 0 : h;
+        return (0, l.v)({ location: "canGoBackForward" }) ? f > 0 : h;
     }
     get backDestination() {
         return this.canGoBack ? _[f + 1] : null;
