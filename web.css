@@ -61311,6 +61311,9 @@ html.disable-forced-colors * {
     --status-warning: var(--yellow-300);
     --status-warning-background: var(--yellow-300);
     --status-warning-text: var(--black);
+    --steam-review-text-mixed: var(--yellow-new-29);
+    --steam-review-text-negative: var(--red-new-24);
+    --steam-review-text-positive: var(--blue-new-26);
     --switch-background-active: var(--blurple-65);
     --switch-background-default: hsl(var(--opacity-black-12-hsl)/0.12156862745098039);
     --switch-background-hover: hsl(var(--opacity-black-12-hsl)/0.12156862745098039);
@@ -61572,6 +61575,9 @@ html.disable-forced-colors * {
         --spoiler-hidden-background: color-mix(in oklab, var(--neutral-36) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --spoiler-hidden-background-hover: color-mix(in oklab, var(--neutral-27) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --spoiler-revealed-background: color-mix(in oklab, var(--primary-660) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --steam-review-text-mixed: color-mix(in oklab, var(--yellow-new-29) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --steam-review-text-negative: color-mix(in oklab, var(--red-new-24) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --steam-review-text-positive: color-mix(in oklab, var(--blue-new-26) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-brand: color-mix(in oklab, var(--blurple-26) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code: color-mix(in oklab, var(--blue-new-16) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code-addition: color-mix(in oklab, var(--green-new-15) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -62028,6 +62034,9 @@ html.disable-forced-colors * {
     --status-warning: var(--yellow-400);
     --status-warning-background: var(--yellow-400);
     --status-warning-text: var(--white);
+    --steam-review-text-mixed: var(--yellow-new-75);
+    --steam-review-text-negative: var(--red-new-50);
+    --steam-review-text-positive: var(--blue-new-53);
     --switch-background-active: var(--blurple-65);
     --switch-background-default: hsl(var(--opacity-black-1-hsl)/0.0196078431372549);
     --switch-background-hover: hsl(var(--opacity-black-1-hsl)/0.0196078431372549);
@@ -62289,6 +62298,9 @@ html.disable-forced-colors * {
         --spoiler-hidden-background: color-mix(in oklab, var(--neutral-31) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --spoiler-hidden-background-hover: color-mix(in oklab, var(--neutral-40) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --spoiler-revealed-background: color-mix(in oklab, var(--primary-160) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
+        --steam-review-text-mixed: color-mix(in oklab, var(--yellow-new-75) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --steam-review-text-negative: color-mix(in oklab, var(--red-new-50) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --steam-review-text-positive: color-mix(in oklab, var(--blue-new-53) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-brand: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code: color-mix(in oklab, var(--blue-new-64) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code-addition: color-mix(in oklab, var(--green-new-68) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -62745,6 +62757,9 @@ html.disable-forced-colors * {
     --status-warning: var(--yellow-300);
     --status-warning-background: var(--yellow-300);
     --status-warning-text: var(--black);
+    --steam-review-text-mixed: var(--yellow-new-55);
+    --steam-review-text-negative: var(--red-new-40);
+    --steam-review-text-positive: var(--blue-new-43);
     --switch-background-active: var(--blurple-65);
     --switch-background-default: hsl(var(--opacity-black-12-hsl)/0.12156862745098039);
     --switch-background-hover: hsl(var(--opacity-black-12-hsl)/0.12156862745098039);
@@ -63006,6 +63021,9 @@ html.disable-forced-colors * {
         --spoiler-hidden-background: color-mix(in oklab, var(--neutral-46) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --spoiler-hidden-background-hover: color-mix(in oklab, var(--neutral-37) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --spoiler-revealed-background: color-mix(in oklab, hsl(var(--plum-11-hsl)/0.16) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.16) var(--custom-theme-base-color-amount, 0%));
+        --steam-review-text-mixed: color-mix(in oklab, var(--yellow-new-55) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --steam-review-text-negative: color-mix(in oklab, var(--red-new-40) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --steam-review-text-positive: color-mix(in oklab, var(--blue-new-43) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-brand: color-mix(in oklab, var(--blurple-42) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code: color-mix(in oklab, var(--blue-new-33) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code-addition: color-mix(in oklab, var(--green-new-32) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -63462,6 +63480,9 @@ html.disable-forced-colors * {
     --status-warning: var(--yellow-300);
     --status-warning-background: var(--yellow-300);
     --status-warning-text: var(--black);
+    --steam-review-text-mixed: var(--yellow-new-51);
+    --steam-review-text-negative: var(--red-new-34);
+    --steam-review-text-positive: var(--blue-new-37);
     --switch-background-active: var(--blurple-65);
     --switch-background-default: hsl(var(--opacity-black-12-hsl)/0.12156862745098039);
     --switch-background-hover: hsl(var(--opacity-black-12-hsl)/0.12156862745098039);
@@ -63723,6 +63744,9 @@ html.disable-forced-colors * {
         --spoiler-hidden-background: color-mix(in oklab, var(--neutral-43) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --spoiler-hidden-background-hover: color-mix(in oklab, var(--neutral-34) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --spoiler-revealed-background: color-mix(in oklab, hsl(var(--plum-11-hsl)/0.16) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.16) var(--custom-theme-base-color-amount, 0%));
+        --steam-review-text-mixed: color-mix(in oklab, var(--yellow-new-51) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --steam-review-text-negative: color-mix(in oklab, var(--red-new-34) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --steam-review-text-positive: color-mix(in oklab, var(--blue-new-37) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-brand: color-mix(in oklab, var(--blurple-36) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code: color-mix(in oklab, var(--blue-new-27) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --text-code-addition: color-mix(in oklab, var(--green-new-26) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
