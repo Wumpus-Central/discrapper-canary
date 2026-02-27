@@ -118,8 +118,8 @@ function _(e) {
             }
         }, [P, E, O.reducedMotion.enabled]),
         i.useLayoutEffect(() => {
-            if (null != P && "layout" === _) {
-                P.resizeDrawingSurfaceToCanvas();
+            if (null != P) {
+                "layout" === _ && P.resizeDrawingSurfaceToCanvas();
                 let e = setTimeout(() => {
                     null != P.canvas && P.resizeDrawingSurfaceToCanvas();
                 }, 100);
