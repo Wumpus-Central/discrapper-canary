@@ -22,8 +22,8 @@ var i = n(627968),
     N = n(652215),
     S = n(165610),
     x = n(985018),
-    v = n(870236),
-    y = n(963369);
+    v = n(842130),
+    y = n(878251);
 function b(e) {
     let t,
         { withFastTravel: n, focusSectionProps: l } = e,
@@ -75,7 +75,7 @@ function b(e) {
                         ? ((t = x.intl.string(x.t.TdEu5X)), (B = (0, i.jsx)(c.$yI, { size: w })))
                         : b.pathname.startsWith(N.BVt.FAMILY_CENTER)
                           ? ((t = x.intl.string(v.default.RZqaJn)), (B = (0, i.jsx)(c.nFg, { size: w })))
-                          : b.pathname.startsWith(N.BVt.QUEST_HOME_V2) &&
+                          : b.pathname.startsWith(N.BVt.QUEST_HOME) &&
                             ((t = x.intl.string(x.t.JALI2K)), (B = (0, i.jsx)(c.r2v, { size: w })));
     let H = r.useCallback((e) => {
             (0, g.L$)("fast-travel");

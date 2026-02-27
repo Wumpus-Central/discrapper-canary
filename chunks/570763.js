@@ -203,7 +203,7 @@ let eI = function (e) {
                 (0, I.Cz)({ tab: el.G2.ORBS, analyticsLocations: [], analyticsSource: m.A.ORBS_BALANCE_MENU });
         }, []);
     r.useEffect(() => {
-        (0, h.I)(er.BVt.QUEST_HOME_V2);
+        (0, h.I)(er.BVt.QUEST_HOME);
     }, []),
         r.useEffect(() => {
             N.g.trigger();

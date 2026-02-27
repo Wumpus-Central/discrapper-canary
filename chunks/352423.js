@@ -285,11 +285,11 @@ function j(e) {
     return j && L?.startsWith("/discovery/quests")
         ? (e) => (e?.preventDefault(), (0, N.navigateToQuestHome)({ fromContent: i.u.QUEST_BADGE }), !0)
         : j && L?.startsWith("/quest-home")
-          ? (e) => (e?.preventDefault(), (0, C.pX)(G.BVt.QUEST_HOME_V2 + (M ?? "")), !0)
+          ? (e) => (e?.preventDefault(), (0, C.pX)(G.BVt.QUEST_HOME + (M ?? "")), !0)
           : j && L?.startsWith("/quest-preview")
             ? (e) => {
                   if ((e?.preventDefault(), (0, v.U)({ location: F.rE.NAVIGATE_TO_QUEST_HOME_UTIL })))
-                      return (0, C.pX)(G.BVt.QUEST_HOME_V2 + `?tab=preview_tool&quest_id=${L.split("/").at(-1)}`), !0;
+                      return (0, C.pX)(G.BVt.QUEST_HOME + `?tab=preview_tool&quest_id=${L.split("/").at(-1)}`), !0;
               }
             : j && L?.startsWith("/discovery/servers")
               ? (e) => (

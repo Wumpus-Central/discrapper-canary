@@ -1,8 +1,8 @@
 n.d(t, { A: () => p }), n(323874), n(14289), n(35956), n(321073);
 var i = n(627968),
     r = n(64700),
-    a = n(960488),
-    l = n(311907),
+    l = n(873263),
+    a = n(311907),
     s = n(73153),
     o = n(829219),
     d = n(859703),
@@ -17,26 +17,26 @@ function m(e) {
 let p = function (e) {
     let { questId: t } = e,
         { questId: n, setQuestId: p } = (function (e) {
-            let t = (0, a.W6)(),
+            let t = (0, l.W6)(),
                 [n, i] = r.useState(e),
-                { search: l } = (0, a.zy)();
+                { search: a } = (0, l.zy)();
             return (
                 r.useEffect(() => {
-                    let t = m(l);
+                    let t = m(a);
                     null != t ? i(t) : null != e && i(e);
-                }, [e, l]),
+                }, [e, a]),
                 r.useEffect(() => {
-                    if (null == n || m(l) === n) return;
+                    if (null == n || m(a) === n) return;
                     let e = new URLSearchParams();
                     e.set(c.L1.TAB, c.NC.PREVIEW_TOOL),
                         e.set(c.L1.QUEST_ID, n),
-                        t.push(`${_.BVt.QUEST_HOME_V2}?${e.toString()}`);
-                }, [n, t, l]),
+                        t.push(`${_.BVt.QUEST_HOME}?${e.toString()}`);
+                }, [n, t, a]),
                 { questId: n, setQuestId: i }
             );
         })(t),
-        g = (0, l.bG)([d.A], () => (null != n ? d.A.getQuest(n) : void 0), [n]),
-        E = (0, l.bG)([d.A], () => (null != n ? d.A.getQuestLoadedViaPreview(n) : null), [n]);
+        g = (0, a.bG)([d.A], () => (null != n ? d.A.getQuest(n) : void 0), [n]),
+        E = (0, a.bG)([d.A], () => (null != n ? d.A.getQuestLoadedViaPreview(n) : null), [n]);
     r.useEffect(() => {
         null != n &&
             (0, o.dQ)(n).then(() => {
@@ -55,7 +55,7 @@ let p = function (e) {
                 }
             );
         }, [n]);
-    let [f, I] = r.useState([]);
+    let [I, f] = r.useState([]);
     return (0, i.jsx)(A.A, {
         controls: (0, i.jsx)(u.A, {
             questId: n,
@@ -65,10 +65,10 @@ let p = function (e) {
                 null != n && (0, o.dQ)(n);
             },
         }),
-        selectedSections: f,
+        selectedSections: I,
         onSectionSelect: (e) => {
-            "all" === e ? I([]) : I([e]);
+            "all" === e ? f([]) : f([e]);
         },
-        children: E?.id != null ? (0, i.jsx)(h.Ok, { questId: E?.id, selectedSections: f }) : null,
+        children: E?.id != null ? (0, i.jsx)(h.Ok, { questId: E?.id, selectedSections: I }) : null,
     });
 };

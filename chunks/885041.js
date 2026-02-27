@@ -407,7 +407,7 @@ let tc = [
             e4.BVt.COLLECTIBLES_SHOP_LAYOUT(":layoutId"),
             e4.BVt.GUILD_DISCOVERY,
             e4.BVt.QUEST_HOME_DEPRECATED,
-            e4.BVt.QUEST_HOME_V2,
+            e4.BVt.QUEST_HOME,
             e4.BVt.ICYMI,
             e4.BVt.GLOBAL_DISCOVERY,
             e4.BVt.GUILD_MEMBER_VERIFICATION(eS.pv.guildId()),

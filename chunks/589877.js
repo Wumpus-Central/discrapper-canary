@@ -47,7 +47,7 @@ function E(e) {
                 let e = new URLSearchParams();
                 e.set(u.L1.TAB, u.NC.PREVIEW_TOOL),
                     e.set(u.L1.QUEST_ID, i),
-                    (0, h.bG)({ pathname: N.BVt.QUEST_HOME_V2, search: `?${e.toString()}` });
+                    (0, h.bG)({ pathname: N.BVt.QUEST_HOME, search: `?${e.toString()}` });
             }
         }
     }, [t, i]);

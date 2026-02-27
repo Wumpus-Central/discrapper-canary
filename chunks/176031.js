@@ -43,8 +43,8 @@ var i = n(627968),
     Y = n(385327),
     q = n(727949),
     W = n(466336),
-    K = n(615003),
-    z = n(442802),
+    z = n(615003),
+    K = n(442802),
     $ = n(67173),
     Q = n(793322),
     X = n(366811),
@@ -63,8 +63,8 @@ var i = n(627968),
     ec = n(49999),
     eu = n(788868),
     eA = n(985018),
-    eh = n(870236),
-    e_ = n(101265);
+    eh = n(842130),
+    e_ = n(870463);
 let em = (e) => {
         let { selected: t, ...n } = e,
             r = (0, P.c)("PrivateChannels.ICYMIButton"),
@@ -151,7 +151,7 @@ let em = (e) => {
                               children: R(),
                           }),
                           !c &&
-                              (0, i.jsx)(z.A, {
+                              (0, i.jsx)(K.A, {
                                   className: e_.t_,
                                   wind: 0,
                                   sprites: ed.uI,
@@ -363,7 +363,7 @@ let eS = r.memo(function (e) {
                                   "div",
                                   {
                                       children: [
-                                          (0, i.jsx)(K.o, {
+                                          (0, i.jsx)(z.o, {
                                               nitroTabButtonRef: C,
                                               selected: null == m ? s : m.startsWith(eo.BVt.APPLICATION_STORE),
                                               route: eo.BVt.APPLICATION_STORE,
@@ -411,9 +411,7 @@ let eS = r.memo(function (e) {
                             $.A,
                             {
                                 selected:
-                                    null == m
-                                        ? null != l && l.startsWith(eo.BVt.QUEST_HOME_V2)
-                                        : m === eo.BVt.QUEST_HOME_V2,
+                                    null == m ? null != l && l.startsWith(eo.BVt.QUEST_HOME) : m === eo.BVt.QUEST_HOME,
                             },
                             "quests",
                         ),
@@ -445,7 +443,7 @@ function ev() {
             let { channelId: t, path: n } = e;
             return [t, n];
         }, s.x),
-        _ = (0, K.P)({ selected: null == h ? r : h.startsWith(eo.BVt.APPLICATION_STORE) }),
+        _ = (0, z.P)({ selected: null == h ? r : h.startsWith(eo.BVt.APPLICATION_STORE) }),
         m = (0, q.Tp)(),
         p = (0, u.bG)([k.A], () => k.A.getReminderStateId()),
         g = (0, Y.c7)(),

@@ -110,7 +110,7 @@ function H() {
     let r = null != t ? `#${t}` : "";
     n && u.A.setState({ selectedTab: w.GlobalDiscoveryTab.QUESTS }),
         (0, d.default)(),
-        (0, c.pX)((n ? L.BVt.QUEST_HOME_DEPRECATED : L.BVt.QUEST_HOME_V2) + r);
+        (0, c.pX)((n ? L.BVt.QUEST_HOME_DEPRECATED : L.BVt.QUEST_HOME) + r);
 }
 let j = 0.2;
 function Y(e) {
@@ -189,7 +189,7 @@ function $(e) {
             source: n.utmSource,
         }),
         p.A.launch(t, (t) => {
-            t || (0, c.bG)({ pathname: L.BVt.QUEST_HOME_V2, hash: e });
+            t || (0, c.bG)({ pathname: L.BVt.QUEST_HOME, hash: e });
         });
 }
 function q(e) {
@@ -213,7 +213,7 @@ function Z(e) {
             source: n.utmSource,
         }),
         p.A.launch(t, (t) => {
-            t || (0, c.bG)({ pathname: L.BVt.QUEST_HOME_V2, hash: e });
+            t || (0, c.bG)({ pathname: L.BVt.QUEST_HOME, hash: e });
         });
 }
 function X(e) {
