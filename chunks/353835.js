@@ -2,6 +2,9 @@
 n.d(t, { A: () => i });
 var r = n(837921);
 let i = {
+    clearNavigationHistory() {
+        r.Ay.clearNavigationHistory();
+    },
     flushDNSCache() {
         r.Ay.flushDNSCache();
     },

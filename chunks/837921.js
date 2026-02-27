@@ -494,6 +494,9 @@ let H = {
         close(e) {
             m.window.close(e);
         },
+        clearNavigationHistory() {
+            B("NAVIGATION_HISTORY_CLEAR");
+        },
         setAlwaysOnTop(e, t) {
             "function" == typeof m.window.setAlwaysOnTop && m.window.setAlwaysOnTop(e, t);
         },
