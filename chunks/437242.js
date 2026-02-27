@@ -10,16 +10,16 @@ var s = n(311907),
     d = n(287809),
     c = n(239705),
     u = n(985018),
-    m = n(434499);
+    m = n(86181);
 function g(e) {
     let { action: t, triggerType: n, toggled: g, onToggleAction: x } = e,
         h = (e) => () => x(e),
         _ = (0, c.x)(t.type, t, n),
-        A = t.metadata?.channelId,
-        p = (0, s.bG)([d.default, o.A, a.A], () => {
-            let e = a.A.getChannel(A);
+        p = t.metadata?.channelId,
+        A = (0, s.bG)([d.default, o.A, a.A], () => {
+            let e = a.A.getChannel(p);
             return null == e ? null : (0, r.m1)(e, d.default, o.A);
-        }, [A]);
+        }, [p]);
     if (null == _) return null;
     let { headerText: f, descriptionText: j, icon: N } = _;
     return (0, i.jsxs)("div", {
@@ -39,7 +39,7 @@ function g(e) {
                             color: "text-muted",
                             variant: "text-xs/medium",
                             children: [
-                                null != p && u.intl.format(u.t["8Sr/ar"], { channelName: p }),
+                                null != A && u.intl.format(u.t["8Sr/ar"], { channelName: A }),
                                 (0, i.jsx)(l.DUT, {
                                     onClick: h(!0),
                                     className: m._2,

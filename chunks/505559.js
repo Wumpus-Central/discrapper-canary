@@ -2,7 +2,7 @@ n.d(t, { A: () => l });
 var i = n(627968);
 n(64700);
 var s = n(397927),
-    a = n(296137);
+    a = n(23579);
 let l = (e) => {
     let { enablePremiumBrandRefresh: t = !1, text: n } = e;
     return (0, i.jsx)("div", {

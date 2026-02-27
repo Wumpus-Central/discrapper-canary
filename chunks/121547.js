@@ -8,9 +8,9 @@ var i = n(627968),
     c = n(713517),
     d = n(384377),
     u = n(808247),
-    g = n(518477),
-    m = n(985018),
-    x = n(24917);
+    m = n(518477),
+    g = n(985018),
+    x = n(799559);
 function f(e) {
     let { wishlistId: t, sku: n, spec: a, analyticsLocations: f, isHoveringOrFocusing: p, onHoverOrFocusChange: h } = e,
         _ = l.useRef(null),
@@ -27,15 +27,15 @@ function f(e) {
             try {
                 await u.A.removeSkuFromWishlist(t, n.id, f);
             } catch (e) {
-                (0, d.XA)(g.jM.SOMETHING_WENT_WRONG);
+                (0, d.XA)(m.jM.SOMETHING_WENT_WRONG);
             }
     }, [t, n.id, f]);
     return (0, i.jsx)(r.m, {
-        text: m.intl.string(m.t.jTW016),
+        text: g.intl.string(g.t.jTW016),
         children: (0, i.jsx)(o.DUT, {
             innerRef: _,
             onClick: j,
-            "aria-label": m.intl.string(m.t.jTW016),
+            "aria-label": g.intl.string(g.t.jTW016),
             className: s()(x.vk, { [x.P8]: A || p }),
             style: { top: a.iconInset, insetInlineEnd: a.iconInset },
             children: (0, i.jsx)(o.C3E, { size: "refresh_sm", colorClass: x.Kk }),

@@ -15,7 +15,7 @@ var i = n(627968),
     g = n(427262),
     A = n(652215),
     x = n(985018),
-    f = n(42441);
+    f = n(563111);
 function C(e) {
     let { invite: t, message: n, getAcceptInviteContext: C } = e,
         E = (0, a.bG)([m.default], () => m.default.getId()),

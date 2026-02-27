@@ -30,7 +30,7 @@ var r = n(627968),
     D = n(806931),
     L = n(544105),
     w = n(985018),
-    x = n(377157);
+    x = n(77615);
 let M = 16,
     P = (e) => {
         let { hangStatusActivity: t, iconClassName: n, isSelf: i, onAddHangStatusClicked: s, userId: o } = e,
@@ -234,9 +234,9 @@ let G = function (e) {
         z = (0, g.A)({ userId: K.id, guildId: G }),
         $ = (0, A.a)({ displayNameStyles: z }),
         q = (0, m.A)(K.id),
-        X = (0, h.v)({ isSpeaking: L, voiceDb: q }),
-        Z = (0, u.bG)([v.A], () => v.A.getProgressForUserId(K.id), [K.id]),
-        Q = (0, y.Uk)("VoiceUser") && null != Z,
+        Z = (0, h.v)({ isSpeaking: L, voiceDb: q }),
+        X = (0, u.bG)([v.A], () => v.A.getProgressForUserId(K.id), [K.id]),
+        Q = (0, y.Uk)("VoiceUser") && null != X,
         J = (e) => {
             p?.(e, K);
         },
@@ -262,7 +262,7 @@ let G = function (e) {
     }
     function es() {
         let e = a()(x.my, { [x.Jb]: i === O.OSZ.LARGE, [x.dT]: i === O.OSZ.SMALL }),
-            n = { backgroundImage: `url(${K.getAvatarURL(G, i === O.OSZ.LARGE ? 38 : 24)})`, ...X };
+            n = { backgroundImage: `url(${K.getAvatarURL(G, i === O.OSZ.LARGE ? 38 : 24)})`, ...Z };
         return Q
             ? (0, r.jsx)(N.A, {
                   userId: K.id,

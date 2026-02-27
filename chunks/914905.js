@@ -20,7 +20,7 @@ var r = n(627968),
     I = n(851023),
     T = n(349688),
     S = n(985018),
-    y = n(977191);
+    y = n(76397);
 let v = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif", "video/quicktime", "video/mp4"];
 function N(e) {
     let { alt: t, spoiler: n, renderContent: s, size: o } = e,

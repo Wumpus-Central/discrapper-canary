@@ -8,7 +8,7 @@ var i = n(627968),
     c = n(403362),
     d = n(175203),
     u = n(806931),
-    h = n(79932);
+    h = n(107826);
 let m = 112,
     A = (16 / 9) * 112 + 8,
     g = 10 * o.A.Millis.SECOND;
@@ -68,23 +68,23 @@ function f(e, t) {
                 I = Math.max(0, C - A.length),
                 T = A.slice(0, C),
                 N = m.slice(0, I),
-                y = Array(I);
+                b = Array(I);
             if (I > 0) {
                 let e = [];
                 for (let t of N) {
                     let n = E.current[t.id];
-                    null != n && n < I ? (y[n] = t) : e.push(t);
+                    null != n && n < I ? (b[n] = t) : e.push(t);
                 }
-                for (let t = 0; t < y.length; t++) {
-                    if (null != y[t]) continue;
+                for (let t = 0; t < b.length; t++) {
+                    if (null != b[t]) continue;
                     let n = e.shift();
                     if (null == n) break;
-                    y[t] = n;
+                    b[t] = n;
                 }
             }
-            let b = y.filter(c.Vq);
-            E.current = (0, s.keyBy)((0, s.range)(b.length), (e) => b[e].id);
-            let v = [...T, ...b];
+            let y = b.filter(c.Vq);
+            E.current = (0, s.keyBy)((0, s.range)(y.length), (e) => y[e].id);
+            let v = [...T, ...y];
             return (
                 null != _ && (h && v.length >= C ? (v[Math.max(0, v.length - 1)] = _) : v.push(_)),
                 { visibleParticipants: v, participantTileWidth: S }

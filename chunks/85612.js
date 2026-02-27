@@ -3,7 +3,7 @@ var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(442215),
+    r = n(475539),
     o = n(311907),
     c = n(397927),
     d = n(964486),
@@ -22,8 +22,8 @@ var i = n(627968),
     I = n(474090),
     T = n(927578),
     N = n(971778),
-    y = n(494783),
-    b = n(342887),
+    b = n(494783),
+    y = n(342887),
     v = n(606451),
     j = n(177392),
     R = n(185494),
@@ -33,9 +33,9 @@ var i = n(627968),
     L = n(806931),
     P = n(788868),
     k = n(731854),
-    w = n(3683),
+    w = n(734317),
     U = n(985018),
-    G = n(311192);
+    G = n(632998);
 function F(e) {
     let { onSettingsButtonClick: t, wide: n, showOutputDevices: s = !1, showSearchBar: F = !0 } = e,
         [H, B] = l.useState(""),
@@ -54,7 +54,7 @@ function F(e) {
         q = (0, o.bG)([N.A], () => N.A.getCatalogUpdateTime()),
         [J, $] = l.useState(!1),
         [Z, X] = l.useState(!1),
-        { activeVoice: Q } = (0, y.f)(),
+        { activeVoice: Q } = (0, b.f)(),
         ee = (0, c.zhh)({
             transform: J ? "translateY(-8px) scale(0.96)" : "translateY(0px) scale(1)",
             config: { duration: 150, mass: 1, stiffness: 711.1, damping: 40 },
@@ -66,7 +66,7 @@ function F(e) {
         }),
         ei = l.useRef(null);
     (0, d.Ay)(() => {
-        (0, b.md)(), S.default.track(O.HAw.VOICE_FILTER_PICKER_OPENED, { active_voice_filter_id: Q ?? null });
+        (0, y.md)(), S.default.track(O.HAw.VOICE_FILTER_PICKER_OPENED, { active_voice_filter_id: Q ?? null });
     });
     let el = l.useCallback(() => B(""), [B]),
         es = l.useRef(null),

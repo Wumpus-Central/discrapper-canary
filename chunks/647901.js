@@ -4,7 +4,7 @@ var n = a(627968),
     r = a(64700),
     i = a(503698),
     s = a.n(i),
-    l = a(6211);
+    l = a(865513);
 let o = {
         SIZE: { default: void 0, reduced: l.k2 },
         COLOR: { default: void 0, muted: l.JF },

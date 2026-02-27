@@ -4,7 +4,7 @@ var i = n(627968),
     s = n(64700),
     l = n(503698),
     r = n.n(l),
-    a = n(442215),
+    a = n(475539),
     o = n(110259),
     c = n(311907),
     d = n(435371),
@@ -21,8 +21,8 @@ var i = n(627968),
     E = n(778768),
     I = n(652215),
     N = n(985018),
-    b = n(314957),
-    S = n(377157);
+    b = n(430023),
+    S = n(77615);
 let T = (e) => 1 - Math.pow(1 - e, 4);
 function y(e) {
     let { channel: t, onClose: l } = e,
@@ -62,7 +62,7 @@ function y(e) {
         Y = s.useCallback(() => {
             null != P &&
                 (0, u.mMO)(async () => {
-                    let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("97710")]).then(
+                    let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("74918")]).then(
                         n.bind(n, 234355),
                     );
                     return (n) => (0, i.jsx)(e, { ...n, guild: P, channel: t, source: I.PE1.VOICE_INVITE_SUGGESTIONS });

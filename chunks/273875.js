@@ -10,7 +10,7 @@ var i = n(627968),
     c = n(765671),
     u = n(775602),
     m = n(530552),
-    g = n(90285);
+    g = n(318023);
 let x = s.forwardRef(function (e, t) {
     let { value: n, isSelected: l, isEditing: a, forceShowErrorTooltip: d = !1, error: c } = e,
         [u, m, x] = s.useMemo(() => {
@@ -62,8 +62,8 @@ function h(e) {
             onFocus: o,
             onRemove: h,
             isSelected: _,
-            isSelecting: A,
-            error: p,
+            isSelecting: p,
+            error: A,
             forceShowErrorTooltip: f,
         } = e,
         j = s.useRef(null),
@@ -138,7 +138,7 @@ function h(e) {
         className: g.G1,
         children: (0, i.jsxs)("div", {
             ref: I,
-            className: r()(g.Tm, { [g.JN]: E, [g.mV]: !E && !S, [g.sp]: _, [g.Pq]: A, [g.bJ]: null != p && !E }),
+            className: r()(g.Tm, { [g.JN]: E, [g.mV]: !E && !S, [g.sp]: _, [g.Pq]: p, [g.bJ]: null != A && !E }),
             children: [
                 (0, i.jsxs)(d.DUT, {
                     tag: "div",
@@ -147,11 +147,11 @@ function h(e) {
                     ignoreKeyPress: !0,
                     onMouseEnter: () => R(!0),
                     onMouseLeave: () => R(!1),
-                    className: r()(g.nz, { [g.Pq]: A, [g.JN]: E }),
+                    className: r()(g.nz, { [g.Pq]: p, [g.JN]: E }),
                     ref: N,
                     children: [
                         (0, i.jsx)("input", {
-                            className: r()(g.uS, { [g.JN]: E, [g.Pq]: A }),
+                            className: r()(g.uS, { [g.JN]: E, [g.Pq]: p }),
                             ref: j,
                             onChange: L,
                             onKeyDownCapture: M,
@@ -163,7 +163,7 @@ function h(e) {
                             value: t,
                             isEditing: E,
                             isSelected: _,
-                            error: p,
+                            error: A,
                             forceShowErrorTooltip: y || E,
                         }),
                     ],

@@ -33,7 +33,7 @@ var i = n(627968),
     D = n(250632),
     M = n(652215),
     w = n(985018),
-    U = n(532439);
+    U = n(59790);
 let G = (e) => {
         let { className: t, children: n, onContextMenu: r, item: l } = e;
         return (0, i.jsx)("div", { className: t, onContextMenu: (e) => r(e, l), children: n });
@@ -124,7 +124,7 @@ function Y(e) {
     }
     throw Error("Invalid Dispatch stage");
 }
-class W extends r.PureComponent {
+class q extends r.PureComponent {
     get isFocused() {
         let { cellProps: e } = this.props;
         return null != e && e.isFocused;
@@ -286,7 +286,7 @@ class W extends r.PureComponent {
         return null;
     }
 }
-let q = () => (0, i.jsx)(V, { icon: _.udU, tooltip: w.intl.string(w.t.YGm6SZ), onClick: () => g.U() }),
+let W = () => (0, i.jsx)(V, { icon: _.udU, tooltip: w.intl.string(w.t.YGm6SZ), onClick: () => g.U() }),
     K = () => (0, i.jsx)(V, { icon: _.E$n, tooltip: w.intl.string(w.t.TVAd5J), onClick: () => g.v7() }),
     z = (e) => {
         let { item: t } = e;
@@ -322,7 +322,7 @@ let q = () => (0, i.jsx)(V, { icon: _.udU, tooltip: w.intl.string(w.t.YGm6SZ), o
             cellClassName: U.Ay,
             headerCellClassName: U.VD,
             bodyCellClassName: U.so,
-            render: (e, t) => (0, i.jsx)(W, { item: e, cellProps: t }),
+            render: (e, t) => (0, i.jsx)(q, { item: e, cellProps: t }),
         },
         {
             key: "actions",
@@ -345,7 +345,7 @@ let q = () => (0, i.jsx)(V, { icon: _.udU, tooltip: w.intl.string(w.t.YGm6SZ), o
                                 e.index > 0
                                     ? (0, i.jsx)(z, { item: e })
                                     : null != t && t.paused
-                                      ? (0, i.jsx)(q, {})
+                                      ? (0, i.jsx)(W, {})
                                       : (0, i.jsx)(K, { item: e })),
                             (r = (0, i.jsx)($, { item: e })))
                           : (r = (0, i.jsx)($, { item: e })),

@@ -18,8 +18,8 @@ var i = n(627968),
     f = n(878831),
     C = n(768349),
     E = n(985018),
-    I = n(62323),
-    b = n(748921);
+    I = n(609653),
+    b = n(103467);
 function T(e) {
     let { message: t, applicationName: n, iconSrc: l, channel: r, currentUserId: s, viewAction: d } = e,
         c = (0, m.Ay)(t),
@@ -69,8 +69,8 @@ function v(e) {
             accountLinkButtonRef: M,
             renderAccountLinkUpsell: w,
         } = e,
-        k = (0, s.bG)([g.A], () => g.A.getMessages(a.id)),
-        { actions: D, hasAccountLinkButton: O } = l.useMemo(() => {
+        D = (0, s.bG)([g.A], () => g.A.getMessages(a.id)),
+        { actions: k, hasAccountLinkButton: O } = l.useMemo(() => {
             let e = [],
                 i = !0,
                 l = !1;
@@ -89,7 +89,7 @@ function v(e) {
                     : null != b && ((e = [b]), (i = !1)),
                 e.length > 0)
             )
-                if (!(0, x.p)(t.id, k, n.id, j)) return { actions: [], hasAccountLinkButton: !1 };
+                if (!(0, x.p)(t.id, D, n.id, j)) return { actions: [], hasAccountLinkButton: !1 };
                 else
                     R &&
                         i &&
@@ -105,22 +105,22 @@ function v(e) {
                         }),
                         (l = !0));
             return { actions: e, hasAccountLinkButton: l };
-        }, [p, h, b, k, j, n.id, t.id, R, P, L, M]),
-        U = D.some((e) => e.trackingArea === u.kY.CLOUD_PLAY);
+        }, [p, h, b, D, j, n.id, t.id, R, P, L, M]),
+        U = k.some((e) => e.trackingArea === u.kY.CLOUD_PLAY);
     (0, f.A)(U, L);
-    let G = D.length > 0,
-        B = l.useMemo(
+    let B = k.length > 0,
+        G = l.useMemo(
             () =>
                 (0, i.jsx)(o.Text, {
                     variant: "text-xs/medium",
                     className: I.h_,
                     color: "none",
                     lineClamp: 3,
-                    children: (0, A.BE)(t, r, a, m, G),
+                    children: (0, A.BE)(t, r, a, m, B),
                 }),
-            [t, r, a, m, G],
+            [t, r, a, m, B],
         );
-    return 0 === D.length
+    return 0 === k.length
         ? (0, i.jsx)(T, { message: t, applicationName: r, iconSrc: y, channel: a, currentUserId: m, viewAction: S })
         : (0, i.jsxs)(i.Fragment, {
               children: [
@@ -131,8 +131,8 @@ function v(e) {
                       onClickBanner: S,
                       bannerAspectRatio: c.u.ACTIVITY,
                       iconSrc: y ?? void 0,
-                      info: B,
-                      actions: D,
+                      info: G,
+                      actions: k,
                       primaryActionFirst: !0,
                       onClickContent: S,
                       trackingConfig: {

@@ -20,7 +20,7 @@ var i = n(627968),
     E = n(536189),
     I = n(652215),
     b = n(272984),
-    T = n(62323);
+    T = n(609653);
 function v(e) {
     let { partyMembers: t, partySize: n, maxPartySize: l, guildId: r, activityActionType: s } = e,
         o = Math.max(n, t.length),
@@ -72,7 +72,7 @@ function S(e) {
                 }),
             [R],
         ),
-        k = l.useMemo(
+        D = l.useMemo(
             () =>
                 (0, i.jsx)(v, {
                     partyMembers: w,
@@ -90,7 +90,7 @@ function S(e) {
               hideParty: T,
               message: g,
               onView: S,
-              partyStatusElement: k,
+              partyStatusElement: D,
               presenceActivity: j,
               guildId: a.guild_id,
           })
@@ -105,7 +105,7 @@ function S(e) {
                 hideParty: T,
                 message: g,
                 onView: S,
-                partyStatusElement: k,
+                partyStatusElement: D,
                 presenceActivity: j,
             });
 }

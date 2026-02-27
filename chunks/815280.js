@@ -9,7 +9,7 @@ var l = n(503698),
     o = n(775602),
     c = n(607470),
     d = n(531685),
-    u = n(24212);
+    u = n(402314);
 let g = (e) => {
     let { bannerStatic: t, bannerAnimated: n, bannerRive: l, isResponsive: g = !1, eventTargetRef: _ } = e,
         m = (0, a.bG)([o.A], () => o.A.useReducedMotion),

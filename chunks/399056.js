@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => A });
+n.d(t, { A: () => p });
 var i = n(627968),
     s = n(64700),
     l = n(417597),
@@ -10,7 +10,7 @@ var i = n(627968),
     c = n(132514),
     u = n(987957),
     m = n(985018),
-    g = n(499323);
+    g = n(659233);
 let x = [];
 function h() {
     return (0, i.jsx)("div", {
@@ -39,7 +39,7 @@ function _(e) {
         a = s.useCallback(() => {
             if (null != t)
                 return (0, r.mMO)(async () => {
-                    let { default: e } = await Promise.all([n.e("54569"), n.e("4593")]).then(n.bind(n, 251632));
+                    let { default: e } = await Promise.all([n.e("54569"), n.e("76945")]).then(n.bind(n, 251632));
                     return (n) => (0, i.jsx)(e, { ...n, guildId: t, onSave: l });
                 });
         }, [t, l]);
@@ -52,7 +52,7 @@ function _(e) {
         ],
     });
 }
-let A = function (e) {
+let p = function (e) {
     let { guildId: t } = e,
         n = (0, l.yK)([c.A], () => c.A.getSettings().newMemberActions ?? x),
         r = s.useCallback((e, t) => {
@@ -68,18 +68,18 @@ let A = function (e) {
             },
             [n, t],
         ),
-        A = s.useCallback(
+        p = s.useCallback(
             (e) => {
                 let t = n[e]?.channelId;
                 null != t && (0, d.sd)(t);
             },
             [n],
         ),
-        p = n.map((e) => ({ ...e, id: e.channelId })),
+        A = n.map((e) => ({ ...e, id: e.channelId })),
         f = s.useCallback((e) => {
             (0, d.DE)(e);
         }, []),
-        { handleDragStart: j, handleDragReset: N, handleDragComplete: E } = (0, a.A)(p, f);
+        { handleDragStart: j, handleDragReset: N, handleDragComplete: E } = (0, a.A)(A, f);
     return (0, i.jsxs)("div", {
         className: g.uW,
         children: [
@@ -91,7 +91,7 @@ let A = function (e) {
                         action: e,
                         actionIndex: n,
                         onChange: m,
-                        onDelete: A,
+                        onDelete: p,
                         onDragStart: j,
                         onDragReset: N,
                         onDragComplete: E,

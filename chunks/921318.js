@@ -27,7 +27,7 @@ var i = n(627968),
     b = n(344917),
     O = n(652215),
     L = n(985018),
-    R = n(790870);
+    R = n(68e4);
 function P(e) {
     let { user: t, index: n, isCompetitive: r } = e,
         { status: l, isMobile: a } = (0, o.cf)([T.A], () => ({

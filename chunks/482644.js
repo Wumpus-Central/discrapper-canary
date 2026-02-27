@@ -15,7 +15,7 @@ var l = n(627968),
     p = n(954571),
     A = n(652215),
     f = n(559868),
-    x = n(816169);
+    x = n(60639);
 let v = o().defaultRules.link,
     N = { section: A.JJy.SETTINGS_CHANGELOG },
     b = (e) => {

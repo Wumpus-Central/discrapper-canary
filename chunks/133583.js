@@ -29,7 +29,7 @@ var i = n(627968),
     k = n(518477),
     R = n(188275),
     w = n(985018),
-    L = n(376721);
+    L = n(39427);
 function O(e) {
     let { isSocialLayerStorefrontEnabled: t, handleOpenShop: n, handleOpenGameShop: l } = e;
     return t

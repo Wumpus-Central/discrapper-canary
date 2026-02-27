@@ -14,14 +14,14 @@ var i = n(627968),
     x = n(923121),
     h = n(352821),
     _ = n(107795),
-    A = n(655943),
-    p = n(259866),
+    p = n(655943),
+    A = n(259866),
     f = n(699256),
     j = n(191117),
     N = n(652215),
     E = n(539916),
     b = n(985018),
-    T = n(981317);
+    T = n(42483);
 function C(e) {
     let { guildId: t, prompts: n } = e,
         r = (0, l.bG)([m.A], () => m.A.editedDefaultChannelIds),
@@ -30,14 +30,14 @@ function C(e) {
         x = d.length + u.length,
         h = (g / x) * 100,
         _ = Math.max(Math.ceil((85 * x) / 100) - g, 0),
-        [A, p] = s.useState(!1),
-        f = A ? a.abt : a.tN5;
+        [p, A] = s.useState(!1),
+        f = p ? a.abt : a.tN5;
     return (0, i.jsxs)("div", {
         className: T.Kf,
         children: [
             (0, i.jsxs)(a.DUT, {
                 className: T.a9,
-                onClick: () => p(!A),
+                onClick: () => A(!p),
                 children: [
                     (0, i.jsxs)("div", {
                         className: T.Vn,
@@ -64,7 +64,7 @@ function C(e) {
                     }),
                 ],
             }),
-            A
+            p
                 ? (0, i.jsxs)("div", {
                       className: T.k$,
                       children: [
@@ -126,8 +126,8 @@ function I(e) {
 function v(e) {
     let { guild: t, saveOnClose: n } = e,
         r = (0, l.bG)([d.A], () => d.A.isLoading()),
-        o = (0, l.bG)([A.A], () => A.A.editedOnboardingPrompts),
-        c = (0, l.bG)([A.A], () => A.A.advancedMode),
+        o = (0, l.bG)([p.A], () => p.A.editedOnboardingPrompts),
+        c = (0, l.bG)([p.A], () => p.A.advancedMode),
         u = s.useRef(!1);
     s.useEffect(() => {
         r || u.current || ((u.current = !0), c || 0 !== o.length || (0, _.WC)(t, [(0, E.Mc)()], !1));
@@ -189,7 +189,7 @@ function v(e) {
                         }),
                     }),
                     (0, i.jsx)("div", { className: T.Om }),
-                    (0, i.jsx)(p.mU, { guildId: t.id }),
+                    (0, i.jsx)(A.mU, { guildId: t.id }),
                 ],
             }),
             (0, i.jsx)(C, { guildId: t.id, prompts: o }),
@@ -203,7 +203,7 @@ function v(e) {
 }
 function S() {
     let e = (0, l.bG)([u.A], () => u.A.getGuild()),
-        t = (0, l.bG)([A.A], () => A.A.submitting),
+        t = (0, l.bG)([p.A], () => p.A.submitting),
         n = (0, l.bG)([h.A], () => h.A.isSubmitting()),
         s = (0, l.bG)([h.A], () => h.A.hasChanges());
     return null == e

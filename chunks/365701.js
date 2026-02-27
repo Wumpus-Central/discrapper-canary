@@ -14,17 +14,17 @@ var i = n(627968),
     x = n(73153),
     h = n(416052),
     _ = n(198982),
-    A = n(292572),
-    p = n(122906),
+    p = n(292572),
+    A = n(122906),
     f = n(539440),
     j = n(555337),
     N = n(401755),
     E = n(985018),
-    b = n(320616),
-    T = n(522759);
+    b = n(776433),
+    T = n(473169);
 class C extends d.Ay.Store {
     initialize() {
-        this.waitFor(j.A, p.A);
+        this.waitFor(j.A, A.A);
     }
     static displayName = "GuildSettingsTemplateMetadataStore_";
     name = "";
@@ -33,7 +33,7 @@ class C extends d.Ay.Store {
     getTemplate() {
         let e = j.A.getProps().guild;
         if (null == e) return null;
-        let t = p.A.getForGuild(e.id);
+        let t = A.A.getForGuild(e.id);
         return null != t && t.state !== N.QB.RESOLVING ? t : null;
     }
     reset = () => {
@@ -53,7 +53,7 @@ class C extends d.Ay.Store {
         (this.error = e), this.emitChange();
     };
     save = async () => {
-        await A.A.updateGuildTemplate(j.A.getProps().guild.id, this.getTemplate().code, this.name, this.description),
+        await p.A.updateGuildTemplate(j.A.getProps().guild.id, this.getTemplate().code, this.name, this.description),
             this.emitChange();
     };
     showNotice() {
@@ -104,13 +104,13 @@ function R() {
                     !(async function () {
                         n(!0);
                         try {
-                            await A.A.loadTemplatesForGuild(e), n(!1);
+                            await p.A.loadTemplatesForGuild(e), n(!1);
                         } catch (e) {
                             I.setError(new _.LG(e));
                         }
                     })();
                 }, [e]),
-                { loading: t, guildTemplate: (0, d.bG)([p.A], () => p.A.getForGuild(e), [e]) }
+                { loading: t, guildTemplate: (0, d.bG)([A.A], () => A.A.getForGuild(e), [e]) }
             );
         })(e.id);
     if (
@@ -341,7 +341,7 @@ function M(e) {
         a = async () => {
             I.setError(null), r(!0);
             try {
-                await A.A.createGuildTemplate(t.id, I.name, I.description);
+                await p.A.createGuildTemplate(t.id, I.name, I.description);
             } catch (e) {
                 I.setError(new _.LG(e));
             }
@@ -361,7 +361,7 @@ function k(e) {
         a = async () => {
             I.setError(null), r(!0);
             try {
-                await A.A.syncGuildTemplate(t.id, n.code);
+                await p.A.syncGuildTemplate(t.id, n.code);
             } catch (e) {
                 I.setError(new _.LG(e));
             }
@@ -384,7 +384,7 @@ function U(e) {
         a = async () => {
             I.setError(null);
             try {
-                await A.A.deleteGuildTemplate(t.id, n.code), I.setName(""), I.setDescription("");
+                await p.A.deleteGuildTemplate(t.id, n.code), I.setName(""), I.setDescription("");
             } catch (e) {
                 I.setError(new _.LG(e));
             }
@@ -415,7 +415,7 @@ function P(e) {
             text: E.intl.string(E.t.YI3iV6),
             onClick: () =>
                 (0, g.mMO)(async () => {
-                    let { default: e } = await Promise.all([n.e("7726"), n.e("58938")]).then(n.bind(n, 72715));
+                    let { default: e } = await Promise.all([n.e("7726"), n.e("4042")]).then(n.bind(n, 72715));
                     return (n) => (0, i.jsx)(e, { ...n, guildTemplate: t });
                 }),
         }),

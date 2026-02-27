@@ -12,8 +12,8 @@ var i = n(627968),
     m = n(430452),
     A = n(40056),
     g = n(985018),
-    p = n(895283),
-    f = n(6923);
+    p = n(463689),
+    f = n(654305);
 function _(e) {
     e.preventDefault(), e.stopPropagation();
 }
@@ -27,8 +27,8 @@ let x = l.memo(function (e) {
             enabled: I,
             zoomLevel: T,
             minZoom: N,
-            maxZoom: y,
-            isDragging: b,
+            maxZoom: b,
+            isDragging: y,
             isWheeling: v,
             isSlidering: j,
             setIsSlidering: R,
@@ -97,11 +97,11 @@ let x = l.memo(function (e) {
                 "--custom-zoom-indicator-width": `${100 * n}%`,
                 "--custom-zoom-indicator-height": `${100 * i}%`,
                 "--custom-zoom-indicator-transition":
-                    b || U || v || j
+                    y || U || v || j
                         ? "none"
                         : "top 0.1s ease-out, left 0.1s ease-out, width 0.1s ease-out, height 0.1s ease-out",
             };
-        }, [b, U, v, j, P, T, L]),
+        }, [y, U, v, j, P, T, L]),
         Z = l.useCallback(
             (e) => {
                 e.preventDefault(), e.stopPropagation(), M(T - 0.25, A.qd, "button");
@@ -180,7 +180,7 @@ let x = l.memo(function (e) {
                                       }),
                                       (0, i.jsx)(d.Apm, {
                                           minValue: N,
-                                          maxValue: y,
+                                          maxValue: b,
                                           initialValue: T,
                                           value: T,
                                           asValueChanges: ee,
@@ -195,7 +195,7 @@ let x = l.memo(function (e) {
                               children: (0, i.jsx)(d.K0, {
                                   icon: d.r1u,
                                   onClick: X,
-                                  disabled: T >= y,
+                                  disabled: T >= b,
                                   variant: "overlay-secondary",
                                   size: "sm",
                                   "aria-label": g.intl.string(g.t["9hMafy"]),

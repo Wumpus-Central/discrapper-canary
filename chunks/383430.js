@@ -6,12 +6,12 @@ var i = n(627968),
     r = n(486020),
     o = n(188275),
     c = n(985018),
-    d = n(126854);
+    d = n(416e3);
 function u(e) {
-    let { title: t, handleOpenCollectiblesShop: n, handleOpenGameShop: u, socialLayerStorefrontApplicationId: g } = e,
-        m = l.useRef(null),
+    let { title: t, handleOpenCollectiblesShop: n, handleOpenGameShop: u, socialLayerStorefrontApplicationId: m } = e,
+        g = l.useRef(null),
         [x, f] = l.useState(!1),
-        p = (0, s.h)(g),
+        p = (0, s.h)(m),
         h = l.useMemo(
             () => (null == p || p.id !== o.XR ? c.intl.string(c.t.apFNLU) : c.intl.string(c.t["kq/75v"])),
             [p],
@@ -42,7 +42,7 @@ function u(e) {
             [n, u, h, A, I],
         );
     return (0, i.jsx)(a.YNO, {
-        targetElementRef: m,
+        targetElementRef: g,
         position: "bottom",
         onRequestOpen: () => f(!0),
         onRequestClose: () => f(!1),
@@ -59,7 +59,7 @@ function u(e) {
         },
         children: (e) =>
             (0, i.jsx)(a.Button, {
-                buttonRef: m,
+                buttonRef: g,
                 variant: "secondary",
                 size: "sm",
                 icon: x ? a.PGe : a.abt,

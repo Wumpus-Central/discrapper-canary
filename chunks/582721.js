@@ -18,7 +18,7 @@ var r = n(627968),
     g = n(256698),
     A = n(652215),
     I = n(985018),
-    T = n(122079);
+    T = n(664445);
 let S = 250,
     y = i.memo(function (e) {
         let {
@@ -75,7 +75,7 @@ let S = 250,
                         e.type === h.op.CREATE_STICKER &&
                             (f.default.track(A.HAw.OPEN_MODAL, { type: A.JJy.CREATE_STICKER_MODAL, location: B }),
                             (0, l.mMO)(async () => {
-                                let { default: t } = await Promise.all([n.e("29143"), n.e("8414")]).then(
+                                let { default: t } = await Promise.all([n.e("29143"), n.e("64800")]).then(
                                     n.bind(n, 445002),
                                 );
                                 return (n) => (0, r.jsx)(t, { guildId: e.guild_id, ...n });

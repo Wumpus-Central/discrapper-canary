@@ -20,7 +20,7 @@ var i = n(627968),
     E = n(168428),
     I = n(652215),
     b = n(985018),
-    T = n(42441);
+    T = n(563111);
 function v(e) {
     let t,
         v,
@@ -34,29 +34,29 @@ function v(e) {
             currentUserId: P,
         } = e,
         M = P === R.author.id,
-        { channel: w, approximate_member_count: k, approximate_presence_count: D } = L,
+        { channel: w, approximate_member_count: D, approximate_presence_count: k } = L,
         O = L.state === I.elq.ACCEPTING,
         U = null != w ? (0, A.OY)(w) : null,
-        G = null != j,
-        B = null != U,
+        B = null != j,
+        G = null != U,
         F = null != U && U.isGuildStageVoice(),
         H = (0, a.Lt)(L.flags ?? 0, r.Q.IS_GUEST_INVITE),
         V = U?.isGuildVoiceOrThread() ?? !1,
         W = j?.features.has(I.GuildFeatures.HUB) ?? !1,
         q = j?.id,
         { analyticsLocations: Y } = (0, _.Ay)(u.A.INVITE_EMBED),
-        [z, K] = l.useState(!1),
-        Q = l.useCallback(() => K(!1), []),
+        [z, Q] = l.useState(!1),
+        K = l.useCallback(() => Q(!1), []),
         J = l.useRef(null),
         X = (0, s.bG)([x.Ay], () => m.A.canAcceptInvite([x.Ay], L)),
         Z = l.useCallback(() => {
-            K(!0), (0, c.Pq)(q, "show profile", Y);
+            Q(!0), (0, c.Pq)(q, "show profile", Y);
         }, [q, Y]),
         $ = l.useCallback(() => {
             let e = "noop";
-            G ? (y(), (e = "transition")) : (N(), (e = "accept")),
+            B ? (y(), (e = "transition")) : (N(), (e = "accept")),
                 (0, c.he)({ invite: L, action: e, inviter_id: R.author.id, invite_message_id: R.id }, Y);
-        }, [L, R, Y, G, y, N]);
+        }, [L, R, Y, B, y, N]);
     if (null == j) {
         if (null == L.guild) return (0, i.jsx)(E.A, {});
         (j = f.DY(L.guild)).premiumTier = L.guild.premium_tier ?? I.TVA.NONE;
@@ -70,7 +70,7 @@ function v(e) {
                     guildId: j.id,
                     name: j.name,
                     shouldShow: z,
-                    onRequestClose: Q,
+                    onRequestClose: K,
                     targetElementRef: J,
                     children: () => (0, i.jsx)(g.A.GuildName, { guild: j, ref: J }),
                 }),
@@ -98,9 +98,9 @@ function v(e) {
                       }),
                   ],
               })))
-            : (null != k && k >= 5) || (null != D && D > 0)
-              ? (t = (0, i.jsx)(g.A.Data, { members: k, membersOnline: D }))
-              : B && (t = (0, i.jsx)(g.A.Channel, { channel: U, guild: j })),
+            : (null != D && D >= 5) || (null != k && k > 0)
+              ? (t = (0, i.jsx)(g.A.Data, { members: D, membersOnline: k }))
+              : G && (t = (0, i.jsx)(g.A.Channel, { channel: U, guild: j })),
         (0, i.jsxs)(g.A, {
             children: [
                 (0, i.jsx)(g.A.GuildSplash, { guild: j }),
@@ -126,7 +126,7 @@ function v(e) {
                                     ? F
                                         ? b.intl.string(b.t["7vb2cc"])
                                         : b.intl.string(b.t.gpqgah)
-                                    : G
+                                    : B
                                       ? b.intl.string(b.t.cEnaWx)
                                       : b.intl.string(b.t.XpeFYr),
                             }),

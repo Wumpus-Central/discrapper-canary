@@ -9,7 +9,7 @@ var s = n(503698),
     o = n(11351),
     d = n(320137),
     c = n(985018),
-    u = n(410083);
+    u = n(86045);
 function m(e) {
     let { emoji: t, onRemoveEmoji: n, disabled: s = !1 } = e,
         o = a.Ay.getEmojiURL({ id: t.id, animated: t.animated, size: 32 });

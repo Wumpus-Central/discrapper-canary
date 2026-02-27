@@ -15,7 +15,7 @@ var i = n(627968),
     p = n(485599),
     g = n(652215),
     E = n(985018),
-    I = n(22883);
+    I = n(308685);
 class f extends r.PureComponent {
     partyMemberAvatarRef = r.createRef();
     partyMemberOverflowRef = r.createRef();

@@ -14,8 +14,8 @@ var i = n(627968),
     x = n(212637),
     h = n(931991),
     _ = n(942975),
-    A = n(434564),
-    p = n(363487),
+    p = n(434564),
+    A = n(363487),
     f = n(954571),
     j = n(473145),
     N = n(740816),
@@ -25,7 +25,7 @@ var i = n(627968),
     C = n(652215),
     I = n(568065),
     v = n(985018),
-    S = n(500736);
+    S = n(65146);
 let y = (e) => {
         let { children: t, currentGuildTier: n, guildStickers: s, tier: l } = e,
             r = n < l,
@@ -59,7 +59,7 @@ let y = (e) => {
                     ((e) => {
                         let { guildId: t } = e;
                         (0, d.mMO)(async () => {
-                            let { default: e } = await Promise.all([n.e("29143"), n.e("37176")]).then(
+                            let { default: e } = await Promise.all([n.e("29143"), n.e("27382")]).then(
                                 n.bind(n, 445002),
                             );
                             return (n) => (0, i.jsx)(e, { guildId: t, ...n });
@@ -73,10 +73,10 @@ let y = (e) => {
         let { guild: t } = e,
             l = (0, N.A)(t.id),
             { analyticsLocations: u } = (0, m.Ay)(),
-            f = (0, A.A)(t.id),
+            f = (0, p.A)(t.id),
             G = t.features.has(C.GuildFeatures.MORE_STICKERS) ? C.TVA.TIER_3 : t.premiumTier,
             L = t.features.has(C.GuildFeatures.MORE_STICKERS) ? C.M2T[C.TVA.TIER_3] : f,
-            D = (0, p.A)(t.id);
+            D = (0, A.A)(t.id);
         if (
             (s.useEffect(() => {
                 window.dispatchEvent(new Event("resize"));
@@ -129,7 +129,7 @@ let y = (e) => {
                 var s;
                 let l,
                     m,
-                    { isAnimatedTo: A, onSetRef: p, tier: N, tiers: b, tierIndex: y } = e,
+                    { isAnimatedTo: p, onSetRef: A, tier: N, tiers: b, tierIndex: y } = e,
                     { canCreateExpressions: k, canManageGuildExpression: U } = (0, h.ie)(t),
                     P = b[y - 1],
                     w = null != P ? (0, j.aG)(P.tier) : 0,
@@ -157,9 +157,9 @@ let y = (e) => {
                     X = B - w,
                     J = n(415358),
                     Z = F - H.length,
-                    Q = Y ? Math.min(5 - ((H.length + 0) % 5), Z) : 0,
-                    q = [];
-                for (let e = 0; e < Q; e++) q.push((0, i.jsx)(R, {}, `placeholder-${e}`));
+                    q = Y ? Math.min(5 - ((H.length + 0) % 5), Z) : 0,
+                    Q = [];
+                for (let e = 0; e < q; e++) Q.push((0, i.jsx)(R, {}, `placeholder-${e}`));
                 let $ = t.premiumTier < N.tier && f >= C.M2T[N.tier],
                     ee = v.intl.string(v.t.dtFw5c),
                     et = () => {
@@ -220,8 +220,8 @@ let y = (e) => {
                         {
                             subscriptionCount: L,
                             tier: N,
-                            onSetRef: p,
-                            isAnimatedTo: A,
+                            onSetRef: A,
+                            isAnimatedTo: p,
                             hasBottomMargin: y !== b.length - 1,
                             withCardBody: !K,
                             headerButton: m,
@@ -239,7 +239,7 @@ let y = (e) => {
                                                     e.id,
                                                 ),
                                             ),
-                                            q,
+                                            Q,
                                         ],
                                     }),
                                 !z &&

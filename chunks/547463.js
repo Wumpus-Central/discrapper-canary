@@ -44,7 +44,7 @@ var r = n(627968),
     Y = n(652215),
     W = n(381941),
     K = n(985018),
-    z = n(383929);
+    z = n(72007);
 function $(e) {
     let t,
         { entry: n, currentUserActivity: s, idx: o, variant: l } = e,
@@ -169,7 +169,7 @@ function q(e) {
         }),
     });
 }
-function X(e) {
+function Z(e) {
     let { entry: t, currentUserActivity: n, idx: i, variant: s } = e,
         a = (0, c.bG)([U.default], () => U.default.getUser(t.author_id)),
         o = (0, c.bG)([w.A], () => (null != a ? w.A.getAnyStreamForUser(a.id) : null), [a]),
@@ -229,12 +229,12 @@ function X(e) {
               ],
           });
 }
-function Z(e) {
+function X(e) {
     return new Set(e.map((e) => e.author_id));
 }
 function Q(e) {
     return new Set(
-        Array.from(Z(e)).filter((t) => {
+        Array.from(X(e)).filter((t) => {
             let n = e.find((e) => {
                 let { author_id: n } = e;
                 return t === n;
@@ -254,7 +254,7 @@ function J(e) {
 }
 function ee(e) {
     let { entries: t, currentUserActivity: n, className: s, hideHeader: a = !1, variant: o = "default" } = e,
-        l = (0, H.Dk)(() => Z(t), [t]),
+        l = (0, H.Dk)(() => X(t), [t]),
         u = (0, H.Dk)(() => Q(t), [t]),
         c = (0, H.Dk)(() => J(t), [t]);
     return (i.useEffect(() => {
@@ -280,7 +280,7 @@ function ee(e) {
                               children: K.intl.string(K.t.y9eo7a),
                           }),
                       }),
-                  t.map((e, t) => (0, r.jsx)(X, { idx: t, entry: e, currentUserActivity: n, variant: o }, t)),
+                  t.map((e, t) => (0, r.jsx)(Z, { idx: t, entry: e, currentUserActivity: n, variant: o }, t)),
               ],
           });
 }

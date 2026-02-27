@@ -1,2 +1,7 @@
-"use strict";
-n(812389), n(637770), n(611750), n(898804), n(931994), n(402405);
+e.exports = {
+    kL: "container__8279f",
+    Em: "mainColumn__8279f",
+    DD: "title__8279f",
+    JS: "artContainer__8279f",
+    Qw: "art__8279f",
+};

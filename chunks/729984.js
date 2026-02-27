@@ -14,8 +14,8 @@ var i = n(627968),
     x = n(777705),
     h = n(769765),
     _ = n(808728),
-    A = n(147925),
-    p = n(555337),
+    p = n(147925),
+    A = n(555337),
     f = n(418448),
     j = n(863694),
     N = n(107795),
@@ -26,20 +26,20 @@ var i = n(627968),
     I = n(561108),
     v = n(191117),
     S = n(985018),
-    y = n(91284),
-    R = n(830412);
+    y = n(894958),
+    R = n(206314);
 function O(e) {
     let { guild: t } = e,
         r = (0, l.bG)([c.A], () => c.A.getEnabled(t.id)),
         h = (0, l.bG)([x.A], () => x.A.hasFetched(t.id)),
         _ = (0, b.A)(t),
-        A = (0, l.bG)([j.A], () => j.A.editedDefaultChannelIds),
-        p = _.filter((e) => !A.has(e.id)),
+        p = (0, l.bG)([j.A], () => j.A.editedDefaultChannelIds),
+        A = _.filter((e) => !p.has(e.id)),
         [N, E] = s.useState(!1);
     return (s.useEffect(() => {
         h || r || (0, g.A)(t.id);
     }, [t.id, h, r]),
-    N || 0 === p.length)
+    N || 0 === A.length)
         ? null
         : (0, i.jsxs)("div", {
               className: y.Jl,
@@ -74,7 +74,7 @@ function O(e) {
                   }),
                   (0, i.jsx)("div", {
                       className: y.IF,
-                      children: p.map((e, s) =>
+                      children: A.map((e, s) =>
                           (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsxs)("div", {
@@ -150,7 +150,7 @@ function O(e) {
                                                 }),
                                       ],
                                   }),
-                                  s < p.length - 1 ? (0, i.jsx)("div", { className: y.me }) : null,
+                                  s < A.length - 1 ? (0, i.jsx)("div", { className: y.me }) : null,
                               ],
                           }),
                       ),
@@ -161,7 +161,7 @@ function O(e) {
 }
 function G(e) {
     let { saveOnClose: t = !1 } = e,
-        n = (0, l.bG)([p.A], () => p.A.getGuild()),
+        n = (0, l.bG)([A.A], () => A.A.getGuild()),
         r = (0, l.bG)([c.A], () => c.A.isLoading()),
         a = (0, l.bG)([_.Ay], () => _.Ay.getChannels(n?.id)),
         d = (0, l.bG)([h.A], () => h.A.getCategories(n?.id)),
@@ -198,8 +198,8 @@ function G(e) {
                             (0, i.jsx)(o.DUT, {
                                 className: y.cS,
                                 onClick: () => x((e) => !e),
-                                children: (0, i.jsx)(A.A, {
-                                    direction: g ? A.A.Directions.DOWN : A.A.Directions.UP,
+                                children: (0, i.jsx)(p.A, {
+                                    direction: g ? p.A.Directions.DOWN : p.A.Directions.UP,
                                     height: 16,
                                     width: 16,
                                 }),
@@ -268,7 +268,7 @@ function G(e) {
             });
 }
 function L() {
-    let e = (0, l.bG)([p.A], () => p.A.getProps().guild),
+    let e = (0, l.bG)([A.A], () => A.A.getProps().guild),
         t = (0, l.bG)([j.A], () => j.A.submitting),
         n = (0, l.bG)([E.A], () => E.A.advancedMode);
     return null == e

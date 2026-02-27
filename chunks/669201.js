@@ -36,7 +36,7 @@ var r = n(627968),
     k = n(994048),
     U = n(823894),
     G = n(652215),
-    F = n(953967);
+    F = n(654329);
 let V = (0, S.xI)(u.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     B = (0, S.xI)(u.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
     H = (0, S.xI)(u.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
@@ -47,11 +47,11 @@ let V = (0, S.xI)(u.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     z = 8,
     $ = 200,
     q = a()(N.Qz, $),
-    X = a()(N.HA, $),
-    Z = i.forwardRef(function (e, t) {
+    Z = a()(N.HA, $),
+    X = i.forwardRef(function (e, t) {
         let { containerWidth: s, channel: a, onSelectSticker: u, closePopout: S } = e,
             $ = x.A.useConfig({ location: "StickerPicker" }).padding,
-            Z = W + 2 * $,
+            X = W + 2 * $,
             Q = K + 2 * $,
             { location: J } = (0, d.p)(),
             { analyticsLocations: ee } = (0, f.Ay)(_.A.STICKER_PICKER),
@@ -101,7 +101,7 @@ let V = (0, S.xI)(u.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 listWidth: ed,
                 listPaddingRight: H,
                 stickerNodeMargin: ey ? j : Y,
-                stickerNodeWidth: ey ? Z : Q,
+                stickerNodeWidth: ey ? X : Q,
             }),
             eO = i.useCallback(
                 (e, t) => {
@@ -110,7 +110,7 @@ let V = (0, S.xI)(u.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                         case R.op.CREATE_STICKER:
                             T.default.track(G.HAw.OPEN_MODAL, { type: G.JJy.CREATE_STICKER_MODAL, location: J }),
                                 (0, c.mMO)(async () => {
-                                    let { default: t } = await Promise.all([n.e("29143"), n.e("8414")]).then(
+                                    let { default: t } = await Promise.all([n.e("29143"), n.e("64800")]).then(
                                         n.bind(n, 445002),
                                     );
                                     return (n) => (0, r.jsx)(t, { guildId: e.guild_id, ...n });
@@ -159,7 +159,7 @@ let V = (0, S.xI)(u.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             "" === el.current && "" !== ea && (0, N.Fg)(), (el.current = ea);
         }, [ea]),
             i.useEffect(() => {
-                0 === eT ? q(ea) : X(ea, eT, eo);
+                0 === eT ? q(ea) : Z(ea, eT, eo);
             }, [ea, eT, eo]),
             i.useLayoutEffect(() => {
                 ei.current?.focus();
@@ -221,7 +221,7 @@ let V = (0, S.xI)(u.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             id: U.GX,
             "aria-labelledby": U.LD,
             role: "tabpanel",
-            children: e.isLoading ? (0, r.jsx)(c.y$y, { className: F.Mz }) : (0, r.jsx)(Z, { ...e, ref: t }),
+            children: e.isLoading ? (0, r.jsx)(c.y$y, { className: F.Mz }) : (0, r.jsx)(X, { ...e, ref: t }),
         })
     ),
     J = i.forwardRef(Q);

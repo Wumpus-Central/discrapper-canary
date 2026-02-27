@@ -3,7 +3,7 @@ var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(442215),
+    r = n(475539),
     o = n(311907),
     c = n(397927),
     d = n(765671),
@@ -17,7 +17,7 @@ var i = n(627968),
     _ = n(103640),
     E = n(924177),
     x = n(985018),
-    C = n(11239);
+    C = n(733313);
 let S = l.memo(function (e) {
         let { channelId: t, width: n } = e,
             s = (0, o.bG)([u.A], () => u.A.useReducedMotion),
@@ -120,20 +120,20 @@ let S = l.memo(function (e) {
             let e = setTimeout(() => x(N), 1e3);
             return () => clearTimeout(e);
         }, [N]);
-        let y = (0, c.zhh)({
+        let b = (0, c.zhh)({
                 opacity: +!!_,
                 transform: _ ? "translateY(0)" : "translateY(100%)",
                 pointerEvents: "none",
                 config: r.config.stiff,
             }),
-            b = l.useMemo(() => T ?? { value: 0, multiplier: 1 }, [T]),
-            v = l.useRef(b);
+            y = l.useMemo(() => T ?? { value: 0, multiplier: 1 }, [T]),
+            v = l.useRef(y);
         l.useEffect(() => {
-            (b.multiplier > 1 || b.value > 0) && (v.current = b);
-        }, [b]);
+            (y.multiplier > 1 || y.value > 0) && (v.current = y);
+        }, [y]);
         let { multiplier: j, value: R } = l.useMemo(
-            () => ({ value: N ? b.value : v.current.value, multiplier: N ? b.multiplier : v.current.multiplier }),
-            [N, b, v],
+            () => ({ value: N ? y.value : v.current.value, multiplier: N ? y.multiplier : v.current.multiplier }),
+            [N, y, v],
         );
         return (0, i.jsxs)(i.Fragment, {
             children: [
@@ -141,7 +141,7 @@ let S = l.memo(function (e) {
                 (0, i.jsx)(r.animated.div, {
                     ref: A,
                     className: C.p_,
-                    style: y,
+                    style: b,
                     children: (0, i.jsx)(I, { value: R, multiplier: j }),
                 }),
             ],

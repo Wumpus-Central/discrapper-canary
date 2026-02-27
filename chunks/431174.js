@@ -4,7 +4,7 @@ var i = n(627968),
     r = n(503698),
     a = n.n(r),
     s = n(126031),
-    o = n(442215),
+    o = n(475539),
     d = n(889137),
     c = n(615300),
     u = n(990078),
@@ -17,7 +17,7 @@ var i = n(627968),
     x = n(306417),
     f = n(290794),
     C = n(985018),
-    E = n(70086);
+    E = n(121272);
 function I(e) {
     let { percentage: t, label: n, canShowVoterDetails: r, answerId: a } = e,
         o = (0, m.GV)(),

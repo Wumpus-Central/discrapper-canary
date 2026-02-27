@@ -9,7 +9,7 @@ var i = n(627968),
     d = n(147925),
     c = n(863913),
     u = n(985018),
-    m = n(20222);
+    m = n(209248);
 let g = function (e) {
     let {
             items: t,
@@ -19,8 +19,8 @@ let g = function (e) {
             renderItem: x,
         } = e,
         h = s.useMemo(() => new a.IX(), []),
-        [_, A] = s.useState(c.f.LEFT),
-        [p, f] = s.useState(0),
+        [_, p] = s.useState(c.f.LEFT),
+        [A, f] = s.useState(0),
         [j, N] = s.useState(!1),
         [E, b] = s.useState(!1),
         T = s.useCallback(
@@ -50,7 +50,7 @@ let g = function (e) {
                 (0, i.jsx)(o.DUT, {
                     className: r()(m.Sx, l),
                     onClick: I,
-                    onMouseEnter: () => A(c.f.RIGHT),
+                    onMouseEnter: () => p(c.f.RIGHT),
                     ignoreKeyPress: E,
                     children: (0, i.jsx)(d.A, {
                         direction: d.A.Directions.LEFT,
@@ -60,17 +60,17 @@ let g = function (e) {
                     }),
                 }),
                 (0, i.jsx)(c.A, {
-                    step: p,
+                    step: A,
                     direction: _,
                     onAnimationStart: () => b(!0),
                     onAnimationEnd: () => b(!1),
                     className: r()(m.Dk, n),
-                    children: x(t[p]),
+                    children: x(t[A]),
                 }),
                 (0, i.jsx)(o.DUT, {
                     className: r()(m.Sx, l),
                     onClick: C,
-                    onMouseEnter: () => A(c.f.LEFT),
+                    onMouseEnter: () => p(c.f.LEFT),
                     ignoreKeyPress: E,
                     children: (0, i.jsx)(d.A, {
                         direction: d.A.Directions.RIGHT,

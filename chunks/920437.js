@@ -22,8 +22,8 @@ var i = n(627968),
     I = n(158476),
     T = n(857071),
     N = n(552227),
-    y = n(698405),
-    b = n(557722),
+    b = n(698405),
+    y = n(557722),
     v = n(976860),
     j = n(544028),
     R = n(560010),
@@ -39,7 +39,7 @@ var i = n(627968),
     F = n(360469),
     H = n(53516),
     B = n(985018),
-    V = n(690427);
+    V = n(32385);
 class K extends l.PureComponent {
     state = { submitting: !1, shouldShowLurkerModeUpsellPopout: !1, shouldShowLurkerModeSuccessPopout: !1 };
     textAreaContainerRef = l.createRef();
@@ -90,8 +90,8 @@ class K extends l.PureComponent {
     handleVerifyPhone = () => {
         (0, d.mMO)(
             async () => {
-                let { default: e } = await Promise.all([n.e("84704"), n.e("24676")]).then(n.bind(n, 615715));
-                return (t) => (0, i.jsx)(e, { reason: b.d.GUILD_PHONE_REQUIRED, ...t });
+                let { default: e } = await Promise.all([n.e("84704"), n.e("45668")]).then(n.bind(n, 615715));
+                return (t) => (0, i.jsx)(e, { reason: y.d.GUILD_PHONE_REQUIRED, ...t });
             },
             { modalKey: H.V },
         );
@@ -131,7 +131,7 @@ class K extends l.PureComponent {
         let { guild: e } = this.props;
         return (
             a()(null != e, "GuildVerification.renderLurkerModeUpsellPopout - guild cannot be undefined"),
-            (0, i.jsx)(y.A, { type: y.w.CHAT, guild: e, closePopout: this.closeLurkerModeUpsellPopout })
+            (0, i.jsx)(b.A, { type: b.w.CHAT, guild: e, closePopout: this.closeLurkerModeUpsellPopout })
         );
     };
     renderMemberVerificationSuccessModal = () => {
@@ -279,7 +279,7 @@ function W(e) {
         f = (0, r.bG)([L.A], () => L.A.can(G.xBc.SEND_MESSAGES, t)),
         _ = (0, r.bG)([C.A], () => C.A.getRequest(l)),
         { showLinkedLobbyApplicationLoadingIndicator: S, requiredLinkedLobbyApplication: N } = (0, w.A)(t.linkedLobby),
-        y = {
+        b = {
             ...a,
             guild: s,
             isLurking: d,
@@ -298,5 +298,5 @@ function W(e) {
             useReducedMotion: A.A.useReducedMotion,
             isStaff: h,
         };
-    return (0, i.jsx)(K, { ...y, channel: t, children: n });
+    return (0, i.jsx)(K, { ...b, channel: t, children: n });
 }

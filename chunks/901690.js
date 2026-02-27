@@ -10,7 +10,7 @@ var i = n(627968),
     u = n(426179),
     h = n(401901),
     m = n(40056),
-    A = n(97762);
+    A = n(139208);
 function g(e) {
     return (1 & e.buttons) == 1;
 }
@@ -27,8 +27,8 @@ let p = l.memo(function (e) {
             setPanOffset: I,
             zoomLevel: T,
             isWheeling: N,
-            setIsWheeling: y,
-            isSlidering: b,
+            setIsWheeling: b,
+            isSlidering: y,
             setVideoAspectRatio: v,
             wrapperRef: j,
             doZoom: R,
@@ -101,14 +101,14 @@ let p = l.memo(function (e) {
         et = l.useCallback(
             (e) => {
                 _ &&
-                    (y(!0),
+                    (b(!0),
                     R(T - e.deltaY / 100, J(e), "wheel"),
                     f(),
                     K.current.start(100, () => {
-                        y(!1);
+                        b(!1);
                     }));
             },
-            [_, R, T, J, f, y],
+            [_, R, T, J, f, b],
         );
     (0, o.i4)(
         j,
@@ -152,9 +152,9 @@ let p = l.memo(function (e) {
             "--custom-zoom-scale": T,
             "--custom-pan-x": `${e.x}px`,
             "--custom-pan-y": `${e.y}px`,
-            "--custom-zoom-transition": x || B || N || b ? "none" : "transform 0.15s ease-out",
+            "--custom-zoom-transition": x || B || N || y ? "none" : "transform 0.15s ease-out",
         };
-    }, [M, x, B, N, b, S, T]);
+    }, [M, x, B, N, y, S, T]);
     return (0, i.jsx)("div", {
         ref: j,
         className: a()(A.iE, p, { [A.rc]: _ && Y, [A.d$]: x }),

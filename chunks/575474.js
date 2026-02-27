@@ -2,7 +2,7 @@ n.d(t, { g: () => E });
 var i = n(627968),
     r = n(64700),
     l = n(554146),
-    a = n(379848),
+    a = n(932001),
     s = n(866945),
     o = n(780964),
     d = n(358776),
@@ -13,7 +13,7 @@ var i = n(627968),
     _ = n(355097),
     m = n(531525),
     p = n(985018),
-    g = n(718026);
+    g = n(91492);
 function E() {
     let [e, t] = (0, a.kn)([l.M.RESTRICTED_ACCOUNTS_SETTING_NOTICE]);
     return r.useMemo(() => e === l.M.RESTRICTED_ACCOUNTS_SETTING_NOTICE, [e])

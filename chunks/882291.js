@@ -3,17 +3,17 @@ var r = n(627968),
     l = n(64700),
     i = n(503698),
     a = n.n(i),
-    s = n(442215),
+    s = n(475539),
     o = n(61491),
     u = n(397927),
     c = n(624600),
     d = n(972441),
     m = n(717415),
     p = n(961255),
-    E = n(261331),
-    f = n(203908),
-    h = n(750813),
-    v = n(23373);
+    f = n(261331),
+    E = n(203908),
+    h = n(790191),
+    v = n(712119);
 let x = { tension: 300, friction: 30, clamp: !0 };
 function g(e) {
     let {
@@ -24,10 +24,10 @@ function g(e) {
             interactionEnabled: S,
             isQuestCompleted: A,
             backgroundColor: C,
-            preloadedBuffers: _,
-            duration: b,
-            maxSeekableTime: T,
-            playerState: y,
+            preloadedBuffers: b,
+            duration: _,
+            maxSeekableTime: y,
+            playerState: T,
             onClick: N,
             onScrubBack: D,
             onScrubForward: I,
@@ -49,13 +49,13 @@ function g(e) {
         } = (0, d.A)({
             onScrubBack: D,
             onScrubForward: I,
-            maxSeekableTime: T,
+            maxSeekableTime: y,
             interactionEnabled: S,
-            duration: b,
+            duration: _,
             percent: i,
             onClick: N,
         }),
-        Y = l.useMemo(() => (null == U || null == R ? null : (0, o.rB)((0, o.hc)(U, R, b))), [U, R, b]),
+        Y = l.useMemo(() => (null == U || null == R ? null : (0, o.rB)((0, o.hc)(U, R, _))), [U, R, _]),
         K = l.useMemo(() => {
             if (null != R) return (0, o.TO)(i, R);
         }, [i, R]),
@@ -64,14 +64,14 @@ function g(e) {
             g ? "animate-always" : "animate-never",
         ),
         {
-            indicators: W,
-            isInExclusionZone: q,
+            indicators: q,
+            isInExclusionZone: W,
             setHoveredIndicatorIndex: z,
             animatingIndicatorIndex: X,
             expansionSpring: J,
-        } = (0, f.Ay)({ timelineRect: R, videoDuration: b, targetSec: t }),
-        Z = l.useMemo(() => q(K), [K, q]),
-        ee = l.useMemo(() => q(U), [U, q]),
+        } = (0, E.Ay)({ timelineRect: R, videoDuration: _, targetSec: t }),
+        Z = l.useMemo(() => W(K), [K, W]),
+        ee = l.useMemo(() => W(U), [U, W]),
         et = !A && w,
         en = R?.width != null && R?.width !== 0 ? R?.width : 1,
         er = l.useMemo(
@@ -80,8 +80,8 @@ function g(e) {
                     let n = [{ startPx: 0, endPx: t, leftIndicatorIndex: null, rightIndicatorIndex: null }];
                     if (0 === e.length) return n;
                     for (let r = 0; r < e.length; r++) {
-                        let l = Math.max(0, e[r].leftPx - f.Ue),
-                            i = Math.min(t, e[r].rightPx + f.Ue),
+                        let l = Math.max(0, e[r].leftPx - E.Ue),
+                            i = Math.min(t, e[r].rightPx + E.Ue),
                             a = n?.[n.length - 1];
                         null != a && ((a.endPx = l), (a.rightIndicatorIndex = r));
                         let s = null != a && a.endPx <= a.startPx,
@@ -90,8 +90,8 @@ function g(e) {
                             i < t && n.push({ startPx: i, endPx: t, leftIndicatorIndex: o, rightIndicatorIndex: null });
                     }
                     return n;
-                })(W, en),
-            [W, en],
+                })(q, en),
+            [q, en],
         );
     return (0, r.jsx)("div", {
         className: v.jD,
@@ -120,14 +120,14 @@ function g(e) {
                             (0, r.jsx)(
                                 c.A,
                                 {
-                                    showGlow: y !== E.Q6.ENDED && null != K && K > e.startPx,
+                                    showGlow: T !== f.Q6.ENDED && null != K && K > e.startPx,
                                     segment: e,
                                     currentPxSpring: H,
                                     animatingIndex: X,
                                     backgroundColor: C,
                                     expansionSpring: J,
                                     timelineWidth: en,
-                                    preloadedBuffers: _,
+                                    preloadedBuffers: b,
                                     maxSeekableX: B,
                                     interactionEnabled: S,
                                     useNewStyles: w,
@@ -139,7 +139,7 @@ function g(e) {
                         ),
                 }),
                 null != R &&
-                    W.map((e, t) => {
+                    q.map((e, t) => {
                         let n = X === e.index,
                             l = e.targetSec;
                         return (0, r.jsx)(

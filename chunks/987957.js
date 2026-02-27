@@ -14,10 +14,10 @@ var i = n(627968),
     x = n(111487),
     h = n(734057),
     _ = n(71393),
-    A = n(486020),
-    p = n(132514),
+    p = n(486020),
+    A = n(132514),
     f = n(985018),
-    j = n(499323);
+    j = n(659233);
 let N = function (e) {
     let {
             guildId: t,
@@ -31,10 +31,10 @@ let N = function (e) {
         } = e,
         v = (0, a.bG)([h.A], () => h.A.getChannel(l.channelId)),
         S = (0, a.bG)([_.A], () => _.A.getGuild(t)),
-        y = (0, a.bG)([p.A], () => p.A.getPendingData()[l.channelId]),
+        y = (0, a.bG)([A.A], () => A.A.getPendingData()[l.channelId]),
         { customEmoji: R, unicodeEmoji: O } = (0, m.A)(l.emoji?.id, l.emoji?.name),
         G = null == l.emoji || null != R || null != O,
-        L = A.Ay.getNewMemberActionIconURL({ channelId: l.channelId, icon: l.icon }),
+        L = p.Ay.getNewMemberActionIconURL({ channelId: l.channelId, icon: l.icon }),
         D = null != y ? y.iconData : L,
         M = null;
     null != v && (0, g.Rc)(v) ? G || (M = f.intl.string(f.t.wAkIZW)) : (M = f.intl.string(f.t.CbTEKP));
@@ -54,7 +54,7 @@ let N = function (e) {
         B = s.useCallback(() => {
             if (null != t)
                 return (0, d.mMO)(async () => {
-                    let { default: e } = await Promise.all([n.e("54569"), n.e("4593")]).then(n.bind(n, 251632));
+                    let { default: e } = await Promise.all([n.e("54569"), n.e("76945")]).then(n.bind(n, 251632));
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,

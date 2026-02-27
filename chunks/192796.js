@@ -6,7 +6,7 @@ var r = n(627968),
     a = n.n(s),
     o = n(253018),
     l = n(711371),
-    u = n(40672);
+    u = n(562650);
 function c(e, t) {
     let { attributes: n, children: i, element: s } = t;
     return "gameMentionInput" === s.type ? (0, r.jsx)(d, { attributes: n, element: s, children: i }) : null;

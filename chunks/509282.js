@@ -25,7 +25,7 @@ var i = n(627968),
     S = n(652215),
     y = n(435220),
     N = n(985018),
-    j = n(61434);
+    j = n(159740);
 let L = (0, s.UT)([x.A, f.A, g.A], {
         getQueryId: S.fic.SKU,
         get: (e) => {
@@ -76,7 +76,7 @@ function P(e) {
     if (!a || null == c) return null;
     let L = () => {
         (0, o.mMO)(async () => {
-            let { default: e } = await Promise.all([n.e("33563"), n.e("4437")]).then(n.bind(n, 719847));
+            let { default: e } = await Promise.all([n.e("33563"), n.e("43245")]).then(n.bind(n, 719847));
             return (n) =>
                 (0, i.jsx)(e, { transitionState: n.transitionState, onClose: n.onClose, appId: t, guildId: g });
         });
@@ -129,19 +129,19 @@ function M(e) {
         E = (0, T.G)(A?.id ?? ""),
         { openModal: P, subscriptionPurchaseButtonState: M } = (0, h.A)({ skuId: r, initialSubscribeForGuild: x });
     if (!E || null == A || null == c) return null;
-    let k = c.type === S.Puh.SUBSCRIPTION,
-        D = !!k && (0, m.bg)(c.flags),
+    let D = c.type === S.Puh.SUBSCRIPTION,
+        k = !!D && (0, m.bg)(c.flags),
         O = () => {
             (0, o.mMO)(async () => {
-                let { default: e } = await Promise.all([n.e("33563"), n.e("4437")]).then(n.bind(n, 719847));
+                let { default: e } = await Promise.all([n.e("33563"), n.e("43245")]).then(n.bind(n, 719847));
                 return (t) =>
                     (0, i.jsx)(e, { transitionState: t.transitionState, onClose: t.onClose, appId: A.id, guildId: x });
             });
         },
         U = () => {
             (0, o.mMO)(async () => {
-                let e = k ? (await Promise.resolve().then(n.bind(n, 168393))).SubscriptionDetailsModal : null,
-                    t = k ? null : (await Promise.resolve().then(n.bind(n, 963179))).ItemDetailsModal;
+                let e = D ? (await Promise.resolve().then(n.bind(n, 168393))).SubscriptionDetailsModal : null,
+                    t = D ? null : (await Promise.resolve().then(n.bind(n, 963179))).ItemDetailsModal;
                 return (n) => {
                     let l = () => {
                         n.onClose(), O();
@@ -152,7 +152,7 @@ function M(e) {
                               appId: A.id,
                               skuId: c.id,
                               guildId: x,
-                              subscriptionType: D ? "user" : "guild",
+                              subscriptionType: k ? "user" : "guild",
                               onClose: n.onClose,
                               onHeaderTitleClick: l,
                           })
@@ -168,8 +168,8 @@ function M(e) {
                 };
             });
         },
-        G = k
-            ? D
+        B = D
+            ? k
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(o.nys, { size: "custom", width: 12, height: 12 }),
@@ -185,8 +185,8 @@ function M(e) {
                       ],
                   })
             : g?.description?.trim();
-    "" === G && (G = void 0);
-    let B = () => {
+    "" === B && (B = void 0);
+    let G = () => {
         C.default.track(S.HAw.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
             application_id: A.id,
             sku_id: c.id,
@@ -196,7 +196,7 @@ function M(e) {
     return (0, i.jsx)(w, {
         appName: A.name,
         title: c.name,
-        description: G,
+        description: B,
         link: `${location.protocol}//${location.host}${S.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(A.id, y.GlobalDiscoveryAppsSections.STORE)}`,
         onLinkCopy: () => {
             (0, b.K)(A.id, b.C.SKU_EMBED, r);
@@ -225,20 +225,20 @@ function M(e) {
                     },
                     text: N.intl.string(N.t.DXYfjO),
                 }),
-                k
+                D
                     ? null != _
                         ? (0, i.jsx)(v.rc, {
                               onClick: P,
                               appId: A.id,
-                              subscriptionType: D ? "user" : "guild",
+                              subscriptionType: k ? "user" : "guild",
                               skuId: c.id,
                               icon: o.U1X,
-                              onHasClicked: B,
+                              onHasClicked: G,
                               subscriptionPlan: _,
                               state: M,
                           })
                         : (0, i.jsx)(o.Button, { variant: "primary", text: N.intl.string(N.t.uuzaAK), onClick: U })
-                    : (0, i.jsx)(v.$P, { appId: A.id, sku: c, icon: o.U1X, onHasClicked: B }),
+                    : (0, i.jsx)(v.$P, { appId: A.id, sku: c, icon: o.U1X, onHasClicked: G }),
             ],
         }),
     });

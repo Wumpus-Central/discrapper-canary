@@ -22,8 +22,8 @@ var i = n(627968),
     I = n(427262),
     T = n(803622),
     N = n(314307),
-    y = n(393194),
-    b = n(455067),
+    b = n(393194),
+    y = n(455067),
     v = n(432817),
     j = n(324799),
     R = n(635157),
@@ -34,14 +34,14 @@ var i = n(627968),
     P = n(652215),
     k = n(746080),
     w = n(985018),
-    U = n(859588),
-    G = n(522759);
+    U = n(82842),
+    G = n(473169);
 function F(e) {
     let { canManageRoles: t, channel: n } = e,
         l = t && (0, h.Ae)(n),
         a = (0, s.bG)([x.Ay], () => null != n.guild_id && n === x.Ay.getDefaultChannel(n.guild_id), [n]);
     if ((0, m.A)(n.id)) return null;
-    if (n.isForumPost()) return (0, i.jsx)(y.A, { channel: n });
+    if (n.isForumPost()) return (0, i.jsx)(b.A, { channel: n });
     if (_.Le.has(n.type)) return (0, i.jsx)(O.A, { channel: n });
     if (a) return (0, i.jsx)(L.A, { channel: n });
     if (l) return (0, i.jsx)(M.A, { channel: n });
@@ -53,7 +53,7 @@ function H(e) {
         { type: m } = t,
         _ = (0, s.bG)([S.default], () => (t.isPrivate() ? S.default.getUser(t.getRecipientId()) : null)),
         x = I.Ay.useUserTag(_),
-        { canManageRoles: y, canReadMessageHistory: M } = (0, s.cf)([C.A], () => ({
+        { canManageRoles: b, canReadMessageHistory: M } = (0, s.cf)([C.A], () => ({
             canManageRoles: C.A.can(P.xBc.MANAGE_ROLES, t),
             canReadMessageHistory: C.A.can(P.xBc.READ_MESSAGE_HISTORY, t),
         })),
@@ -109,10 +109,10 @@ function H(e) {
                     (0, i.jsx)(N.j1, { children: w.intl.string(w.t.M8Ao6I) }),
                 ],
             });
-        else if (t.hasFlag(k.lx.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)) return (0, i.jsx)(b.A, { channel: t });
+        else if (t.hasFlag(k.lx.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)) return (0, i.jsx)(y.A, { channel: t });
         else return (0, i.jsx)(R.A, { channel: t, children: w.intl.format(w.t.MFwcqO, { name: h }) });
     return M
-        ? (0, i.jsx)(F, { channel: t, canManageRoles: y })
+        ? (0, i.jsx)(F, { channel: t, canManageRoles: b })
         : (0, i.jsx)(N.Ay, {
               channelId: t.id,
               children: (0, i.jsx)(N.j1, { children: w.intl.format(w.t.hPVEQG, { channelName: h }) }),

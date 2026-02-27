@@ -17,7 +17,7 @@ var i = n(627968),
     E = n(723690),
     I = n(652215),
     f = n(985018),
-    C = n(79676);
+    C = n(615078);
 function T(e) {
     let { user: t, applicationId: n, isGameRelationship: l, active: o } = e,
         d = h.default.getCurrentUser()?.isStaff() && t?.isStaff(),

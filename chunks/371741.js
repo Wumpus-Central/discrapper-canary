@@ -22,8 +22,8 @@ var i = n(627968),
     I = n(661191),
     T = n(141468),
     N = n(375901),
-    y = n(143413),
-    b = n(763754),
+    b = n(143413),
+    y = n(763754),
     v = n(245748),
     j = n(491182),
     R = n(860227),
@@ -43,7 +43,7 @@ var i = n(627968),
     K = n(381941),
     W = n(652215),
     z = n(985018),
-    Y = n(50397);
+    Y = n(119907);
 function q(e, t, n) {
     return e.getElementById((0, N.j)(t, n));
 }
@@ -59,7 +59,7 @@ function J(e) {
     let { ...u } = (0, c.rm)(e.id ?? ""),
         h = (0, d.bG)([f.A], () => f.A.getMessageByReference(l)),
         { popouts: m, setPopout: A } = (0, O.A)(n.id, K.Fd),
-        g = (0, b.Ay)(n),
+        g = (0, y.Ay)(n),
         p = (0, R.fF)(n),
         _ = (0, R.ZD)(n);
     return n.type === W.lAJ.THREAD_STARTER_MESSAGE && null != h && h.state === f.a.LOADED
@@ -128,7 +128,7 @@ function $(e) {
             viewingChannelId: S,
         }),
         ed = (0, D.A)(s, r, ei),
-        eu = (0, b.Ay)(n),
+        eu = (0, y.Ay)(n),
         eh = (0, R.fF)(n, x),
         em = (0, R.ZD)(n),
         eA = (0, F.A)(e, er, !1),
@@ -152,7 +152,7 @@ function $(e) {
                     [Y.HJ]: !m,
                     [Y.mK]: n.mentioned,
                     [Y.M1]: (0, T.ec)(n),
-                    [Y.H4]: (0, y.A)(n),
+                    [Y.H4]: (0, b.A)(n),
                     [Y._A]: n.id === x || n.type === W.lAJ.REPLY,
                     [Y.wH]: el,
                 }),
@@ -253,8 +253,8 @@ let Z = l.memo(function (e) {
             [x.A],
             () => r.hasFlag(W.pr7.HAS_THREAD) && x.A.getChannel(I.default.castMessageIdAsChannelId(r.id)),
         ),
-        ey = r.isFirstMessageInForumPost(N),
-        eb = (0, g.S)((r.editedTimestamp ?? r.timestamp).valueOf()),
+        eb = r.isFirstMessageInForumPost(N),
+        ey = (0, g.S)((r.editedTimestamp ?? r.timestamp).valueOf()),
         ev = (0, d.bG)([C.A], () => C.A.isDeveloper),
         {
             content: ej,
@@ -264,14 +264,14 @@ let Z = l.memo(function (e) {
             hideSimpleEmbedContent: ei && el,
             isInteracting: eT,
             formatInline: !1,
-            allowList: ey || eb,
-            allowHeading: ey || eb,
+            allowList: eb || ey,
+            allowHeading: eb || ey,
             allowLinks: !0,
             allowDevLinks: ev,
             previewLinkTarget: !0,
         }),
         eD = (0, D.A)(_, q, eS),
-        eO = (0, b.Ay)(r),
+        eO = (0, y.Ay)(r),
         eL = (0, d.bG)([p.A], () => p.A.getPendingReply(q)),
         eP =
             ((t = l.useRef(Z)),
@@ -313,7 +313,7 @@ let Z = l.memo(function (e) {
                         [Y.mK]: r.mentioned,
                         [Y.M1]: (0, T.ec)(r),
                         [Y.SH]: r.type === W.lAJ.NITRO_NOTIFICATION,
-                        [Y.H4]: (0, y.A)(r),
+                        [Y.H4]: (0, b.A)(r),
                         [Y._A]: !Q && (eV || r.type === W.lAJ.REPLY),
                         [Y.wH]: eI,
                         [Y.$n]: eL?.message.id === r.id,
@@ -369,7 +369,7 @@ let Z = l.memo(function (e) {
                     onMouseMove: eu,
                     onMouseLeave: eh,
                     hasThread: !Q && r.hasFlag(W.pr7.HAS_THREAD) && null != eN,
-                    isSystemMessage: (0, y.A)(r),
+                    isSystemMessage: (0, b.A)(r),
                     hasReply: r.type === W.lAJ.REPLY,
                     messageRef: (e) => {
                         (eF.current = e), (eH.current = e?.ownerDocument?.defaultView ?? window);

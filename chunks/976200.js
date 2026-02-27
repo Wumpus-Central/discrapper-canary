@@ -11,7 +11,7 @@ var n = l(627968),
     x = l(166403),
     m = l(661191),
     h = l(985018),
-    C = l(94511);
+    C = l(199326);
 function g(t) {
     let { imageClass: e, children: l, error: i } = t;
     return (0, n.jsxs)("div", {
@@ -115,9 +115,9 @@ let S = (t) => {
             isModifyingSubscription: S,
             onConfirm: f,
             onCancel: A,
-            error: N,
+            error: y,
         } = t,
-        T = [
+        N = [
             { variant: "secondary", text: h.intl.string(h.t["ETE/oC"]), onClick: A, disabled: S },
             { variant: "primary", text: g, onClick: f, loading: S, "aria-label": j },
         ];
@@ -135,7 +135,7 @@ let S = (t) => {
                               blurb: s,
                               fromGuilds: m,
                               toGuild: C,
-                              error: N,
+                              error: y,
                               slotCount: u,
                               canceledCount: c,
                           })
@@ -145,13 +145,13 @@ let S = (t) => {
                                 blurb: s,
                                 guild: o,
                                 warning: d,
-                                error: N,
+                                error: y,
                                 slotCount: u,
                                 canceledCount: c,
                             })
                           : null,
             }),
-            (0, n.jsx)(a.H7u, { actions: T, actionsFullWidth: !1 }),
+            (0, n.jsx)(a.H7u, { actions: N, actionsFullWidth: !1 }),
         ],
     });
 };

@@ -5,7 +5,7 @@ var l = n(397927),
     r = n(104171),
     a = n(652215),
     s = n(985018),
-    o = n(27219);
+    o = n(958505);
 function d(e) {
     let { activityUsers: t, guildId: n, activityText: a } = e;
     return (0, i.jsxs)("div", {

@@ -14,10 +14,10 @@ var i = n(627968),
     x = n(794967),
     h = n(555337),
     _ = n(875331),
-    A = n(545055),
-    p = n(966394),
+    p = n(545055),
+    A = n(966394),
     f = n(985018),
-    j = n(603478);
+    j = n(93100);
 function N(e) {
     let { guildId: t } = e,
         { guildProfile: d, fetchGuildProfile: g, fetchStatus: N } = (0, m.u)(t),
@@ -30,8 +30,8 @@ function N(e) {
             let { fetchedEmbed: e, embedEnabled: t, embedChannelId: n } = h.A.getProps();
             return { fetchedEmbed: e, embedEnabled: t, embedChannelId: n };
         }),
-        I = s.useMemo(() => (0, A.k)(t), [t]),
-        v = s.useMemo(() => (0, A.Z)(t), [t]),
+        I = s.useMemo(() => (0, p.k)(t), [t]),
+        v = s.useMemo(() => (0, p.Z)(t), [t]),
         [S, y] = s.useState(!1),
         R = null != d && l.i.VISIBLE.has(d.visibility),
         O = !E && !R && !T;
@@ -62,7 +62,7 @@ function N(e) {
                   T
                       ? (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(p.s, {
+                                (0, i.jsx)(A.s, {
                                     label: f.intl.string(f.t.LUo0Q8),
                                     description: f.intl.string(f.t.LxVR9A),
                                     guildId: t,

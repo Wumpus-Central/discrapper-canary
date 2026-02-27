@@ -17,7 +17,7 @@ var n = i(503698),
     T = i(156601),
     h = i(788868),
     I = i(985018),
-    f = i(371214);
+    f = i(26212);
 function j(e) {
     let { defaultPriceString: t, subscriptionPlan: i, discountOffer: n } = e,
         s = (0, p.N1)(i);
@@ -49,12 +49,12 @@ function A(e) {
         L = (0, o.bG)([d.default], () => d.default.getCurrentUser()),
         b = (0, x.k5)(),
         w = (0, x.nf)(),
-        H = i === h.PremiumTypes.TIER_0 ? h.pe.TIER_0 : h.pe.TIER_2,
-        S = y?.hasActiveTrial ? L?.premiumType : b ? h.PremiumTypes.TIER_2 : null,
+        S = i === h.PremiumTypes.TIER_0 ? h.pe.TIER_0 : h.pe.TIER_2,
+        H = y?.hasActiveTrial ? L?.premiumType : b ? h.PremiumTypes.TIER_2 : null,
         U = (0, g.V)(),
         O = (0, C.O)(),
         G = U?.subscription_trial;
-    if (!R && !t && null != S && i === S && null != y && null != y.planIdFromItems) {
+    if (!R && !t && null != H && i === H && null != y && null != y.planIdFromItems) {
         let e = null != y.trialEndsAt ? l()(y?.trialEndsAt).diff(l()(), "d") : 0,
             t = h.hd[y.planIdFromItems],
             i = u.Ay.formatPriceString(u.Ay.getDefaultPrice(t.id), t.interval);
@@ -109,7 +109,7 @@ function A(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(T.A, {
-                subscriptionTier: H,
+                subscriptionTier: S,
                 isGift: t,
                 className: null != _ ? _ : f.q,
                 priceOptions: A,
@@ -119,7 +119,7 @@ function A(e) {
             }),
             p &&
                 (0, r.jsx)(T.A, {
-                    subscriptionTier: H,
+                    subscriptionTier: S,
                     interval: h.WT.YEAR,
                     className: null != _ ? _ : f.q,
                     isGift: t,

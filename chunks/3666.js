@@ -7,7 +7,7 @@ var r = n(627968),
     o = n(990078),
     l = n(765671),
     u = n(985018),
-    c = n(53002);
+    c = n(862320);
 function d(e) {
     let { items: t, maxLines: n, itemWidths: r, itemGapPx: i, containerWidth: s, overflowWidth: a } = e,
         o = 0,

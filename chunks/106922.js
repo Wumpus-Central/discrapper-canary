@@ -31,13 +31,13 @@ var i = n(627968),
     P = n(840065),
     L = n(351906),
     D = n(287809),
-    G = n(166403),
-    M = n(224016),
+    M = n(166403),
+    G = n(224016),
     U = n(954571),
     k = n(975571),
     V = n(927578),
-    w = n(526292),
-    H = n(637073),
+    H = n(526292),
+    w = n(637073),
     B = n(810498),
     Y = n(807098),
     F = n(412260),
@@ -55,7 +55,7 @@ var i = n(627968),
     en = n(88001),
     ei = n(652215),
     es = n(985018),
-    ea = n(263442),
+    ea = n(95252),
     el = n(396785),
     er = n(956537);
 let eo = "to_premium_home_button",
@@ -101,14 +101,14 @@ function e_(e) {
         : (0, i.jsx)(J.A, { variant: void 0, subscriptionTier: et.pe.TIER_2, interval: u.interval });
 }
 function em() {
-    let e = (0, w.k5)(),
-        t = (0, w.nf)(),
+    let e = (0, H.k5)(),
+        t = (0, H.nf)(),
         n = (0, T.Ay)(),
-        s = (0, u.bG)([G.A], () => G.A.getPremiumTypeSubscription()),
+        s = (0, u.bG)([M.A], () => M.A.getPremiumTypeSubscription()),
         a = (0, u.bG)([D.default], () => D.default.getCurrentUser()),
         r = a?.isPremiumWithPremiumGroup(),
         o = (0, N.A)(),
-        c = (0, H.d)(),
+        c = (0, w.d)(),
         d = null !== s && null !== s.planIdFromItems;
     if (!d && !o.isFractionalPremiumActive && !r) return null;
     let _ = o.isFractionalPremiumActive,
@@ -126,7 +126,7 @@ function em() {
                               className: ea._K,
                               children: (0, en.DP)(),
                           })
-                        : (0, i.jsx)(M.A, { className: ea.TJ }),
+                        : (0, i.jsx)(G.A, { className: ea.TJ }),
                     r
                         ? (0, i.jsx)("div", { style: { marginBottom: "18px" } })
                         : _ && !c
@@ -333,8 +333,8 @@ let eh = function () {
     let e = (0, f.H)(),
         { analyticsLocations: t } = (0, I.Ay)(S.A.PREMIUM_SETTINGS),
         n = (0, u.bG)([D.default], () => D.default.getCurrentUser()),
-        a = (0, u.bG)([G.A], () => G.A.getPremiumTypeSubscription()),
-        l = (0, u.bG)([G.A], () => G.A.hasFetchedSubscriptions()),
+        a = (0, u.bG)([M.A], () => M.A.getPremiumTypeSubscription()),
+        l = (0, u.bG)([M.A], () => M.A.hasFetchedSubscriptions()),
         r = (0, b.Y)(et.T7),
         [o, m] = s.useState(!0),
         A = (0, N.A)({ forceFetch: !0 }),
@@ -354,15 +354,15 @@ let eh = function () {
             O || e || (await Promise.all([p.hP(), p.$o(), (0, E.zS)(null, null, ei.tF5.DISCOVERY)])), m(!1);
         });
     }, [O, e]);
-    let [P, M] = s.useState(!1);
+    let [P, G] = s.useState(!1);
     if (O) return (0, i.jsx)(C.A, {});
     if (e) return (0, i.jsx)(j.uK, {});
     let k = l && null !== a && r,
         V = A.fetched && A.isFractionalPremiumActive,
-        w = n?.isPremiumWithPremiumGroup();
-    if (!k && !V && !o && !w) return (0, i.jsx)(v.A, { title: es.intl.string(es.t.dyq9TR), note: null });
-    if ((!k && !V && !w) || o) return (0, i.jsx)(h.y$y, {});
-    let H = !!a?.hasActiveTrial;
+        H = n?.isPremiumWithPremiumGroup();
+    if (!k && !V && !o && !H) return (0, i.jsx)(v.A, { title: es.intl.string(es.t.dyq9TR), note: null });
+    if ((!k && !V && !H) || o) return (0, i.jsx)(h.y$y, {});
+    let w = !!a?.hasActiveTrial;
     return (0, i.jsx)(I.f5, {
         value: t,
         children: (0, i.jsxs)(i.Fragment, {
@@ -376,7 +376,7 @@ let eh = function () {
                         (0, i.jsx)($.A, {
                             hideCTAs: !0,
                             headingOverride: es.intl.string(es.t.dnVvQS),
-                            hidePill: !H,
+                            hidePill: !w,
                             selectedPlanColumnClassName: ea.JG,
                             selectedPlanTier: et.PremiumTypes.TIER_2,
                         }),
@@ -388,7 +388,7 @@ let eh = function () {
                         e &&
                             !P &&
                             (U.default.track(ei.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }),
-                            M(!0));
+                            G(!0));
                     },
                     children: (0, i.jsx)("div", { ref: R, className: ea._Z }),
                 }),

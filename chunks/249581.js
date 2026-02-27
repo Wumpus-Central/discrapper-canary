@@ -7,7 +7,7 @@ var n = i(627968),
     o = i(927018),
     c = i(64585),
     d = i(906688),
-    u = i(212963);
+    u = i(99761);
 let h = (e) => {
     let { color: t } = e;
     return (0, n.jsxs)("svg", {
@@ -66,7 +66,7 @@ let h = (e) => {
 };
 function C(e) {
     let { achievement: t, unlocked: i } = e,
-        { name: l, description: C, rarity: E, hideDescriptionUntilUnlock: A, onAction: g } = t,
+        { name: l, description: C, rarity: E, hideDescriptionUntilUnlock: g, onAction: A } = t,
         { color: _ } = (0, o.ag)(E);
     r.useEffect(() => {
         let e = setTimeout(() => {
@@ -76,12 +76,12 @@ function C(e) {
             clearTimeout(e);
         };
     }, []);
-    let p = null != g && i,
+    let p = null != A && i,
         m = p ? s.DUT : "div";
     return (0, n.jsxs)(m, {
         className: a()(u.kL, p && u.b),
         onClick: () => {
-            p && g();
+            p && A();
         },
         children: [
             (0, n.jsx)("div", {
@@ -95,7 +95,7 @@ function C(e) {
                     (0, n.jsx)(s.Text, {
                         variant: "text-xs/medium",
                         color: "text-default",
-                        children: A && !i ? "?????" : C(),
+                        children: g && !i ? "?????" : C(),
                     }),
                 ],
             }),

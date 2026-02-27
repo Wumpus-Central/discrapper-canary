@@ -2,7 +2,7 @@ n.d(t, { U: () => r });
 var i = n(627968),
     s = n(5661),
     a = n(161319),
-    l = n(782373);
+    l = n(74019);
 let r = (e) => {
     let { percentage: t, isFNUserWithNoStandardSub: n } = e;
     return (0, i.jsxs)("div", {

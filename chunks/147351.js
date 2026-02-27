@@ -14,7 +14,7 @@ var i = n(627968),
     h = n(661191),
     f = n(460350),
     E = n(652215),
-    g = n(874377);
+    g = n(48447);
 function p(e) {
     let { assets: t, currentUser: n, message: i } = e,
         l = (h.default.extractTimestamp(n.id) + h.default.extractTimestamp(i.id)) % t.length;

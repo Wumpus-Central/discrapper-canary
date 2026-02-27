@@ -27,8 +27,8 @@ var r = n(627968),
     b = n(652215),
     R = n(272984),
     O = n(985018),
-    D = n(133567),
-    L = n(46e4);
+    D = n(388277),
+    L = n(187866);
 function w(e, t) {
     return O.intl.formatToPlainString(O.t.h2yWWX, { username: t.username, activity: e });
 }
@@ -140,7 +140,7 @@ function P(e) {
             );
         }
     }
-    let X = (0, r.jsx)(y.BC, {
+    let Z = (0, r.jsx)(y.BC, {
         onClickThumbnail: m,
         channel: v,
         entry: C,
@@ -157,7 +157,7 @@ function P(e) {
     });
     return (0, r.jsxs)(y.YN, {
         children: [
-            X,
+            Z,
             (0, r.jsx)(y.Eh, {
                 children: (0, r.jsx)(y.fD, {
                     onReaction: P,

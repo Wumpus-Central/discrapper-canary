@@ -1,4 +1,4 @@
-n.d(t, { j: () => I });
+n.d(t, { j: () => T });
 var l = n(627968),
     i = n(64700),
     s = n(284009),
@@ -14,44 +14,44 @@ var l = n(627968),
     _ = n(937008),
     h = n(156312),
     x = n(166532),
-    P = n(482132),
-    S = n(985018),
-    T = n(606773);
-function I(e) {
+    S = n(482132),
+    P = n(985018),
+    I = n(907);
+function T(e) {
     let { handleStepChange: t } = e,
-        { selectedPlan: n, selectedSkuId: s, step: I } = (0, h.P5)(),
-        { setSelectedGiftingPromotionReward: g, selectedGiftingPromotionReward: j, claimableRewards: A } = (0, _.Pv)(),
+        { selectedPlan: n, selectedSkuId: s, step: T } = (0, h.P5)(),
+        { setSelectedGiftingPromotionReward: g, selectedGiftingPromotionReward: A, claimableRewards: j } = (0, _.Pv)(),
         f = (0, a.bG)([E.default], () => E.default.getCurrentUser()),
         M = (0, a.bG)([p.A], () => p.A.getGiftPromotionRewardSkuIds()),
-        R = (0, c.U)(A, j),
-        [C, y] = i.useState(R),
-        [N, v] = i.useState(!1);
+        R = (0, c.U)(j, A),
+        [y, C] = i.useState(R),
+        [v, N] = i.useState(!1);
     i.useEffect(() => {
-        N || null != j || null == R || (g(R), y(R));
-    }, [R, N, j, g]),
+        v || null != A || null == R || (g(R), C(R));
+    }, [R, v, A, g]),
         r()(null != n, "Expected plan to selected"),
         r()(null != s, "Expected selectedSkuId"),
-        r()(null != I, "Step should be set");
-    let O = i.useMemo(() => null != C && (A ?? []).includes(C), [C, A]),
-        b = i.useMemo(() => 0 === M.length || null == C || !O, [M, C, O]);
+        r()(null != T, "Step should be set");
+    let O = i.useMemo(() => null != y && (j ?? []).includes(y), [y, j]),
+        b = i.useMemo(() => 0 === M.length || null == y || !O, [M, y, O]);
     i.useEffect(() => {
         if (0 === M.length) {
-            y(void 0), g(void 0);
+            C(void 0), g(void 0);
             return;
         }
-        (null != C && O && M.includes(C)) || null == C || (y(void 0), g(void 0));
-    }, [M, O, C, g]);
+        (null != y && O && M.includes(y)) || null == y || (C(void 0), g(void 0));
+    }, [M, O, y, g]);
     let k = (e) => {
-            g(e), y(e), v(!0);
+            g(e), C(e), N(!0);
         },
         w = M.map((e) =>
             (0, l.jsx)(
                 d.k,
-                { skuId: e, claimed: null != A && !A.includes(e), user: f, onSelect: k, selectedSkuId: C },
+                { skuId: e, claimed: null != j && !j.includes(e), user: f, onSelect: k, selectedSkuId: y },
                 e,
             ),
         ),
-        U = (0, l.jsx)(P.UX, {
+        U = (0, l.jsx)(S.UX, {
             children: (0, l.jsx)(m.Z, {
                 onStepChange: t,
                 onBackClick: () => t(x.pn.PLAN_SELECT),
@@ -66,15 +66,15 @@ function I(e) {
         children: [
             (0, l.jsx)(o.rQ0, {
                 titleTextVariant: "heading-lg/semibold",
-                title: S.intl.string(S.t.OEtqpm),
-                subtitle: S.intl.string(S.t.h2nMp0),
+                title: P.intl.string(P.t.OEtqpm),
+                subtitle: P.intl.string(P.t.h2nMp0),
             }),
             (0, l.jsx)(o.cwr, {
                 children: (0, l.jsx)(u.BJc, {
                     direction: "vertical",
                     justify: "center",
                     align: "center",
-                    children: (0, l.jsx)("div", { className: T.Dq, children: w }),
+                    children: (0, l.jsx)("div", { className: I.Dq, children: w }),
                 }),
             }),
             U,

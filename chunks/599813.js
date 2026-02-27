@@ -15,15 +15,15 @@ var i = n(627968),
     p = n(342887),
     f = n(973947),
     _ = n(985018),
-    E = n(361499);
+    E = n(32425);
 let x = [51],
     C = [_.t.OpqAok];
 function S(e) {
     let { columns: t, handleScroll: n, voiceListRef: l, showSectionHeaders: s = !1, query: a } = e,
         r = T(),
         S = (0, o.bG)([h.default], () => (0, m.ki)(h.default.getCurrentUser())),
-        y = N(a, S),
-        b = Math.ceil(y.length / t),
+        b = N(a, S),
+        y = Math.ceil(b.length / t),
         {
             isNativeModuleLoaded: v,
             isNativeModuleLoading: j,
@@ -33,7 +33,7 @@ function S(e) {
             isNativeModuleLoading: g.A.isNativeModuleLoading(),
             catalogLastFetchTime: g.A.getCatalogLastFetchTime(),
         }));
-    return a && 0 === y.length
+    return a && 0 === b.length
         ? (0, i.jsxs)("div", {
               className: E.nm,
               children: [
@@ -72,7 +72,7 @@ function S(e) {
                   className: E.kL,
                   renderRow: (e) => {
                       let n = e * t,
-                          l = y.slice(n, n + t);
+                          l = b.slice(n, n + t);
                       return (0, i.jsx)(
                           I,
                           {
@@ -84,7 +84,7 @@ function S(e) {
                                           hasNitro: S,
                                           analyticsContext: {
                                               reason: A.O.USER_SELECTION,
-                                              gridRows: b,
+                                              gridRows: y,
                                               gridColumns: t,
                                               interactedRow: e,
                                               interactedColumn: l,
@@ -108,7 +108,7 @@ function S(e) {
                                     children: _.intl.string(C[e]),
                                 }),
                   sectionHeaderHeight: !1 === s ? void 0 : (e) => x[e],
-                  rowCount: b,
+                  rowCount: y,
                   rowHeight: 130,
                   onScroll: n,
                   ref: l,

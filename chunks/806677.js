@@ -32,8 +32,8 @@ var a = t(627968),
     v = t(518477),
     H = t(699976),
     M = t(985018),
-    W = t(235889),
-    G = t(8043);
+    W = t(855135),
+    G = t(958237);
 function P(e) {
     let { onSelectSku: i, priceOptions: t, showPromotionalGiftBanner: r } = e;
     return (0, a.jsxs)("div", {

@@ -18,12 +18,12 @@ var s = t(311907),
     h = t(518477),
     I = t(652215),
     j = t(985018),
-    g = t(278792),
-    b = t(230836);
+    g = t(78702),
+    b = t(781425);
 function N(e) {
     let { user: n, currentUser: t, guildId: N, onClose: v } = e,
-        { live: T, recent: E, stream: C } = (0, u.A)(n.id),
-        { voiceChannel: y, voiceActivity: L } = (0, A.A)({ userId: n.id, guildId: N }),
+        { live: T, recent: E, stream: y } = (0, u.A)(n.id),
+        { voiceChannel: C, voiceActivity: L } = (0, A.A)({ userId: n.id, guildId: N }),
         S = (0, s.bG)([a.A], () => a.A.isFetchingUserOutbox(n.id)),
         O = n.id === t.id,
         P = (0, s.bG)([d.A, r.A], () => {
@@ -31,8 +31,8 @@ function N(e) {
             return e === l.clD.OFFLINE || e === l.clD.INVISIBLE;
         }),
         R = (0, s.bG)([o.A], () => o.A.getUserProfile(n.id)?.private === !0),
-        M = T.length > 0 || null != C,
-        G = !R && null == C && null == L && null != y,
+        M = T.length > 0 || null != y,
+        G = !R && null == y && null == L && null != C,
         D = !P && (M || G),
         U = E.length > 0;
     return D || U || !S
@@ -46,12 +46,12 @@ function N(e) {
                             children: (0, i.jsxs)("ul", {
                                 className: g.Ci,
                                 children: [
-                                    null != C &&
+                                    null != y &&
                                         (0, i.jsx)("li", {
                                             children: (0, i.jsx)(p.A, {
                                                 user: n,
                                                 currentUser: t,
-                                                stream: C,
+                                                stream: y,
                                                 onClose: v,
                                             }),
                                         }),
@@ -74,7 +74,7 @@ function N(e) {
                                             children: (0, i.jsx)(f.A, {
                                                 user: n,
                                                 currentUser: t,
-                                                voiceChannel: y,
+                                                voiceChannel: C,
                                                 onClose: v,
                                             }),
                                         }),

@@ -8,11 +8,11 @@ var i = n(627968),
     c = n(793574),
     d = n(688810),
     u = n(362490),
-    g = n(429913),
-    m = n(183555),
+    m = n(429913),
+    g = n(183555),
     x = n(622543),
     f = n(985018),
-    p = n(81157);
+    p = n(413611);
 function h(e) {
     let { applicationId: t, size: n = "default" } = e,
         l = (0, o.bG)([x.A], () => x.A.getApplicationWidgetConfig(t));
@@ -49,8 +49,8 @@ function h(e) {
 }
 function _(e) {
     let { applicationId: t, size: n = "default" } = e,
-        { trackUserProfileAction: a } = (0, m.NJ)(),
-        s = (0, g.h)(t),
+        { trackUserProfileAction: a } = (0, g.NJ)(),
+        s = (0, m.h)(t),
         { hasAlreadyLinked: o, canStartAuthorization: x, startAuthorization: h, fetched: _ } = (0, u.RD)(s),
         { analyticsLocations: A } = (0, d.Ay)(c.A.USER_PROFILE_APPLICATION_WIDGET),
         I = l.useCallback(() => {

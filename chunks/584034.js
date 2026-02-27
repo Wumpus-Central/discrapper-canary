@@ -4,8 +4,8 @@ var A = I(627968),
     T = I(735438),
     C = I(665260),
     O = I(311907),
-    N = I(397927),
-    R = I(922667),
+    R = I(397927),
+    N = I(922667),
     e = I(77350),
     P = I(294520),
     t = I(141468),
@@ -27,7 +27,7 @@ var A = I(627968),
     M = I(239093),
     B = I(652215),
     m = I(838541),
-    H = I(366906);
+    H = I(26896);
 let h = (E) => {
     let { message: _ } = E,
         { attachments: I } = _;
@@ -68,7 +68,7 @@ let h = (E) => {
                         }
                         return (0, A.jsx)("div", {
                             style: { width: I ? S : "100%", height: I ? C : "100%" },
-                            children: (0, A.jsx)(R.Ay, {
+                            children: (0, A.jsx)(N.Ay, {
                                 className: E.className,
                                 forceExternal: !1,
                                 src: _.url,
@@ -78,7 +78,7 @@ let h = (E) => {
                                 volume: E.volume,
                                 autoPlay: !1,
                                 autoMute: !1,
-                                type: R.Ay.Types.VIDEO,
+                                type: N.Ay.Types.VIDEO,
                                 mediaLayoutType: E.mediaLayoutType,
                                 fileName: _.filename,
                                 fileSize: null == _.size ? void 0 : _.size.toString(),
@@ -109,7 +109,7 @@ function u(E) {
     let _,
         { flaggedContent: I } = E,
         T = (0, O.bG)([U.default], () => U.default.getCurrentUser()),
-        [C, R] = S.useState({}),
+        [C, N] = S.useState({}),
         [P, L] = S.useState(!0),
         a = (0, O.bG)([d.A], () => d.A.getUsername()),
         l = I[0],
@@ -168,7 +168,7 @@ function u(E) {
                                     I();
                                 });
                         } else _({ width: 0, height: 0 });
-                    }).then((_) => R((I) => ({ ...I, [E.id]: _ }))),
+                    }).then((_) => N((I) => ({ ...I, [E.id]: _ }))),
                 ),
         ).finally(() => L(!1));
     }, [l.attachments]),
@@ -177,7 +177,7 @@ function u(E) {
         : (0, A.jsx)("div", {
               className: H.O,
               children: P
-                  ? (0, A.jsx)(N.y$y, {})
+                  ? (0, A.jsx)(R.y$y, {})
                   : (0, A.jsx)(n.A, {
                         compact: !1,
                         childrenHeader: (0, o.A)({

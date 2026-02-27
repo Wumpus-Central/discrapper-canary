@@ -7,7 +7,7 @@ var r = n(627968),
 n(883392);
 var o = n(398094),
     l = n(778712),
-    u = n(962917),
+    u = n(83767),
     c = (function (e) {
         return (
             (e.SQUIRCLE = "svg-mask-squircle"),
@@ -775,7 +775,7 @@ function q(e) {
         ],
     });
 }
-function X(e) {
+function Z(e) {
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -793,7 +793,7 @@ function X(e) {
         ],
     });
 }
-function Z(e) {
+function X(e) {
     let t = 16;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -1058,8 +1058,8 @@ let es = ei,
                     z("svg-mask-autocomplete-emoji-upsell-emoji"),
                     $("svg-mask-event-ticket"),
                     q("svg-mask-guild-icon-with-channel-type"),
-                    X("svg-mask-channel-icon-with-guild-icon"),
-                    Z("svg-mask-content-inventory-card-face-pile-avatar"),
+                    Z("svg-mask-channel-icon-with-guild-icon"),
+                    X("svg-mask-content-inventory-card-face-pile-avatar"),
                     J("svg-mask-guild-popout-activity-icon"),
                     ee("svg-mask-clan-icon"),
                     en("svg-mask-badged-guild-icon"),

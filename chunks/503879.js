@@ -16,7 +16,7 @@ var n = a(627968),
     x = a(652176),
     A = a(203982),
     C = a(652215),
-    v = a(6361);
+    v = a(709992);
 let b = `rel=0&iv_load_policy=3&showinfo=0&modestbranding=1&pageType=${C.NzX}`,
     f = { SMALL: { width: 640, height: 360, margin: 15 }, MEDIUM: { width: 880, height: 495, margin: 20 } },
     j = { width: 1920, height: 1080 },
