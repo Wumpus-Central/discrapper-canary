@@ -21550,6 +21550,10 @@ img.thumbnail__0f2e8 {
     backdrop-filter: blur(24px)
 }
 
+.has-animated-banner .popover__2d0ab {
+    background-color: var(--background-surface-high)
+}
+
 .popover__2d0ab.visible__2d0ab,
 .popover__2d0ab:hover {
     opacity: 1
