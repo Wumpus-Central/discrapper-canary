@@ -1,32 +1,37 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => p });
 var r = n(439372),
     i = n(217222),
-    a = n(353835),
-    s = n(723702),
-    o = n(751496);
-let l = !1,
-    u = null;
-async function c() {
-    if ((0, s.isWindows)() && !a.A.getAppHardwareAccelerationEnabled() && window.DiscordNative?.settings?.set != null) {
+    s = n(353835),
+    a = n(723702),
+    o = n(751496),
+    l = n(532055);
+let u = !1,
+    c = null,
+    d = null;
+async function _() {
+    if ((0, a.isWindows)() && !s.A.getAppHardwareAccelerationEnabled() && window.DiscordNative?.settings?.set != null) {
         let { enabled: e } = (0, o.b)({ location: "updateSwitch" });
-        await window.DiscordNative.settings.set("enableH264MFElectron", e), (u = e);
+        await window.DiscordNative.settings.set("enableH264MFElectron", e), (c = e);
+        let { enabled: t } = (0, l.W)({ location: "updateSwitch" });
+        await window.DiscordNative.settings.set("enableH264MFZeroCopy", t), (d = t);
     }
 }
-class d extends r.A {
+class f extends r.A {
     stores = new Map().set(i.A, () => {
-        if (l && !a.A.getAppHardwareAccelerationEnabled()) {
-            let { enabled: e } = (0, o.b)({ location: "experimentStoreUpdate" });
-            u !== e && c();
+        if (u && !s.A.getAppHardwareAccelerationEnabled()) {
+            let { enabled: e } = (0, o.b)({ location: "experimentStoreUpdate" }),
+                { enabled: t } = (0, l.W)({ location: "experimentStoreUpdate" });
+            (c !== e || d !== t) && _();
         }
     });
     actions = {
         POST_CONNECTION_OPEN: async () => {
-            l || window.DiscordNative?.settings?.set == null || ((0, s.isWindows)() && ((l = !0), await c()));
+            u || window.DiscordNative?.settings?.set == null || ((0, a.isWindows)() && ((u = !0), await _()));
         },
         LOGOUT: () => {
-            (l = !1), (u = null);
+            (u = !1), (c = null), (d = null);
         },
     };
 }
-let _ = new d();
+let p = new f();
