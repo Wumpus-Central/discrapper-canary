@@ -1,40 +1,40 @@
 "use strict";
-s.d(t, { k: () => m });
-var n = s(627968),
-    r = s(64700),
-    l = s(503698),
-    a = s.n(l),
-    i = s(397927),
-    o = s(496431),
-    c = s(854818),
-    d = s(985018),
-    u = s(587496);
+n.d(t, { k: () => _ });
+var s = n(627968),
+    l = n(64700),
+    r = n(503698),
+    a = n.n(r),
+    i = n(397927),
+    o = n(496431),
+    c = n(854818),
+    d = n(985018),
+    u = n(587496);
 let g = { pink: "pinkCountdown" },
-    m = r.memo(function (e) {
-        let { message: t, onClick: s, countdownEndDate: l, variant: m } = e,
-            _ = r.useMemo(() => {
-                if (null == l) return null;
-                let e = l instanceof Date ? l : new Date(l);
+    _ = l.memo(function (e) {
+        let { message: t, onClick: n, countdownEndDate: r, variant: _ } = e,
+            m = l.useMemo(() => {
+                if (null == r) return null;
+                let e = r instanceof Date ? r : new Date(r);
                 return isNaN(e.getTime()) ? null : e;
-            }, [l]),
-            h = (0, o.A)(_ ?? 0, 1e3, void 0, null == _);
-        if (null != _ && Object.values(h).every((e) => 0 === e)) return null;
-        let p = null != m ? u[m] : void 0,
-            f = null != m ? u[g[m]] : void 0;
-        return (0, n.jsx)(i.DUT, {
+            }, [r]),
+            h = (0, o.A)(m ?? 0, 1e3, void 0, null == m);
+        if (null != m && Object.values(h).every((e) => 0 === e)) return null;
+        let p = null != _ ? u[_] : void 0,
+            f = null != _ ? u[g[_]] : void 0;
+        return (0, s.jsx)(i.DUT, {
             className: a()(u.nagBar, p),
-            onClick: s,
-            "aria-label": d.intl.string(d.t.zMqLH9),
-            children: (0, n.jsxs)("div", {
+            onClick: n,
+            "aria-label": d.intl.string(d.t["wjws+K"]),
+            children: (0, s.jsxs)("div", {
                 className: u.content,
                 children: [
-                    (0, n.jsx)(i.Text, {
+                    (0, s.jsx)(i.Text, {
                         variant: "text-md/medium",
                         color: "always-white",
                         className: u.message,
                         children: t,
                     }),
-                    null != _ && (0, n.jsx)(c.e, { endDate: _, size: "md", className: f, showSeconds: !0 }),
+                    null != m && (0, s.jsx)(c.e, { endDate: m, size: "md", className: f, showSeconds: !0 }),
                 ],
             }),
         });

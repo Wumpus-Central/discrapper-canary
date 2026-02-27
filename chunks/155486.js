@@ -30,17 +30,17 @@ function N(e) {
         N = (0, i.bG)([h.default], () => h.default.getCurrentUser()),
         { enabled: v } = (0, f.Z)({ location: "collectibles_shop_header_bar" }),
         { searchQuery: R } = (0, A.v)(),
-        j = l.useRef(null),
-        [G, I] = l.useState(!1);
+        G = l.useRef(null),
+        [j, I] = l.useState(!1);
     (0, u.g)(
-        j,
+        G,
         l.useCallback((e) => {
             I(e.contentRect.width < 800);
         }, []),
     );
     let _ = l.useMemo(
             () => [
-                { tab: g.G2.HOME, label: x.intl.string(x.t.ijDDwz) },
+                { tab: g.G2.HOME, label: x.intl.string(x.t["xNiB/O"]) },
                 { tab: g.G2.CATALOG, label: x.intl.string(x.t.Ah5sJo), hasSubmenu: !0 },
                 ...(v ? [{ tab: g.G2.ORBS, label: x.intl.string(x.t.EBYkzk) }] : []),
             ],
@@ -65,7 +65,7 @@ function N(e) {
         theme: n,
         children: (e) =>
             (0, r.jsx)("div", {
-                ref: j,
+                ref: G,
                 children: (0, r.jsxs)(b.A, {
                     disableDoubleClick: !0,
                     className: a()(e, L.jr),
@@ -74,7 +74,7 @@ function N(e) {
                         (0, r.jsx)(c.DUT, {
                             className: L.sU,
                             onClick: () => s(g.G2.HOME),
-                            "aria-label": x.intl.string(x.t.pWG4ze) + " home",
+                            "aria-label": x.intl.string(x.t.pWG4ze),
                             children: (0, r.jsx)(c.U1X, { size: "md", color: c.LU0.colors.TEXT_DEFAULT }),
                         }),
                         (0, r.jsx)(T.A, { tabs: _, selectedTab: t, onTabSelect: $ }),
@@ -84,7 +84,7 @@ function N(e) {
                                 (0, r.jsx)(C.A, {
                                     handleTransition: s,
                                     selectedTab: t,
-                                    isNarrow: G,
+                                    isNarrow: j,
                                     hasText: "" !== R,
                                 }),
                                 (0, r.jsx)(c.DUT, {
