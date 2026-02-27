@@ -1,56 +1,63 @@
 "use strict";
-n.d(t, { t: () => c });
-var r = n(627968);
-n(64700);
-var i = n(397927),
-    a = n(206845),
-    s = n(604238),
-    o = n(261225),
-    l = n(282203),
-    u = n(985018);
+a.d(t, { t: () => c });
+var l = a(627968);
+a(64700);
+var r = a(397927),
+    n = a(206845),
+    s = a(604238),
+    i = a(261225),
+    o = a(282203),
+    d = a(985018);
 let c = {
     name: "SkuList",
     id: "skulist",
     component: (e) => {
-        let { skuIds: t } = e,
-            n = (0, s.e)();
-        return (0, r.jsxs)("div", {
+        let { skuIds: t, sortPurchased: a, eagerLoad: c, showSkeleton: u } = e,
+            x = (0, s.e)();
+        return (0, l.jsxs)("div", {
             children: [
-                (0, r.jsx)(i.Heading, {
+                (0, l.jsx)(r.Heading, {
                     variant: "heading-lg/bold",
                     children: "The SkuList component takes a list of skus and maps them into a block",
                 }),
-                (0, r.jsx)(i.Text, {
+                (0, l.jsx)(r.Text, {
                     variant: "text-md/semibold",
                     children:
                         "Here, we have a list of 3 skuIds and we map over them, pushing them into ShopProductCards",
                 }),
-                (0, r.jsx)(i.Text, {
+                (0, l.jsx)(r.Text, {
                     variant: "text-md/semibold",
                     children:
                         "This will be useful when wanting to get a dynamic list of sku ids from the server (like popular picks) and push them into a product grid",
                 }),
-                (0, r.jsx)("br", {}),
-                (0, r.jsx)(o.A, {
+                (0, l.jsx)("br", {}),
+                (0, l.jsx)(i.A, {
                     columns: 3,
-                    children: (0, r.jsx)(l.A, { skuIds: t?.split(","), skuBlock: "ShopProductCard", componentMap: n }),
+                    children: (0, l.jsx)(o.A, {
+                        skuIds: t?.split(","),
+                        skuBlock: "ShopProductCard",
+                        sortPurchased: a,
+                        eagerLoad: c,
+                        showSkeleton: u,
+                        componentMap: x,
+                    }),
                 }),
-                (0, r.jsx)("hr", {}),
-                (0, r.jsx)(i.Text, { variant: "text-md/bold", children: "Sample Skus:" }),
-                (0, r.jsxs)(i.BJc, {
+                (0, l.jsx)("hr", {}),
+                (0, l.jsx)(r.Text, { variant: "text-md/bold", children: "Sample Skus:" }),
+                (0, l.jsxs)(r.BJc, {
                     direction: "horizontal",
                     children: [
-                        (0, r.jsx)(i.Text, { variant: "text-sm/bold", children: "Avatar Decoration" }),
-                        (0, r.jsx)(a.A, {
-                            text: u.intl.string(u.t.OpuAlK),
+                        (0, l.jsx)(r.Text, { variant: "text-sm/bold", children: "Avatar Decoration" }),
+                        (0, l.jsx)(n.A, {
+                            text: d.intl.string(d.t.OpuAlK),
                             delay: 0,
                             "aria-label": !1,
                             copyValue: "1458472704192811088",
                             children: (e) =>
-                                (0, r.jsx)(i.DUT, {
+                                (0, l.jsx)(r.DUT, {
                                     ...e,
                                     style: { cursor: "pointer" },
-                                    children: (0, r.jsx)(i.Text, {
+                                    children: (0, l.jsx)(r.Text, {
                                         variant: "text-sm/normal",
                                         children: "1458472704192811088",
                                     }),
@@ -58,20 +65,20 @@ let c = {
                         }),
                     ],
                 }),
-                (0, r.jsxs)(i.BJc, {
+                (0, l.jsxs)(r.BJc, {
                     direction: "horizontal",
                     children: [
-                        (0, r.jsx)(i.Text, { variant: "text-sm/bold", children: "Profile Effect" }),
-                        (0, r.jsx)(a.A, {
-                            text: u.intl.string(u.t.OpuAlK),
+                        (0, l.jsx)(r.Text, { variant: "text-sm/bold", children: "Profile Effect" }),
+                        (0, l.jsx)(n.A, {
+                            text: d.intl.string(d.t.OpuAlK),
                             delay: 0,
                             "aria-label": !1,
                             copyValue: "1458479739110166560",
                             children: (e) =>
-                                (0, r.jsx)(i.DUT, {
+                                (0, l.jsx)(r.DUT, {
                                     ...e,
                                     style: { cursor: "pointer" },
-                                    children: (0, r.jsx)(i.Text, {
+                                    children: (0, l.jsx)(r.Text, {
                                         variant: "text-sm/normal",
                                         children: "1458479739110166560",
                                     }),
@@ -79,20 +86,20 @@ let c = {
                         }),
                     ],
                 }),
-                (0, r.jsxs)(i.BJc, {
+                (0, l.jsxs)(r.BJc, {
                     direction: "horizontal",
                     children: [
-                        (0, r.jsx)(i.Text, { variant: "text-sm/bold", children: "Nameplate" }),
-                        (0, r.jsx)(a.A, {
-                            text: u.intl.string(u.t.OpuAlK),
+                        (0, l.jsx)(r.Text, { variant: "text-sm/bold", children: "Nameplate" }),
+                        (0, l.jsx)(n.A, {
+                            text: d.intl.string(d.t.OpuAlK),
                             delay: 0,
                             "aria-label": !1,
                             copyValue: "1458472704524156959",
                             children: (e) =>
-                                (0, r.jsx)(i.DUT, {
+                                (0, l.jsx)(r.DUT, {
                                     ...e,
                                     style: { cursor: "pointer" },
-                                    children: (0, r.jsx)(i.Text, {
+                                    children: (0, l.jsx)(r.Text, {
                                         variant: "text-sm/normal",
                                         children: "1458472704524156959",
                                     }),
@@ -109,5 +116,8 @@ let c = {
             type: "text",
             defaultValue: "1458472704192811088,1458479739110166560,1458472704524156959",
         },
+        sortPurchased: { label: "Sort Purchased to Back", type: "boolean", defaultValue: !1 },
+        eagerLoad: { label: "Eager Load", type: "boolean", defaultValue: !1 },
+        showSkeleton: { label: "Show Skeleton", type: "boolean", defaultValue: !1 },
     },
 };
