@@ -1,14 +1,14 @@
 "use strict";
-l.d(t, { P: () => n });
-var r = l(627968);
-l(64700);
-var a = l(930948);
+a.d(t, { P: () => n });
+var l = a(627968);
+a(64700);
+var r = a(930948);
 let n = {
     name: "StorefrontProductCard",
     id: "storefront-product-card",
     component: (e) => {
-        let { skuId: t } = e;
-        return (0, r.jsx)("div", { children: (0, r.jsx)(a.A, { skuId: t }) });
+        let { productId: t } = e;
+        return (0, l.jsx)("div", { children: (0, l.jsx)(r.A, { productId: t }) });
     },
-    controls: { skuId: { label: "SKU Id", type: "text", defaultValue: "1458472704192811088" } },
+    controls: { productId: { label: "Product ID", type: "text", defaultValue: "1466978489608441989" } },
 };

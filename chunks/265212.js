@@ -1,9 +1,8 @@
-"use strict";
-l.d(t, { A: () => i });
-var r = l(749394),
-    a = l(719986),
-    n = l(19945);
-class i {
+t.d(l, { A: () => a });
+var r = t(749394),
+    o = t(719986),
+    n = t(19945);
+class a {
     id;
     applicationId;
     name;
@@ -88,54 +87,54 @@ class i {
     }
     static fromServer(e) {
         let {
-            collection: { application_id: t, created_at: l, updated_at: s, tenant_metadata: o, ...d },
-            products: c,
+            collection: { application_id: l, created_at: t, updated_at: i, tenant_metadata: d, ...c },
+            products: s,
         } = e;
-        return new i({
-            ...d,
-            applicationId: t,
-            products: c.map((e) => n.A.fromServer(e)),
-            createdAt: new Date(l),
-            updatedAt: new Date(s),
-            styles: null != o.collectibles.styles ? r.A.fromServer(o.collectibles.styles) : void 0,
-            bannerTextColor: o.collectibles.banner_text_color,
-            heroRanking: o.collectibles.hero_ranking,
+        return new a({
+            ...c,
+            applicationId: l,
+            products: s.map((e) => n.A.fromServer(e)),
+            createdAt: new Date(t),
+            updatedAt: new Date(i),
+            styles: null != d.collectibles.styles ? r.A.fromServer(d.collectibles.styles) : void 0,
+            bannerTextColor: d.collectibles.banner_text_color,
+            heroRanking: d.collectibles.hero_ranking,
             heroDisplayConfig:
-                null != o.collectibles.hero_display_config
-                    ? a.M.fromServer(o.collectibles.hero_display_config)
+                null != d.collectibles.hero_display_config
+                    ? o.M.fromServer(d.collectibles.hero_display_config)
                     : void 0,
             heroLogoDisplayConfig:
-                null != o.collectibles.hero_logo_display_config
-                    ? a.M.fromServer(o.collectibles.hero_logo_display_config)
+                null != d.collectibles.hero_logo_display_config
+                    ? o.M.fromServer(d.collectibles.hero_logo_display_config)
                     : void 0,
-            heroUrl: o.collectibles.hero_url,
-            heroRiveUrl: o.collectibles.hero_rive_url,
-            heroAnimatedUrl: o.collectibles.hero_animated_url,
-            heroLogoUrl: o.collectibles.hero_logo_url,
-            heroBannerUrl: o.collectibles.hero_banner_url,
-            heroBannerAnimatedUrl: o.collectibles.hero_banner_animated_url,
-            catalogBannerUrl: o.collectibles.catalog_banner_url,
-            catalogBannerRiveUrl: o.collectibles.catalog_banner_rive_url,
-            catalogBannerAnimatedUrl: o.collectibles.catalog_banner_animated_url,
-            featuredBlockUrl: o.collectibles.featured_block_url,
-            logoUrl: o.collectibles.logo_url,
-            pdpBgUrl: o.collectibles.pdp_bg_url,
-            wideBannerUrl: o.collectibles.wide_banner_url,
-            wideBannerAnimatedUrl: o.collectibles.wide_banner_animated_url,
-            mobileHeroUrl: o.collectibles.mobile_hero_url,
-            mobileHeroAnimatedUrl: o.collectibles.mobile_hero_animated_url,
-            mobileBannerUrl: o.collectibles.mobile_banner_url,
-            mobileBgUrl: o.collectibles.mobile_bg_url,
-            shopButtonBgHoverUrl: o.collectibles.shop_button_bg_hover_url,
-            upsellBannerPopoutUrl: o.collectibles.upsell_banner_popout_url,
-            upsellBannerUrl: o.collectibles.upsell_banner_url,
-            heroBlockTitle: o.collectibles.hero_block_title,
-            featuredBlockBody: o.collectibles.featured_block_body,
-            mobileHeroBlockTitle: o.collectibles.mobile_hero_block_title,
-            mobileProductsTitle: o.collectibles.mobile_products_title,
-            mobileSummary: o.collectibles.mobile_summary,
-            wideBannerTitle: o.collectibles.wide_banner_title,
-            wideBannerBody: o.collectibles.wide_banner_body,
+            heroUrl: d.collectibles.hero_url,
+            heroRiveUrl: d.collectibles.hero_rive_url,
+            heroAnimatedUrl: d.collectibles.hero_animated_url,
+            heroLogoUrl: d.collectibles.hero_logo_url,
+            heroBannerUrl: d.collectibles.hero_banner_url,
+            heroBannerAnimatedUrl: d.collectibles.hero_banner_animated_url,
+            catalogBannerUrl: d.collectibles.catalog_banner_url,
+            catalogBannerRiveUrl: d.collectibles.catalog_banner_rive_url,
+            catalogBannerAnimatedUrl: d.collectibles.catalog_banner_animated_url,
+            featuredBlockUrl: d.collectibles.featured_block_url,
+            logoUrl: d.collectibles.logo_url,
+            pdpBgUrl: d.collectibles.pdp_bg_url,
+            wideBannerUrl: d.collectibles.wide_banner_url,
+            wideBannerAnimatedUrl: d.collectibles.wide_banner_animated_url,
+            mobileHeroUrl: d.collectibles.mobile_hero_url,
+            mobileHeroAnimatedUrl: d.collectibles.mobile_hero_animated_url,
+            mobileBannerUrl: d.collectibles.mobile_banner_url,
+            mobileBgUrl: d.collectibles.mobile_bg_url,
+            shopButtonBgHoverUrl: d.collectibles.shop_button_bg_hover_url,
+            upsellBannerPopoutUrl: d.collectibles.upsell_banner_popout_url,
+            upsellBannerUrl: d.collectibles.upsell_banner_url,
+            heroBlockTitle: d.collectibles.hero_block_title,
+            featuredBlockBody: d.collectibles.featured_block_body,
+            mobileHeroBlockTitle: d.collectibles.mobile_hero_block_title,
+            mobileProductsTitle: d.collectibles.mobile_products_title,
+            mobileSummary: d.collectibles.mobile_summary,
+            wideBannerTitle: d.collectibles.wide_banner_title,
+            wideBannerBody: d.collectibles.wide_banner_body,
         });
     }
 }

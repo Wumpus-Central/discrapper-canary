@@ -1,15 +1,14 @@
-"use strict";
-l.d(t, { A: () => o });
-var r = l(627968),
-    a = l(64700),
-    n = l(151645),
-    s = l(751304),
-    i = l(561769);
-let o = (e) => {
-    let { skuId: t } = e,
-        { product: l } = (0, n.A)({ skuId: t, includePricing: !0 }),
-        o = a.useMemo(() => l?.toLegacyRecord(), [l]);
-    return null == o
+t.d(l, { A: () => d });
+var r = t(627968),
+    o = t(64700),
+    n = t(565235),
+    a = t(751304),
+    i = t(561769);
+let d = (e) => {
+    let { productId: l } = e,
+        { product: t } = (0, n.A)({ productId: l, includePricing: !0 }),
+        d = o.useMemo(() => t?.toLegacyRecord(), [t]);
+    return null == d
         ? null
-        : (0, r.jsx)(i.v3.Provider, { value: { productOverride: o }, children: (0, r.jsx)(s.A, { skuId: t }) });
+        : (0, r.jsx)(i.v3.Provider, { value: { productOverride: d }, children: (0, r.jsx)(a.A, { skuId: d.skuId }) });
 };

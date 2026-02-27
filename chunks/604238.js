@@ -1,55 +1,57 @@
-t.d(l, { E: () => S, e: () => g });
+t.d(l, { E: () => A, e: () => f });
 var r = t(64700),
     o = t(735438),
-    i = t(528226),
-    n = t(653793),
-    a = t(118713),
-    c = t(261225),
-    d = t(970488),
+    n = t(528226),
+    a = t(653793),
+    i = t(118713),
+    d = t(261225),
+    c = t(970488),
     s = t(720462),
     u = t(673277),
     h = t(700263),
-    p = t(304973),
-    m = t(18769),
+    m = t(304973),
+    p = t(18769),
     b = t(458306),
     C = t(282203),
     _ = t(22519),
-    y = t(607795),
-    k = t(954644),
-    A = t(634791);
-let S = {
-        ContainedHero: i.A,
+    k = t(607795),
+    g = t(954644),
+    S = t(930948),
+    y = t(634791);
+let A = {
+        ContainedHero: n.A,
         BasicHero: (e) => {
             let { bannerSrc: l } = e;
             return null;
         },
         PromotionalHero: () => null,
         InteractiveHScroll: s.A,
-        Carousel: a.A,
-        Grid: c.A,
-        GridItem: d.A,
+        Carousel: i.A,
+        Grid: d.A,
+        GridItem: c.A,
         Section: u.A,
-        Card: n.A,
+        Card: a.A,
         Skeleton: h.A,
-        FeaturedChip: p.A,
-        FeaturedCollection: m.A,
+        FeaturedChip: m.A,
+        FeaturedCollection: p.A,
         FeaturedProduct: () => null,
-        ShopProductCard: k.A,
+        ShopProductCard: g.A,
+        StorefrontProductCard: S.A,
         SkuList: C.A,
         SubLayout: _.A,
-        SubTemplate: y.A,
+        SubTemplate: k.A,
         Button: b.ar,
         Heading: b.Oo,
         Stack: b.Kp,
         Text: b.t,
-        Any1: A.A,
-        Any2: A.A,
-        Any3: A.A,
+        Any1: y.A,
+        Any2: y.A,
+        Any3: y.A,
     },
-    g = function () {
+    f = function () {
         let { overrides: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         return r.useMemo(() => {
-            let l = (0, o.cloneDeep)(S);
+            let l = (0, o.cloneDeep)(A);
             if (null != e) for (let [t, r] of Object.entries(e)) null != r && (l[t] = r);
             return l;
         }, [e]);

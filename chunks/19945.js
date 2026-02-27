@@ -1,13 +1,12 @@
-"use strict";
-l.d(t, { A: () => c });
-var r = l(575593),
-    a = l(731935),
-    n = l(696444),
-    i = l(474012),
-    s = l(986630),
-    o = l(758836),
-    d = l(652215);
-class c {
+t.d(l, { A: () => s });
+var r = t(575593),
+    o = t(731935),
+    n = t(696444),
+    a = t(474012),
+    i = t(986630),
+    d = t(758836),
+    c = t(652215);
+class s {
     id;
     skuIds;
     name;
@@ -29,69 +28,69 @@ class c {
             (this.primaryCollectionId = e.primaryCollectionId);
     }
     static fromServer(e) {
-        let { sku_ids: t, options: l, created_at: r, updated_at: n, skus: i, tenant_metadata: s, ...o } = e;
-        return new c({
-            ...o,
-            skuIds: t,
-            options: l.map((e) => ({ name: e.name, optionValues: e.option_values })),
+        let { sku_ids: l, options: t, created_at: r, updated_at: n, skus: a, tenant_metadata: i, ...d } = e;
+        return new s({
+            ...d,
+            skuIds: l,
+            options: t.map((e) => ({ name: e.name, optionValues: e.option_values })),
             createdAt: new Date(r),
             updatedAt: new Date(n),
-            skus: i.map((e) => a.A.createFromServer(e)),
-            primaryCollectionId: s.collectibles.primary_collection_id,
+            skus: a.map((e) => o.A.createFromServer(e)),
+            primaryCollectionId: i.collectibles.primary_collection_id,
         });
     }
     toLegacyRecord() {
         let e = this.skus[0];
         if (null == e) return;
-        let t = e.tenantMetadata?.collectibles;
-        if (null == t) return;
-        let l = this.skus.length > 1 ? r.R.VARIANTS_GROUP : t.type,
-            { items: a, item: c } = (0, i.T)(e) ?? {};
-        return new s.A({
+        let l = e.tenantMetadata?.collectibles;
+        if (null == l) return;
+        let t = this.skus.length > 1 ? r.R.VARIANTS_GROUP : l.type,
+            { items: o, item: s } = (0, a.T)(e) ?? {};
+        return new i.A({
             storeListingId: e.id,
             skuId: e.id,
             name: this.name,
             summary: this.summary,
             unpublishedAt: void 0,
             styles: void 0,
-            type: l,
-            premiumType: t.premiumType === d.oA2 ? null : t.premiumType,
-            items: a ?? [c].filter((e) => null != e),
-            categorySkuId: t.categorySkuId ?? "",
-            isCategoryReward: o.MS.some((t) => {
-                let { rewardSkuId: l } = t;
-                return l === e.id;
+            type: t,
+            premiumType: l.premiumType === c.oA2 ? null : l.premiumType,
+            items: o ?? [s].filter((e) => null != e),
+            categorySkuId: l.categorySkuId ?? "",
+            isCategoryReward: d.MS.some((l) => {
+                let { rewardSkuId: t } = l;
+                return t === e.id;
             }),
             prices: e.prices,
             variants:
-                l === r.R.VARIANTS_GROUP
+                t === r.R.VARIANTS_GROUP
                     ? this.skus
-                          .map((t) => {
-                              let l = t.tenantMetadata?.collectibles;
-                              if (null == l) return null;
-                              let { items: r, item: a } = (0, i.T)(t) ?? {},
-                                  [n] = t.selectedOptions;
-                              return new s.x({
+                          .map((l) => {
+                              let t = l.tenantMetadata?.collectibles;
+                              if (null == t) return null;
+                              let { items: r, item: o } = (0, a.T)(l) ?? {},
+                                  [n] = l.selectedOptions;
+                              return new i.x({
                                   baseVariantName: this.name,
                                   baseVariantSkuId: e.id,
                                   variantLabel: n?.optionValue ?? "",
-                                  variantValue: l.optionSelectorDisplayValue ?? "",
-                                  storeListingId: t.id,
-                                  skuId: t.id,
-                                  name: t.name,
-                                  summary: t.summary,
+                                  variantValue: t.optionSelectorDisplayValue ?? "",
+                                  storeListingId: l.id,
+                                  skuId: l.id,
+                                  name: l.name,
+                                  summary: l.summary,
                                   unpublishedAt: void 0,
                                   styles: void 0,
-                                  type: l.type,
-                                  premiumType: l.premiumType === d.oA2 ? null : l.premiumType,
-                                  items: r ?? [a].filter((e) => null != e),
-                                  categorySkuId: l.categorySkuId ?? "",
-                                  isCategoryReward: o.MS.some((e) => {
-                                      let { rewardSkuId: l } = e;
-                                      return l === t.id;
+                                  type: t.type,
+                                  premiumType: t.premiumType === c.oA2 ? null : t.premiumType,
+                                  items: r ?? [o].filter((e) => null != e),
+                                  categorySkuId: t.categorySkuId ?? "",
+                                  isCategoryReward: d.MS.some((e) => {
+                                      let { rewardSkuId: t } = e;
+                                      return t === l.id;
                                   }),
-                                  prices: t.prices,
-                                  googleSkuIds: { [d.lid.MOBILE]: "", [d.lid.MOBILE_PREMIUM_TIER_2]: "" },
+                                  prices: l.prices,
+                                  googleSkuIds: { [c.lid.MOBILE]: "", [c.lid.MOBILE_PREMIUM_TIER_2]: "" },
                                   eligibleOffers: void 0,
                                   variants: void 0,
                                   bundledProducts: void 0,
@@ -99,16 +98,16 @@ class c {
                           })
                           .filter((e) => null != e)
                     : void 0,
-            googleSkuIds: { [d.lid.MOBILE]: "", [d.lid.MOBILE_PREMIUM_TIER_2]: "" },
+            googleSkuIds: { [c.lid.MOBILE]: "", [c.lid.MOBILE_PREMIUM_TIER_2]: "" },
             eligibleOffers: void 0,
             bundledProducts: e.bundledSkus
                 ?.map((e) => {
-                    let t = e.tenantMetadata?.collectibles;
-                    return null == t
+                    let l = e.tenantMetadata?.collectibles;
+                    return null == l
                         ? null
                         : new n.A({
-                              type: t.type,
-                              premiumType: t.premiumType === d.oA2 ? null : t.premiumType,
+                              type: l.type,
+                              premiumType: l.premiumType === c.oA2 ? null : l.premiumType,
                               name: e.name,
                               skuId: e.id,
                               summary: e.summary,
