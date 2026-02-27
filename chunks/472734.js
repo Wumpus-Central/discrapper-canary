@@ -1,129 +1,127 @@
-i.d(a, { SocialLayerStorefrontItemClaimedSuccessfullyModal: () => T });
-var n = i(627968),
-    e = i(64700),
-    l = i(158954),
-    r = i(397927),
-    s = i(262427),
-    c = i(964486),
-    o = i(793574),
-    d = i(688810),
-    u = i(362490),
-    _ = i(954571),
-    x = i(25171),
-    p = i(938289),
-    m = i(690493),
-    A = i(844815),
-    f = i(383089),
-    C = i(41032),
-    j = i(188275),
-    h = i(652215),
-    k = i(985018),
-    S = i(778560);
+a.d(i, { SocialLayerStorefrontItemClaimedSuccessfullyModal: () => T });
+var n = a(627968),
+    e = a(64700),
+    l = a(158954),
+    r = a(397927),
+    s = a(262427),
+    c = a(964486),
+    o = a(793574),
+    d = a(688810),
+    u = a(362490),
+    _ = a(954571),
+    x = a(25171),
+    p = a(690493),
+    m = a(844815),
+    A = a(383089),
+    f = a(41032),
+    C = a(188275),
+    j = a(652215),
+    h = a(985018),
+    k = a(778560);
 function T(t) {
-    let { transitionState: a, onClose: i, sku: T, application: b, analyticsLocations: v, orbsReward: L } = t,
-        N = (0, A.j)(b),
-        { fetched: g, hasAlreadyLinked: E, canStartAuthorization: I, startAuthorization: y } = (0, u.RD)(b),
-        R = (0, m.J)(b),
-        { analyticsLocations: O } = (0, d.Ay)(v ?? [], o.A.SOCIAL_LAYER_CLAIM_PURCHASED_ITEM_MODAL),
-        w = (0, p.n)({ location: "SocialLayerStorefrontItemClaimedSuccessfullyModal" }),
-        D = !g || null == N,
-        M = e.useRef({
-            analyticsLocations: O,
+    let { transitionState: i, onClose: a, sku: T, application: S, analyticsLocations: b, orbsReward: v } = t,
+        N = (0, m.j)(S),
+        { fetched: L, hasAlreadyLinked: g, canStartAuthorization: E, startAuthorization: I } = (0, u.RD)(S),
+        y = (0, p.J)(S),
+        { analyticsLocations: R } = (0, d.Ay)(b ?? [], o.A.SOCIAL_LAYER_CLAIM_PURCHASED_ITEM_MODAL),
+        O = !L || null == N,
+        w = e.useRef({
+            analyticsLocations: R,
             skuId: T.id,
-            applicationId: b.id,
+            applicationId: S.id,
             isLaunchable: N,
-            isApplicationConnected: R,
-            canStartAuthorization: I,
+            isApplicationConnected: y,
+            canStartAuthorization: E,
         });
     e.useEffect(() => {
-        (M.current.isLaunchable = N), (M.current.isApplicationConnected = R), (M.current.canStartAuthorization = I);
-    }, [N, R, I]),
+        (w.current.isLaunchable = N), (w.current.isApplicationConnected = y), (w.current.canStartAuthorization = E);
+    }, [N, y, E]),
         (0, c.Ay)(() => {
-            _.default.track(h.HAw.OPEN_MODAL, { location_stack: O, type: j.e2, sku_id: T.id, application_id: b.id });
+            _.default.track(j.HAw.OPEN_MODAL, { location_stack: R, type: C.e2, sku_id: T.id, application_id: S.id });
         }),
         e.useEffect(() => {
-            if (D) return;
-            let { analyticsLocations: t, skuId: a, applicationId: i, canStartAuthorization: n } = M.current;
-            _.default.track(h.HAw.SLAYER_STOREFRONT_LINK_ACCOUNT_STEP_VIEWED, {
+            if (O) return;
+            let { analyticsLocations: t, skuId: i, applicationId: a, canStartAuthorization: n } = w.current;
+            _.default.track(j.HAw.SLAYER_STOREFRONT_LINK_ACCOUNT_STEP_VIEWED, {
                 location_stack: t,
-                sku_id: a,
-                application_id: i,
+                sku_id: i,
+                application_id: a,
                 is_gift: !1,
-                is_account_linked: E,
+                is_account_linked: g,
                 can_start_authorization: n,
             });
-        }, [D, E]);
-    let W = e.useCallback(() => {
-            let { analyticsLocations: t, skuId: a, applicationId: i } = M.current;
-            _.default.track(h.HAw.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED, {
+        }, [O, g]);
+    let D = e.useCallback(() => {
+            let { analyticsLocations: t, skuId: i, applicationId: a } = w.current;
+            _.default.track(j.HAw.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED, {
                 location_stack: t,
-                sku_id: a,
-                application_id: i,
+                sku_id: i,
+                application_id: a,
                 is_gift: !1,
             }),
-                y({ analyticsLocations: t });
-        }, [y]),
+                I({ analyticsLocations: t });
+        }, [I]),
+        W = e.useCallback(() => {
+            let { analyticsLocations: t, skuId: i } = w.current;
+            _.default.track(j.HAw.SLAYER_STOREFRONT_GAME_LAUNCH_CLICKED, {
+                location_stack: t,
+                sku_id: i,
+                application_id: S.id,
+                is_gift: !1,
+            }),
+                x.A.launchGame(S.id);
+        }, [S.id]),
         z = e.useCallback(() => {
-            let { analyticsLocations: t, skuId: a } = M.current;
-            _.default.track(h.HAw.SLAYER_STOREFRONT_GAME_LAUNCH_CLICKED, {
-                location_stack: t,
-                sku_id: a,
-                application_id: b.id,
-                is_gift: !1,
-            }),
-                x.A.launchGame(b.id);
-        }, [b.id]),
-        H = e.useCallback(() => {
             let {
                 analyticsLocations: t,
-                skuId: a,
+                skuId: i,
                 applicationId: n,
                 isLaunchable: e,
                 isApplicationConnected: l,
-            } = M.current;
-            _.default.track(h.HAw.SLAYER_STOREFRONT_CLAIM_MODAL_CLOSE_BUTTON_CLICKED, {
+            } = w.current;
+            _.default.track(j.HAw.SLAYER_STOREFRONT_CLAIM_MODAL_CLOSE_BUTTON_CLICKED, {
                 location_stack: t,
-                sku_id: a,
+                sku_id: i,
                 application_id: n,
                 is_gift: !1,
                 is_launchable: e ?? !1,
                 is_application_connected: l,
             }),
-                i();
-        }, [i]);
-    if (D)
+                a();
+        }, [a]);
+    if (O)
         return (0, n.jsx)(l.dWK, {
-            transitionState: a,
-            onClose: i,
+            transitionState: i,
+            onClose: a,
             children: (0, n.jsx)(l.cwr, { children: (0, n.jsx)(r.y$y, {}) }),
         });
-    if (E) {
+    if (g) {
         let t =
-            N && !R
-                ? { variant: "primary", text: k.intl.string(k.t["s+J8Dl"]), onClick: z, icon: l.tfB }
-                : { variant: "primary", text: k.intl.string(k.t.cpT0Cq), onClick: H };
+            N && !y
+                ? { variant: "primary", text: h.intl.string(h.t["s+J8Dl"]), onClick: W, icon: l.tfB }
+                : { variant: "primary", text: h.intl.string(h.t.cpT0Cq), onClick: z };
         return (0, n.jsxs)(l.dWK, {
-            transitionState: a,
-            onClose: i,
+            transitionState: i,
+            onClose: a,
             children: [
-                (0, n.jsx)(C.z, { sku: T, title: k.intl.string(k.t["5glWta"]) }),
+                (0, n.jsx)(f.z, { sku: T, title: h.intl.string(h.t["5glWta"]) }),
                 (0, n.jsxs)(l.cwr, {
                     children: [
                         (0, n.jsx)(r.Text, {
                             variant: "text-md/normal",
-                            className: S.j,
-                            children: k.intl.formatToPlainString(k.t.W2znvX, {
+                            className: k.j,
+                            children: h.intl.formatToPlainString(h.t.W2znvX, {
                                 skuName: T.name,
-                                applicationName: b.name,
+                                applicationName: S.name,
                             }),
                         }),
-                        null != L &&
-                            L > 0 &&
+                        null != v &&
+                            v > 0 &&
                             (0, n.jsx)("div", {
-                                className: S.I,
+                                className: k.I,
                                 children: (0, n.jsx)(s.J, {
                                     Icon: l.Cp8,
-                                    text: k.intl.format(k.t["0StwHe"], { orbCount: L }),
+                                    text: h.intl.format(h.t["0StwHe"], { orbCount: v }),
                                 }),
                             }),
                     ],
@@ -133,18 +131,18 @@ function T(t) {
         });
     }
     {
-        let t = { variant: "primary", text: k.intl.string(k.t["VDAhr+"]), onClick: W, icon: l.A5T, disabled: !I },
-            e = w ? k.t.URLMAM : k.t.Qmkje8;
-        return (0, n.jsx)(f.m, {
+        let t = { variant: "primary", text: h.intl.string(h.t["VDAhr+"]), onClick: D, icon: l.A5T, disabled: !E },
+            e = h.t.URLMAM;
+        return (0, n.jsx)(A.m, {
             sku: T,
-            application: b,
-            transitionState: a,
-            onClose: i,
-            hasAlreadyLinked: E,
-            canStartAuthorization: I,
+            application: S,
+            transitionState: i,
+            onClose: a,
+            hasAlreadyLinked: g,
+            canStartAuthorization: E,
             primaryCTAButtonProps: t,
-            bodyText: k.intl.formatToPlainString(e, { applicationName: b.name }),
-            title: k.intl.string(k.t.GPAtvf),
+            bodyText: h.intl.formatToPlainString(e, { applicationName: S.name }),
+            title: h.intl.string(h.t.GPAtvf),
         });
     }
 }
