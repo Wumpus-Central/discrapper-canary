@@ -159,7 +159,7 @@ let eI = function (e) {
     let { topLevelRoute: t } = e,
         n = (0, s.zy)(),
         l = (0, s.W6)(),
-        _ = r.useMemo(() => (0, R.B)(n.pathname, er.BVt.QUEST_HOME)?.isExact === !0, [n.pathname]),
+        _ = r.useMemo(() => (0, R.B)(n.pathname, er.BVt.QUEST_HOME_DEPRECATED)?.isExact === !0, [n.pathname]),
         C = (0, c.bG)([E.A], () => E.A.getState("quests")),
         { selectedTab: v, onSelectTab: L, tabs: M } = (0, en.J)({ withClaimedQuestsTab: !_ });
     r.useLayoutEffect(() => {

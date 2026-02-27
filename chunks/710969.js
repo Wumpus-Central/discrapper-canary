@@ -158,5 +158,5 @@ function O(e, t) {
     s.A.captureException(e, { ...t, tags: { ...t?.tags, app_context: "quests" } });
 }
 function D() {
-    return window.location.pathname.startsWith(c.BVt.QUEST_HOME);
+    return window.location.pathname.startsWith(c.BVt.QUEST_HOME_DEPRECATED);
 }

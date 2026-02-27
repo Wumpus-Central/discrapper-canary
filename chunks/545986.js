@@ -110,7 +110,7 @@ function H() {
     let r = null != t ? `#${t}` : "";
     n && u.A.setState({ selectedTab: w.GlobalDiscoveryTab.QUESTS }),
         (0, d.default)(),
-        (0, c.pX)((n ? L.BVt.QUEST_HOME : L.BVt.QUEST_HOME_V2) + r);
+        (0, c.pX)((n ? L.BVt.QUEST_HOME_DEPRECATED : L.BVt.QUEST_HOME_V2) + r);
 }
 let j = 0.2;
 function Y(e) {
@@ -121,7 +121,7 @@ function Y(e) {
     t.log(`Showing survey ${r.id}`), (0, R.m)({ questId: e.id, survey: r });
 }
 function W() {
-    return Promise.all([n.e("35584"), n.e("23628"), n.e("73845")]).then(n.bind(n, 717415));
+    return Promise.all([n.e("35584"), n.e("23628"), n.e("78889")]).then(n.bind(n, 717415));
 }
 function K(e) {
     let {
@@ -132,7 +132,7 @@ function K(e) {
         autoplay: l = !0,
         skipEnrollmentCheck: u = !1,
     } = e;
-    if ((0, N.BS)(t)) return void X(t);
+    if ((0, N.K$)(t)) return void X(t);
     let c = (0, i.A)();
     if (!u && t.userStatus?.enrolledAt == null && !(0, v.Ic)(t)) {
         m.A.isEnrolling(t.id) ||
@@ -218,7 +218,7 @@ function Z(e) {
 }
 function X(e) {
     (0, o.mMO)(async () => {
-        let { default: t } = await Promise.all([n.e("45563"), n.e("77828")]).then(n.bind(n, 491390));
+        let { default: t } = await Promise.all([n.e("97484"), n.e("77828")]).then(n.bind(n, 491390));
         return (n) => (0, r.jsx)(t, { ...n, questId: e.id });
     });
 }

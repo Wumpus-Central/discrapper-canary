@@ -41,10 +41,10 @@ var i = n(627968),
     H = n(490358),
     F = n(961973),
     Y = n(140354),
-    W = n(551036),
-    q = n(46533),
-    K = n(467627),
-    z = n(379610),
+    q = n(551036),
+    W = n(46533),
+    z = n(467627),
+    K = n(379610),
     $ = n(920113),
     Q = n(164956),
     X = n(209700),
@@ -142,19 +142,19 @@ let ew = (0, c.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 50083
         name: "GuildOnboardingPage",
         renderLoader: eU,
     }),
-    eW = (0, c.Fe)({
+    eq = (0, c.Fe)({
         createPromise: () => Promise.all([n.e("63379"), n.e("88615")]).then(n.bind(n, 126076)),
         webpackId: 126076,
         name: "GuildPowerupsPage",
         renderLoader: eU,
     }),
-    eq = (0, c.Fe)({
+    eW = (0, c.Fe)({
         createPromise: () => Promise.all([n.e("91284"), n.e("19750")]).then(n.bind(n, 692150)),
         webpackId: 692150,
         name: "GameServerPage",
         renderLoader: eU,
     }),
-    eK = (e) => {
+    ez = (e) => {
         let { match: t } = e,
             n = (0, N.o)(),
             r = (0, A.bG)([ef.A, eS.A], () => {
@@ -188,7 +188,7 @@ let ew = (0, c.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 50083
                 case eR.VV.ROLE_SUBSCRIPTIONS:
                     return E
                         ? (0, i.jsx)(eG, { guildId: l, initialTab: D.B.GUILD_ROLE_SUBSCRIPTIONS })
-                        : (0, i.jsx)(W.A, { guildId: l });
+                        : (0, i.jsx)(q.A, { guildId: l });
                 case eR.VV.SERVER_MONETIZATION_ONBOARDING:
                     return (0, i.jsx)(eV, { guildId: l });
                 case eR.VV.GAME_SHOP:
@@ -208,13 +208,13 @@ let ew = (0, c.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 50083
                 case eR.VV.MEMBER_SAFETY:
                     return (0, i.jsx)(eH, { guildId: l });
                 case eR.VV.GUILD_BOOSTS:
-                    return (0, i.jsx)(eW, {
+                    return (0, i.jsx)(eq, {
                         guildId: l,
                         powerupListingId: n.get("powerupId") ?? n.get("powerupSkuId"),
                     });
                 case eR.VV.GAME_SERVERS:
                     if (!_ || !m) return (0, i.jsx)(o.rd, { to: eL.BVt.CHANNEL(l) });
-                    return (0, i.jsx)(eq, { guildId: l });
+                    return (0, i.jsx)(eW, { guildId: l });
                 case eR.VV.REPORT_TO_MOD:
                     return (0, i.jsx)(b.A, {});
                 default:
@@ -227,7 +227,7 @@ let ew = (0, c.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 50083
         }
         return (0, i.jsx)(b.A, {});
     },
-    ez = r.memo(function () {
+    eK = r.memo(function () {
         let { guildId: e, channelId: t } = (0, e_.A)(),
             { notificationCenterVariant: n } = (0, ei.X8)({ location: "Sidebar" }),
             r = (0, A.bG)([eS.A], () => t ?? eS.A.getChannelId(e));
@@ -238,10 +238,10 @@ let ew = (0, c.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 50083
                 (0, ec.r$)()
               ? (0, i.jsx)(V.A, {})
               : null != e
-                ? (0, i.jsx)(q.A, { selectedChannelId: r, guildId: e }, e)
+                ? (0, i.jsx)(W.A, { selectedChannelId: r, guildId: e }, e)
                 : (0, i.jsx)(ed.A, {});
     }),
-    e$ = (e) => (0, i.jsx)(eK, { ...e }),
+    e$ = (e) => (0, i.jsx)(ez, { ...e }),
     eQ = () => (0, i.jsx)(k.A, {}),
     eX = (e) => (0, i.jsx)(eZ, { ...e }),
     eZ = (e) => {
@@ -261,7 +261,7 @@ let ew = (0, c.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 50083
     },
     e0 = (e) => {
         let { match: t } = e;
-        return (0, eE.pX)(eL.BVt.ME), (0, z.A)(t.params.inviteCode), null;
+        return (0, eE.pX)(eL.BVt.ME), (0, K.A)(t.params.inviteCode), null;
     },
     e1 = () => (0, i.jsx)(E.A, {}),
     e7 = () => (0, i.jsx)(I.A, {}),
@@ -270,10 +270,10 @@ let ew = (0, c.Fe)({ createPromise: () => Promise.resolve().then(n.bind(n, 50083
             let { tab: t } = (0, s.parse)(e.location.search);
             return Object.values(eP.G2).includes(t) ? (0, i.jsx)(L.A, { tab: t, ...e }) : (0, i.jsx)(L.A, { ...e });
         };
-function e9() {
+function e5() {
     return (0, i.jsx)(eu.A, { topLevelRoute: !0 });
 }
-let e5 = (e) => (0, i.jsx)(x.A, { ...e }),
+let e9 = (e) => (0, i.jsx)(x.A, { ...e }),
     e2 = () => (0, i.jsx)(es.A, {}),
     e3 = () => (0, i.jsx)($.A, {}),
     e4 = () => (0, i.jsx)(J.A, {}),
@@ -412,11 +412,11 @@ function tn(e) {
                 "data-collapsed": m,
                 className: a()(eM.pz, e, { [eM.Ij]: u.Fr, [eM.R]: d, [eM.WG]: s }),
                 children: [
-                    o && (0, i.jsx)(K.A, { className: eM.Pl, themeOverride: n }),
+                    o && (0, i.jsx)(z.A, { className: eM.Pl, themeOverride: n }),
                     !s &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)("div", { ...x, children: (0, i.jsx)(ez, {}) }),
+                                (0, i.jsx)("div", { ...x, children: (0, i.jsx)(eK, {}) }),
                                 (0, i.jsx)(_.DUT, {
                                     onClick: S,
                                     "aria-label": "Resize Sidebar",
@@ -499,7 +499,7 @@ function ti() {
                                                 }),
                                                 (0, i.jsx)(v.A, {
                                                     path: eL.BVt.ACTIVITY_DETAILS(":applicationId"),
-                                                    render: e5,
+                                                    render: e9,
                                                     impressionName: d.ImpressionNames.ACTIVITY_DETAILS,
                                                     impressionProperties: (e) => {
                                                         let { match: t } = e;
@@ -618,14 +618,14 @@ function ti() {
                                                     disableTrack: !0,
                                                 }),
                                                 (0, i.jsx)(v.A, {
-                                                    path: eL.BVt.QUEST_HOME,
+                                                    path: eL.BVt.QUEST_HOME_DEPRECATED,
                                                     render: eQ,
                                                     impressionName: d.ImpressionNames.QUEST_HOME,
                                                     disableTrack: !0,
                                                 }),
                                                 (0, i.jsx)(v.A, {
                                                     path: eL.BVt.QUEST_HOME_V2,
-                                                    render: e9,
+                                                    render: e5,
                                                     impressionName: d.ImpressionNames.QUEST_HOME,
                                                     disableTrack: !0,
                                                 }),

@@ -43,8 +43,8 @@ var i = n(627968),
     Y = n(746094),
     q = n(257402),
     W = n(216954),
-    K = n(735831),
-    z = n(913953),
+    z = n(735831),
+    K = n(913953),
     $ = n(142120),
     Q = n(507263),
     X = n(998345),
@@ -97,8 +97,8 @@ var i = n(627968),
     eY = n(32294),
     eq = n(639823),
     eW = n(961350),
-    eK = n(761640),
-    ez = n(734057),
+    ez = n(761640),
+    eK = n(734057),
     e$ = n(650048),
     eQ = n(71393),
     eX = n(189081),
@@ -205,7 +205,7 @@ let ti = (0, p.z)((e) => {
                     let e = tu(t);
                     return null == e ||
                         ((e.params.guildId === e4.ME || null != eQ.A.getGuild(e.params.guildId)) &&
-                            null != ez.A.getChannel(e.params.channelId))
+                            null != eK.A.getChannel(e.params.channelId))
                         ? (0, i.jsx)(a.rd, { to: t })
                         : (0, i.jsx)(a.rd, { to: r });
                 }
@@ -406,7 +406,7 @@ let tc = [
             e4.BVt.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"),
             e4.BVt.COLLECTIBLES_SHOP_LAYOUT(":layoutId"),
             e4.BVt.GUILD_DISCOVERY,
-            e4.BVt.QUEST_HOME,
+            e4.BVt.QUEST_HOME_DEPRECATED,
             e4.BVt.QUEST_HOME_V2,
             e4.BVt.ICYMI,
             e4.BVt.GLOBAL_DISCOVERY,
@@ -442,7 +442,7 @@ function tA(e) {
     let { channelId: t, guildId: n, pathname: i } = e;
     if (!$.A.isConnected()) return;
     let { location: r } = (0, ev.JK)();
-    r.pathname === i && (null == ez.A.getChannel(t) ? (0, ev.bG)(e4.BVt.CHANNEL(n)) : (0, ev.bG)(i));
+    r.pathname === i && (null == eK.A.getChannel(t) ? (0, ev.bG)(e4.BVt.CHANNEL(n)) : (0, ev.bG)(i));
 }
 class th extends r.PureComponent {
     historyUnlisten = () => {};
@@ -459,8 +459,8 @@ class th extends r.PureComponent {
             G.A.initialize(),
             ea.A.initialize(),
             E.A.init(),
-            z.A.init(),
             K.A.init(),
+            z.A.init(),
             eu.A.initialize(),
             S.A.initialize(),
             B.A.initialize(),
@@ -554,7 +554,7 @@ class th extends r.PureComponent {
                 if ((o && _ && A.A.selectGuild(i), o && d)) {
                     let n = eZ.A.getChannelId(u),
                         o = n !== r,
-                        d = null != eK.Ay.getGuildSidebarState(i);
+                        d = null != ez.Ay.getGuildSidebarState(i);
                     if (!tn || _ || o || null != a) {
                         (tn = !0), h.default.selectChannel({ guildId: i, channelId: r, messageId: a });
                         let { summaryId: e } = (0, l.parse)(t);
@@ -564,11 +564,11 @@ class th extends r.PureComponent {
                         (d &&
                             o &&
                             null != r &&
-                            null != eK.Ay.getCurrentSidebarChannelId(r) &&
+                            null != ez.Ay.getCurrentSidebarChannelId(r) &&
                             eO.A.closeChannelSidebar(r),
                         null != s && c)
                     ) {
-                        let e = eK.Ay.getCurrentSidebarChannelId(n),
+                        let e = ez.Ay.getCurrentSidebarChannelId(n),
                             t = e !== s;
                         if (null != r && null != s && t)
                             if (d) (0, ev.bG)(e4.BVt.CHANNEL(i, s, a));
@@ -603,12 +603,12 @@ class th extends r.PureComponent {
         let { guildId: i, channelId: r, threadId: l } = td(n),
             a = (0, eS.nn)(i) && i !== e4.ME && i !== e4.YYv;
         if (null != r && (0, eS.ts)(r) && !(0, e8.jq)(r) && a) {
-            let n = ez.A.getChannel(r);
+            let n = eK.A.getChannel(r);
             if (null == n) eM.A.loadThread(r).then(() => tA({ channelId: r, guildId: i, pathname: t }));
             else if (n.guild_id !== i && i !== e4.gNP) return { path: e4.BVt.CHANNEL(i), state: e.state };
             if (null != l) {
                 if (!((0, eS.ts)(l) && !(0, e8.jq)(r))) return null;
-                let n = ez.A.getChannel(l);
+                let n = eK.A.getChannel(l);
                 if (null == n) eM.A.loadThread(l).then(() => tA({ channelId: l, guildId: i, pathname: t }));
                 else if (n?.parent_id !== r)
                     return eO.A.closeChannelSidebar(r), { path: e4.BVt.CHANNEL(i, r), state: e.state };
