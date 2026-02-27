@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { Ay: () => g, Eq: () => h, Jo: () => d, LG: () => m, e5: () => f, ks: () => _, m1: () => p });
+n.d(t, { Ay: () => E, Eq: () => h, Jo: () => d, LG: () => m, e5: () => f, ks: () => _, m1: () => p });
 var r = n(311907),
     i = n(49463),
-    a = n(994500),
-    s = n(287809),
+    s = n(994500),
+    a = n(287809),
     o = n(403362),
     l = n(427262),
     u = n(652215),
@@ -21,39 +21,40 @@ function _(e, t, n) {
     return d(e.recipients, t, n);
 }
 function f(e) {
-    return (0, r.bG)([s.default, a.A], () => (null != e && e.isMultiUserDM() ? _(e, s.default, a.A) : null));
+    return (0, r.bG)([a.default, s.A], () => (null != e && e.isMultiUserDM() ? _(e, a.default, s.A) : null));
 }
 function p(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+        s = e.name;
     if (e.isObfuscated()) return c.intl.string(c.t["/YzI63"]);
     switch (e.type) {
         case u.rbe.DM:
             let [a] = e.recipients.map(t.getUser).filter(o.Vq);
             if (null == a) return "???";
             if (a.isProvisional && null != a.globalName) return a.globalName;
-            let s = n.getNickname(a.id) ?? l.Ay.getName(a) ?? "???";
-            return r ? `@${s}` : s;
+            let d = n.getNickname(a.id) ?? l.Ay.getName(a) ?? "???";
+            return r ? `@${d}` : d;
         case u.rbe.GROUP_DM:
-            if ("" !== e.name) return e.name;
+            if ("" !== s) return s;
             return _(e, t, n);
         case u.rbe.GUILD_ANNOUNCEMENT:
         case u.rbe.GUILD_TEXT:
         case u.rbe.GUILD_FORUM:
         case u.rbe.GUILD_MEDIA:
-            if (r) return `#${e.name}`;
-            return e.name;
+            if (r) return `#${s}`;
+            return s;
         case u.rbe.PUBLIC_THREAD:
         case u.rbe.PRIVATE_THREAD:
         case u.rbe.ANNOUNCEMENT_THREAD:
         case u.rbe.GUILD_VOICE:
         case u.rbe.GUILD_STAGE_VOICE:
         case u.rbe.GUILD_CATEGORY:
-            if (i) return `#"${h(e.name)}"`;
-            if (r && e.isThread()) return `"${e.name}"`;
-            return e.name;
+            if (i) return `#"${h(s)}"`;
+            if (r && e.isThread()) return `"${s}"`;
+            return s;
         default:
-            return e.name;
+            return s;
     }
 }
 function h(e) {
@@ -62,7 +63,7 @@ function h(e) {
 function m(e) {
     return e.replace(/\\"/g, '"').replace(/\\\\/g, "\\");
 }
-function g(e) {
+function E(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return (0, r.bG)([s.default, i.A, a.A], () => (null == e ? null : p(e, s.default, a.A, t)));
+    return (0, r.bG)([a.default, i.A, s.A], () => (null == e ? null : p(e, a.default, s.A, t)));
 }
