@@ -47,7 +47,7 @@ function f(e) {
                       sourceQuestContent: g.uF.QUEST_HOME_DESKTOP,
                   }),
                   _.A.openNativeAppModal("quests", p.e$_.DEEP_LINK, { type: E.XK.QUEST_HOME, params: { questId: l } }))
-                : t === p.fAW.OPEN_FAIL && (0, h.bG)({ pathname: p.BVt.QUEST_HOME, hash: l }));
+                : t === p.fAW.OPEN_FAIL && (0, h.bG)({ pathname: p.BVt.QUEST_HOME_V2, hash: l }));
     }, [t, l]);
     let C = r.useCallback(() => (0, o.QA)(l), [l]);
     if (T)
