@@ -36846,12 +36846,10 @@ html:not(.chat-input) .inputInner_b1f01d {
     pointer-events: auto
 }
 
-.itemIconHeart_d9866f {
-    fill: var(--control-critical-primary-background-default)
-}
-
-.itemIconShop_d9866f {
-    fill: var(--icon-strong)
+.itemIconBackground_d9866f {
+    background-color: var(--control-overlay-secondary-background-default);
+    border-radius: var(--radius-round);
+    padding: 2px
 }
 
 .container_b7b2cf {
@@ -45501,20 +45499,6 @@ screen and (max-width:485px) {
 
 .stepBody_a3d32e>* {
     width: 50%
-}
-
-.container__96168 {
-    margin-top: 8px;
-    position: relative
-}
-
-.full-motion .container__96168 {
-    transition: transform .2s ease
-}
-
-.cardContainer__96168 {
-    height: 100%;
-    width: 100%
 }
 
 .card__20585:focus-within .cardBackgroundImage__20585,

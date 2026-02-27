@@ -8,8 +8,8 @@ var i = n(627968),
     c = n(808247),
     d = n(107563),
     u = n(840411),
-    g = n(178213),
-    m = n(594832),
+    m = n(178213),
+    g = n(594832),
     x = n(86638),
     f = n(46537),
     p = n(287809),
@@ -50,7 +50,7 @@ let T = l.memo(function (e) {
             onReorder: p,
         } = e,
         { registerDragHandleRef: h } = (0, A.r)(),
-        j = (0, g.G)("user_profile_wishlist_grid"),
+        j = (0, m.G)("user_profile_wishlist_grid"),
         T = l.useMemo(
             () =>
                 s
@@ -63,15 +63,7 @@ let T = l.memo(function (e) {
             [s, h, t.skuId],
         ),
         b = l.useMemo(() => {
-            if (j)
-                return (0, i.jsx)(x.A, {
-                    item: t,
-                    wishlistOwner: a,
-                    wishlistId: c,
-                    isDragging: u,
-                    dragHandle: T,
-                    tooltipConfig: d,
-                });
+            if (j) return (0, i.jsx)(x.A, { item: t, wishlistOwner: a, wishlistId: c, isDragging: u, dragHandle: T });
             let e = (0, i.jsx)(I.A, {
                     item: t,
                     profileOwner: a,
@@ -85,15 +77,15 @@ let T = l.memo(function (e) {
                 d.shouldShow &&
                     !u &&
                     (n = (0, f.Qc)(d)
-                        ? (0, i.jsx)(o.m, { text: d.title, position: "top", asContainer: !0, delay: m.Zh, children: e })
+                        ? (0, i.jsx)(o.m, { text: d.title, position: "top", asContainer: !0, delay: g.Zh, children: e })
                         : (0, i.jsx)(r.u, {
                               title: d.title,
                               body: d.body ?? "",
                               asset: d.renderIcon?.(t),
-                              assetSize: m.Q8,
+                              assetSize: g.Q8,
                               position: "top",
                               asContainer: !0,
-                              delay: m.Zh,
+                              delay: g.Zh,
                               children: e,
                           })),
                 n
@@ -106,21 +98,21 @@ let T = l.memo(function (e) {
 function b(e) {
     let { items: t, profileOwner: n, isOwner: r } = e,
         o = p.default.getCurrentUser(),
-        { defaultWishlistId: g } = (0, s.cf)([h.A], () => ({ defaultWishlistId: h.A.getFirstWishlistId(n.id) })),
-        m = (0, f.b7)(t, r),
+        { defaultWishlistId: m } = (0, s.cf)([h.A], () => ({ defaultWishlistId: h.A.getFirstWishlistId(n.id) })),
+        g = (0, f.b7)(t, r),
         { isDragging: x } = (0, a.V)((e) => ({ isDragging: e.isDragging() })),
         _ = l.useCallback(
             (e, n) => {
-                if (e === n || null == g || 0 === t.length || e < 0 || e >= t.length || n < 0 || n >= t.length) return;
-                let i = d.A.getWishlist(g);
+                if (e === n || null == m || 0 === t.length || e < 0 || e >= t.length || n < 0 || n >= t.length) return;
+                let i = d.A.getWishlist(m);
                 if (null == i) return;
                 let l = t[e],
                     { newWishlistData: a, previousSkuId: s, nextSkuId: r } = (0, u.A)(i, t, e, n);
-                c.A.reorderWishlistItem(g, l.skuId, { previousSkuId: s, nextSkuId: r, newWishlistData: a });
+                c.A.reorderWishlistItem(m, l.skuId, { previousSkuId: s, nextSkuId: r, newWishlistData: a });
             },
-            [g, t],
+            [m, t],
         );
-    if (null == o || null == g) return null;
+    if (null == o || null == m) return null;
     let I = (0, i.jsx)("ul", {
         className: v.Vg,
         children: t.map((e, t) =>
@@ -131,8 +123,8 @@ function b(e) {
                     index: t,
                     profileOwner: n,
                     isOwner: r,
-                    wishlistId: g,
-                    tooltipConfig: m[t],
+                    wishlistId: m,
+                    tooltipConfig: g[t],
                     isDragging: x,
                     onReorder: _,
                 },

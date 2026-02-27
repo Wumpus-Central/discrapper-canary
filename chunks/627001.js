@@ -1,36 +1,38 @@
 "use strict";
-n.d(t, { P: () => f });
+n.d(t, { P: () => h });
 var r = n(627968),
     i = n(503698),
     s = n.n(i),
     a = n(435371),
     o = n(240248),
-    l = n(360469),
-    u = n(114855);
-function c(e) {
+    l = n(594832),
+    u = n(360469),
+    c = n(985018),
+    d = n(569261);
+function _(e) {
     return { top: e.iconInset, insetInlineStart: e.iconInset };
 }
-function d(e) {
+function f(e) {
     return { width: e.iconSize, height: e.iconSize };
 }
-function _(e) {
+function p(e) {
     let { spec: t, icon: n, tooltipText: i } = e,
-        l = !(0, o.uJ)(i),
-        d = (0, r.jsx)("div", { className: s()(u.Fx, { [u.Y_]: l }), style: c(t), children: n });
-    return l ? (0, r.jsx)(a.m_, { text: i, position: "top", children: d }) : d;
+        u = !(0, o.uJ)(i),
+        c = (0, r.jsx)("div", { className: s()(d.Fx, { [d.Y_]: u }), style: _(t), children: n });
+    return u ? (0, r.jsx)(a.m_, { text: i, position: "top", delay: l.Zh, children: c }) : c;
 }
-function f(e) {
-    let { spec: t, application: n, tooltipText: i } = e,
-        s = null != n ? n.getIconURL(l.iu.SMALL) : void 0;
-    return null == s
+function h(e) {
+    let { spec: t, application: n } = e,
+        i = null != n ? n.getIconURL(u.iu.SMALL) : void 0;
+    return null == i
         ? null
-        : (0, r.jsx)(_, {
+        : (0, r.jsx)(p, {
               spec: t,
               icon: (0, r.jsx)("div", {
-                  className: u.In,
-                  style: d(t),
-                  children: (0, r.jsx)("img", { src: s, alt: n?.name }),
+                  className: d.In,
+                  style: f(t),
+                  children: (0, r.jsx)("img", { src: i, alt: n?.name }),
               }),
-              tooltipText: i,
+              tooltipText: c.intl.string(c.t["4yiU7x"]),
           });
 }
