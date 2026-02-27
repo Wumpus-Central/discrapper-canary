@@ -6,5 +6,5 @@ e.exports = {
     U6: "steamContainer_ceab1a",
     tN: "steamNameContainer_ceab1a",
     Z0: "steamRatingContainer_ceab1a",
-    TN: "openSteamLinkClickable_ceab1a",
+    nf: "link_ceab1a",
 };

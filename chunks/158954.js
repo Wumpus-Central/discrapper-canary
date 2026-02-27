@@ -138,6 +138,7 @@ n.d(t, {
     NPJ: () => eB.N,
     NVR: () => $.PawPrintIcon,
     NVf: () => $.NewUserIcon,
+    NXQ: () => $.SteamNeutralIcon,
     Nxw: () => $.UserMinusIcon,
     O1p: () => $.MicrophoneDenyIcon,
     O4: () => $.ClockIcon,

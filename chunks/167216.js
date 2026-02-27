@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     iE: "wrapper_fc8177",
     oE: "compact_fc8177",
