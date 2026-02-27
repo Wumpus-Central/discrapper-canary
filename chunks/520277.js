@@ -1,5 +1,6 @@
 e.exports = {
-    kL: "container__6c253",
+    fx: "containerDefault__6c253",
+    ft: "containerCompact__6c253",
     Qs: "content__6c253",
     Sl: "image__6c253 content__6c253",
     $J: "boostIcon__6c253",

@@ -1,133 +1,112 @@
-i.d(e, { default: () => O });
-var c = i(627968),
-    n = i(64700),
-    a = i(158954),
-    o = i(311907),
-    s = i(397927),
-    r = i(793574),
-    l = i(688810),
-    _ = i(607470),
-    d = i(509536),
-    u = i(987144),
-    A = i(71393),
-    p = i(954571),
-    b = i(652215),
-    E = i(985018),
-    M = i(937660),
-    I = i(773055),
-    U = i(519636);
-function O(t) {
+c.d(t, { default: () => M });
+var i = c(627968),
+    n = c(64700),
+    a = c(158954),
+    s = c(311907),
+    o = c(397927),
+    r = c(793574),
+    l = c(688810),
+    d = c(607470),
+    _ = c(987144),
+    u = c(71393),
+    p = c(954571),
+    A = c(652215),
+    b = c(985018),
+    E = c(937660),
+    I = c(773055),
+    T = c(519636);
+function M(e) {
     let {
-            guildId: e,
-            transitionState: i,
-            onClose: O,
-            showLearnMore: R = !0,
-            analyticsLocation: T,
-            sourceAnalyticsLocations: y,
-            videoPlacement: D,
-        } = t,
-        L = (0, o.bG)([A.A], () => A.A.getGuild(e)),
-        { analyticsLocations: f } = (0, l.Ay)(y, r.A.GUILD_POWERUPS_MARKETING_VIDEO_MODAL),
-        [g, k] = n.useState(!1),
-        m = n.useRef(!1),
-        G = n.useMemo(
+            guildId: t,
+            transitionState: c,
+            onClose: M,
+            analyticsLocation: O,
+            sourceAnalyticsLocations: U,
+            videoPlacement: y,
+        } = e,
+        D = (0, s.bG)([u.A], () => u.A.getGuild(t)),
+        { analyticsLocations: f } = (0, l.Ay)(U, r.A.GUILD_POWERUPS_MARKETING_VIDEO_MODAL),
+        [k, m] = n.useState(!1),
+        G = n.useRef(!1),
+        L = n.useMemo(
             () => ({
-                guild_id: e,
-                type: b.liQ.PREMIUM_GUILD_USER_MODAL,
+                guild_id: t,
+                type: A.liQ.PREMIUM_GUILD_USER_MODAL,
                 location_stack: f,
-                location_section: T.section,
-                location_object: T.object,
-                video_placement: D,
+                location_section: O.section,
+                location_object: O.object,
+                video_placement: y,
             }),
-            [T.object, T.section, f, e, D],
+            [O.object, O.section, f, t, y],
         ),
-        j = n.useCallback(
-            (t) => {
-                let e = t.currentTarget.duration;
-                m.current ||
-                    ((m.current = !0),
-                    p.default.track(b.HAw.BOOSTING_MARKETING_VIDEO_PLAYED, {
-                        ...G,
-                        ...(Number.isFinite(e) ? { video_duration_sec: e } : {}),
+        R = n.useCallback(
+            (e) => {
+                let t = e.currentTarget.duration;
+                G.current ||
+                    ((G.current = !0),
+                    p.default.track(A.HAw.BOOSTING_MARKETING_VIDEO_PLAYED, {
+                        ...L,
+                        ...(Number.isFinite(t) ? { video_duration_sec: t } : {}),
                     }));
             },
-            [G],
+            [L],
         ),
-        C = n.useCallback(
-            (t) => {
-                let e = t.currentTarget.currentTime,
-                    i = t.currentTarget.duration;
-                p.default.track(b.HAw.BOOSTING_MARKETING_VIDEO_COMPLETED, {
-                    ...G,
-                    ...(Number.isFinite(e) ? { seconds_played: e } : {}),
-                    ...(Number.isFinite(i) ? { video_duration_sec: i } : {}),
+        g = n.useCallback(
+            (e) => {
+                let t = e.currentTarget.currentTime,
+                    c = e.currentTarget.duration;
+                p.default.track(A.HAw.BOOSTING_MARKETING_VIDEO_COMPLETED, {
+                    ...L,
+                    ...(Number.isFinite(t) ? { seconds_played: t } : {}),
+                    ...(Number.isFinite(c) ? { video_duration_sec: c } : {}),
                 });
             },
-            [G],
+            [L],
         );
-    async function P() {
-        null != L &&
-            (k(!0),
-            await (0, u.g)({
+    async function j() {
+        null != D &&
+            (m(!0),
+            await (0, _.g)({
                 analyticsLocations: f,
                 analyticsLocation: {
-                    page: b.liQ.PREMIUM_GUILD_USER_MODAL,
-                    section: b.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                    object: b.ZSU.BUTTON_CTA,
-                    objectType: b.AnalyticsObjectTypes.BUY,
+                    page: A.liQ.PREMIUM_GUILD_USER_MODAL,
+                    section: A.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                    object: A.ZSU.BUTTON_CTA,
+                    objectType: A.AnalyticsObjectTypes.BUY,
                 },
-                guild: L,
-                onClose: O,
+                guild: D,
+                onClose: M,
             }),
-            k(!1));
+            m(!1));
     }
-    return (0, c.jsxs)(a.dWK, {
+    return (0, i.jsxs)(a.dWK, {
         size: "xxl",
-        transitionState: i,
-        onClose: O,
+        transitionState: c,
+        onClose: M,
         children: [
-            (0, c.jsx)(a.rQ0, { title: E.intl.string(E.t["0f1VCH"]) }),
-            (0, c.jsx)(a.cwr, {
-                children: (0, c.jsx)(_.A, {
-                    className: M.K,
+            (0, i.jsx)(a.rQ0, { title: b.intl.string(b.t["0f1VCH"]) }),
+            (0, i.jsx)(a.cwr, {
+                children: (0, i.jsx)(d.A, {
+                    className: E.K,
                     src: I.A,
-                    poster: U.A,
+                    poster: T.A,
                     controls: !0,
                     autoPlay: !0,
                     controlsList: "nodownload noremoteplayback noplaybackrate",
-                    onPlay: j,
-                    onEnded: C,
+                    onPlay: R,
+                    onEnded: g,
                     disablePictureInPicture: !0,
                 }),
             }),
-            (0, c.jsx)(a.H7u, {
+            (0, i.jsx)(a.H7u, {
                 actions: [
-                    ...(R
-                        ? [
-                              {
-                                  variant: "secondary",
-                                  size: "md",
-                                  text: E.intl.string(E.t.hvVgAZ),
-                                  onClick: function () {
-                                      O(),
-                                          (0, d.K)({
-                                              guildId: e,
-                                              location: {
-                                                  section: b.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
-                                                  object: b.ZSU.LEARN_MORE,
-                                              },
-                                          });
-                                  },
-                              },
-                          ]
-                        : []),
                     {
                         variant: "expressive",
                         size: "md",
-                        icon: s._Jp,
-                        text: E.intl.string(E.t.gKmQ1G),
-                        onClick: P,
-                        loading: g,
+                        icon: o._Jp,
+                        text: b.intl.string(b.t.gKmQ1G),
+                        onClick: j,
+                        loading: k,
                     },
                 ],
             }),

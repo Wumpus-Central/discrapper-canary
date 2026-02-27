@@ -16,7 +16,6 @@ function c(e) {
                     (0, r.jsx)(e, {
                         ...n,
                         guildId: t.id,
-                        showLearnMore: !1,
                         analyticsLocation: c,
                         videoPlacement: d,
                         sourceAnalyticsLocations: _,
