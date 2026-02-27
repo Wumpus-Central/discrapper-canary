@@ -20,7 +20,7 @@ let f = {
             jumpType: s,
             preserveDrawerState: a,
             source: o,
-            isInitialSetup: l,
+            skipMessageFetch: l,
         } = e;
         r.h.dispatch({
             type: "CHANNEL_SELECT",
@@ -30,7 +30,7 @@ let f = {
             jumpType: s,
             preserveDrawerState: a,
             source: o,
-            isInitialSetup: l,
+            skipMessageFetch: l,
         });
     },
     selectPrivateChannel(e) {
