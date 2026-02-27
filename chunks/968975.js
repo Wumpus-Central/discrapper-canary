@@ -1,141 +1,157 @@
 "use strict";
-n.d(t, { A: () => I }), n(321073);
+n.d(t, { A: () => T }), n(321073);
 var i = n(627968),
     s = n(64700),
-    l = n(397927),
-    r = n(688810),
-    a = n(871123),
-    o = n(84511),
-    c = n(3648),
-    d = n(178213),
-    u = n(872472),
-    h = n(721932),
-    A = n(35092),
-    p = n(183555),
-    g = n(535089),
-    m = n(946356),
-    _ = n(173678),
-    f = n(524380),
-    x = n(652215),
-    C = n(985018),
-    E = n(250783);
-function I(e) {
-    let { unownedWishlistItems: t = [], profileOwner: n, onClick: I, wishlistId: b, cardSize: N, title: S } = e,
-        { analyticsLocations: T } = (0, r.Ay)(),
-        { trackUserProfileWishlistAction: v } = (0, p.NJ)(),
-        y = (0, d.G)("user_profile_sidebar_wishlist_breadcrumb"),
-        j = (0, f.Q)(y),
-        R = (0, s.useCallback)(
+    l = n(554146),
+    r = n(397927),
+    a = n(688810),
+    o = n(357186),
+    c = n(932001),
+    d = n(871123),
+    u = n(84511),
+    h = n(3648),
+    A = n(178213),
+    p = n(872472),
+    g = n(721932),
+    m = n(35092),
+    _ = n(183555),
+    f = n(535089),
+    x = n(946356),
+    C = n(173678),
+    E = n(524380),
+    I = n(652215),
+    N = n(49999),
+    b = n(985018),
+    S = n(250783);
+function T(e) {
+    let { unownedWishlistItems: t = [], profileOwner: n, onClick: T, wishlistId: y, cardSize: v, title: j } = e,
+        { analyticsLocations: R } = (0, a.Ay)(),
+        { trackUserProfileWishlistAction: O } = (0, _.NJ)(),
+        L = (0, A.G)("user_profile_sidebar_wishlist_breadcrumb"),
+        M = (0, E.Q)(L),
+        D = (0, s.useCallback)(
             (e) => {
                 let { wishlistId: t, action: n, productLines: i } = e;
-                null != t && v({ wishlistId: t, action: n, productLines: i });
+                null != t && O({ wishlistId: t, action: n, productLines: i });
             },
-            [v],
+            [O],
         ),
-        { visibleItems: O, showTypeTooltip: L } = (0, s.useMemo)(() => {
+        { visibleItems: G, showTypeTooltip: U } = (0, s.useMemo)(() => {
             let e = [],
                 n = !1,
                 i = !1;
-            for (let s = 0; s < t.length && e.length < j; s++) {
+            for (let s = 0; s < t.length && e.length < M; s++) {
                 let l = t[s];
-                e.push(l), (0, h.$)(l) && (0, a.bF)(l.sku) ? (n = !0) : (0, u.L)(l) && (i = !0);
+                e.push(l), (0, g.$)(l) && (0, d.bF)(l.sku) ? (n = !0) : (0, p.L)(l) && (i = !0);
             }
             return { visibleItems: e, showTypeTooltip: n && i };
-        }, [j, t]),
+        }, [M, t]),
         {
-            cards: M,
-            singleItem: D,
-            productLines: G,
+            cards: P,
+            singleItem: w,
+            productLines: k,
         } = (0, s.useMemo)(() => {
             let e = [],
                 i = null,
                 s = new Set();
-            for (let i = 0; i < O.length; i++) {
-                let l = O[i],
-                    r = i === j - 1 && t.length > j;
-                (0, u.L)(l)
+            for (let i = 0; i < G.length; i++) {
+                let l = G[i],
+                    r = i === M - 1 && t.length > M;
+                (0, p.L)(l)
                     ? (s.add(l.skuProductLine),
                       e.push(
-                          (0, _.M)(l, {
+                          (0, C.M)(l, {
                               index: i,
-                              moreCount: r ? t.length - j + 1 : void 0,
+                              moreCount: r ? t.length - M + 1 : void 0,
                               profileOwner: n,
-                              analyticsLocations: T,
-                              onViewWishlist: I,
-                              wishlistId: b,
-                              showTypeTooltip: L,
-                              cardSize: N,
+                              analyticsLocations: R,
+                              onViewWishlist: T,
+                              wishlistId: y,
+                              showTypeTooltip: U,
+                              cardSize: v,
                           }),
                       ))
-                    : (0, h.$)(l) &&
+                    : (0, g.$)(l) &&
                       (s.add(l.skuProductLine),
                       e.push(
-                          (0, c.Z)(l, {
+                          (0, h.Z)(l, {
                               index: i,
-                              moreCount: r ? t.length - j + 1 : void 0,
+                              moreCount: r ? t.length - M + 1 : void 0,
                               profileOwner: n,
-                              analyticsLocations: T,
-                              onViewWishlist: I,
-                              wishlistId: b,
-                              showTypeTooltip: L,
-                              cardSize: N,
+                              analyticsLocations: R,
+                              onViewWishlist: T,
+                              wishlistId: y,
+                              showTypeTooltip: U,
+                              cardSize: v,
                           }),
                       ));
             }
-            return 1 === O.length && (i = O[0]), { cards: e, singleItem: i, productLines: s };
-        }, [t, n, T, I, b, N, O, L, j]),
-        U = (0, g.A)({ wishlistId: b ?? null, onAction: R, productLines: G }),
-        P = (0, s.useMemo)(
+            return 1 === G.length && (i = G[0]), { cards: e, singleItem: i, productLines: s };
+        }, [t, n, R, T, y, v, G, U, M]),
+        B = (0, f.A)({ wishlistId: y ?? null, onAction: D, productLines: k }),
+        V = (0, s.useMemo)(
             () =>
-                y
-                    ? O.map((e, t) =>
+                L
+                    ? G.map((e, t) =>
                           null == e.sku
                               ? null
                               : (0, i.jsx)(
-                                    A.A,
+                                    m.A,
                                     {
                                         sku: e.sku,
                                         index: t,
                                         wishlistOwner: n,
-                                        wishlistId: b,
-                                        analyticsLocations: T,
-                                        onViewWishlist: I,
-                                        showTypeTooltip: L,
+                                        wishlistId: y,
+                                        analyticsLocations: R,
+                                        onViewWishlist: T,
+                                        showTypeTooltip: U,
                                     },
                                     e.skuId,
                                 ),
                       )
                     : null,
-            [T, y, I, n, L, O, b],
-        );
-    if (0 === M.length) return null;
-    let w = M;
+            [R, L, T, n, U, G, y],
+        ),
+        [H, F] = (0, c.RF)(
+            l.M.SLAYER_STOREFRONT_ORBS_REWARD_WISHLIST_UPSELL,
+            (0, o.c)(l.M.SLAYER_STOREFRONT_ORBS_REWARD_WISHLIST_UPSELL),
+            void 0,
+            !0,
+        ),
+        K = H !== l.M.SLAYER_STOREFRONT_ORBS_REWARD_WISHLIST_UPSELL;
+    if (0 === P.length) return null;
+    let W = P;
     return (
-        null != D &&
-            ((0, u.L)(D)
-                ? (w = (0, _.z)(D, { profileOwner: n, analyticsLocations: T, wishlistId: b, onViewWishlist: I }))
-                : (0, h.$)(D) &&
-                  (w = (0, c.A)(D, { profileOwner: n, analyticsLocations: T, wishlistId: b, onViewWishlist: I }))),
-        (0, i.jsxs)(m.A.Overlay, {
-            ref: U,
-            className: E.kL,
+        null != w &&
+            ((0, p.L)(w)
+                ? (W = (0, C.z)(w, { profileOwner: n, analyticsLocations: R, wishlistId: y, onViewWishlist: T }))
+                : (0, g.$)(w) &&
+                  (W = (0, h.A)(w, { profileOwner: n, analyticsLocations: R, wishlistId: y, onViewWishlist: T }))),
+        (0, i.jsxs)(x.A.Overlay, {
+            ref: B,
+            className: S.kL,
             children: [
                 (0, i.jsxs)("div", {
-                    className: E.wx,
+                    className: S.wx,
                     children: [
-                        (0, i.jsx)(l.Text, { variant: "text-sm/medium", children: S ?? C.intl.string(C.t["7lZ31J"]) }),
-                        y &&
-                            (0, i.jsx)(l.QWc, {
+                        (0, i.jsx)(r.Text, { variant: "text-sm/medium", children: j ?? b.intl.string(b.t["7lZ31J"]) }),
+                        L &&
+                            (0, i.jsx)(r.QWc, {
                                 variant: "secondary",
                                 textVariant: "text-sm/medium",
-                                onClick: I,
-                                text: C.intl.string(C.t.y6PSA3),
+                                onClick: T,
+                                text: b.intl.string(b.t.y6PSA3),
                             }),
                     ],
                 }),
-                G.has(x.EZt.SOCIAL_LAYER_GAME_ITEM) &&
-                    (0, i.jsx)(o.A, { location: "user_profile_sidebar_wishlist_breadcrumb" }),
-                (0, i.jsx)("div", { className: E.vY, children: y ? P : w }),
+                (0, i.jsx)("div", { className: S.vY, children: L ? V : W }),
+                !K &&
+                    k.has(I.EZt.SOCIAL_LAYER_GAME_ITEM) &&
+                    (0, i.jsx)(u.A, {
+                        location: "user_profile_sidebar_wishlist_breadcrumb",
+                        className: S.EK,
+                        onDismiss: () => F(N.i.USER_DISMISS),
+                    }),
             ],
         })
     );

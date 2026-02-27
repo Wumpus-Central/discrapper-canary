@@ -42,8 +42,8 @@ function P(e) {
             excludeActivity: P,
             onWatchStream: w,
             hangStatusActivity: k,
-            renderSelfHangStatus: V,
-            isStandardGap: B = !1,
+            renderSelfHangStatus: B,
+            isStandardGap: V = !1,
         } = e,
         H = s.useMemo(() => ({ [t.guild_id]: [n.id] }), [t.guild_id, n.id]);
     (0, c.E)(H, "VoiceUserActivities");
@@ -89,11 +89,11 @@ function P(e) {
     )
         return null;
     if (eu) {
-        if (es) return V({ position: "right", nudge: 0, closePopout: () => {}, updatePosition: () => {} });
+        if (es) return B({ position: "right", nudge: 0, closePopout: () => {}, updatePosition: () => {} });
         if (!eh) return null;
     }
     return (0, i.jsxs)(o.HOs, {
-        className: r()(U.kL, { [U.iA]: B, [U.XK]: el }),
+        className: r()(U.kL, { [U.iA]: V, [U.XK]: el }),
         children: [
             ed && es && null != k
                 ? (0, i.jsx)(f.Z, {
@@ -150,8 +150,9 @@ function P(e) {
                                       enableUserHoverActivities: ei,
                                   }),
                                   (0, i.jsx)(I.A, {
-                                      className: r()({ [U.SW]: el }),
+                                      className: r()(U.L, { [U.SW]: el }),
                                       applicationId: a,
+                                      rewardOfferNoticeClassName: U.Nh,
                                       userIds: [n.id],
                                       location: "voice_channel",
                                       guildId: t.guild_id,

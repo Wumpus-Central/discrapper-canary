@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { B: () => c, q: () => u });
 var r = n(64700),
     i = n(989349),
     s = n.n(i),
@@ -12,6 +12,10 @@ function u() {
         if (null == e) return null;
         let t = s()(),
             n = s()(e).diff(t, "days");
-        return n <= 0 ? null : l.intl.formatToPlainString(l.t.BXpdIg, { days: Math.max(n, 1) });
+        return n <= 0 ? null : n;
     }, [e]);
+}
+function c() {
+    let e = u();
+    return r.useMemo(() => (null == e ? null : l.intl.formatToPlainString(l.t.BXpdIg, { days: Math.max(e, 1) })), [e]);
 }

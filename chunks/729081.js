@@ -64,7 +64,7 @@ function L(e) {
         {
             state: w,
             recommendations: k,
-            skuIdToUserIdsReasons: V,
+            skuIdToUserIdsReasons: B,
         } = (0, I.A)({
             applicationId: T.XR,
             numWishlistItems: I.o,
@@ -72,13 +72,13 @@ function L(e) {
             location: "Social Layer Gifting Mini Shelf",
             includeWishlists: !0,
         }),
-        B = s.useMemo(() => {
+        V = s.useMemo(() => {
             let e = new Set(P),
-                { hasWishlist: t, hasPopular: n } = (0, C.wH)(k, V, e),
+                { hasWishlist: t, hasPopular: n } = (0, C.wH)(k, B, e),
                 s = t && n;
             return k.map((t) => {
                 let n =
-                    V[t.skuId]
+                    B[t.skuId]
                         ?.filter((t) => t.reason === E.G.WISHLIST && e.has(t.userId))
                         .map((e) => e.userId)
                         .filter(x.Vq) ?? [];
@@ -111,7 +111,7 @@ function L(e) {
                           t.skuId,
                       );
             });
-        }, [L.guild_id, L.id, k, V, P, M, D]);
+        }, [L.guild_id, L.id, k, B, P, M, D]);
     return (
         s.useEffect(() => {
             0 !== k.length &&
@@ -130,35 +130,31 @@ function L(e) {
                     onMouseEnter: l,
                     onMouseLeave: o,
                     children: [
-                        (0, i.jsxs)("div", {
+                        (0, i.jsx)("div", {
                             className: R.wx,
-                            children: [
-                                (0, i.jsxs)("div", {
-                                    children: [
-                                        (0, i.jsx)(c.DZT, {
-                                            className: R.DD,
-                                            variant: "text-lg/bold",
-                                            color: "text-strong",
-                                            children: j.intl.string(j.t.xLP3bi),
+                            children: (0, i.jsxs)("div", {
+                                children: [
+                                    (0, i.jsx)(c.DZT, {
+                                        className: R.DD,
+                                        variant: "text-lg/bold",
+                                        color: "text-strong",
+                                        children: j.intl.string(j.t.xLP3bi),
+                                    }),
+                                    (0, i.jsx)(c.EYj, {
+                                        variant: "text-sm/medium",
+                                        color: "text-subtle",
+                                        children: j.intl.format(j.t["+SqhBF"], {
+                                            applicationName: D?.name ?? j.intl.string(j.t["/1hhto"]),
                                         }),
-                                        (0, i.jsx)(c.EYj, {
-                                            variant: "text-sm/medium",
-                                            color: "text-subtle",
-                                            children: j.intl.format(j.t["+SqhBF"], {
-                                                applicationName: D?.name ?? j.intl.string(j.t["/1hhto"]),
-                                            }),
-                                        }),
-                                    ],
-                                }),
-                                (0, i.jsx)("div", {
-                                    children: (0, i.jsx)(S.A, { location: "social_layer_gifting_mini_shelf" }),
-                                }),
-                            ],
+                                    }),
+                                ],
+                            }),
                         }),
                         (0, i.jsx)("div", {
                             className: r()(R.Xb, { [R.Im]: M }),
-                            children: "loading" === w || 0 === k.length ? (0, i.jsx)(c.y$y, { className: R.Lq }) : B,
+                            children: "loading" === w || 0 === k.length ? (0, i.jsx)(c.y$y, { className: R.Lq }) : V,
                         }),
+                        (0, i.jsx)(S.A, { location: "social_layer_gifting_mini_shelf", className: R.Ij }),
                     ],
                 }),
             }),

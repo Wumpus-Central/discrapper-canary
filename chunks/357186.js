@@ -28,10 +28,9 @@ function f(e) {
         case i.M.GAME_SHOP_ANNOUNCEMENT_MODAL:
             return _.Lo;
         case i.M.COLLECTIBLES_SHOP_MARVEL_RIVALS_ORBS_REWARD:
-            return 1;
         case i.M.GAME_SHOP_ORBS_REWARD_BANNER:
-            return 0;
         case i.M.SLAYER_STOREFRONT_ORBS_REWARDS_ANNOUNCEMENT:
+        case i.M.SLAYER_STOREFRONT_ORBS_REWARD_WISHLIST_UPSELL:
             return 1;
         default:
             return (0, s.dr)(e, { andFail: !1 }), 0;

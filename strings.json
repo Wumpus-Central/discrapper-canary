@@ -18437,6 +18437,7 @@
   "QAZA5f": "Gift Item",
   "TlwPZw": "For a limited time, receive Orbs on purchases from the !!{applicationName}!! game shop.",
   "TpuAkN": "Get Discord Orbs on !!{applicationName}!! purchases",
+  "/bHQ84": "{numDays, plural, one { day} other { days} } left to get Discord Orbs on !!{applicationName}!! purchases.",
   "ulQB+t": "Preview of a newly added item in the shop",
   "pWxiLd": "Checking item availability...",
   "cg0M2H": "Item Unavailable",

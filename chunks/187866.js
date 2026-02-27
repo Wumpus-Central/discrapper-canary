@@ -40,4 +40,5 @@ e.exports = {
     NE: "streamCTA_af3b89",
     Zw: "maybeClickable_af3b89",
     zu: "popoutGiftingBreadcrumb_af3b89",
+    PU: "popoutRewardOfferNotice_af3b89",
 };

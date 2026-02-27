@@ -469,6 +469,7 @@ function ev(e) {
             N && null != I && ep.sQ.has(I)
                 ? (0, r.jsx)(k.A, {
                       className: em.zu,
+                      rewardOfferNoticeClassName: em.PU,
                       applicationId: I,
                       userIds: [g.author_id],
                       cardSize: U.Y.SMALL_SQUARE,
