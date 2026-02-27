@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { A8: () => l, O_: () => a, RM: () => c, gX: () => o, i4: () => d, k$: () => s, rY: () => u }), n(321073);
+n.d(t, { A8: () => l, O_: () => s, RM: () => c, gX: () => o, i4: () => d, k$: () => a, rY: () => u }), n(321073);
 var r = n(179771),
     i = n(985018);
-let a = [
+let s = [
         () => i.intl.string(i.t["6xfSCq"]),
         () => i.intl.string(i.t.ymSk0r),
         () => i.intl.string(i.t.EnN7c5),
@@ -12,10 +12,11 @@ let a = [
         () => i.intl.string(i.t.sGOSG4),
         () => i.intl.string(i.t.JfibUq),
     ],
-    s = [
+    a = [
         r.F.BOT,
         r.F.OPENID,
         r.F.IDENTIFY,
+        r.F.IDENTIFY_PREMIUM,
         r.F.EMAIL,
         r.F.CONNECTIONS,
         r.F.MESSAGES_READ,
@@ -58,12 +59,14 @@ let a = [
         r.F.SDK_SOCIAL_LAYER_PRESENCE,
         r.F.SDK_SOCIAL_LAYER,
     ],
-    o = s.concat([r.F.WEBHOOK_INCOMING, r.F.BOT]),
+    o = a.concat([r.F.WEBHOOK_INCOMING, r.F.BOT]),
     l = ["rpc.api"];
 function u(e, t) {
     switch (e) {
         case r.F.IDENTIFY:
             return [i.intl.string(i.t.DD9KQh)];
+        case r.F.IDENTIFY_PREMIUM:
+            return [i.intl.string(i.t.xhQsxx)];
         case r.F.OPENID:
             return [i.intl.string(i.t.R5IKv1)];
         case r.F.EMAIL:

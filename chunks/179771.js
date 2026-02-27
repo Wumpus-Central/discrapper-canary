@@ -3,6 +3,7 @@ n.d(t, { F: () => r });
 var r = (function (e) {
     return (
         (e.IDENTIFY = "identify"),
+        (e.IDENTIFY_PREMIUM = "identify.premium"),
         (e.EMAIL = "email"),
         (e.CONNECTIONS = "connections"),
         (e.GUILDS = "guilds"),
