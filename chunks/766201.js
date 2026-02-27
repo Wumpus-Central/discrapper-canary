@@ -1,27 +1,28 @@
 n.d(t, { n: () => a });
 var i = n(64700),
-    r = n(651162);
+    r = n(651162),
+    l = n(652215);
 let a = (e, t, n) => {
         let [r, a] = (0, i.useState)(!1);
         return (
             (0, i.useEffect)(() => {
-                let i = l(e);
+                let i = s(e);
                 if (t || n || null == i) return void a(!1);
                 let r = i - Date.now();
                 if (r <= 0) return void a(!0);
                 a(!1);
-                let s = setTimeout(
+                let o = setTimeout(
                     () => {
                         a(!0);
                     },
-                    Math.min(0x7fffffff, r),
+                    Math.min(l.mnr, r),
                 );
-                return () => clearTimeout(s);
+                return () => clearTimeout(o);
             }, [t, n, e]),
             r
         );
     },
-    l = (e) => {
+    s = (e) => {
         let t = null;
         return (
             e.forEach((e) => {

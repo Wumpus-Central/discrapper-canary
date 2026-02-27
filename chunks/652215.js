@@ -264,6 +264,7 @@ n.d(t, {
     m_i: () => rc,
     mdB: () => tM,
     meB: () => p.me,
+    mnr: () => rU,
     mu: () => eY,
     n5X: () => nd,
     n83: () => nZ,
@@ -6287,4 +6288,5 @@ let rM = Object.freeze({
         __DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU: (e) => (null != e ? `useParentSkuData/${e}` : null),
     }),
     rP = 4096,
-    rk = 17718768e5;
+    rk = 17718768e5,
+    rU = 0x7fffffff;

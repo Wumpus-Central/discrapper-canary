@@ -18,13 +18,13 @@ var r = n(735438),
     g = n(439174),
     A = n(633075),
     I = n(289173),
-    T = n(985018);
-let S = Symbol("NO GUILD ID"),
-    y = new Map(),
-    v = new Set(),
-    N = "premium",
-    C = "guild_booster_lvl",
-    b = 0x7fffffff,
+    T = n(652215),
+    S = n(985018);
+let y = Symbol("NO GUILD ID"),
+    v = new Map(),
+    N = new Set(),
+    C = "premium",
+    b = "guild_booster_lvl",
     R = new Map(),
     O = new Map(),
     D = new Map(),
@@ -63,7 +63,7 @@ function H(e) {
         return;
     }
     let i = D.get(e);
-    null != i && i.start(Math.min(b, r), () => H(e));
+    null != i && i.start(Math.min(T.mnr, r), () => H(e));
 }
 function j(e, t) {
     let n = O.get(e);
@@ -78,18 +78,18 @@ function j(e, t) {
         return;
     }
     let a = L.get(e)?.get(t);
-    null != a && a.start(Math.min(b, s), () => j(e, t));
+    null != a && a.start(Math.min(T.mnr, s), () => j(e, t));
 }
 function Y() {
-    y.clear(), v.clear(), R.clear(), O.clear(), w.clear(), x.clear(), M.clear(), (V = !1);
+    v.clear(), N.clear(), R.clear(), O.clear(), w.clear(), x.clear(), M.clear(), (V = !1);
 }
 function W(e) {
     let { userId: t } = e;
-    v.add(t);
+    N.add(t);
 }
 function K(e) {
     let { userId: t } = e;
-    v.delete(t);
+    N.delete(t);
 }
 function z(e) {
     return i()(e)
@@ -101,12 +101,12 @@ function z(e) {
         .value();
 }
 function $(e) {
-    v.delete(e.userId), w.set(e.userId, z(e.mutualFriends)), x.set(e.userId, e.mutualFriends.length);
+    N.delete(e.userId), w.set(e.userId, z(e.mutualFriends)), x.set(e.userId, e.mutualFriends.length);
 }
 function q(e) {
     let { userProfile: t, fetchStartedAt: n } = e,
-        r = t.guild_member_profile?.guild_id ?? S;
-    if ((y.get(t.user.id)?.delete(r), v.delete(t.user.id), null != t.mutual_guilds)) {
+        r = t.guild_member_profile?.guild_id ?? y;
+    if ((v.get(t.user.id)?.delete(r), N.delete(t.user.id), null != t.mutual_guilds)) {
         let e = {};
         t.mutual_guilds.forEach((t) => {
             let { id: n, nick: r } = t,
@@ -133,15 +133,15 @@ function q(e) {
             null != t.badges
                 ? t.badges.map((e) => {
                       let t = (0, g.e0)(e.id);
-                      if ((e.id === N || null != t) && null != i) {
-                          let n = T.intl.formatToPlainString(T.t["8zbGNR"], { date: i });
+                      if ((e.id === C || null != t) && null != i) {
+                          let n = S.intl.formatToPlainString(S.t["8zbGNR"], { date: i });
                           return (
-                              null != t && (n = T.intl.formatToPlainString(T.t.Hu4jfi, { date: i })),
+                              null != t && (n = S.intl.formatToPlainString(S.t.Hu4jfi, { date: i })),
                               { ...e, description: n }
                           );
                       }
-                      return e.id.startsWith(C) && null != s
-                          ? { ...e, description: T.intl.formatToPlainString(T.t.IWkAq7, { date: s }) }
+                      return e.id.startsWith(b) && null != s
+                          ? { ...e, description: S.intl.formatToPlainString(S.t.IWkAq7, { date: s }) }
                           : e;
                   })
                 : [];
@@ -232,18 +232,18 @@ function Z(e, t) {
 }
 function X(e) {
     let { userId: t, guildId: n, withMutualFriends: r } = e,
-        i = n ?? S,
-        s = y.get(t);
+        i = n ?? y,
+        s = v.get(t);
     if (null != s) s.add(i);
     else {
         let e = new Set();
-        e.add(i), y.set(t, e);
+        e.add(i), v.set(t, e);
     }
-    r && v.add(t);
+    r && N.add(t);
 }
 function Q(e) {
     let { userId: t, guildId: n, apiError: r, fetchStartedAt: i } = e;
-    y.get(t)?.delete(n ?? S), v.delete(t);
+    v.get(t)?.delete(n ?? y), N.delete(t);
     let s = R.get(t) ?? {
         connectedAccounts: [],
         applicationRoleConnections: [],
@@ -364,7 +364,7 @@ function es(e) {
 }
 function ea(e) {
     let t = e.user.id;
-    return !((y.get(t)?.size ?? 0) > 0) && ed(t);
+    return !((v.get(t)?.size ?? 0) > 0) && ed(t);
 }
 function eo(e) {
     return [...R.keys()].reduce((e, t) => ed(t) || e, !1);
@@ -376,7 +376,7 @@ function eu(e) {
     return ed(e.relationship.id);
 }
 function ec() {
-    y.clear(), v.clear(), R.clear(), O.clear();
+    v.clear(), N.clear(), R.clear(), O.clear();
 }
 function ed(e) {
     if (null == e) return !1;
@@ -422,11 +422,11 @@ class ef extends p.A {
         this.waitFor(m.Ay), this.syncWith([c.default], ec);
     }
     isFetchingProfile(e, t) {
-        let n = y.get(e);
-        return null != n && n.has(t ?? S);
+        let n = v.get(e);
+        return null != n && n.has(t ?? y);
     }
     isFetchingFriends(e) {
-        return v.has(e);
+        return N.has(e);
     }
     get isSubmitting() {
         return V;

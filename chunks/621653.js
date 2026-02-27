@@ -1,11 +1,12 @@
-s.d(t, { g: () => o }), s(321073);
+s.d(t, { g: () => i }), s(321073);
 var r = s(64700),
     l = s(417597),
-    a = s(73153),
-    n = s(248352);
-function o() {
+    n = s(73153),
+    a = s(248352),
+    o = s(652215);
+function i() {
     let e = r.useRef(new Map()),
-        t = (0, l.bG)([n.A], () => n.A.getUserDiscounts());
+        t = (0, l.bG)([a.A], () => a.A.getUserDiscounts());
     r.useEffect(() => {
         let s = e.current,
             r = Date.now(),
@@ -18,15 +19,15 @@ function o() {
                 else {
                     let r = setTimeout(
                         () => {
-                            a.h.dispatch({ type: "COLLECTIBLES_USER_DISCOUNTS_EXPIRED", discountIds: [e.discountId] }),
+                            n.h.dispatch({ type: "COLLECTIBLES_USER_DISCOUNTS_EXPIRED", discountIds: [e.discountId] }),
                                 s.delete(e.discountId);
                         },
-                        Math.min(0x7fffffff, t),
+                        Math.min(o.mnr, t),
                     );
                     s.set(e.discountId, r);
                 }
             }),
-            l.length > 0 && a.h.dispatch({ type: "COLLECTIBLES_USER_DISCOUNTS_EXPIRED", discountIds: l }),
+            l.length > 0 && n.h.dispatch({ type: "COLLECTIBLES_USER_DISCOUNTS_EXPIRED", discountIds: l }),
             () => {
                 s.forEach((e) => clearTimeout(e)), s.clear();
             }
