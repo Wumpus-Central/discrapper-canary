@@ -281,6 +281,46 @@ function eF(e, t) {
         return { parse: Object.values(ey.uw8), replied_user: !1 };
 }
 let eV = {
+        [ey.t02.SLOWMODE_RATE_LIMITED]: {
+            messageName: "SLOWMODE_RATE_LIMITED",
+            messageGetter: (e) => eb.intl.formatToPlainString(eb.t.IWntYg, { seconds: e.rateLimitPerUser }),
+        },
+        [ey.t02.INVALID_MESSAGE_SEND_NO_MUTUAL_GUILDS]: {
+            messageName: "INVALID_MESSAGE_SEND_NO_MUTUAL_GUILDS",
+            messageGetter: () => {
+                let e = eg.A.getArticleURL(ey.MVz.DM_COULD_NOT_BE_DELIVERED),
+                    { enabled: t } = V.A.getConfig({ location: "sendClydeError" });
+                return t
+                    ? eb.intl.formatToPlainString(eb.t.llTkqr, { helpUrl: e })
+                    : eb.intl.formatToPlainString(eb.t.CTMXwL, { helpUrl: e });
+            },
+        },
+        [ey.t02.INVALID_MESSAGE_SEND_USER]: {
+            messageName: "INVALID_MESSAGE_SEND_USER",
+            messageGetter: () =>
+                eb.intl.formatToPlainString(eb.t.CTMXwL, {
+                    helpUrl: eg.A.getArticleURL(ey.MVz.DM_COULD_NOT_BE_DELIVERED),
+                }),
+        },
+        [ey.t02.TOO_MANY_THREADS]: {
+            messageName: "TOO_MANY_THREADS",
+            messageGetter: (e) =>
+                e.isForumLikeChannel() || e.isForumPost()
+                    ? eb.intl.string(eb.t["/jUd2+"])
+                    : eb.intl.string(eb.t["5EMPA7"]),
+        },
+        [ey.t02.TOO_MANY_ANNOUNCEMENT_THREADS]: {
+            messageName: "TOO_MANY_ANNOUNCEMENT_THREADS",
+            messageGetter: () => eb.intl.string(eb.t["aY+lLC"]),
+        },
+        [ey.t02.HARMFUL_LINK_MESSAGE_BLOCKED]: {
+            messageName: "HARMFUL_LINK_MESSAGE_BLOCKED",
+            messageGetter: () => eb.intl.formatToPlainString(eb.t.zSG3Qy, { helpUrl: ey.X7G.HARMFUL_LINKS }),
+        },
+        [ey.t02.HARMFUL_URL_BLOCKED]: {
+            messageName: "HARMFUL_URL_BLOCKED",
+            messageGetter: () => eb.intl.string(eb.t.WxX2Fd),
+        },
         [ey.t02.EMAIL_VERIFICATION_REQUIRED]: {
             messageName: "BOT_REQUIRES_EMAIL_VERIFICATION",
             messageGetter: () => eb.intl.string(eb.t.k1Cjqr),
@@ -289,22 +329,11 @@ let eV = {
             messageName: "GUILD_MESSAGE_UPDATE_RATE_LIMIT_EXCEEDED",
             messageGetter: () => eb.intl.string(eb.t.Z5SUuv),
         },
-        [ey.t02.INVALID_MESSAGE_SEND_USER]: {
-            messageName: "BOT_DM_SEND_FAILED_WITH_HELP_LINK",
-            messageGetter: () =>
-                eb.intl.formatToPlainString(eb.t.CTMXwL, {
-                    helpUrl: eg.A.getArticleURL(ey.MVz.DM_COULD_NOT_BE_DELIVERED),
-                }),
-        },
         [ey.t02.RATE_LIMIT_DM_OPEN]: {
             messageName: "BOT_DM_RATE_LIMITED",
             messageGetter: () => eb.intl.string(eb.t.E8nbNb),
         },
         [ey.t02.SEND_MESSAGE_TEMPORARILY_DISABLED]: {
-            messageName: "BOT_DM_SEND_MESSAGE_TEMPORARILY_DISABLED",
-            messageGetter: () => eb.intl.string(eb.t.aRUbah),
-        },
-        [ey.t02.SLOWMODE_RATE_LIMITED]: {
             messageName: "BOT_DM_SEND_MESSAGE_TEMPORARILY_DISABLED",
             messageGetter: () => eb.intl.string(eb.t.aRUbah),
         },
@@ -315,13 +344,6 @@ let eV = {
         [ey.t02.INVALID_MESSAGE_SEND_PROVISIONAL_ACCOUNT_OFFLINE]: {
             messageName: "BOT_DM_SEND_MESSAGE_INVALID_OFFLINE_PROVISIONAL_ACCOUNT",
             messageGetter: () => eb.intl.string(eb.t.Oc1Zjw),
-        },
-        [ey.t02.INVALID_MESSAGE_SEND_NO_MUTUAL_GUILDS]: {
-            messageName: "BOT_DM_SEND_FAILED_FRIENDS",
-            messageGetter: () =>
-                eb.intl.formatToPlainString(eb.t.llTkqr, {
-                    helpUrl: eg.A.getArticleURL(ey.MVz.DM_COULD_NOT_BE_DELIVERED),
-                }),
         },
     },
     eB = {
@@ -388,48 +410,19 @@ let eV = {
             eB.receiveMessage(e, { ...n, state: ey.cmJ.SENT }, !0);
         },
         sendClydeError(e) {
-            let t,
-                n,
-                r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-                i = eo.A.getChannel(e);
-            if (null != i) {
-                if (r === ey.t02.SLOWMODE_RATE_LIMITED)
-                    (t = eb.intl.formatToPlainString(eb.t.IWntYg, { seconds: i.rateLimitPerUser })),
-                        (n = "SLOWMODE_RATE_LIMITED");
-                else if (r === ey.t02.INVALID_MESSAGE_SEND_NO_MUTUAL_GUILDS) {
-                    let e = eg.A.getArticleURL(ey.MVz.DM_COULD_NOT_BE_DELIVERED),
-                        { enabled: r } = V.A.getConfig({ location: "sendClydeError" });
-                    (t = r
-                        ? eb.intl.formatToPlainString(eb.t.llTkqr, { helpUrl: e })
-                        : eb.intl.formatToPlainString(eb.t.CTMXwL, { helpUrl: e })),
-                        (n = "INVALID_MESSAGE_SEND_NO_MUTUAL_GUILDS");
-                } else
-                    r === ey.t02.INVALID_MESSAGE_SEND_USER
-                        ? ((t = eb.intl.formatToPlainString(eb.t.CTMXwL, {
-                              helpUrl: eg.A.getArticleURL(ey.MVz.DM_COULD_NOT_BE_DELIVERED),
-                          })),
-                          (n = "INVALID_MESSAGE_SEND_USER"))
-                        : r === ey.t02.TOO_MANY_THREADS
-                          ? ((t =
-                                i.isForumLikeChannel() || i.isForumPost()
-                                    ? eb.intl.string(eb.t["/jUd2+"])
-                                    : eb.intl.string(eb.t["5EMPA7"])),
-                            (n = "TOO_MANY_THREADS"))
-                          : r === ey.t02.TOO_MANY_ANNOUNCEMENT_THREADS
-                            ? ((t = eb.intl.string(eb.t["aY+lLC"])), (n = "TOO_MANY_ANNOUNCEMENT_THREADS"))
-                            : r === ey.t02.HARMFUL_LINK_MESSAGE_BLOCKED
-                              ? ((t = eb.intl.formatToPlainString(eb.t.zSG3Qy, { helpUrl: ey.X7G.HARMFUL_LINKS })),
-                                (n = "HARMFUL_LINK_MESSAGE_BLOCKED"))
-                              : r === ey.t02.HARMFUL_URL_BLOCKED
-                                ? ((t = eb.intl.string(eb.t.WxX2Fd)), (n = "HARMFUL_URL_BLOCKED"))
-                                : r in eV
-                                  ? ((n = eV[r].messageName), (t = eV[r].messageGetter()))
-                                  : ((t = eb.intl.formatToPlainString(eb.t.CTMXwL, {
-                                        helpUrl: eg.A.getArticleURL(ey.MVz.DM_COULD_NOT_BE_DELIVERED),
-                                    })),
-                                    (n = `SEND_FAILED (${r})`));
-                eB.sendBotMessage(e, t, n);
-            }
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+                n = eo.A.getChannel(e);
+            if (null == n) return;
+            let r = eV[t];
+            null == r
+                ? eB.sendBotMessage(
+                      e,
+                      eb.intl.formatToPlainString(eb.t.CTMXwL, {
+                          helpUrl: eg.A.getArticleURL(ey.MVz.DM_COULD_NOT_BE_DELIVERED),
+                      }),
+                      `SEND_FAILED (${t})`,
+                  )
+                : eB.sendBotMessage(e, r.messageGetter(n), r.messageName);
         },
         sendExplicitMediaClydeError(e, t, n) {
             let i = eo.A.getChannel(e);
