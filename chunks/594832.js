@@ -4,13 +4,13 @@ n.d(t, {
     KQ: () => A,
     Q8: () => T,
     Zh: () => I,
-    eT: () => x,
+    eT: () => w,
     fw: () => b,
-    mk: () => M,
-    pE: () => k,
+    mk: () => x,
+    pE: () => P,
     rJ: () => R,
     sv: () => C,
-    tA: () => P,
+    tA: () => M,
     uS: () => y,
 }),
     n(321073);
@@ -168,36 +168,33 @@ function L(e, t) {
         { isFetching: o }
     );
 }
-function w() {
-    let e = [];
-    for (let t of g.PI) {
-        let n = a.A.getProduct(t);
-        null != n && e.push(n);
-    }
-    return e;
-}
-function x(e) {
+function w(e) {
     let { giftRecipient: t, minNumItems: n, source: s } = e,
-        { defaultWishlistId: a } = (0, i.cf)([l.A], () => ({ defaultWishlistId: l.A.getFirstWishlistId(t.id) })),
-        { wishlist: o, isFetching: u, error: c } = b({ wishlistId: a, source: s }),
-        d = r.useMemo(() => null != o && o.items.filter((e) => !0 !== e.isOwned).length >= n, [o, n]),
-        { validatedSkuIds: _, isValidating: f } = D(t.id),
-        { isFetching: p } = L(_, n);
+        { defaultWishlistId: o } = (0, i.cf)([l.A], () => ({ defaultWishlistId: l.A.getFirstWishlistId(t.id) })),
+        { wishlist: u, isFetching: c, error: d } = b({ wishlistId: o, source: s }),
+        _ = r.useMemo(() => null != u && u.items.filter((e) => !0 !== e.isOwned).length >= n, [u, n]),
+        { validatedSkuIds: f, isValidating: p } = D(t.id),
+        { isFetching: h } = L(f, n);
     return {
-        defaultWishlistId: a,
-        wishlist: o,
-        popularCollectiblesProducts: r.useMemo(() => {
-            if (d) return [];
-            let e = new Set(_);
-            return w().filter((t) => e.has(t.skuId));
-        }, [d, _]),
-        isFetchingWishlist: u,
-        isValidatingPopularProducts: !d && f,
-        isFetchingPopularProducts: !d && p,
-        wishlistError: c,
+        defaultWishlistId: o,
+        wishlist: u,
+        popularCollectiblesProducts: (0, i.yK)([a.A], () => {
+            if (_) return [];
+            let e = new Set(f),
+                t = [];
+            for (let n of g.PI) {
+                let r = a.A.getProduct(n);
+                null != r && e.has(r.skuId) && t.push(r);
+            }
+            return t;
+        }, [_, f]),
+        isFetchingWishlist: c,
+        isValidatingPopularProducts: !_ && p,
+        isFetchingPopularProducts: !_ && h,
+        wishlistError: d,
     };
 }
-function M(e) {
+function x(e) {
     let {
         wishlist: t,
         popularCollectiblesProducts: n,
@@ -223,7 +220,7 @@ function M(e) {
         return { displayItems: o, totalUnownedWishlistItemCount: e.length };
     }, [s, t?.items, n, i, a]);
 }
-function P(e) {
+function M(e) {
     let { location: t, isGift: n, giftRecipient: s, isSocialLayerStorefrontEnabled: a = !0 } = e,
         u = (0, o.c)({ userId: s?.id, location: t }),
         c = (0, i.bG)([l.A], () => (s?.id == null ? null : l.A.getFirstWishlistId(s.id))),
@@ -233,10 +230,10 @@ function P(e) {
         [n, s, d, u, a],
     );
 }
-function k() {
-    return U((0, i.bG)([c.default], () => c.default.getId()));
+function P() {
+    return k((0, i.bG)([c.default], () => c.default.getId()));
 }
-function U(e) {
+function k(e) {
     let t = (0, i.bG)([d.default], () => d.default.getUser(e)),
         { userProfile: n, wishlistId: s } = (0, i.cf)(
             [l.A],
