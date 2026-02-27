@@ -49,29 +49,30 @@ let E = l.memo(function (t) {
                 prioritizedCurrency: M,
                 onClickAnalytics: X,
             } = t,
-            { previewingVariantIndex: Q, handleEntering: q, handleLeaving: Y } = (0, y.f)(e),
-            Z = (0, m.Mk)(),
-            K = Z?.tab,
-            J = (0, x.s7)(e),
-            $ = l.useRef(null),
-            { isHoveringOrFocusing: tt } = (0, c.A)($),
-            { handleCardVisibilityChange: te } = (0, A.Z)(e.skuId, K === T.G2.CATALOG ? "full" : K),
-            tr = (0, f.ql)(e, d.A.COLLECTIBLES_SHOP_CARD, X),
-            ti = e.type === a.R.VARIANTS_GROUP && !E,
-            tl = l.useMemo(() => ({ maxVariantsToShow: 4, onClick: tr }), [tr]),
-            tn = !N || !b,
-            ts = !(R && n) || ti,
-            ta = ts || tn,
-            tu = tn || ti;
+            { previewingVariantIndex: Q, handleEntering: q, handleLeaving: Z } = (0, y.f)(e),
+            Y = (0, f.gZ)() ?? M,
+            K = (0, m.Mk)(),
+            J = K?.tab,
+            $ = (0, x.s7)(e),
+            tt = l.useRef(null),
+            { isHoveringOrFocusing: te } = (0, c.A)(tt),
+            { handleCardVisibilityChange: tr } = (0, A.Z)(e.skuId, J === T.G2.CATALOG ? "full" : J),
+            ti = (0, f.ql)(e, d.A.COLLECTIBLES_SHOP_CARD, X),
+            tl = e.type === a.R.VARIANTS_GROUP && !E,
+            tn = l.useMemo(() => ({ maxVariantsToShow: 4, onClick: ti }), [ti]),
+            ts = !N || !b,
+            ta = !(R && n) || tl,
+            tu = ta || ts,
+            to = ts || tl;
         return (0, i.jsx)(u.L, {
-            innerRef: $,
-            onChange: te,
+            innerRef: tt,
+            onChange: tr,
             threshold: 0,
             children: (0, i.jsx)(o.sqX, {
-                ref: $,
-                onClick: P ?? tr,
-                "aria-label": J,
-                className: s()(z, _.ty, { [_.yo]: tt }),
+                ref: tt,
+                onClick: P ?? ti,
+                "aria-label": $,
+                className: s()(z, _.ty, { [_.yo]: te }),
                 onFocus: () => U?.(e.skuId),
                 onBlur: () => D?.(e.skuId),
                 onMouseEnter: () => w?.(e.skuId),
@@ -80,8 +81,8 @@ let E = l.memo(function (t) {
                     className: _.qt,
                     children: [
                         (0, i.jsx)("div", {
-                            className: s()(_.Dq, { [_.$r]: !n || ts || tu }),
-                            children: (0, i.jsx)(g.A, { skuId: e.skuId, isCardHovered: tt, overrideVariantIndex: Q }),
+                            className: s()(_.Dq, { [_.$r]: !n || ta || to }),
+                            children: (0, i.jsx)(g.A, { skuId: e.skuId, isCardHovered: te, overrideVariantIndex: Q }),
                         }),
                         (0, i.jsxs)("div", {
                             className: _.N1,
@@ -90,20 +91,20 @@ let E = l.memo(function (t) {
                                     skuId: e.skuId,
                                     badgeOverride: O,
                                     className: G,
-                                    prioritizedCurrency: M,
+                                    prioritizedCurrency: Y,
                                     skipLimitedTimeCheck: L,
                                 }),
-                                !r && (0, i.jsx)(k.A, { skuId: e.skuId, isCardHovered: tt }),
+                                !r && (0, i.jsx)(k.A, { skuId: e.skuId, isCardHovered: te }),
                             ],
                         }),
-                        ta &&
+                        tu &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)("div", { className: _.wY }),
                                     (0, i.jsxs)("div", {
                                         className: _.xQ,
                                         children: [
-                                            ts &&
+                                            ta &&
                                                 (0, i.jsxs)("div", {
                                                     className: _.xE,
                                                     children: [
@@ -122,22 +123,22 @@ let E = l.memo(function (t) {
                                                                             "aria-hidden": !0,
                                                                             children: (0, i.jsx)(C.A, {
                                                                                 skuId: e.skuId,
-                                                                                prioritizedCurrency: M,
+                                                                                prioritizedCurrency: Y,
                                                                             }),
                                                                         }),
                                                                 ],
                                                             }),
-                                                        ti &&
+                                                        tl &&
                                                             (0, i.jsx)(j.A, {
                                                                 skuId: e.skuId,
-                                                                isCollapsed: !tt,
+                                                                isCollapsed: !te,
                                                                 onVariantEnter: q,
-                                                                onVariantExit: Y,
-                                                                overflowProps: tl,
+                                                                onVariantExit: Z,
+                                                                overflowProps: tn,
                                                             }),
                                                     ],
                                                 }),
-                                            tn &&
+                                            ts &&
                                                 (0, i.jsx)("div", {
                                                     className: _.Vs,
                                                     children: (0, i.jsxs)(o.ButtonGroup, {
@@ -148,19 +149,19 @@ let E = l.memo(function (t) {
                                                             !N &&
                                                                 (0, i.jsx)(I.A, {
                                                                     skuId: e.skuId,
-                                                                    cardRef: $,
+                                                                    cardRef: tt,
                                                                     onClick: S,
                                                                     text: H,
-                                                                    prioritizedCurrency: M,
+                                                                    prioritizedCurrency: Y,
                                                                     onClickAnalytics: X,
                                                                 }),
                                                             !b &&
                                                                 (0, i.jsx)(v.A, {
                                                                     skuId: e.skuId,
-                                                                    cardRef: $,
+                                                                    cardRef: tt,
                                                                     onClick: V,
                                                                     icon: W,
-                                                                    prioritizedCurrency: M,
+                                                                    prioritizedCurrency: Y,
                                                                     onClickAnalytics: X,
                                                                 }),
                                                         ],

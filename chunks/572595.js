@@ -1,59 +1,60 @@
-n.d(t, { M: () => s, t: () => o });
-var r = n(627968);
-n(64700);
-var l = n(397927),
-    a = n(4227),
-    i = n(466459);
-let u = "collectibles shop product details modal",
+"use strict";
+l.d(t, { M: () => d, t: () => o });
+var r = l(627968);
+l(64700);
+var a = l(397927),
+    n = l(4227),
+    i = l(466459);
+let s = "collectibles shop product details modal",
     o = (e) => {
         let {
             product: t,
             category: o,
-            shouldCheckoutWithOrbs: s,
+            shouldCheckoutWithOrbs: d,
             analyticsSource: c,
-            analyticsLocations: d,
-            returnRef: p,
-            tab: C,
+            analyticsLocations: u,
+            returnRef: h,
+            tab: m,
         } = e;
         if (t.isCategoryReward) {
-            let { isPurchased: e } = (0, i.o)(a.A, t);
+            let { isPurchased: e } = (0, i.o)(n.A, t);
             if (!e) return;
         }
-        (0, l.mMO)(
+        (0, a.mMO)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("8555"),
-                    n.e("28936"),
-                    n.e("68859"),
-                    n.e("40396"),
-                    n.e("13088"),
-                    n.e("48330"),
-                    n.e("92414"),
-                    n.e("94857"),
-                    n.e("48840"),
-                    n.e("49559"),
-                    n.e("37372"),
-                    n.e("99970"),
-                    n.e("95095"),
-                    n.e("41595"),
-                    n.e("93612"),
-                    n.e("16289"),
-                ]).then(n.bind(n, 929400));
-                return (n) =>
+                    l.e("8555"),
+                    l.e("28936"),
+                    l.e("68859"),
+                    l.e("40396"),
+                    l.e("13088"),
+                    l.e("48330"),
+                    l.e("92414"),
+                    l.e("94857"),
+                    l.e("48840"),
+                    l.e("49559"),
+                    l.e("37372"),
+                    l.e("99970"),
+                    l.e("95095"),
+                    l.e("41595"),
+                    l.e("93612"),
+                    l.e("16289"),
+                ]).then(l.bind(l, 929400));
+                return (l) =>
                     (0, r.jsx)(e, {
-                        ...n,
+                        ...l,
                         product: t,
                         category: o,
-                        shouldCheckoutWithOrbs: s,
+                        shouldCheckoutWithOrbs: d,
                         analyticsSource: c,
-                        analyticsLocations: d,
-                        returnRef: p,
-                        tab: C,
+                        analyticsLocations: u,
+                        returnRef: h,
+                        tab: m,
                     });
             },
-            { modalKey: u },
+            { modalKey: s },
         );
     },
-    s = () => {
-        (0, l.OoC)(u);
+    d = () => {
+        (0, a.OoC)(s);
     };
