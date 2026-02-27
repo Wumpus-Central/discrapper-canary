@@ -220,7 +220,7 @@ function D(e) {
             currency: o?.currency ?? _.currency,
             interval: i.interval,
             intervalCount: i.intervalCount,
-            startDate: o?.subscriptionPeriodStart ?? new Date(),
+            startDate: o?.subscriptionPeriodEnd ?? new Date(),
         };
     return (0, r.jsx)(c._P, {
         variant: { type: s ? c.I0.GiftNitro : n ? c.I0.SubscriptionTrial : c.I0.Subscription, ...f },
