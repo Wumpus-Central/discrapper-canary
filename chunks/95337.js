@@ -23,17 +23,17 @@ let x = () => {
                 planId: x,
                 handleCancellation: P,
             } = (0, c.X)(),
-            [y, C] = (0, r.useState)(!1),
+            [C, y] = (0, r.useState)(!1),
             [v, E] = (0, r.useState)(!1),
-            D = async () => {
-                C(!0), E(!1);
+            j = async () => {
+                y(!0), E(!1);
                 try {
                     await P(), e();
                 } catch (t) {
-                    E(!0), C(!1);
+                    E(!0), y(!1);
                 }
             },
-            j =
+            D =
                 (m.items.some((t) => {
                     let { planId: e } = t;
                     return !d.JM.has(e);
@@ -44,31 +44,29 @@ let x = () => {
                     return !d.JM.has(e);
                 }) != null,
             _ = [];
-        _.push({ text: p.intl.string(p.t.h9tkAK), onClick: () => e(), variant: "secondary" }),
-            j
+        _.push({ text: p.intl.string(p.t.rzVN6j), onClick: () => e(), variant: "secondary" }),
+            D
                 ? _.push({
                       text: p.intl.string(p.t.PDTjLN),
                       onClick: () => s(o.g.PREVIEW),
-                      disabled: y,
+                      disabled: C,
                       variant: "critical-primary",
-                      loading: y,
+                      loading: C,
                   })
                 : _.push({
                       text: p.intl.string(p.t["cY+Oob"]),
-                      onClick: () => D(),
-                      disabled: y,
+                      onClick: () => j(),
+                      disabled: C,
                       variant: "critical-primary",
-                      loading: y,
+                      loading: C,
                   });
-        let A = (0, u.Zb)(x),
-            S = A
-                ? p.intl.string(g.default.qbDPGM)
-                : p.intl.formatToPlainString(p.t.LZunzZ, { planPremiumType: u.Ay.getTierDisplayNameByPlanId(`${x}`) });
+        let S = (0, u.Zb)(x),
+            A = S ? p.intl.string(g.default.qbDPGM) : p.intl.string(p.t.LZunzZ);
         return (0, n.jsx)(l.Modal, {
             size: "md",
             transitionState: t,
-            title: S,
-            subtitle: h(f, i, m, A),
+            title: A,
+            subtitle: h(f, i, m, S),
             actions: _,
             onClose: async () => e(),
             children: v ? (0, n.jsx)(a.wx6, { type: "critical", children: p.intl.string(p.t["5mlOCW"]) }) : null,

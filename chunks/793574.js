@@ -79,6 +79,7 @@ var r = (function (e) {
         (e.EMPTY_STATE = "empty state"),
         (e.SUBSCRIPTION_DETAILS = "subscription details"),
         (e.SUBSCRIPTION_HEADER = "subscription header"),
+        (e.GUILD_BOOSTING_SUBSCRIPTION_HEADER = "guild boosting subscription header"),
         (e.CHURN_DISCOUNT_SUBSCRIPTION_HEADER = "churn discount subscription header"),
         (e.CHURN_DISCOUNT_POPOVER = "churn discount popover"),
         (e.CHURN_DISCOUNT_PERSISTENT_CTA = "churn discount persistent cta"),

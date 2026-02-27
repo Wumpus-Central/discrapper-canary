@@ -856,48 +856,56 @@ function eR(e) {
 }
 function eO(e) {
     let { subscription: t, user: n, price: r, renewalInvoicePreview: s, fractionalPremiumInfo: a } = e,
-        { planId: o, additionalPlans: l } = t,
-        u = g.A.get(o);
-    i()(null != u, "Missing plan");
-    let c = e_(l),
-        d = eU(t.planId, t.paymentSourceId, t.currency, n).amount * c;
+        { planId: o, additionalPlans: u } = t,
+        c = g.A.get(o);
+    i()(null != c, "Missing plan");
+    let d = e_(u),
+        _ = eU(t.planId, t.paymentSourceId, t.currency, n).amount * d;
     if (null != s) {
         let e = s.invoiceItems.find((e) => D.pW.has(e.subscriptionPlanId));
-        null != e && (d = e.amount);
+        null != e && (_ = e.amount);
     }
-    r = r ?? (0, b.$g)(d, t.currency);
-    let _ = s?.taxInclusive ?? t.latestInvoice?.taxInclusive ?? !0;
+    r = r ?? (0, b.$g)(_, t.currency);
+    let f = s?.taxInclusive ?? t.latestInvoice?.taxInclusive ?? !0;
     if (eR(t))
         return t.isPurchasedViaGoogle
-            ? x.intl.format(x.t["3/WTrI"], { quantity: c })
-            : _
-              ? x.intl.format(x.t["0ozBSB"], { quantity: c, rate: (0, b.CE)(r, u.interval, u.intervalCount) })
-              : x.intl.format(x.t["yjsv/s"], { quantity: c, rate: (0, b.CE)(r, u.interval, u.intervalCount) });
+            ? x.intl.format(x.t["3/WTrI"], { quantity: d })
+            : f
+              ? x.intl.format(x.t["0ozBSB"], { quantity: d, rate: (0, b.CE)(r, c.interval, c.intervalCount) })
+              : x.intl.format(x.t["yjsv/s"], { quantity: d, rate: (0, b.CE)(r, c.interval, c.intervalCount) });
     switch (t.status) {
         case R.Dmq.ACCOUNT_HOLD:
             return t.isPurchasedViaGoogle
-                ? x.intl.format(x.t.Nlf3nc, { quantity: c, boostQuantity: c })
-                : _
+                ? x.intl.format(x.t.Nlf3nc, { quantity: d, boostQuantity: d })
+                : f
                   ? x.intl.format(x.t.oiRy7v, {
-                        quantity: c,
-                        boostQuantity: c,
-                        rate: (0, b.CE)(r, u.interval, u.intervalCount),
+                        quantity: d,
+                        boostQuantity: d,
+                        rate: (0, b.CE)(r, c.interval, c.intervalCount),
                     })
                   : x.intl.format(x.t["0QxOAi"], {
-                        quantity: c,
-                        boostQuantity: c,
-                        rate: (0, b.CE)(r, u.interval, u.intervalCount),
+                        quantity: d,
+                        boostQuantity: d,
+                        rate: (0, b.CE)(r, c.interval, c.intervalCount),
                     });
         case R.Dmq.PAUSE_PENDING:
         case R.Dmq.PAUSED:
             if (null != a && !a.isFractionalPremiumActive) return x.intl.string(x.t.CduWAm);
-            return x.intl.format(x.t["5iud9s"], { quantity: c });
+            return x.intl.format(x.t["5iud9s"], { quantity: d });
+        case R.Dmq.PAST_DUE:
+            if (t.isBoostOnly)
+                return x.intl.format(x.t["d+0vwo"], {
+                    endDate: (0, T.i$)(eA(t).expiresDate, "LL"),
+                    onClick: () => {
+                        (0, l.A)("https://support.discord.com/hc/articles/23082866222871");
+                    },
+                });
         default:
             return t.isPurchasedViaGoogle
-                ? x.intl.format(x.t["5iud9s"], { quantity: c })
-                : _
-                  ? x.intl.format(x.t.eDwrLA, { quantity: c, rate: (0, b.CE)(r, u.interval, u.intervalCount) })
-                  : x.intl.format(x.t.ijSDcI, { quantity: c, rate: (0, b.CE)(r, u.interval, u.intervalCount) });
+                ? x.intl.format(x.t["5iud9s"], { quantity: d })
+                : f
+                  ? x.intl.format(x.t.eDwrLA, { quantity: d, rate: (0, b.CE)(r, c.interval, c.intervalCount) })
+                  : x.intl.format(x.t.ijSDcI, { quantity: d, rate: (0, b.CE)(r, c.interval, c.intervalCount) });
     }
 }
 function eD(e, t, n) {

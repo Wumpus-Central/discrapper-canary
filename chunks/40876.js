@@ -397,7 +397,6 @@ let i = {
         actions: [
             "POST_CONNECTION_OPEN",
             "BILLING_SUBSCRIPTION_UPDATE_SUCCESS",
-            "BILLING_SUBSCRIPTION_CANCEL_SUCCESS",
             "PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS",
             "BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS",
             "BILLING_PAYMENT_SOURCE_CREATE_SUCCESS",
@@ -405,7 +404,7 @@ let i = {
         ],
         inlineRequire: () => n(415202).A,
     },
-    RelationshipManager: { actions: ["RELATIONSHIP_ADD", "FRIEND_REQUEST_ACCEPTED"], inlineRequire: () => n(903626).A },
+    RelationshipManager: { actions: ["RELATIONSHIP_ADD", "FRIEND_REQUEST_ACCEPTED"], inlineRequire: () => n(681245).A },
     RTCLatencyTestManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(222804).A },
     SavedMessagesManager: {
         actions: ["POST_CONNECTION_OPEN"],
