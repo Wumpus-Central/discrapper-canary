@@ -1,17 +1,18 @@
-n.d(t, { A: () => h });
-var i = n(627968),
-    s = n(64700),
+"use strict";
+n.d(t, { A: () => _ });
+var l = n(627968),
+    a = n(64700),
     r = n(503698),
-    l = n.n(r),
-    o = n(397927),
-    a = n(262633);
+    s = n.n(r),
+    i = n(397927),
+    o = n(262633);
 let c = { UP: "up", RIGHT: "right", DOWN: "down", LEFT: "left" },
-    d = { [c.UP]: "", [c.RIGHT]: a.pG, [c.DOWN]: a.TR, [c.LEFT]: a.kb };
-class u extends s.PureComponent {
+    d = { [c.UP]: "", [c.RIGHT]: o.pG, [c.DOWN]: o.TR, [c.LEFT]: o.kb };
+class u extends a.PureComponent {
     static Directions = c;
     render() {
         let { direction: e, className: t } = this.props;
-        return (0, i.jsx)(o.z$m, { size: "md", color: "currentColor", className: l()(t, { [d[e]]: !0 }) });
+        return (0, l.jsx)(i.z$m, { size: "md", color: "currentColor", className: s()(t, { [d[e]]: !0 }) });
     }
 }
-let h = u;
+let _ = u;
