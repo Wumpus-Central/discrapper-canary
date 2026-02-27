@@ -1,15 +1,18 @@
-t.d(r, { A: () => c });
-var d = t(627968);
+t.d(l, { A: () => a });
+var r = t(627968);
 t(64700);
-var l = t(988064);
-let c = (e) => {
-    let { bannerSrc: r, logoSrc: t, backgroundColor: c, children: o } = e;
-    return (0, d.jsxs)("div", {
-        className: l.ZK,
-        style: { backgroundImage: `url(${r})`, backgroundColor: c },
+var o = t(506456),
+    n = t(988064);
+let a = (e) => {
+    let { bannerSrc: l, logoSrc: t, backgroundColor: a, children: i } = e,
+        d = (0, o.A)(l),
+        s = (0, o.A)(t);
+    return (0, r.jsxs)("div", {
+        className: n.ZK,
+        style: { backgroundImage: `url(${d})`, backgroundColor: a },
         children: [
-            null != t && (0, d.jsx)("img", { src: t, className: l.wm, alt: "" }),
-            null != o && (0, d.jsx)("div", { className: l.Y_, children: o }),
+            null != s && (0, r.jsx)("img", { src: s, className: n.wm, alt: "" }),
+            null != i && (0, r.jsx)("div", { className: n.Y_, children: i }),
         ],
     });
 };

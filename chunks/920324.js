@@ -236,5 +236,59 @@ let u = {
                 tenantId: { label: "Tenant Id", type: "text", defaultValue: c.FYj },
             },
         },
+        {
+            name: "Themed Images",
+            id: "themed-images",
+            component: (e) => {
+                let { lightAsset: t, darkAsset: a } = e,
+                    r = {
+                        id: "themed-images",
+                        children: [
+                            {
+                                block: "BackgroundImage",
+                                backgroundImage: { light: t, dark: a },
+                                children: [
+                                    {
+                                        block: "Stack",
+                                        direction: "vertical",
+                                        children: [
+                                            {
+                                                block: "Heading",
+                                                variant: "heading-xl/bold",
+                                                content: "Theme-aware images",
+                                            },
+                                            {
+                                                block: "Text",
+                                                variant: "text-md/normal",
+                                                content: "Switch your app theme to see this change",
+                                            },
+                                            {
+                                                block: "Text",
+                                                variant: "text-sm/normal",
+                                                content: "(Light shows multiple orbs, dark shows hands holding an orb)",
+                                            },
+                                        ],
+                                    },
+                                ],
+                            },
+                        ],
+                    };
+                return (0, l.jsx)(d.Ay, { layout: r });
+            },
+            controls: {
+                lightAsset: {
+                    label: "Light Asset URL",
+                    type: "text",
+                    defaultValue:
+                        "https://cdn.discordapp.com/assets/content/8f774ab3b8482a9fd205e8b7285cc372448c4893d8fe9b50d37ddb70c922240d",
+                },
+                darkAsset: {
+                    label: "Dark Asset URL",
+                    type: "text",
+                    defaultValue:
+                        "https://cdn.discordapp.com/assets/content/1a68031e600ecb954fd6ea9d28ab0c0544457623f7a2c0f2b9137569c32800e8",
+                },
+            },
+        },
     ],
 };

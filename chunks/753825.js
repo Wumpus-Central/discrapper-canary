@@ -1,13 +1,15 @@
 "use strict";
-n.d(t, { A: () => s });
-var r = n(627968),
-    i = n(397927),
-    a = n(487329);
-let s = (e) => {
-    let { backgroundImage: t, href: n, ctaText: s } = e;
-    return (0, r.jsx)("div", {
-        className: a.q,
-        style: { backgroundImage: `url(${t})` },
-        children: (0, r.jsx)(i.Text, { variant: "text-lg/bold", color: "always-white", children: s }),
+a.d(t, { A: () => i });
+var l = a(627968),
+    r = a(397927),
+    n = a(506456),
+    s = a(709710);
+let i = (e) => {
+    let { backgroundImage: t, href: a, ctaText: i } = e,
+        o = (0, n.A)(t);
+    return (0, l.jsx)("div", {
+        className: s.q,
+        style: { backgroundImage: `url(${o})` },
+        children: (0, l.jsx)(r.Text, { variant: "text-lg/bold", color: "always-white", children: i }),
     });
 };
