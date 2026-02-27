@@ -121,6 +121,9 @@ let u = {
                                             children: [
                                                 {
                                                     block: "SkuList",
+                                                    eagerLoad: !0,
+                                                    showSkeleton: !0,
+                                                    sortPurchased: !0,
                                                     skuBlock: "ShopProductCard",
                                                     skuIds: [
                                                         "1333912750274904064",
