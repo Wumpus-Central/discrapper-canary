@@ -15,5 +15,5 @@ let d = (0, s.sN)(r.X.SATURATION, {
     minValue: 0,
     maxValue: 1,
     getInitialValue: () => l.A.saturation,
-    setValue: (t) => (0, n.HU)(t),
+    asValueChanges: (t) => (0, n.HU)(t),
 });

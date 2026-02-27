@@ -1,4 +1,4 @@
-i.d(e, { o: () => T });
+i.d(e, { o: () => A });
 var n = i(955572),
     l = i(775602),
     s = i(419954),
@@ -7,7 +7,7 @@ var n = i(955572),
     u = i(381941),
     o = i(985018);
 let d = (t) => `${t.toFixed(0)}px`,
-    T = (0, s.sN)(a.X.APPEARANCE_MESSAGE_GROUP_SPACING, {
+    A = (0, s.sN)(a.X.APPEARANCE_MESSAGE_GROUP_SPACING, {
         useTitle: () => o.intl.string(o.t.Q6lKkg),
         useSubtitle: () => o.intl.string(o.t.p7eUrb),
         markers: u.qh,
@@ -22,7 +22,7 @@ let d = (t) => `${t.toFixed(0)}px`,
         },
         onValueRender: d,
         onMarkerRender: d,
-        setValue: (t) => {
+        asValueChanges: (t) => {
             switch (t) {
                 case 0:
                 case 4:

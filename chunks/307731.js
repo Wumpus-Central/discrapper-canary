@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Am: () => a, Re: () => u, Vl: () => l, ZT: () => r, b_: () => s, he: () => i });
+n.d(t, { Am: () => s, Re: () => u, Vl: () => l, ZT: () => r, b_: () => a, he: () => i });
 let r = /[^a-zA-Z0-9_]/g;
 var i = (function (e) {
         return (
@@ -10,7 +10,7 @@ var i = (function (e) {
             e
         );
     })({}),
-    a = (function (e) {
+    s = (function (e) {
         return (
             (e[(e.DISALLOW_EXTERNAL = 0)] = "DISALLOW_EXTERNAL"),
             (e[(e.GUILD_SUBSCRIPTION_UNAVAILABLE = 1)] = "GUILD_SUBSCRIPTION_UNAVAILABLE"),
@@ -22,7 +22,7 @@ var i = (function (e) {
             e
         );
     })({}),
-    s = (function (e) {
+    a = (function (e) {
         return (
             (e[(e.REACTION = 0)] = "REACTION"),
             (e[(e.STATUS = 1)] = "STATUS"),
@@ -39,6 +39,7 @@ var i = (function (e) {
             (e[(e.GUILD_PROFILE = 12)] = "GUILD_PROFILE"),
             (e[(e.CHANNEL_NAME = 13)] = "CHANNEL_NAME"),
             (e[(e.DEFAULT_REACT_EMOJI = 14)] = "DEFAULT_REACT_EMOJI"),
+            (e[(e.NO_CUSTOM_EMOJI = 15)] = "NO_CUSTOM_EMOJI"),
             e
         );
     })({});
