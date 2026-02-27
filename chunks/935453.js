@@ -1,48 +1,51 @@
-n.d(t, { N: () => c });
+n.d(t, { N: () => u });
 var i = n(627968);
 n(64700);
 var l = n(835245),
-    a = n(397927),
-    r = n(391048),
+    r = n(397927),
+    a = n(391048),
     s = n(636099),
-    o = n(954571),
-    d = n(652215);
-function c(e) {
-    let { guildProductListing: t, guildId: c, sourceAnalyticsLocations: u } = e,
+    o = n(608805),
+    d = n(954571),
+    c = n(652215);
+function u(e) {
+    let { guildProductListing: t, guildId: u, sourceAnalyticsLocations: _ } = e,
         m = !1,
-        _ = (0, l.A)(),
-        h = t.id,
-        p = () => {
+        h = (0, l.A)(),
+        p = t.id,
+        g = () => {
             m = !0;
         };
-    (0, a.mMO)(
+    (0, r.mMO)(
         async () => {
             let { default: e } = await n.e("41469").then(n.bind(n, 35052));
             return (n) =>
                 (0, i.jsx)(e, {
                     ...n,
                     applicationId: t.application_id,
-                    skuId: h,
-                    sourceAnalyticsLocations: u,
-                    guildProductContext: { guildProductListingId: t.id, guildId: c },
-                    loadId: _,
-                    onComplete: p,
+                    skuId: p,
+                    sourceAnalyticsLocations: _,
+                    guildProductContext: { guildProductListingId: t.id, guildId: u },
+                    loadId: h,
+                    onComplete: g,
                 });
         },
         {
             onCloseCallback: () => {
-                m ||
-                    o.default.track(d.HAw.PAYMENT_FLOW_CANCELED, {
-                        load_id: _,
-                        payment_type: d.frM[d.VVm.ONE_TIME],
+                if (!m) {
+                    let e = (0, o.q1)({ location: "GuildProductPurchaseModal" });
+                    d.default.track(c.HAw.PAYMENT_FLOW_CANCELED, {
+                        load_id: h,
+                        payment_type: c.frM[c.VVm.ONE_TIME],
                         is_gift: !1,
-                        sku_id: h,
-                        location_stack: Array.isArray(u) ? u : [u],
-                    }),
-                    (0, r.ET)(),
-                    (0, s.z)();
+                        sku_id: p,
+                        location_stack: Array.isArray(_) ? _ : [_],
+                        checkout_design: e ? o.rS.UNIFIED : o.rS.LEGACY,
+                    });
+                }
+                (0, a.ET)(), (0, s.z)();
             },
-            onCloseRequest: d.tEg,
+            onCloseRequest: c.tEg,
         },
     );
 }

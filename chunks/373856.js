@@ -1,86 +1,92 @@
 "use strict";
-n.d(t, { O: () => _, g: () => d });
+n.d(t, { O: () => p, g: () => f });
 var r = n(64700),
-    i = n(156312),
-    a = n(166532),
-    s = n(954571),
-    o = n(310829),
-    l = n(652215);
+    i = n(608805),
+    s = n(120700),
+    a = n(156312),
+    o = n(166532),
+    l = n(954571),
+    u = n(310829),
+    c = n(652215);
 n(322076);
-var u = n(818348);
-let c = () => ({
-        payment_type: l.frM[l.VVm.ONE_TIME],
-        is_gift: !1,
-        eligible_for_trial: !1,
-        payment_modal_version: "v2",
-    }),
-    d = (e, t) => {
-        let { loadId: n, skuId: r, analyticsLocations: i, analyticsSourceLocation: a } = t;
-        e === l.HAw.PAYMENT_FLOW_CANCELED &&
-            s.default.track(l.HAw.PAYMENT_FLOW_CANCELED, {
+var d = n(818348);
+let _ = () => {
+        let e = (0, i.q1)({ location: "OrbCheckoutModal", unifiedCheckoutFlow: s.C.ORB_CHECKOUT });
+        return {
+            payment_type: c.frM[c.VVm.ONE_TIME],
+            is_gift: !1,
+            eligible_for_trial: !1,
+            payment_modal_version: "v2",
+            checkout_design: e ? i.rS.UNIFIED : i.rS.LEGACY,
+        };
+    },
+    f = (e, t) => {
+        let { loadId: n, skuId: r, analyticsLocations: i, analyticsSourceLocation: s } = t;
+        e === c.HAw.PAYMENT_FLOW_CANCELED &&
+            l.default.track(c.HAw.PAYMENT_FLOW_CANCELED, {
                 load_id: n,
-                application_id: (0, o.p)(r),
+                application_id: (0, u.p)(r),
                 location: i,
                 location_stack: i,
-                payment_gateway: u.ps.VIRTUAL_CURRENCY,
+                payment_gateway: d.ps.VIRTUAL_CURRENCY,
                 sku_id: r,
-                currency: l.Yri.DISCORD_ORB,
-                ...(null != a && { source: a }),
-                ...c(),
+                currency: c.Yri.DISCORD_ORB,
+                ...(null != s && { source: s }),
+                ..._(),
             });
     },
-    _ = (e) => {
-        let { skuId: t, orbProductContext: n, analyticsLocations: d, analyticsSourceLocation: _ } = e,
-            { activitySessionId: f, hasPaymentSources: p, contextMetadata: h } = (0, i.P5)(),
-            { loadId: m, startTime: g } = h,
-            E = (0, r.useMemo)(
+    p = (e) => {
+        let { skuId: t, orbProductContext: n, analyticsLocations: i, analyticsSourceLocation: s } = e,
+            { activitySessionId: f, hasPaymentSources: p, contextMetadata: h } = (0, a.P5)(),
+            { loadId: m, startTime: E } = h,
+            g = (0, r.useMemo)(
                 () => ({
                     load_id: m,
-                    application_id: (0, o.p)(t),
-                    location: d,
-                    location_stack: d,
+                    application_id: (0, u.p)(t),
+                    location: i,
+                    location_stack: i,
                     sku_id: t,
                     activity_session_id: f,
-                    payment_gateway: u.ps.VIRTUAL_CURRENCY,
+                    payment_gateway: d.ps.VIRTUAL_CURRENCY,
                     ...(null != n && { price: n.orbPriceAmount ?? void 0, regular_price: n.orbPriceAmount ?? void 0 }),
-                    currency: l.Yri.DISCORD_ORB,
-                    ...(null != _ && { source: _ }),
-                    ...c(),
+                    currency: c.Yri.DISCORD_ORB,
+                    ...(null != s && { source: s }),
+                    ..._(),
                 }),
-                [m, f, t, d, _, n],
+                [m, f, t, i, s, n],
             );
         return {
             emitOrbCheckoutPaymentFlowEvent: (0, r.useCallback)(
                 (e, t) => {
-                    let n = Date.now() - g;
-                    e === l.HAw.PAYMENT_FLOW_STARTED
-                        ? s.default.track(l.HAw.PAYMENT_FLOW_STARTED, {
-                              ...E,
+                    let n = Date.now() - E;
+                    e === c.HAw.PAYMENT_FLOW_STARTED
+                        ? l.default.track(c.HAw.PAYMENT_FLOW_STARTED, {
+                              ...g,
                               has_saved_payment_source: p,
-                              payment_gateway: u.ps.VIRTUAL_CURRENCY,
+                              payment_gateway: d.ps.VIRTUAL_CURRENCY,
                               continue_session_initial_step: null,
                           })
-                        : e === l.HAw.PAYMENT_FLOW_LOADED
-                          ? s.default.track(l.HAw.PAYMENT_FLOW_LOADED, {
-                                ...E,
+                        : e === c.HAw.PAYMENT_FLOW_LOADED
+                          ? l.default.track(c.HAw.PAYMENT_FLOW_LOADED, {
+                                ...g,
                                 has_saved_payment_source: p,
-                                initial_step: a.pn.REVIEW,
+                                initial_step: o.pn.REVIEW,
                                 duration_ms: n,
                             })
-                          : e === l.HAw.PAYMENT_FLOW_CANCELED
-                            ? s.default.track(l.HAw.PAYMENT_FLOW_CANCELED, { ...E, duration_ms: n })
-                            : e === l.HAw.PAYMENT_FLOW_COMPLETED
-                              ? s.default.track(l.HAw.PAYMENT_FLOW_COMPLETED, { ...E, duration_ms: n })
-                              : e === l.HAw.PAYMENT_FLOW_SUCCEEDED
-                                ? s.default.track(l.HAw.PAYMENT_FLOW_SUCCEEDED, { ...E, duration_ms: n })
-                                : e === l.HAw.PAYMENT_FLOW_FAILED &&
-                                  s.default.track(l.HAw.PAYMENT_FLOW_FAILED, {
-                                      ...E,
+                          : e === c.HAw.PAYMENT_FLOW_CANCELED
+                            ? l.default.track(c.HAw.PAYMENT_FLOW_CANCELED, { ...g, duration_ms: n })
+                            : e === c.HAw.PAYMENT_FLOW_COMPLETED
+                              ? l.default.track(c.HAw.PAYMENT_FLOW_COMPLETED, { ...g, duration_ms: n })
+                              : e === c.HAw.PAYMENT_FLOW_SUCCEEDED
+                                ? l.default.track(c.HAw.PAYMENT_FLOW_SUCCEEDED, { ...g, duration_ms: n })
+                                : e === c.HAw.PAYMENT_FLOW_FAILED &&
+                                  l.default.track(c.HAw.PAYMENT_FLOW_FAILED, {
+                                      ...g,
                                       duration_ms: n,
                                       ...(null != t ? { payment_error_code: t.code, error_message: t.message } : {}),
                                   });
                 },
-                [g, E, p],
+                [E, g, p],
             ),
         };
     };
