@@ -17,4 +17,5 @@ var i,
         (i.GUILD_MOD_DASH_MEMBER_SAFETY = "guild-mod-dash-member-safety"),
         (i.GUILD_BOOSTS = "guild-boosts"),
         (i.GAME_SERVERS = "game-servers"),
+        (i.GAME_SERVERS_EMPTY = "game-servers-empty"),
         i);
