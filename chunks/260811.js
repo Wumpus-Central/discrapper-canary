@@ -7,8 +7,8 @@ var r = n(989349),
     o = n(935816),
     l = n(611010),
     u = n(820269),
-    c = n(652215);
-let d = ["500428425362931713", "451550535720501248", "471376328319303681", "466696214818193408"];
+    c = n(409949),
+    d = n(652215);
 class _ extends a.A {
     id;
     type;
@@ -156,7 +156,7 @@ class _ extends a.A {
     }
     get supportedOperatingSystems() {
         let e = null != this.systemRequirements ? Object.keys(this.systemRequirements) : [];
-        return e.length > 0 ? e : [c.uje.WINDOWS];
+        return e.length > 0 ? e : [d.uje.WINDOWS];
     }
     get isOnSale() {
         return null != this.price && null != this.price.saleAmount;
@@ -164,11 +164,11 @@ class _ extends a.A {
     isGiftable() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.price;
         return (
-            this.type === c.Puh.DURABLE_PRIMARY &&
+            this.type === d.Puh.DURABLE_PRIMARY &&
             this.available &&
             this.requiresPayment &&
             null != e &&
-            c.Ly6.has(e.currency) &&
+            d.Ly6.has(e.currency) &&
             null == this.externalPurchaseUrl
         );
     }
@@ -193,26 +193,26 @@ class _ extends a.A {
         return !this.premium && null != e && e.amount > 0;
     }
     get isTheGameAwardsWinner() {
-        return d.includes(this.id);
+        return c.U.has(this.id);
     }
     get available() {
-        return (0, s.Lt)(this.flags, c.d68.AVAILABLE) || null != this.externalPurchaseUrl;
+        return (0, s.Lt)(this.flags, d.d68.AVAILABLE) || null != this.externalPurchaseUrl;
     }
     isAvailableForDistribution() {
         return (
             this.available &&
             null != this.getPrice() &&
             null == this.externalPurchaseUrl &&
-            (!this.premium || (0, s.Lt)(this.flags, c.d68.PREMIUM_AND_DISTRIBUTION))
+            (!this.premium || (0, s.Lt)(this.flags, d.d68.PREMIUM_AND_DISTRIBUTION))
         );
     }
     isAvailable() {
-        return (0, s.Lt)(this.flags, c.d68.AVAILABLE);
+        return (0, s.Lt)(this.flags, d.d68.AVAILABLE);
     }
     isPremiumPerk() {
         return (
             this.premium &&
-            ((0, s.Lt)(this.flags, c.d68.PREMIUM_PURCHASE) || (0, s.Lt)(this.flags, c.d68.PREMIUM_AND_DISTRIBUTION))
+            ((0, s.Lt)(this.flags, d.d68.PREMIUM_PURCHASE) || (0, s.Lt)(this.flags, d.d68.PREMIUM_AND_DISTRIBUTION))
         );
     }
     hasFeature(e) {
