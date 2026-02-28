@@ -798,16 +798,6 @@ let i = {
         neverLoadBeforeConnectionOpen: !0,
         hasStoreChangeListeners: !0,
     },
-    KrispBVCDeviceManager: {
-        actions: [
-            "AUDIO_SET_INPUT_DEVICE",
-            "MEDIA_ENGINE_DEVICES",
-            "RTC_CONNECTION_STATE",
-            "AUDIO_INPUT_DEVICE_SAMPLE_RATE_CHANGED",
-        ],
-        inlineRequire: () => n(14477).A,
-        neverLoadBeforeConnectionOpen: !0,
-    },
     RequestToStreamManager: {
         actions: ["VOICE_STATE_UPDATES"],
         inlineRequire: () => n(553366).A,
