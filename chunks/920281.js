@@ -37,16 +37,15 @@ async function d(e) {
                 { ...e, name: t }
             );
         }),
-        j =
-            ((t = _.filter((e) => e.id.startsWith(i.fS.WINDOW))),
-            (s = {}),
-            m.forEach((e) => {
-                s[e.id] = e;
-            }),
-            t.forEach((e) => {
-                s[e.id] = e;
-            }),
-            Object.values(s)),
+        j = ((t = _.filter((e) => e.id.startsWith(i.fS.WINDOW))),
+        (s = {}),
+        m.forEach((e) => {
+            s[e.id] = e;
+        }),
+        t.forEach((e) => {
+            s[e.id] = e;
+        }),
+        Object.values(s)).map((e) => ({ ...e, icon: e.icon?.split(",")[1] ? e.icon : void 0 })),
         v = [];
     return (
         f.includes(i.fS.CAMERA) &&
