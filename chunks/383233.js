@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { Ay: () => h, _c: () => f, go: () => c, vF: () => d }), n(938796), n(321073);
+n.d(t, { Ay: () => p, _c: () => f, go: () => c, vF: () => d }), n(938796), n(321073);
 var r = n(485845),
     i = n(665260),
-    a = n(315069),
-    s = n(427930),
+    s = n(315069),
+    a = n(427930),
     o = n(505527),
     l = n(815807),
     u = n(652215);
-class c extends a.A {
+class c extends s.A {
     type;
     content;
     attachments;
@@ -39,7 +39,7 @@ class c extends a.A {
         return (0, i.Lt)(this.flags, e);
     }
 }
-class d extends a.A {
+class d extends s.A {
     message;
     moderatorReport;
     constructor(e) {
@@ -152,7 +152,7 @@ class _ extends c {
         return this.reactions.find((t) => (0, l.i6)(t.emoji, e));
     }
     getContentMessage() {
-        return (0, s.A)(this) ? this.messageSnapshots[0].message : this;
+        return (0, a.A)(this) ? this.messageSnapshots[0].message : this;
     }
     userHasReactedWithEmoji(e, t) {
         return this.reactions.some((n) => {
@@ -164,34 +164,34 @@ class _ extends c {
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
             r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.v.NORMAL,
             i = -1,
-            a = this.reactions.map((a, s) => {
-                if ((0, l.i6)(a.emoji, e))
-                    if (((i = s), r === o.v.BURST)) {
-                        if (t && a.me) return a;
-                        let e = t && a.me_burst ? a.burst_count : a.burst_count + 1,
-                            r = null != a.burst_colors && a.burst_colors.length > 0 ? a.burst_colors : n;
-                        a = {
-                            ...a,
-                            me_burst: !!t || a.me_burst,
+            s = this.reactions.map((s, a) => {
+                if ((0, l.i6)(s.emoji, e))
+                    if (((i = a), r === o.v.BURST)) {
+                        if (t && s.me_burst) return s;
+                        let e = s.burst_count + 1,
+                            r = null != s.burst_colors && s.burst_colors.length > 0 ? s.burst_colors : n;
+                        s = {
+                            ...s,
+                            me_burst: !!t || s.me_burst,
                             burst_count: e,
-                            count_details: { ...a.count_details, burst: e },
+                            count_details: { ...s.count_details, burst: e },
                             burst_colors: r,
                         };
                     } else if (r === o.v.VOTE) {
-                        let e = a.count_details?.vote ?? 0,
-                            n = t && a.me_vote ? e : e + 1;
-                        a = { ...a, count_details: { ...a.count_details, vote: n }, me_vote: !!t || a.me_vote };
+                        let e = s.count_details?.vote ?? 0,
+                            n = t && s.me_vote ? e : e + 1;
+                        s = { ...s, count_details: { ...s.count_details, vote: n }, me_vote: !!t || s.me_vote };
                     } else {
-                        if (t && a.me_burst) return a;
-                        let e = t && a.me ? a.count : a.count + 1;
-                        a = { ...a, count: e, count_details: { ...a.count_details, normal: e }, me: !!t || a.me };
+                        if (t && s.me) return s;
+                        let e = s.count + 1;
+                        s = { ...s, count: e, count_details: { ...s.count_details, normal: e }, me: !!t || s.me };
                     }
-                return a;
+                return s;
             });
         return (
             -1 === i &&
                 (r === o.v.BURST
-                    ? a.push({
+                    ? s.push({
                           emoji: e,
                           me: !1,
                           me_burst: t,
@@ -201,7 +201,7 @@ class _ extends c {
                           burst_colors: n,
                       })
                     : r === o.v.VOTE
-                      ? a.push({
+                      ? s.push({
                             emoji: e,
                             me: !1,
                             me_burst: !1,
@@ -211,7 +211,7 @@ class _ extends c {
                             burst_count: 0,
                             burst_colors: [],
                         })
-                      : a.push({
+                      : s.push({
                             emoji: e,
                             me: t,
                             me_burst: !1,
@@ -220,20 +220,20 @@ class _ extends c {
                             burst_count: 0,
                             burst_colors: [],
                         })),
-            this.set("reactions", a)
+            this.set("reactions", s)
         );
     }
     addReactionBatch(e, t) {
         return e.reduce((e, n) => {
-            let { users: r, emoji: i, reactionType: a } = n;
-            return r.reduce((e, n) => e.addReaction(i, n === t, [], a), e);
+            let { users: r, emoji: i, reactionType: s } = n;
+            return r.reduce((e, n) => e.addReaction(i, n === t, [], s), e);
         }, this);
     }
     removeReaction(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.v.NORMAL,
             r = -1,
-            i = this.reactions.map((i, a) => {
+            i = this.reactions.map((i, s) => {
                 if ((0, l.i6)(i.emoji, e)) {
                     if (n === o.v.BURST) {
                         let e = t && !i.me_burst ? i.burst_count : i.burst_count - 1;
@@ -251,15 +251,15 @@ class _ extends c {
                         let e = t && !i.me ? i.count : i.count - 1;
                         i = { ...i, count: e, me: !t && i.me, count_details: { ...i.count_details, normal: e } };
                     }
-                    r = a;
+                    r = s;
                 }
                 return i;
             }),
-            { count: a, burst_count: s, count_details: u } = i[r] ?? {},
+            { count: s, burst_count: a, count_details: u } = i[r] ?? {},
             c = u?.normal ?? 0,
             d = u?.burst ?? 0,
             _ = u?.vote ?? 0;
-        return -1 !== r && a <= 0 && s <= 0 && c <= 0 && d <= 0 && _ <= 0 && i.splice(r, 1), this.set("reactions", i);
+        return -1 !== r && s <= 0 && a <= 0 && c <= 0 && d <= 0 && _ <= 0 && i.splice(r, 1), this.set("reactions", i);
     }
     removeReactionsForEmoji(e) {
         return this.set(
@@ -299,4 +299,4 @@ class _ extends c {
 function f(e) {
     return (0, i.Lt)(e.flags, u.pr7.IS_COMPONENTS_V2);
 }
-let h = _;
+let p = _;
