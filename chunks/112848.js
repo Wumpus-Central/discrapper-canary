@@ -1,70 +1,66 @@
-r.d(t, { $F: () => _, Lh: () => g, Wo: () => h, Xb: () => b, bu: () => f, p3: () => R, rG: () => x });
-var n,
-    a = r(989349),
-    l = r.n(a),
-    s = r(311907),
-    i = r(439174),
-    d = r(622543),
-    u = r(287809),
-    o = r(166403),
-    c = r(474090),
-    m = r(416654),
-    p = r(788868),
-    h = (((n = {}).UPCOMING = "upcoming"), (n.EARNED = "earned"), n);
-function g() {
-    let e = (0, s.bG)([u.default], () => u.default.getCurrentUser());
+n.d(t, { $F: () => E, Lh: () => h, Wo: () => R, Xb: () => x, bu: () => A, p3: () => f, rG: () => p });
+var r,
+    a = n(989349),
+    s = n.n(a),
+    l = n(311907),
+    i = n(439174),
+    d = n(622543),
+    u = n(287809),
+    o = n(166403),
+    c = n(474090),
+    m = n(416654),
+    _ = n(788868),
+    R = (((r = {}).UPCOMING = "upcoming"), (r.EARNED = "earned"), r);
+function h() {
+    let e = (0, l.bG)([u.default], () => u.default.getCurrentUser());
     return (0, m.v)(e?.id) ?? null;
 }
-let x = (e) =>
-    (0, s.bG)([d.A], () => {
+let p = (e) =>
+    (0, l.bG)([d.A], () => {
         if (null == e) return null;
         let t = d.A.getUserProfile(e);
         return t?.premiumSince;
     });
-function b() {
-    let e = (0, s.bG)([u.default], () => u.default.getCurrentUser()),
-        t = (0, c.YE)(e, p.PremiumTypes.TIER_2),
-        r = (0, s.bG)([o.A], () => {
+function x() {
+    let e = (0, l.bG)([u.default], () => u.default.getCurrentUser()),
+        t = (0, c.YE)(e, _.PremiumTypes.TIER_2),
+        n = (0, l.bG)([o.A], () => {
             let e = o.A.getPremiumSubscription();
             return null != e && t ? e.premiumSince : null;
         }, [t]),
-        n = x(e?.id);
-    return r ?? n;
+        r = p(e?.id);
+    return n ?? r;
 }
-let f = () => {
-        let e = Object.values(p.VD),
-            t = (0, s.bG)([u.default], () => u.default.getCurrentUser()),
-            r = (0, s.bG)([o.A], () => o.A.getPremiumTypeSubscription());
-        if (!(0, c.YE)(t, p.PremiumTypes.TIER_2) || null == r || null == r.premiumSince) return null;
-        let n = l()(),
-            a = l()(r.premiumSince).add(1, "day"),
-            i = n.diff(a, "months");
+let A = () => {
+        let e = Object.values(_.VD),
+            t = (0, l.bG)([u.default], () => u.default.getCurrentUser()),
+            n = (0, l.bG)([o.A], () => o.A.getPremiumTypeSubscription());
+        if (!(0, c.YE)(t, _.PremiumTypes.TIER_2) || null == n || null == n.premiumSince) return null;
+        let r = s()(),
+            a = s()(n.premiumSince).add(1, "day"),
+            i = r.diff(a, "months");
         return e.reduce((e, t) => {
-            let { id: r, tenureReqNumMonths: n } = t;
-            return i >= n ? r : e;
+            let { id: n, tenureReqNumMonths: r } = t;
+            return i >= r ? n : e;
         }, null);
     },
-    _ = () => {
+    E = () => {
         let e,
             t,
-            r = (0, s.bG)([u.default], () => u.default.getCurrentUser()),
-            n = R(r?.id),
+            n = (0, l.bG)([u.default], () => u.default.getCurrentUser()),
+            r = f(n?.id),
             a =
-                ((e = g()),
-                (t = (0, s.bG)([o.A], () => o.A.getPremiumTypeSubscription())),
+                ((e = h()),
+                (t = (0, l.bG)([o.A], () => o.A.getPremiumTypeSubscription())),
                 null == e || null == t || null == t.premiumSince ? null : (0, i.Xr)(e, t.premiumSince)),
-            d = (() => {
-                let e = b(),
-                    t = Object.values(p.VD);
-                if (null == e || null == t) return null;
-                let r = l()().diff(e, "days"),
-                    n = t[0],
-                    a = 30 * n.tenureReqNumMonths - r;
-                return a <= 0 ? null : { ...n, daysLeft: a, status: "upcoming" };
-            })();
-        return null != n ? { ...n, earnedOnDate: a, status: "earned" } : null != d ? d : null;
+            s = x();
+        return null != r
+            ? { ...r, earnedOnDate: a, status: "earned" }
+            : null != s
+              ? { ...Object.values(_.VD)[0], status: "upcoming" }
+              : null;
     },
-    R = (e) => {
+    f = (e) => {
         let t = (0, m.v)(e);
-        return null == t ? null : p.VD[t];
+        return null == t ? null : _.VD[t];
     };
