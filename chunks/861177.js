@@ -1,9 +1,9 @@
-n.d(t, { default: () => g });
+n.d(e, { default: () => C });
 var a = n(627968);
 n(64700);
 var i = n(311907),
-    o = n(385612),
-    r = n(287809),
+    r = n(385612),
+    o = n(287809),
     s = n(927578),
     c = n(87719),
     l = n(414345),
@@ -11,42 +11,42 @@ var i = n(311907),
     u = n(788868),
     p = n(652215),
     f = n(339984),
-    b = n(985018),
-    y = n(626072);
-function g(e) {
-    let { onClose: t, source: n, ...g } = e,
-        A = (0, i.bG)([r.default], () => r.default.getCurrentUser()),
-        C = s.Ay.isPremium(A) ? b.t.E0sNsc : b.t.UBcuto,
-        m = b.intl.format(C, {
+    m = n(985018),
+    A = n(626072);
+function C(t) {
+    let { onClose: e, source: n, ...C } = t,
+        L = (0, i.bG)([o.default], () => o.default.getCurrentUser()),
+        y = s.Ay.isPremium(L) ? m.t.E0sNsc : m.t.UBcuto,
+        T = m.intl.format(y, {
             onLearnMore: function () {
-                t(), (0, c.e)();
+                e(), (0, c.e)();
             },
         });
-    return (0, l.g)({ location: "PremiumProfileUpsell" })
+    return (0, l.g1)({ location: "PremiumProfileUpsell" })
         ? (0, a.jsx)(d.F, {
-              title: b.intl.string(b.t.BbsMm4),
-              subtitle: m,
-              graphic: { src: y.A, type: "image" },
-              secondaryCTA: b.intl.string(b.t.SpAQib),
+              title: m.intl.string(m.t.BbsMm4),
+              subtitle: T,
+              graphic: { src: A.A, type: "image" },
+              secondaryCTA: m.intl.string(m.t.SpAQib),
               onSecondaryClick: () => {
-                  t(), (0, o.XD)({ uploadType: f.HL.BANNER, analyticsSource: n });
+                  e(), (0, r.XD)({ uploadType: f.HL.BANNER, analyticsSource: n });
               },
-              onClose: t,
-              ...g,
+              onClose: e,
+              ...C,
           })
         : (0, a.jsx)(d.A, {
-              artURL: y.A,
+              artURL: A.A,
               type: u.e.CUSTOM_PROFILE_UPSELL,
-              title: b.intl.string(b.t.BbsMm4),
-              body: m,
-              glowUp: m,
+              title: m.intl.string(m.t.BbsMm4),
+              body: T,
+              glowUp: T,
               onSecondaryClick: () => {
-                  t(), (0, o.XD)({ uploadType: f.HL.BANNER, analyticsSource: n });
+                  e(), (0, r.XD)({ uploadType: f.HL.BANNER, analyticsSource: n });
               },
-              secondaryCTA: b.intl.string(b.t.SpAQib),
+              secondaryCTA: m.intl.string(m.t.SpAQib),
               analyticsSource: n,
               analyticsLocation: { section: p.JJy.USER_PROFILE, object: p.ZSU.BUTTON_CTA },
-              onClose: t,
-              ...g,
+              onClose: e,
+              ...C,
           });
 }

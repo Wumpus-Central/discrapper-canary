@@ -15,7 +15,7 @@ function p(t) {
                 e(), (0, i.e)();
             },
         });
-    return (0, o.g)({ location: "PremiumGuildMemberProfileUpsell" })
+    return (0, o.g1)({ location: "PremiumGuildMemberProfileUpsell" })
         ? (0, c.jsx)(a.F, {
               title: l.intl.string(l.t.kOEBKP),
               subtitle: b,

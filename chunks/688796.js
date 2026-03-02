@@ -59,7 +59,7 @@ function I(e) {
         v = (0, u.u)(n === m.HL.AVATAR ? h.e.ANIMATED_AVATAR_MODAL_UPSELL : h.e.ANIMATED_BANNER_MODAL_UPSELL),
         y = (0, u.A)(n === m.HL.AVATAR ? h.e.ANIMATED_AVATAR_MODAL_UPSELL : h.e.ANIMATED_BANNER_MODAL_UPSELL);
     return S
-        ? (0, c.g)({ location: "getReducedMotionImageUrl" })
+        ? (0, c.g1)({ location: "getReducedMotionImageUrl" })
             ? (0, i.jsx)(A.F, {
                   title: n === m.HL.AVATAR ? p.intl.string(p.t.X7tO60) : p.intl.string(p.t.zXPa2C),
                   subtitle: n === m.HL.AVATAR ? p.intl.string(p.t.ifCRdB) : p.intl.string(p.t.yQAnf4),

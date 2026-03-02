@@ -23,7 +23,7 @@ function b(t) {
         (0, c.R)([(0, s.VE)(t, "message.txt", "text/plain")], e, a.C.ChannelMessage, { requireConfirm: !0 }),
             o._.dispatchToLastSubscribed(p.jej.CLEAR_TEXT);
     }
-    return (0, r.g)({ location: "PremiumMessageLengthRoadblockUpsell" })
+    return (0, r.g1)({ location: "PremiumMessageLengthRoadblockUpsell" })
         ? (0, i.jsx)(d.F, {
               title: u.intl.string(u.t.TZT3sJ),
               subtitle: u.intl.format(u.t.QhcEAL, { maxLength: p.uvi, onLearnMore: h }),

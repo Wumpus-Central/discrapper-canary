@@ -51,7 +51,7 @@ function k(e) {
               }
           })(e, d)
         : (function (e, c) {
-              if ((0, n.g)({ location: "getAnimatedImageUrl" }))
+              if ((0, n.g1)({ location: "getAnimatedImageUrl" }))
                   switch (e) {
                       case b.e.ANIMATED_AVATAR_MODAL_UPSELL:
                           return (0, A.TM)() ? p.A : r.A;

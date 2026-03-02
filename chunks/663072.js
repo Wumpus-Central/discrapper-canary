@@ -23,7 +23,7 @@ function h(t) {
             }),
             (0, l.pX)(d.BVt.APPLICATION_STORE);
     }
-    return (0, i.g)({ location: "VoiceFiltersUpsell" })
+    return (0, i.g1)({ location: "VoiceFiltersUpsell" })
         ? (0, n.jsx)(r.F, {
               title: C.intl.string(C.t.YqknLn),
               subtitle: C.intl.string(C.t["3hj4kU"]),

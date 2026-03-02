@@ -23,7 +23,7 @@ function A(e) {
         f = (0, u.V)(),
         T = (0, o.O)(),
         E = null != f || null != T;
-    return (0, r.g)({ location: "BurstReactionsUpsell" })
+    return (0, r.g1)({ location: "BurstReactionsUpsell" })
         ? (0, n.jsx)(d.F, {
               title: m.intl.string(m.t.N4SCJ0),
               subtitle: A,

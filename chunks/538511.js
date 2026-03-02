@@ -53,7 +53,7 @@ function W(e) {
         discountAmount: o,
         premiumType: c,
     } = e;
-    if (!0 === (0, y.g)({ location: "PremiumBanner" })) {
+    if (!0 === (0, y.g1)({ location: "PremiumBanner" })) {
         let e;
         switch (c) {
             case G.PremiumTypes.TIER_0:
@@ -139,7 +139,7 @@ function K(e) {
         discountAmount: o,
         premiumType: c,
     } = e;
-    if (!0 === (0, y.g)({ location: "PremiumBanner" })) {
+    if (!0 === (0, y.g1)({ location: "PremiumBanner" })) {
         let e;
         switch (c) {
             case G.PremiumTypes.TIER_0:
@@ -250,10 +250,10 @@ let X = function (e) {
         } = e,
         { analyticsLocations: q } = (0, m.Ay)(_.A.SUBSCRIPTION_HEADER),
         X = (0, A.A)({ forceFetch: !1 }),
-        { fractionalState: J } = X,
-        Q = J === G.xc.FP_SUB_PAUSED,
+        { fractionalState: Q } = X,
+        J = Q === G.xc.FP_SUB_PAUSED,
         { enabled: $ } = (0, R.Ay)({ location: "subscription_header" });
-    (G.QV.has(t.planId) && U.Uyk.ALL_PAUSEABLE.has(t.status) && !Q) || ($ = !1);
+    (G.QV.has(t.planId) && U.Uyk.ALL_PAUSEABLE.has(t.status) && !J) || ($ = !1);
     let ee = (0, P.O)(),
         et = ee?.discount?.amount,
         en = (0, j.k5)(),
@@ -264,7 +264,7 @@ let X = function (e) {
                 eo(M.g.PAUSE_SELECT);
         },
         el = () => {
-            (t.status === U.Dmq.ACTIVE || t.status === U.Dmq.PAST_DUE || t.status === U.Dmq.PAUSE_PENDING || Q) && eo();
+            (t.status === U.Dmq.ACTIVE || t.status === U.Dmq.PAST_DUE || t.status === U.Dmq.PAUSE_PENDING || J) && eo();
         },
         er = () => {
             t.status === U.Dmq.BILLING_RETRY && eo(M.g.CONFIRM);
@@ -385,7 +385,7 @@ let X = function (e) {
             [w.hA]: eg === G.PremiumTypes.TIER_2,
             [w.aD]: eA === U.Dmq.CANCELED,
             [w.WY]: eA === U.Dmq.PAUSE_PENDING,
-            [w.Ft]: eA === U.Dmq.PAUSED && !Q,
+            [w.Ft]: eA === U.Dmq.PAUSED && !J,
             [w.GD]: (0, f.PK)(eA),
         },
         ex = null;
@@ -405,7 +405,7 @@ let X = function (e) {
         case G.PremiumTypes.TIER_2:
             ex = (0, i.jsx)(C.A, { className: w.V6, "aria-label": V.intl.string(V.t.lpNrPu) });
     }
-    let ep = z.includes(t.status) && !Q ? K : W;
+    let ep = z.includes(t.status) && !J ? K : W;
     return (0, i.jsx)(ep, {
         wordMark: ex,
         subscriptionInfo:
@@ -420,12 +420,12 @@ let X = function (e) {
                           renewalInvoicePreview: s,
                           hasDiscountApplied: en,
                           activeDiscountInfo: ei,
-                          hasFractionalPremiumWithSub: Q,
+                          hasFractionalPremiumWithSub: J,
                       }),
             })),
         buttons: (() => {
             let { status: e } = t;
-            if (!0 === (0, y.g)({ location: "renderButtons" })) {
+            if (!0 === (0, y.g1)({ location: "renderButtons" })) {
                 if (t.isPurchasedExternally) {
                     let e = (0, f.tW)(t.paymentGateway, "SUBSCRIPTION_MANAGEMENT");
                     return (0, i.jsx)(d.MzZ, {
@@ -483,7 +483,7 @@ let X = function (e) {
                             ],
                         });
                     case U.Dmq.PAUSED:
-                        if (Q) return n();
+                        if (J) return n();
                         let { durations: s } = (0, b.Vy)(t);
                         return (0, i.jsxs)("div", {
                             className: H.f6,
@@ -534,7 +534,7 @@ let X = function (e) {
             function n() {
                 let e = f.Ay.isSwitchingPlansDisabled(t),
                     n = f.Ay.getSwitchingPlansDisabledMessage(t);
-                if (!0 === (0, y.g)({ location: "renderButtons" })) {
+                if (!0 === (0, y.g1)({ location: "renderButtons" })) {
                     if ($)
                         return (0, i.jsx)("div", {
                             className: H.f6,
@@ -672,7 +672,7 @@ let X = function (e) {
                         ],
                     });
                 case U.Dmq.PAUSED:
-                    if (Q) return n();
+                    if (J) return n();
                     let { durations: s } = (0, b.Vy)(t);
                     return (0, i.jsxs)("div", {
                         className: w.Lv,
