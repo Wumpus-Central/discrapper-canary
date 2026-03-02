@@ -1,1 +1,34 @@
-"use strict";r.d(e,{lu:()=>i,zf:()=>n});var s=r(978862);function i(){return Date.now()/1e3}let n=function(){let{performance:t}=s.O;if(!t||!t.now)return i;let e=Date.now()-t.now(),r=void 0==t.timeOrigin?e:t.timeOrigin;return()=>(r+t.now())/1e3}();(()=>{let{performance:t}=s.O;if(!t||!t.now)return;let e=t.now(),r=Date.now(),i=t.timeOrigin?Math.abs(t.timeOrigin+e-r):36e5,n=t.timing&&t.timing.navigationStart,o="number"==typeof n?Math.abs(n+e-r):36e5;if((i<36e5||o<36e5)&&i<=o)return t.timeOrigin})()u)return r="timeOrigin",e.timeOrigin;else return r="navigationStart";return r="dateNow"})()
+"use strict";
+let r;
+n.d(t, { lu: () => a, zf: () => o });
+var i = n(978862);
+let s = 1e3;
+function a() {
+    return Date.now() / s;
+}
+let o = (function () {
+    let { performance: e } = i.O;
+    if (!e || !e.now) return a;
+    let t = Date.now() - e.now(),
+        n = void 0 == e.timeOrigin ? t : e.timeOrigin;
+    return () => (n + e.now()) / s;
+})();
+(() => {
+    let { performance: e } = i.O;
+    if (!e || !e.now) {
+        r = "none";
+        return;
+    }
+    let t = 36e5,
+        n = e.now(),
+        s = Date.now(),
+        a = e.timeOrigin ? Math.abs(e.timeOrigin + n - s) : t,
+        o = a < t,
+        l = e.timing && e.timing.navigationStart,
+        u = "number" == typeof l ? Math.abs(l + n - s) : t,
+        c = u < t;
+    if (o || c)
+        if (a <= u) return (r = "timeOrigin"), e.timeOrigin;
+        else return (r = "navigationStart");
+    return (r = "dateNow");
+})();
