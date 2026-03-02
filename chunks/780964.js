@@ -320,6 +320,7 @@ var r = (function (e) {
         (e.VOICE_AND_VIDEO_RECORD_CONNECTION_REPLAY = "voice_and_video_record_connection_replay"),
         (e.VOICE_AND_VIDEO_OPEN_CONNECTION_REPLAY = "voice_and_video_open_connection_replay"),
         (e.VOICE_AND_VIDEO_DEBUG_LOGGING = "voice_and_video_debug_logging"),
+        (e.VOICE_AND_VIDEO_OPENH264 = "voice_and_video_openh264"),
         (e.VOICE_AND_VIDEO_RESET_ALL_SETTINGS = "voice_and_video_reset_all_settings"),
         (e.SOUNDS_CATEGORY = "sounds_category"),
         (e.VOICE_AND_VIDEO_SOUNDS_LIST = "voice_and_video_sounds_list"),

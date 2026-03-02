@@ -39,8 +39,8 @@ let C = new Set([
         "discord_voice",
     ]),
     R = !1,
-    b = "lastImageSaveDirectory",
-    O = /[<>:"/\\|?*@]/g,
+    O = "lastImageSaveDirectory",
+    b = /[<>:"/\\|?*@]/g,
     D = /(\.[a-zA-Z0-9]+):[^.]*$/,
     L = /(\.[a-zA-Z0-9]+)%3A.+$/,
     w = /[^a-zA-Z0-9]/g,
@@ -51,12 +51,12 @@ var M = (function (e) {
 function P(e) {
     try {
         let t = decodeURIComponent(e);
-        return (t = (t = t.replace(D, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(O, "_");
+        return (t = (t = t.replace(D, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(b, "_");
     } catch {
         return e
             .replace(L, "$1")
             .replace(/(.+)%40([a-zA-Z0-9]+)$/, "$1.$2")
-            .replace(O, "_");
+            .replace(b, "_");
     }
 }
 async function k(e) {
@@ -354,7 +354,7 @@ let j = {
             }
             let u = await U(e),
                 d = m.from(u),
-                _ = c.w.get(b);
+                _ = c.w.get(O);
             if (("string" != typeof _ && (_ = void 0), "function" == typeof E.fileManager.saveWithDialog2)) {
                 if (null == (r = await E.fileManager.saveWithDialog2(d, o, _ ?? void 0))) return "errored";
                 if (r.canceledByUser) return "canceled";
@@ -365,7 +365,7 @@ let j = {
                 } catch (e) {
                     return "errored";
                 }
-            return null == s || "" === s ? "errored" : (c.w.set(b, s), "saved");
+            return null == s || "" === s ? "errored" : (c.w.set(O, s), "saved");
         },
         async saveFile(e, t) {
             i()(f.isPlatformEmbedded, "Save file method called outside native app");
@@ -545,6 +545,9 @@ let j = {
             !f.isPlatformEmbedded || (!__OVERLAY__ && E.gpuSettings.getEnableHardwareAcceleration()),
         setEnableHardwareAcceleration(e) {
             E.gpuSettings.setEnableHardwareAcceleration(e);
+        },
+        setOpenH264Enabled(e) {
+            E.settings.set("openH264Enabled", e);
         },
         setChromiumSwitches(e) {
             E.gpuSettings.setChromiumSwitches(e);
