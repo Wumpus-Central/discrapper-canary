@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => T });
+n.d(t, { A: () => I });
 var r = n(439372),
     i = n(183636),
     s = n(927813),
@@ -8,16 +8,15 @@ var r = n(439372),
     l = n(859703),
     u = n(341915),
     c = n(245853),
-    d = n(51935),
-    _ = n(302654),
-    f = n(677402),
-    p = n(654487);
-let h = s.A.Millis.DAY,
-    m = 30 * s.A.Millis.MINUTE,
-    E = 5 * s.A.Millis.SECOND,
-    g = 5 * s.A.Millis.MINUTE,
-    A = 12 * s.A.Millis.HOUR;
-class I extends r.A {
+    d = n(302654),
+    _ = n(677402),
+    f = n(654487);
+let p = s.A.Millis.DAY,
+    h = 30 * s.A.Millis.MINUTE,
+    m = 5 * s.A.Millis.SECOND,
+    E = 5 * s.A.Millis.MINUTE,
+    g = 12 * s.A.Millis.HOUR;
+class A extends r.A {
     instantiatedAt = Date.now();
     initialFetchTimerId = null;
     initialQuestHomeHeroFetchTimerId = null;
@@ -26,45 +25,42 @@ class I extends r.A {
     lastFetchedQuestForLocaleChangeAt = 0;
     _fetch(e) {
         if (
-            !(0, f.s)({ location: p.rE.QUESTS_MANAGER }) ||
+            !(0, _.s)({ location: f.rE.QUESTS_MANAGER }) ||
             l.A.isFetchingCurrentQuests ||
             ((0, o.N1)(), (0, a.isMac)() && "focused" !== i.A.getState())
         )
             return;
-        let { enableNewRequestBehavior: t } = _.A.getConfig({ location: "QuestFetchManager" });
+        let { enableNewRequestBehavior: t } = d.A.getConfig({ location: "QuestFetchManager" });
         t || (0, o.r8)(u.yW.DESKTOP_ACCOUNT_PANEL_AREA, e);
     }
     handleQuestsFetchCurrentQuestsBegin = () => {
         this.lastFetchAttemptedAt = Date.now();
     };
     handlePostConnectionOpen = () => {
-        let e = (0, d.u)({ location: p.rE.QUESTS_MANAGER });
         window.clearTimeout(this.initialFetchTimerId),
             window.clearTimeout(this.initialQuestHomeHeroFetchTimerId),
             window.clearTimeout(this.recurringFetchTimerId),
             (this.recurringFetchTimerId = window.setInterval(() => {
-                Date.now() - this.lastFetchAttemptedAt > h && this._fetch("post_connect_recurring");
-            }, m));
-        let t = Math.floor(Math.random() * E);
+                Date.now() - this.lastFetchAttemptedAt > p && this._fetch("post_connect_recurring");
+            }, h));
+        let e = Math.floor(Math.random() * m);
         this.initialFetchTimerId = window.setTimeout(() => {
-            !(Date.now() - t < l.A.lastFetchedCurrentQuests) &&
-                (e || 0 === l.A.lastFetchedCurrentQuests) &&
-                this._fetch("post_connect_initial");
-        }, t);
-        let { enabled: n } = c.sn.getConfig({ location: p.rE.QUESTS_MANAGER }),
-            { enabled: r } = c.Iq.getConfig({ location: p.rE.QUESTS_MANAGER });
-        if (n && r && (0, f.s)({ location: p.rE.QUESTS_MANAGER })) {
-            let e = t + Math.floor(Math.random() * E);
+            Date.now() - e < l.A.lastFetchedCurrentQuests || this._fetch("post_connect_initial");
+        }, e);
+        let { enabled: t } = c.sn.getConfig({ location: f.rE.QUESTS_MANAGER }),
+            { enabled: n } = c.Iq.getConfig({ location: f.rE.QUESTS_MANAGER });
+        if (t && n && (0, _.s)({ location: f.rE.QUESTS_MANAGER })) {
+            let t = e + Math.floor(Math.random() * m);
             this.initialQuestHomeHeroFetchTimerId = window.setTimeout(() => {
                 try {
                     (0, o.Yf)();
                 } catch (e) {}
-            }, e);
+            }, t);
         }
     };
     handleRunningGamesChange = () => {
-        this.instantiatedAt + A > Date.now() ||
-            l.A.lastFetchedCurrentQuests + A > Date.now() ||
+        this.instantiatedAt + g > Date.now() ||
+            l.A.lastFetchedCurrentQuests + g > Date.now() ||
             this._fetch("running_games");
     };
     handleUserSettingsProtoUpdate = (e) => {
@@ -72,7 +68,7 @@ class I extends r.A {
         !("localization" in n.proto) ||
             !t ||
             r ||
-            Date.now() - this.lastFetchedQuestForLocaleChangeAt <= g ||
+            Date.now() - this.lastFetchedQuestForLocaleChangeAt <= E ||
             ((this.lastFetchedQuestForLocaleChangeAt = Date.now()), this._fetch("user_settings"));
     };
     handleLogout = () => {
@@ -91,4 +87,4 @@ class I extends r.A {
         LOGOUT: this.handleLogout,
     };
 }
-let T = new I();
+let I = new A();
