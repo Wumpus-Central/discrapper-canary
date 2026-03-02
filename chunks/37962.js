@@ -1,98 +1,95 @@
 "use strict";
-n.d(t, { A: () => C, u: () => m });
+n.d(t, { A: () => v, u: () => h });
 var r = n(735438),
     i = n(506774),
-    a = n(439372),
-    s = n(450510),
+    s = n(439372),
+    a = n(450510),
     o = n(891540),
     l = n(868974),
     u = n(253932),
     c = n(383501),
     d = n(881520),
-    _ = n(368854),
-    f = n(670455);
-let p = 200,
-    h = { chance: 0.2, cooldown: 864e5 },
-    m = {
-        [f.MW.VOICE]: {
-            ...h,
-            group: f.h0.AV,
-            hotspot: s._2.VOICE_CALL_FEEDBACK,
+    _ = n(670455);
+let f = 200,
+    p = { chance: 0.2, cooldown: 864e5 },
+    h = {
+        [_.MW.VOICE]: {
+            ...p,
+            group: _.h0.AV,
+            hotspot: a._2.VOICE_CALL_FEEDBACK,
             storageKey: "lastVoiceFeedback",
-            feedbackType: f.MW.VOICE,
-            eligibilityChecks: [y],
+            feedbackType: _.MW.VOICE,
+            eligibilityChecks: [T],
         },
-        [f.MW.STREAM]: {
-            ...h,
-            group: f.h0.AV,
-            hotspot: s._2.REPORT_PROBLEM_POST_STREAM,
+        [_.MW.STREAM]: {
+            ...p,
+            group: _.h0.AV,
+            hotspot: a._2.REPORT_PROBLEM_POST_STREAM,
             storageKey: "lastStreamFeedback",
-            feedbackType: f.MW.STREAM,
+            feedbackType: _.MW.STREAM,
         },
-        [f.MW.VIDEO_BACKGROUND]: {
-            ...h,
-            group: f.h0.AV,
-            hotspot: s._2.VIDEO_BACKGROUND_FEEDBACK,
+        [_.MW.VIDEO_BACKGROUND]: {
+            ...p,
+            group: _.h0.AV,
+            hotspot: a._2.VIDEO_BACKGROUND_FEEDBACK,
             storageKey: "lastVideoBackgroundFeedback",
-            feedbackType: f.MW.VIDEO_BACKGROUND,
+            feedbackType: _.MW.VIDEO_BACKGROUND,
         },
-        [f.MW.ACTIVITY]: {
+        [_.MW.ACTIVITY]: {
             cooldown: 0,
             chance: 0.5,
-            group: f.h0.AV,
-            hotspot: s._2.POST_ACTIVITY_FEEDBACK,
+            group: _.h0.AV,
+            hotspot: a._2.POST_ACTIVITY_FEEDBACK,
             storageKey: "lastActivityFeedback",
-            feedbackType: f.MW.ACTIVITY,
+            feedbackType: _.MW.ACTIVITY,
         },
-        [f.MW.IN_APP_REPORTS]: {
+        [_.MW.IN_APP_REPORTS]: {
             cooldown: 1728e5,
             chance: 0.5,
-            group: f.h0.SAFETY,
-            hotspot: s._2.IN_APP_REPORTS_FEEDBACK,
+            group: _.h0.SAFETY,
+            hotspot: a._2.IN_APP_REPORTS_FEEDBACK,
             storageKey: "inAppReportsFeedback",
-            feedbackType: f.MW.IN_APP_REPORTS,
+            feedbackType: _.MW.IN_APP_REPORTS,
         },
-        [f.MW.BLOCK_USER]: {
+        [_.MW.BLOCK_USER]: {
             cooldown: 0,
             chance: 1,
-            group: f.h0.SAFETY,
-            hotspot: s._2.BLOCK_USER_FEEDBACK,
+            group: _.h0.SAFETY,
+            hotspot: a._2.BLOCK_USER_FEEDBACK,
             storageKey: "blockUser",
-            feedbackType: f.MW.BLOCK_USER,
+            feedbackType: _.MW.BLOCK_USER,
         },
-        [f.MW.VOICE_FILTER]: {
-            ...h,
-            group: f.h0.AV,
-            hotspot: s._2.VOICE_FILTER_FEEDBACK,
+        [_.MW.VOICE_FILTER]: {
+            ...p,
+            group: _.h0.AV,
+            hotspot: a._2.VOICE_FILTER_FEEDBACK,
             storageKey: "lastVoiceFilterFeedback",
-            feedbackType: f.MW.VOICE_FILTER,
-            eligibilityChecks: [y],
+            feedbackType: _.MW.VOICE_FILTER,
+            eligibilityChecks: [T],
         },
-        [f.MW.SEARCH_RESULTS]: {
-            ...h,
-            group: f.h0.SEARCH,
-            hotspot: s._2.SEARCH_RESULTS_FEEDBACK,
+        [_.MW.SEARCH_RESULTS]: {
+            ...p,
+            group: _.h0.SEARCH,
+            hotspot: a._2.SEARCH_RESULTS_FEEDBACK,
             storageKey: "searchResultsFeedback",
-            feedbackType: f.MW.SEARCH_RESULTS,
+            feedbackType: _.MW.SEARCH_RESULTS,
             eligibilityChecks: [S],
         },
-        [f.MW.AGE_VERIFICATION]: {
+        [_.MW.AGE_VERIFICATION]: {
             cooldown: 0,
             chance: 1,
-            group: f.h0.SAFETY,
-            hotspot: s._2.AGE_VERIFICATION_FEEDBACK,
+            group: _.h0.SAFETY,
+            hotspot: a._2.AGE_VERIFICATION_FEEDBACK,
             storageKey: "ageVerificationFeedback",
-            feedbackType: f.MW.AGE_VERIFICATION,
+            feedbackType: _.MW.AGE_VERIFICATION,
         },
     };
-function g(e) {
+function m(e) {
     if (__OVERLAY__) return !1;
-    let { overrideEligibility: t } = (0, _.P)({ location: "FeedbackManager" });
-    if (t) return !0;
-    let n = d.A.getFeedbackConfig(e) ?? m[e],
-        r = [A, E, T],
-        i = n.eligibilityChecks ?? [];
-    return r.every((e) => e(n)) && i.every((e) => e(n));
+    let t = d.A.getFeedbackConfig(e) ?? h[e],
+        n = [g, E, I],
+        r = t.eligibilityChecks ?? [];
+    return n.every((e) => e(t)) && r.every((e) => e(t));
 }
 function E(e) {
     let t = u.Yt.getSetting()[e.feedbackType]?.optOutExpiryTime,
@@ -101,18 +98,18 @@ function E(e) {
     return (
         r &&
             !n &&
-            u.Yt.updateSetting((t) => ({ ...t, [e.feedbackType]: { ...t[e.feedbackType], optOutExpiryTime: f.fs } })),
+            u.Yt.updateSetting((t) => ({ ...t, [e.feedbackType]: { ...t[e.feedbackType], optOutExpiryTime: _.fs } })),
         !n && !r
     );
 }
-function A(e) {
+function g(e) {
     return Math.random() < e.chance;
 }
-function I(e, t) {
+function A(e, t) {
     let n,
-        a = u.Yt.getSetting()[t.feedbackType]?.lastImpressionTime;
+        s = u.Yt.getSetting()[t.feedbackType]?.lastImpressionTime;
     return (
-        (null == a || Number.isNaN(a)) &&
+        (null == s || Number.isNaN(s)) &&
             null != t.storageKey &&
             (null == (n = i.w.get(t.storageKey) ?? void 0) ||
                 Number.isNaN(n) ||
@@ -120,34 +117,34 @@ function I(e, t) {
                     ...e,
                     [t.feedbackType]: { ...e[t.feedbackType], lastImpressionTime: n },
                 }))),
-        ((0, r.max)([a, n]) ?? 0) + e.cooldown < Date.now()
+        ((0, r.max)([s, n]) ?? 0) + e.cooldown < Date.now()
     );
 }
-function T(e) {
-    for (let t of Object.values(m).filter((t) => {
+function I(e) {
+    for (let t of Object.values(h).filter((t) => {
         let { group: n } = t;
         return n === e.group;
     }))
-        if (!I(e, t)) return !1;
+        if (!A(e, t)) return !1;
     return !0;
 }
-function y(e) {
+function T(e) {
     return !c.A.getWasEverRtcConnected() || c.A.getWasEverMultiParticipant();
 }
 function S(e) {
     return !!(0, l.s)({ location: "FeedbackManager" });
 }
-function v(e) {
+function y(e) {
     u.Yt.updateSetting((t) => ({ ...t, [e]: { ...t[e], lastImpressionTime: Date.now() } }));
 }
-class C extends a.A {
+class v extends s.A {
     feedbackTypeToShow = null;
     possiblyShowFeedbackModal(e, t, n) {
-        !g(e) || (null != this.feedbackTypeToShow && f.uf[this.feedbackTypeToShow] < f.uf[e])
+        !m(e) || (null != this.feedbackTypeToShow && _.uf[this.feedbackTypeToShow] < _.uf[e])
             ? n?.()
             : ((this.feedbackTypeToShow = e), this.showFeedbackModalDebounced(t, n));
     }
     showFeedbackModalDebounced = (0, r.debounce)((e, t) => {
-        null != this.feedbackTypeToShow ? (v(this.feedbackTypeToShow), (this.feedbackTypeToShow = null), e()) : t?.();
-    }, p);
+        null != this.feedbackTypeToShow ? (y(this.feedbackTypeToShow), (this.feedbackTypeToShow = null), e()) : t?.();
+    }, f);
 }
