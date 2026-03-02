@@ -5,10 +5,10 @@ n.d(t, {
     Q8: () => T,
     Zh: () => I,
     eT: () => w,
-    fw: () => b,
+    fw: () => R,
     mk: () => x,
     pE: () => P,
-    rJ: () => R,
+    rJ: () => O,
     sv: () => C,
     tA: () => M,
     uS: () => y,
@@ -104,31 +104,33 @@ function C(e) {
         { wishlists: a, isFetching: o, errors: u }
     );
 }
-function b(e) {
+function R(e) {
     let { wishlistId: t, userId: n, source: s = "user_profile" } = e,
         [a, o, u, c] = (0, i.yK)([p.A], () =>
             null == t
-                ? [null, !1, void 0, void 0]
-                : [p.A.getWishlist(t), p.A.isFetching(t), p.A.getError(t), p.A.getUpdatedAt(t)],
+                ? [null, "success", void 0, void 0]
+                : [p.A.getWishlist(t), p.A.getStatus(t), p.A.getError(t), p.A.getUpdatedAt(t)],
         ),
-        d = (0, h.A)("use_fetch_wishlist"),
-        _ = (0, i.bG)([l.A], () => {
+        d = "fetching" === o,
+        _ = "success" === o || "error" === o,
+        m = (0, h.A)("use_fetch_wishlist"),
+        E = (0, i.bG)([l.A], () => {
             if (null != t && null != n) return l.A.getWishlistSettings(n, t)?.updated_at;
         });
     return (
         (0, r.useEffect)(() => {
             if (null == t || p.A.isFetching(t) || null != u) return;
             let e = p.A.getLastFetchedAt(t),
-                n = d && (null == e || Date.now() - e > S);
-            (null == a || (null != _ && c !== _) || n) && f.A.fetchWishlist(t, _, s);
-        }, [t, s, d, a, _, c, u]),
-        { wishlist: a, isFetching: o, error: u }
+                n = m && (null == e || Date.now() - e > S);
+            (null == a || (null != E && c !== E) || n) && f.A.fetchWishlist(t, E, s);
+        }, [t, s, m, a, E, c, u]),
+        { wishlist: a, isFetching: d, wasFetched: _, error: u }
     );
 }
-function R(e, t) {
+function O(e, t) {
     return (0, i.bG)([p.A], () => null != e && p.A.hasSkuId(e, t));
 }
-function O(e) {
+function b(e) {
     if (null == e.items || 0 === e.items.length) return null;
     let t = { sku_id: e.skuId, sku_name: e.name, sku_product_line: E.EZt.COLLECTIBLES, collectibles_item: e.items[0] };
     return m.A.fromServer(t);
@@ -171,7 +173,7 @@ function L(e, t) {
 function w(e) {
     let { giftRecipient: t, minNumItems: n, source: s } = e,
         { defaultWishlistId: o } = (0, i.cf)([l.A], () => ({ defaultWishlistId: l.A.getFirstWishlistId(t.id) })),
-        { wishlist: u, isFetching: c, error: d } = b({ wishlistId: o, source: s }),
+        { wishlist: u, isFetching: c, error: d } = R({ wishlistId: o, source: s }),
         _ = r.useMemo(() => null != u && u.items.filter((e) => !0 !== e.isOwned).length >= n, [u, n]),
         { validatedSkuIds: f, isValidating: p } = D(t.id),
         { isFetching: h } = L(f, n);
@@ -213,7 +215,7 @@ function x(e) {
             for (let e = 0; e < t.length && o.length < a; e++) o.push({ item: t[e], source: "popular" });
             let s = n.filter((t) => !e.has(t.skuId));
             for (let e = 0; e < s.length && o.length < a; e++) {
-                let t = O(s[e]);
+                let t = b(s[e]);
                 null !== t && o.push({ item: t, source: "popular" });
             }
         }
@@ -224,7 +226,7 @@ function M(e) {
     let { location: t, isGift: n, giftRecipient: s, isSocialLayerStorefrontEnabled: a = !0 } = e,
         u = (0, o.c)({ userId: s?.id, location: t }),
         c = (0, i.bG)([l.A], () => (s?.id == null ? null : l.A.getFirstWishlistId(s.id))),
-        { wishlist: d } = b({ wishlistId: null != c && n && null != s ? c : null, userId: s?.id });
+        { wishlist: d } = R({ wishlistId: null != c && n && null != s ? c : null, userId: s?.id });
     return r.useMemo(
         () => !0 === n && null != s && ((d?.items.filter((e) => !0 !== e.isOwned) ?? []).length > 0 || (a && u)),
         [n, s, d, u, a],
@@ -247,6 +249,6 @@ function k(e) {
         r.useEffect(() => {
             null != e && null == n && null != t && null == n && (0, u.A)(t.id, t.getAvatarURL(null, 80));
         }, [t, e, n]),
-        b({ wishlistId: s, userId: e })
+        R({ wishlistId: s, userId: e })
     );
 }
