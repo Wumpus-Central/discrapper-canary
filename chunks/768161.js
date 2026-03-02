@@ -1,22 +1,21 @@
-l.d(e, { default: () => E });
+l.d(e, { default: () => S });
 var n = l(627968),
     a = l(64700),
     i = l(96337),
     s = l(997101),
     r = l(311907),
-    o = l(732955),
-    u = l(397927),
+    u = l(732955),
+    o = l(397927),
     c = l(384904),
     d = l(500380),
     h = l(518977),
     p = l(615405),
     C = l(295405),
-    g = l(580630),
-    y = l(99696),
-    f = l(818348),
+    g = l(99696),
+    y = l(818348),
     m = l(985018),
-    b = l(615305);
-let S = i.A.filter((t) => s.M.EU_COUNTRIES.has(t.alpha2)).map((t) => ({
+    f = l(615305);
+let b = i.A.filter((t) => s.M.EU_COUNTRIES.has(t.alpha2)).map((t) => ({
     id: t.alpha2,
     value: t.alpha2,
     label: (0, h.Gw)(t.alpha2),
@@ -30,16 +29,16 @@ function x(t) {
         selectedBillingCountry: i,
         redemptionError: s,
         onCodeInputChange: r,
-        onPostalCodeChange: o,
+        onPostalCodeChange: u,
         onBillingCountryChange: c,
     } = t;
     return (0, n.jsxs)("div", {
-        className: b.Cl,
+        className: f.Cl,
         children: [
-            null != s && (0, n.jsx)(u.wx6, { type: "critical", children: s }),
+            null != s && (0, n.jsx)(o.wx6, { type: "critical", children: s }),
             (0, n.jsx)("span", {
-                className: b.ZY,
-                children: (0, n.jsx)(u.ksK, {
+                className: f.ZY,
+                children: (0, n.jsx)(o.ksK, {
                     label: m.intl.string(m.t["3Ujv7z"]),
                     type: "text",
                     value: e,
@@ -49,34 +48,34 @@ function x(t) {
                 }),
             }),
             l
-                ? (0, n.jsx)(u.ZiE, {
+                ? (0, n.jsx)(o.ZiE, {
                       selectionMode: "single",
                       label: m.intl.string(m.t.eDdrAD),
                       placeholder: m.intl.string(m.t.eDdrAD),
                       value: i,
                       onSelectionChange: c,
-                      options: S,
+                      options: b,
                   })
-                : (0, n.jsx)(u.ksK, {
+                : (0, n.jsx)(o.ksK, {
                       label: m.intl.string(m.t.mfpJ9m),
                       type: "text",
                       value: a,
-                      onChange: o,
+                      onChange: u,
                       placeholder: m.intl.string(m.t["9xLNmi"]),
                       fullWidth: !0,
                   }),
         ],
     });
 }
-function E(t) {
-    let { transitionState: e, onClose: l, onComplete: i, initialCode: S = "" } = t,
-        [E, v] = a.useState(S),
-        [j, k] = a.useState(!1),
-        [A, U] = a.useState(""),
-        [I, T] = a.useState(null),
-        [_, w] = a.useState(null),
-        [N, M] = a.useState(null),
-        [P, L] = a.useState(!1),
+function S(t) {
+    let { transitionState: e, onClose: l, onComplete: i, initialCode: o = "", withRedemptionSuccessModal: b = !1 } = t,
+        [S, E] = a.useState(o),
+        [v, j] = a.useState(!1),
+        [k, A] = a.useState(""),
+        [I, _] = a.useState(null),
+        [U, N] = a.useState(null),
+        [M, w] = a.useState(null),
+        [T, P] = a.useState(!1),
         {
             savedPostalCode: z,
             savedCountry: D,
@@ -92,86 +91,83 @@ function E(t) {
             };
         });
     a.useEffect(() => {
-        F || (0, c.$o)(), (0, y.IK)().then(M), (0, c.xe)();
+        F || (0, c.$o)(), (0, g.IK)().then(w), (0, c.xe)();
     }, [F]);
-    let R = N?.country ?? null;
+    let R = M?.country ?? null;
     a.useEffect(() => {
-        "" === A && null != z && U(z);
-    }, [z, A]),
+        "" === k && null != z && A(z);
+    }, [z, k]),
         a.useEffect(() => {
-            let t = N?.country ?? null;
+            let t = M?.country ?? null;
             null != t
-                ? L(s.M.EU_COUNTRIES.has(t))
+                ? P(s.M.EU_COUNTRIES.has(t))
                 : null != D
-                  ? L(s.M.EU_COUNTRIES.has(D))
+                  ? P(s.M.EU_COUNTRIES.has(D))
                   : null != O
-                    ? L(s.M.EU_COUNTRIES.has(O))
-                    : L(!1);
-        }, [O, D, N]);
-    let W = m.intl.string(m.t.ToslbL),
-        B = a.useMemo(() => {
+                    ? P(s.M.EU_COUNTRIES.has(O))
+                    : P(!1);
+        }, [O, D, M]);
+    let L = m.intl.string(m.t.ToslbL),
+        W = a.useMemo(() => {
             if (null != R)
                 return {
                     text: (0, h.Gw)(R),
-                    leadingIcon: () => (0, n.jsx)("img", { alt: "", src: (0, d.t)(R), className: b.IM }),
+                    leadingIcon: () => (0, n.jsx)("img", { alt: "", src: (0, d.t)(R), className: f.IM }),
                 };
         }, [R]),
-        K = a.useCallback((t) => {
-            v(t), w(null);
+        B = a.useCallback((t) => {
+            E(t), N(null);
         }, []),
-        Y = a.useCallback(async () => {
-            let t = E.trim();
-            if ("" === t) return void w(m.intl.string(m.t.j8734b));
-            if (P && null == I) return void w(m.intl.string(m.t["+bm+zE"]));
-            k(!0), w(null);
+        K = a.useCallback(async () => {
+            let t = S.trim();
+            if ("" === t) return void N(m.intl.string(m.t.j8734b));
+            if (T && null == I) return void N(m.intl.string(m.t["+bm+zE"]));
+            j(!0), N(null);
             try {
-                let e = await (0, y.Ng)(t, P ? void 0 : A.trim()),
-                    n = m.intl.formatToPlainString(m.t.U4L4rn, {
-                        price: (0, g.$g)(e.amount, e.currency.toLowerCase()),
-                    });
-                (0, u.showToast)((0, u.createToast)(n, u.ToastType.SUCCESS)),
-                    i?.(),
+                let e = await (0, g.Ng)(t, T ? void 0 : k.trim());
+                i?.(),
                     l(),
+                    b && (0, g.cV)({ amountRedeemed: e.amount, currencyCode: e.currency }),
                     (0, c.$o)().then((t) => {
-                        let e = (t?.body ?? []).find((t) => t.type === f.he.TDS_WALLET);
+                        let e = (t?.body ?? []).find((t) => t.type === y.he.TDS_WALLET);
                         null != e && (0, c.YP)(e.id);
                     });
             } catch (e) {
                 let t = e?.body;
-                w(
+                N(
                     t?.errors?.postal_code != null || t?.postal_code != null
                         ? m.intl.string(m.t.e2zhgU)
                         : m.intl.string(m.t.OBnXjv),
                 );
                 return;
             } finally {
-                k(!1);
+                j(!1);
             }
-        }, [E, P, I, A, i, l]),
-        Z = a.useCallback((t) => {
-            U(t), w(null);
+        }, [S, T, I, k, i, l, b]),
+        Y = a.useCallback((t) => {
+            A(t), N(null);
         }, []),
-        $ = a.useCallback((t) => {
-            T(t), w(null);
+        Z = a.useCallback((t) => {
+            _(t), N(null);
         }, []);
-    return (0, n.jsx)(o.aFV, {
+    return (0, n.jsx)(u.aFV, {
         transitionState: e,
         onClose: l,
-        title: W,
-        subtitle: B,
+        title: L,
+        subtitle: W,
         input: (0, n.jsx)(x, {
-            codeInput: E,
-            isEU: P,
-            postalCodeInput: A,
+            codeInput: S,
+            isEU: T,
+            postalCodeInput: k,
             selectedBillingCountry: I,
-            redemptionError: _,
-            onCodeInputChange: K,
-            onPostalCodeChange: Z,
-            onBillingCountryChange: $,
+            redemptionError: U,
+            onCodeInputChange: B,
+            onPostalCodeChange: Y,
+            onBillingCountryChange: Z,
         }),
         actions: [
             { variant: "secondary", size: "md", text: m.intl.string(m.t["13/7kX"]), onClick: l },
-            { variant: "primary", size: "md", text: m.intl.string(m.t.H2hHyf), loading: j, onClick: Y },
+            { variant: "primary", size: "md", text: m.intl.string(m.t.H2hHyf), loading: v, onClick: K },
         ],
     });
 }

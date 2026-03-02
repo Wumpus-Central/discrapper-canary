@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { HF: () => c, IK: () => l, Ng: () => u, Qp: () => o });
+n.d(t, { HF: () => d, IK: () => l, Ng: () => u, Qp: () => o, cV: () => c });
 var r = n(627968);
 n(64700);
 var i = n(562465),
@@ -21,14 +21,29 @@ async function u(e, t) {
             oldFormErrors: !0,
             rejectWithError: !0,
         });
-        return { success: !0, amount: n.body.amount, currency: n.body.currency };
+        return { success: !0, amount: n.body.amount, currency: n.body.currency.toLowerCase() };
     } catch (e) {
         throw e;
     }
 }
-function c() {
+function c(e) {
+    let { amountRedeemed: t, currencyCode: i, onClose: a } = e;
+    (0, s.mMO)(async () => {
+        let { default: e } = await n.e("8818").then(n.bind(n, 544036));
+        return (n) =>
+            (0, r.jsx)(e, {
+                ...n,
+                amountRedeemed: t,
+                currencyCode: i,
+                onClose: async () => {
+                    a?.(), await n.onClose();
+                },
+            });
+    });
+}
+function d() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        { initialCode: t = "", onClose: i, onComplete: a } = e;
+        { initialCode: t = "", onClose: i, onComplete: a, withRedemptionSuccessModal: o = !1 } = e;
     (0, s.mMO)(async () => {
         let { default: e } = await n.e("13978").then(n.bind(n, 768161));
         return (n) =>
@@ -39,6 +54,7 @@ function c() {
                 onClose: async () => {
                     i?.(), await n.onClose();
                 },
+                withRedemptionSuccessModal: o,
             });
     });
 }
