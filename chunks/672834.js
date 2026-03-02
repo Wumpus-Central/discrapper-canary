@@ -1,54 +1,54 @@
-n.d(t, { A: () => eP });
+n.d(t, { A: () => eU });
 var i = n(627968),
     l = n(64700),
     a = n(311907),
     r = n(397927),
     s = n(442433),
     o = n(843472),
-    d = n(956793),
-    c = n(401843),
+    c = n(956793),
+    d = n(401843),
     u = n(155718),
     m = n(151660),
     _ = n(626584),
-    h = n(659859),
-    p = n(785823),
-    g = n(509536),
-    A = n(615179),
-    f = n(120120),
-    x = n(379114),
-    C = n(698441),
-    E = n(484724),
+    A = n(659859),
+    E = n(785823),
+    h = n(509536),
+    f = n(615179),
+    g = n(120120),
+    p = n(379114),
+    x = n(698441),
+    C = n(484724),
     I = n(997509),
     T = n(850131),
-    v = n(31051),
-    N = n(659203),
-    b = n(446028),
-    S = n(302291),
-    j = n(282224),
-    y = n(976860),
-    R = n(849736),
-    L = n(63995),
-    M = n(105530),
-    O = n(353202),
+    N = n(31051),
+    S = n(659203),
+    R = n(446028),
+    v = n(302291),
+    M = n(282224),
+    j = n(976860),
+    O = n(849736),
+    b = n(63995),
+    y = n(105530),
+    L = n(353202),
     D = n(747926),
-    P = n(336589),
-    k = n(961350),
-    U = n(470710),
-    w = n(734057),
-    G = n(71393),
-    B = n(576705),
-    F = n(290863),
-    H = n(309010),
+    U = n(336589),
+    P = n(961350),
+    k = n(470710),
+    G = n(734057),
+    w = n(71393),
+    F = n(576705),
+    H = n(290863),
+    B = n(309010),
     V = n(287809),
     z = n(977997),
-    W = n(203982),
-    Y = n(562153),
-    q = n(728458),
-    K = n(661191),
-    Q = n(465364),
-    J = n(877923),
+    J = n(203982),
+    K = n(562153),
+    W = n(728458),
+    Q = n(661191),
+    Y = n(465364),
+    Z = n(877923),
     X = n(291812),
-    Z = n(898401),
+    q = n(898401),
     $ = n(447215),
     ee = n(97896),
     et = n(939344),
@@ -59,62 +59,62 @@ var i = n(627968),
     er = n(441412),
     es = n(986533),
     eo = n(394388),
-    ed = n(320381),
-    ec = n(749795),
+    ec = n(320381),
+    ed = n(749795),
     eu = n(821241),
     em = n(541171),
     e_ = n(229673),
-    eh = n(494086),
-    ep = n(734771),
-    eg = n(753073),
-    eA = n(640289),
-    ef = n(293657),
-    ex = n(269802),
-    eC = n(576471),
-    eE = n(808821),
+    eA = n(494086),
+    eE = n(734771),
+    eh = n(753073),
+    ef = n(640289),
+    eg = n(293657),
+    ep = n(269802),
+    ex = n(576471),
+    eC = n(808821),
     eI = n(933762),
     eT = n(840233),
-    ev = n(536030),
-    eN = n(912746),
-    eb = n(817253),
-    eS = n(911726),
-    ej = n(904854),
-    ey = n(652215),
-    eR = n(502075),
-    eL = n(985018);
-function eM(e) {
+    eN = n(536030),
+    eS = n(912746),
+    eR = n(817253),
+    ev = n(911726),
+    eM = n(904854),
+    ej = n(652215),
+    eO = n(502075),
+    eb = n(985018);
+function ey(e) {
     let { message: t, channel: n, compact: r } = e,
         { author: s } = t,
         { guild_id: o } = n,
-        d = t.getChannelId(),
-        c = (0, a.bG)([G.A], () => G.A.getGuild(o), [o]),
+        c = t.getChannelId(),
+        d = (0, a.bG)([w.A], () => w.A.getGuild(o), [o]),
         u = l.useCallback(() => {
-            null != c &&
-                (0, g.K)({
-                    guildId: c.id,
-                    location: { section: ey.JJy.CHANNEL_TEXT_AREA, object: ey.ZSU.BOOST_ANNOUNCEMENT_UPSELL },
+            null != d &&
+                (0, h.K)({
+                    guildId: d.id,
+                    location: { section: ej.JJy.CHANNEL_TEXT_AREA, object: ej.ZSU.BOOST_ANNOUNCEMENT_UPSELL },
                 });
-        }, [c]),
-        m = (0, $.P)({ user: s, channelId: d, guildId: n.guild_id, messageId: t.id, stopPropagation: !0 });
-    return (0, i.jsx)(eS.Ay, { message: t, compact: r, guild: c, usernameHook: m, onClickMessage: u });
+        }, [d]),
+        m = (0, $.P)({ user: s, channelId: c, guildId: n.guild_id, messageId: t.id, stopPropagation: !0 });
+    return (0, i.jsx)(ev.Ay, { message: t, compact: r, guild: d, usernameHook: m, onClickMessage: u });
 }
-function eO(e) {
+function eL(e) {
     let { message: t, compact: n, channel: l } = e,
         a = (0, $.P)({ user: t.author, channelId: l.id, guildId: l.guild_id, messageId: t.id });
     return (0, i.jsx)(es.A, { message: t, compact: n, usernameHook: a });
 }
 let eD = Object.freeze({
-        [ey.lAJ.DEFAULT]: void 0,
-        [ey.lAJ.REPLY]: void 0,
-        [ey.lAJ.CHAT_INPUT_COMMAND]: void 0,
-        [ey.lAJ.CONTEXT_MENU_COMMAND]: void 0,
-        [ey.lAJ.RECIPIENT_ADD]: function (e) {
+        [ej.lAJ.DEFAULT]: void 0,
+        [ej.lAJ.REPLY]: void 0,
+        [ej.lAJ.CHAT_INPUT_COMMAND]: void 0,
+        [ej.lAJ.CONTEXT_MENU_COMMAND]: void 0,
+        [ej.lAJ.RECIPIENT_ADD]: function (e) {
             let { message: t, channel: n, compact: l } = e,
                 { author: r } = t,
                 s = t.getChannelId(),
                 o = (0, a.bG)([V.default], () => V.default.getUser(t.mentions[0]), [t]),
-                d = Y.Ay.getName(null, s, o),
-                c = (0, $.P)({ user: r, channelId: s, guildId: n.guild_id, messageId: t.id }),
+                c = K.Ay.getName(null, s, o),
+                d = (0, $.P)({ user: r, channelId: s, guildId: n.guild_id, messageId: t.id }),
                 u = (0, $.P)({ user: o, channelId: s, guildId: n.guild_id, messageId: t.id });
             return n.isThread()
                 ? (0, i.jsx)(eT.A, {
@@ -122,49 +122,49 @@ let eD = Object.freeze({
                       channel: n,
                       compact: l,
                       targetUser: o,
-                      actorUsernameHook: c,
+                      actorUsernameHook: d,
                       targetUsernameHook: u,
                   })
-                : (0, i.jsx)(eh.A, { message: t, compact: l, otherUsername: d, usernameHook: c, otherUsernameHook: u });
+                : (0, i.jsx)(eA.A, { message: t, compact: l, otherUsername: c, usernameHook: d, otherUsernameHook: u });
         },
-        [ey.lAJ.RECIPIENT_REMOVE]: function (e) {
+        [ej.lAJ.RECIPIENT_REMOVE]: function (e) {
             let { message: t, channel: n, compact: l } = e,
                 { author: r } = t,
                 s = t.getChannelId(),
                 o = (0, a.bG)([V.default], () => V.default.getUser(t.mentions[0]), [t]),
-                d = (0, $.P)({ user: r, channelId: s, guildId: n.guild_id, messageId: t.id }),
-                c = (0, $.P)({ user: o, channelId: s, guildId: n.guild_id, messageId: t.id });
+                c = (0, $.P)({ user: r, channelId: s, guildId: n.guild_id, messageId: t.id }),
+                d = (0, $.P)({ user: o, channelId: s, guildId: n.guild_id, messageId: t.id });
             return n.isThread()
-                ? (0, i.jsx)(ev.A, {
+                ? (0, i.jsx)(eN.A, {
                       message: t,
                       channel: n,
                       compact: l,
                       targetUser: o,
-                      actorUsernameHook: d,
-                      targetUsernameHook: c,
+                      actorUsernameHook: c,
+                      targetUsernameHook: d,
                   })
                 : null != o && o.id !== r.id
-                  ? (0, i.jsx)(ep.A, {
+                  ? (0, i.jsx)(eE.A, {
                         message: t,
                         channel: n,
                         compact: l,
-                        usernameHook: d,
+                        usernameHook: c,
                         otherUser: o,
-                        otherUsernameHook: c,
+                        otherUsernameHook: d,
                     })
-                  : (0, i.jsx)(ep.A, { message: t, channel: n, usernameHook: d });
+                  : (0, i.jsx)(eE.A, { message: t, channel: n, usernameHook: c });
         },
-        [ey.lAJ.CALL]: function (e) {
+        [ej.lAJ.CALL]: function (e) {
             let { message: t, compact: n, channel: r } = e,
                 { id: s, author: o } = t,
-                c = k.default.getId(),
+                d = P.default.getId(),
                 u = t.getChannelId(),
-                m = (0, a.bG)([U.A], () => U.A.isCallActive(u, s), [u, s]),
-                _ = (0, a.bG)([z.A], () => z.A.getVoiceState(ey.ME, c)),
-                h = !m && null != t.call && !t.call.participants.includes(c),
-                p = m && (null == _ || _.channelId !== u),
-                g = l.useCallback(() => d.default.selectVoiceChannel(u), [u]),
-                A = (0, $.P)({
+                m = (0, a.bG)([k.A], () => k.A.isCallActive(u, s), [u, s]),
+                _ = (0, a.bG)([z.A], () => z.A.getVoiceState(ej.ME, d)),
+                A = !m && null != t.call && !t.call.participants.includes(d),
+                E = m && (null == _ || _.channelId !== u),
+                h = l.useCallback(() => c.default.selectVoiceChannel(u), [u]),
+                f = (0, $.P)({
                     user: o,
                     channelId: u,
                     guildId: r.guild_id,
@@ -174,116 +174,116 @@ let eD = Object.freeze({
             return (0, i.jsx)(et.A, {
                 compact: n,
                 message: t,
-                missed: h,
-                joinable: p,
-                usernameHook: A,
-                onClickJoinCall: g,
+                missed: A,
+                joinable: E,
+                usernameHook: f,
+                onClickJoinCall: h,
             });
         },
-        [ey.lAJ.CHANNEL_NAME_CHANGE]: function (e) {
+        [ej.lAJ.CHANNEL_NAME_CHANGE]: function (e) {
             let { message: t, compact: n, channel: l } = e,
                 { author: a } = t,
                 r = t.getChannelId(),
                 s = (0, $.P)({ user: a, channelId: r, guildId: l.guild_id, messageId: t.id });
             return (0, i.jsx)(ea.A, { compact: n, message: t, usernameHook: s, isForumPost: l.isForumPost() });
         },
-        [ey.lAJ.CHANNEL_ICON_CHANGE]: function (e) {
+        [ej.lAJ.CHANNEL_ICON_CHANGE]: function (e) {
             let { message: t, compact: n, channel: l } = e,
                 { author: a } = t,
                 r = t.getChannelId(),
                 s = (0, $.P)({ user: a, channelId: r, guildId: l.guild_id, messageId: t.id });
             return (0, i.jsx)(ei.A, { compact: n, message: t, usernameHook: s });
         },
-        [ey.lAJ.CHANNEL_PINNED_MESSAGE]: function (e) {
+        [ej.lAJ.CHANNEL_PINNED_MESSAGE]: function (e) {
             let { message: t, compact: n, channel: a } = e,
                 { author: r } = t,
                 s = t.getChannelId(),
                 o = l.useCallback(() => {
-                    if (H.A.getChannelId() !== s) {
-                        let e = w.A.getChannel(s);
-                        null != e && (0, y.uh)(e.guild_id, e.id);
+                    if (B.A.getChannelId() !== s) {
+                        let e = G.A.getChannel(s);
+                        null != e && (0, j.uh)(e.guild_id, e.id);
                     }
-                    setTimeout(() => W._.dispatch(ey.jej.TOGGLE_CHANNEL_PINS), 0);
+                    setTimeout(() => J._.dispatch(ej.jej.TOGGLE_CHANNEL_PINS), 0);
                 }, [s]),
-                d = (0, $.P)({ user: r, channelId: s, guildId: a.guild_id, messageId: t.id });
-            return (0, i.jsx)(er.A, { message: t, compact: n, usernameHook: d, onClickPins: __OVERLAY__ ? null : o });
+                c = (0, $.P)({ user: r, channelId: s, guildId: a.guild_id, messageId: t.id });
+            return (0, i.jsx)(er.A, { message: t, compact: n, usernameHook: c, onClickPins: __OVERLAY__ ? null : o });
         },
-        [ey.lAJ.USER_JOIN]: function (e) {
+        [ej.lAJ.USER_JOIN]: function (e) {
             let { message: t, compact: n, channel: l } = e,
                 { author: a } = t,
                 r = t.getChannelId(),
                 s = (0, $.P)({ user: a, channelId: r, guildId: l.guild_id, messageId: t.id });
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(eb.A, { message: t, compact: n, usernameHook: s }),
-                    (0, i.jsx)(P.I, { channel: l, message: t }),
+                    (0, i.jsx)(eR.A, { message: t, compact: n, usernameHook: s }),
+                    (0, i.jsx)(U.I, { channel: l, message: t }),
                 ],
             });
         },
-        [ey.lAJ.GUILD_BOOST]: eM,
-        [ey.lAJ.GUILD_BOOST_TIER_1]: eM,
-        [ey.lAJ.GUILD_BOOST_TIER_2]: eM,
-        [ey.lAJ.GUILD_BOOST_TIER_3]: eM,
-        [ey.lAJ.CHANNEL_FOLLOW_ADD]: function (e) {
+        [ej.lAJ.GUILD_BOOST]: ey,
+        [ej.lAJ.GUILD_BOOST_TIER_1]: ey,
+        [ej.lAJ.GUILD_BOOST_TIER_2]: ey,
+        [ej.lAJ.GUILD_BOOST_TIER_3]: ey,
+        [ej.lAJ.CHANNEL_FOLLOW_ADD]: function (e) {
             let { message: t, compact: n, channel: l } = e,
                 { author: a } = t,
                 r = t.getChannelId(),
                 s = (0, $.P)({ user: a, channelId: r, guildId: l.guild_id, messageId: t.id });
             return (0, i.jsx)(en.A, { message: t, compact: n, usernameHook: s });
         },
-        [ey.lAJ.GUILD_STREAM]: function (e) {
+        [ej.lAJ.GUILD_STREAM]: function (e) {
             let { message: t, compact: n, channel: r } = e,
                 {
                     author: s,
                     author: { id: o },
-                    messageReference: d,
+                    messageReference: c,
                 } = t,
                 u = t.getChannelId(),
-                m = (0, a.bG)([F.A], () => F.A.findActivity(o, (e) => e.type === ey.$pd.PLAYING), [o]),
-                _ = (0, a.bG)([w.A], () => (null != d ? w.A.getChannel(d.channel_id) : null), [d]),
-                h = d?.guild_id,
-                p = (0, $.P)({ user: s, channelId: u, guildId: r.guild_id, messageId: t.id }),
-                g = l.useCallback(() => {
+                m = (0, a.bG)([H.A], () => H.A.findActivity(o, (e) => e.type === ej.$pd.PLAYING), [o]),
+                _ = (0, a.bG)([G.A], () => (null != c ? G.A.getChannel(c.channel_id) : null), [c]),
+                A = c?.guild_id,
+                E = (0, $.P)({ user: s, channelId: u, guildId: r.guild_id, messageId: t.id }),
+                h = l.useCallback(() => {
                     null != _ &&
-                        null != h &&
-                        (0, c.Nl)({ streamType: eR.U4.GUILD, ownerId: o, channelId: _.id, guildId: h });
-                }, [o, _, h]);
-            return null != d && null != _ && null != d.guild_id
+                        null != A &&
+                        (0, d.Nl)({ streamType: eO.U4.GUILD, ownerId: o, channelId: _.id, guildId: A });
+                }, [o, _, A]);
+            return null != c && null != _ && null != c.guild_id
                 ? (0, i.jsx)(em.A, {
                       message: t,
                       compact: n,
                       channel: _,
                       playingActivity: m,
-                      onJoinStream: g,
-                      usernameHook: p,
+                      onJoinStream: h,
+                      usernameHook: E,
                   })
                 : null;
         },
-        [ey.lAJ.GUILD_DISCOVERY_DISQUALIFIED]: function (e) {
+        [ej.lAJ.GUILD_DISCOVERY_DISQUALIFIED]: function (e) {
             let { message: t, compact: n } = e,
                 l = t.getChannelId(),
-                r = (0, a.bG)([w.A], () => w.A.getChannel(l), [l]),
+                r = (0, a.bG)([G.A], () => G.A.getChannel(l), [l]),
                 s = null != r ? r.getGuildId() : null;
-            return (0, i.jsx)(ed.Rk, {
+            return (0, i.jsx)(ec.Rk, {
                 message: t,
                 compact: n,
                 onClick: () => {
-                    null != s && I.A.open(s, ey.BEX.ACCESS, ey.nd0.ACCESS_DISCOVERABLE);
+                    null != s && I.A.open(s, ej.BEX.ACCESS, ej.nd0.ACCESS_DISCOVERABLE);
                 },
             });
         },
-        [ey.lAJ.GUILD_DISCOVERY_REQUALIFIED]: ed.wj,
-        [ey.lAJ.GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING]: ed.Cq,
-        [ey.lAJ.GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING]: ed.If,
-        [ey.lAJ.THREAD_CREATED]: function (e) {
+        [ej.lAJ.GUILD_DISCOVERY_REQUALIFIED]: ec.wj,
+        [ej.lAJ.GUILD_DISCOVERY_GRACE_PERIOD_INITIAL_WARNING]: ec.Cq,
+        [ej.lAJ.GUILD_DISCOVERY_GRACE_PERIOD_FINAL_WARNING]: ec.If,
+        [ej.lAJ.THREAD_CREATED]: function (e) {
             let { message: t, channel: a, compact: o } = e,
-                d = (0, $.P)({ user: t.author, channelId: t.channel_id, guildId: a.guild_id, messageId: t.id }),
-                c = l.useCallback(
+                c = (0, $.P)({ user: t.author, channelId: t.channel_id, guildId: a.guild_id, messageId: t.id }),
+                d = l.useCallback(
                     async (e) => {
                         let n = t.messageReference?.channel_id;
                         if (null != n) {
-                            await O.A.loadThread(n);
-                            let t = w.A.getChannel(n);
+                            await L.A.loadThread(n);
+                            let t = G.A.getChannel(n);
                             null != t && (0, D.JA)(t, e.shiftKey);
                         }
                     },
@@ -297,10 +297,10 @@ let eD = Object.freeze({
                 }, [a]),
                 m = l.useCallback(
                     (e) => {
-                        let l = w.A.getChannel(t.messageReference?.channel_id);
+                        let l = G.A.getChannel(t.messageReference?.channel_id);
                         null != l &&
                             (0, s.L3)(e, async () => {
-                                let { default: e } = await Promise.all([n.e("74192"), n.e("13223")]).then(
+                                let { default: e } = await Promise.all([n.e("64719"), n.e("10178")]).then(
                                     n.bind(n, 44536),
                                 );
                                 return (t) => (0, i.jsx)(e, { ...t, channel: l });
@@ -311,165 +311,163 @@ let eD = Object.freeze({
             return (0, i.jsx)(eI.A, {
                 message: t,
                 compact: o,
-                usernameHook: d,
-                onClickThread: c,
+                usernameHook: c,
+                onClickThread: d,
                 onClickViewThreads: u,
                 onContextMenuThread: m,
             });
         },
-        [ey.lAJ.THREAD_STARTER_MESSAGE]: eN.A,
-        [ey.lAJ.GUILD_INVITE_REMINDER]: void 0,
-        [ey.lAJ.AUTO_MODERATION_ACTION]: function (e) {
+        [ej.lAJ.THREAD_STARTER_MESSAGE]: eS.A,
+        [ej.lAJ.GUILD_INVITE_REMINDER]: void 0,
+        [ej.lAJ.AUTO_MODERATION_ACTION]: function (e) {
             let { message: t, compact: n, channel: l } = e;
-            return (0, p.ER)(t) ? (0, i.jsx)(ee.A, { message: t, compact: n, channel: l }) : null;
+            return (0, E.ER)(t) ? (0, i.jsx)(ee.A, { message: t, compact: n, channel: l }) : null;
         },
-        [ey.lAJ.GUILD_INCIDENT_ALERT_MODE_ENABLED]: eO,
-        [ey.lAJ.GUILD_INCIDENT_ALERT_MODE_DISABLED]: eO,
-        [ey.lAJ.GUILD_INCIDENT_REPORT_RAID]: function (e) {
+        [ej.lAJ.GUILD_INCIDENT_ALERT_MODE_ENABLED]: eL,
+        [ej.lAJ.GUILD_INCIDENT_ALERT_MODE_DISABLED]: eL,
+        [ej.lAJ.GUILD_INCIDENT_REPORT_RAID]: function (e) {
             let { message: t, compact: n, channel: l } = e,
                 a = (0, $.P)({ user: t.author, channelId: l.id, guildId: l.guild_id, messageId: t.id });
             return (0, i.jsx)(eu.A, { message: t, compact: n, channel: l, usernameHook: a });
         },
-        [ey.lAJ.GUILD_INCIDENT_REPORT_FALSE_ALARM]: function (e) {
+        [ej.lAJ.GUILD_INCIDENT_REPORT_FALSE_ALARM]: function (e) {
             let { message: t, compact: n, channel: l } = e,
                 a = (0, $.P)({ user: t.author, channelId: l.id, guildId: l.guild_id, messageId: t.id });
-            return (0, i.jsx)(ec.A, { message: t, compact: n, channel: l, usernameHook: a });
+            return (0, i.jsx)(ed.A, { message: t, compact: n, channel: l, usernameHook: a });
         },
-        [ey.lAJ.ROLE_SUBSCRIPTION_PURCHASE]: x.A,
-        [ey.lAJ.PURCHASE_NOTIFICATION]: function (e) {
+        [ej.lAJ.ROLE_SUBSCRIPTION_PURCHASE]: p.A,
+        [ej.lAJ.PURCHASE_NOTIFICATION]: function (e) {
             let { message: t, channel: n, compact: l } = e;
             return t.purchaseNotification?.type === u.hE.GUILD_PRODUCT
-                ? (0, i.jsx)(f.A, { message: t, channel: n, compact: l })
+                ? (0, i.jsx)(g.A, { message: t, channel: n, compact: l })
                 : null;
         },
-        [ey.lAJ.INTERACTION_PREMIUM_UPSELL]: void 0,
-        [ey.lAJ.STAGE_START]: function (e) {
+        [ej.lAJ.INTERACTION_PREMIUM_UPSELL]: void 0,
+        [ej.lAJ.STAGE_START]: function (e) {
             let { message: t, channel: n, compact: l } = e,
                 r = (0, $.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id }),
-                s = (0, a.bG)([C.Ay], () => C.Ay.getActiveEventByChannel(n.id), [n.id]);
+                s = (0, a.bG)([x.Ay], () => x.Ay.getActiveEventByChannel(n.id), [n.id]);
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(ex.A, { message: t, compact: l, usernameHook: r }),
-                    null != s && s.name === t.content ? (0, i.jsx)(E.A, { code: `${n.guild_id}-${s.id}` }) : null,
+                    (0, i.jsx)(ep.A, { message: t, compact: l, usernameHook: r }),
+                    null != s && s.name === t.content ? (0, i.jsx)(C.A, { code: `${n.guild_id}-${s.id}` }) : null,
                 ],
             });
         },
-        [ey.lAJ.STAGE_END]: function (e) {
+        [ej.lAJ.STAGE_END]: function (e) {
+            let { message: t, channel: n, compact: l } = e,
+                a = (0, $.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id });
+            return (0, i.jsx)(eh.A, { message: t, compact: l, usernameHook: a });
+        },
+        [ej.lAJ.STAGE_SPEAKER]: function (e) {
             let { message: t, channel: n, compact: l } = e,
                 a = (0, $.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id });
             return (0, i.jsx)(eg.A, { message: t, compact: l, usernameHook: a });
         },
-        [ey.lAJ.STAGE_SPEAKER]: function (e) {
-            let { message: t, channel: n, compact: l } = e,
-                a = (0, $.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id });
-            return (0, i.jsx)(ef.A, { message: t, compact: l, usernameHook: a });
-        },
-        [ey.lAJ.STAGE_RAISE_HAND]: function (e) {
+        [ej.lAJ.STAGE_RAISE_HAND]: function (e) {
             let { message: t, channel: n, compact: l } = e,
                 s = (0, $.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id }),
-                d = (0, a.bG)([B.A], () => B.A.can(ey.xBc.MUTE_MEMBERS, n)),
-                c = (0, a.bG)([L.A], () => L.A.getParticipant(n.id, t.author.id)),
+                c = (0, a.bG)([F.A], () => F.A.can(ej.xBc.MUTE_MEMBERS, n)),
+                d = (0, a.bG)([b.A], () => b.A.getParticipant(n.id, t.author.id)),
                 u =
-                    new Date(K.default.extractTimestamp(t.id)).toISOString() ===
-                    new Date(c?.voiceState?.requestToSpeakTimestamp ?? 0).toISOString(),
-                m = d && c?.rtsState === M.zF.REQUESTED_TO_SPEAK && u;
+                    new Date(Q.default.extractTimestamp(t.id)).toISOString() ===
+                    new Date(d?.voiceState?.requestToSpeakTimestamp ?? 0).toISOString(),
+                m = c && d?.rtsState === y.zF.REQUESTED_TO_SPEAK && u;
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(eA.A, { message: t, compact: l, usernameHook: s }),
+                    (0, i.jsx)(ef.A, { message: t, compact: l, usernameHook: s }),
                     m
                         ? (0, i.jsx)(r.Button, {
                               variant: "secondary",
                               onClick: () => {
-                                  (0, R.lL)(n, t.author.id, !1), o.A.deleteMessage(n.id, t.id, !0);
+                                  (0, O.lL)(n, t.author.id, !1), o.A.deleteMessage(n.id, t.id, !0);
                               },
-                              text: eL.intl.string(eL.t.f0T7hI),
+                              text: eb.intl.string(eb.t.f0T7hI),
                               icon: r.LvC,
                           })
                         : null,
                 ],
             });
         },
-        [ey.lAJ.STAGE_TOPIC]: function (e) {
+        [ej.lAJ.STAGE_TOPIC]: function (e) {
             let { message: t, channel: n, compact: l } = e,
                 a = (0, $.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id });
-            return (0, i.jsx)(eC.A, { message: t, compact: l, usernameHook: a });
+            return (0, i.jsx)(ex.A, { message: t, compact: l, usernameHook: a });
         },
-        [ey.lAJ.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: b.A,
-        [ey.lAJ.PRIVATE_CHANNEL_INTEGRATION_ADDED]: S.R,
-        [ey.lAJ.PRIVATE_CHANNEL_INTEGRATION_REMOVED]: S.d,
-        [ey.lAJ.PREMIUM_REFERRAL]: function (e) {
+        [ej.lAJ.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: R.A,
+        [ej.lAJ.PRIVATE_CHANNEL_INTEGRATION_ADDED]: v.R,
+        [ej.lAJ.PRIVATE_CHANNEL_INTEGRATION_REMOVED]: v.d,
+        [ej.lAJ.PREMIUM_REFERRAL]: function (e) {
             let { message: t, compact: n } = e;
-            return (0, i.jsx)(N.A, {
+            return (0, i.jsx)(S.A, {
                 userTrialOfferId: t.referralTrialOfferId,
                 canRenderReferralEmbed: !0,
                 compact: n,
             });
         },
-        [ey.lAJ.GUILD_DEADCHAT_REVIVE_PROMPT]: function (e) {
+        [ej.lAJ.GUILD_DEADCHAT_REVIVE_PROMPT]: function (e) {
             let { message: t, channel: n, compact: l } = e;
             return (0, i.jsx)(m.A, { message: t, channel: n, compact: l });
         },
-        [ey.lAJ.CUSTOM_GIFT]: void 0,
-        [ey.lAJ.GUILD_GAMING_STATS_PROMPT]: void 0,
-        [ey.lAJ.VOICE_HANGOUT_INVITE]: void 0,
-        [ey.lAJ.POLL_RESULT]: T.A,
-        [ey.lAJ.CHANGELOG]: void 0,
-        [ey.lAJ.NITRO_NOTIFICATION]: function (e) {
+        [ej.lAJ.CUSTOM_GIFT]: void 0,
+        [ej.lAJ.GUILD_GAMING_STATS_PROMPT]: void 0,
+        [ej.lAJ.VOICE_HANGOUT_INVITE]: void 0,
+        [ej.lAJ.POLL_RESULT]: T.A,
+        [ej.lAJ.CHANGELOG]: void 0,
+        [ej.lAJ.NITRO_NOTIFICATION]: function (e) {
             let { message: t, channel: n } = e;
-            return (0, i.jsx)(Z.A, { message: t, channel: n });
+            return (0, i.jsx)(q.A, { message: t, channel: n });
         },
-        [ey.lAJ.CHANNEL_LINKED_TO_LOBBY]: function (e) {
+        [ej.lAJ.CHANNEL_LINKED_TO_LOBBY]: function (e) {
             let { message: t, channel: n, compact: l } = e;
             return (0, i.jsx)(el.A, { message: t, channel: n, compact: l });
         },
-        [ey.lAJ.GIFTING_PROMPT]: function (e) {
+        [ej.lAJ.GIFTING_PROMPT]: function (e) {
             let { message: t, channel: n } = e,
                 l = t.giftingPrompt,
                 r = (0, a.bG)([V.default], () => V.default.getUser(l?.recipientUserId));
             return null == l || null == r
                 ? null
-                : (0, i.jsx)(J.A, { giftIntentType: l.giftIntentType, recipientUser: r, channel: n });
+                : (0, i.jsx)(Z.A, { giftIntentType: l.giftIntentType, recipientUser: r, channel: n });
         },
-        [ey.lAJ.IN_GAME_MESSAGE_NUX]: function (e) {
+        [ej.lAJ.IN_GAME_MESSAGE_NUX]: function (e) {
             let { message: t, channel: n, compact: l } = e;
             return (0, i.jsx)(e_.A, { message: t, channel: n, author: t.author, compact: l });
         },
-        [ey.lAJ.GUILD_JOIN_REQUEST_ACCEPT_NOTIFICATION]: A.Z_,
-        [ey.lAJ.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION]: A.QN,
-        [ey.lAJ.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION]: A.ez,
-        [ey.lAJ.HD_STREAMING_UPGRADED]: void 0,
-        [ey.lAJ.EMOJI_ADDED]: function (e) {
+        [ej.lAJ.GUILD_JOIN_REQUEST_ACCEPT_NOTIFICATION]: f.Z_,
+        [ej.lAJ.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION]: f.QN,
+        [ej.lAJ.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION]: f.ez,
+        [ej.lAJ.HD_STREAMING_UPGRADED]: void 0,
+        [ej.lAJ.EMOJI_ADDED]: function (e) {
             let { message: t, channel: n, compact: l } = e,
                 a = (0, $.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id });
-            return (0, i.jsx)(h._W, { message: t, channel: n, compact: l, usernameHook: a });
+            return (0, i.jsx)(A._W, { message: t, channel: n, compact: l, usernameHook: a });
         },
-        [ey.lAJ.CHAT_WALLPAPER_SET]: void 0,
-        [ey.lAJ.CHAT_WALLPAPER_REMOVED]: void 0,
-        [ey.lAJ.REPORT_TO_MOD_BAN_USER]: j.A,
-        [ey.lAJ.REPORT_TO_MOD_KICK_USER]: j.A,
-        [ey.lAJ.REPORT_TO_MOD_TIMEOUT_USER]: j.A,
-        [ey.lAJ.REPORT_TO_MOD_DELETED_MESSAGE]: j.A,
-        [ey.lAJ.REPORT_TO_MOD_CLOSED_REPORT]: j.A,
-        [ey.lAJ.PREMIUM_GROUP_INVITE]: function (e) {
+        [ej.lAJ.CHAT_WALLPAPER_SET]: void 0,
+        [ej.lAJ.CHAT_WALLPAPER_REMOVED]: void 0,
+        [ej.lAJ.REPORT_TO_MOD_BAN_USER]: M.A,
+        [ej.lAJ.REPORT_TO_MOD_KICK_USER]: M.A,
+        [ej.lAJ.REPORT_TO_MOD_TIMEOUT_USER]: M.A,
+        [ej.lAJ.REPORT_TO_MOD_DELETED_MESSAGE]: M.A,
+        [ej.lAJ.REPORT_TO_MOD_CLOSED_REPORT]: M.A,
+        [ej.lAJ.PREMIUM_GROUP_INVITE]: function (e) {
             let { message: t, channel: n, compact: l } = e;
-            return (0, i.jsx)(v.A, { message: t, channel: n, compact: l });
+            return (0, i.jsx)(N.A, { message: t, channel: n, compact: l });
         },
-        [ey.lAJ.VOICE_SESSION]: function (e) {
+        [ej.lAJ.VOICE_SESSION]: function (e) {
             let { message: t, channel: n, compact: l } = e;
-            return (0, i.jsx)(ej.A, { message: t, channel: n, compact: l });
+            return (0, i.jsx)(eM.A, { message: t, channel: n, compact: l });
         },
-        [ey.lAJ.GUILD_BOOST_UPSELL]: function (e) {
-            let { message: t, channel: n, compact: l } = e;
-            return null == t.boostingPrompt
-                ? null
-                : (0, i.jsx)(eo.A, { boostingPrompt: t.boostingPrompt, channel: n, compact: l });
+        [ej.lAJ.GUILD_BOOST_UPSELL]: function (e) {
+            let { message: t, channel: n } = e;
+            return null == t.boostingPrompt ? null : (0, i.jsx)(eo.A, { boostingPrompt: t.boostingPrompt, channel: n });
         },
         67: function (e) {
             let { message: t, compact: n } = e;
-            return (0, i.jsx)(eE.A, { message: t, compact: n });
+            return (0, i.jsx)(eC.A, { message: t, compact: n });
         },
     }),
-    eP = l.memo(function (e) {
+    eU = l.memo(function (e) {
         let { message: t, channel: n, compact: l, disableInteraction: a } = e,
             { type: r } = t,
             s = eD[r];
@@ -477,14 +475,14 @@ let eD = Object.freeze({
             var o;
             return (
                 (o = Error(`unknown message type ${t.type}`)),
-                q.A.captureException(o),
+                W.A.captureException(o),
                 new _.A("SystemMessage").error("", o),
                 null
             );
         }
         return (0, i.jsx)(X.Ay, {
             message: t,
-            content: (0, Q.Ay)(t).content,
+            content: (0, Y.Ay)(t).content,
             compact: l ?? !1,
             children: (0, i.jsx)(s, { message: t, channel: n, compact: l, disableInteraction: a }),
         });
