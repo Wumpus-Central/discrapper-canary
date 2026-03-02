@@ -13,18 +13,18 @@ var l = n(627968),
     A = n(313961),
     p = n(85448),
     I = n(571694),
-    m = n(47167),
-    x = n(10862),
+    x = n(47167),
+    m = n(10862),
     v = n(410876),
     S = n(71393),
     y = n(535820),
     E = n(290863),
     f = n(994500),
-    T = n(287809),
-    C = n(486020),
-    _ = n(240248),
-    b = n(427262),
-    N = n(222075),
+    _ = n(287809),
+    T = n(486020),
+    C = n(240248),
+    N = n(427262),
+    b = n(222075),
     M = n(652215),
     j = n(806931),
     R = n(985018),
@@ -43,45 +43,44 @@ let w = i.memo(
                 location: V,
                 row: w,
                 source: O,
-                shouldRenameButtonCTA: D,
-                ringingEnabled: P,
-                inviteChannel: L,
-                guildId: k,
+                ringingEnabled: D,
+                inviteChannel: P,
+                guildId: L,
             } = e,
-            [B, F] = i.useState(!1),
-            [H, K] = i.useState(!1),
-            z = (0, r.bG)([S.A], () => S.A.getGuild(s?.guild_id)),
-            { showActivityStatus: Q } = N.o.useExperiment(
-                { guildId: k, location: "InviteRow" },
+            [k, F] = i.useState(!1),
+            [B, H] = i.useState(!1),
+            K = (0, r.bG)([S.A], () => S.A.getGuild(s?.guild_id)),
+            { showActivityStatus: z } = b.o.useExperiment(
+                { guildId: L, location: "InviteRow" },
                 { autoTrackExposure: !1 },
             ),
             {
-                status: W,
+                status: Q,
                 isMobileOnline: q,
-                activities: Y,
+                activities: W,
             } = (0, r.cf)(
                 [E.A],
                 () =>
                     null == n
                         ? { status: void 0, isMobileOnline: void 0, activities: void 0 }
                         : {
-                              status: E.A.getStatus(n.id, k),
+                              status: E.A.getStatus(n.id, L),
                               isMobileOnline: E.A.isMobileOnline(n.id),
-                              activities: E.A.getActivities(n.id, k),
+                              activities: E.A.getActivities(n.id, L),
                           },
-                [n, k],
+                [n, L],
             ),
-            { activityStatusText: J, activityStatusIcon: Z } = i.useMemo(() => {
-                if (!Q || null == Y) return { activityStatusText: {}, activityStatusIcon: void 0 };
-                let e = Y.find((e) => e.type !== M.$pd.CUSTOM_STATUS && e.type !== M.$pd.HANG_STATUS);
+            { activityStatusText: Y, activityStatusIcon: J } = i.useMemo(() => {
+                if (!z || null == W) return { activityStatusText: {}, activityStatusIcon: void 0 };
+                let e = W.find((e) => e.type !== M.$pd.CUSTOM_STATUS && e.type !== M.$pd.HANG_STATUS);
                 return { activityStatusText: (0, u.A)(e, !1), activityStatusIcon: null == e ? void 0 : (0, h.f)(e) };
-            }, [Q, Y]),
-            { voiceChannel: X } = (0, c.A)({ userId: n?.id }),
-            $ = (0, m.Ay)(X),
-            ee = (0, r.bG)([A.A], () => (null != L && null != n ? A.A.getParticipant(L.id, n.id) : null)),
-            et = P && null != ee && ee.type === j.lp.USER && ee.ringing,
-            en = (0, o.S31)(o.clD.ONLINE),
-            el = i.useCallback(() => {
+            }, [z, W]),
+            { voiceChannel: Z } = (0, c.A)({ userId: n?.id }),
+            X = (0, x.Ay)(Z),
+            $ = (0, r.bG)([A.A], () => (null != P && null != n ? A.A.getParticipant(P.id, n.id) : null)),
+            ee = D && null != $ && $.type === j.lp.USER && $.ringing,
+            et = (0, o.S31)(o.clD.ONLINE),
+            en = i.useCallback(() => {
                 null != y &&
                     (null != s
                         ? (F(!0),
@@ -94,7 +93,7 @@ let w = i.memo(
                                   inviteAnalyticsMetadata: U(w, O),
                               },
                               (e) => {
-                                  F(!1), K(e);
+                                  F(!1), H(e);
                               },
                           ))
                         : null != n &&
@@ -102,108 +101,108 @@ let w = i.memo(
                           d.A.enqueue(
                               { type: d.F.USER, user: n, inviteKey: y, location: V, inviteAnalyticsMetadata: U(w, O) },
                               (e) => {
-                                  F(!1), K(e);
+                                  F(!1), H(e);
                               },
                           )));
             }, [y, s, n, V, w, O]),
-            ei = b.Ay.getName(n),
-            es = null != n ? f.A.getNickname(n.id) : null,
-            ea = null != s ? (0, m.m1)(s, T.default, f.A) : null,
-            er = null != n ? n.getAvatarURL(s?.guild_id, 32) : null,
-            eo = null != s ? (0, I.Y)(s) : null,
-            ed =
-                null != z && null != s && null == eo
-                    ? C.Ay.getGuildIconURL({ id: s.guild_id, icon: z.icon, size: 32 })
+            el = N.Ay.getName(n),
+            ei = null != n ? f.A.getNickname(n.id) : null,
+            es = null != s ? (0, x.m1)(s, _.default, f.A) : null,
+            ea = null != n ? n.getAvatarURL(s?.guild_id, 32) : null,
+            er = null != s ? (0, I.Y)(s) : null,
+            eo =
+                null != K && null != s && null == er
+                    ? T.Ay.getGuildIconURL({ id: s.guild_id, icon: K.icon, size: 32 })
                     : null,
-            eu = W !== o.clD.OFFLINE ? W : void 0,
-            ec = er ?? eo ?? ed,
-            eg = ei ?? ea ?? void 0,
-            eh = null != z && null == z.icon ? (0, _.oN)(z.name) : null,
-            eA = null != ec && null != eg;
-        null != n && (t = es ?? ei);
-        let ep = b.Ay.getUserTag(n, { decoration: "never" }),
-            eI = (0, l.jsx)(o.Button, {
+            ed = Q !== o.clD.OFFLINE ? Q : void 0,
+            eu = ea ?? er ?? eo,
+            ec = el ?? es ?? void 0,
+            eg = null != K && null == K.icon ? (0, C.oN)(K.name) : null,
+            eh = null != eu && null != ec;
+        null != n && (t = ei ?? el);
+        let eA = N.Ay.getUserTag(n, { decoration: "never" }),
+            ep = (0, l.jsx)(o.Button, {
                 variant: "secondary",
-                text: H ? R.intl.string(R.t.dVT149) : D ? R.intl.string(R.t.AWLVgR) : R.intl.string(R.t.jYnGPG),
+                text: B ? R.intl.string(R.t.dVT149) : R.intl.string(R.t.jYnGPG),
                 size: "sm",
-                loading: B,
-                onClick: el,
-                disabled: H,
+                loading: k,
+                onClick: en,
+                disabled: B,
             }),
-            em = Q && null != J.text,
-            ex = Q && null != X && null != $,
-            ev = ex || em || null != n;
+            eI = z && null != Y.text,
+            ex = z && null != Z && null != X,
+            em = ex || eI || null != n;
         return (0, l.jsxs)("div", {
             className: G.Og,
             children: [
                 (0, l.jsxs)("div", {
                     className: G.mQ,
                     children: [
-                        eA
-                            ? et
-                                ? (0, l.jsx)(p.A, { size: o._3J.SIZE_32, ringing: et, src: ec, className: G.hO })
+                        eh
+                            ? ee
+                                ? (0, l.jsx)(p.A, { size: o._3J.SIZE_32, ringing: ee, src: eu, className: G.hO })
                                 : (0, l.jsx)(o.euF, {
-                                      src: ec,
-                                      "aria-label": eg,
+                                      src: eu,
+                                      "aria-label": ec,
                                       size: o._3J.SIZE_32,
                                       className: G.hO,
-                                      status: Q && null != n ? eu : void 0,
-                                      isMobile: Q && null != n ? q : void 0,
+                                      status: z && null != n ? ed : void 0,
+                                      isMobile: z && null != n ? q : void 0,
                                   })
                             : (0, l.jsx)(o.Text, {
                                   variant: "text-md/medium",
                                   className: G.q9,
                                   "aria-hidden": !0,
-                                  children: eh,
+                                  children: eg,
                               }),
                         (0, l.jsxs)("div", {
-                            className: a()(G.BT, { [G.DF]: et }),
+                            className: a()(G.BT, { [G.DF]: ee }),
                             children: [
                                 (0, l.jsxs)(o.Text, {
                                     tag: "strong",
                                     variant: "text-md/semibold",
                                     lineClamp: 1,
-                                    children: [t, null != s ? (0, m.m1)(s, T.default, f.A, !0) : null],
+                                    children: [t, null != s ? (0, x.m1)(s, _.default, f.A, !0) : null],
                                 }),
-                                ev &&
+                                em &&
                                     (0, l.jsxs)("div", {
-                                        className: a()(G.eq, { [G.DF]: et }),
+                                        className: a()(G.eq, { [G.DF]: ee }),
                                         children: [
                                             ex
-                                                ? (0, l.jsx)(x.A, {
+                                                ? (0, l.jsx)(m.A, {
                                                       size: "custom",
-                                                      color: en,
-                                                      channel: X,
+                                                      color: et,
+                                                      channel: Z,
                                                       className: G.j8,
                                                   })
-                                                : null != Z
-                                                  ? (0, l.jsx)(g.A, { icon: Z, className: G.j8 })
+                                                : null != J
+                                                  ? (0, l.jsx)(g.A, { icon: J, className: G.j8 })
                                                   : null,
                                             ex
                                                 ? (0, l.jsx)(o.Text, {
                                                       variant: "text-xs/medium",
                                                       color: "text-status-online",
                                                       lineClamp: 1,
-                                                      children: $,
+                                                      children: X,
                                                   })
-                                                : em
+                                                : eI
                                                   ? (0, l.jsx)(o.Text, {
                                                         variant: "text-xs/medium",
                                                         color: "text-status-online",
                                                         lineClamp: 1,
-                                                        children: J.text,
+                                                        children: Y.text,
                                                     })
                                                   : (0, l.jsx)(o.Text, {
                                                         variant: "text-xs/normal",
                                                         color: "text-muted",
                                                         lineClamp: 1,
-                                                        children: ep,
+                                                        children: eA,
                                                     }),
                                             (0, l.jsx)(o.Text, {
                                                 variant: "text-xs/normal",
                                                 color: "text-muted",
                                                 lineClamp: 1,
-                                                children: et && ` • ${R.intl.string(R.t.sURrjb)}`,
+                                                children: ee && ` • ${R.intl.string(R.t.sURrjb)}`,
                                             }),
                                         ],
                                     }),
@@ -214,8 +213,8 @@ let w = i.memo(
                 (0, l.jsxs)("div", {
                     className: G.t$,
                     children: [
-                        P && null != n && null != L && (0, l.jsx)(v.A, { user: n, channel: L, location: "InviteRow" }),
-                        eI,
+                        D && null != n && null != P && (0, l.jsx)(v.A, { user: n, channel: P, location: "InviteRow" }),
+                        ep,
                     ],
                 }),
             ],
@@ -224,7 +223,6 @@ let w = i.memo(
     (e, t) =>
         e.user === t.user &&
         e.channel === t.channel &&
-        e.shouldRenameButtonCTA === t.shouldRenameButtonCTA &&
         e.guildId === t.guildId &&
         e.inviteChannel?.id === t.inviteChannel?.id &&
         e.inviteKey === t.inviteKey &&
