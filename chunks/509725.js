@@ -12,10 +12,7 @@ let d = (0, a.zD)(u.X.CLIPS_ENABLE_REMINDERS, {
     useValue: () => (0, n.bG)([s.A], () => s.A.getSettings().remindersEnabled),
     setValue: (t) => r.Mt(t),
     usePredicate: () => {
-        let { showClipsHeaderEntrypoint: t } = l.L_.useExperiment(
-            { location: "clips_recording_settings" },
-            { autoTrackExposure: !1 },
-        );
+        let { showClipsHeaderEntrypoint: t } = l.L_.useConfig({ location: "clips_recording_settings" });
         return t;
     },
 });

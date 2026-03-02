@@ -1,12 +1,9 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var r = n(723702),
     i = n(734066),
-    a = n(731854);
-function s(e) {
-    let { ignorePlatformRestriction: t } = i.L_.getCurrentConfig(
-        { location: "isClipsClientCapable" },
-        { autoTrackExposure: !1 },
-    );
-    return t || (r.isDesktop() && e.getMediaEngine().supports(a.O5.CLIPS));
+    s = n(731854);
+function a(e) {
+    let { ignorePlatformRestriction: t } = i.L_.getConfig({ location: "isClipsClientCapable" });
+    return t || (r.isDesktop() && e.getMediaEngine().supports(s.O5.CLIPS));
 }

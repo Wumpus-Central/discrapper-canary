@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { BW: () => d, J: () => f, L_: () => a, Pm: () => l, Vr: () => _, cx: () => c, sw: () => u });
+n.d(t, { BW: () => _, J: () => p, L_: () => o, Pm: () => u, Vr: () => f, cx: () => d, sw: () => c });
 var r = n(600975),
-    i = n(430452);
+    i = n(945810),
+    s = n(430452);
 n(927578);
-var s = n(915618);
+var a = n(915618);
 n(788868);
-let a = (0, r.C)({
+let o = (0, i.mj)({
         kind: "user",
-        id: "2022-11_clips_experiment",
-        label: "Clips Experiment",
+        name: "2026-03-clips-experiment",
         defaultConfig: {
             enableClips: !1,
             ignorePlatformRestriction: !1,
@@ -17,46 +17,26 @@ let a = (0, r.C)({
             enableVoiceOnlyClips: !1,
             enableAdvancedSignals: !1,
         },
-        treatments: [
-            {
-                id: 1,
-                label: "Clips without upsells",
-                config: {
-                    enableClips: !0,
-                    ignorePlatformRestriction: !1,
-                    showClipsHeaderEntrypoint: !0,
-                    enableScreenshotKeybind: !1,
-                    enableVoiceOnlyClips: !1,
-                    enableAdvancedSignals: !1,
-                },
+        variations: {
+            1: {
+                enableClips: !0,
+                ignorePlatformRestriction: !1,
+                showClipsHeaderEntrypoint: !0,
+                enableScreenshotKeybind: !1,
+                enableVoiceOnlyClips: !1,
+                enableAdvancedSignals: !1,
             },
-            {
-                id: 2,
-                label: "Clips with upsells",
-                config: {
-                    enableClips: !0,
-                    ignorePlatformRestriction: !1,
-                    showClipsHeaderEntrypoint: !0,
-                    enableScreenshotKeybind: !1,
-                    enableVoiceOnlyClips: !1,
-                    enableAdvancedSignals: !1,
-                },
+            99: {
+                enableClips: !0,
+                ignorePlatformRestriction: !0,
+                showClipsHeaderEntrypoint: !0,
+                enableScreenshotKeybind: !0,
+                enableVoiceOnlyClips: !0,
+                enableAdvancedSignals: !0,
             },
-            {
-                id: 99,
-                label: "Clips 4 da Developerz",
-                config: {
-                    enableClips: !0,
-                    ignorePlatformRestriction: !0,
-                    showClipsHeaderEntrypoint: !0,
-                    enableScreenshotKeybind: !0,
-                    enableVoiceOnlyClips: !0,
-                    enableAdvancedSignals: !0,
-                },
-            },
-        ],
+        },
     }),
-    o = (0, r.C)({
+    l = (0, r.C)({
         kind: "user",
         id: "2023-09_clips_nitro_early_access",
         label: "Clips (Nitro EA)",
@@ -95,43 +75,31 @@ let a = (0, r.C)({
             },
         ],
     });
-function l() {
-    if (!(0, s.A)(i.Ay)) return !1;
-    let { enableClips: e } = o.getCurrentConfig({ location: "areClipsEnabled" }, { autoTrackExposure: !1 }),
-        { enableClips: t } = a.getCurrentConfig({ location: "areClipsEnabled" }, { autoTrackExposure: !1 });
+function u() {
+    if (!(0, a.A)(s.Ay)) return !1;
+    let { enableClips: e } = l.getCurrentConfig({ location: "areClipsEnabled" }, { autoTrackExposure: !1 }),
+        { enableClips: t } = o.getConfig({ location: "areClipsEnabled" });
     return e || t;
 }
-function u() {
-    let e = (0, s.A)(i.Ay),
-        { enableClips: t } = o.useExperiment({ location: "useEnableClips" }, { autoTrackExposure: !1 }),
-        { enableClips: n } = a.useExperiment({ location: "useEnableClips" }, { autoTrackExposure: !1 });
+function c() {
+    let e = (0, a.A)(s.Ay),
+        { enableClips: t } = l.useExperiment({ location: "useEnableClips" }, { autoTrackExposure: !1 }),
+        { enableClips: n } = o.getConfig({ location: "useEnableClips" });
     return (n || t) && e;
 }
-function c() {
-    let { enableScreenshotKeybind: e } = a.getCurrentConfig(
-        { location: "isScreenshotKeybindEnabled" },
-        { autoTrackExposure: !1 },
-    );
-    return e;
-}
 function d() {
-    let { enableScreenshotKeybind: e } = a.useExperiment(
-        { location: "useScreenshotKeybindEnabled" },
-        { autoTrackExposure: !1 },
-    );
+    let { enableScreenshotKeybind: e } = o.getConfig({ location: "isScreenshotKeybindEnabled" });
     return e;
 }
 function _() {
-    let { enableVoiceOnlyClips: e } = a.getCurrentConfig(
-        { location: "areVoiceOnlyClipsEnabled" },
-        { autoTrackExposure: !1 },
-    );
+    let { enableScreenshotKeybind: e } = o.useConfig({ location: "useScreenshotKeybindEnabled" });
     return e;
 }
 function f() {
-    let { enableAdvancedSignals: e } = a.getCurrentConfig(
-        { location: "areAdvancedSignalsEnabled" },
-        { autoTrackExposure: !1 },
-    );
+    let { enableVoiceOnlyClips: e } = o.getConfig({ location: "areVoiceOnlyClipsEnabled" });
+    return e;
+}
+function p() {
+    let { enableAdvancedSignals: e } = o.getConfig({ location: "areAdvancedSignalsEnabled" });
     return e;
 }
