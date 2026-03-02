@@ -203,7 +203,6 @@ n.d(t, {
     Xsb: () => r.Xsb,
     XxR: () => r.XxR,
     Y3C: () => r.Y3C,
-    Y5K: () => r.Y5K,
     YPf: () => r.YPf,
     YRe: () => r.YRe,
     YWd: () => r.YWd,

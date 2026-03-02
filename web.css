@@ -49841,23 +49841,6 @@ svg.radioIcon_c1e9c4 {
     width: 100%
 }
 
-.cutoutIcon__44b0c {
-    color: var(--icon-muted);
-    height: 100%;
-    width: 100%
-}
-
-.cutoutIcon__44b0c,
-.largeEmoji__44b0c {
-    align-items: center;
-    display: flex
-}
-
-.largeEmoji__44b0c {
-    font-size: 48px;
-    justify-content: center
-}
-
 .button__06eda {
     align-items: center;
     border-radius: 50%;

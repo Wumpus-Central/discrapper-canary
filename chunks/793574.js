@@ -522,7 +522,6 @@ var r = (function (e) {
         (e.CLOUD_PLAY_POPOVER = "cloud play popover"),
         (e.NOW_PLAYING_ITEM_RICH_PRESENCE_SECTION = "now playing item rich presence section"),
         (e.NOW_PLAYING_ITEM_GAME_SECTION = "now playing item game section"),
-        (e.FREQUENT_FRIENDS_ROW = "frequent friends row"),
         (e.BILLING_SETTINGS_BILLING = "billing settings billing"),
         (e.SDK_DEBUG_TOOLS = "sdk debug tools"),
         (e.CHANNELS_AND_ROLES = "channels and roles"),

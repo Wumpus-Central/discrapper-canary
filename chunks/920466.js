@@ -11,6 +11,4 @@ e.exports = {
     Hs: "pointerEvents__44b0c",
     DX: "avatarDecorationContainer__44b0c",
     M: "avatarDecoration__44b0c",
-    QP: "cutoutIcon__44b0c",
-    mh: "largeEmoji__44b0c",
 };
