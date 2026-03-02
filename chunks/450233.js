@@ -10,7 +10,7 @@ var r = n(627968),
     c = n(403362),
     d = n(832208),
     _ = n(985018),
-    f = n(602372);
+    f = n(784550);
 let p = "US",
     h = "CA",
     m = 5,
@@ -96,7 +96,7 @@ let p = "US",
     v = (0, u.Ld)(),
     N = (0, u.Ld)(),
     C = (0, u.Ld)();
-var b = (function (e) {
+var R = (function (e) {
         return (
             (e.MODAL_US = "modalUS"),
             (e.MODAL_INTL = "modalInternational"),
@@ -110,10 +110,10 @@ var b = (function (e) {
             (e.SETTINGS_INTL_NO_NAME_MOBILE = "settingsInternationalWithoutNameMobile"),
             e
         );
-    })(b || {}),
-    R = (function (e) {
+    })(R || {}),
+    b = (function (e) {
         return (e.EDIT = "edit"), (e.CREATE = "create"), e;
-    })(R || {});
+    })(b || {});
 let O = { [p]: o.D, [h]: s.i },
     D = { [p]: o.J, [h]: s.d },
     L = (e, t) => ({
@@ -136,8 +136,8 @@ let O = { [p]: o.D, [h]: s.i },
         renderInput: (e) => (0, r.jsx)(l.ksK, { ...e }),
     }),
     w = (e, t) => {
-        let n = t?.lockedStoreCountry ?? null,
-            i = null != n ? g.filter((e) => e.value === n) : g;
+        let n = t?.allowedBillingAddressCountries,
+            i = null != n && n.length > 0 ? g.filter((e) => n.includes(e.value)) : g;
         return {
             name: "country",
             id: T,
@@ -155,22 +155,22 @@ let O = { [p]: o.D, [h]: s.i },
                 }
             },
             renderInput(e, t) {
-                let { onChange: s, ...a } = e;
+                let { onChange: n, ...s } = e;
                 return (0, r.jsx)(l.ZiE, {
-                    ...a,
+                    ...s,
                     selectionMode: "single",
                     autoFocus: !0,
                     maxOptionsVisible: 8,
-                    disabled: "edit" === t.mode || null != n,
+                    disabled: "edit" === t.mode || 1 === i.length,
                     options: i,
                     onQueryChange: (t) => {
-                        let n = t.target.value;
-                        if (null == s) return;
-                        let r = n.toLowerCase();
-                        r in A && s(A[r], e.name);
+                        let r = t.target.value;
+                        if (null == n) return;
+                        let i = r.toLowerCase();
+                        i in A && n(A[i], e.name);
                     },
                     onSelectionChange: (t) => {
-                        null != s && s(t, e.name);
+                        null != n && n(t, e.name);
                     },
                 });
             },
@@ -359,8 +359,8 @@ let O = { [p]: o.D, [h]: s.i },
         settingsInternationalWithoutNameMobile: [[x], [M], [P], [U], [k], [w]],
     };
 class F extends i.PureComponent {
-    static Layouts = b;
-    static Modes = R;
+    static Layouts = R;
+    static Modes = b;
     static defaultProps = {
         name: "",
         country: "",
@@ -372,7 +372,7 @@ class F extends i.PureComponent {
         layout: "modalUS",
         mode: "create",
         error: null,
-        lockedStoreCountry: null,
+        allowedBillingAddressCountries: null,
     };
     state = {
         values: {
@@ -443,11 +443,11 @@ class F extends i.PureComponent {
     };
     render() {
         let { errors: e, values: t } = this.state,
-            { layout: n, mode: i, className: s, error: a, lockedStoreCountry: o } = this.props,
+            { layout: n, mode: i, className: s, error: a, allowedBillingAddressCountries: o } = this.props,
             l = G[n];
         if (null == l) throw Error("Provide a proper layout property.");
         let u = t.country,
-            _ = { lockedStoreCountry: o },
+            _ = { allowedBillingAddressCountries: o },
             f = l
                 .map((e) => {
                     let t = e.map((e) => e(u ?? "", _)).filter(c.Vq);
