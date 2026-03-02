@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => b });
+n.d(t, { A: () => N });
 var r = n(311907),
     i = n(73153),
-    a = n(532555);
-let s = 864e5,
+    s = n(532555);
+let a = 864e5,
     o = 3e5,
     l = {},
     u = { catalog: {}, hasFetchedCatalog: !1, catalogLastFetchedAt: void 0 };
@@ -21,15 +21,15 @@ function f(e) {
     let { catalog: t } = e;
     u = { catalog: t, hasFetchedCatalog: !0, catalogLastFetchedAt: Date.now() };
 }
-function h(e) {
+function p(e) {
     let { guildId: t, instances: n } = e;
     l = { ...l, [t]: { ...d(t), instances: n, hasFetchedInstances: !0, instancesLastFetchedAt: Date.now() } };
 }
-function p(e) {
+function h(e) {
     let { guildId: t, skuId: n, instructions: r } = e;
     l = { ...l, [t]: { ...d(t), instructions: { ...d(t).instructions, [n]: r } } };
 }
-function g(e) {
+function m(e) {
     let { guildId: t, instance: n } = e,
         r = d(t);
     l = { ...l, [t]: { ...r, instances: { ...r.instances, [n.id]: n } } };
@@ -40,22 +40,22 @@ function E(e, t) {
         0,
     );
 }
-function A(e) {
+function g(e) {
     let { guildId: t, unlockedGameServers: n } = e,
         r = E(t, n);
     l = { ...l, [t]: { ...d(t), entitlements: n, appliedBoosts: r } };
 }
-function I(e) {
+function A(e) {
     let { guildId: t, gameServer: n } = e,
         r = d(t);
-    l = { ...l, [t]: { ...r, instances: { ...r.instances, [n.id]: (0, a.A)(n) } } };
+    l = { ...l, [t]: { ...r, instances: { ...r.instances, [n.id]: (0, s.A)(n) } } };
 }
-function T(e) {
+function I(e) {
     let { guildId: t, gameServerId: n } = e,
         r = d(t);
     delete r.instances[n], (l = { ...l, [t]: { ...r } });
 }
-function y(e) {
+function T(e) {
     let { guildId: t, entitlements: n } = e,
         r = d(t);
     n
@@ -63,7 +63,7 @@ function y(e) {
         .forEach((e) => {
             r.entitlements[e.id] = e;
         }),
-        v(t, r);
+        y(t, r);
 }
 function S(e) {
     let { guildId: t, entitlements: n } = e,
@@ -71,13 +71,13 @@ function S(e) {
     n.forEach((e) => {
         delete r.entitlements[e.id];
     }),
-        v(t, r);
+        y(t, r);
 }
-function v(e, t) {
+function y(e, t) {
     let n = E(e, t.entitlements);
     l = { ...l, [e]: { ...t, appliedBoosts: n } };
 }
-class C extends r.Ay.PersistedStore {
+class v extends r.Ay.PersistedStore {
     static displayName = "GameServerStore";
     static persistKey = "GameServerStore";
     initialize(e) {
@@ -91,6 +91,9 @@ class C extends r.Ay.PersistedStore {
     }
     getGlobalCatalogState() {
         return u;
+    }
+    getGlobalCatalogGame(e) {
+        return Object.values(u.catalog).find((t) => t.gameId === e);
     }
     getLowestGameCostForGuild(e) {
         if (null == e) return null;
@@ -106,7 +109,7 @@ class C extends r.Ay.PersistedStore {
     }
     shouldFetchCatalogForGuild(e) {
         let t = l[e]?.catalogLastFetchedAt;
-        return null == t || t + s < Date.now();
+        return null == t || t + a < Date.now();
     }
     shouldFetchInstancesForGuild(e) {
         let t = l[e]?.instancesLastFetchedAt;
@@ -114,20 +117,20 @@ class C extends r.Ay.PersistedStore {
     }
     shouldFetchGlobalCatalog() {
         let e = u.catalogLastFetchedAt;
-        return null == e || e + s < Date.now();
+        return null == e || e + a < Date.now();
     }
 }
-let b = new C(i.h, {
+let N = new v(i.h, {
     LOGOUT: c,
     GAME_SERVER_FETCH_CATALOG_SUCCESS: _,
     GAME_SERVER_FETCH_GLOBAL_CATALOG_SUCCESS: f,
-    GAME_SERVER_FETCH_INSTANCES_SUCCESS: h,
-    GAME_SERVER_FETCH_GAME_INSTRUCTIONS_SUCCESS: p,
-    GAME_SERVER_UPDATE_INSTANCE_SUCCESS: g,
-    GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS: A,
-    GAME_SERVER_CREATE: I,
-    GAME_SERVER_UPDATE: I,
-    GAME_SERVER_DELETE: T,
-    GUILD_POWERUP_ENTITLEMENTS_CREATE: y,
+    GAME_SERVER_FETCH_INSTANCES_SUCCESS: p,
+    GAME_SERVER_FETCH_GAME_INSTRUCTIONS_SUCCESS: h,
+    GAME_SERVER_UPDATE_INSTANCE_SUCCESS: m,
+    GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS: g,
+    GAME_SERVER_CREATE: A,
+    GAME_SERVER_UPDATE: A,
+    GAME_SERVER_DELETE: I,
+    GUILD_POWERUP_ENTITLEMENTS_CREATE: T,
     GUILD_POWERUP_ENTITLEMENTS_DELETE: S,
 });

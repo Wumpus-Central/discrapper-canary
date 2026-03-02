@@ -16,6 +16,7 @@ function r(e) {
         baseCost: n,
         disabled: e.tenant_metadata?.guild_monetization?.game_server?.disabled,
         early_access: e.tenant_metadata?.guild_monetization?.game_server?.early_access,
+        can_market: e.tenant_metadata?.guild_monetization?.game_server?.can_market,
     };
 }
 n.d(t, { o: () => r });
