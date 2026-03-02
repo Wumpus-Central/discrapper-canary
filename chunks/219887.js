@@ -69,9 +69,9 @@ class A extends s.PureComponent {
                                     : e instanceof c.EE
                                       ? null == e.bank
                                           ? _.intl.string(_.t.nSbwqC)
-                                          : _.intl.format(_.t["9kUlRU"], { bank: (0, l.o0)(e.bank) })
+                                          : _.intl.format(_.t["9kUlRU"], { bank: (0, l.o)(e.bank) })
                                       : e instanceof c.rJ
-                                        ? _.intl.format(_.t.hSPoZw, { bank: (0, l.jK)(e.bank) })
+                                        ? _.intl.format(_.t.hSPoZw, { bank: (0, l.j)(e.bank) })
                                         : e instanceof c.FQ
                                           ? _.intl.string(_.t["+rbTmL"])
                                           : e instanceof c.Pw

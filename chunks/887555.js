@@ -1,145 +1,27 @@
 "use strict";
-n.d(t, { Ay: () => s, jK: () => c, o0: () => l });
-var r = n(600975),
-    i = n(652215),
-    a = n(985018);
-let s = (0, r.C)({
-        kind: "user",
-        id: "2021-08_regional_payment_methods",
-        label: "Regional Payment Methods",
-        defaultConfig: { enabledPaymentTypes: [], forceCountryCode: null, validCountryCodes: [] },
-        treatments: [
-            {
-                id: 1,
-                label: "Regional Payment Method for Germany",
-                config: { enabledPaymentTypes: [], forceCountryCode: "DE", validCountryCodes: ["DE"] },
-            },
-            {
-                id: 2,
-                label: "Regional Payment Method for US",
-                config: {
-                    enabledPaymentTypes: [i.hes.VENMO, i.hes.CASH_APP],
-                    forceCountryCode: "US",
-                    validCountryCodes: ["US"],
-                },
-            },
-            {
-                id: 3,
-                label: "Regional Payment Method for Brazil",
-                config: { enabledPaymentTypes: [], forceCountryCode: "BR", validCountryCodes: ["BR"] },
-            },
-            {
-                id: 4,
-                label: "Regional Payment Method for Turkey",
-                config: { enabledPaymentTypes: [], forceCountryCode: "TR", validCountryCodes: ["TR"] },
-            },
-            {
-                id: 5,
-                label: "Regional Payment Method for Poland",
-                config: { enabledPaymentTypes: [i.hes.PRZELEWY24], forceCountryCode: "PL", validCountryCodes: ["PL"] },
-            },
-            {
-                id: 6,
-                label: "Enable paysafecard",
-                config: {
-                    enabledPaymentTypes: [i.hes.PAYSAFE_CARD],
-                    forceCountryCode: "DE",
-                    validCountryCodes: ["BG", "CZ", "DK", "HU", "RO", "SE", "DE"],
-                },
-            },
-            {
-                id: 7,
-                label: "Regional Payment Method for Philippines",
-                config: { enabledPaymentTypes: [i.hes.GCASH], forceCountryCode: "PH", validCountryCodes: ["PH"] },
-            },
-            {
-                id: 8,
-                label: "Regional Payment Method for Malaysia",
-                config: { enabledPaymentTypes: [i.hes.GRABPAY_MY], forceCountryCode: "MY", validCountryCodes: ["MY"] },
-            },
-            {
-                id: 9,
-                label: "Regional Payment Method for Vietnam",
-                config: { enabledPaymentTypes: [i.hes.MOMO_WALLET], forceCountryCode: "VN", validCountryCodes: ["VN"] },
-            },
-            {
-                id: 10,
-                label: "Regional Payment Method for Indonesia",
-                config: {
-                    enabledPaymentTypes: [i.hes.GOPAY_WALLET],
-                    forceCountryCode: "ID",
-                    validCountryCodes: ["ID"],
-                },
-            },
-            {
-                id: 11,
-                label: "Regional Payment Method for South Korea",
-                config: { enabledPaymentTypes: [i.hes.KAKAOPAY], forceCountryCode: "KR", validCountryCodes: ["KR"] },
-            },
-            {
-                id: 12,
-                label: "Regional Payment Method for Belgium",
-                config: {
-                    enabledPaymentTypes: [i.hes.PAYSAFE_CARD, i.hes.BANCONTACT],
-                    forceCountryCode: "BE",
-                    validCountryCodes: ["BE"],
-                },
-            },
-            {
-                id: 13,
-                label: "Regional Payment Method for Austria",
-                config: {
-                    enabledPaymentTypes: [i.hes.PAYSAFE_CARD, i.hes.EPS],
-                    forceCountryCode: "AT",
-                    validCountryCodes: ["AT"],
-                },
-            },
-            {
-                id: 14,
-                label: "Regional Payment Method for Netherlands",
-                config: {
-                    enabledPaymentTypes: [i.hes.PAYSAFE_CARD, i.hes.IDEAL],
-                    forceCountryCode: "NL",
-                    validCountryCodes: ["NL"],
-                },
-            },
-            {
-                id: 15,
-                label: "Launch Paysafecard",
-                config: {
-                    enabledPaymentTypes: [i.hes.PAYSAFE_CARD],
-                    forceCountryCode: "ES",
-                    validCountryCodes: ["ES", "IT"],
-                },
-            },
-            {
-                id: 16,
-                label: "Launch Cash App",
-                config: { enabledPaymentTypes: [i.hes.CASH_APP], forceCountryCode: "US", validCountryCodes: ["US"] },
-            },
-        ],
-    }),
-    o = new Map([
-        ["abn_amro", "ABN AMRO"],
-        ["asn_bank", "ASN Bank"],
-        ["bunq", "Bunq"],
-        ["ing ", "ING"],
-        ["knab", "Knab"],
-        ["n26", "N26"],
-        ["nn", "Nationale-Nederlanden"],
-        ["rabobank", "Rabobank"],
-        ["revolut", "Revolut"],
-        ["regiobank", "RegioBank"],
-        ["sns_bank", "SNS Bank (De Volksbank)"],
-        ["triodos_bank", "Triodos Bank"],
-        ["van_lanschot", "Van Lanschot"],
-        ["yoursafe", "Yoursafe"],
-        ["handelsbanken", "Handelsbanken"],
-    ]);
-function l(e) {
-    return void 0 !== e && o.has(e) ? o.get(e) : a.intl.string(a.t.jdPblk);
+n.d(t, { j: () => o, o: () => s });
+var r = n(985018);
+let i = new Map([
+    ["abn_amro", "ABN AMRO"],
+    ["asn_bank", "ASN Bank"],
+    ["bunq", "Bunq"],
+    ["ing ", "ING"],
+    ["knab", "Knab"],
+    ["n26", "N26"],
+    ["nn", "Nationale-Nederlanden"],
+    ["rabobank", "Rabobank"],
+    ["revolut", "Revolut"],
+    ["regiobank", "RegioBank"],
+    ["sns_bank", "SNS Bank (De Volksbank)"],
+    ["triodos_bank", "Triodos Bank"],
+    ["van_lanschot", "Van Lanschot"],
+    ["yoursafe", "Yoursafe"],
+    ["handelsbanken", "Handelsbanken"],
+]);
+function s(e) {
+    return void 0 !== e && i.has(e) ? i.get(e) : r.intl.string(r.t.jdPblk);
 }
-let u = new Map([
+let a = new Map([
     ["arzte_und_apotheker_bank", "\xc4rzte- und Apothekerbank"],
     ["austrian_anadi_bank_ag", "Austrian Anadi Bank AG"],
     ["bank_austria", "Bank Austria"],
@@ -168,6 +50,6 @@ let u = new Map([
     ["volkskreditbank_ag", "Volkskreditbank AG"],
     ["vr_bank_braunau", "VR-Bank Braunau"],
 ]);
-function c(e) {
-    return void 0 !== e && u.has(e) ? u.get(e) : a.intl.string(a.t.jdPblk);
+function o(e) {
+    return void 0 !== e && a.has(e) ? a.get(e) : r.intl.string(r.t.jdPblk);
 }

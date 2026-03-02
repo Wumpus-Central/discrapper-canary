@@ -1,36 +1,34 @@
 "use strict";
-n.d(t, { E: () => f, p: () => p });
+n.d(t, { E: () => d, p: () => _ });
 var r = n(64700),
     i = n(397927),
-    a = n(964486),
-    s = n(626584),
-    o = n(615405),
-    l = n(739508),
-    u = n(219538),
-    c = n(550238),
-    d = n(648335);
-let _ = new s.A("useStripePaymentElementOptions"),
-    f = function () {
+    s = n(964486),
+    a = n(626584),
+    o = n(739508),
+    l = n(219538),
+    u = n(648335);
+let c = new a.A("useStripePaymentElementOptions"),
+    d = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             t = (0, i.rdh)(i.LU0.colors.MODAL_BACKGROUND),
             n = (0, i.rdh)(i.LU0.colors.TEXT_STRONG),
-            a = (0, i.rdh)(i.LU0.colors.INPUT_BACKGROUND_DEFAULT),
-            s = e.theme ?? "flat",
+            s = (0, i.rdh)(i.LU0.colors.INPUT_BACKGROUND_DEFAULT),
+            a = e.theme ?? "flat",
             o = e.colorText ?? n.hex(),
             l = e.colorBackground ?? t.hex(),
-            u = e.inputBackgroundColor ?? a.hex(),
-            c = e.tabBackgroundColor ?? a.hex();
+            u = e.inputBackgroundColor ?? s.hex(),
+            c = e.tabBackgroundColor ?? s.hex();
         return {
             elementsAppearance: r.useMemo(
                 () => ({
-                    theme: s,
+                    theme: a,
                     variables: { colorText: o, colorBackground: l },
                     rules: { ".Input": { backgroundColor: u }, ".Tab": { backgroundColor: c } },
                 }),
-                [s, o, l, u, c],
+                [a, o, l, u, c],
             ),
             elementsAppearanceOptions: {
-                theme: s,
+                theme: a,
                 colorText: o,
                 colorBackground: l,
                 inputBackgroundColor: u,
@@ -38,48 +36,44 @@ let _ = new s.A("useStripePaymentElementOptions"),
             },
         };
     },
-    p = (e) => {
+    _ = (e) => {
         let { onSetupError: t, elementsAppearanceOptions: n = {} } = e,
-            [i, s] = r.useState(void 0),
-            [p, h] = r.useState(null),
-            [m, g] = r.useState(!0),
-            [E, A] = r.useState([]),
-            [I, T] = r.useState({}),
-            y = r.useCallback(async () => {
-                let e = (0, c.J)({
-                    ipCountryCode: o.A.ipCountryCode ?? "ALL",
-                    location: "stripe_payment_element_options",
-                }).countryPaymentMethods;
+            [i, a] = r.useState(void 0),
+            [_, f] = r.useState(null),
+            [p, h] = r.useState(!0),
+            [m, E] = r.useState([]),
+            [g, A] = r.useState({}),
+            I = r.useCallback(async () => {
                 try {
-                    let { client_secret: t, custom_payment_methods: n } = await (0, u.w)(e),
-                        r = (0, d.Dd)(n),
-                        i = n.reduce((e, t) => ((e[t.custom_payment_method_id] = t.payment_source_type), e), {});
-                    A(r), T(i), s(t);
+                    let { client_secret: e, custom_payment_methods: t } = await (0, l.w)(),
+                        n = (0, u.Dd)(t),
+                        r = t.reduce((e, t) => ((e[t.custom_payment_method_id] = t.payment_source_type), e), {});
+                    E(n), A(r), a(e);
                 } catch (e) {
-                    h(e),
+                    f(e),
                         null != t && t(e),
-                        _.error("there was an error on setup for Payment Elements: ", e),
-                        (0, l.pM)(e, { tags: { source: "payment_elements" } });
+                        c.error("there was an error on setup for Payment Elements: ", e),
+                        (0, o.pM)(e, { tags: { source: "payment_elements" } });
                 }
-                g(!1);
+                h(!1);
             }, [t]);
-        (0, a.Ay)(() => {
-            y();
+        (0, s.Ay)(() => {
+            I();
         });
-        let { elementsAppearance: S, elementsAppearanceOptions: v } = f(n);
+        let { elementsAppearance: T, elementsAppearanceOptions: S } = d(n);
         return {
-            setupError: p,
+            setupError: _,
             elementsOptions: r.useMemo(
                 () =>
-                    m
+                    p
                         ? null
-                        : { clientSecret: i, appearance: S, customPaymentMethods: E, paymentMethodCreation: "manual" },
-                [S, i, E, m],
+                        : { clientSecret: i, appearance: T, customPaymentMethods: m, paymentMethodCreation: "manual" },
+                [T, i, m, p],
             ),
             setupIntentSecret: i,
-            customPaymentMethods: E,
-            customPaymentMethodIdsToSourceTypes: I,
-            isLoading: m,
-            elementsAppearanceOptions: v,
+            customPaymentMethods: m,
+            customPaymentMethodIdsToSourceTypes: g,
+            isLoading: p,
+            elementsAppearanceOptions: S,
         };
     };
