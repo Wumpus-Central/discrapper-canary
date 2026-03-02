@@ -3,46 +3,45 @@ n.d(t, {
     AE: () => R,
     L8: () => E,
     XA: () => O,
-    XB: () => D,
-    Zj: () => u,
-    ge: () => f,
-    r1: () => b,
-    tT: () => d,
-    u: () => c,
+    XB: () => b,
+    Zj: () => l,
+    ge: () => _,
+    r1: () => N,
+    tT: () => c,
+    u: () => u,
 });
 var r = n(723702),
-    i = n(389512),
-    a = n(334278);
+    i = n(334278);
 let s = (e, t) => {
         if (null == e) return !1;
         let [n, r] = e.split(/\?/, 1);
         return t.test(n);
     },
-    o = (e, t) => {
+    a = (e, t) => {
         if (null == e) return !1;
         let [n, r] = e.split("/");
         return n === t;
     },
-    l = /\.(png|jpe?g|jfif|webp|gif|heic|heif|dng|avif)$/i,
-    u = (e) => s(e, l),
-    c = (e) => null != e && l.test(e),
-    d = (e) => o(e, "image"),
-    _ = /\.(webp|gif|avif)$/i,
-    f = (e) => s(e, _),
-    p = /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i,
-    h = /\.(mp3|m4a|wav|ogg|opus|flac)$/i,
-    m = /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i,
-    g = (0, r.isIOS)() ? p : (0, r.isAndroid)() ? h : m,
-    E = (e) => null != e && g.test(e),
-    A = /\.(webm)$/i,
-    I = /\.(mp4|mov|qt)$/i,
+    o = /\.(png|jpe?g|jfif|webp|gif|heic|heif|dng|avif)$/i,
+    l = (e) => s(e, o),
+    u = (e) => null != e && o.test(e),
+    c = (e) => a(e, "image"),
+    d = /\.(webp|gif|avif)$/i,
+    _ = (e) => s(e, d),
+    f = /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i,
+    p = /\.(mp3|m4a|wav|ogg|opus|flac)$/i,
+    h = /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i,
+    m = (0, r.isIOS)() ? f : (0, r.isAndroid)() ? p : h,
+    E = (e) => null != e && m.test(e),
+    g = /\.(webm)$/i,
+    A = /\.(mp4|mov|qt)$/i,
+    I = /\.(mp4|webm|mov|qt)$/i,
     T = /\.(mp4|webm|mov|qt)$/i,
-    y = /\.(mp4|webm|mov|qt)$/i,
     S = /\.(riv)$/i,
-    v = (0, r.isIOS)() ? I : (0, r.isAndroid)() ? T : y,
-    C = (e) => (0, a.D)() && i.A.getConfig({ location: "isWebPlayerVideoUrl" }).enabled && s(e, A),
-    b = (e) => s(e, v) || C(e),
-    N = (e) => null != e && (0, a.D)() && i.A.getConfig({ location: "isWebPlayerVideoFile" }).enabled && A.test(e),
-    R = (e) => null != e && (v.test(e) || N(e)),
+    y = (0, r.isIOS)() ? A : (0, r.isAndroid)() ? I : T,
+    v = (e) => (0, i.D)() && s(e, g),
+    N = (e) => s(e, y) || v(e),
+    C = (e) => null != e && (0, i.D)() && g.test(e),
+    R = (e) => null != e && (y.test(e) || C(e)),
     O = (e) => null != e && S.test(e),
-    D = (e) => o(e, "video");
+    b = (e) => a(e, "video");
