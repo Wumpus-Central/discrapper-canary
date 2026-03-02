@@ -10,8 +10,9 @@ var r = a(397927),
 let d = {
     name: "BackgroundImage",
     id: "background-image",
-    component: (e) =>
-        (0, l.jsxs)("div", {
+    component: (e) => {
+        let { backgroundImage: t } = e;
+        return (0, l.jsxs)("div", {
             children: [
                 (0, l.jsx)(r.Text, {
                     variant: "text-lg/semibold",
@@ -19,7 +20,7 @@ let d = {
                         "Background Image just takes children and displays them in with a background image behind them, and some padding to add inset",
                 }),
                 (0, l.jsx)(o.A, {
-                    ...e,
+                    backgroundImage: { src: t },
                     children: (0, l.jsx)(i.A, {
                         children: (0, l.jsx)(s.A, {
                             columns: 2,
@@ -40,7 +41,8 @@ let d = {
                     }),
                 }),
             ],
-        }),
+        });
+    },
     controls: {
         backgroundImage: {
             label: "Background Image",

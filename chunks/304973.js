@@ -6,7 +6,7 @@ var r = t(627968),
     i = t(494213);
 let d = (e) => {
     let { backgroundImage: l, href: t, ctaText: d } = e,
-        s = (0, n.A)(l);
+        s = (0, n.A)(l.src);
     return (0, r.jsx)(a.A, {
         children: (0, r.jsx)("div", {
             className: i.j,

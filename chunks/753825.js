@@ -6,7 +6,7 @@ var l = a(627968),
     s = a(709710);
 let i = (e) => {
     let { backgroundImage: t, href: a, ctaText: i } = e,
-        o = (0, n.A)(t);
+        o = (0, n.A)(t.src);
     return (0, l.jsx)("div", {
         className: s.q,
         style: { backgroundImage: `url(${o})` },

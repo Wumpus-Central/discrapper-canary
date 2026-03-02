@@ -10,10 +10,12 @@ let i = {
         children: [
             {
                 block: "ContainedHero",
-                bannerSrc:
-                    "https://cdn.discordapp.com/assets/content/cd657aa88cb5c636a97dd3a5d68debfb009515cdc1c541296c1ac4e3ad5fc63e",
-                logoSrc:
-                    "https://cdn.discordapp.com/assets/content/272efe50874c7fc6e788078e6f8b5fdfc40a7de7358fe3672f1b5e3659047bda",
+                bannerSrc: {
+                    src: "https://cdn.discordapp.com/assets/content/cd657aa88cb5c636a97dd3a5d68debfb009515cdc1c541296c1ac4e3ad5fc63e",
+                },
+                logoSrc: {
+                    src: "https://cdn.discordapp.com/assets/content/272efe50874c7fc6e788078e6f8b5fdfc40a7de7358fe3672f1b5e3659047bda",
+                },
                 backgroundColor: "rgb(25, 32, 86)",
                 children: [
                     {
