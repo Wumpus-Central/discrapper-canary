@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { $j: () => s, Eh: () => a, ko: () => o });
+n.d(t, { $j: () => a, Eh: () => s, ko: () => o });
 var r = n(600975),
     i = n(688151);
-let a = (0, r.C)({
+let s = (0, r.C)({
     kind: "guild",
     id: "2025-07_hang_status",
     label: "Hang Statuses",
@@ -59,13 +59,24 @@ let a = (0, r.C)({
                 defaultStatusVariant: "twemojimild",
             },
         },
+        {
+            id: 5,
+            label: "Enable Hang Status with no default, allow clearing statuses",
+            config: {
+                enableHangStatus: !0,
+                setDefaultStatus: !1,
+                showEmptyChannelTopic: !1,
+                allowPermanentClear: !0,
+                defaultStatusVariant: "illocons",
+            },
+        },
     ],
 });
-function s(e) {
+function a(e) {
     let { guildId: t, location: n } = e;
-    return a.useExperiment({ guildId: t, location: n }, { autoTrackExposure: !0 });
+    return s.useExperiment({ guildId: t, location: n }, { autoTrackExposure: !0 });
 }
 function o(e) {
     let { guildId: t, location: n } = e;
-    return a.getCurrentConfig({ guildId: t, location: n }, { autoTrackExposure: !0 });
+    return s.getCurrentConfig({ guildId: t, location: n }, { autoTrackExposure: !0 });
 }
