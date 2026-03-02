@@ -6,11 +6,14 @@ var i = n(64700),
     r = n(810397),
     o = n(49999);
 function c(e) {
-    let [t, n] = (0, r.A)(e);
+    let [t, n] = (0, r.A)(e),
+        c = i.useRef(null);
     i.useEffect(() => {
-        null != t &&
-            (t === l.M.FIRST_BOOSTER_UPSELL &&
-                s.A.sendGuildBoostUpsellSystemMessage(e.id, { guildBoostUpsellType: a.Mk.FIRST_BOOSTER }),
-            n(o.i.AUTO_DISMISS));
+        null == t ||
+            ((null == c.current || c.current.visibleContent !== t || c.current.channelId !== e.id) &&
+                (t === l.M.FIRST_BOOSTER_UPSELL &&
+                    s.A.sendGuildBoostUpsellSystemMessage(e.id, { guildBoostUpsellType: a.Mk.FIRST_BOOSTER }),
+                (c.current = { visibleContent: t, channelId: e.id }),
+                n(o.i.AUTO_DISMISS)));
     }, [t, e.id, n]);
 }
