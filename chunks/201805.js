@@ -12,7 +12,7 @@ n.d(t, {
 });
 var r = n(627968),
     i = n(64700),
-    s = n(442215),
+    s = n(475539),
     a = n(311907),
     o = n(397927),
     l = n(59520);
@@ -35,14 +35,14 @@ var u = n(87719),
     v = n(710969),
     N = n(639214),
     C = n(901406),
-    b = n(92246),
-    R = n(792620),
-    O = n(814793),
+    R = n(92246),
+    O = n(792620),
+    b = n(814793),
     D = n(753386),
     L = n(175248),
     w = n(545986),
-    x = n(654487),
-    M = n(985018);
+    M = n(654487),
+    x = n(985018);
 function P(e) {
     let { quest: t, questContent: n, questContentPosition: r, questContentRowIndex: s, sourceQuestContent: o } = e,
         l = (0, a.bG)([c.default], () => c.default.getCurrentUser()),
@@ -59,16 +59,16 @@ function P(e) {
                 questContentRowIndex: s,
                 sourceQuestContent: o,
             }),
-            (0, b.ks)(t.config) && !_
+            (0, R.ks)(t.config) && !_
                 ? (0, L.E)()
                 : d
-                  ? (0, b.K9)(t.config)
+                  ? (0, R.K9)(t.config)
                       ? (0, u.x)()
-                      : (0, b.tU)(t.config)
+                      : (0, R.tU)(t.config)
                         ? (0, w.hJ)(t, n, o)
-                        : (0, b.HG)(t.config)
+                        : (0, R.HG)(t.config)
                           ? (0, w.cf)(t, n, o)
-                          : (0, b.ks)(t.config)
+                          : (0, R.ks)(t.config)
                             ? (0, w.Df)(t, n, o)
                             : (0, w.rx)({ quest: t, sourceQuestContent: o })
                   : (0, L.E)());
@@ -116,13 +116,13 @@ let k = (e) => {
         return (0, r.jsx)("span", { onClick: o, children: i });
     };
 function G(e) {
-    return e.config.features.includes(x.Li.START_QUEST_CTA)
-        ? (0, R.vl)(e)
-            ? e.config.features.includes(x.Li.CLOUD_GAMING_ACTIVITY)
-                ? { text: M.intl.string(M.t["+qoymD"]), questContentCTA: I.Cy.START_QUEST }
-                : { text: M.intl.string(M.t["Ie9++s"]), questContentCTA: I.Cy.START_QUEST }
-            : { text: M.intl.string(M.t["hRIVy+"]), questContentCTA: I.Cy.START_QUEST }
-        : { text: M.intl.string(M.t.l7E81v), questContentCTA: I.Cy.ACCEPT_QUEST };
+    return e.config.features.includes(M.Li.START_QUEST_CTA)
+        ? (0, O.vl)(e)
+            ? e.config.features.includes(M.Li.CLOUD_GAMING_ACTIVITY)
+                ? { text: x.intl.string(x.t["+qoymD"]), questContentCTA: I.Cy.START_QUEST }
+                : { text: x.intl.string(x.t["Ie9++s"]), questContentCTA: I.Cy.START_QUEST }
+            : { text: x.intl.string(x.t["hRIVy+"]), questContentCTA: I.Cy.START_QUEST }
+        : { text: x.intl.string(x.t.l7E81v), questContentCTA: I.Cy.ACCEPT_QUEST };
 }
 function F(e) {
     let {
@@ -141,20 +141,20 @@ function F(e) {
         p = (0, g.fc)(t),
         h = (0, T.vU)()?.getId(),
         { launchInGameActivity: m } = (0, g.zW)(t),
-        E = (0, O.vA)(t);
+        E = (0, b.vA)(t);
     return i.useMemo(() => {
         switch (n) {
             case g.F3.UNACCEPTED:
-                let e = M.intl.string(M.t.kUQLMJ),
+                let e = x.intl.string(x.t.kUQLMJ),
                     i = I.Cy.ACCEPT_QUEST;
                 return (
-                    l && ((e = M.intl.string(M.t.umdNin)), (i = I.Cy.START_QUEST)),
-                    (u || (0, R.vl)(t)) && ({ text: e, questContentCTA: i } = G(t)),
+                    l && ((e = x.intl.string(x.t.umdNin)), (i = I.Cy.START_QUEST)),
+                    (u || (0, O.vl)(t)) && ({ text: e, questContentCTA: i } = G(t)),
                     {
                         text: e,
                         tooltipText: null,
                         onClick: async () => {
-                            if ((0, R.BS)(t)) {
+                            if ((0, O.K$)(t)) {
                                 await (0, _.Oy)(t.id, {
                                     questContent: r,
                                     questContentCTA: i,
@@ -199,7 +199,7 @@ function F(e) {
             case g.F3.IN_PROGRESS:
                 if (f && o)
                     return {
-                        text: M.intl.string(M.t.Cfye4v),
+                        text: x.intl.string(x.t.Cfye4v),
                         tooltipText: null,
                         onClick: () =>
                             (0, C.se)(
@@ -214,9 +214,9 @@ function F(e) {
                                 },
                             ),
                     };
-                if ((0, R.BS)(t))
+                if ((0, O.K$)(t))
                     return {
-                        text: M.intl.string(M.t.IsH2Sp),
+                        text: x.intl.string(x.t.IsH2Sp),
                         tooltipText: null,
                         onClick: () => {
                             (0, w.Fy)(t);
@@ -225,7 +225,7 @@ function F(e) {
                 if (l)
                     return {
                         text: (0, D.WM)(p),
-                        tooltipText: M.intl.string(M.t.hsbwjv),
+                        tooltipText: x.intl.string(x.t.hsbwjv),
                         onClick: () =>
                             (0, w.d5)({
                                 quest: t,
@@ -238,20 +238,20 @@ function F(e) {
                     let { text: e } = G(t);
                     return {
                         text: e,
-                        tooltipText: M.intl.string(M.t.hsbwjv),
+                        tooltipText: x.intl.string(x.t.hsbwjv),
                         onClick: () => {
-                            t.config.features.includes(x.Li.START_QUEST_CTA) && m();
+                            t.config.features.includes(M.Li.START_QUEST_CTA) && m();
                         },
                     };
                 }
-                return { text: M.intl.string(M.t.cfY4PE), tooltipText: M.intl.string(M.t.hsbwjv), onClick: null };
+                return { text: x.intl.string(x.t.cfY4PE), tooltipText: x.intl.string(x.t.hsbwjv), onClick: null };
             case g.F3.COMPLETED:
-                return { text: M.intl.string(M.t.cfY4PE), tooltipText: null, onClick: d };
+                return { text: x.intl.string(x.t.cfY4PE), tooltipText: null, onClick: d };
             case g.F3.CLAIMED:
                 return {
                     tooltipText: null,
                     onClick: d,
-                    text: (0, b.r7)(t.config) ? M.intl.string(M.t.bAGFz3) : M.intl.string(M.t.vTgCWx),
+                    text: (0, R.r7)(t.config) ? x.intl.string(x.t.bAGFz3) : x.intl.string(x.t.vTgCWx),
                 };
         }
     }, [n, l, f, o, d, t, r, s, a, h, p, u, m, c, E]);
@@ -275,7 +275,7 @@ function B(e) {
         { premiumSubscription: s } = (0, a.cf)([d.A], () => ({ premiumSubscription: d.A.getPremiumSubscription() })),
         o = (0, a.bG)([f.A], () => null != f.A.questDeliveryOverride);
     if (null == n) return { isQuestBarVisible: !1, reason: "quest_is_null" };
-    if ((0, b.K9)(n.config) && s?.isPurchasedExternally)
+    if ((0, R.K9)(n.config) && s?.isPurchasedExternally)
         return { isQuestBarVisible: !1, reason: "premium_subscription_is_purchased_externally" };
     let l = n.userStatus?.claimedAt != null,
         u = !o && null != n.userStatus && (0, v.gO)(n.userStatus, p.uF.QUEST_BAR);
@@ -305,7 +305,7 @@ function Y(e) {
         i.useCallback(() => {
             t &&
                 ((0, y.Xm)(n, r),
-                (0, o.showToast)((0, o.createToast)(M.intl.string(M.t["+5kSoW"]), o.ToastType.SUCCESS)));
+                (0, o.showToast)((0, o.createToast)(x.intl.string(x.t["+5kSoW"]), o.ToastType.SUCCESS)));
         }, [t, n, r]),
         3e3,
         [],
@@ -316,7 +316,7 @@ function W(e) {
     let t = (0, a.bG)([f.A], () => f.A.quests),
         s = (0, a.bG)([h.A], () => h.A.getState().autoEnroll),
         l = i.useMemo(
-            () => (0, N.jm)(t, e, !0).find((e) => !e.config.features.includes(x.Li.ACTIVITY_QUEST_AUTO_ENROLLMENT)),
+            () => (0, N.jm)(t, e, !0).find((e) => !e.config.features.includes(M.Li.ACTIVITY_QUEST_AUTO_ENROLLMENT)),
             [t, e],
         ),
         u = (0, a.bG)([h.A], () => h.A.isDismissed(l?.id));
@@ -325,9 +325,12 @@ function W(e) {
             l.userStatus?.enrolledAt != null ||
             s ||
             u ||
-            (0, o.mMO)(async () => {
-                let { default: e } = await n.e("85986").then(n.bind(n, 113273));
-                return (t) => (0, r.jsx)(e, { ...t, quest: l });
-            });
+            (0, o.mMO)(
+                async () => {
+                    let { default: e } = await n.e("85986").then(n.bind(n, 113273));
+                    return (t) => (0, r.jsx)(e, { ...t, quest: l });
+                },
+                { modalKey: "quest-activity-unenrolled-modal" },
+            );
     }, [l, s, u]);
 }
