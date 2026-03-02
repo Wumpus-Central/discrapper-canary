@@ -1,79 +1,80 @@
 "use strict";
 n.d(t, {
-    AD: () => N,
-    Cm: () => b,
-    DY: () => C,
-    FX: () => F,
-    Gg: () => A,
-    Jo: () => et,
-    Kc: () => S,
-    Kf: () => eh,
+    AD: () => C,
+    Cm: () => O,
+    DY: () => R,
+    FX: () => V,
+    Gg: () => I,
+    Jo: () => en,
+    Kc: () => y,
     L_: () => em,
-    Lt: () => H,
-    Lw: () => q,
+    Lt: () => j,
+    Lw: () => Z,
     NJ: () => r.NJ,
-    Nc: () => R,
-    OL: () => v,
-    Pq: () => er,
-    Q7: () => w,
-    Sb: () => ea,
+    Nc: () => b,
+    OL: () => N,
+    Pq: () => ei,
+    Q7: () => x,
+    Sb: () => eo,
     TG: () => eg,
-    Tk: () => eo,
-    U2: () => l,
-    VV: () => M,
-    Wz: () => ef,
-    Xl: () => u,
+    Tk: () => el,
+    U2: () => u,
+    VV: () => P,
+    Wz: () => ep,
+    Xl: () => c,
     YI: () => X,
-    Yr: () => e_,
-    ZE: () => $,
-    _A: () => h,
-    __: () => D,
-    bZ: () => ec,
-    cl: () => f,
-    dL: () => j,
-    do: () => I,
+    Yr: () => ef,
+    ZE: () => q,
+    _A: () => m,
+    __: () => L,
+    bZ: () => ed,
+    cl: () => p,
+    dH: () => a.d,
+    dL: () => Y,
+    do: () => T,
     e$: () => z,
-    fr: () => P,
+    fr: () => k,
     gx: () => eA,
-    hC: () => c,
-    hV: () => k,
-    he: () => T,
-    il: () => Q,
-    js: () => V,
-    kM: () => m,
-    kv: () => y,
-    mX: () => ed,
-    me: () => K,
-    nf: () => B,
-    ps: () => E,
-    qF: () => en,
-    qm: () => g,
+    hC: () => d,
+    hV: () => U,
+    he: () => S,
+    il: () => J,
+    js: () => B,
+    kM: () => E,
+    kv: () => v,
+    mX: () => e_,
+    me: () => $,
+    nf: () => H,
+    ps: () => g,
+    qF: () => er,
+    qm: () => A,
     rE: () => r.rE,
-    rI: () => O,
-    rz: () => L,
-    sE: () => eu,
-    sJ: () => W,
-    sh: () => Z,
-    tE: () => G,
-    tF: () => x,
-    w7: () => el,
-    x0: () => ep,
-    xB: () => U,
-    xE: () => Y,
+    rI: () => D,
+    rz: () => w,
+    sE: () => ec,
+    sJ: () => K,
+    sh: () => Q,
+    tE: () => F,
+    tF: () => M,
+    w7: () => eu,
+    x0: () => eh,
+    xB: () => G,
+    xE: () => W,
     xe: () => eE,
-    xf: () => p,
-    zy: () => J,
+    xf: () => h,
+    zy: () => ee,
 });
 var r = n(812743),
     i = n(136722),
-    s = n(323125);
-let a = location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT,
-    o = location.protocol + "//discord.gg",
-    l = "discord.com",
-    u = "support.discord.com",
-    c = "support-dev.discord.com",
-    d = "discord.com",
-    _ = "feedback.discord.com";
+    s = n(323125),
+    a = n(346699);
+let o = location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT,
+    l = location.protocol + "//discord.gg",
+    u = "discord.com",
+    c = "support.discord.com",
+    d = "support-dev.discord.com",
+    _ = "discord.com",
+    f = "feedback.discord.com";
 Object.freeze({
     HINT_PURPLE: "#c9d2f0",
     DARK_PURPLE: "#697ec4",
@@ -98,7 +99,7 @@ Object.freeze({
     GREY7: "#1c242b",
     GREY9: "#202226",
 });
-var f = (function (e) {
+var p = (function (e) {
         return (
             (e.ONLINE = "online"),
             (e.OFFLINE = "offline"),
@@ -110,13 +111,13 @@ var f = (function (e) {
             e
         );
     })({}),
-    p = (function (e) {
+    h = (function (e) {
         return (
             (e.DESKTOP = "desktop"), (e.WEB = "web"), (e.MOBILE = "mobile"), (e.VR = "vr"), (e.UNKNOWN = "unknown"), e
         );
     })({});
-let h = "6Lef5iQTAAAAAKeIvIY-DeexoO3gj7ryl9rLMEnn";
-var m = (function (e) {
+let m = "6Lef5iQTAAAAAKeIvIY-DeexoO3gj7ryl9rLMEnn";
+var E = (function (e) {
         return (
             (e[(e.STRIPE = 1)] = "STRIPE"),
             (e[(e.BRAINTREE = 2)] = "BRAINTREE"),
@@ -130,10 +131,10 @@ var m = (function (e) {
             e
         );
     })({}),
-    E = (function (e) {
+    g = (function (e) {
         return (e[(e.VIRTUAL_CURRENCY = 8)] = "VIRTUAL_CURRENCY"), e;
     })({});
-let g = Object.freeze({
+let A = Object.freeze({
         1: "Stripe",
         2: "Braintree",
         3: "Apple",
@@ -144,15 +145,15 @@ let g = Object.freeze({
         9: "Apple ACOM",
         10: "TDS",
     }),
-    A = Object.freeze({
+    I = Object.freeze({
         BRAINTREE: { KEY: window.GLOBAL_ENV.BRAINTREE_KEY, PAYMENT_GATEWAY: "braintree" },
         STRIPE: { KEY: window.GLOBAL_ENV.STRIPE_KEY, PAYMENT_GATEWAY: "stripe" },
         ADYEN: { KEY: window.GLOBAL_ENV.ADYEN_KEY, PAYMENT_GATEWAY: "adyen" },
     });
-var I = (function (e) {
+var T = (function (e) {
         return (e.GOOGLE_PAY = "google_pay"), (e.APPLE_PAY = "apple_pay"), e;
     })({}),
-    T = (function (e) {
+    S = (function (e) {
         return (
             (e[(e.UNKNOWN = 0)] = "UNKNOWN"),
             (e[(e.CARD = 1)] = "CARD"),
@@ -178,7 +179,7 @@ var I = (function (e) {
             e
         );
     })({});
-let S = new Map([
+let y = new Map([
         [7, "paysafecard"],
         [8, "gcash"],
         [9, "grabpay_MY"],
@@ -187,20 +188,20 @@ let S = new Map([
         [12, "gopay_wallet"],
         [17, "cashapp"],
     ]),
-    y = new Map([
+    v = new Map([
         [14, "bancontact"],
         [3, "giropay"],
         [16, "ideal"],
     ]),
-    v = new Set([7, 8, 9, 12, 10, 13, 14, 15, 16, 4, 3, 5, 17]),
-    N = new Set([7, 9, 3, 5, 4, 14, 15, 16]),
-    C = new Set([1, 2, 6, 8, 10, 11, 13, 12, 17, 19]),
-    b = new Set([3, 4, 5, 14, 15, 16, 7, 9, 12]),
-    R = new Set([6]);
-var O = (function (e) {
+    N = new Set([7, 8, 9, 12, 10, 13, 14, 15, 16, 4, 3, 5, 17]),
+    C = new Set([7, 9, 3, 5, 4, 14, 15, 16]),
+    R = new Set([1, 2, 6, 8, 10, 11, 13, 12, 17, 19]),
+    O = new Set([3, 4, 5, 14, 15, 16, 7, 9, 12]),
+    b = new Set([6]);
+var D = (function (e) {
         return (e[(e.NEW = 1)] = "NEW"), e;
     })({}),
-    D = (function (e) {
+    L = (function (e) {
         return (
             (e[(e.PENDING = 0)] = "PENDING"),
             (e[(e.COMPLETED = 1)] = "COMPLETED"),
@@ -211,12 +212,12 @@ var O = (function (e) {
             e
         );
     })({}),
-    L = (function (e) {
+    w = (function (e) {
         return (
             (e[(e.PREMIUM = 1)] = "PREMIUM"), (e[(e.GUILD = 2)] = "GUILD"), (e[(e.APPLICATION = 3)] = "APPLICATION"), e
         );
     })({}),
-    w = (function (e) {
+    x = (function (e) {
         return (
             (e.PAYPAL_POPUP_CLOSED = "PAYPAL_POPUP_CLOSED"),
             (e.VENMO_APP_CANCELED = "VENMO_APP_CANCELED"),
@@ -226,14 +227,14 @@ var O = (function (e) {
         );
     })({});
 Object.freeze({ CONSTANT: 1, APPLE_STICKER: 2 });
-var x = (function (e) {
+var M = (function (e) {
         return (e[(e.DISCOVERY = 0)] = "DISCOVERY"), (e[(e.CHECKOUT = 1)] = "CHECKOUT"), e;
     })({}),
-    M = (function (e) {
+    P = (function (e) {
         return (e[(e.SUBSCRIPTION = 0)] = "SUBSCRIPTION"), (e[(e.ONE_TIME = 1)] = "ONE_TIME"), e;
     })({});
-let P = Object.freeze({ 0: "subscription", 1: "sku" });
-var k = (function (e) {
+let k = Object.freeze({ 0: "subscription", 1: "sku" });
+var U = (function (e) {
     return (
         (e[(e.VIEW_CHANNEL = 1024)] = "VIEW_CHANNEL"),
         (e[(e.READ_MESSAGE_HISTORY = 65536)] = "READ_MESSAGE_HISTORY"),
@@ -241,7 +242,7 @@ var k = (function (e) {
         e
     );
 })({});
-let U = Object.freeze({
+let G = Object.freeze({
         CREATE_INSTANT_INVITE: i.jB(0),
         KICK_MEMBERS: i.jB(1),
         BAN_MEMBERS: i.jB(2),
@@ -295,27 +296,27 @@ let U = Object.freeze({
         MANAGE_EVENTS: i.jB(33),
         CREATE_EVENTS: i.jB(44),
     }),
-    G = function () {
+    F = function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     },
-    F = () => null,
-    V = () => Promise.resolve(),
-    B = [
-        U.KICK_MEMBERS,
-        U.BAN_MEMBERS,
-        U.ADMINISTRATOR,
-        U.MANAGE_CHANNELS,
-        U.MANAGE_GUILD,
-        U.MANAGE_ROLES,
-        U.MANAGE_MESSAGES,
-        U.MANAGE_THREADS,
-        U.MODERATE_MEMBERS,
+    V = () => null,
+    B = () => Promise.resolve(),
+    H = [
+        G.KICK_MEMBERS,
+        G.BAN_MEMBERS,
+        G.ADMINISTRATOR,
+        G.MANAGE_CHANNELS,
+        G.MANAGE_GUILD,
+        G.MANAGE_ROLES,
+        G.MANAGE_MESSAGES,
+        G.MANAGE_THREADS,
+        G.MODERATE_MEMBERS,
     ],
-    H = i.kg(...B),
-    j = 1,
-    Y = 6463,
-    W = 10,
-    K = "RpcApplicationLogger";
+    j = i.kg(...H),
+    Y = 1,
+    W = 6463,
+    K = 10,
+    $ = "RpcApplicationLogger";
 var z = (function (e) {
         return (
             (e.DISPATCH = "DISPATCH"),
@@ -405,7 +406,7 @@ var z = (function (e) {
             e
         );
     })({}),
-    $ = (function (e) {
+    q = (function (e) {
         return (
             (e.CURRENT_USER_UPDATE = "CURRENT_USER_UPDATE"),
             (e.CURRENT_GUILD_MEMBER_UPDATE = "CURRENT_GUILD_MEMBER_UPDATE"),
@@ -454,7 +455,7 @@ var z = (function (e) {
             e
         );
     })({}),
-    q = (function (e) {
+    Z = (function (e) {
         return (
             (e[(e.UNKNOWN_ERROR = 1e3)] = "UNKNOWN_ERROR"),
             (e[(e.SERVICE_UNAVAILABLE = 1001)] = "SERVICE_UNAVAILABLE"),
@@ -507,34 +508,34 @@ var z = (function (e) {
             e
         );
     })({});
-let Z = 250,
-    Q = "token",
-    J = "tokens",
-    ee = "status.discord.com",
-    et = `https://${ee}`,
-    en = {
+let Q = 250,
+    J = "token",
+    ee = "tokens",
+    et = "status.discord.com",
+    en = `https://${et}`,
+    er = {
         PRESSKIT: "https://app.box.com/s/5puqm5ijahrrdao7yldi7fr3zah5i1am",
         REBRAND_PRESSKIT:
             "https://www.dropbox.com/scl/fo/2vittfakjukwa3zl4gnxh/AOS0AZlx-zA4TjDyv-M-dgk?rlkey=kn0v1lcqfq1lurj3lk3x1ujhf&dl=0",
         STATUS: "https://discordstatus.com",
-        HELP_AND_SUPPORT: `//${u}/hc/en-us`,
-        HELP_ARTICLE_ORBS_FAQ: `https://${u}/hc/en-us/articles/30593690165783`,
-        FEEDBACK: `//${_}`,
-        EMAIL_SUPPORT: `mailto:support@${d}`,
-        EMAIL_LAW_ENFORCEMENT: `mailto:lawenforcement@${d}`,
-        EMAIL_HYPESQUAD: `mailto:hypesquad@${d}`,
-        EMAIL_JOBS: `mailto:jobs@${d}`,
+        HELP_AND_SUPPORT: `//${c}/hc/en-us`,
+        HELP_ARTICLE_ORBS_FAQ: `https://${c}/hc/en-us/articles/30593690165783`,
+        FEEDBACK: `//${f}`,
+        EMAIL_SUPPORT: `mailto:support@${_}`,
+        EMAIL_LAW_ENFORCEMENT: `mailto:lawenforcement@${_}`,
+        EMAIL_HYPESQUAD: `mailto:hypesquad@${_}`,
+        EMAIL_JOBS: `mailto:jobs@${_}`,
         DEV_PERKS_FORM: "https://goo.gl/forms/oZfKBStV3sR8GHdU2",
         VERIFICATION_REQUIREMENTS: "https://dis.gd/vfqual",
-        BASE_URL: `https://${l}`,
-        PRESS_INQUIRIES: `mailto:press@${d}`,
+        BASE_URL: `https://${u}`,
+        PRESS_INQUIRIES: `mailto:press@${_}`,
         CONTACT_US: "https://dis.gd/contact",
         DEV_LANDING: "/build",
         DEV_PORTAL: "/developers",
         DEV_PORTAL_APPLICATIONS: "/developers/applications",
         DEV_PORTAL_DOCUMENTATION: "/developers/docs",
         DEV_PORTAL_SELF_SERVE_MODAL: "/developers/?store_signup=true",
-        PARTNER_CODE_OF_CONDUCT: `https://${u}/hc/en-us/articles/360024871991`,
+        PARTNER_CODE_OF_CONDUCT: `https://${c}/hc/en-us/articles/360024871991`,
         SUBMIT_TNS_REPORT: "https://dis.gd/request",
         MERCH_STORE: "https://discordmerch.com",
         MOD_ACADEMY_EXAM: "https://dis.gd/exam",
@@ -543,30 +544,30 @@ let Z = 250,
         TWITTER_SUPPORT: "https://twitter.com/discord_support",
         QUESTS: "/quests",
     },
-    er = Object.freeze({
+    ei = Object.freeze({
         TWITTER: Object.freeze({ default: "https://twitter.com/discord", ja: "https://twitter.com/discord_jp" }),
     }),
-    ei = Object.freeze({
-        WELCOME: `${a}/welcome/`,
-        ME: `${a}/channels/@me`,
-        SETTINGS: (e, t) => `${a}/settings/${e}${t ? `/${t}` : ""}`,
-        CONNECTION: (e) => `${a}/connections/${e}`,
-        CHANGELOGS: `${a}/settings/changelogs`,
-        LOGIN: `${a}/login`,
-        LOGIN_WITH_REDIRECT: (e) => `${a}/login?redirect_to=${e}`,
-        REGISTER: `${a}/register`,
-        REGISTER_WITH_REDIRECT: (e) => `${a}/register?redirect_to=${e}`,
-        CREATE_GUILD: `${a}/guilds/create`,
-        VANITY_INVITE: (e) => `${o}/${e}`,
-        HYPESQUAD_ONLINE: `${a}/settings/hypesquad-online`,
-        BROWSE_NITRO_TITLES: `${a}/store/browse?type=nitro`,
-        SKU_DETAILS: (e, t) => `${a}/store/skus/${e}${null != t ? `?store_listing_id=${t}` : ""}`,
+    es = Object.freeze({
+        WELCOME: `${o}/welcome/`,
+        ME: `${o}/channels/@me`,
+        SETTINGS: (e, t) => `${o}/settings/${e}${t ? `/${t}` : ""}`,
+        CONNECTION: (e) => `${o}/connections/${e}`,
+        CHANGELOGS: `${o}/settings/changelogs`,
+        LOGIN: `${o}/login`,
+        LOGIN_WITH_REDIRECT: (e) => `${o}/login?redirect_to=${e}`,
+        REGISTER: `${o}/register`,
+        REGISTER_WITH_REDIRECT: (e) => `${o}/register?redirect_to=${e}`,
+        CREATE_GUILD: `${o}/guilds/create`,
+        VANITY_INVITE: (e) => `${l}/${e}`,
+        HYPESQUAD_ONLINE: `${o}/settings/hypesquad-online`,
+        BROWSE_NITRO_TITLES: `${o}/store/browse?type=nitro`,
+        SKU_DETAILS: (e, t) => `${o}/store/skus/${e}${null != t ? `?store_listing_id=${t}` : ""}`,
         MESSAGE: (e, t, n) => `/channels/${e}/${t}/${n}`,
         CHANNEL: (e, t) => `/channels/${e}/${t}`,
-        REPORT: `${a}/report`,
-        QUEST_PREVIEW_TOOL_2: (e) => `${a}/quest-preview/${e}`,
+        REPORT: `${o}/report`,
+        QUEST_PREVIEW_TOOL_2: (e) => `${o}/quest-preview/${e}`,
     });
-var es = (function (e) {
+var ea = (function (e) {
     return (
         (e.INDEX = "/"),
         (e.INDEX_WORD = "/index"),
@@ -657,16 +658,16 @@ var es = (function (e) {
         (e.SNOWSGIVING_GIVEAWAY_TWITTER = "/terms/snowsgiving-2020/twitter"),
         e
     );
-})(es || {});
-let ea = (0, s.dN)(ei),
-    eo = (0, s.dN)(es),
-    el = Object.freeze({
+})(ea || {});
+let eo = (0, s.dN)(es),
+    el = (0, s.dN)(ea),
+    eu = Object.freeze({
         FACEBOOK_URL: "https://www.facebook.com/discord/",
         INSTAGRAM_URL: "https://www.instagram.com/discord/",
         YOUTUBE_URL: "https://www.youtube.com/discord/",
         TIKTOK_URL: "https://www.tiktok.com/@discord",
     });
-var eu = (function (e) {
+var ec = (function (e) {
         return (
             (e.EXPERIMENT_USER_TRIGGERED = "experiment_user_triggered"),
             (e.EXPERIMENT_GUILD_TRIGGERED = "experiment_guild_triggered"),
@@ -699,13 +700,13 @@ var eu = (function (e) {
             e
         );
     })({}),
-    ec = (function (e) {
+    ed = (function (e) {
         return (e.CLIENT_TELEMETRY = "client_telemetry"), e;
     })({}),
-    ed = (function (e) {
+    e_ = (function (e) {
         return (e.CLIENT_TELEMETRY = "/beaker"), e;
     })({}),
-    e_ = (function (e) {
+    ef = (function (e) {
         return (
             (e.AED = "aed"),
             (e.AFN = "afn"),
@@ -893,8 +894,8 @@ var eu = (function (e) {
             e
         );
     })({});
-let ef = "US";
-var ep = (function (e) {
+let ep = "US";
+var eh = (function (e) {
         return (
             (e[(e.SINGLE_PLAYER = 1)] = "SINGLE_PLAYER"),
             (e[(e.ONLINE_MULTIPLAYER = 2)] = "ONLINE_MULTIPLAYER"),
@@ -909,80 +910,6 @@ var ep = (function (e) {
             (e[(e.CLOUD_SAVES = 11)] = "CLOUD_SAVES"),
             (e[(e.ONLINE_COOP = 12)] = "ONLINE_COOP"),
             (e[(e.SECURE_NETWORKING = 13)] = "SECURE_NETWORKING"),
-            e
-        );
-    })({}),
-    eh = (function (e) {
-        return (
-            (e[(e.ACTION = 1)] = "ACTION"),
-            (e[(e.ACTION_RPG = 2)] = "ACTION_RPG"),
-            (e[(e.BRAWLER = 3)] = "BRAWLER"),
-            (e[(e.HACK_AND_SLASH = 4)] = "HACK_AND_SLASH"),
-            (e[(e.PLATFORMER = 5)] = "PLATFORMER"),
-            (e[(e.STEALTH = 6)] = "STEALTH"),
-            (e[(e.SURVIVAL = 7)] = "SURVIVAL"),
-            (e[(e.ADVENTURE = 8)] = "ADVENTURE"),
-            (e[(e.ACTION_ADVENTURE = 9)] = "ACTION_ADVENTURE"),
-            (e[(e.METROIDVANIA = 10)] = "METROIDVANIA"),
-            (e[(e.OPEN_WORLD = 11)] = "OPEN_WORLD"),
-            (e[(e.PSYCHOLOGICAL_HORROR = 12)] = "PSYCHOLOGICAL_HORROR"),
-            (e[(e.SANDBOX = 13)] = "SANDBOX"),
-            (e[(e.SURVIVAL_HORROR = 14)] = "SURVIVAL_HORROR"),
-            (e[(e.VISUAL_NOVEL = 15)] = "VISUAL_NOVEL"),
-            (e[(e.DRIVING_RACING = 16)] = "DRIVING_RACING"),
-            (e[(e.VEHICULAR_COMBAT = 17)] = "VEHICULAR_COMBAT"),
-            (e[(e.MASSIVELY_MULTIPLAYER = 18)] = "MASSIVELY_MULTIPLAYER"),
-            (e[(e.MMORPG = 19)] = "MMORPG"),
-            (e[(e.ROLE_PLAYING = 20)] = "ROLE_PLAYING"),
-            (e[(e.DUNGEON_CRAWLER = 21)] = "DUNGEON_CRAWLER"),
-            (e[(e.ROGUELIKE = 22)] = "ROGUELIKE"),
-            (e[(e.SHOOTER = 23)] = "SHOOTER"),
-            (e[(e.LIGHT_GUN = 24)] = "LIGHT_GUN"),
-            (e[(e.SHOOT_EM_UP = 25)] = "SHOOT_EM_UP"),
-            (e[(e.FPS = 26)] = "FPS"),
-            (e[(e.DUAL_JOYSTICK_SHOOTER = 27)] = "DUAL_JOYSTICK_SHOOTER"),
-            (e[(e.SIMULATION = 28)] = "SIMULATION"),
-            (e[(e.FLIGHT_SIMULATOR = 29)] = "FLIGHT_SIMULATOR"),
-            (e[(e.TRAIN_SIMULATOR = 30)] = "TRAIN_SIMULATOR"),
-            (e[(e.LIFE_SIMULATOR = 31)] = "LIFE_SIMULATOR"),
-            (e[(e.FISHING = 32)] = "FISHING"),
-            (e[(e.SPORTS = 33)] = "SPORTS"),
-            (e[(e.BASEBALL = 34)] = "BASEBALL"),
-            (e[(e.BASKETBALL = 35)] = "BASKETBALL"),
-            (e[(e.BILLIARDS = 36)] = "BILLIARDS"),
-            (e[(e.BOWLING = 37)] = "BOWLING"),
-            (e[(e.BOXING = 38)] = "BOXING"),
-            (e[(e.FOOTBALL = 39)] = "FOOTBALL"),
-            (e[(e.GOLF = 40)] = "GOLF"),
-            (e[(e.HOCKEY = 41)] = "HOCKEY"),
-            (e[(e.SKATEBOARDING_SKATING = 42)] = "SKATEBOARDING_SKATING"),
-            (e[(e.SNOWBOARDING_SKIING = 43)] = "SNOWBOARDING_SKIING"),
-            (e[(e.SOCCER = 44)] = "SOCCER"),
-            (e[(e.TRACK_FIELD = 45)] = "TRACK_FIELD"),
-            (e[(e.SURFING_WAKEBOARDING = 46)] = "SURFING_WAKEBOARDING"),
-            (e[(e.WRESTLING = 47)] = "WRESTLING"),
-            (e[(e.STRATEGY = 48)] = "STRATEGY"),
-            (e[(e.FOUR_X = 49)] = "FOUR_X"),
-            (e[(e.ARTILLERY = 50)] = "ARTILLERY"),
-            (e[(e.RTS = 51)] = "RTS"),
-            (e[(e.TOWER_DEFENSE = 52)] = "TOWER_DEFENSE"),
-            (e[(e.TURN_BASED_STRATEGY = 53)] = "TURN_BASED_STRATEGY"),
-            (e[(e.WARGAME = 54)] = "WARGAME"),
-            (e[(e.MOBA = 55)] = "MOBA"),
-            (e[(e.FIGHTING = 56)] = "FIGHTING"),
-            (e[(e.PUZZLE = 57)] = "PUZZLE"),
-            (e[(e.CARD_GAME = 58)] = "CARD_GAME"),
-            (e[(e.EDUCATION = 59)] = "EDUCATION"),
-            (e[(e.FITNESS = 60)] = "FITNESS"),
-            (e[(e.GAMBLING = 61)] = "GAMBLING"),
-            (e[(e.MUSIC_RHYTHM = 62)] = "MUSIC_RHYTHM"),
-            (e[(e.PARTY_MINI_GAME = 63)] = "PARTY_MINI_GAME"),
-            (e[(e.PINBALL = 64)] = "PINBALL"),
-            (e[(e.TRIVIA_BOARD_GAME = 65)] = "TRIVIA_BOARD_GAME"),
-            (e[(e.TACTICAL = 66)] = "TACTICAL"),
-            (e[(e.INDIE = 67)] = "INDIE"),
-            (e[(e.ARCADE = 68)] = "ARCADE"),
-            (e[(e.POINT_AND_CLICK = 69)] = "POINT_AND_CLICK"),
             e
         );
     })({}),
