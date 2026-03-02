@@ -1,74 +1,72 @@
-i.d(t, { A: () => p });
-var n = i(627968);
-i(64700);
-var a = i(311907),
-    l = i(990078),
-    r = i(397927),
-    s = i(630054),
-    o = i(956793),
-    d = i(401843),
-    c = i(315606),
-    u = i(279250),
-    m = i(267102),
-    _ = i(616356),
-    A = i(734057),
-    g = i(203982),
-    h = i(652215),
-    f = i(985018);
-function p(e) {
-    let { isCurrentUser: t, applicationStream: i, onAction: p } = e,
-        { defaultWatchMultipleStreams: S } = (0, c.W)({ location: "WatchStreamButton" }),
-        { activeStream: I, watchingOtherStream: x } = (0, a.cf)([_.A], () => ({
-            activeStream: _.A.getActiveStreamForApplicationStream(i),
+n.d(e, { A: () => f });
+var i = n(627968);
+n(64700);
+var l = n(311907),
+    r = n(990078),
+    a = n(397927),
+    s = n(630054),
+    o = n(956793),
+    d = n(401843),
+    u = n(279250),
+    c = n(267102),
+    A = n(616356),
+    p = n(734057),
+    m = n(203982),
+    h = n(652215),
+    g = n(985018);
+function f(t) {
+    let { isCurrentUser: e, applicationStream: n, onAction: f } = t,
+        { activeStream: E, watchingOtherStream: C } = (0, l.cf)([A.A], () => ({
+            activeStream: A.A.getActiveStreamForApplicationStream(n),
             watchingOtherStream:
-                null != i &&
-                _.A.getAllActiveStreamsForChannel(i.channelId).filter((e) => {
-                    let { ownerId: t } = e;
-                    return t !== i.ownerId;
+                null != n &&
+                A.A.getAllActiveStreamsForChannel(n.channelId).filter((t) => {
+                    let { ownerId: e } = t;
+                    return e !== n.ownerId;
                 }).length > 0,
         })),
-        v = (0, a.bG)([A.A], () => A.A.getChannel(i?.channelId)),
-        [C, E] = (0, u.zP)(v),
-        y = (0, m.aL)(),
-        T = null != I && null != i && I.state !== h.XYD.ENDED && I.ownerId === i.ownerId,
-        N = (e) => {
-            null != i &&
-                (p?.(),
-                o.default.selectVoiceChannel(i.channelId),
-                T || (0, d.Nl)(i, { forceMultiple: e }),
+        S = (0, l.bG)([p.A], () => p.A.getChannel(n?.channelId)),
+        [T, v] = (0, u.zP)(S),
+        y = (0, c.aL)(),
+        x = null != E && null != n && E.state !== h.XYD.ENDED && E.ownerId === n.ownerId,
+        N = (t) => {
+            null != n &&
+                (f?.(),
+                o.default.selectVoiceChannel(n.channelId),
+                x || (0, d.Nl)(n, { forceMultiple: t }),
                 y.dispatch(h.jej.POPOUT_CLOSE),
-                g._.dispatch(h.jej.MODAL_CLOSE),
+                m._.dispatch(h.jej.MODAL_CLOSE),
                 s.A.popAll());
         };
-    if (null == i) return null;
-    let b = (0, u.CT)(E);
+    if (null == n) return null;
+    let _ = (0, u.CT)(v);
     return (
-        t ? (b = f.intl.string(f.t.XvBdeT)) : T && (b = f.intl.string(f.t["JH1SJ+"])),
-        (0, n.jsxs)(n.Fragment, {
+        e ? (_ = g.intl.string(g.t.XvBdeT)) : x && (_ = g.intl.string(g.t["JH1SJ+"])),
+        (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, n.jsx)(r.Button, {
+                (0, i.jsx)(a.Button, {
                     size: "sm",
-                    variant: T ? "secondary" : "active",
-                    icon: r.Fzq,
-                    text: b,
-                    disabled: t || T || !C,
+                    variant: x ? "secondary" : "active",
+                    icon: a.Fzq,
+                    text: _,
+                    disabled: e || x || !T,
                     onClick: () => N(!1),
                     fullWidth: !0,
                 }),
-                !x || T || S
-                    ? null
-                    : (0, n.jsx)(l.m, {
-                          text: f.intl.string(f.t.wCrzut),
-                          children: (0, n.jsx)(r.K0, {
+                C && !x
+                    ? (0, i.jsx)(r.m, {
+                          text: g.intl.string(g.t.wCrzut),
+                          children: (0, i.jsx)(a.K0, {
                               variant: "secondary",
                               size: "sm",
-                              icon: r.vAm,
-                              "aria-label": f.intl.string(f.t.wCrzut),
+                              icon: a.vAm,
+                              "aria-label": g.intl.string(g.t.wCrzut),
                               onClick: () => {
                                   N(!0);
                               },
                           }),
-                      }),
+                      })
+                    : null,
             ],
         })
     );

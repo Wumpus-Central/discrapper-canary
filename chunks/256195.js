@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => A });
+n.d(t, { A: () => g });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -8,57 +8,55 @@ var i = n(503698),
     o = n(435371),
     l = n(397927),
     u = n(401843),
-    c = n(315606),
-    d = n(616356),
-    _ = n(961350),
-    f = n(200749),
-    p = n(985018),
-    h = n(438823);
-let m = 175,
-    E = 195,
-    g = n(913516);
-function A(e) {
-    let { participant: t, width: n, noArt: i = !1, selected: A = !1 } = e,
-        I = n < E,
-        { defaultWatchMultipleStreams: T } = (0, c.W)({ location: "StreamHidden" }),
-        S = (0, a.bG)([d.A, _.default], () =>
-            d.A.getAllActiveStreams().some((e) => {
+    c = n(616356),
+    d = n(961350),
+    _ = n(200749),
+    f = n(985018),
+    p = n(438823);
+let h = 175,
+    m = 195,
+    E = n(913516);
+function g(e) {
+    let { participant: t, width: n, noArt: i = !1, selected: g = !1 } = e,
+        A = n < m,
+        I = (0, a.bG)([c.A, d.default], () =>
+            c.A.getAllActiveStreams().some((e) => {
                 let { ownerId: t } = e;
-                return t !== _.default.getId();
+                return t !== d.default.getId();
             }),
         );
     return (0, r.jsx)("div", {
-        className: s()(h.Qs, h.FY),
-        children: (0, r.jsx)(f.A, {
-            className: h.FP,
-            artURL: g,
+        className: s()(p.Qs, p.FY),
+        children: (0, r.jsx)(_.A, {
+            className: p.FP,
+            artURL: E,
             noArt: i,
-            selected: A,
-            size: (0, f.J)(n),
-            header: I ? null : p.intl.string(p.t.epU4Ec),
-            description: A
+            selected: g,
+            size: (0, _.J)(n),
+            header: A ? null : f.intl.string(f.t.epU4Ec),
+            description: g
                 ? null
                 : (0, r.jsxs)("div", {
-                      className: s()(h.t2, { [h.y8]: !I }),
+                      className: s()(p.t2, { [p.y8]: !A }),
                       children: [
                           (0, r.jsx)("div", {
-                              className: h.lO,
+                              className: p.lO,
                               children: (0, r.jsx)(l.Button, {
                                   variant: "secondary",
-                                  size: I ? "sm" : "md",
-                                  text: n < m ? p.intl.string(p.t.I6JG46) : p.intl.string(p.t["7Xq/nV"]),
+                                  size: A ? "sm" : "md",
+                                  text: n < h ? f.intl.string(f.t.I6JG46) : f.intl.string(f.t["7Xq/nV"]),
                               }),
                           }),
-                          S && !T
+                          I
                               ? (0, r.jsx)("div", {
-                                    className: s()(h.lO, h.EU),
+                                    className: s()(p.lO, p.EU),
                                     children: (0, r.jsx)(o.m_, {
-                                        text: p.intl.string(p.t.wCrzut),
+                                        text: f.intl.string(f.t.wCrzut),
                                         children: (0, r.jsx)(l.K0, {
                                             variant: "secondary",
-                                            size: I ? "sm" : "md",
+                                            size: A ? "sm" : "md",
                                             icon: l.vAm,
-                                            "aria-label": p.intl.string(p.t.wCrzut),
+                                            "aria-label": f.intl.string(f.t.wCrzut),
                                             onClick: (e) => {
                                                 e.stopPropagation(), (0, u.A9)(t.stream, { forceMultiple: !0 });
                                             },
