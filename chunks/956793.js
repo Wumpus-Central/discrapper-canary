@@ -13,24 +13,15 @@ var o = n(574172),
     _ = n(652215);
 let f = {
     selectChannel(e) {
-        let {
-            guildId: t,
-            channelId: n,
-            messageId: i,
-            jumpType: s,
-            preserveDrawerState: a,
-            source: o,
-            skipMessageFetch: l,
-        } = e;
+        let { guildId: t, channelId: n, messageId: i, jumpType: s, source: a, skipMessageFetch: o } = e;
         r.h.dispatch({
             type: "CHANNEL_SELECT",
             guildId: t === _.ME ? null : t,
             channelId: n,
             messageId: i,
             jumpType: s,
-            preserveDrawerState: a,
-            source: o,
-            skipMessageFetch: l,
+            source: a,
+            skipMessageFetch: o,
         });
     },
     selectPrivateChannel(e) {
