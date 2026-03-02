@@ -24,9 +24,9 @@ var r = n(627968),
     v = n(612669),
     N = n(511484),
     C = n(251913),
-    b = n(869573),
-    R = n(344159),
-    O = n(97352),
+    R = n(869573),
+    O = n(344159),
+    b = n(97352),
     D = n(469778),
     L = n(954571),
     w = n(45938),
@@ -45,8 +45,8 @@ var r = n(627968),
 n(322076);
 var W = n(652215),
     K = n(788868),
-    z = n(985018),
-    $ = n(898772);
+    $ = n(985018),
+    z = n(898772);
 let q = 2,
     Z = "billing",
     X = { [o.rIJ.SMALL]: "sm", [o.rIJ.MEDIUM]: "md", [o.rIJ.LARGE]: "xl", [o.rIJ.DYNAMIC]: "md" },
@@ -132,9 +132,9 @@ function ee(e) {
             selectedPlan: ev,
             setSelectedPlanId: eN,
             setSelectedPlanNotification: eC,
-            setStep: eb,
-            setPurchaseError: eR,
-            paymentAuthenticationState: eO,
+            setStep: eR,
+            setPurchaseError: eO,
+            paymentAuthenticationState: eb,
             step: eD,
             selectedSku: eL,
             contextMetadata: ew,
@@ -150,7 +150,7 @@ function ee(e) {
             invoicePreview: eH,
         } = (0, P.P5)(),
         ej = (0, G.A)(),
-        { isGift: eY, giftRecipient: eW, customGiftMessage: eK, emojiConfetti: ez, soundEffect: e$ } = (0, M.Pv)(),
+        { isGift: eY, giftRecipient: eW, customGiftMessage: eK, emojiConfetti: e$, soundEffect: ez } = (0, M.Pv)(),
         eq = o.rIJ.SMALL;
     e_ || ej?.isLargeModal
         ? (eq = o.rIJ.LARGE)
@@ -166,7 +166,7 @@ function ee(e) {
             location: a ?? u,
             source: _,
             subscription_type: p,
-            subscription_plan_id: ev?.id,
+            subscription_plan_id: ev?.id ?? D,
             is_gift: eY,
             eligible_for_trial: null != j,
             location_stack: n,
@@ -208,23 +208,23 @@ function ee(e) {
         }),
         i.useEffect(() => {
             null == ev && (null != eV && null != eE ? eN(eV) : eN(D)),
-                null != eu ? ey(eu) : null != D && ey(O.A.get(D)?.skuId);
+                null != eu ? ey(eu) : null != D && ey(b.A.get(D)?.skuId);
         }, [eN, ev, ey, D, eu, eV, eE]);
     let e3 = i.useCallback(() => {
             let e = (0, w.lo)(eW) === w.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
                 t = Date.now();
             L.default.track(W.HAw.PAYMENT_FLOW_SUCCEEDED, {
                 ...eJ,
-                is_custom_message_edited: eY && e && null != eK ? eK !== z.intl.string(z.t.ZkOo1U) : void 0,
+                is_custom_message_edited: eY && e && null != eK ? eK !== $.intl.string($.t.ZkOo1U) : void 0,
                 is_custom_emoji_sound_available: eY && e,
-                emoji_name: eY && e && ez?.id == null ? ez?.surrogates : void 0,
-                sound_id: eY && e ? e$?.soundId : void 0,
+                emoji_name: eY && e && e$?.id == null ? e$?.surrogates : void 0,
+                sound_id: eY && e ? ez?.soundId : void 0,
                 duration_ms: t - ew.startTime,
                 payment_source_type: e1?.type,
             });
             let { enabled: n } = I.u.getConfig({ location: "PaymentModal emitPaymentFlowSuccess" });
             eY && null != eW && null != a && n && (0, S.W)(a) && (0, T.Yd)(eW.id);
-        }, [eJ, ez, eK, eW, eY, e$, ew.startTime, e1, a]),
+        }, [eJ, e$, eK, eW, eY, ez, ew.startTime, e1, a]),
         e6 = i.useMemo(() => () => V?.(eI === U.h.COMPLETED, eS), [V, eI, eS]),
         e4 = (0, s.A)(() => Date.now(), [eD]),
         e5 = i.useCallback(
@@ -233,7 +233,7 @@ function ee(e) {
                     { trackedFromStep: n, analyticsDataOverride: r, fulfillment: i, emitPaymentFlowLoadedEvent: s } = t,
                     a = Date.now();
                 if (e === k.pn.CONFIRM && (e3(), E?.(i), em)) return void e6();
-                eb(e), ec?.(e), eR(null), eC(null), e === k.pn.ADD_PAYMENT_STEPS && (l.h.wait(c.ET), l.h.wait(d.T3));
+                eR(e), ec?.(e), eO(null), eC(null), e === k.pn.ADD_PAYMENT_STEPS && (l.h.wait(c.ET), l.h.wait(d.T3));
                 let o = null != n ? n : eD;
                 null === o || s
                     ? L.default.track(W.HAw.PAYMENT_FLOW_LOADED, {
@@ -251,14 +251,14 @@ function ee(e) {
                           flow_duration_ms: a - ew.startTime,
                       });
             },
-            [eb, ec, eR, eC, eD, eE, eJ, e4, ew.startTime, e3, E, em, e6, ek],
+            [eR, ec, eO, eC, eD, eE, eJ, e4, ew.startTime, e3, E, em, e6, ek],
         );
-    (0, C.b)(eD, eO, e5, eT),
+    (0, C.b)(eD, eb, e5, eT),
         (0, k.zT)(eD, eI, eT),
-        (0, b.Q)(eD, ex, e5),
+        (0, R.Q)(eD, ex, e5),
         (0, A.A)(e6),
-        (0, R.s)(eM, () => V(!1), eY),
-        (0, C.QR)(eO);
+        (0, O.s)(eM, () => V(!1), eY),
+        (0, C.QR)(eb);
     let e7 = {
             initialPlanId: D,
             subscriptionTier: F,
@@ -283,7 +283,7 @@ function ee(e) {
         e8 = (0, H.L)({ renderHeader: es, handleClose: e6 });
     return (0, r.jsx)(m.e0, {
         children: (0, r.jsx)(o.bfh, {
-            className: $.Xn,
+            className: z.Xn,
             isShaking: ed && eI === U.h.PURCHASING,
             intensity: q,
             children: (0, r.jsx)(J, {
@@ -327,10 +327,10 @@ function et(e) {
         { isGift: y } = (0, M.Pv)(),
         v = T.current,
         N = (0, V.A)({ isGift: y, skuId: g, referralTrialOfferId: o }),
-        [C, b] = i.useState(!0),
-        R = (0, a.bG)([D.A], () => D.A.applicationIdsFetched.has(K.tv));
+        [C, R] = i.useState(!0),
+        O = (0, a.bG)([D.A], () => D.A.applicationIdsFetched.has(K.tv));
     return (i.useEffect(() => {
-        b(!h || !m || E);
+        R(!h || !m || E);
     }, [E, m, h]),
     (0, _.A)(
         "Payment Modal",
@@ -340,7 +340,7 @@ function et(e) {
         { tags: { app_context: Z } },
     ),
     i.useEffect(() => {
-        if ((R || (0, u.LM)(K.tv), C || f)) return;
+        if ((O || (0, u.LM)(K.tv), C || f)) return;
         let e = (0, F.vT)({ isTrial: N, isGift: y, selectedSkuId: g, startedPaymentFlowWithPaymentSources: v });
         null != c
             ? s(k.pn.ADD_PAYMENT_STEPS, { emitPaymentFlowLoadedEvent: !0, trackedFromStep: c })
@@ -353,7 +353,7 @@ function et(e) {
                 : null != t
                   ? s(k.pn.PLAN_SELECT)
                   : s(k.pn.SKU_SELECT);
-    }, [c, d, f, R, n, C, s, t, g, A, N, I, y, v, S]),
+    }, [c, d, f, O, n, C, s, t, g, A, N, I, y, v, S]),
     C)
         ? (0, r.jsx)(j.A, {})
         : f
