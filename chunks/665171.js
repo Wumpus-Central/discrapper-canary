@@ -36,7 +36,7 @@ function p(e) {
         }, 5e3);
     let n = s.default.getCurrentUser()?.isStaff() ?? !1;
     return (0, o.aP)({
-        url: f.Rsh.COLLECTION_PUBLISHED_LISTINGS_SKU(_.q4),
+        url: f.Rsh.STOREFRONT_COLLECTION_WITH_PRODUCTS(_.q4),
         query: { guild_id: e, include_unpublished_products: n, include_unpublished_collection: n },
         oldFormErrors: !0,
         rejectWithError: !1,
@@ -52,7 +52,7 @@ function p(e) {
 function h() {
     let e = s.default.getCurrentUser()?.isStaff() ?? !1;
     return (0, o.aP)({
-        url: f.Rsh.COLLECTION_PUBLISHED_LISTINGS_SKU(_.q4),
+        url: f.Rsh.STOREFRONT_COLLECTION_WITH_PRODUCTS(_.q4),
         query: { include_unpublished_products: e, include_unpublished_collection: e },
         oldFormErrors: !0,
         rejectWithError: !1,
@@ -87,7 +87,7 @@ function m(e) {
 function E(e, t) {
     let n = s.default.getCurrentUser()?.isStaff() ?? !1;
     return (0, o.aP)({
-        url: f.Rsh.PRODUCT_FOR_SKU(t),
+        url: f.Rsh.STOREFRONT_PRODUCT_BY_SKU_ID(t),
         query: { include_unpublished: n },
         rejectWithError: !0,
         retries: 3,

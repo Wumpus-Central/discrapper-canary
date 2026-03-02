@@ -1,8 +1,8 @@
-t.d(l, { A: () => a });
+t.d(l, { A: () => i });
 var r = t(749394),
     o = t(719986),
-    n = t(19945);
-class a {
+    n = t(507832);
+class i {
     id;
     applicationId;
     name;
@@ -94,7 +94,7 @@ class a {
             collection: {
                 application_id: l,
                 created_at: t,
-                updated_at: i,
+                updated_at: a,
                 unpublished_at: d,
                 unpublish_settings: s,
                 tenant_metadata: c,
@@ -102,12 +102,12 @@ class a {
             },
             products: h,
         } = e;
-        return new a({
+        return new i({
             ...u,
             applicationId: l,
             products: h.map((e) => n.A.fromServer(e)),
             createdAt: new Date(t),
-            updatedAt: new Date(i),
+            updatedAt: new Date(a),
             unpublishedAt: null != d ? new Date(d) : void 0,
             willUnpublishAt: s?.will_unpublish_at != null ? new Date(s.will_unpublish_at) : void 0,
             styles: null != c.collectibles.styles ? r.A.fromServer(c.collectibles.styles) : void 0,

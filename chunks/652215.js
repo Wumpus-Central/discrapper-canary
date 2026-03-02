@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, {
-    $4X: () => ex,
+    $4X: () => eM,
     $8o: () => es,
     $OG: () => tL,
     $aF: () => ta,
@@ -76,7 +76,7 @@ n.d(t, {
     ME: () => _.ME,
     MLl: () => rd,
     MRS: () => a.M,
-    MVz: () => nM,
+    MVz: () => nx,
     MdR: () => tl,
     Mmu: () => tR,
     NA2: () => eU,
@@ -98,7 +98,7 @@ n.d(t, {
     Pq7: () => p.Pq,
     Puh: () => n9,
     PvD: () => ei,
-    Q4z: () => tx,
+    Q4z: () => tM,
     Q7O: () => p.Q7,
     QCW: () => nQ,
     RCc: () => te,
@@ -106,7 +106,7 @@ n.d(t, {
     R_U: () => nH,
     RoK: () => to,
     Rsh: () => eg,
-    Rv1: () => rx,
+    Rv1: () => rM,
     S3d: () => B,
     S7L: () => U,
     SH7: () => s.S,
@@ -157,7 +157,7 @@ n.d(t, {
     YYv: () => _.YY,
     Yri: () => p.Yr,
     YvQ: () => C,
-    Z86: () => nx,
+    Z86: () => nM,
     ZE4: () => p.ZE,
     ZGg: () => eW,
     ZSU: () => tb,
@@ -201,13 +201,13 @@ n.d(t, {
     eGj: () => ef,
     eMA: () => n8,
     eQT: () => e0,
-    elq: () => x,
+    elq: () => M,
     ewM: () => tz,
     f5z: () => q,
-    fAW: () => M,
-    fHV: () => eM,
+    fAW: () => x,
+    fHV: () => ex,
     fg2: () => tj,
-    fic: () => rM,
+    fic: () => rx,
     frM: () => p.fr,
     frR: () => eu,
     ftr: () => tF,
@@ -262,7 +262,7 @@ n.d(t, {
     lid: () => t9,
     m3P: () => R,
     m_i: () => rc,
-    mdB: () => tM,
+    mdB: () => tx,
     meB: () => p.me,
     mnr: () => rU,
     mu: () => eY,
@@ -704,7 +704,7 @@ var r = n(478437),
             e
         );
     })({}),
-    x = (function (e) {
+    M = (function (e) {
         return (
             (e.RESOLVING = "RESOLVING"),
             (e.RESOLVED = "RESOLVED"),
@@ -719,7 +719,7 @@ var r = n(478437),
             e
         );
     })({}),
-    M = (function (e) {
+    x = (function (e) {
         return (e.OPENING = "OPENING"), (e.OPEN = "OPEN"), (e.OPEN_FAIL = "OPEN_FAIL"), e;
     })({}),
     P = (function (e) {
@@ -1537,9 +1537,9 @@ let e_ = "",
         APPLICATION_BRANCH_LIST: (e) => `/applications/${e}/branches`,
         LIBRARY_APPLICATION_INSTALLED: (e, t) => `/users/@me/library/${e}/${t}/installed`,
         STOREFRONT_PREMIUM_BUTTON: (e) => `/applications/storefront/interactions/premium-button/${e}`,
-        COLLECTION_PUBLISHED_LISTINGS_SKU: (e) => `/storefront/collections/${e}`,
-        PRODUCT_WITH_SKUS: (e) => `/storefront/products/${e}`,
-        PRODUCT_FOR_SKU: (e) => `/storefront/products/sku/${e}`,
+        STOREFRONT_COLLECTION_WITH_PRODUCTS: (e) => `/storefront/collections/${e}`,
+        STOREFRONT_PRODUCT_WITH_SKUS: (e) => `/storefront/products/${e}`,
+        STOREFRONT_PRODUCT_BY_SKU_ID: (e) => `/storefront/products/sku/${e}`,
         STORE_DIRECTORY_LAYOUT: (e) => `/store/directory-layouts/${e}`,
         STORE_DIRECTORY: (e) => `/store/directory/${e}`,
         STORE_EMAIL_RESEND_PAYMENT_VERIFICATION: "/store/email/resend-payment-verification",
@@ -1959,8 +1959,8 @@ let eT = 100,
     eD = 4e3,
     eL = 250,
     ew = 100,
-    ex = 1e3,
-    eM = 100,
+    eM = 1e3,
+    ex = 100,
     eP = 256,
     ek = 32,
     eU = 190,
@@ -3206,7 +3206,7 @@ let tL = { page: "Direct", object: "Web URL" },
         PRIVATE_BROWSING: "WARP+",
         REACTION_NOTIFICATIONS: "Reaction Notifications",
     });
-var tx = (function (e) {
+var tM = (function (e) {
         return (
             (e.APPLICATION_STORE = "Application Store Verified Guild Invite - Lurker"),
             (e.CHAT_INPUT_BLOCKER = "Chat Input Blocker - Lurker Mode"),
@@ -3222,7 +3222,7 @@ var tx = (function (e) {
             e
         );
     })({}),
-    tM = (function (e) {
+    tx = (function (e) {
         return (
             (e.QR_CODE = "QR Code Login"),
             (e.MOBILE_WEB_HANDOFF = "Mobile Web Handoff"),
@@ -5716,11 +5716,11 @@ var nO = (function (e) {
     nw = (function (e) {
         return (e.GIF = "GIF"), (e.STICKER = "STICKER"), e;
     })({});
-let nx = Object.freeze({
+let nM = Object.freeze({
     GIF: { type: "GIF", command: "gif", title: "Gif", commandId: "-16" },
     TENOR: { type: "GIF", command: "tenor", title: "Tenor", commandId: "-9" },
 });
-var nM = (function (e) {
+var nx = (function (e) {
         return (
             (e.ENABLE_MIC_FIREFOX = "204392448"),
             (e.PUSH_TO_TALK_ADMINISTRATOR_MODE = "205082178"),
@@ -6272,10 +6272,10 @@ var rw = (function (e) {
             e
         );
     })({}),
-    rx = (function (e) {
+    rM = (function (e) {
         return (e.LOADING = "LOADING"), (e.ERROR = "ERROR"), (e.READY = "READY"), e;
     })({});
-let rM = Object.freeze({
+let rx = Object.freeze({
         APPLICATIONS: (e) => (null != e ? `applications/${e}` : null),
         APP_PREMIUM_BUTTON: (e) => (null != e ? `premium-button/${e}` : null),
         CUSTOM_ACTIVITY_LINK: (e, t) => (null != e && null != t ? `custom-activity-links/${e}/${t}` : null),

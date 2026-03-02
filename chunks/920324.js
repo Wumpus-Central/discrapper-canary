@@ -3,8 +3,8 @@ a.d(t, { t: () => b });
 var l = a(627968),
     r = a(64700),
     n = a(397927),
-    s = a(179262),
-    i = a(561769),
+    s = a(561769),
+    i = a(32585),
     o = a(41770),
     d = a(53566),
     c = a(148702),
@@ -43,8 +43,8 @@ let b = {
             id: "shop-index-page",
             component: (e) => {
                 let { collectionId: t } = e,
-                    { collection: a, isFetching: n } = (0, s.A)({ collectionId: t, includePricing: !0 }),
-                    i = r.useMemo(() => {
+                    { collection: a, isFetching: n } = (0, i.A)({ collectionId: t, includePricing: !0 }),
+                    s = r.useMemo(() => {
                         let e = a?.styles?.backgroundColors?.[0];
                         return {
                             id: "shop-index-page",
@@ -76,7 +76,7 @@ let b = {
                             ],
                         };
                     }, [a?.styles?.backgroundColors, a?.catalogBannerUrl, a?.products]);
-                return n ? (0, l.jsx)("div", { children: "Loading..." }) : (0, l.jsx)(u.Ay, { layout: i });
+                return n ? (0, l.jsx)("div", { children: "Loading..." }) : (0, l.jsx)(u.Ay, { layout: s });
             },
             controls: { collectionId: { label: "Collection Id", type: "text", defaultValue: "1458472704809111646" } },
         },
@@ -208,8 +208,8 @@ let b = {
                                 backgroundRepeat: "no-repeat",
                             },
                         }),
-                        (0, l.jsx)(i.v3.Provider, {
-                            value: { prioritizedCurrency: i.Hi.ORBS },
+                        (0, l.jsx)(s.v3.Provider, {
+                            value: { prioritizedCurrency: s.Hi.ORBS },
                             children: (0, l.jsx)("div", {
                                 style: { position: "relative" },
                                 children: (0, l.jsx)(u.Ay, { layout: e }),
