@@ -73,7 +73,10 @@ let u = (e) => {
                                 (0, r.jsx)("div", { className: a()(o.YK, j), style: { width: `${L}px`, opacity: 1 } }),
                         ],
                     }),
-                    (0, r.jsx)(s.animated.div, { className: a()(o.TN, x), style: { transform: D } }),
+                    (0, r.jsx)(s.animated.div, {
+                        className: a()(o.TN, x),
+                        style: { transform: D, opacity: _.to((e) => (e <= 0 ? 0 : 1)) },
+                    }),
                 ],
             }),
             h && (0, r.jsx)(s.animated.div, { className: a()(o.DT, v), style: { width: I } }),
