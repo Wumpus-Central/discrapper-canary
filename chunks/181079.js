@@ -47,10 +47,10 @@ class m extends i.Ay.Store {
     getFavoriteChannels() {
         return d;
     }
-    get favoriteServerMuted() {
+    get favoriteGuildMuted() {
         return _;
     }
-    get favoriteServerEnabled() {
+    get favoriteGuildEnabled() {
         return f;
     }
     isFavorite(e) {

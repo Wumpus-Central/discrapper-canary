@@ -3,8 +3,8 @@ n.d(t, { A: () => M }), n(321073);
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(837381),
+    a = n.n(l),
+    r = n(837381),
     o = n(311907),
     c = n(397927),
     d = n(308528),
@@ -12,8 +12,8 @@ var i = n(627968),
     h = n(933958),
     A = n(969151),
     p = n(941971),
-    g = n(900848),
-    m = n(65611),
+    m = n(900848),
+    g = n(65611),
     _ = n(855725),
     f = n(366811),
     x = n(616356),
@@ -43,12 +43,12 @@ function M() {
         k,
         V,
         B,
-        H = (0, a.Vd)("favorites"),
+        H = (0, r.Vd)("favorites"),
         { favoriteAdded: F, clearFavoriteAdded: K } = (0, S.CJ)(),
         [W, Y] = s.useState(!1),
-        { favoriteServerMuted: z, favoriteChannels: X } = (0, o.cf)([b.A], () => ({
+        { favoriteGuildMuted: z, favoriteChannels: X } = (0, o.cf)([b.A], () => ({
             favoriteChannels: b.A.getFavoriteChannels(),
-            favoriteServerMuted: b.A.favoriteServerMuted,
+            favoriteGuildMuted: b.A.favoriteGuildMuted,
         })),
         q = (0, o.bG)([E.A], () => E.A.getChannelId(j.YYv)),
         J = (0, o.bG)([C.A], () => C.A.getChannel(q)),
@@ -79,12 +79,12 @@ function M() {
             (V = !1),
             (B = !1),
             t ? ((w = !D), (k = D), (V = l), (B = U)) : ((V = M), (B = P)),
-            (0, m.oi)({ audio: w, video: k, screenshare: V, liveStage: !1, isCurrentUserConnected: t, activity: B })),
+            (0, g.oi)({ audio: w, video: k, screenshare: V, liveStage: !1, isCurrentUserConnected: t, activity: B })),
         et = $ > 0 ? (0, _.w)($) : null,
         en = s.useCallback(() => {
             K();
         }, [K]);
-    return (0, i.jsxs)(g.c, {
+    return (0, i.jsxs)(m.c, {
         children: [
             (0, i.jsx)(p.A, { selected: Q, hovered: W, unread: Z && !z, className: O.Io }),
             (0, i.jsx)(v.A, {
@@ -115,7 +115,7 @@ function M() {
                                 });
                             },
                             children: (0, i.jsx)("div", {
-                                className: r()(O.hN, { [O.b1]: F }),
+                                className: a()(O.hN, { [O.b1]: F }),
                                 children: (0, i.jsx)(c.Gg5, {
                                     size: "custom",
                                     color: "currentColor",
