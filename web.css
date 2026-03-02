@@ -52569,9 +52569,10 @@ svg.radioIcon_c1e9c4 {
 }
 
 .track_a562c8 {
+    --custom-track-inset: 5px;
     position: absolute;
     top: 0;
-    inset-inline: 5px;
+    inset-inline: var(--custom-track-inset);
     bottom: 0
 }
 
@@ -52611,6 +52612,14 @@ svg.radioIcon_c1e9c4 {
 
 .markBelow_a562c8 {
     bottom: -12px
+}
+
+.mark_a562c8:first-child .markValue_a562c8 {
+    transform: translateX(calc(50% - var(--custom-track-inset)))
+}
+
+.mark_a562c8:last-child .markValue_a562c8 {
+    transform: translateX(calc(-50% + var(--custom-track-inset)))
 }
 
 .markValue_a562c8 {
