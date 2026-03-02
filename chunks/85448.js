@@ -34,8 +34,8 @@ function p(e) {
         } = e,
         N = (0, a.bG)([u.Ay], () => null != t && u.Ay.isLocalMute(t)),
         C = (0, d.A)(t),
-        b = (0, c.v)({ isSpeaking: i, voiceDb: C }),
-        R = () => {
+        R = (0, c.v)({ isSpeaking: i, voiceDb: C }),
+        O = () => {
             let e = N ? o.O1p : p ? o.cQT : o.z0P;
             return f || p || N
                 ? (0, r.jsx)("div", {
@@ -44,13 +44,13 @@ function p(e) {
                   })
                 : null;
         },
-        O = () => (0, r.jsx)("div", { className: _.PQ, style: b }, "border"),
+        b = () => (0, r.jsx)("div", { className: _.PQ, style: R }, "border"),
         D = () =>
             f && i
-                ? (0, r.jsxs)(r.Fragment, { children: [O(), R()] })
+                ? (0, r.jsxs)(r.Fragment, { children: [b(), O()] })
                 : f || p || N
-                  ? (0, r.jsx)(r.Fragment, { children: R() })
-                  : (0, r.jsx)(r.Fragment, { children: O() }),
+                  ? (0, r.jsx)(r.Fragment, { children: O() })
+                  : (0, r.jsx)(r.Fragment, { children: b() }),
         L = () => {
             let e = (0, o.FT9)(n),
                 t = (0, r.jsx)("img", { src: h, alt: " ", className: s()(_.sb, A, { [_.tb]: E && 0 === g }) });
@@ -71,7 +71,12 @@ function p(e) {
         },
         w = s()(
             _.iE,
-            { [_.vk]: null != S, [_.tb]: E && 0 === g, [_.hs]: E && 1 === g, [_.EX]: n === o._3J.SIZE_32 },
+            {
+                [_.vk]: null != S,
+                [_.tb]: E && 0 === g,
+                [_.hs]: E && 1 === g,
+                [_.EX]: n === o._3J.SIZE_32 || n === o._3J.SIZE_24,
+            },
             v,
         ),
         x = (0, o.FT9)(n),
