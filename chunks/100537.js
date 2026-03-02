@@ -48,7 +48,7 @@ function M(e) {
         Y = r.useCallback(() => {
             v.A.updateFrameLayoutMode({ applicationId: t.applicationId, layoutMode: O.y.PIP });
         }, [t.applicationId]),
-        q = r.useCallback(() => {
+        W = r.useCallback(() => {
             v.A.stopFrame({ applicationId: t.applicationId });
         }, [t.applicationId]);
     r.useLayoutEffect(() => {
@@ -61,7 +61,7 @@ function M(e) {
         r.useEffect(() => {
             let e = (e) => {
                 null == V.current ||
-                    V.current.contains(e.target) ||
+                    (0, c.HG$)(V.current, e.target) ||
                     l ||
                     v.A.updateFrameLayoutMode({ applicationId: t.applicationId, layoutMode: O.y.PIP });
             };
@@ -72,14 +72,14 @@ function M(e) {
                 }
             );
         }, [t.applicationId, l]);
-    let W = H.width / Math.max(H.height, 1) < R.B5,
+    let q = H.width / Math.max(H.height, 1) < R.B5,
         K = 0,
         z = 0,
         $ = (0, h.A)(n?.id);
     if (!$) {
         let e = H.width,
             t = H.height;
-        W
+        q
             ? ((t = H.width / R.B5) > H.height && (e = (t = H.height) * R.B5), (z = (H.height - t) / 2))
             : ((e = Math.min(H.height * R.B5, H.width)) > H.width && (t = (e = H.width) / R.B5),
               (K = (H.width - e) / 2));
@@ -138,7 +138,7 @@ function M(e) {
                                     (0, i.jsx)(T.l, {
                                         isTrayButton: !1,
                                         label: P.intl.string(P.t["R/FK4A"]),
-                                        onClick: q,
+                                        onClick: W,
                                         iconComponent: c.oLl,
                                         color: "disconnect",
                                     }),
