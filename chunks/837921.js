@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => Y, UB: () => B, _0: () => M, dv: () => F, kw: () => G }), n(321073);
+n.d(t, { Ay: () => W, UB: () => H, _0: () => P, dv: () => V, kw: () => F }), n(321073);
 var r = n(284009),
     i = n.n(r),
     s = n(279194),
@@ -39,37 +39,38 @@ let C = new Set([
         "discord_voice",
     ]),
     R = !1,
-    O = "lastImageSaveDirectory",
-    b = /[<>:"/\\|?*@]/g,
-    D = /(\.[a-zA-Z0-9]+):[^.]*$/,
-    L = /(\.[a-zA-Z0-9]+)%3A.+$/,
-    w = /[^a-zA-Z0-9]/g,
+    O = null,
+    b = "lastImageSaveDirectory",
+    D = /[<>:"/\\|?*@]/g,
+    L = /(\.[a-zA-Z0-9]+):[^.]*$/,
+    w = /(\.[a-zA-Z0-9]+)%3A.+$/,
+    M = /[^a-zA-Z0-9]/g,
     x = /\.[^.]*$/;
-var M = (function (e) {
+var P = (function (e) {
     return (e.SAVED = "saved"), (e.CANCELED = "canceled"), (e.ERRORED = "errored"), e;
 })({});
-function P(e) {
+function k(e) {
     try {
         let t = decodeURIComponent(e);
-        return (t = (t = t.replace(D, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(b, "_");
+        return (t = (t = t.replace(L, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(D, "_");
     } catch {
         return e
-            .replace(L, "$1")
+            .replace(w, "$1")
             .replace(/(.+)%40([a-zA-Z0-9]+)$/, "$1.$2")
-            .replace(b, "_");
+            .replace(D, "_");
     }
 }
-async function k(e) {
+async function U(e) {
     let t = { method: "GET", mode: "cors" },
         n = await fetch(new Request(e, t));
     i()(200 === n.status, "Data fetch unsuccessful");
     let r = await n.arrayBuffer();
     return i()(null != r, "Data is null"), r;
 }
-function U(e) {
-    return k(e);
+function G(e) {
+    return U(e);
 }
-var G = (function (e) {
+var F = (function (e) {
         return (
             (e[(e.Camera = 0)] = "Camera"),
             (e[(e.Microphone = 1)] = "Microphone"),
@@ -79,10 +80,10 @@ var G = (function (e) {
             e
         );
     })({}),
-    F = (function (e) {
+    V = (function (e) {
         return (e.VIDEO = "VIDEO"), (e.MUTE = "MUTE"), (e.DEAFEN = "DEAFEN"), (e.DISCONNECT = "DISCONNECT"), e;
     })({});
-function V(e) {
+function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : N;
     return {
         id: t[e.id ?? ""],
@@ -108,7 +109,7 @@ function V(e) {
         executableFingerprint: e.executableFingerprint,
     };
 }
-function B(e, t) {
+function H(e, t) {
     if (null != t && I(t)) {
         let e = t.split("/")[1]?.toLowerCase();
         if ("jpeg" === e) return "jpg";
@@ -119,13 +120,13 @@ function B(e, t) {
     let r = n.pathname?.split(".")?.pop()?.toLowerCase();
     return null != r && r.length <= T ? r : void 0;
 }
-function H(e) {
+function j(e) {
     if ((0, f.isDesktop)())
         try {
-            j.sendIPC(e);
+            Y.sendIPC(e);
         } catch (e) {}
 }
-let j = {
+let Y = {
         requireModule: (e) => E.nativeModules.requireModule(e),
         ensureModule: (e) =>
             f.isPlatformEmbedded
@@ -184,7 +185,7 @@ let j = {
                         return null != e.id && (N[t] = e.id), { ...e, cmdline: e.cmdLine, id: t };
                     }),
                     o = N,
-                    l = (e) => n(e.map((e) => V(e, o)));
+                    l = (e) => n(e.map((e) => B(e, o)));
                 null != r && null != s.setProcessObserverUserId && s.setProcessObserverUserId(r),
                     t && null != s.setObservedGamesCallback2
                         ? s.setObservedGamesCallback2(a, l)
@@ -194,8 +195,8 @@ let j = {
         setGameDetectionCallback(e) {
             this.getDiscordUtils().setGameDetectionCallback?.((t, n) =>
                 e(
-                    t.map((e) => V(e)),
-                    n.map((e) => V(e)),
+                    t.map((e) => B(e)),
+                    n.map((e) => B(e)),
                 ),
             );
         },
@@ -210,7 +211,7 @@ let j = {
         },
         setCandidateGamesCallback(e) {
             this.getDiscordUtils().setCandidateGamesCallback((t) => {
-                e(t.map((e) => V(e)));
+                e(t.map((e) => B(e)));
             });
         },
         clearCandidateGamesCallback() {
@@ -249,6 +250,11 @@ let j = {
         },
         isSystemDarkMode() {
             return !!(0, f.isWindows)() && (this.getDiscordUtils().isSystemDarkMode?.() ?? !0);
+        },
+        getDiscordIsElevated() {
+            return (0, f.isWindows)() && null != this.getDiscordUtils().getDiscordIsElevated
+                ? (null === O && (O = this.getDiscordUtils().getDiscordIsElevated()), O)
+                : null;
         },
         getVoiceFilters() {
             return this.requireModule("discord_voice_filters");
@@ -320,8 +326,8 @@ let j = {
         async copyImage(e, t) {
             i()(f.isPlatformEmbedded, "Copy image method called outside native app"),
                 i()("function" == typeof E.clipboard.copyImage, "Copy image not supported");
-            let n = await U(e),
-                r = B(e, t),
+            let n = await G(e),
+                r = H(e, t),
                 s = null != r && g.has(r) ? `image.${r}` : e;
             E.clipboard.copyImage(m.from(n), s);
         },
@@ -331,7 +337,7 @@ let j = {
         },
         canSaveImage(e, t) {
             if (null == e || !f.isPlatformEmbedded) return !1;
-            let n = B(e, t);
+            let n = H(e, t);
             return null == n || A.has(n);
         },
         async saveImage(e, t, n) {
@@ -340,21 +346,21 @@ let j = {
             let a = p.A.toURLSafe(e);
             if (null == a) return "errored";
             let o = a.pathname.split("/").pop() ?? "unknown";
-            o = P(o);
+            o = k(o);
             let l = a.searchParams.get("format");
             if (null != l) {
-                let e = l.replace(w, "").toLowerCase();
+                let e = l.replace(M, "").toLowerCase();
                 if (e.length > 0) {
                     let t = o.replace(x, "");
                     o = `${t}.${e}`;
                 }
             } else if (!o.includes(".")) {
-                let r = B(e, t) ?? n ?? "png";
+                let r = H(e, t) ?? n ?? "png";
                 o = `${o}.${r}`;
             }
-            let u = await U(e),
+            let u = await G(e),
                 d = m.from(u),
-                _ = c.w.get(O);
+                _ = c.w.get(b);
             if (("string" != typeof _ && (_ = void 0), "function" == typeof E.fileManager.saveWithDialog2)) {
                 if (null == (r = await E.fileManager.saveWithDialog2(d, o, _ ?? void 0))) return "errored";
                 if (r.canceledByUser) return "canceled";
@@ -365,15 +371,15 @@ let j = {
                 } catch (e) {
                     return "errored";
                 }
-            return null == s || "" === s ? "errored" : (c.w.set(O, s), "saved");
+            return null == s || "" === s ? "errored" : (c.w.set(b, s), "saved");
         },
         async saveFile(e, t) {
             i()(f.isPlatformEmbedded, "Save file method called outside native app");
             let n = p.A.toURLSafe(e);
             if (null == n) return null;
             let r = t ?? n.pathname.split("/").pop() ?? "unknown";
-            null == t && (r = P(r));
-            let s = await k(e),
+            null == t && (r = k(r));
+            let s = await U(e),
                 a = m.from(s),
                 o = await E.fileManager.saveWithDialog(a, r, void 0);
             return null == o ? null : o;
@@ -422,7 +428,7 @@ let j = {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0;
             if (!f.isPlatformEmbedded || "function" != typeof E.clipboard.copyImage) return !1;
             if (null != e) {
-                let t = B(e, void 0);
+                let t = H(e, void 0);
                 if (null != t && !g.has(t)) return !1;
             }
             return !0;
@@ -507,7 +513,7 @@ let j = {
             E.window.close(e);
         },
         clearNavigationHistory() {
-            H(o.W.NAVIGATION_HISTORY_CLEAR);
+            j(o.W.NAVIGATION_HISTORY_CLEAR);
         },
         setAlwaysOnTop(e, t) {
             "function" == typeof E.window.setAlwaysOnTop && E.window.setAlwaysOnTop(e, t);
@@ -879,10 +885,10 @@ let j = {
             (0, f.isDesktop)() && this.sendIPC(o.W.APP_FIRST_RENDER_AFTER_READY_PAYLOAD);
         },
         appLoaded() {
-            H(o.W.APP_LOADED);
+            j(o.W.APP_LOADED);
         },
         indexLoadedAsync() {
-            H(o.W.APP_ASYNC_INDEX_TSX_LOADED);
+            j(o.W.APP_ASYNC_INDEX_TSX_LOADED);
         },
     },
-    Y = j;
+    W = Y;
