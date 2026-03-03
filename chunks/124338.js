@@ -118,8 +118,45 @@ let u = new c(o.h, {
         o?.skuIds.forEach((e) => {
             d.delete(e);
         }),
+            null != o && d.delete(o.id),
             (s[l] = t),
             d.delete(l);
+    },
+    STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH: (e) => {
+        let { skuIds: l } = e;
+        l.forEach((e) => {
+            let l = a[e],
+                t = l?.productId != null ? i[l.productId] : null;
+            t?.skuIds.forEach((e) => {
+                d.add(e);
+            }),
+                null != t && d.add(t.id),
+                d.add(e);
+        });
+    },
+    STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH_SUCCESS: (e) => {
+        let { products: l } = e;
+        l.forEach((e) => {
+            e.skus.forEach((e) => {
+                (a[e.id] = e), delete s[e.id], d.delete(e.id);
+            }),
+                (i[e.id] = e),
+                delete s[e.id],
+                d.delete(e.id);
+        });
+    },
+    STOREFRONT_PRODUCTS_BY_SKU_IDS_FETCH_FAILURE: (e) => {
+        let { skuIds: l, apiError: t } = e;
+        l.forEach((e) => {
+            let l = a[e],
+                r = l?.productId != null ? i[l.productId] : null;
+            r?.skuIds.forEach((e) => {
+                d.delete(e);
+            }),
+                null != r && d.delete(r.id),
+                (s[e] = t),
+                d.delete(e);
+        });
     },
     LOGOUT: (e) => {
         (n = {}), (i = {}), (a = {}), (d = new Set()), (s = {});
