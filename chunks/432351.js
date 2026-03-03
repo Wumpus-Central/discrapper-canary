@@ -47,7 +47,6 @@ class l extends r.A {
         return s.qe;
     }
     setAsyncVideoInputDeviceInit(e) {}
-    setAsyncClipsSourceDeinit(e) {}
     getCodecCapabilities(e) {
         e("");
     }

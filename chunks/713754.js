@@ -2,7 +2,7 @@
 n.d(t, {
     $I: () => r.$I,
     B8: () => l,
-    BY: () => s,
+    BY: () => a,
     CO: () => r.CO,
     Cn: () => r.Cn,
     E6: () => o,
@@ -22,15 +22,15 @@ n.d(t, {
     oh: () => r.oh,
     qe: () => r.qe,
     rB: () => r.rB,
-    s6: () => a,
+    s6: () => s,
     us: () => r.us,
     x: () => r.x,
     zt: () => r.zt,
 });
 var r = n(731854);
 let i = 3e4,
-    a = { [r.TB.VOICE_ACTIVITY]: 1, [r.TB.PUSH_TO_TALK]: 2 };
-var s = (function (e) {
+    s = { [r.TB.VOICE_ACTIVITY]: 1, [r.TB.PUSH_TO_TALK]: 2 };
+var a = (function (e) {
         return (
             (e.VOICE_SOUND_STOP_LOOP = "voice_sound_stop_loop"),
             (e.VOICE_RELATIVE_SOUNDS = "voice_relative_sounds"),
@@ -76,7 +76,6 @@ var s = (function (e) {
             (e.VAAPI = "vaapi"),
             (e.GAMESCOPE_CAPTURE = "gamescope_capture"),
             (e.ASYNC_VIDEO_INPUT_DEVICE_INIT = "async_video_input_device_init"),
-            (e.ASYNC_CLIPS_SOURCE_DEINIT = "async_clips_source_deinit"),
             (e.PORT_AWARE_LATENCY_TESTING = "port_aware_latency_testing"),
             e
         );

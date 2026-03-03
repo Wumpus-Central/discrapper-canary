@@ -151,8 +151,6 @@ class A extends s.A {
                 return (0, d.$b)(h.BY.GAMESCOPE_CAPTURE);
             case h.O5.ASYNC_VIDEO_INPUT_DEVICE_INIT:
                 return (0, d.$b)(h.BY.ASYNC_VIDEO_INPUT_DEVICE_INIT);
-            case h.O5.ASYNC_CLIPS_SOURCE_DEINIT:
-                return (0, d.$b)(h.BY.ASYNC_CLIPS_SOURCE_DEINIT);
             case h.O5.PORT_AWARE_LATENCY_TESTING:
                 return (0, d.$b)(h.BY.PORT_AWARE_LATENCY_TESTING);
             case h.O5.DIAGNOSTICS:
@@ -274,9 +272,6 @@ class A extends s.A {
     }
     setAsyncVideoInputDeviceInit(e) {
         (0, d.lE)().setAsyncVideoInputDeviceInitSetting?.(e), (0, d.lE)().setAsyncVideoInputDeviceInit?.(e);
-    }
-    setAsyncClipsSourceDeinit(e) {
-        (0, d.lE)().setAsyncClipsSourceDeinit?.(e);
     }
     getCodecCapabilities(e) {
         (0, d.lE)().getCodecCapabilities(e);

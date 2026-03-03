@@ -218,7 +218,6 @@ class R extends o.A {
         return this.videoInputDeviceId;
     }
     setAsyncVideoInputDeviceInit(e) {}
-    setAsyncClipsSourceDeinit(e) {}
     getCodecCapabilities(e) {
         e("");
     }
