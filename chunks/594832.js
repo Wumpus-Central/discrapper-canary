@@ -248,6 +248,6 @@ function U(e) {
         r.useEffect(() => {
             null != e && null == n && null != t && null == n && (0, u.A)(t.id, t.getAvatarURL(null, 80));
         }, [t, e, n]),
-        O({ wishlistId: s, userId: e })
+        { ...O({ wishlistId: s, userId: e }), wishlistId: s, userProfile: n }
     );
 }
