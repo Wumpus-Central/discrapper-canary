@@ -42,14 +42,14 @@ function C() {
             .map((e) => e.toLowerCase()),
     );
 }
-function b() {
+function R() {
     return new Set(
         l()
             .weekdays()
             .map((e) => e.toLowerCase()),
     );
 }
-function R() {
+function O() {
     let e = new Date().getFullYear();
     return new Set(
         a()
@@ -57,15 +57,15 @@ function R() {
             .map((e) => e.toString()),
     );
 }
-function O(e, t) {
+function b(e, t) {
     return [e, e.clone().add(1, t)];
 }
 function D(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-    return O(l()().startOf(e).add(t, e), e);
+    return b(l()().startOf(e).add(t, e), e);
 }
 function L(e, t, n) {
-    return O(l()(e, t).local(), n);
+    return b(l()(e, t).local(), n);
 }
 function w() {
     return {
@@ -76,11 +76,11 @@ function w() {
         [N.intl.string(N.t["dXC/hn"])]: () => D("year"),
     };
 }
-let x = "([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})",
-    M = "\\d{4}",
+let M = "([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})",
+    x = "\\d{4}",
     P = "([0-9]{4})-([0-9]{1,2})",
     k = "([^\\d\\s]+)",
-    U = RegExp(`(?:\\s*(${x}|${P}|${M}|${k}))`, "i"),
+    U = RegExp(`(?:\\s*(${M}|${P}|${x}|${k}))`, "i"),
     G = RegExp("\\s*(true|false)", "i");
 function F(e) {
     return `${e}:`;
@@ -115,9 +115,9 @@ function H(e, t) {
             ? ([n, r] = s())
             : C().has(i)
               ? ([n, r] = L(i, "MMMM", "month"))
-              : b().has(i)
+              : R().has(i)
                 ? ([n, r] = L(i, "dddd", "day"))
-                : R().has(i)
+                : O().has(i)
                   ? ([n, r] = L(i, "YYYY", "year"))
                   : ([n, r] = L(i, v.ump, "day")),
         !!(n.isValid() && r.isValid()) &&
@@ -190,7 +190,7 @@ function K(e) {
     }[e.getMatch(1)];
     return null != t && "" !== t && (e.setData("has", t), !0);
 }
-function z(e) {
+function $(e) {
     let t = {
         [N.intl.string(N.t.tPZo4p)]: "user",
         [N.intl.string(N.t.JL7sRS)]: "bot",
@@ -198,11 +198,11 @@ function z(e) {
     }[e.getMatch(1)];
     return null != t && "" !== t && (e.setData("author_type", t), !0);
 }
-function $() {
-    return [...Array.from(C()), ...Array.from(b()), ...Array.from(R()), ...Object.keys(w())];
+function z() {
+    return [...Array.from(C()), ...Array.from(R()), ...Array.from(O()), ...Object.keys(w())];
 }
 function q(e, t, n) {
-    return Z(e, t, $()).map((e) => ({ ...e, group: n, key: `${n}-${e.text}` }));
+    return Z(e, t, z()).map((e) => ({ ...e, group: n, key: `${n}-${e.text}` }));
 }
 function Z(e, t, n) {
     let r = e.toLocaleLowerCase();
@@ -463,7 +463,7 @@ function es(e) {
             follows: [v.LWr.FILTER_FILE_TYPE],
             mutable: !0,
             componentType: "ANSWER",
-            queryKey: "attachment_extensions",
+            queryKey: "attachment_extension",
         },
         [v.LWr.FILTER_FILE_NAME]: {
             regex: V(N.intl.string(N.t["5xtLRC"])),
@@ -581,7 +581,7 @@ function es(e) {
         [v.LWr.ANSWER_AUTHOR_TYPE]: {
             regex: RegExp(`(?:\\s*-?(${t.map((e) => g.A.escape(e)).join("|")}))`, "i"),
             follows: [v.LWr.FILTER_AUTHOR_TYPE],
-            validator: z,
+            validator: $,
             componentType: "ANSWER",
             queryKey: "author_type",
         },
