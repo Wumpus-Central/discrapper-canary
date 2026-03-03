@@ -15,7 +15,7 @@ var r = n(64700),
     h = n(986719),
     m = n(652215),
     E = n(307731);
-let g = { thread: new Set(["name"]) };
+let g = new Map([["thread", new Set(["name"])]]);
 function A(e, t, n) {
     let { channel: A, type: I } = e,
         [T, S] = r.useState(() => (0, p.Ur)()),
@@ -32,17 +32,13 @@ function A(e, t, n) {
             }),
             [A, I, v],
         ),
-        { activeCommand: b, activeCommandOption: R } = (0, s.cf)([o.A], () => ({
+        { activeCommand: R, activeCommandOption: O } = (0, s.cf)([o.A], () => ({
             activeCommand: o.A.getActiveCommand(A.id),
             activeCommandOption: o.A.getActiveOption(A.id),
         })),
-        O = r.useMemo(
-            () =>
-                b?.untranslatedName != null &&
-                R?.name != null &&
-                null != g[b.untranslatedName] &&
-                g[b.untranslatedName].has(R.name),
-            [b?.untranslatedName, R?.name],
+        b = r.useMemo(
+            () => R?.untranslatedName != null && O?.name != null && (g.get(R.untranslatedName)?.has(O.name) ?? !1),
+            [R?.untranslatedName, O?.name],
         ),
         D = (0, h.A)({
             navId: "channel-autocomplete",
@@ -52,31 +48,31 @@ function A(e, t, n) {
         }),
         L = e.editorRef.current?.getCurrentWord(),
         w = e.editorRef.current?.getSlateEditor(),
-        x = null;
-    null != w && (x = u.VW.getSelectedParentOfType(w, p.mk)?.[0] ?? null);
-    let M = {
+        M = null;
+    null != w && (M = u.VW.getSelectedParentOfType(w, p.mk)?.[0] ?? null);
+    let x = {
             ...e,
             navigator: D,
-            activeCommand: b,
-            activeCommandOption: R,
-            activeInlineAutocompleteInput: x,
+            activeCommand: R,
+            activeCommandOption: O,
+            activeInlineAutocompleteInput: M,
             canMentionUsers: I.users?.allowMentioning ?? !1,
             canMentionEveryone: N,
             hidePersonalInformation: C,
             hideMentionDescription: I === l.oU.RULES_INPUT,
-            emojiIntention: I === l.oU.RULES_INPUT ? E.b_.COMMUNITY_CONTENT : O ? E.b_.NO_CUSTOM_EMOJI : E.b_.CHAT,
+            emojiIntention: I === l.oU.RULES_INPUT ? E.b_.COMMUNITY_CONTENT : b ? E.b_.NO_CUSTOM_EMOJI : E.b_.CHAT,
             currentWord: L?.word ?? "",
             currentWordIsAtStart: L?.isAtStart === !0,
             currentFullWord: L?.fullWord ?? "",
             optionText:
-                null != R
-                    ? (0, a.getString)({ [R.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] }, R.name)
+                null != O
+                    ? (0, a.getString)({ [O.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] }, O.name)
                     : "",
         },
-        [P] = r.useState(() => new p.Ay(M));
+        [P] = r.useState(() => new p.Ay(x));
     return (
         r.useEffect(() => {
-            P.updateProps(M);
+            P.updateProps(x);
         }),
         r.useImperativeHandle(t, () => P, [P]),
         r.useEffect(() => {
