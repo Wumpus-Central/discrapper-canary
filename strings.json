@@ -2350,7 +2350,6 @@
   "E8nbNb": "You are sending too many new direct messages. Hold off for a few minutes before trying to message this person again.",
   "llTkqr": "Your message could not be delivered. Send a friend request first and start the conversation once they've accepted.\\n\\nHere is the full list of reasons why your message could not be delivered: !!{helpUrl}!!",
   "SkGL7l": "Your message could not be delivered.\\n\\nYou can see the full list of reasons here: !!{helpUrl}!!",
-  "CTMXwL": "Your message could not be delivered. This is usually because you don't share a server with the recipient or the recipient is only accepting direct messages from friends. You can see the full list of reasons here: !!{helpUrl}!!",
   "/meGhR": "This user does not allow messages from Game Friends in Discord, try sending them a message in-game instead!",
   "Oc1Zjw": "This user cannot receive messages while offline.",
   "aRUbah": "Sending messages to this channel has been temporarily disabled. Try again in a bit.",
