@@ -10,7 +10,7 @@ let o = (e) => {
     return (0, i.jsxs)("div", {
         className: r()(s.Vs, { [s.ZQ]: c }, d),
         children: [
-            (0, i.jsx)("div", { className: r()(s.$_, { [s.rO]: c }), children: o?.() }),
+            null != o && (0, i.jsx)("div", { className: r()(s.$_, { [s.rO]: c }), children: o?.() }),
             (0, i.jsxs)("div", {
                 className: s.h_,
                 children: [

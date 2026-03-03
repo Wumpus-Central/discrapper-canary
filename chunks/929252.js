@@ -9,12 +9,5 @@ e.exports = {
     Y2: "experimentUpsellIcon__9b0f4",
     Cq: "experimentUpsellText__9b0f4",
     MY: "experimentGetNitro__9b0f4",
-    ow: "errorContent__9b0f4",
-    M6: "errorImage__9b0f4",
-    t4: "errorBody__9b0f4",
-    zc: "iconContainer__9b0f4",
-    Mk: "iconSparklePlus__9b0f4",
-    _Q: "iconLink__9b0f4",
-    sY: "iconSparkleStar__9b0f4",
     Mp: "acceptAsAvatar__9b0f4",
 };

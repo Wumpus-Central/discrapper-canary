@@ -6,8 +6,8 @@ var i = n(627968),
     l = n.n(r),
     a = n(311907),
     o = n(397927),
-    c = n(73153),
-    d = n(830215),
+    d = n(73153),
+    c = n(830215),
     u = n(869038),
     h = n(110782),
     _ = n(803306),
@@ -16,16 +16,16 @@ var i = n(627968),
     m = n(871123),
     f = n(210714),
     A = n(961350),
-    E = n(650048),
-    x = n(30793),
-    v = n(189081),
-    I = n(67480),
+    x = n(650048),
+    E = n(30793),
+    I = n(189081),
+    v = n(67480),
     N = n(45938),
-    S = n(975571),
-    j = n(427262),
+    j = n(975571),
+    S = n(427262),
     C = n(161928),
-    y = n(129851),
-    T = n(229),
+    T = n(129851),
+    y = n(229),
     b = n(652215),
     R = n(985018),
     O = n(473169);
@@ -39,7 +39,7 @@ class L extends s.PureComponent {
     componentDidUpdate(e) {
         let { authenticated: t, isResolved: n } = this.props;
         n ||
-            c.h.wait(() => {
+            d.h.wait(() => {
                 this.resolveGiftCode();
             }),
             t && !e.authenticated && this.handleAuthenticated(),
@@ -85,10 +85,10 @@ class L extends s.PureComponent {
     }
     handleLogout = () => {
         let e = this.props.match.params.giftCode;
-        d.A.logout("gift_code", b.BVt.GIFT_CODE_LOGIN(e));
+        c.A.logout("gift_code", b.BVt.GIFT_CODE_LOGIN(e));
     };
     handleResendVerification = () => {
-        d.A.verifyResend(), this.setState({ sentVerification: !0 });
+        c.A.verifyResend(), this.setState({ sentVerification: !0 });
     };
     handleAccept = async () => {
         let { transitionTo: e, giftCode: t } = this.props;
@@ -114,7 +114,6 @@ class L extends s.PureComponent {
         let { defaultRoute: e, transitionTo: t } = this.props;
         return (0, i.jsxs)(p.Ay, {
             children: [
-                (0, i.jsx)(p._V, { src: n(428721), className: O.QB }),
                 (0, i.jsx)(p.hE, { className: l()(O.Ot, O.QB), children: R.intl.string(R.t.KPowgn) }),
                 (0, i.jsx)(p.tK, { children: R.intl.string(R.t.j8734b) }),
                 (0, i.jsx)("div", {
@@ -128,7 +127,7 @@ class L extends s.PureComponent {
                 (0, i.jsx)(o.QWc, {
                     text: R.intl.string(R.t["/CjuXF"]),
                     textVariant: "text-sm/normal",
-                    onClick: () => window.open(S.A.getArticleURL(b.MVz.GIFTING), "_blank"),
+                    onClick: () => window.open(j.A.getArticleURL(b.MVz.GIFTING), "_blank"),
                 }),
             ],
         });
@@ -200,7 +199,7 @@ class L extends s.PureComponent {
                         : (0, i.jsx)(p.ME, {
                               className: O.QX,
                               children: R.intl.format(R.t.NYM08s, {
-                                  userTag: j.Ay.getUserTag(t),
+                                  userTag: S.Ay.getUserTag(t),
                                   onLogoutClick: this.handleLogout,
                               }),
                           }),
@@ -219,41 +218,41 @@ class L extends s.PureComponent {
                 transitionTo: a,
                 location: o,
             } = this.props,
-            { fetchingUser: c, continueOnWeb: d } = this.state;
-        if (e === b.fAW.OPEN && !d) return this.renderAppOpened();
+            { fetchingUser: d, continueOnWeb: c } = this.state;
+        if (e === b.fAW.OPEN && !c) return this.renderAppOpened();
         if (e === b.fAW.OPENING) return this.renderSpinner(R.intl.string(R.t["Z+hCVU"]));
         if (l) return this.renderSpinner(R.intl.string(R.t.bhJseN));
         if (null == s) return r ? this.renderExpiredInvite() : this.renderSpinner(R.intl.string(R.t.b3lf1c));
         if (r) {
             if (n) {
                 let e = this.state.currentUser;
-                return c || null == e
+                return d || null == e
                     ? this.renderSpinner(R.intl.string(R.t.bYb2nS))
                     : this.requiresVerification && null != e
                       ? this.renderVerification(e)
                       : this.renderAuthenticated(s, e, t);
             }
             return "login" === this.getMode()
-                ? (0, i.jsx)(y.A, { giftCodeSKU: t, giftCode: s, transitionTo: a, location: o })
-                : (0, i.jsx)(T.A, { giftCodeSKU: t, giftCode: s, transitionTo: a, location: o });
+                ? (0, i.jsx)(T.A, { giftCodeSKU: t, giftCode: s, transitionTo: a, location: o })
+                : (0, i.jsx)(y.A, { giftCodeSKU: t, giftCode: s, transitionTo: a, location: o });
         }
         return null;
     }
 }
-let w = a.Ay.connectStores([x.A, v.A, A.default, I.A, E.A, g.A], (e) => {
+let w = a.Ay.connectStores([E.A, I.A, A.default, v.A, x.A, g.A], (e) => {
         let t = e.match.params.giftCode,
-            n = x.A.get(t),
-            i = null != n ? I.A.get(n.skuId) : null;
+            n = E.A.get(t),
+            i = null != n ? v.A.get(n.skuId) : null;
         return {
             giftCode: n,
             sku: i,
             libraryApplication:
-                null != i && n?.entitlementBranches != null ? N.YI(n.entitlementBranches, i, v.A) : null,
+                null != i && n?.entitlementBranches != null ? N.YI(n.entitlementBranches, i, I.A) : null,
             authenticated: A.default.isAuthenticated(),
-            defaultRoute: E.A.defaultRoute,
-            isResolved: x.A.getIsResolved(t),
-            isAccepting: x.A.getIsAccepting(t),
-            libraryApplicationsFetched: v.A.fetched,
+            defaultRoute: x.A.defaultRoute,
+            isResolved: E.A.getIsResolved(t),
+            isAccepting: E.A.getIsAccepting(t),
+            libraryApplicationsFetched: I.A.fetched,
             nativeAppState: g.A.getState(t),
         };
     })(L),

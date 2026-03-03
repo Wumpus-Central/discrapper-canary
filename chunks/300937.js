@@ -2,8 +2,6 @@ e.exports = {
     yu: "metadata__857bf",
     kP: "libraryLink__857bf",
     dy: "libraryIcon__857bf",
-    oK: "invalidPoop__857bf",
-    ok: "invalidPoopHorizontal__857bf",
     El: "legacySeasonalGiftEmbedWrapper__857bf",
     gB: "customGiftEmbedWrapper__857bf",
     by: "giftEmbedWrapperHorizontal__857bf",

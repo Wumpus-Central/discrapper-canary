@@ -15,7 +15,7 @@ var n = l(627968),
     N = l(486020),
     g = l(821589),
     p = l(985018),
-    j = l(816756);
+    j = l(485366);
 let A = (e) => {
         let { text: t, extra: l } = e;
         return (0, n.jsxs)(r.Heading, { variant: "heading-md/semibold", className: j.header, children: [t, l] });
@@ -45,7 +45,11 @@ let A = (e) => {
         let { application: t, guild: l, channel: s, onClick: i, expired: d = !1, user: o, className: v } = e,
             N = (0, u.Ay)(s) ?? "",
             p = h.kt.useSetting();
-        if (d) return (0, n.jsx)("div", { className: j.guildIconExpired });
+        if (d)
+            return (0, n.jsx)("div", {
+                className: j.guildIconExpired,
+                children: (0, n.jsx)(r.u6c, { size: "custom", width: 26, height: 26, color: "currentColor" }),
+            });
         let A = null == l || null != l.icon,
             E = a()((0, g.t)(j, "guildIcon", A ? "Image" : "", null != i ? "Joined" : ""), v);
         return null != t

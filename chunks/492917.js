@@ -3,6 +3,7 @@ n.d(t, {
     $wK: () => r.$wK,
     DeQ: () => r.DeQ,
     IDW: () => r.IDW,
+    KTg: () => r.KTg,
     Mwn: () => r.Mwn,
     Zbm: () => r.Zbm,
     Zui: () => r.Zui,
