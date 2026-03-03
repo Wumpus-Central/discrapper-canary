@@ -1,13 +1,14 @@
-i.d(t, { m: () => r });
-var n = i(64700),
-    s = i(310209);
+"use strict";
+n.d(t, { m: () => r });
+var i = n(64700),
+    s = n(310209);
 function r(e) {
-    let { wishlistAndRecommendations: t, skusToUserAndReason: i, userId: r, numItems: a } = e;
+    let { wishlistAndRecommendations: t, skusToUserAndReason: n, userId: r, numItems: a } = e;
     return {
-        totalUnownedWishlistItemCount: n.useMemo(
-            () => t.filter((e) => null != i[e.id] && i[e.id][r] === s.j.WISHLIST).length,
-            [t, r, i],
+        totalUnownedWishlistItemCount: i.useMemo(
+            () => t.filter((e) => null != n[e.id] && n[e.id][r] === s.j.WISHLIST).length,
+            [t, r, n],
         ),
-        slicedWishlistAndRecommendations: n.useMemo(() => t.slice(0, a), [t, a]),
+        slicedWishlistAndRecommendations: i.useMemo(() => t.slice(0, a), [t, a]),
     };
 }
