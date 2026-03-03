@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => x, ZM: () => b, dL: () => N, oO: () => O }), n(321073);
+n.d(t, { Ay: () => M, ZM: () => R, dL: () => N, oO: () => b }), n(321073);
 var r = n(627968),
     i = n(64700),
     s = n(575593),
@@ -34,32 +34,32 @@ let N = (e) => e.name,
                   priceTooltip: r.showNitroPrice ? S.intl.string(y.default.YUNJJa) : void 0,
               };
     },
-    b = (e) => {
+    R = (e) => {
         let { sku: t, product: n } = e;
         return null != n && n.type === s.R.BUNDLE
             ? (0, r.jsx)(h.a, { product: n, fallbackLabel: null })
             : (0, r.jsx)(T.r$, { sku: t, slayerProductPreviewClassName: v.a });
     },
-    R = {
+    O = {
         [s.R.BUNDLE]: () => S.intl.string(y.default["jM8/71"]),
         [s.R.AVATAR_DECORATION]: () => S.intl.string(y.default.r29Oel),
         [s.R.PROFILE_EFFECT]: () => S.intl.string(y.default.eTYAvF),
         [s.R.NAMEPLATE]: () => S.intl.string(y.default.of9bom),
     },
-    O = (e) => {
+    b = (e) => {
         let t = S.intl.string(y.default.iZe9Wy);
         if (null == e);
-        else if (e.type in R) return (0, R[e.type])();
+        else if (e.type in O) return (0, O[e.type])();
         return t;
     },
     D = (e) => {
         let { sku: t, product: n, application: r, isSocialLayerGameItem: i, giftRecipient: s } = e,
             a = S.intl.string(y.default.iZe9Wy);
-        i ? (a = S.intl.string(y.default.qwSlCO)) : null != n && (a = O(n));
+        i ? (a = S.intl.string(y.default.qwSlCO)) : null != n && (a = b(n));
         let o = i
                 ? { header: r.name, headerIconSrc: E.Ay.getApplicationIconURL({ id: r.id, icon: r.icon, size: 16 }) }
                 : {},
-            l = b({ sku: t, product: n }),
+            l = R({ sku: t, product: n }),
             c = {};
         return (
             null != n && (c = C(n)),
@@ -110,33 +110,33 @@ let N = (e) => e.name,
                 () => D({ sku: n, product: m, application: t, isSocialLayerGameItem: E, giftRecipient: p }),
                 [n, m, t, E, p],
             ),
-            [b, R] = i.useMemo(
+            [R, O] = i.useMemo(
                 () => [S.intl.string(y.default.Zxav97), null != s ? (0, A.$g)(s.amount, s.currency) : void 0],
                 [s],
             ),
-            O = i.useMemo(() => {
+            b = i.useMemo(() => {
                 let e = (0, I.PN)(s, { isGift: u });
                 return null != e ? (0, r.jsx)(l.J, { ...e }) : null;
             }, [s, u]),
-            { setCheckoutHeaderConfigs: w, checkoutHeaderConfigs: x } = (0, c.ck)();
+            { setCheckoutHeaderConfigs: w, checkoutHeaderConfigs: M } = (0, c.ck)();
         return (
             i.useEffect(() => {
-                null != O && null == x.headerBadgeText && w({ ...x, headerBadgeText: S.intl.string(y.default.Fjpyfj) });
-            }, [O, w, x]),
+                null != b && null == M.headerBadgeText && w({ ...M, headerBadgeText: S.intl.string(y.default.Fjpyfj) });
+            }, [b, w, M]),
             (0, r.jsx)(d.rg, {
                 shouldShowGlobalNotices: !0,
                 purchaseItemContent: (0, r.jsx)(f.f7, { ...C, price: v }),
                 invoiceSummaryContent: N,
                 paymentSelectContent: a,
                 legalContent: o,
-                promotionalNoticeContent: O,
+                promotionalNoticeContent: b,
                 upperInlineNoticeProps: h,
-                invoiceTotalDueLabel: b,
-                invoiceTotalDueValue: R,
+                invoiceTotalDueLabel: R,
+                invoiceTotalDueValue: O,
             })
         );
     };
-function x(e) {
+function M(e) {
     let { hasLegalTermsFlash: t, legalTermsNodeRef: n, onPaymentSourceChange: s, handlePaymentSourceAdd: a } = e,
         {
             sku: l,
@@ -157,14 +157,15 @@ function x(e) {
         }),
         g = (0, r.jsx)(o.A, { ...f, shouldUseUnifiedCheckoutUI: !0 }),
         A = i.useMemo(() => {
-            if (null == E.testModeWarning && null == E.devShelfError) return null;
             let e = [];
             return (
                 null != E.testModeWarning && e.push({ type: "warning", message: E.testModeWarning }),
                 null != E.devShelfError && e.push({ type: "critical", message: E.devShelfError }),
-                e
+                null != E.socialLayerGameItemDisclaimer &&
+                    e.push({ type: "warning", message: E.socialLayerGameItemDisclaimer }),
+                e.length > 0 ? e : null
             );
-        }, [E.testModeWarning, E.devShelfError]);
+        }, [E.testModeWarning, E.devShelfError, E.socialLayerGameItemDisclaimer]);
     return h
         ? (0, r.jsx)(d.Ed, {})
         : (0, r.jsx)(w, {
