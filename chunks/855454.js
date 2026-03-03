@@ -1,11 +1,10 @@
 "use strict";
-n.d(t, { C: () => a });
-var r = n(600975);
+n.d(t, { C: () => s });
+var r = n(250105);
 let i = { enableStats: !1 },
-    a = (0, r.C)({
+    s = (0, r.Ay)({
         kind: "user",
-        id: "2025-06_krisp_stats_collection",
-        label: "Krisp Stats Collection Experiment",
+        name: "2026-03-krisp-stats-collection",
         defaultConfig: i,
-        treatments: [{ id: 1, label: "Enable Krisp Stats Collection", config: { ...i, enableStats: !0 } }],
+        variations: { 1: { ...i, enableStats: !0 } },
     });

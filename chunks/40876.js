@@ -789,8 +789,9 @@ let i = {
         neverLoadBeforeConnectionOpen: !0,
     },
     KrispExperimentManager: {
-        actions: ["POST_CONNECTION_OPEN", "RTC_CONNECTION_STATE"],
+        actions: ["RTC_CONNECTION_STATE"],
         inlineRequire: () => n(65457).A,
+        hasStoreChangeListeners: !0,
     },
     FramesWebManager: { actions: ["RPC_APP_DISCONNECTED"], inlineRequire: () => n(905579).A },
     NotificationsInboxAutoLoadManager: {
