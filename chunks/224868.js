@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { f: () => g, p: () => m });
+n.d(t, { f: () => E, p: () => m });
 var r = n(47167),
     i = n(508675),
-    a = n(7584),
-    s = n(863005),
+    s = n(7584),
+    a = n(863005),
     o = n(734057),
     l = n(808728),
     u = n(696451),
@@ -14,10 +14,10 @@ var r = n(47167),
     p = n(661191),
     h = n(408018);
 function m(e, t, n, r) {
-    let { allowUsers: i = !0, allowRoles: a = !0 } = r ?? {};
+    let { allowUsers: i = !0, allowRoles: s = !0 } = r ?? {};
     switch (e[0]) {
         case "@":
-            return E(e, t, n, i, a);
+            return g(e, t, n, i, s);
         case ":":
             return T(e, t);
         case "#":
@@ -25,16 +25,16 @@ function m(e, t, n, r) {
     }
     return null;
 }
-function g(e, t, n, r) {
+function E(e, t, n, r) {
     let i = m(e, t, n, r);
     return null == i ? null : (0, h.QR)(i);
 }
-function E(e, t, n, r, i) {
-    let [a, s] = e.slice(1).split("#", 2),
+function g(e, t, n, r, i) {
+    let [s, a] = e.slice(1).split("#", 2),
         l = null != t ? d.A.getGuild(t) : null;
-    if (i && null == s && null != l) {
+    if (i && null == a && null != l) {
         for (let e of c.A.getSortedRoles(l.id))
-            if (a === e.name) return { type: "roleMention", roleId: e.id, children: [{ text: "" }] };
+            if (s === e.name) return { type: "roleMention", roleId: e.id, children: [{ text: "" }] };
     }
     if (r) {
         let e = null != n ? o.A.getChannel(n) : null;
@@ -48,10 +48,10 @@ function E(e, t, n, r, i) {
                   })
         )
             .map((e) => _.default.getUser(e))
-            .filter((e) => void 0 !== e && A(a, s, e));
+            .filter((e) => void 0 !== e && A(s, a, e));
         if (1 === r.length) {
             let e = r[0];
-            if (A(a, s, e, { requireExact: !0 }))
+            if (A(s, a, e, { requireExact: !0 }))
                 return { type: "userMention", userId: e.id, children: [{ text: "" }] };
         }
     }
@@ -73,21 +73,21 @@ function I(e, t) {
             for (let { channel: r } of l.Ay.getChannels(t)[e])
                 if (r.name === n) return { type: "channelMention", channelId: r.id, children: [{ text: "" }] };
         }
-    let a = s.A.getActiveJoinedThreadsForGuild(t);
-    for (let e of p.default.keys(a))
-        for (let t of p.default.keys(a[e])) {
-            let { channel: r } = a[e][t];
+    let s = a.A.getActiveJoinedThreadsForGuild(t);
+    for (let e of p.default.keys(s))
+        for (let t of p.default.keys(s[e])) {
+            let { channel: r } = s[e][t];
             if (r.name === n) return { type: "channelMention", channelId: r.id, children: [{ text: "" }] };
         }
     return null;
 }
 function T(e, t) {
-    let n = a.Ay.EMOJI_NAME_RE.exec(e);
+    let n = s.Ay.EMOJI_NAME_RE.exec(e);
     if (null == n) return null;
     let r = n[1],
-        s = i.Ay.getDisambiguatedEmojiContext(t).getCustomEmoji();
-    if (null != s && r in s) {
-        let e = s[r];
+        a = i.Ay.getDisambiguatedEmojiContext(t).getCustomEmoji();
+    if (null != a && Object.prototype.hasOwnProperty.call(a, r)) {
+        let e = a[r];
         return {
             type: "customEmoji",
             emoji: {
