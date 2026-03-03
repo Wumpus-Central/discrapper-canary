@@ -12,10 +12,10 @@ var r = s(627968),
     p = s(151252),
     E = s(142270),
     S = s(287809),
-    f = s(365491),
+    h = s(365491),
     A = s(628979),
-    h = s(494573),
-    m = s(758836),
+    m = s(494573),
+    f = s(758836),
     C = s(652215);
 s(801416);
 var T = s(518477),
@@ -25,7 +25,7 @@ function O(e) {
     let { selectedTab: t, handleTransition: s } = e,
         O = (0, n.bG)([S.default], () => S.default.getCurrentUser()),
         { enabled: L } = (0, p.Z)({ location: "collectibles_shop_header_bar" }),
-        { searchQuery: x } = (0, f.v)(),
+        { searchQuery: x } = (0, h.v)(),
         R = l.useRef(null),
         [N, v] = l.useState(!1);
     (0, i.g)(
@@ -36,13 +36,13 @@ function O(e) {
     );
     let G = l.useMemo(
             () => [
-                { tab: m.G2.HOME, label: g.intl.string(g.t["xNiB/O"]) },
-                { tab: m.G2.CATALOG, label: g.intl.string(g.t.Ah5sJo), hasSubmenu: !0 },
-                ...(L ? [{ tab: m.G2.ORBS, label: g.intl.string(g.t.EBYkzk) }] : []),
+                { tab: f.G2.HOME, label: g.intl.string(g.t["xNiB/O"]) },
+                { tab: f.G2.CATALOG, label: g.intl.string(g.t.Ah5sJo), hasSubmenu: !0 },
+                ...(L ? [{ tab: f.G2.ORBS, label: g.intl.string(g.t.EBYkzk) }] : []),
             ],
             [L],
         ),
-        I = t === m.G2.ORBS ? C.liQ.SHOP_ORBS_TAB : C.liQ.COLLECTIBLES_SHOP,
+        I = t === f.G2.ORBS ? C.liQ.SHOP_ORBS_TAB : C.liQ.COLLECTIBLES_SHOP,
         _ = l.useCallback(() => {
             (0, b.Y)({ pageType: I, sectionType: C.JJy.ORBS_BALANCE_MENU, ctaObject: C.ZSU.CTA_TO_QUEST_HOME }),
                 (0, u.navigateToQuestHome)({ fromContent: a.u.ORBS_BALANCE_MENU });
@@ -80,14 +80,16 @@ function O(e) {
                         }),
                 ],
             }),
+            hideForLater: !0,
+            hideSearch: !0,
             children: [
                 (0, r.jsx)(o.DUT, {
                     className: y.sU,
-                    onClick: () => s(m.G2.HOME),
+                    onClick: () => s(f.G2.HOME),
                     "aria-label": g.intl.string(g.t["5upuqx"]),
                     children: (0, r.jsx)(o.U1X, { size: "md", color: o.LU0.colors.TEXT_DEFAULT }),
                 }),
-                (0, r.jsx)(h.A, { tabs: G, selectedTab: t, onTabSelect: F }),
+                (0, r.jsx)(m.A, { tabs: G, selectedTab: t, onTabSelect: F }),
             ],
         }),
     });

@@ -3,19 +3,19 @@ var i = n(627968);
 n(64700);
 var l = n(607399),
     r = n(793574),
-    s = n(688810),
-    a = n(966597),
+    a = n(688810),
+    s = n(966597),
     o = n(922281),
-    E = n(907745),
-    c = n(723702),
-    _ = n(837921),
+    c = n(907745),
+    _ = n(723702),
+    E = n(837921),
     d = n(58736),
     u = n(746080),
     A = n(892513);
 async function T(e) {
-    if (!e && (0, c.isMac)() && c.isPlatformEmbedded) {
+    if (!e && (0, _.isMac)() && _.isPlatformEmbedded) {
         let e = (await window.DiscordNative.remoteApp.getDefaultDoubleClickAction?.()) ?? "Maximize";
-        "Minimize" === e ? _.Ay.minimize() : "Maximize" === e && _.Ay.maximize();
+        "Minimize" === e ? E.Ay.minimize() : "Maximize" === e && E.Ay.maximize();
     }
 }
 function I(e) {
@@ -23,65 +23,66 @@ function I(e) {
             children: t,
             className: n,
             channelId: r,
-            guildId: s,
-            innerClassname: c,
-            transparent: _ = !1,
+            guildId: a,
+            innerClassname: _,
+            transparent: E = !1,
             hidden: I = !1,
             toolbar: N,
             mobileToolbar: R,
             "aria-label": S,
-            "aria-labelledby": O,
-            scrollable: C,
-            role: P,
-            hideSearch: D,
-            showDivider: p,
-            disableDoubleClick: m,
+            "aria-labelledby": C,
+            scrollable: O,
+            role: p,
+            hideSearch: m,
+            hideForLater: P,
+            showDivider: D,
+            disableDoubleClick: g,
         } = e,
-        { enabled: U, inInbox: h } = a.A.useExperiment({ location: "HeaderBar" });
+        { enabled: U, inInbox: h } = s.A.useExperiment({ location: "HeaderBar" });
     return (0, i.jsx)(d.Ay, {
         className: n,
-        innerClassName: c,
+        innerClassName: _,
         toolbar: (function () {
             if (null == N) return null;
-            let e = null != r && !D;
+            let e = null != r && !m;
             return l.Fr
                 ? R
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           N,
                           e && !(0, u.jq)(r)
-                              ? (0, i.jsx)(E.Ay, { guildId: s, channelId: r, className: A.$P }, s ?? r)
+                              ? (0, i.jsx)(c.Ay, { guildId: a, channelId: r, className: A.$P }, a ?? r)
                               : null,
-                          p && (0, i.jsx)(d.Ay.Divider, {}),
-                          U && !h ? (0, i.jsx)(o.A, {}) : null,
+                          D && (0, i.jsx)(d.Ay.Divider, {}),
+                          P || !U || h ? null : (0, i.jsx)(o.A, {}),
                       ],
                   });
         })(),
-        transparent: _,
+        transparent: E,
         hidden: I,
-        onDoubleClick: () => T(m),
+        onDoubleClick: () => T(g),
         "aria-label": S,
-        "aria-labelledby": O,
-        role: P,
-        scrollable: C,
+        "aria-labelledby": C,
+        role: p,
+        scrollable: O,
         children: t,
     });
 }
 function N(e) {
-    let { children: t, className: n, "aria-label": l, "aria-labelledby": r, role: s, disableDoubleClick: a } = e;
+    let { children: t, className: n, "aria-label": l, "aria-labelledby": r, role: a, disableDoubleClick: s } = e;
     return (0, i.jsx)(d.Ay, {
         className: n,
-        onDoubleClick: () => T(a),
+        onDoubleClick: () => T(s),
         "aria-label": l,
         "aria-labelledby": r,
-        role: s,
+        role: a,
         children: t,
     });
 }
 function R(e) {
     let { isAuthenticated: t = !0, ...n } = e,
-        { analyticsLocations: l } = (0, s.Ay)(r.A.HEADER_BAR);
-    return (0, i.jsx)(s.f5, {
+        { analyticsLocations: l } = (0, a.Ay)(r.A.HEADER_BAR);
+    return (0, i.jsx)(a.f5, {
         value: l,
         children: t ? (0, i.jsx)(I, { ...n, className: n.className }) : (0, i.jsx)(N, { ...n, className: n.className }),
     });
