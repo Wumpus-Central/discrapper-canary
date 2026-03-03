@@ -6,7 +6,6 @@ e.exports = {
     mr: "newMosaicStyle__4d95d",
     Xb: "codeView__4d95d",
     Zw: "wordWrap__4d95d",
-    sz: "expanded__4d95d",
     qr: "footer__4d95d",
     R1: "openFullPreviewSection__4d95d",
     Kb: "footerGap__4d95d",

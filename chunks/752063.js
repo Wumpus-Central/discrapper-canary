@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => b });
+n.d(t, { A: () => R });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -233,23 +233,23 @@ function N(e) {
             className: N,
         } = e,
         C = s?.split("\n"),
-        b = C?.length ?? 0,
-        R = o ? 100 : 6,
-        O = 0 === g,
+        R = C?.length ?? 0,
+        O = o ? 100 : 6,
+        b = 0 === g,
         D = "";
-    O && o && b > R ? (D = "\n...") : O || (D = "..."),
+    b && o && R > O ? (D = "\n...") : b || (D = "..."),
         "" !== D &&
-            (O
-                ? (D += " " + p.intl.formatToPlainString(p.t.DQnFp2, { lines: b - R }))
+            (b
+                ? (D += " " + p.intl.formatToPlainString(p.t.DQnFp2, { lines: R - O }))
                 : (D += " " + p.intl.formatToPlainString(p.t["1+gGcK"], { formattedBytes: (0, f.up)(g) })));
-    let L = C?.slice(0, R).join("\n") + D,
+    let L = C?.slice(0, O).join("\n") + D,
         w = (0, d.sJ)(L),
-        x = o || R < b;
+        M = o || O < R;
     return (0, r.jsxs)("div", {
         className: a()(N, h.kL),
         children: [
-            (0, r.jsx)("div", {
-                className: a()(h.FS, { [h.sz]: o }),
+            (0, r.jsx)(u.IpV, {
+                className: h.FS,
                 children:
                     null == s
                         ? (0, r.jsx)(u.y$y, { className: h.u1 })
@@ -258,7 +258,7 @@ function N(e) {
             (0, r.jsxs)("div", {
                 className: h.qr,
                 children: [
-                    x ? (0, r.jsx)(I, { expanded: o, setExpanded: l, numLines: b, isWholeFile: O }) : null,
+                    M ? (0, r.jsx)(I, { expanded: o, setExpanded: l, numLines: R, isWholeFile: b }) : null,
                     (0, r.jsx)(T, { fileName: n, fileSize: i }),
                     (0, r.jsx)("div", { className: h.Kb }),
                     (0, r.jsx)(S, { language: c, setLanguage: _, align: "top" }),
@@ -327,7 +327,7 @@ function C(e) {
         })
     );
 }
-let b = i.memo(
+let R = i.memo(
     function (e) {
         let { url: t, fileName: n, fileSize: s, contentType: o, className: l, onClick: u, onContextMenu: d } = e,
             [_, f] = i.useState(!1),
