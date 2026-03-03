@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => w, F: () => x });
+n.d(t, { A: () => w, F: () => M });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -24,9 +24,9 @@ var r = n(627968),
     v = n(811611),
     N = n(841252),
     C = n(788868),
-    b = n(652215),
-    R = n(985018),
-    O = n(953239),
+    R = n(652215),
+    O = n(985018),
+    b = n(953239),
     D = n(669149);
 function L(e) {
     switch (e) {
@@ -49,8 +49,8 @@ function w(e) {
             analyticsSource: o,
             analyticsLocation: S,
             body: w,
-            context: x,
-            glowUp: M,
+            context: M,
+            glowUp: x,
             modalClassName: P,
             modalContentClassName: k,
             artContainerClassName: U,
@@ -63,8 +63,8 @@ function w(e) {
             onSubscribeFinish: Y,
             onSecondaryClick: W,
             secondaryCTA: K,
-            secondaryCTAClassName: z,
-            subscribeButtonText: $,
+            secondaryCTAClassName: $,
+            subscribeButtonText: z,
             showNewBadge: q = !1,
             showBetaBadge: Z = !1,
             enableArtBoxShadow: X = !0,
@@ -103,14 +103,14 @@ function w(e) {
                 type: i,
             } = eg.current;
             e_
-                ? m.default.track(b.HAw.PREMIUM_GUILD_UPSELL_VIEWED, {
+                ? m.default.track(R.HAw.PREMIUM_GUILD_UPSELL_VIEWED, {
                       type: `${i} - Tier ${r?.boostedGuildTier}`,
                       guild_id: r?.guild.id,
                       channel_id: r?.channelId,
                       location: e,
                       location_stack: t,
                   })
-                : m.default.track(b.HAw.PREMIUM_UPSELL_VIEWED, {
+                : m.default.track(R.HAw.PREMIUM_UPSELL_VIEWED, {
                       type: i,
                       source: n,
                       location: e,
@@ -126,7 +126,7 @@ function w(e) {
     }, [eT]);
     let eS = () => {
             if (e_) return (0, r.jsx)(h.A, { analyticsLocation: S, guild: s.guild, onClose: H });
-            let e = en ? R.intl.string(R.t.pj0XBN) : void 0;
+            let e = en ? O.intl.string(O.t.pj0XBN) : void 0;
             return (
                 eh &&
                     (null != ef
@@ -134,7 +134,7 @@ function w(e) {
                               intervalType: ef?.subscription_trial?.interval,
                               intervalCount: ef?.subscription_trial?.interval_count,
                           }))
-                        : null != ep && (e = R.intl.formatToPlainString(R.t.bkQ4bH, { percent: ep.discount.amount }))),
+                        : null != ep && (e = O.intl.formatToPlainString(O.t.bkQ4bH, { percent: ep.discount.amount }))),
                 (0, r.jsx)(T.A, {
                     className: ei,
                     showGradient: en || er,
@@ -146,19 +146,19 @@ function w(e) {
                         j?.(), H();
                     },
                     onSubscribeModalClose: Y,
-                    textOptions: { textOverride: $ ?? e },
+                    textOptions: { textOverride: z ?? e },
                 })
             );
         },
-        ey = X ? a()(O.JS, O.OV, U) : a()(O.JS, U),
+        ey = X ? a()(b.JS, b.OV, U) : a()(b.JS, U),
         ev = null;
     return (
         null != ed.artURL
-            ? (ev = (0, r.jsx)("img", { className: a()(G, O.Qw), alt: "", src: ed.artURL }))
+            ? (ev = (0, r.jsx)("img", { className: a()(G, b.Qw), alt: "", src: ed.artURL }))
             : null != ed.artElement && (ev = ed.artElement),
         (0, r.jsxs)(c.EOs, {
             "data-migration-pending": !0,
-            className: a()(O.zr, !eh && P),
+            className: a()(b.zr, !eh && P),
             "aria-label": t,
             transitionState: B,
             parentComponent: "PremiumUpsellModal",
@@ -166,12 +166,12 @@ function w(e) {
                 null != ev &&
                     (0, r.jsxs)("div", {
                         className: ey,
-                        children: [ev, q ? (0, r.jsx)("img", { className: O.CI, alt: "", src: D }) : null],
+                        children: [ev, q ? (0, r.jsx)("img", { className: b.CI, alt: "", src: D }) : null],
                     }),
                 (0, r.jsx)(c.$mQ, {
                     "data-migration-pending": !0,
                     scrollbarType: "none",
-                    className: a()(en ? O.es : O.Qs, !eh && k),
+                    className: a()(en ? b.es : b.Qs, !eh && k),
                     children: J
                         ? (0, r.jsx)(c.y$y, {})
                         : eh
@@ -180,29 +180,29 @@ function w(e) {
                                 type: n,
                                 subscriptionTier: ef?.subscription_trial?.sku_id ?? C.pe.TIER_2,
                                 headingText: t,
-                                context: x,
+                                context: M,
                                 analyticsLocationObject: S,
                                 discountOffer: ep,
                                 trialOffer: ef,
-                                children: M,
+                                children: x,
                             })
                           : (0, r.jsxs)("div", {
-                                className: O.hQ,
+                                className: b.hQ,
                                 children: [
                                     eo,
                                     (0, r.jsxs)("div", {
-                                        className: O.kQ,
+                                        className: b.kQ,
                                         children: [
                                             (0, r.jsxs)(c.Heading, {
-                                                className: a()(O.wx, { [O.k]: en }, F),
+                                                className: a()(b.wx, { [b.k]: en }, F),
                                                 variant: "heading-xl/bold",
-                                                children: [t, Z ? (0, r.jsx)(p.A, { className: O.TN }) : null],
+                                                children: [t, Z ? (0, r.jsx)(p.A, { className: b.TN }) : null],
                                             }),
                                             eI ? (0, r.jsx)(N.A, { affinities: eA }) : void 0,
                                             ea,
                                             (0, r.jsx)(c.Text, {
                                                 variant: eu ? "text-sm/normal" : "text-md/normal",
-                                                className: a()(V, O.uI),
+                                                className: a()(V, b.uI),
                                                 children: w,
                                             }),
                                         ],
@@ -212,15 +212,15 @@ function w(e) {
                 }),
                 (0, r.jsxs)(c.jlY, {
                     "data-migration-pending": !0,
-                    className: a()(O.qr, ec, { [O.I$]: en }),
+                    className: a()(b.qr, ec, { [b.I$]: en }),
                     children: [
                         (0, r.jsxs)("div", {
-                            className: a()(O.E3, { [O.Q_]: en }),
+                            className: a()(b.E3, { [b.Q_]: en }),
                             children: [
                                 null != K
                                     ? (0, r.jsx)(u.$n, {
                                           "data-migration-pending": !0,
-                                          className: a()(O.Dc, z, { [O.HZ]: en }),
+                                          className: a()(b.Dc, $, { [b.HZ]: en }),
                                           onClick: W,
                                           size: u.$n.Sizes.SMALL,
                                           color: en ? u.$n.Colors.CUSTOM : u.$n.Colors.PRIMARY,
@@ -236,18 +236,18 @@ function w(e) {
                             (0, r.jsx)(c.Button, {
                                 variant: "secondary",
                                 size: "sm",
-                                text: null != et ? et : R.intl.string(R.t["13/7kX"]),
+                                text: null != et ? et : O.intl.string(O.t["13/7kX"]),
                                 onClick: H,
                             }),
                     ],
                 }),
-                en ? (0, r.jsx)(c.s_y, { "data-migration-pending": !0, onClick: H, className: O.b }) : null,
+                en ? (0, r.jsx)(c.s_y, { "data-migration-pending": !0, onClick: H, className: b.b }) : null,
                 el,
             ],
         })
     );
 }
-function x(e) {
+function M(e) {
     let {
             title: t,
             subtitle: n,
@@ -259,25 +259,24 @@ function x(e) {
             showNewBadge: d = !1,
             showBetaBadge: _ = !1,
             subscriptionTier: f = C.pe.TIER_2,
-            showEnhancedUpsell: p,
-            hidePremiumOfferUpsell: h,
+            hidePremiumOfferUpsell: p,
         } = e,
-        m = null != s,
-        g = (0, I.V)(),
-        T = (0, A.O)(),
-        v = !h && (g?.subscription_trial?.sku_id === f || (0, y.U9)(T, f)) && !m,
-        N = p ? R.intl.string(R.t.pj0XBN) : void 0;
-    v &&
-        (null != g
-            ? (N = (0, E.FY)({
-                  intervalType: g?.subscription_trial?.interval,
-                  intervalCount: g?.subscription_trial?.interval_count,
+        h = null != s,
+        m = (0, I.V)(),
+        g = (0, A.O)(),
+        T = !p && (m?.subscription_trial?.sku_id === f || (0, y.U9)(g, f)) && !h,
+        v = O.intl.string(O.t.pj0XBN);
+    T &&
+        (null != m
+            ? (v = (0, E.FY)({
+                  intervalType: m?.subscription_trial?.interval,
+                  intervalCount: m?.subscription_trial?.interval_count,
               }))
-            : null != T && (N = R.intl.formatToPlainString(R.t.bkQ4bH, { percent: T.discount.amount })));
-    let b = null;
+            : null != g && (v = O.intl.formatToPlainString(O.t.bkQ4bH, { percent: g.discount.amount })));
+    let N = null;
     return (
-        d ? (b = "new") : _ && (b = "beta"),
-        null != g && (b = "free_trial"),
+        d ? (N = "new") : _ && (N = "beta"),
+        null != m && (N = "free_trial"),
         (0, r.jsx)(S.A, {
             subscriptionTier: f,
             children: (e) => {
@@ -292,7 +291,7 @@ function x(e) {
                     actions: [
                         { text: u, variant: "secondary", size: "md", onClick: l },
                         {
-                            text: N,
+                            text: v,
                             variant: "expressive",
                             size: "md",
                             onClick: async (e) => {
@@ -301,7 +300,7 @@ function x(e) {
                             icon: o.pVd,
                         },
                     ],
-                    ...(null !== b && { badge: { type: b, variant: "expressive" } }),
+                    ...(null !== N && { badge: { type: N, variant: "expressive" } }),
                 });
             },
         })

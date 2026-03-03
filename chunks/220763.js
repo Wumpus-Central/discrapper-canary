@@ -1,46 +1,47 @@
-n.d(e, { default: () => L });
+n.d(e, { default: () => p });
 var a = n(627968);
 n(64700);
 var i = n(87719),
-    r = n(414345),
-    s = n(244975),
-    o = n(788868),
-    c = n(652215),
-    l = n(985018),
-    d = n(736975);
-function L(t) {
-    let { channel: e, onClose: n, ...L } = t,
-        u = l.intl.format(l.t.AVVUse, {
+    s = n(414345),
+    r = n(244975),
+    c = n(788868),
+    o = n(652215),
+    d = n(985018),
+    l = n(736975),
+    L = n(101280);
+function p(t) {
+    let { channel: e, onClose: n, ...p } = t,
+        u = d.intl.format(d.t.AVVUse, {
             onLearnMore: function () {
                 n(), (0, i.e)();
             },
         });
-    return (0, r.g1)({ location: "PremiumMessageLengthUpsell" })
-        ? (0, a.jsx)(s.F, {
-              title: l.intl.string(l.t.SeL3ec),
+    return (0, s.g1)({ location: "PremiumMessageLengthUpsell" })
+        ? (0, a.jsx)(r.F, {
+              title: d.intl.string(d.t.SeL3ec),
               subtitle: u,
-              graphic: { src: d.A, type: "image" },
-              secondaryCTA: l.intl.string(l.t["13/7kX"]),
+              graphic: { src: L.A, type: "image" },
+              secondaryCTA: d.intl.string(d.t["13/7kX"]),
               onSecondaryClick: n,
               onClose: n,
-              ...L,
+              ...p,
           })
-        : (0, a.jsx)(s.A, {
-              artURL: d.A,
-              type: o.e.MESSAGE_LENGTH_UPSELL,
-              title: l.intl.string(l.t.SeL3ec),
+        : (0, a.jsx)(r.A, {
+              artURL: l.A,
+              type: c.e.MESSAGE_LENGTH_UPSELL,
+              title: d.intl.string(d.t.SeL3ec),
               body: u,
               glowUp: u,
               analyticsSource: {
                   page:
                       e?.getGuildId() != null
-                          ? c.liQ.GUILD_CHANNEL
+                          ? o.liQ.GUILD_CHANNEL
                           : e?.isGroupDM() || e?.isPrivate()
-                            ? c.liQ.DM_CHANNEL
+                            ? o.liQ.DM_CHANNEL
                             : null,
               },
-              analyticsLocation: { section: c.JJy.MESSAGE_LENGTH_UPSELL_MODAL, object: c.ZSU.BUTTON_CTA },
+              analyticsLocation: { section: o.JJy.MESSAGE_LENGTH_UPSELL_MODAL, object: o.ZSU.BUTTON_CTA },
               onClose: n,
-              ...L,
+              ...p,
           });
 }

@@ -69,7 +69,6 @@ function I(e) {
                   },
                   secondaryCTA: p.intl.string(p.t.PcTCB7),
                   onClose: o,
-                  showEnhancedUpsell: !0,
               })
             : (0, i.jsx)(A.A, {
                   artURL: x ? void 0 : v,

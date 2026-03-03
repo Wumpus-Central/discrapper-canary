@@ -40,7 +40,6 @@ function h(e) {
               },
               secondaryCTA: _.intl.string(_.t.PcTCB7),
               onClose: n,
-              showEnhancedUpsell: !0,
               ...s,
           })
         : (0, i.jsx)(c.A, {

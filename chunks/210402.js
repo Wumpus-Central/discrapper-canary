@@ -3,37 +3,36 @@ var a = n(627968);
 n(64700);
 var i = n(87719),
     r = n(414345),
-    s = n(244975),
-    o = n(788868),
+    o = n(244975),
+    s = n(788868),
     c = n(652215),
-    l = n(985018),
-    d = n(451067),
+    d = n(985018),
+    l = n(451067),
     p = n(196436);
 function u(t) {
     let { onClose: e, analyticsSource: n, onLearnMore: u, ...C } = t,
-        _ = o.pe.TIER_2,
-        A = l.intl.format(l.t.hDMlqD, {
+        _ = s.pe.TIER_2,
+        A = d.intl.format(d.t.hDMlqD, {
             onLearnMore: function () {
                 u?.(), e(), (0, i.e)();
             },
         });
     return (0, r.g1)({ location: "PremiumVideoBackgroundsUpsell" })
-        ? (0, a.jsx)(s.F, {
-              title: l.intl.string(l.t.fHqiDW),
+        ? (0, a.jsx)(o.F, {
+              title: d.intl.string(d.t.fHqiDW),
               subtitle: A,
               graphic: { src: p.A, type: "image" },
               onSecondaryClick: e,
-              secondaryCTA: l.intl.string(l.t["13/7kX"]),
+              secondaryCTA: d.intl.string(d.t["13/7kX"]),
               onClose: e,
-              showEnhancedUpsell: !0,
               subscriptionTier: _,
               ...C,
           })
-        : (0, a.jsx)(s.A, {
+        : (0, a.jsx)(o.A, {
               artURL: p.A,
-              artContainerClassName: d.z,
-              type: o.e.VIDEO_BACKGROUNDS_MODAL,
-              title: l.intl.string(l.t.fHqiDW),
+              artContainerClassName: l.z,
+              type: s.e.VIDEO_BACKGROUNDS_MODAL,
+              title: d.intl.string(d.t.fHqiDW),
               body: A,
               glowUp: A,
               analyticsSource: n,

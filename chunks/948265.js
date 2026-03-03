@@ -18,22 +18,21 @@ function d(t) {
             onSecondaryClick: p,
             ...h
         } = t,
-        U = (0, i.u)(e),
-        A = (0, i.A)(e);
+        A = (0, i.u)(e),
+        L = (0, i.A)(e);
     return (0, r.g1)({ location: "PremiumProfileDecorationUpsell" })
         ? (0, a.jsx)(c.F, {
               title: n,
               subtitle: d,
-              graphic: A,
+              graphic: L,
               onSecondaryClick: () => {
                   p(), (0, o.x)(T);
               },
               secondaryCTA: l.intl.string(l.t.PcTCB7),
               onClose: T,
-              showEnhancedUpsell: !0,
           })
         : (0, a.jsx)(c.A, {
-              artURL: U,
+              artURL: A,
               type: e,
               title: n,
               body: d,
