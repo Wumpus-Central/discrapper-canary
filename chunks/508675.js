@@ -167,59 +167,60 @@ class e_ {
     frequentlyUsed = null;
     frequentlyUsedReactionEmojis = null;
     frequentlyUsedReactionNamesAndIds = null;
-    unicodeAliases = {};
+    unicodeAliases = new Map();
     customEmojis = new Map();
-    groupedCustomEmojis = {};
-    emoticonsByName = {};
-    emojisByName = {};
-    emojisById = {};
-    newlyAddedEmoji = {};
+    customEmojisByGroup = new Map();
+    emoticonsByName = new Map();
+    emojisByName = new Map();
+    emojisById = new Map();
+    newlyAddedEmoji = new Map();
     constructor(e) {
         this.guildId = e;
-        const t = {},
+        const t = new Map(),
             n = [],
             r = (e) => {
-                e.names.slice(1).forEach((t) => (this.unicodeAliases[t] = e.name));
-                let n = t[e.name] ?? 0;
+                e.names.slice(1).forEach((t) => this.unicodeAliases.set(t, e.name));
+                let n = t.get(e.name) ?? 0;
                 i()(0 === n, "Expected existing count to be 0"),
-                    (t[e.name] = n + 1),
-                    (this.emojisByName[e.name] = e),
+                    t.set(e.name, n + 1),
+                    this.emojisByName.set(e.name, e),
                     this.disambiguatedEmoji.push(e);
             },
             s = (e) => {
                 let n,
                     r = e.name,
-                    i = t[r] ?? 0;
-                if (((t[r] = i + 1), i > 0)) {
+                    i = t.get(r) ?? 0;
+                if ((t.set(r, i + 1), i > 0)) {
                     let t = `${r}~${i}`;
                     n = { ...e, name: t, originalName: r };
                 } else n = e;
-                (this.emojisByName[n.name] = n), (this.emojisById[n.id] = n), this.customEmojis.set(n.name, n);
-                let { guildId: s } = e;
-                null != this.groupedCustomEmojis[s]
-                    ? this.groupedCustomEmojis[s].push(n)
-                    : (this.groupedCustomEmojis[s] = [n]),
+                this.emojisByName.set(n.name, n), this.emojisById.set(n.id, n), this.customEmojis.set(n.name, n);
+                let s = e.guildId;
+                this.customEmojisByGroup.has(s)
+                    ? this.customEmojisByGroup.get(s)?.push(n)
+                    : this.customEmojisByGroup.set(s, [n]),
                     x.default.compare(e.id, q) >= 0 &&
-                        (null != this.newlyAddedEmoji[s]
-                            ? this.newlyAddedEmoji[s].push(n)
-                            : (this.newlyAddedEmoji[s] = [n])),
+                        (this.newlyAddedEmoji.has(s)
+                            ? this.newlyAddedEmoji.get(s)?.push(n)
+                            : this.newlyAddedEmoji.set(s, [n])),
                     this.disambiguatedEmoji.push(n);
             },
             o = (e) => {
-                Object.prototype.hasOwnProperty.call(this.emoticonsByName, e.name) ||
-                    (n.push(M.A.escape(e.name)), (this.emoticonsByName[e.name] = e));
+                this.emoticonsByName.has(e.name) || (n.push(M.A.escape(e.name)), this.emoticonsByName.set(e.name, e));
             };
         G.Ay.forEach(r);
         const l = (e) => {
             let t = et[null == e ? H.eGj : e];
             null != t && (a().each(t.usableEmojis, s), a().each(t.emoticons, o));
         };
-        for (const e in (l(this.guildId), this.newlyAddedEmoji))
-            null != this.newlyAddedEmoji[e]
-                ? (this.newlyAddedEmoji[e] = this.newlyAddedEmoji[e]
-                      .sort((e, t) => x.default.compare(t.id, e.id))
-                      .slice(0, 3))
-                : (this.newlyAddedEmoji[e] = []);
+        for (const e of (l(this.guildId), this.newlyAddedEmoji.keys())) {
+            const t = this.newlyAddedEmoji.get(e);
+            if (null == t) {
+                this.newlyAddedEmoji.set(e, []);
+                continue;
+            }
+            this.newlyAddedEmoji.set(e, t.sort((e, t) => x.default.compare(t.id, e.id)).slice(0, 3));
+        }
         O.Ay.getFlattenedGuildIds().forEach((e) => {
             e !== this.guildId && l(e);
         }),
@@ -253,20 +254,19 @@ class e_ {
         return this.customEmojis;
     }
     getGroupedCustomEmoji() {
-        return this.groupedCustomEmojis;
+        return this.customEmojisByGroup;
     }
     getByName(e) {
-        if (Object.prototype.hasOwnProperty.call(this.emojisByName, e)) return this.emojisByName[e];
-        if (Object.prototype.hasOwnProperty.call(this.unicodeAliases, e)) {
-            let t = this.unicodeAliases[e];
-            if (Object.prototype.hasOwnProperty.call(this.emojisByName, t)) return this.emojisByName[t];
-        }
+        let t = this.emojisByName.get(e);
+        if (null != t) return t;
+        let n = this.unicodeAliases.get(e);
+        if (null != n) return this.emojisByName.get(n);
     }
     getEmoticonByName(e) {
-        if (Object.prototype.hasOwnProperty.call(this.emoticonsByName, e)) return this.emoticonsByName[e];
+        return this.emoticonsByName.get(e);
     }
     getById(e) {
-        if (Object.prototype.hasOwnProperty.call(this.emojisById, e)) return this.emojisById[e];
+        return this.emojisById.get(e);
     }
     getCustomEmoticonRegex() {
         return (
@@ -356,7 +356,7 @@ class e_ {
     }
     getNewlyAddedEmojiForGuild(e) {
         if (null == this.newlyAddedEmoji) return Z;
-        let t = this.newlyAddedEmoji[e];
+        let t = this.newlyAddedEmoji.get(e);
         return null == t ? Z : t;
     }
     getEscapedCustomEmoticonNames() {
