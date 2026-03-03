@@ -14,7 +14,7 @@ let c = () => {
             ...Object.values(i.C).map((e) => ({ id: e, label: e, value: e })),
         ];
     return (0, a.jsx)("div", {
-        className: d.k,
+        className: d.kL,
         children: (0, a.jsx)(l.l6P, {
             label: "Shop Home Override",
             options: t,

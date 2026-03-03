@@ -1,130 +1,148 @@
 "use strict";
-s.d(t, { A: () => w });
+s.d(t, { A: () => U });
 var n = s(627968),
     l = s(64700),
     r = s(503698),
     a = s.n(r),
     i = s(651162),
-    o = s(554146),
-    c = s(397927),
-    d = s(564322),
-    u = s(287344),
-    _ = s(785330),
-    g = s(367727),
-    m = s(954571),
-    h = s(440938),
-    p = s(344011),
-    f = s(335657),
-    x = s(100057),
-    E = s(599062),
-    C = s(159439),
-    b = s(998694),
-    A = s(666413),
-    S = s(573455),
-    v = s(565057),
-    I = s(227205),
-    L = s(457414),
-    j = s(761218),
-    k = s(633026),
-    T = s(251191),
-    O = s(613258),
-    N = s(152568),
-    y = s(758836),
-    R = s(652215),
-    B = s(985018),
-    M = s(201073);
-let P = () =>
-        (0, n.jsx)("div", {
-            className: a()(M.YB, M.GS),
-            children: (0, n.jsx)(_.Qs, { tenantId: R.FYj, layoutId: "1465939725649973269" }),
-        }),
-    D = (e) => {
-        let { handleTransition: t, numVisibleItems: s, isFetchingCategories: r, tab: c } = e,
-            { noCache: d, includeUnpublished: u } = (0, b.A)(),
-            [_, m] = l.useState(!1),
-            C = (0, h.uM)(),
-            O = C?.sessionId ?? "";
+    o = s(311907),
+    c = s(554146),
+    d = s(397927),
+    u = s(564322),
+    _ = s(287344),
+    g = s(785330),
+    m = s(367727),
+    h = s(954571),
+    p = s(440938),
+    f = s(344011),
+    x = s(295811),
+    E = s(335657),
+    C = s(100057),
+    b = s(599062),
+    A = s(159439),
+    S = s(998694),
+    v = s(666413),
+    I = s(573455),
+    L = s(565057),
+    j = s(227205),
+    k = s(457414),
+    T = s(761218),
+    O = s(633026),
+    N = s(251191),
+    y = s(613258),
+    R = s(152568),
+    B = s(758836),
+    M = s(652215),
+    P = s(985018),
+    D = s(201073);
+let w = () => {
+        let e = (0, o.bG)([x.A], () => x.A.getShopLayoutUrlOverride()),
+            [t, s] = l.useState(null);
+        return (
+            l.useEffect(() => {
+                null != e &&
+                    "" !== e &&
+                    fetch(e)
+                        .then((e) => e.json())
+                        .then((e) => s(e))
+                        .catch(() => s(null));
+            }, [e]),
+            (0, n.jsx)("div", {
+                className: a()(D.YB, D.GS),
+                children:
+                    null != e && "" !== e && null != t
+                        ? (0, n.jsx)(g.Ay, { layout: t })
+                        : (0, n.jsx)(g.Qs, { tenantId: M.FYj, layoutId: "1465939725649973269" }),
+            })
+        );
+    },
+    H = (e) => {
+        let { handleTransition: t, numVisibleItems: s, isFetchingCategories: r, tab: o } = e,
+            { noCache: d, includeUnpublished: u } = (0, S.A)(),
+            [_, g] = l.useState(!1),
+            h = (0, p.uM)(),
+            x = h?.sessionId ?? "";
         l.useEffect(() => {
-            (0, x.z)({
-                sessionId: O,
-                checkpoint: x.t.SHOP_MOUNTED,
-                tab: c,
+            (0, C.z)({
+                sessionId: x,
+                checkpoint: C.t.SHOP_MOUNTED,
+                tab: o,
                 unpublishedCategoriesShown: u,
                 cacheDisabled: d,
             });
-        }, [c]);
+        }, [o]);
         let {
-                isFetchingShopHome: R,
-                fetchShopHomeError: P,
-                shopBlocks: D,
+                isFetchingShopHome: A,
+                fetchShopHomeError: y,
+                shopBlocks: M,
                 refreshShopHome: w,
-            } = (0, f.y)(
-                c,
+            } = (0, E.y)(
+                o,
                 { noCache: d, includeUnpublished: u, includeBundles: !0, logPerf: !0 },
-                { sessionId: O, tab: c },
+                { sessionId: x, tab: o },
             ),
             H = l.useCallback(() => {
                 w();
             }, [w]);
         return (l.useEffect(() => {
-            null != P ||
-                R ||
-                0 === D.length ||
-                (0, x.z)({
-                    sessionId: O,
-                    checkpoint: x.t.SHOP_RENDERED,
-                    tab: c,
+            null != y ||
+                A ||
+                0 === M.length ||
+                (0, C.z)({
+                    sessionId: x,
+                    checkpoint: C.t.SHOP_RENDERED,
+                    tab: o,
                     unpublishedCategoriesShown: u,
                     cacheDisabled: d,
                 });
-        }, [P, R, D.length, u, d, O, c]),
-        null != P)
-            ? (0, n.jsx)(E.h, { onRetry: H, errorOrigin: E.A.SHOP_PAGE, errorMessage: P.message })
-            : R || 0 === D.length
+        }, [y, A, M.length, u, d, x, o]),
+        null != y)
+            ? (0, n.jsx)(b.h, { onRetry: H, errorOrigin: b.A.SHOP_PAGE, errorMessage: y.message })
+            : A || 0 === M.length
               ? (0, n.jsxs)("div", {
-                    className: a()(M.g4, M.Of),
+                    className: a()(D.g4, D.Of),
                     children: [
-                        (0, n.jsx)(I.A, { isLoading: R, handleTransition: t, tab: c }),
-                        (0, n.jsx)(S.A, { isLoading: R, handleTransition: t, categories: [] }),
-                        (0, n.jsx)(v.A, {
-                            isLoading: R,
-                            title: c === y.G2.ORBS ? B.intl.string(B.t.dFgeuZ) : B.intl.string(B.t.NSv5KV),
+                        (0, n.jsx)(j.A, { isLoading: A, handleTransition: t, tab: o }),
+                        (0, n.jsx)(I.A, { isLoading: A, handleTransition: t, categories: [] }),
+                        (0, n.jsx)(L.A, {
+                            isLoading: A,
+                            title: o === B.G2.ORBS ? P.intl.string(P.t.dFgeuZ) : P.intl.string(P.t.NSv5KV),
                             numVisibleItems: s,
-                            tab: c,
+                            tab: o,
                         }),
                     ],
                 })
               : (0, n.jsx)(n.Fragment, {
-                    children: D.map((e, l) =>
+                    children: M.map((e, l) =>
                         ((e, l, d) => {
                             if (null == e) return null;
                             let u = null,
                                 h = !1;
                             switch (e.type) {
                                 case i.g.HERO:
-                                    u = (0, n.jsx)(I.A, { isLoading: R, handleTransition: t, heroBlock: e, tab: c }, d);
+                                    u = (0, n.jsx)(j.A, { isLoading: A, handleTransition: t, heroBlock: e, tab: o }, d);
                                     break;
                                 case i.g.FEATURED:
                                     u = (0, n.jsx)(
-                                        S.A,
-                                        { isLoading: R, handleTransition: t, featuredBlockRecord: e },
+                                        I.A,
+                                        { isLoading: A, handleTransition: t, featuredBlockRecord: e },
                                         d,
                                     );
                                     break;
                                 case i.g.FEED:
-                                    let f = e.sortedSkuIds;
+                                    let p = e.sortedSkuIds;
                                     u = (0, n.jsx)(
-                                        v.A,
+                                        L.A,
                                         {
                                             title:
-                                                c === y.G2.ORBS ? B.intl.string(B.t.dFgeuZ) : B.intl.string(B.t.NSv5KV),
-                                            isLoading: R || r,
+                                                o === B.G2.ORBS ? P.intl.string(P.t.dFgeuZ) : P.intl.string(P.t.NSv5KV),
+                                            isLoading: A || r,
                                             numVisibleItems: s,
-                                            sortedSkuIds: f,
-                                            buttonContainerClassName: l?.type === i.g.IMMERSIVE_BANNER ? M.w : void 0,
-                                            prioritizeUserDiscounts: c === y.G2.HOME,
-                                            tab: c,
-                                            orbsSupportedOnly: c === y.G2.ORBS,
+                                            sortedSkuIds: p,
+                                            buttonContainerClassName: l?.type === i.g.IMMERSIVE_BANNER ? D.w : void 0,
+                                            prioritizeUserDiscounts: o === B.G2.HOME,
+                                            tab: o,
+                                            orbsSupportedOnly: o === B.G2.ORBS,
                                         },
                                         d,
                                     );
@@ -132,41 +150,41 @@ let P = () =>
                                 case i.g.WIDE_BANNER:
                                     if (e.isDismissible) {
                                         let t = e.dismissibleContentVersion ?? 0,
-                                            { isDismissed: s } = (0, g.En)(o.M.COLLECTIBLES_SHOP_WIDE_BANNER, t);
+                                            { isDismissed: s } = (0, m.En)(c.M.COLLECTIBLES_SHOP_WIDE_BANNER, t);
                                         if (s) return null;
                                     }
-                                    u = (0, n.jsx)(N.A, { wideBannerBlock: e, tab: c }, d);
+                                    u = (0, n.jsx)(R.A, { wideBannerBlock: e, tab: o }, d);
                                     break;
                                 case i.g.SHELF:
-                                    u = (0, n.jsx)(T.A, { handleTransition: t, shelf: e, tab: c }, d);
+                                    u = (0, n.jsx)(N.A, { handleTransition: t, shelf: e, tab: o }, d);
                                     break;
                                 case i.g.COUNTDOWN_TIMER:
-                                    (u = (0, n.jsx)(A.S, { countdownTimerBlock: e, isVisible: _ }, d)), (h = !0);
+                                    (u = (0, n.jsx)(v.S, { countdownTimerBlock: e, isVisible: _ }, d)), (h = !0);
                                     break;
                                 case i.g.IMMERSIVE_BANNER:
                                     u = (0, n.jsx)(
-                                        L.A,
-                                        { immersiveBannerBlock: e, onVisibilityChange: (e) => m(!e) },
+                                        k.A,
+                                        { immersiveBannerBlock: e, onVisibilityChange: (e) => g(!e) },
                                         d,
                                     );
                                     break;
                                 case i.g.REWARD_HERO:
-                                    u = (0, n.jsx)(k.A, { isLoading: R, handleTransition: t, heroBlock: e, tab: c }, d);
+                                    u = (0, n.jsx)(O.A, { isLoading: A, handleTransition: t, heroBlock: e, tab: o }, d);
                                     break;
                                 case i.g.MARVEL_RIVALS_PROMOTIONAL_BANNER: {
-                                    let { isDismissed: t } = (0, g.En)(o.M.COLLECTIBLES_SHOP_MARVEL_RIVALS_ORBS_REWARD);
+                                    let { isDismissed: t } = (0, m.En)(c.M.COLLECTIBLES_SHOP_MARVEL_RIVALS_ORBS_REWARD);
                                     if (t) return null;
-                                    return (0, n.jsx)(p.rW, {
+                                    return (0, n.jsx)(f.rW, {
                                         blockType: e.type,
                                         children: (0, n.jsx)(
-                                            j.A,
+                                            T.A,
                                             {
                                                 onDismiss: () => {
-                                                    (0, g.d6)(o.M.COLLECTIBLES_SHOP_MARVEL_RIVALS_ORBS_REWARD, {});
+                                                    (0, m.d6)(c.M.COLLECTIBLES_SHOP_MARVEL_RIVALS_ORBS_REWARD, {});
                                                 },
                                                 skuIds: e.skuIds,
                                                 endTime: e.endTime,
-                                                tab: c,
+                                                tab: o,
                                             },
                                             d,
                                         ),
@@ -175,26 +193,26 @@ let P = () =>
                                 default:
                                     return null;
                             }
-                            return (0, n.jsx)(p.rW, {
+                            return (0, n.jsx)(f.rW, {
                                 blockType: e.type,
                                 children: (0, n.jsx)(
                                     "div",
-                                    { className: a()(M.v1, M.Of, { [M.J1]: 0 === d || h }), children: u },
+                                    { className: a()(D.v1, D.Of, { [D.J1]: 0 === d || h }), children: u },
                                     d,
                                 ),
                             });
-                        })(e, l > 0 ? D[l - 1] : null, l),
+                        })(e, l > 0 ? M[l - 1] : null, l),
                     ),
                 });
     },
-    w = (e) => {
+    U = (e) => {
         let { handleTransition: t, tab: s, transitionState: r } = e,
             a = l.useRef(null),
-            { handleScroll: i } = (0, d.X)(a, s),
-            o = (0, C.U)(),
-            _ = (0, u.f)("Shop Home"),
-            g = (0, h.uM)(),
-            [p, f] = l.useState(y.md),
+            { handleScroll: i } = (0, u.X)(a, s),
+            o = (0, A.U)(),
+            c = (0, _.f)("Shop Home"),
+            g = (0, p.uM)(),
+            [m, f] = l.useState(B.md),
             [x, E] = l.useState(!1);
         return (
             l.useEffect(() => {
@@ -202,7 +220,7 @@ let P = () =>
                     let e = () => {
                             if (null == a.current) return;
                             let e = a.current.getDistanceFromBottom();
-                            p >= 36 ? E(e < 20) : e <= 200 && f((e) => e + y.md);
+                            m >= 36 ? E(e < 20) : e <= 200 && f((e) => e + B.md);
                         },
                         t = a.current.getScrollerNode();
                     return (
@@ -212,43 +230,43 @@ let P = () =>
                         }
                     );
                 }
-            }, [a, p, f, E]),
-            (0, n.jsx)(c.T7Y, {
-                className: M.OW,
+            }, [a, m, f, E]),
+            (0, n.jsx)(d.T7Y, {
+                className: D.OW,
                 ref: a,
                 onScroll: i,
                 children: (0, n.jsxs)("div", {
-                    className: M.bx,
+                    className: D.bx,
                     children: [
                         (0, n.jsxs)("div", {
-                            className: M.rb,
+                            className: D.rb,
                             children: [
-                                _
-                                    ? (0, n.jsx)(P, {})
-                                    : (0, n.jsx)(D, {
+                                c
+                                    ? (0, n.jsx)(w, {})
+                                    : (0, n.jsx)(H, {
                                           handleTransition: t,
-                                          numVisibleItems: p,
+                                          numVisibleItems: m,
                                           isFetchingCategories: o,
                                           tab: s,
                                       }),
-                                s !== y.G2.CATALOG &&
-                                    p >= 36 &&
+                                s !== B.G2.CATALOG &&
+                                    m >= 36 &&
                                     (0, n.jsxs)("div", {
-                                        className: M.R$,
+                                        className: D.R$,
                                         children: [
-                                            (0, n.jsx)(c.Heading, {
+                                            (0, n.jsx)(d.Heading, {
                                                 variant: "heading-md/semibold",
-                                                children: B.intl.string(B.t.Yr70c4),
+                                                children: P.intl.string(P.t.Yr70c4),
                                             }),
-                                            (0, n.jsx)(c.Button, {
+                                            (0, n.jsx)(d.Button, {
                                                 variant: "primary",
-                                                text: B.intl.string(B.t.AfrvRD),
+                                                text: P.intl.string(P.t.AfrvRD),
                                                 onClick: () => {
                                                     t({ sourceButton: "shop all button", shouldAnimate: !0 }),
-                                                        m.default.track(R.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                        h.default.track(M.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                             collectibles_shop_session_id: g?.sessionId,
                                                             page_type: s,
-                                                            page_category: s === y.G2.HOME ? void 0 : g?.pageCategory,
+                                                            page_category: s === B.G2.HOME ? void 0 : g?.pageCategory,
                                                             cta_name: "browse the shop button",
                                                         });
                                                 },
@@ -258,7 +276,7 @@ let P = () =>
                                     }),
                             ],
                         }),
-                        (0, n.jsx)(O.A, { peaking: x, transitioning: r === y.Pf.OUT }),
+                        (0, n.jsx)(y.A, { peaking: x, transitioning: r === B.Pf.OUT }),
                     ],
                 }),
             })
