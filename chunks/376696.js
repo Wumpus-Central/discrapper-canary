@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { A: () => P });
+n.d(t, { A: () => U });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(311907),
+    a = n.n(l),
+    r = n(311907),
     o = n(397927),
     c = n(80682),
     d = n(845056),
@@ -12,147 +12,145 @@ var i = n(627968),
     h = n(323073),
     A = n(643501),
     p = n(279250),
-    g = n(834757),
-    m = n(727353),
+    m = n(834757),
+    g = n(727353),
     _ = n(140547),
     f = n(636920),
     x = n(565688),
     C = n(533562),
     E = n(760716),
     I = n(93879),
-    N = n(178213),
-    b = n(616356),
-    S = n(961350),
-    T = n(71393),
-    y = n(576705),
-    v = n(290863),
-    j = n(977997),
-    R = n(607567),
-    O = n(954571),
-    L = n(338234),
-    M = n(667936),
-    D = n(652215),
-    G = n(188275),
-    U = n(962966);
-function P(e) {
+    N = n(616356),
+    b = n(961350),
+    S = n(71393),
+    T = n(576705),
+    y = n(290863),
+    v = n(977997),
+    j = n(607567),
+    R = n(954571),
+    O = n(338234),
+    L = n(667936),
+    M = n(652215),
+    D = n(188275),
+    G = n(962966);
+function U(e) {
     let {
             channel: t,
             user: n,
             onAction: l,
-            excludeActivity: P,
-            onWatchStream: w,
-            hangStatusActivity: k,
-            renderSelfHangStatus: B,
+            excludeActivity: U,
+            onWatchStream: P,
+            hangStatusActivity: w,
+            renderSelfHangStatus: k,
             isStandardGap: V = !1,
         } = e,
-        H = s.useMemo(() => ({ [t.guild_id]: [n.id] }), [t.guild_id, n.id]);
-    (0, c.E)(H, "VoiceUserActivities");
-    let F = (0, u.Ay)(t),
-        K = s.useMemo(() => F.filter((e) => e.embeddedActivity.userIds.has(n.id)), [F, n.id]),
-        W = Array.from((0, u.Rz)(K).values()),
-        Y = (0, C.W)(),
-        z = (0, E.i)((e) => e.showSelfActivity),
-        [X, q] = (0, a.yK)(
-            [b.A],
-            () => [b.A.getStreamForUser(n.id, t.getGuildId()), b.A.getActiveStreamForUser(n.id, t.getGuildId())],
+        B = s.useMemo(() => ({ [t.guild_id]: [n.id] }), [t.guild_id, n.id]);
+    (0, c.E)(B, "VoiceUserActivities");
+    let H = (0, u.Ay)(t),
+        F = s.useMemo(() => H.filter((e) => e.embeddedActivity.userIds.has(n.id)), [H, n.id]),
+        K = Array.from((0, u.Rz)(F).values()),
+        W = (0, C.W)(),
+        Y = (0, E.i)((e) => e.showSelfActivity),
+        [z, q] = (0, r.yK)(
+            [N.A],
+            () => [N.A.getStreamForUser(n.id, t.getGuildId()), N.A.getActiveStreamForUser(n.id, t.getGuildId())],
             [t, n.id],
         ),
-        [J, Q] = (0, a.yK)([j.A, T.A, y.A, A.default], () => (0, p.eo)(t, j.A, T.A, y.A, A.default)),
-        $ = (0, a.bG)([S.default], () => S.default.getId()),
-        Z = (0, a.bG)([v.A], () => (0, g.nr)(X, v.A), [X]),
-        ee = (0, d.m)(n, P ?? Z),
-        et = (0, a.bG)([R.Ay], () => R.Ay.getVoiceStatesForChannel(t).find((e) => e.user.id === n.id) ?? null, [
+        [X, J] = (0, r.yK)([v.A, S.A, T.A, A.default], () => (0, p.eo)(t, v.A, S.A, T.A, A.default)),
+        Q = (0, r.bG)([b.default], () => b.default.getId()),
+        $ = (0, r.bG)([y.A], () => (0, m.nr)(z, y.A), [z]),
+        Z = (0, d.m)(n, U ?? $),
+        ee = (0, r.bG)([j.Ay], () => j.Ay.getVoiceStatesForChannel(t).find((e) => e.user.id === n.id) ?? null, [
             t,
             n.id,
         ]),
-        en = s.useMemo(() => (null != et ? [et] : []), [et]),
-        { enableUserHoverActivities: ei } = (0, L.fC)({ guildId: t.guild_id, location: "VoiceUserActivities" }),
-        { enableHangStatus: es } = (0, _.$j)({ guildId: t.guild_id, location: "VoiceUserActivities" }),
-        el = (0, N.G)("voice_channel_activities"),
-        er = (0, x.m)({ location: "voice_channel_activities" }),
-        ea = (0, h.r9)() && (0, h.UK)(t.id),
-        eo = null != X && !ea,
-        ec = ee.length + W.length > 0,
-        ed = null != k,
-        eu = n.id === S.default.getId() && !z,
-        eh = eo || ec || (ed && es);
+        et = s.useMemo(() => (null != ee ? [ee] : []), [ee]),
+        { enableUserHoverActivities: en } = (0, O.fC)({ guildId: t.guild_id, location: "VoiceUserActivities" }),
+        { enableHangStatus: ei } = (0, _.$j)({ guildId: t.guild_id, location: "VoiceUserActivities" }),
+        es = (0, x.m)({ location: "voice_channel_activities" }),
+        el = (0, h.r9)() && (0, h.UK)(t.id),
+        ea = null != z && !el,
+        er = Z.length + K.length > 0,
+        eo = null != w,
+        ec = n.id === b.default.getId() && !Y,
+        ed = ea || er || (eo && ei);
     if (
         (s.useEffect(() => {
-            eh &&
-                O.default.track(D.HAw.OPEN_POPOUT, {
+            ed &&
+                R.default.track(M.HAw.OPEN_POPOUT, {
                     type: "Voice User Activities",
                     channel_id: t.id,
                     other_user_id: n.id,
                 });
-        }, [eh, t.id, n.id]),
-        !eh && !eu)
+        }, [ed, t.id, n.id]),
+        !ed && !ec)
     )
         return null;
-    if (eu) {
-        if (es) return B({ position: "right", nudge: 0, closePopout: () => {}, updatePosition: () => {} });
-        if (!eh) return null;
+    if (ec) {
+        if (ei) return k({ position: "right", nudge: 0, closePopout: () => {}, updatePosition: () => {} });
+        if (!ed) return null;
     }
     return (0, i.jsxs)(o.HOs, {
-        className: r()(U.kL, { [U.iA]: V, [U.XK]: el }),
+        className: a()(G.kL, { [G.iA]: V }),
         children: [
-            ed && es && null != k
+            eo && ei && null != w
                 ? (0, i.jsx)(f.Z, {
-                      hangStatusActivity: k,
+                      hangStatusActivity: w,
                       channel: t,
                       userId: n.id,
-                      isSelf: eu,
+                      isSelf: ec,
                       analyticsSource: "VoiceUserActivities",
                       onAction: l,
-                      className: U.AF,
-                      iconClassName: U.W9,
-                      textClassName: U.YJ,
+                      className: G.AF,
+                      iconClassName: G.W9,
+                      textClassName: G.YJ,
                   })
                 : null,
-            null == X || null == w || ea
+            null == z || null == P || el
                 ? null
-                : (0, i.jsx)(m.P, {
-                      stream: X,
+                : (0, i.jsx)(g.P, {
+                      stream: z,
                       activeStream: q,
-                      streamActivity: Z,
+                      streamActivity: $,
                       user: n,
-                      currentUserId: $,
-                      canWatch: J,
-                      unavailableReason: Q,
-                      onWatchStream: w,
+                      currentUserId: Q,
+                      canWatch: X,
+                      unavailableReason: J,
+                      onWatchStream: P,
                       onAction: l,
-                      showHeader: ei,
+                      showHeader: en,
                   }),
-            W.map((e) =>
+            K.map((e) =>
                 (0, i.jsx)(
-                    M.A,
+                    L.A,
                     {
                         embeddedApp: e,
                         presenceActivity: e.presenceActivity ?? void 0,
                         channel: t,
                         onAction: l,
-                        enableUserHoverActivities: ei,
+                        enableUserHoverActivities: en,
                     },
                     e.application.id,
                 ),
             ),
-            ee.map((e) => {
+            Z.map((e) => {
                 let a = e.application_id;
-                return (null != Y && (a = Y), er && null != a && G.sQ.has(a))
+                return (null != W && (a = W), es && null != a && D.sQ.has(a))
                     ? (0, i.jsxs)(
                           s.Fragment,
                           {
                               children: [
-                                  (0, i.jsx)(M.A, {
+                                  (0, i.jsx)(L.A, {
                                       presenceActivity: e,
                                       channel: t,
-                                      members: en,
+                                      members: et,
                                       onAction: l,
-                                      enableUserHoverActivities: ei,
+                                      enableUserHoverActivities: en,
                                   }),
                                   (0, i.jsx)(I.A, {
-                                      className: r()(U.L, { [U.SW]: el }),
+                                      className: G.L,
                                       applicationId: a,
-                                      rewardOfferNoticeClassName: U.Nh,
+                                      rewardOfferNoticeClassName: G.Nh,
                                       userIds: [n.id],
                                       location: "voice_channel",
                                       guildId: t.guild_id,
@@ -163,8 +161,8 @@ function P(e) {
                           `${e.application_id}-with-gifting-breadcrumb`,
                       )
                     : (0, i.jsx)(
-                          M.A,
-                          { presenceActivity: e, channel: t, members: en, onAction: l, enableUserHoverActivities: ei },
+                          L.A,
+                          { presenceActivity: e, channel: t, members: et, onAction: l, enableUserHoverActivities: en },
                           `${e.application_id}`,
                       );
             }),
