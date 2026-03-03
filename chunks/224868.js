@@ -85,19 +85,17 @@ function T(e, t) {
     let n = s.Ay.EMOJI_NAME_RE.exec(e);
     if (null == n) return null;
     let r = n[1],
-        a = i.Ay.getDisambiguatedEmojiContext(t).getCustomEmoji();
-    if (null != a && Object.prototype.hasOwnProperty.call(a, r)) {
-        let e = a[r];
-        return {
-            type: "customEmoji",
-            emoji: {
-                emojiId: e.id,
-                name: "require_colons" in e && e.require_colons ? `:${e.name}:` : e.name,
-                animated: !0 === e.animated,
-                jumboable: !1,
-            },
-            children: [{ text: "" }],
-        };
-    }
-    return null;
+        a = i.Ay.getDisambiguatedEmojiContext(t).getCustomEmoji().get(r);
+    return null != a
+        ? {
+              type: "customEmoji",
+              emoji: {
+                  emojiId: a.id,
+                  name: "require_colons" in a && a.require_colons ? `:${a.name}:` : a.name,
+                  animated: !0 === a.animated,
+                  jumboable: !1,
+              },
+              children: [{ text: "" }],
+          }
+        : null;
 }
