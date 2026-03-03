@@ -36,7 +36,8 @@ function v(e) {
         I = r.useRef(null),
         v = r.useRef(null),
         [y, b] = (0, d.kn)([s.M.QUEST_ACTIVITY_HEADER_INTRO], void 0, !0),
-        O = r.useCallback(() => {
+        { completedRatio: O, completedRatioDisplay: L, percentComplete: R } = (0, m.O9)(t, !0),
+        P = r.useCallback(() => {
             c.A.updateFrameLayoutMode({ applicationId: n, layoutMode: N.y.PIP });
         }, [n]);
     return (0, i.jsxs)(i.Fragment, {
@@ -61,7 +62,13 @@ function v(e) {
                         targetElementRef: v,
                         renderPopout: (e) => {
                             let { closePopout: n } = e;
-                            return (0, i.jsx)(E.A, { quest: t, questDescription: u, minimizeFrame: O, onClose: n });
+                            return (0, i.jsx)(E.A, {
+                                quest: t,
+                                questDescription: u,
+                                completedRatio: O,
+                                minimizeFrame: P,
+                                onClose: n,
+                            });
                         },
                         position: "bottom",
                         align: "center",
@@ -77,6 +84,27 @@ function v(e) {
                                     size: "sm",
                                 }),
                             }),
+                    }),
+                    (0, i.jsxs)("div", {
+                        className: x.L$,
+                        children: [
+                            (0, i.jsx)(l.EYj, { variant: "text-sm/semibold", color: "text-strong", children: L }),
+                            (0, i.jsxs)("div", {
+                                className: x.hr,
+                                children: [
+                                    (0, i.jsx)("div", { className: x.SX, style: { width: `${R}%` } }),
+                                    (0, i.jsxs)("div", {
+                                        className: x.tu,
+                                        style: { width: `${R}%` },
+                                        children: [
+                                            (0, i.jsx)("div", { className: x.SZ }),
+                                            (0, i.jsx)("div", { className: x.SZ }),
+                                            (0, i.jsx)("div", { className: x.SZ }),
+                                        ],
+                                    }),
+                                ],
+                            }),
+                        ],
                     }),
                 ],
             }),
