@@ -1,41 +1,40 @@
 "use strict";
 n.d(t, {
-    Kl: () => C,
+    Kl: () => v,
     SW: () => E,
-    Td: () => b,
-    VL: () => I,
-    Wi: () => x,
-    _R: () => L,
-    aY: () => P,
-    bz: () => v,
-    gm: () => y,
-    hK: () => D,
-    hv: () => A,
+    Td: () => N,
+    VL: () => A,
+    Wi: () => w,
+    _R: () => D,
+    aY: () => M,
+    bz: () => y,
+    gm: () => T,
+    hK: () => b,
+    hv: () => g,
     j8: () => O,
-    qZ: () => w,
-    rA: () => T,
-    rY: () => g,
+    qZ: () => L,
+    rA: () => I,
+    rY: () => m,
     zt: () => S,
 });
 var r = n(687123),
     i = n(731738);
 n(873298);
-var a = n(36149);
+var s = n(36149);
 n(865116);
-var s = n(831062),
+var a = n(831062),
     o = n(207560),
     l = n(203389),
-    u = n(64313),
-    c = n(734057),
-    d = n(954571),
-    _ = n(581381);
+    u = n(734057),
+    c = n(954571),
+    d = n(581381);
 n(900819);
-var f = n(338717),
-    p = n(961440),
-    h = n(652215);
+var _ = n(338717),
+    f = n(961440),
+    p = n(652215);
 n(985018);
-let m = 1;
-var g = (function (e) {
+let h = 1;
+var m = (function (e) {
         return (
             (e.EXPLICIT_MEDIA_LEARN_MORE_VIEWED = "explicit_media_learn_more_viewed"),
             (e.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS = "explicit_media_learn_more_click_settings"),
@@ -64,46 +63,46 @@ var g = (function (e) {
             e
         );
     })({});
-function A(e) {
+function g(e) {
     let { action: t, channelId: n, messageId: r, context: i } = e;
     if (null == n || null == r) return;
-    let a = c.A.getChannel(n);
-    d.default.track(h.HAw.EXPLICIT_MEDIA_ACTION, {
+    let s = u.A.getChannel(n);
+    c.default.track(p.HAw.EXPLICIT_MEDIA_ACTION, {
         action: t,
-        guild_id: a?.guild_id,
+        guild_id: s?.guild_id,
         channel_id: n,
         message_id: r,
         user_is_underage: (0, l.L)(),
         context: i,
     });
 }
-var I = (function (e) {
+var A = (function (e) {
     return (e.UPDATE = "update"), (e.TIMEOUT = "timeout"), e;
 })({});
-function T(e, t) {
+function I(e, t) {
     let n = Math.min(Math.floor((Date.now() - e) / 1e3), 3);
-    s.A.increment({
+    a.A.increment({
         name: i.K.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING,
-        tags: [`timingBucket:${n}`, `source:${t}`, `metricVersion:${m}`],
+        tags: [`timingBucket:${n}`, `source:${t}`, `metricVersion:${h}`],
     });
 }
-function y(e) {
-    let { channelId: t, messageId: n, attachmentIds: r, embedIds: a } = e;
-    if (null == t || null == n || ((r?.length ?? 0) === 0 && (a?.length ?? 0) === 0)) return;
-    let o = c.A.getChannel(t);
-    d.default.track(h.HAw.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, {
+function T(e) {
+    let { channelId: t, messageId: n, attachmentIds: r, embedIds: s } = e;
+    if (null == t || null == n || ((r?.length ?? 0) === 0 && (s?.length ?? 0) === 0)) return;
+    let o = u.A.getChannel(t);
+    c.default.track(p.HAw.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, {
         channel_id: t,
         guild_id: o?.guild_id,
         message_id: n,
-        embed_ids: a,
+        embed_ids: s,
         user_is_underage: (0, l.L)(),
-        scan_timeout_duration: _.MX,
+        scan_timeout_duration: d.MX,
         attachment_ids_v2: r,
     }),
-        s.A.increment({ name: i.K.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, tags: [`metricVersion:${m}`] }),
-        s.A.distribution(
+        a.A.increment({ name: i.K.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, tags: [`metricVersion:${h}`] }),
+        a.A.distribution(
             { name: i.K.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT_DISTRIBUTION },
-            (r?.length ?? 0) + (a?.length ?? 0),
+            (r?.length ?? 0) + (s?.length ?? 0),
         );
 }
 function S(e) {
@@ -111,86 +110,86 @@ function S(e) {
         channelId: t,
         numOfAttachments: n,
         numOfAttachmentsPendingScan: r,
-        numOfEmbeds: a,
+        numOfEmbeds: s,
         numOfEmbedsPendingScan: o,
     } = e;
     if (null == t) return;
-    let l = c.A.getChannel(t);
-    d.default.track(h.HAw.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED, {
+    let l = u.A.getChannel(t);
+    c.default.track(p.HAw.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED, {
         channel_id: t,
         guild_id: l?.guild_id,
         num_of_attachments: n,
         num_of_attachments_pending_scan: r,
-        num_of_embeds: a,
+        num_of_embeds: s,
         num_of_embeds_pending_scan: o,
     });
-    let u = r + o;
-    u > 0 && s.A.distribution({ name: i.K.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2 }, u);
+    let d = r + o;
+    d > 0 && a.A.distribution({ name: i.K.EXPLICIT_MEDIA_PENDING_MESSAGE_LOADED_V2 }, d);
 }
-function v(e) {
+function y(e) {
     let {
             messageId: t,
             channelId: n,
             numOfAttachments: r,
             numOfSelfHarmAttachments: i,
-            numOfEmbeds: a,
-            numOfGoreAttachments: s,
+            numOfEmbeds: s,
+            numOfGoreAttachments: a,
             numOfExplicitAttachments: o,
             numOfSelfHarmEmbeds: l,
-            numOfGoreEmbeds: u,
+            numOfGoreEmbeds: d,
             numOfExplicitEmbeds: _,
         } = e,
         f = o > 0 || _ > 0,
-        p = s > 0 || u > 0,
+        h = a > 0 || d > 0,
         m = i > 0 || l > 0;
-    if (null == n || null == t || (!f && !p && !m)) return;
-    let g = c.A.getChannel(n);
-    d.default.track(h.HAw.REDACTABLE_MESSAGE_LOADED, {
+    if (null == n || null == t || (!f && !h && !m)) return;
+    let E = u.A.getChannel(n);
+    c.default.track(p.HAw.REDACTABLE_MESSAGE_LOADED, {
         message_id: t,
         channel_id: n,
-        channel_type: g?.type,
-        guild_id: g?.guild_id,
+        channel_type: E?.type,
+        guild_id: E?.guild_id,
         num_of_attachments: r,
-        num_of_gore_attachments: s,
+        num_of_gore_attachments: a,
         num_of_explicit_attachments: o,
         num_of_self_harm_attachments: i,
-        num_of_embeds: a,
-        num_of_gore_embeds: u,
+        num_of_embeds: s,
+        num_of_gore_embeds: d,
         num_of_explicit_embeds: _,
         num_of_self_harm_embeds: l,
         has_redactable_explicit: f,
-        has_redactable_gore: p,
+        has_redactable_gore: h,
         has_redactable_self_harm: m,
     });
 }
-function C(e) {
+function v(e) {
     let {
         messageId: t,
         channelId: n,
         numOfAttachments: r,
         numOfExplicitAttachments: i,
-        numOfEmbeds: a,
-        numOfExplicitEmbeds: s,
+        numOfEmbeds: s,
+        numOfExplicitEmbeds: a,
     } = e;
     if (null == n) return;
-    let o = c.A.getChannel(n);
-    d.default.track(h.HAw.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE, {
+    let o = u.A.getChannel(n);
+    c.default.track(p.HAw.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE, {
         message_id: t,
         channel_id: n,
         channel_type: o?.type,
         guild_id: o?.guild_id,
         num_of_attachments: r,
         num_of_explicit_attachments: i,
-        num_of_embeds: a,
-        num_of_explicit_embeds: s,
+        num_of_embeds: s,
+        num_of_explicit_embeds: a,
     });
 }
-function b(e) {
-    let { attachments: t, embeds: n } = N(e),
+function N(e) {
+    let { attachments: t, embeds: n } = C(e),
         r = R(e);
     return e.merge({ attachments: t, embeds: n, messageSnapshots: r });
 }
-function N(e) {
+function C(e) {
     return {
         attachments: e.attachments.map((e) => ((e.content_scan_version = -1), e)),
         embeds: e.embeds.map((e) => ((e.contentScanVersion = -1), e)),
@@ -202,33 +201,29 @@ function R(e) {
         ? t
         : t.map((e) => {
               let { message: t } = e,
-                  { attachments: n, embeds: r } = N(t);
+                  { attachments: n, embeds: r } = C(t);
               return (t = t.merge({ attachments: n, embeds: r })), (e = e.merge({ message: t }));
           });
 }
-let O = (e, t) => null != e && null != t && (e <= p._L || t <= p.jd);
-function D() {
+let O = (e, t) => null != e && null != t && (e <= f._L || t <= f.jd);
+function b() {
     let e = (0, o.d6)(r.t.SENSITIVE_CONTENT_SHOW_SETTING),
-        t = (0, u.o)("explicit_media_redaction_utils"),
-        n = e || t,
-        i = (0, a.p9)();
-    return n && i;
+        t = (0, s.p9)();
+    return e && t;
 }
-function L() {
+function D() {
     let e = (0, o.aX)(r.t.SENSITIVE_CONTENT_SHOW_SETTING),
-        t = (0, u.j)("explicit_media_redaction_utils"),
-        n = e || t,
-        i = (0, a.i2)();
-    return n && i;
+        t = (0, s.i2)();
+    return e && t;
+}
+function L(e) {
+    return !!D() && null != e && _.tY.has(e);
 }
 function w(e) {
-    return !!L() && null != e && f.tY.has(e);
-}
-function x(e) {
     let { obscure: t } = e;
-    (0, a.$8)() && d.default.track(h.HAw.EXPLICIT_MEDIA_OBSCURITY_TOGGLE_V2, { toggle_direction: t ? "hide" : "show" });
+    (0, s.$8)() && c.default.track(p.HAw.EXPLICIT_MEDIA_OBSCURITY_TOGGLE_V2, { toggle_direction: t ? "hide" : "show" });
 }
-function P(e) {
+function M(e) {
     return e.message_snapshots?.some(
         (e) =>
             (e.message?.attachments != null && e.message.attachments.length > 0) ||

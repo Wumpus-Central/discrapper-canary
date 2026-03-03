@@ -1,46 +1,44 @@
 "use strict";
-n.d(t, { T4: () => h, WX: () => g, gC: () => d, jj: () => p, qY: () => m });
+n.d(t, { T4: () => p, WX: () => m, gC: () => c, jj: () => f, qY: () => h });
 var r = n(64700),
     i = n(923457),
-    a = n(873298),
-    s = n(207560),
-    o = n(64313),
-    l = n(253932),
-    u = n(287809),
-    c = n(652215);
-let d = (e) => {
+    s = n(873298),
+    a = n(207560),
+    o = n(253932),
+    l = n(287809),
+    u = n(652215);
+let c = (e) => {
         let { setting: t, isDm: n = !1, isFriend: r = !1 } = e;
-        if (null != t && t !== a.TO.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
-        let l = u.default.getCurrentUser(),
-            c = (0, o.o)("resolveExplicitContentSettingWithDefaults");
-        return (0, s.To)(i.p.SENSITIVE_CONTENT) || c
-            ? _({ isDm: n, isFriend: r })
-            : l?.nsfwAllowed === !1
-              ? p({ isDm: n, isFriend: r })
-              : f({ isDm: n, isFriend: r });
+        if (null != t && t !== s.TO.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
+        let o = l.default.getCurrentUser();
+        return (0, a.To)(i.p.SENSITIVE_CONTENT)
+            ? d({ isDm: n, isFriend: r })
+            : o?.nsfwAllowed === !1
+              ? f({ isDm: n, isFriend: r })
+              : _({ isDm: n, isFriend: r });
+    },
+    d = (e) => {
+        let { isDm: t = !1, isFriend: n = !1 } = e;
+        return t && !n ? s.TO.BLOCK : s.TO.BLUR;
     },
     _ = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
-        return t && !n ? a.TO.BLOCK : a.TO.BLUR;
+        return t && n ? s.TO.SHOW : t ? s.TO.BLOCK : s.TO.SHOW;
     },
     f = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
-        return t && n ? a.TO.SHOW : t ? a.TO.BLOCK : a.TO.SHOW;
+        return t && n ? s.TO.BLUR : t ? s.TO.BLOCK : s.TO.BLUR;
     },
     p = (e) => {
-        let { isDm: t = !1, isFriend: n = !1 } = e;
-        return t && n ? a.TO.BLUR : t ? a.TO.BLOCK : a.TO.BLUR;
-    },
-    h = (e) => {
-        let t = e ?? l.qN.getSetting();
+        let t = e ?? o.qN.getSetting();
         return {
-            goreContentGuilds: d({ setting: t?.goreContentGuilds }),
-            goreContentNonFriendDm: d({ setting: t?.goreContentNonFriendDm, isDm: !0 }),
-            goreContentFriendDm: d({ setting: t?.goreContentFriendDm, isDm: !0, isFriend: !0 }),
+            goreContentGuilds: c({ setting: t?.goreContentGuilds }),
+            goreContentNonFriendDm: c({ setting: t?.goreContentNonFriendDm, isDm: !0 }),
+            goreContentFriendDm: c({ setting: t?.goreContentFriendDm, isDm: !0, isFriend: !0 }),
         };
     },
-    m = (e) => {
-        let t = h();
-        l.qN.updateSetting({ ...t, ...e });
+    h = (e) => {
+        let t = p();
+        o.qN.updateSetting({ ...t, ...e });
     },
-    g = () => r.useMemo(() => c.MVz.EXPLICIT_MEDIA_REDACTION, []);
+    m = () => r.useMemo(() => u.MVz.EXPLICIT_MEDIA_REDACTION, []);

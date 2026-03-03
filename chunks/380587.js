@@ -1,4 +1,4 @@
-n.d(t, { Ev: () => C, Ow: () => T, Xj: () => N, aK: () => S, m3: () => I });
+n.d(t, { Ev: () => E, Ow: () => C, Xj: () => f, aK: () => T, m3: () => S });
 var i = n(627968),
     s = n(64700),
     a = n(687123),
@@ -13,37 +13,36 @@ var i = n(627968),
     A = n(840387),
     g = n(933297),
     h = n(975571),
-    x = n(64313),
-    p = n(835002),
-    E = n(985018);
-function C() {
+    x = n(835002),
+    p = n(985018);
+function E() {
     let e = (0, d.WX)();
     return (0, i.jsx)(m.e, {
-        label: E.t.EUo0yj,
+        label: p.t.EUo0yj,
         labelHook: () => {
             window.open(h.A.getArticleURL(e), "_blank");
         },
-        noticeType: p.YA.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE,
+        noticeType: x.YA.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE,
     });
 }
-function T() {
+function C() {
     return (0, i.jsx)(m.e, {
-        label: E.t.OX4ybh,
+        label: p.t.OX4ybh,
         labelHook: () => {
             r.A.showAgeVerificationGetStartedModal({ entryPoint: o.q1.CONTENT_AND_SOCIAL_NOTICE });
         },
-        noticeType: p.YA.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE,
+        noticeType: x.YA.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE,
     });
 }
-function S() {
+function T() {
     let e = (0, A.Z)(),
         t = (0, d.WX)(),
         n = s.useCallback(() => {
             window.open(h.A.getArticleURL(t), "_blank"),
-                (0, _.N)(p.YA.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE, p.YX.LEARN_MORE);
+                (0, _.N)(x.YA.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE, x.YX.LEARN_MORE);
         }, [t]),
         a = s.useCallback(() => {
-            (0, _.N)(p.YA.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE, p.YX.VIEWED);
+            (0, _.N)(x.YA.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE, x.YX.VIEWED);
         }, []);
     return s.useMemo(() => {
         if (e)
@@ -52,44 +51,43 @@ function S() {
                 noticeType: "info",
                 trackView: a,
                 useText: () =>
-                    E.intl.format(E.t.EUo0yj, { hook: (e, t) => (0, i.jsx)(l.MzZ, { onClick: n, children: e }, t) }),
+                    p.intl.format(p.t.EUo0yj, { hook: (e, t) => (0, i.jsx)(l.MzZ, { onClick: n, children: e }, t) }),
             };
     }, [n, e, a]);
 }
-function I() {
+function S() {
     let e = (0, u.SJ)(),
-        t = (0, x.j)("useContentAndSocialAgeVerificationInlineNotice"),
-        n = (0, c.b8)(),
-        a = (e || t) && !n,
-        d = s.useCallback(() => {
+        t = (0, c.b8)(),
+        n = e && !t,
+        a = s.useCallback(() => {
             r.A.showAgeVerificationGetStartedModal({ entryPoint: o.q1.CONTENT_AND_SOCIAL_NOTICE }),
-                (0, _.N)(p.YA.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE, p.YX.LEARN_MORE);
+                (0, _.N)(x.YA.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE, x.YX.LEARN_MORE);
         }, []),
-        m = s.useCallback(() => {
-            (0, _.N)(p.YA.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE, p.YX.VIEWED);
+        d = s.useCallback(() => {
+            (0, _.N)(x.YA.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE, x.YX.VIEWED);
         }, []);
     return s.useMemo(() => {
-        if (a)
+        if (n)
             return {
                 type: g.lT.INLINE_NOTICE,
                 noticeType: "info",
-                trackView: m,
+                trackView: d,
                 useText: () =>
-                    E.intl.format(E.t.OX4ybh, { hook: (e, t) => (0, i.jsx)(l.MzZ, { onClick: d, children: e }, t) }),
+                    p.intl.format(p.t.OX4ybh, { hook: (e, t) => (0, i.jsx)(l.MzZ, { onClick: a, children: e }, t) }),
             };
-    }, [d, a, m]);
+    }, [a, n, d]);
 }
-function f() {
+function I() {
     let e = (0, d.WX)();
     s.useEffect(() => {
-        (0, _.N)(p.YA.AGE_CONFIRMATION_NOTICE, p.YX.VIEWED);
+        (0, _.N)(x.YA.AGE_CONFIRMATION_NOTICE, x.YX.VIEWED);
     }, []);
     let t = s.useCallback(() => {
-            window.open(h.A.getArticleURL(e), "_blank"), (0, _.N)(p.YA.AGE_CONFIRMATION_NOTICE, p.YX.LEARN_MORE);
+            window.open(h.A.getArticleURL(e), "_blank"), (0, _.N)(x.YA.AGE_CONFIRMATION_NOTICE, x.YX.LEARN_MORE);
         }, [e]),
         n = s.useCallback(() => {
             r.A.showAgeVerificationGetStartedModal({ entryPoint: o.q1.CONTENT_AND_SOCIAL_NOTICE }),
-                (0, _.N)(p.YA.AGE_CONFIRMATION_NOTICE, p.YX.CONFIRM_AGE);
+                (0, _.N)(x.YA.AGE_CONFIRMATION_NOTICE, x.YX.CONFIRM_AGE);
         }, []);
     return (0, i.jsx)(l.po8, {
         messageType: l.YCn.INFO,
@@ -97,16 +95,16 @@ function f() {
             variant: "secondary",
             size: "sm",
             textVariant: "text-sm/medium",
-            text: E.intl.string(E.t.FDSSia),
+            text: p.intl.string(p.t.FDSSia),
             onClick: n,
         }),
-        children: E.intl.format(E.t.mFgsfg, { hook: (e, n) => (0, i.jsx)(l.MzZ, { onClick: t, children: e }, n) }),
+        children: p.intl.format(p.t.mFgsfg, { hook: (e, n) => (0, i.jsx)(l.MzZ, { onClick: t, children: e }, n) }),
     });
 }
-function N() {
+function f() {
     let e = (0, u.aX)(a.t.REACTIVE_CHECK),
         t = (0, c.b8)();
     return s.useMemo(() => {
-        if (e && !t) return { type: g.lT.STRONGLY_DISCOURAGED_CUSTOM, notice: f };
+        if (e && !t) return { type: g.lT.STRONGLY_DISCOURAGED_CUSTOM, notice: I };
     }, [e, t]);
 }
