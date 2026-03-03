@@ -30,25 +30,25 @@ function g(e) {
             className: v,
             tagClassName: N,
             onOpenProfile: C,
-            onClose: b,
-            nicknameVariant: R = "heading-lg/bold",
+            onClose: R,
+            nicknameVariant: O = "heading-lg/bold",
         } = e,
-        O = (e) => (null == C ? e : (0, r.jsx)(o.DUT, { onClick: C, className: E.pt, children: e })),
+        b = (e) => (null == C ? e : (0, r.jsx)(o.DUT, { onClick: C, className: E.pt, children: e })),
         D = null != S && S.length > 0,
         L = (0, u.r)(t),
         w = (0, d.A)({ userId: t.id, guildId: n, pendingDisplayNameStyles: T }),
-        x = null != w,
-        M = null != L && (0, r.jsx)(c.A, { type: L, verified: t.isVerifiedBot(), className: E.AO });
+        M = null != w,
+        x = null != L && (0, r.jsx)(c.A, { type: L, verified: t.isVerifiedBot(), className: E.AO });
     return (0, r.jsxs)("div", {
         className: s()(E.kL, { [E.Od]: null != L }, v),
         children: [
             (0, r.jsxs)("div", {
                 className: E.Fj,
                 children: [
-                    O(
-                        x
+                    b(
+                        M
                             ? (0, r.jsx)(o.Text, {
-                                  variant: R,
+                                  variant: O,
                                   children: (0, r.jsx)(f.A, {
                                       userName: A,
                                       displayNameStyles: w,
@@ -58,9 +58,11 @@ function g(e) {
                                       loop: !0,
                                       inProfile: !0,
                                       shouldUnderlineOnHover: null != C,
+                                      appendedInlineContent:
+                                          null != x ? (0, r.jsxs)(r.Fragment, { children: [" ", x] }) : null,
                                   }),
                               })
-                            : (0, r.jsxs)(o.Text, { className: E.$R, variant: R, children: [A, " ", M] }),
+                            : (0, r.jsxs)(o.Text, { className: E.$R, variant: O, children: [A, " ", x] }),
                     ),
                     null != I && (0, r.jsx)("div", { className: E.t4, children: I }),
                 ],
@@ -69,7 +71,7 @@ function g(e) {
                 className: s()(E._A, { [E.hI]: D, [E.Od]: null != L }),
                 children: [
                     !t.isProvisional &&
-                        O(
+                        b(
                             (0, r.jsx)(l.A, {
                                 user: t,
                                 usernameIcon: i,
@@ -107,7 +109,7 @@ function g(e) {
                     (0, r.jsx)(p.Ay, {
                         primaryGuild: y,
                         userId: t.id,
-                        onClose: b,
+                        onClose: R,
                         containerClassName: E.L4,
                         className: E.Mp,
                     }),

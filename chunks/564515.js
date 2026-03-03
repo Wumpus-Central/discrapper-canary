@@ -2,6 +2,8 @@
 e.exports = {
     kL: "container_dfb989",
     $E: "inProfile_dfb989",
+    Tn: "hasAppendedInlineContent_dfb989",
+    g8: "userNameAndAppendedInlineContentContainer_dfb989",
     WH: "innerContainer_dfb989",
     _W: "underlineOnHover_dfb989",
     uY: "pop_dfb989",

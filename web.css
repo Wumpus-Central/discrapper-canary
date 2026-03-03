@@ -14650,6 +14650,11 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     display: flex
 }
 
+.container_dfb989.hasAppendedInlineContent_dfb989,
+.userNameAndAppendedInlineContentContainer_dfb989 {
+    display: inline
+}
+
 .innerContainer_dfb989 {
     flex: 1 1 0%;
     min-width: 0;
@@ -34430,7 +34435,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 }
 
 .usernameRow__63ed3 .botTag__63ed3 {
-    vertical-align: middle
+    vertical-align: baseline
 }
 
 .tags__63ed3 {
