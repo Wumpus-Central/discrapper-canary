@@ -24,14 +24,13 @@ async function p(e) {
             showGuildProfile: m = !0,
             appContext: E,
             customStatusPrompt: g,
-            disableActionsForPreview: A = !1,
-            ...I
+            ...A
         } = e,
-        T = l.default.getUser(t);
+        I = l.default.getUser(t);
+    if (null == I) return;
+    let T = l.default.getCurrentUser();
     if (null == T) return;
-    let S = l.default.getCurrentUser();
-    if (null == S) return;
-    let y = f(t, m ? p : void 0);
+    let S = f(t, m ? p : void 0);
     _.add(
         await (0, i.mMO)(
             async () => {
@@ -50,26 +49,25 @@ async function p(e) {
                 ).default;
                 return (t) =>
                     (0, r.jsx)(e, {
-                        user: T,
-                        currentUser: S,
+                        user: I,
+                        currentUser: T,
                         guildId: p,
                         initialTabSection: s,
                         initialScrollTarget: a,
                         channelId: h,
                         showGuildProfile: m,
                         customStatusPrompt: g,
-                        disableActionsForPreview: A,
                         ...t,
-                        ...I,
+                        ...A,
                     });
             },
             {
-                modalKey: y,
+                modalKey: S,
                 contextKey: (0, i.TId)(E ?? (0, o.zd)() ?? d.BRT.APP),
                 onCloseRequest: () => {
                     c.A.hasUnsavedChanges()
                         ? u.A.notifyUnsavedWidgets()
-                        : ((0, i.OoC)(y), _.delete(y), u.A.clearPendingWidgets());
+                        : ((0, i.OoC)(S), _.delete(S), u.A.clearPendingWidgets());
                 },
             },
         ),

@@ -2,8 +2,8 @@
 n.r(t), n.d(t, { closeUserProfileModal: () => m, openUserProfileModal: () => h });
 var r = n(397927),
     i = n(73153),
-    a = n(803306),
-    s = n(993327),
+    s = n(803306),
+    a = n(993327),
     o = n(626584),
     l = n(961350),
     u = n(287809),
@@ -16,7 +16,7 @@ let _ = (0, r.FT9)(r._3J.SIZE_120),
             { recentActivityTabEnabled: n } = (0, c.f)({ location: "UserProfileModalActionCreators" });
         if (n || t)
             try {
-                await (0, s.A)(e);
+                await (0, a.A)(e);
             } catch (t) {
                 f.log(`Failed to fetch content inventory outbox for ${e}:`, t);
             }
@@ -26,23 +26,22 @@ async function h(e) {
             userId: t,
             guildId: n,
             channelId: r,
-            messageId: s,
+            messageId: a,
             roleId: o,
             sessionId: l,
             joinRequestId: c,
             tabSection: f,
             scrollTarget: h,
             showGuildProfile: m,
-            hideRestrictedProfile: g,
-            sourceAnalyticsLocations: E,
+            hideRestrictedProfile: E,
+            sourceAnalyticsLocations: g,
             appContext: A,
             customStatusPrompt: I = null,
-            disableActionsForPreview: T = !1,
         } = e,
-        y = u.default.getUser(t);
+        T = u.default.getUser(t);
     p(t),
-        null == y
-            ? await (0, a.eO)(t, {
+        null == T
+            ? await (0, s.eO)(t, {
                   type: "modal",
                   guildId: m && null != n ? n : void 0,
                   withMutualFriendsCount: !0,
@@ -50,10 +49,10 @@ async function h(e) {
                   withMutualGuilds: !0,
                   joinRequestId: c,
               })
-            : (0, d.A)(y.id, y.getAvatarURL(void 0, _), {
+            : (0, d.A)(T.id, T.getAvatarURL(void 0, _), {
                   type: "modal",
                   guildId: m && null != n ? n : void 0,
-                  withMutualFriendsCount: !y.bot,
+                  withMutualFriendsCount: !T.bot,
                   withMutualFriends: !1,
                   withMutualGuilds: !0,
                   joinRequestId: c,
@@ -63,7 +62,7 @@ async function h(e) {
             userId: t,
             guildId: n ?? void 0,
             channelId: r ?? void 0,
-            messageId: s ?? void 0,
+            messageId: a ?? void 0,
             roleId: o ?? void 0,
             sessionId: l ?? void 0,
             openedAt: Date.now(),
@@ -71,10 +70,9 @@ async function h(e) {
             tabSection: f,
             scrollTarget: h,
             showGuildProfile: m,
-            hideRestrictedProfile: g,
-            sourceAnalyticsLocations: E,
+            hideRestrictedProfile: E,
+            sourceAnalyticsLocations: g,
             appContext: A,
-            disableActionsForPreview: T,
         });
 }
 function m() {

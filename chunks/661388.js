@@ -1,7 +1,5 @@
 e.exports = {
     zr: "root__9c3be",
-    r9: "disabled__9c3be",
-    sr: "previewBar__9c3be",
     Q0: "editingToolbar__9c3be",
     oR: "toast__9c3be",
     aX: "interactionToast__9c3be",
