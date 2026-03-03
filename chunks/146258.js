@@ -4,5 +4,8 @@ e.exports = {
     jC: "twoColumnMainContent__81040",
     Pn: "twoColumnSidebar__81040",
     b9: "oneColumnMainContent__81040",
-    Qs: "content__81040",
+    n8: "twoColumnCoverArt__81040",
+    gr: "oneColumnCoverArtStoreLinksSummaryContainer__81040",
+    E1: "oneColumnStoreLinksSummaryContainer__81040",
+    FS: "oneColumnCoverArt__81040",
 };
