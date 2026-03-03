@@ -33243,7 +33243,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 }
 
 .bar__8e51c {
-    background-color: var(--background-mod-muted);
+    background-color: var(--background-mod-normal);
     border-radius: 2px;
     flex: 1;
     height: 2px

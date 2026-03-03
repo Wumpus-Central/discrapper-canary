@@ -1,30 +1,33 @@
 "use strict";
 n.d(t, {
-    As: () => m,
-    BZ: () => L,
-    CZ: () => x,
-    Hd: () => T,
-    I5: () => I,
-    JM: () => E,
-    KH: () => C,
-    L7: () => v,
-    Pj: () => w,
-    Pv: () => g,
-    Rf: () => A,
-    TQ: () => S,
+    As: () => g,
+    BZ: () => M,
+    CZ: () => P,
+    Hd: () => y,
+    I5: () => S,
+    JM: () => I,
+    KH: () => R,
+    L7: () => C,
+    Pj: () => x,
+    Pv: () => A,
+    Rf: () => T,
+    TQ: () => N,
+    U3: () => h,
     W6: () => f,
-    aJ: () => h,
-    gF: () => R,
-    iy: () => D,
-    kR: () => N,
-    ty: () => y,
-    us: () => b,
-    uw: () => O,
-});
+    XK: () => p,
+    aJ: () => E,
+    gF: () => D,
+    iy: () => w,
+    kR: () => b,
+    ty: () => v,
+    us: () => O,
+    uw: () => L,
+}),
+    n(321073);
 var r = n(444058),
     i = n(989349),
-    a = n.n(i),
-    s = n(974690),
+    s = n.n(i),
+    a = n(974690),
     o = n(681154),
     l = n(927813),
     u = n(661191),
@@ -49,15 +52,29 @@ let d = (e, t) => {
     },
     f = (e, t) => {
         let { seconds: n, minutes: r, hours: i } = _(e, t);
-        function a(e) {
+        function s(e) {
             return String(e).padStart(2, "0");
         }
-        let s = i,
-            o = i > 0 ? a(r) : r,
-            l = a(n);
-        return i > 0 ? `${s}:${o}:${l}` : `${o}:${l}`;
+        let a = i,
+            o = i > 0 ? s(r) : r,
+            l = s(n);
+        return i > 0 ? `${a}:${o}:${l}` : `${o}:${l}`;
     },
-    p = {
+    p = (e) => {
+        let { hours: t, minutes: n, seconds: r } = e,
+            i = [];
+        return (
+            t > 0 && i.push(c.intl.formatToPlainString(c.t.xCjYxK, { hours: t })),
+            i.push(c.intl.formatToPlainString(c.t.iXLF9W, { minutes: n })),
+            i.push(c.intl.formatToPlainString(c.t.geSp4K, { seconds: r })),
+            i.join(", ")
+        );
+    },
+    h = (e, t) => {
+        let { seconds: n, minutes: r, hours: i } = _(e, t);
+        return p({ hours: i, minutes: r, seconds: n });
+    },
+    m = {
         secondsAgo: (e) => c.intl.formatToPlainString(c.t.EOrEJl, { count: e }),
         minutesAgo: (e) => c.intl.formatToPlainString(c.t.LRNgHp, { count: e }),
         hoursAgo: (e) => c.intl.formatToPlainString(c.t.raJpz3, { count: e }),
@@ -65,11 +82,11 @@ let d = (e, t) => {
         weeksAgo: (e) => c.intl.formatToPlainString(c.t.sDtO6D, { count: e }),
         monthsAgo: (e) => c.intl.formatToPlainString(c.t.ITymou, { count: e }),
     },
-    h = function (e, t, n) {
-        let { formatSet: r = p } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-            i = a()(n),
-            s = a()(u.default.extractTimestamp(e.id)),
-            o = i.diff(s, "s"),
+    E = function (e, t, n) {
+        let { formatSet: r = m } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+            i = s()(n),
+            a = s()(u.default.extractTimestamp(e.id)),
+            o = i.diff(a, "s"),
             c = Math.abs(o);
         if (c < l.A.Seconds.MINUTE) return r.secondsAgo(o);
         if (c < l.A.Seconds.HOUR) {
@@ -91,49 +108,49 @@ let d = (e, t) => {
         let d = Math.round(o / l.A.Seconds.DAYS_30);
         return r.monthsAgo(d);
     },
-    m = function (e, t) {
+    g = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
             r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        return E(e) ? f(e, n) : h(e, t, n, r);
+        return I(e) ? f(e, n) : E(e, t, n, r);
     };
-function g(e, t) {
+function A(e, t) {
     return e.traits.find((e) => e.type === t);
 }
-function E(e) {
-    return g(e, s.K.IS_LIVE)?.is_live ?? !1;
-}
-function A(e) {
-    return g(e, s.K.FIRST_TIME)?.first_time ?? !1;
-}
 function I(e) {
-    return null != e.expires_at && new Date(e.expires_at) < new Date();
+    return A(e, a.K.IS_LIVE)?.is_live ?? !1;
 }
 function T(e) {
-    return E(e) && !I(e);
-}
-function y(e) {
-    return g(e, s.K.DURATION_SECONDS)?.duration_seconds;
+    return A(e, a.K.FIRST_TIME)?.first_time ?? !1;
 }
 function S(e) {
-    return g(e, s.K.AGGREGATE_RANGE)?.range;
+    return null != e.expires_at && new Date(e.expires_at) < new Date();
+}
+function y(e) {
+    return I(e) && !S(e);
 }
 function v(e) {
-    return g(e, s.K.MARATHON)?.marathon;
+    return A(e, a.K.DURATION_SECONDS)?.duration_seconds;
+}
+function N(e) {
+    return A(e, a.K.AGGREGATE_RANGE)?.range;
 }
 function C(e) {
-    let t = g(e, s.K.RESURRECTED);
+    return A(e, a.K.MARATHON)?.marathon;
+}
+function R(e) {
+    let t = A(e, a.K.RESURRECTED);
     return t?.resurrected_last_played != null ? new Date(t.resurrected_last_played) : void 0;
 }
-function b(e) {
+function O(e) {
     let { months: t = 0, weeks: n = 0, days: i = 0 } = (0, r.A)({ start: e, end: new Date() });
     return c.intl.formatToPlainString(c.t.NXBtjF, { months: t, weeks: t > 0 ? 0 : n, days: t > 0 || n > 0 ? 0 : i });
 }
-function N(e) {
+function b(e) {
     if (null == e || "" === e) return null;
     let t = /\w+ (\d+), \w+ (\d+)/.exec(e);
     return null == t ? null : c.intl.formatToPlainString(c.t.ijVm6y, { seasonNum: t[1], episodeNum: t[2] });
 }
-function R(e, t) {
+function D(e, t) {
     let n,
         r = t?.size?.[0] ?? void 0,
         i = t?.size?.[1] ?? void 0;
@@ -144,20 +161,20 @@ function R(e, t) {
         null != n && null != e ? `${e} (${n})` : (e ?? n)
     );
 }
-function O(e) {
+function L(e) {
     return e.content_type === o.ContentInventoryEntryType.TOP_GAME;
 }
-function D(e) {
-    return g(e, s.K.STREAK_DAYS)?.streak_count_days;
+function w(e) {
+    return A(e, a.K.STREAK_DAYS)?.streak_count_days;
 }
-function L(e) {
-    let t = D(e);
+function M(e) {
+    let t = w(e);
     if (null == t || t < 3) return !1;
     let n = u.default.extractTimestamp(e.id);
     return !(Date.now() - n > 48 * l.A.Millis.HOUR);
 }
-function w(e) {
-    let t = y(e);
+function x(e) {
+    let t = v(e);
     if (null == t) return { text: null, tooltipText: null };
     let n = Math.round(t / l.A.Seconds.HOUR);
     return n <= 0
@@ -167,6 +184,6 @@ function w(e) {
               tooltipText: c.intl.formatToPlainString(c.t.S5F485, { hours: n }),
           };
 }
-function x(e) {
-    return g(e, s.K.TRENDING_CONTENT)?.trending;
+function P(e) {
+    return A(e, a.K.TRENDING_CONTENT)?.trending;
 }
