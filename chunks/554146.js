@@ -555,6 +555,7 @@ var r = (function (e) {
             (e[(e.GAME_SERVER_HOSTING_BATCH_RELEASE_V2_COACHMARK = 704)] =
                 "GAME_SERVER_HOSTING_BATCH_RELEASE_V2_COACHMARK"),
             (e[(e.QUEST_ACTIVITY_HEADER_INTRO = 705)] = "QUEST_ACTIVITY_HEADER_INTRO"),
+            (e[(e.GAME_SERVER_GAME_DETECTION_UPSELL_NEW_BADGE = 706)] = "GAME_SERVER_GAME_DETECTION_UPSELL_NEW_BADGE"),
             e
         );
     })({}),
