@@ -31,6 +31,7 @@ function A(e) {
               onSecondaryClick: t,
               secondaryCTA: m.intl.string(m.t.f3Pet9),
               onClose: t,
+              ...l,
           })
         : (0, n.jsx)(d.A, {
               artURL: g,

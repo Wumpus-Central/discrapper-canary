@@ -30,6 +30,7 @@ function d(t) {
               },
               secondaryCTA: l.intl.string(l.t.PcTCB7),
               onClose: T,
+              ...h,
           })
         : (0, a.jsx)(c.A, {
               artURL: A,

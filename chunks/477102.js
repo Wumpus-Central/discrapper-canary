@@ -592,23 +592,29 @@ let b = {
     },
     SelectFriendsModal: async () => {
         let { default: e, SelectFriendsModalScreens: t } = await Promise.resolve().then(n.bind(n, 303682));
-        return (n) =>
-            (0, a.jsx)(e, {
+        return (n) => {
+            let { onClose: i, ...s } = n;
+            return (0, a.jsx)(e, {
                 onClose: async () => {
-                    console.log("SelectFriendsModal: Closed"), await n.onClose();
+                    console.log("SelectFriendsModal: Closed"), await i();
                 },
                 startingScreen: t.SELECT_FRIENDS,
+                ...s,
             });
+        };
     },
     SelectFriendsModalReminder: async () => {
         let { default: e, SelectFriendsModalScreens: t } = await Promise.resolve().then(n.bind(n, 303682));
-        return (n) =>
-            (0, a.jsx)(e, {
+        return (n) => {
+            let { onClose: i, ...s } = n;
+            return (0, a.jsx)(e, {
                 onClose: async () => {
-                    console.log("SelectFriendsModalReminder: Closed"), await n.onClose();
+                    console.log("SelectFriendsModalReminder: Closed"), await i();
                 },
                 startingScreen: t.REMINDER,
+                ...s,
             });
+        };
     },
     AddFavoriteChannelModal: async () => {
         let { default: e } = await n.e("59839").then(n.bind(n, 889186));
@@ -860,7 +866,7 @@ let b = {
         return (n) => (0, a.jsx)(i, { ...n, currentUser: e, otherUser: t });
     },
     FamilyCenterQRCodeModal: async () => {
-        let { default: e } = await Promise.all([n.e("97484"), n.e("72875")]).then(n.bind(n, 320742));
+        let { default: e } = await Promise.all([n.e("55277"), n.e("72875")]).then(n.bind(n, 320742));
         return (t) => (0, a.jsx)(e, { ...t });
     },
     PremiumGroupFriendsSelectorModal: async () => {
