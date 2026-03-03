@@ -356,9 +356,6 @@ class A extends s.A {
     setClipBufferLength(e) {
         (0, d.lE)().setClipBufferLength?.(e);
     }
-    setClipsBufferSize(e) {
-        (0, d.lE)().setClipsBufferSize?.(e);
-    }
     setClipsMLPipelineEnabled(e) {
         (0, d.lE)().setClipsMLPipelineEnabled?.(e);
     }

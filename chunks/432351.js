@@ -81,7 +81,6 @@ class l extends r.A {
         return Promise.reject(Error("UNSUPPORTED"));
     }
     setClipBufferLength(e) {}
-    setClipsBufferSize(e) {}
     setClipsMLPipelineEnabled(e) {}
     setClipsMLPipelineTypeEnabled(e, t) {}
     saveClip(e, t) {
