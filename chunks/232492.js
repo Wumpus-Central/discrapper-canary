@@ -10,7 +10,7 @@ var l = i(311907),
 function u(e, t) {
     let i = (0, l.bG)([r.A], () => r.A.getChannel(t)),
         { needSubscriptionToAccess: u } = (0, d.A)(i?.id);
-    if (null == i || u) return null;
+    if (null == i || u || i.isObfuscated()) return null;
     let m = i.isGuildVocal();
     return {
         navigateToChannel: () => {

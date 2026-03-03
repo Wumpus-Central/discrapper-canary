@@ -1,18 +1,19 @@
 "use strict";
-n.d(t, { Z: () => f, y: () => _ });
+n.d(t, { Z: () => p, y: () => f });
 var r = n(627968),
     i = n(503698),
     s = n.n(i),
     a = n(158954),
     o = n(397927),
     l = n(99696),
-    u = n(756366),
-    c = n(985018),
-    d = n(754316);
-let _ = (e) => {
-        let { text: t = c.intl.string(u.default["/JKmHB"]), onClick: n, className: i } = e;
+    u = n(736843),
+    c = n(756366),
+    d = n(985018),
+    _ = n(754316);
+let f = (e) => {
+        let { text: t = d.intl.string(c.default["/JKmHB"]), onClick: n, className: i } = e;
         return (0, r.jsxs)(a.DUT, {
-            className: s()(d.U, i),
+            className: s()(_.U, i),
             onClick: n,
             children: [
                 (0, r.jsx)(a.j96, { color: o.LU0.colors.TEXT_BRAND }),
@@ -20,10 +21,17 @@ let _ = (e) => {
             ],
         });
     },
-    f = (e) => {
+    p = (e) => {
         let { onComplete: t, onClose: n, text: i, className: s, initialCode: a } = e,
-            o = () => {
-                (0, l.HF)({ initialCode: a ?? "", onComplete: t, onClose: n });
+            { sharedCheckoutContext: o } = (0, u.jP)(),
+            c = () => {
+                (0, l.HF)({
+                    initialCode: a ?? "",
+                    onComplete: t,
+                    onClose: n,
+                    source: "payment_modal",
+                    loadId: o.loadId,
+                });
             };
-        return (0, r.jsx)(_, { text: i, onClick: o, className: s });
+        return (0, r.jsx)(f, { text: i, onClick: c, className: s });
     };
