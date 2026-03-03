@@ -1,171 +1,180 @@
-i.d(t, { A: () => A });
-var n,
-    a,
-    l = i(627968),
-    r = i(64700),
-    s = i(499979),
-    o = i(451988),
-    d = i(985018),
-    c =
-        (((n = c || {}).ACTIVITY_FEED = "ACTIVITY_FEED"),
-        (n.ACTIVITY_FEED_NEW = "ACTIVITY_FEED_NEW"),
-        (n.USER_ACTIVITY = "USER_ACTIVITY"),
-        (n.GAME_LIBRARY_TIME_PLAYED = "GAME_LIBRARY_TIME_PLAYED"),
-        (n.GAME_LIBRARY_LAST_PLAYED = "GAME_LIBRARY_LAST_PLAYED"),
-        n),
-    u = (((a = u || {}).START = "START"), (a.END = "END"), (a.TIME = "TIME"), a);
-let m = (e) => (t, i) => (null == i ? "" : d.intl.format(e(), { time: t, ...i })),
-    _ = {
+n.d(e, { A: () => m });
+var i,
+    l,
+    r = n(627968),
+    a = n(64700),
+    s = n(499979),
+    o = n(451988),
+    d = n(985018),
+    u =
+        (((i = u || {}).ACTIVITY_FEED = "ACTIVITY_FEED"),
+        (i.ACTIVITY_FEED_NEW = "ACTIVITY_FEED_NEW"),
+        (i.USER_ACTIVITY = "USER_ACTIVITY"),
+        (i.GAME_LIBRARY_TIME_PLAYED = "GAME_LIBRARY_TIME_PLAYED"),
+        (i.GAME_LIBRARY_LAST_PLAYED = "GAME_LIBRARY_LAST_PLAYED"),
+        (i.VOICE_CHANNEL_HISTORY = "VOICE_CHANNEL_HISTORY"),
+        i),
+    c = (((l = c || {}).START = "START"), (l.END = "END"), (l.TIME = "TIME"), l);
+let A = (t) => (e, n) => (null == n ? "" : d.intl.format(t(), { time: e, ...n })),
+    p = {
         ACTIVITY_FEED: {
             START: {
                 [s.pJ.SECONDS]: () => d.intl.string(d.t["ahzZr+"]),
-                [s.pJ.MINUTES]: (e) => d.intl.formatToPlainString(d.t["03mIHW"], { time: e }),
-                [s.pJ.HOURS]: (e) => d.intl.formatToPlainString(d.t.eNoooU, { time: e }),
-                [s.pJ.DAYS]: (e) => d.intl.formatToPlainString(d.t["2rUo/p"], { time: e }),
+                [s.pJ.MINUTES]: (t) => d.intl.formatToPlainString(d.t["03mIHW"], { time: t }),
+                [s.pJ.HOURS]: (t) => d.intl.formatToPlainString(d.t.eNoooU, { time: t }),
+                [s.pJ.DAYS]: (t) => d.intl.formatToPlainString(d.t["2rUo/p"], { time: t }),
             },
             END: {
                 [s.pJ.SECONDS]: () => d.intl.string(d.t.EluAd9),
-                [s.pJ.MINUTES]: (e) => d.intl.formatToPlainString(d.t.BZxG8Z, { time: e }),
-                [s.pJ.HOURS]: (e) => d.intl.formatToPlainString(d.t.cRMUpw, { time: e }),
-                [s.pJ.DAYS]: (e) => d.intl.formatToPlainString(d.t.yP1T84, { time: e }),
-                [s.pJ.WEEKS]: (e) => d.intl.formatToPlainString(d.t.AWkdqe, { time: e }),
-                [s.pJ.MONTHS]: (e) => d.intl.formatToPlainString(d.t.upamA7, { time: e }),
-                [s.pJ.YEARS]: (e) => d.intl.formatToPlainString(d.t.vfMC2h, { time: e }),
+                [s.pJ.MINUTES]: (t) => d.intl.formatToPlainString(d.t.BZxG8Z, { time: t }),
+                [s.pJ.HOURS]: (t) => d.intl.formatToPlainString(d.t.cRMUpw, { time: t }),
+                [s.pJ.DAYS]: (t) => d.intl.formatToPlainString(d.t.yP1T84, { time: t }),
+                [s.pJ.WEEKS]: (t) => d.intl.formatToPlainString(d.t.AWkdqe, { time: t }),
+                [s.pJ.MONTHS]: (t) => d.intl.formatToPlainString(d.t.upamA7, { time: t }),
+                [s.pJ.YEARS]: (t) => d.intl.formatToPlainString(d.t.vfMC2h, { time: t }),
             },
         },
         ACTIVITY_FEED_NEW: {
             START: {
-                [s.pJ.SECONDS]: m(() => d.t.Bf3PRU),
-                [s.pJ.MINUTES]: m(() => d.t["A9P+dT"]),
-                [s.pJ.HOURS]: m(() => d.t.KwVzfh),
-                [s.pJ.DAYS]: m(() => d.t.hbUpBN),
+                [s.pJ.SECONDS]: A(() => d.t.Bf3PRU),
+                [s.pJ.MINUTES]: A(() => d.t["A9P+dT"]),
+                [s.pJ.HOURS]: A(() => d.t.KwVzfh),
+                [s.pJ.DAYS]: A(() => d.t.hbUpBN),
             },
             END: {
-                [s.pJ.SECONDS]: (e) => d.intl.formatToPlainString(d.t.C3MTOD, { seconds: e }),
-                [s.pJ.MINUTES]: (e) => d.intl.formatToPlainString(d.t["GqQ/Y9"], { minutes: e }),
-                [s.pJ.HOURS]: (e) => d.intl.formatToPlainString(d.t.c5zfWZ, { hours: e }),
-                [s.pJ.DAYS]: (e) => d.intl.formatToPlainString(d.t.amjnaI, { days: e }),
+                [s.pJ.SECONDS]: (t) => d.intl.formatToPlainString(d.t.C3MTOD, { seconds: t }),
+                [s.pJ.MINUTES]: (t) => d.intl.formatToPlainString(d.t["GqQ/Y9"], { minutes: t }),
+                [s.pJ.HOURS]: (t) => d.intl.formatToPlainString(d.t.c5zfWZ, { hours: t }),
+                [s.pJ.DAYS]: (t) => d.intl.formatToPlainString(d.t.amjnaI, { days: t }),
             },
         },
         USER_ACTIVITY: {
             START: {
-                [s.pJ.SECONDS]: function (e, t) {
+                [s.pJ.SECONDS]: function (t, e) {
                     return (
                         arguments.length > 2 && void 0 !== arguments[2] && arguments[2], d.intl.string(d.t["ahzZr+"])
                     );
                 },
-                [s.pJ.MINUTES]: function (e, t) {
-                    let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                        n = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-                    return i
-                        ? d.intl.formatToPlainString(d.t["03mIHW"], { time: e })
-                        : n
-                          ? d.intl.formatToPlainString(d.t.w5w79N, { time: e })
-                          : d.intl.formatToPlainString(d.t["vQml+P"], { time: e });
+                [s.pJ.MINUTES]: function (t, e) {
+                    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                        i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+                    return n
+                        ? d.intl.formatToPlainString(d.t["03mIHW"], { time: t })
+                        : i
+                          ? d.intl.formatToPlainString(d.t.w5w79N, { time: t })
+                          : d.intl.formatToPlainString(d.t["vQml+P"], { time: t });
                 },
-                [s.pJ.HOURS]: function (e, t) {
-                    let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                        n = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-                    return i
-                        ? d.intl.formatToPlainString(d.t.eNoooU, { time: e })
-                        : n
-                          ? d.intl.formatToPlainString(d.t.EPkGyE, { time: e })
-                          : d.intl.formatToPlainString(d.t["4Wq+6x"], { time: e });
+                [s.pJ.HOURS]: function (t, e) {
+                    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                        i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+                    return n
+                        ? d.intl.formatToPlainString(d.t.eNoooU, { time: t })
+                        : i
+                          ? d.intl.formatToPlainString(d.t.EPkGyE, { time: t })
+                          : d.intl.formatToPlainString(d.t["4Wq+6x"], { time: t });
                 },
-                [s.pJ.DAYS]: function (e, t) {
-                    let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                        n = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-                    return i
-                        ? d.intl.formatToPlainString(d.t["2rUo/p"], { time: e })
-                        : n
-                          ? d.intl.formatToPlainString(d.t.V3g3dS, { time: e })
-                          : d.intl.formatToPlainString(d.t["jN3/fR"], { time: e });
+                [s.pJ.DAYS]: function (t, e) {
+                    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                        i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+                    return n
+                        ? d.intl.formatToPlainString(d.t["2rUo/p"], { time: t })
+                        : i
+                          ? d.intl.formatToPlainString(d.t.V3g3dS, { time: t })
+                          : d.intl.formatToPlainString(d.t["jN3/fR"], { time: t });
                 },
             },
         },
         GAME_LIBRARY_TIME_PLAYED: {
             TIME: {
                 [s.pJ.NONE]: () => d.intl.string(d.t.LqDiCt),
-                [s.pJ.SECONDS]: (e) => d.intl.formatToPlainString(d.t.xDIDBL, { time: e }),
-                [s.pJ.MINUTES]: (e) => d.intl.formatToPlainString(d.t.KGqJce, { time: e }),
-                [s.pJ.HOURS]: (e) => d.intl.formatToPlainString(d.t.OLchUE, { time: e }),
+                [s.pJ.SECONDS]: (t) => d.intl.formatToPlainString(d.t.xDIDBL, { time: t }),
+                [s.pJ.MINUTES]: (t) => d.intl.formatToPlainString(d.t.KGqJce, { time: t }),
+                [s.pJ.HOURS]: (t) => d.intl.formatToPlainString(d.t.OLchUE, { time: t }),
             },
         },
         GAME_LIBRARY_LAST_PLAYED: {
             END: {
                 [s.pJ.NONE]: () => d.intl.string(d.t.EoWLru),
                 [s.pJ.SECONDS]: () => d.intl.string(d.t.QTHa8b),
-                [s.pJ.MINUTES]: (e) => d.intl.formatToPlainString(d.t.SVEfcd, { time: e }),
-                [s.pJ.HOURS]: (e) => d.intl.formatToPlainString(d.t["0Gbusd"], { time: e }),
-                [s.pJ.DAYS]: (e) => d.intl.formatToPlainString(d.t.hnPZZ7, { time: e }),
-                [s.pJ.WEEKS]: (e) => d.intl.formatToPlainString(d.t.L3fTpL, { time: e }),
-                [s.pJ.MONTHS]: (e) => d.intl.formatToPlainString(d.t.xAFWQV, { time: e }),
-                [s.pJ.YEARS]: (e) => d.intl.formatToPlainString(d.t["9Yr3NW"], { time: e }),
+                [s.pJ.MINUTES]: (t) => d.intl.formatToPlainString(d.t.SVEfcd, { time: t }),
+                [s.pJ.HOURS]: (t) => d.intl.formatToPlainString(d.t["0Gbusd"], { time: t }),
+                [s.pJ.DAYS]: (t) => d.intl.formatToPlainString(d.t.hnPZZ7, { time: t }),
+                [s.pJ.WEEKS]: (t) => d.intl.formatToPlainString(d.t.L3fTpL, { time: t }),
+                [s.pJ.MONTHS]: (t) => d.intl.formatToPlainString(d.t.xAFWQV, { time: t }),
+                [s.pJ.YEARS]: (t) => d.intl.formatToPlainString(d.t["9Yr3NW"], { time: t }),
+            },
+        },
+        VOICE_CHANNEL_HISTORY: {
+            END: {
+                [s.pJ.SECONDS]: () => d.intl.string(d.t["1QsMmY"]),
+                [s.pJ.MINUTES]: (t) => d.intl.formatToPlainString(d.t.LRNgHp, { count: t }),
+                [s.pJ.HOURS]: (t) => d.intl.formatToPlainString(d.t.raJpz3, { count: t }),
+                [s.pJ.DAYS]: (t) => d.intl.formatToPlainString(d.t.KkvKhi, { count: t }),
             },
         },
     };
-function A(e) {
-    return class extends r.PureComponent {
-        static Locations = c;
-        static Types = u;
+function m(t) {
+    return class extends a.PureComponent {
+        static Locations = u;
+        static Types = c;
         timer = new o.IX();
         state = { time: this.getDiff() };
         componentDidMount() {
             this.timer.start(1e4, this.update);
         }
-        componentDidUpdate(e) {
-            let { start: t, end: i, time: n } = this.props;
-            (e.start !== t || e.end !== i || e.time !== n) && this.update();
+        componentDidUpdate(t) {
+            let { start: e, end: n, time: i } = this.props;
+            (t.start !== e || t.end !== n || t.time !== i) && this.update();
         }
         componentWillUnmount() {
             this.timer.stop();
         }
         getDiff() {
-            let { start: e, end: t, time: i } = this.props;
-            if (null != i) return i / 1e3 / 60;
-            let n = Date.now(),
-                a = 0;
-            return null != e ? (a = n - e) : null != t && (a = n - t), Math.abs(a) / 1e3 / 60;
+            let { start: t, end: e, time: n } = this.props;
+            if (null != n) return n / 1e3 / 60;
+            let i = Date.now(),
+                l = 0;
+            return null != t ? (l = i - t) : null != e && (l = i - e), Math.abs(l) / 1e3 / 60;
         }
         update = () => {
             this.setState({ time: this.getDiff() });
         };
-        getTimeUnit(e, t, i) {
-            let n = (0, s.Ul)(e, (e) =>
-                (function (e, t, i) {
-                    let n = _[i];
-                    if (null != n) {
-                        let i = n[t];
-                        if (null != i) return null != i[e];
+        getTimeUnit(t, e, n) {
+            let i = (0, s.Ul)(t, (t) =>
+                (function (t, e, n) {
+                    let i = p[n];
+                    if (null != i) {
+                        let n = i[e];
+                        if (null != n) return null != n[t];
                     }
                     return !1;
-                })(e, i, t),
+                })(t, n, e),
             );
-            if (null == n)
-                throw Error(`Could not get the time unit in PlayTime with time: ${e} for type: ${i} in location: ${t}`);
-            return n;
+            if (null == i)
+                throw Error(`Could not get the time unit in PlayTime with time: ${t} for type: ${n} in location: ${e}`);
+            return i;
         }
         getType() {
-            let { start: e, end: t, time: i } = this.props;
-            return null != e ? "START" : null != t ? "END" : null != i ? "TIME" : null;
+            let { start: t, end: e, time: n } = this.props;
+            return null != t ? "START" : null != e ? "END" : null != n ? "TIME" : null;
         }
         render() {
             let {
-                    location: t,
-                    messageProps: i,
-                    isApplicationStreaming: n,
-                    enableUserHoverActivities: a,
-                    ...r
+                    location: e,
+                    messageProps: n,
+                    isApplicationStreaming: i,
+                    enableUserHoverActivities: l,
+                    ...a
                 } = this.props,
                 { time: o } = this.state,
                 d = this.getType();
             if (null == d) return null;
-            let c = this.getTimeUnit(o, t, d),
-                u = _[t][d];
-            if (null == u) return null;
-            let m = u[c],
-                A = Math.floor((0, s.eZ)(o, c));
-            return (0, l.jsx)(e, { ...r, children: m?.(A, i, n, a) });
+            let u = this.getTimeUnit(o, e, d),
+                c = p[e][d];
+            if (null == c) return null;
+            let A = c[u],
+                m = Math.floor((0, s.eZ)(o, u));
+            return (0, r.jsx)(t, { ...a, children: A?.(m, n, i, l) });
         }
     };
 }
