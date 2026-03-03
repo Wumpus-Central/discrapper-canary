@@ -7,15 +7,17 @@ var i = n(627968),
     o = n(3258),
     d = n(652215);
 function c() {
-    let e = (0, a.ni)("playground_menu"),
-        t = (0, s.useComponentPlaygroundConfigs)(e);
-    if (!e) return null;
-    let n = t.flatMap((e) => e.collections);
+    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+        t = (0, a.ni)("playground_menu"),
+        n = (0, s.useComponentPlaygroundConfigs)(t);
+    if (!t) return null;
+    let c = n.flatMap((e) => e.collections);
     return (0, i.jsx)(
         r.Drp,
         {
             id: "playgrounds",
             label: "Playgrounds",
+            leadingAccessory: e ? { type: "icon", icon: r.RgP } : void 0,
             action: () => {
                 o.PlaygroundStore.setState({ selectedCollection: null, selectedStory: null }),
                     (0, l.id)(d.zgK.COMPONENT_PLAYGROUND);
@@ -23,7 +25,7 @@ function c() {
             children: (0, i.jsx)(
                 r.rXV,
                 {
-                    children: n.map((e) =>
+                    children: c.map((e) =>
                         (0, i.jsx)(
                             r.Drp,
                             {

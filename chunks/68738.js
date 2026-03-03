@@ -76,10 +76,9 @@ let h = {
             let { default: e } = await n.e("15687").then(n.bind(n, 646938));
             return (t) => (0, a.jsx)(e, { ...t, id: "123456789", label: "Copy Test ID" });
         },
-        UserSettingsCogContextMenu: async () => {
-            let { default: e } = await n.e("95153").then(n.bind(n, 50120)),
-                t = c.default.getCurrentUser();
-            return null == t ? () => null : (n) => (0, a.jsx)(e, { ...n, user: t, webBuildOverride: null });
+        UserSettingsMenu: async () => {
+            let { default: e } = await n.e("50143").then(n.bind(n, 92962));
+            return (t) => (0, a.jsx)(e, { ...t, onClose: l.Z_ });
         },
         ExpressionPickerContextMenu: async () => {
             let { default: e } = await n.e("46132").then(n.bind(n, 233503));

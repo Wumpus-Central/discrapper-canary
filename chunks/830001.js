@@ -1,4 +1,4 @@
-i.d(t, { f: () => R });
+i.d(e, { f: () => m });
 var n = i(627968),
     l = i(934551),
     s = i(311907),
@@ -7,76 +7,80 @@ var n = i(627968),
     u = i(631670),
     o = i(252452),
     d = i(103738),
-    _ = i(745109),
+    A = i(745109),
     T = i(419954),
-    A = i(933297),
-    S = i(836602),
-    E = i(854627),
+    S = i(933297),
+    E = i(836602),
+    g = i(854627),
     c = i(287809),
-    g = i(780964),
+    _ = i(780964),
     I = i(358776),
     C = i(368631),
     N = i(633817),
     O = i(531525),
-    b = i(652215),
-    L = i(985018),
-    m = i(722125);
-let p = (0, T.t_)(g.X.PROFILE_PANEL, {
+    L = i(652215),
+    b = i(985018),
+    D = i(722125);
+let p = (0, T.t_)(_.X.PROFILE_PANEL, {
         usePredicate: () => !(0, I.dk)("LegacyProfilePanel"),
-        useTitle: () => L.intl.string(L.t["vi7f+q"]),
-        notice: { stores: [S.A], element: d.A },
+        useTitle: () => b.intl.string(b.t["vi7f+q"]),
+        notice: { stores: [E.A], element: d.A },
         initialize: () => () =>
             a.h.wait(() => {
-                (0, u.F7)(), o.A.clearSubsection(b.nc_.PROFILE_CUSTOMIZATION);
+                (0, u.F7)(), o.A.clearSubsection(L.nc_.PROFILE_CUSTOMIZATION);
             }),
-        StronglyDiscouragedCustomComponent: _.A,
+        StronglyDiscouragedCustomComponent: A.A,
         buildLayout: () => [],
     }),
-    D = (0, T.t_)(g.X.PROFILE_PANEL, {
+    R = (0, T.t_)(_.X.PROFILE_PANEL, {
         usePredicate: () => (0, I.dk)("ProfilePanel"),
-        useTitle: () => L.intl.string(L.t["vi7f+q"]),
-        notice: { stores: [S.A], element: d.A },
+        useTitle: () => b.intl.string(b.t["vi7f+q"]),
+        notice: { stores: [E.A], element: d.A },
         initialize: () => () =>
             a.h.wait(() => {
-                (0, u.F7)(), o.A.clearSubsection(b.nc_.PROFILE_CUSTOMIZATION);
+                (0, u.F7)(), o.A.clearSubsection(L.nc_.PROFILE_CUSTOMIZATION);
             }),
         buildLayout: () => [N.I],
     }),
-    R = (0, T.i4)(g.X.PROFILE_SIDEBAR_ITEM, {
-        useTitle: () => L.intl.string(L.t["vi7f+q"]),
+    m = (0, T.i4)(_.X.PROFILE_SIDEBAR_ITEM, {
+        useTitle: () => b.intl.string(b.t["vi7f+q"]),
         getLegacySearchKey: () => ((0, I.WJ)("ProfilePanel") ? void 0 : O.H.PROFILE_CUSTOMIZATION),
-        icon: l.UserIcon,
+        icon: function () {
+            let t = (0, s.bG)([c.default], () => c.default.getCurrentUser()),
+                { avatarSrc: e, avatarDecorationSrc: i } = (0, g.A)({ userId: t?.id, size: r._3J.SIZE_48 });
+            return (0, n.jsx)(r.euF, { src: e, avatarDecoration: i, size: r._3J.SIZE_20, "aria-hidden": !0 });
+        },
         StronglyDiscouragedCustomComponent: () => {
-            let e = (0, s.bG)([c.default], () => c.default.getCurrentUser()),
-                { avatarSrc: t, avatarDecorationSrc: i } = (0, E.A)({ userId: e?.id, size: r._3J.SIZE_48 });
-            return null == e
+            let t = (0, s.bG)([c.default], () => c.default.getCurrentUser()),
+                { avatarSrc: e, avatarDecorationSrc: i } = (0, g.A)({ userId: t?.id, size: r._3J.SIZE_48 });
+            return null == t
                 ? null
                 : (0, n.jsxs)("div", {
-                      className: m.a5,
+                      className: D.a5,
                       children: [
                           (0, n.jsx)(r.euF, {
-                              src: t,
+                              src: e,
                               avatarDecoration: i,
                               size: r._3J.SIZE_48,
-                              "aria-label": L.intl.string(L.t.lqaIxI),
+                              "aria-label": b.intl.string(b.t.lqaIxI),
                           }),
                           (0, n.jsxs)("div", {
-                              className: m.FS,
+                              className: D.FS,
                               children: [
                                   (0, n.jsx)(r.Text, {
                                       color: "text-strong",
                                       variant: "text-md/medium",
                                       lineClamp: 1,
-                                      children: e.globalName ?? e.username,
+                                      children: t.globalName ?? t.username,
                                   }),
                                   (0, n.jsxs)("div", {
-                                      className: m.Fk,
+                                      className: D.Fk,
                                       children: [
                                           (0, n.jsx)(r.Text, {
                                               variant: "text-sm/normal",
                                               color: "currentColor",
                                               lineClamp: 1,
-                                              children: L.intl.string(L.t.Ip9nBS),
+                                              children: b.intl.string(b.t.Ip9nBS),
                                           }),
                                           (0, n.jsx)(l.PencilIcon, { size: "xxs", color: "currentColor" }),
                                       ],
@@ -86,6 +90,6 @@ let p = (0, T.t_)(g.X.PROFILE_PANEL, {
                       ],
                   });
         },
-        trailing: { type: A.Si.BADGE_NEW, getDismissibleContentTypes: C.Jn },
-        buildLayout: () => ((0, I.WJ)("ProfilePanel") ? [D] : [p]),
+        trailing: { type: S.Si.BADGE_NEW, getDismissibleContentTypes: C.Jn },
+        buildLayout: () => ((0, I.WJ)("ProfilePanel") ? [R] : [p]),
     });

@@ -1,4 +1,4 @@
-i.d(t, { yj: () => O });
+i.d(e, { yj: () => L });
 var n = i(934551),
     l = i(920603),
     s = i(419954),
@@ -7,31 +7,33 @@ var n = i(934551),
     u = i(358776),
     o = i(368631),
     d = i(614651),
-    _ = i(859669),
-    T = i(662802),
-    A = i(988208),
-    S = i(819070),
-    E = i(352694),
-    c = i(136451),
-    g = i(531525),
-    I = i(985018);
-let C = (0, s.t_)(a.X.APPEARANCE_PANEL, {
-        useTitle: () => I.intl.string(I.t["iHH+ky"]),
+    A = i(227542),
+    T = i(859669),
+    S = i(662802),
+    E = i(988208),
+    g = i(819070),
+    c = i(352694),
+    _ = i(136451),
+    I = i(531525),
+    C = i(985018);
+let N = (0, s.t_)(a.X.APPEARANCE_PANEL, {
+        useTitle: () => C.intl.string(C.t["iHH+ky"]),
         initialize: () => {
             (0, l.v)();
         },
-        buildLayout: () => [E.S, T._, c.b, A.U, S.M, _.d],
+        buildLayout: () => [c.S, S._, _.u, E.U, g.M, T.d],
     }),
-    N = (0, s.t_)(a.X.APPEARANCE_PANEL, {
-        useTitle: () => I.intl.string(I.t["iHH+ky"]),
+    O = (0, s.t_)(a.X.APPEARANCE_PANEL, {
+        useTitle: () => C.intl.string(C.t["iHH+ky"]),
         StronglyDiscouragedCustomComponent: d.Ay,
         buildLayout: () => [],
     }),
-    O = (0, s.i4)(a.X.APPEARANCE_SIDEBAR_ITEM, {
-        useTitle: () => I.intl.string(I.t["iHH+ky"]),
-        getLegacySearchKey: () => ((0, u.WJ)("AppearanceSidebarItem") ? void 0 : g.H.APPEARANCE),
+    L = (0, s.i4)(a.X.APPEARANCE_SIDEBAR_ITEM, {
+        useTitle: () => C.intl.string(C.t["iHH+ky"]),
+        getLegacySearchKey: () => ((0, u.WJ)("AppearanceSidebarItem") ? void 0 : I.H.APPEARANCE),
         icon: n.PaintPaletteIcon,
         trailing: { type: r.Si.BADGE_NEW, getDismissibleContentTypes: o.p_, stronglyDiscouragedBadgeComponent: o.AW },
         usePredicate: () => !(0, u.bp)("AppearanceSidebarItem"),
-        buildLayout: () => ((0, u.WJ)("AppearanceSidebarItem") ? [C] : [N]),
+        useMenu: A.A,
+        buildLayout: () => ((0, u.WJ)("AppearanceSidebarItem") ? [N] : [O]),
     });

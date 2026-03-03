@@ -1,34 +1,36 @@
-i.d(e, { g: () => L });
+i.d(e, { g: () => b });
 var n = i(934551),
     l = i(419954),
     s = i(780964),
     r = i(358776),
     a = i(16986),
-    u = i(176817),
-    o = i(74973),
-    d = i(256464),
-    A = i(982770),
-    T = i(461158),
-    S = i(81453),
-    E = i(289882),
-    g = i(427887),
+    u = i(850060),
+    o = i(176817),
+    d = i(74973),
+    A = i(256464),
+    T = i(982770),
+    S = i(461158),
+    E = i(81453),
+    g = i(289882),
+    c = i(427887),
     _ = i(222323),
-    c = i(411476),
-    I = i(531525),
-    C = i(985018);
-let N = (0, l.t_)(s.X.CHAT_PANEL, {
-        useTitle: () => C.intl.string(C.t["/VQax8"]),
-        buildLayout: () => [A.M, u.f, o.z, g.J, S.n, _.p, d.c, c.U, T.W, E.o],
+    I = i(411476),
+    C = i(531525),
+    N = i(985018);
+let O = (0, l.t_)(s.X.CHAT_PANEL, {
+        useTitle: () => N.intl.string(N.t["/VQax8"]),
+        buildLayout: () => [T.M, o.f, d.z, c.J, E.n, _.p, A.c, I.U, S.W, g.o],
     }),
-    O = (0, l.t_)(s.X.CHAT_PANEL, {
-        useTitle: () => C.intl.string(C.t["/VQax8"]),
+    L = (0, l.t_)(s.X.CHAT_PANEL, {
+        useTitle: () => N.intl.string(N.t["/VQax8"]),
         StronglyDiscouragedCustomComponent: a.A,
         buildLayout: () => [],
     }),
-    L = (0, l.i4)(s.X.CHAT_SIDEBAR_ITEM, {
-        useTitle: () => C.intl.string(C.t["/VQax8"]),
-        getLegacySearchKey: () => ((0, r.WJ)("ChatPanel") ? void 0 : I.H.CHAT),
+    b = (0, l.i4)(s.X.CHAT_SIDEBAR_ITEM, {
+        useTitle: () => N.intl.string(N.t["/VQax8"]),
+        getLegacySearchKey: () => ((0, r.WJ)("ChatPanel") ? void 0 : C.H.CHAT),
         icon: n.ChatIcon,
         usePredicate: () => !(0, r.Ci)("ChatSidebarItem"),
-        buildLayout: () => [(0, r.WJ)("ChatPanel") ? N : O],
+        useMenu: u.A,
+        buildLayout: () => [(0, r.WJ)("ChatPanel") ? O : L],
     });
