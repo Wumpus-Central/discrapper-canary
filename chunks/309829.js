@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { K: () => c });
+n.d(t, { K: () => d });
 var i = n(627968);
 n(64700);
 var s = n(397927),
@@ -7,9 +7,9 @@ var s = n(397927),
     l = n(843376),
     a = n(985018),
     o = n(101865);
-let c = (e) => {
-    let { showBackButton: t, onBack: n, renderFooter: c, onReopen: d } = e,
-        u = (0, l.i)(r.tY.MEDIA_TAKEDOWN, d),
+let d = (e) => {
+    let { showBackButton: t, onBack: n, renderFooter: d, onReopen: c } = e,
+        u = (0, l.i)(r.tY.MEDIA_TAKEDOWN, c),
         h = (0, i.jsxs)(s.ButtonGroup, {
             fullWidth: !0,
             children: [
@@ -22,9 +22,47 @@ let c = (e) => {
     return (0, i.jsxs)(s.BJc, {
         gap: 8,
         children: [
-            (0, i.jsx)(s.Heading, { variant: "heading-xl/semibold", children: a.intl.string(a.t.jMSjZL) }),
-            (0, i.jsx)(s.Text, { variant: "text-md/normal", className: o.D, children: a.intl.format(a.t.SenKQA, {}) }),
-            c?.(h),
+            (0, i.jsx)(s.Heading, { variant: "heading-xl/semibold", children: a.intl.string(a.t.YignUm) }),
+            (0, i.jsxs)("div", {
+                className: o.D,
+                children: [
+                    (0, i.jsx)(s.Text, { variant: "text-md/normal", children: a.intl.string(a.t["3zG2Y9"]) }),
+                    (0, i.jsx)(s.Text, { variant: "text-md/semibold", children: a.intl.string(a.t.CfBo0z) }),
+                    (0, i.jsxs)("ul", {
+                        className: o.T,
+                        children: [
+                            (0, i.jsx)("li", {
+                                children: (0, i.jsx)(s.Text, {
+                                    variant: "text-md/normal",
+                                    children: a.intl.string(a.t.ofQnNQ),
+                                }),
+                            }),
+                            (0, i.jsx)("li", {
+                                children: (0, i.jsx)(s.Text, {
+                                    variant: "text-md/normal",
+                                    children: a.intl.string(a.t.dFaQGn),
+                                }),
+                            }),
+                        ],
+                    }),
+                    (0, i.jsx)(s.Text, { variant: "text-md/normal", children: a.intl.string(a.t.o5azXJ) }),
+                    (0, i.jsx)(s.Text, {
+                        variant: "text-md/normal",
+                        children: a.intl.format(a.t.YETtaY, {
+                            policyURL: "https://discord.com/safety/non-consensual-intimate-media-policy-explainer",
+                        }),
+                    }),
+                    (0, i.jsx)(s.Text, { variant: "text-md/semibold", children: a.intl.string(a.t.FJh2zi) }),
+                    (0, i.jsx)(s.Text, {
+                        variant: "text-md/normal",
+                        children: a.intl.format(a.t.R2Q57u, {
+                            supportOrgURL: "https://stopncii.org/partners/global-network-of-partners/",
+                            wellbeingURL: "https://discord.com/safety-wellbeing",
+                        }),
+                    }),
+                ],
+            }),
+            d?.(h),
         ],
     });
 };

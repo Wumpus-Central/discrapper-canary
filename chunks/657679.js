@@ -1,19 +1,20 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => o });
 var l = n(627968),
     a = n(64700),
     i = n(397927),
     r = n(473169);
 let s = (e) => {
         let { element: t, onChange: n, initialOption: s } = e,
-            [d, o] = a.useState("");
+            [o, d] = a.useState("");
         a.useEffect(() => {
-            o(s ?? "");
+            d(s ?? "");
         }, [s]);
-        let u = t.name,
-            { title: c, options: m } = t.data,
-            _ = a.useCallback(
+        let c = t.name,
+            { title: u, options: _ } = t.data,
+            m = a.useMemo(() => _.map((e) => ({ ...e, id: e.id ?? e.value })), [_]),
+            x = a.useCallback(
                 (e) => {
-                    null != e && (o(e), n(e));
+                    null != e && (d(e), n(e));
                 },
                 [n],
             );
@@ -22,19 +23,19 @@ let s = (e) => {
             {
                 className: r.QB,
                 children: (0, l.jsx)(i.l6P, {
-                    label: c,
-                    value: d,
+                    label: u,
+                    value: o,
                     required: t.should_submit_data,
-                    onSelectionChange: _,
+                    onSelectionChange: x,
                     options: m,
                     selectionMode: "single",
                     fullWidth: !0,
                 }),
             },
-            u,
+            c,
         );
     },
-    d = (e) => {
+    o = (e) => {
         let { elements: t, onChange: n, state: a } = e,
             i = t.map((e) => {
                 let t = e.name;
