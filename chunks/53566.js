@@ -6,6 +6,7 @@ let o = {
         COLLECTIBLES_SHOP_FEED_END_OF_SCROLL_TEXT: r.t.Yr70c4,
         COLLECTIBLES_SHOP_FEED_END_OF_SCROLL_BUTTON: r.t.AfrvRD,
         COLLECTIBLES_SHOP_FEED_END_OF_SCROLL_BUTTON_BROWSE: r.t["i/yzHs"],
+        TAKE_ME_THERE: r.t.jVcuVY,
     },
     n = (e) => {
         if (e in o) {
