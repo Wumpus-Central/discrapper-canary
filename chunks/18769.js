@@ -1,35 +1,33 @@
-t.d(l, { A: () => s });
+t.d(l, { A: () => d });
 var r = t(627968),
-    o = t(158954),
-    n = t(53566),
-    a = t(506456),
-    i = t(653793),
-    d = t(524025);
-let s = (e) => {
-    let { backgroundImage: l, logoSrc: t, supplementalImage: s, href: c, ctaText: u } = e,
-        h = (0, a.A)(l.src),
-        p = (0, a.A)(t?.src),
-        m = (0, a.A)(s?.src),
-        b = (0, n.S)(u ?? "");
+    o = t(506456),
+    n = t(653793),
+    a = t(458306),
+    i = t(524025);
+let d = (e) => {
+    let { backgroundImage: l, logoSrc: t, supplementalImage: d, href: c, ctaText: s } = e,
+        u = (0, o.A)(l.src),
+        h = (0, o.A)(t?.src),
+        p = (0, o.A)(d?.src);
     return (0, r.jsxs)("div", {
-        className: d.rJ,
+        className: i.rJ,
         children: [
-            (0, r.jsx)(i.A, {
+            (0, r.jsx)(n.A, {
                 overflowable: !0,
                 children: (0, r.jsx)("div", {
-                    className: d.rf,
-                    style: { backgroundImage: `url(${h})` },
+                    className: i.rf,
+                    style: { backgroundImage: `url(${u})` },
                     children: (0, r.jsxs)("div", {
-                        className: d.kb,
+                        className: i.kb,
                         children: [
                             (0, r.jsx)("div", {}),
-                            (0, r.jsx)("img", { className: d.wm, src: p, alt: t?.alt ?? "" }),
-                            (0, r.jsx)(o.$nd, { text: b, variant: "overlay-primary" }),
+                            (0, r.jsx)("img", { className: i.wm, src: h, alt: t?.alt ?? "" }),
+                            null != s && (0, r.jsx)(a.ar, { ctaText: s, variant: "overlay-primary", href: c }),
                         ],
                     }),
                 }),
             }),
-            null != m && (0, r.jsx)("img", { className: d.hP, src: m, alt: s?.alt ?? "" }),
+            null != p && (0, r.jsx)("img", { className: i.hP, src: p, alt: d?.alt ?? "" }),
         ],
     });
 };

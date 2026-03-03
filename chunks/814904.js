@@ -12,13 +12,21 @@ let s = () => (0, l.jsx)("div", { style: { height: 250, width: 250, background: 
                 name: "ContainedHero",
                 id: "contained-hero",
                 component: (e) => {
-                    let { containerHeight: t, showChildren: a, bannerSrc: i, logoSrc: o, backgroundColor: d } = e;
+                    let {
+                        containerHeight: t,
+                        showChildren: a,
+                        bannerSrc: i,
+                        logoSrc: o,
+                        href: d,
+                        backgroundColor: c,
+                    } = e;
                     return (0, l.jsx)("div", {
                         style: { height: a ? void 0 : t },
                         children: (0, l.jsx)(n.A, {
                             bannerSrc: { src: i },
                             logoSrc: { src: o },
-                            backgroundColor: d,
+                            href: d,
+                            backgroundColor: c,
                             children: a
                                 ? (0, l.jsxs)(r.A, {
                                       children: [
@@ -52,6 +60,7 @@ let s = () => (0, l.jsx)("div", { style: { height: 250, width: 250, background: 
                             "https://cdn.discordapp.com/assets/content/272efe50874c7fc6e788078e6f8b5fdfc40a7de7358fe3672f1b5e3659047bda",
                     },
                     backgroundColor: { label: "Background Color", type: "text", defaultValue: "#171D55" },
+                    href: { label: "Href", type: "text", defaultValue: "/shop?tab=catalog" },
                     containerHeight: { label: "Container Height", type: "number", defaultValue: 150 },
                     showChildren: { label: "Show Children", type: "boolean", defaultValue: !1 },
                 },
