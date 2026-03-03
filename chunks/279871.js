@@ -1,95 +1,101 @@
-i.d(e, { default: () => T });
-var a = i(627968),
-    l = i(64700),
-    s = i(158954),
-    n = i(311907),
-    c = i(435371),
-    d = i(397927),
-    r = i(793574),
-    o = i(263063),
-    u = i(976860),
-    m = i(498642),
-    _ = i(522055),
-    x = i(823748),
-    f = i(843095),
-    g = i(800007),
-    S = i(652215),
-    h = i(746080),
-    p = i(738072),
-    A = i(985018),
-    j = i(635729);
-function N(t) {
-    let { guild: e, onClick: i } = t,
-        l = (0, n.bG)([m.A], () => m.A.getMemberCount(e.id));
+e.d(i, { default: () => b });
+var a = e(627968),
+    l = e(64700),
+    s = e(158954),
+    n = e(311907),
+    c = e(435371),
+    d = e(397927),
+    r = e(793574),
+    o = e(263063),
+    u = e(976860),
+    m = e(498642),
+    _ = e(397400),
+    x = e(522055),
+    f = e(823748),
+    g = e(843095),
+    S = e(800007),
+    h = e(652215),
+    p = e(746080),
+    A = e(294726),
+    j = e(985018),
+    N = e(733039);
+function T(t) {
+    let { guild: i, onClick: e } = t,
+        l = (0, n.bG)([m.A], () => m.A.getMemberCount(i.id));
     return (0, a.jsxs)(d.DUT, {
-        className: j._S,
-        onClick: i,
+        className: N._S,
+        onClick: e,
         children: [
-            (0, a.jsx)(o.Ay, { className: j.$f, guild: e, size: o.Ay.Sizes.MEDIUM, active: !0 }),
+            (0, a.jsx)(o.Ay, { className: N.$f, guild: i, size: o.Ay.Sizes.MEDIUM, active: !0 }),
             (0, a.jsxs)("div", {
-                className: j.OA,
+                className: N.OA,
                 children: [
                     (0, a.jsx)(d.Text, {
-                        className: j.J5,
+                        className: N.J5,
                         variant: "text-md/medium",
                         color: "text-subtle",
-                        children: e.name,
+                        children: i.name,
                     }),
                     null != l &&
                         (0, a.jsx)(d.Text, {
                             variant: "text-sm/normal",
                             color: "text-subtle",
-                            children: A.intl.formatToPlainString(A.t.zRl6XR, { count: l }),
+                            children: j.intl.formatToPlainString(j.t.zRl6XR, { count: l }),
                         }),
                 ],
             }),
         ],
     });
 }
-function T(t) {
-    let { gameName: e, gameApplicationId: i, onClose: n, transitionState: o } = t,
-        m = (0, x.EX)("game_server_modal"),
-        T = l.useCallback(
+function b(t) {
+    let { gameName: i, gameApplicationId: e, onClose: n, transitionState: o } = t,
+        m = (0, f.EX)("game_server_modal"),
+        b = l.useCallback(
             async (t) => {
-                let e;
-                if ((await n(), (0, u.pX)(S.BVt.CHANNEL(t.id, h.VV.GUILD_BOOSTS)), null != i)) {
-                    let { catalog: t } = _.A.getGlobalCatalogState();
-                    e = Object.values(t).find((t) => t.gameId === i);
+                let i;
+                if (
+                    ((0, _.gU)({ guildId: t.id, gameApplicationId: e }),
+                    await n(),
+                    (0, u.pX)(h.BVt.CHANNEL(t.id, p.VV.GUILD_BOOSTS)),
+                    null != e)
+                ) {
+                    let { catalog: t } = x.A.getGlobalCatalogState();
+                    i = Object.values(t).find((t) => t.gameId === e);
                 }
-                (0, f.A)({
+                (0, g.A)({
                     guildId: t.id,
                     analyticsLocation: r.A.GAME_SERVER_GUILD_SELECT_MODAL,
-                    ...(null != e
-                        ? { stepConfig: { ...g.ZN, initialStep: g.HS.SERVER_SETTINGS }, initialGameServerGame: e }
+                    ...(null != i
+                        ? { stepConfig: { ...S.ZN, initialStep: S.HS.SERVER_SETTINGS }, initialGameServerGame: i }
                         : {}),
                 });
             },
-            [n, i],
+            [n, e],
         ),
-        b = async () => {
+        I = async () => {
             await n();
         };
     return (0, a.jsxs)(s.Modal, {
         transitionState: o,
-        onClose: b,
-        title: A.intl.formatToPlainString(p.default.hPiVx3, { gameName: e }),
-        subtitle: A.intl.formatToPlainString(p.default.fUFylB, { gameName: e }),
+        onClose: I,
+        title: j.intl.formatToPlainString(A.default.hPiVx3, { gameName: i }),
+        subtitle: j.intl.formatToPlainString(A.default.fUFylB, { gameName: i }),
         actions: [],
         children: [
             (0, a.jsxs)("div", {
-                className: j.fA,
+                className: N.fA,
                 children: [
-                    (0, a.jsx)(d.Text, { variant: "text-sm/semibold", children: A.intl.string(p.default["4MInNs"]) }),
+                    (0, a.jsx)(d.Text, { variant: "text-sm/semibold", children: j.intl.string(A.default["4MInNs"]) }),
                     (0, a.jsx)(c.m_, {
                         position: "top",
-                        text: A.intl.string(p.default.OdTfpx),
-                        children: (0, a.jsx)(d.mir, { size: "xs", className: j.G }),
+                        text: j.intl.string(A.default.OdTfpx),
+                        children: (0, a.jsx)(d.mir, { size: "xs", className: N.G }),
                     }),
                 ],
             }),
             (0, a.jsx)(d.IpV, {
-                className: j.OW,
-                children: m.map((t) => (0, a.jsx)(N, { guild: t, onClick: () => T(t) }, t.id)),
+                className: N.OW,
+                children: m.map((t) => (0, a.jsx)(T, { guild: t, onClick: () => b(t) }, t.id)),
             }),
         ],
     });
