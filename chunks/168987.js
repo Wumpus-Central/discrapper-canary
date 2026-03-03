@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { H: () => s });
+n.d(t, { H: () => a });
 var r = n(627968);
 n(64700);
 var i = n(996682),
-    a = n(27989);
-let s = (e) => {
-    let { size: t = "md", width: n, height: s, ...o } = e,
-        l = (0, a.J)(t),
+    s = n(27989);
+let a = (e) => {
+    let { size: t = "md", width: n, height: a, ...o } = e,
+        l = (0, s.J)(t),
         u = l?.width ?? n,
-        c = l?.height ?? s;
+        c = l?.height ?? a;
     return (0, r.jsxs)("svg", {
         ...(0, i.A)(o),
         xmlns: "http://www.w3.org/2000/svg",
@@ -22,6 +22,12 @@ let s = (e) => {
                 fillRule: "evenodd",
                 d: "M2.4 4h19.2c1.32 0 2.4.9 2.4 2v12c0 1.1-1.08 2-2.4 2H2.4C1.08 20 0 19.1 0 18V6c0-1.1 1.08-2 2.4-2Z",
                 clipRule: "evenodd",
+            }),
+            (0, r.jsx)("path", {
+                stroke: "#97979F",
+                strokeOpacity: ".3",
+                strokeWidth: ".5",
+                d: "M2.4 4.25h19.2c1.23 0 2.15.82 2.15 1.75v12c0 .93-.92 1.75-2.15 1.75H2.4C1.17 19.75.25 18.93.25 18V6c0-.93.92-1.75 2.15-1.75Z",
             }),
             (0, r.jsx)("path", {
                 fill: "#3C4043",

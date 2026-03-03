@@ -3,8 +3,8 @@ n.d(t, { B: () => o });
 var r = n(627968);
 n(64700);
 var i = n(827734),
-    a = n(996682),
-    s = n(27989);
+    s = n(996682),
+    a = n(27989);
 let o = (e) => {
     let {
             size: t = "md",
@@ -14,29 +14,22 @@ let o = (e) => {
             colorClass: u = "",
             ...c
         } = e,
-        d = (0, s.J)(t),
+        d = (0, a.J)(t),
         _ = d?.width ?? n,
         f = d?.height ?? o;
-    return (0, r.jsxs)("svg", {
-        ...(0, a.A)(c),
+    return (0, r.jsx)("svg", {
+        ...(0, s.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
         width: _,
         height: f,
         fill: "none",
         viewBox: "0 0 24 24",
-        children: [
-            (0, r.jsx)("path", {
-                fill: "string" == typeof l ? l : l.css,
-                d: "M1 6a3 3 0 0 1 3-3h16a3 3 0 0 1 3 3v1H1V6Z",
-                className: u,
-            }),
-            (0, r.jsx)("path", {
-                fill: "string" == typeof l ? l : l.css,
-                fillRule: "evenodd",
-                d: "M1 10h22v8a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3v-8Zm4 3a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H5Zm-1 4a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1Zm13-4a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2h-2Z",
-                clipRule: "evenodd",
-                className: u,
-            }),
-        ],
+        children: (0, r.jsx)("path", {
+            fill: "string" == typeof l ? l : l.css,
+            fillRule: "evenodd",
+            d: "M0 6c0-1.1 1.07-2 2.4-2h19.2c1.32 0 2.4.9 2.4 2v1H0V6ZM2.4 20C1.07 20 0 19.1 0 18v-8h24v8c0 1.1-1.08 2-2.4 2H2.4ZM18 12a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2h-2ZM3 13a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1Zm0 3a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1Z",
+            clipRule: "evenodd",
+            className: u,
+        }),
     });
 };
