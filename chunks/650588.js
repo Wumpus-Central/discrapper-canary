@@ -2,8 +2,8 @@
 n.d(t, { A: () => h });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(827734),
     l = n(397927),
     u = n(170887),
@@ -14,10 +14,10 @@ var r = n(627968),
 let p = [54, 8, 8, 8];
 function h(e) {
     let { onSelect: t, sound: n } = e,
-        [a, h] = i.useState(!1),
+        [s, h] = i.useState(!1),
         m = i.useRef(null),
-        g = (0, u.A)({ location: "GiftSoundboard" }),
-        E = s()(f.Qq, g && f.Ow);
+        E = (0, u.A)({ location: "GiftSoundboard" }),
+        g = a()(f.Qq, E && f.Ow);
     function A(e) {
         h(!1), t?.(e);
     }
@@ -37,7 +37,7 @@ function h(e) {
         });
     return (0, r.jsx)(l.YNO, {
         targetElementRef: m,
-        shouldShow: a,
+        shouldShow: s,
         position: "bottom",
         align: "left",
         onRequestClose: () => h(!1),
@@ -46,7 +46,7 @@ function h(e) {
             return (0, r.jsx)(l.lGe, {
                 children: (0, r.jsx)(d.A, {
                     suppressPlaySound: !0,
-                    shouldShowUpsell: !1,
+                    shouldShowLockedSounds: !1,
                     guildId: null,
                     channel: null,
                     onClose: t,
@@ -61,7 +61,7 @@ function h(e) {
         },
         children: () =>
             (0, r.jsx)(l.DUT, {
-                className: s()(f.kL, g && f.Ow),
+                className: a()(f.kL, E && f.Ow),
                 onClick: () => h(!0),
                 innerRef: m,
                 children:
@@ -71,13 +71,13 @@ function h(e) {
                               children: [
                                   (0, r.jsx)(l.JMI, {
                                       size: "custom",
-                                      color: g ? o.A.colors.ICON_STRONG : o.A.colors.WHITE,
+                                      color: E ? o.A.colors.ICON_STRONG : o.A.colors.WHITE,
                                       className: f.tc,
                                       width: 14,
                                       height: 14,
                                   }),
                                   (0, r.jsx)(l.Text, {
-                                      className: E,
+                                      className: g,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: _.intl.string(_.t.aThJz8),
@@ -88,13 +88,13 @@ function h(e) {
                               className: f.hQ,
                               children: [
                                   (0, r.jsx)(l.Text, {
-                                      className: E,
+                                      className: g,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: n.emojiName,
                                   }),
                                   (0, r.jsx)(l.Text, {
-                                      className: E,
+                                      className: g,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: n.name,

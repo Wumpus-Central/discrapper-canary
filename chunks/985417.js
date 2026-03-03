@@ -2,8 +2,8 @@
 n.d(t, { A: () => l });
 var r = n(64700),
     i = n(850992),
-    a = n(807348),
-    s = n(69217),
+    s = n(807348),
+    a = n(69217),
     o = n(527442);
 function l(e) {
     let {
@@ -18,15 +18,15 @@ function l(e) {
             onItemMouseEnter: p,
             buttonOverlay: h,
             isNitroLocked: m,
-            shouldShowUpsell: g,
-            inExpressionPicker: E,
+            showLockForDisabledSound: E,
+            inExpressionPicker: g,
         } = e,
         A = i.LW.useStore((e) => e.inspectedExpressionPosition),
         I = `${l}-${u}`,
         T = c && A.rowIndex === l && A.columnIndex === u;
     switch (t.item.type) {
-        case a.uq.SOUND:
-            return (0, r.createElement)(s.Ay, {
+        case s.uq.SOUND:
+            return (0, r.createElement)(a.Ay, {
                 ..._(u),
                 ...n,
                 key: I,
@@ -38,10 +38,10 @@ function l(e) {
                 enableSecondaryActions: !0,
                 buttonOverlay: h,
                 inNitroLockedSection: m,
-                showLockForDisabledSound: g,
-                isSoundmoji: !0 === E,
+                showLockForDisabledSound: E,
+                isSoundmoji: !0 === g,
             });
-        case a.uq.ADD_SOUND:
+        case s.uq.ADD_SOUND:
             return (0, r.createElement)(o.A, {
                 ..._(u),
                 key: I,

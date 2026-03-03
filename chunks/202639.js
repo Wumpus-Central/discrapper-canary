@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { d: () => g });
+n.d(t, { d: () => m });
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    s = n(522160),
+    s = n.n(i),
+    a = n(475539),
     o = n(397927),
     l = n(565645),
     u = n(736653),
@@ -12,56 +12,57 @@ var i = n(503698),
     d = n(71393),
     _ = n(857586),
     f = n(788868),
-    h = n(985018),
-    p = n(732591);
-function g(e) {
+    p = n(985018),
+    h = n(732591);
+function m(e) {
     let {
             showUpsell: t,
             text: n,
             textVariant: i,
             button: u,
-            buttonAnalyticsObject: g,
-            className: A,
-            onSubscribeModalClose: I,
-            position: T = "floating",
-            useGradientBg: y = !1,
+            buttonAnalyticsObject: m,
+            className: g,
+            onSubscribeModalClose: A,
+            position: I = "floating",
+            useGradientBg: T = !1,
             hoveredNitroLockedSound: S,
-            useUpdatedStyling: v = !1,
+            useUpdatedStyling: y = !1,
+            subscribeButtonVariantOverride: v,
         } = e,
-        C = c.r.useConfig({ location: "PremiumFloatingPickerUpsell" }).enabled,
-        b = (0, o.zhh)({
+        N = c.rn.useConfig({ location: "PremiumFloatingPickerUpsell" }).enableSoundPreview,
+        C = (0, o.zhh)({
             transform: t ? "translateY(0%)" : "translateY(120%)",
             opacity: +!!t,
             config: { tension: 120, friction: 14 },
         }),
-        N = C && null != S,
-        R = S?.emojiId != null || S?.emojiName != null,
-        O = n;
-    if (N) {
+        R = N && null != S,
+        O = S?.emojiId != null || S?.emojiName != null,
+        b = n;
+    if (R) {
         let e = d.A.getGuild(S.guildId);
-        O = h.intl.format(h.t.eku049, { serverName: e?.name ?? h.intl.string(h.t.DmIUGK) });
+        b = p.intl.format(p.t.eku049, { serverName: e?.name ?? p.intl.string(p.t.DmIUGK) });
     }
-    return (0, r.jsx)(s.animated.div, {
-        style: { ...b },
-        className: a()(
-            p.Zj,
-            y && p.Me,
-            v && p.ww,
-            { [p.tO]: "floating" === T, [p.Kx]: "inline" === T, [p.ik]: "bottom" === T },
-            A,
+    return (0, r.jsx)(a.animated.div, {
+        style: { ...C },
+        className: s()(
+            h.Zj,
+            T && h.Me,
+            y && h.ww,
+            { [h.tO]: "floating" === I, [h.Kx]: "inline" === I, [h.ik]: "bottom" === I },
+            g,
         ),
         children: (0, r.jsxs)(E, {
-            hasPreviewSound: N,
-            useGradientBg: y,
+            hasPreviewSound: R,
+            useGradientBg: T,
             children: [
-                N &&
+                R &&
                     (0, r.jsxs)("div", {
-                        className: p.Ed,
+                        className: h.Ed,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: p.vg,
+                                className: h.vg,
                                 children: [
-                                    R && (0, r.jsx)(l.A, { emojiId: S.emojiId, emojiName: S.emojiName }),
+                                    O && (0, r.jsx)(l.A, { emojiId: S.emojiId, emojiName: S.emojiName }),
                                     (0, r.jsx)(o.Text, {
                                         variant: "text-sm/semibold",
                                         color: "text-strong",
@@ -72,16 +73,16 @@ function g(e) {
                             (0, r.jsx)(o.Text, {
                                 variant: "text-xs/normal",
                                 color: "text-muted",
-                                className: p.Fr,
-                                children: O ?? n,
+                                className: h.Fr,
+                                children: b ?? n,
                             }),
                         ],
                     }),
-                !N &&
+                !R &&
                     (0, r.jsx)(o.Text, {
                         variant: i ?? "text-sm/medium",
                         color: "text-strong",
-                        className: p.tD,
+                        className: h.tD,
                         children: n,
                     }),
                 "string" == typeof u
@@ -89,9 +90,10 @@ function g(e) {
                           size: "sm",
                           subscriptionTier: f.pe.TIER_2,
                           buttonTextOverride: u,
-                          premiumModalAnalyticsLocation: g,
+                          premiumModalAnalyticsLocation: m,
                           tabIndex: t ? 0 : -1,
-                          onSubscribeModalClose: I,
+                          onSubscribeModalClose: A,
+                          variantOverride: v,
                       })
                     : u,
             ],
@@ -100,12 +102,12 @@ function g(e) {
 }
 function E(e) {
     let { hasPreviewSound: t, useGradientBg: n, children: i } = e,
-        s = (0, u.Ay)();
+        a = (0, u.Ay)();
     return n
         ? (0, r.jsx)(o.hLv, {
               color: "nitro-pink",
               offsetBottom: -3,
-              className: a()(p.nC, { [p.Ay]: (0, o.Mwr)(s), [p.u8]: t }),
+              className: s()(h.nC, { [h.Ay]: (0, o.Mwr)(a), [h.u8]: t }),
               children: i,
           })
         : i;
