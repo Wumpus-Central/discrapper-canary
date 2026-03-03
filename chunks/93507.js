@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => N }), n(122143);
+n.d(t, { A: () => R }), n(122143);
 var r = n(284009),
     i = n.n(r),
-    a = n(214958),
-    s = n.n(a),
+    s = n(214958),
+    a = n.n(s),
     o = n(972347),
     l = n(738239),
     u = n.n(l),
@@ -14,19 +14,19 @@ var r = n(284009),
     p = n(782425),
     h = n(647457),
     m = n(672239),
-    g = n(277738),
-    E = n(339702),
+    E = n(277738),
+    g = n(339702),
     A = n(267411),
     I = n(126208),
     T = n(247872),
-    y = n(351871),
-    S = n(539541),
+    S = n(351871),
+    y = n(539541),
     v = n(731854),
-    C = n(396574);
-let b = new c.Vy("MediaEngineWebRTC");
-class N extends o.A {
-    Video = S.A;
-    Camera = y.A;
+    N = n(396574);
+let C = new c.Vy("MediaEngineWebRTC");
+class R extends o.A {
+    Video = y.A;
+    Camera = S.A;
     _audioContext = null;
     outputVolume = v.Hz;
     sourceId = v.dx;
@@ -63,9 +63,9 @@ class N extends o.A {
     static supported() {
         return (
             !__OVERLAY__ &&
-            (C.Hz && null != window.AudioContext && null != window.RTCPeerConnection
+            (N.Hz && null != window.AudioContext && null != window.RTCPeerConnection
                 ? (n(528416), !0)
-                : (b.info("WebRTC is not supported on", s().name, s().version), !1))
+                : (C.info("WebRTC is not supported on", a().name, a().version), !1))
         );
     }
     supported() {
@@ -74,23 +74,23 @@ class N extends o.A {
     supports(e) {
         switch (e) {
             case v.O5.AUDIO_INPUT_DEVICE:
-                return g.sq;
+                return E.sq;
             case v.O5.AUDIO_OUTPUT_DEVICE:
-                return g.gY;
+                return E.gY;
             case v.O5.VIDEO:
-                return C.g7;
+                return N.g7;
             case v.O5.DESKTOP_CAPTURE:
                 return navigator.mediaDevices?.getDisplayMedia != null;
             case v.O5.VOICE_PROCESSING:
-                return "Chrome" === s().name;
+                return "Chrome" === a().name;
             case v.O5.NATIVE_PING:
             case v.O5.DIAGNOSTICS:
-                return C.fA;
+                return N.fA;
             case v.O5.DESKTOP_CAPTURE_APPLICATIONS:
             case v.O5.LOOPBACK:
             case v.O5.NOISE_SUPPRESSION:
             case v.O5.AUTOMATIC_GAIN_CONTROL:
-                return "Safari" !== s().name;
+                return "Safari" !== a().name;
             case v.O5.NOISE_CANCELLATION:
                 return u()();
             case v.O5.QOS:
@@ -118,7 +118,7 @@ class N extends o.A {
         return null == this._audioContext && (this._audioContext = new AudioContext()), this._audioContext;
     }
     connect(e, t, n) {
-        let { ssrc: r, address: i, port: a, modes: s, streamUserId: o, streamParameters: l } = n,
+        let { ssrc: r, address: i, port: s, modes: a, streamUserId: o, streamParameters: l } = n,
             u = {
                 context: e,
                 userId: t,
@@ -163,12 +163,12 @@ class N extends o.A {
     }
     async _enable() {
         if (this.enabled) return;
-        await this.getAudioContext().audioWorklet.addModule(E);
+        await this.getAudioContext().audioWorklet.addModule(g);
         let e = new h.A(this.getAudioContext());
         e.on("permission", this.handleAudioPermission);
         try {
             await e.enable(),
-                "Firefox" === s().name && (await this.handleDeviceChange()),
+                "Firefox" === a().name && (await this.handleDeviceChange()),
                 (this.enabled = !0),
                 this.eachConnection((e) => e.input.enableAudioInput(), v.x.DEFAULT),
                 this.voiceActivityInput?.enable();
@@ -188,7 +188,7 @@ class N extends o.A {
     setNoiseCancellationAfterProcessing(e) {}
     setVADAfterWebrtc(e) {}
     getAudioInputDevices() {
-        return (0, g._e)();
+        return (0, E._e)();
     }
     setAudioInputDevice(e) {
         let t = this.sourceId;
@@ -199,7 +199,7 @@ class N extends o.A {
             this.emit(_.bg.SelectedDeviceChange, v.oh.AUDIO_INPUT, t, e);
     }
     getAudioOutputDevices() {
-        return (0, g.tS)();
+        return (0, E.tS)();
     }
     setAudioOutputDevice(e) {
         let t = this.sinkId;
@@ -209,7 +209,7 @@ class N extends o.A {
             this.emit(_.bg.SelectedDeviceChange, v.oh.AUDIO_OUTPUT, t, e);
     }
     getVideoInputDevices() {
-        return (0, g.DT)();
+        return (0, E.DT)();
     }
     setVideoInputDevice(e) {
         (this.videoInputDeviceId = e), this.eachConnection((t) => t.setVideoSource(e), v.x.DEFAULT);
@@ -239,7 +239,6 @@ class N extends o.A {
     setClipsBufferSize(e) {}
     setClipsMLPipelineEnabled(e) {}
     setClipsMLPipelineTypeEnabled(e, t) {}
-    setClipsMaxPendingTasks(e) {}
     saveClip(e, t) {
         return Promise.reject(Error("UNSUPPORTED"));
     }
@@ -359,14 +358,14 @@ class N extends o.A {
                                   (this.dave = t),
                                       (this.transientKeys = (0, A.Lc)()),
                                       (this.maxSupportedProtocolVersion = t.MaxSupportedProtocolVersion()),
-                                      b.info(
+                                      C.info(
                                           "Successfully initialized DAVE, version:",
                                           this.maxSupportedProtocolVersion,
                                       ),
                                       e();
                               })
                               .catch((e) => {
-                                  (this.maxSupportedProtocolVersion = 0), b.error("Failed to initialize DAVE", e), t(e);
+                                  (this.maxSupportedProtocolVersion = 0), C.error("Failed to initialize DAVE", e), t(e);
                               });
                       })
                     : ((this.maxSupportedProtocolVersion = 0),
@@ -418,7 +417,7 @@ class N extends o.A {
         }
     };
     handleDeviceChange = () =>
-        (0, g.oG)().then((e) => {
+        (0, E.oG)().then((e) => {
             let [t, n, r] = e;
             return this.emit(_.bg.DeviceChange, t, n, r);
         });

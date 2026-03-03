@@ -370,9 +370,6 @@ class A extends s.A {
     setClipsMLPipelineTypeEnabled(e, t) {
         (0, d.lE)().setClipsMLPipelineTypeEnabled?.(e, t);
     }
-    setClipsMaxPendingTasks(e) {
-        (0, d.lE)().setClipsMaxPendingTasks?.(e);
-    }
     saveClip(e, t) {
         let n = (0, d.lE)();
         return null == n.setClipBufferLength || null == n.saveClip
