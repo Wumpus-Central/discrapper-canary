@@ -12,6 +12,7 @@ e.exports = {
     o1: "actions__39ec2",
     FS: "primaryButton__39ec2",
     fO: "customButtons__39ec2",
+    Ij: "fullWidth__39ec2",
     jp: "badges__39ec2",
     OV: "clickableContainer__39ec2",
     Sl: "image__39ec2",

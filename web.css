@@ -33074,6 +33074,10 @@ html:not(.chat-input) .inputInner_b1f01d {
     min-width: calc(50% - 8px)
 }
 
+.actions__39ec2 .fullWidth__39ec2 {
+    flex-grow: 1
+}
+
 .actions__39ec2:empty {
     display: none
 }
