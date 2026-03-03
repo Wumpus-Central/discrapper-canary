@@ -2,29 +2,29 @@
 n.d(t, { h: () => u, i: () => c });
 var r = n(627968),
     i = n(64700),
-    a = n(435371),
-    s = n(397927),
+    s = n(435371),
+    a = n(397927),
     o = n(297689),
     l = n(861175);
 function u(e) {
     let {
             label: t,
             defaultExpanded: n = !1,
-            onExpandedChange: a,
-            isDisabled: s = !1,
+            onExpandedChange: s,
+            isDisabled: a = !1,
             collapsedContent: u,
             children: c,
         } = e,
         [d, _] = i.useState(n),
         f = i.useCallback(
             (e) => {
-                _(e), null != a && a(e);
+                _(e), null != s && s(e);
             },
-            [a],
+            [s],
         );
     return (0, r.jsxs)(o.nD, {
         defaultExpanded: n,
-        isDisabled: s,
+        isDisabled: a,
         onExpandedChange: f,
         children: [
             (0, r.jsxs)("div", {
@@ -35,7 +35,7 @@ function u(e) {
                         color: d ? "text-strong" : "text-muted",
                         children: t,
                     }),
-                    (!d || s) && u,
+                    (!d || a) && u,
                 ],
             }),
             (0, r.jsx)(o.vr, { children: (0, r.jsx)("div", { className: l.CS, children: c }) }),
@@ -44,32 +44,54 @@ function u(e) {
 }
 function c(e) {
     let {
-        label: t,
-        value: n,
-        color: i = "text-muted",
-        valueColor: o = "text-muted",
-        icon: u,
-        tooltip: c,
-        tooltipAriaLabel: d,
-    } = e;
+            label: t,
+            value: n,
+            color: o = "text-muted",
+            valueColor: u = "text-muted",
+            valueIcon: c,
+            icon: d,
+            tooltip: _,
+            tooltipAriaLabel: f,
+            subText: p,
+            subTextHasStrikethrough: h,
+        } = e,
+        m = i.useMemo(() => {
+            let e = (0, r.jsxs)(a.Text, {
+                variant: "text-md/normal",
+                color: u,
+                className: l.U4,
+                children: [null != c && (0, r.jsx)(c, { size: "xs" }), n],
+            });
+            return null == p
+                ? e
+                : (0, r.jsxs)("div", {
+                      className: l.Lm,
+                      children: [
+                          e,
+                          (0, r.jsx)(a.Text, {
+                              variant: "text-xs/medium",
+                              color: "text-muted",
+                              className: h ? l.tP : void 0,
+                              children: p,
+                          }),
+                      ],
+                  });
+        }, [n, c, p, h, u]);
     return (0, r.jsxs)("div", {
         className: l.Yn,
         children: [
-            (0, r.jsxs)(s.Text, {
+            (0, r.jsxs)(a.Text, {
                 variant: "text-md/normal",
-                color: i,
+                color: o,
                 className: l.yB,
                 children: [
-                    u,
+                    d,
                     t,
-                    null != c &&
-                        (0, r.jsx)(a.m_, {
-                            text: c,
-                            children: (0, r.jsx)(s.cBN, { size: "xs", color: "currentColor", "aria-label": d }),
-                        }),
+                    null != _ &&
+                        (0, r.jsx)(s.m_, { text: _, children: (0, r.jsx)(a.cBN, { size: "xs", "aria-label": f }) }),
                 ],
             }),
-            (0, r.jsx)(s.Text, { variant: "text-md/normal", color: o, children: n }),
+            m,
         ],
     });
 }

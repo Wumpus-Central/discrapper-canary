@@ -2,11 +2,11 @@
 n.d(t, {
     DP: () => H,
     Lw: () => B,
-    U5: () => M,
+    U5: () => x,
     _J: () => P,
     m0: () => V,
     mT: () => k,
-    sw: () => x,
+    sw: () => M,
     tC: () => j,
     wP: () => U,
 });
@@ -34,9 +34,9 @@ var r = n(627968),
     v = n(234419),
     N = n(735164),
     C = n(787455),
-    b = n(815545),
-    R = n(788868),
-    O = n(652215),
+    R = n(815545),
+    O = n(788868),
+    b = n(652215),
     D = n(985018),
     L = n(362442);
 function w(e) {
@@ -60,7 +60,7 @@ function w(e) {
             originalAmount: I,
             subscriptionDiscount: T,
             entitlementDiscount: S,
-        } = (0, b.Ae)(t, {
+        } = (0, R.Ae)(t, {
             subscriptionPlan: p,
             subscriptionTrial: h,
             overrideAmount: n,
@@ -100,7 +100,7 @@ function w(e) {
         })
     );
 }
-function x(e) {
+function M(e) {
     let { label: t, tooltipText: n, tooltipAriaLabel: i } = e;
     return (0, r.jsxs)("div", {
         className: L._H,
@@ -114,7 +114,7 @@ function x(e) {
         ],
     });
 }
-let M = (e) => (e.currency === O.Yri.USD ? (0, T.$g)(e.total, e.currency) : `${(0, T.$g)(e.total, e.currency)}*`);
+let x = (e) => (e.currency === b.Yri.USD ? (0, T.$g)(e.total, e.currency) : `${(0, T.$g)(e.total, e.currency)}*`);
 function P(e) {
     let { invoice: t, isPrepaidPaymentSource: n, shouldUseUnifiedCheckoutUI: i } = e,
         {
@@ -125,7 +125,7 @@ function P(e) {
             formattedGuildBoostPrice: u,
             formattedGuildBoostRate: c,
             guildBoostItemLabel: d,
-        } = (0, b.rc)(t, { isPrepaidPaymentSource: n });
+        } = (0, R.rc)(t, { isPrepaidPaymentSource: n });
     if (i) {
         let { lineItems: e, entitlementDiscount: i } = (0, m.Ig)(t, {
             subscriptionTrial: null,
@@ -147,14 +147,14 @@ function P(e) {
             (0, r.jsx)(N.pK, {}),
             (0, r.jsx)(N.Sd, {
                 label: D.intl.format(t.taxInclusive ? (n ? D.t.BqdxQt : D.t.XH4raN) : D.t.RUI48E, {}),
-                value: M(t),
+                value: x(t),
             }),
         ],
     });
 }
 function k(e) {
     let { invoice: t, newPlan: n, isPrepaidPaymentSource: i, referralTrialOfferId: s } = e,
-        { newPlanInvoiceItem: a, basePlanFullAmount: o, invoiceAdjustmentDisplayItems: l } = (0, b.SA)(t, n);
+        { newPlanInvoiceItem: a, basePlanFullAmount: o, invoiceAdjustmentDisplayItems: l } = (0, R.SA)(t, n);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(w, {
@@ -168,7 +168,7 @@ function k(e) {
                 let { id: t, label: n, tooltipText: i, tooltipAriaLabel: s, value: a } = e;
                 return (0, r.jsx)(
                     N.oR,
-                    { label: (0, r.jsx)(x, { label: n, tooltipText: i, tooltipAriaLabel: s }), value: a },
+                    { label: (0, r.jsx)(M, { label: n, tooltipText: i, tooltipAriaLabel: s }), value: a },
                     t,
                 );
             }),
@@ -176,7 +176,7 @@ function k(e) {
             (0, r.jsx)(N.pK, {}),
             (0, r.jsx)(N.Sd, {
                 label: D.intl.format(t.taxInclusive ? (i ? D.t.BqdxQt : D.t.XH4raN) : D.t.RUI48E, {}),
-                value: M(t),
+                value: x(t),
             }),
         ],
     });
@@ -191,8 +191,7 @@ function U(e) {
 }
 function G(e) {
     let { isUpdate: t, currentInvoice: n, newInvoice: i, inTrialPeriod: s } = e,
-        o = null != n ? (0, y.Z)(n.invoiceItems) : null,
-        { intervalType: l, intervalCount: u } = (0, I.Ge)(i);
+        { intervalType: o, intervalCount: l } = (0, I.Ge)(i);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(N.pK, { extended: !0 }),
@@ -200,7 +199,7 @@ function G(e) {
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(N.Xd, { children: D.intl.string(D.t.tuqjWQ) }),
-                          (0, b.Q8)(n).map((e) =>
+                          (0, R.Q8)(n).map((e) =>
                               (0, r.jsx)(w, { invoiceItem: e, currency: n.currency, inTrialPeriod: s }, e.id),
                           ),
                           (0, r.jsx)(N.pK, { extended: !0 }),
@@ -208,18 +207,15 @@ function G(e) {
                   })
                 : null,
             (0, r.jsx)(N.Xd, { children: D.intl.string(D.t.qxVrh6) }),
-            (0, b.Q8)(i, n).map((e) => {
-                let { showGuildSubscriptionAdjustmentTooltip: n, ...s } = e,
-                    l =
-                        null != o &&
-                        !o.some((e) => e.subscriptionPlanId === s.subscriptionPlanId && e.quantity === s.quantity);
+            (0, R.Q8)(i, n, { isSubscriptionUpdate: t }).map((e) => {
+                let { showGuildSubscriptionAdjustmentTooltip: t, isAddedSubscriptionInvoiceItem: n, ...s } = e;
                 return (0, r.jsx)(
                     w,
                     {
                         invoiceItem: s,
                         currency: i.currency,
-                        showGuildSubscriptionAdjustmentTooltip: n,
-                        className: a()({ [L.sy]: !t || l }),
+                        showGuildSubscriptionAdjustmentTooltip: t,
+                        className: a()({ [L.sy]: n }),
                     },
                     s.id,
                 );
@@ -228,7 +224,7 @@ function G(e) {
             (0, r.jsx)(N.pK, {}),
             (0, r.jsx)(N.oR, {
                 label: D.intl.string(D.t.AChTLW),
-                value: (0, T.CE)((0, T.$g)(i.total, i.currency), l, u),
+                value: (0, T.CE)((0, T.$g)(i.total, i.currency), o, l),
                 className: L.RV,
             }),
         ],
@@ -248,14 +244,14 @@ function F(e) {
     if (null == t) return null;
     if (i) {
         let e = (0, I.re)({ intervalType: l?.interval, intervalCount: l?.interval_count }),
-            t = l?.interval === R.WT.DAY && l?.interval_count < 28 ? 2 : 7;
+            t = l?.interval === O.WT.DAY && l?.interval_count < 28 ? 2 : 7;
         return (
             o ??
             D.intl.format(D.t["2FvcjG"], {
                 duration: e,
                 days: t,
-                contactLink: O.X7G.CONTACT,
-                helpdeskArticle: A.A.getArticleURL(O.MVz.PREMIUM_TRIAL),
+                contactLink: b.X7G.CONTACT,
+                helpdeskArticle: A.A.getArticleURL(b.MVz.PREMIUM_TRIAL),
             })
         );
     }
@@ -271,8 +267,8 @@ function F(e) {
                           ? t.subscriptionPeriodEnd
                           : n.subscriptionPeriodStart
                       : n.subscriptionPeriodEnd,
-            contactLink: O.X7G.CONTACT,
-            helpdeskArticle: A.A.getArticleURL(O.MVz.BILLING),
+            contactLink: b.X7G.CONTACT,
+            helpdeskArticle: A.A.getArticleURL(b.MVz.BILLING),
         }),
     });
 }
@@ -301,9 +297,13 @@ function V(e) {
             ...u,
         },
         [v] = (0, S.Kq)(y),
-        [C, b] = i.useState(!1);
+        [C, R] = i.useState(!1);
     if (A) {
-        let e = (0, m.Gj)(n ?? null, s, null);
+        let e = (0, m.Gj)(v ?? null, s, null, {
+            includeTaxLineItem: !0,
+            overrideRenewalDate: a,
+            isSubscriptionUpdate: o,
+        });
         return (0, r.jsx)(p._D, { ...e, defaultExpanded: I });
     }
     return (0, r.jsxs)(r.Fragment, {
@@ -324,7 +324,7 @@ function V(e) {
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)(d.DUT, {
-                            onClick: () => b((e) => !e),
+                            onClick: () => R((e) => !e),
                             className: L.K3,
                             children: [
                                 C ? D.intl.string(D.t.aBcRbK) : D.intl.string(D.t.X6duqp),
@@ -384,9 +384,9 @@ function j(e) {
         s = (0, y.Z)(n.invoiceItems).find((e) => e.subscriptionPlanId === i.id);
     return (
         l()(null != s, "newPlanInvoiceItem can not be null"),
-        i.interval === R.WT.MONTH
+        i.interval === O.WT.MONTH
             ? (t = n.taxInclusive ? D.t.v9QeON : D.t.FALkO5)
-            : i.interval === R.WT.YEAR
+            : i.interval === O.WT.YEAR
               ? (t = n.taxInclusive ? D.t.ECT4A5 : D.t["0HQxKW"])
               : l()(!1, "Invalid interval type"),
         (0, r.jsx)(d.Text, {

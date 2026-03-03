@@ -30,10 +30,10 @@ function d(e) {
             collapsedContent: (0, r.jsx)(o.Text, { variant: "text-md/normal", color: "text-subtle", children: A }),
             children: [
                 s.map((e) => {
-                    let { id: t, label: n, amount: i, icon: s, tooltip: a, formatWithoutRate: o } = e,
-                        c = (0, l.$g)(i, f),
-                        p = o ? c : (0, l.CE)(c, d, _);
-                    return (0, r.jsx)(u.i, { label: n, value: p, icon: s, tooltip: a }, t);
+                    let { formatWithoutRate: t, amount: n, ...i } = e,
+                        s = (0, l.$g)(n, f),
+                        a = t ? s : (0, l.CE)(s, d, _);
+                    return (0, r.jsx)(u.i, { value: a, ...i }, i.id);
                 }),
                 (0, r.jsx)("div", { className: c.m }),
                 (0, r.jsx)(u.i, { label: n ?? t, value: A, color: "text-strong" }),

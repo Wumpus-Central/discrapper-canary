@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ae: () => S, Q8: () => E, SA: () => R, Sb: () => y, Tp: () => I, rc: () => C, wt: () => b }), n(321073);
+n.d(t, { Ae: () => S, Q8: () => E, SA: () => O, Sb: () => y, Tp: () => I, rc: () => C, wt: () => R }), n(321073);
 var r = n(284009),
     i = n.n(r),
     s = n(311907),
@@ -29,19 +29,28 @@ function m(e) {
         return t !== d.gD.NONE_MONTH && t !== d.gD.NONE_YEAR;
     });
 }
-let E = (e, t) => {
-        let n = null != t ? (0, l.Ge)(t) : null,
-            { intervalType: r, intervalCount: i } = (0, l.Ge)(e),
-            s = null != n && (n.intervalType !== r || n.intervalCount !== i);
-        return m(h((0, c.Z)(e.invoiceItems))).map((e) => ({
-            ...e,
-            showGuildSubscriptionAdjustmentTooltip:
-                s &&
-                (e.subscriptionPlanId === d.gD.PREMIUM_MONTH_GUILD ||
-                    e.subscriptionPlanId === d.gD.PREMIUM_YEAR_GUILD ||
-                    e.subscriptionPlanId === d.gD.PREMIUM_3_MONTH_GUILD ||
-                    e.subscriptionPlanId === d.gD.PREMIUM_6_MONTH_GUILD),
-        }));
+let E = function (e, t) {
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { isSubscriptionUpdate: !1 },
+            r = null != t ? (0, c.Z)(t.invoiceItems) : null,
+            i = null != t ? (0, l.Ge)(t) : null,
+            { intervalType: s, intervalCount: a } = (0, l.Ge)(e),
+            o = null != i && (i.intervalType !== s || i.intervalCount !== a);
+        return m(h((0, c.Z)(e.invoiceItems))).map((e) => {
+            let t =
+                    null != r &&
+                    !r.some((t) => t.subscriptionPlanId === e.subscriptionPlanId && t.quantity === e.quantity),
+                i = !n.isSubscriptionUpdate || t;
+            return {
+                ...e,
+                showGuildSubscriptionAdjustmentTooltip:
+                    o &&
+                    (e.subscriptionPlanId === d.gD.PREMIUM_MONTH_GUILD ||
+                        e.subscriptionPlanId === d.gD.PREMIUM_YEAR_GUILD ||
+                        e.subscriptionPlanId === d.gD.PREMIUM_3_MONTH_GUILD ||
+                        e.subscriptionPlanId === d.gD.PREMIUM_6_MONTH_GUILD),
+                isAddedSubscriptionInvoiceItem: i,
+            };
+        });
     },
     g = (e, t) => (e.discounts ?? []).some((e) => e.type === t),
     A = (e, t) => e.subscriptionPlanPrice - (e.discounts?.find((e) => e.type === t)?.amount ?? 0);
@@ -151,14 +160,14 @@ let T = (e) => {
             l = N(a, r, { currency: e.currency, isPrepaidPaymentSource: n });
         return { ...i, guildSubscriptionInvoiceItem: r, guildSubscriptionPlan: a, ...l };
     },
-    b = (e, t) => {
+    R = (e, t) => {
         let { isPrepaidPaymentSource: n = !1 } = t,
             { guildSubscriptionInvoiceItem: r, ...i } = v(e),
             s = null != r ? o.A.get(r.subscriptionPlanId) : null,
             a = N(s, r, { currency: e.currency, isPrepaidPaymentSource: n });
         return { ...i, guildSubscriptionInvoiceItem: r, guildSubscriptionPlan: s, ...a };
     },
-    R = (e, t) => {
+    O = (e, t) => {
         let { subscriptionPlanInvoiceItem: n, coalescedInvoiceItems: r } = y(e, t);
         i()(null != n, "Expected newPlanInvoiceItem");
         let s = r.find((e) => !(0, l.z4)(e.subscriptionPlanId) && e.amount < 0),
