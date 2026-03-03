@@ -27,7 +27,7 @@ let c = (0, i.mj)({
             enableVoiceOnlyClips: !1,
             enableAdvancedSignals: !1,
         },
-        99: {
+        2: {
             enableClips: !0,
             ignorePlatformRestriction: !0,
             showClipsHeaderEntrypoint: !0,
