@@ -53,6 +53,7 @@ var r = (function (e) {
         (e[(e.QUEST_HOME_ENTRYPOINT_THEMED = 48)] = "QUEST_HOME_ENTRYPOINT_THEMED"),
         (e[(e.QUEST_ACTIVITY_UNENROLLED_MODAL = 49)] = "QUEST_ACTIVITY_UNENROLLED_MODAL"),
         (e[(e.QUEST_HOME_HERO = 50)] = "QUEST_HOME_HERO"),
+        (e[(e.QUEST_ACTIVITY_HEADER = 51)] = "QUEST_ACTIVITY_HEADER"),
         e
     );
 })({});
