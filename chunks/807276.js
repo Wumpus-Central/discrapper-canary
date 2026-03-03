@@ -11,5 +11,8 @@ let o = (0, s.zD)(a.X.FRIEND_ANNIVERSARY_NOTIFICATIONS, {
     useValue: r.oz.useSetting,
     setValue: n.O,
     useSearchTerms: () => [u.intl.string(u.t.hi4dSk)],
-    usePredicate: () => (0, l.p)("FriendAnniversaryNotifications"),
+    usePredicate: () => {
+        let { enabled: t, showDmPrompts: e } = l.u.getConfig({ location: "FriendAnniversaryNotifications" });
+        return t && e;
+    },
 });

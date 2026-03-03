@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => R });
+n.d(t, { A: () => O });
 var r = n(110259),
     i = n(478437),
     s = n(554146),
@@ -24,7 +24,7 @@ var r = n(110259),
     v = n(49999);
 let N = 1e3,
     C = new d.A("PremiumGiftingIntentManager");
-class b extends u.A {
+class R extends u.A {
     actions = {
         POST_CONNECTION_OPEN: () => this.onPostConnectionOpen(),
         CHANNEL_SELECT: (e) => this.onChannelSelect(e),
@@ -53,7 +53,7 @@ class b extends u.A {
     maybeSendGiftingPromptSystemMessage(e, t, n, r) {
         let i = g.A.getChannelId(),
             s = E.A.isReady(e);
-        if (!(this.isGiftIntentDCInCooldown() || S.Ay.isGiftIntentMessageInCooldown(n)) && e === i) {
+        if (!S.Ay.isGiftIntentMessageInCooldown(n) && e === i) {
             if (!s)
                 return void E.A.whenReady(e, () => {
                     g.A.getChannelId() === e && this.maybeSendGiftingPromptSystemMessage(e, t, n, r);
@@ -63,7 +63,6 @@ class b extends u.A {
                 recipientUserId: n,
                 giftIntentSecondaryAction: r,
             }),
-                this.dismissGiftIntentDC(),
                 (0, T.xs)(n);
         }
     }
@@ -80,15 +79,15 @@ class b extends u.A {
         }
     }
     async sendGiftingNotificationIfEligible() {
-        let { enabled: e } = I.u.getConfig({
+        let { enabled: e, showDmPrompts: t } = I.u.getConfig({
                 location: "PremiumGiftingIntentManager handleTopAffinityUnreadNotification",
             }),
-            t = h.oz.getSetting();
-        if (!e || !t || this.isGiftIntentDCInCooldown()) return;
-        let n = S.Ay.getNextRecipientUserIDForNotification();
-        if (null != n)
+            n = h.oz.getSetting();
+        if (!e || !t || !n || this.isGiftIntentDCInCooldown()) return;
+        let i = S.Ay.getNextRecipientUserIDForNotification();
+        if (null != i)
             try {
-                let e = await o.A.getOrEnsurePrivateChannel(n),
+                let e = await o.A.getOrEnsurePrivateChannel(i),
                     t = m.A.getChannel(e);
                 if (null == t) return;
                 if (
@@ -97,17 +96,17 @@ class b extends u.A {
                 )
                     return void C.info("Skipping gift intent notification - fetched messages marked as stale", {
                         channelId: t.id,
-                        recipientUserID: n,
+                        recipientUserID: i,
                     });
-                let i = S.Ay.getNextRecipientUserIDForNotification();
-                if (i !== n) return;
+                let n = S.Ay.getNextRecipientUserIDForNotification();
+                if (n !== i) return;
                 l.A.sendGiftingPromptSystemMessage(t.id, {
                     giftIntentType: y.np.FRIEND_ANNIVERSARY,
-                    recipientUserId: i,
+                    recipientUserId: n,
                     giftIntentSecondaryAction: y.l1.SEND_MESSAGE,
                 }),
                     this.dismissGiftIntentDC();
-                let s = p.A.getUserAffinity(i);
+                let s = p.A.getUserAffinity(n);
                 (0, c.x)({
                     name: r.ImpressionNames.GIFT_INTENT_UNREAD_NOTIFICATION,
                     type: r.ImpressionTypes.VIEW,
@@ -117,10 +116,10 @@ class b extends u.A {
                         channel_id: t.id,
                     },
                 }),
-                    (0, T.xs)(i),
+                    (0, T.xs)(n),
                     (0, T.BT)();
             } catch (e) {
-                C.error("Failed to fetch DM channel data for gifting notification", { recipientUserID: n, error: e });
+                C.error("Failed to fetch DM channel data for gifting notification", { recipientUserID: i, error: e });
             }
     }
     onChannelSelect(e) {
@@ -133,4 +132,4 @@ class b extends u.A {
         null != e && this.sendGiftPromptMessageInSelectedChannelIfEligible(e);
     }
 }
-let R = new b();
+let O = new R();
