@@ -1,20 +1,21 @@
 i.d(t, { A: () => x });
 var n = i(627968),
     l = i(64700),
-    a = i(505779),
-    s = i(990078),
-    r = i(397927),
-    o = i(524799),
+    a = i(990078),
+    s = i(397927),
+    r = i(524799),
     c = i(223273),
-    d = i(880405),
+    o = i(880405),
+    d = i(778591),
     u = i(985018),
     m = i(719187);
 let x = function (e) {
-    let { websites: t, reviews: i } = e,
-        x = i?.steam ?? { rating: void 0, ratingCount: void 0 },
-        g = t.find((e) => e.category === a.V.STEAM),
-        h = (0, o.j)(x.rating, x.ratingCount),
-        f = (function (e) {
+    let { detectedGame: t } = e,
+        { reviews: i, applicationId: x } = t,
+        g = i?.steam ?? { rating: void 0, ratingCount: void 0 },
+        h = (0, d.I)(x),
+        f = (0, r.j)(g.rating, g.ratingCount),
+        j = (function (e) {
             switch (e) {
                 case c.vI.NO_USER_REVIEWS:
                     return "text-subtle";
@@ -33,35 +34,35 @@ let x = function (e) {
                 default:
                     return "text-subtle";
             }
-        })(h),
-        [j, v] = l.useState(!1),
-        p = l.useCallback(() => {
-            v(!0);
-        }, []),
-        A = l.useCallback(() => {
-            v(!1);
+        })(f),
+        [p, A] = l.useState(!1),
+        v = l.useCallback(() => {
+            A(!0);
         }, []),
         E = l.useCallback(() => {
-            null != g && window.open((0, d.L)(g.url), "_blank", "noreferrer noopener");
-        }, [g]);
-    return null == g
+            A(!1);
+        }, []),
+        I = l.useCallback(() => {
+            null != h && window.open((0, o.L)(h), "_blank", "noreferrer noopener");
+        }, [h]);
+    return null == h
         ? null
         : (0, n.jsxs)("div", {
               className: m.uW,
               children: [
                   (0, n.jsx)("div", {
                       className: m.Gf,
-                      children: (0, n.jsx)(r.Heading, {
+                      children: (0, n.jsx)(s.Heading, {
                           variant: "heading-sm/semibold",
                           color: "text-strong",
                           children: u.intl.string(u.t.GaAQXP),
                       }),
                   }),
-                  (0, n.jsx)(s.m, {
+                  (0, n.jsx)(a.m, {
                       text: u.intl.string(u.t.YNC5Di),
-                      shouldShow: !j,
-                      children: (0, n.jsx)(r.DUT, {
-                          onClick: E,
+                      shouldShow: !p,
+                      children: (0, n.jsx)(s.DUT, {
+                          onClick: I,
                           className: m.nf,
                           role: "link",
                           "aria-label": u.intl.string(u.t.YNC5Di),
@@ -75,11 +76,11 @@ let x = function (e) {
                                           (0, n.jsxs)("div", {
                                               className: m.tN,
                                               children: [
-                                                  (0, n.jsx)(r.NXQ, {
+                                                  (0, n.jsx)(s.NXQ, {
                                                       size: "sm",
-                                                      color: r.LU0.colors.ICON_STRONG.css,
+                                                      color: s.LU0.colors.ICON_STRONG.css,
                                                   }),
-                                                  (0, n.jsx)(r.Heading, {
+                                                  (0, n.jsx)(s.Heading, {
                                                       variant: "heading-sm/medium",
                                                       color: "text-strong",
                                                       children: u.intl.string(u.t.whmopT),
@@ -87,25 +88,25 @@ let x = function (e) {
                                               ],
                                           }),
                                           (0, n.jsx)(
-                                              s.m,
+                                              a.m,
                                               {
                                                   text:
-                                                      h === c.vI.NO_USER_REVIEWS
+                                                      f === c.vI.NO_USER_REVIEWS
                                                           ? u.intl.string(u.t.CLMt8J)
                                                           : u.intl
                                                                 .format(u.t["lzANJ/"], {
-                                                                    rating: x.rating,
-                                                                    rating_count: x.ratingCount?.toLocaleString(),
+                                                                    rating: g.rating,
+                                                                    rating_count: g.ratingCount?.toLocaleString(),
                                                                 })
                                                                 .toString(),
-                                                  onTooltipShow: p,
-                                                  onTooltipHide: A,
+                                                  onTooltipShow: v,
+                                                  onTooltipHide: E,
                                                   children: (0, n.jsxs)("div", {
                                                       className: m.Z0,
                                                       children: [
-                                                          (0, n.jsx)(r.Text, {
+                                                          (0, n.jsx)(s.Text, {
                                                               variant: "text-xs/medium",
-                                                              color: f,
+                                                              color: j,
                                                               children: (function (e) {
                                                                   switch (e) {
                                                                       case c.vI.NO_USER_REVIEWS:
@@ -131,16 +132,16 @@ let x = function (e) {
                                                                       default:
                                                                           return null;
                                                                   }
-                                                              })(h),
+                                                              })(f),
                                                           }),
-                                                          null != x.ratingCount &&
-                                                              h !== c.vI.NO_USER_REVIEWS &&
-                                                              (0, n.jsx)(r.Text, {
+                                                          null != g.ratingCount &&
+                                                              f !== c.vI.NO_USER_REVIEWS &&
+                                                              (0, n.jsx)(s.Text, {
                                                                   variant: "text-xs/medium",
                                                                   color: "text-subtle",
                                                                   children: u.intl
                                                                       .format(u.t.sgIoin, {
-                                                                          rating_count: x.ratingCount?.toLocaleString(),
+                                                                          rating_count: g.ratingCount?.toLocaleString(),
                                                                       })
                                                                       .toString(),
                                                               }),

@@ -15,8 +15,8 @@ var n = i(627968),
     f = i(544420),
     j = i(964486),
     p = i(359549),
-    v = i(793574),
-    A = i(688810),
+    A = i(793574),
+    v = i(688810),
     E = i(139286),
     I = i(429913),
     _ = i(590703),
@@ -26,9 +26,9 @@ var n = i(627968),
     S = i(928550),
     b = i(657331),
     G = i(773669),
-    w = i(486020),
-    L = i(541830),
-    R = i(661191),
+    L = i(486020),
+    R = i(541830),
+    w = i(661191),
     O = i(240248),
     M = i(409626),
     k = i(880405),
@@ -68,7 +68,7 @@ let el = () =>
     });
 function ea(e) {
     let { detectedGame: t, application: i, entries: a } = e,
-        r = l.useMemo(() => t?.genres.map(L.du).join(", "), [t]),
+        r = l.useMemo(() => t?.genres.map(R.du).join(", "), [t]),
         [o] = l.useState(() => Math.random()),
         d = l.useMemo(() => {
             if (null == t) return "";
@@ -84,9 +84,9 @@ function ea(e) {
             return "";
         }, [t, o]),
         u = (0, O.uJ)(t.iconHash)
-            ? i?.getIconURL(160, w.QB ? "webp" : "png")
-            : w.Ay.getGameAssetURL({ id: t.applicationId, hash: t.iconHash, size: 160, format: w.QB ? "webp" : "png" }),
-        x = R.default.extractTimestamp(i.id),
+            ? i?.getIconURL(160, L.QB ? "webp" : "png")
+            : L.Ay.getGameAssetURL({ id: t.applicationId, hash: t.iconHash, size: 160, format: L.QB ? "webp" : "png" }),
+        x = w.default.extractTimestamp(i.id),
         g = 7 >= c()().diff(c()(x), "days"),
         f = a.some((e) => (0, T.CZ)(e) === m.m.GLOBAL),
         j = t.name ?? i?.name;
@@ -166,7 +166,7 @@ function es(e) {
 }
 function er(e) {
     let { detectedGame: t, application: i, entries: a, isTwoColumn: r } = e,
-        o = l.useMemo(() => t?.genres.map(L.du).join(", "), [t]),
+        o = l.useMemo(() => t?.genres.map(R.du).join(", "), [t]),
         [d] = l.useState(() => Math.random()),
         u = l.useMemo(() => {
             if (null == t) return "";
@@ -182,9 +182,9 @@ function er(e) {
             return "";
         }, [t, d]),
         x = (0, O.uJ)(t.iconHash)
-            ? i?.getIconURL(160, w.QB ? "webp" : "png")
-            : w.Ay.getGameAssetURL({ id: t.applicationId, hash: t.iconHash, size: 160, format: w.QB ? "webp" : "png" }),
-        g = R.default.extractTimestamp(i.id),
+            ? i?.getIconURL(160, L.QB ? "webp" : "png")
+            : L.Ay.getGameAssetURL({ id: t.applicationId, hash: t.iconHash, size: 160, format: L.QB ? "webp" : "png" }),
+        g = w.default.extractTimestamp(i.id),
         f = 7 >= c()().diff(c()(g), "days"),
         j = a.some((e) => (0, T.CZ)(e) === m.m.GLOBAL),
         p = t.name ?? i?.name;
@@ -297,7 +297,7 @@ function ed(e) {
                 ],
             }),
             (0, n.jsx)(X.o, { detectedGame: t, trackClick: a, onInviteResolved: i, closeModal: o }),
-            c && (0, n.jsx)(Z.A, { websites: t.websites, reviews: t.reviews }),
+            c && (0, n.jsx)(Z.A, { detectedGame: t }),
         ],
     });
 }
@@ -342,7 +342,7 @@ function ex(e) {
         d = l.useCallback(() => {
             c(), (0, b.closeUserProfileModal)();
         }, [c]),
-        { analyticsLocations: u } = (0, A.Ay)(v.A.GAME_PROFILE),
+        { analyticsLocations: u } = (0, v.Ay)(A.A.GAME_PROFILE),
         { isCloudPlayButtonShown: m, onCloudPlayClick: x } = em({ applicationId: o, analyticsLocations: u });
     return (0, n.jsxs)("div", {
         className: s()(ei.pz, ei.fi, ei.iH),
@@ -383,7 +383,7 @@ function eg(e) {
         d = l.useCallback(() => {
             c(), (0, b.closeUserProfileModal)();
         }, [c]),
-        { analyticsLocations: m } = (0, A.Ay)(v.A.GAME_PROFILE),
+        { analyticsLocations: m } = (0, v.Ay)(A.A.GAME_PROFILE),
         { isCloudPlayButtonShown: x, onCloudPlayClick: g } = em({ applicationId: o, analyticsLocations: m }),
         f = t.steamReleaseStatus !== u.Y.RETIRED_ABANDONED;
     return (0, n.jsxs)("div", {
@@ -401,7 +401,7 @@ function eg(e) {
                 children: [
                     (0, n.jsx)(Q.A, { detectedGame: t }),
                     (0, n.jsx)(q.A, { detectedGame: t, trackAction: r }),
-                    f && (0, n.jsx)(Z.A, { websites: t.websites, reviews: t.reviews }),
+                    f && (0, n.jsx)(Z.A, { detectedGame: t }),
                     (0, n.jsx)(X.o, { detectedGame: t, trackClick: r, onInviteResolved: i, closeModal: d }),
                     (0, n.jsx)(F.R, { detectedGame: t, trackClick: r }),
                     (0, n.jsx)(K.v, { detectedGame: t }),
@@ -429,15 +429,15 @@ function eh(e) {
         m = (0, x.bG)([G.default], () => G.default.locale),
         g = l.useMemo(() => (0, M.u9)(), []),
         p = (0, x.yK)([y.A], () => (y.A.getSimilarGames(t) ?? []).slice(0, 25)),
-        [v, A] = l.useState(null),
+        [A, v] = l.useState(null),
         E = (0, D.s)(t),
         [S, b] = l.useState(null),
-        w = (0, I.h)(t),
-        L = (0, x.bG)([C.A], () => C.A.getGame(t)),
-        R = L?.name ?? w?.name,
+        L = (0, I.h)(t),
+        R = (0, x.bG)([C.A], () => C.A.getGame(t)),
+        w = R?.name ?? L?.name,
         O = (e, n) => {
             (0, M.Tn)({
-                gameName: R ?? "",
+                gameName: w ?? "",
                 applicationId: t,
                 action: e,
                 similarGameId: n,
@@ -451,7 +451,7 @@ function eh(e) {
             source: i,
             viewId: g,
             applicationId: t,
-            gameName: R ?? "",
+            gameName: w ?? "",
             authorId: a,
             profileType: M.HV.FullProfile,
         }),
@@ -460,17 +460,17 @@ function eh(e) {
     (0, I.A)(p),
     l.useEffect(() => {
         m.startsWith("en") ||
-            L?.summaryLocalized != null ||
+            R?.summaryLocalized != null ||
             f.A.getDetectableGamesSupplemental([t], { forceFetch: !0 });
-    }, [t, L?.summaryLocalized, m]),
+    }, [t, R?.summaryLocalized, m]),
     l.useEffect(() => {
         (async () => {
             if (0 === p.length) {
-                A(null);
+                v(null);
                 try {
                     await (0, k.N)(t);
                 } catch (e) {
-                    A(e);
+                    v(e);
                 }
             }
         })();
@@ -484,14 +484,14 @@ function eh(e) {
         (0, M.V_)({
             viewId: g,
             applicationId: t,
-            gameName: R ?? "",
+            gameName: w ?? "",
             playedFriendIds: E.map((e) => e.author_id),
             playedFriendsData: i,
             similarGames: p.filter(V.oS).slice(0, 5),
             officialGuildId: S?.guild?.id,
         });
     }),
-    null == L || null == w)
+    null == R || null == L)
         ? null
         : (0, n.jsx)(h.dWK, {
               transitionState: r,
@@ -503,8 +503,8 @@ function eh(e) {
                       orientation: "auto",
                       children: [
                           (0, n.jsx)(ea, {
-                              detectedGame: L,
-                              application: w,
+                              detectedGame: R,
+                              application: L,
                               entries: E,
                               trackAction: O,
                               isTwoColumn: !0,
@@ -514,19 +514,19 @@ function eh(e) {
                                   className: s()(ei.Qs, ei.rb),
                                   children: [
                                       (0, n.jsx)(ec, {
-                                          detectedGame: L,
-                                          application: w,
+                                          detectedGame: R,
+                                          application: L,
                                           entries: E,
                                           officialGuildInvite: S,
                                           similarGames: p,
-                                          similarGamesError: v,
+                                          similarGamesError: A,
                                           onClose: c,
                                           viewId: g,
                                           trackAction: O,
                                           source: i,
                                       }),
                                       (0, n.jsx)(ex, {
-                                          detectedGame: L,
+                                          detectedGame: R,
                                           onSetOfficialGuildInvite: b,
                                           officialGuildInvite: S,
                                           trackAction: O,
@@ -557,19 +557,19 @@ function ef(e) {
         { clientThemesClassName: m } = (0, _.Ay)(),
         g = (0, x.bG)([G.default], () => G.default.locale),
         p = l.useMemo(() => (0, M.u9)(), []),
-        v = (0, D.s)(t),
-        [A, E] = l.useState(null),
+        A = (0, D.s)(t),
+        [v, E] = l.useState(null),
         S = (0, I.h)(t),
         b = (0, x.bG)([C.A], () => C.A.getGame(t)),
-        w = b?.name ?? S?.name,
-        L = (e, n) => {
+        L = b?.name ?? S?.name,
+        R = (e, n) => {
             (0, M.Tn)({
-                gameName: w ?? "",
+                gameName: L ?? "",
                 applicationId: t,
                 action: e,
                 similarGameId: n,
                 viewId: p,
-                officialGuildId: A?.guild?.id,
+                officialGuildId: v?.guild?.id,
                 source: i,
             });
         };
@@ -578,7 +578,7 @@ function ef(e) {
             source: i,
             viewId: p,
             applicationId: t,
-            gameName: w ?? "",
+            gameName: L ?? "",
             authorId: a,
             profileType: M.HV.FullProfile,
         }),
@@ -591,21 +591,21 @@ function ef(e) {
         }, [t, b?.summaryLocalized, g]),
         (0, j.Ay)(() => () => {
             let e = Date.now(),
-                i = v.map((t) => {
+                i = A.map((t) => {
                     let i = (0, T.JM)(t) ? (0, T.W6)(t, e) : (0, T.aJ)(t, g);
                     return JSON.stringify({ item_id: t.id, trait: t.traits, time_played: i });
                 });
             (0, M.V_)({
                 viewId: p,
                 applicationId: t,
-                gameName: w ?? "",
-                playedFriendIds: v.map((e) => e.author_id),
+                gameName: L ?? "",
+                playedFriendIds: A.map((e) => e.author_id),
                 playedFriendsData: i,
                 similarGames: [],
-                officialGuildId: A?.guild?.id,
+                officialGuildId: v?.guild?.id,
             });
         });
-    let [R, O] = l.useState(!0),
+    let [w, O] = l.useState(!0),
         k = l.useCallback((e) => {
             e.contentRect.width < 800 ? O(!1) : O(!0);
         }, []),
@@ -617,9 +617,9 @@ function ef(e) {
               onClose: c,
               size: "xxl",
               children: (0, n.jsx)(W.D.Provider, {
-                  value: { isTwoColumn: R },
+                  value: { isTwoColumn: w },
                   children: (0, n.jsx)("div", {
-                      className: s()(m, R ? en.bo : en.Rm),
+                      className: s()(m, w ? en.bo : en.Rm),
                       ref: y,
                       children: (0, n.jsxs)(h.HOs, {
                           orientation: "auto",
@@ -627,21 +627,21 @@ function ef(e) {
                               (0, n.jsx)(er, {
                                   detectedGame: b,
                                   application: S,
-                                  entries: v,
-                                  trackAction: L,
-                                  isTwoColumn: R,
+                                  entries: A,
+                                  trackAction: R,
+                                  isTwoColumn: w,
                               }),
                               (0, n.jsx)(h.Fmo, {
-                                  children: R
+                                  children: w
                                       ? (0, n.jsxs)("div", {
                                             className: en.jC,
                                             children: [
-                                                (0, n.jsx)(eo, { detectedGame: b, trackAction: L }),
+                                                (0, n.jsx)(eo, { detectedGame: b, trackAction: R }),
                                                 (0, n.jsx)(eg, {
                                                     detectedGame: b,
                                                     onSetOfficialGuildInvite: E,
-                                                    officialGuildInvite: A,
-                                                    trackAction: L,
+                                                    officialGuildInvite: v,
+                                                    trackAction: R,
                                                     onClose: c,
                                                     appContext: o,
                                                     applicationId: t,
@@ -654,7 +654,7 @@ function ef(e) {
                                             className: en.b9,
                                             children: (0, n.jsx)(ed, {
                                                 detectedGame: b,
-                                                trackAction: L,
+                                                trackAction: R,
                                                 application: S,
                                                 onSetOfficialGuildInvite: E,
                                                 onClose: c,
