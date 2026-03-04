@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     oO: "popover_f84418",
     W1: "hoverBarButton_f84418",
