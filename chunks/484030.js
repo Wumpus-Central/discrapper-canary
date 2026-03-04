@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { tH: () => s });
-var r = n(64700);
-let i = (0, r.createContext)(null),
-    a = { didCatch: !1, error: null };
-class s extends r.Component {
+r.d(t, { tH: () => a });
+var n = r(64700);
+let o = (0, n.createContext)(null),
+    i = { didCatch: !1, error: null };
+class a extends n.Component {
     constructor(e) {
-        super(e), (this.resetErrorBoundary = this.resetErrorBoundary.bind(this)), (this.state = a);
+        super(e), (this.resetErrorBoundary = this.resetErrorBoundary.bind(this)), (this.state = i);
     }
     static getDerivedStateFromError(e) {
         return { didCatch: !0, error: e };
@@ -13,44 +12,47 @@ class s extends r.Component {
     resetErrorBoundary() {
         let { error: e } = this.state;
         if (null !== e) {
-            for (var t, n, r = arguments.length, i = Array(r), s = 0; s < r; s++) i[s] = arguments[s];
-            null == (t = (n = this.props).onReset) || t.call(n, { args: i, reason: "imperative-api" }),
-                this.setState(a);
+            for (var t, r, n = arguments.length, o = Array(n), a = 0; a < n; a++) o[a] = arguments[a];
+            null == (t = (r = this.props).onReset) || t.call(r, { args: o, reason: "imperative-api" }),
+                this.setState(i);
         }
     }
     componentDidCatch(e, t) {
-        var n, r;
-        null == (n = (r = this.props).onError) || n.call(r, e, t);
+        var r, n;
+        null == (r = (n = this.props).onError) || r.call(n, e, t);
     }
     componentDidUpdate(e, t) {
-        let { didCatch: n } = this.state,
-            { resetKeys: r } = this.props;
-        if (n && null !== t.error && o(e.resetKeys, r)) {
-            var i, s;
-            null == (i = (s = this.props).onReset) || i.call(s, { next: r, prev: e.resetKeys, reason: "keys" }),
-                this.setState(a);
+        let { didCatch: r } = this.state,
+            { resetKeys: n } = this.props;
+        if (
+            r &&
+            null !== t.error &&
+            (function () {
+                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+                    t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+                return e.length !== t.length || e.some((e, r) => !Object.is(e, t[r]));
+            })(e.resetKeys, n)
+        ) {
+            var o, a;
+            null == (o = (a = this.props).onReset) || o.call(a, { next: n, prev: e.resetKeys, reason: "keys" }),
+                this.setState(i);
         }
     }
     render() {
-        let { children: e, fallbackRender: t, FallbackComponent: n, fallback: a } = this.props,
-            { didCatch: s, error: o } = this.state,
-            l = e;
-        if (s) {
-            let e = { error: o, resetErrorBoundary: this.resetErrorBoundary };
-            if ("function" == typeof t) l = t(e);
-            else if (n) l = (0, r.createElement)(n, e);
-            else if (void 0 !== a) l = a;
-            else throw o;
+        let { children: e, fallbackRender: t, FallbackComponent: r, fallback: i } = this.props,
+            { didCatch: a, error: s } = this.state,
+            c = e;
+        if (a) {
+            let e = { error: s, resetErrorBoundary: this.resetErrorBoundary };
+            if ("function" == typeof t) c = t(e);
+            else if (r) c = (0, n.createElement)(r, e);
+            else if (void 0 !== i) c = i;
+            else throw s;
         }
-        return (0, r.createElement)(
-            i.Provider,
-            { value: { didCatch: s, error: o, resetErrorBoundary: this.resetErrorBoundary } },
-            l,
+        return (0, n.createElement)(
+            o.Provider,
+            { value: { didCatch: a, error: s, resetErrorBoundary: this.resetErrorBoundary } },
+            c,
         );
     }
-}
-function o() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-        t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-    return e.length !== t.length || e.some((e, n) => !Object.is(e, t[n]));
 }

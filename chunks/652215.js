@@ -1084,7 +1084,6 @@ let e_ = "",
         USER_PROFILE_APPLICATION_WIDGET_APPLICATION_IDS: "/users/@me/widgets/application-widget-application-ids",
         USER_GUILD_PROFILE: (e, t) => `/guilds/${e}/profile/${t}`,
         USER_CHANNELS: "/users/@me/channels",
-        USER_WARP_LICENSE: "/users/@me/warp/license",
         USER_WISHLIST: (e) => `/wishlists/${e}`,
         USER_WISHLIST_PATCH: (e) => `/users/@me/wishlists/${e}`,
         USER_WISHLIST_ITEMS: "/users/@me/wishlist/items",
@@ -2908,7 +2907,6 @@ var tO = (function (e) {
             (e.ORBS_REWARD_MODAL = "Orbs Reward Modal"),
             (e.ORBS_SHOP_HERO_BLOCK = "Orbs Shop Hero Block"),
             (e.NOTIFICATIONS_INBOX = "Notifications Inbox"),
-            (e.SETTINGS_WARP = "WARP+"),
             e
         );
     })({}),
@@ -3207,7 +3205,6 @@ let tL = { page: "Direct", object: "Web URL" },
         QUEST_PREVIEW_TOOL_2: "Quest Preview Tool 2",
         SECURE_FRAMES: "Secure Frames",
         SECURE_FRAMES_VERIFIED_DEVICES: "Secure Frames Verified Devices",
-        PRIVATE_BROWSING: "WARP+",
         REACTION_NOTIFICATIONS: "Reaction Notifications",
     });
 var tM = (function (e) {
@@ -5186,8 +5183,6 @@ var na = (function (e) {
             (e.NITRO_PRIVATE_BROWSING_SURVEY_RESPONDED = "nitro_privatebrowsing_surveyresponded"),
             (e.NITRO_PRIVACY_UPSELL_PERKS_CLICKED = "nitro_privacy_upsell_perks_clicked"),
             (e.NITRO_PRIVACY_UPSELL_SETTINGS_CLICKED = "nitro_privacy_upsell_settings_clicked"),
-            (e.NITRO_WARP_CTA_CLICKED = "nitro_warp_cta_clicked"),
-            (e.NITRO_WARP_TOGGLED = "nitro_warp_toggled"),
             (e.PREMIUM_FEATURE_ERROR = "premium_feature_error"),
             (e.EMOJI_STUDIO_ENDED = "emoji_studio_ended"),
             (e.PASSWORD_RESET_ACTION = "password_reset_action"),

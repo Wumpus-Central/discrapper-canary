@@ -209,6 +209,5 @@ var i,
         (i.LOGOUT = "LOGOUT"),
         (i.SOCIAL_LINKS = "SOCIAL_LINKS"),
         (i.CLIENT_DEBUG_INFO = "CLIENT_DEBUG_INFO"),
-        (i.PRIVATE_BROWSING_PERK = "PRIVATE_BROWSING_PERK"),
         i);
 let a = [];

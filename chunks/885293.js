@@ -1,55 +1,53 @@
-n.d(t, { default: () => p });
-var a = n(627968);
-n(64700);
-var s = n(484030),
-    i = n(110259),
-    l = n(158954),
-    r = n(397927),
-    o = n(139286),
-    d = n(422230),
-    c = n(954571),
-    u = n(60888),
-    m = n(652215),
-    h = n(985018),
-    x = n(589049);
-function p(e) {
-    let { url: t, trustUrl: n, isProtocol: p, onConfirm: g, onCancel: _, onClose: f, transitionState: v } = e,
+a.d(e, { default: () => x });
+var n = a(627968);
+a(64700);
+var l = a(110259),
+    s = a(158954),
+    r = a(397927),
+    i = a(139286),
+    o = a(954571),
+    c = a(60888),
+    d = a(652215),
+    u = a(985018),
+    m = a(589049);
+function x(t) {
+    let { url: e, trustUrl: a, isProtocol: x, onConfirm: p, onCancel: h, onClose: _, transitionState: C } = t,
         {
-            protocol: b,
-            authorityPrefix: j,
-            hostname: A,
-            theRestOfTheUrl: C,
-            shouldTrustUrl: S,
-            setShouldTrustUrl: T,
-            handleConfirm: y,
-            handleCancel: N,
-        } = (0, u.u)({ url: t, trustUrl: n, onConfirm: g, onCancel: _, onClose: f });
+            protocol: k,
+            authorityPrefix: f,
+            hostname: b,
+            theRestOfTheUrl: g,
+            shouldTrustUrl: A,
+            setShouldTrustUrl: L,
+            handleConfirm: v,
+            handleCancel: D,
+        } = (0, c.u)({ url: e, trustUrl: a, onConfirm: p, onCancel: h, onClose: _ });
     return (
-        (0, o.A)({ type: i.ImpressionTypes.MODAL, name: i.ImpressionNames.MASKED_LINK_MODAL }),
-        (0, a.jsxs)(l.Modal, {
+        (0, i.A)({ type: l.ImpressionTypes.MODAL, name: l.ImpressionNames.MASKED_LINK_MODAL }),
+        (0, n.jsxs)(s.Modal, {
             size: "md",
-            transitionState: v,
-            onClose: f,
-            title: h.intl.string(h.t["3w1QGl"]),
-            subtitle: p ? h.intl.format(h.t.aCYv1z, {}) : h.intl.string(h.t.soRxRe),
+            transitionState: C,
+            onClose: _,
+            title: u.intl.string(u.t["3w1QGl"]),
+            subtitle: x ? u.intl.format(u.t.aCYv1z, {}) : u.intl.string(u.t.soRxRe),
             actions: [
                 {
-                    text: h.intl.string(h.t["/g10LC"]),
+                    text: u.intl.string(u.t["/g10LC"]),
                     onClick: () => {
-                        N(),
-                            c.default.track(m.HAw.MASKED_LINK_MODAL_CLICKED, {
-                                is_trust_url_selected: S,
+                        D(),
+                            o.default.track(d.HAw.MASKED_LINK_MODAL_CLICKED, {
+                                is_trust_url_selected: A,
                                 action_type: "cancel",
                             });
                     },
                     variant: "secondary",
                 },
                 {
-                    text: p ? h.intl.string(h.t.COq6kk) : h.intl.string(h.t.NcJfJG),
+                    text: x ? u.intl.string(u.t.COq6kk) : u.intl.string(u.t.NcJfJG),
                     onClick: () => {
-                        y(),
-                            c.default.track(m.HAw.MASKED_LINK_MODAL_CLICKED, {
-                                is_trust_url_selected: S,
+                        v(),
+                            o.default.track(d.HAw.MASKED_LINK_MODAL_CLICKED, {
+                                is_trust_url_selected: A,
                                 action_type: "confirm",
                             });
                     },
@@ -57,41 +55,40 @@ function p(e) {
                 },
             ],
             children: [
-                (0, a.jsxs)(r.HOs, {
-                    className: x.ul,
+                (0, n.jsxs)(r.HOs, {
+                    className: m.ul,
                     children: [
-                        (0, a.jsxs)(r.Text, {
+                        (0, n.jsxs)(r.Text, {
                             tag: "span",
-                            variant: p ? "text-md/semibold" : "text-md/normal",
-                            color: p ? "text-default" : "text-muted",
-                            children: [b, j],
+                            variant: x ? "text-md/semibold" : "text-md/normal",
+                            color: x ? "text-default" : "text-muted",
+                            children: [k, f],
                         }),
-                        (0, a.jsx)(r.Text, {
+                        (0, n.jsx)(r.Text, {
                             tag: "span",
-                            variant: p ? "text-md/normal" : "text-md/semibold",
-                            color: p ? "text-muted" : "text-default",
-                            children: A,
+                            variant: x ? "text-md/normal" : "text-md/semibold",
+                            color: x ? "text-muted" : "text-default",
+                            children: b,
                         }),
-                        (0, a.jsx)(r.Text, {
+                        (0, n.jsx)(r.Text, {
                             tag: "span",
                             variant: "text-md/normal",
                             color: "text-muted",
-                            children: C,
+                            children: g,
                         }),
                     ],
                 }),
-                (0, a.jsx)("div", {
-                    className: x.F5,
-                    children: (0, a.jsx)(r.Checkbox, {
-                        checked: S,
-                        onChange: (e) => T(e),
-                        label: p
-                            ? h.intl.format(h.t["haA+Xw"], { protocol: b.replace(":", "") })
-                            : h.intl.format(h.t.ZgXDsI, { domain: A }),
+                (0, n.jsx)("div", {
+                    className: m.F5,
+                    children: (0, n.jsx)(r.Checkbox, {
+                        checked: A,
+                        onChange: (t) => L(t),
+                        label: x
+                            ? u.intl.format(u.t["haA+Xw"], { protocol: k.replace(":", "") })
+                            : u.intl.format(u.t.ZgXDsI, { domain: b }),
                         labelType: "secondary",
                     }),
                 }),
-                (0, a.jsx)(s.tH, { fallback: null, children: (0, a.jsx)(d.l, { onClose: f }) }),
             ],
         })
     );

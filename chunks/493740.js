@@ -4,35 +4,34 @@ n.d(t, {
     G3: () => v,
     GS: () => h,
     He: () => m,
-    II: () => O,
+    II: () => b,
     JK: () => p,
     OW: () => A,
     Pm: () => k,
     Qz: () => U,
-    RM: () => Y,
-    T7: () => C,
-    Uc: () => F,
+    RM: () => j,
+    T7: () => N,
     WQ: () => w,
-    Zc: () => M,
-    _V: () => N,
-    _w: () => x,
-    aE: () => R,
-    cS: () => S,
+    Zc: () => P,
+    _V: () => R,
+    _w: () => M,
+    aE: () => O,
+    cS: () => y,
     gQ: () => f,
-    ii: () => g,
+    ii: () => E,
     lx: () => T,
-    nI: () => y,
+    nI: () => S,
     nh: () => I,
     sj: () => D,
-    u6: () => V,
-    x: () => P,
-    z0: () => E,
-    zL: () => b,
+    u6: () => F,
+    x: () => x,
+    z0: () => g,
+    zL: () => C,
 });
 var r = n(83790),
     i = n(626584),
-    a = n(125584),
-    s = n(124856),
+    s = n(125584),
+    a = n(124856),
     o = n(276767),
     l = n(594579),
     u = n(788868);
@@ -43,7 +42,7 @@ function d(e, t) {
         let n = u.u0[t.premiumType];
         if (null == n)
             return c.warn(`Cannot find the corresponding SKU to the user's premium type ${t.premiumType}`), !1;
-        let r = B[n];
+        let r = V[n];
         if (null == r)
             return (
                 c.warn(
@@ -57,7 +56,7 @@ function d(e, t) {
     }
     return !1;
 }
-class _ extends s.A {
+class _ extends a.A {
     constructor(e, t) {
         super(e, (e) => d(this, e), t);
     }
@@ -66,72 +65,70 @@ let f = new _(r.w.ANIMATED_EMOJIS),
     p = new _(r.w.EMOJIS_EVERYWHERE),
     h = new _(r.w.STICKERS_EVERYWHERE),
     m = new _(r.w.SOUNDBOARD_EVERYWHERE),
-    g = new _(r.w.CUSTOM_CALL_SOUNDS),
-    E = new _(r.w.PREMIUM_VOICE_FILTERS),
+    E = new _(r.w.CUSTOM_CALL_SOUNDS),
+    g = new _(r.w.PREMIUM_VOICE_FILTERS),
     A = new _(r.w.ANIMATED_AVATAR),
     I = new _(r.w.CUSTOM_DISCRIMINATOR),
     T = new _(r.w.PREMIUM_GUILD_MEMBER_PROFILE),
-    y = new _("profileBadges"),
-    S = new _(r.w.PROFILE_PREMIUM_FEATURES, "custom banner and avatar decoration"),
+    S = new _("profileBadges"),
+    y = new _(r.w.PROFILE_PREMIUM_FEATURES, "custom banner and avatar decoration"),
     v = new _("collectibles"),
-    C = new _("appIcons"),
-    b = new _(r.w.CLIENT_THEMES),
-    N = new _("boostDiscount"),
-    R = new _("freeBoosts"),
-    O = new _(r.w.STREAM_MID_QUALITY),
+    N = new _("appIcons"),
+    C = new _(r.w.CLIENT_THEMES),
+    R = new _("boostDiscount"),
+    O = new _("freeBoosts"),
+    b = new _(r.w.STREAM_MID_QUALITY),
     D = new _(r.w.STREAM_HIGH_QUALITY),
     L = new _(r.w.CUSTOM_NOTIFICATION_SOUNDS),
     w = new _("fancyVoiceChannelReactions"),
-    x = new _("installPremiumApplications"),
-    P = new _("redeemPremiumPerks"),
-    M = new _(r.w.VIDEO_FILTER_ASSETS);
-new s.A(r.w.INCREASED_FILE_UPLOAD_SIZE, a.f);
+    M = new _("installPremiumApplications"),
+    x = new _("redeemPremiumPerks"),
+    P = new _(r.w.VIDEO_FILTER_ASSETS);
+new a.A(r.w.INCREASED_FILE_UPLOAD_SIZE, s.f);
 let k = new _(r.w.INCREASED_GUILD_LIMIT),
     U = new _(r.w.INCREASED_MESSAGE_LENGTH),
     G = new _("increasedVideoUploadQuality"),
-    V = new _("uploadLargeFiles"),
-    F = new _("warpPrivateBrowsing"),
-    B = Object.freeze({
-        [u.pe.TIER_0]: new l.A(u.pe.TIER_0, [f, p, h, y, M, G, V, C]),
-        [u.pe.TIER_1]: new l.A(u.pe.TIER_1, [f, p, A, I, y, N, O, w, G, V, C]),
+    F = new _("uploadLargeFiles"),
+    V = Object.freeze({
+        [u.pe.TIER_0]: new l.A(u.pe.TIER_0, [f, p, h, S, P, G, F, N]),
+        [u.pe.TIER_1]: new l.A(u.pe.TIER_1, [f, p, A, I, S, R, b, w, G, F, N]),
         [u.pe.TIER_2]: new l.A(u.pe.TIER_2, [
             f,
             p,
             h,
             m,
-            g,
+            E,
             A,
             I,
             T,
-            y,
             S,
-            b,
-            N,
+            y,
+            C,
             R,
             O,
+            b,
             D,
             w,
+            M,
             x,
             P,
-            M,
             k,
             U,
             G,
-            V,
-            C,
+            F,
+            N,
             v,
             L,
-            E,
-            F,
+            g,
         ]),
     }),
-    j = [N, R, F],
-    H = [F];
-function Y(e, t, n) {
+    B = [R, O],
+    H = [];
+function j(e, t, n) {
     return (
         !(
             (0, o.Z)("canUserUse", t) ||
-            (null != t && t.isPremiumWithFractionalPremiumOnly() && j.includes(e)) ||
+            (null != t && t.isPremiumWithFractionalPremiumOnly() && B.includes(e)) ||
             (n && H.includes(e))
         ) && e.getFeatureValue(t)
     );
