@@ -19,4 +19,3 @@ var i,
         (i.GAME_SERVERS = "game-servers"),
         (i.GAME_SERVERS_EMPTY = "game-servers-empty"),
         i);
-/^(14256|21552)$/.test(n.j);

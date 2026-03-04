@@ -6,4 +6,5 @@ e.exports = {
     Vo: "settingNudgeText__4e30a",
     L: "voiceChannelGiftingBreadcrumb__4e30a",
     Nh: "voiceChannelRewardOfferNotice__4e30a",
+    iA: "isStandardGap__4e30a",
 };
