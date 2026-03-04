@@ -1,4 +1,4 @@
-t.d(l, { E: () => f, e: () => I });
+t.d(l, { E: () => E, e: () => y });
 var r = t(64700),
     o = t(735438),
     n = t(528226),
@@ -11,15 +11,15 @@ var r = t(64700),
     h = t(673277),
     p = t(700263),
     m = t(304973),
-    b = t(18769),
-    C = t(458306),
-    g = t(282203),
-    _ = t(22519),
-    k = t(607795),
+    _ = t(18769),
+    b = t(458306),
+    S = t(282203),
+    T = t(22519),
+    C = t(607795),
     A = t(954644),
-    S = t(930948),
-    y = t(634791);
-let f = {
+    g = t(930948),
+    k = t(634791);
+let E = {
         ContainedHero: n.A,
         BasicHero: (e) => {
             let { bannerSrc: l } = e;
@@ -35,25 +35,26 @@ let f = {
         BackgroundImage: a.A,
         Skeleton: p.A,
         FeaturedChip: m.A,
-        FeaturedCollection: b.A,
+        FeaturedCollection: _.A,
         FeaturedProduct: () => null,
         ShopProductCard: A.A,
-        StorefrontProductCard: S.A,
-        SkuList: g.A,
-        SubLayout: _.A,
-        SubTemplate: k.A,
-        Button: C.ar,
-        Heading: C.Oo,
-        Stack: C.Kp,
-        Text: C.t,
-        Any1: y.A,
-        Any2: y.A,
-        Any3: y.A,
+        StorefrontProductCard: g.A,
+        SkuList: S.A,
+        SubLayout: T.A,
+        SubTemplate: C.A,
+        Button: b.ar,
+        Heading: b.Oo,
+        Stack: b.Kp,
+        Text: b.t,
+        Tooltip: b.xY,
+        Any1: k.A,
+        Any2: k.A,
+        Any3: k.A,
     },
-    I = function () {
+    y = function () {
         let { overrides: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         return r.useMemo(() => {
-            let l = (0, o.cloneDeep)(f);
+            let l = (0, o.cloneDeep)(E);
             if (null != e) for (let [t, r] of Object.entries(e)) null != r && (l[t] = r);
             return l;
         }, [e]);
