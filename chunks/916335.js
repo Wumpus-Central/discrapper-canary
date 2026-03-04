@@ -56,59 +56,41 @@ function O() {
         ),
         u = (0, s.bG)([r.A], () => r.A.messageGroupSpacing);
     return (0, n.jsx)(a.M1G, {
-        children: (0, n.jsx)("section", {
-            "aria-label": c.intl.string(c.t.RC22qg),
-            children: (0, n.jsxs)(a.IpV, {
-                className: _.VH,
-                children: [
-                    (0, n.jsx)("ol", {
-                        className: _.DZ,
-                        style: { gap: u },
-                        "aria-label": c.intl.string(c.t.xfjsEV),
-                        children: i.map((e) =>
-                            (0, n.jsx)(
-                                "li",
-                                {
-                                    children: (0, n.jsx)(A.A, {
-                                        message: e,
-                                        channel: I,
-                                        compact: t,
-                                        author: { ...(0, d.p_)(e), colorString: "#dd80f4" },
-                                    }),
-                                },
-                                e.id,
-                            ),
+        children: (0, n.jsxs)(a.IpV, {
+            className: _.VH,
+            children: [
+                (0, n.jsx)("div", {
+                    className: _.DZ,
+                    style: { gap: u },
+                    children: i.map((e) =>
+                        (0, n.jsx)(
+                            A.A,
+                            { message: e, channel: I, compact: t, author: { ...(0, d.p_)(e), colorString: "#dd80f4" } },
+                            e.id,
                         ),
-                    }),
-                    (0, n.jsxs)("div", {
-                        className: _.Jb,
-                        children: [
-                            (0, n.jsx)("div", {
-                                className: _.HD,
-                                children: C.map((t) => {
-                                    let { status: e, discriminator: i, mobile: l = !1 } = t;
-                                    return (0, n.jsx)(
-                                        a.euF,
-                                        {
-                                            status: e,
-                                            isMobile: l,
-                                            size: a._3J.SIZE_32,
-                                            src: S.Ay.getDefaultAvatarURL(void 0, i),
-                                            "aria-label": c.intl.string(c.t.VKE5TK),
-                                        },
-                                        e,
-                                    );
-                                }),
-                            }),
-                            (0, n.jsx)(a.Button, {
-                                text: c.intl.string(c.t["2RHHgz"]),
-                                size: "sm",
-                                variant: "primary",
-                            }),
-                        ],
-                    }),
-                ],
-            }),
+                    ),
+                }),
+                (0, n.jsxs)("div", {
+                    className: _.HD,
+                    children: [
+                        C.map((t) => {
+                            let { status: e, discriminator: i, mobile: l = !1 } = t;
+                            return (0, n.jsx)(
+                                a.euF,
+                                {
+                                    status: e,
+                                    isMobile: l,
+                                    size: a._3J.SIZE_32,
+                                    src: S.Ay.getDefaultAvatarURL(void 0, i),
+                                    "aria-hidden": !0,
+                                },
+                                e,
+                            );
+                        }),
+                        (0, n.jsx)(a.Button, { text: c.intl.string(c.t["2RHHgz"]), size: "sm", variant: "primary" }),
+                    ],
+                }),
+            ],
         }),
     });
 }
