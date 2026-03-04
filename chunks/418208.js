@@ -1,46 +1,47 @@
 "use strict";
-n.d(t, { Cf: () => _, PI: () => h, Vv: () => f, o$: () => d, tp: () => p, zU: () => c });
-var r = n(311907),
-    i = n(36149),
-    a = n(191541),
-    s = n(734057),
-    o = n(576705),
-    l = n(309010),
-    u = n(818348);
-function c() {
-    let e = (0, i.yM)();
-    return (0, a.f)("useIsStageSpeakingDisabledForCurrentUser") && e;
-}
+n.d(t, { Cf: () => f, PI: () => m, Vv: () => p, o$: () => _, tp: () => h, zU: () => d });
+var r = n(687123),
+    i = n(311907),
+    s = n(36149),
+    a = n(207560),
+    o = n(734057),
+    l = n(576705),
+    u = n(309010),
+    c = n(818348);
 function d() {
-    let e = (0, i.NI)();
-    return (0, a.W)("isStageSpeakingDisabledForCurrentUser") && e;
+    let e = (0, s.yM)();
+    return (0, a.aX)(r.t.STAGE_SPEAKING) && e;
 }
-function _(e) {
-    let t = (0, i.$8)(),
-        n = null != e ? e : l.A.getChannelId(),
-        r = null != n ? s.A.getChannel(n) : null,
-        c = null != r && o.A.can(u.xB.REQUEST_TO_SPEAK, r);
-    return (0, a.W)("shouldAgeVerifyToSpeakForCurrentUser") && !t && c;
+function _() {
+    let e = (0, s.NI)();
+    return (0, a.d6)(r.t.STAGE_SPEAKING) && e;
 }
 function f(e) {
-    let t = null != e ? e : l.A.getChannelId(),
-        n = (0, r.bG)([o.A, s.A], () => {
-            let e = null != t ? s.A.getChannel(t) : null;
-            return null != e && o.A.can(u.xB.REQUEST_TO_SPEAK, e);
-        }, [t]),
-        c = (0, i.uE)();
-    return (0, a.f)("useShouldAgeVerifyToSpeakForCurrentUser") && !c && n;
+    let t = (0, s.$8)(),
+        n = null != e ? e : u.A.getChannelId(),
+        i = null != n ? o.A.getChannel(n) : null,
+        d = null != i && l.A.can(c.xB.REQUEST_TO_SPEAK, i);
+    return (0, a.d6)(r.t.STAGE_SPEAKING) && !t && d;
 }
 function p(e) {
-    let t = null != e ? e : l.A.getChannelId(),
-        n = (0, r.bG)([o.A, s.A], () => {
-            let e = null != t ? s.A.getChannel(t) : null;
-            return null != e && o.A.can(u.xB.REQUEST_TO_SPEAK, e);
+    let t = null != e ? e : u.A.getChannelId(),
+        n = (0, i.bG)([l.A, o.A], () => {
+            let e = null != t ? o.A.getChannel(t) : null;
+            return null != e && l.A.can(c.xB.REQUEST_TO_SPEAK, e);
         }, [t]),
-        c = (0, i.b8)();
-    return (0, a.f)("useShouldShowAgeVerificationPopover") && !c && n;
+        d = (0, s.uE)();
+    return (0, a.aX)(r.t.STAGE_SPEAKING) && !d && n;
 }
-function h() {
-    let e = (0, i.uE)();
-    return (0, a.f)("useShouldShowAgeVerificationForEvent") && !e;
+function h(e) {
+    let t = null != e ? e : u.A.getChannelId(),
+        n = (0, i.bG)([l.A, o.A], () => {
+            let e = null != t ? o.A.getChannel(t) : null;
+            return null != e && l.A.can(c.xB.REQUEST_TO_SPEAK, e);
+        }, [t]),
+        d = (0, s.b8)();
+    return (0, a.aX)(r.t.STAGE_SPEAKING) && !d && n;
+}
+function m() {
+    let e = (0, s.uE)();
+    return (0, a.aX)(r.t.STAGE_SPEAKING) && !e;
 }

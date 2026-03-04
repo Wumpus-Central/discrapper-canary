@@ -10,6 +10,7 @@ var r = (function (e) {
         (e[(e.LARGE_SERVER_ACCESS = 16)] = "LARGE_SERVER_ACCESS"),
         (e[(e.COMMANDS_TOGGLE = 32)] = "COMMANDS_TOGGLE"),
         (e[(e.REACTIVE_CHECK = 64)] = "REACTIVE_CHECK"),
+        (e[(e.STAGE_SPEAKING = 128)] = "STAGE_SPEAKING"),
         e
     );
 })({});
