@@ -20,6 +20,7 @@ function d(e) {
         profilePreview: l,
         profilePreviewTitle: d,
         nameplatePreview: u,
+        stickyPreview: _ = !0,
     } = e;
     return (0, i.jsx)("div", {
         className: a()(o.UA, n),
@@ -27,7 +28,7 @@ function d(e) {
             className: a()(o.yt, s),
             children: [
                 (0, i.jsx)("div", {
-                    className: o.Fp,
+                    className: a()(o.Fp, _ && o.Oz),
                     children: (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)(c, { title: d ?? r.intl.string(r.t.Zb06yP), children: l }),
