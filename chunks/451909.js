@@ -32,10 +32,9 @@ var r = n(735438),
     w = n(652215),
     M = n(307731),
     x = n(985018);
-function P(e, t, n) {
-    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-    if (t[0] !== e) return null;
-    let i = t.substr(e.length);
+function P(e, t, n, r) {
+    if (t[0] !== e) return;
+    let i = t.substring(e.length);
     return n
         .sortBy((e) => {
             let { text: t } = e;
@@ -56,19 +55,18 @@ function P(e, t, n) {
         .first();
 }
 function k(e, t, n) {
-    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-    if (t[0] !== e) return null;
-    if ('"' !== t[1]) return P(e, t, n, r);
-    let i = 2;
-    for (; i < t.length; i++) {
-        if ("\\" === t[i]) {
-            i++;
+    if (t[0] !== e) return;
+    if ('"' !== t[1]) return P(e, t, n, "channel");
+    let r = 2;
+    for (; r < t.length; r++) {
+        if ("\\" === t[r]) {
+            r++;
             continue;
         }
-        if ('"' === t[i]) break;
+        if ('"' === t[r]) break;
     }
-    let s = t.substring(0, i + 1),
-        a = (0, l.LG)(t.substring(2, i));
+    let i = t.substring(0, r + 1),
+        s = (0, l.LG)(t.substring(2, r));
     return n
         .sortBy((e) => {
             let { text: t } = e;
@@ -76,11 +74,11 @@ function k(e, t, n) {
         })
         .filter((e) => {
             let { text: t } = e;
-            return a === t;
+            return s === t;
         })
         .map((e) => {
             let { id: t } = e;
-            return [s, t, r];
+            return [i, t, "channel"];
         })
         .first();
 }
@@ -114,9 +112,10 @@ let F = _.A.RULES,
                 let r = n.split(" ").pop() + e;
                 if ($.test(r)) return null;
                 let i = P("@", e, t.users, "mention");
-                if (i || (i = P("@", e, t.mentionableRoles, "roleMention"))) return i;
+                if (null != i || null != (i = P("@", e, t.mentionableRoles, "roleMention"))) return i;
                 if (
-                    !(i = P(
+                    null ==
+                    (i = P(
                         "@",
                         e,
                         t.users.map((e) => ({ ...e, text: e.text.split("#")[0] })),
@@ -138,7 +137,10 @@ let F = _.A.RULES,
                 return "roleMention" === n && (r += "&"), { type: n, content: `<${r}${t}>` };
             },
         },
-        channel: { match: (e, t) => k("#", e, t.channels), parse: (e) => ({ type: "text", content: `<#${e[1]}>` }) },
+        channel: {
+            match: (e, t) => k("#", e, t.channels) ?? null,
+            parse: (e) => ({ type: "text", content: `<#${e[1]}>` }),
+        },
         emoticon: {
             match(e, t, n) {
                 if (!E.j7.getSetting() || (0 !== n.length && !/\s$/.test(n))) return null;
