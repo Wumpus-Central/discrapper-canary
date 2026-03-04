@@ -1,54 +1,55 @@
-n.d(t, { A: () => _ });
+"use strict";
+n.d(t, { A: () => p });
 var i = n(627968);
 n(64700);
-var r = n(311907),
+var s = n(311907),
     l = n(827734),
     a = n(990078),
-    s = n(397927),
+    r = n(397927),
     o = n(775602),
-    d = n(890687),
-    c = n(92246),
+    c = n(890687),
+    d = n(92246),
     u = n(792620),
-    A = n(793683),
-    h = n(985018);
-function _(e) {
-    let { quest: t, questContent: n, sourceQuestContent: _, onClose: m } = e,
-        p = (0, d.LS)(t),
-        g = (0, r.bG)([o.A], () => o.A.useReducedMotion),
-        E = null != (0, c._Z)(t.config),
-        I = (0, u.vv)(t),
-        f = (0, A.v)({
+    h = n(793683),
+    A = n(985018);
+function p(e) {
+    let { quest: t, questContent: n, sourceQuestContent: p, onClose: m } = e,
+        g = (0, c.LS)(t),
+        _ = (0, s.bG)([o.A], () => o.A.useReducedMotion),
+        f = null != (0, d._Z)(t.config),
+        x = (0, u.vv)(t),
+        C = (0, h.v)({
             quest: t,
             questContent: n,
-            sourceQuestContent: _,
+            sourceQuestContent: p,
             onCloseModal: m,
             shouldShowShopIfAlreadyClaimed: !0,
         }),
-        C =
+        E =
             t.userStatus?.claimedAt != null
-                ? E
-                    ? h.intl.string(h.t.WYchde)
-                    : h.intl.string(h.t.vTgCWx)
-                : h.intl.string(h.t.cfY4PE),
-        T =
+                ? f
+                    ? A.intl.string(A.t.WYchde)
+                    : A.intl.string(A.t.vTgCWx)
+                : A.intl.string(A.t.cfY4PE),
+        I =
             t.userStatus?.completedAt == null
-                ? p
-                    ? h.intl.string(h.t.NJ6Bnm)
-                    : I
-                      ? h.intl.string(h.t.USNO1K)
-                      : h.intl.string(h.t["9MnkEh"])
+                ? g
+                    ? A.intl.string(A.t.NJ6Bnm)
+                    : x
+                      ? A.intl.string(A.t.USNO1K)
+                      : A.intl.string(A.t["9MnkEh"])
                 : void 0;
     return (0, i.jsx)(a.m, {
-        text: T,
+        text: I,
         children: (0, i.jsx)("div", {
-            children: (0, i.jsx)(s.Button, {
+            children: (0, i.jsx)(r.Button, {
                 variant: "secondary",
                 fullWidth: !0,
                 icon: ((e, t) => {
                     if (e.userStatus?.claimedAt == null)
                         return {
                             type: "rive",
-                            asset: s.Vs8,
+                            asset: r.Vs8,
                             riveProps: {
                                 withReducedMotion: "play",
                                 dataBinding: {
@@ -58,9 +59,9 @@ function _(e) {
                                 },
                             },
                         };
-                })(t, g),
-                onClick: f,
-                text: C,
+                })(t, _),
+                onClick: C,
+                text: E,
                 disabled: t.userStatus?.completedAt == null,
             }),
         }),

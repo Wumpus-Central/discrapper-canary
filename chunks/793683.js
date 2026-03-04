@@ -1,19 +1,20 @@
-n.d(t, { v: () => u });
-var r = n(64700),
-    l = n(793574),
-    i = n(979286),
-    s = n(92246),
-    a = n(201805),
+"use strict";
+n.d(t, { v: () => c });
+var i = n(64700),
+    s = n(793574),
+    l = n(979286),
+    a = n(92246),
+    r = n(201805),
     o = n(758836);
-function u(e) {
-    let { quest: t, questContent: n, sourceQuestContent: u, onCloseModal: c, shouldShowShopIfAlreadyClaimed: d } = e,
-        m = (0, a.ix)({ quest: t, questContent: n, sourceQuestContent: u });
-    return r.useCallback(
+function c(e) {
+    let { quest: t, questContent: n, sourceQuestContent: c, onCloseModal: d, shouldShowShopIfAlreadyClaimed: u } = e,
+        h = (0, r.ix)({ quest: t, questContent: n, sourceQuestContent: c });
+    return i.useCallback(
         (e) => {
-            (0, s.ks)(t.config) && t.userStatus?.claimedAt != null && d
-                ? (c?.(e), (0, i.Cz)({ tab: o.G2.ORBS, analyticsLocations: [], analyticsSource: l.A.QUEST_HOME_PAGE }))
-                : ((0, s.K9)(t.config) && c?.(e), m());
+            (0, a.ks)(t.config) && t.userStatus?.claimedAt != null && u
+                ? (d?.(e), (0, l.Cz)({ tab: o.G2.ORBS, analyticsLocations: [], analyticsSource: s.A.QUEST_HOME_PAGE }))
+                : ((0, a.K9)(t.config) && d?.(e), h());
         },
-        [t.config, t.userStatus?.claimedAt, m, d, c],
+        [t.config, t.userStatus?.claimedAt, h, u, d],
     );
 }

@@ -1,62 +1,63 @@
+"use strict";
 n.d(t, { A: () => m });
 var i = n(627968),
-    r = n(64700),
+    s = n(64700),
     l = n(158954),
     a = n(397927),
-    s = n(341915),
+    r = n(341915),
     o = n(18437),
-    d = n(590202),
-    c = n(453384),
+    c = n(590202),
+    d = n(453384),
     u = n(646764),
-    A = n(545986),
-    h = n(985018),
-    _ = n(554703);
+    h = n(545986),
+    A = n(985018),
+    p = n(554703);
 function m(e) {
-    let { quest: t, questDescription: n, completedRatio: m, minimizeFrame: p, onClose: g } = e,
-        E = (0, o.Ut)(),
-        I = r.useCallback(() => {
-            E({
+    let { quest: t, questDescription: n, completedRatio: m, minimizeFrame: g, onClose: _ } = e,
+        f = (0, o.Ut)(),
+        x = s.useCallback(() => {
+            f({
                 questId: t.id,
-                questContent: s.uF.RUNNING_ACTIVITY,
-                questContentCTA: d.Cy.LEARN_MORE,
-                sourceQuestContent: s.uF.RUNNING_ACTIVITY,
+                questContent: r.uF.RUNNING_ACTIVITY,
+                questContentCTA: c.Cy.LEARN_MORE,
+                sourceQuestContent: r.uF.RUNNING_ACTIVITY,
             }),
-                (0, A.navigateToQuestHome)({ fromContent: s.uF.RUNNING_ACTIVITY, questId: t.id }),
-                p(),
-                g();
-        }, [t.id, E, p, g]);
+                (0, h.navigateToQuestHome)({ fromContent: r.uF.RUNNING_ACTIVITY, questId: t.id }),
+                g(),
+                _();
+        }, [t.id, f, g, _]);
     return (0, i.jsxs)("div", {
-        className: _.kL,
+        className: p.kL,
         children: [
             (0, i.jsxs)("div", {
-                className: _.wx,
+                className: p.wx,
                 children: [
                     (0, i.jsx)(l.EYj, {
                         variant: "text-md/semibold",
                         color: "text-strong",
-                        children: h.intl.formatToPlainString(h.t.EAYZAr, { questName: t.config.messages.questName }),
+                        children: A.intl.formatToPlainString(A.t.EAYZAr, { questName: t.config.messages.questName }),
                     }),
                     (0, i.jsx)(a.DUT, {
-                        className: _.b,
-                        "aria-label": h.intl.string(h.t.cpT0Cq),
-                        onClick: g,
+                        className: p.b,
+                        "aria-label": A.intl.string(A.t.cpT0Cq),
+                        onClick: _,
                         children: (0, i.jsx)(a.PGe, { size: "sm", color: "currentColor" }),
                     }),
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: _.rf,
+                className: p.rf,
                 children: [
-                    (0, i.jsx)(c.A, {
+                    (0, i.jsx)(d.A, {
                         size: 48,
                         style: "default",
                         percentComplete: m,
                         children: (0, i.jsx)(u.A, {
                             quest: t,
-                            questContent: s.uF.RUNNING_ACTIVITY,
-                            sourceQuestContent: s.uF.RUNNING_ACTIVITY,
+                            questContent: r.uF.RUNNING_ACTIVITY,
+                            sourceQuestContent: r.uF.RUNNING_ACTIVITY,
                             autoplay: !1,
-                            className: _.Qq,
+                            className: p.Qq,
                         }),
                     }),
                     (0, i.jsx)(l.EYj, { variant: "text-sm/normal", color: "text-muted", children: n }),
@@ -64,10 +65,10 @@ function m(e) {
             }),
             (0, i.jsx)(l.$nd, {
                 fullWidth: !0,
-                text: h.intl.string(h.t.LLLLPD),
+                text: A.intl.string(A.t.LLLLPD),
                 variant: "secondary",
                 size: "md",
-                onClick: I,
+                onClick: x,
             }),
         ],
     });
