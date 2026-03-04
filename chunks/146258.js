@@ -8,4 +8,6 @@ e.exports = {
     gr: "oneColumnCoverArtStoreLinksSummaryContainer__81040",
     E1: "oneColumnStoreLinksSummaryContainer__81040",
     FS: "oneColumnCoverArt__81040",
+    lM: "twoColumnLeftMediaSummaryContainer__81040",
+    oC: "twoColumnLeftSections__81040",
 };
