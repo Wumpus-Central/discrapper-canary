@@ -1,96 +1,95 @@
 "use strict";
-n.d(t, { A: () => b });
+n.d(t, { A: () => N });
 var r = n(627968),
     i = n(503698),
-    a = n.n(i),
-    s = n(284009),
-    o = n.n(s),
+    s = n.n(i),
+    a = n(284009),
+    o = n.n(a),
     l = n(158954),
     u = n(311907),
-    c = n(827734),
-    d = n(397927),
-    _ = n(824552),
-    f = n(975807),
-    p = n(933958),
-    h = n(869003),
-    m = n(793574),
-    g = n(688810),
-    E = n(429913),
-    A = n(793943),
-    I = n(134861),
-    T = n(147964),
-    y = n(362490),
+    c = n(397927),
+    d = n(824552),
+    _ = n(933958),
+    f = n(869003),
+    p = n(793574),
+    h = n(688810),
+    m = n(429913),
+    E = n(793943),
+    g = n(134861),
+    A = n(147964),
+    I = n(362490),
+    T = n(487431),
     S = n(271469),
-    v = n(985018),
-    C = n(410758);
-function b() {
-    let e = (0, E.h)(T.A.testModeApplicationId),
-        { analyticsLocations: t } = (0, g.Ay)(m.A.SDK_DEBUG_TOOLS),
+    y = n(985018),
+    v = n(410758);
+function N() {
+    let e = (0, m.h)(A.A.testModeApplicationId),
+        { analyticsLocations: t } = (0, h.Ay)(p.A.SDK_DEBUG_TOOLS),
         {
             canStartAuthorization: n,
             hasAlreadyLinked: i,
-            startAuthorization: s,
-            chosenFlow: c,
-            connectionApp: f,
-            debug: { isSubscribedToAuthorizeRequest: b, oauth2Token: O, hasConnectionEntrypointUrl: D, validFlows: L },
-        } = (0, y.RD)(e, { debug: !0 }),
-        w = (0, u.bG)([I.A], () => null != e && I.A.isConnected(e.id)),
-        x = (0, u.bG)([p.Ay], () => p.Ay.getSelfEmbeddedActivities()),
-        P = "authorization_debug",
-        M = [{ id: "authorization_debug", name: v.intl.string(S.default.vR0zs6) }],
-        k = () =>
+            startAuthorization: a,
+            chosenFlow: N,
+            connectionApp: C,
+            debug: { isSubscribedToAuthorizeRequest: R, oauth2Token: O, hasConnectionEntrypointUrl: b, validFlows: D },
+        } = (0, I.RD)(e, { debug: !0 }),
+        L = (0, u.bG)([g.A], () => null != e && g.A.isConnected(e.id)),
+        w = (0, u.bG)([_.Ay], () => _.Ay.getSelfEmbeddedActivities()),
+        M = "authorization_debug",
+        x = [{ id: "authorization_debug", name: y.intl.string(S.default.vR0zs6) }],
+        P = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)("div", {
-                        className: C.wx,
+                        className: v.wx,
                         children: (0, r.jsx)("div", {
-                            className: C.if,
+                            className: v.if,
                             children: (0, r.jsx)(l.DZT, {
                                 variant: "heading-lg/extrabold",
-                                children: v.intl.format(S.default.KoK4J9, { appName: "" }),
+                                children: y.intl.format(S.default.KoK4J9, { appName: "" }),
                             }),
                         }),
                     }),
-                    (0, r.jsx)("div", { className: C.rf, children: (0, r.jsx)(l.y$y, { className: C.u1 }) }),
+                    (0, r.jsx)("div", { className: v.rf, children: (0, r.jsx)(l.y$y, { className: v.u1 }) }),
                 ],
             }),
-        U = () => (
+        k = () => (
             o()(null != e, "Application should be defined when rendering the test mode panel"),
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)("div", {
-                        className: C.wx,
+                        className: v.wx,
                         children: [
                             (0, r.jsx)("div", {
-                                className: C.if,
+                                className: v.if,
                                 children: (0, r.jsx)(l.DZT, {
                                     variant: "heading-lg/extrabold",
-                                    children: v.intl.format(S.default.KoK4J9, { appName: e.name }),
+                                    children: y.intl.format(S.default.KoK4J9, { appName: e.name }),
                                 }),
                             }),
                             (0, r.jsx)(l.K0, {
                                 variant: "icon-only",
                                 icon: l.UlM,
                                 "aria-label": "Close",
-                                onClick: () => (0, A.Jp)(),
+                                onClick: () => (0, E.Jp)(),
                             }),
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: C.rf,
+                        className: v.rf,
                         children: [
-                            (0, r.jsx)(d.VQ0, {
-                                className: C.$H,
-                                selectedItem: P,
+                            (0, r.jsx)(c.VQ0, {
+                                className: v.$H,
+                                selectedItem: M,
                                 onItemSelect: () => {},
                                 orientation: "horizontal",
                                 type: "top",
                                 look: "brand",
-                                children: M.map((e) =>
+                                children: x.map((e) =>
                                     (0, r.jsx)(
-                                        d.VQ0.Item,
+                                        c.VQ0.Item,
                                         {
-                                            className: a()(C.Mf, { [C.wH]: e.id === P }),
+                                            className: s()(v.Mf, { [v.wH]: e.id === M }),
                                             id: e.id,
                                             "aria-label": e.name,
                                             children: e.name,
@@ -102,81 +101,84 @@ function b() {
                             (0, r.jsx)(l.EYj, {
                                 variant: "text-md/medium",
                                 color: "text-subtle",
-                                children: v.intl.string(S.default["no+FQS"]),
+                                children: y.intl.string(S.default["no+FQS"]),
                             }),
-                            (0, r.jsx)(N, {
-                                overallStatus: b ? 0 : w ? 3 : 1,
-                                name: v.intl.string(S.default.AGLx00),
+                            (0, r.jsx)(T.VT, {
+                                overallStatus: R ? T.nW.OVERALL_GOOD : L ? T.nW.WARN : T.nW.OVERALL_BAD,
+                                name: y.intl.string(S.default.AGLx00),
                                 steps: [
                                     {
-                                        status: w ? 2 : 4,
-                                        text: v.intl.string(S.default.kxF9br),
-                                        description: w ? null : v.intl.string(S.default.PFxxJa),
-                                        learnMoreLink: w
+                                        status: L ? T.nW.GOOD : T.nW.BAD,
+                                        text: y.intl.string(S.default.kxF9br),
+                                        description: L ? null : y.intl.string(S.default.PFxxJa),
+                                        learnMoreLink: L
                                             ? null
                                             : "https://discord.com/developers/docs/discord-social-sdk/how-to/debug-log",
                                     },
                                     {
-                                        status: b ? 2 : w ? 3 : 4,
-                                        text: v.intl.string(S.default.S94dzs),
-                                        description: b || !w ? null : v.intl.string(S.default.aTULMB),
+                                        status: R ? T.nW.GOOD : L ? T.nW.WARN : T.nW.BAD,
+                                        text: y.intl.string(S.default.S94dzs),
+                                        description: R || !L ? null : y.intl.string(S.default.aTULMB),
                                         learnMoreLink:
-                                            b || !w
+                                            R || !L
                                                 ? null
                                                 : "https://discord.com/developers/docs/discord-social-sdk/how-to/debug-log",
                                     },
                                 ],
-                                isChosen: c === y._M.RPC,
+                                isChosen: N === I._M.RPC,
                             }),
-                            (0, r.jsx)(N, {
-                                overallStatus: +!D,
-                                name: v.intl.string(S.default.K3ObrU),
+                            (0, r.jsx)(T.VT, {
+                                overallStatus: b ? T.nW.OVERALL_GOOD : T.nW.OVERALL_BAD,
+                                name: y.intl.string(S.default.K3ObrU),
                                 steps: [
                                     {
-                                        status: D ? 2 : 4,
-                                        text: v.intl.string(S.default["8a7IrV"]),
-                                        description: D
-                                            ? v.intl.formatToPlainString(S.default["9iLeL2"], {
-                                                  url: f?.connectionEntrypointUrl,
+                                        status: b ? T.nW.GOOD : T.nW.BAD,
+                                        text: y.intl.string(S.default["8a7IrV"]),
+                                        description: b
+                                            ? y.intl.formatToPlainString(S.default["9iLeL2"], {
+                                                  url: C?.connectionEntrypointUrl,
                                               })
                                             : null,
                                     },
                                 ],
-                                isChosen: c === y._M.WEB,
+                                isChosen: N === I._M.WEB,
                             }),
                         ],
                     }),
                     (0, r.jsxs)("div", {
-                        className: C.qr,
+                        className: v.qr,
                         children: [
-                            (0, r.jsx)(R, { status: +!i, text: v.intl.string(v.t["Vu/zmQ"]) }),
-                            0 === L.length &&
+                            (0, r.jsx)(T.Sy, {
+                                status: i ? T.nW.OVERALL_GOOD : T.nW.OVERALL_BAD,
+                                text: y.intl.string(y.t["Vu/zmQ"]),
+                            }),
+                            0 === D.length &&
                                 (0, r.jsx)(l.EYj, {
                                     style: { minWidth: 0, overflow: "hidden" },
                                     variant: "text-md/medium",
-                                    children: v.intl.string(S.default.eg0mNa),
+                                    children: y.intl.string(S.default.eg0mNa),
                                 }),
                             (0, r.jsx)(l.$nd, {
                                 variant: "secondary",
                                 disabled: !n || i,
-                                onClick: () => s({ analyticsLocations: t }),
-                                text: v.intl.string(S.default.w0pN4R),
+                                onClick: () => a({ analyticsLocations: t }),
+                                text: y.intl.string(S.default.w0pN4R),
                                 fullWidth: !0,
                             }),
                             null != O &&
                                 (0, r.jsx)(l.$nd, {
                                     variant: "secondary",
                                     onClick: () => {
-                                        _.A.delete(O.id);
-                                        let t = x.get(e.id);
+                                        d.A.delete(O.id);
+                                        let t = w.get(e.id);
                                         null != t &&
-                                            h.A.leaveActivity({
+                                            f.A.leaveActivity({
                                                 location: t.location,
                                                 applicationId: e.id,
                                                 showFeedback: !1,
                                             });
                                     },
-                                    text: v.intl.string(S.default.tkIymA),
+                                    text: y.intl.string(S.default.tkIymA),
                                     fullWidth: !0,
                                 }),
                         ],
@@ -186,74 +188,7 @@ function b() {
         );
     return (0, r.jsx)("div", {
         "data-app-right-panel": !0,
-        className: C.nE,
-        children: (0, r.jsx)(l.Fmo, { children: null != e ? U() : k() }),
+        className: v.nE,
+        children: (0, r.jsx)(l.Fmo, { children: null != e ? k() : P() }),
     });
-}
-function N(e) {
-    let { overallStatus: t, name: n, steps: i, isChosen: a } = e;
-    return (0, r.jsxs)("div", {
-        className: C.Wk,
-        children: [
-            (0, r.jsx)(R, { status: t, text: n }),
-            i.map((e, t) => (0, r.jsx)(O, { ...e }, t)),
-            a &&
-                (0, r.jsx)("div", {
-                    className: C.MH,
-                    children: (0, r.jsx)(l.EYj, {
-                        variant: "text-sm/medium",
-                        color: "text-subtle",
-                        children: v.intl.string(S.default.OEkrCx),
-                    }),
-                }),
-        ],
-    });
-}
-function R(e) {
-    let { text: t, status: n } = e;
-    return (0, r.jsxs)("div", {
-        className: C.Km,
-        children: [
-            (0, r.jsx)(l.EYj, { variant: "text-md/semibold", color: "text-subtle", children: t }),
-            (0, r.jsx)(D, { status: n }),
-        ],
-    });
-}
-function O(e) {
-    let { status: t, text: n, description: i, learnMoreLink: a } = e;
-    return (0, r.jsxs)("div", {
-        className: C.jf,
-        children: [
-            (0, r.jsx)(D, { status: t }),
-            (0, r.jsxs)("div", {
-                className: C.bc,
-                children: [
-                    (0, r.jsx)(l.EYj, { variant: "text-md/medium", children: n }),
-                    null != i && (0, r.jsx)(l.EYj, { variant: "text-sm/medium", color: "text-subtle", children: i }),
-                    null != a &&
-                        (0, r.jsx)(l.QWc, {
-                            textVariant: "text-sm/medium",
-                            text: v.intl.string(v.t.hvVgAZ),
-                            onClick: () => (0, f.A)(a),
-                        }),
-                ],
-            }),
-        ],
-    });
-}
-function D(e) {
-    let { status: t } = e,
-        n = { size: "sm", className: C.I8 };
-    switch (t) {
-        case 0:
-            return (0, r.jsx)(l.yr3, { ...n, color: c.A.colors.ICON_FEEDBACK_POSITIVE });
-        case 1:
-            return (0, r.jsx)(l.aXh, { ...n, color: c.A.colors.ICON_FEEDBACK_CRITICAL });
-        case 2:
-            return (0, r.jsx)(l.Uzd, { ...n, color: c.A.colors.ICON_FEEDBACK_POSITIVE });
-        case 3:
-            return (0, r.jsx)(l.id, { ...n, color: c.A.colors.ICON_FEEDBACK_WARNING });
-        case 4:
-            return (0, r.jsx)(l.PGe, { ...n, color: c.A.colors.ICON_FEEDBACK_CRITICAL });
-    }
 }
