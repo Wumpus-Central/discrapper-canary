@@ -1,4 +1,4 @@
-l.d(e, { default: () => N });
+l.d(e, { default: () => T });
 var n = l(627968),
     i = l(64700),
     s = l(284009),
@@ -6,87 +6,90 @@ var n = l(627968),
     a = l(158954),
     o = l(311907),
     d = l(397927),
-    u = l(923408),
-    c = l(859241),
+    c = l(923408),
+    u = l(43594),
+    m = l(859241),
     x = l(71393),
-    m = l(178368),
-    h = l(954571),
+    h = l(178368),
+    g = l(954571),
     C = l(473145),
-    g = l(976200),
-    j = l(770101),
+    j = l(976200),
+    v = l(770101),
     p = l(879100),
-    v = l(652215),
-    S = l(568065),
-    f = l(985018),
-    A = l(449838);
-let N = (t) => {
-    let { guildBoostSlots: e, selectedGuild: l, locationSection: s, intent: N, transitionState: T, onClose: y } = t,
-        E = (0, C.D$)(m.A.boostSlots);
+    f = l(592918),
+    S = l(652215),
+    A = l(568065),
+    N = l(985018),
+    y = l(449838);
+let T = (t) => {
+    let { guildBoostSlots: e, selectedGuild: l, locationSection: s, intent: T, transitionState: b, onClose: E } = t,
+        P = (0, u.D)("ApplyGuildBoostModal"),
+        w = (0, C.D$)(h.A.boostSlots);
     r()(null != e || null != l, "Must either provide slots or an initial selected guild"),
         r()(!e?.some((t) => t.isOnCooldown()), "If slots are provided, they must not be on cooldown");
-    let b = [
+    let G = [
             null == e ? "UNUSED_QUANTITY_SELECT" : null,
             null == l ? "GUILD_SELECT" : null,
             "CONFIRM",
             "SUCCESS",
         ].filter((t) => null != t),
-        [w, I] = (0, o.yK)([c.A], () => [c.A.isModifyingAppliedBoost, c.A.applyBoostError]),
-        [L, P] = i.useState(b[0]),
-        [U, G] = i.useState(!1),
-        [M, _] = i.useState(l),
-        [D, k] = i.useState(e ?? E.slice(0, 1)),
-        B = i.useMemo(
+        [I, L] = (0, o.yK)([m.A], () => [m.A.isModifyingAppliedBoost, m.A.applyBoostError]),
+        [M, k] = i.useState(G[0]),
+        [U, _] = i.useState(!1),
+        [D, R] = i.useState(l),
+        [F, B] = i.useState(e ?? w.slice(0, 1)),
+        z = i.useMemo(
             () =>
-                null == D
+                null == F
                     ? []
-                    : D.map((t) => {
+                    : F.map((t) => {
                           let { premiumGuildSubscription: e } = t;
                           return x.A.getGuild(e?.guildId);
                       }).filter((t) => null != t),
-            [D],
+            [F],
         ),
-        F = i.useMemo(() => D?.[0]?.premiumGuildSubscription != null, [D]),
-        R = () => (
-            y("SUCCESS" === L),
-            h.default.track(v.HAw.MODAL_DISMISSED, { type: v.JJy.PREMIUM_GUILD_SUBSCRIBE_MODAL, location_section: s }),
+        O = i.useMemo(() => F?.[0]?.premiumGuildSubscription != null, [F]),
+        V = () => (
+            E("SUCCESS" === M),
+            g.default.track(S.HAw.MODAL_DISMISSED, { type: S.JJy.PREMIUM_GUILD_SUBSCRIBE_MODAL, location_section: s }),
             Promise.resolve()
         );
     i.useEffect(() => {
-        h.default.track(v.HAw.OPEN_MODAL, { type: v.JJy.PREMIUM_GUILD_SUBSCRIBE_MODAL, location_section: s });
+        g.default.track(S.HAw.OPEN_MODAL, { type: S.JJy.PREMIUM_GUILD_SUBSCRIBE_MODAL, location_section: s });
     }, [s]);
-    let O = {
+    let K = {
         UNUSED_QUANTITY_SELECT: () => (
-            r()(null != e || 0 !== E.length, "Cannot provide no slots if there are no other available slots"),
+            r()(null != e || 0 !== w.length, "Cannot provide no slots if there are no other available slots"),
             (0, n.jsx)(a.Modal, {
-                transitionState: T,
-                onClose: R,
+                transitionState: b,
+                onClose: V,
                 size: "md",
-                title: f.intl.string(f.t["9FFrrT"]),
+                title: N.intl.string(N.t["9FFrrT"]),
                 actions: [
-                    { variant: "secondary", text: f.intl.string(f.t["1BPTsK"]), onClick: R },
-                    { variant: "primary", text: f.intl.string(f.t["/uwYda"]), onClick: () => P("CONFIRM") },
+                    { variant: "secondary", text: N.intl.string(N.t["1BPTsK"]), onClick: V },
+                    { variant: "primary", text: N.intl.string(N.t["/uwYda"]), onClick: () => k("CONFIRM") },
                 ],
                 children: (0, n.jsxs)("div", {
-                    className: A.pS,
+                    className: y.pS,
                     children: [
                         (0, n.jsx)(d.Text, {
                             variant: "text-md/normal",
-                            className: A.TH,
-                            children: f.intl.string(f.t.x5qw5U),
+                            className: y.TH,
+                            children: N.intl.string(N.t.x5qw5U),
                         }),
                         (0, n.jsxs)("div", {
-                            className: A.g9,
+                            className: y.g9,
                             children: [
                                 (0, n.jsx)(d.lw3, {
-                                    value: D.length,
-                                    onChange: (t) => k(E.slice(0, t)),
+                                    value: F.length,
+                                    onChange: (t) => B(w.slice(0, t)),
                                     minValue: 1,
-                                    maxValue: E.length,
+                                    maxValue: w.length,
                                 }),
                                 (0, n.jsx)(d.Text, {
-                                    className: A.v$,
+                                    className: y.v$,
                                     variant: "text-md/normal",
-                                    children: f.intl.string(f.t["Vl8TC+"]),
+                                    children: N.intl.string(N.t["Vl8TC+"]),
                                 }),
                             ],
                         }),
@@ -95,104 +98,116 @@ let N = (t) => {
             })
         ),
         GUILD_SELECT: () =>
-            (0, n.jsx)(j.default, {
-                onClose: R,
+            (0, n.jsx)(v.default, {
+                onClose: V,
                 onSelectGuild: (t) => {
-                    _(t), P("CONFIRM");
+                    R(t), k("CONFIRM");
                 },
-                transitionState: T,
-                isTransfer: F,
-                selectedSlotGuilds: B,
+                transitionState: b,
+                isTransfer: O,
+                selectedSlotGuilds: z,
             }),
         CONFIRM() {
-            if (null == M) return null;
-            let t = D.filter((t) => (0, C.I5)(t)).length,
-                e = D.length,
-                l = B.length,
-                i = "CONFIRM" === b[0] ? R : () => P(b[b.indexOf(L) - 1]),
+            if (null == D) return null;
+            let t = F.filter((t) => (0, C.I5)(t)).length,
+                e = F.length,
+                l = z.length,
+                i = "CONFIRM" === G[0] ? V : () => k(G[G.indexOf(M) - 1]),
                 s = async () => {
-                    if ((G(!1), null != M && D?.length !== 0)) {
+                    if ((_(!1), null != D && F?.length !== 0)) {
                         r()(
-                            !D.some((t) => t.isOnCooldown()),
+                            !F.some((t) => t.isOnCooldown()),
                             "Cannot use a premium guild subscription slot while on cooldown",
                         );
                         try {
                             await Promise.all(
-                                D.map((t) => {
+                                F.map((t) => {
                                     let { premiumGuildSubscription: e } = t;
-                                    return null != e ? (0, u.jZ)(e.guildId, e.id) : Promise.resolve();
+                                    return null != e ? (0, c.jZ)(e.guildId, e.id) : Promise.resolve();
                                 }),
                             ),
-                                await (0, u.VA)(
-                                    M.id,
-                                    D.map((t) => {
+                                await (0, c.VA)(
+                                    D.id,
+                                    F.map((t) => {
                                         let { id: e } = t;
                                         return e;
                                     }),
-                                    N === S.Pn.PERK,
+                                    T === A.Pn.PERK,
                                 ),
-                                P("SUCCESS");
+                                k("SUCCESS");
                         } catch (t) {
-                            G(!0);
+                            _(!0);
                         }
                     }
                 },
-                o = F ? f.intl.string(f.t["PR0n//"]) : f.intl.string(f.t["7KP/fI"]);
-            return (0, n.jsx)(a.Modal, {
-                transitionState: T,
-                onClose: R,
-                size: "md",
-                title: o,
-                actions: [
-                    { variant: "secondary", text: f.intl.string(f.t["ETE/oC"]), onClick: i },
-                    {
-                        variant: "primary",
-                        text: F
-                            ? f.intl.formatToPlainString(f.t.Oh6mxU, { slotCount: e })
-                            : f.intl.formatToPlainString(f.t.ZU5x5w, { slotCount: e }),
-                        onClick: s,
-                        loading: w,
-                        disabled: w,
-                    },
-                ],
-                children: F
-                    ? (0, n.jsx)(g.A.TransferBody, {
-                          fromGuilds: B,
-                          toGuild: M,
-                          blurb: f.intl.formatToPlainString(f.t.SSA2lu, { slotCount: e, guildCount: l }),
-                          imageClass: A.LA,
-                          error: U ? I : null,
-                          slotCount: e,
-                          canceledCount: t,
-                      })
-                    : (0, n.jsx)(g.A.ApplyBody, {
-                          guild: M,
-                          blurb: f.intl.string(f.t.yTlZV0),
-                          warning: f.intl.formatToPlainString(f.t.KPnDlu, { days: v.FI6, slotCount: e }),
-                          imageClass: A.MP,
-                          error: U ? I : null,
-                          slotCount: e,
-                          canceledCount: t,
-                      }),
-            });
+                o = O ? N.intl.string(N.t["PR0n//"]) : N.intl.string(N.t["7KP/fI"]);
+            return O && "control" !== P
+                ? (0, n.jsx)(f.A, {
+                      transitionState: b,
+                      toGuild: D,
+                      fromGuilds: z,
+                      slotCount: e,
+                      canceledCount: t,
+                      isModifyingSubscription: I,
+                      error: U ? L : null,
+                      onConfirm: s,
+                      onClose: V,
+                  })
+                : (0, n.jsx)(a.Modal, {
+                      transitionState: b,
+                      onClose: V,
+                      size: "md",
+                      title: o,
+                      actions: [
+                          { variant: "secondary", text: N.intl.string(N.t["ETE/oC"]), onClick: i },
+                          {
+                              variant: "primary",
+                              text: O
+                                  ? N.intl.formatToPlainString(N.t.Oh6mxU, { slotCount: e })
+                                  : N.intl.formatToPlainString(N.t.ZU5x5w, { slotCount: e }),
+                              onClick: s,
+                              loading: I,
+                              disabled: I,
+                          },
+                      ],
+                      children: O
+                          ? (0, n.jsx)(j.A.TransferBody, {
+                                fromGuilds: z,
+                                toGuild: D,
+                                blurb: N.intl.formatToPlainString(N.t.SSA2lu, { slotCount: e, guildCount: l }),
+                                imageClass: y.LA,
+                                error: U ? L : null,
+                                slotCount: e,
+                                canceledCount: t,
+                            })
+                          : (0, n.jsx)(j.A.ApplyBody, {
+                                guild: D,
+                                blurb: N.intl.string(N.t.yTlZV0),
+                                warning: N.intl.formatToPlainString(N.t.KPnDlu, { days: S.FI6, slotCount: e }),
+                                imageClass: y.MP,
+                                error: U ? L : null,
+                                slotCount: e,
+                                canceledCount: t,
+                            }),
+                  });
         },
         SUCCESS() {
-            let t = F ? f.intl.string(f.t["PR0n//"]) : f.intl.string(f.t["7KP/fI"]);
+            let t = O ? N.intl.string(N.t["PR0n//"]) : N.intl.string(N.t["7KP/fI"]);
             return (0, n.jsx)(a.Modal, {
-                transitionState: T,
-                onClose: R,
+                transitionState: b,
+                onClose: V,
                 size: "md",
                 title: t,
                 actions: [],
                 children: (0, n.jsx)(p.WE, {
-                    guild: M,
-                    isTransfer: F,
-                    guildBoostQuantity: D.length,
-                    onClose: R,
+                    guild: D,
+                    isTransfer: O,
+                    guildBoostQuantity: F.length,
+                    onClose: V,
                     didPurchaseOnFractionalPremium: !1,
                 }),
             });
         },
-    }[L];
-    return null == O ? null : O();
+    }[M];
+    return null == K ? null : K();
 };
