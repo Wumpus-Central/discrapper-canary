@@ -1,37 +1,41 @@
-n.d(t, { v: () => a });
+n.d(t, { v: () => r });
 var i = n(627968),
     s = n(397927),
-    r = n(244242);
-function a(e) {
+    a = n(791498),
+    l = n(244242);
+function r(e) {
     let { node: t } = e,
         {
             useValue: n,
-            setValue: a,
-            useTitle: l,
-            useSubtitle: o,
-            useDisabled: c,
-            useDisabledMessage: d,
-            useBadge: u,
-            hasIcon: _,
+            setValue: r,
+            useTitle: o,
+            useSubtitle: c,
+            useDisabled: d,
+            useDisabledMessage: u,
+            useBadge: _,
+            hasIcon: m,
         } = t,
-        m = l(),
-        A = o?.(),
-        g = n(),
-        E = c?.() ?? !1,
-        h = d?.(),
-        p = u?.();
-    return (0, i.jsxs)(r.L, {
+        A = o(),
+        g = c?.(),
+        h = n(),
+        x = d?.() ?? !1,
+        p = u?.(),
+        E = _?.(),
+        C = (0, a.q)(t);
+    return (0, i.jsxs)(l.L, {
         children: [
             (0, i.jsx)(s.dOG, {
-                label: m,
-                description: A,
-                badge: p,
-                checked: g,
-                hasIcon: _,
-                onChange: (e) => a(e),
-                disabled: E,
+                label: A,
+                description: g,
+                badge: E,
+                checked: h,
+                hasIcon: m,
+                onChange: (e) => {
+                    C(), r(e);
+                },
+                disabled: x,
             }),
-            E && null != h ? (0, i.jsx)(s.po8, { messageType: s.YCn.WARNING, children: h }) : null,
+            x && null != p ? (0, i.jsx)(s.po8, { messageType: s.YCn.WARNING, children: p }) : null,
         ],
     });
 }
