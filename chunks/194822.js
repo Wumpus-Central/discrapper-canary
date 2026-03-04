@@ -17,12 +17,17 @@ let i = (0, n.m6)() ? { [a.C8]: { "dummy-shop-home": a.uG, "dummy-orb-shelf": a.
     T = function (e) {
         let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             t = Object.entries(l)
+                .sort((e, l) => {
+                    let [t] = e,
+                        [r] = l;
+                    return t.localeCompare(r);
+                })
                 .map((e) => {
                     let [l, t] = e;
                     return `${l}:${t}`;
                 })
                 .join("-");
-        return `${e}-${t}`;
+        return "" !== t ? `${e}-${t}` : e;
     };
 class C extends r.Ay.Store {
     static displayName = "CmsLayoutStore";
