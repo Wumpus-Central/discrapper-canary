@@ -7,15 +7,15 @@ n.d(t, {
     Li: () => l,
     Ni: () => _,
     RN: () => o,
-    ds: () => b,
-    eg: () => C,
-    pd: () => E,
+    ds: () => C,
+    eg: () => N,
+    pd: () => g,
 }),
     n(321073);
 var r = n(64700),
     i = n(397927),
-    a = n(77350),
-    s = n(940622),
+    s = n(77350),
+    a = n(940622),
     o = (function (e) {
         return (
             (e.CATALOG_BANNER_STATIC = "catalog_banner.jpg"),
@@ -36,6 +36,7 @@ var r = n(64700),
             (e.SHOP_BUTTON_BG_RESTING_DARK = "shop_button_bg_resting_dark.png"),
             (e.SHOP_BUTTON_BG_RESTING_LIGHT = "shop_button_bg_resting_light.png"),
             (e.COACHTIP_AVATAR = "coachtip_avatar.png"),
+            (e.TAB_TOOLTIP = "tab_tooltip.png"),
             (e.LOGO = "logo.png"),
             (e.MOBILE_BANNER = "mobile_banner.jpg"),
             (e.MOBILE_BACKGROUND = "mobile_bg.jpg"),
@@ -76,8 +77,8 @@ let _ = (e) => {
         for (let n of e) p(n, t);
     },
     m = (e, t) => `${e}/${t}`,
-    g = (e) => (0, a.tT)(e.type) || (0, a.XB)(e.type) || (0, a.XA)(e.name),
-    E = (e) => (l.has(e.name) ? e.name : null),
+    E = (e) => (0, s.tT)(e.type) || (0, s.XB)(e.type) || (0, s.XA)(e.name),
+    g = (e) => (l.has(e.name) ? e.name : null),
     A = async (e) => {
         let t = [];
         if (e.isFile) {
@@ -93,7 +94,7 @@ let _ = (e) => {
         return t;
     },
     I = (e, t, n) => {
-        g(t) || t.name.endsWith(".txt")
+        E(t) || t.name.endsWith(".txt")
             ? (e in n.profileEffectFilesMap || (n.profileEffectFilesMap[e] = []), n.profileEffectFilesMap[e].push(t))
             : n.ignoredFilenames.push(m(e, t.name));
     },
@@ -102,7 +103,7 @@ let _ = (e) => {
         let i = m(e, t.name);
         "profile_effects" === n
             ? I(e, t, r)
-            : g(t)
+            : E(t)
               ? "collection" === n || null === n
                   ? l.has(t.name)
                       ? r.collectionFiles.push(t)
@@ -112,24 +113,24 @@ let _ = (e) => {
                     : r.ignoredFilenames.push(i)
               : r.ignoredFilenames.push(i);
     },
-    y = async (e, t, n) => {
+    S = async (e, t, n) => {
         let r = e.createReader();
         for (let i of await new Promise((e) => r.readEntries(e)))
             if (i.isFile) {
                 let r = i,
-                    a = await new Promise((e) => r.file(e));
-                T(e.name, a, t, n);
+                    s = await new Promise((e) => r.file(e));
+                T(e.name, s, t, n);
             } else {
                 let e = await A(i);
                 n.ignoredFilenames.push(...e.map((e) => m(i.name, e.name)));
             }
     },
-    S = async (e, t) => {
+    y = async (e, t) => {
         let n = e.createReader();
         for (let r of await new Promise((e) => n.readEntries(e)))
             if (r.isDirectory) {
                 let e = r;
-                await y(e, "profile_effects", t);
+                await S(e, "profile_effects", t);
             } else r.isFile && r.name !== c && t.ignoredFilenames.push(m(e.name, r.name));
     },
     v = async (e, t) => {
@@ -137,25 +138,25 @@ let _ = (e) => {
         for (let e of await new Promise((e) => n.readEntries(e)))
             if (e.isDirectory) {
                 let n = e;
-                if ("collection" === n.name) await y(n, "collection", t);
-                else if ("avatar_decorations" === n.name) await y(n, "avatar_decorations", t);
-                else if ("profile_effects" === n.name) await S(n, t);
+                if ("collection" === n.name) await S(n, "collection", t);
+                else if ("avatar_decorations" === n.name) await S(n, "avatar_decorations", t);
+                else if ("profile_effects" === n.name) await y(n, t);
                 else {
                     let e = await A(n);
                     t.ignoredFilenames.push(...e.map((e) => m(n.name, e.name)));
                 }
             }
     },
-    C = async (e) => {
+    N = async (e) => {
         let t = { collectionFiles: [], avatarDecorationFiles: [], profileEffectFilesMap: {}, ignoredFilenames: [] };
         for (let n of e)
             if (n.isDirectory) {
                 let e = n,
                     r = e.name;
                 "collection" === r || "avatar_decorations" === r
-                    ? await y(e, r, t)
+                    ? await S(e, r, t)
                     : "profile_effects" === r
-                      ? await S(e, t)
+                      ? await y(e, t)
                       : await v(e, t);
             } else if (n.isFile) {
                 let e = n;
@@ -168,22 +169,22 @@ let _ = (e) => {
             t
         );
     },
-    b = () => {
+    C = () => {
         let [e, t] = r.useState(() => ({
                 collectionFiles: [],
                 avatarDecorationFiles: [],
                 profileEffectFilesMap: {},
                 ignoredFilenames: [],
             })),
-            { upsertCollectionAsset: n, upsertAvatarDecorationAsset: i } = (0, s.JE)(),
-            a = r.useCallback(
+            { upsertCollectionAsset: n, upsertAvatarDecorationAsset: i } = (0, a.JE)(),
+            s = r.useCallback(
                 async (e) => {
-                    let r = await C(e);
+                    let r = await N(e);
                     t(r),
                         (0 !== r.collectionFiles.length || 0 !== r.avatarDecorationFiles.length) &&
                             (r.collectionFiles.forEach((e) => {
                                 p(e, (e) => {
-                                    let t = E(e);
+                                    let t = g(e);
                                     null != t && n(t, e);
                                 });
                             }),
@@ -205,6 +206,6 @@ let _ = (e) => {
             ignoredFilenames: e.ignoredFilenames,
             clearAssets: o,
             clearIgnoredFilenames: l,
-            processAndUpsertAssets: a,
+            processAndUpsertAssets: s,
         };
     };

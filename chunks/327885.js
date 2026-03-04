@@ -1,13 +1,13 @@
 n.d(t, { y: () => _ });
 var a = n(64700),
-    s = n(559474);
-let i = new Set([
-        s.RN.HERO_BANNER_STATIC,
-        s.RN.HERO_LOGO,
-        s.RN.PDP_BACKGROUND,
-        s.RN.LOGO,
-        s.RN.MOBILE_BANNER,
-        s.RN.MOBILE_BACKGROUND,
+    i = n(559474);
+let s = new Set([
+        i.RN.HERO_BANNER_STATIC,
+        i.RN.HERO_LOGO,
+        i.RN.PDP_BACKGROUND,
+        i.RN.LOGO,
+        i.RN.MOBILE_BANNER,
+        i.RN.MOBILE_BACKGROUND,
     ]),
     l = ["intro", "idle", "reduced_motion", "static", "thumbnail"],
     r = { max: 5e6, warn: 2e6 },
@@ -16,29 +16,30 @@ let i = new Set([
     c = { max: 1e6, warn: 5e5 },
     u = { max: 25e4, warn: 5e4 },
     m = {
-        [s.Jn.PROFILE_EFFECT]: r,
-        [s.Jn.AVATAR_DECORATION]: o,
-        [s.RN.HERO_BANNER_ANIMATED]: r,
-        [s.RN.HERO_BANNER_RIVE]: r,
-        [s.RN.CATALOG_BANNER_RIVE]: r,
-        [s.RN.SHOP_BUTTON_BG_HOVER]: o,
-        [s.RN.SHOP_BUTTON_BG_HOVER_DARK]: o,
-        [s.RN.SHOP_BUTTON_BG_HOVER_LIGHT]: o,
-        [s.RN.SHOP_BUTTON_BG_RESTING]: o,
-        [s.RN.SHOP_BUTTON_BG_RESTING_DARK]: o,
-        [s.RN.SHOP_BUTTON_BG_RESTING_LIGHT]: o,
-        [s.RN.HERO_BANNER_STATIC]: d,
-        [s.RN.UPSELL_BANNER]: c,
-        [s.RN.UPSELL_BANNER_POPOUT]: u,
-        [s.RN.MOBILE_BANNER]: c,
-        [s.RN.MOBILE_BACKGROUND]: u,
-        [s.RN.MOBILE_HERO]: c,
-        [s.RN.PDP_BACKGROUND]: u,
-        [s.RN.LOGO]: u,
-        [s.RN.COACHTIP_AVATAR]: u,
+        [i.Jn.PROFILE_EFFECT]: r,
+        [i.Jn.AVATAR_DECORATION]: o,
+        [i.RN.HERO_BANNER_ANIMATED]: r,
+        [i.RN.HERO_BANNER_RIVE]: r,
+        [i.RN.CATALOG_BANNER_RIVE]: r,
+        [i.RN.SHOP_BUTTON_BG_HOVER]: o,
+        [i.RN.SHOP_BUTTON_BG_HOVER_DARK]: o,
+        [i.RN.SHOP_BUTTON_BG_HOVER_LIGHT]: o,
+        [i.RN.SHOP_BUTTON_BG_RESTING]: o,
+        [i.RN.SHOP_BUTTON_BG_RESTING_DARK]: o,
+        [i.RN.SHOP_BUTTON_BG_RESTING_LIGHT]: o,
+        [i.RN.HERO_BANNER_STATIC]: d,
+        [i.RN.UPSELL_BANNER]: c,
+        [i.RN.UPSELL_BANNER_POPOUT]: u,
+        [i.RN.MOBILE_BANNER]: c,
+        [i.RN.MOBILE_BACKGROUND]: u,
+        [i.RN.MOBILE_HERO]: c,
+        [i.RN.PDP_BACKGROUND]: u,
+        [i.RN.LOGO]: u,
+        [i.RN.COACHTIP_AVATAR]: u,
+        [i.RN.TAB_TOOLTIP]: u,
     },
     h = async (e) => {
-        let t = Object.values(s.Kx),
+        let t = Object.values(i.Kx),
             n = new Set(),
             a = e.createReader();
         for (let e of await new Promise((e) => a.readEntries(e))) e.isDirectory && t.includes(e.name) && n.add(e.name);
@@ -47,21 +48,21 @@ let i = new Set([
     x = (e) => {
         let { names: t, addError: n } = e,
             a = /^[a-z0-9]+(_[a-z0-9]+)*(\.[a-z0-9]+)?$/,
-            s = t.filter((e) => !a.test(e));
-        s.length > 0 && n("File names must be in lowercase snake case", s);
+            i = t.filter((e) => !a.test(e));
+        i.length > 0 && n("File names must be in lowercase snake case", i);
     },
     p = (e, t, n, a) => {
-        let s = t.size,
-            i = s > 1e6 ? `${(s / 1e6).toFixed(2)}MB` : `${(s / 1e3).toFixed(2)}KB`,
-            l = `${t.name} - ${i}`;
-        if (s > e.max) {
+        let i = t.size,
+            s = i > 1e6 ? `${(i / 1e6).toFixed(2)}MB` : `${(i / 1e3).toFixed(2)}KB`,
+            l = `${t.name} - ${s}`;
+        if (i > e.max) {
             let t = e.max > 1e6 ? `${Math.round(e.max / 1e6)}MB` : `${Math.round(e.max / 1e3)}KB`;
             n("Files exceed the recommended size limit - make sure they are optimized!", [`${l} (max: ${t})`]);
-        } else s > e.warn && a("Files are a tad chonky - are you sure they're optimized?", [`${l}`]);
+        } else i > e.warn && a("Files are a tad chonky - are you sure they're optimized?", [`${l}`]);
     },
     g = (e, t, n, a) => {
-        let s = m[e];
-        if (null != s) for (let e of t) e.name.endsWith(".txt") || p(s, e, n, a);
+        let i = m[e];
+        if (null != i) for (let e of t) e.name.endsWith(".txt") || p(i, e, n, a);
     },
     _ = () => {
         let [e, t] = a.useState(!1),
@@ -98,20 +99,20 @@ let i = new Set([
                         if (!t.isDirectory) return void c("Uploaded a file. Expected a directory.");
                         let a = await h(t);
                         if (a.length > 0) return void c("Missing required directories", a);
-                        (n = await (0, s.eg)([t])),
+                        (n = await (0, i.eg)([t])),
                             ((e) => {
                                 let { files: t, addError: n, addWarning: a } = e;
                                 for (let e of t.collectionFiles) {
-                                    let t = (0, s.pd)(e),
-                                        i = null != t ? m[t] : null;
-                                    null != i && p(i, e, n, a);
+                                    let t = (0, i.pd)(e),
+                                        s = null != t ? m[t] : null;
+                                    null != s && p(s, e, n, a);
                                 }
                                 x({ names: t.collectionFiles.map((e) => e.name), addError: n });
                                 let l = new Set(t.collectionFiles.map((e) => e.name)),
-                                    r = Array.from(i).filter((e) => !l.has(e));
+                                    r = Array.from(s).filter((e) => !l.has(e));
                                 r.length > 0 && n("Missing required files", r);
-                                let o = Object.values(s.RN)
-                                    .filter((e) => !i.has(e))
+                                let o = Object.values(i.RN)
+                                    .filter((e) => !s.has(e))
                                     .filter((e) => !l.has(e));
                                 o.length > 0 && a("Missing optional assets", o);
                             })({ files: n, addError: c, addWarning: u }),
@@ -119,8 +120,8 @@ let i = new Set([
                                 let { files: t, addError: n, addWarning: a } = e;
                                 x({ names: Object.keys(t.profileEffectFilesMap), addError: n }),
                                     Object.entries(t.profileEffectFilesMap).forEach((e) => {
-                                        let [t, i] = e,
-                                            r = i.map((e) => e.name);
+                                        let [t, s] = e,
+                                            r = s.map((e) => e.name);
                                         x({
                                             names: r.map((e) => {
                                                 let t = e.indexOf("-");
@@ -128,7 +129,7 @@ let i = new Set([
                                             }),
                                             addError: n,
                                         }),
-                                            g(s.Jn.PROFILE_EFFECT, i, n, a);
+                                            g(i.Jn.PROFILE_EFFECT, s, n, a);
                                         let o = l
                                             .filter((e) => !r.some((t) => t.startsWith(e) && t.endsWith(".png")))
                                             .map((e) => `${t}/${e}`);
@@ -147,7 +148,7 @@ let i = new Set([
                             ((e) => {
                                 let { files: t, addError: n, addWarning: a } = e;
                                 x({ names: t.avatarDecorationFiles.map((e) => e.name), addError: n }),
-                                    g(s.Jn.AVATAR_DECORATION, t.avatarDecorationFiles, n, a);
+                                    g(i.Jn.AVATAR_DECORATION, t.avatarDecorationFiles, n, a);
                             })({ files: n, addError: c, addWarning: u }),
                             ((e) => {
                                 let { files: t, addWarning: n } = e;
