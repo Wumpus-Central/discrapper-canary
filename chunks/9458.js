@@ -12,7 +12,7 @@ var i = n(64700),
     m = n(920050),
     A = n(788868),
     g = n(985018),
-    h = n(950268),
+    h = n(160664),
     x = n(714206);
 function p(e) {
     let { fractionalState: t } = (0, l.A)(),
@@ -37,7 +37,7 @@ function p(e) {
                 title: null != s ? g.intl.string(s.nameUnformattedNitro) : n ? g.intl.string(g.t.tx9Fvw) : "",
                 pillText: g.intl.string(g.t["jyYgZ+"]),
                 primaryAsset: null != C ? (E ? C.standard : C.ambientLarge) : n ? x : null,
-                primaryAssetClassName: a()(h.pq, { [h.n6]: E }),
+                primaryAssetClassName: a()(h.p, { [h.n]: E }),
                 caption: null != p ? g.intl.formatToPlainString(g.t.Hu4jfi, { date: new Date(p) }) : void 0,
                 description: t,
                 subscriptionRequired: !0,

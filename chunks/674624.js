@@ -17,7 +17,7 @@ var i,
     p = n(112848),
     E = n(149757),
     C = n(920050),
-    T = n(598998),
+    T = n(189024),
     S = n(652215),
     I = n(355097),
     f = n(985018),
@@ -87,8 +87,8 @@ function D() {
             );
         }, [i]),
         V = (0, T.A)(),
-        H = (0, a.useMemo)(() => V.map((e) => e?.id), [V]),
-        w = (0, a.useMemo)(
+        w = (0, a.useMemo)(() => V.map((e) => e?.id), [V]),
+        H = (0, a.useMemo)(
             () => [
                 {
                     id: C.SERVER_BOOSTS_CARD_ID,
@@ -231,5 +231,5 @@ function D() {
             ],
             [e, n, P, L, D, M, G, U, k],
         );
-    return (0, a.useMemo)(() => w.filter((e) => null != e && !H.includes(e.id)), [w, H]);
+    return (0, a.useMemo)(() => H.filter((e) => null != e && !w.includes(e.id)), [H, w]);
 }
