@@ -27,6 +27,7 @@ class a extends r.A {
     bannerHash;
     screenshotHashes;
     screenshotUrls;
+    trailers;
     supplementalData;
     get applicationId() {
         return this.id;
@@ -55,6 +56,7 @@ class a extends r.A {
             (this.bannerHash = e.banner_hash),
             (this.screenshotHashes = e.screenshot_hashes),
             (this.screenshotUrls = t?.screenshot_urls ?? e.screenshot_urls),
+            (this.trailers = e.trailers),
             null != t &&
                 (this.supplementalData = {
                     applicationId: e.id,
@@ -72,6 +74,7 @@ class a extends r.A {
                     firstReleaseDate: t.first_release_date,
                     publishers: t.publisher_names ?? [],
                     developers: t.developer_names ?? [],
+                    trailers: e.trailers,
                     steamReleaseStatus: t.steam_release_status,
                     reviews: s(t.reviews),
                     steam_id: t.steam_id,
