@@ -1,19 +1,20 @@
+"use strict";
 n.d(t, { DO: () => u, Mt: () => d, c: () => _, l7: () => A }), n(735438);
 var i = n(383501),
-    l = n(562153),
-    r = n(488926),
+    r = n(562153),
+    l = n(488926),
     s = n(446600),
     a = n(516607),
     o = n(652215),
     E = n(737045),
     c = n(985018);
 function _(e, t, n, i) {
-    let r = t[0],
-        s = l.Ay.getName(e, n, r),
+    let l = t[0],
+        s = r.Ay.getName(e, n, l),
         a = i ?? t.length;
-    return 1 === a && null != r
+    return 1 === a && null != l
         ? s
-        : null == r
+        : null == l
           ? c.intl.formatToPlainString(c.t.chmM9N, { count: a })
           : c.intl.formatToPlainString(c.t.GhkJ21, { name: s, count: a - 1 });
 }
@@ -37,22 +38,22 @@ function A(e) {
         guild_id: e.guild_id,
         topic: t?.topic,
         media_session_id: i.A.getMediaSessionId(),
-        request_to_speak_state: r.MJ(o.xBc.REQUEST_TO_SPEAK, e) ? a.kw.EVERYONE : a.kw.NO_ONE,
+        request_to_speak_state: l.MJ(o.xBc.REQUEST_TO_SPEAK, e) ? a.kw.EVERYONE : a.kw.NO_ONE,
         stage_instance_id: t?.id,
     };
 }
 function u(e, t) {
-    let n = (t) => l.Ay.getName(e.getGuildId(), e.id, t.user),
+    let n = (t) => r.Ay.getName(e.getGuildId(), e.id, t.user),
         i = new Set(),
-        r = t.filter((e) => {
+        l = t.filter((e) => {
             let t = e.user.id;
             return !i.has(t) && (i.add(t), !0);
         });
-    return 0 === r.length
+    return 0 === l.length
         ? c.intl.string(c.t.FUVhyC)
-        : 1 === r.length
-          ? c.intl.formatToPlainString(c.t.EQwZlN, { a: n(r[0]) })
-          : 2 === r.length
-            ? c.intl.formatToPlainString(c.t.zBcKoA, { a: n(r[0]), b: n(r[1]) })
-            : c.intl.formatToPlainString(c.t["3AqFaG"], { a: n(r[0]), b: n(r[1]), n: r.length - 2 });
+        : 1 === l.length
+          ? c.intl.formatToPlainString(c.t.EQwZlN, { a: n(l[0]) })
+          : 2 === l.length
+            ? c.intl.formatToPlainString(c.t.zBcKoA, { a: n(l[0]), b: n(l[1]) })
+            : c.intl.formatToPlainString(c.t["3AqFaG"], { a: n(l[0]), b: n(l[1]), n: l.length - 2 });
 }

@@ -1,7 +1,8 @@
+"use strict";
 n.d(t, { Fu: () => _, GZ: () => c, __: () => A, rn: () => d });
 var i = n(496431),
-    l = n(773669),
-    r = n(975571),
+    r = n(773669),
+    l = n(975571),
     s = n(927578),
     a = n(788868),
     o = n(652215),
@@ -31,21 +32,21 @@ function c(e, t, n, i) {
 let _ = (e) => {
     let t = e.expires_at,
         n = (0, i.A)(null != t ? Date.parse(t) : 0, 1e3),
-        l = e?.subscription_trial?.sku_id;
-    return null == t || null == l
+        r = e?.subscription_trial?.sku_id;
+    return null == t || null == r
         ? null
         : c(
-              l,
+              r,
               n,
               (0, s.re)({
                   intervalType: e.subscription_trial?.interval,
                   intervalCount: e.subscription_trial?.interval_count,
               }),
-              r.A.getArticleURL(e.trial_id === a.yo ? o.MVz.NITRO_TRIAL_FOR_ALL : o.MVz.PREMIUM_TRIAL),
+              l.A.getArticleURL(e.trial_id === a.yo ? o.MVz.NITRO_TRIAL_FOR_ALL : o.MVz.PREMIUM_TRIAL),
           );
 };
 function d(e, t) {
-    let n = new Intl.NumberFormat(l.default.locale, {
+    let n = new Intl.NumberFormat(r.default.locale, {
         style: "percent",
         minimumFractionDigits: 0,
         maximumFractionDigits: 0,

@@ -1,7 +1,8 @@
-n.d(t, { T: () => P });
+"use strict";
+n.d(t, { T: () => p });
 var i = n(627968),
-    l = n(64700),
-    r = n(311907),
+    r = n(64700),
+    l = n(311907),
     s = n(554146),
     a = n(397927),
     o = n(728364),
@@ -18,15 +19,15 @@ var i = n(627968),
     S = n(788868),
     O = n(985018),
     C = n(210320);
-let P = (e) => {
+let p = (e) => {
     let { dismissibleContent: t } = e,
         n = (0, E.Cp)(),
-        P = (0, r.bG)([A.default], () => T.Ay.isPremiumExactly(A.default.getCurrentUser(), S.PremiumTypes.TIER_2)),
-        { enabled: D } = o.m.useExperiment(
+        p = (0, l.bG)([A.default], () => T.Ay.isPremiumExactly(A.default.getCurrentUser(), S.PremiumTypes.TIER_2)),
+        { enabled: P } = o.m.useExperiment(
             { location: "OutboundPromotionNotice" },
-            { autoTrackExposure: !1, disable: P },
+            { autoTrackExposure: !1, disable: p },
         ),
-        p = l.useCallback(() => {
+        D = r.useCallback(() => {
             u.default.track(R.HAw.OUTBOUND_PROMOTION_NOTICE_CLICKED),
                 (0, d.openUserSettings)(_.X.GIFT_PANEL, { section: R.nc_.INVENTORY }),
                 c.Ay.dismissOutboundPromotionNotice();
@@ -52,11 +53,11 @@ let P = (e) => {
                                   },
                               }),
                               (0, i.jsx)(a.tvc, { size: "md", color: "currentColor", className: C.P }),
-                              D ? O.intl.string(O.t["5JMiOo"]) : O.intl.string(O.t["Pzh+G2"]),
+                              P ? O.intl.string(O.t["5JMiOo"]) : O.intl.string(O.t["Pzh+G2"]),
                               (0, i.jsx)(a.Z_L, {
                                   noticeType: R.kqX.OUTBOUND_PROMOTION,
                                   onClick: () => {
-                                      p(), null !== n && n(N.i.TAKE_ACTION);
+                                      D(), null !== n && n(N.i.TAKE_ACTION);
                                   },
                                   children: O.intl.string(O.t.jVcuVY),
                               }),

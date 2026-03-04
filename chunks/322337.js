@@ -1,7 +1,8 @@
+"use strict";
 n.d(t, { A: () => T, p: () => A });
 var i = n(627968),
-    l = n(64700),
-    r = n(311907),
+    r = n(64700),
+    l = n(311907),
     s = n(397927),
     a = n(442433),
     o = n(543594),
@@ -10,7 +11,7 @@ var i = n(627968),
     _ = n(371794),
     d = n(985018);
 let A = { DropdownSizes: o.A.DropdownSizes, Sizes: o.A.Sizes, Colors: o.A.Colors, Looks: o.A.Looks };
-class u extends l.PureComponent {
+class u extends r.PureComponent {
     renderContextMenu = () => {
         let { skus: e, onSKUSelect: t, onMenuSelect: n } = this.props;
         return (0, i.jsx)(s.W1t, {
@@ -42,7 +43,7 @@ class u extends l.PureComponent {
         null != t && e?.(t);
     };
     render() {
-        let { skus: e, children: t, applicationId: n, primarySKU: l, onSKUSelect: r, ...s } = this.props;
+        let { skus: e, children: t, applicationId: n, primarySKU: r, onSKUSelect: l, ...s } = this.props;
         return (0, i.jsx)(o.A, {
             onClick: this.handleClick,
             onDropdownClick: e.length > 0 ? this.handleContextMenu : null,
@@ -52,7 +53,7 @@ class u extends l.PureComponent {
         });
     }
 }
-let T = r.Ay.connectStores([c.A, E.A], (e) => {
+let T = l.Ay.connectStores([c.A, E.A], (e) => {
     let { applicationId: t } = e,
         n = (0, _.VH)(t, E.A, c.A);
     return {

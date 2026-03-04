@@ -1,8 +1,9 @@
+"use strict";
 n.d(t, { $: () => N });
 var i = n(627968),
-    l = n(64700),
-    r = n(989349),
-    s = n.n(r),
+    r = n(64700),
+    l = n(989349),
+    s = n.n(l),
     a = n(554146),
     o = n(916768),
     E = n(617108),
@@ -15,7 +16,7 @@ var i = n(627968),
     I = n(788868);
 let N = (e) => {
     let { dismissibleContent: t, noticeType: n } = e,
-        r = l.useMemo(() => {
+        l = r.useMemo(() => {
             switch (n) {
                 case T.kqX.PREMIUM_TIER_2_TRIAL_ENDING:
                     let e = _.A.getAlmostExpiringTrialOffersForReminder([I.pe.TIER_2]);
@@ -28,7 +29,7 @@ let N = (e) => {
             }
         }, [n]),
         N = s()().add(5, "days").toDate(),
-        [R, S] = (0, A.Bo)(t, r, u.m.NOTICE_BAR);
+        [R, S] = (0, A.Bo)(t, l, u.m.NOTICE_BAR);
     if (null == R) return null;
     if (R === a.M.NAGBAR_NOTICE_OFFER_EXPIRING) {
         if (n === T.kqX.PREMIUM_TIER_2_TRIAL_ENDING)

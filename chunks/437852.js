@@ -1,8 +1,9 @@
+"use strict";
 n.d(t, { Ay: () => o, Fq: () => s, qe: () => a });
 var i = n(600975),
-    l = n(945810),
-    r = n(688151);
-let s = (0, l.mj)({
+    r = n(945810),
+    l = n(688151);
+let s = (0, r.mj)({
         name: "2025-10-seasonal-gifting-2025",
         kind: "user",
         defaultConfig: { enabled: !1 },
@@ -13,7 +14,7 @@ let s = (0, l.mj)({
         label: "Seasonal Gifting 2025 Reminder",
         kind: "user",
         defaultConfig: { enabled: !1 },
-        commonTriggerPoint: r.$G.CONNECTION_OPEN,
+        commonTriggerPoint: l.$G.CONNECTION_OPEN,
         treatments: [{ id: 1, label: "Enabled", config: { enabled: !0 } }],
     }),
     o = s;

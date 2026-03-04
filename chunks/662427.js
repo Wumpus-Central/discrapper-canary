@@ -1,16 +1,17 @@
+"use strict";
 n.d(t, { A: () => a });
 var i = n(311907),
-    l = n(73153);
-let r = [];
+    r = n(73153);
+let l = [];
 class s extends i.Ay.Store {
     static displayName = "CreatorMonetizationMarketingStore";
     getEligibleGuildsForNagActivate() {
-        return r;
+        return l;
     }
 }
-let a = new s(l.h, {
+let a = new s(r.h, {
     CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY_FETCH_SUCCESS: function (e) {
         let { eligibleGuilds: t } = e;
-        r = t;
+        l = t;
     },
 });

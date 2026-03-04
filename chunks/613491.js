@@ -1,8 +1,9 @@
+"use strict";
 n.d(t, { A: () => S });
 var i = n(627968);
 n(64700);
-var l = n(503698),
-    r = n.n(l),
+var r = n(503698),
+    l = n.n(r),
     s = n(397927),
     a = n(935649),
     o = n(847599),
@@ -25,21 +26,21 @@ function N(e) {
 function R(e) {
     let { channelId: t } = e,
         n = (0, A.D3)(t) ?? 0,
-        l = (0, A.Xk)(t) ?? 0;
-    return n > 0 && l > 0
+        r = (0, A.Xk)(t) ?? 0;
+    return n > 0 && r > 0
         ? (0, i.jsx)("div", {
               className: I.Z5,
-              children: (0, i.jsx)("div", { className: r()(I.qQ, I.lN), children: T.intl.string(T.t.xlJRfv) }),
+              children: (0, i.jsx)("div", { className: l()(I.qQ, I.lN), children: T.intl.string(T.t.xlJRfv) }),
           })
         : n > 0
           ? (0, i.jsx)("div", {
                 className: I.Z5,
-                children: (0, i.jsx)("div", { className: r()(I.qQ, I.lN), children: T.intl.string(T.t.WYad9Z) }),
+                children: (0, i.jsx)("div", { className: l()(I.qQ, I.lN), children: T.intl.string(T.t.WYad9Z) }),
             })
-          : l > 0
+          : r > 0
             ? (0, i.jsx)("div", {
                   className: I.Z5,
-                  children: (0, i.jsx)("div", { className: r()(I.qQ, I.lN), children: T.intl.string(T.t.eHq2OF) }),
+                  children: (0, i.jsx)("div", { className: l()(I.qQ, I.lN), children: T.intl.string(T.t.eHq2OF) }),
               })
             : null;
 }

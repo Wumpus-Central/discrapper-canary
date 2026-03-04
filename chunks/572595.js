@@ -1,26 +1,25 @@
-"use strict";
-l.d(t, { M: () => d, t: () => o });
-var r = l(627968);
+l.d(t, { M: () => o, t: () => u });
+var n = l(627968);
 l(64700);
-var a = l(397927),
-    n = l(4227),
+var r = l(397927),
+    a = l(4227),
     i = l(466459);
 let s = "collectibles shop product details modal",
-    o = (e) => {
+    u = (e) => {
         let {
             product: t,
-            category: o,
-            shouldCheckoutWithOrbs: d,
-            analyticsSource: c,
-            analyticsLocations: u,
+            category: u,
+            shouldCheckoutWithOrbs: o,
+            analyticsSource: d,
+            analyticsLocations: c,
             returnRef: h,
-            tab: m,
+            tab: A,
         } = e;
         if (t.isCategoryReward) {
-            let { isPurchased: e } = (0, i.o)(n.A, t);
+            let { isPurchased: e } = (0, i.o)(a.A, t);
             if (!e) return;
         }
-        (0, a.mMO)(
+        (0, r.mMO)(
             async () => {
                 let { default: e } = await Promise.all([
                     l.e("8555"),
@@ -41,20 +40,20 @@ let s = "collectibles shop product details modal",
                     l.e("16289"),
                 ]).then(l.bind(l, 929400));
                 return (l) =>
-                    (0, r.jsx)(e, {
+                    (0, n.jsx)(e, {
                         ...l,
                         product: t,
-                        category: o,
-                        shouldCheckoutWithOrbs: d,
-                        analyticsSource: c,
-                        analyticsLocations: u,
+                        category: u,
+                        shouldCheckoutWithOrbs: o,
+                        analyticsSource: d,
+                        analyticsLocations: c,
                         returnRef: h,
-                        tab: m,
+                        tab: A,
                     });
             },
             { modalKey: s },
         );
     },
-    d = () => {
-        (0, a.OoC)(s);
+    o = () => {
+        (0, r.OoC)(s);
     };

@@ -1,7 +1,8 @@
-n.d(t, { E5: () => D, G6: () => S, H0: () => P, Vj: () => O, W5: () => p, nV: () => C, s6: () => R, wu: () => m });
+"use strict";
+n.d(t, { E5: () => P, G6: () => S, H0: () => p, Vj: () => O, W5: () => D, nV: () => C, s6: () => R, wu: () => M });
 var i = n(562465),
-    l = n(73153),
-    r = n(58149),
+    r = n(73153),
+    l = n(58149),
     s = n(71393),
     a = n(576705),
     o = n(403362),
@@ -72,11 +73,11 @@ async function O(e) {
 async function C(e, t) {
     return await i.Bo.del({ url: A.Rsh.GUILD_AUTOMOD_RULE(t, e), rejectWithError: !1 }), !0;
 }
-async function P(e) {
+async function p(e) {
     let t = await i.Bo.get({ url: A.Rsh.GUILD_AUTOMOD_RULES(e), rejectWithError: !1 });
     return Array.isArray(t.body) ? t.body.map(N) : [];
 }
-async function D(e, t, n) {
+async function P(e, t, n) {
     a.A.can(A.xBc.MANAGE_MESSAGES, t) &&
         (await i.Bo.post({
             url: A.Rsh.GUILD_AUTOMOD_ALERT_ACTION(t.guild_id),
@@ -84,12 +85,12 @@ async function D(e, t, n) {
             rejectWithError: !1,
         }));
 }
-function p(e, t, n) {
-    let l = s.A.getGuild(e);
-    null != l &&
-        a.A.can(A.xBc.MANAGE_GUILD, l) &&
+function D(e, t, n) {
+    let r = s.A.getGuild(e);
+    null != r &&
+        a.A.can(A.xBc.MANAGE_GUILD, r) &&
         (0, d.rI)(() => {
-            (0, r.zV)(A.HAw.GUILD_AUTOMOD_FEEDBACK, {
+            (0, l.zV)(A.HAw.GUILD_AUTOMOD_FEEDBACK, {
                 feedback_type: c.Gb.MENTION_RAID_REMOVE_RESTRICTION,
                 decision_id: t,
             }),
@@ -97,6 +98,6 @@ function p(e, t, n) {
                 n();
         });
 }
-function m(e) {
-    l.h.dispatch({ type: "AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS", guildId: e });
+function M(e) {
+    r.h.dispatch({ type: "AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS", guildId: e });
 }
