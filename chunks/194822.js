@@ -1,4 +1,4 @@
-t.d(l, { A: () => C });
+t.d(l, { A: () => A });
 var r = t(311907),
     o = t(73153),
     n = t(403362),
@@ -13,8 +13,18 @@ let i = (0, n.m6)() ? { [a.C8]: { "dummy-shop-home": a.uG, "dummy-orb-shelf": a.
     m = {},
     _ = s,
     S = new Set(c),
-    b = {};
-class T extends r.Ay.Store {
+    b = {},
+    T = function (e) {
+        let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            t = Object.entries(l)
+                .map((e) => {
+                    let [l, t] = e;
+                    return `${l}:${t}`;
+                })
+                .join("-");
+        return `${e}-${t}`;
+    };
+class C extends r.Ay.Store {
     static displayName = "CmsLayoutStore";
     getLayout(e, l) {
         return null == e || null == l ? null : (h[e]?.[l] ?? null);
@@ -25,17 +35,20 @@ class T extends r.Ay.Store {
     getFetchError(e, l) {
         return null == e || null == l ? null : (m[u(e, l)] ?? null);
     }
-    getTemplateLayout(e, l) {
-        return null == e || null == l ? null : (_[e]?.[l] ?? null);
+    getTemplateLayout(e, l, t) {
+        if (null == e || null == l) return null;
+        let r = T(l, t);
+        return _[e]?.[r] ?? null;
     }
-    isFetchingTemplate(e, l) {
-        return null != e && null != l && S.has(u(e, l));
+    isFetchingTemplate(e, l, t) {
+        let r = T(l ?? "", t);
+        return null != e && null != l && S.has(u(e, r));
     }
-    getTemplateFetchError(e, l) {
-        return null == e || null == l ? null : (b[u(e, l)] ?? null);
+    getTemplateFetchError(e, l, t) {
+        return null == e || null == l ? null : (b[u(e, T(l ?? "", t))] ?? null);
     }
 }
-let C = new T(o.h, {
+let A = new C(o.h, {
     CMS_LAYOUT_FETCH: (e) => {
         let { tenantId: l, layoutId: t } = e;
         p.add(u(l, t));
@@ -49,16 +62,18 @@ let C = new T(o.h, {
         (m[u(l, t)] = r), p.delete(u(l, t));
     },
     CMS_TEMPLATE_FETCH: (e) => {
-        let { tenantId: l, templateId: t } = e;
-        S.add(u(l, t));
+        let { tenantId: l, templateId: t, requestParams: r } = e;
+        S.add(u(l, T(t, r)));
     },
     CMS_TEMPLATE_FETCH_SUCCESS: (e) => {
-        let { tenantId: l, templateId: t, layout: r } = e;
-        ((_[l] ??= {})[t] = r), delete b[u(l, t)], S.delete(u(l, t));
+        let { tenantId: l, templateId: t, requestParams: r, layout: o } = e,
+            n = T(t, r);
+        ((_[l] ??= {})[n] = o), delete b[u(l, n)], S.delete(u(l, n));
     },
     CMS_TEMPLATE_FETCH_FAILURE: (e) => {
-        let { tenantId: l, templateId: t, apiError: r } = e;
-        (b[u(l, t)] = r), S.delete(u(l, t));
+        let { tenantId: l, templateId: t, requestParams: r, apiError: o } = e,
+            n = T(t, r);
+        (b[u(l, n)] = o), S.delete(u(l, n));
     },
     LOGOUT: function () {
         (h = {}), (p = new Set()), (m = {}), (_ = {}), (S = new Set()), (b = {});

@@ -33,15 +33,28 @@ let s = ["request_params"],
     },
     h = async (e) => {
         let { tenantId: l, templateId: t, abortSignal: r, requestParams: s } = e;
-        if (!i.A.isFetchingTemplate(l, t))
+        if (!i.A.isFetchingTemplate(l, t, s))
             try {
-                n.h.dispatch({ type: "CMS_TEMPLATE_FETCH", tenantId: l, templateId: t });
+                n.h.dispatch({ type: "CMS_TEMPLATE_FETCH", tenantId: l, templateId: t, requestParams: s });
                 let e = await o.Bo.get({ url: d.Rsh.CMS_TEMPLATE(l, t), rejectWithError: !0, signal: r, query: s });
-                n.h.dispatch({ type: "CMS_TEMPLATE_FETCH_SUCCESS", tenantId: l, templateId: t, layout: c(e.body) });
+                n.h.dispatch({
+                    type: "CMS_TEMPLATE_FETCH_SUCCESS",
+                    tenantId: l,
+                    templateId: t,
+                    requestParams: s,
+                    layout: c(e.body),
+                });
             } catch (r) {
                 let e = new a.LG(r);
                 throw (
-                    (n.h.dispatch({ type: "CMS_TEMPLATE_FETCH_FAILURE", tenantId: l, templateId: t, apiError: e }), e)
+                    (n.h.dispatch({
+                        type: "CMS_TEMPLATE_FETCH_FAILURE",
+                        tenantId: l,
+                        templateId: t,
+                        requestParams: s,
+                        apiError: e,
+                    }),
+                    e)
                 );
             }
     };

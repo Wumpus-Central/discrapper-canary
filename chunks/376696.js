@@ -60,7 +60,7 @@ function P(e) {
         [J, Q] = (0, r.yK)([y.A, b.A, T.A, A.default], () => (0, p.eo)(t, y.A, b.A, T.A, A.default)),
         $ = (0, r.bG)([S.default], () => S.default.getId()),
         Z = (0, r.bG)([v.A], () => (0, m.nr)(q, v.A), [q]),
-        ee = (0, d.m)(n, P ?? Z),
+        ee = (0, d.me)(n, P ?? Z),
         et = (0, r.bG)([j.Ay], () => j.Ay.getVoiceStatesForChannel(t).find((e) => e.user.id === n.id) ?? null, [
             t,
             n.id,

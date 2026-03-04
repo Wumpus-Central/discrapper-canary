@@ -7,9 +7,9 @@ var r = t(64700),
 let d = (e, l, t) => {
     let d = (0, o.bG)([n.A], () => n.A.hasLoadedExperiments),
         [s, c, u] = (0, o.yK)([i.A], () => [
-            i.A.getTemplateLayout(e, l),
-            i.A.isFetchingTemplate(e, l),
-            i.A.getTemplateFetchError(e, l),
+            i.A.getTemplateLayout(e, l, t),
+            i.A.isFetchingTemplate(e, l, t),
+            i.A.getTemplateFetchError(e, l, t),
         ]),
         h = null == s && null != l && d && !c && null == u;
     return (
