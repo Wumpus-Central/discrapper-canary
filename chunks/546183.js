@@ -1,9 +1,9 @@
 "use strict";
-n.r(t), n.d(t, { FetchState: () => l, default: () => T }), n(321073);
+n.r(t), n.d(t, { FetchState: () => l, default: () => S }), n(321073);
 var r = n(311907),
     i = n(73153),
-    a = n(734057),
-    s = n(134861),
+    s = n(734057),
+    a = n(134861),
     o = n(320501),
     l = (function (e) {
         return (e.NOT_FETCHED = "NOT_FETCHED"), (e.FETCHING = "FETCHING"), (e.FETCHED = "FETCHED"), e;
@@ -12,15 +12,17 @@ let u = new Map(),
     c = [],
     d = [],
     _ = "NOT_FETCHED",
-    f = new Map();
-function p() {
+    f = new Map(),
+    p = 0;
+function h() {
     (_ = "FETCHING"), f.clear();
 }
-function h(e) {
-    f.set(e.applicationId, "FETCHING");
-}
 function m(e) {
+    f.set(e.applicationId, "FETCHING"), (p += 1);
+}
+function E(e) {
     f.set(e.applicationId, "FETCHED"),
+        (p += 1),
         e.tokens.forEach((e) => {
             (c = c.filter((t) => t.id !== e.id)),
                 u.set(e.application.id, e),
@@ -37,7 +39,7 @@ function g(e) {
             return null == t.parent_id;
         }));
 }
-function E(e) {
+function A(e) {
     let { id: t, application: n, scopes: r } = e,
         i = u.get(n.id);
     null != i &&
@@ -49,10 +51,10 @@ function E(e) {
             let { application: t } = e;
             return t.id !== i.application.id;
         })));
-    let a = { id: t, application: n, scopes: r };
-    u.set(a.application.id, a), (c = [...c, a]), null == a.application.parent_id && (d = [...d, a]);
+    let s = { id: t, application: n, scopes: r };
+    u.set(s.application.id, s), (c = [...c, s]), null == s.application.parent_id && (d = [...d, s]);
 }
-function A(e) {
+function I(e) {
     let { id: t, applicationId: n } = e,
         r = u.get(n);
     if (null == r || r.id !== t) return !1;
@@ -66,10 +68,10 @@ function A(e) {
             return t !== r.id;
         }));
 }
-class I extends r.Ay.Store {
+class T extends r.Ay.Store {
     static displayName = "AuthorizedAppsStore";
     initialize() {
-        this.waitFor(a.A, s.A, o.A);
+        this.waitFor(s.A, a.A, o.A);
     }
     getNewestTokenForApplication(e) {
         return null == e ? null : (u.get(e) ?? null);
@@ -86,12 +88,15 @@ class I extends r.Ay.Store {
     getFetchStateForApplication(e) {
         return "FETCHED" === _ ? _ : (f.get(e) ?? _);
     }
+    getApplicationFetchStateVersion() {
+        return p;
+    }
 }
-let T = new I(i.h, {
-    USER_AUTHORIZED_APPS_REQUEST: p,
-    USER_AUTHORIZED_APPS_REQUEST_BY_ID: h,
+let S = new T(i.h, {
+    USER_AUTHORIZED_APPS_REQUEST: h,
+    USER_AUTHORIZED_APPS_REQUEST_BY_ID: m,
     USER_AUTHORIZED_APPS_UPDATE: g,
-    USER_AUTHORIZED_APPS_UPDATE_BY_ID: m,
-    OAUTH2_TOKEN_CREATE: E,
-    OAUTH2_TOKEN_DELETE: A,
+    USER_AUTHORIZED_APPS_UPDATE_BY_ID: E,
+    OAUTH2_TOKEN_CREATE: A,
+    OAUTH2_TOKEN_DELETE: I,
 });

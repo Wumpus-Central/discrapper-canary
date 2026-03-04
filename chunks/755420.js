@@ -1,8 +1,8 @@
-n.d(t, { FL: () => r, z4: () => o }), n(321073);
+n.d(t, { FL: () => a, z4: () => o }), n(321073);
 var i,
     l = n(64700),
-    a = n(652215),
-    r =
+    r = n(652215),
+    a =
         (((i = {}).DESKTOP = "desktop"),
         (i.MOBILE = "mobile"),
         (i.ANDROID = "android"),
@@ -11,37 +11,37 @@ var i,
         (i.XBOX = "xbox"),
         (i.VR = "vr"),
         i);
-a.yTV.DESKTOP,
-    a.yTV.ANDROID,
-    a.yTV.IOS,
-    a.yTV.XBOX,
-    a.yTV.PS4,
-    a.yTV.PS5,
-    a.yTV.SAMSUNG,
-    a.yTV.EMBEDDED,
-    a.yTV.META_QUEST;
+r.yTV.DESKTOP,
+    r.yTV.ANDROID,
+    r.yTV.IOS,
+    r.yTV.XBOX,
+    r.yTV.PS4,
+    r.yTV.PS5,
+    r.yTV.SAMSUNG,
+    r.yTV.EMBEDDED,
+    r.yTV.META_QUEST;
 let s = [];
 function o(e) {
-    let { platforms: t, currentPlatform: n } = e;
+    let { platforms: t, currentPlatform: n, isGameLaunchable: i } = e;
     return l.useMemo(
         () =>
             (function (e) {
-                let { platforms: t, currentPlatform: n } = e,
-                    i = new Set(t),
-                    l = [];
-                return null == t || 0 === t.length || (null != n && i.has(n))
+                let { platforms: t, currentPlatform: n, isGameLaunchable: i } = e,
+                    l = new Set(t),
+                    a = [];
+                return null == t || 0 === t.length || (null != n && l.has(n) && i)
                     ? s
-                    : (i.has(a.yTV.ANDROID) && i.has(a.yTV.IOS)
-                          ? l.push("mobile")
-                          : i.has(a.yTV.ANDROID)
-                            ? l.push("android")
-                            : i.has(a.yTV.IOS) && l.push("ios"),
-                      (i.has(a.yTV.PS4) || i.has(a.yTV.PS5)) && l.push("playstation"),
-                      i.has(a.yTV.XBOX) && l.push("xbox"),
-                      i.has(a.yTV.DESKTOP) && l.push("desktop"),
-                      i.has(a.yTV.META_QUEST) && l.push("vr"),
-                      l);
-            })({ platforms: t, currentPlatform: n }),
-        [n, t],
+                    : (l.has(r.yTV.ANDROID) && l.has(r.yTV.IOS)
+                          ? a.push("mobile")
+                          : l.has(r.yTV.ANDROID)
+                            ? a.push("android")
+                            : l.has(r.yTV.IOS) && a.push("ios"),
+                      (l.has(r.yTV.PS4) || l.has(r.yTV.PS5)) && a.push("playstation"),
+                      l.has(r.yTV.XBOX) && a.push("xbox"),
+                      l.has(r.yTV.DESKTOP) && a.push("desktop"),
+                      l.has(r.yTV.META_QUEST) && a.push("vr"),
+                      a);
+            })({ platforms: t, currentPlatform: n, isGameLaunchable: i }),
+        [n, t, i],
     );
 }
