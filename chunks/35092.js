@@ -34,7 +34,15 @@ var i = n(627968),
     D = n(585048);
 let G = T.Z.SIZE_90,
     U = s.forwardRef(function (e, t) {
-        let { sku: n, wishlistOwner: l, wishlistId: r, style: o, skuPreviewStyle: c, onClick: d, onButtonClick: u } = e,
+        let {
+                sku: n,
+                wishlistOwner: l,
+                wishlistId: r,
+                style: o,
+                skuPreviewStyle: c,
+                onDetailsClick: d,
+                onPurchaseClick: u,
+            } = e,
             { trackUserProfileWishlistAction: h } = (0, E.NJ)(),
             A = s.useCallback(() => {
                 h({
@@ -54,13 +62,12 @@ let G = T.Z.SIZE_90,
                 }),
                     u();
             }, [u, n.id, r, n.productLine, h]),
-            { label: m, icon: g } = (0, S.hB)({
-                sku: n,
-                wishlistOwner: l,
-                isOwned: !1,
-                location: "DM Side Panel Wishlist Item Card",
-            }),
-            [_, f] = s.useState(!1);
+            {
+                label: m,
+                icon: g,
+                isPromptingPurchase: _,
+            } = (0, S.hB)({ sku: n, wishlistOwner: l, isOwned: !1, location: "DM Side Panel Wishlist Item Card" }),
+            [f, x] = s.useState(!1);
         return (0, i.jsx)("div", {
             className: M.kL,
             ref: t,
@@ -72,8 +79,8 @@ let G = T.Z.SIZE_90,
                 cardStyle: a()(M.Nr, M.Q1, o),
                 skuPreviewStyle: a()(M.ho, c),
                 onClick: A,
-                onHoverOrFocusChange: f,
-                children: (0, i.jsx)(S.AJ, { spec: G, onClick: p, isHoveringOrFocusing: _, label: m, icon: g }),
+                onHoverOrFocusChange: x,
+                children: (0, i.jsx)(S.AJ, { spec: G, onClick: _ ? p : A, isHoveringOrFocusing: f, label: m, icon: g }),
             }),
         });
     });
@@ -144,8 +151,8 @@ function w(e) {
                 onViewWishlist: a,
                 analyticsLocations: _,
                 wishlistOwner: n,
-                onClick: L,
-                onButtonClick: O,
+                onDetailsClick: L,
+                onPurchaseClick: O,
                 ...o,
             }),
             b === d.M.GAME_SHOP_WISHLIST_POPOVER &&
@@ -165,7 +172,7 @@ function k(e) {
                 variantsReturnStyle: o.g.VARIANTS_GROUP,
             });
         }, [t.id, n, l]),
-        u = (0, b.ez)({ sku: t, analyticsLocations: l }),
+        u = (0, b.e)({ sku: t, analyticsLocations: l }),
         h = s.useMemo(() => {
             switch (t?.tenantMetadata?.collectibles?.type) {
                 case r.R.PROFILE_EFFECT:
@@ -180,8 +187,8 @@ function k(e) {
         sku: t,
         wishlistOwner: n,
         analyticsLocations: l,
-        onClick: u,
-        onButtonClick: d,
+        onDetailsClick: u,
+        onPurchaseClick: d,
         skuPreviewStyle: h,
         ...c,
     });

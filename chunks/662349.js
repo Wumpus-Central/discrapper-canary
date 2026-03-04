@@ -10,7 +10,7 @@ var r = n(627968),
     c = n(519421),
     d = n(818348),
     _ = n(985018),
-    f = n(433107);
+    f = n(333245);
 function p(e) {
     return { margin: e.buttonInset };
 }
@@ -19,18 +19,19 @@ function h(e) {
         f = (0, c.A)(d ?? "User Profile Wishlist Overlay Button"),
         p = (0, l.Xi)(t);
     return i.useMemo(() => {
-        if (f && null != t) {
+        if (f && null != t && !s) {
             if (null != p)
                 return {
                     label: _.intl.formatToPlainString(_.t.AYcXGW, { discountOfferAmount: p.amount }),
                     icon: void 0,
+                    isPromptingPurchase: !0,
                 };
             let e = t.getPrice();
-            if (null != e) return { label: (0, u.$g)(e.amount, e.currency), icon: void 0 };
+            if (null != e) return { label: (0, u.$g)(e.amount, e.currency), icon: void 0, isPromptingPurchase: !0 };
         }
         return null == n || n.id === r?.id || s
-            ? { label: _.intl.string(_.t.FdGl5A), icon: void 0 }
-            : { label: _.intl.string(_.t.ilhtIa), icon: a ? void 0 : o.okO };
+            ? { label: _.intl.string(_.t.FdGl5A), icon: void 0, isPromptingPurchase: !1 }
+            : { label: _.intl.string(_.t.ilhtIa), icon: a ? void 0 : o.okO, isPromptingPurchase: !0 };
     }, [t, n, r, s, a, f, p]);
 }
 function m(e) {
