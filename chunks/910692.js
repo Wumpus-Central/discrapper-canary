@@ -176,7 +176,7 @@ function eT(e) {
                 }),
                 r?.(i, n);
         },
-        K = null != _ ? _ : null != b ? b : null != w ? w : void 0,
+        K = _ ?? b ?? w,
         $ = () => {
             g((e) => !e), k && A?.focus();
         },
@@ -191,17 +191,16 @@ function eT(e) {
             children: (0, r.jsxs)("div", {
                 children: [
                     (0, r.jsx)(ec.A, { sent: R, shown: N, className: eE.Jt }),
-                    null != K
-                        ? K
-                        : (0, r.jsx)(el.A, {
-                              children: (0, r.jsxs)("div", {
-                                  className: eE.T7,
-                                  children: [
-                                      (0, r.jsx)(eS, { channel: t, onClickSuggestion: B }),
-                                      (0, r.jsx)(T.g1, { onSelectEmoji: B }),
-                                  ],
-                              }),
-                          }),
+                    K ??
+                        (0, r.jsx)(el.A, {
+                            children: (0, r.jsxs)("div", {
+                                className: eE.T7,
+                                children: [
+                                    (0, r.jsx)(eS, { channel: t, onClickSuggestion: B }),
+                                    (0, r.jsx)(T.g1, { onSelectEmoji: B }),
+                                ],
+                            }),
+                        }),
                     (0, r.jsxs)("div", {
                         className: k ? eE.P2 : eE.VE,
                         children: [
