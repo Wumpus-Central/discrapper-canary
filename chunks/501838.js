@@ -1,54 +1,54 @@
 "use strict";
-n.d(t, { K6: () => c, gT: () => _, hJ: () => h, l1: () => d, ok: () => f });
+n.d(t, { K6: () => d, gT: () => f, hJ: () => h, l1: () => _, ok: () => p });
 var r = n(311907),
     i = n(517164),
-    a = n(20805),
-    s = n(15285),
+    s = n(20805),
+    a = n(15285),
     o = n(622543),
     l = n(290863),
-    u = n(533562);
-function c(e) {
+    u = n(533562),
+    c = n(652215);
+function d(e) {
     let { userIds: t, gameIds: n } = e;
     return (0, r.bG)(
         [i.A],
         () =>
             t.some((e) =>
-                i.A.getUserOutbox(e)?.entries.some((e) => null != e && (0, a.zD)(e) && n.has(e.extra.application_id)),
+                i.A.getUserOutbox(e)?.entries.some((e) => null != e && (0, s.zD)(e) && n.has(e.extra.application_id)),
             ),
         [n, t],
     );
 }
-function d(e) {
-    let { userIds: t, guildIdsWithGameStores: n } = e;
+function _(e) {
     return (0, r.bG)([o.A], () => {
-        for (let e of t) {
-            let t = o.A.getMutualGuilds(e);
-            if (null != t) {
-                for (let e of t) if (n.has(e.guild.id)) return !0;
+        for (let t of e) {
+            let e = o.A.getMutualGuilds(t);
+            if (null != e) {
+                for (let t of e) if (t.guild.features.has(c.GuildFeatures.SOCIAL_LAYER_STOREFRONT)) return !0;
             }
         }
         return !1;
-    }, [n, t]);
+    }, [e]);
 }
-function _(e) {
+function f(e) {
     let { userIds: t, gameIds: n } = e,
         i = (0, r.bG)([l.A], () => {
             for (let e of t)
                 for (let t of l.A.getActivities(e)) if (null != t.application_id && n.has(t.application_id)) return !0;
             return !1;
         }, [n, t]),
-        a = (0, u.W)();
-    return i || null != a;
+        s = (0, u.W)();
+    return i || null != s;
 }
-function f(e) {
+function p(e) {
     let { gameIds: t } = e;
-    return (0, r.bG)([s.Ay], () => s.Ay.getGamesSeen(!1, !1).some((e) => null != e.id && t.has(e.id)), [t]);
+    return (0, r.bG)([a.Ay], () => a.Ay.getGamesSeen(!1, !1).some((e) => null != e.id && t.has(e.id)), [t]);
 }
 function h(e) {
     let { gameIds: t } = e;
     return (0, r.bG)(
-        [s.Ay],
-        () => s.Ay.getRunningGames().some((e) => null != e.id && t.has(e.id) && s.Ay.isDetectionEnabled(e)),
+        [a.Ay],
+        () => a.Ay.getRunningGames().some((e) => null != e.id && t.has(e.id) && a.Ay.isDetectionEnabled(e)),
         [t],
     );
 }

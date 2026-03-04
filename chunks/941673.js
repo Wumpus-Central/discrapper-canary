@@ -24,14 +24,14 @@ var r = n(627968),
     v = n(871123),
     N = n(832163),
     C = n(44724),
-    b = n(980094),
-    R = n(421161),
-    O = n(366523),
+    R = n(980094),
+    O = n(421161),
+    b = n(366523),
     D = n(652215),
     L = n(806931),
     w = n(788868),
-    x = n(818348),
-    M = n(985018),
+    M = n(818348),
+    x = n(985018),
     P = n(490669);
 function k(e) {
     let t = (0, o.bG)([A.A], () => (A.A.isConnected() ? A.A.getChannelId() : null)),
@@ -75,7 +75,7 @@ function G(e) {
     return (0, r.jsx)("div", {
         className: P.$O,
         children: (0, r.jsx)(l.QWc, {
-            text: n.id === (0, v.zf)() ? M.intl.string(M.t.nyIcya) : M.intl.string(M.t.ImioFL),
+            text: x.intl.string(x.t.ImioFL),
             onMouseDown: a,
             onClick: o,
             textVariant: "text-sm/medium",
@@ -102,7 +102,7 @@ let F = (e) => {
         V = (0, o.bG)([T.A], () => (null != D ? T.A.get(D) : null), [D]),
         B = (0, v.fq)(V),
         H = (0, v.xf)(V),
-        j = (0, R.j)(V, { shouldFetchIfMissing: !0 }),
+        j = (0, O.j)(V, { shouldFetchIfMissing: !0 }),
         Y = async (e, t) => {},
         W = () =>
             (0, r.jsx)(h.A, {
@@ -117,15 +117,15 @@ let F = (e) => {
             null != a && (N === w.vQ.USER_PROFILE_WISHLIST || N === w.vQ.DM_CHANNEL_WISHLIST)
                 ? (0, r.jsx)(E.Z, { giftRecipient: a })
                 : (0, r.jsx)(d.A, { selectedSkuId: D, validateSelectedGift: Y, recipients: F }),
-        z = (e) => {
+        $ = (e) => {
             null != S && S(null == e ? void 0 : e);
         },
-        $ = () =>
+        z = () =>
             (0, r.jsxs)("div", {
                 className: P.mT,
                 children: [
                     null != B &&
-                        (0, r.jsx)(O.A, {
+                        (0, r.jsx)(b.A, {
                             containerClassName: P.T3,
                             cardImage: B,
                             cardBackgroundImage: H,
@@ -135,7 +135,7 @@ let F = (e) => {
                     (0, r.jsxs)("div", {
                         className: P._T,
                         children: [
-                            (0, r.jsx)(g.A, { sound: _, onSelect: z }),
+                            (0, r.jsx)(g.A, { sound: _, onSelect: $ }),
                             (0, r.jsx)(m.A, { setEmojiConfetti: A, emojiConfetti: null == c ? void 0 : c }),
                         ],
                     }),
@@ -143,11 +143,11 @@ let F = (e) => {
             }),
         q = () => {
             if (null == V) return null;
-            let e = (0, y.$g)(V.price?.amount ?? 0, V.price?.currency ?? x.Yr.USD);
+            let e = (0, y.$g)(V.price?.amount ?? 0, V.price?.currency ?? M.Yr.USD);
             return (0, r.jsxs)("div", {
                 className: P.AN,
                 children: [
-                    (0, r.jsx)(l.zEo, { className: P.jr, children: M.intl.string(M.t.PpoJzt) }),
+                    (0, r.jsx)(l.zEo, { className: P.jr, children: x.intl.string(x.t.PpoJzt) }),
                     (0, r.jsxs)("div", {
                         className: P.Wx,
                         children: [
@@ -156,7 +156,7 @@ let F = (e) => {
                                 children:
                                     null != V &&
                                     null != B &&
-                                    (0, r.jsx)(O.A, {
+                                    (0, r.jsx)(b.A, {
                                         containerClassName: P.Iy,
                                         cardImage: B,
                                         cardBackgroundImage: H,
@@ -167,7 +167,7 @@ let F = (e) => {
                             (0, r.jsxs)("div", {
                                 className: P.vz,
                                 children: [
-                                    null != L && (0, r.jsx)(b.Q, { application: L }),
+                                    null != L && (0, r.jsx)(R.Q, { application: L }),
                                     (0, r.jsx)(l.Text, { variant: "text-sm/semibold", children: V.name }),
                                 ],
                             }),
@@ -187,14 +187,14 @@ let F = (e) => {
                     q(),
                     null != e &&
                         e > 0 &&
-                        (0, r.jsx)(u.J, { Icon: l.Cp8, text: M.intl.format(M.t["ZV+aS9"], { orbCount: e }) }),
+                        (0, r.jsx)(u.J, { Icon: l.Cp8, text: x.intl.format(x.t["ZV+aS9"], { orbCount: e }) }),
                     null != j && null != V && (0, r.jsx)(G, { handleClose: n, sku: V, guild: j }),
                 ],
             });
         };
     return {
-        renderStepBody: () => (0, r.jsxs)("div", { className: P.Du, children: [$(), Z()] }),
-        getLeftColumnComponent: $,
+        renderStepBody: () => (0, r.jsxs)("div", { className: P.Du, children: [z(), Z()] }),
+        getLeftColumnComponent: z,
         getRightColumnComponent: Z,
         onStepChange: t,
         onBackClick: n,

@@ -1,46 +1,45 @@
-i.d(t, { A: () => u, Y: () => m });
-var l = i(627968),
-    a = i(64700),
-    n = i(158954),
-    s = i(871123),
-    r = i(44724),
-    c = i(409626),
-    o = i(652215),
-    d = i(985018);
-function u(e) {
-    let { invite: t, trackClick: i, closeModal: u } = e,
-        m = a.useCallback(() => {
-            t?.guild != null && (0, r.X)({ guildId: t.guild.id });
+n.d(t, { A: () => d, Y: () => u });
+var i = n(627968),
+    l = n(64700),
+    a = n(158954),
+    s = n(44724),
+    r = n(409626),
+    c = n(652215),
+    o = n(985018);
+function d(e) {
+    let { invite: t, trackClick: n, closeModal: d } = e,
+        u = l.useCallback(() => {
+            t?.guild != null && (0, s.X)({ guildId: t.guild.id });
         }, [t]),
-        x = a.useCallback(() => {
-            t?.guild != null && ((0, r.default)({ invite: t }), u(), i(c.Ws.GameShop));
-        }, [u, t, i]);
-    return new Set(t?.guild?.features).has(o.GuildFeatures.SOCIAL_LAYER_STOREFRONT)
-        ? (0, l.jsx)(n.$nd, {
+        m = l.useCallback(() => {
+            t?.guild != null && ((0, s.default)({ invite: t }), d(), n(r.Ws.GameShop));
+        }, [d, t, n]);
+    return new Set(t?.guild?.features).has(c.GuildFeatures.SOCIAL_LAYER_STOREFRONT)
+        ? (0, i.jsx)(a.$nd, {
               variant: "primary",
-              text: t?.guild?.id === (0, s.zf)() ? d.intl.string(d.t.WTXyEQ) : d.intl.string(d.t.v8UpgE),
-              icon: n.U1X,
-              onClick: x,
-              onMouseDown: m,
+              text: o.intl.string(o.t.v8UpgE),
+              icon: a.U1X,
+              onClick: m,
+              onMouseDown: u,
               fullWidth: !0,
           })
         : null;
 }
-function m(e) {
-    let { invite: t, trackClick: i, closeModal: u } = e,
-        m = a.useCallback(() => {
-            t?.guild != null && (0, r.X)({ guildId: t.guild.id });
+function u(e) {
+    let { invite: t, trackClick: n, closeModal: d } = e,
+        u = l.useCallback(() => {
+            t?.guild != null && (0, s.X)({ guildId: t.guild.id });
         }, [t]),
-        x = a.useCallback(() => {
-            t?.guild != null && ((0, r.default)({ invite: t }), u(), i(c.Ws.GameShop));
-        }, [u, t, i]);
-    return new Set(t?.guild?.features).has(o.GuildFeatures.SOCIAL_LAYER_STOREFRONT)
-        ? (0, l.jsx)(n.$nd, {
+        m = l.useCallback(() => {
+            t?.guild != null && ((0, s.default)({ invite: t }), d(), n(r.Ws.GameShop));
+        }, [d, t, n]);
+    return new Set(t?.guild?.features).has(c.GuildFeatures.SOCIAL_LAYER_STOREFRONT)
+        ? (0, i.jsx)(a.$nd, {
               variant: "primary",
-              text: t?.guild?.id === (0, s.zf)() ? d.intl.string(d.t.WTXyEQ) : d.intl.string(d.t.v8UpgE),
-              icon: n.U1X,
-              onClick: x,
-              onMouseDown: m,
+              text: o.intl.string(o.t.v8UpgE),
+              icon: a.U1X,
+              onClick: m,
+              onMouseDown: u,
               fullWidth: !0,
           })
         : null;

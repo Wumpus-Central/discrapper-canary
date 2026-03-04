@@ -16,7 +16,7 @@ function u(e) {
         h = n?.items.some((e) => (0, a.$)(e)) ?? !1,
         _ = (0, c.gT)({ gameIds: d.sQ, userIds: f }),
         A = (0, c.K6)({ gameIds: d.sQ, userIds: f }),
-        I = (0, c.l1)({ userIds: f, guildIdsWithGameStores: d.tC }),
+        I = (0, c.l1)(f),
         j = (0, c.hJ)({ gameIds: d.sQ }),
         v = (0, c.ok)({ gameIds: d.sQ });
     return m && (h || _ || A || I || (x && (null != p || j || v)));
