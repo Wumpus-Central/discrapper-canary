@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { Ay: () => g, JB: () => _, z$: () => f });
+n.d(t, { Ay: () => E, JB: () => _, z$: () => f });
 var r = n(627968),
     i = n(64700),
-    a = n(580424),
-    s = n(696451),
+    s = n(580424),
+    a = n(696451),
     o = n(248465),
     l = n(427262),
     u = n(634788),
@@ -27,14 +27,14 @@ function h(e) {
 function m(e) {
     return `<@&${e.id}>`;
 }
-let g = {
+let E = {
     sentinel: "@",
-    stores: [s.Ay],
+    stores: [a.Ay],
     matches: (e, t, n, r, i) =>
         i.mentions.user !== c.Vf.DENY || i.mentions.role !== c.eP.DENY || i.mentions.global !== c.VN.DENY,
     queryResults(e, t, n, r, i) {
-        let a = r.mentions.global === c.VN.ALLOW_EVERYONE || r.mentions.global === c.VN.ALLOW_EVERYONE_OR_HERE,
-            s = r.mentions.global === c.VN.ALLOW_EVERYONE_OR_HERE,
+        let s = r.mentions.global === c.VN.ALLOW_EVERYONE || r.mentions.global === c.VN.ALLOW_EVERYONE_OR_HERE,
+            a = r.mentions.global === c.VN.ALLOW_EVERYONE_OR_HERE,
             l = r.mentions.user !== c.Vf.DENY,
             u = r.mentions.role !== c.eP.DENY,
             d = r.mentions.user === c.Vf.ALLOW_GUILD,
@@ -43,8 +43,8 @@ let g = {
             results: o.Ay.queryMentionResults({
                 query: n,
                 channel: e,
-                canMentionEveryone: a,
-                canMentionHere: s,
+                canMentionEveryone: s,
+                canMentionHere: a,
                 canMentionUsers: l,
                 canMentionRoles: u,
                 canMentionOtherGlobals: r.mentions.otherGlobals,
@@ -58,20 +58,20 @@ let g = {
         let t,
             n,
             {
-                results: { users: s, globals: o, roles: l },
+                results: { users: a, globals: o, roles: l },
                 selectedIndex: _,
                 channel: f,
                 query: p,
                 options: h,
                 onHover: m,
-                onClick: g,
+                onClick: E,
             } = e,
-            E = s.map((e, t) =>
+            g = a.map((e, t) =>
                 (0, r.jsx)(
-                    a.Ay.User,
+                    s.Ay.User,
                     {
                         guildId: f.guild_id,
-                        onClick: g,
+                        onClick: E,
                         onHover: m,
                         selected: _ === t,
                         index: t,
@@ -85,28 +85,27 @@ let g = {
             ),
             A = o.map((e, t) =>
                 (0, r.jsx)(
-                    a.Ay.Generic,
+                    s.Ay.Generic,
                     {
-                        onClick: g,
+                        onClick: E,
                         onHover: m,
-                        selected: _ === t + s.length,
-                        index: s.length + t,
+                        selected: _ === t + a.length,
+                        index: a.length + t,
                         text: e.text,
                         description: h.hideMentionDescription ? null : e.description,
                         "aria-label": e.text,
-                        badge: "@game" === e.text || "@time" === e.text ? "new" : void 0,
                     },
                     e.text,
                 ),
             ),
             I = l.map((e, t) =>
                 (0, r.jsx)(
-                    a.Ay.Role,
+                    s.Ay.Role,
                     {
-                        onClick: g,
+                        onClick: E,
                         onHover: m,
-                        selected: _ === t + s.length + o.length,
-                        index: s.length + o.length + t,
+                        selected: _ === t + a.length + o.length,
+                        index: a.length + o.length + t,
                         role: e,
                         hideDescription: h.hideMentionDescription,
                         guildId: f.guild_id,
@@ -123,11 +122,11 @@ let g = {
                 {
                     children: [
                         (0, u.wZ)({ titleWithQuery: t, titleWithoutQuery: n, query: p, getQuery: (e) => `@${e}` }),
-                        E,
-                        s.length > 0 && o.length > 0 ? (0, r.jsx)(a.Ay.Divider, {}) : null,
+                        g,
+                        a.length > 0 && o.length > 0 ? (0, r.jsx)(s.Ay.Divider, {}) : null,
                         A,
-                        (s.length > 0 && l.length > 0) || (o.length > 0 && l.length > 0)
-                            ? (0, r.jsx)(a.Ay.Divider, {})
+                        (a.length > 0 && l.length > 0) || (o.length > 0 && l.length > 0)
+                            ? (0, r.jsx)(s.Ay.Divider, {})
                             : null,
                         I,
                     ],
@@ -140,8 +139,8 @@ let g = {
         let {
                 results: { users: t, globals: n, roles: r },
                 index: i,
-                options: a,
-                channel: s,
+                options: s,
+                channel: a,
             } = e,
             o = t[i],
             l = n[i - t.length],
@@ -149,13 +148,13 @@ let g = {
             d = c.kc.MENTION;
         return (
             null != o
-                ? a.insertText(_(o.user, s, a.hidePersonalInformation), f(o.user))
+                ? s.insertText(_(o.user, a, s.hidePersonalInformation), f(o.user))
                 : null != l
                   ? null != l.inlineAutocompleteType
-                      ? (a.insertAutocompleteInput(l.inlineAutocompleteType),
+                      ? (s.insertAutocompleteInput(l.inlineAutocompleteType),
                         (d = "timestampMentionInput" === l.inlineAutocompleteType ? c.kc.TIMESTAMP : c.kc.GAME_MENTION))
-                      : a.insertText(p(l))
-                  : null != u && a.insertText(h(u), m(u)),
+                      : s.insertText(p(l))
+                  : null != u && s.insertText(h(u), m(u)),
             { type: d }
         );
     },
