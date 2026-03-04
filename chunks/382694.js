@@ -4,7 +4,7 @@ var i = n(627968),
     a = n.n(s),
     l = n(397927),
     r = n(102815),
-    o = n(598998),
+    o = n(189024),
     c = n(985018),
     d = n(950268);
 function u(e) {
@@ -20,13 +20,8 @@ function u(e) {
                     if (null == e) return;
                     let s = 0 === n && !0 === e.featured;
                     return (0, i.jsx)(
-                        "div",
-                        {
-                            id: e.id,
-                            className: a()({ [d.Nq]: s }),
-                            style: { scrollMarginTop: 30 },
-                            children: (0, i.jsx)(r.S, { ...e, glowing: t === e.id, featured: s }),
-                        },
+                        r.S,
+                        { ...e, glowing: t === e.id, featured: s, containerClassName: a()(d.Nr, { [d.Nq]: s }) },
                         e.id,
                     );
                 }),

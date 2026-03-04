@@ -4,9 +4,9 @@ var i = n(627968),
     a = n(397927),
     l = n(720462),
     r = n(102815),
-    o = n(977446),
+    o = n(674624),
     c = n(985018),
-    d = n(185902);
+    d = n(574268);
 function u(e) {
     let { glowingPerkId: t = null } = e,
         n = (0, o.Ay)(),
@@ -35,11 +35,7 @@ function u(e) {
                     className: d.jG,
                     children: A.map((e) => {
                         if (null != e)
-                            return (0, i.jsx)(
-                                "div",
-                                { id: e.id, className: d.Nr, children: (0, i.jsx)(r.S, { ...e, glowing: t === e.id }) },
-                                e.id,
-                            );
+                            return (0, i.jsx)(r.S, { ...e, glowing: t === e.id, containerClassName: d.Ui }, e.id);
                     }),
                 },
                 _,
