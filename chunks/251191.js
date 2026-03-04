@@ -1,74 +1,76 @@
 "use strict";
-n.d(t, { A: () => C });
-var s = n(627968),
-    l = n(64700),
-    r = n(503698),
-    a = n.n(r),
-    i = n(311907),
-    o = n(397927),
-    c = n(720462),
-    d = n(287809),
-    u = n(440938),
-    g = n(590180),
-    _ = n(313276),
-    m = n(206077),
-    h = n(751304),
-    p = n(561769),
-    f = n(758836),
-    x = n(985018),
-    E = n(201073);
-let C = (e) => {
-    let { shelf: t, handleTransition: n, tab: r } = e,
-        C = (0, i.bG)([d.default], () => d.default.getCurrentUser()),
-        A = (0, i.bG)([g.A], () => g.A.getCategory(t.categorySkuId)),
-        b = (0, u.uM)(),
-        S = (0, _.A)(),
-        v = l.useMemo(() => S(t.rankedSkuIds), [t.rankedSkuIds, S]),
-        L = (0, m.X)(v);
-    return null == C
+s.d(t, { A: () => b });
+var n = s(627968),
+    r = s(64700),
+    l = s(503698),
+    i = s.n(l),
+    a = s(311907),
+    o = s(397927),
+    c = s(720462),
+    d = s(287809),
+    u = s(440938),
+    _ = s(590180),
+    g = s(940980),
+    m = s(313276),
+    h = s(206077),
+    p = s(751304),
+    f = s(561769),
+    x = s(758836),
+    E = s(985018),
+    C = s(201073);
+let b = (e) => {
+    let { shelf: t, handleTransition: s, tab: l } = e,
+        b = (0, a.bG)([d.default], () => d.default.getCurrentUser()),
+        A = (0, g.W)("ShelfBlock"),
+        S = (0, a.bG)([_.A], () => _.A.getCategory(t.categorySkuId)),
+        v = (0, u.uM)(),
+        I = (0, m.A)(),
+        L = r.useMemo(() => I(t.rankedSkuIds), [t.rankedSkuIds, I]),
+        j = (0, h.X)(L);
+    return null == b
         ? null
-        : (0, s.jsxs)("div", {
-              className: a()(E.Vp, E.YB),
+        : (0, n.jsxs)("div", {
+              className: i()(C.Vp, C.YB),
               children: [
-                  (0, s.jsxs)("div", {
-                      className: E.$6,
+                  (0, n.jsxs)("div", {
+                      className: C.$6,
                       children: [
-                          (0, s.jsx)(o.Heading, { variant: "heading-lg/semibold", children: t.name }),
-                          (0, s.jsx)(o.Button, {
+                          (0, n.jsx)(o.Heading, { variant: "heading-lg/semibold", children: t.name }),
+                          (0, n.jsx)(o.Button, {
                               variant: "secondary",
-                              text: x.intl.formatToPlainString(x.t.bc9RBE, { category_name: t.name }),
+                              text: E.intl.formatToPlainString(E.t.bc9RBE, { category_name: t.name }),
                               onClick: () => {
-                                  n({
+                                  s({
                                       sourceButton: "shelf block see all",
                                       categorySkuId: t.categorySkuId,
                                       isInternalShopDeeplink: !0,
-                                      isOrbsExclusive: A?.isOrbsExclusive && r !== f.G2.ORBS,
+                                      isOrbsExclusive: S?.isOrbsExclusive && l !== x.G2.ORBS,
                                   });
                               },
                           }),
                       ],
                   }),
-                  (0, s.jsx)(c.A, {
+                  (0, n.jsx)(c.A, {
                       gap: "xl",
-                      children: (0, s.jsx)(s.Fragment, {
-                          children: L.map((e, n) => {
-                              if (null == g.A.getCategoryForProduct(e.skuId) || null == e) return null;
-                              let l = e.skuId;
-                              return (0, s.jsx)(
+                      children: (0, n.jsx)(n.Fragment, {
+                          children: j.map((e, s) => {
+                              if (null == _.A.getCategoryForProduct(e.skuId) || null == e) return null;
+                              let r = e.skuId;
+                              return (0, n.jsx)(
                                   u.R9,
                                   {
-                                      newValue: { tilePosition: n, pageSection: t.name, categoryPosition: 2 },
-                                      children: (0, s.jsx)(
-                                          h.A,
+                                      newValue: { tilePosition: s, pageSection: t.name, categoryPosition: 2 },
+                                      children: (0, n.jsx)(
+                                          p.A,
                                           {
-                                              skuId: l,
-                                              prioritizedCurrency: r === f.G2.ORBS ? p.Hi.ORBS : void 0,
-                                              onClickAnalytics: (0, p.UU)(e, r, b),
+                                              skuId: r,
+                                              prioritizedCurrency: l === x.G2.ORBS ? f.Hi.ORBS : A ? f.Hi.FIAT : void 0,
+                                              onClickAnalytics: (0, f.UU)(e, l, v),
                                           },
-                                          l,
+                                          r,
                                       ),
                                   },
-                                  l,
+                                  r,
                               );
                           }),
                       }),

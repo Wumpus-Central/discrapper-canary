@@ -1,114 +1,120 @@
 "use strict";
-s.d(t, { A: () => R });
+s.d(t, { A: () => B });
 var n = s(627968),
     r = s(64700),
     l = s(575593),
-    a = s(417597),
-    i = s(582754),
+    i = s(417597),
+    a = s(582754),
     o = s(397927),
     c = s(736653),
     d = s(287809),
     u = s(954571),
-    g = s(440938),
-    _ = s(590180),
-    m = s(511265),
-    h = s(206077),
-    p = s(100057),
-    f = s(392183),
-    x = s(751304),
-    E = s(561769),
-    C = s(998694),
+    _ = s(440938),
+    g = s(590180),
+    m = s(940980),
+    h = s(511265),
+    p = s(206077),
+    f = s(100057),
+    x = s(392183),
+    E = s(751304),
+    C = s(561769),
+    b = s(998694),
     A = s(758836),
-    b = s(652215),
-    S = s(985018),
-    v = s(157884),
+    S = s(652215),
+    v = s(985018),
+    I = s(157884),
     L = s(517700),
-    I = s(304009),
-    j = s(495482),
-    k = s(479512),
+    j = s(304009),
+    k = s(495482),
+    T = s(479512),
     O = s(867341),
-    T = s(632728),
+    y = s(632728),
     N = s(368146),
-    y = s(536003);
-function R(e) {
-    let { isFetchingCategories: t, scrollerRef: s, tab: R } = e,
-        B = (0, g.uM)(),
-        M = B?.sessionId ?? "",
-        { noCache: P, includeUnpublished: D } = (0, C.A)(),
-        H = (0, a.bG)([d.default], () => d.default.getCurrentUser()),
-        w = (0, a.bG)([_.A], () => _.A.productsWithVariantsAsGroup),
-        [U, G] = r.useState(1),
-        F = (0, c.DP)(),
-        V = (0, i.qB)(F),
-        [K, z, W] = r.useMemo(() => {
-            switch (R) {
+    R = s(536003);
+function B(e) {
+    let { isFetchingCategories: t, scrollerRef: s, tab: B } = e,
+        M = (0, _.uM)(),
+        P = M?.sessionId ?? "",
+        { noCache: D, includeUnpublished: w } = (0, b.A)(),
+        H = (0, m.W)("CollectiblesFilterableShop"),
+        U = (0, i.bG)([d.default], () => d.default.getCurrentUser()),
+        F = (0, i.bG)([g.A], () => g.A.productsWithVariantsAsGroup),
+        [G, V] = r.useState(1),
+        K = (0, c.DP)(),
+        z = (0, a.qB)(K),
+        [W, Y, $] = r.useMemo(() => {
+            switch (B) {
                 case A.G2.AVATAR_DECORATIONS:
-                    return [S.intl.string(S.t.dRZYNE), V ? k.A : j.A, l.R.AVATAR_DECORATION];
+                    return [v.intl.string(v.t.dRZYNE), z ? T.A : k.A, l.R.AVATAR_DECORATION];
                 case A.G2.PROFILE_EFFECTS:
-                    return [S.intl.string(S.t["1cNjtx"]), V ? y.A : N.A, l.R.PROFILE_EFFECT];
+                    return [v.intl.string(v.t["1cNjtx"]), z ? R.A : N.A, l.R.PROFILE_EFFECT];
                 case A.G2.NAMEPLATES:
-                    return [S.intl.string(S.t.V68Fqz), V ? T.A : O.A, l.R.NAMEPLATE];
+                    return [v.intl.string(v.t.V68Fqz), z ? y.A : O.A, l.R.NAMEPLATE];
                 case A.G2.BUNDLES:
-                    return [S.intl.string(S.t.FYFpps), V ? I.A : L.A, l.R.BUNDLE];
+                    return [v.intl.string(v.t.FYFpps), z ? j.A : L.A, l.R.BUNDLE];
             }
-        }, [R, V]),
-        Y = (0, m.p)(),
-        $ = r.useMemo(
+        }, [B, z]),
+        Z = (0, h.p)(),
+        q = r.useMemo(
             () =>
-                Y(
-                    w.filter(
+                Z(
+                    F.filter(
                         (e) =>
-                            (e.type === W ||
-                                (e.type === l.R.VARIANTS_GROUP && e.variants?.some((e) => e.type === W) === !0)) &&
+                            (e.type === $ ||
+                                (e.type === l.R.VARIANTS_GROUP && e.variants?.some((e) => e.type === $) === !0)) &&
                             !A.MS.some((t) => {
                                 let { categorySkuId: s } = t;
                                 return s === e.categorySkuId;
                             }),
                     ),
                 ),
-            [w, W, Y],
+            [F, $, Z],
         ),
-        Z = (0, h.X)($);
+        X = (0, p.X)(q);
     return (r.useEffect(() => {
-        (0, p.z)({
-            sessionId: M,
-            checkpoint: p.t.SHOP_MOUNTED,
-            tab: R,
-            unpublishedCategoriesShown: D,
-            cacheDisabled: P,
+        (0, f.z)({
+            sessionId: P,
+            checkpoint: f.t.SHOP_MOUNTED,
+            tab: B,
+            unpublishedCategoriesShown: w,
+            cacheDisabled: D,
         });
     }, []),
     r.useEffect(() => {
         t ||
-            (0, p.z)({
-                sessionId: M,
-                checkpoint: p.t.SHOP_RENDERED,
-                tab: R,
-                unpublishedCategoriesShown: D,
-                cacheDisabled: P,
+            (0, f.z)({
+                sessionId: P,
+                checkpoint: f.t.SHOP_RENDERED,
+                tab: B,
+                unpublishedCategoriesShown: w,
+                cacheDisabled: D,
             });
-    }, [M, D, P, t, R]),
-    t || null == H)
-        ? (0, n.jsx)(f.A, {})
+    }, [P, w, D, t, B]),
+    t || null == U)
+        ? (0, n.jsx)(x.A, {})
         : (0, n.jsxs)(n.Fragment, {
               children: [
                   (0, n.jsx)("div", {
-                      style: { backgroundImage: `url(${z})` },
-                      className: v.cI,
-                      children: (0, n.jsx)(o.Heading, { variant: "heading-xxl/extrabold", children: K }),
+                      style: { backgroundImage: `url(${Y})` },
+                      className: I.cI,
+                      children: (0, n.jsx)(o.Heading, { variant: "heading-xxl/extrabold", children: W }),
                   }),
                   (0, n.jsx)("div", {
-                      className: v.ZE,
-                      children: Z.slice(40 * (U - 1), 40 * U).map((e, t) =>
-                          null == _.A.getCategory(e.categorySkuId)
+                      className: I.ZE,
+                      children: X.slice(40 * (G - 1), 40 * G).map((e, t) =>
+                          null == g.A.getCategory(e.categorySkuId)
                               ? null
                               : (0, n.jsx)(
-                                    g.R9,
+                                    _.R9,
                                     {
                                         newValue: { tilePosition: t },
                                         children: (0, n.jsx)(
-                                            x.A,
-                                            { skuId: e.skuId, onClickAnalytics: (0, E.UU)(e, R, B) },
+                                            E.A,
+                                            {
+                                                skuId: e.skuId,
+                                                prioritizedCurrency: H ? C.Hi.FIAT : void 0,
+                                                onClickAnalytics: (0, C.UU)(e, B, M),
+                                            },
                                             e.skuId,
                                         ),
                                     },
@@ -116,25 +122,25 @@ function R(e) {
                                 ),
                       ),
                   }),
-                  Z.length > 40 &&
+                  X.length > 40 &&
                       (0, n.jsx)("div", {
-                          className: v.Ej,
+                          className: I.Ej,
                           children: (0, n.jsx)("div", {
                               children: (0, n.jsx)(o.mgR, {
-                                  currentPage: U,
-                                  totalCount: Z.length,
+                                  currentPage: G,
+                                  totalCount: X.length,
                                   pageSize: 40,
                                   onPageChange: (e) => {
-                                      u.default.track(b.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                          collectibles_shop_session_id: B?.sessionId,
-                                          page_section: B?.pageSection,
-                                          page_category: B?.pageCategory,
+                                      u.default.track(S.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                          collectibles_shop_session_id: M?.sessionId,
+                                          page_section: M?.pageSection,
+                                          page_category: M?.pageCategory,
                                           page_index: e,
                                           page_size: 40,
-                                          cta_name: `${R} page ${e}`,
-                                          page_type: R,
+                                          cta_name: `${B} page ${e}`,
+                                          page_type: B,
                                       }),
-                                          G(e),
+                                          V(e),
                                           s?.current?.scrollToTop({ animate: !0 });
                                   },
                                   disablePaginationGap: !0,

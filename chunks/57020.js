@@ -27,29 +27,36 @@ let c = (e) => {
                 prioritizedCurrency: s = null,
             } = e,
             i = [],
-            c = s === o.Hi.ORBS;
+            c = s === o.Hi.ORBS,
+            u = s === o.Hi.FIAT;
         null != a && null != l
-            ? c || (t && !n)
+            ? c || (!u && t && !n)
                 ? i.push(a, l)
                 : i.push(l, a)
             : null != a
               ? i.push(a)
               : null != l && i.push(l);
-        let u = i.length > 0 && i[0]?.currency === d.Yri.DISCORD_ORB;
-        return { checkoutEligiblePrices: i, isOrbExclusive: r, hasSufficientOrbs: t, shouldCheckoutWithOrbs: u };
+        let x = i.length > 0 && i[0]?.currency === d.Yri.DISCORD_ORB;
+        return { checkoutEligiblePrices: i, isOrbExclusive: r, hasSufficientOrbs: t, shouldCheckoutWithOrbs: x };
     },
     x = (e) => {
-        let { product: t } = e,
-            a = (0, l.r_)(),
-            r = n.default.getCurrentUser(),
+        let { product: t, prioritizedCurrency: a } = e,
+            r = (0, l.r_)(),
+            i = n.default.getCurrentUser(),
             {
-                orbPrice: i,
-                fiatPrice: o,
-                isOrbExclusive: d,
-            } = c({ product: t, isPremiumUser: s.Ay.canUseCollectibles(r) }),
-            x = null != i && null != a && a >= i.amount,
-            { shouldCheckoutWithOrbs: h } = u({ orbPrice: i, fiatPrice: o, isOrbExclusive: d, hasSufficientOrbs: x });
-        return h;
+                orbPrice: o,
+                fiatPrice: d,
+                isOrbExclusive: x,
+            } = c({ product: t, isPremiumUser: s.Ay.canUseCollectibles(i) }),
+            h = null != o && null != r && r >= o.amount,
+            { shouldCheckoutWithOrbs: m } = u({
+                orbPrice: o,
+                fiatPrice: d,
+                isOrbExclusive: x,
+                hasSufficientOrbs: h,
+                prioritizedCurrency: a ?? null,
+            });
+        return m;
     };
 function h(e) {
     let { product: t, isPremiumUser: a, prioritizedCurrency: r, hasDiscountOffer: n = !1 } = e,

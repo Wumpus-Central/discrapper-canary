@@ -1,41 +1,43 @@
 "use strict";
-n.d(t, { A: () => E });
-var s = n(627968),
-    l = n(64700),
-    r = n(720462),
-    a = n(440938),
-    i = n(590180),
-    o = n(511265),
-    c = n(313276),
-    d = n(206077),
-    u = n(751304),
-    g = n(561769),
-    _ = n(484469),
-    m = n(758836),
-    h = n(419447);
-let p = (e) => (0, s.jsx)("div", { className: h.hm, children: (0, s.jsx)(x, { ...e }) }),
-    f = (e) => (0, s.jsx)(r.A, { gap: "xl", children: (0, s.jsx)(x, { ...e }) }),
-    x = (e) => {
-        let { isLoading: t, products: n, tab: l, totalCards: r } = e,
-            o = (0, a.uM)();
-        if (t) return (0, s.jsx)(s.Fragment, { children: [...Array(r ?? 4)].map((e, t) => (0, s.jsx)(_.A, {}, t)) });
-        let c = null != r ? n.slice(0, r) : n;
-        return (0, s.jsx)(g.v3.Provider, {
+s.d(t, { A: () => C });
+var n = s(627968),
+    r = s(64700),
+    l = s(720462),
+    i = s(440938),
+    a = s(590180),
+    o = s(940980),
+    c = s(511265),
+    d = s(313276),
+    u = s(206077),
+    _ = s(751304),
+    g = s(561769),
+    m = s(484469),
+    h = s(758836),
+    p = s(201073);
+let f = (e) => (0, n.jsx)("div", { className: p.hm, children: (0, n.jsx)(E, { ...e }) }),
+    x = (e) => (0, n.jsx)(l.A, { gap: "xl", children: (0, n.jsx)(E, { ...e }) }),
+    E = (e) => {
+        let { isLoading: t, products: s, tab: r, totalCards: l } = e,
+            c = (0, i.uM)(),
+            d = (0, o.W)("HeroBlockCards");
+        if (t) return (0, n.jsx)(n.Fragment, { children: [...Array(l ?? 4)].map((e, t) => (0, n.jsx)(m.A, {}, t)) });
+        let u = null != l ? s.slice(0, l) : s;
+        return (0, n.jsx)(g.v3.Provider, {
             value: { flattenProductVariants: !1 },
-            children: c.map((e, t) => {
-                let n = i.A.getCategoryForProduct(e.skuId);
-                return null == e || null == n
+            children: u.map((e, t) => {
+                let s = a.A.getCategoryForProduct(e.skuId);
+                return null == e || null == s
                     ? null
-                    : (0, s.jsx)(
-                          a.R9,
+                    : (0, n.jsx)(
+                          i.R9,
                           {
                               newValue: { tilePosition: t, pageSection: "top 4", categoryPosition: 0 },
-                              children: (0, s.jsx)(
-                                  u.A,
+                              children: (0, n.jsx)(
+                                  _.A,
                                   {
                                       skuId: e?.skuId,
-                                      prioritizedCurrency: l === m.G2.ORBS ? g.Hi.ORBS : void 0,
-                                      onClickAnalytics: (0, g.UU)(e, l, o),
+                                      prioritizedCurrency: r === h.G2.ORBS ? g.Hi.ORBS : d ? g.Hi.FIAT : void 0,
+                                      onClickAnalytics: (0, g.UU)(e, r, c),
                                   },
                                   e.skuId,
                               ),
@@ -45,29 +47,29 @@ let p = (e) => (0, s.jsx)("div", { className: h.hm, children: (0, s.jsx)(x, { ..
             }),
         });
     },
-    E = (e) => {
+    C = (e) => {
         let t,
-            n,
-            r,
-            { heroBlockRecord: a, layout: u, tab: g, isBlockLoading: _ = !1 } = e,
+            s,
+            l,
+            { heroBlockRecord: i, layout: o, tab: _, isBlockLoading: g = !1 } = e,
             { products: m } =
-                ((t = (0, c.A)()),
-                (n = l.useMemo(() => (_ ? [] : t(a.rankedSkuIds)), [_, t, a.rankedSkuIds])),
-                (r = (0, o.p)()(n)),
-                { products: (0, d.X)(r) }),
-            h = l.useMemo(
+                ((t = (0, d.A)()),
+                (s = r.useMemo(() => (g ? [] : t(i.rankedSkuIds)), [g, t, i.rankedSkuIds])),
+                (l = (0, c.p)()(s)),
+                { products: (0, u.X)(l) }),
+            h = r.useMemo(
                 () =>
-                    !_ &&
-                    0 !== a.rankedSkuIds.length &&
+                    !g &&
+                    0 !== i.rankedSkuIds.length &&
                     !(m.length > 0) &&
-                    a.rankedSkuIds.every((e) => i.A.getProduct(e)?.variantGroupStoreListingId != null),
-                [_, a.rankedSkuIds, m.length],
+                    i.rankedSkuIds.every((e) => a.A.getProduct(e)?.variantGroupStoreListingId != null),
+                [g, i.rankedSkuIds, m.length],
             ),
-            x = _ || h;
-        switch (u) {
+            p = g || h;
+        switch (o) {
             case "feed":
-                return (0, s.jsx)(p, { heroBlockRecord: a, isLoading: x, products: m, tab: g });
+                return (0, n.jsx)(f, { heroBlockRecord: i, isLoading: p, products: m, tab: _ });
             case "hscroll":
-                return (0, s.jsx)(f, { heroBlockRecord: a, isLoading: x, products: m, tab: g });
+                return (0, n.jsx)(x, { heroBlockRecord: i, isLoading: p, products: m, tab: _ });
         }
     };
