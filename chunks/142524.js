@@ -13,8 +13,8 @@ var i = n(627968),
     m = n(290863),
     h = n(977997),
     g = n(954571),
-    E = n(279250),
-    f = n(834757),
+    f = n(279250),
+    E = n(834757),
     C = n(727353),
     S = n(652215),
     T = n(945354);
@@ -44,12 +44,11 @@ class v extends l.PureComponent {
             canWatch: c,
             unavailableReason: A,
             streamApplication: p,
-            isStandardGap: m,
         } = this.props;
         return null == n
             ? null
             : (0, i.jsx)("div", {
-                  className: a()(T.yt, { [T.P0]: l, [T.iA]: !0 === m }),
+                  className: a()(T.yt, { [T.P0]: l }),
                   children: (0, i.jsx)(C.Z, {
                       stream: n,
                       activeStream: d,
@@ -62,22 +61,21 @@ class v extends l.PureComponent {
                       onWatchStream: o,
                       onAction: r,
                       hideTip: s,
-                      className: T.Rh,
                   }),
               });
     }
 }
 function y(t) {
     let { user: e, channel: n, ...r } = t,
-        [a, g] = (0, s.yK)([h.A, A.A, p.A, d.default], () => (0, E.eo)(n, h.A, A.A, p.A, d.default)),
+        [a, g] = (0, s.yK)([h.A, A.A, p.A, d.default], () => (0, f.eo)(n, h.A, A.A, p.A, d.default)),
         C = (0, s.bG)([u.A], () => u.A.getStreamForUser(e.id, n.getGuildId())),
         S = (0, s.bG)([u.A], () => u.A.getActiveStreamForApplicationStream(C)),
         T = (0, s.bG)([c.default], () => c.default.getId()),
-        y = (0, f.AO)(C),
-        N = (0, s.bG)([m.A], () => (0, f.nr)(C, m.A)),
-        x = l.useMemo(() => ({ [n.guild_id]: [e.id] }), [n.guild_id, e.id]);
+        y = (0, E.AO)(C),
+        x = (0, s.bG)([m.A], () => (0, E.nr)(C, m.A)),
+        N = l.useMemo(() => ({ [n.guild_id]: [e.id] }), [n.guild_id, e.id]);
     return (
-        (0, o.Eq)(x, "StreamPreviewPopout"),
+        (0, o.Eq)(N, "StreamPreviewPopout"),
         (0, i.jsx)(v, {
             ...r,
             canWatch: a,
@@ -87,7 +85,7 @@ function y(t) {
             stream: C,
             activeStream: S,
             currentUserId: T,
-            activity: N,
+            activity: x,
             channel: n,
         })
     );

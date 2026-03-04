@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { A: () => P });
+n.d(t, { A: () => w });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    a = n.n(l),
-    r = n(311907),
+    r = n.n(l),
+    a = n(311907),
     o = n(397927),
     c = n(80682),
     d = n(845056),
     u = n(685399),
     h = n(323073),
     A = n(643501),
-    p = n(279250),
-    m = n(834757),
+    m = n(279250),
+    p = n(834757),
     g = n(727353),
     _ = n(140547),
     f = n(636920),
@@ -33,17 +33,17 @@ var i = n(627968),
     M = n(652215),
     D = n(188275),
     G = n(699976),
-    U = n(962966);
-function P(e) {
+    U = n(962966),
+    P = n(248789);
+function w(e) {
     let {
             channel: t,
             user: n,
             onAction: l,
-            excludeActivity: P,
-            onWatchStream: w,
-            hangStatusActivity: k,
-            renderSelfHangStatus: V,
-            isStandardGap: B = !1,
+            excludeActivity: w,
+            onWatchStream: k,
+            hangStatusActivity: V,
+            renderSelfHangStatus: B,
         } = e,
         H = s.useMemo(() => ({ [t.guild_id]: [n.id] }), [t.guild_id, n.id]);
     (0, c.Eq)(H, "VoiceUserActivities");
@@ -52,16 +52,16 @@ function P(e) {
         W = Array.from((0, u.Rz)(K).values()),
         Y = (0, C.W)(),
         z = (0, E.i)((e) => e.showSelfActivity),
-        [q, X] = (0, r.yK)(
+        [q, X] = (0, a.yK)(
             [N.A],
             () => [N.A.getStreamForUser(n.id, t.getGuildId()), N.A.getActiveStreamForUser(n.id, t.getGuildId())],
             [t, n.id],
         ),
-        [J, Q] = (0, r.yK)([y.A, b.A, T.A, A.default], () => (0, p.eo)(t, y.A, b.A, T.A, A.default)),
-        $ = (0, r.bG)([S.default], () => S.default.getId()),
-        Z = (0, r.bG)([v.A], () => (0, m.nr)(q, v.A), [q]),
-        ee = (0, d.me)(n, P ?? Z),
-        et = (0, r.bG)([j.Ay], () => j.Ay.getVoiceStatesForChannel(t).find((e) => e.user.id === n.id) ?? null, [
+        [J, Q] = (0, a.yK)([y.A, b.A, T.A, A.default], () => (0, m.eo)(t, y.A, b.A, T.A, A.default)),
+        $ = (0, a.bG)([S.default], () => S.default.getId()),
+        Z = (0, a.bG)([v.A], () => (0, p.nr)(q, v.A), [q]),
+        ee = (0, d.me)(n, w ?? Z),
+        et = (0, a.bG)([j.Ay], () => j.Ay.getVoiceStatesForChannel(t).find((e) => e.user.id === n.id) ?? null, [
             t,
             n.id,
         ]),
@@ -69,12 +69,12 @@ function P(e) {
         { enableUserHoverActivities: ei } = (0, O.fC)({ guildId: t.guild_id, location: "VoiceUserActivities" }),
         { enableHangStatus: es } = (0, _.$j)({ guildId: t.guild_id, location: "VoiceUserActivities" }),
         el = (0, x.m)({ location: "voice_channel_activities" }),
-        ea = (0, h.r9)() && (0, h.UK)(t.id),
-        er = null != q && !ea,
+        er = (0, h.r9)() && (0, h.UK)(t.id),
+        ea = null != q && !er,
         eo = ee.length + W.length > 0,
-        ec = null != k,
+        ec = null != V,
         ed = n.id === S.default.getId() && !z,
-        eu = er || eo || (ec && es);
+        eu = ea || eo || (ec && es);
     if (
         (s.useEffect(() => {
             eu &&
@@ -88,15 +88,15 @@ function P(e) {
     )
         return null;
     if (ed) {
-        if (es) return V({ position: "right", nudge: 0, closePopout: () => {}, updatePosition: () => {} });
+        if (es) return B({ position: "right", nudge: 0, closePopout: () => {}, updatePosition: () => {} });
         if (!eu) return null;
     }
     return (0, i.jsxs)(o.HOs, {
-        className: a()(U.kL, { [U.iA]: B }),
+        className: r()(P.popover, U.kL),
         children: [
-            ec && es && null != k
+            ec && es && null != V
                 ? (0, i.jsx)(f.Z, {
-                      hangStatusActivity: k,
+                      hangStatusActivity: V,
                       channel: t,
                       userId: n.id,
                       isSelf: ed,
@@ -107,7 +107,7 @@ function P(e) {
                       textClassName: U.YJ,
                   })
                 : null,
-            null == q || null == w || ea
+            null == q || null == k || er
                 ? null
                 : (0, i.jsx)(g.P, {
                       stream: q,
@@ -117,7 +117,7 @@ function P(e) {
                       currentUserId: $,
                       canWatch: J,
                       unavailableReason: Q,
-                      onWatchStream: w,
+                      onWatchStream: k,
                       onAction: l,
                       showHeader: ei,
                   }),
@@ -135,8 +135,8 @@ function P(e) {
                 ),
             ),
             ee.map((e) => {
-                let a = e.application_id;
-                return (null != Y && (a = Y), el && null != a && D.sQ.has(a))
+                let r = e.application_id;
+                return (null != Y && (r = Y), el && null != r && D.sQ.has(r))
                     ? (0, i.jsxs)(
                           s.Fragment,
                           {
@@ -150,7 +150,7 @@ function P(e) {
                                   }),
                                   (0, i.jsx)(I.A, {
                                       className: U.L,
-                                      applicationId: a,
+                                      applicationId: r,
                                       rewardOfferNoticeClassName: U.Nh,
                                       userIds: [n.id],
                                       location: "voice_channel",
