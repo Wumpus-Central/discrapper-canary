@@ -2,8 +2,8 @@ i.d(e, { A: () => O });
 var n = i(627968),
     l = i(64700),
     s = i(311907),
-    r = i(397927),
-    a = i(775602),
+    a = i(397927),
+    r = i(775602),
     u = i(141468),
     o = i(963852),
     d = i(763754),
@@ -12,13 +12,13 @@ var n = i(627968),
     S = i(486020),
     E = i(253932),
     g = i(652215),
-    _ = i(985018),
-    c = i(468209);
+    c = i(985018),
+    _ = i(317911);
 let I = new T.nA({ id: "1337", guild_id: "1337", type: g.rbe.GUILD_TEXT, name: "preview" }),
     C = [
-        { status: r.clD.IDLE, discriminator: "2" },
-        { status: r.clD.DND, discriminator: "3" },
-        { status: r.clD.ONLINE, mobile: !0, discriminator: "4" },
+        { status: a.clD.IDLE, discriminator: "2" },
+        { status: a.clD.DND, discriminator: "3" },
+        { status: a.clD.ONLINE, mobile: !0, discriminator: "4" },
     ];
 function N(t) {
     let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
@@ -30,7 +30,7 @@ function O() {
         i = l.useMemo(
             () => [
                 N(
-                    _.intl.formatToPlainString(_.t.BknJRT, {}),
+                    c.intl.formatToPlainString(c.t.BknJRT, {}),
                     e
                         ? [
                               {
@@ -50,47 +50,65 @@ function O() {
                           ]
                         : [],
                 ),
-                N(_.intl.formatToPlainString(_.t["4rDfgM"], {})),
+                N(c.intl.formatToPlainString(c.t["4rDfgM"], {})),
             ],
             [e],
         ),
-        u = (0, s.bG)([a.A], () => a.A.messageGroupSpacing);
-    return (0, n.jsx)(r.M1G, {
-        children: (0, n.jsxs)("div", {
-            className: c.VH,
-            children: [
-                (0, n.jsx)("div", {
-                    className: c.DZ,
-                    style: { gap: u },
-                    children: i.map((e) =>
-                        (0, n.jsx)(
-                            A.A,
-                            { message: e, channel: I, compact: t, author: { ...(0, d.p_)(e), colorString: "#dd80f4" } },
-                            e.id,
-                        ),
-                    ),
-                }),
-                (0, n.jsxs)("div", {
-                    className: c.HD,
-                    children: [
-                        C.map((t) => {
-                            let { status: e, discriminator: i, mobile: l = !1 } = t;
-                            return (0, n.jsx)(
-                                r.euF,
+        u = (0, s.bG)([r.A], () => r.A.messageGroupSpacing);
+    return (0, n.jsx)(a.M1G, {
+        children: (0, n.jsx)("section", {
+            "aria-label": c.intl.string(c.t.RC22qg),
+            children: (0, n.jsxs)(a.IpV, {
+                className: _.VH,
+                children: [
+                    (0, n.jsx)("ol", {
+                        className: _.DZ,
+                        style: { gap: u },
+                        "aria-label": c.intl.string(c.t.xfjsEV),
+                        children: i.map((e) =>
+                            (0, n.jsx)(
+                                "li",
                                 {
-                                    status: e,
-                                    isMobile: l,
-                                    size: r._3J.SIZE_32,
-                                    src: S.Ay.getDefaultAvatarURL(void 0, i),
-                                    "aria-hidden": !0,
+                                    children: (0, n.jsx)(A.A, {
+                                        message: e,
+                                        channel: I,
+                                        compact: t,
+                                        author: { ...(0, d.p_)(e), colorString: "#dd80f4" },
+                                    }),
                                 },
-                                e,
-                            );
-                        }),
-                        (0, n.jsx)(r.Button, { text: _.intl.string(_.t["2RHHgz"]), size: "sm", variant: "primary" }),
-                    ],
-                }),
-            ],
+                                e.id,
+                            ),
+                        ),
+                    }),
+                    (0, n.jsxs)("div", {
+                        className: _.Jb,
+                        children: [
+                            (0, n.jsx)("div", {
+                                className: _.HD,
+                                children: C.map((t) => {
+                                    let { status: e, discriminator: i, mobile: l = !1 } = t;
+                                    return (0, n.jsx)(
+                                        a.euF,
+                                        {
+                                            status: e,
+                                            isMobile: l,
+                                            size: a._3J.SIZE_32,
+                                            src: S.Ay.getDefaultAvatarURL(void 0, i),
+                                            "aria-label": c.intl.string(c.t.VKE5TK),
+                                        },
+                                        e,
+                                    );
+                                }),
+                            }),
+                            (0, n.jsx)(a.Button, {
+                                text: c.intl.string(c.t["2RHHgz"]),
+                                size: "sm",
+                                variant: "primary",
+                            }),
+                        ],
+                    }),
+                ],
+            }),
         }),
     });
 }
