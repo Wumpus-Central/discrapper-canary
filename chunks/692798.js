@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => X, X8: () => H, Zg: () => K, ew: () => W, t6: () => $, v0: () => F }), n(801541);
+n.d(t, { Ay: () => X, X8: () => H, Zg: () => K, ew: () => W, t6: () => z, v0: () => F }), n(801541);
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -24,18 +24,18 @@ var r = n(627968),
     v = n(253932),
     N = n(12901),
     C = n(954571),
-    b = n(823459),
-    R = n(47671),
-    O = n(323618),
+    R = n(823459),
+    O = n(47671),
+    b = n(323618),
     D = n(653523),
     L = n(385803),
     w = n(652215),
-    x = n(788868),
-    M = n(185928),
+    M = n(788868),
+    x = n(185928),
     P = n(355097),
     k = n(818348),
     U = n(985018),
-    G = n(671214),
+    G = n(176240),
     F = (function (e) {
         return (e.EDITOR = "EDITOR"), (e.SETTINGS = "SETTINGS"), e;
     })({});
@@ -44,7 +44,7 @@ let V = Object.freeze({ EDITOR: P.Sb.SLOW_USER_ACTION, SETTINGS: P.Sb.INFREQUENT
     H = (e) => {
         let { isPersisted: t, themeName: n, analyticsLocations: r } = e;
         C.default.track(w.HAw.CLIENT_THEME_UPDATED, {
-            feature_name: x.Ae.CLIENT_THEME,
+            feature_name: M.Ae.CLIENT_THEME,
             theme_name: n,
             is_persisted: t,
             location_stack: r,
@@ -67,13 +67,13 @@ let V = Object.freeze({ EDITOR: P.Sb.SLOW_USER_ACTION, SETTINGS: P.Sb.INFREQUENT
             className: G.DD,
             children: [
                 (0, r.jsx)(d.Heading, { "aria-label": c, className: a()(G.Qw, s), variant: u, children: c }),
-                (0, r.jsx)(T.A, { className: a()(G.PC, l) }),
+                (0, r.jsx)(T.A, { className: a()(G.PC, l), size: "xs" }),
             ],
         });
     },
     Y = (e) => {
         let { type: t, isPreview: n, isCoachmark: i } = e;
-        if ((0, A.V)()?.subscription_trial?.sku_id === x.pe.TIER_2 && n) return null;
+        if ((0, A.V)()?.subscription_trial?.sku_id === M.pe.TIER_2 && n) return null;
         let s = (0, o.YW)({ type: t, isPreview: n, isCoachmark: i })
             .with({ type: "EDITOR", isPreview: !0 }, () => U.intl.format(U.t.G8yQXi, { onPremiumClick: () => g.e }))
             .with({ type: "EDITOR", isCoachmark: !0 }, () => U.intl.string(U.t.jmZiNu))
@@ -92,12 +92,12 @@ let V = Object.freeze({ EDITOR: P.Sb.SLOW_USER_ACTION, SETTINGS: P.Sb.INFREQUENT
                 titleIconClassName: c,
             } = e,
             { type: d } = i.useContext(B),
-            [_] = (0, l.yK)([R.A], () => [R.A.isPreview]),
-            f = (0, A.V)()?.subscription_trial?.sku_id === x.pe.TIER_2;
+            [_] = (0, l.yK)([O.A], () => [O.A.isPreview]),
+            f = (0, A.V)()?.subscription_trial?.sku_id === M.pe.TIER_2;
         return "EDITOR" === d && _ && f
             ? (0, r.jsx)(I.Ay, {
-                  type: x.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
-                  subscriptionTier: x.pe.TIER_2,
+                  type: M.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+                  subscriptionTier: M.pe.TIER_2,
                   children: U.intl.format(U.t.G8yQXi, { onPremiumClick: () => g.e }),
               })
             : (0, r.jsxs)("div", {
@@ -125,7 +125,7 @@ let V = Object.freeze({ EDITOR: P.Sb.SLOW_USER_ACTION, SETTINGS: P.Sb.INFREQUENT
         let { disabled: t, size: s } = e,
             { type: a, delay: o } = i.useContext(B),
             { analyticsLocations: c } = (0, h.Ay)(p.A.CLIENT_THEMES_THEME_SELECTOR),
-            [E, g] = (0, l.yK)([R.A], () => [R.A.isPreview, R.A.gradientPreset?.id]),
+            [E, g] = (0, l.yK)([O.A], () => [O.A.isPreview, O.A.gradientPreset?.id]),
             [A, I] = i.useState(!1),
             [T, S] = i.useState(-1),
             y = (0, l.bG)([f.A], () => f.A.useReducedMotion);
@@ -134,7 +134,7 @@ let V = Object.freeze({ EDITOR: P.Sb.SLOW_USER_ACTION, SETTINGS: P.Sb.INFREQUENT
         }, [T, a, g]);
         let v = (e, t) => {
                 if (
-                    ((0, b.bc)(e.id),
+                    ((0, R.bc)(e.id),
                     H({ isPersisted: !E, analyticsLocations: c, themeName: u.ju[e.id] }),
                     E && "SETTINGS" === a
                         ? C(e)
@@ -142,7 +142,7 @@ let V = Object.freeze({ EDITOR: P.Sb.SLOW_USER_ACTION, SETTINGS: P.Sb.INFREQUENT
                               {
                                   backgroundGradientPresetId: e.id,
                                   theme: e.theme,
-                                  useSystemTheme: E ? M.Q_.OFF : void 0,
+                                  useSystemTheme: E ? x.Q_.OFF : void 0,
                               },
                               o,
                           ),
@@ -154,7 +154,7 @@ let V = Object.freeze({ EDITOR: P.Sb.SLOW_USER_ACTION, SETTINGS: P.Sb.INFREQUENT
             },
             C = async (e) => {
                 await (0, _.u_)(
-                    { backgroundGradientPresetId: e.id, theme: e.theme, useSystemTheme: E ? M.Q_.OFF : void 0 },
+                    { backgroundGradientPresetId: e.id, theme: e.theme, useSystemTheme: E ? x.Q_.OFF : void 0 },
                     P.Sb.SLOW_USER_ACTION,
                 ),
                     (0, m.nf)(m.HP.CLIENT_THEMES),
@@ -183,7 +183,7 @@ let V = Object.freeze({ EDITOR: P.Sb.SLOW_USER_ACTION, SETTINGS: P.Sb.INFREQUENT
             };
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(O.A, {
+                (0, r.jsx)(b.A, {
                     size: s,
                     isDisabled: t,
                     onSelect: () => {
@@ -216,7 +216,7 @@ let V = Object.freeze({ EDITOR: P.Sb.SLOW_USER_ACTION, SETTINGS: P.Sb.INFREQUENT
             ],
         });
     },
-    z = (e) => {
+    $ = (e) => {
         let { className: t, renderCTAButtons: n, disabled: i = !1, isCoachmark: s, iconSize: a } = e;
         return (0, r.jsxs)("section", {
             className: t,
@@ -232,17 +232,17 @@ let V = Object.freeze({ EDITOR: P.Sb.SLOW_USER_ACTION, SETTINGS: P.Sb.INFREQUENT
             ],
         });
     },
-    $ = (e) => {
+    z = (e) => {
         let { size: t, systemSelectorFirst: n, hideSystemSelector: s = !1 } = e,
             { delay: a } = i.useContext(B),
             { analyticsLocations: o } = (0, h.Ay)(p.A.CLIENT_THEMES_THEME_SELECTOR),
-            [u, c, d] = (0, l.yK)([S.A, y.Ay, R.A], () => [
+            [u, c, d] = (0, l.yK)([S.A, y.Ay, O.A], () => [
                 S.A.theme,
-                null == R.A.gradientPreset && null == v.eh.getSetting().customUserThemeSettings,
-                y.Ay.useSystemTheme === M.Q_.ON,
+                null == O.A.gradientPreset && null == v.eh.getSetting().customUserThemeSettings,
+                y.Ay.useSystemTheme === x.Q_.ON,
             ]),
             f = (e) => {
-                (0, b.Py)(),
+                (0, R.Py)(),
                     H({ isPersisted: !0, analyticsLocations: o, themeName: `default ${e}` }),
                     (0, _.u_)({ theme: e }, a);
             },
@@ -308,7 +308,7 @@ let V = Object.freeze({ EDITOR: P.Sb.SLOW_USER_ACTION, SETTINGS: P.Sb.INFREQUENT
                     justify: t ? "center" : "start",
                     style: { marginTop: 16 },
                     children: [
-                        (0, r.jsx)($, { systemSelectorFirst: !0, size: a }),
+                        (0, r.jsx)(z, { systemSelectorFirst: !0, size: a }),
                         (0, r.jsx)(K, { disabled: !1, size: a }),
                     ],
                 }),
@@ -334,10 +334,10 @@ let V = Object.freeze({ EDITOR: P.Sb.SLOW_USER_ACTION, SETTINGS: P.Sb.INFREQUENT
             wrap: !0,
             gap: 8,
             style: { marginTop: 16 },
-            children: (0, r.jsx)($, { hideSystemSelector: n, size: i }),
+            children: (0, r.jsx)(z, { hideSystemSelector: n, size: i }),
         }),
     });
 }),
-    (Z.Gradient = z),
+    (Z.Gradient = $),
     (Z.BasicAndGradient = q);
 let X = Z;

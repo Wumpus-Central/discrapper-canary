@@ -461,6 +461,7 @@ var r = (function (e) {
         (e.USER_SETTINGS_TRY_OUT_PREMIUM = "user settings try out premium"),
         (e.USER_SETTINGS_SOUNDBOARD_TAB = "user settings soundboard tab"),
         (e.USER_SETTINGS_DEBUG_TAB = "user settings debug tab"),
+        (e.USER_SETTINGS_FAVORITES = "user settings favorites"),
         (e.DEEPLINK = "deeplink"),
         (e.HOLIDAY_COACHMARK = "holiday coachmark"),
         (e.USER_SETTINGS_COACHMARK = "user settings coachmark"),

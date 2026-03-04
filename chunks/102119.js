@@ -24,14 +24,14 @@ var r = n(627968),
     v = n(927578),
     N = n(535229),
     C = n(526162),
-    b = n(848971),
-    R = n(635917),
-    O = n(652215),
+    R = n(848971),
+    O = n(635917),
+    b = n(652215),
     D = n(49999),
     L = n(788868),
     w = n(985018),
-    x = n(870217);
-let M = () => {
+    M = n(378399);
+let x = () => {
         let e = (0, o.bG)([S.default], () => v.Ay.isPremium(S.default.getCurrentUser())),
             t = (0, m.V)(),
             n = t?.subscription_trial?.sku_id === L.pe.TIER_2;
@@ -56,21 +56,21 @@ let M = () => {
                 t?.(D.i.DISMISS), (0, h.Jp)(), (0, N.U)();
             };
         return (0, r.jsxs)("div", {
-            className: x.nV,
+            className: M.nV,
             children: [
                 (0, r.jsx)(c.DUT, {
-                    className: x.VV,
+                    className: M.VV,
                     onClick: () => n(),
-                    children: (0, r.jsx)(c.aXh, { size: "md", color: "currentColor", className: x.P0 }),
+                    children: (0, r.jsx)(c.aXh, { size: "md", color: "currentColor", className: M.P0 }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: x.DD,
+                    className: M.DD,
                     children: [
                         (0, r.jsx)(c.Heading, {
                             variant: "heading-lg/extrabold",
                             children: w.intl.string(w.t["hb/wE0"]),
                         }),
-                        (0, r.jsx)(g.A, { className: x.PC }),
+                        (0, r.jsx)(g.A, { color: c.LU0.colors.TEXT_STRONG, size: "sm", className: M.PC }),
                     ],
                 }),
             ],
@@ -83,14 +83,14 @@ let M = () => {
                 if ((n?.(D.i.DISMISS), (0, h.Jp)(), (0, N.U)(), !t)) {
                     let e = (0, I.Ci)("AppIconEditor_handleBack");
                     (0, T.openUserSettings)(e ? A.X.DISPLAY_IN_APP_ICON_CATEGORY : A.X.APPEARANCE_PANEL, {
-                        section: O.nc_.APPEARANCE,
+                        section: b.nc_.APPEARANCE,
                     });
                 }
             };
         return (0, r.jsxs)("div", {
-            className: x.N3,
+            className: M.N3,
             children: [
-                i && (0, r.jsx)(M, {}),
+                i && (0, r.jsx)(x, {}),
                 (0, r.jsx)(l.$nd, {
                     onClick: s,
                     variant: "secondary",
@@ -103,7 +103,7 @@ let M = () => {
     U = 16,
     G = 24;
 function F(e) {
-    let { isCoachmark: t, markAsDismissed: n, iconSize: s = R.N8.SIZE_60 } = e,
+    let { isCoachmark: t, markAsDismissed: n, iconSize: s = O.N8.SIZE_60 } = e,
         { analyticsLocations: l } = (0, p.Ay)(f.A.APP_ICON_EDITOR),
         u = (0, o.bG)([S.default], () => S.default.getCurrentUser()),
         { isUpsellPreview: m, shouldEditorAnimate: E } = (0, o.cf)([C.A, _.A], () => ({
@@ -112,9 +112,9 @@ function F(e) {
         })),
         g = h.fy.getState().activePanel === h.HP.APP_ICON;
     i.useEffect(() => {
-        m && y.default.track(O.HAw.PREMIUM_UPSELL_VIEWED, { type: L.e.APP_ICON_UPSELL, location_stack: l });
+        m && y.default.track(b.HAw.PREMIUM_UPSELL_VIEWED, { type: L.e.APP_ICON_UPSELL, location_stack: l });
     }, [m, l]);
-    let A = (0, d.A)(null, m ? N.U : O.tEg);
+    let A = (0, d.A)(null, m ? N.U : b.tEg);
     i.useEffect(() => {
         if (m && !g) return N.U;
     }, [m, g]);
@@ -131,15 +131,15 @@ function F(e) {
               value: l,
               children: (0, r.jsx)("div", {
                   ref: A,
-                  className: a()(x.EN, E ? x.hP : null),
+                  className: a()(M.EN, E ? M.hP : null),
                   "data-app-right-panel": !0,
                   style: I,
                   children: (0, r.jsxs)(c.Fmo, {
                       children: [
                           (0, r.jsx)(P, { markAsDismissed: n }),
                           (0, r.jsx)(c.HOs, {
-                              className: x.sV,
-                              children: (0, r.jsx)(b.A, { className: x.Gg, isEditor: !0, iconSize: s }),
+                              className: M.sV,
+                              children: (0, r.jsx)(R.A, { className: M.Gg, isEditor: !0, iconSize: s }),
                           }),
                           (0, r.jsx)(k, { markAsDismissed: n, isCoachmark: t }),
                       ],

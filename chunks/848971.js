@@ -15,8 +15,8 @@ var r = n(627968),
     h = n(635917),
     m = n(355097),
     E = n(985018),
-    g = n(270405),
-    A = n(239589);
+    g = n(638959),
+    A = n(944255);
 function I(e) {
     let { disabled: t, size: n } = e,
         [i] = (0, s.yK)([f.A], () => [f.A.getCurrentDesktopIcon()]),
@@ -77,7 +77,7 @@ function T(e) {
                                                     color: p ? "text-strong" : void 0,
                                                     children: E.intl.string(E.t.NThqTw),
                                                 }),
-                                                (0, r.jsx)(c.A, { className: g.PC }),
+                                                (0, r.jsx)(c.A, { color: o.LU0.colors.ICON_STRONG, size: "sm" }),
                                             ],
                                         }),
                                     (0, r.jsx)(o.Heading, {

@@ -1,9 +1,9 @@
 n.d(t, { A: () => m });
 var i = n(627968),
     s = n(64700),
-    r = n(503698),
-    a = n.n(r),
-    l = n(397927),
+    a = n(503698),
+    l = n.n(a),
+    r = n(397927),
     o = n(453771),
     c = n(450232),
     d = n(212168),
@@ -13,7 +13,7 @@ function _(e) {
     return (0, i.jsx)(i.Fragment, {
         children: t.map((e, t) =>
             (0, i.jsx)(
-                l.Text,
+                r.Text,
                 {
                     variant: "text-xs/normal",
                     color: "text-feedback-critical",
@@ -32,38 +32,38 @@ let m = s.forwardRef(function (e, t) {
     let {
         title: n,
         titleIcon: s,
-        titleId: r,
+        titleId: a,
         description: o,
         children: m,
         className: A,
         errors: g,
-        disabled: E = !1,
-        hideDivider: h = !1,
+        disabled: h = !1,
+        hideDivider: x = !1,
         showBorder: p = !1,
-        borderType: C,
-        hasBackground: x = !1,
+        borderType: E,
+        hasBackground: C = !1,
         forcedDivider: T = !1,
-        showPremiumIcon: I = !1,
+        showPremiumIcon: S = !1,
     } = e;
     return (0, i.jsx)("div", {
-        className: a()(u.fz, A, { [u.r9]: E, [u.Ai]: h, [u.Ac]: p, [u.Cx]: T }),
+        className: l()(u.fz, A, { [u.r9]: h, [u.Ai]: x, [u.Ac]: p, [u.Cx]: T }),
         ref: t,
         children: (0, i.jsxs)(d.A, {
             className: u.D6,
             backgroundClassName: u.fr,
             isShown: p,
-            type: C,
-            hasBackground: x,
+            type: E,
+            hasBackground: C,
             children: [
-                (0, i.jsxs)(l.zEo, {
+                (0, i.jsxs)(r.zEo, {
                     className: u.DD,
-                    id: r,
+                    id: a,
                     "data-migration-pending": !0,
-                    children: [n, I && (0, i.jsx)(c.A, {}), s],
+                    children: [n, S && (0, i.jsx)(c.A, { size: "xs" }), s],
                 }),
                 null != o
-                    ? (0, i.jsx)(l.ayl, {
-                          type: l.ayl.Types.DESCRIPTION,
+                    ? (0, i.jsx)(r.ayl, {
+                          type: r.ayl.Types.DESCRIPTION,
                           className: u.yV,
                           "data-migration-pending": !0,
                           children: o,

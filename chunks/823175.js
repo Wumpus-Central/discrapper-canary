@@ -1,4 +1,4 @@
-s.r(r), s.d(r, { default: () => i });
-let i = JSON.parse(
-    '{"IF7iE0":["Display the Favorites Server in your server list for quick access to your favorite channels."],"0h2CcM":["Show Favorites Server"]}',
+a.r(r), a.d(r, { default: () => s });
+let s = JSON.parse(
+    '{"v7GajN":["Preview"],"IF7iE0":["Save your favorite channels and DMs for quick access. Your favorites are saved even if you turn this off, cancel Nitro, or resubscribe later. Learn more."],"0h2CcM":["Show Favorites"]}',
 );

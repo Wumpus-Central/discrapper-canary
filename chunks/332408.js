@@ -24,14 +24,14 @@ var r = n(627968),
     v = n(840065),
     N = n(287809),
     C = n(954571),
-    b = n(927578),
-    R = n(47671),
-    O = n(11029),
+    R = n(927578),
+    O = n(47671),
+    b = n(11029),
     D = n(58034),
     L = n(474529),
     w = n(692798),
-    x = n(385803),
-    M = n(652215),
+    M = n(385803),
+    x = n(652215),
     P = n(49999),
     k = n(788868),
     U = n(985018),
@@ -42,7 +42,7 @@ let F = () =>
             children: (0, r.jsxs)("div", {
                 className: G.mR,
                 children: [
-                    (0, r.jsx)(T.A, { className: G.PC }),
+                    (0, r.jsx)(T.A, { className: G.PC, size: "md" }),
                     (0, r.jsx)(d.Heading, {
                         variant: "heading-md/bold",
                         color: "always-white",
@@ -55,7 +55,7 @@ let F = () =>
         let { markAsDismissed: t } = e,
             n = (0, D.H)(),
             i = () => {
-                null != t && t(P.i.DISMISS), n(M.HAw.CLIENT_THEME_PREVIEW_CLOSED), (0, O.D)();
+                null != t && t(P.i.DISMISS), n(x.HAw.CLIENT_THEME_PREVIEW_CLOSED), (0, b.D)();
             };
         return (0, r.jsxs)("div", {
             className: G.nV,
@@ -72,12 +72,12 @@ let F = () =>
     B = (e) => {
         let { onSubscribeSuccess: t, markAsDismissed: n } = e,
             { analyticsLocations: i } = (0, m.Ay)(h.A.CLIENT_THEMES_EDITOR),
-            [s, a] = (0, l.yK)([N.default, R.A], () => [
-                R.A.gradientPreset,
-                b.Ay.isPremium(N.default.getCurrentUser()),
+            [s, a] = (0, l.yK)([N.default, O.A], () => [
+                O.A.gradientPreset,
+                R.Ay.isPremium(N.default.getCurrentUser()),
             ]),
             o = (0, A.V)(),
-            c = (0, b.FY)({
+            c = (0, R.FY)({
                 intervalType: o?.subscription_trial?.interval,
                 intervalCount: o?.subscription_trial?.interval_count,
             }),
@@ -97,21 +97,21 @@ let F = () =>
         return (0, r.jsx)(I.A, {
             subscriptionTier: k.pe.TIER_2,
             defaultTextOverride: d,
-            premiumModalAnalyticsLocation: { object: M.ZSU.BUTTON_CTA, objectType: M.AnalyticsObjectTypes.BUY },
+            premiumModalAnalyticsLocation: { object: x.ZSU.BUTTON_CTA, objectType: x.AnalyticsObjectTypes.BUY },
             onSubscribeModalClose: f,
             fullWidth: !0,
         });
     },
     H = (e) => {
         let { markAsDismissed: t, isCoachmark: n } = e,
-            { isPreview: s } = (0, l.cf)([R.A], () => ({ isPreview: R.A.isPreview })),
+            { isPreview: s } = (0, l.cf)([O.A], () => ({ isPreview: O.A.isPreview })),
             [a, u] = i.useState(!1),
             d = (0, D.H)(),
             _ = () => {
-                if ((null != t && t(P.i.DISMISS), d(M.HAw.CLIENT_THEME_PREVIEW_CLOSED), (0, O.D)(), !n)) {
+                if ((null != t && t(P.i.DISMISS), d(x.HAw.CLIENT_THEME_PREVIEW_CLOSED), (0, b.D)(), !n)) {
                     let e = (0, y.Ci)("ClientThemesEditor_handleBack");
                     (0, v.openUserSettings)(e ? S.X.DISPLAY_THEME_CATEGORY : S.X.APPEARANCE_PANEL, {
-                        section: M.nc_.APPEARANCE,
+                        section: x.nc_.APPEARANCE,
                     });
                 }
             },
@@ -140,24 +140,24 @@ let F = () =>
     j = 16,
     Y = 24;
 function W(e) {
-    let { markAsDismissed: t, showClientThemesCoachmark: n, iconSize: s = x.ni.SIZE_60 } = e,
+    let { markAsDismissed: t, showClientThemesCoachmark: n, iconSize: s = M.ni.SIZE_60 } = e,
         { analyticsLocations: o } = (0, m.Ay)(h.A.CLIENT_THEMES_EDITOR),
-        { isPreview: u, shouldEditorAnimate: c } = (0, l.cf)([R.A, p.A], () => ({
-            isPreview: R.A.isPreview,
+        { isPreview: u, shouldEditorAnimate: c } = (0, l.cf)([O.A, p.A], () => ({
+            isPreview: O.A.isPreview,
             shouldEditorAnimate: n && !p.A.useReducedMotion,
         })),
         _ = (0, E.fy)().activePanel === E.HP.CLIENT_THEMES,
         g = (0, D.H)();
-    i.useEffect(() => g(M.HAw.CLIENT_THEME_PREVIEW_VIEWED), [g]),
+    i.useEffect(() => g(x.HAw.CLIENT_THEME_PREVIEW_VIEWED), [g]),
         i.useEffect(() => {
             u &&
-                C.default.track(M.HAw.PREMIUM_UPSELL_VIEWED, {
+                C.default.track(x.HAw.PREMIUM_UPSELL_VIEWED, {
                     type: k.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                     location_stack: o,
                 });
         }, [u, o]);
     let A = (0, D.Z)(),
-        I = (0, f.A)(null, u ? A : M.tEg);
+        I = (0, f.A)(null, u ? A : x.tEg);
     i.useEffect(() => {
         if (u && !_) return A;
     }, [u, _, A]);

@@ -48043,10 +48043,8 @@ svg.radioIcon_c1e9c4 {
 }
 
 .nitroWheel_c5f0dc {
-    height: 16px;
     margin-inline: 2px 4px;
-    vertical-align: sub;
-    width: 16px
+    vertical-align: sub
 }
 
 .themeSelectionContainer__36dee {
@@ -59359,12 +59357,6 @@ html.disable-forced-colors * {
     flex: 1
 }
 
-.premiumIcon_a00e6e {
-    color: var(--icon-strong);
-    height: 20px;
-    width: 20px
-}
-
 .titleText_a00e6e {
     color: var(--text-strong)
 }
@@ -59493,10 +59485,7 @@ html.disable-forced-colors * {
 }
 
 .title__2a891 .premiumIcon__2a891 {
-    color: var(--text-strong);
-    height: 18px;
-    margin-inline-start: 8px;
-    width: 18px
+    margin-inline-start: 8px
 }
 
 .editor__2a891 {
@@ -59812,9 +59801,7 @@ html.disable-forced-colors * {
 .bannerUpsell_cf6da1 .premiumIcon_cf6da1 {
     color: var(--white);
     flex-shrink: 0;
-    height: 24px;
-    margin-inline-end: 10px;
-    width: 24px
+    margin-inline-end: 10px
 }
 
 .container__247cf {
