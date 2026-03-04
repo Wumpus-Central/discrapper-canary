@@ -1,15 +1,14 @@
 "use strict";
 n.d(t, {
     DB: () => u,
-    SB: () => _,
     VN: () => r,
     Vf: () => i,
     Ze: () => o,
     e: () => d,
-    eP: () => a,
+    eP: () => s,
     kc: () => c,
     lg: () => l,
-    xS: () => s,
+    xS: () => a,
 });
 var r = (function (e) {
         return (
@@ -27,7 +26,7 @@ var r = (function (e) {
             e
         );
     })({}),
-    a = (function (e) {
+    s = (function (e) {
         return (
             (e[(e.DENY = 0)] = "DENY"),
             (e[(e.ALLOW_MENTIONABLE = 1)] = "ALLOW_MENTIONABLE"),
@@ -35,7 +34,7 @@ var r = (function (e) {
             e
         );
     })({}),
-    s = (function (e) {
+    a = (function (e) {
         return (e[(e.DENY = 0)] = "DENY"), (e[(e.ALLOW_SELECTABLE = 1)] = "ALLOW_SELECTABLE"), e;
     })({}),
     o = (function (e) {
@@ -53,7 +52,6 @@ var r = (function (e) {
     u = (function (e) {
         return (
             (e.MENTIONS = "MENTIONS"),
-            (e.MENTION_SUGGESTIONS = "MENTION_SUGGESTIONS"),
             (e.CHANNELS = "CHANNELS"),
             (e.EMOJIS_AND_STICKERS = "EMOJIS_AND_STICKERS"),
             (e.REACTIONS = "REACTIONS"),
@@ -94,7 +92,4 @@ var r = (function (e) {
             (e[(e.MANUAL = 2)] = "MANUAL"),
             e
         );
-    })({}),
-    _ = (function (e) {
-        return (e[(e.NORMAL = 0)] = "NORMAL"), (e[(e.TAB_ONLY = 1)] = "TAB_ONLY"), e;
     })({});

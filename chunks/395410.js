@@ -24,8 +24,4 @@ e.exports = {
     Mf: "autocompleteRowVerticalSmall__13533",
     m4: "roleDot__13533",
     M: "autocompletePlaceholder__13533",
-    H5: "autocompleteContentWrapper__13533",
-    xF: "autoCompleteRowSuggestion__13533 autocompleteRowVertical__13533 autocompleteRow__13533",
-    ti: "keyComboContainer__13533",
-    DH: "verticalLayout__13533",
 };

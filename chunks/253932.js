@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
     $s: () => en,
-    Bh: () => b,
+    Bh: () => R,
     CY: () => ey,
     D_: () => A,
     FA: () => er,
@@ -9,24 +9,24 @@ n.d(t, {
     H1: () => ec,
     HO: () => el,
     HZ: () => eq,
-    Hu: () => e8,
+    Hu: () => e7,
     Iv: () => eZ,
     JG: () => eV,
     JI: () => eL,
     JV: () => D,
-    Jr: () => M,
+    Jr: () => x,
     KP: () => eI,
     Kg: () => ef,
-    LJ: () => e9,
+    LJ: () => e8,
     ML: () => T,
     NF: () => eJ,
-    NO: () => x,
-    NR: () => R,
+    NO: () => M,
+    NR: () => O,
     PZ: () => e2,
-    Pf: () => z,
+    Pf: () => $,
     Pw: () => eB,
     Q$: () => eC,
-    Q_: () => eM,
+    Q_: () => ex,
     Qe: () => ep,
     Qr: () => L,
     S0: () => eG,
@@ -34,17 +34,17 @@ n.d(t, {
     SY: () => v,
     Sf: () => eU,
     T3: () => w,
-    TA: () => e$,
+    TA: () => ez,
     UM: () => q,
     Vd: () => eQ,
     Vv: () => eX,
     WY: () => J,
-    X6: () => eb,
+    X6: () => eR,
     Xi: () => e4,
     YX: () => Q,
     Yh: () => eu,
     Yt: () => e5,
-    Zk: () => ez,
+    Zk: () => e$,
     Zp: () => N,
     Zr: () => X,
     Zt: () => ee,
@@ -60,11 +60,11 @@ n.d(t, {
     cj: () => eE,
     dG: () => eo,
     dm: () => eW,
-    e: () => $,
+    e: () => z,
     eK: () => S,
     eh: () => eP,
     gs: () => y,
-    hD: () => eR,
+    hD: () => eO,
     hH: () => ea,
     he: () => eg,
     iM: () => k,
@@ -76,14 +76,13 @@ n.d(t, {
     l_: () => eh,
     m$: () => eK,
     n6: () => et,
-    ng: () => e7,
     ns: () => W,
     on: () => em,
-    oz: () => O,
+    oz: () => b,
     pE: () => ej,
     pK: () => e3,
     qN: () => e1,
-    rs: () => eO,
+    rs: () => eb,
     tP: () => U,
     tz: () => eA,
     uB: () => K,
@@ -178,19 +177,19 @@ let N = (0, d.c$)(
         (e) => e?.value ?? !0,
         (e) => o._t.create({ value: !!e }),
     );
-let b = (0, d.c$)(
+let R = (0, d.c$)(
         "notifications",
         "enableVoiceActivityNotifications",
         (e) => e?.value ?? !0,
         (e) => o._t.create({ value: !!e }),
     ),
-    R = (0, d.c$)(
+    O = (0, d.c$)(
         "notifications",
         "enableFriendOnlineNotifications",
         (e) => e?.value ?? !0,
         (e) => o._t.create({ value: !!e }),
     ),
-    O = (0, d.c$)(
+    b = (0, d.c$)(
         "notifications",
         "enableFriendAnniversaryNotifications",
         (e) => e?.value ?? !0,
@@ -220,13 +219,13 @@ let b = (0, d.c$)(
     (e) => e?.value ?? !0,
     (e) => o._t.create({ value: !!e }),
 );
-let x = (0, d.c$)(
+let M = (0, d.c$)(
         "notifications",
         "quietMode",
         (e) => e?.value ?? !1,
         (e) => o._t.create({ value: !!e }),
     ),
-    M = (0, d.c$)(
+    x = (0, d.c$)(
         "notifications",
         "focusModeExpiresAtMs",
         (e) => e ?? "0",
@@ -294,13 +293,13 @@ let x = (0, d.c$)(
         (e) => e?.value ?? !1,
         (e) => o._t.create({ value: e }),
     ),
-    z = (0, d.c$)(
+    $ = (0, d.c$)(
         "gameLibrary",
         "installShortcutStartMenu",
         (e) => e?.value ?? !0,
         (e) => o._t.create({ value: e }),
     ),
-    $ = (0, d.c$)(
+    z = (0, d.c$)(
         "privacy",
         "allowActivityPartyPrivacyFriends",
         (e) => e?.value ?? !0,
@@ -524,7 +523,7 @@ let eI = (0, d.c$)(
         (e) => e?.value ?? !0,
         (e) => o._t.create({ value: e }),
     ),
-    eb = (0, d.Mt)(
+    eR = (0, d.Mt)(
         (0, d.c$)(
             "textAndImages",
             "inlineAttachmentMedia",
@@ -534,7 +533,7 @@ let eI = (0, d.c$)(
         "text",
         "inlineAttachmentMedia",
     ),
-    eR = (0, d.Mt)(
+    eO = (0, d.Mt)(
         (0, d.c$)(
             "textAndImages",
             "inlineEmbedMedia",
@@ -544,7 +543,7 @@ let eI = (0, d.c$)(
         "text",
         "inlineEmbedMedia",
     ),
-    eO = (0, d.Mt)(
+    eb = (0, d.Mt)(
         (0, d.c$)(
             "textAndImages",
             "renderEmbeds",
@@ -604,14 +603,14 @@ let eL = (0, d.c$)(
     (e) => (null != e && ew.has(e.value) ? e.value : u.b.COZY),
     (e) => o.hU.create({ value: e }),
 );
-let ex = new Set([u.P.ALL, u.P.UNREADS, u.P.NONE]);
+let eM = new Set([u.P.ALL, u.P.UNREADS, u.P.NONE]);
 (0, d.c$)(
     "appearance",
     "messagePreviews",
-    (e) => (null != e && ex.has(e.value) ? e.value : u.P.ALL),
+    (e) => (null != e && eM.has(e.value) ? e.value : u.P.ALL),
     (e) => o.hU.create({ value: e }),
 );
-let eM = (0, d.Mt)(
+let ex = (0, d.Mt)(
         (0, d.c$)(
             "appearance",
             "developerMode",
@@ -753,13 +752,13 @@ let eY = (0, d.c6)({
         (e) => e?.value ?? !1,
         (e) => o._t.create({ value: e }),
     ),
-    ez = (0, d.c$)(
+    e$ = (0, d.c$)(
         "privacy",
         "allowGameFriendDmsInDiscord",
         (e) => e?.value ?? !0,
         (e) => o._t.create({ value: e }),
     ),
-    e$ = (0, d.c$)(
+    ez = (0, d.c$)(
         "privacy",
         "slayerSdkReceiveDmsInGame",
         (e) => e ?? a.fL.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET,
@@ -866,17 +865,11 @@ let e3 = (0, d.c$)(
     ),
     e7 = (0, d.c$)(
         "textAndImages",
-        "showMentionSuggestions",
-        (e) => e?.value ?? !0,
-        (e) => o._t.create({ value: e }),
-    ),
-    e8 = (0, d.c$)(
-        "textAndImages",
         "isCrossDmSearchEnabled",
         (e) => e?.value ?? !1,
         (e) => o._t.create({ value: e }),
     ),
-    e9 = (0, d.c$)(
+    e8 = (0, d.c$)(
         "notifications",
         "enableDmReplyNudgeReminders",
         (e) => e?.value ?? !0,

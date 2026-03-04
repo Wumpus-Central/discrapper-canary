@@ -63,7 +63,6 @@ function A(e, t, n) {
             emojiIntention: I === l.oU.RULES_INPUT ? E.b_.COMMUNITY_CONTENT : b ? E.b_.NO_CUSTOM_EMOJI : E.b_.CHAT,
             currentWord: L?.word ?? "",
             currentWordIsAtStart: L?.isAtStart === !0,
-            currentFullWord: L?.fullWord ?? "",
             optionText:
                 null != O
                     ? (0, a.getString)({ [O.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] }, O.name)

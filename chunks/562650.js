@@ -15,6 +15,4 @@ e.exports = {
     Nx: "newLine__1464f",
     lB: "gameMention__1464f",
     FF: "timestampMention__1464f",
-    Z2: "mentionSuggestion__1464f",
-    xD: "mentionSuggestionSimpleColorVariant__1464f",
 };

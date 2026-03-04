@@ -1,17 +1,17 @@
 "use strict";
-n.d(t, { O1: () => a, oU: () => E, wt: () => s });
+n.d(t, { O1: () => s, oU: () => g, wt: () => a });
 var r = n(607399),
     i = n(31717),
-    a = (function (e) {
+    s = (function (e) {
         return (e[(e.TOOLTIP = 0)] = "TOOLTIP"), (e[(e.STATIC = 1)] = "STATIC"), (e[(e.NONE = 2)] = "NONE"), e;
     })({}),
-    s = (function (e) {
+    a = (function (e) {
         return (e[(e.DEFAULT = 0)] = "DEFAULT"), (e[(e.INLINE = 1)] = "INLINE"), (e[(e.FLUSH = 2)] = "FLUSH"), e;
     })({});
 let o = {
         analyticsName: "normal",
         attachments: !0,
-        autocomplete: { addReactionShortcut: !0, forceChatLayer: !0, reactions: !0, mentionSuggestions: !0 },
+        autocomplete: { addReactionShortcut: !0, forceChatLayer: !0, reactions: !0 },
         commands: { enabled: !0 },
         confetti: { button: !0 },
         drafts: { type: i.C.ChannelMessage, commandType: i.C.SlashCommand, autoSave: !0 },
@@ -40,7 +40,7 @@ let o = {
     l = {
         analyticsName: "overlay",
         attachments: !0,
-        autocomplete: { addReactionShortcut: !0, forceChatLayer: !0, mentionSuggestions: !0 },
+        autocomplete: { addReactionShortcut: !0, forceChatLayer: !0 },
         confetti: { button: !0 },
         drafts: { type: i.C.ChannelMessage, autoSave: !0 },
         emojis: { button: !0 },
@@ -65,7 +65,7 @@ let o = {
     u = {
         analyticsName: "sidebar",
         attachments: !0,
-        autocomplete: { addReactionShortcut: !0, mentionSuggestions: !0 },
+        autocomplete: { addReactionShortcut: !0 },
         commands: { enabled: !0 },
         confetti: { button: !0 },
         disableAutoFocus: !0,
@@ -91,7 +91,6 @@ let o = {
     },
     c = {
         analyticsName: "edit",
-        autocomplete: { mentionSuggestions: !0 },
         drafts: { type: i.C.ChannelMessage },
         emojis: { button: !0 },
         soundmoji: { allowSending: !0 },
@@ -128,7 +127,6 @@ let o = {
     f = {
         analyticsName: "thread_creation",
         attachments: !0,
-        autocomplete: { mentionSuggestions: !0 },
         drafts: { type: i.C.FirstThreadMessage },
         emojis: { button: !0 },
         gifs: { allowSending: !0 },
@@ -155,7 +153,6 @@ let o = {
     h = {
         analyticsName: "create_forum_post",
         attachments: !0,
-        autocomplete: { mentionSuggestions: !0 },
         drafts: { type: i.C.FirstThreadMessage },
         gifs: { allowSending: !0 },
         stickers: { allowSending: !0 },
@@ -178,7 +175,7 @@ let o = {
         permissions: { requireSendMessages: !0 },
         submit: { useDisabledStylesOnSubmit: !0, disableEnterToSubmit: !0 },
     },
-    g = {
+    E = {
         analyticsName: "user_profile",
         drafts: { type: i.C.ChannelMessage },
         emojis: { button: !0 },
@@ -189,7 +186,7 @@ let o = {
         toolbarType: 2,
         layout: 1,
     },
-    E = {
+    g = {
         NORMAL: o,
         OVERLAY: l,
         OVERLAY_INLINE_REPLY: {
@@ -208,7 +205,7 @@ let o = {
         FORM: d,
         VOICE_CHANNEL_STATUS: _,
         THREAD_CREATION: f,
-        USER_PROFILE: g,
+        USER_PROFILE: E,
         USER_PROFILE_REPLY: {
             analyticsName: "user_profile_reply",
             drafts: { type: i.C.ChannelMessage },
@@ -286,7 +283,7 @@ let o = {
             permissions: { requireSendMessages: !0 },
             submit: { useDisabledStylesOnSubmit: !0 },
             users: { allowMentioning: !0 },
-            autocomplete: { alwaysUseLayer: !0, small: !0, mentionSuggestions: !0 },
+            autocomplete: { alwaysUseLayer: !0, small: !0 },
             disableAutoFocus: !0,
             showCharacterCount: !0,
             layout: 1,

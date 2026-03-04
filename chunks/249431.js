@@ -26,8 +26,6 @@ let c = {
     codeBlockSyntax: o.codeBlockSyntax,
     codeBlockLang: o.codeBlockLang,
     subtext: o.subtext,
-    mentionSuggestion: l.Z2,
-    mentionSuggestionSimpleColorVariant: l.xD,
 };
 function d(e, t) {
     let n,

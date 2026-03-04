@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => et, Sz: () => x, aI: () => M });
+n.d(t, { Ay: () => ee, Sz: () => x, aI: () => M });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -160,73 +160,6 @@ class B extends k {
     }
 }
 class H extends k {
-    layoutClass = w.xF;
-    renderContent() {
-        let {
-                user: e,
-                nick: t,
-                comparator: n,
-                status: i,
-                hidePersonalInformation: s,
-                guildId: o,
-                selected: l,
-                layout: u = "horizontal",
-            } = this.props,
-            d = null == o ? N.A.getNickname(e.id) : null,
-            _ = t ?? d ?? O.Ay.getName(e);
-        return (0, r.jsxs)(b.Mr, {
-            className: a()({ [w.DH]: "vertical-suggestion" === u }),
-            children: [
-                (0, r.jsx)(b.Ch, {
-                    children: (0, r.jsx)(c.euF, {
-                        size: c._3J.SIZE_32,
-                        src: e.getAvatarURL(o, 32),
-                        "aria-hidden": !0,
-                        status: i,
-                    }),
-                }),
-                (0, r.jsxs)("div", {
-                    className: w.H5,
-                    "aria-label": L.intl.formatToPlainString(L.t["9v/R+j"], { name: _ }),
-                    children: [
-                        (0, r.jsx)(b.oC, {
-                            children: (0, r.jsx)(c.Text, {
-                                className: w.hf,
-                                color: "interactive-text-active",
-                                variant: "text-sm/medium",
-                                children: _,
-                            }),
-                        }),
-                        (0, r.jsx)(b.Aq, {
-                            children:
-                                null == n || n === _.toLocaleLowerCase() || n === e.username.toLocaleLowerCase()
-                                    ? (0, r.jsxs)(r.Fragment, {
-                                          children: [
-                                              O.Ay.getUserTag(e, {
-                                                  mode: "username",
-                                                  identifiable: s ? "never" : "always",
-                                              }),
-                                              s || e.hasUniqueUsername()
-                                                  ? null
-                                                  : (0, r.jsxs)("span", {
-                                                        className: w.T,
-                                                        children: ["#", e.discriminator],
-                                                    }),
-                                          ],
-                                      })
-                                    : n,
-                        }),
-                    ],
-                }),
-                (0, r.jsx)("div", {
-                    className: w.ti,
-                    children: l ? (0, r.jsx)(c.e7I, { shortcut: "tab", dim: !0 }) : null,
-                }),
-            ],
-        });
-    }
-}
-class j extends k {
     renderContent() {
         let { role: e, hideDescription: t, guildId: n } = this.props,
             { colorString: i, colorStrings: s } = e,
@@ -261,7 +194,7 @@ class j extends k {
         });
     }
 }
-class Y extends k {
+class j extends k {
     renderContent() {
         let { timestamp: e, description: t } = this.props;
         return (0, r.jsxs)(b.Mr, {
@@ -274,7 +207,7 @@ class Y extends k {
         });
     }
 }
-class W extends k {
+class Y extends k {
     renderContent() {
         let { channel: e, category: t } = this.props,
             n = e.type === D.rbe.GUILD_CATEGORY ? c.sjq : (0, m.gU)(e);
@@ -287,7 +220,7 @@ class W extends k {
         });
     }
 }
-class K extends k {
+class W extends k {
     renderContent() {
         let { command: e } = this.props;
         return (0, r.jsxs)(b.Mr, {
@@ -306,7 +239,7 @@ class K extends k {
         });
     }
 }
-class $ extends k {
+class K extends k {
     isSelectable() {
         return this.props.command.inputType !== _.y$.PLACEHOLDER;
     }
@@ -326,7 +259,7 @@ class $ extends k {
               });
     }
 }
-class z extends k {
+class $ extends k {
     layoutClass = a()(w.rT, w.Mf);
     renderContent() {
         let { emoji: e, sentinel: t, guild: n } = this.props,
@@ -352,7 +285,7 @@ class z extends k {
         });
     }
 }
-class q extends k {
+class z extends k {
     layoutClass = a()(w.rT, w.Mf);
     renderContent() {
         let e,
@@ -377,24 +310,24 @@ class q extends k {
         );
     }
 }
-class Z extends k {
+class q extends k {
     layoutClass = w.ju;
     renderContent() {
         let { width: e, height: t, src: n } = this.props;
         return (0, r.jsx)("img", { alt: "", src: n, width: e, height: t });
     }
 }
-class X extends k {
+class Z extends k {
     renderContent() {
         return (0, r.jsx)(E.A, { emojis: this.props.emojis });
     }
 }
-class Q extends k {
+class X extends k {
     renderContent() {
         return (0, r.jsx)(I.A, { ...this.props });
     }
 }
-class J extends k {
+class Q extends k {
     renderContent() {
         let { game: e } = this.props,
             t = (0, r.jsx)("img", {
@@ -410,24 +343,23 @@ class J extends k {
         });
     }
 }
-class ee extends i.PureComponent {
+class J extends i.PureComponent {
     static Generic = U;
     static Loading = G;
     static Title = F;
     static Divider = V;
     static User = B;
-    static UserSuggestion = H;
-    static Role = j;
-    static Channel = W;
-    static Command = K;
-    static NewCommand = $;
-    static Emoji = z;
-    static GIFIntegration = Z;
-    static Sticker = q;
-    static EmojiUpsell = X;
-    static Soundmoji = Q;
-    static Game = J;
-    static Timestamp = Y;
+    static Role = H;
+    static Channel = Y;
+    static Command = W;
+    static NewCommand = K;
+    static Emoji = $;
+    static GIFIntegration = q;
+    static Sticker = z;
+    static EmojiUpsell = Z;
+    static Soundmoji = X;
+    static Game = Q;
+    static Timestamp = j;
     render() {
         let { children: e, className: t, innerClassName: n, id: s, ...o } = this.props;
         return i.Children.count(e) > 0
@@ -441,4 +373,4 @@ class ee extends i.PureComponent {
             : null;
     }
 }
-let et = ee;
+let ee = J;

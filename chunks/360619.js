@@ -1,90 +1,87 @@
-n.d(t, { AC: () => R, NI: () => y, PH: () => O }), n(560197), n(321073);
+n.d(t, { AC: () => O, NI: () => R, PH: () => v }), n(560197), n(321073);
 var i = n(64700),
     s = n(311907);
 n(361739);
 var a = n(406360),
     l = n(86379),
-    r = n(968011),
-    o = n(643015),
-    c = n(945276),
-    d = n(834981),
-    u = n(155984),
-    _ = n(35587),
-    m = n(677402),
-    A = n(207560),
-    g = n(818143),
-    h = n(639555),
-    x = n(617641),
-    p = n(961350);
+    r = n(643015),
+    o = n(945276),
+    c = n(834981),
+    d = n(155984),
+    u = n(35587),
+    _ = n(677402),
+    m = n(207560),
+    A = n(818143),
+    g = n(639555),
+    h = n(617641),
+    x = n(961350);
 n(540999);
-var E = n(189081),
-    C = n(994500),
-    T = n(628965),
-    S = n(287809),
-    I = n(80422),
-    f = n(253932),
-    N = n(368631),
-    b = n(682262),
-    j = n(987281);
+var p = n(189081),
+    E = n(994500),
+    C = n(628965),
+    T = n(287809),
+    S = n(80422),
+    I = n(253932),
+    f = n(368631),
+    N = n(682262),
+    b = n(987281);
 n(531525);
-var v = n(654487);
-function O() {
-    let e = (0, _.IO)().length,
-        t = (0, u.l)(),
-        n = (0, s.bG)([T.A], () => T.A.getSearchParams()),
-        j = (0, d.VT)(),
-        O = (0, b.b_)(),
-        { shouldMergeGameSettings: R } = I.X.useExperiment({ location: "settings" }),
-        y = S.default.getCurrentUser()?.isStaff() ?? !1,
-        P = (0, x.Lc)({ location: "settings" }),
-        L = (0, h.Rv)({ location: "settings" }),
-        D = (0, l.H)(),
-        M = (0, m.H)({ location: v.rE.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
-        G = (0, s.bG)([E.A], () => E.A.hasLibraryApplication()),
-        U = (0, s.bG)([p.default], () => p.default.hasTOTPEnabled()),
-        k = f.Q_.useSetting(),
-        V = (0, o.A)(),
-        w = (0, c.A)() ?? !0,
-        H = (0, g.G)()?.length > 0,
-        { hasBlockedUsers: B, hasIgnoredUsers: Y } = (0, s.cf)([C.A], () => ({
-            hasBlockedUsers: C.A.getBlockedIDs().length > 0,
-            hasIgnoredUsers: C.A.getIgnoredIDs().length > 0,
+var j = n(654487);
+function v() {
+    let e = (0, u.IO)().length,
+        t = (0, d.l)(),
+        n = (0, s.bG)([C.A], () => C.A.getSearchParams()),
+        b = (0, c.VT)(),
+        v = (0, N.b_)(),
+        { shouldMergeGameSettings: O } = S.X.useExperiment({ location: "settings" }),
+        R = T.default.getCurrentUser()?.isStaff() ?? !1,
+        y = (0, h.Lc)({ location: "settings" }),
+        P = (0, g.Rv)({ location: "settings" }),
+        L = (0, l.H)(),
+        D = (0, _.H)({ location: j.rE.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
+        M = (0, s.bG)([p.A], () => p.A.hasLibraryApplication()),
+        G = (0, s.bG)([x.default], () => x.default.hasTOTPEnabled()),
+        U = I.Q_.useSetting(),
+        k = (0, r.A)(),
+        V = (0, o.A)() ?? !0,
+        w = (0, A.G)()?.length > 0,
+        { hasBlockedUsers: H, hasIgnoredUsers: B } = (0, s.cf)([E.A], () => ({
+            hasBlockedUsers: E.A.getBlockedIDs().length > 0,
+            hasIgnoredUsers: E.A.getIgnoredIDs().length > 0,
         })),
-        F = (0, A.fk)(),
-        { enabled: z } = (0, r.us)("useGenerateUserSettingsSections", { autoTrackExposure: !1 }),
-        W = (0, a.i)("useGenerateUserSettingsSections");
+        Y = (0, m.fk)(),
+        F = (0, a.i)("useGenerateUserSettingsSections");
     return i.useMemo(
         () =>
-            (0, N.zj)({
+            (0, f.zj)({
                 unseenGiftCount: e,
                 showPrepaidPaymentPastDueWarning: t,
                 searchParams: n,
-                numOfPendingFamilyRequests: j,
-                isOverlaySupported: O,
-                shouldMergeGameSettings: R,
-                isStaff: y,
-                isInappropriateConversationWarningEnabled: P,
-                isInapproprateConversationsDefaultOn: L,
-                paymentsBlocked: D,
-                isEligibleForQuests: M,
-                isStricterMessageRequestsEnabled: V,
-                hasLibraryApplication: G,
-                hasTOTPEnabled: U,
-                developerMode: k,
-                isAdultUser: w,
-                hasSecureFramesVerifiedUserIds: H,
-                hasIgnoredUsers: Y,
-                hasBlockedUsers: B,
-                hasAgeGatedFeature: F,
-                isChatMentionSuggestionsSettingEnabled: z,
-                isHDRAccessibilitySettingExperimentEnabled: W,
+                numOfPendingFamilyRequests: b,
+                isOverlaySupported: v,
+                shouldMergeGameSettings: O,
+                isStaff: R,
+                isInappropriateConversationWarningEnabled: y,
+                isInapproprateConversationsDefaultOn: P,
+                paymentsBlocked: L,
+                isEligibleForQuests: D,
+                isStricterMessageRequestsEnabled: k,
+                hasLibraryApplication: M,
+                hasTOTPEnabled: G,
+                developerMode: U,
+                isAdultUser: V,
+                hasSecureFramesVerifiedUserIds: w,
+                hasIgnoredUsers: B,
+                hasBlockedUsers: H,
+                hasAgeGatedFeature: Y,
+                isHDRAccessibilitySettingExperimentEnabled: F,
             }),
-        [k, B, Y, G, H, U, n, w, M, L, P, O, y, V, j, D, R, t, e, F, z, W],
+        [U, H, B, M, w, G, n, V, D, P, y, v, R, k, b, L, O, t, e, Y, F],
     );
 }
-function R(e) {
-    let t = j.a.useField("searchResults"),
-        n = O(),
+function O(e) {
+    let t = b.a.useField("searchResults"),
+        n = v(),
         i = n[e],
         s = Object.fromEntries(
             Object.entries(n).filter((e) => {
@@ -134,7 +131,7 @@ function R(e) {
         }
     return l;
 }
-function y(e) {
+function R(e) {
     return Array.from(
         new Map(
             Object.entries(e).filter((e) => {

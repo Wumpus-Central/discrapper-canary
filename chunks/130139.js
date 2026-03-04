@@ -7,5 +7,4 @@ e.exports = {
     Fv: "autocompleteInner__6b0e0",
     mO: "autocompleteTop__6b0e0",
     XG: "scroller__6b0e0",
-    Wi: "minimal__6b0e0",
 };

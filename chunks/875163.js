@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => O });
+n.d(t, { A: () => b });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -24,18 +24,18 @@ var r = n(627968),
 let v = 490,
     N = 490,
     C = 245,
-    b = 200,
-    R = 120,
-    O = i.forwardRef(function (e, t) {
-        let { channel: n, type: s, editorHeight: O, onVisibilityChange: D, editorScrollerRef: L, barsHeight: w } = e,
-            x = (0, h.GV)(),
-            M = (0, l.bG)([g.A], () => g.A.getGuild(n.guild_id) ?? null, [n.guild_id]),
+    R = 200,
+    O = 120,
+    b = i.forwardRef(function (e, t) {
+        let { channel: n, type: s, editorHeight: b, onVisibilityChange: D, editorScrollerRef: L, barsHeight: w } = e,
+            M = (0, h.GV)(),
+            x = (0, l.bG)([g.A], () => g.A.getGuild(n.guild_id) ?? null, [n.guild_id]),
             P = i.useRef(null),
-            [k, U, G] = (0, T.A)({ ...e, guild: M }, t, P),
+            [k, U, G] = (0, T.A)({ ...e, guild: x }, t, P),
             F = s.autocomplete?.forceChatLayer ? E.Ay : m.Ay,
             V = (0, f.aI)(k.selectedIndex);
-        (0, p.gf)(x, k.isVisible, V);
-        let B = (0, I.l)({ editorHeight: O, type: s, state: k }),
+        (0, p.gf)(M, k.isVisible, V);
+        let B = (0, I.l)({ editorHeight: b, type: s, state: k }),
             H = (0, l.bG)([d.Ay], () => {
                 let e = d.Ay.getSelfEmbeddedActivityForChannel(n.id),
                     t = d.Ay.getActivityPanelMode();
@@ -50,8 +50,8 @@ let v = 490,
             );
         if (
             (i.useEffect(() => {
-                D(k.isVisible, k.query?.type ?? null);
-            }, [D, k.isVisible, k.query?.type]),
+                D(k.isVisible);
+            }, [D, k.isVisible]),
             !k.isVisible || null == k.query || void 0 === B)
         )
             return null;
@@ -60,27 +60,21 @@ let v = 490,
                 results: k.query.results,
                 selectedIndex: k.selectedIndex,
                 channel: n,
-                guild: M,
+                guild: x,
                 query: k.query.queryText,
                 options: k.query.options,
                 onHover: (e) => U.onResultHover(e),
                 onClick: (e) => U.onResultClick(e),
             }) ?? null;
         if (null == Y) return null;
-        let W = {
-                [y.pK]: null == B,
-                [y.YB]: null != B,
-                [y.sQ]: null == B && "bottom" === e.position,
-                [y.mO]: H,
-                [y.Wi]: k.query?.type === A.DB.MENTION_SUGGESTIONS,
-            },
+        let W = { [y.pK]: null == B, [y.YB]: null != B, [y.sQ]: null == B && "bottom" === e.position, [y.mO]: H },
             K = v;
-        null != B && (K = s.autocomplete?.small ? b : k.query?.type === A.DB.EMOJIS_AND_STICKERS ? N : C);
-        let z = Math.max(O, L?.current?.clientHeight ?? 0),
-            $ = Math.min(0.5 * window.innerHeight, z);
-        K = Math.min(window.innerHeight - R - $ - (w ?? 0), K);
+        null != B && (K = s.autocomplete?.small ? R : k.query?.type === A.DB.EMOJIS_AND_STICKERS ? N : C);
+        let $ = Math.max(b, L?.current?.clientHeight ?? 0),
+            z = Math.min(0.5 * window.innerHeight, $);
+        K = Math.min(window.innerHeight - O - z - (w ?? 0), K);
         let q = (0, r.jsx)(f.Ay, {
-            id: x,
+            id: M,
             className: a()(y.nx, W),
             innerClassName: y.Fv,
             onMouseDown: (e) => e.preventDefault(),
@@ -90,7 +84,7 @@ let v = 490,
                     children: (e) => {
                         let { ref: t, ...n } = e;
                         return (0, r.jsx)(u.ChK, {
-                            id: x,
+                            id: M,
                             ref: (e) => {
                                 (t.current = e?.getScrollerNode() ?? null), (P.current = e);
                             },
@@ -100,7 +94,7 @@ let v = 490,
                             className: y.XG,
                             style: { maxHeight: K },
                             role: "listbox",
-                            "aria-labelledby": (0, f.Sz)(x),
+                            "aria-labelledby": (0, f.Sz)(M),
                             children: Y,
                         });
                     },

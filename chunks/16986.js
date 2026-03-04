@@ -26,10 +26,9 @@ function p() {
         I = m.hD.useSetting(),
         f = m.rs.useSetting(),
         N = m.jW.useSetting(),
-        b = m.ng.useSetting(),
-        j = m.Hu.useSetting(),
-        { analyticsLocations: v } = (0, r.Ay)(l.A.TEXT_AND_IMAGES),
-        O = s.useCallback((e) => {
+        b = m.Hu.useSetting(),
+        { analyticsLocations: j } = (0, r.Ay)(l.A.TEXT_AND_IMAGES),
+        v = s.useCallback((e) => {
             let t = 1 === e;
             t ? c.A.cleanUpPrivateChannelSearchState() : c.A.cleanUpSearchState({ type: h.I4_.DMS }),
                 (0, d._k)({
@@ -139,7 +138,7 @@ function p() {
                                         _.default.track(h.HAw.STICKERS_IN_AUTOCOMPLETE_TOGGLED, {
                                             enabled: e,
                                             location: { section: h.JJy.SETTINGS_TEXT_AND_IMAGES },
-                                            location_stack: v,
+                                            location_stack: j,
                                         }),
                                             m.ML.updateSetting(e);
                                     },
@@ -177,35 +176,22 @@ function p() {
                     setting: g.H.CHAT_TEXT_BOX,
                     children: [
                         (0, i.jsx)(a.cGx, {}),
-                        (0, i.jsxs)(a.nVY, {
+                        (0, i.jsx)(a.nVY, {
                             label: x.intl.string(x.t.afR0pI),
-                            children: [
-                                (0, i.jsx)(u.x, {
-                                    setting: g.H.CHAT_TEXT_BOX_PREVIEW,
-                                    children: (0, i.jsx)(a.dOG, {
-                                        checked: n,
-                                        onChange: (e) => {
-                                            _.default.track(h.HAw.PREVIEW_MARKDOWN_TOGGLED, {
-                                                enabled: e,
-                                                location: { section: h.JJy.SETTINGS_TEXT_AND_IMAGES },
-                                            }),
-                                                m.SI.updateSetting(e);
-                                        },
-                                        label: x.intl.string(x.t.AqGrEI),
-                                    }),
+                            children: (0, i.jsx)(u.x, {
+                                setting: g.H.CHAT_TEXT_BOX_PREVIEW,
+                                children: (0, i.jsx)(a.dOG, {
+                                    checked: n,
+                                    onChange: (e) => {
+                                        _.default.track(h.HAw.PREVIEW_MARKDOWN_TOGGLED, {
+                                            enabled: e,
+                                            location: { section: h.JJy.SETTINGS_TEXT_AND_IMAGES },
+                                        }),
+                                            m.SI.updateSetting(e);
+                                    },
+                                    label: x.intl.string(x.t.AqGrEI),
                                 }),
-                                (0, i.jsx)(u.x, {
-                                    setting: g.H.CHAT_MENTION_SUGGESTIONS,
-                                    children: (0, i.jsx)(a.dOG, {
-                                        checked: b,
-                                        description: x.intl.string(x.t.AaXigo),
-                                        onChange: (e) => {
-                                            m.ng.updateSetting(e);
-                                        },
-                                        label: x.intl.string(x.t.uXQ2xT),
-                                    }),
-                                }),
-                            ],
+                            }),
                         }),
                     ],
                 }),
@@ -238,8 +224,8 @@ function p() {
                                     { name: x.intl.string(x.t["t+fGsk"]), value: 0 },
                                     { name: x.intl.string(x.t.MwlEGN), value: 1 },
                                 ],
-                                onChange: O,
-                                value: +!!j,
+                                onChange: v,
+                                value: +!!b,
                             }),
                         }),
                     ],

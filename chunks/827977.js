@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => U }), n(321073);
+n.d(t, { A: () => k }), n(321073);
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -20,70 +20,67 @@ var r = n(627968),
     I = n(702483),
     T = n(337630),
     S = n(490682),
-    y = n(904987),
-    v = n(848570),
-    N = n(1228),
-    C = n(919499),
-    b = n(126455),
+    y = n(848570),
+    v = n(1228),
+    N = n(919499),
+    C = n(126455),
     R = n(806839),
     O = n(870748),
-    D = n(2368),
-    L = n(820159),
-    w = n(330095),
-    x = n(192796),
+    b = n(2368),
+    D = n(820159),
+    L = n(330095),
+    w = n(192796),
     M = n(113796),
-    P = n(652215),
-    k = n(111925);
-let U = i.forwardRef(function (e, t) {
+    x = n(652215),
+    P = n(111925);
+let k = i.forwardRef(function (e, t) {
     let {
             value: n,
             type: s,
-            channel: U,
-            className: G,
-            id: F,
-            disabled: V,
-            submitting: B,
-            placeholder: H,
-            required: j,
-            textAreaPaddingClassName: Y,
-            onChange: W,
-            onPaste: K,
-            onResize: z,
+            channel: k,
+            className: U,
+            id: G,
+            disabled: F,
+            submitting: V,
+            placeholder: B,
+            required: H,
+            textAreaPaddingClassName: j,
+            onChange: Y,
+            onPaste: W,
+            onResize: K,
             onFocus: $,
-            onBlur: q,
-            onKeyDown: Z,
-            onKeyUp: X,
-            onTab: Q,
-            onEnter: J,
-            onSubmit: ee,
-            onSubmitFailure: et,
-            maybeShowAutocomplete: en,
-            hideAutocomplete: er,
-            moveSelection: ei,
-            spellcheckEnabled: es,
-            canUseCommands: ea,
-            canOnlyUseTextCommands: eo,
-            disableAutoFocus: el,
-            disableEnterToSubmit: eu,
-            allowNewLines: ec,
-            isEditorIdle: ed,
-            currentAutocompleteType: e_,
-            "aria-owns": ef,
-            "aria-expanded": ep,
-            "aria-haspopup": eh,
-            "aria-activedescendant": em,
-            "aria-controls": eE,
-            "aria-invalid": eg,
-            "aria-describedby": eA,
-            "aria-labelledby": eI,
-            "aria-autocomplete": eT,
+            onBlur: z,
+            onKeyDown: q,
+            onKeyUp: Z,
+            onTab: X,
+            onEnter: Q,
+            onSubmit: J,
+            onSubmitFailure: ee,
+            maybeShowAutocomplete: et,
+            hideAutocomplete: en,
+            moveSelection: er,
+            spellcheckEnabled: ei,
+            canUseCommands: es,
+            canOnlyUseTextCommands: ea,
+            disableAutoFocus: eo,
+            disableEnterToSubmit: el,
+            allowNewLines: eu,
+            "aria-owns": ec,
+            "aria-expanded": ed,
+            "aria-haspopup": e_,
+            "aria-activedescendant": ef,
+            "aria-controls": ep,
+            "aria-invalid": eh,
+            "aria-describedby": em,
+            "aria-labelledby": eE,
+            "aria-autocomplete": eg,
         } = e,
-        eS = i.useRef(null),
-        ey = i.useRef(null),
-        ev = i.useRef(!0),
-        eN = i.useRef(!0),
-        eC = V || B,
-        eb = i.useCallback(
+        eA = i.useRef(null),
+        eI = i.useRef(null),
+        eT = i.useRef(!0),
+        eS = i.useRef(!0),
+        ey = F || V,
+        ev = i.useCallback(
             (e, t, n) => {
                 let { value: r, selection: i } = n,
                     s = A.VW.richValue(e),
@@ -92,11 +89,11 @@ let U = i.forwardRef(function (e, t) {
                 if (void 0 !== r && r !== s) {
                     if (((e.children = r), "parent" === t && !e.previewMarkdown && e.chatInputType === f.oU.EDIT)) {
                         try {
-                            (e.previewMarkdown = !0), (0, D.eF)(e, U.guild_id, U.id);
+                            (e.previewMarkdown = !0), (0, b.eF)(e, k.guild_id, k.id);
                         } finally {
                             e.previewMarkdown = !1;
                         }
-                        (0, D.eF)(e, U.guild_id, U.id), (i = void 0);
+                        (0, b.eF)(e, k.guild_id, k.id), (i = void 0);
                     }
                     "undo" !== t && void 0 !== r && r !== s && h.o.insertEntry(e, "other", !1, s, a), (o = !0);
                 }
@@ -105,7 +102,7 @@ let U = i.forwardRef(function (e, t) {
                     i = { anchor: t, focus: t };
                 }
                 let l = null != i && !A.Ot.equals(i, a);
-                if ((o && !el && A.VW.focus(e), null != i && l)) {
+                if ((o && !eo && A.VW.focus(e), null != i && l)) {
                     e.selection = i;
                     let t = h.o.currentEntry(e);
                     null != t && (t.selection = i), (o = !0);
@@ -113,65 +110,65 @@ let U = i.forwardRef(function (e, t) {
                 let c = p.n$(e);
                 if (
                     (null != c &&
-                        c[0].command.id !== u.A.getActiveCommand(U.id)?.id &&
+                        c[0].command.id !== u.A.getActiveCommand(k.id)?.id &&
                         h.o.withMergedEntry(e, () => {
-                            (0, O.t)(e, U.id, null, !0);
+                            (0, O.t)(e, k.id, null, !0);
                         }),
                     o)
                 )
                     if ("parent" === t)
                         try {
-                            (eN.current = !1), e.onChange();
+                            (eS.current = !1), e.onChange();
                         } finally {
-                            eN.current = !0;
+                            eS.current = !0;
                         }
                     else e.onChange();
             },
-            [U.id, U.guild_id, el],
+            [k.id, k.guild_id, eo],
         ),
-        eR = i.useCallback(() => {
-            ev.current = !1;
+        eN = i.useCallback(() => {
+            eT.current = !1;
         }, []),
-        eO = i.useCallback(() => {
-            ev.current = !0;
+        eC = i.useCallback(() => {
+            eT.current = !0;
         }, []),
-        eD = (0, v.A)({
-            channel: U,
+        eR = (0, y.A)({
+            channel: k,
             chatInputType: s,
-            canUseCommands: ea,
-            canOnlyUseTextCommands: eo,
-            onChangeStart: eR,
-            onChangeEnd: eO,
-            updateState: eb,
+            canUseCommands: es,
+            canOnlyUseTextCommands: ea,
+            onChangeStart: eN,
+            onChangeEnd: eC,
+            updateState: ev,
         }),
-        eL = i.useCallback(
+        eO = i.useCallback(
             (e, t) => {
-                let n = p.SQ(eD, e, U.id),
-                    r = p.cd(e, U.guild_id, U.id, n, t);
+                let n = p.SQ(eR, e, k.id),
+                    r = p.cd(e, k.guild_id, k.id, n, t);
                 return { values: n, results: r };
             },
-            [U.guild_id, U.id, eD],
+            [k.guild_id, k.id, eR],
         ),
-        ew = i.useCallback(() => {
+        eb = i.useCallback(() => {
             let e,
-                t = A.VW.getNodesOfType(eD, ["gameMentionInput", "timestampMentionInput"]),
+                t = A.VW.getNodesOfType(eR, ["gameMentionInput", "timestampMentionInput"]),
                 n = null != t ? [...t] : null,
-                r = ea ? u.A.getActiveCommand(U.id) : null,
+                r = es ? u.A.getActiveCommand(k.id) : null,
                 i = !1;
             if (null != r && null != r.options) {
-                let t = eL(r, !1);
+                let t = eO(r, !1);
                 e = t.values;
                 let n = p
-                    .O7(eD)
+                    .O7(eR)
                     .filter((e) => !t.results[e].success)
                     .map((e) => (r.options ?? []).find((t) => t.name === e));
                 for (let e of r.options)
-                    !e.required || e.name in t.values || (g.b.insertCommandOption(eD, e), n.push(e));
+                    !e.required || e.name in t.values || (g.b.insertCommandOption(eR, e), n.push(e));
                 if (n.length > 0) {
                     let e = n[0];
-                    g.b.selectCommandOption(eD, e.name),
+                    g.b.selectCommandOption(eR, e.name),
                         (i = !0),
-                        (0, l.zV)(P.HAw.APPLICATION_COMMAND_VALIDATION_FAILED, {
+                        (0, l.zV)(x.HAw.APPLICATION_COMMAND_VALIDATION_FAILED, {
                             application_id: r?.applicationId,
                             command_id: r?.rootCommand?.id,
                             argument_type: o.n4[e?.type ?? 3],
@@ -181,104 +178,96 @@ let U = i.forwardRef(function (e, t) {
             }
             if (null != n)
                 for (let [e, t] of n)
-                    g.b.setNodes(eD, { error: !0 }, { at: t }), i || g.b.select(eD, A.VW.end(eD, t)), (i = !0);
+                    g.b.setNodes(eR, { error: !0 }, { at: t }), i || g.b.select(eR, A.VW.end(eR, t)), (i = !0);
             if (i) {
-                _._.dispatch(P.jej.SHAKE_APP, { duration: 200, intensity: 2 }), et?.();
+                _._.dispatch(x.jej.SHAKE_APP, { duration: 200, intensity: 2 }), ee?.();
                 return;
             }
-            ee?.((0, E.WO)(A.VW.richValue(eD), { mode: "raw", ignoreTrailingEmptyNodes: !0 }), r, e);
-        }, [U.id, eD, ee, et, eL, ea]);
-    (0, N.A)(t, eD, U, ew), (0, R.A)(eD, eS, z);
-    let { handleKeyDown: ex, handleKeyUp: eM } = (0, C.A)({
-            editor: eD,
-            channel: U,
-            disableEnterToSubmit: eu,
-            onKeyDown: Z,
-            onKeyUp: X,
-            onTab: Q,
-            onEnter: J,
-            allowNewLines: ec,
-            submit: ew,
-            hideAutocomplete: er,
-            moveSelection: ei,
+            J?.((0, E.WO)(A.VW.richValue(eR), { mode: "raw", ignoreTrailingEmptyNodes: !0 }), r, e);
+        }, [k.id, eR, J, ee, eO, es]);
+    (0, v.A)(t, eR, k, eb), (0, R.A)(eR, eA, K);
+    let { handleKeyDown: eD, handleKeyUp: eL } = (0, N.A)({
+            editor: eR,
+            channel: k,
+            disableEnterToSubmit: el,
+            onKeyDown: q,
+            onKeyUp: Z,
+            onTab: X,
+            onEnter: Q,
+            allowNewLines: eu,
+            submit: eb,
+            hideAutocomplete: en,
+            moveSelection: er,
         }),
-        { handlePaste: eP, handleGlobalPaste: ek } = (0, b.A)(eD, eC, K),
-        eU = i.useCallback(
+        { handlePaste: ew, handleGlobalPaste: eM } = (0, C.A)(eR, ey, W),
+        ex = i.useCallback(
             (e) => {
-                en?.();
+                et?.();
             },
-            [en],
+            [et],
         ),
-        eG = i.useCallback(
+        eP = i.useCallback(
             (e) => {
-                e !== ey.current ? eN.current && W?.(null, (0, E.WO)(e, { mode: "raw" }), e) : eN.current && en();
+                e !== eI.current ? eS.current && Y?.(null, (0, E.WO)(e, { mode: "raw" }), e) : eS.current && et();
             },
-            [en, W],
+            [et, Y],
         );
     i.useLayoutEffect(() => {
-        ev.current && ((ey.current = n), eb(eD, "parent", { value: n }));
-    }, [eD, n, eb]),
+        eT.current && ((eI.current = n), ev(eR, "parent", { value: n }));
+    }, [eR, n, ev]),
         i.useEffect(() => {
             let e = () => {
-                let e = u.A.getActiveCommand(U.id) ?? null;
-                null !== e && null != e.options && eL(e, !0);
+                let e = u.A.getActiveCommand(k.id) ?? null;
+                null !== e && null != e.options && eO(e, !0);
             };
             return c.A.addChangeListener(e), () => c.A.removeChangeListener(e);
-        }, [U, eD, eL]);
-    let eF = i.useCallback(
-            (e) => [
-                ...(0, S.A)(eD, e, U.guild_id),
-                ...(0, I.A)(eD, e),
-                ...(0, T.A)(eD, e),
-                ...(0, y.A)(eD, e, U, { isIdle: ed, currentAutocompleteType: e_ }),
-            ],
-            [eD, U, ed, e_],
-        ),
-        eV = i.useCallback(
+        }, [k, eR, eO]);
+    let ek = i.useCallback((e) => [...(0, S.A)(eR, e, k.guild_id), ...(0, I.A)(eR, e), ...(0, T.A)(eR, e)], [eR, k]),
+        eU = i.useCallback(
             (e) => {
-                let t = (0, L.A)(eD, e, U.id);
-                return null == t && (t = (0, x.A)(eD, e)), null == t && (t = (0, M.A)(eD, e)), t;
+                let t = (0, D.A)(eR, e, k.id);
+                return null == t && (t = (0, w.A)(eR, e)), null == t && (t = (0, M.A)(eR, e)), t;
             },
-            [U.id, eD],
+            [k.id, eR],
         ),
-        eB = i.useCallback((e) => (0, w.A)(e), []);
+        eG = i.useCallback((e) => (0, L.A)(e), []);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(d.EG, { event: P.jej.GLOBAL_CLIPBOARD_PASTE, handler: ek }),
+            (0, r.jsx)(d.EG, { event: x.jej.GLOBAL_CLIPBOARD_PASTE, handler: eM }),
             (0, r.jsx)("div", {
-                ref: eS,
-                className: a()(G, k.pC),
+                ref: eA,
+                className: a()(U, P.pC),
                 children: (0, r.jsx)(m.A, {
-                    id: F,
-                    editor: eD,
-                    channelId: U.id,
-                    guildId: U.guild_id,
-                    className: a()(k.gf, Y),
-                    placeholder: H,
-                    readOnly: eC,
-                    spellCheck: es,
-                    autoFocus: !el,
-                    canFocus: !V,
-                    onChange: eG,
+                    id: G,
+                    editor: eR,
+                    channelId: k.id,
+                    guildId: k.guild_id,
+                    className: a()(P.gf, j),
+                    placeholder: B,
+                    readOnly: ey,
+                    spellCheck: ei,
+                    autoFocus: !eo,
+                    canFocus: !F,
+                    onChange: eP,
                     onFocus: $,
-                    onBlur: q,
-                    onClick: eU,
-                    onPaste: eP,
-                    onKeyDown: ex,
-                    onKeyUp: eM,
-                    decorate: eF,
-                    renderExtraElement: eV,
-                    renderExtraLeaf: eB,
-                    "aria-owns": ef,
-                    "aria-haspopup": eh,
-                    "aria-expanded": ep,
-                    "aria-activedescendant": em,
-                    "aria-controls": eE,
-                    "aria-labelledby": eI,
-                    "aria-describedby": eA,
-                    "aria-invalid": eg,
-                    "aria-autocomplete": eT,
-                    "aria-required": j,
+                    onBlur: z,
+                    onClick: ex,
+                    onPaste: ew,
+                    onKeyDown: eD,
+                    onKeyUp: eL,
+                    decorate: ek,
+                    renderExtraElement: eU,
+                    renderExtraLeaf: eG,
+                    "aria-owns": ec,
+                    "aria-haspopup": e_,
+                    "aria-expanded": ed,
+                    "aria-activedescendant": ef,
+                    "aria-controls": ep,
+                    "aria-labelledby": eE,
+                    "aria-describedby": em,
+                    "aria-invalid": eh,
+                    "aria-autocomplete": eg,
+                    "aria-required": H,
                 }),
             }),
         ],

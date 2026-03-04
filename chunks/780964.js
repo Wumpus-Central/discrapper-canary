@@ -348,7 +348,6 @@ var r = (function (e) {
         (e.CHAT_SOUNDMOJI_AUTOCOMPLETE = "chat_soundmoji_autocomplete"),
         (e.CHAT_TEXT_BOX_CATEGORY = "chat_text_box_category"),
         (e.CHAT_TEXT_BOX_PREVIEWS = "chat_text_box_previews"),
-        (e.CHAT_TEXT_BOX_MENTION_SUGGESTIONS = "chat_text_box_mention_suggestions"),
         (e.CHAT_THREADS_CATEGORY = "chat_threads_category"),
         (e.CHAT_THREADS_SPLIT_VIEW = "chat_threads_split_view"),
         (e.CHAT_MESSAGE_SEARCH_CATEGORY = "chat_message_search_category"),
