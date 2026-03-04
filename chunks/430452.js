@@ -758,7 +758,7 @@ function ng() {
             null != e && ((t3 = e.gpu_brand), (t6 = e.has_intel_hybrid_igpu));
         }),
         tu.on(y.bg.SystemMicrophoneModeChange, (e) => {
-            (f = e), tu.eachConnection(nE);
+            (f = e), tu.eachConnection(nE), r.emitChange();
         });
 }
 function nA() {
