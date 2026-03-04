@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => h });
 var r = n(136722),
     i = n(867051),
     s = n(548965),
@@ -46,10 +46,16 @@ class _ extends a.yW {
     }
 }
 function f(e, t, n) {
+    if ((p(e, t, n), 0 === n.partitionLength(e)))
+        throw Error(
+            `Guild data was missing from store for guild ${e}: got empty role update with no existing partition, Array.isArray(roles) = ${Array.isArray(t)}`,
+        );
+}
+function p(e, t, n) {
     ("update" !== t.op || 0 !== t.writes.length || 0 !== t.deletes.length) &&
         n.setPartition(e, u.j_(e, t, n.getPartition(e)));
 }
-let p = new _(
+let h = new _(
     {
         BACKGROUND_SYNC: (e, t) => {
             let { guilds: n } = e;
