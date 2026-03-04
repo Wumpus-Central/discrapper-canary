@@ -825,7 +825,8 @@ function nR() {
         tu.setAecDump(e.aecDumpEnabled),
         tu.setSidechainCompression(e.sidechainCompression),
         tu.setSidechainCompressionStrength(e.sidechainCompressionStrength),
-        tu.setAudioInputBypassSystemProcessing(e.bypassSystemInputProcessing);
+        tu.setAudioInputBypassSystemProcessing(e.bypassSystemInputProcessing),
+        eb.Ay?.setOpenH264Enabled?.(e.openH264Enabled);
 }
 function nO() {
     t_ || tu.enable().then(() => C.h.dispatch({ type: "MEDIA_ENGINE_SET_AUDIO_ENABLED", enabled: !0, unmute: !1 }));

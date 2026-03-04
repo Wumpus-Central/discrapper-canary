@@ -553,7 +553,7 @@ let Y = {
             E.gpuSettings.setEnableHardwareAcceleration(e);
         },
         setOpenH264Enabled(e) {
-            E.settings.set("openH264Enabled", e);
+            E?.settings?.set?.("openH264Enabled", e);
         },
         setChromiumSwitches(e) {
             E.gpuSettings.setChromiumSwitches(e);
