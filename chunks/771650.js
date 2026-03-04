@@ -452,6 +452,19 @@ function es(e) {
             componentType: "ANSWER",
             queryKey: "has",
         },
+        [v.LWr.FILTER_LINK_FROM]: {
+            regex: V(N.intl.string(N.t.RpRAZD)),
+            key: F(N.intl.string(N.t.RpRAZD)),
+            plainText: N.intl.string(N.t.RpRAZD),
+            componentType: "FILTER",
+        },
+        [v.LWr.ANSWER_LINK_FROM]: {
+            regex: y.G,
+            follows: [v.LWr.FILTER_LINK_FROM],
+            mutable: !0,
+            componentType: "ANSWER",
+            queryKey: "link_hostname",
+        },
         [v.LWr.FILTER_FILE_TYPE]: {
             regex: V(N.intl.string(N.t.TMNjFm)),
             key: F(N.intl.string(N.t.TMNjFm)),
@@ -459,7 +472,7 @@ function es(e) {
             componentType: "FILTER",
         },
         [v.LWr.ANSWER_FILE_TYPE]: {
-            regex: /(?:\s*([^\s]+))/,
+            regex: y.G,
             follows: [v.LWr.FILTER_FILE_TYPE],
             mutable: !0,
             componentType: "ANSWER",
@@ -472,7 +485,7 @@ function es(e) {
             componentType: "FILTER",
         },
         [v.LWr.ANSWER_FILE_NAME]: {
-            regex: /(?:\s*([^\s]+)(?=\s))/,
+            regex: y.G,
             follows: [v.LWr.FILTER_FILE_NAME],
             mutable: !0,
             componentType: "ANSWER",
