@@ -44436,6 +44436,15 @@ screen and (max-width:485px) {
     margin: 12px 0
 }
 
+.renewalInvoiceDate_d313e6 {
+    color: var(--text-default);
+    margin-bottom: 16px
+}
+
+.unifiedCheckoutInvoicePreviewLoader_d313e6 {
+    margin-top: 60px
+}
+
 .warningContainer__98bed {
     align-items: center;
     background-color: var(--background-feedback-warning);
@@ -44495,15 +44504,6 @@ screen and (max-width:485px) {
 .promotionalNoticeContainer_bb5449,
 .totalDueReviewStep_bb5449 {
     margin-bottom: var(--space-12)
-}
-
-.renewalInvoiceDate_d313e6 {
-    color: var(--text-default);
-    margin-bottom: 16px
-}
-
-.unifiedCheckoutInvoicePreviewLoader_d313e6 {
-    margin-top: 60px
 }
 
 .paymentNote__56a21 {
