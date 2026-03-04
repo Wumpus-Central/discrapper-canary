@@ -268,20 +268,22 @@ function P(e, t) {
             freeTextElements: n,
             dropdownElements: r,
             countrySelectElement: i,
-            multiSelectElement: s,
-            contentUrlInputElement: a,
+            radioGroupElement: s,
+            multiSelectElement: a,
+            contentUrlInputElement: o,
         } = e,
-        { textInput: o, multiSelect: l } = t;
+        { textInput: l, multiSelect: u } = t;
     return (
         n.some(
             (e) =>
                 !0 === e.should_submit_data &&
-                (o?.[e.name] == null || o?.[e.name].value === "" || !o?.[e.name]?.isValid),
+                (l?.[e.name] == null || l?.[e.name].value === "" || !l?.[e.name]?.isValid),
         ) ||
-        r.some((e) => !0 === e.should_submit_data && (o?.[e.name] == null || o?.[e.name].value === "")) ||
-        (i?.should_submit_data === !0 && (o?.[i.name] == null || o?.[i.name].value === "")) ||
-        (s?.should_submit_data === !0 && (null == l || 0 === Object.keys(l).length)) ||
-        (a?.should_submit_data === !0 && (o?.[a.name] == null || o?.[a.name].value === "" || !o?.[a.name]?.isValid))
+        r.some((e) => !0 === e.should_submit_data && (l?.[e.name] == null || l?.[e.name].value === "")) ||
+        (i?.should_submit_data === !0 && (l?.[i.name] == null || l?.[i.name].value === "")) ||
+        (s?.should_submit_data === !0 && (l?.[s.name] == null || l?.[s.name].value === "")) ||
+        (a?.should_submit_data === !0 && (null == u || 0 === Object.keys(u).length)) ||
+        (o?.should_submit_data === !0 && (l?.[o.name] == null || l?.[o.name].value === "" || !l?.[o.name]?.isValid))
     );
 }
 var k = (function (e) {

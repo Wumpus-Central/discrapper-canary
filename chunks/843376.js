@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { i: () => d });
+n.d(t, { i: () => c });
 var i = n(627968),
     s = n(110259),
     r = n(397927),
     l = n(17372),
     a = n(928658),
     o = n(369053),
-    c = n(985018);
-function d(e, t) {
-    let d = (d) => {
+    d = n(985018);
+function c(e, t) {
+    let c = (c) => {
         let u = async () => {
-                await (0, o.TP)(e, d);
+                await (0, o.TP)(e, c);
             },
-            h = async (t) => await (0, o.G_)(e, d, t),
+            h = async (t) => await (0, o.G_)(e, c, t),
             _ = (n) => {
                 let i = n?.token;
                 e === l.tY.MESSAGE
@@ -33,8 +33,8 @@ function d(e, t) {
                             onFormSubmit: h,
                             onResend: u,
                             onSuccess: _,
-                            headerText: c.intl.string(c.t.H3Q7U8),
-                            confirmButtonText: c.intl.string(c.t["13ofGu"]),
+                            headerText: d.intl.string(d.t.H3Q7U8),
+                            confirmButtonText: d.intl.string(d.t["13ofGu"]),
                             impression: { impressionName: s.ImpressionNames.URF_CONFIRM_EMAIL_CODE },
                         });
                 },
@@ -49,10 +49,10 @@ function d(e, t) {
                     return (n) =>
                         (0, i.jsx)(t, {
                             ...n,
-                            onSuccess: d,
-                            headerText: c.intl.string(c.t.ZLRYGU),
-                            confirmButtonText: c.intl.string(c.t.PDTjLN),
-                            helperText: e === l.tY.MEDIA_TAKEDOWN ? c.intl.string(c.t.jt3z8f) : void 0,
+                            onSuccess: c,
+                            headerText: d.intl.string(d.t.ZLRYGU),
+                            confirmButtonText: d.intl.string(d.t.PDTjLN),
+                            subtitle: e === l.tY.MEDIA_TAKEDOWN ? d.intl.string(d.t.jt3z8f) : void 0,
                         });
                 },
                 { onCloseCallback: t },
