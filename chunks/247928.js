@@ -14,27 +14,42 @@ function l(e) {
 }
 function u(e, t) {
     let [n] = i.useState(() => o()),
-        r = `${s}-${n}`;
+        r = `${s}-${n}`,
+        a = i.useCallback(
+            (e) => {
+                let t = l(e),
+                    n = t.currentNode;
+                for (; null != n; ) {
+                    let e = n;
+                    e.setAttribute(r, String(e.tabIndex)), (e.tabIndex = -1), (n = t.nextNode());
+                }
+            },
+            [r],
+        ),
+        u = i.useCallback(
+            (e) => {
+                e.querySelectorAll(`[${r}]`).forEach((e) => {
+                    let t = e.getAttribute(r);
+                    null != t && ((e.tabIndex = parseInt(t, 10)), e.removeAttribute(r));
+                });
+            },
+            [r],
+        );
     i.useLayoutEffect(() => {
         if (t) {
             let t = e.current;
-            if (null != t) {
-                let e = l(t),
-                    n = e.currentNode;
-                for (; null !== n; ) {
-                    let t = n,
-                        i = t.tabIndex;
-                    (t.tabIndex = -1), t.setAttribute(r, String(i)), (n = e.nextNode());
-                }
-                return () => {
-                    t.querySelectorAll(`[${r}]`).forEach((e) => {
-                        let t = e.getAttribute(r);
-                        null != t && (e.tabIndex = parseInt(t, 10));
-                    });
-                };
-            }
+            if (null != t) return a(t), () => u(t);
         }
-    }, [t, e, r]);
+    }, [t, e, a, u]),
+        i.useEffect(() => {
+            if (!t) return;
+            let n = e.current;
+            if (null == n) return;
+            let r = new MutationObserver((e) => {
+                e.some((e) => e.addedNodes.length > 0) && a(n);
+            });
+            return r.observe(n, { childList: !0, subtree: !0 }), () => r.disconnect();
+        }, [t, e, a]);
 }
 function c(e) {
     let { children: t, className: n, enabled: s = !0 } = e,
