@@ -1,45 +1,29 @@
 "use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => h });
 var r = n(627968);
 n(64700);
-var i = n(311907),
-    s = n(397927),
-    a = n(736653),
-    o = n(775602),
-    l = n(607470),
-    u = n(676279),
-    c = n(200430),
-    d = n(154057),
-    _ = n(609636),
-    f = n(236806),
-    p = n(988297),
-    h = n(307236),
-    m = n(613702);
-function E(e) {
-    let t,
-        { className: n } = e,
-        E = (0, i.bG)([o.A], () => o.A.useReducedMotion),
-        g = (0, a.Ay)(),
-        A = (0, s.qB1)(g);
-    if (E) {
-        let e = A ? p.A : d.A;
-        return (0, r.jsxs)("div", {
-            className: n,
-            children: [(0, r.jsx)("div", { className: c.YL }), (0, r.jsx)("img", { src: e, alt: "" })],
-        });
-    }
-    return (
-        (t = (0, u.TM)() ? (A ? h.A : _.A) : A ? m.A : f.A),
-        (0, r.jsxs)("div", {
-            className: n,
-            children: [
-                (0, r.jsx)("div", { className: c.YL }),
-                (0, r.jsx)(
-                    l.A,
-                    { muted: !0, autoPlay: !0, playsInline: !0, loop: !0, children: (0, r.jsx)("source", { src: t }) },
-                    t,
-                ),
-            ],
-        })
-    );
+var i = n(397927),
+    s = n(736653),
+    a = n(303136),
+    o = n(676279),
+    l = n(200430),
+    u = n(154057),
+    c = n(609636),
+    d = n(236806),
+    _ = n(988297),
+    f = n(307236),
+    p = n(613702);
+function h(e) {
+    let { className: t } = e,
+        n = (0, s.Ay)(),
+        h = (0, i.qB1)(n),
+        m = h ? _.A : u.A,
+        E = (0, o.TM)() ? (h ? f.A : c.A) : h ? p.A : d.A;
+    return (0, r.jsxs)("div", {
+        className: t,
+        children: [
+            (0, r.jsx)("div", { className: l.YL }),
+            (0, r.jsx)(a.A, { fallbackImage: m, children: (0, r.jsx)("source", { src: E }) }, E),
+        ],
+    });
 }

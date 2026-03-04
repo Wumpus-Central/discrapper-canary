@@ -1,64 +1,50 @@
 "use strict";
-n.d(t, { A: () => y });
+n.d(t, { A: () => I });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(607399),
-    l = n(311907),
-    u = n(397927),
-    c = n(241524),
-    d = n(775602),
-    _ = n(607470),
-    f = n(676279),
-    p = n(156312),
-    h = n(166532),
-    m = n(376747),
-    g = n(679190),
-    E = n(386224),
-    A = n(568442),
-    I = n(582860);
-let T = (e) => {
-    let { className: t, style: n } = e;
-    return (0, l.bG)([d.A], () => d.A.useReducedMotion)
-        ? (0, r.jsx)("img", { src: A.A, className: t, style: n, alt: "" })
-        : (0, r.jsxs)(_.A, {
-              tabIndex: -1,
-              className: t,
-              style: n,
-              autoPlay: !0,
-              loop: !0,
-              children: [
-                  (0, r.jsx)("source", { src: I.A, type: "video/webm" }),
-                  (0, r.jsx)("img", { src: A.A, className: t, style: n, alt: "" }),
-              ],
-          });
+    l = n(397927),
+    u = n(241524),
+    c = n(303136),
+    d = n(676279),
+    _ = n(156312),
+    f = n(166532),
+    p = n(376747),
+    h = n(679190),
+    m = n(386224),
+    E = n(568442),
+    g = n(582860);
+let A = (e) => {
+    let { className: t } = e;
+    return (0, r.jsx)(c.A, { src: g.A, fallbackImage: E.A, className: t });
 };
-function y(e) {
-    let { step: t, onClose: n, isOrbCheckout: a } = e,
-        l = (0, c.A)(m.T),
-        { footerNode: d } = (0, p.P5)(),
-        _ = (0, f.nr)() && !o.Fr,
-        A = null != d ? d.offsetWidth : void 0,
-        I = i.useMemo(() => (_ && null != A && (t === h.pn.ADD_PAYMENT_STEPS || a) ? A : void 0), [_, A, t, a]);
-    if (t === h.pn.BENEFITS || t === h.pn.CONFIRM) return null;
-    let y = null != I ? { width: I + 2 } : void 0,
-        S = null != I ? { width: I + 3 } : void 0;
+function I(e) {
+    let { step: t, onClose: n, isOrbCheckout: s } = e,
+        c = (0, u.A)(p.T),
+        { footerNode: E } = (0, _.P5)(),
+        g = (0, d.nr)() && !o.Fr,
+        I = null != E ? E.offsetWidth : void 0,
+        T = i.useMemo(() => (g && null != I && (t === f.pn.ADD_PAYMENT_STEPS || s) ? I : void 0), [g, I, t, s]);
+    if (t === f.pn.BENEFITS || t === f.pn.CONFIRM) return null;
+    let S = null != T ? { width: T + 2 } : void 0,
+        y = null != T ? { width: T + 3 } : void 0;
     return (0, r.jsxs)("div", {
-        className: g.N1,
-        style: y,
+        className: h.N1,
+        style: S,
         children: [
-            !l &&
+            !c &&
                 (0, r.jsx)("div", {
-                    className: g.oZ,
+                    className: h.oZ,
                     "aria-hidden": "true",
                     "data-accessibility": "desaturate",
-                    style: S,
-                    children: a
-                        ? (0, r.jsx)(T, { className: s()(g.F0, g.WL) })
-                        : (0, r.jsx)("img", { src: E, alt: "", className: g.F0 }),
+                    style: y,
+                    children: s
+                        ? (0, r.jsx)(A, { className: a()(h.F0, h.WL) })
+                        : (0, r.jsx)("img", { src: m, alt: "", className: h.F0 }),
                 }),
-            (0, r.jsx)(u.s_y, { "data-migration-pending": !0, withCircleBackground: !0, className: g.b, onClick: n }),
+            (0, r.jsx)(l.s_y, { "data-migration-pending": !0, withCircleBackground: !0, className: h.b, onClick: n }),
         ],
     });
 }

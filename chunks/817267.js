@@ -1,37 +1,27 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => A });
 var i = n(627968);
 n(64700);
-var s = n(417597),
-    a = n(397927),
-    l = n(736653),
-    r = n(775602),
-    o = n(607470),
-    c = n(676279),
-    d = n(69091),
-    u = n(264996),
-    _ = n(837137),
-    m = n(723473),
-    A = n(728654),
-    g = n(903671);
-let h = (e) => {
+var s = n(397927),
+    a = n(736653),
+    l = n(303136),
+    r = n(676279),
+    o = n(69091),
+    c = n(264996),
+    d = n(837137),
+    u = n(723473),
+    _ = n(728654),
+    m = n(903671);
+let A = (e) => {
     let t,
         { className: n } = e,
-        h = (0, s.bG)([r.A], () => r.A.useReducedMotion),
-        x = (0, c.TM)(),
-        p = (0, a.qB1)((0, l.Ay)());
-    if (h) {
-        let e = p ? g.A : _.A;
-        return (0, i.jsx)("div", { className: n, children: (0, i.jsx)("img", { src: e, alt: "" }) });
-    }
+        A = (0, r.TM)(),
+        g = (0, s.qB1)((0, a.Ay)()),
+        h = g ? m.A : d.A;
     return (
-        (t = x ? (p ? m.A : d.A) : p ? A.A : u.A),
+        (t = A ? (g ? u.A : o.A) : g ? _.A : c.A),
         (0, i.jsx)("div", {
             className: n,
-            children: (0, i.jsx)(
-                o.A,
-                { muted: !0, autoPlay: !0, playsInline: !0, loop: !0, children: (0, i.jsx)("source", { src: t }) },
-                t,
-            ),
+            children: (0, i.jsx)(l.A, { fallbackImage: h, children: (0, i.jsx)("source", { src: t }) }, t),
         })
     );
 };
