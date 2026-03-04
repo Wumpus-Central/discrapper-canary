@@ -251,21 +251,21 @@ class V extends u.A {
                 e === M.S7L.RTC_CONNECTED &&
                     (this._connection?.on(
                         s.yq.ScreenshareFinish,
-                        (e, t, n, r, i, s, a, o, l, u, c, d, _, f, p, m, E, g, A, I, T, S) => {
-                            let y = this.analyticsContext.getStreamApplicationFromHistory(
+                        (e, t, n, r, i, s, a, o, l, u, c, d, _, f, p, m, E, g, A, I, T, S, y) => {
+                            let C = this.analyticsContext.getStreamApplicationFromHistory(
                                 this.screenshareFinishedCount,
                             );
                             this.screenshareFinishedCount++;
-                            let { gameName: C, gameId: R, exe: b, distributor: D } = (0, h.wH)(y),
-                                L = this.getMediaSessionId(),
-                                w = this.getRTCConnectionId();
+                            let { gameName: R, gameId: b, exe: D, distributor: L } = (0, h.wH)(C),
+                                w = this.getMediaSessionId(),
+                                P = this.getRTCConnectionId();
                             (0, v.w)().then((h) => {
-                                let y = null;
+                                let v = null;
                                 if (null != h) {
                                     let { cpu_brand: e, cpu_vendor: t, cpu_memory: n, gpu_brand: r, gpu_memory: i } = h;
-                                    y = { cpu_brand: e, cpu_vendor: t, cpu_memory: n, gpu_brand: r, gpu_memory: i };
+                                    v = { cpu_brand: e, cpu_vendor: t, cpu_memory: n, gpu_brand: r, gpu_memory: i };
                                 }
-                                let v =
+                                let C =
                                         (e ?? 0) +
                                         (t ?? 0) +
                                         (n ?? 0) +
@@ -275,7 +275,7 @@ class V extends u.A {
                                         (m ?? 0) +
                                         (I ?? 0) +
                                         (A ?? 0),
-                                    P = (u ?? 0) + (c ?? 0) + (d ?? 0) + (_ ?? 0) + (f ?? 0);
+                                    k = (u ?? 0) + (c ?? 0) + (d ?? 0) + (_ ?? 0) + (f ?? 0);
                                 N.default.track(M.HAw.SCREENSHARE_FINISHED, {
                                     screenshare_frames: e,
                                     videohook_frames: t,
@@ -295,25 +295,26 @@ class V extends u.A {
                                     quartz_frames: m,
                                     screencapturekit_frames: I,
                                     go_live_camera_frames: A,
-                                    total_frames: v,
-                                    total_frames_unique: P,
+                                    total_frames: C,
+                                    total_frames_unique: k,
                                     desktop_capturer_type: E,
-                                    media_session_id: L,
-                                    rtc_connection_id: w,
+                                    media_session_id: w,
+                                    rtc_connection_id: P,
                                     context: x.x.STREAM,
                                     activity: g,
                                     soundshare_session: this.soundshareStats.getStats().soundshare_last_session,
                                     picker_type_used:
                                         null != this.analyticsContext.nativePickerStyleUsed ? "native" : "internal",
                                     duration: this.analyticsContext.getDuration(),
-                                    share_game_name: C,
-                                    share_game_id: R,
-                                    share_game_exe: b,
-                                    share_game_distributor: D,
+                                    share_game_name: R,
+                                    share_game_id: b,
+                                    share_game_exe: D,
+                                    share_game_distributor: L,
                                     hdr_frames_capable: T,
                                     hdr_frames: S,
                                     discord_is_elevated: O.Ay.getDiscordIsElevated(),
-                                    ...y,
+                                    target_window_elevated: y,
+                                    ...v,
                                 });
                             });
                         },

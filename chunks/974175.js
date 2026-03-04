@@ -1,4 +1,4 @@
-r.d(t, { R: () => v, f8: () => u, q7: () => D }), r(321073), r(134528), r(947204);
+r.d(t, { R: () => F, f8: () => u, q7: () => D }), r(321073), r(134528), r(947204);
 var n = r(627968),
     a = r(64700),
     i = r(796873),
@@ -159,10 +159,10 @@ function g(e) {
     let { last: t } = e;
     return `${t} ms`;
 }
-function F(e) {
+function v(e) {
     return e.toFixed(2);
 }
-let v = {
+let F = {
         audioJitterBuffer: !0,
         audioJitterDelay: !0,
         audioJitterTarget: !0,
@@ -186,6 +186,7 @@ let v = {
         sinkWantLocalAsInt: !0,
         skipHistoryJson: !0,
         sumOfSquaredFramesDurations: !0,
+        targetWindowElevated: !0,
         timestamp: !0,
         type: !0,
         videoJitterBuffer: !0,
@@ -224,7 +225,7 @@ let v = {
         encoderQualityPsnr: function (e) {
             return `${Math.max(e, 0).toFixed(2)} dB`;
         },
-        encoderQualityVmaf: F,
+        encoderQualityVmaf: v,
         encodeUsage: y,
         expandRate: y,
         filter: p,
@@ -248,15 +249,15 @@ let v = {
             return `${t}x${r}`;
         },
         sampleRateMismatchPercent: y,
-        screenshareCapturedFps: F,
-        screenshareCapturedFpsUnique: F,
+        screenshareCapturedFps: v,
+        screenshareCapturedFpsUnique: v,
         secondaryDecodedRate: y,
         secureFramesProtocolVersion: function (e) {
             return e > 0 ? `Version ${e}` : "Disabled";
         },
         speechExpandRate: y,
         targetDelay: h,
-        videoEntropy: F,
+        videoEntropy: v,
         videohookBackend: function (e) {
             let t = ["N/A", "Direct3D 9", "Direct3D 10", "Direct3D 11", "Direct3D 12", "OpenGL", "Vulkan"];
             return e < t.length ? t[e] : "Unknown";

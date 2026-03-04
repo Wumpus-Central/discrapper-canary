@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => R }), n(321073);
+n.d(t, { A: () => O }), n(321073);
 var r = n(119479),
     i = n.n(r),
     s = n(415955),
@@ -27,10 +27,10 @@ let S = 50,
 function C(e) {
     return (null != e ? e : T.Hz) / T.Hz;
 }
-function b(e) {
+function R(e) {
     return null != e && 0 !== e ? e + 1 : 0;
 }
-class R extends f.A {
+class O extends f.A {
     mediaEngineConnectionId = `Native-${N++}`;
     goLiveSourceIdentifier;
     selfVideo = !1;
@@ -87,11 +87,11 @@ class R extends f.A {
             this.logger.enableNativeLogger(!0);
     }
     static create(e, t, n) {
-        let r = new R(e, t, !0);
+        let r = new O(e, t, !0);
         return r.initialize(n), r;
     }
     static createReplay(e, t) {
-        let n = new R(e, "0", !0),
+        let n = new O(e, "0", !0),
             r = (0, g.lE)();
         n.initializeStreamParameters([{ type: I.mI.VIDEO, rid: "100", ssrc: 0, rtxSsrc: 0, quality: 100, active: !1 }]);
         let i = (t, i) => {
@@ -303,6 +303,7 @@ class R extends f.A {
                                 e.screenCaptureKitFrames,
                                 e.hdrFramesCapable,
                                 e.hdrFrames,
+                                e.targetWindowElevated,
                             )
                           : "video_state" === e.type
                             ? this.emit(h.yq.VideoState, e.state)
@@ -380,7 +381,7 @@ class R extends f.A {
                     ssrc: t,
                     videoSsrc: r,
                     videoSsrcs: n,
-                    rtxSsrc: b(r),
+                    rtxSsrc: R(r),
                     mute: this.getLocalMute(e),
                     volume: this.getLocalVolume(e),
                 };
@@ -738,7 +739,7 @@ class R extends f.A {
                     null,
                     this.audioSSRC,
                     this.videoStreamParameters[o].ssrc,
-                    b(this.videoStreamParameters[o].ssrc),
+                    R(this.videoStreamParameters[o].ssrc),
                     this.videoStreamParameters,
                 ),
                 this.conn.setTransportOptions(this.applyQualityConstraints().constraints));
@@ -825,7 +826,7 @@ class R extends f.A {
                 ssrc: this.remoteAudioSSRCs[e],
                 videoSsrc: t,
                 videoSsrcs: this.remoteVideoSSRCs[e],
-                rtxSsrc: b(t),
+                rtxSsrc: R(t),
                 mute: this.getLocalMute(e),
                 volume: this.getLocalVolume(e),
             };
@@ -1028,7 +1029,7 @@ class R extends f.A {
                       });
                   })
                 : t > 0
-                  ? ((i[0].active = !0), (i[0].ssrc = t), (i[0].rtxSsrc = b(t)))
+                  ? ((i[0].active = !0), (i[0].ssrc = t), (i[0].rtxSsrc = R(t)))
                   : (i[0].active = !1)
             : t > 0 &&
               (void 0 !== this.remoteVideoSSRCs[e]
@@ -1042,7 +1043,7 @@ class R extends f.A {
                 null != n && "" !== n ? n : null,
                 e === this.userId ? this.audioSSRC : this.remoteAudioSSRCs[e],
                 t,
-                b(t),
+                R(t),
                 this.videoStreamParameters,
             );
     };
