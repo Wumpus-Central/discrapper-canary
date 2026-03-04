@@ -12,7 +12,6 @@ var i,
         (i.USER_ACTIVITY = "USER_ACTIVITY"),
         (i.GAME_LIBRARY_TIME_PLAYED = "GAME_LIBRARY_TIME_PLAYED"),
         (i.GAME_LIBRARY_LAST_PLAYED = "GAME_LIBRARY_LAST_PLAYED"),
-        (i.VOICE_CHANNEL_HISTORY = "VOICE_CHANNEL_HISTORY"),
         i),
     c = (((l = c || {}).START = "START"), (l.END = "END"), (l.TIME = "TIME"), l);
 let A = (t) => (e, n) => (null == n ? "" : d.intl.format(t(), { time: e, ...n })),
@@ -102,14 +101,6 @@ let A = (t) => (e, n) => (null == n ? "" : d.intl.format(t(), { time: e, ...n })
                 [s.pJ.WEEKS]: (t) => d.intl.formatToPlainString(d.t.L3fTpL, { time: t }),
                 [s.pJ.MONTHS]: (t) => d.intl.formatToPlainString(d.t.xAFWQV, { time: t }),
                 [s.pJ.YEARS]: (t) => d.intl.formatToPlainString(d.t["9Yr3NW"], { time: t }),
-            },
-        },
-        VOICE_CHANNEL_HISTORY: {
-            END: {
-                [s.pJ.SECONDS]: () => d.intl.string(d.t["1QsMmY"]),
-                [s.pJ.MINUTES]: (t) => d.intl.formatToPlainString(d.t.LRNgHp, { count: t }),
-                [s.pJ.HOURS]: (t) => d.intl.formatToPlainString(d.t.raJpz3, { count: t }),
-                [s.pJ.DAYS]: (t) => d.intl.formatToPlainString(d.t.KkvKhi, { count: t }),
             },
         },
     };
