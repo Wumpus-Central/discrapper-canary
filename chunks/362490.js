@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { RD: () => g, U9: () => A, _M: () => h }), n(321073);
+n.d(t, { RD: () => E, U9: () => A, _M: () => h }), n(321073);
 var r = n(64700),
     i = n(868714),
-    a = n(975807),
-    s = n(474951),
+    s = n(975807),
+    a = n(474951),
     o = n(954571),
     l = n(307600),
     u = n(312083),
@@ -16,41 +16,42 @@ var h = (function (e) {
     return (e.RPC = "rpc"), (e.WEB = "web"), e;
 })({});
 let m = ["rpc", "web"];
-function g(e) {
+function E(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { debug: n = !1 } = t,
         i = (0, c.g)(e),
-        a = I(i, t),
-        s = a?.preferredFlow,
-        o = null != s,
+        s = I(i, t),
+        a = s?.preferredFlow,
+        o = null != a,
         { token: l, fetched: u } = (0, d.U)(i?.parentId ?? i?.id),
         _ = u && null != l;
     return {
         fetched: u,
         hasAlreadyLinked: _,
         canStartAuthorization: o,
-        startAuthorization: r.useCallback((e) => (null == s ? null : (s.initiate(e), s.type)), [s]),
+        startAuthorization: r.useCallback((e) => (null == a ? null : (a.initiate(e), a.type)), [a]),
         connectionApp: i,
-        chosenFlow: s?.type ?? null,
+        chosenFlow: a?.type ?? null,
+        token: l,
         debug: n
             ? {
-                  isSubscribedToAuthorizeRequest: a?.context?.isSubscribedToAuthorizeRequest ?? !1,
+                  isSubscribedToAuthorizeRequest: s?.context?.isSubscribedToAuthorizeRequest ?? !1,
                   oauth2Token: l,
                   hasConnectionEntrypointUrl: i?.connectionEntrypointUrl != null,
-                  validFlows: a?.availableFlows?.map((e) => e.type) ?? [],
+                  validFlows: s?.availableFlows?.map((e) => e.type) ?? [],
               }
             : void 0,
     };
 }
-function E(e) {
-    return s.A.listenIsSubscribed(e);
+function g(e) {
+    return a.A.listenIsSubscribed(e);
 }
 function A(e, t) {
     let n = (0, i.A)(t?.allowedFlows ?? m),
         c = (0, _.A)(
-            E,
+            g,
             r.useCallback(
-                () => e.map((e) => ({ application: e, isSubscribedToAuthorizeRequest: s.A.isSubscribed(e.id, p) })),
+                () => e.map((e) => ({ application: e, isSubscribedToAuthorizeRequest: a.A.isSubscribed(e.id, p) })),
                 [e],
             ),
         );
@@ -65,7 +66,7 @@ function A(e, t) {
                             type: "rpc",
                             initiate(t) {
                                 let n = u.A.getConfig({ location: "useStartAuthorize" }).enabled;
-                                s.A.dispatchToSubscriptions(p, (t) => t.socket.application.id === e.application.id, {}),
+                                a.A.dispatchToSubscriptions(p, (t) => t.socket.application.id === e.application.id, {}),
                                     t.onConfirm?.(),
                                     n &&
                                         o.default.track(f.HAw.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, {
@@ -85,7 +86,7 @@ function A(e, t) {
                             (0, l.h)({
                                 href: n,
                                 onConfirm: () => {
-                                    (0, a.A)(n), t?.onConfirm?.();
+                                    (0, s.A)(n), t?.onConfirm?.();
                                 },
                             }),
                                 r &&
