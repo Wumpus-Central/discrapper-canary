@@ -41,20 +41,20 @@ let T = function (e) {
                       src: m.Ay.getApplicationIconURL({ id: S.id, icon: S.icon, size: 32 }),
                   })
                 : null,
-        b = (0, _.Ay)({
-            applicationId: t,
+        R = (0, _.Ay)({
+            applicationId: S?.id,
             location: "GameMention",
             source: d.Ob.GameMention,
             trackEntryPointImpression: !1,
             autoTrackExposure: !1,
         }),
-        R = i.useCallback(() => {
+        O = i.useCallback(() => {
             (0, u.mMO)(async () => {
                 let { default: e } = await n.e("56466").then(n.bind(n, 188841));
                 return (t) => (0, r.jsx)(e, { ...t });
             });
         }, []),
-        O = null != S ? `@game ${S.name}` : void 0;
+        b = null != S ? `@game ${S.name}` : void 0;
     return (0, r.jsx)(f.A, {
         applicationId: t,
         targetElementRef: T,
@@ -63,15 +63,15 @@ let T = function (e) {
             (0, r.jsx)(l.m, {
                 asContainer: !0,
                 tag: "span",
-                text: O,
-                "aria-label": O,
+                text: b,
+                "aria-label": b,
                 delay: 750,
                 children: (0, r.jsxs)(E.A, {
                     onContextMenu: N,
                     ref: T,
                     ...e,
                     onClick: (n) => {
-                        b.shouldOpenGameProfile && null != t ? e.onClick?.(n) : R();
+                        R.shouldOpenGameProfile && null != t ? e.onClick?.(n) : O();
                     },
                     children: [
                         (0, r.jsx)(g.A, { children: C }),

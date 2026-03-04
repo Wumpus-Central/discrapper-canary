@@ -2,8 +2,8 @@
 n.d(t, { HV: () => c, K6: () => h, Ob: () => u, Tn: () => p, V_: () => f, Ws: () => l, rw: () => _, u9: () => d });
 var r = n(835245),
     i = n(99753),
-    a = n(954571),
-    s = n(652215),
+    s = n(954571),
+    a = n(652215),
     o = n(424994),
     l = (function (e) {
         return (
@@ -22,6 +22,7 @@ var r = n(835245),
             (e[(e.JoinOfficialServer = 12)] = "JoinOfficialServer"),
             (e[(e.ClickImage = 13)] = "ClickImage"),
             (e[(e.GameShop = 14)] = "GameShop"),
+            (e[(e.LinkAccount = 15)] = "LinkAccount"),
             e
         );
     })({}),
@@ -54,7 +55,7 @@ let d = () => (0, r.A)(),
     _ = (e) => {
         let { viewId: t, source: n, gameName: r, applicationId: l, authorId: u, profileType: c } = e;
         return (
-            a.default.track(s.HAw.GAME_PROFILE_OPEN, {
+            s.default.track(a.HAw.GAME_PROFILE_OPEN, {
                 view_id: t,
                 source: n,
                 game_name: r,
@@ -76,7 +77,7 @@ let d = () => (0, r.A)(),
             similarGames: c,
             officialGuildId: d,
         } = e;
-        a.default.track(s.HAw.GAME_PROFILE_CLOSE, {
+        s.default.track(a.HAw.GAME_PROFILE_CLOSE, {
             view_id: t,
             game_name: n,
             application_id: r,
@@ -98,7 +99,7 @@ let d = () => (0, r.A)(),
             officialGuildId: u,
             source: c,
         } = e;
-        a.default.track(s.HAw.GAME_PROFILE_ACTION, {
+        s.default.track(a.HAw.GAME_PROFILE_ACTION, {
             game_name: t,
             application_id: n,
             action: r,
@@ -118,7 +119,7 @@ let d = () => (0, r.A)(),
             feedback: o,
             submitted: l,
         } = e;
-        return a.default.track(s.HAw.GAME_PROFILE_FEEDBACK, {
+        return s.default.track(a.HAw.GAME_PROFILE_FEEDBACK, {
             view_id: t,
             application_id: n,
             suggested_game_name: r,
