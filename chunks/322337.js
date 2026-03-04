@@ -1,28 +1,27 @@
-"use strict";
-n.d(t, { A: () => T, p: () => A });
+n.d(t, { A: () => T, p: () => u });
 var i = n(627968),
-    r = n(64700),
-    l = n(311907),
-    s = n(397927),
-    a = n(442433),
+    l = n(64700),
+    r = n(311907),
+    a = n(397927),
+    s = n(442433),
     o = n(543594),
-    E = n(587895),
-    c = n(67480),
-    _ = n(371794),
+    c = n(587895),
+    _ = n(67480),
+    E = n(371794),
     d = n(985018);
-let A = { DropdownSizes: o.A.DropdownSizes, Sizes: o.A.Sizes, Colors: o.A.Colors, Looks: o.A.Looks };
-class u extends r.PureComponent {
+let u = { DropdownSizes: o.A.DropdownSizes, Sizes: o.A.Sizes, Colors: o.A.Colors, Looks: o.A.Looks };
+class A extends l.PureComponent {
     renderContextMenu = () => {
         let { skus: e, onSKUSelect: t, onMenuSelect: n } = this.props;
-        return (0, i.jsx)(s.W1t, {
+        return (0, i.jsx)(a.W1t, {
             "data-menu-migrated": !0,
             onSelect: n,
             navId: "test-skus",
             "aria-label": d.intl.string(d.t.ogxXGq),
-            onClose: a.Z_,
+            onClose: s.Z_,
             children: e.map((e) =>
                 (0, i.jsx)(
-                    s.Drp,
+                    a.Drp,
                     {
                         id: `${e.id}`,
                         label: e.name,
@@ -36,30 +35,30 @@ class u extends r.PureComponent {
         });
     };
     handleContextMenu = (e) => {
-        e.stopPropagation(), a.jA(e, this.renderContextMenu);
+        e.stopPropagation(), s.jA(e, this.renderContextMenu);
     };
     handleClick = () => {
         let { onSKUSelect: e, primarySKU: t } = this.props;
         null != t && e?.(t);
     };
     render() {
-        let { skus: e, children: t, applicationId: n, primarySKU: r, onSKUSelect: l, ...s } = this.props;
+        let { skus: e, children: t, applicationId: n, primarySKU: l, onSKUSelect: r, ...a } = this.props;
         return (0, i.jsx)(o.A, {
             onClick: this.handleClick,
             onDropdownClick: e.length > 0 ? this.handleContextMenu : null,
             onContextMenu: e.length > 0 ? this.handleContextMenu : void 0,
-            ...s,
+            ...a,
             children: t,
         });
     }
 }
-let T = l.Ay.connectStores([c.A, E.A], (e) => {
+let T = r.Ay.connectStores([_.A, c.A], (e) => {
     let { applicationId: t } = e,
-        n = (0, _.VH)(t, E.A, c.A);
+        n = (0, E.VH)(t, c.A, _.A);
     return {
-        skus: (c.A.getForApplication(t) ?? []).sort((e, t) =>
+        skus: (_.A.getForApplication(t) ?? []).sort((e, t) =>
             null != n && e.id === n.id ? -1 : null != n && t.id === n.id ? 1 : e.name >= t.name ? -1 : 1,
         ),
         primarySKU: n,
     };
-})(u);
+})(A);

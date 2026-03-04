@@ -1,4 +1,4 @@
-a.r(l), a.d(l, { manaCollection: () => C, playgroundConfig: () => j });
+a.r(l), a.d(l, { manaCollection: () => S, playgroundConfig: () => k });
 var t = a(330741),
     o = a(747247),
     n = a(973107),
@@ -6,21 +6,23 @@ var t = a(330741),
     s = a(362124),
     r = a(686071),
     d = a(874783),
-    u = a(414319),
-    c = a(541236),
-    b = a(471936),
-    p = a(361500),
-    m = a(102998),
-    x = a(339754),
-    v = a(19147),
-    h = a(746539),
-    y = a(566193),
-    f = a(932880),
-    g = a(5900),
-    V = a(32272);
-let C = {
+    u = a(707283),
+    c = a(414319),
+    b = a(541236),
+    p = a(471936),
+    m = a(361500),
+    x = a(102998),
+    h = a(766359),
+    v = a(339754),
+    y = a(19147),
+    f = a(746539),
+    g = a(566193),
+    V = a(932880),
+    C = a(5900),
+    j = a(32272);
+let S = {
         id: "mana",
         name: "Mana",
-        groups: [f.d, o.t, n.Q, i.i, s.h, r.E, d.g, m.C, h.M, b.t, c.Y, v.S, p.t, g.V, y.f, u.s, V.V, x.Q],
+        groups: [V.d, o.t, n.Q, i.i, s.h, r.E, d.g, u.t, x.C, h.p, f.M, p.t, b.Y, y.S, m.t, C.V, g.f, c.s, j.V, v.Q],
     },
-    j = { collections: [C, t.v] };
+    k = { collections: [S, t.v] };

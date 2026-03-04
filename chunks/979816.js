@@ -1,26 +1,27 @@
-n.d(i, { XO: () => a, hX: () => o, iI: () => A, i_: () => S });
-var e = n(311907),
-    r = n(71393),
-    E = n(576705),
-    s = n(652215);
-let l = function (t) {
-    let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.A,
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E.A,
-        e = i.getGuild(t);
-    return null != e && n.can(s.xBc.MANAGE_GUILD, e);
+"use strict";
+a.d(t, { XO: () => d, hX: () => c, iI: () => _, i_: () => o });
+var n = a(311907),
+    r = a(71393),
+    i = a(576705),
+    s = a(652215);
+let l = function (e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.A,
+        a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.A,
+        n = t.getGuild(e);
+    return null != n && a.can(s.xBc.MANAGE_GUILD, n);
 };
-function S(t) {
-    return null != t && l(t);
+function o(e) {
+    return null != e && l(e);
 }
-function o(t) {
-    return l(t);
+function c(e) {
+    return l(e);
 }
-function A(t) {
-    return (0, e.bG)([r.A, E.A], () => l(t, r.A, E.A), [t]);
+function _(e) {
+    return (0, n.bG)([r.A, i.A], () => l(e, r.A, i.A), [e]);
 }
-function a(t) {
-    return (0, e.bG)([r.A], () => {
-        let i = r.A.getGuild(t);
-        return i?.features.has(s.GuildFeatures.COMMUNITY) || !1;
-    }, [t]);
+function d(e) {
+    return (0, n.bG)([r.A], () => {
+        let t = r.A.getGuild(e);
+        return t?.features.has(s.GuildFeatures.COMMUNITY) || !1;
+    }, [e]);
 }
