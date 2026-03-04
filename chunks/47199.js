@@ -1,67 +1,58 @@
 "use strict";
-n.d(t, { A: () => A });
+n.d(t, { A: () => g });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(311907),
     l = n(397927),
-    u = n(544420),
-    c = n(964486),
-    d = n(627363),
-    _ = n(587895),
-    f = n(429913),
-    p = n(524799),
-    h = n(409626),
-    m = n(265565),
-    g = n(796812),
+    u = n(964486),
+    c = n(627363),
+    d = n(587895),
+    _ = n(429913),
+    f = n(885151),
+    p = n(409626),
+    h = n(265565),
+    m = n(796812),
     E = n(379979);
-function A(e) {
-    let { applicationId: t, name: n, setPopoutRef: a, onClose: A, source: I } = e,
-        T = (0, f.h)(t),
-        y = (0, o.bG)([p.A], () => p.A.getGame(t)),
-        {
-            isFetching: S,
-            fetchFailed: v,
-            isFetchingDetectable: C,
-            detectableFetchFailed: b,
-        } = (0, o.cf)([_.A, p.A], () => ({
-            isFetching: _.A.isFetchingApplication(t),
-            fetchFailed: _.A.didFetchingApplicationFail(t),
-            isFetchingDetectable: p.A.isFetching(t),
-            detectableFetchFailed: p.A.didFetchingFail(t),
+function g(e) {
+    let { applicationId: t, name: n, setPopoutRef: s, onClose: g, source: A } = e,
+        I = (0, _.h)(t),
+        { data: T, isLoading: S, error: y, refetch: v } = (0, f.k)(t),
+        N = T?.supplementalData ?? null,
+        C = null != y,
+        { isFetching: R, fetchFailed: O } = (0, o.cf)([d.A], () => ({
+            isFetching: d.A.isFetchingApplication(t),
+            fetchFailed: d.A.didFetchingApplicationFail(t),
         })),
-        N = i.useRef(null),
-        R = i.useMemo(() => (0, h.u9)(), []);
+        b = i.useRef(null),
+        D = i.useMemo(() => (0, p.u9)(), []),
+        L = i.useCallback(() => {
+            c.Ay.fetchApplication(t), v();
+        }, [t, v]);
     i.useEffect(() => {
-        u.A.getDetectableGamesSupplemental([t]);
-    }, [t]);
-    let O = i.useCallback(() => {
-        d.Ay.fetchApplication(t), u.A.getDetectableGamesSupplemental([t]);
-    }, [t]);
-    i.useEffect(() => {
-        a?.(N?.current);
-    }, [N, a]),
-        (0, c.Ay)(() => {
-            (0, h.rw)({
-                source: I,
-                viewId: R,
+        s?.(b?.current);
+    }, [b, s]),
+        (0, u.Ay)(() => {
+            (0, p.rw)({
+                source: A,
+                viewId: D,
                 applicationId: t,
-                gameName: y?.name ?? "",
-                profileType: h.HV.MiniProfile,
+                gameName: N?.name ?? "",
+                profileType: p.HV.MiniProfile,
             });
         });
-    let D = i.useMemo(
+    let w = i.useMemo(
         () =>
-            S || C
-                ? (0, r.jsx)("div", { className: s()(E.k, E.d), children: (0, r.jsx)(l.y$y, {}) })
-                : v || b || null == T || null == y
-                  ? (0, r.jsx)("div", { className: E.k, children: (0, r.jsx)(m.A, { name: n, onRetry: O }) })
+            R || S
+                ? (0, r.jsx)("div", { className: a()(E.k, E.d), children: (0, r.jsx)(l.y$y, {}) })
+                : O || C || null == I || null == N
+                  ? (0, r.jsx)("div", { className: E.k, children: (0, r.jsx)(h.A, { name: n, onRetry: L }) })
                   : (0, r.jsx)("div", {
                         className: E.k,
-                        children: (0, r.jsx)(g.Ay, { application: T, detectedGame: y, onClose: A }),
+                        children: (0, r.jsx)(m.Ay, { application: I, detectedGame: N, onClose: g }),
                     }),
-        [S, C, v, b, T, y, n, O, A],
+        [R, S, O, C, I, N, n, L, g],
     );
-    return (0, r.jsx)(l.lGe, { ref: N, "aria-label": T?.name, children: D });
+    return (0, r.jsx)(l.lGe, { ref: b, "aria-label": I?.name, children: w });
 }

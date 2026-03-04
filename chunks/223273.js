@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => o, Lb: () => l, Mh: () => s, q0: () => a, vI: () => u });
+n.d(t, { Lb: () => l, Mh: () => s, q0: () => a, vI: () => u, xg: () => o });
 var r = n(315069),
     i = n(611010),
     s = (function (e) {
@@ -25,6 +25,14 @@ class o extends r.A {
     thirdPartySkus;
     themes;
     linkedApplications;
+    genres;
+    platforms;
+    bannerHash;
+    screenshotHashes;
+    screenshotUrls;
+    websites;
+    companies;
+    supplementalGameData;
     constructor(e) {
         super(),
             (this.id = e.id),
@@ -42,7 +50,15 @@ class o extends r.A {
             (this.supportsOutOfProcessOverlay = e.supportsOutOfProcessOverlay || !1),
             (this.thirdPartySkus = e.thirdPartySkus || []),
             (this.themes = e.themes || []),
-            (this.linkedApplications = e.linkedApplications);
+            (this.linkedApplications = e.linkedApplications),
+            (this.genres = e.genres),
+            (this.platforms = e.platforms),
+            (this.bannerHash = e.bannerHash),
+            (this.screenshotHashes = e.screenshotHashes),
+            (this.screenshotUrls = e.screenshotUrls),
+            (this.websites = e.websites),
+            (this.companies = e.companies),
+            (this.supplementalGameData = e.supplementalGameData);
     }
     getIconURL(e) {
         return null == this.icon
