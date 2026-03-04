@@ -21904,6 +21904,7 @@
   "0/xHFO": "Windows",
   "08KQ1P": "Your version of Windows is out of date. Update it to continue receiving Discord updates and technical support. [Learn more about system requirements](Learn more about system requirements)",
   "8Je+dX": "Your version of Windows is out of date. Update it to continue receiving Discord updates and technical support. [Learn more about system requirements](Learn more about system requirements)",
+  "9DJgOg": "Discord started in Windows Compatibility Mode, which will break updates and prevent you from joining voice channels. Right-click the Discord shortcut, open Properties > Compatibility, and uncheck \"Run this program in compatibility mode\".",
   "IVzJ8G": "Notifications now come wrapped in $[festive sounds]({{settingsHook}}). Not feeling so jolly? Go to your settings to switch back.",
   "6CxPoB": "The holidays are here!",
   "50TX9k": "This item cannot be added to Wishlists at this time",
