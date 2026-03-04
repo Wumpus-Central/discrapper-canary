@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => A }), n(321073);
+n.d(t, { A: () => I }), n(321073);
 var r = n(562465),
     i = n(506774),
-    a = n(73153),
-    s = n(439372),
+    s = n(73153),
+    a = n(439372),
     o = n(380610),
     l = n(626584),
     u = n(927813),
@@ -14,8 +14,9 @@ let f = +u.A.Millis.HOUR,
     p = 7 * u.A.Millis.DAY,
     h = +u.A.Millis.DAY,
     m = i.w.get("lastNonRequiredUpdateShown", Date.now()),
+    E = ["win", "osx"],
     g = new l.A("AutoUpdateManager");
-class E extends s.A {
+class A extends a.A {
     _checkInterval = null;
     _callbacks = [];
     _bootstrapper = null;
@@ -48,6 +49,9 @@ class E extends s.A {
                 : location.reload(!0));
     }
     isNewUpdater() {
+        return E.includes((0, c.getNewUpdaterPlatformName)() ?? "");
+    }
+    canBootstrapNewUpdater() {
         return "win32" === (0, c.getPlatformName)();
     }
     handlePostConnectionOpen() {
@@ -59,12 +63,11 @@ class E extends s.A {
         var e = this;
         return function () {
             let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-                n = e.isNewUpdater(),
-                r = n && e.nativeUpdatesDownloaded < e.nativeUpdateCountThreshold;
+                n = e.isNewUpdater() && e.nativeUpdatesDownloaded < e.nativeUpdateCountThreshold;
             return (
-                (t || !e.nativeUpdateAvailable || r) &&
+                (t || !e.nativeUpdateAvailable || n) &&
                     (c.isPlatformEmbedded
-                        ? n && _.Ay.canBootstrapNewUpdater
+                        ? e.canBootstrapNewUpdater() && _.Ay.canBootstrapNewUpdater
                             ? e._requestNewUpdaterBootstrap()
                             : _.Ay.send("CHECK_FOR_UPDATES", { allowMultipleUpdates: !1 })
                         : e._handleNativeUpdateNotAvailable()),
@@ -101,7 +104,7 @@ class E extends s.A {
         this._callbacks.forEach((e) => e(this.updateAvailable)), (this._callbacks = []);
     }
     _handleCheckingForUpdates = () => {
-        a.h.dispatch({ type: "CHECKING_FOR_UPDATES" });
+        s.h.dispatch({ type: "CHECKING_FOR_UPDATES" });
     };
     _handleNativeUpdateNotAvailable = () => {
         this._handleCheckingForUpdates(),
@@ -112,7 +115,7 @@ class E extends s.A {
                 rejectWithError: !0,
             }).then(
                 (e) => {
-                    if (null == e.body || "93179522fde40f7ecc7aea17608967ce0f49de7c" === e.body.hash)
+                    if (null == e.body || "b1224f1f371f5ab2ab61f50546b0bef4b6e5ffe5" === e.body.hash)
                         return this._handleUpdateNotAvailable();
                     if (e.body.required || (0, o.kK)()) return this._handleUpdateDownloaded(!1);
                     let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? p : h;
@@ -123,22 +126,22 @@ class E extends s.A {
             );
     };
     _handleUpdateNotAvailable = () => {
-        a.h.dispatch({ type: "UPDATE_NOT_AVAILABLE" }), this._emitCallbacks();
+        s.h.dispatch({ type: "UPDATE_NOT_AVAILABLE" }), this._emitCallbacks();
     };
     _handleUpdateAvailable = (e) => {
-        (this.updateAvailable = !0), (this.nativeUpdateAvailable = e), a.h.dispatch({ type: "UPDATE_AVAILABLE" });
+        (this.updateAvailable = !0), (this.nativeUpdateAvailable = e), s.h.dispatch({ type: "UPDATE_AVAILABLE" });
     };
     _handleUpdateManually = () => {
-        (this.updateAvailable = !0), (this.nativeUpdateAvailable = !0), a.h.dispatch({ type: "UPDATE_MANUALLY" });
+        (this.updateAvailable = !0), (this.nativeUpdateAvailable = !0), s.h.dispatch({ type: "UPDATE_MANUALLY" });
     };
     _handleUpdateError = (e) => {
-        (this.updateAvailable = !1), a.h.dispatch({ type: "UPDATE_ERROR", message: e });
+        (this.updateAvailable = !1), s.h.dispatch({ type: "UPDATE_ERROR", message: e });
     };
     _handleUpdateDownloaded = (e, t, n, r, i) => {
         e && (this.nativeUpdatesDownloaded += 1),
             this._handleUpdateAvailable(e),
-            a.h.dispatch({ type: "UPDATE_DOWNLOADED", releaseNotes: t, releaseName: n, releaseDate: r, updateURL: i }),
+            s.h.dispatch({ type: "UPDATE_DOWNLOADED", releaseNotes: t, releaseName: n, releaseDate: r, updateURL: i }),
             this._emitCallbacks();
     };
 }
-let A = new E();
+let I = new A();

@@ -1,20 +1,21 @@
 "use strict";
 n.d(t, {
     Aq: () => _,
-    Av: () => a,
+    Av: () => s,
     Ct: () => f,
     HZ: () => d,
     Ls: () => A,
-    R0: () => S,
+    R0: () => y,
     Sn: () => p,
     cX: () => l,
+    cZ: () => v,
     fg: () => r,
     j9: () => u,
     m0: () => h,
-    q4: () => g,
-    r_: () => y,
+    q4: () => E,
+    r_: () => S,
     t1: () => T,
-    tn: () => E,
+    tn: () => g,
     uF: () => o,
     un: () => m,
     uo: () => I,
@@ -24,16 +25,16 @@ var r = (function (e) {
     return (e.WINDOWS = "WINDOWS"), (e.OSX = "OSX"), (e.LINUX = "LINUX"), (e.WEB = "WEB"), e;
 })({});
 let i = window.DiscordNative,
-    a = null != i,
-    s = null != i ? i.process.platform : "";
+    s = null != i,
+    a = null != i ? i.process.platform : "";
 function o() {
-    return /^win/.test(s);
+    return /^win/.test(a);
 }
 function l() {
-    return "darwin" === s;
+    return "darwin" === a;
 }
 function u() {
-    return "linux" === s;
+    return "linux" === a;
 }
 function c() {
     return o() || l() || u();
@@ -54,36 +55,36 @@ function p() {
     return navigator.userAgent?.match(/Macintosh/i) != null;
 }
 function h() {
-    return "android" === s;
+    return "android" === a;
 }
 function m() {
-    return "ios" === s;
-}
-function g() {
-    return navigator.userAgent?.match(/OculusBrowser/i) != null;
+    return "ios" === a;
 }
 function E() {
-    return g();
+    return navigator.userAgent?.match(/OculusBrowser/i) != null;
+}
+function g() {
+    return E();
 }
 function A() {
-    return c() || g() || a;
+    return c() || E() || s;
 }
 function I() {
     return o() ? "WINDOWS" : l() ? "OSX" : u() ? "LINUX" : "WEB";
 }
 function T() {
-    return s;
+    return a;
 }
-function y() {
-    switch (s) {
+function S() {
+    switch (a) {
         case "ios":
         case "android":
-            return s;
+            return a;
         default:
             return "web";
     }
 }
-function S() {
+function y() {
     let { userAgent: e } = window.navigator;
     if (/Windows/i.test(e)) return /Phone/.test(e) ? "windows mobile" : "windows";
     if (/(iPhone|iPad|iPod)/.test(e)) return "ios";
@@ -92,4 +93,7 @@ function S() {
     if (/Mac/i.test(e))
         return null != window.navigator.maxTouchPoints && window.navigator.maxTouchPoints > 2 ? "ios" : "macos";
     else if (/Linux/i.test(e)) return "linux";
+}
+function v() {
+    return o() ? "win" : l() ? "osx" : void 0;
 }

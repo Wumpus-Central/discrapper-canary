@@ -3,6 +3,7 @@ n.r(t),
     n.d(t, {
         PlatformTypes: () => r.fg,
         getNativePlatform: () => r.r_,
+        getNewUpdaterPlatformName: () => r.cZ,
         getOS: () => r.R0,
         getPlatform: () => r.uo,
         getPlatformName: () => r.t1,
