@@ -4,6 +4,7 @@ e.exports = {
     Dk: "textXs_c9d15c",
     WV: "textSm_c9d15c",
     ht: "activityContainer_c9d15c",
+    D7: "containerWithoutTruncatedText_c9d15c",
     e7: "iconOnly_c9d15c",
     Kk: "icon_c9d15c",
     ps: "truncated_c9d15c",

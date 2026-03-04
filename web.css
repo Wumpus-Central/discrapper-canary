@@ -14128,11 +14128,15 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     display: none
 }
 
-.activityContainer_c9d15c {
+.activityContainer_c9d15c,
+.containerWithoutTruncatedText_c9d15c {
     align-items: center;
     display: flex;
+    gap: 4px
+}
+
+.activityContainer_c9d15c {
     flex-shrink: 0;
-    gap: 4px;
     max-width: 100%;
     overflow: hidden
 }
