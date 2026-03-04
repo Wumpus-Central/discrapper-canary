@@ -1,66 +1,81 @@
-r.d(t, { A: () => f });
-var l = r(311907),
-    d = r(73153),
-    c = r(403362),
-    a = r(41770);
-let n = (0, c.m6)() ? { [a.C8]: { "dummy-shop-home": a.uG, "dummy-orb-shelf": a.oP, "dummy-sku-list": a.Ej } } : {},
-    o = (0, c.m6)() ? ["dummy-skeleton"] : [],
-    u = (0, c.m6)() ? { [a.C8]: { "dummy-popular-picks": a.Ot } } : {},
-    s = (0, c.m6)() ? ["dummy-skeleton-template"] : [],
-    i = (e, t) => `${e}/${t}`,
-    h = n,
-    m = new Set(o),
-    p = {},
-    k = u,
-    b = new Set(s),
-    A = {};
-class S extends l.Ay.Store {
+t.d(l, { A: () => A });
+var r = t(311907),
+    o = t(73153),
+    n = t(403362),
+    a = t(41770);
+let i = (0, n.m6)() ? { [a.C8]: { "dummy-shop-home": a.uG, "dummy-orb-shelf": a.oP, "dummy-sku-list": a.Ej } } : {},
+    d = (0, n.m6)() ? ["dummy-skeleton"] : [],
+    s = (0, n.m6)() ? { [a.C8]: { "dummy-popular-picks": a.Ot } } : {},
+    c = (0, n.m6)() ? ["dummy-skeleton-template"] : [],
+    u = (e, l) => `${e}/${l}`,
+    h = i,
+    p = new Set(d),
+    m = {},
+    _ = s,
+    S = new Set(c),
+    b = {},
+    T = function (e) {
+        let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            t = Object.entries(l)
+                .map((e) => {
+                    let [l, t] = e;
+                    return `${l}:${t}`;
+                })
+                .join("-");
+        return `${e}-${t}`;
+    };
+class C extends r.Ay.Store {
     static displayName = "CmsLayoutStore";
-    getLayout(e, t) {
-        return null == e || null == t ? null : (h[e]?.[t] ?? null);
+    getLayout(e, l) {
+        return null == e || null == l ? null : (h[e]?.[l] ?? null);
     }
-    isFetchingLayout(e, t) {
-        return null != e && null != t && m.has(i(e, t));
+    isFetchingLayout(e, l) {
+        return null != e && null != l && p.has(u(e, l));
     }
-    getFetchError(e, t) {
-        return null == e || null == t ? null : (p[i(e, t)] ?? null);
+    getFetchError(e, l) {
+        return null == e || null == l ? null : (m[u(e, l)] ?? null);
     }
-    getTemplateLayout(e, t) {
-        return null == e || null == t ? null : (k[e]?.[t] ?? null);
+    getTemplateLayout(e, l, t) {
+        if (null == e || null == l) return null;
+        let r = T(l, t);
+        return _[e]?.[r] ?? null;
     }
-    isFetchingTemplate(e, t) {
-        return null != e && null != t && b.has(i(e, t));
+    isFetchingTemplate(e, l, t) {
+        let r = T(l ?? "", t);
+        return null != e && null != l && S.has(u(e, r));
     }
-    getTemplateFetchError(e, t) {
-        return null == e || null == t ? null : (A[i(e, t)] ?? null);
+    getTemplateFetchError(e, l, t) {
+        return null == e || null == l ? null : (b[u(e, T(l ?? "", t))] ?? null);
     }
 }
-let f = new S(d.h, {
+let A = new C(o.h, {
     CMS_LAYOUT_FETCH: (e) => {
-        let { tenantId: t, layoutId: r } = e;
-        m.add(i(t, r));
+        let { tenantId: l, layoutId: t } = e;
+        p.add(u(l, t));
     },
     CMS_LAYOUT_FETCH_SUCCESS: (e) => {
-        let { tenantId: t, layout: r } = e;
-        ((h[t] ??= {})[r.id] = r), delete p[i(t, r.id)], m.delete(i(t, r.id));
+        let { tenantId: l, layout: t } = e;
+        ((h[l] ??= {})[t.id] = t), delete m[u(l, t.id)], p.delete(u(l, t.id));
     },
     CMS_LAYOUT_FETCH_FAILURE: (e) => {
-        let { tenantId: t, layoutId: r, apiError: l } = e;
-        (p[i(t, r)] = l), m.delete(i(t, r));
+        let { tenantId: l, layoutId: t, apiError: r } = e;
+        (m[u(l, t)] = r), p.delete(u(l, t));
     },
     CMS_TEMPLATE_FETCH: (e) => {
-        let { tenantId: t, templateId: r } = e;
-        b.add(i(t, r));
+        let { tenantId: l, templateId: t, requestParams: r } = e;
+        S.add(u(l, T(t, r)));
     },
     CMS_TEMPLATE_FETCH_SUCCESS: (e) => {
-        let { tenantId: t, templateId: r, layout: l } = e;
-        ((k[t] ??= {})[r] = l), delete A[i(t, r)], b.delete(i(t, r));
+        let { tenantId: l, templateId: t, requestParams: r, layout: o } = e,
+            n = T(t, r);
+        ((_[l] ??= {})[n] = o), delete b[u(l, n)], S.delete(u(l, n));
     },
     CMS_TEMPLATE_FETCH_FAILURE: (e) => {
-        let { tenantId: t, templateId: r, apiError: l } = e;
-        (A[i(t, r)] = l), b.delete(i(t, r));
+        let { tenantId: l, templateId: t, requestParams: r, apiError: o } = e,
+            n = T(t, r);
+        (b[u(l, n)] = o), S.delete(u(l, n));
     },
     LOGOUT: function () {
-        (h = {}), (m = new Set()), (p = {}), (k = {}), (b = new Set()), (A = {});
+        (h = {}), (p = new Set()), (m = {}), (_ = {}), (S = new Set()), (b = {});
     },
 });

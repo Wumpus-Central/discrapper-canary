@@ -1,21 +1,21 @@
-t.d(l, { A: () => c });
+t.d(l, { A: () => d });
 var r = t(64700),
     o = t(311907),
-    i = t(49463),
-    n = t(409013),
-    a = t(972441);
-let c = (e, l, t) => {
-    let c = (0, o.bG)([i.A], () => i.A.hasLoadedExperiments),
-        [d, s, u] = (0, o.yK)([a.A], () => [
-            a.A.getTemplateLayout(e, l),
-            a.A.isFetchingTemplate(e, l),
-            a.A.getTemplateFetchError(e, l),
+    n = t(49463),
+    a = t(409013),
+    i = t(194822);
+let d = (e, l, t) => {
+    let d = (0, o.bG)([n.A], () => n.A.hasLoadedExperiments),
+        [s, c, u] = (0, o.yK)([i.A], () => [
+            i.A.getTemplateLayout(e, l, t),
+            i.A.isFetchingTemplate(e, l, t),
+            i.A.getTemplateFetchError(e, l, t),
         ]),
-        h = null == d && null != l && c && !s && null == u;
+        h = null == s && null != l && d && !c && null == u;
     return (
         r.useEffect(() => {
-            h && (0, n.J)({ tenantId: e, templateId: l, requestParams: t }).catch(() => {});
+            h && (0, a.J)({ tenantId: e, templateId: l, requestParams: t }).catch(() => {});
         }, [h, e, l, t]),
-        { layout: d, loading: s, error: u }
+        { layout: s, loading: c, error: u }
     );
 };
