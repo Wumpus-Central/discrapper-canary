@@ -89,6 +89,7 @@ function A(e, t, n) {
         minidump_relative_crash_address: o?.relativeCrashAddress ?? null,
         minidump_exception_module_version: o?.exceptionModuleVersion ?? null,
         minidump_exception_module_code_id: o?.exceptionModuleCodeId ?? null,
+        minidump_exception_thread_name: o?.exceptionThreadName ?? null,
         ...a,
     };
 }
