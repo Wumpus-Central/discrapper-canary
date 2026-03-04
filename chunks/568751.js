@@ -28,29 +28,30 @@ function T(e) {
             channelId: y,
             userIdsForGifting: v,
             userIdsForRecommendation: N,
+            spec: C = I,
         } = e,
-        [C, b] = i.useState(a().uniq(v)),
-        [R, O] = i.useState(!1),
-        [D, L] = i.useState(a().uniq(N)),
-        { analyticsLocations: w } = (0, c.Ay)(
+        [R, O] = i.useState(a().uniq(v)),
+        [b, D] = i.useState(!1),
+        [L, w] = i.useState(a().uniq(N)),
+        { analyticsLocations: M } = (0, c.Ay)(
             u.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD,
             u.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON,
         );
     i.useEffect(() => {
-        L((e) => {
+        w((e) => {
             let t = a().uniq(N);
             return (0, l.v)(e, t) ? e : t;
         });
     }, [N]),
         i.useEffect(() => {
-            b((e) => {
+            O((e) => {
                 let t = a().uniq(v);
                 return (0, l.v)(e, t) ? e : t;
             });
         }, [v]);
-    let x = (0, o.bG)([h.default], () => (1 === C.length ? h.default.getUser(C[0]) : void 0), [C]),
-        M = (0, o.yK)([h.default], () => D.map((e) => h.default.getUser(e)).filter(m.Vq), [D]),
-        P = i.useCallback(() => {
+    let x = (0, o.bG)([h.default], () => (1 === R.length ? h.default.getUser(R[0]) : void 0), [R]),
+        P = (0, o.yK)([h.default], () => L.map((e) => h.default.getUser(e)).filter(m.Vq), [L]),
+        k = i.useCallback(() => {
             null != s &&
                 null != s.guildId &&
                 (0, E.R)({
@@ -58,33 +59,33 @@ function T(e) {
                     applicationId: t.applicationId,
                     guildId: s.guildId,
                     isStorefront: !1,
-                    analyticsLocations: w,
+                    analyticsLocations: M,
                 });
-        }, [t.id, t.applicationId, s, w]),
-        k = i.useCallback(() => {
+        }, [t.id, t.applicationId, s, M]),
+        U = i.useCallback(() => {
             (0, g.a)(
                 t,
                 {
                     isGift: !0,
                     giftRecipient: x,
-                    additionalUserIds: C.length > 1 ? C : void 0,
+                    additionalUserIds: R.length > 1 ? R : void 0,
                     giftingOrigin: A.vQ.SHOP_PAGE,
                 },
-                { analyticsLocations: w },
+                { analyticsLocations: M },
             );
-        }, [t, x, C, w]);
+        }, [t, x, R, M]);
     return (0, r.jsxs)(_.A, {
         sku: t,
         user: x,
-        spec: I,
-        onClick: P,
-        onHoverOrFocusChange: O,
+        spec: C,
+        onClick: k,
+        onHoverOrFocusChange: D,
         children: [
-            (0, r.jsx)(f.lQ, { sku: t, spec: I, onClick: k, isHoveringOrFocusing: R }),
+            (0, r.jsx)(f.lQ, { sku: t, spec: C, onClick: U, isHoveringOrFocusing: b }),
             S &&
                 n === d.uS.WISHLIST &&
-                M.length > 0 &&
-                (0, r.jsx)(p.X, { spec: I, users: M, guildId: T ?? void 0, channelId: y ?? void 0 }),
+                P.length > 0 &&
+                (0, r.jsx)(p.X, { spec: C, users: P, guildId: T ?? void 0, channelId: y ?? void 0 }),
         ],
     });
 }

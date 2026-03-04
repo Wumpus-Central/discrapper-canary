@@ -45679,7 +45679,7 @@ screen and (max-width:485px) {
 .items__3a590 {
     display: flex;
     flex-direction: row;
-    justify-content: space-around
+    justify-content: space-between
 }
 
 .spinner__3a590 {
