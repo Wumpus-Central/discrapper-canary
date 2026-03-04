@@ -1,10 +1,10 @@
-i.d(t, { U: () => I });
+i.d(t, { U: () => b });
 var n = i(627968),
     s = i(64700),
     l = i(503698),
     a = i.n(l),
-    r = i(311907),
-    o = i(843282),
+    o = i(311907),
+    r = i(843282),
     c = i(582754),
     u = i(397927),
     d = i(827343),
@@ -13,99 +13,99 @@ var n = i(627968),
     p = i(825468),
     v = i(347481),
     g = i(430452),
-    f = i(954571),
-    x = i(74848),
-    _ = i(652215),
-    A = i(731854),
-    T = i(985018),
-    C = i(534393);
-let D = "SHOW_MORE";
-function I(e) {
+    A = i(954571),
+    _ = i(74848),
+    x = i(652215),
+    T = i(731854),
+    D = i(985018),
+    f = i(534393);
+let I = "SHOW_MORE";
+function b(e) {
     let {
             deviceType: t,
             location: l,
-            showAllDevices: I = !1,
-            selectedDeviceId: S,
-            onSelectDevice: N,
-            hideDeviceTypeIcon: O = !1,
-            label: y,
-            ...w
+            showAllDevices: b = !1,
+            selectedDeviceId: C,
+            onSelectDevice: S,
+            hideDeviceTypeIcon: y = !1,
+            label: O,
+            ...M
         } = e,
         {
             setDevice: j,
-            Icon: M,
-            getCanSetDevice: b,
+            Icon: V,
+            getCanSetDevice: N,
             getWarningMessage: E,
-            getLocation: L,
+            getLocation: w,
         } = {
-            [A.oh.AUDIO_INPUT]: {
+            [T.oh.AUDIO_INPUT]: {
                 setDevice: d.A.setInputDevice,
                 Icon: u.cNw,
-                getCanSetDevice: (e) => e.supports(A.O5.AUDIO_INPUT_DEVICE),
+                getCanSetDevice: (e) => e.supports(T.O5.AUDIO_INPUT_DEVICE),
                 getWarningMessage: () =>
-                    T.intl.format(T.t["1iK6UW"], { onDownloadClick: () => (0, p._)("Help Text Input Devices") }),
+                    D.intl.format(D.t["1iK6UW"], { onDownloadClick: () => (0, p._)("Help Text Input Devices") }),
                 getLocation: (e) => `${e}.SingleSelectInputDevices`,
             },
-            [A.oh.AUDIO_OUTPUT]: {
+            [T.oh.AUDIO_OUTPUT]: {
                 setDevice: d.A.setOutputDevice,
                 Icon: u.LoC,
-                getCanSetDevice: (e) => e.supports(A.O5.AUDIO_OUTPUT_DEVICE),
+                getCanSetDevice: (e) => e.supports(T.O5.AUDIO_OUTPUT_DEVICE),
                 getWarningMessage: () =>
-                    T.intl.format(T.t.Ow0dbF, { onDownloadClick: () => (0, p._)("Help Text Output Devices") }),
+                    D.intl.format(D.t.Ow0dbF, { onDownloadClick: () => (0, p._)("Help Text Output Devices") }),
                 getLocation: (e) => `${e}.SingleSelectOutputDevices`,
             },
-            [A.oh.VIDEO_INPUT]: {
+            [T.oh.VIDEO_INPUT]: {
                 setDevice: d.A.setVideoDevice,
                 Icon: u.xpe,
-                getCanSetDevice: (e) => e.isVideoAvailable(),
+                getCanSetDevice: (e) => e.isVideoAvailable() || !e.hasVideoDevice(),
                 getWarningMessage: () =>
-                    T.intl.format(T.t["1iK6UW"], { onDownloadClick: () => (0, p._)("Help Text Video Devices") }),
+                    D.intl.format(D.t["1iK6UW"], { onDownloadClick: () => (0, p._)("Help Text Video Devices") }),
                 getLocation: (e) => `${e}.SingleSelectVideoDevices`,
             },
         }[t],
-        { analyticsLocations: V } = (0, h.Ay)(),
-        R = (0, r.bG)([m.A], () => m.A.theme),
-        [k, W] = s.useState(I),
-        U = L(l),
-        [P, G] = (0, x.tR)(t, { location: U }),
-        { id: H } = (0, x.x5)(t),
-        z = (0, r.bG)([g.Ay], () => b(g.Ay)),
-        B = (0, n.jsx)(u.po8, { messageType: u.YCn.WARNING, children: E() }),
-        F = s.useCallback(
+        { analyticsLocations: k } = (0, h.Ay)(),
+        U = (0, o.bG)([m.A], () => m.A.theme),
+        [L, B] = s.useState(b),
+        P = w(l),
+        [$, K] = (0, _.tR)(t, { location: P }),
+        { id: G } = (0, _.x5)(t),
+        R = (0, o.bG)([g.Ay], () => N(g.Ay)),
+        W = (0, n.jsx)(u.po8, { messageType: u.YCn.WARNING, children: E() }),
+        H = s.useCallback(
             (e) => {
-                e === D
-                    ? (W(!0),
-                      f.default.track(_.HAw.DEVICES_LIST_SHOW_MORE_CLICKED, {
+                e === I
+                    ? (B(!0),
+                      A.default.track(x.HAw.DEVICES_LIST_SHOW_MORE_CLICKED, {
                           device_type: t,
-                          location: U,
-                          location_stack: V,
-                          shown_device_count: P.length,
-                          hidden_device_count: G.length,
+                          location: P,
+                          location_stack: k,
+                          shown_device_count: $.length,
+                          hidden_device_count: K.length,
                       }))
-                    : (N?.(e) ?? !0) && j(e, { location: U, analyticsLocations: V });
+                    : (S?.(e) ?? !0) && j(e, { location: P, analyticsLocations: k });
             },
-            [t, U, P.length, G.length, V, N, j],
+            [t, P, $.length, K.length, k, S, j],
         );
-    function $(e) {
+    function z(e) {
         let t,
             s,
-            { label: l, value: r } = e,
-            o = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            { label: l, value: o } = e,
+            r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             d = l,
-            h = (0, x.d)(l);
+            h = (0, _.d)(l);
         null != h && ((d = h.prefix), (t = h.subName));
-        let m = v.A.getCertifiedDeviceName(r, d);
-        if (v.A.isCertified(r)) {
-            let e = (0, c.qB)(R) ? i(961392) : i(848672);
-            s = (0, n.jsx)("img", { src: e, alt: T.intl.string(T.t.smSKsj) });
+        let m = v.A.getCertifiedDeviceName(o, d);
+        if (v.A.isCertified(o)) {
+            let e = (0, c.qB)(U) ? i(961392) : i(848672);
+            s = (0, n.jsx)("img", { src: e, alt: D.intl.string(D.t.smSKsj) });
         }
         return (0, n.jsxs)("div", {
-            className: a()(C.Mg, { [C.S2]: o && null != t, [C.Sy]: !O }),
+            className: a()(f.Mg, { [f.S2]: r && null != t, [f.Sy]: !y }),
             children: [
-                !O &&
+                !y &&
                     (0, n.jsx)("div", {
-                        className: C.Kt,
-                        children: (0, n.jsx)(M, {
+                        className: f.Kt,
+                        children: (0, n.jsx)(V, {
                             size: "custom",
                             width: 20,
                             height: 20,
@@ -115,55 +115,55 @@ function I(e) {
                 (0, n.jsx)(u.Text, {
                     lineClamp: 2,
                     variant: "text-md/medium",
-                    color: o ? "text-subtle" : "text-default",
-                    className: C.hV,
+                    color: r ? "text-subtle" : "text-default",
+                    className: f.hV,
                     children: m,
                 }),
                 null != t &&
                     (0, n.jsx)(u.Text, {
                         lineClamp: 2,
-                        variant: o ? "text-xs/medium" : "text-md/medium",
+                        variant: r ? "text-xs/medium" : "text-md/medium",
                         color: "text-muted",
-                        className: C.VT,
+                        className: f.VT,
                         children: t,
                     }),
-                null != s && (0, n.jsx)("div", { className: C.pN, children: s }),
+                null != s && (0, n.jsx)("div", { className: f.pN, children: s }),
             ],
         });
     }
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)(o.Te, {
-                label: y,
-                value: S ?? H,
-                onChange: F,
+            (0, n.jsx)(r.Te, {
+                label: O,
+                value: C ?? G,
+                onChange: H,
                 options: (function () {
                     let e = (e) => {
                             let { id: t, name: i } = e;
                             return { value: t, label: i };
                         },
-                        t = P.map(e);
-                    if (k || 0 === G.length) {
-                        let i = G.map(e);
+                        t = $.map(e);
+                    if (L || 0 === K.length) {
+                        let i = K.map(e);
                         return t.concat(i);
                     }
                     {
-                        let e = { value: D, label: T.intl.string(T.t.E99UMh), preventCloseOnSelect: !0 };
+                        let e = { value: I, label: D.intl.string(D.t.E99UMh), preventCloseOnSelect: !0 };
                         return t.concat(e);
                     }
                 })(),
-                isDisabled: !z,
+                isDisabled: !R,
                 popoutPosition: "bottom",
-                renderOptionLabel: (e) => $(e, !0),
+                renderOptionLabel: (e) => z(e, !0),
                 renderOptionValue: (e) => {
                     let [t] = e;
-                    return $(t);
+                    return z(t);
                 },
-                optionClassName: C.OS,
-                ...w,
+                optionClassName: f.OS,
+                ...M,
                 "data-migration-pending": !0,
             }),
-            !z && B,
+            !R && W,
         ],
     });
 }

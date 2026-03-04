@@ -2,11 +2,11 @@
 n.d(t, { A: () => c });
 var r = n(143236),
     i = n(277738),
-    a = n(256398),
-    s = n(201327),
+    s = n(256398),
+    a = n(201327),
     o = n(731854),
     l = n(818348);
-let u = new a.A();
+let u = new s.A();
 class c extends r.EventEmitter {
     stream = new MediaStream();
     sourceId = o.qe;
@@ -14,21 +14,22 @@ class c extends r.EventEmitter {
     destroyed = !1;
     destroy() {
         null != this.stream && (u.release(this.stream), (this.stream = null)),
-            null != this.streamId && (0, s.it)(this.streamId),
+            null != this.streamId && (0, a.it)(this.streamId),
             (this.destroyed = !0);
     }
     getStreamId() {
         return this.streamId;
     }
     async setSource(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         if (this.sourceId === e) return this.stream;
         (this.sourceId = e), null != this.stream && (u.release(this.stream), (this.stream = null));
-        let t = await (0, i.DT)();
+        let n = await (0, i.DT)();
         if (this.sourceId === o.qe) return this.setStream(new MediaStream());
-        let n = { width: 1280 };
-        t.some((e) => e.id === this.sourceId) && (n.deviceId = this.sourceId);
+        let r = { width: 1280, ...t };
+        n.some((e) => e.id === this.sourceId) && (r.deviceId = this.sourceId);
         try {
-            let e = await u.acquire({ audio: !1, video: n });
+            let e = await u.acquire({ audio: !1, video: r });
             if (this.destroyed) throw (u.release(e), Error("VideoInput: Already destroyed"));
             return this.emit("permission", !0), this.setStream(e);
         } catch (e) {
@@ -50,10 +51,10 @@ class c extends r.EventEmitter {
     }
     setStream(e) {
         return (
-            null != this.streamId && ((0, s.it)(this.streamId), (this.streamId = null)),
+            null != this.streamId && ((0, a.it)(this.streamId), (this.streamId = null)),
             (this.stream = e),
             (e.onaddtrack = (e) => this.emit("add-video-track", e)),
-            e.getVideoTracks().length > 0 && (this.streamId = (0, s.ju)(e)),
+            e.getVideoTracks().length > 0 && (this.streamId = (0, a.ju)(e)),
             this.emit("stream", e),
             this.emit("video", this.getStreamId()),
             e
