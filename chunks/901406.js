@@ -3,11 +3,11 @@ n.d(t, {
     $J: () => A,
     IG: () => T,
     UR: () => m,
-    W1: () => E,
-    b6: () => C,
-    bg: () => g,
-    pu: () => S,
-    se: () => b,
+    W1: () => g,
+    b6: () => N,
+    bg: () => E,
+    pu: () => y,
+    se: () => C,
     v0: () => I,
 }),
     n(321073),
@@ -15,8 +15,8 @@ n.d(t, {
     n(947204);
 var r = n(412703),
     i = n(73153),
-    a = n(975807),
-    s = n(882997),
+    s = n(975807),
+    a = n(882997),
     o = n(780964),
     l = n(203982),
     u = n(723702),
@@ -32,7 +32,7 @@ function m(e) {
         r = [];
     return t && r.push(f.fO.DESKTOP), n && r.push(f.fO.CONSOLE), r;
 }
-function g(e) {
+function E(e) {
     let t = Object.keys(e.config.taskConfigV2.tasks),
         n = [];
     for (let e of t)
@@ -45,7 +45,7 @@ function g(e) {
         }
     return n;
 }
-function E(e) {
+function g(e) {
     let t = (0, _.vv)(e),
         n = (0, _.vl)(e);
     return t || n;
@@ -62,24 +62,25 @@ function I(e, t) {
         questContentCTA: t.ctaContent,
         impressionId: t.impressionId,
     }),
-        (0, s.A)({ platformType: n, location: t.ctaContent });
+        (0, a.A)({ platformType: n, location: t.ctaContent });
 }
 function T(e) {
     return A(e) === p.fg2.XBOX ? h.t["mytEv+"] : h.t.iDiwby;
 }
-function y(e) {
+function S(e) {
     let t = e.config.ctaConfig;
-    return null == t
-        ? null
-        : ((0, u.isIOS)() || "ios" === (0, u.getOS)()) && t.ios?.iosAppId != null
-          ? `https://apps.apple.com/app/id${t.ios.iosAppId}`
-          : ((0, u.isAndroid)() || "android" === (0, u.getOS)()) && t.android?.androidAppId != null
-            ? `https://play.google.com/store/apps/details?id=${t.android.androidAppId}`
-            : null;
+    if (null == t) return null;
+    if (((0, u.isIOS)() || "ios" === (0, u.getOS)()) && t.ios?.iosAppId != null) {
+        let e = t.ios.iosAppId.startsWith("id") ? t.ios.iosAppId : `id${t.ios.iosAppId}`;
+        return `https://apps.apple.com/app/${e}`;
+    }
+    return ((0, u.isAndroid)() || "android" === (0, u.getOS)()) && t.android?.androidAppId != null
+        ? `https://play.google.com/store/apps/details?id=${t.android.androidAppId}`
+        : null;
 }
-function S(e, t) {
+function y(e, t) {
     let n = (0, d.Jx)(e.config),
-        r = y(e);
+        r = S(e);
     null != r && (n = r),
         (0, c.Y5)({
             questId: e.id,
@@ -90,7 +91,7 @@ function S(e, t) {
             sourceQuestContent: t.sourceQuestContent,
         }),
         l._.dispatch(p.jej.QUEST_GAME_LINK_OPENED),
-        (0, a.A)(n);
+        (0, s.A)(n);
 }
 function v() {
     {
@@ -98,7 +99,7 @@ function v() {
         e(o.X.CONNECTIONS_PANEL, { section: p.nc_.CONNECTIONS });
     }
 }
-function C(e, t) {
+function N(e, t) {
     let { quest: n } = e;
     (0, c.Y5)({
         questId: n.id,
@@ -110,7 +111,7 @@ function C(e, t) {
     }),
         v();
 }
-function b(e, t) {
+function C(e, t) {
     let { quest: n } = e;
     (0, c.Y5)({
         questId: n.id,
@@ -121,11 +122,11 @@ function b(e, t) {
         impressionId: t.impressionId,
         sourceQuestContent: t.sourceQuestContent,
     });
-    let r = g(n);
-    if (1 === r.length) return (0, s.A)({ platformType: r.at(0) });
+    let r = E(n);
+    if (1 === r.length) return (0, a.A)({ platformType: r.at(0) });
     i.h.dispatch({
         type: "CONNECTIONS_GRID_MODAL_SHOW",
-        onComplete: (e) => (0, s.A)({ platformType: e }),
+        onComplete: (e) => (0, a.A)({ platformType: e }),
         includedPlatformTypes: new Set(r),
     });
 }
