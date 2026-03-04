@@ -2,6 +2,7 @@
 e.exports = {
     kL: "container_da8ac7",
     Qs: "content_da8ac7",
+    dx: "bottomSubText_da8ac7",
     wx: "header_da8ac7",
     nr: "headerIcon_da8ac7",
     zH: "details_da8ac7",

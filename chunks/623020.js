@@ -24,14 +24,14 @@ var r = n(627968),
     v = n(800471),
     N = n(367160),
     C = n(112242),
-    b = n(800132),
-    R = n(216641),
-    O = n(69494),
+    R = n(800132),
+    O = n(216641),
+    b = n(69494),
     D = n(312649),
     L = n(482132),
     w = n(788868),
-    x = n(818348),
-    M = n(985018);
+    M = n(818348),
+    x = n(985018);
 let P = 500;
 function k() {
     let {
@@ -52,7 +52,7 @@ function k() {
             hasCheckoutContextLoaded: A,
         } = (0, g.P5)(),
         { isGift: I } = (0, E.Pv)(),
-        T = (0, R.W)(r, n),
+        T = (0, O.W)(r, n),
         S = i.useMemo(() => {
             if (null == n) return !1;
             if (!A) return !0;
@@ -68,15 +68,15 @@ function k() {
         }, [a]),
         v = i.useMemo(
             () =>
-                u === x.VV.ONE_TIME
+                u === M.VV.ONE_TIME
                     ? null == n || S || null == o || null != l
-                    : null == c || (!I && null != T && u === x.VV.SUBSCRIPTION && f && !T.canRedeemTrial()),
+                    : null == c || (!I && null != T && u === M.VV.SUBSCRIPTION && f && !T.canRedeemTrial()),
             [u, o, n, l, c, I, T, f, S],
         ),
         N = (0, m.J$)(s.paymentSourceId),
         C =
-            u === x.VV.SUBSCRIPTION && null == a
-                ? M.intl.string(M.t.YScQSF)
+            u === M.VV.SUBSCRIPTION && null == a
+                ? x.intl.string(x.t.YScQSF)
                 : (0, _.Ro)({
                       purchaseType: u,
                       plan: a,
@@ -104,7 +104,7 @@ function U(e) {
             trialId: s,
             trialFooterMessageOverride: _,
             reviewWarningMessage: m,
-            planGroup: R,
+            planGroup: O,
             openInvoiceId: U,
             analyticsData: G,
             analyticsLocation: F,
@@ -117,8 +117,8 @@ function U(e) {
         {
             activeSubscription: W,
             setUpdatedSubscription: K,
-            contextMetadata: z,
-            currencies: $,
+            contextMetadata: $,
+            currencies: z,
             paymentSources: q,
             priceOptions: Z,
             purchaseError: X,
@@ -145,10 +145,10 @@ function U(e) {
     a()(null != er, "Step should be set");
     let eI = i.useRef(null),
         [eT, eS] = (0, l.A)(!1, P),
-        { paymentSource: ey, isEligibleForTrial: ev, planGroup: eN, disablePurchase: eC, userTrialOffer: eb } = k(),
-        eR = s ?? V ?? null,
-        eO = null != eR && (!es || w.TP[eR].skus.includes(J)) ? eR : null,
-        eD = { user_trial_offer_id: eb?.id };
+        { paymentSource: ey, isEligibleForTrial: ev, planGroup: eN, disablePurchase: eC, userTrialOffer: eR } = k(),
+        eO = s ?? V ?? null,
+        eb = null != eO && (!es || w.TP[eO].skus.includes(J)) ? eO : null,
+        eD = { user_trial_offer_id: eR?.id };
     i.useEffect(() => {
         null != X && null != eI.current && eI.current.scrollIntoView({ behavior: "smooth" });
     }, [X]);
@@ -161,15 +161,15 @@ function U(e) {
             },
             [n, K, el, eu],
         ),
-        ew = null != Q && w.Er.has(Q.id) && null != ey && !(0, c.j2)(ey) ? Error(M.intl.string(M.t["2ik8ih"])) : null,
-        ex = i.useRef(null),
-        [eM, eP] = i.useState(null),
+        ew = null != Q && w.Er.has(Q.id) && null != ey && !(0, c.j2)(ey) ? Error(x.intl.string(x.t["2ik8ih"])) : null,
+        eM = i.useRef(null),
+        [ex, eP] = i.useState(null),
         ek = eh?.discount?.plan_ids,
         eU = ep && null != eh && null != ek && null != Q && ek.includes(Q.id),
         eG = em && (0, h.Ik)(eg),
-        eF = null == B && null == H && eo === x.VV.SUBSCRIPTION,
+        eF = null == B && null == H && eo === M.VV.SUBSCRIPTION,
         eV = (0, v.vT)({ isTrial: ev, isGift: em, selectedSkuId: J, startedPaymentFlowWithPaymentSources: ec.current }),
-        eB = em && eo === x.VV.ONE_TIME,
+        eB = em && eo === M.VV.ONE_TIME,
         eH = eB || (eV ? eF && es : es),
         ej = (0, d.px)(Q, em, eA),
         eY = i.useCallback(
@@ -190,31 +190,31 @@ function U(e) {
         },
         eK = eC;
     e_ && (eK = !0);
-    let ez = R ?? eN,
-        e$ = i.useCallback((e) => et(null != e ? e.id : null), [et]);
-    if (eo === x.VV.ONE_TIME) {
+    let e$ = O ?? eN,
+        ez = i.useCallback((e) => et(null != e ? e.id : null), [et]);
+    if (eo === M.VV.ONE_TIME) {
         let e = {
             hasLegalTermsFlash: eT,
-            legalTermsNodeRef: ex,
-            onPaymentSourceChange: e$,
+            legalTermsNodeRef: eM,
+            onPaymentSourceChange: ez,
             handlePaymentSourceAdd: () => n(A.pn.ADD_PAYMENT_STEPS),
         };
-        t = Y ? (0, r.jsx)(b.Ay, { ...e }) : (0, r.jsx)(C.Ay, { ...e });
+        t = Y ? (0, r.jsx)(R.Ay, { ...e }) : (0, r.jsx)(C.Ay, { ...e });
     } else if (null == W || ed || em) {
         a()(null != Q, "Expected plan to be selected");
         let e = {
             selectedPlanId: Q.id,
-            planGroup: ez,
+            planGroup: e$,
             paymentSources: q,
-            onPaymentSourceChange: e$,
+            onPaymentSourceChange: ez,
             priceOptions: Z,
-            currencies: $,
+            currencies: z,
             onCurrencyChange: (e) => ee(e),
             handlePaymentSourceAdd: () => n(A.pn.ADD_PAYMENT_STEPS),
             setHasAcceptedTerms: ea,
-            legalTermsNodeRef: ex,
+            legalTermsNodeRef: eM,
             hasLegalTermsFlash: eT,
-            trialId: eO,
+            trialId: eb,
             trialFooterMessageOverride: _,
             reviewWarningMessage: m,
             purchaseState: ei,
@@ -230,15 +230,16 @@ function U(e) {
             premiumSubscription: W,
             paymentSources: q,
             priceOptions: Z,
-            onPaymentSourceChange: e$,
+            onPaymentSourceChange: ez,
             onPaymentSourceAdd: eW,
             planId: Q.id,
             setHasAcceptedTerms: ea,
-            legalTermsNodeRef: ex,
+            legalTermsNodeRef: eM,
             hasLegalTermsFlash: eT,
             onInvoiceError: (e) => eP(e),
-            planGroup: ez,
-            currencies: $,
+            invoiceError: ex,
+            planGroup: e$,
+            currencies: z,
             onCurrencyChange: (e) => ee(e),
             hasOpenInvoice: null != U,
             purchaseState: ei,
@@ -251,7 +252,7 @@ function U(e) {
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(I.Z, { giftMessage: eE }),
-                        !eG && (0, r.jsx)(O.A, { isEligibleForTrial: ev }),
+                        !eG && (0, r.jsx)(b.A, { isEligibleForTrial: ev }),
                     ],
                 }),
             [eE, eG, ev],
@@ -275,15 +276,15 @@ function U(e) {
                     setPurchaseState: en,
                     onBack: eY,
                     onNext: eL,
-                    legalTermsNodeRef: ex,
+                    legalTermsNodeRef: eM,
                     flashLegalTerms: () => eS(!0),
-                    invoiceError: eM,
+                    invoiceError: ex,
                     planError: ew,
                     analyticsLocation: F,
                     baseAnalyticsData: G,
-                    flowStartTime: z.startTime,
-                    trialId: eO,
-                    planGroup: ez,
+                    flowStartTime: $.startTime,
+                    trialId: eb,
+                    planGroup: e$,
                     openInvoiceId: U,
                     backButtonEligible: eH,
                     metadata: eD,

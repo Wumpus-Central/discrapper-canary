@@ -56,23 +56,23 @@ let I = (e) => {
                 () => ({ onClick: p, loading: l, text: v, disabled: S, tooltipText: y }),
                 [p, l, v, S, y],
             ),
-            b = I ? g.intl.format(g.t.fsOXXO, {}) : null,
-            R = (0, i.useMemo)(() => {
-                if (null != b || null != T) {
+            R = I ? g.intl.format(g.t.fsOXXO, {}) : null,
+            O = (0, i.useMemo)(() => {
+                if (null != R || null != T) {
                     let e = [];
                     return (
-                        null != b && e.push({ type: "warning", message: b }),
-                        null != T && e.push({ type: "critical", message: T }),
+                        null != R && e.push({ type: "warning", message: R, key: "orb-checkout-warning-notice" }),
+                        null != T && e.push({ type: "critical", message: T, key: "orb-checkout-error-notice" }),
                         e
                     );
                 }
                 return null;
-            }, [b, T]);
+            }, [R, T]);
         return N
             ? {
                   shouldUseUnifiedCheckoutUI: !0,
                   isStepLoading: d,
-                  upperInlineNoticeProps: R,
+                  upperInlineNoticeProps: O,
                   purchaseItemContent: (0, r.jsx)(E.e, { skuId: t, orbPriceAmount: _ }),
                   paymentSelectContent: (0, r.jsx)(E.Q, { orbBalance: f }),
                   legalContent: (0, r.jsx)(A, {}),
@@ -93,7 +93,7 @@ let I = (e) => {
                   }),
                   reviewBodyLegalContent: null,
                   primaryCTAButtonProps: C,
-                  warningMessage: b,
+                  warningMessage: R,
                   errorMessage: T,
               };
     },

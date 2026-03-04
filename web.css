@@ -43744,15 +43744,15 @@ screen and (max-width:485px) {
     top: var(--space-8)
 }
 
-.headingSubText__220d4,
-.radioGroupContainer__220d4 {
-    margin-top: var(--space-12)
+.headingSubText__220d4 {
+    margin-top: var(--space-8)
 }
 
 .radioGroupContainer__220d4 {
     display: flex;
     flex-direction: column;
-    gap: var(--space-4)
+    gap: var(--space-4);
+    margin-top: var(--space-12)
 }
 
 .radioItemNameContainer__220d4 {
@@ -43829,6 +43829,10 @@ screen and (max-width:485px) {
 .content_da8ac7 {
     flex: 1;
     min-width: 0
+}
+
+.bottomSubText_da8ac7 {
+    margin-top: var(--space-12)
 }
 
 .header_da8ac7 {
@@ -44248,6 +44252,10 @@ screen and (max-width:485px) {
 .currencyWrapper_b41cc5,
 .previewTotalSectionContainer_b41cc5 {
     margin-top: var(--space-16)
+}
+
+.premiumSwitchPlanSelectText_b41cc5 {
+    margin-bottom: var(--space-24)
 }
 
 .subscriptionCostRowAmount__3d62f {

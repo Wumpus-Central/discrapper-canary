@@ -63,7 +63,7 @@ function c(e) {
         children: [
             t,
             null != n &&
-                (0, r.jsx)(o.Text, { variant: "text-sm/medium", color: "text-subtle", className: l.cm, children: n }),
+                (0, r.jsx)(o.Text, { variant: "text-sm/medium", color: "text-muted", className: l.cm, children: n }),
             (0, r.jsx)(o.$dE, { ...d, options: _, value: s, className: l.ul }),
         ],
     });

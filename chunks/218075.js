@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { f: () => o, j: () => l });
+n.d(t, { fU: () => o, i: () => l, je: () => u });
 var r = n(627968);
 n(64700);
 var i = n(397927),
@@ -12,17 +12,18 @@ var i = n(397927),
             e
         );
     })({});
-function l(e) {
-    let { paymentRestrictionBannerType: t } = e,
-        n = "";
-    if (!t) return null;
-    switch (t) {
+let l = (e) => {
+    switch (e) {
         case "SELECT_PAYMENT_METHOD":
-            n = s.intl.string(s.t.Tdb5qb);
-            break;
+            return s.intl.string(s.t.Tdb5qb);
         case "ADD_NEW_PAYMENT_METHOD":
-            n = s.intl.string(s.t["6d44F5"]);
+            return s.intl.string(s.t["6d44F5"]);
     }
+};
+function u(e) {
+    let { paymentRestrictionBannerType: t } = e;
+    if (null == t) return null;
+    let n = l(t);
     return (0, r.jsxs)("div", {
         className: a.Y4,
         children: [

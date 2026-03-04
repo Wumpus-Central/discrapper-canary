@@ -159,10 +159,16 @@ function M(e) {
         A = i.useMemo(() => {
             let e = [];
             return (
-                null != E.testModeWarning && e.push({ type: "warning", message: E.testModeWarning }),
-                null != E.devShelfError && e.push({ type: "critical", message: E.devShelfError }),
+                null != E.testModeWarning &&
+                    e.push({ type: "warning", message: E.testModeWarning, key: "test-mode-warning-notice" }),
+                null != E.devShelfError &&
+                    e.push({ type: "critical", message: E.devShelfError, key: "dev-shelf-error-notice" }),
                 null != E.socialLayerGameItemDisclaimer &&
-                    e.push({ type: "warning", message: E.socialLayerGameItemDisclaimer }),
+                    e.push({
+                        type: "warning",
+                        message: E.socialLayerGameItemDisclaimer,
+                        key: "social-layer-game-item-disclaimer-notice",
+                    }),
                 e.length > 0 ? e : null
             );
         }, [E.testModeWarning, E.devShelfError, E.socialLayerGameItemDisclaimer]);

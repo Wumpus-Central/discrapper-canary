@@ -24,14 +24,14 @@ var r = n(627968),
     v = n(79387),
     N = n(147964),
     C = n(603349),
-    b = n(45938),
-    R = n(937008),
-    O = n(156312),
+    R = n(45938),
+    O = n(937008),
+    b = n(156312),
     D = n(566980),
     L = n(907927),
     w = n(938136),
-    x = n(319820),
-    M = n(652215),
+    M = n(319820),
+    x = n(652215),
     P = n(985018),
     k = n(342444);
 function U(e) {
@@ -60,7 +60,7 @@ let G = (e) => {
                 paymentSourceId: T,
                 setPaymentSourceId: C,
                 skusById: w,
-                skuPricePreviewsById: x,
+                skuPricePreviewsById: M,
                 selectedSkuId: U,
                 setHasAcceptedTerms: G,
                 isEmbeddedIAP: F,
@@ -70,9 +70,9 @@ let G = (e) => {
                 hasPaymentSources: j,
                 checkoutPaymentSources: Y,
                 hasCheckoutContextLoaded: W,
-            } = (0, O.P5)(),
-            { isGift: K, giftRecipient: z } = (0, R.Pv)(),
-            $ = K && (0, b.Ik)(z),
+            } = (0, b.P5)(),
+            { isGift: K, giftRecipient: $ } = (0, O.Pv)(),
+            z = K && (0, R.Ik)($),
             { fetched: q, hasAlreadyLinked: Z } = (0, m.RD)(p);
         a()(null != U, "Expected selectedSkuId");
         let X = i.useRef(!1);
@@ -85,7 +85,7 @@ let G = (e) => {
         }, [W, Y, C]);
         let Q = w[U],
             J = Q?.eligiblePaymentGateways,
-            ee = x[U],
+            ee = M[U],
             et = T ?? v.B,
             en = Y.length > 0,
             er = null != ee ? (ee[et] ?? (en ? ee[v.B] : null)) : null;
@@ -98,13 +98,13 @@ let G = (e) => {
             eo = g === D.h.PURCHASING || g === D.h.COMPLETED,
             el = Y.find((e) => e.id === T) ?? null,
             eu = null != el ? el.type : null,
-            ec = null != J && J.length > 0 && (T === v.B || null === eu) && j ? I.f.SELECT_PAYMENT_METHOD : void 0,
-            ed = Q.productLine === M.EZt.SOCIAL_LAYER_GAME_ITEM,
-            e_ = $ && !ed,
+            ec = null != J && J.length > 0 && (T === v.B || null === eu) && j ? I.fU.SELECT_PAYMENT_METHOD : void 0,
+            ed = Q.productLine === x.EZt.SOCIAL_LAYER_GAME_ITEM,
+            e_ = z && !ed,
             ef = i.useMemo(
                 () => ({
                     testModeWarning: ei ? P.intl.string(P.t.OvMyMd) : null,
-                    devShelfError: (0, E.n)(p, M.gfo.EMBEDDED) && H === h.$.ERROR ? P.intl.string(P.t.tAmECt) : null,
+                    devShelfError: (0, E.n)(p, x.gfo.EMBEDDED) && H === h.$.ERROR ? P.intl.string(P.t.tAmECt) : null,
                     socialLayerGameItemDisclaimer: ed && q && !Z && !K ? P.intl.string(P.t["3pLGHL"]) : null,
                 }),
                 [ei, p, H, ed, q, Z, K],
@@ -124,7 +124,7 @@ let G = (e) => {
             ),
             eh = i.useMemo(
                 () =>
-                    _ && Q.productLine === M.EZt.COLLECTIBLES
+                    _ && Q.productLine === x.EZt.COLLECTIBLES
                         ? (0, r.jsx)(L.f, { paymentSourceType: eu })
                         : (0, r.jsxs)(A.A, {
                               isActive: t,
@@ -165,7 +165,7 @@ let G = (e) => {
         return {
             sku: Q,
             application: p,
-            giftRecipient: z,
+            giftRecipient: $,
             isGift: K,
             skuPricePreview: er,
             isEmbeddedIAP: F,
@@ -209,7 +209,7 @@ function V(e) {
     return (0, r.jsxs)("div", {
         className: k.Du,
         children: [
-            (0, r.jsx)(I.j, { paymentRestrictionBannerType: m }),
+            (0, r.jsx)(I.je, { paymentRestrictionBannerType: m }),
             null != g.testModeWarning
                 ? (0, r.jsx)(
                       d.A,
@@ -247,8 +247,8 @@ function V(e) {
                               label: c ? P.intl.string(P.t.PEjaCx) : P.intl.string(P.t.sail9P),
                               children:
                                   null != f
-                                      ? (0, r.jsx)(x.hl, { sku: a, skuPricePreview: f, application: o })
-                                      : (0, r.jsx)(x.Uw, { sku: a, value: "" }),
+                                      ? (0, r.jsx)(M.hl, { sku: a, skuPricePreview: f, application: o })
+                                      : (0, r.jsx)(M.Uw, { sku: a, value: "" }),
                           }),
                           (0, r.jsx)(_.A, { ...A }),
                           null != y && (0, r.jsx)(B, { ...y }),
