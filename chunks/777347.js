@@ -1,57 +1,60 @@
-n.d(t, { A: () => p, U: () => m });
+n.d(t, { A: () => m, U: () => p });
 var r = n(64700),
-    l = n(311907),
-    i = n(923408),
+    i = n(311907),
+    l = n(923408),
     s = n(80682),
-    o = n(859241),
-    a = n(256587),
-    u = n(696451),
-    d = n(71393),
+    a = n(859241),
+    o = n(256587),
+    d = n(696451),
+    u = n(71393),
     c = n(661191);
-function p(e, t) {
-    let n = (0, l.yK)([o.A], () => o.A.getAppliedGuildBoostsForGuild(e) ?? [], [e]),
-        p = r.useMemo(
+function m(e, t) {
+    let n = (0, i.yK)([a.A], () => a.A.getAppliedGuildBoostsForGuild(e) ?? [], [e]),
+        m = r.useMemo(
             () =>
                 [...n]
                     .sort((e, t) => (c.default.extractTimestamp(e.id) < c.default.extractTimestamp(t.id) ? 1 : -1))
                     .slice(0, t),
             [n, t],
         ),
-        m = (0, l.yK)([u.Ay], () => {
+        p = (0, i.yK)([d.Ay], () => {
             let t = new Set();
             return (
-                p.forEach((n) => {
-                    null == u.Ay.getMember(e, n.userId) && t.add(n.userId);
+                m.forEach((n) => {
+                    null == d.Ay.getMember(e, n.userId) && t.add(n.userId);
                 }),
                 Array.from(t)
             );
-        }, [e, p]);
+        }, [e, m]);
     r.useEffect(() => {
-        m.length > 0 && m.forEach((t) => a.A.requestMember(e, t));
-    }, [e, m]);
-    let A = r.useMemo(() => (m.length > 0 ? { [e]: m } : {}), [e, m]);
-    (0, s.E)(A, "GuildPowerupsRecentActivity");
-    let _ = (0, l.bG)([d.A], () => d.A.getGuild(e)?.premiumSubscriberCount);
+        p.length > 0 && p.forEach((t) => o.A.requestMember(e, t));
+    }, [e, p]);
+    let _ = r.useMemo(() => {
+        let t = p.slice(0, s.JM / 2);
+        return t.length > 0 ? { [e]: t } : {};
+    }, [e, p]);
+    (0, s.Eq)(_, "GuildPowerupsRecentActivity");
+    let x = (0, i.bG)([u.A], () => u.A.getGuild(e)?.premiumSubscriberCount);
     return (
         r.useEffect(() => {
-            _ !== n.length && (0, i.VU)(e);
-        }, [e, _, n.length]),
-        p
+            x !== n.length && (0, l.VU)(e);
+        }, [e, x, n.length]),
+        m
     );
 }
-function m(e) {
+function p(e) {
     let t = new Date(c.default.extractTimestamp(e.id)),
         {
             username: n,
             roleColor: r,
-            roleColorStrings: i,
-        } = (0, l.cf)([u.Ay], () => {
-            let t = u.Ay.getMember(e.guildId, e.userId);
+            roleColorStrings: l,
+        } = (0, i.cf)([d.Ay], () => {
+            let t = d.Ay.getMember(e.guildId, e.userId);
             return {
-                username: u.Ay.getNick(e.guildId, e.userId) ?? e.user?.username,
+                username: d.Ay.getNick(e.guildId, e.userId) ?? e.user?.username,
                 roleColor: t?.colorString ?? null,
                 roleColorStrings: t?.colorStrings ?? null,
             };
         }, [e]);
-    return { timestamp: t, username: n, roleColor: r, roleColorStrings: i };
+    return { timestamp: t, username: n, roleColor: r, roleColorStrings: l };
 }

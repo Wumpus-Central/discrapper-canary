@@ -50,7 +50,7 @@ function C(e) {
             }
         );
     }, [U, p, a]),
-    (0, _.E)({ [n]: [t] }, "GuildMemberModViewSidebar"),
+    (0, _.Eq)({ [n]: [t] }, "GuildMemberModViewSidebar"),
     r.useEffect(() => {
         !(async function () {
             let e = [

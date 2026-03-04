@@ -2,7 +2,7 @@
 n.d(t, { A: () => F });
 var r = n(627968),
     i = n(64700),
-    s = n(475539),
+    s = n(523436),
     a = n(311907),
     o = n(397927),
     l = n(80682),
@@ -24,14 +24,14 @@ var r = n(627968),
     v = n(915614),
     N = n(439053),
     C = n(312381),
-    b = n(946356),
-    R = n(587168),
-    O = n(193738),
+    R = n(946356),
+    O = n(587168),
+    b = n(193738),
     D = n(613457),
     L = n(853397),
     w = n(159218),
-    x = n(320819),
-    M = n(848674),
+    M = n(320819),
+    x = n(848674),
     P = n(652215),
     k = n(996988),
     U = n(985018),
@@ -48,17 +48,17 @@ function F(e) {
             closePopout: Y,
             setPopoutRef: W,
             disableUserProfileLink: K = __OVERLAY__,
-            newAnalyticsLocations: z = [],
-            appContext: $,
+            newAnalyticsLocations: $ = [],
+            appContext: z,
             disableAutoFocus: q = !1,
             onClickContainer: Z,
         } = e,
-        { analyticsLocations: X } = (0, c.Ay)([...z, u.A.USER_PROFILE_POPOUT]),
+        { analyticsLocations: X } = (0, c.Ay)([...$, u.A.USER_PROFILE_POPOUT]),
         Q = (0, p.aL)(),
         J = (0, g.pb)({ layout: "POPOUT", userId: t.id, guildId: F, channelId: V, messageId: B, roleId: H }),
         ee = (0, a.bG)([m.A], () => (null != F ? m.A.getGuild(F) : null)),
         et = i.useMemo(() => (null != F ? { [F]: [t.id] } : {}), [F, t.id]);
-    (0, l.E)(et, "UserProfilePopout");
+    (0, l.Eq)(et, "UserProfilePopout");
     let en = i.useRef(null),
         er = (0, I.Ay)(t.id, F),
         { isHoveringOrFocusing: ei, isHovering: es } = (0, _.A)(en),
@@ -79,7 +79,7 @@ function F(e) {
                     customStatusPrompt: ec,
                     ...J,
                     ...e,
-                    appContext: $,
+                    appContext: z,
                 });
         },
         e_ = () =>
@@ -113,7 +113,7 @@ function F(e) {
                         (0, r.jsx)(o.AC4, {
                             children: (0, r.jsx)(o.H, { id: ep, children: U.intl.format(U.t.KRe1Fk, { name: eh }) }),
                         }),
-                        (0, r.jsxs)(b.A, {
+                        (0, r.jsxs)(R.A, {
                             user: t,
                             displayProfile: er,
                             themeType: k.d.POPOUT,
@@ -121,7 +121,7 @@ function F(e) {
                             children: [
                                 null != ea.interactionType &&
                                     (0, r.jsx)(s.animated.div, { style: eo, className: G.tB }),
-                                (0, r.jsxs)(R.A, {
+                                (0, r.jsxs)(O.A, {
                                     children: [
                                         (0, r.jsx)(D.A, {
                                             shouldShowTooltip: null === ea.interactionType,
@@ -129,15 +129,15 @@ function F(e) {
                                             guildId: F,
                                             channelId: V,
                                             onClose: Y,
-                                            appContext: $,
+                                            appContext: z,
                                         }),
-                                        (0, r.jsx)(O.A, { themeType: k.d.POPOUT, user: t }),
+                                        (0, r.jsx)(b.A, { themeType: k.d.POPOUT, user: t }),
                                         !eu &&
                                             (0, r.jsx)(L.yo, {
                                                 user: t,
                                                 guildId: F,
                                                 viewProfileItem: e_(),
-                                                appContext: $,
+                                                appContext: z,
                                             }),
                                     ],
                                 }),
@@ -170,7 +170,7 @@ function F(e) {
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)(x.A, {
+                                (0, r.jsx)(M.A, {
                                     user: t,
                                     currentUser: n,
                                     displayProfile: er,
@@ -180,12 +180,12 @@ function F(e) {
                                     channelId: V,
                                     onClose: Y,
                                 }),
-                                (0, r.jsx)(M.A, {
+                                (0, r.jsx)(x.A, {
                                     user: t,
                                     guildId: F,
                                     channelId: V,
                                     onClose: Y,
-                                    appContext: $,
+                                    appContext: z,
                                     disableAutoFocus: q,
                                 }),
                                 er?.profileEffect != null &&

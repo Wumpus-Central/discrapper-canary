@@ -46,7 +46,7 @@ function P(e) {
             isStandardGap: B = !1,
         } = e,
         H = s.useMemo(() => ({ [t.guild_id]: [n.id] }), [t.guild_id, n.id]);
-    (0, c.E)(H, "VoiceUserActivities");
+    (0, c.Eq)(H, "VoiceUserActivities");
     let F = (0, u.Ay)(t),
         K = s.useMemo(() => F.filter((e) => e.embeddedActivity.userIds.has(n.id)), [F, n.id]),
         W = Array.from((0, u.Rz)(K).values()),

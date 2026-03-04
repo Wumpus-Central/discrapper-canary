@@ -1,7 +1,7 @@
 i.d(t, { A: () => ed });
 var l = i(627968),
     n = i(64700),
-    s = i(475539),
+    s = i(523436),
     a = i(311907),
     r = i(397927),
     o = i(80682),
@@ -97,7 +97,7 @@ function ed(e) {
     let eO = (0, R.fC)(),
         eR = (0, r.zhh)({ opacity: +(null != eO.interactionType), config: { duration: 150 } }),
         eS = n.useMemo(() => (null != ed ? { [ed]: [t.id] } : {}), [ed, t.id]);
-    (0, o.E)(eS, "UserProfileModalV2");
+    (0, o.Eq)(eS, "UserProfileModalV2");
     let eL = (0, _.Ay)(t.id, ej ? ed : void 0),
         eD = N.Ay.useName(eL?.guildId, ec, t),
         { relationshipType: eG, originApplicationId: eU } = (0, a.cf)([f.A], () => ({

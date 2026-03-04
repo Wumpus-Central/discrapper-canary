@@ -15,7 +15,7 @@ var l = t(627968),
     p = t(985018);
 function x(e, n, x) {
     let b = i.useMemo(() => ({ [n]: [e.id] }), [n, e.id]);
-    (0, d.E)(b, "useThreadAdminActionItems"), (0, r.bG)([m.A], () => m.A.getGuildVersion(n), [n]);
+    (0, d.Eq)(b, "useThreadAdminActionItems"), (0, r.bG)([m.A], () => m.A.getGuildVersion(n), [n]);
     let E = (0, r.bG)([A.A], () => A.A.getChannel(x)),
         h = (0, r.bG)([g.A], () => g.A.getGuild(n), [n]),
         _ = (0, r.bG)([f.default], () => f.default.getCurrentUser()),

@@ -41,7 +41,7 @@ function C(e) {
 }
 function I(e) {
     let { channel: t, message: s } = e;
-    (0, o.E)({ [t.guild_id]: [s.author.id] }, "ThreadBrowserRowSubtext");
+    (0, o.Eq)({ [t.guild_id]: [s.author.id] }, "ThreadBrowserRowSubtext");
     let d = (0, a.bG)([f.default], () => f.default.getUser(s.author.id) ?? s.author),
         { nick: m, colorString: x, colorStrings: v } = (0, u.Ay)(s),
         T = (0, g.gn)(t.guild_id, d.id, v),
@@ -81,7 +81,7 @@ function k(e) {
             null == s
                 ? new Date(t.threadMetadata?.archiveTimestamp ?? Date.now()).getTime()
                 : j.default.extractTimestamp(s);
-    (0, o.E)({ [t.guild_id]: [t.ownerId] }, "ThreadBrowserRowSubtext");
+    (0, o.Eq)({ [t.guild_id]: [t.ownerId] }, "ThreadBrowserRowSubtext");
     let c = (0, a.bG)([f.default], () => f.default.getUser(t.ownerId)),
         u = (0, a.bG)([m.Ay], () => m.Ay.getMember(t.guild_id, t.ownerId)),
         h = (0, g.gn)(t.guild_id, c?.id, u?.colorStrings ?? null),

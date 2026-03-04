@@ -1,94 +1,94 @@
-i.d(t, { A: () => x });
-var n = i(627968),
-    a = i(64700),
-    r = i(503698),
-    l = i.n(r),
-    s = i(311907),
-    o = i(80682),
-    c = i(643501),
-    d = i(616356),
-    u = i(961350),
-    m = i(71393),
-    _ = i(576705),
-    p = i(290863),
-    A = i(977997),
-    h = i(954571),
-    f = i(279250),
-    g = i(834757),
-    S = i(727353),
-    v = i(652215),
-    C = i(945354);
-class I extends a.PureComponent {
+n.d(e, { A: () => y });
+var i = n(627968),
+    l = n(64700),
+    r = n(503698),
+    a = n.n(r),
+    s = n(311907),
+    o = n(80682),
+    d = n(643501),
+    u = n(616356),
+    c = n(961350),
+    A = n(71393),
+    p = n(576705),
+    m = n(290863),
+    h = n(977997),
+    g = n(954571),
+    E = n(279250),
+    f = n(834757),
+    C = n(727353),
+    S = n(652215),
+    T = n(945354);
+class v extends l.PureComponent {
     componentDidMount() {
-        let { user: e, streamApplication: t } = this.props;
-        h.default.track(v.HAw.OPEN_POPOUT, {
+        let { user: t, streamApplication: e } = this.props;
+        g.default.track(S.HAw.OPEN_POPOUT, {
             type: "Stream Preview",
-            other_user_id: e.id,
-            application_id: null != t ? t.id : null,
-            application_name: null != t ? t.name : null,
-            game_id: null != t ? t.id : null,
+            other_user_id: t.id,
+            application_id: null != e ? e.id : null,
+            application_name: null != e ? e.name : null,
+            game_id: null != e ? e.id : null,
             is_streaming: !0,
         });
     }
     render() {
         let {
-            activity: e,
-            user: t,
-            stream: i,
-            previewIsOpen: a,
+            activity: t,
+            user: e,
+            stream: n,
+            previewIsOpen: l,
             onAction: r,
             hideTip: s,
             onWatch: o,
-            activeStream: c,
-            currentUserId: d,
-            canWatch: u,
-            unavailableReason: m,
-            streamApplication: _,
-            isStandardGap: p,
+            activeStream: d,
+            currentUserId: u,
+            canWatch: c,
+            unavailableReason: A,
+            streamApplication: p,
+            isStandardGap: m,
         } = this.props;
-        return null == i
+        return null == n
             ? null
-            : (0, n.jsx)("div", {
-                  className: l()(C.yt, { [C.P0]: a, [C.iA]: !0 === p }),
-                  children: (0, n.jsx)(S.Z, {
-                      stream: i,
-                      activeStream: c,
-                      streamActivity: e,
-                      streamApplication: _,
-                      user: t,
-                      currentUserId: d,
-                      canWatch: u ?? !1,
-                      unavailableReason: m,
+            : (0, i.jsx)("div", {
+                  className: a()(T.yt, { [T.P0]: l, [T.iA]: !0 === m }),
+                  children: (0, i.jsx)(C.Z, {
+                      stream: n,
+                      activeStream: d,
+                      streamActivity: t,
+                      streamApplication: p,
+                      user: e,
+                      currentUserId: u,
+                      canWatch: c ?? !1,
+                      unavailableReason: A,
                       onWatchStream: o,
                       onAction: r,
                       hideTip: s,
-                      className: C.Rh,
+                      className: T.Rh,
                   }),
               });
     }
 }
-function x(e) {
-    let { user: t, channel: i, ...r } = e,
-        [l, h] = (0, s.yK)([A.A, m.A, _.A, c.default], () => (0, f.eo)(i, A.A, m.A, _.A, c.default)),
-        S = (0, s.bG)([d.A], () => d.A.getStreamForUser(t.id, i.getGuildId())),
-        v = (0, s.bG)([d.A], () => d.A.getActiveStreamForApplicationStream(S)),
-        C = (0, s.bG)([u.default], () => u.default.getId()),
-        x = (0, g.AO)(S),
-        E = (0, s.bG)([p.A], () => (0, g.nr)(S, p.A)),
-        T = a.useMemo(() => ({ [i.guild_id]: [t.id] }), [i.guild_id, t.id]);
+function y(t) {
+    let { user: e, channel: n, ...r } = t,
+        [a, g] = (0, s.yK)([h.A, A.A, p.A, d.default], () => (0, E.eo)(n, h.A, A.A, p.A, d.default)),
+        C = (0, s.bG)([u.A], () => u.A.getStreamForUser(e.id, n.getGuildId())),
+        S = (0, s.bG)([u.A], () => u.A.getActiveStreamForApplicationStream(C)),
+        T = (0, s.bG)([c.default], () => c.default.getId()),
+        y = (0, f.AO)(C),
+        N = (0, s.bG)([m.A], () => (0, f.nr)(C, m.A)),
+        x = l.useMemo(() => ({ [n.guild_id]: [e.id] }), [n.guild_id, e.id]);
     return (
-        (0, o.E)(T, "StreamPreviewPopout"),
-        (0, n.jsx)(I, {
+        (0, o.Eq)(x, "StreamPreviewPopout"),
+        (0, i.jsx)(v, {
             ...r,
-            canWatch: l,
-            unavailableReason: h,
-            user: t,
-            streamApplication: x,
-            stream: S,
-            activeStream: v,
-            currentUserId: C,
-            activity: E,
-            channel: i,
+            canWatch: a,
+            unavailableReason: g,
+            user: e,
+            streamApplication: y,
+            stream: C,
+            activeStream: S,
+            currentUserId: T,
+            activity: N,
+            channel: n,
         })
     );
 }
