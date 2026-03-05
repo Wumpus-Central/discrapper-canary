@@ -1,39 +1,28 @@
-n.d(e, { default: () => p });
-var c = n(627968);
-n(64700);
-var i = n(87719),
-    o = n(414345),
-    a = n(244975),
-    s = n(788868),
-    r = n(652215),
-    l = n(985018),
-    d = n(399703);
-function p(t) {
-    let { onClose: e, source: n, ...p } = t,
-        b = l.intl.format(l.t.WMO9po, {
+c.d(e, { default: () => r });
+var a = c(627968);
+c(64700);
+var n = c(87719),
+    o = c(244975),
+    s = c(788868),
+    i = c(652215),
+    d = c(985018),
+    p = c(399703);
+function r(t) {
+    let { onClose: e, source: c, ...r } = t,
+        f = d.intl.format(d.t.WMO9po, {
             onAndMore: function () {
-                e(), (0, i.e)();
+                e(), (0, n.e)();
             },
         });
-    return (0, o.g1)({ location: "PremiumGuildMemberProfileUpsell" })
-        ? (0, c.jsx)(a.F, {
-              title: l.intl.string(l.t.kOEBKP),
-              subtitle: b,
-              graphic: { src: d.A, type: "image" },
-              secondaryCTA: l.intl.string(l.t["13/7kX"]),
-              onSecondaryClick: e,
-              onClose: e,
-              ...p,
-          })
-        : (0, c.jsx)(a.A, {
-              artURL: d.A,
-              type: s.e.PREMIUM_GUILD_IDENTITY_MODAL,
-              title: l.intl.string(l.t.kOEBKP),
-              body: b,
-              glowUp: b,
-              analyticsSource: n,
-              analyticsLocation: { section: r.JJy.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_MODAL, object: r.ZSU.BUTTON_CTA },
-              onClose: e,
-              ...p,
-          });
+    return (0, a.jsx)(o.A, {
+        artURL: p.A,
+        type: s.e.PREMIUM_GUILD_IDENTITY_MODAL,
+        title: d.intl.string(d.t.kOEBKP),
+        body: f,
+        glowUp: f,
+        analyticsSource: c,
+        analyticsLocation: { section: i.JJy.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_MODAL, object: i.ZSU.BUTTON_CTA },
+        onClose: e,
+        ...r,
+    });
 }
