@@ -23,6 +23,7 @@ var r = n(835245),
             (e[(e.ClickImage = 13)] = "ClickImage"),
             (e[(e.GameShop = 14)] = "GameShop"),
             (e[(e.LinkAccount = 15)] = "LinkAccount"),
+            (e[(e.ClaimGame = 16)] = "ClaimGame"),
             e
         );
     })({}),
