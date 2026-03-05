@@ -24,23 +24,23 @@ var r = n(110259),
     v = n(287809),
     N = n(954571),
     C = n(488926),
-    b = n(927578),
-    R = n(499785),
-    O = n(157559),
+    R = n(927578),
+    O = n(499785),
+    b = n(157559),
     D = n(652215),
     L = n(204925),
     w = n(985018);
-let x = (e) => {
-        O.A.show({
+let M = (e) => {
+        b.A.show({
             title: w.intl.string(w.t.cTaRxF),
             body: w.intl.formatToPlainString(w.t["VSd+Aj"], { quantity: e }),
         });
     },
-    M = (e) => {
+    x = (e) => {
         a.h.dispatch({ type: "GUILD_DELETE", guild: { id: e } });
     },
     P = () => {
-        O.A.show({ title: w.intl.string(w.t.ZZlox4), body: w.intl.string(w.t.ZUEGFn) });
+        b.A.show({ title: w.intl.string(w.t.ZZlox4), body: w.intl.string(w.t.ZUEGFn) });
     };
 function k(e) {
     return new Promise((t) =>
@@ -71,6 +71,7 @@ let G = {
                         session_id: c ? g.default.getSessionId() : null,
                         recommendation_load_id: i,
                         location: c && null != o ? o : null,
+                        from_directory: r === D.Q4z.DIRECTORY_ENTRY || null,
                     },
                     context: { source: r },
                     oldFormErrors: !0,
@@ -109,10 +110,10 @@ let G = {
                 t.body?.code === D.t02.TOO_MANY_USER_GUILDS)
             ) {
                 let e = v.default.getCurrentUser();
-                b.Ay.canUseIncreasedGuildCap(e) || e?.isStaff() ? x(D.cZu) : x(D.qlD);
+                R.Ay.canUseIncreasedGuildCap(e) || e?.isStaff() ? M(D.cZu) : M(D.qlD);
             }
             throw (
-                (t.body?.code === D.t02.GUILD_AT_CAPACITY && P(), c && t.body?.code === D.t02.UNKNOWN_GUILD && M(e), t)
+                (t.body?.code === D.t02.GUILD_AT_CAPACITY && P(), c && t.body?.code === D.t02.UNKNOWN_GUILD && x(e), t)
             );
         }
     },
@@ -126,7 +127,7 @@ let G = {
             (0, f.A)(D.BVt.CHANNEL(e, i, r), s),
             await new Promise(setImmediate);
     },
-    deleteGuild: M,
+    deleteGuild: x,
     selectGuild(e) {
         (0, p.j)(e);
     },
@@ -162,7 +163,7 @@ let G = {
             location: o,
             moderatorReportId: l,
         } = e;
-        return R.A.patch({
+        return O.A.patch({
             url: D.Rsh.GUILD_MEMBER(t, n),
             reason: a,
             body: { communication_disabled_until: i, moderator_report_id: l },
