@@ -4893,8 +4893,17 @@
     min-height: calc(var(--select-option-height) - 2px)
 }
 
+.listBoxItemContent__2e223[data-has-description=true] {
+    align-items: flex-start;
+    flex-direction: column
+}
+
 .listBoxItemLabel__2e223 {
     flex-grow: 1;
+    flex-shrink: 1
+}
+
+.listBoxItemDescription__2e223 {
     flex-shrink: 1
 }
 
@@ -4931,6 +4940,11 @@
     gap: var(--space-4);
     grid-template-columns: auto 1fr auto;
     grid-template-rows: 1fr
+}
+
+.option__56a50[data-has-description=true] {
+    align-items: start;
+    grid-template-rows: auto auto
 }
 
 .leading__56a50 {
