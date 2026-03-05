@@ -1,4 +1,4 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => b });
 var a = n(627968),
     i = n(64700),
     s = n(417597),
@@ -10,8 +10,8 @@ var a = n(627968),
     u = n(295405),
     m = n(652215),
     h = n(815907),
-    p = n(206467),
-    x = n(661251);
+    x = n(206467),
+    p = n(661251);
 let g = [
         { label: "3DS and Failed Cards", value: "", disabled: !0 },
         { label: "Other", value: "OTHER" },
@@ -226,7 +226,7 @@ let g = [
         { label: "Wisconsin", value: "WI" },
         { label: "Wyoming", value: "WY" },
     ],
-    b = {
+    v = {
         NONE: null,
         AL: {
             name: "Alabama State Capitol",
@@ -688,16 +688,16 @@ let g = [
             country: "US",
         },
     };
-function v() {
+function b() {
     let [e, t] = i.useState("US"),
         [n, d] = i.useState(null),
-        [m, v] = i.useState(null),
-        [A, C] = i.useState("pm_card_us"),
-        [T, y] = i.useState(!1),
-        S = Object.values((0, s.bG)([u.A], () => u.A.paymentSources)),
-        E = _[e],
-        N = async () => {
-            let t = A;
+        [m, b] = i.useState(null),
+        [j, A] = i.useState("pm_card_us"),
+        [T, S] = i.useState(!1),
+        E = Object.values((0, s.bG)([u.A], () => u.A.paymentSources)),
+        N = _[e],
+        I = async () => {
+            let t = j;
             "" === t && (t = "pm_card_us"),
                 await l.Bo.post({
                     url: "/debug/payment-source",
@@ -706,10 +706,10 @@ function v() {
                 }),
                 await (0, o.$o)();
         },
-        I = async () => {
+        k = async () => {
             await l.Bo.del({ url: "/debug/payment-source", rejectWithError: !1 }), await (0, o.$o)();
         },
-        k = async () => {
+        R = async () => {
             await l.Bo.del({ url: "/debug/rate-limits", rejectWithError: !1 }), window.location.reload();
         };
     return (
@@ -717,7 +717,7 @@ function v() {
             (0, o.$o)();
         }, []),
         (0, a.jsx)(r.IpV, {
-            className: x.nd,
+            className: p.nd,
             children: (0, a.jsxs)("div", {
                 className: h.l$,
                 children: [
@@ -741,11 +741,11 @@ function v() {
                                             id: t,
                                             value: t,
                                             label: n,
-                                            leading: (0, a.jsx)("img", { alt: "", className: p.bI, src: (0, c.t)(t) }),
+                                            leading: (0, a.jsx)("img", { alt: "", className: x.bI, src: (0, c.t)(t) }),
                                         };
                                     }),
                                 onSelectionChange: (e) => {
-                                    t(e), C(_[e][0].value), y(1 === _[e].length);
+                                    t(e), A(_[e][0].value), S(1 === _[e].length);
                                 },
                             }),
                             "US" === e &&
@@ -759,54 +759,149 @@ function v() {
                                         return { id: t, value: t, label: n };
                                     }),
                                     onSelectionChange: (e) => {
-                                        d(e), v(b[e] ?? null);
+                                        d(e), b(v[e] ?? null);
                                     },
                                 }),
                             (0, a.jsx)(r.l6P, {
                                 selectionMode: "single",
                                 label: "Card Token",
                                 hideLabel: !0,
-                                value: A,
-                                options: E.map((e) => {
+                                value: j,
+                                options: N.map((e) => {
                                     let { value: t, label: n } = e;
                                     return { id: t, value: t, label: n };
                                 }),
-                                onSelectionChange: C,
+                                onSelectionChange: A,
                                 disabled: T,
                             }),
                             (0, a.jsx)(r.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Create Stripe Credit Card",
-                                onClick: N,
+                                onClick: I,
                             }),
-                            S.length > 0 &&
+                            E.length > 0 &&
                                 (0, a.jsx)(r.Button, {
                                     variant: "primary",
                                     size: "sm",
                                     text: "Delete All Payment Sources",
-                                    onClick: I,
+                                    onClick: k,
                                 }),
                             (0, a.jsx)(r.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Reset API Rate limits and reload app",
-                                onClick: k,
+                                onClick: R,
                             }),
                         ],
                     }),
                     (0, a.jsx)(r.Text, {
-                        style: { marginTop: "16px", marginBottom: "16px" },
-                        variant: "text-md/normal",
+                        style: { marginTop: "24px", marginBottom: "16px" },
+                        variant: "text-lg/bold",
+                        children: "Generate Gift Card PIN",
+                    }),
+                    (0, a.jsx)(C, {}),
+                    (0, a.jsx)(r.Text, {
+                        style: { marginTop: "24px", marginBottom: "16px" },
+                        variant: "text-lg/bold",
                         children: "Existing Payment Sources",
                     }),
-                    S.map((e) => (0, a.jsx)(j, { paymentSource: e }, e.id)),
+                    E.map((e) => (0, a.jsx)(y, { paymentSource: e }, e.id)),
                 ],
             }),
         })
     );
 }
-function j(e) {
+let j = [
+        { id: "US", value: "US", label: "United States (USD)" },
+        { id: "CA", value: "CA", label: "Canada (CAD)" },
+        { id: "FR", value: "FR", label: "France (EUR)" },
+        { id: "GB", value: "GB", label: "United Kingdom (GBP)" },
+        { id: "DE", value: "DE", label: "Germany (EUR)" },
+    ],
+    A = { US: "usd", CA: "cad", FR: "eur", GB: "gbp", DE: "eur" };
+function C() {
+    let [e, t] = i.useState("US"),
+        [n, s] = i.useState("500"),
+        [o, d] = i.useState(null),
+        [c, u] = i.useState(!1),
+        [m, h] = i.useState(!1),
+        [x, p] = i.useState(null),
+        g = parseInt(n, 10),
+        _ = !isNaN(g) && g >= 500 && g <= 5e3,
+        f = async () => {
+            if (_) {
+                u(!0), p(null), d(null), h(!1);
+                try {
+                    let t = await l.Bo.post({
+                        url: "/billing/gift-card/create-on-demand-pin",
+                        body: { country: e, currency: A[e], amount: g },
+                        rejectWithError: !0,
+                    });
+                    d(t.body.pin);
+                } catch (e) {
+                    p(e instanceof Error ? e.message : "Failed to generate PIN");
+                } finally {
+                    u(!1);
+                }
+            }
+        };
+    return (0, a.jsxs)(r.BJc, {
+        direction: "vertical",
+        gap: 8,
+        children: [
+            (0, a.jsxs)(r.BJc, {
+                direction: "horizontal",
+                gap: 8,
+                align: "end",
+                children: [
+                    (0, a.jsx)(r.l6P, {
+                        selectionMode: "single",
+                        label: "Gift Card Country",
+                        value: e,
+                        options: j,
+                        onSelectionChange: t,
+                    }),
+                    (0, a.jsx)(r.ksK, {
+                        label: "Amount (500–5000)",
+                        type: "number",
+                        value: n,
+                        onChange: s,
+                        min: 500,
+                        max: 5e3,
+                    }),
+                    (0, a.jsx)(r.Button, {
+                        variant: "primary",
+                        size: "sm",
+                        text: "Generate Gift Card PIN",
+                        onClick: f,
+                        loading: c,
+                        disabled: !_,
+                    }),
+                ],
+            }),
+            null != o &&
+                (0, a.jsxs)(r.BJc, {
+                    direction: "horizontal",
+                    gap: 8,
+                    align: "end",
+                    children: [
+                        (0, a.jsx)(r.ksK, { label: "Generated PIN", value: o, onChange: () => {}, readOnly: !0 }),
+                        (0, a.jsx)(r.Button, {
+                            variant: "secondary",
+                            size: "sm",
+                            text: m ? "Copied!" : "Copy",
+                            onClick: () => {
+                                navigator.clipboard.writeText(o), h(!0), setTimeout(() => h(!1), 2e3);
+                            },
+                        }),
+                    ],
+                }),
+            null != x && (0, a.jsx)(r.wx6, { type: "critical", children: x }),
+        ],
+    });
+}
+function y(e) {
     let { paymentSource: t } = e,
         n = async () => {
             await l.Bo.patch({ url: m.Rsh.BILLING_PAYMENT_SOURCE(t.id), body: { default: !0 }, rejectWithError: !1 }),
@@ -816,7 +911,7 @@ function j(e) {
         className: h.bd,
         children: [
             (0, a.jsx)(d.A, { locale: "en-US", paymentSource: t, showLabels: !0, showPaymentSourceIcon: !0 }, t.id),
-            (0, a.jsx)("img", { alt: t.country, className: p.bI, src: (0, c.t)(t.country) }),
+            (0, a.jsx)("img", { alt: t.country, className: x.bI, src: (0, c.t)(t.country) }),
             t.isDefault
                 ? (0, a.jsx)(r.Text, { variant: "text-sm/medium", children: "(Default)" })
                 : (0, a.jsx)(r.Button, { variant: "secondary", size: "sm", text: "Set as Default", onClick: n }),
