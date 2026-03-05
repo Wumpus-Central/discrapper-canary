@@ -134,6 +134,7 @@ class g {
     focusTargetId = null;
     focusSequenceId = 1;
     initialScrollSequenceId = 0;
+    suppressRowAnimationSequenceId = 0;
     hasMoreBefore = !0;
     hasMoreAfter = !1;
     loadingMore = !1;
@@ -200,6 +201,7 @@ class g {
                   (n.hasFetched = this.hasFetched),
                   (n.error = this.error),
                   (n.initialScrollSequenceId = this.initialScrollSequenceId),
+                  (n.suppressRowAnimationSequenceId = this.suppressRowAnimationSequenceId),
                   e(n))
                 : "object" == typeof e &&
                   ((n.ready = void 0 !== e.ready ? !0 === e.ready : this.ready),
@@ -222,7 +224,11 @@ class g {
                   (n.hasFetched = void 0 !== e.hasFetched ? e.hasFetched : this.hasFetched),
                   (n.error = void 0 !== e.error ? e.error : this.error),
                   (n.initialScrollSequenceId =
-                      void 0 !== e.initialScrollSequenceId ? e.initialScrollSequenceId : this.initialScrollSequenceId)),
+                      void 0 !== e.initialScrollSequenceId ? e.initialScrollSequenceId : this.initialScrollSequenceId),
+                  (n.suppressRowAnimationSequenceId =
+                      void 0 !== e.suppressRowAnimationSequenceId
+                          ? e.suppressRowAnimationSequenceId
+                          : this.suppressRowAnimationSequenceId)),
             n
         );
     }

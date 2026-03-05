@@ -24,14 +24,14 @@ var r = n(735438),
     v = n(696451),
     N = n(71393),
     C = n(576705),
-    b = n(994500),
-    R = n(309010),
-    O = n(967198),
+    R = n(994500),
+    O = n(309010),
+    b = n(967198),
     D = n(287809),
     L = n(652215);
 let w = new Set(),
-    x = new d.A("MessageStore"),
-    M = !1;
+    M = new d.A("MessageStore"),
+    x = !1;
 function P() {
     u.A.forEach((e) => {
         u.A.commit(e.mutate({ ready: !1, loadingMore: !1 }));
@@ -45,7 +45,7 @@ function k(e) {
         if (null == n) continue;
         let r = !1;
         if (!(n.cached || !r)) {
-            x.log(
+            M.log(
                 `Skipping background message sync for ${e} cached:${n.cached} ready:${n.ready} hasMoreAfter:${n.hasMoreAfter} isConnected:${r}`,
             );
             continue;
@@ -58,13 +58,13 @@ function U() {
 }
 function G(e) {
     let { channelId: t, truncateBottom: n, truncateTop: r } = e;
-    x.log(`Truncating messages for ${t} bottom:${n} top:${r}`);
+    M.log(`Truncating messages for ${t} bottom:${n} top:${r}`);
     let i = u.A.getOrCreate(t);
     (i = i.truncate(n, r)), u.A.commit(i);
 }
 function F(e) {
     let { channelId: t } = e;
-    x.log(`Clearing messages for ${t}`), u.A.clear(t), w.clear();
+    M.log(`Clearing messages for ${t}`), u.A.clear(t), w.clear();
 }
 function V(e) {
     let { channelId: t, jump: n, focus: r, before: i, after: s, limit: a, truncate: o } = e,
@@ -129,7 +129,7 @@ function W(e) {
         s = u.A.getOrCreate(t),
         a = n(142120).A.isConnected();
     if (i) {
-        x.log("Inserting message tapped on from a push notification", r.id, r.channel_id),
+        M.log("Inserting message tapped on from a push notification", r.id, r.channel_id),
             u.A.commit(s.receivePushNotification(r, a));
         return;
     }
@@ -160,7 +160,7 @@ function K(e) {
               )),
         u.A.commit(i);
 }
-function z(e) {
+function $(e) {
     let { id: t, channelId: n } = e,
         r = u.A.getOrCreate(n);
     if (null == r || !r.has(t)) return !1;
@@ -170,7 +170,7 @@ function z(e) {
     }
     (r = r.remove(t)), u.A.commit(r), w.delete(t);
 }
-function $(e) {
+function z(e) {
     let { ids: t, channelId: n } = e,
         r = u.A.getOrCreate(n);
     if (null == r) return !1;
@@ -224,10 +224,10 @@ function ee() {
                 t.reset(
                     t.map(
                         (t) => (
-                            t.blocked !== b.A.isBlockedForMessage(t) &&
-                                ((e = !0), (t = t.set("blocked", b.A.isBlockedForMessage(t)))),
-                            t.ignored !== b.A.isIgnoredForMessage(t) &&
-                                ((e = !0), (t = t.set("ignored", b.A.isIgnoredForMessage(t)))),
+                            t.blocked !== R.A.isBlockedForMessage(t) &&
+                                ((e = !0), (t = t.set("blocked", R.A.isBlockedForMessage(t)))),
+                            t.ignored !== R.A.isIgnoredForMessage(t) &&
+                                ((e = !0), (t = t.set("ignored", R.A.isIgnoredForMessage(t)))),
                             t
                         ),
                     ),
@@ -303,17 +303,27 @@ function ec(e) {
 }
 function ed(e) {
     let t = u.A.getOrCreate(e.channelId);
-    (e.shouldForceCommitMessages || t.cached || !t.ready) && u.A.commit(t.addCachedMessages(e.messages, e.stale));
+    if (e.isForegroundCacheLoad || t.cached || !t.ready) {
+        let n = t.addCachedMessages(e.messages, e.stale);
+        e.isForegroundCacheLoad &&
+            e.messages.length > 0 &&
+            null == n.jumpTargetId &&
+            (n = n.mutate({
+                initialScrollSequenceId: n.initialScrollSequenceId + 1,
+                suppressRowAnimationSequenceId: n.suppressRowAnimationSequenceId + 1,
+            })),
+            u.A.commit(n);
+    }
 }
 function e_(e) {
     let { message: t } = e,
         n = D.default.getCurrentUser();
-    null != t && null != t.author && null != n && t.author.id === n.id && (M = !0);
+    null != t && null != t.author && null != n && t.author.id === n.id && (x = !0);
 }
 class ef extends a.Ay.Store {
     static displayName = "MessageStore";
     initialize() {
-        this.waitFor(I.default, T.A, S.A, y.Ay, v.Ay, N.A, p.A, g.default, C.A, b.A, R.A, O.A, D.default),
+        this.waitFor(I.default, T.A, S.A, y.Ay, v.Ay, N.A, p.A, g.default, C.A, R.A, O.A, b.A, D.default),
             this.syncWith([p.A], () => {});
     }
     getMessages(e) {
@@ -382,7 +392,7 @@ class ef extends a.Ay.Store {
         return null != this.getMessages(e).findNewest((e) => e.author.id === t?.id);
     }
     hasCurrentUserSentMessageSinceAppStart() {
-        return M;
+        return x;
     }
 }
 let ep = new ef(o.h, {
@@ -404,8 +414,8 @@ let ep = new ef(o.h, {
     MESSAGE_EDIT_FAILED_AUTOMOD: ea,
     MESSAGE_UPDATE: q,
     MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: Z,
-    MESSAGE_DELETE: z,
-    MESSAGE_DELETE_BULK: $,
+    MESSAGE_DELETE: $,
+    MESSAGE_DELETE_BULK: z,
     MESSAGE_REVEAL: et,
     THREAD_CREATE_LOCAL: Q,
     CHANNEL_DELETE: J,
