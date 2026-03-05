@@ -1,4 +1,5 @@
-n.r(
+"use strict";
+a.r(
     (e.exports = {
         ellipsis: "ellipsis__2ef49",
         headerContainer: "headerContainer__2ef49",
