@@ -1,22 +1,23 @@
-i.d(t, { A: () => r, v: () => c });
-var l = i(627968);
-i(64700);
-var a = i(158954),
-    n = i(985018),
-    s = i(851822);
-function r(e) {
+"use strict";
+n.d(t, { A: () => s, v: () => c });
+var i = n(627968);
+n(64700);
+var l = n(158954),
+    a = n(985018),
+    r = n(851822);
+function s(e) {
     let { detectedGame: t } = e;
     return 0 === t.publishers.length
         ? null
-        : (0, l.jsxs)("div", {
+        : (0, i.jsxs)("div", {
               children: [
-                  (0, l.jsx)(a.DZT, {
-                      className: s.bV,
+                  (0, i.jsx)(l.DZT, {
+                      className: r.bV,
                       variant: "text-xs/semibold",
                       color: "text-default",
-                      children: n.intl.string(n.t["4Byy/G"]),
+                      children: a.intl.string(a.t["4Byy/G"]),
                   }),
-                  (0, l.jsx)(a.EYj, { variant: "text-sm/normal", children: t.publishers.join(", ") }),
+                  (0, i.jsx)(l.EYj, { variant: "text-sm/normal", children: t.publishers.join(", ") }),
               ],
           });
 }
@@ -24,15 +25,15 @@ function c(e) {
     let { detectedGame: t } = e;
     return 0 === t.publishers.length
         ? null
-        : (0, l.jsxs)("div", {
+        : (0, i.jsxs)("div", {
               children: [
-                  (0, l.jsx)(a.DZT, {
-                      className: s.bV,
+                  (0, i.jsx)(l.DZT, {
+                      className: r.bV,
                       variant: "text-xs/semibold",
                       color: "text-default",
-                      children: n.intl.string(n.t["4Byy/G"]),
+                      children: a.intl.string(a.t["4Byy/G"]),
                   }),
-                  (0, l.jsx)(a.EYj, { variant: "text-sm/normal", children: t.publishers.join(", ") }),
+                  (0, i.jsx)(l.EYj, { variant: "text-sm/normal", children: t.publishers.join(", ") }),
               ],
           });
 }

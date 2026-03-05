@@ -1,49 +1,50 @@
-i.d(t, { L: () => o, N: () => r }), i(323874), i(14289), i(35956);
-var n = i(562465),
-    l = i(73153),
-    a = i(198982),
-    s = i(652215);
-let r = async (e) => {
+"use strict";
+n.d(t, { L: () => c, N: () => s }), n(323874), n(14289), n(35956);
+var i = n(562465),
+    l = n(73153),
+    a = n(198982),
+    r = n(652215);
+let s = async (e) => {
         try {
             let t = (
-                (await n.Bo.get({ url: s.Rsh.SIMILAR_GAMES(e), rejectWithError: !1 })).body.similar_games ?? []
+                (await i.Bo.get({ url: r.Rsh.SIMILAR_GAMES(e), rejectWithError: !1 })).body.similar_games ?? []
             ).filter((t) => t !== e);
             l.h.dispatch({ type: "GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS", applicationId: e, games: t });
         } catch (e) {
             throw new a.LG(e);
         }
     },
-    o = (e) => c(e, { utm_source: "discord" }),
-    c = (e, t) => {
+    c = (e) => o(e, { utm_source: "discord" }),
+    o = (e, t) => {
         try {
-            let i = new URL(e, window.location.origin);
+            let n = new URL(e, window.location.origin);
             return (
                 Object.entries(t).forEach((e) => {
-                    let [t, n] = e;
-                    i.searchParams.set(t, n);
+                    let [t, i] = e;
+                    n.searchParams.set(t, i);
                 }),
-                i.toString()
+                n.toString()
             );
         } catch {
-            let [i, n] = e.split("#");
+            let [n, i] = e.split("#");
             try {
-                let e = new URL(i, window.location.origin);
+                let e = new URL(n, window.location.origin);
                 return (
                     Object.entries(t).forEach((t) => {
-                        let [i, n] = t;
-                        e.searchParams.set(i, n);
+                        let [n, i] = t;
+                        e.searchParams.set(n, i);
                     }),
-                    null != n ? `${e.toString()}#${n}` : e.toString()
+                    null != i ? `${e.toString()}#${i}` : e.toString()
                 );
             } catch {
-                let i = e.includes("?"),
-                    n = Object.entries(t)
+                let n = e.includes("?"),
+                    i = Object.entries(t)
                         .map((e) => {
-                            let [t, i] = e;
-                            return `${encodeURIComponent(t)}=${encodeURIComponent(i)}`;
+                            let [t, n] = e;
+                            return `${encodeURIComponent(t)}=${encodeURIComponent(n)}`;
                         })
                         .join("&");
-                return `${e}${i ? "&" : "?"}${n}`;
+                return `${e}${n ? "&" : "?"}${i}`;
             }
         }
     };

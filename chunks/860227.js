@@ -1,59 +1,58 @@
-"use strict";
-n.d(t, { CJ: () => r, JH: () => c, XL: () => d, ZD: () => h, d$: () => o, fF: () => m, nS: () => a, xl: () => u });
-var l = n(264927),
-    s = n(143413),
-    i = n(652215);
-function r(e) {
+n.d(t, { CJ: () => l, JH: () => d, XL: () => u, ZD: () => m, d$: () => o, fF: () => _, nS: () => s, xl: () => c });
+var a = n(264927),
+    i = n(143413),
+    r = n(652215);
+function l(e) {
     return `message-content-${e.id}`;
 }
-function a(e) {
+function s(e) {
     return `message-reply-context-${e.id}`;
 }
 function o(e, t) {
     let n = t ?? e.id;
     return `message-username-${n}`;
 }
-function u(e) {
+function c(e) {
     return `message-timestamp-${e.id}`;
 }
-function c(e) {
+function d(e) {
     return `message-reactions-${e.id}`;
 }
-function d(e) {
+function u(e) {
     return `message-accessories-${e.id}`;
 }
-function m(e, t, n) {
-    let c = e.type === i.lAJ.REPLY && null != e.messageReference,
-        m = e.embeds.length > 0,
-        h = e.attachments.length > 0,
-        g = e.stickerItems.length > 0,
-        p = e.codedLinks.length > 0,
-        A = e.components.length > 0,
-        f = e.hasFlag(i.pr7.HAS_THREAD),
-        x = m || h || g || p || f || A || e.type === i.lAJ.THREAD_CREATED,
-        v = m && e.content === e.embeds[0].url && e.embeds[0].type === i.Auw.GIFV,
-        N = e.type !== i.lAJ.DEFAULT || (!v && "" !== e.content),
-        b = (0, s.A)(e),
-        j = !b && n?.hasTimestamp !== !1,
+function _(e, t, n) {
+    let d = e.type === r.lAJ.REPLY && null != e.messageReference,
+        _ = e.embeds.length > 0,
+        m = e.attachments.length > 0,
+        p = e.stickerItems.length > 0,
+        f = e.codedLinks.length > 0,
+        b = e.components.length > 0,
+        h = e.hasFlag(r.pr7.HAS_THREAD),
+        g = _ || m || p || f || h || b || e.type === r.lAJ.THREAD_CREATED,
+        A = _ && e.content === e.embeds[0].url && e.embeds[0].type === r.Auw.GIFV,
+        T = e.type !== r.lAJ.DEFAULT || (!A && "" !== e.content),
+        x = (0, i.A)(e),
+        I = !x && n?.hasTimestamp !== !1,
         C = o(e, t),
-        E = a(e),
-        R = b ? "" : `${c ? E : C} ${l.lW}`;
-    if (N) {
-        let t = r(e);
-        R += ` ${t}`;
+        E = s(e),
+        S = x ? "" : `${d ? E : C} ${a.lW}`;
+    if (T) {
+        let t = l(e);
+        S += ` ${t}`;
     }
-    if (x) {
-        let t = d(e);
-        R += ` ${t}`;
-    }
-    if (j) {
+    if (g) {
         let t = u(e);
-        R += ` ${l.l6} ${t}`;
+        S += ` ${t}`;
     }
-    return R.trim();
+    if (I) {
+        let t = c(e);
+        S += ` ${a.l6} ${t}`;
+    }
+    return S.trim();
 }
-function h(e) {
+function m(e) {
     if (0 === e.reactions.length) return;
-    let t = c(e);
-    return `${l.oz} ${t}`;
+    let t = d(e);
+    return `${a.oz} ${t}`;
 }

@@ -1,8 +1,9 @@
-i.d(t, { A: () => a });
-var l = i(64700);
-function a() {
+"use strict";
+n.d(t, { A: () => l });
+var i = n(64700);
+function l() {
     arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    let [e, t] = l.useState(
+    let [e, t] = i.useState(
         (function () {
             return (
                 arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -11,7 +12,7 @@ function a() {
         })(),
     );
     return (
-        l.useLayoutEffect(() => {
+        i.useLayoutEffect(() => {
             function e() {
                 t({ width: window.innerWidth, height: window.innerHeight });
             }

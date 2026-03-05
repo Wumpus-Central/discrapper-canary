@@ -75,12 +75,15 @@ async function T(e) {
     )
         try {
             i.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_START", applicationId: t, userIds: n });
-            let e = await r.Bo.get({
+            let e = (
+                await r.Bo.get({
                     url: u.Rsh.SOCIAL_LAYER_APPLCIATION_RECOMMENDATIONS(t),
                     rejectWithError: !0,
                     query: { user_ids: n, max_recommendations: s, include_wishlists: l },
-                }),
-                o = (0, a.ty)(e.body);
+                })
+            ).body;
+            null != e.skus && e.skus.length > 0 && i.h.dispatch({ type: "SKUS_FETCH_SUCCESS", skus: e.skus });
+            let o = (0, a.ty)(e);
             return (
                 i.h.dispatch({
                     type: "SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_SUCCESS",

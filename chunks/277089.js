@@ -1,17 +1,18 @@
-n.d(t, { A: () => o });
+"use strict";
+n.d(t, { A: () => c });
 var i = n(64700),
     l = n(505779),
     a = n(311907),
-    s = n(970163),
-    r = n(184989);
-let o = function (e, t) {
-    let [n, o] = i.useState(),
-        c = i.useRef(null),
+    r = n(970163),
+    s = n(184989);
+let c = function (e, t) {
+    let [n, c] = i.useState(),
+        o = i.useRef(null),
         d = i.useRef(t);
     i.useEffect(() => {
         d.current = t;
     }, [t]);
-    let u = (0, a.bG)([r.A], () => n?.guild?.id != null && r.A.isMember(n?.guild?.id)),
+    let u = (0, a.bG)([s.A], () => n?.guild?.id != null && s.A.isMember(n?.guild?.id)),
         m = i.useMemo(
             () =>
                 e?.websites?.find((e) => {
@@ -25,9 +26,9 @@ let o = function (e, t) {
             let e = async (e) => {
                 let t = e.split("/").pop();
                 if (null != t) {
-                    if (c.current?.toLowerCase() === t.toLowerCase()) return;
-                    let e = await (0, s.A)(t);
-                    !0 !== e.banned && ((c.current = t), o(e.invite), null != e.invite && d.current?.(e.invite));
+                    if (o.current?.toLowerCase() === t.toLowerCase()) return;
+                    let e = await (0, r.A)(t);
+                    !0 !== e.banned && ((o.current = t), c(e.invite), null != e.invite && d.current?.(e.invite));
                 }
             };
             null != m && e(m.url);

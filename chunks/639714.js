@@ -1,33 +1,34 @@
-n.d(t, { A: () => A, o: () => N });
+"use strict";
+n.d(t, { A: () => E, o: () => b });
 var i = n(627968),
     l = n(64700),
     a = n(503698),
-    s = n.n(a),
-    r = n(505779),
-    o = n(311907),
-    c = n(397927),
+    r = n.n(a),
+    s = n(505779),
+    c = n(311907),
+    o = n(397927),
     d = n(73153),
     u = n(714991),
     m = n(970163),
     x = n(184989),
-    g = n(486020),
-    h = n(240248),
-    f = n(409626),
-    j = n(305080),
+    h = n(486020),
+    f = n(240248),
+    g = n(409626),
+    _ = n(305080),
     p = n(652215),
-    _ = n(985018),
+    v = n(985018),
     I = n(851822),
-    v = n(921380),
-    E = n(20440);
-function A(e) {
-    let { detectedGame: t, trackClick: n, onInviteResolved: a, closeModal: h } = e,
-        [j, E] = l.useState(),
-        A = (0, o.bG)([x.A], () => j?.guild?.id != null && x.A.isMember(j?.guild?.id)),
-        N = l.useMemo(
+    j = n(921380),
+    A = n(20440);
+function E(e) {
+    let { detectedGame: t, trackClick: n, onInviteResolved: a, closeModal: f } = e,
+        [_, A] = l.useState(),
+        E = (0, c.bG)([x.A], () => _?.guild?.id != null && x.A.isMember(_?.guild?.id)),
+        b = l.useMemo(
             () =>
                 t.websites?.find((e) => {
                     let { category: t } = e;
-                    return t === r.V.DISCORD;
+                    return t === s.V.DISCORD;
                 }),
             [t.websites],
         );
@@ -36,155 +37,155 @@ function A(e) {
             let e = async (e) => {
                 let t = e.split("/").pop();
                 if (null != t) {
-                    if (null != j && j.code.toLowerCase() === t.toLowerCase()) return;
+                    if (null != _ && _.code.toLowerCase() === t.toLowerCase()) return;
                     let e = await (0, m.A)(t);
-                    !0 !== e.banned && (E(e.invite), null != e.invite && a?.(e.invite));
+                    !0 !== e.banned && (A(e.invite), null != e.invite && a?.(e.invite));
                 }
             };
-            null != N && e(N.url);
-        }, [N, a, j]),
-        null == j || null == j.guild || !j.guild.features.includes(p.GuildFeatures.VERIFIED))
+            null != b && e(b.url);
+        }, [b, a, _]),
+        null == _ || null == _.guild || !_.guild.features.includes(p.GuildFeatures.VERIFIED))
     )
         return null;
-    let C = g.Ay.getGuildIconURL({ id: j.guild.id, icon: j.guild.icon, size: 32 });
+    let N = h.Ay.getGuildIconURL({ id: _.guild.id, icon: _.guild.icon, size: 32 });
     return (0, i.jsxs)("div", {
         className: I.fi,
         children: [
-            (0, i.jsx)(c.Heading, {
+            (0, i.jsx)(o.Heading, {
                 className: I.bV,
                 variant: "text-xs/semibold",
                 color: "text-default",
-                children: _.intl.string(_.t.kBDZSL),
+                children: v.intl.string(v.t.kBDZSL),
             }),
             (0, i.jsxs)("div", {
-                className: s()(I.nM, I.mX),
+                className: r()(I.nM, I.mX),
                 children: [
                     (0, i.jsx)("img", {
-                        className: v.$f,
-                        src: C,
-                        alt: _.intl.formatToPlainString(_.t.xm6W9D, { guildName: j.guild.name }),
+                        className: j.$f,
+                        src: N,
+                        alt: v.intl.formatToPlainString(v.t.xm6W9D, { guildName: _.guild.name }),
                     }),
                     (0, i.jsxs)("div", {
-                        className: v.U5,
+                        className: j.U5,
                         children: [
                             (0, i.jsxs)("div", {
-                                className: v.YS,
+                                className: j.YS,
                                 children: [
-                                    (0, i.jsx)(c.Text, { variant: "text-sm/semibold", children: j.guild.name }),
-                                    (0, i.jsx)(u.A, { guild: j.guild, size: 16 }),
+                                    (0, i.jsx)(o.Text, { variant: "text-sm/semibold", children: _.guild.name }),
+                                    (0, i.jsx)(u.A, { guild: _.guild, size: 16 }),
                                 ],
                             }),
-                            null != j.approximate_member_count &&
-                                (0, i.jsx)(c.Text, {
+                            null != _.approximate_member_count &&
+                                (0, i.jsx)(o.Text, {
                                     variant: "text-xxs/normal",
                                     color: "text-muted",
-                                    children: _.intl.format(_.t.zRl6XR, { count: j.approximate_member_count }),
+                                    children: v.intl.format(v.t.zRl6XR, { count: _.approximate_member_count }),
                                 }),
                         ],
                     }),
                 ],
             }),
-            (0, i.jsx)(c.Button, {
+            (0, i.jsx)(o.Button, {
                 variant: "secondary",
-                text: A ? _.intl.string(_.t.cEnaWx) : _.intl.string(_.t.XpeFYr),
+                text: E ? v.intl.string(v.t.cEnaWx) : v.intl.string(v.t.XpeFYr),
                 onClick: () => {
-                    h(),
-                        n(f.Ws.JoinOfficialServer),
-                        d.h.dispatch({ type: "INVITE_MODAL_OPEN", invite: j, code: j.code, context: p.BRT.APP });
+                    f(),
+                        n(g.Ws.JoinOfficialServer),
+                        d.h.dispatch({ type: "INVITE_MODAL_OPEN", invite: _, code: _.code, context: p.BRT.APP });
                 },
                 fullWidth: !0,
             }),
         ],
     });
 }
-function N(e) {
+function b(e) {
     let { trackClick: t, closeModal: n } = e,
-        { canStartAuthorization: l, hasAlreadyLinked: a, officialInvite: s, isMember: r } = (0, j.c)();
-    if (null == s || null == s.guild || !s.guild.features.includes(p.GuildFeatures.VERIFIED)) return null;
-    let o = g.Ay.getGuildIconURL({ id: s.guild.id, icon: s.guild.icon, size: 48 }),
-        m = g.Ay.getGuildSplashURL({ id: s.guild.id, splash: s.guild.splash }),
+        { canStartAuthorization: l, hasAlreadyLinked: a, officialInvite: r, isMember: s } = (0, _.c)();
+    if (null == r || null == r.guild || !r.guild.features.includes(p.GuildFeatures.VERIFIED)) return null;
+    let c = h.Ay.getGuildIconURL({ id: r.guild.id, icon: r.guild.icon, size: 48 }),
+        m = h.Ay.getGuildSplashURL({ id: r.guild.id, splash: r.guild.splash }),
         x = (l && !a) || null == m,
         I = (0, i.jsx)("img", {
-            className: E.$f,
-            src: o,
-            alt: _.intl.formatToPlainString(_.t.xm6W9D, { guildName: s.guild.name }),
+            className: A.$f,
+            src: c,
+            alt: v.intl.formatToPlainString(v.t.xm6W9D, { guildName: r.guild.name }),
         }),
-        v = x ? E.To : E.Kt,
-        A = x ? E.yj : E.FS;
+        j = x ? A.To : A.Kt,
+        E = x ? A.yj : A.FS;
     return (0, i.jsxs)("div", {
-        className: E.uW,
+        className: A.uW,
         children: [
-            (0, i.jsx)(c.Heading, {
-                className: E.Gf,
+            (0, i.jsx)(o.Heading, {
+                className: A.Gf,
                 variant: "heading-sm/semibold",
                 color: "text-strong",
-                children: _.intl.string(_.t["U2N+ci"]),
+                children: v.intl.string(v.t["U2N+ci"]),
             }),
             (0, i.jsxs)("div", {
-                className: E.kL,
+                className: A.kL,
                 children: [
-                    !x && null != m && (0, i.jsx)("img", { className: E.ll, src: m, alt: "" }),
+                    !x && null != m && (0, i.jsx)("img", { className: A.ll, src: m, alt: "" }),
                     (0, i.jsxs)("div", {
-                        className: E.hQ,
+                        className: A.hQ,
                         children: [
                             (0, i.jsxs)("div", {
-                                className: v,
+                                className: j,
                                 children: [
                                     x
                                         ? I
                                         : (0, i.jsx)("div", {
-                                              className: E._C,
-                                              children: (0, i.jsx)("div", { className: E.kW, children: I }),
+                                              className: A._C,
+                                              children: (0, i.jsx)("div", { className: A.kW, children: I }),
                                           }),
                                     (0, i.jsxs)("div", {
-                                        className: A,
+                                        className: E,
                                         children: [
                                             (0, i.jsxs)("div", {
-                                                className: E.YS,
+                                                className: A.YS,
                                                 children: [
-                                                    (0, i.jsx)(u.A, { guild: s.guild, size: 16 }),
-                                                    (0, i.jsx)(c.Heading, {
+                                                    (0, i.jsx)(u.A, { guild: r.guild, size: 16 }),
+                                                    (0, i.jsx)(o.Heading, {
                                                         variant: "heading-md/semibold",
                                                         color: "text-default",
-                                                        children: s.guild.name,
+                                                        children: r.guild.name,
                                                     }),
                                                 ],
                                             }),
-                                            !(0, h.uJ)(s.guild?.description) &&
-                                                (0, i.jsx)(c.Text, {
+                                            !(0, f.uJ)(r.guild?.description) &&
+                                                (0, i.jsx)(o.Text, {
                                                     variant: "text-sm/medium",
                                                     color: "text-muted",
-                                                    children: s.guild?.description,
+                                                    children: r.guild?.description,
                                                 }),
-                                            null != s.approximate_member_count || null != s.approximate_presence_count
+                                            null != r.approximate_member_count || null != r.approximate_presence_count
                                                 ? (0, i.jsxs)("div", {
-                                                      className: E.iR,
+                                                      className: A.iR,
                                                       children: [
-                                                          null != s.approximate_presence_count &&
+                                                          null != r.approximate_presence_count &&
                                                               (0, i.jsxs)("div", {
-                                                                  className: E.Tb,
+                                                                  className: A.Tb,
                                                                   children: [
-                                                                      (0, i.jsx)("i", { className: E._o }),
-                                                                      (0, i.jsx)(c.Text, {
+                                                                      (0, i.jsx)("i", { className: A._o }),
+                                                                      (0, i.jsx)(o.Text, {
                                                                           variant: "text-xs/normal",
                                                                           color: "text-muted",
-                                                                          children: _.intl.format(_.t["LC+S+m"], {
+                                                                          children: v.intl.format(v.t["LC+S+m"], {
                                                                               membersOnline:
-                                                                                  s.approximate_presence_count,
+                                                                                  r.approximate_presence_count,
                                                                           }),
                                                                       }),
                                                                   ],
                                                               }),
-                                                          null != s.approximate_member_count &&
+                                                          null != r.approximate_member_count &&
                                                               (0, i.jsxs)("div", {
-                                                                  className: E.Tb,
+                                                                  className: A.Tb,
                                                                   children: [
-                                                                      (0, i.jsx)("i", { className: E.jk }),
-                                                                      (0, i.jsx)(c.Text, {
+                                                                      (0, i.jsx)("i", { className: A.jk }),
+                                                                      (0, i.jsx)(o.Text, {
                                                                           variant: "text-xs/normal",
                                                                           color: "text-muted",
-                                                                          children: _.intl.format(_.t.zRl6XR, {
-                                                                              count: s.approximate_member_count,
+                                                                          children: v.intl.format(v.t.zRl6XR, {
+                                                                              count: r.approximate_member_count,
                                                                           }),
                                                                       }),
                                                                   ],
@@ -196,16 +197,16 @@ function N(e) {
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(c.Button, {
+                            (0, i.jsx)(o.Button, {
                                 variant: "secondary",
-                                text: r ? _.intl.string(_.t.cEnaWx) : _.intl.string(_.t.XpeFYr),
+                                text: s ? v.intl.string(v.t.cEnaWx) : v.intl.string(v.t.XpeFYr),
                                 onClick: () => {
                                     n(),
-                                        t(f.Ws.JoinOfficialServer),
+                                        t(g.Ws.JoinOfficialServer),
                                         d.h.dispatch({
                                             type: "INVITE_MODAL_OPEN",
-                                            invite: s,
-                                            code: s.code,
+                                            invite: r,
+                                            code: r.code,
                                             context: p.BRT.APP,
                                         });
                                 },

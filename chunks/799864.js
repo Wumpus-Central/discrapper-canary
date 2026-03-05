@@ -1,3 +1,4 @@
+"use strict";
 e.exports = {
     D$: "similarGames_a02225",
     iu: "similarGameImageWrapper_a02225",
