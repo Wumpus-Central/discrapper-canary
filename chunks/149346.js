@@ -5,8 +5,8 @@ var r = n(627968),
     s = n.n(i),
     a = n(158954),
     o = n(397927),
-    l = n(99696),
-    u = n(736843),
+    l = n(156312),
+    u = n(99696),
     c = n(756366),
     d = n(985018),
     _ = n(754316);
@@ -23,9 +23,9 @@ let f = (e) => {
     },
     p = (e) => {
         let { onComplete: t, onClose: n, text: i, className: s, initialCode: a } = e,
-            { sharedCheckoutContext: o } = (0, u.jP)(),
+            { contextMetadata: o } = (0, l.P5)(),
             c = () => {
-                (0, l.HF)({
+                (0, u.HF)({
                     initialCode: a ?? "",
                     onComplete: t,
                     onClose: n,
