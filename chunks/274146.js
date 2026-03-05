@@ -11,23 +11,23 @@ var i = n(627968),
     u = n(208882),
     h = n(938764),
     A = n(519480),
-    p = n(352123),
-    g = n(372536),
-    m = n(268965),
+    m = n(352123),
+    p = n(372536),
+    g = n(491346),
     _ = n(667369),
     f = n(647026),
     x = n(946116),
     C = n(652215),
     E = n(650583),
-    I = n(10544);
+    I = n(875514);
 let N = (e) => {
     let { channel: t, guild: N } = e,
         {
             currentCategoryId: b,
             directoryEntries: S,
             categoryCounts: T,
-            allEntriesCount: y,
-            isLoading: v,
+            allEntriesCount: v,
+            isLoading: y,
         } = (0, l.cf)([A.A], () => {
             let e = A.A.getCurrentCategoryId(t.id),
                 n = A.A.getDirectoryEntries(t.id, e === x.mU.ALL ? null : e),
@@ -86,7 +86,7 @@ let N = (e) => {
                 primary_category_id: b,
             });
         }, [t.id, N.id, b]);
-    let w = (0, p.b)(t),
+    let w = (0, m.b)(t),
         k = s.useMemo(
             () =>
                 w
@@ -132,8 +132,8 @@ let N = (e) => {
         : null == j && null == b
           ? (0, i.jsx)("div", { className: I.$$, children: (0, i.jsx)(r.y$y, { className: I.u1 }) })
           : j?.length === 0 && null == b
-            ? (0, i.jsx)("div", { className: I.$$, children: (0, i.jsx)(g.A, { guild: N, onAddGuild: k }) })
-            : (0, i.jsx)(m.A, {
+            ? (0, i.jsx)("div", { className: I.$$, children: (0, i.jsx)(p.A, { guild: N, onAddGuild: k }) })
+            : (0, i.jsx)(g.A, {
                   channel: t,
                   searchQuery: M,
                   setSearchQuery: D,
@@ -146,7 +146,7 @@ let N = (e) => {
                   },
                   directoryEntries: j,
                   categoryCounts: T,
-                  allEntriesCount: y,
-                  isLoading: v,
+                  allEntriesCount: v,
+                  isLoading: y,
               });
 };

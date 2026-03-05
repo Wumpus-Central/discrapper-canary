@@ -3,7 +3,7 @@ var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(475539),
+    r = n(380278),
     o = n(311907),
     c = n(397927),
     d = n(964486),
@@ -32,10 +32,10 @@ var i = n(627968),
     O = n(652215),
     L = n(806931),
     P = n(788868),
-    k = n(731854),
-    w = n(734317),
+    w = n(731854),
+    k = n(3683),
     U = n(985018),
-    G = n(632998);
+    G = n(311192);
 function F(e) {
     let { onSettingsButtonClick: t, wide: n, showOutputDevices: s = !1, showSearchBar: F = !0 } = e,
         [H, B] = l.useState(""),
@@ -49,7 +49,7 @@ function F(e) {
             onElementResizeEnd: (e) => {},
             orientation: u.R.VERTICAL_TOP,
         });
-    (0, U.useSyncMessages)(w.messagesLoader);
+    (0, U.useSyncMessages)(k.messagesLoader);
     let Y = (0, o.bG)([C.default], () => (0, I.ki)(C.default.getCurrentUser())),
         q = (0, o.bG)([N.A], () => N.A.getCatalogUpdateTime()),
         [J, $] = l.useState(!1),
@@ -139,7 +139,7 @@ function F(e) {
                     className: a()(G.N$, { [G.rd]: null != Q }),
                     children: [
                         (0, i.jsx)(f.U, {
-                            deviceType: k.oh.AUDIO_INPUT,
+                            deviceType: w.oh.AUDIO_INPUT,
                             location: "VoiceFiltersPopout",
                             onOpen: () => {
                                 S.default.track(O.HAw.VOICE_FILTER_MIC_SELECTOR_OPENED, {
@@ -150,7 +150,7 @@ function F(e) {
                         }),
                         s &&
                             (0, i.jsx)(f.U, {
-                                deviceType: k.oh.AUDIO_OUTPUT,
+                                deviceType: w.oh.AUDIO_OUTPUT,
                                 location: "VoiceFiltersPopout",
                                 popoutPosition: "top",
                             }),

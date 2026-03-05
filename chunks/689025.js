@@ -21,8 +21,8 @@ var i = n(627968),
     E = n(323443),
     I = n(113783),
     N = n(69407),
-    S = n(446600),
-    b = n(96566),
+    b = n(446600),
+    S = n(96566),
     T = n(175452),
     v = n(924985),
     y = n(734057),
@@ -41,8 +41,8 @@ n(281405);
 var V = n(652215),
     B = n(349828),
     H = n(985018),
-    F = n(728444),
-    K = n(834201);
+    F = n(719550),
+    K = n(24383);
 class W extends U.Ay {
     channelItemRef = s.createRef();
     state = { shouldShowGuildVerificationPopout: !1 };
@@ -159,7 +159,7 @@ class W extends U.Ay {
             } = this.props,
             { shouldShowGuildVerificationPopout: I } = this.state,
             N = this.getVoiceStatesCount(),
-            S = (0, i.jsxs)("li", {
+            b = (0, i.jsxs)("li", {
                 className: r()(this.getModeClass(), { [F.r9]: this.isDisabled() }),
                 "data-dnd-name": e.name,
                 children: [
@@ -215,7 +215,7 @@ class W extends U.Ay {
                     this.renderVoiceUsers(),
                 ],
             });
-        return A && (S = o(S)), h && (S = l(a(S))), S;
+        return A && (b = o(b)), h && (b = l(a(b))), b;
     }
 }
 let Y = (0, A.a)((0, m.F)(W));
@@ -240,11 +240,11 @@ function z(e) {
         }),
         h = (0, a.bG)([v.A], () => v.A.isCollapsed(n.parent_id)),
         A = (0, T.Ay)(n.id),
-        m = (0, a.bG)([S.A], () => S.A.getStageInstanceByChannel(n.id), [n.id]),
+        m = (0, a.bG)([b.A], () => b.A.getStageInstanceByChannel(n.id), [n.id]),
         p = (0, I.zy)(n.id, N.ip.AUDIENCE),
         { isSubscriptionGated: g, needSubscriptionToAccess: _ } = (0, f.A)(n.id),
         x = (0, a.bG)([M.Ay], () => M.Ay.isFavorite(t.id, n.id)),
-        C = (0, b.xn)(n.id),
+        C = (0, S.xn)(n.id),
         E = (0, P.A)({
             channel: n,
             isChannelSelected: !1,

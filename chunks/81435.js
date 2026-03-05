@@ -11,9 +11,9 @@ var i = n(627968),
     u = n(397927),
     h = n(442433),
     A = n(104171),
-    p = n(47167),
-    g = n(713654),
-    m = n(427930),
+    m = n(47167),
+    p = n(713654),
+    g = n(427930),
     _ = n(427209),
     f = n(763754),
     x = n(291812),
@@ -24,8 +24,8 @@ var i = n(627968),
     b = n(995273),
     S = n(854627),
     T = n(95701),
-    y = n(260509),
-    v = n(734057),
+    v = n(260509),
+    y = n(734057),
     j = n(256587),
     R = n(71393),
     O = n(851109),
@@ -35,13 +35,13 @@ var i = n(627968),
     G = n(559873),
     U = n(346061),
     P = n(652215),
-    w = n(228160),
+    w = n(21786),
     k = n(985018),
-    V = n(471135);
+    V = n(823221);
 function B(e) {
     let { message: t, channel: n, focusProps: l, isSelected: a, isUnread: o, groupedMessages: h } = e,
-        A = n.type === P.rbe.UNKNOWN ? u.N$i : (0, g.gU)(n, null),
-        m = (0, p.Ay)(n, !1),
+        A = n.type === P.rbe.UNKNOWN ? u.N$i : (0, p.gU)(n, null),
+        g = (0, m.Ay)(n, !1),
         _ = (0, c.bG)([R.A], () => R.A.getGuild(n.getGuildId())),
         { nick: x, colorString: C } = (0, f.Ay)(t),
         { avatarSrc: N, eventHandlers: b } = (0, S.A)({
@@ -51,7 +51,7 @@ function B(e) {
             animateOnHover: !0,
         }),
         T = n.type !== P.rbe.GUILD_ANNOUNCEMENT || null == _,
-        v = (0, E.y)({ channel: n, message: t, user: t.author, compact: !0, isRepliedMessage: !0 }),
+        y = (0, E.y)({ channel: n, message: t, user: t.author, compact: !0, isRepliedMessage: !0 }),
         O = (0, i.jsx)("div", {
             className: V.Ys,
             inert: !0,
@@ -77,13 +77,13 @@ function B(e) {
                                   "aria-label": "User Avatar",
                                   src: N,
                                   size: u._3J.SIZE_32,
-                                  cornerIconUrl: null != _ ? (0, y.Iv)(_, 24) : void 0,
+                                  cornerIconUrl: null != _ ? (0, v.Iv)(_, 24) : void 0,
                                   cornerIconOffsetX: 4,
                                   cornerIconOffsetY: 3,
                               })
                             : (0, i.jsx)(U.h, {
                                   "aria-label": "Guild Icon",
-                                  src: (0, y.Iv)(_, 32),
+                                  src: (0, v.Iv)(_, 32),
                                   size: u._3J.SIZE_32,
                                   cornerIconUrl: t.author.getAvatarURL(_.id, 24),
                                   cornerIconOffsetX: 4,
@@ -108,7 +108,7 @@ function B(e) {
                                                       style: { color: C ?? void 0 },
                                                       children: (0, i.jsx)(d.A, { children: O }),
                                                   }),
-                                                  v,
+                                                  y,
                                               ],
                                           })
                                         : (0, i.jsx)(d.A, {
@@ -145,7 +145,7 @@ function B(e) {
                                         variant: "text-sm/medium",
                                         lineClamp: 1,
                                         className: r()(V.HA, { [V.gy]: o, [V.wH]: a }),
-                                        children: [m, !T && ` \xb7 ${x}`],
+                                        children: [g, !T && ` \xb7 ${x}`],
                                     }),
                                 ],
                             }),
@@ -212,11 +212,11 @@ function K(e) {
                     s = "" === t.content,
                     o = t.embeds.some((e) => e.type === P.Auw.GIFV),
                     c = ((e = t.embeds.some((e) => e.type === P.Auw.GIFV)), t.attachments.length + +!!e),
-                    d = (0, m.A)(t),
+                    d = (0, g.A)(t),
                     h = t.stickerItems.length > 0,
                     A = t.isPoll(),
-                    p = t.type === P.lAJ.POLL_RESULT,
-                    g = t.hasFlag(P.pr7.IS_VOICE_MESSAGE),
+                    m = t.type === P.lAJ.POLL_RESULT,
+                    p = t.hasFlag(P.pr7.IS_VOICE_MESSAGE),
                     f = t.type === P.lAJ.USER_JOIN,
                     C = null;
                 1 === c
@@ -225,11 +225,11 @@ function K(e) {
                       ? (C = u.sYc)
                       : d
                         ? (C = _.A)
-                        : A || p
+                        : A || m
                           ? (C = u.YRe)
                           : h
                             ? (C = u.tEP)
-                            : g && (C = u.HKD);
+                            : p && (C = u.HKD);
                 let E = !0,
                     I = null;
                 return (
@@ -238,7 +238,7 @@ function K(e) {
                             ? (I = k.intl.string(k.t["9ddYKt"]))
                             : A
                               ? ((E = !1), (I = t.poll?.question.text))
-                              : (I = p
+                              : (I = m
                                     ? k.intl.string(k.t.sad2PH)
                                     : o
                                       ? k.intl.string(k.t.p0oZmy)
@@ -248,7 +248,7 @@ function K(e) {
                                           ? k.intl.string(k.t.tCcq5p)
                                           : h
                                             ? k.intl.format(k.t.zY4v1B, { stickerName: t.stickerItems[0].name })
-                                            : g
+                                            : p
                                               ? k.intl.string(k.t.slFYgi)
                                               : f
                                                 ? k.intl.string(k.t.Yvvfw9)
@@ -285,10 +285,10 @@ let W = (0, s.memo)(
         let { message: t, groupedMessages: l, isUnread: a } = e,
             d = t.message,
             A = (0, M.op)(),
-            { params: p } = (0, o.W5)(),
-            g = (0, c.bG)([v.A], () => {
+            { params: m } = (0, o.W5)(),
+            p = (0, c.bG)([y.A], () => {
                 if (null == d) return null;
-                let e = v.A.getChannel(t.channelId);
+                let e = y.A.getChannel(t.channelId);
                 return null != e
                     ? e
                     : new T.jb({
@@ -298,19 +298,19 @@ let W = (0, s.memo)(
                           name: k.intl.string(k.t.J90oLW),
                       });
             }),
-            m = (0, D.s)((e) => e.isMenuOpenForMessage(d?.id ?? null)),
+            g = (0, D.s)((e) => e.isMenuOpenForMessage(d?.id ?? null)),
             { notificationCenterVariant: _ } = (0, O.X8)({ location: "NotificationsInboxMessageUnit" }),
-            f = s.useMemo(() => `${d?.author.username}: ${g?.name}`, [d?.author.username, g?.name]),
+            f = s.useMemo(() => `${d?.author.username}: ${p?.name}`, [d?.author.username, p?.name]),
             x = l?.map((e) => e.message).filter((e) => null != e) ?? [];
-        return null == d || null == g
+        return null == d || null == p
             ? null
             : (0, i.jsx)(u.sqX, {
                   "aria-label": f,
-                  className: r()(V.FJ, { [V.wH]: d.id === p.messageId, [V.Yj]: m }),
+                  className: r()(V.FJ, { [V.wH]: d.id === m.messageId, [V.Yj]: g }),
                   onClick: () => {
                       L.A.inboxItemClick({
                           message: d,
-                          channel: g,
+                          channel: p,
                           isUnread: a,
                           isSidebar: _ === O.U5.SIDEBAR,
                           viewId: A,
@@ -323,15 +323,15 @@ let W = (0, s.memo)(
                               e,
                               async () => {
                                   let { default: e } = await n.e("48118").then(n.bind(n, 594005));
-                                  return (t) => (0, i.jsx)(e, { ...t, channel: g });
+                                  return (t) => (0, i.jsx)(e, { ...t, channel: p });
                               },
                               { disableClickTrap: !0 },
                           );
                   },
                   children: (0, i.jsx)(B, {
                       message: d,
-                      channel: g,
-                      isSelected: d.id === p.messageId,
+                      channel: p,
+                      isSelected: d.id === m.messageId,
                       groupedMessages: x,
                       isUnread: a,
                   }),

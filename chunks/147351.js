@@ -11,21 +11,21 @@ var i = n(627968),
     m = n(576705),
     _ = n(287809),
     A = n(954571),
-    h = n(661191),
-    f = n(460350),
-    E = n(652215),
-    g = n(48447);
+    f = n(661191),
+    h = n(460350),
+    g = n(652215),
+    E = n(874377);
 function p(e) {
     let { assets: t, currentUser: n, message: i } = e,
-        l = (h.default.extractTimestamp(n.id) + h.default.extractTimestamp(i.id)) % t.length;
+        l = (f.default.extractTimestamp(n.id) + f.default.extractTimestamp(i.id)) % t.length;
     return t[l];
 }
 function x(e) {
     let { currentUser: t, channel: n, message: a, buttonLabels: d, stickers: u, event: m, eventProperties: _ } = e,
-        h = l.useMemo(() => p({ assets: u, currentUser: t, message: a }), [u, t, a]),
-        E = l.useMemo(() => p({ assets: d, currentUser: t, message: a }), [d, t, a]),
-        g = l.useCallback(async () => {
-            let { valid: e } = await (0, f.i)({ type: o.oU.FORM, content: "", channel: n });
+        f = l.useMemo(() => p({ assets: u, currentUser: t, message: a }), [u, t, a]),
+        g = l.useMemo(() => p({ assets: d, currentUser: t, message: a }), [d, t, a]),
+        E = l.useCallback(async () => {
+            let { valid: e } = await (0, h.i)({ type: o.oU.FORM, content: "", channel: n });
             e &&
                 (!(function (e) {
                     let { channel: t, message: n, sticker: i } = e;
@@ -39,16 +39,16 @@ function x(e) {
                             showMentionToggle: !0,
                         }),
                     );
-                })({ channel: n, message: a, sticker: h }),
+                })({ channel: n, message: a, sticker: f }),
                 (function (e) {
                     let { sticker: t, event: n, eventProperties: i } = e;
                     null != n && A.default.track(n, { ...i, sticker_id: t.id });
-                })({ sticker: h, event: m, eventProperties: _ }));
-        }, [n, a, h, m, _]);
+                })({ sticker: f, event: m, eventProperties: _ }));
+        }, [n, a, f, m, _]);
     return (0, i.jsx)(r.$nd, {
-        icon: { type: "sticker", asset: h, component: c.A },
-        text: E,
-        onClick: g,
+        icon: { type: "sticker", asset: f, component: c.A },
+        text: g,
+        onClick: E,
         variant: "secondary",
     });
 }
@@ -61,7 +61,7 @@ function C(e) {
                 let e = t.guild_id;
                 if (null == i || null == e) return !1;
                 let l = (0, d.UJ)(t),
-                    a = m.A.can(E.xBc.SEND_MESSAGES, t),
+                    a = m.A.can(g.xBc.SEND_MESSAGES, t),
                     r = u.Ay.getMember(e, i.id)?.isPending,
                     s = n.author.bot;
                 return a && !l && !r && !s;
@@ -69,7 +69,7 @@ function C(e) {
         })({ channel: t, message: n, currentUser: c });
     return null != c && A
         ? (0, i.jsx)("div", {
-              className: g.S,
+              className: E.S,
               children: (0, i.jsx)(x, {
                   currentUser: c,
                   channel: t,

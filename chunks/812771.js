@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => f, X: () => m });
+n.d(t, { A: () => f, X: () => g });
 var i,
     s = n(627968),
     l = n(64700),
@@ -11,9 +11,9 @@ var i,
     u = n(817281),
     h = n(761929),
     A = n(964404),
-    p = n(743898),
-    g = n(3651),
-    m =
+    m = n(743898),
+    p = n(83181),
+    g =
         (((i = {})[(i.PostSidebar = 0)] = "PostSidebar"),
         (i[(i.ThreadSidebar = 1)] = "ThreadSidebar"),
         (i[(i.CallChatSidebar = 2)] = "CallChatSidebar"),
@@ -31,11 +31,11 @@ function _(e) {
             orientation: h.R.HORIZONTAL_LEFT,
             throttleDuration: 16,
         });
-    return (0, s.jsx)("div", { onMouseDown: a, className: g.Di });
+    return (0, s.jsx)("div", { onMouseDown: a, className: p.Di });
 }
 function f(e) {
     let { sidebarType: t, maxWidth: n, onWidthChange: i, children: r, floatingLayer: h } = e,
-        m = l.useRef(null),
+        g = l.useRef(null),
         f = (function (e) {
             switch (e) {
                 case 0:
@@ -57,7 +57,7 @@ function f(e) {
             },
             [f],
         ),
-        I = (0, p.P)({ maxWidth: n, minWidth: 450 }),
+        I = (0, m.P)({ maxWidth: n, minWidth: 450 }),
         N = (0, d.rdh)(c.A.modules.chat.RESIZE_HANDLE_WIDTH),
         b = (0, o.clamp)(x, 450, n),
         S = I ? b : b + N;
@@ -70,20 +70,20 @@ function f(e) {
             !I && (0, s.jsx)("div", { style: { minWidth: S } }),
             (0, s.jsx)(T, {
                 children: (0, s.jsxs)("div", {
-                    className: a()(g.PA, { [g.R]: !1 }),
+                    className: a()(p.PA, { [p.R]: !1 }),
                     children: [
-                        (0, s.jsx)("div", { className: a()(g.Uc, { [g.DU]: I, [g.iK]: !I }), style: { width: S } }),
+                        (0, s.jsx)("div", { className: a()(p.Uc, { [p.DU]: I, [p.iK]: !I }), style: { width: S } }),
                         !I &&
                             (0, s.jsx)(_, {
                                 minWidth: 450,
                                 maxWidth: n,
-                                resizableNode: m,
+                                resizableNode: g,
                                 onResize: C,
                                 onResizeEnd: E,
                             }),
                         (0, s.jsx)("div", {
-                            ref: m,
-                            className: a()(g.kL, { [g.DU]: I }),
+                            ref: g,
+                            className: a()(p.kL, { [p.DU]: I }),
                             style: { width: b },
                             children: r,
                         }),

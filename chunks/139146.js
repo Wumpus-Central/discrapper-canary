@@ -16,7 +16,7 @@ var l = a(627968),
     p = a(620434),
     g = a(49999),
     f = a(985018),
-    v = a(394236);
+    v = a(60386);
 let j = { sm: "xs", md: "refresh_sm" },
     y = (e) => {
         let { product: t, selectedVariantIndex: a, ...n } = e,
@@ -92,12 +92,12 @@ function _(e) {
         L = r.useRef(null),
         [R, B] = r.useState(!1),
         M = P && !R,
-        N = M ? u.C3E : u.yhu,
-        F = s()(v.normalIconColor, M && v.wishlistedOrAnimating);
+        F = M ? u.C3E : u.yhu,
+        H = s()(v.normalIconColor, M && v.wishlistedOrAnimating);
     r.useEffect(() => {
         B(!1);
     }, [t]);
-    let H = r.useCallback(
+    let N = r.useCallback(
             (e) => {
                 e.stopPropagation(), h || (_?.(), P || V.enabled ? P && R && B(!1) : B(!0), O());
             },
@@ -125,19 +125,19 @@ function _(e) {
                     i,
                 ),
                 innerRef: L,
-                onClick: H,
+                onClick: N,
                 "aria-label": G,
                 "aria-pressed": P,
                 "aria-busy": E,
                 "aria-disabled": h,
                 children: V.enabled
-                    ? (0, l.jsx)(N, { colorClass: void 0 ?? F, size: C })
+                    ? (0, l.jsx)(F, { colorClass: void 0 ?? H, size: C })
                     : (0, l.jsxs)("div", {
                           className: s()(v.iconContainer, U && v.canAnimate),
                           children: [
                               (0, l.jsx)("span", {
                                   className: s()(v.iconWrapper, U && v.canHover),
-                                  children: (0, l.jsx)(N, { colorClass: void 0 ?? F, size: C }),
+                                  children: (0, l.jsx)(F, { colorClass: void 0 ?? H, size: C }),
                               }),
                               (0, l.jsx)("span", {
                                   className: s()(v.animationOverlay, R && v.clickAnimation),

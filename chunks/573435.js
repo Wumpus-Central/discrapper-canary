@@ -7,7 +7,7 @@ var r = n(627968),
 n(883392);
 var o = n(398094),
     l = n(778712),
-    u = n(83767),
+    u = n(962917),
     c = (function (e) {
         return (
             (e.SQUIRCLE = "svg-mask-squircle"),
@@ -394,7 +394,7 @@ function C(e, t) {
         ],
     });
 }
-function b(e) {
+function R(e) {
     return (0, r.jsx)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -405,7 +405,7 @@ function b(e) {
         }),
     });
 }
-function R(e) {
+function O(e) {
     let t = `${e}-gradient`;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -428,7 +428,7 @@ function R(e) {
         ],
     });
 }
-function O(e) {
+function b(e) {
     return (0, r.jsx)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -502,7 +502,7 @@ function w(e, t) {
         ],
     });
 }
-function x(e, t) {
+function M(e, t) {
     let n = (0, l.Kj)(t),
         i = (2.5 * n.status - n.status + 2 * n.stroke) / 2,
         s = _((n.size - n.status - n.stroke - n.offset) / n.size),
@@ -520,7 +520,7 @@ function x(e, t) {
         ],
     });
 }
-function M(e, t) {
+function x(e, t) {
     let n = (0, l.Kj)(t);
     return (0, r.jsxs)("mask", {
         id: e,
@@ -738,7 +738,7 @@ function K(e) {
         ],
     });
 }
-function z(e) {
+function $(e) {
     let t = 24;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -750,7 +750,7 @@ function z(e) {
         ],
     });
 }
-function $(e) {
+function z(e) {
     return (0, r.jsx)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -913,89 +913,89 @@ let es = ei,
                 style: { position: "absolute", pointerEvents: "none", top: -1, left: -1, width: 1, height: 1 },
                 "aria-hidden": !0,
                 children: [
-                    b("svg-mask-squircle"),
+                    R("svg-mask-squircle"),
                     E("svg-mask-header-bar-badge-top", 0.25),
                     E("svg-mask-header-bar-badge-bottom", 0.75),
                     A("svg-mask-voice-user-summary-item"),
-                    R("svg-mask-vertical-fade"),
+                    O("svg-mask-vertical-fade"),
                     g("svg-mask-panel-button"),
                     h("svg-mask-channel-call-control-button"),
                     m("svg-mask-channel-call-control-button-badge-16", 16),
                     m("svg-mask-channel-call-control-button-badge-22", 22),
                     m("svg-mask-channel-call-control-button-badge-29", 29),
-                    O("svg-mask-avatar-default"),
+                    b("svg-mask-avatar-default"),
                     D("svg-mask-avatar-status-round-16", l._3.SIZE_16),
                     L("svg-mask-avatar-decoration-status-round-16", l._3.SIZE_16),
-                    M("svg-mask-avatar-status-mobile-16", l._3.SIZE_16),
+                    x("svg-mask-avatar-status-mobile-16", l._3.SIZE_16),
                     P("svg-mask-avatar-decoration-status-mobile-16", l._3.SIZE_16),
                     w("svg-mask-avatar-status-typing-16", l._3.SIZE_16),
-                    x("svg-mask-avatar-decoration-status-typing-16", l._3.SIZE_16),
+                    M("svg-mask-avatar-decoration-status-typing-16", l._3.SIZE_16),
                     D("svg-mask-avatar-status-round-20", l._3.SIZE_20),
                     L("svg-mask-avatar-decoration-status-round-20", l._3.SIZE_20),
-                    M("svg-mask-avatar-status-mobile-20", l._3.SIZE_20),
+                    x("svg-mask-avatar-status-mobile-20", l._3.SIZE_20),
                     P("svg-mask-avatar-decoration-status-mobile-20", l._3.SIZE_20),
                     w("svg-mask-avatar-status-typing-20", l._3.SIZE_20),
-                    x("svg-mask-avatar-decoration-status-typing-20", l._3.SIZE_20),
+                    M("svg-mask-avatar-decoration-status-typing-20", l._3.SIZE_20),
                     D("svg-mask-avatar-status-round-24", l._3.SIZE_24),
                     L("svg-mask-avatar-decoration-status-round-24", l._3.SIZE_24),
-                    M("svg-mask-avatar-status-mobile-24", l._3.SIZE_24),
+                    x("svg-mask-avatar-status-mobile-24", l._3.SIZE_24),
                     P("svg-mask-avatar-decoration-status-mobile-24", l._3.SIZE_24),
                     w("svg-mask-avatar-status-typing-24", l._3.SIZE_24),
-                    x("svg-mask-avatar-decoration-status-typing-24", l._3.SIZE_24),
+                    M("svg-mask-avatar-decoration-status-typing-24", l._3.SIZE_24),
                     D("svg-mask-avatar-status-round-32", l._3.SIZE_32),
                     L("svg-mask-avatar-decoration-status-round-32", l._3.SIZE_32),
-                    M("svg-mask-avatar-status-mobile-32", l._3.SIZE_32),
+                    x("svg-mask-avatar-status-mobile-32", l._3.SIZE_32),
                     P("svg-mask-avatar-decoration-status-mobile-32", l._3.SIZE_32),
                     w("svg-mask-avatar-status-typing-32", l._3.SIZE_32),
-                    x("svg-mask-avatar-decoration-status-typing-32", l._3.SIZE_32),
+                    M("svg-mask-avatar-decoration-status-typing-32", l._3.SIZE_32),
                     D("svg-mask-avatar-status-round-40", l._3.SIZE_40),
                     L("svg-mask-avatar-decoration-status-round-40", l._3.SIZE_40),
-                    M("svg-mask-avatar-status-mobile-40", l._3.SIZE_40),
+                    x("svg-mask-avatar-status-mobile-40", l._3.SIZE_40),
                     P("svg-mask-avatar-decoration-status-mobile-40", l._3.SIZE_40),
                     w("svg-mask-avatar-status-typing-40", l._3.SIZE_40),
-                    x("svg-mask-avatar-decoration-status-typing-40", l._3.SIZE_40),
+                    M("svg-mask-avatar-decoration-status-typing-40", l._3.SIZE_40),
                     D("svg-mask-avatar-status-round-44", l._3.SIZE_44),
                     L("svg-mask-avatar-decoration-status-round-44", l._3.SIZE_44),
-                    M("svg-mask-avatar-status-mobile-44", l._3.SIZE_44),
+                    x("svg-mask-avatar-status-mobile-44", l._3.SIZE_44),
                     P("svg-mask-avatar-decoration-status-mobile-44", l._3.SIZE_44),
                     w("svg-mask-avatar-status-typing-44", l._3.SIZE_44),
-                    x("svg-mask-avatar-decoration-status-typing-44", l._3.SIZE_44),
+                    M("svg-mask-avatar-decoration-status-typing-44", l._3.SIZE_44),
                     D("svg-mask-avatar-status-round-48", l._3.SIZE_48),
                     L("svg-mask-avatar-decoration-status-round-48", l._3.SIZE_48),
-                    M("svg-mask-avatar-status-mobile-48", l._3.SIZE_48),
+                    x("svg-mask-avatar-status-mobile-48", l._3.SIZE_48),
                     P("svg-mask-avatar-decoration-status-mobile-48", l._3.SIZE_48),
                     w("svg-mask-avatar-status-typing-48", l._3.SIZE_48),
-                    x("svg-mask-avatar-decoration-status-typing-48", l._3.SIZE_48),
+                    M("svg-mask-avatar-decoration-status-typing-48", l._3.SIZE_48),
                     D("svg-mask-avatar-status-round-56", l._3.SIZE_56),
                     L("svg-mask-avatar-decoration-status-round-56", l._3.SIZE_56),
-                    M("svg-mask-avatar-status-mobile-56", l._3.SIZE_56),
+                    x("svg-mask-avatar-status-mobile-56", l._3.SIZE_56),
                     P("svg-mask-avatar-decoration-status-mobile-56", l._3.SIZE_56),
                     w("svg-mask-avatar-status-typing-56", l._3.SIZE_56),
-                    x("svg-mask-avatar-decoration-status-typing-56", l._3.SIZE_56),
+                    M("svg-mask-avatar-decoration-status-typing-56", l._3.SIZE_56),
                     D("svg-mask-avatar-status-round-72", l._3.SIZE_72),
                     L("svg-mask-avatar-decoration-status-round-72", l._3.SIZE_72),
-                    M("svg-mask-avatar-status-mobile-72", l._3.SIZE_72),
+                    x("svg-mask-avatar-status-mobile-72", l._3.SIZE_72),
                     P("svg-mask-avatar-decoration-status-mobile-72", l._3.SIZE_72),
                     w("svg-mask-avatar-status-typing-72", l._3.SIZE_72),
-                    x("svg-mask-avatar-decoration-status-typing-72", l._3.SIZE_72),
+                    M("svg-mask-avatar-decoration-status-typing-72", l._3.SIZE_72),
                     D("svg-mask-avatar-status-round-80", l._3.SIZE_80),
                     L("svg-mask-avatar-decoration-status-round-80", l._3.SIZE_80),
-                    M("svg-mask-avatar-status-mobile-80", l._3.SIZE_80),
+                    x("svg-mask-avatar-status-mobile-80", l._3.SIZE_80),
                     P("svg-mask-avatar-decoration-status-mobile-80", l._3.SIZE_80),
                     w("svg-mask-avatar-status-typing-80", l._3.SIZE_80),
-                    x("svg-mask-avatar-decoration-status-typing-80", l._3.SIZE_80),
+                    M("svg-mask-avatar-decoration-status-typing-80", l._3.SIZE_80),
                     D("svg-mask-avatar-status-round-96", l._3.SIZE_96),
                     L("svg-mask-avatar-decoration-status-round-96", l._3.SIZE_96),
-                    M("svg-mask-avatar-status-mobile-96", l._3.SIZE_96),
+                    x("svg-mask-avatar-status-mobile-96", l._3.SIZE_96),
                     P("svg-mask-avatar-decoration-status-mobile-96", l._3.SIZE_96),
                     w("svg-mask-avatar-status-typing-96", l._3.SIZE_96),
-                    x("svg-mask-avatar-decoration-status-typing-96", l._3.SIZE_96),
+                    M("svg-mask-avatar-decoration-status-typing-96", l._3.SIZE_96),
                     D("svg-mask-avatar-status-round-120", l._3.SIZE_120),
                     L("svg-mask-avatar-decoration-status-round-120", l._3.SIZE_120),
-                    M("svg-mask-avatar-status-mobile-120", l._3.SIZE_120),
+                    x("svg-mask-avatar-status-mobile-120", l._3.SIZE_120),
                     P("svg-mask-avatar-decoration-status-mobile-120", l._3.SIZE_120),
                     w("svg-mask-avatar-status-typing-120", l._3.SIZE_120),
-                    x("svg-mask-avatar-decoration-status-typing-120", l._3.SIZE_120),
+                    M("svg-mask-avatar-decoration-status-typing-120", l._3.SIZE_120),
                     v("svg-mask-diagonal-facepile-16", l._3.SIZE_16),
                     S("svg-mask-diagonal-facepile-back-16", l._3.SIZE_16),
                     N("svg-mask-diagonal-facepile-status-16", l._3.SIZE_16),
@@ -1042,7 +1042,7 @@ let es = ei,
                     C("svg-mask-diagonal-facepile-typing-120", l._3.SIZE_120),
                     k("svg-mask-status-online-mobile"),
                     U("svg-mask-status-online-vr"),
-                    O("svg-mask-status-online"),
+                    b("svg-mask-status-online"),
                     G("svg-mask-status-idle"),
                     F("svg-mask-status-dnd"),
                     V("svg-mask-status-offline"),
@@ -1055,8 +1055,8 @@ let es = ei,
                     Y("svg-mask-sticker-rounded-rect"),
                     W("svg-mask-chat-input-button-notification"),
                     K("svg-mask-sticker-shop-notification"),
-                    z("svg-mask-autocomplete-emoji-upsell-emoji"),
-                    $("svg-mask-event-ticket"),
+                    $("svg-mask-autocomplete-emoji-upsell-emoji"),
+                    z("svg-mask-event-ticket"),
                     q("svg-mask-guild-icon-with-channel-type"),
                     Z("svg-mask-channel-icon-with-guild-icon"),
                     X("svg-mask-content-inventory-card-face-pile-avatar"),

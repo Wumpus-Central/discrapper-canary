@@ -32,14 +32,14 @@ var i = n(627968),
     O = n(834942),
     L = n(576705),
     P = n(287809),
-    k = n(488926),
-    w = n(137577),
+    w = n(488926),
+    k = n(137577),
     U = n(786051),
     G = n(652215),
     F = n(360469),
     H = n(53516),
     B = n(985018),
-    V = n(32385);
+    V = n(690427);
 class K extends l.PureComponent {
     state = { submitting: !1, shouldShowLurkerModeUpsellPopout: !1, shouldShowLurkerModeSuccessPopout: !1 };
     textAreaContainerRef = l.createRef();
@@ -90,7 +90,7 @@ class K extends l.PureComponent {
     handleVerifyPhone = () => {
         (0, d.mMO)(
             async () => {
-                let { default: e } = await Promise.all([n.e("84704"), n.e("45668")]).then(n.bind(n, 615715));
+                let { default: e } = await Promise.all([n.e("84704"), n.e("24676")]).then(n.bind(n, 615715));
                 return (t) => (0, i.jsx)(e, { reason: y.d.GUILD_PHONE_REQUIRED, ...t });
             },
             { modalKey: H.V },
@@ -278,14 +278,14 @@ function W(e) {
         p = (0, r.bG)([I.A], () => I.A.shouldShowPopout(l)),
         f = (0, r.bG)([L.A], () => L.A.can(G.xBc.SEND_MESSAGES, t)),
         _ = (0, r.bG)([C.A], () => C.A.getRequest(l)),
-        { showLinkedLobbyApplicationLoadingIndicator: S, requiredLinkedLobbyApplication: N } = (0, w.A)(t.linkedLobby),
+        { showLinkedLobbyApplicationLoadingIndicator: S, requiredLinkedLobbyApplication: N } = (0, k.A)(t.linkedLobby),
         b = {
             ...a,
             guild: s,
             isLurking: d,
             isFollowable: o,
             shouldShowLurkerModeSuccessPopout: p,
-            showLurkerModeUpsellPopout: d && null != s && k.MJ(G.xBc.SEND_MESSAGES, t),
+            showLurkerModeUpsellPopout: d && null != s && w.MJ(G.xBc.SEND_MESSAGES, t),
             theme: j.A.theme,
             canSendMessages: f,
             channelFollowingUsersSeen: null != c ? c.usersSeenEver : null,

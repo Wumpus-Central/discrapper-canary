@@ -16,13 +16,13 @@ var n = a(627968),
     x = a(656106),
     A = a(241837),
     C = a(116219),
-    v = a(475356),
-    b = a(489253),
+    b = a(475356),
+    v = a(489253),
     f = a(247165),
     j = a(435220),
     I = a(652215),
     E = a(985018),
-    S = a(312222);
+    S = a(50840);
 let N = function (e) {
     let { applicationId: t, onSelectApplication: a, onScroll: N, initialTab: y, onButtonsVisibilityChange: T } = e,
         R = i.useRef(null),
@@ -126,7 +126,7 @@ let N = function (e) {
                                                       }),
                                                   }),
                                               Y,
-                                              (0, n.jsx)(b.A, {
+                                              (0, n.jsx)(v.A, {
                                                   applicationId: t,
                                                   fetchState: U,
                                                   similarApplications: V,
@@ -135,7 +135,7 @@ let N = function (e) {
                                               }),
                                           ],
                                       }),
-                                      X && (0, n.jsx)(v.A, { className: S.pz, application: L, view: "side" }),
+                                      X && (0, n.jsx)(b.A, { className: S.pz, application: L, view: "side" }),
                                   ],
                               }),
                           ],

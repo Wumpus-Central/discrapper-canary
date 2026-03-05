@@ -11,9 +11,9 @@ var i = n(627968),
     u = n(957785),
     h = n(788868),
     A = n(985018),
-    p = n(733557),
-    g = n(101616);
-function m(e, t, n) {
+    m = n(55751),
+    p = n(754558);
+function g(e, t, n) {
     (0, c.A)({
         skuId: e.skuId,
         isGift: !0,
@@ -30,7 +30,7 @@ function _(e, t) {
             analyticsLocations: r,
             onViewWishlist: c,
             isSingleCard: h = !1,
-            wishlistId: g,
+            wishlistId: p,
             showTypeTooltip: _ = !1,
             cardSize: f,
         } = t,
@@ -49,7 +49,7 @@ function _(e, t) {
         u.A,
         {
             onCardClick: () => {
-                C ? c() : m(e, l, r);
+                C ? c() : g(e, l, r);
             },
             tooltipConfig: N,
             shouldScalePreview: x || !b,
@@ -57,7 +57,7 @@ function _(e, t) {
                 if (x) {
                     let t = { items: e.bundleItems };
                     return (0, i.jsx)("div", {
-                        className: p.hT,
+                        className: m.hT,
                         children: (0, i.jsx)(o.X, { product: t, isHighlighted: !1, user: l }),
                     });
                 }
@@ -66,7 +66,7 @@ function _(e, t) {
             moreCount: n,
             isSingleCard: h,
             wishlistItem: e,
-            wishlistId: g,
+            wishlistId: p,
             cardSize: f,
         },
         e.skuId,
@@ -98,17 +98,17 @@ function f(e, t) {
                   }
               })(e);
     return (0, i.jsxs)("div", {
-        className: g.D5,
+        className: p.D5,
         children: [
             d,
             (0, i.jsxs)("div", {
-                className: g.S7,
+                className: p.S7,
                 children: [
                     (0, i.jsx)(r.DUT, {
                         onClick: () => {
-                            m(e, n, l);
+                            g(e, n, l);
                         },
-                        className: g.Hh,
+                        className: p.Hh,
                         "aria-label": A.intl.string(A.t.pLPjsb),
                         children: (0, i.jsx)(r.Text, {
                             variant: "text-sm/semibold",

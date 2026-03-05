@@ -1,60 +1,60 @@
-r.d(t, { A: () => x, L: () => E });
-var n = r(627968),
-    a = r(64700),
-    l = r(503698),
-    s = r.n(l),
-    i = r(230109),
-    d = r(732955),
-    u = r(688810),
-    o = r(320118),
-    c = r(954571),
-    m = r(570627),
-    _ = r(128620),
-    R = r(652215),
-    p = r(49370),
-    h = r(985018),
-    A = r(609195);
-let E = "orbs",
-    x = (e) => {
-        let { className: t, location: r } = e,
-            l = m.m.useConfig({ location: "PremiumTenureRewardsOrbsSection" }).enabled,
-            { analyticsLocations: x } = (0, u.Ay)(r),
-            N = a.useRef(null),
-            C = a.useRef(!1),
-            { passesGeneralUIInvariant: f, programReward: g } = (0, o.F)({
+n.d(t, { A: () => E, L: () => A });
+var r = n(627968),
+    a = n(64700),
+    s = n(503698),
+    l = n.n(s),
+    i = n(230109),
+    d = n(732955),
+    u = n(688810),
+    o = n(320118),
+    c = n(954571),
+    m = n(570627),
+    _ = n(128620),
+    R = n(652215),
+    h = n(723468),
+    p = n(985018),
+    x = n(204593);
+let A = "orbs",
+    E = (e) => {
+        let { className: t, location: n } = e,
+            s = m.m.useConfig({ location: "PremiumTenureRewardsOrbsSection" }).enabled,
+            { analyticsLocations: E } = (0, u.Ay)(n),
+            f = a.useRef(null),
+            N = a.useRef(!1),
+            { passesGeneralUIInvariant: C, programReward: g } = (0, o.F)({
                 location: "PremiumTenureRewardsOrbsSection",
             });
-        return f
-            ? (0, n.jsx)(u.f5, {
-                  value: x,
-                  children: (0, n.jsx)(i.L, {
-                      innerRef: N,
+        return C
+            ? (0, r.jsx)(u.f5, {
+                  value: E,
+                  children: (0, r.jsx)(i.L, {
+                      innerRef: f,
                       onChange: (e) => {
                           e &&
-                              !C.current &&
-                              ((C.current = !0),
+                              !N.current &&
+                              ((N.current = !0),
                               c.default.track(R.HAw.PREMIUM_TENURE_REWARDS_ORBS_SECTION_IMPRESSION, {
                                   program_state: g?.program_current_state,
                               }));
                       },
                       threshold: 0.5,
-                      children: (0, n.jsxs)("div", {
-                          ref: N,
-                          id: E,
-                          className: s()(A.uW, A.Uv, A.qr, t, { [A.J4]: l }),
+                      children: (0, r.jsxs)("div", {
+                          ref: f,
+                          id: A,
+                          className: l()(x.uW, x.Uv, x.qr, t, { [x.J4]: s }),
                           children: [
-                              (0, n.jsx)(d.DZT, {
-                                  variant: l ? "display-sm" : "heading-xxl/extrabold",
-                                  className: A.R_,
+                              (0, r.jsx)(d.DZT, {
+                                  variant: s ? "display-sm" : "heading-xxl/extrabold",
+                                  className: x.R_,
                                   style: { textAlign: "start" },
-                                  children: h.intl.string(p.default.EdGvBM),
+                                  children: p.intl.string(h.default.EdGvBM),
                               }),
-                              (0, n.jsx)(d.EYj, {
-                                  variant: l ? "text-md/medium" : "text-lg/normal",
-                                  className: s()(A.VA, A.dO),
-                                  children: h.intl.string(p.default["2KoHRF"]),
+                              (0, r.jsx)(d.EYj, {
+                                  variant: s ? "text-md/medium" : "text-lg/normal",
+                                  className: l()(x.VA, x.dO),
+                                  children: p.intl.string(h.default["2KoHRF"]),
                               }),
-                              (0, n.jsx)(_.A, {}),
+                              (0, r.jsx)(_.A, {}),
                           ],
                       }),
                   }),

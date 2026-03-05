@@ -6,7 +6,7 @@ var l = n(627968),
     a = n.n(s),
     r = n(989349),
     o = n.n(r),
-    d = n(475539),
+    d = n(380278),
     c = n(942381),
     u = n(136722),
     m = n(311907),
@@ -14,8 +14,8 @@ var l = n(627968),
     x = n(397927),
     g = n(435183),
     f = n(417454),
-    p = n(964486),
-    _ = n(148719),
+    _ = n(964486),
+    p = n(148719),
     j = n(504842),
     b = n(376708),
     v = n(207336),
@@ -29,8 +29,8 @@ var l = n(627968),
     I = n(661191),
     R = n(947094),
     M = n(919577),
-    k = n(387255),
-    w = n(422844),
+    w = n(387255),
+    k = n(422844),
     L = n(435470),
     P = n(853742),
     D = n(892110),
@@ -39,7 +39,7 @@ var l = n(627968),
     U = n(253913),
     G = n(652215),
     z = n(985018),
-    H = n(524445);
+    H = n(5395);
 let B = { width: 28, height: 28 },
     V = { width: 20, height: 20, borderRadius: 10 },
     W = (e) => {
@@ -97,7 +97,7 @@ let q = (e) => {
                 let { onboardingExpanded: t } = e;
                 return { onboardingExpanded: t };
             }, c.x),
-            { tagFilter: Y } = (0, w.R)(f.id),
+            { tagFilter: Y } = (0, k.R)(f.id),
             Z = (0, m.bG)([N.A], () => N.A.getGuild(f.getGuildId())),
             ee = (0, L.S4)(f),
             { transitions: et, setVisible: en } = (() => {
@@ -135,7 +135,7 @@ let q = (e) => {
                     a,
                     r,
                     d,
-                    { guild: c, channel: h, hasAnyThread: f, handleHide: p } = e,
+                    { guild: c, channel: h, hasAnyThread: f, handleHide: _ } = e,
                     [j, b] = i.useState(!1),
                     v = (0, D.l)(h.id),
                     A = (0, m.bG)([R.A], () => R.A.hasHidden(h.id)),
@@ -151,21 +151,21 @@ let q = (e) => {
                                 o,
                                 d,
                                 m,
-                                p = new K(),
+                                _ = new K(),
                                 j = h?.isMediaChannel() === !0;
                             return (
                                 null == c ||
                                     null == h ||
                                     j ||
                                     null == a ||
-                                    p.addStep(
-                                        ((e = (0, _.A)(h)
+                                    _.addStep(
+                                        ((e = (0, p.A)(h)
                                             ? u.kg(G.xBc.VIEW_CHANNEL, G.xBc.SEND_MESSAGES)
                                             : G.xBc.SEND_MESSAGES),
                                         (i =
                                             (t =
                                                 null != c
-                                                    ? (0, k.N)(a, h, e).filter(
+                                                    ? (0, w.N)(a, h, e).filter(
                                                           (e) =>
                                                               h.permissionOverwrites.hasOwnProperty(e.id) ||
                                                               (0, C.Oy)(e),
@@ -207,7 +207,7 @@ let q = (e) => {
                                         }),
                                     ),
                                 j ||
-                                    p.addStep(
+                                    _.addStep(
                                         ((r = null != h.topic && h.topic.length > 0),
                                         {
                                             name: z.intl.string(z.t.UgJu1e),
@@ -218,7 +218,7 @@ let q = (e) => {
                                             isDone: r,
                                         }),
                                     ),
-                                p.addStep(
+                                _.addStep(
                                     ((o = null != h.availableTags && h.availableTags.length > 0),
                                     {
                                         name: z.intl.string(z.t.xiBFCi),
@@ -235,7 +235,7 @@ let q = (e) => {
                                         isDone: o,
                                     }),
                                 ),
-                                p.addStep(
+                                _.addStep(
                                     ((d = null != h.defaultReactionEmoji),
                                     {
                                         name: z.intl.string(z.t.QlyC9s),
@@ -250,7 +250,7 @@ let q = (e) => {
                                         isDone: d,
                                     }),
                                 ),
-                                p.addStep(
+                                _.addStep(
                                     ((m = c?.id),
                                     {
                                         name: z.intl.string(z.t["6A0O64"]),
@@ -276,7 +276,7 @@ let q = (e) => {
                                         isDone: f,
                                     }),
                                 ),
-                                p
+                                _
                             );
                         }, [h, c, a, f, b])),
                     S = N.isAllDone(),
@@ -293,11 +293,11 @@ let q = (e) => {
                             j || !S || M
                                 ? clearTimeout(d.current)
                                 : (d.current = setTimeout(() => {
-                                      p();
+                                      _();
                                   }, 60 * E.A.Millis.SECOND)),
                             () => clearTimeout(d.current)
                         ),
-                        [S, M, p, j],
+                        [S, M, _, j],
                     ),
                     { onboardingSteps: N, isHidden: A, isDismissed: v, isAllDone: S }
                 );
@@ -306,7 +306,7 @@ let q = (e) => {
             eu = (0, F.ST)(),
             em = f.isMediaChannel(),
             eh = (e) => eu.getState().setOnboardingExpanded(e);
-        return ((0, p.Ay)(() => {
+        return ((0, _.Ay)(() => {
             ed && ec && es();
         }),
         ((e) => {
@@ -322,7 +322,7 @@ let q = (e) => {
         i.useEffect(() => {
             er || en(!eo);
         }, [er, en, eo]),
-        (0, p.Ay)(() => {
+        (0, _.Ay)(() => {
             (s && ec) || eh(!0);
         }),
         null == Z)

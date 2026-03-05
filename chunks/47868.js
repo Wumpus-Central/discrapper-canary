@@ -7,7 +7,7 @@ var i = n(627968),
     a = n(732955),
     o = n(397927),
     c = n(985018),
-    d = n(67170);
+    d = n(167192);
 function u(e) {
     let {
             className: t,
@@ -16,19 +16,19 @@ function u(e) {
             title: u,
             description: h,
             userCount: A,
-            onClick: p,
-            highlight: g,
-            onDismiss: m,
+            onClick: m,
+            highlight: p,
+            onDismiss: g,
         } = e,
         _ = s.useCallback(
             (e) => {
-                e.stopPropagation(), m?.();
+                e.stopPropagation(), g?.();
             },
-            [m],
+            [g],
         );
     return (0, i.jsxs)(o.DUT, {
-        className: r()(d.kL, t, null != g && { [d.U6]: g }),
-        onClick: p,
+        className: r()(d.kL, t, null != p && { [d.U6]: p }),
+        onClick: m,
         children: [
             (0, i.jsx)("div", { className: r()(d.Kk, n), children: l }),
             (0, i.jsxs)("div", {
@@ -61,7 +61,7 @@ function u(e) {
                         : null,
                 ],
             }),
-            null != m
+            null != g
                 ? (0, i.jsx)("div", { className: d.r, children: (0, i.jsx)(a.JnF, { size: "xs", onClick: _ }) })
                 : (0, i.jsx)(o._BQ, { size: "xs", color: "currentColor", className: d.OW }),
         ],

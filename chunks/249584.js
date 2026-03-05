@@ -1,8 +1,8 @@
 "use strict";
 n.d(t, {
-    Gw: () => q,
+    Gw: () => X,
     HW: () => H,
-    K8: () => X,
+    K8: () => q,
     Mr: () => J,
     UB: () => F,
     bo: () => W,
@@ -21,9 +21,9 @@ var i = n(627968),
     u = n(342494),
     h = n(775602),
     A = n(793574),
-    p = n(688810),
-    g = n(509536),
-    m = n(987144),
+    m = n(688810),
+    p = n(509536),
+    g = n(987144),
     _ = n(976860),
     f = n(71393),
     x = n(204017),
@@ -34,17 +34,17 @@ var i = n(627968),
     b = n(363487),
     S = n(828162),
     T = n(490557),
-    y = n(306113),
-    v = n(220628),
+    v = n(306113),
+    y = n(220628),
     j = n(867060),
     R = n(568065),
     O = n(652215),
     L = n(746080),
     M = n(49999),
-    D = n(294726),
-    G = n(333354),
+    D = n(738072),
+    G = n(136708),
     U = n(985018),
-    P = n(7946),
+    P = n(861236),
     w = n(108432),
     k = n(581665),
     V = n(392438),
@@ -91,10 +91,10 @@ function F(e) {
 function K(e) {
     let { guildId: t, powerups: n, channelRowRef: s, markAsDismissed: l } = e,
         a = (0, c.bG)([f.A], () => f.A.getGuild(t)?.name),
-        { onActivate: o, isLoading: d, error: u } = (0, v.A)(t, n[0]),
+        { onActivate: o, isLoading: d, error: u } = (0, y.A)(t, n[0]),
         h = (0, I.A)(n[0], !0);
     if (((0, j.A)(u), 0 === n.length)) return;
-    let p =
+    let m =
             n.length >= 3
                 ? U.intl.formatToPlainString(G.default["6Sv+3M"], {
                       perk: n[0].title,
@@ -104,7 +104,7 @@ function K(e) {
                 : 2 === n.length
                   ? U.intl.formatToPlainString(G.default.wcQOqC, { perks: `${n[0].title} & ${n[1].title}` })
                   : U.intl.formatToPlainString(G.default.ZF8NT6, { perk: n[0].title }),
-        g = 1 === n.length;
+        p = 1 === n.length;
     return (0, i.jsx)(Q, {
         size: 1 === n.length ? "video" : "lg",
         asset:
@@ -112,13 +112,13 @@ function K(e) {
                 ? (0, i.jsx)(T.b, { className: r()(P.Sl, P.SV) })
                 : (0, i.jsx)("img", { alt: "", src: h, className: P.Sl }),
         title: U.intl.formatToPlainString(G.default.LmpChE, { guildName: a }),
-        body: p,
+        body: m,
         actions: [
             {
-                text: g ? U.intl.string(G.default.gSxlHf) : U.intl.string(U.t.RzWDqY),
+                text: p ? U.intl.string(G.default.gSxlHf) : U.intl.string(U.t.RzWDqY),
                 variant: "primary",
                 onClick: (e) => {
-                    e.stopPropagation(), g ? o() : (0, S.A)(t, A.A.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS);
+                    e.stopPropagation(), p ? o() : (0, S.A)(t, A.A.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS);
                 },
                 loading: d,
             },
@@ -241,7 +241,7 @@ function z(e) {
         markAsDismissed: n,
     });
 }
-function X(e) {
+function q(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: s } = e,
         { gameName: l, gameName2: r } = (0, x.A)(),
         a = (0, c.bG)([h.A], () => h.A.useReducedMotion);
@@ -266,7 +266,7 @@ function X(e) {
                 variant: "primary",
                 onClick: () => {
                     n(M.i.TAKE_ACTION),
-                        (0, g.K)({
+                        (0, p.K)({
                             guildId: t,
                             location: { section: O.JJy.GUILD_HEADER, object: O.ZSU.BUTTON_CTA },
                             scrollToPowerupCards: !0,
@@ -277,18 +277,18 @@ function X(e) {
         markAsDismissed: n,
     });
 }
-function q(e) {
+function X(e) {
     let { guildId: t, powerup: n, channelRowRef: l, markAsDismissed: r } = e,
         { available: a } = (0, N.A)(t),
         o = n.cost - a,
         c = (0, I.A)(n, !0),
-        { analyticsLocations: d } = (0, p.Ay)(A.A.GUILD_POWERUPS_COACHMARK_BOOST_TO_UNLOCK),
+        { analyticsLocations: d } = (0, m.Ay)(A.A.GUILD_POWERUPS_COACHMARK_BOOST_TO_UNLOCK),
         u = (0, b.A)(t),
         h = s.useRef(null);
     return (0, i.jsx)(Q, {
         asset:
             n.type === R.o9.LEVEL
-                ? (0, i.jsx)(y.n, { powerup: n, eventTargetRef: h, className: P.Lj })
+                ? (0, i.jsx)(v.n, { powerup: n, eventTargetRef: h, className: P.Lj })
                 : (0, i.jsx)("img", { alt: "", src: c, className: P.Sl }),
         title: U.intl.string(G.default.n37JhA),
         body: U.intl.formatToPlainString(G.default.Yr1ogl, { boostCount: o, perkName: n.title }),
@@ -300,7 +300,7 @@ function q(e) {
                     let e = f.A.getGuild(t);
                     if (null == e) return;
                     let i = { page: O.liQ.GUILD_CHANNEL, section: O.JJy.GUILD_HEADER };
-                    await (0, m.g)({
+                    await (0, g.g)({
                         guild: e,
                         numberOfBoostsToAdd: o,
                         analyticsLocation: i,
@@ -321,13 +321,13 @@ function q(e) {
 function J(e) {
     let { guildId: t, featuredExpiringPowerup: n, channelRowRef: l, markAsDismissed: r } = e,
         a = (0, c.bG)([C.A], () => C.A.getStateForGuild(t)),
-        { analyticsLocations: d } = (0, p.Ay)(A.A.GUILD_POWERUPS_COACHMARK_EXPIRING_PERK),
+        { analyticsLocations: d } = (0, m.Ay)(A.A.GUILD_POWERUPS_COACHMARK_EXPIRING_PERK),
         u = (0, b.A)(t),
-        g = a?.allPowerups[n.skuId],
-        _ = (0, I.A)(g, !0),
+        p = a?.allPowerups[n.skuId],
+        _ = (0, I.A)(p, !0),
         x = s.useRef(null),
         E = (0, c.bG)([h.A], () => h.A.useReducedMotion);
-    if (null == g && !n.isGameServer) return null;
+    if (null == p && !n.isGameServer) return null;
     let N = n.isGameServer
             ? U.intl.string(G.default["9L0pAN"])
             : U.intl.formatToPlainString(G.default.gG8bI8, { perkName: n.name }),
@@ -342,8 +342,8 @@ function J(e) {
                   className: P.Sl,
                   stateMachine: E ? "SM_Main_Int" : "SM_Auto",
               })
-            : g?.type === R.o9.LEVEL
-              ? (0, i.jsx)(y.n, { powerup: g, eventTargetRef: x, className: P.Lj })
+            : p?.type === R.o9.LEVEL
+              ? (0, i.jsx)(v.n, { powerup: p, eventTargetRef: x, className: P.Lj })
               : (0, i.jsx)("img", { alt: "", src: _, className: P.Sl }),
         title: N,
         body: T,
@@ -355,12 +355,12 @@ function J(e) {
                     let e = f.A.getGuild(t);
                     if (null == e) return;
                     let i = { page: O.liQ.GUILD_CHANNEL, section: O.JJy.GUILD_HEADER };
-                    await (0, m.g)({
+                    await (0, g.g)({
                         guild: e,
                         numberOfBoostsToAdd: n.numExpiringBoosts,
                         analyticsLocation: i,
                         analyticsLocations: d,
-                        intent: g?.type === R.o9.PERK || n.isGameServer ? R.Pn.PERK : void 0,
+                        intent: p?.type === R.o9.PERK || n.isGameServer ? R.Pn.PERK : void 0,
                     }),
                         r(M.i.TAKE_ACTION);
                 },

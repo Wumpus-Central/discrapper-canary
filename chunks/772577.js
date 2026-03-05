@@ -7,7 +7,7 @@ var i = n(627968),
     a = n(397927),
     o = n(567305),
     c = n(985018),
-    d = n(801985);
+    d = n(46127);
 function u(e) {
     let { text: t, hasScrolled: n } = e;
     return (0, i.jsxs)("div", {
@@ -31,11 +31,11 @@ function h(e) {
         [l, r] = s.useState(),
         [a, d] = s.useState(!1),
         [h, A] = s.useState(!1),
-        { enabled: p } = (0, o.DN)(e);
+        { enabled: m } = (0, o.DN)(e);
     return (
         s.useEffect(() => {
-            p && null != t && null != l ? d(t < l) : d(!1);
-        }, [p, t, l]),
+            m && null != t && null != l ? d(t < l) : d(!1);
+        }, [m, t, l]),
         {
             horizontalScrollNotice: s.useMemo(
                 () => (a ? (0, i.jsx)(u, { text: c.intl.string(c.t.RfAAH9), hasScrolled: h }) : null),

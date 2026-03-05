@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => g });
 var i,
     r = n(627968);
 n(64700);
@@ -9,7 +9,7 @@ var l = n(503698),
     d = n(966327),
     c = n(531685),
     u = n(985018),
-    A = n(208744),
+    A = n(33802),
     h = (((i = h || {})[(i.STAFF_NOTES = 1)] = "STAFF_NOTES"), i);
 let _ = s.Ay.connectStores([c.A], () => ({ animate: c.A.isFocused() }))((e) => {
         let { user: t, className: n, animate: i } = e;
@@ -45,4 +45,4 @@ let _ = s.Ay.connectStores([c.A], () => ({ animate: c.A.isFocused() }))((e) => {
         throw Error("Unknown type");
     };
 m.Types = h;
-let p = m;
+let g = m;

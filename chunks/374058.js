@@ -15,19 +15,19 @@ var a = n(627968),
     g = n(287809),
     _ = n(957565),
     f = n(405269),
-    b = n(967954),
-    v = n(538064),
+    v = n(967954),
+    b = n(538064),
     j = n(708403),
-    C = n(260880),
-    A = n(303054),
-    T = n(231643),
-    S = n(985018),
-    y = n(76584),
-    E = n(661251);
+    A = n(260880),
+    C = n(303054),
+    y = n(231643),
+    T = n(985018),
+    S = n(891026),
+    E = n(930821);
 let N = [
     {
         key: "event",
-        cellClassName: y.Hz,
+        cellClassName: S.Hz,
         render(e) {
             let { event: t } = e;
             return t;
@@ -35,7 +35,7 @@ let N = [
     },
     {
         key: "location",
-        cellClassName: y.QN,
+        cellClassName: S.QN,
         render(e) {
             let { properties: t } = e;
             return null == t.location ? null : t.location;
@@ -44,7 +44,7 @@ let N = [
 ];
 function I(e) {
     let { children: t } = e;
-    return (0, a.jsx)(u.IpV, { className: y._D, children: (0, a.jsx)("dl", { children: t }) });
+    return (0, a.jsx)(u.IpV, { className: S._D, children: (0, a.jsx)("dl", { children: t }) });
 }
 function k(e) {
     let { name: t, children: n, copyValue: s } = e,
@@ -57,13 +57,13 @@ function k(e) {
             }
         }, [l]),
         (0, a.jsxs)("div", {
-            className: y.fY,
+            className: S.fY,
             children: [
-                (0, a.jsx)("dt", { className: y.m2, children: t }),
+                (0, a.jsx)("dt", { className: S.m2, children: t }),
                 (0, a.jsx)("dd", { children: n }),
                 (0, a.jsx)(u.DUT, {
                     tag: "span",
-                    className: y.nH,
+                    className: S.nH,
                     onClick: () => (0, _.C)(JSON.stringify(s), () => r(!0)),
                     children: l
                         ? (0, a.jsx)(u.Uzd, { color: "currentColor", size: "sm" })
@@ -78,7 +78,7 @@ let R = new Set(["client_performance_cpu", "client_performance_memory"]),
         {
             id: "details",
             name: "Details",
-            group: T.fu.NONE,
+            group: y.fu.NONE,
             render: (e) => {
                 let {
                         loggedEvent: { event: t, properties: n, timestamp: i, fingerprint: s },
@@ -91,16 +91,16 @@ let R = new Set(["client_performance_cpu", "client_performance_memory"]),
                     "data-mtctest-ignore": "true",
                     children: [
                         (0, a.jsxs)(h.Ay, {
-                            className: l()(E.jr, y.nZ),
+                            className: l()(E.jr, S.nZ),
                             children: [
                                 (0, a.jsx)(h.Ay.Icon, { icon: u.Uy2, tooltip: t }),
                                 (0, a.jsxs)(h.Ay.Title, {
-                                    wrapperClassName: y.qd,
+                                    wrapperClassName: S.qd,
                                     children: [
                                         t,
                                         (0, a.jsx)(u.DUT, {
                                             tag: "span",
-                                            className: y.KE,
+                                            className: S.KE,
                                             onClick: () => (0, _.C)(t),
                                             children: (0, a.jsx)(u.TdU, { color: "currentColor", size: "sm" }),
                                         }),
@@ -123,7 +123,7 @@ let R = new Set(["client_performance_cpu", "client_performance_memory"]),
                             ],
                         }),
                         (0, a.jsxs)(j.OA, {
-                            className: y.ZK,
+                            className: S.ZK,
                             children: [
                                 (0, a.jsx)(j.mA, {
                                     name: "Timestamp (local)",
@@ -175,7 +175,7 @@ let R = new Set(["client_performance_cpu", "client_performance_memory"]),
                                                     children:
                                                         null != i
                                                             ? (0, a.jsx)("code", { children: JSON.stringify(i) })
-                                                            : (0, a.jsx)("code", { className: y.HO, children: "null" }),
+                                                            : (0, a.jsx)("code", { className: S.HO, children: "null" }),
                                                 },
                                                 n,
                                             ),
@@ -236,50 +236,50 @@ let R = new Set(["client_performance_cpu", "client_performance_memory"]),
 function M() {
     let e = i.useRef(null),
         [t, n] = i.useState(""),
-        s = (0, d.bG)([b.A], () => b.A.loggedEventsVersion),
+        s = (0, d.bG)([v.A], () => v.A.loggedEventsVersion),
         [r, o] = i.useState(() => Object.keys(w)),
-        [m, h] = i.useState(b.A.loggedEvents),
+        [m, h] = i.useState(v.A.loggedEvents),
         x = i.useCallback((e) => {
             h(e);
         }, []);
-    (0, p.RT)(t, b.A.loggedEvents, x, D, [s]);
+    (0, p.RT)(t, v.A.loggedEvents, x, D, [s]);
     let g = m.filter((e) => {
             for (let t of r) if (w[t].filter(e)) return !0;
             return !1;
         }),
         [_, f] = i.useState(void 0),
         j = g.find((e) => e.key === _),
-        { TabBar: I, renderSelectedTab: k } = (0, T.Ay)({ tabs: O }, []);
+        { TabBar: I, renderSelectedTab: k } = (0, y.Ay)({ tabs: O }, []);
     return (0, a.jsxs)("div", {
         ref: e,
-        className: l()(E.nd, y.nd),
+        className: l()(E.nd, S.nd),
         children: [
             (0, a.jsxs)("div", {
-                className: y.rh,
+                className: S.rh,
                 children: [
                     (0, a.jsx)(c.$n, {
-                        className: y.Q$,
+                        className: S.Q$,
                         look: c.$n.Looks.BLANK,
                         size: c.$n.Sizes.ICON,
-                        onClick: v.eY,
+                        onClick: b.eY,
                         children: (0, a.jsx)("span", {
-                            title: S.intl.string(S.t.VkKicb),
+                            title: T.intl.string(T.t.VkKicb),
                             children: (0, a.jsx)(u.ucK, {
                                 size: "md",
                                 color: "currentColor",
-                                "aria-label": S.intl.string(S.t.VkKicb),
+                                "aria-label": T.intl.string(T.t.VkKicb),
                             }),
                         }),
                     }),
-                    (0, a.jsx)("div", { className: y.Bi }),
+                    (0, a.jsx)("div", { className: S.Bi }),
                     (0, a.jsx)("div", {
-                        className: y.uW,
+                        className: S.uW,
                         children: Object.entries(w).map((e) => {
                             let [t, n] = e;
                             return (0, a.jsx)(
                                 u.DUT,
                                 {
-                                    className: l()(y.pb, r.includes(t) && y.bx),
+                                    className: l()(S.pb, r.includes(t) && S.bx),
                                     onClick: () => {
                                         o((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
                                     },
@@ -292,7 +292,7 @@ function M() {
                 ],
             }),
             (0, a.jsx)("div", {
-                className: y.rh,
+                className: S.rh,
                 children: (0, a.jsx)(u.IWV, {
                     size: "sm",
                     query: t,
@@ -301,10 +301,10 @@ function M() {
                     placeholder: "Search by event name",
                 }),
             }),
-            (0, a.jsx)(A.A, { columns: N, data: g, selectedRowKey: _, onClickRow: (e) => f(e.key) }),
+            (0, a.jsx)(C.A, { columns: N, data: g, selectedRowKey: _, onClickRow: (e) => f(e.key) }),
             null != j &&
-                (0, a.jsxs)(C.A, {
-                    className: y.rf,
+                (0, a.jsxs)(A.A, {
+                    className: S.rf,
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                     children: [(0, a.jsx)(I, {}), k({ loggedEvent: j, onClose: () => f(void 0), filteredEvents: g })],

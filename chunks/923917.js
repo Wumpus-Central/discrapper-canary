@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => z, q: () => Y });
+n.d(t, { A: () => $, q: () => Y });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -24,14 +24,14 @@ var r = n(627968),
     v = n(681582),
     N = n(573435),
     C = n(71855),
-    b = n(203480),
-    R = n(670735),
-    O = n(549205),
+    R = n(203480),
+    O = n(670735),
+    b = n(549205),
     D = n(750506),
     L = n(267102),
     w = n(666347),
-    x = n(97469),
-    M = n(975616),
+    M = n(97469),
+    x = n(975616),
     P = n(611635),
     k = n(723702),
     U = n(677134),
@@ -40,7 +40,7 @@ var r = n(627968),
     V = n(869146),
     B = n(652215),
     H = n(392164),
-    j = n(32069);
+    j = n(628867);
 function Y(e) {
     let { withTitleBar: t, isFullScreen: n } = e;
     return t && k.isPlatformEmbedded && !n;
@@ -111,7 +111,7 @@ class W extends i.Component {
     registerPopoutGlobalKeybinds() {
         let { guestWindow: e } = this.props,
             t = e.document;
-        for (let e of ((this._combokeys = (0, O.I)(t.documentElement)),
+        for (let e of ((this._combokeys = (0, b.I)(t.documentElement)),
         [E.VT, E.rR, m.D, ...(this.props.keybinds ?? [])]))
             if (e.comboKeysBindGlobal)
                 for (let t of e.binds)
@@ -136,10 +136,10 @@ class W extends i.Component {
                 appContext: g,
             } = this.props,
             I = Y({ withTitleBar: s, isFullScreen: i }),
-            T = n === H.f ? w.A : R.A;
+            T = n === H.f ? w.A : O.A;
         return (0, r.jsx)(u.Kd, {
             children: (0, r.jsx)(
-                M.e,
+                x.e,
                 {
                     windowKey: n,
                     themeOverride: f,
@@ -213,7 +213,7 @@ let K = i.forwardRef(function (e, t) {
             (0, r.jsx)("div", { "data-popout-root": !0, ref: t, className: a()(d, s), children: o })
         );
     }),
-    z = i.forwardRef(function (e, t) {
+    $ = i.forwardRef(function (e, t) {
         let { guestWindow: n, isFullScreen: i } = (0, f.cf)([V.A], () => ({
             guestWindow: V.A.getWindow(e.windowKey),
             isFullScreen: V.A.isWindowFullScreen(e.windowKey),
@@ -223,10 +223,10 @@ let K = i.forwardRef(function (e, t) {
             forcedColors: g.A.useForcedColors ? "yes" : "no",
             connectedEmbeddedActivity: I.Ay.getCurrentEmbeddedActivity(),
         }));
-        (0, b.A)(n, !1);
+        (0, R.A)(n, !1);
         let { analyticsLocations: o } = (0, S.Ay)(T.A.POPOUT_WINDOW),
             { clientThemesClassName: u, clientThemesCSS: c } = (0, y.Ay)(),
-            d = (0, x.NC)(),
+            d = (0, M.NC)(),
             _ = e.themeOverride ?? d;
         return null == n
             ? null

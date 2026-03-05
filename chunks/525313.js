@@ -24,21 +24,21 @@ var r = n(627968),
     v = n(693879),
     N = n(18282),
     C = n(809854),
-    b = n(652215),
-    R = n(272984),
-    O = n(985018),
-    D = n(388277),
-    L = n(187866);
+    R = n(652215),
+    O = n(272984),
+    b = n(985018),
+    D = n(133567),
+    L = n(46e4);
 function w(e, t) {
-    return O.intl.formatToPlainString(O.t.h2yWWX, { username: t.username, activity: e });
+    return b.intl.formatToPlainString(b.t.h2yWWX, { username: t.username, activity: e });
 }
-let x = (e, t, n) => {
+let M = (e, t, n) => {
     let { artist: r, media: i } = e,
-        s = O.t["6iNxrl"],
+        s = b.t["6iNxrl"],
         a = m.Ay.getName(t.guild_id, t.id, n);
-    return O.intl.formatToMarkdownString(s, { artist: r, userName: a, media: i }).replaceAll("*", "");
+    return b.intl.formatToMarkdownString(s, { artist: r, userName: a, media: i }).replaceAll("*", "");
 };
-function M(e) {
+function x(e) {
     let { activity: t } = e,
         n = t.timestamps,
         { now: s } = (0, C.e)(),
@@ -75,14 +75,14 @@ function P(e) {
         { largeImage: U } = (0, E.nO)({ entry: C }),
         { activity: G, currentEntry: F, artist: V, title: B, user: H } = (0, S.u7)(C),
         { primaryColor: j, secondaryColor: Y } = (0, T.A)(U?.src),
-        W = (0, I.A)(b.fg2.SPOTIFY),
+        W = (0, I.A)(R.fg2.SPOTIFY),
         K = (0, a.bG)(
             [c.A, p.default],
-            () => (G?.type === b.$pd.LISTENING && null != H ? (0, _.A)(c.A, p.default, H, G) : void 0),
+            () => (G?.type === R.$pd.LISTENING && null != H ? (0, _.A)(c.A, p.default, H, G) : void 0),
             [G, H],
             o.A,
         ),
-        z = i.useCallback(() => {
+        $ = i.useCallback(() => {
             if (null == v || null == H) return;
             let e = G.timestamps?.start,
                 t = (0, g.W6)(null != e ? { start: e } : C, Date.now());
@@ -91,13 +91,13 @@ function P(e) {
                 channel: v,
                 mediaImageSrc: U?.src,
                 artist: V,
-                description: x({ artist: V, media: B }, v, H),
+                description: M({ artist: V, media: B }, v, H),
                 colors: [j, Y],
                 badges: (0, A.N)({ timestamp: t }),
             });
         }, [G, V, v, C, U?.src, j, Y, B, H]);
     if (null == G || null == F) return null;
-    let $ = V,
+    let z = V,
         q = [];
     if (F.media.provider === s.X.SPOTIFY) {
         (n = () => {
@@ -113,7 +113,7 @@ function P(e) {
             (0, u.mN)(G, H.id, e);
         };
         if (
-            (($ = (0, r.jsx)(d.A, {
+            ((z = (0, r.jsx)(d.A, {
                 artists: V,
                 canOpen: null != G.sync_id,
                 linkClassName: L.zA,
@@ -122,7 +122,7 @@ function P(e) {
             K?.syncDisabled === !1)
         ) {
             let e = () => {
-                (0, f.A)(K, R.Qp.USER_ACTIVITY_SYNC), D();
+                (0, f.A)(K, O.Qp.USER_ACTIVITY_SYNC), D();
             };
             q.push(
                 (0, r.jsx)(
@@ -131,7 +131,7 @@ function P(e) {
                         variant: "primary",
                         size: "md",
                         fullWidth: !0,
-                        text: O.intl.string(O.t.eU3inB),
+                        text: b.intl.string(b.t.eU3inB),
                         icon: l.J2m,
                         onClick: e,
                     },
@@ -146,14 +146,14 @@ function P(e) {
         entry: C,
         headerIcons:
             F.media.provider === s.X.SPOTIFY
-                ? (0, r.jsx)(N.A, { onClick: t, "aria-label": O.intl.string(O.t.rRffNz), Icon: h.A })
+                ? (0, r.jsx)(N.A, { onClick: t, "aria-label": b.intl.string(b.t.rRffNz), Icon: h.A })
                 : null,
-        userDescription: (0, g.JM)(C) ? O.t.Tzx5D2 : O.t.CcVI1T,
+        userDescription: (0, g.JM)(C) ? b.t.Tzx5D2 : b.t.CcVI1T,
         title: B,
         onClickTitle: n,
-        subtitle: $,
+        subtitle: z,
         badges: null,
-        children: G.timestamps?.start != null && (0, r.jsx)(M, { activity: G }),
+        children: G.timestamps?.start != null && (0, r.jsx)(x, { activity: G }),
     });
     return (0, r.jsxs)(y.YN, {
         children: [
@@ -164,7 +164,7 @@ function P(e) {
                     onVoiceChannelPreview: k,
                     user: H,
                     channel: v,
-                    generateReactionImage: z,
+                    generateReactionImage: $,
                     reactionImageAltText: w(V, H),
                     entry: C,
                     buttons: q,

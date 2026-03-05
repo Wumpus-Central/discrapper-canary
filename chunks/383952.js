@@ -15,20 +15,20 @@ var a = n(627968),
     g = n(362823),
     _ = n(980923),
     f = n(206018),
-    b = n(480890),
-    v = n(74848),
+    v = n(480890),
+    b = n(74848),
     j = n(77735),
-    C = n(340913),
-    A = n(277342),
-    T = n(430452),
-    S = n(383501),
-    y = n(350535),
+    A = n(340913),
+    C = n(277342),
+    y = n(430452),
+    T = n(383501),
+    S = n(350535),
     E = n(42473),
     N = n(731854),
     I = n(985018),
-    k = n(807880),
-    R = n(368149),
-    O = n(709502),
+    k = n(83214),
+    R = n(845775),
+    O = n(565204),
     w = n(973324);
 function D(e) {
     let t,
@@ -38,8 +38,8 @@ function D(e) {
             suppress: D,
             awaitingRemote: M,
             iconForeground: P,
-            onMouseEnter: L,
-            onMouseLeave: U,
+            onMouseEnter: U,
+            onMouseLeave: L,
             onClick: B,
             nameplate: G,
             shouldShowSpeakingWhileMutedTooltip: F,
@@ -49,16 +49,16 @@ function D(e) {
             dismissTooltips: K,
             speaking: z,
         } = e,
-        { showPTTIconIndicator: $ } = C.A.useConfig({ location: "MicrophoneButton" }),
-        q = (0, o.bG)([T.Ay], () => T.Ay.getMode() === N.TB.PUSH_TO_TALK),
-        Q = (0, o.bG)([T.Ay], () => T.Ay.getSettings().modeOptions.shortcut),
+        { showPTTIconIndicator: $ } = A.A.useConfig({ location: "MicrophoneButton" }),
+        q = (0, o.bG)([y.Ay], () => y.Ay.getMode() === N.TB.PUSH_TO_TALK),
+        Q = (0, o.bG)([y.Ay], () => y.Ay.getSettings().modeOptions.shortcut),
         Y = (0, o.bG)([p.A], () => p.A.getIsTutorialActive(g.v.MUTE_TUTORIAL)),
-        J = (0, o.bG)([S.A], () => null != S.A.getChannelId()),
-        { name: X } = (0, v.x5)(N.oh.AUDIO_INPUT),
+        J = (0, o.bG)([T.A], () => null != T.A.getChannelId()),
+        { name: X } = (0, b.x5)(N.oh.AUDIO_INPUT),
         { enabledInputProfiles: Z } = (0, j.d)({ location: "MicrophoneButton" }),
         ee = i.useRef(null),
         et = n || D || s,
-        en = (0, A.q)(et),
+        en = (0, C.q)(et),
         { analyticsLocations: ea } = (0, h.Ay)(m.A.AUDIO_INPUT_BUTTON),
         { Component: ei, events: es, play: el } = en,
         er = s || D ? r.O1p : ei;
@@ -69,7 +69,7 @@ function D(e) {
         : H || V
           ? {
                 tooltipType: "green_void_do_not_use",
-                tooltipText: I.intl.format(I.t.c1qUOQ, { keybind: y.dI(Q).toLocaleUpperCase() }),
+                tooltipText: I.intl.format(I.t.c1qUOQ, { keybind: S.dI(Q).toLocaleUpperCase() }),
                 tooltipForceOpen: !0,
             }
           : { tooltipText: eo };
@@ -90,7 +90,7 @@ function D(e) {
                         (0, a.jsx)(h.f5, {
                             value: ea,
                             children: (0, a.jsx)(f.A, {
-                                onInteraction: (0, b.s)("AudioDeviceMenu", m.A.ACCOUNT),
+                                onInteraction: (0, v.s)("AudioDeviceMenu", m.A.ACCOUNT),
                                 onClose: t,
                                 maybeRenderPTTCheckbox: !0,
                                 renderInputProfiles: Z.length > 0,
@@ -129,10 +129,10 @@ function D(e) {
                                 onClick: eu,
                                 onContextMenu: i,
                                 onMouseEnter: () => {
-                                    L(), es.onMouseEnter();
+                                    U(), es.onMouseEnter();
                                 },
                                 onMouseLeave: () => {
-                                    U(), es.onMouseLeave();
+                                    L(), es.onMouseLeave();
                                 },
                                 plated: null != G,
                                 redGlow: et,
@@ -155,8 +155,8 @@ function D(e) {
                                 }),
                                 onClick: i,
                                 onContextMenu: i,
-                                onMouseEnter: L,
-                                onMouseLeave: U,
+                                onMouseEnter: U,
+                                onMouseLeave: L,
                                 plated: null != G,
                                 redGlow: et,
                                 tooltipType: W ? "green_void_do_not_use" : void 0,

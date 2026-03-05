@@ -1,19 +1,19 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => m });
 var i = n(627968);
 n(64700);
 var s = n(503698),
-    a = n.n(s),
-    l = n(934551),
+    l = n.n(s),
+    a = n(934551),
     r = n(397927),
     o = n(294433),
-    c = n(842130),
-    d = n(985018),
-    u = n(705362),
-    _ = n(473169);
-let m = (e) => {
-        let { header: t, description: n, icon: s, inModal: l } = e;
+    d = n(870236),
+    c = n(985018),
+    u = n(56456),
+    _ = n(522759);
+let g = (e) => {
+        let { header: t, description: n, icon: s, inModal: a } = e;
         return (0, i.jsxs)("div", {
-            className: a()(u.nM, _.QB, { [u.zE]: l }),
+            className: l()(u.nM, _.QB, { [u.zE]: a }),
             children: [
                 (0, i.jsx)("div", { className: u.zc, children: s }),
                 (0, i.jsxs)("div", {
@@ -30,25 +30,25 @@ let m = (e) => {
             ],
         });
     },
-    A = (e) => {
+    m = (e) => {
         let { inModal: t } = e,
-            n = (0, o.y)(d.intl.string(c.default["TCzk/e"]), d.intl.string(c.default["2OqtJJ"])),
-            s = (0, o.y)(d.intl.string(c.default.ASf7XN), d.intl.string(c.default["82y87X"])),
-            a = (0, o.y)(d.intl.string(c.default["0QDVFN"]), d.intl.string(c.default["1xBHHV"])),
-            _ = d.intl.string(c.default["JvJ3P/"]),
-            A = (0, o.y)(d.intl.string(c.default.l0ChgF), d.intl.string(c.default.S2ss5X)),
-            g = (0, o.y)(d.intl.string(c.default.LDu4Uk), d.intl.string(c.default.fEgtLV)),
-            h = d.intl.string(c.default["4SCALu"]),
-            x = d.intl.string(c.default.oYf9P7),
-            p = (0, o.y)(d.intl.string(c.default["dES/2r"]), d.intl.string(c.default.ep6mdN)),
-            E = (0, o.y)(d.intl.string(c.default["30+sih"]), d.intl.string(c.default["0cuLn1"])),
-            C = (0, o.y)(d.intl.string(c.default.tHTyRh), d.intl.string(c.default.TeNlMb)),
-            T = (0, o.y)(d.intl.string(c.default.wZejZr), d.intl.string(c.default.tdgcf1));
+            n = (0, o.y)(c.intl.string(d.default["TCzk/e"]), c.intl.string(d.default["2OqtJJ"])),
+            s = (0, o.y)(c.intl.string(d.default.ASf7XN), c.intl.string(d.default["82y87X"])),
+            l = (0, o.y)(c.intl.string(d.default["0QDVFN"]), c.intl.string(d.default["1xBHHV"])),
+            _ = c.intl.string(d.default["JvJ3P/"]),
+            m = (0, o.y)(c.intl.string(d.default.l0ChgF), c.intl.string(d.default.S2ss5X)),
+            A = (0, o.y)(c.intl.string(d.default.LDu4Uk), c.intl.string(d.default.fEgtLV)),
+            h = c.intl.string(d.default["4SCALu"]),
+            p = c.intl.string(d.default.oYf9P7),
+            x = (0, o.y)(c.intl.string(d.default["dES/2r"]), c.intl.string(d.default.ep6mdN)),
+            E = (0, o.y)(c.intl.string(d.default["30+sih"]), c.intl.string(d.default["0cuLn1"])),
+            T = (0, o.y)(c.intl.string(d.default.tHTyRh), c.intl.string(d.default.TeNlMb)),
+            S = (0, o.y)(c.intl.string(d.default.wZejZr), c.intl.string(d.default.tdgcf1));
         return (0, i.jsxs)("div", {
             children: [
-                (0, i.jsx)(m, {
+                (0, i.jsx)(g, {
                     header: _,
-                    description: A,
+                    description: m,
                     icon: (0, i.jsx)(r.$yI, {
                         size: "custom",
                         width: 20,
@@ -57,9 +57,9 @@ let m = (e) => {
                     }),
                     inModal: t,
                 }),
-                (0, i.jsx)(m, {
-                    header: d.intl.string(c.default["44NEx6"]),
-                    description: g,
+                (0, i.jsx)(g, {
+                    header: c.intl.string(d.default["44NEx6"]),
+                    description: A,
                     icon: (0, i.jsx)(r.Bxc, {
                         size: "custom",
                         width: 20,
@@ -68,30 +68,30 @@ let m = (e) => {
                     }),
                     inModal: t,
                 }),
-                (0, i.jsx)(m, { header: h, description: x, icon: (0, i.jsx)(l.ChatIcon, { size: "md" }), inModal: t }),
-                (0, i.jsx)(m, {
-                    header: d.intl.string(c.default.GNs2ZH),
-                    description: d.intl.string(c.default.Ief2xc),
+                (0, i.jsx)(g, { header: h, description: p, icon: (0, i.jsx)(a.ChatIcon, { size: "md" }), inModal: t }),
+                (0, i.jsx)(g, {
+                    header: c.intl.string(d.default.GNs2ZH),
+                    description: c.intl.string(d.default.Ief2xc),
                     icon: (0, i.jsx)(r._jp, { size: "md" }),
                     inModal: t,
                 }),
-                (0, i.jsx)(m, {
-                    header: d.intl.string(c.default.PjM3r5),
-                    description: p,
+                (0, i.jsx)(g, {
+                    header: c.intl.string(d.default.PjM3r5),
+                    description: x,
                     icon: (0, i.jsx)(r.BFk, { size: "md" }),
                     inModal: t,
                 }),
-                (0, i.jsx)(m, { header: E, description: C, icon: (0, i.jsx)(l.FlagIcon, { size: "md" }), inModal: t }),
-                (0, i.jsx)(m, {
-                    header: d.intl.string(c.default.UCuHM8),
-                    description: T,
-                    icon: (0, i.jsx)(l.SettingsIcon, { size: "md" }),
+                (0, i.jsx)(g, { header: E, description: T, icon: (0, i.jsx)(a.FlagIcon, { size: "md" }), inModal: t }),
+                (0, i.jsx)(g, {
+                    header: c.intl.string(d.default.UCuHM8),
+                    description: S,
+                    icon: (0, i.jsx)(a.SettingsIcon, { size: "md" }),
                     inModal: t,
                 }),
                 (0, i.jsx)(r.Text, { className: u.x_, variant: "text-xxs/bold", color: "text-default", children: n }),
-                (0, i.jsx)(m, {
+                (0, i.jsx)(g, {
                     header: s,
-                    description: a,
+                    description: l,
                     icon: (0, i.jsx)(r.PGe, {
                         size: "custom",
                         width: 20,

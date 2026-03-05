@@ -1,4 +1,4 @@
-n.d(t, { A: () => g }), n(938796);
+n.d(t, { A: () => E }), n(938796);
 var i = n(627968),
     l = n(64700),
     a = n(665260),
@@ -6,17 +6,17 @@ var i = n(627968),
     s = n(732955),
     o = n(397927),
     c = n(274372),
-    d = n(239450),
+    d = n(17069),
     u = n(794905),
     m = n(320501),
     _ = n(998218),
     A = n(888675),
-    h = n(652215),
-    f = n(985018),
-    E = n(633232);
-function g(e) {
+    f = n(652215),
+    h = n(985018),
+    g = n(363866);
+function E(e) {
     let { message: t, compact: n } = e,
-        g = t.channel_id,
+        E = t.channel_id,
         p = (0, r.bG)(
             [m.A],
             () =>
@@ -45,16 +45,16 @@ function g(e) {
             [p],
         ),
         I = (0, r.bG)([c.A], () => c.A.getMatchingGroupClip(x, C)),
-        T = (0, r.bG)([c.A], () => null != I && null != g && c.A.wasClipSharedInChannel(I.id, g)),
-        { onShareClick: N } = (0, u.A)(g),
+        T = (0, r.bG)([c.A], () => null != I && null != E && c.A.wasClipSharedInChannel(I.id, E)),
+        { onShareClick: N } = (0, u.A)(E),
         S = l.useCallback(() => {
             null != I &&
-                null != g &&
+                null != E &&
                 t.messageReference?.message_id != null &&
-                N({ clips: [I], messageReference: { channel_id: g, message_id: t.messageReference.message_id } });
-        }, [I, g, t.messageReference, N]);
+                N({ clips: [I], messageReference: { channel_id: E, message_id: t.messageReference.message_id } });
+        }, [I, E, t.messageReference, N]);
     if (null == p || (null == x && null == C) || null == I || T) return null;
-    let R = p.attachments.find((e) => (0, a.Lt)(e.flags ?? 0, h.sbO.IS_CLIP)),
+    let R = p.attachments.find((e) => (0, a.Lt)(e.flags ?? 0, f.sbO.IS_CLIP)),
         v = null;
     if (R?.proxy_url != null) {
         let e = _.A.toURLSafe(R.proxy_url);
@@ -66,12 +66,12 @@ function g(e) {
         timestamp: t.timestamp,
         compact: n,
         additionalContent: (0, i.jsxs)("div", {
-            className: E.i,
+            className: g.i,
             children: [
                 (0, i.jsx)(d.A, { thumbnails: M, variant: "stacked" }),
-                (0, i.jsx)(s.$nd, { size: "sm", onClick: S, text: f.intl.string(f.t["5qb8EX"]), icon: o.W4J }),
+                (0, i.jsx)(s.$nd, { size: "sm", onClick: S, text: h.intl.string(h.t["5qb8EX"]), icon: o.W4J }),
             ],
         }),
-        children: f.intl.string(f.t.ThhsNG),
+        children: h.intl.string(h.t.ThhsNG),
     });
 }

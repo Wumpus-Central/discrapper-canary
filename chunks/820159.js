@@ -14,7 +14,7 @@ var r = n(627968),
     p = n(35277),
     h = n(711371),
     m = n(985018),
-    E = n(562650);
+    E = n(40672);
 function g(e, t, n) {
     let { attributes: i, children: s, element: a } = t;
     switch (a.type) {
@@ -59,8 +59,8 @@ let A = (e) => {
         v = (0, l.bG)([_.A], () => _.A.getUpload(n, s.optionName, d.C.SlashCommand), [n, s.optionName]),
         N = s.children[s.children.length - 1],
         C = null != N && h.l5.isText(N) && N.text.endsWith("\n"),
-        b = a()(E.S0, E.xP, { [E.t$]: I && A, [E.$2]: (!I || !A) && y }),
-        R = i.useCallback(() => {
+        R = a()(E.S0, E.xP, { [E.t$]: I && A, [E.$2]: (!I || !A) && y }),
+        O = i.useCallback(() => {
             h.VW.isVoid(T, s) || p.b.selectCommandOption(T, s.optionName, !0);
         }, [T, s]);
     return (
@@ -83,12 +83,12 @@ let A = (e) => {
                   })),
         (0, r.jsxs)("span", {
             ...f,
-            className: b,
+            className: R,
             children: [
                 (0, r.jsxs)("span", {
                     className: E.gA,
                     contentEditable: !1,
-                    onClick: R,
+                    onClick: O,
                     children: [s.optionDisplayName, "​"],
                 }),
                 t,

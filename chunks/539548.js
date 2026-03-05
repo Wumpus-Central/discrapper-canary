@@ -1,69 +1,69 @@
-t.d(n, { A: () => N });
-var i = t(627968);
-t(64700);
-var s = t(311907),
-    l = t(397927),
-    a = t(517164),
-    r = t(290863),
-    d = t(461213),
-    c = t(975571),
-    o = t(622543),
-    u = t(146655),
-    A = t(489379),
-    x = t(900179),
-    m = t(837924),
-    _ = t(558628),
-    p = t(842241),
-    f = t(282797),
-    h = t(518477),
-    I = t(652215),
-    j = t(985018),
-    g = t(78702),
-    b = t(781425);
-function N(e) {
-    let { user: n, currentUser: t, guildId: N, onClose: v } = e,
-        { live: T, recent: E, stream: y } = (0, u.A)(n.id),
-        { voiceChannel: C, voiceActivity: L } = (0, A.A)({ userId: n.id, guildId: N }),
-        S = (0, s.bG)([a.A], () => a.A.isFetchingUserOutbox(n.id)),
-        O = n.id === t.id,
-        P = (0, s.bG)([d.A, r.A], () => {
-            let e = O ? d.A.getStatus() : r.A.getStatus(n.id);
-            return e === l.clD.OFFLINE || e === l.clD.INVISIBLE;
+n.d(t, { A: () => b });
+var i = n(627968);
+n(64700);
+var s = n(311907),
+    r = n(397927),
+    l = n(517164),
+    a = n(290863),
+    d = n(461213),
+    o = n(975571),
+    c = n(622543),
+    u = n(146655),
+    A = n(489379),
+    m = n(900179),
+    x = n(837924),
+    f = n(558628),
+    _ = n(842241),
+    p = n(282797),
+    h = n(518477),
+    g = n(652215),
+    I = n(985018),
+    j = n(278792),
+    v = n(230836);
+function b(e) {
+    let { user: t, currentUser: n, guildId: b, onClose: N } = e,
+        { live: C, recent: y, stream: E } = (0, u.A)(t.id),
+        { voiceChannel: T, voiceActivity: L } = (0, A.A)({ userId: t.id, guildId: b }),
+        O = (0, s.bG)([l.A], () => l.A.isFetchingUserOutbox(t.id)),
+        R = t.id === n.id,
+        S = (0, s.bG)([d.A, a.A], () => {
+            let e = R ? d.A.getStatus() : a.A.getStatus(t.id);
+            return e === r.clD.OFFLINE || e === r.clD.INVISIBLE;
         }),
-        R = (0, s.bG)([o.A], () => o.A.getUserProfile(n.id)?.private === !0),
-        M = T.length > 0 || null != y,
-        G = !R && null == y && null == L && null != C,
-        D = !P && (M || G),
-        U = E.length > 0;
-    return D || U || !S
-        ? (0, i.jsxs)(l.IpV, {
-              className: g.XG,
+        P = (0, s.bG)([c.A], () => c.A.getUserProfile(t.id)?.private === !0),
+        M = C.length > 0 || null != E,
+        G = !P && null == E && null == L && null != T,
+        k = !S && (M || G),
+        U = y.length > 0;
+    return k || U || !O
+        ? (0, i.jsxs)(r.IpV, {
+              className: j.XG,
               fade: !0,
               children: [
-                  D
-                      ? (0, i.jsx)(x.A, {
-                            "aria-label": j.intl.string(j.t.J6STd9),
+                  k
+                      ? (0, i.jsx)(m.A, {
+                            "aria-label": I.intl.string(I.t.J6STd9),
                             children: (0, i.jsxs)("ul", {
-                                className: g.Ci,
+                                className: j.Ci,
                                 children: [
-                                    null != y &&
+                                    null != E &&
                                         (0, i.jsx)("li", {
-                                            children: (0, i.jsx)(p.A, {
-                                                user: n,
-                                                currentUser: t,
-                                                stream: y,
-                                                onClose: v,
+                                            children: (0, i.jsx)(_.A, {
+                                                user: t,
+                                                currentUser: n,
+                                                stream: E,
+                                                onClose: N,
                                             }),
                                         }),
-                                    T.map((e, s) =>
+                                    C.map((e, s) =>
                                         (0, i.jsx)(
                                             "li",
                                             {
-                                                children: (0, i.jsx)(m.A, {
-                                                    user: n,
-                                                    currentUser: t,
+                                                children: (0, i.jsx)(x.A, {
+                                                    user: t,
+                                                    currentUser: n,
                                                     activity: e,
-                                                    onClose: v,
+                                                    onClose: N,
                                                 }),
                                             },
                                             `live-${s}`,
@@ -71,11 +71,11 @@ function N(e) {
                                     ),
                                     G &&
                                         (0, i.jsx)("li", {
-                                            children: (0, i.jsx)(f.A, {
-                                                user: n,
-                                                currentUser: t,
-                                                voiceChannel: C,
-                                                onClose: v,
+                                            children: (0, i.jsx)(p.A, {
+                                                user: t,
+                                                currentUser: n,
+                                                voiceChannel: T,
+                                                onClose: N,
                                             }),
                                         }),
                                 ],
@@ -83,25 +83,25 @@ function N(e) {
                         })
                       : null,
                   U
-                      ? (0, i.jsx)(x.A, {
-                            heading: j.intl.string(j.t.M0zgnT),
-                            introText: O
-                                ? j.intl.format(j.t["4bk9Ak"], {
-                                      learnMoreHook: (e, n) =>
+                      ? (0, i.jsx)(m.A, {
+                            heading: I.intl.string(I.t.M0zgnT),
+                            introText: R
+                                ? I.intl.format(I.t["4bk9Ak"], {
+                                      learnMoreHook: (e, t) =>
                                           (0, i.jsx)(
-                                              l.MzZ,
-                                              { href: c.A.getArticleURL(I.MVz.ACTIVITY_STATUS_SETTINGS), children: e },
-                                              n,
+                                              r.MzZ,
+                                              { href: o.A.getArticleURL(g.MVz.ACTIVITY_STATUS_SETTINGS), children: e },
+                                              t,
                                           ),
                                   })
                                 : void 0,
                             scrollTargetId: h.bk.RECENT_ACTIVITY,
                             children: (0, i.jsx)("ul", {
-                                className: g.Ci,
-                                children: E.map((e) =>
+                                className: j.Ci,
+                                children: y.map((e) =>
                                     (0, i.jsx)(
                                         "li",
-                                        { children: (0, i.jsx)(_.A, { user: n, entry: e, onClose: v }) },
+                                        { children: (0, i.jsx)(f.A, { user: t, entry: e, onClose: N }) },
                                         e.id,
                                     ),
                                 ),
@@ -110,5 +110,5 @@ function N(e) {
                       : null,
               ],
           })
-        : (0, i.jsx)("div", { className: b.Ie, children: (0, i.jsx)(l.y$y, {}) });
+        : (0, i.jsx)("div", { className: v.Ie, children: (0, i.jsx)(r.y$y, {}) });
 }

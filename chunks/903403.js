@@ -1,47 +1,47 @@
 "use strict";
-n.d(t, { A: () => f });
-var s = n(627968),
-    l = n(64700),
-    r = n(503698),
-    a = n.n(r),
-    i = n(417597),
-    o = n(653887),
-    c = n(775602),
-    d = n(607470),
-    u = n(531685),
-    g = n(993408),
-    _ = n(203312),
-    m = n(212407),
-    h = n(985018),
-    p = n(68763);
+s.d(t, { A: () => f });
+var n = s(627968),
+    r = s(64700),
+    l = s(503698),
+    i = s.n(l),
+    a = s(417597),
+    o = s(653887),
+    c = s(775602),
+    d = s(607470),
+    u = s(531685),
+    _ = s(993408),
+    g = s(203312),
+    m = s(212407),
+    h = s(985018),
+    p = s(906357);
 function f(e) {
     let { category: t } = e,
-        n = (0, i.bG)([c.A], () => c.A.useReducedMotion),
-        r = (0, i.bG)([u.A], () => u.A.isFocused()),
-        { catalogBannerStatic: g, catalogBannerAnimated: f, catalogBannerRive: x } = (0, m.MV)(t),
-        E = l.useRef(null),
-        C = null != x;
-    return (0, s.jsxs)("div", {
-        ref: E,
-        className: a()(p.sW, { [p.by]: C }),
+        s = (0, a.bG)([c.A], () => c.A.useReducedMotion),
+        l = (0, a.bG)([u.A], () => u.A.isFocused()),
+        { catalogBannerStatic: _, catalogBannerAnimated: f, catalogBannerRive: x } = (0, m.MV)(t),
+        C = r.useRef(null),
+        E = null != x;
+    return (0, n.jsxs)("div", {
+        ref: C,
+        className: i()(p.sW, { [p.by]: E }),
         children: [
-            C
-                ? (0, s.jsx)(o._, {
+            E
+                ? (0, n.jsx)(o._, {
                       src: x,
                       fit: "cover",
                       alignment: "center-left",
                       style: { width: "100%", height: "100%" },
-                      eventTargetRef: E,
+                      eventTargetRef: C,
                       autoplay: !0,
                   })
-                : (0, s.jsxs)(s.Fragment, {
+                : (0, n.jsxs)(n.Fragment, {
                       children: [
-                          (0, s.jsx)("img", { className: p.ze, src: g, alt: t.name }),
-                          null != f && !n && r && (0, s.jsx)(d.A, { src: f, className: p.tr, autoPlay: !0, loop: !0 }),
+                          (0, n.jsx)("img", { className: p.ze, src: _, alt: t.name }),
+                          null != f && !s && l && (0, n.jsx)(d.A, { src: f, className: p.tr, autoPlay: !0, loop: !0 }),
                       ],
                   }),
-            (0, s.jsx)(_.A, { category: t, className: p.v0, daysRemainingText: h.t["8gsP5M"] }),
+            (0, n.jsx)(g.A, { category: t, className: p.v0, daysRemainingText: h.t["8gsP5M"] }),
         ],
     });
 }
-(0, g.$b)(90);
+(0, _.$b)(90);

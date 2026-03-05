@@ -9,11 +9,11 @@ var i = n(627968),
     c = n(139286),
     d = n(688895),
     u = n(456425),
-    h = n(1347);
+    h = n(18373);
 function A(e) {
-    let { initialized: t, items: n, loading: A, loadMore: p } = e,
-        g = s.useRef(null),
-        m = (0, o.A)("for-you", g);
+    let { initialized: t, items: n, loading: A, loadMore: m } = e,
+        p = s.useRef(null),
+        g = (0, o.A)("for-you", p);
     (0, c.A)(
         {
             type: l.ImpressionTypes.VIEW,
@@ -24,21 +24,21 @@ function A(e) {
         [t],
     );
     let _ = () => {
-        let e = g.current?.getScrollerState();
-        null == e || (e.scrollHeight - e.scrollTop - e.offsetHeight < 1500 && p());
+        let e = p.current?.getScrollerState();
+        null == e || (e.scrollHeight - e.scrollTop - e.offsetHeight < 1500 && m());
     };
     return t
         ? 0 === n.length
             ? (0, i.jsx)(d.H, {})
             : (0, i.jsx)(r.hD, {
-                  navigator: m,
+                  navigator: g,
                   children: (0, i.jsx)(r.PR, {
                       children: (e) => {
                           let { ref: t, ...s } = e;
                           return (0, i.jsxs)(a.T7Y, {
                               className: h.kL,
                               ref: (e) => {
-                                  (g.current = e), (t.current = e?.getScrollerNode() ?? null);
+                                  (p.current = e), (t.current = e?.getScrollerNode() ?? null);
                               },
                               ...s,
                               onScroll: _,

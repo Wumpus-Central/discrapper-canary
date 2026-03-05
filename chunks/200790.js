@@ -1,64 +1,64 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => p });
 var i = n(627968);
 n(64700);
 var s = n(503698),
-    a = n.n(s),
-    l = n(421380),
+    l = n.n(s),
+    a = n(421380),
     r = n(397927),
     o = n(688810),
-    c = n(507698),
-    d = n(954921),
+    d = n(507698),
+    c = n(954921),
     u = n(354328),
     _ = n(405810),
-    m = n(919395),
-    A = n(128450),
-    g = n(985018),
-    h = n(223772);
-function x(e) {
-    let { user: t, guild: n, className: s, sectionTitle: _, forcedDivider: x = !1, withTutorial: E = !1 } = e,
-        { analyticsLocations: C } = (0, o.Ay)(),
-        T = (0, u.A)("enable_avatar_decoration_uploads"),
-        S = (0, m.a4)({ user: t, guildId: n?.id }),
-        { pendingAvatarDecoration: I, errors: f } = (0, m.CP)(n?.id),
-        N = E ? r.wLn : l.$n;
-    return (0, i.jsxs)(A.A, {
+    g = n(919395),
+    m = n(128450),
+    A = n(985018),
+    h = n(6022);
+function p(e) {
+    let { user: t, guild: n, className: s, sectionTitle: _, forcedDivider: p = !1, withTutorial: E = !1 } = e,
+        { analyticsLocations: T } = (0, o.Ay)(),
+        S = (0, u.A)("enable_avatar_decoration_uploads"),
+        C = (0, g.a4)({ user: t, guildId: n?.id }),
+        { pendingAvatarDecoration: f, errors: I } = (0, g.CP)(n?.id),
+        b = E ? r.wLn : a.$n;
+    return (0, i.jsxs)(m.A, {
         className: s,
-        forcedDivider: x,
+        forcedDivider: p,
         hasBackground: !0,
         title: _,
-        errors: f,
+        errors: I,
         children: [
             (0, i.jsxs)("div", {
                 className: h.NC,
                 children: [
-                    (0, i.jsx)(N, {
-                        size: l.$n.Sizes.SMALL,
+                    (0, i.jsx)(b, {
+                        size: a.$n.Sizes.SMALL,
                         onClick: () => {
-                            (0, d.L)({ analyticsLocations: C, guild: n });
+                            (0, c.L)({ analyticsLocations: T, guild: n });
                         },
-                        className: a()({ [h.yj]: E }),
-                        children: g.intl.string(g.t.BVcYCx),
+                        className: l()({ [h.yj]: E }),
+                        children: A.intl.string(A.t.BVcYCx),
                     }),
-                    (void 0 === I ? null != S : null != I) &&
+                    (void 0 === f ? null != C : null != f) &&
                         (0, i.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: h.DT,
                             children: (0, i.jsx)(r.Button, {
                                 variant: "secondary",
                                 size: "sm",
-                                text: (0, c.uZ)(t, n) ? g.intl.string(g.t.CHf9iJ) : g.intl.string(g.t.OrokWm),
+                                text: (0, d.uZ)(t, n) ? A.intl.string(A.t.CHf9iJ) : A.intl.string(A.t.OrokWm),
                                 onClick: () => {
-                                    (0, m.Dx)(null, n?.id);
+                                    (0, g.Dx)(null, n?.id);
                                 },
                             }),
                         }),
                 ],
             }),
-            t.isStaff() && T && (0, i.jsx)(p, { user: t }),
+            t.isStaff() && S && (0, i.jsx)(x, { user: t }),
         ],
     });
 }
-let p = (e) => {
+let x = (e) => {
     let { user: t } = e;
     return (0, i.jsxs)("div", {
         className: h.J_,
@@ -73,7 +73,7 @@ let p = (e) => {
                 },
                 size: "sm",
                 variant: "primary",
-                text: g.intl.string(g.t.a9F1Qu),
+                text: A.intl.string(A.t.a9F1Qu),
             }),
         ],
     });

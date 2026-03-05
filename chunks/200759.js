@@ -7,7 +7,7 @@ var l = n(627968),
     a = n(351001),
     o = n(226884),
     u = n(985018),
-    c = n(58855);
+    c = n(697449);
 function d(e) {
     let { guild: t, message: n } = e,
         d = s.useRef(null);

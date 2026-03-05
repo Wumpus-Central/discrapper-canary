@@ -1,16 +1,10 @@
 "use strict";
-e.exports = {
-    Du: "stepBody_d947e6",
-    mh: "stepBodyCustomGift_d947e6",
-    MU: "bodyColumnMiddleCentered_d947e6",
-    Tc: "bodyColumnRight_d947e6",
-    G3: "bodyText_d947e6",
-    T: "selectPlanDivider_d947e6",
-    VZ: "selectPlanChooseTitle_d947e6",
-    M3: "selectPlanTotalRow_d947e6",
-    RA: "planSelectSeparator_d947e6",
-    Tz: "trialPlanSelectHeader_d947e6",
-    iX: "customGiftMessageWrapper_d947e6",
-    pt: "customGiftMessage_d947e6",
-    KW: "compactSendGiftToUser_d947e6",
-};
+function r() {
+    return {
+        logsUploaded: new Date().toISOString(),
+        releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
+        buildNumber: "506690",
+        versionHash: "255f49de389443a295109314a097d2bc55f73547",
+    };
+}
+n.d(t, { A: () => r });

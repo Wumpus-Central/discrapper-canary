@@ -5,8 +5,8 @@ var i = n(627968),
     a = n.n(r),
     s = n(397927),
     o = n(415350),
-    d = n(366468),
-    c = n(206314);
+    d = n(41058),
+    c = n(830412);
 function u(e) {
     let { color: t, className: n, variant: r, text: u, lineClamp: _ } = e,
         m = (0, s.$Il)(),

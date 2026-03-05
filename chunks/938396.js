@@ -14,22 +14,22 @@ var a = l(627968),
     x = l(309954),
     b = l(287809),
     g = l(975571),
-    y = l(474090),
-    f = l(94264),
+    f = l(474090),
+    y = l(94264),
     E = l(235365),
     v = l(566119),
     S = l(788868),
     j = l(652215),
     T = l(901123),
-    C = l(49370),
-    R = l(985018),
-    P = l(125634),
-    _ = l(268920),
-    A = l(633217),
-    I = l(909340);
-let N = () =>
-    (0, a.jsx)("div", { className: P.s, children: (0, a.jsx)(p.A, { src: A.A, fallbackImage: _.A, className: P.Cb }) });
-function k() {
+    C = l(723468),
+    P = l(985018),
+    A = l(99720),
+    R = l(268920),
+    _ = l(633217),
+    k = l(909340);
+let I = () =>
+    (0, a.jsx)("div", { className: A.s, children: (0, a.jsx)(p.A, { src: _.A, fallbackImage: R.A, className: A.Cb }) });
+function N() {
     (0, v.RQ)(), (0, h.pX)(`${T.BV.NITRO_HOME}?section=${E.L}`);
 }
 function D() {
@@ -44,11 +44,11 @@ function O(e) {
             location: "PremiumTenureRewardsOrbsBalancePopover",
         }),
         T = (0, o.bG)([b.default], () => b.default.getCurrentUser()),
-        { balance: _ } = (0, x.W)(),
-        A = !(0, y.ki)(T),
+        { balance: R } = (0, x.W)(),
+        _ = !(0, f.ki)(T),
         O = n.useMemo(() => {
-            let e = (0, y.YE)(T, S.PremiumTypes.TIER_2);
-            if (!E || A) return null;
+            let e = (0, f.YE)(T, S.PremiumTypes.TIER_2);
+            if (!E || _) return null;
             if (e && null != v) {
                 let e = (0, s.default)(new Date(v.next_reward_date), new Date());
                 return (0, a.jsxs)(a.Fragment, {
@@ -56,18 +56,18 @@ function O(e) {
                         (0, a.jsx)(d.EYj, {
                             variant: "text-xs/normal",
                             color: "text-default",
-                            children: R.intl.format(C.default["AvL/At"], {
+                            children: P.intl.format(C.default["AvL/At"], {
                                 days: Math.max(1, e),
-                                deepLinkToNitroOrbs: k,
+                                deepLinkToNitroOrbs: N,
                             }),
                         }),
-                        (0, a.jsx)(f.A, {}),
+                        (0, a.jsx)(y.A, {}),
                     ],
                 });
             }
             return null;
-        }, [T, A, v, E]),
-        B = (_ ?? 0) >= 4100;
+        }, [T, _, v, E]),
+        L = (R ?? 0) >= 4100;
     return (0, a.jsx)(u.x, {
         targetElementRef: t,
         shouldShow: l,
@@ -77,36 +77,36 @@ function O(e) {
         modal: !0,
         closeOnClickOutside: !0,
         children: (0, a.jsx)(d.NPJ, {
-            theme: B ? j.NJ8.DARKER : void 0,
+            theme: L ? j.NJ8.DARKER : void 0,
             children: (e) =>
                 (0, a.jsxs)("div", {
-                    className: i()(e, P.j),
+                    className: i()(e, A.j),
                     children: [
-                        B && (0, a.jsx)(p.A, { src: I.A, className: P.yG }),
+                        L && (0, a.jsx)(p.A, { src: k.A, className: A.yG }),
                         (0, a.jsxs)("div", {
-                            className: P.Qs,
+                            className: A.Qs,
                             children: [
                                 (0, a.jsx)(c.q, { onClick: r }),
                                 (0, a.jsxs)("div", {
-                                    className: P.hQ,
+                                    className: A.hQ,
                                     children: [
-                                        (0, a.jsx)(N, {}),
+                                        (0, a.jsx)(I, {}),
                                         (0, a.jsxs)("div", {
-                                            className: P.y$,
+                                            className: A.y$,
                                             children: [
-                                                (_ ?? 0) > 0 &&
+                                                (R ?? 0) > 0 &&
                                                     (0, a.jsxs)("div", {
-                                                        className: P.E2,
+                                                        className: A.E2,
                                                         children: [
                                                             (0, a.jsx)(d.EYj, {
                                                                 variant: "display-lg",
-                                                                className: P.K,
-                                                                children: _ ?? 0,
+                                                                className: A.K,
+                                                                children: R ?? 0,
                                                             }),
                                                             (0, a.jsx)(d.EYj, {
                                                                 variant: "text-xs/normal",
                                                                 color: "text-muted",
-                                                                children: R.intl.string(C.default.KclK9z),
+                                                                children: P.intl.string(C.default.KclK9z),
                                                             }),
                                                         ],
                                                     }),
@@ -122,11 +122,11 @@ function O(e) {
                                         }),
                                         (0, a.jsx)(d.EYj, {
                                             variant: "text-xs/normal",
-                                            color: A ? "text-default" : "text-muted",
-                                            className: P.CU,
-                                            children: A
-                                                ? R.intl.format(C.default.juvXqj, { deepLinkToNitroOrbs: D })
-                                                : R.intl.format(C.default.fhAVek, { helpdeskArticle: M }),
+                                            color: _ ? "text-default" : "text-muted",
+                                            className: A.CU,
+                                            children: _
+                                                ? P.intl.format(C.default.juvXqj, { deepLinkToNitroOrbs: D })
+                                                : P.intl.format(C.default.fhAVek, { helpdeskArticle: M }),
                                         }),
                                     ],
                                 }),

@@ -10,7 +10,7 @@ var a = n(627968),
     u = n(841702),
     m = n(751304),
     h = n(61750),
-    x = n(841015);
+    x = n(91753);
 let p = (e) => {
         let [t, n] = i.useState(0);
         return (
@@ -35,20 +35,20 @@ let p = (e) => {
             m = (0, s.bG)([d.A], () => d.A.lastSuccessfulFetch),
             g = t.size > 0 && n.size > 0 && null != m,
             { isFetching: _, categories: f } = (0, u.Ay)({ logPerf: !1, stalePurchasesOK: !0, noOp: g }),
-            b = g ? t : f,
-            v = g || (!_ && b.size > 0),
-            [j, C] = i.useState(""),
-            [A, T] = i.useState(null),
-            [S, y] = i.useState(null);
+            v = g ? t : f,
+            b = g || (!_ && v.size > 0),
+            [j, A] = i.useState(""),
+            [C, y] = i.useState(null),
+            [T, S] = i.useState(null);
         return (i.useEffect(() => {
-            if ("" === j.trim() || !v) {
-                T(null), y(null);
+            if ("" === j.trim() || !b) {
+                y(null), S(null);
                 return;
             }
             let e = d.A.getProduct(j),
                 t = d.A.getCategoryForProduct(j);
-            null != e && null != t ? (T(e), y(t)) : (T(null), y(null));
-        }, [j, v]),
+            null != e && null != t ? (y(e), S(t)) : (y(null), S(null));
+        }, [j, b]),
         _)
             ? (0, a.jsx)(l.Text, { variant: "text-md/normal", children: "Loading categories and collectibles..." })
             : null == e
@@ -73,29 +73,29 @@ let p = (e) => {
                                         }),
                                         (0, a.jsx)(l.ksK, {
                                             value: j,
-                                            onChange: C,
+                                            onChange: A,
                                             placeholder: "Enter product SKU ID",
                                         }),
-                                        !v &&
+                                        !b &&
                                             "" !== j.trim() &&
                                             (0, a.jsx)(l.Text, {
                                                 variant: "text-sm/normal",
                                                 className: x.KQ,
                                                 children: "Loading products...",
                                             }),
-                                        v &&
+                                        b &&
                                             "" !== j.trim() &&
-                                            null == A &&
+                                            null == C &&
                                             (0, a.jsx)(l.Text, {
                                                 variant: "text-sm/normal",
                                                 className: x.kc,
                                                 children: "Product not found",
                                             }),
-                                        null != A &&
+                                        null != C &&
                                             (0, a.jsxs)(l.Text, {
                                                 variant: "text-sm/normal",
                                                 className: x.xT,
-                                                children: ["Found: ", A.name],
+                                                children: ["Found: ", C.name],
                                             }),
                                     ],
                                 }),
@@ -105,18 +105,18 @@ let p = (e) => {
                             className: x.uW,
                             children: [
                                 (0, a.jsx)(l.Heading, { variant: "heading-lg/semibold", children: "Product Preview" }),
-                                null != A && null != S
+                                null != C && null != T
                                     ? (0, a.jsxs)("div", {
                                           className: x.i1,
                                           children: [
-                                              (0, a.jsx)(p, { skuId: A.skuId }),
+                                              (0, a.jsx)(p, { skuId: C.skuId }),
                                               (0, a.jsx)(l.Button, {
                                                   variant: "primary",
                                                   onClick: () => {
-                                                      null != A &&
+                                                      null != C &&
                                                           null != e &&
                                                           (0, h.A)({
-                                                              product: A,
+                                                              product: C,
                                                               analyticsLocations: [r.A.COLLECTIBLES_SHOP_CARD],
                                                           });
                                                   },

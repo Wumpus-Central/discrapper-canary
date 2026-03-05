@@ -12,7 +12,7 @@ var n = a(627968),
     x = a(652215),
     u = a(49999),
     h = a(985018),
-    v = a(864562);
+    v = a(487708);
 function p(t) {
     let { guildId: e, shouldUpsellCreation: p, transitionState: j, onClose: N } = t,
         f = (0, r.bG)([o.A], () => o.A.getGuild(e), [e]),
@@ -37,7 +37,7 @@ function p(t) {
                 text: h.intl.string(h.t["1X8SK/"]),
                 onClick: () => {
                     (0, l.mMO)(async () => {
-                        let { default: t } = await Promise.all([a.e("64233"), a.e("9743")]).then(a.bind(a, 409200));
+                        let { default: t } = await Promise.all([a.e("64233"), a.e("10923")]).then(a.bind(a, 409200));
                         return (a) =>
                             (0, n.jsx)(t, {
                                 ...a,

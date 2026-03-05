@@ -1,4 +1,4 @@
-n.d(t, { A: () => b });
+n.d(t, { A: () => v });
 var a = n(627968);
 n(64700);
 var i = n(989349),
@@ -13,8 +13,8 @@ var i = n(989349),
     h = n(594061),
     x = n(617617),
     p = n(287809),
-    g = n(105040),
-    _ = n(661251);
+    g = n(98806),
+    _ = n(930821);
 function f(e) {
     let t = new Date(e);
     return (
@@ -23,25 +23,25 @@ function f(e) {
         t.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", hour12: !0 })
     );
 }
-function b() {
+function v() {
     let e = (0, l.bG)([u.Ay], () => u.Ay.getDevToolTotalFriendAnniversaries()),
         t = (0, l.bG)([u.Ay], () => u.Ay.getDevToolCurrentDate()),
         n = (0, l.bG)([u.Ay], () => u.Ay.getGiftUnreadNotificationLastDismissedTimes()),
         i = (0, l.bG)([u.Ay], () => u.Ay.getMessageGiftIntentLastShownMap()),
-        b = (0, l.bG)([u.Ay], () => u.Ay.getHighestAffinityFriendAnniversaries()),
-        v = (0, l.bG)([u.Ay], () => u.Ay.getHighAffinityFriendAnniversaries()),
+        v = (0, l.bG)([u.Ay], () => u.Ay.getHighestAffinityFriendAnniversaries()),
+        b = (0, l.bG)([u.Ay], () => u.Ay.getHighAffinityFriendAnniversaries()),
         j = (0, l.bG)([u.Ay], () => u.Ay.getProfilePopoutGiftIntentsDismissMap()),
-        C = (0, l.bG)([x.A], () => {
+        A = (0, l.bG)([x.A], () => {
             let e =
                 x.A.settings.userContent?.recurringDismissibleContentStates[r.M.GIFT_INTENT_MESSAGE]?.lastDismissedAtMs;
             if (null == e || "0" === e) return null;
             let t = Number(e);
             return Number.isNaN(t) ? null : t;
         }),
-        A = (e) => {
+        C = (e) => {
             d.h.dispatch({ type: "DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT", total: e });
         },
-        T = (e) => {
+        y = (e) => {
             let t = m.A.getUserAffinity(e);
             return t?.dmProbability != null ? `${(100 * t.dmProbability).toFixed(3)}%` : "N/A";
         };
@@ -73,7 +73,7 @@ function b() {
                                 ],
                                 value: e,
                                 onSelectionChange: (e) => {
-                                    A(e);
+                                    C(e);
                                 },
                             }),
                             (0, a.jsx)(o.Button, {
@@ -81,7 +81,7 @@ function b() {
                                 variant: "secondary",
                                 text: "Clear",
                                 onClick: () => {
-                                    A(null);
+                                    C(null);
                                 },
                             }),
                         ],
@@ -103,7 +103,7 @@ function b() {
                                     children:
                                         "The devtool automatically assigns users as high affinity regardless of actual affinity for testing.",
                                 }),
-                                b.length > 0 &&
+                                v.length > 0 &&
                                     (0, a.jsxs)(o.BJc, {
                                         gap: 4,
                                         children: [
@@ -112,18 +112,18 @@ function b() {
                                                 children:
                                                     "Highest Affinity Friend Anniversaries (Eligible for Notification):",
                                             }),
-                                            b.map((e) => {
+                                            v.map((e) => {
                                                 let t = p.default.getUser(e),
                                                     n = t?.username ?? `Unknown User (${e})`;
                                                 return (0, a.jsxs)(
                                                     o.Text,
-                                                    { variant: "text-xs/normal", children: [n, " (", T(e), ")"] },
+                                                    { variant: "text-xs/normal", children: [n, " (", y(e), ")"] },
                                                     e,
                                                 );
                                             }),
                                         ],
                                     }),
-                                v.length > 0 &&
+                                b.length > 0 &&
                                     (0, a.jsxs)(o.BJc, {
                                         gap: 4,
                                         children: [
@@ -131,12 +131,12 @@ function b() {
                                                 variant: "text-xs/semibold",
                                                 children: "High Affinity Friend Anniversaries:",
                                             }),
-                                            v.map((e) => {
+                                            b.map((e) => {
                                                 let t = p.default.getUser(e),
                                                     n = t?.username ?? `Unknown User (${e})`;
                                                 return (0, a.jsxs)(
                                                     o.Text,
-                                                    { variant: "text-xs/normal", children: [n, " (", T(e), ")"] },
+                                                    { variant: "text-xs/normal", children: [n, " (", y(e), ")"] },
                                                     e,
                                                 );
                                             }),
@@ -201,7 +201,7 @@ function b() {
                             }),
                             (0, a.jsx)(o.Text, {
                                 variant: "text-xs/normal",
-                                children: null != C ? `Dismissed at: ${f(C)}` : "Not dismissed",
+                                children: null != A ? `Dismissed at: ${f(A)}` : "Not dismissed",
                             }),
                         ],
                     }),

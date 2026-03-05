@@ -1,79 +1,79 @@
 "use strict";
-n.d(t, { A: () => v });
-var s = n(627968),
-    l = n(64700),
-    r = n(989349),
-    a = n.n(r),
-    i = n(158954),
-    o = n(311907),
-    c = n(230109),
-    d = n(688810),
-    u = n(733391),
-    g = n(439303),
-    _ = n(44724),
-    m = n(317560),
-    h = n(183802),
-    p = n(67480),
-    f = n(954571),
-    x = n(440938),
-    E = n(652215),
-    C = n(188275),
-    A = n(985018),
-    b = n(27112);
+s.d(t, { A: () => v });
+var n = s(627968),
+    r = s(64700),
+    l = s(989349),
+    i = s.n(l),
+    a = s(158954),
+    o = s(311907),
+    c = s(230109),
+    d = s(688810),
+    u = s(733391),
+    _ = s(439303),
+    g = s(44724),
+    m = s(317560),
+    h = s(183802),
+    p = s(67480),
+    f = s(954571),
+    x = s(440938),
+    C = s(652215),
+    E = s(188275),
+    b = s(985018),
+    A = s(413194);
 let S = { pageSection: "marvel-rivals-promotional-banner" },
     v = (e) => {
-        let { onDismiss: t, skuIds: n, endTime: r, tab: v } = e,
-            L = (0, o.bG)([p.A], () => n.every((e) => null != p.A.get(e)), [n]),
-            I = (0, x.uM)(),
+        let { onDismiss: t, skuIds: s, endTime: l, tab: v } = e,
+            I = (0, o.bG)([p.A], () => s.every((e) => null != p.A.get(e)), [s]),
+            L = (0, x.uM)(),
             { analyticsLocations: j } = (0, d.Ay)(),
-            k = l.useRef(null),
-            T = l.useRef(!1),
-            O = l.useRef(null);
-        l.useEffect(() => {
-            for (let e of n) (0, u.qf)(C.Kf, e);
-        }, [n]);
-        let N = l.useMemo(() => {
-                let e = a()(),
-                    t = Math.max(a()(r).diff(e, "days"), 1);
-                return A.intl.formatToPlainString(A.t.BXpdIg, { days: t });
-            }, [r]),
-            y = l.useCallback(
+            k = r.useRef(null),
+            T = r.useRef(!1),
+            O = r.useRef(null);
+        r.useEffect(() => {
+            for (let e of s) (0, u.qf)(E.Kf, e);
+        }, [s]);
+        let y = r.useMemo(() => {
+                let e = i()(),
+                    t = Math.max(i()(l).diff(e, "days"), 1);
+                return b.intl.formatToPlainString(b.t.BXpdIg, { days: t });
+            }, [l]),
+            N = r.useCallback(
                 (e, t) => {
-                    f.default.track(E.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                        collectibles_shop_session_id: I?.sessionId,
+                    f.default.track(C.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                        collectibles_shop_session_id: L?.sessionId,
                         page_type: v,
-                        page_category: I?.pageCategory,
-                        page_section: I?.pageSection,
+                        page_category: L?.pageCategory,
+                        page_section: L?.pageSection,
                         tile_type: "MARVEL_RIVALS_PROMOTIONAL_BANNER",
                         cta_name: e,
                         ...(null != t ? { sku_id: t } : void 0),
                     });
                 },
-                [I?.sessionId, I?.pageCategory, I?.pageSection, v],
+                [L?.sessionId, L?.pageCategory, L?.pageSection, v],
             ),
-            R = l.useCallback(() => {
-                (0, _.X)({ guildId: C.Kf });
+            R = r.useCallback(() => {
+                (0, g.X)({ guildId: E.Kf });
             }, []),
-            B = l.useCallback(() => {
-                y("go_to_game_shop"), (0, _.default)({ guildId: C.Kf });
-            }, [y]),
-            M = l.useCallback(
+            B = r.useCallback(() => {
+                N("go_to_game_shop"), (0, g.default)({ guildId: E.Kf });
+            }, [N]),
+            M = r.useCallback(
                 (e) => {
-                    y("card_click", e),
+                    N("card_click", e),
                         (0, m.R)({
                             skuId: e,
-                            applicationId: C.XR,
-                            guildId: C.Kf,
+                            applicationId: E.XR,
+                            guildId: E.Kf,
                             isStorefront: !1,
                             analyticsLocations: j,
                         });
                 },
-                [y, j],
+                [N, j],
             ),
-            P = l.useCallback(() => {
-                y("dismiss"), t();
-            }, [y, t]),
-            D = l.useCallback(
+            P = r.useCallback(() => {
+                N("dismiss"), t();
+            }, [N, t]),
+            D = r.useCallback(
                 (e) => {
                     T.current ||
                         (e
@@ -81,63 +81,63 @@ let S = { pageSection: "marvel-rivals-promotional-banner" },
                               (O.current = setTimeout(() => {
                                   (T.current = !0),
                                       (O.current = null),
-                                      f.default.track(E.HAw.COLLECTIBLES_TILE_IMPRESSION, {
-                                          collectibles_shop_session_id: I?.sessionId,
+                                      f.default.track(C.HAw.COLLECTIBLES_TILE_IMPRESSION, {
+                                          collectibles_shop_session_id: L?.sessionId,
                                           page_type: v,
-                                          page_category: I?.pageCategory,
-                                          page_section: I?.pageSection,
+                                          page_category: L?.pageCategory,
+                                          page_section: L?.pageSection,
                                           type: "marvel_rivals_promotional_banner",
                                       });
                               }, 1e3))
                             : null !== O.current && (clearTimeout(O.current), (O.current = null)));
                 },
-                [I?.sessionId, I?.pageCategory, I?.pageSection, v],
+                [L?.sessionId, L?.pageCategory, L?.pageSection, v],
             );
-        return (l.useEffect(
+        return (r.useEffect(
             () => () => {
                 null !== O.current && (clearTimeout(O.current), (O.current = null));
             },
             [],
         ),
-        L)
-            ? (0, s.jsx)(c.L, {
+        I)
+            ? (0, n.jsx)(c.L, {
                   innerRef: k,
                   onChange: D,
                   threshold: 0,
-                  children: (0, s.jsx)("div", {
+                  children: (0, n.jsx)("div", {
                       ref: k,
-                      className: b.YB,
-                      children: (0, s.jsxs)("div", {
-                          className: b.kL,
+                      className: A.YB,
+                      children: (0, n.jsxs)("div", {
+                          className: A.kL,
                           children: [
-                              (0, s.jsx)("div", {
-                                  className: b.b,
-                                  children: (0, s.jsx)(i.JnF, { size: "sm", variant: "icon-only", onClick: P }),
+                              (0, n.jsx)("div", {
+                                  className: A.b,
+                                  children: (0, n.jsx)(a.JnF, { size: "sm", variant: "icon-only", onClick: P }),
                               }),
-                              (0, s.jsxs)("div", {
-                                  className: b.xf,
+                              (0, n.jsxs)("div", {
+                                  className: A.xf,
                                   children: [
-                                      null != N &&
-                                          (0, s.jsx)("div", {
-                                              className: b.qw,
-                                              children: (0, s.jsx)(i.Exy, {
-                                                  type: { text: `${A.intl.string(A.t.yYEZGi)} (${N})` },
+                                      null != y &&
+                                          (0, n.jsx)("div", {
+                                              className: A.qw,
+                                              children: (0, n.jsx)(a.Exy, {
+                                                  type: { text: `${b.intl.string(b.t.yYEZGi)} (${y})` },
                                                   variant: "brand",
                                               }),
                                           }),
-                                      (0, s.jsxs)("div", {
-                                          className: b.B5,
+                                      (0, n.jsxs)("div", {
+                                          className: A.B5,
                                           children: [
-                                              (0, s.jsx)(i.DZT, {
+                                              (0, n.jsx)(a.DZT, {
                                                   variant: "heading-xl/semibold",
                                                   color: "always-white",
-                                                  children: A.intl.string(A.t["b3+OH1"]),
+                                                  children: b.intl.string(b.t["z/QEIP"]),
                                               }),
-                                              (0, s.jsx)(i.$nd, {
+                                              (0, n.jsx)(a.$nd, {
                                                   variant: "overlay-primary",
-                                                  icon: i.I9m,
+                                                  icon: a.I9m,
                                                   iconPosition: "end",
-                                                  text: A.intl.string(A.t["kq/75v"]),
+                                                  text: b.intl.string(b.t["kq/75v"]),
                                                   onMouseDown: R,
                                                   onClick: B,
                                               }),
@@ -145,17 +145,17 @@ let S = { pageSection: "marvel-rivals-promotional-banner" },
                                       }),
                                   ],
                               }),
-                              (0, s.jsx)(g.E9, {
+                              (0, n.jsx)(_.E9, {
                                   newValue: S,
-                                  children: (0, s.jsx)("div", {
-                                      className: b.$2,
-                                      children: n.map((e, t) =>
-                                          (0, s.jsx)(
+                                  children: (0, n.jsx)("div", {
+                                      className: A.$2,
+                                      children: s.map((e, t) =>
+                                          (0, n.jsx)(
                                               h.A,
                                               {
                                                   skuId: e,
-                                                  applicationId: C.XR,
-                                                  guildId: C.Kf,
+                                                  applicationId: E.XR,
+                                                  guildId: E.Kf,
                                                   positionInSection: t,
                                                   onClick: () => M(e),
                                               },

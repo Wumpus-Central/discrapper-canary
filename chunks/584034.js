@@ -19,15 +19,15 @@ var A = I(627968),
     s = I(538355),
     Y = I(715628),
     o = I(752636),
-    U = I(287809),
-    r = I(515718),
+    r = I(287809),
+    U = I(515718),
     G = I(661191),
     d = I(207913),
     c = I(393033),
     M = I(239093),
     B = I(652215),
     m = I(838541),
-    H = I(26896);
+    H = I(366906);
 let h = (E) => {
     let { message: _ } = E,
         { attachments: I } = _;
@@ -62,7 +62,7 @@ let h = (E) => {
                         let S = M.V5,
                             C = M.M8;
                         if (null != _.width && null != _.height) {
-                            let E = (0, r.U8)({ width: _.width, height: _.height, maxWidth: M.V5, maxHeight: M.M8 });
+                            let E = (0, U.U8)({ width: _.width, height: _.height, maxWidth: M.V5, maxHeight: M.M8 });
                             (S = (0, T.clamp)(Math.round(_.width * E), 0, M.V5)),
                                 (C = (0, T.clamp)(Math.round(_.height * E), 0, M.M8));
                         }
@@ -108,7 +108,7 @@ let h = (E) => {
 function u(E) {
     let _,
         { flaggedContent: I } = E,
-        T = (0, O.bG)([U.default], () => U.default.getCurrentUser()),
+        T = (0, O.bG)([r.default], () => r.default.getCurrentUser()),
         [C, N] = S.useState({}),
         [P, L] = S.useState(!0),
         a = (0, O.bG)([d.A], () => d.A.getUsername()),
@@ -132,7 +132,7 @@ function u(E) {
                 attachments: _,
                 state: B.cmJ.SENT,
             })),
-        r = (0, i.Ay)(V),
+        U = (0, i.Ay)(V),
         m = (0, s.A)(V, {
             hideSimpleEmbedContent: !1,
             allowList: !1,
@@ -195,7 +195,7 @@ function u(E) {
                         childrenMessageContent: (0, Y.A)({ message: V }, m.content),
                         hasThread: !1,
                         hasReply: !1,
-                        author: r,
+                        author: U,
                     }),
           });
 }

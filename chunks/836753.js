@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => m });
 var i = n(627968);
 n(64700);
 var s = n(397927),
@@ -27,7 +27,7 @@ class A extends r.A {
             !(0, s.kBI)(h) &&
             (0, s.mMO)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e("83155"), n.e("79051")]).then(n.bind(n, 563038));
+                    let { default: e } = await Promise.all([n.e("83155"), n.e("565")]).then(n.bind(n, 563038));
                     return (t) => (0, i.jsx)(e, { ...t });
                 },
                 {
@@ -45,4 +45,4 @@ class A extends r.A {
         (0, s.OoC)(h);
     }
 }
-let p = new A();
+let m = new A();

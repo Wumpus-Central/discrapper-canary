@@ -10,7 +10,7 @@ var i = n(503698),
     u = n(430452),
     c = n(659974),
     d = n(863089),
-    _ = n(503434),
+    _ = n(15772),
     f = (function (e) {
         return (e[(e.OUTGOING = 0)] = "OUTGOING"), (e[(e.INCOMING = 1)] = "INCOMING"), e;
     })(f || {});
@@ -79,9 +79,9 @@ function p(e) {
             },
             v,
         ),
-        x = (0, o.FT9)(n),
-        M = { height: x, width: x, ...T };
-    return (0, r.jsx)("div", { style: M, onContextMenu: y, className: w, children: L() });
+        M = (0, o.FT9)(n),
+        x = { height: M, width: M, ...T };
+    return (0, r.jsx)("div", { style: x, onContextMenu: y, className: w, children: L() });
 }
 p.RingingType = f;
 let h = p;

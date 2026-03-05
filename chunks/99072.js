@@ -19,7 +19,7 @@ var l = n(311907),
     f = n(661191),
     C = n(820672),
     E = n(768349),
-    I = n(426127),
+    I = n(55705),
     b = n(985018);
 function T(e) {
     let { currentUserId: t, message: T, application: v, channel: S, analyticsLocations: y, onView: N } = e,
@@ -35,19 +35,19 @@ function T(e) {
         ),
         w = (0, l.bG)([h.A], () => h.A.getCurrentUserActiveStream()),
         D = (0, l.bG)([g.A], () => g.A.getChannelId()),
-        k = f.default.extractTimestamp(T.id) + C.M < Date.now(),
-        O = (0, i.jsx)(i.Fragment, { children: (0, a.Wf)(T, S, t) }),
+        O = f.default.extractTimestamp(T.id) + C.M < Date.now(),
+        k = (0, i.jsx)(i.Fragment, { children: (0, a.Wf)(T, S, t) }),
         { analyticsLocations: U } = (0, o.Ay)(y, s.A.REQUEST_TO_STREAM_INVITE_EMBED),
-        B = b.intl.string(I.default["5+172e"]),
-        G = !1;
+        G = b.intl.string(I.default["5+172e"]),
+        B = !1;
     return (
-        k
-            ? ((B = b.intl.string(I.default.u4QmWl)), (G = !0))
+        O
+            ? ((G = b.intl.string(I.default.u4QmWl)), (B = !0))
             : null != w
-              ? ((B = b.intl.string(I.default.P0wwmM)), (G = !0))
+              ? ((G = b.intl.string(I.default.P0wwmM)), (B = !0))
               : D !== S.id
-                ? ((B = b.intl.string(I.default.qRXats)), (G = !0))
-                : null == M && ((B = b.intl.string(I.default["43zohO"])), (G = !0)),
+                ? ((G = b.intl.string(I.default.qRXats)), (B = !0))
+                : null == M && ((G = b.intl.string(I.default["43zohO"])), (B = !0)),
         (0, i.jsx)(d.h, {
             header: b.intl.string(I.default.nAyuPp),
             title: v.name,
@@ -55,15 +55,15 @@ function T(e) {
             videoBannerSrc: L,
             bannerAspectRatio: R,
             iconSrc: P ?? void 0,
-            info: O,
+            info: k,
             actions:
                 T.author.id === t
                     ? []
                     : [
                           {
-                              label: B,
+                              label: G,
                               trackingArea: c.kY.STREAM,
-                              disabled: G,
+                              disabled: B,
                               onClick: () => {
                                   null != M &&
                                       ((0, x.isWindows)()
@@ -85,7 +85,7 @@ function T(e) {
                 channelId: S.id,
                 messageId: T.id,
                 onView: N,
-                isDeadEnd: k,
+                isDeadEnd: O,
             },
         })
     );

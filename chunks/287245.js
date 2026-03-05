@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => y });
+n.d(t, { A: () => v });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -11,9 +11,9 @@ var i = n(627968),
     u = n(408018),
     h = n(133343),
     A = n(609425),
-    p = n(922301),
-    g = n(750112),
-    m = n(451909),
+    m = n(922301),
+    p = n(750112),
+    g = n(451909),
     _ = n(538355),
     f = n(854627),
     x = n(447404),
@@ -22,7 +22,7 @@ var i = n(627968),
     I = n(427262),
     N = n(652215),
     b = n(985018),
-    S = n(65309);
+    S = n(739699);
 let T = (e) => {
         let { channel: t, message: n, out: s = !1, noAnimate: l = !1 } = e,
             o = (0, _.A)(n, {
@@ -38,20 +38,20 @@ let T = (e) => {
             c = n.author,
             d = I.Ay.getName(c),
             u = (0, A.A)({ userId: c.id, guildId: t.guild_id }),
-            { avatarSrc: h, avatarDecorationSrc: m } = (0, f.A)({ userId: c.id, guildId: t.guild_id, size: 48 });
+            { avatarSrc: h, avatarDecorationSrc: g } = (0, f.A)({ userId: c.id, guildId: t.guild_id, size: 48 });
         return (0, i.jsxs)("div", {
             className: r()(S.iU, { [S.FD]: s, [S.Tf]: l }),
             children: [
                 (0, i.jsx)("div", {
                     children: (0, i.jsx)(a.euF, {
                         src: h,
-                        avatarDecoration: m,
+                        avatarDecoration: g,
                         size: a._3J.SIZE_24,
                         "aria-label": "User Avatar",
                         isTyping: !1,
                     }),
                 }),
-                (0, i.jsx)(g.A, { userName: d, displayNameStyles: u, effectDisplayType: p.G.STATIC, loop: !0 }),
+                (0, i.jsx)(p.A, { userName: d, displayNameStyles: u, effectDisplayType: m.G.STATIC, loop: !0 }),
                 (0, i.jsxs)("div", {
                     className: S.fi,
                     children: [
@@ -74,14 +74,14 @@ let T = (e) => {
             ],
         });
     },
-    y = (e) => {
+    v = (e) => {
         let { channel: t, idle: n, showChat: l } = e,
             A = s.useRef(new Set()),
-            [p, g] = s.useState([]),
+            [m, p] = s.useState([]),
             [_, f] = s.useState(0),
             I = s.useRef(null),
             b = s.useRef(!1),
-            [y, v] = s.useState(!0),
+            [v, y] = s.useState(!0),
             [j, R] = s.useState(""),
             [O, L] = s.useState((0, u.x7)(j));
         s.useEffect(() => {
@@ -91,8 +91,8 @@ let T = (e) => {
             };
         }, []),
             s.useEffect(() => {
-                let e = () => v(!0),
-                    t = () => v(!1);
+                let e = () => y(!0),
+                    t = () => y(!1);
                 return (
                     E._.subscribe(N.jej.TEXTAREA_FOCUS, e),
                     E._.subscribe(N.jej.TEXTAREA_BLUR, t),
@@ -107,14 +107,14 @@ let T = (e) => {
             }, [I]),
             s.useEffect(() => {
                 let e = Date.now();
-                g(
+                p(
                     C.A.getMessages(t.id)
                         ._array.filter((t) => t.timestamp.getTime() > e - 12e5)
                         .slice(-50),
                 );
             }, [t]);
         let M = s.useCallback((e) => {
-                g((t) => {
+                p((t) => {
                     if (!t.some((t) => t.id === e.id)) {
                         let n = [...t, e];
                         return n.length > 50 && n.shift(), n;
@@ -123,7 +123,7 @@ let T = (e) => {
                 });
             }, []),
             D = s.useMemo(() => {
-                let e = p[p.length - 1];
+                let e = m[m.length - 1];
                 if (null == e) return !0;
                 if (_ + 100 > Date.now()) return !1;
                 let t = Date.now() > e.timestamp.getTime() + 5e3;
@@ -134,7 +134,7 @@ let T = (e) => {
                     A.current.add(e);
                 }
                 return t;
-            }, [p, _]);
+            }, [m, _]);
         return (
             s.useEffect(() => {
                 let e = (e) => {
@@ -169,7 +169,7 @@ let T = (e) => {
                             children: (0, i.jsx)(a.HOs, {
                                 className: r()(S.b6, { [S.N7]: D && n }),
                                 ref: I,
-                                children: p.map((e) => (0, i.jsx)(T, { channel: t, message: e, noAnimate: !0 }, e.id)),
+                                children: m.map((e) => (0, i.jsx)(T, { channel: t, message: e, noAnimate: !0 }, e.id)),
                             }),
                         }),
                     }),
@@ -181,9 +181,9 @@ let T = (e) => {
                         textValue: j,
                         richValue: O,
                         placeholder: "Send message",
-                        onFocus: () => v(!0),
-                        onBlur: () => v(!1),
-                        focused: y,
+                        onFocus: () => y(!0),
+                        onBlur: () => y(!1),
+                        focused: v,
                         disabled: !l,
                         showValueWhenDisabled: !0,
                         onChange: (e, t, n) => {
@@ -193,7 +193,7 @@ let T = (e) => {
                             let { value: n } = e,
                                 i = n.trim();
                             if (0 === i.length) return { shouldClear: !1, shouldRefocus: !1 };
-                            let s = m.Ay.parse(t, i);
+                            let s = g.Ay.parse(t, i);
                             try {
                                 return (
                                     await c.A.sendMessage(t.id, s, !0, { location: "Haven" }),

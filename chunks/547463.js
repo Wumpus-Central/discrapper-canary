@@ -24,14 +24,14 @@ var r = n(627968),
     v = n(428249),
     N = n(661908),
     C = n(474397),
-    b = n(279877),
-    R = n(976860),
-    O = n(219271),
+    R = n(279877),
+    O = n(976860),
+    b = n(219271),
     D = n(21119),
     L = n(712785),
     w = n(616356),
-    x = n(734057),
-    M = n(375492),
+    M = n(734057),
+    x = n(375492),
     P = n(290863),
     k = n(994500),
     U = n(287809),
@@ -44,8 +44,8 @@ var r = n(627968),
     Y = n(652215),
     W = n(381941),
     K = n(985018),
-    z = n(72007);
-function $(e) {
+    $ = n(383929);
+function z(e) {
     let t,
         { entry: n, currentUserActivity: s, idx: o, variant: l } = e,
         u = (0, c.bG)([U.default], () => U.default.getUser(n.author_id)),
@@ -71,9 +71,9 @@ function $(e) {
                         });
                     else {
                         let e = await h.A.getOrEnsurePrivateChannel(u.id),
-                            t = x.A.getChannel(e) ?? null;
+                            t = M.A.getChannel(e) ?? null;
                         a()(null != t, "Send channel must be defined"),
-                            (0, R.pX)(Y.BVt.CHANNEL(t.guild_id, t.id)),
+                            (0, O.pX)(Y.BVt.CHANNEL(t.guild_id, t.id)),
                             (0, C.A)(Y.BRT.OVERLAY, !0),
                             !0 === n.extra.fake_inventory_item
                                 ? await (0, v.J)({
@@ -107,9 +107,9 @@ function $(e) {
         y = async () => {
             if (null == u) return;
             let e = await h.A.getOrEnsurePrivateChannel(u.id),
-                t = x.A.getChannel(e) ?? null;
+                t = M.A.getChannel(e) ?? null;
             a()(null != t, "Send channel must be defined"),
-                (0, R.pX)(Y.BVt.CHANNEL(t.guild_id, t.id)),
+                (0, O.pX)(Y.BVt.CHANNEL(t.guild_id, t.id)),
                 (0, C.A)(Y.BRT.OVERLAY, !0),
                 (0, H.YX)(Y.uss.ACTIVITY, { type: H.Z5.REDIRECT, value: H.IP.CHAT, userId: u.id });
         },
@@ -192,27 +192,27 @@ function Z(e) {
     return null == a
         ? null
         : (0, r.jsxs)("div", {
-              className: z.nM,
+              className: $.nM,
               children: [
-                  (0, r.jsx)(E.A, { className: z.my, user: a, isMobile: l, isVR: u, status: d }),
+                  (0, r.jsx)(E.A, { className: $.my, user: a, isMobile: l, isVR: u, status: d }),
                   (0, r.jsxs)("div", {
-                      className: z.zH,
+                      className: $.zH,
                       children: [
                           (0, r.jsxs)("div", {
-                              className: z.Yn,
+                              className: $.Yn,
                               children: [
                                   (0, r.jsx)(_.Text, {
-                                      className: z.Xh,
+                                      className: $.Xh,
                                       variant: "text-md/medium",
                                       color: "text-strong",
                                       children: V.Ay.getName(void 0, void 0, a),
                                   }),
-                                  null != o && (0, r.jsx)(S.Ay, { className: z.Ok }),
+                                  null != o && (0, r.jsx)(S.Ay, { className: $.Ok }),
                               ],
                           }),
                           (0, r.jsx)(y.mG, {
                               location: y.N5.OVERLAY,
-                              className: z.cV,
+                              className: $.cV,
                               children: [y.iq, y.tR, y.K7, y.sp, y.MK].map((e, n) =>
                                   (0, r.jsx)(e, { entry: t }, `entry-${n}`),
                               ),
@@ -220,10 +220,10 @@ function Z(e) {
                       ],
                   }),
                   (0, r.jsxs)("div", {
-                      className: z.nB,
+                      className: $.nB,
                       children: [
                           (0, r.jsx)(q, { entry: t, currentUserActivity: n, idx: i, variant: s }),
-                          (0, r.jsx)($, { entry: t, currentUserActivity: n, idx: i, variant: s }),
+                          (0, r.jsx)(z, { entry: t, currentUserActivity: n, idx: i, variant: s }),
                       ],
                   }),
               ],
@@ -272,7 +272,7 @@ function ee(e) {
               children: [
                   !a &&
                       (0, r.jsx)("div", {
-                          className: z.v4,
+                          className: $.v4,
                           children: (0, r.jsx)(_.Text, {
                               variant: "text-xs/medium",
                               color: "subtle" === o ? "text-subtle" : "text-default",
@@ -329,9 +329,9 @@ function es(e) {
     let { gamingId: t, maxUserShowCount: n, userAffinityThresholdV2: r = er } = e,
         s = (0, N.A)(t);
     (0, g.Ay)(() => {
-        (0, O.u)();
+        (0, b.u)();
     });
-    let a = (0, c.bG)([M.A], () => (null == t ? null : M.A.getApplicationActivity(t)), [t]),
+    let a = (0, c.bG)([x.A], () => (null == t ? null : x.A.getApplicationActivity(t)), [t]),
         o = (0, c.yK)([G.A, k.A, D.A], () => {
             if (null == t) return [];
             let e = G.A.nowPlayingCards,
@@ -343,7 +343,7 @@ function es(e) {
             });
         }, [t, r]);
     return (
-        (0, g.Ay)(() => (b.O(), () => b.v())),
+        (0, g.Ay)(() => (R.O(), () => R.v())),
         {
             entries: i.useMemo(() => {
                 let e = s.filter((e) => !o.some((t) => t.activityUser.id === e.author_id)),
@@ -367,10 +367,10 @@ function eo(e) {
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(L.A, { className: z.M4, activity: t, user: n, currentUser: n, appContext: Y.BRT.OVERLAY }),
+                  (0, r.jsx)(L.A, { className: $.M4, activity: t, user: n, currentUser: n, appContext: Y.BRT.OVERLAY }),
                   s && !o && i
                       ? (0, r.jsx)("div", {
-                            className: z.DJ,
+                            className: $.DJ,
                             children: (0, r.jsx)(_.Button, {
                                 text: K.intl.string(K.t["6Qgrev"]),
                                 size: "sm",
@@ -393,16 +393,16 @@ function el(e) {
         a = (0, N.A)(i),
         o = (0, c.bG)([U.default], () => U.default.getCurrentUser()),
         l = null != s ? s : i,
-        u = (0, c.bG)([M.A], () => (null == l ? null : M.A.getApplicationActivity(l)), [l]);
-    (0, g.Ay)(() => (b.O(), () => b.v()));
+        u = (0, c.bG)([x.A], () => (null == l ? null : x.A.getApplicationActivity(l)), [l]);
+    (0, g.Ay)(() => (R.O(), () => R.v()));
     let d = es({ gamingId: l, userAffinityThresholdV2: er / 2, maxUserShowCount: 12 });
     return t || (0 === a.length && null == u)
         ? null
         : (0, r.jsxs)("div", {
-              className: z.kL,
+              className: $.kL,
               children: [
                   (0, r.jsx)(eo, { activity: u, currentUser: o }),
-                  (0, r.jsx)(ee, { ...d, className: z.l_, hideHeader: !0 }),
+                  (0, r.jsx)(ee, { ...d, className: $.l_, hideHeader: !0 }),
               ],
           });
 }

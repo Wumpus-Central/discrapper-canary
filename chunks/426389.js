@@ -12,8 +12,8 @@ var i = n(627968),
     h = n(859703),
     _ = n(341915),
     m = n(843490),
-    p = n(890687),
-    g = n(639214),
+    g = n(890687),
+    p = n(639214),
     E = n(814793),
     I = n(219271),
     f = n(21119),
@@ -30,7 +30,7 @@ var i = n(627968),
     R = n(652215),
     P = n(654487),
     j = n(985018),
-    D = n(23729);
+    D = n(832779);
 let M = 15 * S.A.Millis.MINUTE,
     w = (0, L.A)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
@@ -38,8 +38,8 @@ let M = 15 * S.A.Millis.MINUTE,
             d = (0, i.jsx)(y.A, { party: t, onUserContextMenu: n }),
             u = (0, i.jsx)(v.A, { party: t, onChannelContextMenu: l, quest: a }),
             { partiedMembers: A, applicationStreams: h, currentActivities: _, voiceChannels: m } = t,
-            p = A.length,
-            g = h.length,
+            g = A.length,
+            p = h.length,
             E = _.length,
             I = m.length > 0,
             f = r.useCallback(() => {
@@ -47,13 +47,13 @@ let M = 15 * S.A.Millis.MINUTE,
                     (e) => e.game.name,
                 );
                 N.default.track(R.HAw.NOW_PLAYING_CARD_HOVERED, {
-                    num_users: p,
-                    num_streams: g,
+                    num_users: g,
+                    num_streams: p,
                     num_activities: E,
                     in_voice_channel: I,
                     games_detected: e,
                 });
-            }, [p, g, E, I, _]),
+            }, [g, p, E, I, _]),
             C = r.useMemo(() => o()(f, M), [f]);
         return null != d || null != u
             ? (0, i.jsx)(c.YNO, {
@@ -95,7 +95,7 @@ function G() {
             currentUser: C.default.getCurrentUser(),
         })),
         s = (0, d.bG)([h.A], () => h.A.quests),
-        o = (0, p.oH)(Array.from(s.values()));
+        o = (0, g.oH)(Array.from(s.values()));
     r.useEffect(
         () => (
             u.h.wait(() => x.O()),
@@ -118,7 +118,7 @@ function G() {
                 l.party.currentActivities.forEach((e) => {
                     let { activity: a } = e;
                     if (null == a) return;
-                    let s = (0, g.nq)(r, a);
+                    let s = (0, p.nq)(r, a);
                     null == s || i.has(s.id) || (t.set(l.party.id, s), i.add(s.id), n.set(l.party.id, s.id));
                 });
             return { questsByPartyId: t, questIdsByPartyId: n };

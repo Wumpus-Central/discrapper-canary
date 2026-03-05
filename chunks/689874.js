@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(627968),
     s = n(311907),
     l = n(827734),
@@ -11,9 +11,9 @@ var i = n(627968),
     u = n(274372),
     h = n(572164),
     A = n(806931),
-    p = n(985018),
-    g = n(639291);
-let m = (e) => {
+    m = n(985018),
+    p = n(27962);
+let g = (e) => {
     let { channelId: t } = e;
     return (0, s.bG)([d.A, o.A, u.A, c.Ay], () => {
         if (null == t) return !1;
@@ -25,21 +25,21 @@ let m = (e) => {
         );
     })
         ? (0, i.jsx)(r.m, {
-              text: p.intl.string(p.t.DJXW3G),
+              text: m.intl.string(m.t.DJXW3G),
               children: (0, i.jsxs)("div", {
-                  className: g.g0,
+                  className: p.g0,
                   children: [
                       (0, i.jsx)(a.fkz, {
                           icon: a.xgA,
                           shape: a.EGs.ROUND_LEFT,
                           color: l.A.unsafe_rawColors.PRIMARY_500.css,
-                          className: g.Z7,
+                          className: p.Z7,
                       }),
                       (0, i.jsx)(a.LpS, {
-                          text: p.intl.string(p.t.pCMkDb),
+                          text: m.intl.string(m.t.pCMkDb),
                           shape: a.EGs.ROUND_RIGHT,
                           color: l.A.unsafe_rawColors.PRIMARY_500.css,
-                          className: g.lm,
+                          className: p.lm,
                       }),
                   ],
               }),

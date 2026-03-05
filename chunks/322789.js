@@ -18,8 +18,8 @@ var r = n(627968),
     g = n(424994),
     A = n(518477),
     I = n(985018),
-    T = n(22589),
-    S = n(332225);
+    T = n(197291),
+    S = n(687071);
 let y = [m.iq, m.Zc, m.Xy, m.$X, m.tR, m.K7, m.fg, m.sp, m.MK],
     v = (e) => {
         let {
@@ -30,10 +30,10 @@ let y = [m.iq, m.Zc, m.Xy, m.$X, m.tR, m.K7, m.fg, m.sp, m.MK],
                 isFirstApplicationOccurrence: N,
                 trackRankingItemInteraction: C,
             } = e,
-            { largeImage: b } = (0, p.nO)({ entry: t, showCoverImage: !1 }),
-            { data: R } = (0, u.YY)(t.extra.application_id),
-            O = (0, l.J)(R) && N,
-            D = O ? [a.M.CLOUD_PLAY_NEW_BADGE] : [],
+            { largeImage: R } = (0, p.nO)({ entry: t, showCoverImage: !1 }),
+            { data: O } = (0, u.YY)(t.extra.application_id),
+            b = (0, l.J)(O) && N,
+            D = b ? [a.M.CLOUD_PLAY_NEW_BADGE] : [],
             [L] = (0, c.kn)(D);
         return (0, r.jsxs)(E.Zp, {
             selected: i,
@@ -57,16 +57,16 @@ let y = [m.iq, m.Zc, m.Xy, m.$X, m.tR, m.K7, m.fg, m.sp, m.MK],
                                     ],
                                 }),
                                 (0, r.jsx)(h.V, {
-                                    alt: b?.text ?? b?.alt,
-                                    src: b?.src,
+                                    alt: R?.text ?? R?.alt,
+                                    src: R?.src,
                                     size: 48,
                                     className: S.xn,
-                                    showTooltip: b?.text != null,
+                                    showTooltip: R?.text != null,
                                 }),
                             ],
                         }),
                 }),
-                O &&
+                b &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(E.ik, {}),

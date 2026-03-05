@@ -12,8 +12,8 @@ var i = n(627968),
     m = n(430452),
     A = n(40056),
     g = n(985018),
-    p = n(463689),
-    f = n(654305);
+    p = n(895283),
+    f = n(6923);
 function _(e) {
     e.preventDefault(), e.stopPropagation();
 }
@@ -37,8 +37,8 @@ let x = l.memo(function (e) {
             videoAspectRatio: O,
             wrapperRef: L,
             panOffset: P,
-            setPanOffset: k,
-            clampPanOffset: w,
+            setPanOffset: w,
+            clampPanOffset: k,
         } = l.useContext(A.e9),
         [U, G] = l.useState(!1),
         F = l.useRef(null),
@@ -61,9 +61,9 @@ let x = l.memo(function (e) {
                     i = L.current.clientHeight,
                     l = e.x - t.left,
                     s = e.y - t.top;
-                k(w({ x: (0.5 - l / t.width) * n * T, y: (0.5 - s / t.height) * i * T }));
+                w(k({ x: (0.5 - l / t.width) * n * T, y: (0.5 - s / t.height) * i * T }));
             },
-            [w, T, L, k],
+            [k, T, L, w],
         ),
         z = l.useCallback(
             (e) => {

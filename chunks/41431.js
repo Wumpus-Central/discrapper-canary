@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => R });
+n.d(t, { A: () => O });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -19,7 +19,7 @@ var r = n(627968),
     A = n(518950),
     I = n(652215),
     T = n(985018),
-    S = n(97051);
+    S = n(945689);
 let y = i.lazy(() => n.e("94436").then(n.bind(n, 660207)));
 function v(e) {
     let t = (A.CA.indexOf(e) + 1) % A.CA.length,
@@ -46,7 +46,7 @@ function C(e, t, n) {
         );
     }, [e, t, n]);
 }
-function b(e, t, n) {
+function R(e, t, n) {
     i.useEffect(() => {
         if (t)
             return (
@@ -62,7 +62,7 @@ function b(e, t, n) {
         }
     }, [e, t, n]);
 }
-let R = i.memo(function (e) {
+let O = i.memo(function (e) {
     let t,
         {
             src: n,
@@ -71,22 +71,22 @@ let R = i.memo(function (e) {
             onMute: h,
             waveform: A,
             durationSecs: I,
-            onVolumeShow: R,
-            onVolumeHide: O,
+            onVolumeShow: O,
+            onVolumeHide: b,
             onPlay: D,
             onPause: L,
             onError: w,
-            playbackCacheKey: x,
+            playbackCacheKey: M,
         } = e,
-        M = i.useRef(null),
-        P = i.useMemo(() => (null != x ? d.Ay.getPlaybackPosition(x) : 0), [x]),
+        x = i.useRef(null),
+        P = i.useMemo(() => (null != M ? d.Ay.getPlaybackPosition(M) : 0), [M]),
         k = (0, o.bG)([d.Ay], () => d.Ay.getPlaybackRate(d.k0.VOICE_MESSAGE)),
         [U, G] = i.useState(P > 0),
         [F, V] = i.useState(P),
         [B, H] = i.useState(I),
         [j, Y] = i.useState(!1),
         [W, K] = i.useState(!1),
-        [z, $] = i.useState(!1),
+        [$, z] = i.useState(!1),
         [q, Z] = i.useState(!1),
         [X, Q] = i.useState("none"),
         [J, ee] = i.useState(() => ("function" == typeof s ? s() : s)),
@@ -103,9 +103,9 @@ let R = i.memo(function (e) {
         }, []),
         es = i.useCallback(
             (e) => {
-                null != I && null != x && (0, c.d)(x, e, I);
+                null != I && null != M && (0, c.d)(M, e, I);
             },
-            [x, I],
+            [M, I],
         ),
         ea = i.useCallback(() => {
             K(!1),
@@ -115,14 +115,14 @@ let R = i.memo(function (e) {
                     }, 500));
         }, []),
         eo = i.useCallback(() => {
-            z || (es(0), ea());
-        }, [ea, z, es]),
+            $ || (es(0), ea());
+        }, [ea, $, es]),
         el = i.useCallback((e) => {
-            let t = M.current;
+            let t = x.current;
             null != t && (V(e), (t.currentTime = e), G(!0));
         }, []),
         eu = i.useCallback(() => {
-            let e = M.current;
+            let e = x.current;
             if (null == e) return;
             let t = e.error;
             w?.(t);
@@ -138,14 +138,14 @@ let R = i.memo(function (e) {
             Y(!j), h?.(!j);
         }, [j, h]),
         e_ = i.useCallback(() => {
-            $(!0);
+            z(!0);
         }, []),
         ef = i.useCallback(() => {
-            $(!1), F === B && ea(), es(F);
+            z(!1), F === B && ea(), es(F);
         }, [F, B, ea, es]),
         ep = i.useCallback(
             (e) => {
-                let t = M.current;
+                let t = x.current;
                 null == B || null == t || (el(e * B), clearTimeout(et.current), (et.current = void 0));
             },
             [B, el],
@@ -166,19 +166,19 @@ let R = i.memo(function (e) {
             let e;
             return (
                 W &&
-                    !z &&
+                    !$ &&
                     (e = setInterval(() => {
-                        es(M.current?.currentTime ?? 0);
+                        es(x.current?.currentTime ?? 0);
                     }, m.A.Millis.SECOND)),
                 () => {
                     null != e && clearInterval(e);
                 }
             );
-        }, [W, z, es]),
+        }, [W, $, es]),
         i.useEffect(() => {
             let { played: e, currentTime: t, onPause: n, onPlay: r } = eE.current;
             if (e || W)
-                if (W) (eh.current = performance.now()), r?.(!1, t, (M.current?.duration ?? 0) * m.A.Millis.SECOND);
+                if (W) (eh.current = performance.now()), r?.(!1, t, (x.current?.duration ?? 0) * m.A.Millis.SECOND);
                 else {
                     let e = performance.now(),
                         r = eh.current,
@@ -186,8 +186,8 @@ let R = i.memo(function (e) {
                     n?.(t, i), es(t), (eh.current = null);
                 }
         }, [W, n, B, es]),
-        C(M, W, V),
-        b(n, W, K);
+        C(x, W, V),
+        R(n, W, K);
     let eg = W ? l.E$n : l.udU,
         eA = W ? T.intl.string(T.t.ZcgDJX) : T.intl.string(T.t.RscU7I),
         eI = T.intl.formatToPlainString(T.t.LgCPMt, { playbackRate: k }),
@@ -196,11 +196,11 @@ let R = i.memo(function (e) {
         "Safari" === platform.name
             ? (0, r.jsx)(i.Suspense, {
                   children: (0, r.jsx)(y, {
-                      ref: M,
+                      ref: x,
                       className: S.Zn,
                       src: n,
                       preload: X,
-                      playing: W && !z,
+                      playing: W && !$,
                       onEnded: eo,
                       onLoadedMetadata: ei,
                       onError: eu,
@@ -210,7 +210,7 @@ let R = i.memo(function (e) {
                   }),
               })
             : (0, r.jsx)(_.A, {
-                  ref: M,
+                  ref: x,
                   className: S.Zn,
                   controls: !1,
                   preload: X,
@@ -220,7 +220,7 @@ let R = i.memo(function (e) {
                   muted: j,
                   volume: J,
                   playbackRate: k,
-                  playing: W && !z,
+                  playing: W && !$,
                   children: (0, r.jsx)("source", { src: n }),
               });
     let eS = (0, o.bG)([u.A], () => u.A.useReducedMotion);
@@ -268,8 +268,8 @@ let R = i.memo(function (e) {
                 currentWindow: window,
                 onValueChange: ec,
                 onToggleMute: ed,
-                onVolumeShow: R,
-                onVolumeHide: O,
+                onVolumeShow: O,
+                onVolumeHide: b,
             }),
             t,
         ],

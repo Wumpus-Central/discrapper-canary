@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => g });
 var i = n(627968);
 n(64700);
 var r = n(503698),
@@ -10,10 +10,10 @@ var r = n(503698),
     c = n(729904),
     u = n(963169),
     A = n(985018),
-    h = n(88808);
+    h = n(952482);
 let _ = d.GY.binds["0"],
     m = d.M$.binds["0"],
-    p = (e) => {
+    g = (e) => {
         let { firstElementFocusJumpSectionProps: t = {} } = e,
             { canGoBack: n, canGoForward: r } = (0, a.cf)([c.A], () => ({
                 canGoBack: c.A.canGoBack,

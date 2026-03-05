@@ -7,9 +7,9 @@ var s = n(503698),
     r = n(837381),
     a = n(672117),
     o = n(397927),
-    c = n(69813),
-    d = n(728444),
-    u = n(811094);
+    c = n(814823),
+    d = n(719550),
+    u = n(516632);
 function h(e) {
     let {
             id: t,
@@ -17,9 +17,9 @@ function h(e) {
             innerClassName: s,
             renderIcon: h,
             text: A,
-            selected: p,
-            trailing: g,
-            background: m,
+            selected: m,
+            trailing: p,
+            background: g,
             showUnread: _ = !1,
             ref: f,
             ...x
@@ -40,9 +40,9 @@ function h(e) {
                     : (e) => {
                           e.stopPropagation();
                       },
-            className: l()(d.fx, u.iE, { [u.J1]: p }, n),
+            className: l()(d.fx, u.iE, { [u.J1]: m }, n),
             children: [
-                m,
+                g,
                 _ ? (0, i.jsx)("div", { className: l()(u.gy, u.WS) }) : null,
                 (0, i.jsx)("div", {
                     className: l()([u.nf, u.ae, s]),
@@ -51,7 +51,7 @@ function h(e) {
                         children: [
                             (0, i.jsx)("div", { className: u.zc, children: h(u.Kk) }),
                             (0, i.jsx)("div", { className: u.UU, "aria-hidden": !0, children: A }),
-                            g,
+                            p,
                         ],
                     }),
                 }),

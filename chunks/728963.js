@@ -11,14 +11,14 @@ var i = n(627968),
     m = n(706727),
     _ = n(332173),
     A = n(657331),
-    h = n(734057),
-    f = n(317525),
-    E = n(71393),
-    g = n(287809),
+    f = n(734057),
+    h = n(317525),
+    g = n(71393),
+    E = n(287809),
     p = n(763754);
 n(827669);
 var x = n(985018),
-    C = n(998815);
+    C = n(99245);
 let I = { tag: "span", variant: "text-md/normal", color: "text-default" },
     T = { className: r()("mention", C.lE) };
 function N(e) {
@@ -29,7 +29,7 @@ let S = l.memo(function (e) {
         { channel: n, messageId: a, interactionData: r } = e,
         { analyticsLocations: S } = (0, d.Ay)(),
         { onCopy: R, copyRef: v } = (0, u.A)(n, r?.application_command?.id),
-        M = (0, s.bG)([E.A], () => E.A.getGuild(n.guild_id), [n.guild_id]);
+        M = (0, s.bG)([g.A], () => g.A.getGuild(n.guild_id), [n.guild_id]);
     if (
         (l.useEffect(() => {
             (null == r || (r.type === c.kc.CHAT && void 0 === r.application_command)) && m.S7(n.id, a);
@@ -51,7 +51,7 @@ let S = l.memo(function (e) {
                             messageId: d,
                             parentOptionKey: u,
                             commandOptionSpec: m,
-                            sourceAnalyticsLocations: E,
+                            sourceAnalyticsLocations: g,
                         } = t,
                         C = null != u ? u + " " + a.name : a.name;
                     if (a.type === c.n4.SUB_COMMAND || a.type === c.n4.SUB_COMMAND_GROUP) {
@@ -77,7 +77,7 @@ let S = l.memo(function (e) {
                                     messageId: d,
                                     parentOptionKey: C,
                                     commandOptionSpec: n[i.name],
-                                    sourceAnalyticsLocations: E,
+                                    sourceAnalyticsLocations: g,
                                 }),
                             );
                         return t;
@@ -87,7 +87,7 @@ let S = l.memo(function (e) {
                         switch (a.type) {
                             case c.n4.USER: {
                                 let e = a.value.toString(),
-                                    t = g.default.getUser(e);
+                                    t = E.default.getUser(e);
                                 if (null != t) {
                                     let e = (0, p.FT)(t, r);
                                     n = (0, i.jsxs)(_.A, {
@@ -98,7 +98,7 @@ let S = l.memo(function (e) {
                                                 guildId: r.guild_id,
                                                 channelId: r.id,
                                                 messageId: d,
-                                                sourceAnalyticsLocations: E,
+                                                sourceAnalyticsLocations: g,
                                             }),
                                         children: ["@", e.nick],
                                     });
@@ -107,22 +107,22 @@ let S = l.memo(function (e) {
                             }
                             case c.n4.CHANNEL: {
                                 let e = a.value.toString(),
-                                    t = h.A.getChannel(e);
+                                    t = f.A.getChannel(e);
                                 null != t && (n = (0, i.jsxs)(_.A, { ...T, children: ["#", t.name] }));
                                 break;
                             }
                             case c.n4.ROLE: {
                                 let e = a.value.toString(),
-                                    t = null != s ? f.A.getRole(s.id, e) : void 0;
+                                    t = null != s ? h.A.getRole(s.id, e) : void 0;
                                 null != t && (n = (0, i.jsxs)(_.A, { ...T, children: ["@", t.name] }));
                                 break;
                             }
                             case c.n4.MENTIONABLE: {
                                 let e = a.value.toString(),
-                                    t = null != s ? f.A.getRole(s.id, e) : void 0;
+                                    t = null != s ? h.A.getRole(s.id, e) : void 0;
                                 if (null != t) n = (0, i.jsxs)(_.A, { children: ["@", t.name] });
                                 else {
-                                    let t = g.default.getUser(e);
+                                    let t = E.default.getUser(e);
                                     if (null != t) {
                                         let e = (0, p.FT)(t, r);
                                         n = (0, i.jsxs)(_.A, {
@@ -131,7 +131,7 @@ let S = l.memo(function (e) {
                                                 (0, A.openUserProfileModal)({
                                                     userId: t.id,
                                                     guildId: r.guild_id,
-                                                    sourceAnalyticsLocations: E,
+                                                    sourceAnalyticsLocations: g,
                                                 }),
                                             children: ["@", e.nick],
                                         });

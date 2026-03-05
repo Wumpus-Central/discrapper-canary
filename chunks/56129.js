@@ -25,18 +25,18 @@ var i = n(503698),
     v = n(970636),
     N = n(430452),
     C = n(646865),
-    b = n(795816),
-    R = n(104171),
-    O = n(47294),
+    R = n(795816),
+    O = n(104171),
+    b = n(47294),
     D = n(652215),
     L = n(818348),
     w = n(985018),
-    x = n(31545),
-    M = n(319567);
+    M = n(700063),
+    x = n(299973);
 function P(e) {
     let { onClick: t, isExpanded: n } = e;
     return (0, r.jsx)(I.A, {
-        iconClassName: s()(x.D6, { [x.S7]: n }),
+        iconClassName: s()(M.D6, { [M.S7]: n }),
         onClick: t,
         iconComponent: o.abt,
         label: n ? w.intl.string(w.t["2TiKgS"]) : w.intl.string(w.t.oN8bqe),
@@ -51,7 +51,7 @@ function k(e) {
             onMouseLeave: o,
             onJumpToChannel: I,
             idle: y,
-            selectedParticipant: R,
+            selectedParticipant: O,
             embeddedActivity: w,
         } = e,
         P = (0, p.Us)() === D.BRT.POPOUT,
@@ -70,20 +70,20 @@ function k(e) {
         Y = () => {
             (0, _.X)(B, _.O.POPOUT, !0),
                 null != t &&
-                    (0, O.A)({
+                    (0, b.A)({
                         onConfirm: async () => {
-                            await (0, b.od)(n, t.id), h.openChannelCallPopout(t);
+                            await (0, R.od)(n, t.id), h.openChannelCallPopout(t);
                         },
                     });
         };
     return (0, r.jsxs)("div", {
-        className: M._v,
+        className: x._v,
         onMouseMove: s,
         onMouseDown: i,
         onMouseLeave: o,
         children: [
             (0, r.jsx)("div", {
-                className: M.K1,
+                className: x.K1,
                 children: (0, r.jsx)(A.X, {
                     idle: y,
                     title: F?.name ?? t?.name ?? "",
@@ -92,7 +92,7 @@ function k(e) {
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: M.q6,
+                className: x.q6,
                 children: [
                     (0, r.jsxs)(f.A, {
                         grow: 0,
@@ -101,7 +101,7 @@ function k(e) {
                         align: f.A.Align.CENTER,
                         children: [
                             (0, r.jsx)(v.A, {
-                                className: x.Oc,
+                                className: M.Oc,
                                 enabled: k,
                                 cameraUnavailable: !G,
                                 hasPermission: V,
@@ -113,8 +113,8 @@ function k(e) {
                                     children: (0, r.jsx)(d.A, {
                                         channelId: t.id,
                                         guildId: t.getGuildId(),
-                                        className: M.__invalid_leftTrayIcon,
-                                        participant: R,
+                                        className: x.__invalid_leftTrayIcon,
+                                        participant: O,
                                         compact: !0,
                                     }),
                                 }),
@@ -130,12 +130,12 @@ function k(e) {
                             P || (0, C.f)()
                                 ? null
                                 : (0, r.jsx)(S.A, {
-                                      className: x.BD,
+                                      className: M.BD,
                                       popoutOpen: !1,
                                       onOpenPopout: Y,
                                       onClosePopout: L.FX,
                                   }),
-                            (0, r.jsx)(T.A, { applicationId: n, location: w.location, className: x.BD }),
+                            (0, r.jsx)(T.A, { applicationId: n, location: w.location, className: M.BD }),
                         ],
                     }),
                 ],
@@ -157,14 +157,14 @@ function U(e) {
         } = e,
         p = (0, c.A)([n])[0];
     return (0, r.jsxs)(o.DUT, {
-        className: s()(M._v, M.ob),
+        className: s()(x._v, x.ob),
         onMouseMove: a,
         onMouseDown: i,
         onMouseLeave: l,
         onDoubleClick: u,
         children: [
             (0, r.jsx)("div", {
-                className: M.K1,
+                className: x.K1,
                 children: (0, r.jsx)(A.X, {
                     idle: d,
                     title: p?.name ?? t?.name ?? "",
@@ -173,16 +173,16 @@ function U(e) {
                 }),
             }),
             (0, r.jsxs)("div", {
-                className: M.q6,
+                className: x.q6,
                 children: [
-                    (0, r.jsx)(R.Ay, {
+                    (0, r.jsx)(O.Ay, {
                         renderIcon: !1,
                         users: _,
                         size: 24,
                         max: 3,
-                        className: x.__invalid_userSummaryContainer,
+                        className: M.__invalid_userSummaryContainer,
                     }),
-                    (0, r.jsx)(T.A, { applicationId: n, location: f.location, iconClassName: x.Gu, isActive: !0 }),
+                    (0, r.jsx)(T.A, { applicationId: n, location: f.location, iconClassName: M.Gu, isActive: !0 }),
                 ],
             }),
         ],
@@ -190,7 +190,7 @@ function U(e) {
 }
 function G(e) {
     let { channelId: t, participantsOpen: n, showToggleParticipants: i } = e;
-    return i ? (0, r.jsx)(y.A, { channelId: t, isParticipantsOpen: n, className: x.N9 }) : null;
+    return i ? (0, r.jsx)(y.A, { channelId: t, isParticipantsOpen: n, className: M.N9 }) : null;
 }
 function F(e) {
     let {
@@ -208,14 +208,14 @@ function F(e) {
         } = e,
         m = (0, c.A)([l])[0];
     return (0, r.jsx)("div", {
-        className: x.LO,
+        className: M.LO,
         onMouseMove: n,
         onMouseDown: t,
         onMouseLeave: i,
         children: (0, r.jsxs)("div", {
-            className: s()(M.K1, x.eA, { [x.eo]: a }),
+            className: s()(x.K1, M.eA, { [M.eo]: a }),
             children: [
-                !a && (0, r.jsx)(o.jNK, { size: "xxs", color: "currentColor", className: x.ro }),
+                !a && (0, r.jsx)(o.jNK, { size: "xxs", color: "currentColor", className: M.ro }),
                 a &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
@@ -226,10 +226,10 @@ function F(e) {
                                 preventIdleComponent: g.A,
                             }),
                             (0, r.jsxs)("div", {
-                                className: x.QS,
+                                className: M.QS,
                                 children: [
                                     p ? null : (0, r.jsx)(P, { isExpanded: f, onClick: _ }),
-                                    (0, r.jsx)(T.A, { applicationId: l, location: h.location, iconClassName: x.Gu }),
+                                    (0, r.jsx)(T.A, { applicationId: l, location: h.location, iconClassName: M.Gu }),
                                 ],
                             }),
                         ],

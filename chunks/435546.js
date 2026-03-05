@@ -7,7 +7,7 @@ var l = n(503698),
     r = n(735321),
     o = n(34442),
     c = n(985018),
-    d = n(61752);
+    d = n(920210);
 function u(e) {
     let { widget: t } = e,
         n = (0, r.cv)(t.type),

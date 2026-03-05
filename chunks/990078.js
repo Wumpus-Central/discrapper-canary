@@ -9,7 +9,7 @@ var r = n(627968),
     u = n(348275),
     c = n(505679),
     d = n(747781),
-    _ = n(894524);
+    _ = n(69042);
 function f(e) {
     let {
             children: t,
@@ -29,13 +29,13 @@ function f(e) {
             ariaHidden: N = !1,
             ...C
         } = e,
-        [b, R] = i.useState(null);
+        [R, O] = i.useState(null);
     i.useLayoutEffect(() => {
-        null != S && R(S.current);
+        null != S && O(S.current);
     }, [S]);
-    let O = i.useCallback(
+    let b = i.useCallback(
             (e) => {
-                null == S && R(e), (0, u.cZ)(T, e);
+                null == S && O(e), (0, u.cZ)(T, e);
             },
             [T, S],
         ),
@@ -43,9 +43,9 @@ function f(e) {
             tooltipId: D,
             isVisible: L,
             targetElementRef: w,
-            trigger: x,
-        } = (0, d.D)({ children: t, targetElementRef: O, asContainer: h, containerTag: m, ariaHidden: N, ...C }),
-        [M, P] = i.useState(!1),
+            trigger: M,
+        } = (0, d.D)({ children: t, targetElementRef: b, asContainer: h, containerTag: m, ariaHidden: N, ...C }),
+        [x, P] = i.useState(!1),
         { defaultLayerContext: k } = (0, a.G98)(),
         U = i.useMemo(
             () =>
@@ -65,7 +65,7 @@ function f(e) {
             [n, f, p],
         ),
         G = null != U && ("string" != typeof U || "" !== U),
-        F = L || M;
+        F = L || x;
     i.useEffect(() => {
         L && G ? P(!0) : G || P(!1);
     }, [L, G]);
@@ -73,7 +73,7 @@ function f(e) {
             P(!1);
         }, []),
         B = (0, c.j)({ shouldShow: L, onExitComplete: V });
-    if (!G && (L || !M)) return t;
+    if (!G && (L || !x)) return t;
     if (null == t || (!h && !i.isValidElement(t))) return null;
     let H = v ?? (0, u.Xj)(n),
         j = B((e, t) =>
@@ -82,7 +82,7 @@ function f(e) {
                       isVisible: L,
                       isRendered: F,
                       targetElementRef: w,
-                      targetElement: b,
+                      targetElement: R,
                       anchorRef: S,
                       id: D,
                       content: U,
@@ -97,6 +97,6 @@ function f(e) {
                 : null,
         );
     return (0, r.jsxs)(r.Fragment, {
-        children: [x, N || null == U || "" === U ? null : (0, r.jsx)(s.A, { id: D, children: U }), j],
+        children: [M, N || null == U || "" === U ? null : (0, r.jsx)(s.A, { id: D, children: U }), j],
     });
 }

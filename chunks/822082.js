@@ -8,7 +8,7 @@ var i = n(627968),
     d = n(397927),
     c = n(442433);
 n(687599);
-var u = n(102752);
+var u = n(58826);
 let A = function (e) {
     let {
             index: t,
@@ -17,14 +17,14 @@ let A = function (e) {
             channel: h,
             onClick: _,
             isFocused: m,
-            isActive: p,
-            onOtherHover: g,
+            isActive: g,
+            onOtherHover: p,
             className: E,
         } = e,
         [I, f] = r.useState(!1),
         [C, T] = r.useState(!1),
         N = () => {
-            f(!0), !m || p || C || g?.();
+            f(!0), !m || g || C || p?.();
         },
         S = () => {
             f(!1);
@@ -35,7 +35,7 @@ let A = function (e) {
             (0, i.jsx)(d.vN3, {
                 offset: { left: -8, right: -8 },
                 children: (0, i.jsx)(s.A.div, {
-                    className: a()(u.Cf, E, { [u.vu]: p || C, [u.CJ]: 0 === t }),
+                    className: a()(u.Cf, E, { [u.vu]: g || C, [u.CJ]: 0 === t }),
                     onContextMenu: (e) => {
                         null != A &&
                             (T(!0),
@@ -45,7 +45,7 @@ let A = function (e) {
                                     let { default: e } = await Promise.all([
                                         n.e("97262"),
                                         n.e("32418"),
-                                        n.e("22252"),
+                                        n.e("93382"),
                                     ]).then(n.bind(n, 668569));
                                     return (t) => (0, i.jsx)(e, { ...t, user: A });
                                 },
@@ -61,7 +61,7 @@ let A = function (e) {
                     onClick: _ ?? void 0,
                     style: { LIST_ROW_HEIGHT: 73, opacity: 1 },
                     ...e,
-                    children: l(I || p || C),
+                    children: l(I || g || C),
                 }),
             }),
     });

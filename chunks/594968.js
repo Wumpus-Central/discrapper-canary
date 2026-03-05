@@ -12,12 +12,12 @@ var i = n(627968),
     h = n(287809),
     _ = n(427262),
     m = n(390848),
-    p = n(513297),
-    g = n(414711),
+    g = n(513297),
+    p = n(414711),
     E = n(723690),
     I = n(652215),
     f = n(985018),
-    C = n(615078);
+    C = n(79676);
 function T(e) {
     let { user: t, applicationId: n, isGameRelationship: l, active: o } = e,
         d = h.default.getCurrentUser()?.isStaff() && t?.isStaff(),
@@ -49,16 +49,16 @@ function T(e) {
                         text: f.intl.string(f.t.oMx98L),
                     }),
                 }),
-            (0, i.jsx)(p.A, {
+            (0, i.jsx)(g.A, {
                 icon: s.A9s,
-                actionType: p.A.ActionTypes.ACCEPT,
+                actionType: g.A.ActionTypes.ACCEPT,
                 tooltip: f.intl.string(f.t.Zcibdf),
                 onClick: A,
                 shouldHighlight: o,
             }),
-            (0, i.jsx)(p.A, {
+            (0, i.jsx)(g.A, {
                 icon: s.PGe,
-                actionType: p.A.ActionTypes.DENY,
+                actionType: g.A.ActionTypes.DENY,
                 tooltip: f.intl.string(f.t.xuio0C),
                 onClick: _,
                 shouldHighlight: o,
@@ -80,9 +80,9 @@ function N(e) {
             },
             [o],
         );
-    return (0, i.jsx)(p.A, {
+    return (0, i.jsx)(g.A, {
         icon: s.PGe,
-        actionType: p.A.ActionTypes.DENY,
+        actionType: g.A.ActionTypes.DENY,
         tooltip: f.intl.string(f.t.eaq81S),
         onClick: d,
         shouldHighlight: a,
@@ -123,7 +123,7 @@ function v(e) {
         { analyticsLocations: c } = (0, o.Ay)(),
         u = l === I.clD.OFFLINE ? I.clD.UNKNOWN : l,
         h = r.useCallback(() => (0, A.openUserProfileModal)({ userId: t.id, sourceAnalyticsLocations: c }), [c, t.id]);
-    return (0, i.jsx)(g.A, {
+    return (0, i.jsx)(p.A, {
         isFocused: a,
         user: t,
         onClick: h,

@@ -17,9 +17,9 @@ var i = n(627968),
     _ = n(305080),
     p = n(652215),
     v = n(985018),
-    I = n(851822),
-    j = n(921380),
-    A = n(20440);
+    I = n(728528),
+    j = n(272746),
+    A = n(639142);
 function E(e) {
     let { detectedGame: t, trackClick: n, onInviteResolved: a, closeModal: f } = e,
         [_, A] = l.useState(),

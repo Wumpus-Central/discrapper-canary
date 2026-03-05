@@ -4,7 +4,7 @@ var r = n(627968);
 n(64700);
 var i = n(503698),
     s = n.n(i),
-    a = n(475539),
+    a = n(380278),
     o = n(435371),
     l = n(397927),
     u = n(688810),
@@ -16,8 +16,8 @@ var i = n(503698),
     h = n(652215),
     m = n(788868),
     E = n(985018),
-    g = n(333354),
-    A = n(195450);
+    g = n(136708),
+    A = n(68748);
 function I(e) {
     switch (e) {
         case h.TVA.TIER_3:
@@ -41,17 +41,17 @@ let T = { [h.TVA.NONE]: 0, [h.TVA.TIER_1]: 1 / 3, [h.TVA.TIER_2]: 2 / 3, [h.TVA.
                 setShouldFireConfetti: v,
                 tier: N,
                 tierMarkerAnimationPosition: C,
-                totalAvailableBoostsCount: b,
+                totalAvailableBoostsCount: R,
             } = e,
-            { analyticsLocations: R } = (0, u.Ay)(),
-            O = (0, c.A)(),
+            { analyticsLocations: O } = (0, u.Ay)(),
+            b = (0, c.A)(),
             D = h.M2T[N],
-            L = D - b,
+            L = D - R,
             w = N <= C || S,
-            x = w && N <= i.premiumTier,
-            M = w && N < i.premiumTier,
+            M = w && N <= i.premiumTier,
+            x = w && N < i.premiumTier,
             P = w && N === i.premiumTier,
-            k = i.premiumTier < N && b >= D,
+            k = i.premiumTier < N && R >= D,
             { scaleFactor: U } = (0, l.zhh)({
                 from: { scaleFactor: 0 },
                 to: { scaleFactor: C >= N || (S && C + 1 === N) || (S && -1 === C && N === h.TVA.NONE) ? 1 : 0 },
@@ -74,7 +74,7 @@ let T = { [h.TVA.NONE]: 0, [h.TVA.TIER_1]: 1 / 3, [h.TVA.TIER_2]: 2 / 3, [h.TVA.
             !w ||
                 k ||
                 (0, f.g)({
-                    analyticsLocations: R,
+                    analyticsLocations: O,
                     analyticsLocation: {
                         page: h.liQ.PREMIUM_GUILD_USER_MODAL,
                         section: h.JJy.PREMIUM_GUILD_USER_MODAL_PROGRESS_BAR,
@@ -85,10 +85,10 @@ let T = { [h.TVA.NONE]: 0, [h.TVA.TIER_1]: 1 / 3, [h.TVA.TIER_2]: 2 / 3, [h.TVA.
                     guild: i,
                 });
         }
-        let V = !x && O.fractionalState === m.xc.NONE,
+        let V = !M && b.fractionalState === m.xc.NONE,
             B = V ? l.DUT : "div",
             H = V ? { onClick: F } : {},
-            j = x
+            j = M
                 ? E.intl.formatToPlainString(E.t["1o48ki"], { tierName: (0, _.gb)(N, { useLevels: !1 }) })
                 : k
                   ? E.intl.formatToPlainString(g.default["9CtPjt"], { perk: (0, _.gb)(N, { useLevels: !1 }) })
@@ -97,12 +97,12 @@ let T = { [h.TVA.NONE]: 0, [h.TVA.TIER_1]: 1 / 3, [h.TVA.TIER_2]: 2 / 3, [h.TVA.
                         tierName: (0, _.gb)(N, { useLevels: !1 }),
                     }),
             Y = (0, r.jsxs)(B, {
-                className: s()(A.Ll, { [A.kZ]: x, [A.ng]: V, [A.uZ]: M, [A.Ue]: P }),
+                className: s()(A.Ll, { [A.kZ]: M, [A.ng]: V, [A.uZ]: x, [A.Ue]: P }),
                 style: { left: `${100 * T[N]}%` },
                 ...H,
                 children: [
-                    !x && (0, r.jsx)("div", { className: A.cj }),
-                    x && N === h.TVA.TIER_3
+                    !M && (0, r.jsx)("div", { className: A.cj }),
+                    M && N === h.TVA.TIER_3
                         ? (0, r.jsx)(p.H, {
                               confettiTriggerRef: n,
                               setConfettiCount: y,
@@ -114,7 +114,7 @@ let T = { [h.TVA.NONE]: 0, [h.TVA.TIER_1]: 1 / 3, [h.TVA.TIER_2]: 2 / 3, [h.TVA.
                         className: A.Td,
                         variant: "text-md/normal",
                         children: [
-                            x &&
+                            M &&
                                 N !== h.TVA.NONE &&
                                 (0, r.jsx)(l.A9s, { size: "md", color: "currentColor", className: A.ZI }),
                             t,

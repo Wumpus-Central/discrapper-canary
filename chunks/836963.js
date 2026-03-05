@@ -6,7 +6,7 @@ var r = n(627968),
     a = n(887695),
     o = n(770171),
     l = n(101024),
-    u = n(990675);
+    u = n(76269);
 function c(e) {
     let {
             categories: t,
@@ -28,14 +28,14 @@ function c(e) {
             renderEmptySearchState: v,
             renderCategoryList: N,
             renderHeaderAccessories: C,
-            rowHeight: b,
-            sectionHeaderHeight: R,
-            sectionFooterHeight: O,
+            rowHeight: R,
+            sectionHeaderHeight: O,
+            sectionFooterHeight: b,
             itemNodeWidth: D,
             listPaddingRight: L,
             itemNodeMargin: w,
-            listPadding: x,
-            gridNavigatorId: M,
+            listPadding: M,
+            gridNavigatorId: x,
             gridNotice: P,
             renderHeader: k,
             renderUpsell: U,
@@ -50,8 +50,8 @@ function c(e) {
         {
             expressionsGrid: W,
             rowCount: K,
-            rowCountBySection: z,
-            columnCounts: $,
+            rowCountBySection: $,
+            columnCounts: z,
             gutterWidth: q,
         } = (0, a.se)({
             categories: t,
@@ -68,12 +68,12 @@ function c(e) {
             handleGridContainerKeyDown: J,
             isUsingKeyboardNavigation: ee,
         } = (0, a.JZ)({
-            columnCounts: $,
+            columnCounts: z,
             expressionsListRef: F,
             expressionsGrid: W,
             onSelectItem: _,
             store: d,
-            gridNavigatorId: M,
+            gridNavigatorId: x,
         }),
         et = i.useCallback(
             (e, t) =>
@@ -113,7 +113,7 @@ function c(e) {
                 hasSendableExpressions: !0,
                 onKeyDown: J,
                 expressionsListRef: F,
-                gridNavigatorId: M,
+                gridNavigatorId: x,
                 defaultSearchPlaceholder: m,
                 emptySearchPlaceholder: E,
             }),
@@ -132,7 +132,7 @@ function c(e) {
                           (0, r.jsx)("div", {
                               ref: G,
                               className: u.AD,
-                              id: M,
+                              id: x,
                               ...Q,
                               children:
                                   null != Y
@@ -141,7 +141,7 @@ function c(e) {
                                             ref: F,
                                             store: d,
                                             hasSearchResults: h,
-                                            listPadding: x,
+                                            listPadding: M,
                                             renderRow: et,
                                             renderSection: I,
                                             renderSectionHeader: null != T ? en : void 0,
@@ -149,10 +149,10 @@ function c(e) {
                                             renderInspector: null != y ? ei : void 0,
                                             renderEmptySearchState: v,
                                             rowCount: K,
-                                            rowCountBySection: z,
-                                            rowHeight: b,
-                                            sectionHeaderHeight: R,
-                                            sectionFooterHeight: O,
+                                            rowCountBySection: $,
+                                            rowHeight: R,
+                                            sectionHeaderHeight: O,
+                                            sectionFooterHeight: b,
                                             renderUpsell: U,
                                             onScroll: p,
                                         })

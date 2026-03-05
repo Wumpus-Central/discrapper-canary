@@ -24,14 +24,14 @@ var r = n(627968),
     v = n(455440),
     N = n(720371),
     C = n(735991),
-    b = n(297486),
-    R = n(956522),
-    O = n(652215),
+    R = n(297486),
+    O = n(956522),
+    b = n(652215),
     D = n(73510),
     L = n(985018),
-    w = n(457806),
-    x = n(577382);
-let M = 5,
+    w = n(86e3),
+    M = n(370092);
+let x = 5,
     P = "placeholder",
     k = [, , , , ,].fill(P);
 function U(e) {
@@ -50,14 +50,14 @@ function U(e) {
                         source: e,
                         commandOrigin: m.iw.APPLICATION_LAUNCHER,
                     }),
-                    A._.dispatch(O.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: t.channel.id }));
+                    A._.dispatch(b.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: t.channel.id }));
         }, [t, n, s, a]),
         u = (n.options?.length ?? 0) > 0,
-        d = i.useMemo(() => (0, b.SD)(n.displayDescription, void 0), [n.displayDescription]),
+        d = i.useMemo(() => (0, R.SD)(n.displayDescription, void 0), [n.displayDescription]),
         _ = i.useMemo(
             () =>
                 (0, r.jsxs)("div", {
-                    className: x.sd,
+                    className: M.sd,
                     children: [
                         (0, r.jsx)(c.Text, {
                             variant: "text-sm/semibold",
@@ -75,10 +75,10 @@ function U(e) {
             [n.displayName, d],
         );
     return (0, r.jsxs)(c.DUT, {
-        className: x.G5,
+        className: M.G5,
         onClick: l,
         children: [
-            (0, r.jsx)(c.M1G, { className: x.fg, children: _ }),
+            (0, r.jsx)(c.M1G, { className: M.fg, children: _ }),
             u ? (0, r.jsx)(o._, {}) : (0, r.jsx)(F, { context: t, command: n, sectionName: a }),
         ],
     });
@@ -95,7 +95,7 @@ function G() {
         s = i.useMemo(
             () =>
                 (0, r.jsxs)("div", {
-                    className: x.Vc,
+                    className: M.Vc,
                     children: [
                         (0, r.jsx)("div", {
                             className: w.jC,
@@ -123,7 +123,7 @@ function G() {
                 }),
             [t, n],
         );
-    return (0, r.jsx)("div", { className: a()(x.G5, w.NX, { [w.cb]: e }), children: s });
+    return (0, r.jsx)("div", { className: a()(M.G5, w.NX, { [w.cb]: e }), children: s });
 }
 function F(e) {
     let { context: t, command: n, sectionName: s } = e;
@@ -180,11 +180,11 @@ function V(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)("div", {
-                      className: x.Zp,
+                      className: M.Zp,
                       children: [(0, r.jsx)(c.Heading, { variant: "heading-sm/semibold", children: s }), o],
                   }),
                   (0, r.jsx)("ul", {
-                      className: x.dO,
+                      className: M.dO,
                       "aria-label": s,
                       children: n.map((e, n) =>
                           e === P
@@ -225,13 +225,13 @@ function B(e) {
     i.useEffect(() => {
         l(n.id);
     }, [n.id, l]);
-    let A = (0, v.A)({ context: t, commands: E, limit: M });
+    let A = (0, v.A)({ context: t, commands: E, limit: x });
     return (i.useEffect(() => {
         o(E.length > 0);
     }, [o, E]),
     _ || 0 !== E.length)
         ? (0, r.jsxs)("ul", {
-              className: x.hQ,
+              className: M.hQ,
               children: [
                   (0, r.jsx)(V, {
                       context: t,
@@ -246,7 +246,7 @@ function B(e) {
                       commands: _ ? k : E,
                       headerName: L.intl.string(L.t.DUU9L3),
                       sectionName: s,
-                      children: g && (0, r.jsx)(R.A, { sortOrder: p, onSortOptionClick: m }),
+                      children: g && (0, r.jsx)(O.A, { sortOrder: p, onSortOptionClick: m }),
                   }),
               ],
           })

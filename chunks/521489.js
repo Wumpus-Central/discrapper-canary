@@ -3,13 +3,13 @@ var t = a(627968),
     o = a(64700),
     n = a(503698),
     i = a.n(n),
-    s = a(475539),
+    s = a(380278),
     r = a(110259),
     d = a(158954),
     u = a(397927),
     c = a(97469),
-    b = a(538029),
-    p = a(22789);
+    b = a(9836),
+    p = a(52379);
 function m(e) {
     let {
             transitionState: l,
@@ -17,8 +17,8 @@ function m(e) {
             returnRef: n,
             "aria-label": m,
             onClose: x,
-            trackingProps: v,
-            children: h,
+            trackingProps: h,
+            children: v,
         } = e,
         y = o.useId(),
         f = o.useMemo(() => ({ id: y, headingId: `heading-${y}`, onClose: x, dismissable: !0 }), [y, x]),
@@ -33,8 +33,8 @@ function m(e) {
             "aria-label": m,
             "aria-labelledby": null != m ? void 0 : f.headingId,
             returnRef: n,
-            ...v,
-            impressionType: v?.impressionType ?? r.ImpressionTypes.MODAL,
+            ...h,
+            impressionType: h?.impressionType ?? r.ImpressionTypes.MODAL,
             children: (0, t.jsx)(d.Fmo, {
                 forceLevel: 1,
                 children: (0, t.jsx)("div", {
@@ -50,7 +50,7 @@ function m(e) {
                                     className: b.jE,
                                     children: (0, t.jsx)(u.NPJ, {
                                         theme: V,
-                                        children: (e) => (0, t.jsx)("div", { className: i()(e, b.h_), children: h }),
+                                        children: (e) => (0, t.jsx)("div", { className: i()(e, b.h_), children: v }),
                                     }),
                                 }),
                             }),

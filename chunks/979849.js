@@ -13,7 +13,7 @@ var r = n(627968),
     f = n(351242),
     p = n(385612),
     h = n(339984),
-    m = n(577401);
+    m = n(84279);
 let E = _.Ay.getEnableHardwareAcceleration() ? l.JsQ : l.euF;
 function g(e) {
     let {
@@ -31,8 +31,8 @@ function g(e) {
             onUpsellClick: N,
         } = e,
         C = i.useRef(null),
-        { analyticsLocations: b, newestAnalyticsLocation: R } = (0, u.Ay)(),
-        O = (0, o.bG)([d.A], () => d.A.getStatus(t.id)),
+        { analyticsLocations: R, newestAnalyticsLocation: O } = (0, u.Ay)(),
+        b = (0, o.bG)([d.A], () => d.A.getStatus(t.id)),
         D = null == n || s?.canUsePremiumProfileCustomization || _,
         L = (0, r.jsx)(E, {
             src: g,
@@ -40,7 +40,7 @@ function g(e) {
             imageClassName: a()(S, { [m.Lw]: !y }),
             size: l._3J.SIZE_80,
             "aria-label": t.username,
-            status: O,
+            status: b,
             statusTooltip: !1,
             statusBackdropColor: null != T ? (0, l.C$5)(I) : void 0,
         });
@@ -54,9 +54,9 @@ function g(e) {
                     return (0, r.jsx)(f.A, {
                         onClose: t,
                         onChangeAvatar: () =>
-                            (0, p.XD)({ uploadType: h.HL.AVATAR, guildId: n?.id, analyticsSource: R, isTryItOut: v }),
+                            (0, p.XD)({ uploadType: h.HL.AVATAR, guildId: n?.id, analyticsSource: O, isTryItOut: v }),
                         onChangeAvatarDecoration: () => {
-                            (0, c.L)({ guild: null == n ? void 0 : n, analyticsLocations: b });
+                            (0, c.L)({ guild: null == n ? void 0 : n, analyticsLocations: R });
                         },
                     });
                 },

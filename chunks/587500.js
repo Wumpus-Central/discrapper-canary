@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(475539),
+    o = n(380278),
     l = n(311907),
     u = n(397927),
     c = n(387755),
@@ -24,14 +24,14 @@ var r = n(627968),
     v = n(151476),
     N = n(704877),
     C = n(222692),
-    b = n(404355),
-    R = n(496841),
-    O = n(970636),
+    R = n(404355),
+    O = n(496841),
+    b = n(970636),
     D = n(164891),
     L = n(260509),
     w = n(71393),
-    x = n(430452),
-    M = n(287809),
+    M = n(430452),
+    x = n(287809),
     P = n(531685),
     k = n(954571),
     U = n(486020),
@@ -44,11 +44,11 @@ var r = n(627968),
     Y = n(806931),
     W = n(652215),
     K = n(650583),
-    z = n(731854),
-    $ = n(985018),
-    q = n(503434),
-    Z = n(424658),
-    X = n(976092);
+    $ = n(731854),
+    z = n(985018),
+    q = n(15772),
+    Z = n(143400),
+    X = n(754694);
 let Q = { width: 232, height: 315 },
     J = { width: 232, height: 267 },
     ee = 475,
@@ -56,12 +56,12 @@ let Q = { width: 232, height: 315 },
     en = 128;
 function er(e) {
     let { header: t } = e,
-        n = x.Ay.getCameraComponent(),
-        s = (0, l.bG)([x.Ay], () => x.Ay.getVideoDeviceId()),
+        n = M.Ay.getCameraComponent(),
+        s = (0, l.bG)([M.Ay], () => M.Ay.getVideoDeviceId()),
         a = (0, y.A)();
     return (
         i.useEffect(() => {
-            let e = M.default.getCurrentUser();
+            let e = x.default.getCurrentUser();
             if (a && null != e) {
                 let t = (0, T.i)(e);
                 (0, S.S1)(t, s, { track: !1 }).catch(W.tEg);
@@ -90,9 +90,9 @@ function ei(e) {
     return (0, r.jsxs)("div", {
         className: a()(Z.iE, Z.o1),
         children: [
-            (0, r.jsx)(b.A, {
+            (0, r.jsx)(R.A, {
                 iconComponent: u.PGe,
-                label: $.intl.string($.t.WAI6xu),
+                label: z.intl.string(z.t.WAI6xu),
                 className: Z.hP,
                 onClick: () => {
                     (0, H.X)(o, H.O.DISCONNECT),
@@ -120,7 +120,7 @@ function ei(e) {
                     children: (e, t) => {
                         let { onClick: i } = e,
                             { isShown: s } = t;
-                        return (0, r.jsx)(O.A, {
+                        return (0, r.jsx)(b.A, {
                             buttonRef: p,
                             join: !0,
                             enabled: d,
@@ -146,7 +146,7 @@ function ei(e) {
                         });
                     },
                 }),
-            (0, r.jsx)(R.A, {
+            (0, r.jsx)(O.A, {
                 channel: n,
                 color: "join",
                 centerButton: !0,
@@ -165,10 +165,10 @@ function es(e) {
         y = null != S ? U.Ay.getGuildIconURL({ id: S.id, icon: S.icon, size: en }) : null,
         v = (0, E.Y)(_, en, !0) ?? y,
         N = (0, g.Ay)(_),
-        [C, b] = (0, l.yK)([x.Ay], () => [x.Ay.supports(z.O5.VIDEO), Object.keys(x.Ay.getVideoDevices()).length]),
-        R = null != S ? `${N}, ${S.name}` : N,
-        O = (0, l.bG)([P.A], () => P.A.isFocused()),
-        M = (0, l.bG)([G.A], () => G.A.getMode(_.id)),
+        [C, R] = (0, l.yK)([M.Ay], () => [M.Ay.supports($.O5.VIDEO), Object.keys(M.Ay.getVideoDevices()).length]),
+        O = null != S ? `${N}, ${S.name}` : N,
+        b = (0, l.bG)([P.A], () => P.A.isFocused()),
+        x = (0, l.bG)([G.A], () => G.A.getMode(_.id)),
         k = i.useCallback((e) => {
             null != e.top && null != e.left && d.A.move(e.left, e.top);
         }, []),
@@ -179,12 +179,12 @@ function es(e) {
         };
         return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
     }, [_]);
-    let B = M === W._Of.VIDEO && C && b > 0,
+    let B = x === W._Of.VIDEO && C && R > 0,
         { enabled: H } = D.A.useExperiment({ guildId: _?.guild_id, location: "IncomingCallModal" }),
         j =
-            M === W._Of.VOICE || (H && _.type === W.rbe.GUILD_VOICE)
-                ? $.intl.string($.t.Js8cK3)
-                : $.intl.string($.t.KcnWCO),
+            x === W._Of.VOICE || (H && _.type === W.rbe.GUILD_VOICE)
+                ? z.intl.string(z.t.Js8cK3)
+                : z.intl.string(z.t.KcnWCO),
         Y = (0, r.jsxs)(r.Fragment, {
             children: [
                 null != S && null == y
@@ -203,7 +203,7 @@ function es(e) {
                       })
                     : (0, r.jsx)(F.A, {
                           className: Z.Kk,
-                          ringing: O,
+                          ringing: b,
                           src: v ?? "",
                           ringingType: F.A.RingingType.INCOMING,
                           size: I ? u._3J.SIZE_40 : u._3J.SIZE_80,
@@ -215,7 +215,7 @@ function es(e) {
                             className: Z.DD,
                             color: "text-strong",
                             variant: I ? "text-md/semibold" : "text-lg/semibold",
-                            children: R,
+                            children: O,
                         }),
                         (0, r.jsx)(u.Text, {
                             color: "text-default",
@@ -252,7 +252,7 @@ function es(e) {
                         },
                         children: [
                             I ? (0, r.jsx)(er, { header: Y }) : (0, r.jsx)("div", { className: Z.Rh, children: Y }),
-                            (0, r.jsx)(ei, { canVideo: B, channel: _, numVideoDevices: b }),
+                            (0, r.jsx)(ei, { canVideo: B, channel: _, numVideoDevices: R }),
                             B && !I
                                 ? (0, r.jsx)("div", {
                                       "data-button-hoisted-classname-wrapper": !0,
@@ -260,7 +260,7 @@ function es(e) {
                                       children: (0, r.jsx)(u.Button, {
                                           variant: "secondary",
                                           size: "sm",
-                                          text: $.intl.string($.t["8B0UDr"]),
+                                          text: z.intl.string(z.t["8B0UDr"]),
                                           fullWidth: !0,
                                           onClick: () => T(!0),
                                       }),

@@ -10,7 +10,7 @@ var i = n(627968),
     u = n(426179),
     h = n(401901),
     m = n(40056),
-    A = n(139208);
+    A = n(97762);
 function g(e) {
     return (1 & e.buttons) == 1;
 }
@@ -36,7 +36,7 @@ let p = l.memo(function (e) {
         } = l.useContext(m.e9),
         [D, O] = l.useState(null),
         [L, P] = l.useState(null),
-        [k, w] = l.useState(0),
+        [w, k] = l.useState(0),
         [U, G] = l.useState(null),
         [F, H] = l.useState(null),
         [B, V] = l.useState(!1),
@@ -63,7 +63,7 @@ let p = l.memo(function (e) {
                 if (!Y || !g(e)) return;
                 e.preventDefault(), e.stopPropagation();
                 let t = J(e);
-                C(!0), P(t), O(t), w(Date.now()), H(t), G(S);
+                C(!0), P(t), O(t), k(Date.now()), H(t), G(S);
             },
             [J, Y, S, C],
         ),
@@ -89,11 +89,11 @@ let p = l.memo(function (e) {
                 if (Y && null != L && null != D) {
                     let { x: t, y: n } = L,
                         { x: i, y: l } = D;
-                    (Math.sqrt((i - t) ** 2 + (l - n) ** 2) > 0.01 || Date.now() - k >= 500) &&
+                    (Math.sqrt((i - t) ** 2 + (l - n) ** 2) > 0.01 || Date.now() - w >= 500) &&
                         (e.preventDefault(), e.stopPropagation());
                 }
             },
-            [Y, L, k, D],
+            [Y, L, w, D],
         ),
         ee = l.useCallback(() => {
             C(!1), H(null), G(null);

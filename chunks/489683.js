@@ -1,4 +1,4 @@
-n.d(t, { A: () => e9 });
+n.d(t, { A: () => e5 });
 var i = n(627968),
     r = n(64700),
     l = n(503698),
@@ -40,7 +40,7 @@ var i = n(627968),
     B = n(379848),
     H = n(643501),
     F = n(857253),
-    Y = n(41261),
+    Y = n(263642),
     W = n(880144),
     q = n(338771),
     K = n(421838),
@@ -98,7 +98,7 @@ var i = n(627968),
     eW = n(897513),
     eq = n(509381),
     eK = n(985018),
-    ez = n(255259);
+    ez = n(492685);
 let e$ = { offset: { left: -1, top: -1, right: 1, bottom: 1 } };
 function eQ(e) {
     let t = e.currentTarget;
@@ -585,7 +585,7 @@ class e6 extends r.PureComponent {
                           renderPopout: () => (0, i.jsx)(eX, {}),
                           children: (t, n) => {
                               let { isShown: r } = n;
-                              return (0, i.jsx)(e5, {
+                              return (0, i.jsx)(e9, {
                                   popoutProps: t,
                                   isShown: r,
                                   noiseCancellationActive: e,
@@ -700,7 +700,7 @@ class e6 extends r.PureComponent {
               });
     }
 }
-function e5(e) {
+function e9(e) {
     let { popoutProps: t, isShown: n, noiseCancellationActive: l, ref: a } = e,
         { parentAnalyticsLocation: s } = (0, P.Ay)(),
         { play: o, Component: d, events: c } = (0, g.G)(l ? "disable" : "enable");
@@ -723,7 +723,7 @@ function e5(e) {
         })
     );
 }
-let e9 = (0, N.A)(function (e) {
+let e5 = (0, N.A)(function (e) {
     let t = (0, F.A)(),
         n = (0, c.bG)([H.default], () => H.default.getAwaitingRemoteSessionInfo()),
         l = (0, c.bG)([eP.default], () => eP.default.getCurrentUser()),

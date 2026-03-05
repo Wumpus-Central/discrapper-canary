@@ -24,14 +24,14 @@ var r = n(627968),
     v = n(122641),
     N = n(242254),
     C = n(893598),
-    b = n(338659),
-    R = n(410694),
-    O = n(20504),
+    R = n(338659),
+    O = n(410694),
+    b = n(20504),
     D = n(652215),
     L = n(838541),
     w = n(985018),
-    x = n(940727),
-    M = n(20976);
+    M = n(173605),
+    x = n(641254);
 let P = 3e3,
     k = 1e3,
     U = "-:--",
@@ -63,11 +63,11 @@ let j = (e) => {
     return (
         (i = i.padStart(s.length, "0")),
         (0, r.jsxs)("div", {
-            className: x.d$,
+            className: M.d$,
             children: [
-                (0, r.jsx)("span", { className: x.Ue, children: i }),
-                (0, r.jsx)("span", { className: x.zO, children: "/" }),
-                (0, r.jsx)("span", { className: x.Ue, children: s }),
+                (0, r.jsx)("span", { className: M.Ue, children: i }),
+                (0, r.jsx)("span", { className: M.zO, children: "/" }),
+                (0, r.jsx)("span", { className: M.Ue, children: s }),
             ],
         })
     );
@@ -109,26 +109,26 @@ class Y extends i.Component {
         let { playing: e, currentTime: t, duration: n, onPause: i, onPlay: s, disabled: a } = this.props;
         return e
             ? (0, r.jsx)(_.DUT, {
-                  className: x.CY,
+                  className: M.CY,
                   onClick: i,
                   tabIndex: a ? -1 : 0,
                   "aria-label": w.intl.string(w.t.ZcgDJX),
-                  children: (0, r.jsx)(_.E$n, { size: "xs", color: "currentColor", className: x.pd }, "pause"),
+                  children: (0, r.jsx)(_.E$n, { size: "xs", color: "currentColor", className: M.pd }, "pause"),
               })
             : null != t && t === n
               ? (0, r.jsx)(_.DUT, {
-                    className: x.CY,
+                    className: M.CY,
                     onClick: s,
                     tabIndex: a ? -1 : 0,
                     "aria-label": w.intl.string(w.t.hsvh0i),
-                    children: (0, r.jsx)(g.A, { className: x.pd }, "replay"),
+                    children: (0, r.jsx)(g.A, { className: M.pd }, "replay"),
                 })
               : (0, r.jsx)(_.DUT, {
-                    className: x.CY,
+                    className: M.CY,
                     onClick: s,
                     tabIndex: a ? -1 : 0,
                     "aria-label": w.intl.string(w.t.RscU7I),
-                    children: (0, r.jsx)(_.udU, { size: "xs", color: "currentColor", className: x.pd }, "play"),
+                    children: (0, r.jsx)(_.udU, { size: "xs", color: "currentColor", className: M.pd }, "play"),
                 });
     }
     render() {
@@ -150,7 +150,7 @@ class Y extends i.Component {
             } = this.props,
             m = "string" == typeof f || f > 250;
         return (0, r.jsxs)(u.A.div, {
-            className: h === F.VIDEO ? x._v : x.dH,
+            className: h === F.VIDEO ? M._v : M.dH,
             onClick: (e) => e.stopPropagation(),
             onDoubleClick: (e) => e.stopPropagation(),
             style: this.getAnimatedStyle(),
@@ -167,8 +167,8 @@ class Y extends i.Component {
                     ref: this.setDurationRef,
                 }),
                 (0, r.jsx)("div", {
-                    className: M.Uu,
-                    children: (0, r.jsx)(O.A, {
+                    className: x.Uu,
+                    children: (0, r.jsx)(b.A, {
                         ref: this.setVolumeButtonRef,
                         muted: s,
                         value: p,
@@ -179,9 +179,9 @@ class Y extends i.Component {
                         onToggleMute: c,
                         onVolumeShow: d,
                         onVolumeHide: _,
-                        iconClassName: x.pd,
+                        iconClassName: M.pd,
                         iconColor: "currentColor",
-                        sliderWrapperClassName: x.L9,
+                        sliderWrapperClassName: M.L9,
                     }),
                 }),
                 t,
@@ -192,18 +192,18 @@ class Y extends i.Component {
 function W(e) {
     let { fileName: t, fileSize: n, src: i, disabled: s, mimeType: a, hideDownloadButton: o } = e;
     return (0, r.jsxs)("div", {
-        className: x.WU,
+        className: M.WU,
         children: [
             (0, r.jsxs)("div", {
-                className: x.xe,
+                className: M.xe,
                 children: [
                     s
                         ? t
-                        : (0, r.jsx)(p.A, { href: i, className: x.kH, iconClassName: x.XR, mimeType: a, fileName: t }),
-                    (0, r.jsx)("div", { className: x.fL, children: n }),
+                        : (0, r.jsx)(p.A, { href: i, className: M.kH, iconClassName: M.XR, mimeType: a, fileName: t }),
+                    (0, r.jsx)("div", { className: M.fL, children: n }),
                 ],
             }),
-            !o && (0, r.jsx)(p.A, { href: i, className: x.kH, iconClassName: x.XR, mimeType: a }),
+            !o && (0, r.jsx)(p.A, { href: i, className: M.kH, iconClassName: M.XR, mimeType: a }),
         ],
     });
 }
@@ -236,20 +236,20 @@ class K extends i.Component {
         let { play: e } = this.state,
             t = e ? _.udU : _.E$n;
         return (0, r.jsx)(u.A.div, {
-            className: x.kO,
+            className: M.kO,
             style: this.getAnimatedStyle(),
-            children: (0, r.jsx)(t, { className: x.PK }),
+            children: (0, r.jsx)(t, { className: M.PK }),
         });
     }
 }
-let z = (0, h.C)({
+let $ = (0, h.C)({
     kind: "user",
     id: "2024-03_media_play_metrics",
     label: "Media play metrics User Experiment",
     defaultConfig: { enabled: !1 },
     treatments: [{ id: 1, label: "Send metrics", config: { enabled: !0 } }],
 });
-class $ {
+class z {
     metadata;
     playTimeSec = 0;
     playWallTimeMs = 0;
@@ -266,7 +266,7 @@ class $ {
     lastPlayingTime;
     analyticsEnabled;
     constructor(e) {
-        (this.metadata = e), (this.analyticsEnabled = z.getCurrentConfig({ location: "media_player" }).enabled);
+        (this.metadata = e), (this.analyticsEnabled = $.getCurrentConfig({ location: "media_player" }).enabled);
     }
     moveToState(e) {
         (this.stateTime = performance.now()), (this.currentState = e);
@@ -468,7 +468,7 @@ class q extends i.PureComponent {
         return !e.playable && t.playing ? { playing: !1, hideControls: !1 } : null;
     }
     constructor(e) {
-        super(e), (this._analytics = new $({ src: e.src, mimeType: e.mimeType?.join("/"), fileSize: e.fileSizeBytes }));
+        super(e), (this._analytics = new z({ src: e.src, mimeType: e.mimeType?.join("/"), fileSize: e.fileSizeBytes }));
         const { autoPlay: t, autoMute: n, volume: r, playable: i } = this.props,
             s = "function" == typeof r ? r() : r,
             a = "function" == typeof n ? n() : n;
@@ -736,7 +736,7 @@ class q extends i.PureComponent {
                 });
         else if (null != t && (0, c.vq)(t, HTMLVideoElement))
             try {
-                null == this._statsCollector && (this._statsCollector = new b.s(t, this.props.fileSizeBytes)),
+                null == this._statsCollector && (this._statsCollector = new R.s(t, this.props.fileSizeBytes)),
                     this._statsCollector.startTracking(this.handleStatsUpdate),
                     (this._isUpdatingStats = !0),
                     this.setState({ showStats: !0, videoStats: this._statsCollector.getStats() }, () => {
@@ -766,7 +766,7 @@ class q extends i.PureComponent {
         return i
             ? (0, r.jsx)(f.A, {
                   alt: e,
-                  className: x.Ki,
+                  className: M.Ki,
                   controls: !1,
                   height: c,
                   poster: n,
@@ -778,7 +778,7 @@ class q extends i.PureComponent {
               })
             : (0, r.jsx)(f.A, {
                   alt: e,
-                  className: x.Ki,
+                  className: M.Ki,
                   controls: !1,
                   playsInline: !0,
                   autoPlay: o,
@@ -805,7 +805,7 @@ class q extends i.PureComponent {
     }
     renderAudio() {
         return (0, r.jsx)("audio", {
-            className: x.z7,
+            className: M.z7,
             controls: !1,
             onClick: this.handleVideoClick,
             onEnded: this.handleEnded,
@@ -871,8 +871,8 @@ class q extends i.PureComponent {
                       t === F.VIDEO
                           ? (0, r.jsx)(m.A, {
                                 "aria-label": w.intl.string(w.t["2nM3Pk"]),
-                                className: x.CY,
-                                iconClassName: x.pd,
+                                className: M.CY,
+                                iconClassName: M.pd,
                                 guestWindow: window,
                                 onClick: this.toggleFullscreen,
                                 node: (0, S.qf)(e?.parentNode, e),
@@ -911,11 +911,11 @@ class q extends i.PureComponent {
                 renderOverlayContent: c,
             } = this.props,
             { fullscreen: d, hideControls: f, playing: p } = this.state,
-            h = x.ub;
-        if ((t === F.AUDIO ? (h = x._X) : f ? (h = x.CX) : p && (h = x.sw), i && t === F.VIDEO)) {
+            h = M.ub;
+        if ((t === F.AUDIO ? (h = M._X) : f ? (h = M.CX) : p && (h = M.sw), i && t === F.VIDEO)) {
             let t = this.getWidth();
             return (0, r.jsxs)("div", {
-                className: a()(h, { [x.mE]: u === L.dG.MOSAIC }),
+                className: a()(h, { [M.mE]: u === L.dG.MOSAIC }),
                 style: l ? void 0 : { width: t, height: e },
                 onKeyDown: this.handleKeyDown,
                 tabIndex: 0,
@@ -923,9 +923,9 @@ class q extends i.PureComponent {
                     this.renderMetadata(),
                     this.renderVideo(),
                     (0, r.jsx)("div", {
-                        className: x.s4,
+                        className: M.s4,
                         children: (0, r.jsx)(C.A, {
-                            className: x.__invalid_playButton,
+                            className: M.__invalid_playButton,
                             externalURL: n,
                             renderLinkComponent: o,
                         }),
@@ -934,7 +934,7 @@ class q extends i.PureComponent {
             });
         }
         return (0, r.jsxs)("div", {
-            className: a()(h, x.mr, s, { [x.mE]: u === L.dG.MOSAIC }),
+            className: a()(h, M.mr, s, { [M.mE]: u === L.dG.MOSAIC }),
             "data-fullscreen": d,
             onMouseEnter: this.handleMouseEnter,
             onMouseLeave: this.handleMouseLeave,
@@ -950,9 +950,9 @@ class q extends i.PureComponent {
                     children: (e) => (0, r.jsx)("div", { className: e, children: this.renderControls() }),
                 }),
                 t === F.VIDEO ? this.renderPlayPausePop() : null,
-                null != c ? (0, r.jsx)("div", { className: a()({ [x.eM]: p || d }), children: c() }) : null,
+                null != c ? (0, r.jsx)("div", { className: a()({ [M.eM]: p || d }), children: c() }) : null,
                 t === F.VIDEO && this.state.showStats && null != this.state.videoStats
-                    ? (0, r.jsx)(R.J, { stats: this.state.videoStats, onClose: this.toggleStats })
+                    ? (0, r.jsx)(O.J, { stats: this.state.videoStats, onClose: this.toggleStats })
                     : null,
             ],
         });

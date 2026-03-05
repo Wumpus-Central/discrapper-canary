@@ -32,7 +32,7 @@ var r = n(627968),
     w = n(806931),
     M = n(544105),
     x = n(985018),
-    P = n(77615);
+    P = n(377157);
 let k = 16,
     U = (e) => {
         let { hangStatusActivity: t, iconClassName: n, isSelf: i, onAddHangStatusClicked: s, userId: o } = e,

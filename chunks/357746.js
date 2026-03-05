@@ -11,21 +11,21 @@ var i = n(627968),
     u = n(361158),
     h = n(186111),
     A = n(942975),
-    p = n(379229),
-    g = n(489306),
-    m = n(828162),
+    m = n(379229),
+    p = n(489306),
+    g = n(828162),
     _ = n(249584),
     f = n(49999),
-    x = n(333354),
+    x = n(136708),
     C = n(985018),
-    E = n(408392);
+    E = n(14714);
 function I(e) {
     let { indicator: t } = e;
     if (null == t) return null;
     switch (t.type) {
-        case p.cD.WARNING:
+        case m.cD.WARNING:
             return (0, i.jsx)(o.EpV, { color: o.LU0.colors.STATUS_WARNING, size: "sm" });
-        case p.cD.UNREAD:
+        case m.cD.UNREAD:
             return (0, i.jsx)(o.hVq, { count: t.count, color: o.LU0.colors.BACKGROUND_MOD_STRONG.css });
         default:
             return null;
@@ -34,34 +34,34 @@ function I(e) {
 let N = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
     b = s.memo(function (e) {
         let { guildId: t, selected: l } = e,
-            b = (0, g.Ay)(t),
+            b = (0, p.Ay)(t),
             S = s.useCallback(() => {
                 (0, A.Zm)(t),
-                    (0, m.A)(t, c.A.GUILD_POWERUPS_CHANNEL_LIST_ROW),
+                    (0, g.A)(t, c.A.GUILD_POWERUPS_CHANNEL_LIST_ROW),
                     b?.popout?.markAsDismissed(f.i.INDIRECT_ACTION);
             }, [t, b]),
             T = s.useRef(null),
-            y = (0, o.red)(o.DXt),
-            v = (0, a.bG)([h.A], () => h.A.hasLayers()),
+            v = (0, o.red)(o.DXt),
+            y = (0, a.bG)([h.A], () => h.A.hasLayers()),
             j = (0, u.xr)((e) => e.fullScreenLayers.length > 0),
-            R = y || v || j,
+            R = v || y || j,
             O = s.useCallback(() => {
                 if (b?.popout == null || R) return null;
                 switch (b?.popout?.type) {
-                    case p.o.LEVEL_REACHED:
+                    case m.o.LEVEL_REACHED:
                         return (0, i.jsx)(_.HW, { guildId: t, channelRowRef: T, ...b.popout });
-                    case p.o.PERKS_AVAILABLE:
+                    case m.o.PERKS_AVAILABLE:
                         return (0, i.jsx)(_.UB, { guildId: t, channelRowRef: T, ...b.popout });
-                    case p.o.PERKS_PURCHASABLE:
+                    case m.o.PERKS_PURCHASABLE:
                         return (0, i.jsx)(_.lw, { guildId: t, channelRowRef: T, ...b.popout });
-                    case p.o.NEW_PERK_AVAILABLE:
+                    case m.o.NEW_PERK_AVAILABLE:
                         return (0, i.jsx)(_.bo, { guildId: t, channelRowRef: T, ...b.popout });
-                    case p.o.BOOST_TO_UNLOCK:
+                    case m.o.BOOST_TO_UNLOCK:
                         return (0, i.jsx)(_.Gw, { guildId: t, channelRowRef: T, ...b.popout });
-                    case p.o.EXPIRING_PERK:
+                    case m.o.EXPIRING_PERK:
                         return (0, i.jsx)(_.Mr, { guildId: t, channelRowRef: T, ...b.popout });
-                    case p.o.GAME_SERVER_HOSTING_AVAILABLE:
-                    case p.o.GAME_SERVER_HOSTING_GUILD_ELIGIBLE:
+                    case m.o.GAME_SERVER_HOSTING_AVAILABLE:
+                    case m.o.GAME_SERVER_HOSTING_GUILD_ELIGIBLE:
                         return (0, i.jsx)(_.jz, { guildId: t, channelRowRef: T, ...b.popout });
                     default:
                         return (0, i.jsx)("div", {});

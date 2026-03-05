@@ -19,8 +19,8 @@ var i = n(627968),
     T = n(792656),
     S = n(511484),
     C = n(811611),
-    I = n(97469),
-    f = n(954571),
+    f = n(97469),
+    I = n(954571),
     b = n(544028),
     N = n(253932),
     v = n(12901),
@@ -28,7 +28,7 @@ var i = n(627968),
     O = n(49999),
     R = n(788868),
     y = n(985018),
-    P = n(21082);
+    P = n(318684);
 let L = () => {
     (0, p.Dr)(a.M.CLIENT_THEMES_SPARKLE_PREVIEW, { dismissAction: O.i.PRIMARY, forceTrack: !0 }),
         (0, h.nf)(h.HP.CLIENT_THEMES),
@@ -65,7 +65,7 @@ function M(e) {
         { analyticsLocations: a } = (0, _.Ay)(u.A.USER_SETTINGS);
     return (s.useEffect(() => {
         n &&
-            f.default.track(j.HAw.PREMIUM_UPSELL_VIEWED, {
+            I.default.track(j.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: R.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                 location_stack: a,
             });
@@ -113,7 +113,7 @@ let k = () =>
         }),
     });
 function V() {
-    let e = (0, I.qo)(),
+    let e = (0, f.qo)(),
         {
             theme: t,
             useForcedColors: n,

@@ -17,7 +17,7 @@ var r = n(627968),
     E = n(783123),
     g = n(996988),
     A = n(985018),
-    I = n(612704),
+    I = n(54578),
     T = n(911850);
 function S(e) {
     let {
@@ -28,31 +28,31 @@ function S(e) {
             messageId: v,
             roleId: N,
             openedAt: C,
-            onHide: b,
-            newAnalyticsLocations: R = [],
-            disableAutoFocus: O = !1,
+            onHide: R,
+            newAnalyticsLocations: O = [],
+            disableAutoFocus: b = !1,
             onClickContainer: D,
         } = e,
         L = (0, s.bG)([u.A], () => u.A.isBlocked(t.id)),
-        { analyticsLocations: w } = (0, l.Ay)([...R, L ? o.A.BLOCKED_PROFILE_POPOUT : o.A.IGNORED_PROFILE_POPOUT]),
-        x = (0, d.pb)({ layout: "POPOUT", userId: t.id, guildId: n, channelId: y, messageId: v, roleId: N }),
-        M = i.useRef(null),
+        { analyticsLocations: w } = (0, l.Ay)([...O, L ? o.A.BLOCKED_PROFILE_POPOUT : o.A.IGNORED_PROFILE_POPOUT]),
+        M = (0, d.pb)({ layout: "POPOUT", userId: t.id, guildId: n, channelId: y, messageId: v, roleId: N }),
+        x = i.useRef(null),
         P = (0, f.Ay)(t.id, n);
     i.useEffect(() => {
-        S?.(M?.current);
-    }, [M, S]);
+        S?.(x?.current);
+    }, [x, S]);
     let k = L ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
-        U = O ? "div" : a.lGe;
+        U = b ? "div" : a.lGe;
     return (0, r.jsx)(l.f5, {
         value: w,
         children: (0, r.jsx)(d.of, {
-            value: x,
+            value: M,
             openedAt: C,
             fetchStartedAt: P?.fetchStartedAt,
             fetchEndedAt: P?.fetchEndedAt,
             isLoaded: P?.isLoaded,
             children: (0, r.jsx)(U, {
-                ref: M,
+                ref: x,
                 "aria-label": t.username,
                 onClick: D,
                 children: (0, r.jsx)(h.A, {
@@ -88,17 +88,17 @@ function S(e) {
                                             (0, r.jsx)(E.A, {
                                                 isBlocked: L,
                                                 onClick: () => {
-                                                    b(), (0, _.Wn)({ action: k, analyticsLocations: w, ...x });
+                                                    R(), (0, _.Wn)({ action: k, analyticsLocations: w, ...M });
                                                 },
                                             }),
                                             (0, r.jsx)(m.A, {
                                                 userId: t.id,
                                                 onClick: () => {
-                                                    b(),
+                                                    R(),
                                                         (0, _.Wn)({
                                                             action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
                                                             analyticsLocations: w,
-                                                            ...x,
+                                                            ...M,
                                                         });
                                                 },
                                             }),

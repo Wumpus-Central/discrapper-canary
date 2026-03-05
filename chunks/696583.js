@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => p });
 var l = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(475539),
+    r = n(380278),
     o = n(942381),
     d = n(397927),
     c = n(435183),
@@ -13,11 +13,11 @@ var l = n(627968),
     h = n(218152),
     x = n(652215),
     g = n(985018),
-    f = n(40211),
-    p = n(206314);
-let _ = i.memo(function (e) {
+    f = n(676745),
+    _ = n(830412);
+let p = i.memo(function (e) {
     let { channel: t, onChange: s } = e,
-        _ = (0, h.ST)(),
+        p = (0, h.ST)(),
         { guidelinesOpen: j } = (0, h.kU)((e) => {
             let { guidelinesOpen: t } = e;
             return { guidelinesOpen: t };
@@ -73,7 +73,7 @@ let _ = i.memo(function (e) {
                                   "aria-label": g.intl.string(g.t.cpT0Cq),
                                   className: f.vk,
                                   onClick: () => {
-                                      _.getState().setGuidelinesOpen(!1);
+                                      p.getState().setGuidelinesOpen(!1);
                                   },
                                   children: (0, l.jsx)(d.PGe, { size: "xs", color: "currentColor" }),
                               }),
@@ -87,7 +87,7 @@ let _ = i.memo(function (e) {
                                   variant: "text-sm/normal",
                                   color: "text-default",
                                   style: { maxHeight: 220 },
-                                  className: a()(f.I4, p.PT),
+                                  className: a()(f.I4, _.PT),
                                   children: (0, l.jsx)("div", {
                                       ref: C,
                                       children: u.A.parseForumPostGuidelines(t.topic, !0, {

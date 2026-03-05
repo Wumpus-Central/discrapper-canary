@@ -18,7 +18,7 @@ var i = n(627968),
     f = n(652215),
     C = n(172799),
     E = n(985018),
-    I = n(563111);
+    I = n(42441);
 function b(e) {
     let t,
         {
@@ -53,32 +53,32 @@ function b(e) {
     a()(null != n, "Invite cannot be null");
     let { target_type: w, target_user: D } = n;
     a()(w === C.yV.STREAM && null != D, "invalid streaming invite");
-    let k = r === D.id,
-        O = n.state === f.elq.ACCEPTING,
+    let O = r === D.id,
+        k = n.state === f.elq.ACCEPTING,
         U = l.useCallback(() => {
             let e = "noop";
             P ? (v(), (e = "transition")) : (S(), (e = "accept")),
                 (0, d.he)({ invite: n, action: e, inviter_id: T.author.id, invite_message_id: T.id }, R);
         }, [n, T, R, P, v, S]),
-        B = null != b;
+        G = null != b;
     if (null == b) {
         if (null == n.guild) return (0, i.jsx)(x.A, {});
         b = (0, g.DY)(n.guild);
     }
-    let G = null != n.channel ? (0, m.OY)(n.channel) : null,
+    let B = null != n.channel ? (0, m.OY)(n.channel) : null,
         F = A.Ay.getName(D),
-        H = P || (!M && B),
+        H = P || (!M && G),
         V = E.intl.string(E.t.I6JG46),
         W = "active";
-    B && !M
-        ? ((t = k ? E.intl.string(E.t.oBLoZJ) : E.intl.formatToPlainString(E.t["0QJmA+"], { name: F })),
+    G && !M
+        ? ((t = O ? E.intl.string(E.t.oBLoZJ) : E.intl.formatToPlainString(E.t["0QJmA+"], { name: F })),
           (V = E.intl.string(E.t.Wdi5E1)))
         : ((W = "active"),
           P && ((V = E.intl.string(E.t.Q1W99y)), (W = "secondary")),
-          (t = k ? E.intl.string(E.t["4hyaHu"]) : E.intl.formatToPlainString(E.t.QmlLEq, { name: F })));
+          (t = O ? E.intl.string(E.t["4hyaHu"]) : E.intl.formatToPlainString(E.t.QmlLEq, { name: F })));
     let q =
-        N === b.id && null != G
-            ? (0, i.jsx)(_.A.Channel, { channel: G })
+        N === b.id && null != B
+            ? (0, i.jsx)(_.A.Channel, { channel: B })
             : E.intl.formatToPlainString(E.t.u0vaDE, { guildName: b.name });
     return (0, i.jsxs)(_.A, {
         children: [
@@ -88,11 +88,11 @@ function b(e) {
                     (0, i.jsxs)("div", {
                         className: I.iH,
                         children: [
-                            (0, i.jsx)(_.A.Icon, { guild: b, onClick: B && M ? U : void 0 }),
-                            (0, i.jsx)(_.A.Info, { title: t, onClick: B && M ? U : void 0, children: q }),
+                            (0, i.jsx)(_.A.Icon, { guild: b, onClick: G && M ? U : void 0 }),
+                            (0, i.jsx)(_.A.Info, { title: t, onClick: G && M ? U : void 0, children: q }),
                         ],
                     }),
-                    (0, i.jsx)(s.$nd, { onClick: U, loading: O, disabled: H, variant: W, text: V }),
+                    (0, i.jsx)(s.$nd, { onClick: U, loading: k, disabled: H, variant: W, text: V }),
                 ],
             }),
         ],

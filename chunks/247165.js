@@ -1,4 +1,4 @@
-a.d(t, { A: () => b }), a(938796);
+a.d(t, { A: () => v }), a(938796);
 var n = a(627968),
     i = a(64700),
     s = a(158954),
@@ -16,11 +16,11 @@ var n = a(627968),
     x = a(435220),
     A = a(652215),
     C = a(985018),
-    v = a(70345);
-function b(e) {
+    b = a(451219);
+function v(e) {
     let { application: t } = e;
     return (0, n.jsxs)("div", {
-        className: v.ZM,
+        className: b.ZM,
         children: [(0, n.jsx)(f, { application: t }), (0, n.jsx)(I, { application: t })],
     });
 }
@@ -28,15 +28,15 @@ function f(e) {
     let { application: t } = e,
         { subscriptions: a, otps: i } = (0, d.C)(t.id);
     return (0, n.jsxs)("div", {
-        className: v.ZM,
+        className: b.ZM,
         children: [
             a.length > 0 &&
                 (0, n.jsxs)("div", {
-                    className: v.dD,
+                    className: b.dD,
                     children: [
                         (0, n.jsx)(h.A, { subscriptions: a, color: "text-strong" }),
                         (0, n.jsx)("div", {
-                            className: v.ZE,
+                            className: b.ZE,
                             children: a.map((e) => {
                                 let a = (0, m.bg)(e.skuFlags) ? "user" : "guild";
                                 return (0, n.jsx)(
@@ -56,7 +56,7 @@ function f(e) {
                 }),
             i.length > 0 &&
                 (0, n.jsxs)("div", {
-                    className: v.dD,
+                    className: b.dD,
                     children: [
                         (0, n.jsx)(s.DZT, {
                             variant: "heading-lg/semibold",
@@ -64,7 +64,7 @@ function f(e) {
                             children: C.intl.string(C.t.yUGTs8),
                         }),
                         (0, n.jsx)("div", {
-                            className: v.ZE,
+                            className: b.ZE,
                             children: i.map((e) =>
                                 (0, n.jsx)(
                                     u.B8,
@@ -168,7 +168,7 @@ function I(e) {
     if (null == i && null == l) return null;
     let r = (e, t) => (0, n.jsx)(o.A, { href: t, trusted: !a, children: e });
     return (0, n.jsx)("div", {
-        className: v.V6,
+        className: b.V6,
         children: (0, n.jsx)(s.EYj, {
             color: "text-strong",
             variant: "text-sm/normal",

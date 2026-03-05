@@ -11,9 +11,9 @@ var i = n(627968),
     u = n(397927),
     h = n(928039),
     A = n(793574),
-    p = n(688810),
-    g = n(222823),
-    m = n(203982),
+    m = n(688810),
+    p = n(222823),
+    g = n(203982),
     _ = n(661191),
     f = n(851109),
     x = n(932883),
@@ -24,9 +24,9 @@ var i = n(627968),
     b = n(524628),
     S = n(849077),
     T = n(652215),
-    y = n(228160),
-    v = n(985018),
-    j = n(128354);
+    v = n(21786),
+    y = n(985018),
+    j = n(19e3);
 function R(e) {
     e.stopPropagation();
 }
@@ -45,7 +45,7 @@ function O(e) {
                     variant: "text-sm/medium",
                     color: "text-subtle",
                     className: j.P7,
-                    children: (0, a.capitalize)(v.intl.string(S.v7[t]).toLowerCase()),
+                    children: (0, a.capitalize)(y.intl.string(S.v7[t]).toLowerCase()),
                 }),
                 (0, i.jsx)(u.abt, { size: "xxs", className: j.ai }),
             ],
@@ -54,7 +54,7 @@ function O(e) {
 }
 let L = [S.Ur.UNREAD, S.Ur.TODAY, S.Ur.YESTERDAY, S.Ur.OLDER];
 function M() {
-    let { analyticsLocations: e } = (0, p.Ay)(A.A.NOTIFICATIONS_INBOX);
+    let { analyticsLocations: e } = (0, m.Ay)(A.A.NOTIFICATIONS_INBOX);
     return (0, i.jsx)("div", {
         className: j.y7,
         children: (0, i.jsxs)(u.BJc, {
@@ -75,14 +75,14 @@ function M() {
                             variant: "text-sm/medium",
                             color: "text-muted",
                             style: { textAlign: "center" },
-                            children: v.intl.string(y.default["O+racd"]),
+                            children: y.intl.string(v.default["O+racd"]),
                         }),
                     ],
                 }),
                 (0, i.jsx)(u.Button, {
                     variant: "secondary",
                     onClick: () => (0, I.tZ)(e),
-                    text: v.intl.string(y.default.klSpfs),
+                    text: y.intl.string(v.default.klSpfs),
                 }),
             ],
         }),
@@ -95,9 +95,9 @@ function D(e) {
             unreadMessages: l,
             loadMore: a,
             renderLoadingState: A,
-            renderMessageGroup: p,
-            scrollerClassName: y,
-            className: v,
+            renderMessageGroup: m,
+            scrollerClassName: v,
+            className: y,
             listName: D,
             ignoreGrouping: G = !1,
         } = e,
@@ -118,11 +118,11 @@ function D(e) {
         { messageCategoryOpenStates: W, toggleOpenState: Y } = (0, C.A)(),
         z =
             ((t = (0, d.yK)([E.A], () => E.A.getNotifyingChannelIds() ?? [])),
-            (0, d.bG)([E.A, g.Ay], () => {
+            (0, d.bG)([E.A, p.Ay], () => {
                 let e = E.A.getChannelInfoMap();
                 for (let n of t) {
                     let t = e[n];
-                    if ((null == t || t.loadState === S.Ve.UNLOADED) && g.Ay.hasUnread(n)) return !0;
+                    if ((null == t || t.loadState === S.Ve.UNLOADED) && p.Ay.hasUnread(n)) return !0;
                 }
                 return !1;
             }, [t]));
@@ -134,20 +134,20 @@ function D(e) {
             P.current?.scrollPageDown({ animate: !0 });
         }
         return (
-            m._.subscribe(T.jej.SCROLL_PAGE_DOWN, t),
-            m._.subscribe(T.jej.SCROLL_PAGE_UP, e),
+            g._.subscribe(T.jej.SCROLL_PAGE_DOWN, t),
+            g._.subscribe(T.jej.SCROLL_PAGE_UP, e),
             () => {
-                m._.unsubscribe(T.jej.SCROLL_PAGE_DOWN, t), m._.unsubscribe(T.jej.SCROLL_PAGE_UP, e);
+                g._.unsubscribe(T.jej.SCROLL_PAGE_DOWN, t), g._.unsubscribe(T.jej.SCROLL_PAGE_UP, e);
             }
         );
     }, []);
-    let X = s.useCallback(() => {
+    let q = s.useCallback(() => {
             let e = P.current?.getScrollerState();
             if (null == e) return;
             let t = 0.5 * e.offsetHeight;
             e.scrollHeight - (e.scrollTop + e.offsetHeight) <= t && a?.(S.VA.USER_SCROLL);
         }, [a]),
-        q = s.useMemo(() => {
+        X = s.useMemo(() => {
             let e = { [S.Ur.UNREAD]: [], [S.Ur.TODAY]: [], [S.Ur.YESTERDAY]: [], [S.Ur.OLDER]: [] },
                 t = { [S.Ur.UNREAD]: [], [S.Ur.TODAY]: [], [S.Ur.YESTERDAY]: [], [S.Ur.OLDER]: [] },
                 i = { [S.Ur.UNREAD]: {}, [S.Ur.TODAY]: {}, [S.Ur.YESTERDAY]: {}, [S.Ur.OLDER]: {} };
@@ -188,9 +188,9 @@ function D(e) {
                     : J
                       ? e.push((0, i.jsx)(M, {}, "empty-state"))
                       : G
-                        ? (e.push(...l.map((e) => p([e], !0))), e.push(...n.map((e) => p([e], !1))))
+                        ? (e.push(...l.map((e) => m([e], !0))), e.push(...n.map((e) => m([e], !1))))
                         : o().each(L, (t) => {
-                              0 !== q[t].length &&
+                              0 !== X[t].length &&
                                   (e.push(
                                       (0, i.jsx)(
                                           O,
@@ -205,17 +205,17 @@ function D(e) {
                                           t,
                                       ),
                                   ),
-                                  W[t] && e.push(...q[t].map((e) => p(e, t === S.Ur.UNREAD))));
+                                  W[t] && e.push(...X[t].map((e) => m(e, t === S.Ur.UNREAD))));
                           }),
                 e
             );
-        }, [n, l, A, W, Y, q, G, p, J, Q, U]),
+        }, [n, l, A, W, Y, X, G, m, J, Q, U]),
         Z = $[$.length - 1],
         ee = s.isValidElement(Z) && Z.type === O,
         et = (0, N.S)((e) => e.setInboxReadState);
     s.useEffect(() => {
-        Q || et(0 === q.UNREAD.length);
-    }, [q, Q, et]);
+        Q || et(0 === X.UNREAD.length);
+    }, [X, Q, et]);
     let en = (n.length > 0 || l.length > 0) && null != a && B;
     !(function (e) {
         let { loadingInitial: t, messagesByCategory: n } = e,
@@ -225,12 +225,12 @@ function D(e) {
         s.useEffect(() => {
             t || i.current || (r(l), (i.current = !0));
         }, [r, l, t]);
-    })({ messagesByCategory: q, loadingInitial: K });
+    })({ messagesByCategory: X, loadingInitial: K });
     let ei = s.useCallback(() => {
-        let e = L.filter((e) => W[e]).reduce((e, t) => e + q[t].length, 0),
+        let e = L.filter((e) => W[e]).reduce((e, t) => e + X[t].length, 0),
             t = P.current?.getScrollerState();
         return null == t ? 0 : Math.max(0, Math.ceil(t.offsetHeight / 64) - e);
-    }, [W, q]);
+    }, [W, X]);
     s.useEffect(() => {
         Q || B || 0 >= ei() || ((!ee || z) && a?.(S.VA.FILL_SCROLLER));
     }, [ei, a, Q, B, ee, z]);
@@ -244,11 +244,11 @@ function D(e) {
             entrypoint: k,
             messages: n,
             unreadMessages: l,
-            messagesByCategory: q,
+            messagesByCategory: X,
             viewId: U,
         }),
         (0, i.jsx)("div", {
-            className: r()(v, j.KQ),
+            className: r()(y, j.KQ),
             onClick: R,
             onDoubleClick: R,
             "aria-label": e["aria-label"],
@@ -261,8 +261,8 @@ function D(e) {
                             ref: (e) => {
                                 (P.current = e), (t.current = e?.getScrollerNode() ?? null);
                             },
-                            className: r()(j.m4, y),
-                            onScroll: X,
+                            className: r()(j.m4, v),
+                            onScroll: q,
                             fade: !0,
                             ...n,
                             children: [$, en && !ee ? es : null],

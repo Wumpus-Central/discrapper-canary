@@ -1,35 +1,35 @@
 n.d(t, { A: () => u });
 var i = n(627968),
     s = n(158954),
-    a = n(894858),
-    l = n(688897),
+    l = n(894858),
+    a = n(688897),
     r = n(791498),
     o = n(590089),
-    c = n(876813),
-    d = n(191563);
+    d = n(876813),
+    c = n(40937);
 function u(e) {
     let { node: t } = e,
-        { destinationKey: n, useTrailingDecoration: u, useTitle: _, useSubtitle: m } = t,
-        A = u?.(),
-        g = m?.(),
-        { parentPanelNode: h, parentSidebarItemNode: x } = (0, l.x)(n),
-        p = _?.(),
+        { destinationKey: n, useTrailingDecoration: u, useTitle: _, useSubtitle: g } = t,
+        m = u?.(),
+        A = g?.(),
+        { parentPanelNode: h, parentSidebarItemNode: p } = (0, a.x)(n),
+        x = _?.(),
         E = h?.useTitle?.(),
-        C = p ?? E,
-        T = (0, r.q)(t);
-    if (null == h || null == C) return null;
-    let S = null != x ? x.icon : void 0;
+        T = x ?? E,
+        S = (0, r.q)(t);
+    if (null == h || null == T) return null;
+    let C = null != p ? p.icon : void 0;
     return (0, i.jsx)(o.U, {
-        title: C,
-        description: g,
+        title: T,
+        description: A,
         leadingElement:
-            null != S && (0, i.jsx)("div", { className: d.z, children: (0, i.jsx)(S, { color: "currentColor" }) }),
+            null != C && (0, i.jsx)("div", { className: c.z, children: (0, i.jsx)(C, { color: "currentColor" }) }),
         trailingElement: (0, i.jsxs)("div", {
-            className: d.M,
-            children: [null != A && (0, i.jsx)(c.Q, { decoration: A }), (0, i.jsx)(s.uhT, {})],
+            className: c.M,
+            children: [null != m && (0, i.jsx)(d.Q, { decoration: m }), (0, i.jsx)(s.uhT, {})],
         }),
         onClick: () => {
-            a.A.setState({ requestedTargetKey: n, disableSidebarScrollAnimate: !0 }), T();
+            l.A.setState({ requestedTargetKey: n, disableSidebarScrollAnimate: !0 }), S();
         },
     });
 }

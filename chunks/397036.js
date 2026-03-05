@@ -11,9 +11,9 @@ var i = n(627968),
     u = n(950344),
     h = n(136179),
     A = n(250253),
-    p = n(652215),
-    g = n(985018),
-    m = n(18318);
+    m = n(652215),
+    p = n(985018),
+    g = n(449515);
 function _(e) {
     let { guildId: t, channelId: n } = e,
         _ = (0, d.e)({ guildId: t, channelId: n }),
@@ -29,24 +29,24 @@ function _(e) {
         }, [f]);
     return ((0, u.A)({
         guildId: t,
-        location: p.ThZ.ROLE_SUBSCRIPTION_GATED_CHANNEL,
+        location: m.ThZ.ROLE_SUBSCRIPTION_GATED_CHANNEL,
         relevantSubscriptionListingIds: _.map((e) => e.id),
     }),
     null == C)
         ? (0, i.jsx)("div", {
-              className: m.__invalid_spinnerContainer,
-              children: (0, i.jsx)(r.y$y, { className: m.__invalid_spinner }),
+              className: g.__invalid_spinnerContainer,
+              children: (0, i.jsx)(r.y$y, { className: g.__invalid_spinner }),
           })
         : (0, i.jsxs)(r.ArX, {
-              className: m.$$,
+              className: g.$$,
               children: [
                   (0, i.jsx)(r.Heading, {
                       variant: "heading-xl/semibold",
-                      className: m.DX,
-                      children: g.intl.format(g.t.xHMpym, { serverName: E, channelName: I?.name }),
+                      className: g.DX,
+                      children: p.intl.format(p.t.xHMpym, { serverName: E, channelName: I?.name }),
                   }),
                   (0, i.jsx)(r.Text, {
-                      className: m.Lv,
+                      className: g.Lv,
                       variant: "text-md/normal",
                       color: "text-default",
                       children: x?.description,
@@ -60,7 +60,7 @@ function _(e) {
                                   guildId: t,
                                   listingId: e.id,
                                   groupListingId: N[e.id],
-                                  analyticsLocation: p.ThZ.ROLE_SUBSCRIPTION_GATED_CHANNEL,
+                                  analyticsLocation: m.ThZ.ROLE_SUBSCRIPTION_GATED_CHANNEL,
                               },
                               e.id,
                           ),

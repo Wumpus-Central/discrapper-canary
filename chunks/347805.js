@@ -8,26 +8,26 @@ var l = i(627968),
     d = i(351906),
     c = i(652215),
     u = i(985018),
-    A = i(75945);
+    A = i(893251);
 function m(e) {
     let { autoFocus: t = !1, className: i, userId: m, onUpdate: x } = e,
-        g = (0, s.bG)([d.A], () => d.A.hidePersonalInformation),
-        { loading: p, note: h } = (0, o.A)(m),
+        p = (0, s.bG)([d.A], () => d.A.hidePersonalInformation),
+        { loading: g, note: h } = (0, o.A)(m),
         I = n.useRef(null);
     return (n.useEffect(() => {
-        if (!t || g) return;
+        if (!t || p) return;
         let e = I.current;
         e?.selectionStart != null && (e.focus(), e.setSelection(e.value.length, e.value.length));
-    }, [t, g]),
-    g)
+    }, [t, p]),
+    p)
         ? null
         : (0, l.jsx)("div", {
               className: i,
               children: (0, l.jsx)(a.d4u, {
                   ref: I,
                   className: A.P,
-                  disabled: p,
-                  placeholder: p ? u.intl.string(u.t["WLKx/9"]) : u.intl.string(u.t.VBhOe2),
+                  disabled: g,
+                  placeholder: g ? u.intl.string(u.t["WLKx/9"]) : u.intl.string(u.t.VBhOe2),
                   "aria-label": u.intl.string(u.t.PbMNh2),
                   onBlur: (e) => {
                       let t = e.currentTarget.value;

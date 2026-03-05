@@ -9,15 +9,15 @@ var i = n(627968),
     c = n(941971),
     d = n(900848),
     u = n(550591),
-    h = n(878442);
+    h = n(75796);
 let A = s.forwardRef(function (e, t) {
     let {
             id: n,
             onClick: l,
             onContextMenu: A,
-            icon: p,
-            selected: g,
-            tooltip: m,
+            icon: m,
+            selected: p,
+            tooltip: g,
             upperBadge: _,
             lowerBadge: f,
             lowerBadgeSize: x,
@@ -29,15 +29,15 @@ let A = s.forwardRef(function (e, t) {
             onMouseLeave: S,
             onMouseDown: T,
         } = e,
-        y = (0, a.Vd)(n),
-        [v, j] = s.useState(!1),
-        R = "string" == typeof m && null == I ? m : I;
+        v = (0, a.Vd)(n),
+        [y, j] = s.useState(!1),
+        R = "string" == typeof g && null == I ? g : I;
     return (0, i.jsxs)(d.c, {
         children: [
-            C ? (0, i.jsx)("div", { className: h.Io, children: (0, i.jsx)(c.A, { hovered: v, selected: g }) }) : null,
+            C ? (0, i.jsx)("div", { className: h.Io, children: (0, i.jsx)(c.A, { hovered: y, selected: p }) }) : null,
             (0, i.jsx)(u.A, {
-                text: m,
-                selected: g,
+                text: g,
+                selected: p,
                 children: (0, i.jsx)(o.Qk9, {
                     selected: !0,
                     upperBadge: _,
@@ -52,14 +52,14 @@ let A = s.forwardRef(function (e, t) {
                             S?.(), j(!1);
                         },
                         onMouseDown: T,
-                        className: r()(h.oZ, E, { [h.wH]: g || v }),
+                        className: r()(h.oZ, E, { [h.wH]: p || y }),
                         onClick: l,
                         "aria-label": R,
-                        "aria-selected": g,
+                        "aria-selected": p,
                         onContextMenu: A,
                         focusProps: { enabled: !1 },
-                        ...y,
-                        children: null != p && (0, i.jsx)(p, { className: h.sF, color: "currentColor" }),
+                        ...v,
+                        children: null != m && (0, i.jsx)(m, { className: h.sF, color: "currentColor" }),
                     }),
                 }),
             }),

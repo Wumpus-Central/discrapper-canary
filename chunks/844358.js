@@ -10,11 +10,11 @@ var i = n(627968),
     u = n(652215),
     A = n(613057),
     h = n(985018),
-    _ = n(742249);
+    _ = n(9043);
 function m(e) {
     let { applicationId: t } = e,
-        [m, p] = r.useState(null),
-        [g, E] = r.useState(!1),
+        [m, g] = r.useState(null),
+        [p, E] = r.useState(!1),
         I = r.useRef(!1),
         f = !c.isPlatformEmbedded && !a.Fr,
         C = r.useMemo(() => (0, l.A)(), []);
@@ -31,17 +31,17 @@ function m(e) {
                           })
                               .then((e) => {
                                   let t = e ?? !1;
-                                  p(t), t || E(!0);
+                                  g(t), t || E(!0);
                               })
                               .catch(() => {
-                                  p(!1), E(!0);
+                                  g(!1), E(!0);
                               })
                               .then(() => n.disconnect());
                       }),
                   (I.current = !0))
                 : f || E(!0);
         }, [t, f, C]),
-        g)
+        p)
     )
         return (0, i.jsx)(d.A, {});
     if (f && !1 !== m)

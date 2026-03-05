@@ -20,7 +20,7 @@ var r = n(627968),
     I = n(652215),
     T = n(788868),
     S = n(985018),
-    y = n(48187);
+    y = n(392757);
 let v = 80;
 function N(e) {
     let { className: t, onClose: n } = e;
@@ -35,15 +35,15 @@ function N(e) {
         });
     }, [s]);
     let C = (0, _.V)(),
-        b = (0, d.O)(),
-        R = null != C || null != b,
-        O = C?.subscription_trial?.sku_id === T.pe.TIER_0;
+        R = (0, d.O)(),
+        O = null != C || null != R,
+        b = C?.subscription_trial?.sku_id === T.pe.TIER_0;
     return (0, r.jsxs)("div", {
-        className: a()(y.p$, t, { [y.Hz]: R }),
+        className: a()(y.p$, t, { [y.Hz]: O }),
         children: [
-            R
+            O
                 ? (0, r.jsx)(f.Ay, {
-                      discountOffer: b,
+                      discountOffer: R,
                       trialOffer: C,
                       onClose: n,
                       type: T.e.EMPTY_STICKER_PICKER_UPSELL,
@@ -71,10 +71,10 @@ function N(e) {
                           }),
                       ],
                   }),
-            !R &&
+            !O &&
                 (0, r.jsx)(g.A, {
                     analyticsSection: I.JJy.EXPRESSION_PICKER,
-                    buttonText: R ? (O ? S.intl.string(S.t.hz78hE) : S.intl.string(S.t["Gd/XHF"])) : void 0,
+                    buttonText: O ? (b ? S.intl.string(S.t.hz78hE) : S.intl.string(S.t["Gd/XHF"])) : void 0,
                 }),
         ],
     });

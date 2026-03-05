@@ -11,9 +11,9 @@ var i = n(627968),
     u = n(964486),
     h = n(887700),
     A = n(855446),
-    p = n(793574),
-    g = n(688810),
-    m = n(975412),
+    m = n(793574),
+    p = n(688810),
+    g = n(975412),
     _ = n(392054),
     f = n(826673),
     x = n(757293),
@@ -21,20 +21,20 @@ var i = n(627968),
     E = n(272812),
     I = n(652215),
     N = n(985018),
-    b = n(89996),
+    b = n(556614),
     S = n(867010);
 function T(e) {
     let { channel: t, guild: n, width: s, inPopout: l, handleClose: r, userParticipantCount: a } = e;
     return s < 250
-        ? (0, i.jsx)(y, { channel: t, guild: n, width: s, inPopout: l, handleClose: r, userParticipantCount: a })
+        ? (0, i.jsx)(v, { channel: t, guild: n, width: s, inPopout: l, handleClose: r, userParticipantCount: a })
         : a > 1
           ? (0, i.jsx)(j, { channel: t, guild: n, width: s, inPopout: l, handleClose: r, userParticipantCount: a })
-          : (0, i.jsx)(v, { channel: t, guild: n, width: s, inPopout: l });
+          : (0, i.jsx)(y, { channel: t, guild: n, width: s, inPopout: l });
 }
-function y(e) {
+function v(e) {
     let { channel: t, inPopout: n, handleClose: s } = e,
-        { analyticsLocations: l, newestAnalyticsLocation: a } = (0, g.Ay)(p.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
-    return (0, i.jsx)(g.f5, {
+        { analyticsLocations: l, newestAnalyticsLocation: a } = (0, p.Ay)(m.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
+    return (0, i.jsx)(p.f5, {
         value: l,
         children: (0, i.jsxs)(E.A, {
             className: b.zr,
@@ -44,7 +44,7 @@ function y(e) {
                     text: N.intl.string(N.t.qJvTKQ),
                     children: (0, i.jsx)(d.DUT, {
                         onClick: () => {
-                            (0, m.A)({
+                            (0, g.A)({
                                 context: null != t ? { type: "channel", channel: t } : { type: "contextless" },
                                 openInPopout: n,
                                 analyticsLocation: a,
@@ -80,7 +80,7 @@ function y(e) {
         }),
     });
 }
-function v(e) {
+function y(e) {
     let { channel: t, guild: l, inPopout: a } = e;
     s.useEffect(() => {
         C.default.track(I.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
@@ -88,11 +88,11 @@ function v(e) {
             n_participants: 1,
         });
     }, []);
-    let { analyticsLocations: o, newestAnalyticsLocation: c } = (0, g.Ay)(p.A.VC_TILE_ACTIVITY_INVITE);
+    let { analyticsLocations: o, newestAnalyticsLocation: c } = (0, p.Ay)(m.A.VC_TILE_ACTIVITY_INVITE);
     function u() {
         (0, d.mMO)(
             async () => {
-                let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("74918")]).then(
+                let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("97710")]).then(
                     n.bind(n, 234355),
                 );
                 return (n) => (0, i.jsx)(e, { ...n, guild: l, channel: t, source: I.PE1.ACTIVITY_ENTRY_POINT_TILE });
@@ -101,13 +101,13 @@ function v(e) {
         );
     }
     function h() {
-        (0, m.A)({
+        (0, g.A)({
             context: null != t ? { type: "channel", channel: t } : { type: "contextless" },
             openInPopout: a,
             analyticsLocation: c,
         });
     }
-    return (0, i.jsx)(g.f5, {
+    return (0, i.jsx)(p.f5, {
         value: o,
         children: (0, i.jsx)(d.NPJ, {
             disableAdaptiveTheme: !0,
@@ -148,10 +148,10 @@ function j(e) {
             n_participants: c,
         });
     });
-    let m = (0, h.A)({ guildId: n.id }).slice(0, 3),
-        { analyticsLocations: S } = (0, g.Ay)(p.A.VC_TILE_ACTIVITY_SUGGESTION),
+    let g = (0, h.A)({ guildId: n.id }).slice(0, 3),
+        { analyticsLocations: S } = (0, p.Ay)(m.A.VC_TILE_ACTIVITY_SUGGESTION),
         T = s.useMemo(() => ({ channel: t, type: "channel" }), [t]);
-    return (0, i.jsx)(g.f5, {
+    return (0, i.jsx)(p.f5, {
         value: S,
         children: (0, i.jsxs)(E.A, {
             className: b.zr,
@@ -165,7 +165,7 @@ function j(e) {
                     : null,
                 (0, i.jsx)("div", {
                     className: r()(b.Di, { [b.qy]: o <= 300 }),
-                    children: m.map((e) =>
+                    children: g.map((e) =>
                         (0, i.jsx)(
                             A.C,
                             {

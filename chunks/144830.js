@@ -26,7 +26,7 @@ var n = s(627968),
     C = s(339984),
     S = s(788868),
     k = s(985018),
-    b = s(151e3);
+    b = s(127230);
 function y(e) {
     let {
         icon: t,
@@ -209,7 +209,7 @@ function L(e) {
         onClick: function () {
             (0, c.mMO)(
                 async () => {
-                    let { default: e } = await Promise.all([s.e("59701"), s.e("53653"), s.e("8261")]).then(
+                    let { default: e } = await Promise.all([s.e("59701"), s.e("53653"), s.e("70944")]).then(
                         s.bind(s, 551028),
                     );
                     return (s) =>

@@ -32,8 +32,8 @@ var i = n(627968),
     M = n(112150),
     w = n(574660),
     D = n(768349),
-    k = n(985018),
-    O = n(22658);
+    O = n(985018),
+    k = n(355208);
 function U(e) {
     let { app: t, linkType: n, activityCustomId: r, activityReferrerId: a, message: o, onView: g } = e,
         { name: f, bot: C } = (t = (0, P.b)(t)),
@@ -41,7 +41,7 @@ function U(e) {
         T = (0, h.Ag)(t),
         v = S.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, bot: C }),
         { staticBannerSrc: y, videoBannerSrc: L, bannerAspectRatio: D } = (0, M.f)(t),
-        O = (0, s.bG)([E.default], () => a ?? E.default.getId(), [a]),
+        k = (0, s.bG)([E.default], () => a ?? E.default.getId(), [a]),
         { analyticsLocations: U } = (0, _.Ay)(u.A.APP_MESSAGE_EMBED),
         { currentChannelId: F, instanceId: H, isCurrentlyInInstance: V, canLaunchInChannel: W } = (0, N.w)(t.id),
         q = (0, c.A)(),
@@ -57,7 +57,7 @@ function U(e) {
                 T
                     ? K
                         ? e.push({
-                              label: k.intl.string(k.t.RscU7I),
+                              label: O.intl.string(O.t.RscU7I),
                               trackingArea: R.kY.PLAY,
                               onClick() {
                                   A.A.launchFrame({ applicationId: t.id });
@@ -67,10 +67,10 @@ function U(e) {
                               e.push({
                                   label:
                                       null == H
-                                          ? k.intl.string(k.t.RscU7I)
+                                          ? O.intl.string(O.t.RscU7I)
                                           : V
-                                            ? k.intl.string(k.t.DPfdsq)
-                                            : k.intl.string(k.t.sqe0hj),
+                                            ? O.intl.string(O.t.DPfdsq)
+                                            : O.intl.string(O.t.sqe0hj),
                                   trackingArea: R.kY.PLAY,
                                   onClick() {
                                       (0, d.su)({
@@ -79,7 +79,7 @@ function U(e) {
                                           isStart: null == H,
                                           embeddedActivitiesManager: q,
                                           customId: r,
-                                          referrerId: O,
+                                          referrerId: k,
                                           analyticsLocations: U,
                                       });
                                   },
@@ -88,7 +88,7 @@ function U(e) {
                           !Q &&
                               z &&
                               e.push({
-                                  label: k.intl.string(k.t.JeK1Wg),
+                                  label: O.intl.string(O.t.JeK1Wg),
                                   trackingArea: R.kY.PLAY,
                                   onClick() {
                                       (0, m.Q)({
@@ -96,15 +96,15 @@ function U(e) {
                                           botId: b,
                                           analyticsLocations: U,
                                           customId: r,
-                                          referrerId: O,
+                                          referrerId: k,
                                       });
                                   },
                               }))
                     : null != X && e.push(X),
                 e
             );
-        }, [T, X, K, t.id, Q, z, H, V, F, q, r, O, U, b]),
-        $ = T ? (0, i.jsx)(G, { app: t }) : (0, i.jsx)(B, { app: t });
+        }, [T, X, K, t.id, Q, z, H, V, F, q, r, k, U, b]),
+        $ = T ? (0, i.jsx)(B, { app: t }) : (0, i.jsx)(G, { app: t });
     return (0, i.jsx)(j.h, {
         title: f,
         staticBannerSrc: y,
@@ -118,7 +118,7 @@ function U(e) {
         trackingConfig: {
             id: t.id,
             linkType: n,
-            referrerId: O,
+            referrerId: k,
             activityCustomId: r,
             onView: g,
             guildId: I.A.getChannel(o.channel_id)?.guild_id,
@@ -127,7 +127,7 @@ function U(e) {
         },
     });
 }
-function B(e) {
+function G(e) {
     let { app: t } = e,
         n =
             (0, y.Ie)({
@@ -142,16 +142,16 @@ function B(e) {
             if (!n) return null;
             let e = new Intl.NumberFormat(a, { notation: "compact", compactDisplay: "short" }),
                 i = t.directoryEntry?.guild_count ?? 0;
-            return 0 === i ? null : k.intl.format(k.t["6IW6Wi"], { guildCount: e.format(i) });
+            return 0 === i ? null : O.intl.format(O.t["6IW6Wi"], { guildCount: e.format(i) });
         }, [t.directoryEntry?.guild_count, n, a]),
         c = t.categories?.at(0)?.name;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            null != c && (0, i.jsx)(o.Text, { variant: "text-xs/medium", className: O.h_, color: "none", children: c }),
+            null != c && (0, i.jsx)(o.Text, { variant: "text-xs/medium", className: k.h_, color: "none", children: c }),
             null != d &&
                 (0, i.jsxs)(o.Text, {
                     variant: "text-xs/normal",
-                    className: O.dS,
+                    className: k.dS,
                     color: "none",
                     lineClamp: 1,
                     children: [(0, i.jsx)(o.QGJ, { size: "xxs", color: "currentColor" }), d],
@@ -159,7 +159,7 @@ function B(e) {
         ],
     });
 }
-function G(e) {
+function B(e) {
     let { app: t } = e,
         { tags: n, maxParticipants: r = 0 } = t,
         d = (0, s.bG)([T.A], () => T.A.getGuildId() ?? void 0, []),
@@ -179,13 +179,13 @@ function G(e) {
                 return (0, i.jsx)(L.$, {
                     activityUsers: u,
                     guildId: d,
-                    activityText: k.intl.formatToPlainString(k.t["IJa+46"], { count: u.length }),
+                    activityText: O.intl.formatToPlainString(O.t["IJa+46"], { count: u.length }),
                 });
             if (c.some((e) => (0, g.CZ)(e) === a.m.GLOBAL))
                 return (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(o.Y3C, { size: "xxs", color: "currentColor" }), k.intl.string(k.t.TsWCdW)],
+                    children: [(0, i.jsx)(o.Y3C, { size: "xxs", color: "currentColor" }), O.intl.string(O.t.TsWCdW)],
                 });
-            let e = r > 0 ? k.intl.format(k.t.z8EAJW, { count: r }) : k.intl.string(k.t.RjceQU);
+            let e = r > 0 ? O.intl.format(O.t.z8EAJW, { count: r }) : O.intl.string(O.t.RjceQU);
             return (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(o.nys, { size: "xxs", color: "currentColor" }), e],
             });
@@ -195,14 +195,14 @@ function G(e) {
             n.length > 0 &&
                 (0, i.jsx)(o.Text, {
                     variant: "text-xs/medium",
-                    className: O.h_,
+                    className: k.h_,
                     color: "none",
                     lineClamp: 1,
-                    children: n.map((e, t) => (0, i.jsx)("span", { className: O.Tc, children: e }, t)),
+                    children: n.map((e, t) => (0, i.jsx)("span", { className: k.Tc, children: e }, t)),
                 }),
             (0, i.jsx)(o.Text, {
                 variant: "text-xs/normal",
-                className: O.dS,
+                className: k.dS,
                 color: "none",
                 lineClamp: 1,
                 children: _,

@@ -18,7 +18,7 @@ var i = n(627968),
     E = n(205120),
     x = n(652215);
 n(294920);
-var C = n(119907);
+var C = n(50397);
 function S(e) {
     let { value: t, channel: n } = e;
     return (0, p.i)({ type: c.oU.EDIT, content: t, channel: n, restrictMentions: !1, respectCooldown: !1 });

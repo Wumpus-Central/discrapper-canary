@@ -4,13 +4,13 @@ var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(475539),
+    o = n(380278),
     l = n(158954),
     u = n(397927),
     c = n(263215),
-    d = n(333354),
+    d = n(136708),
     _ = n(985018),
-    f = n(68388);
+    f = n(939614);
 function p(e) {
     let { powerup: t } = e;
     return (0, r.jsx)(l.EYj, { tag: "span", variant: "text-md/semibold", className: f.Zt, children: t.title });

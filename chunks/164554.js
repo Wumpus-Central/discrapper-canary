@@ -8,14 +8,14 @@ var i = n(627968),
     d = n(235365),
     c = n(652215),
     u = n(49999),
-    A = n(49370),
+    A = n(723468),
     h = n(985018);
 function _(e) {
     let { targetElementRef: t, dismissPopover: n, children: _ } = e,
         m = r.useCallback(() => {
             n(u.i.TAKE_ACTION), (0, o.pX)(`${c.BVt.NITRO_HOME}?section=${d.L}`);
         }, [n]),
-        p = (0, i.jsx)(a.AM, {
+        g = (0, i.jsx)(a.AM, {
             targetElementRef: t,
             onRequestClose: () => n(u.i.USER_DISMISS),
             graphic: { type: "rive", rive: l.Z },
@@ -30,5 +30,5 @@ function _(e) {
             actions: [{ text: h.intl.string(h.t.RzWDqY), icon: s.tvc, onClick: m }],
             gradientColor: "nitro-pink",
         });
-    return (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)("div", { children: _ }), p] });
+    return (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)("div", { children: _ }), g] });
 }

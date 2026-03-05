@@ -9,31 +9,31 @@ var i = n(627968),
     c = n(594832),
     d = n(183555),
     u = n(524380),
-    h = n(733557);
+    h = n(55751);
 let A = s.forwardRef(function (e, t) {
     let {
             onCardClick: n,
             tooltipConfig: s,
             shouldScalePreview: l = !0,
             renderPreview: A,
-            moreCount: p,
-            isSingleCard: g = !1,
-            wishlistId: m,
+            moreCount: m,
+            isSingleCard: p = !1,
+            wishlistId: g,
             wishlistItem: _,
             cardSize: f = u.Y.MEDIUM,
         } = e,
         { skuId: x, skuProductLine: C } = _,
         { trackUserProfileWishlistAction: E } = (0, d.NJ)(),
         I = l ? h.ho : h.C8,
-        N = g ? h.pr : h.Nr,
-        b = null != p && p > 0,
+        N = p ? h.pr : h.Nr,
+        b = null != m && m > 0,
         S = (0, i.jsxs)(o.DUT, {
             onClick: () => {
                 n(),
                     E({
                         action: b ? "PRESS_WISHLIST_BREADCRUMB_OVERFLOW_CARD" : "PRESS_WISHLIST_BREADCRUMB_CARD",
                         skuId: b ? null : x,
-                        wishlistId: m,
+                        wishlistId: g,
                         productLines: new Set([C]),
                     });
             },
@@ -48,7 +48,7 @@ let A = s.forwardRef(function (e, t) {
                         children: (0, i.jsxs)(o.Text, {
                             variant: "text-xs/medium",
                             color: "always-white",
-                            children: ["+", p],
+                            children: ["+", m],
                         }),
                     }),
             ],

@@ -16,9 +16,9 @@ var r = n(627968),
     m = n(467135),
     E = n(230835),
     g = n(738419),
-    A = n(520650),
+    A = n(674547),
     I = n(985018),
-    T = n(217590);
+    T = n(87788);
 function S() {
     return (0, r.jsx)("div", { className: T.wG, children: (0, r.jsx)(p.y$y, {}) });
 }
@@ -33,7 +33,7 @@ let y = (0, u.Fe)({
 function C(e, t) {
     return e.length < 1 ? 0 : (t / (e.length - 1)) * 80 + 10;
 }
-function b(e) {
+function R(e) {
     let { colors: t, selectedIndex: n, onColorSelect: s } = e,
         [a, o] = i.useMemo(() => {
             let e = t.map((e, n) => C(t, n)),
@@ -64,12 +64,12 @@ function b(e) {
         }),
     });
 }
-function R(e) {
+function O(e) {
     let { color: t } = e,
         n = i.useMemo(() => ({ backgroundColor: (0, c.qt)(t) ? t : N }), [t]);
     return (0, r.jsx)("div", { className: T.ld, style: n, "aria-label": "Color preview" });
 }
-function O(e) {
+function b(e) {
     if (!(0, c.qt)(e)) return e;
     let t = a()(e);
     return t.set("hsl.h", (t.get("hsl.h") + 15) % 360).hex();
@@ -97,10 +97,10 @@ function D(e) {
                 (e[S] = t), o(e);
             }
         },
-        x = i.useCallback((e) => {
+        M = i.useCallback((e) => {
             D(e.hex);
         }, []),
-        M = (e) => {
+        x = (e) => {
             if (((0, g.VE)(), n(e.hex), a.length > 0)) {
                 let t = [...a];
                 (t[S] = e.hex), o(t);
@@ -117,7 +117,7 @@ function D(e) {
             if (a.length === v) return;
             0 === a.length && (0, E.eq)(), (0, g.HU)();
             let e = a.length > 0 ? a[a.length - 1] : C,
-                t = a.length > 0 ? O(e) : e,
+                t = a.length > 0 ? b(e) : e,
                 n = [...a, t];
             o(n), N(n.length - 1);
         },
@@ -135,12 +135,12 @@ function D(e) {
     return (0, r.jsxs)("div", {
         className: l()(T.kL, s),
         children: [
-            F && (0, r.jsx)(b, { colors: a, selectedIndex: S, onColorSelect: G }),
-            (0, r.jsx)(y, { onChange: x, onChangeComplete: M, color: C }),
+            F && (0, r.jsx)(R, { colors: a, selectedIndex: S, onColorSelect: G }),
+            (0, r.jsx)(y, { onChange: M, onChangeComplete: x, color: C }),
             (0, r.jsxs)("div", {
                 className: T.Xr,
                 children: [
-                    (0, r.jsx)(R, { color: C }),
+                    (0, r.jsx)(O, { color: C }),
                     (0, r.jsx)("input", {
                         className: T.Im,
                         value: C.toUpperCase(),

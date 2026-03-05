@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { J: () => b }), n(321073);
+n.d(t, { J: () => R }), n(321073);
 var r = n(627968),
     i = n(64700),
     s = n(435371),
     a = n(397927),
     o = n(957565),
     l = n(43105),
-    u = n(640192);
+    u = n(90358);
 function c(e) {
     return isFinite(e) ? e.toFixed(1) + "s" : "Live";
 }
@@ -74,13 +74,13 @@ function C(e) {
         2,
     );
 }
-function b(e) {
+function R(e) {
     let { stats: t, onClose: n } = e,
-        [b, R] = i.useState(!1),
-        O = i.useRef(null);
+        [R, O] = i.useState(!1),
+        b = i.useRef(null);
     i.useEffect(
         () => () => {
-            null != O.current && clearTimeout(O.current);
+            null != b.current && clearTimeout(b.current);
         },
         [],
     );
@@ -89,10 +89,10 @@ function b(e) {
         (0, o.C)(
             e,
             () => {
-                R(!0),
-                    null != O.current && clearTimeout(O.current),
-                    (O.current = window.setTimeout(() => {
-                        R(!1), (O.current = null);
+                O(!0),
+                    null != b.current && clearTimeout(b.current),
+                    (b.current = window.setTimeout(() => {
+                        O(!1), (b.current = null);
                     }, 2e3));
             },
             () => {},
@@ -109,11 +109,11 @@ function b(e) {
                         className: u.Pz,
                         children: [
                             (0, r.jsx)(s.m_, {
-                                text: b ? m : h,
+                                text: R ? m : h,
                                 children: (0, r.jsx)(a.DUT, {
                                     className: u.cL,
                                     onClick: D,
-                                    "aria-label": b ? m : h,
+                                    "aria-label": R ? m : h,
                                     focusProps: { offset: 2 },
                                     children: (0, r.jsx)(a.TdU, { size: "md", color: "currentColor" }),
                                 }),

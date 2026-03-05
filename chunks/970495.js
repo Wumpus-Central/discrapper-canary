@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => M });
+n.d(t, { A: () => x });
 var r = n(627968),
     i = n(503698),
     s = n.n(i),
@@ -24,10 +24,10 @@ var r = n(627968),
     v = n(592598),
     N = n(658198),
     C = n(581730),
-    b = n(672396),
-    R = n(652215),
-    O = n(985018),
-    D = n(676667);
+    R = n(672396),
+    O = n(652215),
+    b = n(985018),
+    D = n(13217);
 function L(e) {
     let { user: t, application: n, runningGame: i } = e;
     return null != n || null != i
@@ -59,7 +59,7 @@ function w(e) {
                     variant: "text-sm/medium",
                     color: "interactive-text-default",
                     className: D.G3,
-                    children: O.intl.format(O.t.vTPX23, { username: o }),
+                    children: b.intl.format(b.t.vTPX23, { username: o }),
                 }),
             }),
             (0, r.jsx)("div", {
@@ -71,14 +71,14 @@ function w(e) {
                         variant: "text-sm/medium",
                         color: "always-white",
                         tag: "span",
-                        children: O.intl.string(O.t["xl+bTG"]),
+                        children: b.intl.string(b.t["xl+bTG"]),
                     }),
                 }),
             }),
         ],
     });
 }
-function x(e) {
+function M(e) {
     let { user: t, application: n, runningGame: i, username: o, onWatchClick: l, iconColor: u } = e;
     return (0, r.jsxs)("div", {
         className: D.kL,
@@ -90,7 +90,7 @@ function x(e) {
                     variant: "text-sm/medium",
                     color: "interactive-text-default",
                     className: D.G3,
-                    children: O.intl.format(O.t.NmEczg, { username: o }),
+                    children: b.intl.format(b.t.NmEczg, { username: o }),
                 }),
             }),
             (0, r.jsx)("div", { className: D.U4 }),
@@ -108,8 +108,8 @@ function x(e) {
         ],
     });
 }
-function M(e, t, n) {
-    if (v.A.isNotificationDisabled(b.KS.StreamWatchNudge)) return null;
+function x(e, t, n) {
+    if (v.A.isNotificationDisabled(R.KS.StreamWatchNudge)) return null;
     let i = A.default.getUser(e);
     if (null == i) return null;
     let { designVariant: s } = (0, S.Fg)("OverlayV3StreamWatchNudge"),
@@ -117,21 +117,21 @@ function M(e, t, n) {
         c = m.A.getChannel(t),
         p = null != a ? d.A.getApplication(a) : null,
         N = null != a ? E.A.getDetectableGame(a) : null,
-        O = null != a ? f.Ay.getRunningGames().find((e) => e.id === a) : null,
-        D = O?.name ?? N?.name ?? p?.name,
+        b = null != a ? f.Ay.getRunningGames().find((e) => e.id === a) : null,
+        D = b?.name ?? N?.name ?? p?.name,
         L = (0, I.mG)(c?.guild_id, c?.id, i),
-        M = () => _.A.getStreamParticipants(t).find((t) => t.user.id === e),
+        x = () => _.A.getStreamParticipants(t).find((t) => t.user.id === e),
         P = () => {
             G("overlay-watch-stream");
-            let [e] = g.A.getWidgetsByType(R.uss.GO_LIVE),
-                t = M();
+            let [e] = g.A.getWidgetsByType(O.uss.GO_LIVE),
+                t = x();
             null != e &&
                 null != t &&
                 ((0, y.CZ)(t.stream, h.$.COVER),
                 (0, u.A9)(t.stream, { forceMultiple: !0, noFocus: !0 }),
                 (0, o.v0)(e.id, { forcedPinnedState: !0 }),
                 (0, o.dH)(e.id),
-                (0, T.YX)(R.uss.GO_LIVE, { type: T.Z5.GO_LIVE, value: T.IP.ACCEPT_REQUEST, userId: t.user.id }));
+                (0, T.YX)(O.uss.GO_LIVE, { type: T.Z5.GO_LIVE, value: T.IP.ACCEPT_REQUEST, userId: t.user.id }));
         },
         k = () => {
             switch (s) {
@@ -139,18 +139,18 @@ function M(e, t, n) {
                     return (0, r.jsx)(w, {
                         user: i,
                         application: p,
-                        runningGame: O,
+                        runningGame: b,
                         username: L,
                         buttonColor: "green",
                     });
                 case S.wD.GRAY_BUTTON_WITH_TEXT:
-                    return (0, r.jsx)(w, { user: i, application: p, runningGame: O, username: L, buttonColor: "gray" });
+                    return (0, r.jsx)(w, { user: i, application: p, runningGame: b, username: L, buttonColor: "gray" });
                 case S.wD.SINGLE_ICON_BUTTON:
-                    return (0, r.jsx)(x, { user: i, application: p, runningGame: O, username: L, iconColor: "white" });
+                    return (0, r.jsx)(M, { user: i, application: p, runningGame: b, username: L, iconColor: "white" });
             }
         },
-        { trackView: U, trackClick: G } = (0, C.Y9)(b.KS.StreamWatchNudge, {
-            notif_type: b.KS.StreamWatchNudge,
+        { trackView: U, trackClick: G } = (0, C.Y9)(R.KS.StreamWatchNudge, {
+            notif_type: R.KS.StreamWatchNudge,
             notif_user_id: i.id,
             activity_type: n?.type,
             activity_name: D ?? n?.name,

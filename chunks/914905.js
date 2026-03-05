@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => O, J: () => R }), n(323874), n(14289), n(35956);
+n.d(t, { A: () => b, J: () => O }), n(323874), n(14289), n(35956);
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -20,7 +20,7 @@ var r = n(627968),
     I = n(851023),
     T = n(349688),
     S = n(985018),
-    y = n(76397);
+    y = n(977191);
 let v = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif", "video/quicktime", "video/mp4"];
 function N(e) {
     let { alt: t, spoiler: n, renderContent: s, size: o } = e,
@@ -125,7 +125,7 @@ function C(e) {
         }),
     });
 }
-function b(e) {
+function R(e) {
     let { file: t, alt: n, spoiler: s, size: o = T.L.MEDIUM, onMouseEnter: l, onVideoLoadError: u } = e,
         [c, d] = i.useState(),
         _ = i.useRef(null);
@@ -165,13 +165,13 @@ function b(e) {
         })
     );
 }
-function R(e) {
+function O(e) {
     let { upload: t, size: n = T.L.MEDIUM, onMouseEnter: s } = e,
         [o, l] = i.useState(!1);
     return t.isImage && t.item.platform === _.xz.WEB
         ? (0, r.jsx)(C, { file: t.item.file, alt: t.description, spoiler: t.spoiler, size: n, onMouseEnter: s })
         : !o && t.isVideo && t.item.platform === _.xz.WEB
-          ? (0, r.jsx)(b, {
+          ? (0, r.jsx)(R, {
                 file: t.item.file,
                 size: n,
                 alt: t.description,
@@ -194,7 +194,7 @@ function R(e) {
                 }),
             });
 }
-function O(e) {
+function b(e) {
     let {
             channelId: t,
             draftType: n,
@@ -208,8 +208,8 @@ function O(e) {
         } = e,
         N = null != v,
         C = (h = N ? T.L.CLIP : h) === T.L.SMALL,
-        b = (0, o.bG)([E.A], () => E.A.getChannel(t)?.guild_id),
-        O = (e) => {
+        R = (0, o.bG)([E.A], () => E.A.getChannel(t)?.guild_id),
+        b = (e) => {
             e.stopPropagation(),
                 (0, u.qfG)((e) =>
                     (0, r.jsx)(d.default, {
@@ -249,7 +249,7 @@ function O(e) {
                     ? (0, r.jsx)(I.A, {
                           className: a()({ [y.action]: C }),
                           tooltip: S.intl.string(S.t.Y8ujqr),
-                          onClick: O,
+                          onClick: b,
                           children: (0, r.jsx)(u.R2l, {
                               size: "xs",
                               color: "currentColor",
@@ -273,12 +273,12 @@ function O(e) {
         draftType: n,
         id: s.id,
         channelId: t,
-        handleEditModal: O,
+        handleEditModal: b,
         keyboardModeEnabled: _,
         size: h,
         className: a()({ [y.attachmentItemSmall]: C }),
         children: [
-            (0, r.jsx)(R, { upload: s, size: h }),
+            (0, r.jsx)(O, { upload: s, size: h }),
             !g &&
                 !N &&
                 (0, r.jsx)("div", {
@@ -299,7 +299,7 @@ function O(e) {
                             participantIds: v.users,
                             applicationId: v.applicationId,
                             title: v.name,
-                            guildId: b,
+                            guildId: R,
                         }),
                         (0, r.jsx)(u.LpS, {
                             color: l.A.colors.BACKGROUND_BRAND.css,

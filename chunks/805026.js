@@ -23,15 +23,15 @@ var r = n(961358),
     y = n(456424),
     v = n(676363),
     N = n(438970),
-    C = n(734317),
-    b = n(382967),
-    R = n(45094),
-    O = n(975803),
+    C = n(3683),
+    R = n(382967),
+    O = n(45094),
+    b = n(975803),
     D = n(864628),
     L = n(361349),
     w = n(86409),
-    x = n(323681),
-    M = n(913058),
+    M = n(323681),
+    x = n(913058),
     P = n(730191),
     k = n(126389),
     U = n(956743),
@@ -51,7 +51,7 @@ let H = {
         },
         quinn: {
             name: C.default["biQVN/"],
-            iconURL: M.A,
+            iconURL: x.A,
             splashGradient:
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, #5F549D 0%, rgba(95, 84, 157, 0.00) 100%)",
             baseColor: "#1E1B32",
@@ -60,7 +60,7 @@ let H = {
         },
         axel: {
             name: C.default.VCZdns,
-            iconURL: b.A,
+            iconURL: R.A,
             splashGradient:
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(40, 84, 54, 0.50) 0%, rgba(40, 84, 54, 0.00) 100%)",
             baseColor: "#14291B",
@@ -78,7 +78,7 @@ let H = {
         },
         megaphone: {
             name: C.default.fPU01d,
-            iconURL: x.A,
+            iconURL: M.A,
             splashGradient:
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(230, 90, 205, 0.50) 0%, rgba(230, 90, 205, 0.00) 100%)",
             baseColor: "#35082D",
@@ -159,7 +159,7 @@ let H = {
         },
         cave: {
             name: C.default.Xypb3z,
-            iconURL: R.A,
+            iconURL: O.A,
             splashGradient:
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(207, 122, 124, 0.50) 0%, rgba(207, 122, 124, 0.00) 100%)",
             baseColor: "#2D1011",
@@ -168,7 +168,7 @@ let H = {
         },
         deepfried: {
             name: C.default.qRFFLK,
-            iconURL: O.A,
+            iconURL: b.A,
             splashGradient:
                 "radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(253, 177, 45, 0.50) 0%, rgba(253, 177, 45, 0.00) 100%)",
             baseColor: "#3D2701",

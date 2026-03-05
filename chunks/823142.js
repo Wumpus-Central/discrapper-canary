@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { AV: () => R, Ay: () => v, P4: () => j, kD: () => O, sM: () => L });
+n.d(t, { AV: () => R, Ay: () => y, P4: () => j, kD: () => O, sM: () => L });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -11,9 +11,9 @@ var i = n(627968),
     u = n(732955),
     h = n(397927),
     A = n(914430),
-    p = n(442433),
-    g = n(676002),
-    m = n(485947),
+    m = n(442433),
+    p = n(676002),
+    g = n(485947),
     _ = n(924985),
     f = n(71393),
     x = n(576705),
@@ -22,26 +22,26 @@ var i = n(627968),
     I = n(879124),
     N = n(652215),
     b = n(985018),
-    S = n(33925);
+    S = n(587079);
 function T(e) {
     e.stopPropagation();
 }
-let y = s.memo(function (e) {
+let v = s.memo(function (e) {
         let t,
             {
                 channel: l,
                 connectChannelDragSource: u,
-                connectChannelDropTarget: g,
+                connectChannelDropTarget: p,
                 disableManageChannels: E,
                 position: I,
-                sortingPosition: y,
-                hideIcon: v,
+                sortingPosition: v,
+                hideIcon: y,
                 children: j,
             } = e,
             R = (0, o.bG)([C.Ay], () => C.Ay.isChannelMuted(l.getGuildId(), l.id)),
             O = (0, o.bG)([_.A], () => _.A.isCollapsed(l.id)),
             L = (0, o.bG)([x.A], () => x.A.can(N.xBc.MANAGE_CHANNELS, l));
-        t = null != y ? (I > y ? S.mU : S.TR) : S.fx;
+        t = null != v ? (I > v ? S.mU : S.TR) : S.fx;
         let M = s.useCallback(() => {
                 O ? (0, A.fh)(l.id) : (0, A.Gv)(l.id);
             }, [l.id, O]),
@@ -50,7 +50,7 @@ let y = s.memo(function (e) {
                     if ("null" !== l.id) {
                         let t = f.A.getGuild(l.getGuildId());
                         null != t &&
-                            (0, p.L3)(e, async () => {
+                            (0, m.L3)(e, async () => {
                                 let { default: e } = await Promise.all([n.e("75149"), n.e("40540")]).then(
                                     n.bind(n, 725756),
                                 );
@@ -65,7 +65,7 @@ let y = s.memo(function (e) {
                     t = l.getGuildId();
                 null != t &&
                     (0, h.mMO)(async () => {
-                        let { default: s } = await Promise.all([n.e("64233"), n.e("9743")]).then(n.bind(n, 409200));
+                        let { default: s } = await Promise.all([n.e("64233"), n.e("10923")]).then(n.bind(n, 409200));
                         return (n) =>
                             (0, i.jsx)(s, {
                                 ...n,
@@ -101,11 +101,11 @@ let y = s.memo(function (e) {
                                     "aria-expanded": !O,
                                     focusProps: { enabled: !1 },
                                     children: [
-                                        (0, i.jsx)(m.A, {
+                                        (0, i.jsx)(g.A, {
                                             className: S.UU,
                                             children: (0, i.jsx)(c.A, { children: l.name }),
                                         }),
-                                        v
+                                        y
                                             ? null
                                             : (0, i.jsx)(h.abt, { size: "md", color: "currentColor", className: S.Kk }),
                                     ],
@@ -138,9 +138,9 @@ let y = s.memo(function (e) {
                     j,
                 ],
             });
-        return null != g && null != u ? g(u(B)) : B;
+        return null != p && null != u ? p(u(B)) : B;
     }),
-    v = (0, g.a)(y),
+    y = (0, p.a)(v),
     j = s.memo(function (e) {
         let { name: t, onDismiss: n, className: s } = e;
         return (0, i.jsx)("li", {
@@ -150,7 +150,7 @@ let y = s.memo(function (e) {
                 children: [
                     (0, i.jsx)("div", {
                         className: S.rb,
-                        children: (0, i.jsx)(m.A, { className: S.UU, children: (0, i.jsx)(c.A, { children: t }) }),
+                        children: (0, i.jsx)(g.A, { className: S.UU, children: (0, i.jsx)(c.A, { children: t }) }),
                     }),
                     null != n
                         ? (0, i.jsx)(d.m, {
@@ -193,7 +193,7 @@ let y = s.memo(function (e) {
                       className: S.fx,
                       children: (0, i.jsx)("div", {
                           className: r()(S.Ki, S._V),
-                          children: (0, i.jsx)(m.A, {
+                          children: (0, i.jsx)(g.A, {
                               className: S.UU,
                               children: (0, i.jsx)(c.A, { children: b.intl.string(b.t["V/u9Dy"]) }),
                           }),
@@ -208,7 +208,7 @@ let y = s.memo(function (e) {
             className: S.fx,
             children: (0, i.jsx)("div", {
                 className: r()(S.Ki, S._V),
-                children: (0, i.jsx)(m.A, { className: S.UU, children: (0, i.jsx)(c.A, { children: t.name }) }),
+                children: (0, i.jsx)(g.A, { className: S.UU, children: (0, i.jsx)(c.A, { children: t.name }) }),
             }),
         });
     });

@@ -25,7 +25,7 @@ var i = n(627968),
     S = n(49999),
     T = n(165610),
     v = n(985018),
-    y = n(453561);
+    y = n(25327);
 function j(e) {
     let { quest: t, applicationId: n } = e,
         r = (0, _.fc)(t),

@@ -18,7 +18,7 @@ var i = r(627968),
     I = r(245068),
     v = r(761365),
     f = r(550674),
-    j = r(8056);
+    j = r(998918);
 let k = (t) => {
         let { product: e, isCardHovered: r, showDefaultAvatar: l, disableAnimation: a } = t,
             u = (0, p.YW)(e),

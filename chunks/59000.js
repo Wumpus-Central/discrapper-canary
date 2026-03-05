@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => p });
 var i = n(627968),
     s = n(64700),
     l = n(582754),
@@ -9,15 +9,15 @@ var i = n(627968),
     c = n(742589),
     d = n(652215),
     u = n(985018),
-    h = n(491986),
+    h = n(3628),
     A = n(745652),
-    p = n(855324);
-let g = () => {
+    m = n(855324);
+let p = () => {
     let e = (0, a.Ay)();
     s.useEffect(() => {
         o.Ay.trackWithMetadata(d.HAw.GUILD_OUTAGE_VIEWED, {});
     }, []);
-    let t = (0, l.Mw)(e) ? A : p;
+    let t = (0, l.Mw)(e) ? A : m;
     return (0, i.jsxs)("div", {
         className: h.kL,
         children: [

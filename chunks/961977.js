@@ -13,11 +13,11 @@ var n = t(627968),
     p = t(652215),
     I = t(49999),
     x = t(985018),
-    f = t(545941);
+    f = t(8519);
 function A(e) {
     let { location: l } = e,
         t = (0, _.n)({ location: l }),
-        c = (0, g.A)(),
+        c = (0, g.B)(),
         [A, h] = (0, d.RF)(
             t ? a.M.GAME_SHOP_ORBS_REWARD_BANNER : null,
             (0, o.c)(a.M.GAME_SHOP_ORBS_REWARD_BANNER),

@@ -2,19 +2,19 @@ n.d(t, { A: () => _ });
 var i = n(627968);
 n(64700);
 var s = n(397927),
-    a = n(757036),
-    l = n(128450),
+    l = n(757036),
+    a = n(128450),
     r = n(180020),
     o = n(652215),
-    c = n(788868),
-    d = n(985018),
-    u = n(93448);
+    d = n(788868),
+    c = n(985018),
+    u = n(319741);
 function _(e) {
-    let t = (0, a.L)(c.PremiumTypes.TIER_2);
-    return (0, i.jsxs)(l.A, {
+    let t = (0, l.L)(d.PremiumTypes.TIER_2);
+    return (0, i.jsxs)(a.A, {
         errors: e.errors,
         disabled: e.disabled,
-        title: d.intl.string(d.t["9AjdkD"]),
+        title: c.intl.string(c.t["9AjdkD"]),
         children: [
             (0, i.jsx)("div", {
                 children: (0, i.jsx)(s.ksK, {

@@ -4,7 +4,7 @@ var l = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(475539),
+    r = n(380278),
     o = n(311907),
     d = n(397927),
     c = n(517461),
@@ -14,11 +14,11 @@ var l = n(627968),
     x = n(576705),
     g = n(975571),
     f = n(652215),
-    p = n(641131),
-    _ = n(985018),
-    j = n(352954),
-    b = n(1004),
-    v = n(558997),
+    _ = n(733045),
+    p = n(985018),
+    j = n(34988),
+    b = n(162070),
+    v = n(351511),
     A = n(207532);
 let C = { mass: 1, tension: 250, friction: 18, clamp: !0 },
     T = (e) => {
@@ -38,7 +38,7 @@ let C = { mass: 1, tension: 250, friction: 18, clamp: !0 },
                             children: (0, l.jsx)(d.Text, {
                                 variant: "text-md/medium",
                                 color: "text-default",
-                                children: _.intl.string(p.default.fP8DVx),
+                                children: p.intl.string(_.default.fP8DVx),
                             }),
                         }),
                         (0, l.jsxs)(d.BJc, {
@@ -48,7 +48,7 @@ let C = { mass: 1, tension: 250, friction: 18, clamp: !0 },
                                 (0, l.jsx)(d.Text, {
                                     variant: "text-lg/semibold",
                                     color: "text-default",
-                                    children: _.intl.string(p.default["i7CH/I"]),
+                                    children: p.intl.string(_.default["i7CH/I"]),
                                 }),
                                 (0, l.jsxs)("ol", {
                                     className: a()(j.p_, j.o8, j.ap),
@@ -57,7 +57,7 @@ let C = { mass: 1, tension: 250, friction: 18, clamp: !0 },
                                             children: (0, l.jsx)(d.Text, {
                                                 variant: "text-md/normal",
                                                 color: "text-default",
-                                                children: _.intl.string(p.default["+Izoz7"]),
+                                                children: p.intl.string(_.default["+Izoz7"]),
                                             }),
                                         }),
                                         (0, l.jsxs)("li", {
@@ -65,7 +65,7 @@ let C = { mass: 1, tension: 250, friction: 18, clamp: !0 },
                                                 (0, l.jsx)(d.Text, {
                                                     variant: "text-md/normal",
                                                     color: "text-default",
-                                                    children: _.intl.string(p.default["iu/RkU"]),
+                                                    children: p.intl.string(_.default["iu/RkU"]),
                                                 }),
                                                 (0, l.jsxs)("ul", {
                                                     className: a()(j.p_, j.t3, j.zS),
@@ -74,35 +74,35 @@ let C = { mass: 1, tension: 250, friction: 18, clamp: !0 },
                                                             children: (0, l.jsx)(d.Text, {
                                                                 variant: "text-md/normal",
                                                                 color: "text-default",
-                                                                children: _.intl.string(p.default.QogKbP),
+                                                                children: p.intl.string(_.default.QogKbP),
                                                             }),
                                                         }),
                                                         (0, l.jsx)("li", {
                                                             children: (0, l.jsx)(d.Text, {
                                                                 variant: "text-md/normal",
                                                                 color: "text-default",
-                                                                children: _.intl.string(p.default.V4orHT),
+                                                                children: p.intl.string(_.default.V4orHT),
                                                             }),
                                                         }),
                                                         (0, l.jsx)("li", {
                                                             children: (0, l.jsx)(d.Text, {
                                                                 variant: "text-md/normal",
                                                                 color: "text-default",
-                                                                children: _.intl.string(p.default.VrrQXe),
+                                                                children: p.intl.string(_.default.VrrQXe),
                                                             }),
                                                         }),
                                                         (0, l.jsx)("li", {
                                                             children: (0, l.jsx)(d.Text, {
                                                                 variant: "text-md/normal",
                                                                 color: "text-default",
-                                                                children: _.intl.string(p.default.pSuM5e),
+                                                                children: p.intl.string(_.default.pSuM5e),
                                                             }),
                                                         }),
                                                         (0, l.jsx)("li", {
                                                             children: (0, l.jsx)(d.Text, {
                                                                 variant: "text-md/normal",
                                                                 color: "text-default",
-                                                                children: _.intl.string(p.default["/RLXlI"]),
+                                                                children: p.intl.string(_.default["/RLXlI"]),
                                                             }),
                                                         }),
                                                     ],
@@ -113,14 +113,14 @@ let C = { mass: 1, tension: 250, friction: 18, clamp: !0 },
                                             children: (0, l.jsx)(d.Text, {
                                                 variant: "text-md/normal",
                                                 color: "text-default",
-                                                children: _.intl.string(p.default.j4AmYy),
+                                                children: p.intl.string(_.default.j4AmYy),
                                             }),
                                         }),
                                         (0, l.jsx)("li", {
                                             children: (0, l.jsx)(d.Text, {
                                                 variant: "text-md/normal",
                                                 color: "text-default",
-                                                children: _.intl.format(p.default["/g+PvX"], {
+                                                children: p.intl.format(_.default["/g+PvX"], {
                                                     termsOfService: f.X7G.TERMS,
                                                     communityGuidelines: f.X7G.GUIDELINES,
                                                     helpArticle: g.A.getArticleURL(f.MVz.FLAG_TO_MOD),
@@ -138,7 +138,7 @@ let C = { mass: 1, tension: 250, friction: 18, clamp: !0 },
                                 (0, l.jsx)(d.Text, {
                                     variant: "text-lg/semibold",
                                     color: "text-default",
-                                    children: _.intl.string(p.default.qJWXsz),
+                                    children: p.intl.string(_.default.qJWXsz),
                                 }),
                                 (0, l.jsxs)("ul", {
                                     className: a()(j.p_, j.zS, j.ap),
@@ -147,7 +147,7 @@ let C = { mass: 1, tension: 250, friction: 18, clamp: !0 },
                                             children: (0, l.jsx)(d.Text, {
                                                 variant: "text-md/normal",
                                                 color: "text-default",
-                                                children: _.intl.format(p.default.FUBV1P, {
+                                                children: p.intl.format(_.default.FUBV1P, {
                                                     survey: "https://discord.sjc1.qualtrics.com/jfe/form/SV_3WvT7SqlWpCJ4HQ",
                                                 }),
                                             }),
@@ -156,7 +156,7 @@ let C = { mass: 1, tension: 250, friction: 18, clamp: !0 },
                                             children: (0, l.jsx)(d.Text, {
                                                 variant: "text-md/normal",
                                                 color: "text-default",
-                                                children: _.intl.format(p.default.W4MIAG, {
+                                                children: p.intl.format(_.default.W4MIAG, {
                                                     feedback: "https://forms.gle/RbDhW46PMmR39XUP7",
                                                 }),
                                             }),
@@ -172,13 +172,13 @@ let C = { mass: 1, tension: 250, friction: 18, clamp: !0 },
                                 (0, l.jsx)(d.Text, {
                                     variant: "text-md/normal",
                                     color: "text-default",
-                                    children: _.intl.string(p.default.J3HKmx),
+                                    children: p.intl.string(_.default.J3HKmx),
                                 }),
                                 n &&
                                     (0, l.jsx)(d.Text, {
                                         variant: "text-md/normal",
                                         color: "text-default",
-                                        children: _.intl.format(p.default["9x2vbP"], {
+                                        children: p.intl.format(_.default["9x2vbP"], {
                                             optOutHook: (e) =>
                                                 (0, l.jsx)(h.A, {
                                                     onClick: () =>
@@ -190,13 +190,13 @@ let C = { mass: 1, tension: 250, friction: 18, clamp: !0 },
                                 (0, l.jsx)(d.Text, {
                                     variant: "text-md/normal",
                                     color: "text-default",
-                                    children: _.intl.string(p.default.KcCY25),
+                                    children: p.intl.string(_.default.KcCY25),
                                 }),
                             ],
                         }),
                     ],
                 }),
-                (0, l.jsx)("img", { src: A, alt: _.intl.string(_.t.gAlJzV), width: u.T5, height: u.T5 }),
+                (0, l.jsx)("img", { src: A, alt: p.intl.string(p.t.gAlJzV), width: u.T5, height: u.T5 }),
             ],
         });
     };
@@ -255,7 +255,7 @@ function N(e) {
                                             (0, l.jsx)(d.Text, {
                                                 variant: "text-sm/semibold",
                                                 color: "text-strong",
-                                                children: _.intl.string(_.t.uvGmCx),
+                                                children: p.intl.string(p.t.uvGmCx),
                                             }),
                                             (0, l.jsx)(d.Text, {
                                                 variant: "text-sm/semibold",
@@ -265,7 +265,7 @@ function N(e) {
                                             (0, l.jsx)(d.Heading, {
                                                 variant: "text-md/semibold",
                                                 color: "text-strong",
-                                                children: _.intl.string(p.default["95qQRB"]),
+                                                children: p.intl.string(_.default["95qQRB"]),
                                             }),
                                         ],
                                     }),

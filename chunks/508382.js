@@ -9,7 +9,7 @@ var r = n(627968),
     u = n.n(l),
     c = n(426333),
     d = n(337836),
-    _ = n(11212);
+    _ = n(366242);
 let f = 8,
     p = 100,
     h = "data-popover-layer";
@@ -29,14 +29,14 @@ function m(e) {
             crossAccessFlip: v = !0,
             autoShift: N = !0,
             strategy: C = "fixed",
-            portal: b = !0,
-            blockPointerEvents: R = !1,
-            children: O,
+            portal: R = !0,
+            blockPointerEvents: O = !1,
+            children: b,
             renderLayer: D,
             viewportPadding: L = f,
             maxHeight: w,
-            trigger: x = "click",
-            hoverDelay: M = p,
+            trigger: M = "click",
+            hoverDelay: x = p,
             autoUpdate: P = !1,
         } = e,
         k = i.useRef(null),
@@ -79,28 +79,28 @@ function m(e) {
             elements: t,
         }),
         Y = (0, a.s9)(j),
-        W = (0, a.Mk)(j, { restMs: M, delay: { open: M, close: 0 }, enabled: "hover" === x, handleClose: (0, a.iB)() }),
-        { getReferenceProps: K, getFloatingProps: z } = (0, a.bv)([Y, W]),
-        $ = B.hide?.referenceHidden ? "hidden" : "visible",
-        q = b ? d.sM : i.Fragment;
+        W = (0, a.Mk)(j, { restMs: x, delay: { open: x, close: 0 }, enabled: "hover" === M, handleClose: (0, a.iB)() }),
+        { getReferenceProps: K, getFloatingProps: $ } = (0, a.bv)([Y, W]),
+        z = B.hide?.referenceHidden ? "hidden" : "visible",
+        q = R ? d.sM : i.Fragment;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            O({ ref: G.setReference, props: K() }),
+            b({ ref: G.setReference, props: K() }),
             l &&
                 (0, r.jsxs)(q, {
                     ownerDocument: n,
                     children: [
-                        R ? (0, r.jsx)(a.zR, {}) : null,
+                        O ? (0, r.jsx)(a.zR, {}) : null,
                         (0, r.jsx)("div", {
                             id: E,
                             className: u()(g, _.q),
                             [h]: !0,
-                            style: { ...F, visibility: $ },
+                            style: { ...F, visibility: z },
                             ref: G.setFloating,
-                            ...z(),
+                            ...$(),
                             children: (0, r.jsx)(c.xp, {
                                 containerRef: k,
-                                children: D({ placement: V, update: H, hidden: "hidden" === $, shift: B.shift }),
+                                children: D({ placement: V, update: H, hidden: "hidden" === z, shift: B.shift }),
                             }),
                         }),
                     ],

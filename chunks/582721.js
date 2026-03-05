@@ -18,7 +18,7 @@ var r = n(627968),
     g = n(256698),
     A = n(652215),
     I = n(985018),
-    T = n(664445);
+    T = n(122079);
 let S = 250,
     y = i.memo(function (e) {
         let {
@@ -28,14 +28,14 @@ let S = 250,
                 getStickerRowProps: v,
                 gutterWidth: N,
                 inspectedStickerPosition: C,
-                isScrolling: b,
-                isUsingKeyboardNavigation: R,
-                onInspect: O,
+                isScrolling: R,
+                isUsingKeyboardNavigation: O,
+                onInspect: b,
                 onSelect: D,
                 rowIndex: L,
                 stickerClassName: w,
-                stickerDescriptors: x,
-                stickerPadding: M,
+                stickerDescriptors: M,
+                stickerPadding: x,
                 stickerSize: P,
                 ownedStickerPacks: k,
                 enlargeOnInteraction: U = !1,
@@ -44,7 +44,7 @@ let S = 250,
                 checkSendability: V = !0,
             } = e,
             { location: B } = (0, c.p)(),
-            H = P + 2 * M,
+            H = P + 2 * x,
             j = i.useMemo(
                 () => ({
                     gridColumnGap: N,
@@ -54,48 +54,48 @@ let S = 250,
                 }),
                 [t, N, H],
             ),
-            Y = i.useMemo(() => ({ width: P, height: P, padding: M }), [M, P]),
+            Y = i.useMemo(() => ({ width: P, height: P, padding: x }), [x, P]),
             [W, K] = (0, d.A)(null, 300);
         return (0, r.jsx)("div", {
             className: T.nM,
             style: j,
             ...v?.(L),
-            children: x.map((e) => {
+            children: M.map((e) => {
                 let c = e.visibleRowIndex === C?.rowIndex && e.columnIndex === C?.columnIndex,
                     d = e.type === h.op.STICKER && U && c,
                     v = (t) => {
-                        if (b?.current === !0 || R?.current === !0) return;
+                        if (R?.current === !0 || O?.current === !0) return;
                         let n = t.altKey;
                         n && e.type === h.op.STICKER && !(0, m.o1)(e.sticker.id) && K(e.sticker.id), D?.(e, n);
                     },
                     N = (0, o.throttle)(() => {
-                        b?.current === !0 || R?.current === !0 || c || O?.(e);
+                        R?.current === !0 || O?.current === !0 || c || b?.(e);
                     }, S),
-                    x = () => {
+                    M = () => {
                         e.type === h.op.CREATE_STICKER &&
                             (f.default.track(A.HAw.OPEN_MODAL, { type: A.JJy.CREATE_STICKER_MODAL, location: B }),
                             (0, l.mMO)(async () => {
-                                let { default: t } = await Promise.all([n.e("29143"), n.e("64800")]).then(
+                                let { default: t } = await Promise.all([n.e("29143"), n.e("8414")]).then(
                                     n.bind(n, 445002),
                                 );
                                 return (n) => (0, r.jsx)(t, { guildId: e.guild_id, ...n });
                             }));
                     },
-                    { ref: M, tabIndex: H, onFocus: j, ...z } = y?.(e.columnIndex, L) ?? {};
+                    { ref: x, tabIndex: H, onFocus: j, ...$ } = y?.(e.columnIndex, L) ?? {};
                 switch (e.type) {
                     case h.op.CREATE_STICKER:
                         return (0, r.jsx)(
                             "div",
                             {
-                                ...z,
+                                ...$,
                                 children: (0, r.jsxs)(l.DUT, {
                                     "aria-label": e.name,
                                     className: a()(T.wP, w, { [T.Kj]: c }),
-                                    innerRef: M,
+                                    innerRef: x,
                                     tabIndex: H,
                                     onFocus: j ?? N,
                                     onMouseMove: N,
-                                    onClick: x,
+                                    onClick: M,
                                     style: Y,
                                     children: [
                                         !U && (0, r.jsx)("div", { className: T.fw }),
@@ -127,10 +127,10 @@ let S = 250,
                             };
                         return (0, i.createElement)(
                             "div",
-                            { ...z, key: e.sticker.id },
+                            { ...$, key: e.sticker.id },
                             (0, r.jsxs)(l.DUT, {
                                 className: a()(T.yI, w, { [T.PV]: c, [T.TV]: W === e.sticker.id }),
-                                innerRef: M,
+                                innerRef: x,
                                 tabIndex: H,
                                 onFocus: j ?? N,
                                 onMouseMove: N,

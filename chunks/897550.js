@@ -12,8 +12,8 @@ var i = n(627968),
     h = n(590858),
     _ = n(652215),
     m = n(985018),
-    p = n(918704);
-let g = {
+    g = n(40926);
+let p = {
     [_.uje.WINDOWS]: A.PlatformTypes.WINDOWS,
     [_.uje.MACOS]: A.PlatformTypes.OSX,
     [_.uje.LINUX]: A.PlatformTypes.LINUX,
@@ -25,8 +25,8 @@ class E extends r.PureComponent {
         return (0, i.jsx)(s.$n, {
             size: l ? s.$n.Sizes.MIN : s.$n.Sizes.LARGE,
             fullWidth: !l,
-            color: e ? p.gl : p.Hu,
-            className: a()({ [p.AA]: l, [p.Wt]: !l, [p.jP]: e, [p.I7]: !e }),
+            color: e ? g.gl : g.Hu,
+            className: a()({ [g.AA]: l, [g.Wt]: !l, [g.jP]: e, [g.I7]: !e }),
             onClick: r,
             children: t,
         });
@@ -38,7 +38,7 @@ class I extends r.PureComponent {
         const t = (0, A.getPlatform)(),
             n = Object.keys(e.systemRequirements);
         let i = n[0];
-        for (const e of n) g[e] === t && (i = e);
+        for (const e of n) p[e] === t && (i = e);
         this.state = { selectedOperatingSystem: i };
     }
     static getDerivedStateFromProps(e, t) {
@@ -57,9 +57,9 @@ class I extends r.PureComponent {
         return 1 === r.length
             ? null
             : (0, i.jsxs)(d.A, {
-                  className: p.vR,
+                  className: g.vR,
                   children: [
-                      (0, i.jsx)("div", { className: p.me }),
+                      (0, i.jsx)("div", { className: g.me }),
                       r.map((t) =>
                           (0, i.jsx)(
                               E,
@@ -114,19 +114,19 @@ class I extends r.PureComponent {
                     : (0, i.jsxs)(
                           "div",
                           {
-                              className: p.aS,
-                              children: [(0, i.jsxs)("span", { className: p.D8, children: [e.key, ":"] }), n],
+                              className: g.aS,
+                              children: [(0, i.jsxs)("span", { className: g.D8, children: [e.key, ":"] }), n],
                           },
                           t,
                       );
             })
             .filter(u.Vq);
-        return (0, i.jsxs)("div", { className: p.Ln, children: [(0, i.jsx)(o.A, { tag: "h4", children: t }), n] });
+        return (0, i.jsxs)("div", { className: g.Ln, children: [(0, i.jsx)(o.A, { tag: "h4", children: t }), n] });
     }
     renderBody() {
         let { minimum: e, recommended: t } = this.props.systemRequirements[this.state.selectedOperatingSystem];
         return (0, i.jsxs)("div", {
-            className: p.GQ,
+            className: g.GQ,
             children: [
                 this.renderRequirementsSection(e, m.intl.string(m.t.QCCMXE)),
                 this.renderRequirementsSection(t, m.intl.string(m.t.He39wq)),

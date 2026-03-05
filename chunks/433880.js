@@ -9,7 +9,7 @@ var r = n(627968),
     u = n(994500),
     c = n(287809),
     d = n(652215),
-    _ = n(379066);
+    _ = n(11356);
 let f = [];
 function p(e, t) {
     let n = (0, o.A)(e, t);
@@ -46,11 +46,11 @@ function m(e) {
             [T],
         ),
         C = (0, s.bG)([u.A], () => u.A.getRelationshipType(g), [g]),
-        b = p(N, S || 1 === T.length);
+        R = p(N, S || 1 === T.length);
     if (I || 0 === T.length || C === d.eA$.FRIEND) return null;
     if (1 === T.length) {
         let { applicationId: e } = T[0],
-            n = b.get(e);
+            n = R.get(e);
         return null == n
             ? null
             : (0, r.jsx)(a.Drp, {
@@ -62,13 +62,13 @@ function m(e) {
                   action: () => m(n),
               });
     }
-    let R = [];
+    let O = [];
     return (T.forEach((e) => {
         let { applicationId: t } = e,
-            n = b.get(t);
+            n = R.get(t);
         if (null != n) {
             let e = n.getIconURL(16);
-            R.push(
+            O.push(
                 (0, r.jsx)(
                     a.Drp,
                     {
@@ -83,7 +83,7 @@ function m(e) {
             );
         }
     }),
-    0 === R.length)
+    0 === O.length)
         ? null
-        : (0, r.jsx)(a.Drp, { color: E, id: t, label: o, onFocus: v, children: R });
+        : (0, r.jsx)(a.Drp, { color: E, id: t, label: o, onFocus: v, children: O });
 }

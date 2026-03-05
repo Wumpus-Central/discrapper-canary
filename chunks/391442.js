@@ -2,7 +2,7 @@ n.d(e, { A: () => r });
 var i = n(627968);
 n(64700);
 var s = n(397927),
-    l = n(520320);
+    l = n(55418);
 function r(t) {
     let { children: e, label: n } = t;
     return (0, i.jsxs)("li", {

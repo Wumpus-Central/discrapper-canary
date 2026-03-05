@@ -13,7 +13,7 @@ var r = n(627968),
     f = n(348275),
     p = n(505679),
     h = n(747781),
-    m = n(999630);
+    m = n(93476);
 function E(e) {
     let {
             children: t,
@@ -29,28 +29,28 @@ function E(e) {
             spacing: v,
             caretConfig: N,
             layerContext: C,
-            targetElementRef: b,
-            anchorRef: R,
-            positionKey: O,
+            targetElementRef: R,
+            anchorRef: O,
+            positionKey: b,
             ariaHidden: D = !1,
             ...L
         } = e,
-        [w, x] = i.useState(null);
+        [w, M] = i.useState(null);
     i.useLayoutEffect(() => {
-        null != R && x(R.current);
-    }, [R]);
-    let M = i.useCallback(
+        null != O && M(O.current);
+    }, [O]);
+    let x = i.useCallback(
             (e) => {
-                null == R && x(e), (0, f.cZ)(b, e);
+                null == O && M(e), (0, f.cZ)(R, e);
             },
-            [b, R],
+            [R, O],
         ),
         {
             tooltipId: P,
             isVisible: k,
             targetElementRef: U,
             trigger: G,
-        } = (0, h.D)({ children: t, targetElementRef: M, asContainer: I, containerTag: T, ariaHidden: D, ...L }),
+        } = (0, h.D)({ children: t, targetElementRef: x, asContainer: I, containerTag: T, ariaHidden: D, ...L }),
         F = null != n && ("string" != typeof n || "" !== n),
         V = null != E && !i.isValidElement(E),
         B = i.useMemo(
@@ -79,7 +79,7 @@ function E(e) {
                 }),
             [E, g, A, n, s, F, V],
         ),
-        H = O ?? `${(0, f.Xj)(n ?? "")}|${(0, f.Xj)(s)}`,
+        H = b ?? `${(0, f.Xj)(n ?? "")}|${(0, f.Xj)(s)}`,
         j = (0, p.j)({ shouldShow: k });
     if (!I && !i.isValidElement(t)) return null;
     let Y = j((e, t) =>
@@ -92,7 +92,7 @@ function E(e) {
                       isRendered: !0,
                       targetElementRef: U,
                       targetElement: w,
-                      anchorRef: R,
+                      anchorRef: O,
                       id: P,
                       content: B,
                       position: S,

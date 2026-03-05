@@ -11,9 +11,9 @@ var i = n(627968),
     u = n(793574),
     h = n(688810),
     A = n(313961),
-    p = n(384059),
-    g = n(47167),
-    m = n(689874),
+    m = n(384059),
+    p = n(47167),
+    g = n(689874),
     _ = n(509536),
     f = n(58736),
     x = n(742589),
@@ -24,30 +24,30 @@ var i = n(627968),
     b = n(113783),
     S = n(69407),
     T = n(776781),
-    y = n(233993),
-    v = n(446600),
+    v = n(233993),
+    y = n(446600),
     j = n(608900),
     R = n(533233),
     O = n(652215),
     L = n(788868),
     M = n(985018),
-    D = n(20531);
+    D = n(142829);
 function G(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, showRequestToSpeakSidebar: s } = e,
         { analyticsLocations: l, newestAnalyticsLocation: o } = (0, h.Ay)(u.A.VOICE_CHANNEL_HEADER),
         c = (0, a.bG)([A.A], () => A.A.getChatOpen(t.id), [t.id]),
-        g = (0, T.Ni)(t.id),
+        p = (0, T.Ni)(t.id),
         _ = (0, b.zy)(t.id, S.ip.REQUESTED_TO_SPEAK_ONLY);
     return (0, i.jsxs)(h.f5, {
         value: l,
         children: [
-            (0, i.jsx)(m.A, { channelId: t.id }, "clips-enabled-indicator"),
-            !s && g
+            (0, i.jsx)(g.A, { channelId: t.id }, "clips-enabled-indicator"),
+            !s && p
                 ? (0, i.jsx)("div", {
                       className: r()(D.x6, { [D.vc]: c }),
                       children: (0, i.jsx)(j.A, {
                           toggleRequestToSpeakSidebar: () => {
-                              c && d.A.updateChatOpen(t.id, !1), (0, p.X)(o, p.O.OPEN_REQUEST_TO_SPEAK_SIDEBAR), n();
+                              c && d.A.updateChatOpen(t.id, !1), (0, m.X)(o, m.O.OPEN_REQUEST_TO_SPEAK_SIDEBAR), n();
                           },
                           showRequestToSpeakSidebar: s,
                           numRequestToSpeak: _,
@@ -69,18 +69,18 @@ function G(e) {
 }
 function U(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, showRequestToSpeakSidebar: l } = e,
-        u = (0, g.Ay)(t),
-        h = (0, a.bG)([v.A], () => v.A.getStageInstanceByChannel(t.id)),
+        u = (0, p.Ay)(t),
+        h = (0, a.bG)([y.A], () => y.A.getStageInstanceByChannel(t.id)),
         A = (0, b.uy)(t.id),
-        p = (0, b.zy)(t.id, S.ip.AUDIENCE),
-        m = (0, a.bG)([E.A], () => E.A.getGuild(t.guild_id), [t.guild_id]),
-        C = m?.maxStageVideoChannelUsers ?? 0,
+        m = (0, b.zy)(t.id, S.ip.AUDIENCE),
+        g = (0, a.bG)([E.A], () => E.A.getGuild(t.guild_id), [t.guild_id]),
+        C = g?.maxStageVideoChannelUsers ?? 0,
         T =
-            null != m && m.features.has(O.GuildFeatures.COMMUNITY)
+            null != g && g.features.has(O.GuildFeatures.COMMUNITY)
                 ? C < O.p2C
-                : m?.premiumTier !== O.TVA.TIER_3 && C <= O.nyz,
+                : g?.premiumTier !== O.TVA.TIER_3 && C <= O.nyz,
         j = (0, R.A)(t),
-        U = (0, a.bG)([I.A], () => I.A.can(y.QY, t)),
+        U = (0, a.bG)([I.A], () => I.A.can(v.QY, t)),
         w = () => {
             d.A.updateStageVideoLimitBoostUpsellDismissed(t.id, !0),
                 N.default.track(O.HAw.BOOSTING_UPSELL_CLICKED, {
@@ -90,7 +90,7 @@ function U(e) {
                     action: L.pd.DISMISS,
                 });
         },
-        k = { canModerate: U, audienceCount: p, channel: t, speakerCount: A },
+        k = { canModerate: U, audienceCount: m, channel: t, speakerCount: A },
         V = s.useRef(k);
     s.useEffect(() => {
         V.current = k;
@@ -137,7 +137,7 @@ function U(e) {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
                                 className: D.N_,
-                                children: M.intl.format(M.t["+v2pN2"], { count: p }),
+                                children: M.intl.format(M.t["+v2pN2"], { count: m }),
                             }),
                         ],
                     }),

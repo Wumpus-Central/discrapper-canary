@@ -2,7 +2,7 @@
 n.d(t, { A: () => O });
 var i = n(627968),
     s = n(64700),
-    l = n(475539),
+    l = n(380278),
     r = n(837381),
     a = n(311907),
     o = n(397927),
@@ -11,9 +11,9 @@ var i = n(627968),
     u = n(571694),
     h = n(47167),
     A = n(598104),
-    p = n(616356),
-    g = n(383501),
-    m = n(222823),
+    m = n(616356),
+    p = n(383501),
+    g = n(222823),
     _ = n(309010),
     f = n(287809),
     x = n(607567),
@@ -24,15 +24,15 @@ var i = n(627968),
     b = n(65611),
     S = n(652215),
     T = n(985018),
-    y = n(308294);
-let v = { friction: 28, tension: 600 };
+    v = n(2724);
+let y = { friction: 28, tension: 600 };
 function j(e) {
     switch (e) {
         case "height":
         case "opacity":
-            return { duration: 150, ...v };
+            return { duration: 150, ...y };
         case "scale":
-            return { ...v };
+            return { ...y };
         default:
             throw Error(`DirectMessage: getSpringConfigs() - Invalid spring ${String(e)}`);
     }
@@ -81,7 +81,7 @@ class R extends s.PureComponent {
             s = t.type === S.rbe.DM ? f.default.getUser(t.getRecipientId()) : null;
         null != s
             ? (0, c.L3)(e, async () => {
-                  let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("39778"), n.e("31885")]).then(
+                  let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("39778"), n.e("16141")]).then(
                       n.bind(n, 385913),
                   );
                   return (n) => (0, i.jsx)(e, { ...n, channel: t, user: s });
@@ -104,19 +104,19 @@ class R extends s.PureComponent {
                 unread: u,
                 treeItemProps: h,
             } = this.props,
-            { hovered: p, animating: g } = this.state,
-            m = e.isMultiUserDM() && null == e.icon,
+            { hovered: m, animating: p } = this.state,
+            g = e.isMultiUserDM() && null == e.icon,
             _ = () =>
                 (0, i.jsx)(o.jlP, {
                     to: S.BVt.CHANNEL(S.ME, e.id),
                     onMouseEnter: () => this.setState({ hovered: !0 }),
                     onMouseLeave: () => this.setState({ hovered: !1 }),
-                    selected: n || p,
+                    selected: n || m,
                     ariaLabel: null != t ? T.intl.formatToPlainString(T.t.hKarnZ, { mentions: s, name: t }) : "",
                     onContextMenu: this.handleContextMenu,
-                    icon: m ? void 0 : this.getChannelIcon(),
-                    backgroundStyle: m ? "on-hover" : "always",
-                    children: m
+                    icon: g ? void 0 : this.getChannelIcon(),
+                    backgroundStyle: g ? "on-hover" : "always",
+                    children: g
                         ? (0, i.jsx)(A.A, {
                               channel: e,
                               size: o._3J.SIZE_40,
@@ -130,7 +130,7 @@ class R extends s.PureComponent {
             style: this.getAnimatedStyle(),
             children: (0, i.jsxs)(N.c, {
                 children: [
-                    (0, i.jsx)(E.A, { hovered: !g && p, selected: !g && n, unread: !g && u, className: y.I }),
+                    (0, i.jsx)(E.A, { hovered: !p && m, selected: !p && n, unread: !p && u, className: v.I }),
                     (0, i.jsx)(I.A, {
                         channel: e,
                         children: (0, i.jsx)(o.Qk9, {
@@ -151,12 +151,12 @@ let O = s.forwardRef(function (e, t) {
     let n = e.channel.id,
         s = (0, h.Ay)(e.channel),
         l = (0, r.Vd)(n, 2),
-        c = (0, a.bG)([g.A], () => g.A.getChannelId(), []),
+        c = (0, a.bG)([p.A], () => p.A.getChannelId(), []),
         u = (0, a.bG)([d.A], () => d.A.getMode(n), [n]),
-        A = (0, a.bG)([p.A], () => p.A.getAllApplicationStreamsForChannel(n).length > 0),
+        A = (0, a.bG)([m.A], () => m.A.getAllApplicationStreamsForChannel(n).length > 0),
         f = (0, a.bG)([x.Ay], () => x.Ay.getVoiceStatesForChannel(e.channel).length > 0, [e.channel]),
         C = (0, a.bG)([_.A], () => _.A.getChannelId(), []),
-        E = (0, a.bG)([m.Ay], () => m.Ay.getMentionCount(n), [n]),
+        E = (0, a.bG)([g.Ay], () => g.Ay.getMentionCount(n), [n]),
         I = c === n,
         N = !1,
         b = !1;

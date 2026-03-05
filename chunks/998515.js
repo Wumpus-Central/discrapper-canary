@@ -12,8 +12,8 @@ var i = n(627968),
     h = n(441271),
     _ = n(915967),
     m = n(775121),
-    p = n(268218),
-    g = n(670735),
+    g = n(268218),
+    p = n(670735),
     E = n(976860),
     I = n(210714),
     f = n(75587),
@@ -21,8 +21,8 @@ var i = n(627968),
     T = n(590858),
     N = n(652215),
     S = n(985018),
-    x = n(58682);
-let v = (0, p.Fe)({
+    x = n(881640);
+let v = (0, g.Fe)({
     createPromise: () => Promise.all([n.e("19846"), n.e("41031")]).then(n.bind(n, 554238)),
     webpackId: 554238,
 });
@@ -112,7 +112,7 @@ class b extends r.PureComponent {
             n = e
                 ? (0, i.jsx)("div", { className: x.gE, children: this.renderContent() })
                 : (0, i.jsx)(v, { className: x.gE, location: t, render: this.renderContent });
-        return (0, i.jsx)(g.A, { renderCustomMessage: this.renderCustomErrorMessage, children: n });
+        return (0, i.jsx)(p.A, { renderCustomMessage: this.renderCustomErrorMessage, children: n });
     }
 }
 let O = (0, u.A)(

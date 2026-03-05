@@ -3,8 +3,8 @@ n.d(t, { A: () => B }), n(321073);
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    a = n.n(l),
-    r = n(837381),
+    r = n.n(l),
+    a = n(837381),
     o = n(311907),
     c = n(554146),
     d = n(342494),
@@ -34,9 +34,9 @@ var i = n(627968),
     D = n(332396),
     G = n(652215),
     U = n(49999),
-    P = n(665606),
+    P = n(525736),
     w = n(985018),
-    k = n(299446);
+    k = n(4720);
 let V = { analyticsSource: { page: G.liQ.GUILD_CHANNEL, section: G.JJy.CHANNEL_LIST, object: G.ZSU.CHANNEL } };
 function B() {
     let e,
@@ -51,7 +51,7 @@ function B() {
         z,
         q,
         X,
-        J = (0, r.Vd)("favorites"),
+        J = (0, a.Vd)("favorites"),
         { favoriteAdded: Q, clearFavoriteAdded: $ } = (0, R.CJ)(),
         Z = s.useRef(null),
         [ee, et] = s.useState(!1),
@@ -61,8 +61,8 @@ function B() {
         })),
         es = (0, o.bG)([S.A], () => S.A.getChannelId(G.YYv)),
         el = (0, o.bG)([b.A], () => b.A.getChannel(es)),
-        ea = (0, I.A)((e) => e.guildId) === G.YYv,
-        { badge: er, unread: eo } = (0, L.A)(ei),
+        er = (0, I.A)((e) => e.guildId) === G.YYv,
+        { badge: ea, unread: eo } = (0, L.A)(ei),
         ec =
             ((t = null != (e = (0, o.bG)([S.A], () => S.A.getVoiceChannelId())) && null != ei[e]),
             (l = (0, o.bG)([N.A], () => {
@@ -89,7 +89,7 @@ function B() {
             (X = !1),
             t ? ((Y = !H), (z = H), (q = l), (X = K)) : ((q = B), (X = W)),
             (0, x.oi)({ audio: Y, video: z, screenshare: q, liveStage: !1, isCurrentUserConnected: t, activity: X })),
-        ed = er > 0 ? (0, C.w)(er) : null,
+        ed = ea > 0 ? (0, C.w)(ea) : null,
         eu = (0, j.m)({ location: "FavoritesButton" }).enabled,
         [eh, eA] = (0, g.kn)(eu ? [c.M.FAVORITES_SERVER_ONBOARDING_INTRO] : []),
         em = eh === c.M.FAVORITES_SERVER_ONBOARDING_INTRO,
@@ -117,7 +117,7 @@ function B() {
     }, [$]);
     return (0, i.jsxs)(f.c, {
         children: [
-            (0, i.jsx)(_.A, { selected: ea, hovered: ee, unread: eo && !en, className: k.Io }),
+            (0, i.jsx)(_.A, { selected: er, hovered: ee, unread: eo && !en, className: k.Io }),
             (0, i.jsx)(D.A, {
                 onShow: eC,
                 children: (0, i.jsx)(M.Q, {
@@ -129,11 +129,11 @@ function B() {
                             ...J,
                             ariaLabel: w.intl.formatToPlainString(w.t["/uzRss"], {
                                 guildName: w.intl.string(w.t.wMWyci),
-                                mentions: er,
+                                mentions: ea,
                             }),
-                            "aria-selected": ea,
+                            "aria-selected": er,
                             to: { pathname: G.BVt.CHANNEL(G.YYv, es), state: V },
-                            selected: ea || ee,
+                            selected: er || ee,
                             onMouseEnter: () => et(!0),
                             onMouseLeave: () => et(!1),
                             onMouseDown: function () {
@@ -151,7 +151,7 @@ function B() {
                             },
                             children: (0, i.jsx)("div", {
                                 ref: Z,
-                                className: a()(k.hN, { [k.b1]: Q }),
+                                className: r()(k.hN, { [k.b1]: Q }),
                                 children: (0, i.jsx)(u.Gg5, {
                                     size: "custom",
                                     color: "currentColor",

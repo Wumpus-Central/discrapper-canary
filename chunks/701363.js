@@ -53,7 +53,7 @@ var l = s(627968),
     ee = s(837921),
     et = s(652215),
     es = s(985018),
-    el = s(45119);
+    el = s(477549);
 let en = ee.Ay.getEnableHardwareAcceleration() ? f.JsQ : f.euF,
     ea = { offset: { top: 2, bottom: 2, right: 4 } },
     ei = (e) => {
@@ -244,7 +244,7 @@ function ed(e) {
                                   s.e("97262"),
                                   s.e("42128"),
                                   s.e("39778"),
-                                  s.e("84488"),
+                                  s.e("22128"),
                               ]).then(s.bind(s, 385913));
                               return (s) => (0, l.jsx)(e, { ...s, user: r, channel: t, channelSelected: a });
                           },
@@ -292,7 +292,7 @@ function ed(e) {
         e2 = (0, x.bG)([K.Ay], () => K.Ay.lastMessageId(t.id)),
         { waveShouldShow: e9, wavePressed: e6 } = (0, L.A)(t, e2),
         { showClose: e7 } = I.A.useConfig({ location: "PrivateChannel" }),
-        e4 = (0, A.A)(() => {
+        e3 = (0, A.A)(() => {
             let e = ej.current?.getBoundingClientRect() ?? null,
                 t = eZ.current?.getBoundingClientRect() ?? null;
             if (null == t || null == e || e.width + 44 - t.width <= 0) return void eC({ maskImage: "none" });
@@ -302,8 +302,8 @@ function ed(e) {
             });
         });
     return (
-        n.useLayoutEffect(e4, [em, e4]),
-        (0, m.g)(eS, e4),
+        n.useLayoutEffect(e3, [em, e3]),
+        (0, m.g)(eS, e3),
         (0, l.jsx)(d.tG, {
             id: t.id,
             children: (e) => {

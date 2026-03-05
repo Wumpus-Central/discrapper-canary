@@ -13,7 +13,7 @@ var r = n(627968),
     f = n(679492),
     p = n(518477),
     h = n(985018),
-    m = n(55837);
+    m = n(575971);
 let E = 2700,
     g = "> -# *",
     A = {
@@ -40,25 +40,25 @@ function T(e) {
         v = i.useRef(null),
         N = (0, o.bG)([d.default], () => d.default.getId() === t.id),
         C = (0, _.A)(t.id),
-        { onInteraction: b, onInteractionPopoutTargetRefChange: R } = (0, f.Pq)();
+        { onInteraction: R, onInteractionPopoutTargetRefChange: O } = (0, f.Pq)();
     if (t.bot || N || !C) return null;
-    let O = () => {
-            R(T),
+    let b = () => {
+            O(T),
                 n === p.dS.AVATAR
                     ? S({ action: "PRESS_REACT_AVATAR" })
                     : n === p.dS.STATUS
                       ? S({ action: "PRESS_REACT_CUSTOM_STATUS" })
                       : S({ action: "PRESS_REACT_ACTIVITY" }),
-                b?.({ interactionType: p.AQ.REACT, interactionSource: n, interactionSourceId: g });
+                R?.({ interactionType: p.AQ.REACT, interactionSource: n, interactionSourceId: g });
         },
         D = () => {
-            R(T),
+            O(T),
                 n === p.dS.AVATAR
                     ? S({ action: "PRESS_REPLY_AVATAR" })
                     : n === p.dS.STATUS
                       ? S({ action: "PRESS_REPLY_CUSTOM_STATUS" })
                       : S({ action: "PRESS_REPLY_ACTIVITY" }),
-                b?.({ interactionType: p.AQ.REPLY, interactionSource: n, interactionSourceId: g });
+                R?.({ interactionType: p.AQ.REPLY, interactionSource: n, interactionSourceId: g });
         };
     return (0, r.jsxs)(c.Ay, {
         className: a()(m.oO, {
@@ -76,7 +76,7 @@ function T(e) {
                 delay: 0,
                 ariaHidden: !0,
                 children: (0, r.jsx)(c.$n, {
-                    onClick: O,
+                    onClick: b,
                     className: m.x6,
                     "aria-label": A[n](),
                     "aria-haspopup": "dialog",
@@ -99,7 +99,7 @@ function T(e) {
             }),
             y?.((e) => {
                 let t = () => {
-                    R(v), e.onClick?.();
+                    O(v), e.onClick?.();
                 };
                 return (0, r.jsx)(l.m, {
                     asContainer: !0,
