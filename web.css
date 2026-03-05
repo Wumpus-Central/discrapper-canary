@@ -42879,6 +42879,14 @@ screen and (max-width:485px) {
     cursor: pointer
 }
 
+.noticeMessageContainer__84bdf {
+    align-items: start;
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: auto 1fr;
+    margin-top: var(--space-8)
+}
+
 .paymentSourceLabel_f38e43 {
     line-height: 22px;
     margin-inline-start: 8px;
@@ -42888,6 +42896,10 @@ screen and (max-width:485px) {
 
 .paymentSourceLabel_f38e43:first-child {
     margin-inline-start: 0
+}
+
+.unifiedAddPaymentMethodLabel_f38e43 {
+    margin-bottom: var(--space-8)
 }
 
 .paymentSourceSelectedOption_f38e43 {

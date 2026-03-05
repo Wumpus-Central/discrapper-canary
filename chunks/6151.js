@@ -1,27 +1,29 @@
 "use strict";
-n.d(t, { a: () => c, v: () => d }), n(321073);
+n.d(t, { a: () => d, v: () => _ }), n(321073);
 var r = n(627968),
     i = n(64700),
-    a = n(158954),
-    s = n(812745),
-    o = n(756366),
-    l = n(985018),
-    u = n(355767);
-let c = "new_payment_source_id";
-function d(e) {
+    s = n(158954),
+    a = n(827734),
+    o = n(812745),
+    l = n(756366),
+    u = n(985018),
+    c = n(355767);
+let d = "new_payment_source_id";
+function _(e) {
     let {
             label: t,
             value: n,
-            options: d,
-            onChange: _,
-            onNew: f,
-            newPaymentMethodOptionLabel: p,
-            disabled: h = !1,
-            error: m,
+            options: _,
+            onChange: f,
+            onNew: p,
+            noticeMessage: h,
+            newPaymentMethodOptionLabel: m,
+            disabled: E = !1,
+            error: g,
         } = e,
-        g = i.useMemo(() => {
-            let e = d.map((e) => {
-                let t = e.icon ? (0, r.jsx)("img", { src: (0, s.Nj)(e.icon), alt: "", className: u.s }) : void 0;
+        A = i.useMemo(() => {
+            let e = _.map((e) => {
+                let t = e.icon ? (0, r.jsx)("img", { src: (0, o.Nj)(e.icon), alt: "", className: c.s7 }) : void 0;
                 return {
                     id: e.id,
                     value: e.id,
@@ -33,33 +35,51 @@ function d(e) {
             });
             return (
                 e.push({
-                    id: c,
-                    value: c,
-                    label: p ?? l.intl.string(o.default.rNF29q),
+                    id: d,
+                    value: d,
+                    label: m ?? u.intl.string(l.default.rNF29q),
                     leading: void 0,
                     description: void 0,
                 }),
                 e
             );
-        }, [d, p]),
-        E = i.useCallback(
+        }, [_, m]),
+        I = i.useCallback(
             (e) => {
-                e === c ? f() : null != e && _(e);
+                e === d ? p() : null != e && f(e);
             },
-            [f, _],
+            [p, f],
         ),
-        A = (0, r.jsx)(a.l6P, {
-            label: t,
-            placeholder: l.intl.string(o.default.rNF29q),
-            value: n,
-            options: g,
-            onSelectionChange: E,
-            selectionMode: "single",
-            disabled: h || 0 === d.length,
-            errorMessage: m,
-            fullWidth: !0,
+        T = (0, r.jsxs)(r.Fragment, {
+            children: [
+                (0, r.jsx)(s.l6P, {
+                    label: t,
+                    placeholder: u.intl.string(l.default.rNF29q),
+                    value: n,
+                    options: A,
+                    onSelectionChange: I,
+                    selectionMode: "single",
+                    disabled: E || 0 === _.length,
+                    errorMessage: g,
+                    fullWidth: !0,
+                }),
+                null != h
+                    ? (0, r.jsxs)("div", {
+                          className: c.T4,
+                          children: [
+                              (0, r.jsx)(s.mir, { size: "xs", color: a.A.colors.TEXT_FEEDBACK_INFO }),
+                              (0, r.jsx)(s.EYj, { variant: "text-xs/normal", color: "text-subtle", children: h }),
+                          ],
+                      })
+                    : null,
+            ],
         });
-    return 0 !== d.length || h
-        ? A
-        : (0, r.jsx)(a.DUT, { onClick: f, "aria-label": l.intl.string(o.default.rNF29q), className: u.O, children: A });
+    return 0 !== _.length || E
+        ? T
+        : (0, r.jsx)(s.DUT, {
+              onClick: p,
+              "aria-label": u.intl.string(l.default.rNF29q),
+              className: c.OV,
+              children: T,
+          });
 }

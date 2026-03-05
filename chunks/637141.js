@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => D });
+n.d(t, { A: () => L });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -91,7 +91,7 @@ function R(e) {
     }
     return null;
 }
-let b = (e) => {
+let O = (e) => {
         let {
                 selectedPaymentSourceId: t,
                 paymentSources: n,
@@ -142,7 +142,7 @@ let b = (e) => {
             selectedPaymentSourceId: g,
         };
     },
-    O = (e) => {
+    b = (e) => {
         let {
                 onPaymentSourceAdd: t,
                 dropdownLoading: n,
@@ -151,7 +151,7 @@ let b = (e) => {
                 paymentSourceOptions: o,
                 selectedPaymentSourceId: l,
                 newPaymentMethodOptionLabel: u,
-                errorMessage: c,
+                noticeMessage: c,
             } = e,
             d = i.useMemo(
                 () =>
@@ -173,84 +173,109 @@ let b = (e) => {
                 }),
                 [l, d, a, t, s, n, u],
             );
-        return (0, r.jsx)(_.v, { ...f, error: c });
+        return (0, r.jsx)(_.v, { ...f, noticeMessage: c });
+    },
+    D = (e) => {
+        let { onClick: t, shouldUseUnifiedCheckoutUI: n } = e,
+            s = i.useMemo(
+                () =>
+                    (0, r.jsx)(u.$nd, {
+                        variant: "primary",
+                        fullWidth: !0,
+                        onClick: t,
+                        text: A.intl.string(A.t.eQ2bLp),
+                    }),
+                [t],
+            );
+        return n
+            ? (0, r.jsxs)(r.Fragment, {
+                  children: [
+                      (0, r.jsx)(c.Text, {
+                          variant: "text-md/medium",
+                          color: "text-strong",
+                          className: I.bM,
+                          children: A.intl.string(A.t["u+Cw58"]),
+                      }),
+                      s,
+                  ],
+              })
+            : s;
     };
-function D(e) {
+function L(e) {
     let {
             label: t,
             selectedPaymentSourceId: n,
             paymentSources: s,
             prependOption: a,
-            hidePersonalInformation: d,
-            onChange: _,
-            onPaymentSourceAdd: f,
-            isTrial: p = !1,
-            disabled: h = !1,
-            className: m,
-            optionClassName: E,
-            dropdownLoading: g,
-            paymentGatewayRestrictions: T,
-            shouldUseUnifiedCheckoutUI: S,
-            newPaymentMethodOptionLabel: y,
-            defaultPaymentSourceId: v,
+            hidePersonalInformation: u,
+            onChange: d,
+            onPaymentSourceAdd: _,
+            isTrial: f = !1,
+            disabled: p = !1,
+            className: h,
+            optionClassName: m,
+            dropdownLoading: E,
+            paymentGatewayRestrictions: g,
+            shouldUseUnifiedCheckoutUI: T,
+            newPaymentMethodOptionLabel: S,
+            defaultPaymentSourceId: y,
         } = e,
         {
-            hasNoPaymentSources: N,
-            handleChange: D,
+            hasNoPaymentSources: v,
+            handleChange: N,
             paymentSource: L,
             paymentSourceOptions: w,
-            selectedPaymentSourceId: x,
-        } = b({
+            selectedPaymentSourceId: M,
+        } = O({
             selectedPaymentSourceId: n,
             paymentSources: s,
             prependOption: a,
-            hidePersonalInformation: d,
-            onChange: _,
-            onPaymentSourceAdd: f,
-            paymentGatewayRestrictions: T,
-            includeNewPaymentSourceOption: !S,
+            hidePersonalInformation: u,
+            onChange: d,
+            onPaymentSourceAdd: _,
+            paymentGatewayRestrictions: g,
+            includeNewPaymentSourceOption: !T,
         }),
-        M = i.useMemo(() => new Map(s.map((e) => [e.id, e])), [s]),
-        P = R({ isTrial: p, selectedPaymentSource: L, paymentSources: s, defaultPaymentSourceId: v }),
-        k = S
-            ? (0, r.jsx)(O, {
-                  onPaymentSourceAdd: f,
-                  disabled: h,
-                  handleChange: D,
-                  paymentSourceOptions: w,
-                  selectedPaymentSourceId: x,
-                  newPaymentMethodOptionLabel: y,
-                  errorMessage: P,
-              })
-            : g
-              ? (0, r.jsx)("div", {
-                    className: I.hN,
-                    children: (0, r.jsx)(c.y$y, { type: c.y$y.Type.WANDERING_CUBES }),
-                })
-              : N
-                ? (0, r.jsx)(u.$nd, { variant: "primary", fullWidth: !0, onClick: f, text: A.intl.string(A.t.eQ2bLp) })
-                : (0, r.jsx)(l.Te, {
-                      options: w,
-                      value: x,
-                      label: t,
-                      onChange: D,
-                      isDisabled: h,
-                      className: m,
-                      optionClassName: E,
-                      placeholder: A.intl.string(A.t["8lqkf8"]),
-                      renderOptionValue: (e) => {
-                          let [t] = e;
-                          return g
-                              ? (0, r.jsx)(c.y$y, { type: c.tVU.SPINNING_CIRCLE })
-                              : C(null == t.value ? void 0 : M.get(t.value), t, d);
-                      },
-                      renderOptionLabel: (e) => C(null == e.value ? void 0 : M.get(e.value), e, d),
-                      "data-migration-pending": !0,
-                  });
+        x = i.useMemo(() => new Map(s.map((e) => [e.id, e])), [s]),
+        P = R({ isTrial: f, selectedPaymentSource: L, paymentSources: s, defaultPaymentSourceId: y });
+    if (E)
+        return (0, r.jsx)("div", {
+            className: I.hN,
+            children: (0, r.jsx)(c.y$y, { type: c.y$y.Type.WANDERING_CUBES }),
+        });
+    if (v) return (0, r.jsx)(D, { onClick: _, shouldUseUnifiedCheckoutUI: T });
+    let k = T
+        ? (0, r.jsx)(b, {
+              onPaymentSourceAdd: _,
+              disabled: p,
+              handleChange: N,
+              paymentSourceOptions: w,
+              selectedPaymentSourceId: M,
+              newPaymentMethodOptionLabel: S,
+              noticeMessage: P,
+          })
+        : (0, r.jsx)(l.Te, {
+              options: w,
+              value: M,
+              label: t,
+              onChange: N,
+              isDisabled: p,
+              className: h,
+              optionClassName: m,
+              placeholder: A.intl.string(A.t["8lqkf8"]),
+              renderOptionValue: (e) => {
+                  let [t] = e;
+                  return E
+                      ? (0, r.jsx)(c.y$y, { type: c.tVU.SPINNING_CIRCLE })
+                      : C(null == t.value ? void 0 : x.get(t.value), t, u);
+              },
+              renderOptionLabel: (e) => C(null == e.value ? void 0 : x.get(e.value), e, u),
+              "data-migration-pending": !0,
+          });
     return (0, r.jsxs)(r.Fragment, {
         children: [
             k,
-            null == P || S
+            null == P || T
                 ? null
                 : (0, r.jsxs)("div", {
                       className: I.ot,

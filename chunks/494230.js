@@ -164,9 +164,13 @@ let $ = (e) => {
         Y ? R(ea) : R(ee);
     }, [Y, R, ea, ee]);
     let eC = i.useMemo(
-        () => ({ label: W.intl.string(W.t["/AAR02"]), selectedCurrency: r.currency, currencies: u, onChange: d }),
-        [r.currency, u, d],
-    );
+            () => ({ label: W.intl.string(W.t["/AAR02"]), selectedCurrency: r.currency, currencies: u, onChange: d }),
+            [r.currency, u, d],
+        ),
+        eR = i.useMemo(
+            () => (eh && null == ef ? W.intl.format(W.t["2wPRSF"], { months: em.length }) : null),
+            [eh, ef, em],
+        );
     return {
         disabled: Z,
         activeSubscription: p,
@@ -207,6 +211,7 @@ let $ = (e) => {
         checkoutPaymentSources: el,
         paymentSourcesForDropdown: el.length > 0 ? el : Object.values(n),
         defaultPaymentSourceId: el.find((e) => e.isDefault)?.id,
+        paymentSourceOptionalWarningCopy: eR,
     };
 };
 function z(e) {
@@ -265,10 +270,10 @@ function z(e) {
             isPremiumGroupPurchase: eS,
             discountInvoiceItems: ey,
             hasEntitlements: ev,
-            entitlements: eN,
-            currencyDropdownProps: eC,
-            paymentSourcesForDropdown: eR,
-            defaultPaymentSourceId: eO,
+            currencyDropdownProps: eN,
+            paymentSourcesForDropdown: eC,
+            defaultPaymentSourceId: eR,
+            paymentSourceOptionalWarningCopy: eO,
         } = $({
             selectedPlanId: t,
             paymentSources: i,
@@ -383,9 +388,9 @@ function z(e) {
                 children: [
                     (0, r.jsx)(h.A, {
                         label: x ? W.intl.string(W.t["YH7B+D"]) : W.intl.string(W.t["mmDvV+"]),
-                        paymentSources: eR,
+                        paymentSources: eC,
                         selectedPaymentSourceId: es,
-                        defaultPaymentSourceId: eO,
+                        defaultPaymentSourceId: eR,
                         prependOption: ev && !x ? { label: W.intl.string(W.t.IGU7El), value: null } : null,
                         onChange: c,
                         onPaymentSourceAdd: E,
@@ -394,18 +399,13 @@ function z(e) {
                         paymentGatewayRestrictions: ea,
                         className: a()({ [K.E4]: eI }),
                     }),
-                    ev && null == es
-                        ? (0, r.jsx)("div", {
-                              className: K.QN,
-                              children: W.intl.format(W.t["2wPRSF"], { months: eN.length }),
-                          })
-                        : null,
+                    null != eO ? (0, r.jsx)("div", { className: K.QN, children: eO }) : null,
                     V
                         ? null
                         : (0, r.jsx)(f.f, {
-                              currencies: eC.currencies,
+                              currencies: eN.currencies,
                               className: K.p2,
-                              children: (0, r.jsx)(f.A, { ...eC }),
+                              children: (0, r.jsx)(f.A, { ...eN }),
                           }),
                 ],
             }),

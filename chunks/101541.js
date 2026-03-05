@@ -1,6 +1,7 @@
 "use strict";
 e.exports = {
     wC: "paymentSourceLabel_f38e43",
+    bM: "unifiedAddPaymentMethodLabel_f38e43",
     IF: "paymentSourceSelectedOption_f38e43",
     ot: "paymentSourceWarning_f38e43",
     fT: "paymentSourceWarningIcon_f38e43",
