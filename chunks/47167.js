@@ -26,15 +26,16 @@ function f(e) {
 function p(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-        s = e.name;
+        s = e.name,
+        a = (e) => (r ? `@${e}` : e);
     if (e.isObfuscated()) return c.intl.string(c.t["/YzI63"]);
     switch (e.type) {
         case u.rbe.DM:
-            let [a] = e.recipients.map(t.getUser).filter(o.Vq);
-            if (null == a) return "???";
-            if (a.isProvisional && null != a.globalName) return a.globalName;
-            let d = n.getNickname(a.id) ?? l.Ay.getName(a) ?? "???";
-            return r ? `@${d}` : d;
+            if ("" !== s) return a(s);
+            let [d] = e.recipients.map(t.getUser).filter(o.Vq);
+            if (null == d) return "???";
+            if (d.isProvisional && null != d.globalName) return d.globalName;
+            return a(n.getNickname(d.id) ?? l.Ay.getName(d) ?? "???");
         case u.rbe.GROUP_DM:
             if ("" !== s) return s;
             return _(e, t, n);
