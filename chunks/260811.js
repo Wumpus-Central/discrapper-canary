@@ -15,6 +15,7 @@ class _ extends a.A {
     applicationId;
     application;
     eligiblePaymentGateways;
+    googleSkuIds;
     productLine;
     name;
     releaseDate;
@@ -59,6 +60,7 @@ class _ extends a.A {
             applicationId: e.application_id,
             application: null != e.application ? o.Ay.createFromServer(e.application) : null,
             eligiblePaymentGateways: e.eligible_payment_gateways ?? null,
+            googleSkuIds: e.google_sku_ids ?? null,
             productLine: e.product_line,
             name: e.name ?? "",
             releaseDate: null != e.release_date ? i()(e.release_date) : null,
@@ -117,6 +119,7 @@ class _ extends a.A {
             (this.applicationId = e.applicationId),
             (this.application = e.application),
             (this.eligiblePaymentGateways = e.eligiblePaymentGateways),
+            (this.googleSkuIds = e.googleSkuIds),
             (this.productLine = e.productLine),
             (this.name = e.name),
             (this.preorderReleaseAt = e.preorderReleaseAt),
