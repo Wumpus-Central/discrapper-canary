@@ -30,8 +30,8 @@ var r = n(627968),
     D = n(427262),
     L = n(652215),
     w = n(806931),
-    x = n(544105),
-    M = n(985018),
+    M = n(544105),
+    x = n(985018),
     P = n(77615);
 let k = 16,
     U = (e) => {
@@ -96,7 +96,7 @@ function F(e) {
                   (0, r.jsx)(
                       c.m,
                       {
-                          text: M.intl.string(M.t["PXMZ/+"]),
+                          text: x.intl.string(x.t["PXMZ/+"]),
                           children: (0, r.jsx)(d.OCo, {
                               size: "md",
                               color: "currentColor",
@@ -111,7 +111,7 @@ function F(e) {
                   (0, r.jsx)(
                       c.m,
                       {
-                          text: M.intl.string(M.t.FlNoSV),
+                          text: x.intl.string(x.t.FlNoSV),
                           children: (0, r.jsx)(d.npA, { size: "md", color: "currentColor", className: a()(P.Kk, y) }),
                       },
                       "video",
@@ -122,7 +122,7 @@ function F(e) {
                 (0, r.jsx)(
                     c.m,
                     {
-                        text: M.intl.string(M.t.HFwRpk),
+                        text: x.intl.string(x.t.HFwRpk),
                         children: (0, r.jsx)(d.EpV, {
                             className: a()(P.Kk, y),
                             color: d.LU0.colors.STATUS_WARNING_BACKGROUND,
@@ -142,9 +142,9 @@ function F(e) {
                     "activity",
                 ),
             ),
-        N === x.f$.XBOX || C === w.J7.XBOX
+        N === M.f$.XBOX || C === w.J7.XBOX
             ? q.push((0, r.jsx)(b.A, { className: a()(P.Kk, y) }, "xbox"))
-            : N === x.f$.PLAYSTATION || C === w.J7.PLAYSTATION
+            : N === M.f$.PLAYSTATION || C === w.J7.PLAYSTATION
               ? q.push((0, r.jsx)(O.A, { className: a()(P.Kk, y) }, "playstation"))
               : C === w.J7.QUEST &&
                 q.push(
@@ -159,7 +159,7 @@ function F(e) {
                 (0, r.jsx)(
                     c.m,
                     {
-                        text: M.intl.string(M.t["JH1SJ+"]),
+                        text: x.intl.string(x.t["JH1SJ+"]),
                         children: (0, r.jsx)(d.bMW, { size: "xs", color: "currentColor", className: a()(P.Kk, y) }),
                     },
                     "watch",
@@ -173,7 +173,7 @@ function F(e) {
                 (0, r.jsx)(
                     c.m,
                     {
-                        text: M.intl.string(M.t.ygslb0),
+                        text: x.intl.string(x.t.ygslb0),
                         children: (0, r.jsx)(d.DUT, {
                             onClick: (e) => {
                                 e.stopPropagation(), _.A.stopRinging(k, [G.id]);
@@ -243,7 +243,7 @@ let V = function (e) {
             onMouseLeave: O,
             onMouseDown: b,
             priority: w,
-            speaking: x = !1,
+            speaking: M = !1,
             collapsed: k,
             mute: U,
             serverMute: G,
@@ -260,7 +260,11 @@ let V = function (e) {
         q = (0, I.A)({ userId: z.id, guildId: V }),
         Z = (0, T.a)({ displayNameStyles: q }),
         X = (0, E.A)(z.id),
-        Q = (0, m.v)({ isSpeaking: x, voiceDb: X }),
+        Q = (0, m.v)({
+            isSpeaking: M,
+            voiceDb: X,
+            ...(W ? { spreadDirection: m.O.INSET_ONLY, maxInnerSpreadRadius: 3 } : {}),
+        }),
         [J, ee] = i.useState(!1),
         et = (0, u.bG)([C.A], () => C.A.getProgressForUserId(z.id), [z.id]),
         en = (0, N.Uk)("VoiceUser") && null != et,
@@ -285,8 +289,8 @@ let V = function (e) {
     function eu() {
         return w && !k
             ? (0, r.jsx)(c.m, {
-                  text: M.intl.string(M.t.BVK71i),
-                  children: (0, r.jsx)("div", { className: a()(P.G, { [P.g4]: !U && !G && x }) }),
+                  text: x.intl.string(x.t.BVK71i),
+                  children: (0, r.jsx)("div", { className: a()(P.G, { [P.g4]: !U && !G && M }) }),
               })
             : null;
     }
@@ -310,10 +314,10 @@ let V = function (e) {
     }
     function ed() {
         let e = (0, r.jsxs)("div", {
-                className: a()(n, P.Xh, Z, { [P.Pi]: !U && !G && x, [P.DF]: $ }),
+                className: a()(n, P.Xh, Z, { [P.Pi]: !U && !G && M, [P.DF]: $ }),
                 children: [
                     B ?? D.Ay.getName(z),
-                    H ? (0, r.jsxs)("span", { className: P.IW, children: ["\xa0", M.intl.string(M.t["pFO/Ph"])] }) : "",
+                    H ? (0, r.jsxs)("span", { className: P.IW, children: ["\xa0", x.intl.string(x.t["pFO/Ph"])] }) : "",
                 ],
             }),
             t = {
@@ -374,8 +378,8 @@ function B(e) {
         });
     };
     return (0, r.jsx)(c.m, {
-        text: M.intl.formatToPlainString(M.t.Sq9xJ7, { game: t.name }),
-        "aria-label": M.intl.formatToPlainString(M.t.Sq9xJ7, { game: t.name }),
+        text: x.intl.formatToPlainString(x.t.Sq9xJ7, { game: t.name }),
+        "aria-label": x.intl.formatToPlainString(x.t.Sq9xJ7, { game: t.name }),
         children: (0, r.jsx)(S.A, {
             ref: f,
             className: a()(P.Kk, P.Gt, n),
@@ -390,7 +394,7 @@ function H(e) {
         u = [];
     if (n) {
         let e,
-            n = () => (i ? M.intl.string(M.t.Q8Uzof) : s ? M.intl.string(M.t.uLddbQ) : M.intl.string(M.t.tjtv3P));
+            n = () => (i ? x.intl.string(x.t.Q8Uzof) : s ? x.intl.string(x.t.uLddbQ) : x.intl.string(x.t.tjtv3P));
         e = s || i ? d.O1p : d.z0P;
         let o = (0, r.jsx)(e, { className: a()(P.Kk, t, { [P.DU]: s }), color: "currentColor" });
         u.push((0, r.jsx)(c.m, { text: n(), children: o }, "mute"));
@@ -399,7 +403,7 @@ function H(e) {
         let e = l ? d.TJE : d.cQT,
             n = (0, r.jsx)(e, { className: a()(P.Kk, t, { [P.DU]: l }), color: "currentColor" });
         u.push(
-            (0, r.jsx)(c.m, { text: l ? M.intl.string(M.t.btxSdB) : M.intl.string(M.t.NjmiOL), children: n }, "deaf"),
+            (0, r.jsx)(c.m, { text: l ? x.intl.string(x.t.btxSdB) : x.intl.string(x.t.NjmiOL), children: n }, "deaf"),
         );
     }
     return u;
