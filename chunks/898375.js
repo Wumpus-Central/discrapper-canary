@@ -66,7 +66,7 @@ function p(e) {
             }),
             (0, i.jsx)(l.$nd, {
                 fullWidth: !0,
-                text: A.intl.string(A.t.LLLLPD),
+                text: A.intl.string(A.t["th2+0j"]),
                 variant: "secondary",
                 size: "md",
                 onClick: x,
