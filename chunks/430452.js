@@ -123,12 +123,14 @@ async function ts() {
         return;
     }
     let e = await R.A.processUtils.getSystemInfo(),
-        t = (e.cpus?.[0]?.model ?? "").match(/Apple M(\d+)/);
-    if (null == t) {
+        t = e.cpus?.[0]?.model ?? "";
+    eK.info("Detected Mac CPU", t);
+    let n = t.match(/Apple M(\d+)/);
+    if (null == n) {
         ti = !0;
         return;
     }
-    ti = parseInt(t[1], 10) >= 3;
+    ti = parseInt(n[1], 10) >= 3;
 }
 function ta() {
     return !0 === ti;
@@ -538,12 +540,15 @@ function ng() {
             }
             if ((0, eR.isWindows)())
                 e.setExperimentFlag(eY.fd.SIGNAL_AV1, !0), e.setExperimentFlag(eY.fd.SIGNAL_AV1_HARDWARE_DECODE, !0);
-            else if ((0, eR.isMac)()) {
+            else if ((0, eR.isMac)())
                 if ((e.setExperimentFlag(eY.fd.SIGNAL_AV1_DECODE, !0), ta())) {
                     let { enabled: t } = (0, j.t)("MediaEngineStore");
-                    t && e.setExperimentFlag(eY.fd.SIGNAL_AV1_HARDWARE_DECODE, !0);
-                }
-            } else if ((0, eR.isLinux)()) e.setExperimentFlag(eY.fd.SIGNAL_AV1_DECODE, !0);
+                    t
+                        ? (eK.info("This Mac supports AV1 Hardware. AV1 Hardware enabled."),
+                          e.setExperimentFlag(eY.fd.SIGNAL_AV1_HARDWARE_DECODE, !0))
+                        : eK.info("This Mac supports AV1 Hardware. AV1 Hardware not yet enabled.");
+                } else eK.info("This Mac does not support AV1 Hardware.");
+            else if ((0, eR.isLinux)()) e.setExperimentFlag(eY.fd.SIGNAL_AV1_DECODE, !0);
             else if ((0, eR.isIOS)() && tr()) {
                 let { enabled: t } = (0, H.$)("MediaEngineStore");
                 t &&
