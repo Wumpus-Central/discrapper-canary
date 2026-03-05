@@ -1,73 +1,95 @@
-r.d(t, { A: () => T });
-var a = r(627968),
-    s = r(64700),
-    n = r(512750),
-    o = r(397927),
-    i = r(503852),
-    c = r(470934),
-    l = r(363487),
-    d = r(998418),
-    u = r(220628),
-    p = r(933337),
-    _ = r(506361),
-    m = r(568065),
-    I = r(652215),
-    b = r(333354),
-    f = r(985018);
-let k = (e) => (0, a.jsx)(o._Jp, { ...e, color: o.LU0.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH }),
-    x = { [n.ec]: o.tIK, [n.RV]: o.J$p, [n.YG]: o.zzg };
-function T(e) {
+a.d(t, { A: () => v });
+var r = a(627968),
+    s = a(64700),
+    n = a(512750),
+    o = a(435371),
+    i = a(397927),
+    l = a(503852),
+    c = a(470934),
+    d = a(363487),
+    u = a(998418),
+    p = a(220628),
+    _ = a(933337),
+    m = a(506361),
+    I = a(568065),
+    f = a(652215),
+    b = a(333354),
+    k = a(985018);
+let x = (e) => (0, r.jsx)(i._Jp, { ...e, color: i.LU0.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH }),
+    T = { [n.ec]: i.tIK, [n.RV]: i.J$p, [n.YG]: i.zzg };
+function v(e) {
     var t;
-    let r,
+    let a,
         n,
-        { guildId: T, powerup: v, expressiveCta: A, onClose: E, ...N } = e,
-        [g, h] = s.useState(void 0),
-        C = (0, d.Ay)(T, v),
-        j = C.type !== m.b_.INACTIVE,
-        P = C.type === m.b_.TIER_OVERRIDE_ACTIVATED,
-        S = (0, l.A)(T),
-        { disabled: D } = (0, c.A)(T, v, j),
-        { onActivate: O, isLoading: w, error: y } = (0, u.A)(T, v),
-        R = (0, p.A)(T, v);
+        { guildId: v, powerup: A, expressiveCta: E, onClose: N, ...g } = e,
+        [h, C] = s.useState(void 0),
+        j = (0, u.Ay)(v, A),
+        P = j.type !== I.b_.INACTIVE,
+        S = j.type === I.b_.TIER_OVERRIDE_ACTIVATED,
+        D = (0, d.A)(v),
+        { disabled: O } = (0, c.A)(v, A, P),
+        { onActivate: w, isLoading: y, error: R } = (0, p.A)(v, A),
+        K = (0, _.A)(v, A);
     s.useEffect(() => {
-        h(y);
-    }, [y]),
-        (0, i.Z)(T, v, i.q.DETAIL);
-    let K = { type: "rive", rive: x[v.skuId], aspectRatio: "16/9" },
-        L =
-            !P && S
+        C(R);
+    }, [R]),
+        (0, l.Z)(v, A, l.q.DETAIL);
+    let L = { type: "rive", rive: T[A.skuId], aspectRatio: "16/9" },
+        M = !S && D,
+        V =
+            M && !P
                 ? [
                       {
-                          text: f.intl.string(j ? b.default.PYPdl4 : b.default.AOQgki),
-                          icon: o._Jp,
-                          variant: A ? "expressive" : j ? "secondary" : "primary",
+                          text: k.intl.string(b.default.AOQgki),
+                          icon: i._Jp,
+                          variant: E ? "expressive" : "primary",
                           size: "md",
-                          disabled: D,
-                          loading: w,
+                          disabled: O,
+                          loading: y,
                           onClick: () => {
-                              j ? R() : O();
+                              w();
                           },
                       },
                   ]
+                : void 0,
+        q = k.intl.formatToPlainString(b.default["5HQUzD"], { boostCount: A.cost }),
+        z =
+            M && P
+                ? (0, r.jsx)(o.m_, {
+                      text: q,
+                      delay: 100,
+                      children: (0, r.jsx)(i.Button, {
+                          variant: "secondary",
+                          size: "md",
+                          fullWidth: !0,
+                          disabled: O,
+                          loading: y,
+                          text: k.intl.string(b.default.PYPdl4),
+                          onClick: () => {
+                              K();
+                          },
+                      }),
+                  })
                 : void 0;
-    return (0, a.jsxs)(o.kpP, {
-        graphic: K,
-        title: v.title,
+    return (0, r.jsxs)(i.kpP, {
+        graphic: L,
+        title: A.title,
         subtitle: {
             text:
-                ((t = v.skuId),
-                (r = m.y7[t] ?? I.TVA.NONE),
-                (n = I.M2T[r]),
-                f.intl.formatToPlainString(f.t["pob/cL"], { subscriptions: n })),
-            leadingIcon: k,
+                ((t = A.skuId),
+                (a = I.y7[t] ?? f.TVA.NONE),
+                (n = f.M2T[a]),
+                k.intl.formatToPlainString(k.t["pob/cL"], { subscriptions: n })),
+            leadingIcon: x,
         },
-        actions: L,
-        onClose: E,
-        ...N,
+        actions: V,
+        actionBarInput: z,
+        onClose: N,
+        ...g,
         children: [
-            (0, a.jsx)(_.A, { powerup: v }),
-            null != g &&
-                (0, a.jsx)(o.Text, { color: "text-feedback-critical", variant: "text-sm/semibold", children: g }),
+            (0, r.jsx)(m.A, { powerup: A }),
+            null != h &&
+                (0, r.jsx)(i.Text, { color: "text-feedback-critical", variant: "text-sm/semibold", children: h }),
         ],
     });
 }
