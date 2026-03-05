@@ -11,9 +11,9 @@ var i = n(627968),
     u = n(587895),
     h = n(568598),
     A = n(313961),
-    p = n(246356),
-    g = n(178213),
-    m = n(594832),
+    m = n(246356),
+    p = n(178213),
+    g = n(594832),
     _ = n(290863),
     f = n(954571),
     x = n(403362),
@@ -24,17 +24,17 @@ var i = n(627968),
     b = n(620406),
     S = n(84511),
     T = n(188275),
-    y = n(652215),
-    v = n(806931),
+    v = n(652215),
+    y = n(806931),
     j = n(985018),
-    R = n(877409);
+    R = n(430071);
 let O = `vc-gifting-${(0, o.A)()}`;
 function L(e) {
     let { isHovered: t, closePopout: n, onMouseEnter: l, onMouseLeave: o, channel: L } = e;
     s.useEffect(() => {
         t || n();
     }, [n, t]);
-    let M = (0, g.G)("social_layer_storefront_gifting_mini_shelf"),
+    let M = (0, p.G)("social_layer_storefront_gifting_mini_shelf"),
         D = (0, d.bG)([u.A], () => u.A.getApplication(T.XR)),
         [G] = (0, d.bG)(
             [A.A],
@@ -45,7 +45,7 @@ function L(e) {
         U = (0, d.yK)([_.A], () => {
             let e = new Set();
             for (let t of G)
-                if ((0, v.Xw)(t) || (0, v.Ay)(t)) {
+                if ((0, y.Xw)(t) || (0, y.Ay)(t)) {
                     for (let n of _.A.getActivities(t.user.id))
                         if (
                             n.application_id === D?.id ||
@@ -58,27 +58,21 @@ function L(e) {
             return Array.from(e).sort();
         }, [G, D]),
         P = s.useMemo(() => {
-            let e = G.map((e) => ((0, v.Xw)(e) || (0, v.Ay)(e) ? e.user.id : null)).filter(x.Vq);
+            let e = G.map((e) => ((0, y.Xw)(e) || (0, y.Ay)(e) ? e.user.id : null)).filter(x.Vq);
             return (0, a.uniq)([...U, ...e]);
         }, [G, U]),
         {
             state: w,
             recommendations: k,
-            skuIdToUserIdsReasons: B,
-        } = (0, I.A)({
-            applicationId: T.XR,
-            numWishlistItems: I.o,
-            userIds: P,
-            location: "Social Layer Gifting Mini Shelf",
-            includeWishlists: !0,
-        }),
-        V = s.useMemo(() => {
+            skuIdToUserIdsReasons: V,
+        } = (0, I.A)({ applicationId: T.XR, numWishlistItems: I.o, userIds: P, includeWishlists: !0 }),
+        B = s.useMemo(() => {
             let e = new Set(P),
-                { hasWishlist: t, hasPopular: n } = (0, C.wH)(k, B, e),
+                { hasWishlist: t, hasPopular: n } = (0, C.wH)(k, V, e),
                 s = t && n;
             return k.map((t) => {
                 let n =
-                    B[t.skuId]
+                    V[t.skuId]
                         ?.filter((t) => t.reason === E.G.WISHLIST && e.has(t.userId))
                         .map((e) => e.userId)
                         .filter(x.Vq) ?? [];
@@ -87,7 +81,7 @@ function L(e) {
                           N.A,
                           {
                               sku: t.sku,
-                              source: n.length > 0 ? m.uS.WISHLIST : m.uS.POPULAR,
+                              source: n.length > 0 ? g.uS.WISHLIST : g.uS.POPULAR,
                               application: D,
                               guildId: L.guild_id,
                               channelId: L.id,
@@ -111,17 +105,17 @@ function L(e) {
                           t.skuId,
                       );
             });
-        }, [L.guild_id, L.id, k, B, P, M, D]);
+        }, [L.guild_id, L.id, k, V, P, M, D]);
     return (
         s.useEffect(() => {
             0 !== k.length &&
-                f.default.track(y.HAw.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED, {
+                f.default.track(v.HAw.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED, {
                     guild_id: L.guild_id,
                     channel_id: L.id,
                     sku_ids: k.map((e) => e.skuId),
                 });
         }, [L.id, L.guild_id, k]),
-        (0, i.jsx)(p.A, {
+        (0, i.jsx)(m.A, {
             children: (0, i.jsx)(c.lGe, {
                 "aria-labelledby": O,
                 modal: !1,
@@ -152,7 +146,7 @@ function L(e) {
                         }),
                         (0, i.jsx)("div", {
                             className: r()(R.Xb, { [R.Im]: M }),
-                            children: "loading" === w || 0 === k.length ? (0, i.jsx)(c.y$y, { className: R.Lq }) : V,
+                            children: "loading" === w || 0 === k.length ? (0, i.jsx)(c.y$y, { className: R.Lq }) : B,
                         }),
                         (0, i.jsx)(S.A, { location: "social_layer_gifting_mini_shelf", className: R.Ij }),
                     ],

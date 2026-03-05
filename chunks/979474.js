@@ -2,8 +2,8 @@
 n.d(t, { $: () => u });
 var r = n(64700),
     i = n(532794),
-    a = n(594832),
-    s = n(404036),
+    s = n(594832),
+    a = n(404036),
     o = n(882873),
     l = n(990820);
 function u(e) {
@@ -19,10 +19,10 @@ function u(e) {
             isDmChannel: h,
         } = e,
         { enabled: m } = o.u.useConfig({ location: p }),
-        g = (0, a.tA)({ location: p, isGift: !0, giftRecipient: t }),
-        E = h ?? !0,
-        A = m && null != t && E,
-        I = g && null != t && E;
+        E = (0, s.tA)({ isGift: !0, giftRecipient: t }),
+        g = h ?? !0,
+        A = m && null != t && g,
+        I = E && null != t && g;
     return {
         openGiftModal: r.useCallback(() => {
             A && null != t
@@ -34,7 +34,7 @@ function u(e) {
                       giftMessage: f,
                   })
                 : I && null != t
-                  ? (0, s.A)({
+                  ? (0, a.A)({
                         giftRecipient: t,
                         analyticsLocations: n,
                         analyticsLocation: _,

@@ -1,26 +1,23 @@
 "use strict";
-n.d(t, { A: () => A });
+n.d(t, { A: () => h });
 var i = n(64700),
     s = n(735438),
     l = n.n(s),
     r = n(311907),
     a = n(568598),
     o = n(313961),
-    c = n(916023),
-    d = n(501838),
-    u = n(188275),
-    h = n(806931);
-function A(e) {
-    let { location: t, channelId: n } = e,
-        s = (0, c.kt)({ location: t }),
-        [A] = (0, r.bG)(
+    c = n(501838),
+    d = n(188275),
+    u = n(806931);
+function h(e) {
+    let { channelId: t } = e,
+        [n] = (0, r.bG)(
             [o.A],
-            () => (null != n ? [o.A.getParticipants(n), o.A.getParticipantsVersion(n)] : [[], 0]),
-            [n],
+            () => (null != t ? [o.A.getParticipants(t), o.A.getParticipantsVersion(t)] : [[], 0]),
+            [t],
             a.hS,
         ),
-        p = i.useMemo(() => l().uniq(A.filter((e) => (0, h.Xw)(e) || (0, h.Ay)(e)).map((e) => e.user.id)), [A]),
-        g = (0, d.gT)({ gameIds: u.sQ, userIds: p }),
-        m = (0, d.hJ)({ gameIds: u.sQ });
-    return s && (m || g);
+        s = i.useMemo(() => l().uniq(n.filter((e) => (0, u.Xw)(e) || (0, u.Ay)(e)).map((e) => e.user.id)), [n]),
+        h = (0, c.gT)({ gameIds: d.sQ, userIds: s });
+    return (0, c.hJ)({ gameIds: d.sQ }) || h;
 }

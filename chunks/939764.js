@@ -1,35 +1,32 @@
 "use strict";
-n.d(t, { V: () => x });
+n.d(t, { V: () => u });
 var i = n(64700),
     l = n(311907),
-    a = n(793574),
-    r = n(223273),
-    s = n(871123),
-    c = n(733391),
-    o = n(832163),
-    d = n(916023),
-    u = n(287809),
-    m = n(705751);
-function x(e) {
-    let t = (0, d.kt)({ location: a.A.GAME_PROFILE }),
-        n = u.default.getCurrentUser()?.id,
-        x = i.useMemo(() => (null != n ? [n] : []).slice(0, c.g9), [n]),
-        h = i.useMemo(() => {
-            if (null != e && t && e.type === m.S7.GAME)
-                return e.linkedGames?.find((e) => e.type === r.Mh.OFFICIAL && (0, s.Xg)(e.application))?.application;
-        }, [e, t]),
-        f = (0, l.bG)([o.A], () => (null != h ? o.A.recommendationsByApplicationsAndUsers(h.id, x) : void 0));
+    a = n(223273),
+    r = n(871123),
+    s = n(733391),
+    c = n(832163),
+    o = n(287809),
+    d = n(705751);
+function u(e) {
+    let t = o.default.getCurrentUser()?.id,
+        n = i.useMemo(() => (null != t ? [t] : []).slice(0, s.g9), [t]),
+        u = i.useMemo(() => {
+            if (null != e && e.type === d.S7.GAME)
+                return e.linkedGames?.find((e) => e.type === a.Mh.OFFICIAL && (0, r.Xg)(e.application))?.application;
+        }, [e]),
+        m = (0, l.bG)([c.A], () => (null != u ? c.A.recommendationsByApplicationsAndUsers(u.id, n) : void 0));
     return (
         i.useEffect(() => {
-            null != h && 0 !== x.length && (0, c.Xg)({ applicationId: h.id, userIds: x, includeWishlists: !1 });
-        }, [h, x]),
+            null != u && 0 !== n.length && (0, s.Xg)({ applicationId: u.id, userIds: n, includeWishlists: !1 });
+        }, [u, n]),
         {
             socialLayerStorefrontRecommendationsData: i.useMemo(
                 () =>
-                    null == h || null == h.guildId || null == f || "success" !== f.state || 0 === f.data.skus.length
+                    null == u || null == u.guildId || null == m || "success" !== m.state || 0 === m.data.skus.length
                         ? null
-                        : { application: h, skuIds: f.data.skus.map((e) => e.id), guildId: h.guildId },
-                [h, f],
+                        : { application: u, skuIds: m.data.skus.map((e) => e.id), guildId: u.guildId },
+                [u, m],
             ),
         }
     );

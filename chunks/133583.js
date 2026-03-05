@@ -232,7 +232,7 @@ function F(e) {
         u = r?.id === t.id,
         I = O.XR,
         { wishlist: E, wasFetched: N, error: k } = (0, j.fw)({ wishlistId: a, userId: t.id }),
-        R = (0, h.A)({ location: "user-profile-modal-v2-wishlist", wishlist: E, profileOwner: t, currentUser: r }),
+        R = (0, h.A)({ wishlist: E, profileOwner: t, currentUser: r }),
         L = (0, p.X)({ location: "user-profile-modal-v2-wishlist" }),
         w = u && R && L,
         P = l.useCallback(() => {

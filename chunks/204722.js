@@ -76,7 +76,7 @@ let z = s.memo(function (e) {
                 connectionApp: et,
             } = e,
             { parentAnalyticsLocation: en, analyticsLocations: ei } = (0, f.Ay)(),
-            es = (0, L.A)(D, "rtc-activity-panel"),
+            es = (0, L.A)(D),
             el = Y(D, M, I),
             { enabled: er } = y._.useConfig({ location: "activity-panel" }),
             ea = (0, j.Bp)("activity-panel"),

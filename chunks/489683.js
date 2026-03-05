@@ -791,7 +791,7 @@ let e5 = (0, N.A)(function (e) {
         L = (0, v.A)(d ?? eH.dJq, o?.id),
         j = (0, O.A)(o?.id),
         D = (0, et.T)({ location: "RTCConnection" }),
-        M = (0, en.A)({ channelId: o?.id, location: "RTCConnection" });
+        M = (0, en.A)({ channelId: o?.id });
     return (0, i.jsx)(P.f5, {
         value: b,
         children: (0, i.jsxs)("div", {

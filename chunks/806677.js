@@ -21,8 +21,8 @@ var a = i(627968),
     L = i(657331),
     k = i(18983),
     E = i(798048),
-    w = i(834796),
-    A = i(310250),
+    A = i(834796),
+    w = i(310250),
     b = i(178213),
     j = i(594832),
     T = i(996353),
@@ -75,7 +75,7 @@ function q(e) {
             { length: 12 },
             t
                 ? (e, t) => (0, a.jsx)(M.O, { spec: Z.Z.SIZE_150 }, `placeholder-${t}`)
-                : (e, t) => (0, a.jsx)(w.A, { cardSize: E.Y.MEDIUM_SQUARE }, `placeholder-${t}`),
+                : (e, t) => (0, a.jsx)(A.A, { cardSize: E.Y.MEDIUM_SQUARE }, `placeholder-${t}`),
         ),
     });
 }
@@ -214,7 +214,7 @@ function $(e) {
         { analyticsLocations: x } = (0, p.Ay)(...(f ?? []), m.A.GIFT_SELECTION_MODAL_WISHLIST),
         L = (0, H.bc)(r, t),
         [k, E] = s.useState(!1),
-        w = s.useCallback(
+        A = s.useCallback(
             (e) => {
                 e &&
                     !c &&
@@ -239,7 +239,7 @@ function $(e) {
             },
             [c, r, t.id, x],
         ),
-        A = (0, o.K)(w, void 0, !c && !k),
+        w = (0, o.K)(A, void 0, !c && !k),
         j = s.useMemo(
             () =>
                 r.some((e) => {
@@ -249,7 +249,7 @@ function $(e) {
             [r],
         );
     return (0, a.jsxs)("div", {
-        ref: A,
+        ref: w,
         className: z.jf,
         children: [
             (0, a.jsxs)("div", {
@@ -306,8 +306,8 @@ function ee(e) {
             isWishlistLoaded: k,
         } = e,
         { priceOptions: E } = (0, I.P5)(),
-        { claimableRewards: w } = (0, h.Pv)(),
-        A = null != w && w.length > 0,
+        { claimableRewards: A } = (0, h.Pv)(),
+        w = null != A && A.length > 0,
         b = null != (0, d.bG)([x.A], () => x.A.getFirstWishlistId(t.id)) && (!k || C > 0),
         j = K.intl.string(K.t["7lZ31J"]),
         [T, O] = s.useState("Nitro"),
@@ -430,7 +430,7 @@ function ee(e) {
                                 children: (0, a.jsx)(V, {
                                     onSelectSku: P,
                                     priceOptions: E,
-                                    showPromotionalGiftBanner: A,
+                                    showPromotionalGiftBanner: w,
                                 }),
                             }),
                             b &&
@@ -472,12 +472,7 @@ function et(e) {
             skusToUserAndReason: m,
             status: p,
             defaultWishlistId: h,
-        } = (0, O.r)({
-            userId: t.id,
-            numItems: 12,
-            source: j.B5.USER_PROFILE,
-            location: "Gift Selection Modal New Recommendations",
-        }),
+        } = (0, O.r)({ userId: t.id, numItems: 12, source: j.B5.USER_PROFILE }),
         I = s.useMemo(
             () =>
                 r()(
@@ -520,7 +515,7 @@ function ei(e) {
             displayItems: _,
             defaultWishlistId: u,
             fetchState: f,
-        } = (0, T.A)({ user: t, numItems: 12, location: "Gift Selection Modal" });
+        } = (0, T.A)({ user: t, numItems: 12 });
     return (0, a.jsx)(ee, {
         giftRecipient: t,
         onClose: i,
@@ -547,7 +542,7 @@ function ea(e) {
             giftMessage: l,
             giftingOrigin: d = Q.vQ.DM_CHANNEL,
         } = e,
-        c = (0, A.T)("gift_selection_modal_wishlist_section");
+        c = (0, w.T)("gift_selection_modal_wishlist_section");
     return (0, a.jsx)(I.PaymentContextProvider, {
         activeSubscription: null,
         stepConfigs: [],

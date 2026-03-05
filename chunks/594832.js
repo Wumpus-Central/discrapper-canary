@@ -224,12 +224,12 @@ function x(e) {
     }, [s, t?.items, n, i, a]);
 }
 function P(e) {
-    let { location: t, isGift: n, giftRecipient: s, isSocialLayerStorefrontEnabled: a = !0 } = e,
-        u = (0, o.c)({ userId: s?.id, location: t }),
-        c = (0, i.bG)([l.A], () => (s?.id == null ? null : l.A.getFirstWishlistId(s.id))),
-        { wishlist: d } = O({ wishlistId: null != c && n && null != s ? c : null, userId: s?.id }),
-        _ = (0, E.B)(d);
-    return r.useMemo(() => !0 === n && null != s && (_.length > 0 || (a && u)), [n, s, _, u, a]);
+    let { isGift: t, giftRecipient: n, isSocialLayerStorefrontEnabled: s = !0 } = e,
+        a = (0, o.c)({ userId: n?.id }),
+        u = (0, i.bG)([l.A], () => (n?.id == null ? null : l.A.getFirstWishlistId(n.id))),
+        { wishlist: c } = O({ wishlistId: null != u && t && null != n ? u : null, userId: n?.id }),
+        d = (0, E.B)(c);
+    return r.useMemo(() => !0 === t && null != n && (d.length > 0 || (s && a)), [t, n, d, a, s]);
 }
 function k() {
     return U((0, i.bG)([c.default], () => c.default.getId()));

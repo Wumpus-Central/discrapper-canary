@@ -2,8 +2,8 @@
 n.d(t, { default: () => Y }), n(321073);
 var a = n(627968),
     l = n(64700),
-    r = n(310784),
-    s = n.n(r),
+    s = n(310784),
+    r = n.n(s),
     i = n(503698),
     o = n.n(i),
     c = n(311907),
@@ -23,8 +23,8 @@ var a = n(627968),
     I = n(580630),
     E = n(371794),
     v = n(871123),
-    S = n(733391),
-    N = n(832163),
+    N = n(733391),
+    S = n(832163),
     y = n(429635),
     k = n(476438),
     j = n(44724),
@@ -39,9 +39,9 @@ var a = n(627968),
     F = n(985018),
     B = n(550951);
 function H(e) {
-    let { sku: t, guildId: n, shouldShowShopLink: r, onClose: s, trackPDPClick: i, analyticsLocations: o } = e,
+    let { sku: t, guildId: n, shouldShowShopLink: s, onClose: r, trackPDPClick: i, analyticsLocations: o } = e,
         u = t?.id,
-        _ = (0, c.bG)([N.A], () => (null != u ? N.A.getNormalizedSKUEligibility(u) : void 0), [u]),
+        _ = (0, c.bG)([S.A], () => (null != u ? S.A.getNormalizedSKUEligibility(u) : void 0), [u]),
         m = (0, k.B)(),
         p = l.useCallback(() => {
             null != t &&
@@ -59,8 +59,8 @@ function H(e) {
             (0, j.X)({ guildId: n });
         }, [n]),
         f = l.useCallback(() => {
-            i(w.Jq.VISIT_SHOP), (0, j.default)({ guildId: n }), s();
-        }, [n, s, i]),
+            i(w.Jq.VISIT_SHOP), (0, j.default)({ guildId: n }), r();
+        }, [n, r, i]),
         g = l.useCallback(() => {
             null != t &&
                 (i(w.Jq.GIFT_BUTTON),
@@ -114,7 +114,7 @@ function H(e) {
                         wrap: !1,
                         fullWidth: !0,
                         children: [
-                            r
+                            s
                                 ? (0, a.jsx)(d.Button, {
                                       icon: d.U1X,
                                       variant: "secondary",
@@ -139,48 +139,48 @@ function H(e) {
     });
 }
 function G(e) {
-    let { sku: t, applicationId: n, storefront: r, onSelectedCarouselItemChange: s, isMuted: i, trackPDPClick: o } = e,
+    let { sku: t, applicationId: n, storefront: s, onSelectedCarouselItemChange: r, isMuted: i, trackPDPClick: o } = e,
         [c, d] = l.useState([]),
         [u, _] = l.useState([]),
         m = l.useCallback(
             (e) => {
                 let t = u.findIndex((t) => t === e);
-                s?.(c[t] ?? null);
+                r?.(c[t] ?? null);
             },
-            [s, c, u],
+            [r, c, u],
         );
     return (l.useEffect(() => {
         let [e, a] = (function (e, t, n) {
             let a = [],
                 l = [];
             if (null == e || 0 === e.length) return [a, l];
-            for (let r of e) {
-                let e = null != r.assetId ? n[r.assetId] : null;
+            for (let s of e) {
+                let e = null != s.assetId ? n[s.assetId] : null;
                 null != e &&
-                    (a.push(r),
+                    (a.push(s),
                     e.mime_type.startsWith("video/")
                         ? l.push({
                               type: "video",
                               src: (0, E.YE)(t, e, U.B, "mp4"),
                               videoThumbnailSrc: (0, E.YE)(t, e, U.B, "webp"),
                               thumbnailSrc:
-                                  null != r.thumbnailAssetId ? (0, E.YE)(t, r.thumbnailAssetId, 112, "webp") : void 0,
+                                  null != s.thumbnailAssetId ? (0, E.YE)(t, s.thumbnailAssetId, 112, "webp") : void 0,
                               backgroundSrc:
-                                  null != r.backgroundAssetId ? (0, E.YE)(t, r.backgroundAssetId, U.B, v.pV) : void 0,
+                                  null != s.backgroundAssetId ? (0, E.YE)(t, s.backgroundAssetId, U.B, v.pV) : void 0,
                           })
                         : l.push({
                               type: "image",
                               src: (0, E.YE)(t, e, U.B, "webp"),
                               thumbnailSrc:
-                                  null != r.thumbnailAssetId ? (0, E.YE)(t, r.thumbnailAssetId, 112, "webp") : void 0,
+                                  null != s.thumbnailAssetId ? (0, E.YE)(t, s.thumbnailAssetId, 112, "webp") : void 0,
                               backgroundSrc:
-                                  null != r.backgroundAssetId ? (0, E.YE)(t, r.backgroundAssetId, U.B, v.pV) : void 0,
+                                  null != s.backgroundAssetId ? (0, E.YE)(t, s.backgroundAssetId, U.B, v.pV) : void 0,
                           }));
             }
             return [a, l];
-        })(t?.tenantMetadata?.socialLayer?.carouselItems ?? [], n, r.assets);
+        })(t?.tenantMetadata?.socialLayer?.carouselItems ?? [], n, s.assets);
         d(e), _(a);
-    }, [t, r.assets, n]),
+    }, [t, s.assets, n]),
     0 === u.length)
         ? null
         : (0, a.jsx)(U.A, { className: B.Dk, items: u, onItemChange: m, isMuted: i, onTrackClick: o });
@@ -205,50 +205,50 @@ function Y(e) {
     let {
             transitionState: t,
             returnRef: n,
-            skuId: r,
+            skuId: s,
             applicationId: i,
             guildId: u,
             isStorefront: h,
             analyticsLocations: I,
             analyticsContext: v,
-            onClose: N,
+            onClose: S,
         } = e,
         { analyticsLocations: k } = (0, p.Ay)(I ?? []),
-        j = (0, y.A)({ guildId: u, location: "Social Layer Storefront PDP" }),
-        P = (0, c.bG)([x.A], () => x.A.isFetchingForSKU(r)),
+        j = (0, y.A)({ guildId: u }),
+        P = (0, c.bG)([x.A], () => x.A.isFetchingForSKU(s)),
         U = (0, d.Mwr)((0, m.Ay)()),
         [M, Y] = l.useState(!0),
-        q = (0, c.bG)([C.A], () => C.A.get(r)),
+        q = (0, c.bG)([C.A], () => C.A.get(s)),
         [X, $] = l.useState(null),
         z = (function (e, t) {
             let n = t?.labelIconAssetId != null ? (0, E.YE)(e, t?.labelIconAssetId) : null,
-                [a, r] = (0, b.rh)(n, "#000000"),
+                [a, s] = (0, b.rh)(n, "#000000"),
                 i = l.useMemo(() => {
-                    let e = s()(a).darken(1);
+                    let e = r()(a).darken(1);
                     return `radial-gradient(181.07% 122.33% at -20.89% -23.8%, ${e.alpha(0.25).hex()} 0%, transparent 100%)`;
                 }, [a]);
             return null != n && "#000000" !== a ? i : void 0;
         })(i, X);
     (0, A.pE)(),
         (0, _.Ay)(() => {
-            T.default.track(D.HAw.OPEN_MODAL, { location_stack: k, type: L.Nh, sku_id: r, application_id: i }),
-                (0, S.Xw)();
+            T.default.track(D.HAw.OPEN_MODAL, { location_stack: k, type: L.Nh, sku_id: s, application_id: i }),
+                (0, N.Xw)();
         });
     let J = l.useCallback(
         (e) => {
             T.default.track(D.HAw.SLAYER_STOREFRONT_PDP_ELEMENT_CLICKED, {
                 slayer_storefront_session_id: v?.sessionId,
-                sku_id: r,
+                sku_id: s,
                 guild_id: v?.guildId,
                 cta_type: e,
                 location_stack: k,
             });
         },
-        [v, r, k],
+        [v, s, k],
     );
     l.useEffect(() => {
-        null == u || null == r || x.A.isFetchingForSKU(r) || (0, S.qf)(u, r);
-    }, [u, r]);
+        null == u || null == s || x.A.isFetchingForSKU(s) || (0, N.qf)(u, s);
+    }, [u, s]);
     let K = l.useCallback(() => {
             null != q &&
                 (J(w.Jq.FORWARD_BUTTON),
@@ -301,7 +301,7 @@ function Y(e) {
                                 sku: q,
                                 guildId: u,
                                 shouldShowShopLink: !h,
-                                onClose: N,
+                                onClose: S,
                                 trackPDPClick: J,
                                 analyticsLocations: k,
                             }),
@@ -344,7 +344,7 @@ function Y(e) {
                                             : (0, a.jsx)(d.HKD, { size: "refresh_sm", color: "currentColor" }),
                                     }),
                                     (0, a.jsx)(V, {
-                                        onClick: N,
+                                        onClick: S,
                                         ariaLabel: F.intl.string(F.t.cpT0Cq),
                                         children: (0, a.jsx)(d.d$L, { size: "refresh_sm", color: "currentColor" }),
                                     }),

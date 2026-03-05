@@ -36,7 +36,7 @@ function N(e) {
             cardSpec: L,
         } = e,
         w = (0, l.h)(s),
-        M = (0, m.A)(w, R),
+        M = (0, m.A)(w),
         x = (0, c.G)("social_layer_storefront_gifting_breadcrumb"),
         P = i.useMemo(() => {
             if (x) return null;
@@ -47,7 +47,7 @@ function N(e) {
             state: k,
             recommendations: U,
             skuIdToUserIdsReasons: G,
-        } = (0, E.A)({ applicationId: M?.id, numWishlistItems: D, location: R, includeWishlists: !0, userIds: N }),
+        } = (0, E.A)({ applicationId: M?.id, numWishlistItems: D, includeWishlists: !0, userIds: N }),
         F = i.useMemo(() => new Set(N), [N]),
         { hasWishlist: V, hasPopular: B } = i.useMemo(() => (0, p.wH)(U, G, F), [U, G, F]),
         H = i.useMemo(() => {

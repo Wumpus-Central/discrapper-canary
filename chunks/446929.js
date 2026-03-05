@@ -48,7 +48,7 @@ var r = n(627968),
 n(601107);
 var G = n(818348),
     F = n(985018),
-    V = n(329221);
+    V = n(892191);
 function B(e, t) {
     let { isEligibleForBOGOPromotion: n } = t;
     return null != e && !n;
@@ -144,7 +144,7 @@ let j = () => {
                 setSelectedGiftingPromotionReward: F,
             } = (0, f.Pv)(),
             V = (0, C.kz)(S, L && (0, A.Ik)(w), U),
-            B = (0, E.tA)({ location: "PremiumPlanSelectStep", giftRecipient: w, isGift: L }),
+            B = (0, E.tA)({ giftRecipient: w, isGift: L }),
             H = h;
         a()(void 0 !== H, "should not be undefined");
         let [Y, W] = (0, o.yK)([g.A], () => [null != H ? g.A.get(H.planId) : null, null != t ? g.A.get(t) : null]),

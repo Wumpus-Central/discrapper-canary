@@ -1,19 +1,19 @@
 "use strict";
 n.d(t, {
-    Cv: () => T,
-    OY: () => v,
-    Q6: () => N,
-    Xg: () => h,
-    Ye: () => C,
-    bF: () => m,
-    fq: () => S,
-    jz: () => g,
-    pV: () => p,
-    sq: () => A,
-    ty: () => I,
-    wH: () => b,
-    xf: () => y,
-    zf: () => E,
+    Cv: () => I,
+    OY: () => y,
+    Q6: () => v,
+    Xg: () => p,
+    Ye: () => N,
+    bF: () => h,
+    fq: () => T,
+    jz: () => E,
+    pV: () => f,
+    sq: () => g,
+    ty: () => A,
+    wH: () => C,
+    xf: () => S,
+    zf: () => m,
 });
 var r = n(735438),
     i = n.n(r),
@@ -23,24 +23,23 @@ var r = n(735438),
     l = n(371794),
     u = n(998218),
     c = n(79871),
-    d = n(916023),
-    _ = n(188275),
-    f = n(652215);
-let p = l.QB ? "webp" : "jpg";
+    d = n(188275),
+    _ = n(652215);
+let f = l.QB ? "webp" : "jpg";
+function p(e) {
+    return null != e && d.Pc.has(e.id);
+}
 function h(e) {
-    return null != e && _.Pc.has(e.id);
+    return null != e && e.productLine === _.EZt.SOCIAL_LAYER_GAME_ITEM;
 }
-function m(e) {
-    return null != e && e.productLine === f.EZt.SOCIAL_LAYER_GAME_ITEM;
+function m() {
+    let e = o.A.getGuild(d.v8);
+    return null != e && e.features.has(_.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ? e.id : d.Kf;
 }
-function E() {
-    let e = o.A.getGuild(_.v8);
-    return null != e && e.features.has(f.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ? e.id : _.Kf;
+function E(e) {
+    return e.id === m() || (e.features?.has(_.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1);
 }
 function g(e) {
-    return e.id === E() || (e.features?.has(f.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1);
-}
-function A(e) {
     return {
         applicationId: e.application_id,
         title: e.title,
@@ -63,7 +62,7 @@ function A(e) {
         application: null != e.application ? a.Ay.createFromServer(e.application) : void 0,
     };
 }
-function I(e) {
+function A(e) {
     return {
         skus: e.skus.map((e) => s.A.createFromServer(e)),
         skusToRecommendationReasons: Object.fromEntries(
@@ -75,7 +74,7 @@ function I(e) {
         application: a.Ay.createFromServer(e.application),
     };
 }
-function T(e, t) {
+function I(e, t) {
     if (
         null == t ||
         e?.tenantMetadata?.socialLayer?.carouselItems == null ||
@@ -90,30 +89,30 @@ function T(e, t) {
               primaryIconLabel: n.label,
           };
 }
-function S(e) {
+function T(e) {
     let t = e?.applicationId,
         n = e?.tenantMetadata?.socialLayer?.cardImageAssetId ?? e?.thumbnailAssetId;
     if (null != n && null != t) return u.A.toURLSafe((0, l.YE)(t, n, 512, "webp"));
 }
-function y(e) {
+function S(e) {
     if (e?.tenantMetadata?.socialLayer?.cardBackgroundImageAssetId != null && e?.applicationId != null)
         return u.A.toURLSafe(
-            (0, l.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, p),
+            (0, l.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, f),
         );
 }
-function v(e, t) {
-    return `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${f.BVt.GAME_SHOP(e, t.id, t.slug)}`;
+function y(e, t) {
+    return `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${_.BVt.GAME_SHOP(e, t.id, t.slug)}`;
 }
-function N(e, t) {
-    return `${v(e, t)}
+function v(e, t) {
+    return `${y(e, t)}
 
 `;
 }
-function C(e, t) {
-    let n = o.A.getGuild(e);
-    return null != n && g(n) && (0, d.xD)({ location: t });
+function N(e) {
+    let t = o.A.getGuild(e);
+    return null != t && E(t);
 }
-function b(e, t, n) {
+function C(e, t, n) {
     return 0 === e.length
         ? { hasWishlist: !1, hasPopular: !1 }
         : {
