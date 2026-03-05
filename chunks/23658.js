@@ -3,8 +3,8 @@ n.d(t, { D: () => h, openUploadError: () => m });
 var r = n(627968);
 n(64700);
 var i = n(192308),
-    a = n(732955),
-    s = n(523527),
+    s = n(732955),
+    a = n(523527),
     o = n(170887),
     l = n(997351),
     u = n(218252),
@@ -14,9 +14,9 @@ var i = n(192308),
     f = n(985018);
 function p(e) {
     let { title: t, help: n, showPremiumUpsell: i, transitionState: p, fileSize: h, onClose: m } = e,
-        g = (0, o.A)({ location: "UploadError" }),
-        E = () => {
-            (0, s.A)(),
+        E = (0, o.A)({ location: "UploadError" }),
+        g = () => {
+            (0, a.A)(),
                 m(),
                 d.default.track(_.HAw.PREMIUM_PROMOTION_OPENED, {
                     location_section: _.JJy.FILE_UPLOAD_UPSELL_MODAL,
@@ -25,10 +25,10 @@ function p(e) {
                 (0, c.pX)(_.BVt.APPLICATION_STORE);
         };
     return i
-        ? g
-            ? (0, r.jsx)(u.A, { transitionState: p, onClose: m, handleLearnMore: E })
-            : (0, r.jsx)(l.A, { transitionState: p, onClose: m, handleLearnMore: E, fileSize: h })
-        : (0, r.jsx)(a.aFV, {
+        ? E
+            ? (0, r.jsx)(u.A, { transitionState: p, onClose: m, handleLearnMore: g })
+            : (0, r.jsx)(l.default, { transitionState: p, onClose: m, handleLearnMore: g, fileSize: h })
+        : (0, r.jsx)(s.aFV, {
               title: t,
               subtitle: n,
               transitionState: p,

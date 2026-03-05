@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => I });
+n.d(t, { default: () => A });
 var r = n(627968),
     i = n(64700),
-    a = n(311907),
-    s = n(397927),
+    s = n(311907),
+    a = n(397927),
     o = n(544028),
     l = n(967198),
     u = n(287809),
@@ -11,52 +11,52 @@ var r = n(627968),
     d = n(453771),
     _ = n(975571),
     f = n(927578),
-    h = n(244975),
-    p = n(788868),
-    g = n(652215),
+    p = n(244975),
+    h = n(788868),
+    m = n(652215),
     E = n(985018),
-    A = n(950503);
-function I(e) {
-    let { onClose: t, handleLearnMore: n, ...I } = e,
-        T = (0, a.bG)([u.default], () => u.default.getCurrentUser()),
-        y = (0, a.bG)([o.A], () => o.A.theme),
-        S = (0, a.bG)([l.A], () => l.A.getGuildId()),
-        v = y === g.NJ8.LIGHT ? "light" : "dark",
-        C = (0, r.jsx)("img", {
-            className: A.Qw,
+    g = n(950503);
+function A(e) {
+    let { onClose: t, handleLearnMore: n, ...A } = e,
+        I = (0, s.bG)([u.default], () => u.default.getCurrentUser()),
+        T = (0, s.bG)([o.A], () => o.A.theme),
+        S = (0, s.bG)([l.A], () => l.A.getGuildId()),
+        y = T === m.NJ8.LIGHT ? "light" : "dark",
+        v = (0, r.jsx)("img", {
+            className: g.Qw,
             alt: "File Upload Nitro Perk",
-            src: `https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_${v}_v2.png`,
+            src: `https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_${y}_v2.png`,
         }),
-        b = i.useMemo(() => {
-            let e = f.Ay.getUserMaxFileSize(T);
+        N = i.useMemo(() => {
+            let e = f.Ay.getUserMaxFileSize(I);
             return (0, c.Xq)(e / 1024, { useKibibytes: !0 });
-        }, [T]),
-        N = (0, d.Iu)({
+        }, [I]),
+        C = (0, d.Iu)({
             guildId: S,
             onClick: () => {
-                window.open(_.A.getArticleURL(g.MVz.NITRO_FAQ), "_blank");
+                window.open(_.A.getArticleURL(m.MVz.NITRO_FAQ), "_blank");
             },
         }),
         R = (0, r.jsx)("div", {
-            className: A.rf,
-            children: (0, r.jsx)(s.Text, { variant: "text-sm/medium", children: N }),
+            className: g.rf,
+            children: (0, r.jsx)(a.Text, { variant: "text-sm/medium", children: C }),
         });
-    return (0, r.jsx)(h.A, {
-        artElement: C,
-        artURL: `https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_${v}_v2.png`,
-        artContainerClassName: A.JS,
+    return (0, r.jsx)(p.A, {
+        artElement: v,
+        artURL: `https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_${y}_v2.png`,
+        artContainerClassName: g.JS,
         enableArtBoxShadow: !1,
-        type: p.e.UPLOAD_ERROR_UPSELL,
+        type: h.e.UPLOAD_ERROR_UPSELL,
         title: E.intl.string(E.t["9C+41g"]),
         body: R,
-        context: E.intl.formatToPlainString(E.t.q5fTZp, { maxSize: b }),
-        glowUp: N,
-        analyticsLocation: { section: g.JJy.FILE_UPLOAD_POPOUT },
+        context: E.intl.formatToPlainString(E.t.q5fTZp, { maxSize: N }),
+        glowUp: C,
+        analyticsLocation: { section: m.JJy.FILE_UPLOAD_POPOUT },
         onClose: t,
-        subscriptionTier: p.pe.TIER_2,
+        subscriptionTier: h.pe.TIER_2,
         secondaryCTA: E.intl.string(E.t.ZnqyZ2),
         onSecondaryClick: n,
         showEnhancedUpsell: !0,
-        ...I,
+        ...A,
     });
 }
