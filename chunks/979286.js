@@ -46,8 +46,9 @@ n(870216), n(457421), n(295811);
 let v = (e) => {
         let { tab: t, ...r } = e;
         {
-            let { default: e } = n(12901);
-            N(r), e(), (0, c.pX)(t ? y.BVt.COLLECTIBLES_SHOP_WITH_TAB(t) : y.BVt.COLLECTIBLES_SHOP);
+            let { default: e } = n(12901),
+                { default: i } = n(408166);
+            N(r), e(), i(), (0, c.pX)(t ? y.BVt.COLLECTIBLES_SHOP_WITH_TAB(t) : y.BVt.COLLECTIBLES_SHOP);
         }
     },
     N = (e) => {
