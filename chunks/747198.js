@@ -1,20 +1,17 @@
 "use strict";
-n.d(t, { i: () => _ });
+n.d(t, { i: () => d });
 var r = n(64700),
     i = n(635358),
     s = n(311907),
     a = n(49463),
     o = n(979286),
-    l = n(590180),
-    u = n(233525);
-let c = 6e5,
-    d = 6e5;
-function _(e, t, n) {
-    (0, u.n)("useMaybeFetchCollectiblesCategoriesShared");
-    let _ = (0, s.bG)([a.A], () => a.A.hasLoadedExperiments),
-        f = e?.includeBundles,
-        p = i.g.VARIANTS_GROUP,
-        [h, m, E, g, A, I, T] = (0, s.yK)([l.A], () => [
+    l = n(590180);
+let u = 6e5,
+    c = 6e5;
+function d(e, t, n) {
+    let d = (0, s.bG)([a.A], () => a.A.hasLoadedExperiments),
+        _ = e?.includeBundles,
+        [f, p, h, m, E, g, A] = (0, s.yK)([l.A], () => [
             l.A.isFetchingCategories,
             l.A.lastFetchOptions,
             l.A.error,
@@ -25,22 +22,22 @@ function _(e, t, n) {
         ]);
     return (
         (0, r.useEffect)(() => {
-            if (!_ || l.A.isFetchingCategories) return;
-            let r = Date.now() - g < d;
-            if (E && r) return;
-            let i = { ...e, variantsReturnStyle: p, includeBundles: f, skipNumCategories: T },
-                s = !(0, o.gn)(m, i),
-                a = Date.now() - A < c;
-            (s || !a) && (0, o.CK)(i, t, n);
-        }, [_, m, A, e, E, f, g, t, n, T, p]),
+            if (!d || l.A.isFetchingCategories) return;
+            let r = Date.now() - m < c;
+            if (h && r) return;
+            let s = { ...e, variantsReturnStyle: i.g.VARIANTS_GROUP, includeBundles: _, skipNumCategories: A },
+                a = !(0, o.gn)(p, s),
+                f = Date.now() - E < u;
+            (a || !f) && (0, o.CK)(s, t, n);
+        }, [d, p, E, e, h, _, m, t, n, A]),
         {
-            isFetching: h,
-            categories: I,
-            fetchCategoriesError: E,
+            isFetching: f,
+            categories: g,
+            fetchCategoriesError: h,
             refreshCategories: (0, r.useCallback)(() => {
-                let t = { ...e, variantsReturnStyle: p, includeBundles: f, skipNumCategories: T };
+                let t = { ...e, variantsReturnStyle: i.g.VARIANTS_GROUP, includeBundles: _, skipNumCategories: A };
                 (0, o.CK)(t, void 0, n);
-            }, [e, f, n, T, p]),
+            }, [e, _, n, A]),
         }
     );
 }
