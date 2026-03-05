@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(475539),
+    o = n(380278),
     l = n(311907),
     u = n(397927),
     c = n(684013),
@@ -15,7 +15,7 @@ var r = n(627968),
     h = n(57019),
     m = n(652215),
     E = n(985018),
-    g = n(879716);
+    g = n(257758);
 function A(e) {
     e.currentTarget.scrollTo(0, 0);
 }
@@ -34,53 +34,54 @@ let I = i.memo(function (e) {
             icon: v,
             body: N,
             title: C,
-            renderFooter: b,
-            contentOpacity: R,
-            status: O,
+            renderFooter: R,
+            contentOpacity: O,
+            status: b,
             containerRef: D,
             className: L,
             wrapperClassName: w,
+            unreadAccessory: M,
         } = e,
-        [x, M] = i.useState(!1),
-        P = n || x || O === m.yFH.FOCUSED,
-        k = (0, l.bG)([p.A, f.A], () => p.A.isInputLocked(f.A.getTargetPID()));
+        [x, P] = i.useState(!1),
+        k = n || x || b === m.yFH.FOCUSED,
+        U = (0, l.bG)([p.A, f.A], () => p.A.isInputLocked(f.A.getTargetPID()));
     i.useEffect(() => {
         s?.();
     }, [s]);
-    let U = i.useCallback(
+    let G = i.useCallback(
             (e) => {
                 e.stopPropagation(), c?.(e);
             },
             [c],
         ),
-        G = i.useCallback(
+        F = i.useCallback(
             (e) => {
                 e.stopPropagation(), _?.(e);
             },
             [_],
         ),
-        F = i.useCallback(
+        V = i.useCallback(
             (e) => {
                 e.stopPropagation(), h?.(e);
             },
             [h],
         ),
-        V = i.useCallback(() => {
-            M(!0);
-        }, []),
         B = i.useCallback(() => {
-            M(!1);
+            P(!0);
+        }, []),
+        H = i.useCallback(() => {
+            P(!1);
         }, []);
-    function H() {
-        return (0, r.jsx)(d.A, { className: g.r, onDismiss: U, "aria-label": E.intl.string(E.t.LnEgqX) });
-    }
     function j() {
-        let e = "function" == typeof T ? T(P, k) : T;
+        return (0, r.jsx)(d.A, { className: g.r, onDismiss: G, "aria-label": E.intl.string(E.t.LnEgqX) });
+    }
+    function Y() {
+        let e = "function" == typeof T ? T(k, U) : T;
         return null != T
             ? (0, r.jsx)(u.Text, { className: g.aK, color: "text-muted", variant: "text-xxs/medium", children: e })
             : null;
     }
-    function Y() {
+    function W() {
         return null == _ && null == h
             ? null
             : (0, r.jsxs)("div", {
@@ -92,7 +93,7 @@ let I = i.memo(function (e) {
                                 children: (0, r.jsx)(u.Button, {
                                     size: "sm",
                                     variant: "active",
-                                    onClick: G,
+                                    onClick: F,
                                     text: y ?? E.intl.string(E.t.BddRzS),
                                 }),
                             })
@@ -103,7 +104,7 @@ let I = i.memo(function (e) {
                                 children: (0, r.jsx)(u.Button, {
                                     size: "sm",
                                     variant: "secondary",
-                                    onClick: F,
+                                    onClick: V,
                                     text: S ?? E.intl.string(E.t["ETE/oC"]),
                                 }),
                             })
@@ -111,22 +112,22 @@ let I = i.memo(function (e) {
                   ],
               });
     }
-    function W() {
+    function K() {
         return null == v
             ? null
             : "string" == typeof v
               ? (0, r.jsx)(u.euF, { src: v, size: u._3J.SIZE_40, className: g.my, "aria-hidden": !0 })
               : (0, r.jsx)("div", { className: g.my, children: v });
     }
-    function K() {
-        let e = b?.(P, k);
+    function $() {
+        let e = R?.(k, U);
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)(o.animated.div, {
                     className: g.VM,
-                    style: { opacity: R },
+                    style: { opacity: O },
                     children: [
-                        W(),
+                        K(),
                         (0, r.jsxs)("div", {
                             className: g.zH,
                             children: [
@@ -142,12 +143,12 @@ let I = i.memo(function (e) {
                                     ? (0, r.jsx)(u.Text, {
                                           color: "interactive-text-default",
                                           variant: "text-sm/normal",
-                                          lineClamp: null != t ? t * (P ? 2 : 1) : void 0,
+                                          lineClamp: null != t ? t * (k ? 2 : 1) : void 0,
                                           children: N,
                                       })
                                     : null,
-                                j(),
                                 Y(),
+                                W(),
                             ],
                         }),
                     ],
@@ -162,22 +163,28 @@ let I = i.memo(function (e) {
             ],
         });
     }
+    function z() {
+        return null == M ? null : (0, r.jsx)("div", { className: g.B3, children: M(x) });
+    }
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)("div", {
+            (0, r.jsxs)("div", {
                 className: a()(g.af, w),
                 onScroll: A,
-                children: (0, r.jsx)(u.DUT, {
-                    innerRef: D,
-                    ignoreKeyPress: !0,
-                    onMouseOver: V,
-                    onMouseLeave: B,
-                    onClick: I,
-                    className: a()(g.kL, { [g.vk]: null != I }, L),
-                    children: K(),
-                }),
+                children: [
+                    (0, r.jsx)(u.DUT, {
+                        innerRef: D,
+                        ignoreKeyPress: !0,
+                        onMouseOver: B,
+                        onMouseLeave: H,
+                        onClick: I,
+                        className: a()(g.kL, { [g.vk]: null != I }, L),
+                        children: $(),
+                    }),
+                    z(),
+                ],
             }),
-            H(),
+            j(),
         ],
     });
 });
@@ -254,19 +261,19 @@ function N(e) {
             [u, _],
         ),
         { clickSpring: N, handleMouseClick: C } = v(),
-        b = i.useCallback(
+        R = i.useCallback(
             (e) => {
                 f?.(e, u), C();
             },
             [f, u, C],
         ),
-        R = i.useCallback(
+        O = i.useCallback(
             (e) => {
                 p?.(e, u);
             },
             [p, u],
         ),
-        O = i.useCallback(
+        b = i.useCallback(
             (e) => {
                 m?.(e, u);
             },
@@ -277,8 +284,8 @@ function N(e) {
             props: {
                 onNotificationShow: L,
                 onDismissClick: w,
-                renderFooter: x,
-                onNotificationClick: M,
+                renderFooter: M,
+                onNotificationClick: x,
                 onConfirmClick: P,
                 onCancelClick: k,
                 disableClickableRegions: U = !1,
@@ -307,9 +314,9 @@ function N(e) {
                 notificationId: t.id,
                 onNotificationShow: 0 === n ? A : void 0,
                 onDismissClick: y,
-                onNotificationClick: b,
-                onConfirmClick: null != p ? R : void 0,
-                onCancelClick: null != m ? O : void 0,
+                onNotificationClick: R,
+                onConfirmClick: null != p ? O : void 0,
+                onCancelClick: null != m ? b : void 0,
                 renderFooter: D,
                 expand: !1,
                 index: n,

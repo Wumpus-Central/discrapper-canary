@@ -1,40 +1,44 @@
 "use strict";
-n.d(t, { A: () => O });
+n.d(t, { A: () => L });
 var r = n(627968);
 n(64700);
 var i = n(684013),
     s = n(334738),
-    a = n(465364),
-    o = n(742984),
-    l = n(976860),
-    u = n(400492),
-    c = n(845618),
-    d = n(203982),
-    _ = n(723702),
-    f = n(837921),
-    p = n(1193),
-    h = n(41984),
-    m = n(589051),
-    E = n(592598),
-    g = n(395011),
-    A = n(222506),
-    I = n(145567),
-    T = n(378702),
-    S = n(119191),
-    y = n(581730),
-    v = n(672396),
-    N = n(652215),
-    C = n(822889),
-    b = n(985018);
-let R = 2;
-function O(e, t, n, O) {
-    let { hasChat: D } = (0, m.NI)("textChatNotification");
-    if (E.A.isNotificationDisabled(v.KS.TextChat)) return (0, u.Ak)(c.cH, c.pD), null;
-    let L = !A.A.isInputLocked(g.A.getTargetPID());
-    if (p.A.getSelectedChannelId() === e.id && L) return null;
-    let { icon: w, title: x, body: M } = (0, o.TB)(e, t, n),
-        { trackView: P, trackClick: k } = (0, y.Y9)(v.KS.TextChat, {
-            notif_type: v.KS.TextChat,
+    a = n(941971),
+    o = n(465364),
+    l = n(742984),
+    u = n(976860),
+    c = n(400492),
+    d = n(845618),
+    _ = n(203982),
+    f = n(723702),
+    p = n(837921),
+    h = n(1193),
+    m = n(41984),
+    E = n(589051),
+    g = n(592598),
+    A = n(395011),
+    I = n(222506),
+    T = n(145567),
+    S = n(378702),
+    y = n(119191),
+    v = n(581730),
+    N = n(672396),
+    C = n(652215),
+    R = n(822889),
+    O = n(985018);
+let b = 2,
+    D = (e) => {
+        e && (0, c.Ak)(d.cH, d.pD);
+    };
+function L(e, t, n, c) {
+    let { hasChat: d } = (0, E.NI)("textChatNotification");
+    if (g.A.isNotificationDisabled(N.KS.TextChat)) return D(!0), null;
+    let L = !I.A.isInputLocked(A.A.getTargetPID());
+    if (h.A.getSelectedChannelId() === e.id && L && d) return D(c), null;
+    let { icon: w, title: M, body: x } = (0, l.TB)(e, t, n),
+        { trackView: P, trackClick: k } = (0, v.Y9)(N.KS.TextChat, {
+            notif_type: N.KS.TextChat,
             notif_user_id: t.author?.id,
             message_id: t.id,
             message_type: t.type,
@@ -44,54 +48,55 @@ function O(e, t, n, O) {
         });
     return {
         icon: w,
-        title: x,
+        title: M,
         body:
             t.content.length > 0
-                ? (0, a.Ay)(t, { noStyleAndInteraction: !0, formatInline: !0, hideSimpleEmbedContent: !1 }).content
-                : M,
+                ? (0, o.Ay)(t, { noStyleAndInteraction: !0, formatInline: !0, hideSimpleEmbedContent: !1 }).content
+                : x,
+        unreadAccessory: (e) => (d ? (0, r.jsx)(a.A, { unread: !0, hovered: e }) : null),
         hint: (e, t) =>
-            e || !t ? null : (0, S.sI)((0, y.Jn)(), D ? C.default.VMcw8s : b.t.ykjOAJ, b.intl.string(b.t.jZkzVJ)),
-        maxBodyLines: R,
+            e || !t ? null : (0, y.sI)((0, v.Jn)(), d ? R.default.VMcw8s : O.t.ykjOAJ, O.intl.string(O.t.jZkzVJ)),
+        maxBodyLines: b,
         renderFooter: (n, i, s) =>
-            D
+            d
                 ? null
                 : n && !s
-                  ? (0, r.jsx)(T.A, { id: i, replyToMessageId: t.id, channel: e, onSend: () => k("send") })
+                  ? (0, r.jsx)(S.A, { id: i, replyToMessageId: t.id, channel: e, onSend: () => k("send") })
                   : null,
         onNotificationShow: () => {
-            O && (0, u.Ak)(c.cH, c.pD), P();
+            D(c), P();
         },
         onNotificationClick: (n, r) => {
-            let a = g.A.getTargetPID();
+            let a = A.A.getTargetPID();
             if (
                 ((0, s.ack)(
                     e.id,
                     {
-                        section: N.JJy.OVERLAY,
-                        object: N.ZSU.ACK_TEXT_CHAT_NOTIFICATION,
-                        objectType: N.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
+                        section: C.JJy.OVERLAY,
+                        object: C.ZSU.ACK_TEXT_CHAT_NOTIFICATION,
+                        objectType: C.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
                     },
                     !0,
                     !0,
                     t.id,
                 ),
-                D)
+                d)
             ) {
-                (0, I.D$)({
-                    target: { kind: I.bB.CHANNEL, channelId: e.id, guildId: e.guild_id ?? null, messageId: t.id },
-                    source: h.B9.NOTIFICATION_CLICK,
-                    widgetType: N.uss.NOTIFICATIONS,
+                (0, T.D$)({
+                    target: { kind: T.bB.CHANNEL, channelId: e.id, guildId: e.guild_id ?? null, messageId: t.id },
+                    source: m.B9.NOTIFICATION_CLICK,
+                    widgetType: C.uss.NOTIFICATIONS,
                 }),
-                    A.A.isInputLocked(a) ? (k("unlock"), i.A.setInputLocked(!1, a)) : k("jump"),
+                    I.A.isInputLocked(a) ? (k("unlock"), i.A.setInputLocked(!1, a)) : k("jump"),
                     requestAnimationFrame(() => {
-                        d._.dispatchToLastSubscribed(N.jej.TEXTAREA_FOCUS, { channelId: e.id });
+                        _._.dispatchToLastSubscribed(C.jej.TEXTAREA_FOCUS, { channelId: e.id });
                     }),
-                    i.A.updateNotificationStatus(r, N.yFH.DISMISSED);
+                    i.A.updateNotificationStatus(r, C.yFH.DISMISSED);
                 return;
             }
-            A.A.isInputLocked(a)
+            I.A.isInputLocked(a)
                 ? (k("unlock"), i.A.setInputLocked(!1, a))
-                : (k("jump"), (0, l.pX)(N.BVt.CHANNEL(e.guild_id, e.id, t.id)), _.isPlatformEmbedded && f.Ay.focus());
+                : (k("jump"), (0, u.pX)(C.BVt.CHANNEL(e.guild_id, e.id, t.id)), f.isPlatformEmbedded && p.Ay.focus());
         },
         onDismissClick: () => {
             k("dismiss");

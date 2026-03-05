@@ -15,4 +15,5 @@ e.exports = {
     x6: "button_e8d31f",
     my: "avatar_e8d31f",
     Kk: "icon_e8d31f",
+    B3: "unreadAccessoryContainer_e8d31f",
 };
