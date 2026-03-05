@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => W, UB: () => H, _0: () => P, dv: () => V, kw: () => F }), n(321073);
+n.d(t, { Ay: () => K, UB: () => j, _0: () => k, dv: () => B, kw: () => V }), n(321073);
 var r = n(284009),
     i = n.n(r),
     s = n(279194),
@@ -22,7 +22,8 @@ let E = window.DiscordNative,
     S = null,
     y = null,
     v = null,
-    N = {};
+    N = {},
+    C = {};
 null != E &&
     ((S = E.remoteApp
         .getVersion()
@@ -30,7 +31,7 @@ null != E &&
         .map((e) => parseInt(e))),
     (v = E.remoteApp.getModuleVersions?.()),
     (y = E.remoteApp.getBuildNumber?.()));
-let C = new Set([
+let R = new Set([
         "discord_erlpack",
         "discord_game_utils",
         "discord_rpc",
@@ -38,39 +39,39 @@ let C = new Set([
         "discord_utils",
         "discord_voice",
     ]),
-    R = !1,
-    O = null,
-    b = "lastImageSaveDirectory",
-    D = /[<>:"/\\|?*@]/g,
-    L = /(\.[a-zA-Z0-9]+):[^.]*$/,
-    w = /(\.[a-zA-Z0-9]+)%3A.+$/,
-    M = /[^a-zA-Z0-9]/g,
-    x = /\.[^.]*$/;
-var P = (function (e) {
+    O = !1,
+    b = null,
+    D = "lastImageSaveDirectory",
+    L = /[<>:"/\\|?*@]/g,
+    w = /(\.[a-zA-Z0-9]+):[^.]*$/,
+    M = /(\.[a-zA-Z0-9]+)%3A.+$/,
+    x = /[^a-zA-Z0-9]/g,
+    P = /\.[^.]*$/;
+var k = (function (e) {
     return (e.SAVED = "saved"), (e.CANCELED = "canceled"), (e.ERRORED = "errored"), e;
 })({});
-function k(e) {
+function U(e) {
     try {
         let t = decodeURIComponent(e);
-        return (t = (t = t.replace(L, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(D, "_");
+        return (t = (t = t.replace(w, "$1")).replace(/(.+)@([a-zA-Z0-9]+)$/, "$1.$2")).replace(L, "_");
     } catch {
         return e
-            .replace(w, "$1")
+            .replace(M, "$1")
             .replace(/(.+)%40([a-zA-Z0-9]+)$/, "$1.$2")
-            .replace(D, "_");
+            .replace(L, "_");
     }
 }
-async function U(e) {
+async function G(e) {
     let t = { method: "GET", mode: "cors" },
         n = await fetch(new Request(e, t));
     i()(200 === n.status, "Data fetch unsuccessful");
     let r = await n.arrayBuffer();
     return i()(null != r, "Data is null"), r;
 }
-function G(e) {
-    return U(e);
+function F(e) {
+    return G(e);
 }
-var F = (function (e) {
+var V = (function (e) {
         return (
             (e[(e.Camera = 0)] = "Camera"),
             (e[(e.Microphone = 1)] = "Microphone"),
@@ -80,10 +81,10 @@ var F = (function (e) {
             e
         );
     })({}),
-    V = (function (e) {
+    B = (function (e) {
         return (e.VIDEO = "VIDEO"), (e.MUTE = "MUTE"), (e.DEAFEN = "DEAFEN"), (e.DISCONNECT = "DISCONNECT"), e;
     })({});
-function B(e) {
+function H(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : N;
     return {
         id: t[e.id ?? ""],
@@ -109,7 +110,7 @@ function B(e) {
         executableFingerprint: e.executableFingerprint,
     };
 }
-function H(e, t) {
+function j(e, t) {
     if (null != t && I(t)) {
         let e = t.split("/")[1]?.toLowerCase();
         if ("jpeg" === e) return "jpg";
@@ -120,17 +121,22 @@ function H(e, t) {
     let r = n.pathname?.split(".")?.pop()?.toLowerCase();
     return null != r && r.length <= T ? r : void 0;
 }
-function j(e) {
+function Y(e) {
     if ((0, f.isDesktop)())
         try {
-            Y.sendIPC(e);
+            W.sendIPC(e);
         } catch (e) {}
 }
-let Y = {
-        requireModule: (e) => E.nativeModules.requireModule(e),
+let W = {
+        requireModule(e) {
+            let t = n(393742).A.getConfig({ location: "requireModule" }).moduleCacheEnabled;
+            if (t && C.hasOwnProperty(e) && null != C[e]) return C[e];
+            let r = E.nativeModules.requireModule(e);
+            return t && (C[e] = r), r;
+        },
         ensureModule: (e) =>
             f.isPlatformEmbedded
-                ? __OVERLAY__ && C.has(e)
+                ? __OVERLAY__ && R.has(e)
                     ? Promise.resolve()
                     : E.nativeModules.ensureModule(e)
                 : Promise.reject(Error("not embedded")),
@@ -185,7 +191,7 @@ let Y = {
                         return null != e.id && (N[t] = e.id), { ...e, cmdline: e.cmdLine, id: t };
                     }),
                     o = N,
-                    l = (e) => n(e.map((e) => B(e, o)));
+                    l = (e) => n(e.map((e) => H(e, o)));
                 null != r && null != s.setProcessObserverUserId && s.setProcessObserverUserId(r),
                     t && null != s.setObservedGamesCallback2
                         ? s.setObservedGamesCallback2(a, l)
@@ -195,8 +201,8 @@ let Y = {
         setGameDetectionCallback(e) {
             this.getDiscordUtils().setGameDetectionCallback?.((t, n) =>
                 e(
-                    t.map((e) => B(e)),
-                    n.map((e) => B(e)),
+                    t.map((e) => H(e)),
+                    n.map((e) => H(e)),
                 ),
             );
         },
@@ -211,7 +217,7 @@ let Y = {
         },
         setCandidateGamesCallback(e) {
             this.getDiscordUtils().setCandidateGamesCallback((t) => {
-                e(t.map((e) => B(e)));
+                e(t.map((e) => H(e)));
             });
         },
         clearCandidateGamesCallback() {
@@ -233,16 +239,16 @@ let Y = {
             if (__OVERLAY__) throw Error("cannot require discord_voice in overlay");
             let e = this.requireModule("discord_voice");
             return (
-                R ||
+                O ||
                     (0, u.si)((t, n, r) => {
                         e.consoleLog(n, `[${t}] ${r}`);
                     }),
-                (R = !0),
+                (O = !0),
                 e
             );
         },
         getDiscordUtils() {
-            if (!R)
+            if (!O)
                 try {
                     this.getVoiceEngine();
                 } catch (e) {}
@@ -253,7 +259,7 @@ let Y = {
         },
         getDiscordIsElevated() {
             return (0, f.isWindows)() && null != this.getDiscordUtils().getDiscordIsElevated
-                ? (null === O && (O = this.getDiscordUtils().getDiscordIsElevated()), O)
+                ? (null === b && (b = this.getDiscordUtils().getDiscordIsElevated()), b)
                 : null;
         },
         getVoiceFilters() {
@@ -326,8 +332,8 @@ let Y = {
         async copyImage(e, t) {
             i()(f.isPlatformEmbedded, "Copy image method called outside native app"),
                 i()("function" == typeof E.clipboard.copyImage, "Copy image not supported");
-            let n = await G(e),
-                r = H(e, t),
+            let n = await F(e),
+                r = j(e, t),
                 s = null != r && g.has(r) ? `image.${r}` : e;
             E.clipboard.copyImage(m.from(n), s);
         },
@@ -337,7 +343,7 @@ let Y = {
         },
         canSaveImage(e, t) {
             if (null == e || !f.isPlatformEmbedded) return !1;
-            let n = H(e, t);
+            let n = j(e, t);
             return null == n || A.has(n);
         },
         async saveImage(e, t, n) {
@@ -346,21 +352,21 @@ let Y = {
             let a = p.A.toURLSafe(e);
             if (null == a) return "errored";
             let o = a.pathname.split("/").pop() ?? "unknown";
-            o = k(o);
+            o = U(o);
             let l = a.searchParams.get("format");
             if (null != l) {
-                let e = l.replace(M, "").toLowerCase();
+                let e = l.replace(x, "").toLowerCase();
                 if (e.length > 0) {
-                    let t = o.replace(x, "");
+                    let t = o.replace(P, "");
                     o = `${t}.${e}`;
                 }
             } else if (!o.includes(".")) {
-                let r = H(e, t) ?? n ?? "png";
+                let r = j(e, t) ?? n ?? "png";
                 o = `${o}.${r}`;
             }
-            let u = await G(e),
+            let u = await F(e),
                 d = m.from(u),
-                _ = c.w.get(b);
+                _ = c.w.get(D);
             if (("string" != typeof _ && (_ = void 0), "function" == typeof E.fileManager.saveWithDialog2)) {
                 if (null == (r = await E.fileManager.saveWithDialog2(d, o, _ ?? void 0))) return "errored";
                 if (r.canceledByUser) return "canceled";
@@ -371,15 +377,15 @@ let Y = {
                 } catch (e) {
                     return "errored";
                 }
-            return null == s || "" === s ? "errored" : (c.w.set(b, s), "saved");
+            return null == s || "" === s ? "errored" : (c.w.set(D, s), "saved");
         },
         async saveFile(e, t) {
             i()(f.isPlatformEmbedded, "Save file method called outside native app");
             let n = p.A.toURLSafe(e);
             if (null == n) return null;
             let r = t ?? n.pathname.split("/").pop() ?? "unknown";
-            null == t && (r = k(r));
-            let s = await U(e),
+            null == t && (r = U(r));
+            let s = await G(e),
                 a = m.from(s),
                 o = await E.fileManager.saveWithDialog(a, r, void 0);
             return null == o ? null : o;
@@ -428,7 +434,7 @@ let Y = {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0;
             if (!f.isPlatformEmbedded || "function" != typeof E.clipboard.copyImage) return !1;
             if (null != e) {
-                let t = H(e, void 0);
+                let t = j(e, void 0);
                 if (null != t && !g.has(t)) return !1;
             }
             return !0;
@@ -513,7 +519,7 @@ let Y = {
             E.window.close(e);
         },
         clearNavigationHistory() {
-            j(o.W.NAVIGATION_HISTORY_CLEAR);
+            Y(o.W.NAVIGATION_HISTORY_CLEAR);
         },
         setAlwaysOnTop(e, t) {
             "function" == typeof E.window.setAlwaysOnTop && E.window.setAlwaysOnTop(e, t);
@@ -885,10 +891,10 @@ let Y = {
             (0, f.isDesktop)() && this.sendIPC(o.W.APP_FIRST_RENDER_AFTER_READY_PAYLOAD);
         },
         appLoaded() {
-            j(o.W.APP_LOADED);
+            Y(o.W.APP_LOADED);
         },
         indexLoadedAsync() {
-            j(o.W.APP_ASYNC_INDEX_TSX_LOADED);
+            Y(o.W.APP_ASYNC_INDEX_TSX_LOADED);
         },
     },
-    W = Y;
+    K = W;

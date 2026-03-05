@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, { getKrispModel: () => i, setKrispModelOverride: () => s, setKrispSuppressionLevel: () => a });
-var r = n(77729);
+n.r(t), n.d(t, { getKrispModel: () => i, setKrispModelOverride: () => a, setKrispSuppressionLevel: () => s });
+var r = n(837921);
 function i() {
     try {
-        return r.A.nativeModules.requireModule("discord_krisp").getNcModelFilename();
+        return r.Ay.requireModule("discord_krisp").getNcModelFilename();
     } catch (e) {
         return Promise.resolve(null);
     }
 }
-function a(e) {
-    try {
-        r.A.nativeModules.requireModule("discord_krisp").setSuppressionLevel?.(e);
-    } catch (e) {}
-}
 function s(e) {
     try {
-        r.A.nativeModules.requireModule("discord_krisp").setNcModel(e);
+        r.Ay.requireModule("discord_krisp").setSuppressionLevel?.(e);
+    } catch (e) {}
+}
+function a(e) {
+    try {
+        r.Ay.requireModule("discord_krisp").setNcModel(e);
     } catch (e) {}
 }
