@@ -21,8 +21,8 @@ var i = n(627968),
     E = n(290863),
     I = n(222823),
     N = n(309010),
-    b = n(607567),
-    S = n(234320),
+    S = n(607567),
+    b = n(234320),
     T = n(203982),
     v = n(975571),
     y = n(793322),
@@ -65,11 +65,11 @@ let P = o.Ay.connectStores([I.Ay, f.A], (e) => {
             category: f.A.getChannel(t.parent_id),
         };
     })(U),
-    w = o.Ay.connectStores([b.Ay], (e) => {
+    w = o.Ay.connectStores([S.Ay], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id)
             throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
-        return { voiceStates: b.Ay.getVoiceStates(t.guild_id)[t.id] };
+        return { voiceStates: S.Ay.getVoiceStates(t.guild_id)[t.id] };
     })(U),
     k = o.Ay.connectStores([x.default], (e) => {
         let { guild: t } = e;
@@ -177,7 +177,7 @@ class F extends s.PureComponent {
                     case L.rbe.GUILD_FORUM:
                     case L.rbe.GUILD_MEDIA:
                         return (0, u.L3)(e, async () => {
-                            let { default: e } = await Promise.all([n.e("97262"), n.e("57287"), n.e("72467")]).then(
+                            let { default: e } = await Promise.all([n.e("97262"), n.e("57287"), n.e("77666")]).then(
                                 n.bind(n, 370372),
                             );
                             return (t) => (0, i.jsx)(e, { ...t, channel: s, guild: l, onSelect: y.jD });
@@ -189,7 +189,7 @@ class F extends s.PureComponent {
                                 n.e("97262"),
                                 n.e("57287"),
                                 n.e("40394"),
-                                n.e("3488"),
+                                n.e("18159"),
                             ]).then(n.bind(n, 698193));
                             return (t) => (0, i.jsx)(e, { ...t, channel: s, guild: l, onSelect: y.jD });
                         });
@@ -214,7 +214,7 @@ class F extends s.PureComponent {
                 break;
             case m.rD.GROUP_DM:
                 return (0, u.L3)(e, async () => {
-                    let { default: e } = await Promise.all([n.e("97262"), n.e("93057")]).then(n.bind(n, 4027));
+                    let { default: e } = await Promise.all([n.e("97262"), n.e("15438")]).then(n.bind(n, 4027));
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,
@@ -287,7 +287,7 @@ class F extends s.PureComponent {
             s = t.length > 0 && "" !== n;
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(S.EG, { event: L.jej.GLOBAL_CLIPBOARD_PASTE, handler: this.handleGlobalPaste }),
+                (0, i.jsx)(b.EG, { event: L.jej.GLOBAL_CLIPBOARD_PASTE, handler: this.handleGlobalPaste }),
                 (0, i.jsx)(d.vN3, {
                     children: (0, i.jsx)("input", {
                         className: D.hF,
