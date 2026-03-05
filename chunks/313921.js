@@ -32,8 +32,8 @@ let S = (0, d.A)(
                         u = o.useCallback(() => {
                             if (e?.id == null) return null;
                             (0, s.mMO)(async () => {
-                                let { default: o } = await Promise.all([n.e("8555"), n.e("40556"), n.e("74152")]).then(
-                                    n.bind(n, 6503),
+                                let { default: o } = await Promise.all([n.e("8555"), n.e("40556"), n.e("99256")]).then(
+                                    n.bind(n, 228884),
                                 );
                                 return (n) => (0, r.jsx)(o, { ...n, existingSound: t, guildId: e.id });
                             });
