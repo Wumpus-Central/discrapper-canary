@@ -466,7 +466,7 @@ function nh(e, t) {
     e.setAutomaticGainControl(np(t));
 }
 function nm(e, t) {
-    let n = (0, eE.A)(t, r.getSystemMicrophoneMode(), { location: "setNoiseCancellation" });
+    let n = (0, eE.A)(t, r.getSystemMicrophoneMode());
     n !== t && eK.info("Falling back to system noise suppression."), (t = n), e.setNoiseCancellation(t);
     let { noiseCancellationDuringProcessing: i } = (0, B.F)({ location: "setNoiseCancellation", disable: !t });
     e.setNoiseCancellationDuringProcessing(i);
@@ -1191,7 +1191,7 @@ function rr(e) {
         i = tu.getAudioLayer(),
         s = nL(tE, t.inputDeviceId),
         a = tE[s]?.name,
-        o = (0, eE.A)(t.noiseCancellation, r.getSystemMicrophoneMode(), { location: "trackVoiceProcessing" });
+        o = (0, eE.A)(t.noiseCancellation, r.getSystemMicrophoneMode());
     ev.default.track(eF.HAw.VOICE_PROCESSING, {
         echo_cancellation: t.echoCancellation,
         noise_cancellation: t.noiseCancellation,
