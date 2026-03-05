@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(158954),
+    o = n(934551),
     l = n(311907),
     u = n(421380),
     c = n(397927),
@@ -298,7 +298,7 @@ function M(e) {
                             onClick: async (e) => {
                                 await l(), a(e);
                             },
-                            icon: o.pVd,
+                            icon: o.NitroWheelIcon,
                         },
                     ],
                     ...(null !== R && { badge: { type: R, variant: "expressive" } }),
