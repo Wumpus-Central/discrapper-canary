@@ -1,52 +1,65 @@
-n.d(t, { C: () => O });
+n.d(t, { C: () => R });
 var i = n(627968),
     s = n(64700),
-    a = n(503698),
-    l = n.n(a),
+    l = n(503698),
+    a = n.n(l),
     r = n(284009),
     o = n.n(r),
-    c = n(607399),
-    d = n(158954),
+    d = n(607399),
+    c = n(158954),
     u = n(311907),
     _ = n(397927),
-    m = n(384904),
-    A = n(793574),
-    g = n(688810),
+    g = n(384904),
+    m = n(793574),
+    A = n(688810),
     h = n(701273),
-    x = n(780964),
-    p = n(840065),
+    p = n(780964),
+    x = n(840065),
     E = n(287809),
-    C = n(927578),
-    T = n(866312),
-    S = n(327479),
+    T = n(954571),
+    S = n(927578),
+    C = n(866312),
+    f = n(327479),
     I = n(652215),
-    f = n(601107),
+    b = n(601107),
     N = n(985018),
-    b = n(141384);
+    v = n(141384);
 let j = [I.Dmq.PAST_DUE, I.Dmq.ACCOUNT_HOLD, I.Dmq.BILLING_RETRY],
-    v = (e) => {
-        let { transitionState: t, onClose: n, subscription: a, analyticsLocations: l, analyticsLocation: r } = e,
-            [o, c] = s.useState(!1),
-            [u, A] = s.useState(!1),
-            g = async () => {
-                c(!0), A(!1);
+    O = (e) => {
+        let { transitionState: t, onClose: n, subscription: l, analyticsLocations: a, analyticsLocation: r } = e,
+            [o, d] = s.useState(!1),
+            [u, m] = s.useState(!1);
+        s.useEffect(() => {
+            T.default.track(I.HAw.GUILD_BOOST_PAST_DUE_CANCEL_MODAL_VIEWED, {
+                subscription_id: l.id,
+                location_stack: a,
+            });
+        }, []);
+        let A = async () => {
+                d(!0), m(!1);
                 try {
-                    await (0, m.M2)(a.id, l, r), (0, m.hP)(), n();
+                    await (0, g.M2)(l.id, a, r),
+                        T.default.track(I.HAw.GUILD_BOOST_PAST_DUE_CANCELLATION_FLOW_COMPLETED, {
+                            subscription_id: l.id,
+                            location_stack: a,
+                        }),
+                        (0, g.hP)(),
+                        n();
                 } catch (e) {
-                    A(!0), c(!1);
+                    m(!0), d(!1);
                 }
             },
             h = [
                 { text: N.intl.string(N.t.oEAioF), onClick: () => n(), variant: "secondary" },
                 {
                     text: N.intl.string(N.t["cY+Oob"]),
-                    onClick: () => g(),
+                    onClick: () => A(),
                     disabled: o,
                     variant: "critical-primary",
                     loading: o,
                 },
             ];
-        return (0, i.jsx)(d.Modal, {
+        return (0, i.jsx)(c.Modal, {
             size: "md",
             transitionState: t,
             title: N.intl.string(N.t.LZunzZ),
@@ -56,79 +69,79 @@ let j = [I.Dmq.PAST_DUE, I.Dmq.ACCOUNT_HOLD, I.Dmq.BILLING_RETRY],
             children: u ? (0, i.jsx)(_.wx6, { type: "critical", children: N.intl.string(N.t["5mlOCW"]) }) : null,
         });
     };
-function O(e) {
+function R(e) {
     let t,
         {
             subscription: n,
             renewalInvoicePreview: s,
-            fractionalPremiumInfo: a,
+            fractionalPremiumInfo: l,
             fromStandaloneBillingPage: r = !0,
-            analyticsLocation: m,
+            analyticsLocation: g,
         } = e,
-        O = (0, u.bG)([E.default], () => {
+        T = (0, u.bG)([E.default], () => {
             let e = E.default.getCurrentUser();
             return o()(null != e, "GuildBoostingHeader: currentUser cannot be undefined"), e;
         }),
-        { analyticsLocations: R } = (0, g.Ay)(A.A.GUILD_BOOSTING_SUBSCRIPTION_HEADER),
-        y = (0, T.A)({ location: "GuildBoostingHeader" });
-    if (0 === (0, C.bx)(n.additionalPlans)) return null;
+        { analyticsLocations: R } = (0, A.Ay)(m.A.GUILD_BOOSTING_SUBSCRIPTION_HEADER),
+        y = (0, C.A)({ location: "GuildBoostingHeader" });
+    if (0 === (0, S.bx)(n.additionalPlans)) return null;
     let { status: P } = n,
-        L = (0, C.$k)(n),
+        L = (0, S.$k)(n),
         D = y && !L && n.isBoostOnly && j.includes(n.status);
-    if (L) t = b.v2;
+    if (L) t = v.v2;
     else
         switch (P) {
             case I.Dmq.PAST_DUE:
             case I.Dmq.ACCOUNT_HOLD:
             case I.Dmq.BILLING_RETRY:
-                t = b.P7;
+                t = v.P7;
                 break;
             case I.Dmq.PAUSE_PENDING:
             case I.Dmq.PAUSED:
-                t = n.pauseReason !== f.qf.FRACTIONAL_PREMIUM ? b.C7 : b.wG;
+                t = n.pauseReason !== b.qf.FRACTIONAL_PREMIUM ? v.C7 : v.wG;
                 break;
             default:
-                t = b.wG;
+                t = v.wG;
         }
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
-                className: l()(t, b.Qn),
+                className: a()(t, v.Qn),
                 children: [
-                    (0, i.jsx)("div", { className: b.Kq }),
-                    (0, i.jsx)("div", { className: b.OL }),
+                    (0, i.jsx)("div", { className: v.Kq }),
+                    (0, i.jsx)("div", { className: v.OL }),
                     (0, i.jsxs)("div", {
-                        className: b.eC,
+                        className: v.eC,
                         children: [
-                            (0, i.jsx)("div", { className: l()(b.Ab, { [b.aD]: L }) }),
+                            (0, i.jsx)("div", { className: a()(v.Ab, { [v.aD]: L }) }),
                             (0, i.jsx)("div", {
-                                children: (0, C.Uf)({
+                                children: (0, S.Uf)({
                                     subscription: n,
                                     renewalInvoicePreview: s,
-                                    user: O,
-                                    fractionalPremiumInfo: a,
+                                    user: T,
+                                    fractionalPremiumInfo: l,
                                 }),
                             }),
                         ],
                     }),
                     r &&
                         (0, i.jsxs)("div", {
-                            className: b.BQ,
+                            className: v.BQ,
                             children: [
                                 D &&
                                     (0, i.jsx)("div", {
-                                        className: b.x7,
-                                        children: (0, i.jsx)(d.QWc, {
+                                        className: v.x7,
+                                        children: (0, i.jsx)(c.QWc, {
                                             variant: "always-white",
                                             onClick: () => {
                                                 j.includes(n.status) &&
                                                     (0, _.mMO)(
                                                         async () => (e) =>
-                                                            (0, i.jsx)(v, {
+                                                            (0, i.jsx)(O, {
                                                                 ...e,
                                                                 subscription: n,
                                                                 analyticsLocations: R,
-                                                                analyticsLocation: m,
+                                                                analyticsLocation: g,
                                                             }),
                                                     );
                                             },
@@ -136,9 +149,9 @@ function O(e) {
                                             text: N.intl.string(N.t["ETE/oC"]),
                                         }),
                                     }),
-                                (0, i.jsx)(S.A, {
+                                (0, i.jsx)(f.A, {
                                     onClick: () =>
-                                        (0, p.openUserSettings)(x.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, {
+                                        (0, x.openUserSettings)(p.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, {
                                             section: I.nc_.GUILD_BOOSTING,
                                         }),
                                     text: N.intl.string(N.t["NQ5g/U"]),
@@ -149,9 +162,9 @@ function O(e) {
             }),
             !r &&
                 (0, i.jsx)(_.Text, {
-                    className: b.yW,
+                    className: v.yW,
                     variant: "text-sm/normal",
-                    children: N.intl.format(c.Fr ? N.t.uxYBEa : N.t.k6haR9, { openAppHook: () => (0, h.A)("app") }),
+                    children: N.intl.format(d.Fr ? N.t.uxYBEa : N.t.k6haR9, { openAppHook: () => (0, h.A)("app") }),
                 }),
         ],
     });
