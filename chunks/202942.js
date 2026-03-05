@@ -34,11 +34,5 @@ e.exports = {
     Y5: "widgetContainer__9d98d",
     R$: "widgetHeaderContainer__9d98d",
     xJ: "sliderContainer__9d98d",
-    xC: "overlaySettingsNux__9d98d",
-    VV: "closeCircleButton__9d98d",
-    tl: "nuxFirstImage__9d98d",
-    lh: "nuxUserSettingsImage__9d98d",
-    vJ: "mainTitleContainer__9d98d",
-    $x: "nuxDivider__9d98d",
     Hh: "systemServiceWarning__9d98d",
 };
