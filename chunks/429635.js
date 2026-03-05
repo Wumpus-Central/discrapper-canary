@@ -1,17 +1,18 @@
-t.d(l, { A: () => r });
-var n = t(64700),
-    s = t(311907),
-    a = t(733391),
-    i = t(832163),
-    d = t(916023);
-function r(e) {
-    let { guildId: l, location: t } = e,
-        r = (0, d.kt)({ location: t }),
-        o = (0, s.bG)([i.A], () => (null != l ? i.A.getStorefrontData(l) : void 0), [l]);
+"use strict";
+n.d(t, { A: () => o });
+var l = n(64700),
+    a = n(311907),
+    r = n(733391),
+    s = n(832163),
+    i = n(916023);
+function o(e) {
+    let { guildId: t, location: n } = e,
+        o = (0, i.kt)({ location: n }),
+        c = (0, a.bG)([s.A], () => (null != t ? s.A.getStorefrontData(t) : void 0), [t]);
     return (
-        n.useEffect(() => {
-            null != l && r && (0, a.Rw)(l, { eager: !1 });
-        }, [l, o, r]),
-        o
+        l.useEffect(() => {
+            null != t && o && (0, r.Rw)(t, { eager: !1 });
+        }, [t, c, o]),
+        c
     );
 }
