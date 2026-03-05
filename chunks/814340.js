@@ -11,17 +11,17 @@ var i = n(627968),
     u = n(442433),
     h = n(390435),
     A = n(775121),
-    p = n(629357),
-    g = n(599677),
-    m = n(12351),
+    m = n(629357),
+    p = n(599677),
+    g = n(12351),
     _ = n(915089),
     f = n(734057),
     x = n(458294),
     C = n(71393),
     E = n(290863),
     I = n(222823),
-    b = n(309010),
-    N = n(607567),
+    N = n(309010),
+    b = n(607567),
     S = n(234320),
     T = n(203982),
     v = n(975571),
@@ -65,11 +65,11 @@ let P = o.Ay.connectStores([I.Ay, f.A], (e) => {
             category: f.A.getChannel(t.parent_id),
         };
     })(U),
-    w = o.Ay.connectStores([N.Ay], (e) => {
+    w = o.Ay.connectStores([b.Ay], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id)
             throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
-        return { voiceStates: N.Ay.getVoiceStates(t.guild_id)[t.id] };
+        return { voiceStates: b.Ay.getVoiceStates(t.guild_id)[t.id] };
     })(U),
     k = o.Ay.connectStores([x.default], (e) => {
         let { guild: t } = e;
@@ -138,12 +138,12 @@ class F extends s.PureComponent {
         this.state.mouseFocusDisabled || (0, y.wf)(this.props.results.indexOf(e));
     };
     selectResult = (e) => {
-        (0, y.F6)(e, this.props.queryMode === p.rD.TEXT_CHANNEL);
+        (0, y.F6)(e, this.props.queryMode === m.rD.TEXT_CHANNEL);
     };
     handleContextMenu = (e) => {
         let t = this.props.results[this.props.selectedIndex];
         switch (t.type) {
-            case p.rD.GUILD:
+            case m.rD.GUILD:
                 return (0, u.L3)(e, async () => {
                     let { default: e } = await Promise.all([
                         n.e("43600"),
@@ -160,14 +160,14 @@ class F extends s.PureComponent {
                         n.e("8458"),
                         n.e("11810"),
                         n.e("39048"),
-                        n.e("36290"),
+                        n.e("56475"),
                         n.e("54469"),
                         n.e("57498"),
                     ]).then(n.bind(n, 544676));
                     return (n) => (0, i.jsx)(e, { ...n, guild: t.record, onSelect: y.jD, hideSettings: !0 });
                 });
-            case p.rD.TEXT_CHANNEL:
-            case p.rD.VOICE_CHANNEL:
+            case m.rD.TEXT_CHANNEL:
+            case m.rD.VOICE_CHANNEL:
                 let s = t.record,
                     l = C.A.getGuild(s.getGuildId());
                 if (null == l) return;
@@ -177,7 +177,7 @@ class F extends s.PureComponent {
                     case L.rbe.GUILD_FORUM:
                     case L.rbe.GUILD_MEDIA:
                         return (0, u.L3)(e, async () => {
-                            let { default: e } = await Promise.all([n.e("97262"), n.e("57287"), n.e("77666")]).then(
+                            let { default: e } = await Promise.all([n.e("97262"), n.e("57287"), n.e("72467")]).then(
                                 n.bind(n, 370372),
                             );
                             return (t) => (0, i.jsx)(e, { ...t, channel: s, guild: l, onSelect: y.jD });
@@ -189,7 +189,7 @@ class F extends s.PureComponent {
                                 n.e("97262"),
                                 n.e("57287"),
                                 n.e("40394"),
-                                n.e("30997"),
+                                n.e("3488"),
                             ]).then(n.bind(n, 698193));
                             return (t) => (0, i.jsx)(e, { ...t, channel: s, guild: l, onSelect: y.jD });
                         });
@@ -212,18 +212,18 @@ class F extends s.PureComponent {
                         });
                 }
                 break;
-            case p.rD.GROUP_DM:
+            case m.rD.GROUP_DM:
                 return (0, u.L3)(e, async () => {
-                    let { default: e } = await Promise.all([n.e("97262"), n.e("15438")]).then(n.bind(n, 4027));
+                    let { default: e } = await Promise.all([n.e("97262"), n.e("93057")]).then(n.bind(n, 4027));
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,
                             channel: t.record,
-                            selected: b.A.getChannelId() === t.record.id,
+                            selected: N.A.getChannelId() === t.record.id,
                             onSelect: y.jD,
                         });
                 });
-            case p.rD.USER:
+            case m.rD.USER:
                 return (0, u.L3)(e, async () => {
                     let { default: e } = await Promise.all([n.e("97262"), n.e("32418"), n.e("22252")]).then(
                         n.bind(n, 668569),
@@ -254,18 +254,18 @@ class F extends s.PureComponent {
                 return;
             }
             case "arrowup":
-                l = (0, p.Vv)(p.vB.UP, l, i);
+                l = (0, m.Vv)(m.vB.UP, l, i);
                 break;
             case "arrowdown":
-                l = (0, p.Vv)(p.vB.DOWN, l, i);
+                l = (0, m.Vv)(m.vB.DOWN, l, i);
                 break;
             case "n":
                 if (!e.ctrlKey) return;
-                l = (0, p.Vv)(p.vB.DOWN, l, i);
+                l = (0, m.Vv)(m.vB.DOWN, l, i);
                 break;
             case "p":
                 if (!e.ctrlKey) return;
-                l = (0, p.Vv)(p.vB.UP, l, i);
+                l = (0, m.Vv)(m.vB.UP, l, i);
                 break;
             default:
                 return;
@@ -347,11 +347,11 @@ class F extends s.PureComponent {
         let { row: t } = e,
             n = this.props.results[t],
             { selectedIndex: s } = this.props,
-            { showScores: l } = g.A.getCurrentConfig({ location: "62f4be_1" }, { autoTrackExposure: !1 });
+            { showScores: l } = p.A.getCurrentConfig({ location: "62f4be_1" }, { autoTrackExposure: !1 });
         switch (n.type) {
-            case p.rD.HEADER:
+            case m.rD.HEADER:
                 return (0, i.jsx)(R.Y9, { children: n.record.text }, `${n.type}-${n.record.id}`);
-            case p.rD.TEXT_CHANNEL:
+            case m.rD.TEXT_CHANNEL:
                 return (0, i.jsx)(
                     P,
                     {
@@ -366,7 +366,7 @@ class F extends s.PureComponent {
                     },
                     `${n.type}-${n.record.id}`,
                 );
-            case p.rD.VOICE_CHANNEL:
+            case m.rD.VOICE_CHANNEL:
                 return (0, i.jsx)(
                     w,
                     {
@@ -381,7 +381,7 @@ class F extends s.PureComponent {
                     },
                     `${n.type}-${n.record.id}`,
                 );
-            case p.rD.GUILD:
+            case m.rD.GUILD:
                 return (0, i.jsx)(
                     k,
                     {
@@ -396,7 +396,7 @@ class F extends s.PureComponent {
                     },
                     `${n.type}-${n.record.id}`,
                 );
-            case p.rD.USER:
+            case m.rD.USER:
                 return (0, i.jsx)(
                     B,
                     {
@@ -412,7 +412,7 @@ class F extends s.PureComponent {
                     },
                     `${n.type}-${n.record.id}`,
                 );
-            case p.rD.GROUP_DM:
+            case m.rD.GROUP_DM:
                 return (0, i.jsx)(
                     V,
                     {
@@ -427,7 +427,7 @@ class F extends s.PureComponent {
                     },
                     `${n.type}-${n.record.id}`,
                 );
-            case p.rD.APPLICATION:
+            case m.rD.APPLICATION:
                 return (0, i.jsx)(
                     R.lg,
                     {
@@ -440,7 +440,7 @@ class F extends s.PureComponent {
                     },
                     `${n.type}-${n.record.id}`,
                 );
-            case p.rD.LINK:
+            case m.rD.LINK:
                 return (0, i.jsx)(
                     R.N_,
                     {
@@ -455,7 +455,7 @@ class F extends s.PureComponent {
                     },
                     `${n.type}-${n.record.id}`,
                 );
-            case p.rD.IN_APP_NAVIGATION:
+            case m.rD.IN_APP_NAVIGATION:
                 return (0, i.jsx)(
                     R.vw,
                     {
@@ -475,14 +475,14 @@ class F extends s.PureComponent {
         }
     };
     renderProtip() {
-        return (0, i.jsx)(m.A, {
+        return (0, i.jsx)(g.A, {
             className: r()(D.PP, { [D.ov]: this.state.query.length > 0 }),
-            type: m.A.Types.INLINE,
+            type: g.A.Types.INLINE,
             children: M.intl.format(M.t.wukqXQ, {
-                userSymbolHook: (e, t) => H(t, p.AT.USER, M.intl.string(M.t.GQRCGn)),
-                textChannelSymbolHook: (e, t) => H(t, p.AT.TEXT_CHANNEL, M.intl.string(M.t.wrwhuZ)),
-                voiceChannelSymbolHook: (e, t) => H(t, p.AT.VOICE_CHANNEL, M.intl.string(M.t["jz+hJp"])),
-                guildSymbolHook: (e, t) => H(t, p.AT.GUILD, M.intl.string(M.t.WuwCWi)),
+                userSymbolHook: (e, t) => H(t, m.AT.USER, M.intl.string(M.t.GQRCGn)),
+                textChannelSymbolHook: (e, t) => H(t, m.AT.TEXT_CHANNEL, M.intl.string(M.t.wrwhuZ)),
+                voiceChannelSymbolHook: (e, t) => H(t, m.AT.VOICE_CHANNEL, M.intl.string(M.t["jz+hJp"])),
+                guildSymbolHook: (e, t) => H(t, m.AT.GUILD, M.intl.string(M.t.WuwCWi)),
                 helpdeskArticle: v.A.getArticleURL(L.MVz.QUICK_SWITCHER_TUTORIAL),
             }),
         });

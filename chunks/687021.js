@@ -1,4 +1,4 @@
-n.d(t, { A: () => x, v: () => p }), n(667532);
+n.d(t, { A: () => x }), n(667532);
 var i = n(627968),
     s = n(64700),
     a = n(503698),
@@ -12,7 +12,7 @@ var i = n(627968),
     m = n(711014),
     A = n(403362),
     g = n(985018),
-    h = n(651203);
+    h = n(306505);
 function x(e) {
     let { guildId: t, className: n, globalOption: s, hideDivider: a = !1, onChange: r, renderOptionSuffix: o } = e;
     return (0, i.jsx)(d.A, {

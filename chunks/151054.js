@@ -16,47 +16,54 @@ function h(e) {
     return null != n && m.D.includes(n) && ((l = [n]), (i = n)), { query: t, queryMode: i, resultTypes: l };
 }
 function b(e) {
-    let { targetDestination: t, selectedDestinations: n, originDestination: a, includeMissingDMs: m = !1 } = e,
-        b = (0, i.bG)([u.default], () => u.default.getId()),
-        f = l.useMemo(
-            () => ({ searchOptions: { blacklist: new Set([`user:${b}`]), frecencyBoosters: !0, userFilters: null } }),
-            [b],
+    let {
+            targetDestination: t,
+            selectedDestinations: n,
+            originDestination: a,
+            channelFilter: m,
+            includeMissingDMs: b = !1,
+        } = e,
+        f = (0, i.bG)([u.default], () => u.default.getId()),
+        x = l.useMemo(
+            () => ({ searchOptions: { blacklist: new Set([`user:${f}`]), frecencyBoosters: !0, userFilters: null } }),
+            [f],
         ),
-        { search: x, query: g, results: p } = (0, d.A)(f),
-        [A, _] = l.useState(h("")),
-        v = l.useCallback((e) => _(h(e)), [_]),
-        { queryMode: y } = A,
-        S = l.useRef(null),
-        C = l.useRef(n),
-        j = g !== S.current ? n : C.current;
+        { search: g, query: p, results: A } = (0, d.A)(x),
+        [_, v] = l.useState(h("")),
+        y = l.useCallback((e) => v(h(e)), [v]),
+        { queryMode: S } = _,
+        C = l.useRef(null),
+        j = l.useRef(n),
+        N = p !== C.current ? n : j.current;
     l.useEffect(() => {
-        g !== S.current && (C.current = n), (S.current = g);
-    }, [g, n]),
+        p !== C.current && (j.current = n), (C.current = p);
+    }, [p, n]),
         l.useLayoutEffect(() => {
-            let { query: e, resultTypes: t } = A;
-            x({ query: e, resultTypes: t });
-        }, [x, A]),
+            let { query: e, resultTypes: t } = _;
+            g({ query: e, resultTypes: t });
+        }, [g, _]),
         (0, r.k)();
-    let N = (0, i.bG)([o.A], () => o.A.getFrequentlyWithoutFetchingLatest()),
-        T = (0, i.bG)([s.A], () => s.A.isConnected()),
-        L = "" !== g;
+    let T = (0, i.bG)([o.A], () => o.A.getFrequentlyWithoutFetchingLatest()),
+        L = (0, i.bG)([s.A], () => s.A.isConnected()),
+        D = "" !== p;
     return {
         results: l.useMemo(
             () =>
                 (0, c.Ay)({
-                    results: p,
-                    hasQuery: L,
-                    queryMode: y,
+                    results: A,
+                    hasQuery: D,
+                    queryMode: S,
                     targetDestination: t,
-                    frequentChannels: N,
+                    frequentChannels: T,
                     selectedDestinations: n,
-                    pinnedDestinations: j,
+                    pinnedDestinations: N,
                     originDestination: a,
-                    includeMissingDMs: m,
-                    isConnected: T,
+                    channelFilter: m,
+                    includeMissingDMs: b,
+                    isConnected: L,
                 }),
-            [p, L, y, t, N, n, j, a, m, T],
+            [A, D, S, t, T, n, N, a, m, b, L],
         ),
-        updateSearchText: v,
+        updateSearchText: y,
     };
 }
