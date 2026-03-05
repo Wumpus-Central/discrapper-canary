@@ -2533,6 +2533,7 @@
 @media (max-height:550px),
 (max-width:485px) {
     .fullScreenOnMobile__8a031 {
+        height: 100dvh;
         padding: 0
     }
 
