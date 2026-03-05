@@ -1,44 +1,43 @@
-"use strict";
-r.d(t, { A: () => o });
-var a = r(627968);
+r.d(t, { A: () => c });
+var i = r(627968);
 r(64700);
-var s = r(503698),
-    n = r.n(s),
-    l = r(397927),
-    c = r(376092),
-    i = r(565928);
-function o(e) {
+var a = r(503698),
+    s = r.n(a),
+    n = r(397927),
+    o = r(376092),
+    l = r(565928);
+function c(e) {
     let {
         grantedPermissions: t,
         disabledPermissions: r,
-        grantedPermissionsHeader: s,
-        disabledPermissionsHeader: o,
-        className: d,
+        grantedPermissionsHeader: a,
+        disabledPermissionsHeader: c,
+        className: _,
     } = e;
-    return (0, a.jsxs)("div", {
-        className: n()(i.p_, d),
+    return (0, i.jsxs)("div", {
+        className: s()(l.p_, _),
         children: [
             null != t && t.length > 0
-                ? (0, a.jsxs)(a.Fragment, {
+                ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          null != s
-                              ? (0, a.jsx)(l.Heading, {
+                          null != a
+                              ? (0, i.jsx)(n.Heading, {
                                     variant: "heading-sm/semibold",
                                     color: "text-strong",
-                                    className: i.wx,
-                                    children: s,
+                                    className: l.wx,
+                                    children: a,
                                 })
                               : null,
-                          (0, a.jsx)("div", {
-                              className: i.kL,
+                          (0, i.jsx)("div", {
+                              className: l.kL,
                               children: t.map((e) =>
-                                  (0, a.jsxs)(
+                                  (0, i.jsxs)(
                                       "div",
                                       {
-                                          className: i.EK,
+                                          className: l.EK,
                                           children: [
-                                              (0, a.jsx)(l.A9s, { size: "xs", color: "currentColor", className: i.z6 }),
-                                              (0, a.jsx)(l.Text, { variant: "text-sm/normal", children: (0, c.hx)(e) }),
+                                              (0, i.jsx)(n.A9s, { size: "xs", color: "currentColor", className: l.z6 }),
+                                              (0, i.jsx)(n.Text, { variant: "text-sm/normal", children: (0, o.hx)(e) }),
                                           ],
                                       },
                                       e.toString(),
@@ -49,26 +48,26 @@ function o(e) {
                   })
                 : null,
             null != r && r.length > 0
-                ? (0, a.jsxs)(a.Fragment, {
+                ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          null != o
-                              ? (0, a.jsx)(l.Heading, {
+                          null != c
+                              ? (0, i.jsx)(n.Heading, {
                                     variant: "heading-sm/semibold",
                                     color: "text-strong",
-                                    className: i.wx,
-                                    children: o,
+                                    className: l.wx,
+                                    children: c,
                                 })
                               : null,
-                          (0, a.jsx)("div", {
-                              className: i.kL,
+                          (0, i.jsx)("div", {
+                              className: l.kL,
                               children: r.map((e) =>
-                                  (0, a.jsxs)(
+                                  (0, i.jsxs)(
                                       "div",
                                       {
-                                          className: i.EK,
+                                          className: l.EK,
                                           children: [
-                                              (0, a.jsx)(l.PGe, { size: "xs", color: "currentColor", className: i.$A }),
-                                              (0, a.jsx)(l.Text, { variant: "text-sm/normal", children: (0, c.hx)(e) }),
+                                              (0, i.jsx)(n.PGe, { size: "xs", color: "currentColor", className: l.$A }),
+                                              (0, i.jsx)(n.Text, { variant: "text-sm/normal", children: (0, o.hx)(e) }),
                                           ],
                                       },
                                       e.toString(),

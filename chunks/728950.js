@@ -29,11 +29,11 @@ function c(e) {
                 { STEPS: r } = await Promise.all([
                     i.e("41353"),
                     i.e("62175"),
-                    i.e("2292"),
+                    i.e("12437"),
                     i.e("29716"),
                     i.e("14704"),
                     i.e("2824"),
-                    i.e("50687"),
+                    i.e("45123"),
                 ]).then(i.bind(i, 674619));
             return (i) => {
                 let { onClose: _, ...N } = i;

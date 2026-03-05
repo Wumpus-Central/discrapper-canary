@@ -1,46 +1,39 @@
-i.d(n, { default: () => _ });
-var e = i(627968);
-i(64700);
-var a = i(158954),
-    o = i(397927),
-    s = i(253932),
-    l = i(780964),
-    r = i(358776),
-    c = i(840065),
-    p = i(954571),
-    C = i(652215),
-    d = i(355097),
-    u = i(985018),
-    E = i(575621);
-function _(t) {
-    let { onClose: n, transitionState: i } = t;
-    function _() {
-        n();
-        let t = (0, r.WJ)("LegacyChatInputExplanationModal");
-        (0, c.openUserSettings)(t ? l.X.ENABLE_LEGACY_CHAT_INPUT : l.X.ACCESSIBILITY_PANEL, {
-            section: C.nc_.ACCESSIBILITY,
-            scrollPosition: t ? void 0 : d.Yu.LEGACY_CHAT_INPUT,
-        });
+e.d(n, { default: () => C });
+var i = e(627968);
+e(64700);
+var a = e(158954),
+    s = e(397927),
+    o = e(253932),
+    r = e(780964),
+    c = e(840065),
+    l = e(954571),
+    p = e(652215),
+    d = e(985018),
+    u = e(575621);
+function C(t) {
+    let { onClose: n, transitionState: e } = t;
+    function C() {
+        n(), (0, c.openUserSettings)(r.X.ENABLE_LEGACY_CHAT_INPUT, { section: p.nc_.ACCESSIBILITY });
     }
-    return (0, e.jsx)(a.ExpressiveModal, {
-        transitionState: i,
-        title: u.intl.string(u.t.G9HG5O),
-        subtitle: u.intl.format(u.t.ZtUieE, {
-            openSettingsHook: (t, n) => (0, e.jsx)(o.MzZ, { onClick: _, children: t }, n),
+    return (0, i.jsx)(a.ExpressiveModal, {
+        transitionState: e,
+        title: d.intl.string(d.t.G9HG5O),
+        subtitle: d.intl.format(d.t.ZtUieE, {
+            openSettingsHook: (t, n) => (0, i.jsx)(s.MzZ, { onClick: C, children: t }, n),
         }),
         onClose: n,
-        graphic: { type: "image", src: E },
+        graphic: { type: "image", src: u },
         actions: [
-            { variant: "secondary", text: u.intl.string(u.t.f3Pet9), onClick: n },
+            { variant: "secondary", text: d.intl.string(d.t.f3Pet9), onClick: n },
             {
                 variant: "primary",
-                text: u.intl.string(u.t.VdzwlA),
+                text: d.intl.string(d.t.VdzwlA),
                 onClick: function () {
-                    p.default.track(C.HAw.LEGACY_CHAT_INPUT_TOGGLED, {
+                    l.default.track(p.HAw.LEGACY_CHAT_INPUT_TOGGLED, {
                         enabled: !1,
                         location: "LegacyChatInputExplanationModal",
                     }),
-                        s.D_.updateSetting(!1),
+                        o.D_.updateSetting(!1),
                         n();
                 },
             },

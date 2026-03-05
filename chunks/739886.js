@@ -1,11 +1,11 @@
-i.d(e, { I: () => o });
-var n = i(419954),
-    l = i(780964),
-    s = i(120929),
-    r = i(312574),
-    a = i(861061),
-    u = i(985018);
-let o = (0, n.WI)(l.X.ACTIVITY_SECTION, {
-    useTitle: () => u.intl.string(u.t.SmHCFf),
-    buildLayout: () => [s.T0, a.Jj, r.u],
+n.d(t, { I: () => d });
+var i = n(419954),
+    s = n(780964),
+    l = n(120929),
+    a = n(312574),
+    r = n(861061),
+    o = n(985018);
+let d = (0, i.WI)(s.X.ACTIVITY_SECTION, {
+    useTitle: () => o.intl.string(o.t.SmHCFf),
+    buildLayout: () => [l.T, r.J, a.u],
 });

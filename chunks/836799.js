@@ -1,23 +1,15 @@
-i.d(t, { $: () => S });
-var n = i(934551),
-    l = i(419954),
-    s = i(723702),
-    r = i(780964),
-    a = i(358776),
-    u = i(62218),
-    o = i(477908),
-    d = i(531525),
-    _ = i(985018);
-let T = (0, l.t_)(r.X.WINDOWS_PANEL, { useTitle: () => _.intl.string(_.t.ZkDZov), buildLayout: () => [o.w] }),
-    A = (0, l.t_)(r.X.WINDOWS_PANEL, {
-        useTitle: () => _.intl.string(_.t.ZkDZov),
-        StronglyDiscouragedCustomComponent: u.A,
-        buildLayout: () => [],
-    }),
-    S = (0, l.i4)(r.X.WINDOWS_SIDEBAR_ITEM, {
-        useTitle: () => _.intl.string(_.t.ZkDZov),
-        getLegacySearchKey: () => ((0, a.WJ)("WindowsPanel") ? void 0 : d.H.WINDOW_SETTINGS),
-        icon: n.ScreenIcon,
-        usePredicate: () => !(0, a.bp)("WindowsSidebarItem") && s.isPlatformEmbedded && (0, s.isWindows)(),
-        buildLayout: () => [(0, a.WJ)("WindowsPanel") ? T : A],
+n.d(t, { $: () => u });
+var i = n(934551),
+    s = n(419954),
+    l = n(723702),
+    a = n(780964),
+    r = n(358776),
+    o = n(477908),
+    d = n(985018);
+let c = (0, s.t_)(a.X.WINDOWS_PANEL, { useTitle: () => d.intl.string(d.t.ZkDZov), buildLayout: () => [o.w] }),
+    u = (0, s.i4)(a.X.WINDOWS_SIDEBAR_ITEM, {
+        useTitle: () => d.intl.string(d.t.ZkDZov),
+        icon: i.ScreenIcon,
+        usePredicate: () => !(0, r.bp)("WindowsSidebarItem") && l.isPlatformEmbedded && (0, l.isWindows)(),
+        buildLayout: () => [c],
     });

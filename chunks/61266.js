@@ -1,31 +1,30 @@
-"use strict";
-a.d(t, { A: () => p });
-var n = a(627968),
-    r = a(64700),
-    s = a(503698),
-    i = a.n(s),
-    l = a(46054),
-    o = a(465364),
-    c = a(207963),
-    _ = a(647901),
-    d = a(560438),
-    u = a(483496),
-    f = a(206314);
-function p(e) {
+n.d(t, { A: () => x });
+var l = n(627968),
+    a = n(64700),
+    r = n(503698),
+    i = n.n(r),
+    s = n(46054),
+    d = n(465364),
+    o = n(207963),
+    c = n(647901),
+    u = n(560438),
+    _ = n(483496),
+    m = n(206314);
+function x(e) {
     let t,
-        { content: a, className: s } = e,
-        p =
-            ((t = (0, c.jc)()),
-            (0, r.useMemo)(() => {
+        { content: n, className: r } = e,
+        x =
+            ((t = (0, o.jc)()),
+            (0, a.useMemo)(() => {
                 let e;
                 return null === t
                     ? null
                     : ((e =
                           null != t.message
-                              ? (0, o.ko)(t.message, d.l)
-                              : (0, o.Le)({ channelId: t.channelId, renderOptions: d.l })),
-                      l.A.parse(a, !0, e));
-            }, [a, t])),
-        m = (0, _.X)();
-    return (0, n.jsx)("div", { className: i()(s, f.PT, u.T, m.className), children: p });
+                              ? (0, d.ko)(t.message, u.l)
+                              : (0, d.Le)({ channelId: t.channelId, renderOptions: u.l })),
+                      s.A.parse(n, !0, e));
+            }, [n, t])),
+        p = (0, c.X)();
+    return (0, l.jsx)("div", { className: i()(r, m.PT, _.T, p.className), children: x });
 }

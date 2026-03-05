@@ -1,105 +1,104 @@
-"use strict";
-a.d(t, { Ay: () => A, B5: () => p, BP: () => g, FQ: () => u, Uj: () => h, VF: () => b, _G: () => m });
-var n = a(627968);
-a(64700);
-var r = a(503698),
-    s = a.n(r),
-    i = a(735438),
-    l = a.n(i),
-    o = a(397927),
-    c = a(406590);
-function _(e) {
+n.d(t, { Ay: () => v, B5: () => x, BP: () => g, FQ: () => _, Uj: () => h, VF: () => A, _G: () => p });
+var l = n(627968);
+n(64700);
+var a = n(503698),
+    r = n.n(a),
+    i = n(735438),
+    s = n.n(i),
+    d = n(397927),
+    o = n(406590);
+function c(e) {
     return `${e / 16}rem`;
 }
-function d() {
-    return (0, n.jsx)("div", { className: c.my, style: { opacity: 0.08 } });
+function u() {
+    return (0, l.jsx)("div", { className: o.my, style: { opacity: 0.08 } });
 }
-function u(e) {
-    let { width: t, height: a, opacity: r, className: i } = e,
-        o = { width: _(t), opacity: null != r ? r : l().random(0.02, 0.08) };
-    return null != a && (o.height = _(a)), (0, n.jsx)("div", { className: s()(i, { [c.av]: !0 }), style: o });
+function _(e) {
+    let { width: t, height: n, opacity: a, className: i } = e,
+        d = { width: c(t), opacity: null != a ? a : s().random(0.02, 0.08) };
+    return null != n && (d.height = c(n)), (0, l.jsx)("div", { className: r()(i, { [o.av]: !0 }), style: d });
 }
-function f(e) {
+function m(e) {
     let t,
         {
-            groupStart: a = !1,
-            compact: r = !1,
+            groupStart: n = !1,
+            compact: a = !1,
             attachmentSpecs: i,
-            usernameWidth: _,
-            usernameOpacity: f,
-            className: p,
-            style: m,
+            usernameWidth: c,
+            usernameOpacity: m,
+            className: x,
+            style: p,
         } = e,
-        g = r ? 50 : l().random(40, 50);
+        g = a ? 50 : s().random(40, 50);
     return (
-        !r && a
-            ? (t = (0, n.jsxs)(n.Fragment, {
+        !a && n
+            ? (t = (0, l.jsxs)(l.Fragment, {
                   children: [
-                      (0, n.jsx)(d, {}),
-                      (0, n.jsx)(o.H, {
-                          className: c.wx,
-                          children: (0, n.jsx)(u, { width: _, opacity: f, className: c.__invalid_username }),
+                      (0, l.jsx)(u, {}),
+                      (0, l.jsx)(d.H, {
+                          className: o.wx,
+                          children: (0, l.jsx)(_, { width: c, opacity: m, className: o.__invalid_username }),
                       }),
                   ],
               }))
-            : r &&
-              (t = (0, n.jsxs)(n.Fragment, {
+            : a &&
+              (t = (0, l.jsxs)(l.Fragment, {
                   children: [
-                      r && (0, n.jsx)(u, { width: g, className: s()({ [c.ce]: !0, [c.R]: !a }) }),
-                      (0, n.jsx)(o.H, { className: c.wx, children: (0, n.jsx)(u, { width: _, opacity: f }) }),
+                      a && (0, l.jsx)(_, { width: g, className: r()({ [o.ce]: !0, [o.R]: !n }) }),
+                      (0, l.jsx)(d.H, { className: o.wx, children: (0, l.jsx)(_, { width: c, opacity: m }) }),
                   ],
               })),
-        (0, n.jsxs)("div", {
+        (0, l.jsxs)("div", {
             "aria-hidden": !0,
-            className: s()(p, { [c.iE]: !0, [c.oE]: r, [c.E]: !r }),
-            style: m,
+            className: r()(x, { [o.iE]: !0, [o.oE]: a, [o.E]: !a }),
+            style: p,
             children: [
-                (0, n.jsxs)("div", {
-                    className: c.PG,
+                (0, l.jsxs)("div", {
+                    className: o.PG,
                     children: [
                         t,
-                        (0, n.jsx)("div", {
-                            className: c.Qs,
-                            children: Array(l().random(3, 8))
+                        (0, l.jsx)("div", {
+                            className: o.Qs,
+                            children: Array(s().random(3, 8))
                                 .fill(null)
-                                .map(() => l().random(30, 80))
-                                .map((e, t) => (0, n.jsx)(u, { width: e, opacity: 0.06 }, t)),
+                                .map(() => s().random(30, 80))
+                                .map((e, t) => (0, l.jsx)(_, { width: e, opacity: 0.06 }, t)),
                         }),
                     ],
                 }),
                 null != i &&
-                    (0, n.jsx)("div", {
-                        className: c.Dq,
-                        children: (0, n.jsx)("div", { className: c.oh, style: { opacity: 0.03, ...i } }),
+                    (0, l.jsx)("div", {
+                        className: o.Dq,
+                        children: (0, l.jsx)("div", { className: o.oh, style: { opacity: 0.03, ...i } }),
                     }),
             ],
         })
     );
 }
-let p = 44,
-    m = 22,
+let x = 44,
+    p = 22,
     g = 26,
     h = 26,
-    b = 6;
-function A(e) {
-    let { messages: t, groupSpacing: a = 0, compact: r = !1, attachmentSpecs: s, className: i } = e,
-        o = null != s ? (s.last ? t - 1 : l().random(0, t - 1)) : -1,
-        c = l().random(80, 120),
-        d = l().random(0.1, 0.2);
-    return (0, n.jsx)(n.Fragment, {
+    A = 6;
+function v(e) {
+    let { messages: t, groupSpacing: n = 0, compact: a = !1, attachmentSpecs: r, className: i } = e,
+        d = null != r ? (r.last ? t - 1 : s().random(0, t - 1)) : -1,
+        o = s().random(80, 120),
+        u = s().random(0.1, 0.2);
+    return (0, l.jsx)(l.Fragment, {
         children: Array(t)
             .fill(null)
             .map((e, t) =>
-                (0, n.jsx)(
-                    f,
+                (0, l.jsx)(
+                    m,
                     {
-                        compact: r,
+                        compact: a,
                         className: i,
-                        usernameWidth: c,
-                        usernameOpacity: d,
+                        usernameWidth: o,
+                        usernameOpacity: u,
                         groupStart: 0 === t,
-                        attachmentSpecs: t === o ? s : void 0,
-                        style: 0 === t ? { marginTop: _(a) } : void 0,
+                        attachmentSpecs: t === d ? r : void 0,
+                        style: 0 === t ? { marginTop: c(n) } : void 0,
                     },
                     t,
                 ),

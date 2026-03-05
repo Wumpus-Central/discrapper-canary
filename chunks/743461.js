@@ -1,100 +1,93 @@
-n.d(e, { default: () => M });
+n.d(e, { default: () => L });
 var i = n(627968),
     r = n(64700),
     l = n(158954),
     E = n(397927),
-    o = n(975807),
-    _ = n(935649),
-    s = n(847599),
-    a = n(36149),
+    s = n(975807),
+    a = n(935649),
+    o = n(847599),
+    _ = n(36149),
     I = n(945276),
     A = n(780964),
-    C = n(358776),
-    d = n(840065),
-    L = n(975571),
+    C = n(840065),
+    d = n(975571),
     c = n(390248),
-    R = n(652215),
-    u = n(355097),
-    T = n(985018);
-let M = (t) => {
-    let { channelId: e, messageId: M, transitionState: g, onClose: N } = t,
-        O = (0, I.A)(),
-        f = (0, a.yM)(),
-        P = (0, c._R)(),
-        h = T.intl.string(T.t["9KiIz6"]),
-        S = r.useMemo(() => f && P, [f, P]),
-        D = r.useCallback(
+    u = n(652215),
+    R = n(985018);
+let L = (t) => {
+    let { channelId: e, messageId: L, transitionState: T, onClose: M } = t,
+        g = (0, I.A)(),
+        f = (0, _.yM)(),
+        h = (0, c._R)(),
+        O = R.intl.string(R.t["9KiIz6"]),
+        S = r.useMemo(() => f && h, [f, h]),
+        N = r.useCallback(
             (t) => {
-                (0, c.hv)({ action: t, channelId: e, messageId: M });
+                (0, c.hv)({ action: t, channelId: e, messageId: L });
             },
-            [e, M],
+            [e, L],
         ),
-        p = r.useCallback(() => {
-            N(),
-                D(c.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE),
+        P = r.useCallback(() => {
+            M(),
+                N(c.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE),
                 (0, E.mMO)(async () => {
                     let { default: t } = await n(652442);
-                    return (n) => (0, i.jsx)(t, { channelId: e, messageId: M, ...n });
+                    return (n) => (0, i.jsx)(t, { channelId: e, messageId: L, ...n });
                 });
-        }, [e, M, N, D]);
+        }, [e, L, M, N]);
     return (
         r.useEffect(() => {
-            (0, c.hv)({ action: c.rY.EXPLICIT_MEDIA_LEARN_MORE_VIEWED, channelId: e, messageId: M });
-        }, [e, M]),
+            (0, c.hv)({ action: c.rY.EXPLICIT_MEDIA_LEARN_MORE_VIEWED, channelId: e, messageId: L });
+        }, [e, L]),
         (0, i.jsx)(l.Modal, {
-            title: T.intl.string(T.t.sGW77l),
+            title: R.intl.string(R.t.sGW77l),
             subtitle: (function () {
                 if (S)
-                    return T.intl.format(T.t.KEPOlE, {
+                    return R.intl.format(R.t.KEPOlE, {
                         handleOnHelpUrlHook: () => {
-                            _.A.openUrl(L.A.getArticleURL(R.MVz.TIGGER_PAWTECT_LEARN_MORE)),
-                                D(c.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE);
+                            a.A.openUrl(d.A.getArticleURL(u.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                                N(c.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE);
                         },
                     });
-                let t = T.intl.string(T.t.RUw0ZC),
-                    e = T.intl.string(T.t["E/oQYL"]);
-                return O ? t : e;
+                let t = R.intl.string(R.t.RUw0ZC),
+                    e = R.intl.string(R.t["E/oQYL"]);
+                return g ? t : e;
             })(),
             actions: [
                 (function () {
-                    if (!P && !S) return { text: T.intl.string(T.t.ZH7P2h), onClick: p, variant: "secondary" };
+                    if (!h && !S) return { text: R.intl.string(R.t.ZH7P2h), onClick: P, variant: "secondary" };
                 })(),
                 S
                     ? {
-                          text: h,
+                          text: O,
                           onClick: function () {
-                              N(),
-                                  D(c.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY),
-                                  _.A.showAgeVerificationGetStartedModal({
-                                      entryPoint: s.q1.SENSITIVE_MEDIA_LEARN_MORE,
+                              M(),
+                                  N(c.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY),
+                                  a.A.showAgeVerificationGetStartedModal({
+                                      entryPoint: o.q1.SENSITIVE_MEDIA_LEARN_MORE,
                                   });
                           },
                       }
-                    : O
+                    : g
                       ? {
-                            text: T.intl.string(T.t["9D+zGX"]),
+                            text: R.intl.string(R.t["9D+zGX"]),
                             onClick: function () {
-                                D(c.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS);
-                                let t = (0, C.WJ)("ExplicitMediaLearnMoreModal");
-                                (0, d.openUserSettings)(
-                                    t ? A.X.CONTENT_AND_SOCIAL_CONTENT_FILTERS_SETTING : A.X.CONTENT_AND_SOCIAL_PANEL,
-                                    {
-                                        section: R.nc_.CONTENT_AND_SOCIAL,
-                                        scrollPosition: t ? void 0 : u.d1.EXPLICIT_MEDIA_REDACTION_V2,
-                                    },
-                                ),
-                                    N();
+                                N(c.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS),
+                                    (0, C.openUserSettings)(A.X.CONTENT_AND_SOCIAL_CONTENT_FILTERS_SETTING, {
+                                        section: u.nc_.CONTENT_AND_SOCIAL,
+                                    }),
+                                    M();
                             },
                         }
                       : {
-                            text: T.intl.string(T.t.hvVgAZ),
+                            text: R.intl.string(R.t.hvVgAZ),
                             onClick: () => {
-                                (0, o.A)(L.A.getArticleURL(R.MVz.EXPLICIT_MEDIA_REDACTION));
+                                (0, s.A)(d.A.getArticleURL(u.MVz.EXPLICIT_MEDIA_REDACTION));
                             },
                         },
             ].filter((t) => void 0 !== t),
-            onClose: () => (N(), D(c.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS), Promise.resolve()),
-            transitionState: g,
+            onClose: () => (M(), N(c.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS), Promise.resolve()),
+            transitionState: T,
         })
     );
 };

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => T, m: () => I });
+n.d(t, { A: () => I, m: () => A });
 var r = n(627968),
     i = n(64700),
     s = n(311907),
@@ -8,30 +8,29 @@ var r = n(627968),
     l = n(73153),
     u = n(915089),
     c = n(450232),
-    d = n(358776),
-    _ = n(193658),
-    f = n(526162),
-    p = n(603880),
-    h = n(635917),
-    m = n(355097),
-    E = n(985018),
-    g = n(638959),
-    A = n(944255);
-function I(e) {
+    d = n(193658),
+    _ = n(526162),
+    f = n(603880),
+    p = n(635917),
+    h = n(355097),
+    m = n(985018),
+    E = n(638959),
+    g = n(944255);
+function A(e) {
     let { disabled: t, size: n } = e,
-        [i] = (0, s.yK)([f.A], () => [f.A.getCurrentDesktopIcon()]),
+        [i] = (0, s.yK)([_.A], () => [_.A.getCurrentDesktopIcon()]),
         a = (e) => {
             l.h.dispatch({ type: "APP_ICON_UPDATED", id: e });
         };
     return (0, r.jsx)(r.Fragment, {
-        children: (0, h.v8)()
+        children: (0, p.v8)()
             .filter((e) => {
                 let { isHidden: t } = e;
                 return !t;
             })
             .map((e, s) =>
                 (0, r.jsx)(
-                    p.A,
+                    f.A,
                     {
                         icon: e,
                         isSelected: i === e.id,
@@ -46,44 +45,43 @@ function I(e) {
             ),
     });
 }
-function T(e) {
-    let { className: t, disabled: n, isEditor: s, renderCTAButtons: l, iconSize: f } = e,
-        p = (0, d.dk)("AppIconSelectionGroup"),
-        h = i.useRef(null);
-    (0, _.A)(h, m.kq.CUSTOM_APP_ICONS);
-    let T = (0, u.GV)(),
-        { ref: S, ...y } = (0, a._u)({ orientation: "horizontal", labelledBy: T });
+function I(e) {
+    let { className: t, disabled: n, isEditor: s, renderCTAButtons: l, iconSize: _ } = e,
+        f = i.useRef(null);
+    (0, d.A)(f, h.kq.CUSTOM_APP_ICONS);
+    let p = (0, u.GV)(),
+        { ref: I, ...T } = (0, a._u)({ orientation: "horizontal", labelledBy: p });
     return (0, r.jsx)("div", {
-        ref: h,
+        ref: f,
         children: (0, r.jsx)("div", {
-            ...y,
-            ref: S,
+            ...T,
+            ref: I,
             children: (0, r.jsxs)("div", {
                 className: t,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: g.wx,
+                        className: E.wx,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: g.so,
+                                className: E.so,
                                 children: [
                                     !s &&
                                         (0, r.jsxs)("div", {
-                                            className: g.DD,
+                                            className: E.DD,
                                             children: [
                                                 (0, r.jsx)(o.Heading, {
-                                                    className: g.Qw,
-                                                    variant: p ? "heading-xl/normal" : "text-lg/medium",
-                                                    color: p ? "text-strong" : void 0,
-                                                    children: E.intl.string(E.t.NThqTw),
+                                                    className: E.Qw,
+                                                    variant: "heading-xl/normal",
+                                                    color: "text-strong",
+                                                    children: m.intl.string(m.t.NThqTw),
                                                 }),
                                                 (0, r.jsx)(c.A, { color: o.LU0.colors.ICON_STRONG, size: "sm" }),
                                             ],
                                         }),
                                     (0, r.jsx)(o.Heading, {
                                         variant: "text-sm/normal",
-                                        className: A.W$,
-                                        children: E.intl.string(E.t.IgENJo),
+                                        className: g.W$,
+                                        children: m.intl.string(m.t.IgENJo),
                                     }),
                                 ],
                             }),
@@ -95,7 +93,7 @@ function T(e) {
                         wrap: !0,
                         gap: 8,
                         style: { marginTop: 16 },
-                        children: (0, r.jsx)(I, { disabled: n, size: f }),
+                        children: (0, r.jsx)(A, { disabled: n, size: _ }),
                     }),
                 ],
             }),

@@ -3,8 +3,8 @@ n.d(t, { A: () => L });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(311907),
+    a = n.n(l),
+    r = n(311907),
     o = n(397927),
     c = n(80682),
     d = n(845056),
@@ -31,7 +31,7 @@ var i = n(627968),
     O = n(248789);
 function L(e) {
     let t,
-        { channel: l, guild: a, onAction: h, voiceStates: g, isChannelSelected: _, shouldShowSettingNudge: f } = e;
+        { channel: l, guild: r, onAction: h, voiceStates: g, isChannelSelected: _, shouldShowSettingNudge: f } = e;
     (t = s.useMemo(
         () =>
             null == g || g.length > 50
@@ -57,7 +57,7 @@ function L(e) {
     }, [L, l.id]),
     L)
         ? (0, i.jsxs)(o.HOs, {
-              className: r()(O.popover, j.kL),
+              className: a()(O.popover, j.kL),
               children: [
                   (0, i.jsx)(M, { channel: l, isChannelSelected: _, voiceStatesCount: g?.length ?? 0 }),
                   (0, i.jsx)("div", { className: j.zN }),
@@ -69,18 +69,18 @@ function L(e) {
                       ),
                   ),
                   b.map((e, t) => {
-                      let { members: n, activity: r } = e,
-                          a = r.application_id;
-                      return (null != N && (a = N), R && null != a && T.sQ.has(a))
+                      let { members: n, activity: a } = e,
+                          r = a.application_id;
+                      return (null != N && (r = N), R && null != r && T.sQ.has(r))
                           ? (0, i.jsxs)(
                                 s.Fragment,
                                 {
                                     children: [
-                                        (0, i.jsx)(E.A, { presenceActivity: r, channel: l, members: n, onAction: h }),
+                                        (0, i.jsx)(E.A, { presenceActivity: a, channel: l, members: n, onAction: h }),
                                         (0, i.jsx)(p.A, {
                                             className: j.L,
                                             rewardOfferNoticeClassName: j.Nh,
-                                            applicationId: a,
+                                            applicationId: r,
                                             userIds: n.map((e) => e.user.id),
                                             location: "voice_channel",
                                             guildId: l.guild_id,
@@ -92,7 +92,7 @@ function L(e) {
                                 },
                                 `${t}-with-gifting-breadcrumb`,
                             )
-                          : (0, i.jsx)(E.A, { presenceActivity: r, channel: l, members: n, onAction: h }, t);
+                          : (0, i.jsx)(E.A, { presenceActivity: a, channel: l, members: n, onAction: h }, t);
                   }),
                   f &&
                       (0, i.jsxs)(i.Fragment, {
@@ -107,24 +107,10 @@ function L(e) {
                                           onClick: () => {
                                               (0, o.mMO)(async () => {
                                                   let { default: e } = await Promise.all([
-                                                      n.e("62175"),
-                                                      n.e("2292"),
-                                                      n.e("67231"),
-                                                      n.e("62733"),
-                                                      n.e("83518"),
-                                                      n.e("34749"),
-                                                      n.e("24771"),
-                                                      n.e("12664"),
-                                                      n.e("44667"),
-                                                      n.e("55090"),
-                                                      n.e("7803"),
-                                                      n.e("84704"),
-                                                      n.e("67646"),
-                                                      n.e("63742"),
-                                                      n.e("7525"),
-                                                      n.e("47065"),
+                                                      n.e("51145"),
+                                                      n.e("64847"),
                                                   ]).then(n.bind(n, 585265));
-                                                  return (t) => (0, i.jsx)(e, { ...t, guild: a });
+                                                  return (t) => (0, i.jsx)(e, { ...t, guild: r });
                                               });
                                           },
                                       }),
@@ -138,14 +124,14 @@ function L(e) {
 }
 function M(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: s } = e,
-        l = (0, a.bG)([_.A], () => !_.A.can(S.xBc.CONNECT, t)),
-        o = (0, a.bG)([f.A], () => f.A.hasVideo(t.id)),
+        l = (0, r.bG)([_.A], () => !_.A.can(S.xBc.CONNECT, t)),
+        o = (0, r.bG)([f.A], () => f.A.hasVideo(t.id)),
         c = (0, C.Ay)({ channel: t, locked: l, video: o, selected: n }),
-        d = (0, a.bG)([g.A], () => g.A.getGuild(t.guild_id));
+        d = (0, r.bG)([g.A], () => g.A.getGuild(t.guild_id));
     return null == (0, h.gU)(t, d)
         ? null
         : (0, i.jsxs)("div", {
-              className: r()(j.oT, R.oT),
+              className: a()(j.oT, R.oT),
               children: [
                   (0, i.jsx)(I.A, { channel: t }),
                   c ? (0, i.jsx)(N.A, { userCount: s, video: o, channel: t }) : (0, i.jsx)(b.A, { userCount: s }),

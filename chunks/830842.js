@@ -1,26 +1,12 @@
-i.d(e, { _: () => S });
-var n = i(934551),
-    l = i(419954),
-    s = i(780964),
-    r = i(358776),
-    a = i(69435),
-    u = i(945353),
-    o = i(531525),
-    d = i(985018);
-let T = (0, l.t_)(s.X.ADVANCED_PANEL, {
-        useTitle: () => d.intl.string(d.t["8/udY0"]),
-        usePredicate: () => !(0, r.dk)("LegacyAdvancedPanel"),
-        StronglyDiscouragedCustomComponent: a.A,
-        buildLayout: () => [],
-    }),
-    A = (0, l.t_)(s.X.ADVANCED_PANEL, {
-        useTitle: () => d.intl.string(d.t["8/udY0"]),
-        usePredicate: () => (0, r.dk)("AdvancedPanel"),
-        buildLayout: () => [u.J],
-    }),
-    S = (0, l.i4)(s.X.ADVANCED_SIDEBAR_ITEM, {
-        useTitle: () => d.intl.string(d.t["8/udY0"]),
-        getLegacySearchKey: () => ((0, r.WJ)("AdvancedPanel") ? void 0 : o.H.SETTINGS_ADVANCED),
-        icon: n.MoreHorizontalIcon,
-        buildLayout: () => ((0, r.WJ)("AdvancedPanel") ? [A] : [T]),
+n.d(t, { _: () => d });
+var i = n(934551),
+    s = n(419954),
+    l = n(780964),
+    a = n(945353),
+    r = n(985018);
+let o = (0, s.t_)(l.X.ADVANCED_PANEL, { useTitle: () => r.intl.string(r.t["8/udY0"]), buildLayout: () => [a.J] }),
+    d = (0, s.i4)(l.X.ADVANCED_SIDEBAR_ITEM, {
+        useTitle: () => r.intl.string(r.t["8/udY0"]),
+        icon: i.MoreHorizontalIcon,
+        buildLayout: () => [o],
     });

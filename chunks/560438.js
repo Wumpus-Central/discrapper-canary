@@ -1,3 +1,2 @@
-"use strict";
-a.d(t, { l: () => n });
-let n = { allowList: !0, allowHeading: !0, allowLinks: !0, previewLinkTarget: !0 };
+n.d(t, { l: () => l });
+let l = { allowList: !0, allowHeading: !0, allowLinks: !0, previewLinkTarget: !0 };

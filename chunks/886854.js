@@ -1,39 +1,31 @@
-i.d(e, { yj: () => L });
-var n = i(934551),
-    l = i(920603),
-    s = i(419954),
-    r = i(933297),
-    a = i(780964),
-    u = i(358776),
-    o = i(368631),
-    d = i(614651),
-    A = i(227542),
-    T = i(859669),
-    S = i(662802),
-    E = i(988208),
-    g = i(819070),
-    c = i(352694),
-    _ = i(136451),
-    I = i(531525),
-    C = i(985018);
-let N = (0, s.t_)(a.X.APPEARANCE_PANEL, {
-        useTitle: () => C.intl.string(C.t["iHH+ky"]),
+n.d(t, { y: () => E });
+var i = n(934551),
+    s = n(920603),
+    l = n(419954),
+    a = n(933297),
+    r = n(780964),
+    o = n(358776),
+    d = n(368631),
+    c = n(227542),
+    u = n(859669),
+    _ = n(662802),
+    g = n(988208),
+    m = n(819070),
+    A = n(352694),
+    h = n(136451),
+    p = n(985018);
+let x = (0, l.t_)(r.X.APPEARANCE_PANEL, {
+        useTitle: () => p.intl.string(p.t["iHH+ky"]),
         initialize: () => {
-            (0, l.v)();
+            (0, s.v)();
         },
-        buildLayout: () => [c.S, S._, _.u, E.U, g.M, T.d],
+        buildLayout: () => [A.S, _._, h.u, g.U, m.M, u.d],
     }),
-    O = (0, s.t_)(a.X.APPEARANCE_PANEL, {
-        useTitle: () => C.intl.string(C.t["iHH+ky"]),
-        StronglyDiscouragedCustomComponent: d.Ay,
-        buildLayout: () => [],
-    }),
-    L = (0, s.i4)(a.X.APPEARANCE_SIDEBAR_ITEM, {
-        useTitle: () => C.intl.string(C.t["iHH+ky"]),
-        getLegacySearchKey: () => ((0, u.WJ)("AppearanceSidebarItem") ? void 0 : I.H.APPEARANCE),
-        icon: n.PaintPaletteIcon,
-        trailing: { type: r.Si.BADGE_NEW, getDismissibleContentTypes: o.p_, stronglyDiscouragedBadgeComponent: o.AW },
-        usePredicate: () => !(0, u.bp)("AppearanceSidebarItem"),
-        useMenu: A.A,
-        buildLayout: () => ((0, u.WJ)("AppearanceSidebarItem") ? [N] : [O]),
+    E = (0, l.i4)(r.X.APPEARANCE_SIDEBAR_ITEM, {
+        useTitle: () => p.intl.string(p.t["iHH+ky"]),
+        icon: i.PaintPaletteIcon,
+        trailing: { type: a.Si.BADGE_NEW, getDismissibleContentTypes: d.p_, stronglyDiscouragedBadgeComponent: d.AW },
+        usePredicate: () => !(0, o.bp)("AppearanceSidebarItem"),
+        useMenu: c.A,
+        buildLayout: () => [x],
     });

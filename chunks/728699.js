@@ -1,44 +1,33 @@
-i.d(t, { T: () => C });
-var n = i(627968),
-    l = i(934551),
-    s = i(554146),
-    r = i(397927),
-    a = i(834981),
-    u = i(793998),
-    o = i(419954),
-    d = i(933297),
-    _ = i(780964),
-    T = i(358776),
-    A = i(264474),
-    S = i(531525),
-    E = i(985018),
-    c = i(842130);
-let g = (0, o.t_)(_.X.FAMILY_CENTER_PANEL, {
-        usePredicate: () => !(0, T.dk)("LegacyFamilyCenterPanel"),
-        useTitle: () => E.intl.string(c.default.RZqaJn),
-        StronglyDiscouragedCustomComponent: u.p,
-        buildLayout: () => [],
+n.d(t, { T: () => A });
+var i = n(627968),
+    s = n(934551),
+    l = n(554146),
+    a = n(397927),
+    r = n(834981),
+    o = n(419954),
+    d = n(933297),
+    c = n(780964),
+    u = n(264474),
+    _ = n(985018),
+    g = n(842130);
+let m = (0, o.t_)(c.X.FAMILY_CENTER_PANEL, {
+        useTitle: () => _.intl.string(g.default.RZqaJn),
+        buildLayout: () => [u.g],
     }),
-    I = (0, o.t_)(_.X.FAMILY_CENTER_PANEL, {
-        usePredicate: () => (0, T.dk)("FamilyCenterPanel"),
-        useTitle: () => E.intl.string(c.default.RZqaJn),
-        buildLayout: () => [A.g],
-    }),
-    C = (0, o.i4)(_.X.FAMILY_CENTER_SIDEBAR_ITEM, {
-        useTitle: () => E.intl.string(c.default.RZqaJn),
-        getLegacySearchKey: () => ((0, T.WJ)("FamilyCenterPanel") ? void 0 : S.H.PRIVACY_FAMILY_CENTER),
-        icon: l.GroupIcon,
+    A = (0, o.i4)(c.X.FAMILY_CENTER_SIDEBAR_ITEM, {
+        useTitle: () => _.intl.string(g.default.RZqaJn),
+        icon: s.GroupIcon,
         trailing: {
             type: d.Si.STRONGLY_DISCOURAGED_CUSTOM,
-            getDismissibleContentTypes: () => [s.M.FAMILY_CENTER_NEW_BADGE],
+            getDismissibleContentTypes: () => [l.M.FAMILY_CENTER_NEW_BADGE],
             useCustomDecoration: function (e) {
-                let t = (0, a.VT)();
-                return e === s.M.FAMILY_CENTER_NEW_BADGE
-                    ? (0, n.jsx)(r.LpS, { text: E.intl.string(E.t.y2b7CA) })
+                let t = (0, r.VT)();
+                return e === l.M.FAMILY_CENTER_NEW_BADGE
+                    ? (0, i.jsx)(a.LpS, { text: _.intl.string(_.t.y2b7CA) })
                     : t > 0
-                      ? (0, n.jsx)(r.hVq, { count: t })
+                      ? (0, i.jsx)(a.hVq, { count: t })
                       : null;
             },
         },
-        buildLayout: () => ((0, T.WJ)("FamilyCenterPanel") ? [I] : [g]),
+        buildLayout: () => [m],
     });

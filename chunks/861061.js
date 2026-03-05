@@ -1,31 +1,20 @@
-i.d(e, { Jj: () => c });
-var n = i(934551),
-    l = i(419954),
-    s = i(780964),
-    r = i(358776),
-    a = i(768908),
-    u = i(682262),
-    o = i(8086),
-    d = i(644619),
-    A = i(474069),
-    T = i(531525),
-    S = i(985018);
-let E = (0, l.t_)(s.X.REGISTERED_GAMES_PANEL, {
-        useTitle: () => S.intl.string(S.t.AVDyEj),
-        StronglyDiscouragedCustomComponent: a.Ay,
-        buildLayout: () => [],
-        usePredicate: () => !(0, r.dk)("RegisteredGamesPanel"),
+n.d(t, { J: () => _ });
+var i = n(934551),
+    s = n(419954),
+    l = n(780964),
+    a = n(682262),
+    r = n(8086),
+    o = n(644619),
+    d = n(474069),
+    c = n(985018);
+let u = (0, s.t_)(l.X.REGISTERED_GAMES_PANEL, {
+        useTitle: () => c.intl.string(c.t.AVDyEj),
+        buildLayout: () => [d.i, o.G],
     }),
-    g = (0, l.t_)(s.X.REGISTERED_GAMES_PANEL, {
-        useTitle: () => S.intl.string(S.t.AVDyEj),
-        usePredicate: () => (0, r.dk)("RegisteredGamesPanel"),
-        buildLayout: () => [A.i, d.G],
-    }),
-    c = (0, l.i4)(s.X.REGISTERED_GAMES_SIDEBAR_ITEM, {
-        useTitle: () => S.intl.string(S.t.AVDyEj),
-        getLegacySearchKey: () => ((0, r.WJ)("RegisteredGamesPanel") ? void 0 : T.H.REGISTERED_GAMES),
-        icon: n.GameControllerIcon,
-        usePredicate: u.Pi,
-        useMenu: o.A,
-        buildLayout: () => ((0, r.WJ)("RegisteredGamesPanel") ? [g] : [E]),
+    _ = (0, s.i4)(l.X.REGISTERED_GAMES_SIDEBAR_ITEM, {
+        useTitle: () => c.intl.string(c.t.AVDyEj),
+        icon: i.GameControllerIcon,
+        usePredicate: a.Pi,
+        useMenu: r.A,
+        buildLayout: () => [u],
     });

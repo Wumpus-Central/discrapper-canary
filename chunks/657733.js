@@ -1,27 +1,18 @@
-i.d(e, { v: () => _ });
-var n = i(934551),
-    l = i(419954),
-    s = i(780964),
-    r = i(358776),
-    a = i(195548),
-    u = i(409355),
-    o = i(218701),
-    d = i(251139),
-    T = i(121616),
-    A = i(531525),
-    S = i(985018);
-let E = (0, l.t_)(s.X.DATA_AND_PRIVACY_PANEL, {
-        useTitle: () => S.intl.string(S.t.OAuOHD),
-        StronglyDiscouragedCustomComponent: a.A,
-        buildLayout: () => [],
+n.d(t, { v: () => _ });
+var i = n(934551),
+    s = n(419954),
+    l = n(780964),
+    a = n(409355),
+    r = n(218701),
+    o = n(251139),
+    d = n(121616),
+    c = n(985018);
+let u = (0, s.t_)(l.X.DATA_AND_PRIVACY_PANEL, {
+        useTitle: () => c.intl.string(c.t.OAuOHD),
+        buildLayout: () => [r.u, o.w, a.w, d.d],
     }),
-    g = (0, l.t_)(s.X.DATA_AND_PRIVACY_PANEL, {
-        useTitle: () => S.intl.string(S.t.OAuOHD),
-        buildLayout: () => [o.u, d.w, u.w, T.d],
-    }),
-    _ = (0, l.i4)(s.X.DATA_AND_PRIVACY_SIDEBAR_ITEM, {
-        useTitle: () => S.intl.string(S.t.OAuOHD),
-        icon: n.ShieldLockIcon,
-        getLegacySearchKey: () => ((0, r.WJ)("DataAndPrivacyPanel") ? void 0 : A.H.DATA_PRIVACY),
-        buildLayout: () => [(0, r.WJ)("DataAndPrivacyPanel") ? g : E],
+    _ = (0, s.i4)(l.X.DATA_AND_PRIVACY_SIDEBAR_ITEM, {
+        useTitle: () => c.intl.string(c.t.OAuOHD),
+        icon: i.ShieldLockIcon,
+        buildLayout: () => [u],
     });

@@ -13,5 +13,5 @@ e.exports = {
     GR: "sessionCheckbox__803f2",
     Cn: "logOutAllButton__803f2",
     Lq: "loading__803f2",
-    hI: "logOutAllButtonRedesign__803f2",
+    wq: "logOutButtonWrapper__803f2",
 };

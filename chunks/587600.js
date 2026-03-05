@@ -1,6 +1,7 @@
-n.d(t, { C5: () => l, Sk: () => i, yX: () => r, yg: () => s }), n(321073);
-var a = n(392107);
-function r(e) {
+"use strict";
+n.d(t, { C5: () => l, Sk: () => i, yX: () => a, yg: () => s }), n(321073);
+var r = n(392107);
+function a(e) {
     let t = {};
     return (
         void 0 !== e.pendingBanner && (t.banner = e.pendingBanner),
@@ -24,7 +25,7 @@ function i(e) {
         let { pendingAvatar: n } = e;
         null === n
             ? (t.avatar = null)
-            : n.assetOrigin === a.E.ARCHIVED_ASSET
+            : n.assetOrigin === r.E.ARCHIVED_ASSET
               ? (t.avatarId = n.originalAsset.id)
               : ((t.avatar = n.imageUri), (t.avatarDescription = n.description));
     }
@@ -40,7 +41,7 @@ function l(e) {
         let { pendingAvatar: n } = e;
         null === n
             ? (t.avatar = null)
-            : n.assetOrigin === a.E.ARCHIVED_ASSET
+            : n.assetOrigin === r.E.ARCHIVED_ASSET
               ? (t.avatarId = n.originalAsset.id)
               : ((t.avatar = n.imageUri), (t.avatarDescription = n.description));
     }

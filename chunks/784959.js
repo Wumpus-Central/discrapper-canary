@@ -1,26 +1,14 @@
-i.d(e, { A: () => S });
-var n = i(934551),
-    l = i(419954),
-    s = i(780964),
-    r = i(358776),
-    a = i(640068),
-    u = i(84654),
-    o = i(1626);
-let d = (0, l.zZ)(s.X.EXPERIMENTS_CATEGORY, { buildLayout: () => [o.h] }),
-    A = (0, l.t_)(s.X.EXPERIMENTS_PANEL, {
-        usePredicate: () => !(0, r.dk)("LegacyExperimentsPanel"),
+n.d(t, { A: () => c });
+var i = n(934551),
+    s = n(419954),
+    l = n(780964),
+    a = n(84654),
+    r = n(1626);
+let o = (0, s.zZ)(l.X.EXPERIMENTS_CATEGORY, { buildLayout: () => [r.h] }),
+    d = (0, s.t_)(l.X.EXPERIMENTS_PANEL, { useTitle: () => "Experiments", buildLayout: () => [o] }),
+    c = (0, s.i4)(l.X.EXPERIMENTS_SIDEBAR_ITEM, {
         useTitle: () => "Experiments",
-        StronglyDiscouragedCustomComponent: a.A,
-        buildLayout: () => [],
-    }),
-    T = (0, l.t_)(s.X.EXPERIMENTS_PANEL, {
-        usePredicate: () => (0, r.dk)("ExperimentsPanel"),
-        useTitle: () => "Experiments",
+        icon: i.BeakerIcon,
+        useMenu: a.A,
         buildLayout: () => [d],
-    }),
-    S = (0, l.i4)(s.X.EXPERIMENTS_SIDEBAR_ITEM, {
-        useTitle: () => "Experiments",
-        icon: n.BeakerIcon,
-        useMenu: u.A,
-        buildLayout: () => ((0, r.WJ)("ExperimentsPanel") ? [T] : [A]),
     });

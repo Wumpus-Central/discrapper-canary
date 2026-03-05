@@ -79,32 +79,9 @@ function m(e) {
                               label: O.intl.string(O.t.IlFwwR),
                               action: () =>
                                   (0, a.mMO)(async () => {
-                                      let { default: e } = await Promise.all([
-                                          i.e("41927"),
-                                          i.e("38939"),
-                                          i.e("34699"),
-                                          i.e("62175"),
-                                          i.e("97283"),
-                                          i.e("2292"),
-                                          i.e("84127"),
-                                          i.e("62733"),
-                                          i.e("83518"),
-                                          i.e("69733"),
-                                          i.e("86713"),
-                                          i.e("64190"),
-                                          i.e("57009"),
-                                          i.e("34749"),
-                                          i.e("12664"),
-                                          i.e("44667"),
-                                          i.e("55090"),
-                                          i.e("7803"),
-                                          i.e("84704"),
-                                          i.e("67646"),
-                                          i.e("77374"),
-                                          i.e("79208"),
-                                          i.e("73099"),
-                                          i.e("48058"),
-                                      ]).then(i.bind(i, 585265));
+                                      let { default: e } = await Promise.all([i.e("51145"), i.e("27484")]).then(
+                                          i.bind(i, 585265),
+                                      );
                                       return (i) => (0, n.jsx)(e, { ...i, guild: t });
                                   }),
                           }),
@@ -146,32 +123,9 @@ function m(e) {
                                     label: O.intl.string(O.t.BayiAo),
                                     action: () =>
                                         (0, a.mMO)(async () => {
-                                            let { default: e } = await Promise.all([
-                                                i.e("41927"),
-                                                i.e("38939"),
-                                                i.e("34699"),
-                                                i.e("62175"),
-                                                i.e("97283"),
-                                                i.e("2292"),
-                                                i.e("84127"),
-                                                i.e("62733"),
-                                                i.e("83518"),
-                                                i.e("69733"),
-                                                i.e("86713"),
-                                                i.e("64190"),
-                                                i.e("57009"),
-                                                i.e("34749"),
-                                                i.e("12664"),
-                                                i.e("44667"),
-                                                i.e("55090"),
-                                                i.e("7803"),
-                                                i.e("84704"),
-                                                i.e("67646"),
-                                                i.e("77374"),
-                                                i.e("79208"),
-                                                i.e("73099"),
-                                                i.e("48058"),
-                                            ]).then(i.bind(i, 585265));
+                                            let { default: e } = await Promise.all([i.e("51145"), i.e("27484")]).then(
+                                                i.bind(i, 585265),
+                                            );
                                             return (i) => (0, n.jsx)(e, { ...i, guild: t });
                                         }),
                                 }),
