@@ -1244,6 +1244,7 @@ let e_ = "",
             let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "png";
             return `/guilds/${e}/users/${t}/banners/${n}.${r}`;
         },
+        CHANNEL_CONVERSATIONS: (e) => `/channels/${e}/conversations`,
         MESSAGES: (e) => `/channels/${e}/messages`,
         MESSAGES_GREET: (e) => `/channels/${e}/greet`,
         MESSAGES_ANNOUNCEMENT: (e) => `/channels/${e}/messages/announcement`,
