@@ -151,6 +151,7 @@ class A extends a.G {
                 kind: "enum",
                 T: () => ["discord_protos.discord_experimentation.v1.Experiment.CustomUnitPrefix", h],
             },
+            { no: 37, name: "growthbook_tags", kind: "scalar", repeat: 2, T: 9 },
         ]);
     }
     create(e) {
@@ -182,6 +183,7 @@ class A extends a.G {
             engineFeatureFlags: [],
             isAutomatedChange: !1,
             customUnitPrefix: 0,
+            growthbookTags: [],
         };
         return (
             globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
@@ -304,6 +306,9 @@ class A extends a.G {
                 case 36:
                     s.customUnitPrefix = e.int32();
                     break;
+                case 37:
+                    s.growthbookTags.push(e.string());
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -365,6 +370,7 @@ class A extends a.G {
             e.guildExperimentVersion &&
                 o.as.internalBinaryWrite(e.guildExperimentVersion, t.tag(35, r.O0.LengthDelimited).fork(), n).join(),
             0 !== e.customUnitPrefix && t.tag(36, r.O0.Varint).int32(e.customUnitPrefix);
+        for (let n = 0; n < e.growthbookTags.length; n++) t.tag(37, r.O0.LengthDelimited).string(e.growthbookTags[n]);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
