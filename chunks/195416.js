@@ -7,4 +7,5 @@ e.exports = {
     iL: "backgroundImage_b05cb4",
     XI: "wishlistBannerListItem_b05cb4",
     Tz: "bundlePreviewBanner_b05cb4",
+    jG: "orbsRewardNoticeFooter_b05cb4",
 };
