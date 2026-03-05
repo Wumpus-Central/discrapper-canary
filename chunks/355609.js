@@ -1,108 +1,108 @@
-n.d(t, { A: () => h, k: () => E });
+n.d(t, { A: () => A, k: () => S });
 var a = n(627968),
-    i = n(64700),
+    s = n(64700),
     l = n(503698),
-    s = n.n(l),
+    i = n.n(l),
     r = n(990078),
     d = n(397927),
-    u = n(793574),
+    o = n(793574),
     c = n(801264),
-    o = n(363487),
+    u = n(363487),
     m = n(397400),
-    g = n(709255),
-    f = n(895770),
-    _ = n(468946),
-    v = n(27023),
-    p = n(548392),
-    x = n(800007),
-    b = n(294726),
-    j = n(985018),
-    A = n(453729);
-function E() {
+    x = n(709255),
+    v = n(895770),
+    g = n(468946),
+    b = n(27023),
+    f = n(548392),
+    j = n(800007),
+    p = n(294726),
+    h = n(985018),
+    N = n(453729);
+function S() {
     return (0, a.jsx)(c.A, {
-        className: A.Bq,
+        className: N.Bq,
         children: (0, a.jsx)(d.Text, {
             variant: "text-sm/medium",
-            children: j.intl.formatToPlainString(b.default.xta2U9, { maxInstances: x.ZI }),
+            children: h.intl.formatToPlainString(p.default.xta2U9, { maxInstances: j.ZI }),
         }),
     });
 }
-function h() {
+function A() {
     let {
         guildId: e,
         gameServerGames: t,
         instances: n,
         gameServerInstance: l,
         setGameServerInstance: c,
-        setCurrentGame: h,
-        onNext: S,
-    } = (0, v.bv)();
+        setCurrentGame: A,
+        onNext: I,
+    } = (0, b.bv)();
     (0, m.ft)(e, null == l ? "create" : "edit");
-    let I = i.useCallback(
+    let C = s.useCallback(
             (e) => {
-                h(e), S();
+                A(e), I();
             },
-            [h, S],
+            [A, I],
         ),
-        k = i.useCallback(
+        k = s.useCallback(
             (e) => {
-                c(e), S();
+                c(e), I();
             },
-            [c, S],
+            [c, I],
         ),
-        N = n.length >= x.ZI,
-        C = n.length > 0,
-        G = (0, o.A)(e);
+        T = n.length >= j.ZI,
+        _ = n.length > 0,
+        y = (0, u.A)(e);
     return 0 === Object.values(t).length
-        ? (0, a.jsx)("div", { className: A.g4, children: (0, a.jsx)(d.y$y, { type: d.tVU.SPINNING_CIRCLE }) })
+        ? (0, a.jsx)("div", { className: N.g4, children: (0, a.jsx)(d.y$y, { type: d.tVU.SPINNING_CIRCLE }) })
         : (0, a.jsxs)(a.Fragment, {
               children: [
-                  C &&
+                  _ &&
                       (0, a.jsxs)("div", {
-                          className: A.yn,
+                          className: N.yn,
                           children: [
                               (0, a.jsx)(d.Heading, {
                                   variant: "heading-md/semibold",
-                                  children: j.intl.string(b.default.BOWmmT),
+                                  children: h.intl.string(p.default.BOWmmT),
                               }),
                               (0, a.jsx)("div", {
-                                  className: A.Hy,
+                                  className: N.Hy,
                                   children: n.map((t, n) =>
                                       (0, a.jsx)(
-                                          g.A,
+                                          x.A,
                                           { guildId: e, gameInstance: t, onClick: k },
                                           `instance-${t.id}-${n}`,
                                       ),
                                   ),
                               }),
-                              N && (0, a.jsx)(E, {}),
+                              T && (0, a.jsx)(S, {}),
                           ],
                       }),
                   (0, a.jsxs)("div", {
-                      className: s()(A.yn, { [A.r9]: N }),
+                      className: i()(N.yn, { [N.r9]: T }),
                       children: [
-                          C &&
+                          _ &&
                               (0, a.jsx)(d.Heading, {
                                   variant: "heading-md/semibold",
-                                  children: j.intl.string(b.default.NIwDqW),
+                                  children: h.intl.string(p.default.NIwDqW),
                               }),
                           (0, a.jsx)("div", {
-                              className: A.Y_,
+                              className: N.Y_,
                               children: Object.values(t).map((t, n) =>
                                   (0, a.jsx)(
                                       r.m,
                                       {
                                           asContainer: !0,
                                           text: t.disabled
-                                              ? j.intl.formatToPlainString(b.default.uVpJYf, { gameName: t.name })
+                                              ? h.intl.formatToPlainString(p.default.uVpJYf, { gameName: t.name })
                                               : null,
                                           position: "top",
-                                          children: (0, a.jsx)(f.A, {
+                                          children: (0, a.jsx)(v.A, {
                                               guildId: e,
                                               game: t,
-                                              disabled: N || !G || t.disabled,
-                                              onClick: I,
-                                              location: u.A.GAME_SERVER_SETUP_MODAL,
+                                              variant: T || !y || t.disabled ? v.e.DISABLED : v.e.CLICKABLE,
+                                              onClick: C,
+                                              location: o.A.GAME_SERVER_SETUP_MODAL,
                                           }),
                                       },
                                       `game-${t.id}-${n}`,
@@ -111,21 +111,21 @@ function h() {
                           }),
                       ],
                   }),
-                  (0, a.jsxs)(p.N4, {
-                      step: x.HS.SELECT_GAME,
-                      className: A.xQ,
+                  (0, a.jsxs)(f.N4, {
+                      step: j.HS.SELECT_GAME,
+                      className: N.xQ,
                       children: [
                           (0, a.jsxs)("div", {
-                              className: A.UW,
+                              className: N.UW,
                               children: [
                                   (0, a.jsx)(d.mir, { size: "sm" }),
                                   (0, a.jsx)(d.Text, {
                                       variant: "text-sm/medium",
-                                      children: j.intl.string(b.default["5DjxXm"]),
+                                      children: h.intl.string(p.default["5DjxXm"]),
                                   }),
                               ],
                           }),
-                          (0, a.jsx)(_.A, {}),
+                          (0, a.jsx)(g.A, {}),
                       ],
                   }),
               ],
