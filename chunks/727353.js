@@ -1,4 +1,4 @@
-n.d(e, { P: () => S, Z: () => C });
+n.d(e, { P: () => T, Z: () => S });
 var i = n(627968);
 n(64700);
 var l = n(503698),
@@ -15,58 +15,59 @@ var l = n(503698),
     h = n(607407),
     g = n(652215),
     f = n(985018),
-    E = n(573073);
-function C(t) {
+    E = n(573073),
+    C = n(248789);
+function S(t) {
     let {
             stream: e,
             activeStream: n,
             streamActivity: l,
             streamApplication: c,
-            user: C,
-            currentUserId: S,
-            canWatch: T,
-            unavailableReason: v,
-            onWatchStream: y,
-            onAction: x,
-            showHeader: N = !1,
-            hideTip: _ = !1,
-            className: I,
+            user: S,
+            currentUserId: T,
+            canWatch: v,
+            unavailableReason: y,
+            onWatchStream: x,
+            onAction: N,
+            showHeader: _ = !1,
+            hideTip: I = !1,
+            className: j,
         } = t,
-        j = (0, a.bG)([u.A], () => {
+        P = (0, a.bG)([u.A], () => {
             if (null != c) {
                 if (null != c.id) return u.A.getApplication(c.id);
                 else if (null != c.name) return u.A.getApplicationByName(c.name);
             }
             return null;
         }, [c]),
-        P =
+        U =
             null != l && null != l.name
                 ? f.intl.formatToPlainString(f.t["4CQq9Q"], { name: l.name })
                 : f.intl.string(f.t["Jpkr/q"]),
-        U = (0, i.jsxs)(i.Fragment, {
+        L = (0, i.jsxs)(i.Fragment, {
             children: [
-                N &&
+                _ &&
                     (0, i.jsxs)("div", {
                         className: E.WG,
                         children: [
-                            null != j && (0, i.jsx)(p.A, { game: j, className: E.lK }),
-                            (0, i.jsx)(s.Text, { variant: "text-xs/bold", color: "currentColor", children: P }),
+                            null != P && (0, i.jsx)(p.A, { game: P, className: E.lK }),
+                            (0, i.jsx)(s.Text, { variant: "text-xs/bold", color: "currentColor", children: U }),
                         ],
                     }),
-                null != y
+                null != x
                     ? (0, i.jsxs)(s.DUT, {
-                          onClick: y,
+                          onClick: x,
                           className: E.i1,
                           children: [
                               (0, i.jsx)(h.A, { className: E.oz, stream: e }),
-                              T
+                              v
                                   ? (0, i.jsx)("div", {
                                         className: E.xD,
                                         children: (0, i.jsx)(s.Text, {
                                             variant: "text-sm/normal",
                                             color: "none",
                                             className: E.ON,
-                                            children: (0, m.A)(e, n, S, v),
+                                            children: (0, m.A)(e, n, T, y),
                                         }),
                                     })
                                   : null,
@@ -76,14 +77,14 @@ function C(t) {
                           className: E.i1,
                           children: [
                               (0, i.jsx)(h.A, { className: E.oz, stream: e }),
-                              T
+                              v
                                   ? (0, i.jsx)("div", {
                                         className: E.xD,
                                         children: (0, i.jsx)(s.Text, {
                                             variant: "text-sm/normal",
                                             color: "none",
                                             className: E.ON,
-                                            children: (0, m.A)(e, n, S, v),
+                                            children: (0, m.A)(e, n, T, y),
                                         }),
                                     })
                                   : null,
@@ -97,24 +98,24 @@ function C(t) {
                                   hideHeader: !0,
                                   type: o.M.STREAM_PREVIEW,
                                   activity: l,
-                                  user: C,
+                                  user: S,
                                   guildId: e.guildId,
                                   channelId: e.channelId,
                                   analyticsParams: {
                                       location: { page: g.liQ.GO_LIVE_MODAL, section: g.JJy.STREAM_VIEWER_POPOUT },
                                   },
-                                  onAction: x,
+                                  onAction: N,
                               })
                             : (0, i.jsx)(d.A, {
                                   type: o.M.STREAM_PREVIEW,
                                   applicationStream: e,
-                                  user: C,
+                                  user: S,
                                   guildId: e.guildId,
                                   channelId: e.channelId,
                                   className: E.lx,
-                                  onAction: x,
+                                  onAction: N,
                               }),
-                        !_ &&
+                        !I &&
                             (0, i.jsx)(A.A, {
                                 type: A.A.Types.INLINE,
                                 className: E.PP,
@@ -126,10 +127,10 @@ function C(t) {
         });
     return (0, i.jsx)("div", {
         className: E.yt,
-        children: (0, i.jsx)("div", { className: r()(E.Rh, I), children: U }),
+        children: (0, i.jsx)("div", { className: r()(C.popover, E.Rh, j), children: L }),
     });
 }
-function S(t) {
+function T(t) {
     let {
         stream: e,
         streamActivity: n,
