@@ -6,8 +6,8 @@ var l = n(627968),
     s = n(235986),
     d = n(834981),
     o = n(840387),
-    c = n(319582),
-    u = n(17372),
+    u = n(319582),
+    c = n(17372),
     _ = n(369053),
     m = n(482578),
     x = n(248492),
@@ -30,8 +30,8 @@ var l = n(627968),
     M = n(796071),
     R = n(132318),
     O = n(985879),
-    G = n(117056),
-    w = n(66535),
+    w = n(117056),
+    G = n(66535),
     L = n(12613),
     D = n(842012),
     U = n(666580),
@@ -76,8 +76,8 @@ let el = (e) => {
             onSubmit: es,
             onNavigateToNode: ed,
             multiSelect: eo,
-            reportId: ec,
-            textInput: eu,
+            reportId: eu,
+            textInput: ec,
             initialErrorMessage: e_,
         } = e,
         em = et(t, "checkbox"),
@@ -91,13 +91,13 @@ let el = (e) => {
         ef = et(t, "text"),
         eT = et(t, "content_url_input"),
         eC = i.x.REPORT_TO_MOD.has(n.name),
-        ej = n.name === u.tY.MEDIA_TAKEDOWN,
+        ej = n.name === c.tY.MEDIA_TAKEDOWN,
         [eI, eN] = a.useState(!1),
         [eS, ey] = a.useState(!1),
         [ek, eE] = a.useState(e_ ?? ""),
         [eM, eR] = a.useState(() => ({})),
-        [eO, eG] = a.useState(() => ({})),
-        ew = a.useMemo(() => ("message" === n.name ? n.record.channel_id : void 0), [n]),
+        [eO, ew] = a.useState(() => ({})),
+        eG = a.useMemo(() => ("message" === n.name ? n.record.channel_id : void 0), [n]),
         eL = a.useCallback(
             (e) => ({
                 nodeRef: t.id,
@@ -137,7 +137,7 @@ let el = (e) => {
                     i = { ...eO };
                 (i[e] = { value: t, isValid: n }),
                     null != l && (null != a && "" !== a ? (i[l] = { value: a, isValid: n }) : delete i[l]),
-                    eG(i);
+                    ew(i);
             },
             [eO],
         ),
@@ -148,8 +148,8 @@ let el = (e) => {
             [ei, eL],
         );
     a.useEffect(() => {
-        null != eo && eR(eo), null != eu && eG(eu);
-    }, [eo, eu]),
+        null != eo && eR(eo), null != ec && ew(ec);
+    }, [eo, ec]),
         a.useEffect(() => {
             null != e_ && eE(e_);
         }, [e_]),
@@ -217,7 +217,7 @@ let el = (e) => {
     a.useEffect(() => {
         t.is_auto_submit && !eS && (ey(!0), es(eL(["", t.id])));
     }, [t.is_auto_submit, eS, es, eL, t.id]);
-    let ez = (0, c.fY)(el),
+    let ez = (0, u.fY)(el),
         eK = null != et(t, "ignore_users") && ("message" === n.name || "first_dm" === n.name || "user" === n.name),
         e$ = (0, o.Z)(),
         eQ = (0, d.GR)(),
@@ -258,7 +258,7 @@ let el = (e) => {
                     null != ef && (0, l.jsx)(z.A, { element: ef }),
                     null != et(t, "message_preview") &&
                         ("message" === n.name || "first_dm" === n.name || "report_to_mod_message" === n.name) &&
-                        (0, l.jsx)(w.A, { message: n.record }),
+                        (0, l.jsx)(G.A, { message: n.record }),
                     null != et(t, "user_preview") && "user" === n.name ? (0, l.jsx)($.A, { user: n.record }) : null,
                     null != et(t, "widget_preview") && "widget" === n.name
                         ? (0, l.jsx)(Q.A, { widget: n.widget, userId: n.user_id })
@@ -277,8 +277,8 @@ let el = (e) => {
                                 eK &&
                                     (0, l.jsx)(M.A, {
                                         user: "user" === n.name ? n.record : n.record.author,
-                                        channelId: ew,
-                                        reportId: ec,
+                                        channelId: eG,
+                                        reportId: eu,
                                     }),
                                 eY && (0, l.jsx)(V.A, { parents: eQ }),
                                 null != et(t, "block_users") &&
@@ -294,8 +294,8 @@ let el = (e) => {
                                                 : "user" === n.name
                                                   ? n.record
                                                   : n.record.author,
-                                        channelId: ew,
-                                        reportId: ec,
+                                        channelId: eG,
+                                        reportId: eu,
                                         reportType: n,
                                     }),
                                 !eK &&
@@ -306,21 +306,21 @@ let el = (e) => {
                                         "report_to_mod_message" === n.name) &&
                                     (0, l.jsx)(D.A, {
                                         user: "user" === n.name ? n.record : n.record.author,
-                                        channelId: ew,
-                                        reportId: ec,
+                                        channelId: eG,
+                                        reportId: eu,
                                     }),
                                 null != et(t, "delete_message") &&
                                     ("message" === n.name || "report_to_mod_message" === n.name) &&
-                                    (0, l.jsx)(f.A, { message: n.record, reportId: ec }),
+                                    (0, l.jsx)(f.A, { message: n.record, reportId: eu }),
                                 null != et(t, "leave_guild") &&
                                     "guild" === n.name &&
-                                    (0, l.jsx)(G.A, { guildId: n.record.id, reportId: ec }),
+                                    (0, l.jsx)(w.A, { guildId: n.record.id, reportId: eu }),
                                 null != et(t, "deauthorize_app") &&
                                     "application" === n.name &&
-                                    (0, l.jsx)(v.A, { application: n.record, reportId: ec }),
+                                    (0, l.jsx)(v.A, { application: n.record, reportId: eu }),
                                 null != et(t, "deauthorize_app") &&
                                     "application" === n.name &&
-                                    (0, l.jsx)(P.A, { application: n.record, reportId: ec }),
+                                    (0, l.jsx)(P.A, { application: n.record, reportId: eu }),
                             ],
                         }),
                     null != et(t, "settings_upsells") &&
@@ -330,7 +330,7 @@ let el = (e) => {
                             settingsUpsells: ez,
                             channelId: n.record.channel_id,
                             onModalClose: er,
-                            reportId: ec,
+                            reportId: eu,
                             reportType: n,
                             reportSubType: el,
                         }),
@@ -367,7 +367,14 @@ let el = (e) => {
                             className: null != em ? X.yF : void 0,
                             children: (0, l.jsx)(U.A, { element: ev, onChange: eB, state: eO }),
                         }),
-                    null != eb && (0, l.jsx)(O.A, { element: eb }),
+                    null != eb &&
+                        (function (e, t, n) {
+                            let { visible_when: l } = e.data;
+                            if (null == l) return !0;
+                            let a = et(t, l.element_type);
+                            return null != a && n?.[a.name]?.value === l.value;
+                        })(eb, t, eO) &&
+                        (0, l.jsx)(O.A, { element: eb }),
                     null != eA && (0, l.jsx)(b.A, { element: eA, onChange: eB, state: eO }),
                     ee.includes(n.name) &&
                         null != eg &&
