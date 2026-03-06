@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => G });
+n.d(t, { A: () => L });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -14,68 +14,71 @@ var i = n(627968),
     x = n(138298),
     h = n(657331),
     _ = n(761640),
-    A = n(71393),
-    p = n(266047),
-    f = n(221950),
-    j = n(735937),
-    N = n(104685),
-    E = n(856768),
-    b = n(189552),
-    T = n(508160),
-    C = n(749060),
-    I = n(374963),
-    v = n(636670),
-    S = n(652215),
-    y = n(985018),
-    R = n(503377),
-    O = n(63135);
-function G(e) {
+    p = n(71393),
+    A = n(343969),
+    f = n(266047),
+    j = n(221950),
+    N = n(735937),
+    E = n(104685),
+    b = n(856768),
+    T = n(189552),
+    C = n(508160),
+    I = n(749060),
+    v = n(374963),
+    S = n(636670),
+    y = n(652215),
+    R = n(985018),
+    O = n(334063),
+    G = n(21397);
+function L(e) {
     let { guildId: t } = e,
-        n = (0, a.bG)([A.A], () => A.A.getGuild(t)),
+        n = (0, a.bG)([p.A], () => p.A.getGuild(t)),
         { analyticsLocations: l } = (0, c.Ay)(d.A.GUILD_SETTINGS_MEMBERS_PAGE),
-        G = (0, u.q)(t),
-        L = (0, a.bG)([_.Ay], () => _.Ay.getGuildSidebarState(t), [t]),
-        D = s.useCallback(() => {
+        L = (0, u.q)(t),
+        D = (0, a.bG)([_.Ay], () => _.Ay.getGuildSidebarState(t), [t]),
+        M = s.useCallback(() => {
             x.A.closeGuildSidebar(t);
         }, [t]),
-        M = !1 == !!n?.features.has(S.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
-        k = (0, a.bG)([p.A], () => p.A.getEstimatedMemberSearchCountByGuildId(t), [t]),
-        U = s.useCallback(
+        k = !1 == !!n?.features.has(y.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
+        U = (0, a.bG)([f.A], () => f.A.getEstimatedMemberSearchCountByGuildId(t), [t]),
+        P = s.useCallback(
             (e) => {
                 null != e &&
                     (0, h.openUserProfileModal)({ userId: e.userId, guildId: e.guildId, sourceAnalyticsLocations: l });
             },
             [l],
         ),
-        P = s.useRef(null),
-        w = s.useCallback(() => {
-            P.current?.resetSearchText();
-        }, []);
+        w = s.useRef(null),
+        B = s.useCallback(() => {
+            w.current?.resetSearchText();
+        }, []),
+        F = (0, A.Ms)(t),
+        H = (0, A.Wl)(t);
     if (null == n) return null;
-    let B = (0, b.ii)(!1, !1, k);
+    let V = (0, T.ii)(H, F, U);
     return (0, i.jsxs)(c.f5, {
         value: l,
         children: [
             (0, i.jsx)("div", {
-                className: r()(O.customColumn, R.$Z, R.ed),
+                className: r()(G.customColumn, O.$Z, O.ed),
                 children: (0, i.jsx)("div", {
-                    className: O.customContainer,
+                    className: G.customContainer,
                     children: (0, i.jsx)(o.ArX, {
-                        className: r()(O.customScroller, R.cj),
+                        className: r()(G.customScroller, O.cj),
                         orientation: "auto",
                         children: (0, i.jsx)(o.ArX, {
-                            className: R.mh,
+                            className: O.mh,
                             orientation: "auto",
                             children: (0, i.jsxs)("main", {
-                                className: r()(O.customColumn, O.contentColumnDefault, R.$Z, R.ed, R.z1),
+                                className: r()(G.customColumn, G.contentColumnDefault, O.$Z, O.ed, O.z1),
                                 children: [
                                     (0, i.jsx)(
                                         "div",
                                         {
-                                            className: R.wx,
+                                            className: O.wx,
                                             children: (0, i.jsx)(o.Heading, {
                                                 variant: "heading-lg/semibold",
-                                                children: y.intl.string(y.t.S40K66),
+                                                children: R.intl.string(R.t.S40K66),
                                             }),
                                         },
                                         "header",
@@ -84,43 +87,43 @@ function G(e) {
                                         "div",
                                         {
                                             children: (0, i.jsxs)("div", {
-                                                className: R.CZ,
+                                                className: O.CZ,
                                                 children: [
+                                                    (0, i.jsx)(E.A, { guild: n }),
                                                     (0, i.jsx)(N.A, { guild: n }),
-                                                    (0, i.jsx)(j.A, { guild: n }),
-                                                    M
+                                                    k
                                                         ? (0, i.jsxs)("div", {
-                                                              className: R.FV,
+                                                              className: O.FV,
                                                               children: [
-                                                                  (0, i.jsx)(I.A, { guild: n, ref: P }),
-                                                                  (0, i.jsx)(T.A, {
+                                                                  (0, i.jsx)(v.A, { guild: n, ref: w }),
+                                                                  (0, i.jsx)(C.A, {
                                                                       guild: n,
-                                                                      searchState: B,
+                                                                      searchState: V,
                                                                       compact: !0,
-                                                                      onSelectRow: U,
-                                                                      onResetForNewMembers: w,
+                                                                      onSelectRow: P,
+                                                                      onResetForNewMembers: B,
                                                                   }),
-                                                                  B !== b.IY.SUCCESS_STILL_INDEXING &&
-                                                                      (0, i.jsx)(C.A, { guildId: n.id }),
+                                                                  V !== T.IY.SUCCESS_STILL_INDEXING &&
+                                                                      (0, i.jsx)(I.A, { guildId: n.id }),
                                                               ],
                                                           })
                                                         : (0, i.jsx)("div", {
-                                                              className: R.qQ,
+                                                              className: O.qQ,
                                                               children: (0, i.jsxs)("div", {
-                                                                  className: R.pb,
+                                                                  className: O.pb,
                                                                   children: [
                                                                       (0, i.jsx)("div", {
-                                                                          children: (0, i.jsx)(v.A, {}),
+                                                                          children: (0, i.jsx)(S.A, {}),
                                                                       }),
                                                                       (0, i.jsx)(o.Text, {
                                                                           variant: "text-md/normal",
                                                                           color: "text-muted",
-                                                                          children: y.intl.format(y.t.Bf6yxB, {
+                                                                          children: R.intl.format(R.t.Bf6yxB, {
                                                                               onClick: (e) => {
                                                                                   null != n &&
                                                                                       (e.preventDefault(),
                                                                                       g.A.close(),
-                                                                                      (0, f.aZ)(n.id));
+                                                                                      (0, j.aZ)(n.id));
                                                                               },
                                                                           }),
                                                                       }),
@@ -132,25 +135,25 @@ function G(e) {
                                         },
                                         "body",
                                     ),
-                                    (0, i.jsx)(E.A, { guildId: n.id }),
+                                    (0, i.jsx)(b.A, { guildId: n.id }),
                                 ],
                             }),
                         }),
                     }),
                 }),
             }),
-            G &&
-                null != L &&
+            L &&
+                null != D &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(o.pkL, { isVisible: !0, onClick: D }),
+                        (0, i.jsx)(o.pkL, { isVisible: !0, onClick: M }),
                         (0, i.jsx)("div", {
-                            className: R.zd,
-                            style: { width: S.da6 },
+                            className: O.zd,
+                            style: { width: y.da6 },
                             children: (0, i.jsx)(m.A, {
-                                userId: L.details.userId,
-                                guildId: L.details.guildId,
-                                onClose: D,
+                                userId: D.details.userId,
+                                guildId: D.details.guildId,
+                                onClose: M,
                             }),
                         }),
                     ],
