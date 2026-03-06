@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => x });
+n.d(t, { A: () => w });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(837381),
     l = n(311907),
     u = n(435371),
@@ -11,126 +11,125 @@ var r = n(627968),
     d = n(724511),
     _ = n(850992),
     f = n(802019),
-    h = n(407698),
-    p = n(287809),
-    g = n(954571),
+    p = n(407698),
+    h = n(287809),
+    m = n(954571),
     E = n(927578),
-    A = n(807348),
-    I = n(338821),
-    T = n(652215),
-    y = n(698279),
+    g = n(807348),
+    A = n(338821),
+    I = n(652215),
+    T = n(698279),
     S = n(788868),
-    v = n(985018),
-    C = n(873080);
-let b = [8, 8, 8, 8],
-    N = 40,
+    y = n(985018),
+    v = n(873080);
+let N = [8, 8, 8, 8],
+    C = 40,
     R = 50;
 function O(e) {
-    let { icon: t, isSelected: n, onClick: i, listItemProps: a } = e;
+    let { icon: t, isSelected: n, onClick: i, listItemProps: s } = e;
     return (0, r.jsx)(c.DUT, {
-        ...a,
+        ...s,
         onClick: i,
-        className: s()(C.Yl, { [C.wH]: n }),
-        children: (0, r.jsx)(t, { className: C.xi, color: "currentColor" }),
+        className: a()(v.Yl, { [v.wH]: n }),
+        children: (0, r.jsx)(t, { className: v.xi, color: "currentColor" }),
     });
 }
-function D(e, t, n, i, a) {
+function b(e, t, n, i, s) {
     switch (e.categoryInfo.type) {
-        case A.Cx.FAVORITES:
+        case g.Cx.FAVORITES:
             return (0, r.jsx)(O, { icon: c.Gg5, onClick: t, isSelected: n, listItemProps: i }, e.key);
-        case A.Cx.GUILD:
+        case g.Cx.GUILD:
             return (0, r.jsx)(
                 c.DUT,
                 {
                     ...i,
-                    className: C.L1,
+                    className: v.L1,
                     onClick: t,
-                    children: (0, r.jsx)(d.A, { guild: e.categoryInfo.guild, isSelected: n, isLocked: a }),
+                    children: (0, r.jsx)(d.A, { guild: e.categoryInfo.guild, isSelected: n, isLocked: s }),
                 },
                 e.key,
             );
-        case A.Cx.DEFAULTS:
+        case g.Cx.DEFAULTS:
             return (0, r.jsx)(O, { icon: c.pVd, onClick: t, isSelected: n, listItemProps: i }, e.key);
         default:
             return null;
     }
 }
-function L(e) {
+function D(e) {
     switch (e.categoryInfo.type) {
-        case A.Cx.FAVORITES:
-            return v.intl.string(v.t.k8fFjp);
-        case A.Cx.GUILD:
+        case g.Cx.FAVORITES:
+            return y.intl.string(y.t.k8fFjp);
+        case g.Cx.GUILD:
             return e.categoryInfo.guild.name;
-        case A.Cx.DEFAULTS:
-            return v.intl.string(v.t.Rtvk9X);
+        case g.Cx.DEFAULTS:
+            return y.intl.string(y.t.Rtvk9X);
     }
 }
-function w(e) {
-    let { category: t, categoryIndex: n, onClick: i, isSelected: a, isNitroLocked: s } = e,
+function L(e) {
+    let { category: t, categoryIndex: n, onClick: i, isSelected: s, isNitroLocked: a } = e,
         l = (0, o.rm)(`soundboard_guild_${n}`);
-    return t.categoryInfo.type === A.Cx.GUILD
-        ? (0, r.jsx)(h.Q, { guild: t.categoryInfo.guild, children: D(t, i, a, l, s) })
-        : (0, r.jsx)(u.m_, { text: L(t), position: "right", align: "center", children: D(t, i, a, l, s) });
+    return t.categoryInfo.type === g.Cx.GUILD
+        ? (0, r.jsx)(p.Q, { guild: t.categoryInfo.guild, children: b(t, i, s, l, a) })
+        : (0, r.jsx)(u.m_, { text: D(t), position: "right", align: "center", children: b(t, i, s, l, a) });
 }
-function x(e) {
+function w(e) {
     let {
             soundboardListRef: t,
             categories: n,
-            shouldUpsellLockedCategories: a,
-            listPadding: o = b,
+            shouldUpsellLockedCategories: s,
+            listPadding: o = N,
             guildId: u,
             inExpressionPicker: d,
-            showPinnedDefaultsShortcut: h = !1,
-            hasBottomBarUpsell: A = !1,
-            defaultsSectionIndex: O = -1,
+            showPinnedDefaultsShortcut: p = !1,
+            defaultsSectionIndex: g = -1,
         } = e,
-        D = i.useRef(null),
-        L = (0, l.bG)([p.default], () => p.default.getCurrentUser()),
-        x = (0, E.TW)(L, S.PremiumTypes.TIER_2),
-        P = i.useCallback(
+        O = i.useRef(null),
+        b = (0, l.bG)([h.default], () => h.default.getCurrentUser()),
+        D = (0, E.TW)(b, S.PremiumTypes.TIER_2),
+        w = i.useCallback(
             (e) => {
-                O >= 0 && (e(O), t.current?.scrollToSectionTop(O));
+                g >= 0 && (e(g), t.current?.scrollToSectionTop(g));
             },
-            [O, t],
+            [g, t],
         ),
-        M = i.useCallback((e) => (h || A ? R : 0), [h, A]),
-        k = i.useCallback(
+        M = i.useCallback((e) => (p ? R : 0), [p]),
+        x = i.useCallback(
             (e, t, n, i) => {
-                let s = a && (0, I.B)(e.categoryInfo, x, u),
+                let a = s && (0, A.B)(e.categoryInfo, D, u),
                     o = () => {
-                        g.default.track(T.HAw.EXPRESSION_PICKER_CATEGORY_SELECTED, {
-                            location: { page: T.liQ.SOUNDBOARD_POPOUT },
+                        m.default.track(I.HAw.EXPRESSION_PICKER_CATEGORY_SELECTED, {
+                            location: { page: I.liQ.SOUNDBOARD_POPOUT },
                             guild_id: u ?? null,
                             num_expressions: e.items.length,
-                            tab: y.kx.SOUNDBOARD,
+                            tab: T.kx.SOUNDBOARD,
                             sticker_pack_id: null,
                             pack_id: null,
                         }),
                             n();
                     };
-                return (0, r.jsx)(w, { category: e, categoryIndex: t, onClick: o, isSelected: i, isNitroLocked: s });
+                return (0, r.jsx)(L, { category: e, categoryIndex: t, onClick: o, isSelected: i, isNitroLocked: a });
             },
-            [u, a, x],
+            [u, s, D],
         );
     return (
-        h && ((o = [...o])[2] = R),
+        p && ((o = [...o])[2] = R),
         (0, r.jsx)(f.A, {
-            className: s()(d ? C.HZ : C.jv, { [C.Gi]: A }),
-            categoryListRef: D,
+            className: a()(d ? v.HZ : v.jv),
+            categoryListRef: O,
             expressionsListRef: t,
             store: _.LW,
             categories: n,
             listPadding: o,
-            renderCategoryListItem: k,
+            renderCategoryListItem: x,
             rowCount: n.length,
-            categoryHeight: N,
+            categoryHeight: C,
             getScrollOffsetForIndex: M,
             children: (e) =>
-                h &&
+                p &&
                 (0, r.jsx)(c.DUT, {
-                    "aria-label": v.intl.string(v.t.Rtvk9X),
-                    className: C.xe,
-                    onClick: () => P(e),
+                    "aria-label": y.intl.string(y.t.Rtvk9X),
+                    className: v.xe,
+                    onClick: () => w(e),
                     children: (0, r.jsx)(c.pVd, { size: "custom", width: 24, height: 24, color: "currentColor" }),
                 }),
         })
