@@ -1,101 +1,117 @@
 "use strict";
-n.d(t, { L: () => c });
+n.d(t, { L: () => d });
 var r = n(852015),
     i = n(144367),
-    a = n(428420),
-    s = n(324281);
-class o extends s.G {
+    s = n(428420),
+    a = n(324281),
+    o = n(232582);
+class l extends a.G {
     constructor() {
-        super("discord_protos.premium_marketing.v1.CTAButton", [{ no: 1, name: "copy", kind: "scalar", T: 9 }]);
+        super("discord_protos.premium_marketing.v1.CTAButton", [
+            { no: 1, name: "copy", kind: "scalar", T: 9 },
+            {
+                no: 2,
+                name: "button_action",
+                kind: "enum",
+                T: () => ["discord_protos.premium_marketing.v1.ButtonAction", o.dz, "BUTTON_ACTION_"],
+            },
+        ]);
     }
     create(e) {
-        let t = { copy: "" };
+        let t = { copy: "", buttonAction: 0 };
         return (
-            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = i ?? this.create(),
-            s = e.pos + t;
-        for (; e.pos < s; ) {
+        let s = i ?? this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
             let [t, i] = e.tag();
-            if (1 === t) a.copy = e.string();
-            else {
-                let s = n.readUnknownField;
-                if ("throw" === s)
-                    throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
-                let o = e.skip(i);
-                !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, o);
+            switch (t) {
+                case 1:
+                    s.copy = e.string();
+                    break;
+                case 2:
+                    s.buttonAction = e.int32();
+                    break;
+                default:
+                    let a = n.readUnknownField;
+                    if ("throw" === a)
+                        throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
+                    let o = e.skip(i);
+                    !1 !== a && (!0 === a ? r.f$.onRead : a)(this.typeName, s, t, i, o);
             }
         }
-        return a;
+        return s;
     }
     internalBinaryWrite(e, t, n) {
-        "" !== e.copy && t.tag(1, r.O0.LengthDelimited).string(e.copy);
+        "" !== e.copy && t.tag(1, r.O0.LengthDelimited).string(e.copy),
+            0 !== e.buttonAction && t.tag(2, r.O0.Varint).int32(e.buttonAction);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let l = new o();
-class u extends s.G {
+let u = new l();
+class c extends a.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.MobileBottomSheet", [
             { no: 1, name: "asset_url", kind: "scalar", T: 9 },
             { no: 2, name: "header", kind: "scalar", T: 9 },
             { no: 3, name: "body", kind: "scalar", T: 9 },
             { no: 4, name: "help_article_id", kind: "scalar", T: 9 },
-            { no: 5, name: "button", kind: "message", T: () => l },
+            { no: 5, name: "button", kind: "message", T: () => u },
         ]);
     }
     create(e) {
         let t = { assetUrl: "", header: "", body: "", helpArticleId: "" };
         return (
-            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = i ?? this.create(),
-            s = e.pos + t;
-        for (; e.pos < s; ) {
+        let s = i ?? this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    a.assetUrl = e.string();
+                    s.assetUrl = e.string();
                     break;
                 case 2:
-                    a.header = e.string();
+                    s.header = e.string();
                     break;
                 case 3:
-                    a.body = e.string();
+                    s.body = e.string();
                     break;
                 case 4:
-                    a.helpArticleId = e.string();
+                    s.helpArticleId = e.string();
                     break;
                 case 5:
-                    a.button = l.internalBinaryRead(e, e.uint32(), n, a.button);
+                    s.button = u.internalBinaryRead(e, e.uint32(), n, s.button);
                     break;
                 default:
-                    let s = n.readUnknownField;
-                    if ("throw" === s)
+                    let a = n.readUnknownField;
+                    if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let o = e.skip(i);
-                    !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, o);
+                    !1 !== a && (!0 === a ? r.f$.onRead : a)(this.typeName, s, t, i, o);
             }
         }
-        return a;
+        return s;
     }
     internalBinaryWrite(e, t, n) {
         "" !== e.assetUrl && t.tag(1, r.O0.LengthDelimited).string(e.assetUrl),
             "" !== e.header && t.tag(2, r.O0.LengthDelimited).string(e.header),
             "" !== e.body && t.tag(3, r.O0.LengthDelimited).string(e.body),
             "" !== e.helpArticleId && t.tag(4, r.O0.LengthDelimited).string(e.helpArticleId),
-            e.button && l.internalBinaryWrite(e.button, t.tag(5, r.O0.LengthDelimited).fork(), n).join();
+            e.button && u.internalBinaryWrite(e.button, t.tag(5, r.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let c = new u();
+let d = new c();
