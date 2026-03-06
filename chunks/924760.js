@@ -30,6 +30,5 @@ e.exports = {
     Li: "emptyStateDescription_adb41f",
     Zd: "emptyWumpus_adb41f",
     mv: "emptyStateLarge_adb41f emptyState_adb41f",
-    MG: "emptyStateSmall_adb41f emptyState_adb41f",
     ic: "rowWrapperDim_adb41f",
 };

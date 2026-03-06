@@ -250,7 +250,7 @@ function eT(e) {
                                             fullWidth: !0,
                                             variant: "secondary",
                                             onClick: () => z(!0),
-                                            size: P ? "sm" : "md",
+                                            size: "md",
                                             text: em.intl.string(em.t.OAJQlP),
                                         },
                                         "toggleMessageMode",

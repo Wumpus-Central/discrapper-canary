@@ -88,7 +88,7 @@ function C(e, t, C, U, D) {
                                 o.Drp,
                                 {
                                     id: "voice-disconnect",
-                                    label: x ? T.intl.string(T.t["6vrfgt"]) : T.intl.string(T.t["/jERiG"]),
+                                    label: T.intl.string(T.t["/jERiG"]),
                                     color: "danger",
                                     action: () => s.A.setChannel(t, e.id, null),
                                 },

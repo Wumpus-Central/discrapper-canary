@@ -21,7 +21,7 @@ var r = n(627968),
     T = n(788868),
     S = n(818348),
     y = n(985018),
-    v = n(125908);
+    v = n(252410);
 let N = 20;
 function C(e) {
     let {
@@ -29,29 +29,28 @@ function C(e) {
             additionalUserIds: n,
             hideButtonIcon: s = !1,
             showPrice: C = !1,
-            showIcons: b = !1,
-            source: R = h.uS.WISHLIST,
-            heartColor: O = "red",
+            showIcons: R = !1,
+            source: O = h.uS.WISHLIST,
+            heartColor: b = "red",
             onWishlistItemClick: D,
             analyticsLocations: L,
             ...w
         } = e,
-        { item: x, isOwner: M, giftingOrigin: P = T.vQ.USER_PROFILE_WISHLIST } = w,
-        k = x.sku,
+        { item: M, isOwner: x, giftingOrigin: P = T.vQ.USER_PROFILE_WISHLIST } = w,
+        k = M.sku,
         U = k.applicationId,
         G = (0, d.h)(U),
         F = i.useRef(null),
         { analyticsLocations: V } = (0, c.Ay)(...(L ?? []), u.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD),
-        B = (0, o.bG)([p.A], () => null != t && p.A.hasSentGift(x.skuId, t.id), [x.skuId, t]),
-        H = B || !0 === x.isOwned,
-        j = x.skuName,
+        B = (0, o.bG)([p.A], () => null != t && p.A.hasSentGift(M.skuId, t.id), [M.skuId, t]) || !0 === M.isOwned,
+        H = M.skuName,
         {
-            buttonCTALabel: Y,
-            buttonIcon: W,
-            handleCardClick: K,
+            buttonCTALabel: j,
+            buttonIcon: Y,
+            handleCardClick: W,
         } = i.useMemo(
             () =>
-                M || H
+                x || B
                     ? {
                           buttonCTALabel: C
                               ? (0, m.$g)(k.price?.amount ?? 0, k.price?.currency ?? S.Yr.USD)
@@ -59,7 +58,7 @@ function C(e) {
                           buttonIcon: void 0,
                           handleCardClick: () => {
                               G?.guildId != null &&
-                                  (M
+                                  (x
                                       ? ((0, _.closeUserProfileModal)(),
                                         (0, E.default)({ guildId: G.guildId, skuId: k.id, slug: k.slug }))
                                       : (0, g.R)({
@@ -77,8 +76,7 @@ function C(e) {
                               : y.intl.string(y.t.ilhtIa),
                           buttonIcon: s ? void 0 : l.okO,
                           handleCardClick: () => {
-                              B ||
-                                  (D?.(),
+                              D?.(),
                                   (0, A.a)(
                                       k,
                                       { isGift: !0, giftRecipient: t, additionalUserIds: n, giftingOrigin: P },
@@ -88,15 +86,15 @@ function C(e) {
                                               u.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON,
                                           ],
                                       },
-                                  ));
+                                  );
                           },
                       },
-            [M, H, C, k, s, G, B, t, n, P, D, V],
+            [x, B, C, k, s, G, t, n, P, D, V],
         ),
-        z = i.useCallback(
+        K = i.useCallback(
             () =>
-                b
-                    ? R === h.uS.WISHLIST
+                R
+                    ? O === h.uS.WISHLIST
                         ? (0, r.jsx)("div", {
                               className: v.Fx,
                               children: (0, r.jsx)(l.C3E, {
@@ -104,10 +102,10 @@ function C(e) {
                                   width: N,
                                   height: N,
                                   color: "currentColor",
-                                  colorClass: a()({ [v.aP]: "white" === O, [v.Be]: "red" === O }),
+                                  colorClass: a()({ [v.e_]: "white" === b, [v.Be]: "red" === b }),
                               }),
                           })
-                        : R === h.uS.POPULAR
+                        : O === h.uS.POPULAR
                           ? (0, r.jsx)("div", {
                                 className: v.Fx,
                                 children: (0, r.jsx)(l.Y3C, {
@@ -120,7 +118,7 @@ function C(e) {
                             })
                           : null
                     : null,
-            [b, R, O],
+            [R, O, b],
         ),
         $ = i.useCallback(
             () =>
@@ -135,14 +133,14 @@ function C(e) {
         );
     return (0, r.jsx)(f.A, {
         ...w,
-        source: R,
+        source: O,
         cardRef: F,
-        accessibleLabel: j,
-        onCardClick: K,
-        buttonCTALabel: Y,
-        buttonIcon: W,
-        isOwned: H,
+        accessibleLabel: H,
+        onCardClick: W,
+        buttonCTALabel: j,
+        buttonIcon: Y,
+        isOwned: B,
         renderItemPreview: $,
-        renderSourceIcon: z,
+        renderSourceIcon: K,
     });
 }

@@ -17,7 +17,7 @@ var r = n(627968),
     E = n(652215),
     g = n(818348),
     A = n(985018),
-    I = n(101541);
+    I = n(130219);
 let T = "***@***.***",
     S = "****",
     y = "***",
@@ -265,9 +265,7 @@ function L(e) {
               placeholder: A.intl.string(A.t["8lqkf8"]),
               renderOptionValue: (e) => {
                   let [t] = e;
-                  return E
-                      ? (0, r.jsx)(c.y$y, { type: c.tVU.SPINNING_CIRCLE })
-                      : C(null == t.value ? void 0 : x.get(t.value), t, u);
+                  return C(null == t.value ? void 0 : x.get(t.value), t, u);
               },
               renderOptionLabel: (e) => C(null == e.value ? void 0 : x.get(e.value), e, u),
               "data-migration-pending": !0,

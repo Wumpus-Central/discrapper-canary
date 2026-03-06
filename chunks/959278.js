@@ -339,7 +339,7 @@ function tn(e) {
     r.useLayoutEffect(() => {
         if (c) {
             let e = parseInt(h.w.get(p.o) ?? "");
-            Number.isNaN(e) && (e = 375), (e = Math.min(Math.max(e, 264), 432)), !c && e <= 76 && (e = 375), tt(e);
+            Number.isNaN(e) && (e = 375), tt((e = Math.min(Math.max(e, 264), 432)));
             let t = (e) => {
                 e.metaKey && "b" === e.key && R.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
             };

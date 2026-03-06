@@ -11,30 +11,30 @@ var i = n(627968),
     h = n(313961),
     m = n(520698),
     A = n(164617),
-    p = n(958713),
-    g = n(525505),
+    g = n(958713),
+    p = n(525505),
     f = n(991701),
     _ = n(401901),
     E = n(869146),
-    C = n(854627),
-    x = n(530804),
+    x = n(854627),
+    C = n(530804),
     S = n(961350),
-    T = n(696451),
-    N = n(430452),
-    I = n(531685),
+    I = n(696451),
+    T = n(430452),
+    N = n(531685),
     y = n(562153),
-    v = n(51082),
-    b = (n(729365), n(566566)),
+    b = n(51082),
+    v = n(566566),
     j = n(289552),
     R = n(652215),
     M = n(731854),
     D = n(985018),
-    O = n(707511);
+    O = n(257277);
 let L = c._3J.SIZE_80,
     P = c._3J.SIZE_40;
 function w(e) {
     let { channelId: t, participant: n } = e;
-    return (0, x.uy)(t, n.id)
+    return (0, C.uy)(t, n.id)
         ? (0, i.jsx)(o.m, {
               text: D.intl.string(D.t.HFwRpk),
               position: "bottom",
@@ -52,7 +52,7 @@ function k(e) {
             inCall: s,
             width: o,
             selected: c,
-            popoutType: x,
+            popoutType: C,
             fit: j,
             onVideoResize: w,
             blocked: k,
@@ -61,27 +61,27 @@ function k(e) {
             pulseSpeakingIndicator: F = !1,
             paused: H = !1,
         } = e,
-        B = N.Ay.getVideoComponent(),
+        B = T.Ay.getVideoComponent(),
         V = (0, r.bG)([S.default], () => S.default.getId()),
         { user: K, streamId: W, speaking: z } = t,
         Y = K.id === V,
-        q = (0, v.Ay)(t),
-        J = (0, r.bG)([I.A], () => I.A.isFocused()),
+        q = (0, b.Ay)(t),
+        J = (0, r.bG)([N.A], () => N.A.isFocused()),
         $ = (0, r.bG)([E.A], () => E.A.getWindowFocused(R.MLl.CHANNEL_CALL_POPOUT)),
-        Z = (0, r.bG)([N.Ay], () => null != K.id && N.Ay.isLocalVideoDisabled(K.id, (0, m.A)(t.type)), [K.id, t.type]),
-        X = (0, r.bG)([T.Ay], () => T.Ay.isGuestOrLurker(n.guild_id, K.id)),
+        Z = (0, r.bG)([T.Ay], () => null != K.id && T.Ay.isLocalVideoDisabled(K.id, (0, m.A)(t.type)), [K.id, t.type]),
+        X = (0, r.bG)([I.Ay], () => I.Ay.isGuestOrLurker(n.guild_id, K.id)),
         Q = y.Ay.getName(n.getGuildId(), n.id, K) + (X ? ` ${D.intl.string(D.t["pFO/Ph"])}` : ""),
         ee = z && ($ || J),
         et = o < 124 ? P : L,
-        { avatarSrc: en, avatarDecorationSrc: ei } = (0, C.A)({
+        { avatarSrc: en, avatarDecorationSrc: ei } = (0, x.A)({
             userId: K.id,
             guildId: n.guild_id,
             size: et,
             animateOnHover: !ee,
         }),
         el = (0, r.bG)([h.A], () => h.A.getSelectedParticipant(n.id)),
-        es = (0, g.A)(M.x.DEFAULT, t.user.id),
-        ea = (0, p.A)(t.user.id),
+        es = (0, p.A)(M.x.DEFAULT, t.user.id),
+        ea = (0, g.A)(t.user.id),
         er = { channel: n, selectedParticipant: el, user: K },
         eo = l.useRef(er);
     return (l.useEffect(() => {
@@ -91,14 +91,14 @@ function k(e) {
         let { channel: e, selectedParticipant: t, user: n } = eo.current;
         e.isGuildStageVoice() && !q && t?.id === n.id && d.A.selectParticipant(e.id, null);
     }, [q]),
-    s && !Z && !G && q && !c && null != B && N.Ay.supports(M.O5.VIDEO))
+    s && !Z && !G && q && !c && null != B && T.Ay.supports(M.O5.VIDEO))
         ? null != es && null == ea
-            ? (0, i.jsx)(b.A, { avError: es, userId: t.id, width: o, selected: c })
+            ? (0, i.jsx)(v.A, { avError: es, userId: t.id, width: o, selected: c })
             : (0, i.jsx)(
                   _.A,
                   {
                       onResize: w,
-                      wrapperClassName: x !== A.N.CALL_TILE ? O.tN : void 0,
+                      wrapperClassName: C !== A.N.CALL_TILE ? O.tN : void 0,
                       className: O.Qs,
                       mirror: Y,
                       streamId: W,

@@ -10,17 +10,16 @@ var r = n(627968),
     c = n(545428),
     d = n(698279),
     _ = n(985018),
-    f = n(111314);
+    f = n(178588);
 function p(e, t) {
     let { disabled: n, type: s, channel: p } = e,
         [h, m, E, g] = (0, u.RQ)((e) => [e.activeView, e.pickerId, e.activeChannelId, e.activeViewType], o.x),
         A = !1,
         I = h === d.kx.STICKER && g === s && E === p.id,
-        T = !1,
-        S = i.useCallback(() => {
+        T = i.useCallback(() => {
             (0, u.r$)(d.kx.STICKER, s, p.id);
         }, [s, p.id]),
-        { Component: y, events: v, play: N } = (0, l.g)();
+        { Component: S, events: y, play: v } = (0, l.g)();
     return n
         ? null
         : (0, r.jsx)("div", {
@@ -28,9 +27,9 @@ function p(e, t) {
               ref: t,
               children: (0, r.jsx)(c.A, {
                   className: a()(f.x6, f.KE),
-                  ...v,
+                  ...y,
                   onClick: () => {
-                      S(), N();
+                      T(), v();
                   },
                   isActive: I,
                   "aria-label": _.intl.string(_.t.rZpidU),
@@ -38,8 +37,7 @@ function p(e, t) {
                   "aria-haspopup": "dialog",
                   "aria-controls": m,
                   sparkle: A,
-                  notification: T ? c.V.UPDATE : null,
-                  children: (0, r.jsx)(y, { size: "refresh_sm", color: "currentColor" }),
+                  children: (0, r.jsx)(S, { size: "refresh_sm", color: "currentColor" }),
               }),
           });
 }

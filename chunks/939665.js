@@ -26,8 +26,8 @@ var l = n(627968),
     R = n(937008),
     y = n(156312),
     C = n(166532),
-    v = n(69494),
-    N = n(534479),
+    N = n(69494),
+    v = n(534479),
     O = n(482132),
     b = n(340034),
     k = n(216641),
@@ -40,9 +40,9 @@ var l = n(627968),
     H = n(985018),
     B = n(368959);
 function W(e) {
-    let { handleStepChange: t, initialPlanId: n, planGroup: s, subscriptionTier: a, trialId: W, handleClose: K } = e,
+    let { handleStepChange: t, initialPlanId: n, planGroup: s, subscriptionTier: a, trialId: W, handleClose: z } = e,
         {
-            activeSubscription: z,
+            activeSubscription: K,
             hasFetchedSubscriptions: V,
             paymentSourceId: Z,
             paymentSources: q,
@@ -73,7 +73,7 @@ function W(e) {
             null != em &&
             em.hasHadPremium() &&
             V &&
-            null == z &&
+            null == K &&
             (0, _.j2)(ec),
         e_ = (et || en) ?? !1,
         eh = i.useMemo(
@@ -82,10 +82,10 @@ function W(e) {
                     skuId: Y,
                     isPremium: ee,
                     multiMonthPlans: eE ? ep : [],
-                    currentSubscription: z,
+                    currentSubscription: K,
                     defaultPlanId: J,
                 }),
-            [Y, ee, ep, z, eE, J],
+            [Y, ee, ep, K, eE, J],
         ),
         ex = en && eh.includes(F.gD.PREMIUM_MONTH_TIER_2) ? F.gD.PREMIUM_MONTH_TIER_2 : eh[0],
         eS = (0, d.bG)([A.A], () => A.A.get(ex)),
@@ -113,7 +113,7 @@ function W(e) {
     let ej = eA?.message ?? H.intl.string(H.t.R0RpRX),
         ef = e_ && null == eA,
         eM = e_ && null != eA,
-        eR = ef && null == z && !!e_ && eg?.subscriptionPeriodEnd == null,
+        eR = ef && null == K && eg?.subscriptionPeriodEnd == null,
         ey = (0, m.D7)({ location: "premium_payment_plan_select_step" }),
         eC = i.useMemo(
             () => ({
@@ -124,27 +124,27 @@ function W(e) {
                 subscriptionPeriodEnd: eg?.subscriptionPeriodEnd,
                 discountInvoiceItems: en ? eg?.invoiceItems : void 0,
                 useCompactGiftComponents: ed,
-                handleClose: K,
+                handleClose: z,
             }),
-            [eh, eE, X?.id, s, eg?.subscriptionPeriodEnd, eg?.invoiceItems, en, ed, K],
+            [eh, eE, X?.id, s, eg?.subscriptionPeriodEnd, eg?.invoiceItems, en, ed, z],
         );
-    if (eR) return ey ? (0, l.jsx)(E.Ed, { className: B.QW }) : (0, l.jsx)(N.A, {});
+    if (eR) return ey ? (0, l.jsx)(E.Ed, { className: B.QW }) : (0, l.jsx)(v.A, {});
     o()(null != Q, "Step should be set"), o()(eh.length > 0, "Premium plan options should be set");
-    let ev =
+    let eN =
         ey && !ei
             ? (0, l.jsx)(b.XH, { ...eC, isInPlanSelectStep: !0, showSecondarySubTexts: !0 })
             : (0, l.jsx)(T.$p, { ...eC });
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(w.Z, { giftMessage: er }),
-            !(ei && (0, j.Ik)(es)) && (0, l.jsx)(v.A, { isEligibleForTrial: et }),
+            !(ei && (0, j.Ik)(es)) && (0, l.jsx)(N.A, { isEligibleForTrial: et }),
             (0, l.jsxs)(O.dZ, {
                 children: [
                     !ey && ef && (0, l.jsx)("hr", { className: B.T4 }),
                     (0, l.jsx)(L.P, { className: B.ZB, planSkuId: eS?.skuId, referralTrialOfferId: el }),
                     (0, l.jsx)(D.A, {}),
                     (0, l.jsx)(U.A, {}),
-                    eM ? (0, l.jsx)(c.wx6, { type: "critical", children: ej }) : ev,
+                    eM ? (0, l.jsx)(c.wx6, { type: "critical", children: ej }) : eN,
                     ef &&
                         (0, l.jsxs)(l.Fragment, {
                             children: [

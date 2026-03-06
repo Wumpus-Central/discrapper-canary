@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { u: () => E }), n(321073);
+n.d(t, { u: () => g }), n(321073);
 var r = n(118356),
     i = n(996308),
-    a = n(92277),
-    s = n(9302),
+    s = n(92277),
+    a = n(9302),
     o = n(996283),
     l = n(652215);
 let u = new r.Vy("LegacyOverlayLogger"),
@@ -25,7 +25,7 @@ async function m(e, t) {
         c = null;
     if (null != o)
         try {
-            c = (0, a.g)(o);
+            c = (0, s.g)(o);
         } catch (e) {
             try {
                 c = { _error: "Failed to serialize context", _type: Object.prototype.toString.call(o) };
@@ -36,7 +36,7 @@ async function m(e, t) {
     let d = {
         type: l.kGV.LOG_MESSAGES,
         token: t,
-        pid: (0, s.getPID)(),
+        pid: (0, a.getPID)(),
         payload: { level: n, message: r, timestamp: Date.now(), context: c },
     };
     try {
@@ -47,7 +47,7 @@ async function m(e, t) {
             p === h && u.error("Too many RPC send failures, suppressing further error logs"));
     }
 }
-function g(e) {
+function E(e) {
     return {
         log: (t, n) => m({ level: "log", message: t, context: n }, e),
         info: (t, n) => m({ level: "info", message: t, context: n }, e),
@@ -56,10 +56,10 @@ function g(e) {
         crash: (t, n) => m({ level: "crash", message: t, context: n }, e),
     };
 }
-function E(e) {
+function g(e) {
     if (__OVERLAY__) {
         if (d) return void f.warn("Overlay logger already set up, skipping duplicate setup");
-        (c = g(e)),
+        (c = E(e)),
             (d = !0),
             c.info("Overlay logger initialized"),
             (console.log = function () {
@@ -191,20 +191,15 @@ function E(e) {
 }
 function A(e) {
     if (0 === e.length) return e;
-    let t = [],
-        n = !1;
-    for (let r = 0; r < e.length; r++) {
-        if (n) {
-            n = !1;
+    let t = [];
+    for (let n = 0; n < e.length; n++) {
+        let r = e[n];
+        if ("string" == typeof r && r.includes("%c")) {
+            let e = r.replace(/%c/g, "");
+            "" !== e.trim() && t.push(e), (n += (r.match(/%c/g) ?? []).length);
             continue;
         }
-        let i = e[r];
-        if ("string" == typeof i && i.includes("%c")) {
-            let e = i.replace(/%c/g, "");
-            "" !== e.trim() && t.push(e), (r += (i.match(/%c/g) ?? []).length);
-            continue;
-        }
-        ("string" == typeof i && /^\s*(font-weight|color|background|padding|margin|border)/.test(i)) || t.push(i);
+        ("string" == typeof r && /^\s*(font-weight|color|background|padding|margin|border)/.test(r)) || t.push(r);
     }
     return t;
 }

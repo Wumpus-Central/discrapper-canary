@@ -36,8 +36,7 @@ function N(e) {
     }, [s]);
     let C = (0, _.V)(),
         R = (0, d.O)(),
-        O = null != C || null != R,
-        b = C?.subscription_trial?.sku_id === T.pe.TIER_0;
+        O = null != C || null != R;
     return (0, r.jsxs)("div", {
         className: a()(y.p$, t, { [y.Hz]: O }),
         children: [
@@ -71,11 +70,7 @@ function N(e) {
                           }),
                       ],
                   }),
-            !O &&
-                (0, r.jsx)(g.A, {
-                    analyticsSection: I.JJy.EXPRESSION_PICKER,
-                    buttonText: O ? (b ? S.intl.string(S.t.hz78hE) : S.intl.string(S.t["Gd/XHF"])) : void 0,
-                }),
+            !O && (0, r.jsx)(g.A, { analyticsSection: I.JJy.EXPRESSION_PICKER }),
         ],
     });
 }
