@@ -19,16 +19,16 @@ var r = s(627968),
     v = s(290805),
     A = s(429432),
     S = s(830012),
-    C = s(905552),
-    y = s(688465),
+    y = s(905552),
+    C = s(688465),
     b = s(207975),
     w = s(502075),
     I = s(765682),
-    E = s(191850),
+    E = s(332800),
     N = s(985018),
-    O = s(146896);
+    O = s(243486);
 function T(e, t, s, r) {
-    let i = (0, j.isWindows)() ? (0, C.A)(h.Ay, _.A) : null,
+    let i = (0, j.isWindows)() ? (0, y.A)(h.Ay, _.A) : null,
         n = h.Ay.getRunningGames(),
         l = s?.split(":")[1],
         a = e.id.split(":")[1];
@@ -96,10 +96,10 @@ function U(e) {
                 sourceType: a,
                 fetchingSources: _,
                 selectedSource: g,
-                discordSourceId: C,
+                discordSourceId: y,
                 hasPermission: w,
             },
-        ] = (0, y.tS)(),
+        ] = (0, C.tS)(),
         { smarterSourceOrdering: E } = (0, A.s)({ location: "GoLiveSourceGrid" }),
         R = (0, d.bG)([h.Ay], () => h.Ay.getRunningGames()),
         U = (0, d.cf)([h.Ay], () => {
@@ -112,14 +112,14 @@ function U(e) {
         D = (0, b.A)(L, R, s);
     i.useEffect(() => ((0, x.a2)(), x.e0), []);
     let P = i.useMemo(
-        () => (E ? [...s].sort((e, t) => T(t, D?.source.id, C, U) - T(e, D?.source.id, C, U)) : s),
-        [D, E, s, C, U],
+        () => (E ? [...s].sort((e, t) => T(t, D?.source.id, y, U) - T(e, D?.source.id, y, U)) : s),
+        [D, E, s, y, U],
     );
     if (_) {
         if (!1 === w) {
             let e = !1;
             if ((0, j.isMac)()) {
-                let t = f.A?.remoteApp?.getVersion?.();
+                let t = f.A?.app.getVersion();
                 e = !v.M || "0.0.0" === t || o().satisfies(t, "0.0.363");
             }
             return (0, r.jsxs)("div", {

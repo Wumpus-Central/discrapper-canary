@@ -11,10 +11,10 @@ var l = n(607399),
     E = n(837921),
     d = n(58736),
     u = n(746080),
-    A = n(892513);
+    A = n(512147);
 async function T(e) {
     if (!e && (0, _.isMac)() && _.isPlatformEmbedded) {
-        let e = (await window.DiscordNative.remoteApp.getDefaultDoubleClickAction?.()) ?? "Maximize";
+        let e = await window.DiscordNative.app.getDefaultDoubleClickAction();
         "Minimize" === e ? E.Ay.minimize() : "Maximize" === e && E.Ay.maximize();
     }
 }
@@ -38,7 +38,7 @@ function I(e) {
             showDivider: D,
             disableDoubleClick: g,
         } = e,
-        { enabled: U, inInbox: h } = s.A.useExperiment({ location: "HeaderBar" });
+        { enabled: U, inInbox: M } = s.A.useExperiment({ location: "HeaderBar" });
     return (0, i.jsx)(d.Ay, {
         className: n,
         innerClassName: _,
@@ -54,7 +54,7 @@ function I(e) {
                               ? (0, i.jsx)(c.Ay, { guildId: a, channelId: r, className: A.$P }, a ?? r)
                               : null,
                           D && (0, i.jsx)(d.Ay.Divider, {}),
-                          P || !U || h ? null : (0, i.jsx)(o.A, {}),
+                          P || !U || M ? null : (0, i.jsx)(o.A, {}),
                       ],
                   });
         })(),

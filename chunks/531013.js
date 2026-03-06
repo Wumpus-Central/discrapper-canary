@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { OV: () => g, Xo: () => E, sZ: () => m });
+n.d(t, { OV: () => E, Xo: () => g, sZ: () => m });
 var r = n(73153),
     i = n(77729),
-    a = n(183636),
-    s = n(626584),
+    s = n(183636),
+    a = n(626584),
     o = n(961350),
     l = n(954571),
     u = n(209489),
@@ -12,14 +12,14 @@ var r = n(73153),
     _ = n(261811),
     f = n(500496),
     p = n(469177);
-let h = new s.A("ConnectionStore"),
+let h = new a.A("ConnectionStore"),
     m = new d.A(),
-    g = new _.A(m),
-    E = new f.A(m);
+    E = new _.A(m),
+    g = new f.A(m);
 (m.handleIdentify = () => {
     let e = o.default.getToken();
     if ((h.verbose("handleIdentify called", { hasToken: null != e }), null == e)) return null;
-    let t = a.A.getState(),
+    let t = s.A.getState(),
         n = o.default.getInstallationForTracking();
     return {
         token: e,
@@ -30,11 +30,11 @@ let h = new s.A("ConnectionStore"),
             gateway_connect_reasons: p.L7(),
             ...(null != n ? { installation_id: n } : {}),
         },
-        presence: g.getInitialState(),
+        presence: E.getInitialState(),
     };
 }),
     (0, c.isDesktop)() &&
-        i.A.remotePowerMonitor.on("resume", () => {
+        i.A.powerMonitor.on("resume", () => {
             m.expeditedHeartbeat(5e3, "power monitor resumed");
         }),
     u.A.addOfflineCallback(() => {

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => x, L: () => d }), n(205816);
+n.d(t, { A: () => M, L: () => d }), n(205816);
 var r = n(107678),
     i = n(653922),
     s = n(311907),
@@ -31,7 +31,7 @@ let f = {
     },
     p = null;
 function h() {
-    return o.A?.remoteApp.getVersion() === "0.0.0";
+    return o.A?.app.getVersion() === "0.0.0";
 }
 function m(e) {
     return e.available ? 0 : e.temporarilyAvailable ? 1 : 2;
@@ -170,15 +170,15 @@ function C(e) {
         ((f.modelState[t] = { ...f.modelState[t], status: u.u.MISSING }),
         "USER_CANCELED_DOWNLOAD" in (n ?? {}) || (f.error = "ERROR_DOWNLOADING_DEPENDENCY"));
 }
-function b(e) {
+function R(e) {
     let { modelId: t } = e;
     f.modelState[t] = { ...f.modelState[t], status: u.u.DOWNLOADED, downloadedBytes: void 0 };
 }
-function R(e) {
+function O(e) {
     let { timeInSeconds: t } = e;
     g((0, i.A)(new Date(), t));
 }
-function O(e) {
+function b(e) {
     f.nativeVoiceFilterModuleState = e.state;
 }
 function D() {
@@ -190,16 +190,16 @@ function L() {
 function w() {
     p = Date.now();
 }
-let x = new S(a.h, {
+let M = new S(a.h, {
     VOICE_FILTER_DOWNLOAD_STARTED: v,
     VOICE_FILTER_DOWNLOAD_PROGRESS: N,
     VOICE_FILTER_DOWNLOAD_FAILED: C,
-    VOICE_FILTER_FILE_READY: b,
+    VOICE_FILTER_FILE_READY: R,
     VOICE_FILTER_CATALOG_FETCH_SUCCESS: I,
     VOICE_FILTER_CATALOG_FETCH_FAILED: T,
     VOICE_FILTER_UPDATE_LIMITED_TIME_VOICES: y,
-    VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME: R,
-    VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE: O,
+    VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME: O,
+    VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE: b,
     VOICE_FILTER_APPLY_FAILED: D,
     VOICE_FILTER_REQUEST_SWITCH: L,
     VOICE_FILTER_LAGGING: w,

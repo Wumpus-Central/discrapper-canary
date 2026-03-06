@@ -76,7 +76,7 @@ class $ extends s.A {
     }
     handlePostConnectionOpen() {
         if (!K()) return;
-        let e = a.A.remoteApp.getReleaseChannel?.();
+        let e = a.A.app.getReleaseChannel();
         "development" !== e && "canary" !== e && (this._supportedNativeChannel = !1),
             clearInterval(this._checkIntervalNativeHeap),
             (this._checkIntervalNativeHeap = setInterval(async () => {

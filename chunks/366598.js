@@ -141,7 +141,7 @@ class v extends s.A {
             return t ? g.k9.MEETS_AUTO_ENABLE : n ? g.k9.MEETS_MINIMUM : g.k9.BELOW_MINIMUM;
         }
         return (0, h.isMac)()
-            ? "arm64" === a.A.remoteApp.getAppArch()
+            ? "arm64" === a.A.app.getAppArch()
                 ? g.k9.MEETS_AUTO_ENABLE
                 : g.k9.MEETS_MINIMUM
             : g.k9.UNKNOWN;

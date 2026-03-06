@@ -1,8 +1,8 @@
 "use strict";
 let r, i;
-n.d(t, { BV: () => w, Fy: () => L, Pf: () => T, Pg: () => N, R0: () => m, sv: () => x });
-var a = n(214958),
-    s = n.n(a);
+n.d(t, { BV: () => w, Fy: () => L, Pf: () => T, Pg: () => R, R0: () => m, sv: () => M });
+var s = n(214958),
+    a = n.n(s);
 n(689953);
 var o = n(70298),
     l = n(175259),
@@ -15,12 +15,12 @@ let f = "deviceProperties",
     h = window.DiscordNative;
 if (null != h) {
     let e,
-        t = h.remoteApp.getVersion(),
+        t = h.app.getVersion(),
         n = h.process.platform,
         i = h.os.release,
-        a = h.os.arch,
+        s = h.os.arch,
         u = h.os.appArch,
-        c = h.remoteApp.getReleaseChannel(),
+        c = h.app.getReleaseChannel(),
         _ = (0, l.c)();
     switch (n) {
         case "win32":
@@ -42,14 +42,14 @@ if (null != h) {
             release_channel: c || "unknown",
             client_version: t,
             os_version: i,
-            os_arch: a,
+            os_arch: s,
             app_arch: u,
             system_locale: _,
             has_client_mods: (0, o.b)(),
             client_launch_id: d.C,
         }),
-        s().name?.toLocaleLowerCase() === "electron" &&
-            ((r.browser_user_agent = s().ua || ""), (r.browser_version = s().version || "")),
+        a().name?.toLocaleLowerCase() === "electron" &&
+            ((r.browser_user_agent = a().ua || ""), (r.browser_version = a().version || "")),
         "linux" === n)
     ) {
         let e = h.crashReporter.getMetadata();
@@ -71,13 +71,13 @@ function m() {
     else if (/Linux/i.test(e)) return "Linux";
     else return "";
 }
-function g(e, t) {
+function E(e, t) {
     if (null == e) return "";
     t = t.replace(/[[]/, "\\[").replace(/[\]]/, "\\]");
     let n = RegExp(`[\\?&]${t}=([^&#]*)`).exec(e);
     return null === n || ("string" != typeof n[1] && n[1].length) ? "" : decodeURIComponent(n[1]).replace(/\+/g, " ");
 }
-function E() {
+function g() {
     let e = document.referrer;
     return 0 === e.search("https?://(.*)google.([^/?]*)")
         ? "google"
@@ -92,11 +92,11 @@ function E() {
 function A() {
     let e = {},
         t = document.referrer,
-        n = E(),
+        n = g(),
         r = "yahoo" !== n ? "q" : "p";
     if (null != n) {
         e.search_engine = n;
-        let i = g(t, r);
+        let i = E(t, r);
         i.length > 0 && (e.mp_keyword = i);
     }
     return e;
@@ -130,11 +130,11 @@ function T() {
     if (/iPad/.test(e)) return "iPad";
     else return "";
 }
-function y() {
+function S() {
     let e = document.referrer.split("/");
     return e.length >= 3 ? e[2] : "";
 }
-function S() {
+function y() {
     try {
         if (__OVERLAY__) return "OVERLAY";
     } catch (e) {}
@@ -151,30 +151,30 @@ function v() {
         e
     );
 }
-function C() {
+function N() {
     return {
-        ...{ browser_user_agent: window.navigator.userAgent || "", browser_version: s().version || "" },
-        os_version: s()?.os?.version ?? "",
+        ...{ browser_user_agent: window.navigator.userAgent || "", browser_version: a().version || "" },
+        os_version: a()?.os?.version ?? "",
     };
 }
-let b = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
-function N(e) {
+let C = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
+function R(e) {
     let t = {};
     return (
-        b.forEach((n) => {
-            let r = g(e, n);
+        C.forEach((n) => {
+            let r = E(e, n);
             r.length > 0 && (t[n] = r);
         }),
         t
     );
 }
-function R() {
+function O() {
     let e = {};
     return (
-        (e.referrer = document.referrer), (e.referring_domain = y()), (e = { ...e, ...N(window.location.href), ...A() })
+        (e.referrer = document.referrer), (e.referring_domain = S()), (e = { ...e, ...R(window.location.href), ...A() })
     );
 }
-function O(e, t) {
+function b(e, t) {
     let n = {};
     return Object.keys(e).map((r) => (n[`${r}${t}`] = e[r])), n;
 }
@@ -182,9 +182,9 @@ function D() {
     let e = u.w.get(f);
     null == e && ((e = v()), u.w.set(f, e));
     let t = u.w.get(p);
-    null == t && ((t = R()), u.w.set(p, t));
+    null == t && ((t = O()), u.w.set(p, t));
     let n = c.u.get(p);
-    return null == n && ((n = O(R(), "_current")), c.u.set(p, n)), { ...e, ...C(), ...t, ...n };
+    return null == n && ((n = b(O(), "_current")), c.u.set(p, n)), { ...e, ...N(), ...t, ...n };
 }
 if (null == r)
     try {
@@ -198,7 +198,7 @@ function L(e) {
 function w() {
     return r;
 }
-function x() {
+function M() {
     return i;
 }
 L(
@@ -206,12 +206,12 @@ L(
         let e = {},
             t = window.GLOBAL_ENV.RELEASE_CHANNEL;
         t && (null == e.release_channel || "" === e.release_channel) && (e.release_channel = t.split("-")[0]);
-        let n = parseInt("493560", 10);
+        let n = parseInt("507321", 10);
         isNaN(n) || (e.client_build_number = n);
-        let r = h?.remoteApp.getBuildNumber?.();
+        let r = h?.app.getBuildNumber();
         return (
-            isNaN(r) || (e.native_build_number = r),
-            (e.client_event_source = S()),
+            null == r || isNaN(r) || (e.native_build_number = r),
+            (e.client_event_source = y()),
             (e.has_client_mods = (0, o.b)()),
             (e.client_launch_id = d.C),
             e

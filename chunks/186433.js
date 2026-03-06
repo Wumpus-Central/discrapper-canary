@@ -3,8 +3,8 @@ n.r(t), n(323874), n(14289), n(35956), n(142703);
 var r = n(627968);
 n(140595), n(64700);
 var i = n(507240),
-    a = n(284009),
-    s = n.n(a),
+    s = n(284009),
+    a = n.n(s),
     o = n(999212),
     l = n(242120),
     u = n(716680),
@@ -15,74 +15,72 @@ var i = n(507240),
     p = n(728458),
     h = n(975571),
     m = n(769341),
-    g = n(837921),
-    E = n(763685),
+    E = n(837921),
+    g = n(763685),
     A = n(184849),
     I = n(723702),
     T = n(976860),
-    y = n(350723),
-    S = n(913934),
+    S = n(350723),
+    y = n(913934),
     v = n(451988),
-    C = n(77729),
-    b = n(772432),
-    N = n(975616),
-    R = n(617590),
-    O = n(111162),
-    D = n(769253),
+    N = n(77729),
+    C = n(772432),
+    R = n(975616),
+    O = n(617590),
+    b = n(111162),
+    D = n(653103),
     L = n(639723),
     w = n(626584),
-    x = n(927813),
-    P = n(316501),
-    M = n(338816);
-O.default.cssDebuggingEnabled && n.e("42592").then(n.t.bind(n, 196995, 19)), (0, P.pF)();
-let k = 5 * x.A.Millis.MINUTE,
+    M = n(927813),
+    x = n(316501),
+    P = n(338816);
+b.default.cssDebuggingEnabled && n.e("71454").then(n.t.bind(n, 739533, 19)), (0, x.pF)();
+let k = 5 * M.A.Millis.MINUTE,
     U = document.getElementById("app-mount");
-s()(null != U, "Could not find app-mount"), (U.className = __OVERLAY__ ? "" : D.l);
+a()(null != U, "Could not find app-mount"), (U.className = __OVERLAY__ ? "" : D.l);
 let G = (0, i.createRoot)(U),
-    V = { "/oauth2/authorize": A.A, "/one-time": M.A };
-function F(e, t, n) {
+    F = { "/oauth2/authorize": A.A, "/one-time": P.A };
+function V(e, t, n) {
     let r = null != n ? new URLSearchParams(n) : null;
-    V[t]?.(r) || (0, T.pX)(t);
+    F[t]?.(r) || (0, T.pX)(t);
 }
-let B = (e) => G.render((0, r.jsx)(N.e, { children: (0, r.jsx)(b.A, { children: (0, r.jsx)(e, {}) }) }));
-if (null != C.A) {
-    C.A.setUncaughtExceptionHandler?.((e, t) => {
+let B = (e) => G.render((0, r.jsx)(R.e, { children: (0, r.jsx)(C.A, { children: (0, r.jsx)(e, {}) }) }));
+if (null != N.A) {
+    N.A.setUncaughtExceptionHandler?.((e, t) => {
         setImmediate(() => {
             throw (p.A.captureCrash(e), e);
         });
     }),
-        g.Ay.appLoaded();
-    let e = C.A.remoteApp.getVersion?.(),
-        t = C.A.remoteApp.getBuildNumber?.(),
-        n = {};
-    null != C.A.remoteApp.getModuleVersions && (n = C.A.remoteApp.getModuleVersions()),
-        p.A.setExtra({ hostVersion: e, moduleVersions: n }),
-        p.A.setTags({ nativeBuildNumber: t?.toString() });
+        E.Ay.appLoaded();
+    let e = N.A.app.getVersion(),
+        t = N.A.app.getBuildNumber(),
+        n = N.A.app.getModuleVersions();
+    p.A.setExtra({ hostVersion: e, moduleVersions: n }), p.A.setTags({ nativeBuildNumber: t?.toString() ?? "" });
     let r = Object.keys(n)
         .filter((e) => null != n[e])
         .map((e) => `${e}: ${n[e]}`)
         .join(", ");
     new w.A().log(`[NATIVE INFO] host ${e}, modules: ${r}, build: ${t}`),
-        g.Ay.pauseFrameEvictor(),
-        g.Ay.initializeExitHook(),
-        g.Ay.initializeWERHandler();
+        E.Ay.pauseFrameEvictor(),
+        E.Ay.initializeExitHook(),
+        E.Ay.initializeWERHandler();
 }
-if (((0, S.M)(window), __OVERLAY__)) B(o.A.Overlay);
+if (((0, y.M)(window), __OVERLAY__)) B(o.A.Overlay);
 else if (null != window.require && null == window.DiscordNative) B(o.A.OutdatedClient);
 else {
     if ((document.addEventListener("scroll", (e) => e.preventDefault()), I.isPlatformEmbedded)) {
-        (window.onbeforeunload = () => g.Ay.beforeUnload()),
-            g.Ay.on("HELP_OPEN", () => window.open(h.A.getCommunityURL()));
-        let e = new v.J_(k, () => g.Ay.purgeMemory());
-        g.Ay.on("MAIN_WINDOW_BLUR", () => {
-            e.delay(), g.Ay.setFocused(!1), (0, y.XC)(window, !1);
+        (window.onbeforeunload = () => E.Ay.beforeUnload()),
+            E.Ay.on("HELP_OPEN", () => window.open(h.A.getCommunityURL()));
+        let e = new v.J_(k, () => E.Ay.purgeMemory());
+        E.Ay.on("MAIN_WINDOW_BLUR", () => {
+            e.delay(), E.Ay.setFocused(!1), (0, S.XC)(window, !1);
         }),
-            g.Ay.on("MAIN_WINDOW_FOCUS", () => {
-                e.cancel(), g.Ay.setFocused(!0), (0, y.XC)(window, !0);
+            E.Ay.on("MAIN_WINDOW_FOCUS", () => {
+                e.cancel(), E.Ay.setFocused(!0), (0, S.XC)(window, !0);
             }),
-            g.Ay.on("MAIN_WINDOW_PATH", F),
-            g.Ay.on("MAIN_WINDOW_HIDDEN", () => {
-                (0, y.R)(window);
+            E.Ay.on("MAIN_WINDOW_PATH", V),
+            E.Ay.on("MAIN_WINDOW_HIDDEN", () => {
+                (0, S.R)(window);
             });
     }
     d.A.initialize(),
@@ -92,8 +90,8 @@ else {
         L.A.init(),
         c.A.initialize(),
         m.A.initialize(),
-        E.A.initialize(),
+        g.A.initialize(),
         _.n(),
-        (0, R.wP)(),
+        (0, O.wP)(),
         B(o.A.App);
 }

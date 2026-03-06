@@ -24,14 +24,14 @@ var r = n(824120),
     v = n(461285),
     N = n(641967),
     C = n(747809),
-    b = n(835498),
-    R = n(525286),
-    O = n(624694),
+    R = n(835498),
+    O = n(525286),
+    b = n(624694),
     D = n(204912),
     L = n(390391),
     w = n(276006),
-    x = n(559633),
-    M = n(714763),
+    M = n(559633),
+    x = n(714763),
     P = n(34135),
     k = n(961350),
     U = n(734057),
@@ -44,8 +44,8 @@ var r = n(824120),
     Y = n(353835),
     W = n(209489),
     K = n(723702),
-    z = n(728458),
-    $ = n(998218),
+    $ = n(728458),
+    z = n(998218),
     q = n(77729),
     Z = n(257506),
     X = n(507821),
@@ -179,7 +179,7 @@ class eC extends _.A {
             (this.context = i),
             this.recordEvent({ c: 0 }),
             (this._fetchAsyncResourcesPromise = G.Ay.fetchAsyncResources().catch((e) => {
-                z.A.captureException(e);
+                $.A.captureException(e);
             })),
             (this.userId = e),
             (this.sessionId = t),
@@ -273,8 +273,7 @@ class eC extends _.A {
                 : (this._recordingEnabled = !1),
             W.A.addOnlineCallback(this._handleNetworkOnline),
             W.A.addOfflineCallback(this._handleNetworkOffline),
-            (0, K.isDesktop)() &&
-                (this.powerMonitorListener = q.A.remotePowerMonitor.on("resume", this._handlePowerResume)),
+            (0, K.isDesktop)() && (this.powerMonitorListener = q.A.powerMonitor.on("resume", this._handlePowerResume)),
             (this._supportedBandwidthEstimationExperiments = []),
             (this._bandwidthEstimationExperiment = null),
             G.Ay.getMediaEngine().getSupportedBandwidthEstimationExperiments((e) => {
@@ -301,7 +300,7 @@ class eC extends _.A {
         if ((this.recordEvent({ c: 6, e: null != e }), null == e)) (this._endpoint = null), (this.hostname = null);
         else {
             e = `${e_}//${e}`;
-            let { hostname: t, port: n } = $.A.toURLSafe(e) ?? {},
+            let { hostname: t, port: n } = z.A.toURLSafe(e) ?? {},
                 r = null != n ? parseInt(n) : NaN;
             null != t && (80 === r || 443 === r) && (e = `${e_}//${t}`),
                 (this._endpoint = e + "/"),
@@ -609,7 +608,7 @@ class eC extends _.A {
             G.Ay.supports(ec.O5.FIXED_KEYFRAME_INTERVAL) && t.push("fixed_keyframe_interval"),
             0 !== this._supportedBandwidthEstimationExperiments.length)
         ) {
-            let e = R.A.workerExperimentString();
+            let e = O.A.workerExperimentString();
             null != e && t.push(e);
         }
         this.context === ec.x.DEFAULT && (0, v.I)("RtcConnection").enabled && t.push("audio_transport_cc");
@@ -740,7 +739,7 @@ class eC extends _.A {
             let n = B.A.shouldIncludePreferredRegion() ? B.A.getPreferredRegion() : null,
                 s = G.Ay.getSettings(),
                 a = U.A.getChannel(this.channelId),
-                o = O.A.getConnectionStats(this.getMediaEngineConnectionId())?.stats.rtp.outbound.find(
+                o = b.A.getConnectionStats(this.getMediaEngineConnectionId())?.stats.rtp.outbound.find(
                     (e) => "audio" === e.type,
                 )?.sampleRateMismatchPercent,
                 l = {
@@ -765,7 +764,7 @@ class eC extends _.A {
                     ...this._voiceQuality?.getAudioDeviceStats(),
                     ...this._voiceQuality?.getAudioLevelStats(),
                     ...this._voiceDuration?.getDurationStats(),
-                    ...b.A.getUsageStats(),
+                    ...R.A.getUsageStats(),
                     ...this.getAudioDeviceStates(),
                     ...this._systemResponsiveness?.getPttQueueLatencyStats(),
                     num_noise_cancellation_changes: this._numNoiseCancellationChanges,
@@ -813,7 +812,7 @@ class eC extends _.A {
                 };
             Promise.all([
                 (async () => (await this._systemResources?.getBatteryLevelStats()) ?? { batteryUsageRounded: null })(),
-                x.A.getKrispModel(),
+                M.A.getKrispModel(),
                 G.Ay.getKrispEnableStats() ? G.Ay.getMediaEngine().getNoiseCancellationStats() : Promise.resolve(null),
             ]).then((e) => {
                 let [{ batteryUsageRounded: t }, n, r] = e;
@@ -873,7 +872,7 @@ class eC extends _.A {
         0 === s.length &&
             s.push({ type: ec.mI.VIDEO, rid: "100", ssrc: i + 1, rtxSsrc: i + 2, quality: 100, active: !1 });
         let l = G.Ay.getMediaEngine(),
-            u = M.A.getPersistentCodesEnabled(),
+            u = x.A.getPersistentCodesEnabled(),
             c = k.default.getStaticAuthSessionId() ?? void 0,
             d = (0, p.tB)(),
             _ = l.connect(this.context, this.userId, {
@@ -889,7 +888,7 @@ class eC extends _.A {
                 ...this.getExtraConnectionOptions(),
             }),
             m = (0, p.tB)() - d;
-        (0, K.isWeb)() && !eu.PF && z.A.captureMessage("Browser does not support Unified Plan"),
+        (0, K.isWeb)() && !eu.PF && $.A.captureMessage("Browser does not support Unified Plan"),
             _.setUseElectronVideo(l.supports(ec.O5.ELECTRON_VIDEO)),
             G.Ay.supports(ec.O5.IMAGE_QUALITY_MEASUREMENT) &&
                 _.setVideoQualityMeasurement("imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec");
@@ -1473,7 +1472,7 @@ class eC extends _.A {
                       try {
                           this._connection?.executeSecureFramesTransition(eI);
                       } catch (e) {
-                          (n = !0), z.A.captureException(e);
+                          (n = !0), $.A.captureException(e);
                       }
                       this._storeSecureFrameTransitionData(eI, {
                           initReceivedTime: t,
@@ -1541,7 +1540,7 @@ class eC extends _.A {
         try {
             this._connection?.executeSecureFramesTransition(e);
         } catch (e) {
-            (n = !0), z.A.captureException(e);
+            (n = !0), $.A.captureException(e);
         }
         this._storeSecureFrameTransitionData(e, {
             executeReceivedTime: t,

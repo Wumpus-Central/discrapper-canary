@@ -25,12 +25,12 @@ let E = window.DiscordNative,
     N = {},
     C = {};
 null != E &&
-    ((S = E.remoteApp
+    ((S = E.app
         .getVersion()
         .split(".")
         .map((e) => parseInt(e))),
-    (v = E.remoteApp.getModuleVersions?.()),
-    (y = E.remoteApp.getBuildNumber?.()));
+    (v = E.app.getModuleVersions()),
+    (y = E.app.getBuildNumber()));
 let R = new Set([
         "discord_erlpack",
         "discord_game_utils",
@@ -155,7 +155,7 @@ let W = {
                     e.disconnectAllProcesses &&
                     e.destroyHostProcess &&
                     (e.disconnectAllProcesses(), e.destroyHostProcess()),
-                E.remotePowerMonitor.removeAllListeners(),
+                E.powerMonitor.removeAllListeners(),
                 window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN &&
                     !0 !== c.w.get(s.qx) &&
                     this.supportsFeature(h.BYE.USER_DATA_CACHE) &&
@@ -277,11 +277,11 @@ let W = {
         setBadge(e) {
             if ("darwin" === (0, f.getPlatformName)()) {
                 let t = "";
-                -1 === e ? (t = "•") : e > 0 && (t = `${e}`), E.remoteApp.dock.setBadge(t);
+                -1 === e ? (t = "•") : e > 0 && (t = `${e}`), E.app.dock.setBadge(t);
             } else
                 "win32" === (0, f.getPlatformName)()
                     ? this.sendIPC(o.W.APP_BADGE_SET, e)
-                    : "linux" === (0, f.getPlatformName)() && E.remoteApp.setBadgeCount(e >= 0 ? e : 0);
+                    : "linux" === (0, f.getPlatformName)() && E.app.setBadgeCount(e >= 0 ? e : 0);
         },
         setSystemTrayIcon(e) {
             f.isPlatformEmbedded && this.sendIPC(o.W.SYSTEM_TRAY_SET_ICON, e);
@@ -291,7 +291,7 @@ let W = {
         },
         bounceDock(e) {
             if (f.isPlatformEmbedded) {
-                let t = E.remoteApp;
+                let t = E.app;
                 if (null != t.dock) {
                     let n = t.dock.bounce(e);
                     return async () => {
@@ -309,9 +309,7 @@ let W = {
         },
         get releaseChannel() {
             if (!f.isPlatformEmbedded) return "";
-            let e = E.remoteApp.getReleaseChannel();
-            if (null != e) return e;
-            return "";
+            return E.app.getReleaseChannel();
         },
         get version() {
             return S;
@@ -699,7 +697,7 @@ let W = {
             f.isPlatformEmbedded && null != E.powerSaveBlocker && E.powerSaveBlocker.cleanupDisplaySleep();
         },
         relaunch() {
-            f.isPlatformEmbedded && null != E.remoteApp.relaunch && E.remoteApp.relaunch();
+            f.isPlatformEmbedded && E.app.relaunch();
         },
         makeChunkedRequest(e, t, n) {
             let r = `${(0, l.TP)()}${e}`;
