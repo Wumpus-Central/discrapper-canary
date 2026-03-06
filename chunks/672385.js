@@ -85,6 +85,7 @@ let A = (e) => {
             user_status: I(u.id),
             is_guild_profile: d?.guildId != null,
             is_bot_profile: u.bot,
+            is_private_to_viewer: d?.private ?? !1,
         };
     },
     y = (e) => {
