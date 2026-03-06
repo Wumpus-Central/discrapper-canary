@@ -1,5 +1,5 @@
 l.d(t, {
-    D5: () => y,
+    D5: () => g,
     Ec: () => b,
     KF: () => A,
     LF: () => m,
@@ -58,7 +58,7 @@ function m() {
 function h() {
     let e = n.useCallback(() => {
         (0, i.mMO)(async () => {
-            let { default: e } = await l.e("10101").then(l.bind(l, 861177));
+            let { default: e } = await l.e("32482").then(l.bind(l, 861177));
             return (t) => (0, a.jsx)(e, { source: {}, ...t });
         });
     }, []);
@@ -104,7 +104,7 @@ function b() {
         }),
     });
 }
-let g = [
+let y = [
         { id: "avatar_decoration", label: "Avatar Decoration", value: d.e.AVATAR_DECORATION_MODAL_UPSELL },
         { id: "profile_effect", label: "Profile Effect", value: d.e.PROFILE_EFFECT_MODAL_UPSELL },
         { id: "nameplate", label: "Nameplate", value: d.e.NAMEPLATE_MODAL_UPSELL },
@@ -126,7 +126,7 @@ let g = [
             glowUp: "Show off your style with a custom nameplate, available with Nitro.",
         },
     };
-function y() {
+function g() {
     let [e, t] = n.useState(d.e.AVATAR_DECORATION_MODAL_UPSELL),
         r = n.useCallback(() => {
             let { title: t, body: n, glowUp: r } = f[e];
@@ -152,7 +152,7 @@ function y() {
                     placeholder: "Select type",
                     onSelectionChange: (e) => t(e),
                     value: e,
-                    options: g,
+                    options: y,
                     selectionMode: "single",
                     fullWidth: !0,
                 }),
@@ -167,8 +167,8 @@ function y() {
     });
 }
 let E = [
-    { id: "near_limit", label: "Near Limit (100 guilds)", value: 100 },
-    { id: "at_limit", label: "At Limit (200 guilds)", value: u.qlD },
+    { id: "near_limit", label: "Near Limit (99 guilds)", value: 99 },
+    { id: "at_limit", label: "At Limit (100 guilds)", value: u.qlD },
 ];
 function v() {
     let [e, t] = n.useState(100),
