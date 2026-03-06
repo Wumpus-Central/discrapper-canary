@@ -92,24 +92,25 @@ function T(e) {
         B = (0, s.useMemo)(
             () =>
                 L
-                    ? G.map((e, t) =>
+                    ? G.map((e, s) =>
                           null == e.sku
                               ? null
                               : (0, i.jsx)(
                                     g.A,
                                     {
                                         sku: e.sku,
-                                        index: t,
+                                        index: s,
                                         wishlistOwner: n,
                                         wishlistId: v,
                                         analyticsLocations: R,
                                         onViewWishlist: T,
+                                        isSingleCard: 1 === t.length,
                                     },
                                     e.skuId,
                                 ),
                       )
                     : null,
-            [R, L, T, n, G, v],
+            [R, L, T, n, t.length, G, v],
         ),
         [H, F] = (0, c.RF)(
             l.M.SLAYER_STOREFRONT_ORBS_REWARD_WISHLIST_UPSELL,
