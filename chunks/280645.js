@@ -1,42 +1,42 @@
-n.d(t, { A: () => h });
-var i = n(627968);
-n(64700);
-var s = n(311907),
-    l = n(696451),
-    a = n(317525),
-    r = n(71393),
-    d = n(576705),
-    o = n(183555),
-    c = n(1659),
-    u = n(166005),
-    A = n(900179),
-    x = n(518477),
-    m = n(652215),
-    p = n(985018);
-function h(e) {
-    let { userId: t, guildId: n, ...h } = e,
-        { trackUserProfileAction: f } = (0, o.NJ)(),
-        g = (0, s.bG)([r.A], () => r.A.getGuild(n)),
-        I = (0, s.bG)([l.Ay], () => l.Ay.getMember(n, t)),
-        j = I?.roles,
-        _ = (0, s.yK)([a.A], () => a.A.getManyRoles(n, j ?? []).sort(c.m), [j, n]),
-        [N] = (0, s.yK)([d.A], () => [d.A.can(m.xBc.MANAGE_ROLES, g), d.A.getGuildVersion(n)]);
-    if (null == g) return null;
-    let v = N && null != I;
-    return 0 !== _.length || v
-        ? (0, i.jsx)(A.A, {
+i.d(t, { A: () => g });
+var l = i(627968);
+i(64700);
+var n = i(311907),
+    s = i(696451),
+    a = i(317525),
+    r = i(71393),
+    o = i(576705),
+    d = i(183555),
+    c = i(1659),
+    u = i(166005),
+    A = i(900179),
+    m = i(518477),
+    x = i(652215),
+    p = i(985018);
+function g(e) {
+    let { userId: t, guildId: i, ...g } = e,
+        { trackUserProfileAction: h } = (0, d.NJ)(),
+        I = (0, n.bG)([r.A], () => r.A.getGuild(i)),
+        f = (0, n.bG)([s.Ay], () => s.Ay.getMember(i, t)),
+        j = f?.roles,
+        v = (0, n.yK)([a.A], () => a.A.getManyRoles(i, j ?? []).sort(c.m), [j, i]),
+        [N] = (0, n.yK)([o.A], () => [o.A.can(x.xBc.MANAGE_ROLES, I), o.A.getGuildVersion(i)]);
+    if (null == I) return null;
+    let E = N && null != f;
+    return 0 !== v.length || E
+        ? (0, l.jsx)(A.A, {
               heading: p.intl.string(p.t["LPJmL/"]),
-              scrollTargetId: x.bk.ROLES,
-              ...h,
-              children: (0, i.jsx)(u.Y, {
+              scrollTargetId: m.bk.ROLES,
+              ...g,
+              children: (0, l.jsx)(u.YR, {
                   userId: t,
-                  guild: g,
-                  roles: _,
+                  guild: I,
+                  roles: v,
                   onAddRole: () => {
-                      f({ action: "ADD_ROLE" });
+                      h({ action: "ADD_ROLE" });
                   },
                   onRemoveRole: () => {
-                      f({ action: "REMOVE_ROLE" });
+                      h({ action: "REMOVE_ROLE" });
                   },
                   allowEditing: !0,
               }),

@@ -3,18 +3,18 @@ n.d(t, { A: () => c });
 var r = n(627968);
 n(64700);
 var i = n(311907),
-    a = n(696451),
-    s = n(317525),
+    s = n(696451),
+    a = n(317525),
     o = n(183555),
     l = n(1659),
     u = n(166005);
 function c(e) {
     let { userId: t, guild: n } = e,
-        c = (0, i.bG)([a.Ay], () => a.Ay.getMember(n.id, t)),
+        c = (0, i.bG)([s.Ay], () => s.Ay.getMember(n.id, t)),
         d = c?.roles,
-        _ = (0, i.yK)([s.A], () => s.A.getManyRoles(n.id, d ?? []).sort(l.m), [d, n.id]),
+        _ = (0, i.yK)([a.A], () => a.A.getManyRoles(n.id, d ?? []).sort(l.m), [d, n.id]),
         { trackUserProfileAction: f } = (0, o.NJ)();
-    return (0, r.jsx)(u.Q, {
+    return (0, r.jsx)(u.Ql, {
         userId: t,
         guild: n,
         roles: _,

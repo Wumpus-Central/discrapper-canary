@@ -1,135 +1,119 @@
-r.d(t, { A: () => G });
-var s = r(627968),
-    n = r(64700),
-    l = r(503698),
-    i = r.n(l),
-    a = r(735438),
-    d = r.n(a),
-    c = r(317097),
-    u = r(827734),
-    o = r(397927),
-    C = r(830215),
-    m = r(398590),
-    L = r(803306),
-    h = r(356343),
-    x = r(713654),
-    g = r(967144),
-    p = r(95701),
-    f = r(34457),
-    j = r(287809),
-    E = r(147925),
-    v = r(9865),
-    A = r(79680),
-    N = r(651539),
-    I = r(774393),
-    b = r(768397),
-    Z = r(652215),
-    _ = r(985018),
-    M = r(751418);
-function G(e) {
+s.d(t, { A: () => M });
+var r = s(627968),
+    n = s(64700),
+    i = s(503698),
+    l = s.n(i),
+    a = s(735438),
+    d = s.n(a),
+    c = s(397927),
+    u = s(830215),
+    C = s(398590),
+    o = s(803306),
+    L = s(356343),
+    m = s(713654),
+    h = s(166005),
+    x = s(95701),
+    g = s(34457),
+    p = s(287809),
+    f = s(147925),
+    j = s(9865),
+    E = s(79680),
+    A = s(651539),
+    v = s(774393),
+    N = s(768397),
+    I = s(652215),
+    Z = s(985018),
+    b = s(751418);
+function M(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        [r, l] = n.useState(""),
-        [i, a] = n.useState(null),
-        [d, c] = n.useState(null),
-        u = (0, N.A)(e.code);
+        [s, i] = n.useState(""),
+        [l, a] = n.useState(null),
+        [d, m] = n.useState(null),
+        h = (0, A.A)(e.code);
     n.useEffect(() => {
         !(async function () {
-            let e = j.default.getCurrentUser();
+            let e = p.default.getCurrentUser();
             if (null == e)
                 try {
-                    e = await (0, L.rQ)();
+                    e = await (0, o.rQ)();
                 } catch (e) {
-                    C.A.verifySSOToken("accept_guild_template", null);
+                    u.A.verifySSOToken("accept_guild_template", null);
                 }
-            null != e && l(_.intl.formatToPlainString(u.defaultName, { username: e.username }));
+            null != e && i(Z.intl.formatToPlainString(h.defaultName, { username: e.username }));
         })();
-    }, [u.defaultName]),
-        (0, I.A)(e);
-    let x = (0, s.jsxs)(s.Fragment, {
+    }, [h.defaultName]),
+        (0, v.A)(e);
+    let x = (0, r.jsxs)(r.Fragment, {
             children: [
-                t ? (0, s.jsx)(b.A, { guildTemplate: e }) : null,
-                (0, s.jsx)("div", { className: M.Kk, children: (0, s.jsx)(h.A, { icon: i, onChange: a }) }),
-                (0, s.jsx)(o.ksK, {
-                    label: u.nameLabel,
-                    helperText: _.intl.format(u.terms, { guidelinesURL: Z.X7G.GUIDELINES }),
+                t ? (0, r.jsx)(N.A, { guildTemplate: e }) : null,
+                (0, r.jsx)("div", { className: b.Kk, children: (0, r.jsx)(L.A, { icon: l, onChange: a }) }),
+                (0, r.jsx)(c.ksK, {
+                    label: h.nameLabel,
+                    helperText: Z.intl.format(h.terms, { guidelinesURL: I.X7G.GUIDELINES }),
                     type: "text",
-                    value: r,
+                    value: s,
                     maxLength: 100,
-                    onChange: l,
+                    onChange: i,
                     error: d?.name,
                 }),
             ],
         }),
-        g = e.serializedSourceGuild.roles.map((t) => v.Wj(e.serializedSourceGuild.id, t)).filter((e) => !(0, f.Oy)(e));
+        f = e.serializedSourceGuild.roles.map((t) => j.Wj(e.serializedSourceGuild.id, t)).filter((e) => !(0, g.Oy)(e));
     return {
         form: x,
-        preview: (0, s.jsxs)(s.Fragment, {
+        preview: (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, s.jsx)(o.cGx, {}),
-                (0, s.jsx)(o.D0$, {
-                    label: _.intl.string(_.t.Zxk1OF),
-                    helperText: _.intl.string(_.t.de7DpI),
-                    children: (0, s.jsx)(S, { channels: e.serializedSourceGuild.channels }),
+                (0, r.jsx)(c.cGx, {}),
+                (0, r.jsx)(c.D0$, {
+                    label: Z.intl.string(Z.t.Zxk1OF),
+                    helperText: Z.intl.string(Z.t.de7DpI),
+                    children: (0, r.jsx)(_, { channels: e.serializedSourceGuild.channels }),
                 }),
-                g.length > 0
-                    ? (0, s.jsx)(o.D0$, {
-                          label: _.intl.string(_.t["RJ1e/r"]),
-                          children: (0, s.jsx)(T, { guildId: e.serializedSourceGuild.id, roles: g }),
+                f.length > 0
+                    ? (0, r.jsx)(c.D0$, {
+                          label: Z.intl.string(Z.t["RJ1e/r"]),
+                          children: (0, r.jsx)(G, { guildId: e.serializedSourceGuild.id, roles: f }),
                       })
                     : null,
             ],
         }),
         handleSubmit: () => {
-            A.A.acceptGuildTemplate(e.code, r, i)
+            E.A.acceptGuildTemplate(e.code, s, l)
                 .then(() => {
-                    (0, o.s7G)(), (0, m.bz)();
+                    (0, c.s7G)(), (0, C.bz)();
                 })
-                .catch((e) => c(e));
+                .catch((e) => m(e));
         },
     };
 }
-function S(e) {
+function _(e) {
     let { channels: t } = e,
-        r = d()(t)
+        s = d()(t)
             .sortBy((e) => (null == e.parent_id ? 1e4 * Number(e.id) : 1e4 * Number(e.parent_id) + e.id))
             .map((e) => {
                 var t;
-                let r = (t = e).type === Z.rbe.GUILD_CATEGORY ? E.A : (0, x.gU)((0, p.UE)(t));
-                return (0, s.jsxs)(
+                let s = (t = e).type === I.rbe.GUILD_CATEGORY ? f.A : (0, m.gU)((0, x.UE)(t));
+                return (0, r.jsxs)(
                     "div",
                     {
-                        className: i()(M.Ix, { [M.L1]: e.type === Z.rbe.GUILD_CATEGORY }),
+                        className: l()(b.Ix, { [b.L1]: e.type === I.rbe.GUILD_CATEGORY }),
                         children: [
-                            null != r ? (0, s.jsx)(r, { className: M.p }) : null,
-                            (0, s.jsx)(o.Text, { className: M.be, variant: "text-sm/normal", children: e.name }),
+                            null != s ? (0, r.jsx)(s, { className: b.p }) : null,
+                            (0, r.jsx)(c.Text, { className: b.be, variant: "text-sm/normal", children: e.name }),
                         ],
                     },
                     e.id,
                 );
             })
             .value();
-    return (0, s.jsx)("div", { className: M.oD, children: r });
+    return (0, r.jsx)("div", { className: b.oD, children: s });
 }
-function T(e) {
-    let { guildId: t, roles: r } = e,
-        n = r
+function G(e) {
+    let { guildId: t, roles: s } = e,
+        n = s
             .slice()
             .reverse()
-            .map((e) => (0, s.jsx)(H, { guildId: t, role: e }, e.id));
-    return (0, s.jsx)("ul", { className: M.F6, children: n });
+            .map((e) => (0, r.jsx)("li", { children: (0, r.jsx)(h.g1, { role: e, guildId: t }) }, e.id));
+    return (0, r.jsx)("ul", { className: b.F6, children: n });
 }
-function H(e) {
-    let { guildId: t, role: r } = e,
-        n = (0, o.rdh)(u.A.colors.BORDER_SUBTLE).hex(),
-        l = null == r.color ? n : (0, c.Hl)(r.color),
-        i = (0, g.X_)(t, r, r.colorStrings);
-    return (0, s.jsxs)("li", {
-        className: M.JC,
-        style: { borderColor: (0, c.xp)(l, 0.6) ?? void 0, backgroundColor: (0, c.xp)(l, 0.075) ?? void 0 },
-        children: [
-            (0, s.jsx)(o.RYH, { className: M.Ni, color: l, colors: i }),
-            (0, s.jsx)(o.Text, { variant: "text-xs/medium", children: r.name }),
-        ],
-    });
-}
-r(979217);
+s(979217);

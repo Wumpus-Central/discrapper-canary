@@ -7,6 +7,4 @@ e.exports = {
     L1: "category__5c799",
     p: "channelIcon__5c799",
     be: "channelText__5c799",
-    JC: "role__5c799",
-    Ni: "roleCircle__5c799",
 };
