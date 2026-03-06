@@ -2,9 +2,9 @@
 n.d(t, { A: () => f });
 var r = n(61090),
     i = n(100245);
-let a = () => {};
+let s = () => {};
 n.g.__timingFunction = () => performance.now();
-let s = null == n.g.__getTotalRequireTime ? () => 0 : () => n.g.__getTotalRequireTime();
+let a = null == n.g.__getTotalRequireTime ? () => 0 : () => n.g.__getTotalRequireTime();
 function o(e, t) {
     if (0 === t || null == t) return null;
     let n = t - e;
@@ -35,25 +35,25 @@ class l {
         return this.end_ > 0;
     }
     recordStart() {
-        0 === this.start_ && this.recordStart_(), r.A.mark(this.emoji, `Start ${this.name}`), a();
+        0 === this.start_ && this.recordStart_(), r.A.mark(this.emoji, `Start ${this.name}`), s();
     }
     recordStart_() {
-        (this.start_ = Date.now()), (this.startNumImports = i.Ej()), (this.startImportTime = s());
+        (this.start_ = Date.now()), (this.startNumImports = i.Ej()), (this.startImportTime = a());
     }
     recordEnd() {
         0 === this.end_ && 0 !== this.start_
             ? (this.recordEnd_(), r.A.mark(this.emoji, `Finish ${this.name}`, this.end_ - this.start_))
             : r.A.mark(this.emoji, `Finish ${this.name}`),
-            a();
+            s();
     }
     recordEnd_() {
-        (this.end_ = Date.now()), (this.endNumImports = i.Ej()), (this.endImportTime = s());
+        (this.end_ = Date.now()), (this.endNumImports = i.Ej()), (this.endImportTime = a());
     }
     set(e, t) {
         0 === this.start_ &&
-            ((this.start_ = e), (this.end_ = e + t), (this.endNumImports = i.Ej()), (this.endImportTime = s())),
+            ((this.start_ = e), (this.end_ = e + t), (this.endNumImports = i.Ej()), (this.endImportTime = a())),
             r.A.mark(this.emoji, this.name, t),
-            a();
+            s();
     }
     serializeStart(e) {
         return o(e, this.start_);
@@ -65,13 +65,13 @@ class l {
         if (this.start_ > 0) return r.A.time(this.emoji, this.name, e);
         this.recordStart_();
         let t = r.A.time(this.emoji, this.name, e);
-        return this.recordEnd_(), a(), t;
+        return this.recordEnd_(), s(), t;
     }
     async measureAsync(e) {
         if (this.start_ > 0) return r.A.timeAsync(this.emoji, this.name, e);
         this.recordStart_();
         let t = await r.A.timeAsync(this.emoji, this.name, e);
-        return this.recordEnd_(), a(), t;
+        return this.recordEnd_(), s(), t;
     }
     async measureAsyncWithoutNesting(e) {
         if (this.start_ > 0) return r.A.timeAsync(this.emoji, this.name, e);
@@ -79,7 +79,7 @@ class l {
         let t = Date.now();
         r.A.mark(this.emoji, `Start ${this.name}`);
         let n = await e();
-        return r.A.mark(this.emoji, `Finish ${this.name}`, Date.now() - t), this.recordEnd_(), a(), n;
+        return r.A.mark(this.emoji, `Finish ${this.name}`, Date.now() - t), this.recordEnd_(), s(), n;
     }
 }
 class u {
@@ -101,15 +101,15 @@ class u {
         if (0 === this.time_) this.recordState_(e);
         else if (!this.onlyOnce) {
             if (this.alwaysRecord) {
-                this.recordState_(e), a();
+                this.recordState_(e), s();
                 return;
             }
             r.A.mark(this.emoji, this.name);
         }
-        a();
+        s();
     }
     recordState_(e) {
-        (this.time_ = e), (this.numImports = i.Ej()), (this.importTime = s()), r.A.mark(this.emoji, this.name);
+        (this.time_ = e), (this.numImports = i.Ej()), (this.importTime = a()), r.A.mark(this.emoji, this.name);
     }
     hasData() {
         return this.time_ > 0;
@@ -124,7 +124,7 @@ class c {
         return this.time_;
     }
     record() {
-        0 === this.time_ && (this.time_ = s());
+        0 === this.time_ && (this.time_ = a());
     }
 }
 class d {
@@ -194,18 +194,26 @@ class _ extends d {
     messageRenderCachedCount = null;
     messageRenderHasMoreAfter = null;
     firstAppActiveTime = null;
-    cacheInfo = null;
+    initialPage = null;
+    earlyCacheInfo = null;
+    lazyCacheInfo = null;
     extraProperties = {};
     setTTICallback(e) {
-        a = () => {
-            !0 === e() && (a = () => !1);
+        s = () => {
+            !0 === e() && (s = () => !1);
         };
     }
-    setCacheInfo(e) {
-        this.cacheInfo = e;
+    setInitialPage(e) {
+        this.initialPage = e;
+    }
+    setEarlyCacheInfo(e) {
+        this.earlyCacheInfo = e;
+    }
+    setLazyCacheInfo(e) {
+        this.lazyCacheInfo = e;
     }
     setInterstitial(e) {
-        (this.interstitial = e), a();
+        (this.interstitial = e), s();
     }
     addLocalMessages(e, t) {
         for (this.cachedChannelCounts.set(e, t); this.cachedChannelCounts.size > 100; ) {
@@ -228,7 +236,7 @@ class _ extends d {
             t && this.renderLatestMessages.record();
     }
     recordMessageRender(e, t, r, i) {
-        let { default: a } = n(661191);
+        let { default: s } = n(661191);
         if (!this.renderLatestMessages.hasData())
             if ((this.renderMessages.record(), t.length > 0 && this.renderMessagesWithCache.record(), r)) {
                 if ((this.renderLatestMessages.record(), null == this.cachedChannelId)) {
@@ -248,13 +256,13 @@ class _ extends d {
                     return;
                 }
                 if (e === this.cachedChannelId) {
-                    let n = this.cachedMessageIds.sort(a.compare).reverse()[0],
-                        r = t.sort(a.compare).reverse()[0];
-                    this.messageCacheAgeSeconds = Math.floor((a.extractTimestamp(r) - a.extractTimestamp(n)) / 1e3);
-                    let s = t.filter((e) => this.cachedMessageIds?.includes(e)).length;
+                    let n = this.cachedMessageIds.sort(s.compare).reverse()[0],
+                        r = t.sort(s.compare).reverse()[0];
+                    this.messageCacheAgeSeconds = Math.floor((s.extractTimestamp(r) - s.extractTimestamp(n)) / 1e3);
+                    let a = t.filter((e) => this.cachedMessageIds?.includes(e)).length;
                     (this.messageCacheCount = this.cachedChannelCounts.get(e) ?? null),
-                        (this.messageCacheHavingCount = s),
-                        (this.messageCacheMissingCount = t.length - s),
+                        (this.messageCacheHavingCount = a),
+                        (this.messageCacheMissingCount = t.length - a),
                         (this.messageRenderFullCount = t.length),
                         (this.messageRenderCachedCount = this.cachedMessageIds.length),
                         (this.messageRenderHasMoreAfter = i);
@@ -346,10 +354,11 @@ class _ extends d {
                 .filter((e) => e.log.startsWith("Require "))
                 .map((e) => e.delta ?? 0)
                 .sum(),
-            a = this.serializeAppStartupMetrics();
+            s = this.serializeAppStartupMetrics();
         return {
             ...this.extraProperties,
-            ...a,
+            ...s,
+            initial_page: this.initialPage,
             time_load_index_start: this.loadIndex.serializeStart(t),
             time_load_index_end: this.loadIndex.serializeEnd(t),
             time_begin_fast_connect_start: this.beginFastConnect.serializeStart(t),
@@ -461,12 +470,12 @@ class _ extends d {
             message_render_cached_count: this.messageRenderCachedCount,
             message_render_has_more_after: this.messageRenderHasMoreAfter,
             duration_major_js_imports: this.loadImports.end - this.loadIndex.start + i,
-            cache_num_guilds: this.cacheInfo?.guilds,
-            cache_num_private_channels: this.cacheInfo?.privateChannels,
-            cache_num_basic_channels: this.cacheInfo?.basicChannels,
-            cache_num_basic_channels_stale: this.cacheInfo?.basicChannelsStale,
-            cache_num_full_channels: this.cacheInfo?.fullChannels,
-            cache_num_full_channel_guilds: this.cacheInfo?.fullChannelGuilds,
+            cache_num_guilds: Math.max(this.earlyCacheInfo?.guilds ?? 0, this.lazyCacheInfo?.guilds ?? 0),
+            cache_num_private_channels: this.lazyCacheInfo?.privateChannels,
+            cache_num_basic_channels: this.lazyCacheInfo?.basicChannels,
+            cache_num_basic_channels_stale: this.lazyCacheInfo?.basicChannelsStale,
+            cache_num_full_channels: this.lazyCacheInfo?.fullChannels,
+            cache_num_full_channel_guilds: this.lazyCacheInfo?.fullChannelGuilds,
             num_imports_at_load_index_end: this.loadIndex.endNumImports,
             num_imports_at_init_end: this.init.endNumImports,
             num_imports_at_load_mini_cache_end: this.loadMiniCache.endNumImports,
