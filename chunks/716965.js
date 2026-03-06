@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { $Q: () => h, Gq: () => f, IN: () => E, Kf: () => _, Vh: () => m, cG: () => g, qY: () => p, zf: () => A });
+n.d(t, { $Q: () => h, Gq: () => f, IN: () => g, Kf: () => _, Vh: () => m, cG: () => E, qY: () => p, zf: () => A });
 var r = n(323125),
     i = n(562465),
-    a = n(830215),
-    s = n(734057),
+    s = n(830215),
+    a = n(734057),
     o = n(309010),
     l = n(652215);
 let u = "10000",
     c = "10000";
 function d() {
     let e = o.A.getChannelId(),
-        t = s.A.getBasicChannel(e);
+        t = a.A.getBasicChannel(e);
     return { guild_id: t?.guild_id ?? u, channel_id: t?.id ?? c, channel_type: t?.type ?? l.rbe.UNKNOWN };
 }
 function _(e) {
@@ -26,8 +26,8 @@ async function f(e) {
         authorize: t,
         clientId: n,
         scopes: r,
-        responseType: a,
-        redirectUri: s,
+        responseType: s,
+        redirectUri: a,
         codeChallenge: o,
         codeChallengeMethod: u,
         state: c,
@@ -36,15 +36,14 @@ async function f(e) {
         channelId: p,
         integrationType: h,
         nonce: m,
-        dmSettings: g,
     } = e;
     return (
         await i.Bo.post({
             url: l.Rsh.OAUTH2_AUTHORIZE,
             query: {
                 client_id: n,
-                response_type: a,
-                redirect_uri: s,
+                response_type: s,
+                redirect_uri: a,
                 code_challenge: o,
                 code_challenge_method: u,
                 scope: r.join(" "),
@@ -59,7 +58,6 @@ async function f(e) {
                 authorize: t,
                 integration_type: h,
                 location_context: d(),
-                dm_settings: { allow_mobile_push: g?.allowMobilePush },
             },
             oldFormErrors: !0,
             rejectWithError: !1,
@@ -71,8 +69,8 @@ async function p(e) {
         clientId: t,
         scopes: n,
         responseType: r,
-        redirectUri: a,
-        codeChallenge: s,
+        redirectUri: s,
+        codeChallenge: a,
         codeChallengeMethod: o,
         state: u,
         integrationType: c,
@@ -85,8 +83,8 @@ async function p(e) {
             query: {
                 client_id: t,
                 response_type: r,
-                redirect_uri: a,
-                code_challenge: s,
+                redirect_uri: s,
+                code_challenge: a,
                 code_challenge_method: o,
                 scope: n.join(" "),
                 state: u,
@@ -110,12 +108,12 @@ async function h(e) {
     return t;
 }
 function m(e, t) {
-    a.A.logout(t, (0, r.T2)(e.pathname + e.search, !1));
+    s.A.logout(t, (0, r.T2)(e.pathname + e.search, !1));
 }
-async function g(e) {
+async function E(e) {
     return await i.Bo.post({ url: l.Rsh.OAUTH2_DEVICE_VERIFY, body: { user_code: e }, rejectWithError: !1 });
 }
-async function E(e, t) {
+async function g(e, t) {
     return await i.Bo.post({ url: l.Rsh.OAUTH2_DEVICE_FINISH, body: { user_code: e, result: t }, rejectWithError: !1 });
 }
 async function A(e, t, n) {

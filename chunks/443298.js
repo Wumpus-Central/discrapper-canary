@@ -9,5 +9,4 @@ e.exports = {
     cw: "contentBackground__3d3b0",
     sL: "intObserver__3d3b0",
     ah: "deepLinkContainer__3d3b0",
-    _j: "mobilePushContainer__3d3b0",
 };
