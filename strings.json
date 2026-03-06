@@ -11122,7 +11122,7 @@
   "YlVvmc": "unread, !!{channelName}!! (thread)",
   "yjQ9P8": "!!{channelName}!! (unknown channel)",
   "bkpadO": "!!{channelName}!! (voice channel)",
-  "GNIiAA": "{userCount, plural, one { user} other { users} }",
+  "sfgpgr": "{overflow, plural, one {and  other} other {and  others} }",
   "ml08KU": "!!{channelName}!! (voice channel), {userCount} of {limit} users",
   "zTqdQM": "{mentionCount, plural, one { mention} other { mentions} }, !!{channelName}!! (voice channel), {userCount} of {limit} users",
   "QpyYaa": "{mentionCount, plural, one { mention} other { mentions} }, !!{channelName}!! (voice channel)",

@@ -158,8 +158,7 @@ class W extends U.Ay {
                 isFavoriteSuggestion: E,
             } = this.props,
             { shouldShowGuildVerificationPopout: I } = this.state,
-            N = this.getVoiceStatesCount(),
-            b = (0, i.jsxs)("li", {
+            N = (0, i.jsxs)("li", {
                 className: r()(this.getModeClass(), { [F.r9]: this.isDisabled() }),
                 "data-dnd-name": e.name,
                 children: [
@@ -197,7 +196,6 @@ class W extends U.Ay {
                                         channel: e,
                                         unread: f,
                                         mentionCount: C,
-                                        userCount: N,
                                         isSubscriptionGated: g,
                                         needSubscriptionToAccess: _,
                                     }),
@@ -215,7 +213,7 @@ class W extends U.Ay {
                     this.renderVoiceUsers(),
                 ],
             });
-        return A && (b = o(b)), h && (b = l(a(b))), b;
+        return A && (N = o(N)), h && (N = l(a(N))), N;
     }
 }
 let Y = (0, A.a)((0, m.F)(W));
