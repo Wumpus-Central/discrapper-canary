@@ -16,7 +16,7 @@ var n = s(627968),
     f = s(652215),
     j = s(731854),
     N = s(985018),
-    _ = s(602785);
+    _ = s(698091);
 function h() {
     let [e, t] = l.useState(!1),
         s = (0, i.bG)([p.Ay], () => p.Ay.isMediaFilterSettingLoading());
@@ -90,7 +90,6 @@ function O(e) {
                     deviceType: j.oh.VIDEO_INPUT,
                     location: "CameraSettings",
                     isDisabled: !S,
-                    showAllDevices: !0,
                 }),
             (0, n.jsx)(x.A, {
                 className: _.Jp,

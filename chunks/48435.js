@@ -1,102 +1,68 @@
 "use strict";
-n.d(t, { H: () => f });
+n.d(t, { H: () => d });
 var r = n(627968),
     i = n(64700),
-    a = n(397927),
-    s = n(827343),
-    o = n(954571),
-    l = n(74848),
-    u = n(652215),
-    c = n(731854),
-    d = n(985018);
-function _(e) {
+    s = n(397927),
+    a = n(827343),
+    o = n(74848),
+    l = n(731854),
+    u = n(985018);
+function c(e) {
     return {
-        [c.oh.AUDIO_INPUT]: {
-            setDevice: s.A.setInputDevice,
-            getLabel: () => d.intl.string(d.t.ElbIXN),
-            getLocation: (e) => `${e}.useInputDeviceMenuItems`,
-        },
-        [c.oh.AUDIO_OUTPUT]: {
-            setDevice: s.A.setOutputDevice,
-            getLabel: () => d.intl.string(d.t["6Ww0iH"]),
-            getLocation: (e) => `${e}.useOutputDeviceMenuItems`,
-        },
-        [c.oh.VIDEO_INPUT]: {
-            setDevice: s.A.setVideoDevice,
-            getLabel: () => d.intl.string(d.t.F122Gz),
-            getLocation: (e) => `${e}.useVideoDeviceMenuItems`,
-        },
+        [l.oh.AUDIO_INPUT]: { setDevice: a.A.setInputDevice, getLabel: () => u.intl.string(u.t.ElbIXN) },
+        [l.oh.AUDIO_OUTPUT]: { setDevice: a.A.setOutputDevice, getLabel: () => u.intl.string(u.t["6Ww0iH"]) },
+        [l.oh.VIDEO_INPUT]: { setDevice: a.A.setVideoDevice, getLabel: () => u.intl.string(u.t.F122Gz) },
     }[e];
 }
-function f(e) {
+function d(e) {
     let {
             deviceType: t,
             analyticsLocations: n,
-            asSubmenu: s = !1,
-            onDeviceSelect: c,
-            showAllDevices: f = !1,
-            selectedDeviceId: p,
-            menuGroupOverrideProps: h,
-            menuItemOverrideProps: m,
-            computeMenuRadioItemOverrideProps: g,
+            asSubmenu: a = !1,
+            onDeviceSelect: l,
+            selectedDeviceId: u,
+            menuGroupOverrideProps: d,
+            menuItemOverrideProps: _,
+            computeMenuRadioItemOverrideProps: f,
         } = e,
-        { setDevice: E, getLabel: A, getLocation: I } = _(t),
-        [T, y] = i.useState(f),
-        S = I(n[n.length - 1]),
-        [v, C] = (0, l.tR)(t, { location: S }),
-        b = T ? v.concat(C) : v,
-        { id: N, name: R } = (0, l.x5)(t),
-        O = p ?? N,
-        D = i.useMemo(
+        { setDevice: p, getLabel: h } = c(t),
+        m = (0, o.tR)(t),
+        { id: E, name: g } = (0, o.x5)(t),
+        A = u ?? E,
+        I = i.useMemo(
             () =>
-                v.concat(C).find((e) => {
+                m.find((e) => {
                     let { id: t } = e;
-                    return t === O;
+                    return t === A;
                 }),
-            [v, C, O],
+            [m, A],
         ),
-        L = b.map((e) => {
+        T = m.map((e) => {
             let i,
-                { id: s, disabled: o, name: u } = e,
-                d = u,
-                _ = (0, l.d)(u);
+                { id: a, disabled: u, name: c } = e,
+                d = c,
+                _ = (0, o.d)(c);
             return (
                 null != _ && ((d = _.prefix), (i = _.subName)),
                 (0, r.jsx)(
-                    a.iDA,
+                    s.iDA,
                     {
-                        id: `${t}-${s}`,
+                        id: `${t}-${a}`,
                         group: `${t}-devices`,
-                        disabled: o,
+                        disabled: u,
                         label: d,
                         subtext: i,
-                        checked: s === O,
+                        checked: a === A,
                         action: () => {
-                            (c?.(s) ?? !0) && E(s, { analyticsLocations: n });
+                            (l?.(a) ?? !0) && p(a, { analyticsLocations: n });
                         },
-                        ...g?.(s),
+                        ...f?.(a),
                     },
-                    `${t}-${s}`,
+                    `${t}-${a}`,
                 )
             );
-        }),
-        w = (0, r.jsx)(a.Drp, {
-            id: "SHOW_MORE",
-            label: d.intl.string(d.t.E99UMh),
-            dontCloseOnAction: !0,
-            action: () => {
-                y(!0),
-                    o.default.track(u.HAw.DEVICES_LIST_SHOW_MORE_CLICKED, {
-                        device_type: t,
-                        location: S,
-                        shown_device_count: v.length,
-                        hidden_device_count: C.length,
-                        location_stack: n,
-                    });
-            },
-        }),
-        x = !T && C?.length > 0;
-    return s
-        ? (0, r.jsxs)(a.Drp, { id: `${t}-devices`, label: A(), subtext: D?.name ?? R, ...m, children: [L, x && w] })
-        : (0, r.jsxs)(a.rXV, { label: A(), ...h, children: [L, x && w] });
+        });
+    return a
+        ? (0, r.jsx)(s.Drp, { id: `${t}-devices`, label: h(), subtext: I?.name ?? g, ..._, children: T })
+        : (0, r.jsx)(s.rXV, { label: h(), ...d, children: T });
 }

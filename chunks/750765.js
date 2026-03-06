@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => E });
 var r = n(627968);
 n(64700);
 var i = n(284009),
-    a = n.n(i),
-    s = n(311907),
+    s = n.n(i),
+    a = n(311907),
     o = n(397927),
     l = n(820284),
     u = n(688810),
@@ -15,16 +15,16 @@ var i = n(284009),
     p = n(652215),
     h = n(731854),
     m = n(985018);
-function g(e) {
-    let { onClose: t, onSelect: n, minimal: i = !1, appContext: g, onInteraction: E } = e,
+function E(e) {
+    let { onClose: t, onSelect: n, minimal: i = !1, appContext: E, onInteraction: g } = e,
         { analyticsLocations: A } = (0, u.Ay)(),
-        I = (0, s.bG)([d.default], () => {
+        I = (0, a.bG)([d.default], () => {
             let e = d.default.getCurrentUser();
-            return a()(null != e, "VideoDeviceMenu: currentUser cannot be undefined"), e;
+            return s()(null != e, "VideoDeviceMenu: currentUser cannot be undefined"), e;
         }),
-        T = (0, c.H)({ deviceType: h.oh.VIDEO_INPUT, analyticsLocations: A, showAllDevices: !0, asSubmenu: i }),
-        y = (0, _.A)(I.id, g),
-        S = (0, f.A)(g);
+        T = (0, c.H)({ deviceType: h.oh.VIDEO_INPUT, analyticsLocations: A, asSubmenu: i }),
+        S = (0, _.A)(I.id, E),
+        y = (0, f.A)(E);
     return (0, r.jsx)(l.A, {
         object: p.ZSU.CONTEXT_MENU,
         children: (0, r.jsxs)(o.W1t, {
@@ -34,8 +34,8 @@ function g(e) {
             variant: "fixed",
             "aria-label": m.intl.string(m.t.F122Gz),
             onSelect: n,
-            onInteraction: E,
-            children: [T, (0, r.jsxs)(o.rXV, { children: [y, i ? S : null] })],
+            onInteraction: g,
+            children: [T, (0, r.jsxs)(o.rXV, { children: [S, i ? y : null] })],
         }),
     });
 }

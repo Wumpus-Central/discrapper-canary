@@ -21,7 +21,7 @@ function I(e) {
     let { onClose: t, channel: n } = e,
         { analyticsLocations: I } = (0, u.Ay)(),
         T = (0, s.bG)([_.default], () => _.default.getId()),
-        S = (0, c.H)({ deviceType: g.oh.VIDEO_INPUT, analyticsLocations: I, showAllDevices: !0, asSubmenu: !0 }),
+        S = (0, c.H)({ deviceType: g.oh.VIDEO_INPUT, analyticsLocations: I, asSubmenu: !0 }),
         y = (0, p.A)(T),
         v = (0, i.useCallback)(() => {
             (0, h.X)(I[0], h.O.JOIN_VIDEO_CALL),
