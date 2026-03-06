@@ -1,38 +1,43 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => _ });
 var i = n(64700),
     l = n(311907),
-    s = n(498642),
-    a = n(71393),
-    r = n(320501),
-    o = n(576705),
-    c = n(927813),
-    d = n(661191),
-    u = n(302909),
-    h = n(342220),
-    m = n(652215);
-let A = 90 * c.A.Millis.DAY,
-    g = 14 * c.A.Millis.DAY;
-function p(e) {
-    let t = (0, l.bG)([a.A], () => a.A.getGuild(e.guild_id)),
-        n = (0, l.bG)([s.A], () => s.A.getMemberCount(t?.id) ?? 0),
-        c = (0, l.bG)([r.A], () => r.A.getLastMessage(e.id)),
-        p = (0, l.bG)([o.A], () => null != t && o.A.can(m.xBc.ADMINISTRATOR, t)),
-        f = (0, h.A)(),
-        { enabled: _ } = u.A.useConfig({ location: "useIsEligibleForFirstBoosterUpsell" });
+    s = n(554146),
+    a = n(932001),
+    r = n(498642),
+    o = n(71393),
+    c = n(320501),
+    d = n(576705),
+    u = n(927813),
+    h = n(661191),
+    m = n(302909),
+    A = n(342220),
+    g = n(652215);
+let p = 90 * u.A.Millis.DAY,
+    f = 14 * u.A.Millis.DAY;
+function _(e) {
+    let t = (0, l.bG)([o.A], () => o.A.getGuild(e.guild_id)),
+        n = (0, l.bG)([r.A], () => r.A.getMemberCount(t?.id) ?? 0),
+        u = (0, l.bG)([c.A], () => c.A.getLastMessage(e.id)),
+        _ = (0, l.bG)([d.A], () => null != t && d.A.can(g.xBc.ADMINISTRATOR, t)),
+        E = (0, A.A)(),
+        { enabled: x } = m.A.useConfig({ location: "useIsEligibleForFirstBoosterUpsell" }),
+        [C] = (0, a.Wl)(s.M.FIRST_BOOSTER_UPSELL_OVERSEER, { cooldownDurationMs: 0, numTimesToRecur: 3 }),
+        S = C === s.M.FIRST_BOOSTER_UPSELL_OVERSEER;
     return i.useMemo(
         () =>
             !(
-                !_ ||
-                e.type !== m.rbe.GUILD_TEXT ||
+                !x ||
+                !S ||
+                e.type !== g.rbe.GUILD_TEXT ||
                 null == t ||
-                d.default.age(t.id) < A ||
+                h.default.age(t.id) < p ||
                 null == t.premiumSubscriberCount ||
                 0 !== t.premiumSubscriberCount ||
                 n < 10 ||
-                c?.id == null ||
-                d.default.age(c.id) > g
+                u?.id == null ||
+                h.default.age(u.id) > f
             ) &&
-            (p || f),
-        [_, e.type, t, n, c?.id, p, f],
+            (_ || E),
+        [x, S, e.type, t, n, u?.id, _, E],
     );
 }
