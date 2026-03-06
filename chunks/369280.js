@@ -36,9 +36,9 @@ var r = n(627968),
     k = n(422268),
     U = n(88001),
     G = n(652215),
-    F = n(519412),
+    F = n(518582),
     V = n(985018),
-    B = n(982571);
+    B = n(289413);
 function H(e) {
     let t,
         {
@@ -177,42 +177,53 @@ function H(e) {
             className: a()({ [B.E4]: el }),
             shouldUseUnifiedCheckoutUI: en,
         }),
-        eF = (0, r.jsx)(w.A, {
-            isActive: $,
-            ref: K,
-            children:
-                null != n && (0, D.Ge)(n, Y, Z)
-                    ? (0, r.jsx)(P.vi, {
-                          premiumSubscription: n,
-                          newPlan: eh,
-                          onInvoiceError: z,
-                          planGroup: Z,
-                          priceOptions: o,
-                          preventFetch: ev,
-                          disabled: ev,
-                          isEEA: ey,
-                          paymentSources: s,
-                          setHasAcceptedTerms: W,
-                          shouldUseUnifiedCheckoutUI: en,
-                      })
-                    : (0, r.jsx)(h.A, {
-                          onChange: W,
-                          finePrint: (0, r.jsx)(f.A, {
-                              subscriptionPlan: eh,
-                              paymentSourceType: ep,
-                              basePrice: (0, b.y8)(eh.id, !1, e_, o),
-                              currentSubscription: n,
-                              planGroup: Z,
-                          }),
-                          forceShow: !0,
-                          showPricingLink: eh.currency !== G.Yri.USD,
-                          showWithdrawalWaiver: ey,
-                          disabled: ev,
-                          subscriptionPlan: eh,
-                          currentSubscription: n,
-                          planGroup: Z,
-                      }),
-        }),
+        eF = en
+            ? (0, r.jsx)(y.PI, {
+                  planGroup: Z,
+                  activeSubscription: n,
+                  isTrial: !1,
+                  plan: eh,
+                  isGift: e_,
+                  priceOptions: o,
+                  renewalInvoicePreview: null,
+                  paymentSourceType: ep,
+              })
+            : (0, r.jsx)(w.A, {
+                  isActive: $,
+                  ref: K,
+                  children:
+                      null != n && (0, D.Ge)(n, Y, Z)
+                          ? (0, r.jsx)(P.vi, {
+                                premiumSubscription: n,
+                                newPlan: eh,
+                                onInvoiceError: z,
+                                planGroup: Z,
+                                priceOptions: o,
+                                preventFetch: ev,
+                                disabled: ev,
+                                isEEA: ey,
+                                paymentSources: s,
+                                setHasAcceptedTerms: W,
+                                shouldUseUnifiedCheckoutUI: en,
+                            })
+                          : (0, r.jsx)(h.A, {
+                                onChange: W,
+                                finePrint: (0, r.jsx)(f.A, {
+                                    subscriptionPlan: eh,
+                                    paymentSourceType: ep,
+                                    basePrice: (0, b.y8)(eh.id, !1, e_, o),
+                                    currentSubscription: n,
+                                    planGroup: Z,
+                                }),
+                                forceShow: !0,
+                                showPricingLink: eh.currency !== G.Yri.USD,
+                                showWithdrawalWaiver: ey,
+                                disabled: ev,
+                                subscriptionPlan: eh,
+                                currentSubscription: n,
+                                planGroup: Z,
+                            }),
+              }),
         eV = !eC && eN && !eu,
         eB = i.useMemo(() => (eV ? (0, r.jsx)(T.P, { planSkuId: eh.skuId }) : null), [eV, eh.skuId]);
     return en
