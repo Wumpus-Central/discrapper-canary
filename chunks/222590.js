@@ -21,6 +21,7 @@ e.exports = {
     FJ: "threadMessageAccessoryAvatar_c19a55",
     UE: "replyIcon_c19a55",
     s4: "clanTagChiplet_c19a55",
+    Mu: "usernameText_c19a55",
     Cw: "ticketIcon_c19a55",
     VJ: "userJoinSystemMessageIcon_c19a55",
     Jx: "commandIcon_c19a55",
