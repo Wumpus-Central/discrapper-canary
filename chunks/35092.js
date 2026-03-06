@@ -132,6 +132,7 @@ function j(e) {
         u = s.useMemo(() => {
             switch (t?.tenantMetadata?.collectibles?.type) {
                 case a.R.PROFILE_EFFECT:
+                case a.R.NAMEPLATE:
                     return;
                 case a.R.AVATAR_DECORATION:
                     return r()(S.ML, S._P);

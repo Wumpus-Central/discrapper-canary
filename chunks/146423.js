@@ -40,21 +40,20 @@ function I(e) {
             disableHoverOrFocus: E,
             onHoverOrFocusChange: A,
             onClick: I,
-            options: T,
         } = e,
-        S = i.useRef(null),
-        { isHoveringOrFocusing: y } = (0, d.A)(S),
-        v = i.useRef(A),
-        N = (0, l.bG)([c.A], () => c.A.getApplication(t.applicationId));
+        T = i.useRef(null),
+        { isHoveringOrFocusing: S } = (0, d.A)(T),
+        y = i.useRef(A),
+        v = (0, l.bG)([c.A], () => c.A.getApplication(t.applicationId));
     return (
         i.useEffect(() => {
-            v.current = A;
+            y.current = A;
         }, [A]),
         i.useEffect(() => {
-            v.current?.(y);
-        }, [y]),
+            y.current?.(S);
+        }, [S]),
         (0, r.jsxs)(o.DUT, {
-            innerRef: S,
+            innerRef: T,
             className: a()(m.Nr, p),
             onClick: I,
             style: g(s),
@@ -62,9 +61,9 @@ function I(e) {
                 (0, r.jsx)(o.AC4, { children: (0, r.jsx)(o.H, { children: t.name }) }),
                 (0, r.jsx)("div", {
                     className: a()(m.ev, h),
-                    children: (0, r.jsx)(_.Ay, { sku: t, isFocused: !E && y, user: n, options: T }),
+                    children: (0, r.jsx)(_.Ay, { sku: t, isFocused: !E && S, user: n }),
                 }),
-                (0, r.jsx)(f.P, { spec: s, application: N }),
+                (0, r.jsx)(f.P, { spec: s, application: v }),
                 u,
             ],
         })
