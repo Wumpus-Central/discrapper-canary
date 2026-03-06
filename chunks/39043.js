@@ -1,66 +1,62 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => g });
 var i = n(627968),
     s = n(64700),
-    a = n(735438),
-    l = n(942381),
-    r = n(770178),
-    o = n(894858),
-    c = n(641324),
-    d = n(791498),
+    l = n(735438),
+    a = n(770178),
+    r = n(894858),
+    o = n(272053),
+    d = n(641324),
+    c = n(791498),
     u = n(78837);
-let _ = s.memo(function (e) {
+function _(e) {
+    return r.A.getField("requestAccordionOpenKey") === e.key;
+}
+let g = s.memo(function (e) {
     let { node: t } = e,
-        { useTitle: n, layout: _, useCollapsedSubtitle: m } = t,
-        [A, g] = s.useState(!1),
-        [h, x] = s.useState(!0),
-        p = s.useRef(A);
+        { useTitle: n, layout: g, useCollapsedSubtitle: m } = t,
+        [A, h] = s.useState(!0),
+        [p, x] = s.useState(() => _(t)),
+        E = s.useRef(p),
+        T = s.useRef(_(t) ? "navigation" : null);
     s.useEffect(
         () =>
-            o.A.subscribe(
+            r.A.subscribe(
+                (e) => e.requestAccordionOpenKey,
                 (e) => {
-                    let { navTransition: t } = e;
-                    return t;
+                    e === t.key &&
+                        (E.current ? o.A.notifyAccordionExpanded(t.key) : ((T.current = "navigation"), h(!1), x(!0)));
                 },
-                (e) => {
-                    let n = e?.targetAccordionKey === t.key;
-                    n && !A && ((p.current = !0), g(!0), x(!1)),
-                        n && A && (o.A.setState({ navTransition: { ...e, targetAccordionKey: void 0 } }), x(!0));
-                },
-                { equalityFn: l.x, fireImmediately: !0 },
+                { equalityFn: (e, t) => e === t, fireImmediately: !0 },
             ),
-        [A, t.key],
+        [t.key, p],
     );
-    let E = s.useCallback(
+    let S = s.useCallback(
             (e) => {
-                null == e.target ||
-                    p.current === A ||
-                    ((p.current = A),
-                    A &&
-                        o.A.setState({
-                            navTransition: {
-                                targetKey: t.key,
-                                targetAccordionKey: t.key,
-                                animateScroll: !0,
-                                scrollBlock: "nearest",
-                            },
-                        }));
+                if (null != e.target && p !== E.current && ((E.current = p), E.current))
+                    switch (T.current) {
+                        case "navigation":
+                            h(!0), o.A.notifyAccordionExpanded(t.key);
+                            break;
+                        case "user":
+                            o.A.navigate(t.key, { animatePanelScroll: !0, panelScrollBlock: "nearest" });
+                    }
             },
-            [A, t.key],
+            [p, t.key],
         ),
-        C = s.useMemo(() => (0, a.debounce)(E, 50), [E]),
-        T = (0, r.w)(C),
-        S = n?.(A),
-        I = m?.(),
-        f = (0, d.q)(t);
+        C = s.useMemo(() => (0, l.debounce)(S, 50), [S]),
+        f = (0, a.w)(C),
+        I = n?.(p),
+        b = m?.(),
+        N = (0, c.q)(t);
     return (0, i.jsx)(u.f, {
-        ref: T,
-        title: S,
-        collapsedSubtitle: I,
-        isExpanded: A,
+        ref: f,
+        title: I,
+        collapsedSubtitle: b,
+        isExpanded: p,
         onExpandedChange: (e) => {
-            f(), g(e);
+            (T.current = "user"), N(), x(e);
         },
-        animate: h,
-        children: _.map((e) => (0, i.jsx)(c.A, { node: e }, e.key)),
+        animate: A,
+        children: g.map((e) => (0, i.jsx)(d.A, { node: e }, e.key)),
     });
 });

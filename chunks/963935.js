@@ -1,33 +1,36 @@
-n.d(t, { Iu: () => l, Z6: () => s, nW: () => r, zY: () => a }), n(64700);
-var i,
-    s =
-        (((i = {})[(i.ROOT = 0)] = "ROOT"),
-        (i[(i.SECTION = 1)] = "SECTION"),
-        (i[(i.SIDEBAR_ITEM = 2)] = "SIDEBAR_ITEM"),
-        (i[(i.PANEL = 3)] = "PANEL"),
-        (i[(i.SPLIT = 4)] = "SPLIT"),
-        (i[(i.CATEGORY = 5)] = "CATEGORY"),
-        (i[(i.ACCORDION = 6)] = "ACCORDION"),
-        (i[(i.LIST = 7)] = "LIST"),
-        (i[(i.RELATED = 8)] = "RELATED"),
-        (i[(i.FIELD_SET = 9)] = "FIELD_SET"),
-        (i[(i.TAB_ITEM = 10)] = "TAB_ITEM"),
-        (i[(i.NESTED_PANEL = 11)] = "NESTED_PANEL"),
-        (i[(i.STATIC = 12)] = "STATIC"),
-        (i[(i.BUTTON = 13)] = "BUTTON"),
-        (i[(i.TOGGLE = 14)] = "TOGGLE"),
-        (i[(i.SLIDER = 15)] = "SLIDER"),
-        (i[(i.SELECT = 16)] = "SELECT"),
-        (i[(i.RADIO = 17)] = "RADIO"),
-        (i[(i.NAVIGATOR = 18)] = "NAVIGATOR"),
-        (i[(i.CUSTOM = 19)] = "CUSTOM"),
-        i);
-function r(e) {
+"use strict";
+n.d(t, { Iu: () => a, Z6: () => r, nW: () => i, zY: () => s }), n(64700);
+var r = (function (e) {
+    return (
+        (e[(e.ROOT = 0)] = "ROOT"),
+        (e[(e.SECTION = 1)] = "SECTION"),
+        (e[(e.SIDEBAR_ITEM = 2)] = "SIDEBAR_ITEM"),
+        (e[(e.PANEL = 3)] = "PANEL"),
+        (e[(e.SPLIT = 4)] = "SPLIT"),
+        (e[(e.CATEGORY = 5)] = "CATEGORY"),
+        (e[(e.ACCORDION = 6)] = "ACCORDION"),
+        (e[(e.LIST = 7)] = "LIST"),
+        (e[(e.RELATED = 8)] = "RELATED"),
+        (e[(e.FIELD_SET = 9)] = "FIELD_SET"),
+        (e[(e.TAB_ITEM = 10)] = "TAB_ITEM"),
+        (e[(e.NESTED_PANEL = 11)] = "NESTED_PANEL"),
+        (e[(e.STATIC = 12)] = "STATIC"),
+        (e[(e.BUTTON = 13)] = "BUTTON"),
+        (e[(e.TOGGLE = 14)] = "TOGGLE"),
+        (e[(e.SLIDER = 15)] = "SLIDER"),
+        (e[(e.SELECT = 16)] = "SELECT"),
+        (e[(e.RADIO = 17)] = "RADIO"),
+        (e[(e.NAVIGATOR = 18)] = "NAVIGATOR"),
+        (e[(e.CUSTOM = 19)] = "CUSTOM"),
+        e
+    );
+})({});
+function i(e) {
     return "layout" in e;
 }
-function a(e) {
+function s(e) {
     return e.every((e) => 10 === e.type) && e.length > 0;
 }
-function l(e) {
+function a(e) {
     return e.every((e) => 5 === e.type) && e.length > 0;
 }

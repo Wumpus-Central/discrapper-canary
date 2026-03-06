@@ -1,17 +1,24 @@
+"use strict";
 n.d(t, { A: () => s });
-var i = n(775602);
-let s = new (class {
+var r = n(775602);
+class i {
+    isSidebarCategoryAutoSelectEnabled = !0;
     scrollListener = null;
     getPanelScrollerNode() {
-        let e = document.querySelectorAll("[data-settings-panel-scroller]");
-        return e.length > 0 ? e[0] : null;
+        return document.querySelector("[data-settings-panel-scroller]");
     }
-    clearInitialScrollListener() {
+    getSidebarScrollerNode() {
+        return document.querySelector("[data-settings-sidebar-scroller]");
+    }
+    getIsSidebarCategoryAutoSelectEnabled() {
+        return this.isSidebarCategoryAutoSelectEnabled;
+    }
+    clearPanelInitialScrollListener() {
         if (null == this.scrollListener) return;
         let e = this.getPanelScrollerNode();
         null != e && (e.removeEventListener("scroll", this.scrollListener), (this.scrollListener = null));
     }
-    setInitialScrollListener(e) {
+    setPanelInitialScrollListener(e) {
         let t = this.getPanelScrollerNode();
         null != t &&
             (null != this.scrollListener && t.removeEventListener("scroll", this.scrollListener),
@@ -21,17 +28,17 @@ let s = new (class {
             t.addEventListener("scroll", this.scrollListener, { once: !0 }));
     }
     scroll(e) {
-        let { scrollerNode: t, target: n, scrollBehavior: i, scrollBlock: s } = e;
+        let { scrollerNode: t, target: n, scrollBehavior: r, scrollBlock: i } = e;
         return new Promise((e) => {
-            let a = null,
-                l = () => {
-                    clearTimeout(a), e(!0);
+            let s = null,
+                a = () => {
+                    clearTimeout(s), e(!0);
                 };
             requestAnimationFrame(() => {
-                t.addEventListener("scroll", l, { once: !0 }),
-                    n.scrollIntoView({ behavior: i, block: s }),
-                    (a = setTimeout(() => {
-                        t.removeEventListener("scroll", l), e(!1);
+                t.addEventListener("scroll", a, { once: !0 }),
+                    n.scrollIntoView({ behavior: r, block: i }),
+                    (s = setTimeout(() => {
+                        t.removeEventListener("scroll", a), e(!1);
                     }, 50));
             });
         });
@@ -42,22 +49,40 @@ let s = new (class {
         let n = Math.max(0, t.getBoundingClientRect().bottom - e.getBoundingClientRect().top);
         e.style.scrollPaddingTop = `${n}px`;
     }
-    async scrollIntoView(e, t) {
-        let n = this.getPanelScrollerNode();
-        if (null == n) return;
-        this.updateScrollPaddingForStickyDecoration(n);
-        let s = t.animate && !i.A.useReducedMotion,
-            a = t.block ?? "start";
-        (await this.scroll({ scrollerNode: n, target: e, scrollBehavior: s ? "smooth" : "auto", scrollBlock: a }))
+    async scrollNodeIntoView(e) {
+        let { scrollerNode: t, target: n, options: i } = e;
+        if (null == t || null == n) return;
+        this.updateScrollPaddingForStickyDecoration(t);
+        let s = i.animate && !r.A.useReducedMotion ? "smooth" : "auto",
+            a = i.block ?? "start";
+        (await this.scroll({ scrollerNode: t, target: n, scrollBehavior: s, scrollBlock: a }))
             ? await new Promise((e) => {
-                  n.addEventListener(
+                  t.addEventListener(
                       "scrollend",
                       () => {
-                          (n.style.scrollPaddingTop = ""), e();
+                          (t.style.scrollPaddingTop = ""), e();
                       },
                       { once: !0 },
                   );
               })
-            : (n.style.scrollPaddingTop = "");
+            : (t.style.scrollPaddingTop = "");
     }
-})();
+    async scrollPanelNodeIntoView(e, t) {
+        this.clearPanelInitialScrollListener(),
+            (this.isSidebarCategoryAutoSelectEnabled = !1),
+            await this.scrollNodeIntoView({ scrollerNode: this.getPanelScrollerNode(), target: e, options: t }),
+            this.setPanelInitialScrollListener(() => {
+                this.isSidebarCategoryAutoSelectEnabled = !0;
+            });
+    }
+    async scrollSidebarNodeIntoView(e, t) {
+        await this.scrollNodeIntoView({ scrollerNode: this.getSidebarScrollerNode(), target: e, options: t });
+    }
+    enableSidebarCategoryAutoSelect() {
+        this.isSidebarCategoryAutoSelectEnabled = !0;
+    }
+    reset() {
+        (this.isSidebarCategoryAutoSelectEnabled = !0), (this.scrollListener = null);
+    }
+}
+let s = new i();

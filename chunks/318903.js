@@ -1,7 +1,7 @@
 n.d(t, { A: () => u });
 var i = n(627968),
     s = n(158954),
-    l = n(894858),
+    l = n(272053),
     a = n(688897),
     r = n(791498),
     o = n(590089),
@@ -29,7 +29,7 @@ function u(e) {
             children: [null != m && (0, i.jsx)(d.Q, { decoration: m }), (0, i.jsx)(s.uhT, {})],
         }),
         onClick: () => {
-            l.A.setState({ requestedTargetKey: n, disableSidebarScrollAnimate: !0 }), S();
+            l.A.navigate(n, { animateSidebarScroll: !1 }), S();
         },
     });
 }

@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { u: () => s }), n(321073);
+n.d(t, { u: () => l }), n(321073);
 var r = n(64700),
     i = n(894858),
     a = n(397274);
-function s(e) {
+function l(e) {
     let t = r.useRef(null),
         n = r.useRef(new Set());
     r.useEffect(() => {
@@ -12,27 +12,27 @@ function s(e) {
         let r = Array.from(e.querySelectorAll("[data-settings-category-key]")).filter(
                 (e) => null != e.getAttribute("data-settings-category-key"),
             ),
-            s = new Map(),
-            l = [];
+            l = new Map(),
+            s = [];
         return (
             r.forEach((e) => {
                 let t = e.getAttribute("data-settings-category-key");
-                null != t && (s.set(e, t), l.push(t));
+                null != t && (l.set(e, t), s.push(t));
             }),
             (t.current = new IntersectionObserver(
                 (e) => {
                     if (
                         (e.forEach((e) => {
                             let { isIntersecting: t, target: r } = e,
-                                i = s.get(r);
+                                i = l.get(r);
                             null != i && (t ? n.current.add(i) : n.current.delete(i));
                         }),
-                        i.A.getField("disableSidebarCategoryAutoSelect"))
+                        !a.A.getIsSidebarCategoryAutoSelectEnabled())
                     )
                         return;
                     let t = [];
                     if (
-                        (l.forEach((e) => {
+                        (s.forEach((e) => {
                             n.current.has(e) && t.push(e);
                         }),
                         0 === t.length)

@@ -1,26 +1,25 @@
 "use strict";
-n.d(t, { L: () => x }), n(321073);
+n.d(t, { L: () => y }), n(321073);
 var r = n(627968),
-    a = n(64700),
-    i = n(503698),
-    l = n.n(i),
+    i = n(64700),
+    a = n(503698),
+    l = n.n(a),
     s = n(837381),
     o = n(607399),
     u = n(397927),
-    c = n(775602),
-    d = n(928039),
-    h = n(379848),
-    g = n(97469),
+    c = n(928039),
+    d = n(379848),
+    h = n(97469),
     f = n(933297),
     m = n(894858),
-    y = n(188180),
-    p = n(985018),
-    v = n(45272);
-function x(e) {
-    let { root: t, footer: n, onClose: i, emptyState: y, searchQuery: x, onSearchChange: S } = e,
-        _ = m.A.useField("showNavigationMobile"),
-        j = a.useRef(null),
-        N = a.useMemo(() => {
+    g = n(188180),
+    v = n(985018),
+    p = n(45272);
+function y(e) {
+    let { root: t, footer: n, onClose: a, emptyState: g, searchQuery: y, onSearchChange: b } = e,
+        j = m.A.useField("showNavigationMobile"),
+        S = i.useRef(null),
+        A = i.useMemo(() => {
             let e = [];
             return (
                 t.layout.forEach((t) => {
@@ -39,7 +38,7 @@ function x(e) {
                 e
             );
         }, [t.layout]),
-        [C, E] = a.useMemo(() => {
+        [N, C] = i.useMemo(() => {
             let e = [],
                 n = [];
             return (
@@ -49,123 +48,101 @@ function x(e) {
                 [e, n]
             );
         }, [t.layout]),
-        T = (0, g.NC)(),
-        k = (0, d.A)("settings-sidebar", j);
-    return (
-        a.useEffect(() => {
-            let e = m.A.subscribe(
-                (e) => {
-                    let { currentPanelKey: t } = e;
-                    return t;
-                },
-                (e) => {
-                    if (null == j.current || null == e) return;
-                    let t = j.current.getScrollerNode()?.querySelector(`[data-settings-sidebar-item="${e}"]`);
-                    if (null == t) return;
-                    let n = m.A.getField("disableSidebarScrollAnimate");
-                    requestAnimationFrame(() => {
-                        j.current?.scrollIntoViewNode({ node: t, padding: 8, animate: !n && !c.A.useReducedMotion });
+        E = (0, h.NC)(),
+        k = (0, c.A)("settings-sidebar", S);
+    return (0, r.jsx)(u.NPJ, {
+        theme: E,
+        children: (e) =>
+            (0, r.jsx)(d.Ay, {
+                contentTypes: A,
+                children: (t) => {
+                    let { visibleContent: i } = t;
+                    return (0, r.jsxs)("div", {
+                        className: l()(p.pz, e, { [p.Hw]: o.Fr, [p.n7]: j }),
+                        children: [
+                            (0, r.jsxs)("div", {
+                                className: p.gM,
+                                children: [
+                                    o.Fr &&
+                                        (0, r.jsx)("div", {
+                                            className: p.hg,
+                                            children: (0, r.jsx)(u.K0, {
+                                                icon: u.d$L,
+                                                onClick: a,
+                                                variant: "icon-only",
+                                                size: "sm",
+                                                "aria-label": v.intl.string(v.t.cpT0Cq),
+                                            }),
+                                        }),
+                                    (0, r.jsx)("div", {
+                                        children: N.map((e) =>
+                                            (0, r.jsx)(x, { section: e, visibleContent: i, hoisted: !0 }, e.key),
+                                        ),
+                                    }),
+                                    null != y && null != b && (0, r.jsx)(_, { searchQuery: y, onSearchChange: b }),
+                                    null != g && 0 === C.length && (0, r.jsx)(g, {}),
+                                ],
+                            }),
+                            (0, r.jsx)(s.hD, {
+                                navigator: k,
+                                children: (0, r.jsx)(s.PR, {
+                                    children: (e) => {
+                                        let { ref: t, ...a } = e;
+                                        return (0, r.jsxs)(u.ChK, {
+                                            "data-settings-sidebar-scroller": !0,
+                                            ref: (e) => {
+                                                (S.current = e), (t.current = e?.getScrollerNode() ?? null);
+                                            },
+                                            className: p.Mt,
+                                            fade: !0,
+                                            ...a,
+                                            children: [
+                                                (0, r.jsx)("nav", {
+                                                    className: p.C$,
+                                                    children: C.map((e) =>
+                                                        (0, r.jsx)(x, { section: e, visibleContent: i }, e.key),
+                                                    ),
+                                                }),
+                                                null != n && (0, r.jsx)(n, {}),
+                                            ],
+                                        });
+                                    },
+                                }),
+                            }),
+                        ],
                     });
                 },
-                { equalityFn: (e, t) => e === t, fireImmediately: !0 },
-            );
-            return () => {
-                e(), m.A.setState({ disableSidebarScrollAnimate: !0 });
-            };
-        }, []),
-        (0, r.jsx)(u.NPJ, {
-            theme: T,
-            children: (e) =>
-                (0, r.jsx)(h.Ay, {
-                    contentTypes: N,
-                    children: (t) => {
-                        let { visibleContent: a } = t;
-                        return (0, r.jsxs)("div", {
-                            className: l()(v.pz, e, { [v.Hw]: o.Fr, [v.n7]: _ }),
-                            children: [
-                                (0, r.jsxs)("div", {
-                                    className: v.gM,
-                                    children: [
-                                        o.Fr &&
-                                            (0, r.jsx)("div", {
-                                                className: v.hg,
-                                                children: (0, r.jsx)(u.K0, {
-                                                    icon: u.d$L,
-                                                    onClick: i,
-                                                    variant: "icon-only",
-                                                    size: "sm",
-                                                    "aria-label": p.intl.string(p.t.cpT0Cq),
-                                                }),
-                                            }),
-                                        (0, r.jsx)("div", {
-                                            children: C.map((e) =>
-                                                (0, r.jsx)(b, { section: e, visibleContent: a, hoisted: !0 }, e.key),
-                                            ),
-                                        }),
-                                        null != x && null != S && (0, r.jsx)(A, { searchQuery: x, onSearchChange: S }),
-                                        null != y && 0 === E.length && (0, r.jsx)(y, {}),
-                                    ],
-                                }),
-                                (0, r.jsx)(s.hD, {
-                                    navigator: k,
-                                    children: (0, r.jsx)(s.PR, {
-                                        children: (e) => {
-                                            let { ref: t, ...i } = e;
-                                            return (0, r.jsxs)(u.ChK, {
-                                                ref: (e) => {
-                                                    (j.current = e), (t.current = e?.getScrollerNode() ?? null);
-                                                },
-                                                className: v.Mt,
-                                                fade: !0,
-                                                ...i,
-                                                children: [
-                                                    (0, r.jsx)("nav", {
-                                                        className: v.C$,
-                                                        children: E.map((e) =>
-                                                            (0, r.jsx)(b, { section: e, visibleContent: a }, e.key),
-                                                        ),
-                                                    }),
-                                                    null != n && (0, r.jsx)(n, {}),
-                                                ],
-                                            });
-                                        },
-                                    }),
-                                }),
-                            ],
-                        });
-                    },
-                }),
-        })
-    );
+            }),
+    });
 }
-function b(e) {
-    let { section: t, visibleContent: n, hoisted: a = !1 } = e,
-        i = t.useTitle?.();
+function x(e) {
+    let { section: t, visibleContent: n, hoisted: i = !1 } = e,
+        a = t.useTitle?.();
     return (0, r.jsxs)("ul", {
-        className: v.uW,
-        "aria-label": i,
+        className: p.uW,
+        "aria-label": a,
         children: [
-            null != i &&
+            null != a &&
                 (0, r.jsx)("div", {
-                    className: v.a9,
+                    className: p.a9,
                     children: (0, r.jsx)(u.Heading, {
-                        className: v.Pf,
+                        className: p.Pf,
                         variant: "heading-sm/medium",
                         color: "text-muted",
-                        children: i,
+                        children: a,
                     }),
                 }),
-            t.layout.map((e) => (0, r.jsx)(y.X, { node: e, visibleContent: n, hoisted: a }, e.key)),
+            t.layout.map((e) => (0, r.jsx)(g.X, { node: e, visibleContent: n, hoisted: i }, e.key)),
         ],
     });
 }
-function A(e) {
+function _(e) {
     let { searchQuery: t, onSearchChange: n } = e,
-        i = a.useCallback(() => {
+        a = i.useCallback(() => {
             n("");
         }, [n]);
     return (0, r.jsx)("div", {
-        className: v.PP,
-        children: (0, r.jsx)(u.IWV, { size: "md", query: t, onChange: n, onClear: i }),
+        className: p.PP,
+        children: (0, r.jsx)(u.IWV, { size: "md", query: t, onChange: n, onClear: a }),
     });
 }

@@ -1,82 +1,78 @@
 "use strict";
-n.d(t, { default: () => S });
+n.d(t, { default: () => _ });
 var r = n(627968),
-    a = n(64700),
-    i = n(397927),
-    l = n(964486),
-    s = n(883662),
-    o = n(961350),
-    u = n(628965),
-    c = n(287809),
-    d = n(115063),
-    h = n(152056),
-    g = n(780964),
+    i = n(64700),
+    a = n(397927),
+    l = n(883662),
+    s = n(961350),
+    o = n(628965),
+    u = n(287809),
+    c = n(115063),
+    d = n(152056),
+    h = n(780964),
     f = n(162396),
     m = n(12901),
-    y = n(921854),
-    p = n(987281),
-    v = n(840065),
-    x = n(985018),
-    b = n(249316);
-function A(e) {
-    let { destinationPanel: t, originPanel: n } = e;
-    (0, d.iY)({
-        destinationPane: t,
-        originPane: n,
-        subsection: u.A.getSubsection(),
-        source: u.A.getAnalyticsLocation(),
-        locationStack: u.A.getAnalyticsLocations(),
-    });
-}
-function S(e) {
+    g = n(921854),
+    v = n(987281),
+    p = n(840065),
+    y = n(985018),
+    x = n(365782);
+function _(e) {
     let { target: t, ...n } = e,
-        i = h.A.useField("query"),
-        d = a.useRef(null);
-    (0, p.V)(),
-        (0, l.Ay)(() => {
-            let e = u.A.getSection();
-            null != e && (A({ destinationPanel: e, originPanel: null }), (d.current = e));
-        });
-    let x = a.useCallback((e) => {
-            h.A.setState({ query: e });
+        a = d.A.useField("query"),
+        y = i.useRef(null);
+    (0, v.V)();
+    let x = i.useCallback((e) => {
+            d.A.setState({ query: e });
         }, []),
-        [b, S] = a.useState(!1);
-    return (a.useLayoutEffect(() => {
+        [_, j] = i.useState(!1);
+    return (i.useLayoutEffect(() => {
         let e = () => {
-            null == c.default.getCurrentUser() && (S(!0), (0, m.default)());
+            null == u.default.getCurrentUser() && (j(!0), (0, m.default)());
         };
-        return o.default.addChangeListener(e), () => o.default.removeChangeListener(e);
+        return s.default.addChangeListener(e), () => s.default.removeChangeListener(e);
     }, []),
-    b)
+    _)
         ? null
-        : (0, r.jsx)(s.A, {
-              partialRoot: y.D,
-              emptyState: _,
+        : (0, r.jsx)(l.A, {
+              partialRoot: g.D,
+              emptyState: b,
               sidebarFooter: f.A,
               onPanelChange: (e) => {
-                  let t = (0, v.getUserSettingsSectionsByWebUserSettings)().get(e);
-                  null != t && (A({ destinationPanel: t, originPanel: d.current }), (d.current = t));
+                  let t = (0, p.getUserSettingsSectionsByWebUserSettings)().get(e);
+                  null != t &&
+                      (!(function (e) {
+                          let { destinationPanel: t, originPanel: n } = e;
+                          (0, c.iY)({
+                              destinationPane: t,
+                              originPane: n,
+                              subsection: o.A.getSubsection(),
+                              source: o.A.getAnalyticsLocation(),
+                              locationStack: o.A.getAnalyticsLocations(),
+                          });
+                      })({ destinationPanel: t, originPanel: y.current }),
+                      (y.current = t));
               },
               target: t,
-              defaultTarget: g.X.ACCOUNT_PANEL,
-              searchQuery: i,
+              defaultTarget: h.X.ACCOUNT_PANEL,
+              searchQuery: a,
               onSearchChange: x,
               ...n,
           });
 }
-function _() {
+function b() {
     return (0, r.jsxs)("div", {
-        className: b.t,
+        className: x.t,
         children: [
-            (0, r.jsx)(i.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: "text-sm/semibold",
                 color: "text-strong",
-                children: x.intl.string(x.t.zihbmv),
+                children: y.intl.string(y.t.zihbmv),
             }),
-            (0, r.jsx)(i.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: "text-sm/normal",
                 color: "text-subtle",
-                children: x.intl.string(x.t.XclvsB),
+                children: y.intl.string(y.t.XclvsB),
             }),
         ],
     });
