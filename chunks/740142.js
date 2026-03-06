@@ -23,17 +23,13 @@ function u(e) {
         contentTypes: x,
         bypassAutoDismiss: !0,
         children: (e) => {
-            let { visibleContent: i, markAsDismissed: l } = e;
+            let { visibleContent: t, markAsDismissed: i } = e;
             if (null == u) return null;
-            switch (i) {
+            switch (t) {
                 case s.M.GAME_WIDGETS_USER_PROFILE_ACCOUNT_POPOUT_UPSELL:
-                    return (0, a.jsx)(c.A, { handleOpenUserProfileModal: n, markAsDismissed: l, height: u });
+                    return (0, a.jsx)(c.A, { handleOpenUserProfileModal: n, markAsDismissed: i, height: u });
                 case s.M.WISHLIST_USER_PROFILE_ACCOUNT_POPOUT_UPSELL:
-                    return (0, a.jsx)(o.A, {
-                        profileUserId: t?.userId,
-                        handleOpenUserProfileModal: n,
-                        markAsDismissed: l,
-                    });
+                    return (0, a.jsx)(o.A, { handleOpenUserProfileModal: n, markAsDismissed: i });
                 default:
                     return null;
             }
