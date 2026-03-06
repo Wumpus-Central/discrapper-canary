@@ -10,7 +10,7 @@ var a = l(627968),
     d = l(812745),
     p = l(652215),
     m = l(788868),
-    h = l(749226);
+    h = l(825092);
 let x = {
         name: "Primitive: Nitro Plan Select",
         id: "unified-checkout-nitro-plan-select",
@@ -28,13 +28,13 @@ let x = {
                     rightShowSubtext: x,
                     rightSubtextStrikethrough: b,
                 } = e,
-                [g, y] = n.useState(0);
+                [y, f] = n.useState(0);
             return (0, a.jsxs)("div", {
                 className: h.Cd,
                 children: [
                     (0, a.jsx)(c.q7, {
-                        selection: g,
-                        onChange: y,
+                        selection: y,
+                        onChange: f,
                         planOptions: [
                             {
                                 id: 0,
@@ -52,7 +52,7 @@ let x = {
                             },
                         ],
                     }),
-                    (0, a.jsxs)(o.Text, { variant: "text-sm/normal", children: ["Selected plan index: ", g] }),
+                    (0, a.jsxs)(o.Text, { variant: "text-sm/normal", children: ["Selected plan index: ", y] }),
                 ],
             });
         },
@@ -83,8 +83,8 @@ let x = {
         },
     },
     b = { "nitro-wheel": o.tvc, gift: o.okO, orbs: o.Cp8 },
-    g = i.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
-    y = {
+    y = i.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
+    f = {
         name: "Modal: Unified Checkout Stateless Modal",
         id: "unified-checkout-stateless-modal",
         component: function (e) {
@@ -143,7 +143,7 @@ let x = {
                     { label: "None", value: "none" },
                 ],
             },
-            countryCode: { label: "Country Code", type: "select", defaultValue: s.d.US, options: g },
+            countryCode: { label: "Country Code", type: "select", defaultValue: s.d.US, options: y },
             headerBadgeText: { label: "Header Pill Text", type: "text", defaultValue: "PROMO" },
             headerBadgeHasIcon: { label: "Header Badge Has Icon", type: "boolean", defaultValue: !1 },
             gradientColor: {
@@ -160,7 +160,7 @@ let x = {
             dismissable: { label: "Dismissable", type: "boolean", defaultValue: !0 },
         },
     },
-    f = {
+    g = {
         purchaseButtonText: "Subscribe",
         totalDue: 999,
         renewalPrice: 1099,
@@ -170,8 +170,8 @@ let x = {
         startDate: new Date(),
     },
     E = {
-        [c.I0.Subscription]: { type: c.I0.Subscription, ...f },
-        [c.I0.SubscriptionTrial]: { type: c.I0.SubscriptionTrial, ...f },
+        [c.I0.Subscription]: { type: c.I0.Subscription, ...g },
+        [c.I0.SubscriptionTrial]: { type: c.I0.SubscriptionTrial, ...g },
         [c.I0.OrbsRedemption]: { type: c.I0.OrbsRedemption, purchaseButtonText: "Redeem" },
         [c.I0.Shop]: { type: c.I0.Shop, purchaseButtonText: "Purchase" },
         [c.I0.GiftNitro]: { type: c.I0.GiftNitro, purchaseButtonText: "Buy Gift" },
@@ -185,7 +185,7 @@ let x = {
     v = {
         title: "Unified Checkout",
         stories: [
-            y,
+            f,
             {
                 name: "Primitive: Order Summary Accordion",
                 id: "unified-checkout-order-summary",
@@ -419,6 +419,23 @@ let x = {
                             onChange: (e) => t(e.value),
                         }),
                     });
+                },
+            },
+            {
+                name: "Primitive: Store Country Row",
+                id: "checkout-store-country-row",
+                component: (e) => {
+                    let { storeCountry: t, relocationCountry: l } = e;
+                    return (0, a.jsx)(c.s7, { storeCountry: t, relocationCountry: l });
+                },
+                controls: {
+                    storeCountry: { label: "Store Country", type: "select", defaultValue: s.d.US, options: y },
+                    relocationCountry: {
+                        label: "Relocation Country",
+                        type: "select",
+                        defaultValue: null,
+                        options: [{ label: "None", value: null }, ...y],
+                    },
                 },
             },
         ],

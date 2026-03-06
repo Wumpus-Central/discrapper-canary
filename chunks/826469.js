@@ -5,8 +5,9 @@ class i {
     source;
     enabled;
     allowedCurrencies;
-    constructor(e, t, n) {
-        (this.source = e), (this.enabled = t), (this.allowedCurrencies = n);
+    relocationCountry;
+    constructor(e, t, n, r = null) {
+        (this.source = e), (this.enabled = t), (this.allowedCurrencies = n), (this.relocationCountry = r);
     }
     get id() {
         return this.source.id;
@@ -38,6 +39,6 @@ class i {
             username: e.username,
             bank: e.bank,
         };
-        return new i(r.Ay.createFromServer(t), e.enabled, e.allowed_currencies);
+        return new i(r.Ay.createFromServer(t), e.enabled, e.allowed_currencies, e.relocation_country ?? null);
     }
 }

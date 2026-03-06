@@ -43818,6 +43818,20 @@ screen and (max-width:485px) {
     display: flex
 }
 
+.row__8a8df {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-6);
+    margin-bottom: var(--space-16)
+}
+
+.flag__8a8df {
+    flex-shrink: 0;
+    height: 18px;
+    width: auto
+}
+
 .planOption_b13085 {
     align-items: center;
     color: var(--interactive-text-default);
