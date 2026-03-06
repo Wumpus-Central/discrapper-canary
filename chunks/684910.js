@@ -2,20 +2,19 @@ t.d(l, { A: () => d });
 var r = t(64700),
     o = t(311907),
     n = t(475743),
-    i = t(828596),
-    a = t(124338);
+    a = t(828596),
+    i = t(124338);
 function d(e) {
-    let { productId: l, includePricing: t = !1, includeUnpublished: d = !1, ignoreCache: s = !1 } = e,
-        [c, u, h] = (0, o.yK)([a.A], () => [a.A.getProduct(l), a.A.isFetching(l), a.A.getApiError(l)]),
-        p = (0, n.A)(t),
-        m = (0, n.A)(d),
-        b = (0, n.A)(s),
-        _ = !!l && !u && h?.status !== 404 && h?.status !== 429,
-        S = null == c || t !== p || d !== m || s !== b;
+    let { productId: l, includePricing: t = !1, ignoreCache: d = !1 } = e,
+        [s, c, u] = (0, o.yK)([i.A], () => [i.A.getProduct(l), i.A.isFetching(l), i.A.getApiError(l)]),
+        h = (0, n.A)(t),
+        p = (0, n.A)(d),
+        m = !!l && !c && u?.status !== 404 && u?.status !== 429,
+        _ = null == s || t !== h || d !== p;
     return (
         (0, r.useEffect)(() => {
-            _ && S && (0, i.M0)({ productId: l, includePricing: t, includeUnpublished: d, ignoreCache: s });
-        }, [_, S, l, t, d, s]),
-        { product: c, isFetching: u, apiError: h }
+            m && _ && (0, a.M0)({ productId: l, includePricing: t, ignoreCache: d });
+        }, [m, _, l, t, d]),
+        { product: s, isFetching: c, apiError: u }
     );
 }

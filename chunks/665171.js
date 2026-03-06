@@ -91,10 +91,9 @@ function E(e) {
           });
 }
 function g(e, t) {
-    let n = a.default.getCurrentUser()?.isStaff() ?? !1;
     return (0, l.aP)({
         url: p.Rsh.STOREFRONT_PRODUCT_BY_SKU_ID(t),
-        query: { locale: s.default.locale, include_unpublished: n },
+        query: { locale: s.default.locale },
         rejectWithError: !0,
         retries: 3,
     }).then((n) => {
