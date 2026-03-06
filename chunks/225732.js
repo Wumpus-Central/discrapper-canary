@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { default: () => eI });
-var a = n(627968),
-    l = n(64700),
+var l = n(627968),
+    a = n(64700),
     i = n(503698),
     r = n.n(i),
     s = n(989349),
@@ -24,48 +24,48 @@ var a = n(627968),
     b = n(708197),
     N = n(583846),
     C = n(885151),
-    S = n(928550),
-    T = n(657331),
-    k = n(773669),
-    L = n(486020),
+    T = n(928550),
+    S = n(657331),
+    L = n(773669),
+    k = n(486020),
     y = n(541830),
     R = n(661191),
-    G = n(240248),
-    w = n(409626),
-    O = n(880405),
+    O = n(240248),
+    G = n(409626),
+    w = n(880405),
     M = n(422069),
-    P = n(476464),
-    D = n(205184),
+    D = n(476464),
+    P = n(205184),
     V = n(939764),
     W = n(277089),
     Y = n(611656),
-    U = n(459746),
-    B = n(503364),
+    F = n(459746),
+    U = n(503364),
     H = n(305080),
-    F = n(814698),
-    z = n(976720),
+    B = n(814698),
+    z = n(431040),
+    K = n(976720),
     X = n(286737),
-    K = n(839671),
-    J = n(94836),
-    Z = n(392332),
-    $ = n(639714),
-    Q = n(936636),
+    J = n(839671),
+    Z = n(94836),
+    $ = n(392332),
+    Q = n(639714),
     q = n(310721),
     ee = n(922283),
     et = n(582942),
     en = n(999450),
-    ea = n(285820),
-    el = n(771004),
+    el = n(285820),
+    ea = n(771004),
     ei = n(424994),
     er = n(985018),
     es = n(728528),
     ec = n(936284);
 let eo = () =>
-    (0, a.jsxs)("div", {
+    (0, l.jsxs)("div", {
         className: es.uv,
         children: [
-            (0, a.jsx)(f.Y3C, { size: "xxs" }),
-            (0, a.jsx)(f.Text, {
+            (0, l.jsx)(f.Y3C, { size: "xxs" }),
+            (0, l.jsx)(f.Text, {
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: er.intl.string(er.t.kAlUsy),
@@ -74,9 +74,9 @@ let eo = () =>
     });
 function ed(e) {
     let { detectedGame: t, application: n, entries: i } = e,
-        s = l.useMemo(() => t?.genres.map(y.du).join(", "), [t]),
-        [o] = l.useState(() => Math.random()),
-        d = l.useMemo(() => {
+        s = a.useMemo(() => t?.genres.map(y.du).join(", "), [t]),
+        [o] = a.useState(() => Math.random()),
+        d = a.useMemo(() => {
             if (null == t) return "";
             let { artwork: e, screenshots: n } = t;
             if (e.length > 0) {
@@ -89,68 +89,68 @@ function ed(e) {
             }
             return "";
         }, [t, o]),
-        u = (0, G.uJ)(t.iconHash)
-            ? n?.getIconURL(160, L.QB ? "webp" : "png")
-            : L.Ay.getGameAssetURL({ id: t.applicationId, hash: t.iconHash, size: 160, format: L.QB ? "webp" : "png" }),
+        u = (0, O.uJ)(t.iconHash)
+            ? n?.getIconURL(160, k.QB ? "webp" : "png")
+            : k.Ay.getGameAssetURL({ id: t.applicationId, hash: t.iconHash, size: 160, format: k.QB ? "webp" : "png" }),
         x = R.default.extractTimestamp(n.id),
         h = 7 >= c()().diff(c()(x), "days"),
         g = i.some((e) => (0, N.CZ)(e) === m.m.GLOBAL),
         p = t.name ?? n?.name;
-    return (0, a.jsxs)(a.Fragment, {
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, a.jsx)("div", { className: es.is, style: { backgroundImage: `url("${d}")` } }),
-            (0, a.jsxs)("div", {
+            (0, l.jsx)("div", { className: es.is, style: { backgroundImage: `url("${d}")` } }),
+            (0, l.jsxs)("div", {
                 className: r()(es.Qs, es.fi, es.iH, es.Se),
                 children: [
-                    (0, a.jsxs)("div", {
+                    (0, l.jsxs)("div", {
                         className: es.xx,
                         children: [
-                            (0, a.jsx)("div", {
+                            (0, l.jsx)("div", {
                                 className: es.bb,
-                                children: (0, a.jsx)(U.A, {
+                                children: (0, l.jsx)(F.A, {
                                     game: t,
                                     application: n,
                                     className: es.wm,
-                                    size: U.w.LARGE,
+                                    size: F.w.LARGE,
                                 }),
                             }),
-                            (0, a.jsx)(B.A, { applicationId: n.id, className: es.Gg }),
+                            (0, l.jsx)(U.A, { applicationId: n.id, className: es.Gg }),
                         ],
                     }),
-                    (0, a.jsx)("div", {
+                    (0, l.jsx)("div", {
                         className: r()(es.nM, es.Lc, es.Z3),
-                        children: (0, a.jsxs)("div", {
+                        children: (0, l.jsxs)("div", {
                             children: [
-                                (0, a.jsx)(f.Heading, { variant: "heading-xl/bold", children: p }),
-                                (0, a.jsxs)("div", {
+                                (0, l.jsx)(f.Heading, { variant: "heading-xl/bold", children: p }),
+                                (0, l.jsxs)("div", {
                                     className: r()(es.nM, es.Lc),
                                     children: [
                                         null != u &&
-                                            (0, a.jsx)("img", {
+                                            (0, l.jsx)("img", {
                                                 className: es.Gt,
                                                 src: u,
                                                 height: 16,
                                                 alt: er.intl.formatToPlainString(er.t["nh+jWk"], { game: p }),
                                             }),
-                                        (0, a.jsx)(f.Text, {
+                                        (0, l.jsx)(f.Text, {
                                             variant: "text-sm/semibold",
                                             color: "text-muted",
                                             children: s,
                                         }),
                                         h &&
-                                            (0, a.jsx)(f.Text, {
+                                            (0, l.jsx)(f.Text, {
                                                 variant: "eyebrow",
                                                 className: es.Ad,
                                                 children: er.intl.string(er.t.y2b7CA),
                                             }),
                                         g &&
-                                            (0, a.jsxs)(a.Fragment, {
+                                            (0, l.jsxs)(l.Fragment, {
                                                 children: [
-                                                    (0, a.jsx)(f.Text, {
+                                                    (0, l.jsx)(f.Text, {
                                                         variant: "text-sm/medium",
                                                         children: " \xb7 ",
                                                     }),
-                                                    (0, a.jsx)(eo, {}),
+                                                    (0, l.jsx)(eo, {}),
                                                 ],
                                             }),
                                     ],
@@ -164,22 +164,22 @@ function ed(e) {
     });
 }
 function eu(e) {
-    let { game: t, application: n, isTwoColumn: l } = e,
+    let { game: t, application: n, isTwoColumn: a } = e,
         i = t.supplementalData;
     return null == i
         ? null
-        : (0, a.jsx)("div", {
-              className: l ? ec.n8 : ec.FS,
-              children: (0, a.jsx)(U.A, { game: i, application: n, className: es.wm, size: U.w.LARGE }),
+        : (0, l.jsx)("div", {
+              className: a ? ec.n8 : ec.FS,
+              children: (0, l.jsx)(F.A, { game: i, application: n, className: es.wm, size: F.w.LARGE }),
           });
 }
 function em(e) {
     let { game: t, application: n, entries: i } = e,
         s = t.supplementalData,
         { isTwoColumn: o } = (0, H.c)(),
-        d = l.useMemo(() => t.genres.map(y.du).join(", "), [t]),
-        [u] = l.useState(() => Math.random()),
-        x = l.useMemo(() => {
+        d = a.useMemo(() => t.genres.map(y.du).join(", "), [t]),
+        [u] = a.useState(() => Math.random()),
+        x = a.useMemo(() => {
             if (null == s) return "";
             let { artwork: e, screenshots: t } = s;
             if (e.length > 0) {
@@ -193,60 +193,60 @@ function em(e) {
             return "";
         }, [s, u]),
         h =
-            null == s || (0, G.uJ)(s.iconHash)
-                ? n?.getIconURL(160, L.QB ? "webp" : "png")
-                : L.Ay.getGameAssetURL({ id: t.id, hash: s.iconHash, size: 160, format: L.QB ? "webp" : "png" }),
+            null == s || (0, O.uJ)(s.iconHash)
+                ? n?.getIconURL(160, k.QB ? "webp" : "png")
+                : k.Ay.getGameAssetURL({ id: t.id, hash: s.iconHash, size: 160, format: k.QB ? "webp" : "png" }),
         g = R.default.extractTimestamp(n.id),
         p = 7 >= c()().diff(c()(g), "days"),
         _ = i.some((e) => (0, N.CZ)(e) === m.m.GLOBAL),
         v = s?.name ?? t.name ?? n?.name;
-    return (0, a.jsxs)(a.Fragment, {
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, a.jsx)("div", { className: ec.is, style: { backgroundImage: `url("${x}")` } }),
-            (0, a.jsxs)("div", {
+            (0, l.jsx)("div", { className: ec.is, style: { backgroundImage: `url("${x}")` } }),
+            (0, l.jsxs)("div", {
                 className: r()(ec.Qs, ec.Se),
                 children: [
-                    (0, a.jsxs)("div", {
+                    (0, l.jsxs)("div", {
                         className: es.xx,
                         children: [
-                            o ? (0, a.jsx)(eu, { game: t, application: n, isTwoColumn: !0 }) : null,
-                            (0, a.jsx)(B.N, { applicationId: n.id, className: es.Gg }),
+                            o ? (0, l.jsx)(eu, { game: t, application: n, isTwoColumn: !0 }) : null,
+                            (0, l.jsx)(U.N, { applicationId: n.id, className: es.Gg }),
                         ],
                     }),
-                    (0, a.jsx)("div", {
+                    (0, l.jsx)("div", {
                         className: r()(es.nM, es.Lc, es.Z3),
-                        children: (0, a.jsxs)("div", {
+                        children: (0, l.jsxs)("div", {
                             children: [
-                                (0, a.jsx)(f.Heading, { variant: "heading-xl/bold", children: v }),
-                                (0, a.jsxs)("div", {
+                                (0, l.jsx)(f.Heading, { variant: "heading-xl/bold", children: v }),
+                                (0, l.jsxs)("div", {
                                     className: r()(es.nM, es.Lc),
                                     children: [
                                         null != h &&
-                                            (0, a.jsx)("img", {
+                                            (0, l.jsx)("img", {
                                                 className: es.Gt,
                                                 src: h,
                                                 height: 16,
                                                 alt: er.intl.formatToPlainString(er.t["nh+jWk"], { game: v }),
                                             }),
-                                        (0, a.jsx)(f.Text, {
+                                        (0, l.jsx)(f.Text, {
                                             variant: "text-sm/semibold",
                                             color: "text-muted",
                                             children: d,
                                         }),
                                         p &&
-                                            (0, a.jsx)(f.Text, {
+                                            (0, l.jsx)(f.Text, {
                                                 variant: "eyebrow",
                                                 className: es.Ad,
                                                 children: er.intl.string(er.t.y2b7CA),
                                             }),
                                         _ &&
-                                            (0, a.jsxs)(a.Fragment, {
+                                            (0, l.jsxs)(l.Fragment, {
                                                 children: [
-                                                    (0, a.jsx)(f.Text, {
+                                                    (0, l.jsx)(f.Text, {
                                                         variant: "text-sm/medium",
                                                         children: " \xb7 ",
                                                     }),
-                                                    (0, a.jsx)(eo, {}),
+                                                    (0, l.jsx)(eo, {}),
                                                 ],
                                             }),
                                     ],
@@ -263,7 +263,7 @@ function ex(e) {
     let {
         detectedGame: t,
         application: n,
-        entries: l,
+        entries: a,
         officialGuildInvite: i,
         similarGames: r,
         similarGamesError: s,
@@ -272,12 +272,12 @@ function ex(e) {
         trackAction: d,
         source: u,
     } = e;
-    return (0, a.jsxs)("div", {
+    return (0, l.jsxs)("div", {
         className: es.V0,
         children: [
-            (0, a.jsx)(Z.A, { entries: l, viewId: o, officialGuildId: i?.guild?.id, onClose: c, source: u }),
-            (0, a.jsx)(J.A, { detectedGame: t, trackAction: d }),
-            (0, a.jsx)(et.A, {
+            (0, l.jsx)($.A, { entries: a, viewId: o, officialGuildId: i?.guild?.id, onClose: c, source: u }),
+            (0, l.jsx)(Z.A, { detectedGame: t, trackAction: d }),
+            (0, l.jsx)(et.A, {
                 applicationId: n.id,
                 onClose: c,
                 trackAction: d,
@@ -291,65 +291,66 @@ function eh(e) {
     let { game: t, trackAction: n } = e;
     return null == t.supplementalData
         ? null
-        : (0, a.jsxs)("div", {
+        : (0, l.jsxs)("div", {
               className: ec.oC,
               children: [
-                  (0, a.jsxs)("div", {
+                  (0, l.jsxs)("div", {
                       className: ec.lM,
                       children: [
-                          (0, a.jsx)(J.a, { detectedGame: t.supplementalData, trackAction: n }),
-                          (0, a.jsx)(el.A, { detectedGame: t.supplementalData, trackAction: n }),
+                          (0, l.jsx)(Z.a, { detectedGame: t.supplementalData, trackAction: n }),
+                          (0, l.jsx)(ea.A, { detectedGame: t.supplementalData, trackAction: n }),
                       ],
                   }),
-                  (0, a.jsx)(en.A, {}),
+                  (0, l.jsx)(en.A, {}),
               ],
           });
 }
 function ef(e) {
     let { game: t, trackAction: n, onClose: i, application: r } = e,
         s = t.supplementalData?.steamReleaseStatus !== u.Y.RETIRED_ABANDONED,
-        c = l.useCallback(() => {
-            i(), (0, T.closeUserProfileModal)();
+        c = a.useCallback(() => {
+            i(), (0, S.closeUserProfileModal)();
         }, [i]);
     return null == t.supplementalData
         ? null
-        : (0, a.jsxs)("div", {
+        : (0, l.jsxs)("div", {
               className: es.V0,
               children: [
-                  (0, a.jsx)(J.a, { detectedGame: t.supplementalData, trackAction: n }),
-                  (0, a.jsxs)("div", {
+                  (0, l.jsx)(Z.a, { detectedGame: t.supplementalData, trackAction: n }),
+                  (0, l.jsxs)("div", {
                       className: ec.gr,
                       children: [
-                          (0, a.jsx)(eu, { game: t, application: r, isTwoColumn: !1 }),
-                          (0, a.jsxs)("div", {
+                          (0, l.jsx)(eu, { game: t, application: r, isTwoColumn: !1 }),
+                          (0, l.jsxs)("div", {
                               className: ec.E1,
                               children: [
-                                  (0, a.jsx)(ea.A, { detectedGame: t.supplementalData }),
-                                  (0, a.jsx)(el.A, { detectedGame: t.supplementalData, trackAction: n }),
+                                  (0, l.jsx)(el.A, { detectedGame: t.supplementalData }),
+                                  (0, l.jsx)(ea.A, { detectedGame: t.supplementalData, trackAction: n }),
                               ],
                           }),
                       ],
                   }),
-                  (0, a.jsx)(X.A, { trackAction: n }),
-                  (0, a.jsx)($.o, { trackClick: n, closeModal: c }),
-                  (0, a.jsx)(en.A, {}),
-                  s && (0, a.jsx)(ee.A, { detectedGame: t.supplementalData }),
-                  (0, a.jsx)(F.A, { application: r, trackAction: n }),
+                  (0, l.jsx)(X.A, { trackAction: n }),
+                  (0, l.jsx)(Q.o, { trackClick: n, closeModal: c }),
+                  (0, l.jsx)(en.A, {}),
+                  s && (0, l.jsx)(ee.A, { detectedGame: t.supplementalData }),
+                  (0, l.jsx)(z.A, { detectedGame: t.supplementalData, trackClick: n }),
+                  (0, l.jsx)(B.A, { application: r, trackAction: n }),
               ],
           });
 }
 function eg(e) {
-    let { onClose: t, onCloudPlayClick: n, analyticsLocations: l } = e;
+    let { onClose: t, onCloudPlayClick: n, analyticsLocations: a } = e;
     return (
         (0, j.A)({
             name: o.ImpressionNames.CLOUD_PLAY_CTA,
             type: o.ImpressionTypes.VIEW,
-            properties: { location_stack: l },
+            properties: { location_stack: a },
         }),
-        (0, a.jsx)(h.m, {
+        (0, l.jsx)(h.m, {
             text: er.intl.string(er.t.JVwWva),
             position: "top",
-            children: (0, a.jsx)(f.Button, {
+            children: (0, l.jsx)(f.Button, {
                 icon: f.hpF,
                 text: er.intl.string(er.t["jaYS/h"]),
                 variant: "overlay-secondary",
@@ -363,9 +364,9 @@ function eg(e) {
 }
 function ep(e) {
     let { applicationId: t, analyticsLocations: n } = e,
-        a = (0, I.h)(t),
-        l = (0, p.A)({ application: a, analyticsLocations: n });
-    return { onCloudPlayClick: l, isCloudPlayButtonShown: !(0, S.L)(t) && null != l };
+        l = (0, I.h)(t),
+        a = (0, p.A)({ application: l, analyticsLocations: n });
+    return { onCloudPlayClick: a, isCloudPlayButtonShown: !(0, T.L)(t) && null != a };
 }
 function e_(e) {
     let {
@@ -376,31 +377,31 @@ function e_(e) {
             onClose: c,
             application: o,
         } = e,
-        d = l.useCallback(() => {
-            c(), (0, T.closeUserProfileModal)();
+        d = a.useCallback(() => {
+            c(), (0, S.closeUserProfileModal)();
         }, [c]),
         { analyticsLocations: u } = (0, v.Ay)(_.A.GAME_PROFILE),
         { isCloudPlayButtonShown: m, onCloudPlayClick: x } = ep({ applicationId: o.id, analyticsLocations: u });
-    return (0, a.jsxs)("div", {
+    return (0, l.jsxs)("div", {
         className: r()(es.pz, es.fi, es.iH),
         children: [
-            (0, a.jsxs)("div", {
+            (0, l.jsxs)("div", {
                 className: es.NC,
                 children: [
-                    (0, a.jsx)(z.A, { invite: i, trackClick: s, closeModal: d }),
-                    m && null != x && (0, a.jsx)(eg, { onClose: d, onCloudPlayClick: x, analyticsLocations: u }),
+                    (0, l.jsx)(K.A, { invite: i, trackClick: s, closeModal: d }),
+                    m && null != x && (0, l.jsx)(eg, { onClose: d, onCloudPlayClick: x, analyticsLocations: u }),
                 ],
             }),
-            (0, a.jsx)(f.Heading, { variant: "heading-md/bold", children: er.intl.string(er.t.CI0vSJ) }),
-            (0, a.jsxs)("div", {
+            (0, l.jsx)(f.Heading, { variant: "heading-md/bold", children: er.intl.string(er.t.CI0vSJ) }),
+            (0, l.jsxs)("div", {
                 className: es.V0,
                 children: [
-                    (0, a.jsx)(el.h, { detectedGame: t, trackAction: s }),
-                    (0, a.jsx)($.A, { detectedGame: t, trackClick: s, onInviteResolved: n, closeModal: d }),
-                    (0, a.jsx)(K.A, { detectedGame: t, trackClick: s }),
-                    (0, a.jsx)(q.A, { detectedGame: t }),
-                    (0, a.jsx)(F.A, { application: o, trackAction: s }),
-                    (0, a.jsx)(f.Text, {
+                    (0, l.jsx)(ea.h, { detectedGame: t, trackAction: s }),
+                    (0, l.jsx)(Q.A, { detectedGame: t, trackClick: s, onInviteResolved: n, closeModal: d }),
+                    (0, l.jsx)(J.A, { detectedGame: t, trackClick: s }),
+                    (0, l.jsx)(q.A, { detectedGame: t }),
+                    (0, l.jsx)(B.A, { application: o, trackAction: s }),
+                    (0, l.jsx)(f.Text, {
                         variant: "text-xxs/normal",
                         children: er.intl.format(er.t.pch2Jw, { igdbLink: ei.s8 }),
                     }),
@@ -411,35 +412,29 @@ function e_(e) {
 }
 function ev(e) {
     let { game: t, trackAction: n, onClose: i, application: s } = e,
-        c = l.useCallback(() => {
-            i(), (0, T.closeUserProfileModal)();
+        c = a.useCallback(() => {
+            i(), (0, S.closeUserProfileModal)();
         }, [i]),
         { analyticsLocations: o } = (0, v.Ay)(_.A.GAME_PROFILE),
         { isCloudPlayButtonShown: d, onCloudPlayClick: m } = ep({ applicationId: s.id, analyticsLocations: o });
     if (null == t.supplementalData) return null;
     let x = t.supplementalData.steamReleaseStatus !== u.Y.RETIRED_ABANDONED;
-    return (0, a.jsxs)("div", {
+    return (0, l.jsxs)("div", {
         className: r()(ec.Pn, es.fi, es.iH),
         children: [
-            (0, a.jsx)("div", {
+            (0, l.jsx)("div", {
                 className: es.NC,
-                children: d && null != m && (0, a.jsx)(eg, { onClose: c, onCloudPlayClick: m, analyticsLocations: o }),
+                children: d && null != m && (0, l.jsx)(eg, { onClose: c, onCloudPlayClick: m, analyticsLocations: o }),
             }),
-            (0, a.jsxs)("div", {
+            (0, l.jsxs)("div", {
                 className: es.V0,
                 children: [
-                    (0, a.jsx)(ea.A, { detectedGame: t.supplementalData }),
-                    (0, a.jsx)(X.A, { trackAction: n }),
-                    (0, a.jsx)($.o, { trackClick: n, closeModal: c }),
-                    x && (0, a.jsx)(ee.A, { detectedGame: t.supplementalData }),
-                    (0, a.jsx)(K.R, { detectedGame: t.supplementalData, trackClick: n }),
-                    (0, a.jsx)(q.v, { detectedGame: t.supplementalData }),
-                    (0, a.jsx)(f.Text, {
-                        variant: "text-xxs/normal",
-                        children: er.intl.format(er.t.pch2Jw, { igdbLink: ei.s8 }),
-                    }),
-                    (0, a.jsx)(Q.A, { detectedGame: t.supplementalData }),
-                    (0, a.jsx)(F.A, { application: s, trackAction: n }),
+                    (0, l.jsx)(el.A, { detectedGame: t.supplementalData }),
+                    (0, l.jsx)(X.A, { trackAction: n }),
+                    (0, l.jsx)(Q.o, { trackClick: n, closeModal: c }),
+                    x && (0, l.jsx)(ee.A, { detectedGame: t.supplementalData }),
+                    (0, l.jsx)(z.A, { detectedGame: t.supplementalData, trackClick: n }),
+                    (0, l.jsx)(B.A, { application: s, trackAction: n }),
                 ],
             }),
         ],
@@ -456,48 +451,48 @@ function ej(e) {
             trackExternalAction: d,
         } = e,
         { clientThemesClassName: u } = (0, E.Ay)(),
-        m = (0, x.bG)([k.default], () => k.default.locale),
-        h = l.useMemo(() => (0, w.u9)(), []),
+        m = (0, x.bG)([L.default], () => L.default.locale),
+        h = a.useMemo(() => (0, G.u9)(), []),
         p = (0, x.yK)([M.A], () => (M.A.getSimilarGames(t) ?? []).slice(0, 25)),
-        [_, v] = l.useState(null),
-        j = (0, D.s)(t),
-        [A, S] = l.useState(null),
-        T = (0, I.h)(t),
-        { data: L, refetch: y } = (0, C.k)(t),
-        R = L?.supplementalData ?? null,
-        G = R?.name ?? T?.name,
-        P = (e, a) => {
-            (0, w.Tn)({
-                gameName: G ?? "",
+        [_, v] = a.useState(null),
+        j = (0, P.s)(t),
+        [A, T] = a.useState(null),
+        S = (0, I.h)(t),
+        { data: k, refetch: y } = (0, C.k)(t),
+        R = k?.supplementalData ?? null,
+        O = R?.name ?? S?.name,
+        D = (e, l) => {
+            (0, G.Tn)({
+                gameName: O ?? "",
                 applicationId: t,
                 action: e,
-                similarGameId: a,
+                similarGameId: l,
                 viewId: h,
                 officialGuildId: A?.guild?.id,
                 source: n,
             });
         };
     return ((0, g.Ay)(() => {
-        (0, w.rw)({
+        (0, G.rw)({
             source: n,
             viewId: h,
             applicationId: t,
-            gameName: G ?? "",
+            gameName: O ?? "",
             authorId: i,
-            profileType: w.HV.FullProfile,
+            profileType: G.HV.FullProfile,
         }),
             (0, b.He)();
     }),
     (0, I.A)(p),
-    l.useEffect(() => {
+    a.useEffect(() => {
         m.startsWith("en") || R?.summaryLocalized != null || y();
     }, [t, R?.summaryLocalized, m, y]),
-    l.useEffect(() => {
+    a.useEffect(() => {
         (async () => {
             if (0 === p.length) {
                 v(null);
                 try {
-                    await (0, O.N)(t);
+                    await (0, w.N)(t);
                 } catch (e) {
                     v(e);
                 }
@@ -510,52 +505,52 @@ function ej(e) {
                 let n = (0, N.JM)(t) ? (0, N.W6)(t, e) : (0, N.aJ)(t, m);
                 return JSON.stringify({ item_id: t.id, trait: t.traits, time_played: n });
             });
-        (0, w.V_)({
+        (0, G.V_)({
             viewId: h,
             applicationId: t,
-            gameName: G ?? "",
+            gameName: O ?? "",
             playedFriendIds: j.map((e) => e.author_id),
             playedFriendsData: n,
             similarGames: p.filter(Y.oS).slice(0, 5),
             officialGuildId: A?.guild?.id,
         });
     }),
-    null == L || null == R || null == T)
+    null == k || null == R || null == S)
         ? null
-        : (0, a.jsx)(f.dWK, {
+        : (0, l.jsx)(f.dWK, {
               transitionState: s,
               onClose: c,
               size: "xl",
-              children: (0, a.jsx)("div", {
+              children: (0, l.jsx)("div", {
                   className: r()(u, es.fn),
-                  children: (0, a.jsxs)(f.HOs, {
+                  children: (0, l.jsxs)(f.HOs, {
                       orientation: "auto",
                       children: [
-                          (0, a.jsx)(ed, { detectedGame: R, application: T, entries: j, trackAction: P }),
-                          (0, a.jsx)(f.Fmo, {
-                              children: (0, a.jsxs)("div", {
+                          (0, l.jsx)(ed, { detectedGame: R, application: S, entries: j, trackAction: D }),
+                          (0, l.jsx)(f.Fmo, {
+                              children: (0, l.jsxs)("div", {
                                   className: r()(es.Qs, es.rb),
                                   children: [
-                                      (0, a.jsx)(ex, {
+                                      (0, l.jsx)(ex, {
                                           detectedGame: R,
-                                          application: T,
+                                          application: S,
                                           entries: j,
                                           officialGuildInvite: A,
                                           similarGames: p,
                                           similarGamesError: _,
                                           onClose: c,
                                           viewId: h,
-                                          trackAction: P,
+                                          trackAction: D,
                                           source: n,
                                       }),
-                                      (0, a.jsx)(e_, {
+                                      (0, l.jsx)(e_, {
                                           detectedGame: R,
-                                          onSetOfficialGuildInvite: S,
+                                          onSetOfficialGuildInvite: T,
                                           officialGuildInvite: A,
-                                          trackAction: P,
+                                          trackAction: D,
                                           onClose: c,
                                           appContext: o,
-                                          application: T,
+                                          application: S,
                                           source: n,
                                           trackExternalAction: d,
                                       }),
@@ -577,103 +572,103 @@ function eA(e) {
             appContext: o,
             trackExternalAction: u,
         } = e,
-        [m, h] = l.useState(!0),
-        [p, _] = l.useState(null),
+        [m, h] = a.useState(!0),
+        [p, _] = a.useState(null),
         { clientThemesClassName: v } = (0, E.Ay)(),
-        j = (0, x.bG)([k.default], () => k.default.locale),
-        S = l.useMemo(() => (0, w.u9)(), []),
-        T = (0, I.h)(t),
-        L = (0, D.s)(t),
+        j = (0, x.bG)([L.default], () => L.default.locale),
+        T = a.useMemo(() => (0, G.u9)(), []),
+        S = (0, I.h)(t),
+        k = (0, P.s)(t),
         { data: y, refetch: R } = (0, C.k)(t),
-        G = y?.supplementalData ?? null,
-        O = G?.name ?? y?.name ?? T?.name ?? "",
+        O = y?.supplementalData ?? null,
+        w = O?.name ?? y?.name ?? S?.name ?? "",
         {
             hasAlreadyLinked: M,
-            canStartAuthorization: P,
+            canStartAuthorization: D,
             fetched: Y,
-            startAuthorization: U,
-            connectionApp: B,
-        } = (0, A.RD)(T),
-        { invite: F, isMember: z } = (0, W.A)(G, _),
-        { socialLayerStorefrontRecommendationsData: X } = (0, V.V)(T ?? null),
-        K = (e, a) => {
-            (0, w.Tn)({
-                gameName: O,
+            startAuthorization: F,
+            connectionApp: U,
+        } = (0, A.RD)(S),
+        { invite: B, isMember: z } = (0, W.A)(O, _),
+        { socialLayerStorefrontRecommendationsData: K } = (0, V.V)(S ?? null),
+        X = (e, l) => {
+            (0, G.Tn)({
+                gameName: w,
                 applicationId: t,
                 action: e,
-                similarGameId: a,
-                viewId: S,
+                similarGameId: l,
+                viewId: T,
                 officialGuildId: p?.guild?.id,
                 source: n,
             });
         };
     (0, g.Ay)(() => {
-        (0, w.rw)({ source: n, viewId: S, applicationId: t, gameName: O, authorId: i, profileType: w.HV.FullProfile }),
+        (0, G.rw)({ source: n, viewId: T, applicationId: t, gameName: w, authorId: i, profileType: G.HV.FullProfile }),
             (0, b.He)();
     }),
-        l.useEffect(() => {
-            j.startsWith("en") || G?.summaryLocalized != null || R();
-        }, [t, G?.summaryLocalized, j, R]),
+        a.useEffect(() => {
+            j.startsWith("en") || O?.summaryLocalized != null || R();
+        }, [t, O?.summaryLocalized, j, R]),
         (0, g.Ay)(() => () => {
             let e = Date.now(),
-                n = L.map((t) => {
+                n = k.map((t) => {
                     let n = (0, N.JM)(t) ? (0, N.W6)(t, e) : (0, N.aJ)(t, j);
                     return JSON.stringify({ item_id: t.id, trait: t.traits, time_played: n });
                 });
-            (0, w.V_)({
-                viewId: S,
+            (0, G.V_)({
+                viewId: T,
                 applicationId: t,
-                gameName: O,
-                playedFriendIds: L.map((e) => e.author_id),
+                gameName: w,
+                playedFriendIds: k.map((e) => e.author_id),
                 playedFriendsData: n,
                 similarGames: [],
                 officialGuildId: p?.guild?.id,
             });
         });
-    let J = l.useCallback((e) => {
+    let J = a.useCallback((e) => {
             h(e.contentRect.width >= 800);
         }, []),
         Z = (0, d.w)(J, [], { fireOnMount: !0 }),
-        $ = l.useMemo(
+        $ = a.useMemo(
             () => ({
-                application: T,
+                application: S,
                 isTwoColumn: m,
-                canStartAuthorization: P,
+                canStartAuthorization: D,
                 hasAlreadyLinked: M,
                 fetchedAuthorization: Y,
-                startAuthorization: U,
-                connectionApp: B,
-                officialInvite: F,
+                startAuthorization: F,
+                connectionApp: U,
+                officialInvite: B,
                 isMember: z,
-                socialLayerStorefrontRecommendationsData: X,
+                socialLayerStorefrontRecommendationsData: K,
             }),
-            [T, m, P, M, Y, U, B, F, z, X],
+            [S, m, D, M, Y, F, U, B, z, K],
         );
-    return null == y || null == G || null == T
+    return null == y || null == O || null == S
         ? null
-        : (0, a.jsx)(f.dWK, {
+        : (0, l.jsx)(f.dWK, {
               transitionState: s,
               onClose: c,
               size: "xxl",
-              children: (0, a.jsx)(H.D.Provider, {
+              children: (0, l.jsx)(H.D.Provider, {
                   value: $,
-                  children: (0, a.jsx)("div", {
+                  children: (0, l.jsx)("div", {
                       className: r()(v, ec.kL),
                       ref: Z,
-                      children: (0, a.jsxs)(f.HOs, {
+                      children: (0, l.jsxs)(f.HOs, {
                           orientation: "auto",
                           children: [
-                              (0, a.jsx)(em, { game: y, application: T, entries: L }),
-                              (0, a.jsx)(f.Fmo, {
+                              (0, l.jsx)(em, { game: y, application: S, entries: k }),
+                              (0, l.jsx)(f.Fmo, {
                                   children: m
-                                      ? (0, a.jsxs)("div", {
+                                      ? (0, l.jsxs)("div", {
                                             className: ec.jC,
                                             children: [
-                                                (0, a.jsx)(eh, { game: y, trackAction: K }),
-                                                (0, a.jsx)(ev, {
+                                                (0, l.jsx)(eh, { game: y, trackAction: X }),
+                                                (0, l.jsx)(ev, {
                                                     game: y,
-                                                    application: T,
-                                                    trackAction: K,
+                                                    application: S,
+                                                    trackAction: X,
                                                     onClose: c,
                                                     appContext: o,
                                                     source: n,
@@ -681,12 +676,12 @@ function eA(e) {
                                                 }),
                                             ],
                                         })
-                                      : (0, a.jsx)("div", {
+                                      : (0, l.jsx)("div", {
                                             className: ec.b9,
-                                            children: (0, a.jsx)(ef, {
+                                            children: (0, l.jsx)(ef, {
                                                 game: y,
-                                                trackAction: K,
-                                                application: T,
+                                                trackAction: X,
+                                                application: S,
                                                 onClose: c,
                                             }),
                                         }),
@@ -698,6 +693,6 @@ function eA(e) {
           });
 }
 let eI = function (e) {
-    let { enabled: t } = P.z.useConfig({ location: "GameProfileModal" });
-    return t ? (0, a.jsx)(eA, { ...e }) : (0, a.jsx)(ej, { ...e });
+    let { enabled: t } = D.z.useConfig({ location: "GameProfileModal" });
+    return t ? (0, l.jsx)(eA, { ...e }) : (0, l.jsx)(ej, { ...e });
 };

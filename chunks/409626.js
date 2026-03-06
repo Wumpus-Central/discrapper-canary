@@ -24,6 +24,11 @@ var r = n(835245),
             (e[(e.GameShop = 14)] = "GameShop"),
             (e[(e.LinkAccount = 15)] = "LinkAccount"),
             (e[(e.ClaimGame = 16)] = "ClaimGame"),
+            (e[(e.FacebookLink = 17)] = "FacebookLink"),
+            (e[(e.InstagramLink = 18)] = "InstagramLink"),
+            (e[(e.BlueskyLink = 19)] = "BlueskyLink"),
+            (e[(e.RedditLink = 20)] = "RedditLink"),
+            (e[(e.TwitchLink = 21)] = "TwitchLink"),
             e
         );
     })({}),
