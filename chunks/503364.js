@@ -1,88 +1,102 @@
 "use strict";
-n.d(t, { A: () => d, N: () => _ });
-var r = n(627968),
-    i = n(64700),
-    a = n(990078),
-    s = n(397927),
-    o = n(442433),
-    l = n(50268),
-    u = n(67518),
-    c = n(985018);
-function d(e) {
+n.d(t, { A: () => u, N: () => m });
+var a = n(627968),
+    l = n(64700),
+    i = n(990078),
+    r = n(397927),
+    s = n(442433),
+    c = n(50268),
+    o = n(67518),
+    d = n(985018);
+function u(e) {
     let { applicationId: t, className: n } = e,
-        d = i.useRef(null),
-        _ = (0, l.A)({ id: t, label: c.intl.string(c.t["FfCL+6"]) }),
-        f = (0, u.n)(t);
-    return null == _ && null == f
+        u = l.useRef(null),
+        m = (0, c.A)({ id: t, label: d.intl.string(d.t["FfCL+6"]) }),
+        x = (0, o.n)(t);
+    return null == m && null == x
         ? null
-        : (0, r.jsx)(s.YNO, {
-              targetElementRef: d,
+        : (0, a.jsx)(r.YNO, {
+              targetElementRef: u,
               align: "top",
               position: "right",
               disablePointerEvents: !1,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, r.jsx)(s.W1t, {
+                  return (0, a.jsx)(r.W1t, {
                       "data-menu-migrated-auto": !0,
                       navId: "game-profile-context",
                       onClose: () => {
-                          (0, o.Z_)(), t();
+                          (0, s.Z_)(), t();
                       },
-                      "aria-label": c.intl.string(c.t.PNeFgW),
+                      "aria-label": d.intl.string(d.t.PNeFgW),
                       onSelect: () => {},
-                      children: (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsx)(s.rXV, { children: _ }), (0, r.jsx)(s.rXV, { children: f })],
+                      children: (0, a.jsxs)(a.Fragment, {
+                          children: [(0, a.jsx)(r.rXV, { children: m }), (0, a.jsx)(r.rXV, { children: x })],
                       }),
                   });
               },
               children: (e) =>
-                  (0, r.jsx)(a.m, {
-                      text: c.intl.string(c.t["UKOtz+"]),
-                      children: (0, r.jsx)(s.DUT, {
-                          innerRef: d,
+                  (0, a.jsx)(i.m, {
+                      text: d.intl.string(d.t["UKOtz+"]),
+                      children: (0, a.jsx)(r.DUT, {
+                          innerRef: u,
                           className: n,
                           ...e,
-                          children: (0, r.jsx)(s.jNK, { size: "xs", color: s.LU0.colors.WHITE }),
+                          children: (0, a.jsx)(r.jNK, { size: "xs", color: r.LU0.colors.WHITE }),
                       }),
                   }),
           });
 }
-function _(e) {
-    let { applicationId: t, className: n } = e,
-        d = i.useRef(null),
-        _ = (0, l.A)({ id: t, label: c.intl.string(c.t["FfCL+6"]) }),
-        f = (0, u.n)(t);
-    return null == _ && null == f
-        ? null
-        : (0, r.jsx)(s.YNO, {
-              targetElementRef: d,
-              align: "top",
-              position: "right",
-              disablePointerEvents: !1,
-              renderPopout: (e) => {
-                  let { closePopout: t } = e;
-                  return (0, r.jsx)(s.W1t, {
-                      navId: "game-profile-context",
-                      onClose: () => {
-                          (0, o.Z_)(), t();
-                      },
-                      "aria-label": c.intl.string(c.t.PNeFgW),
-                      onSelect: () => {},
-                      children: (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsx)(s.rXV, { children: _ }), (0, r.jsx)(s.rXV, { children: f })],
-                      }),
-                  });
-              },
-              children: (e) =>
-                  (0, r.jsx)(a.m, {
-                      text: c.intl.string(c.t["UKOtz+"]),
-                      children: (0, r.jsx)(s.DUT, {
-                          innerRef: d,
-                          className: n,
-                          "aria-label": c.intl.string(c.t["UKOtz+"]),
-                          ...e,
-                          children: (0, r.jsx)(s.jNK, { size: "xs", color: s.LU0.colors.WHITE }),
-                      }),
-                  }),
-          });
+function m(e) {
+    let { applicationId: t, onClose: n, className: u } = e,
+        m = l.useRef(null),
+        x = (0, c.A)({ id: t, label: d.intl.string(d.t["FfCL+6"]) }),
+        h = (0, o.n)(t);
+    return (0, a.jsxs)("div", {
+        className: u,
+        children: [
+            (null != x || null != h) &&
+                (0, a.jsx)(r.YNO, {
+                    targetElementRef: m,
+                    align: "top",
+                    position: "right",
+                    disablePointerEvents: !1,
+                    renderPopout: (e) => {
+                        let { closePopout: t } = e;
+                        return (0, a.jsx)(r.W1t, {
+                            navId: "game-profile-context",
+                            onClose: () => {
+                                (0, s.Z_)(), t();
+                            },
+                            "aria-label": d.intl.string(d.t.PNeFgW),
+                            onSelect: () => {},
+                            children: (0, a.jsxs)(a.Fragment, {
+                                children: [(0, a.jsx)(r.rXV, { children: h }), (0, a.jsx)(r.rXV, { children: x })],
+                            }),
+                        });
+                    },
+                    children: (e) =>
+                        (0, a.jsx)(i.m, {
+                            text: d.intl.string(d.t["UKOtz+"]),
+                            children: (0, a.jsx)("div", {
+                                ...e,
+                                ref: m,
+                                children: (0, a.jsx)(r.K0, {
+                                    icon: r.jNK,
+                                    variant: "overlay-secondary",
+                                    color: "currentColor",
+                                    "aria-label": d.intl.string(d.t["UKOtz+"]),
+                                }),
+                            }),
+                        }),
+                }),
+            (0, a.jsx)(r.K0, {
+                icon: r.d$L,
+                variant: "overlay-secondary",
+                color: "currentColor",
+                onClick: n,
+                "aria-label": d.intl.string(d.t.cpT0Cq),
+            }),
+        ],
+    });
 }
