@@ -549,6 +549,7 @@ var r = (function (e) {
         (e.GIFT_CODE_EMBED = "gift code embed"),
         (e.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED = "slayer storefront product details embed"),
         (e.AGE_GROUP = "age group"),
+        (e.GIFT_CARD_REDEMPTION_SUCCESS_MODAL = "gift card redemption success modal"),
         (e.GAME_COMMUNITY_MULTI_GUILD_UPSELL_GUILDS_BAR_ENTRYPOINT =
             "game community multi guild upsell guilds bar entrypoint"),
         e
