@@ -1,15 +1,13 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var r = n(688810),
-    i = n(80422),
-    a = n(682262),
+    i = n(682262),
     s = n(725177),
-    o = n(857266);
-function l() {
-    let { shouldMergeGameSettings: e } = i.X.getCurrentConfig({ location: "useOpenGameSettings" }),
-        { analyticsLocations: t } = (0, r.Ay)();
-    if ((0, a.Pi)())
+    a = n(857266);
+function o() {
+    let { analyticsLocations: e } = (0, r.Ay)();
+    if ((0, i.Pi)())
         return () => {
-            (0, s.A)(e ? o.J.MY_GAMES : o.J.ACTIVITY_PRIVACY, { analyticsLocations: t });
+            (0, s.A)(a.J.ACTIVITY_PRIVACY, { analyticsLocations: e });
         };
 }
