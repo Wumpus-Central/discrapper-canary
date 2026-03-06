@@ -56,7 +56,7 @@ function U(e, t) {
 let G = {
     joinGuild: async function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            { source: r, loadId: i, lurkLocation: o, skipOnboarding: u } = t,
+            { source: r, loadId: i, lurkLocation: o, autoNavigate: u = !0 } = t,
             c = t.lurker ?? !1,
             d = v.default.getCurrentUser();
         if (d?.hasFlag(D.nhx.QUARANTINED)) return (0, h.default)(), new Promise((e, t) => t(Error()));
@@ -81,7 +81,7 @@ let G = {
             if (
                 (null != d.body.join_request &&
                     a.h.dispatch({ type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: e, request: d.body.join_request }),
-                null == T.A.getGuild(e) && d.body.show_verification_form)
+                null == T.A.getGuild(e) && d.body.show_verification_form && u)
             )
                 return (0, E.pX)(D.BVt.GUILD_MEMBER_VERIFICATION(e)), d;
             if (
@@ -97,12 +97,12 @@ let G = {
                         guildId: d.body.id,
                         count: d.body.approximate_presence_count,
                     }),
-                !c && !u)
+                !c && u)
             ) {
                 let { default: t } = await Promise.resolve().then(n.bind(n, 967305));
                 await t({ guildId: e, returnChannelId: l });
             }
-            return u && (await k(e)), d;
+            return d;
         } catch (t) {
             if (
                 (t.body?.code === D.t02.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED &&
