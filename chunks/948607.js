@@ -2,8 +2,8 @@
 n.d(t, { A: () => _ });
 var r = n(64700),
     i = n(735438),
-    a = n(311907),
-    s = n(68166),
+    s = n(311907),
+    a = n(68166),
     o = n(775602),
     l = n(267102),
     u = n(203982),
@@ -15,8 +15,8 @@ let d = (0, i.debounce)((e) => {
 }, 50);
 function _(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : window,
-        i = (0, a.bG)([o.A], () => o.A.keyboardModeEnabled),
-        _ = (0, s.A)(),
+        i = (0, s.bG)([o.A], () => o.A.keyboardModeEnabled),
+        _ = (0, a.A)(),
         [f, p] = r.useState(!1),
         h = (0, l.aL)();
     return (
@@ -29,18 +29,18 @@ function _(e, t) {
         r.useEffect(() => {
             if (i || !f || !t) return;
             let { current: r } = e,
-                a = _;
-            function s(t) {
+                s = _;
+            function a(t) {
                 let n = t.relatedTarget;
                 setTimeout(() => {
-                    (null != n && "BUTTON" !== n.tagName) || a || d(e);
+                    (null != n && ("BUTTON" !== n.tagName || n.hasAttribute("aria-expanded"))) || s || d(e);
                 }, 100);
             }
             return (
-                r?.addEventListener("focusout", s),
-                n.document.activeElement?.tagName === "IFRAME" || a || r?.focus(),
+                r?.addEventListener("focusout", a),
+                n.document.activeElement?.tagName === "IFRAME" || s || r?.focus(),
                 () => {
-                    r?.removeEventListener("focusout", s), (a = !0);
+                    r?.removeEventListener("focusout", a), (s = !0);
                 }
             );
         }, [t, f, i, e, n, _]),
