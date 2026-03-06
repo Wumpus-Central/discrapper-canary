@@ -206,7 +206,7 @@ function q(e) {
         title: P.intl.string(n === E.o.GAME_SERVER_HOSTING_AVAILABLE ? G.default.wXLChx : G.default["8z8RpY"]),
         body:
             n === E.o.GAME_SERVER_HOSTING_AVAILABLE
-                ? P.intl.formatToPlainString(G.default.sj2nIF, { gameName: a, gameName2: d })
+                ? P.intl.formatToPlainString(G.default["7KXp9J"], { gameName: a, gameName2: d })
                 : P.intl.format(G.default["IQ1E+d"], { boostCount: r }),
         actions: [
             {
@@ -329,7 +329,10 @@ function $(e) {
                 ? (0, i.jsx)(v.n, { powerup: n, eventTargetRef: h, className: w.Lj })
                 : (0, i.jsx)("img", { alt: "", src: c, className: w.Sl }),
         title: P.intl.string(U.default.n37JhA),
-        body: P.intl.formatToPlainString(U.default.Yr1ogl, { boostCount: o, perkName: n.title }),
+        body: P.intl.formatToPlainString(u || n.type === O.o9.LEVEL ? U.default.Yr1ogl : U.default["7MZ2tu"], {
+            boostCount: o,
+            perkName: n.title,
+        }),
         actions: [
             {
                 text: P.intl.string(P.t.oPAx73),
