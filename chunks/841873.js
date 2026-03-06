@@ -11,6 +11,7 @@ n.d(t, {
     Dn: () => eK,
     E1: () => eX,
     EH: () => eH,
+    ET: () => tR,
     FH: () => et,
     FP: () => eA,
     Fs: () => ey,
@@ -21,6 +22,7 @@ n.d(t, {
     HS: () => eI,
     Hz: () => ev,
     Jp: () => en,
+    Kg: () => tN,
     LC: () => tv,
     LM: () => tg,
     M2: () => ek,
@@ -58,9 +60,7 @@ n.d(t, {
     YN: () => eL,
     ZA: () => K,
     ZJ: () => H,
-    Zb: () => tC,
     _U: () => ee,
-    _Y: () => tN,
     _h: () => ti,
     _i: () => J,
     _m: () => eQ,
@@ -93,13 +93,14 @@ n.d(t, {
     l0: () => ta,
     lI: () => i,
     n8: () => Z,
+    nD: () => tC,
     nx: () => k,
     o: () => ec,
     p8: () => e4,
     pD: () => e$,
     qN: () => tB,
     qv: () => tx,
-    rf: () => N,
+    rf: () => R,
     rk: () => tr,
     rl: () => tO,
     s5: () => em,
@@ -109,7 +110,6 @@ n.d(t, {
     t7: () => v,
     tZ: () => eZ,
     uo: () => eR,
-    us: () => tR,
     uw: () => tt,
     v: () => ex,
     v2: () => Y,
@@ -280,8 +280,9 @@ function y() {
 function v(e, t) {
     return r.rustMultiply(e, t);
 }
-function N(e, t, n, i, s) {
-    r.installLogCallback(e, t, n, i, s);
+function N(e) {
+    let t = r.__wbindgen_export_4.get(e);
+    return r.__externref_table_dealloc(e), t;
 }
 function C(e) {
     let t, n;
@@ -292,9 +293,8 @@ function C(e) {
         r.__wbindgen_free(t, n, 1);
     }
 }
-function R(e) {
-    let t = r.__wbindgen_export_4.get(e);
-    return r.__externref_table_dealloc(e), t;
+function R(e, t, n, i, s) {
+    r.installLogCallback(e, t, n, i, s);
 }
 function O(e, t) {
     r._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h075cb6f1f85a8e52(
@@ -309,10 +309,10 @@ function b(e, t) {
     );
 }
 function D(e, t, n) {
-    r.closure711_externref_shim(e, t, n);
+    r.closure713_externref_shim(e, t, n);
 }
 function L(e, t, n, i) {
-    r.closure747_externref_shim(e, t, n, i);
+    r.closure749_externref_shim(e, t, n, i);
 }
 let w = ["bytes"],
     M = ["omit", "same-origin", "include"],
@@ -383,8 +383,8 @@ class V {
     }
     connectStore(e) {
         let t = r.fluxapi_connectStore(this.__wbg_ptr, e);
-        if (t[2]) throw R(t[1]);
-        return R(t[0]);
+        if (t[2]) throw N(t[1]);
+        return N(t[0]);
     }
     dispatchAction(e, t) {
         let n = c(e, r.__wbindgen_malloc, r.__wbindgen_realloc),
@@ -892,13 +892,13 @@ function tv(e) {
     return 1 == t.cnt-- && ((t.a = 0), !0);
 }
 function tN(e, t, n) {
-    return I(e, t, 525, O);
+    return I(e, t, 527, O);
 }
 function tC(e, t, n) {
-    return I(e, t, 565, b);
+    return I(e, t, 567, b);
 }
 function tR(e, t, n) {
-    return I(e, t, 712, D);
+    return I(e, t, 714, D);
 }
 function tO(e, t) {
     let n = c(T(t), r.__wbindgen_malloc, r.__wbindgen_realloc),
