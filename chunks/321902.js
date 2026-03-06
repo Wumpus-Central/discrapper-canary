@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { T: () => a });
-var i = n(64700),
-    s = n(652215),
-    r = n(188275);
-function a(e) {
-    return i.useMemo(() => (e ? [s.FYj, r.XR] : [s.FYj]), [e]);
+n.d(t, { T: () => l });
+var s = n(64700),
+    r = n(652215),
+    i = n(188275);
+function l(e) {
+    return s.useMemo(() => (e ? [r.FYj, i.XR] : [r.FYj]), [e]);
 }

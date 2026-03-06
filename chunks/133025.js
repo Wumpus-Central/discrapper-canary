@@ -1,38 +1,37 @@
-"use strict";
-n.d(t, { A: () => o });
-var i = n(311907),
-    s = n(73153);
-function r(e, t) {
+n.d(t, { A: () => u });
+var s = n(311907),
+    r = n(73153);
+function i(e, t) {
     if (0 === e.length) throw Error("No user IDs provided");
     return [...e, ...t].join(",");
 }
-let a = {};
-class l extends i.Ay.Store {
+let l = {};
+class o extends s.Ay.Store {
     getRecommendations(e, t) {
-        if (0 !== e.length && 0 !== t.length) return a[r(e, t)];
+        if (0 !== e.length && 0 !== t.length) return l[i(e, t)];
     }
 }
-let o = new l(s.h, {
+let u = new o(r.h, {
     LOGOUT: function () {
-        a = {};
+        l = {};
     },
     WISHLIST_RECOMMENDATIONS_FETCH_START: function (e) {
         let { userIds: t, applicationIds: n } = e;
         if (0 === t.length || 0 === n.length) return !1;
-        let i = r(t, n);
-        a = { ...a, [i]: { state: "loading" } };
+        let s = i(t, n);
+        l = { ...l, [s]: { state: "loading" } };
     },
     WISHLIST_RECOMMENDATIONS_FETCH_SUCCESS: function (e) {
-        let { userIds: t, applicationIds: n, data: i } = e;
+        let { userIds: t, applicationIds: n, data: s } = e;
         if (0 === t.length || 0 === n.length) return !1;
-        let s = r(t, n);
-        a = { ...a, [s]: { state: "success", data: i, fetchedAt: Date.now() } };
+        let r = i(t, n);
+        l = { ...l, [r]: { state: "success", data: s, fetchedAt: Date.now() } };
     },
     WISHLIST_RECOMMENDATIONS_FETCH_FAILURE: function (e) {
         let { userIds: t, applicationIds: n } = e;
         if (0 === t.length || 0 === n.length) return !1;
-        let i = r(t, n);
-        if (a[i]?.state === "success") return !1;
-        a = { ...a, [i]: { state: "error", fetchedAt: Date.now() } };
+        let s = i(t, n);
+        if (l[s]?.state === "success") return !1;
+        l = { ...l, [s]: { state: "error", fetchedAt: Date.now() } };
     },
 });
