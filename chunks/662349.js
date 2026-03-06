@@ -1,51 +1,54 @@
 "use strict";
-n.d(t, { AJ: () => E, hB: () => h, lQ: () => g });
+n.d(t, { AJ: () => A, hB: () => E, lQ: () => I });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(397927),
-    l = n(525723),
-    u = n(580630),
-    c = n(519421),
-    d = n(818348),
-    _ = n(985018),
-    f = n(333245);
-function p(e) {
+    o = n(311907),
+    l = n(397927),
+    u = n(525723),
+    c = n(287809),
+    d = n(580630),
+    _ = n(519421),
+    f = n(818348),
+    p = n(985018),
+    h = n(433107);
+function m(e) {
     return { margin: e.buttonInset };
 }
-function h(e) {
-    let { sku: t, wishlistOwner: n, currentUser: r, isOwned: s, hideIcon: a, location: d } = e,
-        f = (0, c.A)(d ?? "User Profile Wishlist Overlay Button"),
-        p = (0, l.Xi)(t);
+function E(e) {
+    let { sku: t, wishlistOwner: n, isOwned: r, hideIcon: s, location: a } = e,
+        f = (0, o.bG)([c.default], () => c.default.getCurrentUser()),
+        h = (0, _.A)(a ?? "User Profile Wishlist Overlay Button"),
+        m = (0, u.Xi)(t);
     return i.useMemo(() => {
-        if (f && null != t && !s) {
-            if (null != p)
+        if (h && null != t && !r) {
+            if (null != m)
                 return {
-                    label: _.intl.formatToPlainString(_.t.AYcXGW, { discountOfferAmount: p.amount }),
+                    label: p.intl.formatToPlainString(p.t.AYcXGW, { discountOfferAmount: m.amount }),
                     icon: void 0,
                     isPromptingPurchase: !0,
                 };
-            let e = t.getPrice();
-            if (null != e) return { label: (0, u.$g)(e.amount, e.currency), icon: void 0, isPromptingPurchase: !0 };
+            let e = t.getPrice(f?.premiumType);
+            if (null != e) return { label: (0, d.$g)(e.amount, e.currency), icon: void 0, isPromptingPurchase: !0 };
         }
-        return null == n || n.id === r?.id || s
-            ? { label: _.intl.string(_.t.FdGl5A), icon: void 0, isPromptingPurchase: !1 }
-            : { label: _.intl.string(_.t.ilhtIa), icon: a ? void 0 : o.okO, isPromptingPurchase: !0 };
-    }, [t, n, r, s, a, f, p]);
+        return null == n || n.id === f?.id || r
+            ? { label: p.intl.string(p.t.FdGl5A), icon: void 0, isPromptingPurchase: !1 }
+            : { label: p.intl.string(p.t.ilhtIa), icon: s ? void 0 : l.okO, isPromptingPurchase: !0 };
+    }, [t, n, f, r, s, h, m]);
 }
-function m(e) {
-    let { spec: t, label: n, icon: s, onClick: l, isHoveringOrFocusing: u, fullWidth: c = !1 } = e,
+function g(e) {
+    let { spec: t, label: n, icon: s, onClick: o, isHoveringOrFocusing: u, fullWidth: c = !1 } = e,
         d = i.useCallback(
             (e) => {
-                e.stopPropagation(), l();
+                e.stopPropagation(), o();
             },
-            [l],
+            [o],
         );
     return (0, r.jsx)("div", {
-        className: a()(f.L, { [f.K]: u }),
-        style: p(t),
-        children: (0, r.jsx)(o.Button, {
+        className: a()(h.L, { [h.K]: u }),
+        style: m(t),
+        children: (0, r.jsx)(l.Button, {
             variant: "primary",
             size: "sm",
             iconPosition: "start",
@@ -56,12 +59,12 @@ function m(e) {
         }),
     });
 }
-function E(e) {
+function A(e) {
     let { spec: t, onClick: n, isHoveringOrFocusing: i, label: s, icon: a } = e;
-    return (0, r.jsx)(m, { spec: t, label: s, icon: a, onClick: n, isHoveringOrFocusing: i, fullWidth: !0 });
+    return (0, r.jsx)(g, { spec: t, label: s, icon: a, onClick: n, isHoveringOrFocusing: i, fullWidth: !0 });
 }
-function g(e) {
+function I(e) {
     let { sku: t, spec: n, onClick: s, isHoveringOrFocusing: a } = e,
-        o = i.useMemo(() => (0, u.$g)(t.price?.amount ?? 0, t.price?.currency ?? d.Yr.USD), [t]);
-    return (0, r.jsx)(m, { spec: n, label: o, icon: void 0, onClick: s, isHoveringOrFocusing: a, fullWidth: !0 });
+        o = i.useMemo(() => (0, d.$g)(t.price?.amount ?? 0, t.price?.currency ?? f.Yr.USD), [t]);
+    return (0, r.jsx)(g, { spec: n, label: o, icon: void 0, onClick: s, isHoveringOrFocusing: a, fullWidth: !0 });
 }

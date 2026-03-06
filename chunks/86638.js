@@ -87,13 +87,7 @@ function C(e) {
             label: w,
             icon: D,
             isPromptingPurchase: P,
-        } = (0, j.hB)({
-            sku: t.sku,
-            wishlistOwner: n,
-            currentUser: a,
-            isOwned: v,
-            location: "User Profile Wishlist Item Card",
-        });
+        } = (0, j.hB)({ sku: t.sku, wishlistOwner: n, isOwned: v, location: "User Profile Wishlist Item Card" });
     return (0, i.jsxs)("div", {
         className: S.kL,
         children: [
