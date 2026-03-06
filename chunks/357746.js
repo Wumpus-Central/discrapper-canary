@@ -63,6 +63,8 @@ let N = { animation: { BEG: 0, END: 75 }, LOOP: { BEG: 76, END: 376 } },
                     case m.o.GAME_SERVER_HOSTING_AVAILABLE:
                     case m.o.GAME_SERVER_HOSTING_GUILD_ELIGIBLE:
                         return (0, i.jsx)(_.jz, { guildId: t, channelRowRef: T, ...b.popout });
+                    case m.o.GAME_SERVER_NEW_GAMES:
+                        return (0, i.jsx)(_.YX, { guildId: t, channelRowRef: T, ...b.popout });
                     default:
                         return (0, i.jsx)("div", {});
                 }

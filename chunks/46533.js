@@ -59,7 +59,7 @@ var i = n(627968),
     ea = n(49999),
     es = n(349828),
     eo = n(985018),
-    ed = n(484241);
+    ed = n(175739);
 let ec = "server-settings",
     eu = { origin: { x: -8, y: -48 }, targetWidth: 40, targetHeight: 40, offset: { x: 0, y: 0 } };
 class eA extends r.PureComponent {
@@ -138,12 +138,12 @@ class eA extends r.PureComponent {
                     n.e("16301"),
                     n.e("22191"),
                     n.e("25961"),
-                    n.e("21968"),
+                    n.e("96760"),
                     n.e("35894"),
                     n.e("50796"),
                     n.e("8458"),
                     n.e("11810"),
-                    n.e("39048"),
+                    n.e("52848"),
                     n.e("54469"),
                     n.e("52191"),
                 ]).then(n.bind(n, 544676));
@@ -423,6 +423,7 @@ function eh(e) {
         em && eD.push(o.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
         !1 === ev && eD.push(o.M.GUILD_POWERUP_PERKS_COACHMARK),
         ey && !eb && !1 === ev && eD.push(o.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
+        ey && !1 === ev && eD.push(o.M.GAME_SERVER_HOSTING_BATCH_RELEASE_V2_COACHMARK),
         eN && eD.push(o.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL);
     let [eM, ew] = (0, f.kn)(eD, ea.m.GUILD_HEADER_TOOLTIPS),
         eU = null == eM,
