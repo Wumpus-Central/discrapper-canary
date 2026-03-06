@@ -12,12 +12,12 @@ var i = n(627968),
     h = n(397927),
     _ = n(565645),
     m = n(701363),
-    p = n(736653),
-    g = n(775602),
+    g = n(736653),
+    p = n(775602),
     E = n(793574),
     I = n(688810),
     f = n(580314),
-    C = n(379848),
+    C = n(932001),
     T = n(7584),
     N = n(821589),
     S = n(979286),
@@ -46,7 +46,7 @@ let w = (e) => {
     },
     U = () => {
         let { noCache: e, includeUnpublished: t } = (0, O.A)();
-        return (0, x.y)(R.G2.HOME, { noCache: e, includeUnpublished: t, includeBundles: !0 }, void 0, !0), null;
+        return (0, x.y)(R.G2.HOME, { noCache: e, includeUnpublished: t }, void 0, !0), null;
     },
     G = (e) => {
         let {
@@ -61,15 +61,15 @@ let w = (e) => {
                 ...A
             } = e,
             _ = (0, s.rm)("shop"),
-            p = E.A.HOME_PAGE_SHOP_TAB,
-            { analyticsLocations: g } = (0, I.Ay)(p),
+            g = E.A.HOME_PAGE_SHOP_TAB,
+            { analyticsLocations: p } = (0, I.Ay)(g),
             [f, C] = r.useState(!1),
             T = r.useCallback(() => {
                 void 0 !== a && a(),
-                    void 0 !== o && (0, S.Cz)({ tab: o, analyticsLocations: g, analyticsSource: p }),
+                    void 0 !== o && (0, S.Cz)({ tab: o, analyticsLocations: p, analyticsSource: g }),
                     C(!0),
-                    (0, S.Sw)({ analyticsSource: p, analyticsLocations: g });
-            }, [p, g, a, C, o]),
+                    (0, S.Sw)({ analyticsSource: g, analyticsLocations: p });
+            }, [g, p, a, C, o]),
             N = P.BVt.COLLECTIBLES_SHOP;
         return (0, i.jsxs)(i.Fragment, {
             children: [
@@ -134,14 +134,14 @@ let w = (e) => {
         let t,
             n,
             { displayOptions: l, ...s } = e,
-            o = (0, c.bG)([g.A], () => g.A.useReducedMotion),
+            o = (0, c.bG)([p.A], () => p.A.useReducedMotion),
             [d, u] = r.useState(0),
             [_, m] = r.useState(0),
             [E, I] = r.useState(!1),
             [f, C] = r.useState(!1),
             T = r.useRef(null),
             S = r.useRef(null),
-            x = (0, p.Ay)(),
+            x = (0, g.Ay)(),
             v = (0, A.Mw)(x);
         E
             ? v
@@ -249,15 +249,15 @@ let w = (e) => {
             s = r.useRef(null),
             o = r.useRef(null),
             [d, c] = r.useState(!1),
-            u = (0, p.Ay)(),
+            u = (0, g.Ay)(),
             h = (0, A.Mw)(u),
             _ = t.entryPointBackgroundAssets,
             m = t.entrypointBackgroundStyle,
-            g = h ? _?.srcDarkHovered : _?.srcLightHovered,
+            p = h ? _?.srcDarkHovered : _?.srcLightHovered,
             E = h ? m?.hovered?.dark : m?.hovered?.light;
         return (
             r.useEffect(() => {
-                if (null == g || "" === g) return void c(!1);
+                if (null == p || "" === p) return void c(!1);
                 let e = () => {
                     c(B(o));
                 };
@@ -266,7 +266,7 @@ let w = (e) => {
                 return () => {
                     cancelAnimationFrame(t);
                 };
-            }, [g]),
+            }, [p]),
             (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsxs)(G, {
@@ -279,9 +279,9 @@ let w = (e) => {
                                 className: M.marketingButtonBackgroundNew,
                                 style: null != E ? { background: E } : void 0,
                                 children:
-                                    null != g &&
+                                    null != p &&
                                     (0, i.jsx)("img", {
-                                        src: g,
+                                        src: p,
                                         className: a()(
                                             M.marketingButtonBackgroundImage,
                                             d && M.marketingButtonBackgroundImageFaded,

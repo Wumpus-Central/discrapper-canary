@@ -1,81 +1,80 @@
-r.d(t, { Ay: () => O, Zu: () => P, uz: () => T });
-var i = r(627968),
-    l = r(64700),
-    s = r(503698),
-    n = r.n(s),
-    u = r(873263),
-    a = r(635358),
-    d = r(311907),
-    o = r(397927),
-    c = r(793574),
-    h = r(688810),
-    I = r(590180),
-    S = r(572595),
-    m = r(245068),
-    g = r(57020),
-    A = r(713517),
-    L = r(44120),
-    E = r(976860),
-    f = r(661492),
-    M = r(111085),
-    x = r(594832),
-    U = r(657331),
-    p = r(353157),
-    _ = r(798048),
-    v = r(652215),
-    R = r(788868),
-    j = r(985018),
-    w = r(752276),
-    k = r(476324);
-let C = (e) => {
-    let { size: t = o._3J.SIZE_80 } = e;
-    return (0, i.jsx)(o.euF, { className: w.RH, src: k, size: t, "aria-label": j.intl.string(j.t.lqaIxI) });
+n.d(t, { Ay: () => v, Zu: () => w, uz: () => C });
+var s = n(627968),
+    r = n(64700),
+    i = n(503698),
+    l = n.n(i),
+    o = n(873263),
+    u = n(311907),
+    d = n(397927),
+    a = n(793574),
+    c = n(688810),
+    m = n(590180),
+    I = n(572595),
+    h = n(245068),
+    f = n(57020),
+    S = n(713517),
+    g = n(44120),
+    A = n(976860),
+    E = n(661492),
+    L = n(111085),
+    M = n(594832),
+    R = n(657331),
+    k = n(353157),
+    T = n(798048),
+    j = n(652215),
+    x = n(788868),
+    p = n(985018),
+    U = n(975462),
+    _ = n(476324);
+let O = (e) => {
+    let { size: t = d._3J.SIZE_80 } = e;
+    return (0, s.jsx)(d.euF, { className: U.RH, src: _, size: t, "aria-label": p.intl.string(p.t.lqaIxI) });
 };
-function P(e) {
-    let { cardSize: t = _.Y.MEDIUM } = e,
-        r = l.useRef(null),
-        s = l.useRef(null);
-    return (0, i.jsx)("div", {
-        ref: r,
-        className: w.kL,
-        children: (0, i.jsx)("div", {
-            ref: s,
-            className: n()(w.Nr, w.Yf, {
-                [w.IU]: t === _.Y.SMALL,
-                [w.D]: t === _.Y.MEDIUM_SQUARE,
-                [w.Sd]: t === _.Y.LARGE,
+function w(e) {
+    let { cardSize: t = T.Y.MEDIUM } = e,
+        n = r.useRef(null),
+        i = r.useRef(null);
+    return (0, s.jsx)("div", {
+        ref: n,
+        className: U.kL,
+        children: (0, s.jsx)("div", {
+            ref: i,
+            className: l()(U.Nr, U.Yf, {
+                [U.IU]: t === T.Y.SMALL,
+                [U.D]: t === T.Y.MEDIUM_SQUARE,
+                [U.Sd]: t === T.Y.LARGE,
             }),
-            children: (0, i.jsx)("div", {
-                className: w.ho,
-                children: (0, i.jsx)("div", { className: w._P, children: (0, i.jsx)(C, { size: o._3J.SIZE_80 }) }),
+            children: (0, s.jsx)("div", {
+                className: U.ho,
+                children: (0, s.jsx)("div", { className: U._P, children: (0, s.jsx)(O, { size: d._3J.SIZE_80 }) }),
             }),
         }),
     });
 }
-function T(e) {
-    let { item: t, cardSize: r = _.Y.SMALL, remainingCount: s, onClick: u, renderItemPreview: a } = e,
-        d = l.useRef(null),
-        c = l.useRef(null),
-        { isHoveringOrFocusing: h } = (0, A.A)(c),
+function C(e) {
+    let { item: t, cardSize: n = T.Y.SMALL, remainingCount: i, onClick: o, renderItemPreview: u } = e,
+        a = r.useRef(null),
+        c = r.useRef(null),
+        { isHoveringOrFocusing: m } = (0, S.A)(c),
         I = !0 === t.isOwned;
-    return (0, i.jsx)("div", {
-        ref: d,
-        className: w.kL,
-        children: (0, i.jsx)(o.DUT, {
+    return (0, s.jsx)("div", {
+        ref: a,
+        className: U.kL,
+        children: (0, s.jsx)(d.DUT, {
             tag: "div",
             innerRef: c,
-            onClick: u,
-            className: n()(w.Nr, w.xJ, { [w.IU]: r === _.Y.SMALL }),
-            children: (0, i.jsxs)("div", {
-                className: n()(w.ho, w.jP),
+            onClick: o,
+            className: l()(U.Nr, U.xJ, { [U.IU]: n === T.Y.SMALL }),
+            children: (0, s.jsxs)("div", {
+                className: l()(U.ho, U.jP),
                 children: [
-                    a(!I && h),
-                    (0, i.jsx)("div", {
-                        className: w.RF,
-                        children: (0, i.jsx)(o.Text, {
+                    u(!I && m),
+                    (0, s.jsx)("div", {
+                        className: U.RF,
+                        children: (0, s.jsx)(d.Text, {
                             variant: "text-md/medium",
                             color: "always-white",
-                            children: j.intl.format(j.t.F6iMs4, { count: s }),
+                            children: p.intl.format(p.t.F6iMs4, { count: i }),
                         }),
                     }),
                 ],
@@ -83,71 +82,64 @@ function T(e) {
         }),
     });
 }
-function O(e) {
+function v(e) {
     let {
             profileOwner: t,
-            showIcons: r = !1,
-            source: s = x.uS.WISHLIST,
-            giftingOrigin: n = R.vQ.USER_PROFILE_WISHLIST,
-            heartColor: k = "red",
-            onWishlistItemClick: C,
-            cardSize: P = _.Y.MEDIUM,
-            analyticsLocations: T,
-            isDragging: O = !1,
-            ...Y
+            showIcons: n = !1,
+            source: i = M.uS.WISHLIST,
+            giftingOrigin: l = x.vQ.USER_PROFILE_WISHLIST,
+            heartColor: _ = "red",
+            onWishlistItemClick: O,
+            cardSize: w = T.Y.MEDIUM,
+            analyticsLocations: C,
+            isDragging: v = !1,
+            ...b
         } = e,
-        { item: N, isOwner: b } = Y,
-        { analyticsLocations: y } = (0, h.Ay)(...(T ?? [])),
-        H = (0, u.zy)(),
-        D = l.useRef(null),
-        { isHoveringOrFocusing: F } = (0, A.A)(D),
-        [z] = (0, d.yK)([M.A], () => [M.A.hasSentGift(N.skuId, t.id)], [N.skuId, t.id]),
-        G = z || !0 === N.isOwned,
-        Q = null != N.bundleItems && N.bundleItems.length > 0,
-        Z = (0, f.x)(N),
-        B = b || G ? j.intl.string(j.t.FdGl5A) : j.intl.string(j.t.ilhtIa),
-        W = b || G ? void 0 : o.okO,
-        J = l.useCallback(() => {
-            let e = H.pathname.startsWith(v.BVt.COLLECTIBLES_SHOP);
-            if (b || G) {
-                let t = !b && G;
+        { item: y, isOwner: N } = b,
+        { analyticsLocations: H } = (0, c.Ay)(...(C ?? [])),
+        F = (0, o.zy)(),
+        P = r.useRef(null),
+        { isHoveringOrFocusing: W } = (0, S.A)(P),
+        [Y] = (0, u.yK)([L.A], () => [L.A.hasSentGift(y.skuId, t.id)], [y.skuId, t.id]),
+        D = Y || !0 === y.isOwned,
+        z = null != y.bundleItems && y.bundleItems.length > 0,
+        G = (0, E.x)(y),
+        B = N || D ? p.intl.string(p.t.FdGl5A) : p.intl.string(p.t.ilhtIa),
+        q = N || D ? void 0 : d.okO,
+        V = r.useCallback(() => {
+            let e = F.pathname.startsWith(j.BVt.COLLECTIBLES_SHOP);
+            if (N || D) {
+                let t = !N && D;
                 if (e) {
-                    let e = I.A.getProduct(N.skuId),
-                        r = I.A.getCategoryForProduct(N.skuId);
-                    if (null != e && null != r) {
-                        t || (0, U.closeUserProfileModal)(),
-                            (0, S.t)({
+                    let e = m.A.getProduct(y.skuId),
+                        n = m.A.getCategoryForProduct(y.skuId);
+                    if (null != e && null != n) {
+                        t || (0, R.closeUserProfileModal)(),
+                            (0, I.t)({
                                 product: e,
-                                category: r,
-                                shouldCheckoutWithOrbs: (0, g.A)({ product: e }),
-                                analyticsLocations: y,
-                                analyticsSource: c.A.USER_PROFILE_WISHLIST,
+                                category: n,
+                                shouldCheckoutWithOrbs: (0, f.A)({ product: e }),
+                                analyticsLocations: H,
+                                analyticsSource: a.A.USER_PROFILE_WISHLIST,
                                 returnRef: void 0,
                                 tab: void 0,
                             });
                         return;
                     }
                 }
-                t || (0, U.closeUserProfileModal)(), (0, E.pX)(`${v.BVt.COLLECTIBLES_SHOP}#itemSkuId=${N.skuId}`);
+                t || (0, R.closeUserProfileModal)(), (0, A.pX)(`${j.BVt.COLLECTIBLES_SHOP}#itemSkuId=${y.skuId}`);
             } else
-                C?.(),
-                    (0, L.A)({
-                        skuId: N.skuId,
-                        isGift: !0,
-                        giftingOrigin: n,
-                        analyticsLocations: y,
-                        giftRecipient: t,
-                        variantsReturnStyle: a.g.VARIANTS_GROUP,
-                    });
-        }, [H.pathname, N.skuId, y, b, G, t, n, C]),
-        q = P === _.Y.MEDIUM_SQUARE,
-        V = l.useCallback(() => {
-            if (!r || (Q && !q)) return null;
-            if (s === x.uS.WISHLIST) {
-                let e = "white" === k ? w.aP : w.Be;
-                return (0, i.jsx)("div", {
-                    className: w.Fx,
-                    children: (0, i.jsx)(o.C3E, {
+                O?.(),
+                    (0, g.A)({ skuId: y.skuId, isGift: !0, giftingOrigin: l, analyticsLocations: H, giftRecipient: t });
+        }, [F.pathname, y.skuId, H, N, D, t, l, O]),
+        Z = w === T.Y.MEDIUM_SQUARE,
+        J = r.useCallback(() => {
+            if (!n || (z && !Z)) return null;
+            if (i === M.uS.WISHLIST) {
+                let e = "white" === _ ? U.e_ : U.Be;
+                return (0, s.jsx)("div", {
+                    className: U.Fx,
+                    children: (0, s.jsx)(d.C3E, {
                         size: "custom",
                         width: 20,
                         height: 20,
@@ -156,41 +148,41 @@ function O(e) {
                     }),
                 });
             }
-            return s === x.uS.POPULAR
-                ? (0, i.jsx)("div", {
-                      className: w.Fx,
-                      children: (0, i.jsx)(o.Y3C, {
+            return i === M.uS.POPULAR
+                ? (0, s.jsx)("div", {
+                      className: U.Fx,
+                      children: (0, s.jsx)(d.Y3C, {
                           size: "custom",
                           width: 20,
                           height: 20,
                           color: "currentColor",
-                          colorClass: w.rY,
+                          colorClass: U.rY,
                       }),
                   })
                 : null;
-        }, [Q, r, s, k, q]),
-        $ = l.useCallback(() => {
-            if (Q) {
-                let e = { items: N.bundleItems };
-                return (0, i.jsx)("div", {
-                    className: w.hT,
-                    children: (0, i.jsx)(m.X, { product: e, isHighlighted: F && !O, user: t }),
+        }, [z, n, i, _, Z]),
+        Q = r.useCallback(() => {
+            if (z) {
+                let e = { items: y.bundleItems };
+                return (0, s.jsx)("div", {
+                    className: U.hT,
+                    children: (0, s.jsx)(h.X, { product: e, isHighlighted: W && !v, user: t }),
                 });
             }
-            return (0, i.jsx)(p.A, { item: N, profileOwner: t, isHighlighted: F && !O, cardSize: P });
-        }, [Q, N, t, F, P, O]);
-    return (0, i.jsx)(_.A, {
-        ...Y,
-        cardRef: D,
-        accessibleLabel: Z,
-        onCardClick: J,
+            return (0, s.jsx)(k.A, { item: y, profileOwner: t, isHighlighted: W && !v, cardSize: w });
+        }, [z, y, t, W, w, v]);
+    return (0, s.jsx)(T.A, {
+        ...b,
+        cardRef: P,
+        accessibleLabel: G,
+        onCardClick: V,
         buttonCTALabel: B,
-        buttonIcon: W,
-        isOwned: G,
-        renderItemPreview: $,
-        renderSourceIcon: V,
-        giftingOrigin: n,
-        source: s,
-        cardSize: P,
+        buttonIcon: q,
+        isOwned: D,
+        renderItemPreview: Q,
+        renderSourceIcon: J,
+        giftingOrigin: l,
+        source: i,
+        cardSize: w,
     });
 }

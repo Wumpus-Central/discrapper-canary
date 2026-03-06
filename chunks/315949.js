@@ -1,14 +1,10 @@
 "use strict";
-n.d(t, { A: () => a });
+n.d(t, { A: () => s });
 var r = n(354328),
     i = n(747198);
-function a(e, t) {
+function s(e, t) {
     let n = e?.paymentGateway,
-        a = (0, r.A)("shop_disable_cache"),
-        s = (0, r.A)("shop_include_unpublished");
-    return (0, i.i)(
-        { noCache: a, includeUnpublished: s, paymentGateway: n, includeBundles: !0, logPerf: e?.logPerf },
-        void 0,
-        t,
-    );
+        s = (0, r.A)("shop_disable_cache"),
+        a = (0, r.A)("shop_include_unpublished");
+    return (0, i.i)({ noCache: s, includeUnpublished: a, paymentGateway: n, logPerf: e?.logPerf }, void 0, t);
 }

@@ -25,6 +25,7 @@ function u(e, t, n) {
             () => ({
                 ...t,
                 variantsReturnStyle: r.g.VARIANTS_GROUP,
+                includeBundles: !0,
                 includeDynamicBlocks: !0,
                 shopHomeConfig: C,
                 skipNumCategories: h,

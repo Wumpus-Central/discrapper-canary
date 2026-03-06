@@ -1,5 +1,6 @@
 "use strict";
-n.d(t, { BZ: () => D, Gj: () => b, IY: () => C, Ig: () => N, MT: () => T, Rs: () => L, fk: () => R }), n(321073);
+n.d(t, { BZ: () => L, EA: () => v, Gj: () => D, IY: () => R, Ig: () => C, MT: () => T, Rs: () => w, fk: () => O }),
+    n(321073);
 var r = n(627968);
 n(64700);
 var i = n(284009),
@@ -17,8 +18,8 @@ var i = n(284009),
     m = n(788868),
     E = n(88001),
     g = n(985018),
-    A = n(756366),
-    I = n(519412);
+    A = n(523376),
+    I = n(518582);
 let T = (e) => g.intl.format(A.default.U2CmMW, { priceAmount: (0, h.$g)(0, e) }),
     S = (e, t, n) => ({ id: e.discount_id ?? t, label: n, amount: -e.amount }),
     y = (e) => {
@@ -42,7 +43,15 @@ let T = (e) => g.intl.format(A.default.U2CmMW, { priceAmount: (0, h.$g)(0, e) })
                     : g.intl.formatToPlainString(A.default["8Jt4Dw"], { timeInterval: s });
         }
     },
-    v = (e, t) => {
+    v = (e) => {
+        let { id: t, label: n, amount: r, subscriptionDiscount: i, entitlementDiscount: s, currency: a } = e,
+            o = [{ id: t, label: n, amount: r }];
+        return (
+            null != i && o.push(S(i, "subscription-discount", g.intl.string(A.default["9yHcmL"]))),
+            { hasSubscriptionCredit: null != s, lineItems: o, currency: a }
+        );
+    },
+    N = (e, t) => {
         let {
                 overrideAmount: n,
                 isPrepaidPaymentSource: r,
@@ -81,7 +90,7 @@ let T = (e) => g.intl.format(A.default.U2CmMW, { priceAmount: (0, h.$g)(0, e) })
             { lineItems: m, primaryLineItem: h, entitlementDiscount: f }
         );
     },
-    N = (e, t) => {
+    C = (e, t) => {
         let {
                 subscriptionTrial: n,
                 subscriptionPlan: r,
@@ -100,7 +109,7 @@ let T = (e) => g.intl.format(A.default.U2CmMW, { priceAmount: (0, h.$g)(0, e) })
             lineItems: _,
             primaryLineItem: f,
             entitlementDiscount: p,
-        } = v(a, {
+        } = N(a, {
             subscriptionPlan: r,
             subscriptionTrial: n,
             isPrepaidPaymentSource: i,
@@ -113,14 +122,14 @@ let T = (e) => g.intl.format(A.default.U2CmMW, { priceAmount: (0, h.$g)(0, e) })
             { lineItems: _, primaryLineItem: f, entitlementDiscount: p }
         );
     },
-    C = (e, t) => {
+    R = (e, t) => {
         let { isPrepaidPaymentSource: n = !1, invoiceSummaryType: r, subscriptionPlan: i, subscriptionTrial: s } = t,
             { newPlanInvoiceItem: a, basePlanFullAmount: o, invoiceAdjustmentDisplayItems: l } = (0, c.SA)(e, i),
             {
                 lineItems: u,
                 primaryLineItem: d,
                 entitlementDiscount: f,
-            } = v(a, {
+            } = N(a, {
                 overrideAmount: _.IJ.has(r) ? o : void 0,
                 subscriptionPlan: i,
                 subscriptionTrial: s,
@@ -130,7 +139,7 @@ let T = (e) => g.intl.format(A.default.U2CmMW, { priceAmount: (0, h.$g)(0, e) })
             });
         return { lineItems: u, primaryLineItem: d, entitlementDiscount: f };
     },
-    R = (e, t) => {
+    O = (e, t) => {
         let { isCustomGift: n = !1, isPrepaidPaymentSource: r = !1, subscriptionPlan: i } = t;
         return [
             {
@@ -140,7 +149,7 @@ let T = (e) => g.intl.format(A.default.U2CmMW, { priceAmount: (0, h.$g)(0, e) })
             },
         ];
     },
-    O = (e, t) => {
+    b = (e, t) => {
         if (1 === t)
             switch (e) {
                 case m.WT.MONTH:
@@ -150,7 +159,7 @@ let T = (e) => g.intl.format(A.default.U2CmMW, { priceAmount: (0, h.$g)(0, e) })
             }
         return g.intl.string(A.default.jxUJkZ);
     },
-    b = function (e, t, n) {
+    D = function (e, t, n) {
         let {
                 includeTaxLineItem: r,
                 overrideRenewalDate: i,
@@ -197,11 +206,11 @@ let T = (e) => g.intl.format(A.default.U2CmMW, { priceAmount: (0, h.$g)(0, e) })
                 intervalCount: u,
                 currency: d,
                 label: g.intl.format(A.default["57B1ks"], { renewalDate: m }),
-                totalLineItemLabel: O(l, u),
+                totalLineItemLabel: b(l, u),
             }
         );
     },
-    D = (e, t, n) => {
+    L = (e, t, n) => {
         let { type: i, invoicePreview: s } = e,
             { isPrepaidPaymentSource: a, giftRecipient: u, isPremiumGroupPurchase: f } = n,
             T = i === _.N$.PREMIUM_GIFT,
@@ -233,7 +242,7 @@ let T = (e) => g.intl.format(A.default.U2CmMW, { priceAmount: (0, h.$g)(0, e) })
             graphic: b,
         };
     },
-    L = (e, t) => {
+    w = (e, t) => {
         let n,
             {
                 planId: r,

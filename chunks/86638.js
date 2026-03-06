@@ -4,51 +4,50 @@ var i = n(627968),
     a = n(503698),
     s = n.n(a),
     r = n(575593),
-    o = n(635358),
-    c = n(311907),
+    o = n(311907),
     d = n(793574),
-    u = n(688810),
-    g = n(429913),
+    c = n(688810),
+    u = n(429913),
     m = n(44120),
-    x = n(317560),
-    f = n(533406),
-    p = n(183555),
-    h = n(287809),
-    _ = n(111085),
-    A = n(146423),
-    I = n(121547),
-    j = n(460442),
-    v = n(662349),
-    E = n(479026),
-    T = n(699976),
-    b = n(652215),
-    N = n(788868),
-    S = n(518477),
-    y = n(894100);
-let C = T.Z.SIZE_133;
-function R(e) {
+    g = n(317560),
+    x = n(533406),
+    f = n(183555),
+    p = n(287809),
+    h = n(111085),
+    _ = n(146423),
+    A = n(121547),
+    I = n(460442),
+    j = n(662349),
+    v = n(479026),
+    E = n(699976),
+    T = n(652215),
+    b = n(788868),
+    N = n(518477),
+    S = n(738878);
+let y = E.Z.SIZE_133;
+function C(e) {
     let {
             item: t,
             wishlistOwner: n,
             currentUser: a,
             style: r,
             isDragging: o,
-            dragHandle: c,
-            skuPreviewStyle: d,
+            dragHandle: d,
+            skuPreviewStyle: c,
             isHoveringOrFocusing: u,
-            setIsHoveringOrFocusing: g,
-            onDetailsClick: m,
+            setIsHoveringOrFocusing: m,
+            onDetailsClick: g,
             onPurchaseClick: x,
-            wishlistId: f,
+            wishlistId: p,
             analyticsLocations: h,
-            isItemOwned: _,
+            isItemOwned: v,
         } = e,
         E = l.useRef(null),
-        T = l.useRef(g),
-        [b, N] = l.useState(!1);
+        T = l.useRef(m),
+        [b, C] = l.useState(!1);
     l.useEffect(() => {
-        T.current = g;
-    }, [g]),
+        T.current = m;
+    }, [m]),
         l.useEffect(() => {
             let e = E.current;
             if (null == e) return;
@@ -62,79 +61,79 @@ function R(e) {
                 }
             );
         }, []);
-    let { trackUserProfileWishlistAction: R } = (0, p.NJ)(),
+    let { trackUserProfileWishlistAction: R } = (0, f.NJ)(),
         k = l.useCallback(() => {
-            null != f &&
+            null != p &&
                 (R({
-                    wishlistId: f,
-                    action: S.Mq.WISHLIST_ITEM_CLICKED,
+                    wishlistId: p,
+                    action: N.Mq.WISHLIST_ITEM_CLICKED,
                     skuId: t.sku.id,
                     productLines: new Set([t.sku.productLine]),
                 }),
-                m());
-        }, [m, t.sku, f, R]),
-        w = l.useCallback(() => {
-            null != f &&
+                g());
+        }, [g, t.sku, p, R]),
+        L = l.useCallback(() => {
+            null != p &&
                 (R({
-                    wishlistId: f,
-                    action: S.Mq.WISHLIST_ITEM_CLICKED,
+                    wishlistId: p,
+                    action: N.Mq.WISHLIST_ITEM_CLICKED,
                     skuId: t.sku.id,
                     productLines: new Set([t.sku.productLine]),
                 }),
                 x());
-        }, [x, t.sku, f, R]),
-        L = null != c ? (0, i.jsx)("div", { ref: E, className: y.BU, children: c }) : null,
+        }, [x, t.sku, p, R]),
+        O = null != d ? (0, i.jsx)("div", { ref: E, className: S.BU, children: d }) : null,
         {
-            label: O,
-            icon: P,
-            isPromptingPurchase: D,
-        } = (0, v.hB)({
+            label: w,
+            icon: D,
+            isPromptingPurchase: P,
+        } = (0, j.hB)({
             sku: t.sku,
             wishlistOwner: n,
             currentUser: a,
-            isOwned: _,
+            isOwned: v,
             location: "User Profile Wishlist Item Card",
         });
     return (0, i.jsxs)("div", {
-        className: y.kL,
+        className: S.kL,
         children: [
             (0, i.jsx)("div", {
-                className: b ? y.B8 : void 0,
-                children: (0, i.jsxs)(A.A, {
+                className: b ? S.B8 : void 0,
+                children: (0, i.jsxs)(_.A, {
                     sku: t.sku,
                     user: n,
-                    spec: C,
+                    spec: y,
                     cardStyle: r,
-                    skuPreviewStyle: s()(y.ev, { [y.go]: _ && !u }, d),
+                    skuPreviewStyle: s()(S.ev, { [S.go]: v && !u }, c),
                     disableHoverOrFocus: o,
-                    onHoverOrFocusChange: g,
+                    onHoverOrFocusChange: m,
                     onClick: k,
                     children: [
-                        (0, i.jsx)(v.AJ, { spec: C, onClick: D ? w : k, isHoveringOrFocusing: u, label: O, icon: P }),
-                        _ && (0, i.jsx)(j.gS, { isHoveringOrFocusing: u }),
+                        (0, i.jsx)(j.AJ, { spec: y, onClick: P ? L : k, isHoveringOrFocusing: u, label: w, icon: D }),
+                        v && (0, i.jsx)(I.gS, { isHoveringOrFocusing: u }),
                     ],
                 }),
             }),
-            L,
+            O,
             n.id === a.id &&
-                null != f &&
-                (0, i.jsx)(I.A, {
-                    wishlistId: f,
+                null != p &&
+                (0, i.jsx)(A.A, {
+                    wishlistId: p,
                     sku: t.sku,
-                    spec: C,
+                    spec: y,
                     analyticsLocations: h,
                     isHoveringOrFocusing: u,
-                    onHoverOrFocusChange: N,
+                    onHoverOrFocusChange: C,
                 }),
         ],
     });
 }
-function k(e) {
+function R(e) {
     let { item: t, isItemOwned: n, wishlistOwner: a, currentUser: s, analyticsLocations: r, ...o } = e,
-        c = (0, g.h)(t.sku?.applicationId),
-        u = l.useCallback(() => {
+        c = (0, u.h)(t.sku?.applicationId),
+        m = l.useCallback(() => {
             c?.guildId != null &&
-                (0, x.R)({
+                (0, g.R)({
                     skuId: t.sku.id,
                     applicationId: t.sku.applicationId,
                     guildId: c?.guildId,
@@ -142,102 +141,101 @@ function k(e) {
                     analyticsLocations: r,
                 });
         }, [t.sku.id, t.sku.applicationId, c?.guildId, r]),
-        m = l.useCallback(() => {
+        f = l.useCallback(() => {
             let e = a.id === s.id;
-            (0, f.a)(
+            (0, x.a)(
                 t.sku,
-                { isGift: !e, giftRecipient: a, giftingOrigin: N.vQ.USER_PROFILE_WISHLIST },
+                { isGift: !e, giftRecipient: a, giftingOrigin: b.vQ.USER_PROFILE_WISHLIST },
                 { analyticsLocations: [...r, d.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON] },
             );
         }, [t.sku, a, s.id, r]);
-    return (0, i.jsx)(R, {
+    return (0, i.jsx)(C, {
         item: t,
         wishlistOwner: a,
         isItemOwned: n,
-        onDetailsClick: u,
-        onPurchaseClick: m,
+        onDetailsClick: m,
+        onPurchaseClick: f,
         analyticsLocations: r,
         currentUser: s,
         ...o,
     });
 }
-function w(e) {
+function k(e) {
     let {
             item: t,
             wishlistOwner: n,
             isItemOwned: a,
             analyticsLocations: s,
-            currentUser: c,
+            currentUser: o,
             isHoveringOrFocusing: d,
-            ...u
+            ...c
         } = e,
-        g = l.useMemo(() => {
+        u = l.useMemo(() => {
             if (
-                t.sku.productLine === b.EZt.COLLECTIBLES &&
+                t.sku.productLine === T.EZt.COLLECTIBLES &&
                 t.sku.tenantMetadata?.collectibles?.type !== r.R.PROFILE_EFFECT
             )
-                return y.mn;
+                return S.mn;
         }, [t.sku]),
-        x = (0, E.e)({ sku: t.sku, analyticsLocations: s }),
-        f = l.useMemo(
+        g = (0, v.e)({ sku: t.sku, analyticsLocations: s }),
+        x = l.useMemo(
             () => () => {
-                let e = n.id === c.id;
+                let e = n.id === o.id;
                 (0, m.A)({
                     skuId: t.sku.id,
                     isGift: !e,
-                    giftingOrigin: N.vQ.USER_PROFILE_WISHLIST,
+                    giftingOrigin: b.vQ.USER_PROFILE_WISHLIST,
                     analyticsLocations: s ?? [],
                     giftRecipient: n,
-                    variantsReturnStyle: o.g.VARIANTS_GROUP,
                 });
             },
-            [t.sku, n, c.id, s],
+            [t.sku, n, o.id, s],
         );
-    return (0, i.jsx)(R, {
+    return (0, i.jsx)(C, {
         item: t,
         wishlistOwner: n,
         isItemOwned: a,
-        currentUser: c,
-        onDetailsClick: x,
-        onPurchaseClick: f,
+        currentUser: o,
+        onDetailsClick: g,
+        onPurchaseClick: x,
         isHoveringOrFocusing: d,
-        skuPreviewStyle: d ? g : void 0,
+        skuPreviewStyle: d ? u : void 0,
         analyticsLocations: s,
-        ...u,
+        ...c,
     });
 }
 function L(e) {
     let { item: t, wishlistOwner: n, wishlistId: a, analyticsLocations: s, ...r } = e,
-        { analyticsLocations: o } = (0, u.Ay)(
+        { analyticsLocations: u } = (0, c.Ay)(
             ...(s ?? []),
-            t.sku?.productLine === b.EZt.SOCIAL_LAYER_GAME_ITEM ? d.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD : [],
+            t.sku?.productLine === T.EZt.SOCIAL_LAYER_GAME_ITEM ? d.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD : [],
         ),
-        g = (0, c.bG)([h.default], () => h.default.getCurrentUser()),
-        [m, x] = l.useState(!1),
-        f = (0, c.bG)([_.A], () => _.A.hasSentGift(t.skuId, n.id), [n, t.skuId]),
-        p = l.useMemo(() => !0 === t.isOwned || f, [t.isOwned, f]);
-    if (null == t.sku || null == g) return null;
+        m = (0, o.bG)([p.default], () => p.default.getCurrentUser()),
+        [g, x] = l.useState(!1),
+        f = (0, o.bG)([h.A], () => h.A.hasSentGift(t.skuId, n.id), [n, t.skuId]),
+        _ = l.useMemo(() => !0 === t.isOwned || f, [t.isOwned, f]);
+    if (null == t.sku || null == m) return null;
     switch (t.sku.productLine) {
-        case b.EZt.SOCIAL_LAYER_GAME_ITEM:
-            return (0, i.jsx)(k, {
+        case T.EZt.SOCIAL_LAYER_GAME_ITEM:
+            return (0, i.jsx)(R, {
                 item: t,
-                analyticsLocations: o,
-                isHoveringOrFocusing: m,
+                analyticsLocations: u,
+                isHoveringOrFocusing: g,
                 setIsHoveringOrFocusing: x,
-                currentUser: g,
-                isItemOwned: p,
+                currentUser: m,
+                isItemOwned: _,
                 wishlistOwner: n,
                 wishlistId: a,
                 ...r,
             });
-        case b.EZt.COLLECTIBLES:
-            return (0, i.jsx)(w, {
+        case T.EZt.COLLECTIBLES:
+            return (0, i.jsx)(k, {
                 item: t,
-                analyticsLocations: o,
-                isHoveringOrFocusing: m,
+                analyticsLocations: u,
+                isHoveringOrFocusing: g,
                 setIsHoveringOrFocusing: x,
-                currentUser: g,
-                isItemOwned: p,
+                currentUser: m,
+                isItemOwned: _,
                 wishlistOwner: n,
                 wishlistId: a,
                 ...r,

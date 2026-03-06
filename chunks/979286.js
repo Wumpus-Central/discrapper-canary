@@ -103,25 +103,28 @@ let v = (e) => {
                 i && (0, f.l)(`fetchCollectiblesCategories failed: ${e.message}`);
         }
     },
-    D = async (e) => {
+    D = async () => {
         if (p.A.isFetching) return;
         o.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH" });
-        let t = u.Ay.get("shop_show_debug_overlay");
-        t && (0, f.l)(`fetchCollectiblesPurchases started, options: ${JSON.stringify(e, null, 2)}`);
+        let e = u.Ay.get("shop_show_debug_overlay");
+        e && (0, f.l)("fetchCollectiblesPurchases started");
         try {
-            let n = { url: y.Rsh.COLLECTIBLES_PURCHASES, rejectWithError: !0 };
-            e?.variantsReturnStyle === s.g.VARIANTS_GROUP && (n.query = { variants_return_style: s.g.VARIANTS_GROUP }),
-                t && (0, f.l)(`fetchCollectiblesPurchases request: ${JSON.stringify(n, null, 2)}`);
-            let r = await a.Bo.get(n);
-            t && (0, f.l)(`fetchCollectiblesPurchases completed with ${r.body.length} purchases`),
-                o.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH_SUCCESS", purchases: r.body.map(g.A.fromServer) });
+            let t = {
+                url: y.Rsh.COLLECTIBLES_PURCHASES,
+                rejectWithError: !0,
+                query: { variants_return_style: s.g.VARIANTS_GROUP },
+            };
+            e && (0, f.l)(`fetchCollectiblesPurchases request: ${JSON.stringify(t, null, 2)}`);
+            let n = await a.Bo.get(t);
+            e && (0, f.l)(`fetchCollectiblesPurchases completed with ${n.body.length} purchases`),
+                o.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH_SUCCESS", purchases: n.body.map(g.A.fromServer) });
         } catch (n) {
-            let e = new l.LG(n);
+            let t = new l.LG(n);
             throw (
-                ((0, S.o)(e),
-                t && (0, f.l)(`fetchCollectiblesPurchases failed: ${e.message}`),
-                o.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH_FAILURE", error: e }),
-                e)
+                ((0, S.o)(t),
+                e && (0, f.l)(`fetchCollectiblesPurchases failed: ${t.message}`),
+                o.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH_FAILURE", error: t }),
+                t)
             );
         }
     },
