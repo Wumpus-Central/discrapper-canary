@@ -1,6 +1,6 @@
 "use strict";
 let r;
-n.d(t, { A: () => D, W: () => b }), n(142703);
+n.d(t, { A: () => D, W: () => R }), n(142703);
 var i = n(110259),
     s = n(247775),
     a = n(562465),
@@ -11,7 +11,7 @@ var i = n(110259),
     d = n(626584),
     _ = n(250953),
     f = n(976860),
-    p = n(321168),
+    p = n(3928),
     h = n(917136),
     m = n(191986),
     E = n(961350),
@@ -24,19 +24,19 @@ var i = n(110259),
 let v = new d.A("AuthenticationActionCreators"),
     N = 5e3,
     C = null;
-var b = (function (e) {
+var R = (function (e) {
     return (e.MFA = "MFA"), (e.SUCCESS = "SUCCESS"), e;
 })({});
-function R(e) {
+function O(e) {
     A.A.clearNavigationHistory();
     let t = { type: "LOGOUT", ...e };
     l.h.dispatch(t).catch((e) => {
         throw (v.error("Error while dispatching LOGOUT", e), window.DiscordErrors?.softCrash(e), e);
     });
 }
-function O(e) {
+function b(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S.BVt.DEFAULT_LOGGED_OUT;
-    if ((R(), null == t)) return;
+    if ((O(), null == t)) return;
     let n = (0, _.Y)();
     null == n ? (0, f.pX)(t, { source: e }) : (T.A.popAll(), n.reset({ index: 0, routes: [{ name: "auth" }] }));
 }
@@ -237,7 +237,7 @@ let D = {
         l.h.dispatch({ type: "LOGIN_STATUS_RESET" });
     },
     logoutInternal(e) {
-        R(e);
+        O(e);
     },
     logout(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S.BVt.DEFAULT_LOGGED_OUT,
@@ -250,7 +250,7 @@ let D = {
             ...(null != n && { headers: { authorization: s.getToken(n) ?? "" } }),
             rejectWithError: !1,
         }).finally(() => {
-            (null == n || n === E.default.getId()) && O(e, t);
+            (null == n || n === E.default.getId()) && b(e, t);
         });
     },
     switchAccountToken(e) {
@@ -258,7 +258,7 @@ let D = {
             n = E.default.getToken();
         return (
             v.log("Switching accounts", { wasLoggedIn: null != n, tokenHasChanged: e !== n }),
-            R({ isSwitchingAccount: !0, goHomeAfterSwitching: t }),
+            O({ isSwitchingAccount: !0, goHomeAfterSwitching: t }),
             this.loginToken(e, !0).then(() => {
                 let t = e === E.default.getToken();
                 return v.log("Switched accounts finished", { isCorrectToken: t }), t;
@@ -267,7 +267,7 @@ let D = {
     },
     verifySSOToken(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S.BVt.DEFAULT_LOGGED_OUT;
-        return a.Bo.get({ url: S.Rsh.ME, oldFormErrors: !0, rejectWithError: !0 }).catch(() => O(e, t));
+        return a.Bo.get({ url: S.Rsh.ME, oldFormErrors: !0, rejectWithError: !0 }).catch(() => b(e, t));
     },
     async verify(e) {
         let t = await I.A.post({
