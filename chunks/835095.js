@@ -51,7 +51,7 @@ class o extends i.A {
             promotionType: e.promotion_type,
             partnerId: e.partner_id ?? null,
             marketingComponents: e.marketing_components ?? [],
-            rewardSkuIds: e.metadata?.gift_promotion?.reward_sku_ids ?? [],
+            rewardSkuIds: e.metadata?.promotion?.reward_sku_ids ?? e.metadata?.gift_promotion?.reward_sku_ids ?? [],
         });
     }
     constructor(e) {

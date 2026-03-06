@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => M });
+n.d(t, { A: () => x });
 var r = n(311907),
     i = n(73153),
-    a = n(617617),
-    s = n(835095),
+    s = n(617617),
+    a = n(835095),
     o = n(822571),
     l = n(264779),
     u = n(852218);
@@ -17,9 +17,9 @@ function c() {
 let d = c(),
     _ = null,
     f = !1,
-    h = null,
-    p = !1,
-    g = null,
+    p = null,
+    h = !1,
+    m = null,
     E = {
         [u.pt.BOGO]: {},
         [u.pt.THIRD_PARTY_DIRECT_FULFILLMENT]: {},
@@ -29,24 +29,24 @@ let d = c(),
         [u.pt.GIFT_PROMOTION]: {},
         [u.pt.THIRD_PARTY_OUTBOUND_RECURRING]: {},
     },
-    A = {},
-    I = null,
-    T = new Map();
-function y() {
+    g = {},
+    A = null,
+    I = new Map();
+function T() {
     f = !0;
 }
 function S() {
     (_ = null), (f = !1);
 }
-function v(e) {
+function y(e) {
     let { activePromotion: t } = e;
     (_ = { id: t.id, startDate: t.startDate.toISOString(), endDate: t.endDate.toISOString() }),
-        (h = Date.now()),
+        (p = Date.now()),
         (f = !1);
 }
-function C(e) {
+function v(e) {
     let { promotions: t, consumedInboundPromotionId: n } = e;
-    (A = {}),
+    (g = {}),
         (E = {
             [u.pt.BOGO]: {},
             [u.pt.THIRD_PARTY_DIRECT_FULFILLMENT]: {},
@@ -56,27 +56,27 @@ function C(e) {
             [u.pt.GIFT_PROMOTION]: {},
             [u.pt.THIRD_PARTY_OUTBOUND_RECURRING]: {},
         }),
-        (T = new Map()),
+        (I = new Map()),
         t.forEach((e) => {
-            let t = s.A.createFromServer(e);
+            let t = a.A.createFromServer(e);
             !0 === (0, l.HB)({ promotionPartner: t.outboundTitle, promotionType: t.promotionType })
-                ? t.id in A || (A[t.id] = t)
+                ? t.id in g || (g[t.id] = t)
                 : e.promotion_type === u.pt.THIRD_PARTY
                   ? (E[u.pt.THIRD_PARTY_OUTBOUND][e.id] = t)
                   : ((E[e.promotion_type][e.id] = t),
                     e.marketing_components?.forEach((e) => {
-                        T.set(e.component_type, o.A.createFromServer(e));
+                        I.set(e.component_type, o.A.createFromServer(e));
                     }));
         }),
-        (g = Date.now()),
-        (p = !1),
+        (m = Date.now()),
+        (h = !1),
         d.hasFetchedConsumedInboundPromotionId ||
             ((d.hasFetchedConsumedInboundPromotionId = !0), (d.consumedInboundPromotionId = n));
 }
-function b() {
-    p = !0;
-}
 function N() {
+    h = !0;
+}
+function C() {
     (E = {
         [u.pt.BOGO]: {},
         [u.pt.THIRD_PARTY_DIRECT_FULFILLMENT]: {},
@@ -86,9 +86,9 @@ function N() {
         [u.pt.GIFT_PROMOTION]: {},
         [u.pt.THIRD_PARTY_OUTBOUND_RECURRING]: {},
     }),
-        (T = new Map()),
-        (p = !1),
-        (A = {});
+        (I = new Map()),
+        (h = !1),
+        (g = {});
 }
 function R() {
     let e = null;
@@ -98,24 +98,24 @@ function R() {
 function O() {
     if (0 === Object.values(E[u.pt.THIRD_PARTY_OUTBOUND]).length) return !1;
     let e = R();
-    null != e && (I = e);
+    null != e && (A = e);
 }
-function D() {
+function b() {
     if (0 === Object.values(E[u.pt.THIRD_PARTY_OUTBOUND]).length) return !1;
     let e = R();
-    null != e && ((I = e), (d.lastSeenOutboundPromotionStartDate = e));
+    null != e && ((A = e), (d.lastSeenOutboundPromotionStartDate = e));
 }
-function L(e) {
+function D(e) {
     let { data: t } = e,
         n = o.A.createFromServer(t);
-    T.set(n.componentType, n);
+    I.set(n.componentType, n);
 }
-function w() {
+function L() {
     (d = c()),
-        (p = !1),
-        (g = null),
+        (h = !1),
+        (m = null),
         (f = !1),
-        (h = null),
+        (p = null),
         (E = {
             [u.pt.BOGO]: {},
             [u.pt.THIRD_PARTY_DIRECT_FULFILLMENT]: {},
@@ -126,17 +126,17 @@ function w() {
             [u.pt.THIRD_PARTY_OUTBOUND_RECURRING]: {},
         }),
         (_ = null),
-        (A = {}),
-        T.clear();
+        (g = {}),
+        I.clear();
 }
-function x() {
-    I = a.A.settings.userContent?.lastDismissedOutboundPromotionStartDate?.value ?? null;
+function w() {
+    A = s.A.settings.userContent?.lastDismissedOutboundPromotionStartDate?.value ?? null;
 }
-class P extends r.Ay.PersistedStore {
+class M extends r.Ay.PersistedStore {
     static displayName = "PromotionsStore";
     static persistKey = "PromotionsPersistedStore";
     initialize(e) {
-        null != e && (d = e), this.waitFor(a.A), this.syncWith([a.A], x);
+        null != e && (d = e), this.waitFor(s.A), this.syncWith([s.A], w);
     }
     static migrations = [
         (e) => {
@@ -150,19 +150,19 @@ class P extends r.Ay.PersistedStore {
         return Object.values(E[u.pt.THIRD_PARTY_OUTBOUND]);
     }
     get outboundRecurringPromotions() {
-        return Object.values(A);
+        return Object.values(g);
     }
     get lastSeenOutboundPromotionStartDate() {
         return d.lastSeenOutboundPromotionStartDate;
     }
     get lastDismissedOutboundPromotionStartDate() {
-        return I;
+        return A;
     }
     get lastFetchedActivePromotions() {
-        return g;
+        return m;
     }
     get isFetchingActivePromotions() {
-        return p;
+        return h;
     }
     get hasFetchedConsumedInboundPromotionId() {
         return d.hasFetchedConsumedInboundPromotionId;
@@ -177,7 +177,7 @@ class P extends r.Ay.PersistedStore {
         return f;
     }
     get lastFetchedActiveBogoPromotion() {
-        return h;
+        return p;
     }
     get promotionsByType() {
         return E;
@@ -189,23 +189,28 @@ class P extends r.Ay.PersistedStore {
         return d;
     }
     getMarketingComponentByType(e) {
-        return T.get(e) ?? null;
+        return I.get(e) ?? null;
     }
     getGiftPromotionRewardSkuIds() {
         let e = E[u.pt.GIFT_PROMOTION],
             t = Object.keys(e);
         return 0 === t.length ? [] : e[t[0]].rewardSkuIds;
     }
+    getMarketingMomentRewardSkuIds() {
+        let e = E[u.pt.MARKETING_MOMENT],
+            t = Object.keys(e);
+        return 0 === t.length ? [] : e[t[0]].rewardSkuIds;
+    }
 }
-let M = new P(i.h, {
-    ACTIVE_PROMOTIONS_FETCH_SUCCESS: C,
-    ACTIVE_PROMOTIONS_FETCH: b,
-    ACTIVE_PROMOTIONS_FETCH_FAIL: N,
-    ACTIVE_BOGO_PROMOTION_FETCH_SUCCESS: v,
-    ACTIVE_BOGO_PROMOTION_FETCH: y,
+let x = new M(i.h, {
+    ACTIVE_PROMOTIONS_FETCH_SUCCESS: v,
+    ACTIVE_PROMOTIONS_FETCH: N,
+    ACTIVE_PROMOTIONS_FETCH_FAIL: C,
+    ACTIVE_BOGO_PROMOTION_FETCH_SUCCESS: y,
+    ACTIVE_BOGO_PROMOTION_FETCH: T,
     ACTIVE_BOGO_PROMOTION_FETCH_FAIL: S,
     OUTBOUND_PROMOTION_NOTICE_DISMISS: O,
-    OUTBOUND_PROMOTIONS_SEEN: D,
-    LOGOUT: w,
-    PREMIUM_MARKETING_PREVIEW: L,
+    OUTBOUND_PROMOTIONS_SEEN: b,
+    LOGOUT: L,
+    PREMIUM_MARKETING_PREVIEW: D,
 });
