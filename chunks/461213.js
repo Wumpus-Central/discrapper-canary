@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => W }), n(321073), n(938796);
+n.d(t, { A: () => K }), n(321073), n(938796);
 var r = n(812729),
     i = n.n(r),
     s = n(735438),
@@ -24,14 +24,14 @@ let S = !1,
     v = T.clD.UNKNOWN,
     N = 0,
     C = [],
-    b = [],
-    R = !1,
-    O = !0,
+    R = [],
+    O = !1,
+    b = !0,
     D = Object.freeze([]),
     L = Object.freeze([]),
     w = [],
-    x = [];
-function M(e) {
+    M = [];
+function x(e) {
     if (0 === e.length) return e;
     let t = [],
         n = [];
@@ -61,10 +61,10 @@ function U(e) {
     }
 }
 function G() {
-    (O = !0), (v = y), F();
+    (b = !0), (v = y), F();
 }
 function F() {
-    if (((N = m.A.getIdleSince() ?? 0), (R = m.A.isAFK()), O)) y = v;
+    if (((N = m.A.getIdleSince() ?? 0), (O = m.A.isAFK()), b)) y = v;
     else if (S) y = T.clD.INVISIBLE;
     else {
         let e = _.jP.getSetting();
@@ -72,14 +72,14 @@ function F() {
     }
     y === T.clD.ONLINE && N > 0 && (y = T.clD.IDLE);
     let e = !1,
-        t = O || y === T.clD.INVISIBLE ? [] : g.A.getActivities().filter(U);
-    i()(C, t) || ((C = t), (b = M(t)), (e = !0));
+        t = b || y === T.clD.INVISIBLE ? [] : g.A.getActivities().filter(U);
+    i()(C, t) || ((C = t), (R = x(t)), (e = !0));
     let n = I.A.getRemoteActivities();
     D !== n && ((D = n), (e = !0));
     let r = I.A.getHiddenActivities();
     L !== r && (L = r),
         e &&
-            (x = M(
+            (M = x(
                 (w = a()([...C, ...D.filter((e) => e.type !== T.$pd.CUSTOM_STATUS)].sort(A.m))
                     .uniqBy((e) => `${e.type}:${e.application_id}:${e.name}`)
                     .value()),
@@ -91,26 +91,30 @@ function V(e) {
 function B() {
     return (S = !1), F();
 }
-function H() {
-    (O = !1), (v = T.clD.UNKNOWN), F(), A.A.setCurrentUserOnConnectionOpen(y, w);
+function H(e) {
+    if (e.state !== T.g6G.ACTIVE || !S) return !1;
+    (S = !1), F();
 }
 function j() {
-    H();
+    (b = !1), (v = T.clD.UNKNOWN), F(), A.A.setCurrentUserOnConnectionOpen(y, w);
 }
-class Y extends l.Ay.Store {
+function Y() {
+    j();
+}
+class W extends l.Ay.Store {
     static displayName = "SelfPresenceStore";
     initialize() {
         this.waitFor(h.A, m.A, E.A, g.A, A.A, I.A, d.A, f.A), this.syncWith([g.A], F);
     }
     getLocalPresence() {
-        return { status: y, since: N, activities: b, afk: R };
+        return { status: y, since: N, activities: R, afk: O };
     }
     getStatus() {
         return y;
     }
     getActivities() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return e ? x : b;
+        return e ? M : R;
     }
     getUnfilteredActivities() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
@@ -132,11 +136,11 @@ class Y extends l.Ay.Store {
         return this.getActivities(t).find(e);
     }
 }
-let W = new Y(u.h, {
+let K = new W(u.h, {
     START_SESSION: F,
-    CONNECTION_OPEN: j,
-    CONNECTION_OPEN_SUPPLEMENTAL: H,
-    OVERLAY_INITIALIZE: H,
+    CONNECTION_OPEN: Y,
+    CONNECTION_OPEN_SUPPLEMENTAL: j,
+    OVERLAY_INITIALIZE: j,
     CONNECTION_CLOSED: F,
     IDLE: F,
     AFK: F,
@@ -154,4 +158,5 @@ let W = new Y(u.h, {
     LOGOUT: G,
     FORCE_INVISIBLE: V,
     WINDOW_FOCUS: B,
+    APP_STATE_UPDATE: H,
 });
