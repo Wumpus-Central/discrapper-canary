@@ -24,27 +24,27 @@ var r = n(735438),
     v = n(33282),
     N = n(448515),
     C = n(652215),
-    b = n(355097);
-let R = window.DiscordNative;
+    R = n(355097);
+let O = window.DiscordNative;
 y.sZ.dispatcher.getDispatchHandler = N.A;
-let O = new l.A("ConnectionStore"),
+let b = new l.A("ConnectionStore"),
     D = 100,
     L = 0,
     w = null,
-    x = !0,
-    M = null,
+    M = !0,
+    x = null,
     P = null;
 function k() {
     return y.sZ.isClosed()
-        ? (O.verbose("Socket is reconnecting because of starting new session"), y.sZ.connect())
-        : (O.verbose("Socket is not reconnecting during a new session because it is not closed"), !1);
+        ? (b.verbose("Socket is reconnecting because of starting new session"), y.sZ.connect())
+        : (b.verbose("Socket is not reconnecting during a new session because it is not closed"), !1);
 }
 function U(e) {
-    e.isSwitchingAccount && y.OV.handleAccountSwitch(), O.verbose("Closing socket because of logout"), y.sZ.close();
+    e.isSwitchingAccount && y.OV.handleAccountSwitch(), b.verbose("Closing socket because of logout"), y.sZ.close();
 }
 function G() {
     return (
-        O.verbose("session refresh dispatched", { isEstablished: y.sZ.isSessionEstablished() }),
+        b.verbose("session refresh dispatched", { isEstablished: y.sZ.isSessionEstablished() }),
         !!y.sZ.isSessionEstablished() && (y.sZ.close(), y.sZ.connect())
     );
 }
@@ -52,21 +52,24 @@ async function F(e) {
     (L = Date.now()), (w = e.sessionId), y.OV.handleConnectionOpen();
     let t = {},
         n = g.A.getVoiceChannelId();
-    if (null != n)
+    if (null != n) {
+        let e = localStorage.getItem("discord_watchdog_restart_timestamp"),
+            r = null != e && Date.now() - parseInt(e, 10) < 6e4;
         if (
-            window?.performance?.getEntriesByType?.("navigation")?.[0]?.type !== "reload" &&
-            (await R?.processUtils?.getLastCrash?.())?.rendererCrashReason == null &&
-            x
-        )
-            m.A.setLastSessionVoiceChannelId(null != n ? n : null), o.default.selectVoiceChannel(null);
-        else {
+            (localStorage.removeItem("discord_watchdog_restart_timestamp"),
+            window?.performance?.getEntriesByType?.("navigation")?.[0]?.type === "reload" ||
+                r ||
+                (await O?.processUtils?.getLastCrash?.())?.rendererCrashReason != null ||
+                !M)
+        ) {
             let e = p.A.getChannel(n);
             null != e && ((t = { guildId: e.getGuildId(), channelId: n }), (0, c.CX)(n));
-        }
-    y.Xo.update(t, !0), (x = !1), (P = null);
+        } else m.A.setLastSessionVoiceChannelId(null != n ? n : null), o.default.selectVoiceChannel(null);
+    }
+    y.Xo.update(t, !0), (M = !1), (P = null);
 }
 function V() {
-    O.verbose("connection closed dispatched"), (L = Date.now());
+    b.verbose("connection closed dispatched"), (L = Date.now());
 }
 function B() {
     P = null;
@@ -79,7 +82,7 @@ function j(e) {
         y.Xo.update({ guildId: e.guildId, channelId: e.channelId }),
         (P = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
         (0, T.isIOS)() &&
-            M === C.g6G.BACKGROUND &&
+            x === C.g6G.BACKGROUND &&
             (null == e.channelId ? y.sZ.close(!0) : y.sZ.isClosed() && (v.V(!1), y.sZ.connect())),
         !1
     );
@@ -88,14 +91,14 @@ function Y() {
     y.Xo.update();
 }
 function W(e) {
-    e.settings.type === b.oD.PRELOADED_USER_SETTINGS && e.settings.proto.clips?.allowVoiceRecording != null && Y();
+    e.settings.type === R.oD.PRELOADED_USER_SETTINGS && e.settings.proto.clips?.allowVoiceRecording != null && Y();
 }
 function K(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         if (_.default.getId() !== t.userId) return e;
         if (t.sessionId === w) {
-            if (null != P) return O.verbose("Ignoring voice state for own session due to VSU lock on channel:", P), e;
+            if (null != P) return b.verbose("Ignoring voice state for own session due to VSU lock on channel:", P), e;
             y.Xo.setState({ guildId: t.guildId, channelId: t.channelId });
         } else {
             if (t.guildId !== y.Xo.guildId) return e;
@@ -104,10 +107,10 @@ function K(e) {
         return !0;
     }, !1);
 }
-function z(e) {
+function $(e) {
     e.guild.id === y.Xo.guildId && y.Xo.setState({ guildId: null, channelId: null });
 }
-function $(e) {
+function z(e) {
     let { channelId: t } = e;
     if (t === y.Xo.channelId) {
         if (P === t) return !1;
@@ -126,13 +129,13 @@ function X(e) {
     return (
         (0, T.isIOS)()
             ? (_.default.isAuthenticated() &&
-                  (M === C.g6G.INACTIVE && e.state === C.g6G.BACKGROUND && null == y.Xo.channelId
+                  (x === C.g6G.INACTIVE && e.state === C.g6G.BACKGROUND && null == y.Xo.channelId
                       ? y.sZ.close(!0)
-                      : M === C.g6G.BACKGROUND &&
+                      : x === C.g6G.BACKGROUND &&
                         e.state === C.g6G.ACTIVE &&
                         y.sZ.isClosed() &&
                         (v.V(!1), y.sZ.connect())),
-              (M = e.state))
+              (x = e.state))
             : e.state === C.g6G.ACTIVE &&
               (v.V(!1), _.default.isAuthenticated() && y.sZ.resetBackoff("App state is active")),
         !1
@@ -265,9 +268,9 @@ let eg = new eE(a.h, {
     RTC_CONNECTION_STATE: Z,
     VOICE_CHANNEL_SELECT: j,
     VOICE_STATE_UPDATES: K,
-    GUILD_DELETE: z,
+    GUILD_DELETE: $,
     CHANNEL_DELETE: q,
-    CALL_DELETE: $,
+    CALL_DELETE: z,
     APP_STATE_UPDATE: X,
     GUILD_MEMBERS_REQUEST: ee,
     GUILD_SEARCH_RECENT_MEMBERS: et,
