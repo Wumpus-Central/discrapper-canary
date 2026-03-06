@@ -1,66 +1,61 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => p });
 var r = n(311907),
     i = n(73153),
-    a = n(661439),
-    s = n(352505),
-    o = n(652215);
-let l = {},
-    u = null,
-    c = 864e5,
-    d = 36e5;
-function _() {
-    s.m.getCurrentConfig({ location: "LibraryApplicationStatisticsStore.handleConnectionOpen" }).enabled && (0, a.X)();
+    s = n(652215);
+let a = {},
+    o = null,
+    l = 864e5,
+    u = 36e5;
+function c() {
+    (a = {}), (o = null);
 }
-function f() {
-    (l = {}), (u = null);
-}
-function p(e) {
+function d(e) {
     let { statistics: t } = e;
     t.forEach((e) => {
-        l[e.application_id] = e;
+        a[e.application_id] = e;
     }),
-        (u = Date.now());
+        (o = Date.now());
 }
-function h(e) {
+function _(e) {
     let { duration: t, applicationId: n, distributor: r } = e,
-        i = l[n],
-        a = new Date().toISOString(),
-        s = 0,
+        i = a[n],
+        o = new Date().toISOString(),
+        l = 0,
         u = 0;
-    null != i && ((s = i.total_duration), (u = i.total_discord_sku_duration ?? 0)),
-        (s += t),
-        r === o.d3x.DISCORD && (u += t),
-        (l[n] = { application_id: n, total_duration: s, last_played_at: a, total_discord_sku_duration: u });
+    null != i && ((l = i.total_duration), (u = i.total_discord_sku_duration ?? 0)),
+        (l += t),
+        r === s.d3x.DISCORD && (u += t),
+        (a[n] = { application_id: n, total_duration: l, last_played_at: o, total_discord_sku_duration: u });
 }
-class m extends r.Ay.Store {
+class f extends r.Ay.Store {
     static displayName = "LibraryApplicationStatisticsStore";
     get applicationStatistics() {
-        return l;
+        return a;
     }
     get lastFetched() {
-        return u;
+        return o;
     }
     getGameDuration(e) {
-        let t = l[e];
+        let t = a[e];
         return null != t ? t.total_duration : 0;
     }
     getLastPlayedDateTime(e) {
-        let t = l[e];
+        let t = a[e];
         return null != t ? new Date(t.last_played_at).getTime() : null;
     }
     hasApplicationStatistic(e) {
-        return null != l[e];
+        return null != a[e];
     }
     getCurrentUserStatisticsForApplication(e) {
-        return l[e];
+        return a[e];
     }
     getQuickSwitcherScoreForApplication(e) {
-        let t = l[e],
+        let t = a[e],
             n = 0;
         if (null != t) {
-            let e = Math.floor((Date.now() - new Date(t.last_played_at).getTime()) / c),
-                r = Math.floor((1e3 * t.total_duration) / d);
+            let e = Math.floor((Date.now() - new Date(t.last_played_at).getTime()) / l),
+                r = Math.floor((1e3 * t.total_duration) / u);
             0 === e
                 ? (n += 50)
                 : e >= 1 && e < 2
@@ -83,9 +78,4 @@ class m extends r.Ay.Store {
         return n;
     }
 }
-let g = new m(i.h, {
-    USER_ACTIVITY_STATISTICS_FETCH_SUCCESS: p,
-    ACTIVITY_UPDATE_START: h,
-    LOGOUT: f,
-    CONNECTION_OPEN: _,
-});
+let p = new f(i.h, { USER_ACTIVITY_STATISTICS_FETCH_SUCCESS: d, ACTIVITY_UPDATE_START: _, LOGOUT: c });

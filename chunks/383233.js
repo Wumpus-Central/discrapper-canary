@@ -56,7 +56,6 @@ class _ extends c {
     mentions;
     mentionRoles;
     mentionChannels;
-    mentionGames;
     mentionEveryone;
     mentioned;
     tts;
@@ -102,7 +101,6 @@ class _ extends c {
             (this.mentions = e.mentions || []),
             (this.mentionRoles = e.mentionRoles || []),
             (this.mentionChannels = e.mentionChannels || []),
-            (this.mentionGames = e.mentionGames || []),
             (this.mentioned = e.mentioned || !1),
             (this.pinned = e.pinned || !1),
             (this.mentionEveryone = e.mentionEveryone || !1),

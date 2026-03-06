@@ -152,7 +152,7 @@ let E = {
                 : null != l
                   ? null != l.inlineAutocompleteType
                       ? (s.insertAutocompleteInput(l.inlineAutocompleteType),
-                        (d = "timestampMentionInput" === l.inlineAutocompleteType ? c.kc.TIMESTAMP : c.kc.GAME_MENTION))
+                        "timestampMentionInput" === l.inlineAutocompleteType && (d = c.kc.TIMESTAMP))
                       : s.insertText(p(l))
                   : null != u && s.insertText(h(u), m(u)),
             { type: d }

@@ -157,20 +157,9 @@ function D(t, e, i) {
             flag: _.xBc.USE_EXTERNAL_STICKERS,
         },
         [_.xBc.MENTION_EVERYONE.toString()]: {
-            title:
-                n === _.rbe.GUILD_STAGE_VOICE
-                    ? A.intl.string(A.t.VDUAHO)
-                    : i?.inGameMentionsExperiment
-                      ? A.intl.string(A.t.lEO7Wr)
-                      : A.intl.string(A.t.Y78KGC),
+            title: n === _.rbe.GUILD_STAGE_VOICE ? A.intl.string(A.t.VDUAHO) : A.intl.string(A.t.Y78KGC),
             description:
-                n === _.rbe.GUILD_CATEGORY
-                    ? A.t["HOhg/B"]
-                    : n === _.rbe.GUILD_STAGE_VOICE
-                      ? A.t.rZn1oO
-                      : i?.inGameMentionsExperiment
-                        ? A.t.wdHpIC
-                        : A.t["6IUSdt"],
+                n === _.rbe.GUILD_CATEGORY ? A.t["HOhg/B"] : n === _.rbe.GUILD_STAGE_VOICE ? A.t.rZn1oO : A.t["6IUSdt"],
             flag: _.xBc.MENTION_EVERYONE,
         },
         [_.xBc.MANAGE_MESSAGES.toString()]: {

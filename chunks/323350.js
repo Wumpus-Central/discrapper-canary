@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { IQ: () => g, WO: () => h }), n(321073);
+n.d(t, { IQ: () => E, WO: () => h }), n(321073);
 var r = n(284009),
     i = n.n(r),
-    a = n(47167),
-    s = n(379418),
+    s = n(47167),
+    a = n(379418),
     o = n(209932),
     l = n(734057),
     u = n(317525),
@@ -14,21 +14,21 @@ var r = n(284009),
     p = n(711371);
 function h(e, t) {
     let { mode: n, ignoreTrailingEmptyNodes: r, preventEmojiSurrogates: i } = t ?? {},
-        [a, s] = t?.range != null ? p.ZF.edges(t.range) : [void 0, void 0];
-    return m(e, { mode: n, start: a, end: s, ignoreTrailingEmptyNodes: r, preventEmojiSurrogates: i });
+        [s, a] = t?.range != null ? p.ZF.edges(t.range) : [void 0, void 0];
+    return m(e, { mode: n, start: s, end: a, ignoreTrailingEmptyNodes: r, preventEmojiSurrogates: i });
 }
 function m(e, t) {
     let {
             mode: n,
             start: r,
             end: i,
-            separator: a,
-            ignoreEmptyNodes: s,
+            separator: s,
+            ignoreEmptyNodes: a,
             ignoreTrailingEmptyNodes: o,
             preventEmojiSurrogates: l,
         } = t ?? {},
         u = e.length > 0 && !p.l5.isText(e[0]);
-    null == a && (a = u ? "\n" : "");
+    null == s && (s = u ? "\n" : "");
     let c = r?.path[0] ?? 0,
         d = i?.path[0] ?? e.length - 1;
     if (o)
@@ -50,33 +50,32 @@ function m(e, t) {
         h = p.AS.isType(e[d], "blockQuote"),
         m = [];
     for (let t = c; t <= d; t++) {
-        let a = e[t];
-        if (s && p.l5.isText(a) && 0 === a.text.length) continue;
-        let o = g(a, {
+        let s = e[t];
+        if (a && p.l5.isText(s) && 0 === s.text.length) continue;
+        let o = E(s, {
             mode: n,
             start: null != r && t === c ? { path: r.path.slice(1), offset: r.offset } : void 0,
             end: null != i && t === d ? { path: i.path.slice(1), offset: i.offset } : void 0,
             allowBlockQuotePrefix: null == r || null == i || (!_ && (!f || h)),
             preventEmojiSurrogates: l,
         });
-        (!s || o.length > 0) && m.push(o);
+        (!a || o.length > 0) && m.push(o);
     }
-    return m.join(a);
+    return m.join(s);
 }
-function g(e, t) {
+function E(e, t) {
     let { mode: n, start: r, allowBlockQuotePrefix: i = !1, preventEmojiSurrogates: h = !1 } = t ?? {};
-    if (p.l5.isText(e)) return E(e.text, t);
+    if (p.l5.isText(e)) return g(e.text, t);
     switch (e.type) {
-        case "gameMentionInput":
-        case "testInlineVoid":
-            return "";
         case "line":
         case "testInline":
             return m(e.children, t);
+        case "testInlineVoid":
+            return "";
         case "blockQuote": {
             let n = m(e.children, t),
-                a = null != r && 1 === r.path.length && 0 === r.path[0] && 0 === r.offset;
-            if (i && (null == r || a)) return `> ${n}`;
+                s = null != r && 1 === r.path.length && 0 === r.path[0] && 0 === r.offset;
+            if (i && (null == r || s)) return `> ${n}`;
             return n;
         }
         case "emoji": {
@@ -100,7 +99,7 @@ function g(e, t) {
             if ("raw" === n) return t;
             let r = l.A.getChannel(e.channelId);
             if (null == r) return t;
-            return (0, a.m1)(r, _.default, c.A, !0, !0);
+            return (0, s.m1)(r, _.default, c.A, !0, !0);
         }
         case "soundboard": {
             let t = `<sound:${e.guildId}:${e.soundId}>`;
@@ -129,9 +128,7 @@ function g(e, t) {
         case "commandMention":
             return `</${e.commandName}:${e.commandId}>`;
         case "timestamp":
-            return (0, s.tf)(e.parsed.timestamp, e.parsed.format);
-        case "gameMention":
-            return `<@$${e.applicationId}>`;
+            return (0, a.tf)(e.parsed.timestamp, e.parsed.format);
         case "timestampMentionInput": {
             let n = m(e.children, t);
             if (null == r) return `<@time:${n}>`;
@@ -146,7 +143,7 @@ function g(e, t) {
         }
     }
 }
-function E(e, t) {
+function g(e, t) {
     let { start: n, end: r } = t ?? {};
     return (
         i()(null == n || 0 === n.path.length, "Invalid start provided to serializeText"),

@@ -1,21 +1,19 @@
 "use strict";
-n.d(t, { S: () => m, a: () => E });
+n.d(t, { S: () => h, a: () => m });
 var r = n(374803),
     i = n(114323),
     s = n(878360),
     a = n(665774),
-    o = n(527434),
-    l = n(564253),
-    u = n(969900),
-    c = n(512780),
-    d = n(744982),
-    _ = n(311036),
-    f = n(33557),
-    p = n(523173),
-    h = n(561754);
-let m = [
+    o = n(564253),
+    l = n(969900),
+    u = n(512780),
+    c = n(744982),
+    d = n(311036),
+    _ = n(33557),
+    f = n(523173),
+    p = n(561754);
+let h = [
         r.DB.CHOICES,
-        r.DB.GAME,
         r.DB.GIFS,
         r.DB.STICKERS,
         r.DB.COMMAND_OPTIONS,
@@ -27,17 +25,16 @@ let m = [
         r.DB.LEGACY_COMMANDS,
         r.DB.TIMESTAMPS,
     ],
-    E = {
-        [r.DB.CHANNELS]: l.A,
+    m = {
+        [r.DB.CHANNELS]: o.A,
         [r.DB.COMMANDS]: i.A,
         [r.DB.COMMAND_OPTIONS]: a.A,
         [r.DB.CHOICES]: s.A,
-        [r.DB.EMOJIS_AND_STICKERS]: u.A,
-        [r.DB.STICKERS]: p.A,
-        [r.DB.GIFS]: c.A,
-        [r.DB.LEGACY_COMMANDS]: d.A,
-        [r.DB.MENTIONS]: _.Ay,
-        [r.DB.REACTIONS]: f.A,
-        [r.DB.GAME]: o.A,
-        [r.DB.TIMESTAMPS]: h.A,
+        [r.DB.EMOJIS_AND_STICKERS]: l.A,
+        [r.DB.STICKERS]: f.A,
+        [r.DB.GIFS]: u.A,
+        [r.DB.LEGACY_COMMANDS]: c.A,
+        [r.DB.MENTIONS]: d.Ay,
+        [r.DB.REACTIONS]: _.A,
+        [r.DB.TIMESTAMPS]: p.A,
     };

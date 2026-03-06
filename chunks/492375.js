@@ -82,12 +82,6 @@ function _(e, t, n) {
                 className: h,
                 children: [(0, r.jsx)(o.Dc, { timestamp: c.parsed }), l],
             });
-        case "gameMention":
-            return (0, r.jsxs)(f, {
-                attributes: i,
-                className: h,
-                children: [(0, r.jsx)(o.NH, { id: c.applicationId }), l],
-            });
         default:
             return null;
     }

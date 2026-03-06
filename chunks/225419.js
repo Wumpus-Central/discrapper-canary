@@ -145,8 +145,8 @@ function o(t) {
             flag: E.xB.USE_EXTERNAL_STICKERS,
         },
         [E.xB.MENTION_EVERYONE.toString()]: {
-            title: t.inGameMentionsExperiment ? s.intl.string(s.t.lEO7Wr) : s.intl.string(s.t.Y78KGC),
-            description: t.inGameMentionsExperiment ? s.intl.string(s.t.wdHpIC) : s.intl.string(s.t.ryj6N5),
+            title: s.intl.string(s.t.Y78KGC),
+            description: s.intl.string(s.t.ryj6N5),
             flag: E.xB.MENTION_EVERYONE,
         },
         [E.xB.MANAGE_MESSAGES.toString()]: {

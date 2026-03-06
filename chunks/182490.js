@@ -36,7 +36,6 @@ var r = (function (e) {
         (e.HEADING = "heading"),
         (e.SUBTEXT = "subtext"),
         (e.SILENT_PREFIX = "silentPrefix"),
-        (e.GAME_MENTION = "gameMention"),
         e
     );
 })({});

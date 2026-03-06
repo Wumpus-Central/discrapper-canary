@@ -34,7 +34,6 @@ let E = new u.A("MarkdownToSlate"),
         roleMention: { type: "inlineObject" },
         commandMention: { type: "inlineObject" },
         channelMention: { type: "inlineObject" },
-        gameMention: { type: "inlineObject" },
         silentPrefix: { type: "inlineStyle", before: "@silent", after: " " },
         emoji: { type: "inlineObject" },
         customEmoji: { type: "inlineObject" },
@@ -119,14 +118,7 @@ let v = {
     w = new (a())(D);
 function M(e, t, n) {
     let r = [],
-        i = {
-            returnMentionIds: !0,
-            disableAutoBlockNewlines: !0,
-            guildId: t,
-            isSlate: !0,
-            allowGameMentions: !0,
-            allowTimeMentionInput: !0,
-        },
+        i = { returnMentionIds: !0, disableAutoBlockNewlines: !0, guildId: t, isSlate: !0, allowTimeMentionInput: !0 },
         s = n ? b : O,
         a = n ? w : L,
         o = a.get(e);
@@ -222,10 +214,6 @@ function k(e, t, n, r, s) {
                     })
                 );
             return V({ result: e, sourceText: t, text: l[0], originalStart: r, attributes: [o], data: { id: a } });
-        }
-        case "gameMention": {
-            let { applicationId: i } = n;
-            return V({ result: e, sourceText: t, text: l[0], originalStart: r, attributes: [o], data: { id: i } });
         }
         case "staticRouteLink":
             let { id: u, itemId: c } = n;

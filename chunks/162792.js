@@ -1,111 +1,109 @@
 n.d(t, { A: () => I });
 var i = n(627968),
     l = n(64700),
-    a = n(311907),
-    s = n(436857),
+    s = n(311907),
+    a = n(436857),
     r = n(387408),
-    o = n(352505),
-    c = n(942075),
-    d = n(384231),
-    u = n(808829),
-    h = n(552691),
-    m = n(9842),
-    A = n(994500),
-    p = n(638075),
+    o = n(942075),
+    c = n(384231),
+    d = n(808829),
+    u = n(552691),
+    h = n(9842),
+    m = n(994500),
+    A = n(638075),
     g = n(465364),
-    f = n(763754),
-    _ = n(448368),
-    E = n(535421),
-    C = n(112758),
+    p = n(763754),
+    f = n(448368),
+    _ = n(535421),
+    E = n(112758),
     x = n(652215),
-    S = n(985018);
-let T = l.memo(function (e) {
+    C = n(985018);
+let S = l.memo(function (e) {
     let {
             baseMessage: t,
             referencedMessage: n,
-            channel: T,
+            channel: S,
             compact: I = !1,
-            referencedUsernameProfile: N,
-            referencedAvatarProfile: v,
-            setPopout: y,
-            isReplySpineClickable: b,
-            showReplySpine: R,
+            referencedUsernameProfile: T,
+            referencedAvatarProfile: N,
+            setPopout: b,
+            isReplySpineClickable: y,
+            showReplySpine: v,
         } = e,
-        j = n.state === m.a.LOADED ? n.message : void 0,
-        M = (0, f.X4)(j),
-        D = o.m.useExperiment({ location: "repliedMessage" }).enabled,
-        O = (0, d.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
-        L = l.useMemo(() => {
+        j = n.state === h.a.LOADED ? n.message : void 0,
+        R = (0, p.X4)(j),
+        M = (0, c.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
+        D = l.useMemo(() => {
             if (null == j) return null;
             let e = (0, r.A)(j);
             if (e.type === x.lAJ.USER_JOIN)
-                return (0, s.$)(
-                    S.intl.formatToParts(p.A.getSystemMessageUserJoin(e.id), {
-                        username: null != M ? M.nick : e.author.username,
+                return (0, a.$)(
+                    C.intl.formatToParts(A.A.getSystemMessageUserJoin(e.id), {
+                        username: null != R ? R.nick : e.author.username,
                         usernameHook: (e) => e,
                     }),
                 );
             if (e.type === x.lAJ.ROLE_SUBSCRIPTION_PURCHASE)
-                return (0, s.$)(
-                    (0, c.WC)({
-                        username: null != M ? M.nick : e.author.username,
-                        guildId: T?.guild_id,
+                return (0, a.$)(
+                    (0, o.WC)({
+                        username: null != R ? R.nick : e.author.username,
+                        guildId: S?.guild_id,
                         roleSubscriptionData: e.roleSubscriptionData,
                     }),
                 );
             if (e.type === x.lAJ.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
-                return (0, s.$)((0, u.P)({ application: e?.application, username: M?.nick }));
+                return (0, a.$)((0, d.P)({ application: e?.application, username: R?.nick }));
             if (e.type === x.lAJ.PRIVATE_CHANNEL_INTEGRATION_ADDED)
-                return (0, s.$)((0, h.g6)({ application: e?.application, username: M?.nick }));
+                return (0, a.$)((0, u.g6)({ application: e?.application, username: R?.nick }));
             if (e.type === x.lAJ.PRIVATE_CHANNEL_INTEGRATION_REMOVED)
-                return (0, s.$)((0, h.uk)({ application: e?.application, username: M?.nick }));
+                return (0, a.$)((0, u.uk)({ application: e?.application, username: R?.nick }));
             else if (e.type === x.lAJ.GUILD_DEADCHAT_REVIVE_PROMPT)
-                return "" !== e.content ? e.content : S.intl.string(S.t.wnn1Dc);
+                return "" !== e.content ? e.content : C.intl.string(C.t.wnn1Dc);
             if (null != e.content && "" !== e.content) {
                 let t = { formatInline: !0, allowLinks: !0 },
-                    n = e.isFirstMessageInForumPost(T)
-                        ? { ...t, noStyleAndInteraction: !0, allowHeading: !0, allowList: !0, allowGameMentions: D }
-                        : { ...t, formatInline: !0, allowHeading: O, allowList: O, allowGameMentions: D };
+                    n = e.isFirstMessageInForumPost(S)
+                        ? { ...t, noStyleAndInteraction: !0, allowHeading: !0, allowList: !0 }
+                        : { ...t, formatInline: !0, allowHeading: M, allowList: M };
                 return (0, g.Ay)(e, n).content;
             }
             return null;
-        }, [j, M, T, O, D]),
-        { isReplyAuthorBlocked: P, isReplyAuthorIgnored: w } = (0, a.cf)(
-            [A.A],
+        }, [j, R, S, M]),
+        { isReplyAuthorBlocked: O, isReplyAuthorIgnored: L } = (0, s.cf)(
+            [m.A],
             () => ({
-                isReplyAuthorBlocked: null != j && A.A.isBlockedForMessage(j),
-                isReplyAuthorIgnored: null != j && A.A.isIgnoredForMessage(j),
+                isReplyAuthorBlocked: null != j && m.A.isBlockedForMessage(j),
+                isReplyAuthorIgnored: null != j && m.A.isIgnoredForMessage(j),
             }),
             [j],
         ),
-        k = (0, C.r4)(j?.author.id, T.id),
-        U = (0, C.Ck)(t, j),
-        G = (0, C.H9)(j, T, N, y),
-        F = (0, C.Ge)(v, y),
-        H = l.useCallback(() => {
-            y({ referencedUsernameProfile: !1, referencedAvatarProfile: !1 });
-        }, [y]),
-        B = (0, f.X4)(t);
-    return (0, i.jsx)(_.A, {
-        repliedAuthor: M,
+        P = (0, E.r4)(j?.author.id, S.id),
+        w = (0, E.Ck)(t, j),
+        k = (0, E.H9)(j, S, T, b),
+        U = (0, E.Ge)(N, b),
+        G = l.useCallback(() => {
+            b({ referencedUsernameProfile: !1, referencedAvatarProfile: !1 });
+        }, [b]),
+        F = (0, p.X4)(t);
+    return (0, i.jsx)(f.A, {
+        repliedAuthor: R,
         baseMessage: t,
-        channel: T,
-        baseAuthor: B,
+        channel: S,
+        baseAuthor: F,
         referencedMessage: n,
-        content: L,
+        content: D,
         compact: I,
-        isReplyAuthorBlocked: P,
-        isReplyAuthorIgnored: w,
-        showAvatarPopout: v,
-        showUsernamePopout: N,
-        renderPopout: E.A,
-        onClickAvatar: F,
-        onClickUsername: G,
-        onClickReply: U,
-        onContextMenu: k,
-        onPopoutRequestClose: H,
-        isReplySpineClickable: b,
-        showReplySpine: R,
+        isReplyAuthorBlocked: O,
+        isReplyAuthorIgnored: L,
+        showAvatarPopout: N,
+        showUsernamePopout: T,
+        renderPopout: _.A,
+        onClickAvatar: U,
+        onClickUsername: k,
+        onClickReply: w,
+        onContextMenu: P,
+        onPopoutRequestClose: G,
+        isReplySpineClickable: y,
+        showReplySpine: v,
     });
 });
 function I(e) {
@@ -113,8 +111,8 @@ function I(e) {
         message: t,
         channel: n,
         compact: l,
-        setPopout: a,
-        referencedUsernameProfile: s,
+        setPopout: s,
+        referencedUsernameProfile: a,
         referencedAvatarProfile: r,
         replyReference: o,
         replyMessage: c,
@@ -123,14 +121,14 @@ function I(e) {
     } = e;
     return (
         null != o &&
-        (0, i.jsx)(T, {
+        (0, i.jsx)(S, {
             baseMessage: t,
             replyReference: o,
             referencedMessage: c,
             channel: n,
             compact: l,
-            setPopout: a,
-            referencedUsernameProfile: s,
+            setPopout: s,
+            referencedUsernameProfile: a,
             referencedAvatarProfile: r,
             isReplySpineClickable: d,
             showReplySpine: u,
