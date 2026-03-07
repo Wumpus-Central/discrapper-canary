@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => O });
+n.d(t, { A: () => b });
 var r = n(735438),
     i = n.n(r),
-    a = n(311907),
-    s = n(73153),
+    s = n(311907),
+    a = n(73153),
     o = n(961350),
     l = n(994500),
     u = n(461213),
@@ -18,8 +18,8 @@ function p(e, t) {
     if (null == n) return;
     let r = d[e];
     delete r[t], i().isEmpty(r) && delete d[e];
-    let a = _.get(n);
-    null != a && (a.delete(e), 0 === a.size && _.delete(n));
+    let s = _.get(n);
+    null != s && (s.delete(e), 0 === s.size && _.delete(n));
 }
 function h(e, t, n) {
     let r = d[e];
@@ -29,23 +29,23 @@ function h(e, t, n) {
 }
 function m(e, t, n, r) {
     let i = n.find((e) => null != e.party && e.party.id),
-        a = null != i && null != i.party ? i.party.id : null,
-        s = f(t, e);
-    if (null == a || r === c.clD.OFFLINE) return null != s && void p(t, e);
-    if (null != s) {
-        if (s === a) return !1;
+        s = null != i && null != i.party ? i.party.id : null,
+        a = f(t, e);
+    if (null == s || r === c.clD.OFFLINE) return null != a && (p(t, e), !0);
+    if (null != a) {
+        if (a === s) return !1;
         p(t, e);
     }
-    h(t, e, a);
+    return h(t, e, s), !0;
 }
-function g(e) {
+function E(e) {
     let { guilds: t, presences: n } = e,
         r = !1;
     for (let { user: e, status: t, activities: i } of n) null != e && !1 !== m(c.ME, e.id, i, t) && (r = !0);
     for (let e of t) !1 !== A({ guild: e }) && (r = !0);
     return r;
 }
-function E(e) {
+function g(e) {
     let { parties: t, userParties: n } = e;
     (_ = new Map()), (d = { ...n }), Object.keys(t).forEach((e) => _.set(e, new Set(t[e])));
 }
@@ -70,14 +70,14 @@ function T(e) {
         })
         .some((e) => e);
 }
-function y(e) {
+function S(e) {
     let { guildId: t, members: n } = e;
     return v(
         t,
         n.map((e) => e.presence),
     );
 }
-function S(e) {
+function y(e) {
     let { guildId: t, addedMembers: n } = e;
     return (
         null != n &&
@@ -96,12 +96,12 @@ function v(e, t) {
         n
     );
 }
-function C() {
+function N() {
     let e = o.default.getId(),
         t = u.A.getActivities();
     return m(c.ME, e, t);
 }
-function b(e) {
+function C(e) {
     let { relationship: t } = e;
     if (!l.A.isBlocked(t.id) && !l.A.isIgnored(t.id)) return !1;
     let n = d[t.id];
@@ -111,7 +111,7 @@ function b(e) {
         null != n && n.delete(t.id);
     }
 }
-function N(e) {
+function R(e) {
     let { relationship: t } = e,
         n = d[t.id];
     if (null == n) return !1;
@@ -120,10 +120,10 @@ function N(e) {
         null != n && n.add(t.id);
     }
 }
-class R extends a.Ay.Store {
+class O extends s.Ay.Store {
     static displayName = "GamePartyStore";
     initialize() {
-        this.syncWith([u.A], C), this.waitFor(o.default, l.A, u.A);
+        this.syncWith([u.A], N), this.waitFor(o.default, l.A, u.A);
     }
     getParty(e) {
         return null != e && _.has(e) ? _.get(e) : null;
@@ -135,15 +135,15 @@ class R extends a.Ay.Store {
         return _;
     }
 }
-let O = new R(s.h, {
-    CONNECTION_OPEN_SUPPLEMENTAL: g,
-    OVERLAY_INITIALIZE: E,
+let b = new O(a.h, {
+    CONNECTION_OPEN_SUPPLEMENTAL: E,
+    OVERLAY_INITIALIZE: g,
     GUILD_CREATE: A,
     PRESENCES_REPLACE: I,
     PRESENCE_UPDATES: T,
-    THREAD_MEMBER_LIST_UPDATE: y,
-    THREAD_MEMBERS_UPDATE: S,
-    RELATIONSHIP_ADD: b,
-    RELATIONSHIP_UPDATE: b,
-    RELATIONSHIP_REMOVE: N,
+    THREAD_MEMBER_LIST_UPDATE: S,
+    THREAD_MEMBERS_UPDATE: y,
+    RELATIONSHIP_ADD: C,
+    RELATIONSHIP_UPDATE: C,
+    RELATIONSHIP_REMOVE: R,
 });

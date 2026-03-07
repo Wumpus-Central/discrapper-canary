@@ -67,7 +67,6 @@ let p = new Map(),
                             }
                             l.push(t);
                         }
-                        if (n) return;
                         a.postMessage({ trackChannels: l, width: b }, i);
                     } catch (e) {
                         n || d.nx.error("Failed to decode audio:", e);

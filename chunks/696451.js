@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => eM, DL: () => j, vg: () => H }), n(938796), n(321073);
+n.d(t, { Ay: () => ex, DL: () => j, vg: () => H }), n(938796), n(321073);
 var r = n(735438),
     i = n.n(r),
     s = n(665260),
@@ -24,14 +24,14 @@ var r = n(735438),
     v = n(340837);
 let N = new _.A("GuildMemberStore"),
     C = {},
-    b = {},
     R = {},
     O = {},
+    b = {},
     D = {},
     L = !1,
     w = 0,
-    x = 0,
-    M = {},
+    M = 0,
+    x = {},
     P = {},
     k = { added: [], removed: [] };
 function U(e, t) {
@@ -50,7 +50,7 @@ function G(e, t) {
         }
 }
 function F(e) {
-    (w += 1), (M[e] = w);
+    (w += 1), (x[e] = w);
 }
 function V(e) {
     H(e) === I.default.getId() && (0, h.G)(j(e)), delete D[e];
@@ -112,7 +112,7 @@ function W(e) {
             collectibles: E,
             displayNameStyles: g,
         } = e,
-        { colorString: T, colorStrings: S, colorRoleId: y, iconRoleId: N, hoistRoleId: b, highestRoleId: O } = Y(o, l),
+        { colorString: T, colorStrings: S, colorRoleId: y, iconRoleId: N, hoistRoleId: R, highestRoleId: b } = Y(o, l),
         D = {
             userId: t,
             nick: n,
@@ -124,8 +124,8 @@ function W(e) {
             colorStrings: S,
             colorRoleId: y,
             iconRoleId: N,
-            hoistRoleId: b,
-            highestRoleId: O,
+            hoistRoleId: R,
+            highestRoleId: b,
             premiumSince: u,
             isPending: c,
             joinedAt: d,
@@ -144,14 +144,14 @@ function W(e) {
     if (t === I.default.getId())
         if (m.A.isViewingRoles(r) || m.A.isFullServerPreview(r)) {
             let e = m.A.getViewingRoles(r);
-            R[r] = { ...D, ...m.A.getMemberOptions(r), roles: null != e ? A.default.keys(e) : [] };
-        } else null != R[r] && delete R[r];
+            O[r] = { ...D, ...m.A.getMemberOptions(r), roles: null != e ? A.default.keys(e) : [] };
+        } else null != O[r] && delete O[r];
     return D;
 }
 function K(e) {
-    L ? (L = !1) : ((C = {}), (b = {})), (D = {}), $(e);
+    L ? (L = !1) : ((C = {}), (R = {})), (D = {}), z(e);
 }
-function z(e) {
+function $(e) {
     e.guilds.forEach((e) => {
         let t = e.id;
         eg({ id: t, members: e.members }),
@@ -160,18 +160,18 @@ function z(e) {
             });
     });
 }
-function $(e) {
+function z(e) {
     e.guilds.forEach((e) => {
         eg(e);
     });
 }
 function q(e) {
     let { guildMembers: t } = e;
-    (C = { ...t }), (b = {});
+    (C = { ...t }), (R = {});
 }
 function Z(e) {
     let { guildMembers: t, guilds: n } = e;
-    (L = !0), (C = { ...t }), (b = {}), (O = {}), Q(n);
+    (L = !0), (C = { ...t }), (R = {}), (b = {}), Q(n);
 }
 function X(e) {
     let { guilds: t } = e;
@@ -181,7 +181,7 @@ function Q(e) {
     for (let t of e)
         if (
             null != t.member &&
-            (null == O[t.id] ? (O[t.id] = t.member) : (O[t.id] = { ...t.member, roles: t.member.roles }),
+            (null == b[t.id] ? (b[t.id] = t.member) : (b[t.id] = { ...t.member, roles: t.member.roles }),
             null != C[t.id])
         ) {
             let e = C[t.id];
@@ -349,7 +349,7 @@ function ec(e, t) {
               })),
                   U(e, n[t.user.id]);
           }),
-          x++,
+          M++,
           !0);
 }
 function ed(e) {
@@ -376,7 +376,7 @@ function ep(e) {
 function eh(e, t) {
     let n = C[e];
     if (null == n || null == n[t]) return !1;
-    delete n[t], G(e, t), x++;
+    delete n[t], G(e, t), M++;
 }
 function em(e) {
     let { guild: t } = e;
@@ -418,7 +418,7 @@ function eg(e) {
 }
 function eA(e) {
     let { guild: t } = e;
-    delete C[t.id], delete b[t.id], G(t.id);
+    delete C[t.id], delete R[t.id], G(t.id);
 }
 function eI(e) {
     let t = C[e.guildId];
@@ -512,17 +512,20 @@ function ey(e) {
     });
 }
 function ev(e, t) {
-    if (e?.members == null || null == t) return !1;
-    eg({
-        id: t,
-        members: Object.entries(e.members)
-            .map((t) => {
-                let [n, r] = t,
-                    i = e?.users?.[n];
-                if (null != i) return { ...r, user: i };
-            })
-            .filter((e) => null != e),
-    });
+    return (
+        e?.members != null &&
+        null != t &&
+        eg({
+            id: t,
+            members: Object.entries(e.members)
+                .map((t) => {
+                    let [n, r] = t,
+                        i = e?.users?.[n];
+                    if (null != i) return { ...r, user: i };
+                })
+                .filter((e) => null != e),
+        })
+    );
 }
 function eN(e, t) {
     let n = !1;
@@ -537,19 +540,19 @@ function eC(e) {
     let { message: t, guildId: n } = e;
     return eN(t, n);
 }
-function eb(e) {
+function eR(e) {
     let t = T.A.getChannel(e.channel_id);
     eN(e, t?.guild_id);
 }
-function eR(e) {
-    let { messages: t } = e;
-    t.forEach((e) => eb(e));
-}
 function eO(e) {
+    let { messages: t } = e;
+    t.forEach((e) => eR(e));
+}
+function eb(e) {
     let { pins: t } = e;
     t.forEach((e) => {
         let { message: t } = e;
-        return eb(t);
+        return eR(t);
     });
 }
 function eD(e) {
@@ -563,7 +566,7 @@ function eD(e) {
             });
         });
     }),
-        eR({ messages: n });
+        eO({ messages: n });
 }
 function eL(e) {
     let { location: t, participants: n } = e,
@@ -574,7 +577,7 @@ function ew(e) {
     let t = T.A.getChannel(e.channelId);
     return ev(e.resolved, t?.guild_id);
 }
-class ex extends a.Ay.Store {
+class eM extends a.Ay.Store {
     static displayName = "GuildMemberStore";
     initialize() {
         this.waitFor(I.default, T.A, S.A, y.A, m.A);
@@ -642,22 +645,22 @@ class ex extends a.Ay.Store {
     getMember(e, t) {
         let n = this.getTrueMember(e, t);
         return null != n && t === I.default.getId() && (m.A.isViewingRoles(e) || m.A.isFullServerPreview(e))
-            ? (R[e] ?? n)
+            ? (O[e] ?? n)
             : n;
     }
     getSelfMember(e) {
         return this.getMember(e, I.default.getId());
     }
     getSelfMemberJoinedAt(e) {
-        let t = b[e];
+        let t = R[e];
         if (null != t) return t;
         let n = this.getSelfMember(e);
         if (null == n || null == n.joinedAt) return null;
         let r = new Date(n.joinedAt);
-        return (b[e] = r), r;
+        return (R[e] = r), r;
     }
     getCachedSelfMember(e) {
-        return O[e] ?? null;
+        return b[e] ?? null;
     }
     getNick(e, t) {
         if (null == e || null == t) return null;
@@ -679,12 +682,12 @@ class ex extends a.Ay.Store {
         return null == r ? n : i().difference(i().union(n, r.added), r.removed);
     }
     getMemberVersion() {
-        return x;
+        return M;
     }
 }
-let eM = new ex(o.h, {
+let ex = new eM(o.h, {
     CONNECTION_OPEN: K,
-    CONNECTION_OPEN_SUPPLEMENTAL: z,
+    CONNECTION_OPEN_SUPPLEMENTAL: $,
     OVERLAY_INITIALIZE: q,
     CACHE_LOADED: Z,
     CACHE_LOADED_LAZY: X,
@@ -712,10 +715,10 @@ let eM = new ex(o.h, {
     LOCAL_MESSAGES_LOADED: J,
     MESSAGE_CREATE: eC,
     MESSAGE_UPDATE: eC,
-    LOAD_MESSAGES_SUCCESS: eR,
-    LOAD_MESSAGES_AROUND_SUCCESS: eR,
-    LOAD_RECENT_MENTIONS_SUCCESS: eR,
-    LOAD_PINNED_MESSAGES_SUCCESS: eO,
+    LOAD_MESSAGES_SUCCESS: eO,
+    LOAD_MESSAGES_AROUND_SUCCESS: eO,
+    LOAD_RECENT_MENTIONS_SUCCESS: eO,
+    LOAD_PINNED_MESSAGES_SUCCESS: eb,
     SEARCH_MESSAGES_SUCCESS: eD,
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: eD,
     MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: e_,

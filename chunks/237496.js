@@ -29,8 +29,7 @@ function h() {
             l.A.can(d.xBc.USE_VAD, n) ||
             p(r);
     }
-    if (_ === e) return !1;
-    (f = e), (_ = e), i.h.dispatch({ type: "SET_VAD_PERMISSION", hasPermission: _ });
+    return _ !== e && ((f = e), (_ = e), i.h.dispatch({ type: "SET_VAD_PERMISSION", hasPermission: _ }), !0);
 }
 function m(e) {
     let { voiceStates: t } = e;
