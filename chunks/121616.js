@@ -1,23 +1,25 @@
-i.d(t, { d: () => _ });
-var n = i(64700),
-    l = i(814278),
-    s = i(419954),
-    r = i(933297),
-    a = i(780964),
-    u = i(179014),
-    o = i(437690),
-    d = i(985018);
-let _ = (0, s.zZ)(a.X.VOICE_SECURITY_CATEGORY, {
-    useTitle: () => d.intl.string(d.t.xVk85F),
+n.d(t, { d: () => _ });
+var i = n(64700),
+    s = n(814278),
+    l = n(419954),
+    a = n(933297),
+    r = n(723702),
+    o = n(780964),
+    d = n(179014),
+    c = n(437690),
+    u = n(985018);
+let _ = (0, l.zZ)(o.X.VOICE_SECURITY_CATEGORY, {
+    useTitle: () => u.intl.string(u.t.xVk85F),
     useInlineNotice: function () {
-        return n.useMemo(
+        return i.useMemo(
             () => ({
-                type: r.lT.INLINE_NOTICE,
+                type: a.lT.INLINE_NOTICE,
                 noticeType: "info",
-                useText: () => d.intl.format(d.t["/6sFWa"], { helpArticle: (0, l.aW)() }),
+                useText: () => u.intl.format(u.t["/6sFWa"], { helpArticle: (0, s.aW)() }),
             }),
             [],
         );
     },
-    buildLayout: () => [u.r, o.f],
+    usePredicate: () => (0, r.isDesktop)(),
+    buildLayout: () => [d.r, c.f],
 });
