@@ -73,7 +73,7 @@ function y(e) {
             w(!P), P ? y?.() : l?.();
         }, [y, l, P]);
     s.useEffect(() => (x._.subscribe(S.jej.TOGGLE_INBOX, K), () => void x._.unsubscribe(S.jej.TOGGLE_INBOX, K)), [K]);
-    let { enabled: W, inInbox: Y } = A.A.useExperiment({ location: "RecentsPopout" }),
+    let { enabled: W, inInbox: Y } = A.A.useConfig({ location: "RecentsPopout" }),
         z = (0, o.bG)([m.A], () => m.A.hasOverdueReminder(), []) && W && Y;
     s.useEffect(() => {
         k !== c.Y2.BOOKMARKS || W || Y || V(c.Y2.MENTIONS), k === c.Y2.GAME_INVITES && V(c.Y2.MENTIONS);

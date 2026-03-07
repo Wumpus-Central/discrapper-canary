@@ -2,22 +2,16 @@
 n.d(t, { A: () => _ });
 var r = n(73153),
     i = n(439372),
-    a = n(927813),
-    s = n(966597),
+    s = n(927813),
+    a = n(966597),
     o = n(85109);
 let l = null;
 function u(e) {
-    let { enabled: t } = s.A.getCurrentConfig(
-        { location: "MessageRemindersNotificationManager" },
-        { autoTrackExposure: !1 },
-    );
+    let { enabled: t } = a.A.getConfig({ location: "MessageRemindersNotificationManager" });
     t && (r.h.dispatch({ type: "MESSAGE_REMINDER_DUE", savedMessage: e }), c());
 }
 function c() {
-    let { enabled: e } = s.A.getCurrentConfig(
-        { location: "MessageRemindersNotificationManager" },
-        { autoTrackExposure: !1 },
-    );
+    let { enabled: e } = a.A.getConfig({ location: "MessageRemindersNotificationManager" });
     if (!e) return;
     null != l && clearTimeout(l);
     let t = o.A.getMessageReminders().find((e) => null != e.saveData.dueAt && e.saveData.dueAt > new Date());
@@ -25,7 +19,7 @@ function c() {
         l = null;
         return;
     }
-    let n = Date.now() + a.A.Millis.WEEK;
+    let n = Date.now() + s.A.Millis.WEEK;
     t.saveData.dueAt.getTime() > n || (l = setTimeout(() => u(t), t.saveData.dueAt.getTime() - Date.now()));
 }
 class d extends i.A {

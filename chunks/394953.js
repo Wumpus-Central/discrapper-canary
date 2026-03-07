@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { EJ: () => E, U4: () => y, i3: () => S, i7: () => A, lI: () => I, tZ: () => T, zo: () => v });
+n.d(t, { EJ: () => g, U4: () => S, i3: () => y, i7: () => A, lI: () => I, tZ: () => T, zo: () => v });
 var r = n(892227),
-    i = n(960488),
-    a = n(311907),
-    s = n(187508),
+    i = n(873263),
+    s = n(311907),
+    a = n(187508),
     o = n(966597),
     l = n(85109),
     u = n(226017),
@@ -16,15 +16,15 @@ n(287809), n(927813);
 var p = n(661191),
     h = n(320697),
     m = n(849077),
-    g = n(652215);
-function E(e) {
-    let { messageId: t, channelId: n, guildId: r, ReadStateStore_: i = f.Ay, GuildStore_: a = _.A } = e;
+    E = n(652215);
+function g(e) {
+    let { messageId: t, channelId: n, guildId: r, ReadStateStore_: i = f.Ay, GuildStore_: s = _.A } = e;
     if (!i.hasUnread(n)) return !1;
-    let s = a.getGuild(r);
-    if (null == s || null == s.joinedAt) return !1;
+    let a = s.getGuild(r);
+    if (null == a || null == a.joinedAt) return !1;
     let o = i.ackMessageId(n);
     if (null == o) {
-        let e = a.getGuild(r);
+        let e = s.getGuild(r);
         null != e && null != e.joinedAt && (o = p.default.fromTimestamp(e.joinedAt.getTime()));
     }
     return p.default.compare(t, o) > 0;
@@ -36,27 +36,27 @@ function A(e) {
 }
 function I() {
     let { pathname: e } = (0, i.zy)();
-    return e.startsWith(g.BVt.CHANNEL(g.gNP));
+    return e.startsWith(E.BVt.CHANNEL(E.gNP));
 }
 function T(e) {
     {
         let { openUserSettings: t } = n(840065);
-        t(c.X.NOTIFICATIONS_PANEL, { section: g.nc_.NOTIFICATIONS, analyticsLocations: e });
+        t(c.X.NOTIFICATIONS_PANEL, { section: E.nc_.NOTIFICATIONS, analyticsLocations: e });
     }
 }
-function y() {
-    let e = (0, a.yK)([h.A], () => h.A.getNotifyingChannelIds() ?? []),
-        t = (0, a.yK)([f.Ay], () => e.filter((e) => f.Ay.hasUnread(e)), [e]),
-        n = (0, a.yK)([s.Ay], () => s.Ay.getSettingsFilteredMentions() ?? []);
+function S() {
+    let e = (0, s.yK)([h.A], () => h.A.getNotifyingChannelIds() ?? []),
+        t = (0, s.yK)([f.Ay], () => e.filter((e) => f.Ay.hasUnread(e)), [e]),
+        n = (0, s.yK)([a.Ay], () => a.Ay.getSettingsFilteredMentions() ?? []);
     return {
-        unreadRecentMentionsCount: (0, a.bG)(
+        unreadRecentMentionsCount: (0, s.bG)(
             [f.Ay, d.A, _.A],
             () =>
                 n?.filter((e) => {
                     let t = d.A.getBasicChannel(e.channel_id);
                     return (
                         null != t &&
-                        E({
+                        g({
                             messageId: e.id,
                             channelId: e.channel_id,
                             guildId: t.guild_id,
@@ -70,9 +70,9 @@ function y() {
         unreadChannelIds: t,
     };
 }
-function S() {
-    let { enabled: e, inInbox: t } = o.A.useExperiment({ location: "NotificationsInboxUtils" }),
-        n = (0, a.bG)([l.A], () => l.A.getSavedMessageCount());
+function y() {
+    let { enabled: e, inInbox: t } = o.A.useConfig({ location: "NotificationsInboxUtils" }),
+        n = (0, s.bG)([l.A], () => l.A.getSavedMessageCount());
     return e && t && (n > 0 || (0, u.A)());
 }
 function v(e, t) {

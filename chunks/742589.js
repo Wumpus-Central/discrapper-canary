@@ -36,9 +36,9 @@ function I(e) {
             hideSearch: m,
             hideForLater: P,
             showDivider: D,
-            disableDoubleClick: g,
+            disableDoubleClick: U,
         } = e,
-        { enabled: U, inInbox: M } = s.A.useExperiment({ location: "HeaderBar" });
+        { enabled: g, inInbox: M } = s.A.useConfig({ location: "HeaderBar" });
     return (0, i.jsx)(d.Ay, {
         className: n,
         innerClassName: _,
@@ -54,13 +54,13 @@ function I(e) {
                               ? (0, i.jsx)(c.Ay, { guildId: a, channelId: r, className: A.$P }, a ?? r)
                               : null,
                           D && (0, i.jsx)(d.Ay.Divider, {}),
-                          P || !U || M ? null : (0, i.jsx)(o.A, {}),
+                          P || !g || M ? null : (0, i.jsx)(o.A, {}),
                       ],
                   });
         })(),
         transparent: E,
         hidden: I,
-        onDoubleClick: () => T(g),
+        onDoubleClick: () => T(U),
         "aria-label": S,
         "aria-labelledby": C,
         role: p,

@@ -1,12 +1,8 @@
 "use strict";
 n.d(t, { A: () => r });
-let r = (0, n(600975).C)({
+let r = (0, n(945810).mj)({
+    name: "2026-03-message-bookmarks",
     kind: "user",
-    id: "2024-06_message_bookmarks",
-    label: "For Later - Bookmarks & Reminders",
     defaultConfig: { enabled: !1, inInbox: !0 },
-    treatments: [
-        { id: 1, label: "Display in inbox", config: { enabled: !0, inInbox: !0 } },
-        { id: 2, label: "Display in header bar", config: { enabled: !0, inInbox: !1 } },
-    ],
+    variations: { 1: { enabled: !0, inInbox: !0 }, 2: { enabled: !0, inInbox: !1 } },
 });

@@ -1,4 +1,4 @@
-n.d(t, { A: () => f, P: () => y });
+n.d(t, { A: () => f, P: () => h });
 var i = n(627968),
     l = n(64700),
     a = n(311907),
@@ -10,17 +10,17 @@ var i = n(627968),
     u = n(85109),
     g = n(226017),
     A = n(49678),
-    p = n(927813),
-    m = n(985018);
+    m = n(927813),
+    p = n(985018);
 function f(e) {
-    let { enabled: t } = o.A.useExperiment({ location: "LongPressMessageActionSheet" }),
+    let { enabled: t } = o.A.useConfig({ location: "LongPressMessageActionSheet" }),
         n = (0, a.bG)([u.A], () => u.A.getSavedMessage(e.channel_id, e.id)),
-        l = y({ message: e, savedMessage: n });
+        l = h({ message: e, savedMessage: n });
     return t
         ? null != n || (0, g.A)()
             ? (0, i.jsxs)(r.Drp, {
                   id: "save-for-later",
-                  label: m.intl.string(m.t.tpxJto),
+                  label: p.intl.string(p.t.tpxJto),
                   leadingAccessory: { type: "icon", icon: null != n ? r.cFy : r.c$8 },
                   action: () =>
                       null == n
@@ -35,7 +35,7 @@ function f(e) {
                       null != n
                           ? (0, i.jsx)(r.Drp, {
                                 id: "remove-from-for-later",
-                                label: m.intl.string(m.t.SvXS1Z),
+                                label: p.intl.string(p.t.SvXS1Z),
                                 leadingAccessory: { type: "icon", icon: r.cFy },
                                 icon: r.cFy,
                                 action: () =>
@@ -48,7 +48,7 @@ function f(e) {
                             })
                           : (0, i.jsx)(r.Drp, {
                                 id: "create-bookmark",
-                                label: m.intl.string(m.t["9p3D9p"]),
+                                label: p.intl.string(p.t["9p3D9p"]),
                                 leadingAccessory: { type: "icon", icon: r.c$8 },
                                 icon: r.c$8,
                                 action: () => (0, d.Y)({ channelId: e.channel_id, messageId: e.id, displayToast: !0 }),
@@ -59,7 +59,7 @@ function f(e) {
               })
             : (0, i.jsx)(r.Drp, {
                   id: "save-for-later-upsell",
-                  label: m.intl.string(m.t.tpxJto),
+                  label: p.intl.string(p.t.tpxJto),
                   leadingAccessory: { type: "icon", icon: r.tvc, color: s.k0.PREMIUM_TIER_2 },
                   icon: r.tvc,
                   iconProps: { color: s.k0.PREMIUM_TIER_2 },
@@ -67,11 +67,11 @@ function f(e) {
               })
         : null;
 }
-function y(e) {
+function h(e) {
     let { message: t, savedMessage: n } = e,
         [a, s] = l.useState(new Date());
     l.useEffect(() => {
-        let e = setInterval(() => s(new Date()), p.A.Millis.MINUTE);
+        let e = setInterval(() => s(new Date()), m.A.Millis.MINUTE);
         return () => {
             clearInterval(e);
         };
@@ -83,18 +83,18 @@ function y(e) {
         u = (0, A.S)({ createReminder: o }),
         { dueInText: g } = (0, c.Ce)({ dueAt: n?.saveData.dueAt, now: a, type: c.kh.LONG });
     return n?.saveData.dueAt == null
-        ? (0, i.jsx)(r.rXV, { label: m.intl.string(m.t.roMu1H), children: u })
+        ? (0, i.jsx)(r.rXV, { label: p.intl.string(p.t.roMu1H), children: u })
         : (0, i.jsxs)(r.rXV, {
               label: g,
               children: [
                   (0, i.jsx)(r.Drp, {
                       id: "mark-complete",
-                      label: m.intl.string(m.t.yjGtdJ),
+                      label: p.intl.string(p.t.yjGtdJ),
                       leadingAccessory: { type: "icon", icon: r.Uzd },
                       icon: r.Uzd,
                       action: () => (0, d.Y)({ channelId: t.channel_id, messageId: t.id, dueAt: void 0 }),
                   }),
-                  (0, i.jsx)(r.Drp, { id: "edit-reminder", label: m.intl.string(m.t.vrbqs1), children: u }),
+                  (0, i.jsx)(r.Drp, { id: "edit-reminder", label: p.intl.string(p.t.vrbqs1), children: u }),
               ],
           });
 }

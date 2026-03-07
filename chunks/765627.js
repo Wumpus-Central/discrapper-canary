@@ -12,13 +12,13 @@ var s = n(417597),
     u = n(566908),
     h = n(646468),
     A = n(790368),
-    p = n(435084),
-    g = n(412484),
-    m = n(985018),
-    _ = n(655967);
+    m = n(435084),
+    p = n(412484),
+    g = n(985018),
+    _ = n(347461);
 function f(e) {
-    let { tab: t, setTab: n, badgeState: h, closePopout: p } = e,
-        { enabled: g, inInbox: f } = c.A.useExperiment({ location: "RecentsPopout" }),
+    let { tab: t, setTab: n, badgeState: h, closePopout: m } = e,
+        { enabled: p, inInbox: f } = c.A.useConfig({ location: "RecentsPopout" }),
         C = (0, u.Sc)({ location: "RecentsHeader" }),
         E = (0, s.bG)([d.A], () => d.A.getOverdueMessageReminderCount());
     return (0, i.jsxs)(o.Y9, {
@@ -32,14 +32,14 @@ function f(e) {
                         className: _.Hi,
                         variant: "text-lg/semibold",
                         color: "interactive-text-active",
-                        children: m.intl.string(m.t.GSmTKJ),
+                        children: g.intl.string(g.t.GSmTKJ),
                     }),
                     (0, i.jsxs)(a.sqX, {
                         className: _.ne,
                         onClick: (e) => e.stopPropagation(),
                         focusProps: { enabled: !1 },
-                        "aria-label": m.intl.string(m.t["8k+6QY"]),
-                        children: [(0, i.jsx)(x, { tab: t }), (0, i.jsx)(A.A, { closePopout: p })],
+                        "aria-label": g.intl.string(g.t["8k+6QY"]),
+                        children: [(0, i.jsx)(x, { tab: t }), (0, i.jsx)(A.A, { closePopout: m })],
                     }),
                 ],
             }),
@@ -54,10 +54,10 @@ function f(e) {
                     children: [
                         (0, i.jsxs)(a.VQ0.Item, {
                             id: l.Y2.FOR_YOU,
-                            "aria-label": m.intl.string(m.t["En+D+u"]),
+                            "aria-label": g.intl.string(g.t["En+D+u"]),
                             className: _.Mf,
                             children: [
-                                m.intl.string(m.t["En+D+u"]),
+                                g.intl.string(g.t["En+D+u"]),
                                 h?.badgeForYou
                                     ? (0, i.jsx)(a.SC0, {
                                           color: r.A.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
@@ -69,23 +69,23 @@ function f(e) {
                         (0, i.jsx)(a.VQ0.Item, {
                             id: l.Y2.UNREADS,
                             className: _.Mf,
-                            children: m.intl.string(m.t.sRUdB8),
+                            children: g.intl.string(g.t.sRUdB8),
                         }),
                         (0, i.jsx)(a.VQ0.Item, {
-                            "aria-label": m.intl.string(m.t.GRZF96),
+                            "aria-label": g.intl.string(g.t.GRZF96),
                             id: l.Y2.MENTIONS,
                             className: _.Mf,
-                            children: m.intl.string(m.t.GRZF96),
+                            children: g.intl.string(g.t.GRZF96),
                         }),
-                        g && f
+                        p && f
                             ? (0, i.jsx)(a.VQ0.Item, {
-                                  "aria-label": m.intl.string(m.t["2pAkDA"]),
+                                  "aria-label": g.intl.string(g.t["2pAkDA"]),
                                   id: l.Y2.BOOKMARKS,
                                   className: _.Mf,
                                   children:
                                       0 === E
-                                          ? m.intl.string(m.t["2pAkDA"])
-                                          : m.intl.formatToPlainString(m.t.I4fryG, { count: E }),
+                                          ? g.intl.string(g.t["2pAkDA"])
+                                          : g.intl.formatToPlainString(g.t.I4fryG, { count: E }),
                               })
                             : null,
                         C
@@ -93,7 +93,7 @@ function f(e) {
                                   "aria-label": "scheduled",
                                   id: l.Y2.SCHEDULED,
                                   className: _.Mf,
-                                  children: m.intl.string(m.t.Fn6Odn),
+                                  children: g.intl.string(g.t.Fn6Odn),
                               })
                             : null,
                     ],
@@ -107,8 +107,8 @@ function x(e) {
     return t === l.Y2.FOR_YOU
         ? (0, i.jsx)(h.xc, {})
         : t === l.Y2.UNREADS
-          ? (0, i.jsx)(g.NH, {})
+          ? (0, i.jsx)(p.NH, {})
           : t === l.Y2.MENTIONS
-            ? (0, i.jsx)(p.A, {})
+            ? (0, i.jsx)(m.A, {})
             : null;
 }

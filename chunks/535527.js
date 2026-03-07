@@ -1,12 +1,12 @@
-n.d(t, { K: () => a });
+n.d(t, { K: () => s });
 var i = n(966597),
-    s = n(203982),
-    r = n(652215);
-let a = {
+    r = n(203982),
+    a = n(652215);
+let s = {
     binds: ["mod+l"],
     comboKeysBindGlobal: !0,
     action() {
-        let { enabled: e, inInbox: t } = i.A.getCurrentConfig({ location: "keybinds" }, { autoTrackExposure: !1 });
-        if (e && !t) return s._.dispatch(r.jej.TOGGLE_FOR_LATER), !1;
+        let { enabled: e, inInbox: t } = i.A.getConfig({ location: "keybinds" });
+        if (e && !t) return r._.dispatch(a.jej.TOGGLE_FOR_LATER), !1;
     },
 };
