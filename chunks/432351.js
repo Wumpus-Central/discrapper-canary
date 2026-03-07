@@ -101,6 +101,7 @@ class l extends r.A {
     setAudioSubsystem(e) {}
     queueAudioSubsystem(e) {}
     setOffloadAdmControls(e) {}
+    updateFieldTrial(e, t) {}
     getDebugLogging() {
         return !1;
     }

@@ -448,6 +448,9 @@ class A extends s.A {
         let t = (0, d.lE)();
         null != t.setOffloadAdmControls && t.setOffloadAdmControls(e);
     }
+    updateFieldTrial(e, t) {
+        (0, d.lE)().updateFieldTrial?.(e, t);
+    }
     queueAudioSubsystem(e) {
         let t = (0, d.lE)();
         null != t.queueAudioSubsystem ? t.queueAudioSubsystem(e) : this.setAudioSubsystem(e);

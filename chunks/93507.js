@@ -275,6 +275,7 @@ class O extends l.A {
     setAudioSubsystem(e) {}
     queueAudioSubsystem(e) {}
     setOffloadAdmControls(e) {}
+    updateFieldTrial(e, t) {}
     getAudioSubsystem() {
         return N.rB.STANDARD;
     }
