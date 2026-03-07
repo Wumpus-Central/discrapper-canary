@@ -14,8 +14,8 @@ function E(t) {
         { canManageGuildEvent: h } = (0, a.nr)(A ?? E),
         T = (0, i.bG)([d.Ay], () => d.Ay.getGuildScheduledEvent(e)),
         f = h(T),
-        y = (0, o.A)(),
-        m = (0, s.A)(g, T?.id),
+        m = (0, o.A)(),
+        y = (0, s.A)(g, T?.id),
         v = (0, u.nh)(e, g);
     if (!f || null == v || null == T) return null;
     let p = null != T.recurrence_rule && !_,
@@ -26,15 +26,15 @@ function E(t) {
                           n.e("68587"),
                           n.e("28136"),
                           n.e("342"),
-                          n.e("41682"),
+                          n.e("3522"),
                       ]).then(n.bind(n, 21653));
                       return (n) => (0, l.jsx)(t, { ...n, guildScheduledEventId: e, guildId: E.id });
-                  }, y)
+                  }, m)
                 : null != g &&
                   (0, r.mMO)(async () => {
                       let { default: t } = await n.e("43940").then(n.bind(n, 271983));
                       return (e) => (0, l.jsx)(t, { ...e, guildEvent: T, recurrenceId: g });
-                  }, y);
+                  }, m);
         };
     return (0, l.jsx)(r.Drp, {
         id: c.intl.string(c.t.Rgy2dU),
@@ -48,7 +48,7 @@ function E(t) {
                         id: c.intl.string(c.t.wmVmXN),
                         label: c.intl.string(c.t.wmVmXN),
                         action: () => N(!1),
-                        disabled: m?.is_canceled || v.startTime.getTime() < Date.now(),
+                        disabled: y?.is_canceled || v.startTime.getTime() < Date.now(),
                     }),
                     (0, l.jsx)(r.Drp, {
                         id: c.intl.string(c.t.BW1Qoh),

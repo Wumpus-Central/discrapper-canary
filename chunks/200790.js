@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => A });
 var i = n(627968);
 n(64700);
 var s = n(503698),
@@ -8,73 +8,47 @@ var s = n(503698),
     o = n(688810),
     d = n(507698),
     c = n(954921),
-    u = n(354328),
-    _ = n(405810),
-    g = n(919395),
-    m = n(128450),
-    A = n(985018),
-    h = n(6022);
-function p(e) {
-    let { user: t, guild: n, className: s, sectionTitle: _, forcedDivider: p = !1, withTutorial: E = !1 } = e,
-        { analyticsLocations: T } = (0, o.Ay)(),
-        S = (0, u.A)("enable_avatar_decoration_uploads"),
-        C = (0, g.a4)({ user: t, guildId: n?.id }),
-        { pendingAvatarDecoration: f, errors: I } = (0, g.CP)(n?.id),
-        b = E ? r.wLn : a.$n;
-    return (0, i.jsxs)(m.A, {
+    u = n(919395),
+    _ = n(128450),
+    g = n(985018),
+    m = n(6022);
+function A(e) {
+    let { user: t, guild: n, className: s, sectionTitle: A, forcedDivider: h = !1, withTutorial: p = !1 } = e,
+        { analyticsLocations: x } = (0, o.Ay)(),
+        E = (0, u.a4)({ user: t, guildId: n?.id }),
+        { pendingAvatarDecoration: T, errors: S } = (0, u.CP)(n?.id),
+        C = p ? r.wLn : a.$n;
+    return (0, i.jsx)(_.A, {
         className: s,
-        forcedDivider: p,
+        forcedDivider: h,
         hasBackground: !0,
-        title: _,
-        errors: I,
-        children: [
-            (0, i.jsxs)("div", {
-                className: h.NC,
-                children: [
-                    (0, i.jsx)(b, {
-                        size: a.$n.Sizes.SMALL,
-                        onClick: () => {
-                            (0, c.L)({ analyticsLocations: T, guild: n });
-                        },
-                        className: l()({ [h.yj]: E }),
-                        children: A.intl.string(A.t.BVcYCx),
-                    }),
-                    (void 0 === f ? null != C : null != f) &&
-                        (0, i.jsx)("div", {
-                            "data-button-hoisted-classname-wrapper": !0,
-                            className: h.DT,
-                            children: (0, i.jsx)(r.Button, {
-                                variant: "secondary",
-                                size: "sm",
-                                text: (0, d.uZ)(t, n) ? A.intl.string(A.t.CHf9iJ) : A.intl.string(A.t.OrokWm),
-                                onClick: () => {
-                                    (0, g.Dx)(null, n?.id);
-                                },
-                            }),
+        title: A,
+        errors: S,
+        children: (0, i.jsxs)("div", {
+            className: m.NC,
+            children: [
+                (0, i.jsx)(C, {
+                    size: a.$n.Sizes.SMALL,
+                    onClick: () => {
+                        (0, c.L)({ analyticsLocations: x, guild: n });
+                    },
+                    className: l()({ [m.yj]: p }),
+                    children: g.intl.string(g.t.BVcYCx),
+                }),
+                (void 0 === T ? null != E : null != T) &&
+                    (0, i.jsx)("div", {
+                        "data-button-hoisted-classname-wrapper": !0,
+                        className: m.DT,
+                        children: (0, i.jsx)(r.Button, {
+                            variant: "secondary",
+                            size: "sm",
+                            text: (0, d.uZ)(t, n) ? g.intl.string(g.t.CHf9iJ) : g.intl.string(g.t.OrokWm),
+                            onClick: () => {
+                                (0, u.Dx)(null, n?.id);
+                            },
                         }),
-                ],
-            }),
-            t.isStaff() && S && (0, i.jsx)(x, { user: t }),
-        ],
+                    }),
+            ],
+        }),
     });
 }
-let x = (e) => {
-    let { user: t } = e;
-    return (0, i.jsxs)("div", {
-        className: h.J_,
-        children: [
-            (0, i.jsx)(r.Text, {
-                variant: "text-xs/bold",
-                children: "STAFF ONLY and Experimental. Upload a decoration to view throughout the app.",
-            }),
-            (0, i.jsx)(_.A, {
-                onChange: (e) => {
-                    null != e && (t.avatarDecoration = { asset: e, skuID: "PALUE000000001" });
-                },
-                size: "sm",
-                variant: "primary",
-                text: A.intl.string(A.t.a9F1Qu),
-            }),
-        ],
-    });
-};

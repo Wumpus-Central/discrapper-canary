@@ -2,7 +2,7 @@
 n.d(t, { A: () => u });
 var r = n(311907),
     i = n(73153);
-let a = {
+let s = {
         highlight_mana_buttons: "Highlight mana buttons",
         highlight_mana_components: "Highlight mana components",
         highlight_void_toggleables: "Highlight toggleable components (Checkbox, VoidRadioGroup, Switch)",
@@ -13,7 +13,6 @@ let a = {
         alt_clips_2: "Use alt clip icon 2",
         shop_disable_cache: "Shop: Disable shop cache",
         shop_include_unpublished: "Shop: Show unpublished items in the shop",
-        enable_avatar_decoration_uploads: "Shop: Enable avatar decoration uploads",
         lottie_hover_multiple_loop: "Lotties - continue playing the hover animation after mouse enter",
         ss01: "Italic - straight forms (K,R,k)",
         ss02: "Italic - straight l",
@@ -22,32 +21,32 @@ let a = {
         wishlist_user_profile_account_popout_upsell:
             "Show user profile account popout upsell (reset WISHLIST_USER_PROFILE_ACCOUNT_POPOUT_UPSELL DCF as well)",
     },
-    s = {};
+    a = {};
 function o(e) {
-    !1 === e.value ? delete s[e.toggle] : (s[e.toggle] = e.value);
+    !1 === e.value ? delete a[e.toggle] : (a[e.toggle] = e.value);
 }
 class l extends r.Ay.DeviceSettingsStore {
     static displayName = "DevToolsDesignTogglesStore";
     static persistKey = "DevToolsDesignTogglesStore";
     getUserAgnosticState() {
-        return { toggleStates: s };
+        return { toggleStates: a };
     }
     initialize(e) {
-        for (var t in a) {
+        for (var t in s) {
             let n = e?.toggleStates?.[t] ?? !1;
-            n && (s[t] = n);
+            n && (a[t] = n);
         }
     }
     get(e) {
-        return s[e] ?? !1;
+        return a[e] ?? !1;
     }
     enabled() {
-        return s;
+        return a;
     }
     allWithDescriptions() {
-        return Object.entries(a).map((e) => {
+        return Object.entries(s).map((e) => {
             let [t, n] = e;
-            return [t, s[t] ?? !1, n];
+            return [t, a[t] ?? !1, n];
         });
     }
 }
