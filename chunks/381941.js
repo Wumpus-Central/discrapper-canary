@@ -1,25 +1,25 @@
 "use strict";
 n.d(t, {
-    ES: () => s,
+    ES: () => a,
     Fd: () => l,
     Gt: () => _,
-    Hx: () => E,
+    Hx: () => g,
     N0: () => c,
     VP: () => m,
-    ZG: () => g,
+    ZG: () => E,
     _W: () => p,
     k8: () => d,
     mZ: () => u,
     q4: () => f,
-    qh: () => a,
+    qh: () => s,
     ty: () => h,
     y5: () => o,
 });
 var r = n(158390),
     i = n(927813);
 n(652215);
-let a = [0, 4, 8, 16, 24],
-    s = 16,
+let s = [0, 4, 8, 16, 24],
+    a = 16,
     o = 0,
     l = Object.freeze({
         referencedAvatarProfile: !1,
@@ -53,8 +53,8 @@ var h = (function (e) {
     );
 })({});
 let m = 0xc800000,
-    g = { timeout: 60 * i.A.Millis.SECOND, retries: 3, backoff: new r.A() };
-var E = (function (e) {
+    E = { timeout: 60 * i.A.Millis.SECOND, retries: 3, backoff: new r.A() };
+var g = (function (e) {
     return (
         (e.PUSH_NOTIFICATION = "push_notification"),
         (e.CHAT_INPUT = "chat_input"),
@@ -72,7 +72,6 @@ var E = (function (e) {
         (e.PRIVATE_MESSAGE_COMMAND = "private_message_command"),
         (e.POLL_CREATION = "poll_creation"),
         (e.SHARE_CUSTOM_THEME = "share_custom_theme"),
-        (e.CHANNEL_PROMPT = "channel_prompt"),
         (e.GIF_REPLY = "gif_reply"),
         (e.STICKER_REPLY = "sticker_reply"),
         (e.SEND_WAVE = "send_wave"),

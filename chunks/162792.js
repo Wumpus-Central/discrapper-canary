@@ -26,8 +26,8 @@ let S = l.memo(function (e) {
             compact: I = !1,
             referencedUsernameProfile: T,
             referencedAvatarProfile: N,
-            setPopout: b,
-            isReplySpineClickable: y,
+            setPopout: y,
+            isReplySpineClickable: b,
             showReplySpine: v,
         } = e,
         j = n.state === h.a.LOADED ? n.message : void 0,
@@ -57,8 +57,6 @@ let S = l.memo(function (e) {
                 return (0, a.$)((0, u.g6)({ application: e?.application, username: R?.nick }));
             if (e.type === x.lAJ.PRIVATE_CHANNEL_INTEGRATION_REMOVED)
                 return (0, a.$)((0, u.uk)({ application: e?.application, username: R?.nick }));
-            else if (e.type === x.lAJ.GUILD_DEADCHAT_REVIVE_PROMPT)
-                return "" !== e.content ? e.content : C.intl.string(C.t.wnn1Dc);
             if (null != e.content && "" !== e.content) {
                 let t = { formatInline: !0, allowLinks: !0 },
                     n = e.isFirstMessageInForumPost(S)
@@ -78,11 +76,11 @@ let S = l.memo(function (e) {
         ),
         P = (0, E.r4)(j?.author.id, S.id),
         w = (0, E.Ck)(t, j),
-        k = (0, E.H9)(j, S, T, b),
-        U = (0, E.Ge)(N, b),
+        k = (0, E.H9)(j, S, T, y),
+        U = (0, E.Ge)(N, y),
         G = l.useCallback(() => {
-            b({ referencedUsernameProfile: !1, referencedAvatarProfile: !1 });
-        }, [b]),
+            y({ referencedUsernameProfile: !1, referencedAvatarProfile: !1 });
+        }, [y]),
         F = (0, p.X4)(t);
     return (0, i.jsx)(f.A, {
         repliedAuthor: R,
@@ -102,7 +100,7 @@ let S = l.memo(function (e) {
         onClickReply: w,
         onContextMenu: P,
         onPopoutRequestClose: G,
-        isReplySpineClickable: y,
+        isReplySpineClickable: b,
         showReplySpine: v,
     });
 });
