@@ -1,4 +1,4 @@
-n.d(t, { A: () => b });
+n.d(t, { A: () => A });
 var a = n(627968),
     i = n(64700),
     s = n(417597),
@@ -9,9 +9,9 @@ var a = n(627968),
     c = n(500380),
     u = n(295405),
     m = n(652215),
-    h = n(815907),
-    x = n(206467),
-    p = n(661251);
+    h = n(872985),
+    x = n(826917),
+    p = n(930821);
 let g = [
         { label: "3DS and Failed Cards", value: "", disabled: !0 },
         { label: "Other", value: "OTHER" },
@@ -687,29 +687,167 @@ let g = [
             postal_code: "82001",
             country: "US",
         },
+    },
+    b = [
+        { label: "None", value: "NONE" },
+        { label: "Alberta", value: "AB" },
+        { label: "British Columbia", value: "BC" },
+        { label: "Manitoba", value: "MB" },
+        { label: "New Brunswick", value: "NB" },
+        { label: "Newfoundland and Labrador", value: "NL" },
+        { label: "Northwest Territories", value: "NT" },
+        { label: "Nova Scotia", value: "NS" },
+        { label: "Nunavut", value: "NU" },
+        { label: "Ontario", value: "ON" },
+        { label: "Prince Edward Island", value: "PE" },
+        { label: "Quebec", value: "QC" },
+        { label: "Saskatchewan", value: "SK" },
+        { label: "Yukon", value: "YT" },
+    ],
+    j = {
+        NONE: null,
+        AB: {
+            name: "Alberta Legislature Building",
+            line_1: "10800 97 Avenue NW",
+            line_2: "",
+            city: "Edmonton",
+            state: "AB",
+            postal_code: "T5K 2B6",
+            country: "CA",
+        },
+        BC: {
+            name: "British Columbia Parliament Buildings",
+            line_1: "501 Belleville Street",
+            line_2: "",
+            city: "Victoria",
+            state: "BC",
+            postal_code: "V8V 2L8",
+            country: "CA",
+        },
+        MB: {
+            name: "Manitoba Legislative Building",
+            line_1: "450 Broadway",
+            line_2: "",
+            city: "Winnipeg",
+            state: "MB",
+            postal_code: "R3C 0V8",
+            country: "CA",
+        },
+        NB: {
+            name: "New Brunswick Legislative Building",
+            line_1: "706 Queen Street",
+            line_2: "",
+            city: "Fredericton",
+            state: "NB",
+            postal_code: "E3B 1C5",
+            country: "CA",
+        },
+        NL: {
+            name: "Newfoundland and Labrador Confederation Building",
+            line_1: "100 Prince Philip Drive",
+            line_2: "",
+            city: "St. John's",
+            state: "NL",
+            postal_code: "A1B 4J6",
+            country: "CA",
+        },
+        NT: {
+            name: "Northwest Territories Legislative Assembly",
+            line_1: "4570 48 Street",
+            line_2: "",
+            city: "Yellowknife",
+            state: "NT",
+            postal_code: "X1A 1A2",
+            country: "CA",
+        },
+        NS: {
+            name: "Nova Scotia Province House",
+            line_1: "1726 Hollis Street",
+            line_2: "",
+            city: "Halifax",
+            state: "NS",
+            postal_code: "B3J 2Y3",
+            country: "CA",
+        },
+        NU: {
+            name: "Nunavut Legislative Assembly",
+            line_1: "926 Federal Road",
+            line_2: "",
+            city: "Iqaluit",
+            state: "NU",
+            postal_code: "X0A 0H0",
+            country: "CA",
+        },
+        ON: {
+            name: "Ontario Legislative Building",
+            line_1: "111 Wellesley Street West",
+            line_2: "",
+            city: "Toronto",
+            state: "ON",
+            postal_code: "M7A 1A2",
+            country: "CA",
+        },
+        PE: {
+            name: "Prince Edward Island Province House",
+            line_1: "165 Richmond Street",
+            line_2: "",
+            city: "Charlottetown",
+            state: "PE",
+            postal_code: "C1A 1J1",
+            country: "CA",
+        },
+        QC: {
+            name: "Quebec Parliament Building",
+            line_1: "1045 Rue des Parlementaires",
+            line_2: "",
+            city: "Quebec City",
+            state: "QC",
+            postal_code: "G1A 1A3",
+            country: "CA",
+        },
+        SK: {
+            name: "Saskatchewan Legislative Building",
+            line_1: "2405 Legislative Drive",
+            line_2: "",
+            city: "Regina",
+            state: "SK",
+            postal_code: "S4S 0B3",
+            country: "CA",
+        },
+        YT: {
+            name: "Yukon Legislative Assembly",
+            line_1: "2071 2nd Avenue",
+            line_2: "",
+            city: "Whitehorse",
+            state: "YT",
+            postal_code: "Y1A 1B3",
+            country: "CA",
+        },
     };
-function b() {
+function A() {
     let [e, t] = i.useState("US"),
         [n, d] = i.useState(null),
-        [m, b] = i.useState(null),
-        [j, A] = i.useState("pm_card_us"),
-        [T, S] = i.useState(!1),
-        E = Object.values((0, s.bG)([u.A], () => u.A.paymentSources)),
-        N = _[e],
-        I = async () => {
-            let t = j;
+        [m, A] = i.useState(null),
+        [C, y] = i.useState(null),
+        [E, N] = i.useState(null),
+        [I, k] = i.useState("pm_card_us"),
+        [R, O] = i.useState(!1),
+        w = Object.values((0, s.bG)([u.A], () => u.A.paymentSources)),
+        D = _[e],
+        M = async () => {
+            let t = I;
             "" === t && (t = "pm_card_us"),
                 await l.Bo.post({
                     url: "/debug/payment-source",
-                    body: { token: t, address: "US" === e ? m : null },
+                    body: { token: t, address: "US" === e ? m : "CA" === e ? E : null },
                     rejectWithError: !1,
                 }),
                 await (0, o.$o)();
         },
-        k = async () => {
+        P = async () => {
             await l.Bo.del({ url: "/debug/payment-source", rejectWithError: !1 }), await (0, o.$o)();
         },
-        R = async () => {
+        U = async () => {
             await l.Bo.del({ url: "/debug/rate-limits", rejectWithError: !1 }), window.location.reload();
         };
     return (
@@ -745,7 +883,7 @@ function b() {
                                         };
                                     }),
                                 onSelectionChange: (e) => {
-                                    t(e), A(_[e][0].value), S(1 === _[e].length);
+                                    t(e), k(_[e][0].value), O(1 === _[e].length);
                                 },
                             }),
                             "US" === e &&
@@ -759,39 +897,53 @@ function b() {
                                         return { id: t, value: t, label: n };
                                     }),
                                     onSelectionChange: (e) => {
-                                        d(e), b(v[e] ?? null);
+                                        d(e), A(v[e] ?? null);
+                                    },
+                                }),
+                            "CA" === e &&
+                                (0, a.jsx)(r.l6P, {
+                                    selectionMode: "single",
+                                    label: "CA Address",
+                                    hideLabel: !0,
+                                    value: C,
+                                    options: b.map((e) => {
+                                        let { value: t, label: n } = e;
+                                        return { id: t, value: t, label: n };
+                                    }),
+                                    onSelectionChange: (e) => {
+                                        y(e), N(j[e] ?? null);
                                     },
                                 }),
                             (0, a.jsx)(r.l6P, {
                                 selectionMode: "single",
                                 label: "Card Token",
                                 hideLabel: !0,
-                                value: j,
-                                options: N.map((e) => {
+                                value: I,
+                                options: D.map((e) => {
                                     let { value: t, label: n } = e;
                                     return { id: t, value: t, label: n };
                                 }),
-                                onSelectionChange: A,
-                                disabled: T,
+                                onSelectionChange: k,
+                                disabled: R,
                             }),
                             (0, a.jsx)(r.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Create Stripe Credit Card",
-                                onClick: I,
+                                onClick: M,
                             }),
-                            E.length > 0 &&
+                            w.length > 0 &&
                                 (0, a.jsx)(r.Button, {
                                     variant: "primary",
                                     size: "sm",
                                     text: "Delete All Payment Sources",
-                                    onClick: k,
+                                    onClick: P,
                                 }),
                             (0, a.jsx)(r.Button, {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Reset API Rate limits and reload app",
-                                onClick: R,
+                                onClick: U,
                             }),
                         ],
                     }),
@@ -800,27 +952,27 @@ function b() {
                         variant: "text-lg/bold",
                         children: "Generate Gift Card PIN",
                     }),
-                    (0, a.jsx)(C, {}),
+                    (0, a.jsx)(T, {}),
                     (0, a.jsx)(r.Text, {
                         style: { marginTop: "24px", marginBottom: "16px" },
                         variant: "text-lg/bold",
                         children: "Existing Payment Sources",
                     }),
-                    E.map((e) => (0, a.jsx)(y, { paymentSource: e }, e.id)),
+                    w.map((e) => (0, a.jsx)(S, { paymentSource: e }, e.id)),
                 ],
             }),
         })
     );
 }
-let j = [
+let C = [
         { id: "US", value: "US", label: "United States (USD)" },
         { id: "CA", value: "CA", label: "Canada (CAD)" },
         { id: "FR", value: "FR", label: "France (EUR)" },
         { id: "GB", value: "GB", label: "United Kingdom (GBP)" },
         { id: "DE", value: "DE", label: "Germany (EUR)" },
     ],
-    A = { US: "usd", CA: "cad", FR: "eur", GB: "gbp", DE: "eur" };
-function C() {
+    y = { US: "usd", CA: "cad", FR: "eur", GB: "gbp", DE: "eur" };
+function T() {
     let [e, t] = i.useState("US"),
         [n, s] = i.useState("500"),
         [o, d] = i.useState(null),
@@ -835,7 +987,7 @@ function C() {
                 try {
                     let t = await l.Bo.post({
                         url: "/billing/gift-card/create-on-demand-pin",
-                        body: { country: e, currency: A[e], amount: g },
+                        body: { country: e, currency: y[e], amount: g },
                         rejectWithError: !0,
                     });
                     d(t.body.pin);
@@ -859,7 +1011,7 @@ function C() {
                         selectionMode: "single",
                         label: "Gift Card Country",
                         value: e,
-                        options: j,
+                        options: C,
                         onSelectionChange: t,
                     }),
                     (0, a.jsx)(r.ksK, {
@@ -901,7 +1053,7 @@ function C() {
         ],
     });
 }
-function y(e) {
+function S(e) {
     let { paymentSource: t } = e,
         n = async () => {
             await l.Bo.patch({ url: m.Rsh.BILLING_PAYMENT_SOURCE(t.id), body: { default: !0 }, rejectWithError: !1 }),
