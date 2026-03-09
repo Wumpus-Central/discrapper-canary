@@ -5,15 +5,15 @@ var n = l(627968),
     r = l(661191),
     a = l(333672),
     o = l(985018),
-    d = l(157190);
+    d = l(2404);
 let c = { type: "image", src: l(685831).A, aspectRatio: "16/9" };
 function u(t) {
     let {
             transitionState: e,
             toGuild: l,
             fromGuilds: u,
-            slotCount: m,
-            canceledCount: x,
+            slotCount: x,
+            canceledCount: m,
             isModifyingSubscription: h,
             error: g,
             onConfirm: C,
@@ -34,7 +34,7 @@ function u(t) {
         children: [
             (0, n.jsx)(s.Text, {
                 variant: "text-md/normal",
-                children: o.intl.formatToPlainString(o.t.SSA2lu, { slotCount: m, guildCount: v ?? 0 }),
+                children: o.intl.formatToPlainString(o.t.SSA2lu, { slotCount: x, guildCount: v ?? 0 }),
             }),
             (0, n.jsx)(s.Text, {
                 variant: "text-xs/bold",
@@ -51,13 +51,13 @@ function u(t) {
             (0, n.jsx)(s.Text, {
                 variant: "text-xs/normal",
                 className: d.bV,
-                children: o.intl.format(o.t.ct6oxD, { slotCount: m }),
+                children: o.intl.format(o.t.ct6oxD, { slotCount: x }),
             }),
             (0, n.jsx)("div", {
                 className: d.P4,
                 children: (0, n.jsx)(a.Ay, { guild: l, subscriptionChange: u.length }),
             }),
-            x > 0 ? (0, n.jsx)(a.ti, { canceledCount: x }) : null,
+            m > 0 ? (0, n.jsx)(a.ti, { canceledCount: m }) : null,
             null != g &&
                 (0, n.jsx)(s.Text, {
                     color: "text-feedback-critical",

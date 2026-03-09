@@ -12,7 +12,7 @@ var i = n(627968),
     h = n(590858),
     _ = n(652215),
     m = n(985018),
-    g = n(40926);
+    g = n(918704);
 let p = {
     [_.uje.WINDOWS]: A.PlatformTypes.WINDOWS,
     [_.uje.MACOS]: A.PlatformTypes.OSX,

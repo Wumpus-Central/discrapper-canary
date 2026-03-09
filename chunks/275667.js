@@ -6,7 +6,7 @@ var i = n(627968),
     r = n(253932),
     a = n(461213),
     o = n(985018),
-    c = n(407709);
+    c = n(73187);
 function d(e) {
     let { onClick: t } = e;
     return (0, i.jsx)(l.DUT, {

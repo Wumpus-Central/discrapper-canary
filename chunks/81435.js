@@ -35,9 +35,9 @@ var i = n(627968),
     G = n(559873),
     U = n(346061),
     P = n(652215),
-    w = n(21786),
+    w = n(228160),
     k = n(985018),
-    V = n(823221);
+    V = n(471135);
 function B(e) {
     let { message: t, channel: n, focusProps: l, isSelected: a, isUnread: o, groupedMessages: h } = e,
         A = n.type === P.rbe.UNKNOWN ? u.N$i : (0, p.gU)(n, null),

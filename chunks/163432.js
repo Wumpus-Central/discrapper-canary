@@ -8,7 +8,7 @@ var i = n(627968),
     c = n(403362),
     d = n(175203),
     u = n(806931),
-    h = n(79932);
+    h = n(107826);
 let m = 112,
     A = (16 / 9) * 112 + 8,
     g = 10 * o.A.Millis.SECOND;
@@ -65,26 +65,26 @@ function f(e, t) {
             let x = null == _ || h ? e : e - i - o,
                 C = Math.max(0, Math.min(Math.floor((x - o) / (r + o)), d, t.length)),
                 S = Math.min((x - o) / C - o, i),
-                I = Math.max(0, C - A.length),
-                T = A.slice(0, C),
-                N = m.slice(0, I),
-                b = Array(I);
-            if (I > 0) {
+                T = Math.max(0, C - A.length),
+                I = A.slice(0, C),
+                N = m.slice(0, T),
+                y = Array(T);
+            if (T > 0) {
                 let e = [];
                 for (let t of N) {
                     let n = E.current[t.id];
-                    null != n && n < I ? (b[n] = t) : e.push(t);
+                    null != n && n < T ? (y[n] = t) : e.push(t);
                 }
-                for (let t = 0; t < b.length; t++) {
-                    if (null != b[t]) continue;
+                for (let t = 0; t < y.length; t++) {
+                    if (null != y[t]) continue;
                     let n = e.shift();
                     if (null == n) break;
-                    b[t] = n;
+                    y[t] = n;
                 }
             }
-            let y = b.filter(c.Vq);
-            E.current = (0, s.keyBy)((0, s.range)(y.length), (e) => y[e].id);
-            let v = [...T, ...y];
+            let b = y.filter(c.Vq);
+            E.current = (0, s.keyBy)((0, s.range)(b.length), (e) => b[e].id);
+            let v = [...I, ...b];
             return (
                 null != _ && (h && v.length >= C ? (v[Math.max(0, v.length - 1)] = _) : v.push(_)),
                 { visibleParticipants: v, participantTileWidth: S }

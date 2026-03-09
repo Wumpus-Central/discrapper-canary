@@ -11,16 +11,16 @@ var i = n(627968),
     m = n(740075),
     _ = n(706727),
     A = n(332173),
-    f = n(657331),
-    h = n(734057),
-    g = n(317525),
-    E = n(71393),
+    E = n(657331),
+    f = n(734057),
+    h = n(317525),
+    g = n(71393),
     p = n(994500),
     x = n(287809),
     C = n(763754);
 n(827669);
 var I = n(985018),
-    T = n(99245);
+    T = n(998815);
 let N = { tag: "span", variant: "text-md/normal", color: "text-default" },
     S = { className: r()("mention", T.lE) };
 function R(e) {
@@ -30,8 +30,8 @@ let v = l.memo(function (e) {
     let t,
         { channel: n, messageId: a, interactionData: r } = e,
         { analyticsLocations: v } = (0, d.Ay)(),
-        { onCopy: M, copyRef: j } = (0, m.A)(n, r?.application_command?.id),
-        O = (0, s.bG)([E.A], () => E.A.getGuild(n.guild_id), [n.guild_id]);
+        { onCopy: O, copyRef: M } = (0, m.A)(n, r?.application_command?.id),
+        j = (0, s.bG)([g.A], () => g.A.getGuild(n.guild_id), [n.guild_id]);
     if (
         (l.useEffect(() => {
             (null == r || (r.type === c.kc.CHAT && void 0 === r.application_command)) && _.S7(n.id, a);
@@ -53,7 +53,7 @@ let v = l.memo(function (e) {
                             messageId: d,
                             parentOptionKey: m,
                             commandOptionSpec: _,
-                            sourceAnalyticsLocations: E,
+                            sourceAnalyticsLocations: g,
                         } = t,
                         T = null != m ? m + " " + a.name : a.name;
                     if (a.type === c.n4.SUB_COMMAND || a.type === c.n4.SUB_COMMAND_GROUP) {
@@ -79,7 +79,7 @@ let v = l.memo(function (e) {
                                     messageId: d,
                                     parentOptionKey: T,
                                     commandOptionSpec: n[i.name],
-                                    sourceAnalyticsLocations: E,
+                                    sourceAnalyticsLocations: g,
                                 }),
                             );
                         return t;
@@ -95,12 +95,12 @@ let v = l.memo(function (e) {
                                     n = (0, i.jsxs)(A.A, {
                                         ...S,
                                         onClick: () =>
-                                            (0, f.openUserProfileModal)({
+                                            (0, E.openUserProfileModal)({
                                                 userId: t.id,
                                                 guildId: r.guild_id,
                                                 channelId: r.id,
                                                 messageId: d,
-                                                sourceAnalyticsLocations: E,
+                                                sourceAnalyticsLocations: g,
                                             }),
                                         children: ["@", e.nick],
                                     });
@@ -109,20 +109,20 @@ let v = l.memo(function (e) {
                             }
                             case c.n4.CHANNEL: {
                                 let e = a.value.toString(),
-                                    t = h.A.getChannel(e);
+                                    t = f.A.getChannel(e);
                                 null != t &&
                                     (n = (0, i.jsxs)(A.A, { ...S, children: ["#", (0, u.m1)(t, x.default, p.A)] }));
                                 break;
                             }
                             case c.n4.ROLE: {
                                 let e = a.value.toString(),
-                                    t = null != s ? g.A.getRole(s.id, e) : void 0;
+                                    t = null != s ? h.A.getRole(s.id, e) : void 0;
                                 null != t && (n = (0, i.jsxs)(A.A, { ...S, children: ["@", t.name] }));
                                 break;
                             }
                             case c.n4.MENTIONABLE: {
                                 let e = a.value.toString(),
-                                    t = null != s ? g.A.getRole(s.id, e) : void 0;
+                                    t = null != s ? h.A.getRole(s.id, e) : void 0;
                                 if (null != t) n = (0, i.jsxs)(A.A, { children: ["@", t.name] });
                                 else {
                                     let t = x.default.getUser(e);
@@ -131,10 +131,10 @@ let v = l.memo(function (e) {
                                         n = (0, i.jsxs)(A.A, {
                                             ...S,
                                             onClick: () =>
-                                                (0, f.openUserProfileModal)({
+                                                (0, E.openUserProfileModal)({
                                                     userId: t.id,
                                                     guildId: r.guild_id,
-                                                    sourceAnalyticsLocations: E,
+                                                    sourceAnalyticsLocations: g,
                                                 }),
                                             children: ["@", e.nick],
                                         });
@@ -171,7 +171,7 @@ let v = l.memo(function (e) {
                 })({
                     option: t,
                     channel: n,
-                    guild: O,
+                    guild: j,
                     messageId: a,
                     parentOptionKey: null,
                     commandOptionSpec: s[t.name],
@@ -189,8 +189,8 @@ let v = l.memo(function (e) {
         className: T.kL,
         onCopy: (e) => {
             let t = window?.getSelection()?.toString() ?? "";
-            t.startsWith("/") && t.endsWith("\n") && M(e, r);
+            t.startsWith("/") && t.endsWith("\n") && O(e, r);
         },
-        children: [(0, i.jsx)("div", { className: T.YL, ref: j, children: t }), (0, i.jsx)("div", { className: T.xQ })],
+        children: [(0, i.jsx)("div", { className: T.YL, ref: M, children: t }), (0, i.jsx)("div", { className: T.xQ })],
     });
 });

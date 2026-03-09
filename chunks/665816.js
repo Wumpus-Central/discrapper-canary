@@ -1,8 +1,8 @@
 n.d(t, { i: () => x });
 var i = n(627968);
 n(64700);
-var l = n(503698),
-    r = n.n(l),
+var r = n(503698),
+    l = n.n(r),
     a = n(835245),
     s = n(397927),
     o = n(954571),
@@ -12,14 +12,14 @@ var l = n(503698),
     _ = n(394900),
     m = n(652215),
     h = n(985018),
-    p = n(31020),
+    p = n(933674),
     g = n(956324);
 function A(e) {
-    let { questId: t, questContent: n, fullWidth: l } = e;
+    let { questId: t, questContent: n, fullWidth: r } = e;
     return (0, i.jsx)("div", {
         className: p.UD,
         children: (0, i.jsx)(s.Button, {
-            fullWidth: l,
+            fullWidth: r,
             variant: "primary",
             onClick: () => {
                 (0, u.navigateToQuestHome)({ fromContent: n }),
@@ -36,7 +36,7 @@ function A(e) {
     });
 }
 function x(e) {
-    let { questId: t, fallbackReason: n, bodyText: l, questContent: a } = e,
+    let { questId: t, fallbackReason: n, bodyText: r, questContent: a } = e,
         { containerRef: o, size: c } = (0, _.L)();
     return (
         (0, d.Ii)(n, t),
@@ -44,7 +44,7 @@ function x(e) {
             ref: (e) => {
                 o.current = e;
             },
-            className: r()(p.kL, { [p.U]: "lg" === c, [p.SP]: "lg" !== c }),
+            className: l()(p.kL, { [p.U]: "lg" === c, [p.SP]: "lg" !== c }),
             children: [
                 (0, i.jsxs)("div", {
                     className: p.hQ,
@@ -58,7 +58,7 @@ function x(e) {
                             variant: "lg" === c ? "text-sm/medium" : "text-xs/medium",
                             color: "text-default",
                             className: p.__invalid_mobileWebCopy,
-                            children: l,
+                            children: r,
                         }),
                         (0, i.jsx)(A, { questId: t, questContent: a, fullWidth: "lg" !== c }),
                     ],

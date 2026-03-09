@@ -8,10 +8,10 @@ var n = l(627968),
     d = l(73939),
     c = l(397927),
     u = l(618167),
-    m = l(166403),
-    x = l(661191),
+    x = l(166403),
+    m = l(661191),
     h = l(985018),
-    g = l(94511);
+    g = l(199326);
 function C(t) {
     let { imageClass: e, children: l, error: i } = t;
     return (0, n.jsxs)("div", {
@@ -33,7 +33,7 @@ function C(t) {
 }
 let j = (t) => {
     let { canceledCount: e } = t,
-        l = (0, o.bG)([m.A], () => m.A.getPremiumTypeSubscription());
+        l = (0, o.bG)([x.A], () => x.A.getPremiumTypeSubscription());
     return null == l
         ? null
         : (0, n.jsxs)("div", {
@@ -63,9 +63,9 @@ function v(t) {
 }
 function p(t) {
     let { imageClass: e, blurb: l, fromGuilds: s, toGuild: r, error: a, slotCount: o = 1, canceledCount: d = 0 } = t,
-        m = i.useRef(s),
-        v = m.current?.length,
-        p = m.current?.reduce((t, e) => (t.hasOwnProperty(e.id) || (t[e.id] = []), t[e.id].push(e), t), {});
+        x = i.useRef(s),
+        v = x.current?.length,
+        p = x.current?.reduce((t, e) => (t.hasOwnProperty(e.id) || (t[e.id] = []), t[e.id].push(e), t), {});
     return (0, n.jsxs)(C, {
         imageClass: e,
         error: a,
@@ -77,7 +77,7 @@ function p(t) {
                 children: h.intl.format(h.t["5zQYEz"], { guildCount: v ?? 0 }),
             }),
             null != p
-                ? x.default
+                ? m.default
                       .keys(p)
                       .map((t) =>
                           (0, n.jsx)(u.A, { className: g.vW, guild: p[t][0], subscriptionChange: -1 * p[t].length }, t),
@@ -107,17 +107,17 @@ let f = (t) => {
             warning: d,
             slotCount: c = 1,
             canceledCount: u = 0,
-            isTransfer: m = !1,
-            fromGuilds: x,
+            isTransfer: x = !1,
+            fromGuilds: m,
             toGuild: g,
             confirmation: C,
             confirmationLabel: j,
             isModifyingSubscription: f,
             onConfirm: S,
             onCancel: A,
-            error: N,
+            error: y,
         } = t,
-        y = [
+        N = [
             { variant: "secondary", text: h.intl.string(h.t["ETE/oC"]), onClick: A, disabled: f },
             { variant: "primary", text: C, onClick: S, loading: f, "aria-label": j },
         ];
@@ -129,13 +129,13 @@ let f = (t) => {
             (0, n.jsx)(a.rQ0, { title: i }),
             (0, n.jsx)(a.cwr, {
                 children:
-                    m && null != g
+                    x && null != g
                         ? (0, n.jsx)(p, {
                               imageClass: r ?? "",
                               blurb: s,
-                              fromGuilds: x,
+                              fromGuilds: m,
                               toGuild: g,
-                              error: N,
+                              error: y,
                               slotCount: c,
                               canceledCount: u,
                           })
@@ -145,13 +145,13 @@ let f = (t) => {
                                 blurb: s,
                                 guild: o,
                                 warning: d,
-                                error: N,
+                                error: y,
                                 slotCount: c,
                                 canceledCount: u,
                             })
                           : null,
             }),
-            (0, n.jsx)(a.H7u, { actions: y, actionsFullWidth: !1 }),
+            (0, n.jsx)(a.H7u, { actions: N, actionsFullWidth: !1 }),
         ],
     });
 };

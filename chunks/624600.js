@@ -3,8 +3,8 @@ var r = n(627968),
     l = n(64700),
     i = n(503698),
     s = n.n(i),
-    a = n(380278),
-    o = n(23373);
+    a = n(490249),
+    o = n(712119);
 let u = (e) => {
     let {
             segment: t,
@@ -21,10 +21,10 @@ let u = (e) => {
             glowClassName: v,
             progressFillClassName: x,
         } = e,
-        { startPx: g, endPx: A, leftIndicatorIndex: S, rightIndicatorIndex: C } = t,
-        _ = A - g,
+        { startPx: g, endPx: S, leftIndicatorIndex: A, rightIndicatorIndex: C } = t,
+        _ = S - g,
         b = u.to((e) => Math.min(Math.max(0, e - g), _)),
-        y = null != n && null != c && S === n,
+        y = null != n && null != c && A === n,
         T = !y && null != n && null != c && C === n,
         N = y || T,
         D = T
@@ -32,13 +32,13 @@ let u = (e) => {
             : b.to((e) => `translateX(-${_ - e}px)`),
         R = N ? (0, a.to)([b, c], (e, t) => (y ? Math.max(0, e - t) : Math.min(e, _ - t))) : b,
         L = Math.max(0, (p ?? 0) - g),
-        I = E ? o.KR : o.Fv,
-        j = l.useMemo(
+        j = E ? o.KR : o.Fv,
+        I = l.useMemo(
             () =>
                 m
                     ?.map((e) => ({ startPx: e.start * d, endPx: (e.start + e.size) * d }))
-                    .filter((e) => e.endPx >= g && e.startPx <= A),
-            [m, g, A, d],
+                    .filter((e) => e.endPx >= g && e.startPx <= S),
+            [m, g, S, d],
         );
     return (0, r.jsxs)(a.animated.div, {
         className: o.$v,
@@ -47,7 +47,7 @@ let u = (e) => {
             width: N ? c.to((e) => _ - e) : _,
             "--custom-segment-bg": null != i ? i : void 0,
             "--custom-r-left": u.to((e) => (0 === g || e >= g ? "99px" : "0px")),
-            "--custom-r-right": u.to((e) => (A >= d || e >= A ? "99px" : "0px")),
+            "--custom-r-right": u.to((e) => (S >= d || e >= S ? "99px" : "0px")),
             "--custom-timeline-width": `${d}px`,
         },
         children: [
@@ -58,11 +58,11 @@ let u = (e) => {
                         className: o.Bw,
                         style: { left: y ? c.to((e) => -(g + e)) : -g },
                         children: [
-                            j?.map((e) =>
+                            I?.map((e) =>
                                 (0, r.jsx)(
                                     "div",
                                     {
-                                        className: s()(o.r, I),
+                                        className: s()(o.r, j),
                                         style: { width: `${e.endPx - e.startPx}px`, left: `${e.startPx}px` },
                                     },
                                     `${e.startPx}:${e.endPx}`,
@@ -70,7 +70,7 @@ let u = (e) => {
                             ),
                             !f &&
                                 L > 0 &&
-                                (0, r.jsx)("div", { className: s()(o.YK, I), style: { width: `${L}px`, opacity: 1 } }),
+                                (0, r.jsx)("div", { className: s()(o.YK, j), style: { width: `${L}px`, opacity: 1 } }),
                         ],
                     }),
                     (0, r.jsx)(a.animated.div, {

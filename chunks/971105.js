@@ -1,4 +1,4 @@
-n.d(t, { A: () => L });
+n.d(t, { A: () => D });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -24,8 +24,8 @@ var i = n(627968),
     b = n(788868),
     N = n(818348),
     v = n(985018),
-    j = n(62495),
-    O = n(956171);
+    j = n(166789),
+    O = n(124953);
 function R(e) {
     let { payments: t, locale: n, compactMode: l, numPages: r } = e,
         o = s.useRef(null),
@@ -150,7 +150,7 @@ function P(e) {
         n = e.subscription?.items[0].planId;
     return !(null == t || null == n || Object.values(b.pe).includes(t) || (0, C.ys)(n));
 }
-function L(e) {
+function D(e) {
     let t = (0, c.bG)([E.A], () => E.A.getPayments()),
         n = (0, c.bG)([S.A], () => S.A.getPremiumTypeSubscription()),
         l = s.useMemo(

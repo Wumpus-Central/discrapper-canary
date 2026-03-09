@@ -12,7 +12,7 @@ var i = n(627968),
     h = n(572164),
     A = n(806931),
     m = n(985018),
-    p = n(27962);
+    p = n(639291);
 let g = (e) => {
     let { channelId: t } = e;
     return (0, s.bG)([d.A, o.A, u.A, c.Ay], () => {

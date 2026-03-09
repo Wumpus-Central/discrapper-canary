@@ -1,4 +1,4 @@
-n.d(t, { Ix: () => k, J3: () => L, Q3: () => w, mx: () => H });
+n.d(t, { Ix: () => k, J3: () => D, Q3: () => w, mx: () => H });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
@@ -28,13 +28,13 @@ var i = n(627968),
     O = n(49999),
     R = n(788868),
     y = n(985018),
-    P = n(318684);
-let L = () => {
+    P = n(21082);
+let D = () => {
     (0, p.Dr)(a.M.CLIENT_THEMES_SPARKLE_PREVIEW, { dismissAction: O.i.PRIMARY, forceTrack: !0 }),
         (0, h.nf)(h.HP.CLIENT_THEMES),
         (0, v.default)();
 };
-function D() {
+function L() {
     let e = (0, x.O)(),
         t = (0, S.U9)(e, R.pe.TIER_2)
             ? y.intl.formatToPlainString(y.t.bkQ4bH, { percent: e?.discount.amount })
@@ -54,8 +54,8 @@ function G() {
         : (0, i.jsxs)("div", {
               className: P.gY,
               children: [
-                  (0, i.jsx)(o.Button, { variant: "secondary", text: y.intl.string(y.t["E+COuA"]), onClick: L }),
-                  (0, i.jsx)(D, {}),
+                  (0, i.jsx)(o.Button, { variant: "secondary", text: y.intl.string(y.t["E+COuA"]), onClick: D }),
+                  (0, i.jsx)(L, {}),
               ],
           });
 }
@@ -86,7 +86,7 @@ function U() {
                           variant: "secondary",
                           fullWidth: !0,
                           text: y.intl.string(y.t["E+COuA"]),
-                          onClick: () => L(),
+                          onClick: () => D(),
                       }),
                   }),
                   (0, i.jsx)("div", { className: P.BU }),
@@ -142,7 +142,7 @@ function V() {
 let w = () =>
     (0, l.bG)([g.A], () => g.A.isPreview)
         ? null
-        : (0, i.jsx)(o.Button, { variant: "primary", text: y.intl.string(y.t.qYXrkX), onClick: L });
+        : (0, i.jsx)(o.Button, { variant: "primary", text: y.intl.string(y.t.qYXrkX), onClick: D });
 function H(e) {
     let { size: t } = e;
     return (0, i.jsx)(A.Ay, {

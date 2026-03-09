@@ -13,7 +13,7 @@ var l = n(627968),
     m = n(691012),
     g = n(895202),
     v = n(985018),
-    j = n(6754);
+    j = n(330156);
 function A(e) {
     var t;
     let { guildId: n, guildEvent: A, guildEventId: N, error: f } = e,

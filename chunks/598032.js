@@ -18,22 +18,22 @@ var i = s(503698),
     g = s(420659),
     j = s(753070),
     v = s(731854),
-    A = s(332800),
-    S = s(985018),
-    y = s(3316);
+    A = s(191850),
+    y = s(985018),
+    S = s(607186);
 function C() {
-    return (0, r.jsx)("span", { className: y.gO, children: "•" });
+    return (0, r.jsx)("span", { className: S.gO, children: "•" });
 }
 function b(e) {
     let { source: t } = e,
         { data: s } = (0, c.YY)(null != t && (0, _.l)(t) ? t.id : void 0);
     return null == t
-        ? (0, r.jsx)(o.Fzq, { className: y.Jd, size: "md", color: "currentColor" })
+        ? (0, r.jsx)(o.Fzq, { className: S.Jd, size: "md", color: "currentColor" })
         : (0, _.l)(t)
           ? (0, r.jsx)(d.A, { game: s, pid: t.pid })
           : null == t.icon || "" === t.icon
-            ? (0, r.jsx)(o.Fzq, { className: y.Jd, size: "md", color: "currentColor" })
-            : (0, r.jsx)("img", { src: t.icon, alt: "", className: y.pI });
+            ? (0, r.jsx)(o.Fzq, { className: S.Jd, size: "md", color: "currentColor" })
+            : (0, r.jsx)("img", { src: t.icon, alt: "", className: S.pI });
 }
 function w() {
     let [{ preset: e, resolution: t, fps: s, muteStreamAudio: i, selectedSource: c, sourceType: d, audioSourceId: _ }] =
@@ -49,28 +49,28 @@ function w() {
         G = R
             ? void 0
             : e === j.jQ.PRESET_VIDEO
-              ? S.intl.string(A.default.MuHUFe)
+              ? y.intl.string(A.default.MuHUFe)
               : e === j.jQ.PRESET_DOCUMENTS
-                ? S.intl.string(A.default.y0JuYR)
+                ? y.intl.string(A.default.y0JuYR)
                 : e === j.jQ.PRESET_AUTO
-                  ? S.intl.string(A.default.m4jtlc)
+                  ? y.intl.string(A.default.m4jtlc)
                   : void 0,
-        L = (0, a.bG)([f.Ay], () => f.Ay.getUseSystemScreensharePicker() && (0, h.isLinux)());
+        D = (0, a.bG)([f.Ay], () => f.Ay.getUseSystemScreensharePicker() && (0, h.isLinux)());
     return (0, r.jsxs)("div", {
-        className: y.zr,
+        className: S.zr,
         children: [
             R && (0, r.jsx)(b, { source: c }),
             (0, r.jsxs)("div", {
-                className: y.z,
+                className: S.z,
                 children: [
                     (0, r.jsx)(o.Text, {
-                        className: y.fB,
+                        className: S.fB,
                         variant: "text-md/semibold",
                         color: "text-strong",
-                        children: R ? (c?.name ?? S.intl.string(A.default["hJMA+x"])) : N,
+                        children: R ? (c?.name ?? y.intl.string(A.default["hJMA+x"])) : N,
                     }),
                     (0, r.jsxs)(o.Text, {
-                        className: y.kI,
+                        className: S.kI,
                         variant: "text-xs/medium",
                         color: "text-muted",
                         children: [
@@ -78,10 +78,10 @@ function w() {
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsxs)("span", {
-                                            className: y.x5,
+                                            className: S.x5,
                                             children: [
                                                 (0, r.jsx)(o.Zes, {
-                                                    className: y.Kk,
+                                                    className: S.Kk,
                                                     size: "xxs",
                                                     color: "currentColor",
                                                 }),
@@ -106,23 +106,23 @@ function w() {
                                     children: [
                                         (0, r.jsx)(C, {}),
                                         (0, r.jsxs)("span", {
-                                            className: y.x5,
+                                            className: S.x5,
                                             children: [
                                                 (0, r.jsx)(o._RO, {
-                                                    className: n()(y.Kk, y.tG),
+                                                    className: n()(S.Kk, S.tG),
                                                     size: "xxs",
                                                     color: "currentColor",
                                                 }),
-                                                S.intl.string(A.default.FzMGWR),
+                                                y.intl.string(A.default.FzMGWR),
                                             ],
                                         }),
                                     ],
                                 }),
                             !i &&
                                 !M &&
-                                L &&
+                                D &&
                                 (0, r.jsxs)(r.Fragment, {
-                                    children: [(0, r.jsx)(C, {}), S.intl.string(A.default["n9/rUq"])],
+                                    children: [(0, r.jsx)(C, {}), y.intl.string(A.default["n9/rUq"])],
                                 }),
                             M
                                 ? (0, r.jsxs)(r.Fragment, {

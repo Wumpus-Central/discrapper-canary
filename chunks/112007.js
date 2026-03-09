@@ -1,7 +1,7 @@
 n.d(t, { A: () => v }), n(938796);
 var i = n(627968),
-    l = n(64700),
-    r = n(821418),
+    r = n(64700),
+    l = n(821418),
     a = n(665260),
     s = n(311907),
     o = n(990078),
@@ -20,7 +20,7 @@ var i = n(627968),
     E = n(168428),
     I = n(652215),
     b = n(985018),
-    T = n(42441);
+    T = n(563111);
 function v(e) {
     let t,
         v,
@@ -40,19 +40,19 @@ function v(e) {
         G = null != j,
         B = null != U,
         F = null != U && U.isGuildStageVoice(),
-        H = (0, a.Lt)(L.flags ?? 0, r.Q.IS_GUEST_INVITE),
+        H = (0, a.Lt)(L.flags ?? 0, l.Q.IS_GUEST_INVITE),
         V = U?.isGuildVoiceOrThread() ?? !1,
         W = j?.features.has(I.GuildFeatures.HUB) ?? !1,
         q = j?.id,
         { analyticsLocations: Y } = (0, _.Ay)(u.A.INVITE_EMBED),
-        [z, Q] = l.useState(!1),
-        K = l.useCallback(() => Q(!1), []),
-        J = l.useRef(null),
+        [z, Q] = r.useState(!1),
+        K = r.useCallback(() => Q(!1), []),
+        J = r.useRef(null),
         X = (0, s.bG)([x.Ay], () => m.A.canAcceptInvite([x.Ay], L)),
-        Z = l.useCallback(() => {
+        Z = r.useCallback(() => {
             Q(!0), (0, c.Pq)(q, "show profile", Y);
         }, [q, Y]),
-        $ = l.useCallback(() => {
+        $ = r.useCallback(() => {
             let e = "noop";
             G ? (y(), (e = "transition")) : (N(), (e = "accept")),
                 (0, c.he)({ invite: L, action: e, inviter_id: R.author.id, invite_message_id: R.id }, Y);

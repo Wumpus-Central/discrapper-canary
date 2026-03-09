@@ -1,7 +1,7 @@
 n.d(t, { A: () => g });
 var i = n(627968),
-    l = n(64700),
-    r = n(158954),
+    r = n(64700),
+    l = n(158954),
     a = n(956793),
     s = n(265422),
     o = n(986268),
@@ -11,12 +11,12 @@ var i = n(627968),
     _ = n(954571),
     m = n(652215),
     h = n(985018),
-    p = n(42441);
+    p = n(563111);
 function g(e) {
     let { guild: t, channel: n, message: g } = e,
         A = u.A.getGuildId(),
         x = c.A.getChannelId(A),
-        f = l.useCallback(() => {
+        f = r.useCallback(() => {
             _.default.track(m.HAw.CHANNEL_LINK_PREVIEW_JOINED, {
                 author_id: g.author?.id,
                 link_guild_id: t.id,
@@ -54,7 +54,7 @@ function g(e) {
                 }),
                 (0, i.jsx)("div", {
                     className: p.UD,
-                    children: (0, i.jsx)(r.$nd, {
+                    children: (0, i.jsx)(l.$nd, {
                         fullWidth: !0,
                         onClick: f,
                         variant: "active",

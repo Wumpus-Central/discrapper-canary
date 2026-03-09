@@ -18,23 +18,23 @@ var i = n(627968),
     E = n(205120),
     x = n(652215);
 n(294920);
-var C = n(50397);
+var C = n(119907);
 function S(e) {
     let { value: t, channel: n } = e;
     return (0, p.i)({ type: c.oU.EDIT, content: t, channel: n, restrictMentions: !1, respectCooldown: !1 });
 }
-function I(e) {
+function T(e) {
     let { channel: t, message: n } = e,
         { id: c } = t,
         { id: d } = n,
         g = t.getGuildId(),
         p = (0, a.bG)([m.A], () => m.A.getGuild(g), [g]),
         _ = t.type === x.rbe.GUILD_ANNOUNCEMENT,
-        I = null != p && p.features.has(x.GuildFeatures.NEWS),
-        N = _ && I,
+        T = null != p && p.features.has(x.GuildFeatures.NEWS),
+        N = _ && T,
         {
-            editingMessage: b,
-            editingTextValue: y,
+            editingMessage: y,
+            editingTextValue: b,
             editingRichValue: v,
         } = (0, a.cf)(
             [h.A],
@@ -50,7 +50,7 @@ function I(e) {
             (e, i, l) => {
                 let { content: a } = l,
                     c = A.A.can(x.xBc.MANAGE_MESSAGES, t),
-                    d = null != b && null != b.author ? b.author.id : null,
+                    d = null != y && null != y.author ? y.author.id : null,
                     u = N && (d === j || c),
                     h = { content: a, components: void 0 };
                 if (n.hasFlag(x.pr7.IS_COMPONENTS_V2)) {
@@ -61,21 +61,21 @@ function I(e) {
                         (h.components = t);
                 }
                 return (
-                    u && null != b && (0, s.Lt)(b.flags, x.pr7.CROSSPOSTED)
+                    u && null != y && (0, s.Lt)(y.flags, x.pr7.CROSSPOSTED)
                         ? f.A.confirmEdit(e, i, h)
                         : r.A.editMessage(e, i, h),
                     Promise.resolve()
                 );
             },
-            [b, N, j, t, n],
+            [y, N, j, t, n],
         ),
-        M = l.useCallback((e) => (0, l.createElement)(T, { ...e, className: C.gM, key: d }), [d]);
-    return null != y && null != v
+        M = l.useCallback((e) => (0, l.createElement)(I, { ...e, className: C.gM, key: d }), [d]);
+    return null != b && null != v
         ? (0, i.jsx)(E.A, {
               ref: void 0,
               channel: t,
               message: n,
-              textValue: y,
+              textValue: b,
               richValue: v,
               onCancel: r.A.endEditMessage,
               onChange: r.A.updateEditMessage,
@@ -86,7 +86,7 @@ function I(e) {
           })
         : null;
 }
-function T(e) {
+function I(e) {
     let {
             textValue: t,
             richValue: n,
@@ -137,6 +137,6 @@ function T(e) {
 function N(e, t, n) {
     let { message: l, channel: s, compact: a } = e;
     return n
-        ? (0, i.jsx)(I, { channel: s, message: l })
+        ? (0, i.jsx)(T, { channel: s, message: l })
         : (0, i.jsx)(_.Ay, { message: l, content: t, compact: a ?? !1 });
 }

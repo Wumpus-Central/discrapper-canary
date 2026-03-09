@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => V });
+n.d(t, { Ay: () => F });
 var a = n(627968),
     s = n(64700),
     i = n(503698),
@@ -14,28 +14,28 @@ var a = n(627968),
     f = n(760751),
     g = n(403362),
     v = n(307600),
-    j = n(363487),
-    h = n(665171),
+    h = n(363487),
+    j = n(665171),
     A = n(397400),
     p = n(165655),
     C = n(496587),
     b = n(684610),
-    N = n(500897),
-    I = n(225180),
+    I = n(500897),
+    N = n(225180),
     E = n(117265),
     S = n(365003),
     T = n(680127),
     y = n(858192),
     R = n(49999),
-    M = n(738072),
+    M = n(294726),
     G = n(985018),
-    k = n(70463);
-function L(e) {
+    k = n(748137);
+function D(e) {
     let { guildId: t, instance: n } = e,
         [i, l] = s.useState(!1),
         r = s.useCallback(() => {
             l(!0),
-                (0, h.as)(t, n.id).finally(() => {
+                (0, j.as)(t, n.id).finally(() => {
                     l(!1);
                 });
         }, [t, n.id]);
@@ -47,7 +47,7 @@ function L(e) {
         onClick: r,
     });
 }
-function D(e) {
+function L(e) {
     return (0, a.jsx)(u.Button, {
         fullWidth: !0,
         text: G.intl.string(M.default.tkbVdf),
@@ -75,7 +75,7 @@ function B(e) {
         [n, i] = s.useState(!1),
         l = s.useCallback(() => {
             i(!0),
-                (0, h.cq)(t).finally(() => {
+                (0, j.cq)(t).finally(() => {
                     i(!1);
                 });
         }, [t]);
@@ -99,27 +99,27 @@ function U(e) {
         },
     });
 }
-function V(e) {
+function F(e) {
     let { guildId: t, instance: n } = e,
         i = (0, E.A)(n),
-        [h, V] = (0, _.kn)([c.M.GAME_SERVER_HOSTING_PORTKEY_TOS]),
-        F = h !== c.M.GAME_SERVER_HOSTING_PORTKEY_TOS,
+        [j, F] = (0, _.kn)([c.M.GAME_SERVER_HOSTING_PORTKEY_TOS]),
+        V = j !== c.M.GAME_SERVER_HOSTING_PORTKEY_TOS,
         w = (0, d.bG)([f.A], () => f.A.getDetectableGame(n.gameId)),
         W = (0, S.A)(n.providerType, n.gameServerPanelUrl),
         q = s.useCallback(() => {
             (0, A.Ai)(t, n.gameId, w?.name ?? "", n.id),
-                F || null == n.providerType
+                V || null == n.providerType
                     ? (0, T.A)(t, n)
                     : (0, y.A)({
                           provider: n.providerType,
                           onAccept: () => {
-                              V(R.i.TAKE_ACTION), (0, T.A)(t, n);
+                              F(R.i.TAKE_ACTION), (0, T.A)(t, n);
                           },
                       });
-        }, [n, F, V, t, w?.name]),
-        { handleCopyServerIp: Y, animateCopyIcon: H } = (0, N.A)(t, n.id, m.A.GAME_SERVER_GAME, i ?? ""),
-        K = (0, I.A)(n.gameId, "cover"),
-        Z = (0, j.A)(t),
+        }, [n, V, F, t, w?.name]),
+        { handleCopyServerIp: Y, animateCopyIcon: H } = (0, I.A)(t, n.id, m.A.GAME_SERVER_GAME, i ?? ""),
+        K = (0, N.A)(n.gameId, "cover"),
+        Z = (0, h.A)(t),
         $ = s.useCallback(() => {
             (0, A.f7)(t, n.id), (0, v.h)({ href: n.gameServerPanelUrl ?? "" });
         }, [n.gameServerPanelUrl, t, n.id]),
@@ -128,8 +128,8 @@ function V(e) {
                 case r.M.SLEEPING:
                     return (0, a.jsxs)(a.Fragment, {
                         children: [
-                            (0, a.jsx)(L, { guildId: t, instance: n }),
-                            Z && (0, a.jsx)(D, { onClick: $, disabled: null == n.gameServerPanelUrl }),
+                            (0, a.jsx)(D, { guildId: t, instance: n }),
+                            Z && (0, a.jsx)(L, { onClick: $, disabled: null == n.gameServerPanelUrl }),
                         ],
                     });
                 case r.M.OFFLINE:
@@ -138,7 +138,7 @@ function V(e) {
                     return (0, a.jsxs)(a.Fragment, {
                         children: [
                             (0, a.jsx)(P, { onClick: q }),
-                            Z && (0, a.jsx)(D, { onClick: $, disabled: null == n.gameServerPanelUrl }),
+                            Z && (0, a.jsx)(L, { onClick: $, disabled: null == n.gameServerPanelUrl }),
                         ],
                     });
                 case r.M.STARTUP_FAILED:
@@ -146,7 +146,7 @@ function V(e) {
                     return Z ? (0, a.jsx)(O, { onClick: $ }) : (0, a.jsx)(P, { onClick: q, disabled: !0 });
                 case r.M.DELETED:
                     return Z
-                        ? (0, a.jsx)(D, { onClick: $, disabled: null == n.gameServerPanelUrl })
+                        ? (0, a.jsx)(L, { onClick: $, disabled: null == n.gameServerPanelUrl })
                         : (0, a.jsx)(P, { onClick: q, disabled: !0 });
                 case r.M.PROVIDER_ERRORED:
                     return (0, a.jsxs)(a.Fragment, {
@@ -235,7 +235,7 @@ function V(e) {
                                             children:
                                                 null == i
                                                     ? (0, a.jsx)(u.Text, { variant: "text-sm/medium", children: "—" })
-                                                    : F
+                                                    : V
                                                       ? (0, a.jsxs)(a.Fragment, {
                                                             children: [
                                                                 (0, a.jsx)(u.Text, {
@@ -258,7 +258,7 @@ function V(e) {
                                                                 (0, y.A)({
                                                                     provider: n.providerType,
                                                                     onAccept: () => {
-                                                                        V(R.i.TAKE_ACTION), Y();
+                                                                        F(R.i.TAKE_ACTION), Y();
                                                                     },
                                                                 });
                                                             },

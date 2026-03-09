@@ -18,8 +18,8 @@ var s = n(311907),
     h = n(518477),
     g = n(652215),
     I = n(985018),
-    j = n(278792),
-    v = n(230836);
+    j = n(78702),
+    v = n(781425);
 function b(e) {
     let { user: t, currentUser: n, guildId: b, onClose: N } = e,
         { live: C, recent: y, stream: E } = (0, u.A)(t.id),

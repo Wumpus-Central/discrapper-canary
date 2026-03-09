@@ -1,4 +1,4 @@
-n.d(t, { A: () => O });
+n.d(t, { A: () => w });
 var i = n(627968),
     l = n(64700),
     a = n(503698),
@@ -8,8 +8,8 @@ var i = n(627968),
     d = n(435371),
     c = n(397927),
     u = n(688810),
-    g = n(429913),
-    m = n(576030),
+    m = n(429913),
+    g = n(576030),
     x = n(713517),
     f = n(492518),
     p = n(592356),
@@ -24,11 +24,11 @@ var i = n(627968),
     b = n(188275),
     N = n(518477),
     S = n(985018),
-    y = n(525785);
+    y = n(79711);
 function C(e) {
     let { application: t, sku: n, handleOpenUserProfileModal: a, analyticsLocations: s } = e,
         o = l.useRef(null),
-        { analyticsLocations: g } = (0, u.Ay)(s ?? []),
+        { analyticsLocations: m } = (0, u.Ay)(s ?? []),
         { isHoveringOrFocusing: p } = (0, x.A)(o),
         [_, I] = l.useState(!1),
         j = l.useCallback(
@@ -36,7 +36,7 @@ function C(e) {
                 if ((e.stopPropagation(), !_)) {
                     I(!0);
                     try {
-                        await A.A.addSkuToWishlist(n.id, g), a?.({ tabSection: N.RP.WISHLIST });
+                        await A.A.addSkuToWishlist(n.id, m), a?.({ tabSection: N.RP.WISHLIST });
                     } catch (e) {
                         (0, c.showToast)((0, c.createToast)(S.intl.string(S.t.F8FvUy), c.ToastType.FAILURE)),
                             r.ORC.announce(S.intl.string(S.t.F8FvUy));
@@ -45,12 +45,12 @@ function C(e) {
                     }
                 }
             },
-            [n.id, g, a, _],
+            [n.id, m, a, _],
         );
     return (0, i.jsx)(d.un, {
         title: S.intl.string(S.t["8DkMEQ"]),
         body: n.name,
-        asset: (0, i.jsx)(m.mW, { application: t }),
+        asset: (0, i.jsx)(g.mW, { application: t }),
         assetSize: v.Q8,
         children: (0, i.jsxs)(r.sqX, {
             className: y.Nr,
@@ -94,13 +94,13 @@ function R(e) {
             maxWishlistItemsToShow: d = r,
             className: c,
             isLoading: u,
-            recommendations: m,
+            recommendations: g,
         } = e,
-        x = (0, g.h)(b.XR),
+        x = (0, m.h)(b.XR),
         p = (0, o.bG)([_.default], () => _.default.getUser(t?.userId)),
         h = (0, j.GG)("add_to_wishlist_grid"),
         A = l.useMemo(() => new Set(t?.items.map((e) => e.skuId) ?? []), [t]),
-        I = m.filter((e) => !A.has(e.id)).slice(0, d);
+        I = g.filter((e) => !A.has(e.id)).slice(0, d);
     return u
         ? (0, i.jsx)("div", { className: y.g4, children: (0, i.jsx)(f.k, {}) })
         : 0 === I.length
@@ -145,6 +145,6 @@ function L(e) {
         d = l.useMemo(() => o.map((e) => e.sku), [o]);
     return (0, i.jsx)(R, { isLoading: "loading" === r, recommendations: d, numWishlistItemsToRecommend: n, ...a });
 }
-function O(e) {
+function w(e) {
     return (0, I.T)("add_to_wishlist_grid") ? (0, i.jsx)(k, { ...e }) : (0, i.jsx)(L, { ...e });
 }

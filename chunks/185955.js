@@ -15,7 +15,7 @@ var i = n(627968),
     h = n(743981),
     p = n(355097),
     x = n(985018),
-    E = n(919501);
+    E = n(86267);
 let T = (0, o.Ld)(),
     S = s.memo(function (e) {
         let { availablePrimaryGuilds: t, pendingPrimaryGuildId: n, onChange: o } = e,
@@ -98,13 +98,13 @@ let T = (0, o.Ld)(),
             P = s.useCallback(() => {
                 o?.(null);
             }, [o]),
-            L = s.useRef(null);
+            D = s.useRef(null);
         return (
-            (0, g.A)(L, p._F.GUILD_TAG),
+            (0, g.A)(D, p._F.GUILD_TAG),
             (0, i.jsxs)(_.A, {
                 title: x.intl.string(x.t.Pdd1nd),
                 titleId: T,
-                ref: L,
+                ref: D,
                 children: [
                     (0, i.jsx)(r.Text, {
                         className: E.VA,

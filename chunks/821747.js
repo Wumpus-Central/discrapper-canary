@@ -12,7 +12,7 @@ var s = n(503698),
     u = n(824744),
     h = n(723702),
     A = n(447404),
-    m = n(874802);
+    m = n(35204);
 function p(e) {
     let {
             className: t,

@@ -1,7 +1,7 @@
 n.d(t, { A: () => p }), n(321073);
 var i = n(627968),
-    l = n(64700),
-    r = n(397927),
+    r = n(64700),
+    l = n(397927),
     a = n(572211),
     s = n(354287),
     o = n(693879),
@@ -10,7 +10,7 @@ var i = n(627968),
     u = n(206589),
     _ = n(768349),
     m = n(985018),
-    h = n(62323);
+    h = n(609653);
 function p(e) {
     let {
             application: t,
@@ -26,7 +26,7 @@ function p(e) {
         } = e,
         b = (0, u.w)(f, g),
         T = (0, d.Gq)(g, n.author, "Invite Embed"),
-        v = l.useMemo(() => {
+        v = r.useMemo(() => {
             let e = [];
             return (
                 b ||
@@ -47,13 +47,13 @@ function p(e) {
                 ? m.intl.formatToPlainString(m.t.JCvHtx, { track: g.details, artist: g.state })
                 : t.name,
         y = g?.timestamps?.start ?? g?.created_at,
-        N = l.useMemo(
+        N = r.useMemo(
             () =>
                 null != y
                     ? (0, i.jsxs)("div", {
                           className: h.Ym,
                           children: [
-                              (0, i.jsx)(r.T7G, { size: "xxs", color: "currentColor" }),
+                              (0, i.jsx)(l.T7G, { size: "xxs", color: "currentColor" }),
                               (0, i.jsx)(o.z, {
                                   entry: { start: y, end: g?.timestamps?.end },
                                   textColor: "currentColor",
@@ -65,12 +65,12 @@ function p(e) {
                     : null,
             [y, g?.timestamps?.end],
         ),
-        j = l.useMemo(
+        j = r.useMemo(
             () =>
                 (0, i.jsxs)("div", {
                     className: h.pq,
                     children: [
-                        (0, i.jsx)(r.Text, {
+                        (0, i.jsx)(l.Text, {
                             variant: "text-xs/normal",
                             className: h.dS,
                             color: "none",

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => A, a: () => I });
+n.d(t, { A: () => A, a: () => E });
 var a = n(627968),
     l = n(64700),
     i = n(503698),
@@ -14,10 +14,10 @@ var a = n(627968),
     h = n(409626),
     f = n(368546),
     g = n(985018),
-    p = n(728528),
-    _ = n(281568),
-    v = n(903404),
-    j = n(176959);
+    p = n(851822),
+    _ = n(351886),
+    v = n(947570),
+    j = n(1309);
 function A(e) {
     let { detectedGame: t, trackAction: n } = e,
         i = l.useRef(null),
@@ -96,13 +96,13 @@ function A(e) {
               ],
           });
 }
-function I(e) {
+function E(e) {
     let { detectedGame: t } = e,
         [n, i] = l.useState(0),
         [h, p] = l.useState(t.artwork),
         [_, A] = l.useState(t.screenshots),
-        I = l.useRef(null),
         E = l.useRef(null),
+        I = l.useRef(null),
         b = (0, s.bG)([o.A], () => o.A.useReducedMotion);
     (h !== t.artwork || _ !== t.screenshots) && (p(t.artwork), A(t.screenshots), i(0));
     let N = l.useMemo(() => {
@@ -111,26 +111,26 @@ function I(e) {
             return [...e, ...t.screenshots.map((e) => ({ url: e, type: "IMAGE" })), ...n];
         }, [t.trailers, t.artwork, t.screenshots]),
         C = N.length > 0 ? Math.min(n, N.length - 1) : 0,
-        S = N[C],
-        T = S?.type === "VIDEO";
-    return ((0, f.A)({ videoRef: I, canvasRef: E, enabled: T && !b }), 0 === N.length)
+        T = N[C],
+        S = T?.type === "VIDEO";
+    return ((0, f.A)({ videoRef: E, canvasRef: I, enabled: S && !b }), 0 === N.length)
         ? null
         : (0, a.jsxs)("div", {
               className: v.kL,
               children: [
-                  T
+                  S
                       ? (0, a.jsxs)("div", {
                             className: j.ND,
                             children: [
-                                !b && (0, a.jsx)("canvas", { ref: E, className: j.HW, "aria-hidden": "true" }),
-                                (0, a.jsx)(u.A, { ref: I, className: j.dj, src: S.url, controls: !0, playsInline: !0 }),
+                                !b && (0, a.jsx)("canvas", { ref: I, className: j.HW, "aria-hidden": "true" }),
+                                (0, a.jsx)(u.A, { ref: E, className: j.dj, src: T.url, controls: !0, playsInline: !0 }),
                             ],
                         })
                       : (0, a.jsx)(c.DUT, {
                             className: v.gv,
                             onClick: () => {
                                 let e = N.filter((e) => "IMAGE" === e.type),
-                                    t = e.indexOf(S);
+                                    t = e.indexOf(T);
                                 (0, x.R)({
                                     items: e,
                                     startingIndex: Math.max(0, t),
@@ -139,7 +139,7 @@ function I(e) {
                                 });
                             },
                             children: (0, a.jsx)("img", {
-                                src: S.url,
+                                src: T.url,
                                 className: v.c8,
                                 alt: g.intl.formatToPlainString(g.t.COYYrn, { game: t.name }),
                             }),

@@ -10,7 +10,7 @@ var l = t(627968),
     o = t(202803),
     h = t(403362),
     m = t(62849),
-    x = t(13490);
+    x = t(800344);
 function j(e) {
     let { type: n, value: t, children: r } = e;
     switch (n) {
@@ -41,11 +41,11 @@ function j(e) {
 function g(e) {
     let { domain: n, ephemeral: i, channelId: h, attachmentId: m, name: j } = e,
         g = `https://${n}/${i ? "ephemeral-attachments" : "attachments"}/${h}/${m}/${j}`,
-        p = r.useCallback(async () => {
+        f = r.useCallback(async () => {
             let e = await (0, o.AN)(g);
             d.A.trackLinkClicked(e), (0, c.A)(e);
         }, [g]),
-        f = r.useCallback(
+        p = r.useCallback(
             (e) => {
                 (0, s.L3)(e, async () => {
                     let { default: e } = await t.e("62529").then(t.bind(t, 740024));
@@ -57,8 +57,8 @@ function g(e) {
     return (0, l.jsxs)(u.A, {
         role: "link",
         href: g,
-        onClick: p,
-        onContextMenu: f,
+        onClick: f,
+        onContextMenu: p,
         className: "attachmentLink",
         children: [(0, l.jsx)(a.PtA, { size: "xs", className: x.Kk, color: "currentColor" }), j],
     });

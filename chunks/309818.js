@@ -1,8 +1,8 @@
 n.d(t, { A: () => E }), n(321073);
 var i = n(627968),
-    l = n(64700),
-    r = n(284009),
-    a = n.n(r),
+    r = n(64700),
+    l = n(284009),
+    a = n.n(l),
     s = n(158954),
     o = n(311907),
     d = n(846293),
@@ -16,21 +16,21 @@ var i = n(627968),
     A = n(168428),
     x = n(652215),
     f = n(985018),
-    C = n(42441);
+    C = n(563111);
 function E(e) {
     let t,
-        { invite: n, message: r, currentUserId: E, onTransitionToInviteChannel: I, onAcceptInstantInvite: b } = e,
-        T = E === r.author.id,
+        { invite: n, message: l, currentUserId: E, onTransitionToInviteChannel: I, onAcceptInstantInvite: b } = e,
+        T = E === l.author.id,
         v = n.state === x.elq.ACCEPTING,
         S = (0, o.bG)([h.A], () => (null != n.channel ? h.A.getChannel(n.channel.id) : null), [n]);
     a()(null == S || S.isPrivate(), "must be a private channel");
     let { analyticsLocations: y } = (0, u.Ay)(c.A.INVITE_EMBED),
         N = null != S,
-        j = l.useCallback(() => {
+        j = r.useCallback(() => {
             let e = "noop";
             N ? (I(), (e = "transition")) : (b(), (e = "accept")),
-                (0, d.he)({ invite: n, action: e, inviter_id: r.author.id, invite_message_id: r.id }, y);
-        }, [n, r, y, N, I, b]);
+                (0, d.he)({ invite: n, action: e, inviter_id: l.author.id, invite_message_id: l.id }, y);
+        }, [n, l, y, N, I, b]);
     if (null == S) {
         if (null == n.channel) return (0, i.jsx)(A.A, {});
         (S = (0, m.OY)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []);

@@ -31,7 +31,7 @@ var i = n(627968),
     O = n(652215),
     L = n(788868),
     M = n(985018),
-    D = n(142829);
+    D = n(20531);
 function G(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, showRequestToSpeakSidebar: s } = e,
         { analyticsLocations: l, newestAnalyticsLocation: o } = (0, h.Ay)(u.A.VOICE_CHANNEL_HEADER),

@@ -21,13 +21,13 @@ var A = I(627968),
     o = I(752636),
     r = I(287809),
     U = I(515718),
-    G = I(661191),
-    d = I(207913),
+    d = I(661191),
+    G = I(207913),
     c = I(393033),
     M = I(239093),
     B = I(652215),
     m = I(838541),
-    H = I(366906);
+    H = I(26896);
 let h = (E) => {
     let { message: _ } = E,
         { attachments: I } = _;
@@ -111,7 +111,7 @@ function u(E) {
         T = (0, O.bG)([r.default], () => r.default.getCurrentUser()),
         [C, N] = S.useState({}),
         [P, L] = S.useState(!0),
-        a = (0, O.bG)([d.A], () => d.A.getUsername()),
+        a = (0, O.bG)([G.A], () => G.A.getUsername()),
         l = I[0],
         V =
             ((_ = l.attachments.map((E) => {
@@ -128,7 +128,7 @@ function u(E) {
                     type: B.lAJ.DEFAULT,
                     channelId: B.dJq,
                 }),
-                timestamp: new Date(G.default.extractTimestamp(l.id)).toISOString(),
+                timestamp: new Date(d.default.extractTimestamp(l.id)).toISOString(),
                 attachments: _,
                 state: B.cmJ.SENT,
             })),

@@ -1,4 +1,0 @@
-t.r(a), t.d(a, { default: () => n });
-let n = JSON.parse(
-    '{"iK1QsY":["Favorite channel"],"w1MU8Y":["Favorite user"],"xB/0Z9":["Search text channels and DMs"],"d3yO98":["Recent Activity"],"uC6Lhg":["Recent Text Channels"],"HGimIS":["Search Results"],"GKTlS6":["Favorites"],"trKJoT":["In Game"],"OV3KfO":["Search voice channels"],"eiie2x":["Active Now"],"OskevP":["Favorites"],"C+ojiQ":["Friends in Voice"],"DUIbKP":["Search Results"],"9ME4wE":["Suggested Voice Channels"],"4l56iz":["Join in ",[8,"channelIcon",[]]," ",[1,"channelName"]],"VMcw8s":["Click here or ",[8,"keybindHook",[[1,"keybind"]]]," to open chat"],"PBVXVW":["Shift+Click to close all"],"ERApc4":["Close overlay chat"],"x1k3cO":["currently playing ",[1,"gameName"]],"uhJexs":["Chat"],"xpv/t5":["Select a chat to start messaging."],"tYPfF2":["Minimize Text-In-Voice"],"KWrMk5":["Open overlay chat"],"2yFtJ1":["Recent overlay chats"],"dvUElD":["Unfavorite channel"],"Xr8XHk":["Unfavorite user"]}',
-);

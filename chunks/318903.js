@@ -6,7 +6,7 @@ var i = n(627968),
     r = n(791498),
     o = n(590089),
     d = n(876813),
-    c = n(40937);
+    c = n(191563);
 function u(e) {
     let { node: t } = e,
         { destinationKey: n, useTrailingDecoration: u, useTitle: _, useSubtitle: g } = t,

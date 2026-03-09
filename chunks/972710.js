@@ -23,7 +23,7 @@ var i = n(627968),
     I = n(652215),
     b = n(601107),
     N = n(985018),
-    v = n(20966);
+    v = n(141384);
 let j = [I.Dmq.PAST_DUE, I.Dmq.ACCOUNT_HOLD, I.Dmq.BILLING_RETRY],
     O = (e) => {
         let { transitionState: t, onClose: n, subscription: l, analyticsLocations: a, analyticsLocation: r } = e,
@@ -86,9 +86,9 @@ function R(e) {
         y = (0, C.A)({ location: "GuildBoostingHeader" });
     if (0 === (0, S.bx)(n.additionalPlans)) return null;
     let { status: P } = n,
-        L = (0, S.$k)(n),
-        D = y && !L && n.isBoostOnly && j.includes(n.status);
-    if (L) t = v.v2;
+        D = (0, S.$k)(n),
+        L = y && !D && n.isBoostOnly && j.includes(n.status);
+    if (D) t = v.v2;
     else
         switch (P) {
             case I.Dmq.PAST_DUE:
@@ -113,7 +113,7 @@ function R(e) {
                     (0, i.jsxs)("div", {
                         className: v.eC,
                         children: [
-                            (0, i.jsx)("div", { className: a()(v.Ab, { [v.aD]: L }) }),
+                            (0, i.jsx)("div", { className: a()(v.Ab, { [v.aD]: D }) }),
                             (0, i.jsx)("div", {
                                 children: (0, S.Uf)({
                                     subscription: n,
@@ -128,7 +128,7 @@ function R(e) {
                         (0, i.jsxs)("div", {
                             className: v.BQ,
                             children: [
-                                D &&
+                                L &&
                                     (0, i.jsx)("div", {
                                         className: v.x7,
                                         children: (0, i.jsx)(c.QWc, {

@@ -15,7 +15,7 @@ var a = n(503698),
     h = n(207963),
     C = n(489414),
     E = n(985018),
-    x = n(20910);
+    x = n(592392);
 function N(e) {
     let { url: t, onSelect: n } = e;
     return p.p5 && null != t
@@ -37,10 +37,10 @@ function N(e) {
 }
 function I(e) {
     let t,
-        { label: n, style: a, disabled: p, emoji: E, url: I, skuId: _ } = e,
-        { executeStateUpdate: f, visualState: g, isDisabled: T } = (0, h.At)(e),
-        v = (0, m.Q)(_),
-        j = null != _ && a === u.in.PREMIUM,
+        { label: n, style: a, disabled: p, emoji: E, url: I, skuId: f } = e,
+        { executeStateUpdate: _, visualState: g, isDisabled: T } = (0, h.At)(e),
+        v = (0, m.Q)(f),
+        j = null != f && a === u.in.PREMIUM,
         S = j && v?.disabled,
         O = j ? v?.label : n,
         R = null != E,
@@ -56,7 +56,7 @@ function I(e) {
               ? null != v && !1 === v.disabled
                   ? v.onClick
                   : s.noop
-              : () => f()),
+              : () => _()),
         (0, l.jsxs)(i.$n, {
             "data-migration-pending": !0,
             color: (function (e) {

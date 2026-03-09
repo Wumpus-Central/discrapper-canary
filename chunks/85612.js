@@ -3,7 +3,7 @@ var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(380278),
+    r = n(490249),
     o = n(311907),
     c = n(397927),
     d = n(964486),
@@ -19,11 +19,11 @@ var i = n(627968),
     x = n(430452),
     C = n(287809),
     S = n(954571),
-    I = n(474090),
-    T = n(927578),
+    T = n(474090),
+    I = n(927578),
     N = n(971778),
-    b = n(494783),
-    y = n(342887),
+    y = n(494783),
+    b = n(342887),
     v = n(606451),
     j = n(177392),
     R = n(185494),
@@ -33,28 +33,28 @@ var i = n(627968),
     L = n(806931),
     P = n(788868),
     w = n(731854),
-    k = n(3683),
+    k = n(734317),
     U = n(985018),
-    G = n(311192);
+    G = n(632998);
 function F(e) {
     let { onSettingsButtonClick: t, wide: n, showOutputDevices: s = !1, showSearchBar: F = !0 } = e,
         [H, B] = l.useState(""),
         { analyticsLocations: V, newestAnalyticsLocation: K } = (0, m.Ay)(h.A.VOICE_FILTER_POPOUT),
-        W = l.useRef(null),
-        z = (0, u.A)({
+        z = l.useRef(null),
+        W = (0, u.A)({
             minDimension: 400,
             maxDimension: 600,
-            resizableDomNodeRef: W,
+            resizableDomNodeRef: z,
             onElementResize: (e, t) => {},
             onElementResizeEnd: (e) => {},
             orientation: u.R.VERTICAL_TOP,
         });
     (0, U.useSyncMessages)(k.messagesLoader);
-    let Y = (0, o.bG)([C.default], () => (0, I.ki)(C.default.getCurrentUser())),
+    let Y = (0, o.bG)([C.default], () => (0, T.ki)(C.default.getCurrentUser())),
         q = (0, o.bG)([N.A], () => N.A.getCatalogUpdateTime()),
         [J, $] = l.useState(!1),
         [Z, X] = l.useState(!1),
-        { activeVoice: Q } = (0, b.f)(),
+        { activeVoice: Q } = (0, y.f)(),
         ee = (0, c.zhh)({
             transform: J ? "translateY(-8px) scale(0.96)" : "translateY(0px) scale(1)",
             config: { duration: 150, mass: 1, stiffness: 711.1, damping: 40 },
@@ -66,7 +66,7 @@ function F(e) {
         }),
         ei = l.useRef(null);
     (0, d.Ay)(() => {
-        (0, y.md)(), S.default.track(O.HAw.VOICE_FILTER_PICKER_OPENED, { active_voice_filter_id: Q ?? null });
+        (0, b.md)(), S.default.track(O.HAw.VOICE_FILTER_PICKER_OPENED, { active_voice_filter_id: Q ?? null });
     });
     let el = l.useCallback(() => B(""), [B]),
         es = l.useRef(null),
@@ -74,14 +74,14 @@ function F(e) {
     return (0, i.jsx)(m.f5, {
         value: V,
         children: (0, i.jsxs)("div", {
-            ref: W,
+            ref: z,
             className: a()(G.ZO, { [G.U]: n, [G.Fd]: !ea }),
             style: { height: 500 },
             children: [
                 ea &&
                     (0, i.jsx)("div", {
                         className: G.Di,
-                        onMouseDown: z,
+                        onMouseDown: W,
                         children: (0, i.jsx)("div", { className: G.YC }),
                     }),
                 F &&
@@ -120,7 +120,7 @@ function F(e) {
                                     children: (0, i.jsx)(_.d, {
                                         showUpsell: !0,
                                         text: U.intl.format(U.t.XMDm8z, {
-                                            nitroTierName: (0, T.Dd)(P.PremiumTypes.TIER_2),
+                                            nitroTierName: (0, I.Dd)(P.PremiumTypes.TIER_2),
                                             onClick: () => (0, E.n)(),
                                         }),
                                         button: U.intl.string(U.t.cRCCJ3),

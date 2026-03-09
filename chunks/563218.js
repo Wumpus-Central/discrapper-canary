@@ -12,8 +12,8 @@ var l = n(627968),
     m = n(319582),
     x = n(369053),
     p = n(652215),
-    g = n(985018),
-    h = n(624507);
+    h = n(985018),
+    g = n(71561);
 function A(e) {
     let { title: t, description: n, onButtonClick: r, trackSettingsUpsellsAction: i } = e,
         [d, c] = a.useState(!1);
@@ -24,7 +24,7 @@ function A(e) {
         (0, l.jsx)(o.PQ, {
             title: t,
             description: n,
-            buttonText: d ? g.intl.string(g.t["h+WsPb"]) : g.intl.string(g.t.A8t4Nf),
+            buttonText: d ? h.intl.string(h.t["h+WsPb"]) : h.intl.string(h.t.A8t4Nf),
             buttonDisabled: d,
             onButtonPress: () => {
                 r(), c(!0), i(x.lJ.SETTINGS_UPSELLS_APPLY_CLICKED);
@@ -34,22 +34,22 @@ function A(e) {
 }
 function v(e) {
     let { settingsUpsells: t, channelId: n, onModalClose: a, reportId: s, reportType: o, reportSubType: v } = e,
-        b = (0, r.bG)([_.A], () => _.A.getChannel(n)),
-        f = (0, m.MR)(t, b?.type),
+        f = (0, r.bG)([_.A], () => _.A.getChannel(n)),
+        b = (0, m.MR)(t, f?.type),
         C = (0, x.Mw)(o, v, s);
-    return 0 === f.length
+    return 0 === b.length
         ? null
         : (0, l.jsxs)("div", {
-              className: h.kL,
+              className: g.kL,
               children: [
                   (0, l.jsx)(i.Heading, {
                       variant: "text-sm/semibold",
-                      className: h.wx,
-                      children: g.intl.string(g.t["1yxTIJ"]),
+                      className: g.wx,
+                      children: h.intl.string(h.t["1yxTIJ"]),
                   }),
                   (0, l.jsx)("div", {
-                      className: h.uk,
-                      children: f.map((e, n) => {
+                      className: g.uk,
+                      children: b.map((e, n) => {
                           let { getTitle: a, getDescription: r, onApply: i } = e;
                           return (0, l.jsx)(
                               A,
@@ -59,7 +59,7 @@ function v(e) {
                       }),
                   }),
                   (0, l.jsx)(i.QWc, {
-                      text: g.intl.string(g.t.olebGx),
+                      text: h.intl.string(h.t.olebGx),
                       onClick: () => {
                           (0, u.openUserSettings)(c.X.CONTENT_AND_SOCIAL_PANEL, { section: p.nc_.CONTENT_AND_SOCIAL }),
                               a(),

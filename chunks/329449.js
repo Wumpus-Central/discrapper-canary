@@ -1,9 +1,9 @@
-n.d(t, { A: () => T }), n(142703);
+n.d(t, { A: () => I }), n(142703);
 var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(380278),
+    r = n(490249),
     o = n(311907),
     c = n(397927),
     d = n(765671),
@@ -17,7 +17,7 @@ var i = n(627968),
     _ = n(103640),
     E = n(924177),
     x = n(985018),
-    C = n(11239);
+    C = n(733313);
 let S = l.memo(function (e) {
         let { channelId: t, width: n } = e,
             s = (0, o.bG)([u.A], () => u.A.useReducedMotion),
@@ -58,7 +58,7 @@ let S = l.memo(function (e) {
             })
         );
     }),
-    I = l.memo(function (e) {
+    T = l.memo(function (e) {
         let { value: t, multiplier: n } = e,
             { color: s, square: r, flair: o } = l.useMemo(() => (0, _.HN)(n), [n]);
         return (0, i.jsxs)(i.Fragment, {
@@ -105,7 +105,7 @@ let S = l.memo(function (e) {
             ],
         });
     }),
-    T = l.memo(function (e) {
+    I = l.memo(function (e) {
         let { channelId: t } = e,
             n = (0, o.bG)([h.default], () => h.default.getId()),
             s = (0, o.bG)([m.A], () => m.A.isTyping(t, n), [t, n]),
@@ -113,27 +113,27 @@ let S = l.memo(function (e) {
             u = (0, o.bG)([f.Ay], () => f.Ay.isComboing(n, t), [t, n]),
             { ref: A, width: g = 0 } = (0, d.Ay)(),
             [_, x] = l.useState(!1),
-            T = (0, E.A)(t),
+            I = (0, E.A)(t),
             N = a && u && s;
         l.useEffect(() => {
             N && x(!0);
             let e = setTimeout(() => x(N), 1e3);
             return () => clearTimeout(e);
         }, [N]);
-        let b = (0, c.zhh)({
+        let y = (0, c.zhh)({
                 opacity: +!!_,
                 transform: _ ? "translateY(0)" : "translateY(100%)",
                 pointerEvents: "none",
                 config: r.config.stiff,
             }),
-            y = l.useMemo(() => T ?? { value: 0, multiplier: 1 }, [T]),
-            v = l.useRef(y);
+            b = l.useMemo(() => I ?? { value: 0, multiplier: 1 }, [I]),
+            v = l.useRef(b);
         l.useEffect(() => {
-            (y.multiplier > 1 || y.value > 0) && (v.current = y);
-        }, [y]);
+            (b.multiplier > 1 || b.value > 0) && (v.current = b);
+        }, [b]);
         let { multiplier: j, value: R } = l.useMemo(
-            () => ({ value: N ? y.value : v.current.value, multiplier: N ? y.multiplier : v.current.multiplier }),
-            [N, y, v],
+            () => ({ value: N ? b.value : v.current.value, multiplier: N ? b.multiplier : v.current.multiplier }),
+            [N, b, v],
         );
         return (0, i.jsxs)(i.Fragment, {
             children: [
@@ -141,8 +141,8 @@ let S = l.memo(function (e) {
                 (0, i.jsx)(r.animated.div, {
                     ref: A,
                     className: C.p_,
-                    style: b,
-                    children: (0, i.jsx)(I, { value: R, multiplier: j }),
+                    style: y,
+                    children: (0, i.jsx)(T, { value: R, multiplier: j }),
                 }),
             ],
         });

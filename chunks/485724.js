@@ -1,7 +1,7 @@
 n.d(t, { J: () => D.J, W: () => U }), n(321073), n(134528), n(947204);
 var i = n(627968),
-    l = n(64700),
-    r = n(485845),
+    r = n(64700),
+    l = n(485845),
     a = n(379834),
     s = n(311907),
     o = n(397927),
@@ -33,9 +33,9 @@ var i = n(627968),
     w = n(574660),
     D = n(768349),
     O = n(985018),
-    k = n(355208);
+    k = n(22658);
 function U(e) {
-    let { app: t, linkType: n, activityCustomId: r, activityReferrerId: a, message: o, onView: g } = e,
+    let { app: t, linkType: n, activityCustomId: l, activityReferrerId: a, message: o, onView: g } = e,
         { name: f, bot: C } = (t = (0, P.b)(t)),
         b = C?.id,
         T = (0, h.Ag)(t),
@@ -51,7 +51,7 @@ function U(e) {
         K = (0, x.e)(t),
         J = (0, w.F)(t),
         X = (0, w.t)(t),
-        Z = l.useMemo(() => {
+        Z = r.useMemo(() => {
             let e = [];
             return (
                 T
@@ -78,7 +78,7 @@ function U(e) {
                                           applicationId: t.id,
                                           isStart: null == H,
                                           embeddedActivitiesManager: q,
-                                          customId: r,
+                                          customId: l,
                                           referrerId: k,
                                           analyticsLocations: U,
                                       });
@@ -95,7 +95,7 @@ function U(e) {
                                           appId: t.id,
                                           botId: b,
                                           analyticsLocations: U,
-                                          customId: r,
+                                          customId: l,
                                           referrerId: k,
                                       });
                                   },
@@ -103,7 +103,7 @@ function U(e) {
                     : null != X && e.push(X),
                 e
             );
-        }, [T, X, K, t.id, Q, z, H, V, F, q, r, k, U, b]),
+        }, [T, X, K, t.id, Q, z, H, V, F, q, l, k, U, b]),
         $ = T ? (0, i.jsx)(B, { app: t }) : (0, i.jsx)(G, { app: t });
     return (0, i.jsx)(j.h, {
         title: f,
@@ -119,7 +119,7 @@ function U(e) {
             id: t.id,
             linkType: n,
             referrerId: k,
-            activityCustomId: r,
+            activityCustomId: l,
             onView: g,
             guildId: I.A.getChannel(o.channel_id)?.guild_id,
             channelId: o.channel_id,
@@ -136,9 +136,9 @@ function G(e) {
                 integrationTypesConfig: t.integrationTypesConfig,
             }) &&
             null != t.integrationTypesConfig &&
-            r.b.GUILD_INSTALL in t.integrationTypesConfig,
+            l.b.GUILD_INSTALL in t.integrationTypesConfig,
         a = (0, s.bG)([C.default], () => C.default.locale, []),
-        d = l.useMemo(() => {
+        d = r.useMemo(() => {
             if (!n) return null;
             let e = new Intl.NumberFormat(a, { notation: "compact", compactDisplay: "short" }),
                 i = t.directoryEntry?.guild_count ?? 0;
@@ -161,7 +161,7 @@ function G(e) {
 }
 function B(e) {
     let { app: t } = e,
-        { tags: n, maxParticipants: r = 0 } = t,
+        { tags: n, maxParticipants: l = 0 } = t,
         d = (0, s.bG)([T.A], () => T.A.getGuildId() ?? void 0, []),
         c = (0, f.s)(t.id),
         u = (0, s.yK)([v.default, b.A], () => {
@@ -169,12 +169,12 @@ function B(e) {
             for (let [t, n] of c.entries()) {
                 if (t >= 5) break;
                 let i = v.default.getUser(n.author_id),
-                    l = b.A.isFriend(n.author_id);
-                null != i && l && e.push(i);
+                    r = b.A.isFriend(n.author_id);
+                null != i && r && e.push(i);
             }
             return e;
         }, [c]),
-        _ = l.useMemo(() => {
+        _ = r.useMemo(() => {
             if (u.length > 0)
                 return (0, i.jsx)(L.$, {
                     activityUsers: u,
@@ -185,11 +185,11 @@ function B(e) {
                 return (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsx)(o.Y3C, { size: "xxs", color: "currentColor" }), O.intl.string(O.t.TsWCdW)],
                 });
-            let e = r > 0 ? O.intl.format(O.t.z8EAJW, { count: r }) : O.intl.string(O.t.RjceQU);
+            let e = l > 0 ? O.intl.format(O.t.z8EAJW, { count: l }) : O.intl.string(O.t.RjceQU);
             return (0, i.jsxs)(i.Fragment, {
                 children: [(0, i.jsx)(o.nys, { size: "xxs", color: "currentColor" }), e],
             });
-        }, [c, u, d, r]);
+        }, [c, u, d, l]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             n.length > 0 &&

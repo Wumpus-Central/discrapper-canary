@@ -6,7 +6,7 @@ var i = n(627968),
     r = n(102815),
     o = n(189024),
     d = n(985018),
-    c = n(15830);
+    c = n(950268);
 function u(e) {
     let { glowingPerkId: t = null } = e,
         n = (0, o.A)();

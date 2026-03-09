@@ -1,4 +1,4 @@
-n.d(t, { A: () => W });
+n.d(t, { A: () => z });
 var i = n(627968),
     l = n(64700),
     s = n(284009),
@@ -19,11 +19,11 @@ var i = n(627968),
     x = n(709977),
     C = n(212455),
     S = n(466244),
-    I = n(158476),
-    T = n(857071),
+    T = n(158476),
+    I = n(857071),
     N = n(552227),
-    b = n(698405),
-    y = n(557722),
+    y = n(698405),
+    b = n(557722),
     v = n(976860),
     j = n(544028),
     R = n(560010),
@@ -39,7 +39,7 @@ var i = n(627968),
     F = n(360469),
     H = n(53516),
     B = n(985018),
-    V = n(690427);
+    V = n(32385);
 class K extends l.PureComponent {
     state = { submitting: !1, shouldShowLurkerModeUpsellPopout: !1, shouldShowLurkerModeSuccessPopout: !1 };
     textAreaContainerRef = l.createRef();
@@ -90,8 +90,8 @@ class K extends l.PureComponent {
     handleVerifyPhone = () => {
         (0, d.mMO)(
             async () => {
-                let { default: e } = await Promise.all([n.e("84704"), n.e("24676")]).then(n.bind(n, 615715));
-                return (t) => (0, i.jsx)(e, { reason: y.d.GUILD_PHONE_REQUIRED, ...t });
+                let { default: e } = await Promise.all([n.e("84704"), n.e("45668")]).then(n.bind(n, 615715));
+                return (t) => (0, i.jsx)(e, { reason: b.d.GUILD_PHONE_REQUIRED, ...t });
             },
             { modalKey: H.V },
         );
@@ -131,7 +131,7 @@ class K extends l.PureComponent {
         let { guild: e } = this.props;
         return (
             a()(null != e, "GuildVerification.renderLurkerModeUpsellPopout - guild cannot be undefined"),
-            (0, i.jsx)(b.A, { type: b.w.CHAT, guild: e, closePopout: this.closeLurkerModeUpsellPopout })
+            (0, i.jsx)(y.A, { type: y.w.CHAT, guild: e, closePopout: this.closeLurkerModeUpsellPopout })
         );
     };
     renderMemberVerificationSuccessModal = () => {
@@ -169,7 +169,7 @@ class K extends l.PureComponent {
                 showLinkedLobbyApplicationLoadingIndicator: C,
                 requiredLinkedLobbyApplication: S,
             } = this.props,
-            { shouldShowLurkerModeUpsellPopout: I, shouldShowLurkerModeSuccessPopout: T } = this.state,
+            { shouldShowLurkerModeUpsellPopout: T, shouldShowLurkerModeSuccessPopout: I } = this.state,
             N = { theme: u, useReducedMotion: f };
         if (e && !m) {
             if (((N.message = B.intl.string(B.t.Hl0Mqh)), null != A && A >= 1e3)) {
@@ -231,7 +231,7 @@ class K extends l.PureComponent {
             targetElementRef: this.textAreaContainerRef,
             position: "top",
             align: "left",
-            shouldShow: T,
+            shouldShow: I,
             onRequestClose: () => this.setState({ shouldShowLurkerModeSuccessPopout: !1 }),
             renderPopout: this.renderSuccessPopout,
             children: (e) =>
@@ -245,7 +245,7 @@ class K extends l.PureComponent {
                                 ? (0, i.jsx)(d.YNO, {
                                       targetElementRef: this.upsellTargetRef,
                                       renderPopout: this.renderLurkerModeUpsellPopout,
-                                      shouldShow: I,
+                                      shouldShow: T,
                                       position: "top",
                                       children: (e) =>
                                           (0, i.jsx)(d.DUT, {
@@ -263,23 +263,23 @@ class K extends l.PureComponent {
         });
     }
 }
-function W(e) {
+function z(e) {
     let { channel: t, children: n } = e,
         l = t.getGuildId(),
         s = (0, r.bG)([D.A], () => D.A.getGuild(l)),
         a = (0, r.bG)([O.A], () => O.A.getCheck(l)),
         o = t.type === G.rbe.GUILD_ANNOUNCEMENT && null != s && s.features.has(G.GuildFeatures.NEWS),
         c = (0, r.bG)([R.A], () => (o ? R.A.getFollowerStatsForChannel(t.id) : null)),
-        d = (0, r.bG)([T.A], () => T.A.isLurking(l)),
+        d = (0, r.bG)([I.A], () => I.A.isLurking(l)),
         u = (0, r.bG)([P.default], () => P.default.getCurrentUser()),
         h = u?.isStaff() ?? !1,
         m = (0, r.bG)([M.Ay], () => null != u && (M.Ay.getMember(l, u.id)?.isPending ?? !1)),
         g = !!(0, x.Qd)(s),
-        p = (0, r.bG)([I.A], () => I.A.shouldShowPopout(l)),
+        p = (0, r.bG)([T.A], () => T.A.shouldShowPopout(l)),
         f = (0, r.bG)([L.A], () => L.A.can(G.xBc.SEND_MESSAGES, t)),
         _ = (0, r.bG)([C.A], () => C.A.getRequest(l)),
         { showLinkedLobbyApplicationLoadingIndicator: S, requiredLinkedLobbyApplication: N } = (0, k.A)(t.linkedLobby),
-        b = {
+        y = {
             ...a,
             guild: s,
             isLurking: d,
@@ -298,5 +298,5 @@ function W(e) {
             useReducedMotion: A.A.useReducedMotion,
             isStaff: h,
         };
-    return (0, i.jsx)(K, { ...b, channel: t, children: n });
+    return (0, i.jsx)(K, { ...y, channel: t, children: n });
 }

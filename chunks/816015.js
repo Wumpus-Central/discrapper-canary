@@ -11,7 +11,7 @@ var i = n(627968),
     A = n(341338),
     h = n(998515),
     _ = n(652215),
-    m = n(881640);
+    m = n(58682);
 class g extends r.Component {
     componentDidMount() {
         this.fetchStoreListing(), (0, d.d)("channel_store_listing");

@@ -15,7 +15,7 @@ var l = n(627968),
 n(253913);
 var x = n(652215),
     A = n(985018),
-    p = n(944616);
+    p = n(57046);
 function f(e) {
     let { channel: t } = e,
         s = (0, r.bG)([g.A], () => g.A.can(x.xBc.MANAGE_CHANNELS, t), [t]),
@@ -42,8 +42,8 @@ function f(e) {
         ),
         {
             handleDragStart: j,
-            handleDragReset: N,
-            handleDragComplete: v,
+            handleDragReset: v,
+            handleDragComplete: N,
         } = (0, h.A)(t.availableTags, (e) => {
             (0, c.fy)({ availableTags: e });
         });
@@ -59,8 +59,8 @@ function f(e) {
                               availableTags: t.availableTags,
                               canManageChannels: s,
                               onTagClick: C,
-                              onDragComplete: v,
-                              onDragReset: N,
+                              onDragComplete: N,
+                              onDragReset: v,
                               onDragStart: j,
                           },
                           e.id,

@@ -27,8 +27,8 @@ var r = n(627968),
     R = n(652215),
     O = n(272984),
     b = n(985018),
-    D = n(133567),
-    L = n(46e4);
+    D = n(388277),
+    L = n(187866);
 function w(e, t) {
     return b.intl.formatToPlainString(b.t.h2yWWX, { username: t.username, activity: e });
 }

@@ -3,7 +3,7 @@ var i = n(627968),
     s = n(64700),
     l = n(397927),
     a = n(985018),
-    r = n(170822);
+    r = n(69940);
 let o = s.forwardRef(function (e, t) {
     let { currentPageIndex: n, numPages: s, onChangePage: o, children: d, showPageCount: c = !0, ...u } = e,
         _ = n >= s - 1,

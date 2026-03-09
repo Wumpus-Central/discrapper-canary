@@ -17,31 +17,31 @@ var i = n(627968),
     _ = n(854627),
     E = n(314307),
     x = n(985018),
-    C = n(859588);
+    C = n(82842);
 function S(e) {
     let t,
-        { channel: n, children: S, user: I } = e,
-        T = (0, s.bG)([o.A], () => o.A.useReducedMotion),
+        { channel: n, children: S, user: T } = e,
+        I = (0, s.bG)([o.A], () => o.A.useReducedMotion),
         N = (0, u.Ay)(n) ?? "",
         {
-            avatarDecorationSrc: b,
-            eventHandlers: y,
+            avatarDecorationSrc: y,
+            eventHandlers: b,
             isAnimating: v,
-        } = (0, _.A)({ userId: I?.id, size: r._3J.SIZE_80, animateOnHover: !0 }),
+        } = (0, _.A)({ userId: T?.id, size: r._3J.SIZE_80, animateOnHover: !0 }),
         [j, R] = l.useState(!1),
         M = l.useCallback(() => {
-            y.onMouseEnter(), R(!0);
-        }, [y]),
+            b.onMouseEnter(), R(!0);
+        }, [b]),
         D = l.useCallback(() => {
-            y.onMouseLeave(), R(!1);
-        }, [y]),
-        O = !n.isMultiUserDM() && I?.displayNameStyles != null;
+            b.onMouseLeave(), R(!1);
+        }, [b]),
+        O = !n.isMultiUserDM() && T?.displayNameStyles != null;
     return (0, i.jsxs)(E.Ay, {
         channelId: n.id,
         onMouseEnter: M,
         onMouseLeave: D,
         children: [
-            ((t = !T && v),
+            ((t = !I && v),
             n.isMultiUserDM()
                 ? (0, i.jsx)(g.Q, {
                       channel: n,
@@ -53,13 +53,13 @@ function S(e) {
                       "aria-label": N,
                       size: r._3J.SIZE_80,
                       src: (0, d.Y)(n, 80, t),
-                      avatarDecoration: b,
+                      avatarDecoration: y,
                   })),
             (0, i.jsx)(E.cr, {
                 children: O
                     ? (0, i.jsx)(m.A, {
                           userName: N,
-                          displayNameStyles: I?.displayNameStyles,
+                          displayNameStyles: T?.displayNameStyles,
                           effectDisplayType: j ? h.G.ANIMATED : h.G.STATIC,
                           loop: !0,
                       })

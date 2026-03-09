@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => Y, T: () => B, Wx: () => H, cH: () => w }), n(321073);
+n.d(t, { Ay: () => F, T: () => B, Wx: () => H, cH: () => w }), n(321073);
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -25,12 +25,12 @@ var i = n(627968),
     N = n(652215),
     v = n(650583),
     j = n(985018),
-    O = n(38872),
-    R = n(754694),
-    y = n(641254),
-    P = n(522759);
-let L = r.Ay.connectStores([I.A], () => ({ theme: I.A.theme }))(c.ppr),
-    D = (0, f.isWindows)();
+    O = n(900506),
+    R = n(976092),
+    y = n(20976),
+    P = n(473169);
+let D = r.Ay.connectStores([I.A], () => ({ theme: I.A.theme }))(c.ppr),
+    L = (0, f.isWindows)();
 function G(e) {
     let { onClose: t } = e,
         n = (0, r.bG)([m.Ay], () => m.Ay.getCandidateGames()),
@@ -75,7 +75,7 @@ function M(e) {
             isCurrentGameDetectionEnabled: m.Ay.isDetectionEnabled(I),
         })),
         P = (0, r.bG)([m.Ay], () => m.Ay.getVisibleGame()),
-        [L, G] = s.useState(!1),
+        [D, G] = s.useState(!1),
         U = s.useMemo(
             () =>
                 (0, x.n1)(I)
@@ -111,7 +111,7 @@ function M(e) {
             : u.A.toggleDetection(I);
     }
     let B = null != P && (0, m.Es)(I) === (0, m.Es)(P),
-        Y = (null != f && f.id === P?.id) || B || (null != p && p.some((e) => e.id === P?.id));
+        F = (null != f && f.id === P?.id) || B || (null != p && p.some((e) => e.id === P?.id));
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
@@ -172,7 +172,7 @@ function M(e) {
                             })(),
                         ],
                     }),
-                    A || L
+                    A || D
                         ? null
                         : (0, i.jsx)("div", {
                               className: a()(y.tR, y.oA, y.LT, O.E3),
@@ -182,7 +182,7 @@ function M(e) {
                                       "aria-label": j.intl.string(j.t["y0B+lo"]),
                                       className: O.ym,
                                       onClick: function () {
-                                          if (L) return;
+                                          if (D) return;
                                           let e = null != I.id ? E.A.getDetectableGame(I.id) : null;
                                           S.default.track(N.HAw.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
                                               application_id: e?.id,
@@ -244,7 +244,7 @@ function M(e) {
                         });
                     })(),
                     (function () {
-                        if (!D || null != f) return null;
+                        if (!L || null != f) return null;
                         let { overlay: e, overlayWarn: t } = I,
                             n = e
                                 ? (0, i.jsx)(c.kN9, {
@@ -284,7 +284,7 @@ function M(e) {
                             ],
                         });
                     })(),
-                    (l && !A) || Y
+                    (l && !A) || F
                         ? null
                         : (0, i.jsx)(_.A, {
                               className: O.LS,
@@ -332,7 +332,7 @@ function U() {
 }
 function k(e) {
     let { children: t } = e;
-    return (0, i.jsxs)(L, {
+    return (0, i.jsxs)(D, {
         className: P.eT,
         children: [(0, i.jsx)(c.G8R, { darkSrc: n(839628), lightSrc: n(446404), width: 430, height: 250 }), t],
     });
@@ -412,7 +412,7 @@ let V = (0, C.L_)(function () {
                   }),
               });
     },
-    Y = function (e) {
+    F = function (e) {
         let { className: t, showHeader: n = !0 } = e;
         return (0, i.jsxs)(b.A, {
             title: n ? j.intl.string(j.t.AVDyEj) : null,

@@ -13,7 +13,7 @@ var i = n(627968),
     _ = n(726845),
     m = n(285395),
     g = n(488995),
-    p = n(935266);
+    p = n(34352);
 let E = function () {
     let e = (0, a.bG)([o.A], () => o.A.hasLoadedExperiments),
         t = _.A.useField("selectedTab"),

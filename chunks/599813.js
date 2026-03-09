@@ -15,15 +15,15 @@ var i = n(627968),
     p = n(342887),
     f = n(973947),
     _ = n(985018),
-    E = n(361499);
+    E = n(32425);
 let x = [51],
     C = [_.t.OpqAok];
 function S(e) {
     let { columns: t, handleScroll: n, voiceListRef: l, showSectionHeaders: s = !1, query: a } = e,
-        r = T(),
+        r = I(),
         S = (0, o.bG)([h.default], () => (0, m.ki)(h.default.getCurrentUser())),
-        b = N(a, S),
-        y = Math.ceil(b.length / t),
+        y = N(a, S),
+        b = Math.ceil(y.length / t),
         {
             isNativeModuleLoaded: v,
             isNativeModuleLoading: j,
@@ -33,7 +33,7 @@ function S(e) {
             isNativeModuleLoading: g.A.isNativeModuleLoading(),
             catalogLastFetchTime: g.A.getCatalogLastFetchTime(),
         }));
-    return a && 0 === b.length
+    return a && 0 === y.length
         ? (0, i.jsxs)("div", {
               className: E.nm,
               children: [
@@ -72,9 +72,9 @@ function S(e) {
                   className: E.kL,
                   renderRow: (e) => {
                       let n = e * t,
-                          l = b.slice(n, n + t);
+                          l = y.slice(n, n + t);
                       return (0, i.jsx)(
-                          I,
+                          T,
                           {
                               children: l.map((n, l) =>
                                   (0, i.jsx)(
@@ -84,7 +84,7 @@ function S(e) {
                                           hasNitro: S,
                                           analyticsContext: {
                                               reason: A.O.USER_SELECTION,
-                                              gridRows: y,
+                                              gridRows: b,
                                               gridColumns: t,
                                               interactedRow: e,
                                               interactedColumn: l,
@@ -108,14 +108,14 @@ function S(e) {
                                     children: _.intl.string(C[e]),
                                 }),
                   sectionHeaderHeight: !1 === s ? void 0 : (e) => x[e],
-                  rowCount: y,
+                  rowCount: b,
                   rowHeight: 130,
                   onScroll: n,
                   ref: l,
                   sectionFooterHeight: 40 * !S,
               });
 }
-function I(e) {
+function T(e) {
     let { children: t } = e,
         n = l.useRef(null);
     return (0, i.jsx)("div", {
@@ -124,7 +124,7 @@ function I(e) {
         children: (0, i.jsx)(d.xpW, { containerRef: n, children: t }),
     });
 }
-let T = () =>
+let I = () =>
         (0, o.bG)(
             [g.A],
             () =>

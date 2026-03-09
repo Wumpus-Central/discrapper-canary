@@ -7,7 +7,7 @@ var i = n(503698),
     a = n(397927),
     o = n(138869),
     l = n(386971),
-    u = n(30944);
+    u = n(775486);
 let c = (e) => {
         let { application: t, asset: n, className: i, ...s } = e;
         return (0, r.jsx)(o.A, { application: t, size: o.V.MEDIUM, asset: n, className: i, ...s });

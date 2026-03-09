@@ -26,17 +26,17 @@ var i = n(627968),
     v = n(768985),
     j = n(191627),
     O = n(652215),
-    R = n(870236),
+    R = n(842130),
     y = n(985018),
-    P = n(41742);
-let L = {
+    P = n(914280);
+let D = {
         [j.u9.REQUESTS]: b.A,
         [j.u9.ACTIVITY]: I.A,
         [j.u9.SETTINGS]: N.A,
         [j.u9.CONTENT_AND_SOCIAL]: C.A,
         [j.u9.DATA_AND_PRIVACY]: f.A,
     },
-    D = { [j.u9.REQUESTS]: b.A, [j.u9.ACTIVITY]: I.A, [j.u9.CONTENT_AND_SOCIAL]: C.A, [j.u9.DATA_AND_PRIVACY]: f.A };
+    L = { [j.u9.REQUESTS]: b.A, [j.u9.ACTIVITY]: I.A, [j.u9.CONTENT_AND_SOCIAL]: C.A, [j.u9.DATA_AND_PRIVACY]: f.A };
 function G() {
     return (0, i.jsx)(d.BJc, { justify: "center", align: "center", className: P.g4, children: (0, i.jsx)(d.y$y, {}) });
 }
@@ -135,7 +135,7 @@ function k() {
             },
         });
     if (l) return null;
-    let a = L[n];
+    let a = D[n];
     return (0, i.jsxs)("main", {
         className: P.kL,
         "aria-label": y.intl.string(R.default.RZqaJn),
@@ -182,7 +182,7 @@ function V() {
     )
         return null;
     let I = S !== j.u9.SETTINGS ? S : j.u9.ACTIVITY,
-        b = D[I];
+        b = L[I];
     return (0, i.jsx)(_.f5, {
         value: e,
         children: (0, i.jsxs)("main", {

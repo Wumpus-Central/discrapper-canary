@@ -22,8 +22,8 @@ var i = n(627968),
     m = n(675722),
     P = n(268719),
     D = n(234957),
-    g = n(652215),
-    U = n(50397);
+    U = n(652215),
+    g = n(119907);
 let M = l.memo(function (e) {
     let {
             message: t,
@@ -40,7 +40,7 @@ let M = l.memo(function (e) {
             trackAnnouncementViews: G = !1,
             ...b
         } = e,
-        j = t.type === g.lAJ.POLL_RESULT || (e.disableInteraction ?? !1),
+        j = t.type === U.lAJ.POLL_RESULT || (e.disableInteraction ?? !1),
         v = t.isFirstMessageInForumPost(y),
         B = (0, _.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
         {
@@ -54,13 +54,13 @@ let M = l.memo(function (e) {
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
-        w = t.type === g.lAJ.REPLY ? t.messageReference : void 0,
+        w = t.type === U.lAJ.REPLY ? t.messageReference : void 0,
         V = (0, o.bG)([E.A], () => E.A.getMessageByReference(w)),
         H = (0, s.rm)(t.id),
         W = (0, T.Ay)(t),
         K = (0, o.bG)(
             [d.A],
-            () => t.hasFlag(g.pr7.HAS_THREAD) && d.A.getChannel(u.default.castMessageIdAsChannelId(t.id)),
+            () => t.hasFlag(U.pr7.HAS_THREAD) && d.A.getChannel(u.default.castMessageIdAsChannelId(t.id)),
         ),
         $ = (0, c.$7)({ guildId: y.guild_id, roleId: W.iconRoleId }),
         Y = (0, S.A)({ message: t, channel: y, enabled: G }),
@@ -68,7 +68,7 @@ let M = l.memo(function (e) {
         Q = (0, N.ZD)(t);
     return (0, i.jsx)(I.A, {
         compact: n,
-        className: a()(l, { [U.M1]: (0, A.ec)(t), [U.XN]: j }),
+        className: a()(l, { [g.M1]: (0, A.ec)(t), [g.XN]: j }),
         disableInteraction: j,
         childrenRepliedMessage: (0, D.A)(t, y, w, V, n),
         childrenExecutedCommand: (0, P.A)(t, y, n),
@@ -78,8 +78,8 @@ let M = l.memo(function (e) {
         childrenSystemMessage: (0, m.A)({ ...e, disableInteraction: j }),
         onContextMenu: r,
         onClick: M,
-        hasThread: x && null != K && t.hasFlag(g.pr7.HAS_THREAD),
-        hasReply: t.type === g.lAJ.REPLY,
+        hasThread: x && null != K && t.hasFlag(U.pr7.HAS_THREAD),
+        hasReply: t.type === U.lAJ.REPLY,
         "aria-labelledby": z,
         "aria-describedby": Q,
         messageRef: Y,

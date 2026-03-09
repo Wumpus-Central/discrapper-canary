@@ -1,4 +1,4 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => T });
 var i = n(627968),
     l = n(64700),
     s = n(735438),
@@ -17,25 +17,25 @@ var i = n(627968),
     _ = n(143413),
     E = n(652215),
     x = n(985018),
-    C = n(989);
+    C = n(455683);
 let S = "749054660769218631";
-function I(e) {
+function T(e) {
     let { channel: t } = e,
         [n, s] = l.useState("");
     l.useEffect(() => {
         (0, d.zk)("847199849233514549", !0);
     }, []);
-    let I = (0, r.bG)(
+    let T = (0, r.bG)(
             [A.A, m.default],
             () =>
                 !!a()(A.A.getMessages(t.id).toArray())
                     .reverse()
                     .find((e) => e.author.id !== m.default.getId() && e.state === E.cmJ.SENT && !(0, _.A)(e)),
         ),
-        T = (0, r.bG)([g.default], () => g.default.getUser(t.isPrivate() ? t.getRecipientId() : null)),
-        N = f.Ay.useName(T) ?? x.intl.string(x.t.y1Wu2f),
-        b = (0, r.bG)([u.A], () => u.A.getStickerById(S)),
-        y = l.useCallback(async () => {
+        I = (0, r.bG)([g.default], () => g.default.getUser(t.isPrivate() ? t.getRecipientId() : null)),
+        N = f.Ay.useName(I) ?? x.intl.string(x.t.y1Wu2f),
+        y = (0, r.bG)([u.A], () => u.A.getStickerById(S)),
+        b = l.useCallback(async () => {
             if (null == n || "" === n)
                 try {
                     await c.A.sendGreetMessage(t.id, S),
@@ -59,16 +59,16 @@ function I(e) {
                       children: n,
                   })
                 : null;
-    return I
+    return T
         ? (0, i.jsxs)("div", {
               className: C.ft,
               children: [
                   (0, i.jsxs)(o.DUT, {
                       className: null != n && "" !== n ? C.AO : C.Iq,
                       "aria-label": x.intl.string(x.t.pJObYI),
-                      onClick: y,
+                      onClick: b,
                       children: [
-                          (0, i.jsx)(h.A, { sticker: b, size: 24 }),
+                          (0, i.jsx)(h.A, { sticker: y, size: 24 }),
                           (0, i.jsx)(o.Text, { className: C.Qq, variant: "text-md/medium", children: v }),
                       ],
                   }),
@@ -78,12 +78,12 @@ function I(e) {
         : (0, i.jsxs)("div", {
               className: C.nj,
               children: [
-                  (0, i.jsx)(h.A, { sticker: b, size: 160, className: C.Xr }),
+                  (0, i.jsx)(h.A, { sticker: y, size: 160, className: C.Xr }),
                   (0, i.jsx)(o.Button, {
                       fullWidth: !0,
                       variant: "primary",
                       size: "md",
-                      onClick: y,
+                      onClick: b,
                       disabled: !!n,
                       text: v,
                   }),

@@ -24,7 +24,7 @@ var r = n(627968),
     v = n(97483),
     N = n(818348),
     C = n(985018),
-    R = n(580002);
+    R = n(94576);
 let O = (0, m.D)(() => ({ selectedCollection: null, selectedStory: null, controlsLayout: "right" }));
 function b() {
     let e = (0, A.A)(),

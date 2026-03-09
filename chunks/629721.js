@@ -5,7 +5,7 @@ var i = n(934551),
     l = n(158954),
     s = n(827734),
     a = n(371028),
-    o = n(997463);
+    o = n(37725);
 function d(e) {
     let { guildId: t, powerupNames: n, warnings: d } = e,
         { shouldShow: u, title: c, description: m } = (0, a.A)(t, n);

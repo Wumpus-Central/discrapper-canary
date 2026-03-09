@@ -8,7 +8,7 @@ var i = n(627968),
     d = n(397927),
     c = n(442433);
 n(687599);
-var u = n(58826);
+var u = n(102752);
 let A = function (e) {
     let {
             index: t,
@@ -45,7 +45,7 @@ let A = function (e) {
                                     let { default: e } = await Promise.all([
                                         n.e("97262"),
                                         n.e("32418"),
-                                        n.e("93382"),
+                                        n.e("22252"),
                                     ]).then(n.bind(n, 668569));
                                     return (t) => (0, i.jsx)(e, { ...t, user: A });
                                 },

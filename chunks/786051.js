@@ -6,7 +6,7 @@ var i = n(627968),
     r = n(397927),
     o = n(576470),
     c = n(761640),
-    d = n(10794);
+    d = n(945675);
 let u = function (e) {
     let {
             message: t,
@@ -24,21 +24,21 @@ let u = function (e) {
             useReducedMotion: C = !1,
             buttonVariant: S,
         } = e,
-        I = (0, a.bG)([c.Ay], () => c.Ay.getState().isMembersOpen);
-    if (s.Fr && I) return null;
+        T = (0, a.bG)([c.Ay], () => c.Ay.getState().isMembersOpen);
+    if (s.Fr && T) return null;
     if (null == t) return (0, i.jsx)(i.Fragment, { children: l.Children.only(x) });
-    let T = null;
+    let I = null;
     return (
         null != p
-            ? (T = (0, i.jsx)("img", { alt: "", src: p, className: d.Sl }))
-            : null != f && (T = (0, i.jsx)(r.akl, { importData: f, shouldAnimate: !C, className: d.lY })),
+            ? (I = (0, i.jsx)("img", { alt: "", src: p, className: d.Sl }))
+            : null != f && (I = (0, i.jsx)(r.akl, { importData: f, shouldAnimate: !C, className: d.lY })),
         (0, i.jsxs)("div", {
             className: d.iE,
             children: [
                 (0, i.jsxs)("div", {
                     className: d.Qs,
                     children: [
-                        T,
+                        I,
                         (0, i.jsxs)("div", {
                             className: d.Qq,
                             children: [

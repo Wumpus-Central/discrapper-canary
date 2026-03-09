@@ -9,16 +9,16 @@ var l = n(827734),
     d = n(263063),
     c = n(562153),
     u = n(939496),
-    g = n(518477),
-    m = n(996988),
-    x = n(786361);
+    m = n(518477),
+    g = n(996988),
+    x = n(7319);
 let f = (0, r.FT9)(r._3J.SIZE_16);
 function p(e) {
     let { user: t, guild: p, nick: h, onSelect: _ } = e,
         { theme: A, themeType: I } = (0, u.E)(),
         j = t.hasAvatarForGuild(p.id);
     return (0, i.jsxs)(r.DUT, {
-        focusProps: I === m.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
+        focusProps: I === g.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
         className: x.nM,
         onClick: _,
         onContextMenu: (e) => {
@@ -39,17 +39,17 @@ function p(e) {
                     n.e("42006"),
                     n.e("37372"),
                     n.e("68587"),
-                    n.e("5283"),
+                    n.e("2245"),
                     n.e("28136"),
                     n.e("3183"),
-                    n.e("10566"),
+                    n.e("53890"),
                     n.e("63379"),
                     n.e("56026"),
                     n.e("16301"),
                     n.e("22191"),
                     n.e("25961"),
                     n.e("8018"),
-                    n.e("96760"),
+                    n.e("21968"),
                     n.e("35894"),
                     n.e("50796"),
                     n.e("41595"),
@@ -57,17 +57,17 @@ function p(e) {
                     n.e("41606"),
                     n.e("8458"),
                     n.e("11810"),
-                    n.e("52848"),
+                    n.e("39048"),
                     n.e("88475"),
                     n.e("30453"),
                     n.e("45266"),
                     n.e("17537"),
                     n.e("49862"),
-                    n.e("2717"),
+                    n.e("33105"),
                     n.e("56475"),
                     n.e("59541"),
                     n.e("54469"),
-                    n.e("50742"),
+                    n.e("94298"),
                 ]).then(n.bind(n, 544676));
                 return (t) => (0, i.jsx)(e, { ...t, guild: p });
             });
@@ -80,7 +80,7 @@ function p(e) {
                 className: null != p.icon ? x.Kk : x.lN,
                 badgeStrokeColor: (0, s.Mw)(A) ? l.A.unsafe_rawColors.PRIMARY_600.css : l.A.unsafe_rawColors.WHITE.css,
                 badgeTooltipColor: r.oMw.PRIMARY,
-                badgeTooltipDelay: g.In,
+                badgeTooltipDelay: m.In,
                 size: d.Ay.Sizes.MEDIUM,
                 active: !0,
             }),
@@ -101,7 +101,7 @@ function p(e) {
                                 (0, i.jsx)(r.Text, {
                                     variant: "text-xs/medium",
                                     children: (0, i.jsx)(a.A, {
-                                        delay: g.In,
+                                        delay: m.In,
                                         children: h ?? c.Ay.getName(p.id, void 0, t),
                                     }),
                                 }),
@@ -111,7 +111,7 @@ function p(e) {
                         null != h &&
                         (0, i.jsx)(r.Text, {
                             variant: "text-xs/medium",
-                            children: (0, i.jsx)(a.A, { delay: g.In, children: h }),
+                            children: (0, i.jsx)(a.A, { delay: m.In, children: h }),
                         }),
                 ],
             }),

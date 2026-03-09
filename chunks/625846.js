@@ -69,7 +69,7 @@ var l = n(627968),
     eg = n(652215),
     ef = n(37411),
     e_ = n(985018),
-    ep = n(162070);
+    ep = n(1004);
 function ej(e) {
     let { channel: t, guild: n, sidebarState: i } = e;
     return (0, l.jsx)(es.Cp, { channel: t, children: (0, l.jsx)(eS, { channel: t, guild: n, sidebarState: i }) }, t.id);
@@ -430,9 +430,9 @@ function eS(e) {
             updateMasonryListScrollerRef: e3,
             getItemKey: e1,
             renderGridSection: e9,
-            renderGridItem: e8,
+            renderGridItem: e4,
             getGridSectionHeight: e6,
-            getSectionProps: e4,
+            getSectionProps: e8,
             handleGridFocus: e7,
         } = (function (e) {
             let {
@@ -661,8 +661,8 @@ function eS(e) {
                                           getSectionHeight: e6,
                                           getItemHeight: tl,
                                           renderSection: e9,
-                                          renderItem: e8,
-                                          getSectionProps: e4,
+                                          renderItem: e4,
+                                          getSectionProps: e8,
                                           onScroll: A ? e2 : void 0,
                                           chunkSize: 350,
                                           ...ts,

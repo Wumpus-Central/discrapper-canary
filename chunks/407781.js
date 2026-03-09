@@ -7,7 +7,7 @@ var r = n(627968),
     o = n.n(a),
     l = n(667050),
     u = n(194486),
-    c = n(13835);
+    c = n(196305);
 let d = async (e) => {
     let { animationType: t, animationId: n, url: r, shouldResize: i } = e,
         a = l.Bf[t] ?? l.Bf[u.B.BASIC],

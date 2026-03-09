@@ -18,8 +18,8 @@ var a = n(503698),
     x = n(379107),
     N = n(126727),
     I = n(430506),
-    _ = n(620513),
-    f = n(145885),
+    f = n(620513),
+    _ = n(145885),
     g = n(371068),
     T = n(61266),
     v = n(324877),
@@ -30,7 +30,7 @@ var a = n(503698),
     y = n(183924),
     b = n(920409),
     P = n(532294),
-    L = n(903634);
+    L = n(87528);
 function D(e) {
     return e.map((e, t) =>
         (0, l.jsxs)(l.Fragment, {
@@ -56,11 +56,11 @@ function D(e) {
                         case i.I5.TEXT_DISPLAY:
                             return (0, l.jsx)(T.A, { ...t }, n);
                         case i.I5.MEDIA_GALLERY:
-                            return (0, l.jsx)(f.A, { ...t }, n);
+                            return (0, l.jsx)(_.A, { ...t }, n);
                         case i.I5.THUMBNAIL:
                             return (0, l.jsx)(v.A, { ...t }, n);
                         case i.I5.FILE:
-                            return (0, l.jsx)(_.A, { ...t }, n);
+                            return (0, l.jsx)(f.A, { ...t }, n);
                         case i.I5.SEPARATOR:
                             return (0, l.jsx)(g.A, { ...t }, n);
                         case i.I5.CONTENT_INVENTORY_ENTRY:

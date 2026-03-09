@@ -1,7 +1,7 @@
 n.d(t, { P: () => S }), n(321073);
 var i = n(627968),
-    l = n(64700),
-    r = n(311907),
+    r = n(64700),
+    l = n(311907),
     a = n(397927),
     s = n(138175),
     o = n(99072),
@@ -20,22 +20,22 @@ var i = n(627968),
     E = n(536189),
     I = n(652215),
     b = n(272984),
-    T = n(62323);
+    T = n(609653);
 function v(e) {
-    let { partyMembers: t, partySize: n, maxPartySize: l, guildId: r, activityActionType: s } = e,
+    let { partyMembers: t, partySize: n, maxPartySize: r, guildId: l, activityActionType: s } = e,
         o = Math.max(n, t.length),
-        d = (0, g.SJ)({ maxPartySize: l, partySize: o, activityActionType: s }),
+        d = (0, g.SJ)({ maxPartySize: r, partySize: o, activityActionType: s }),
         c = [...t];
     for (; c.length < n && c.length < 8; ) c.push(f.mt);
-    for (; c.length < l && c.length < 8; ) c.push(null);
+    for (; c.length < r && c.length < 8; ) c.push(null);
     return (0, i.jsxs)("div", {
         className: T.UF,
         children: [
             c.length > 0 &&
                 (0, i.jsx)(f.Ay, {
-                    guildId: r,
+                    guildId: l,
                     users: c,
-                    max: l > 0 ? Math.min(l, 8) : 8,
+                    max: r > 0 ? Math.min(r, 8) : 8,
                     size: f.DN.SIZE_16,
                     dimEmptyUsers: !0,
                 }),
@@ -46,8 +46,8 @@ function v(e) {
 function S(e) {
     let { analyticsLocations: t, app: n, channel: a, message: g, hideParty: T, onView: S } = e,
         y = (0, s.b)(n),
-        N = (0, r.bG)([c.default], () => c.default.getId()),
-        j = (0, r.bG)([m.A], () => {
+        N = (0, l.bG)([c.default], () => c.default.getId()),
+        j = (0, l.bG)([m.A], () => {
             if (null == g.application) return m.A.findActivity(g.author.id, (e) => e.type === I.$pd.LISTENING);
             {
                 let e = g.author.id;
@@ -57,14 +57,14 @@ function S(e) {
                 );
             }
         }, [g, a, N]),
-        L = (0, r.bG)([_.A, h.A], () => _.A.getApplicationActivity(y.id) ?? h.A.getApplicationActivity(y.id, !0), [
+        L = (0, l.bG)([_.A, h.A], () => _.A.getApplicationActivity(y.id) ?? h.A.getApplicationActivity(y.id, !0), [
             y.id,
         ]),
-        R = (0, r.yK)([u.A], () => (null == j || null == j.party ? [] : Array.from(u.A.getParty(j.party.id) ?? [])), [
+        R = (0, l.yK)([u.A], () => (null == j || null == j.party ? [] : Array.from(u.A.getParty(j.party.id) ?? [])), [
             j,
         ]),
         { partySize: P, maxPartySize: M } = (0, x._)(j),
-        w = l.useMemo(
+        w = r.useMemo(
             () =>
                 R.map((e) => {
                     let t = p.default.getUser(e);
@@ -72,7 +72,7 @@ function S(e) {
                 }),
             [R],
         ),
-        D = l.useMemo(
+        D = r.useMemo(
             () =>
                 (0, i.jsx)(v, {
                     partyMembers: w,

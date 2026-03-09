@@ -1,8 +1,8 @@
 n.d(t, { A: () => T });
 var i = n(627968);
 n(64700);
-var l = n(311907),
-    r = n(397927),
+var r = n(311907),
+    l = n(397927),
     a = n(456060),
     s = n(793574),
     o = n(688810),
@@ -19,13 +19,13 @@ var l = n(311907),
     f = n(661191),
     C = n(820672),
     E = n(768349),
-    I = n(55705),
+    I = n(426127),
     b = n(985018);
 function T(e) {
     let { currentUserId: t, message: T, application: v, channel: S, analyticsLocations: y, onView: N } = e,
         { staticBannerSrc: j, videoBannerSrc: L, bannerAspectRatio: R } = (0, u.f)(v),
         P = A.Ay.getApplicationIconURL({ id: v.id, icon: v.icon }),
-        M = (0, l.bG)([_.Ay, p.A], () =>
+        M = (0, r.bG)([_.Ay, p.A], () =>
             _.Ay.getVisibleRunningGames().find((e) => {
                 let { id: t } = e;
                 if (t === v.id) return !0;
@@ -33,8 +33,8 @@ function T(e) {
                 return null != n && t === n.id;
             }),
         ),
-        w = (0, l.bG)([h.A], () => h.A.getCurrentUserActiveStream()),
-        D = (0, l.bG)([g.A], () => g.A.getChannelId()),
+        w = (0, r.bG)([h.A], () => h.A.getCurrentUserActiveStream()),
+        D = (0, r.bG)([g.A], () => g.A.getChannelId()),
         O = f.default.extractTimestamp(T.id) + C.M < Date.now(),
         k = (0, i.jsx)(i.Fragment, { children: (0, a.Wf)(T, S, t) }),
         { analyticsLocations: U } = (0, o.Ay)(y, s.A.REQUEST_TO_STREAM_INVITE_EMBED),
@@ -68,7 +68,7 @@ function T(e) {
                                   null != M &&
                                       ((0, x.isWindows)()
                                           ? (0, m.A)(M.pid)
-                                          : (0, r.mMO)(async () => {
+                                          : (0, l.mMO)(async () => {
                                                 let { default: e } = await Promise.all([
                                                     n.e("96811"),
                                                     n.e("48697"),

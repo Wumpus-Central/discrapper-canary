@@ -1,20 +1,20 @@
 n.d(t, { l: () => A });
 var i = n(627968);
 n(64700);
-var l = n(989349),
-    r = n.n(l),
+var r = n(989349),
+    l = n.n(r),
     a = n(827734),
     s = n(397927),
     o = n(393033),
     d = n(239093),
     c = n(985018),
-    u = n(682402);
+    u = n(617184);
 function _(e) {
     let { classificationId: t } = e;
     return (0, i.jsx)(s.MzZ, {
         onClick: () => {
             (0, s.mMO)(async () => {
-                let { default: e } = await Promise.all([n.e("83518"), n.e("9407"), n.e("70660")]).then(
+                let { default: e } = await Promise.all([n.e("83518"), n.e("9407"), n.e("1708")]).then(
                     n.bind(n, 956450),
                 );
                 return (n) =>
@@ -35,14 +35,14 @@ function m(e) {
     return (0, i.jsx)(s.MzZ, { className: u.zh, href: t, children: c.intl.string(c.t["8/GdRB"]) });
 }
 function h(e) {
-    let { ctaType: t, classificationId: n, learnMoreLink: l } = e;
+    let { ctaType: t, classificationId: n, learnMoreLink: r } = e;
     switch (t) {
         case d.xw.POLICY_VIOLATION_DETAIL:
             if (null == n) return null;
             return (0, i.jsx)(_, { classificationId: n });
         case d.xw.LEARN_MORE_LINK:
-            if (null == l) return null;
-            return (0, i.jsx)(m, { learnMoreLink: l });
+            if (null == r) return null;
+            return (0, i.jsx)(m, { learnMoreLink: r });
         default:
             return null;
     }
@@ -57,8 +57,8 @@ function p(e) {
 }
 function g(e) {
     let { children: t, theme: n } = e,
-        l = { default: u._y, danger: u.yk };
-    return (0, i.jsx)("div", { className: l[n ?? "default"], children: t });
+        r = { default: u._y, danger: u.yk };
+    return (0, i.jsx)("div", { className: r[n ?? "default"], children: t });
 }
 function A(e) {
     let t;
@@ -84,7 +84,7 @@ function A(e) {
                               children: (0, i.jsx)(s.Text, {
                                   variant: "text-xs/medium",
                                   children: c.intl.format(c.t.eevFb6, {
-                                      daysAgo: ((t = n.timestamp ?? 0), r()().diff(r().unix(t), "days")),
+                                      daysAgo: ((t = n.timestamp ?? 0), l()().diff(l().unix(t), "days")),
                                   }),
                               }),
                           }),

@@ -1,14 +1,22 @@
 "use strict";
-e.exports = {
-    y2: "headerBackground_b66356",
-    qG: "tier2HeaderBackground_b66356 headerBackground_b66356",
-    LI: "headerTop_b66356",
-    nr: "headerIcon_b66356",
-    w6: "nonTier2_b66356",
-    q9: "price_b66356",
-    b: "closeButton_b66356",
-    TX: "trialBadgeContainer_b66356",
-    El: "trialOfferText_b66356",
-    LD: "tier0TrialOffer_b66356",
-    N8: "trialBadgeSparkles_b66356",
-};
+n.d(t, { A: () => d });
+var r = n(582754),
+    i = n(439372),
+    s = n(667747),
+    a = n(652215),
+    o = n(985018);
+function l(e) {
+    let { relationship: t } = e,
+        n = t.userIgnored;
+    t.type !== a.eA$.PENDING_INCOMING ||
+        n ||
+        (r.OR.announce(o.intl.formatToPlainString(o.t.zH0kC7, { username: t.user.username })), s.m(t.user));
+}
+function u(e) {
+    let { user: t } = e;
+    r.OR.announce(o.intl.formatToPlainString(o.t["/+7xky"], { username: t.username })), s.I(t);
+}
+class c extends i.A {
+    actions = { RELATIONSHIP_ADD: l, FRIEND_REQUEST_ACCEPTED: u };
+}
+let d = new c();

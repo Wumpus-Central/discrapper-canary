@@ -1,7 +1,7 @@
 n.d(t, { A: () => U }), n(321073);
 var i = n(627968),
-    l = n(64700),
-    r = n(379834),
+    r = n(64700),
+    l = n(379834),
     a = n(934551),
     s = n(27989),
     o = n(311907),
@@ -32,11 +32,11 @@ var i = n(627968),
     M = n(652215),
     w = n(768349),
     D = n(985018),
-    O = n(62323);
+    O = n(609653);
 function k(e) {
-    let { presenceActivity: t, remoteJoinPlatform: n, isGameLaunchable: r } = e,
-        o = (0, L.z4)({ platforms: t?.supported_platforms, currentPlatform: M.yTV.DESKTOP, isGameLaunchable: r }),
-        c = l.useMemo(
+    let { presenceActivity: t, remoteJoinPlatform: n, isGameLaunchable: l } = e,
+        o = (0, L.z4)({ platforms: t?.supported_platforms, currentPlatform: M.yTV.DESKTOP, isGameLaunchable: l }),
+        c = r.useMemo(
             () =>
                 o
                     .map((e) => {
@@ -102,7 +102,7 @@ function U(e) {
             renderAccountLinkUpsell: Z,
         } = e,
         $ = V?.timestamps?.start ?? V?.created_at,
-        ee = l.useMemo(
+        ee = r.useMemo(
             () =>
                 null != $
                     ? (0, i.jsxs)("div", {
@@ -122,9 +122,9 @@ function U(e) {
         ),
         et = (0, T.v)(t),
         en = (0, x.s)(n.id),
-        ei = l.useMemo(
+        ei = r.useMemo(
             () =>
-                en.some((e) => (0, g.CZ)(e) === r.m.GLOBAL)
+                en.some((e) => (0, g.CZ)(e) === l.m.GLOBAL)
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)(d.Y3C, { size: "xxs", color: "currentColor" }),
@@ -134,7 +134,7 @@ function U(e) {
                     : null,
             [en],
         ),
-        el = l.useMemo(
+        er = r.useMemo(
             () =>
                 (0, i.jsxs)(d.Text, {
                     variant: "text-xs/normal",
@@ -145,9 +145,9 @@ function U(e) {
                 }),
             [et, t, a, s, S, ee, ei],
         ),
-        er = l.useMemo(
-            () => (0, i.jsxs)("div", { className: O.pq, children: [el, q || et ? null : Y] }),
-            [el, q, et, Y],
+        el = r.useMemo(
+            () => (0, i.jsxs)("div", { className: O.pq, children: [er, q || et ? null : Y] }),
+            [er, q, et, Y],
         ),
         ea = !!L,
         es = (0, A.e)(n),
@@ -169,7 +169,7 @@ function U(e) {
             [f.A],
             () => null != V && null != V.application_id && f.A.getState(V.application_id, M.xL.JOIN) === M.eAD.LOADING,
         ),
-        { actions: ep, hasAccountLinkButton: eg } = l.useMemo(() => {
+        { actions: ep, hasAccountLinkButton: eg } = r.useMemo(() => {
             let e = null,
                 n = !0,
                 i = !1;
@@ -246,13 +246,13 @@ function U(e) {
                               disabled: !0,
                           })
                         : null != U && ((e = U), (n = !1));
-            let l = [];
+            let r = [];
             return (
                 null != e &&
-                    (l.push(e),
+                    (r.push(e),
                     Q &&
                         n &&
-                        (l.push({
+                        (r.push({
                             label: D.intl.string(D.t.lw71Nf),
                             trackingArea: h.kY.CONNECT_ACCOUNT,
                             onClick: () => {
@@ -263,12 +263,12 @@ function U(e) {
                             buttonRef: X,
                         }),
                         (i = !0))),
-                { actions: l, hasAccountLinkButton: i }
+                { actions: r, hasAccountLinkButton: i }
             );
         }, [eo, ec, eu, e_, U, t.author.id, t.id, V, s.id, s.guild_id, z, ed, S, eh, Q, J, X, K, em]),
         eA = ep.some((e) => e.trackingArea === h.kY.CLOUD_PLAY);
     (0, P.A)(eA, z);
-    let ex = l.useMemo(
+    let ex = r.useMemo(
         () => (e_ ? null : (0, i.jsx)(k, { presenceActivity: V, remoteJoinPlatform: ed, isGameLaunchable: ea })),
         [e_, V, ed, ea],
     );
@@ -281,7 +281,7 @@ function U(e) {
                 onClickBanner: B,
                 bannerAspectRatio: m.u.ACTIVITY,
                 iconSrc: F ?? void 0,
-                info: er,
+                info: el,
                 actions: ep,
                 primaryActionFirst: !0,
                 onClickContent: B,

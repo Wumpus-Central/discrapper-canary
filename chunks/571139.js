@@ -18,8 +18,8 @@ var l = n(503698),
     R = n(652215),
     S = n(746080),
     C = n(985018),
-    O = n(463149),
-    p = n(504226);
+    O = n(121615),
+    p = n(1624);
 let m = () => {
     let e = (0, s.bG)([d.A], () => d.A.getGuildId(), []),
         t = (0, s.bG)([E.A], () => E.A.getGuild(e), [e]),
@@ -28,14 +28,14 @@ let m = () => {
         P = (0, _.B)(m.pathname, R.BVt.CHANNEL(t?.id, S.VV.GUILD_ONBOARDING))?.isExact === !0;
     if (null == t || !(0, I.Qd)(t) || P) return null;
     let D = l?.applicationStatus ?? T.B5.STARTED,
-        g = null,
         U = null,
+        g = null,
         M = null,
         h = [O.lm, p.lm];
     switch (D) {
         case T.B5.SUBMITTED:
-            (g = C.intl.string(C.t["5iLvSx"])),
-                (U = C.intl.string(C.t.mqtdmQ)),
+            (U = C.intl.string(C.t["5iLvSx"])),
+                (g = C.intl.string(C.t.mqtdmQ)),
                 (M = () => {
                     (0, o.A)({
                         title: C.intl.string(C.t.aIz1oV),
@@ -47,8 +47,8 @@ let m = () => {
                 });
             break;
         case T.B5.REJECTED:
-            (g = C.intl.string(C.t.lk30cY)),
-                (U = C.intl.string(C.t["8RrsHr"])),
+            (U = C.intl.string(C.t.lk30cY)),
+                (g = C.intl.string(C.t["8RrsHr"])),
                 (M = () => {
                     (0, c.mMO)(async () => {
                         let { default: e } = await n.e("37548").then(n.bind(n, 856103));
@@ -58,8 +58,8 @@ let m = () => {
                 h.push(O.z3);
             break;
         default:
-            (g = C.intl.string(C.t.G5YKXP)),
-                (U = C.intl.string(C.t["r8/DT+"])),
+            (U = C.intl.string(C.t.G5YKXP)),
+                (g = C.intl.string(C.t["r8/DT+"])),
                 (M = () => {
                     (0, A.Ze)(t.id);
                 });
@@ -67,8 +67,8 @@ let m = () => {
     return (0, i.jsxs)("div", {
         className: r()(...h),
         children: [
-            (0, i.jsx)(c.Text, { className: O.wx, variant: "text-sm/normal", children: g }),
-            (0, i.jsx)(c.Button, { variant: "overlay-primary", size: "sm", onClick: M, text: U }),
+            (0, i.jsx)(c.Text, { className: O.wx, variant: "text-sm/normal", children: U }),
+            (0, i.jsx)(c.Button, { variant: "overlay-primary", size: "sm", onClick: M, text: g }),
         ],
     });
 };

@@ -16,7 +16,7 @@ var l = n(427262),
 function f(e) {
     let { uploadType: t, guildId: i, analyticsSource: o, filters: l, isTryItOut: f = !1 } = e;
     (0, s.mMO)(async () => {
-        let { default: e } = await Promise.all([n.e("59701"), n.e("53653"), n.e("70944")]).then(n.bind(n, 551028));
+        let { default: e } = await Promise.all([n.e("59701"), n.e("53653"), n.e("8261")]).then(n.bind(n, 551028));
         return (n) =>
             (0, r.jsx)(e, {
                 filters: l,

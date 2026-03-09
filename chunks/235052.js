@@ -10,27 +10,27 @@ var l = i(311907),
     u = i(159426),
     c = i(762370),
     m = i(25528),
-    p = i(652215),
-    h = i(55705),
-    A = i(985018);
+    A = i(652215),
+    p = i(426127),
+    h = i(985018);
 function g(t, e, i) {
     let { enableRequestToStream: n } = u.m.useExperiment(
             { guildId: e.guild_id, location: i },
             { autoTrackExposure: !1 },
         ),
         r = (0, l.bG)([d.default], () => d.default.getId()),
-        h = (0, m.Ay)(t, e.guild_id)[0],
-        A = (0, l.bG)([o.A], () => null != o.A.getStreamForUser(t, e.getGuildId())),
-        g = (0, a.YY)(h?.application_id).data,
+        p = (0, m.Ay)(t, e.guild_id)[0],
+        h = (0, l.bG)([o.A], () => null != o.A.getStreamForUser(t, e.getGuildId())),
+        g = (0, a.YY)(p?.application_id).data,
         f = (0, c.A)(t, e.id);
-    return r !== t && null != h && null != g && n && f && !A
+    return r !== t && null != p && null != g && n && f && !h
         ? {
               playingApplication: g,
               handleRequestToStream: function (i) {
                   s.A.sendActivityInvite({
-                      type: p.xL.STREAM_REQUEST,
+                      type: A.xL.STREAM_REQUEST,
                       channelId: e.id,
-                      activity: h,
+                      activity: p,
                       content: `<@${t}>`,
                       location: i,
                       targetUserId: t,
@@ -47,7 +47,7 @@ function f(t, e) {
               r.Drp,
               {
                   id: "request-to-stream",
-                  label: A.intl.format(h.default["8qq+H7"], { applicationName: i.playingApplication.name }),
+                  label: h.intl.format(p.default["8qq+H7"], { applicationName: i.playingApplication.name }),
                   action: () => i.handleRequestToStream("request to stream item"),
                   icon: r.ofK,
                   leadingAccessory: { type: "icon", icon: r.ofK },

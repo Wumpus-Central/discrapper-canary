@@ -21,7 +21,7 @@ var i = n(627968),
     T = n(315206),
     N = n(844358),
     S = n(828430),
-    x = n(857365),
+    x = n(79746),
     v = n(861638),
     y = n(793574),
     b = n(114716),
@@ -44,7 +44,7 @@ var i = n(627968),
     W = n(257402),
     q = n(216954),
     K = n(735831),
-    z = n(136334),
+    z = n(913953),
     $ = n(142120),
     Q = n(507263),
     X = n(998345),
@@ -108,8 +108,8 @@ var i = n(627968),
     e1 = n(237631),
     e7 = n(194871),
     e6 = n(856588),
-    e9 = n(612181),
-    e5 = n(723702),
+    e5 = n(612181),
+    e9 = n(723702),
     e2 = n(837921),
     e3 = n(715671),
     e4 = n(652215),
@@ -142,7 +142,7 @@ let tn = !1;
 (0, v.as)(),
     s.Ay.initialize(),
     eb.A.loadServer(),
-    e5.isPlatformEmbedded &&
+    e9.isPlatformEmbedded &&
         (e2.Ay.on("USER_SETTINGS_OPEN", (e, t) => {
             (0, eF.openUserSettings)();
         }),
@@ -227,7 +227,7 @@ let tc = [
     {
         path: [e4.BVt.ACTIVITY_DETAILS(":applicationId")],
         render: function (e) {
-            return (0, e9.wR)() ||
+            return (0, e5.wR)() ||
                 eq.default.getLoginStatus() === e4.aUe.LOGGING_IN ||
                 !eq.default.allowLogoutRedirect()
                 ? ta(e)
@@ -338,7 +338,7 @@ let tc = [
             return (
                 (0, Q.B)(() => {
                     (0, o.mMO)(async () => {
-                        let { default: e } = await Promise.all([n.e("64992"), n.e("6356")]).then(n.bind(n, 401539));
+                        let { default: e } = await Promise.all([n.e("64992"), n.e("67208")]).then(n.bind(n, 401539));
                         return (t) => (0, i.jsx)(e, { ...t, guildId: r });
                     });
                 }),

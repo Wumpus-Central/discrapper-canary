@@ -27,7 +27,7 @@ var i = n(627968),
     v = n(652215),
     S = n(746080),
     y = n(985018),
-    R = n(655215);
+    R = n(289);
 function O(e) {
     let { guildId: t, hasValidApplication: n } = e,
         { listingsLoaded: O } = (0, b.bb)(t),

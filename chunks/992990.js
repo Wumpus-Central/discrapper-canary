@@ -10,7 +10,7 @@ var s = n(503698),
     c = n(258799),
     u = n(253558),
     _ = n(985018),
-    g = n(93662);
+    g = n(392044);
 let m = (e) => {
     let { className: t, onBackClick: n } = e,
         s = (0, a.bG)([o.A], () => o.A.useReducedMotion),

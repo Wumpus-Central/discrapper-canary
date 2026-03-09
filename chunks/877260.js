@@ -15,7 +15,7 @@ var r = n(627968),
     g = n(397274),
     v = n(188180),
     p = n(985018),
-    y = n(45272);
+    y = n(658646);
 function x(e) {
     let { root: t, footer: n, onClose: a, emptyState: v, searchQuery: x, onSearchChange: j } = e,
         S = m.A.useField("showNavigationMobile"),

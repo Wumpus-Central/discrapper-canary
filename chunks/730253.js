@@ -34,9 +34,9 @@ var i = n(627968),
     D = n(332396),
     G = n(652215),
     U = n(49999),
-    P = n(525736),
+    P = n(665606),
     w = n(985018),
-    k = n(4720);
+    k = n(299446);
 let V = { analyticsSource: { page: G.liQ.GUILD_CHANNEL, section: G.JJy.CHANNEL_LIST, object: G.ZSU.CHANNEL } };
 function B() {
     let e,

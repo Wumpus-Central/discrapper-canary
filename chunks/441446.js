@@ -4,7 +4,7 @@ l(64700);
 var n = l(503698),
     r = l.n(n),
     i = l(397927),
-    s = l(14503);
+    s = l(798233);
 let o = () => (0, a.jsx)("hr", { className: s.ts }),
     u = (e) => {
         let { label: t, children: l, direction: n = "horizontal", className: u } = e;

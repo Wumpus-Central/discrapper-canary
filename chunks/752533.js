@@ -7,9 +7,9 @@ var i = n(627968),
     o = n(397927),
     d = n(854627),
     c = n(427262),
-    u = n(518582),
+    u = n(519412),
     _ = n(985018),
-    g = n(807323);
+    g = n(75717);
 let m = (e) => {
         let { user: t, isOwnUser: n, label: l, removeButton: r, isFaded: u } = e,
             { avatarSrc: m, eventHandlers: A } = (0, d.A)({ userId: t?.id, size: o._3J.SIZE_24 }),

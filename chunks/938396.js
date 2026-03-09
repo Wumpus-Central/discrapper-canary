@@ -14,43 +14,43 @@ var a = l(627968),
     x = l(309954),
     b = l(287809),
     g = l(975571),
-    f = l(474090),
-    y = l(94264),
-    E = l(235365),
-    v = l(566119),
+    y = l(474090),
+    f = l(94264),
+    v = l(235365),
+    E = l(566119),
     S = l(788868),
     j = l(652215),
     T = l(901123),
-    C = l(723468),
+    C = l(49370),
     P = l(985018),
-    A = l(99720),
+    A = l(125634),
     R = l(268920),
     _ = l(633217),
     k = l(909340);
 let I = () =>
     (0, a.jsx)("div", { className: A.s, children: (0, a.jsx)(p.A, { src: _.A, fallbackImage: R.A, className: A.Cb }) });
 function N() {
-    (0, v.RQ)(), (0, h.pX)(`${T.BV.NITRO_HOME}?section=${E.L}`);
+    (0, E.RQ)(), (0, h.pX)(`${T.BV.NITRO_HOME}?section=${v.L}`);
 }
 function D() {
-    (0, v.gP)(), (0, h.pX)(`${T.BV.NITRO_HOME}?section=${E.L}`);
+    (0, E.gP)(), (0, h.pX)(`${T.BV.NITRO_HOME}?section=${v.L}`);
 }
 function M() {
-    (0, v.b)(), window.open(g.A.getArticleURL(j.MVz.ORBS_FAQ), "_blank");
+    (0, E.b)(), window.open(g.A.getArticleURL(j.MVz.ORBS_FAQ), "_blank");
 }
 function O(e) {
     let { targetElementRef: t, shouldShow: l, onRequestClose: r, ctaText: h, ctaOnClick: g } = e,
-        { passesGeneralUIInvariant: E, programReward: v } = (0, m.F)({
+        { passesGeneralUIInvariant: v, programReward: E } = (0, m.F)({
             location: "PremiumTenureRewardsOrbsBalancePopover",
         }),
         T = (0, o.bG)([b.default], () => b.default.getCurrentUser()),
         { balance: R } = (0, x.W)(),
-        _ = !(0, f.ki)(T),
+        _ = !(0, y.ki)(T),
         O = n.useMemo(() => {
-            let e = (0, f.YE)(T, S.PremiumTypes.TIER_2);
-            if (!E || _) return null;
-            if (e && null != v) {
-                let e = (0, s.default)(new Date(v.next_reward_date), new Date());
+            let e = (0, y.YE)(T, S.PremiumTypes.TIER_2);
+            if (!v || _) return null;
+            if (e && null != E) {
+                let e = (0, s.default)(new Date(E.next_reward_date), new Date());
                 return (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)(d.EYj, {
@@ -61,12 +61,12 @@ function O(e) {
                                 deepLinkToNitroOrbs: N,
                             }),
                         }),
-                        (0, a.jsx)(y.A, {}),
+                        (0, a.jsx)(f.A, {}),
                     ],
                 });
             }
             return null;
-        }, [T, _, v, E]),
+        }, [T, _, E, v]),
         L = (R ?? 0) >= 4100;
     return (0, a.jsx)(u.x, {
         targetElementRef: t,
