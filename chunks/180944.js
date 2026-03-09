@@ -2,11 +2,11 @@
 n.d(t, { X: () => o, l: () => l });
 var r = n(860407),
     i = n(367973);
-function a(e, t) {
+function s(e, t) {
     return 0 === t.length ? e : { key: (0, i.h)(t, e.key), data: e.data, generation: e.generation };
 }
-function s(e, t) {
-    return 0 === t.length ? e : e.map((e) => a(e, t));
+function a(e, t) {
+    return 0 === t.length ? e : e.map((e) => s(e, t));
 }
 class o {
     prefix;
@@ -38,9 +38,9 @@ class o {
     }
     getRange(e, t, n) {
         let r = (0, i.h)(this.prefix, e),
-            a = (0, i.h)(this.prefix, t);
+            s = (0, i.h)(this.prefix, t);
         return this.database.execute(
-            { type: "kv.get_range", table: this.tableId, range: [r, a], ordering: n?.ordering, limit: n?.limit },
+            { type: "kv.get_range", table: this.tableId, range: [r, s], ordering: n?.ordering, limit: n?.limit },
             this.defaultDebugTag,
         );
     }
@@ -75,14 +75,14 @@ class o {
     put(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.hh.Replace;
         return this.database.execute(
-            { type: "kv.put_one", table: this.tableId, cell: a(e, this.prefix), overwrite: t === r.hh.Replace },
+            { type: "kv.put_one", table: this.tableId, cell: s(e, this.prefix), overwrite: t === r.hh.Replace },
             this.defaultDebugTag,
         );
     }
     putAll(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.hh.Replace;
         return this.database.execute(
-            { type: "kv.put_many", table: this.tableId, cells: s(e, this.prefix), overwrite: t === r.hh.Replace },
+            { type: "kv.put_many", table: this.tableId, cells: a(e, this.prefix), overwrite: t === r.hh.Replace },
             this.defaultDebugTag,
         );
     }
@@ -169,7 +169,7 @@ class l {
         this.transaction.add({
             type: "kv.put_one",
             table: this.tableId,
-            cell: a(e, this.prefix),
+            cell: s(e, this.prefix),
             overwrite: t === r.hh.Replace,
         });
     }
@@ -178,7 +178,7 @@ class l {
         this.transaction.add({
             type: "kv.put_many",
             table: this.tableId,
-            cells: s(e, this.prefix),
+            cells: a(e, this.prefix),
             overwrite: t === r.hh.Replace,
         });
     }
@@ -190,6 +190,16 @@ class l {
         let n = (0, i.h)(this.prefix, e),
             r = (0, i.h)(this.prefix, t);
         this.transaction.add({ type: "kv.delete_range", table: this.tableId, range: [n, r] });
+    }
+    deleteAllExcept() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+            t = arguments.length > 1 ? arguments[1] : void 0;
+        this.transaction.add({
+            type: "kv.delete_all_except",
+            table: this.tableId,
+            key: (0, i.$)(this.prefix, e),
+            retain: t,
+        });
     }
     deleteGeneration() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],

@@ -43,7 +43,9 @@ class l {
         this.commit(t);
     }
     handleConnectionOpen(e, t) {
-        for (let t of (this.reset(), e.guilds)) this.updateWith(t.id, [t]);
+        this.reset();
+        let n = [...e.guilds.map((e) => e.id), ...e.unavailableGuilds];
+        for (let r of (a.A.guildVersionsTransaction(t).deleteAllExcept(n), e.guilds)) this.updateWith(r.id, [r]);
         this.commit(t);
     }
     handleGuildCreate(e, t) {

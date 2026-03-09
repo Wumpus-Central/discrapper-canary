@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { B: () => a });
+n.d(t, { B: () => s });
 var r = n(860407),
     i = n(180944);
-class a {
+class s {
     originalPrefix;
     table;
     get prefix() {
@@ -12,7 +12,7 @@ class a {
         (this.originalPrefix = e), (this.table = new i.X([e], t, n, r));
     }
     withoutLogging() {
-        return new a(this.originalPrefix, this.table.tableId, this.table.database, !1);
+        return new s(this.originalPrefix, this.table.tableId, this.table.database, !1);
     }
     get(e, t) {
         return this.table.get([e, t]);
@@ -56,10 +56,10 @@ class a {
         return this.transaction((n) => n.deleteGeneration(e, t), `${this.prefix} deleteGeneration`);
     }
     transaction(e, t) {
-        return this.table.transaction((t) => e(new s(t)), t);
+        return this.table.transaction((t) => e(new a(t)), t);
     }
     upgradeTransaction(e) {
-        return new s(this.table.upgradeTransaction(e));
+        return new a(this.table.upgradeTransaction(e));
     }
     getManySyncUnsafe(e, t) {
         return this.table.getManySyncUnsafe([e], t);
@@ -71,10 +71,10 @@ class a {
         return { key: [e, t.id], data: t, generation: n };
     }
 }
-class s {
+class a {
     transaction;
     static fromDatabaseTransaction(e, t, n) {
-        return new s(new i.l(e, t, n));
+        return new a(new i.l(e, t, n));
     }
     constructor(e) {
         this.transaction = e;
@@ -85,12 +85,12 @@ class s {
     }
     putWithGeneration(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.hh.Replace;
-        return this.transaction.put(a.cell(e, t, n), i);
+        return this.transaction.put(s.cell(e, t, n), i);
     }
     putAll(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.hh.Replace;
         return this.transaction.putAll(
-            t.map((t) => a.cell(e, t, null)),
+            t.map((t) => s.cell(e, t, null)),
             n,
         );
     }
@@ -106,6 +106,9 @@ class s {
             default:
                 return this.transaction.delete([e, t]);
         }
+    }
+    deleteAllExcept(e) {
+        this.transaction.deleteAllExcept([], e);
     }
     deleteGeneration(e, t) {
         return this.transaction.deleteGeneration([], e, t);

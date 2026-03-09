@@ -2,13 +2,13 @@
 n.d(t, { A: () => o }), n(321073);
 var r = n(626584),
     i = n(723176);
-let a = new r.A("GuildStickers");
-class s {
+let s = new r.A("GuildStickers");
+class a {
     async getAsync(e) {
         let t = performance.now(),
             n = await i.A.stickers(e).getMapEntries(),
             r = performance.now();
-        return a.log(`asynchronously loaded in ${r - t}ms (guilds: ${n.length})`), n;
+        return s.log(`asynchronously loaded in ${r - t}ms (guilds: ${n.length})`), n;
     }
     actions = {
         BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
@@ -19,7 +19,8 @@ class s {
         GUILD_UPDATE: (e, t) => this.handleGuildUpdate(e, t),
     };
     handleConnectionOpen(e, t) {
-        for (let n of e.guilds) this.handleOneGuildCreate(n, t);
+        let n = [...e.guilds.map((e) => e.id), ...e.unavailableGuilds];
+        for (let r of (i.A.stickersTransaction(t).deleteAllExcept(n), e.guilds)) this.handleOneGuildCreate(r, t);
     }
     handleGuildCreate(e, t) {
         this.handleOneGuildCreate(e.guild, t);
@@ -39,10 +40,10 @@ class s {
                 e.stickers.map((e) => {
                     if ("unavailable" === e.dataMode) return Promise.resolve();
                     "full" === e.dataMode
-                        ? (a.verbose(`Replacing ${e.entities.length} stickers for ${e.guildId}`),
+                        ? (s.verbose(`Replacing ${e.entities.length} stickers for ${e.guildId}`),
                           this.replace(e.guildId, e.entities, t))
                         : (e.updatedEntities.length > 0 || e.deletedEntityIds.length > 0) &&
-                          (a.verbose(
+                          (s.verbose(
                               `Updating ${e.updatedEntities.length} and deleting ${e.deletedEntityIds.length} stickers for ${e.guildId}`,
                           ),
                           this.update(e.guildId, e.updatedEntities, e.deletedEntityIds, t));
@@ -68,8 +69,8 @@ class s {
         i.A.stickersTransaction(t).delete(e);
     }
     update(e, t, n, r) {
-        let a = i.A.stickersTransaction(r);
-        for (let r of (a.putAll(e, t), n)) a.delete(e, r);
+        let s = i.A.stickersTransaction(r);
+        for (let r of (s.putAll(e, t), n)) s.delete(e, r);
     }
 }
-let o = new s();
+let o = new a();

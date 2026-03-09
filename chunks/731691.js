@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { u: () => a });
+n.d(t, { u: () => s });
 var r = n(860407),
     i = n(180944);
-class a {
+class s {
     originalPrefix;
     table;
     get prefix() {
@@ -12,7 +12,7 @@ class a {
         (this.originalPrefix = e), (this.table = new i.X([e], t, n, r));
     }
     withoutLogging() {
-        return new a(this.originalPrefix, this.table.tableId, this.table.database, !1);
+        return new s(this.originalPrefix, this.table.tableId, this.table.database, !1);
     }
     get(e) {
         return this.table.get([e]);
@@ -50,10 +50,10 @@ class a {
         return this.transaction((t) => t.delete(e), `${this.prefix} delete`);
     }
     transaction(e, t) {
-        return this.table.transaction((t) => e(new s(t)), t);
+        return this.table.transaction((t) => e(new a(t)), t);
     }
     upgradeTransaction(e) {
-        return new s(this.table.upgradeTransaction(e));
+        return new a(this.table.upgradeTransaction(e));
     }
     getManySyncUnsafe(e) {
         return this.table.getManySyncUnsafe([], e);
@@ -65,22 +65,22 @@ class a {
         return { key: [e.id], data: e, generation: t };
     }
 }
-class s {
+class a {
     transaction;
     static fromDatabaseTransaction(e, t, n) {
-        return new s(new i.l(e, t, n));
+        return new a(new i.l(e, t, n));
     }
     constructor(e) {
         this.transaction = e;
     }
     put(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.hh.Replace;
-        return this.transaction.put(a.cell(e, null), t);
+        return this.transaction.put(s.cell(e, null), t);
     }
     putAll(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.hh.Replace;
         return this.transaction.putAll(
-            e.map((e) => a.cell(e, null)),
+            e.map((e) => s.cell(e, null)),
             t,
         );
     }
@@ -89,5 +89,8 @@ class s {
     }
     delete(e) {
         return 0 == arguments.length ? this.transaction.delete([]) : this.transaction.delete([e]);
+    }
+    deleteAllExcept(e) {
+        this.transaction.deleteAllExcept([], e);
     }
 }
