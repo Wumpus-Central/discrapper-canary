@@ -27,7 +27,7 @@ function T(e) {
     let { unownedWishlistItems: t = [], profileOwner: n, onClick: T, wishlistId: v, cardSize: y, title: j } = e,
         { analyticsLocations: R } = (0, a.Ay)(),
         { trackUserProfileWishlistAction: O } = (0, _.NJ)(),
-        L = (0, A.G)("user_profile_sidebar_wishlist_breadcrumb"),
+        L = (0, A.GG)("user_profile_sidebar_wishlist_breadcrumb"),
         M = (0, E.Q)(L),
         D = (0, s.useCallback)(
             (e) => {

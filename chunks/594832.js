@@ -26,7 +26,7 @@ var r = n(64700),
     _ = n(927813),
     f = n(808247),
     p = n(107563),
-    h = n(519421),
+    h = n(178213),
     m = n(872472),
     E = n(792334),
     g = n(652215),
@@ -46,7 +46,7 @@ function C(e, t) {
 }
 function R(e) {
     let { wishlistIdsAndUsers: t, source: n = "user_profile" } = e,
-        s = (0, h.A)("use_fetch_wishlists"),
+        s = (0, h.AZ)("use_fetch_wishlists"),
         a = (0, i.yK)(
             [p.A],
             () =>
@@ -114,7 +114,7 @@ function O(e) {
         ),
         d = "fetching" === o,
         _ = "success" === o || "error" === o,
-        m = (0, h.A)("use_fetch_wishlist"),
+        m = (0, h.AZ)("use_fetch_wishlist"),
         E = (0, i.bG)([l.A], () => {
             if (null != t && null != n) return l.A.getWishlistSettings(n, t)?.updated_at;
         });

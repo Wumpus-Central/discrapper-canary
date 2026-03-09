@@ -395,7 +395,7 @@ function eN(e) {
             trackRankingItemInteraction: h,
             ...m
         } = e,
-        E = (0, V.G)("content_inventory_memberlist_content_popout"),
+        E = (0, V.GG)("content_inventory_memberlist_content_popout"),
         { entry: g } = m,
         A = (0, ee.zD)(g),
         I = A ? g.extra?.application_id : void 0,
@@ -496,7 +496,7 @@ function eC(e) {
             trackRankingItemInteraction: _,
             ...f
         } = e,
-        h = (0, V.G)("content_inventory_memberlist_streaming_content_popout"),
+        h = (0, V.GG)("content_inventory_memberlist_streaming_content_popout"),
         m = (0, u.bG)([H.A], () => H.A.getChannel(a?.channelId)),
         [A] = i.useMemo(() => (0, b.eo)(m, z.A, j.A, Y.A, C.default), [m]),
         { entry: I } = f,

@@ -34,7 +34,7 @@ function L(e) {
     s.useEffect(() => {
         t || n();
     }, [n, t]);
-    let M = (0, p.G)("social_layer_storefront_gifting_mini_shelf"),
+    let M = (0, p.GG)("social_layer_storefront_gifting_mini_shelf"),
         D = (0, d.bG)([u.A], () => u.A.getApplication(T.XR)),
         [G] = (0, d.bG)(
             [A.A],

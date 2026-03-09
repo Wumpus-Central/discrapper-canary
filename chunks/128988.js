@@ -5,16 +5,16 @@ var i = n(627968),
     s = n(311907),
     r = n(397927),
     o = n(178213),
-    c = n(86638),
-    d = n(287809),
+    d = n(86638),
+    c = n(287809),
     u = n(788593),
-    m = n(742710),
-    g = n(463259),
+    g = n(742710),
+    m = n(463259),
     x = n(18983),
-    f = n(330966);
+    f = n(219016);
 function p(e) {
     let { scrollerRef: t } = e,
-        n = (0, o.G)("user_profile_drag_preview_layer"),
+        n = (0, o.GG)("user_profile_drag_preview_layer"),
         {
             isDragging: p,
             item: h,
@@ -24,7 +24,7 @@ function p(e) {
             item: e.getItem(),
             sourceClientOffset: e.getSourceClientOffset(),
         })),
-        A = (0, s.bG)([d.default], () => d.default.getCurrentUser()),
+        A = (0, s.bG)([c.default], () => c.default.getCurrentUser()),
         I = (0, r.VUy)(),
         j = l.useMemo(
             () =>
@@ -35,7 +35,7 @@ function p(e) {
                           if ("WIDGET" === a && s?.widget != null)
                               return (0, i.jsx)("div", {
                                   className: f.dt,
-                                  children: (0, i.jsx)(g.u, { widget: s.widget, user: t, disableInteraction: !0 }),
+                                  children: (0, i.jsx)(m.u, { widget: s.widget, user: t, disableInteraction: !0 }),
                               });
                           if ("GAME_COVER" === a && s?.gameName != null) {
                               let { imageSrc: e, gameName: n } = s;
@@ -50,7 +50,7 @@ function p(e) {
                           }
                           if ("GAME_DETAILS_CARD" === a && s?.game != null && s?.widgetType != null) {
                               let { game: e, widgetType: n } = s;
-                              return (0, i.jsx)(m.A, {
+                              return (0, i.jsx)(g.A, {
                                   className: f.xB,
                                   user: t,
                                   widgetType: n,
@@ -63,7 +63,7 @@ function p(e) {
                               return (0, i.jsx)("div", {
                                   className: f.Xm,
                                   children: n
-                                      ? (0, i.jsx)(c.A, { item: e, wishlistOwner: t, wishlistId: null, isDragging: !0 })
+                                      ? (0, i.jsx)(d.A, { item: e, wishlistOwner: t, wishlistId: null, isDragging: !0 })
                                       : (0, i.jsx)(x.A, {
                                             item: e,
                                             profileOwner: t,
@@ -98,7 +98,7 @@ function p(e) {
         return null;
     null == v.current && E();
     let { x: T, y: b } = v.current ?? { x: 0, y: 0 },
-        y = _.x - T - 60 * !!I,
-        N = _.y - b;
-    return (0, i.jsx)("div", { className: f.kL, style: { transform: `translate3d(${y}px, ${N}px, 0)` }, children: j });
+        N = _.x - T - 60 * !!I,
+        S = _.y - b;
+    return (0, i.jsx)("div", { className: f.kL, style: { transform: `translate3d(${N}px, ${S}px, 0)` }, children: j });
 }

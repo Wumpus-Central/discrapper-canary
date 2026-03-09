@@ -37,7 +37,7 @@ function N(e) {
         } = e,
         w = (0, l.h)(s),
         M = (0, m.A)(w),
-        x = (0, c.G)("social_layer_storefront_gifting_breadcrumb"),
+        x = (0, c.GG)("social_layer_storefront_gifting_breadcrumb"),
         P = i.useMemo(() => {
             if (x) return null;
             let e = null != M ? M.getIconURL(S.iu.SMALL) : void 0;

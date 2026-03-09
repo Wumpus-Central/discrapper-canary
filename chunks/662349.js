@@ -9,7 +9,7 @@ var r = n(627968),
     u = n(525723),
     c = n(287809),
     d = n(580630),
-    _ = n(519421),
+    _ = n(178213),
     f = n(818348),
     p = n(985018),
     h = n(433107);
@@ -19,7 +19,7 @@ function m(e) {
 function E(e) {
     let { sku: t, wishlistOwner: n, isOwned: r, hideIcon: s, location: a } = e,
         f = (0, o.bG)([c.default], () => c.default.getCurrentUser()),
-        h = (0, _.A)(a ?? "User Profile Wishlist Overlay Button"),
+        h = (0, _.AZ)(a ?? "User Profile Wishlist Overlay Button"),
         m = (0, u.Xi)(t);
     return i.useMemo(() => {
         if (h && null != t && !r) {
