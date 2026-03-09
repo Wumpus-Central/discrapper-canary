@@ -1,4 +1,4 @@
-n.d(t, { P: () => X, o: () => Z }), n(321073);
+n.d(t, { P: () => J, o: () => ee }), n(321073);
 var i = n(627968),
     r = n(64700),
     l = n(837381),
@@ -11,9 +11,9 @@ var i = n(627968),
     A = n(366999),
     h = n(531260),
     _ = n(771781),
-    m = n(379848),
-    p = n(320118),
-    g = n(287809),
+    m = n(932001),
+    g = n(320118),
+    p = n(287809),
     E = n(166403),
     I = n(954571),
     f = n(927578),
@@ -33,217 +33,222 @@ var i = n(627968),
     D = n(282077),
     M = n(385327),
     w = n(727949),
-    U = n(164554),
-    G = n(305498),
-    k = n(909255),
-    V = n(328717),
-    B = n(953062),
-    H = n(105390),
-    F = n(796878),
-    Y = n(156393),
-    q = n(513570),
-    W = n(622037),
-    K = n(788868),
-    z = n(652215),
-    $ = n(49999),
-    Q = n(985018);
-let X = (e) => {
+    U = n(84483),
+    G = n(164554),
+    k = n(305498),
+    V = n(909255),
+    B = n(374079),
+    H = n(328717),
+    F = n(953062),
+    Y = n(105390),
+    W = n(796878),
+    q = n(156393),
+    K = n(513570),
+    z = n(622037),
+    $ = n(788868),
+    Q = n(652215),
+    X = n(49999),
+    Z = n(985018);
+let J = (e) => {
         let { selected: t } = e,
-            n = (0, s.bG)([g.default], () => g.default.getCurrentUser()),
+            n = (0, s.bG)([p.default], () => p.default.getCurrentUser()),
             i = (0, s.bG)([E.A], () => E.A.getPremiumTypeSubscription()),
             r = (0, O.V)(),
             l = (0, b.O)(),
             a = (0, T.cg)(),
-            o = (0, q.H)(),
+            o = (0, K.H)(),
             d = (0, f.Of)(n, i),
             c = (0, s.bG)([C.A], () => C.A.getCreatedAtOverride()),
             u = t || null != r || null != l || a || null != o || d,
             A = null != c ? c : n?.createdAt;
         return u || (null != n && null != A && Date.now() - A.getTime() > 12096e5);
     },
-    Z = (e) => {
+    ee = (e) => {
         let t,
             n,
             C,
-            { selected: Z, nitroTabButtonRef: J, route: ee, locationState: et, ...en } = e,
-            ei = (0, s.bG)([g.default], () => g.default.getCurrentUser()),
-            er = (0, s.bG)([E.A], () => E.A.getPremiumTypeSubscription()),
-            el = (0, f.Of)(ei, er),
-            ea = (0, f.YE)(ei, K.PremiumTypes.TIER_2),
-            es = (0, l.rm)("nitro"),
-            eo = (0, O.V)(),
-            ed = (0, b.O)(),
-            ec = (0, y.p)(),
-            eu = (0, S.d)(),
-            eA = (0, T.cg)(),
-            eh = (0, w.NF)({ trialOffer: eo }),
-            e_ = (0, R.bf)(),
-            em = (0, q.H)(),
-            ep = (0, w.Tp)(),
-            eg = (0, s.bG)([N.A], () => N.A.getReminderStateId()),
-            eE = (0, M.c7)(),
-            { programReward: eI, isEligible: ef } = (0, p.F)({ location: "NitroTabButton" }),
-            eC = !(0, f.TW)(ei) && ef,
-            eT = eI?.last_granted_reward,
-            eN = eI?.last_granted_reward_amount,
-            eS = (0, _.mB)(o.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER),
-            ex = ea && ef && null != eT && null != eN && !eS,
-            ev = ea && ef && !ex && null != eI,
-            ey = null != ec && null != er && er.status === z.Dmq.CANCELED,
-            { fractionalState: eb, startsAt: eO, endsAt: eL } = (0, h.A)({ forceFetch: !0 }),
-            [eR, eP] = (0, m.Wl)(eb !== K.xc.NONE ? o.M.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
-                showAfterTimestamp: eO.valueOf(),
+            { selected: ee, nitroTabButtonRef: et, route: en, locationState: ei, ...er } = e,
+            el = (0, s.bG)([p.default], () => p.default.getCurrentUser()),
+            ea = (0, s.bG)([E.A], () => E.A.getPremiumTypeSubscription()),
+            es = (0, f.Of)(el, ea),
+            eo = (0, f.YE)(el, $.PremiumTypes.TIER_2),
+            ed = (0, l.rm)("nitro"),
+            ec = (0, O.V)(),
+            eu = (0, b.O)(),
+            eA = (0, y.p)(),
+            eh = (0, S.d)(),
+            e_ = (0, T.cg)(),
+            em = (0, w.NF)({ trialOffer: ec }),
+            eg = (0, R.bf)(),
+            ep = (0, K.H)(),
+            eE = (0, w.Tp)(),
+            eI = (0, s.bG)([N.A], () => N.A.getReminderStateId()),
+            ef = (0, M.c7)(),
+            { programReward: eC, isEligible: eT } = (0, g.F)({ location: "NitroTabButton" }),
+            { receivesUpdatedUpsellPopover: eN, orbsRewardAmount: eS } = (0, U.uX)("NitroTabButton"),
+            ex = !(0, f.TW)(el) && eT,
+            ev = eC?.last_granted_reward,
+            ey = eC?.last_granted_reward_amount,
+            eb = (0, _.mB)(o.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER),
+            eO = eo && eT && null != ev && null != ey && !eb,
+            eL = eo && eT && !eO && null != eC,
+            eR = null != eA && null != ea && ea.status === Q.Dmq.CANCELED,
+            { fractionalState: eP, startsAt: ej, endsAt: eD } = (0, h.A)({ forceFetch: !0 }),
+            [eM, ew] = (0, m.Wl)(eP !== $.xc.NONE ? o.M.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
+                showAfterTimestamp: ej.valueOf(),
                 cooldownDurationMs: 0,
             }),
-            ej = (0, x.A)({ location: "NitroTabButton" }),
-            eD = eo?.trial_id === K.Dw,
-            eM = [],
-            ew = [];
+            eU = (0, x.A)({ location: "NitroTabButton" }),
+            eG = ec?.trial_id === $.Dw,
+            ek = [],
+            eV = [];
         (0, _.Tc)() &&
-            (eE && eM.push(o.M.RECURRING_3P_PROMOTION_POPOVER),
-            eA && eM.push(o.M.BOGO_2025_NITRO_TAB_BADGE),
-            ej && eM.push(o.M.VOICE_FILTER_EARLY_ACCESS_PREMIUM_TAB_BADGE),
-            eu && eM.push(o.M.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2));
-        let [eU, eG] = (0, m.kn)(eM, void 0, !0);
-        ey && ew.push(o.M.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK),
-            e_ && ew.push(o.M.PREMIUM_GROUP_POPOVER),
-            eC && ew.push(o.M.PREMIUM_ORBS_UPSELL_POPOVER),
-            ev && ew.push(o.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER);
-        let [ek, eV] = (0, m.kn)(ew, void 0, !0),
-            eB = (0, L.c)(a.C.PREMIUM_TAB),
-            eH = (0, L.c)(a.C.PREMIUM_TAB_TOOLTIP),
-            [eF, eY] = (0, m.Cc)(
-                null != eB && "premiumTab" === eB.properties.properties.oneofKind
+            (ef && ek.push(o.M.RECURRING_3P_PROMOTION_POPOVER),
+            e_ && ek.push(o.M.BOGO_2025_NITRO_TAB_BADGE),
+            eU && ek.push(o.M.VOICE_FILTER_EARLY_ACCESS_PREMIUM_TAB_BADGE),
+            eh && ek.push(o.M.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2));
+        let [eB, eH] = (0, m.kn)(ek, void 0, !0);
+        eR && eV.push(o.M.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK),
+            eg && eV.push(o.M.PREMIUM_GROUP_POPOVER),
+            ex && eV.push(o.M.PREMIUM_ORBS_UPSELL_POPOVER),
+            eL && eV.push(o.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER);
+        let [eF, eY] = (0, m.kn)(eV, void 0, !0),
+            eW = (0, L.c)(a.C.PREMIUM_TAB),
+            eq = (0, L.c)(a.C.PREMIUM_TAB_TOOLTIP),
+            [eK, ez] = (0, m.Cc)(
+                null != eW && "premiumTab" === eW.properties.properties.oneofKind
                     ? o.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE
                     : null,
-                eB?.promotionId ?? "",
+                eW?.promotionId ?? "",
                 void 0,
                 !0,
             ),
-            [eq, eW] = (0, m.Cc)(ex ? o.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER : null, eT ?? "", void 0, !0),
-            eK =
-                null != eH &&
-                "premiumTabTooltip" === eH.properties.properties.oneofKind &&
-                eF === o.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE;
+            [e$, eQ] = (0, m.Cc)(eO ? o.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER : null, ev ?? "", void 0, !0),
+            eX =
+                null != eq &&
+                "premiumTabTooltip" === eq.properties.properties.oneofKind &&
+                eK === o.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE;
         if (
             (r.useEffect(() => {
-                !0 === Z && null != eU && eG($.i.AUTO_DISMISS),
-                    !0 === Z && null != ek && eV($.i.AUTO_DISMISS),
-                    !0 === Z && null != eF && eY($.i.AUTO_DISMISS),
-                    !0 === Z && null != eq && eW($.i.AUTO_DISMISS);
-            }, [eG, Z, eU, eV, ek, eF, eY, eq, eW]),
-            !X({ selected: Z }))
+                !0 === ee && null != eB && eH(X.i.AUTO_DISMISS),
+                    !0 === ee && null != eF && eY(X.i.AUTO_DISMISS),
+                    !0 === ee && null != eK && ez(X.i.AUTO_DISMISS),
+                    !0 === ee && null != e$ && eQ(X.i.AUTO_DISMISS);
+            }, [eH, ee, eB, eY, eF, eK, ez, e$, eQ]),
+            !J({ selected: ee }))
         )
             return null;
-        let ez = () => {
-            eR === o.M.FRACTIONAL_NITRO_DURATION_LEFT_PILL && eP($.i.TAKE_ACTION),
-                I.default.track(z.HAw.NITRO_TAB_VISITED, { badge_decorator: C, has_premium: el }),
-                null != eU && eG($.i.USER_DISMISS),
-                null != eF && eY($.i.USER_DISMISS),
-                ek === o.M.PREMIUM_GROUP_POPOVER && eV($.i.USER_DISMISS);
+        let eZ = () => {
+            eM === o.M.FRACTIONAL_NITRO_DURATION_LEFT_PILL && ew(X.i.TAKE_ACTION),
+                I.default.track(Q.HAw.NITRO_TAB_VISITED, { badge_decorator: C, has_premium: es }),
+                null != eB && eH(X.i.USER_DISMISS),
+                null != eK && ez(X.i.USER_DISMISS),
+                eF === o.M.PREMIUM_GROUP_POPOVER && eY(X.i.USER_DISMISS);
         };
-        eb === K.xc.NONE ||
-            eu ||
+        eP === $.xc.NONE ||
+            eh ||
             ((C = 7),
             (n = (0, i.jsx)(v.A, {
                 className: "",
-                startsAt: eO,
-                endsAt: eL,
+                startsAt: ej,
+                endsAt: eD,
                 messageStyle: A.yE.SHORT_TIME,
                 upperCase: !0,
             })));
-        let e$ = e_ && ek === o.M.PREMIUM_GROUP_POPOVER;
-        if (e$) (n = (0, i.jsx)(c.Exy, { type: "new", variant: "expressive" })), (C = 10);
-        else if (null != eB && "premiumTab" === eB.properties.properties.oneofKind)
+        let eJ = eg && eF === o.M.PREMIUM_GROUP_POPOVER;
+        if (eJ) (n = (0, i.jsx)(c.Exy, { type: "new", variant: "expressive" })), (C = 10);
+        else if (null != eW && "premiumTab" === eW.properties.properties.oneofKind)
             (n = (0, i.jsx)(D.A, {
-                componentId: eB.id,
-                badgeCopy: eB.properties.properties.premiumTab.badgeLabel,
-                acknowledgedBadgeCopy: eB.properties.properties.premiumTab.acknowledgedBadgeLabel,
-                isDismissed: eF !== o.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
+                componentId: eW.id,
+                badgeCopy: eW.properties.properties.premiumTab.badgeLabel,
+                acknowledgedBadgeCopy: eW.properties.properties.premiumTab.acknowledgedBadgeLabel,
+                isDismissed: eK !== o.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
             })),
                 (C = 9);
-        else if (eA) (n = (0, i.jsx)(j.A, {})), (C = 0);
-        else if (eh) {
+        else if (e_) (n = (0, i.jsx)(j.A, {})), (C = 0);
+        else if (em) {
             let e = (0, w.ZR)();
-            (n = (0, i.jsx)(H.MA, {
-                isTabSelected: Z,
-                badgeCopy: Q.intl.string(Q.t.OS9KPu),
-                offerExpiresAt: !0 === e ? eo?.expires_at : null,
+            (n = (0, i.jsx)(Y.MA, {
+                isTabSelected: ee,
+                badgeCopy: Z.intl.string(Z.t.OS9KPu),
+                offerExpiresAt: !0 === e ? ec?.expires_at : null,
             })),
                 (C = 4);
         } else
-            eU === o.M.RECURRING_3P_PROMOTION_POPOVER
+            eB === o.M.RECURRING_3P_PROMOTION_POPOVER
                 ? ((n = (0, i.jsx)(c.Exy, { type: "new", variant: "expressive" })),
                   (C = 4),
-                  (ez = () => {
-                      I.default.track(z.HAw.NITRO_TAB_VISITED, { badge_decorator: C, has_premium: el }),
-                          eG($.i.USER_DISMISS);
+                  (eZ = () => {
+                      I.default.track(Q.HAw.NITRO_TAB_VISITED, { badge_decorator: C, has_premium: es }),
+                          eH(X.i.USER_DISMISS);
                   }))
-                : eU === o.M.VOICE_FILTER_EARLY_ACCESS_PREMIUM_TAB_BADGE
-                  ? ((n = (0, i.jsx)(H.MA, {
-                        isTabSelected: Z,
-                        badgeCopy: Q.intl.string(Q.t.y2b7CA),
+                : eB === o.M.VOICE_FILTER_EARLY_ACCESS_PREMIUM_TAB_BADGE
+                  ? ((n = (0, i.jsx)(Y.MA, {
+                        isTabSelected: ee,
+                        badgeCopy: Z.intl.string(Z.t.y2b7CA),
                         offerExpiresAt: null,
                     })),
                     (C = 2))
-                  : eu
-                    ? ((n = (0, i.jsx)(Y.d, { expiresAt: eL })), (C = 4))
-                    : null != em
-                      ? ((n = (0, i.jsx)(W.A, { copy: em, showStars: !1 })), (C = 1))
-                      : null != ed
-                        ? ((n = (0, i.jsx)(H.fY, { userDiscount: ed, isTabSelected: Z, includesAmountOff: !1 })),
+                  : eh
+                    ? ((n = (0, i.jsx)(q.d, { expiresAt: eD })), (C = 4))
+                    : null != ep
+                      ? ((n = (0, i.jsx)(z.A, { copy: ep, showStars: !1 })), (C = 1))
+                      : null != eu
+                        ? ((n = (0, i.jsx)(Y.fY, { userDiscount: eu, isTabSelected: ee, includesAmountOff: !1 })),
                           (C = 3))
-                        : null == eo || eD
-                          ? ey
-                              ? ((n = (0, i.jsx)(B.A, { isSelected: Z, discountOffer: ec })), (C = 8))
-                              : (eC && ek === o.M.PREMIUM_ORBS_UPSELL_POPOVER) ||
-                                  (ev && ek === o.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER)
+                        : null == ec || eG
+                          ? eR
+                              ? ((n = (0, i.jsx)(F.A, { isSelected: ee, discountOffer: eA })), (C = 8))
+                              : (ex && eF === o.M.PREMIUM_ORBS_UPSELL_POPOVER) ||
+                                  (eL && eF === o.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER)
                                 ? ((n = (0, i.jsx)(c.Exy, { type: "new", variant: "expressive" })), (C = 2))
-                                : ex &&
-                                  eq === o.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER &&
+                                : eO &&
+                                  e$ === o.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER &&
                                   ((n = (0, i.jsx)(c.Exy, { type: "new", variant: "expressive" })), (C = 2))
-                          : ((n = (0, i.jsx)(H.Ag, { trialOffer: eo, isTabSelected: Z })), (C = 4));
-        ep &&
-            ((n = (0, i.jsx)(c.Exy, { type: { text: Q.intl.string(Q.t.RDE0Sc) }, variant: "expressive" })),
-            (ez = () => {
-                I.default.track(z.HAw.NITRO_TAB_VISITED, { badge_decorator: C, has_premium: el }), (0, w.ne)(eg);
+                          : ((n = (0, i.jsx)(Y.Ag, { trialOffer: ec, isTabSelected: ee })), (C = 4));
+        eE &&
+            ((n = (0, i.jsx)(c.Exy, { type: { text: Z.intl.string(Z.t.RDE0Sc) }, variant: "expressive" })),
+            (eZ = () => {
+                I.default.track(Q.HAw.NITRO_TAB_VISITED, { badge_decorator: C, has_premium: es }), (0, w.ne)(eI);
             }),
             (C = 6));
-        let eQ = (0, i.jsx)(u.z9, {
-            listItemRef: J,
-            selected: Z,
-            route: ee,
+        let e0 = (0, i.jsx)(u.z9, {
+            listItemRef: et,
+            selected: ee,
+            route: en,
             icon: c.tvc,
-            text: (0, i.jsx)(d.A, { children: ea ? Q.intl.string(Q.t["4gwVVn"]) : Q.intl.string(Q.t.Ipxkog) }),
-            locationState: et,
-            onClick: ez,
-            ...en,
-            ...es,
+            text: (0, i.jsx)(d.A, { children: eo ? Z.intl.string(Z.t["4gwVVn"]) : Z.intl.string(Z.t.Ipxkog) }),
+            locationState: ei,
+            onClick: eZ,
+            ...er,
+            ...ed,
             className: t,
             children: n,
         });
-        return ey && ek === o.M.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK && 8 === C
-            ? (0, i.jsx)(V.A, {
-                  targetElementRef: J,
-                  discountOffer: ec,
-                  premiumSubscription: er,
-                  dismissCoachmark: eV,
-                  children: eQ,
+        return eR && eF === o.M.CHURN_DISCOUNT_PREMIUM_TAB_COACHMARK && 8 === C
+            ? (0, i.jsx)(H.A, {
+                  targetElementRef: et,
+                  discountOffer: eA,
+                  premiumSubscription: ea,
+                  dismissCoachmark: eY,
+                  children: e0,
               })
-            : e$
-              ? (0, i.jsx)(P.p, { targetElementRef: J, dismissPopover: eV, children: eQ })
-              : eC && ek === o.M.PREMIUM_ORBS_UPSELL_POPOVER
-                ? (0, i.jsx)(k.A, { targetElementRef: J, dismissPopover: eV, children: eQ })
-                : ev && ek === o.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER
-                  ? (0, i.jsx)(U.A, { targetElementRef: J, dismissPopover: eV, children: eQ })
-                  : ex && eq === o.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER
-                    ? (0, i.jsx)(G.A, {
-                          targetElementRef: J,
-                          dismissPopover: eW,
-                          lastGrantedRewardAmount: eN,
-                          children: eQ,
+            : eJ
+              ? (0, i.jsx)(P.p, { targetElementRef: et, dismissPopover: eY, children: e0 })
+              : ex && eF === o.M.PREMIUM_ORBS_UPSELL_POPOVER
+                ? eN
+                    ? (0, i.jsx)(B.A, { targetElementRef: et, dismissPopover: eY, numOrbs: eS, children: e0 })
+                    : (0, i.jsx)(V.A, { targetElementRef: et, dismissPopover: eY, children: e0 })
+                : eL && eF === o.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER
+                  ? (0, i.jsx)(G.A, { targetElementRef: et, dismissPopover: eY, children: e0 })
+                  : eO && e$ === o.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER
+                    ? (0, i.jsx)(k.A, {
+                          targetElementRef: et,
+                          dismissPopover: eQ,
+                          lastGrantedRewardAmount: ey,
+                          children: e0,
                       })
-                    : eK
-                      ? (0, i.jsx)(F.A, { children: eQ })
-                      : eQ;
+                    : eX
+                      ? (0, i.jsx)(W.A, { children: e0 })
+                      : e0;
     };
