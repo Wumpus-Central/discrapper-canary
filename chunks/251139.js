@@ -1,14 +1,13 @@
-i.d(e, { w: () => o });
-var n = i(419954),
-    l = i(890164),
-    s = i(780964),
-    r = i(868018),
-    a = i(692964),
-    u = i(985018);
-let o = (0, n.zZ)(s.X.PROFILE_PRIVACY_CATEGORY, {
-    usePredicate: () => (0, l.lX)("ProfilePrivacyCategory"),
-    useTitle: () => u.intl.string(u.t.ul884f),
-    useSubtitle: () =>
-        u.intl.format(u.t.N4jSgR, { learnMoreUrl: "https://support.discord.com/hc/articles/private-profiles" }),
-    buildLayout: () => [a.I, r.O],
+n.d(t, { w: () => d });
+var i = n(419954),
+    s = n(890164),
+    l = n(780964),
+    a = n(868018),
+    r = n(692964),
+    o = n(985018);
+let d = (0, i.zZ)(l.X.PROFILE_PRIVACY_CATEGORY, {
+    usePredicate: () => (0, s.lX)("ProfilePrivacyCategory"),
+    useTitle: () => o.intl.string(o.t.ul884f),
+    useSubtitle: () => o.intl.string(o.t.J0SFL2),
+    buildLayout: () => [r.I, a.O],
 });
