@@ -4,23 +4,23 @@ var l = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(522160),
+    r = n(720431),
     o = n(311907),
     d = n(582754),
     c = n(397927),
     u = n(736653),
-    m = n(607470),
+    m = n(303136),
     h = n(947094),
     x = n(919577),
     g = n(892110),
     f = n(251766),
-    p = n(997509),
-    _ = n(71393),
+    _ = n(997509),
+    p = n(71393),
     j = n(975571),
     b = n(305182),
     v = n(652215),
     A = n(985018),
-    C = n(231984),
+    C = n(380786),
     T = n(394350),
     N = n(488047),
     S = n(336127),
@@ -62,7 +62,7 @@ function I(e) {
                 children: n,
             }),
             (0, l.jsx)(c.hKd, { size: 10 }),
-            (0, l.jsx)(m.A, { className: C.Ki, src: i, autoPlay: !0, loop: !0, muted: !0 }),
+            (0, l.jsx)(m.A, { className: C.Ki, src: i }),
             (0, l.jsx)(c.hKd, { size: 10 }),
             (0, l.jsx)("div", {
                 className: C.qr,
@@ -104,16 +104,16 @@ let R = (e) => {
     let { channel: t } = e,
         n = (0, u.Ay)(),
         s = (0, d.Mw)(n),
-        m = (0, o.bG)([_.A], () => _.A.getGuild(t.guild_id)),
+        m = (0, o.bG)([p.A], () => p.A.getGuild(t.guild_id)),
         R = (0, o.bG)([h.A], () => h.A.hasHidden(t.id)),
         M = (0, f.e)({ guildId: t.guild_id, channelId: t.id }),
-        { transitions: k, setVisible: w } = (0, b.V)(),
+        { transitions: w, setVisible: k } = (0, b.V)(),
         L = i.useCallback(() => {
-            w(!1), x.A.hideAdminOnboarding(t.id, !0);
-        }, [t, w]);
+            k(!1), x.A.hideAdminOnboarding(t.id, !0);
+        }, [t, k]);
     i.useEffect(() => {
-        (0, g.l)(t.id) || w(!R);
-    }, [t, w, R]);
+        (0, g.l)(t.id) || k(!R);
+    }, [t, k, R]);
     let P = i.useMemo(
             () => [
                 A.intl.string(A.t["8pEGAw"]),
@@ -133,7 +133,7 @@ let R = (e) => {
             [],
         ),
         O = () => {
-            p.A.open(t.guild_id, v.BEX.ROLE_SUBSCRIPTIONS);
+            _.A.open(t.guild_id, v.BEX.ROLE_SUBSCRIPTIONS);
         },
         F = m?.features.has(v.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)
             ? A.intl.string(A.t.n0q7sI)
@@ -145,7 +145,7 @@ let R = (e) => {
         G = U ? A.intl.string(A.t["G/7ciZ"]) : A.intl.string(A.t.IFOiit),
         z = U ? A.intl.string(A.t.GjgQO1) : A.intl.string(A.t.E7AO6t);
     return (0, l.jsx)(l.Fragment, {
-        children: k((e, t) =>
+        children: w((e, t) =>
             t
                 ? (0, l.jsxs)(r.animated.div, {
                       style: e,
