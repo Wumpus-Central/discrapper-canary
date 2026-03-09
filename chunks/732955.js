@@ -40,6 +40,7 @@ n.d(t, {
     DF1: () => r.DF1,
     DMX: () => r.DMX,
     DSD: () => r.DSD,
+    DSM: () => r.DSM,
     DSP: () => r.DSP,
     DUT: () => r.DUT,
     DZT: () => r.DZT,

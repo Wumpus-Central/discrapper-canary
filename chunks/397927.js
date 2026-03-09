@@ -54,6 +54,7 @@ n.d(t, {
     DC: () => i.DC,
     DF1: () => i.DF1,
     DSD: () => i.DSD,
+    DSM: () => i.DSM,
     DSP: () => i.DSP,
     DUT: () => s.DUT,
     DXt: () => F.hasAnyModalOpenSelector,

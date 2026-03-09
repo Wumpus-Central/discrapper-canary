@@ -46,6 +46,7 @@ n.d(t, {
     DF1: () => z.ImageFileIcon,
     DMX: () => P.D,
     DSD: () => z.ObjectIcon,
+    DSM: () => Z.BoostThisServerRive,
     DSP: () => q.DS,
     DUT: () => ei.D,
     DZT: () => r.D,
