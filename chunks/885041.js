@@ -403,6 +403,7 @@ let tc = [
             e4.BVt.APPLICATION_STORE,
             e4.BVt.MESSAGE_REQUESTS,
             e4.BVt.COLLECTIBLES_SHOP,
+            e4.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(":collectionId"),
             e4.BVt.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"),
             e4.BVt.COLLECTIBLES_SHOP_LAYOUT(":layoutId"),
             e4.BVt.GUILD_DISCOVERY,
