@@ -45,8 +45,8 @@ function c(e) {
             caretConfig: { align: "top" === d ? "start" : "end" },
             popoverRef: A,
             badge: { type: "beta" },
-            title: u.intl.string(o.default["P+eFN5"]),
-            body: u.intl.string(o.default.Db2nhp),
+            title: u.intl.string(n ? o.default["25YCHl"] : o.default.A3ZjbM),
+            body: u.intl.string(n ? o.default.DFjrWw : o.default.qJUI2v),
             onRequestClose: () => c?.(r.i.USER_DISMISS),
             actions: [
                 {
