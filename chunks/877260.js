@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { L: () => y }), n(321073);
+n.d(t, { L: () => x }), n(321073);
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -12,14 +12,15 @@ var r = n(627968),
     h = n(97469),
     f = n(933297),
     m = n(894858),
-    g = n(188180),
-    v = n(985018),
-    p = n(45272);
-function y(e) {
-    let { root: t, footer: n, onClose: a, emptyState: g, searchQuery: y, onSearchChange: b } = e,
-        j = m.A.useField("showNavigationMobile"),
-        S = i.useRef(null),
-        A = i.useMemo(() => {
+    g = n(397274),
+    v = n(188180),
+    p = n(985018),
+    y = n(45272);
+function x(e) {
+    let { root: t, footer: n, onClose: a, emptyState: v, searchQuery: x, onSearchChange: j } = e,
+        S = m.A.useField("showNavigationMobile"),
+        A = i.useRef(null),
+        N = i.useMemo(() => {
             let e = [];
             return (
                 t.layout.forEach((t) => {
@@ -38,7 +39,7 @@ function y(e) {
                 e
             );
         }, [t.layout]),
-        [N, C] = i.useMemo(() => {
+        [C, E] = i.useMemo(() => {
             let e = [],
                 n = [];
             return (
@@ -48,59 +49,60 @@ function y(e) {
                 [e, n]
             );
         }, [t.layout]),
-        E = (0, h.NC)(),
-        k = (0, c.A)("settings-sidebar", S);
+        k = (0, h.NC)(),
+        w = (0, c.A)("settings-sidebar", A);
     return (0, r.jsx)(u.NPJ, {
-        theme: E,
+        theme: k,
         children: (e) =>
             (0, r.jsx)(d.Ay, {
-                contentTypes: A,
+                contentTypes: N,
                 children: (t) => {
                     let { visibleContent: i } = t;
                     return (0, r.jsxs)("div", {
-                        className: l()(p.pz, e, { [p.Hw]: o.Fr, [p.n7]: j }),
+                        className: l()(y.pz, e, { [y.Hw]: o.Fr, [y.n7]: S }),
                         children: [
                             (0, r.jsxs)("div", {
-                                className: p.gM,
+                                className: y.gM,
                                 children: [
                                     o.Fr &&
                                         (0, r.jsx)("div", {
-                                            className: p.hg,
+                                            className: y.hg,
                                             children: (0, r.jsx)(u.K0, {
                                                 icon: u.d$L,
                                                 onClick: a,
                                                 variant: "icon-only",
                                                 size: "sm",
-                                                "aria-label": v.intl.string(v.t.cpT0Cq),
+                                                "aria-label": p.intl.string(p.t.cpT0Cq),
                                             }),
                                         }),
                                     (0, r.jsx)("div", {
-                                        children: N.map((e) =>
-                                            (0, r.jsx)(x, { section: e, visibleContent: i, hoisted: !0 }, e.key),
+                                        children: C.map((e) =>
+                                            (0, r.jsx)(_, { section: e, visibleContent: i, hoisted: !0 }, e.key),
                                         ),
                                     }),
-                                    null != y && null != b && (0, r.jsx)(_, { searchQuery: y, onSearchChange: b }),
-                                    null != g && 0 === C.length && (0, r.jsx)(g, {}),
+                                    null != x && null != j && (0, r.jsx)(b, { searchQuery: x, onSearchChange: j }),
+                                    null != v && 0 === E.length && (0, r.jsx)(v, {}),
                                 ],
                             }),
                             (0, r.jsx)(s.hD, {
-                                navigator: k,
+                                navigator: w,
                                 children: (0, r.jsx)(s.PR, {
                                     children: (e) => {
                                         let { ref: t, ...a } = e;
                                         return (0, r.jsxs)(u.ChK, {
-                                            "data-settings-sidebar-scroller": !0,
                                             ref: (e) => {
-                                                (S.current = e), (t.current = e?.getScrollerNode() ?? null);
+                                                (A.current = e),
+                                                    g.A.setSidebarScrollerRef(e),
+                                                    (t.current = e?.getScrollerNode() ?? null);
                                             },
-                                            className: p.Mt,
+                                            className: y.Mt,
                                             fade: !0,
                                             ...a,
                                             children: [
                                                 (0, r.jsx)("nav", {
-                                                    className: p.C$,
-                                                    children: C.map((e) =>
-                                                        (0, r.jsx)(x, { section: e, visibleContent: i }, e.key),
+                                                    className: y.C$,
+                                                    children: E.map((e) =>
+                                                        (0, r.jsx)(_, { section: e, visibleContent: i }, e.key),
                                                     ),
                                                 }),
                                                 null != n && (0, r.jsx)(n, {}),
@@ -115,34 +117,34 @@ function y(e) {
             }),
     });
 }
-function x(e) {
+function _(e) {
     let { section: t, visibleContent: n, hoisted: i = !1 } = e,
         a = t.useTitle?.();
     return (0, r.jsxs)("ul", {
-        className: p.uW,
+        className: y.uW,
         "aria-label": a,
         children: [
             null != a &&
                 (0, r.jsx)("div", {
-                    className: p.a9,
+                    className: y.a9,
                     children: (0, r.jsx)(u.Heading, {
-                        className: p.Pf,
+                        className: y.Pf,
                         variant: "heading-sm/medium",
                         color: "text-muted",
                         children: a,
                     }),
                 }),
-            t.layout.map((e) => (0, r.jsx)(g.X, { node: e, visibleContent: n, hoisted: i }, e.key)),
+            t.layout.map((e) => (0, r.jsx)(v.X, { node: e, visibleContent: n, hoisted: i }, e.key)),
         ],
     });
 }
-function _(e) {
+function b(e) {
     let { searchQuery: t, onSearchChange: n } = e,
         a = i.useCallback(() => {
             n("");
         }, [n]);
     return (0, r.jsx)("div", {
-        className: p.PP,
+        className: y.PP,
         children: (0, r.jsx)(u.IWV, { size: "md", query: t, onChange: n, onClear: a }),
     });
 }
