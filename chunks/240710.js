@@ -18,15 +18,24 @@ var s = n(627968),
     C = n(654487),
     v = n(818348),
     N = n(985018),
-    p = n(861616);
+    p = n(661942);
 function A(e) {
-    let { quest: t, sourceQuestContent: n, onLoadComplete: A } = e,
-        y = (0, o.Ay)(),
-        E = (0, r.Mwr)(y) ? v.NJ.DARK : v.NJ.LIGHT,
-        L = (0, x.wr)(t),
-        w = (0, m.go)(),
+    let { quest: t, sourceQuestContent: n, onLoadComplete: A, preCtaClick: y } = e,
+        E = (0, o.Ay)(),
+        L = (0, r.Mwr)(E) ? v.NJ.DARK : v.NJ.LIGHT,
+        w = (0, x.wr)(t),
+        b = (0, m.go)(),
         T = (0, f.E0)(t.config),
-        b = i.useMemo(() => {
+        D = async () => {
+            await y?.(),
+                (0, _.pu)(t, {
+                    content: c.uF.REWARD_MODAL,
+                    ctaContent: u.Cy.OPEN_GAME_LINK,
+                    impressionId: b,
+                    sourceQuestContent: n,
+                });
+        },
+        M = i.useMemo(() => {
             let e = t.config.ctaConfig?.subtitle;
             return null != e
                 ? e
@@ -36,21 +45,21 @@ function A(e) {
                   ? N.intl.string(N.t.y8Xf3k)
                   : N.intl.string(N.t["wirwN+"]);
         }, [t]),
-        { isLoading: D } = (0, h.Gk)();
+        { isLoading: k } = (0, h.Gk)();
     i.useEffect(() => {
-        D || A();
-    }, [D, A]);
-    let M = (0, j.Lk)({
+        k || A();
+    }, [k, A]);
+    let R = (0, j.Lk)({
         isShareable: T,
         questId: t.id,
         trackingCtx: i.useMemo(
             () => ({
                 content: c.uF.REWARD_MODAL,
                 ctaContent: u.Cy.REWARD_MODAL_COPY_LINK,
-                impressionId: w,
+                impressionId: b,
                 sourceQuestContent: n,
             }),
-            [w, n],
+            [b, n],
         ),
     });
     return (0, s.jsxs)("div", {
@@ -76,7 +85,7 @@ function A(e) {
                             ref: e,
                             className: p.a$,
                             alt: N.intl.formatToPlainString(N.t.rtm15P, { name: t.config.messages.gameTitle }),
-                            src: (0, d.tW)(t, d.fY.LOGO_TYPE, E).url,
+                            src: (0, d.tW)(t, d.fY.LOGO_TYPE, L).url,
                         }),
                 }),
             }),
@@ -92,7 +101,7 @@ function A(e) {
                                 className: p.fx,
                                 children: N.intl.format(N.t.EAYZAr, { questName: t.config.messages.questName }),
                             }),
-                            (0, s.jsx)(r.EYj, { variant: "text-sm/medium", color: "text-subtle", children: b }),
+                            (0, s.jsx)(r.EYj, { variant: "text-sm/medium", color: "text-subtle", children: M }),
                         ],
                     }),
                     (0, s.jsx)(h.Sn, {
@@ -102,7 +111,7 @@ function A(e) {
                                 ref: e,
                                 className: p.rw,
                                 alt: N.intl.formatToPlainString(N.t.rtm15P, { name: t.config.messages.gameTitle }),
-                                src: (0, d.tW)(t, d.fY.GAME_TILE, E).url,
+                                src: (0, d.tW)(t, d.fY.GAME_TILE, L).url,
                             }),
                     }),
                 ],
@@ -120,22 +129,15 @@ function A(e) {
                                 text: N.intl.string(N.t.WmfZHZ),
                                 children: (0, s.jsx)(r.K0, {
                                     icon: r.qYV,
-                                    onClick: M,
+                                    onClick: R,
                                     "aria-label": N.intl.string(N.t.WmfZHZ),
                                     variant: "secondary",
                                 }),
                             }),
                         (0, s.jsx)(r.$nd, {
                             variant: "primary",
-                            text: L,
-                            onClick: () => {
-                                (0, _.pu)(t, {
-                                    content: c.uF.REWARD_MODAL,
-                                    ctaContent: u.Cy.OPEN_GAME_LINK,
-                                    impressionId: w,
-                                    sourceQuestContent: n,
-                                });
-                            },
+                            text: w,
+                            onClick: D,
                             fullWidth: !0,
                             icon: r.We5,
                             iconPosition: "end",
