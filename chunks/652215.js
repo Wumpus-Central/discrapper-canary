@@ -816,6 +816,7 @@ var r = n(478437),
             (e.GAME_SERVERS = "GAME_SERVERS"),
             (e.AGE_VERIFICATION_LARGE_GUILD = "AGE_VERIFICATION_LARGE_GUILD"),
             (e.RELAY_ENABLED = "RELAY_ENABLED"),
+            (e.CONFERENCE = "CONFERENCE"),
             e
         );
     })({});
