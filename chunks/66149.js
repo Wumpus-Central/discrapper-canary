@@ -23,17 +23,19 @@ function _(e) {
             .with({ collapsedReason: g.t["+FcYM/"] }, () =>
                 (0, i.jsx)(o.KTN, { size: "md", color: "currentColor", className: p.Q6 }),
             )
-            .otherwise(() => (0, i.jsx)(o.PGe, { size: "md", color: "currentColor", className: p.Q6 })),
-        h = c ? u : (0, i.jsx)(o.DUT, { tag: "span", onClick: n, className: p.Y4, children: u });
+            .with({ collapsedReason: g.t.rHRovo }, () =>
+                (0, i.jsx)(o._mZ, { size: "md", color: "currentColor", className: p.TG }),
+            )
+            .otherwise(() => (0, i.jsx)(o.PGe, { size: "md", color: "currentColor", className: p.Q6 }));
     return (0, i.jsx)(d.A, {
         compact: s,
         role: "group",
         childrenMessageContent: (0, i.jsx)(m.A, {
             compact: s,
             className: p.L9,
-            iconNode: h,
+            iconNode: u,
             children: (0, i.jsxs)("div", {
-                className: p.Fo,
+                className: c ? p.Fo : p.GU,
                 children: [
                     g.intl.format(a, { count: l }),
                     c &&
@@ -57,18 +59,13 @@ let E = l.memo(function (e) {
     let { messages: t, channel: n, compact: s = !1, unreadId: r, collapsedReason: o, canUncollapse: d = !0 } = e,
         { hasJumpTarget: m = !1 } = t,
         [g, E] = l.useState(m && d),
-        [x, C] = l.useState(!1),
-        S = l.useCallback(() => {
-            d ? E((e) => !e) : C(!0);
+        x = l.useCallback(() => {
+            d && E((e) => !e);
         }, [d]);
-    if (
-        (l.useEffect(() => {
-            m && d && E(!0);
-        }, [m, d]),
-        x)
-    )
-        return null;
-    let I = t.hasUnread ? t.content.length - 1 : t.content.length;
+    l.useEffect(() => {
+        m && d && E(!0);
+    }, [m, d]);
+    let C = t.hasUnread ? t.content.length - 1 : t.content.length;
     return (0, i.jsxs)("div", {
         className: a()({ [f._A]: !0, [p.sz]: g }),
         children: [
@@ -77,7 +74,7 @@ let E = l.memo(function (e) {
                 : null,
             (0, i.jsx)(
                 _,
-                { count: I, compact: s, expanded: g, onClick: S, collapsedReason: o, canUncollapse: d },
+                { count: C, compact: s, expanded: g, onClick: x, collapsedReason: o, canUncollapse: d },
                 "collapsed-message-item",
             ),
             g

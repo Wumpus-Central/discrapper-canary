@@ -20202,6 +20202,7 @@
   "VL1KOk": "Are you sure?",
   "RO/KYj": "This is a @silent message.",
   "gLp+Wj": "{count, plural, =0 {No messages hidden from suspended user} one { message hidden from suspended user} other { messages hidden from suspended user} }",
+  "rHRovo": "{count, plural, =0 {No messages removed from a suspended account.} one {One message removed from a suspended account.} other {Some messages removed from a suspended account.} }",
   "L9yFko": "Woah there! While programs downloaded from the internet may be beneficial, this type of file can damage your device or steal your personal data. Make sure to only run executables from developers that you trust!",
   "j7Vi2i": "Close",
   "/bHu89": "Continue to download",
