@@ -8,16 +8,16 @@ var i = n(627968),
     d = n(554146),
     c = n(932001),
     u = n(178213),
-    g = n(770983),
-    m = n(927813),
+    m = n(770983),
+    g = n(927813),
     x = n(622543),
     f = n(49999),
     p = n(985018),
     h = n(757424);
-let _ = 90 * m.A.Millis.DAY,
-    A = 90 * m.A.Millis.DAY;
+let _ = 90 * g.A.Millis.DAY,
+    A = 90 * g.A.Millis.DAY;
 function I(e) {
-    let { user: t, wishlist: n, hasFetchedWishlist: a = !1, analyticsLocations: m, className: I } = e,
+    let { user: t, wishlist: n, hasFetchedWishlist: a = !1, analyticsLocations: g, className: I } = e,
         j = (0, u.GG)("social_layer_wishlist_recommendations_on_profile"),
         v = (n?.items.length ?? 0) > 0,
         [E, T] = l.useState(!1);
@@ -53,13 +53,13 @@ function I(e) {
                               }),
                       ],
                   }),
-                  (0, i.jsx)(g.A, {
+                  (0, i.jsx)(m.A, {
                       userId: t.id,
                       wishlist: n,
                       className: s()(h.Vg, { [h.e6]: j }),
-                      analyticsLocations: m,
-                      numWishlistItemsToRecommend: 8,
-                      maxWishlistItemsToShow: 6,
+                      analyticsLocations: g,
+                      numWishlistItemsToRecommend: 15,
+                      maxWishlistItemsToShow: 8,
                   }),
               ],
           })
