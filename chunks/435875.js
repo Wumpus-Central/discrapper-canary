@@ -1,16 +1,22 @@
-n.d(t, { q: () => o });
+n.d(t, { q: () => d });
 var i = n(73153),
     r = n(846293),
-    a = n(970163),
-    l = n(71393),
-    s = n(652215);
-async function o(e) {
+    l = n(970163),
+    a = n(961350),
+    s = n(696451),
+    o = n(652215);
+async function d(e) {
     let { code: t } = e,
-        o = (await (0, a.A)(t)).invite;
-    if (null == o || null == o.guild) return;
-    let d = o.guild.id;
-    if (null == l.A.getGuild(d))
-        return void i.h.dispatch({ type: "INVITE_MODAL_OPEN", invite: o, code: t, context: s.BRT.APP });
-    let { default: c } = await Promise.resolve().then(n.bind(n, 967305));
-    await c({ guildId: d }), r.Ay.transitionToInvite(o, void 0, !0);
+        d = (await (0, l.A)(t)).invite;
+    if (null == d || null == d.guild) return;
+    let c = d.guild.id,
+        u = s.Ay.getMember(c, a.default.getId()),
+        A = !1;
+    if (null != u && null != d.roles && d.roles.length > 0) {
+        let e = new Set(u.roles ?? []);
+        A = d.roles.some((t) => !e.has(t.id));
+    }
+    if (null == u || A) return void i.h.dispatch({ type: "INVITE_MODAL_OPEN", invite: d, code: t, context: o.BRT.APP });
+    let { default: h } = await Promise.resolve().then(n.bind(n, 967305));
+    await h({ guildId: c }), r.Ay.transitionToInvite(d, void 0, !0);
 }
