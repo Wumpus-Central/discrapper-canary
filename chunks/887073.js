@@ -24,8 +24,12 @@ let f = (e) => {
     let t = (0, h.yB)("CollectiblesShopIndexPage");
     (0, h.gB)();
     let { selectedTab: f, transitionToTab: w } = (0, u.o)(p.G2.COLLECTION_INDEX);
-    return ((0, b.pE)(), null == _)
-        ? ((0, c.pX)(C.BVt.COLLECTIBLES_SHOP), null)
+    return ((0, b.pE)(),
+    r.useEffect(() => {
+        null == _ && (0, c.pX)(C.BVt.COLLECTIBLES_SHOP);
+    }, [_]),
+    null == _)
+        ? null
         : (0, o.jsxs)("div", {
               className: d()(B.bx, { [h.jP]: t }),
               ref: n,
