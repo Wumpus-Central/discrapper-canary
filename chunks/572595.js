@@ -33,12 +33,12 @@ let i = "collectibles shop product details modal",
                     a.e("94857"),
                     a.e("48840"),
                     a.e("49559"),
+                    a.e("42006"),
                     a.e("37372"),
-                    a.e("99970"),
-                    a.e("95095"),
+                    a.e("5283"),
                     a.e("41595"),
                     a.e("93612"),
-                    a.e("16289"),
+                    a.e("32904"),
                 ]).then(a.bind(a, 929400));
                 return (a) =>
                     (0, l.jsx)(e, {

@@ -6,8 +6,8 @@ var l = n(827734),
     s = n(582754),
     r = n(397927),
     o = n(442433),
-    c = n(263063),
-    d = n(562153),
+    d = n(263063),
+    c = n(562153),
     u = n(939496),
     g = n(518477),
     m = n(996988),
@@ -36,10 +36,10 @@ function p(e) {
                     n.e("48840"),
                     n.e("49559"),
                     n.e("43600"),
-                    n.e("34983"),
+                    n.e("42006"),
                     n.e("37372"),
                     n.e("68587"),
-                    n.e("10774"),
+                    n.e("5283"),
                     n.e("28136"),
                     n.e("3183"),
                     n.e("10566"),
@@ -58,8 +58,8 @@ function p(e) {
                     n.e("8458"),
                     n.e("11810"),
                     n.e("52848"),
-                    n.e("73368"),
-                    n.e("41538"),
+                    n.e("88475"),
+                    n.e("30453"),
                     n.e("45266"),
                     n.e("17537"),
                     n.e("49862"),
@@ -67,13 +67,13 @@ function p(e) {
                     n.e("56475"),
                     n.e("59541"),
                     n.e("54469"),
-                    n.e("52215"),
+                    n.e("50742"),
                 ]).then(n.bind(n, 544676));
                 return (t) => (0, i.jsx)(e, { ...t, guild: p });
             });
         },
         children: [
-            (0, i.jsx)(c.Ay, {
+            (0, i.jsx)(d.Ay, {
                 tabIndex: -1,
                 guild: p,
                 showBadge: !0,
@@ -81,7 +81,7 @@ function p(e) {
                 badgeStrokeColor: (0, s.Mw)(A) ? l.A.unsafe_rawColors.PRIMARY_600.css : l.A.unsafe_rawColors.WHITE.css,
                 badgeTooltipColor: r.oMw.PRIMARY,
                 badgeTooltipDelay: g.In,
-                size: c.Ay.Sizes.MEDIUM,
+                size: d.Ay.Sizes.MEDIUM,
                 active: !0,
             }),
             (0, i.jsxs)("div", {
@@ -102,7 +102,7 @@ function p(e) {
                                     variant: "text-xs/medium",
                                     children: (0, i.jsx)(a.A, {
                                         delay: g.In,
-                                        children: h ?? d.Ay.getName(p.id, void 0, t),
+                                        children: h ?? c.Ay.getName(p.id, void 0, t),
                                     }),
                                 }),
                             ],
