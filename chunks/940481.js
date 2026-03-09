@@ -1,90 +1,99 @@
-s.d(t, { default: () => j });
+s.d(t, { default: () => C });
 var n = s(627968),
     a = s(64700),
     r = s(512750),
     l = s(311907),
     i = s(397927),
     o = s(645619),
-    d = s(503852),
-    c = s(363487),
-    u = s(722523),
+    c = s(503852),
+    d = s(43594),
+    u = s(363487),
+    _ = s(722523),
     m = s(490557),
-    _ = s(214676),
-    x = s(499623),
-    g = s(428050),
-    b = s(568065),
-    h = s(333354),
-    f = s(985018),
-    p = s(712957);
-function j(e) {
-    let { guildId: t, powerup: s, ...j } = e,
-        [k, C] = a.useState(void 0),
-        v = a.useMemo(() => {
+    x = s(214676),
+    g = s(499623),
+    b = s(428050),
+    f = s(568065),
+    h = s(136708),
+    p = s(985018),
+    j = s(400415);
+function C(e) {
+    let { guildId: t, powerup: s, ...C } = e,
+        [k, v] = a.useState(void 0),
+        N = a.useMemo(() => {
             switch (s.skuId) {
                 case r.SL:
-                    return (0, n.jsx)(_.L, { guildId: t });
+                    return (0, n.jsx)(x.L, { guildId: t });
                 case r.aN:
-                    return (0, n.jsx)(_.T, {});
+                    return (0, n.jsx)(x.T, {});
                 case r.FB:
-                    return (0, n.jsx)(g.A, {});
+                    return (0, n.jsx)(b.A, {});
                 default:
                     return;
             }
         }, [s, t]);
-    (0, d.Z)(t, s, d.q.DETAIL);
-    let N = (0, c.A)(t),
-        S = b.wr[s.skuId],
-        A = null != S ? b.a8[S] : null,
-        I = (0, l.bG)([o.A], () => o.A.getStateForGuild(t)),
-        w = null != A ? I?.allPowerups[A] : null;
+    (0, c.Z)(t, s, c.q.DETAIL);
+    let S = (0, u.A)(t),
+        A = (0, d.D)("GuildPowerupPerkModal"),
+        I = f.wr[s.skuId],
+        E = null != I ? f.a8[I] : null,
+        T = (0, l.bG)([o.A], () => o.A.getStateForGuild(t)),
+        O = null != E ? T?.allPowerups[E] : null;
     return (0, n.jsxs)(i.EOs, {
         "data-migration-pending": !0,
-        className: p.yl,
+        className: j.yl,
         size: i.rIJ.DYNAMIC,
-        ...j,
+        ...C,
         parentComponent: "GuildPowerupPerkModal",
         children: [
             (0, n.jsxs)(i.$mQ, {
                 "data-migration-pending": !0,
-                className: p._F,
+                className: j._F,
                 scrollbarType: "none",
                 children: [
                     (0, n.jsxs)("div", {
-                        className: p.pz,
+                        className: j.pz,
                         children: [
-                            (0, n.jsx)(i.hLv, { className: p.UZ, children: (0, n.jsx)(m.l, { powerup: s }) }),
+                            (0, n.jsx)(i.hLv, { className: j.UZ, children: (0, n.jsx)(m.l, { powerup: s }) }),
                             (0, n.jsxs)("div", {
-                                className: p.hQ,
+                                className: j.hQ,
                                 children: [
                                     (0, n.jsx)(i.Heading, { variant: "heading-xl/extrabold", children: s.title }),
                                     (0, n.jsx)(i.Text, {
-                                        className: p.h_,
+                                        className: j.h_,
                                         variant: "text-sm/normal",
                                         children: s.description,
                                     }),
-                                    null != w &&
+                                    null != O &&
                                         (0, n.jsx)(i.Text, {
-                                            className: p.h_,
+                                            className: j.h_,
                                             variant: "text-sm/normal",
-                                            children: f.intl.formatToPlainString(h.default.NAFGkH, { level: w.title }),
+                                            children: p.intl.formatToPlainString(h.default.NAFGkH, { level: O.title }),
                                         }),
-                                    (0, n.jsx)(x.F, { powerup: s }),
+                                    (0, n.jsx)(g.F, { powerup: s }),
                                     null != k &&
                                         (0, n.jsx)(i.Text, {
-                                            className: p.z3,
+                                            className: j.z3,
                                             color: "text-feedback-critical",
                                             variant: "text-sm/semibold",
                                             children: k,
                                         }),
-                                    N && (0, n.jsx)(u.Ay, { className: p.qr, guildId: t, powerup: s, onError: C }),
+                                    S &&
+                                        (0, n.jsx)(_.Ay, {
+                                            className: j.qr,
+                                            guildId: t,
+                                            powerup: s,
+                                            expressiveCta: "refresh_expressive_cta" === A,
+                                            onError: v,
+                                        }),
                                 ],
                             }),
                         ],
                     }),
-                    null != v && (0, n.jsx)("div", { className: p._9, children: v }),
+                    null != N && (0, n.jsx)("div", { className: j._9, children: N }),
                 ],
             }),
-            (0, n.jsx)(i.s_y, { "data-migration-pending": !0, className: p.VN, onClick: j.onClose }),
+            (0, n.jsx)(i.s_y, { "data-migration-pending": !0, className: j.VN, onClick: C.onClose }),
         ],
     });
 }
