@@ -3,18 +3,18 @@ n.d(t, {
     JM: () => d,
     Js: () => f,
     Jx: () => E,
-    Xm: () => A,
+    Xm: () => g,
     YT: () => c,
-    fx: () => p,
-    oK: () => T,
-    up: () => h,
+    fx: () => h,
+    oK: () => I,
+    up: () => p,
     wr: () => _,
-    xv: () => I,
+    xv: () => A,
 });
 var r = n(957565),
     i = n(723702),
-    a = n(341915),
-    s = n(561844),
+    s = n(341915),
+    a = n(561844),
     o = n(261331),
     l = n(654487),
     u = n(985018);
@@ -35,14 +35,25 @@ function c(e) {
     return u.intl.formatToPlainString(u.t.EQa7os, { questName: t.config.messages.questName });
 }
 function d(e) {
-    let { isTargetedDisclosure: t, isVideoQuest: n, gamePublisher: r, gameTitle: i, cosponsorName: a } = e;
-    return t
-        ? null == a
-            ? u.intl.formatToPlainString(u.t.Piihy1, { gamePublisher: r })
-            : u.intl.formatToPlainString(u.t.DV47Gy, { gamePublisher: r, cosponsorName: a })
-        : n
-          ? u.intl.formatToPlainString(u.t.zDHY3s, { gamePublisher: r })
-          : u.intl.formatToPlainString(u.t.euizJY, { gamePublisher: r, gameTitle: i });
+    let {
+        isTargetedDisclosure: t,
+        isContextualDisclosure: n,
+        isVideoQuest: r,
+        gamePublisher: i,
+        gameTitle: s,
+        cosponsorName: a,
+    } = e;
+    if (t) {
+        let e =
+                null == a
+                    ? u.intl.formatToPlainString(u.t.Piihy1, { gamePublisher: i })
+                    : u.intl.formatToPlainString(u.t.DV47Gy, { gamePublisher: i, cosponsorName: a }),
+            t = n ? u.intl.string(u.t.nPg6f1) : u.intl.string(u.t.fEbrT8);
+        return `${e} ${t}`;
+    }
+    return r
+        ? u.intl.formatToPlainString(u.t.zDHY3s, { gamePublisher: i })
+        : u.intl.formatToPlainString(u.t.euizJY, { gamePublisher: i, gameTitle: s });
 }
 function _(e) {
     return e.config.ctaConfig.buttonLabel;
@@ -59,7 +70,7 @@ function f(e) {
             return u.intl.string(u.t["BB+2tX"]);
     }
 }
-function h(e) {
+function p(e) {
     switch (e) {
         case l.BQ.VIRTUAL_CURRENCY:
             return u.intl.string(u.t.ElYQFS);
@@ -73,7 +84,7 @@ function h(e) {
             return u.intl.string(u.t["1nJR4p"]);
     }
 }
-function p(e) {
+function h(e) {
     switch (e) {
         case "reward":
             return u.intl.string(u.t.vjLqAU);
@@ -81,12 +92,12 @@ function p(e) {
             return u.intl.string(u.t.Hufmss);
     }
 }
-let g = (e) => `${location.protocol}//${location.host}/quests/${e}`;
+let m = (e) => `${location.protocol}//${location.host}/quests/${e}`;
 function E(e) {
     return e.ctaConfig.link;
 }
-let A = (e, t) => {
-    (0, s.Y5)({
+let g = (e, t) => {
+    (0, a.Y5)({
         questId: e,
         questContent: t.content,
         questContentCTA: t.ctaContent,
@@ -94,16 +105,16 @@ let A = (e, t) => {
         impressionId: t.impressionId,
         sourceQuestContent: t.sourceQuestContent,
     }),
-        (0, r.C)(g(e));
+        (0, r.C)(m(e));
 };
-function I(e) {
+function A(e) {
     if (0 === e.rewardsConfig.rewards.length) throw Error(`Quest ${e.id} has no rewards configured`);
     return e.rewardsConfig.rewards[0];
 }
-let T = (e) => {
+let I = (e) => {
     let { hasVideoAsset: t, playerState: n, pauseReason: r } = e;
     return t
-        ? n === o.Q6.PAUSED && r === a.Yg.LOST_FOCUS
+        ? n === o.Q6.PAUSED && r === s.Yg.LOST_FOCUS
             ? u.intl.string(u.t.w6PeBF)
             : null
         : (0, i.isWeb)()
