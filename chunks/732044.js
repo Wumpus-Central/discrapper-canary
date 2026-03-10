@@ -1,39 +1,26 @@
 "use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => h });
 var i = n(627968),
-    s = n(64700),
+    s = n(311907),
     l = n(397927),
-    r = n(453738),
-    a = n(58736);
-let o = function (e) {
-    let { channel: t } = e,
-        [n, o] = s.useState(!1),
-        c = s.useRef(null);
-    return (0, i.jsx)(l.YNO, {
-        targetElementRef: c,
-        shouldShow: n,
-        animation: l.YNO.Animation.NONE,
-        position: "bottom",
-        align: "right",
-        autoInvert: !1,
-        ignoreModalClicks: !0,
-        onRequestClose: () => o(!1),
-        renderPopout: function (e) {
-            return (0, i.jsx)(r.A, { ...e, channel: t, onClose: () => o(!1) });
-        },
-        clickTrap: !0,
-        children: (e, t) => {
-            let { isShown: n } = t;
-            return (0, i.jsx)(a.In, {
-                ...e,
-                ref: c,
-                onClick: () => o((e) => !e),
-                tooltip: n ? null : "Conversations",
-                icon: l.oyn,
-                iconSize: 20,
-                "aria-label": "Conversations",
-                selected: n,
-            });
-        },
+    a = n(604681),
+    r = n(736339),
+    o = n(761640),
+    c = n(58736),
+    d = n(652215),
+    u = n(320378);
+function h(e) {
+    let { channelId: t } = e,
+        n = (0, s.bG)([o.Ay], () => o.Ay.getSection(t), [t]) === d.YvQ.CONVERSATIONS,
+        h = (0, s.bG)([r.A], () => r.A.getChannelConversations(t).length > 0, [t]);
+    return (0, i.jsx)(c.In, {
+        onClick: a.A.toggleConversationsSection,
+        tooltip: n ? null : "Conversations",
+        icon: l.oyn,
+        iconSize: 20,
+        "aria-label": "Conversations",
+        className: h ? u.q : void 0,
+        selected: n,
+        showBadge: h,
     });
-};
+}

@@ -1,6 +1,6 @@
-n.d(t, { A: () => s });
+n.d(t, { A: () => r });
 var i = n(73153);
-let s = {
+let r = {
     toggleMembersSection() {
         i.h.dispatch({ type: "CHANNEL_TOGGLE_MEMBERS_SECTION" });
     },
@@ -9,5 +9,8 @@ let s = {
     },
     toggleSummariesSection() {
         i.h.dispatch({ type: "CHANNEL_TOGGLE_SUMMARIES_SECTION" });
+    },
+    toggleConversationsSection() {
+        i.h.dispatch({ type: "CHANNEL_TOGGLE_CONVERSATIONS_SECTION" });
     },
 };

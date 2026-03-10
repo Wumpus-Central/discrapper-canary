@@ -603,6 +603,7 @@ var r = n(478437),
             (e.SIDEBAR_CHAT = "SIDEBAR_CHAT"),
             (e.PROFILE = "PROFILE"),
             (e.SUMMARIES = "SUMMARIES"),
+            (e.CONVERSATIONS = "CONVERSATIONS"),
             e
         );
     })({}),
