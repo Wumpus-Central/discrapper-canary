@@ -2,8 +2,8 @@
 n.d(t, { A: () => h });
 var r = n(923457),
     i = n(73153),
-    a = n(49229),
-    s = n(274294),
+    s = n(49229),
+    a = n(274294),
     o = n(207560),
     l = n(900342),
     u = n(994500),
@@ -12,11 +12,11 @@ var r = n(923457),
 function _(e) {
     let { userId: t, applicationId: n, location: r, confirmStrangerRequest: i = !1 } = e;
     return null != n
-        ? s.A.acceptGameFriendRequest({ userId: t, applicationId: n })
-        : a.A.acceptFriendRequest({ userId: t, confirmStrangerRequest: i, context: { location: r } });
+        ? a.A.acceptGameFriendRequest({ userId: t, applicationId: n })
+        : s.A.acceptFriendRequest({ userId: t, confirmStrangerRequest: i, context: { location: r } });
 }
 function f(e) {
-    let { userId: t, applicationId: n, location: i, onConfirm: a, onCancel: s } = e,
+    let { userId: t, applicationId: n, location: i, onConfirm: s, onCancel: a } = e,
         d = (0, o.To)(r.p.FRIEND_REQUEST_STRANGER_CONFIRMATION),
         f = (0, l._)("maybeConfirmFriendRequestAccept"),
         h = d || f,
@@ -25,27 +25,27 @@ function f(e) {
         ? m && h
             ? void (0, c.B)({
                   onConfirm: () => {
-                      _({ userId: t, applicationId: n, location: i, confirmStrangerRequest: !0 }), a?.();
+                      _({ userId: t, applicationId: n, location: i, confirmStrangerRequest: !0 }), s?.();
                   },
                   onCancel: () => {
-                      s?.();
+                      a?.();
                   },
               })
             : h
               ? void _({ userId: t, applicationId: n, location: i })
                     .then((e) => {
-                        p(e, { userId: t, applicationId: n, location: i, onConfirm: a, onCancel: s }) || a?.();
+                        p(e, { userId: t, applicationId: n, location: i, onConfirm: s, onCancel: a }) || s?.();
                     })
                     .catch((e) => {
-                        p(e, { userId: t, applicationId: n, location: i, onConfirm: a, onCancel: s });
+                        p(e, { userId: t, applicationId: n, location: i, onConfirm: s, onCancel: a });
                     })
               : void 0
         : _({ userId: t, applicationId: n, location: i, confirmStrangerRequest: !0 }).then(() => {
-              a?.();
+              s?.();
           });
 }
 function p(e, t) {
-    return e.body?.code === d.t02.RELATIONSHIP_INVALID_NO_CONFIRMATION
+    return e?.body?.code === d.t02.RELATIONSHIP_INVALID_NO_CONFIRMATION
         ? (i.h.dispatch({ type: "UPDATE_STRANGER_STATUS", userId: t.userId, isStranger: !0 }),
           (0, c.B)({
               onConfirm: () => {
@@ -56,18 +56,18 @@ function p(e, t) {
               },
           }),
           !0)
-        : (e.ok && i.h.dispatch({ type: "UPDATE_STRANGER_STATUS", userId: t.userId, isStranger: !1 }), !1);
+        : (e?.ok && i.h.dispatch({ type: "UPDATE_STRANGER_STATUS", userId: t.userId, isStranger: !1 }), !1);
 }
 let h = {
     removeFriend: function (e) {
         let { userId: t, applicationId: n, location: r } = e;
-        null != n ? s.A.removeGameFriend({ userId: t, applicationId: n }) : a.A.removeFriend(t, { location: r });
+        null != n ? a.A.removeGameFriend({ userId: t, applicationId: n }) : s.A.removeFriend(t, { location: r });
     },
     cancelFriendRequest: function (e) {
         let { userId: t, applicationId: n, location: r } = e;
         return null != n
-            ? s.A.cancelGameFriendRequest({ userId: t, applicationId: n })
-            : a.A.cancelFriendRequest(t, { location: r });
+            ? a.A.cancelGameFriendRequest({ userId: t, applicationId: n })
+            : s.A.cancelFriendRequest(t, { location: r });
     },
     acceptFriendRequest: _,
     maybeConfirmFriendRequestAccept: f,
