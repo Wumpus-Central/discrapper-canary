@@ -1,2 +1,2 @@
 n.d(t, { A: () => i });
-function i(e) {}
+function i(e, t) {}

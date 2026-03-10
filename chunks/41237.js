@@ -90,6 +90,7 @@ let p = new _(
     {
         LOGOUT: (e, t) => t.clear(),
         BACKGROUND_SYNC: (e, t) => t.clear(),
+        RESET_SOCKET: (e, t) => t.clear(),
         CONNECTION_OPEN: (e, t) => {
             let { guilds: n, unavailableGuilds: r } = e,
                 i = new Set(n.map((e) => e.id));

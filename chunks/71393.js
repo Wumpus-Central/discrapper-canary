@@ -47,6 +47,9 @@ let h = new p(
                 null != n && "unavailable" !== e.data_mode && t.set(e.id, l.kI(e, n));
             }
         },
+        RESET_SOCKET: (e, t) => {
+            t.clear();
+        },
         CONNECTION_OPEN: (e, t) => {
             let { guilds: n, unavailableGuilds: r } = e,
                 i = t.getAllRecords(),

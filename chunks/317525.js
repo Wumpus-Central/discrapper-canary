@@ -46,14 +46,12 @@ class _ extends a.yW {
     }
 }
 function f(e, t, n) {
-    if ((p(e, t, n), 0 === n.partitionLength(e)))
-        throw Error(
-            `Guild data was missing from store for guild ${e}: got empty role update with no existing partition, Array.isArray(roles) = ${Array.isArray(t)}`,
-        );
-}
-function p(e, t, n) {
     ("update" !== t.op || 0 !== t.writes.length || 0 !== t.deletes.length) &&
         n.setPartition(e, u.j_(e, t, n.getPartition(e)));
+}
+function p(e, t, n) {
+    if (0 === n.partitionLength(t))
+        throw Error(`Guild data was missing from store for guild ${t}: missing roles. (phase: ${e})`);
 }
 let h = new _(
     {
@@ -75,26 +73,30 @@ let h = new _(
             for (let { partitionKey: n, values: r } of (t.clear(), e.serializedGuildRoles))
                 t.setPartition(n, u.lj(n, r));
         },
+        RESET_SOCKET: (e, t) => {
+            t.clear();
+        },
         CONNECTION_OPEN: (e, t) => {
             let { guilds: n, unavailableGuilds: r } = e,
                 i = new Set(n.map((e) => e.id));
             for (let e of r) i.add(e);
             for (let e of t.getPartitionKeys()) i.has(e) || t.removePartition(e);
-            for (let { id: e, roles: r } of n) f(e, r, t);
+            for (let { id: e, roles: r } of n) f(e, r, t), p("connection_open", e, t);
         },
         CACHE_LOADED: (e, t) => {
             let { guilds: n } = e;
-            for (let { id: e, roles: r } of (t.clear(), n)) t.setPartition(e, u.lj(e, r));
+            for (let { id: e, roles: r } of (t.clear(), n)) t.setPartition(e, u.lj(e, r)), p("cache_loaded", e, t);
         },
         CACHE_LOADED_LAZY: (e, t) => {
             if (0 !== e.guilds.length)
-                for (let { id: n, roles: r } of (t.clear(), e.guilds)) t.setPartition(n, u.lj(n, r));
+                for (let { id: n, roles: r } of (t.clear(), e.guilds))
+                    t.setPartition(n, u.lj(n, r)), p("cache_loaded_lazy", n, t);
         },
         GUILD_CREATE: (e, t) => {
             let {
                 guild: { id: n, roles: r },
             } = e;
-            f(n, r, t);
+            f(n, r, t), p("guild_create", n, t);
         },
         GUILD_UPDATE: (e, t) => {
             let {

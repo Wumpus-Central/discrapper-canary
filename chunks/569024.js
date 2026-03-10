@@ -96,25 +96,29 @@ async function F(e, t, n) {
         U = null != j.guildId && null != j.channels,
         k = j.guildId;
     return (
-        s.Ay.Emitter.batched(() => {
-            i.A.time("\uD83D\uDCBE", "Dispatch Mini Cache", () =>
-                a.h.dispatch({
-                    type: "CACHE_LOADED",
-                    guilds: v,
-                    privateChannels: O,
-                    initialGuildChannels: j.channels ?? [],
-                    users: [...I.users],
-                    messages: null == I.channelId ? {} : { [I.channelId]: I.messages },
-                    guildMembers: null == I.guildId ? {} : { [I.guildId]: M },
-                    userSettings: R,
-                    userGuildSettings: L,
-                    readStates: P,
-                }),
-            ),
-                i.A.time("\uD83D\uDCBE", "socket.processFirstQueuedDispatch()", () =>
-                    l.dispatcher.processFirstQueuedDispatch(new Set(["INITIAL_GUILD"])),
-                );
-        }),
+        await new Promise((e, t) =>
+            s.Ay.Emitter.batched(() => {
+                i.A.time("\uD83D\uDCBE", "Dispatch Mini Cache", () =>
+                    a.h
+                        .dispatch({
+                            type: "CACHE_LOADED",
+                            guilds: v,
+                            privateChannels: O,
+                            initialGuildChannels: j.channels ?? [],
+                            users: [...I.users],
+                            messages: null == I.channelId ? {} : { [I.channelId]: I.messages },
+                            guildMembers: null == I.guildId ? {} : { [I.guildId]: M },
+                            userSettings: R,
+                            userGuildSettings: L,
+                            readStates: P,
+                        })
+                        .then(e, t),
+                ),
+                    i.A.time("\uD83D\uDCBE", "socket.processFirstQueuedDispatch()", () =>
+                        l.dispatcher.processFirstQueuedDispatch(new Set(["INITIAL_GUILD"])),
+                    );
+            }),
+        ),
         D.verbose(`early_cache_summary: (
         ok: true
         meta:
@@ -364,9 +368,9 @@ class Z extends s.Ay.Store {
                 : (n(), await (K(() => a.h.dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" })), Promise.resolve()));
         } catch (e) {
             D.error("clearing cache. exception encountered while loading cache.", e, e.stack),
-                (0, y.A)("cache:exception"),
+                (0, y.A)("cache:exception", e),
                 n(),
-                a.h.dispatch({ type: "RESET_SOCKET", args: { error: e, action: "loadCacheAsync" } });
+                a.h.dispatch({ type: "RESET_SOCKET", args: { error: e, action: "loadCacheAsync", clearCache: !0 } });
         }
     }
 }
