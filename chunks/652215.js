@@ -1242,6 +1242,7 @@ let e_ = "",
         COLLECTIBLES_VALID_GIFT_RECIPIENTS_BATCH: "/users/@me/valid-collectibles-gift-recipients-batch",
         COLLECTIBLES_MARKETING: "/users/@me/collectibles-marketing",
         COLLECTIBLES_SHOP: "/collectibles-shop",
+        COLLECTIBLES_SHOP_TAB_LAYOUT: (e) => `/collectibles-shop-tab-layouts/${e}`,
         GUILD_MEMBER_BANNER: function (e, t, n) {
             let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "png";
             return `/guilds/${e}/users/${t}/banners/${n}.${r}`;
