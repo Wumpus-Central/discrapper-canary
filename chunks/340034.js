@@ -20,8 +20,8 @@ var r = n(627968),
     I = n(652215),
     T = n(788868),
     S = n(985018),
-    y = n(523376),
-    v = n(232970);
+    y = n(756366),
+    v = n(772992);
 let N = (e) => {
         let { className: t, currencies: n, onChange: i, selectedCurrency: s, ...o } = e;
         return (0, r.jsx)(l.f, {
@@ -80,76 +80,77 @@ let N = (e) => {
                 subscriptionPeriodEnd: l,
                 discountInvoiceItems: u,
                 showSecondarySubTexts: d,
-                isInPlanSelectStep: _,
-                headingSubText: p,
+                disabled: _,
+                isInPlanSelectStep: p,
+                headingSubText: h,
             } = e,
-            h = (0, f.RO)({
+            m = (0, f.RO)({
                 selectedPlanId: t,
                 priceOptions: n,
                 planOptions: s,
                 eligibleForMultiMonthPlans: a,
                 subscriptionPeriodEnd: l,
                 discountInvoiceItems: u,
-                showTotal: _,
+                showTotal: p,
             }),
             {
-                selectedPlan: m,
-                selectedPlanPrice: E,
-                isPrepaid: g,
-                shouldShowHRKEuroWarning: I,
-                shouldShowTotalInSubscriptionFlow: S,
-                shouldShowUpdatedPaymentModal: y,
-                userTrialOffer: N,
-                trialPeriodCopy: C,
-                isEligibleForTrial: R,
-                isEligibleForBOGOPromotion: O,
-                premiumSubscriptionPlan: b,
-                skuId: D,
-            } = h,
-            { shouldShowPremiumSwitchPlanSelectText: L, premiumSwitchPlanSelectText: w } = i.useMemo(() => {
-                let e = (0, f.U_)(b, { isEligibleForBOGOPromotion: O });
+                selectedPlan: E,
+                selectedPlanPrice: g,
+                isPrepaid: I,
+                shouldShowHRKEuroWarning: S,
+                shouldShowTotalInSubscriptionFlow: y,
+                shouldShowUpdatedPaymentModal: N,
+                userTrialOffer: C,
+                trialPeriodCopy: R,
+                isEligibleForTrial: O,
+                isEligibleForBOGOPromotion: b,
+                premiumSubscriptionPlan: D,
+                skuId: L,
+            } = m,
+            { shouldShowPremiumSwitchPlanSelectText: w, premiumSwitchPlanSelectText: M } = i.useMemo(() => {
+                let e = (0, f.U_)(D, { isEligibleForBOGOPromotion: b });
                 return {
                     shouldShowPremiumSwitchPlanSelectText: e,
-                    premiumSwitchPlanSelectText: e ? (0, f.yq)(b, D) : null,
+                    premiumSwitchPlanSelectText: e ? (0, f.yq)(D, L) : null,
                 };
-            }, [b, O, D]),
-            M = i.useMemo(
-                () => (_ && R ? (0, f.Ct)(N, { subscriptionPeriodEnd: l, trialPeriodCopy: C }) : p),
-                [_, R, N, l, C, p],
+            }, [D, b, L]),
+            x = i.useMemo(
+                () => (p && O ? (0, f.Ct)(C, { subscriptionPeriodEnd: l, trialPeriodCopy: R }) : h),
+                [p, O, C, l, R, h],
             ),
             {
-                selectPlan: x,
-                premiumSubscription: P,
-                userLocale: k,
-                priceOptions: U,
-                isGift: G,
-                shouldUseCalculatedDiscount: F,
-                discountOffer: V,
-            } = (0, f.Rx)(h),
-            B = i.useMemo(() => (s.length > 0 ? T.hd[s[0]].premiumType : void 0), [s]),
-            H = i.useCallback(
+                selectPlan: P,
+                premiumSubscription: k,
+                userLocale: U,
+                priceOptions: G,
+                isGift: F,
+                shouldUseCalculatedDiscount: V,
+                discountOffer: B,
+            } = (0, f.Rx)(m),
+            H = i.useMemo(() => (s.length > 0 ? T.hd[s[0]].premiumType : void 0), [s]),
+            j = i.useCallback(
                 (e) => {
-                    x(e.value);
+                    P(e.value);
                 },
-                [x],
+                [P],
             ),
-            j = i.useMemo(
+            Y = i.useMemo(
                 () =>
                     s.map((e) => {
-                        let { isCurrentPlan: t, disabled: n } = (0, f.cD)(P, e),
-                            r = (0, A.Rs)(P, {
+                        let { isCurrentPlan: t, disabled: n } = (0, f.cD)(k, e),
+                            r = (0, A.Rs)(k, {
                                 planId: e,
                                 isCurrentPlan: t,
                                 disabled: n,
-                                userLocale: k,
+                                userLocale: U,
                                 showSecondarySubTexts: d,
-                                isInPlanSelectStep: _,
-                                discountOffer: V,
-                                priceOptions: U,
-                                isGift: G,
-                                shouldUseCalculatedDiscount: F,
-                                isEligibleForTrial: R,
-                                isEligibleForBOGOPromotion: O,
+                                isInPlanSelectStep: p,
+                                discountOffer: B,
+                                priceOptions: G,
+                                isGift: F,
+                                shouldUseCalculatedDiscount: V,
+                                isEligibleForTrial: O,
+                                isEligibleForBOGOPromotion: b,
                             });
                         return {
                             value: r.id,
@@ -157,38 +158,38 @@ let N = (e) => {
                             primaryText: r.planName,
                             badgeText: r.promoText,
                             subText: r.priceText,
-                            isDisabled: r.isDisabled,
+                            isDisabled: r.isDisabled || _,
                         };
                     }),
-                [d, s, k, V, U, G, F, R, O, P, _],
+                [_, d, s, U, B, G, F, V, O, b, k, p],
             );
-        return null == B
+        return null == H
             ? null
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      L &&
+                      w &&
                           (0, r.jsx)(o.EYj, {
                               variant: "text-md/medium",
                               color: "text-subtle",
                               className: v.ST,
-                              children: w,
+                              children: M,
                           }),
                       (0, r.jsx)(c.me, {
-                          headingComponent: (0, r.jsx)(c.ec, { size: "sm", color: "text-strong", premiumType: B }),
-                          headingSubText: M,
-                          planRadioOptions: j,
-                          value: m?.id ?? "",
-                          onChange: H,
+                          headingComponent: (0, r.jsx)(c.ec, { size: "sm", color: "text-strong", premiumType: H }),
+                          headingSubText: x,
+                          planRadioOptions: Y,
+                          value: E?.id ?? "",
+                          onChange: j,
                       }),
-                      _
+                      p
                           ? (0, f.LR)({
-                                selectedPlan: m,
-                                selectedPlanPrice: E,
-                                isPrepaid: g,
-                                shouldShowHRKEuroWarning: I,
-                                shouldShowUpdatedPaymentModal: y,
-                                showTotal: _,
-                                shouldShowTotalInSubscriptionFlow: S,
+                                selectedPlan: E,
+                                selectedPlanPrice: g,
+                                isPrepaid: I,
+                                shouldShowHRKEuroWarning: S,
+                                shouldShowUpdatedPaymentModal: N,
+                                showTotal: p,
+                                shouldShowTotalInSubscriptionFlow: y,
                                 previewTotalSectionClassName: v.$r,
                             })
                           : null,

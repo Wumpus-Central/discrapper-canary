@@ -36,9 +36,9 @@ var r = n(627968),
     k = n(422268),
     U = n(88001),
     G = n(652215),
-    F = n(518582),
+    F = n(519412),
     V = n(985018),
-    B = n(289413);
+    B = n(982571);
 function H(e) {
     let t,
         {
@@ -228,6 +228,7 @@ function H(e) {
         eB = i.useMemo(() => (eV ? (0, r.jsx)(T.P, { planSkuId: eh.skuId }) : null), [eV, eh.skuId]);
     return en
         ? (0, r.jsx)(k.n, {
+              disabled: ev,
               showFractionalPremiumBanner: eE,
               fractionalPremiumInfo: eg,
               isPremiumGroupPurchase: eu,
@@ -258,6 +259,7 @@ function H(e) {
                           children: [
                               eB,
                               (0, r.jsx)(x.$p, {
+                                  disabled: ev,
                                   planOptions: eR,
                                   eligibleForMultiMonthPlans: !1,
                                   selectedPlanId: Y,

@@ -349,6 +349,7 @@ function z(e) {
                     children: [
                         (0, r.jsx)(y.P, { planSkuId: eu?.skuId, referralTrialOfferId: L }),
                         (0, r.jsx)(F.$p, {
+                            disabled: q,
                             planOptions: en,
                             eligibleForMultiMonthPlans: !1,
                             selectedPlanId: t,
