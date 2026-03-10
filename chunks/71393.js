@@ -47,6 +47,9 @@ let h = new p(
                 null != n && "unavailable" !== e.data_mode && t.set(e.id, l.kI(e, n));
             }
         },
+        LOGOUT: (e, t) => {
+            t.clear();
+        },
         RESET_SOCKET: (e, t) => {
             t.clear();
         },

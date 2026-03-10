@@ -73,6 +73,9 @@ let h = new _(
             for (let { partitionKey: n, values: r } of (t.clear(), e.serializedGuildRoles))
                 t.setPartition(n, u.lj(n, r));
         },
+        LOGOUT: (e, t) => {
+            t.clear();
+        },
         RESET_SOCKET: (e, t) => {
             t.clear();
         },

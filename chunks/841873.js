@@ -126,7 +126,7 @@ n.d(t, {
     x0: () => t_,
     x6: () => er,
     xV: () => tm,
-    xy: () => R,
+    xy: () => y,
     yc: () => tH,
     yq: () => eW,
     zE: () => tD,
@@ -275,8 +275,13 @@ function S(e, t, n, i, s) {
     r.installLogCallback(e, t, n, i, s);
 }
 function y(e) {
-    let t = r.__wbindgen_export_4.get(e);
-    return r.__externref_table_dealloc(e), t;
+    let t, n;
+    try {
+        let i = r.generateLaunchSignature(e);
+        return (t = i[0]), (n = i[1]), p(i[0], i[1]);
+    } finally {
+        r.__wbindgen_free(t, n, 1);
+    }
 }
 function v() {
     return r.initLibdiscore();
@@ -288,13 +293,8 @@ function C(e, t) {
     return r.rustMultiply(e, t);
 }
 function R(e) {
-    let t, n;
-    try {
-        let i = r.generateLaunchSignature(e);
-        return (t = i[0]), (n = i[1]), p(i[0], i[1]);
-    } finally {
-        r.__wbindgen_free(t, n, 1);
-    }
+    let t = r.__wbindgen_export_4.get(e);
+    return r.__externref_table_dealloc(e), t;
 }
 function O(e, t) {
     r._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h075cb6f1f85a8e52(
@@ -383,8 +383,8 @@ class V {
     }
     connectStore(e) {
         let t = r.fluxapi_connectStore(this.__wbg_ptr, e);
-        if (t[2]) throw y(t[1]);
-        return y(t[0]);
+        if (t[2]) throw R(t[1]);
+        return R(t[0]);
     }
     dispatchAction(e, t) {
         let n = c(e, r.__wbindgen_malloc, r.__wbindgen_realloc),

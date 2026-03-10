@@ -16,6 +16,7 @@ class o extends s.yW {
 }
 let l = new o(
     {
+        LOGOUT: (e, t) => t.clear(),
         RESET_SOCKET: (e, t) => t.clear(),
         CONNECTION_OPEN: (e, t) => t.clear(),
         OVERLAY_INITIALIZE: (e, t) => t.clear(),
