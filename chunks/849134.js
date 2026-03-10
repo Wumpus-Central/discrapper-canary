@@ -15,41 +15,43 @@ function d(e) {
         onActionClick: u,
         onActionMouseDown: h,
         position: A = "right",
-        align: p = "top",
-        caretConfig: g = { align: "start" },
-        skuImageDetails: m,
+        align: m = "top",
+        caretConfig: p = { align: "start" },
+        skuImageDetails: g,
         title: _,
         body: f,
+        overlayImageUrl: x,
     } = e;
     s.useEffect(() => {
         n?.();
     }, [n]);
-    let x = s.useMemo(
+    let C = s.useMemo(
         () =>
-            m?.imageUrl == null
+            g?.imageUrl == null
                 ? { type: "image", src: c.A, aspectRatio: "6/4" }
                 : (0, r.e)({
-                      imageUrl: m?.imageUrl,
-                      backgroundImageUrl: m?.backgroundImageUrl,
+                      imageUrl: g?.imageUrl,
+                      backgroundImageUrl: g?.backgroundImageUrl,
                       altText: a.intl.string(a.t["ulQB+t"]),
+                      overlayImageUrl: x,
                       customClassNames: { containerClassName: o.z, foregroundImageClassName: o._ },
                   }),
-        [m?.imageUrl, m?.backgroundImageUrl],
+        [g?.imageUrl, g?.backgroundImageUrl, x],
     );
     return (0, i.jsx)(l.AM, {
         size: "lg",
         shouldShow: !0,
         position: A,
-        caretConfig: g,
+        caretConfig: p,
         gradientColor: "purple",
         alignmentStrategy: "edge",
-        align: p,
+        align: m,
         badge: { type: "new", variant: "default" },
         onRequestClose: d,
         actions: [{ text: a.intl.string(a.t.RzWDqY), variant: "primary", onClick: u, onMouseDown: h }],
         targetElementRef: t,
         title: _ ?? a.intl.string(a.t.Ylu2JM),
         body: f ?? a.intl.string(a.t.vgylLQ),
-        graphic: x,
+        graphic: C,
     });
 }
