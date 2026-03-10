@@ -5,7 +5,7 @@ var i = n(627968),
     a = n.n(s),
     r = n(284009),
     o = n.n(r),
-    c = n(396181),
+    c = n(490249),
     d = n(835245),
     u = n(311907),
     h = n(827734),
@@ -19,11 +19,11 @@ var i = n(627968),
     x = n(688810),
     C = n(861382),
     S = n(875163),
-    I = n(224805),
-    T = n(598071),
+    T = n(224805),
+    I = n(598071),
     N = n(101555),
-    b = n(834755),
-    y = n(703007),
+    y = n(834755),
+    b = n(703007),
     v = n(2553),
     j = n(946274),
     R = n(135621),
@@ -32,8 +32,8 @@ var i = n(627968),
     O = n(31717),
     L = n(638128),
     P = n(522602),
-    k = n(515718),
-    w = n(723702),
+    w = n(515718),
+    k = n(723702),
     U = n(518960),
     G = n(486319),
     F = n(355622),
@@ -72,10 +72,10 @@ let X = l.memo(
                 required: m,
                 disabled: f,
                 accessibilityLabel: N,
-                channel: y,
+                channel: b,
                 type: v,
                 focused: j,
-                onChange: k,
+                onChange: w,
                 onResize: U,
                 onBlur: K,
                 onFocus: Y,
@@ -94,7 +94,7 @@ let X = l.memo(
                 emojiPickerCloseOnModalOuterClick: eA,
                 parentModalKey: eg,
             } = e,
-            ep = I.A.useField("channelDrafts")[y.id],
+            ep = T.A.useField("channelDrafts")[b.id],
             ef = ep?.title ?? "",
             e_ = ep?.heroFile,
             eE = ep?.publish ?? !0,
@@ -102,14 +102,14 @@ let X = l.memo(
         o()(null != v, "chat input type must be set");
         let { analyticsLocations: eC } = (0, x.Ay)(E.A.CHANNEL_TEXT_AREA),
             eS = (0, V.L0)(t),
-            eI = l.useRef(null),
             eT = l.useRef(null),
+            eI = l.useRef(null),
             eN = l.useRef(null),
-            eb = l.useRef(null);
-        eu?.(eT.current);
-        let { activeCommand: ey } = (0, u.cf)([C.A], () => ({
-                activeCommand: v.commands?.enabled ? C.A.getActiveCommand(y.id) : null,
-                activeCommandSection: v.commands?.enabled ? C.A.getActiveCommandSection(y.id) : null,
+            ey = l.useRef(null);
+        eu?.(eI.current);
+        let { activeCommand: eb } = (0, u.cf)([C.A], () => ({
+                activeCommand: v.commands?.enabled ? C.A.getActiveCommand(b.id) : null,
+                activeCommandSection: v.commands?.enabled ? C.A.getActiveCommandSection(b.id) : null,
             })),
             {
                 isLurking: ev,
@@ -117,22 +117,22 @@ let X = l.memo(
                 disabled: eR,
                 canAttachFiles: eM,
                 canEveryoneSendMessages: eD,
-            } = (0, V.Sk)(y, v, ey, f),
-            eO = !D.D_.useSetting() && !(0, w.isAndroidWeb)() && null != window.ResizeObserver,
+            } = (0, V.Sk)(b, v, eb, f),
+            eO = !D.D_.useSetting() && !(0, k.isAndroidWeb)() && null != window.ResizeObserver,
             eL = !eO || !v.commands?.enabled || !j || "/" !== s,
             eP = (0, R.A)(),
-            { fontSize: ek } = (0, u.cf)([_.A], () => ({
+            { fontSize: ew } = (0, u.cf)([_.A], () => ({
                 fontSize: _.A.fontSize,
                 isSubmitButtonEnabled: _.A.isSubmitButtonEnabled,
             })),
-            ew = (0, u.bG)([L.A], () => L.A.isEnabled()),
-            eU = (0, M.n)(y);
-        (0, V.N_)(v, eR, y.id);
-        let { eventEmitter: eG, handleEditorSelectionChanged: eF } = (0, V.ml)(eT, s, r),
+            ek = (0, u.bG)([L.A], () => L.A.isEnabled()),
+            eU = (0, M.n)(b);
+        (0, V.N_)(v, eR, b.id);
+        let { eventEmitter: eG, handleEditorSelectionChanged: eF } = (0, V.ml)(eI, s, r),
             eH = l.useCallback(
                 (e) => {
                     let t = (e) => (
-                            e.shouldClear && ((0, I.x)(y.id, { title: "", heroFile: null }), eT.current?.blur()), e
+                            e.shouldClear && ((0, T.x)(b.id, { title: "", heroFile: null }), eI.current?.blur()), e
                         ),
                         n = [],
                         i =
@@ -148,7 +148,7 @@ let X = l.memo(
                         }).then(t);
                     n.push({ type: p.I5.MEDIA_GALLERY, items: [Z(`attachment://${e_.name}`, null, !1)], id: "82733" }),
                         e.value.length > 0 && n.push({ type: p.I5.TEXT_DISPLAY, content: e.value, id: "82744" });
-                    let l = P.A.getUploads(y.id, O.C.ChannelMessage),
+                    let l = P.A.getUploads(b.id, O.C.ChannelMessage),
                         s = l.filter((e) => (e.isImage || e.isVideo) && e.filename !== e_?.name),
                         a = l.filter((e) => !e.isImage && !e.isVideo && e.filename !== e_?.name),
                         r = s.map((e) => Z(`attachment://${e.filename}`, e.description, e.spoiler));
@@ -171,68 +171,71 @@ let X = l.memo(
                         }).then(t)
                     );
                 },
-                [ei, ef, e_, y.id, ex, eE, eU],
+                [ei, ef, e_, b.id, ex, eE, eU],
             ),
-            { submit: eB, handleSubmit: eV } = (0, V.Zx)(eH, v, eT, eb, y.id),
+            { submit: eB, handleSubmit: eV } = (0, V.Zx)(eH, v, eI, ey, b.id),
             { autocompleteRef: eK, handleMaybeShowAutocomplete: ez, handleHideAutocomplete: eW } = (0, V.v7)(),
-            eY = l.useCallback(() => eb?.current?.hide(), []),
+            eY = l.useCallback(() => ey?.current?.hide(), []),
             { editorHeight: eq, handleResize: eJ } = (0, V.ck)(U),
             {
                 handleTab: e$,
                 handleEnter: eZ,
                 handleMoveSelection: eX,
             } = ((n = l.useCallback(
-                () => !!(!eL && eI.current?.onTabOrEnter(!1)) || eK.current?.onTabOrEnter(!1) || !1,
+                () => !!(!eL && eT.current?.onTabOrEnter(!1)) || eK.current?.onTabOrEnter(!1) || !1,
                 [eL],
             )),
             {
                 handleTab: n,
                 handleEnter: l.useCallback(
-                    () => !!(!eL && eI.current?.onTabOrEnter(!0)) || eK.current?.onTabOrEnter(!1) || !1,
+                    () => !!(!eL && eT.current?.onTabOrEnter(!0)) || eK.current?.onTabOrEnter(!1) || !1,
                     [eL],
                 ),
                 handleMoveSelection: l.useCallback(
-                    (e) => !!(!eL && eI.current?.onMoveSelection(e)) || eK.current?.onMoveSelection(e) || !1,
+                    (e) => !!(!eL && eT.current?.onMoveSelection(e)) || eK.current?.onMoveSelection(e) || !1,
                     [eL],
                 ),
             }),
-            { expressionPickerView: eQ, shouldHideExpressionPicker: e0, handleOuterClick: e1 } = (0, V.MD)(v, eT, y.id),
-            { handleAutocompleteVisibilityChange: e2 } = (0, V.uW)(v, y.id),
-            e3 = (0, V.NO)(eT),
-            e7 = (0, V.Vu)(eB, v, eT),
-            e5 = (0, V.C)({ editorRef: eT, disabled: eR, textValue: s, channelId: y.id, chatInputType: v, submit: eH });
-        (0, G.R)(eG, y.guild_id, y.id);
-        let [e6, e9] = l.useState(!1),
-            e4 = j || e6 || s.length > 0 || null != e_ || ef.length > 0,
-            { editorHeaderHeight: e8, paddingTop: te } = (0, A.zhh)({
-                editorHeaderHeight: 122 * !!e4,
-                paddingTop: 16 * !!e4,
+            { expressionPickerView: eQ, shouldHideExpressionPicker: e0, handleOuterClick: e1 } = (0, V.MD)(v, eI, b.id),
+            { handleAutocompleteVisibilityChange: e2 } = (0, V.uW)(v, b.id),
+            e3 = (0, V.NO)(eI),
+            e7 = (0, V.Vu)(eB, v, eI),
+            e5 = (0, V.C)({ editorRef: eI, disabled: eR, textValue: s, channelId: b.id, chatInputType: v, submit: eH });
+        (0, G.R)(eG, b.guild_id, b.id);
+        let [e9, e6] = l.useState(!1),
+            e4 = l.useCallback(() => {
+                e1(), e6(!0);
+            }, [e1]),
+            e8 = e9 || s.length > 0 || null != e_ || ef.length > 0,
+            { editorHeaderHeight: te, paddingTop: tt } = (0, A.zhh)({
+                editorHeaderHeight: 122 * !!e8,
+                paddingTop: 16 * !!e8,
                 config: { tension: 120, friction: 15, clamp: !0 },
             }),
-            tt = l.useRef(null),
-            [tn, ti] = l.useState(!1),
-            tl = l.useRef(!1),
-            ts = l.useCallback(() => {
-                tl.current = !0;
-                let e = setTimeout(() => {
-                    tl.current && ti(!0);
-                }, 100);
-                return () => clearTimeout(e);
-            }, []),
+            tn = l.useRef(null),
+            [ti, tl] = l.useState(!1),
+            ts = l.useRef(!1),
             ta = l.useCallback(() => {
-                tl.current = !1;
+                ts.current = !0;
                 let e = setTimeout(() => {
-                    tl.current || ti(!1);
+                    ts.current && tl(!0);
                 }, 100);
                 return () => clearTimeout(e);
             }, []),
             tr = l.useCallback(() => {
+                ts.current = !1;
+                let e = setTimeout(() => {
+                    ts.current || tl(!1);
+                }, 100);
+                return () => clearTimeout(e);
+            }, []),
+            to = l.useCallback(() => {
                 if (null == e_) return;
-                let e = P.A.getUploads(y.id, v.drafts.type),
+                let e = P.A.getUploads(b.id, v.drafts.type),
                     t = e.find((e) => e.filename === e_.name)?.id;
-                null != t && g.A.remove(y.id, t, O.C.ChannelMessage), (0, I.x)(y.id, { heroFile: null });
-            }, [y.id, e_, v.drafts.type]);
-        return (0, i.jsx)(T.Sv, {
+                null != t && g.A.remove(b.id, t, O.C.ChannelMessage), (0, T.x)(b.id, { heroFile: null });
+            }, [b.id, e_, v.drafts.type]);
+        return (0, i.jsx)(I.Sv, {
             value: eG,
             children: (0, i.jsxs)(x.f5, {
                 value: eC,
@@ -240,7 +243,7 @@ let X = l.memo(
                     (0, i.jsxs)("div", {
                         ref: eS,
                         className: a()(d, $.gM),
-                        onMouseDown: e1,
+                        onMouseDown: e4,
                         children: [
                             (0, i.jsx)("div", {
                                 ref: eN,
@@ -254,27 +257,25 @@ let X = l.memo(
                                             children: [
                                                 (0, i.jsxs)(c.animated.div, {
                                                     className: J.ov,
-                                                    style: { height: e8, paddingTop: te },
+                                                    style: { height: te, paddingTop: tt },
                                                     children: [
                                                         null != e_
-                                                            ? (0, i.jsx)(ee, { file: e_, onRemoveHeroImage: tr })
+                                                            ? (0, i.jsx)(ee, { file: e_, onRemoveHeroImage: to })
                                                             : null,
                                                         null != e_
                                                             ? null
                                                             : (0, i.jsx)(en, {
-                                                                  channel: y,
+                                                                  channel: b,
                                                                   onImageUploaded: (e) =>
-                                                                      (0, I.x)(y.id, { heroFile: e }),
-                                                                  onFocus: () => e9(!0),
+                                                                      (0, T.x)(b.id, { heroFile: e }),
+                                                                  onFocus: () => e6(!0),
                                                               }),
                                                         (0, i.jsx)("input", {
-                                                            onFocus: () => e9(!0),
-                                                            onBlur: () => e9(!1),
                                                             maxLength: 140,
                                                             className: J.hz,
                                                             placeholder: q.intl.string(q.t.Z8fYjO),
                                                             value: ef,
-                                                            onChange: (e) => (0, I.x)(y.id, { title: e.target.value }),
+                                                            onChange: (e) => (0, T.x)(b.id, { title: e.target.value }),
                                                         }),
                                                     ],
                                                 }),
@@ -284,7 +285,7 @@ let X = l.memo(
                                                         ringTarget: eS,
                                                         ringClassName: $.Rg,
                                                         children: (0, i.jsx)(H.A, {
-                                                            ref: eT,
+                                                            ref: eI,
                                                             id: h,
                                                             focused: j,
                                                             useSlate: eO,
@@ -295,14 +296,14 @@ let X = l.memo(
                                                             required: m,
                                                             accessibilityLabel: N,
                                                             isPreviewing: (ev || ej) && eD,
-                                                            channel: y,
+                                                            channel: b,
                                                             type: F.oU.CREATE_ANNOUNCEMENT_POST,
                                                             canPasteFiles: eM,
                                                             uploadPromptCharacterCount: W.CS1,
                                                             maxCharacterCount: er ?? eP,
                                                             allowNewLines: !0,
                                                             "aria-describedby": ec,
-                                                            onChange: k,
+                                                            onChange: w,
                                                             onResize: eJ,
                                                             onBlur: K,
                                                             onFocus: Y,
@@ -315,8 +316,8 @@ let X = l.memo(
                                                             onMaybeShowAutocomplete: ez,
                                                             onHideAutocomplete: eW,
                                                             promptToUpload: el,
-                                                            fontSize: ek,
-                                                            spellcheckEnabled: ew,
+                                                            fontSize: ew,
+                                                            spellcheckEnabled: ek,
                                                             canOnlyUseTextCommands: !1,
                                                             "aria-labelledby": ed,
                                                         }),
@@ -327,7 +328,7 @@ let X = l.memo(
                                         (0, i.jsx)("div", {
                                             className: J.KK,
                                             children: (0, i.jsx)(z.A, {
-                                                channelId: y.id,
+                                                channelId: b.id,
                                                 type: v,
                                                 canAttachFiles: eM,
                                                 ignoreFile: e_?.name,
@@ -344,11 +345,11 @@ let X = l.memo(
                                     (0, i.jsxs)("div", {
                                         className: J.j4,
                                         children: [
-                                            (0, i.jsx)(et, { channel: y }),
+                                            (0, i.jsx)(et, { channel: b }),
                                             (0, i.jsx)(B.A, {
                                                 type: F.oU.CREATE_ANNOUNCEMENT_POST,
                                                 disabled: eR,
-                                                channel: y,
+                                                channel: b,
                                                 handleSubmit: eV,
                                                 isEmpty: 0 === s.trim().length,
                                                 showAllButtons: !0,
@@ -358,15 +359,15 @@ let X = l.memo(
                                     (0, i.jsx)("div", {
                                         className: J.j4,
                                         children: (0, i.jsx)("div", {
-                                            ref: tt,
+                                            ref: tn,
                                             className: J.Qo,
-                                            onMouseEnter: ts,
-                                            onMouseLeave: ta,
+                                            onMouseEnter: ta,
+                                            onMouseLeave: tr,
                                             children: (0, i.jsx)(A.YNO, {
-                                                targetElementRef: tt,
+                                                targetElementRef: tn,
                                                 renderPopout: () =>
-                                                    (0, i.jsx)(Q, { channelId: y.id, canCreateThread: eU }),
-                                                shouldShow: tn,
+                                                    (0, i.jsx)(Q, { channelId: b.id, canCreateThread: eU }),
+                                                shouldShow: ti,
                                                 autoInvert: !0,
                                                 nudgeAlignIntoViewport: !0,
                                                 position: "top",
@@ -423,7 +424,7 @@ let X = l.memo(
                             (0, i.jsx)(S.A, {
                                 targetRef: eS,
                                 ref: eK,
-                                channel: y,
+                                channel: b,
                                 canMentionRoles: es,
                                 canMentionChannels: ea,
                                 useNewSlashCommands: eO,
@@ -433,25 +434,25 @@ let X = l.memo(
                                 focused: j,
                                 expressionPickerView: eQ,
                                 type: v,
-                                editorRef: eT,
+                                editorRef: eI,
                                 onSendMessage: eB,
                                 onSendSticker: () => {},
                                 onVisibilityChange: e2,
                                 editorHeight: eq,
-                                setValue: (e, t) => k?.(null, e, t),
+                                setValue: (e, t) => w?.(null, e, t),
                                 position: eh,
                             }),
                         ],
                     }),
                     e0
                         ? null
-                        : (0, i.jsx)(b.A, {
+                        : (0, i.jsx)(y.A, {
                               positionTargetRef: eS,
                               type: v,
                               onSelectGIF: e7,
                               onSelectEmoji: e3,
                               onSelectSticker: e5,
-                              channel: y,
+                              channel: b,
                               closeOnModalOuterClick: eA,
                               parentModalKey: eg,
                               position: "top",
@@ -465,7 +466,7 @@ let X = l.memo(
 );
 function Q(e) {
     let { channelId: t, canCreateThread: n } = e,
-        l = I.A.useField("channelDrafts")[t],
+        l = T.A.useField("channelDrafts")[t],
         s = l?.createThread ?? !0,
         a = l?.publish ?? !0;
     return (0, i.jsxs)(A.W1t, {
@@ -481,7 +482,7 @@ function Q(e) {
                 checked: n && s,
                 disabled: !n,
                 action: () => {
-                    (0, I.x)(t, { createThread: !s });
+                    (0, T.x)(t, { createThread: !s });
                 },
             }),
             (0, i.jsx)(A.sLh, {
@@ -489,7 +490,7 @@ function Q(e) {
                 label: q.intl.string(q.t.MFGE51),
                 checked: a,
                 action: () => {
-                    (0, I.x)(t, { publish: !a });
+                    (0, T.x)(t, { publish: !a });
                 },
             }),
         ],
@@ -540,7 +541,7 @@ function ee(e) {
 }
 function et(e) {
     let { channel: t } = e;
-    return (0, i.jsx)(y.A, {
+    return (0, i.jsx)(b.A, {
         "aria-label": q.intl.string(q.t["/IBYAq"]),
         className: J.g$,
         size: "icon",
@@ -562,7 +563,7 @@ function en(e) {
     let { channel: t, onImageUploaded: n, onFocus: s } = e,
         a = l.useRef(null),
         r = async (e, i) => {
-            let l = await (0, k.bX)(e, i.name, i.type),
+            let l = await (0, w.bX)(e, i.name, i.type),
                 s = { id: (0, d.A)(), file: l, platform: f.xz.WEB, isThumbnail: !1, origin: "file_picker" };
             g.A.addFile({ file: s, channelId: t.id, draftType: O.C.ChannelMessage }), n(l);
         },
