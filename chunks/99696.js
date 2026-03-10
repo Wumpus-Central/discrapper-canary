@@ -13,15 +13,15 @@ async function o(e) {
 async function l() {
     return await Promise.resolve(), { country: "US", set_at: null, allowed_currencies: ["usd"] };
 }
-async function u(e, t) {
+async function u(e, t, n) {
     try {
-        let n = await i.Bo.post({
+        let r = await i.Bo.post({
             url: a.Rsh.BILLING_GIFT_CARD_REDEEM,
-            body: { pin: e, postal_code: t },
+            body: { pin: e, postal_code: t, country_code: n },
             oldFormErrors: !0,
             rejectWithError: !0,
         });
-        return { success: !0, amount: n.body.amount, currency: n.body.currency.toLowerCase() };
+        return { success: !0, amount: r.body.amount, currency: r.body.currency.toLowerCase() };
     } catch (e) {
         throw e;
     }

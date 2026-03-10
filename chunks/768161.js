@@ -16,7 +16,7 @@ var n = l(627968),
     y = l(652215),
     m = l(818348),
     E = l(985018),
-    _ = l(762623);
+    _ = l(615305);
 let b = i.A.filter((t) => s.M.EU_COUNTRIES.has(t.alpha2)).map((t) => ({
     id: t.alpha2,
     value: t.alpha2,
@@ -79,8 +79,8 @@ function I(t) {
             source: I,
             loadId: x,
         } = t,
-        [S, k] = a.useState(o),
-        [T, v] = a.useState(!1),
+        [S, v] = a.useState(o),
+        [k, T] = a.useState(!1),
         [j, D] = a.useState(""),
         [R, M] = a.useState(null),
         [N, U] = a.useState(null),
@@ -101,7 +101,7 @@ function I(t) {
             };
         });
     a.useEffect(() => {
-        G || (0, d.$o)(), (0, f.IK)().then(P), (0, d.xe)();
+        G || (0, d.$o)(), (0, f.IK)().then(P), (0, d.xe)(!0);
     }, [G]),
         a.useEffect(() => {
             g.default.track(y.HAw.GIFT_CARD_REDEMPTION_START, { source: I, load_id: x });
@@ -130,15 +130,15 @@ function I(t) {
                 };
         }, [W]),
         Z = a.useCallback((t) => {
-            k(t), U(null);
+            v(t), U(null);
         }, []),
         V = a.useCallback(async () => {
             let t = S.trim();
             if ("" === t) return void U(E.intl.string(E.t.j8734b));
             if (F && null == R) return void U(E.intl.string(E.t["+bm+zE"]));
-            v(!0), U(null);
+            T(!0), U(null);
             try {
-                let e = await (0, f.Ng)(t, F ? void 0 : j.trim());
+                let e = await (0, f.Ng)(t, F ? void 0 : j.trim(), F ? (R ?? void 0) : void 0);
                 i?.(),
                     l(),
                     g.default.track(y.HAw.GIFT_CARD_REDEMPTION_COMPLETED, { source: I, load_id: x }),
@@ -157,7 +157,7 @@ function I(t) {
                     g.default.track(y.HAw.GIFT_CARD_REDEMPTION_FAILED, { source: I, load_id: x });
                 return;
             } finally {
-                v(!1);
+                T(!1);
             }
         }, [S, F, R, j, i, l, b, I, x]),
         X = a.useCallback((t) => {
@@ -187,7 +187,7 @@ function I(t) {
                 variant: "primary",
                 size: "md",
                 text: E.intl.string(E.t.H2hHyf),
-                loading: T,
+                loading: k,
                 disabled: "" === S.trim() || (F ? null == R : "" === j.trim()),
                 onClick: V,
             },
