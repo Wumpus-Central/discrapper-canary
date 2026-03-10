@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     Qq: "text_c8b06d",
     n_: "textLeft_c8b06d text_c8b06d",
