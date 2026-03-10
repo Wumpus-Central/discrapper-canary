@@ -1,20 +1,19 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var r = n(299855),
     i = n.n(r),
-    a = n(574381),
-    s = n(118356),
+    s = n(574381),
+    a = n(118356),
     o = n(205693),
     l = n(451988),
     u = n(73153),
     c = n(77729),
     d = n(837921),
-    _ = n(37770),
-    f = n(502075);
-let p = 5e3,
-    h = 1500,
-    m = new s.Vy("InputWatcher");
-class g {
+    _ = n(502075);
+let f = 5e3,
+    p = 1500,
+    h = new a.Vy("InputWatcher");
+class m {
     mediaEngine;
     mediaEngineStore;
     stateChangeTimeout = new l.Ep();
@@ -29,10 +28,7 @@ class g {
             (this.inputDetected = void 0);
     }
     fetchInputDeviceOSConfig = async () => {
-        let { windowsMuteAndZeroVolumeDetectionEnabled: e } = (0, _.F)({
-            location: "MediaEngineStore.fetchInputDeviceOSConfig",
-        });
-        if ((0, a.uF)() && i().satisfies(c.A?.os.release, f.PH) && e)
+        if ((0, s.uF)() && i().satisfies(c.A?.os.release, _.PH))
             try {
                 let e = this.mediaEngineStore.getInputDeviceId(),
                     t = this.mediaEngineStore.getInputDevices()[e]?.guid;
@@ -45,13 +41,13 @@ class g {
                     u.h.dispatch({ type: "AUDIO_INPUT_DEVICE_OS_CONFIG_FETCHED", osVolume: e, osMuted: n });
                 }
             } catch (e) {
-                m.warn(`Failed to get device OS volume and/or mute state: ${e}`);
+                h.warn(`Failed to get device OS volume and/or mute state: ${e}`);
             }
     };
     handleSilence = (e) => {
         let t = !e;
-        this.stateChangeTimeout.start(t ? h : p, async () => {
-            m.info("Silence:", e),
+        this.stateChangeTimeout.start(t ? p : f, async () => {
+            h.info("Silence:", e),
                 (this.inputDetected = t),
                 (this.lastUpdateTime = performance.now()),
                 e && (await this.fetchInputDeviceOSConfig()),
