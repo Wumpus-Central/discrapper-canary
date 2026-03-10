@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => eN, w: () => eb }), n(938796), n(667532);
+n.d(t, { A: () => ev, w: () => eb }), n(938796), n(667532);
 var l = n(627968),
     i = n(64700),
     s = n(503698),
@@ -19,11 +19,11 @@ var l = n(627968),
     b = n(820284),
     C = n(213464),
     j = n(432371),
-    N = n(323073),
-    v = n(47167),
+    v = n(323073),
+    N = n(47167),
     _ = n(355622),
-    S = n(408018),
-    y = n(133343),
+    y = n(408018),
+    S = n(133343),
     E = n(235986),
     T = n(915089),
     M = n(375499),
@@ -150,7 +150,7 @@ function eC(e) {
                 return (0, l.jsx)(I.A, {
                     channel: n,
                     guildId: s,
-                    pickerIntention: ea.b_.CHANNEL_NAME,
+                    pickerIntention: ea.b_.NO_CUSTOM_EMOJI,
                     closePopout: i,
                     onNavigateAway: i,
                     onSelectEmoji: (e) => {
@@ -191,7 +191,7 @@ class ej extends i.PureComponent {
         const t = this.props.channel?.topic ?? "";
         this.state = {
             textTopicValue: t,
-            richTopicValue: (0, S.x7)(t),
+            richTopicValue: (0, y.x7)(t),
             topicFocused: !1,
             updateNameInputCursorPosition: !1,
         };
@@ -203,7 +203,7 @@ class ej extends i.PureComponent {
         let t = this.props.channel?.topic ?? "";
         (e.channel?.topic ?? "") !== t &&
             t !== this.state.textTopicValue &&
-            this.setState({ textTopicValue: t, richTopicValue: (0, S.x7)(t) });
+            this.setState({ textTopicValue: t, richTopicValue: (0, y.x7)(t) });
     }
     getError(e) {
         let { errors: t } = this.props;
@@ -245,11 +245,11 @@ class ej extends i.PureComponent {
             f = H.Le.has(e.type),
             C = e.isForumLikeChannel(),
             j = C && e.availableTags?.every((e) => e.moderated),
-            v = Q.default.getCurrentUser()?.isStaff() === !0,
-            S = H.IY.has(e.type)
+            N = Q.default.getCurrentUser()?.isStaff() === !0,
+            y = H.IY.has(e.type)
                 ? (0, l.jsx)(A.D0$, {
                       label: C ? eo.intl.string(eo.t.yR6HwZ) : eo.intl.string(eo.t.X8jMDh),
-                      children: (0, l.jsx)(y.Ay, {
+                      children: (0, l.jsx)(S.Ay, {
                           className: a()(ed.zm, { [ed.r9]: !s }),
                           innerClassName: a()(ed.At, { [ed.r9]: !s }),
                           characterCountClassName: ed.IQ,
@@ -276,7 +276,7 @@ class ej extends i.PureComponent {
                   })
                 : null,
             E =
-                C && v
+                C && N
                     ? (0, l.jsx)(A.fs1, {
                           label: eo.intl.string(eo.t.qk2jdY),
                           placeholder: eo.intl.string(eo.t.DDjD1H),
@@ -499,7 +499,7 @@ class ej extends i.PureComponent {
                               label: eo.intl.string(eo.t.Es25Yf),
                               description: eo.intl.string(eo.t["9eUgwR"]),
                               onChange: this.handleNSFWChange,
-                              checked: (0, N.Gc)(e),
+                              checked: (0, v.Gc)(e),
                               disabled: !s || null != e.linkedLobby || z,
                           }),
                           null != e.linkedLobby
@@ -600,7 +600,7 @@ class ej extends i.PureComponent {
                           }
                         : void 0,
                 }),
-                S,
+                y,
                 E,
                 T,
                 M,
@@ -889,7 +889,7 @@ class ej extends i.PureComponent {
         (0, p.fy)({ flags: n });
     };
 }
-function eN() {
+function ev() {
     let { errors: e, channel: t, submitting: n, subsection: s } = (0, g.cf)([Y.A], () => Y.A.getProps()),
         a = (0, g.bG)([J.A], () => J.A.getRegions(t?.getGuildId() ?? null)),
         r = (0, g.bG)([V.A], () => V.A.theme),
@@ -900,13 +900,13 @@ function eN() {
             canManageChannels: z.A.can(ei.xBc.MANAGE_CHANNELS, t),
             canSendMessages: z.A.can(ei.xBc.SEND_MESSAGES, t),
         })),
-        m = (0, v.Ay)(t),
+        m = (0, N.Ay)(t),
         x = W.default.getId(),
         A = (0, w.p)(),
         p = t?.id,
         f = (0, j.cI)(t, !1, !0),
         b = C.A.useExperiment({ guildId: t?.guild_id, location: "ChannelSettingsOverview" }).enabled,
-        N = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 null != p && A.getState().setLayoutType(p, e);
             },
@@ -927,7 +927,7 @@ function eN() {
         subsection: s,
         isForumPost: null != t && t.isForumPost(),
         isOwner: t?.isOwner(x),
-        handleSetDefaultLayout: N,
+        handleSetDefaultLayout: v,
         showChannelSummariesSettings: f,
         showAdvancedSlowModeSetting: b,
     });

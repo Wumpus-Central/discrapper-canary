@@ -507,7 +507,7 @@ function ew(e, t) {
             value: ej,
             children: [
                 tP && e7
-                    ? (0, r.jsx)(ec.A, { editorRef: e$, options: w.markdown, channel: L })
+                    ? (0, r.jsx)(ec.A, { editorRef: e$, type: w, channel: L })
                     : tP
                       ? (0, r.jsx)(el.A, { ref: eq, editorRef: e$, containerRef: ez, options: w.markdown })
                       : null,

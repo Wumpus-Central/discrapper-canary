@@ -37,9 +37,8 @@ var i = (function (e) {
             (e[(e.POLLS = 10)] = "POLLS"),
             (e[(e.PROFILE = 11)] = "PROFILE"),
             (e[(e.GUILD_PROFILE = 12)] = "GUILD_PROFILE"),
-            (e[(e.CHANNEL_NAME = 13)] = "CHANNEL_NAME"),
-            (e[(e.DEFAULT_REACT_EMOJI = 14)] = "DEFAULT_REACT_EMOJI"),
-            (e[(e.NO_CUSTOM_EMOJI = 15)] = "NO_CUSTOM_EMOJI"),
+            (e[(e.DEFAULT_REACT_EMOJI = 13)] = "DEFAULT_REACT_EMOJI"),
+            (e[(e.NO_CUSTOM_EMOJI = 14)] = "NO_CUSTOM_EMOJI"),
             e
         );
     })({});

@@ -28,9 +28,9 @@ var i = n(627968),
     G = n(611371),
     U = n(219444),
     L = n(976860),
-    R = n(233993),
-    y = n(284738),
-    M = n(841811),
+    M = n(233993),
+    R = n(284738),
+    y = n(841811),
     j = n(95701),
     D = n(734057),
     P = n(696451),
@@ -82,7 +82,7 @@ function Q(e) {
         S = l.useRef(null),
         O = (0, c.bG)([w.A], () => w.A.getGuild(h)),
         T = r === W.rbe.GUILD_STAGE_VOICE,
-        { roles: _, members: v, getRichTag: G } = (0, f.K)(O, null, T ? R.QY : (0, j.TA)(r), E, T),
+        { roles: _, members: v, getRichTag: G } = (0, f.K)(O, null, T ? M.QY : (0, j.TA)(r), E, T),
         U = x.A.useSections({ roles: _, members: v });
     return (l.useEffect(() => {
         A(I);
@@ -163,7 +163,7 @@ function ee(e) {
                 return (0, i.jsx)(_.A, {
                     channel: null,
                     guildId: n,
-                    pickerIntention: K.b_.CHANNEL_NAME,
+                    pickerIntention: K.b_.NO_CUSTOM_EMOJI,
                     closePopout: l,
                     onNavigateAway: l,
                     onSelectEmoji: (e) => {
@@ -334,8 +334,8 @@ class et extends l.PureComponent {
                         null != n.id &&
                             "" !== n.id &&
                             (n.rowType === q.T6.ROLE
-                                ? t.push((0, M.j)(n.id, b.r2.ROLE))
-                                : n.rowType === q.T6.MEMBER && t.push((0, M.j)(n.id, b.r2.MEMBER)));
+                                ? t.push((0, y.j)(n.id, b.r2.ROLE))
+                                : n.rowType === q.T6.MEMBER && t.push((0, y.j)(n.id, b.r2.MEMBER)));
                     }));
             }
             this.setState({ errors: {}, submitting: !0 });
@@ -734,7 +734,7 @@ let en = l.forwardRef(function (e, t) {
         ),
         d = new Set(r.memberRoles),
         { canManageRoles: h, canManageChannels: u } = r,
-        g = (0, y.R)(l) && h && u,
+        g = (0, R.R)(l) && h && u,
         p = (0, U.Vf)(r?.guild);
     return (0, i.jsx)(et, {
         ...e,
