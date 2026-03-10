@@ -1,79 +1,80 @@
-n.d(e, { Jf: () => A, TA: () => d, VF: () => g, hH: () => o, nL: () => _, pp: () => c });
-var r = n(64700),
-    a = n(735438),
+"use strict";
+n.d(t, { Jf: () => _, TA: () => u, VF: () => h, hH: () => d, nL: () => m, pp: () => c });
+var a = n(64700),
+    l = n(735438),
     s = n(58149),
-    i = n(734057),
-    l = n(954571),
-    u = n(652215);
-function c(t, e, n) {
-    l.default.track(u.HAw.FORWARD_MESSAGE_STARTED, { channel_id: t, message_id: e, source: n });
+    r = n(734057),
+    i = n(954571),
+    o = n(652215);
+function c(e, t, n) {
+    i.default.track(o.HAw.FORWARD_MESSAGE_STARTED, { channel_id: e, message_id: t, source: n });
 }
-function o(t) {
-    let { channelId: e, messageId: n, numDestinationChanges: r, numQueryChanges: a } = t;
-    l.default.track(u.HAw.FORWARD_MESSAGE_CANCELLED, {
-        channel_id: e,
+function d(e) {
+    let { channelId: t, messageId: n, numDestinationChanges: a, numQueryChanges: l } = e;
+    i.default.track(o.HAw.FORWARD_MESSAGE_CANCELLED, {
+        channel_id: t,
         message_id: n,
-        num_destination_changes: r,
-        num_query_changes: a,
+        num_destination_changes: a,
+        num_query_changes: l,
     });
 }
-function d(t) {
+function u(e) {
     let {
-        channelId: e,
+        channelId: t,
         messageId: n,
-        hasError: r,
-        hasContextMessage: a,
+        hasError: a,
+        hasContextMessage: l,
         numDestinations: c,
-        numDestinationChanges: o,
-        numQueryChanges: d,
-        anyDestinationHasSlowmode: A,
-        source: _,
-    } = t;
+        numDestinationChanges: d,
+        numQueryChanges: u,
+        anyDestinationHasSlowmode: _,
+        source: m,
+    } = e;
     if (
-        (l.default.track(u.HAw.FORWARD_MESSAGE_SENT, {
-            channel_id: e,
+        (i.default.track(o.HAw.FORWARD_MESSAGE_SENT, {
+            channel_id: t,
             message_id: n,
-            has_error: r,
-            has_context_message: a,
+            has_error: a,
+            has_context_message: l,
             num_destinations: c,
-            num_destination_changes: o,
-            num_query_changes: d,
-            any_destination_has_slowmode: A,
+            num_destination_changes: d,
+            num_query_changes: u,
+            any_destination_has_slowmode: _,
         }),
-        "message-shortcut" === _)
+        "message-shortcut" === m)
     ) {
-        let t = i.A.getChannel(e);
-        l.default.track(u.HAw.MESSAGE_SHORTCUT_ACTION_SENT, {
+        let e = r.A.getChannel(t);
+        i.default.track(o.HAw.MESSAGE_SHORTCUT_ACTION_SENT, {
             action: "forward",
             original_message_id: n,
-            ...(0, s.H$)(t?.guild_id),
-            ...(0, s.dI)(t),
+            ...(0, s.H$)(e?.guild_id),
+            ...(0, s.dI)(e),
         });
     }
 }
-function A() {
-    return r.useMemo(
-        () =>
-            (0, a.once)((t, e, n) => {
-                l.default.track(u.HAw.FORWARD_ADD_RECIPIENT, { channel_id: t, message_id: e, has_query: n });
-            }),
-        [],
-    );
-}
 function _() {
-    return r.useMemo(
+    return a.useMemo(
         () =>
-            (0, a.once)((t, e) => {
-                l.default.track(u.HAw.FORWARD_EDIT_SEARCH, { channel_id: t, message_id: e });
+            (0, l.once)((e, t, n) => {
+                i.default.track(o.HAw.FORWARD_ADD_RECIPIENT, { channel_id: e, message_id: t, has_query: n });
             }),
         [],
     );
 }
-function g() {
-    return r.useMemo(
+function m() {
+    return a.useMemo(
         () =>
-            (0, a.once)((t, e) => {
-                l.default.track(u.HAw.FORWARD_EDIT_CONTEXT_MESSAGE, { channel_id: t, message_id: e });
+            (0, l.once)((e, t) => {
+                i.default.track(o.HAw.FORWARD_EDIT_SEARCH, { channel_id: e, message_id: t });
+            }),
+        [],
+    );
+}
+function h() {
+    return a.useMemo(
+        () =>
+            (0, l.once)((e, t) => {
+                i.default.track(o.HAw.FORWARD_EDIT_CONTEXT_MESSAGE, { channel_id: e, message_id: t });
             }),
         [],
     );
