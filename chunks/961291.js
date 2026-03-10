@@ -11,12 +11,12 @@ var i = n(827734),
     u = n(338943),
     h = n(478772),
     A = n(846500),
-    p = n(784297),
-    g = n(51213),
-    m = n(194066),
+    m = n(784297),
+    p = n(51213),
+    g = n(194066),
     _ = n(211643);
 let f = {
-        MISSED_MESSAGES: p,
+        MISSED_MESSAGES: m,
         FRIEND_REQUEST_REMINDER: u,
         SCHEDULED_GUILD_EVENT: c,
         TOP_MESSAGES: A,
@@ -24,7 +24,7 @@ let f = {
         UPDATE_PROFILE: n(566213),
         FIND_FRIENDS: r,
         ADD_FRIEND: r,
-        FIRST_MESSAGE: m,
+        FIRST_MESSAGE: g,
     },
     x = (e) => {
         switch (e.type) {
@@ -45,12 +45,13 @@ let f = {
                 return "MISSED_MESSAGES";
             case "friend_request_reminder":
                 return "FRIEND_REQUEST_REMINDER";
+            case "referral_program_entrypoint_reminder":
+            default:
+                return "NOTIFICATION_CENTER";
             case "scheduled_guild_event_started":
                 return "SCHEDULED_GUILD_EVENT";
             case "top_messages":
                 return "TOP_MESSAGES";
-            default:
-                return "NOTIFICATION_CENTER";
         }
     },
     C = (e) => ("icHighlight" === e ? "TOP_MESSAGES" : "NOTIFICATION_CENTER"),
@@ -65,7 +66,7 @@ let f = {
             case s.hW.FRIEND_SUGGESTION_CREATED:
                 return { icon: d, color: i.A.colors.BACKGROUND_MOD_STRONG };
             case s.hW.DM_FRIEND_NUDGE:
-                return { icon: g, color: i.A.colors.BACKGROUND_MOD_STRONG };
+                return { icon: p, color: i.A.colors.BACKGROUND_MOD_STRONG };
             case s.Uo.INCOMING_FRIEND_REQUESTS:
             case s.Uo.INCOMING_FRIEND_REQUESTS_ACCEPTED:
                 return { icon: d, color: i.A.colors.BACKGROUND_MOD_STRONG };

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $w: () => a, Uo: () => o, e1: () => i, hW: () => s, r_: () => r });
+n.d(t, { $w: () => s, Uo: () => o, e1: () => i, hW: () => a, r_: () => r });
 var r = (function (e) {
         return (
             (e[(e.UPDATE_PROFILE = 0)] = "UPDATE_PROFILE"),
@@ -18,10 +18,10 @@ var r = (function (e) {
             e
         );
     })({}),
-    a = (function (e) {
+    s = (function (e) {
         return (e.ForYou = "ForYou"), (e.Mentions = "Mentions"), (e.MessageReminders = "MessageReminders"), e;
     })({}),
-    s = (function (e) {
+    a = (function (e) {
         return (
             (e.GO_LIVE_PUSH = "go_live_push"),
             (e.FRIEND_REQUEST_ACCEPTED = "friend_request_accepted"),
@@ -39,6 +39,7 @@ var r = (function (e) {
             (e.TRENDING_CONTENT = "trending_content"),
             (e.GAME_FRIEND_REQUEST_ACCEPTED = "game_friend_request_accepted"),
             (e.REACTION_SENT = "reaction_sent"),
+            (e.REFERRAL_PROGRAM_ENTRYPOINT_REMINDER = "referral_program_entrypoint_reminder"),
             e
         );
     })({}),
