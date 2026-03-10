@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { Cx: () => a, Xb: () => o, k7: () => l });
+n.d(t, { Cx: () => s, Xb: () => o, k7: () => l });
 var r = n(4511),
     i = n(731854);
-let a = Object.freeze({ [i.K3.AUTO]: {}, [i.K3.FULL]: { encode: { width: 1280, height: 720 } } });
-class s {
+let s = Object.freeze({ [i.K3.AUTO]: {}, [i.K3.FULL]: { encode: { width: 1280, height: 720 } } });
+class a {
     capture;
     encode;
     bitrateMin;
@@ -52,9 +52,6 @@ class l {
     isMuted = !1;
     qualityOverwrite;
     goliveMaxQuality;
-    goliveSimulcastEnabled;
-    goliveSimulcastLQBitrateMax;
-    goliveSimulcastLQBitrateTarget;
     isStreamContext;
     ladder;
     lastGoLivePixelCount;
@@ -65,9 +62,6 @@ class l {
             (this.isStreamContext = this.contextType === i.x.STREAM),
             (this.ladder = new r.r(n)),
             (this.goliveMaxQuality = this.getDefaultGoliveQuality()),
-            (this.goliveSimulcastEnabled = !1),
-            (this.goliveSimulcastLQBitrateMax = i.q5),
-            (this.goliveSimulcastLQBitrateTarget = i.q5),
             (this.lastGoLivePixelCount = {});
     }
     getQuality(e) {
@@ -83,7 +77,7 @@ class l {
         }
         let r = this.isStreamContext ? this.getGoliveQuality(t, n) : this.getVideoQuality(t);
         return null != this.qualityOverwrite
-            ? new s({
+            ? new a({
                   encode: o.extend(r.encode, this.qualityOverwrite.encode),
                   capture: o.extend(r.capture, this.qualityOverwrite.capture),
                   bitrateMin: this.qualityOverwrite.bitrateMin ?? r.bitrateMin,
@@ -119,7 +113,7 @@ class l {
         this.qualityOverwrite = e;
     }
     setGoliveQuality(e) {
-        this.goliveMaxQuality = new s({
+        this.goliveMaxQuality = new a({
             capture: o.extend(this.goliveMaxQuality.capture, e.capture),
             encode: o.extend(this.goliveMaxQuality.encode, e.encode),
             bitrateMin: e.bitrateMin ?? this.goliveMaxQuality.bitrateMin,
@@ -128,23 +122,12 @@ class l {
             localWant: this.goliveMaxQuality.localWant,
         });
     }
-    configGoLiveSimulcast(e, t) {
-        (this.goliveSimulcastEnabled = e),
-            (this.goliveSimulcastLQBitrateMax = t),
-            (this.goliveSimulcastLQBitrateTarget = t);
-    }
-    setGoLiveSimulcastLQTargetBitrate(e) {
-        this.goliveSimulcastLQBitrateTarget = e;
-    }
-    shouldEnableGoliveSimulcastForHqQuality(e) {
-        return !!this.goliveSimulcastEnabled && ((0 === e.width && 0 === e.height) || e.width * e.height > i.aE * i.Bb);
-    }
     getVideoQuality(e) {
         let t = this.ladder.getResolution(e),
             n = this.options.videoBitrate.min * t.budgetPortion,
             r = this.options.videoBitrate.max * t.budgetPortion,
             i = this.isMuted ? t.mutedFramerate : t.framerate;
-        return new s({
+        return new a({
             encode: { ...t, framerate: i },
             capture: {
                 width: this.options.videoCapture.width,
@@ -160,7 +143,6 @@ class l {
         return 0 === t ? 0 : (e * n) / t;
     }
     getGoliveQuality(e, t) {
-        if (this.goliveSimulcastEnabled && e < 100) return this.getGoliveLQQuality();
         if (
             this.goliveMaxQuality.encode?.pixelCount === void 0 ||
             t >= this.goliveMaxQuality.encode.pixelCount ||
@@ -172,7 +154,7 @@ class l {
                 this.goliveMaxQuality.bitrateMax,
             ),
             r = this.scaleLinearly(t, this.goliveMaxQuality.encode.pixelCount, this.goliveMaxQuality.bitrateMin),
-            a = this.scaleLinearly(t, this.goliveMaxQuality.encode.pixelCount, this.goliveMaxQuality.bitrateMax),
+            s = this.scaleLinearly(t, this.goliveMaxQuality.encode.pixelCount, this.goliveMaxQuality.bitrateMax),
             o =
                 null != this.goliveMaxQuality.bitrateTarget
                     ? this.scaleLinearly(
@@ -181,38 +163,22 @@ class l {
                           this.goliveMaxQuality.bitrateTarget,
                       )
                     : void 0;
-        return new s({
+        return new a({
             encode: this.goliveMaxQuality.encode,
             capture: this.goliveMaxQuality.capture,
             bitrateMin: Math.max(Math.ceil(r), this.options.videoBitrateFloor),
-            bitrateMax: Math.max(Math.ceil(a), n),
+            bitrateMax: Math.max(Math.ceil(s), n),
             bitrateTarget: null != o ? Math.max(Math.ceil(o), this.options.videoBitrateFloor) : void 0,
             localWant: e,
         });
     }
     getDefaultGoliveQuality() {
-        return new s({
+        return new a({
             capture: { width: 1280, height: 720, framerate: i.sG },
             encode: { width: 1280, height: 720, framerate: i.sG, pixelCount: 921600 },
             bitrateMin: this.options.desktopBitrate.min,
             bitrateMax: this.options.desktopBitrate.max,
             bitrateTarget: this.options.desktopBitrate.target,
-        });
-    }
-    getGoliveLQQuality() {
-        let e = Math.min(i.aE, this.goliveMaxQuality.encode?.width ?? i.aE),
-            t = Math.min(i.Bb, this.goliveMaxQuality.encode?.height ?? i.Bb),
-            n = Math.min(i.Xk, this.goliveMaxQuality.encode?.framerate ?? i.Xk);
-        return new s({
-            capture: {
-                width: Math.min(i.aE, this.goliveMaxQuality.capture?.width ?? i.aE),
-                height: Math.min(i.Bb, this.goliveMaxQuality.capture?.height ?? i.Bb),
-                framerate: Math.min(i.Xk, this.goliveMaxQuality.capture?.framerate ?? i.Xk),
-            },
-            encode: { width: e, height: t, framerate: n, pixelCount: e * t },
-            bitrateMin: i.yS,
-            bitrateMax: this.goliveSimulcastLQBitrateMax,
-            bitrateTarget: this.goliveSimulcastLQBitrateTarget,
         });
     }
 }

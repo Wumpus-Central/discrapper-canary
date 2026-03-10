@@ -2,8 +2,8 @@
 n.d(t, { A: () => _, y: () => l.y });
 var r = n(415955),
     i = n.n(r),
-    a = n(241899),
-    s = n.n(a),
+    s = n(241899),
+    a = n.n(s),
     o = n(972347),
     l = n(935172),
     u = n(466376),
@@ -68,8 +68,8 @@ class _ extends o.A {
         let r = this.getHasActiveVideoOutputSink(e),
             i = this.activeOutputSinks.get(e) ?? new Set();
         t ? i.add(n) : i.delete(n), this.activeOutputSinks.set(e, i);
-        let a = this.getHasActiveVideoOutputSink(e);
-        (this.isActiveOutputSinksEnabled = !0), r !== a && this.emit(l.y.ActiveSinksChange, e, a);
+        let s = this.getHasActiveVideoOutputSink(e);
+        (this.isActiveOutputSinksEnabled = !0), r !== s && this.emit(l.y.ActiveSinksChange, e, s);
     }
     getActiveOutputSinkTrackingEnabled() {
         return this.isActiveOutputSinksEnabled;
@@ -98,16 +98,16 @@ class _ extends o.A {
         let t = this.videoStreamParameters.findIndex((e) => 100 === e.quality);
         -1 === t && (t = 0);
         let { quality: n, constraints: r } = this.applyQualityConstraints({}, this.videoStreamParameters[t].ssrc),
-            a = i()(this.videoStreamParameters);
+            s = i()(this.videoStreamParameters);
         null != n &&
-            ((a[t].maxBitrate = n.bitrateMax),
-            (a[t].minBitrate = n.bitrateMin),
-            (a[t].targetBitrate = n.bitrateTarget ?? 0),
-            null != n.encode && ((a[t].maxPixelCount = n.encode.pixelCount), (a[t].maxFrameRate = n.encode.framerate))),
-            (this.videoStreamParameters = a);
+            ((s[t].maxBitrate = n.bitrateMax),
+            (s[t].minBitrate = n.bitrateMin),
+            (s[t].targetBitrate = n.bitrateTarget ?? 0),
+            null != n.encode && ((s[t].maxPixelCount = n.encode.pixelCount), (s[t].maxFrameRate = n.encode.framerate))),
+            (this.videoStreamParameters = s);
         for (let e = 0; e < this.videoStreamParameters.length; e++) {
             if (e === t) continue;
-            let { quality: i, constraints: a } = this.applyQualityConstraints({}, this.videoStreamParameters[e].ssrc);
+            let { quality: i, constraints: s } = this.applyQualityConstraints({}, this.videoStreamParameters[e].ssrc);
             null != i &&
                 ((this.videoStreamParameters[e].maxBitrate = i.bitrateMax),
                 (this.videoStreamParameters[e].minBitrate = i.bitrateMin),
@@ -115,11 +115,11 @@ class _ extends o.A {
                 null != i.encode &&
                     ((this.videoStreamParameters[e].maxPixelCount = i.encode.pixelCount),
                     (this.videoStreamParameters[e].maxFrameRate = i.encode.framerate))),
-                100 === this.videoStreamParameters[e].quality && ((r = a), (n = i));
+                100 === this.videoStreamParameters[e].quality && ((r = s), (n = i));
         }
         (r.streamParameters = i()(this.videoStreamParameters)),
             (r.remoteSinkWantsPixelCount = Math.max(...this.videoStreamParameters.map((e) => e.maxPixelCount ?? 0)));
-        let o = null != e ? s()(r, e) : { ...r };
+        let o = null != e ? a()(r, e) : { ...r };
         this.logger.verbose(`updateVideoQuality: ${JSON.stringify(o)}`), this.updateVideoQualityCore(o, n);
     }
     applyVideoQualityMode(e) {
@@ -129,9 +129,6 @@ class _ extends o.A {
     }
     overwriteQualityForTesting(e) {
         this.videoQualityManager.setQualityOverwrite(e), this.updateVideoQuality();
-    }
-    configureGoLiveSimulcast(e, t) {
-        this.videoQualityManager.configGoLiveSimulcast(e, t);
     }
     applyQualityConstraints() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},

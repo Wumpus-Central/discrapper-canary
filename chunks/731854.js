@@ -2,59 +2,53 @@
 n.d(t, {
     $I: () => o,
     Al: () => u,
-    Bb: () => U,
-    CO: () => es,
+    CO: () => J,
     Cl: () => P,
     Cn: () => _,
-    Dk: () => $,
+    Dk: () => H,
     HE: () => p,
     Hz: () => d,
-    K3: () => ei,
+    K3: () => Q,
     KR: () => R,
-    Ku: () => Z,
-    ME: () => J,
-    O5: () => q,
+    Ku: () => W,
+    ME: () => z,
+    O5: () => Y,
     PR: () => h,
     QP: () => N,
     Rv: () => f,
     TB: () => a,
-    U9: () => en,
-    UK: () => Q,
-    X1: () => K,
+    UK: () => $,
+    X1: () => B,
     XA: () => M,
     Xg: () => S,
-    Xk: () => G,
     Y4: () => x,
-    YU: () => W,
+    YU: () => V,
     Zi: () => T,
-    aE: () => k,
     d_: () => y,
     dx: () => E,
-    eQ: () => Y,
-    ei: () => et,
+    eQ: () => F,
+    ei: () => Z,
     fS: () => r.fS,
-    fd: () => er,
+    fd: () => X,
     kO: () => m,
     kc: () => w,
     l2: () => C,
-    lo: () => B,
-    mI: () => ee,
+    lo: () => k,
+    mI: () => q,
     n8: () => b,
-    nJ: () => j,
+    nJ: () => G,
     nO: () => v,
-    oL: () => H,
+    oL: () => U,
     oh: () => s,
-    q5: () => F,
     qe: () => A,
     qm: () => D,
     r8: () => c,
-    rB: () => X,
+    rB: () => K,
     sG: () => L,
-    tl: () => z,
+    tl: () => j,
     us: () => O,
     vt: () => g,
     x: () => i,
-    yS: () => V,
     yt: () => l,
     zt: () => I,
 });
@@ -128,14 +122,9 @@ let d = 100,
     M = 12,
     x = 100,
     P = 50,
-    k = 1280,
-    U = 720,
-    G = 30,
-    F = 15e5,
-    V = 5e5,
-    B = 35e5,
-    H = 9e6,
-    j = [
+    k = 35e5,
+    U = 9e6,
+    G = [
         "remoteSinkWantsPixelCount",
         "remoteSinkWantsMaxFramerate",
         "encodingVideoMinBitRate",
@@ -143,18 +132,18 @@ let d = 100,
         "encodingVideoBitRate",
         "streamParameters",
     ],
-    Y = {
+    F = {
         videoBudget: { width: 1280, height: 720, framerate: 30 },
         videoCapture: { width: 1280, height: 720, framerate: 30 },
         videoBitrate: { min: 15e4, max: 25e5 },
         desktopBitrate: { min: 5e5, max: 35e5, target: 6e5 },
         videoBitrateFloor: 15e4,
     },
-    W = 0.02,
-    K = 6e4,
-    $ = ">=22.0.0",
-    z = 9e5;
-var q = (function (e) {
+    V = 0.02,
+    B = 6e4,
+    H = ">=22.0.0",
+    j = 9e5;
+var Y = (function (e) {
         return (
             (e.AUTO_ENABLE = "AUTO_ENABLE"),
             (e.ATTENUATION = "ATTENUATION"),
@@ -219,10 +208,10 @@ var q = (function (e) {
             e
         );
     })({}),
-    Z = (function (e) {
+    W = (function (e) {
         return (e.NATIVE = "NATIVE"), (e.WEBRTC = "WEBRTC"), (e.DUMMY = "DUMMY"), e;
     })({}),
-    X = (function (e) {
+    K = (function (e) {
         return (
             (e.LEGACY = "legacy"),
             (e.STANDARD = "standard"),
@@ -231,7 +220,7 @@ var q = (function (e) {
             e
         );
     })({}),
-    Q = (function (e) {
+    $ = (function (e) {
         return (
             (e.OPUS = "opus"),
             (e.VP8 = "VP8"),
@@ -243,7 +232,7 @@ var q = (function (e) {
             e
         );
     })({}),
-    J = (function (e) {
+    z = (function (e) {
         return (
             (e[(e.NONE = 0)] = "NONE"),
             (e[(e.VOICE = 1)] = "VOICE"),
@@ -253,16 +242,13 @@ var q = (function (e) {
             e
         );
     })({}),
-    ee = (function (e) {
+    q = (function (e) {
         return (e.AUDIO = "audio"), (e.VIDEO = "video"), (e.SCREEN = "screen"), (e.TEST = "test"), e;
     })({}),
-    et = (function (e) {
+    Z = (function (e) {
         return (e.FIXED = "fixed"), (e.SOURCE = "source"), e;
     })({}),
-    en = (function (e) {
-        return (e.REMB = "remb"), e;
-    })({}),
-    er = (function (e) {
+    X = (function (e) {
         return (
             (e.VIDEOTOOLBOX_RATE_CONTROL = "videotoolbox_rate_control"),
             (e.SIGNAL_AV1 = "signal_av1"),
@@ -287,10 +273,10 @@ var q = (function (e) {
             e
         );
     })({}),
-    ei = (function (e) {
+    Q = (function (e) {
         return (e[(e.AUTO = 1)] = "AUTO"), (e[(e.FULL = 2)] = "FULL"), e;
     })({}),
-    es = (function (e) {
+    J = (function (e) {
         return (
             (e[(e.CPU_OVERUSE = 1)] = "CPU_OVERUSE"),
             (e[(e.FAILED = 2)] = "FAILED"),
