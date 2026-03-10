@@ -1,11 +1,12 @@
 "use strict";
-n.d(t, { L: () => d });
+n.d(t, { L: () => _ });
 var r = n(852015),
     i = n(144367),
     s = n(428420),
     a = n(324281),
-    o = n(232582);
-class l extends a.G {
+    o = n(554146),
+    l = n(232582);
+class u extends a.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.CTAButton", [
             { no: 1, name: "copy", kind: "scalar", T: 9 },
@@ -13,7 +14,7 @@ class l extends a.G {
                 no: 2,
                 name: "button_action",
                 kind: "enum",
-                T: () => ["discord_protos.premium_marketing.v1.ButtonAction", o.dz, "BUTTON_ACTION_"],
+                T: () => ["discord_protos.premium_marketing.v1.ButtonAction", l.dz, "BUTTON_ACTION_"],
             },
         ]);
     }
@@ -54,19 +55,25 @@ class l extends a.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let u = new l();
-class c extends a.G {
+let c = new u();
+class d extends a.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.MobileBottomSheet", [
             { no: 1, name: "asset_url", kind: "scalar", T: 9 },
             { no: 2, name: "header", kind: "scalar", T: 9 },
             { no: 3, name: "body", kind: "scalar", T: 9 },
             { no: 4, name: "help_article_id", kind: "scalar", T: 9 },
-            { no: 5, name: "button", kind: "message", T: () => u },
+            { no: 5, name: "button", kind: "message", T: () => c },
+            {
+                no: 6,
+                name: "dismissible_content",
+                kind: "enum",
+                T: () => ["discord_protos.discord_users.v1.DismissibleContent", o.M],
+            },
         ]);
     }
     create(e) {
-        let t = { assetUrl: "", header: "", body: "", helpArticleId: "" };
+        let t = { assetUrl: "", header: "", body: "", helpArticleId: "", dismissibleContent: 0 };
         return (
             globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
@@ -92,7 +99,10 @@ class c extends a.G {
                     s.helpArticleId = e.string();
                     break;
                 case 5:
-                    s.button = u.internalBinaryRead(e, e.uint32(), n, s.button);
+                    s.button = c.internalBinaryRead(e, e.uint32(), n, s.button);
+                    break;
+                case 6:
+                    s.dismissibleContent = e.int32();
                     break;
                 default:
                     let a = n.readUnknownField;
@@ -109,9 +119,10 @@ class c extends a.G {
             "" !== e.header && t.tag(2, r.O0.LengthDelimited).string(e.header),
             "" !== e.body && t.tag(3, r.O0.LengthDelimited).string(e.body),
             "" !== e.helpArticleId && t.tag(4, r.O0.LengthDelimited).string(e.helpArticleId),
-            e.button && u.internalBinaryWrite(e.button, t.tag(5, r.O0.LengthDelimited).fork(), n).join();
+            e.button && c.internalBinaryWrite(e.button, t.tag(5, r.O0.LengthDelimited).fork(), n).join(),
+            0 !== e.dismissibleContent && t.tag(6, r.O0.Varint).int32(e.dismissibleContent);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let d = new c();
+let _ = new d();
