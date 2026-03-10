@@ -11,27 +11,28 @@ function l(e) {
     r.useEffect(() => {
         if (((c.current = !1), null == t || !o.has(t))) return;
         let e = o.get(t);
-        if (null != e)
-            return a.A.subscribe(
+        if (null == e) return;
+        let n = () => {
+                c.current = !1;
+                let t = u.get(e.sidebarItemKey);
+                null != t &&
+                    t.forEach((e) => {
+                        (0, i.Dr)(e, { dismissAction: s.i.AUTO, forceTrack: !0 });
+                    });
+            },
+            r = a.A.subscribe(
                 (e) => {
                     let { currentPanelKey: t } = e;
                     return t;
                 },
                 (t) => {
-                    let n = null != t && null != l ? l.entry(t)?.parentSidebarItemKey : null;
-                    if (null != n) {
-                        if (n === e.sidebarItemKey) c.current = !0;
-                        else if (c.current) {
-                            c.current = !1;
-                            let t = u.get(e.sidebarItemKey);
-                            if (null == t) return;
-                            t.forEach((e) => {
-                                (0, i.Dr)(e, { dismissAction: s.i.AUTO, forceTrack: !0 });
-                            });
-                        }
-                    }
+                    let r = null != t && null != l ? l.entry(t)?.parentSidebarItemKey : null;
+                    null != r && (r === e.sidebarItemKey ? (c.current = !0) : c.current && n());
                 },
                 { equalityFn: (e, t) => e === t, fireImmediately: !0 },
             );
+        return () => {
+            r(), c.current && n();
+        };
     }, [t, o, l, u]);
 }
