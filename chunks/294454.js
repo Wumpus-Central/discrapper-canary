@@ -1,46 +1,45 @@
-"use strict";
-n.d(t, { Be: () => o, aU: () => r, fO: () => i, vK: () => c });
-var a = n(627968);
+n.d(e, { Be: () => u, aU: () => i, fO: () => l, vK: () => c });
+var r = n(627968);
 n(64700);
-var l = n(397927),
+var a = n(397927),
     s = n(530912);
-let r = "forward-modal";
-function i(e) {
+let i = "forward-modal";
+function l(t) {
     let {
-        message: t,
-        source: i,
-        initialSelectedDestinations: o = [],
+        message: e,
+        source: l,
+        initialSelectedDestinations: u = [],
         forwardOptions: c,
-        onRequestSent: d,
-        customSendHandler: u,
-    } = e;
-    (0, s.pp)(t.channel_id, t.id, i),
-        (0, l.mMO)(
+        onRequestSent: o,
+        customSendHandler: d,
+    } = t;
+    (0, s.pp)(e.channel_id, e.id, l),
+        (0, a.mMO)(
             async () => {
-                let { ForwardModal: e } = await Promise.all([n.e("96758"), n.e("43622"), n.e("79996")]).then(
+                let { ForwardModal: t } = await Promise.all([n.e("96758"), n.e("43622"), n.e("79996")]).then(
                     n.bind(n, 911269),
                 );
                 return (n) =>
-                    (0, a.jsx)(e, {
+                    (0, r.jsx)(t, {
                         ...n,
-                        message: t,
-                        initialSelectedDestinations: o,
+                        message: e,
+                        initialSelectedDestinations: u,
                         forwardOptions: c,
-                        onRequestSent: d,
-                        customSendHandler: u,
-                        source: i,
+                        onRequestSent: o,
+                        customSendHandler: d,
+                        source: l,
                     });
             },
-            { modalKey: r },
+            { modalKey: i },
         );
 }
-function o() {
-    (0, l.OoC)(r);
+function u() {
+    (0, a.OoC)(i);
 }
-function c(e) {
-    let { message: t, failedDestinations: s, forwardOptions: r } = e;
-    (0, l.mMO)(async () => {
-        let { ForwardFailedAlertModal: e } = await n.e("66139").then(n.bind(n, 181622));
-        return (n) => (0, a.jsx)(e, { ...n, message: t, failedDestinations: s, forwardOptions: r });
+function c(t) {
+    let { message: e, failedDestinations: s, forwardOptions: i } = t;
+    (0, a.mMO)(async () => {
+        let { ForwardFailedAlertModal: t } = await n.e("66139").then(n.bind(n, 181622));
+        return (n) => (0, r.jsx)(t, { ...n, message: e, failedDestinations: s, forwardOptions: i });
     });
 }

@@ -1,8 +1,7 @@
-"use strict";
 n.d(t, { A: () => r });
-var l = n(679740);
-let s = { LATIN12: l.Xh, LATIN24: l.ID, ASIAN: l.KC },
-    i = /(AM|PM)$/;
+var a = n(679740);
+let i = { LATIN12: a.Xh, LATIN24: a.ID, ASIAN: a.KC },
+    l = /(AM|PM)$/;
 function r(e) {
-    return null != e.match(i) ? s.LATIN24 : e.length <= 5 ? s.LATIN12 : s.ASIAN;
+    return null != e.match(l) ? i.LATIN24 : e.length <= 5 ? i.LATIN12 : i.ASIAN;
 }

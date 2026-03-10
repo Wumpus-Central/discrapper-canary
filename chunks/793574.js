@@ -552,6 +552,7 @@ var r = (function (e) {
         (e.GIFT_CARD_REDEMPTION_SUCCESS_MODAL = "gift card redemption success modal"),
         (e.GAME_COMMUNITY_MULTI_GUILD_UPSELL_GUILDS_BAR_ENTRYPOINT =
             "game community multi guild upsell guilds bar entrypoint"),
+        (e.FAVORITES_GUILD_UPSELL_MODAL = "favorites guild upsell modal"),
         e
     );
 })(r || {});
