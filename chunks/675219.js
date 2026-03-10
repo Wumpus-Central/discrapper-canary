@@ -2,8 +2,8 @@
 n.d(t, { o: () => T }), n(321073);
 var r = n(627968),
     i = n(835245),
-    a = n(397927),
-    s = n(166532),
+    s = n(397927),
+    a = n(166532),
     o = n(546042),
     l = n(721252),
     u = n(310829),
@@ -14,8 +14,8 @@ var r = n(627968),
     p = n(684477),
     h = n(331611),
     m = n(69882),
-    g = n(652215),
-    E = n(985018);
+    E = n(652215),
+    g = n(985018);
 let A = (e, t) => null != t && t.implemented && t.flowType === e,
     I = {
         [c.C.ORB_CHECKOUT]: { allowGiftCustomization: !1, disablePaymentAuthSteps: !0, predicateStepType: "unified" },
@@ -50,7 +50,7 @@ class T {
             : "unified" === e
               ? {
                     key: null,
-                    renderStep: (e) => (0, r.jsx)(h.e, { paymentModalStepProps: e, defaultStep: s.pn.REVIEW }),
+                    renderStep: (e) => (0, r.jsx)(h.e, { paymentModalStepProps: e, defaultStep: a.pn.REVIEW }),
                 }
               : { key: null, renderStep: (e) => (0, r.jsx)(o.I, { ...e }) };
     }
@@ -59,12 +59,12 @@ class T {
             { allowGiftCustomization: n } = this.internalCheckoutFlowControls;
         if (this.checkoutFlow !== c.C.ORB_CHECKOUT)
             return {
-                key: s.pn.ADD_PAYMENT_STEPS,
+                key: a.pn.ADD_PAYMENT_STEPS,
                 renderStep: (e) =>
                     (0, r.jsx)(f.c, {
                         paymentModalStepProps: e,
-                        returnStep: s.pn.REVIEW,
-                        returnStepIfNoPaymentSources: t && n ? s.pn.GIFT_CUSTOMIZATION : void 0,
+                        returnStep: a.pn.REVIEW,
+                        returnStepIfNoPaymentSources: t && n ? a.pn.GIFT_CUSTOMIZATION : void 0,
                     }),
                 options: { renderHeader: !0 },
             };
@@ -74,24 +74,24 @@ class T {
             { allowGiftCustomization: n } = this.internalCheckoutFlowControls;
         return t && n
             ? {
-                  key: s.pn.GIFT_CUSTOMIZATION,
+                  key: a.pn.GIFT_CUSTOMIZATION,
                   renderStep: (e) =>
                       (0, r.jsx)(p.E, {
                           paymentModalStepProps: e,
-                          unifiedStepDefinition: this.getUnifiedStepDefinition(s.pn.GIFT_CUSTOMIZATION),
+                          unifiedStepDefinition: this.getUnifiedStepDefinition(a.pn.GIFT_CUSTOMIZATION),
                       }),
-                  options: { isLargeModal: !0, useBreadcrumbLabel: () => E.intl.string(E.t["W685+b"]) },
+                  options: { modalSizeGetter: () => "xl", useBreadcrumbLabel: () => g.intl.string(g.t["W685+b"]) },
               }
             : void 0;
     }
     getReviewStepConfig() {
-        let e = this.getUnifiedStepDefinition(s.pn.REVIEW);
+        let e = this.getUnifiedStepDefinition(a.pn.REVIEW);
         return (0, d.B)(e)
             ? l.r2
             : {
-                  key: s.pn.REVIEW,
+                  key: a.pn.REVIEW,
                   renderStep: (t) => (0, r.jsx)(m.Pw, { paymentModalStepProps: t, unifiedStepDefinition: e }),
-                  options: { useBreadcrumbLabel: () => E.intl.string(E.t.QBnNHq) },
+                  options: { useBreadcrumbLabel: () => g.intl.string(g.t.QBnNHq) },
               };
     }
     createDefinedStepConfigsArray(e) {
@@ -102,23 +102,23 @@ class T {
             { CUSTOM_CONFIRM_STEP_CONFIG: n } = this.tenantCheckoutFlowConfig,
             { disablePaymentAuthSteps: r } = this.internalCheckoutFlowControls,
             i = this.getPredicateStepConfig(),
-            a = this.getGiftCustomizationStepConfig({ isGift: t }),
+            s = this.getGiftCustomizationStepConfig({ isGift: t }),
             o = this.getAddPaymentStepConfig({ isGift: t }),
             u = this.getReviewStepConfig(),
-            c = this.createDefinedStepConfigsArray([i, a, o, ...(r ? [] : l.hh), u]);
-        return null != n && c.push({ key: s.pn.CONFIRM, renderStep: n.renderStep, options: n.options }), c;
+            c = this.createDefinedStepConfigsArray([i, s, o, ...(r ? [] : l.hh), u]);
+        return null != n && c.push({ key: a.pn.CONFIRM, renderStep: n.renderStep, options: n.options }), c;
     }
     getApplicationId(e) {
         return this.checkoutFlow === c.C.ORB_CHECKOUT
             ? (0, u.p)(e)
             : this.checkoutFlow === c.C.COLLECTIBLES_CHECKOUT
-              ? g.FYj
+              ? E.FYj
               : void 0;
     }
     openCheckoutModal(e) {
         let {
                 openModalOptions: t,
-                flowSpecificOptions: s,
+                flowSpecificOptions: a,
                 giftContextProps: o,
                 onComplete: l,
                 onClose: u,
@@ -130,11 +130,11 @@ class T {
             } = e,
             h = d ?? (0, i.A)(),
             { modalKey: m } = t,
-            g = this.generateRenderHeader(),
-            E = _ ?? this.getApplicationId(c),
+            E = this.generateRenderHeader(),
+            g = _ ?? this.getApplicationId(c),
             A = !1,
-            I = s ?? void 0;
-        return (0, a.mMO)(
+            I = a ?? void 0;
+        return (0, s.mMO)(
             async () => {
                 let { WrappedUnifiedPaymentModal: e } = await n.e("87298").then(n.bind(n, 246681));
                 return (t) =>
@@ -147,10 +147,10 @@ class T {
                             null != l && l(e), (A = !0);
                         },
                         onClose: u,
-                        renderHeader: g,
+                        renderHeader: E,
                         skuId: c,
                         loadId: h,
-                        applicationId: E,
+                        applicationId: g,
                         analyticsLocations: p,
                         analyticsSourceLocation: f,
                         renderModalProps: t,
@@ -161,7 +161,7 @@ class T {
             {
                 ...t,
                 onCloseRequest() {
-                    null != t.onCloseRequest && t.onCloseRequest(A, h), (0, a.OoC)(m);
+                    null != t.onCloseRequest && t.onCloseRequest(A, h), (0, s.OoC)(m);
                 },
                 modalKey: m,
             },

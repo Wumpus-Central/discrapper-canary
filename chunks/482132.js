@@ -12,10 +12,10 @@ var r = n(627968),
     _ = n(608805),
     f = n(156312),
     p = n(166532),
-    h = n(211936);
+    h = n(804686);
 function m(e) {
-    let { header: t, isLargeModal: n, ...r } = e;
-    return { header: t, isLargeModal: n, stepProps: r };
+    let { header: t, ...n } = e;
+    return { header: t, stepProps: n };
 }
 function E(e) {
     let { header: t, stepProps: n } = m(e),
@@ -38,7 +38,7 @@ function E(e) {
         v = T?.options?.sliderBodyClassName,
         N = "100%",
         C = (0, _.D7)({ location: "PaymentModalStep" }),
-        b = i.useMemo(() => C && s === p.pn.REVIEW, [C, s]);
+        R = i.useMemo(() => C && s === p.pn.REVIEW, [C, s]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (T?.options?.renderHeader ?? !0) ? t : null,
@@ -56,7 +56,7 @@ function E(e) {
                                         centered: !1,
                                         onSlideReady: (e) => A(e),
                                         width: N,
-                                        disableDefaultTransformStyling: b,
+                                        disableDefaultTransformStyling: R,
                                         overflow: I ? "visible" : void 0,
                                         children: o
                                             .filter((e) => null != e.key)
@@ -66,7 +66,7 @@ function E(e) {
                                                     {
                                                         id: e.key,
                                                         children: (0, r.jsx)("form", {
-                                                            className: a()(h.OO, { [h.Wq]: b }, v),
+                                                            className: a()(h.OO, { [h.Wq]: R }, v),
                                                             ref: (e) => {
                                                                 u(e);
                                                             },

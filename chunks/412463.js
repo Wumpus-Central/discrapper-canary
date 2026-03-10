@@ -1,4 +1,4 @@
-l.d(t, { dL: () => T, eO: () => j, n1: () => S, ud: () => v });
+l.d(t, { dL: () => T, eO: () => j, n1: () => S, ud: () => E });
 var a = l(627968),
     n = l(64700),
     r = l(835245),
@@ -15,9 +15,9 @@ var a = l(627968),
     b = l(491057),
     g = l(546042),
     y = l(97352),
-    E = l(67480),
-    f = l(582658);
-let v = (e) => {
+    f = l(67480),
+    v = l(582658);
+let E = (e) => {
         let { skuId: t, isGift: l, applicationId: a } = e,
             { analyticsLocations: o } = (0, m.Ay)(p.A.PAYMENT_FLOW_TEST_PAGE),
             u = n.useRef(null),
@@ -26,7 +26,7 @@ let v = (e) => {
         n.useEffect(() => {
             (u.current !== t || d.current !== l) && (x((0, r.A)()), (u.current = t), (d.current = l));
         }, [t, l]);
-        let [b, g] = (0, s.yK)([E.A], () => [E.A.isFetching(t), E.A.get(t)]);
+        let [b, g] = (0, s.yK)([f.A], () => [f.A.isFetching(t), f.A.get(t)]);
         return (
             n.useEffect(() => {
                 null != g || b || (0, c.EX)(a, t, i.g.VARIANTS_GROUP).catch((e) => {});
@@ -79,12 +79,12 @@ let v = (e) => {
                 loadId: p,
                 excludeSubscriptionPlansBySKU: m,
                 renderHeader: y,
-                hideErrors: E,
-                disablePurchases: v,
+                hideErrors: f,
+                disablePurchases: E,
                 paymentContextOverrides: S,
             } = e,
-            j = E ? { purchasePreviewError: null, purchaseError: null, ...S } : { ...S };
-        v && (j.disablePurchasesForStorybook = !0);
+            j = f ? { purchasePreviewError: null, purchaseError: null, ...S } : { ...S };
+        E && (j.disablePurchasesForStorybook = !0);
         let T = `${n}-${r}-${p}`;
         return (0, a.jsx)(
             x.PaymentContextProvider,
@@ -96,7 +96,7 @@ let v = (e) => {
                 activeSubscription: null,
                 purchaseType: c,
                 excludeSubscriptionPlansBySKU: m,
-                children: (0, a.jsx)(f.Y, {
+                children: (0, a.jsx)(v.Y, {
                     ...j,
                     children: (0, a.jsx)(b.Qt, {
                         children: (0, a.jsx)(h.dX, {
@@ -111,7 +111,6 @@ let v = (e) => {
                                     skuId: n,
                                     initialPlanId: u,
                                     analyticsLocations: t,
-                                    hideShadow: !0,
                                     renderHeader: y,
                                 },
                                 T,

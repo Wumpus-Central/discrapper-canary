@@ -9,9 +9,6 @@ let i = (e) => {
         stepConfigs: l,
         skuIDs: [],
         activeSubscription: null,
-        children: [
-            (0, a.jsx)(r.dZ, { children: t }),
-            (0, a.jsx)(r.Ay, { header: null, isLargeModal: !1, isDynamicModal: !0 }),
-        ],
+        children: [(0, a.jsx)(r.dZ, { children: t }), (0, a.jsx)(r.Ay, { header: null })],
     });
 };

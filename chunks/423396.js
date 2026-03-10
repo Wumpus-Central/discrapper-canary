@@ -35,15 +35,21 @@ let y = [
             key: i.pn.PLAN_SELECT,
             renderStep: (e) =>
                 (0, a.jsx)(d.eO, { ...e, originStep: i.pn.REVIEW, text: "Plan Select Step Placeholder" }),
-            options: { useBreadcrumbLabel: () => b.intl.string(b.t.QBnNHq) },
+            options: {
+                useBreadcrumbLabel: () => b.intl.string(b.t.QBnNHq),
+                modalSizeGetter: (e) => {
+                    let { isGift: t } = e;
+                    return t ? "xl" : "md";
+                },
+            },
         },
     ],
     f = () => (0, a.jsx)(r.Text, { variant: "text-sm/normal", children: "Purchase button is disabled for this story" }),
-    E = {
+    v = {
         isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 },
         hideErrors: { label: "Hide Errors", type: "boolean", defaultValue: !0 },
     },
-    v = (0, m.R)(),
+    E = (0, m.R)(),
     S = {
         title: "Checkout Review Step",
         stories: [
@@ -60,8 +66,8 @@ let y = [
                             isFetching: x,
                             sku: b,
                         } = (0, d.ud)({ skuId: t, isGift: l, applicationId: h.FYj }),
-                        E = c.Ay.isPremiumSku(t);
-                    return x || null == b || E
+                        v = c.Ay.isPremiumSku(t);
+                    return x || null == b || v
                         ? (0, a.jsx)(p.k, {})
                         : (0, a.jsxs)("div", {
                               className: g.Cd,
@@ -90,8 +96,8 @@ let y = [
                           });
                 },
                 controls: {
-                    skuId: { label: "SKU ID", type: "select", options: v.options, defaultValue: v.defaultValue },
-                    ...E,
+                    skuId: { label: "SKU ID", type: "select", options: E.options, defaultValue: E.defaultValue },
+                    ...v,
                 },
             },
             {
@@ -107,15 +113,15 @@ let y = [
                             isFetching: m,
                             sku: b,
                         } = (0, d.ud)({ skuId: t, isGift: l, applicationId: x.tv }),
-                        E = c.Ay.isPremiumSku(t),
-                        v = E ? x.zE[t] : void 0,
-                        [S, j] = n.useState(v),
+                        v = c.Ay.isPremiumSku(t),
+                        E = v ? x.zE[t] : void 0,
+                        [S, j] = n.useState(E),
                         T = n.useRef(!1);
                     n.useEffect(() => {
-                        T.current || null == v || ((T.current = !0), j(v));
-                    }, [v, S]);
+                        T.current || null == E || ((T.current = !0), j(E));
+                    }, [E, S]);
                     let { isLoadedForPremiumSKUs: C, selectedPlan: P } = (0, d.n1)({ subscriptionPlanId: S });
-                    return !m && null != b && C && E && null != P
+                    return !m && null != b && C && v && null != P
                         ? (0, a.jsxs)("div", {
                               className: g.Cd,
                               children: [
@@ -123,7 +129,7 @@ let y = [
                                       stepConfigs: y,
                                       analyticsLocations: i,
                                       applicationId: x.tv,
-                                      initialPlanId: v,
+                                      initialPlanId: E,
                                       skuId: t,
                                       isGift: l,
                                       hideErrors: r,
@@ -149,7 +155,7 @@ let y = [
                         ],
                         defaultValue: x.pe.TIER_0,
                     },
-                    ...E,
+                    ...v,
                 },
             },
         ],

@@ -1,8 +1,8 @@
 a.d(n, { K: () => A });
 var t = a(627968),
     i = a(64700),
-    s = a(311907),
-    l = a(397927),
+    l = a(311907),
+    s = a(397927),
     d = a(734925),
     r = a(687033),
     c = a(871181),
@@ -11,8 +11,8 @@ var t = a(627968),
     p = a(67480),
     h = a(328968),
     x = a(371794),
-    g = a(937008),
-    m = a(156312),
+    m = a(937008),
+    g = a(156312),
     f = a(166532),
     j = a(482132),
     C = a(788868),
@@ -21,11 +21,11 @@ var t = a(627968),
 let A = {
     key: f.pn.GIFT_CUSTOMIZATION,
     renderStep: (e) => (0, t.jsx)(T, { ...e }),
-    options: { isLargeModal: !0, useBreadcrumbLabel: () => k.intl.string(k.t["W685+b"]) },
+    options: { modalSizeGetter: () => "xl", useBreadcrumbLabel: () => k.intl.string(k.t["W685+b"]) },
 };
 function I(e) {
-    let { onStepChange: n, onBackClick: a, showBackButton: s = !1, disabled: d = !1, loading: r = !1 } = e,
-        { hasPaymentSources: c } = (0, m.P5)(),
+    let { onStepChange: n, onBackClick: a, showBackButton: l = !1, disabled: d = !1, loading: r = !1 } = e,
+        { hasPaymentSources: c } = (0, g.P5)(),
         u = c ? f.pn.REVIEW : f.pn.ADD_PAYMENT_STEPS,
         p = i.useMemo(
             () => [
@@ -33,21 +33,21 @@ function I(e) {
             ],
             [n, u, d, r],
         );
-    return (0, t.jsx)(l.H7u, { actions: p, leading: s ? (0, t.jsx)(o.A, { onClick: a }) : void 0 });
+    return (0, t.jsx)(s.H7u, { actions: p, leading: l ? (0, t.jsx)(o.A, { onClick: a }) : void 0 });
 }
 function T(e) {
     let { handleStepChange: n, handleClose: a } = e,
-        { customGiftMessage: i = "", setCustomGiftMessage: o, giftRecipient: f } = (0, g.Pv)(),
-        { selectedSkuId: k } = (0, m.P5)(),
-        A = (0, s.bG)([u.default], () => u.default.getCurrentUser()),
-        T = (0, s.bG)([p.A], () => (null != k ? p.A.get(k) : null), [k]),
+        { customGiftMessage: i = "", setCustomGiftMessage: o, giftRecipient: f } = (0, m.Pv)(),
+        { selectedSkuId: k } = (0, g.P5)(),
+        A = (0, l.bG)([u.default], () => u.default.getCurrentUser()),
+        T = (0, l.bG)([p.A], () => (null != k ? p.A.get(k) : null), [k]),
         b = (0, r.A)(),
-        y = (0, s.bG)([h.A], () => (null != k ? h.A.getForSKU(k) : null), [k]),
+        y = (0, l.bG)([h.A], () => (null != k ? h.A.getForSKU(k) : null), [k]),
         _ =
             y?.headerBackground != null && T?.applicationId != null
                 ? (0, x.YE)(T.applicationId, y.headerBackground, 256)
                 : void 0,
-        M = async (e, n) => {};
+        P = async (e, n) => {};
     return (0, t.jsxs)(t.Fragment, {
         children: [
             (0, t.jsx)(j.dZ, {
@@ -58,7 +58,7 @@ function T(e) {
                             className: v.mT,
                             children: [
                                 T?.name != null &&
-                                    (0, t.jsx)(l.Heading, {
+                                    (0, t.jsx)(s.Heading, {
                                         variant: "heading-lg/semibold",
                                         color: "text-strong",
                                         children: T.name,
@@ -69,7 +69,7 @@ function T(e) {
                         (0, t.jsxs)("div", {
                             className: v.Tc,
                             children: [
-                                (0, t.jsx)(d.A, { recipients: b, selectedSkuId: k, validateSelectedGift: M }),
+                                (0, t.jsx)(d.A, { recipients: b, selectedSkuId: k, validateSelectedGift: P }),
                                 (0, t.jsx)(c.A, {
                                     onTextChange: (e) => o?.(e),
                                     pendingText: i,
