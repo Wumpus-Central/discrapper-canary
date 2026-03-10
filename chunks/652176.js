@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, {
-    $o: () => z,
+    $o: () => $,
     Ab: () => er,
     Dk: () => J,
     Ez: () => ei,
@@ -14,7 +14,7 @@ n.d(t, {
     Y0: () => e_,
     _d: () => Q,
     bU: () => X,
-    gL: () => $,
+    gL: () => z,
     ks: () => ee,
     yR: () => ec,
 });
@@ -42,14 +42,14 @@ var r = n(627968),
     v = n(752063),
     N = n(863922),
     C = n(513272),
-    b = n(977463),
-    R = n(253932),
-    O = n(41431),
+    R = n(977463),
+    O = n(253932),
+    b = n(41431),
     D = n(222823),
     L = n(287809),
     w = n(147925),
-    x = n(954571),
-    M = n(403362),
+    M = n(954571),
+    x = n(403362),
     P = n(587481),
     k = n(661191),
     U = n(838541),
@@ -87,14 +87,14 @@ function K(e) {
     let [I, T] = i.useState(!0),
         [S, v] = i.useState(!1),
         N = h === U.dG.MOSAIC || !0 === p,
-        C = (I || S) && !_ && R._z.getSetting() && null != l && "" !== l && !0 !== f,
-        b = (e) => {
+        C = (I || S) && !_ && O._z.getSetting() && null != l && "" !== l && !0 !== f,
+        R = (e) => {
             let { altText: t } = e;
             return (0, r.jsxs)(d.lGe, {
                 "aria-label": B.intl.string(B.t.fSiQ3A),
                 className: H.ob,
                 onKeyDown: (e) => {
-                    e.key === V.N$.Escape && setTimeout(() => O.current?.focus(), 0);
+                    e.key === V.N$.Escape && setTimeout(() => b.current?.focus(), 0);
                 },
                 children: [
                     (0, r.jsx)("span", { className: H.k_, children: B.intl.string(B.t.fSiQ3A) }),
@@ -102,7 +102,7 @@ function K(e) {
                 ],
             });
         },
-        O = i.useRef(null);
+        b = i.useRef(null);
     return (0, r.jsxs)(i.Fragment, {
         children: [
             (0, r.jsx)(y.A, {
@@ -124,16 +124,16 @@ function K(e) {
                 (0, r.jsx)("div", {
                     className: H.NO,
                     children: (0, r.jsx)(d.YNO, {
-                        targetElementRef: O,
+                        targetElementRef: b,
                         animation: d.YNO.Animation.FADE,
-                        renderPopout: () => (0, r.jsx)(b, { altText: l }),
+                        renderPopout: () => (0, r.jsx)(R, { altText: l }),
                         children: (e) =>
                             (0, r.jsx)(d.vN3, {
                                 offset: 4,
                                 children: (0, r.jsx)("button", {
                                     ...e,
                                     type: "button",
-                                    ref: O,
+                                    ref: b,
                                     "aria-label": B.intl.string(B.t.fSiQ3A),
                                     onMouseEnter: () => v(!0),
                                     onMouseLeave: () => v(!1),
@@ -147,10 +147,10 @@ function K(e) {
         ],
     });
 }
-function z(e) {
+function $(e) {
     return (0, r.jsx)(K, { ...e });
 }
-function $(e) {
+function z(e) {
     let {
             onVolumeChange: t,
             volume: n,
@@ -184,7 +184,7 @@ function q(e) {
     let { onVolumeChange: t, volume: n, onMute: i, ...s } = e,
         a = Y(t),
         o = W(i);
-    return (n = null == n ? P.v1 : n), (0, r.jsx)(O.A, { ...s, onVolumeChange: a, onMute: o, volume: n });
+    return (n = null == n ? P.v1 : n), (0, r.jsx)(b.A, { ...s, onVolumeChange: a, onMute: o, volume: n });
 }
 function Z(e) {
     let {
@@ -200,7 +200,7 @@ function Z(e) {
             mosaicStyleAlt: h,
         } = e,
         m = _ === U.dG.MOSAIC || !0 === h,
-        E = !u && R._z.getSetting() && null != t && "" !== t && !0 !== n,
+        E = !u && O._z.getSetting() && null != t && "" !== t && !0 !== n,
         g = (e) => {
             let { altText: t } = e;
             return (0, r.jsxs)(d.lGe, {
@@ -270,7 +270,7 @@ function et(e) {
         case 1:
             return B.intl.string(B.t["1J6Xq7"]);
         default:
-            return (0, M.xb)(e);
+            return (0, x.xb)(e);
     }
 }
 function en(e) {
@@ -280,7 +280,7 @@ function en(e) {
         case 1:
             return B.intl.string(B.t.k3RM8z);
         default:
-            return (0, M.xb)(e);
+            return (0, x.xb)(e);
     }
 }
 let er = (e) => {
@@ -331,7 +331,10 @@ let er = (e) => {
                                         className: H.u1,
                                         itemClassName: H.$N,
                                     })
-                                  : (0, r.jsx)("div", { className: H.hQ, children: B.intl.string(B.t.TdQXA8) }),
+                                  : (0, r.jsx)("div", {
+                                        className: a()(H.hQ, H.d3),
+                                        children: B.intl.string(B.t.TdQXA8),
+                                    }),
                           ],
                       }),
         });
@@ -397,10 +400,10 @@ function ea(e) {
         [I, S] = i.useState(null),
         y = i.useRef(null),
         v = (0, c.yK)([C.A], () => C.A.summaries(t.id) ?? [], [t]),
-        R = (0, E.A)(v);
+        O = (0, E.A)(v);
     i.useEffect(() => {
-        l().isEqual(R, v) ||
-            x.default.track(G.HAw.SUMMARIES_TOPICS_PILL_VIEWED, {
+        l().isEqual(O, v) ||
+            M.default.track(G.HAw.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: v.length,
                 message_counts: v.map((e) => e.count),
                 start_message_ids: v.map((e) => e.startId),
@@ -410,10 +413,10 @@ function ea(e) {
                 channel_id: t.id,
                 channel_type: t.type,
             });
-    }, [v, R, t.guild_id, t.id, t.type]);
-    let O = (0, c.bG)(
+    }, [v, O, t.guild_id, t.id, t.type]);
+    let b = (0, c.bG)(
             [L.default],
-            () => v?.map((e) => e.people?.map((e) => L.default.getUser(e) ?? null).filter(M.Vq)) ?? [],
+            () => v?.map((e) => e.people?.map((e) => L.default.getUser(e) ?? null).filter(x.Vq)) ?? [],
             [v],
             el,
         ),
@@ -445,8 +448,8 @@ function ea(e) {
             [V, j],
         ),
         [W, K] = i.useState(!1),
-        z = i.useCallback(() => {
-            x.default.track(G.HAw.SUMMARIES_TOPICS_PILL_TOGGLED, {
+        $ = i.useCallback(() => {
+            M.default.track(G.HAw.SUMMARIES_TOPICS_PILL_TOGGLED, {
                 topics_dropdown_open: !W,
                 num_summaries: v.length,
                 message_counts: v.map((e) => e.count),
@@ -459,7 +462,7 @@ function ea(e) {
             }),
                 K(!W);
         }, [W, v, K, t]),
-        $ = i.useCallback(
+        z = i.useCallback(
             function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : F.eh.PILL_DROPDOWN,
                     r = v[e];
@@ -473,7 +476,7 @@ function ea(e) {
                 };
                 s.removeAutomaticAnchorCallback(Y),
                     s.addScrollCompleteCallback(i),
-                    x.default.track(G.HAw.SUMMARIES_TOPIC_CLICKED, {
+                    M.default.track(G.HAw.SUMMARIES_TOPIC_CLICKED, {
                         source: n,
                         message_id: r.startId,
                         guild_id: t.guild_id,
@@ -503,7 +506,7 @@ function ea(e) {
         (e) => {
             ((0, u.vq)(e.target) && g.current?.contains(e.target)) ||
                 (W &&
-                    x.default.track(G.HAw.SUMMARIES_TOPICS_PILL_TOGGLED, {
+                    M.default.track(G.HAw.SUMMARIES_TOPICS_PILL_TOGGLED, {
                         topics_dropdown_open: !1,
                         num_summaries: v.length,
                         message_counts: v.map((e) => e.count),
@@ -540,8 +543,8 @@ function ea(e) {
             [Z],
         );
     let X = i.useMemo(
-            () => (0, r.jsx)(b.A, { channel: t, summaries: v, summariesMembers: O, selectTopic: $, setOpen: q }),
-            [v, O, $, q, t],
+            () => (0, r.jsx)(R.A, { channel: t, summaries: v, summariesMembers: b, selectTopic: z, setOpen: q }),
+            [v, b, z, q, t],
         ),
         Q = i.useCallback(() => {
             let e = D.Ay.ackMessageId(t.id);
@@ -575,7 +578,7 @@ function ea(e) {
                           children: (0, r.jsx)(d.DUT, {
                               className: H.TQ,
                               "aria-label": B.intl.string(B.t.RT3MPz),
-                              onClick: z,
+                              onClick: $,
                               children: (0, r.jsxs)("div", {
                                   className: a()({ [H.hN]: !W, [H.Ap]: W }),
                                   children: [
@@ -632,7 +635,7 @@ function ea(e) {
                                           }),
                                           (0, r.jsx)(d.DUT, {
                                               "aria-label": B.intl.string(B.t.cpT0Cq),
-                                              onClick: z,
+                                              onClick: $,
                                               className: H.oX,
                                               children: (0, r.jsx)(d.PGe, { size: "md", color: "currentColor" }),
                                           }),
@@ -662,7 +665,7 @@ function eu(e) {
         y = (0, E.A)(S);
     i.useEffect(() => {
         l().isEqual(y, S) ||
-            x.default.track(G.HAw.SUMMARIES_TOPICS_PILL_VIEWED, {
+            M.default.track(G.HAw.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: S.length,
                 message_counts: S.map((e) => e.count),
                 start_message_ids: S.map((e) => e.startId),
@@ -675,15 +678,15 @@ function eu(e) {
     }, [S, y, t.guild_id, t.id, t.type]);
     let v = (0, c.bG)(
             [L.default],
-            () => S?.map((e) => e.people?.map((e) => L.default.getUser(e) ?? null).filter(M.Vq)) ?? [],
+            () => S?.map((e) => e.people?.map((e) => L.default.getUser(e) ?? null).filter(x.Vq)) ?? [],
             [S],
             el,
         ),
-        R = (0, c.bG)([C.A], () => C.A.visibleSummaryIndex()) ?? -1,
-        O = S?.[R]?.topic;
-    null == O && null == o && S?.length >= 1 && (O = S[0]?.topic);
-    let D = i.useMemo(() => l().get(S, R - 1), [R, S]),
-        P = i.useMemo(() => l().get(S, R + 1), [R, S]),
+        O = (0, c.bG)([C.A], () => C.A.visibleSummaryIndex()) ?? -1,
+        b = S?.[O]?.topic;
+    null == b && null == o && S?.length >= 1 && (b = S[0]?.topic);
+    let D = i.useMemo(() => l().get(S, O - 1), [O, S]),
+        P = i.useMemo(() => l().get(S, O + 1), [O, S]),
         k = i.useMemo(
             () =>
                 l().debounce((e) => {
@@ -710,7 +713,7 @@ function eu(e) {
         ),
         [j, Y] = i.useState(!1),
         W = i.useCallback(() => {
-            x.default.track(G.HAw.SUMMARIES_TOPICS_PILL_TOGGLED, {
+            M.default.track(G.HAw.SUMMARIES_TOPICS_PILL_TOGGLED, {
                 topics_dropdown_open: !j,
                 num_summaries: S.length,
                 message_counts: S.map((e) => e.count),
@@ -737,7 +740,7 @@ function eu(e) {
                 };
                 n.removeAutomaticAnchorCallback(V),
                     n.addScrollCompleteCallback(s),
-                    x.default.track(G.HAw.SUMMARIES_TOPIC_CLICKED, {
+                    M.default.track(G.HAw.SUMMARIES_TOPIC_CLICKED, {
                         source: r,
                         message_id: i.startId,
                         guild_id: t.guild_id,
@@ -755,12 +758,12 @@ function eu(e) {
             },
             [S, t, V, n],
         ),
-        z = i.useCallback(() => {
-            K(R - 1, F.eh.PILL_NEXT_ARROW);
-        }, [K, R]),
         $ = i.useCallback(() => {
-            K(R + 1, F.eh.PILL_PREVIOUS_ARROW);
-        }, [R, K]),
+            K(O - 1, F.eh.PILL_NEXT_ARROW);
+        }, [K, O]),
+        z = i.useCallback(() => {
+            K(O + 1, F.eh.PILL_PREVIOUS_ARROW);
+        }, [O, K]),
         q = i.useCallback((e) => {
             Y(e);
             let t = I.current?.scrollTop;
@@ -773,7 +776,7 @@ function eu(e) {
         (e) => {
             ((0, u.vq)(e.target) && p.current?.contains(e.target)) ||
                 (j &&
-                    x.default.track(G.HAw.SUMMARIES_TOPICS_PILL_TOGGLED, {
+                    M.default.track(G.HAw.SUMMARIES_TOPICS_PILL_TOGGLED, {
                         topics_dropdown_open: !1,
                         num_summaries: S.length,
                         message_counts: S.map((e) => e.count),
@@ -810,13 +813,13 @@ function eu(e) {
             [Z],
         );
     let X = i.useMemo(
-        () => (0, r.jsx)(b.A, { channel: t, summaries: S, summariesMembers: v, selectTopic: K, setOpen: q }),
+        () => (0, r.jsx)(R.A, { channel: t, summaries: S, summariesMembers: v, selectTopic: K, setOpen: q }),
         [S, v, K, q, t],
     );
     if (!(0, c.bG)([C.A], () => C.A.shouldShowTopicsBar())) return null;
     let Q = B.intl.string(B.t["38qwgO"]);
     return (
-        S.length > 0 && (Q = "" === O || null == O ? B.intl.string(B.t.DwnFuG) : O),
+        S.length > 0 && (Q = "" === b || null == b ? B.intl.string(B.t.DwnFuG) : b),
         s
             ? null
             : (0, r.jsxs)("div", {
@@ -853,7 +856,7 @@ function eu(e) {
                                   children: [
                                       (0, r.jsx)(d.DUT, {
                                           "aria-label": B.intl.string(B.t["4huCnC"]),
-                                          onClick: $,
+                                          onClick: z,
                                           className: a()(H.ZM, H.vz, { [H.jf]: null == P }),
                                           children: (0, r.jsx)(w.A, {
                                               width: 16,
@@ -863,7 +866,7 @@ function eu(e) {
                                       }),
                                       (0, r.jsx)(d.DUT, {
                                           "aria-label": B.intl.string(B.t["58KOoF"]),
-                                          onClick: z,
+                                          onClick: $,
                                           className: a()(H.ZM, H.mt, { [H.jf]: null == D }),
                                           children: (0, r.jsx)(w.A, {
                                               width: 16,
