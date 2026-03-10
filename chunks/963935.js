@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Iu: () => a, Z6: () => r, nW: () => i, zY: () => s }), n(64700);
+n.d(t, { Iu: () => a, Z6: () => r, bJ: () => o, nW: () => i, zY: () => s }), n(64700);
 var r = (function (e) {
     return (
         (e[(e.ROOT = 0)] = "ROOT"),
@@ -33,4 +33,7 @@ function s(e) {
 }
 function a(e) {
     return e.every((e) => 5 === e.type) && e.length > 0;
+}
+function o(e) {
+    return null != e.useTitle || null != e.useSubnavLabel;
 }

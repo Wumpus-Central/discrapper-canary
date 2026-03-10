@@ -31,7 +31,9 @@ let A = (0, r.zZ)(d.X.SESSIONS_CATEGORY, {
     p = (0, r.i4)(d.X.SESSIONS_SIDEBAR_ITEM, {
         useTitle: () => m.intl.string(m.t["+1h0k/"]),
         icon: s.LaptopPhoneIcon,
-        trailing: { type: o.Si.BADGE_NEW, getDismissibleContentTypes: () => [l.M.AUTH_SESSIONS_NEW] },
-        buildLayout: () => [h],
+        getDismissibleBadges: function () {
+            return [{ badgeType: o.Xi.NEW, dismissibleContent: l.M.AUTH_SESSIONS_NEW }];
+        },
         usePredicate: () => !(0, c._A)("SessionsPanel"),
+        buildLayout: () => [h],
     });

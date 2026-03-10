@@ -22,7 +22,7 @@ let T = (0, i.WI)(l.X.APP_SECTION, {
         let e = (0, a.Ci)("AppSection_buildLayout");
         return [
             e ? p.q : null,
-            e ? null : d.y,
+            e ? null : d.yj,
             e ? u.S : null,
             r.w,
             e ? null : p.q,

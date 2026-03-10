@@ -1,26 +1,37 @@
-n.d(t, { A: () => r });
+n.d(t, { A: () => o });
 var i = n(627968),
     s = n(397927),
+    l = n(600812),
     a = n(791498),
-    l = n(244242);
-function r(e) {
+    r = n(244242);
+function o(e) {
     let { node: t } = e,
-        { useValue: n, setValue: r, useTitle: o, useSubtitle: c, useOptions: d, useBadge: u } = t,
-        _ = o(),
-        m = c?.(),
-        A = n(),
-        g = d(),
-        h = u?.(),
-        x = (0, a.q)(t);
-    return (0, i.jsx)(l.L, {
+        {
+            useValue: n,
+            setValue: o,
+            useTitle: d,
+            useSubtitle: c,
+            useOptions: u,
+            usePersistentBadge: _,
+            getDismissibleBadges: g,
+        } = t,
+        m = d(),
+        A = c?.(),
+        h = n(),
+        p = u(),
+        x = _?.(),
+        E = g?.(),
+        T = (0, l.A)({ persistentBadge: x, dismissibleBadges: E }),
+        S = (0, a.q)(t);
+    return (0, i.jsx)(r.L, {
         children: (0, i.jsx)(s.z6M, {
-            label: _,
-            description: m,
-            options: g,
-            value: A,
-            badge: h,
+            label: m,
+            description: A,
+            options: p,
+            value: h,
+            badge: T,
             onChange: (e) => {
-                x(), r(e);
+                S(), o(e);
             },
         }),
     });

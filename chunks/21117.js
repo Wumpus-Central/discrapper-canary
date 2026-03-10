@@ -1,33 +1,34 @@
-i.d(e, { b: () => T });
-var n = i(64700),
-    l = i(311907),
-    s = i(955572),
-    r = i(406360),
-    a = i(419954),
-    u = i(964404),
-    o = i(780964),
-    d = i(985018);
-let T = (0, a.Qx)(o.X.HIGH_DYNAMIC_RANGE, {
-    useTitle: () => d.intl.string(d.t.nemtgW),
-    useSubtitle: () => d.intl.string(d.t["O/Gjvn"]),
-    useBadge: () => "beta",
+n.d(t, { b: () => _ });
+var i = n(64700),
+    s = n(311907),
+    l = n(955572),
+    a = n(406360),
+    r = n(419954),
+    o = n(933297),
+    d = n(964404),
+    c = n(780964),
+    u = n(985018);
+let _ = (0, r.Qx)(c.X.HIGH_DYNAMIC_RANGE, {
+    useTitle: () => u.intl.string(u.t.nemtgW),
+    useSubtitle: () => u.intl.string(u.t["O/Gjvn"]),
+    usePersistentBadge: () => ({ badgeType: o.Xi.BETA }),
     useOptions: function () {
-        return n.useMemo(
+        return i.useMemo(
             () => [
-                { name: d.intl.string(d.t.D5Fma9), desc: d.intl.string(d.t.Qj75ck), value: "no-limit" },
-                { name: d.intl.string(d.t.ldcGIH), desc: d.intl.string(d.t["+V/bDk"]), value: "standard" },
+                { name: u.intl.string(u.t.D5Fma9), desc: u.intl.string(u.t.Qj75ck), value: "no-limit" },
+                { name: u.intl.string(u.t.ldcGIH), desc: u.intl.string(u.t["+V/bDk"]), value: "standard" },
             ],
             [],
         );
     },
     usePredicate: function () {
-        return (0, r.i)("HDRDynamicRangeSetting");
+        return (0, a.i)("HDRDynamicRangeSetting");
     },
-    setValue: function (t) {
-        (0, s.FU)(t);
+    setValue: function (e) {
+        (0, l.FU)(e);
     },
     useValue: function () {
-        return (0, l.bG)([u.Ay], () => u.Ay.hdrDynamicRange);
+        return (0, s.bG)([d.Ay], () => d.Ay.hdrDynamicRange);
     },
-    useSearchTerms: () => ["HDR", d.intl.string(d.t["O/Gjvn"])],
+    useSearchTerms: () => ["HDR", u.intl.string(u.t["O/Gjvn"])],
 });

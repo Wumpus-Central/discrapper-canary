@@ -1,33 +1,26 @@
-n.d(t, { T: () => A });
-var i = n(627968),
+n.d(t, { T: () => m });
+var i = n(64700),
     s = n(934551),
     l = n(554146),
-    a = n(397927),
-    r = n(834981),
-    o = n(419954),
-    d = n(933297),
-    c = n(780964),
-    u = n(264474),
-    _ = n(985018),
-    g = n(842130);
-let m = (0, o.t_)(c.X.FAMILY_CENTER_PANEL, {
-        useTitle: () => _.intl.string(g.default.RZqaJn),
-        buildLayout: () => [u.g],
+    a = n(834981),
+    r = n(419954),
+    o = n(933297),
+    d = n(780964),
+    c = n(264474),
+    u = n(985018),
+    _ = n(842130);
+let g = (0, r.t_)(d.X.FAMILY_CENTER_PANEL, {
+        useTitle: () => u.intl.string(_.default.RZqaJn),
+        buildLayout: () => [c.g],
     }),
-    A = (0, o.i4)(c.X.FAMILY_CENTER_SIDEBAR_ITEM, {
-        useTitle: () => _.intl.string(g.default.RZqaJn),
+    m = (0, r.i4)(d.X.FAMILY_CENTER_SIDEBAR_ITEM, {
+        useTitle: () => u.intl.string(_.default.RZqaJn),
         icon: s.GroupIcon,
-        trailing: {
-            type: d.Si.STRONGLY_DISCOURAGED_CUSTOM,
-            getDismissibleContentTypes: () => [l.M.FAMILY_CENTER_NEW_BADGE],
-            useCustomDecoration: function (e) {
-                let t = (0, r.VT)();
-                return e === l.M.FAMILY_CENTER_NEW_BADGE
-                    ? (0, i.jsx)(a.LpS, { text: _.intl.string(_.t.y2b7CA) })
-                    : t > 0
-                      ? (0, i.jsx)(a.hVq, { count: t })
-                      : null;
-            },
+        usePersistentBadge: function () {
+            return i.useMemo(() => ({ badgeType: o.Xi.COUNT, useCount: a.VT }), []);
         },
-        buildLayout: () => [m],
+        getDismissibleBadges: function () {
+            return [{ badgeType: o.Xi.NEW, dismissibleContent: l.M.FAMILY_CENTER_NEW_BADGE }];
+        },
+        buildLayout: () => [g],
     });

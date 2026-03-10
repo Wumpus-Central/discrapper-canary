@@ -1,9 +1,10 @@
 "use strict";
-n.d(t, { Ay: () => k, Tc: () => P, dD: () => D, mB: () => L, oF: () => w, oo: () => R, pd: () => O }), n(667532);
+n.d(t, { Ay: () => U, Tc: () => P, dD: () => D, mB: () => L, oF: () => M, oo: () => O, pd: () => b, uW: () => w }),
+    n(667532);
 var r = n(265690),
     i = n(121894),
-    a = n(311907),
-    s = n(73153),
+    s = n(311907),
+    a = n(73153),
     o = n(715314),
     l = n(45143),
     u = n(870570),
@@ -23,13 +24,13 @@ let d = new (n(863620).u)(),
     }),
     h = (0, r.h)(p),
     m = !1,
-    g = (e) => ({
+    E = (e) => ({
         ...e,
         candidates: new Map(e.candidates),
         currentlyShown: new Set(e.currentlyShown),
         currentlyShownGroup: new Set(e.currentlyShownGroup),
     }),
-    E = (e, t) => (
+    g = (e, t) => (
         null == t ||
             (null != t.content && e.currentlyShown.delete(t.content),
             null != t.groupName && e.currentlyShownGroup.delete(t.groupName),
@@ -55,8 +56,8 @@ let d = new (n(863620).u)(),
     },
     I = (e, t) => (e.candidates.set(t.content, t), e),
     T = (e, t) => (e.candidates.delete(t.content), e),
-    y = (e, t) => A(E(e, e.shownFatigableCandidate), t),
-    S = (e) => (null != e.prevFatigableCandidate ? e.candidates.get(e.prevFatigableCandidate.content) : void 0),
+    S = (e, t) => A(g(e, e.shownFatigableCandidate), t),
+    y = (e) => (null != e.prevFatigableCandidate ? e.candidates.get(e.prevFatigableCandidate.content) : void 0),
     v = (e) => {
         let t = [...e.candidates.keys()];
         return (
@@ -67,52 +68,53 @@ let d = new (n(863620).u)(),
             e.candidates.get(t[Math.floor(Math.random() * t.length)])
         );
     },
-    C = (e) =>
+    N = (e) =>
         null != e.prevFatigableCandidate &&
         e.candidates.has(e.prevFatigableCandidate.content) &&
         null == e.shownFatigableCandidate,
-    b = (e) => {
+    C = (e) => {
         if (0 === e.candidates.size) return e;
         let t = new Date().getTime() - e.lastWinnerTime > _;
-        return C(e) && !t
-            ? (d.unschedule(), y(e, S(e)))
+        return N(e) && !t
+            ? (d.unschedule(), S(e, y(e)))
             : ((null != e.shownFatigableCandidate && !t) ||
                   d.scheduled() ||
-                  N(e) ||
+                  R(e) ||
                   d.schedule(() => {
                       (0, i.r)(() => {
                           h.setState((e) => {
-                              let t = g(e);
-                              return y(t, v(t));
+                              let t = E(e);
+                              return S(t, v(t));
                           });
                       });
                   }, 250),
               e);
     },
-    N = (e) => {
+    R = (e) => {
         let t = new Date().getTime();
         return null == e.shownFatigableCandidate && t - e.lastWinnerTime < f;
     },
-    R = (e) => {
+    O = (e) => {
         let t = c.C.has(e.content);
         (0, i.r)(() => {
             h.setState((n) => {
-                let r = g(n);
-                return m ? r : t ? A(r, e) : b(I(r, e));
+                let r = E(n);
+                return m ? r : t ? A(r, e) : C(I(r, e));
             });
         });
     },
-    O = (e, t) => {
+    b = (e, t) => {
         (0, i.r)(() => {
             h.setState((n) => {
-                let r = g(n);
-                return t ? b(E(T(r, e), e)) : E(T(r, e), e);
+                let r = E(n);
+                return t ? C(g(T(r, e), e)) : g(T(r, e), e);
             });
         });
     },
     D = (e) => h.getState().currentlyShown.has(e),
     L = (e) => h((t) => t.currentlyShown.has(e)),
-    w = () => {
+    w = (e) => h((t) => e.some((e) => t.currentlyShown.has(e))),
+    M = () => {
         let e = [...h.getState().currentlyShown].filter((e) => !c.C.has(e)).length;
         return [h.getState().currentlyShown.size, e];
     },
@@ -126,7 +128,7 @@ let d = new (n(863620).u)(),
             d.unschedule();
     },
     P = () => h.getState().postConnectionOpen;
-class M extends a.Ay.Store {
+class k extends s.Ay.Store {
     static displayName = "DismissibleContentShownStateStore";
     initialize() {
         this.waitFor(o.A, u.A), this.syncWith([o.A, u.A], () => this.setHasRequiredAction());
@@ -135,7 +137,7 @@ class M extends a.Ay.Store {
         m = (0, l.A)(o.A, u.A);
     }
 }
-function k(e, t) {
+function U(e, t) {
     return h(e, t);
 }
-new M(s.h, { CONNECTION_OPEN: () => x(), LOGOUT: () => x() });
+new k(a.h, { CONNECTION_OPEN: () => x(), LOGOUT: () => x() });

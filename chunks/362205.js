@@ -3,90 +3,101 @@ n.d(t, { A: () => _ });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    l = n.n(a),
-    s = n(284009),
-    o = n.n(s),
-    u = n(380278),
+    s = n.n(a),
+    l = n(284009),
+    o = n.n(l),
+    u = n(490249),
     c = n(942381),
     d = n(837381),
-    h = n(397927),
-    f = n(775602),
-    m = n(253932),
-    g = n(894858),
-    v = n(272053),
-    p = n(890690),
-    y = n(652099);
-function x(e) {
-    let { category: t, onClick: n, active: i } = e,
-        { useTitle: a, useSubnavLabel: s, key: u } = t,
-        c = a?.(),
-        f = s?.() ?? c;
+    f = n(397927),
+    m = n(775602),
+    g = n(253932),
+    h = n(894858),
+    y = n(272053),
+    p = n(189857),
+    v = n(674085),
+    x = n(890690),
+    b = n(637577);
+function A(e) {
+    let { category: t, onClick: n, active: i, dismissibleBadge: a } = e,
+        { useTitle: l, useSubnavLabel: u, key: c } = t,
+        m = l?.(),
+        g = u?.() ?? m;
     return (
-        o()(null != f, "[SettingsSubnavigationCategory] Category must have a title"),
+        o()(null != g, "[SettingsSubnavigationCategory] Category must have a title"),
         (0, r.jsx)(d.tG, {
-            id: u,
+            id: c,
             children: (e) =>
-                (0, r.jsx)(h.DUT, { onClick: n, className: l()(y.AS, { [y.vu]: i }), ...e, children: f }, u),
+                (0, r.jsxs)(
+                    f.DUT,
+                    {
+                        onClick: n,
+                        className: s()(b.AS, { [b.vu]: i }),
+                        ...e,
+                        children: [g, null != a && !i && (0, r.jsx)(v.A, { badge: a })],
+                    },
+                    c,
+                ),
         })
     );
 }
 function _(e) {
-    let { categories: t } = e,
-        [n, a] = i.useState(() => {
-            let e = g.A.getField("currentCategoryKey"),
+    let { categories: t, visibleContent: n, dismissibleBadges: a } = e,
+        [s, l] = i.useState(() => {
+            let e = h.A.getField("currentCategoryKey"),
                 n = t.find((t) => t.key === e);
             return n?.key ?? t[0].key;
         });
     i.useEffect(
         () =>
-            g.A.subscribe(
+            h.A.subscribe(
                 (e) => {
                     let { currentCategoryKey: t } = e;
                     return t;
                 },
                 (e) => {
                     let n = t.find((t) => t.key === e);
-                    null != n && a(n.key);
+                    null != n && l(n.key);
                 },
                 { equalityFn: c.x },
             ),
         [t],
     );
-    let l = i.useMemo(
+    let o = i.useMemo(
             () =>
                 Math.max(
-                    t.findIndex((e) => e.key === n),
+                    t.findIndex((e) => e.key === s),
                     0,
                 ),
-            [t, n],
+            [t, s],
         ),
         {
-            thumbRef: s,
-            trackRef: o,
-            thumbAnchorRef: d,
-            springs: _,
+            thumbRef: d,
+            trackRef: v,
+            thumbAnchorRef: _,
+            springs: j,
         } = (function (e) {
-            let t = m.Xi.useSetting(),
+            let t = g.Xi.useSetting(),
                 n = i.useRef(null),
                 r = i.useRef(null),
                 a = i.useRef(null),
-                l = i.useRef(!0),
-                s = i.useRef(t),
-                [o, u] = (0, h.zhh)(() => ({ y: 0, height: 0, config: { mass: 0.1, friction: 20, tension: 300 } }));
+                s = i.useRef(!0),
+                l = i.useRef(t),
+                [o, u] = (0, f.zhh)(() => ({ y: 0, height: 0, config: { mass: 0.1, friction: 20, tension: 300 } }));
             return (
                 i.useLayoutEffect(() => {
-                    let e = s.current !== t,
+                    let e = l.current !== t,
                         i = () => {
                             if (null == n.current || null == r.current || null == a.current) return;
                             let [i, c] = [n.current.getBoundingClientRect(), a.current.getBoundingClientRect()],
                                 d = i.width / 2,
-                                h = (c.y - i.y) / d,
-                                m = c.height / d;
-                            l.current || e || f.A.useReducedMotion
-                                ? (o.y.set(h), o.height.set(m))
-                                : u({ y: h, height: m }),
-                                (l.current = !1),
-                                (s.current = t);
+                                f = (c.y - i.y) / d,
+                                g = c.height / d;
+                            s.current || e || m.A.useReducedMotion
+                                ? (o.y.set(f), o.height.set(g))
+                                : u({ y: f, height: g }),
+                                (s.current = !1),
+                                (l.current = t);
                         },
                         c = null;
                     return (
@@ -102,35 +113,37 @@ function _(e) {
                 }, [e, u, o.y, o.height, t]),
                 { thumbRef: r, trackRef: n, thumbAnchorRef: a, springs: o }
             );
-        })(l);
+        })(o);
     return (
-        (0, p.u)(t),
+        (0, x.u)(t),
         (0, r.jsxs)("div", {
-            className: y.o8,
+            className: b.o8,
             role: "list",
-            style: { "--custom-nav-count": t.length, "--custom-nav-index": l, "--custom-nav-width": "2px" },
+            style: { "--custom-nav-count": t.length, "--custom-nav-index": o, "--custom-nav-width": "2px" },
             children: [
                 (0, r.jsx)("div", {
-                    className: y.u4,
+                    className: b.u4,
                     "aria-hidden": "true",
-                    ref: o,
-                    children: (0, r.jsx)(u.animated.div, { className: y.FF, style: _, ref: s }),
+                    ref: v,
+                    children: (0, r.jsx)(u.animated.div, { className: b.FF, style: j, ref: d }),
                 }),
-                (0, r.jsx)("div", { className: y.gu, "aria-hidden": "true", ref: d }),
-                t.map((e) =>
-                    (0, r.jsx)(
-                        x,
+                (0, r.jsx)("div", { className: b.gu, "aria-hidden": "true", ref: _ }),
+                t.map((e) => {
+                    let t = (0, p.H)(e.key, n, a);
+                    return (0, r.jsx)(
+                        A,
                         {
                             onClick: () => {
                                 var t;
-                                return (t = e.key), void v.A.navigate(t, { showNavigationMobile: !1 });
+                                return (t = e.key), void y.A.navigate(t, { showNavigationMobile: !1 });
                             },
-                            active: e.key === n,
+                            active: e.key === s,
                             category: e,
+                            dismissibleBadge: t,
                         },
                         e.key,
-                    ),
-                ),
+                    );
+                }),
             ],
         })
     );

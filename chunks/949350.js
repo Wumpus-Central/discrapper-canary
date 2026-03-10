@@ -1,19 +1,22 @@
-n.d(t, { Q: () => A });
-var i = n(934551),
-    s = n(35587),
-    l = n(419954),
-    a = n(933297),
-    r = n(780964),
-    o = n(525707),
-    d = n(9653),
-    c = n(473146),
-    u = n(709747),
-    _ = n(985018);
-let g = (0, l.zZ)(r.X.GIFT_INVENTORY_CATEGORY, { buildLayout: () => [o.V, c.E, d.R, u.Y] }),
-    m = (0, l.t_)(r.X.GIFT_PANEL, { useTitle: () => _.intl.string(_.t["jcSP+g"]), buildLayout: () => [g] }),
-    A = (0, l.i4)(r.X.GIFT_SIDEBAR_ITEM, {
-        useTitle: () => _.intl.string(_.t["jcSP+g"]),
-        icon: i.GiftIcon,
-        trailing: { type: a.Si.BADGE_COUNT, useCount: () => (0, s.IO)().length },
-        buildLayout: () => [m],
+n.d(t, { Q: () => h });
+var i = n(64700),
+    s = n(934551),
+    l = n(35587),
+    a = n(419954),
+    r = n(933297),
+    o = n(780964),
+    d = n(525707),
+    c = n(9653),
+    u = n(473146),
+    _ = n(709747),
+    g = n(985018);
+let m = (0, a.zZ)(o.X.GIFT_INVENTORY_CATEGORY, { buildLayout: () => [d.V, u.E, c.R, _.Y] }),
+    A = (0, a.t_)(o.X.GIFT_PANEL, { useTitle: () => g.intl.string(g.t["jcSP+g"]), buildLayout: () => [m] }),
+    h = (0, a.i4)(o.X.GIFT_SIDEBAR_ITEM, {
+        useTitle: () => g.intl.string(g.t["jcSP+g"]),
+        icon: s.GiftIcon,
+        usePersistentBadge: function () {
+            return i.useMemo(() => ({ badgeType: r.Xi.COUNT, useCount: () => (0, l.IO)().length }), []);
+        },
+        buildLayout: () => [A],
     });
