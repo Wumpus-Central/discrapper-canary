@@ -123,7 +123,7 @@ let K = (0, m.J)(function (e) {
             ea?.(l.id);
         },
         eB = (e) => {
-            (!eC || ep) &&
+            eC ||
                 (e
                     ? (eb.current = setTimeout(() => {
                           eT(!0);
@@ -175,9 +175,7 @@ let K = (0, m.J)(function (e) {
             onMouseEnter: eh
                 ? void 0
                 : () => {
-                      eC
-                          ? (!ep || !ex || eC || eI || eD || eT(!0), eI || er?.(l.id))
-                          : (en || ex || eG || eP) && !eI && er?.(l.id);
+                      !eI && (en || ex || eG || eP || eC) && er?.(l.id);
                   },
             onMouseLeave: eh ? void 0 : eV,
             children: (0, i.jsx)(v.A, {
