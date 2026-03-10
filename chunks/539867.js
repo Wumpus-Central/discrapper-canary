@@ -1,11 +1,13 @@
-n.d(t, { A: () => l });
+n.d(t, { Ay: () => s, KI: () => l, _4: () => i });
 var r = n(64700);
-function l(e) {
+let l = 4e3,
+    i = 2e3;
+function s(e) {
     let {
-            getCurrentVideoTime: t,
-            isPlaying: n,
-            isMetadataLoaded: l,
-            isInitialSeekComplete: i,
+            isPlaying: t,
+            isMetadataLoaded: n,
+            isInitialSeekComplete: l,
+            getCurrentVideoTime: i,
             onAnalytics: s,
             emitIntervalMs: a,
             minSegmentDurationMs: o,
@@ -14,13 +16,13 @@ function l(e) {
         d = (0, r.useRef)(null),
         m = (0, r.useRef)(Date.now()),
         p = (0, r.useRef)(!1),
-        E = (0, r.useCallback)(
+        f = (0, r.useCallback)(
             (e) => {
                 e.segmentEndSec < e.segmentStartSec ||
                     s({
-                        start_time: e.startTime,
-                        end_time: e.endTime,
-                        duration: e.endTime - e.startTime,
+                        start_time: e.startTimeMs,
+                        end_time: e.endTimeMs,
+                        duration: e.endTimeMs - e.startTimeMs,
                         segment_start_sec: e.segmentStartSec,
                         segment_end_sec: e.segmentEndSec,
                         segment_duration_sec: e.segmentEndSec - e.segmentStartSec,
@@ -28,53 +30,55 @@ function l(e) {
             },
             [s],
         ),
-        f = (0, r.useCallback)(() => {
-            let e = t();
-            if (null != e && l && i) {
+        E = (0, r.useCallback)(() => {
+            let e = i();
+            if (null != e && n && l) {
                 let t = Date.now();
-                c({ startTime: t, endTime: t, segmentStartSec: e, segmentEndSec: e }), (p.current = !0);
+                c({ startTimeMs: t, endTimeMs: t, segmentStartSec: e, segmentEndSec: e }), (p.current = !0);
             }
-        }, [t, l, i]),
-        v = (0, r.useCallback)(() => {
-            let e = t();
+        }, [i, n, l]),
+        h = (0, r.useCallback)(() => {
+            let e = i();
             if (null == e || null == u) return;
-            let n = Date.now();
-            n - m.current < a ||
+            let t = Date.now();
+            t - m.current < a ||
                 e - u.segmentStartSec < o / 1e3 ||
-                (E({ ...u, endTime: n, segmentEndSec: e }),
-                c({ startTime: n, endTime: n, segmentStartSec: e, segmentEndSec: e }),
-                (m.current = n));
-        }, [u, E, a, o, t]);
+                (f({ ...u, endTimeMs: t, segmentEndSec: e }),
+                c({ startTimeMs: t, endTimeMs: t, segmentStartSec: e, segmentEndSec: e }),
+                (m.current = t));
+        }, [u, f, a, o, i]);
     return (
         (0, r.useEffect)(() => {
-            (l && i) || (c(null), (p.current = !1));
-        }, [l, i]),
+            (n && l) || (c(null), (p.current = !1));
+        }, [n, l]),
         (0, r.useEffect)(() => {
-            if (n && l && i)
-                p.current || f(),
+            if (t && n && l)
+                p.current || E(),
                     (d.current = window.setInterval(() => {
-                        v();
+                        h();
                     }, 200));
             else {
-                let e = t();
+                let e = i();
                 if (null != u && null != e) {
                     let t = Date.now();
-                    e - u.segmentStartSec > 0.2 && E({ ...u, endTime: t, segmentEndSec: e });
+                    e - u.segmentStartSec > 0.2 && f({ ...u, endTimeMs: t, segmentEndSec: e });
                 }
                 c(null), (p.current = !1), null != d.current && (clearInterval(d.current), (d.current = null));
             }
             return () => {
                 null != d.current && (clearInterval(d.current), (d.current = null));
             };
-        }, [n, l, i, u, v, E, f, t]),
+        }, [t, n, l, u, h, f, E, i]),
         {
             forceSendCurrentSegment: (0, r.useCallback)(() => {
-                let e = t();
+                let e = i();
                 if (null != u && null != e) {
                     let t = Date.now();
-                    e - u.segmentStartSec > 0.2 && E({ ...u, endTime: t, segmentEndSec: e }), c(null), (p.current = !1);
+                    e - u.segmentStartSec > 0.2 && f({ ...u, endTimeMs: t, segmentEndSec: e }),
+                        c(null),
+                        (p.current = !1);
                 }
-            }, [u, E, t]),
+            }, [u, f, i]),
             isInitialized: p.current,
         }
     );
