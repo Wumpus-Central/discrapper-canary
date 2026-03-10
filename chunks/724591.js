@@ -3,8 +3,8 @@ n.d(t, { A: () => M });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(311907),
+    a = n.n(l),
+    r = n(311907),
     o = n(554146),
     c = n(827734),
     d = n(192308),
@@ -35,13 +35,13 @@ let M = s.memo(function (e) {
         M = s.useRef(null),
         D = s.useRef(null),
         G = (0, d.useHasAnyModalOpen)(),
-        U = (0, a.bG)([b.A], () => b.A.hasLayers()),
+        U = (0, r.bG)([b.A], () => b.A.hasLayers()),
         P = (0, m.xr)((e) => e.fullScreenLayers.length > 0),
         w = (0, x.n)({ location: "GameShopChannelRow" });
     s.useEffect(() => {
         (0, _.Kh)(t.id);
     }, [t.id]);
-    let k = (0, a.bG)([f.A], () => f.A.getAnnouncement(t.id)),
+    let k = (0, r.bG)([f.A], () => f.A.getAnnouncement(t.id)),
         V = k?.state === "success" ? k.announcement : void 0,
         [B, H] = (0, A.x_)(o.M.GAME_SHOP_NEW_BADGE, t.id, V?.id ?? ""),
         F = B === o.M.GAME_SHOP_NEW_BADGE && null != V,
@@ -51,11 +51,8 @@ let M = s.memo(function (e) {
         q = F || z,
         X = s.useMemo(() => (F ? H : Y), [F, H, Y]);
     s.useEffect(() => {
-        q && null != D.current && D.current.scrollIntoView({ block: "nearest", behavior: "smooth" });
-    }, [q]),
-        s.useEffect(() => {
-            l && q && X(j.i.INDIRECT_ACTION);
-        }, [X, l, q]);
+        l && q && X(j.i.INDIRECT_ACTION);
+    }, [X, l, q]);
     let J = s.useCallback(() => {
             X(j.i.TAKE_ACTION);
             let e = f.A.getStorefrontState(t.id)?.activePage ?? 0;
@@ -81,7 +78,7 @@ let M = s.memo(function (e) {
             M.current?.onMouseEnter(null, 500);
         }, [M]),
         et = s.useCallback(
-            (e, n, s, a) =>
+            (e, n, s, r) =>
                 (0, i.jsx)(v.G, {
                     innerClassName: e,
                     ref: D,
@@ -92,11 +89,11 @@ let M = s.memo(function (e) {
                             color: "currentColor",
                             width: 20,
                             height: 20,
-                            className: r()(e, s),
+                            className: a()(e, s),
                         }),
                     text: (0, i.jsx)(u.Text, {
                         variant: "text-md/medium",
-                        className: r()(O.UU, n),
+                        className: a()(O.UU, n),
                         children: t?.id === (0, g.zf)() ? R.intl.string(R.t.xFQAPs) : R.intl.string(R.t.vyaWs7),
                     }),
                     selected: l,
@@ -110,7 +107,7 @@ let M = s.memo(function (e) {
                                     text: R.intl.string(R.t.y2b7CA),
                                     color: c.A.colors.BACKGROUND_BRAND.css,
                                 }),
-                            a,
+                            r,
                         ],
                     }),
                 }),
