@@ -1,16 +1,18 @@
 "use strict";
-n.d(t, { J: () => f }), n(321073);
-var r = n(181079),
-    i = n(957300),
-    s = n(616075),
-    a = n(832275),
-    o = n(976860),
-    l = n(345942),
-    u = n(967198),
-    c = n(711014),
-    d = n(287809),
-    _ = n(652215);
-let f = {
+n.d(t, { J: () => h }), n(321073);
+var r = n(554146),
+    i = n(771781),
+    s = n(826673),
+    a = n(181079),
+    o = n(379587),
+    l = n(832275),
+    u = n(976860),
+    c = n(345942),
+    d = n(967198),
+    _ = n(711014),
+    f = n(287809),
+    p = n(652215);
+let h = {
     binds: (() => {
         let e = 10,
             t = [];
@@ -20,20 +22,26 @@ let f = {
     comboKeysBindGlobal: !0,
     action(e, t) {
         let n,
-            f = parseInt(t.split("+")[1], 10);
-        if ((0 === f && (f = 10), !isNaN(f) && 0 !== f)) {
-            if (1 === f) n = _.ME;
+            h = parseInt(t.split("+")[1], 10);
+        if ((0 === h && (h = 10), !isNaN(h) && 0 !== h)) {
+            if (1 === h) n = p.ME;
             else {
-                let e = i.E.getState().isPreviewMode,
-                    { enabled: t, hasHigherPrivileges: o } = s.w.getConfig({ location: "jumpToGuild" });
-                n = (0, a.J)(r.A, d.default, e, t, o)
-                    ? 2 === f
-                        ? _.YYv
-                        : c.Ay.getFlattenedGuildIds()[f - 3]
-                    : c.Ay.getFlattenedGuildIds()[f - 2];
+                let { enabled: e, hasHigherPrivileges: t } = o.o.getConfig({ location: "jumpToGuild" }),
+                    u = (0, i.dD)(r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM),
+                    c = (0, s.k8)(r.M.FAVORITES_SERVER_ONBOARDING_INTRO);
+                n = (0, l.J)(a.A, f.default, d.A, {
+                    favoritesGuildXPEnabled: e,
+                    hasHigherPrivileges: t,
+                    isMenuItemDCSelected: u,
+                    isIntroDCDismissed: c,
+                })
+                    ? 2 === h
+                        ? p.YYv
+                        : _.Ay.getFlattenedGuildIds()[h - 3]
+                    : _.Ay.getFlattenedGuildIds()[h - 2];
             }
             if (null != n)
-                return n === _.ME && null == u.A.getGuildId() ? (0, o.pX)(_.BVt.CHANNEL(n)) : (0, l.u)(n), !1;
+                return n === p.ME && null == d.A.getGuildId() ? (0, u.pX)(p.BVt.CHANNEL(n)) : (0, c.u)(n), !1;
         }
     },
 };

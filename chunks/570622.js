@@ -1,27 +1,22 @@
-n.d(t, { z: () => c });
+n.d(t, { z: () => u });
 var l = n(554146),
     s = n(826673),
     a = n(932001),
-    i = n(757036),
-    r = n(379587),
-    o = n(652215);
-let u = new Set([
-    o.rbe.DM,
-    o.rbe.GROUP_DM,
-    o.rbe.GUILD_TEXT,
-    o.rbe.GUILD_ANNOUNCEMENT,
-    o.rbe.ANNOUNCEMENT_THREAD,
-    o.rbe.GUILD_FORUM,
+    i = n(93055),
+    r = n(652215);
+let o = new Set([
+    r.rbe.DM,
+    r.rbe.GROUP_DM,
+    r.rbe.GUILD_TEXT,
+    r.rbe.GUILD_ANNOUNCEMENT,
+    r.rbe.ANNOUNCEMENT_THREAD,
+    r.rbe.GUILD_FORUM,
 ]);
-function c(e) {
-    let { location: t, isChannelSelected: n, isTargetInViewport: o = !0, channelType: c, isPopoverAllowed: d = !0 } = e,
-        m = (0, s.JZ)(l.M.FAVORITES_SERVER_ONBOARDING_INTRO),
-        A = (0, i.L)(),
-        p = (0, r.m)({ location: t }).enabled && o && n && u.has(c) && d,
-        [h, x] = (0, a.kn)(p && m ? [l.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM] : []);
-    return {
-        showMenuItemPopover: h === l.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM,
-        markMenuItemPopoverAsDismissed: x,
-        isPremium: A,
-    };
+function u(e) {
+    let { location: t, isChannelSelected: n, isTargetInViewport: r = !0, channelType: u, isPopoverAllowed: c = !0 } = e,
+        d = (0, s.JZ)(l.M.FAVORITES_SERVER_ONBOARDING_INTRO),
+        { isExperimentEnabled: m } = (0, i.TW)(t),
+        A = m && r && n && o.has(u) && c,
+        [p, f] = (0, a.kn)(A && d ? [l.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM] : []);
+    return { showMenuItemPopover: p === l.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM, markMenuItemPopoverAsDismissed: f };
 }

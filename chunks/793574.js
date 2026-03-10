@@ -554,6 +554,8 @@ var r = (function (e) {
             "game community multi guild upsell guilds bar entrypoint"),
         (e.FAVORITES_GUILD_HOME = "favorites guild home"),
         (e.FAVORITES_GUILD_UPSELL_MODAL = "favorites guild upsell modal"),
+        (e.FAVORITES_GUILD_BUTTON = "favorites guild button"),
+        (e.FAVORITES_GUILD_MENU_ITEM = "favorites guild menu item"),
         e
     );
 })(r || {});

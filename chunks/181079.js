@@ -66,5 +66,8 @@ class m extends i.Ay.Store {
         let t = this.getFavorite(e);
         return t?.nickname ?? void 0;
     }
+    hasFavorites() {
+        return !(0, r.isEmpty)(this.getFavoriteChannels());
+    }
 }
 let E = new m(a.h, {});

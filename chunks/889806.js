@@ -159,26 +159,25 @@ class k extends L.Ay {
                 enableActivities: S,
                 showMenuItemPopover: T,
                 markMenuItemPopoverAsDismissed: v,
-                isPremium: y,
-                channelItemRef: j,
+                channelItemRef: y,
             } = this.props,
-            R = j ?? this.channelItemRef,
-            O = !T && o,
-            L = !T && S && null != I && I.length > 0,
-            M = (0, _.M)(C),
-            G = (0, i.jsxs)("li", {
+            j = y ?? this.channelItemRef,
+            R = !T && o,
+            O = !T && S && null != I && I.length > 0,
+            L = (0, _.M)(C),
+            M = (0, i.jsxs)("li", {
                 className: r()(this.getClassName(), { [w.r9]: this.isDisabled(), [w.wH]: n }),
                 "data-dnd-name": e.name,
-                onMouseEnter: O || L ? this.handleMouseEnter : void 0,
-                onMouseLeave: O || L ? this.handleMouseLeave : void 0,
+                onMouseEnter: R || O ? this.handleMouseEnter : void 0,
+                onMouseLeave: R || O ? this.handleMouseLeave : void 0,
                 children: [
                     (0, i.jsx)(c.YNO, {
-                        targetElementRef: R,
+                        targetElementRef: j,
                         position: "right",
                         renderPopout: this.renderPopout,
                         onRequestClose: this.handleClosePopout,
                         spacing: 17,
-                        shouldShow: (O && this.state.shouldShowThreadsPopout) || (L && this.state.shouldShowActivities),
+                        shouldShow: (R && this.state.shouldShowThreadsPopout) || (O && this.state.shouldShowActivities),
                         children: () =>
                             (0, i.jsxs)(D.Ay, {
                                 ref: this.setChannelItemRef,
@@ -190,8 +189,8 @@ class k extends L.Ay {
                                 unread: l,
                                 mentionCount: d,
                                 hasActiveThreads: a,
-                                subtitle: M?.subtitle,
-                                subtitleColor: M?.color,
+                                subtitle: L?.subtitle,
+                                subtitleColor: L?.color,
                                 onMouseDown: this.handleMouseDown,
                                 onContextMenu: this.handleContextMenu,
                                 connectDragPreview: m ? A : null,
@@ -224,11 +223,10 @@ class k extends L.Ay {
                                 ],
                             }),
                     }),
-                    T &&
-                        (0, i.jsx)(x.A, { targetElementRef: R, isPremium: y ?? !1, markMenuItemPopoverAsDismissed: v }),
+                    T && (0, i.jsx)(x.A, { targetElementRef: j, markMenuItemPopoverAsDismissed: v }),
                 ],
             });
-        return m ? u(h(G)) : G;
+        return m ? u(h(M)) : M;
     }
 }
 let V = (0, h.a)(k);
@@ -274,11 +272,7 @@ function B(e) {
                 H(e);
             }, []),
         ),
-        {
-            showMenuItemPopover: K,
-            markMenuItemPopoverAsDismissed: W,
-            isPremium: Y,
-        } = (0, f.z)({
+        { showMenuItemPopover: K, markMenuItemPopoverAsDismissed: W } = (0, f.z)({
             location: "TextChannel",
             isChannelSelected: d,
             isTargetInViewport: B,
@@ -305,7 +299,6 @@ function B(e) {
               enableActivities: G,
               showMenuItemPopover: K,
               markMenuItemPopoverAsDismissed: W,
-              isPremium: Y,
               channelItemRef: F,
           });
 }
