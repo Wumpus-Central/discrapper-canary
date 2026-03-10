@@ -23152,6 +23152,7 @@
   "6PDpse": "Vibrate (Dev)",
   "MSB4E4": "!!{amountOrPercentOffText}!! Off",
   "rNF29q": "Add new payment method",
+  "8imbq5": "Boosting $[guildIcon]({{guildIcon}}) **!!{guildName}!!**",
   "2PiTTi": "Gift for !!{avatar}!! **!!{nickname}!!** @!!{username}!!",
   "iPorlt": "{intervalCount, plural, one {day} other { days} }",
   "8CYJ8Y": "{intervalCount, plural, one {month} other { months} }",
