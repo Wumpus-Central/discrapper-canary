@@ -230,7 +230,6 @@ let i = {
     },
     MessageManager: {
         actions: [
-            "APP_STATE_UPDATE",
             "APP_STATE_UPDATE_WILL_BECOME_ACTIVE",
             "OVERLAY_INITIALIZE",
             "CONNECTION_RESUMED",
@@ -406,7 +405,7 @@ let i = {
         ],
         inlineRequire: () => n(415202).A,
     },
-    RelationshipManager: { actions: ["RELATIONSHIP_ADD", "FRIEND_REQUEST_ACCEPTED"], inlineRequire: () => n(903626).A },
+    RelationshipManager: { actions: ["RELATIONSHIP_ADD", "FRIEND_REQUEST_ACCEPTED"], inlineRequire: () => n(681245).A },
     RTCLatencyTestManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(222804).A },
     SavedMessagesManager: {
         actions: ["POST_CONNECTION_OPEN"],
