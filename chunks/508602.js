@@ -21,6 +21,7 @@ var r = (function (e) {
         (e.VOICE_CHANNEL = "voice_channel"),
         (e.GAMING_PROFILE = "gaming_profile"),
         (e.POLL_RESULT = "poll_result"),
+        (e.COMPONENTS = "components"),
         e
     );
 })({});

@@ -1,14 +1,14 @@
 "use strict";
 n.d(t, {
-    G8: () => D,
-    NV: () => N,
-    V: () => O,
+    G8: () => L,
+    NV: () => O,
+    V: () => D,
     ax: () => x,
-    ds: () => L,
-    fK: () => v,
-    fS: () => w,
-    nh: () => b,
-    p6: () => R,
+    ds: () => w,
+    fK: () => N,
+    fS: () => M,
+    nh: () => R,
+    p6: () => b,
 }),
     n(938796),
     n(323874),
@@ -17,57 +17,58 @@ n.d(t, {
     n(321073);
 var r = n(735438),
     i = n.n(r),
-    a = n(989349),
-    s = n.n(a),
+    s = n(989349),
+    a = n.n(s),
     o = n(317097),
     l = n(665260),
-    u = n(661191),
-    c = n(652215),
-    d = n(581619);
-let _ = /sketchfab/i,
-    f = /^https:\/\/sketchfab\.com/i,
-    p = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
-    h = 0x15b7e4a5bfb,
-    m = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
+    u = n(814890),
+    c = n(661191),
+    d = n(652215),
+    _ = n(581619);
+let f = /sketchfab/i,
+    p = /^https:\/\/sketchfab\.com/i,
+    h = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
+    m = 0x15b7e4a5bfb,
+    E = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
     g = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
-    E = RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/shop"),
-    A = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/game-shop\/([0-9]+)\/([0-9]+)/,
-    I = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/game-shop\/([0-9]+)\/([0-9]+)/;
-function T(e) {
+    A = RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/shop"),
+    I = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/game-shop\/([0-9]+)\/([0-9]+)/,
+    T = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/game-shop\/([0-9]+)\/([0-9]+)/;
+function S(e) {
     let { width: t, height: n } = e;
     return t > 0 && n > 0;
 }
 function y(e, t, n) {
-    if ((null != t && _.test(t.name)) || f.test(n.url)) return !1;
+    if ((null != t && f.test(t.name)) || p.test(n.url)) return !1;
     let r = null != n.proxy_url || /^https:/i.test(n.url);
-    return null != e && u.default.extractTimestamp(e) < h && (r = r && null != t && p.test(t.name)), r;
+    return null != e && c.default.extractTimestamp(e) < m && (r = r && null != t && h.test(t.name)), r;
 }
-function S(e) {
+function v(e) {
     let {
         url: t,
         proxy_url: n,
         width: r,
         height: i,
-        placeholder: a,
-        placeholder_version: s,
+        placeholder: s,
+        placeholder_version: a,
         description: o,
         flags: u,
-        content_type: d,
+        content_type: c,
     } = e;
     return {
         url: t,
         proxyURL: n,
         width: r,
         height: i,
-        placeholder: a,
-        placeholderVersion: s,
+        placeholder: s,
+        placeholderVersion: a,
         description: o,
-        srcIsAnimated: (0, l.Lt)(u ?? 0, c.qNw.IS_ANIMATED),
+        srcIsAnimated: (0, l.Lt)(u ?? 0, d.qNw.IS_ANIMATED),
         flags: u ?? 0,
-        contentType: d ?? void 0,
+        contentType: c ?? void 0,
     };
 }
-function v(e, t, n) {
+function N(e, t, n) {
     let r = {
         id: i().uniqueId("embed_"),
         url: n.url,
@@ -90,38 +91,42 @@ function v(e, t, n) {
                 iconProxyURL: n.author.proxy_icon_url,
             }),
         null != n.provider && null != n.provider.name && (r.provider = { name: n.provider.name, url: n.provider.url }),
-        null != n.timestamp && (r.timestamp = s()(new Date(n.timestamp))),
+        null != n.timestamp && (r.timestamp = a()(new Date(n.timestamp))),
         null != n.color && (r.color = (0, o.$k)(n.color, !0)),
-        null != n.thumbnail && T(n.thumbnail))
+        null != n.thumbnail && S(n.thumbnail))
     )
         switch (r.type) {
-            case c.Auw.ARTICLE:
-            case c.Auw.IMAGE:
-                r.image = S(n.thumbnail);
+            case d.Auw.ARTICLE:
+            case d.Auw.IMAGE:
+                r.image = v(n.thumbnail);
                 break;
             default:
-                r.thumbnail = S(n.thumbnail);
+                r.thumbnail = v(n.thumbnail);
         }
-    return (
-        null != n.image && T(n.image) && (r.image = S(n.image)),
+    if (
+        (null != n.image && S(n.image) && (r.image = v(n.image)),
         null != n.video &&
             (null == r.thumbnail &&
                 null != n.video.proxy_url &&
-                T(n.video) &&
+                S(n.video) &&
                 (r.thumbnail = {
                     width: n.video.width,
                     height: n.video.height,
                     url: C(n.video.proxy_url, { format: "webp" }),
                 }),
-            null != r.thumbnail && T(n.video) && y(t, n.provider, n.video) && (r.video = S(n.video))),
-        d.p.has(r.type)
+            null != r.thumbnail && S(n.video) && y(t, n.provider, n.video) && (r.video = v(n.video))),
+        _.p.has(r.type)
             ? (r.fields = (n.fields ?? []).map((e) => {
                   let { name: t, value: n, inline: r } = e;
                   return { rawName: t, rawValue: n, inline: r };
               }))
             : (r.fields = []),
-        r
-    );
+        null != n.components)
+    ) {
+        let e = (0, u.ZV)(n.components);
+        r.components = e.length > 0 ? e : void 0;
+    }
+    return r;
 }
 function C(e, t) {
     let n = new URL(e);
@@ -132,7 +137,7 @@ function C(e, t) {
         n.toString()
     );
 }
-function b(e) {
+function R(e) {
     let t = new Map(),
         n = [];
     return (
@@ -150,28 +155,28 @@ function b(e) {
         n
     );
 }
-function N(e) {
-    let { image: t, video: n, type: r, author: i, rawTitle: a } = e;
-    return (null != t || null != n) && (r === c.Auw.GIFV || (r !== c.Auw.RICH && null == i && null == a));
-}
-function R(e) {
-    return e.type === c.Auw.ARTICLE && null != e.url && (g.test(e.url) || m.test(e.url));
-}
 function O(e) {
-    return e.type === c.Auw.ARTICLE && null != e.url && E.test(e.url);
+    let { image: t, video: n, type: r, author: i, rawTitle: s } = e;
+    return (null != t || null != n) && (r === d.Auw.GIFV || (r !== d.Auw.RICH && null == i && null == s));
+}
+function b(e) {
+    return e.type === d.Auw.ARTICLE && null != e.url && (g.test(e.url) || E.test(e.url));
 }
 function D(e) {
-    return e.type === c.Auw.ARTICLE && null != e.url && (I.test(e.url) || A.test(e.url));
+    return e.type === d.Auw.ARTICLE && null != e.url && A.test(e.url);
 }
-function L(e, t, n) {
+function L(e) {
+    return e.type === d.Auw.ARTICLE && null != e.url && (T.test(e.url) || I.test(e.url));
+}
+function w(e, t, n) {
     return null != t && null != n
         ? { maxMediaWidth: t, maxMediaHeight: n }
         : e.provider?.name === "TikTok"
           ? { maxMediaWidth: 400, maxMediaHeight: 450 }
           : { maxMediaWidth: 400, maxMediaHeight: 300 };
 }
-function w(e, t) {
-    return e.isPrivate() ? !e.isManaged() : t.can(c.xBc.EMBED_LINKS, e);
+function M(e, t) {
+    return e.isPrivate() ? !e.isManaged() : t.can(d.xBc.EMBED_LINKS, e);
 }
 function x(e) {
     return (
