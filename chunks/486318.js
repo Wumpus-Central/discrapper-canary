@@ -1,16 +1,15 @@
-"use strict";
-n.d(t, { N: () => s, e: () => r });
-var a = n(397927),
-    l = n(871123);
-function r(e) {
-    let { imageUrl: t, backgroundImageUrl: n, altText: l, customClassNames: r } = e;
+n.d(e, { N: () => i, e: () => s });
+var r = n(397927),
+    a = n(871123);
+function s(t) {
+    let { imageUrl: e, backgroundImageUrl: n, altText: a, customClassNames: s } = t;
     return {
         type: "dynamic",
-        component: a.Oz7.SOCIAL_LAYER_SKU_PREVIEW,
+        component: r.Oz7.SOCIAL_LAYER_SKU_PREVIEW,
         aspectRatio: "16/9",
-        props: { imageUrl: t, backgroundImageUrl: n, altText: l, customClassNames: r },
+        props: { imageUrl: e, backgroundImageUrl: n, altText: a, customClassNames: s },
     };
 }
-function s(e) {
-    return r({ imageUrl: (0, l.fq)(e), backgroundImageUrl: (0, l.xf)(e), altText: e.name });
+function i(t) {
+    return s({ imageUrl: (0, a.fq)(t), backgroundImageUrl: (0, a.xf)(t), altText: t.name });
 }
