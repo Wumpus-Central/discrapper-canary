@@ -1,4 +1,4 @@
-n.d(t, { j: () => O });
+n.d(t, { j: () => j });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -17,7 +17,7 @@ var i = n(627968),
     x = n(641324),
     E = n(46373),
     T = n(49999),
-    S = n(639485);
+    S = n(872175);
 function C(e) {
     let { notice: t, children: n } = e,
         { showNotice: l, handleStoreUpdate: a } = (0, g.L_)(),
@@ -147,10 +147,6 @@ function v(e) {
     return (0, i.jsx)(I, { panelKey: t, notice: n, children: (0, i.jsx)(b, { layout: l, decoration: s }) });
 }
 function j(e) {
-    let { component: t, panelKey: n, notice: s } = e;
-    return (0, i.jsx)(I, { panelKey: n, notice: s, children: (0, i.jsx)(t, {}) });
-}
-function O(e) {
     let { node: t } = e,
         { layout: n } = t,
         l = (0, r.bG)([_.A], () => _.A.hidePersonalInformation);
@@ -167,8 +163,6 @@ function O(e) {
         l && t.hideInStreamerMode)
     )
         return (0, i.jsx)(c.A, {});
-    if (null != t.StronglyDiscouragedCustomComponent)
-        return (0, i.jsx)(j, { component: t.StronglyDiscouragedCustomComponent, panelKey: t.key, notice: t.notice });
     if ((0, m.zY)(n)) return (0, i.jsx)(N, { panelKey: t.key, notice: t.notice, decoration: t.decoration, layout: n });
     if ((0, m.Iu)(n)) return (0, i.jsx)(v, { panelKey: t.key, notice: t.notice, decoration: t.decoration, layout: n });
     throw Error("Panels must have a list of categories or a list of tabs");

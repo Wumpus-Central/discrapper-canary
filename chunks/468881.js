@@ -1,42 +1,36 @@
-n.d(t, { wC: () => N });
+n.d(t, { w: () => b });
 var i = n(934551),
     s = n(419954),
     l = n(933297),
     a = n(780964),
     r = n(358776),
-    o = n(805577),
-    d = n(916335),
-    c = n(380450),
-    u = n(41598),
-    _ = n(640351),
-    g = n(623049),
-    m = n(43119),
-    A = n(661485),
-    h = n(411669),
-    p = n(581837),
-    x = n(666196),
-    E = n(654757),
-    T = n(556710),
-    S = n(305290),
-    C = n(8187),
-    I = n(985018);
-(0, s.t_)(a.X.ACCESSIBILITY_PANEL, {
-    useTitle: () => I.intl.string(I.t.G0neg7),
-    StronglyDiscouragedCustomComponent: o.Ay,
-    buildLayout: () => [],
-});
+    o = n(916335),
+    d = n(380450),
+    c = n(41598),
+    u = n(640351),
+    _ = n(623049),
+    g = n(43119),
+    m = n(661485),
+    A = n(411669),
+    h = n(581837),
+    p = n(666196),
+    x = n(654757),
+    E = n(556710),
+    T = n(305290),
+    S = n(8187),
+    C = n(985018);
 let f = (0, s.t_)(a.X.ACCESSIBILITY_PANEL, {
-        useTitle: () => I.intl.string(I.t.G0neg7),
-        buildLayout: () => [u.s, T._, p.b, E.T, A.V, x.G, _.v, g.T],
+        useTitle: () => C.intl.string(C.t.G0neg7),
+        buildLayout: () => [c.s, E._, h.b, x.T, m.V, p.G, u.v, _.T],
     }),
-    b = (0, s.t_)(a.X.ACCESSIBILITY_PANEL, {
-        useTitle: () => I.intl.string(I.t.G0neg7),
-        buildLayout: () => [S.U, C.P, h.l, E.T, m.X],
-        decoration: { type: l.t9.STRONGLY_DISCOURAGED_CUSTOM, component: d.A, sticky: !0 },
+    I = (0, s.t_)(a.X.ACCESSIBILITY_PANEL, {
+        useTitle: () => C.intl.string(C.t.G0neg7),
+        buildLayout: () => [T.U, S.P, A.l, x.T, g.X],
+        decoration: { type: l.t9.STRONGLY_DISCOURAGED_CUSTOM, component: o.A, sticky: !0 },
     }),
-    N = (0, s.i4)(a.X.ACCESSIBILITY_SIDEBAR_ITEM, {
-        useTitle: () => I.intl.string(I.t.G0neg7),
+    b = (0, s.i4)(a.X.ACCESSIBILITY_SIDEBAR_ITEM, {
+        useTitle: () => C.intl.string(C.t.G0neg7),
         icon: i.AccessibilityIcon,
-        useMenu: c.A,
-        buildLayout: () => ((0, r.Ci)("AccessibilityPanel") ? [b] : [f]),
+        useMenu: d.A,
+        buildLayout: () => ((0, r.Ci)("AccessibilityPanel") ? [I] : [f]),
     });

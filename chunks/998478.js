@@ -24,7 +24,7 @@ let T = (0, i.WI)(l.X.APP_SECTION, {
             e ? p.q : null,
             e ? null : d.y,
             e ? u.S : null,
-            r.wC,
+            r.w,
             e ? null : p.q,
             A.z,
             e ? null : c.g,
