@@ -1,6 +1,7 @@
 e.exports = {
     zr: "root__9c3be",
     Q0: "editingToolbar__9c3be",
+    b: "closeButton__9c3be",
     oR: "toast__9c3be",
     aX: "interactionToast__9c3be",
     tB: "backdrop__9c3be",
