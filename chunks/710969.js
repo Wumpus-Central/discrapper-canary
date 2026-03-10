@@ -1,23 +1,24 @@
 "use strict";
 n.d(t, {
-    Gp: () => b,
-    HN: () => I,
-    Ic: () => h,
-    Kc: () => y,
-    L4: () => N,
-    Li: () => v,
-    RF: () => O,
-    ZG: () => g,
-    gO: () => p,
-    if: () => m,
-    r$: () => D,
-    t6: () => A,
-    v1: () => E,
-    vZ: () => R,
-    vc: () => _,
-    vy: () => f,
-    xn: () => T,
-    yI: () => C,
+    Gp: () => O,
+    HN: () => T,
+    Ic: () => m,
+    Kc: () => v,
+    L4: () => C,
+    Li: () => N,
+    Oh: () => _,
+    RF: () => D,
+    ZG: () => A,
+    gO: () => h,
+    if: () => E,
+    r$: () => L,
+    t6: () => I,
+    v1: () => g,
+    vZ: () => b,
+    vc: () => f,
+    vy: () => p,
+    xn: () => S,
+    yI: () => R,
 });
 var r = n(665260),
     i = n(773669),
@@ -28,7 +29,10 @@ var r = n(665260),
     u = n(654487),
     c = n(652215);
 let d = 2592e6;
-function _(e, t, n) {
+function _(e) {
+    return null != e && e.fetchedAt + e.ttlMillis >= Date.now();
+}
+function f(e, t, n) {
     let r = Array.isArray(t) ? new Map(t.map((e) => [e.id, e])) : t,
         i = Array.isArray(n) ? new Map(n.map((e) => [e.id, e])) : n,
         s = r.get(e);
@@ -36,24 +40,24 @@ function _(e, t, n) {
     let a = i.get(e)?.replacementId;
     if (null != a) return r.get(a);
 }
-function f(e) {
+function p(e) {
     return Object.keys(u.TY).includes(o.uF[e]);
 }
-function p(e, t) {
-    if (!f(t)) return !1;
+function h(e, t) {
+    if (!p(t)) return !1;
     let n = o.uF[t];
     return (0, r.Lt)(e.dismissedQuestContent, u.TY[n]);
 }
-function h(e) {
+function m(e) {
     return new Date(e.config.expiresAt).valueOf() <= Date.now();
 }
-function m(e) {
-    if (!h(e)) return !1;
+function E(e) {
+    if (!m(e)) return !1;
     let t = Date.now() - d,
         n = new Date(e.config.expiresAt).valueOf();
     return null != e.config.expiresAt && !(n <= t);
 }
-function E(e) {
+function g(e) {
     let t = null,
         n = Date.now();
     for (let r of e) {
@@ -62,28 +66,28 @@ function E(e) {
     }
     return t;
 }
-function g(e) {
+function A(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { dateStyle: "short" };
     return null == e ? "" : new Date(e).toLocaleDateString(i.default.locale, t);
 }
-function A(e, t, n) {
+function I(e, t, n) {
     let r = t.get(n);
     if (null == r) return;
     let i = e.get(r.quest.id);
-    if (null != i && !h(i)) return i;
+    if (null != i && !m(i)) return i;
 }
-function I(e) {
+function T(e) {
     return {
         [o.uF.QUEST_BAR]: o.yW.DESKTOP_ACCOUNT_PANEL_AREA,
         [o.uF.QUEST_BAR_V2]: o.yW.DESKTOP_ACCOUNT_PANEL_AREA,
         [o.uF.QUEST_BAR_MOBILE]: o.yW.MOBILE_HOME_DOCK_AREA,
     }[e];
 }
-function T(e) {
-    let t = I(e);
+function S(e) {
+    let t = T(e);
     return null != t && u.J6.has(t);
 }
-function S(e) {
+function y(e) {
     let { enableNewRequestBehavior: t } = l.A.getConfig({ location: "getQuestDeliveryDataForPlacement" });
     if (t) {
         let t = a.A.questAdDecisionByPlacement.get(e);
@@ -114,24 +118,24 @@ function S(e) {
               };
     }
 }
-function y(e, t) {
-    let n = I(t);
+function v(e, t) {
+    let n = T(t);
     if (null == n) return u.K3;
-    let { adDecisionData: r, questId: i } = S(n) ?? {};
+    let { adDecisionData: r, questId: i } = y(n) ?? {};
     return null != r && i === e ? r : u.K3;
 }
-function v(e) {
-    let t = I(e);
-    if (null != t) return S(t)?.metadataRaw;
-}
 function N(e) {
-    let t = I(e);
-    if (null != t) return S(t)?.metadataSealed;
+    let t = T(e);
+    if (null != t) return y(t)?.metadataRaw;
 }
-function C(e, t) {
-    let n = I(e);
+function C(e) {
+    let t = T(e);
+    if (null != t) return y(t)?.metadataSealed;
+}
+function R(e, t) {
+    let n = T(e);
     if (null != n) {
-        let { trafficMetadataRaw: e, questId: r } = S(n) ?? {};
+        let { trafficMetadataRaw: e, questId: r } = y(n) ?? {};
         if (null != e && r === t) return e;
     }
     if (null != t) {
@@ -139,10 +143,10 @@ function C(e, t) {
         return e?.trafficMetadataRaw;
     }
 }
-function b(e, t) {
-    let n = I(e);
+function O(e, t) {
+    let n = T(e);
     if (null != n) {
-        let { trafficMetadataSealed: e, questId: r } = S(n) ?? {};
+        let { trafficMetadataSealed: e, questId: r } = y(n) ?? {};
         if (null != e && r === t) return e;
     }
     if (null != t) {
@@ -150,13 +154,13 @@ function b(e, t) {
         return e?.trafficMetadataSealed;
     }
 }
-function R(e) {
-    let t = I(e);
-    if (null != t) return S(t)?.adContext;
+function b(e) {
+    let t = T(e);
+    if (null != t) return y(t)?.adContext;
 }
-function O(e, t) {
+function D(e, t) {
     s.A.captureException(e, { ...t, tags: { ...t?.tags, app_context: "quests" } });
 }
-function D() {
+function L() {
     return window.location.pathname.startsWith(c.BVt.QUEST_HOME_DEPRECATED);
 }

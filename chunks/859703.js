@@ -335,12 +335,18 @@ function ez(e) {
     (o = !0), (l = new Map(l)).set(t, !0);
 }
 function eq(e) {
-    let { quests: t, metadataRaw: n, content: r } = e;
-    (o = !1), (l = new Map(l)).set(r, !1), 0 === t.size ? R.delete(r) : R.set(r, { quests: t, metadataRaw: n });
+    let { serverQuests: t, metadataRaw: n, content: r, fetchedAt: i, responseTtlSeconds: s } = e;
+    (o = !1), (l = new Map(l)).set(r, !1);
+    let a = eK(s),
+        u = R.get(r),
+        c = new Map(u?.quests);
+    for (let [e, n] of t)
+        c.set(e, { fetchedAt: i, ttlMillis: a, questWithUserStatus: null != n ? (0, W.rO)(n) : null });
+    R.set(r, { quests: c, metadataRaw: n });
 }
 function eZ(e) {
     let { content: t } = e;
-    R.delete(t), (o = !1), (l = new Map(l)).set(t, !1);
+    (o = !1), (l = new Map(l)).set(t, !1);
 }
 function eX() {
     let e = !1,
