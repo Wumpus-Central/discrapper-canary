@@ -19,8 +19,8 @@ var i = n(627968),
     x = n(688810),
     C = n(861382),
     S = n(875163),
-    T = n(224805),
-    I = n(598071),
+    I = n(224805),
+    T = n(598071),
     N = n(101555),
     y = n(834755),
     b = n(703007),
@@ -94,7 +94,7 @@ let X = l.memo(
                 emojiPickerCloseOnModalOuterClick: eA,
                 parentModalKey: eg,
             } = e,
-            ep = T.A.useField("channelDrafts")[b.id],
+            ep = I.A.useField("channelDrafts")[b.id],
             ef = ep?.title ?? "",
             e_ = ep?.heroFile,
             eE = ep?.publish ?? !0,
@@ -102,11 +102,11 @@ let X = l.memo(
         o()(null != v, "chat input type must be set");
         let { analyticsLocations: eC } = (0, x.Ay)(E.A.CHANNEL_TEXT_AREA),
             eS = (0, V.L0)(t),
-            eT = l.useRef(null),
             eI = l.useRef(null),
+            eT = l.useRef(null),
             eN = l.useRef(null),
             ey = l.useRef(null);
-        eu?.(eI.current);
+        eu?.(eT.current);
         let { activeCommand: eb } = (0, u.cf)([C.A], () => ({
                 activeCommand: v.commands?.enabled ? C.A.getActiveCommand(b.id) : null,
                 activeCommandSection: v.commands?.enabled ? C.A.getActiveCommandSection(b.id) : null,
@@ -128,19 +128,17 @@ let X = l.memo(
             ek = (0, u.bG)([L.A], () => L.A.isEnabled()),
             eU = (0, M.n)(b);
         (0, V.N_)(v, eR, b.id);
-        let { eventEmitter: eG, handleEditorSelectionChanged: eF } = (0, V.ml)(eI, s, r),
+        let { eventEmitter: eG, handleEditorSelectionChanged: eF } = (0, V.ml)(eT, s, r),
             eH = l.useCallback(
                 (e) => {
                     let t = (e) => (
-                            e.shouldClear && ((0, T.x)(b.id, { title: "", heroFile: null }), eI.current?.blur()), e
+                            e.shouldClear && ((0, I.x)(b.id, { title: "", heroFile: null }), eT.current?.blur()), e
                         ),
                         n = [],
-                        i =
-                            ef.length > 0
-                                ? ef
-                                : e.value.length > 0
-                                  ? e.value.slice(0, 80)
-                                  : q.intl.string(q.t["7Xm5QI"]);
+                        i = (ef.length > 0 ? ef : e.value.length > 0 ? e.value : q.intl.string(q.t["7Xm5QI"])).slice(
+                            0,
+                            W.Ign,
+                        );
                     if (null == e_)
                         return ei({
                             ...e,
@@ -173,7 +171,7 @@ let X = l.memo(
                 },
                 [ei, ef, e_, b.id, ex, eE, eU],
             ),
-            { submit: eB, handleSubmit: eV } = (0, V.Zx)(eH, v, eI, ey, b.id),
+            { submit: eB, handleSubmit: eV } = (0, V.Zx)(eH, v, eT, ey, b.id),
             { autocompleteRef: eK, handleMaybeShowAutocomplete: ez, handleHideAutocomplete: eW } = (0, V.v7)(),
             eY = l.useCallback(() => ey?.current?.hide(), []),
             { editorHeight: eq, handleResize: eJ } = (0, V.ck)(U),
@@ -182,25 +180,25 @@ let X = l.memo(
                 handleEnter: eZ,
                 handleMoveSelection: eX,
             } = ((n = l.useCallback(
-                () => !!(!eL && eT.current?.onTabOrEnter(!1)) || eK.current?.onTabOrEnter(!1) || !1,
+                () => !!(!eL && eI.current?.onTabOrEnter(!1)) || eK.current?.onTabOrEnter(!1) || !1,
                 [eL],
             )),
             {
                 handleTab: n,
                 handleEnter: l.useCallback(
-                    () => !!(!eL && eT.current?.onTabOrEnter(!0)) || eK.current?.onTabOrEnter(!1) || !1,
+                    () => !!(!eL && eI.current?.onTabOrEnter(!0)) || eK.current?.onTabOrEnter(!1) || !1,
                     [eL],
                 ),
                 handleMoveSelection: l.useCallback(
-                    (e) => !!(!eL && eT.current?.onMoveSelection(e)) || eK.current?.onMoveSelection(e) || !1,
+                    (e) => !!(!eL && eI.current?.onMoveSelection(e)) || eK.current?.onMoveSelection(e) || !1,
                     [eL],
                 ),
             }),
-            { expressionPickerView: eQ, shouldHideExpressionPicker: e0, handleOuterClick: e1 } = (0, V.MD)(v, eI, b.id),
+            { expressionPickerView: eQ, shouldHideExpressionPicker: e0, handleOuterClick: e1 } = (0, V.MD)(v, eT, b.id),
             { handleAutocompleteVisibilityChange: e2 } = (0, V.uW)(v, b.id),
-            e3 = (0, V.NO)(eI),
-            e7 = (0, V.Vu)(eB, v, eI),
-            e5 = (0, V.C)({ editorRef: eI, disabled: eR, textValue: s, channelId: b.id, chatInputType: v, submit: eH });
+            e3 = (0, V.NO)(eT),
+            e7 = (0, V.Vu)(eB, v, eT),
+            e5 = (0, V.C)({ editorRef: eT, disabled: eR, textValue: s, channelId: b.id, chatInputType: v, submit: eH });
         (0, G.R)(eG, b.guild_id, b.id);
         let [e9, e6] = l.useState(!1),
             e4 = l.useCallback(() => {
@@ -233,9 +231,9 @@ let X = l.memo(
                 if (null == e_) return;
                 let e = P.A.getUploads(b.id, v.drafts.type),
                     t = e.find((e) => e.filename === e_.name)?.id;
-                null != t && g.A.remove(b.id, t, O.C.ChannelMessage), (0, T.x)(b.id, { heroFile: null });
+                null != t && g.A.remove(b.id, t, O.C.ChannelMessage), (0, I.x)(b.id, { heroFile: null });
             }, [b.id, e_, v.drafts.type]);
-        return (0, i.jsx)(I.Sv, {
+        return (0, i.jsx)(T.Sv, {
             value: eG,
             children: (0, i.jsxs)(x.f5, {
                 value: eC,
@@ -267,7 +265,7 @@ let X = l.memo(
                                                             : (0, i.jsx)(en, {
                                                                   channel: b,
                                                                   onImageUploaded: (e) =>
-                                                                      (0, T.x)(b.id, { heroFile: e }),
+                                                                      (0, I.x)(b.id, { heroFile: e }),
                                                                   onFocus: () => e6(!0),
                                                               }),
                                                         (0, i.jsx)("input", {
@@ -275,7 +273,7 @@ let X = l.memo(
                                                             className: J.hz,
                                                             placeholder: q.intl.string(q.t.Z8fYjO),
                                                             value: ef,
-                                                            onChange: (e) => (0, T.x)(b.id, { title: e.target.value }),
+                                                            onChange: (e) => (0, I.x)(b.id, { title: e.target.value }),
                                                         }),
                                                     ],
                                                 }),
@@ -285,7 +283,7 @@ let X = l.memo(
                                                         ringTarget: eS,
                                                         ringClassName: $.Rg,
                                                         children: (0, i.jsx)(H.A, {
-                                                            ref: eI,
+                                                            ref: eT,
                                                             id: h,
                                                             focused: j,
                                                             useSlate: eO,
@@ -434,7 +432,7 @@ let X = l.memo(
                                 focused: j,
                                 expressionPickerView: eQ,
                                 type: v,
-                                editorRef: eI,
+                                editorRef: eT,
                                 onSendMessage: eB,
                                 onSendSticker: () => {},
                                 onVisibilityChange: e2,
@@ -466,7 +464,7 @@ let X = l.memo(
 );
 function Q(e) {
     let { channelId: t, canCreateThread: n } = e,
-        l = T.A.useField("channelDrafts")[t],
+        l = I.A.useField("channelDrafts")[t],
         s = l?.createThread ?? !0,
         a = l?.publish ?? !0;
     return (0, i.jsxs)(A.W1t, {
@@ -482,7 +480,7 @@ function Q(e) {
                 checked: n && s,
                 disabled: !n,
                 action: () => {
-                    (0, T.x)(t, { createThread: !s });
+                    (0, I.x)(t, { createThread: !s });
                 },
             }),
             (0, i.jsx)(A.sLh, {
@@ -490,7 +488,7 @@ function Q(e) {
                 label: q.intl.string(q.t.MFGE51),
                 checked: a,
                 action: () => {
-                    (0, T.x)(t, { publish: !a });
+                    (0, I.x)(t, { publish: !a });
                 },
             }),
         ],
