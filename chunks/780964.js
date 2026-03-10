@@ -394,7 +394,6 @@ var r = (function (e) {
         (e.ADVANCED_CATEGORY = "advanced_category"),
         (e.ADVANCED_DEVELOPER_MODE = "advanced_developer_mode"),
         (e.ADVANCED_HARDWARE_ACCELERATION = "advanced_hardware_acceleration"),
-        (e.ADVANCED_HARDWARE_ACCELERATION_WARNING = "advanced_hardware_acceleration_warning"),
         (e.ADVANCED_SHOW_GAME_LIBRARY = "advanced_show_game_library"),
         (e.ADVANCED_APPLICATION_TEST_MODE = "advanced_application_test_mode"),
         (e.ACTIVITY_SECTION = "activity_section"),

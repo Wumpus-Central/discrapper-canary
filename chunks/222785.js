@@ -1,4 +1,4 @@
-n.d(i, { default: () => R });
+n.d(i, { default: () => F });
 var t = n(627968),
     l = n(64700),
     a = n(284009),
@@ -7,95 +7,97 @@ var t = n(627968),
     s = n(397927),
     c = n(686449),
     o = n(293260),
-    u = n(226958),
-    g = n(82770),
-    A = n(346247),
-    p = n(434352),
-    y = n(664967),
+    u = n(649308),
+    g = n(226958),
+    A = n(82770),
+    p = n(346247),
+    y = n(434352),
+    f = n(664967),
     b = n(531335),
-    f = n(957316),
-    I = n(974103),
-    h = n(509536),
-    E = n(359047),
+    I = n(957316),
+    h = n(974103),
+    E = n(509536),
+    v = n(359047),
     x = n(997509),
-    v = n(595818),
-    G = n(685073),
-    D = n(534400),
-    j = n(647534),
-    O = n(857071),
-    M = n(36942),
-    m = n(149280),
-    L = n(260509),
-    U = n(696451),
+    G = n(595818),
+    D = n(685073),
+    M = n(534400),
+    O = n(647534),
+    j = n(857071),
+    m = n(36942),
+    L = n(149280),
+    U = n(260509),
+    _ = n(696451),
     N = n(576705),
-    _ = n(543465),
-    C = n(287809),
+    C = n(543465),
+    T = n(287809),
     P = n(954571),
-    T = n(652215),
-    S = n(349828),
-    w = n(985018),
-    H = n(583970);
-let R = l.memo(function (e) {
-    let { guild: i, onClose: a, onSelect: R } = e,
-        k = (0, d.bG)([C.default], () => C.default.getCurrentUser());
-    r()(null != k, "GuildHeaderPopout: user cannot be undefined"),
+    S = n(652215),
+    w = n(349828),
+    H = n(985018),
+    R = n(583970);
+let F = l.memo(function (e) {
+    let { guild: i, onClose: a, onSelect: F } = e,
+        X = (0, d.bG)([T.default], () => T.default.getCurrentUser());
+    r()(null != X, "GuildHeaderPopout: user cannot be undefined"),
         l.useEffect(() => {
-            P.default.track(T.HAw.GUILD_DROPDOWN_MENU_VIEWED, { guild_id: i.id });
+            P.default.track(S.HAw.GUILD_DROPDOWN_MENU_VIEWED, { guild_id: i.id });
         });
-    let F = (0, d.bG)([_.Ay], () => _.Ay.isGuildCollapsed(i.id), [i.id]),
+    let k = (0, d.bG)([C.Ay], () => C.Ay.isGuildCollapsed(i.id), [i.id]),
         {
-            canAccessSettings: X,
-            canManageChannels: B,
-            showGuildAnalytics: J,
+            canAccessSettings: B,
+            canManageChannels: V,
+            showGuildAnalytics: W,
         } = (0, d.cf)(
             [N.A],
             () => ({
                 canAccessSettings: N.A.canAccessGuildSettings(i),
-                canManageChannels: N.A.can(T.xBc.MANAGE_CHANNELS, i),
-                showGuildAnalytics: N.A.can(T.xBc.VIEW_GUILD_ANALYTICS, i) && i.features.has(T.GuildFeatures.COMMUNITY),
+                canManageChannels: N.A.can(S.xBc.MANAGE_CHANNELS, i),
+                showGuildAnalytics: N.A.can(S.xBc.VIEW_GUILD_ANALYTICS, i) && i.features.has(S.GuildFeatures.COMMUNITY),
             }),
             [i],
         ),
-        V = (0, I.ic)(i),
-        W = (0, L.bM)(i, k),
-        Y = (0, d.bG)([O.A], () => O.A.isLurking(i.id), [i.id]),
-        K = (0, d.bG)([U.Ay], () => U.Ay.isCurrentUserGuest(i.id)),
-        Q = (0, E.A)(i.id, !0),
-        Z = (0, o.Ay)(i),
-        $ = (0, b.A)({ source: T.PE1.GUILD_HEADER, guild: i }),
-        q = (0, A.A)({
+        J = (0, h.ic)(i),
+        Y = (0, U.bM)(i, X),
+        K = (0, d.bG)([j.A], () => j.A.isLurking(i.id), [i.id]),
+        Z = (0, d.bG)([_.Ay], () => _.Ay.isCurrentUserGuest(i.id)),
+        Q = (0, v.A)(i.id, !0),
+        $ = (0, o.Ay)(i),
+        q = (0, b.A)({ source: S.PE1.GUILD_HEADER, guild: i }),
+        z = (0, p.A)({
             guildId: i.id,
-            userId: k.id,
-            analyticsLocation: { page: T.liQ.GUILD_CHANNEL, section: T.JJy.GUILD_DROPDOWN_MENU },
+            userId: X.id,
+            analyticsLocation: { page: S.liQ.GUILD_CHANNEL, section: S.JJy.GUILD_DROPDOWN_MENU },
             icon: s.R2l,
         }),
-        z = i.features.has(T.GuildFeatures.HUB),
-        ee = i.id === S.Vc,
-        ei = i.id === T.gNP,
-        en = (0, M.A)(i.id, !0),
-        et = (0, u.A)(i),
+        ee = i.features.has(S.GuildFeatures.HUB),
+        ei = i.id === w.Vc,
+        en = i.id === S.gNP,
+        et = (0, m.A)(i.id, !0),
         el = (0, g.A)(i),
-        ea = (0, y.A)(i, !0),
-        er = (0, p.A)(i),
-        ed = (0, m.A)(i),
-        es = (0, G.Rg)(i) && (0, G.q0)(i),
-        ec = l.useCallback(() => {
+        ea = (0, A.A)(i),
+        er = (0, f.A)(i, !0),
+        ed = (0, y.A)(i),
+        es = (0, u.A)(),
+        ec = (0, L.A)(i),
+        eo = (0, D.Rg)(i) && (0, D.q0)(i),
+        eu = l.useCallback(() => {
             (0, s.mMO)(async () => {
                 let { default: e } = await n.e("53485").then(n.bind(n, 20508));
                 return (n) => (0, t.jsx)(e, { ...n, guild: i });
             });
         }, [i]);
-    return Y || K
+    return K || Z
         ? (0, t.jsx)(s.W1t, {
               "data-menu-migrated-auto": !0,
-              onSelect: R,
+              onSelect: F,
               navId: "guild-header-popout",
               variant: "fixed",
               onClose: a,
-              "aria-label": w.intl.string(w.t.HpQykc),
+              "aria-label": H.intl.string(H.t.HpQykc),
               children: (0, t.jsx)(s.Drp, {
                   id: "leave-guild",
-                  label: w.intl.string(w.t.J2TBi3),
+                  label: H.intl.string(H.t.J2TBi3),
                   icon: s.oLl,
                   leadingAccessory: { type: "icon", icon: s.oLl },
                   action: () => {
@@ -103,67 +105,42 @@ let R = l.memo(function (e) {
                   },
               }),
           })
-        : ee
-          ? (0, t.jsxs)(s.W1t, {
+        : ei
+          ? (0, t.jsx)(s.W1t, {
                 "data-menu-migrated-auto": !0,
-                onSelect: R,
+                onSelect: F,
                 navId: "favorites-header-popout",
                 variant: "fixed",
                 onClose: a,
-                "aria-label": w.intl.string(w.t.HpQykc),
-                children: [
-                    (0, t.jsxs)(s.rXV, {
-                        children: [
-                            !1,
-                            (0, t.jsx)(s.Drp, {
-                                id: "create-category",
-                                label: w.intl.string(w.t["ISN+NM"]),
-                                icon: s.YPf,
-                                leadingAccessory: { type: "icon", icon: s.YPf },
-                                action: () =>
-                                    (0, s.mMO)(async () => {
-                                        let { default: e } = await n.e("5639").then(n.bind(n, 395199));
-                                        return (i) => (0, t.jsx)(e, { ...i });
-                                    }),
-                            }),
-                        ],
-                    }),
-                    (0, t.jsx)(s.rXV, {
-                        children: (0, t.jsx)(s.sLh, {
-                            id: "hide-muted-channels",
-                            label: w.intl.string(w.t.UwOLJO),
-                            checked: F,
-                            action: () => c.A.toggleCollapseGuild(i.id),
-                        }),
-                    }),
-                ],
+                "aria-label": H.intl.string(H.t.HpQykc),
+                children: (0, t.jsx)(s.rXV, { children: es }),
             })
-          : z
+          : ee
             ? (0, t.jsxs)(s.W1t, {
                   "data-menu-migrated": !0,
-                  onSelect: R,
+                  onSelect: F,
                   navId: "guild-header-popout",
                   variant: "fixed",
                   onClose: a,
-                  "aria-label": w.intl.string(w.t.HpQykc),
+                  "aria-label": H.intl.string(H.t.HpQykc),
                   children: [
                       (0, t.jsxs)(s.rXV, {
                           children: [
-                              X
+                              B
                                   ? (0, t.jsx)(s.Drp, {
                                         id: "settings",
-                                        label: w.intl.string(w.t["154/bL"]),
-                                        icon: ed ? s.vJI : s.Zes,
-                                        leadingAccessory: { type: "icon", icon: ed ? s.vJI : s.Zes },
+                                        label: H.intl.string(H.t["154/bL"]),
+                                        icon: ec ? s.vJI : s.Zes,
+                                        leadingAccessory: { type: "icon", icon: ec ? s.vJI : s.Zes },
                                         action: () => {
-                                            x.A.open(i.id, (0, v.x)());
+                                            x.A.open(i.id, (0, G.x)());
                                         },
                                     })
                                   : null,
-                              $,
+                              q,
                               (0, t.jsx)(s.Drp, {
                                   id: "privacy",
-                                  label: w.intl.string(w.t.BayiAo),
+                                  label: H.intl.string(H.t.BayiAo),
                                   icon: s.lmn,
                                   leadingAccessory: { type: "icon", icon: s.lmn },
                                   action: () =>
@@ -172,96 +149,96 @@ let R = l.memo(function (e) {
                                           return (n) => (0, t.jsx)(e, { ...n, guild: i });
                                       }),
                               }),
-                              q,
+                              z,
                           ],
                       }),
-                      W
+                      Y
                           ? null
                           : (0, t.jsx)(s.rXV, {
                                 children: (0, t.jsx)(s.Drp, {
                                     id: "leave",
-                                    label: w.intl.string(w.t.Dv8gFT),
+                                    label: H.intl.string(H.t.Dv8gFT),
                                     icon: s.oLl,
                                     leadingAccessory: { type: "icon", icon: s.oLl },
                                     color: "danger",
-                                    action: ec,
+                                    action: eu,
                                 }),
                             }),
                   ],
               })
-            : ei
+            : en
               ? null
               : (0, t.jsxs)(s.W1t, {
                     "data-menu-needs-review": !0,
-                    onSelect: R,
+                    onSelect: F,
                     navId: "guild-header-popout",
                     variant: "fixed",
                     onClose: a,
-                    "aria-label": w.intl.string(w.t.HpQykc),
+                    "aria-label": H.intl.string(H.t.HpQykc),
                     children: [
                         (0, t.jsxs)(s.rXV, {
                             children: [
                                 (0, t.jsx)(s.Drp, {
                                     id: "premium-subscribe",
-                                    label: w.intl.string(w.t.VJEVbu),
+                                    label: H.intl.string(H.t.VJEVbu),
                                     icon: s._Jp,
                                     leadingAccessory: { type: "icon", icon: s._Jp },
                                     action: () => {
-                                        (0, h.K)({ guildId: i.id, location: { section: T.JJy.GUILD_HEADER_POPOUT } });
+                                        (0, E.K)({ guildId: i.id, location: { section: S.JJy.GUILD_HEADER_POPOUT } });
                                     },
                                 }),
-                                es &&
+                                eo &&
                                     (0, t.jsx)(s.Drp, {
                                         id: "guild-tag",
-                                        label: w.intl.string(H.default.mf2OwH),
+                                        label: H.intl.string(R.default.mf2OwH),
                                         leadingAccessory: {
                                             type: "guildTag",
-                                            element: (0, t.jsx)(D.o9, {
+                                            element: (0, t.jsx)(M.o9, {
                                                 guildId: i.id,
                                                 guildTag: i.profile.tag,
                                                 guildBadge: i.profile.badge ?? void 0,
                                                 inline: !1,
                                             }),
                                         },
-                                        icon: (0, t.jsx)(D.o9, {
+                                        icon: (0, t.jsx)(M.o9, {
                                             guildId: i.id,
                                             guildBadge: i.profile.badge,
                                             guildTag: i.profile.tag,
                                             inline: !1,
                                         }),
-                                        action: () => (0, j.A)(i.id),
+                                        action: () => (0, O.A)(i.id),
                                     }),
                             ],
                         }),
                         (0, t.jsxs)(s.rXV, {
                             children: [
-                                $,
-                                X
+                                q,
+                                B
                                     ? (0, t.jsx)(s.Drp, {
                                           id: "settings",
-                                          label: w.intl.string(w.t["154/bL"]),
-                                          icon: ed ? s.vJI : s.Zes,
-                                          leadingAccessory: { type: "icon", icon: ed ? s.vJI : s.Zes },
+                                          label: H.intl.string(H.t["154/bL"]),
+                                          icon: ec ? s.vJI : s.Zes,
+                                          leadingAccessory: { type: "icon", icon: ec ? s.vJI : s.Zes },
                                           action: () => {
-                                              x.A.open(i.id, (0, v.x)());
+                                              x.A.open(i.id, (0, G.x)());
                                           },
                                       })
                                     : null,
-                                J
+                                W
                                     ? (0, t.jsx)(s.Drp, {
                                           id: "insights",
-                                          label: w.intl.string(w.t["0wWfUG"]),
+                                          label: H.intl.string(H.t["0wWfUG"]),
                                           icon: s.Uy2,
                                           leadingAccessory: { type: "icon", icon: s.Uy2 },
-                                          action: () => x.A.open(i.id, T.BEX.ANALYTICS),
+                                          action: () => x.A.open(i.id, S.BEX.ANALYTICS),
                                       })
                                     : null,
-                                B
+                                V
                                     ? (0, t.jsxs)(t.Fragment, {
                                           children: [
                                               (0, t.jsx)(s.Drp, {
                                                   id: "create-channel",
-                                                  label: w.intl.string(w.t["fUYU+j"]),
+                                                  label: H.intl.string(H.t["fUYU+j"]),
                                                   icon: s.U1e,
                                                   leadingAccessory: { type: "icon", icon: s.U1e },
                                                   action: () =>
@@ -273,14 +250,14 @@ let R = l.memo(function (e) {
                                                           return (n) =>
                                                               (0, t.jsx)(e, {
                                                                   ...n,
-                                                                  channelType: T.rbe.GUILD_TEXT,
+                                                                  channelType: S.rbe.GUILD_TEXT,
                                                                   guildId: i.id,
                                                               });
                                                       }),
                                               }),
                                               (0, t.jsx)(s.Drp, {
                                                   id: "create-category",
-                                                  label: w.intl.string(w.t["ISN+NM"]),
+                                                  label: H.intl.string(H.t["ISN+NM"]),
                                                   icon: s.YPf,
                                                   leadingAccessory: { type: "icon", icon: s.YPf },
                                                   action: () =>
@@ -292,7 +269,7 @@ let R = l.memo(function (e) {
                                                           return (n) =>
                                                               (0, t.jsx)(e, {
                                                                   ...n,
-                                                                  channelType: T.rbe.GUILD_CATEGORY,
+                                                                  channelType: S.rbe.GUILD_CATEGORY,
                                                                   guildId: i.id,
                                                               });
                                                       }),
@@ -301,18 +278,18 @@ let R = l.memo(function (e) {
                                       })
                                     : null,
                                 Q,
-                                et,
                                 el,
-                                Z,
-                                er,
+                                ea,
+                                $,
+                                ed,
                             ],
                         }),
                         (0, t.jsxs)(s.rXV, {
                             children: [
-                                en,
+                                et,
                                 (0, t.jsx)(s.Drp, {
                                     id: "notifications",
-                                    label: w.intl.string(w.t.h850Ss),
+                                    label: H.intl.string(H.t.h850Ss),
                                     icon: s.XFE,
                                     leadingAccessory: { type: "icon", icon: s.XFE },
                                     action: () =>
@@ -325,7 +302,7 @@ let R = l.memo(function (e) {
                                 }),
                                 (0, t.jsx)(s.Drp, {
                                     id: "privacy",
-                                    label: w.intl.string(w.t.BayiAo),
+                                    label: H.intl.string(H.t.BayiAo),
                                     icon: s.lmn,
                                     leadingAccessory: { type: "icon", icon: s.lmn },
                                     action: () =>
@@ -338,38 +315,38 @@ let R = l.memo(function (e) {
                         }),
                         (0, t.jsxs)(s.rXV, {
                             children: [
-                                q,
+                                z,
                                 (0, t.jsx)(s.sLh, {
                                     id: "hide-muted-channels",
-                                    label: w.intl.string(w.t.UwOLJO),
+                                    label: H.intl.string(H.t.UwOLJO),
                                     leadingAccessory: { type: "icon", icon: s.G3N },
-                                    checked: F,
+                                    checked: k,
                                     action: () => c.A.toggleCollapseGuild(i.id),
                                 }),
                             ],
                         }),
                         (0, t.jsxs)(s.rXV, {
                             children: [
-                                ea,
-                                V && i.features.has(T.GuildFeatures.COMMUNITY)
+                                er,
+                                J && i.features.has(S.GuildFeatures.COMMUNITY)
                                     ? (0, t.jsx)(s.Drp, {
                                           id: "report-raid",
-                                          label: w.intl.string(w.t.cswId3),
+                                          label: H.intl.string(H.t.cswId3),
                                           icon: s.lmn,
                                           leadingAccessory: { type: "icon", icon: s.lmn },
                                           color: "danger",
-                                          action: () => (0, f.M)(i.id),
+                                          action: () => (0, I.M)(i.id),
                                       })
                                     : null,
-                                W
+                                Y
                                     ? null
                                     : (0, t.jsx)(s.Drp, {
                                           id: "leave",
-                                          label: w.intl.string(w.t.J2TBi3),
+                                          label: H.intl.string(H.t.J2TBi3),
                                           icon: s.oLl,
                                           leadingAccessory: { type: "icon", icon: s.oLl },
                                           color: "danger",
-                                          action: ec,
+                                          action: eu,
                                       }),
                             ],
                         }),

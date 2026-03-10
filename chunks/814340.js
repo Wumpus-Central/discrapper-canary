@@ -159,10 +159,10 @@ class F extends s.PureComponent {
                         n.e("8458"),
                         n.e("11810"),
                         n.e("39048"),
-                        n.e("41538"),
+                        n.e("30453"),
                         n.e("56475"),
                         n.e("54469"),
-                        n.e("67109"),
+                        n.e("51438"),
                     ]).then(n.bind(n, 544676));
                     return (n) => (0, i.jsx)(e, { ...n, guild: t.record, onSelect: y.jD, hideSettings: !0 });
                 });
@@ -214,7 +214,9 @@ class F extends s.PureComponent {
                 break;
             case m.rD.GROUP_DM:
                 return (0, u.L3)(e, async () => {
-                    let { default: e } = await Promise.all([n.e("97262"), n.e("15438")]).then(n.bind(n, 4027));
+                    let { default: e } = await Promise.all([n.e("97262"), n.e("60200"), n.e("21351")]).then(
+                        n.bind(n, 4027),
+                    );
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,

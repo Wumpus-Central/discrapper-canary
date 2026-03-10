@@ -3,8 +3,8 @@ n.d(t, { A: () => B });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(172218),
+    a = n.n(l),
+    r = n(172218),
     o = n(311907),
     c = n(397927),
     d = n(308528),
@@ -82,10 +82,10 @@ class k extends L.Ay {
     };
     renderPopout = (e) => {
         let { channel: t, sorting: n, embeddedApps: s, channelIsContentGated: l } = this.props,
-            { shouldShowActivities: r } = this.state;
+            { shouldShowActivities: a } = this.state;
         return t.isModeratorReportChannel() || l
             ? null
-            : null != s && s.length > 0 && r && !n
+            : null != s && s.length > 0 && a && !n
               ? (0, i.jsx)(G.A, { onAction: this.handleActivitiesPopoutClose, channel: t })
               : (0, i.jsx)(O.A, { ...e, channel: this.props.channel });
     };
@@ -100,7 +100,9 @@ class k extends L.Ay {
         let { channel: t } = this.props;
         if (t.type === U.rbe.GROUP_DM)
             return void (0, u.L3)(e, async () => {
-                let { default: e } = await Promise.all([n.e("97262"), n.e("15438")]).then(n.bind(n, 4027));
+                let { default: e } = await Promise.all([n.e("97262"), n.e("60200"), n.e("21351")]).then(
+                    n.bind(n, 4027),
+                );
                 return (n) => (0, i.jsx)(e, { ...n, channel: t, selected: !0 });
             });
         if (t.type === U.rbe.DM) {
@@ -111,7 +113,7 @@ class k extends L.Ay {
                         n.e("97262"),
                         n.e("42128"),
                         n.e("39778"),
-                        n.e("31885"),
+                        n.e("35025"),
                     ]).then(n.bind(n, 385913));
                     return (n) => (0, i.jsx)(e, { ...n, user: s, channel: t, showModalItems: !1 });
                 });
@@ -142,7 +144,7 @@ class k extends L.Ay {
                 selected: n,
                 muted: s,
                 unread: l,
-                hasActiveThreads: a,
+                hasActiveThreads: r,
                 hasMoreActiveThreads: o,
                 mentionCount: d,
                 connectChannelDropTarget: u,
@@ -166,7 +168,7 @@ class k extends L.Ay {
             O = !T && S && null != I && I.length > 0,
             L = (0, _.M)(C),
             M = (0, i.jsxs)("li", {
-                className: r()(this.getClassName(), { [w.r9]: this.isDisabled(), [w.wH]: n }),
+                className: a()(this.getClassName(), { [w.r9]: this.isDisabled(), [w.wH]: n }),
                 "data-dnd-name": e.name,
                 onMouseEnter: R || O ? this.handleMouseEnter : void 0,
                 onMouseLeave: R || O ? this.handleMouseLeave : void 0,
@@ -188,7 +190,7 @@ class k extends L.Ay {
                                 muted: s,
                                 unread: l,
                                 mentionCount: d,
-                                hasActiveThreads: a,
+                                hasActiveThreads: r,
                                 subtitle: L?.subtitle,
                                 subtitleColor: L?.color,
                                 onMouseDown: this.handleMouseDown,
@@ -231,7 +233,7 @@ class k extends L.Ay {
 }
 let V = (0, h.a)(k);
 function B(e) {
-    let { channel: t, guild: n, disableSorting: l, isFavoriteCategory: r, muted: c, selected: d } = e,
+    let { channel: t, guild: n, disableSorting: l, isFavoriteCategory: a, muted: c, selected: d } = e,
         { hasActiveThreads: u, hasMoreActiveThreads: h } = (0, I.NR)(t),
         g = (0, o.cf)([y.Ay], () => ({
             unread: y.Ay.hasUnread(t.id),
@@ -267,7 +269,7 @@ function B(e) {
         }),
         k = (0, m.Ay)(t),
         [B, H] = s.useState(!1),
-        F = (0, a.K)(
+        F = (0, r.K)(
             s.useCallback((e) => {
                 H(e);
             }, []),
@@ -290,7 +292,7 @@ function B(e) {
               isSubscriptionGated: O,
               needSubscriptionToAccess: R,
               isNewChannel: S && e.canBeNewChannel,
-              isFavoriteSuggestion: r && !L,
+              isFavoriteSuggestion: a && !L,
               channelIsContentGated: D,
               channelInfo: w,
               embeddedApps: k,
