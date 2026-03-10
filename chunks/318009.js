@@ -72,10 +72,7 @@ let A = (e) => {
         }, [C]),
         b = (0, l.D)("ContextMenu"),
         D = c.ownerDocument;
-    return (i.useEffect(() => {
-        b && R();
-    }, [b, R]),
-    b)
+    return b
         ? (0, r.jsx)(a.Ow, {
               spacing: 0,
               open: !0,
