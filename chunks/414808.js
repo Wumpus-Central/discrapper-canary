@@ -12,8 +12,8 @@ var l = n(627968),
     A = n(49999),
     p = n(788868),
     f = n(665606),
-    E = n(985018),
-    h = n(988572);
+    h = n(985018),
+    E = n(988572);
 function x(e) {
     let { targetElementRef: t, markMenuItemPopoverAsDismissed: n } = e,
         [x, N] = s.useState("top"),
@@ -21,7 +21,7 @@ function x(e) {
         T = s.useRef(null),
         { hasAccess: v } = (0, m.TW)("FavoritesOnboardingMenuItemPopover"),
         { analyticsLocations: S } = (0, u.Ay)(o.A.FAVORITES_GUILD_MENU_ITEM),
-        _ = (0, a.bG)([d.A], () => d.A.hasFavorites());
+        C = (0, a.bG)([d.A], () => d.A.hasFavorites());
     s.useLayoutEffect(() => {
         if (null == t.current) return;
         let e = () => {
@@ -47,27 +47,28 @@ function x(e) {
             }
         );
     }, [t]);
-    let C = s.useCallback(() => {
+    let _ = s.useCallback(() => {
             n?.(A.i.TAKE_ACTION), v || (0, c.A)({ subscriptionTier: p.pe.TIER_2, analyticsLocations: S });
         }, [n, S, v]),
-        j = _ ? f.default.TWuDTt : f.default["25YCHl"];
+        j = C ? f.default.TWuDTt : f.default["25YCHl"];
     return (0, l.jsx)(i.AM, {
         targetElementRef: t,
+        gradientColor: "purple",
         position: "right",
         alignmentStrategy: "edge",
         align: x,
         caretConfig: { align: "top" === x ? "start" : "end" },
         popoverRef: g,
         badge: { type: "beta", variant: "expressive" },
-        graphic: { src: h.A, type: "image", aspectRatio: "16/9" },
-        title: E.intl.string(v ? j : f.default.A3ZjbM),
-        body: E.intl.string(v ? f.default.DFjrWw : f.default.qJUI2v),
+        graphic: { src: E.A, type: "image", aspectRatio: "16/9" },
+        title: h.intl.string(v ? j : f.default.A3ZjbM),
+        body: h.intl.string(v ? f.default.DFjrWw : f.default.qJUI2v),
         onRequestClose: () => n?.(A.i.USER_DISMISS),
         actions: [
             {
                 icon: v ? void 0 : r.tvc,
-                text: v ? E.intl.string(f.default["+h9aza"]) : E.intl.string(f.default["avps/2"]),
-                onClick: () => C(),
+                text: v ? h.intl.string(f.default["+h9aza"]) : h.intl.string(f.default["avps/2"]),
+                onClick: () => _(),
                 variant: v ? "secondary" : "expressive",
             },
         ],

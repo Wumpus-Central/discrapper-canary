@@ -3,8 +3,8 @@ n.d(t, { A: () => F }), n(321073);
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(837381),
+    a = n.n(l),
+    r = n(837381),
     o = n(311907),
     c = n(342494),
     d = n(397927),
@@ -54,11 +54,11 @@ function F(e) {
         Q,
         $,
         { shouldShowIntroPopover: Z, markIntroPopoverAsDismissed: ee } = e,
-        et = (0, a.Vd)("favorites"),
+        et = (0, r.Vd)("favorites"),
         { favoriteAdded: en, clearFavoriteAdded: ei } = (0, R.CJ)(),
         es = s.useRef(null),
         { analyticsLocations: el } = (0, p.Ay)(m.A.FAVORITES_GUILD_BUTTON),
-        [er, ea] = s.useState(!1),
+        [ea, er] = s.useState(!1),
         eo = (0, L.$)("FavoritesButton", "favorite-server-context"),
         {
             favoriteGuildEnabled: ec,
@@ -137,7 +137,7 @@ function F(e) {
     }, [ei]);
     return (0, i.jsxs)(_.c, {
         children: [
-            (0, i.jsx)(g.A, { selected: em, hovered: er, unread: eg && !ed, className: V.Io }),
+            (0, i.jsx)(g.A, { selected: em, hovered: ea, unread: eg && !ed, className: V.Io }),
             (0, i.jsx)(D.A, {
                 onShow: eN,
                 children: (0, i.jsx)(M.Q, {
@@ -153,19 +153,19 @@ function F(e) {
                             }),
                             "aria-selected": em,
                             to: { pathname: G.BVt.CHANNEL(G.YYv, eh), state: H },
-                            selected: em || er,
+                            selected: em || ea,
                             onClick: () => {
                                 Z && eI(!1);
                             },
-                            onMouseEnter: () => ea(!0),
-                            onMouseLeave: () => ea(!1),
+                            onMouseEnter: () => er(!0),
+                            onMouseLeave: () => er(!1),
                             onMouseDown: function () {
                                 null != eA && u.A.preload(eA.guild_id, eA.id);
                             },
                             onContextMenu: eo,
                             children: (0, i.jsx)("div", {
                                 ref: es,
-                                className: r()(V.hN, { [V.b1]: en }),
+                                className: a()(V.hN, { [V.b1]: en }),
                                 children: (0, i.jsx)(d.Gg5, {
                                     size: "custom",
                                     color: "currentColor",
@@ -181,6 +181,7 @@ function F(e) {
             Z &&
                 (0, i.jsx)(c.AM, {
                     targetElementRef: es,
+                    gradientColor: "purple",
                     position: "right",
                     alignmentStrategy: "edge",
                     align: "top",
