@@ -684,7 +684,7 @@ function nm() {
                 t &&
                     (eY.info("Relaunching app due to voice watchdog timeout"),
                     await R.A.processUtils.setCrashReason("voice-watchdog-timeout"),
-                    localStorage.setItem("discord_watchdog_restart_timestamp", Date.now().toString()),
+                    v.w.set("discord_watchdog_restart_timestamp", Date.now().toString()),
                     R.A.app.relaunch());
         }),
         to.on(y.bg.VideoInputInitialized, (e) => {

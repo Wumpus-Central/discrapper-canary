@@ -24,18 +24,18 @@ var r = n(284009),
     v = n(723702),
     N = n(728458),
     C = n(175306),
-    b = n(949189),
-    R = n(313449),
-    O = n(805396),
+    R = n(949189),
+    O = n(313449),
+    b = n(805396),
     D = n(932170),
     L = n(538343),
     w = n(969091),
-    x = n(33282),
-    M = n(318015),
+    M = n(33282),
+    x = n(318015),
     P = n(751124),
     k = n(652215);
 let U = new E.A("GatewaySocket"),
-    G = new O.A();
+    G = new b.A();
 function F(e) {
     let t,
         { gatewayURL: n, newCallback: r, onOpen: i, onMessage: s, onError: a, onClose: o } = e;
@@ -79,8 +79,8 @@ let B = 4,
     Y = 4004,
     W = 30 * y.A.Millis.SECOND,
     K = 3 * y.A.Millis.MINUTE,
-    z = +y.A.Millis.MINUTE;
-function $(e, t, n) {
+    $ = +y.A.Millis.MINUTE;
+function z(e, t, n) {
     let r = 0;
     e.dataReady((e) => {
         try {
@@ -107,7 +107,7 @@ let Z = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
 class X extends w.A {
     gatewayBackoff;
     handleIdentify;
-    dispatchExceptionBackoff = new o.A(1e3, z);
+    dispatchExceptionBackoff = new o.A(1e3, $);
     dispatchSuccessTimer = 0;
     connectionState_;
     webSocket;
@@ -163,7 +163,7 @@ class X extends w.A {
             (this.connectionStartTime = 0),
             (this.identifyStartTime = 0),
             (this.nextReconnectIsImmediate = !1),
-            (this.compressionHandler = (0, R.Z)(G)),
+            (this.compressionHandler = (0, O.Z)(G)),
             (this.hasConnectedOnce = !1),
             (this.isFastConnect = !1),
             (this.identifyCount = 0),
@@ -198,7 +198,7 @@ class X extends w.A {
     }
     _connect() {
         if (!this.willReconnect()) return void U.verbose("Skipping _connect because willReconnect is false");
-        if (x.j()) return void U.info("Skipping _connect because socket is paused");
+        if (M.j()) return void U.info("Skipping _connect because socket is paused");
         (this.connectionState = C.A.CONNECTING), (this.nextReconnectIsImmediate = !1);
         let e = this.compressionHandler.getAlgorithm(),
             t = G.getName(),
@@ -230,7 +230,7 @@ class X extends w.A {
                         (this.isFastConnect = e),
                         e ? this._doFastConnectIdentify() : this._doResumeOrIdentify();
                 },
-                onMessage: $(this.compressionHandler, this._handleClose.bind(this), (e, t) => {
+                onMessage: z(this.compressionHandler, this._handleClose.bind(this), (e, t) => {
                     let n = Date.now(),
                         { op: r, s: i, t: s, d: o } = G.unpack(e);
                     if (
@@ -457,7 +457,7 @@ class X extends w.A {
             null != t && ((t.onopen = V), (t.onmessage = V), (t.onerror = V), (t.onclose = V), e?.(t)),
             this.gatewayBackoff.cancel(),
             this.compressionHandler.close(),
-            (this.compressionHandler = (0, R.Z)(G));
+            (this.compressionHandler = (0, O.Z)(G));
     }
     _doResume() {
         (this.connectionState = C.A.RESUMING),
@@ -495,7 +495,7 @@ class X extends w.A {
         (this.token = o), U.verbose("[IDENTIFY]");
         let c = {
                 token: o,
-                capabilities: (0, b.O)({ useChannelObfuscation: (0, M.RK)("GatewaySocket") }),
+                capabilities: (0, R.O)({ useChannelObfuscation: (0, x.RK)("GatewaySocket") }),
                 properties: l,
                 presence: u,
                 compress: this.compressionHandler.usesLegacyCompression(),
@@ -597,7 +597,7 @@ class X extends w.A {
                 ((this.didForceClearGuildHashes = !0),
                 _.h.dispatch({ type: "CLEAR_CACHES", reason: `Socket reset during ${t}` })),
             clearTimeout(this.dispatchSuccessTimer),
-            (this.dispatchSuccessTimer = setTimeout(() => this.dispatchExceptionBackoff.succeed(), 2 * z));
+            (this.dispatchSuccessTimer = setTimeout(() => this.dispatchExceptionBackoff.succeed(), 2 * $));
     }
     resetSocketOnDispatchError(e) {
         let t = null != e.error.message && e.error.message.indexOf("Guild data was missing from store") >= 0;
@@ -656,7 +656,7 @@ class X extends w.A {
                 : t && this.connectionState !== C.A.SESSION_ESTABLISHED && this._handleClose(!0, 0, e);
     }
     send = (e, t, n) => {
-        I.default.isLoggingGatewayEvents && U.verboseDangerously("~>", e, t);
+        I.default.isLoggingGatewayEvents && U.verboseDangerously("~>", e, w.p[e], t);
         let r = G.pack({ op: e, d: t });
         if (!n || this.isSessionEstablished())
             try {

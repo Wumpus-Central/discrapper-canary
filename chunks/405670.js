@@ -2,9 +2,9 @@
 n.d(t, { Ay: () => d, K2: () => l, Kr: () => c, Lx: () => u, yc: () => o });
 var r = n(499867),
     i = n(265690),
-    s = n(121894),
-    a = n(506774);
+    s = n(121894);
 n(876230);
+var a = n(932607);
 let o = { timestampSec: 0, duration: 10, maxTimestampSec: 0 };
 var l = (function (e) {
         return (
@@ -80,11 +80,7 @@ let c = (0, i.h)()(
             }),
             {
                 name: "videoQuestUIState",
-                storage: (0, r.KU)(() => ({
-                    getItem: (e) => a.w.get(e) ?? null,
-                    setItem: (e, t) => a.w.set(e, t),
-                    removeItem: (e) => a.w.remove(e),
-                })),
+                storage: (0, r.KU)(() => a.A),
                 partialize: (e) => ({ volume: e.volume, muted: e.muted, videoProgress: e.videoProgress }),
                 version: 0,
             },

@@ -1,8 +1,9 @@
-s.d(t, { T: () => i });
+s.d(t, { T: () => o });
 var l = s(353640),
     n = s(499867),
-    a = s(121894);
-let r = (0, l.v)(
+    a = s(121894),
+    r = s(932607);
+let i = (0, l.v)(
         (0, n.Zr)(
             (e, t) => ({
                 channelShowResolvedFlags: {},
@@ -12,11 +13,11 @@ let r = (0, l.v)(
                     }),
                 getShowResolvedFlags: (e) => t().channelShowResolvedFlags[e] ?? !0,
             }),
-            { name: "report-to-mod-channel-storage", storage: (0, n.KU)(() => localStorage) },
+            { name: "report-to-mod-channel-storage", storage: (0, n.KU)(() => r.A) },
         ),
     ),
-    i = (e) => {
-        let t = r();
+    o = (e) => {
+        let t = i();
         return null == e
             ? { showResolvedFlags: !0, setShowResolvedFlags: () => {} }
             : {
