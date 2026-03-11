@@ -11365,7 +11365,7 @@
   "u9zxnX": "The invite link is invalid or has expired.",
   "mDFGFj": "Whoops...",
   "5NHEPu": "{count, plural, =0 {With your friend !!{username}!!} =1 {With your friends !!{username}!! and !!{username2}!!} other {With !!{username}!! and  more friends} }",
-  "qnYumI": "{count, plural, =0 {With your friend **!!{username}!!**} =1 {With your friends **!!{username}!!** and **!!{username2}!!**} other {With **!!{username}!!** and  more friends} }",
+  "qnYumI": "{count, plural, =0 {With your friend $[!!{username}!!]({{usernameHook}})} =1 {With your friends $[!!{username}!!]({{usernameHook}}) and $[!!{username2}!!]({{usernameHook}})} other {With $[!!{username}!!]({{usernameHook}}) and  more friends} }",
   "1IKKC1": "Games played here",
   "ri1ubC": "$[]({{usernameHook}}) invited you to join",
   "afcl67": "Invite more friends",
