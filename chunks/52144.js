@@ -1,67 +1,41 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => _ });
 var i = n(627968),
     r = n(64700),
-    l = n(503698),
-    a = n.n(l),
-    s = n(311907),
-    o = n(319354),
-    d = n(435371),
-    c = n(397927),
-    u = n(573435),
-    A = n(851580),
-    h = n(222823),
-    _ = n(287809),
-    m = n(371911),
-    p = n(790782),
-    g = n(985018),
-    E = n(656678);
-function I(e) {
-    let { onOpen: t, onClose: n, "data-jump-section": l } = e,
-        I = (0, s.bG)([_.default], () => _.default.getCurrentUser()),
-        f = r.useRef(null),
-        C = (0, s.bG)([h.Ay], () => I?.id != null && h.Ay.getMentionCount(I.id, p.P.NOTIFICATION_CENTER) > 0);
-    return (0, i.jsx)(m.C, {
-        targetElementRef: f,
+    l = n(311907),
+    a = n(397927),
+    s = n(189252),
+    o = n(851580),
+    d = n(222823),
+    c = n(287809),
+    u = n(371911),
+    A = n(790782),
+    h = n(985018);
+function _(e) {
+    let { onOpen: t, onClose: n, "data-jump-section": _ } = e,
+        m = (0, l.bG)([c.default], () => c.default.getCurrentUser()),
+        p = r.useRef(null),
+        g = (0, l.bG)([d.Ay], () => m?.id != null && d.Ay.getMentionCount(m.id, A.P.NOTIFICATION_CENTER) > 0);
+    return (0, i.jsx)(u.C, {
+        targetElementRef: p,
         onOpen: t,
         onClose: n,
-        badgeState: { badgeForYou: C },
+        badgeState: { badgeForYou: g },
         popoutPosition: "bottom",
         popoutAlign: "right",
         children: (e, t, n, r) =>
             (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(d.m_, {
-                        targetElementRef: f,
-                        shouldShow: !t,
-                        text: g.intl.string(g.t.GSmTKJ),
-                        children: (0, i.jsx)(c.DUT, {
-                            ...n,
-                            tag: "div",
-                            innerRef: f,
-                            onClick: e,
-                            "data-jump-section": l,
-                            "aria-label": g.intl.string(g.t.GSmTKJ),
-                            className: a()(E.vk, E.l9),
-                            children:
-                                C || r
-                                    ? (0, i.jsxs)(i.Fragment, {
-                                          children: [
-                                              (0, i.jsx)(u.Ay, {
-                                                  mask: u.Ay.Masks.HEADER_BAR_BADGE_BOTTOM,
-                                                  height: o.E.refresh_sm,
-                                                  width: o.E.refresh_sm,
-                                                  children: (0, i.jsx)(c.K$s, {
-                                                      size: "refresh_sm",
-                                                      color: "currentColor",
-                                                  }),
-                                              }),
-                                              (0, i.jsx)("span", { className: E.qS }),
-                                          ],
-                                      })
-                                    : (0, i.jsx)(c.K$s, { size: "refresh_sm", color: "currentColor" }),
-                        }),
+                    (0, i.jsx)(s.A, {
+                        ...n,
+                        icon: a.K$s,
+                        tooltip: h.intl.string(h.t.GSmTKJ),
+                        onClick: e,
+                        showBadge: g || r,
+                        selected: t,
+                        "data-jump-section": _,
+                        ref: p,
                     }),
-                    (0, i.jsx)(A.v, { location: "inbox-button", targetElementRef: f }),
+                    (0, i.jsx)(o.v, { location: "inbox-button", targetElementRef: p }),
                 ],
             }),
     });

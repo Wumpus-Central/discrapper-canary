@@ -1,63 +1,62 @@
 n.d(t, { R: () => A });
 var i = n(627968),
     r = n(64700),
-    a = n(397927),
-    l = n(538064),
-    s = n(786574),
-    o = n(641616),
-    d = n(616621),
-    c = n(58736);
+    l = n(397927),
+    a = n(189252),
+    s = n(538064),
+    o = n(786574),
+    d = n(641616),
+    c = n(616621);
 function u(e) {
     let { onClose: t } = e,
-        n = (0, o.x)(),
-        r = (0, s.N)(n, l.Ft),
-        c = (0, d.A)();
-    return (0, i.jsxs)(a.W1t, {
+        n = (0, d.x)(),
+        r = (0, o.N)(n, s.Ft),
+        a = (0, c.A)();
+    return (0, i.jsxs)(l.W1t, {
         "data-menu-migrated": !0,
         onSelect: () => {},
         navId: "devtools-popout",
         variant: "fixed",
         onClose: t,
         "aria-label": "DevTools Actions",
-        children: [r, (0, i.jsx)(a.rXV, { "aria-label": "Playgrounds", children: c })],
+        children: [r, (0, i.jsx)(l.rXV, { "aria-label": "Playgrounds", children: a })],
     });
 }
 function A(e) {
-    let { className: t, focusSectionProps: n } = e,
-        [s, o] = r.useState(!1),
-        [d, A] = r.useState(0),
-        h = r.useRef(null),
-        _ = (e) => {
+    let { focusSectionProps: t } = e,
+        [n, o] = r.useState(!1),
+        [d, c] = r.useState(0),
+        A = r.useRef(null),
+        h = (e) => {
             clearTimeout(d),
-                A(
+                c(
                     setTimeout(() => {
                         o(e);
                     }, 100),
                 );
         };
     return (0, i.jsx)("div", {
-        onMouseEnter: () => _(!0),
-        onMouseLeave: () => _(!1),
-        children: (0, i.jsx)(a.YNO, {
-            targetElementRef: h,
-            shouldShow: s,
-            animation: a.YNO.Animation.NONE,
+        onMouseEnter: () => h(!0),
+        onMouseLeave: () => h(!1),
+        children: (0, i.jsx)(l.YNO, {
+            targetElementRef: A,
+            shouldShow: n,
+            animation: l.YNO.Animation.NONE,
             position: "bottom",
             align: "right",
             autoInvert: !1,
             onRequestOpen: () => o(!0),
             onRequestClose: () => o(!1),
             renderPopout: () => (0, i.jsx)(u, { onClose: () => o(!1) }),
-            children: (e, r) => {
-                let { isShown: s } = r;
-                return (0, i.jsx)(c.In, {
-                    ref: h,
-                    onClick: () => (0, l.Ft)(),
-                    icon: a.VaJ,
+            children: (e, n) => {
+                let { isShown: r } = n;
+                return (0, i.jsx)(a.A, {
+                    ref: A,
+                    onClick: () => (0, s.Ft)(),
+                    icon: l.VaJ,
                     "aria-label": "DevTools",
-                    selected: s,
-                    className: t,
-                    ...n,
+                    selected: r,
+                    ...t,
                 });
             },
         }),

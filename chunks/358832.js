@@ -1,26 +1,26 @@
 n.d(t, { A: () => p });
 var i = n(627968),
     r = n(64700),
-    a = n(311907),
-    l = n(397927),
+    l = n(311907),
+    a = n(397927),
     s = n(157559),
     o = n(229224),
-    d = n(987482),
-    c = n(598384),
-    u = n(383501),
-    A = n(58736),
+    d = n(189252),
+    c = n(987482),
+    u = n(598384),
+    A = n(383501),
     h = n(985018),
-    _ = n(892513);
+    _ = n(339182);
 class m extends r.PureComponent {
     static getDerivedStateFromProps(e, t) {
         return e.mode !== t.memoizedMode ? { memoizedMode: e.mode, clicked: !1 } : null;
     }
     state = { memoizedMode: this.props.mode, clicked: !1 };
     handleDownloadApps() {
-        (0, l.qfG)((e) => (0, i.jsx)(d.default, { source: "Links", ...e }));
+        (0, a.qfG)((e) => (0, i.jsx)(c.default, { source: "Links", ...e }));
     }
     handleInstallDownload = () => {
-        u.A.isConnected()
+        A.A.isConnected()
             ? s.A.show({
                   title: h.intl.string(h.t.tiu1ly),
                   body: h.intl.string(h.t["zK+lqW"]),
@@ -35,27 +35,18 @@ class m extends r.PureComponent {
         this.state.clicked || (this.setState({ clicked: !0 }), (0, o.a)());
     };
     render() {
-        switch (this.props.mode) {
-            case "UPDATE_AVAILABLE":
-                return (0, i.jsx)(A.In, {
-                    tooltip: h.intl.string(h.t["zp9d/4"]),
-                    foreground: _.el,
-                    background: _.gg,
-                    icon: l.s3U,
-                    className: this.props.className,
-                });
-            case "UPDATE_MANUALLY":
-            case "UPDATE_DOWNLOADED":
-                return (0, i.jsx)(A.In, {
-                    tooltip: h.intl.string(h.t.u18OXF),
-                    foreground: _.wV,
-                    onClick: this.handleInstallDownload,
-                    icon: l.s3U,
-                    className: this.props.className,
-                });
-            default:
-                return null;
-        }
+        let e = "UPDATE_AVAILABLE" === this.props.mode,
+            t = "UPDATE_DOWNLOADED" === this.props.mode || "UPDATE_MANUALLY" === this.props.mode;
+        return e || t
+            ? (0, i.jsx)(d.A, {
+                  tooltip: e ? h.intl.string(h.t["zp9d/4"]) : h.intl.string(h.t.u18OXF),
+                  color: a.LU0.unsafe_rawColors.GREEN_360.css,
+                  colorClass: e ? _.z : void 0,
+                  onClick: this.handleInstallDownload,
+                  icon: a.s3U,
+                  disabled: e,
+              })
+            : null;
     }
 }
-let p = a.Ay.connectStores([c.A], () => ({ mode: c.A.getState() }))(m);
+let p = l.Ay.connectStores([u.A], () => ({ mode: u.A.getState() }))(m);

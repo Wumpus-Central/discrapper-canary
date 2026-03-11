@@ -4,28 +4,27 @@ n(64700);
 var r = n(311907),
     l = n(827734),
     a = n(397927),
-    s = n(287809),
-    o = n(954571),
-    d = n(975571),
-    c = n(427262),
-    u = n(58736),
+    s = n(189252),
+    o = n(287809),
+    d = n(954571),
+    c = n(975571),
+    u = n(427262),
     A = n(652215),
     h = n(985018);
 function _(e) {
-    let { className: t, focusSectionProps: n } = e,
-        _ = (0, r.bG)([s.default], () => s.default.getCurrentUser()),
-        m = (0, c.mv)(_);
+    let { focusSectionProps: t } = e,
+        n = (0, r.bG)([o.default], () => o.default.getCurrentUser()),
+        _ = (0, u.mv)(n);
     return (0, i.jsx)(a.MzZ, {
-        href: d.C,
+        href: c.C,
         target: "_blank",
         tabIndex: -1,
-        children: (0, i.jsx)(u.In, {
-            color: m ? l.A.unsafe_rawColors.GREEN_360.css : "currentColor",
-            className: t,
-            onClick: () => o.default.track(A.HAw.HELP_CLICKED, { highlighted: m }),
+        children: (0, i.jsx)(s.A, {
+            color: _ ? l.A.unsafe_rawColors.GREEN_360.css : "currentColor",
+            onClick: () => d.default.track(A.HAw.HELP_CLICKED, { highlighted: _ }),
             icon: a.cBN,
             tooltip: h.intl.string(h.t["cqEoj/"]),
-            ...n,
+            ...t,
         }),
     });
 }
