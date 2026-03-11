@@ -185,6 +185,9 @@ class M extends r.Ay.PersistedStore {
     getPromotionByTypeAndId(e, t) {
         return E[e]?.[t];
     }
+    getPromotionByTypeAndKey(e, t) {
+        return Object.values(E[e]).find((e) => e.promotionKey === t);
+    }
     getState() {
         return d;
     }

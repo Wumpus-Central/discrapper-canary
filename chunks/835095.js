@@ -27,6 +27,7 @@ class o extends i.A {
     partnerId;
     marketingComponents;
     rewardSkuIds;
+    promotionKey;
     static createFromServer(e) {
         return new o({
             id: e.id,
@@ -53,6 +54,7 @@ class o extends i.A {
             marketingComponents: e.marketing_components ?? [],
             rewardSkuIds:
                 e.metadata?.premium_promotion?.reward_sku_ids ?? e.metadata?.gift_promotion?.reward_sku_ids ?? [],
+            promotionKey: e.promotion_key ?? "",
         });
     }
     constructor(e) {
@@ -78,7 +80,8 @@ class o extends i.A {
             (this.promotionType = e.promotionType),
             (this.partnerId = e.partnerId),
             (this.marketingComponents = e.marketingComponents),
-            (this.rewardSkuIds = e.rewardSkuIds);
+            (this.rewardSkuIds = e.rewardSkuIds),
+            (this.promotionKey = e.promotionKey);
     }
     get isBogo() {
         return this.promotionType === s.pt.BOGO;
