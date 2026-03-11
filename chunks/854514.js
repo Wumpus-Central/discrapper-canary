@@ -1,4 +1,4 @@
-n.d(t, { A: () => b, H: () => O });
+n.d(t, { A: () => O, H: () => L });
 var i = n(627968),
     r = n(64700),
     l = n(503698),
@@ -18,51 +18,55 @@ var i = n(627968),
     I = n(415441),
     f = n(73473),
     C = n(545986),
-    T = n(7832),
-    N = n(654487),
-    S = n(49999),
-    x = n(985018),
-    v = n(487866);
-function y(e) {
+    T = n(139384),
+    N = n(7832),
+    S = n(654487),
+    x = n(49999),
+    v = n(985018),
+    y = n(437176);
+function b(e) {
     let { assetImage: t, assetVideo: n } = e,
-        l = r.useMemo(() => (null != n ? (0, p.WV)(n.url) : null) ?? t.url, [n, t]);
+        l = r.useRef(null);
+    (0, T.A)(l, S.rE.QUEST_HOME_DESKTOP);
+    let s = r.useMemo(() => (null != n ? (0, p.WV)(n.url) : null) ?? t.url, [n, t]);
     return null == n
         ? (0, i.jsxs)("div", {
-              className: v.Tv,
+              className: y.Tv,
               children: [
-                  (0, i.jsx)("div", { className: v.Np }),
+                  (0, i.jsx)("div", { className: y.Np }),
                   (0, i.jsx)("div", {
-                      className: v.LO,
-                      children: (0, i.jsx)("img", { className: v.LY, src: t.url, alt: t.altText }),
+                      className: y.LO,
+                      children: (0, i.jsx)("img", { className: y.LY, src: t.url, alt: t.altText }),
                   }),
                   (0, i.jsx)("div", {
-                      className: a()(v.LO, v.jx, v.hw),
-                      children: (0, i.jsx)("img", { className: v.LY, src: t.url, alt: "" }),
+                      className: a()(y.LO, y.jx, y.hw),
+                      children: (0, i.jsx)("img", { className: y.LY, src: t.url, alt: "" }),
                   }),
                   (0, i.jsx)("div", {
-                      className: a()(v.LO, v.jx, v.Co),
-                      children: (0, i.jsx)("img", { className: v.LY, src: t.url, alt: "" }),
+                      className: a()(y.LO, y.jx, y.Co),
+                      children: (0, i.jsx)("img", { className: y.LY, src: t.url, alt: "" }),
                   }),
               ],
           })
         : (0, i.jsxs)("div", {
-              className: v.Tv,
+              className: y.Tv,
               children: [
-                  (0, i.jsx)("div", { className: v.Np }),
+                  (0, i.jsx)("div", { className: y.Np }),
                   (0, i.jsx)("div", {
-                      className: v.LO,
+                      className: y.LO,
                       children: (0, i.jsx)(I.N, {
                           showImage: !1,
                           showVideo: !0,
+                          assetRef: l,
                           imageAsset: {
                               alt: n.altText,
-                              className: v.LY,
-                              asset: { url: l, mimetype: (0, p.vm)(l), isAnimated: !1 },
-                              assetId: l,
+                              className: y.LY,
+                              asset: { url: s, mimetype: (0, p.vm)(s), isAnimated: !1 },
+                              assetId: s,
                           },
                           videoAsset: {
                               alt: n.altText,
-                              className: v.LY,
+                              className: y.LY,
                               asset: { url: n.url, mimetype: (0, p.vm)(n.url), isAnimated: !0 },
                               assetId: n.url,
                           },
@@ -71,21 +75,21 @@ function y(e) {
               ],
           });
 }
-function b(e) {
+function O(e) {
     let { config: t, onQuestCtaClick: n } = e,
         l = (0, s.zy)(),
         p = (0, s.W6)(),
-        { enabled: I } = (0, h.Z)({ location: N.rE.QUEST_HOME_DESKTOP }),
-        [b, O] = r.useState("display-lg"),
+        { enabled: I } = (0, h.Z)({ location: S.rE.QUEST_HOME_DESKTOP }),
+        [T, O] = r.useState("display-lg"),
         L = r.useCallback((e) => {
             e.contentRect.width < 500 ? O("display-md") : O("display-lg");
         }, []),
         R = (0, u.w)(L, [], { fireOnMount: !0 }),
         P = (0, d.bG)([_.A], () => _.A.quests),
-        { dismissQuestHomeHeroContent: j } = (0, T.I)();
+        { dismissQuestHomeHeroContent: j } = (0, N.I)();
     return (
         r.useEffect(() => {
-            j(S.i.INDIRECT_ACTION);
+            j(x.i.INDIRECT_ACTION);
         }, [j]),
         (0, i.jsx)(f.R, {
             adContentId: t.campaignId,
@@ -94,15 +98,15 @@ function b(e) {
             sourceQuestContent: m.uF.QUEST_HOME_HERO,
             children: (e) =>
                 (0, i.jsx)("div", {
-                    className: a()(v.iE, "theme-midnight", { [v.Qx]: !I }),
+                    className: a()(y.iE, "theme-midnight", { [y.Qx]: !I }),
                     ref: (t) => {
                         (R.current = t), (e.current = t);
                     },
                     children: (0, i.jsxs)("div", {
-                        className: v.FG,
+                        className: y.FG,
                         children: [
                             (0, i.jsxs)(c.BJc, {
-                                className: v.Qs,
+                                className: y.Qs,
                                 direction: "vertical",
                                 justify: "space-between",
                                 children: [
@@ -114,18 +118,18 @@ function b(e) {
                                             (0, i.jsx)("img", {
                                                 src: t.assetSponsorImage.url,
                                                 alt: t.assetSponsorImage.altText,
-                                                className: v.wm,
+                                                className: y.wm,
                                             }),
                                             (0, i.jsx)(c.Text, {
                                                 color: "text-strong",
                                                 variant: "text-sm/normal",
-                                                className: v.yu,
-                                                children: x.intl.string(x.t.OJjFi5),
+                                                className: y.yu,
+                                                children: v.intl.string(v.t.OJjFi5),
                                             }),
                                         ],
                                     }),
                                     (0, i.jsxs)(c.BJc, {
-                                        className: v.yp,
+                                        className: y.yp,
                                         gap: 16,
                                         children: [
                                             (0, i.jsxs)(c.BJc, {
@@ -133,14 +137,14 @@ function b(e) {
                                                 children: [
                                                     (0, i.jsx)(c.Heading, {
                                                         color: "text-strong",
-                                                        variant: b,
-                                                        className: v.DD,
+                                                        variant: T,
+                                                        className: y.DD,
                                                         children: t.labelTitle,
                                                     }),
                                                     (0, i.jsx)(c.Text, {
                                                         color: "text-strong",
                                                         variant: "text-md/normal",
-                                                        className: v.VA,
+                                                        className: y.VA,
                                                         children: t.labelSubtitle,
                                                     }),
                                                 ],
@@ -198,13 +202,13 @@ function b(e) {
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(y, { assetImage: t.assetHeroImage, assetVideo: t.assetHeroVideo }),
+                            (0, i.jsx)(b, { assetImage: t.assetHeroImage, assetVideo: t.assetHeroVideo }),
                         ],
                     }),
                 }),
         })
     );
 }
-function O() {
-    return (0, i.jsx)("div", { className: a()(v.iE, v.FG, v.B3), children: (0, i.jsx)(c.y$y, {}) });
+function L() {
+    return (0, i.jsx)("div", { className: a()(y.iE, y.FG, y.B3), children: (0, i.jsx)(c.y$y, {}) });
 }
