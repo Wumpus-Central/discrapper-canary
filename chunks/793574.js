@@ -146,7 +146,6 @@ var r = (function (e) {
         (e.GUILD_BOOSTING_TIER_3 = "guild boosting tier 3"),
         (e.GUILD_BOOSTING_UPSELL_BANNER = "guild boosting upsell banner"),
         (e.GUILD_BOOSTING_SIDEBAR_DISPLAY = "guild boosting sidebar display"),
-        (e.GUILD_BOOSTING_ENHANCED_ROLE_COLOR_COACHMARK = "guild boosting enhanced role color coachmark"),
         (e.GUILDS_LIST = "guilds list"),
         (e.ACTIVITY_CHANNEL_SELECTOR = "activity channel selector"),
         (e.ACTIVITY_DIRECTORY = "activity directory"),

@@ -2886,7 +2886,6 @@ var tO = (function (e) {
             (e.GUILD_POWERUPS_OVERVIEW_SIDEBAR = "Guild Powerups Overview Sidebar"),
             (e.GUILD_POWERUPS_OVERVIEW_CARD = "Powerups Overview Card"),
             (e.GUILD_POWERUPS_NEW_PERKS_COACHMARK = "Guild Powerups New Perks Coachmark"),
-            (e.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK = "Booster Enhanced Role Colors Coachmark"),
             (e.GAME_SERVERS_EMPTY_STATE = "Game Servers Empty State"),
             (e.SECURE_FRAMES_STREAM_BOTTOM_SHEET = "Secure Frames Stream Bottom Sheet"),
             (e.SECURE_FRAMES_VOICE_BOTTOM_SHEET = "Secure Frames Voice Bottom Sheet"),
