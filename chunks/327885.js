@@ -1,4 +1,4 @@
-n.d(t, { y: () => _ });
+n.d(t, { y: () => f });
 var a = n(64700),
     i = n(559474);
 let s = new Set([
@@ -45,13 +45,13 @@ let s = new Set([
         for (let e of await new Promise((e) => a.readEntries(e))) e.isDirectory && t.includes(e.name) && n.add(e.name);
         return t.filter((e) => !n.has(e));
     },
-    x = (e) => {
+    p = (e) => {
         let { names: t, addError: n } = e,
             a = /^[a-z0-9]+(_[a-z0-9]+)*(\.[a-z0-9]+)?$/,
             i = t.filter((e) => !a.test(e));
         i.length > 0 && n("File names must be in lowercase snake case", i);
     },
-    p = (e, t, n, a) => {
+    x = (e, t, n, a) => {
         let i = t.size,
             s = i > 1e6 ? `${(i / 1e6).toFixed(2)}MB` : `${(i / 1e3).toFixed(2)}KB`,
             l = `${t.name} - ${s}`;
@@ -62,9 +62,13 @@ let s = new Set([
     },
     g = (e, t, n, a) => {
         let i = m[e];
-        if (null != i) for (let e of t) e.name.endsWith(".txt") || p(i, e, n, a);
+        if (null != i) for (let e of t) e.name.endsWith(".txt") || x(i, e, n, a);
     },
-    _ = () => {
+    _ = (e) => {
+        let t = i.aL[e];
+        return `${e} (${t.map((e) => `.${e}`).join(", ")})`;
+    },
+    f = () => {
         let [e, t] = a.useState(!1),
             [n, r] = a.useState({}),
             [o, d] = a.useState({}),
@@ -82,7 +86,7 @@ let s = new Set([
                     return { ...n, [e]: [...a, ...t] };
                 });
             }, []),
-            _ = a.useCallback(() => {
+            f = a.useCallback(() => {
                 t(!1), d({}), r({});
             }, []);
         return {
@@ -105,24 +109,27 @@ let s = new Set([
                                 for (let e of t.collectionFiles) {
                                     let t = (0, i.pd)(e),
                                         s = null != t ? m[t] : null;
-                                    null != s && p(s, e, n, a);
+                                    null != s && x(s, e, n, a);
                                 }
-                                x({ names: t.collectionFiles.map((e) => e.name), addError: n });
-                                let l = new Set(t.collectionFiles.map((e) => e.name)),
-                                    r = Array.from(s).filter((e) => !l.has(e));
+                                p({ names: t.collectionFiles.map((e) => e.name), addError: n });
+                                let l = new Set(t.collectionFiles.map((e) => (0, i.pd)(e)).filter((e) => null != e)),
+                                    r = Array.from(s)
+                                        .filter((e) => !l.has(e))
+                                        .map(_);
                                 r.length > 0 && n("Missing required files", r);
                                 let o = Object.values(i.RN)
                                     .filter((e) => !s.has(e))
-                                    .filter((e) => !l.has(e));
+                                    .filter((e) => !l.has(e))
+                                    .map(_);
                                 o.length > 0 && a("Missing optional assets", o);
                             })({ files: n, addError: c, addWarning: u }),
                             ((e) => {
                                 let { files: t, addError: n, addWarning: a } = e;
-                                x({ names: Object.keys(t.profileEffectFilesMap), addError: n }),
+                                p({ names: Object.keys(t.profileEffectFilesMap), addError: n }),
                                     Object.entries(t.profileEffectFilesMap).forEach((e) => {
                                         let [t, s] = e,
                                             r = s.map((e) => e.name);
-                                        x({
+                                        p({
                                             names: r.map((e) => {
                                                 let t = e.indexOf("-");
                                                 return e.substring(0, t > 0 ? t : e.length);
@@ -147,7 +154,7 @@ let s = new Set([
                             })({ files: n, addError: c, addWarning: u }),
                             ((e) => {
                                 let { files: t, addError: n, addWarning: a } = e;
-                                x({ names: t.avatarDecorationFiles.map((e) => e.name), addError: n }),
+                                p({ names: t.avatarDecorationFiles.map((e) => e.name), addError: n }),
                                     g(i.Jn.AVATAR_DECORATION, t.avatarDecorationFiles, n, a);
                             })({ files: n, addError: c, addWarning: u }),
                             ((e) => {
@@ -160,6 +167,6 @@ let s = new Set([
                 },
                 [c, u],
             ),
-            reset: _,
+            reset: f,
         };
     };
