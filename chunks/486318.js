@@ -1,15 +1,16 @@
-n.d(e, { N: () => i, e: () => s });
-var r = n(397927),
-    a = n(871123);
-function s(t) {
-    let { imageUrl: e, backgroundImageUrl: n, altText: a, overlayImageUrl: s, customClassNames: i } = t;
+"use strict";
+n.d(t, { N: () => r, e: () => s });
+var a = n(397927),
+    l = n(871123);
+function s(e) {
+    let { imageUrl: t, backgroundImageUrl: n, altText: l, overlayImageUrl: s, customClassNames: r } = e;
     return {
         type: "dynamic",
-        component: r.Oz7.SOCIAL_LAYER_SKU_PREVIEW,
+        component: a.Oz7.SOCIAL_LAYER_SKU_PREVIEW,
         aspectRatio: "16/9",
-        props: { imageUrl: e, backgroundImageUrl: n, altText: a, overlayImageUrl: s, customClassNames: i },
+        props: { imageUrl: t, backgroundImageUrl: n, altText: l, overlayImageUrl: s, customClassNames: r },
     };
 }
-function i(t) {
-    return s({ imageUrl: (0, a.fq)(t), backgroundImageUrl: (0, a.xf)(t), altText: t.name });
+function r(e) {
+    return s({ imageUrl: (0, l.fq)(e), backgroundImageUrl: (0, l.xf)(e), altText: e.name });
 }
