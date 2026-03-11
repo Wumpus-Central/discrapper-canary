@@ -1,18 +1,18 @@
-t.d(l, { Ay: () => b, F2: () => u, Qs: () => p, Z_: () => m });
+t.d(l, { Ay: () => E, F2: () => u, Qs: () => _, Z_: () => T });
 var r = t(627968),
-    o = t(64700),
-    i = t(835245),
-    n = t(204990),
+    n = t(64700),
+    o = t(835245),
+    i = t(204990),
     a = t(604238),
-    c = t(856535),
+    s = t(856535),
     d = t(55391);
-function s(e, l) {
+function c(e, l) {
     return e.children.map((e) =>
         (function e(l, t) {
             if ("string" == typeof l) return l;
-            let { block: o, ...a } = l,
-                c = t[o];
-            if (null == c) return null;
+            let { block: n, ...a } = l,
+                s = t[n];
+            if (null == s) return null;
             let d = (() => {
                     if ("children" in l) {
                         if (!Array.isArray(l.children) && null != l.children) return e(l.children, t);
@@ -20,32 +20,63 @@ function s(e, l) {
                     }
                     return null;
                 })(),
-                s = n.E.has(o) ? { ...a, componentMap: t } : a;
-            return (0, r.jsx)(c, { ...s, children: d }, (0, i.A)());
+                c = i.E.has(n) ? { ...a, componentMap: t } : a;
+            return (0, r.jsx)(s, { ...c, children: d }, (0, o.A)());
         })(e, l),
     );
 }
 function u(e) {
     let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.E;
     try {
-        return s(e, l), !0;
+        return c(e, l), !0;
     } catch (e) {
         return !1;
     }
 }
-let h = (e) => {
-        let { layout: l, overrides: t } = e,
-            r = (0, a.e)({ overrides: t });
-        return o.useMemo(() => s(l, r), [l, r]);
+class h extends n.Component {
+    state = { hasError: !1 };
+    static getDerivedStateFromError() {
+        return { hasError: !0 };
+    }
+    componentDidCatch() {
+        this.props.onError?.();
+    }
+    render() {
+        return this.state.hasError ? null : this.props.children;
+    }
+}
+let m = (e) => {
+        let { layout: l, Components: t } = e;
+        return n.useMemo(() => c(l, t), [l, t]);
     },
     p = (e) => {
-        let { layoutId: l, tenantId: t, overrides: o } = e,
-            { layout: i } = (0, c.A)(t, l);
-        return null == i ? null : (0, r.jsx)(h, { layout: i, overrides: o });
+        let { layout: l, overrides: t, onError: o, onEmptyLayout: i } = e,
+            s = (0, a.e)({ overrides: t });
+        return (
+            n.useEffect(() => {
+                0 === l.children.length && i?.();
+            }, [l, i]),
+            (0, r.jsx)(h, { onError: o, children: (0, r.jsx)(m, { layout: l, Components: s }) })
+        );
     },
-    m = (e) => {
-        let { templateId: l, tenantId: t, overrides: o, requestParams: i } = e,
-            { layout: n } = (0, d.A)(t, l, i);
-        return null == n ? null : (0, r.jsx)(h, { layout: n, overrides: o });
+    _ = (e) => {
+        let { layoutId: l, tenantId: t, overrides: o, onError: i, onEmptyLayout: a } = e,
+            { layout: d, error: c } = (0, s.A)(t, l);
+        return (n.useEffect(() => {
+            null != c && i?.();
+        }, [c, i]),
+        null == d)
+            ? null
+            : (0, r.jsx)(p, { layout: d, overrides: o, onError: i, onEmptyLayout: a });
     },
-    b = h;
+    T = (e) => {
+        let { templateId: l, tenantId: t, overrides: o, onError: i, onEmptyLayout: a, requestParams: s } = e,
+            { layout: c, error: u } = (0, d.A)(t, l, s);
+        return (n.useEffect(() => {
+            null != u && i?.();
+        }, [u, i]),
+        null == c)
+            ? null
+            : (0, r.jsx)(p, { layout: c, overrides: o, onError: i, onEmptyLayout: a });
+    },
+    E = p;

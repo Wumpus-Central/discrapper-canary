@@ -15,19 +15,22 @@ var o = n(627968),
     h = n(938191),
     p = n(758836),
     C = n(652215),
-    B = n(892766),
-    I = n(419447);
+    B = n(157884),
+    I = n(201073);
 let f = (e) => {
     let { collectionId: _ } = e,
         n = r.useRef(null);
     (0, l.P)(s.a), (0, m.g)();
     let t = (0, h.yB)("CollectiblesShopIndexPage");
     (0, h.gB)();
-    let { selectedTab: f, transitionToTab: w } = (0, u.o)(p.G2.COLLECTION_INDEX);
+    let { selectedTab: f, transitionToTab: w } = (0, u.o)(p.G2.COLLECTION_INDEX),
+        k = r.useCallback(() => {
+            (0, c.pX)(C.BVt.COLLECTIBLES_SHOP);
+        }, []);
     return ((0, b.pE)(),
     r.useEffect(() => {
-        null == _ && (0, c.pX)(C.BVt.COLLECTIBLES_SHOP);
-    }, [_]),
+        null == _ && k();
+    }, [_, k]),
     null == _)
         ? null
         : (0, o.jsxs)("div", {
@@ -43,6 +46,8 @@ let f = (e) => {
                               tenantId: C.FYj,
                               templateId: "collection-index",
                               requestParams: { collection_id: _ },
+                              onError: k,
+                              onEmptyLayout: k,
                           }),
                       }),
                   }),
