@@ -155,16 +155,19 @@ function ee(e) {
         }),
         K = (0, w.Pd)(c),
         { primaryCtaButtonVariant: z } = (0, j.Op)(),
-        q = (0, y.do)({
+        q = j.s5.useConfig({ location: $.rE.QUESTS_CARD }),
+        X =
+            q.enabled &&
+            (q.variant === j.tL.LEARN_MORE_CTA_ONLY || q.variant === j.tL.COMBINE_LEARN_MORE_CTA_AND_EXPRESSIVE_BUTTON),
+        ee = (0, y.do)({
             quest: c,
             content: v.uF.QUEST_BAR_V2,
-            ctaContent: S.Cy.CONTEXT_MENU_OPEN_GAME_LINK_EXP_TREATMENT_ONE,
+            ctaContent:
+                q.variant === j.tL.LEARN_MORE_CTA_ONLY
+                    ? S.Cy.LEARN_MORE_CTA_AND_EXPRESSIVE_BUTTON_TREATMENT_TWO_OPEN_GAME_LINK
+                    : S.Cy.LEARN_MORE_CTA_AND_EXPRESSIVE_BUTTON_TREATMENT_THREE_OPEN_GAME_LINK,
             sourceQuestContent: v.uF.QUEST_BAR_V2,
         }),
-        X = j.s5.useConfig({ location: $.rE.QUESTS_CARD }),
-        ee =
-            X.enabled &&
-            (X.variant === j.tL.LEARN_MORE_CTA_ONLY || X.variant === j.tL.COMBINE_LEARN_MORE_CTA_AND_EXPRESSIVE_BUTTON),
         et = (0, E.wr)(c);
     return (0, a.jsxs)(a.Fragment, {
         children: [
@@ -194,12 +197,12 @@ function ee(e) {
                                 fullWidth: !0,
                                 wrap: !1,
                                 children: [
-                                    ee &&
+                                    X &&
                                         (0, a.jsx)(m.Button, {
                                             size: "sm",
                                             variant: "secondary",
                                             text: et,
-                                            onClick: q,
+                                            onClick: ee,
                                         }),
                                     W.enabled && K === w.UA.UNENROLLED && W.enabledQuestStates.has(w.UA.UNENROLLED)
                                         ? (0, a.jsx)(O.A, {

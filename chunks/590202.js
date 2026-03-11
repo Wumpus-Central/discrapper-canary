@@ -50,10 +50,12 @@ var l = (function (e) {
         (e.REWARD_MODAL_COPY_LINK = "REWARD_MODAL.COPY_LINK"),
         (e.CONTEXT_MENU_HIDE_CONTENT = "CONTEXT_MENU.HIDE_CONTENT"),
         (e.CONTEXT_MENU_OPEN_GAME_LINK = "CONTEXT_MENU.OPEN_GAME_LINK"),
-        (e.CONTEXT_MENU_OPEN_GAME_LINK_EXP_TREATMENT_ONE =
-            "2026-02-quest-card-learn-more-cta_treatment_1_OPEN_GAME_LINK"),
-        (e.CONTEXT_MENU_OPEN_GAME_LINK_EXP_TREATMENT_TWO =
-            "2026-02-quest-card-learn-more-cta_treatment_2_OPEN_GAME_LINK"),
+        (e.LEARN_MORE_CTA_AND_EXPRESSIVE_BUTTON_TREATMENT_TWO_OPEN_GAME_LINK =
+            "2026-03-learn-more-cta-and-expressive-button_treatment_2_OPEN_GAME_LINK"),
+        (e.LEARN_MORE_CTA_AND_EXPRESSIVE_BUTTON_TREATMENT_THREE_OPEN_GAME_LINK =
+            "2026-03-learn-more-cta-and-expressive-button_treatment_3_OPEN_GAME_LINK"),
+        (e.LEARN_MORE_CTA_AND_EXPRESSIVE_BUTTON_TREATMENT_FOUR_OPEN_GAME_LINK =
+            "2026-03-learn-more-cta-and-expressive-button_treatment_4_OPEN_GAME_LINK"),
         (e.CONTEXT_MENU_OPEN_DISCLOSURE = "CONTEXT_MENU.OPEN_DISCLOSURE"),
         (e.CONTEXT_MENU_LEARN_MORE = "CONTEXT_MENU.LEARN_MORE"),
         (e.HOW_TO_HELP_ARTICLE_XBOX = "HOW_TO_HELP_ARTICLE_XBOX"),

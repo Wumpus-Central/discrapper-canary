@@ -230,21 +230,24 @@ function F(e) {
         eb = t.userStatus?.claimedAt != null,
         { launchInGameActivity: ej } = (0, v.zW)(t),
         eA = (0, f.NA)({ quest: t, shortText: !0 }),
-        eC = (0, v.do)({
+        eC = p.s5.useConfig({ location: O.rE.QUESTS_CARD }),
+        ey =
+            eC.enabled &&
+            (eC.variant === p.tL.LEARN_MORE_CTA_ONLY ||
+                eC.variant === p.tL.COMBINE_LEARN_MORE_CTA_AND_EXPRESSIVE_BUTTON),
+        eT = (0, v.do)({
             quest: t,
             content: n,
-            ctaContent: j.Cy.CONTEXT_MENU_OPEN_GAME_LINK_EXP_TREATMENT_ONE,
+            ctaContent:
+                eC.variant === p.tL.LEARN_MORE_CTA_ONLY
+                    ? j.Cy.LEARN_MORE_CTA_AND_EXPRESSIVE_BUTTON_TREATMENT_TWO_OPEN_GAME_LINK
+                    : j.Cy.LEARN_MORE_CTA_AND_EXPRESSIVE_BUTTON_TREATMENT_THREE_OPEN_GAME_LINK,
             sourceQuestContent: L,
         }),
-        ey = p.s5.useConfig({ location: O.rE.QUESTS_CARD }),
-        eT =
-            ey.enabled &&
-            (ey.variant === p.tL.LEARN_MORE_CTA_ONLY ||
-                ey.variant === p.tL.COMBINE_LEARN_MORE_CTA_AND_EXPRESSIVE_BUTTON),
         eS = null;
-    if (eT) {
+    if (ey) {
         let e = (0, C.wr)(t);
-        eS = (0, a.jsx)(r.$nd, { variant: "secondary", text: e, onClick: eC });
+        eS = (0, a.jsx)(r.$nd, { variant: "secondary", text: e, onClick: eT });
     }
     let eE = null;
     return (Z && X
