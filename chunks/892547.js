@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { I: () => s });
+n.d(t, { I: () => a });
 var r = n(627968);
 n(64700);
 var i = n(397927),
-    a = n(985018);
-function s(e) {
+    s = n(985018);
+function a(e) {
     let {
         query: t,
         autoFocus: n,
-        onClear: s,
-        placeholder: o = a.intl.string(a.t["5h0QOP"]),
+        onClear: a,
+        placeholder: o = s.intl.string(s.t["5h0QOP"]),
         onKeyDown: l,
         size: u = "md",
         disabled: c = !1,
@@ -18,8 +18,8 @@ function s(e) {
         onFocus: f,
         autoComplete: p,
         inputProps: h,
-        "aria-label": m = a.intl.string(a.t["5h0QOP"]),
-        ref: g,
+        "aria-label": m = s.intl.string(s.t["5h0QOP"]),
+        ref: E,
     } = e;
     return (0, r.jsx)(i.ksK, {
         ...h,
@@ -33,9 +33,10 @@ function s(e) {
         autoFocus: n,
         autoComplete: p,
         "aria-label": m,
-        inputRef: g,
+        inputRef: E,
         leading: i.$p$,
-        clearable: null != s,
+        onClear: a,
+        clearable: null != a,
         size: u,
         fullWidth: !0,
     });

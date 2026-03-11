@@ -2,8 +2,8 @@
 n.d(t, { A: () => f });
 var r = n(627968),
     i = n(64700),
-    a = n(942381),
-    s = n(602034),
+    s = n(942381),
+    a = n(602034),
     o = n(397927),
     l = n(850992),
     u = n(151271);
@@ -19,9 +19,9 @@ let _ = i.forwardRef(function (e, t) {
                 autoFocus: h,
                 defaultSearchPlaceholder: m,
             } = e,
-            g = i.useRef(null),
-            E = (0, u.RQ)((e) => e.searchQuery),
-            [A, I] = l.Om.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], a.x),
+            E = i.useRef(null),
+            g = (0, u.RQ)((e) => e.searchQuery),
+            [A, I] = l.Om.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], s.x),
             T = i.useCallback(
                 (e) => {
                     l.Om.setActiveCategoryIndex("" === e ? 0 : -1),
@@ -32,10 +32,10 @@ let _ = i.forwardRef(function (e, t) {
                 },
                 [n],
             ),
-            y = i.useCallback(() => {
-                (0, u.Ri)("");
-            }, []),
-            S = (e) => {
+            S = i.useCallback(() => {
+                T("");
+            }, [T]),
+            y = (e) => {
                 switch (e.key) {
                     case c.dh.ARROW_LEFT:
                     case c.dh.ARROW_RIGHT:
@@ -46,14 +46,14 @@ let _ = i.forwardRef(function (e, t) {
                 f(e);
             };
         return (
-            i.useImperativeHandle(t, () => ({ focus: () => g.current?.focus() })),
+            i.useImperativeHandle(t, () => ({ focus: () => E.current?.focus() })),
             (0, r.jsx)(o.IWV, {
                 autoFocus: h,
-                query: E,
-                ref: g,
+                query: g,
+                ref: E,
                 placeholder: I ?? m,
-                onClear: y,
-                onKeyDown: S,
+                onClear: S,
+                onKeyDown: y,
                 onFocus: p,
                 onChange: T,
                 inputProps: {
@@ -61,7 +61,7 @@ let _ = i.forwardRef(function (e, t) {
                     "aria-haspopup": "grid",
                     "aria-controls": _,
                     "aria-expanded": !0,
-                    "aria-activedescendant": (0, s.Aq)(_, A.columnIndex, A.rowIndex),
+                    "aria-activedescendant": (0, a.Aq)(_, A.columnIndex, A.rowIndex),
                 },
             })
         );

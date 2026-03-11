@@ -33,8 +33,8 @@ let d = i.forwardRef(function (e, t) {
             [p, n],
         ),
         y = i.useCallback(() => {
-            (0, u.Ri)("");
-        }, []);
+            S("");
+        }, [S]);
     i.useImperativeHandle(t, () => ({ focus: () => E.current?.focus() })),
         i.useLayoutEffect(() => {
             A && E.current?.focus();

@@ -2,8 +2,8 @@
 n.d(t, { A: () => p });
 var r = n(627968),
     i = n(64700),
-    a = n(942381),
-    s = n(602034),
+    s = n(942381),
+    a = n(602034),
     o = n(397927),
     l = n(850992),
     u = n(151271),
@@ -14,14 +14,14 @@ var r = n(627968),
 let p = i.forwardRef(function (e, t) {
     let { onKeyDown: n, stickersListRef: p, channel: h } = e,
         m = (0, c.ZO)(h),
-        g = i.useRef(null),
-        { searchQuery: E, isSearchSuggestion: A } = (0, u.RQ)(
+        E = i.useRef(null),
+        { searchQuery: g, isSearchSuggestion: A } = (0, u.RQ)(
             (e) => ({ searchQuery: e.searchQuery, isSearchSuggestion: e.isSearchSuggestion }),
-            a.x,
+            s.x,
         ),
         I = l.bM.useStore((e) => e.searchPlaceholder),
-        T = l.bM.useStore((e) => e.inspectedExpressionPosition, a.x),
-        y = i.useCallback(
+        T = l.bM.useStore((e) => e.inspectedExpressionPosition, s.x),
+        S = i.useCallback(
             (e) => {
                 l.bM.setActiveCategoryIndex("" === e ? 0 : -1),
                     l.bM.setInspectedExpressionPosition(0, 0),
@@ -31,30 +31,30 @@ let p = i.forwardRef(function (e, t) {
             },
             [p],
         ),
-        S = i.useCallback(() => {
-            (0, u.Ri)("");
-        }, []);
+        y = i.useCallback(() => {
+            S("");
+        }, [S]);
     return (
-        i.useImperativeHandle(t, () => ({ focus: () => g.current?.focus() })),
+        i.useImperativeHandle(t, () => ({ focus: () => E.current?.focus() })),
         i.useLayoutEffect(() => {
-            A && g.current?.focus();
+            A && E.current?.focus();
         }, [A]),
         (0, r.jsx)("div", {
             className: f.i,
             children: (0, r.jsx)(o.IWV, {
                 autoFocus: m,
                 disabled: !m,
-                query: E,
-                ref: g,
+                query: g,
+                ref: E,
                 placeholder: I ?? (m ? _.intl.string(_.t.dt5h1C) : _.intl.string(_.t["Pck/4U"])),
-                onClear: S,
+                onClear: y,
                 onKeyDown: n,
-                onChange: y,
+                onChange: S,
                 inputProps: {
                     "aria-haspopup": "grid",
                     "aria-controls": d.lq,
                     "aria-expanded": !0,
-                    "aria-activedescendant": (0, s.Aq)(d.lq, T.columnIndex, T.rowIndex),
+                    "aria-activedescendant": (0, a.Aq)(d.lq, T.columnIndex, T.rowIndex),
                 },
             }),
         })
