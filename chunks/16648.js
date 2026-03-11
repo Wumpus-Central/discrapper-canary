@@ -2,8 +2,8 @@
 n.d(t, { A: () => I });
 var r = n(562465),
     i = n(73153),
-    a = n(439372),
-    s = n(461213),
+    s = n(439372),
+    a = n(461213),
     o = n(927813),
     l = n(728458),
     u = n(527776),
@@ -18,19 +18,21 @@ function h() {
 function m() {
     return u.A.getCurrentConfig({ location: "FriendOnlineTimer" }).useTestTimerDuration ? p : f;
 }
-async function g() {
-    if (h())
+async function E() {
+    if (h()) {
         try {
-            await r.Bo.post({ url: d.Rsh.USER_MEANINGFULLY_ONLINE, rejectWithError: !0 }),
-                i.h.dispatch({ type: "FRIEND_ONLINE_TIMER_REPORTED", timestampMs: Date.now() });
+            await r.Bo.post({ url: d.Rsh.USER_MEANINGFULLY_ONLINE, rejectWithError: !0 });
         } catch (e) {
-            l.A.captureException(e, { tags: { app_context: "session_timer" } });
+            if (!(e instanceof r.oh) || 429 !== e.status)
+                return void l.A.captureException(e, { tags: { app_context: "session_timer" } });
         }
+        i.h.dispatch({ type: "FRIEND_ONLINE_TIMER_REPORTED", timestampMs: Date.now() });
+    }
 }
-function E(e) {
+function g(e) {
     return [_.cl.ONLINE, _.cl.STREAMING].includes(e);
 }
-class A extends a.A {
+class A extends s.A {
     timerId = null;
     actions = {
         POST_CONNECTION_OPEN: () => this.start(),
@@ -47,9 +49,9 @@ class A extends a.A {
         h() &&
             c.A.isCooldownElapsed() &&
             null == this.timerId &&
-            E(s.A.getStatus()) &&
+            g(a.A.getStatus()) &&
             (this.timerId = setTimeout(() => {
-                (this.timerId = null), !E(s.A.getStatus()) || (c.A.isCooldownElapsed() && g());
+                (this.timerId = null), !g(a.A.getStatus()) || (c.A.isCooldownElapsed() && E());
             }, m()));
     };
     clear = () => {
