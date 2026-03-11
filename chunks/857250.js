@@ -2,8 +2,8 @@
 n.d(t, { o: () => _, y: () => f });
 var r = n(627968),
     i = n(64700),
-    a = n(835245),
-    s = n(571356),
+    s = n(835245),
+    a = n(571356),
     o = n(397927),
     l = n(427209),
     u = n(97483),
@@ -28,6 +28,8 @@ function d(e) {
             return (0, r.jsx)(o.O4, { className: c.Kk, color: o.LU0.colors.TEXT_STRONG.css });
         case u.Ck.AI:
             return (0, r.jsx)(o.Dud, { className: c.Kk, color: o.LU0.colors.TEXT_STRONG.css });
+        case u.Ck.FAVORITE:
+            return (0, r.jsx)(o.Gg5, { className: c.Kk, color: o.LU0.colors.TEXT_STRONG.css });
         default:
             return null;
     }
@@ -37,19 +39,19 @@ function _(e, t) {
         {
             position: r = u.jg.position,
             component: i = u.jg.component,
-            duration: s = u.jg.duration,
+            duration: a = u.jg.duration,
             appContext: o = u.jg.appContext,
         } = n;
-    return { message: e, id: (0, a.A)(), type: t, options: { position: r, component: i, duration: s, appContext: o } };
+    return { message: e, id: (0, s.A)(), type: t, options: { position: r, component: i, duration: a, appContext: o } };
 }
 let f = i.memo(function (e) {
-    let { message: t, type: n, id: i, options: { component: a = u.jg.component } = u.jg } = e;
-    return null != a
-        ? a
+    let { message: t, type: n, id: i, options: { component: s = u.jg.component } = u.jg } = e;
+    return null != s
+        ? s
         : (0, r.jsxs)("div", {
               id: i,
               className: c.oR,
               "data-type": n,
-              children: [d(n), (0, r.jsx)(s.E, { className: c.Qs, variant: "text-md/normal", children: t })],
+              children: [d(n), (0, r.jsx)(a.E, { className: c.Qs, variant: "text-md/normal", children: t })],
           });
 });

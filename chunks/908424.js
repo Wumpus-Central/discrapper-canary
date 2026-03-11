@@ -9,7 +9,7 @@ function d(t) {
     let { navId: a, onClose: d = l.Z_, onSelect: o } = t,
         u = n.useCallback(() => {
             (0, r.mMO)(async () => {
-                let { default: t } = await i.e("59839").then(i.bind(i, 889186));
+                let { default: t } = await Promise.all([i.e("59839"), i.e("4738")]).then(i.bind(i, 889186));
                 return (a) => (0, e.jsx)(t, { ...a });
             });
         }, []),

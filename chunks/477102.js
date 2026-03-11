@@ -617,7 +617,7 @@ let v = {
         };
     },
     AddFavoriteChannelModal: async () => {
-        let { default: e } = await n.e("82220").then(n.bind(n, 889186));
+        let { default: e } = await Promise.all([n.e("59839"), n.e("4738")]).then(n.bind(n, 889186));
         return (t) => (0, a.jsx)(e, { ...t, parentId: null });
     },
     ActivityShareMomentModal: async () => {

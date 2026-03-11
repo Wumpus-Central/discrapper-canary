@@ -1,4 +1,4 @@
-l.d(t, { default: () => M }), l(321073);
+l.d(t, { default: () => j }), l(321073);
 var n = l(627968),
     s = l(64700),
     r = l(158954),
@@ -11,111 +11,113 @@ var n = l(627968),
     h = l(255266),
     f = l(223863),
     g = l(151054),
-    p = l(734057),
-    A = l(71393),
-    _ = l(576705),
-    m = l(287809),
-    x = l(181079),
-    b = l(422258),
-    y = l(652215),
-    C = l(665606),
-    L = l(985018),
+    A = l(734057),
+    p = l(71393),
+    m = l(576705),
+    x = l(287809),
+    C = l(181079),
+    y = l(422258),
+    b = l(93055),
+    _ = l(652215),
+    L = l(665606),
+    M = l(985018),
     S = l(233492);
-function M(e) {
+function j(e) {
     let { transitionState: t, onClose: l, parentId: a } = e,
         [d, o] = s.useState(""),
         [h, f] = s.useState(() => new Set()),
-        A = (0, i.bG)([x.A], () => x.A.getFavoriteChannels()),
-        m = s.useMemo(() => new Set(Object.keys(A)), [A]),
-        M = s.useCallback(
+        { notifyFavoriteAdded: p } = (0, b.CJ)(),
+        x = (0, i.bG)([C.A], () => C.A.getFavoriteChannels()),
+        j = s.useMemo(() => new Set(Object.keys(x)), [x]),
+        E = s.useCallback(
             (e, t) => {
                 if (e.type === c.rD.USER) {
-                    let l = p.A.getDMChannelFromUserId(e.record.id);
-                    return (!!t || null != l) && (null == l || !m.has(l.id));
+                    let l = A.A.getDMChannelFromUserId(e.record.id);
+                    return (!!t || null != l) && (null == l || !j.has(l.id));
                 }
                 return e.type === c.rD.GROUP_DM
-                    ? !m.has(e.record.id)
-                    : _.A.can(y.xBc.VIEW_CHANNEL, e.record) && !m.has(e.record.id);
+                    ? !j.has(e.record.id)
+                    : m.A.can(_.xBc.VIEW_CHANNEL, e.record) && !j.has(e.record.id);
             },
-            [m],
+            [j],
         ),
-        { results: N, updateSearchText: v } = (0, g.R)({ includeMissingDMs: !0, channelFilter: M }),
-        E = s.useMemo(() => [...h].filter((e) => !m.has(e)).length, [m, h]),
-        G = E >= 20,
+        { results: N, updateSearchText: G } = (0, g.R)({ includeMissingDMs: !0, channelFilter: E }),
+        R = s.useMemo(() => [...h].filter((e) => !j.has(e)).length, [j, h]),
+        w = R >= 20,
         I = s.useMemo(
             () =>
-                E >= 2 ? L.intl.formatToPlainString(C.default.LbCa8x, { count: E }) : L.intl.string(C.default.xKXcSu),
-            [E],
+                R >= 2 ? M.intl.formatToPlainString(L.default.LbCa8x, { count: R }) : M.intl.string(L.default.xKXcSu),
+            [R],
         ),
-        R = s.useCallback(
+        T = s.useCallback(
             (e) => {
-                o(e), v(e);
+                o(e), G(e);
             },
-            [v],
+            [G],
         ),
-        w = s.useCallback(
+        H = s.useCallback(
             (e) => {
-                m.has(e) ||
+                j.has(e) ||
                     f((t) => {
                         let l = 0;
-                        for (let e of t) m.has(e) || (l += 1);
+                        for (let e of t) j.has(e) || (l += 1);
                         if (l >= 20 && !t.has(e)) return t;
                         let n = new Set(t);
                         return n.has(e) ? n.delete(e) : n.add(e), n;
                     });
             },
-            [m],
+            [j],
         ),
-        H = s.useCallback(() => {
-            let e = [...h].filter((e) => !m.has(e));
-            e.length > 0 && (0, b.S_)(e, a ?? null), l();
-        }, [m, l, a, h]),
-        T = s.useMemo(() => {
+        U = s.useCallback(() => {
+            let e = [...h].filter((e) => !j.has(e));
+            e.length > 0 && (p(), (0, y.S_)(e, a ?? null)), l();
+        }, [j, p, l, a, h]),
+        q = s.useMemo(() => {
             let e = [];
-            for (let t of N) t.type !== c.rD.HEADER && null != k(t) && e.push(t);
+            for (let t of N) t.type !== c.rD.HEADER && null != D(t) && e.push(t);
             return e;
         }, [N]),
-        q = s.useMemo(
+        O = s.useMemo(
             () =>
-                0 === T.length
-                    ? { sections: [1], sectionHeight: 0, renderRow: () => (0, n.jsx)(j, {}), rowHeight: 72 }
+                0 === q.length
+                    ? { sections: [1], sectionHeight: 0, renderRow: () => (0, n.jsx)(k, {}), rowHeight: 72 }
                     : {
-                          sections: [T.length],
+                          sections: [q.length],
                           sectionHeight: 0,
                           rowHeight: 48,
                           renderRow: (e) => {
                               let { section: t, row: l } = e;
                               if (t > 0) return null;
-                              let s = T[l];
+                              let s = q[l];
                               if (null == s) return null;
-                              let r = k(s);
+                              let r = D(s);
                               return null == r
                                   ? null
                                   : (0, n.jsx)(
-                                        D,
+                                        v,
                                         {
                                             channel: r,
                                             selected: h.has(r.id),
-                                            disabled: G && !h.has(r.id),
-                                            onToggleChannel: w,
+                                            disabled: w && !h.has(r.id),
+                                            onToggleChannel: H,
                                         },
                                         r.id,
                                     );
                           },
                       },
-            [T, w, h, G],
+            [q, H, h, w],
         );
     return (0, n.jsx)(r.Modal, {
-        title: L.intl.string(C.default.Rp35U1),
+        title: M.intl.string(L.default.Rp35U1),
         actions: [],
         transitionState: t,
         onClose: l,
         input: (0, n.jsx)(u.IWV, {
             query: d,
-            onChange: R,
-            onClear: () => R(""),
-            placeholder: L.intl.string(L.t["5h0QOP"]),
-            "aria-label": L.intl.string(L.t["5h0QOP"]),
+            onChange: T,
+            onClear: () => T(""),
+            placeholder: M.intl.string(M.t["5h0QOP"]),
+            "aria-label": M.intl.string(M.t["5h0QOP"]),
             autoFocus: !0,
         }),
         actionBarInput: (0, n.jsx)("div", {
@@ -125,35 +127,35 @@ function M(e) {
                 size: "md",
                 fullWidth: !0,
                 text: I,
-                onClick: H,
-                disabled: 0 === E,
+                onClick: U,
+                disabled: 0 === R,
             }),
         }),
-        listProps: q,
+        listProps: O,
     });
 }
-function j() {
+function k() {
     return (0, n.jsx)("div", {
         className: S.p$,
         children: (0, n.jsx)(u.Text, {
             variant: "text-md/normal",
             color: "text-muted",
-            children: L.intl.string(C.default.kQL9be),
+            children: M.intl.string(L.default.kQL9be),
         }),
     });
 }
-function k(e) {
+function D(e) {
     if (e.type === c.rD.USER) {
         let t = (0, f._g)({ type: "user", id: e.record.id });
-        return null != t ? (p.A.getChannel(t) ?? null) : null;
+        return null != t ? (A.A.getChannel(t) ?? null) : null;
     }
     return e.type === c.rD.TEXT_CHANNEL || e.type === c.rD.VOICE_CHANNEL || e.type === c.rD.GROUP_DM ? e.record : null;
 }
-function D(e) {
+function v(e) {
     let { channel: t, selected: l, disabled: s, onToggleChannel: r } = e,
-        c = (0, i.bG)([A.A], () => A.A.getGuild(t.guild_id), [t.guild_id]),
+        c = (0, i.bG)([p.A], () => p.A.getGuild(t.guild_id), [t.guild_id]),
         f = (0, d.Ay)(t),
-        g = (0, i.bG)([m.default], () => (t.isDM() ? m.default.getUser(t.recipients?.[0]) : null), [t]);
+        g = (0, i.bG)([x.default], () => (t.isDM() ? x.default.getUser(t.recipients?.[0]) : null), [t]);
     return (0, n.jsxs)(
         u.DUT,
         {
