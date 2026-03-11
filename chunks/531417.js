@@ -625,6 +625,12 @@ class A extends s.A {
     async getDeviceOSMuted(e) {
         return await (0, d.lE)().getDeviceOSMuted?.(e);
     }
+    getDeviceAudioEffects(e) {
+        let t = (0, d.lE)();
+        return null != t.getDeviceAudioEffects
+            ? t.getDeviceAudioEffects(e)
+            : Promise.reject(Error("Device audio effect querying not supported"));
+    }
     handleDeviceChange = (() => {
         var e = this;
         return function () {

@@ -164,6 +164,9 @@ class l extends r.A {
     getDeviceOSMuted(e) {
         return Promise.resolve(void 0);
     }
+    getDeviceAudioEffects(e) {
+        return Promise.reject(Error("Device audio effect querying not supported"));
+    }
     getNoiseCancellationStats() {
         return Promise.reject(Error("Dummy noise cancellation stats not supported"));
     }

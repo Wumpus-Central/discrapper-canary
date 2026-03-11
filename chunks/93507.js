@@ -381,6 +381,9 @@ class O extends l.A {
     getDeviceOSMuted(e) {
         return Promise.resolve(void 0);
     }
+    getDeviceAudioEffects(e) {
+        return Promise.reject(Error("Device audio effect querying not supported on browsers."));
+    }
     handleActiveSinksChange = (e, t) => {
         this.connections.forEach((n) =>
             n.setHasActiveVideoOutputSink(e, t, "MediaEngineWebRTC.handleActiveSinksChange"),
