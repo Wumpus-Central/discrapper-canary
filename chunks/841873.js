@@ -9,6 +9,7 @@ n.d(t, {
     CI: () => tI,
     DS: () => e2,
     Dn: () => eK,
+    Dp: () => tN,
     E1: () => eX,
     EH: () => eH,
     FH: () => et,
@@ -34,7 +35,7 @@ n.d(t, {
     Oy: () => q,
     PJ: () => tn,
     PR: () => tw,
-    Ph: () => v,
+    Ph: () => N,
     Py: () => tG,
     QH: () => ef,
     QR: () => tM,
@@ -80,13 +81,12 @@ n.d(t, {
     gR: () => ep,
     hI: () => eB,
     he: () => ej,
-    hx: () => tN,
     iA: () => e8,
     ii: () => tu,
     j1: () => ez,
+    jN: () => tC,
     jn: () => eq,
     ju: () => e6,
-    jv: () => tC,
     k2: () => eJ,
     k4: () => eY,
     kK: () => tf,
@@ -106,7 +106,7 @@ n.d(t, {
     sQ: () => ed,
     sW: () => tF,
     ss: () => to,
-    t7: () => C,
+    t7: () => R,
     tZ: () => eZ,
     uo: () => eR,
     uw: () => tt,
@@ -115,8 +115,7 @@ n.d(t, {
     vF: () => eC,
     vU: () => tk,
     vV: () => eU,
-    vb: () => N,
-    vo: () => tR,
+    vb: () => C,
     w2: () => e9,
     w6: () => tc,
     w9: () => eo,
@@ -126,7 +125,8 @@ n.d(t, {
     x0: () => t_,
     x6: () => er,
     xV: () => tm,
-    xy: () => y,
+    xf: () => tR,
+    xy: () => v,
     yc: () => tH,
     yq: () => eW,
     zE: () => tD,
@@ -275,6 +275,10 @@ function S(e, t, n, i, s) {
     r.installLogCallback(e, t, n, i, s);
 }
 function y(e) {
+    let t = r.__wbindgen_export_4.get(e);
+    return r.__externref_table_dealloc(e), t;
+}
+function v(e) {
     let t, n;
     try {
         let i = r.generateLaunchSignature(e);
@@ -283,18 +287,14 @@ function y(e) {
         r.__wbindgen_free(t, n, 1);
     }
 }
-function v() {
+function N() {
     return r.initLibdiscore();
 }
-function N() {
+function C() {
     r.crash();
 }
-function C(e, t) {
+function R(e, t) {
     return r.rustMultiply(e, t);
-}
-function R(e) {
-    let t = r.__wbindgen_export_4.get(e);
-    return r.__externref_table_dealloc(e), t;
 }
 function O(e, t) {
     r._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h075cb6f1f85a8e52(
@@ -309,10 +309,10 @@ function b(e, t) {
     );
 }
 function D(e, t, n) {
-    r.closure730_externref_shim(e, t, n);
+    r.closure720_externref_shim(e, t, n);
 }
 function L(e, t, n, i) {
-    r.closure766_externref_shim(e, t, n, i);
+    r.closure759_externref_shim(e, t, n, i);
 }
 let w = ["bytes"],
     M = ["omit", "same-origin", "include"],
@@ -335,12 +335,14 @@ class k {
             n = c(e, r.__wbindgen_malloc, r.__wbindgen_realloc),
             i = s,
             a = r.blockeddomainsstore_isBlockedDomain(n, i);
+        if (a[3]) throw y(a[2]);
         return 0 !== a[0] && ((t = p(a[0], a[1]).slice()), r.__wbindgen_free(a[0], +a[1], 1)), t;
     }
     static startFetchingBlockedDomains(e) {
         let t = c(e, r.__wbindgen_malloc, r.__wbindgen_realloc),
-            n = s;
-        r.blockeddomainsstore_startFetchingBlockedDomains(t, n);
+            n = s,
+            i = r.blockeddomainsstore_startFetchingBlockedDomains(t, n);
+        if (i[1]) throw y(i[0]);
     }
 }
 let U =
@@ -360,12 +362,14 @@ class G {
         let t = c(e, r.__wbindgen_malloc, r.__wbindgen_realloc),
             n = s,
             i = r.experimentcacher_getConfig(t, n);
-        return 0 === i ? void 0 : z.__wrap(i);
+        if (i[2]) throw y(i[1]);
+        return 0 === i[0] ? void 0 : z.__wrap(i[0]);
     }
     static flushToCache(e) {
         let t = c(e, r.__wbindgen_malloc, r.__wbindgen_realloc),
-            n = s;
-        r.experimentcacher_flushToCache(t, n);
+            n = s,
+            i = r.experimentcacher_flushToCache(t, n);
+        if (i[1]) throw y(i[0]);
     }
 }
 let F =
@@ -383,8 +387,8 @@ class V {
     }
     connectStore(e) {
         let t = r.fluxapi_connectStore(this.__wbg_ptr, e);
-        if (t[2]) throw R(t[1]);
-        return R(t[0]);
+        if (t[2]) throw y(t[1]);
+        return y(t[0]);
     }
     dispatchAction(e, t) {
         let n = c(e, r.__wbindgen_malloc, r.__wbindgen_realloc),
@@ -892,13 +896,13 @@ function tv(e) {
     return 1 == t.cnt-- && ((t.a = 0), !0);
 }
 function tN(e, t, n) {
-    return I(e, t, 544, O);
+    return I(e, t, 537, O);
 }
 function tC(e, t, n) {
-    return I(e, t, 584, b);
+    return I(e, t, 577, b);
 }
 function tR(e, t, n) {
-    return I(e, t, 731, D);
+    return I(e, t, 721, D);
 }
 function tO(e, t) {
     let n = c(T(t), r.__wbindgen_malloc, r.__wbindgen_realloc),
