@@ -1,49 +1,45 @@
-n.d(t, { j0: () => S, yj: () => f });
-var i = n(627968),
-    s = n(934551),
-    l = n(554146),
-    a = n(397927),
-    r = n(920603),
-    o = n(419954),
-    d = n(933297),
-    c = n(780964),
-    u = n(358776),
-    _ = n(227542),
-    g = n(859669),
-    m = n(662802),
+n.d(t, { j0: () => E, yj: () => S });
+var i = n(934551),
+    s = n(554146),
+    l = n(920603),
+    a = n(419954),
+    r = n(933297),
+    o = n(780964),
+    d = n(358776),
+    c = n(227542),
+    u = n(729770),
+    _ = n(859669),
+    g = n(662802),
     A = n(988208),
-    h = n(819070),
-    p = n(352694),
-    x = n(136451),
-    E = n(985018);
-function T() {
-    return (0, i.jsx)(a.JIr, { text: E.intl.string(E.t.y2b7CA) });
-}
-let S = [
+    m = n(819070),
+    h = n(352694),
+    p = n(136451),
+    x = n(985018);
+let E = [
         {
-            badgeType: d.Xi.STRONGLY_DISCOURAGED_CUSTOM,
-            dismissibleContent: l.M.CLIENT_THEMES_SETTINGS_BADGE,
-            StronglyDiscouragedCustomComponent: T,
+            badgeType: r.Xi.STRONGLY_DISCOURAGED_CUSTOM,
+            dismissibleContent: s.M.CLIENT_THEMES_SETTINGS_BADGE,
+            StronglyDiscouragedCustomComponent: u.L,
         },
         {
-            badgeType: d.Xi.STRONGLY_DISCOURAGED_CUSTOM,
-            dismissibleContent: l.M.DEKSTOP_CUSTOM_APP_ICON_BADGE,
-            StronglyDiscouragedCustomComponent: T,
+            badgeType: r.Xi.STRONGLY_DISCOURAGED_CUSTOM,
+            dismissibleContent: s.M.DEKSTOP_CUSTOM_APP_ICON_BADGE,
+            StronglyDiscouragedCustomComponent: u.L,
         },
-        { badgeType: d.Xi.NEW, dismissibleContent: l.M.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE },
+        { badgeType: r.Xi.NEW, dismissibleContent: s.M.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE },
     ],
-    C = (0, o.t_)(c.X.APPEARANCE_PANEL, {
-        useTitle: () => E.intl.string(E.t["iHH+ky"]),
+    T = (0, a.t_)(o.X.APPEARANCE_PANEL, {
+        useTitle: () => x.intl.string(x.t["iHH+ky"]),
         initialize: () => {
-            (0, r.v)();
+            (0, l.v)();
         },
-        buildLayout: () => [p.S, m._, x.u, A.U, h.M, g.d],
+        buildLayout: () => [h.S, g._, p.u, A.U, m.M, _.d],
     }),
-    f = (0, o.i4)(c.X.APPEARANCE_SIDEBAR_ITEM, {
-        useTitle: () => E.intl.string(E.t["iHH+ky"]),
-        icon: s.PaintPaletteIcon,
-        usePredicate: () => !(0, u.bp)("AppearanceSidebarItem"),
-        useMenu: _.A,
-        getDismissibleBadges: () => S,
-        buildLayout: () => [C],
+    S = (0, a.i4)(o.X.APPEARANCE_SIDEBAR_ITEM, {
+        useTitle: () => x.intl.string(x.t["iHH+ky"]),
+        icon: i.PaintPaletteIcon,
+        usePredicate: () => !(0, d.bp)("AppearanceSidebarItem"),
+        useMenu: c.A,
+        getDismissibleBadges: () => E,
+        buildLayout: () => [T],
     });

@@ -1,14 +1,13 @@
-i.d(e, { S: () => A });
-var n = i(419954),
-    l = i(780964),
-    s = i(692228),
-    a = i(400442),
-    r = i(518405),
-    u = i(247865),
-    o = i(604434),
-    d = i(985018);
-let A = (0, n.zZ)(l.X.DISPLAY_CHAT_BOX_CATEGORY, {
+n.d(t, { S: () => c });
+var i = n(419954),
+    s = n(780964),
+    l = n(692228),
+    a = n(400442),
+    r = n(247865),
+    o = n(604434),
+    d = n(985018);
+let c = (0, i.zZ)(s.X.DISPLAY_CHAT_BOX_CATEGORY, {
     useTitle: () => d.intl.string(d.t.Ob7VMB),
     useSearchTerms: () => [d.intl.string(d.t.onqU6o)],
-    buildLayout: () => [o.m, a.j, u.k, s.g, r.t],
+    buildLayout: () => [o.m, a.j, r.k, l.g],
 });
