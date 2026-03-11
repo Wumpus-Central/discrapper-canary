@@ -1,5 +1,5 @@
 l.d(t, {
-    D5: () => g,
+    D5: () => f,
     Ec: () => b,
     KF: () => A,
     LF: () => m,
@@ -12,7 +12,7 @@ l.d(t, {
     t$: () => p,
     yJ: () => j,
     yi: () => C,
-    z_: () => v,
+    z_: () => E,
 });
 var a = l(627968),
     n = l(64700),
@@ -104,12 +104,12 @@ function b() {
         }),
     });
 }
-let y = [
+let g = [
         { id: "avatar_decoration", label: "Avatar Decoration", value: d.e.AVATAR_DECORATION_MODAL_UPSELL },
         { id: "profile_effect", label: "Profile Effect", value: d.e.PROFILE_EFFECT_MODAL_UPSELL },
         { id: "nameplate", label: "Nameplate", value: d.e.NAMEPLATE_MODAL_UPSELL },
     ],
-    f = {
+    y = {
         [d.e.AVATAR_DECORATION_MODAL_UPSELL]: {
             title: "Express Yourself with Avatar Decorations",
             body: "Stand out with unique avatar decorations exclusive to Nitro subscribers.",
@@ -126,12 +126,12 @@ let y = [
             glowUp: "Show off your style with a custom nameplate, available with Nitro.",
         },
     };
-function g() {
+function f() {
     let [e, t] = n.useState(d.e.AVATAR_DECORATION_MODAL_UPSELL),
         r = n.useCallback(() => {
-            let { title: t, body: n, glowUp: r } = f[e];
+            let { title: t, body: n, glowUp: r } = y[e];
             (0, i.mMO)(async () => {
-                let { default: i } = await Promise.all([l.e("59701"), l.e("42483")]).then(l.bind(l, 948265));
+                let { default: i } = await Promise.all([l.e("59701"), l.e("64864")]).then(l.bind(l, 948265));
                 return (l) =>
                     (0, a.jsx)(i, {
                         premiumUpsellType: e,
@@ -152,7 +152,7 @@ function g() {
                     placeholder: "Select type",
                     onSelectionChange: (e) => t(e),
                     value: e,
-                    options: y,
+                    options: g,
                     selectionMode: "single",
                     fullWidth: !0,
                 }),
@@ -166,11 +166,11 @@ function g() {
         ],
     });
 }
-let E = [
+let v = [
     { id: "near_limit", label: "Near Limit (99 guilds)", value: 99 },
     { id: "at_limit", label: "At Limit (100 guilds)", value: u.qlD },
 ];
-function v() {
+function E() {
     let [e, t] = n.useState(100),
         r = n.useCallback(() => {
             (0, i.mMO)(async () => {
@@ -193,7 +193,7 @@ function v() {
                     placeholder: "Select state",
                     onSelectionChange: (e) => t(e),
                     value: e,
-                    options: E,
+                    options: v,
                     selectionMode: "single",
                     fullWidth: !0,
                 }),
@@ -303,7 +303,7 @@ function A() {
 function R() {
     let e = n.useCallback(() => {
         (0, i.mMO)(async () => {
-            let { default: e } = await Promise.resolve().then(l.bind(l, 997351));
+            let { default: e } = await l.e("31852").then(l.bind(l, 219732));
             return (t) => (0, a.jsx)(e, { handleLearnMore: t.onClose, ...t });
         });
     }, []);

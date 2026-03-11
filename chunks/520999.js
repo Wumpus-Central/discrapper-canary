@@ -33,22 +33,22 @@ function _(e) {
     }, []);
     let k = (0, i.cf)([u.A], () => (S ? u.A.videoFilterAssets : {})),
         b = l.useMemo(() => Object.values(k).filter((e) => e.type === g.yZ.BACKGROUND), [k]),
-        D = (0, o.p)(),
-        U = { isVideoBackgroundSupported: C, onSelectBackgroundOption: h, selectedBackgroundOption: _ },
-        y = l.useRef(U);
+        y = (0, o.p)(),
+        D = { isVideoBackgroundSupported: C, onSelectBackgroundOption: h, selectedBackgroundOption: _ },
+        U = l.useRef(D);
     l.useEffect(() => {
-        y.current = U;
+        U.current = D;
     }),
         l.useEffect(() => {
-            let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: s } = y.current;
+            let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: s } = U.current;
             e ? (0, x.S1)(s, O, { track: !1 }).catch(() => t(null)) : null != s && t(null);
         }, [O]);
     let B = (e) => {
         h(e),
-            (0, x.S1)(e, O, { location: D.location })
+            (0, x.S1)(e, O, { location: y.location })
                 .then(() => T(null))
                 .catch(() => {
-                    T(N.intl.string(N.t.ejrSLe)), (0, x.S1)(null, O, { location: D.location });
+                    T(N.intl.string(N.t.ejrSLe)), (0, x.S1)(null, O, { location: y.location });
                 });
     };
     return C
@@ -64,12 +64,14 @@ function _(e) {
                       onSelectOption: B,
                       onUpsellClick: () => {
                           (0, a.mMO)(async () => {
-                              let { default: e } = await s.e("95743").then(s.bind(s, 210402));
+                              let { default: e } = await Promise.all([s.e("14138"), s.e("49924"), s.e("35817")]).then(
+                                  s.bind(s, 210402),
+                              );
                               return (s) =>
                                   (0, n.jsx)(e, {
                                       ...s,
                                       onLearnMore: t,
-                                      analyticsSource: { ...D.location, object: f.ZSU.BUTTON_CTA },
+                                      analyticsSource: { ...y.location, object: f.ZSU.BUTTON_CTA },
                                   });
                           });
                       },

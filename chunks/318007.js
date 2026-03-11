@@ -1,97 +1,74 @@
 "use strict";
-n.d(t, { t: () => T });
+n.d(t, { t: () => E });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(421380),
     l = n(397927),
     u = n(937008),
     c = n(650588),
     d = n(45938),
     _ = n(242874),
-    f = n(170887),
-    h = n(367371),
-    p = n(75825),
-    g = n(238017),
-    E = n(903618),
-    A = n(985018),
-    I = n(120459);
-let T = (e) => {
+    f = n(75825),
+    p = n(238017),
+    h = n(985018),
+    m = n(120459);
+let E = (e) => {
     let { isShopGift: t } = e,
         {
             giftRecipient: n,
-            selectedGiftStyle: a,
-            setSelectedGiftStyle: T,
-            emojiConfetti: y,
-            soundEffect: S,
-            setEmojiConfetti: v,
-            setSoundEffect: C,
+            selectedGiftStyle: s,
+            emojiConfetti: E,
+            soundEffect: g,
+            setEmojiConfetti: A,
+            setSoundEffect: I,
         } = (0, u.Pv)(),
-        [b, N] = i.useState(!1),
-        R = i.useRef(null),
-        { ref: O, ...D } = (0, o._u)({ orientation: "horizontal" }),
-        L = (0, d.lo)(n, t),
-        w = L === d.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        x = L !== d.tB.DEFAULT,
-        P = (0, h._)(),
-        M = (0, f.A)({ location: "GiftAnimationOptions" }),
-        k = (e) => {
-            null != C && C(null == e ? void 0 : e);
+        [T] = i.useState(!1),
+        S = i.useRef(null),
+        { ref: y, ...v } = (0, o._u)({ orientation: "horizontal" }),
+        N = (0, d.lo)(n, t),
+        C = N === d.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        R = N !== d.tB.DEFAULT,
+        O = (e) => {
+            null != I && I(null == e ? void 0 : e);
         };
     return (0, r.jsxs)("div", {
         children: [
-            x &&
+            R &&
                 (0, r.jsxs)("div", {
-                    className: I.Os,
+                    className: m.Os,
                     children: [
-                        null != a
-                            ? (0, r.jsx)(p.A, {
-                                  giftStyle: a,
+                        null != s
+                            ? (0, r.jsx)(f.A, {
+                                  giftStyle: s,
                                   defaultAnimationState: _.oA.ACTION,
                                   idleAnimationState: _.oA.LOOP,
                                   shouldAnimate: !0,
-                                  className: I.lY,
+                                  className: m.lY,
                               })
-                            : (0, r.jsx)(l.y$y, { className: I.u1 }),
-                        w &&
+                            : (0, r.jsx)(l.y$y, { className: m.u1 }),
+                        C &&
                             (0, r.jsxs)("div", {
-                                className: s()(I.b7, M && I.Ow),
+                                className: a()(m.b7, m.Ow),
                                 children: [
-                                    (0, r.jsx)(c.A, { sound: S, onSelect: k }),
-                                    (0, r.jsx)(g.A, { setEmojiConfetti: v, emojiConfetti: null == y ? void 0 : y }),
+                                    (0, r.jsx)(c.A, { sound: g, onSelect: O }),
+                                    (0, r.jsx)(p.A, { setEmojiConfetti: A, emojiConfetti: null == E ? void 0 : E }),
                                 ],
                             }),
                     ],
                 }),
             (0, r.jsx)("div", {
-                tabIndex: null != a || b ? void 0 : 0,
+                tabIndex: null != s || T ? void 0 : 0,
                 onFocus: (e) => {
-                    e.target === e.currentTarget && R.current?.focus();
+                    e.target === e.currentTarget && S.current?.focus();
                 },
-                className: I.Qh,
-                "aria-label": A.intl.string(A.t.v54NrN),
-                ref: O,
-                ...D,
-                children:
-                    null != P &&
-                    !M &&
-                    P.map((e, t) =>
-                        (0, r.jsx)(
-                            E.A,
-                            {
-                                isSelected: a === e,
-                                giftStyle: e,
-                                setSelectedGiftStyle: T,
-                                ref: 0 === t ? R : null,
-                                onFocus: () => N(!0),
-                                onBlur: () => N(!1),
-                            },
-                            e,
-                        ),
-                    ),
+                className: m.Qh,
+                "aria-label": h.intl.string(h.t.v54NrN),
+                ref: y,
+                ...v,
             }),
-            (0, r.jsx)("div", { className: I.__invalid_selectPlanDivider }),
+            (0, r.jsx)("div", { className: m.__invalid_selectPlanDivider }),
         ],
     });
 };

@@ -33,9 +33,12 @@ function d(e) {
                               ? o.intl.format(o.t["aFR/EI"], {
                                     onClick: () => {
                                         (0, i.mMO)(async () => {
-                                            let { default: e } = await Promise.all([l.e("59701"), l.e("64864")]).then(
-                                                l.bind(l, 948265),
-                                            );
+                                            let { default: e } = await Promise.all([
+                                                l.e("14138"),
+                                                l.e("49924"),
+                                                l.e("59701"),
+                                                l.e("62396"),
+                                            ]).then(l.bind(l, 948265));
                                             return (t) =>
                                                 (0, n.jsx)(e, {
                                                     premiumUpsellType: p,
@@ -53,9 +56,12 @@ function d(e) {
                                 ? o.intl.format(o.t.eWNONM, {
                                       onClick: () => {
                                           (0, i.mMO)(async () => {
-                                              let { default: e } = await Promise.all([l.e("59701"), l.e("64864")]).then(
-                                                  l.bind(l, 948265),
-                                              );
+                                              let { default: e } = await Promise.all([
+                                                  l.e("14138"),
+                                                  l.e("49924"),
+                                                  l.e("59701"),
+                                                  l.e("62396"),
+                                              ]).then(l.bind(l, 948265));
                                               return (t) =>
                                                   (0, n.jsx)(e, {
                                                       premiumUpsellType: p,
@@ -74,8 +80,10 @@ function d(e) {
                                         onClick: () => {
                                             (0, i.mMO)(async () => {
                                                 let { default: e } = await Promise.all([
+                                                    l.e("14138"),
+                                                    l.e("49924"),
                                                     l.e("59701"),
-                                                    l.e("64864"),
+                                                    l.e("62396"),
                                                 ]).then(l.bind(l, 948265));
                                                 return (t) =>
                                                     (0, n.jsx)(e, {

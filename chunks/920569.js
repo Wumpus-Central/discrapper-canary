@@ -1,12 +1,11 @@
 "use strict";
 n.d(t, { z: () => s });
 var r = n(242874),
-    i = n(170887),
-    a = n(788868);
+    i = n(788868);
 let s = (e, t) => {
     let s;
     switch (e) {
-        case a.o2.SNOWGLOBE:
+        case i.o2.SNOWGLOBE:
             s = () =>
                 n
                     .e("66960")
@@ -16,7 +15,7 @@ let s = (e, t) => {
                         return t;
                     });
             break;
-        case a.o2.BOX:
+        case i.o2.BOX:
             s = () =>
                 n
                     .e("22525")
@@ -26,7 +25,7 @@ let s = (e, t) => {
                         return t;
                     });
             break;
-        case a.o2.CUP:
+        case i.o2.CUP:
             s = () =>
                 n
                     .e("78452")
@@ -36,73 +35,40 @@ let s = (e, t) => {
                         return t;
                     });
             break;
-        case a.o2.STANDARD_BOX:
-            if ((0, i.R)({ location: "GiftAnimationData" }))
-                switch (t) {
-                    case r.oA.IDLE:
-                        s = () =>
-                            n
-                                .e("76464")
-                                .then(n.bind(n, 567091))
-                                .then((e) => {
-                                    let { default: t } = e;
-                                    return fetch(t).then((e) => e.json());
-                                });
-                        break;
-                    case r.oA.LOOP:
-                        s = () =>
-                            n
-                                .e("15240")
-                                .then(n.bind(n, 598683))
-                                .then((e) => {
-                                    let { default: t } = e;
-                                    return fetch(t).then((e) => e.json());
-                                });
-                        break;
-                    default:
-                        s = () =>
-                            n
-                                .e("46600")
-                                .then(n.bind(n, 128859))
-                                .then((e) => {
-                                    let { default: t } = e;
-                                    return fetch(t).then((e) => e.json());
-                                });
-                }
-            else
-                switch (t) {
-                    case r.oA.IDLE:
-                        s = () =>
-                            n
-                                .e("12427")
-                                .then(n.t.bind(n, 676614, 19))
-                                .then((e) => {
-                                    let { default: t } = e;
-                                    return t;
-                                });
-                        break;
-                    case r.oA.LOOP:
-                        s = () =>
-                            n
-                                .e("31939")
-                                .then(n.t.bind(n, 900110, 19))
-                                .then((e) => {
-                                    let { default: t } = e;
-                                    return t;
-                                });
-                        break;
-                    default:
-                        s = () =>
-                            n
-                                .e("98287")
-                                .then(n.t.bind(n, 380082, 19))
-                                .then((e) => {
-                                    let { default: t } = e;
-                                    return t;
-                                });
-                }
+        case i.o2.STANDARD_BOX:
+            switch (t) {
+                case r.oA.IDLE:
+                    s = () =>
+                        n
+                            .e("76464")
+                            .then(n.bind(n, 567091))
+                            .then((e) => {
+                                let { default: t } = e;
+                                return fetch(t).then((e) => e.json());
+                            });
+                    break;
+                case r.oA.LOOP:
+                    s = () =>
+                        n
+                            .e("15240")
+                            .then(n.bind(n, 598683))
+                            .then((e) => {
+                                let { default: t } = e;
+                                return fetch(t).then((e) => e.json());
+                            });
+                    break;
+                default:
+                    s = () =>
+                        n
+                            .e("46600")
+                            .then(n.bind(n, 128859))
+                            .then((e) => {
+                                let { default: t } = e;
+                                return fetch(t).then((e) => e.json());
+                            });
+            }
             break;
-        case a.o2.CAKE:
+        case i.o2.CAKE:
             switch (t) {
                 case r.oA.IDLE:
                     s = () =>
@@ -135,7 +101,7 @@ let s = (e, t) => {
                             });
             }
             break;
-        case a.o2.CHEST:
+        case i.o2.CHEST:
             switch (t) {
                 case r.oA.IDLE:
                     s = () =>
@@ -168,7 +134,7 @@ let s = (e, t) => {
                             });
             }
             break;
-        case a.o2.COFFEE:
+        case i.o2.COFFEE:
             switch (t) {
                 case r.oA.IDLE:
                     s = () =>
@@ -201,13 +167,13 @@ let s = (e, t) => {
                             });
             }
             break;
-        case a.o2.SEASONAL_STANDARD_BOX:
+        case i.o2.SEASONAL_STANDARD_BOX:
             switch (t) {
                 case r.oA.IDLE:
                     s = () =>
                         n
                             .e("12250")
-                            .then(n.t.bind(n, 331617, 19))
+                            .then(n.t.bind(n, 553998, 19))
                             .then((e) => {
                                 let { default: t } = e;
                                 return t;
@@ -234,7 +200,7 @@ let s = (e, t) => {
                             });
             }
             break;
-        case a.o2.SEASONAL_CAKE:
+        case i.o2.SEASONAL_CAKE:
             switch (t) {
                 case r.oA.IDLE:
                     s = () =>
@@ -267,7 +233,7 @@ let s = (e, t) => {
                             });
             }
             break;
-        case a.o2.SEASONAL_CHEST:
+        case i.o2.SEASONAL_CHEST:
             switch (t) {
                 case r.oA.IDLE:
                     s = () =>
@@ -300,7 +266,7 @@ let s = (e, t) => {
                             });
             }
             break;
-        case a.o2.SEASONAL_COFFEE:
+        case i.o2.SEASONAL_COFFEE:
             switch (t) {
                 case r.oA.IDLE:
                     s = () =>
@@ -333,7 +299,7 @@ let s = (e, t) => {
                             });
             }
             break;
-        case a.o2.NITROWEEN_STANDARD:
+        case i.o2.NITROWEEN_STANDARD:
             switch (t) {
                 case r.oA.IDLE:
                     s = () =>

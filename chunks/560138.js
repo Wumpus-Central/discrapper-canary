@@ -1,25 +1,25 @@
-"use strict";
-n.d(t, { A: () => c });
-var r = n(311907),
-    i = n(73153);
-let a = { fetched: !1, affinities: [] };
-function s(e) {
-    let {} = e;
-    a.fetched = !0;
-}
-function o(e) {
-    let { res: t } = e;
-    a.affinities = t;
-}
-function l() {
-    (a.fetched = !1), (a.affinities = []);
-}
-class u extends r.Ay.Store {
+n.d(t, { A: () => a });
+var i = n(311907),
+    l = n(73153);
+let r = { fetched: !1, affinities: [] };
+class s extends i.Ay.Store {
     get hasFetched() {
-        return a.fetched;
+        return r.fetched;
     }
     get affinities() {
-        return a.affinities;
+        return r.affinities;
     }
 }
-let c = new u(i.h, { BILLING_NITRO_AFFINITY_FETCHED: s, BILLING_NITRO_AFFINITY_FETCH_SUCCEEDED: o, LOGOUT: l });
+let a = new s(l.h, {
+    BILLING_NITRO_AFFINITY_FETCHED: function (e) {
+        let {} = e;
+        r.fetched = !0;
+    },
+    BILLING_NITRO_AFFINITY_FETCH_SUCCEEDED: function (e) {
+        let { res: t } = e;
+        r.affinities = t;
+    },
+    LOGOUT: function () {
+        (r.fetched = !1), (r.affinities = []);
+    },
+});

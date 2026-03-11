@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__011b7",
     ak: "micTest__011b7",

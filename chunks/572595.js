@@ -23,7 +23,9 @@ let i = "collectibles shop product details modal",
         (0, r.mMO)(
             async () => {
                 let { default: e } = await Promise.all([
+                    a.e("14138"),
                     a.e("8555"),
+                    a.e("49924"),
                     a.e("28936"),
                     a.e("68859"),
                     a.e("40396"),
@@ -35,10 +37,10 @@ let i = "collectibles shop product details modal",
                     a.e("49559"),
                     a.e("42006"),
                     a.e("37372"),
-                    a.e("5283"),
-                    a.e("41595"),
+                    a.e("2245"),
+                    a.e("62452"),
                     a.e("93612"),
-                    a.e("32904"),
+                    a.e("34219"),
                 ]).then(a.bind(a, 929400));
                 return (a) =>
                     (0, l.jsx)(e, {

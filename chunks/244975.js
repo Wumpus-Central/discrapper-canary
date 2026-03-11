@@ -1,248 +1,251 @@
-"use strict";
-n.d(t, { A: () => w, F: () => M });
-var r = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(934551),
-    l = n(311907),
-    u = n(421380),
-    c = n(397927),
-    d = n(384904),
+n.d(t, { A: () => U, F: () => M });
+var i = n(627968),
+    l = n(64700),
+    r = n(503698),
+    s = n.n(r),
+    a = n(934551),
+    o = n(311907),
+    c = n(421380),
+    d = n(397927),
+    u = n(384904),
     _ = n(793574),
-    f = n(688810),
-    p = n(611371),
-    h = n(721923),
-    m = n(954571),
-    E = n(927578),
-    g = n(560138),
-    A = n(422936),
-    I = n(234419),
-    T = n(465794),
-    S = n(783420),
-    y = n(511484),
-    v = n(811611),
-    N = n(841252),
-    C = n(788868),
-    R = n(652215),
-    O = n(985018),
-    b = n(953239),
+    E = n(688810),
+    T = n(611371),
+    A = n(721923),
+    I = n(954571),
+    p = n(927578),
+    N = n(560138),
+    m = n(422936),
+    R = n(234419),
+    S = n(465794),
+    h = n(783420),
+    g = n(511484),
+    C = n(811611),
+    O = n(841252),
+    y = n(788868),
+    x = n(652215),
+    f = n(985018),
+    P = n(953239),
     D = n(669149);
-function L(e) {
-    switch (e) {
-        case C.e.ANIMATED_AVATAR_MODAL_UPSELL:
-        case C.e.ANIMATED_BANNER_MODAL_UPSELL:
-        case C.e.PROFILE_EFFECT_MODAL_UPSELL:
-        case C.e.AVATAR_DECORATION_MODAL_UPSELL:
-        case C.e.FOR_LATER_MODAL_UPSELL:
-        case C.e.VOICE_FILTERS_UPSELL:
-            return !0;
-        default:
-            return !1;
-    }
-}
-function w(e) {
+function U(e) {
     let {
             title: t,
             type: n,
-            guildBoostProps: s,
-            analyticsSource: o,
-            analyticsLocation: S,
-            body: w,
+            guildBoostProps: r,
+            analyticsSource: a,
+            analyticsLocation: h,
+            body: U,
             context: M,
-            glowUp: x,
-            modalClassName: P,
-            modalContentClassName: k,
-            artContainerClassName: U,
-            artClassName: G,
-            headerClassName: F,
-            bodyClassName: V,
-            transitionState: B,
+            glowUp: L,
+            modalClassName: j,
+            modalContentClassName: b,
+            artContainerClassName: v,
+            artClassName: k,
+            headerClassName: G,
+            bodyClassName: B,
+            transitionState: w,
             onClose: H,
-            onSubscribeClick: j,
-            onSubscribeFinish: Y,
-            onSecondaryClick: W,
-            secondaryCTA: K,
-            secondaryCTAClassName: $,
-            subscribeButtonText: z,
-            showNewBadge: q = !1,
-            showBetaBadge: Z = !1,
-            enableArtBoxShadow: X = !0,
-            subscriptionTier: Q = C.pe.TIER_2,
-            isLoading: J = !1,
-            hideBackButton: ee,
-            backButtonText: et,
-            showEnhancedUpsell: en,
-            useSubscribeButtonGradient: er,
+            onSubscribeClick: F,
+            onSubscribeFinish: V,
+            onSecondaryClick: $,
+            secondaryCTA: q,
+            secondaryCTAClassName: W,
+            subscribeButtonText: X,
+            showNewBadge: z = !1,
+            showBetaBadge: K = !1,
+            enableArtBoxShadow: Y = !0,
+            subscriptionTier: J = y.pe.TIER_2,
+            isLoading: Q = !1,
+            hideBackButton: Z,
+            backButtonText: ee,
+            showEnhancedUpsell: et,
+            useSubscribeButtonGradient: en,
             subscribeButtonClassname: ei,
-            hidePremiumOfferUpsell: es,
-            children: ea,
-            LeadingComponent: eo,
-            backgroundElements: el,
-            smallText: eu = !1,
+            hidePremiumOfferUpsell: el,
+            children: er,
+            LeadingComponent: es,
+            backgroundElements: ea,
+            smallText: eo = !1,
             footerClassName: ec,
             ...ed
         } = e,
-        e_ = null != s,
-        ef = (0, I.V)(),
-        ep = (0, A.O)(),
-        eh = !es && (ef?.subscription_trial?.sku_id === Q || (0, y.U9)(ep, Q)) && !e_,
-        { analyticsLocations: em } = (0, f.Ay)(_.A.PREMIUM_UPSELL_MODAL),
-        eE = { analyticsLocation: S, analyticsLocations: em, analyticsSource: o, guildBoostProps: s, type: n },
-        eg = i.useRef(eE);
-    i.useEffect(() => {
-        eg.current = eE;
+        eu = null != r,
+        e_ = (0, R.V)(),
+        eE = (0, m.O)(),
+        eT = !el && (e_?.subscription_trial?.sku_id === J || (0, g.U9)(eE, J)) && !eu,
+        { analyticsLocations: eA } = (0, E.Ay)(_.A.PREMIUM_UPSELL_MODAL),
+        eI = { analyticsLocation: h, analyticsLocations: eA, analyticsSource: a, guildBoostProps: r, type: n },
+        ep = l.useRef(eI);
+    l.useEffect(() => {
+        ep.current = eI;
     }),
-        i.useEffect(() => {
-            if (J) return;
+        l.useEffect(() => {
+            if (Q) return;
             let {
                 analyticsLocation: e,
                 analyticsLocations: t,
                 analyticsSource: n,
-                guildBoostProps: r,
-                type: i,
-            } = eg.current;
-            e_
-                ? m.default.track(R.HAw.PREMIUM_GUILD_UPSELL_VIEWED, {
-                      type: `${i} - Tier ${r?.boostedGuildTier}`,
-                      guild_id: r?.guild.id,
-                      channel_id: r?.channelId,
+                guildBoostProps: i,
+                type: l,
+            } = ep.current;
+            eu
+                ? I.default.track(x.HAw.PREMIUM_GUILD_UPSELL_VIEWED, {
+                      type: `${l} - Tier ${i?.boostedGuildTier}`,
+                      guild_id: i?.guild.id,
+                      channel_id: i?.channelId,
                       location: e,
                       location_stack: t,
                   })
-                : m.default.track(R.HAw.PREMIUM_UPSELL_VIEWED, {
-                      type: i,
+                : I.default.track(x.HAw.PREMIUM_UPSELL_VIEWED, {
+                      type: l,
                       source: n,
                       location: e,
                       location_stack: t,
-                      sku_id: (0, E.mH)(Q),
+                      sku_id: (0, p.mH)(J),
                   });
-        }, [e_, Q, J]);
-    let eA = (0, l.bG)([g.A], () => g.A.affinities),
-        eI = eA.length > 1 && L(n),
-        eT = (0, l.bG)([g.A], () => g.A.hasFetched);
-    i.useEffect(() => {
-        eT || d.xG();
-    }, [eT]);
-    let eS = () => {
-            if (e_) return (0, r.jsx)(h.A, { analyticsLocation: S, guild: s.guild, onClose: H });
-            let e = en ? O.intl.string(O.t.pj0XBN) : void 0;
-            return (
-                eh &&
-                    (null != ef
-                        ? (e = (0, E.FY)({
-                              intervalType: ef?.subscription_trial?.interval,
-                              intervalCount: ef?.subscription_trial?.interval_count,
-                          }))
-                        : null != ep && (e = O.intl.formatToPlainString(O.t.bkQ4bH, { percent: ep.discount.amount }))),
-                (0, r.jsx)(T.A, {
-                    className: ei,
-                    showGradient: en || er,
-                    premiumModalAnalyticsLocation: S,
-                    subscriptionTier: Q,
-                    size: u.$n.Sizes.SMALL,
-                    color: en || er ? u.$n.Colors.CUSTOM : u.$n.Colors.GREEN,
-                    onClick: () => {
-                        j?.(), H();
-                    },
-                    onSubscribeModalClose: Y,
-                    textOptions: { textOverride: z ?? e },
-                })
-            );
-        },
-        ey = X ? a()(b.JS, b.OV, U) : a()(b.JS, U),
-        ev = null;
+        }, [eu, J, Q]);
+    let eN = (0, o.bG)([N.A], () => N.A.affinities),
+        em =
+            eN.length > 1 &&
+            (function (e) {
+                switch (e) {
+                    case y.e.ANIMATED_AVATAR_MODAL_UPSELL:
+                    case y.e.ANIMATED_BANNER_MODAL_UPSELL:
+                    case y.e.PROFILE_EFFECT_MODAL_UPSELL:
+                    case y.e.AVATAR_DECORATION_MODAL_UPSELL:
+                    case y.e.FOR_LATER_MODAL_UPSELL:
+                    case y.e.VOICE_FILTERS_UPSELL:
+                        return !0;
+                    default:
+                        return !1;
+                }
+            })(n),
+        eR = (0, o.bG)([N.A], () => N.A.hasFetched);
+    l.useEffect(() => {
+        eR || u.xG();
+    }, [eR]);
+    let eS = Y ? s()(P.JS, P.OV, v) : s()(P.JS, v),
+        eh = null;
     return (
         null != ed.artURL
-            ? (ev = (0, r.jsx)("img", { className: a()(G, b.Qw), alt: "", src: ed.artURL }))
-            : null != ed.artElement && (ev = ed.artElement),
-        (0, r.jsxs)(c.EOs, {
+            ? (eh = (0, i.jsx)("img", { className: s()(k, P.Qw), alt: "", src: ed.artURL }))
+            : null != ed.artElement && (eh = ed.artElement),
+        (0, i.jsxs)(d.EOs, {
             "data-migration-pending": !0,
-            className: a()(b.zr, !eh && P),
+            className: s()(P.zr, !eT && j),
             "aria-label": t,
-            transitionState: B,
+            transitionState: w,
             parentComponent: "PremiumUpsellModal",
             children: [
-                null != ev &&
-                    (0, r.jsxs)("div", {
-                        className: ey,
-                        children: [ev, q ? (0, r.jsx)("img", { className: b.CI, alt: "", src: D }) : null],
+                null != eh &&
+                    (0, i.jsxs)("div", {
+                        className: eS,
+                        children: [eh, z ? (0, i.jsx)("img", { className: P.CI, alt: "", src: D }) : null],
                     }),
-                (0, r.jsx)(c.$mQ, {
+                (0, i.jsx)(d.$mQ, {
                     "data-migration-pending": !0,
                     scrollbarType: "none",
-                    className: a()(en ? b.es : b.Qs, !eh && k),
-                    children: J
-                        ? (0, r.jsx)(c.y$y, {})
-                        : eh
-                          ? (0, r.jsx)(v.Ay, {
+                    className: s()(et ? P.es : P.Qs, !eT && b),
+                    children: Q
+                        ? (0, i.jsx)(d.y$y, {})
+                        : eT
+                          ? (0, i.jsx)(C.Ay, {
                                 onClose: H,
                                 type: n,
-                                subscriptionTier: ef?.subscription_trial?.sku_id ?? C.pe.TIER_2,
+                                subscriptionTier: e_?.subscription_trial?.sku_id ?? y.pe.TIER_2,
                                 headingText: t,
                                 context: M,
-                                analyticsLocationObject: S,
-                                discountOffer: ep,
-                                trialOffer: ef,
-                                children: x,
+                                analyticsLocationObject: h,
+                                discountOffer: eE,
+                                trialOffer: e_,
+                                children: L,
                             })
-                          : (0, r.jsxs)("div", {
-                                className: b.hQ,
+                          : (0, i.jsxs)("div", {
+                                className: P.hQ,
                                 children: [
-                                    eo,
-                                    (0, r.jsxs)("div", {
-                                        className: b.kQ,
+                                    es,
+                                    (0, i.jsxs)("div", {
+                                        className: P.kQ,
                                         children: [
-                                            (0, r.jsxs)(c.Heading, {
-                                                className: a()(b.wx, { [b.k]: en }, F),
+                                            (0, i.jsxs)(d.Heading, {
+                                                className: s()(P.wx, { [P.k]: et }, G),
                                                 variant: "heading-xl/bold",
-                                                children: [t, Z ? (0, r.jsx)(p.A, { className: b.TN }) : null],
+                                                children: [t, K ? (0, i.jsx)(T.A, { className: P.TN }) : null],
                                             }),
-                                            eI ? (0, r.jsx)(N.A, { affinities: eA }) : void 0,
-                                            ea,
-                                            (0, r.jsx)(c.Text, {
-                                                variant: eu ? "text-sm/normal" : "text-md/normal",
-                                                className: a()(V, b.uI),
-                                                children: w,
+                                            em ? (0, i.jsx)(O.A, { affinities: eN }) : void 0,
+                                            er,
+                                            (0, i.jsx)(d.Text, {
+                                                variant: eo ? "text-sm/normal" : "text-md/normal",
+                                                className: s()(B, P.uI),
+                                                children: U,
                                             }),
                                         ],
                                     }),
                                 ],
                             }),
                 }),
-                (0, r.jsxs)(c.jlY, {
+                (0, i.jsxs)(d.jlY, {
                     "data-migration-pending": !0,
-                    className: a()(b.qr, ec, { [b.I$]: en }),
+                    className: s()(P.qr, ec, { [P.I$]: et }),
                     children: [
-                        (0, r.jsxs)("div", {
-                            className: a()(b.E3, { [b.Q_]: en }),
+                        (0, i.jsxs)("div", {
+                            className: s()(P.E3, { [P.Q_]: et }),
                             children: [
-                                null != K
-                                    ? (0, r.jsx)(u.$n, {
+                                null != q
+                                    ? (0, i.jsx)(c.$n, {
                                           "data-migration-pending": !0,
-                                          className: a()(b.Dc, $, { [b.HZ]: en }),
-                                          onClick: W,
-                                          size: u.$n.Sizes.SMALL,
-                                          color: en ? u.$n.Colors.CUSTOM : u.$n.Colors.PRIMARY,
-                                          look: u.$n.Looks.LINK,
-                                          children: K,
+                                          className: s()(P.Dc, W, { [P.HZ]: et }),
+                                          onClick: $,
+                                          size: c.$n.Sizes.SMALL,
+                                          color: et ? c.$n.Colors.CUSTOM : c.$n.Colors.PRIMARY,
+                                          look: c.$n.Looks.LINK,
+                                          children: q,
                                       })
                                     : null,
-                                eS(),
+                                (() => {
+                                    if (eu)
+                                        return (0, i.jsx)(A.A, { analyticsLocation: h, guild: r.guild, onClose: H });
+                                    let e = et ? f.intl.string(f.t.pj0XBN) : void 0;
+                                    return (
+                                        eT &&
+                                            (null != e_
+                                                ? (e = (0, p.FY)({
+                                                      intervalType: e_?.subscription_trial?.interval,
+                                                      intervalCount: e_?.subscription_trial?.interval_count,
+                                                  }))
+                                                : null != eE &&
+                                                  (e = f.intl.formatToPlainString(f.t.bkQ4bH, {
+                                                      percent: eE.discount.amount,
+                                                  }))),
+                                        (0, i.jsx)(S.A, {
+                                            className: ei,
+                                            showGradient: et || en,
+                                            premiumModalAnalyticsLocation: h,
+                                            subscriptionTier: J,
+                                            size: c.$n.Sizes.SMALL,
+                                            color: et || en ? c.$n.Colors.CUSTOM : c.$n.Colors.GREEN,
+                                            onClick: () => {
+                                                F?.(), H();
+                                            },
+                                            onSubscribeModalClose: V,
+                                            textOptions: { textOverride: X ?? e },
+                                        })
+                                    );
+                                })(),
                             ],
                         }),
-                        !ee &&
-                            !en &&
-                            (0, r.jsx)(c.Button, {
+                        !Z &&
+                            !et &&
+                            (0, i.jsx)(d.Button, {
                                 variant: "secondary",
                                 size: "sm",
-                                text: null != et ? et : O.intl.string(O.t["13/7kX"]),
+                                text: null != ee ? ee : f.intl.string(f.t["13/7kX"]),
                                 onClick: H,
                             }),
                     ],
                 }),
-                en ? (0, r.jsx)(c.s_y, { "data-migration-pending": !0, onClick: H, className: b.b }) : null,
-                el,
+                et ? (0, i.jsx)(d.s_y, { "data-migration-pending": !0, onClick: H, className: P.b }) : null,
+                ea,
             ],
         })
     );
@@ -251,57 +254,56 @@ function M(e) {
     let {
             transitionState: t,
             title: n,
-            subtitle: i,
-            graphic: s,
-            guildBoostProps: a,
-            onClose: l,
-            onSecondaryClick: u,
-            secondaryCTA: d,
+            subtitle: l,
+            graphic: r,
+            guildBoostProps: s,
+            onClose: o,
+            onSecondaryClick: c,
+            secondaryCTA: u,
             showNewBadge: _ = !1,
-            showBetaBadge: f = !1,
-            subscriptionTier: p = C.pe.TIER_2,
-            hidePremiumOfferUpsell: h,
+            showBetaBadge: E = !1,
+            subscriptionTier: T = y.pe.TIER_2,
+            hidePremiumOfferUpsell: A,
         } = e,
-        m = null != a,
-        g = (0, I.V)(),
-        T = (0, A.O)(),
-        v = !h && (g?.subscription_trial?.sku_id === p || (0, y.U9)(T, p)) && !m,
-        N = O.intl.string(O.t.pj0XBN);
-    v &&
-        (null != g
-            ? (N = (0, E.FY)({
-                  intervalType: g?.subscription_trial?.interval,
-                  intervalCount: g?.subscription_trial?.interval_count,
+        I = (0, R.V)(),
+        N = (0, m.O)(),
+        S = !A && (I?.subscription_trial?.sku_id === T || (0, g.U9)(N, T)) && null == s,
+        C = f.intl.string(f.t.pj0XBN);
+    S &&
+        (null != I
+            ? (C = (0, p.FY)({
+                  intervalType: I?.subscription_trial?.interval,
+                  intervalCount: I?.subscription_trial?.interval_count,
               }))
-            : null != T && (N = O.intl.formatToPlainString(O.t.bkQ4bH, { percent: T.discount.amount })));
-    let R = null;
+            : null != N && (C = f.intl.formatToPlainString(f.t.bkQ4bH, { percent: N.discount.amount })));
+    let O = null;
     return (
-        _ ? (R = "new") : f && (R = "beta"),
-        null != g && (R = "free_trial"),
-        (0, r.jsx)(S.A, {
-            subscriptionTier: p,
+        _ ? (O = "new") : E && (O = "beta"),
+        null != I && (O = "free_trial"),
+        (0, i.jsx)(h.A, {
+            subscriptionTier: T,
             children: (e) => {
-                let { onClick: a } = e;
-                return (0, r.jsx)(c.kpP, {
+                let { onClick: s } = e;
+                return (0, i.jsx)(d.kpP, {
                     title: n,
-                    subtitle: i,
-                    graphic: s,
+                    subtitle: l,
+                    graphic: r,
                     gradientColor: "nitro-pink",
                     transitionState: t,
-                    onClose: async () => await l(),
+                    onClose: async () => await o(),
                     actions: [
-                        { text: d, variant: "secondary", size: "md", onClick: u },
+                        { text: u, variant: "secondary", size: "md", onClick: c },
                         {
-                            text: N,
+                            text: C,
                             variant: "expressive",
                             size: "md",
                             onClick: async (e) => {
-                                await l(), a(e);
+                                await o(), s(e);
                             },
-                            icon: o.NitroWheelIcon,
+                            icon: a.NitroWheelIcon,
                         },
                     ],
-                    ...(null !== R && { badge: { type: R, variant: "expressive" } }),
+                    ...(null !== O && { badge: { type: O, variant: "expressive" } }),
                 });
             },
         })

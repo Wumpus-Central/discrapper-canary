@@ -333,9 +333,6 @@ function Y(e) {
                                           en === M.kx.EMOJI
                                               ? (0, r.jsx)(I.A, {
                                                     hasTabWrapper: !0,
-                                                    containerContext: ef
-                                                        ? I.f.TABS_EXPRESSION_PICKER
-                                                        : I.f.NO_TABS_EXPRESSION_PICKER,
                                                     persistSearch: !0,
                                                     channel: b,
                                                     containerWidth: ee,

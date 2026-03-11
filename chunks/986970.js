@@ -1,5 +1,4 @@
 e.exports = {
-    qY: "heroHeadingContainer_cd0f26",
     kL: "container_cd0f26",
     V1: "settingsContainer_cd0f26",
     Q4: "affinityHeight_cd0f26",
@@ -9,7 +8,6 @@ e.exports = {
     jn: "descriptionV2_cd0f26",
     If: "descriptionBottomMargin_cd0f26",
     DF: "affinityDescription_cd0f26",
-    kb: "affinityDescriptionContainer_cd0f26",
     UD: "buttonContainer_cd0f26",
     x6: "button_cd0f26",
     Sq: "extendedButton_cd0f26",
@@ -18,13 +16,7 @@ e.exports = {
     G: "settingsSparkleStar2_cd0f26 sparkleStar_cd0f26",
     zy: "settingsSparkleStar3_cd0f26 sparkleStar_cd0f26",
     GX: "settingsSparkleStar4_cd0f26 sparkleStar_cd0f26",
-    $F: "marketingPageCTAContainer_cd0f26",
-    In: "marketingPageCTAMargin_cd0f26",
-    s8: "marketingPageTextContainer_cd0f26",
-    WT: "marketingPageHeading_cd0f26",
     Ph: "subButton_cd0f26",
     MF: "whiteSubButton_cd0f26",
     PJ: "tier2Gradient_cd0f26",
-    gm: "heroHeadingV2Art_cd0f26",
-    TT: "heroHeadingV2ArtContainer_cd0f26",
 };

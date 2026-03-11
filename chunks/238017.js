@@ -1,102 +1,100 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(827734),
     l = n(397927),
     u = n(937773),
-    c = n(170887),
-    d = n(652215),
-    _ = n(307731),
-    f = n(985018),
-    p = n(752729);
-let h = { section: d.JJy.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER, openPopoutType: "gift_effect_emoji_picker" },
-    m = _.b_.GIFT;
-function g(e) {
+    c = n(652215),
+    d = n(307731),
+    _ = n(985018),
+    f = n(752729);
+let p = { section: c.JJy.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER, openPopoutType: "gift_effect_emoji_picker" },
+    h = d.b_.GIFT;
+function m(e) {
     let { setEmojiConfetti: t, emojiConfetti: n } = e,
-        [a, d] = i.useState(!1),
-        _ = i.useRef(null),
-        g = (0, c.A)({ location: "GiftEmoji" }),
-        E = s()(p.Qq, g && p.Ow),
-        A = (e) =>
+        [s, c] = i.useState(!1),
+        d = i.useRef(null),
+        m = a()(f.Qq, f.Ow),
+        E = (e) =>
             (0, r.jsxs)("div", {
-                className: p.ZC,
+                className: f.ZC,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: p.Ry,
+                        className: f.Ry,
                         children: [
-                            (0, r.jsx)(l.Text, { variant: "text-md/bold", children: f.intl.string(f.t.Hl2Ige) }),
-                            (0, r.jsx)(l.Text, { variant: "text-sm/normal", children: f.intl.string(f.t.stGFA3) }),
+                            (0, r.jsx)(l.Text, { variant: "text-md/bold", children: _.intl.string(_.t.Hl2Ige) }),
+                            (0, r.jsx)(l.Text, { variant: "text-sm/normal", children: _.intl.string(_.t.stGFA3) }),
                         ],
                     }),
                     e,
                 ],
             }),
-        I = (e) => {
+        g = (e) => {
             let { emoji: n } = e;
-            null != t && (t(n), d(!1));
+            null != t && (t(n), c(!1));
         };
     return (0, r.jsx)(l.YNO, {
-        targetElementRef: _,
-        shouldShow: a,
+        targetElementRef: d,
+        shouldShow: s,
         position: "bottom",
         align: "left",
-        onRequestClose: () => d(!1),
+        onRequestClose: () => c(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, r.jsx)(l.lGe, {
                 children: (0, r.jsx)(u.A, {
-                    analyticsOverride: h,
+                    analyticsOverride: p,
                     closePopout: t,
-                    onSelectEmoji: I,
+                    onSelectEmoji: g,
                     wrapper: "div",
-                    pickerIntention: m,
-                    renderHeader: A,
-                    headerClassName: p.a8,
-                    className: p.vX,
-                    listHeaderClassName: p.vX,
-                    categoryListClassName: p.jv,
+                    pickerIntention: h,
+                    renderHeader: E,
+                    headerClassName: f.a8,
+                    className: f.vX,
+                    listHeaderClassName: f.vX,
+                    categoryListClassName: f.jv,
                     searchProps: { accessory: (0, r.jsx)(r.Fragment, {}) },
                 }),
             });
         },
         children: () =>
             (0, r.jsx)(l.DUT, {
-                className: s()(p.kL, g && p.Ow),
-                onClick: () => d(!0),
-                innerRef: _,
+                className: a()(f.kL, f.Ow),
+                onClick: () => c(!0),
+                innerRef: d,
                 children:
                     n?.name == null
                         ? (0, r.jsxs)("div", {
-                              className: p.hQ,
+                              className: f.hQ,
                               children: [
                                   (0, r.jsx)(l.nm2, {
                                       size: "custom",
-                                      color: g ? o.A.colors.ICON_STRONG : o.A.colors.WHITE,
-                                      className: p.mI,
+                                      color: o.A.colors.ICON_STRONG,
+                                      className: f.mI,
                                       width: 14,
                                       height: 14,
                                   }),
                                   (0, r.jsx)(l.Text, {
-                                      className: E,
+                                      className: m,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
-                                      children: f.intl.string(f.t.Hl2Ige),
+                                      children: _.intl.string(_.t.Hl2Ige),
                                   }),
                               ],
                           })
                         : (0, r.jsxs)("div", {
-                              className: p.hQ,
+                              className: f.hQ,
                               children: [
                                   (0, r.jsx)(l.Text, {
-                                      className: E,
+                                      className: m,
                                       variant: "text-sm/semibold",
                                       children: null == n.guildId ? n.optionallyDiverseSequence : null,
                                   }),
                                   (0, r.jsx)(l.Text, {
-                                      className: E,
+                                      className: m,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: n.name.replace(/_/g, " "),

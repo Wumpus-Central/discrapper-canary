@@ -48,7 +48,7 @@ var r = n(627968),
     z = n(698279),
     q = n(788868),
     Z = n(985018),
-    X = n(635643);
+    X = n(426889);
 let Q = 16,
     J = 48,
     ee = 32,
@@ -429,8 +429,7 @@ function eu(e) {
                     : null,
             [E],
         ),
-        ta = "https://cdn.discordapp.com/assets/premium/roadblocks/soundboard_dark.png",
-        to = i.useCallback(() => {
+        ta = i.useCallback(() => {
             let e = P.A.getSoundById(ei),
                 t = new Audio((0, F.A)(ei));
             null != eE.current && eE.current.pause(),
@@ -439,7 +438,7 @@ function eu(e) {
                 (t.volume = (0, V.A)(e?.volume ?? 1)),
                 t.play();
         }, [eE]),
-        tl = (0, l.bG)([O.A], () => O.A.getMediaSessionId());
+        to = (0, l.bG)([O.A], () => O.A.getMediaSessionId());
     return (
         (0, h.A)({
             type: o.ImpressionTypes.POPOUT,
@@ -447,7 +446,7 @@ function eu(e) {
             properties: {
                 source: eh,
                 guild_id: t,
-                media_session_id: tl,
+                media_session_id: to,
                 available_custom_sounds_count: eU.unlockedCustomSoundCount,
                 unavailable_custom_sounds_count: eU.lockedCustomSoundCount,
                 favorite_sounds_count: eU.favoriteSoundCount,
@@ -457,11 +456,8 @@ function eu(e) {
             children: [
                 null != eS
                     ? (0, r.jsx)(N.A, {
-                          containerContext: ep ? N.N.TAB_PARENT_CONTAINER : N.N.NONE,
-                          image: { url: ta, width: 220, height: 132 },
                           title: Z.intl.string(ep ? Z.t.rZEEvU : Z.t.jGDYF0),
                           description: Z.intl.string(ep ? Z.t.ZPNG5A : Z.t["grL/hg"]),
-                          enableSocialProof: !0,
                           analyticsLocationSection: $.JJy.SOUNDBOARD_SOUND_PICKER_UPSELL,
                           upsellViewedTrackingData: {
                               type: q.e.SOUND_PICKER_SOUND_CLICKED,
@@ -472,7 +468,7 @@ function eu(e) {
                           },
                           onClose: () => ey(null),
                           onLearnMore: E,
-                          onDisplay: to,
+                          onDisplay: ta,
                       })
                     : void 0,
                 (0, r.jsx)(I.A, {

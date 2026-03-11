@@ -2,18 +2,18 @@ n.d(t, { A: () => a });
 var i = n(627968);
 n(64700);
 var s = n(397927),
-    r = n(652215);
+    l = n(652215);
 function a() {
     (0, s.mMO)(async () => {
-        let { default: e } = await n.e("32482").then(n.bind(n, 861177));
+        let { default: e } = await Promise.all([n.e("14138"), n.e("49924"), n.e("92510")]).then(n.bind(n, 861177));
         return (t) =>
             (0, i.jsx)(e, {
                 ...t,
                 source: {
-                    page: r.liQ.USER_SETTINGS,
-                    section: r.JJy.SETTINGS_CUSTOMIZE_PROFILE,
-                    object: r.ZSU.BUTTON_CTA,
-                    type: r.AnalyticsObjectTypes.BUY,
+                    page: l.liQ.USER_SETTINGS,
+                    section: l.JJy.SETTINGS_CUSTOMIZE_PROFILE,
+                    object: l.ZSU.BUTTON_CTA,
+                    type: l.AnalyticsObjectTypes.BUY,
                 },
             });
     });
