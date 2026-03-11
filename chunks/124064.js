@@ -1,79 +1,82 @@
-n.d(t, { A: () => C });
+n.d(t, { A: () => E });
 var i = n(627968),
     s = n(64700),
-    r = n(397927),
+    l = n(397927),
     a = n(355622),
-    l = n(408018),
+    r = n(408018),
     o = n(133343),
-    c = n(915089),
-    d = n(840065),
+    d = n(915089),
+    c = n(840065),
     u = n(95701),
     _ = n(128450),
-    m = n(652215),
+    g = n(652215),
     A = n(985018),
-    g = n(973746);
-let E = (0, c.Ld)(),
-    h = (0, u.createChannelRecord)({ id: "1", type: m.rbe.DM }),
-    p = (0, c.Ld)();
-function C(e) {
+    m = n(973746);
+let h = (0, d.Ld)(),
+    p = (0, u.createChannelRecord)({ id: "1", type: g.rbe.DM }),
+    x = (0, d.Ld)();
+function E(e) {
     let {
             sectionTitle: t,
             errors: n,
-            onBioChange: c,
+            onBioChange: d,
             pendingBio: u,
-            placeholder: C,
-            currentBio: x,
-            disabled: T = !1,
+            placeholder: E,
+            currentBio: T,
+            disabled: S = !1,
         } = e,
-        [I, S] = s.useState(u ?? x),
-        [f, N] = s.useState((0, l.x7)(I)),
-        b = s.useRef(x),
-        R = s.useRef(!1);
+        [C, I] = s.useState(u ?? T),
+        [f, b] = s.useState((0, r.x7)(C)),
+        N = s.useRef(T),
+        v = s.useRef(!1);
     return (
         s.useEffect(() => {
-            if (b.current !== x) {
-                let e = (0, l.x7)(x);
-                S(x), N(e);
+            if (N.current !== T) {
+                let e = (0, r.x7)(T);
+                I(T), b(e);
             }
-            b.current = x;
-        }, [x]),
+            N.current = T;
+        }, [T]),
+        s.useEffect(() => {
+            void 0 !== u || C === T || v.current || (I(T), b((0, r.x7)(T)));
+        }, [u, T, C]),
         (0, i.jsxs)(_.A, {
             title: t,
-            titleId: E,
+            titleId: h,
             description: A.intl.string(A.t.Bbw6Ac),
             errors: n,
-            disabled: T,
+            disabled: S,
             children: [
                 (0, i.jsx)(o.Ay, {
-                    "aria-describedby": p,
-                    "aria-labelledby": E,
-                    className: g.i,
-                    innerClassName: g.Z,
-                    maxCharacterCount: m.NA2,
+                    "aria-describedby": x,
+                    "aria-labelledby": h,
+                    className: m.i,
+                    innerClassName: m.Z,
+                    maxCharacterCount: g.NA2,
                     onChange: function (e, t, n) {
-                        t !== I && (S(t), N(n), c(t));
+                        t !== C && (I(t), b(n), d(t));
                     },
-                    placeholder: C,
-                    channel: h,
-                    textValue: I,
+                    placeholder: E,
+                    channel: p,
+                    textValue: C,
                     richValue: f,
                     emojiPickerCloseOnModalOuterClick: !0,
-                    parentModalKey: d.USER_SETTINGS_MODAL_KEY,
+                    parentModalKey: c.USER_SETTINGS_MODAL_KEY,
                     type: a.oU.PROFILE_BIO_INPUT,
                     onBlur: () => {
-                        R.current = !1;
+                        v.current = !1;
                     },
                     onFocus: () => {
-                        R.current = !0;
+                        v.current = !0;
                     },
-                    focused: R.current,
+                    focused: v.current,
                     onSubmit: function () {
                         return new Promise((e) => {
                             e({ shouldClear: !1, shouldRefocus: !0 });
                         });
                     },
                 }),
-                (0, i.jsx)(r.AC4, { id: p, children: A.intl.format(A.t["+DFxLc"], { maxLength: m.NA2 }) }),
+                (0, i.jsx)(l.AC4, { id: x, children: A.intl.format(A.t["+DFxLc"], { maxLength: g.NA2 }) }),
             ],
         })
     );
