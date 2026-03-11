@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => S });
+n.d(t, { A: () => v });
 var r = n(311907),
     i = n(73153),
-    a = n(956518),
-    s = n(165610),
+    s = n(956518),
+    a = n(165610),
     o = n(5867);
 let l = null,
     u = new Map(),
@@ -16,7 +16,7 @@ function f(e) {
 }
 function p(e) {
     let { applicationId: t, proxyTicket: n } = e,
-        r = (0, a.Ay)(t);
+        r = (0, s.Ay)(t);
     null == r
         ? u.delete(t)
         : (u.delete(t),
@@ -24,7 +24,7 @@ function p(e) {
               applicationId: t,
               url: r,
               connectedSince: Date.now(),
-              layoutMode: s.y.FOCUSED,
+              layoutMode: a.y.FOCUSED,
               activityPanelMode: o.Gd.PANEL,
               proxyTicket: n,
           }));
@@ -37,23 +37,26 @@ function m(e) {
     let { applicationId: t } = e;
     l?.applicationId === t && (l = null);
 }
-function g(e) {
+function E(e) {
     let { applicationId: t, layoutMode: n } = e;
     l?.applicationId === t && (l = { ...l, layoutMode: n });
 }
-function E(e) {
+function g(e) {
     let { activityPanelMode: t } = e;
     null != l && (l = { ...l, activityPanelMode: t });
 }
 function A(e) {
+    return null != l && l.layoutMode !== a.y.PIP && ((l = { ...l, layoutMode: a.y.PIP }), !0);
+}
+function I(e) {
     let { applicationId: t, lockState: n, pictureInPictureLockState: r } = e;
     null == n ? d.delete(t) : d.set(t, n), null === r ? _.delete(t) : void 0 !== r && _.set(t, r);
 }
-function I(e) {
+function T(e) {
     let { applicationId: t, refreshing: n } = e;
     n ? c.set(t, !0) : c.delete(t);
 }
-function T(e) {
+function S(e) {
     let { applicationId: t, proxyTicket: n } = e;
     l?.applicationId === t && (l = { ...l, proxyTicket: n });
 }
@@ -84,14 +87,15 @@ class y extends r.Ay.Store {
         return _.get(e) ?? this.getOrientationLockStateForApp(e);
     }
 }
-let S = new y(i.h, {
+let v = new y(i.h, {
     FRAME_LAUNCH_START: f,
     FRAME_LAUNCH: p,
     FRAME_LAUNCH_FAIL: h,
     FRAME_STOP: m,
-    FRAME_UPDATE_LAYOUT_MODE: g,
-    FRAME_SET_PANEL_MODE: E,
-    FRAME_SET_ORIENTATION_LOCK_STATE: A,
-    FRAME_SET_PROXY_TICKET_REFRESHING: I,
-    FRAME_UPDATE_PROXY_TICKET: T,
+    FRAME_UPDATE_LAYOUT_MODE: E,
+    FRAME_SET_PANEL_MODE: g,
+    FRAME_SET_ORIENTATION_LOCK_STATE: I,
+    FRAME_SET_PROXY_TICKET_REFRESHING: T,
+    FRAME_UPDATE_PROXY_TICKET: S,
+    CHANNEL_SELECT: A,
 });
