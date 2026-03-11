@@ -7,16 +7,16 @@ var l = n(397927),
     s = n(447215),
     o = n(888675),
     c = n(985018),
-    d = n(893112);
+    d = n(58350);
 function u(e) {
     let { message: t, channel: n, compact: u } = e,
-        m = (0, r.Ay)(t),
-        _ = (0, s.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id })(m),
+        _ = (0, r.Ay)(t),
+        m = (0, s.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id })(_),
         A = (0, a.h)(t.applicationId);
     if (null == A) return null;
     let E = c.intl.format(c.t.mAtJTC, {
         username: t.author.username,
-        usernameHook: _,
+        usernameHook: m,
         applicationName: A.name,
         applicationNameHook: () =>
             (0, i.jsx)(

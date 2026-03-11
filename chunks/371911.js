@@ -3,8 +3,8 @@ n.d(t, { C: () => y });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(484030),
+    a = n.n(l),
+    r = n(484030),
     o = n(311907),
     c = n(873298),
     d = n(397927),
@@ -24,7 +24,7 @@ var i = n(627968),
     b = n(412484),
     S = n(652215),
     T = n(985018),
-    v = n(98938);
+    v = n(868192);
 function y(e) {
     let t,
         n,
@@ -100,7 +100,7 @@ function y(e) {
                     "aria-label": T.intl.string(T.t.GSmTKJ),
                     className: G,
                     children: (0, i.jsx)("div", {
-                        className: r()(v.k, { [v.q]: X }),
+                        className: a()(v.k, { [v.q]: X }),
                         children: (0, i.jsx)(d.Fmo, {
                             component: (0, i.jsx)(I.A, { tab: k, setTab: V, badgeState: R, closePopout: F }),
                             children:
@@ -112,7 +112,7 @@ function y(e) {
                                         ? (0, i.jsx)(p.J, { closePopout: F })
                                         : k === c.Y2.SCHEDULED
                                           ? (0, i.jsx)(N.w, {})
-                                          : (0, i.jsx)(a.tH, {
+                                          : (0, i.jsx)(r.tH, {
                                                 fallback: (0, i.jsx)(b.T, {}),
                                                 children: (0, i.jsx)(b.Ay, {
                                                     onJump: q,

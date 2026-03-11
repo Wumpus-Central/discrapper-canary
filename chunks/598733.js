@@ -1,58 +1,58 @@
-n.d(t, { A: () => S });
+n.d(t, { A: () => m });
 var i = n(627968),
     l = n(64700),
     r = n(503698),
-    a = n.n(r),
-    s = n(311907),
+    s = n.n(r),
+    a = n(311907),
     o = n(421380),
     c = n(397927),
-    _ = n(686956),
-    E = n(976860),
-    d = n(71393),
-    u = n(967198),
-    A = n(449054),
-    T = n(652215),
+    d = n(686956),
+    u = n(976860),
+    _ = n(71393),
+    E = n(967198),
+    T = n(449054),
+    A = n(652215),
     I = n(985018),
-    N = n(163677),
-    R = n(1624);
-let S = () => {
-    let e = (0, s.bG)([u.A], () => u.A.getGuildId(), []),
-        t = (0, s.bG)([d.A], () => d.A.getGuild(e), [e]),
+    p = n(231667),
+    N = n(504226);
+let m = () => {
+    let e = (0, a.bG)([E.A], () => E.A.getGuildId(), []),
+        t = (0, a.bG)([_.A], () => _.A.getGuild(e), [e]),
         [n, r] = l.useState(!1);
     if (null == t) return null;
-    let S = async () => {
+    let m = async () => {
         r(!0);
         try {
-            A.cf(t.id), await _.A.joinGuild(t.id, { source: T.Q4z.NOTICE_BAR });
+            T.cf(t.id), await d.A.joinGuild(t.id, { source: A.Q4z.NOTICE_BAR });
         } catch {
             r(!1);
         }
     };
     return (0, i.jsxs)("div", {
-        className: a()(N.lm, R.lm),
+        className: s()(p.lm, N.lm),
         children: [
             (0, i.jsxs)(o.$n, {
                 look: o.$n.Looks.OUTLINED,
                 color: o.$n.Colors.WHITE,
                 size: o.$n.Sizes.NONE,
-                className: a()(N.x6, N.aX),
-                innerClassName: N.gb,
+                className: s()(p.x6, p.aX),
+                innerClassName: p.gb,
                 onClick: () => {
-                    (0, E.JK)().goBack();
+                    (0, u.JK)().goBack();
                 },
                 children: [
-                    (0, i.jsx)(c.rJJ, { size: "xs", color: "currentColor", className: N.UE }),
+                    (0, i.jsx)(c.rJJ, { size: "xs", color: "currentColor", className: p.UE }),
                     I.intl.string(I.t["13/7kX"]),
                 ],
             }),
-            (0, i.jsx)(c.Text, { className: N.wx, variant: "text-sm/normal", children: I.intl.string(I.t["N/y2WE"]) }),
+            (0, i.jsx)(c.Text, { className: p.wx, variant: "text-sm/normal", children: I.intl.string(I.t["N/y2WE"]) }),
             (0, i.jsx)(o.$n, {
-                className: N.x6,
+                className: p.x6,
                 look: o.$n.Looks.OUTLINED,
                 color: o.$n.Colors.WHITE,
                 size: o.$n.Sizes.NONE,
                 submitting: n,
-                onClick: S,
+                onClick: m,
                 children: I.intl.format(I.t.uHN7ny, { guild: t.name }),
             }),
         ],

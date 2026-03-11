@@ -33,7 +33,7 @@ var i = n(627968),
     w = n(574660),
     D = n(768349),
     O = n(985018),
-    k = n(22658);
+    k = n(355208);
 function U(e) {
     let { app: t, linkType: n, activityCustomId: l, activityReferrerId: a, message: o, onView: g } = e,
         { name: f, bot: C } = (t = (0, P.b)(t)),

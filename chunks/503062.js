@@ -5,15 +5,15 @@ var i = n(627968),
     s = n(397927),
     r = n(442433),
     o = n(297413),
-    d = n(714114),
-    c = n(729551),
+    c = n(714114),
+    d = n(729551),
     u = n(178418),
     m = n(87664),
     g = n(290863),
     x = n(939496),
     f = n(652215),
     p = n(996988),
-    h = n(794904);
+    h = n(565702);
 let _ = s._3J.SIZE_40,
     A = (0, s.FT9)(_);
 function I(e) {
@@ -25,14 +25,14 @@ function I(e) {
             isMobileOnline: g.A.isMobileOnline(t.id),
         })),
         C = (0, m.A)(t.id),
-        { voiceChannel: R } = (0, d.A)({ userId: t.id, guildId: j });
+        { voiceChannel: R } = (0, c.A)({ userId: t.id, guildId: j });
     return (0, i.jsxs)(s.DUT, {
         focusProps: b === p.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
         className: h.nM,
         onClick: E,
         onContextMenu: (e) => {
             (0, r.L3)(e, async () => {
-                let { default: e } = await Promise.all([n.e("97262"), n.e("3795"), n.e("32418"), n.e("57600")]).then(
+                let { default: e } = await Promise.all([n.e("97262"), n.e("3795"), n.e("32418"), n.e("4827")]).then(
                     n.bind(n, 668569),
                 );
                 return (n) => (0, i.jsx)(e, { ...n, user: t });
@@ -52,7 +52,7 @@ function I(e) {
                 className: h.zH,
                 children: [
                     (0, i.jsx)(o.A, { user: t, className: h.Tc, discriminatorClass: h.D2 }),
-                    (0, i.jsx)(c.A, { user: t, activities: S, applicationStream: C, voiceChannel: R }),
+                    (0, i.jsx)(d.A, { user: t, activities: S, applicationStream: C, voiceChannel: R }),
                 ],
             }),
         ],

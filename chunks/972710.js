@@ -10,8 +10,8 @@ var i = n(627968),
     u = n(311907),
     _ = n(397927),
     g = n(384904),
-    m = n(793574),
-    A = n(688810),
+    A = n(793574),
+    m = n(688810),
     h = n(701273),
     p = n(780964),
     x = n(840065),
@@ -19,41 +19,41 @@ var i = n(627968),
     T = n(954571),
     S = n(927578),
     C = n(866312),
-    f = n(327479),
-    I = n(652215),
-    b = n(601107),
-    N = n(985018),
-    v = n(141384);
-let j = [I.Dmq.PAST_DUE, I.Dmq.ACCOUNT_HOLD, I.Dmq.BILLING_RETRY],
-    O = (e) => {
+    I = n(327479),
+    f = n(652215),
+    N = n(601107),
+    b = n(985018),
+    v = n(20966);
+let O = [f.Dmq.PAST_DUE, f.Dmq.ACCOUNT_HOLD, f.Dmq.BILLING_RETRY],
+    j = (e) => {
         let { transitionState: t, onClose: n, subscription: l, analyticsLocations: a, analyticsLocation: r } = e,
             [o, d] = s.useState(!1),
-            [u, m] = s.useState(!1);
+            [u, A] = s.useState(!1);
         s.useEffect(() => {
-            T.default.track(I.HAw.GUILD_BOOST_PAST_DUE_CANCEL_MODAL_VIEWED, {
+            T.default.track(f.HAw.GUILD_BOOST_PAST_DUE_CANCEL_MODAL_VIEWED, {
                 subscription_id: l.id,
                 location_stack: a,
             });
         }, []);
-        let A = async () => {
-                d(!0), m(!1);
+        let m = async () => {
+                d(!0), A(!1);
                 try {
                     await (0, g.M2)(l.id, a, r),
-                        T.default.track(I.HAw.GUILD_BOOST_PAST_DUE_CANCELLATION_FLOW_COMPLETED, {
+                        T.default.track(f.HAw.GUILD_BOOST_PAST_DUE_CANCELLATION_FLOW_COMPLETED, {
                             subscription_id: l.id,
                             location_stack: a,
                         }),
                         (0, g.hP)(),
                         n();
                 } catch (e) {
-                    m(!0), d(!1);
+                    A(!0), d(!1);
                 }
             },
             h = [
-                { text: N.intl.string(N.t.oEAioF), onClick: () => n(), variant: "secondary" },
+                { text: b.intl.string(b.t.oEAioF), onClick: () => n(), variant: "secondary" },
                 {
-                    text: N.intl.string(N.t["cY+Oob"]),
-                    onClick: () => A(),
+                    text: b.intl.string(b.t["cY+Oob"]),
+                    onClick: () => m(),
                     disabled: o,
                     variant: "critical-primary",
                     loading: o,
@@ -62,11 +62,11 @@ let j = [I.Dmq.PAST_DUE, I.Dmq.ACCOUNT_HOLD, I.Dmq.BILLING_RETRY],
         return (0, i.jsx)(c.Modal, {
             size: "md",
             transitionState: t,
-            title: N.intl.string(N.t.LZunzZ),
-            subtitle: N.intl.string(N.t.FClXh9),
+            title: b.intl.string(b.t.LZunzZ),
+            subtitle: b.intl.string(b.t.FClXh9),
             actions: h,
             onClose: async () => n(),
-            children: u ? (0, i.jsx)(_.wx6, { type: "critical", children: N.intl.string(N.t["5mlOCW"]) }) : null,
+            children: u ? (0, i.jsx)(_.wx6, { type: "critical", children: b.intl.string(b.t["5mlOCW"]) }) : null,
         });
     };
 function R(e) {
@@ -82,23 +82,23 @@ function R(e) {
             let e = E.default.getCurrentUser();
             return o()(null != e, "GuildBoostingHeader: currentUser cannot be undefined"), e;
         }),
-        { analyticsLocations: R } = (0, A.Ay)(m.A.GUILD_BOOSTING_SUBSCRIPTION_HEADER),
+        { analyticsLocations: R } = (0, m.Ay)(A.A.GUILD_BOOSTING_SUBSCRIPTION_HEADER),
         y = (0, C.A)({ location: "GuildBoostingHeader" });
     if (0 === (0, S.bx)(n.additionalPlans)) return null;
     let { status: P } = n,
         D = (0, S.$k)(n),
-        L = y && !D && n.isBoostOnly && j.includes(n.status);
+        L = y && !D && n.isBoostOnly && O.includes(n.status);
     if (D) t = v.v2;
     else
         switch (P) {
-            case I.Dmq.PAST_DUE:
-            case I.Dmq.ACCOUNT_HOLD:
-            case I.Dmq.BILLING_RETRY:
+            case f.Dmq.PAST_DUE:
+            case f.Dmq.ACCOUNT_HOLD:
+            case f.Dmq.BILLING_RETRY:
                 t = v.P7;
                 break;
-            case I.Dmq.PAUSE_PENDING:
-            case I.Dmq.PAUSED:
-                t = n.pauseReason !== b.qf.FRACTIONAL_PREMIUM ? v.C7 : v.wG;
+            case f.Dmq.PAUSE_PENDING:
+            case f.Dmq.PAUSED:
+                t = n.pauseReason !== N.qf.FRACTIONAL_PREMIUM ? v.C7 : v.wG;
                 break;
             default:
                 t = v.wG;
@@ -134,10 +134,10 @@ function R(e) {
                                         children: (0, i.jsx)(c.QWc, {
                                             variant: "always-white",
                                             onClick: () => {
-                                                j.includes(n.status) &&
+                                                O.includes(n.status) &&
                                                     (0, _.mMO)(
                                                         async () => (e) =>
-                                                            (0, i.jsx)(O, {
+                                                            (0, i.jsx)(j, {
                                                                 ...e,
                                                                 subscription: n,
                                                                 analyticsLocations: R,
@@ -146,15 +146,15 @@ function R(e) {
                                                     );
                                             },
                                             size: "sm",
-                                            text: N.intl.string(N.t["ETE/oC"]),
+                                            text: b.intl.string(b.t["ETE/oC"]),
                                         }),
                                     }),
-                                (0, i.jsx)(f.A, {
+                                (0, i.jsx)(I.A, {
                                     onClick: () =>
                                         (0, x.openUserSettings)(p.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, {
-                                            section: I.nc_.GUILD_BOOSTING,
+                                            section: f.nc_.GUILD_BOOSTING,
                                         }),
-                                    text: N.intl.string(N.t["NQ5g/U"]),
+                                    text: b.intl.string(b.t["NQ5g/U"]),
                                 }),
                             ],
                         }),
@@ -164,7 +164,7 @@ function R(e) {
                 (0, i.jsx)(_.Text, {
                     className: v.yW,
                     variant: "text-sm/normal",
-                    children: N.intl.format(d.Fr ? N.t.uxYBEa : N.t.k6haR9, { openAppHook: () => (0, h.A)("app") }),
+                    children: b.intl.format(d.Fr ? b.t.uxYBEa : b.t.k6haR9, { openAppHook: () => (0, h.A)("app") }),
                 }),
         ],
     });

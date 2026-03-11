@@ -10,13 +10,13 @@ var a = n(627968),
     u = n(278466),
     m = n(805866),
     h = n(627575),
-    x = n(870341),
-    p = n(686267),
+    p = n(870341),
+    x = n(686267),
     g = n(231723),
     _ = n(818348),
-    f = n(646284),
+    f = n(774630),
     v = n(985018),
-    b = n(36303);
+    b = n(248065);
 let j = n(843020);
 function A(e) {
     let { task: t, handleSubmit: n, disabled: s } = e,
@@ -28,14 +28,14 @@ function A(e) {
         }, [t]),
         (0, a.jsxs)(u.h.Provider, {
             value: o,
-            children: [(0, a.jsx)(p.A, {}), (0, a.jsx)(x.A, { onSubmit: n, disabled: s })],
+            children: [(0, a.jsx)(x.A, {}), (0, a.jsx)(p.A, { onSubmit: n, disabled: s })],
         })
     );
 }
 let C = function (e) {
     let { transitionState: t, onClose: n } = e,
-        [u, x] = i.useState(null),
-        [p, C] = i.useState(!0),
+        [u, p] = i.useState(null),
+        [x, C] = i.useState(!0),
         [y, T] = i.useState(null),
         [S, E] = i.useState(!1),
         N = i.useCallback(async () => {
@@ -44,8 +44,8 @@ let C = function (e) {
                 let e = await (0, c.$R)();
                 if (null == e) return void n();
                 !(0, d.uJ)(e.ui_component?.component.type) && m.Vn.has(e.ui_component.component.type)
-                    ? x(e)
-                    : x({
+                    ? p(e)
+                    : p({
                           task_id: e.task_id,
                           task_type: m.wP.REFRESH_APP,
                           assignment_id: e.assignment_id,
@@ -94,7 +94,7 @@ let C = function (e) {
                   })
                 : (0, a.jsx)("div", {
                       className: b.nA,
-                      children: p
+                      children: x
                           ? (0, a.jsx)(s.y$y, { type: s.y$y.Type.SPINNING_CIRCLE })
                           : (0, a.jsx)("div", {
                                 className: b.kL,

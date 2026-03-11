@@ -19,8 +19,8 @@ var i = n(627968),
     x = n(430452),
     C = n(287809),
     S = n(954571),
-    T = n(474090),
-    I = n(927578),
+    I = n(474090),
+    T = n(927578),
     N = n(971778),
     y = n(494783),
     b = n(342887),
@@ -33,9 +33,9 @@ var i = n(627968),
     L = n(806931),
     P = n(788868),
     w = n(731854),
-    k = n(734317),
+    k = n(3683),
     U = n(985018),
-    G = n(632998);
+    G = n(311192);
 function F(e) {
     let { onSettingsButtonClick: t, wide: n, showOutputDevices: s = !1, showSearchBar: F = !0 } = e,
         [H, B] = l.useState(""),
@@ -50,7 +50,7 @@ function F(e) {
             orientation: u.R.VERTICAL_TOP,
         });
     (0, U.useSyncMessages)(k.messagesLoader);
-    let Y = (0, o.bG)([C.default], () => (0, T.ki)(C.default.getCurrentUser())),
+    let Y = (0, o.bG)([C.default], () => (0, I.ki)(C.default.getCurrentUser())),
         q = (0, o.bG)([N.A], () => N.A.getCatalogUpdateTime()),
         [J, $] = l.useState(!1),
         [Z, X] = l.useState(!1),
@@ -120,7 +120,7 @@ function F(e) {
                                     children: (0, i.jsx)(_.d, {
                                         showUpsell: !0,
                                         text: U.intl.format(U.t.XMDm8z, {
-                                            nitroTierName: (0, I.Dd)(P.PremiumTypes.TIER_2),
+                                            nitroTierName: (0, T.Dd)(P.PremiumTypes.TIER_2),
                                             onClick: () => (0, E.n)(),
                                         }),
                                         button: U.intl.string(U.t.cRCCJ3),

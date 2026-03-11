@@ -11,9 +11,9 @@ var r = n(158954),
     u = n(842319),
     m = n(27023),
     x = n(800007),
-    _ = n(294726),
+    _ = n(738072),
     g = n(985018),
-    f = n(8577);
+    f = n(434467);
 function h(e) {
     let { step: t, setFooterNode: n } = (0, m.bv)(),
         i = (0, o.U)("GameServerSetupModal"),

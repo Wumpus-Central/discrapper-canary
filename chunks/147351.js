@@ -1,4 +1,4 @@
-n.d(t, { A: () => C });
+n.d(t, { A: () => g });
 var i = n(627968),
     l = n(64700),
     a = n(311907),
@@ -8,24 +8,24 @@ var i = n(627968),
     c = n(148355),
     d = n(406704),
     u = n(696451),
-    m = n(576705),
-    _ = n(287809),
+    _ = n(576705),
+    m = n(287809),
     A = n(954571),
     E = n(661191),
-    f = n(460350),
-    h = n(652215),
-    g = n(48447);
-function p(e) {
+    I = n(460350),
+    T = n(652215),
+    f = n(874377);
+function C(e) {
     let { assets: t, currentUser: n, message: i } = e,
         l = (E.default.extractTimestamp(n.id) + E.default.extractTimestamp(i.id)) % t.length;
     return t[l];
 }
-function x(e) {
-    let { currentUser: t, channel: n, message: a, buttonLabels: d, stickers: u, event: m, eventProperties: _ } = e,
-        E = l.useMemo(() => p({ assets: u, currentUser: t, message: a }), [u, t, a]),
-        h = l.useMemo(() => p({ assets: d, currentUser: t, message: a }), [d, t, a]),
-        g = l.useCallback(async () => {
-            let { valid: e } = await (0, f.i)({ type: o.oU.FORM, content: "", channel: n });
+function N(e) {
+    let { currentUser: t, channel: n, message: a, buttonLabels: d, stickers: u, event: _, eventProperties: m } = e,
+        E = l.useMemo(() => C({ assets: u, currentUser: t, message: a }), [u, t, a]),
+        T = l.useMemo(() => C({ assets: d, currentUser: t, message: a }), [d, t, a]),
+        f = l.useCallback(async () => {
+            let { valid: e } = await (0, I.i)({ type: o.oU.FORM, content: "", channel: n });
             e &&
                 (!(function (e) {
                     let { channel: t, message: n, sticker: i } = e;
@@ -43,25 +43,25 @@ function x(e) {
                 (function (e) {
                     let { sticker: t, event: n, eventProperties: i } = e;
                     null != n && A.default.track(n, { ...i, sticker_id: t.id });
-                })({ sticker: E, event: m, eventProperties: _ }));
-        }, [n, a, E, m, _]);
+                })({ sticker: E, event: _, eventProperties: m }));
+        }, [n, a, E, _, m]);
     return (0, i.jsx)(r.$nd, {
         icon: { type: "sticker", asset: E, component: c.A },
-        text: h,
-        onClick: g,
+        text: T,
+        onClick: f,
         variant: "secondary",
     });
 }
-function C(e) {
+function g(e) {
     let { channel: t, message: n, buttonLabels: l, stickers: r, event: s, eventProperties: o } = e,
-        c = _.default.getCurrentUser(),
+        c = m.default.getCurrentUser(),
         A = (function (e) {
             let { channel: t, message: n, currentUser: i } = e;
-            return (0, a.bG)([m.A, u.Ay], () => {
+            return (0, a.bG)([_.A, u.Ay], () => {
                 let e = t.guild_id;
                 if (null == i || null == e) return !1;
                 let l = (0, d.UJ)(t),
-                    a = m.A.can(h.xBc.SEND_MESSAGES, t),
+                    a = _.A.can(T.xBc.SEND_MESSAGES, t),
                     r = u.Ay.getMember(e, i.id)?.isPending,
                     s = n.author.bot;
                 return a && !l && !r && !s;
@@ -69,8 +69,8 @@ function C(e) {
         })({ channel: t, message: n, currentUser: c });
     return null != c && A
         ? (0, i.jsx)("div", {
-              className: g.S,
-              children: (0, i.jsx)(x, {
+              className: f.S,
+              children: (0, i.jsx)(N, {
                   currentUser: c,
                   channel: t,
                   message: n,

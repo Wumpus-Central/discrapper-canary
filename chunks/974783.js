@@ -8,7 +8,7 @@ var i = n(627968),
     o = n(843376),
     d = n(652215),
     c = n(985018),
-    u = n(188335);
+    u = n(77457);
 let h = { [l.tY.MESSAGE]: c.t.fuqnBC, [l.tY.USER]: c.t.F4jrRW, [l.tY.GUILD]: c.t.gH3aMs },
     _ = (e) => {
         let { title: t, menuType: n, onReopen: l } = e,

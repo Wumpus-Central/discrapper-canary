@@ -1,4 +1,4 @@
-n.d(t, { A: () => b });
+n.d(t, { A: () => v });
 var i = n(627968);
 n(64700);
 var s = n(311907),
@@ -13,17 +13,17 @@ var s = n(311907),
     m = n(900179),
     x = n(837924),
     f = n(558628),
-    _ = n(842241),
-    p = n(282797),
+    p = n(842241),
+    _ = n(282797),
     h = n(518477),
     g = n(652215),
     I = n(985018),
-    j = n(78702),
-    v = n(781425);
-function b(e) {
-    let { user: t, currentUser: n, guildId: b, onClose: N } = e,
+    j = n(278792),
+    b = n(230836);
+function v(e) {
+    let { user: t, currentUser: n, guildId: v, onClose: N } = e,
         { live: C, recent: y, stream: E } = (0, u.A)(t.id),
-        { voiceChannel: T, voiceActivity: L } = (0, A.A)({ userId: t.id, guildId: b }),
+        { voiceChannel: T, voiceActivity: L } = (0, A.A)({ userId: t.id, guildId: v }),
         O = (0, s.bG)([l.A], () => l.A.isFetchingUserOutbox(t.id)),
         R = t.id === n.id,
         S = (0, s.bG)([d.A, a.A], () => {
@@ -48,7 +48,7 @@ function b(e) {
                                 children: [
                                     null != E &&
                                         (0, i.jsx)("li", {
-                                            children: (0, i.jsx)(_.A, {
+                                            children: (0, i.jsx)(p.A, {
                                                 user: t,
                                                 currentUser: n,
                                                 stream: E,
@@ -71,7 +71,7 @@ function b(e) {
                                     ),
                                     G &&
                                         (0, i.jsx)("li", {
-                                            children: (0, i.jsx)(p.A, {
+                                            children: (0, i.jsx)(_.A, {
                                                 user: t,
                                                 currentUser: n,
                                                 voiceChannel: T,
@@ -110,5 +110,5 @@ function b(e) {
                       : null,
               ],
           })
-        : (0, i.jsx)("div", { className: v.Ie, children: (0, i.jsx)(r.y$y, {}) });
+        : (0, i.jsx)("div", { className: b.Ie, children: (0, i.jsx)(r.y$y, {}) });
 }

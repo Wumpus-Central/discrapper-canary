@@ -19,8 +19,8 @@ var r = n(627968),
     A = n(839914),
     I = n(914905),
     T = n(652215),
-    S = n(896189),
-    y = n(829681);
+    S = n(29719),
+    y = n(431055);
 let v = [];
 function N(e) {
     let { channelId: t, type: n, ignoreFile: s, smallAttachments: N = !1 } = e,

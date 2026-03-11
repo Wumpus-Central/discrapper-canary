@@ -5,19 +5,19 @@ var i = n(627968),
     s = n(429913),
     r = n(486020),
     o = n(188275),
-    d = n(985018),
-    c = n(416e3);
+    c = n(985018),
+    d = n(126854);
 function u(e) {
     let { title: t, handleOpenCollectiblesShop: n, handleOpenGameShop: u, socialLayerStorefrontApplicationId: m } = e,
         g = l.useRef(null),
         [x, f] = l.useState(!1),
         p = (0, s.h)(m),
         h = l.useMemo(
-            () => (null == p || p.id !== o.XR ? d.intl.string(d.t.apFNLU) : d.intl.string(d.t["kq/75v"])),
+            () => (null == p || p.id !== o.XR ? c.intl.string(c.t.apFNLU) : c.intl.string(c.t["kq/75v"])),
             [p],
         ),
         _ = l.useMemo(() => (null == p ? null : r.Ay.getApplicationIconURL({ id: p.id, icon: p.icon, size: 20 })), [p]),
-        A = l.useMemo(() => (null == _ ? a.U1X : () => (0, i.jsx)("img", { className: c.I, src: _, alt: "" })), [_]),
+        A = l.useMemo(() => (null == _ ? a.U1X : () => (0, i.jsx)("img", { className: d.I, src: _, alt: "" })), [_]),
         I = l.useMemo(() => (null == _ ? { type: "icon", icon: a.U1X } : { type: "image", src: _ }), [_]),
         j = l.useMemo(
             () =>
@@ -25,7 +25,7 @@ function u(e) {
                     children: [
                         (0, i.jsx)(a.Drp, {
                             id: "browse-collectibles-shop",
-                            label: d.intl.string(d.t["5upuqx"]),
+                            label: c.intl.string(c.t["5upuqx"]),
                             iconLeft: a.U1X,
                             leadingAccessory: { type: "icon", icon: a.U1X },
                             action: n,
@@ -53,7 +53,7 @@ function u(e) {
                 navId: "wishlist-overflow-menu",
                 onSelect: void 0,
                 onClose: t,
-                "aria-label": d.intl.string(d.t.GdNkvG),
+                "aria-label": c.intl.string(c.t.GdNkvG),
                 children: j,
             });
         },

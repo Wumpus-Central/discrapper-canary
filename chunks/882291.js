@@ -12,8 +12,8 @@ var r = n(627968),
     p = n(961255),
     f = n(261331),
     E = n(203908),
-    h = n(790191),
-    v = n(712119);
+    h = n(750813),
+    v = n(23373);
 let x = { tension: 300, friction: 30, clamp: !0 };
 function g(e) {
     let {
@@ -33,7 +33,7 @@ function g(e) {
             onScrubForward: R,
             "data-testid": L,
         } = e,
-        { quest: j, sourceQuestContent: I, useNewProgressBarStyling: M } = l.useContext(m.VideoQuestModalContext),
+        { quest: I, sourceQuestContent: M, useNewProgressBarStyling: j } = l.useContext(m.VideoQuestModalContext),
         {
             contRef: w,
             boundingRect: k,
@@ -55,12 +55,12 @@ function g(e) {
             percent: i,
             onClick: N,
         }),
-        $ = l.useMemo(() => (null == U || null == k ? null : (0, o.rB)((0, o.hc)(U, k, b))), [U, k, b]),
-        Y = l.useMemo(() => {
+        Y = l.useMemo(() => (null == U || null == k ? null : (0, o.rB)((0, o.hc)(U, k, b))), [U, k, b]),
+        $ = l.useMemo(() => {
             if (null != k) return (0, o.TO)(i, k);
         }, [i, k]),
         { currentPxSpring: H } = (0, u.zhh)(
-            { currentPxSpring: Y ?? 0, config: x },
+            { currentPxSpring: $ ?? 0, config: x },
             g ? "animate-always" : "animate-never",
         ),
         {
@@ -70,9 +70,9 @@ function g(e) {
             animatingIndicatorIndex: X,
             expansionSpring: J,
         } = (0, E.Ay)({ timelineRect: k, videoDuration: b, targetSec: t }),
-        Z = l.useMemo(() => W(Y), [Y, W]),
+        Z = l.useMemo(() => W($), [$, W]),
         ee = l.useMemo(() => W(U), [U, W]),
-        et = !A && M,
+        et = !A && j,
         en = k?.width != null && k?.width !== 0 ? k?.width : 1,
         er = l.useMemo(
             () =>
@@ -98,8 +98,8 @@ function g(e) {
         ref: w,
         "data-testid": L,
         style: {
-            "--custom-timeline-height": `${M || F ? 4 : 2}px`,
-            "--custom-initial-timeline-height": `${M ? 4 : 2}px`,
+            "--custom-timeline-height": `${j || F ? 4 : 2}px`,
+            "--custom-initial-timeline-height": `${j ? 4 : 2}px`,
         },
         children: (0, r.jsxs)(u.DUT, {
             className: s()(v.KF, { [v.uc]: S }),
@@ -120,7 +120,7 @@ function g(e) {
                             (0, r.jsx)(
                                 c.A,
                                 {
-                                    showGlow: T !== f.Q6.ENDED && null != Y && Y > e.startPx,
+                                    showGlow: T !== f.Q6.ENDED && null != $ && $ > e.startPx,
                                     segment: e,
                                     currentPxSpring: H,
                                     animatingIndex: X,
@@ -130,7 +130,7 @@ function g(e) {
                                     preloadedBuffers: _,
                                     maxSeekableX: B,
                                     interactionEnabled: S,
-                                    useNewStyles: M,
+                                    useNewStyles: j,
                                     progressFillClassName: et ? h.QR : h.UA,
                                     glowClassName: et ? h.Um : h.U5,
                                 },
@@ -145,12 +145,12 @@ function g(e) {
                         return (0, r.jsx)(
                             p.A,
                             {
-                                currentPx: null != Y ? Y : 0,
+                                currentPx: null != $ ? $ : 0,
                                 indicator: e,
                                 isAnimated: n,
                                 expansionSpring: J,
-                                quest: j,
-                                sourceQuestContent: I,
+                                quest: I,
+                                sourceQuestContent: M,
                                 onMouseEnter: () => q(e.index),
                                 onMouseLeave: () => q(null),
                                 onClick: null != N ? () => N(l) : void 0,
@@ -159,7 +159,7 @@ function g(e) {
                         );
                     }),
                 F &&
-                    null != $ &&
+                    null != Y &&
                     n &&
                     !ee &&
                     (0, r.jsx)(u.Text, {
@@ -167,11 +167,11 @@ function g(e) {
                         variant: "text-xs/normal",
                         color: "always-white",
                         style: { left: null != U ? `${U}px` : "auto" },
-                        children: $,
+                        children: Y,
                     }),
                 F &&
                     S &&
-                    null != Y &&
+                    null != $ &&
                     !Z &&
                     (0, r.jsx)(a.animated.div, { className: v.Ub, style: { left: H.to((e) => `${e}px`) } }),
             ],

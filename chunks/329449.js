@@ -1,4 +1,4 @@
-n.d(t, { A: () => I }), n(142703);
+n.d(t, { A: () => T }), n(142703);
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -17,7 +17,7 @@ var i = n(627968),
     _ = n(103640),
     E = n(924177),
     x = n(985018),
-    C = n(733313);
+    C = n(11239);
 let S = l.memo(function (e) {
         let { channelId: t, width: n } = e,
             s = (0, o.bG)([u.A], () => u.A.useReducedMotion),
@@ -58,7 +58,7 @@ let S = l.memo(function (e) {
             })
         );
     }),
-    T = l.memo(function (e) {
+    I = l.memo(function (e) {
         let { value: t, multiplier: n } = e,
             { color: s, square: r, flair: o } = l.useMemo(() => (0, _.HN)(n), [n]);
         return (0, i.jsxs)(i.Fragment, {
@@ -105,7 +105,7 @@ let S = l.memo(function (e) {
             ],
         });
     }),
-    I = l.memo(function (e) {
+    T = l.memo(function (e) {
         let { channelId: t } = e,
             n = (0, o.bG)([h.default], () => h.default.getId()),
             s = (0, o.bG)([m.A], () => m.A.isTyping(t, n), [t, n]),
@@ -113,7 +113,7 @@ let S = l.memo(function (e) {
             u = (0, o.bG)([f.Ay], () => f.Ay.isComboing(n, t), [t, n]),
             { ref: A, width: g = 0 } = (0, d.Ay)(),
             [_, x] = l.useState(!1),
-            I = (0, E.A)(t),
+            T = (0, E.A)(t),
             N = a && u && s;
         l.useEffect(() => {
             N && x(!0);
@@ -126,7 +126,7 @@ let S = l.memo(function (e) {
                 pointerEvents: "none",
                 config: r.config.stiff,
             }),
-            b = l.useMemo(() => I ?? { value: 0, multiplier: 1 }, [I]),
+            b = l.useMemo(() => T ?? { value: 0, multiplier: 1 }, [T]),
             v = l.useRef(b);
         l.useEffect(() => {
             (b.multiplier > 1 || b.value > 0) && (v.current = b);
@@ -142,7 +142,7 @@ let S = l.memo(function (e) {
                     ref: A,
                     className: C.p_,
                     style: y,
-                    children: (0, i.jsx)(T, { value: R, multiplier: j }),
+                    children: (0, i.jsx)(I, { value: R, multiplier: j }),
                 }),
             ],
         });

@@ -6,12 +6,12 @@ var i = n(627968),
     r = n(791498),
     o = n(590089),
     d = n(876813),
-    c = n(191563);
+    c = n(40937);
 function u(e) {
     let { node: t } = e,
         { destinationKey: n, useTrailingDecoration: u, useTitle: _, useSubtitle: g } = t,
-        m = u?.(),
-        A = g?.(),
+        A = u?.(),
+        m = g?.(),
         { parentPanelNode: h, parentSidebarItemNode: p } = (0, a.x)(n),
         x = _?.(),
         E = h?.useTitle?.(),
@@ -21,12 +21,12 @@ function u(e) {
     let C = null != p ? p.icon : void 0;
     return (0, i.jsx)(o.U, {
         title: T,
-        description: A,
+        description: m,
         leadingElement:
             null != C && (0, i.jsx)("div", { className: c.z, children: (0, i.jsx)(C, { color: "currentColor" }) }),
         trailingElement: (0, i.jsxs)("div", {
             className: c.M,
-            children: [null != m && (0, i.jsx)(d.Q, { decoration: m }), (0, i.jsx)(s.uhT, {})],
+            children: [null != A && (0, i.jsx)(d.Q, { decoration: A }), (0, i.jsx)(s.uhT, {})],
         }),
         onClick: () => {
             l.A.navigate(n, { animateSidebarScroll: !1 }), S();

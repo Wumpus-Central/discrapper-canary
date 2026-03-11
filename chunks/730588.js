@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => A });
 var i = n(627968);
 n(64700);
 var s = n(503698),
@@ -10,14 +10,14 @@ var s = n(503698),
     c = n(128450),
     u = n(339984),
     _ = n(985018),
-    g = n(52506);
-function m(e) {
+    g = n(738296);
+function A(e) {
     let {
             showRemoveBannerButton: t,
             errors: n,
             onBannerChange: s,
-            guildId: m,
-            className: A,
+            guildId: A,
+            className: m,
             disabled: h = !1,
             showPremiumIcon: p = !0,
             isTryItOut: x = !1,
@@ -27,7 +27,7 @@ function m(e) {
         { newestAnalyticsLocation: S } = (0, o.Ay)(),
         C = T ? r.wLn : a.$n;
     return (0, i.jsx)(c.A, {
-        className: A,
+        className: m,
         title: _.intl.string(_.t.Vgdusv),
         showPremiumIcon: p,
         errors: n,
@@ -40,7 +40,7 @@ function m(e) {
                     className: l()({ [g.yj]: T }),
                     size: a.$n.Sizes.SMALL,
                     onClick: () =>
-                        (0, d.XD)({ uploadType: u.HL.BANNER, analyticsSource: S, guildId: m, isTryItOut: x }),
+                        (0, d.XD)({ uploadType: u.HL.BANNER, analyticsSource: S, guildId: A, isTryItOut: x }),
                     children: _.intl.string(_.t.N0bC3P),
                 }),
                 t &&
@@ -50,7 +50,7 @@ function m(e) {
                         children: (0, i.jsx)(r.Button, {
                             variant: "secondary",
                             size: "sm",
-                            text: null != m ? _.intl.string(_.t.jHlJNS) : _.intl.string(_.t.tT9n7D),
+                            text: null != A ? _.intl.string(_.t.jHlJNS) : _.intl.string(_.t.tT9n7D),
                             onClick: () => s(null),
                         }),
                     }),

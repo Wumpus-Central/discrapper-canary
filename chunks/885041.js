@@ -12,8 +12,8 @@ var i = n(627968),
     h = n(956793),
     _ = n(271866),
     m = n(18422),
-    g = n(159084),
-    p = n(775602),
+    p = n(159084),
+    g = n(775602),
     E = n(502229),
     I = n(836753),
     f = n(196492),
@@ -21,7 +21,7 @@ var i = n(627968),
     T = n(315206),
     N = n(844358),
     S = n(828430),
-    x = n(79746),
+    x = n(857365),
     v = n(861638),
     y = n(793574),
     b = n(114716),
@@ -44,7 +44,7 @@ var i = n(627968),
     W = n(257402),
     q = n(216954),
     K = n(735831),
-    z = n(913953),
+    z = n(136334),
     $ = n(142120),
     Q = n(507263),
     X = n(998345),
@@ -66,8 +66,8 @@ var i = n(627968),
     eh = n(584257),
     e_ = n(64585),
     em = n(281913),
-    eg = n(334116),
-    ep = n(194970),
+    ep = n(334116),
+    eg = n(194970),
     eE = n(414967),
     eI = n(499454),
     ef = n(580960),
@@ -108,8 +108,8 @@ var i = n(627968),
     e1 = n(237631),
     e7 = n(194871),
     e6 = n(856588),
-    e5 = n(612181),
-    e9 = n(723702),
+    e9 = n(612181),
+    e5 = n(723702),
     e2 = n(837921),
     e3 = n(715671),
     e4 = n(652215),
@@ -142,7 +142,7 @@ let tn = !1;
 (0, v.as)(),
     s.Ay.initialize(),
     eb.A.loadServer(),
-    e9.isPlatformEmbedded &&
+    e5.isPlatformEmbedded &&
         (e2.Ay.on("USER_SETTINGS_OPEN", (e, t) => {
             (0, eF.openUserSettings)();
         }),
@@ -152,7 +152,7 @@ let tn = !1;
                 analyticsParams: { location: { page: e4.liQ.DIRECT, object: e4.ZSU.WEB_URL } },
             });
         }));
-let ti = (0, g.z)((e) => {
+let ti = (0, p.z)((e) => {
         let { location: t } = e,
             n = (0, eH.default)(t.pathname);
         return (
@@ -172,7 +172,7 @@ let ti = (0, g.z)((e) => {
             })
         );
     }),
-    tr = (0, g.z)((e) => {
+    tr = (0, p.z)((e) => {
         let { location: t } = e,
             r = (0, eA.parsePlaygroundUrl)(t.pathname);
         return (
@@ -213,7 +213,7 @@ let ti = (0, g.z)((e) => {
             }
         },
     ),
-    ta = (0, g.z)((0, b.C)(L.A, null, { passProps: !1 })),
+    ta = (0, p.z)((0, b.C)(L.A, null, { passProps: !1 })),
     ts = (0, b.C)(X.default, null, { passProps: !1 }),
     to = [
         e4.BVt.GUILD_BOOSTING_MARKETING(eS.pv.guildId()),
@@ -227,7 +227,7 @@ let tc = [
     {
         path: [e4.BVt.ACTIVITY_DETAILS(":applicationId")],
         render: function (e) {
-            return (0, e5.wR)() ||
+            return (0, e9.wR)() ||
                 eq.default.getLoginStatus() === e4.aUe.LOGGING_IN ||
                 !eq.default.allowLogoutRedirect()
                 ? ta(e)
@@ -338,7 +338,7 @@ let tc = [
             return (
                 (0, Q.B)(() => {
                     (0, o.mMO)(async () => {
-                        let { default: e } = await Promise.all([n.e("64992"), n.e("67208")]).then(n.bind(n, 401539));
+                        let { default: e } = await Promise.all([n.e("64992"), n.e("6356")]).then(n.bind(n, 401539));
                         return (t) => (0, i.jsx)(e, { ...t, guildId: r });
                     });
                 }),
@@ -449,10 +449,10 @@ class th extends r.PureComponent {
     historyUnlisten = () => {};
     rewriterUnlisten = () => {};
     componentDidMount() {
-        e2.Ay.setZoomFactor(p.A.zoom),
+        e2.Ay.setZoomFactor(g.A.zoom),
             eb.A.init(),
             O.A.initialize(),
-            ep.A.initialize(),
+            eg.A.initialize(),
             W.A.initialize(),
             eW.A.initialize(),
             q.A.initialize(),
@@ -470,7 +470,7 @@ class th extends r.PureComponent {
             H.Ay.initialize(),
             eY.A.initialize(),
             ei.Ay.initialize(),
-            eg.A.initialize(),
+            ep.A.initialize(),
             C.A.initialize(),
             er.A.init(),
             P.A.init(),
@@ -506,14 +506,14 @@ class th extends r.PureComponent {
         eb.A.terminate(),
             eW.A.terminate(),
             ef.A.terminate(),
-            ep.A.terminate(),
+            eg.A.terminate(),
             O.A.terminate(),
             T.Ay.terminate(),
             H.Ay.terminate(),
             eY.A.terminate(),
             C.A.terminate(),
             eC.A.terminate(),
-            eg.A.terminate(),
+            ep.A.terminate(),
             eG.A.terminate(),
             f.A.terminate(),
             V.A.terminate(),

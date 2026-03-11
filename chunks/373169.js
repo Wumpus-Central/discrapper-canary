@@ -1,4 +1,4 @@
-n.d(t, { p: () => A });
+n.d(t, { p: () => m });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
@@ -9,11 +9,11 @@ var i = n(627968),
     c = n(840065),
     u = n(652215),
     _ = n(985018),
-    g = n(58477),
-    m = n(72290);
-function A() {
+    g = n(520383),
+    A = n(72290);
+function m() {
     let e = (0, l.bG)([o.default], () => o.default.locale),
-        [t, A] = s.useState(e),
+        [t, m] = s.useState(e),
         h = s.useMemo(
             () =>
                 (0, _.getAvailableLocales)().map((e) => {
@@ -38,8 +38,8 @@ function A() {
             [],
         ),
         p = s.useCallback((e) => {
-            A(e),
-                m.nextTick(() => {
+            m(e),
+                A.nextTick(() => {
                     r.Ay.updateLocale(e),
                         (0, a.OoC)(c.USER_SETTINGS_MODAL_KEY) &&
                             (0, c.openUserSettings)(d.X.LANGUAGE_AND_TIME_PANEL, { section: u.nc_.LANGUAGE });

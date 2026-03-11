@@ -3,8 +3,8 @@ n.d(t, { A: () => z });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(311907),
+    a = n.n(l),
+    r = n(311907),
     o = n(3026),
     c = n(990078),
     d = n(397927),
@@ -41,8 +41,8 @@ n(281405);
 var V = n(652215),
     B = n(349828),
     H = n(985018),
-    F = n(728444),
-    K = n(834201);
+    F = n(719550),
+    K = n(24383);
 class W extends U.Ay {
     channelItemRef = s.createRef();
     state = { shouldShowGuildVerificationPopout: !1 };
@@ -82,7 +82,7 @@ class W extends U.Ay {
             s = j.A.getGuild(t.getGuildId());
         null != s &&
             (0, h.L3)(e, async () => {
-                let { default: e } = await Promise.all([n.e("97262"), n.e("57287"), n.e("40394"), n.e("18159")]).then(
+                let { default: e } = await Promise.all([n.e("97262"), n.e("57287"), n.e("40394"), n.e("30997")]).then(
                     n.bind(n, 698193),
                 );
                 return (n) => (0, i.jsx)(e, { ...n, channel: t, guild: s });
@@ -117,7 +117,7 @@ class W extends U.Ay {
                 asContainer: !0,
                 text: H.intl.string(H.t.ZXxLQg),
                 children: (0, i.jsx)(d.DUT, {
-                    className: r()(F.Xs, n ? F.Tf : null),
+                    className: a()(F.Xs, n ? F.Tf : null),
                     onClick: () => {
                         u.A.updateChatOpen(e.id, !0), this.handleClickChat();
                     },
@@ -144,7 +144,7 @@ class W extends U.Ay {
                 connected: n,
                 locked: s,
                 connectChannelDropTarget: l,
-                connectChannelDragSource: a,
+                connectChannelDragSource: r,
                 connectUserDropTarget: o,
                 connectDragPreview: u,
                 canReorderChannel: h,
@@ -159,7 +159,7 @@ class W extends U.Ay {
             } = this.props,
             { shouldShowGuildVerificationPopout: I } = this.state,
             N = (0, i.jsxs)("li", {
-                className: r()(this.getModeClass(), { [F.r9]: this.isDisabled() }),
+                className: a()(this.getModeClass(), { [F.r9]: this.isDisabled() }),
                 "data-dnd-name": e.name,
                 children: [
                     (0, i.jsx)(d.YNO, {
@@ -175,7 +175,7 @@ class W extends U.Ay {
                                 children: (0, i.jsxs)(w.Ay, {
                                     ref: this.channelItemRef,
                                     className: F.Ki,
-                                    iconClassName: r()({ [K.G]: null != m }),
+                                    iconClassName: a()({ [K.G]: null != m }),
                                     channel: e,
                                     selected: !E && t,
                                     connected: n,
@@ -213,15 +213,15 @@ class W extends U.Ay {
                     this.renderVoiceUsers(),
                 ],
             });
-        return A && (N = o(N)), h && (N = l(a(N))), N;
+        return A && (N = o(N)), h && (N = l(r(N))), N;
     }
 }
 let Y = (0, A.a)((0, m.F)(W));
 function z(e) {
-    let { guild: t, channel: n, disableSorting: s, isFavoriteCategory: l, collapsed: r, voiceStates: o } = e,
-        c = (0, a.cf)([L.Ay], () => ({ unread: L.Ay.hasUnread(n.id), mentionCount: L.Ay.getMentionCount(n.id) })),
-        d = (0, a.bG)([M.Ay], () => M.Ay.resolveUnreadSetting(n)),
-        u = (0, a.cf)([y.A, R.A, O.A], () => {
+    let { guild: t, channel: n, disableSorting: s, isFavoriteCategory: l, collapsed: a, voiceStates: o } = e,
+        c = (0, r.cf)([L.Ay], () => ({ unread: L.Ay.hasUnread(n.id), mentionCount: L.Ay.getMentionCount(n.id) })),
+        d = (0, r.bG)([M.Ay], () => M.Ay.resolveUnreadSetting(n)),
+        u = (0, r.cf)([y.A, R.A, O.A], () => {
             let e = y.A.getChannel(n.parent_id),
                 i = R.A.getCheck(n.guild_id);
             return {
@@ -236,17 +236,17 @@ function z(e) {
                 unverifiedAccount: !i.canChat,
             };
         }),
-        h = (0, a.bG)([v.A], () => v.A.isCollapsed(n.parent_id)),
+        h = (0, r.bG)([v.A], () => v.A.isCollapsed(n.parent_id)),
         A = (0, T.Ay)(n.id),
-        m = (0, a.bG)([b.A], () => b.A.getStageInstanceByChannel(n.id), [n.id]),
+        m = (0, r.bG)([b.A], () => b.A.getStageInstanceByChannel(n.id), [n.id]),
         p = (0, I.zy)(n.id, N.ip.AUDIENCE),
         { isSubscriptionGated: g, needSubscriptionToAccess: _ } = (0, f.A)(n.id),
-        x = (0, a.bG)([M.Ay], () => M.Ay.isFavorite(t.id, n.id)),
+        x = (0, r.bG)([M.Ay], () => M.Ay.isFavorite(t.id, n.id)),
         C = (0, S.xn)(n.id),
         E = (0, P.A)({
             channel: n,
             isChannelSelected: !1,
-            isChannelCollapsed: r,
+            isChannelCollapsed: a,
             voiceStates: o,
             isSubscriptionGated: g,
             needSubscriptionToAccess: _,

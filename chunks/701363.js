@@ -20,8 +20,8 @@ var l = n(627968),
     T = n(308528),
     v = n(442433),
     S = n(960076),
-    _ = n(397244),
-    C = n(714114),
+    C = n(397244),
+    _ = n(714114),
     j = n(729551),
     y = n(709066),
     I = n(262295),
@@ -55,7 +55,7 @@ var l = n(627968),
     en = n(837921),
     el = n(652215),
     es = n(985018),
-    ea = n(45119);
+    ea = n(477549);
 let ei = en.Ay.getEnableHardwareAcceleration() ? g.JsQ : g.euF,
     er = { offset: { top: 2, bottom: 2, right: 4 } },
     eo = (e) => {
@@ -155,7 +155,7 @@ function eA(e) {
             user: r,
             activities: h,
             applicationStream: N,
-            voiceChannel: C,
+            voiceChannel: _,
             isTyping: q,
             status: B,
             isMobile: K,
@@ -177,8 +177,8 @@ function eA(e) {
         ),
         ev = s.useRef(null),
         eS = ee ?? ev,
-        e_ = (0, A.A)(eS, eT),
-        { showMenuItemPopover: eC, markMenuItemPopoverAsDismissed: ej } = (0, k.z)({
+        eC = (0, A.A)(eS, eT),
+        { showMenuItemPopover: e_, markMenuItemPopoverAsDismissed: ej } = (0, k.z)({
             location: "PrivateChannel",
             isChannelSelected: !0 === a,
             isTargetInViewport: eN,
@@ -256,7 +256,7 @@ function eA(e) {
                                   n.e("97262"),
                                   n.e("42128"),
                                   n.e("39778"),
-                                  n.e("85689"),
+                                  n.e("49182"),
                               ]).then(n.bind(n, 385913));
                               return (n) => (0, l.jsx)(e, { ...n, user: r, channel: t, channelSelected: a });
                           },
@@ -282,7 +282,7 @@ function eA(e) {
             loop: em,
             boldFontOpacity: 0.9,
         }),
-        e6 = eO
+        e7 = eO
             ? (0, l.jsxs)(l.Fragment, {
                   children: [
                       e9,
@@ -296,9 +296,9 @@ function eA(e) {
                   ],
               })
             : e9,
-        e7 = s.useRef(null),
-        e4 = (0, O.W)({ location: "PrivateChannel" }) && r?.displayNameStyles != null,
-        e3 = [(0, R.Ay)({ channel: t, unread: eq }), (0, R.r2)({ channel: t, muted: eG, userStatus: B })]
+        e6 = s.useRef(null),
+        e3 = (0, O.W)({ location: "PrivateChannel" }) && r?.displayNameStyles != null,
+        e4 = [(0, R.Ay)({ channel: t, unread: eq }), (0, R.r2)({ channel: t, muted: eG, userStatus: B })]
             .filter(Boolean)
             .join(", "),
         e8 = (0, E.bG)([$.Ay], () => $.Ay.lastMessageId(t.id)),
@@ -306,7 +306,7 @@ function eA(e) {
         { showClose: tt } = b.A.useConfig({ location: "PrivateChannel" }),
         tn = (0, f.A)(() => {
             let e = eL.current?.getBoundingClientRect() ?? null,
-                t = e7.current?.getBoundingClientRect() ?? null;
+                t = e6.current?.getBoundingClientRect() ?? null;
             if (null == t || null == e || e.width + 44 - t.width <= 0) return void eR({ maskImage: "none" });
             let n = t.width - 16;
             eR({
@@ -324,7 +324,7 @@ function eA(e) {
                     className: i()(ea.Ix, ea.dm),
                     role: n,
                     focusProps: { ...er, focusTarget: ex, ringTarget: eS },
-                    ref: e_,
+                    ref: eC,
                     onMouseEnter: eW,
                     onMouseLeave: eK,
                     onMouseDown: eZ,
@@ -346,19 +346,19 @@ function eA(e) {
                                     nameplate: eH ? Z : void 0,
                                     selected: a,
                                     hovered: em,
-                                    content: e7,
+                                    content: e6,
                                     placement: z.u.CHANNEL,
                                 }),
-                                (0, l.jsx)("div", { className: ea.lU, ref: eL, children: e6 }),
+                                (0, l.jsx)("div", { className: ea.lU, ref: eL, children: e7 }),
                                 (0, l.jsx)(u.N_, {
                                     style: eb,
                                     innerRef: ex,
                                     to: el.BVt.CHANNEL(el.ME, t.id),
                                     className: ea.nf,
-                                    "aria-label": e3,
+                                    "aria-label": e4,
                                     ...s,
                                     children: (0, l.jsx)(I.A, {
-                                        ref: e7,
+                                        ref: e6,
                                         avatar: (() => {
                                             let e = g._3J.SIZE_32;
                                             if (t.isMultiUserDM())
@@ -416,23 +416,23 @@ function eA(e) {
                                                         members: t.recipients.length + 1,
                                                     }),
                                                 })
-                                              : (0, _.A)({
+                                              : (0, C.A)({
                                                       activities: h,
                                                       status: B,
                                                       applicationStream: N,
-                                                      voiceChannel: C,
+                                                      voiceChannel: _,
                                                   })
                                                 ? (0, l.jsx)(j.A, {
                                                       user: r,
                                                       activities: h,
-                                                      voiceChannel: C,
+                                                      voiceChannel: _,
                                                       applicationStream: N,
                                                       animateEmoji: em || ep || eh,
                                                       textClassName: ea.XD,
                                                       iconClassName: eV ? ea.tG : void 0,
                                                   })
                                                 : null,
-                                        name: (0, l.jsx)(x.A, { className: i()(ea.uN, { [ea.e8]: e4 }), children: e6 }),
+                                        name: (0, l.jsx)(x.A, { className: i()(ea.uN, { [ea.e8]: e3 }), children: e7 }),
                                         decorators: t.isSystemDM()
                                             ? (0, l.jsx)(y.A, {
                                                   className: ea.G$,
@@ -440,7 +440,7 @@ function eA(e) {
                                                   verified: !0,
                                               })
                                             : null,
-                                        withDisplayNameStyles: e4,
+                                        withDisplayNameStyles: e3,
                                     }),
                                 }),
                                 (0, l.jsxs)("div", {
@@ -468,7 +468,7 @@ function eA(e) {
                                 }),
                             ],
                         }),
-                        eC && (0, l.jsx)(P.A, { targetElementRef: eS, markMenuItemPopoverAsDismissed: ej }),
+                        e_ && (0, l.jsx)(P.A, { targetElementRef: eS, markMenuItemPopoverAsDismissed: ej }),
                     ],
                 });
             },
@@ -495,7 +495,7 @@ let ep =
                           isVR: null != i && Y.A.isVROnline(i),
                       };
                   }, [t, i]),
-                  { voiceChannel: o } = (0, C.A)({ userId: i }),
+                  { voiceChannel: o } = (0, _.A)({ userId: i }),
                   u = (0, q.r)({ user: a }),
                   c = (0, E.bG)(
                       [ee.default, Z.A],

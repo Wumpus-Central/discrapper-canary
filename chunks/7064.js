@@ -7,25 +7,25 @@ var i = n(627968),
     o = n(355097),
     d = n(531525),
     c = n(985018),
-    u = n(943626);
+    u = n(27676);
 function _(e) {
     let { currentUser: t, disabled: n, handleDisableAccount: _, handleDeleteAccount: g } = e,
-        m = t.isClaimed(),
-        A = s.useRef(null);
+        A = t.isClaimed(),
+        m = s.useRef(null);
     return (
-        (0, r.A)(A, o.Ew.AccountScrollPositions.DISABLE_ACCOUNT),
+        (0, r.A)(m, o.Ew.AccountScrollPositions.DISABLE_ACCOUNT),
         (0, i.jsx)(a.x, {
             setting: d.H.ACCOUNT_DISABLE_ACCOUNT,
             children: (0, i.jsx)("div", {
-                ref: A,
+                ref: m,
                 children: (0, i.jsx)(l.D0$, {
                     label: c.intl.string(c.t.ZKsIks),
-                    description: m ? c.intl.string(c.t.TIh3Yj) : c.intl.string(c.t.czsGA8),
+                    description: A ? c.intl.string(c.t.TIh3Yj) : c.intl.string(c.t.czsGA8),
                     children: (0, i.jsxs)(l.ButtonGroup, {
                         size: "sm",
                         className: u.U,
                         children: [
-                            m
+                            A
                                 ? (0, i.jsx)(l.Button, {
                                       variant: "critical-primary",
                                       size: "sm",

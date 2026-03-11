@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => A });
 var i = n(627968);
 n(64700);
 var s = n(503698),
@@ -6,10 +6,10 @@ var s = n(503698),
     a = n(934551),
     r = n(397927),
     o = n(294433),
-    d = n(842130),
+    d = n(870236),
     c = n(985018),
-    u = n(705362),
-    _ = n(473169);
+    u = n(56456),
+    _ = n(522759);
 let g = (e) => {
         let { header: t, description: n, icon: s, inModal: a } = e;
         return (0, i.jsxs)("div", {
@@ -30,14 +30,14 @@ let g = (e) => {
             ],
         });
     },
-    m = (e) => {
+    A = (e) => {
         let { inModal: t } = e,
             n = (0, o.y)(c.intl.string(d.default["TCzk/e"]), c.intl.string(d.default["2OqtJJ"])),
             s = (0, o.y)(c.intl.string(d.default.ASf7XN), c.intl.string(d.default["82y87X"])),
             l = (0, o.y)(c.intl.string(d.default["0QDVFN"]), c.intl.string(d.default["1xBHHV"])),
             _ = c.intl.string(d.default["JvJ3P/"]),
-            m = (0, o.y)(c.intl.string(d.default.l0ChgF), c.intl.string(d.default.S2ss5X)),
-            A = (0, o.y)(c.intl.string(d.default.LDu4Uk), c.intl.string(d.default.fEgtLV)),
+            A = (0, o.y)(c.intl.string(d.default.l0ChgF), c.intl.string(d.default.S2ss5X)),
+            m = (0, o.y)(c.intl.string(d.default.LDu4Uk), c.intl.string(d.default.fEgtLV)),
             h = c.intl.string(d.default["4SCALu"]),
             p = c.intl.string(d.default.oYf9P7),
             x = (0, o.y)(c.intl.string(d.default["dES/2r"]), c.intl.string(d.default.ep6mdN)),
@@ -48,7 +48,7 @@ let g = (e) => {
             children: [
                 (0, i.jsx)(g, {
                     header: _,
-                    description: m,
+                    description: A,
                     icon: (0, i.jsx)(r.$yI, {
                         size: "custom",
                         width: 20,
@@ -59,7 +59,7 @@ let g = (e) => {
                 }),
                 (0, i.jsx)(g, {
                     header: c.intl.string(d.default["44NEx6"]),
-                    description: A,
+                    description: m,
                     icon: (0, i.jsx)(r.Bxc, {
                         size: "custom",
                         width: 20,

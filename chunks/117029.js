@@ -12,8 +12,8 @@ var i = n(627968),
     m = n(430452),
     A = n(40056),
     g = n(985018),
-    p = n(463689),
-    f = n(654305);
+    p = n(895283),
+    f = n(6923);
 function _(e) {
     e.preventDefault(), e.stopPropagation();
 }
@@ -24,8 +24,8 @@ let x = l.memo(function (e) {
     let { mirror: t = !1, streamId: n, paused: s } = e,
         { onActive: x, onPreventIdle: C, onAllowIdle: S } = l.useContext(h.k3),
         {
-            enabled: T,
-            zoomLevel: I,
+            enabled: I,
+            zoomLevel: T,
             minZoom: N,
             maxZoom: y,
             isDragging: b,
@@ -42,7 +42,7 @@ let x = l.memo(function (e) {
         } = l.useContext(A.e9),
         [U, G] = l.useState(!1),
         F = l.useRef(null),
-        H = I > N,
+        H = T > N,
         B = l.useCallback(() => {
             C("interact");
         }, [C]),
@@ -61,9 +61,9 @@ let x = l.memo(function (e) {
                     i = L.current.clientHeight,
                     l = e.x - t.left,
                     s = e.y - t.top;
-                w(k({ x: (0.5 - l / t.width) * n * I, y: (0.5 - s / t.height) * i * I }));
+                w(k({ x: (0.5 - l / t.width) * n * T, y: (0.5 - s / t.height) * i * T }));
             },
-            [k, I, L, w],
+            [k, T, L, w],
         ),
         W = l.useCallback(
             (e) => {
@@ -87,10 +87,10 @@ let x = l.memo(function (e) {
         $ = l.useMemo(() => {
             let e = null != L.current ? L.current.clientWidth : 1,
                 t = null != L.current ? L.current.clientHeight : 1,
-                n = 1 / I,
-                i = 1 / I,
-                l = 0.5 - P.x / (e * I),
-                s = 0.5 - P.y / (t * I);
+                n = 1 / T,
+                i = 1 / T,
+                l = 0.5 - P.x / (e * T),
+                s = 0.5 - P.y / (t * T);
             return {
                 "--custom-zoom-indicator-left": `${100 * ((0, r.clamp))(l - n / 2, 0, 1 - n)}%`,
                 "--custom-zoom-indicator-top": `${100 * ((0, r.clamp))(s - i / 2, 0, 1 - i)}%`,
@@ -101,18 +101,18 @@ let x = l.memo(function (e) {
                         ? "none"
                         : "top 0.1s ease-out, left 0.1s ease-out, width 0.1s ease-out, height 0.1s ease-out",
             };
-        }, [b, U, v, j, P, I, L]),
+        }, [b, U, v, j, P, T, L]),
         Z = l.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), M(I - 0.25, A.qd, "button");
+                e.preventDefault(), e.stopPropagation(), M(T - 0.25, A.qd, "button");
             },
-            [M, I],
+            [M, T],
         ),
         X = l.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), M(I + 0.25, A.qd, "button");
+                e.preventDefault(), e.stopPropagation(), M(T + 0.25, A.qd, "button");
             },
-            [M, I],
+            [M, T],
         ),
         Q = l.useRef(null),
         ee = l.useCallback(
@@ -130,7 +130,7 @@ let x = l.memo(function (e) {
     return ((0, u.l0)(() => {
         Q.current?.stop();
     }),
-    T && null != n)
+    I && null != n)
         ? (0, i.jsxs)("div", {
               className: a()(f.ne, { [f.Ge]: D || H }),
               onMouseEnter: B,
@@ -172,7 +172,7 @@ let x = l.memo(function (e) {
                                           children: (0, i.jsx)(d.K0, {
                                               icon: d.V0_,
                                               onClick: Z,
-                                              disabled: I <= N,
+                                              disabled: T <= N,
                                               variant: "overlay-secondary",
                                               size: "sm",
                                               "aria-label": g.intl.string(g.t.M6Cmwy),
@@ -181,8 +181,8 @@ let x = l.memo(function (e) {
                                       (0, i.jsx)(d.Apm, {
                                           minValue: N,
                                           maxValue: y,
-                                          initialValue: I,
-                                          value: I,
+                                          initialValue: T,
+                                          value: T,
                                           asValueChanges: ee,
                                           onValueRender: (e) => `${Math.round(100 * e)}%`,
                                           "aria-label": g.intl.string(g.t.grzPmr),
@@ -195,7 +195,7 @@ let x = l.memo(function (e) {
                               children: (0, i.jsx)(d.K0, {
                                   icon: d.r1u,
                                   onClick: X,
-                                  disabled: I >= y,
+                                  disabled: T >= y,
                                   variant: "overlay-secondary",
                                   size: "sm",
                                   "aria-label": g.intl.string(g.t["9hMafy"]),

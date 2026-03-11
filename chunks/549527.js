@@ -35,7 +35,7 @@ var i = n(627968),
     O = n(709634),
     k = n(652215),
     U = n(381941),
-    G = n(618231);
+    G = n(8185);
 function B(e) {
     let { message: t, snapshot: n, index: c } = e,
         _ = r.useMemo(() => new u.j(t, n, c), [t, n, c]),

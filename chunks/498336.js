@@ -10,8 +10,8 @@ var a = n(627968),
     u = n(387265),
     m = n(230135),
     h = n(45780),
-    x = n(665171),
-    p = n(942975),
+    p = n(665171),
+    x = n(942975),
     g = n(594061),
     _ = n(617617),
     f = n(859241),
@@ -19,7 +19,7 @@ var a = n(627968),
     b = n(967198),
     j = n(642020),
     A = n(652215),
-    C = n(45298);
+    C = n(300756);
 async function y(e, t, n) {
     await r.Bo.patch({
         url: A.Rsh.APPLIED_BOOST_MODIFY_END_DATE,
@@ -27,7 +27,7 @@ async function y(e, t, n) {
         rejectWithError: !0,
     }),
         (0, c.VU)(e),
-        (0, p.Xd)(e, !0);
+        (0, x.Xd)(e, !0);
 }
 async function T(e) {
     await r.Bo.post({ url: A.Rsh.SEND_POWERUPS_SYSTEM_MESSAGE(e), rejectWithError: !0 });
@@ -57,7 +57,7 @@ function S() {
                             variant: "primary",
                             text: "Reset",
                             onClick: () => {
-                                (0, p.qM)();
+                                (0, x.qM)();
                             },
                         }),
                     ],
@@ -181,7 +181,7 @@ function S() {
                     variant: "primary",
                     text: "Reset GameServer ToS",
                     onClick: () => {
-                        (0, x.Wp)(!1);
+                        (0, p.Wp)(!1);
                     },
                 }),
             ],

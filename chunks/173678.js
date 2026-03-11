@@ -3,15 +3,15 @@ n.d(t, { M: () => g, z: () => _ });
 var i = n(627968),
     s = n(575593),
     l = n(397927),
-    r = n(576030),
-    a = n(245068),
+    a = n(576030),
+    r = n(245068),
     o = n(44120),
     c = n(353157),
     d = n(957785),
     u = n(788868),
     h = n(985018),
-    A = n(733557),
-    m = n(101616);
+    A = n(55751),
+    m = n(754558);
 function p(e, t, n) {
     (0, o.A)({
         skuId: e.skuId,
@@ -39,7 +39,7 @@ function g(e, t) {
         N = {
             title: E ? h.intl.string(h.t.HFhcqh) : I,
             body: E ? h.intl.string(h.t.ilhtIa) : void 0,
-            renderIcon: E ? r.GM : void 0,
+            renderIcon: E ? a.GM : void 0,
             shouldShow: !0,
         },
         b = !x && e.collectiblesItem.type === s.R.PROFILE_EFFECT;
@@ -56,7 +56,7 @@ function g(e, t) {
                     let t = { items: e.bundleItems };
                     return (0, i.jsx)("div", {
                         className: A.hT,
-                        children: (0, i.jsx)(a.X, { product: t, isHighlighted: !1, user: l }),
+                        children: (0, i.jsx)(r.X, { product: t, isHighlighted: !1, user: l }),
                     });
                 }
                 return (0, i.jsx)(c.A, { item: e, profileOwner: l, isHighlighted: !1 });
@@ -71,14 +71,14 @@ function g(e, t) {
     );
 }
 function _(e, t) {
-    let { profileOwner: n, analyticsLocations: r, wishlistId: a, onViewWishlist: o } = t,
+    let { profileOwner: n, analyticsLocations: a, wishlistId: r, onViewWishlist: o } = t,
         c = null != e.bundleItems && e.bundleItems.length > 0,
         d = g(e, {
             profileOwner: n,
-            analyticsLocations: r,
+            analyticsLocations: a,
             onViewWishlist: o,
             isSingleCard: !0,
-            wishlistId: a,
+            wishlistId: r,
             index: 0,
         }),
         u = c
@@ -104,7 +104,7 @@ function _(e, t) {
                 children: [
                     (0, i.jsx)(l.DUT, {
                         onClick: () => {
-                            p(e, n, r);
+                            p(e, n, a);
                         },
                         className: m.Hh,
                         "aria-label": h.intl.string(h.t.pLPjsb),

@@ -9,7 +9,7 @@ var r = n(627968),
     c = n(397927),
     d = n(624600),
     m = n(972441),
-    p = n(712119);
+    p = n(23373);
 let f = { tension: 300, friction: 30, clamp: !0 };
 function E(e) {
     let {
@@ -34,9 +34,9 @@ function E(e) {
             handleMouseLeave: D,
             handleMouseMove: R,
             handleKeyDown: L,
-            hoveredAtX: j,
-            maxSeekableX: I,
-            isHovering: M,
+            hoveredAtX: I,
+            maxSeekableX: M,
+            isHovering: j,
             handleClick: w,
             ariaProps: k,
         } = (0, m.A)({
@@ -48,7 +48,7 @@ function E(e) {
             percent: n,
             onClick: A,
         }),
-        O = l.useMemo(() => (null == j || null == T ? null : (0, u.rB)((0, u.hc)(j, T, g))), [j, T, g]),
+        O = l.useMemo(() => (null == I || null == T ? null : (0, u.rB)((0, u.hc)(I, T, g))), [I, T, g]),
         P = l.useMemo(() => {
             if (null != T) return (0, u.TO)(n, T);
         }, [n, T]),
@@ -87,7 +87,7 @@ function E(e) {
                                     backgroundColor: h,
                                     timelineWidth: U,
                                     preloadedBuffers: x,
-                                    maxSeekableX: I,
+                                    maxSeekableX: M,
                                     interactionEnabled: E,
                                     useNewStyles: !0,
                                     progressFillClassName: p.UA,
@@ -98,17 +98,17 @@ function E(e) {
                             ),
                         ),
                 }),
-                M &&
+                j &&
                     null != O &&
                     t &&
                     (0, r.jsx)(c.Text, {
                         className: p.Ey,
                         variant: "text-xs/normal",
                         color: "always-white",
-                        style: { left: null != j ? `${j}px` : "auto" },
+                        style: { left: null != I ? `${I}px` : "auto" },
                         children: O,
                     }),
-                M &&
+                j &&
                     E &&
                     null != P &&
                     (0, r.jsx)(a.animated.div, { className: p.Ub, style: { left: Q.to((e) => `${e}px`) } }),

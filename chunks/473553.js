@@ -3,8 +3,8 @@ n.d(t, { A: () => L });
 var i = n(627968),
     s = n(64700),
     l = n(158954),
-    r = n(311907),
-    a = n(554146),
+    a = n(311907),
+    r = n(554146),
     o = n(397927),
     c = n(932001),
     d = n(625180),
@@ -27,13 +27,13 @@ var i = n(627968),
     v = n(49999),
     y = n(165610),
     j = n(985018),
-    R = n(453561);
+    R = n(25327);
 function O(e) {
     let { quest: t, applicationId: n } = e,
-        r = (0, f.fc)(t),
+        a = (0, f.fc)(t),
         u = (0, _.mU)({
             quest: t,
-            taskDetails: r,
+            taskDetails: a,
             location: T.rE.QUEST_ACTIVITY_HEADER,
             questContent: m.uF.QUEST_ACTIVITY_HEADER,
             sourceQuestContent: m.uF.RUNNING_ACTIVITY,
@@ -41,7 +41,7 @@ function O(e) {
         [A, p] = s.useState(!1),
         g = s.useRef(null),
         C = s.useRef(null),
-        [b, O] = (0, c.kn)([a.M.QUEST_ACTIVITY_HEADER_INTRO], void 0, !0),
+        [b, O] = (0, c.kn)([r.M.QUEST_ACTIVITY_HEADER_INTRO], void 0, !0),
         { completedRatio: L, completedRatioDisplay: M, percentComplete: D } = (0, f.O9)(t, !0),
         G = s.useCallback(() => {
             d.A.updateFrameLayoutMode({ applicationId: n, layoutMode: y.y.PIP });
@@ -165,13 +165,13 @@ function O(e) {
 }
 function L(e) {
     let { applicationId: t } = e,
-        a = (0, r.bG)([A.A], () => A.A.quests),
-        c = (0, r.bG)([u.A], () => u.A.theme),
-        d = s.useMemo(() => (0, C.jm)(a, t, !0)[0], [a, t]),
+        r = (0, a.bG)([A.A], () => A.A.quests),
+        c = (0, a.bG)([u.A], () => u.A.theme),
+        d = s.useMemo(() => (0, C.jm)(r, t, !0)[0], [r, t]),
         { enabled: h } = g.Ym.useConfig({ location: T.rE.QUEST_ACTIVITY_HEADER }),
-        _ = (0, r.bG)([p.A], () => p.A.getState().autoEnroll),
+        _ = (0, a.bG)([p.A], () => p.A.getState().autoEnroll),
         f = d?.id,
-        x = (0, r.bG)([p.A], () => p.A.isDismissed(f), [f]);
+        x = (0, a.bG)([p.A], () => p.A.isDismissed(f), [f]);
     return (s.useEffect(() => {
         !h ||
             null == d ||

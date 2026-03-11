@@ -10,8 +10,8 @@ var i = n(627968),
     u = n(235986),
     _ = n(147964),
     g = n(985018),
-    m = n(361151),
-    A = n(473169);
+    A = n(76985),
+    m = n(522759);
 let h = /^\d+$|^$/;
 function p(e) {
     let { onClose: t, transitionState: n } = e,
@@ -25,9 +25,9 @@ function p(e) {
             authorizing: _.A.isFetchingAuthorization,
         })),
         [T, S] = s.useState(p ?? ""),
-        [C, f] = s.useState("8080"),
-        [I, b] = s.useState("localhost"),
-        N = h.test(T);
+        [C, I] = s.useState("8080"),
+        [f, N] = s.useState("localhost"),
+        b = h.test(T);
     async function v() {
         d.SH();
         let e = (function (e, t, n) {
@@ -38,27 +38,27 @@ function p(e) {
                 case "proxy":
                     return (0, c.Ay)(n);
             }
-        })(I, C, T);
+        })(f, C, T);
         null != (await d.q1(T, e)) && t();
     }
     s.useEffect(() => () => o.h.wait(() => d.SH()), []);
-    let j = null != p && p === T,
-        O = j
+    let O = null != p && p === T,
+        j = O
             ? function () {
-                  d.cL(), S(""), b(null);
+                  d.cL(), S(""), N(null);
               }
             : v,
         R = s.useMemo(
             () => [
                 {
                     loading: E,
-                    disabled: !N || 0 === T.length || ("localhost" === I && 0 === C.length),
-                    variant: j ? "critical-primary" : "active",
-                    text: j ? g.intl.string(g.t.d6TR3I) : g.intl.string(g.t.qwuK5I),
-                    onClick: O,
+                    disabled: !b || 0 === T.length || ("localhost" === f && 0 === C.length),
+                    variant: O ? "critical-primary" : "active",
+                    text: O ? g.intl.string(g.t.d6TR3I) : g.intl.string(g.t.qwuK5I),
+                    onClick: j,
                 },
             ],
-            [T.length, E, j, N, C.length, O, I],
+            [T.length, E, O, b, C.length, j, f],
         );
     return (0, i.jsxs)(l.Modal, {
         title: g.intl.string(g.t.f8fzky),
@@ -70,7 +70,7 @@ function p(e) {
             null == x
                 ? null
                 : (0, i.jsx)("div", {
-                      className: A.SX,
+                      className: m.SX,
                       children: (0, i.jsx)(r.wx6, { type: "critical", children: x }),
                   }),
             (0, i.jsxs)(u.A, {
@@ -78,13 +78,13 @@ function p(e) {
                 align: u.A.Align.START,
                 children: [
                     (0, i.jsx)("div", {
-                        className: m.I,
+                        className: A.I,
                         children: (0, i.jsx)(r.ksK, {
                             label: g.intl.string(g.t.P6TzgI),
                             required: !0,
                             value: T,
                             maxLength: 19,
-                            error: N ? null : g.intl.string(g.t.gPNgKO),
+                            error: b ? null : g.intl.string(g.t.gPNgKO),
                             onChange: function (e) {
                                 S(e);
                             },
@@ -92,32 +92,32 @@ function p(e) {
                         }),
                     }),
                     (0, i.jsx)("div", {
-                        className: m.I,
+                        className: A.I,
                         children: (0, i.jsx)(r.l6P, {
                             selectionMode: "single",
                             label: g.intl.string(g.t["/GTqXG"]),
-                            disabled: !N || "" === T,
-                            value: I,
+                            disabled: !b || "" === T,
+                            value: f,
                             options: [
                                 { value: "localhost", label: g.intl.string(g.t["+Y9Y6r"]), id: "localhost" },
                                 { value: "proxy", label: g.intl.string(g.t.uaksyW), id: "proxy" },
                             ],
                             onSelectionChange: function (e) {
-                                b(e);
+                                N(e);
                             },
                             placeholder: "URL Origin Type",
                         }),
                     }),
-                    "localhost" !== I
+                    "localhost" !== f
                         ? null
                         : (0, i.jsx)("div", {
-                              className: m.I,
+                              className: A.I,
                               children: (0, i.jsx)(r.ksK, {
                                   required: !0,
                                   label: g.intl.string(g.t.fF4zxq),
                                   value: C,
                                   maxLength: 5,
-                                  onChange: (e) => f(e),
+                                  onChange: (e) => I(e),
                                   disabled: E,
                               }),
                           }),

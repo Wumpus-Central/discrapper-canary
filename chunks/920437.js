@@ -19,8 +19,8 @@ var i = n(627968),
     x = n(709977),
     C = n(212455),
     S = n(466244),
-    T = n(158476),
-    I = n(857071),
+    I = n(158476),
+    T = n(857071),
     N = n(552227),
     y = n(698405),
     b = n(557722),
@@ -39,7 +39,7 @@ var i = n(627968),
     F = n(360469),
     H = n(53516),
     B = n(985018),
-    V = n(32385);
+    V = n(690427);
 class K extends l.PureComponent {
     state = { submitting: !1, shouldShowLurkerModeUpsellPopout: !1, shouldShowLurkerModeSuccessPopout: !1 };
     textAreaContainerRef = l.createRef();
@@ -90,7 +90,7 @@ class K extends l.PureComponent {
     handleVerifyPhone = () => {
         (0, d.mMO)(
             async () => {
-                let { default: e } = await Promise.all([n.e("84704"), n.e("45668")]).then(n.bind(n, 615715));
+                let { default: e } = await Promise.all([n.e("84704"), n.e("24676")]).then(n.bind(n, 615715));
                 return (t) => (0, i.jsx)(e, { reason: b.d.GUILD_PHONE_REQUIRED, ...t });
             },
             { modalKey: H.V },
@@ -169,7 +169,7 @@ class K extends l.PureComponent {
                 showLinkedLobbyApplicationLoadingIndicator: C,
                 requiredLinkedLobbyApplication: S,
             } = this.props,
-            { shouldShowLurkerModeUpsellPopout: T, shouldShowLurkerModeSuccessPopout: I } = this.state,
+            { shouldShowLurkerModeUpsellPopout: I, shouldShowLurkerModeSuccessPopout: T } = this.state,
             N = { theme: u, useReducedMotion: f };
         if (e && !m) {
             if (((N.message = B.intl.string(B.t.Hl0Mqh)), null != A && A >= 1e3)) {
@@ -231,7 +231,7 @@ class K extends l.PureComponent {
             targetElementRef: this.textAreaContainerRef,
             position: "top",
             align: "left",
-            shouldShow: I,
+            shouldShow: T,
             onRequestClose: () => this.setState({ shouldShowLurkerModeSuccessPopout: !1 }),
             renderPopout: this.renderSuccessPopout,
             children: (e) =>
@@ -245,7 +245,7 @@ class K extends l.PureComponent {
                                 ? (0, i.jsx)(d.YNO, {
                                       targetElementRef: this.upsellTargetRef,
                                       renderPopout: this.renderLurkerModeUpsellPopout,
-                                      shouldShow: T,
+                                      shouldShow: I,
                                       position: "top",
                                       children: (e) =>
                                           (0, i.jsx)(d.DUT, {
@@ -270,12 +270,12 @@ function z(e) {
         a = (0, r.bG)([O.A], () => O.A.getCheck(l)),
         o = t.type === G.rbe.GUILD_ANNOUNCEMENT && null != s && s.features.has(G.GuildFeatures.NEWS),
         c = (0, r.bG)([R.A], () => (o ? R.A.getFollowerStatsForChannel(t.id) : null)),
-        d = (0, r.bG)([I.A], () => I.A.isLurking(l)),
+        d = (0, r.bG)([T.A], () => T.A.isLurking(l)),
         u = (0, r.bG)([P.default], () => P.default.getCurrentUser()),
         h = u?.isStaff() ?? !1,
         m = (0, r.bG)([M.Ay], () => null != u && (M.Ay.getMember(l, u.id)?.isPending ?? !1)),
         g = !!(0, x.Qd)(s),
-        p = (0, r.bG)([T.A], () => T.A.shouldShowPopout(l)),
+        p = (0, r.bG)([I.A], () => I.A.shouldShowPopout(l)),
         f = (0, r.bG)([L.A], () => L.A.can(G.xBc.SEND_MESSAGES, t)),
         _ = (0, r.bG)([C.A], () => C.A.getRequest(l)),
         { showLinkedLobbyApplicationLoadingIndicator: S, requiredLinkedLobbyApplication: N } = (0, k.A)(t.linkedLobby),

@@ -43,8 +43,8 @@ var s = i(627968),
     B = i(518477),
     Z = i(699976),
     K = i(985018),
-    X = i(855135),
-    z = i(958237);
+    X = i(235889),
+    z = i(8043);
 function V(e) {
     let { onSelectSku: t, priceOptions: i, showPromotionalGiftBanner: a } = e;
     return (0, s.jsxs)("div", {

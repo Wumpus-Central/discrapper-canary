@@ -1,4 +1,4 @@
-n.d(t, { K: () => A, default: () => h });
+n.d(t, { K: () => m, default: () => h });
 var i = n(627968);
 n(64700);
 var s = n(397927),
@@ -10,9 +10,9 @@ var s = n(397927),
     c = n(788868),
     u = n(652215),
     _ = n(985018),
-    g = n(698290),
-    m = n(880223);
-function A(e) {
+    g = n(94184),
+    A = n(880223);
+function m(e) {
     let { analyticsSource: t, onSubscribeFinish: l } = e,
         r = a.default.getCurrentUser();
     null != r &&
@@ -34,7 +34,7 @@ function h(e) {
         ? (0, i.jsx)(d.F, {
               title: _.intl.string(_.t.reVc0M),
               subtitle: _.intl.string(_.t.KckEj7),
-              graphic: { src: m.A, type: "image" },
+              graphic: { src: A.A, type: "image" },
               onSecondaryClick: () => {
                   (0, r.x)(n);
               },

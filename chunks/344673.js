@@ -10,8 +10,8 @@ var a = n(627968),
     u = n(311907),
     m = n(435371),
     h = n(397927),
-    x = n(73153),
-    p = n(58736),
+    p = n(73153),
+    x = n(58736),
     g = n(405269),
     _ = n(967954),
     f = n(538064),
@@ -20,8 +20,8 @@ var a = n(627968),
     j = n(303054),
     A = n(231643),
     C = n(985018),
-    y = n(76584),
-    T = n(661251);
+    y = n(891026),
+    T = n(930821);
 let S = [
         {
             key: "id",
@@ -68,11 +68,11 @@ let S = [
                     u = c()(r);
                 return (0, a.jsxs)(a.Fragment, {
                     children: [
-                        (0, a.jsxs)(p.Ay, {
+                        (0, a.jsxs)(x.Ay, {
                             className: l()(T.jr, y.nZ),
                             children: [
-                                (0, a.jsx)(p.Ay.Icon, { icon: h.Uy2, tooltip: t }),
-                                (0, a.jsx)(p.Ay.Title, { children: t }),
+                                (0, a.jsx)(x.Ay.Icon, { icon: h.Uy2, tooltip: t }),
+                                (0, a.jsx)(x.Ay.Title, { children: t }),
                             ],
                         }),
                         (0, a.jsxs)(v.OA, {
@@ -132,11 +132,11 @@ function N() {
             [s, e],
         ),
         [d, c] = i.useState(void 0),
-        p = r.find((e) => e.key === d),
+        x = r.find((e) => e.key === d),
         { TabBar: g, renderSelectedTab: v } = (0, A.Ay)({ tabs: E }, []),
         N = (0, u.bG)([_.A], () => _.A.trackTriggers),
         I = i.useCallback((e) => {
-            x.h.dispatch({ type: "SET_TRACK_TRIGGERS", enabled: e });
+            p.h.dispatch({ type: "SET_TRACK_TRIGGERS", enabled: e });
         }, []),
         k = N ? "Stop Tracking" : "Start Tracking";
     return (0, a.jsxs)("div", {
@@ -173,12 +173,12 @@ function N() {
                 ],
             }),
             (0, a.jsx)(j.A, { columns: S, data: r, selectedRowKey: d, onClickRow: (e) => c(e.key) }),
-            null != p &&
+            null != x &&
                 (0, a.jsxs)(b.A, {
                     className: y.rf,
                     minHeight: 100,
                     initialHeight: null != n.current ? n.current.clientHeight / 2 : 300,
-                    children: [(0, a.jsx)(g, {}), v({ loggedTrigger: p })],
+                    children: [(0, a.jsx)(g, {}), v({ loggedTrigger: x })],
                 }),
         ],
     });

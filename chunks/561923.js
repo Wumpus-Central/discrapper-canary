@@ -14,7 +14,7 @@ var i = n(627968),
     x = n(665346),
     h = n(652215),
     _ = n(985018),
-    p = n(7791);
+    p = n(923453);
 function A(e) {
     let { profile: t, canManageGuild: n } = e,
         l = t.id,

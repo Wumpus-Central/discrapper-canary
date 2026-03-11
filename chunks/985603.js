@@ -13,8 +13,8 @@ var r = n(835245),
     h = n(933958),
     _ = n(956549),
     m = n(257269),
-    g = n(793574),
-    p = n(627363),
+    p = n(793574),
+    g = n(627363),
     E = n(121623),
     I = n(200330),
     f = n(708281),
@@ -67,7 +67,7 @@ let G = {
             return (
                 R.Ay.focus(),
                 (0, a.mMO)(async () => {
-                    let { default: e } = await Promise.all([n.e("7726"), n.e("4042")]).then(n.bind(n, 72715));
+                    let { default: e } = await Promise.all([n.e("7726"), n.e("58938")]).then(n.bind(n, 72715));
                     return (t) => (0, i.jsx)(e, { ...t, guildTemplate: r });
                 }),
                 { guildTemplate: r, code: t }
@@ -88,7 +88,7 @@ let G = {
                             R.Ay.focus(),
                                 b.default.track(M.HAw.OPEN_MODAL, { type: "gift_accept", location: M.$OG }),
                                 (0, a.mMO)(async () => {
-                                    let { default: e } = await n.e("14439").then(n.bind(n, 67327));
+                                    let { default: e } = await n.e("36820").then(n.bind(n, 67327));
                                     return (n) => (0, i.jsx)(e, { code: t, ...n });
                                 }),
                                 e({ giftCode: l });
@@ -198,7 +198,7 @@ let G = {
                                             failure_reason: "activity_already_running",
                                             attempt_id: n,
                                         });
-                                    let r = await p.Ay.fetchApplication(e),
+                                    let r = await g.Ay.fetchApplication(e),
                                         l = r?.bot?.id;
                                     if (null == l)
                                         return void b.default.track(M.HAw.ACTIVITY_DEEP_LINK_RECEIVED, {
@@ -218,7 +218,7 @@ let G = {
                                     await (0, _.A)({
                                         targetApplicationId: e,
                                         channelId: a,
-                                        analyticsLocations: [g.A.DEEPLINK],
+                                        analyticsLocations: [p.A.DEEPLINK],
                                         customId: d,
                                         referrerId: o,
                                     }),

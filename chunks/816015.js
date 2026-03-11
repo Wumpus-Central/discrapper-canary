@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => g });
 var i = n(627968),
     r = n(64700),
     l = n(873263),
@@ -11,8 +11,8 @@ var i = n(627968),
     A = n(341338),
     h = n(998515),
     _ = n(652215),
-    m = n(58682);
-class g extends r.Component {
+    m = n(881640);
+class p extends r.Component {
     componentDidMount() {
         this.fetchStoreListing(), (0, d.d)("channel_store_listing");
     }
@@ -48,9 +48,9 @@ class g extends r.Component {
             : null;
     }
 }
-let p = (0, o.A)(
+let g = (0, o.A)(
     a.Ay.connectStores([c.A], (e) => {
         let { channel: t, inputSkuId: n } = e;
         return { skuId: null != n ? n : c.A.getSkuIdForChannel(t.id) };
-    })(g),
+    })(p),
 );

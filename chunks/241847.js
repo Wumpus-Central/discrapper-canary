@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => I });
 var i = n(627968),
     l = n(64700),
     s = n(311907),
@@ -14,7 +14,7 @@ var i = n(627968),
     g = n(857341),
     p = n(603266),
     f = n(985018),
-    _ = n(78875);
+    _ = n(855945);
 function E(e) {
     let { lobbyId: t, connectionTypeText: n, closePopout: l } = e,
         a = (0, s.cf)([d.A], () => ({
@@ -101,7 +101,7 @@ function S(e) {
         })
     );
 }
-function T(e) {
+function I(e) {
     return (0, m.k)({ channelId: e.channelId })
         ? (0, i.jsx)(S, { ...e })
         : (0, i.jsx)("div", {

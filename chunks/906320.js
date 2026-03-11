@@ -12,8 +12,8 @@ var i = n(627968),
     h = n(582754),
     _ = n(397927),
     m = n(73153),
-    g = n(442433),
-    p = n(92077),
+    p = n(442433),
+    g = n(92077),
     E = n(979604),
     I = n(707606),
     f = n(456412),
@@ -33,7 +33,7 @@ var i = n(627968),
     D = n(250632),
     M = n(652215),
     w = n(985018),
-    U = n(59790);
+    U = n(532439);
 let G = (e) => {
         let { className: t, children: n, onContextMenu: r, item: l } = e;
         return (0, i.jsx)("div", { className: t, onContextMenu: (e) => r(e, l), children: n });
@@ -163,7 +163,7 @@ class W extends r.PureComponent {
     renderFinished() {
         let { item: e } = this.props;
         return this.renderBody({
-            message: w.intl.format(w.t.z1oxGO, { remove: () => p.Vt(e.applicationId, e.branchId) }),
+            message: w.intl.format(w.t.z1oxGO, { remove: () => g.Vt(e.applicationId, e.branchId) }),
             foregroundColor: (0, h.qB)(e.theme)
                 ? u.A.unsafe_rawColors.PRIMARY_300.css
                 : u.A.unsafe_rawColors.PRIMARY_500.css,
@@ -286,14 +286,14 @@ class W extends r.PureComponent {
         return null;
     }
 }
-let q = () => (0, i.jsx)(V, { icon: _.udU, tooltip: w.intl.string(w.t.YGm6SZ), onClick: () => p.U() }),
-    K = () => (0, i.jsx)(V, { icon: _.E$n, tooltip: w.intl.string(w.t.TVAd5J), onClick: () => p.v7() }),
+let q = () => (0, i.jsx)(V, { icon: _.udU, tooltip: w.intl.string(w.t.YGm6SZ), onClick: () => g.U() }),
+    K = () => (0, i.jsx)(V, { icon: _.E$n, tooltip: w.intl.string(w.t.TVAd5J), onClick: () => g.v7() }),
     z = (e) => {
         let { item: t } = e;
         return (0, i.jsx)(V, {
             icon: _.z$m,
             tooltip: w.intl.string(w.t["Eqb+LN"]),
-            onClick: () => p.BO(t.applicationId, t.branchId),
+            onClick: () => g.BO(t.applicationId, t.branchId),
         });
     },
     $ = (e) => {
@@ -301,7 +301,7 @@ let q = () => (0, i.jsx)(V, { icon: _.udU, tooltip: w.intl.string(w.t.YGm6SZ), o
         return (0, i.jsx)(V, {
             icon: _.PGe,
             tooltip: w.intl.string(w.t["0lFmC9"]),
-            onClick: () => p.ZT(t.applicationId, t.branchId),
+            onClick: () => g.ZT(t.applicationId, t.branchId),
         });
     },
     Q = [
@@ -368,7 +368,7 @@ class X extends r.PureComponent {
         e.forEach((e) => {
             e.finished &&
                 m.h.wait(() => {
-                    p.Vt(e.applicationId, e.branchId);
+                    g.Vt(e.applicationId, e.branchId);
                 });
         }),
             window.removeEventListener("resize", this.throttledUpdateHeight),
@@ -416,7 +416,7 @@ class X extends r.PureComponent {
                           cellProps: { paused: t, isFocused: r, theme: l },
                           rowProps: {
                               onContextMenu: (e, t) => {
-                                  g.L3(e, async () => {
+                                  p.L3(e, async () => {
                                       let { default: e } = await n.e("881").then(n.bind(n, 163368));
                                       return (n) =>
                                           (0, i.jsx)(e, {

@@ -11,7 +11,7 @@ var n = l(627968),
     x = l(166403),
     m = l(661191),
     h = l(985018),
-    g = l(199326);
+    g = l(94511);
 function C(t) {
     let { imageClass: e, children: l, error: i } = t;
     return (0, n.jsxs)("div", {

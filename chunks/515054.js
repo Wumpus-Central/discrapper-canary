@@ -5,15 +5,15 @@ var i = n(627968),
     s = n.n(a),
     r = n(397927),
     o = n(183555),
-    d = n(958805),
-    c = n(61881),
+    c = n(958805),
+    d = n(61881),
     u = n(790417),
     m = n(113763),
     g = n(583246),
     x = n(463259),
     f = n(133583),
     p = n(518477),
-    h = n(96124);
+    h = n(905182);
 function _(e) {
     let { children: t, className: n, scrollerRef: l, ...a } = e;
     return (0, i.jsx)(r.HOs, { ref: l, className: s()(h.gN, n), fade: !0, ...a, children: t });
@@ -63,8 +63,8 @@ function I(e) {
                     look: "custom",
                     selectedItem: _,
                     onItemSelect: (e) => {
-                        c.A.hasUnsavedChanges() && _ === p.RP.WIDGETS
-                            ? d.A.notifyUnsavedWidgets()
+                        d.A.hasUnsavedChanges() && _ === p.RP.WIDGETS
+                            ? c.A.notifyUnsavedWidgets()
                             : (f({ action: "PRESS_SECTION", section: e }),
                               j((t) => m.find((t) => t.section === e) ?? t));
                     },

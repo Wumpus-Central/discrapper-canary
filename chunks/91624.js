@@ -18,20 +18,20 @@ var i = n(627968),
     E = n(205120),
     x = n(652215);
 n(294920);
-var C = n(119907);
+var C = n(50397);
 function S(e) {
     let { value: t, channel: n } = e;
     return (0, p.i)({ type: c.oU.EDIT, content: t, channel: n, restrictMentions: !1, respectCooldown: !1 });
 }
-function T(e) {
+function I(e) {
     let { channel: t, message: n } = e,
         { id: c } = t,
         { id: d } = n,
         g = t.getGuildId(),
         p = (0, a.bG)([m.A], () => m.A.getGuild(g), [g]),
         _ = t.type === x.rbe.GUILD_ANNOUNCEMENT,
-        T = null != p && p.features.has(x.GuildFeatures.NEWS),
-        N = _ && T,
+        I = null != p && p.features.has(x.GuildFeatures.NEWS),
+        N = _ && I,
         {
             editingMessage: y,
             editingTextValue: b,
@@ -69,7 +69,7 @@ function T(e) {
             },
             [y, N, j, t, n],
         ),
-        M = l.useCallback((e) => (0, l.createElement)(I, { ...e, className: C.gM, key: d }), [d]);
+        M = l.useCallback((e) => (0, l.createElement)(T, { ...e, className: C.gM, key: d }), [d]);
     return null != b && null != v
         ? (0, i.jsx)(E.A, {
               ref: void 0,
@@ -86,7 +86,7 @@ function T(e) {
           })
         : null;
 }
-function I(e) {
+function T(e) {
     let {
             textValue: t,
             richValue: n,
@@ -137,6 +137,6 @@ function I(e) {
 function N(e, t, n) {
     let { message: l, channel: s, compact: a } = e;
     return n
-        ? (0, i.jsx)(T, { channel: s, message: l })
+        ? (0, i.jsx)(I, { channel: s, message: l })
         : (0, i.jsx)(_.Ay, { message: l, content: t, compact: a ?? !1 });
 }

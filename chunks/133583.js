@@ -5,8 +5,8 @@ var i = n(627968),
     s = n.n(a),
     r = n(777480),
     o = n(311907),
-    d = n(192308),
-    c = n(990078),
+    c = n(192308),
+    d = n(990078),
     u = n(397927),
     m = n(793574),
     g = n(688810),
@@ -32,7 +32,7 @@ var i = n(627968),
     w = n(518477),
     O = n(188275),
     P = n(985018),
-    D = n(39427);
+    D = n(376721);
 function G(e) {
     let { isSocialLayerStorefrontEnabled: t, handleOpenShop: n, handleOpenGameShop: l } = e;
     return t
@@ -138,7 +138,7 @@ function F(e) {
             profileOwner: n,
             wishlist: a,
             socialLayerStorefrontApplicationId: s,
-            isEligibleForSocialLayerMarketingInWishlist: d,
+            isEligibleForSocialLayerMarketingInWishlist: c,
             handleOpenShop: m,
             handleOpenGameShop: g,
         } = e,
@@ -182,7 +182,7 @@ function F(e) {
                         children: P.intl.format(P.t.r6Y1Lg, { count: a.items.length }),
                     }),
                     !_ &&
-                        (0, i.jsx)(c.m, {
+                        (0, i.jsx)(d.m, {
                             text: P.intl.string(P.t.RX7D9h),
                             asContainer: !0,
                             children: (0, i.jsx)(u.vN3, {
@@ -195,7 +195,7 @@ function F(e) {
                         }),
                     _ &&
                         h &&
-                        (0, i.jsx)(c.m, {
+                        (0, i.jsx)(d.m, {
                             text: P.intl.string(P.t.d78ChW),
                             asContainer: !0,
                             children: (0, i.jsx)(u.vN3, {
@@ -210,14 +210,14 @@ function F(e) {
             }),
             t
                 ? (0, i.jsx)(M, {
-                      isSocialLayerStorefrontEnabled: d,
+                      isSocialLayerStorefrontEnabled: c,
                       isWishlistPublic: _,
                       handleOpenShop: m,
                       handleOpenGameShop: g,
                       handleToggleWishlistVisibility: b,
                       socialLayerStorefrontApplicationId: s,
                   })
-                : (0, i.jsx)(G, { isSocialLayerStorefrontEnabled: d, handleOpenShop: m, handleOpenGameShop: g }),
+                : (0, i.jsx)(G, { isSocialLayerStorefrontEnabled: c, handleOpenShop: m, handleOpenGameShop: g }),
         ],
     });
 }
@@ -229,7 +229,7 @@ function W(e) {
             wishlistId: T.A.getFirstWishlistId(t.id),
             currentUser: v.default.getCurrentUser(),
         })),
-        { analyticsLocations: c } = (0, g.Ay)(),
+        { analyticsLocations: d } = (0, g.Ay)(),
         u = r?.id === t.id,
         A = O.XR,
         { wishlist: E, wasFetched: N, error: k } = (0, j.fw)({ wishlistId: a, userId: t.id }),
@@ -238,13 +238,13 @@ function W(e) {
         P = (0, I.GG)("user-profile-modal-v2-wishlist"),
         G = u && ((w && L) || P),
         M = l.useCallback(() => {
-            (0, d.closeAllModals)(), (0, x.Cz)({ analyticsLocations: c, analyticsSource: m.A.USER_PROFILE_WISHLIST });
-        }, [c]),
+            (0, c.closeAllModals)(), (0, x.Cz)({ analyticsLocations: d, analyticsSource: m.A.USER_PROFILE_WISHLIST });
+        }, [d]),
         W = l.useCallback(() => {
             (0, _.X)({ guildId: (0, f.zf)() });
         }, []),
         H = l.useCallback(() => {
-            (0, d.closeAllModals)(), (0, _.default)({ guildId: (0, f.zf)() });
+            (0, c.closeAllModals)(), (0, _.default)({ guildId: (0, f.zf)() });
         }, []);
     if (null != k) return null;
     let B = null == E || 0 === E.items.length;
@@ -282,7 +282,7 @@ function W(e) {
                     user: t,
                     wishlist: E,
                     hasFetchedWishlist: N,
-                    analyticsLocations: c,
+                    analyticsLocations: d,
                     className: B ? D._E : D.HZ,
                 }),
         ],

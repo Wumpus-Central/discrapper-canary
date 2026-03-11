@@ -1,4 +1,4 @@
-n.d(t, { A: () => eh, c: () => em });
+n.d(t, { A: () => eh, c: () => eA });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -10,8 +10,8 @@ var i = n(627968),
     u = n(311907),
     _ = n(230109),
     g = n(732955),
-    m = n(582754),
-    A = n(421380),
+    A = n(582754),
+    m = n(421380),
     h = n(397927),
     p = n(73153),
     x = n(384904),
@@ -19,13 +19,13 @@ var i = n(627968),
     T = n(974544),
     S = n(736653),
     C = n(793574),
-    f = n(688810),
-    I = n(86379),
-    b = n(531260),
-    N = n(160946),
+    I = n(688810),
+    f = n(86379),
+    N = n(531260),
+    b = n(160946),
     v = n(459793),
-    j = n(721668),
-    O = n(976860),
+    O = n(721668),
+    j = n(976860),
     R = n(780964),
     y = n(12901),
     P = n(840065),
@@ -55,7 +55,7 @@ var i = n(627968),
     en = n(88001),
     ei = n(652215),
     es = n(985018),
-    el = n(95252),
+    el = n(263442),
     ea = n(396785),
     er = n(956537);
 let eo = "to_premium_home_button",
@@ -77,7 +77,7 @@ function e_(e) {
                       (0, i.jsx)(q.ir, {
                           text: a ? es.intl.string(es.t.qYKftX) : es.intl.string(es.t.EyjDRE),
                           className: el.uS,
-                          colorOptions: (0, m.Mw)(l)
+                          colorOptions: (0, A.Mw)(l)
                               ? q.at.PREMIUM_TIER_2_WHITE_FILL
                               : q.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
                       }),
@@ -107,14 +107,14 @@ function eg() {
         s = (0, u.bG)([G.A], () => G.A.getPremiumTypeSubscription()),
         l = (0, u.bG)([L.default], () => L.default.getCurrentUser()),
         r = l?.isPremiumWithPremiumGroup(),
-        o = (0, b.A)(),
+        o = (0, N.A)(),
         d = (0, H.d)(),
         c = null !== s && null !== s.planIdFromItems;
     if (!c && !o.isFractionalPremiumActive && !r) return null;
     let _ = o.isFractionalPremiumActive,
-        A = null !== s && s.hasActiveTrial;
+        m = null !== s && s.hasActiveTrial;
     return (0, i.jsxs)("div", {
-        className: a()(el.$Y, { [el.J5]: e || A }),
+        className: a()(el.$Y, { [el.J5]: e || m }),
         children: [
             (0, i.jsxs)("div", {
                 className: el.jp,
@@ -160,7 +160,7 @@ function eg() {
                                         (0, i.jsx)(q.ir, {
                                             text: es.intl.string(es.t.qYKftX),
                                             className: el.uS,
-                                            colorOptions: (0, m.Mw)(n)
+                                            colorOptions: (0, A.Mw)(n)
                                                 ? q.at.PREMIUM_TIER_2_WHITE_FILL
                                                 : q.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
                                         }),
@@ -199,7 +199,7 @@ function eg() {
                                               target: ed,
                                           }),
                                               (0, y.default)(),
-                                              (0, O.pX)(ei.BVt.APPLICATION_STORE);
+                                              (0, j.pX)(ei.BVt.APPLICATION_STORE);
                                       },
                                       variant: "overlay-secondary",
                                       fullWidth: !0,
@@ -221,7 +221,7 @@ function eg() {
                                               target: ed,
                                           }),
                                               (0, y.default)(),
-                                              (0, O.pX)(ei.BVt.APPLICATION_STORE);
+                                              (0, j.pX)(ei.BVt.APPLICATION_STORE);
                                       },
                                       text: es.intl.string(es.t.VR2iVB),
                                       size: "md",
@@ -252,7 +252,7 @@ function eg() {
         ],
     });
 }
-function em(e) {
+function eA(e) {
     let { className: t, config: n } = e,
         l = (0, F.T)(n.asset),
         r = (0, F.T)(n.backgroundAsset),
@@ -298,7 +298,7 @@ function em(e) {
         ],
     });
 }
-function eA() {
+function em() {
     return (0, i.jsxs)("div", {
         className: el.T1,
         children: [
@@ -319,7 +319,7 @@ function eA() {
                     (0, i.jsx)(W.A, {
                         className: a()(el.Tp, el._c),
                         textOptions: { textOverride: es.intl.string(es.t.Ve9Ge6), textClassName: el.VV },
-                        color: A.$n.Colors.CUSTOM,
+                        color: m.$n.Colors.CUSTOM,
                         onClick: () => {
                             U.default.track(ei.HAw.PREMIUM_SETTINGS_INTERACTED, { cta_type: ec, target: eu });
                         },
@@ -330,49 +330,49 @@ function eA() {
     });
 }
 let eh = function () {
-    let e = (0, I.H)(),
-        { analyticsLocations: t } = (0, f.Ay)(C.A.PREMIUM_SETTINGS),
+    let e = (0, f.H)(),
+        { analyticsLocations: t } = (0, I.Ay)(C.A.PREMIUM_SETTINGS),
         n = (0, u.bG)([L.default], () => L.default.getCurrentUser()),
         l = (0, u.bG)([G.A], () => G.A.getPremiumTypeSubscription()),
         a = (0, u.bG)([G.A], () => G.A.hasFetchedSubscriptions()),
-        r = (0, N.Y)(et.T7),
+        r = (0, b.Y)(et.T7),
         [o, g] = s.useState(!0),
-        m = (0, b.A)({ forceFetch: !0 }),
-        A = (0, u.bG)([Y.A], () => {
+        A = (0, N.A)({ forceFetch: !0 }),
+        m = (0, u.bG)([Y.A], () => {
             let e = Y.A.getMarketingComponentByType(c.C.BILLING_SETTINGS_NITRO_GIFT_BANNER);
             return null == e || "billingSettingsNitroGiftBanner" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.billingSettingsNitroGiftBanner;
         }),
-        S = !(d.Fr || d.v1) && null != A,
-        O = (0, u.bG)([D.A], () => D.A.enabled),
+        S = !(d.Fr || d.v1) && null != m,
+        j = (0, u.bG)([D.A], () => D.A.enabled),
         R = s.useRef(null);
     (0, X.i)();
     let y = (0, z.m)();
     s.useEffect(() => {
         p.h.wait(async () => {
-            O || e || (await Promise.all([x.hP(), x.$o(), (0, E.zS)(null, null, ei.tF5.DISCOVERY)])), g(!1);
+            j || e || (await Promise.all([x.hP(), x.$o(), (0, E.zS)(null, null, ei.tF5.DISCOVERY)])), g(!1);
         });
-    }, [O, e]);
+    }, [j, e]);
     let [P, M] = s.useState(!1);
-    if (O) return (0, i.jsx)(T.A, {});
+    if (j) return (0, i.jsx)(T.A, {});
     if (e) return (0, i.jsx)(v.uK, {});
     let k = a && null !== l && r,
-        V = m.fetched && m.isFractionalPremiumActive,
+        V = A.fetched && A.isFractionalPremiumActive,
         w = n?.isPremiumWithPremiumGroup();
-    if (!k && !V && !o && !w) return (0, i.jsx)(j.A, { title: es.intl.string(es.t.dyq9TR), note: null });
+    if (!k && !V && !o && !w) return (0, i.jsx)(O.A, { title: es.intl.string(es.t.dyq9TR), note: null });
     if ((!k && !V && !w) || o) return (0, i.jsx)(h.y$y, {});
     let H = !!l?.hasActiveTrial;
-    return (0, i.jsx)(f.f5, {
+    return (0, i.jsx)(I.f5, {
         value: t,
         children: (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)("div", {
                     children: [
-                        S && (0, i.jsx)(em, { config: A }),
+                        S && (0, i.jsx)(eA, { config: m }),
                         (0, i.jsx)(eg, {}),
                         y && (0, i.jsx)(ee.A, { isInSettings: !0 }),
-                        !S && (0, i.jsx)(eA, {}),
+                        !S && (0, i.jsx)(em, {}),
                         (0, i.jsx)($.A, {
                             hideCTAs: !0,
                             headingOverride: es.intl.string(es.t.dnVvQS),

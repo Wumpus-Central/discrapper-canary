@@ -12,10 +12,10 @@ var i = n(627968),
     h = n(975571),
     _ = n(42473),
     m = n(994314),
-    g = n(485599),
-    p = n(652215),
+    p = n(485599),
+    g = n(652215),
     E = n(985018),
-    I = n(308685);
+    I = n(22883);
 class f extends r.PureComponent {
     partyMemberAvatarRef = r.createRef();
     partyMemberOverflowRef = r.createRef();
@@ -26,7 +26,7 @@ class f extends r.PureComponent {
     renderTitle() {
         return (0, i.jsxs)("div", {
             children: [
-                (0, i.jsx)(g.A, {
+                (0, i.jsx)(p.A, {
                     children: this.isHost()
                         ? E.intl.formatToPlainString(E.t["6UJ7mh"], { count: this.props.party.length })
                         : E.intl.string(E.t.RZufbH),
@@ -101,7 +101,7 @@ class f extends r.PureComponent {
             ? (0, i.jsx)(_.A, {
                   tooltipText: E.intl.string(E.t.U7N2Hs),
                   onClick: () => {
-                      window.open(h.A.getArticleURL(p.MVz.SPOTIFY_CONNECTION), "_blank");
+                      window.open(h.A.getArticleURL(g.MVz.SPOTIFY_CONNECTION), "_blank");
                   },
                   icon: o.mir,
               })

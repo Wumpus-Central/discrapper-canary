@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => g });
 var i = n(627968),
     r = n(64700),
     l = n(397927),
@@ -11,12 +11,12 @@ var i = n(627968),
     A = n(212165),
     h = n(599907),
     _ = n(985018),
-    m = n(27740),
-    g = n(318937);
-let p = function (e) {
+    m = n(987134),
+    p = n(236415);
+let g = function (e) {
     let { onScroll: t } = e,
         n = (0, A.A)(),
-        p = r.useMemo(
+        g = r.useMemo(
             () =>
                 n.map((e) => ({
                     ...e,
@@ -49,7 +49,7 @@ let p = function (e) {
                                   (0, i.jsxs)("div", {
                                       className: m.Q,
                                       children: [
-                                          p.map((e) =>
+                                          g.map((e) =>
                                               (0, i.jsx)(
                                                   h.nO,
                                                   { guild: e, onClick: () => a.A.transitionToGuildSync(e.id) },
@@ -62,18 +62,18 @@ let p = function (e) {
                               ],
                           })
                         : (0, i.jsx)("div", { className: m.Q, children: (0, i.jsx)(u.A, { hasHub: !1 }) }),
-                    (0, i.jsx)("div", { className: g.yF }),
+                    (0, i.jsx)("div", { className: p.yF }),
                     (0, i.jsxs)("div", {
-                        className: g.ed,
+                        className: p.ed,
                         children: [
                             (0, i.jsxs)(l.Text, {
-                                className: g.Qq,
+                                className: p.Qq,
                                 variant: "text-sm/medium",
                                 color: "text-default",
                                 children: [_.intl.string(_.t.O1k9XX), " "],
                             }),
                             (0, i.jsx)(l.Text, {
-                                className: g.Qq,
+                                className: p.Qq,
                                 variant: "text-sm/medium",
                                 color: "text-default",
                                 children: _.intl.string(_.t.FV5dvh),

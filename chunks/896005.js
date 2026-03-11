@@ -5,7 +5,7 @@ var i = n(627968),
     a = n.n(l),
     r = n(397927),
     o = n(641324),
-    d = n(702421);
+    d = n(97291);
 function c(e) {
     let { title: t, subtitle: n, isHiddenVisually: s } = e;
     return null == t || "" === t
@@ -24,10 +24,10 @@ let u = s.memo(function (e) {
     let { node: t } = e,
         { useTitle: n, useSubtitle: l, layout: a, variant: u = "default", isTitleHiddenVisually: _ } = t,
         g = n(),
-        m = l?.(),
-        A = s.useId(),
+        A = l?.(),
+        m = s.useId(),
         h = null != g && "" !== g,
-        p = null != m && "" !== m,
+        p = null != A && "" !== A,
         x = (function (e) {
             switch (e) {
                 case "default":
@@ -37,16 +37,16 @@ let u = s.memo(function (e) {
             }
         })(u);
     return (0, i.jsxs)("fieldset", {
-        "aria-describedby": p ? A : void 0,
+        "aria-describedby": p ? m : void 0,
         children: [
-            (0, i.jsx)(c, { title: g, subtitle: m, isHiddenVisually: _ }),
+            (0, i.jsx)(c, { title: g, subtitle: A, isHiddenVisually: _ }),
             p
                 ? (0, i.jsx)(r.Text, {
                       variant: "text-sm/normal",
                       color: "text-default",
-                      id: A,
+                      id: m,
                       className: d.VA,
-                      children: m,
+                      children: A,
                   })
                 : null,
             (0, i.jsx)(r.BJc, {

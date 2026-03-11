@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => A });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -8,7 +8,7 @@ var i = n(627968),
     d = n(287809),
     c = n(427262),
     u = n(283900),
-    _ = n(975977);
+    _ = n(31435);
 let g = s.memo((e) => {
     let { userId: t, subText: n, className: s } = e,
         l = (0, r.bG)([d.default], () => d.default.getUser(t));
@@ -36,4 +36,4 @@ let g = s.memo((e) => {
           });
 });
 g.displayName = "FamilyCenterActivityUserRow";
-let m = g;
+let A = g;

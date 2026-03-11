@@ -10,8 +10,8 @@ var i = n(627968),
     u = n(793574),
     _ = n(688810),
     g = n(47671),
-    m = n(959443),
-    A = n(692798),
+    A = n(959443),
+    m = n(692798),
     h = n(793943),
     p = n(826673),
     x = n(422936),
@@ -19,18 +19,18 @@ var i = n(627968),
     T = n(792656),
     S = n(511484),
     C = n(811611),
-    f = n(97469),
-    I = n(954571),
-    b = n(544028),
-    N = n(253932),
+    I = n(97469),
+    f = n(954571),
+    N = n(544028),
+    b = n(253932),
     v = n(12901),
-    j = n(652215),
-    O = n(49999),
+    O = n(652215),
+    j = n(49999),
     R = n(788868),
     y = n(985018),
-    P = n(21082);
+    P = n(318684);
 let D = () => {
-    (0, p.Dr)(a.M.CLIENT_THEMES_SPARKLE_PREVIEW, { dismissAction: O.i.PRIMARY, forceTrack: !0 }),
+    (0, p.Dr)(a.M.CLIENT_THEMES_SPARKLE_PREVIEW, { dismissAction: j.i.PRIMARY, forceTrack: !0 }),
         (0, h.nf)(h.HP.CLIENT_THEMES),
         (0, v.default)();
 };
@@ -42,7 +42,7 @@ function L() {
     return (0, i.jsx)(T.A, {
         subscriptionTier: R.pe.TIER_2,
         defaultTextOverride: t,
-        premiumModalAnalyticsLocation: { object: j.ZSU.BUTTON_CTA, objectType: j.AnalyticsObjectTypes.BUY },
+        premiumModalAnalyticsLocation: { object: O.ZSU.BUTTON_CTA, objectType: O.AnalyticsObjectTypes.BUY },
         fullWidth: !0,
     });
 }
@@ -65,7 +65,7 @@ function M(e) {
         { analyticsLocations: a } = (0, _.Ay)(u.A.USER_SETTINGS);
     return (s.useEffect(() => {
         n &&
-            I.default.track(j.HAw.PREMIUM_UPSELL_VIEWED, {
+            f.default.track(O.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: R.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                 location_stack: a,
             });
@@ -97,15 +97,15 @@ function U() {
 }
 let k = () =>
     (0, i.jsx)("div", {
-        children: (0, i.jsxs)(A.Ay, {
-            type: A.v0.SETTINGS,
+        children: (0, i.jsxs)(m.Ay, {
+            type: m.v0.SETTINGS,
             children: [
-                (0, i.jsx)(A.Ay.Basic, { className: P.a6 }),
+                (0, i.jsx)(m.Ay.Basic, { className: P.a6 }),
                 (0, i.jsx)(V, {}),
-                (0, i.jsx)(m.A, {}),
+                (0, i.jsx)(A.A, {}),
                 (0, i.jsxs)(M, {
                     children: [
-                        (0, i.jsx)(A.Ay.Gradient, { disabled: !1, renderCTAButtons: () => (0, i.jsx)(G, {}) }),
+                        (0, i.jsx)(m.Ay.Gradient, { disabled: !1, renderCTAButtons: () => (0, i.jsx)(G, {}) }),
                         (0, i.jsx)(U, {}),
                     ],
                 }),
@@ -113,18 +113,18 @@ let k = () =>
         }),
     });
 function V() {
-    let e = (0, f.qo)(),
+    let e = (0, I.qo)(),
         {
             theme: t,
             useForcedColors: n,
             gradientPreset: s,
-        } = (0, l.cf)([b.A, c.A, g.A], () => ({
-            theme: b.A.theme,
+        } = (0, l.cf)([N.A, c.A, g.A], () => ({
+            theme: N.A.theme,
             useForcedColors: c.A.useForcedColors,
             gradientPreset: g.A.gradientPreset,
         })),
-        a = null != N.eh.useSetting().customUserThemeSettings;
-    return t !== j.NJ8.LIGHT
+        a = null != b.eh.useSetting().customUserThemeSettings;
+    return t !== O.NJ8.LIGHT
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
@@ -132,7 +132,7 @@ function V() {
                   (0, i.jsx)(o.dOG, {
                       label: y.intl.string(y.t.yF54Ks),
                       checked: e && (0, r.qB)(t) && !n,
-                      disabled: t !== j.NJ8.LIGHT || n || null != s || a,
+                      disabled: t !== O.NJ8.LIGHT || n || null != s || a,
                       onChange: d.LO,
                   }),
                   (0, i.jsx)(o.cGx, { gap: 24 }),
@@ -145,11 +145,11 @@ let w = () =>
         : (0, i.jsx)(o.Button, { variant: "primary", text: y.intl.string(y.t.qYXrkX), onClick: D });
 function H(e) {
     let { size: t } = e;
-    return (0, i.jsx)(A.Ay, {
-        type: A.v0.SETTINGS,
+    return (0, i.jsx)(m.Ay, {
+        type: m.v0.SETTINGS,
         children: (0, i.jsxs)(M, {
             children: [
-                (0, i.jsx)(A.ew, {
+                (0, i.jsx)(m.ew, {
                     isCoachmark: !1,
                     renderCTAButtons: () => (0, i.jsx)(G, {}),
                     headingClassName: P.EK,
@@ -162,7 +162,7 @@ function H(e) {
                     wrap: !0,
                     gap: 8,
                     padding: { top: 24 },
-                    children: (0, i.jsx)(A.Zg, { disabled: !1, size: t }),
+                    children: (0, i.jsx)(m.Zg, { disabled: !1, size: t }),
                 }),
                 (0, i.jsx)(U, {}),
             ],

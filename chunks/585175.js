@@ -1,4 +1,4 @@
-n.d(t, { O: () => I });
+n.d(t, { O: () => f });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -10,13 +10,13 @@ var i = n(627968),
     u = n(397927),
     _ = n(827343),
     g = n(915089),
-    m = n(419954),
-    A = n(430452),
+    A = n(419954),
+    m = n(430452),
     h = n(780964),
     p = n(731854),
     x = n(985018),
-    E = n(15267),
-    T = n(785294);
+    E = n(913129),
+    T = n(244984);
 let S = (0, g.Ld)();
 function C(e) {
     let { isSpeaking: t, className: n, id: s, ariaDescribedBy: l, ariaLabelledBy: r, disabled: o } = e;
@@ -28,13 +28,13 @@ function C(e) {
         children: (0, i.jsx)("div", { className: a()(E.Jx, E.NU, { [E.zY]: t && !o, [E.r9]: o }) }),
     });
 }
-function f(e) {
+function I(e) {
     let { volume: t, id: n, ariaDescribedBy: s, ariaLabelledBy: l, disabled: o } = e,
-        { threshold: d, autoThreshold: g } = (0, r.cf)([A.Ay], () => ({
-            threshold: A.Ay.getModeOptions().threshold,
-            autoThreshold: A.Ay.getModeOptions().autoThreshold,
+        { threshold: d, autoThreshold: g } = (0, r.cf)([m.Ay], () => ({
+            threshold: m.Ay.getModeOptions().threshold,
+            autoThreshold: m.Ay.getModeOptions().autoThreshold,
         })),
-        m = (0, r.bG)([A.Ay], () => A.Ay.getMode());
+        A = (0, r.bG)([m.Ay], () => m.Ay.getMode());
     return (0, i.jsx)("section", {
         className: a()(E.Mo, E.jW),
         id: n,
@@ -45,7 +45,7 @@ function f(e) {
             onValueRender: (e) => `${(-((100 - e) * 1)).toFixed(0)}dB`,
             onValueChange: (e) => {
                 var t;
-                return (t = -((100 - e) * 1)), void _.A.setMode(m, { threshold: t, autoThreshold: g });
+                return (t = -((100 - e) * 1)), void _.A.setMode(A, { threshold: t, autoThreshold: g });
             },
             barStyles: { background: c.A.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: c.A.unsafe_rawColors.YELLOW_300.css },
@@ -61,20 +61,20 @@ function f(e) {
         }),
     });
 }
-let I = (0, m.E2)(h.X.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
+let f = (0, A.E2)(h.X.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
     useSearchTerms: () => [x.intl.string(x.t["sqUm+k"]), x.intl.string(x.t.I1Zuq0), x.intl.string(x.t.nuFtHH)],
-    usePredicate: () => (0, r.bG)([A.Ay], () => A.Ay.isInputProfileCustom()),
+    usePredicate: () => (0, r.bG)([m.Ay], () => m.Ay.isInputProfileCustom()),
     Component: function () {
-        let { autoThreshold: e, disabled: t } = (0, r.cf)([A.Ay], () => ({
-                autoThreshold: A.Ay.getModeOptions().autoThreshold,
-                disabled: A.Ay.getMode() !== p.TB.VOICE_ACTIVITY,
+        let { autoThreshold: e, disabled: t } = (0, r.cf)([m.Ay], () => ({
+                autoThreshold: m.Ay.getModeOptions().autoThreshold,
+                disabled: m.Ay.getMode() !== p.TB.VOICE_ACTIVITY,
             })),
             n = s.useCallback((e) => {
-                let t = A.Ay.getMode(),
-                    { threshold: n } = A.Ay.getModeOptions();
+                let t = m.Ay.getMode(),
+                    { threshold: n } = m.Ay.getModeOptions();
                 _.A.setMode(t, { autoThreshold: e, threshold: n });
             }, []),
-            l = (0, r.bG)([A.Ay], () => A.Ay.supports(p.O5.AUTOMATIC_VAD)),
+            l = (0, r.bG)([m.Ay], () => m.Ay.supports(p.O5.AUTOMATIC_VAD)),
             { volume: a, isSpeaking: c } = (function () {
                 let [e, t] = s.useState(-100),
                     [n, i] = s.useState(!1);
@@ -86,18 +86,18 @@ let I = (0, m.E2)(h.X.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
                         let e = new d.Ep();
                         return (
                             e.start(1e3, () => {
-                                A.Ay.getMediaEngine().on(o.bg.VoiceActivity, l), e.stop();
+                                m.Ay.getMediaEngine().on(o.bg.VoiceActivity, l), e.stop();
                             }),
                             () => {
-                                A.Ay.getMediaEngine().removeListener(o.bg.VoiceActivity, l), e.stop();
+                                m.Ay.getMediaEngine().removeListener(o.bg.VoiceActivity, l), e.stop();
                             }
                         );
                     }, []),
                     { volume: e, isSpeaking: n }
                 );
             })(),
-            g = (0, r.bG)([A.Ay], () => A.Ay.isEnabled()),
-            m = s.useMemo(
+            g = (0, r.bG)([m.Ay], () => m.Ay.isEnabled()),
+            A = s.useMemo(
                 () =>
                     !g &&
                     (0, i.jsx)("div", {
@@ -137,8 +137,8 @@ let I = (0, m.E2)(h.X.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
                                         ariaLabelledBy: T,
                                         disabled: t,
                                     })
-                                  : (0, i.jsx)(f, { volume: a, ariaDescribedBy: S, ariaLabelledBy: T, disabled: t }),
-                              m,
+                                  : (0, i.jsx)(I, { volume: a, ariaDescribedBy: S, ariaLabelledBy: T, disabled: t }),
+                              A,
                           ],
                       }),
                   ],
@@ -161,7 +161,7 @@ let I = (0, m.E2)(h.X.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
                                         ariaLabelledBy: n.labelId,
                                         disabled: t,
                                     })
-                                  : (0, i.jsx)(f, {
+                                  : (0, i.jsx)(I, {
                                         volume: a,
                                         id: n.controlId,
                                         ariaDescribedBy: n.describedById,
@@ -169,7 +169,7 @@ let I = (0, m.E2)(h.X.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
                                         disabled: t,
                                     }),
                       }),
-                      m,
+                      A,
                   ],
               });
     },

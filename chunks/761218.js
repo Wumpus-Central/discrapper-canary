@@ -19,7 +19,7 @@ var n = s(627968),
     C = s(652215),
     E = s(188275),
     b = s(985018),
-    A = s(27112);
+    A = s(413194);
 let S = { pageSection: "marvel-rivals-promotional-banner" },
     v = (e) => {
         let { onDismiss: t, skuIds: s, endTime: l, tab: v } = e,

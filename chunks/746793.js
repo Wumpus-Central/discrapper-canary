@@ -12,8 +12,8 @@ var i = n(627968),
     h = n(775602),
     _ = n(142120),
     m = n(552122),
-    g = n(400492),
-    p = n(312671),
+    p = n(400492),
+    g = n(312671),
     E = n(210714),
     I = n(773669),
     f = n(437959),
@@ -23,7 +23,7 @@ var i = n(627968),
     S = n(902811),
     x = n(652215),
     v = n(985018),
-    y = n(281733);
+    y = n(55607);
 class b extends r.PureComponent {
     videoRef = null;
     _noProblemsTimeout = null;
@@ -121,7 +121,7 @@ class b extends r.PureComponent {
     }
     createSound() {
         let { soundpack: e } = this.props,
-            t = (0, g.aN)("discodo", e);
+            t = (0, p.aN)("discodo", e);
         return (t.volume = 1), t;
     }
     componentDidMount() {
@@ -238,11 +238,11 @@ class b extends r.PureComponent {
         }
     }
 }
-let O = d.Ay.connectStores([_.A, f.A, p.A, h.A], () => ({
+let O = d.Ay.connectStores([_.A, f.A, g.A, h.A], () => ({
     isTryingToConnect: _.A.isTryingToConnect(),
     connected: _.A.isConnected(),
     incident: f.A.getIncident(),
-    soundpack: p.A.getSoundpack(),
+    soundpack: g.A.getSoundpack(),
     reducedMotion: h.A.useReducedMotion,
 }))((e) => {
     let { isTryingToConnect: t, connected: n, incident: r, soundpack: l, reducedMotion: a } = e;

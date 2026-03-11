@@ -12,8 +12,8 @@ var i = n(627968),
     h = n(485947),
     _ = n(831062),
     m = n(954571),
-    g = n(336590),
-    p = n(471271),
+    p = n(336590),
+    g = n(471271),
     E = n(957283),
     I = n(284306),
     f = n(790499),
@@ -22,19 +22,19 @@ var i = n(627968),
     N = n(687599),
     S = n(652215),
     x = n(985018),
-    v = n(843284);
+    v = n(38702);
 function y() {
     let e = r.useRef(null),
         t = (0, I.A)(),
         n = (0, f.I)(),
-        l = (0, g.r)(),
+        l = (0, p.r)(),
         y = (0, c.w)(),
         b = (0, A.A)("message-requests-spam-list"),
         { channelId: O } = (0, E.N)(),
         L = r.useCallback(() => {
             (0, d.showToast)((0, d.createToast)(x.intl.string(x.t["EDYbS+"]), d.ToastType.FAILURE));
         }, []),
-        { rejectAll: R } = (0, p.t)({ onError: L }),
+        { rejectAll: R } = (0, g.t)({ onError: L }),
         P = r.useCallback(() => {
             R(t.map((e) => e.channel.id));
         }, [t, R]);

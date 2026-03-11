@@ -7,12 +7,12 @@ var i = n(627968),
     o = n(201805),
     d = n(461797),
     c = n(985018),
-    u = n(428208);
+    u = n(25470);
 function _(e) {
     let { preset: t, onShuffle: n } = e,
         _ = (0, l.bG)([r.A], () => r.A.useReducedMotion),
         g = (0, o.Xf)({ useReducedMotion: _ }),
-        { name: m, header: A } = s.useMemo(() => {
+        { name: A, header: m } = s.useMemo(() => {
             let e = (0, d.Wt)(t);
             return { name: e.getName(), header: e.getHeaderSrc() };
         }, [t]);
@@ -31,15 +31,15 @@ function _(e) {
                 onClick: () => {
                     n(), g.startAnimation(!1);
                 },
-                "aria-label": `${m}: ${c.intl.string(c.t["44yJxh"])}`,
+                "aria-label": `${A}: ${c.intl.string(c.t["44yJxh"])}`,
                 className: u.Lt,
                 children: [
-                    (0, i.jsx)("img", { alt: "", "aria-hidden": !0, src: A, className: u.L_ }),
+                    (0, i.jsx)("img", { alt: "", "aria-hidden": !0, src: m, className: u.L_ }),
                     (0, i.jsx)(a.Text, {
                         className: u._e,
                         variant: "text-sm/bold",
                         color: "always-white",
-                        children: m,
+                        children: A,
                     }),
                 ],
             }),

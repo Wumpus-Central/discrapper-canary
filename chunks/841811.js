@@ -15,7 +15,7 @@ var i = n(627968),
     A = n(233993),
     C = n(737045),
     E = n(985018),
-    b = n(138695);
+    b = n(69405);
 function I(e, t) {
     return { id: e, type: t, deny: m.x3, allow: A.QY };
 }
@@ -28,8 +28,8 @@ function N(e) {
         [_, v] = l.useState(!1),
         [G, U] = l.useState(null),
         L = l.useRef(null),
-        { roles: R, members: y, getRichTag: M } = (0, c.K)(S, N, A.QY, x),
-        j = u.A.useSections({ roles: R, members: y });
+        { roles: M, members: R, getRichTag: y } = (0, c.K)(S, N, A.QY, x),
+        j = u.A.useSections({ roles: M, members: R });
     if (null == N || null == S) return null;
     let D = async () => {
         v(!0);
@@ -57,9 +57,9 @@ function N(e) {
         setQuery: f,
         pendingAdditions: O,
         setPendingAdditions: T,
-        roles: R,
-        members: y,
-        getRichTag: M,
+        roles: M,
+        members: R,
+        getRichTag: y,
         children: (0, i.jsx)(s.Modal, {
             ...m,
             title: E.intl.string(E.t.dMJ3Y6),

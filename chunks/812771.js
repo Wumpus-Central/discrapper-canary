@@ -3,8 +3,8 @@ n.d(t, { A: () => f, X: () => g });
 var i,
     s = n(627968),
     l = n(64700),
-    r = n(503698),
-    a = n.n(r),
+    a = n(503698),
+    r = n.n(a),
     o = n(735438),
     c = n(827734),
     d = n(397927),
@@ -12,7 +12,7 @@ var i,
     h = n(761929),
     A = n(964404),
     m = n(743898),
-    p = n(3651),
+    p = n(83181),
     g =
         (((i = {})[(i.PostSidebar = 0)] = "PostSidebar"),
         (i[(i.ThreadSidebar = 1)] = "ThreadSidebar"),
@@ -21,9 +21,9 @@ var i,
         (i[(i.HomeSidebar = 4)] = "HomeSidebar"),
         i);
 function _(e) {
-    let { resizableNode: t, onResize: n, onResizeEnd: i, maxWidth: l, minWidth: r } = e,
-        a = (0, h.A)({
-            minDimension: r,
+    let { resizableNode: t, onResize: n, onResizeEnd: i, maxWidth: l, minWidth: a } = e,
+        r = (0, h.A)({
+            minDimension: a,
             maxDimension: l,
             resizableDomNodeRef: t,
             onElementResize: n,
@@ -31,10 +31,10 @@ function _(e) {
             orientation: h.R.HORIZONTAL_LEFT,
             throttleDuration: 16,
         });
-    return (0, s.jsx)("div", { onMouseDown: a, className: p.Di });
+    return (0, s.jsx)("div", { onMouseDown: r, className: p.Di });
 }
 function f(e) {
-    let { sidebarType: t, maxWidth: n, onWidthChange: i, children: r, floatingLayer: h } = e,
+    let { sidebarType: t, maxWidth: n, onWidthChange: i, children: a, floatingLayer: h } = e,
         g = l.useRef(null),
         f = (function (e) {
             switch (e) {
@@ -70,9 +70,9 @@ function f(e) {
             !I && (0, s.jsx)("div", { style: { minWidth: S } }),
             (0, s.jsx)(T, {
                 children: (0, s.jsxs)("div", {
-                    className: a()(p.PA, { [p.R]: !1 }),
+                    className: r()(p.PA, { [p.R]: !1 }),
                     children: [
-                        (0, s.jsx)("div", { className: a()(p.Uc, { [p.DU]: I, [p.iK]: !I }), style: { width: S } }),
+                        (0, s.jsx)("div", { className: r()(p.Uc, { [p.DU]: I, [p.iK]: !I }), style: { width: S } }),
                         !I &&
                             (0, s.jsx)(_, {
                                 minWidth: 450,
@@ -83,9 +83,9 @@ function f(e) {
                             }),
                         (0, s.jsx)("div", {
                             ref: g,
-                            className: a()(p.kL, { [p.DU]: I }),
+                            className: r()(p.kL, { [p.DU]: I }),
                             style: { width: b },
-                            children: r,
+                            children: a,
                         }),
                     ],
                 }),

@@ -10,12 +10,12 @@ var i = n(627968),
     u = n(954571),
     _ = n(927578),
     g = n(919395),
-    m = n(128450),
-    A = n(212168),
+    A = n(128450),
+    m = n(212168),
     h = n(652215),
     p = n(788868),
     x = n(985018),
-    E = n(97671);
+    E = n(971065);
 function T(e) {
     let {
             user: t,
@@ -24,28 +24,28 @@ function T(e) {
             className: T,
             sectionTitle: S,
             forcedDivider: C = !1,
-            withTutorial: f = !1,
-            showBorder: I = !1,
+            withTutorial: I = !1,
+            showBorder: f = !1,
         } = e,
-        { analyticsLocations: b } = (0, d.Ay)(),
-        N = _.Ay.canUsePremiumProfileCustomization(t),
+        { analyticsLocations: N } = (0, d.Ay)(),
+        b = _.Ay.canUsePremiumProfileCustomization(t),
         v = (0, g.N2)({ user: t, guildId: n?.id }),
-        { pendingProfileEffect: j, errors: O } = (0, g.nZ)(n?.id);
+        { pendingProfileEffect: O, errors: j } = (0, g.nZ)(n?.id);
     s.useEffect(() => {
-        N &&
+        b &&
             u.default.track(h.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: p.e.PROFILE_EFFECTS_INLINE_SETTINGS,
-                location_stack: b,
+                location_stack: N,
             });
-    }, [N, b]);
-    let R = f ? o.wLn : r.$n;
-    return (0, i.jsx)(m.A, {
+    }, [b, N]);
+    let R = I ? o.wLn : r.$n;
+    return (0, i.jsx)(A.A, {
         forcedDivider: C,
-        borderType: A.i.PREMIUM,
+        borderType: m.i.PREMIUM,
         hasBackground: !0,
         title: S,
-        showBorder: I,
-        errors: O,
+        showBorder: f,
+        errors: j,
         className: T,
         children: (0, i.jsxs)("div", {
             className: E.NC,
@@ -53,12 +53,12 @@ function T(e) {
                 (0, i.jsx)(R, {
                     size: r.$n.Sizes.SMALL,
                     onClick: () => {
-                        (0, c.W)({ analyticsLocations: b, guild: n, initialSelectedEffect: l });
+                        (0, c.W)({ analyticsLocations: N, guild: n, initialSelectedEffect: l });
                     },
-                    className: a()({ [E.yj]: f }),
+                    className: a()({ [E.yj]: I }),
                     children: x.intl.string(x.t["/dRfCf"]),
                 }),
-                (void 0 === j ? null != v : null != j) &&
+                (void 0 === O ? null != v : null != O) &&
                     (0, i.jsx)("div", {
                         "data-button-hoisted-classname-wrapper": !0,
                         className: E.DT,

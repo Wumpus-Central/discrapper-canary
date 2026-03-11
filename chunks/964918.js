@@ -3,9 +3,9 @@ n.d(t, { A: () => T });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(735438),
-    o = n.n(a),
+    a = n.n(l),
+    r = n(735438),
+    o = n.n(r),
     c = n(311907),
     d = n(397927),
     u = n(730134),
@@ -21,8 +21,8 @@ var i = n(627968),
     E = n(652215),
     I = n(37411),
     N = n(985018),
-    b = n(533848),
-    S = n(248789);
+    b = n(64022),
+    S = n(513679);
 function T(e) {
     let { channel: t } = e,
         l = (0, c.yK)([A.A, _.Ay, g.A], () => {
@@ -40,14 +40,14 @@ function T(e) {
                 .reverse()
                 .value();
         }),
-        a = t.isForumLikeChannel() ? 5 : 3,
+        r = t.isForumLikeChannel() ? 5 : 3,
         u = t.isForumLikeChannel() ? d.bSJ : d.ysw;
     return (
         s.useEffect(() => {
             (0, m.TE)();
         }, []),
         (0, i.jsxs)("div", {
-            className: r()(S.popover, b.SW),
+            className: a()(S.popover, b.SW),
             children: [
                 (0, i.jsx)(d.Text, {
                     variant: "text-sm/medium",
@@ -59,10 +59,10 @@ function T(e) {
                     className: b.p_,
                     children: [
                         l
-                            .slice(0, t.isForumLikeChannel() ? l.length : a)
+                            .slice(0, t.isForumLikeChannel() ? l.length : r)
                             .map((e) => (0, i.jsx)(v, { thread: e }, e.id))
                             .filter((e) => s.isValidElement(e))
-                            .slice(0, a),
+                            .slice(0, r),
                         (0, i.jsxs)(d.DUT, {
                             className: b.nM,
                             onClick: () => {

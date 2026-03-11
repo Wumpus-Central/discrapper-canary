@@ -10,7 +10,7 @@ var i = e(284009),
     c = e(59375),
     u = e(94733),
     m = e(985018),
-    f = e(14036);
+    f = e(308982);
 function h(t) {
     let { attachment: a, guildId: e, productId: i } = t;
     return (0, n.jsxs)("li", {

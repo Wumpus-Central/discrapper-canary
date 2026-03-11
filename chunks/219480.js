@@ -13,7 +13,7 @@ var i = l(627968),
     h = l(714973),
     x = l(696016),
     C = l(985018),
-    v = l(430494);
+    v = l(178428);
 let g = 16 / 9,
     j = [0, 16, 0, 16],
     f = j[1] + j[3];
@@ -107,7 +107,7 @@ function A(e) {
             (e) => {
                 (0, r.mMO)(
                     async () => {
-                        let { default: s } = await Promise.all([l.e("19632"), l.e("95987")]).then(l.bind(l, 723028));
+                        let { default: s } = await Promise.all([l.e("19632"), l.e("1487")]).then(l.bind(l, 723028));
                         return (l) => (0, i.jsx)(s, { ...l, channelId: t, clip: e });
                     },
                     { modalKey: x.DQ, stackingBehavior: "stack" },

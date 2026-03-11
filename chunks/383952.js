@@ -10,8 +10,8 @@ var a = n(627968),
     u = n(397927),
     m = n(793574),
     h = n(688810),
-    x = n(993719),
-    p = n(14059),
+    p = n(993719),
+    x = n(14059),
     g = n(362823),
     _ = n(980923),
     f = n(206018),
@@ -26,9 +26,9 @@ var a = n(627968),
     E = n(42473),
     N = n(731854),
     I = n(985018),
-    k = n(807880),
-    R = n(368149),
-    O = n(709502),
+    k = n(83214),
+    R = n(845775),
+    O = n(565204),
     w = n(973324);
 function D(e) {
     let t,
@@ -52,7 +52,7 @@ function D(e) {
         { showPTTIconIndicator: $ } = A.A.useConfig({ location: "MicrophoneButton" }),
         q = (0, o.bG)([y.Ay], () => y.Ay.getMode() === N.TB.PUSH_TO_TALK),
         Q = (0, o.bG)([y.Ay], () => y.Ay.getSettings().modeOptions.shortcut),
-        Y = (0, o.bG)([p.A], () => p.A.getIsTutorialActive(g.v.MUTE_TUTORIAL)),
+        Y = (0, o.bG)([x.A], () => x.A.getIsTutorialActive(g.v.MUTE_TUTORIAL)),
         J = (0, o.bG)([T.A], () => null != T.A.getChannelId()),
         { name: X } = (0, b.x5)(N.oh.AUDIO_INPUT),
         { enabledInputProfiles: Z } = (0, j.d)({ location: "MicrophoneButton" }),
@@ -76,7 +76,7 @@ function D(e) {
     let ed = $ && q && J,
         ec = et ? d.A.colors.ICON_VOICE_MUTED : "currentColor",
         eu = i.useCallback(() => {
-            B(), Y && x.N(g.v.MUTE_TUTORIAL);
+            B(), Y && p.N(g.v.MUTE_TUTORIAL);
         }, [B, Y]);
     return (0, a.jsxs)(h.f5, {
         value: ea,
@@ -178,7 +178,7 @@ function D(e) {
                 shouldShow: Y,
                 graphic: { type: "image", src: w.A },
                 onRequestClose: () => {
-                    x.N(g.v.MUTE_TUTORIAL);
+                    p.N(g.v.MUTE_TUTORIAL);
                 },
                 position: "top",
                 title: I.intl.string(k.default.VG4zAf),

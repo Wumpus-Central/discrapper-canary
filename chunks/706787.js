@@ -8,7 +8,7 @@ var i = n(627968),
     c = n(775602),
     d = n(927813),
     u = n(614518),
-    h = n(804771);
+    h = n(77357);
 let m = 6 * d.A.Millis.SECOND,
     A = 2 * d.A.Millis.SECOND,
     g = 2 * d.A.Millis.SECOND,
@@ -19,7 +19,7 @@ function f(e) {
         E = (0, a.bG)([c.A], () => c.A.useReducedMotion),
         [x, C] = l.useState(!0),
         S = !E,
-        T = (0, r.pnh)(x, {
+        I = (0, r.pnh)(x, {
             from: { rotate: -120 },
             enter: { rotate: 0 },
             leave: { rotate: -120 },
@@ -47,7 +47,7 @@ function f(e) {
     }, [_, t, S]),
     S)
         ? null
-        : T((e, t) => {
+        : I((e, t) => {
               let { rotate: n } = e;
               return (
                   t &&

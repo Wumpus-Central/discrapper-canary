@@ -4,7 +4,7 @@ n(64700);
 var s = n(732955),
     l = n(397927),
     a = n(985018),
-    r = n(109878),
+    r = n(34240),
     o = n(713052);
 function d(e) {
     let { onClickManageSubscription: t, count: n } = e;

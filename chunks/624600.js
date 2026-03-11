@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(503698),
     s = n.n(i),
     a = n(490249),
-    o = n(712119);
+    o = n(23373);
 let u = (e) => {
     let {
             segment: t,
@@ -32,8 +32,8 @@ let u = (e) => {
             : b.to((e) => `translateX(-${_ - e}px)`),
         R = N ? (0, a.to)([b, c], (e, t) => (y ? Math.max(0, e - t) : Math.min(e, _ - t))) : b,
         L = Math.max(0, (p ?? 0) - g),
-        j = E ? o.KR : o.Fv,
-        I = l.useMemo(
+        I = E ? o.KR : o.Fv,
+        M = l.useMemo(
             () =>
                 m
                     ?.map((e) => ({ startPx: e.start * d, endPx: (e.start + e.size) * d }))
@@ -58,11 +58,11 @@ let u = (e) => {
                         className: o.Bw,
                         style: { left: y ? c.to((e) => -(g + e)) : -g },
                         children: [
-                            I?.map((e) =>
+                            M?.map((e) =>
                                 (0, r.jsx)(
                                     "div",
                                     {
-                                        className: s()(o.r, j),
+                                        className: s()(o.r, I),
                                         style: { width: `${e.endPx - e.startPx}px`, left: `${e.startPx}px` },
                                     },
                                     `${e.startPx}:${e.endPx}`,
@@ -70,7 +70,7 @@ let u = (e) => {
                             ),
                             !f &&
                                 L > 0 &&
-                                (0, r.jsx)("div", { className: s()(o.YK, j), style: { width: `${L}px`, opacity: 1 } }),
+                                (0, r.jsx)("div", { className: s()(o.YK, I), style: { width: `${L}px`, opacity: 1 } }),
                         ],
                     }),
                     (0, r.jsx)(a.animated.div, {

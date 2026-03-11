@@ -10,17 +10,17 @@ var a = n(627968),
     u = n(627575),
     m = n(393033),
     h = n(105428),
-    x = n(975571),
-    p = n(935649),
+    p = n(975571),
+    x = n(935649),
     g = n(847599),
     _ = n(295972),
     f = n(36149),
     v = n(807734),
     b = n(652215),
     j = n(239093),
-    A = n(536242),
+    A = n(949268),
     C = n(985018),
-    y = n(62959),
+    y = n(499453),
     T = n(700129);
 function S(e) {
     let { modalSessionId: t, entryPoint: n } = e;
@@ -29,7 +29,7 @@ function S(e) {
               variant: "text-xs/medium",
               children: C.intl.format(A.default.htWh1G, {
                   handleOnHelpUrlHook: () => {
-                      p.A.openUrl(j.d$.LEARN_MORE_UU_APPEAL_LINK),
+                      x.A.openUrl(j.d$.LEARN_MORE_UU_APPEAL_LINK),
                           (0, g.St)(t, g.WU.EXPRESSIVE_PRIMARY, g._7.LEARN_MORE);
                   },
               }),
@@ -92,7 +92,7 @@ let E = function (e) {
             subtitle: (0, f.mK)(
                 n,
                 () => {
-                    p.A.openUrl(x.A.getArticleURL(b.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                    x.A.openUrl(p.A.getArticleURL(b.MVz.TIGGER_PAWTECT_LEARN_MORE)),
                         (0, g.St)(D, g.WU.EXPRESSIVE_PRIMARY, g._7.LEARN_MORE);
                 },
                 P,

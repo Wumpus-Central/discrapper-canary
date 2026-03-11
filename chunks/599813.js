@@ -15,12 +15,12 @@ var i = n(627968),
     p = n(342887),
     f = n(973947),
     _ = n(985018),
-    E = n(32425);
+    E = n(361499);
 let x = [51],
     C = [_.t.OpqAok];
 function S(e) {
     let { columns: t, handleScroll: n, voiceListRef: l, showSectionHeaders: s = !1, query: a } = e,
-        r = I(),
+        r = T(),
         S = (0, o.bG)([h.default], () => (0, m.ki)(h.default.getCurrentUser())),
         y = N(a, S),
         b = Math.ceil(y.length / t),
@@ -74,7 +74,7 @@ function S(e) {
                       let n = e * t,
                           l = y.slice(n, n + t);
                       return (0, i.jsx)(
-                          T,
+                          I,
                           {
                               children: l.map((n, l) =>
                                   (0, i.jsx)(
@@ -115,7 +115,7 @@ function S(e) {
                   sectionFooterHeight: 40 * !S,
               });
 }
-function T(e) {
+function I(e) {
     let { children: t } = e,
         n = l.useRef(null);
     return (0, i.jsx)("div", {
@@ -124,7 +124,7 @@ function T(e) {
         children: (0, i.jsx)(d.xpW, { containerRef: n, children: t }),
     });
 }
-let I = () =>
+let T = () =>
         (0, o.bG)(
             [g.A],
             () =>

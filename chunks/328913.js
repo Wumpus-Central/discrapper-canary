@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => x });
+n.d(t, { A: () => E });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -14,12 +14,12 @@ var i = n(627968),
     A = n(266244),
     f = n(439817),
     g = n(985018),
-    _ = n(90901);
+    _ = n(176767);
 function m(e) {
     let { closePopout: t } = e;
     return (0, i.jsx)(p.A, { onClose: t });
 }
-class E extends s.PureComponent {
+class x extends s.PureComponent {
     static defaultProps = { contained: !1 };
     onDragStart = (e) => {
         let { dragStart: t } = this.props;
@@ -43,4 +43,4 @@ class E extends s.PureComponent {
         });
     }
 }
-let x = r.Ay.connectStores([c.A], () => ({ selectedGuildId: c.A.getGuildId() }))(E);
+let E = r.Ay.connectStores([c.A], () => ({ selectedGuildId: c.A.getGuildId() }))(x);

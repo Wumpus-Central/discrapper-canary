@@ -3,8 +3,8 @@ n.d(t, { p: () => T });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(490249),
+    a = n.n(l),
+    r = n(490249),
     o = n(110259),
     c = n(311907),
     d = n(435371),
@@ -21,8 +21,8 @@ var i = n(627968),
     E = n(652215);
 n(281405);
 var I = n(985018),
-    N = n(430023),
-    b = n(77615);
+    N = n(314957),
+    b = n(377157);
 let S = (e) => 1 - Math.pow(1 - e, 4);
 function T(e) {
     let { channel: t, onClose: l } = e,
@@ -61,7 +61,7 @@ function T(e) {
         K = s.useCallback(() => {
             null != G &&
                 (0, u.mMO)(async () => {
-                    let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("74918")]).then(
+                    let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("97710")]).then(
                         n.bind(n, 234355),
                     );
                     return (n) => (0, i.jsx)(e, { ...n, guild: G, channel: t, source: E.PE1.VOICE_INVITE_SUGGESTIONS });
@@ -128,18 +128,18 @@ function T(e) {
               onRequestClose: Q,
               children: (e) => {
                   let { onClick: t, ...n } = e;
-                  return (0, i.jsx)(a.animated.div, {
+                  return (0, i.jsx)(r.animated.div, {
                       className: N.lY,
                       style: W,
                       children: (0, i.jsx)(u.DUT, {
                           innerRef: T,
-                          className: r()({ [N.vk]: !U }, b.q7, b.L9, b.vk),
+                          className: a()({ [N.vk]: !U }, b.q7, b.L9, b.vk),
                           "aria-disabled": U,
                           "aria-label": I.intl.string(I.t.F3qiJr),
                           onClick: K,
                           ...n,
                           children: (0, i.jsxs)("div", {
-                              className: r()(N.Qs, b.Qs),
+                              className: a()(N.Qs, b.Qs),
                               children: [
                                   (0, i.jsxs)("div", {
                                       className: N.R4,
@@ -148,7 +148,7 @@ function T(e) {
                                           (0, i.jsxs)(
                                               "svg",
                                               {
-                                                  className: r()(N.O1, { [N.Ft]: H }),
+                                                  className: a()(N.O1, { [N.Ft]: H }),
                                                   viewBox: "0 0 24 24",
                                                   style: { "--custom-voice-invite-suggestions-timer-duration": 1e4 },
                                                   children: [
@@ -163,7 +163,7 @@ function T(e) {
                                               width: 14,
                                               height: 14,
                                               color: "currentColor",
-                                              className: r()(N.Hk, N.Kk),
+                                              className: a()(N.Hk, N.Kk),
                                           }),
                                       ],
                                   }),

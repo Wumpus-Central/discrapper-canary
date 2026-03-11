@@ -3,8 +3,8 @@ n.d(t, { A: () => T });
 var i = n(627968),
     s = n(64700),
     l = n(735438),
-    r = n.n(l),
-    a = n(311907),
+    a = n.n(l),
+    r = n(311907),
     o = n(3026),
     c = n(990078),
     d = n(397927),
@@ -21,7 +21,7 @@ var i = n(627968),
     E = n(58736),
     I = n(518477),
     N = n(985018),
-    b = n(940688);
+    b = n(30250);
 class S {
     userId;
     user;
@@ -35,7 +35,7 @@ class S {
         (this.userId = t), (this.user = n), (this.channelId = i), (this.analyticsLocations = s);
     }
     generateNicknameGuildPairs = (0, x.L_)((e) =>
-        r()(g.Ay.getNicknameGuildsMapping(e?.id ?? this.userId))
+        a()(g.Ay.getNicknameGuildsMapping(e?.id ?? this.userId))
             .toPairs()
             .map((e) => {
                 let [t, n] = e;
@@ -68,20 +68,20 @@ class S {
         );
     renderNicknamePairs(e) {
         return this.getNicknameGuildPairs().map((t, n) => {
-            let [l, r] = t,
-                a = (0, i.jsx)(d.DUT, { tag: "span", onClick: this.handleClick, children: l });
+            let [l, a] = t,
+                r = (0, i.jsx)(d.DUT, { tag: "span", onClick: this.handleClick, children: l });
             return (
-                r.length > 0 &&
-                    (a = (0, i.jsx)(c.m, {
+                a.length > 0 &&
+                    (r = (0, i.jsx)(c.m, {
                         asContainer: !0,
                         tag: "span",
-                        text: r.join(", "),
+                        text: a.join(", "),
                         position: "bottom",
                         shouldShow: e,
                         delay: 50,
-                        children: a,
+                        children: r,
                     })),
-                (0, i.jsxs)(s.Fragment, { children: [0 !== n ? ", " : null, a] }, n)
+                (0, i.jsxs)(s.Fragment, { children: [0 !== n ? ", " : null, r] }, n)
             );
         });
     }
@@ -98,13 +98,13 @@ function T(e) {
     let { channel: t } = e,
         n = t.getRecipientId(),
         l = (0, m.EI)(n),
-        r = Array(l.length).fill(null),
+        a = Array(l.length).fill(null),
         { analyticsLocations: p } = (0, A.Ay)(h.A.AKA),
         g = (function (e) {
             let { userId: t, channelId: n, analyticsLocations: i } = e,
-                l = (0, a.bG)([f.default], () => f.default.getUser(t), [t]),
-                [r] = s.useState(() => new S({ user: l, userId: t, channelId: n, analyticsLocations: i }));
-            return r.updateData({ userId: t, user: l, channelId: n, analyticsLocations: i }), r;
+                l = (0, r.bG)([f.default], () => f.default.getUser(t), [t]),
+                [a] = s.useState(() => new S({ user: l, userId: t, channelId: n, analyticsLocations: i }));
+            return a.updateData({ userId: t, user: l, channelId: n, analyticsLocations: i }), a;
         })({ userId: n, analyticsLocations: p, channelId: t.id }),
         [x, C] = s.useState(!1),
         I = s.useCallback(() => {
@@ -123,28 +123,28 @@ function T(e) {
                   l.length > 0
                       ? (0, i.jsx)(u.Ay, {
                             size: 16,
-                            users: r,
+                            users: a,
                             showUserPopout: !1,
                             renderUser: (e, t, n) => {
                                 let s = g.user,
-                                    r = l[n];
-                                return null == r || null == s
+                                    a = l[n];
+                                return null == a || null == s
                                     ? null
                                     : (0, i.jsx)(
                                           c.m,
                                           {
                                               asContainer: !0,
-                                              text: _.A.getGuild(r)?.name,
+                                              text: _.A.getGuild(a)?.name,
                                               position: "bottom",
                                               children: (0, i.jsx)("img", {
                                                   alt: "",
                                                   className: b.my,
                                                   onClick: g.handleClick,
-                                                  src: s.getAvatarURL(r, 16),
+                                                  src: s.getAvatarURL(a, 16),
                                                   "aria-hidden": !0,
                                               }),
                                           },
-                                          r[1],
+                                          a[1],
                                       );
                             },
                             renderMoreUsers: g.renderMoreAvatars,

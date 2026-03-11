@@ -20,7 +20,7 @@ var i = n(627968),
     E = n(371794),
     I = n(652215),
     b = n(985018),
-    T = n(187663);
+    T = n(34077);
 class v extends r.Component {
     static defaultProps = { renderFallback: I.tEg };
     state = { playing: !1, muted: !0 };

@@ -5,11 +5,11 @@ var a = n(627968),
     l = n.n(s),
     r = n(397927),
     o = n(817363),
-    d = n(93064);
+    d = n(774126);
 function c(e) {
     let { filename: t, className: n, filters: s, buttonText: c, placeholder: u, onFileSelect: m } = e,
         h = i.useRef(null),
-        x = i.useRef(null);
+        p = i.useRef(null);
     return (0, a.jsx)(r.vN3, {
         ringTarget: h,
         within: !0,
@@ -26,7 +26,7 @@ function c(e) {
                 }),
                 (0, a.jsx)(r.Button, { "aria-hidden": !0, variant: "secondary", size: "sm", text: c, tabIndex: -1 }),
                 (0, a.jsx)(o.A, {
-                    ref: x,
+                    ref: p,
                     onChange: (e) => {
                         m(e.currentTarget.files?.[0]);
                     },

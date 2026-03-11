@@ -13,8 +13,8 @@ var r = n(397927),
     h = n(788868),
     _ = n(652215),
     m = n(339984),
-    g = n(985018),
-    p = n(698290);
+    p = n(985018),
+    g = n(94184);
 function E(e) {
     let { uploadType: t, imageSrc: l, analyticsSource: a } = e,
         s = o.default.getCurrentUser();
@@ -61,28 +61,28 @@ function I(e) {
     return S
         ? (0, c.g1)({ location: "getReducedMotionImageUrl" })
             ? (0, i.jsx)(A.F, {
-                  title: n === m.HL.AVATAR ? g.intl.string(g.t.X7tO60) : g.intl.string(g.t.zXPa2C),
-                  subtitle: n === m.HL.AVATAR ? g.intl.string(g.t.ifCRdB) : g.intl.string(g.t.yQAnf4),
+                  title: n === m.HL.AVATAR ? p.intl.string(p.t.X7tO60) : p.intl.string(p.t.zXPa2C),
+                  subtitle: n === m.HL.AVATAR ? p.intl.string(p.t.ifCRdB) : p.intl.string(p.t.yQAnf4),
                   graphic: y,
                   onSecondaryClick: () => {
                       I?.(), (0, d.x)(o);
                   },
-                  secondaryCTA: g.intl.string(g.t.PcTCB7),
+                  secondaryCTA: p.intl.string(p.t.PcTCB7),
                   onClose: o,
                   ...f,
               })
             : (0, i.jsx)(A.A, {
                   artURL: x ? void 0 : v,
-                  modalClassName: x ? p.yl : void 0,
-                  modalContentClassName: x ? p.jE : void 0,
+                  modalClassName: x ? g.yl : void 0,
+                  modalContentClassName: x ? g.jE : void 0,
                   type: n === m.HL.AVATAR ? h.e.ANIMATED_AVATAR_MODAL_UPSELL : h.e.ANIMATED_BANNER_MODAL_UPSELL,
-                  title: n === m.HL.AVATAR ? g.intl.string(g.t.X7tO60) : g.intl.string(g.t.zXPa2C),
-                  body: n === m.HL.AVATAR ? g.intl.string(g.t.ifCRdB) : g.intl.string(g.t.yQAnf4),
-                  glowUp: n === m.HL.AVATAR ? g.intl.string(g.t.ifCRdB) : g.intl.string(g.t.yQAnf4),
+                  title: n === m.HL.AVATAR ? p.intl.string(p.t.X7tO60) : p.intl.string(p.t.zXPa2C),
+                  body: n === m.HL.AVATAR ? p.intl.string(p.t.ifCRdB) : p.intl.string(p.t.yQAnf4),
+                  glowUp: n === m.HL.AVATAR ? p.intl.string(p.t.ifCRdB) : p.intl.string(p.t.yQAnf4),
                   onSecondaryClick: () => {
                       I?.(), (0, d.x)(o);
                   },
-                  secondaryCTA: g.intl.string(g.t.PcTCB7),
+                  secondaryCTA: p.intl.string(p.t.PcTCB7),
                   onClose: o,
                   enableArtBoxShadow: !1,
                   analyticsSource: _,
@@ -91,9 +91,9 @@ function I(e) {
                   showEnhancedUpsell: !0,
                   LeadingComponent: x
                       ? (0, i.jsx)("div", {
-                            className: p.wC,
+                            className: g.wC,
                             children: (0, i.jsx)(l.A, {
-                                containerClassName: p.i1,
+                                containerClassName: g.i1,
                                 user: t,
                                 canUsePremiumCustomization: !0,
                                 disabledInputs: !0,

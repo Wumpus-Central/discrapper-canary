@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => p });
 var i = n(627968),
     r = n(64700),
     l = n(835245),
@@ -11,13 +11,13 @@ var i = n(627968),
     A = n(652215),
     h = n(613057),
     _ = n(985018),
-    m = n(742249);
-function g(e) {
+    m = n(9043);
+function p(e) {
     let { applicationId: t } = e.match.params,
-        [g, p] = r.useState(!1),
+        [p, g] = r.useState(!1),
         E = r.useRef(!1),
         [I, f] = r.useState(null),
-        C = !c.isPlatformEmbedded && !a.Fr && !g,
+        C = !c.isPlatformEmbedded && !a.Fr && !p,
         T = r.useMemo(() => (0, l.A)(), []);
     return (r.useEffect(() => {
         C &&
@@ -60,7 +60,7 @@ function g(e) {
                   children: [
                       (0, i.jsx)(o.Heading, { variant: "heading-xxl/bold", children: _.intl.string(_.t.csrAMJ) }),
                       (0, i.jsx)(o.Text, { variant: "text-xs/semibold", children: _.intl.string(_.t["m1+IBn"]) }),
-                      (0, i.jsx)(s.$nd, { variant: "primary", text: _.intl.string(_.t.fIv16B), onClick: () => p(!0) }),
+                      (0, i.jsx)(s.$nd, { variant: "primary", text: _.intl.string(_.t.fIv16B), onClick: () => g(!0) }),
                   ],
               })
             : (0, i.jsxs)("div", {

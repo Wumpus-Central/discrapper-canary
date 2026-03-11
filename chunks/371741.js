@@ -19,8 +19,8 @@ var i = n(627968),
     x = n(976860),
     C = n(253932),
     S = n(734057),
-    T = n(540999),
-    I = n(580745),
+    I = n(540999),
+    T = n(580745),
     N = n(661191),
     y = n(141468),
     b = n(375901),
@@ -45,7 +45,7 @@ var i = n(627968),
     W = n(381941),
     Y = n(652215),
     q = n(985018),
-    J = n(119907);
+    J = n(50397);
 function $(e, t, n) {
     return e.getElementById((0, b.j)(t, n));
 }
@@ -98,8 +98,8 @@ function X(e) {
             viewingChannelId: _,
         } = e,
         S = n.type === Y.lAJ.REPLY ? n.messageReference : void 0,
-        { onFocus: I, ...N } = (0, c.rm)(e.id ?? ""),
-        { isFocused: b, handleFocus: R, handleBlur: k } = (0, O.G8)(I),
+        { onFocus: T, ...N } = (0, c.rm)(e.id ?? ""),
+        { isFocused: b, handleFocus: R, handleBlur: k } = (0, O.G8)(T),
         { popouts: G, selected: F, setPopout: V } = (0, P.A)(n.id, W.Fd),
         $ = C.hD.useSetting(),
         Z = C.rs.useSetting(),
@@ -113,7 +113,7 @@ function X(e) {
         ei = (0, d.bG)([h.A], () => h.A.keyboardModeEnabled),
         el = F || (ei && b),
         es = el || en,
-        ea = (0, d.bG)([T.A], () => T.A.isDeveloper),
+        ea = (0, d.bG)([I.A], () => I.A.isDeveloper),
         {
             content: er,
             hasSpoilerEmbeds: eo,
@@ -247,9 +247,9 @@ let Q = l.memo(function (e) {
             },
             [ex, eA],
         ),
-        eT = (0, d.bG)([I.A], () => I.A.isEditing($, x), [$, x]),
-        eI = (0, d.bG)([h.A], () => h.A.keyboardModeEnabled),
-        eN = ec || eT || (eI && ef),
+        eI = (0, d.bG)([T.A], () => T.A.isEditing($, x), [$, x]),
+        eT = (0, d.bG)([h.A], () => h.A.keyboardModeEnabled),
+        eN = ec || eI || (eT && ef),
         ey = eN || ep,
         eb = (0, d.bG)(
             [S.A],
@@ -257,7 +257,7 @@ let Q = l.memo(function (e) {
         ),
         ev = r.isFirstMessageInForumPost(b),
         ej = (0, f.S)((r.editedTimestamp ?? r.timestamp).valueOf()),
-        eR = (0, d.bG)([T.A], () => T.A.isDeveloper),
+        eR = (0, d.bG)([I.A], () => I.A.isDeveloper),
         {
             content: eM,
             hasSpoilerEmbeds: eD,
@@ -272,7 +272,7 @@ let Q = l.memo(function (e) {
             allowDevLinks: eR,
             previewLinkTarget: !0,
         }),
-        eL = (0, L.A)(x, $, eI),
+        eL = (0, L.A)(x, $, eT),
         eP = (0, j.Ay)(r),
         ew = (0, d.bG)([_.A], () => _.A.getPendingReply($)),
         ek =
@@ -292,7 +292,7 @@ let Q = l.memo(function (e) {
         eV = (0, k.A)({ message: r, channel: b }),
         eK = l.useRef(window),
         ez = null != eB;
-    n = r.type === Y.lAJ.CUSTOM_GIFT ? "" : !eT && ez ? (0, G.A)(e, eM) : (0, B.A)(e, eM, eT);
+    n = r.type === Y.lAJ.CUSTOM_GIFT ? "" : !eI && ez ? (0, G.A)(e, eM) : (0, B.A)(e, eM, eI);
     let eW = r.id === ee,
         eY = (0, i.jsx)(u.vN3, {
             offset: { left: 4, right: 4 },
@@ -327,7 +327,7 @@ let Q = l.memo(function (e) {
                         [J.$w]: r.isCommandType() && r.state === Y.cmJ.SENDING,
                         [J.DX]: ez,
                     }),
-                    zalgo: !eT,
+                    zalgo: !eI,
                     childrenRepliedMessage:
                         et || r.type !== Y.lAJ.REPLY
                             ? void 0

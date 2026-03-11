@@ -12,18 +12,18 @@ var i = n(627968),
     h = n(657331),
     _ = n(994500),
     m = n(287809),
-    g = n(427262),
-    p = n(390848),
+    p = n(427262),
+    g = n(390848),
     E = n(513297),
     I = n(414711),
     f = n(723690),
     C = n(652215),
     T = n(985018),
-    N = n(615078);
+    N = n(79676);
 function S(e) {
     let { user: t, applicationId: n, isGameRelationship: l, active: o, onAcceptFriendRequest: d } = e,
         c = m.default.getCurrentUser()?.isStaff() && t?.isStaff(),
-        { acceptFriendRequest: u, cancelFriendRequest: A } = (0, p.I)({
+        { acceptFriendRequest: u, cancelFriendRequest: A } = (0, g.I)({
             userId: t.id,
             applicationId: n,
             isGameRelationship: l,
@@ -71,7 +71,7 @@ function S(e) {
 }
 function x(e) {
     let { userId: t, applicationId: n, isGameRelationship: l, active: a } = e,
-        { cancelFriendRequest: o } = (0, p.I)({
+        { cancelFriendRequest: o } = (0, g.I)({
             userId: t,
             applicationId: n,
             isGameRelationship: l,
@@ -112,7 +112,7 @@ function v(e) {
 }
 function y(e) {
     let { user: t, hovered: n, status: r, isGameRelationship: l, applicationId: a } = e,
-        s = g.Ay.useUserTag(t);
+        s = p.Ay.useUserTag(t);
     return (0, i.jsx)(f.A, {
         user: t,
         hovered: n,
@@ -131,10 +131,10 @@ function b(e) {
             isGameRelationship: A,
             onAcceptFriendRequest: m,
         } = e,
-        { analyticsLocations: g } = (0, d.Ay)(),
-        p = a === C.clD.OFFLINE ? C.clD.UNKNOWN : a,
+        { analyticsLocations: p } = (0, d.Ay)(),
+        g = a === C.clD.OFFLINE ? C.clD.UNKNOWN : a,
         E = (0, l.bG)([_.A], () => _.A.getRelationshipType(t.id)),
-        f = r.useCallback(() => (0, h.openUserProfileModal)({ userId: t.id, sourceAnalyticsLocations: g }), [g, t.id]),
+        f = r.useCallback(() => (0, h.openUserProfileModal)({ userId: t.id, sourceAnalyticsLocations: p }), [p, t.id]),
         T = (e) => {
             e.stopPropagation(), o.A.openPrivateChannel({ recipientIds: [t.id] });
         };
@@ -147,7 +147,7 @@ function b(e) {
                   (0, i.jsxs)("div", {
                       className: N.a4,
                       children: [
-                          (0, i.jsx)(y, { user: t, hovered: e, status: p, isGameRelationship: A, applicationId: u }),
+                          (0, i.jsx)(y, { user: t, hovered: e, status: g, isGameRelationship: A, applicationId: u }),
                           (0, i.jsx)("div", {
                               className: N.o1,
                               children:

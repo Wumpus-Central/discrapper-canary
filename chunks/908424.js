@@ -3,13 +3,13 @@ var e = i(627968),
     n = i(64700),
     r = i(397927),
     l = i(442433),
-    s = i(665606),
+    s = i(525736),
     c = i(985018);
 function d(t) {
     let { navId: a, onClose: d = l.Z_, onSelect: o } = t,
         u = n.useCallback(() => {
             (0, r.mMO)(async () => {
-                let { default: t } = await Promise.all([i.e("59839"), i.e("4738")]).then(i.bind(i, 889186));
+                let { default: t } = await Promise.all([i.e("59839"), i.e("23006")]).then(i.bind(i, 889186));
                 return (a) => (0, e.jsx)(t, { ...a });
             });
         }, []),

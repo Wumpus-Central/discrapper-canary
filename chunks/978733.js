@@ -39,7 +39,7 @@ var l = n(627968),
     U = n(253913),
     G = n(652215),
     z = n(985018),
-    H = n(524445);
+    H = n(5395);
 let B = { width: 28, height: 28 },
     V = { width: 20, height: 20, borderRadius: 10 },
     W = (e) => {

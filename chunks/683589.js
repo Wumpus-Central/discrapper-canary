@@ -10,8 +10,8 @@ var a = n(627968),
     u = n(446868),
     m = n(652215),
     h = n(985018),
-    x = n(441609);
-let p = c.A.getArticleURL(m.MVz.VERIFICATION_FAQ);
+    p = n(26939);
+let x = c.A.getArticleURL(m.MVz.VERIFICATION_FAQ);
 class g extends i.PureComponent {
     static defaultProps = { types: [m.Fz7.CAPTCHA], onCaptchaVerify: m.tEg, onLogout: m.tEg };
     renderFields() {
@@ -27,7 +27,7 @@ class g extends i.PureComponent {
     render() {
         return (0, a.jsxs)(o.BJc, {
             gap: 16,
-            className: x.Ot,
+            className: p.Ot,
             align: "center",
             direction: "vertical",
             justify: "center",
@@ -35,7 +35,7 @@ class g extends i.PureComponent {
                 (0, a.jsxs)(o.BJc, {
                     gap: 16,
                     fullWidth: !1,
-                    className: l()(x.kL, { [x.Fr]: r.Fr }),
+                    className: l()(p.kL, { [p.Fr]: r.Fr }),
                     align: "center",
                     direction: "vertical",
                     justify: "center",
@@ -46,9 +46,9 @@ class g extends i.PureComponent {
                             justify: "center",
                             gap: 16,
                             children: [
-                                (0, a.jsx)("div", { className: x.Sl }),
+                                (0, a.jsx)("div", { className: p.Sl }),
                                 (0, a.jsxs)(o.BJc, {
-                                    className: x.FS,
+                                    className: p.FS,
                                     gap: 4,
                                     align: "center",
                                     direction: "vertical",
@@ -60,7 +60,7 @@ class g extends i.PureComponent {
                                         }),
                                         (0, a.jsx)(o.Text, {
                                             variant: "text-md/normal",
-                                            children: h.intl.format(h.t["0rqMV5"], { helpCenterURL: p }),
+                                            children: h.intl.format(h.t["0rqMV5"], { helpCenterURL: x }),
                                         }),
                                     ],
                                 }),
@@ -83,7 +83,7 @@ class g extends i.PureComponent {
                     children: [
                         (0, a.jsx)(o.Text, {
                             variant: "text-sm/normal",
-                            className: x.qr,
+                            className: p.qr,
                             children: h.intl.string(h.t.qqYun3),
                         }),
                         (0, a.jsxs)(o.BJc, {
@@ -94,13 +94,13 @@ class g extends i.PureComponent {
                             children: [
                                 (0, a.jsx)(o.Text, {
                                     variant: "text-sm/semibold",
-                                    className: x.qr,
+                                    className: p.qr,
                                     children: h.intl.format(h.t.WL51ZR, { supportURL: c.A.getSubmitRequestURL() }),
                                 }),
-                                (0, a.jsx)("div", { className: l()(x.qr, x.mf), children: "•" }),
+                                (0, a.jsx)("div", { className: l()(p.qr, p.mf), children: "•" }),
                                 (0, a.jsx)(o.Text, {
                                     variant: "text-sm/semibold",
-                                    className: x.qr,
+                                    className: p.qr,
                                     children: h.intl.format(h.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
                                 }),
                             ],

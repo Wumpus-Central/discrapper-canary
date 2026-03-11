@@ -10,28 +10,28 @@ var i = n(627968),
     u = n(369496),
     _ = n(580630),
     g = n(349439),
-    m = n(959349);
-let A = (e) => {
+    A = n(22907);
+let m = (e) => {
         let { displayName: t, product: n } = e,
             s = (0, g.nF)(n);
-        return null == s ? null : (0, i.jsx)("img", { src: s, alt: t, className: m._P });
+        return null == s ? null : (0, i.jsx)("img", { src: s, alt: t, className: A._P });
     },
     h = (e) => {
         let { displayName: t, nameplateData: n } = e,
             { staticImageUrl: s } = (0, c.K)(n);
-        return null == s ? null : (0, i.jsx)("img", { src: s, alt: t, className: m.M4 });
+        return null == s ? null : (0, i.jsx)("img", { src: s, alt: t, className: A.M4 });
     },
     p = (e) => {
         let { displayName: t, product: n } = e,
             s = (0, g.GQ)(n);
-        return null == s ? null : (0, i.jsx)("img", { src: s, alt: t, className: m._P });
+        return null == s ? null : (0, i.jsx)("img", { src: s, alt: t, className: A._P });
     },
     x = (e) => {
         let { subscriptionPlanId: t } = e;
-        if (null == t) return (0, i.jsx)("div", { className: m.T8, children: (0, i.jsx)(o.U1X, {}) });
+        if (null == t) return (0, i.jsx)("div", { className: A.T8, children: (0, i.jsx)(o.U1X, {}) });
         let n = (0, g.il)(t);
         return (0, i.jsx)("div", {
-            className: m.T8,
+            className: A.T8,
             children: n
                 ? (0, i.jsx)(o._Jp, { size: "custom", width: 20, height: 20 })
                 : (0, i.jsx)(o.tvc, { size: "custom", width: 20, height: 20 }),
@@ -39,32 +39,32 @@ let A = (e) => {
     },
     E = (e) => {
         let { displayName: t, product: n } = e;
-        if (null == n) return (0, i.jsx)("div", { className: m.T8, children: (0, i.jsx)(o.U1X, {}) });
+        if (null == n) return (0, i.jsx)("div", { className: A.T8, children: (0, i.jsx)(o.U1X, {}) });
         switch (n.type) {
             case r.R.AVATAR_DECORATION:
-                return (0, i.jsx)(A, { displayName: t, product: n });
+                return (0, i.jsx)(m, { displayName: t, product: n });
             case r.R.NAMEPLATE:
                 let s = (0, u.EQ)(n);
                 return null != s ? (0, i.jsx)(h, { displayName: t, nameplateData: s }) : null;
             case r.R.PROFILE_EFFECT:
                 return (0, i.jsx)(p, { displayName: t, product: n });
             default:
-                return (0, i.jsx)("div", { className: m.T8, children: (0, i.jsx)(o.U1X, {}) });
+                return (0, i.jsx)("div", { className: A.T8, children: (0, i.jsx)(o.U1X, {}) });
         }
     },
     T = s.memo((e) => {
         let { skuId: t, subscriptionPlanId: n, total: s, currency: l, className: r } = e,
             { product: c } = (0, d.A)(t),
-            { displayName: u, typeName: A, isSubscription: h } = (0, g.GZ)(c ?? null, n);
+            { displayName: u, typeName: m, isSubscription: h } = (0, g.GZ)(c ?? null, n);
         if ((null != t && !h && null == c) || null == u) return null;
         let p = (0, _.$g)(s, l);
         return (0, i.jsxs)("div", {
-            className: a()(m.kL, r),
+            className: a()(A.kL, r),
             children: [
                 h ? (0, i.jsx)(x, { subscriptionPlanId: n }) : (0, i.jsx)(E, { displayName: u, product: c ?? null }),
                 (0, i.jsxs)("div", {
                     children: [
-                        (0, i.jsx)(o.Text, { variant: "text-md/semibold", children: null != A ? `${u} • ${A}` : u }),
+                        (0, i.jsx)(o.Text, { variant: "text-md/semibold", children: null != m ? `${u} • ${m}` : u }),
                         (0, i.jsx)(o.Text, { variant: "text-sm/medium", color: "text-subtle", children: p }),
                     ],
                 }),
