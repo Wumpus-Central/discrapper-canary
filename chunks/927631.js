@@ -1,19 +1,19 @@
-i.d(e, { W: () => u });
-var n = i(77468),
-    l = i(419954),
-    s = i(780964),
-    r = i(75698),
-    a = i(985018);
-let u = (0, l.E2)(s.X.CONNECTIONS_CONNECTED_ACCOUNTS_SETTING, {
-    Component: r.d7,
+n.d(t, { W: () => o });
+var i = n(77468),
+    s = n(419954),
+    l = n(780964),
+    a = n(807396),
+    r = n(985018);
+let o = (0, s.E2)(l.X.CONNECTIONS_CONNECTED_ACCOUNTS_SETTING, {
+    Component: a.d,
     initialize: () => {
-        n.A.fetch();
+        i.A.fetch();
     },
     useSearchTerms: () => [
-        a.intl.string(a.t["+/hZM/"]),
-        a.intl.string(a.t.bsbMVz),
-        a.intl.string(a.t.f7yOAX),
-        a.intl.string(a.t.FYKGsL),
-        a.intl.string(a.t["+KCMSi"]),
+        r.intl.string(r.t["+/hZM/"]),
+        r.intl.string(r.t.bsbMVz),
+        r.intl.string(r.t.f7yOAX),
+        r.intl.string(r.t.FYKGsL),
+        r.intl.string(r.t["+KCMSi"]),
     ],
 });
