@@ -121,7 +121,12 @@ var r = n(852015),
         );
     })({}),
     I = (function (e) {
-        return (e[(e.SOURCE_UNSPECIFIED = 0)] = "SOURCE_UNSPECIFIED"), (e[(e.SOURCE_NITRO = 1)] = "SOURCE_NITRO"), e;
+        return (
+            (e[(e.SOURCE_UNSPECIFIED = 0)] = "SOURCE_UNSPECIFIED"),
+            (e[(e.SOURCE_NITRO = 1)] = "SOURCE_NITRO"),
+            (e[(e.SOURCE_THIRDPARTY_CROISSANT = 2)] = "SOURCE_THIRDPARTY_CROISSANT"),
+            e
+        );
     })({});
 class T extends a.G {
     constructor() {
