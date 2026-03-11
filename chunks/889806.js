@@ -100,9 +100,7 @@ class k extends L.Ay {
         let { channel: t } = this.props;
         if (t.type === U.rbe.GROUP_DM)
             return void (0, u.L3)(e, async () => {
-                let { default: e } = await Promise.all([n.e("97262"), n.e("60200"), n.e("21351")]).then(
-                    n.bind(n, 4027),
-                );
+                let { default: e } = await Promise.all([n.e("97262"), n.e("60200")]).then(n.bind(n, 4027));
                 return (n) => (0, i.jsx)(e, { ...n, channel: t, selected: !0 });
             });
         if (t.type === U.rbe.DM) {
@@ -113,7 +111,7 @@ class k extends L.Ay {
                         n.e("97262"),
                         n.e("42128"),
                         n.e("39778"),
-                        n.e("35025"),
+                        n.e("60770"),
                     ]).then(n.bind(n, 385913));
                     return (n) => (0, i.jsx)(e, { ...n, user: s, channel: t, showModalItems: !1 });
                 });
@@ -157,29 +155,28 @@ class k extends L.Ay {
                 forceTopLevelThread: E,
                 embeddedApps: I,
                 resolvedUnreadSetting: N,
-                withGuildIcon: b,
-                enableActivities: S,
-                showMenuItemPopover: T,
-                markMenuItemPopoverAsDismissed: v,
-                channelItemRef: y,
+                enableActivities: b,
+                showMenuItemPopover: S,
+                markMenuItemPopoverAsDismissed: T,
+                channelItemRef: v,
             } = this.props,
-            j = y ?? this.channelItemRef,
-            R = !T && o,
-            O = !T && S && null != I && I.length > 0,
-            L = (0, _.M)(C),
-            M = (0, i.jsxs)("li", {
+            y = v ?? this.channelItemRef,
+            j = !S && o,
+            R = !S && b && null != I && I.length > 0,
+            O = (0, _.M)(C),
+            L = (0, i.jsxs)("li", {
                 className: a()(this.getClassName(), { [w.r9]: this.isDisabled(), [w.wH]: n }),
                 "data-dnd-name": e.name,
-                onMouseEnter: R || O ? this.handleMouseEnter : void 0,
-                onMouseLeave: R || O ? this.handleMouseLeave : void 0,
+                onMouseEnter: j || R ? this.handleMouseEnter : void 0,
+                onMouseLeave: j || R ? this.handleMouseLeave : void 0,
                 children: [
                     (0, i.jsx)(c.YNO, {
-                        targetElementRef: j,
+                        targetElementRef: y,
                         position: "right",
                         renderPopout: this.renderPopout,
                         onRequestClose: this.handleClosePopout,
                         spacing: 17,
-                        shouldShow: (R && this.state.shouldShowThreadsPopout) || (O && this.state.shouldShowActivities),
+                        shouldShow: (j && this.state.shouldShowThreadsPopout) || (R && this.state.shouldShowActivities),
                         children: () =>
                             (0, i.jsxs)(D.Ay, {
                                 ref: this.setChannelItemRef,
@@ -191,15 +188,14 @@ class k extends L.Ay {
                                 unread: l,
                                 mentionCount: d,
                                 hasActiveThreads: r,
-                                subtitle: L?.subtitle,
-                                subtitleColor: L?.color,
+                                subtitle: O?.subtitle,
+                                subtitleColor: O?.color,
                                 onMouseDown: this.handleMouseDown,
                                 onContextMenu: this.handleContextMenu,
                                 connectDragPreview: m ? A : null,
                                 isFavoriteSuggestion: f,
                                 channelTypeOverride: E ? U.rbe.GUILD_TEXT : void 0,
                                 resolvedUnreadSetting: N,
-                                withGuildIcon: b,
                                 "aria-label": (0, g.Ay)({
                                     channel: e,
                                     unread: l,
@@ -225,10 +221,10 @@ class k extends L.Ay {
                                 ],
                             }),
                     }),
-                    T && (0, i.jsx)(x.A, { targetElementRef: j, markMenuItemPopoverAsDismissed: v }),
+                    S && (0, i.jsx)(x.A, { targetElementRef: y, markMenuItemPopoverAsDismissed: T }),
                 ],
             });
-        return m ? u(h(M)) : M;
+        return m ? u(h(L)) : L;
     }
 }
 let V = (0, h.a)(k);

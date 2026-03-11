@@ -81,15 +81,13 @@ class R extends s.PureComponent {
             s = t.type === S.rbe.DM ? f.default.getUser(t.getRecipientId()) : null;
         null != s
             ? (0, c.L3)(e, async () => {
-                  let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("39778"), n.e("35025")]).then(
+                  let { default: e } = await Promise.all([n.e("97262"), n.e("42128"), n.e("39778"), n.e("60770")]).then(
                       n.bind(n, 385913),
                   );
                   return (n) => (0, i.jsx)(e, { ...n, channel: t, user: s });
               })
             : (0, c.L3)(e, async () => {
-                  let { default: e } = await Promise.all([n.e("97262"), n.e("60200"), n.e("21351")]).then(
-                      n.bind(n, 4027),
-                  );
+                  let { default: e } = await Promise.all([n.e("97262"), n.e("60200")]).then(n.bind(n, 4027));
                   return (n) => (0, i.jsx)(e, { ...n, channel: t, selected: !1 });
               });
     };

@@ -189,7 +189,7 @@ class F extends s.PureComponent {
                                 n.e("97262"),
                                 n.e("57287"),
                                 n.e("40394"),
-                                n.e("18159"),
+                                n.e("30997"),
                             ]).then(n.bind(n, 698193));
                             return (t) => (0, i.jsx)(e, { ...t, channel: s, guild: l, onSelect: y.jD });
                         });
@@ -214,9 +214,7 @@ class F extends s.PureComponent {
                 break;
             case m.rD.GROUP_DM:
                 return (0, u.L3)(e, async () => {
-                    let { default: e } = await Promise.all([n.e("97262"), n.e("60200"), n.e("21351")]).then(
-                        n.bind(n, 4027),
-                    );
+                    let { default: e } = await Promise.all([n.e("97262"), n.e("60200")]).then(n.bind(n, 4027));
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,
@@ -227,7 +225,7 @@ class F extends s.PureComponent {
                 });
             case m.rD.USER:
                 return (0, u.L3)(e, async () => {
-                    let { default: e } = await Promise.all([n.e("97262"), n.e("32418"), n.e("22252")]).then(
+                    let { default: e } = await Promise.all([n.e("97262"), n.e("32418"), n.e("47969")]).then(
                         n.bind(n, 668569),
                     );
                     return (n) => (0, i.jsx)(e, { ...n, user: t.record, onSelect: y.jD });
