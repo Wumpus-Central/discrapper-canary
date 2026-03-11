@@ -1,32 +1,34 @@
 "use strict";
 n.r(t),
     n.d(t, {
-        USER_SETTINGS_MODAL_KEY: () => _,
-        getUserSettingsSectionsByWebUserSettings: () => E,
-        getWebUserSettingsByUserSettingsSections: () => m,
-        openUserSettings: () => f,
-        openUserSettingsFromParsedUrl: () => g,
+        USER_SETTINGS_MODAL_KEY: () => p,
+        getUserSettingsSectionsByWebUserSettings: () => A,
+        getWebUserSettingsByUserSettingsSections: () => g,
+        openUserSettings: () => h,
+        openUserSettingsFromParsedUrl: () => I,
     });
 var r = n(627968),
     i = n(397927),
     s = n(73153),
-    a = n(272053),
-    o = n(954571),
-    l = n(780964),
-    u = n(358776),
-    c = n(995377),
-    d = n(652215);
-let _ = "USER_SETTINGS_MODAL_MODAL_KEY";
-async function f(e) {
+    a = n(790284),
+    o = n(272053),
+    l = n(954571),
+    u = n(780964),
+    c = n(358776),
+    d = n(995377),
+    _ = n(355097),
+    f = n(652215);
+let p = "USER_SETTINGS_MODAL_MODAL_KEY";
+async function h(e) {
     let {
             subsection: t,
-            stackingBehavior: o = "replaceAll",
+            stackingBehavior: a = "replaceAll",
             ...l
-        } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { section: d.nc_.ACCOUNT },
+        } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { section: f.nc_.ACCOUNT },
         u = arguments.length > 2 ? arguments[2] : void 0;
-    if ((s.h.dispatch({ type: "USER_SETTINGS_MODAL_OPEN", subsection: t ?? null, ...l }), (0, c.f)())) {
+    if ((s.h.dispatch({ type: "USER_SETTINGS_MODAL_OPEN", subsection: t ?? null, ...l }), (0, d.f)())) {
         if (null == e) return;
-        a.A.navigate(e);
+        o.A.navigate(e);
     } else
         await (0, i.mMO)(
             async () => {
@@ -81,84 +83,87 @@ async function f(e) {
                 ]).then(n.bind(n, 796150));
                 return (n) => (0, r.jsx)(t, { ...n, target: e });
             },
-            { modalKey: _, stackingBehavior: o, stackNextByDefault: !0, contextKey: i.SYi },
+            { modalKey: p, stackingBehavior: a, stackNextByDefault: !0, contextKey: i.SYi },
         );
     u?.();
 }
-function p(e) {
+function m(e) {
     let { section: t, subsection: n, urlOrigin: r } = e;
-    o.default.track(d.HAw.USER_SETTINGS_URL_PARSED, {
+    l.default.track(f.HAw.USER_SETTINGS_URL_PARSED, {
         user_settings_section: t,
         user_settings_subsection: n,
         user_settings_url_origin: r,
     });
 }
-function h(e) {
+function E(e) {
     let { section: t, subsection: n, urlOrigin: r } = e;
-    o.default.track(d.HAw.USER_SETTINGS_URL_PARSING_FAILED, {
+    l.default.track(f.HAw.USER_SETTINGS_URL_PARSING_FAILED, {
         user_settings_section: t,
         user_settings_subsection: n,
         user_settings_url_origin: r,
     });
 }
-function m() {
-    let e = (0, u.Ci)("getWebUserSettingFromSection");
+function g() {
+    let e = (0, c.Ci)("getWebUserSettingFromSection");
     return new Map([
-        [d.nc_.ACCOUNT, l.X.ACCOUNT_PANEL],
-        [d.nc_.PROFILE_CUSTOMIZATION, l.X.PROFILE_PANEL],
-        [d.nc_.CONTENT_AND_SOCIAL, l.X.CONTENT_AND_SOCIAL_PANEL],
-        [d.nc_.DATA_AND_PRIVACY, l.X.DATA_AND_PRIVACY_PANEL],
-        [d.nc_.PRIVACY_AND_SAFETY, l.X.DATA_AND_PRIVACY_PANEL],
-        [d.nc_.FAMILY_CENTER, l.X.FAMILY_CENTER_PANEL],
-        [d.nc_.SESSIONS, l.X.SESSIONS_PANEL],
-        [d.nc_.AUTHORIZED_APPS, l.X.AUTHORIZED_APPS_PANEL],
-        [d.nc_.CONNECTIONS, l.X.CONNECTIONS_PANEL],
-        [d.nc_.CLIPS, l.X.CLIPS_PANEL],
-        [d.nc_.PREMIUM, l.X.NITRO_PANEL],
-        [d.nc_.GUILD_BOOSTING, l.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL],
-        [d.nc_.SUBSCRIPTIONS, l.X.SUBSCRIPTIONS_PANEL],
-        [d.nc_.INVENTORY, l.X.GIFT_PANEL],
-        [d.nc_.BILLING, l.X.BILLING_PANEL],
-        [d.nc_.APPEARANCE, e ? l.X.DISPLAY_PANEL : l.X.APPEARANCE_PANEL],
-        [d.nc_.ACCESSIBILITY, l.X.ACCESSIBILITY_PANEL],
-        [d.nc_.VOICE, l.X.VOICE_AND_VIDEO_PANEL],
-        [d.nc_.POGGERMODE, l.X.POGGERMODE_PANEL],
-        [d.nc_.TEXT, e ? l.X.DISPLAY_MESSAGES_CATEGORY : l.X.CHAT_PANEL],
-        [d.nc_.NOTIFICATIONS, l.X.NOTIFICATIONS_PANEL],
-        [d.nc_.KEYBINDS, l.X.KEYBINDS_PANEL],
-        [d.nc_.LANGUAGE, l.X.LANGUAGE_AND_TIME_PANEL],
-        [d.nc_.WINDOWS, e ? l.X.ADVANCED_CATEGORY : l.X.WINDOWS_PANEL],
-        [d.nc_.LINUX, e ? l.X.ADVANCED_CATEGORY : l.X.LINUX_PANEL],
-        [d.nc_.STREAMER_MODE, e ? l.X.STREAMER_MODE_CATEGORY : l.X.STREAMER_MODE_PANEL],
-        [d.nc_.ADVANCED, e ? l.X.DEVELOPER_PANEL : l.X.ADVANCED_PANEL],
-        [d.nc_.ACTIVITY_PRIVACY, l.X.ACTIVITY_PRIVACY_PANEL],
-        [d.nc_.REGISTERED_GAMES, l.X.REGISTERED_GAMES_PANEL],
-        [d.nc_.OVERLAY, l.X.OVERLAY_PANEL],
-        [d.nc_.EXPERIMENTS, l.X.EXPERIMENTS_PANEL],
-        [d.nc_.DEVELOPER_OPTIONS, l.X.DEVELOPER_OPTIONS_PANEL],
-        [d.nc_.ACCOUNT_STANDING, l.X.ACCOUNT_STANDING_CATEGORY],
-        [d.nc_.CONNECTED_GAMES, l.X.CONTENT_AND_SOCIAL_CONNECTED_GAMES_CATEGORY],
-        [d.nc_.EMAILS, l.X.NOTIFICATIONS_EMAIL_CATEGORY],
+        [f.nc_.ACCOUNT, u.X.ACCOUNT_PANEL],
+        [f.nc_.PROFILE_CUSTOMIZATION, u.X.PROFILE_PANEL],
+        [f.nc_.CONTENT_AND_SOCIAL, u.X.CONTENT_AND_SOCIAL_PANEL],
+        [f.nc_.DATA_AND_PRIVACY, u.X.DATA_AND_PRIVACY_PANEL],
+        [f.nc_.PRIVACY_AND_SAFETY, u.X.DATA_AND_PRIVACY_PANEL],
+        [f.nc_.FAMILY_CENTER, u.X.FAMILY_CENTER_PANEL],
+        [f.nc_.SESSIONS, u.X.SESSIONS_PANEL],
+        [f.nc_.AUTHORIZED_APPS, u.X.AUTHORIZED_APPS_PANEL],
+        [f.nc_.CONNECTIONS, u.X.CONNECTIONS_PANEL],
+        [f.nc_.CLIPS, u.X.CLIPS_PANEL],
+        [f.nc_.PREMIUM, u.X.NITRO_PANEL],
+        [f.nc_.GUILD_BOOSTING, u.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL],
+        [f.nc_.SUBSCRIPTIONS, u.X.SUBSCRIPTIONS_PANEL],
+        [f.nc_.INVENTORY, u.X.GIFT_PANEL],
+        [f.nc_.BILLING, u.X.BILLING_PANEL],
+        [f.nc_.APPEARANCE, e ? u.X.DISPLAY_PANEL : u.X.APPEARANCE_PANEL],
+        [f.nc_.ACCESSIBILITY, u.X.ACCESSIBILITY_PANEL],
+        [f.nc_.VOICE, u.X.VOICE_AND_VIDEO_PANEL],
+        [f.nc_.POGGERMODE, u.X.POGGERMODE_PANEL],
+        [f.nc_.TEXT, e ? u.X.DISPLAY_MESSAGES_CATEGORY : u.X.CHAT_PANEL],
+        [f.nc_.NOTIFICATIONS, u.X.NOTIFICATIONS_PANEL],
+        [f.nc_.KEYBINDS, u.X.KEYBINDS_PANEL],
+        [f.nc_.LANGUAGE, u.X.LANGUAGE_AND_TIME_PANEL],
+        [f.nc_.WINDOWS, e ? u.X.ADVANCED_CATEGORY : u.X.WINDOWS_PANEL],
+        [f.nc_.LINUX, e ? u.X.ADVANCED_CATEGORY : u.X.LINUX_PANEL],
+        [f.nc_.STREAMER_MODE, e ? u.X.STREAMER_MODE_CATEGORY : u.X.STREAMER_MODE_PANEL],
+        [f.nc_.ADVANCED, e ? u.X.DEVELOPER_PANEL : u.X.ADVANCED_PANEL],
+        [f.nc_.ACTIVITY_PRIVACY, u.X.ACTIVITY_PRIVACY_PANEL],
+        [f.nc_.REGISTERED_GAMES, u.X.REGISTERED_GAMES_PANEL],
+        [f.nc_.OVERLAY, u.X.OVERLAY_PANEL],
+        [f.nc_.EXPERIMENTS, u.X.EXPERIMENTS_PANEL],
+        [f.nc_.DEVELOPER_OPTIONS, u.X.DEVELOPER_OPTIONS_PANEL],
+        [f.nc_.ACCOUNT_STANDING, u.X.ACCOUNT_STANDING_CATEGORY],
+        [f.nc_.CONNECTED_GAMES, u.X.CONTENT_AND_SOCIAL_CONNECTED_GAMES_CATEGORY],
+        [f.nc_.EMAILS, u.X.NOTIFICATIONS_EMAIL_CATEGORY],
     ]);
 }
-function E() {
-    let e = m(),
+function A() {
+    let e = g(),
         t = new Map();
     for (let [n, r] of e.entries()) t.set(r, n);
     return t;
 }
-function g(e) {
+function I(e) {
     let { match: t, urlOrigin: n, analyticsLocations: r } = e;
-    p({ section: t.section, subsection: t.subsection, urlOrigin: n });
-    let i = m(),
+    m({ section: t.section, subsection: t.subsection, urlOrigin: n });
+    let i = g(),
         s = i.get(t.section);
     if (null == s) {
-        h({ section: t.section, subsection: t.subsection, urlOrigin: n }), f();
+        E({ section: t.section, subsection: t.subsection, urlOrigin: n }), h();
         return;
     }
-    f((null != t.subsection && "" !== t.subsection ? i.get(d.nc_[t.subsection]) : null) ?? s, {
-        section: t.section,
-        subsection: t.subsection,
-        analyticsLocations: r,
-    });
+    t.subsection === _.nR
+        ? (a.A.setState({ subsection: t.subsection }),
+          h(s, { section: t.section, subsection: t.subsection, analyticsLocations: r }))
+        : h((null != t.subsection && "" !== t.subsection ? i.get(f.nc_[t.subsection]) : null) ?? s, {
+              section: t.section,
+              subsection: t.subsection,
+              analyticsLocations: r,
+          });
 }

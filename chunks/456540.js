@@ -1,29 +1,31 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => A });
 var i = n(627968);
 n(64700);
 var r = n(397927),
+    l = n(790284),
     a = n(780964),
-    l = n(840065),
-    s = n(322092),
-    o = n(652215),
-    d = n(355097),
-    c = n(985018);
-function u(e) {
+    s = n(840065),
+    o = n(322092),
+    d = n(652215),
+    c = n(355097),
+    u = n(985018);
+function A(e) {
     let { subscription: t } = e;
     return null == t
         ? null
-        : t.status === o.Dmq.PAST_DUE
+        : t.status === d.Dmq.PAST_DUE
           ? (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(r.hKd, { size: 16 }),
-                    (0, i.jsx)(s.A, {
-                        message: c.intl.string(c.t.eSuJE2),
-                        ctaMessage: c.intl.string(c.t.RXsxqb),
+                    (0, i.jsx)(o.A, {
+                        message: u.intl.string(u.t.eSuJE2),
+                        ctaMessage: u.intl.string(u.t.RXsxqb),
                         onClick: () => {
-                            (0, l.openUserSettings)(a.X.SUBSCRIPTIONS_PANEL, {
-                                section: o.nc_.SUBSCRIPTIONS,
-                                subsection: d.nR,
-                            });
+                            l.A.setState({ subsection: c.nR }),
+                                (0, s.openUserSettings)(a.X.SUBSCRIPTIONS_PANEL, {
+                                    section: d.nc_.SUBSCRIPTIONS,
+                                    subsection: c.nR,
+                                });
                         },
                     }),
                 ],
