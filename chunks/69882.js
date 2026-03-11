@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ed: () => R, Pw: () => C, rg: () => w });
+n.d(t, { Ed: () => R, Pw: () => C, rg: () => M });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -18,9 +18,9 @@ var r = n(627968),
     g = n(147422),
     A = n(93159),
     I = n(270537),
-    T = n(523376),
+    T = n(756366),
     S = n(985018),
-    y = n(193010);
+    y = n(954848);
 let v = (e) => (0, r.jsx)(N, { ...e }),
     N = (e) => {
         let { unifiedStepProps: t } = e,
@@ -90,75 +90,77 @@ let v = (e) => (0, r.jsx)(N, { ...e }),
             [n, s, a, t],
         );
     },
-    w = (e) => {
+    w = (e) =>
+        i.useMemo(
+            () =>
+                null == e
+                    ? null
+                    : Array.isArray(e)
+                      ? 0 === e.length
+                          ? null
+                          : (0, r.jsx)(r.Fragment, { children: e.map((e) => b(e)) })
+                      : null != e
+                        ? b(e)
+                        : null,
+            [e],
+        ),
+    M = (e) => {
         let {
                 upperInlineNoticeProps: t,
-                upperInlineNoticeContent: n,
-                planSelectContent: s,
-                purchaseItemContent: a,
-                subscriptionDetailsContent: o,
-                isStepLoading: l,
-                paymentSelectContent: u,
-                invoiceSummaryContent: d,
-                promotionalNoticeContent: _,
-                legalContent: f,
-                invoiceTotalDueLabel: h = S.intl.string(T.default.R0cZsM),
-                invoiceTotalDueValue: m,
-                shouldShowGlobalNotices: g,
+                planSelectContent: n,
+                purchaseItemContent: s,
+                subscriptionDetailsContent: a,
+                isStepLoading: o,
+                paymentSelectContent: l,
+                invoiceSummaryContent: u,
+                promotionalNoticeContent: d,
+                legalContent: _,
+                invoiceTotalDueLabel: f = S.intl.string(T.default.R0cZsM),
+                invoiceTotalDueValue: h,
+                shouldShowGlobalNotices: m,
+                footerInlineNoticeProps: g,
                 className: v,
             } = e,
-            N = i.useMemo(
+            N = w(t),
+            C = w(g),
+            O = i.useMemo(
                 () =>
-                    null == t && null == n
-                        ? null
-                        : null != n
-                          ? n
-                          : Array.isArray(t)
-                            ? 0 === t.length
-                                ? null
-                                : (0, r.jsx)(r.Fragment, { children: t.map((e) => b(e)) })
-                            : null != t
-                              ? b(t)
-                              : null,
-                [t, n],
-            ),
-            C = i.useMemo(
-                () =>
-                    null != N || g
-                        ? g
+                    null != N || m
+                        ? m
                             ? null != N
                                 ? (0, r.jsx)(L, { children: N })
                                 : (0, r.jsx)(L, {})
                             : (0, r.jsx)("div", { className: y.dD, children: N })
                         : null,
-                [g, N],
+                [m, N],
             ),
-            O = i.useMemo(() => (0, p.Gn)(), []);
-        return l
+            b = i.useMemo(() => (0, p.Gn)(), []);
+        return o
             ? (0, r.jsx)(R, { className: v })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsxs)("div", {
                           className: v,
                           children: [
-                              C,
-                              s,
-                              null != s && null != a && (0, r.jsx)("div", { className: y.ls }),
+                              O,
+                              n,
+                              null != n && null != s && (0, r.jsx)("div", { className: y.ls }),
                               (0, r.jsx)(c.I, {}),
-                              a,
-                              null != o && (0, r.jsx)("div", { className: y.P3, children: o }),
+                              s,
+                              null != a && (0, r.jsx)("div", { className: y.P3, children: a }),
                               (0, r.jsxs)("div", {
                                   className: y.Jv,
-                                  children: [u, O ? (0, r.jsx)(A.Z4, { className: y.KX }) : null],
+                                  children: [l, b ? (0, r.jsx)(A.Z4, { className: y.KX }) : null],
                               }),
-                              null != d && (0, r.jsx)("div", { className: y.ZF, children: d }),
+                              null != u && (0, r.jsx)("div", { className: y.ZF, children: u }),
                           ],
                       }),
                       (0, r.jsxs)(E.bx, {
                           children: [
-                              null != h && (0, r.jsx)(I.Qf, { className: y.NR, label: h, value: m ?? "--" }),
-                              null != _ ? (0, r.jsx)("div", { className: y.uh, children: _ }) : null,
-                              f,
+                              null != f && (0, r.jsx)(I.Qf, { className: y.NR, label: f, value: h ?? "--" }),
+                              null != d ? (0, r.jsx)("div", { className: y.uh, children: d }) : null,
+                              _,
+                              null != C ? (0, r.jsx)("div", { className: y.Uu, children: C }) : null,
                           ],
                       }),
                   ],

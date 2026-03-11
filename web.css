@@ -44537,6 +44537,10 @@ screen and (max-width:485px) {
     margin-bottom: var(--space-12)
 }
 
+.footerInlineNoticeContainer_bb5449 {
+    margin-top: var(--space-12)
+}
+
 .paymentNote__56a21 {
     background-color: var(--modal-background);
     margin: 0;

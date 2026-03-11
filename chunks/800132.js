@@ -104,41 +104,43 @@ let v = (e) => e.name,
                 legalContent: o,
                 isGift: f,
                 giftRecipient: p,
-                checkoutUpperInlineNoticeProps: h,
+                upperInlineNoticeProps: h,
+                footerInlineNoticeProps: m,
             } = e,
-            { product: m, isSocialLayerGameItem: E } = (0, I.AO)({ sku: n }),
-            { unifiedInvoiceSummaryProps: y, priceText: v } = i.useMemo(
+            { product: E, isSocialLayerGameItem: y } = (0, I.AO)({ sku: n }),
+            { unifiedInvoiceSummaryProps: v, priceText: N } = i.useMemo(
                 () => D({ sku: n, skuPricePreview: s }),
                 [n, s],
             ),
-            N = i.useMemo(() => (null != y ? (0, r.jsx)(d.Vm, { ...y }) : null), [y]),
-            C = i.useMemo(
-                () => b({ sku: n, product: m, application: t, isSocialLayerGameItem: E, giftRecipient: p }),
-                [n, m, t, E, p],
+            C = i.useMemo(() => (null != v ? (0, r.jsx)(d.Vm, { ...v }) : null), [v]),
+            R = i.useMemo(
+                () => b({ sku: n, product: E, application: t, isSocialLayerGameItem: y, giftRecipient: p }),
+                [n, E, t, y, p],
             ),
-            [R, O] = i.useMemo(
+            [O, L] = i.useMemo(
                 () => [T.intl.string(S.default.Zxav97), null != s ? (0, g.$g)(s.amount, s.currency) : void 0],
                 [s],
             ),
-            L = i.useMemo(() => {
+            w = i.useMemo(() => {
                 let e = (0, A.PN)(s, { isGift: f });
                 return null != e ? (0, r.jsx)(l.J, { ...e }) : null;
             }, [s, f]),
-            { setCheckoutHeaderConfigs: w, checkoutHeaderConfigs: M } = (0, u.ck)();
+            { setCheckoutHeaderConfigs: M, checkoutHeaderConfigs: x } = (0, u.ck)();
         return (
             i.useEffect(() => {
-                null != L && null == M.headerBadgeText && w({ ...M, headerBadgeText: T.intl.string(S.default.Fjpyfj) });
-            }, [L, w, M]),
+                null != w && null == x.headerBadgeText && M({ ...x, headerBadgeText: T.intl.string(S.default.Fjpyfj) });
+            }, [w, M, x]),
             (0, r.jsx)(c.rg, {
                 shouldShowGlobalNotices: !0,
-                purchaseItemContent: (0, r.jsx)(_.f7, { ...C, price: v }),
-                invoiceSummaryContent: N,
+                purchaseItemContent: (0, r.jsx)(_.f7, { ...R, price: N }),
+                invoiceSummaryContent: C,
                 paymentSelectContent: a,
                 legalContent: o,
-                promotionalNoticeContent: L,
+                promotionalNoticeContent: w,
                 upperInlineNoticeProps: h,
-                invoiceTotalDueLabel: R,
-                invoiceTotalDueValue: O,
+                footerInlineNoticeProps: m,
+                invoiceTotalDueLabel: O,
+                invoiceTotalDueValue: L,
             })
         );
     };
@@ -169,15 +171,21 @@ function w(e) {
                     e.push({ type: "warning", message: E.testModeWarning, key: "test-mode-warning-notice" }),
                 null != E.devShelfError &&
                     e.push({ type: "critical", message: E.devShelfError, key: "dev-shelf-error-notice" }),
+                e.length > 0 ? e : null
+            );
+        }, [E.testModeWarning, E.devShelfError]),
+        T = i.useMemo(() => {
+            let e = [];
+            return (
                 null != E.socialLayerGameItemDisclaimer &&
                     e.push({
-                        type: "warning",
+                        type: "info",
                         message: E.socialLayerGameItemDisclaimer,
                         key: "social-layer-game-item-disclaimer-notice",
                     }),
                 e.length > 0 ? e : null
             );
-        }, [E.testModeWarning, E.devShelfError, E.socialLayerGameItemDisclaimer]);
+        }, [E.socialLayerGameItemDisclaimer]);
     return h
         ? (0, r.jsx)(c.Ed, {})
         : (0, r.jsx)(L, {
@@ -188,6 +196,7 @@ function w(e) {
               skuPricePreview: d,
               paymentSelectContent: g,
               legalContent: p,
-              checkoutUpperInlineNoticeProps: I,
+              upperInlineNoticeProps: I,
+              footerInlineNoticeProps: T,
           });
 }

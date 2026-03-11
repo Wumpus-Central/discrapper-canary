@@ -11,4 +11,5 @@ e.exports = {
     Je: "spinnerColor_bb5449",
     NR: "totalDueReviewStep_bb5449",
     uh: "promotionalNoticeContainer_bb5449",
+    Uu: "footerInlineNoticeContainer_bb5449",
 };
