@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { HF: () => d, IK: () => l, Ng: () => u, Qp: () => o, cV: () => c });
+n.d(t, { HF: () => c, Ng: () => l, Qp: () => o, cV: () => u });
 var r = n(627968);
 n(64700);
 var i = n(562465),
@@ -10,10 +10,7 @@ async function o(e) {
         await i.Bo.post({ url: a.Rsh.BILLING_GIFT_CARD_VIEW, body: { pin: e }, oldFormErrors: !0, rejectWithError: !1 })
     ).body;
 }
-async function l() {
-    return await Promise.resolve(), { country: "US", set_at: null, allowed_currencies: ["usd"] };
-}
-async function u(e, t, n) {
+async function l(e, t, n) {
     try {
         let r = await i.Bo.post({
             url: a.Rsh.BILLING_GIFT_CARD_REDEEM,
@@ -26,7 +23,7 @@ async function u(e, t, n) {
         throw e;
     }
 }
-function c(e) {
+function u(e) {
     let { amountRedeemed: t, currencyCode: i, loadId: a, onClose: o } = e;
     (0, s.mMO)(async () => {
         let { default: e } = await n.e("8818").then(n.bind(n, 544036));
@@ -42,7 +39,7 @@ function c(e) {
             });
     });
 }
-function d() {
+function c() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         {
             initialCode: t = "",

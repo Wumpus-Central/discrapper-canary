@@ -20942,8 +20942,8 @@ img.thumbnail__0f2e8 {
 }
 
 .user-profile-modal-v2 :where(.avatar__75742) {
-    inset-inline-start: 32px;
-    top: 80px
+    inset-block-start: calc(var(--custom-user-profile-banner-height) - var(--custom-user-profile-avatar-size)/2);
+    inset-inline-start: var(--custom-modal-profile-card-padding)
 }
 
 .user-profile-sidebar :where(.avatar__75742) {
@@ -21057,9 +21057,11 @@ img.thumbnail__0f2e8 {
 
 :root .user-profile-modal-v2 {
     --custom-user-profile-banner-height: 140px;
+    --custom-user-profile-avatar-size: 120px;
     --custom-modal-v2-padding: var(--space-48);
     --custom-modal-v2-gutter: var(--space-32);
-    --custom-modal-v2-tabpanel-scrollbar-offset: var(--space-16)
+    --custom-modal-v2-tabpanel-scrollbar-offset: var(--space-16);
+    --custom-modal-profile-card-padding: var(--space-32)
 }
 
 :root .user-profile-sidebar {
@@ -32237,8 +32239,9 @@ html:not(.chat-input) .inputInner_b1f01d {
 }
 
 .user-profile-modal-v2 .container_ab8609 {
-    inset-inline-start: 172px;
-    top: calc(var(--custom-user-profile-banner-height) - 8px)
+    inset-block-start: calc(var(--custom-user-profile-banner-height) - var(--space-8));
+    inset-inline-end: var(--space-16);
+    inset-inline-start: calc(var(--custom-modal-profile-card-padding) + var(--custom-user-profile-avatar-size) + var(--space-20))
 }
 
 .user-profile-sidebar .container_ab8609 {
@@ -32280,7 +32283,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .user-profile-modal-v2 .referenceContainer_ab8609 {
     margin-top: -10px;
-    margin-inline: 144px 12px
+    margin-inline: calc(var(--custom-modal-profile-card-padding) + var(--custom-user-profile-avatar-size) - var(--space-8)) 12px
 }
 
 .user-profile-modal-v2 .referenceContainer_ab8609.withLabel_ab8609 {
