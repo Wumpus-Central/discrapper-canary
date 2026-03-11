@@ -5,23 +5,23 @@ var n = s(627968),
     a = s(311907),
     r = s(732955),
     C = s(397927),
-    c = s(303136),
-    d = s(550111),
+    d = s(303136),
+    c = s(550111),
     L = s(287809),
     H = s(676279),
     M = s(659746),
     o = s(985018),
     u = s(537671),
-    g = s(42085),
-    h = s(49402),
-    p = s(27753);
+    g = s(472161),
+    h = s(573080),
+    p = s(780350);
 let N = (e) => {
-    let { type: t, text: s, buttonText: l, buttonLoading: N, hideClose: m, onClose: A } = e,
-        E = (0, a.bG)([L.default], () => {
+    let { type: t, text: s, buttonText: l, buttonLoading: N, hideClose: m, onClose: f } = e,
+        A = (0, a.bG)([L.default], () => {
             let e = L.default.getCurrentUser();
             return i()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e;
         }),
-        f = (0, H.TM)() ? g.A : h.A,
+        E = (0, H.TM)() ? g.A : p.A,
         _ = ((e) => {
             switch (e) {
                 case M.Or.PREMIUM_UPDATED:
@@ -39,16 +39,16 @@ let N = (e) => {
             (0, n.jsxs)("div", {
                 className: u.Dz,
                 children: [
-                    (0, n.jsx)(c.A, {
-                        fallbackImage: p.A,
-                        className: u.d9,
-                        children: (0, n.jsx)("source", { src: f }),
-                    }),
                     (0, n.jsx)(d.A, {
-                        user: E,
+                        fallbackImage: h.A,
+                        className: u.d9,
+                        children: (0, n.jsx)("source", { src: E }),
+                    }),
+                    (0, n.jsx)(c.A, {
+                        user: A,
                         isHighlighted: !0,
                         nameplate: null,
-                        nameplateData: E.nameplate,
+                        nameplateData: A.nameplate,
                         className: u.M4,
                         nameplatePreviewSize: "large",
                     }),
@@ -62,7 +62,7 @@ let N = (e) => {
                         variant: "expressive",
                         fullWidth: !0,
                         text: l,
-                        onClick: A,
+                        onClick: f,
                         loading: N,
                     }),
                 }),
