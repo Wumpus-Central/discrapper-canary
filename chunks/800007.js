@@ -1,25 +1,24 @@
 "use strict";
 n.d(t, {
     Ge: () => p,
-    HS: () => a,
+    HS: () => s,
     PH: () => _,
     ST: () => l,
     U$: () => u,
-    W5: () => g,
+    W5: () => m,
     XF: () => d,
     ZI: () => c,
-    ZN: () => s,
+    ZN: () => a,
     by: () => o,
     eh: () => h,
     q4: () => f,
-    yC: () => m,
 });
 var r = n(281445),
     i = n(115093),
-    a = (function (e) {
+    s = (function (e) {
         return (e.SELECT_GAME = "select-game"), (e.SERVER_SETTINGS = "server-settings"), e;
     })({});
-let s = {
+let a = {
         steps: {
             "select-game": { onBack: { type: "close" }, onNext: { type: "go-to-step", step: "server-settings" } },
             "server-settings": { onBack: { type: "go-to-step", step: "select-game" }, onNext: { type: "save" } },
@@ -45,5 +44,4 @@ let s = {
               : ["1", "2"];
 r.X.SHOCKBYTE, window.GLOBAL_ENV.RELEASE_CHANNEL, i.B.STAGING;
 let h = { [r.X.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy" },
-    m = (e, t) => `https://discord.sjc1.qualtrics.com/jfe/form/SV_2h34PnQLPTCjTTM?user_id=${e}&guild_id=${t}`,
-    g = "0";
+    m = "0";
