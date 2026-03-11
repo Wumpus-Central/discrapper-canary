@@ -45,24 +45,25 @@ function u(e) {
 function c(e) {
     let {
             label: t,
-            value: n,
-            color: o = "text-muted",
-            valueColor: u = "text-muted",
-            valueIcon: c,
-            icon: d,
-            tooltip: _,
-            tooltipAriaLabel: f,
-            subText: p,
-            subTextHasStrikethrough: h,
+            labelSubText: n,
+            value: o,
+            color: u = "text-muted",
+            valueColor: c = "text-muted",
+            valueIcon: d,
+            icon: _,
+            tooltip: f,
+            tooltipAriaLabel: p,
+            subText: h,
+            subTextHasStrikethrough: m,
         } = e,
-        m = i.useMemo(() => {
+        E = i.useMemo(() => {
             let e = (0, r.jsxs)(a.Text, {
                 variant: "text-md/normal",
-                color: u,
+                color: c,
                 className: l.U4,
-                children: [null != c && (0, r.jsx)(c, { size: "xs" }), n],
+                children: [null != d && (0, r.jsx)(d, { size: "xs" }), o],
             });
-            return null == p
+            return null == h
                 ? e
                 : (0, r.jsxs)("div", {
                       className: l.Lm,
@@ -71,27 +72,39 @@ function c(e) {
                           (0, r.jsx)(a.Text, {
                               variant: "text-xs/medium",
                               color: "text-muted",
-                              className: h ? l.tP : void 0,
-                              children: p,
+                              className: m ? l.tP : void 0,
+                              children: h,
                           }),
                       ],
                   });
-        }, [n, c, p, h, u]);
+        }, [o, d, h, m, c]),
+        g = i.useMemo(
+            () =>
+                null == n
+                    ? t
+                    : (0, r.jsxs)("div", {
+                          children: [
+                              t,
+                              (0, r.jsx)(a.Text, { variant: "text-xs/normal", color: "text-subtle", children: n }),
+                          ],
+                      }),
+            [t, n],
+        );
     return (0, r.jsxs)("div", {
         className: l.Yn,
         children: [
             (0, r.jsxs)(a.Text, {
                 variant: "text-md/normal",
-                color: o,
+                color: u,
                 className: l.yB,
                 children: [
-                    d,
-                    t,
-                    null != _ &&
-                        (0, r.jsx)(s.m_, { text: _, children: (0, r.jsx)(a.cBN, { size: "xs", "aria-label": f }) }),
+                    _,
+                    g,
+                    null != f &&
+                        (0, r.jsx)(s.m_, { text: f, children: (0, r.jsx)(a.cBN, { size: "xs", "aria-label": p }) }),
                 ],
             }),
-            m,
+            E,
         ],
     });
 }

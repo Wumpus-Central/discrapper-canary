@@ -14,7 +14,7 @@ var r = n(284009),
     f = n(580630),
     p = n(788868),
     h = n(985018),
-    m = n(523376);
+    m = n(756366);
 let E = (e) => h.intl.format(m.default.U2CmMW, { priceAmount: (0, f.$g)(0, e) }),
     g = (e, t, n) => ({ id: e.discount_id ?? t, label: n, amount: -e.amount }),
     A = (e) => {
@@ -200,8 +200,9 @@ let E = (e) => h.intl.format(m.default.U2CmMW, { priceAmount: (0, f.$g)(0, e) })
                 intervalType: u,
                 intervalCount: c,
                 currency: d,
-                label: h.intl.format(m.default["57B1ks"], { renewalDate: g }),
+                label: h.intl.string(m.default.GGn3pp),
                 totalLineItemLabel: N(u, c),
+                totalLineItemLabelSubText: h.intl.format(m.default.MR4VnX, { renewalDate: g }),
             }
         );
     },
