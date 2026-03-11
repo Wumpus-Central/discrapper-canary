@@ -1,0 +1,3 @@
+a.exports = JSON.parse(
+    '{"xKXcSu":["Adaugă la favorite"],"Rp35U1":["Adaugă la favorite"],"G9fGlP":["Adaugă la favorite"],"CgmkFJ":["Favorite"],"yYVbdv":["Deblochează cu Nitro"],"6kk0gM":["Adaugă la favorite"],"3KruG3":["Mergi la server"],"9jWMQ9":["Am \xeențeles"],"GCCs6j":["O, nu!"],"OXC/Du":["Adăugat la favorite"],"0nZZEk":["Ia-ți Nitro"],"0lHa0Z":["Adaugă la favorite"],"avps/2":["Ia-ți Nitro"],"+h9aza":["Am \xeențeles"],"25YCHl":["Adaugă la favorite"],"TN4nAX":["Elimină din favorite"],"4XlAQd":["Favorite"],"20sYUU":["Ia-ți Nitro"],"7WwLnr":["Previzualizare"],"OT1NK5":["Favorite"]}',
+);

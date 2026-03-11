@@ -1,0 +1,3 @@
+o.exports = JSON.parse(
+    '{"xKXcSu":["Dodaj do ulubionych"],"Rp35U1":["Dodaj do ulubionych"],"G9fGlP":["Dodaj do ulubionych"],"CgmkFJ":["Ulubione"],"yYVbdv":["Odblokuj dzięki Nitro"],"6kk0gM":["Dodaj do ulubionych"],"3KruG3":["Przejdź do serwera"],"9jWMQ9":["Zrozumiano"],"GCCs6j":["O, nie!"],"OXC/Du":["Dodano do ulubionych"],"0nZZEk":["Zdobądź Nitro"],"0lHa0Z":["Dodaj do ulubionych"],"avps/2":["Zdobądź Nitro"],"+h9aza":["Zrozumiano"],"25YCHl":["Dodaj do ulubionych"],"TN4nAX":["Usuń z ulubionych"],"4XlAQd":["Ulubione"],"20sYUU":["Zdobądź Nitro"],"7WwLnr":["Podgląd"],"OT1NK5":["Ulubione"]}',
+);

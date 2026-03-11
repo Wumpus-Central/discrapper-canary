@@ -1,0 +1,3 @@
+h.exports = JSON.parse(
+    '{"xKXcSu":["Th\xeam v\xe0o Ưa th\xedch"],"Rp35U1":["Th\xeam v\xe0o Ưa th\xedch"],"G9fGlP":["Th\xeam v\xe0o Ưa th\xedch"],"CgmkFJ":["Ưa th\xedch"],"yYVbdv":["Mở kh\xf3a với Nitro"],"6kk0gM":["Th\xeam v\xe0o Ưa th\xedch"],"3KruG3":["Đi tới m\xe1y chủ"],"9jWMQ9":["Đ\xe3 hiểu"],"GCCs6j":["\xd4i kh\xf4ng!"],"OXC/Du":["Đ\xe3 th\xeam v\xe0o Ưa th\xedch"],"0nZZEk":["Nhận Nitro"],"0lHa0Z":["Th\xeam v\xe0o Ưa th\xedch"],"avps/2":["Nhận Nitro"],"+h9aza":["Đ\xe3 hiểu"],"25YCHl":["Th\xeam v\xe0o Ưa th\xedch"],"TN4nAX":["X\xf3a khỏi Ưa th\xedch"],"4XlAQd":["Ưa th\xedch"],"20sYUU":["Nhận Nitro"],"7WwLnr":["Xem trước"],"OT1NK5":["Ưa th\xedch"]}',
+);

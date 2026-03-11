@@ -1,0 +1,3 @@
+r.exports = JSON.parse(
+    '{"xKXcSu":["L\xe4gg till i Favoriter"],"Rp35U1":["L\xe4gg till i Favoriter"],"G9fGlP":["L\xe4gg till i Favoriter"],"CgmkFJ":["Favoriter"],"yYVbdv":["L\xe5s upp med Nitro"],"6kk0gM":["L\xe4gg till i Favoriter"],"3KruG3":["G\xe5 till servern"],"9jWMQ9":["Jag f\xf6rst\xe5r"],"GCCs6j":["\xc5h nej!"],"OXC/Du":["Tillagd i Favoriter"],"0nZZEk":["Skaffa Nitro"],"0lHa0Z":["L\xe4gg till i Favoriter"],"avps/2":["Skaffa Nitro"],"+h9aza":["Jag f\xf6rst\xe5r"],"25YCHl":["L\xe4gg till i Favoriter"],"TN4nAX":["Ta bort fr\xe5n Favoriter"],"4XlAQd":["Favoriter"],"20sYUU":["Skaffa Nitro"],"7WwLnr":["F\xf6rhandsgranska"],"OT1NK5":["Favoriter"]}',
+);

@@ -1,0 +1,3 @@
+o.exports = JSON.parse(
+    '{"xKXcSu":["Přidat do obl\xedben\xfdch"],"Rp35U1":["Přidat do obl\xedben\xfdch"],"G9fGlP":["Přidat do obl\xedben\xfdch"],"CgmkFJ":["Obl\xedben\xe9"],"yYVbdv":["Odemknout s Nitrem"],"6kk0gM":["Přidat do obl\xedben\xfdch"],"3KruG3":["Přej\xedt na server"],"9jWMQ9":["Rozum\xedm"],"GCCs6j":["Ale ne!"],"OXC/Du":["Přid\xe1no do obl\xedben\xfdch"],"0nZZEk":["Poř\xeddit Nitro"],"0lHa0Z":["Přidat do obl\xedben\xfdch"],"avps/2":["Poř\xeddit Nitro"],"+h9aza":["Rozum\xedm"],"25YCHl":["Přidat do obl\xedben\xfdch"],"TN4nAX":["Odebrat z obl\xedben\xfdch"],"4XlAQd":["Obl\xedben\xe9"],"20sYUU":["Poř\xeddit Nitro"],"7WwLnr":["N\xe1hled"],"OT1NK5":["Obl\xedben\xe9"]}',
+);

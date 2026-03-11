@@ -1,0 +1,3 @@
+i.exports = JSON.parse(
+    '{"xKXcSu":["Pridėti į mėgstamiausius"],"Rp35U1":["Pridėti į mėgstamiausius"],"G9fGlP":["Pridėti į mėgstamiausius"],"CgmkFJ":["Mėgstamiausi"],"yYVbdv":["Gauk su Nitro"],"6kk0gM":["Pridėti į mėgstamiausius"],"3KruG3":["Eiti į serverį"],"9jWMQ9":["Supratau"],"GCCs6j":["O ne!"],"OXC/Du":["Pridėta į mėgstamiausius"],"0nZZEk":["Įsigyk Nitro"],"0lHa0Z":["Pridėti į mėgstamiausius"],"avps/2":["Įsigyk Nitro"],"+h9aza":["Supratau"],"25YCHl":["Pridėti į mėgstamiausius"],"TN4nAX":["Pašalinti iš mėgstamiausių"],"4XlAQd":["Mėgstamiausi"],"20sYUU":["Įsigyk Nitro"],"7WwLnr":["Peržiūra"],"OT1NK5":["Mėgstamiausi"]}',
+);

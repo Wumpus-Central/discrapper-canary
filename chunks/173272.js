@@ -1,0 +1,3 @@
+i.exports = JSON.parse(
+    '{"xKXcSu":["Lis\xe4\xe4 suosikkeihin"],"Rp35U1":["Lis\xe4\xe4 suosikkeihin"],"G9fGlP":["Lis\xe4\xe4 suosikkeihin"],"CgmkFJ":["Suosikit"],"yYVbdv":["Avaa Nitrolla"],"6kk0gM":["Lis\xe4\xe4 suosikkeihin"],"3KruG3":["Siirry palvelimelle"],"9jWMQ9":["Selv\xe4"],"GCCs6j":["Oi ei!"],"OXC/Du":["Lis\xe4tty suosikkeihin"],"0nZZEk":["Hanki Nitro"],"0lHa0Z":["Lis\xe4\xe4 suosikkeihin"],"avps/2":["Hanki Nitro"],"+h9aza":["Selv\xe4"],"25YCHl":["Lis\xe4\xe4 suosikkeihin"],"TN4nAX":["Poista suosikeista"],"4XlAQd":["Suosikit"],"20sYUU":["Hanki Nitro"],"7WwLnr":["Esikatselu"],"OT1NK5":["Suosikit"]}',
+);

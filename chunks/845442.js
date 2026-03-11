@@ -1,0 +1,3 @@
+e.exports = JSON.parse(
+    '{"xKXcSu":["Hozz\xe1ad\xe1s a kedvencekhez"],"Rp35U1":["Hozz\xe1ad\xe1s a kedvencekhez"],"G9fGlP":["Hozz\xe1ad\xe1s a kedvencekhez"],"CgmkFJ":["Kedvencek"],"yYVbdv":["Felold\xe1s Nitr\xf3val"],"6kk0gM":["Hozz\xe1ad\xe1s a kedvencekhez"],"3KruG3":["Ugr\xe1s a szerverre"],"9jWMQ9":["Meg\xe9rtettem"],"GCCs6j":["Jaj, ne!"],"OXC/Du":["Kedvencekhez hozz\xe1adva"],"0nZZEk":["Nitro-előfizet\xe9s"],"0lHa0Z":["Hozz\xe1ad\xe1s a kedvencekhez"],"avps/2":["Nitro-előfizet\xe9s"],"+h9aza":["Meg\xe9rtettem"],"25YCHl":["Hozz\xe1ad\xe1s a kedvencekhez"],"TN4nAX":["Elt\xe1vol\xedt\xe1s a kedvencekből"],"4XlAQd":["Kedvencek"],"20sYUU":["Nitro-előfizet\xe9s"],"7WwLnr":["Előn\xe9zet"],"OT1NK5":["Kedvencek"]}',
+);
