@@ -25,14 +25,14 @@ var i = n(503698),
     v = n(607567),
     N = n(92240),
     C = n(257367),
-    b = n(939496),
-    R = n(584904),
-    O = n(351638),
+    R = n(939496),
+    O = n(584904),
+    b = n(351638),
     D = n(316770),
     L = n(910607),
     w = n(70963),
-    x = n(8738),
-    M = n(652215),
+    M = n(8738),
+    x = n(652215),
     P = n(996988),
     k = n(985018),
     U = n(380297),
@@ -41,10 +41,10 @@ var i = n(503698),
     V = n(181147);
 function B(e) {
     let { user: t, currentUser: n, stream: i, className: B, onClose: H } = e,
-        { themeType: j, theme: Y } = (0, b.E)(),
+        { themeType: j, theme: Y } = (0, R.E)(),
         W = (0, a.bG)([T.A], () => T.A.getGuild(i?.guildId)),
         K = (0, a.bG)([I.A], () => I.A.getChannel(i?.channelId)),
-        z = (0, a.yK)([v.Ay], () =>
+        $ = (0, a.yK)([v.Ay], () =>
             null != K
                 ? v.Ay.getVoiceStatesForChannel(K).map((e) => {
                       let { user: t } = e;
@@ -52,14 +52,14 @@ function B(e) {
                   })
                 : [],
         ),
-        $ = (0, a.bG)([y.A], () => y.A.findActivity(t.id, (e) => (0, _.A)(e) && !(0, f.A)(e))),
+        z = (0, a.bG)([y.A], () => y.A.findActivity(t.id, (e) => (0, _.A)(e) && !(0, f.A)(e))),
         { analyticsLocations: q } = (0, m.Ay)(h.A.USER_PROFILE_LIVE_ACTIVITY_CARD),
         Z = (0, N.A)({ display: "live", voiceChannelId: K?.id, user: t, stream: i, analyticsLocations: q }),
         X = (0, C.A)({ userId: t.id, onAction: Z }),
         { previewUrl: Q, isLoading: J } = (0, g.A)(i?.guildId, i?.channelId, i?.ownerId),
         [ee, et] = (0, A.zP)(K),
         en = (0, p.a9)() && (0, p.UK)(K?.id),
-        er = (0, a.bG)([S.A], () => null != K && !en && S.A.canBasicChannel(M.hVb.CONNECT, K)),
+        er = (0, a.bG)([S.A], () => null != K && !en && S.A.canBasicChannel(x.hVb.CONNECT, K)),
         ei = (0, d.A)(J ? null : Q),
         es = J || null == Q ? ei : Q;
     if (null == W || null == K || !1 === i.discoverable) return null;
@@ -78,7 +78,7 @@ function B(e) {
                         "aria-label": (0, A.CQ)(et),
                         "aria-disabled": !ee,
                         children: [
-                            (0, r.jsx)("img", { alt: "", src: Y === M.NJ8.LIGHT ? V : F }),
+                            (0, r.jsx)("img", { alt: "", src: Y === x.NJ8.LIGHT ? V : F }),
                             j !== P.d.MODAL &&
                                 j !== P.d.MODAL_V2 &&
                                 (0, r.jsxs)(r.Fragment, {
@@ -128,7 +128,7 @@ function B(e) {
                       children: [
                           (0, r.jsx)(D.A, { channel: K, guild: W, onAction: Z, onClose: H }),
                           (0, r.jsx)(o.A, {
-                              users: z,
+                              users: $,
                               guildId: W.id,
                               channelId: K.id,
                               maxUsers: L.k,
@@ -153,22 +153,22 @@ function B(e) {
                 ? null
                 : (0, r.jsx)("div", {
                       className: U.o1,
-                      children: (0, r.jsx)(w.A, { channel: K, onAction: Z, onClose: H }),
+                      children: (0, r.jsx)(w.Ay, { channel: K, onAction: Z, onClose: H }),
                   }),
-        ec = null != $ ? k.intl.formatToPlainString(k.t["4CQq9Q"], { name: $.name }) : k.intl.string(k.t["Jpkr/q"]);
+        ec = null != z ? k.intl.formatToPlainString(k.t["4CQq9Q"], { name: z.name }) : k.intl.string(k.t["Jpkr/q"]);
     return (0, r.jsx)(m.f5, {
         value: q,
-        children: (0, r.jsxs)(R.A, {
+        children: (0, r.jsxs)(O.A, {
             ref: X,
             className: B,
             onAction: Z,
             onClose: H,
             "aria-label": ec,
             children: [
-                (0, r.jsx)(O.A, {
+                (0, r.jsx)(b.A, {
                     text: ec,
                     tags: (0, r.jsx)(E.Ay, { size: E.ed.SMALL }),
-                    contextMenu: (0, r.jsx)(x.A, { display: "live", user: t, onClose: H }),
+                    contextMenu: (0, r.jsx)(M.A, { display: "live", user: t, onClose: H }),
                 }),
                 (0, r.jsxs)("div", {
                     className: U.rf,
