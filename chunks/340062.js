@@ -7,7 +7,7 @@ var r = n(627968),
     o = n(928658),
     l = n(239211),
     u = n(985018),
-    c = n(888897);
+    c = n(390472);
 let d = (e) => {
         let { appRecord: t, closePopout: n, selectedGuildId: i, selectedChannelId: l, children: c = null } = e,
             d = (0, a.A)({ id: t.id, label: u.intl.string(u.t["+NP/b2"]) });

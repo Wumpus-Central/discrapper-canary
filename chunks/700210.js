@@ -1,73 +1,73 @@
 "use strict";
-n.d(t, { A: () => E }), n(321073);
+n.d(t, { A: () => g }), n(321073);
 var r = n(627968),
     i = n(64700),
-    a = n(311907),
-    s = n(397927),
+    s = n(311907),
+    a = n(397927),
     o = n(282956),
     l = n(264322),
     u = n(997509),
     c = n(780964),
-    d = n(891912),
+    d = n(630457),
     _ = n(840065),
     f = n(546183),
     p = n(71393),
     h = n(576705),
     m = n(652215),
-    g = n(985018);
-function E(e) {
-    let { user: t, application: E, guildId: A, context: I, onItemClick: T } = e,
-        y = E?.id ?? t?.id,
-        S = p.A.getGuild(A),
-        v = (0, a.bG)([h.A], () => (null != S ? h.A.can(m.xBc.MANAGE_GUILD, S) : null)),
+    E = n(985018);
+function g(e) {
+    let { user: t, application: g, guildId: A, context: I, onItemClick: T } = e,
+        S = g?.id ?? t?.id,
+        y = p.A.getGuild(A),
+        v = (0, s.bG)([h.A], () => (null != y ? h.A.can(m.xBc.MANAGE_GUILD, y) : null)),
+        N = !0,
         C = !0,
-        b = !0,
-        N = (0, l.ON)(A, b),
-        R = (0, l.A4)(C, b),
-        O = (0, a.bG)([f.default], () => null != f.default.getNewestTokenForApplication(y)),
+        R = (0, l.ON)(A, C),
+        O = (0, l.A4)(N, C),
+        b = (0, s.bG)([f.default], () => null != f.default.getNewestTokenForApplication(S)),
         { isUserApp: D, isGuildApp: L } = i.useMemo(() => {
-            if (null == y) return { isGuildApp: !1, isUserApp: !1 };
-            let e = Object.values(N.result?.sections ?? {}),
-                t = Object.values(R.result?.sections ?? {});
+            if (null == S) return { isGuildApp: !1, isUserApp: !1 };
+            let e = Object.values(R.result?.sections ?? {}),
+                t = Object.values(O.result?.sections ?? {});
             return {
-                isGuildApp: e.some((e) => e.descriptor.application?.id === y),
-                isUserApp: t.some((e) => e.descriptor.application?.id === y),
+                isGuildApp: e.some((e) => e.descriptor.application?.id === S),
+                isUserApp: t.some((e) => e.descriptor.application?.id === S),
             };
-        }, [N, R, y]);
+        }, [R, O, S]);
     i.useEffect(() => {
         n(53656);
     }, []);
     let w = i.useCallback(() => {
-            S?.id != null && (u.A.open(S.id, m.BEX.INTEGRATIONS), o.A.setSection(m.wLn.APPLICATION, y), T?.());
-        }, [y, S?.id, T]),
-        x = i.useCallback(() => {
+            y?.id != null && (u.A.open(y.id, m.BEX.INTEGRATIONS), o.A.setSection(m.wLn.APPLICATION, S), T?.());
+        }, [S, y?.id, T]),
+        M = i.useCallback(() => {
             (0, _.openUserSettings)(c.X.AUTHORIZED_APPS_PANEL, { section: m.nc_.AUTHORIZED_APPS });
             let e = "";
-            null != E ? (e = E.name) : null != t && (e = t.username),
-                "" !== e && d.iU.setState({ searchQuery: e }),
+            null != g ? (e = g.name) : null != t && (e = t.username),
+                "" !== e && d.i.setState({ searchQuery: e }),
                 T?.();
-        }, [E, T, t]);
+        }, [g, T, t]);
     if (I === m.BRT.POPOUT) return null;
-    let P = [];
+    let x = [];
     return (
         L &&
             v &&
-            P.push(
+            x.push(
                 (0, r.jsx)(
-                    s.Drp,
-                    { id: "manage-server-integration", label: g.intl.string(g.t.IuSJT8), action: w },
+                    a.Drp,
+                    { id: "manage-server-integration", label: E.intl.string(E.t.IuSJT8), action: w },
                     "manage-server-integration",
                 ),
             ),
         D &&
-            O &&
-            P.push(
+            b &&
+            x.push(
                 (0, r.jsx)(
-                    s.Drp,
-                    { id: "manage-authorized-app", label: g.intl.string(g.t.V8ruvz), action: x },
+                    a.Drp,
+                    { id: "manage-authorized-app", label: E.intl.string(E.t.V8ruvz), action: M },
                     "manage-authorized-app",
                 ),
             ),
-        P
+        x
     );
 }

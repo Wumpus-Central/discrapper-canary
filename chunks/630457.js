@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => Q, _g: () => X, iU: () => Z }), n(321073);
+n.d(t, { A: () => Z, i: () => q }), n(321073);
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -33,52 +33,51 @@ var r = n(627968),
     M = n(780964),
     x = n(904504),
     P = n(801264),
-    k = n(790174),
-    U = n(669253),
-    G = n(840065),
-    F = n(652215),
-    V = n(985018),
-    B = n(127964),
-    H = n(830412),
-    j = n(522759);
-let Y = _.Ay.connectStores([w.A], () => ({ theme: w.A.theme }))(p.ppr);
-function W(e) {
+    k = n(840065),
+    U = n(340062),
+    G = n(652215),
+    F = n(985018),
+    V = n(898969),
+    B = n(206314),
+    H = n(473169);
+let j = _.Ay.connectStores([w.A], () => ({ theme: w.A.theme }))(p.ppr);
+function Y(e) {
     let { className: t, text: n } = e;
     return (0, r.jsxs)("div", {
-        className: a()(B.GC, t),
+        className: a()(V.GC, t),
         children: [
-            (0, r.jsx)(p.mir, { size: "md", color: "currentColor", className: B.QW }),
+            (0, r.jsx)(p.mir, { size: "md", color: "currentColor", className: V.QW }),
             (0, r.jsx)(p.Text, { color: "text-default", variant: "text-sm/medium", children: n }),
         ],
     });
 }
-let K = (e) => {
+let W = (e) => {
         let { disclosure: t } = e;
         return i.useMemo(() => {
             switch (t) {
                 case f.mo.IP_LOCATION:
-                    return (0, r.jsx)(p.L_e, { size: "md", color: "currentColor", className: B.PR });
+                    return (0, r.jsx)(p.L_e, { size: "md", color: "currentColor", className: V.PR });
                 case f.mo.DISPLAYS_ADVERTISEMENTS:
-                    return (0, r.jsx)(p.JD7, { className: B.PR });
+                    return (0, r.jsx)(p.JD7, { className: V.PR });
                 default:
-                    return (0, r.jsx)(p.mir, { className: B.PR });
+                    return (0, r.jsx)(p.mir, { className: V.PR });
             }
         }, [t]);
     },
-    $ = (e, t) => {
-        let n = V.intl.string(V.t["DT39A+"]),
-            i = V.intl.formatToPlainString(V.t.QWGvxA, { applicationName: e.name }),
+    K = (e, t) => {
+        let n = F.intl.string(F.t["DT39A+"]),
+            i = F.intl.formatToPlainString(F.t.QWGvxA, { applicationName: e.name }),
             s = null;
         return (
             (0, A.A)(e) &&
-                ((n = V.intl.formatToPlainString(V.t["paC+US"], { applicationName: e.name })),
-                (i = V.intl.formatToPlainString(V.t.inM1Yt, { applicationName: e.name })),
-                (s = (0, r.jsx)(P.A, { look: P.k.WARNING, children: V.intl.string(V.t.LY35Zy) }))),
+                ((n = F.intl.formatToPlainString(F.t["paC+US"], { applicationName: e.name })),
+                (i = F.intl.formatToPlainString(F.t.inM1Yt, { applicationName: e.name })),
+                (s = (0, r.jsx)(P.A, { look: P.k.WARNING, children: F.intl.string(F.t.LY35Zy) }))),
             (0, x.A)(e.id) &&
                 (s = (0, r.jsxs)(r.Fragment, {
                     children: [
                         s,
-                        (0, r.jsx)(P.A, { children: V.intl.format(V.t.KRnERi, { applicationName: e.name }) }),
+                        (0, r.jsx)(P.A, { children: F.intl.format(F.t.KRnERi, { applicationName: e.name }) }),
                     ],
                 })),
             (0, p.qfG)((e) =>
@@ -86,9 +85,9 @@ let K = (e) => {
                     title: n,
                     subtitle: i,
                     actions: [
-                        { text: V.intl.string(V.t["ETE/oC"]), onClick: e.onClose, variant: "secondary" },
+                        { text: F.intl.string(F.t["ETE/oC"]), onClick: e.onClose, variant: "secondary" },
                         {
-                            text: V.intl.string(V.t.xUqheM),
+                            text: F.intl.string(F.t.xUqheM),
                             onClick: () => {
                                 t(), e.onClose();
                             },
@@ -96,12 +95,12 @@ let K = (e) => {
                         },
                     ],
                     ...e,
-                    children: (0, r.jsx)("div", { className: B.rO, children: s }),
+                    children: (0, r.jsx)("div", { className: V.rO, children: s }),
                 }),
             )
         );
     },
-    z = (e) => {
+    $ = (e) => {
         let { application: t, isVisible: n } = e,
             i = () => {
                 null != t.terms_of_service_url && (0, b.h)({ href: t.terms_of_service_url, shouldConfirm: !0 });
@@ -111,41 +110,41 @@ let K = (e) => {
             };
         return null != t.terms_of_service_url || null != t.privacy_policy_url
             ? (0, r.jsxs)("div", {
-                  className: B.vi,
+                  className: V.vi,
                   children: [
                       null != t.terms_of_service_url
                           ? (0, r.jsxs)(p.MzZ, {
                                 onClick: i,
                                 tabIndex: n ? 0 : -1,
-                                className: B.Dt,
+                                className: V.Dt,
                                 children: [
                                     (0, r.jsx)(p.Text, {
                                         variant: "text-sm/normal",
                                         color: "text-link",
-                                        children: V.intl.string(V.t["lx+Gec"]),
+                                        children: F.intl.string(F.t["lx+Gec"]),
                                     }),
-                                    (0, r.jsx)(p.I9m, { size: "sm", className: B.X6, color: "var(--text-link)" }),
+                                    (0, r.jsx)(p.I9m, { size: "sm", className: V.X6, color: "var(--text-link)" }),
                                 ],
                             })
                           : null,
                       null != t.privacy_policy_url
                           ? (0, r.jsxs)("div", {
-                                className: B.Fb,
+                                className: V.Fb,
                                 children: [
-                                    null != t.terms_of_service_url ? (0, r.jsx)("div", { className: B.yF }) : null,
+                                    null != t.terms_of_service_url ? (0, r.jsx)("div", { className: V.yF }) : null,
                                     (0, r.jsxs)(p.MzZ, {
                                         onClick: s,
-                                        className: B.Fb,
+                                        className: V.Fb,
                                         tabIndex: n ? 0 : -1,
                                         children: [
                                             (0, r.jsx)(p.Text, {
                                                 variant: "text-sm/normal",
                                                 color: "text-link",
-                                                children: V.intl.string(V.t.okSwq9),
+                                                children: F.intl.string(F.t.okSwq9),
                                             }),
                                             (0, r.jsx)(p.I9m, {
                                                 size: "sm",
-                                                className: B.X6,
+                                                className: V.X6,
                                                 color: "var(--text-link)",
                                             }),
                                         ],
@@ -157,7 +156,7 @@ let K = (e) => {
               })
             : null;
     },
-    q = (e) => {
+    z = (e) => {
         let {
                 scopes: t,
                 application: n,
@@ -174,21 +173,21 @@ let K = (e) => {
             N = () => {
                 let e = [];
                 for (let n of t)
-                    e.push(...(0, y.rY)(n, t)), n === c.F.APPLICATIONS_COMMANDS && e.push(V.intl.string(V.t.Ls2XRq));
+                    e.push(...(0, y.rY)(n, t)), n === c.F.APPLICATIONS_COMMANDS && e.push(F.intl.string(F.t.Ls2XRq));
                 if (e.length > 0 || (null != u && u.length > 0))
                     return (0, r.jsx)(p.Nt8, {
-                        className: B.Nm,
+                        className: V.Nm,
                         isExpanded: E,
                         collapsibleContent: (0, r.jsxs)("ul", {
-                            className: B.vo,
+                            className: V.vo,
                             children: [
                                 e.map((e, t) =>
                                     (0, r.jsxs)(
                                         "li",
                                         {
-                                            className: B.EK,
+                                            className: V.EK,
                                             children: [
-                                                (0, r.jsx)("i", { className: B.dv }),
+                                                (0, r.jsx)("i", { className: V.dv }),
                                                 (0, r.jsx)(p.Text, { variant: "text-sm/normal", children: e }),
                                             ],
                                         },
@@ -201,9 +200,9 @@ let K = (e) => {
                                         ? (0, r.jsxs)(
                                               "li",
                                               {
-                                                  className: B.EK,
+                                                  className: V.EK,
                                                   children: [
-                                                      (0, r.jsx)(K, { disclosure: t }),
+                                                      (0, r.jsx)(W, { disclosure: t }),
                                                       (0, r.jsx)(p.Text, { variant: "text-sm/normal", children: i }),
                                                   ],
                                               },
@@ -218,7 +217,7 @@ let K = (e) => {
                             return (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsxs)(p.DUT, {
-                                        className: B.gF,
+                                        className: V.gF,
                                         onClick: (e) => {
                                             A(!E), n(e);
                                         },
@@ -226,7 +225,7 @@ let K = (e) => {
                                             (0, r.jsx)(p.Heading, {
                                                 variant: "heading-sm/medium",
                                                 color: "text-strong",
-                                                children: V.intl.string(V.t.xrmhRX),
+                                                children: F.intl.string(F.t.xrmhRX),
                                             }),
                                             E
                                                 ? (0, r.jsx)(p.abt, {
@@ -243,8 +242,8 @@ let K = (e) => {
                                         (0, r.jsx)(p.Text, {
                                             variant: "text-sm/normal",
                                             color: "text-subtle",
-                                            className: a()(B.vo, B.k8),
-                                            children: V.intl.format(V.t.nZOS8j, { numPermissions: e.length }),
+                                            className: a()(V.vo, V.k8),
+                                            children: F.intl.format(F.t.nZOS8j, { numPermissions: e.length }),
                                         }),
                                 ],
                             });
@@ -254,7 +253,7 @@ let K = (e) => {
             C = i.useMemo(() => {
                 if (null != n.description && "" !== n.description)
                     return (0, r.jsx)(p.Text, {
-                        className: H.PT,
+                        className: B.PT,
                         variant: "text-sm/normal",
                         color: "text-default",
                         children: (0, S.parseBioReact)(n.description),
@@ -265,16 +264,16 @@ let K = (e) => {
                     t = null != n.terms_of_service_url || null != n.privacy_policy_url;
                 return e || t
                     ? (0, r.jsx)(p.Nt8, {
-                          className: B.Nm,
+                          className: V.Nm,
                           isExpanded: h,
                           collapsibleContent: (0, r.jsxs)("div", {
-                              className: B.vo,
-                              children: [e && C, t && (0, r.jsx)(z, { application: n, isVisible: h })],
+                              className: V.vo,
+                              children: [e && C, t && (0, r.jsx)($, { application: n, isVisible: h })],
                           }),
                           children: (e) => {
                               let { onClick: t } = e;
                               return (0, r.jsxs)(p.DUT, {
-                                  className: B.gF,
+                                  className: V.gF,
                                   onClick: (e) => {
                                       m(!h), t(e);
                                   },
@@ -282,7 +281,7 @@ let K = (e) => {
                                       (0, r.jsx)(p.Heading, {
                                           variant: "heading-sm/medium",
                                           color: "text-strong",
-                                          children: V.intl.string(V.t.fcYgiY),
+                                          children: F.intl.string(F.t.fcYgiY),
                                       }),
                                       h
                                           ? (0, r.jsx)(p.abt, {
@@ -304,28 +303,28 @@ let K = (e) => {
                     t =
                         null != e
                             ? (0, r.jsx)(T.A.Child, {
-                                  className: B.zN,
+                                  className: V.zN,
                                   grow: 0,
                                   children: (0, r.jsx)("img", { src: e, alt: "" }),
                               })
                             : null,
                     i = new Date(D.default.extractTimestamp(_)).toLocaleDateString(d);
                 return (0, r.jsxs)("div", {
-                    className: B.ie,
+                    className: V.ie,
                     children: [
                         t,
                         (0, r.jsxs)("div", {
-                            className: B.gC,
+                            className: V.gC,
                             children: [
                                 (0, r.jsx)(p.Heading, {
                                     variant: "heading-md/semibold",
-                                    className: a()(B.TK, j.Q5),
+                                    className: a()(V.TK, H.Q5),
                                     children: n.name,
                                 }),
                                 (0, r.jsx)(p.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-default",
-                                    children: V.intl.format(V.t.yOApCK, { date: i }),
+                                    children: F.intl.format(F.t.yOApCK, { date: i }),
                                 }),
                             ],
                         }),
@@ -337,46 +336,46 @@ let K = (e) => {
             w = (0, I.A)(n),
             P = () =>
                 (0, r.jsxs)("div", {
-                    className: B.qr,
+                    className: V.qr,
                     children: [
                         w
-                            ? (0, r.jsx)(W, {
-                                  className: B.UW,
-                                  text: V.intl.format(V.t.j4B7EW, { applicationName: n.name }),
+                            ? (0, r.jsx)(Y, {
+                                  className: V.UW,
+                                  text: F.intl.format(F.t.j4B7EW, { applicationName: n.name }),
                               })
                             : L
-                              ? (0, r.jsx)(W, {
-                                    className: B.UW,
-                                    text: V.intl.format(V.t.jUhnwb, {
+                              ? (0, r.jsx)(Y, {
+                                    className: V.UW,
+                                    text: F.intl.format(F.t.jUhnwb, {
                                         applicationName: n.name,
                                         onConnectionPress: () =>
-                                            (0, G.openUserSettings)(M.X.CONNECTIONS_PANEL, {
-                                                section: F.nc_.CONNECTIONS,
+                                            (0, k.openUserSettings)(M.X.CONNECTIONS_PANEL, {
+                                                section: G.nc_.CONNECTIONS,
                                             }),
                                     }),
                                 })
                               : null,
                         (0, r.jsx)("div", {
-                            className: B.hU,
+                            className: V.hU,
                             children: (0, r.jsx)(p.Button, {
                                 variant: "critical-secondary",
                                 size: "sm",
-                                text: V.intl.string(V.t.xUqheM),
-                                onClick: () => $(n, l),
+                                text: F.intl.string(F.t.xUqheM),
+                                onClick: () => K(n, l),
                             }),
                         }),
                     ],
                 });
         return (0, r.jsx)("div", {
-            className: B.Zy,
+            className: V.Zy,
             children: (0, r.jsx)(p.Fmo, {
                 component: b(),
-                children: (0, r.jsxs)("div", { className: B.TD, children: [R(), N(), P()] }),
+                children: (0, r.jsxs)("div", { className: V.TD, children: [R(), N(), P()] }),
             }),
         });
     },
-    Z = (0, u.v)(() => ({ searchQuery: "" })),
-    X = () => {
+    q = (0, u.v)(() => ({ searchQuery: "" })),
+    Z = () => {
         let { fetchState: e, appAuthTokens: t } = (0, _.cf)([N.default], () => ({
                 fetchState: N.default.getFetchState(),
                 appAuthTokens: N.default.getNewestTokensForNonChildrenApplications(),
@@ -391,8 +390,8 @@ let K = (e) => {
                 let r = s.get(n.id);
                 null != r && E.A.leaveActivity({ location: r.location, applicationId: n.id, showFeedback: !1 });
             },
-            c = Z((e) => e.searchQuery),
-            d = (e) => Z.setState({ searchQuery: e }),
+            c = q((e) => e.searchQuery),
+            d = (e) => q.setState({ searchQuery: e }),
             f = (e) => {
                 d(e);
             },
@@ -401,18 +400,18 @@ let K = (e) => {
             },
             A = () =>
                 (0, r.jsx)("div", {
-                    className: B.MT,
+                    className: V.MT,
                     children: (0, r.jsx)(p.IWV, {
                         query: c,
                         onChange: f,
                         onClear: g,
-                        placeholder: V.intl.string(V.t["5prvKe"]),
-                        "aria-label": V.intl.string(V.t["5prvKe"]),
+                        placeholder: F.intl.string(F.t["5prvKe"]),
+                        "aria-label": F.intl.string(F.t["5prvKe"]),
                     }),
                 }),
             I = (e, t) =>
-                (0, r.jsx)(Y, {
-                    className: B.__invalid_marginTop20,
+                (0, r.jsx)(j, {
+                    className: V.__invalid_marginTop20,
                     children: (0, r.jsx)(p.SGT, { note: e, children: t }),
                 }),
             T = i.useMemo(() => {
@@ -425,17 +424,17 @@ let K = (e) => {
             }, [t, c]),
             S = () =>
                 null == t || null == T || e !== N.FetchState.FETCHED
-                    ? (0, r.jsx)(p.y$y, { className: j.QX, type: p.y$y.Type.SPINNING_CIRCLE })
+                    ? (0, r.jsx)(p.y$y, { className: H.QX, type: p.y$y.Type.SPINNING_CIRCLE })
                     : 0 === t.length
-                      ? I(V.intl.string(V.t.CpPv5l), V.intl.string(V.t["E+SM6T"]))
+                      ? I(F.intl.string(F.t.CpPv5l), F.intl.string(F.t["E+SM6T"]))
                       : 0 === T.length
-                        ? (0, r.jsxs)(r.Fragment, { children: [A(), I(null, V.intl.string(V.t.EVWFNr))] })
+                        ? (0, r.jsxs)(r.Fragment, { children: [A(), I(null, F.intl.string(F.t.EVWFNr))] })
                         : (0, r.jsxs)(r.Fragment, {
                               children: [
                                   A(),
                                   T.sort((e, t) => Number(t.id) - Number(e.id)).map((e) =>
                                       (0, r.jsx)(
-                                          q,
+                                          z,
                                           {
                                               locale: n,
                                               onDelete: () => u(e),
@@ -448,27 +447,17 @@ let K = (e) => {
                                   ),
                               ],
                           });
-        return (0, r.jsx)(p.Fmo, {
-            component: (0, r.jsxs)(p.ZpM, {
-                type: p.ZpM.Types.PRIMARY,
-                className: B.Rd,
-                children: [
-                    (0, r.jsx)(p.Heading, { variant: "heading-md/medium", children: V.intl.string(V.t.HU3RFw) }),
-                    (0, r.jsx)(p.Text, { variant: "text-sm/normal", children: V.intl.string(V.t.Nu5Yi0) }),
-                ],
+        return (0, r.jsx)(p.BJc, {
+            children: (0, r.jsx)(p.Fmo, {
+                component: (0, r.jsxs)(p.ZpM, {
+                    type: p.ZpM.Types.PRIMARY,
+                    className: V.Rd,
+                    children: [
+                        (0, r.jsx)(p.Heading, { variant: "heading-md/medium", children: F.intl.string(F.t.HU3RFw) }),
+                        (0, r.jsx)(p.Text, { variant: "text-sm/normal", children: F.intl.string(F.t.Nu5Yi0) }),
+                    ],
+                }),
+                children: S(),
             }),
-            children: S(),
         });
-    },
-    Q = () => (
-        i.useEffect(() => {
-            h.A.fetch();
-        }, []),
-        i.useEffect(
-            () => () => {
-                Z.setState({ searchQuery: "" });
-            },
-            [],
-        ),
-        (0, r.jsx)(k.A, { title: V.intl.string(V.t["f6kk+r"]), children: (0, r.jsx)(X, {}) })
-    );
+    };
