@@ -38,7 +38,7 @@ class _ extends a.yW {
     getEveryoneRole(e) {
         let t = (0, o.af)(e),
             n = this.database.getRecord(e.id, t);
-        if (null == n) throw Error(`Guild ${e.id} does not have an @everyone role`);
+        if (null == n) throw Error("Guild does not have an @everyone role");
         return n;
     }
     partitionVersion(e) {
