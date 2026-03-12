@@ -1,5 +1,16 @@
 "use strict";
-n.d(t, { Iq: () => a, TY: () => c, YX: () => u, Ym: () => l, jS: () => o, m8: () => d, sn: () => i, uK: () => s });
+n.d(t, {
+    Ig: () => f,
+    Iq: () => a,
+    TY: () => c,
+    YX: () => u,
+    Ym: () => l,
+    jS: () => o,
+    m8: () => d,
+    sn: () => i,
+    sy: () => _,
+    uK: () => s,
+});
 var r = n(945810);
 let i = (0, r.mj)({
         name: "2025-11-quest-home-takeover-client-rollout",
@@ -49,3 +60,17 @@ let i = (0, r.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     });
+var _ = (function (e) {
+    return (
+        (e[(e.DEFAULT = 0)] = "DEFAULT"),
+        (e[(e.AUTO_ENABLE_CAPTIONS = 1)] = "AUTO_ENABLE_CAPTIONS"),
+        (e[(e.AUTO_UNMUTE = 2)] = "AUTO_UNMUTE"),
+        e
+    );
+})({});
+let f = (0, r.mj)({
+    name: "2026-03-muted-video-quest-new-defaults",
+    kind: "user",
+    defaultConfig: { enabled: !1, variant: 0 },
+    variations: { 0: { enabled: !1, variant: 0 }, 1: { enabled: !0, variant: 1 }, 2: { enabled: !0, variant: 2 } },
+});
