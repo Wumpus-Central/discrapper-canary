@@ -6836,6 +6836,7 @@
   "IhF5d+": "Prompt members to reply to Server Subscription congratulation messages with a sticker",
   "ZhOdpR": "This is the channel we send system event messages to.",
   "qxIcrT": "Configure system event messages sent to your server.",
+  "IMtHBW": "Send a message when a voice hangout has started.",
   "A53l87": "Members are automatically kicked when they disconnect unless a role is assigned.",
   "cSyXJk": "When disabled, only moderators and the thread creator can add new members to this thread.",
   "8yb3JT": "Limits the number of users that can connect to this voice channel. Users with the **Move Members** permission\\nignore this limit and can move other users into the channel.",
