@@ -1,4 +1,4 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => m });
 var i = n(627968),
     s = n(64700),
     r = n(621466),
@@ -9,7 +9,7 @@ var i = n(627968),
     d = n(628965),
     u = n(152056),
     h = n(985018);
-function _() {
+function m() {
     let e = u.A.useField("query"),
         t = s.useCallback((e, t) => {
             t.stopPropagation(),
@@ -20,32 +20,37 @@ function _() {
         n = s.useCallback(() => {
             a.A.terminate(), u.A.setState({ query: "", isActive: !1 });
         }, []),
-        _ = s.useRef(null),
-        S = (0, l.bG)([d.A], () => d.A.getSection());
+        m = s.useRef(null),
+        p = (0, l.bG)([d.A], () => d.A.getSection());
     s.useEffect(() => {
         let e = (e) => {
-            let t = _.current;
+            let t = m.current;
             (0, r.BF)(e)?.activeElement === document.body && t?.focus();
         };
         return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
-    }, [S]);
-    let p = s.useCallback((e) => {
-        u.A.setState({ query: e });
+    }, [p]);
+    let S = s.useCallback((e) => {
+        u.A.setState({ query: e }), a.A.maybeTrackQueryEntered();
     }, []);
-    return (0, i.jsx)("div", {
-        style: { marginBottom: "8px" },
-        children: (0, i.jsx)(o.IWV, {
-            ref: _,
-            query: e,
-            onClear: n,
-            onChange: p,
-            placeholder: h.intl.string(h.t["5h0QOP"]),
-            inputProps: {
-                "aria-label": h.intl.string(h.t.pk9BWW),
-                "aria-expanded": !0,
+    return (
+        s.useEffect(
+            () => () => {
+                a.A.terminate();
+            },
+            [],
+        ),
+        (0, i.jsx)("div", {
+            style: { marginBottom: "8px" },
+            children: (0, i.jsx)(o.IWV, {
+                ref: m,
+                query: e,
+                onClear: n,
+                onChange: S,
                 onFocus: (e) => t(!0, e),
                 onBlur: (e) => t(!1, e),
-            },
-        }),
-    });
+                placeholder: h.intl.string(h.t["5h0QOP"]),
+                inputProps: { "aria-label": h.intl.string(h.t.pk9BWW), "aria-expanded": !0 },
+            }),
+        })
+    );
 }

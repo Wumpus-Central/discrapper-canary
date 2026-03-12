@@ -10,5 +10,4 @@ e.exports = {
     a9: "sectionLabel__409aa",
     Pf: "label__409aa",
     gM: "fixedContent__409aa",
-    PP: "searchBarContainer__409aa",
 };
