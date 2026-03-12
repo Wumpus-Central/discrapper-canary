@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { EA: () => I, Gj: () => C, IY: () => y, Ig: () => S, MT: () => E, Rs: () => R, fk: () => v, iK: () => A }),
+n.d(t, { EA: () => I, Gj: () => C, IY: () => y, Ig: () => S, Rs: () => O, fk: () => v, iK: () => A, ib: () => E }),
     n(321073);
 var r = n(284009),
     i = n.n(r),
@@ -14,8 +14,16 @@ var r = n(284009),
     f = n(580630),
     p = n(788868),
     h = n(985018),
-    m = n(756366);
-let E = (e) => h.intl.format(m.default.U2CmMW, { priceAmount: (0, f.$g)(0, e) }),
+    m = n(523376);
+let E = function (e) {
+        let { includeNowSuffix: t } =
+            arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { includeNowSuffix: !1 };
+        return t
+            ? h.intl.format(m.default.U2CmMW, {
+                  priceAmount: (0, f.$g)(0, e, { minimumFractionDigits: 0, maximumFractionDigits: 0 }),
+              })
+            : (0, f.$g)(0, e);
+    },
     g = (e, t, n) => ({ id: e.discount_id ?? t, label: n, amount: -e.amount }),
     A = (e) => {
         let { interval: t } = e,
@@ -207,6 +215,14 @@ let E = (e) => h.intl.format(m.default.U2CmMW, { priceAmount: (0, f.$g)(0, e) })
         );
     },
     R = (e, t) => {
+        let { isEligibleForTrial: n } = t;
+        return n
+            ? h.intl.format(h.t.hXcaLT, {
+                  price: (0, f.$g)(0, e.currency, { minimumFractionDigits: 0, maximumFractionDigits: 0 }),
+              })
+            : (0, f.$g)(e.amount, e.currency);
+    },
+    O = (e, t) => {
         let n,
             {
                 planId: r,
@@ -214,46 +230,46 @@ let E = (e) => h.intl.format(m.default.U2CmMW, { priceAmount: (0, f.$g)(0, e) })
                 userLocale: o,
                 discountOffer: l,
                 priceOptions: c,
-                shouldUseCalculatedDiscount: p,
-                isCurrentPlan: m,
-                isGift: E,
-                isEligibleForTrial: g,
-                isEligibleForBOGOPromotion: A,
-                showSecondarySubTexts: I,
-                isInPlanSelectStep: T,
+                shouldUseCalculatedDiscount: f,
+                isCurrentPlan: p,
+                isGift: m,
+                isEligibleForTrial: E,
+                isEligibleForBOGOPromotion: g,
+                showSecondarySubTexts: A,
+                isInPlanSelectStep: I,
             } = t,
-            S = d.A.get(r);
-        i()(null != S, "Missing subscriptionPlan");
-        let y = (0, _.L_)({
+            T = d.A.get(r);
+        i()(null != T, "Missing subscriptionPlan");
+        let S = (0, _.L_)({
                 planId: r,
-                shouldUseCalculatedDiscount: p,
-                isGift: E,
+                shouldUseCalculatedDiscount: f,
+                isGift: m,
                 priceOptions: c,
-                subscriptionPlan: S,
+                subscriptionPlan: T,
             }),
-            v = null != y,
-            N = (0, _.y8)(r, !1, E, c),
-            C = (0, a.Nc)({ subscriptionPlan: S, userLocale: o, discountOffer: l, yearlyPercentSavings: y }),
-            R = (0, u.gS)(e, S, {
+            y = null != S,
+            v = (0, _.y8)(r, !1, m, c),
+            N = (0, a.Nc)({ subscriptionPlan: T, userLocale: o, discountOffer: l, yearlyPercentSavings: S }),
+            C = (0, u.gS)(e, T, {
                 userLocale: o,
-                isEligibleForBOGOPromotion: A,
-                shouldShowDiscount: v,
-                isGift: E,
+                isEligibleForBOGOPromotion: g,
+                shouldShowDiscount: y,
+                isGift: m,
                 planId: r,
-                savingsPercent: y,
+                savingsPercent: S,
             });
-        I && (T && g ? (n = (0, u.O7)(S, N)) : m ? (n = h.intl.string(h.t.ymSxhy)) : "string" == typeof R && (n = R));
-        let O = C;
+        A && (I && E ? (n = (0, u.O7)(T, v)) : p ? (n = h.intl.string(h.t.ymSxhy)) : "string" == typeof C && (n = C));
+        let O = N;
         return (
-            null != R && "object" == typeof R && (O = R.text),
+            null != C && "object" == typeof C && (O = C.text),
             {
                 id: r,
-                planName: (0, a.YR)(S.interval, S.intervalCount, !0),
-                priceText: (0, f.$g)(N.amount, N.currency),
+                planName: (0, a.YR)(T.interval, T.intervalCount, !0),
+                priceText: R(v, { isEligibleForTrial: E }),
                 secondarySubText: n,
                 promoText: O,
                 isDisabled: s,
-                savingsPercent: y,
+                savingsPercent: S,
             }
         );
     };

@@ -42618,6 +42618,10 @@ screen and (max-width:485px) {
     color: var(--text-strong)
 }
 
+.nitroPinkGradient__3e43f {
+    background: linear-gradient(90deg, var(--expressive-gradient-nitro-pink-start) 0, var(--expressive-gradient-nitro-pink-end) 100%)
+}
+
 .offerNoticeContainer__3e43f {
     align-items: center;
     display: flex;

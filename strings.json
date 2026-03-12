@@ -819,6 +819,7 @@
   "Tt3O81": "Next renewal",
   "11g67A": "Next Renewal",
   "57B1ks": "Next renewal {renewalDate, date, short}",
+  "OFkKkc": "Enjoy **Nitro for {daysCount, plural, one {Day} other { Days} }** before getting charged!",
   "8Jt4Dw": "1 !!{timeInterval}!! of Nitro",
   "Z9mu9q": "1 !!{timeInterval}!! of Nitro Basic",
   "eoXh7B": "Order Summary",

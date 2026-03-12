@@ -117,8 +117,12 @@ function R(e) {
         s = (O(t) ? i?.amount : i?.subscriptionPlanPrice) ?? 0,
         a = (0, p.$g)(s, r.currency),
         c = (0, p.CE)(a, n.interval, n.intervalCount),
-        d = b(t) ? (0, l.O7)(n, { amount: s, currency: r.currency }) : null;
-    return { price: t === u.N$.PREMIUM_GIFT ? a : c, priceSubText: d, priceSubTextHasStrikethrough: !b(t) };
+        d = b(t) ? (0, l.O7)(n, { amount: s, currency: r.currency }) : null,
+        _ = c;
+    return (
+        b(t) ? (_ = (0, m.ib)(r.currency, { includeNowSuffix: !0 })) : t === u.N$.PREMIUM_GIFT && (_ = a),
+        { price: _, priceSubText: d, priceSubTextHasStrikethrough: !b(t) }
+    );
 }
 function O(e) {
     return e === u.N$.PREMIUM_GIFT;

@@ -48,7 +48,7 @@ var r = n(627968),
 n(601107);
 var G = n(818348),
     F = n(985018),
-    V = n(329221);
+    V = n(892191);
 function B(e, t) {
     let { isEligibleForBOGOPromotion: n } = t;
     return null != e && !n;
@@ -103,16 +103,17 @@ function H(e, t) {
 }
 let j = () => {
         let { userTrialOffer: e } = (0, p.P5)(),
-            t = e?.subscription_trial;
-        return i.useMemo(
-            () =>
-                t?.interval === k.WT.DAY
-                    ? t?.interval_count > 7
-                        ? F.intl.string(F.t.Z1V2cs)
-                        : F.intl.string(F.t.MI1rHs)
-                    : F.intl.string(F.t["+S5lrV"]),
-            [t],
-        );
+            t = e?.subscription_trial,
+            { daysCount: n, copy: r } = i.useMemo(
+                () =>
+                    t?.interval === k.WT.DAY
+                        ? t?.interval_count > 7
+                            ? { daysCount: 14, copy: F.intl.string(F.t.Z1V2cs) }
+                            : { daysCount: 7, copy: F.intl.string(F.t.MI1rHs) }
+                        : { daysCount: 30, copy: F.intl.string(F.t["+S5lrV"]) },
+                [t],
+            );
+        return { daysCount: n, copy: r, userTrialOffer: e };
     },
     Y = (e) => {
         let {
@@ -187,7 +188,8 @@ let j = () => {
             el = c
                 ?.find((e) => e.subscriptionPlanId === k.gD.PREMIUM_MONTH_TIER_2)
                 ?.discounts?.find((e) => e.type === d.iS.SUBSCRIPTION_PLAN)?.amount,
-            eu = I;
+            eu = I,
+            { copy: ec } = j();
         return {
             skuId: eu,
             setPlanId: q,
@@ -212,7 +214,7 @@ let j = () => {
             isEligibleForBOGOPromotion: $,
             isEligibleForTrial: b,
             userTrialOffer: O,
-            trialPeriodCopy: j(),
+            trialPeriodCopy: ec,
             discountOffer: D,
             isPlansEligibleForDiscount: Q,
             discountedPlanRegularPrice: J,
