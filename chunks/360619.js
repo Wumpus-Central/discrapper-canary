@@ -1,77 +1,74 @@
-n.d(t, { AC: () => b, NI: () => v, PH: () => N }), n(321073);
+n.d(t, { AC: () => b, NI: () => I, PH: () => N }), n(321073);
 var i = n(64700),
     s = n(311907);
 n(361739);
 var l = n(406360),
-    a = n(86379),
-    r = n(643015),
+    r = n(86379),
+    a = n(643015),
     o = n(945276),
     d = n(35587),
     c = n(677402),
     u = n(207560),
     _ = n(818143),
-    g = n(639555),
-    A = n(617641),
-    m = n(961350);
+    m = n(639555),
+    g = n(617641),
+    A = n(961350);
 n(540999);
 var h = n(189081),
-    p = n(994500),
-    x = n(628965),
-    E = n(287809),
+    x = n(994500),
+    p = n(628965),
     T = n(253932),
-    S = n(368631),
+    E = n(368631),
     C = n(682262),
-    I = n(987281);
+    S = n(987281);
 n(531525);
 var f = n(654487);
 function N() {
     let e = (0, d.IO)().length,
-        t = (0, s.bG)([x.A], () => x.A.getSearchParams()),
+        t = (0, s.bG)([p.A], () => p.A.getSearchParams()),
         n = (0, C.b_)(),
-        I = E.default.getCurrentUser()?.isStaff() ?? !1,
-        N = (0, A.Lc)({ location: "settings" }),
-        b = (0, g.Rv)({ location: "settings" }),
-        v = (0, a.H)(),
-        O = (0, c.H)({ location: f.rE.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
-        j = (0, s.bG)([h.A], () => h.A.hasLibraryApplication()),
-        R = (0, s.bG)([m.default], () => m.default.hasTOTPEnabled()),
-        y = T.Q_.useSetting(),
-        P = (0, r.A)(),
-        D = (0, o.A)() ?? !0,
-        L = (0, _.G)()?.length > 0,
-        { hasBlockedUsers: G, hasIgnoredUsers: M } = (0, s.cf)([p.A], () => ({
-            hasBlockedUsers: p.A.getBlockedIDs().length > 0,
-            hasIgnoredUsers: p.A.getIgnoredIDs().length > 0,
+        S = (0, g.Lc)({ location: "settings" }),
+        N = (0, m.Rv)({ location: "settings" }),
+        b = (0, r.H)(),
+        I = (0, c.H)({ location: f.rE.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
+        v = (0, s.bG)([h.A], () => h.A.hasLibraryApplication()),
+        j = (0, s.bG)([A.default], () => A.default.hasTOTPEnabled()),
+        O = T.Q_.useSetting(),
+        y = (0, a.A)(),
+        R = (0, o.A)() ?? !0,
+        P = (0, _.G)()?.length > 0,
+        { hasBlockedUsers: D, hasIgnoredUsers: L } = (0, s.cf)([x.A], () => ({
+            hasBlockedUsers: x.A.getBlockedIDs().length > 0,
+            hasIgnoredUsers: x.A.getIgnoredIDs().length > 0,
         })),
-        U = (0, u.fk)(),
-        k = (0, l.i)("useGenerateUserSettingsSections");
+        M = (0, u.fk)(),
+        G = (0, l.i)("useGenerateUserSettingsSections");
     return i.useMemo(
         () =>
-            (0, S.zj)({
+            (0, E.zj)({
                 unseenGiftCount: e,
                 searchParams: t,
                 isOverlaySupported: n,
-                isStaff: I,
-                isInappropriateConversationWarningEnabled: N,
-                isInapproprateConversationsDefaultOn: b,
-                paymentsBlocked: v,
-                isEligibleForQuests: O,
-                isStricterMessageRequestsEnabled: P,
-                hasLibraryApplication: j,
-                hasTOTPEnabled: R,
-                developerMode: y,
-                isAdultUser: D,
-                hasSecureFramesVerifiedUserIds: L,
-                hasIgnoredUsers: M,
-                hasBlockedUsers: G,
-                hasAgeGatedFeature: U,
-                isHDRAccessibilitySettingExperimentEnabled: k,
+                isInappropriateConversationWarningEnabled: S,
+                isInapproprateConversationsDefaultOn: N,
+                paymentsBlocked: b,
+                isEligibleForQuests: I,
+                isStricterMessageRequestsEnabled: y,
+                hasLibraryApplication: v,
+                hasTOTPEnabled: j,
+                developerMode: O,
+                isAdultUser: R,
+                hasSecureFramesVerifiedUserIds: P,
+                hasIgnoredUsers: L,
+                hasBlockedUsers: D,
+                hasAgeGatedFeature: M,
+                isHDRAccessibilitySettingExperimentEnabled: G,
             }),
-        [y, G, M, j, L, R, t, D, O, b, N, n, I, P, v, e, U, k],
+        [O, D, L, v, P, j, t, R, I, N, S, n, y, b, e, M, G],
     );
 }
 function b(e) {
-    let t = I.a.useField("searchResults"),
+    let t = S.a.useField("searchResults"),
         n = N(),
         i = n[e],
         s = Object.fromEntries(
@@ -91,16 +88,16 @@ function b(e) {
                     return [t, n];
                 }),
         ),
-        a = new Set(),
-        r = (e) => {
+        r = new Set(),
+        a = (e) => {
             let t = s[e];
             if (null == t) return;
-            a.add(e);
+            r.add(e);
             let n = t.parent;
-            null != n && r(n);
+            null != n && a(n);
         },
         o = (e) => {
-            for (let t of (a.add(e),
+            for (let t of (r.add(e),
             Object.entries(l)
                 .filter((t) => {
                     let [n, i] = t;
@@ -113,16 +110,16 @@ function b(e) {
                 o(t);
         };
     for (let e of t.filter((e) => e in s))
-        if (!a.has(e)) {
+        if (!r.has(e)) {
             if (null != s[e].element && null == s[e].parent) {
-                a.clear();
+                r.clear();
                 break;
             }
-            Object.values(l).includes(e) && o(e), r(e);
+            Object.values(l).includes(e) && o(e), a(e);
         }
-    return a;
+    return r;
 }
-function v(e) {
+function I(e) {
     return Array.from(
         new Map(
             Object.entries(e).filter((e) => {
