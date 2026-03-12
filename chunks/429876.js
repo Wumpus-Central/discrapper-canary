@@ -1,106 +1,117 @@
 "use strict";
-s.d(t, { A: () => v });
+s.d(t, { A: () => L });
 var n = s(627968),
     r = s(64700),
     l = s(503698),
-    a = s.n(l),
-    i = s(397927),
+    i = s.n(l),
+    a = s(397927),
     o = s(564322),
-    c = s(954571),
-    d = s(440938),
-    u = s(365491),
-    g = s(549367),
-    _ = s(976742),
-    m = s(177366),
-    h = s(212602),
-    p = s(662166),
-    f = s(919610),
-    x = s(685533),
-    E = s(773591),
-    C = s(758836),
-    A = s(652215),
-    b = s(985018),
-    S = s(356365);
-function v(e) {
-    let { tab: t, categories: s, initialCategoryId: l, showFilterInitially: a = !0, onUnmount: c } = e;
-    (0, u.S)();
-    let d = r.useRef(null),
-        { handleScroll: g } = (0, o.X)(d, t),
-        { setCategoryRef: _, handleScrollToCategory: h } = (0, m.k0)(d.current),
-        [f, x] = r.useState(a),
-        [E, C] = r.useState(!1);
+    c = s(287344),
+    d = s(785330),
+    u = s(954571),
+    _ = s(440938),
+    g = s(365491),
+    m = s(549367),
+    h = s(976742),
+    p = s(177366),
+    f = s(212602),
+    x = s(662166),
+    C = s(919610),
+    E = s(685533),
+    b = s(773591),
+    A = s(758836),
+    S = s(652215),
+    v = s(985018),
+    I = s(941667);
+function L(e) {
+    let { tab: t, categories: s, initialCategoryId: l, showFilterInitially: i = !0, onUnmount: u } = e;
+    (0, g.S)();
+    let _ = r.useRef(null),
+        { handleScroll: m } = (0, o.X)(_, t),
+        h = (0, c.f)("Shop Browse"),
+        { setCategoryRef: f, handleScrollToCategory: C } = (0, p.k0)(_.current),
+        [E, b] = r.useState(i),
+        [A, v] = r.useState(!1);
     return (
         r.useEffect(() => {
-            null != l && h(l);
-        }, [l, h]),
+            null != l && C(l);
+        }, [l, C]),
         r.useEffect(
             () => () => {
-                null != c && c();
+                null != u && u();
             },
             [],
         ),
         r.useEffect(() => {
             let e = () => {
-                C(window.innerWidth < 1400);
+                v(window.innerWidth < 1400);
             };
             return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
         }, []),
         (0, n.jsx)("div", {
-            className: S.VM,
+            className: I.VM,
             children: (0, n.jsxs)("main", {
-                className: S.MY,
+                className: I.MY,
                 children: [
-                    (0, n.jsx)(i.GtU, {
-                        className: S.OW,
-                        ref: d,
-                        onScroll: g,
-                        children: (0, n.jsx)(L, {
-                            isSmallScreen: E,
-                            filterBarOpen: f,
-                            setFilterBarOpen: x,
-                            tab: t,
-                            scrollerRef: d,
-                            categories: s,
-                            setCategoryRef: _,
-                            initialCategoryId: l,
-                        }),
+                    (0, n.jsx)(a.GtU, {
+                        className: I.OW,
+                        ref: _,
+                        onScroll: m,
+                        children: h
+                            ? (0, n.jsx)("div", {
+                                  className: I.en,
+                                  children: (0, n.jsx)("div", {
+                                      className: I.pf,
+                                      children: (0, n.jsx)(d.Z_, { tenantId: S.FYj, templateId: "back-catalog" }),
+                                  }),
+                              })
+                            : (0, n.jsx)(j, {
+                                  isSmallScreen: A,
+                                  filterBarOpen: E,
+                                  setFilterBarOpen: b,
+                                  tab: t,
+                                  scrollerRef: _,
+                                  categories: s,
+                                  setCategoryRef: f,
+                                  initialCategoryId: l,
+                              }),
                     }),
-                    f && !E && (0, n.jsx)("div", { className: S.yF }),
-                    f && !E && (0, n.jsx)(i.HOs, { className: S.kT, children: (0, n.jsx)(p.A, {}) }),
+                    E && !A && (0, n.jsx)("div", { className: I.yF }),
+                    E && !A && (0, n.jsx)(a.HOs, { className: I.kT, children: (0, n.jsx)(x.A, {}) }),
                 ],
             }),
         })
     );
 }
-let L = (e) => {
+let j = (e) => {
     let {
             isSmallScreen: t,
             filterBarOpen: s,
             setFilterBarOpen: l,
             tab: o,
-            scrollerRef: m,
-            categories: v,
-            setCategoryRef: L,
-            initialCategoryId: I,
+            scrollerRef: c,
+            categories: d,
+            setCategoryRef: p,
+            initialCategoryId: L,
         } = e,
         j = r.useRef(null),
-        k = (0, u.v)((e) => e.hasDefaultFilters()),
-        O = (0, d.uM)(),
-        { handlePageChange: T, currentPage: N } = (0, f.Z)(m),
-        y = r.useCallback(
+        k = (0, g.v)((e) => e.hasDefaultFilters()),
+        T = (0, _.uM)(),
+        { handlePageChange: O, currentPage: y } = (0, C.Z)(c),
+        N = r.useCallback(
             (e) => {
-                c.default.track(A.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                    collectibles_shop_session_id: O?.sessionId,
-                    page_section: O?.pageSection,
-                    page_category: O?.pageCategory,
+                u.default.track(S.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                    collectibles_shop_session_id: T?.sessionId,
+                    page_section: T?.pageSection,
+                    page_category: T?.pageCategory,
                     page_index: e,
-                    page_size: O?.pageSize,
+                    page_size: T?.pageSize,
                     cta_name: `catalog page ${e}`,
                     page_type: "catalog",
                 }),
-                    T(e);
+                    O(e);
             },
-            [O, T],
+            [T, O],
         ),
         R = r.useRef(null);
     return (
@@ -112,60 +123,60 @@ let L = (e) => {
                     null === R.current ||
                     j.current.contains(t) ||
                     R.current.contains(t) ||
-                    (c.default.track(A.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                        collectibles_shop_session_id: O?.sessionId,
-                        page_section: O?.pageSection,
-                        page_category: O?.pageCategory,
-                        page_index: O?.pageIndex,
-                        page_size: O?.pageSize,
+                    (u.default.track(S.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                        collectibles_shop_session_id: T?.sessionId,
+                        page_section: T?.pageSection,
+                        page_category: T?.pageCategory,
+                        page_index: T?.pageIndex,
+                        page_size: T?.pageSize,
                         cta_name: "filter bar hide outside click",
                         page_type: "catalog",
                     }),
                     l(!1));
             };
             return document.addEventListener("mousedown", e), () => document.removeEventListener("mousedown", e);
-        }, [t, s, l, O]),
+        }, [t, s, l, T]),
         (0, n.jsx)("div", {
-            className: S.en,
+            className: I.en,
             children: (0, n.jsxs)("div", {
-                className: S.pf,
+                className: I.pf,
                 children: [
                     (0, n.jsxs)("div", {
-                        className: S.ne,
+                        className: I.ne,
                         children: [
-                            (0, n.jsx)("div", { className: S.lQ, children: (0, n.jsx)(g.A, {}) }),
+                            (0, n.jsx)("div", { className: I.lQ, children: (0, n.jsx)(m.A, {}) }),
                             (0, n.jsxs)("div", {
-                                className: a()(S.wR, { [S.Im]: t }),
+                                className: i()(I.wR, { [I.Im]: t }),
                                 children: [
                                     (0, n.jsxs)("div", {
-                                        className: S.Ul,
+                                        className: I.Ul,
                                         children: [
-                                            (0, n.jsx)(i.Text, {
+                                            (0, n.jsx)(a.Text, {
                                                 variant: "text-md/semibold",
-                                                children: b.intl.string(b.t.uaX705),
+                                                children: v.intl.string(v.t.uaX705),
                                             }),
-                                            (0, n.jsx)(h.A, {}),
+                                            (0, n.jsx)(f.A, {}),
                                         ],
                                     }),
                                     (0, n.jsx)("div", {
                                         ref: R,
-                                        children: (0, n.jsx)(i.Button, {
+                                        children: (0, n.jsx)(a.Button, {
                                             onClick: () => {
                                                 let e = !s;
-                                                c.default.track(A.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                                    collectibles_shop_session_id: O?.sessionId,
-                                                    page_section: O?.pageSection,
-                                                    page_category: O?.pageCategory,
-                                                    page_index: O?.pageIndex,
-                                                    page_size: O?.pageSize,
+                                                u.default.track(S.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                    collectibles_shop_session_id: T?.sessionId,
+                                                    page_section: T?.pageSection,
+                                                    page_category: T?.pageCategory,
+                                                    page_index: T?.pageIndex,
+                                                    page_size: T?.pageSize,
                                                     cta_name: `filter bar ${e ? "show" : "hide"}`,
                                                     page_type: "catalog",
                                                 }),
                                                     l(e);
                                             },
                                             variant: "secondary",
-                                            text: b.intl.string(s ? b.t.fYtm6f : b.t["TeTYE+"]),
-                                            icon: i.RgP,
+                                            text: v.intl.string(s ? v.t.fYtm6f : v.t["TeTYE+"]),
+                                            icon: a.RgP,
                                             iconPosition: "end",
                                         }),
                                     }),
@@ -174,26 +185,26 @@ let L = (e) => {
                             s &&
                                 t &&
                                 (0, n.jsx)("div", {
-                                    className: S.Dh,
+                                    className: I.Dh,
                                     ref: j,
-                                    children: (0, n.jsx)(i.T7Y, { className: S.Qo, children: (0, n.jsx)(p.A, {}) }),
+                                    children: (0, n.jsx)(a.T7Y, { className: I.Qo, children: (0, n.jsx)(x.A, {}) }),
                                 }),
                         ],
                     }),
                     k
-                        ? (0, C.dF)(o)
-                            ? (0, n.jsx)(E.A, { scrollerRef: m, tab: o }, o)
-                            : (0, n.jsx)(d.R9, {
-                                  newValue: { pageIndex: N },
-                                  children: (0, n.jsx)(_.A, {
-                                      categories: v,
-                                      setCategoryRef: L,
-                                      currentPage: N,
-                                      handlePageChange: y,
-                                      initialCategoryId: I,
+                        ? (0, A.dF)(o)
+                            ? (0, n.jsx)(b.A, { scrollerRef: c, tab: o }, o)
+                            : (0, n.jsx)(_.R9, {
+                                  newValue: { pageIndex: y },
+                                  children: (0, n.jsx)(h.A, {
+                                      categories: d,
+                                      setCategoryRef: p,
+                                      currentPage: y,
+                                      handlePageChange: N,
+                                      initialCategoryId: L,
                                   }),
                               })
-                        : (0, n.jsx)(x.A, { scrollerRef: m, tab: o }, o),
+                        : (0, n.jsx)(E.A, { scrollerRef: c, tab: o }, o),
                 ],
             }),
         })

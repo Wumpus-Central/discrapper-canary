@@ -1,5 +1,8 @@
-t.d(r, { A: () => c });
-var d = t(627968);
+t.d(l, { A: () => o });
+var r = t(627968);
 t(64700);
-var l = t(732955);
-let c = (e) => (0, d.jsx)(l.BJc, { ...e });
+var n = t(732955);
+let o = (e) => {
+    let { gap: l = 24, ...t } = e;
+    return (0, r.jsx)(n.BJc, { ...t, gap: l });
+};
