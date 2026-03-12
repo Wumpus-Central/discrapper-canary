@@ -121,7 +121,7 @@ function y(e) {
         user: t,
         hovered: n,
         status: r,
-        showAccountIdentifier: !l && !t.isProvisional,
+        showAccountIdentifier: !1,
         subText: d
             ? (0, i.jsxs)("div", {
                   className: N.Tl,
