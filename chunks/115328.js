@@ -7,6 +7,10 @@ let l = {
         nav_experiment_server_drawer_enabled: "[NavI] Enable expandable server drawer",
         show_icymi_debug_scores: "Show ICYMI debug scores",
         channel_list_scrim: "Dim the channel list when chat appears",
+        mana_radio_large_variant: "Larger Radio",
+        mana_checkbox_large_variant: "Larger Checkbox",
+        mana_switch_large_variant: "Larger Switch",
+        mana_switch_show_icons: "Show icons on switches",
     },
     r = {};
 class a extends i.Ay.DeviceSettingsStore {

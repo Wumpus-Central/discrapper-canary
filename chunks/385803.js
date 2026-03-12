@@ -318,7 +318,15 @@ let l = [
     a.NJ.LIGHT,
     s.F.STANDARD_BACKGROUND_THEME,
     a.NJ.MIDNIGHT,
-    s.F.STANDARD_BACKGROUND_THEME;
+    s.F.STANDARD_BACKGROUND_THEME,
+    s.F.STANDARD_BACKGROUND_THEME,
+    a.NJ.LIGHT,
+    s.F.STANDARD_BACKGROUND_THEME,
+    a.NJ.DARK,
+    s.F.STANDARD_BACKGROUND_THEME,
+    a.NJ.DARKER,
+    s.F.STANDARD_BACKGROUND_THEME,
+    a.NJ.MIDNIGHT;
 let _ = (0, r.keyBy)(d, "id");
 var f = (function (e) {
     return (e[(e.SIZE_48 = 48)] = "SIZE_48"), (e[(e.SIZE_60 = 60)] = "SIZE_60"), e;
