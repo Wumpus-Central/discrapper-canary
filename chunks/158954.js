@@ -426,6 +426,7 @@ n.d(t, {
     s3U: () => z.DownloadIcon,
     sC$: () => $.s,
     sYc: () => z.ImagesIcon,
+    s_y: () => U.s_,
     sjE: () => z.ClipboardListIcon,
     sjq: () => z.FolderIcon,
     skg: () => Q.sk,
