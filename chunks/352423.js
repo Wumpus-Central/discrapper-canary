@@ -24,15 +24,15 @@ var r = n(607399),
     v = n(807876),
     N = n(545986),
     C = n(976860),
-    b = n(788995),
-    R = n(556022);
+    R = n(788995),
+    O = n(556022);
 n(345953);
-var O = n(961350),
+var b = n(961350),
     D = n(696451),
     L = n(299091),
     w = n(309010),
-    x = n(967198),
-    M = n(711014),
+    M = n(967198),
+    x = n(711014),
     P = n(954571),
     k = n(998218),
     U = n(975807),
@@ -51,12 +51,12 @@ async function B(e) {
     if (null == t) return;
     if (t.state === G.elq.EXPIRED || t.state === G.elq.BANNED || t.state === G.elq.ERROR)
         return void (await V(t, e.code));
-    let n = M.Ay.getFlattenedGuildIds(),
+    let n = x.Ay.getFlattenedGuildIds(),
         r = t?.guild?.id,
         i = null != r && n.includes(r),
         s = !1;
     if (i && null != t.roles && t.roles.length > 0) {
-        let e = O.default.getId(),
+        let e = b.default.getId(),
             n = D.Ay.getMember(r, e),
             i = new Set(n?.roles ?? []);
         s = t.roles.some((e) => !i.has(e.id));
@@ -83,7 +83,7 @@ function j(e) {
                     o.type === m.I.APP_DIRECTORY_PROFILE || o.type === m.I.APP_DIRECTORY_STOREFRONT
                         ? { applicationId: i, skuId: void 0 }
                         : ((0, f.u)(i) ?? { applicationId: void 0, skuId: void 0 }),
-                l = x.A.getGuildId() ?? void 0;
+                l = M.A.getGuildId() ?? void 0;
             return (
                 null == s
                     ? (0, U.A)(e)
@@ -211,8 +211,8 @@ function j(e) {
                 !0
             );
         };
-    let { host: O, hostname: D, pathname: L, search: M, hash: V } = k.A.toURLSafe(e) ?? {},
-        j = k.A.isDiscordHostname(D ?? null) || k.A.isDiscordLocalhost(O ?? null, D ?? null);
+    let { host: b, hostname: D, pathname: L, search: x, hash: V } = k.A.toURLSafe(e) ?? {},
+        j = k.A.isDiscordHostname(D ?? null) || k.A.isDiscordLocalhost(b ?? null, D ?? null);
     if (j && (L?.startsWith("/application-directory") || L?.startsWith("/discovery/applications"))) {
         let e = L.split("/"),
             t = L?.startsWith("/discovery/applications"),
@@ -222,7 +222,7 @@ function j(e) {
         return (t) => {
             let r, a, o;
             if ((t?.preventDefault(), i)) {
-                let e = new URLSearchParams(M);
+                let e = new URLSearchParams(x);
                 (r = e.get("q") ?? void 0), (a = e.get("category_id") ?? void 0), (o = e.get("page") ?? void 0);
             } else s && (a = e[4]);
             return (
@@ -245,7 +245,7 @@ function j(e) {
     }
     if (null != L && j && k.A.isAppRoute(L)) {
         let e = { navigationReplace: !1, openChannel: !0 };
-        return null != M && (e.search = M), null != V && (e.hash = V), (t) => (t?.preventDefault(), (0, S.A)(L, e), !0);
+        return null != x && (e.search = x), null != V && (e.hash = V), (t) => (t?.preventDefault(), (0, S.A)(L, e), !0);
     }
     if (null != L && j) {
         let { getOAuth2AuthorizeProps: t, openOAuth2ModalWithCreateGuildModal: r } = n(200330),
@@ -264,17 +264,19 @@ function j(e) {
     if (null != L && j && null != Y)
         return (e) => {
             e?.preventDefault();
-            let t = x.A.getGuildId();
+            let t = M.A.getGuildId();
             null != Y.guildId && "" !== Y.guildId && Y.guildId !== t && (0, S.A)(G.BVt.CHANNEL(Y.guildId));
             let n = A.Ay.getGuildScheduledEvent(Y.guildEventId);
             return null != n && (0, g.uR)({ eventId: n.id }), !0;
         };
     if (j && L?.startsWith("/settings/")) {
-        let { default: e } = n(849823),
-            { openUserSettingsFromParsedUrl: t } = n(840065),
-            r = e(L, M);
-        if (null != r)
-            return (e) => (e?.preventDefault(), t({ match: r, analyticsLocations: s, urlOrigin: "link_click" }), !0);
+        let { default: e, trackParseSettingsUrl: t } = n(849823),
+            { openUserSettings: r } = n(840065);
+        return (n) => {
+            n?.preventDefault();
+            let i = e({ path: L, search: x });
+            return t(i, "link_click"), r(i.target, { analyticsLocations: s, path: i.path }), !0;
+        };
     }
     if (j && L?.startsWith("/playground")) {
         let { parsePlaygroundUrl: e } = n(682492),
@@ -285,7 +287,7 @@ function j(e) {
     return j && L?.startsWith("/discovery/quests")
         ? (e) => (e?.preventDefault(), (0, N.navigateToQuestHome)({ fromContent: i.u.QUEST_BADGE }), !0)
         : j && L?.startsWith("/quest-home")
-          ? (e) => (e?.preventDefault(), (0, C.pX)(G.BVt.QUEST_HOME + (M ?? "")), !0)
+          ? (e) => (e?.preventDefault(), (0, C.pX)(G.BVt.QUEST_HOME + (x ?? "")), !0)
           : j && L?.startsWith("/quest-preview")
             ? (e) => {
                   if ((e?.preventDefault(), (0, v.U)({ location: F.rE.NAVIGATE_TO_QUEST_HOME_UTIL })))
@@ -304,7 +306,7 @@ function j(e) {
                         }),
                     !0
                 )
-              : t || null == (0, R.m)(e)
+              : t || null == (0, O.m)(e)
                 ? void 0
-                : (t) => (t?.preventDefault(), b.A.show(e), !0);
+                : (t) => (t?.preventDefault(), R.A.show(e), !0);
 }

@@ -108,8 +108,9 @@ let G = {
                 case D.XK.USER_SETTINGS:
                     if (null != i) {
                         let e = M.BVt.SETTINGS(i.section, i.subsection),
-                            n = (0, S.default)(e, i.search);
-                        null != n && (0, x.openUserSettingsFromParsedUrl)({ match: n, urlOrigin: "deeplink" }),
+                            n = (0, S.default)({ path: e, search: i.search });
+                        (0, S.trackParseSettingsUrl)(n, "deeplink"),
+                            (0, x.openUserSettings)(n.target, { path: n.path }),
                             U(i.fingerprint, (0, D.OE)(t));
                     }
                     break;
