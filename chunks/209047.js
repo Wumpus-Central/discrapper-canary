@@ -25,31 +25,39 @@ function A(e) {
                 children: (0, i.jsx)(h, { navId: "favorite-guild-header-add-context", onClose: t, onSelect: t }),
             });
         }, []);
-    return (0, i.jsx)(l.m, {
-        text: m,
-        position: "bottom",
-        asContainer: !0,
-        children: n
-            ? (0, i.jsx)(r.YNO, {
-                  targetElementRef: A,
-                  position: "bottom",
-                  align: "left",
-                  spacing: 4,
-                  renderPopout: g,
-                  children: (e) =>
-                      (0, i.jsx)(r.DUT, {
+    return n
+        ? (0, i.jsx)(r.YNO, {
+              targetElementRef: A,
+              position: "bottom",
+              align: "left",
+              spacing: 4,
+              renderPopout: g,
+              children: (e, n) => {
+                  let { isShown: s } = n;
+                  return (0, i.jsx)(l.m, {
+                      text: m,
+                      position: "bottom",
+                      asContainer: !0,
+                      shouldShow: !s,
+                      children: (0, i.jsx)(r.DUT, {
                           innerRef: A,
                           className: t,
                           "aria-label": m,
                           ...e,
                           children: (0, i.jsx)(r.TIR, { color: "currentColor", size: "refresh_sm" }),
                       }),
-              })
-            : (0, i.jsx)(r.DUT, {
+                  });
+              },
+          })
+        : (0, i.jsx)(l.m, {
+              text: m,
+              position: "bottom",
+              asContainer: !0,
+              children: (0, i.jsx)(r.DUT, {
                   className: t,
                   "aria-label": m,
                   onClick: p,
                   children: (0, i.jsx)(r.PGe, { color: "currentColor", size: "refresh_sm" }),
               }),
-    });
+          });
 }
