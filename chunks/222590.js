@@ -65,8 +65,6 @@ e.exports = {
     hB: "hasBadges_c19a55",
     jW: "botTagCompact_c19a55 botTag_c19a55",
     RQ: "botTagCozy_c19a55 botTag_c19a55",
-    MP: "nitroBadgeSvg_c19a55 botTag_c19a55",
-    vu: "nitroAuthorBadgeContainer_c19a55",
     me: "separator_c19a55",
     pR: "hasThread_c19a55",
     X4: "isSystemMessage_c19a55",
