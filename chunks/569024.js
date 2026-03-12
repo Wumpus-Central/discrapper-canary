@@ -351,7 +351,7 @@ class Y extends r.Ay.Store {
             D.error("clearing cache. exception encountered while loading cache.", e, e.stack),
                 (0, R.A)("cache:exception", e),
                 n(),
-                a.h.dispatch({ type: "RESET_SOCKET", args: { error: e, action: "loadCacheAsync", clearCache: !0 } });
+                a.h.dispatch({ type: "RESET_SOCKET", args: { error: e, action: "loadCacheAsync" } });
         }
     }
 }

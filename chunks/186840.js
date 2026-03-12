@@ -570,9 +570,9 @@ class X extends w.A {
               !0)
             : (U.error("Cannot start a new connection, connection state is not closed"), !1);
     }
-    resetSocketOnError(e) {
+    resetSocketAndClearCacheOnError(e) {
         let { action: t, error: n, metricAction: r } = e;
-        U.error(`resetSocketOnError during ${t}: ${n.message}`, n.stack);
+        U.error(`resetSocketAndClearCacheOnError during ${t}: ${n.message}`, n.stack);
         let i = (0, u.b)();
         g.A.increment({ name: l.K.SOCKET_CRASHED, tags: [`action:${r ?? t}`, `modded_client:${i}`] }, !0),
             !1 !== e.sentry && N.A.captureException(n, { tags: { socketCrashedAction: t } }),
@@ -586,22 +586,21 @@ class X extends w.A {
             this._reset(!0, 1e3, "Resetting socket due to error."),
             this.dispatcher.clear(),
             (this.connectionState = C.A.WILL_RECONNECT),
-            this.dispatchExceptionBackoff.cancel();
-        let s = e.clearCache || this.dispatchExceptionBackoff._fails > 0;
-        0 === this.dispatchExceptionBackoff._fails
-            ? (U.verbose("Triggering fast reconnect"),
-              this.dispatchExceptionBackoff.fail(() => {}),
-              setTimeout(() => this._connect(), 0))
-            : this.dispatchExceptionBackoff.fail(() => this._connect()),
-            s &&
-                ((this.didForceClearGuildHashes = !0),
-                _.h.dispatch({ type: "CLEAR_CACHES", reason: `Socket reset during ${t}` })),
+            this.dispatchExceptionBackoff.cancel(),
+            0 === this.dispatchExceptionBackoff._fails
+                ? (U.verbose("Triggering fast reconnect"),
+                  this.dispatchExceptionBackoff.fail(() => {}),
+                  setTimeout(() => this._connect(), 0))
+                : this.dispatchExceptionBackoff.fail(() => this._connect()),
+            (this.didForceClearGuildHashes = !0),
+            _.h.dispatch({ type: "CLEAR_CACHES", reason: `Socket reset during ${t}` }),
+            _.h.dispatch({ type: "LIBDISCORE_RESET" }),
             clearTimeout(this.dispatchSuccessTimer),
             (this.dispatchSuccessTimer = setTimeout(() => this.dispatchExceptionBackoff.succeed(), 2 * $));
     }
     resetSocketOnDispatchError(e) {
         let t = null != e.error.message && e.error.message.indexOf("Guild data was missing from store") >= 0;
-        this.resetSocketOnError({ ...e, sentry: !t, clearCache: t });
+        this.resetSocketAndClearCacheOnError({ ...e, sentry: !t });
     }
     close() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];

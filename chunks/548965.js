@@ -1,17 +1,19 @@
 "use strict";
-n.d(t, { ML: () => o, P4: () => f, iQ: () => h, pd: () => p }), n(321073);
+n.d(t, { ML: () => u, P4: () => h, hw: () => I, iQ: () => E, pX: () => T, pd: () => m }), n(321073);
 var r = n(284009),
     i = n.n(r),
     s = n(306173),
-    a = n(723426);
-let o = [],
-    l = Symbol("unknown");
-class u {
+    a = n(626584),
+    o = n(723426);
+let l = new a.A("libdiscoreExperiments"),
+    u = [],
+    c = Symbol("unknown");
+class d {
     id;
     inner = null;
-    cachedConfig = l;
+    cachedConfig = c;
     constructor(e, t) {
-        (this.id = e), o.push(this);
+        (this.id = e), u.push(this);
     }
     getEnabledFeatureName() {
         let e = this.getCachedConfig();
@@ -19,7 +21,7 @@ class u {
     }
     getCachedConfig() {
         return (
-            this.cachedConfig === l &&
+            this.cachedConfig === c &&
                 ((0, s.xd)() ? (this.cachedConfig = (0, s.Ih)().getConfig(this.id)) : (this.cachedConfig = void 0)),
             this.cachedConfig
         );
@@ -34,7 +36,7 @@ class u {
             : this.inner.getConfig({ location: "default" });
     }
 }
-class c extends u {
+class _ extends d {
     label;
     defaultValue;
     constructor(e, t, n = !1) {
@@ -51,7 +53,7 @@ class c extends u {
         return null == e || -1 === e.treatmentId ? this.defaultValue : 1 === e.treatmentId;
     }
 }
-class d extends u {
+class f extends d {
     storeName;
     constructor(e, t, n) {
         super(e, n), (this.storeName = t);
@@ -68,7 +70,7 @@ class d extends u {
                         return "typescript";
                 }
             })();
-        return (0, a.E)(t);
+        return (0, o.E)(t);
     }
     getEnabledFeatureName() {
         let e = this.getCachedBridgedStoreMode();
@@ -81,7 +83,7 @@ class d extends u {
         return [{ treatmentId: 0 }, { treatmentId: 1 }, { treatmentId: 2 }];
     }
 }
-class _ extends u {
+class p extends d {
     MAX_EMISSIONS_PER_APP_LAUNCH = 5;
     emissionsCount = 0;
     getLabel() {
@@ -113,10 +115,10 @@ class _ extends u {
         );
     }
 }
-let f = new d("2026-01-libdiscore-batch-store-refactor", "batch-store-refactor"),
-    p = new _("2025-09-libdiscore-telemetry"),
-    h = new c("2025-11-defer-load-late-lazy-cache", "Allow react to render before lazy cache is loaded");
-class m extends u {
+let h = new f("2026-01-libdiscore-batch-store-refactor", "batch-store-refactor"),
+    m = new p("2025-09-libdiscore-telemetry"),
+    E = new _("2025-11-defer-load-late-lazy-cache", "Allow react to render before lazy cache is loaded");
+class g extends d {
     label;
     treatmentCount;
     getLabel() {
@@ -129,6 +131,14 @@ class m extends u {
         super(e), (this.label = t), (this.treatmentCount = n);
     }
 }
-new m("2026-01-android-rmle", "Android Pull Mode Rendering", 4),
-    new m("2026-02-android-fresco-cache", "Android Fresco Cache", 3),
-    new c("2026-02-android-chat-mosaic-shared-pool", "Android Chat Mosaic Shared Pool");
+new g("2026-01-android-rmle", "Android Pull Mode Rendering", 4),
+    new g("2026-02-android-fresco-cache", "Android Fresco Cache", 3),
+    new _("2026-02-android-chat-mosaic-shared-pool", "Android Chat Mosaic Shared Pool");
+let A = !1;
+function I() {
+    return A;
+}
+function T() {
+    (0, s.xd)() &&
+        (l.info("Clearing libdiscore experiment cache and disabling sync"), (A = !0), (0, s.Ih)().clearCache());
+}

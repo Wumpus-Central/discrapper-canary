@@ -21,6 +21,7 @@ class i {
     flush() {
         let { action: e } = this;
         (this.action = null),
-            null != e && r.h.dispatch(e).catch((t) => this.socket.resetSocketOnError({ error: t, action: e.type }));
+            null != e &&
+                r.h.dispatch(e).catch((t) => this.socket.resetSocketAndClearCacheOnError({ error: t, action: e.type }));
     }
 }

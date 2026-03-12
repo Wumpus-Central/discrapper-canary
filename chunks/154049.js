@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { ES: () => o, Ek: () => s, kk: () => a });
+n.d(t, { ES: () => o, Ek: () => a, kk: () => s });
 var r = n(73153);
 let i = new (n(626584).A)("TryLoad");
-async function a(e) {
+async function s(e) {
     try {
         return await e();
     } catch (e) {
         return i.log("database load failed.", e), null;
     }
 }
-function s(e, t, n) {
+function a(e, t, n) {
     try {
         return t();
     } catch (t) {
@@ -21,7 +21,6 @@ function s(e, t, n) {
                     error: t,
                     action: `tryLoadOrResetCacheGateway (${e})`,
                     metricAction: `tryLoadOrResetCacheGateway (${n ?? e})`,
-                    clearCache: !0,
                 },
             }),
             null
@@ -40,7 +39,6 @@ async function o(e, t, n) {
                     error: t,
                     action: `tryLoadOrResetCacheGatewayAsync (${e})`,
                     metricAction: `tryLoadOrResetCacheGatewayAsync (${n ?? e})`,
-                    clearCache: !0,
                 },
             }),
             null

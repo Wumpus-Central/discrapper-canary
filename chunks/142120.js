@@ -227,7 +227,7 @@ function eh(e) {
     v.sZ.requestForumUnreads(t, n, r);
 }
 function em(e) {
-    v.sZ.connectionState !== y.A.WILL_RECONNECT && v.sZ.resetSocketOnError(e.args);
+    v.sZ.connectionState !== y.A.WILL_RECONNECT && v.sZ.resetSocketAndClearCacheOnError(e.args);
 }
 function eE(e) {
     let { guildIds: t } = e;

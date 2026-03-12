@@ -1,17 +1,17 @@
 "use strict";
 var r = n(841873);
-e.exports = n.v(t, e.id, "b7c42fd01e6a0176", {
+e.exports = n.v(t, e.id, "035d4795a1dede78", {
     "./libdiscore_wasm_bg.js": {
-        __wbg_warn_2159aed0435b2f46: r.CI,
-        __wbindgen_string_new: r.yc,
-        __wbindgen_number_new: r.N8,
-        __wbindgen_error_new: r.Rj,
-        __wbindgen_is_string: r.Gu,
-        __wbindgen_string_get: r.qN,
-        __wbindgen_is_object: r.qv,
         __wbindgen_is_undefined: r.vU,
-        __wbindgen_in: r.zE,
+        __wbindgen_string_new: r.yc,
         __wbindgen_is_null: r.QR,
+        __wbg_warn_2159aed0435b2f46: r.CI,
+        __wbindgen_string_get: r.qN,
+        __wbindgen_number_new: r.N8,
+        __wbindgen_is_string: r.Gu,
+        __wbindgen_is_object: r.qv,
+        __wbindgen_in: r.zE,
+        __wbindgen_error_new: r.Rj,
         __wbindgen_jsval_loose_eq: r.U8,
         __wbindgen_boolean_get: r.eF,
         __wbindgen_number_get: r.sW,
@@ -44,6 +44,7 @@ e.exports = n.v(t, e.id, "b7c42fd01e6a0176", {
         __wbg_instanceof_Cache_68839760b07b7088: r.Fs,
         __wbg_put_75886410036f9ae5: r.E1,
         __wbg_match_5b6cb6a9ae1700aa: r.YN,
+        __wbg_delete_8d7d048660be060f: r.O$,
         __wbg_now_d18023d54d4e5500: r.pD,
         __wbg_abort_410ec47a64ac6117: r.n8,
         __wbg_new_e25e5aab09ff45db: r.RG,
@@ -111,9 +112,9 @@ e.exports = n.v(t, e.id, "b7c42fd01e6a0176", {
         __wbindgen_memory: r.Py,
         __wbindgen_throw: r.Qn,
         __wbindgen_debug_string: r.rl,
-        __wbindgen_closure_wrapper1627: r.Dp,
-        __wbindgen_closure_wrapper1692: r.jN,
-        __wbindgen_closure_wrapper2527: r.xf,
+        __wbindgen_closure_wrapper1669: r.bM,
+        __wbindgen_closure_wrapper1734: r.A2,
+        __wbindgen_closure_wrapper2570: r.Lw,
         __wbindgen_init_externref_table: r.bL,
     },
 });

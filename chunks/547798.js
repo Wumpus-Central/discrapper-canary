@@ -1,4 +1,4 @@
-n.d(t, { A: () => k });
+n.d(t, { A: () => R });
 var a = n(627968),
     i = n(64700),
     s = n(503698),
@@ -10,39 +10,39 @@ var a = n(627968),
     u = n(73153),
     m = n(787880),
     h = n(142120),
-    x = n(69555),
-    p = n(237984),
+    p = n(69555),
+    x = n(237984),
     g = n(43203),
     _ = n(349435),
     f = n(674272),
-    b = n(253932),
-    v = n(559248),
+    v = n(253932),
+    b = n(559248),
     j = n(179690),
-    C = n(309010),
-    A = n(837921),
+    A = n(309010),
+    C = n(837921),
     T = n(652215),
-    S = n(327337),
-    y = n(431804),
+    y = n(327337),
+    S = n(431804),
     E = n(560774),
     N = n(522759);
 function I() {
     throw Error("Send help");
 }
-function k() {
-    let e = b.j0.useSetting(),
+function R() {
+    let e = v.j0.useSetting(),
         [t, s] = i.useState(!1);
     return t
         ? {}
         : (0, a.jsxs)(c.HOs, {
               children: [
-                  (0, a.jsx)("div", { className: l()(E.N, N.SX), children: (0, a.jsx)(v.M, {}) }),
+                  (0, a.jsx)("div", { className: l()(E.N, N.SX), children: (0, a.jsx)(b.M, {}) }),
                   (0, a.jsx)("div", {
                       className: l()(E.N, N.QB),
                       children: (0, a.jsx)(c.Button, {
                           variant: "primary",
                           size: "sm",
                           text: "Launch Vibing Wumpus",
-                          onClick: () => (0, f.A)({ source: y.y.KEYBIND }),
+                          onClick: () => (0, f.A)({ source: S.y.KEYBIND }),
                       }),
                   }),
                   (0, a.jsx)("div", {
@@ -54,7 +54,7 @@ function k() {
                           onClick: () => {
                               let e;
                               return (
-                                  (e = C.A.getChannelId() ?? "21154681615024128"),
+                                  (e = A.A.getChannelId() ?? "21154681615024128"),
                                   void (0, c.mMO)(
                                       async () => {
                                           let { default: t } = await Promise.all([
@@ -71,7 +71,7 @@ function k() {
                                                   ...n,
                                               });
                                       },
-                                      { modalKey: S.V },
+                                      { modalKey: y.V },
                                   )
                               );
                           },
@@ -101,7 +101,7 @@ function k() {
                           variant: "primary",
                           size: "sm",
                           text: "Reset Hang Status State",
-                          onClick: x.B7,
+                          onClick: p.B7,
                       }),
                   }),
                   (0, a.jsx)("div", {
@@ -115,10 +115,24 @@ function k() {
                   }),
                   (0, a.jsx)("div", {
                       className: l()(E.N, N.QB),
+                      children: (0, a.jsx)(c.Button, {
+                          variant: "primary",
+                          size: "sm",
+                          text: "Force libdiscore Store Error",
+                          onClick: () => {
+                              let e = h.A.getSocket();
+                              u.h.dispatch({ type: "LIBDISCORE_SIMULATE_STORE_ERROR" }).catch((t) => {
+                                  e.resetSocketOnDispatchError({ error: t, action: "LIBDISCORE_SIMULATE_STORE_ERROR" });
+                              });
+                          },
+                      }),
+                  }),
+                  (0, a.jsx)("div", {
+                      className: l()(E.N, N.QB),
                       children: (0, a.jsx)(c.dOG, {
                           label: "Ignore profile speedbump disabled",
                           checked: e,
-                          onChange: (e) => b.j0.updateSetting(e),
+                          onChange: (e) => v.j0.updateSetting(e),
                       }),
                   }),
                   (0, a.jsxs)("div", {
@@ -128,7 +142,7 @@ function k() {
                               variant: "primary",
                               size: "sm",
                               text: "Open Overlay",
-                              onClick: () => (0, p.o)(),
+                              onClick: () => (0, x.o)(),
                           }),
                           (0, a.jsx)(c.Button, {
                               variant: "primary",
@@ -183,7 +197,7 @@ function k() {
                                   { label: "RaiseFailFastException", value: 3, id: "raise_fail_fast_exception" },
                                   { label: "Out of Memory", value: 4, id: "out_of_memory" },
                               ],
-                              onSelectionChange: (e) => null != e && A.Ay.crash(e),
+                              onSelectionChange: (e) => null != e && C.Ay.crash(e),
                           }),
                           (0, a.jsx)(c.l6P, {
                               label: "Trigger JS crash",
@@ -208,7 +222,7 @@ function k() {
                                       id: "exception_in_main_process",
                                   },
                               ],
-                              onSelectionChange: (e) => (null != e ? void A.Ay.triggerJSException(e) : void 0),
+                              onSelectionChange: (e) => (null != e ? void C.Ay.triggerJSException(e) : void 0),
                           }),
                           (0, a.jsx)(c.Button, {
                               variant: "primary",

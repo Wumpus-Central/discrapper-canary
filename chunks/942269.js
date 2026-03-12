@@ -2,12 +2,12 @@
 n.d(t, { yW: () => h }), n(321073);
 var r = n(311907),
     i = n(73153),
-    a = n(626584),
-    s = n(747465);
+    s = n(626584),
+    a = n(747465);
 let o = Symbol("version"),
     l = Object.freeze({}),
     u = "0",
-    c = new a.A("LibdiscoreStore"),
+    c = new s.A("LibdiscoreStore"),
     d = (e) => e;
 class _ {
     type;
@@ -147,11 +147,11 @@ class p {
             let i = this.state.root[t];
             if (null == i) return r;
             let {
-                    root: a,
-                    derived: { memoized: s },
+                    root: s,
+                    derived: { memoized: a },
                 } = i,
-                o = s[n];
-            return Object.hasOwnProperty.call(s, n) || ((o = e(t, a)), (s[n] = o)), o;
+                o = a[n];
+            return Object.hasOwnProperty.call(a, n) || ((o = e(t, s)), (a[n] = o)), o;
         };
     }
     memoizedSinglePartition(e, t, n) {
@@ -161,11 +161,11 @@ class p {
             let n = this.state.root[e];
             if (null == n) return i;
             let {
-                    root: a,
-                    derived: { memoized: s },
+                    root: s,
+                    derived: { memoized: a },
                 } = n,
-                o = s[r];
-            return Object.hasOwnProperty.call(s, r) || ((o = t(a)), (s[r] = o)), o;
+                o = a[r];
+            return Object.hasOwnProperty.call(a, r) || ((o = t(s)), (a[r] = o)), o;
         };
     }
     memoized(e) {
@@ -221,9 +221,9 @@ class p {
     updateRecord(e, t, n, r, i) {
         if (((i ??= this.nextVersion()), null == this.state.root[e])) throw Error(`Partition ${e} does not exist`);
         if (null == this.state.root[e].root[t]) throw Error(`Record ${t} does not exist in partition ${e}`);
-        let a = this.state.root[e].root[t],
-            s = r({ ...a, ...n });
-        return this.updateSecondaryIndexes([s], [a], i), (this.touchPartition(e, i).root[t] = s), !0;
+        let s = this.state.root[e].root[t],
+            a = r({ ...s, ...n });
+        return this.updateSecondaryIndexes([a], [s], i), (this.touchPartition(e, i).root[t] = a), !0;
     }
     touchPartition(e, t) {
         return (
@@ -279,6 +279,7 @@ class h extends r.il {
     wrappedState = null;
     shadowDatabases = null;
     shadowRecordCreators = null;
+    dualReadValidationDisabled = !1;
     constructor(e, t = "typescript") {
         const n = {};
         if ("typescript" === t || "typescript-libdiscore-dual-read" === t)
@@ -300,6 +301,9 @@ class h extends r.il {
     getMode() {
         return this.mode;
     }
+    disableDualReadValidation() {
+        "typescript-libdiscore-dual-read" === this.mode && (this.dualReadValidationDisabled = !0);
+    }
     connectWithLibdiscore(e) {
         if ("typescript" === this.mode) throw Error("connectWithLibdiscore should not be called in TypeScript mode.");
         let { storeToken: t, initialState: n } = e.connectStore({
@@ -315,17 +319,17 @@ class h extends r.il {
             t = { root: {}, derived: { length: 0, memoized: {} } };
         this.addChangeListener(() => {
             let n = this.shadowDatabases;
-            if (null != n)
+            if (null != n && !this.dualReadValidationDisabled)
                 for (let r in this.state.databases) {
                     let i = this.state.databases[r],
-                        a = n[r];
-                    if (null == a) {
+                        s = n[r];
+                    if (null == s) {
                         c.warn(`Shadow database ${r} not found for dual-read validation`);
                         continue;
                     }
                     let o = i.getAllPartitions(),
-                        l = a.getAllPartitions();
-                    (0, s.R7)(`${this.getName()}:${r}`, "Kkv", (n) => {
+                        l = s.getAllPartitions();
+                    (0, a.R7)(`${this.getName()}:${r}`, "Kkv", (n) => {
                         let r = Object.keys(o),
                             i = Object.keys(l);
                         for (let i of r) {
@@ -334,13 +338,13 @@ class h extends r.il {
                                 n(r, t);
                                 continue;
                             }
-                            let a = l[i],
-                                s = r.derived.memoized[e],
-                                u = a.derived.memoized[e];
-                            if (null != s && s === u) continue;
-                            n(r, a);
+                            let s = l[i],
+                                a = r.derived.memoized[e],
+                                u = s.derived.memoized[e];
+                            if (null != a && a === u) continue;
+                            n(r, s);
                             let c = {};
-                            (r.derived.memoized[e] = c), (a.derived.memoized[e] = c);
+                            (r.derived.memoized[e] = c), (s.derived.memoized[e] = c);
                         }
                         for (let e of i) Object.prototype.hasOwnProperty.call(o, e) || n(t, l[e]);
                     });
@@ -378,11 +382,11 @@ class h extends r.il {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             { databaseName: n, opcodes: r } = e,
             i = this.nextVersion(),
-            a = t ? this.shadowDatabases : this.state.databases,
-            s = t ? this.shadowRecordCreators : this.recordCreators,
-            o = a[n];
+            s = t ? this.shadowDatabases : this.state.databases,
+            a = t ? this.shadowRecordCreators : this.recordCreators,
+            o = s[n];
         if (null == o) throw Error(`Database ${n} does not exist`);
-        let l = s.get(n);
+        let l = a.get(n);
         for (let e of r)
             switch (e.opcode) {
                 case "removePartition":
