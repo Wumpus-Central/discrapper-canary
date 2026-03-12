@@ -1,4 +1,4 @@
-e.d(t, { default: () => G });
+e.d(t, { default: () => y });
 var i = e(627968);
 e(64700);
 var l = e(397927),
@@ -23,13 +23,13 @@ function v(n) {
     let { channel: t, onSelect: a } = n,
         d = t.isOwner(j.default.getId()),
         o = (0, _.A)(t),
-        x = (0, m.A)(t),
+        x = (0, m.Ay)(t),
         b = (0, c.A)({ id: t.id, label: p.intl.string(p.t.gFHI3k) }),
         v = (0, s.A)(t),
         O = (0, h.y)(t),
-        G = (0, A.A)(t),
-        X = (0, f.A)(t),
-        y = d
+        y = (0, A.A)(t),
+        G = (0, f.A)(t),
+        X = d
             ? (0, i.jsx)(l.Drp, {
                   id: "instant-invites",
                   label: p.intl.string(p.t.ngRFjZ),
@@ -50,11 +50,11 @@ function v(n) {
               onSelect: a,
               children: [
                   (0, i.jsx)(l.rXV, { children: o }),
-                  (0, i.jsx)(l.rXV, { children: X }),
                   (0, i.jsx)(l.rXV, { children: G }),
+                  (0, i.jsx)(l.rXV, { children: y }),
                   (0, i.jsxs)(l.rXV, {
                       children: [
-                          y,
+                          X,
                           (0, i.jsx)(l.Drp, {
                               id: "edit-gdm",
                               label: p.intl.string(p.t["5Q9+/L"]),
@@ -73,13 +73,13 @@ function O(n) {
     let { channel: t, selected: a, onSelect: d } = n,
         o = t.isOwner(j.default.getId()),
         A = (0, _.A)(t),
-        f = (0, m.A)(t),
+        f = (0, m.Ay)(t),
         b = (0, x.A)(t, a),
         v = (0, c.A)({ id: t.id, label: p.intl.string(p.t.gFHI3k) }),
         O = (0, s.A)(t),
-        G = (0, h.m)(t),
-        X = (0, h.y)(t),
-        y = o
+        y = (0, h.m)(t),
+        G = (0, h.y)(t),
+        X = o
             ? (0, i.jsx)(l.Drp, {
                   id: "instant-invites",
                   label: p.intl.string(p.t.ngRFjZ),
@@ -100,10 +100,10 @@ function O(n) {
               onSelect: d,
               children: [
                   (0, i.jsx)(l.rXV, { children: A }),
-                  (0, i.jsx)(l.rXV, { children: G }),
+                  (0, i.jsx)(l.rXV, { children: y }),
                   (0, i.jsxs)(l.rXV, {
                       children: [
-                          y,
+                          X,
                           (0, i.jsx)(l.Drp, {
                               id: "edit-gdm",
                               label: p.intl.string(p.t["5Q9+/L"]),
@@ -113,12 +113,12 @@ function O(n) {
                   }),
                   (0, i.jsx)(l.rXV, { children: O }),
                   (0, i.jsx)(l.rXV, { children: f }),
-                  (0, i.jsxs)(l.rXV, { children: [X, b] }),
+                  (0, i.jsxs)(l.rXV, { children: [G, b] }),
                   (0, i.jsx)(l.rXV, { children: v }),
               ],
           });
 }
-let G = (0, d.A)(
+let y = (0, d.A)(
     (0, a.A)(
         function (n) {
             return (0, o.A)() ? (0, i.jsx)(v, { ...n }) : (0, i.jsx)(O, { ...n });

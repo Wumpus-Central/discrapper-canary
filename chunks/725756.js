@@ -46,7 +46,7 @@ function G(n) {
 function O(n) {
     let { channel: t, guild: e, onSelect: a } = n,
         d = (0, y.A)(t),
-        c = (0, C.A)(t),
+        c = (0, C.Ay)(t),
         o = (0, f.A)(t),
         v = (0, h.A)(t),
         G = (0, g.A)(t),

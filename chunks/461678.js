@@ -24,7 +24,7 @@ function m(e) {
         "aria-label": g,
         onSelect: m,
         children: [
-            (0, i.jsx)(s.rXV, { children: (0, a.A)(t, p) }),
+            (0, i.jsx)(s.rXV, { children: (0, a.Ay)(t, p) }),
             f ? (0, i.jsx)(s.rXV, { children: C }) : null,
             S ? E : (0, i.jsx)(s.rXV, { children: _ }),
         ],

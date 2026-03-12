@@ -26,11 +26,11 @@ let x = (0, c.A)(
                 c = (0, s.A)(e),
                 d = (0, b.m)(e),
                 E = (0, b.y)(e),
-                x = (0, A.A)(e),
+                x = (0, A.Ay)(e),
                 C = (0, f.A)({ id: e.id, label: j.intl.string(j.t.gFHI3k) }),
                 v = (0, o.A)(e),
-                N = (0, h.A)(e),
-                y = (0, _.Ay)(e),
+                y = (0, h.A)(e),
+                N = (0, _.Ay)(e),
                 G = (0, g.os)("ReportToModChannelContextMenu");
             return (0, i.jsxs)(r.W1t, {
                 "data-menu-migrated": !0,
@@ -42,7 +42,7 @@ let x = (0, c.A)(
                     (0, i.jsx)(r.rXV, { children: a }, "mark-as-read-or-favorite"),
                     (0, i.jsx)(r.rXV, { children: d }),
                     (0, i.jsx)(r.rXV, { children: c }, "channel-actions"),
-                    (0, i.jsxs)(r.rXV, { children: [x, G ? y : N] }, "notifications"),
+                    (0, i.jsxs)(r.rXV, { children: [x, G ? N : y] }, "notifications"),
                     (0, i.jsx)(r.rXV, { children: v }),
                     (0, i.jsx)(r.rXV, { children: E }),
                     (0, i.jsx)(r.rXV, { children: C }, "developer-actions"),

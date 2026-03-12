@@ -14,26 +14,8 @@ function u(e) {
         f = (0, d.Ay)(t.id, i);
     return f?.guildId == null
         ? null
-        : A?.guildId == null || A?.private
-          ? A?.guildId != null
-              ? null
-              : (0, l.jsx)(n.Drp, {
-                    id: "view-server-profile",
-                    label: c.intl.string(c.t.DisZzB),
-                    subtext: c.intl.formatToPlainString(c.t["mn/nW2"], { displayName: a.Ay.getName(i, u, t) }),
-                    action: () => {
-                        m?.(),
-                            (0, o.openUserProfileModal)({
-                                userId: t.id,
-                                guildId: i,
-                                ...g,
-                                showGuildProfile: !0,
-                                sourceAnalyticsLocations: x,
-                            }),
-                            h({ action: "PRESS_VIEW_SERVER_PROFILE", analyticsLocations: p, ...g });
-                    },
-                })
-          : (0, l.jsx)(n.Drp, {
+        : A?.guildId != null
+          ? (0, l.jsx)(n.Drp, {
                 id: "view-main-profile",
                 label: c.intl.string(c.t.GISTta),
                 subtext: c.intl.formatToPlainString(c.t["mn/nW2"], { displayName: a.Ay.getName(void 0, void 0, t) }),
@@ -47,6 +29,22 @@ function u(e) {
                             sourceAnalyticsLocations: x,
                         }),
                         h({ action: "PRESS_VIEW_MAIN_PROFILE", analyticsLocations: p, ...g });
+                },
+            })
+          : (0, l.jsx)(n.Drp, {
+                id: "view-server-profile",
+                label: c.intl.string(c.t.DisZzB),
+                subtext: c.intl.formatToPlainString(c.t["mn/nW2"], { displayName: a.Ay.getName(i, u, t) }),
+                action: () => {
+                    m?.(),
+                        (0, o.openUserProfileModal)({
+                            userId: t.id,
+                            guildId: i,
+                            ...g,
+                            showGuildProfile: !0,
+                            sourceAnalyticsLocations: x,
+                        }),
+                        h({ action: "PRESS_VIEW_SERVER_PROFILE", analyticsLocations: p, ...g });
                 },
             });
 }
