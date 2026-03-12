@@ -7,9 +7,6 @@ var i = n(813077),
     a = n(156312);
 function o() {
     let e = (0, i.wI)("StatefulCheckoutStoreCountryRow"),
-        { storeCountryFromCheckoutContext: t, checkoutPaymentSources: n, paymentSourceId: o } = (0, a.P5)();
-    if (!e || null == t) return null;
-    let l = n.find((e) => e.id === o) ?? null,
-        u = l?.relocationCountry ?? null;
-    return (0, r.jsx)(s.s, { storeCountry: t, relocationCountry: u });
+        { storeCountryFromCheckoutContext: t } = (0, a.P5)();
+    return e && null != t ? (0, r.jsx)(s.s, { storeCountry: t }) : null;
 }
