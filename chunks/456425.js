@@ -11,17 +11,17 @@ var i = n(627968),
     u = n(22007),
     h = n(46054),
     A = n(102876),
-    p = n(657331),
-    g = n(253932),
-    m = n(427157),
+    m = n(657331),
+    p = n(253932),
+    g = n(427157),
     _ = n(287809),
     f = n(954571),
     x = n(661191),
     C = n(998218),
     E = n(245205),
     I = n(322387),
-    b = n(995273),
-    N = n(96511),
+    N = n(995273),
+    b = n(96511),
     S = n(160098),
     T = n(429604),
     v = n(9905),
@@ -29,14 +29,14 @@ var i = n(627968),
     j = n(457404),
     R = n(652215),
     O = n(985018),
-    L = n(993169),
+    L = n(595351),
     M = n(213398),
     D = n(537997);
 function G(e) {
     let { item: t } = e,
         n = t.message?.content;
     if (null == n) return (0, i.jsx)("div", {});
-    let s = _.default.getUser(t.message?.author?.id) ?? new m.A(t.message?.author),
+    let s = _.default.getUser(t.message?.author?.id) ?? new g.A(t.message?.author),
         l = h.A.parse(n);
     return (0, i.jsxs)("div", {
         className: L.PI,
@@ -96,7 +96,7 @@ let k = s.memo(function (e) {
                     if (C.A.isDiscordHostname(n)) {
                         let e = i.match("^/users/(\\d+)");
                         null != e && 2 === e.length
-                            ? (0, p.openUserProfileModal)({
+                            ? (0, m.openUserProfileModal)({
                                   userId: e[1],
                                   messageId: t.message?.id,
                                   sourceAnalyticsLocations: o,
@@ -111,14 +111,16 @@ let k = s.memo(function (e) {
                     });
                 }
             }, [t, d, o]),
-            g = null;
+            p = null;
         t.type === I.Uo.INCOMING_FRIEND_REQUESTS && null != t.other_user
-            ? (g = (0, i.jsx)(y.A, { userId: t.other_user.id }))
-            : t.type === I.Uo.INCOMING_GAME_FRIEND_REQUESTS &&
-              null != t.other_user &&
-              (g = (0, i.jsx)(y.A, { userId: t.other_user.id, applicationId: t.applicationId }));
-        let m = null != t.local_id,
-            _ = (0, N.A)({ item: t, renderApplication: (e) => (0, i.jsx)(w, { applicationId: e }) }),
+            ? (p = (0, i.jsx)(y.A, { userId: t.other_user.id }))
+            : t.type === I.Uo.INCOMING_GAME_FRIEND_REQUESTS && null != t.other_user
+              ? (p = (0, i.jsx)(y.A, { userId: t.other_user.id, applicationId: t.applicationId }))
+              : (t.type === I.hW.FRIEND_REQUEST_ACCEPTED || t.type === I.hW.GAME_FRIEND_REQUEST_ACCEPTED) &&
+                null != t.other_user &&
+                (p = (0, i.jsx)(y.R, { userId: t.other_user.id }));
+        let g = null != t.local_id,
+            _ = (0, b.A)({ item: t, renderApplication: (e) => (0, i.jsx)(w, { applicationId: e }) }),
             { emoji_id: S, emoji_name: O } = t,
             M = null != S || null != O ? (0, i.jsx)(a.A, { className: L.Zg, emojiId: S, emojiName: O }) : null;
         return (0, i.jsxs)("div", {
@@ -146,20 +148,20 @@ let k = s.memo(function (e) {
                                 (0, i.jsx)(r.Text, {
                                     variant: "text-xs/medium",
                                     color: d ? "text-muted" : "text-default",
-                                    children: (0, b.jb)(x.default.extractTimestamp(t.id)),
+                                    children: (0, N.jb)(x.default.extractTimestamp(t.id)),
                                 }),
-                                g,
+                                p,
                             ],
                         }),
                     ],
                 }),
-                m ? null : (0, i.jsx)(j.e, { item: t }),
+                g ? null : (0, i.jsx)(j.e, { item: t }),
             ],
         });
     }),
     V = s.memo(function (e) {
         let { items: t } = e,
-            n = g.ns.useSetting();
+            n = p.ns.useSetting();
         return (
             (0, S.q)(t),
             (0, i.jsx)(i.Fragment, { children: t.map((e) => (0, i.jsx)(k, { item: e, ackedBeforeId: n }, e.id)) })
