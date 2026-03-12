@@ -1,12 +1,12 @@
 "use strict";
 n.d(t, { A: () => u, x: () => c });
-var r = n(696444),
-    i = n(474012),
-    a = n(935816),
-    s = n(931772),
+var r = n(384726),
+    i = n(696444),
+    s = n(474012),
+    a = n(931772),
     o = n(758836),
     l = n(652215);
-class u extends s.A {
+class u extends a.A {
     prices;
     type;
     premiumType;
@@ -14,6 +14,7 @@ class u extends s.A {
     categorySkuId;
     isCategoryReward;
     bundledProducts;
+    previewAssets;
     variants;
     variantGroupStoreListingId;
     googleSkuIds;
@@ -28,27 +29,46 @@ class u extends s.A {
             (this.isCategoryReward = e.isCategoryReward),
             (this.prices = e.prices),
             (this.bundledProducts = e.bundledProducts),
+            (this.previewAssets = e.previewAssets),
             (this.googleSkuIds = e.googleSkuIds),
             (this.variants = e.variants),
             (this.eligibleOffers = e.eligibleOffers);
     }
     static fromServer(e) {
-        let { type: t, premium_type: n, category_sku_id: s, prices: d, bundled_products: _, variants: f, ...p } = e;
+        let {
+            type: t,
+            premium_type: n,
+            category_sku_id: a,
+            prices: d,
+            bundled_products: _,
+            preview_assets: f,
+            variants: p,
+            ...h
+        } = e;
         return new u({
-            ...super.fromServer(p),
+            ...super.fromServer(h),
             type: t,
             premiumType: n === l.oA2 ? null : n,
-            categorySkuId: s,
+            categorySkuId: a,
             isCategoryReward: o.MS.some((e) => {
                 let { rewardSkuId: t } = e;
-                return t === p.sku_id;
+                return t === h.sku_id;
             }),
-            prices: (0, a.m)(d),
-            items: (0, i.K)(p.items),
-            bundledProducts: _?.map(r.A.fromServer),
-            variants: f?.map(c.fromServer),
-            googleSkuIds: p.google_sku_ids,
-            eligibleOffers: p.eligible_offers,
+            prices: (0, r.A)(d),
+            items: (0, s.K)(h.items),
+            bundledProducts: _?.map(i.A.fromServer),
+            previewAssets:
+                null != f
+                    ? {
+                          fgStatic: f.fg_static,
+                          fgAnimated: f.fg_animated,
+                          bgStatic: f.bg_static,
+                          bgAnimated: f.bg_animated,
+                      }
+                    : void 0,
+            variants: p?.map(c.fromServer),
+            googleSkuIds: h.google_sku_ids,
+            eligibleOffers: h.eligible_offers,
         });
     }
 }
@@ -65,9 +85,9 @@ class c extends u {
             (this.variantValue = e.variantValue);
     }
     static fromServer(e) {
-        let { base_variant_name: t, base_variant_sku_id: n, variant_label: r, variant_value: i, ...a } = e;
+        let { base_variant_name: t, base_variant_sku_id: n, variant_label: r, variant_value: i, ...s } = e;
         return new c({
-            ...super.fromServer(a),
+            ...super.fromServer(s),
             baseVariantName: t,
             baseVariantSkuId: n,
             variantLabel: r,
