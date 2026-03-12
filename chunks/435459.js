@@ -1,4 +1,4 @@
-n.d(t, { A: () => c }),
+n.d(t, { A: () => m }),
     n(393431),
     n(532706),
     n(42231),
@@ -10,17 +10,19 @@ n.d(t, { A: () => c }),
     n(14289),
     n(35956);
 var a = n(627968),
-    s = n(64700),
-    i = n(687813),
-    l = n(158954),
-    r = n(397927);
-let o = {
+    i = n(64700),
+    s = n(687813),
+    l = n(735438),
+    r = n.n(l),
+    o = n(158954),
+    d = n(397927);
+let c = {
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Messages_Opt.lottie":
         () => n.e("36508").then(n.t.bind(n, 655671, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Notifications_Opt.lottie":
         () => n.e("5252").then(n.t.bind(n, 323823, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Servers_CombinedEE.lottie":
-        () => n.e("65154").then(n.t.bind(n, 670649, 17)),
+        () => n.e("65154").then(n.t.bind(n, 893030, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Servers_Opt.lottie":
         () => n.e("77248").then(n.t.bind(n, 342787, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_You_Opt.lottie": () =>
@@ -46,7 +48,7 @@ let o = {
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/web/MicrophoneVoiceFilter.lottie": () =>
         n.e("60360").then(n.t.bind(n, 900699, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/web/OrbsEarnSpend.lottie": () =>
-        n.e("92568").then(n.t.bind(n, 372088, 17)),
+        n.e("92568").then(n.t.bind(n, 149707, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/web/OrbsEarnSpendLightTheme.lottie": () =>
         n.e("82715").then(n.t.bind(n, 147734, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/web/Screenshare.lottie": () =>
@@ -80,7 +82,7 @@ let o = {
     "discord_common/js/shared/animations/app/gifts/seasonal/box/box-action.lottiejson": () =>
         n.e("19534").then(n.t.bind(n, 87037, 19)),
     "discord_common/js/shared/animations/app/gifts/seasonal/box/box-idle.lottiejson": () =>
-        n.e("12250").then(n.t.bind(n, 331617, 19)),
+        n.e("12250").then(n.t.bind(n, 553998, 19)),
     "discord_common/js/shared/animations/app/gifts/seasonal/box/box-loop.lottiejson": () =>
         n.e("58526").then(n.t.bind(n, 138157, 19)),
     "discord_common/js/shared/animations/app/gifts/seasonal/cake/cake-action.lottiejson": () =>
@@ -170,7 +172,7 @@ let o = {
     "discord_app/images/burst_reactions/BurstReaction_Whirlwind_v01_Lottie.lottiejson": () =>
         n.e("35583").then(n.t.bind(n, 668994, 19)),
     "discord_app/images/burst_reactions/mobile/fullscreen/SuperReactions_Mobile_Send_Spotlight_v1.lottiejson": () =>
-        n.e("47862").then(n.t.bind(n, 911573, 19)),
+        n.e("25481").then(n.t.bind(n, 911573, 19)),
     "discord_app/images/burst_reactions/mobile/SuperReactions_Mobile_Anime_v1.lottiejson": () =>
         n.e("46711").then(n.t.bind(n, 23434, 19)),
     "discord_app/images/burst_reactions/mobile/SuperReactions_Mobile_Arcade_v1.lottiejson": () =>
@@ -297,7 +299,7 @@ let o = {
     "discord_common/js/shared/animations/app/xbox/xbox_connecting.lottiejson": () =>
         n.e("76121").then(n.t.bind(n, 709376, 19)),
 };
-function d(e) {
+function u(e) {
     let { default: t } = e;
     return fetch(t)
         .then((e) => e.arrayBuffer())
@@ -305,67 +307,76 @@ function d(e) {
             (e) =>
                 new Promise((t, n) => {
                     let a = new Uint8Array(e);
-                    i.$1(a, (e, a) => {
+                    s.$1(a, (e, a) => {
                         null != e && n(e);
-                        let s = Object.keys(a).reduce((e, t) => ({ ...e, [t]: JSON.parse(i.he(a[t])) }), {}),
-                            l = s["manifest.json"];
-                        t(s[`animations/${l.animations[0].id}.json`]);
+                        let i = Object.keys(a).reduce((e, t) => ({ ...e, [t]: JSON.parse(s.he(a[t])) }), {}),
+                            l = i["manifest.json"];
+                        t(i[`animations/${l.animations[0].id}.json`]);
                     });
                 }),
         );
 }
-function c() {
-    let [e, t] = s.useState(void 0),
-        [n, i] = s.useState(400),
-        [c, u] = s.useState(400);
+function m() {
+    let [e, t] = i.useState(void 0),
+        [n, s] = i.useState(400),
+        [l, m] = i.useState(400);
     return (0, a.jsx)("div", {
         style: { margin: 24 },
-        children: (0, a.jsxs)(l.BJc, {
+        children: (0, a.jsxs)(o.BJc, {
             gap: 24,
             children: [
-                (0, a.jsx)(r.ZiE, {
-                    options: Object.keys(o).map((e) => ({ id: e, label: e, value: e })),
+                (0, a.jsx)(d.ZiE, {
+                    options: Object.keys(c).map((e) => ({ id: e, label: e, value: e })),
                     value: e,
                     onSelectionChange: t,
                     selectionMode: "single",
                 }),
-                (0, a.jsxs)(l.BJc, {
+                (0, a.jsxs)(o.BJc, {
                     gap: 8,
                     direction: "horizontal",
                     children: [
-                        (0, a.jsx)(r.ksK, { value: n.toString(), onChange: (e) => i(Number(e)), label: "Width" }),
-                        (0, a.jsx)(r.ksK, { value: c.toString(), onChange: (e) => u(Number(e)), label: "Height" }),
+                        (0, a.jsx)(d.ksK, { value: n.toString(), onChange: (e) => s(Number(e)), label: "Width" }),
+                        (0, a.jsx)(d.ksK, { value: l.toString(), onChange: (e) => m(Number(e)), label: "Height" }),
                     ],
                 }),
-                (0, a.jsx)(r.Button, {
+                (0, a.jsx)(d.Button, {
                     size: "sm",
                     disabled: null == e,
                     onClick: async () => {
                         if (null == e) return;
-                        let t = o[e],
-                            n = new Blob([JSON.stringify(e.endsWith(".lottie") ? await t().then(d) : await t())], {
-                                type: "application/json",
-                            }),
+                        let t = c[e],
+                            n = new Blob(
+                                [
+                                    JSON.stringify(
+                                        e.endsWith(".lottie")
+                                            ? await t().then(u).then(r().cloneDeep)
+                                            : await t().then((e) => r().cloneDeep(e.default)),
+                                    ),
+                                ],
+                                { type: "application/json" },
+                            ),
                             a = URL.createObjectURL(n),
-                            s = document.createElement("a");
-                        (s.href = a),
-                            (s.download = `${e.split("/").pop()}.json`),
-                            document.body.appendChild(s),
-                            s.click(),
-                            document.body.removeChild(s),
+                            i = document.createElement("a");
+                        (i.href = a),
+                            (i.download = `${e.split("/").pop()}.json`),
+                            document.body.appendChild(i),
+                            i.click(),
+                            document.body.removeChild(i),
                             URL.revokeObjectURL(a);
                     },
                     text: "Download",
                 }),
                 null != e &&
                     (0, a.jsx)("div", {
-                        style: { width: n, height: c },
+                        style: { width: n, height: l },
                         children: (0, a.jsx)(
-                            r.akl,
+                            d.akl,
                             {
                                 importData: () => {
-                                    let t = o[e];
-                                    return e.endsWith(".lottie") ? t().then(d) : t();
+                                    let t = c[e];
+                                    return e.endsWith(".lottie")
+                                        ? t().then(u).then(r().cloneDeep)
+                                        : t().then((e) => r().cloneDeep(e.default));
                                 },
                             },
                             e,
