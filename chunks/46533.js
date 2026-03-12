@@ -12,8 +12,8 @@ var i = n(627968),
     h = n(442433),
     _ = n(475743),
     m = n(793574),
-    g = n(688810),
-    p = n(665037),
+    p = n(688810),
+    g = n(665037),
     E = n(771781),
     I = n(826673),
     f = n(932001),
@@ -59,7 +59,7 @@ var i = n(627968),
     ea = n(49999),
     es = n(349828),
     eo = n(985018),
-    ed = n(484241);
+    ed = n(175739);
 let ec = "server-settings",
     eu = { origin: { x: -8, y: -48 }, targetWidth: 40, targetHeight: 40, offset: { x: 0, y: 0 } };
 class eA extends r.PureComponent {
@@ -128,12 +128,12 @@ class eA extends r.PureComponent {
                     n.e("16301"),
                     n.e("22191"),
                     n.e("25961"),
-                    n.e("21968"),
+                    n.e("96760"),
                     n.e("35894"),
                     n.e("50796"),
                     n.e("8458"),
                     n.e("11810"),
-                    n.e("39048"),
+                    n.e("52848"),
                     n.e("54469"),
                     n.e("52191"),
                 ]).then(n.bind(n, 544676));
@@ -247,7 +247,7 @@ class eA extends r.PureComponent {
             _ = r || l || a;
         return null == t
             ? null
-            : (0, i.jsx)(g.f5, {
+            : (0, i.jsx)(p.f5, {
                   value: s,
                   children: (0, i.jsx)(u.QCx, {
                       targetElementRef: this.guildHeaderRef,
@@ -355,7 +355,7 @@ class eA extends r.PureComponent {
 }
 function eh(e) {
     let { guildId: t, hideSelectedChannel: n, selectedChannelId: l } = e,
-        d = (0, T.$)("GuildSidebar", "favorite-guild-header-context"),
+        d = (0, T.$)("favorite-guild-header-context"),
         c = (0, s.bG)([W.A], () => W.A.getGuild(t)),
         A = (0, C.A)(t),
         h = (0, s.bG)([H.A], () => H.A.getGuildDimensions(t).scrollTo),
@@ -367,7 +367,7 @@ function eh(e) {
         Z = (0, E.Ay)((e) => e.currentlyShown.has(o.M.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
         [J, ee] = r.useState(!Z),
         et = (0, _.A)(t),
-        { analyticsLocations: en } = (0, g.Ay)(m.A.GUILD_HEADER);
+        { analyticsLocations: en } = (0, p.Ay)(m.A.GUILD_HEADER);
     r.useEffect(() => {
         t !== et && ee(!Z);
     }, [t, et, Z]);
@@ -378,14 +378,14 @@ function eh(e) {
             ],
             a.x,
         ),
-        eo = (0, p.A)(c),
+        eo = (0, g.A)(c),
         ed = (0, u.red)(u.DXt),
         eu = (0, s.bG)([q.A], () => q.A.hasLayers()),
         eh = (0, R.xr)((e) => e.fullScreenLayers.length > 0),
         e_ = (0, s.bG)([V.A], () => V.A.shouldShow(ec)),
         em = (0, v.A)(t),
-        eg = c?.features.has(er.GuildFeatures.HUB) === !0,
-        ep = L && c?.features.has(er.GuildFeatures.DISCOVERABLE) === !0,
+        ep = c?.features.has(er.GuildFeatures.HUB) === !0,
+        eg = L && c?.features.has(er.GuildFeatures.DISCOVERABLE) === !0,
         eE = (0, s.bG)(
             [b.A, q.A],
             () => null != c && null != k && L && !q.A.hasLayers() && b.A.shouldShowGuildTemplateDirtyTooltip(t),
@@ -409,9 +409,9 @@ function eh(e) {
         eD = (0, M.A)(t),
         eM = !1 === eb && eR && null != eD,
         ew = [];
-    eg && ew.push(o.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
+    ep && ew.push(o.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
         em && ew.push(o.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
-        ep && ew.push(o.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
+        eg && ew.push(o.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
         !1 === eb && ew.push(o.M.GUILD_POWERUP_PERKS_COACHMARK),
         eO && !eL && !1 === eb && ew.push(o.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
         eO && !1 === eb && ew.push(o.M.GAME_SERVER_HOSTING_BATCH_RELEASE_V2_COACHMARK),

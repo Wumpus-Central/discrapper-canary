@@ -22,6 +22,7 @@ e.exports = {
     PA: "favoritesIcon_f37cb1",
     Vm: "guildDropdown_f37cb1",
     LO: "guildBadgeAndName_f37cb1",
+    sq: "addActionButton_f37cb1",
     ak: "inviteButton_f37cb1",
     jD: "themedHeaderMobile_f37cb1",
     ze: "headerEllipseForeground_f37cb1",
