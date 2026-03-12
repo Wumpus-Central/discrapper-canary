@@ -138,6 +138,7 @@ n.d(t, {
     Modal: () => F.Modal,
     Mwr: () => C.M,
     N$i: () => z.TextIcon,
+    NDp: () => z.PaintbrushThickIcon,
     NPJ: () => eB.N,
     NVR: () => z.PawPrintIcon,
     NVf: () => z.NewUserIcon,

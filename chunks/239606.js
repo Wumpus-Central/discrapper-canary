@@ -1,395 +1,436 @@
-i.d(t, { A: () => ep });
-var l = i(627968),
-    n = i(64700),
-    s = i(503698),
-    a = i.n(s),
-    r = i(490249),
-    o = i(311907),
-    d = i(397927),
-    c = i(770178),
-    u = i(80682),
-    A = i(793574),
-    m = i(688810),
-    p = i(915089),
-    x = i(713517),
-    g = i(645507),
-    h = i(922590),
-    f = i(821269),
-    I = i(182592),
-    j = i(437774),
-    v = i(594832),
-    N = i(994500),
-    y = i(351906),
-    E = i(203982),
-    T = i(562153),
-    _ = i(474090),
-    C = i(183555),
-    P = i(622543),
-    b = i(950191),
-    O = i(837529),
-    R = i(346713),
-    S = i(484509),
-    L = i(716804),
-    D = i(679492),
-    U = i(718019),
-    G = i(31432),
-    M = i(915614),
-    F = i(389996),
-    k = i(223330),
-    w = i(559506),
-    V = i(361311),
-    W = i(886891),
-    B = i(439053),
-    z = i(743987),
-    K = i(312381),
-    H = i(383448),
-    $ = i(946356),
-    Y = i(810396),
-    Z = i(159218),
-    J = i(280645),
-    q = i(291335),
-    X = i(807651),
-    Q = i(463156),
-    ee = i(510059),
-    et = i(982599),
-    ei = i(399122),
-    el = i(83013),
-    en = i(515054),
-    es = i(513265),
-    ea = i(384377),
-    er = i(160983),
-    eo = i(518477),
-    ed = i(652215),
-    ec = i(996988),
-    eu = i(985018),
-    eA = i(661388);
-let em = { "compact-sm": { avatarOffsetX: 16 }, "compact-xs": { avatarSize: d._3J.SIZE_96, avatarOffsetX: 16 } };
-function ep(e) {
+n.d(t, { A: () => eI });
+var l = n(627968),
+    i = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    r = n(490249),
+    o = n(311907),
+    d = n(397927),
+    c = n(770178),
+    u = n(80682),
+    A = n(793574),
+    m = n(688810),
+    p = n(915089),
+    x = n(713517),
+    g = n(645507),
+    h = n(922590),
+    f = n(821269),
+    I = n(182592),
+    j = n(437774),
+    v = n(594832),
+    N = n(994500),
+    y = n(351906),
+    E = n(203982),
+    T = n(562153),
+    C = n(474090),
+    _ = n(183555),
+    P = n(622543),
+    b = n(591179),
+    O = n(950191),
+    S = n(101928),
+    R = n(837529),
+    L = n(346713),
+    D = n(484509),
+    U = n(195898),
+    G = n(716804),
+    M = n(679492),
+    F = n(718019),
+    k = n(31432),
+    w = n(915614),
+    V = n(389996),
+    B = n(223330),
+    W = n(559506),
+    z = n(361311),
+    H = n(886891),
+    K = n(439053),
+    $ = n(743987),
+    Y = n(312381),
+    Z = n(383448),
+    J = n(946356),
+    X = n(810396),
+    q = n(159218),
+    Q = n(280645),
+    ee = n(291335),
+    et = n(807651),
+    en = n(463156),
+    el = n(510059),
+    ei = n(546136),
+    es = n(982599),
+    ea = n(399122),
+    er = n(83013),
+    eo = n(515054),
+    ed = n(513265),
+    ec = n(384377),
+    eu = n(160983),
+    eA = n(518477),
+    em = n(652215),
+    ep = n(996988),
+    ex = n(985018),
+    eg = n(156614);
+let eh = { "compact-sm": { avatarOffsetX: 16 }, "compact-xs": { avatarSize: d._3J.SIZE_96, avatarOffsetX: 16 } };
+function ef(e) {
+    let { user: t, isCurrentUser: n, displayProfile: s, children: r } = e,
+        o = (0, b.X)("UserProfileModalV2EditingPanelWrapper"),
+        c = n && o,
+        [u, A] = i.useState(!0),
+        { theme: m, primaryColor: p, secondaryColor: x } = (0, S.A)({ user: t, displayProfile: s }),
+        { profileThemeStyle: g, profileThemeClassName: h } = (0, U.A)({
+            theme: m,
+            themeType: null,
+            primaryColor: p,
+            secondaryColor: x,
+        });
+    return (0, l.jsxs)("div", {
+        className: a()(eg.layoutContainer, { [eg.hasEditingPanel]: c && u }),
+        children: [
+            c &&
+                (u
+                    ? (0, l.jsx)(ei.A, { className: eg.editingPanel, onClose: () => A(!1) })
+                    : (0, l.jsx)(d.DUT, {
+                          className: a()(h, eg.editingPanelExpandButton),
+                          style: g,
+                          "aria-label": "Open editing panel",
+                          onClick: () => A(!0),
+                          children: (0, l.jsx)(d.NDp, { size: "sm", color: d.LU0.colors.ICON_STRONG }),
+                      })),
+            r,
+        ],
+    });
+}
+function eI(e) {
     let {
             user: t,
-            currentUser: i,
+            currentUser: n,
             guildId: s,
-            channelId: ep,
-            messageId: ex,
-            roleId: eg,
-            sessionId: eh,
-            initialTabSection: ef,
-            initialScrollTarget: eI,
-            transitionState: ej,
-            customStatusPrompt: ev,
-            openedAt: eN,
-            onClose: ey,
-            showGuildProfile: eE = !0,
-            sourceAnalyticsLocations: eT = [],
+            channelId: b,
+            messageId: S,
+            roleId: U,
+            sessionId: ei,
+            initialTabSection: eI,
+            initialScrollTarget: ej,
+            transitionState: ev,
+            customStatusPrompt: eN,
+            openedAt: ey,
+            onClose: eE,
+            showGuildProfile: eT = !0,
+            sourceAnalyticsLocations: eC = [],
             themeContainerClassName: e_,
         } = e,
-        { analyticsLocations: eC } = (0, m.Ay)([...eT, A.A.USER_PROFILE_MODAL_V2]),
-        eP = (0, C.pb)({
+        { analyticsLocations: eP } = (0, m.Ay)([...eC, A.A.USER_PROFILE_MODAL_V2]),
+        eb = (0, _.pb)({
             layout: "MODAL_V2",
             userId: t.id,
-            sourceSessionId: eh,
+            sourceSessionId: ei,
             guildId: s,
-            channelId: ep,
-            messageId: ex,
-            roleId: eg,
-            showGuildProfile: eE,
+            channelId: b,
+            messageId: S,
+            roleId: U,
+            showGuildProfile: eT,
         }),
-        eb = n.useRef(null),
-        eO = (0, x.M)(eb),
-        [eR, eS] = n.useState(!1),
-        [eL, eD] = n.useState(),
-        eU = n.useCallback((e) => {
+        eO = t.id === n.id,
+        eS = i.useRef(null),
+        eR = (0, x.M)(eS),
+        [eL, eD] = i.useState(!1),
+        [eU, eG] = i.useState(),
+        eM = i.useCallback((e) => {
             let t = e.contentRect.width;
-            t <= 350 ? eD("compact-xs") : t <= 380 ? eD("compact-sm") : eD(void 0);
+            t <= 350 ? eG("compact-xs") : t <= 380 ? eG("compact-sm") : eG(void 0);
         }, []);
-    (0, c.g)(eb, eU, [], { fireOnMount: !0 });
-    let eG = null != eL ? em[eL] : void 0,
-        { defaultWishlistId: eM } = (0, o.cf)([P.A], () => ({ defaultWishlistId: P.A.getFirstWishlistId(t.id) }));
-    (0, v.fw)({ wishlistId: eM, userId: t.id });
-    let eF = (0, D.fC)(),
-        ek = (0, d.zhh)({ opacity: +(null != eF.interactionType), config: { duration: 150 } }),
-        ew = n.useMemo(() => (null != s ? { [s]: [t.id] } : {}), [s, t.id]);
-    (0, u.Eq)(ew, "UserProfileModalV2");
-    let eV = (0, b.Ay)(t.id, eE ? s : void 0),
-        eW = T.Ay.useName(eV?.guildId, ep, t),
-        { relationshipType: eB, originApplicationId: ez } = (0, o.cf)([N.A], () => ({
+    (0, c.g)(eS, eM, [], { fireOnMount: !0 });
+    let eF = null != eU ? eh[eU] : void 0,
+        { defaultWishlistId: ek } = (0, o.cf)([P.A], () => ({ defaultWishlistId: P.A.getFirstWishlistId(t.id) }));
+    (0, v.fw)({ wishlistId: ek, userId: t.id });
+    let ew = (0, M.fC)(),
+        eV = (0, d.zhh)({ opacity: +(null != ew.interactionType), config: { duration: 150 } }),
+        eB = i.useMemo(() => (null != s ? { [s]: [t.id] } : {}), [s, t.id]);
+    (0, u.Eq)(eB, "UserProfileModalV2");
+    let eW = (0, O.Ay)(t.id, eT ? s : void 0),
+        ez = T.Ay.useName(eW?.guildId, b, t),
+        { relationshipType: eH, originApplicationId: eK } = (0, o.cf)([N.A], () => ({
             relationshipType: N.A.getRelationshipType(t.id),
             originApplicationId: N.A.getOriginApplicationId(t.id),
         })),
-        eK = (0, o.bG)([y.A], () => y.A.hidePersonalInformation),
-        eH = (0, O.Nx)() ? null : eV?.getBannerURL({ canAnimate: !1, size: 1024 }),
-        e$ = n.useMemo(() => ev ?? (0, g.A)(), [ev]),
-        eY = (0, er.A)({ user: t, currentUser: i }),
-        eZ = (0, f.q)({ userId: t.id }),
-        eJ = (0, h.fi)(t.id),
-        eq = (0, S.A)(t.id),
-        eX = (0, R.A)(t.id),
-        eQ = (0, p.GV)(),
-        e0 = eu.intl.format(eu.t.KRe1Fk, { name: eW });
+        e$ = (0, o.bG)([y.A], () => y.A.hidePersonalInformation),
+        eY = (0, R.Nx)() ? null : eW?.getBannerURL({ canAnimate: !1, size: 1024 }),
+        eZ = i.useMemo(() => eN ?? (0, g.A)(), [eN]),
+        eJ = (0, eu.A)({ user: t, currentUser: n }),
+        eX = (0, f.q)({ userId: t.id }),
+        eq = (0, h.fi)(t.id),
+        eQ = (0, D.A)(t.id),
+        e0 = (0, L.A)(t.id),
+        e9 = (0, p.GV)(),
+        e1 = ex.intl.format(ex.t.KRe1Fk, { name: ez });
     return (
-        n.useEffect(() => {
+        i.useEffect(() => {
             let e = () => {
-                eS(!0),
+                eD(!0),
                     setTimeout(() => {
-                        eS(!1);
+                        eD(!1);
                     }, 1e3);
             };
             return (
-                E._.subscribe(ed.jej.SHAKE_PROFILE_MODAL, e),
+                E._.subscribe(em.jej.SHAKE_PROFILE_MODAL, e),
                 () => {
-                    E._.unsubscribe(ed.jej.SHAKE_PROFILE_MODAL, e), (0, ea.XA)(null);
+                    E._.unsubscribe(em.jej.SHAKE_PROFILE_MODAL, e), (0, ec.XA)(null);
                 }
             );
         }, []),
         (0, l.jsx)(m.f5, {
-            value: eC,
-            children: (0, l.jsx)(C.of, {
-                value: eP,
-                openedAt: eN,
-                fetchStartedAt: eV?.fetchStartedAt,
-                fetchEndedAt: eV?.fetchEndedAt,
-                isLoaded: eV?.isLoaded,
-                children: (0, l.jsx)(D.Hl, {
-                    value: eF,
-                    children: (0, l.jsx)(L.N, {
-                        value: eI,
+            value: eP,
+            children: (0, l.jsx)(_.of, {
+                value: eb,
+                openedAt: ey,
+                fetchStartedAt: eW?.fetchStartedAt,
+                fetchEndedAt: eW?.fetchEndedAt,
+                isLoaded: eW?.isLoaded,
+                children: (0, l.jsx)(M.Hl, {
+                    value: ew,
+                    children: (0, l.jsx)(G.N, {
+                        value: ej,
                         children: (0, l.jsxs)(d.EOs, {
                             "data-migration-pending": !0,
                             hideShadow: !0,
-                            className: eA.root,
-                            transitionState: ej,
-                            "aria-labelledby": eQ,
+                            className: eg.root,
+                            transitionState: ev,
+                            "aria-labelledby": e9,
                             parentComponent: "UserProfileModalV2",
                             children: [
                                 (0, l.jsxs)(d.bfh, {
-                                    isShaking: eR,
+                                    isShaking: eL,
                                     intensity: 1.4,
                                     children: [
-                                        (0, l.jsx)(d.AC4, { children: (0, l.jsx)(d.H, { id: eQ, children: e0 }) }),
+                                        (0, l.jsx)(d.AC4, { children: (0, l.jsx)(d.H, { id: e9, children: e1 }) }),
                                         (0, l.jsx)(d.Fmo, {
-                                            children: (0, l.jsxs)($.A, {
-                                                className: e_,
+                                            children: (0, l.jsx)(ef, {
                                                 user: t,
-                                                displayProfile: eV,
-                                                themeType: ec.d.MODAL_V2,
-                                                privateBanner: eV?.private === !0 ? (0, l.jsx)(K.A, {}) : void 0,
-                                                children: [
-                                                    null != eH &&
-                                                        (0, l.jsx)("div", {
-                                                            className: eA.backgroundImage,
-                                                            style: { backgroundImage: `url(${eH})` },
-                                                        }),
-                                                    null != eF.interactionType &&
-                                                        (0, l.jsx)(r.animated.div, {
-                                                            style: ek,
-                                                            className: eA.backdrop,
-                                                        }),
-                                                    (0, l.jsx)(Q.A, {
-                                                        className: eA.closeButton,
-                                                        isCurrentUser: t.id === i.id,
-                                                        onClose: ey,
-                                                    }),
-                                                    (0, l.jsx)(es.A, {
-                                                        onAutoHide: () => (0, ea.XA)(null),
-                                                        className: eA.toast,
-                                                    }),
-                                                    (0, l.jsxs)("div", {
-                                                        className: a()(eA.profile, null != eL && eA[eL]),
-                                                        ref: eb,
-                                                        children: [
-                                                            (0, l.jsxs)("div", {
-                                                                className: eA.profileHeader,
-                                                                children: [
-                                                                    (0, l.jsx)(M.A, {
-                                                                        user: t,
-                                                                        displayProfile: eV,
-                                                                        themeType: ec.d.MODAL_V2,
-                                                                        specOverrides: eG,
-                                                                    }),
-                                                                    (0, l.jsx)(B.A, {
-                                                                        userId: t.id,
-                                                                        onClose: ey,
-                                                                        className: eA.interactionToast,
-                                                                    }),
-                                                                    (0, l.jsx)(U.A, {
-                                                                        user: t,
-                                                                        displayProfile: eV,
-                                                                        guildId: s,
-                                                                        channelId: ep,
-                                                                        themeType: ec.d.MODAL_V2,
-                                                                        specOverrides: eG,
-                                                                    }),
-                                                                    (0, l.jsx)(Z.A, {
-                                                                        user: t,
-                                                                        guildId: s,
-                                                                        channelId: ep,
-                                                                        themeType: ec.d.MODAL_V2,
-                                                                        hasEntered: ej === d.ip4.ENTERED,
-                                                                        prompt: t.id === i.id ? e$ : null,
-                                                                    }),
-                                                                ],
+                                                isCurrentUser: eO,
+                                                displayProfile: eW,
+                                                children: (0, l.jsxs)(J.A, {
+                                                    className: a()(e_, eg.themeContainer),
+                                                    user: t,
+                                                    displayProfile: eW,
+                                                    themeType: ep.d.MODAL_V2,
+                                                    privateBanner: eW?.private === !0 ? (0, l.jsx)(Y.A, {}) : void 0,
+                                                    children: [
+                                                        null != eY &&
+                                                            (0, l.jsx)("div", {
+                                                                className: eg.backgroundImage,
+                                                                style: { backgroundImage: `url(${eY})` },
                                                             }),
-                                                            (0, l.jsxs)(d.HOs, {
-                                                                fade: !0,
-                                                                className: eA.profileBody,
-                                                                children: [
-                                                                    (0, l.jsx)(w.A, { userId: t.id }),
-                                                                    (0, l.jsx)(Y.A, {
-                                                                        user: t,
-                                                                        guildId: eV?.guildId ?? void 0,
-                                                                        onClose: ey,
-                                                                        nickname: T.Ay.useName(eV?.guildId, ep, t),
-                                                                        nicknameVariant: "heading-xl/semibold",
-                                                                        pronouns: eV?.pronouns,
-                                                                        tags: (0, l.jsx)(G.A, {
-                                                                            displayProfile: eV,
-                                                                            themeType: ec.d.MODAL_V2,
-                                                                            onClose: ey,
-                                                                        }),
-                                                                    }),
-                                                                    eB === ed.eA$.PENDING_INCOMING &&
-                                                                        (0, l.jsx)($.A.Overlay, {
-                                                                            className: eA.profileOverlay,
-                                                                            children: (0, l.jsx)(W.A, {
-                                                                                user: t,
-                                                                                applicationId: ez,
-                                                                                guildId: eV?.guildId ?? void 0,
-                                                                                channelId: ep,
-                                                                                className: eA.profileBanner,
-                                                                            }),
-                                                                        }),
-                                                                    eJ.map((e) => {
-                                                                        let { applicationId: i } = e;
-                                                                        return (0, l.jsx)(
-                                                                            $.A.Overlay,
-                                                                            {
-                                                                                className: eA.profileOverlay,
-                                                                                children: (0, l.jsx)(W.A, {
-                                                                                    user: t,
-                                                                                    guildId: eV?.guildId ?? void 0,
-                                                                                    channelId: ep,
-                                                                                    isGameRelationship: !0,
-                                                                                    applicationId: i,
-                                                                                    className: eA.profileBanner,
-                                                                                }),
-                                                                            },
-                                                                            i,
-                                                                        );
-                                                                    }),
-                                                                    t.isProvisional &&
-                                                                        (0, l.jsx)($.A.Overlay, {
-                                                                            className: eA.profileOverlay,
-                                                                            children: (0, l.jsx)(el.A, {
-                                                                                heading: eu.intl.string(eu.t.Iyka0U),
-                                                                                headingVariant: "text-md/semibold",
-                                                                                headingIcon: (0, l.jsx)(d.EpV, {
-                                                                                    size: "xs",
-                                                                                    color: "currentColor",
-                                                                                }),
-                                                                                className: eA.profileBanner,
-                                                                                children: (0, l.jsx)(j.T, {
-                                                                                    userId: t.id,
-                                                                                    variant: "text-sm/normal",
-                                                                                }),
-                                                                            }),
-                                                                        }),
-                                                                    t.id === i.id &&
-                                                                        (0, l.jsx)(k.A, {
-                                                                            isPremiumUser: (0, _.ki)(i),
-                                                                            onInteraction: ey,
-                                                                        }),
-                                                                    (0, l.jsx)(H.A, {
-                                                                        user: t,
-                                                                        className: eA.profileBanner,
-                                                                    }),
-                                                                    (0, l.jsx)("div", {
-                                                                        className: eA.profileButtons,
-                                                                        children: (0, l.jsx)(X.A, {
+                                                        null != ew.interactionType &&
+                                                            (0, l.jsx)(r.animated.div, {
+                                                                style: eV,
+                                                                className: eg.backdrop,
+                                                            }),
+                                                        (0, l.jsx)(en.A, {
+                                                            className: eg.modalCloseButton,
+                                                            isCurrentUser: eO,
+                                                            onClose: eE,
+                                                        }),
+                                                        (0, l.jsx)(ed.A, {
+                                                            onAutoHide: () => (0, ec.XA)(null),
+                                                            className: eg.toast,
+                                                        }),
+                                                        (0, l.jsxs)("div", {
+                                                            className: a()(eg.profile, null != eU && eg[eU]),
+                                                            ref: eS,
+                                                            children: [
+                                                                (0, l.jsxs)("div", {
+                                                                    className: eg.profileHeader,
+                                                                    children: [
+                                                                        (0, l.jsx)(w.A, {
                                                                             user: t,
-                                                                            currentUser: i,
-                                                                            guildId: s,
-                                                                            channelId: ep,
-                                                                            displayProfile: eV,
-                                                                            relationshipType: eB,
-                                                                            onClose: ey,
+                                                                            displayProfile: eW,
+                                                                            themeType: ep.d.MODAL_V2,
+                                                                            specOverrides: eF,
                                                                         }),
-                                                                    }),
-                                                                    eV?.bio != null &&
-                                                                        eV?.bio !== "" &&
-                                                                        !eK &&
+                                                                        (0, l.jsx)(K.A, {
+                                                                            userId: t.id,
+                                                                            onClose: eE,
+                                                                            className: eg.interactionToast,
+                                                                        }),
                                                                         (0, l.jsx)(F.A, {
-                                                                            userBio: eV.bio,
-                                                                            setLineClamp: !1,
+                                                                            user: t,
+                                                                            displayProfile: eW,
+                                                                            guildId: s,
+                                                                            channelId: b,
+                                                                            themeType: ep.d.MODAL_V2,
+                                                                            specOverrides: eF,
                                                                         }),
-                                                                    eZ.length > 0 &&
-                                                                        (0, l.jsx)(el.A, {
-                                                                            heading: eu.intl.string(eu.t["Uv/eTx"]),
-                                                                            children: (0, l.jsx)(V.A, {
-                                                                                applicationIds: eZ,
-                                                                            }),
+                                                                        (0, l.jsx)(q.A, {
+                                                                            user: t,
+                                                                            guildId: s,
+                                                                            channelId: b,
+                                                                            themeType: ep.d.MODAL_V2,
+                                                                            hasEntered: ev === d.ip4.ENTERED,
+                                                                            prompt: eO ? eZ : null,
                                                                         }),
-                                                                    (0, l.jsx)(el.A, {
-                                                                        heading: eu.intl.string(eu.t.a6XYD9),
-                                                                        children: (0, l.jsx)(z.A, {
-                                                                            userId: t.id,
-                                                                            guildId: eV?.guildId,
-                                                                            tooltipDelay: eo.In,
-                                                                        }),
-                                                                    }),
-                                                                    eV?.guildId != null &&
-                                                                        (0, l.jsx)(J.A, {
-                                                                            userId: t.id,
-                                                                            guildId: eV.guildId,
-                                                                            className: eA.profileRolesSection,
-                                                                            headingVariant: "text-xs/medium",
-                                                                            headingColor: "currentColor",
-                                                                        }),
-                                                                    eq.length > 0 &&
-                                                                        (0, l.jsx)(el.A, {
-                                                                            heading: eu.intl.string(eu.t["3fe7U5"]),
-                                                                            scrollTargetId: eo.bk.CONNECTIONS,
-                                                                            children: (0, l.jsx)(ee.A, {
-                                                                                connections: eq,
-                                                                                userId: t.id,
-                                                                                className: eA.profileAppConnections,
-                                                                            }),
-                                                                        }),
-                                                                    eX.length > 0 &&
-                                                                        (0, l.jsx)(el.A, {
-                                                                            heading: eu.intl.string(eu.t.PHjkRE),
-                                                                            scrollTargetId: eo.bk.APPS,
-                                                                            children: (0, l.jsx)(q.A, {
-                                                                                applicationRoleConnections: eX,
-                                                                                onClose: ey,
-                                                                                className: eA.profileAppConnections,
-                                                                            }),
-                                                                        }),
-                                                                    (0, l.jsx)(ei.A, { userId: t.id }),
-                                                                ],
-                                                            }),
-                                                            eV?.profileEffect != null &&
-                                                                (0, l.jsx)(I.A, {
-                                                                    skuId: eV?.profileEffect.skuId,
-                                                                    isHovering: eO,
+                                                                    ],
                                                                 }),
-                                                        ],
-                                                    }),
-                                                    (0, l.jsx)(en.A, {
-                                                        user: t,
-                                                        currentUser: i,
-                                                        displayProfile: eV,
-                                                        guildId: s,
-                                                        channelId: ep,
-                                                        items: eY,
-                                                        initialSection: ef,
-                                                        onClose: ey,
-                                                    }),
-                                                ],
+                                                                (0, l.jsxs)(d.HOs, {
+                                                                    fade: !0,
+                                                                    className: eg.profileBody,
+                                                                    children: [
+                                                                        (0, l.jsx)(W.A, { userId: t.id }),
+                                                                        (0, l.jsx)(X.A, {
+                                                                            user: t,
+                                                                            guildId: eW?.guildId ?? void 0,
+                                                                            onClose: eE,
+                                                                            nickname: T.Ay.useName(eW?.guildId, b, t),
+                                                                            nicknameVariant: "heading-xl/semibold",
+                                                                            pronouns: eW?.pronouns,
+                                                                            tags: (0, l.jsx)(k.A, {
+                                                                                displayProfile: eW,
+                                                                                themeType: ep.d.MODAL_V2,
+                                                                                onClose: eE,
+                                                                            }),
+                                                                        }),
+                                                                        eH === em.eA$.PENDING_INCOMING &&
+                                                                            (0, l.jsx)(J.A.Overlay, {
+                                                                                className: eg.profileOverlay,
+                                                                                children: (0, l.jsx)(H.A, {
+                                                                                    user: t,
+                                                                                    applicationId: eK,
+                                                                                    guildId: eW?.guildId ?? void 0,
+                                                                                    channelId: b,
+                                                                                    className: eg.profileBanner,
+                                                                                }),
+                                                                            }),
+                                                                        eq.map((e) => {
+                                                                            let { applicationId: n } = e;
+                                                                            return (0, l.jsx)(
+                                                                                J.A.Overlay,
+                                                                                {
+                                                                                    className: eg.profileOverlay,
+                                                                                    children: (0, l.jsx)(H.A, {
+                                                                                        user: t,
+                                                                                        guildId: eW?.guildId ?? void 0,
+                                                                                        channelId: b,
+                                                                                        isGameRelationship: !0,
+                                                                                        applicationId: n,
+                                                                                        className: eg.profileBanner,
+                                                                                    }),
+                                                                                },
+                                                                                n,
+                                                                            );
+                                                                        }),
+                                                                        t.isProvisional &&
+                                                                            (0, l.jsx)(J.A.Overlay, {
+                                                                                className: eg.profileOverlay,
+                                                                                children: (0, l.jsx)(er.A, {
+                                                                                    heading: ex.intl.string(
+                                                                                        ex.t.Iyka0U,
+                                                                                    ),
+                                                                                    headingVariant: "text-md/semibold",
+                                                                                    headingIcon: (0, l.jsx)(d.EpV, {
+                                                                                        size: "xs",
+                                                                                        color: "currentColor",
+                                                                                    }),
+                                                                                    className: eg.profileBanner,
+                                                                                    children: (0, l.jsx)(j.T, {
+                                                                                        userId: t.id,
+                                                                                        variant: "text-sm/normal",
+                                                                                    }),
+                                                                                }),
+                                                                            }),
+                                                                        eO &&
+                                                                            (0, l.jsx)(B.A, {
+                                                                                isPremiumUser: (0, C.ki)(n),
+                                                                                onInteraction: eE,
+                                                                            }),
+                                                                        (0, l.jsx)(Z.A, {
+                                                                            user: t,
+                                                                            className: eg.profileBanner,
+                                                                        }),
+                                                                        (0, l.jsx)("div", {
+                                                                            className: eg.profileButtons,
+                                                                            children: (0, l.jsx)(et.A, {
+                                                                                user: t,
+                                                                                currentUser: n,
+                                                                                guildId: s,
+                                                                                channelId: b,
+                                                                                displayProfile: eW,
+                                                                                relationshipType: eH,
+                                                                                onClose: eE,
+                                                                            }),
+                                                                        }),
+                                                                        eW?.bio != null &&
+                                                                            eW?.bio !== "" &&
+                                                                            !e$ &&
+                                                                            (0, l.jsx)(V.A, {
+                                                                                userBio: eW.bio,
+                                                                                setLineClamp: !1,
+                                                                            }),
+                                                                        eX.length > 0 &&
+                                                                            (0, l.jsx)(er.A, {
+                                                                                heading: ex.intl.string(ex.t["Uv/eTx"]),
+                                                                                children: (0, l.jsx)(z.A, {
+                                                                                    applicationIds: eX,
+                                                                                }),
+                                                                            }),
+                                                                        (0, l.jsx)(er.A, {
+                                                                            heading: ex.intl.string(ex.t.a6XYD9),
+                                                                            children: (0, l.jsx)($.A, {
+                                                                                userId: t.id,
+                                                                                guildId: eW?.guildId,
+                                                                                tooltipDelay: eA.In,
+                                                                            }),
+                                                                        }),
+                                                                        eW?.guildId != null &&
+                                                                            (0, l.jsx)(Q.A, {
+                                                                                userId: t.id,
+                                                                                guildId: eW.guildId,
+                                                                                className: eg.profileRolesSection,
+                                                                                headingVariant: "text-xs/medium",
+                                                                                headingColor: "currentColor",
+                                                                            }),
+                                                                        eQ.length > 0 &&
+                                                                            (0, l.jsx)(er.A, {
+                                                                                heading: ex.intl.string(ex.t["3fe7U5"]),
+                                                                                scrollTargetId: eA.bk.CONNECTIONS,
+                                                                                children: (0, l.jsx)(el.A, {
+                                                                                    connections: eQ,
+                                                                                    userId: t.id,
+                                                                                    className: eg.profileAppConnections,
+                                                                                }),
+                                                                            }),
+                                                                        e0.length > 0 &&
+                                                                            (0, l.jsx)(er.A, {
+                                                                                heading: ex.intl.string(ex.t.PHjkRE),
+                                                                                scrollTargetId: eA.bk.APPS,
+                                                                                children: (0, l.jsx)(ee.A, {
+                                                                                    applicationRoleConnections: e0,
+                                                                                    onClose: eE,
+                                                                                    className: eg.profileAppConnections,
+                                                                                }),
+                                                                            }),
+                                                                        (0, l.jsx)(ea.A, { userId: t.id }),
+                                                                    ],
+                                                                }),
+                                                                eW?.profileEffect != null &&
+                                                                    (0, l.jsx)(I.A, {
+                                                                        skuId: eW?.profileEffect.skuId,
+                                                                        isHovering: eR,
+                                                                    }),
+                                                            ],
+                                                        }),
+                                                        (0, l.jsx)(eo.A, {
+                                                            user: t,
+                                                            currentUser: n,
+                                                            displayProfile: eW,
+                                                            guildId: s,
+                                                            channelId: b,
+                                                            items: eJ,
+                                                            initialSection: eI,
+                                                            onClose: eE,
+                                                        }),
+                                                    ],
+                                                }),
                                             }),
                                         }),
                                     ],
                                 }),
-                                (0, l.jsx)(et.A, { userId: t.id, className: eA.editingToolbar }),
+                                (0, l.jsx)(es.A, { userId: t.id, className: eg.pendingChangesToolbar }),
                             ],
                         }),
                     }),

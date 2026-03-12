@@ -1,8 +1,13 @@
 n.r(
     (e.exports = {
         root: "root__9c3be",
-        editingToolbar: "editingToolbar__9c3be",
-        closeButton: "closeButton__9c3be",
+        layoutContainer: "layoutContainer__9c3be",
+        themeContainer: "themeContainer__9c3be",
+        hasEditingPanel: "hasEditingPanel__9c3be",
+        editingPanel: "editingPanel__9c3be",
+        editingPanelExpandButton: "editingPanelExpandButton__9c3be",
+        pendingChangesToolbar: "pendingChangesToolbar__9c3be",
+        modalCloseButton: "modalCloseButton__9c3be",
         toast: "toast__9c3be",
         interactionToast: "interactionToast__9c3be",
         backdrop: "backdrop__9c3be",
