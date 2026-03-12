@@ -37288,6 +37288,12 @@ screen and (max-width:485px) {
     margin-inline-start: auto
 }
 
+.fullWidthGraphicHeaderForManaModal_ae16b8.fullWidthGraphicHeaderForManaModal_ae16b8 {
+    margin-top: calc(var(--custom-modal-padding-top, 24px)*-1 - 2px);
+    margin-inline-start: -1px;
+    width: calc(100% + 2px)
+}
+
 .spinner_ca0af2 {
     border-radius: 4px;
     max-height: 720px;
@@ -44440,7 +44446,7 @@ screen and (max-width:485px) {
     width: 48px
 }
 
-.applicationProductPreview__25766 {
+.invoiceProductPreviewImage__25766 {
     max-height: 64px;
     max-width: 64px
 }
@@ -44557,11 +44563,8 @@ screen and (max-width:485px) {
     border-start-start-radius: calc(var(--custom-border-radius) + 2px);
     box-sizing: border-box;
     height: 146px;
-    margin-inline-start: -1px;
-    margin-top: calc(var(--custom-modal-padding-top)*-1 - 2px);
     min-height: 146px;
-    position: relative;
-    width: calc(100% + 2px)
+    position: relative
 }
 
 .closeButton__9abb9 {
