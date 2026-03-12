@@ -2,8 +2,8 @@
 n.d(t, { YG: () => p, jv: () => _, ur: () => d, zS: () => f });
 var r = n(562465),
     i = n(73153),
-    a = n(178253),
-    s = n(615405),
+    s = n(178253),
+    a = n(615405),
     o = n(739508),
     l = n(384904),
     u = n(652215),
@@ -11,7 +11,7 @@ var r = n(562465),
 async function d(e, t, n, c, d) {
     i.h.dispatch({ type: "SUBSCRIPTION_PLANS_FETCH", skuId: e });
     try {
-        let a = {
+        let s = {
                 url: u.Rsh.STORE_PUBLISHED_LISTINGS_SUBSCRIPTION_PLANS(e),
                 oldFormErrors: !0,
                 rejectWithError: !0,
@@ -22,13 +22,13 @@ async function d(e, t, n, c, d) {
             null != n && (o.payment_source_id = n),
             null != c && (o.include_unpublished = c),
             null != d && (o.revenue_surface = d),
-            (a.query = o),
-            s.A.ipCountryCodeLoaded || (await (0, l.xe)());
-        let _ = await r.Bo.get(a);
-        i.h.dispatch({ type: "SUBSCRIPTION_PLANS_FETCH_SUCCESS", skuId: e, subscriptionPlans: _.body });
+            (s.query = o),
+            a.A.ipCountryCodeLoaded || (await (0, l.xe)());
+        let _ = await r.Bo.get(s);
+        return i.h.dispatch({ type: "SUBSCRIPTION_PLANS_FETCH_SUCCESS", skuId: e, subscriptionPlans: _.body }), _.body;
     } catch (n) {
         i.h.dispatch({ type: "SUBSCRIPTION_PLANS_FETCH_FAILURE", skuId: e }), (0, o.pM)(n);
-        let t = new a.A(n);
+        let t = new s.A(n);
         throw ((t.message = `Failed to fetch subscription plans for SKU ${e}`), t);
     }
 }

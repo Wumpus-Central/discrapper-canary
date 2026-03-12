@@ -1,14 +1,14 @@
-n.d(e, { A: () => u });
-var i = n(311907),
-    l = n(73825),
-    r = n(97352),
-    s = n(652215);
-let u = (0, i.UT)(r.A, {
-    getQueryId: s.fic.SUBSCRIPTION_PLAN,
+i.d(e, { A: () => r });
+var n = i(311907),
+    l = i(73825),
+    s = i(97352),
+    a = i(652215);
+let r = (0, n.UT)(s.A, {
+    getQueryId: a.fic.SUBSCRIPTION_PLAN,
     get: (t) => {
-        let e = r.A.getForSKU(t);
+        let e = s.A.getForSKU(t);
         return 0 === e.length ? null : e;
     },
-    load: (t) => (0, l.ur)(t),
-    getIsLoading: (t) => r.A.isFetchingForSKU(t),
+    load: (t) => (0, l.ur)(t).then(() => {}),
+    getIsLoading: (t) => s.A.isFetchingForSKU(t),
 });

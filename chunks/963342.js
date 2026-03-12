@@ -1,18 +1,18 @@
 n.d(t, { j: () => o });
 var i = n(311907),
     s = n(73825),
-    r = n(97352),
-    a = n(728458),
-    l = n(652215);
-let o = (0, i.UT)(r.A, {
-    getQueryId: l.fic.SUBSCRIPTION_PLANS,
+    l = n(97352),
+    r = n(728458),
+    a = n(652215);
+let o = (0, i.UT)(l.A, {
+    getQueryId: a.fic.SUBSCRIPTION_PLANS,
     get: (e) => {
         if (null == e) return null;
-        let t = r.A.getForSKU(e);
+        let t = l.A.getForSKU(e);
         return 0 === t.length ? null : t;
     },
     load: (e) => (
-        null == e && a.A.addBreadcrumb({ message: "Error loading subscription plans: skuId is null" }),
-        null != e ? (0, s.ur)(e) : Promise.reject()
+        null == e && r.A.addBreadcrumb({ message: "Error loading subscription plans: skuId is null" }),
+        null != e ? (0, s.ur)(e).then(() => {}) : Promise.reject()
     ),
 });
