@@ -110,6 +110,7 @@ class eA extends r.PureComponent {
     handleContextMenu = (e) => {
         let { guild: t } = this.props;
         null != t &&
+            t.id !== es.Vc &&
             (0, h.L3)(e, async () => {
                 let { default: e } = await n.e("10758").then(n.bind(n, 455557));
                 return (n) => (0, i.jsx)(e, { ...n, guild: t });
