@@ -105,7 +105,7 @@ function Y(n) {
         ni = (0, c.A)(t),
         ne = (0, T.A)(t),
         nl = (0, C.A)(t),
-        nr = (0, L.Ay)(t),
+        nr = (0, L.A)(t),
         na = (0, V.os)("ChannelListVoiceContextMenuNormal"),
         ns = (0, O.Ay)(t),
         nd = (0, I.A)();

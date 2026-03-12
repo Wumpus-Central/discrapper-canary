@@ -14,6 +14,7 @@ class u extends a.A {
     categorySkuId;
     isCategoryReward;
     bundledProducts;
+    previewAssets;
     variants;
     variantGroupStoreListingId;
     googleSkuIds;
@@ -28,27 +29,46 @@ class u extends a.A {
             (this.isCategoryReward = e.isCategoryReward),
             (this.prices = e.prices),
             (this.bundledProducts = e.bundledProducts),
+            (this.previewAssets = e.previewAssets),
             (this.googleSkuIds = e.googleSkuIds),
             (this.variants = e.variants),
             (this.eligibleOffers = e.eligibleOffers);
     }
     static fromServer(e) {
-        let { type: t, premium_type: n, category_sku_id: a, prices: d, bundled_products: _, variants: f, ...p } = e;
+        let {
+            type: t,
+            premium_type: n,
+            category_sku_id: a,
+            prices: d,
+            bundled_products: _,
+            preview_assets: f,
+            variants: p,
+            ...h
+        } = e;
         return new u({
-            ...super.fromServer(p),
+            ...super.fromServer(h),
             type: t,
             premiumType: n === l.oA2 ? null : n,
             categorySkuId: a,
             isCategoryReward: o.MS.some((e) => {
                 let { rewardSkuId: t } = e;
-                return t === p.sku_id;
+                return t === h.sku_id;
             }),
             prices: (0, r.A)(d),
-            items: (0, s.K)(p.items),
+            items: (0, s.K)(h.items),
             bundledProducts: _?.map(i.A.fromServer),
-            variants: f?.map(c.fromServer),
-            googleSkuIds: p.google_sku_ids,
-            eligibleOffers: p.eligible_offers,
+            previewAssets:
+                null != f
+                    ? {
+                          fgStatic: f.fg_static,
+                          fgAnimated: f.fg_animated,
+                          bgStatic: f.bg_static,
+                          bgAnimated: f.bg_animated,
+                      }
+                    : void 0,
+            variants: p?.map(c.fromServer),
+            googleSkuIds: h.google_sku_ids,
+            eligibleOffers: h.eligible_offers,
         });
     }
 }

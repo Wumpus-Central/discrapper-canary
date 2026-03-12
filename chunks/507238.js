@@ -35,7 +35,7 @@ function A(e, t) {
                 id: "mute-guild",
                 label: m.intl.string(m.t.vRzp7P),
                 action: () => o.A.updateGuildNotificationSettings(n, { muted: !0 }, h.fd.Muted),
-                children: (0, c.gv)().map((e) => {
+                children: (0, c.g)().map((e) => {
                     let { value: l, label: a } = e;
                     return (0, i.jsx)(
                         r.Drp,
