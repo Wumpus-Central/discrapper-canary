@@ -1,50 +1,52 @@
-n.d(t, { A: () => u });
-var i = n(627968),
-    s = n(397927),
-    l = n(688810),
-    a = n(562153),
-    r = n(183555),
-    d = n(657331),
-    o = n(950191),
-    c = n(985018);
+i.d(t, { A: () => u });
+var l = i(627968),
+    n = i(397927),
+    s = i(688810),
+    a = i(562153),
+    r = i(183555),
+    o = i(657331),
+    d = i(950191),
+    c = i(985018);
 function u(e) {
-    let { user: t, guildId: n, channelId: u, displayProfile: A, onClose: x } = e,
-        { analyticsLocations: m, sourceAnalyticsLocations: p } = (0, l.Ay)(),
-        { context: h, trackUserProfileAction: f } = (0, r.NJ)(),
-        g = (0, o.Ay)(t.id, n);
-    return g?.guildId == null
+    let { user: t, guildId: i, channelId: u, displayProfile: A, onClose: m } = e,
+        { analyticsLocations: p, sourceAnalyticsLocations: x } = (0, s.Ay)(),
+        { context: g, trackUserProfileAction: h } = (0, r.NJ)(),
+        f = (0, d.Ay)(t.id, i);
+    return f?.guildId == null
         ? null
-        : A?.guildId != null
-          ? (0, i.jsx)(s.Drp, {
+        : A?.guildId == null || A?.private
+          ? A?.guildId != null
+              ? null
+              : (0, l.jsx)(n.Drp, {
+                    id: "view-server-profile",
+                    label: c.intl.string(c.t.DisZzB),
+                    subtext: c.intl.formatToPlainString(c.t["mn/nW2"], { displayName: a.Ay.getName(i, u, t) }),
+                    action: () => {
+                        m?.(),
+                            (0, o.openUserProfileModal)({
+                                userId: t.id,
+                                guildId: i,
+                                ...g,
+                                showGuildProfile: !0,
+                                sourceAnalyticsLocations: x,
+                            }),
+                            h({ action: "PRESS_VIEW_SERVER_PROFILE", analyticsLocations: p, ...g });
+                    },
+                })
+          : (0, l.jsx)(n.Drp, {
                 id: "view-main-profile",
                 label: c.intl.string(c.t.GISTta),
                 subtext: c.intl.formatToPlainString(c.t["mn/nW2"], { displayName: a.Ay.getName(void 0, void 0, t) }),
                 action: () => {
-                    x?.(),
-                        (0, d.openUserProfileModal)({
+                    m?.(),
+                        (0, o.openUserProfileModal)({
                             userId: t.id,
-                            guildId: n,
-                            ...h,
+                            guildId: i,
+                            ...g,
                             showGuildProfile: !1,
-                            sourceAnalyticsLocations: p,
+                            sourceAnalyticsLocations: x,
                         }),
-                        f({ action: "PRESS_VIEW_MAIN_PROFILE", analyticsLocations: m, ...h });
-                },
-            })
-          : (0, i.jsx)(s.Drp, {
-                id: "view-server-profile",
-                label: c.intl.string(c.t.DisZzB),
-                subtext: c.intl.formatToPlainString(c.t["mn/nW2"], { displayName: a.Ay.getName(n, u, t) }),
-                action: () => {
-                    x?.(),
-                        (0, d.openUserProfileModal)({
-                            userId: t.id,
-                            guildId: n,
-                            ...h,
-                            showGuildProfile: !0,
-                            sourceAnalyticsLocations: p,
-                        }),
-                        f({ action: "PRESS_VIEW_SERVER_PROFILE", analyticsLocations: m, ...h });
+                        h({ action: "PRESS_VIEW_MAIN_PROFILE", analyticsLocations: p, ...g });
                 },
             });
 }
