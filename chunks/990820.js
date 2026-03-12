@@ -2,7 +2,7 @@
 n.d(t, { A: () => a });
 var r = n(627968),
     i = n(397927);
-let s = (e) => `gift-selection-modal-${e.id}`;
+let s = (e) => (null != e ? `gift-selection-modal-${e.id}` : "gift-selection-modal");
 function a(e) {
     let {
         giftRecipient: t,

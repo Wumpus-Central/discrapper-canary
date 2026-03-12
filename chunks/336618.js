@@ -12,7 +12,7 @@ var r = n(627968),
     _ = n(793574),
     f = n(688810),
     p = n(357186),
-    h = n(379848),
+    h = n(932001),
     m = n(979474),
     E = n(810498),
     g = n(40493),
@@ -24,15 +24,15 @@ var r = n(627968),
     v = n(240248),
     N = n(427262),
     C = n(743477),
-    b = n(545428),
-    R = n(652215),
-    O = n(49999),
+    R = n(545428),
+    O = n(652215),
+    b = n(49999),
     D = n(985018),
-    L = n(455424),
-    w = n(111314);
-function x(e) {
+    L = n(278178),
+    w = n(178588);
+function M(e) {
     let t = i.useCallback(() => Promise.resolve({ default: e.boxAnimationUrl }), [e.boxAnimationUrl]);
-    return (0, r.jsx)(b.A, {
+    return (0, r.jsx)(R.A, {
         className: w.x6,
         "aria-label": D.intl.string(D.t.Z1RnTk),
         isActive: !1,
@@ -44,14 +44,14 @@ function x(e) {
         }),
     });
 }
-function M(e) {
+function x(e) {
     let { Component: t, events: n, play: s } = (0, c.T)(),
         a = i.useCallback(() => Promise.resolve({ default: e.trinketAnimationUrl }), [e.trinketAnimationUrl]),
         o = i.useCallback(() => Promise.resolve({ default: e.trinketGlowAnimationUrl }), [e.trinketGlowAnimationUrl]),
         l = () => {
             s(), e.onClick?.();
         };
-    return (0, r.jsx)(b.A, {
+    return (0, r.jsx)(R.A, {
         className: w.x6,
         "aria-label": D.intl.string(D.t.Z1RnTk),
         isActive: !1,
@@ -79,8 +79,8 @@ function k(e) {
         { analyticsLocations: s } = (0, f.Ay)(_.A.GIFT_BUTTON),
         [c, d] = i.useState(!1),
         S = (0, l.bG)([I.A], () => !I.A?.hasLayers()),
-        b = (0, l.bG)([T.default], () => T.default.getCurrentUser()),
-        D = null != b ? y.default.age(b.id) : 0,
+        R = (0, l.bG)([T.default], () => T.default.getCurrentUser()),
+        D = null != R ? y.default.age(R.id) : 0,
         w = (0, l.bG)([A.A], () => {
             let e = A.A.getMarketingComponentByType(o.C.GIFT_ICON);
             return null == e || "giftIcon" !== e.properties.properties.oneofKind
@@ -110,39 +110,37 @@ function k(e) {
         ),
         W = null != j,
         K = c || W,
-        z = (0, N.R1)(n),
-        $ = n.type === R.rbe.DM,
-        { openGiftModal: q } = (0, m.$)({
-            giftRecipient: z,
+        $ = (0, N.R1)(n),
+        { openGiftModal: z } = (0, m.$)({
+            giftRecipient: $,
             analyticsLocations: s,
             analyticsObject: {
-                page: n.isPrivate() ? R.liQ.DM_CHANNEL : R.liQ.GUILD_CHANNEL,
-                section: R.JJy.CHANNEL_TEXT_AREA,
-                object: R.ZSU.GIFTING_PROMOTION_BUTTON,
-                objectType: R.AnalyticsObjectTypes.GIFT,
+                page: n.isPrivate() ? O.liQ.DM_CHANNEL : O.liQ.GUILD_CHANNEL,
+                section: O.JJy.CHANNEL_TEXT_AREA,
+                object: O.ZSU.GIFTING_PROMOTION_BUTTON,
+                objectType: O.AnalyticsObjectTypes.GIFT,
             },
             wishlistAnalyticsObject: {
-                page: n.isPrivate() ? R.liQ.DM_CHANNEL : R.liQ.GUILD_CHANNEL,
-                section: R.JJy.CHANNEL_TEXT_AREA,
-                object: R.ZSU.BUTTON_ICON,
-                objectType: R.AnalyticsObjectTypes.GIFT,
+                page: n.isPrivate() ? O.liQ.DM_CHANNEL : O.liQ.GUILD_CHANNEL,
+                section: O.JJy.CHANNEL_TEXT_AREA,
+                object: O.ZSU.BUTTON_ICON,
+                objectType: O.AnalyticsObjectTypes.GIFT,
             },
-            isDmChannel: $,
             location: "gift-promotion-button",
         });
     if (t) return null;
-    let X = () => {
-            d(!1), Y(O.i.TAKE_ACTION), q();
+    let q = () => {
+            d(!1), Y(b.i.TAKE_ACTION), z();
         },
         Z =
             V && w?.boxAnimationUrl != null
-                ? (0, r.jsx)(x, { boxAnimationUrl: w.boxAnimationUrl, hovered: K, onClick: X })
+                ? (0, r.jsx)(M, { boxAnimationUrl: w.boxAnimationUrl, hovered: K, onClick: q })
                 : B
-                  ? (0, r.jsx)(M, {
+                  ? (0, r.jsx)(x, {
                         trinketAnimationUrl: w?.trinketAnimationUrl ?? null,
                         trinketGlowAnimationUrl: w?.trinketGlowAnimationUrl ?? null,
                         hovered: K,
-                        onClick: X,
+                        onClick: q,
                     })
                   : (0, r.jsx)(C.A, { disabled: t, channel: n });
     return (0, r.jsx)("div", {
@@ -157,7 +155,7 @@ function k(e) {
         children: W
             ? (0, r.jsx)(g.A, {
                   onComplete: () => d(!1),
-                  onCheckItOutClick: q,
+                  onCheckItOutClick: z,
                   markAsDismissed: Y,
                   coachmarkConfig: k,
                   children: Z,

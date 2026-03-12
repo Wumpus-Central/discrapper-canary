@@ -3,6 +3,7 @@ e.exports = {
     CE: "tabBarWrapper__19a29",
     XG: "scroller__19a29",
     Qs: "content__19a29",
+    GP: "contentNonDm__19a29",
     XP: "sectionAnchor__19a29",
     u6: "cardsRow__19a29",
     jf: "wishlistSection__19a29",

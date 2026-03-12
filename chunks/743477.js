@@ -11,7 +11,7 @@ var r = n(627968),
     d = n(545428),
     _ = n(652215),
     f = n(985018),
-    p = n(111314);
+    p = n(178588);
 function h(e) {
     let { disabled: t, channel: n } = e,
         { analyticsLocations: i } = (0, l.Ay)(o.A.GIFT_BUTTON),
@@ -30,7 +30,6 @@ function h(e) {
                 object: _.ZSU.BUTTON_ICON,
                 objectType: _.AnalyticsObjectTypes.GIFT,
             },
-            isDmChannel: n.type === _.rbe.DM,
             location: "gift-button",
         });
     return t
