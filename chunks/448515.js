@@ -25,20 +25,20 @@ var s = n(311907),
     v = n(186111),
     N = n(287809),
     C = n(977997),
-    b = n(97352),
-    R = n(166403),
-    O = n(107351),
+    R = n(97352),
+    O = n(166403),
+    b = n(107351),
     D = n(121254),
     L = n(877166),
     w = n(531013),
-    x = n(652215);
-let M = new c.A("ConnectionStore");
+    M = n(652215);
+let x = new c.A("ConnectionStore");
 function P(e) {
     return e.map((e) => {
         let t = e.timestamps?.end,
             n = e.created_at;
         return null != t && null != n
-            ? { ...e, timestamps: { ...e.timestamps, isCountDown: t > n && e.type !== x.$pd.LISTENING } }
+            ? { ...e, timestamps: { ...e.timestamps, isCountDown: t > n && e.type !== M.$pd.LISTENING } }
             : e;
     });
 }
@@ -166,7 +166,7 @@ function K(e, t, n) {
             displayNameStyles: A,
         });
 }
-function z(e) {
+function $(e) {
     let { member: t, mentions: n, author: r, guild_id: i } = e;
     null != t && null != i && K(i, r, t),
         null != n &&
@@ -177,7 +177,7 @@ function z(e) {
                 }
             });
 }
-function $(e) {
+function z(e) {
     return e.map((e) => ({
         sessionId: e.session_id,
         lastModified: e.last_modified,
@@ -235,7 +235,7 @@ H(
                             discoverable: e.discoverable ?? !0,
                         })),
                     }),
-                    M.log(`Dispatched INITIAL_GUILD ${e.id}`));
+                    x.log(`Dispatched INITIAL_GUILD ${e.id}`));
             });
         });
     },
@@ -355,7 +355,7 @@ H(
                                   apexExperiments: e.apex_experiments ?? void 0,
                                   requiredAction: e.required_action,
                                   consents: e.consents,
-                                  sessions: $(e.sessions ?? []),
+                                  sessions: z(e.sessions ?? []),
                                   pendingPayments: e.pending_payments,
                                   countryCode: e.country_code ?? void 0,
                                   guildJoinRequests: e.guild_join_requests ?? [],
@@ -430,7 +430,7 @@ H(
         ["MESSAGE_CREATE"],
         (e) => S.D.loadGuildIds([e.guild_id]),
         (e) => {
-            z(e),
+            $(e),
                 null != e.author &&
                     W({
                         type: "MESSAGE_CREATE",
@@ -446,7 +446,7 @@ H(
         ["MESSAGE_UPDATE"],
         (e) => S.D.loadGuildIds([e.guild_id]),
         (e) => {
-            z(e), W({ type: "MESSAGE_UPDATE", guildId: e.guild_id, message: e });
+            $(e), W({ type: "MESSAGE_UPDATE", guildId: e.guild_id, message: e });
         },
     ),
     H(
@@ -857,7 +857,7 @@ H(
         W({ type: "PRESENCES_REPLACE", presences: e });
     }),
     B(["SESSIONS_REPLACE"], (e) => {
-        W({ type: "SESSIONS_REPLACE", sessions: $(e) });
+        W({ type: "SESSIONS_REPLACE", sessions: z(e) });
     }),
     B(["VOICE_STATE_UPDATE"], (e) => {
         Y([e]);
@@ -993,7 +993,7 @@ H(
         W({ type: t, entitlement: e });
     }),
     B(["USER_PAYMENT_SOURCES_UPDATE"], () => {
-        v.A.hasLayers() && (n(384904).$o(), o.jv(b.A.getFetchedSKUIDs()));
+        v.A.hasLayers() && (n(384904).$o(), o.jv(R.A.getFetchedSKUIDs()));
     }),
     B(["USER_SUBSCRIPTIONS_UPDATE"], () => {
         l.rQ(), v.A.hasLayers() && n(384904).hP();
@@ -1004,13 +1004,13 @@ H(
     B(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE"], (e) => {
         W({
             type: "GUILD_BOOST_SLOT_CREATE",
-            guildBoostSlot: I.A.createFromServer(e, R.A.getSubscriptionById(e.subscription_id)),
+            guildBoostSlot: I.A.createFromServer(e, O.A.getSubscriptionById(e.subscription_id)),
         });
     }),
     B(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_UPDATE"], (e) => {
         W({
             type: "GUILD_BOOST_SLOT_UPDATE",
-            guildBoostSlot: I.A.createFromServer(e, R.A.getSubscriptionById(e.subscription_id)),
+            guildBoostSlot: I.A.createFromServer(e, O.A.getSubscriptionById(e.subscription_id)),
         });
     }),
     B(["BILLING_POPUP_BRIDGE_CALLBACK"], (e) => {
@@ -1031,7 +1031,7 @@ H(
         });
     }),
     B(["USER_PAYMENT_CLIENT_ADD"], (e) => {
-        (0, O.D)().then((t) => {
+        (0, b.D)().then((t) => {
             let n = e.purchase_token_hash;
             n === t && W({ type: "USER_PAYMENT_CLIENT_ADD", purchaseTokenHash: n, expiresAt: e.expires_at });
         });
@@ -1508,6 +1508,7 @@ H(
             skuId: e.sku_id,
             recipientId: e.recipient_id,
             eligible: e.eligible,
+            ineligibleReason: e.ineligible_reason,
         });
     }),
     B(["HAVEN_CONNECT"], (e, t) => {

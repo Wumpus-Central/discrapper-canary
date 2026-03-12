@@ -40,9 +40,9 @@ function I(e) {
     f = { ...f, [t]: { state: "error", reason: n, httpStatus: r } };
 }
 function T(e) {
-    let { skuId: t, recipientId: n, eligible: r } = e;
+    let { skuId: t, recipientId: n, eligible: r, ineligibleReason: i } = e;
     if (o.default.getId() !== n) return !1;
-    f = { ...f, [t]: { state: r ? "eligible" : "ineligible" } };
+    f = { ...f, [t]: r ? { state: "eligible" } : { state: "ineligible", ineligibleReason: i } };
 }
 function S(e) {
     let { entitlement: t } = e;
@@ -77,7 +77,7 @@ function C(e) {
     let { applicationId: t, userIds: n } = e;
     d = { ...d, [t]: { ...(d[t] ?? {}), [l(n)]: { state: "loading" } } };
 }
-function b(e) {
+function R(e) {
     let { skus: t, skusToRecommendationReasons: n, userIds: r, application: i, numItemsRequested: s } = e;
     d = {
         ...d,
@@ -91,13 +91,13 @@ function b(e) {
         },
     };
 }
-function R(e) {
+function O(e) {
     let { applicationId: t, userIds: n } = e,
         r = l(n);
     if (null != d[t] && null != d[t][r] && "success" === d[t][r].state) return !1;
     d = { ...d, [t]: { ...(d[t] ?? {}), [r]: { state: "error", fetchedAt: Date.now() } } };
 }
-function O(e) {
+function b(e) {
     let { guildId: t } = e,
         n = c[t];
     (c[t] = { ...n, state: "loading" }), (c = { ...c });
@@ -122,11 +122,11 @@ function w(e) {
     } else c[t] = { storefront: null, state: "error", fetchedAt: Date.now() };
     c = { ...c };
 }
-function x(e) {
+function M(e) {
     let { guildId: t, pageIndex: n, skuId: r } = e;
     (u[t] = { activePage: n, activeSkuId: r }), (u = { ...u });
 }
-function M(e) {
+function x(e) {
     let { guildId: t, announcement: n } = e;
     (_ = { ..._ })[t] = { state: "success", announcement: n };
 }
@@ -191,16 +191,16 @@ let H = new B(s.h, {
     ENTITLEMENT_CREATE: S,
     INTERACTION_FAILURE: v,
     INTERACTION_SUCCESS: y,
-    SOCIAL_LAYER_STOREFRONT_LOAD: O,
+    SOCIAL_LAYER_STOREFRONT_LOAD: b,
     SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: D,
     SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS: L,
     SOCIAL_LAYER_STOREFRONT_LOAD_FAILURE: w,
-    SET_SOCIAL_LAYER_STOREFRONT_STATE: x,
-    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_SUCCESS: b,
-    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_FAILURE: R,
+    SET_SOCIAL_LAYER_STOREFRONT_STATE: M,
+    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_SUCCESS: R,
+    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_FAILURE: O,
     SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_START: C,
     SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_START: k,
-    SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_SUCCESS: M,
+    SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_SUCCESS: x,
     SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_FAILURE: P,
     SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_START: U,
     SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS: G,
