@@ -1,8 +1,8 @@
-n.d(t, { A: () => O });
+n.d(t, { A: () => L });
 var i = n(627968),
     l = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     r = n(607399),
     o = n(311907),
     c = n(397927),
@@ -11,36 +11,37 @@ var i = n(627968),
     h = n(573435),
     m = n(327166),
     A = n(157550),
-    p = n(471271),
-    g = n(957283),
+    g = n(471271),
+    p = n(957283),
     f = n(772659),
-    _ = n(138298),
-    E = n(622543),
+    _ = n(390848),
+    E = n(138298),
+    x = n(622543),
     C = n(657331),
-    x = n(761640),
-    S = n(994500),
+    S = n(761640),
+    I = n(994500),
     T = n(287809),
-    I = n(486020),
-    N = n(302975),
-    v = n(652215),
-    y = n(518477),
-    b = n(985018),
-    R = n(228288);
-let j = (e) => {
+    N = n(486020),
+    y = n(302975),
+    b = n(652215),
+    v = n(518477),
+    j = n(985018),
+    R = n(729254);
+let M = (e) => {
         let { userId: t, channelId: n } = e,
-            a = (0, o.bG)([E.A], () => E.A.getMutualGuilds(t), [t]),
-            s = l.useMemo(
+            s = (0, o.bG)([x.A], () => x.A.getMutualGuilds(t), [t]),
+            a = l.useMemo(
                 () =>
-                    null != a
-                        ? a
+                    null != s
+                        ? s
                               .slice(0, 3)
                               .map((e, t) => {
                                   let { guild: n } = e,
-                                      l = null != n ? I.Ay.getGuildIconURL({ id: n.id, icon: n.icon, size: 24 }) : null;
+                                      l = null != n ? N.Ay.getGuildIconURL({ id: n.id, icon: n.icon, size: 24 }) : null;
                                   if (null == l) return null;
-                                  let s = t === (a.length > 3 ? 3 : a.length) - 1,
+                                  let a = t === (s.length > 3 ? 3 : s.length) - 1,
                                       r = (0, i.jsx)("img", { src: l, alt: "", className: R.my }, t);
-                                  return s
+                                  return a
                                       ? r
                                       : (0, i.jsx)(
                                             h.Ay,
@@ -56,127 +57,140 @@ let j = (e) => {
                               })
                               .filter((e) => null != e)
                         : [],
-                [a],
+                [s],
             );
-        return null == a || 0 === a.length
+        return null == s || 0 === s.length
             ? (0, i.jsx)(c.Text, {
                   color: "text-default",
                   variant: "text-sm/normal",
-                  children: b.intl.string(b.t.zjVh8h),
+                  children: j.intl.string(j.t.zjVh8h),
               })
             : (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, i.jsx)("div", { className: R.H, children: s }),
+                      (0, i.jsx)("div", { className: R.H, children: a }),
                       (0, i.jsx)(c.DUT, {
                           onClick: () => {
                               (0, C.openUserProfileModal)({
                                   userId: t,
                                   channelId: n,
-                                  tabSection: y.RP.MUTUAL_GUILDS,
+                                  tabSection: v.RP.MUTUAL_GUILDS,
                                   sourceAnalyticsLocations: [u.A.DM_CHANNEL],
                               });
                           },
                           children: (0, i.jsx)(c.Text, {
                               className: R.tE,
                               variant: "text-sm/normal",
-                              children: b.intl.format(b.t.eE3oep, { count: a.length }),
+                              children: j.intl.format(j.t.eE3oep, { count: s.length }),
                           }),
                       }),
                   ],
               });
     },
-    M = (e) => {
+    D = (e) => {
         let { relationshipType: t, userId: n, showingBanner: l } = e,
-            a = T.default.getUser(n)?.bot,
-            s = () => {
-                d.A.addRelationship({ userId: n, context: { location: v.liQ.DM_CHANNEL } });
-            },
-            r = (0, i.jsx)(c.Button, {
+            s = T.default.getUser(n)?.bot,
+            a = (0, i.jsx)(c.Button, {
                 size: "sm",
                 variant: "secondary",
                 onClick: () => {
-                    d.A.blockUser(n, { location: v.liQ.DM_CHANNEL });
+                    d.A.blockUser(n, { location: b.liQ.DM_CHANNEL });
                 },
-                text: b.intl.string(b.t.l4Emac),
+                text: j.intl.string(j.t.l4Emac),
             }),
-            o = (0, m.D)(n);
+            r = (0, m.D)(n),
+            u = (0, o.bG)([I.A], () => I.A.getOriginApplicationId(n), [n]),
+            { acceptFriendRequest: h } = (0, _.I)({
+                userId: n,
+                applicationId: u,
+                isGameRelationship: !1,
+                location: b.liQ.DM_CHANNEL,
+            });
         switch (t) {
-            case v.eA$.NONE:
+            case b.eA$.NONE:
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        !a && !l && (0, i.jsx)(c.Button, { size: "sm", variant: "primary", onClick: s, text: o }),
-                        r,
+                        !s &&
+                            !l &&
+                            (0, i.jsx)(c.Button, {
+                                size: "sm",
+                                variant: "primary",
+                                onClick: () => {
+                                    d.A.addRelationship({ userId: n, context: { location: b.liQ.DM_CHANNEL } });
+                                },
+                                text: r,
+                            }),
+                        a,
                     ],
                 });
-            case v.eA$.FRIEND:
+            case b.eA$.FRIEND:
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(c.Button, {
                             size: "sm",
                             variant: "secondary",
                             onClick: () => {
-                                d.A.removeFriend(n, { location: v.liQ.DM_CHANNEL });
+                                d.A.removeFriend(n, { location: b.liQ.DM_CHANNEL });
                             },
-                            text: b.intl.string(b.t.cvSt1J),
+                            text: j.intl.string(j.t.cvSt1J),
                         }),
-                        r,
+                        a,
                     ],
                 });
-            case v.eA$.BLOCKED:
+            case b.eA$.BLOCKED:
                 return (0, i.jsx)(c.Button, {
                     size: "sm",
                     variant: "secondary",
                     onClick: () => {
-                        d.A.unblockUser(n, { location: v.liQ.DM_CHANNEL });
+                        d.A.unblockUser(n, { location: b.liQ.DM_CHANNEL });
                     },
-                    text: b.intl.string(b.t.XyHpKH),
+                    text: j.intl.string(j.t.XyHpKH),
                 });
-            case v.eA$.PENDING_INCOMING:
+            case b.eA$.PENDING_INCOMING:
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(c.Button, {
                             size: "sm",
                             variant: "primary",
-                            onClick: s,
-                            text: b.intl.string(b.t["+WbSn5"]),
+                            onClick: h,
+                            text: j.intl.string(j.t["+WbSn5"]),
                         }),
                         (0, i.jsx)(c.Button, {
                             size: "sm",
                             variant: "secondary",
                             onClick: () => {
-                                d.A.cancelFriendRequest(n, { location: v.liQ.DM_CHANNEL });
+                                d.A.cancelFriendRequest(n, { location: b.liQ.DM_CHANNEL });
                             },
-                            text: b.intl.string(b.t.rQSndv),
+                            text: j.intl.string(j.t.rQSndv),
                         }),
-                        r,
+                        a,
                     ],
                 });
-            case v.eA$.PENDING_OUTGOING:
+            case b.eA$.PENDING_OUTGOING:
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(c.Button, {
                             size: "sm",
                             variant: "primary",
                             disabled: !0,
-                            text: b.intl.string(b.t.xMH6vD),
+                            text: j.intl.string(j.t.xMH6vD),
                         }),
-                        r,
+                        a,
                     ],
                 });
             default:
                 return null;
         }
     },
-    D = (e) => {
+    O = (e) => {
         let { channelId: t, otherUserId: n } = e,
-            a = l.useCallback(() => {
-                (0, c.showToast)((0, c.createToast)(b.intl.string(b.t.a2j0hv), c.ToastType.FAILURE));
-            }, []),
             s = l.useCallback(() => {
-                _.A.closeChannelSidebar(x.fe);
+                (0, c.showToast)((0, c.createToast)(j.intl.string(j.t.a2j0hv), c.ToastType.FAILURE));
+            }, []),
+            a = l.useCallback(() => {
+                E.A.closeChannelSidebar(S.fe);
             }, []),
             r = l.useCallback(() => {
-                _.A.closeChannelSidebar(x.fe);
+                E.A.closeChannelSidebar(S.fe);
             }, []),
             {
                 acceptMessageRequest: o,
@@ -185,67 +199,67 @@ let j = (e) => {
                 isRejectLoading: h,
                 isOptimisticAccepted: m,
                 isOptimisticRejected: A,
-            } = (0, p.t)({ user: T.default.getUser(n), onError: a, onAcceptSuccess: r, onRejectSuccess: s }),
-            g = u || h || m || A;
+            } = (0, g.t)({ user: T.default.getUser(n), onError: s, onAcceptSuccess: r, onRejectSuccess: a }),
+            p = u || h || m || A;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(c.Button, {
                     variant: "primary",
                     size: "sm",
-                    disabled: g,
+                    disabled: p,
                     onClick: () => o(t),
                     loading: u,
-                    text: b.intl.string(b.t.Kz8Pwr),
+                    text: j.intl.string(j.t.Kz8Pwr),
                 }),
                 (0, i.jsx)(c.Button, {
                     variant: "secondary",
                     size: "sm",
-                    disabled: g,
+                    disabled: p,
                     onClick: () => d(t),
                     loading: h,
-                    text: b.intl.string(b.t.B2nygW),
+                    text: j.intl.string(j.t.B2nygW),
                 }),
             ],
         });
     },
-    O = (e) => {
+    L = (e) => {
         let { userId: t, channel: n, showingBanner: l } = e,
-            { channelId: a } = (0, g.N)(),
-            d = (0, o.bG)([A.A], () => null != a && A.A.isSpam(a), [a]),
-            u = (0, o.bG)([S.A], () => S.A.getRelationshipType(t), [t]),
-            h = n.id === a,
+            { channelId: s } = (0, p.N)(),
+            d = (0, o.bG)([A.A], () => null != s && A.A.isSpam(s), [s]),
+            u = (0, o.bG)([I.A], () => I.A.getRelationshipType(t), [t]),
+            h = n.id === s,
             m = !r.Fr && !h,
-            p = !!r.Fr || h || d,
+            g = !!r.Fr || h || d,
             _ =
                 d || h
                     ? (0, i.jsxs)("div", {
                           className: R.mG,
                           children: [
-                              (0, i.jsx)(D, { channelId: n.id, otherUserId: t }),
+                              (0, i.jsx)(O, { channelId: n.id, otherUserId: t }),
                               (0, i.jsx)(f.A, { channel: n }),
                           ],
                       })
                     : (0, i.jsxs)("div", {
                           className: R.mG,
                           children: [
-                              (0, i.jsx)(M, { relationshipType: u, userId: t, showingBanner: l }),
-                              !l && (0, i.jsx)(N.A, { otherUserId: t, channel: n, navigateAwayOnReportSuccess: m }),
+                              (0, i.jsx)(D, { relationshipType: u, userId: t, showingBanner: l }),
+                              !l && (0, i.jsx)(y.A, { otherUserId: t, channel: n, navigateAwayOnReportSuccess: m }),
                           ],
                       }),
             E =
-                u !== v.eA$.PENDING_INCOMING || d || h
+                u !== b.eA$.PENDING_INCOMING || d || h
                     ? null
                     : (0, i.jsx)(c.Text, {
                           color: "text-default",
                           variant: "text-sm/normal",
-                          children: b.intl.string(b.t.c2v5nO),
+                          children: j.intl.string(j.t.c2v5nO),
                       });
         return (0, i.jsxs)("div", {
-            className: p ? R.AA : R.kL,
+            className: g ? R.AA : R.kL,
             children: [
-                (0, i.jsx)("div", { className: R.mG, children: (0, i.jsx)(j, { userId: t, channelId: n.id }) }),
-                !p && (0, i.jsx)("div", { className: R.yF }),
-                (0, i.jsxs)("div", { className: s()(R.mG, R.LV), children: [E, _] }),
+                (0, i.jsx)("div", { className: R.mG, children: (0, i.jsx)(M, { userId: t, channelId: n.id }) }),
+                !g && (0, i.jsx)("div", { className: R.yF }),
+                (0, i.jsxs)("div", { className: a()(R.mG, R.LV), children: [E, _] }),
             ],
         });
     };
