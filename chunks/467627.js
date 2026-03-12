@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { A: () => eu });
+n.d(t, { A: () => eh });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    r = n.n(l),
-    a = n(735438),
-    o = n.n(a),
+    a = n.n(l),
+    r = n(735438),
+    o = n.n(r),
     c = n(873263),
     d = n(837381),
     u = n(621466),
@@ -35,32 +35,33 @@ var i = n(627968),
     G = n(543897),
     U = n(696451),
     P = n(71393),
-    w = n(711014),
-    k = n(723702),
-    V = n(757780),
-    B = n(263715),
-    H = n(987344),
-    F = n(750448),
-    K = n(845211),
-    W = n(941604),
-    Y = n(246884),
-    z = n(497140),
-    q = n(34247),
-    X = n(850729),
-    J = n(521872),
-    Q = n(827975),
-    $ = n(369915),
-    Z = n(232879),
-    ee = n(181800),
-    et = n(343170),
-    en = n(652215),
-    ei = n(985018),
-    es = n(216788);
-let el = (0, k.isWindows)() ? 4 : 12 * !(0, k.isMac)();
+    w = n(309010),
+    k = n(711014),
+    V = n(723702),
+    B = n(757780),
+    H = n(263715),
+    F = n(987344),
+    K = n(750448),
+    W = n(845211),
+    Y = n(941604),
+    z = n(246884),
+    q = n(497140),
+    X = n(34247),
+    J = n(850729),
+    Q = n(521872),
+    $ = n(827975),
+    Z = n(369915),
+    ee = n(232879),
+    et = n(181800),
+    en = n(343170),
+    ei = n(652215),
+    es = n(985018),
+    el = n(266450);
+let ea = (0, V.isWindows)() ? 4 : 12 * !(0, V.isMac)();
 function er(e) {
-    return e.startsWith(en.BVt.GUILD_DISCOVERY) || e.startsWith(en.BVt.GLOBAL_DISCOVERY);
+    return e.startsWith(ei.BVt.GUILD_DISCOVERY) || e.startsWith(ei.BVt.GLOBAL_DISCOVERY);
 }
-class ea {
+class eo {
     guildsTree;
     setScrolling;
     setIsScrolledToBottom;
@@ -93,8 +94,8 @@ class ea {
         if (
             null == n ||
             (null == e && er(window.location.pathname)) ||
-            e === en.sFm.SERVER_DISCOVERY_BADGE ||
-            e === en.sFm.E3_SERVER_DISCOVERY_BADGE
+            e === ei.sFm.SERVER_DISCOVERY_BADGE ||
+            e === ei.sFm.E3_SERVER_DISCOVERY_BADGE
         )
             return;
         if (null == e) return void n.scrollTo({ to: 0, animate: t });
@@ -118,14 +119,14 @@ class ea {
         this.scrollerRef.current?.scrollToBottom();
     };
     isItemVisible = (e, t, n) => {
-        let { iconTotalSize: i, badgeVisibleBuffer: s, heightBeforeGuilds: l, bottomInset: r } = this.sizes,
-            a = this.scrollerRef.current;
-        if (null == a) return !1;
+        let { iconTotalSize: i, badgeVisibleBuffer: s, heightBeforeGuilds: l, bottomInset: a } = this.sizes,
+            r = this.scrollerRef.current;
+        if (null == r) return !1;
         let o = n.findIndex((t) => ("string" == typeof t || null == t ? t === e : t.includes(e)));
         if (o < 0) return !1;
         let c = i * o + l,
-            d = a.getScrollerState();
-        return (!t && !!(c >= d.scrollTop)) || (!!t && !!(c + i + s <= d.scrollTop + d.offsetHeight - r));
+            d = r.getScrollerState();
+        return (!t && !!(c >= d.scrollTop)) || (!!t && !!(c + i + s <= d.scrollTop + d.offsetHeight - a));
     };
     getVisibleGuildIds = () => {
         let e = this.scrollerRef.current;
@@ -141,8 +142,8 @@ class ea {
                           s = this.nodeRefs[i];
                       if (null == s) return !1;
                       let l = s.getBoundingClientRect(),
-                          r = l.top - n;
-                      return r + l.height > 0 && r < t;
+                          a = l.top - n;
+                      return a + l.height > 0 && a < t;
                   })
                   .map((e) => {
                       let { id: t } = e;
@@ -169,106 +170,107 @@ class ea {
         this.nodeRefs[e] = t;
     };
 }
-function eo(e) {
+function ec(e) {
     let { hideDms: t, scrollToTop: n, lurkingGuildIds: l } = e,
-        r = (0, v.A)("TopSection"),
-        { isExperimentEnabled: a } = (0, S.TW)("TopSection"),
-        [o, c] = (0, b.kn)(a ? [A.M.FAVORITES_SERVER_ONBOARDING_INTRO] : []),
-        d = o === A.M.FAVORITES_SERVER_ONBOARDING_INTRO,
-        [u] = (0, b.kn)(d ? [A.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM] : [], void 0, !0),
-        m = u === A.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM,
-        p = s.useRef(!1),
-        g = m && r;
+        a = (0, v.A)("TopSection"),
+        { isExperimentEnabled: r } = (0, S.TW)("TopSection"),
+        o = (0, h.bG)([w.A], () => null != w.A.getVoiceChannelId()),
+        [c, d] = (0, b.kn)(r && !o ? [A.M.FAVORITES_SERVER_ONBOARDING_INTRO] : []),
+        u = c === A.M.FAVORITES_SERVER_ONBOARDING_INTRO,
+        [m] = (0, b.kn)(u ? [A.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM] : [], void 0, !0),
+        p = m === A.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM,
+        g = s.useRef(!1),
+        _ = p && a;
     s.useEffect(() => {
-        g && !p.current && n(), (p.current = g);
-    }, [n, g]);
-    let _ = (0, h.yK)([P.A, U.Ay], () => P.A.getGuildIds().filter((e) => U.Ay.isCurrentUserGuest(e))),
-        f = l.concat(_),
-        { entrypoint: x } = (0, O.X8)({ location: "GuildsBar" });
+        _ && !g.current && n(), (g.current = _);
+    }, [n, _]);
+    let f = (0, h.yK)([P.A, U.Ay], () => P.A.getGuildIds().filter((e) => U.Ay.isCurrentUserGuest(e))),
+        x = l.concat(f),
+        { entrypoint: C } = (0, O.X8)({ location: "GuildsBar" });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(X.C, {}),
-            x === O.RK.SERVER_RAIL_TOP && (0, i.jsx)(L.A, {}),
-            r ? (0, i.jsx)(y.A, { shouldShowIntroPopover: m, markIntroPopoverAsDismissed: c }) : null,
-            !t && (0, i.jsx)(K.A, {}),
-            f.map((e) => (0, i.jsx)(et.A, { guildId: e }, e)),
-            (0, i.jsx)(ee.A, { onActivate: n }),
+            (0, i.jsx)(J.C, {}),
+            C === O.RK.SERVER_RAIL_TOP && (0, i.jsx)(L.A, {}),
+            a ? (0, i.jsx)(y.A, { shouldShowIntroPopover: p, markIntroPopoverAsDismissed: d }) : null,
+            !t && (0, i.jsx)(W.A, {}),
+            x.map((e) => (0, i.jsx)(en.A, { guildId: e }, e)),
+            (0, i.jsx)(et.A, { onActivate: n }),
         ],
     });
 }
-function ec(e) {
-    let { guildDiscoveryButton: t, disableAppDownload: n, isOverlay: s, renderTreeNode: l, lurkingGuildIds: r } = e,
-        [a] = (0, h.yK)([w.Ay], () => {
-            let e = w.Ay.getGuildsTree();
+function ed(e) {
+    let { guildDiscoveryButton: t, disableAppDownload: n, isOverlay: s, renderTreeNode: l, lurkingGuildIds: a } = e,
+        [r] = (0, h.yK)([k.Ay], () => {
+            let e = k.Ay.getGuildsTree();
             return [e, e.version];
         }),
-        o = a.getRoots(),
+        o = r.getRoots(),
         c = (0, h.yK)([G.A], () => G.A.getGeoRestrictedGuilds()).map((e) =>
-            (0, i.jsx)(z.A, { id: e.id, name: e.name, icon: e.icon }, e.id),
+            (0, i.jsx)(q.A, { id: e.id, name: e.name, icon: e.icon }, e.id),
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(_.BJc, {
                 role: "group",
-                "aria-label": ei.intl.string(ei.t["7hB4kg"]),
+                "aria-label": es.intl.string(es.t["7hB4kg"]),
                 gap: "xs",
                 children: o.map((e, t) => l(e, t, o.length)),
             }),
             c,
-            (0, i.jsx)(Q.A, {}),
-            s ? null : (0, i.jsx)(Y.A, { disableTooltip: r.length > 0, lastTargetNode: o[o.length - 1] }),
+            (0, i.jsx)($.A, {}),
+            s ? null : (0, i.jsx)(z.A, { disableTooltip: a.length > 0, lastTargetNode: o[o.length - 1] }),
             s ? null : t,
-            n ? null : (0, i.jsx)(W.A, {}),
+            n ? null : (0, i.jsx)(Y.A, {}),
         ],
     });
 }
-function ed(e) {
-    let { disableAppDownload: t = k.isPlatformEmbedded, isOverlay: n = !1, className: l, themeOverride: a } = e;
+function eu(e) {
+    let { disableAppDownload: t = V.isPlatformEmbedded, isOverlay: n = !1, className: l, themeOverride: r } = e;
     (0, T.A)();
-    let [o] = (0, h.yK)([w.Ay], () => {
-            let e = w.Ay.getGuildsTree();
+    let [o] = (0, h.yK)([k.Ay], () => {
+            let e = k.Ay.getGuildsTree();
             return [e, e.version];
         }),
         u = (0, h.bG)([R.A], () => R.A.lurkingGuildIds()),
         A = s.useMemo(() => (n ? [] : u), [u, n]),
         m = (0, h.bG)([N.A], () => N.A.isFullscreenInContext()),
-        { isSorting: f, startSorting: C, stopSorting: b } = (0, V.A)(),
+        { isSorting: f, startSorting: C, stopSorting: b } = (0, B.A)(),
         S = s.useRef(!1),
         [y] = s.useState(() => new p.Ep()),
         j = s.useRef(null),
         G = s.useRef(null),
         { ref: U, ...P } = (0, d.$y)(),
-        K = (0, _.R7z)(),
+        w = (0, _.R7z)(),
         [W, Y] = s.useState(!1),
         z = (0, _.rdh)(g.A.modules.guildbar.AVATAR_SIZE),
-        X = (0, _.rdh)(g.A.space.SPACE_XS),
-        Q = (0, v.A)("GuildsBar"),
-        { pathname: ee } = (0, c.zy)(),
+        q = (0, _.rdh)(g.A.space.SPACE_XS),
+        J = (0, v.A)("GuildsBar"),
+        { pathname: $ } = (0, c.zy)(),
         { entrypoint: et } = (0, O.X8)({ location: "GuildsBar" }),
-        ed = +!!Q + +(et === O.RK.SERVER_RAIL_TOP),
+        en = +!!J + +(et === O.RK.SERVER_RAIL_TOP),
         eu = s.useMemo(() => {
             let e,
                 t,
                 n =
-                    ((e = z + X),
+                    ((e = z + q),
                     {
                         iconSize: z,
                         iconTotalSize: e,
                         badgeVisibleBuffer: e - 16,
-                        separatorSize: (t = 2 + X),
-                        heightBeforeGuilds: el + t + ed * e,
+                        separatorSize: (t = 2 + q),
+                        heightBeforeGuilds: ea + t + en * e,
                         bottomInset: 16,
                     });
-            return new ea(
+            return new eo(
                 o,
                 Y,
-                en.tEg,
+                ei.tEg,
                 () => {
                     j.current?.calculateState(), G.current?.calculateState();
                 },
                 n,
             );
-        }, [z, X, o, ed]);
+        }, [z, q, o, en]);
     s.useEffect(
         () => (
             eu.setResizeObserver(),
@@ -279,7 +281,7 @@ function ed(e) {
         [eu],
     );
     let { analyticsLocations: eh } = (0, I.Ay)(E.A.GUILDS_LIST),
-        eA = er(ee);
+        eA = er($);
     (0, x.u5)(() => {
         if (!S.current && 0 !== o.size) {
             if (!eA) {
@@ -302,13 +304,13 @@ function ed(e) {
     let em = s.useCallback(() => {
         eu.scrollTo({ to: 0, animate: !1 });
     }, [eu]);
-    (0, H.A)(eu.scrollToGuild);
+    (0, F.A)(eu.scrollToGuild);
     let ep = s.useCallback(
             function e(t, n, s) {
                 switch (t.type) {
-                    case B.PJ.FOLDER:
+                    case H.PJ.FOLDER:
                         return (0, i.jsx)(
-                            $.A,
+                            Z.A,
                             {
                                 folderNode: t,
                                 setNodeRef: eu.setNodeRef,
@@ -322,9 +324,9 @@ function ed(e) {
                             },
                             t.id,
                         );
-                    case B.PJ.GUILD:
+                    case H.PJ.GUILD:
                         return (0, i.jsx)(
-                            Z.A,
+                            ee.A,
                             {
                                 guildNode: t,
                                 setRef: eu.setNodeRef,
@@ -343,43 +345,43 @@ function ed(e) {
             },
             [C, b, f, eu.setNodeRef],
         ),
-        eg = (0, i.jsx)(q.A, { selected: eA, className: es.ai }),
+        eg = (0, i.jsx)(X.A, { selected: eA, className: el.ai }),
         e_ = et === O.RK.SERVER_RAIL_BOTTOM;
     return (0, i.jsx)(I.f5, {
         value: eh,
         children: (0, i.jsx)(_.NPJ, {
-            theme: a,
+            theme: r,
             children: (e) =>
                 (0, i.jsxs)("nav", {
-                    className: r()(es.iE, l, e, { [es.R]: m }),
-                    "aria-label": ei.intl.string(ei.t.PjnF2t),
+                    className: a()(el.iE, l, e, { [el.R]: m }),
+                    "aria-label": es.intl.string(es.t.PjnF2t),
                     children: [
-                        (0, i.jsx)(F.A, {
+                        (0, i.jsx)(K.A, {
                             ref: j,
                             isVisible: eu.isItemVisible,
                             onJumpTo: eu.handleJumpToGuild,
-                            className: es.Xl,
-                            barClassName: es.Sh,
+                            className: el.Xl,
+                            barClassName: el.Sh,
                         }),
                         (0, i.jsx)("ul", {
                             ref: U,
                             ...P,
-                            ...K,
+                            ...w,
                             role: "tree",
-                            className: es.B2,
+                            className: el.B2,
                             children: (0, i.jsxs)("div", {
-                                className: es.qD,
+                                className: el.qD,
                                 children: [
                                     (0, i.jsxs)(_.zCo, {
-                                        className: r()({ [es.XG]: !0, [es.qw]: W }),
+                                        className: a()({ [el.XG]: !0, [el.qw]: W }),
                                         experimental_useStack: !0,
                                         gap: "xs",
                                         ref: eu.scrollerRef,
                                         onScroll: eu.handleScroll,
                                         children: [
-                                            (0, i.jsx)(eo, { scrollToTop: em, lurkingGuildIds: A }),
-                                            (0, i.jsx)(J.A, {}),
-                                            (0, i.jsx)(ec, {
+                                            (0, i.jsx)(ec, { scrollToTop: em, lurkingGuildIds: A }),
+                                            (0, i.jsx)(Q.A, {}),
+                                            (0, i.jsx)(ed, {
                                                 guildDiscoveryButton: eg,
                                                 disableAppDownload: t,
                                                 isOverlay: n,
@@ -391,30 +393,30 @@ function ed(e) {
                                     e_ &&
                                         (0, i.jsxs)("div", {
                                             children: [
-                                                (0, i.jsx)(J.A, { fullWidth: !0 }),
-                                                (0, i.jsx)("div", { className: es.JU, children: (0, i.jsx)(L.A, {}) }),
+                                                (0, i.jsx)(Q.A, { fullWidth: !0 }),
+                                                (0, i.jsx)("div", { className: el.JU, children: (0, i.jsx)(L.A, {}) }),
                                             ],
                                         }),
                                 ],
                             }),
                         }),
-                        (0, i.jsx)(F.A, {
+                        (0, i.jsx)(K.A, {
                             reverse: !0,
                             ref: G,
                             isVisible: eu.isItemVisible,
                             onJumpTo: eu.handleJumpToGuild,
-                            className: r()(es.LZ, { [es.CH]: !n && !e_, [es.c0]: !n && e_ }),
-                            barClassName: es.Sh,
+                            className: a()(el.LZ, { [el.CH]: !n && !e_, [el.c0]: !n && e_ }),
+                            barClassName: el.Sh,
                         }),
                     ],
                 }),
         }),
     });
 }
-let eu = s.memo(
+let eh = s.memo(
     function (e) {
         let t = (0, C.A)("guildsnav");
-        return (0, i.jsx)(d.hD, { navigator: t, children: (0, i.jsx)(ed, { ...e }) });
+        return (0, i.jsx)(d.hD, { navigator: t, children: (0, i.jsx)(eu, { ...e }) });
     },
     (e, t) => !1 === t.isVisible || (0, m.A)(e, t),
 );
