@@ -8,7 +8,9 @@ class r {
             player_version: "1.0.0",
             video_id: e.contentMetadata.contentId,
             video_title: e.contentMetadata.title,
-            video_duration: e.contentMetadata.durationMs ?? 1e3 * e.contentMetadata.durationSec,
+            video_duration:
+                e.contentMetadata.durationMs ??
+                (null != e.contentMetadata.durationSec ? 1e3 * e.contentMetadata.durationSec : void 0),
             video_content_type: e.contentMetadata.contentType,
             video_series: e.contentMetadata.questId,
             video_producer: e.contentMetadata.gameId,
@@ -23,7 +25,7 @@ class r {
     }
     static getAppVersion() {
         try {
-            return "498568";
+            return "510263";
         } catch {
             return "unknown";
         }
