@@ -1936,7 +1936,7 @@ var eA = (function (e) {
             (e[(e.PARTY_PRIVACY_VOICE_CHANNEL = 128)] = "PARTY_PRIVACY_VOICE_CHANNEL"),
             (e[(e.EMBEDDED = 256)] = "EMBEDDED"),
             (e[(e.CONTEXTLESS = 512)] = "CONTEXTLESS"),
-            (e[(e.SUPPORTS_GATEWAY_ACTIVITY_ACTION_JOIN = 1024)] = "SUPPORTS_GATEWAY_ACTIVITY_ACTION_JOIN"),
+            (e[(e.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN = 1024)] = "SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN"),
             e
         );
     })({}),
