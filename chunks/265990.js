@@ -12,8 +12,8 @@ var i = n(627968),
     h = n(688810),
     _ = n(429913),
     m = n(70730),
-    g = n(45787),
-    p = n(275759),
+    p = n(45787),
+    g = n(275759),
     E = n(21119),
     I = n(994500),
     f = n(595623),
@@ -30,7 +30,7 @@ n(646363);
 var L = n(652215),
     R = n(788868),
     P = n(985018),
-    j = n(520936);
+    j = n(889382);
 let D = [];
 function M() {
     d.A.transitionToSection(L.m3P.ADD_FRIEND, { explicit: !0 });
@@ -57,12 +57,10 @@ let G = function (e) {
         })),
         { enabled: V } = T.A.useConfig({ location: "PeopleList" }),
         [B, H] = r.useState([]),
-        F = r.useCallback(
-            (e) => {
-                V && H((t) => [...t, e]);
-            },
-            [V],
-        );
+        F = r.useCallback((e) => {
+            let { enabled: t } = T.A.getConfig({ location: "Friend Request Accept" });
+            t && H((t) => [...t, e]);
+        }, []);
     d !== L.m3P.PENDING && B.length > 0 && H([]);
     let [Y, W] = r.useState(() => {
             let e = {};
@@ -163,7 +161,7 @@ let G = function (e) {
                                 t.giftIntentType === R.np.FRIEND_ANNIVERSARY && e.push(t);
                             }),
                             e.sort((e, t) => E.A.compareByDmProbability(e.userId, t.userId)),
-                            [K ? e : e.slice(0, p.ZD), J]
+                            [K ? e : e.slice(0, g.ZD), J]
                         );
                     }
                 default:
@@ -234,7 +232,7 @@ let G = function (e) {
         ),
         ed = r.useCallback(
             (e) =>
-                d === L.m3P.ALL && 0 === e && q && en > p.ZD
+                d === L.m3P.ALL && 0 === e && q && en > g.ZD
                     ? (0, i.jsx)("div", {
                           className: j.Nf,
                           children: (0, i.jsx)(o.Button, {
@@ -251,7 +249,7 @@ let G = function (e) {
         );
     if (
         (r.useEffect(() => {
-            d === L.m3P.ALL && (0, g.Ad)();
+            d === L.m3P.ALL && (0, p.Ad)();
         }, [d]),
         r.useEffect(() => {
             z(!1);

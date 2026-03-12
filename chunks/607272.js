@@ -16,13 +16,13 @@ function _(e) {
         : s.A.acceptFriendRequest({ userId: t, confirmStrangerRequest: i, context: { location: r } });
 }
 function f(e) {
-    let { userId: t, applicationId: n, location: i, onConfirm: s, onCancel: a } = e,
-        d = (0, o.To)(r.p.FRIEND_REQUEST_STRANGER_CONFIRMATION),
-        f = (0, l._)("maybeConfirmFriendRequestAccept"),
-        h = d || f,
-        m = u.A.isStranger(t);
-    return null == n && h && !1 !== m
-        ? m && h
+    let { userId: t, applicationId: n, location: i, onConfirm: s, onCancel: a, onFinally: d } = e,
+        f = (0, o.To)(r.p.FRIEND_REQUEST_STRANGER_CONFIRMATION),
+        h = (0, l._)("maybeConfirmFriendRequestAccept"),
+        m = f || h,
+        E = u.A.isStranger(t);
+    return null == n && m && !1 !== E
+        ? E && m
             ? void (0, c.B)({
                   onConfirm: () => {
                       _({ userId: t, applicationId: n, location: i, confirmStrangerRequest: !0 }), s?.();
@@ -30,8 +30,11 @@ function f(e) {
                   onCancel: () => {
                       a?.();
                   },
+                  onFinally: () => {
+                      d?.();
+                  },
               })
-            : h
+            : m
               ? void _({ userId: t, applicationId: n, location: i })
                     .then((e) => {
                         p(e, { userId: t, applicationId: n, location: i, onConfirm: s, onCancel: a }) || s?.();
@@ -39,9 +42,12 @@ function f(e) {
                     .catch((e) => {
                         p(e, { userId: t, applicationId: n, location: i, onConfirm: s, onCancel: a });
                     })
+                    .finally(() => {
+                        d?.();
+                    })
               : void 0
         : _({ userId: t, applicationId: n, location: i, confirmStrangerRequest: !0 }).then(() => {
-              s?.();
+              s?.(), d?.();
           });
 }
 function p(e, t) {
