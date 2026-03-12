@@ -1,82 +1,80 @@
 "use strict";
-a.d(t, { Ay: () => h, gv: () => b });
+a.d(t, { A: () => g, g: () => A });
 var n = a(627968);
 a(64700);
-var r = a(989349),
-    i = a.n(r),
-    s = a(311907),
-    o = a(397927),
-    l = a(914430),
-    c = a(832712),
-    _ = a(392567),
-    d = a(543465),
-    u = a(477427),
-    f = a(47167),
-    m = a(652215),
-    p = a(815968),
-    g = a(985018);
-let b = () => [
-    { value: p.Xx.MINUTES_15, label: g.intl.string(g.t["8ot6gv"]) },
-    { value: p.Xx.HOURS_1, label: g.intl.string(g.t.UMWBZr) },
-    { value: p.Xx.HOURS_3, label: g.intl.string(g.t.QmYWtu) },
-    { value: p.Xx.HOURS_8, label: g.intl.string(g.t.EpAXPC) },
-    { value: p.Xx.HOURS_24, label: g.intl.string(g.t["755t4q"]) },
-    { value: p.Xx.ALWAYS, label: g.intl.string(g.t.r3LawO) },
+var i = a(311907),
+    r = a(397927),
+    s = a(914430),
+    l = a(832712),
+    o = a(392567),
+    c = a(543465),
+    _ = a(477427),
+    d = a(812141),
+    u = a(47167),
+    f = a(652215),
+    m = a(815968),
+    p = a(985018);
+let A = () => [
+    { value: m.Xx.MINUTES_15, label: p.intl.string(p.t["8ot6gv"]) },
+    { value: m.Xx.HOURS_1, label: p.intl.string(p.t.UMWBZr) },
+    { value: m.Xx.HOURS_3, label: p.intl.string(p.t.QmYWtu) },
+    { value: m.Xx.HOURS_8, label: p.intl.string(p.t.EpAXPC) },
+    { value: m.Xx.HOURS_24, label: p.intl.string(p.t["755t4q"]) },
+    { value: m.Xx.ALWAYS, label: p.intl.string(p.t.r3LawO) },
 ];
-function h(e, t) {
+function g(e, t) {
     let a = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        [r, p] = (0, s.yK)([d.Ay], () => [
-            d.Ay.isChannelMuted(e.guild_id, e.id),
-            d.Ay.getChannelMuteConfig(e.guild_id, e.id),
+        [m, g] = (0, i.yK)([c.Ay], () => [
+            c.Ay.isChannelMuted(e.guild_id, e.id),
+            c.Ay.getChannelMuteConfig(e.guild_id, e.id),
         ]),
-        h = (0, _.M)(p),
-        A = (0, f.Ay)(e, !0);
+        h = (0, o.M)(g),
+        b = (0, u.Ay)(e, !0);
     function I(t) {
-        t && e.type === m.rbe.GUILD_CATEGORY && (0, l.Gv)(e.id),
-            c.A.updateChannelOverrideSettings(e.guild_id, e.id, { muted: t }, u.G_.muted(t));
+        t && e.type === f.rbe.GUILD_CATEGORY && (0, s.Gv)(e.id),
+            l.A.updateChannelOverrideSettings(e.guild_id, e.id, { muted: t }, _.G_.muted(t));
     }
-    let v = g.intl.string(g.t.tbeRRJ),
-        C = g.intl.string(g.t.OYefme);
+    let C = p.intl.string(p.t.tbeRRJ),
+        v = p.intl.string(p.t.OYefme);
     switch (e.type) {
-        case m.rbe.GUILD_CATEGORY:
-            (v = g.intl.string(g.t.pNMCg2)), (C = g.intl.string(g.t.olaBeG));
+        case f.rbe.GUILD_CATEGORY:
+            (C = p.intl.string(p.t.pNMCg2)), (v = p.intl.string(p.t.olaBeG));
             break;
-        case m.rbe.GROUP_DM:
-            (v = g.intl.string(g.t.LO3kaK)), (C = g.intl.string(g.t["s5/5fm"]));
+        case f.rbe.GROUP_DM:
+            (C = p.intl.string(p.t.LO3kaK)), (v = p.intl.string(p.t["s5/5fm"]));
             break;
-        case m.rbe.DM:
-            (v = a ? g.intl.format(g.t.byjuJm, { name: A }) : g.intl.string(g.t.LO3kaK)),
-                (C = a ? g.intl.format(g.t["eC+9rj"], { name: A }) : g.intl.string(g.t["s5/5fm"]));
+        case f.rbe.DM:
+            (C = a ? p.intl.format(p.t.byjuJm, { name: b }) : p.intl.string(p.t.LO3kaK)),
+                (v = a ? p.intl.format(p.t["eC+9rj"], { name: b }) : p.intl.string(p.t["s5/5fm"]));
             break;
         default:
-            (v = g.intl.string(g.t.tbeRRJ)), (C = g.intl.string(g.t.OYefme));
+            (C = p.intl.string(p.t.tbeRRJ)), (v = p.intl.string(p.t.OYefme));
     }
-    return r
-        ? (0, n.jsx)(o.Drp, { id: "unmute-channel", label: C, subtext: h, action: () => I(!1) })
-        : (0, n.jsx)(o.Drp, {
+    return m
+        ? (0, n.jsx)(r.Drp, { id: "unmute-channel", label: v, subtext: h, action: () => I(!1) })
+        : (0, n.jsx)(r.Drp, {
               id: "mute-channel",
-              label: v,
+              label: C,
               action: () => {
                   I(!0);
               },
-              children: b().map((a) => {
-                  let { value: r, label: s } = a;
+              children: A().map((a) => {
+                  let { value: i, label: o } = a;
                   return (0, n.jsx)(
-                      o.Drp,
+                      r.Drp,
                       {
-                          id: `${r}`,
-                          label: s,
+                          id: `${i}`,
+                          label: o,
                           action: () => {
-                              let a, n;
+                              let a;
                               return (
-                                  e.type === m.rbe.GUILD_CATEGORY && (0, l.Gv)(e.id),
-                                  (a = r > 0 ? i()().add(r, "second").toISOString() : null),
-                                  (n = { muted: !0, mute_config: { selected_time_window: r, end_time: a } }),
-                                  void c.A.updateChannelOverrideSettings(e.guild_id, e.id, n, u.fd.Muted, t)
+                                  e.type === f.rbe.GUILD_CATEGORY && (0, s.Gv)(e.id),
+                                  (a = d.p(i)),
+                                  void l.A.updateChannelOverrideSettings(e.guild_id, e.id, a, _.fd.Muted, t)
                               );
                           },
                       },
-                      r,
+                      i,
                   );
               }),
           });

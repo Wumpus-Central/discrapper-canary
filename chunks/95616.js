@@ -18,7 +18,7 @@ var i = t(397927),
     g = t(297460),
     I = t(652215),
     y = t(985018),
-    _ = t(641131);
+    _ = t(733045);
 let M = (0, u.A)(
     (0, a.A)(
         function (e) {
@@ -27,7 +27,7 @@ let M = (0, u.A)(
                 d = (0, s.A)(n),
                 I = (0, g.A)({ kind: "CHANNEL", channel: n, guildId: n.getGuildId?.() ?? null }, t),
                 { toggleFavoriteItem: M } = (0, h.$X)(N.x.MESSAGES, n, t),
-                p = (0, c.Ay)(n),
+                p = (0, c.A)(n),
                 S = (0, f.A)({ id: n.id, label: y.intl.string(y.t.gFHI3k) }),
                 C = (0, A.A)(n),
                 x = (0, E.Ay)(n),
