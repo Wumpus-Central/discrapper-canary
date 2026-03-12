@@ -34,12 +34,8 @@ var r = n(627968),
     x = n(985018),
     P = n(30777);
 let k = (e) => {
-    let { badge: t, tieredTenureBadge: n, currentUserOwnsOrbBadge: i } = e;
-    return t.id === A.A.ORB_PROFILE_BADGE
-        ? (0, r.jsx)(I.A, { showSubtext: !i && !t.isPreviewMode })
-        : void 0 !== n && t.id !== M.K
-          ? (0, r.jsx)(p.A, { profileBadge: t, tenureBadge: n })
-          : t.description;
+    let { badge: t, tieredTenureBadge: n } = e;
+    return void 0 !== n && t.id !== M.K ? (0, r.jsx)(p.A, { profileBadge: t, tenureBadge: n }) : t.description;
 };
 function U(e) {
     let {
@@ -47,17 +43,18 @@ function U(e) {
             className: n,
             badgeClassName: s,
             displayProfile: p,
-            onClose: I,
-            shouldOpenBadgeTooltip: U,
-            shouldGlowTenureBadge: G,
+            onClose: U,
+            shouldOpenBadgeTooltip: G,
+            shouldGlowTenureBadge: F,
         } = e,
-        F = i.useRef(null),
-        { analyticsLocations: V } = (0, d.Ay)(c.A.BADGE),
-        { context: B, trackUserProfileAction: H } = (0, N.NJ)(),
-        j = T.default.getCurrentUser(),
-        Y = (0, y.CC)(j?.premiumType, w.PremiumTypes.TIER_2),
-        W = (0, O.AP)(j?.id ?? null),
-        K = (0, R.A)(W).some((e) => e.id === A.A.ORB_PROFILE_BADGE);
+        V = i.useRef(null),
+        B = i.useRef(null),
+        { analyticsLocations: H } = (0, d.Ay)(c.A.BADGE),
+        { context: j, trackUserProfileAction: Y } = (0, N.NJ)(),
+        W = T.default.getCurrentUser(),
+        K = (0, y.CC)(W?.premiumType, w.PremiumTypes.TIER_2),
+        $ = (0, O.AP)(W?.id ?? null),
+        z = (0, R.A)($).some((e) => e.id === A.A.ORB_PROFILE_BADGE);
     return (0, r.jsx)("div", {
         className: a()(P.k, n),
         "aria-label": x.intl.string(x.t.VWV0y5),
@@ -66,12 +63,12 @@ function U(e) {
             let n = e.id === A.A.ORB_PROFILE_BADGE,
                 i = (0, v.e0)(e.id),
                 d = null != i || e.id === M.K,
-                T = p?.userId === j?.id,
+                T = p?.userId === W?.id,
                 y = (t) => {
-                    if ((H({ action: "PRESS_BADGE" }), (0, C.R9)({ badge: e.id, analyticsLocations: V, ...B }), n))
+                    if ((Y({ action: "PRESS_BADGE" }), (0, C.R9)({ badge: e.id, analyticsLocations: H, ...j }), n))
                         return void (0, _.Cz)({
                             tab: L.G2.ORBS,
-                            analyticsLocations: V,
+                            analyticsLocations: H,
                             analyticsSource: c.A.VIRTUAL_CURRENCY_ORB_PROFILE_BADGE,
                         });
                     if (d) {
@@ -79,24 +76,24 @@ function U(e) {
                             (t.preventDefault(),
                             S.default.track(D.HAw.TIERED_TENURE_BADGE_CLICKED, {
                                 badge: e.id,
-                                premium_type: Y,
+                                premium_type: K,
                                 viewed_user_id: p?.userId,
                             }),
-                            Y)
+                            K)
                         ) {
-                            T ? (0, g.pX)(D.BVt.NITRO_HOME) : (0, h.D)({ analyticsLocations: V, displayProfile: p }),
-                                I?.();
+                            T ? (0, g.pX)(D.BVt.NITRO_HOME) : (0, h.D)({ analyticsLocations: H, displayProfile: p }),
+                                U?.();
                             return;
                         }
                         if (T) {
-                            let n = null != e.link ? (0, u.default)(e.link, { analyticsLocations: V }) : null;
+                            let n = null != e.link ? (0, u.default)(e.link, { analyticsLocations: H }) : null;
                             if (null == n) return;
-                            return I?.(), n(t);
+                            return U?.(), n(t);
                         }
-                        return (0, h.D)({ analyticsLocations: V, displayProfile: p }), void I?.();
+                        return (0, h.D)({ analyticsLocations: H, displayProfile: p }), void U?.();
                     }
-                    let r = null != e.link ? (0, u.default)(e.link, { analyticsLocations: V }) : null;
-                    if (null != r) return I?.(), r(t);
+                    let r = null != e.link ? (0, u.default)(e.link, { analyticsLocations: H }) : null;
+                    if (null != r) return U?.(), r(t);
                 },
                 N = () => {
                     e.id === R.h &&
@@ -104,8 +101,8 @@ function U(e) {
                             ...(0, E.fF)(m.uF.QUEST_BADGE),
                             is_targeted: !1,
                         }),
-                        H({ action: "HOVER_BADGE" }),
-                        (0, C.sQ)({ badge: e.id, analyticsLocations: V, ...B });
+                        Y({ action: "HOVER_BADGE" }),
+                        (0, C.sQ)({ badge: e.id, analyticsLocations: H, ...j });
                 },
                 O = void 0 !== i && e.id !== M.K,
                 w = (0, r.jsx)("img", {
@@ -114,21 +111,22 @@ function U(e) {
                     src: e.iconSrc ?? (0, b.L7)(e.icon),
                     className: a()(P.q, s),
                 }),
-                x = {
+                x = null != G && G(e.id),
+                $ = {
                     onClick: y,
                     onMouseEnter: N,
                     href: e.link,
                     "aria-label": e.description,
-                    style: { filter: G && null != i ? `drop-shadow(0 0 5px ${i.glowColor})` : void 0 },
+                    style: { filter: F && null != i ? `drop-shadow(0 0 5px ${i.glowColor})` : void 0 },
                 };
             if (O) {
-                let n = (0, r.jsx)(l.MzZ, { ...x, ref: F, children: w });
+                let n = (0, r.jsx)(l.MzZ, { ...$, ref: V, children: w });
                 return (0, r.jsx)(
                     "div",
                     {
                         children: (0, r.jsx)(f.A, {
                             badgeId: e.id,
-                            targetElementRef: F,
+                            targetElementRef: V,
                             mode: "tooltip",
                             tooltipDelay: b.In,
                             body: e.description,
@@ -144,17 +142,25 @@ function U(e) {
                     `${e.id}-${t}`,
                 );
             }
-            let W = (0, r.jsx)(l.MzZ, { ...x, children: w }),
-                $ = k({ badge: e, tieredTenureBadge: d && e.id !== M.K ? i : void 0, currentUserOwnsOrbBadge: K });
+            if (n) {
+                let n = (0, r.jsx)(l.MzZ, { ...$, ref: B, children: w });
+                return (0, r.jsx)(
+                    I.d,
+                    {
+                        targetElementRef: B,
+                        delay: b.In,
+                        showSubtext: !z && !e.isPreviewMode,
+                        forceOpen: x,
+                        children: n,
+                    },
+                    `${e.id}-${t}`,
+                );
+            }
+            let q = (0, r.jsx)(l.MzZ, { ...$, children: w }),
+                Z = k({ badge: e, tieredTenureBadge: d && e.id !== M.K ? i : void 0 });
             return (0, r.jsx)(
                 o.m,
-                {
-                    __unsupportedReactNodeAsText: $,
-                    forceOpen: null != U && U(e.id),
-                    delay: b.In,
-                    ariaHidden: !0,
-                    children: W,
-                },
+                { __unsupportedReactNodeAsText: Z, forceOpen: x, delay: b.In, ariaHidden: !0, children: q },
                 `${e.id}-${t}`,
             );
         }),
