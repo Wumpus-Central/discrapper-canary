@@ -3,6 +3,7 @@ var r = {
     icon: "icon_f34534",
     guildIconBadge: "guildIconBadge_f34534",
     iconInactive: "iconInactive_f34534",
+    iconActiveSmol: "iconActiveSmol_f34534",
     iconActiveMini: "iconActiveMini_f34534",
     iconActiveSmaller: "iconActiveSmaller_f34534",
     iconActiveSmall: "iconActiveSmall_f34534",

@@ -67,7 +67,7 @@ function m(e) {
                                             (0, r.jsx)(l.Text, {
                                                 variant: "text-md/normal",
                                                 color: "text-default",
-                                                lineClamp: 1,
+                                                lineClamp: 2,
                                                 children: u,
                                             }),
                                             null != c &&
@@ -123,6 +123,12 @@ function E(e) {
             return p.intl.format(f.default.mXvZt2, {
                 guildName: t.guild.name,
                 icon: (0, r.jsx)(c.Ay, { guild: t.guild, iconSize: 16, className: h.RG }),
+            });
+        case "boost":
+            return p.intl.format(f.default["8imbq5"], {
+                guildName: t.guild.name,
+                guildIcon: () =>
+                    (0, r.jsx)(c.Ay, { guild: t.guild, size: c.Ay.Sizes.SMOL, className: h.RG, active: !0 }),
             });
         case void 0:
             return null;
