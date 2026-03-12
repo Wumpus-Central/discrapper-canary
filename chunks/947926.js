@@ -1,207 +1,217 @@
-n.d(t, { A: () => F, Y: () => B });
+n.d(t, { A: () => H, Y: () => V });
 var a = n(627968),
     i = n(64700),
     s = n(503698),
     l = n.n(s),
-    r = n(475539),
-    o = n(311907),
-    d = n(475743),
-    c = n(676594),
-    u = n(186111),
-    m = n(859703),
-    h = n(341915),
-    x = n(921517),
-    p = n(677402),
-    g = n(943849),
-    _ = n(890687),
-    f = n(792620),
-    b = n(241124),
-    v = n(73473),
-    j = n(201805),
-    C = n(545986),
-    A = n(139210),
-    T = n(568329),
-    y = n(818276),
-    S = n(742860),
-    E = n(783569),
-    N = n(963713),
-    I = n(717695),
-    k = n(899592),
-    R = n(546350),
-    O = n(922532),
-    w = n(20732),
-    D = n(147150),
-    M = n(654487);
+    r = n(490249),
+    o = n(517846),
+    d = n(311907),
+    c = n(475743),
+    u = n(676594),
+    m = n(236698),
+    h = n(253932),
+    p = n(186111),
+    x = n(859703),
+    g = n(341915),
+    _ = n(921517),
+    f = n(677402),
+    v = n(943849),
+    b = n(890687),
+    j = n(792620),
+    A = n(241124),
+    C = n(73473),
+    T = n(201805),
+    y = n(545986),
+    S = n(139210),
+    E = n(568329),
+    N = n(818276),
+    I = n(742860),
+    k = n(783569),
+    R = n(963713),
+    O = n(717695),
+    w = n(899592),
+    D = n(546350),
+    M = n(922532),
+    P = n(20732),
+    U = n(147150),
+    L = n(654487);
 n(272111);
-var P = n(419548);
-function L(e) {
+var B = n(346774);
+function G(e) {
     let { isExpanded: t, questId: n } = e;
     return (
-        (0, _.H6)({
-            mode: t ? M.fP.EXPANDED : M.fP.COLLAPSED,
-            questContent: h.uF.QUEST_BAR_V2,
+        (0, b.H6)({
+            mode: t ? L.fP.EXPANDED : L.fP.COLLAPSED,
+            questContent: g.uF.QUEST_BAR_V2,
             questId: n,
-            sourceQuestContent: h.uF.QUEST_BAR_V2,
+            sourceQuestContent: g.uF.QUEST_BAR_V2,
         }),
         null
     );
 }
-function U() {
+function F() {
     return (
         i.useEffect(() => {
-            c.l.trigger();
+            u.l.trigger();
         }, []),
         null
     );
 }
-function B(e) {
+function V(e) {
     let { quest: t, unfurlEnabled: n = !1, unfurlDurationInMilliseconds: s } = e,
-        c = (0, g.L)({ quest: t, location: M.rE.QUESTS_BAR }),
-        x = (0, p.H)({ location: M.rE.QUESTS_BAR }),
-        B = (0, o.bG)([m.A], () => null != m.A.questEnrollmentBlockedUntil),
-        { isQuestBarVisible: G, reason: F } = (0, j.TQ)({ quest: t, location: M.rE.QUESTS_BAR }),
-        V = (0, o.bG)([u.A], () => u.A.hasLayers()),
-        W = i.useRef(null),
-        H = i.useMemo(() => (0, f.vv)(t), [t]),
-        K = t.id,
-        z = t.userStatus?.enrolledAt != null,
-        $ = (0, d.A)(z),
-        q = t.userStatus?.completedAt != null,
-        { hasError: Q, isLoading: Y } = (0, b.Gk)(),
-        J = i.useContext(I.Z) || (x && G && !Y && !B),
-        { hasSeenUnfurl: X, handleUnfurlDismissed: Z } = (0, D.a)(K),
+        u = (0, v.L)({ quest: t, location: L.rE.QUESTS_BAR }),
+        _ = (0, f.H)({ location: L.rE.QUESTS_BAR }),
+        V = (0, d.bG)([x.A], () => null != x.A.questEnrollmentBlockedUntil),
+        { isQuestBarVisible: W, reason: H } = (0, T.TQ)({ quest: t, location: L.rE.QUESTS_BAR }),
+        K = (0, d.bG)([p.A], () => p.A.hasLayers()),
+        z = i.useRef(null),
+        $ = i.useMemo(() => (0, j.vv)(t), [t]),
+        q = t.id,
+        Q = t.userStatus?.enrolledAt != null,
+        Y = (0, c.A)(Q),
+        J = t.userStatus?.completedAt != null,
+        { hasError: X, isLoading: Z } = (0, A.Gk)(),
+        ee = i.useContext(O.Z) || (_ && W && !Z && !V),
+        { hasSeenUnfurl: et, handleUnfurlDismissed: en } = (0, U.a)(q),
         {
-            isExpanded: ee,
-            setIsExpanded: et,
-            expandQuestBar: en,
-            isExpansionAnimationComplete: ea,
-            isVisibilityAnimationAtRest: ei,
-            expansionSpring: es,
-            visibilitySpring: el,
-            springConfig: er,
-            onQuestBarFocus: eo,
-            isUnfurl: ed,
-            isUnfurlTimeoutActive: ec,
-            onUnfurlTimeoutComplete: eu,
-        } = (0, R.w)({
-            isQuestAccepted: z,
-            isQuestCompleted: q,
-            isQuestBarVisible: J,
+            isExpanded: ea,
+            setIsExpanded: ei,
+            expandQuestBar: es,
+            isExpansionAnimationComplete: el,
+            isVisibilityAnimationAtRest: er,
+            expansionSpring: eo,
+            visibilitySpring: ed,
+            springConfig: ec,
+            onQuestBarFocus: eu,
+            isUnfurl: em,
+            isUnfurlTimeoutActive: eh,
+            onUnfurlTimeoutComplete: ep,
+        } = (0, D.w)({
+            isQuestAccepted: Q,
+            isQuestCompleted: J,
+            isQuestBarVisible: ee,
             unfurlEnabled: n,
-            hasSeenUnfurl: X,
-            onUnfurlDismissed: Z,
+            hasSeenUnfurl: et,
+            onUnfurlDismissed: en,
         }),
         {
-            handleCtxMenuOpened: em,
-            handleCtxMenuClosed: eh,
-            handleCtxMenuSelection: ex,
-            handleGameSheetOpened: ep,
-            handleGameSheetClosed: eg,
-            handleFocusWithoutDelay: e_,
-            handleBlur: ef,
-            handleMouseEnter: eb,
-            handleMouseLeave: ev,
-        } = (0, O.m)({
+            handleCtxMenuOpened: ex,
+            handleCtxMenuClosed: eg,
+            handleCtxMenuSelection: e_,
+            handleGameSheetOpened: ef,
+            handleGameSheetClosed: ev,
+            handleFocusWithoutDelay: eb,
+            handleBlur: ej,
+            handleMouseEnter: eA,
+            handleMouseLeave: eC,
+        } = (0, M.m)({
             quest: t,
-            isExpanded: ee,
-            setIsExpanded: et,
-            expandQuestBar: en,
-            isQuestCompleted: q,
-            isQuestAccepted: z,
-            prevIsQuestAccepted: $,
-            impressionRef: W,
-            onQuestBarFocus: eo,
+            isExpanded: ea,
+            setIsExpanded: ei,
+            expandQuestBar: es,
+            isQuestCompleted: J,
+            isQuestAccepted: Q,
+            prevIsQuestAccepted: Y,
+            impressionRef: z,
+            onQuestBarFocus: eu,
         });
-    (0, w.S)({
+    (0, P.S)({
         quest: t,
-        hasAssetsError: Q,
-        isEligibleForQuests: x,
-        isQuestBarVisible: J,
-        isVisibilityAnimationAtRest: ei,
-        isLoadingAssets: Y,
-        currentQuestVisibleReason: F,
-        shouldShowQuestBar: G,
-        isQuestEnrollmentBlocked: B,
-        impressionRef: W,
+        hasAssetsError: X,
+        isEligibleForQuests: _,
+        isQuestBarVisible: ee,
+        isVisibilityAnimationAtRest: er,
+        isLoadingAssets: Z,
+        currentQuestVisibleReason: H,
+        shouldShowQuestBar: W,
+        isQuestEnrollmentBlocked: V,
+        impressionRef: z,
     });
-    let ej = i.useRef(null),
-        eC = i.useRef(null),
-        eA = i.useRef(null),
-        eT = (0, _.fc)(t);
+    let eT = i.useRef(null),
+        ey = i.useRef(null),
+        eS = i.useRef(null),
+        eE = (0, b.fc)(t),
+        eN = h.H1.useSetting();
     if (
         (i.useEffect(() => {
-            H && (0, C.l9)();
-        }, [H]),
-        !x || (!J && ei && !Y) || Q)
+            if (ee) {
+                let e = eN ? o.w.AD_IMPRESSION_QUEST_BAR_OPT_OUT : o.w.AD_IMPRESSION_QUEST_BAR_OPT_IN;
+                (0, m.hs)(e, { quest_id: q });
+            }
+        }, [ee, eN, q]),
+        i.useEffect(() => {
+            $ && (0, y.l9)();
+        }, [$]),
+        !_ || (!ee && er && !Z) || X)
     )
-        return Q ? c.log("Not rendered due to asset error") : x || c.log("Not rendered due to ineligibility"), null;
-    let ey = 70 + 78 * !!q;
-    return (0, a.jsx)(v.R, {
+        return X ? u.log("Not rendered due to asset error") : _ || u.log("Not rendered due to ineligibility"), null;
+    let eI = 70 + 78 * !!J;
+    return (0, a.jsx)(C.R, {
         questOrQuests: t,
-        questContent: h.uF.QUEST_BAR_V2,
-        overrideVisibility: !V && J,
-        sourceQuestContent: h.uF.QUEST_BAR_V2,
+        questContent: g.uF.QUEST_BAR_V2,
+        overrideVisibility: !K && ee,
+        sourceQuestContent: g.uF.QUEST_BAR_V2,
         children: (e, n) => (
-            (W.current = n.current),
+            (z.current = n.current),
             (0, a.jsxs)("div", {
-                className: P.dK,
+                className: B.dK,
                 children: [
-                    J &&
+                    ee &&
                         (0, a.jsxs)(a.Fragment, {
-                            children: [(0, a.jsx)(L, { questId: K, isExpanded: ee }), (0, a.jsx)(U, {})],
+                            children: [(0, a.jsx)(G, { questId: q, isExpanded: ea }), (0, a.jsx)(F, {})],
                         }),
                     (0, a.jsx)(r.animated.div, {
-                        "aria-hidden": !J,
-                        onMouseLeave: ev,
-                        onMouseEnter: eb,
-                        onFocus: e_,
-                        onBlur: ef,
-                        className: l()(P.iE, { [P.Xc]: !J, [P.uv]: J && ei }),
-                        style: { height: el.to({ range: [0, 1], output: [0, ey] }) },
+                        "aria-hidden": !ee,
+                        onMouseLeave: eC,
+                        onMouseEnter: eA,
+                        onFocus: eb,
+                        onBlur: ej,
+                        className: l()(B.iE, { [B.Xc]: !ee, [B.uv]: ee && er }),
+                        style: { height: ed.to({ range: [0, 1], output: [0, eI] }) },
                         children: (0, a.jsx)(r.animated.div, {
-                            className: l()(P.FG, { [P.E$]: ee, [P.KA]: z }),
-                            children: (0, a.jsx)(E.R, {
-                                springConfig: er,
-                                isExpanded: ee,
-                                children: (0, a.jsx)(T.oK, {
-                                    expandedContentRef: ej,
-                                    collapsedContentRef: eC,
-                                    expansionSpring: es,
-                                    children: (0, a.jsxs)(N.C, {
+                            className: l()(B.FG, { [B.E$]: ea, [B.KA]: Q }),
+                            children: (0, a.jsx)(k.R, {
+                                springConfig: ec,
+                                isExpanded: ea,
+                                children: (0, a.jsx)(E.oK, {
+                                    expandedContentRef: eT,
+                                    collapsedContentRef: ey,
+                                    expansionSpring: eo,
+                                    children: (0, a.jsxs)(R.C, {
                                         quest: t,
-                                        taskDetails: eT,
-                                        isExpanded: ee,
-                                        isExpansionAnimationComplete: ea,
-                                        onCtxMenuClose: eh,
-                                        onCtxMenuOpen: em,
-                                        onCtxMenuSelect: ex,
-                                        onGameSheetOpen: ep,
-                                        onGameSheetClose: eg,
-                                        collapsedHeight: ey,
+                                        taskDetails: eE,
+                                        isExpanded: ea,
+                                        isExpansionAnimationComplete: el,
+                                        onCtxMenuClose: eg,
+                                        onCtxMenuOpen: ex,
+                                        onCtxMenuSelect: e_,
+                                        onGameSheetOpen: ef,
+                                        onGameSheetClose: ev,
+                                        collapsedHeight: eI,
                                         children: [
                                             (0, a.jsx)(
-                                                y.A,
-                                                { ref: eC, className: P.Qs, overlayRef: eA },
-                                                q ? "collapsed-with-rewards" : "collapsed-without-rewards",
+                                                N.A,
+                                                { ref: ey, className: B.Qs, overlayRef: eS },
+                                                J ? "collapsed-with-rewards" : "collapsed-without-rewards",
                                             ),
-                                            (0, a.jsx)(S.A, {
-                                                className: P.Qs,
-                                                overlayRef: eA,
-                                                ref: ej,
-                                                isUnfurl: ed,
+                                            (0, a.jsx)(I.A, {
+                                                className: B.Qs,
+                                                overlayRef: eS,
+                                                ref: eT,
+                                                isUnfurl: em,
                                                 children: (0, a.jsxs)(a.Fragment, {
                                                     children: [
-                                                        (0, a.jsx)(k.A, {}),
-                                                        !z &&
-                                                            (0, a.jsx)(A.A, {
+                                                        (0, a.jsx)(w.A, {}),
+                                                        !Q &&
+                                                            (0, a.jsx)(S.A, {
                                                                 unfurlTimeoutDurationInMilliseconds: s,
-                                                                withUnfurlTimeout: ec,
-                                                                onUnfurlTimeoutComplete: eu,
+                                                                withUnfurlTimeout: eh,
+                                                                onUnfurlTimeoutComplete: ep,
                                                             }),
                                                     ],
                                                 }),
                                             }),
-                                            (0, a.jsx)("div", { ref: eA, className: P.Lw }),
+                                            (0, a.jsx)("div", { ref: eS, className: B.Lw }),
                                         ],
                                     }),
                                 }),
@@ -213,17 +223,17 @@ function B(e) {
         ),
     });
 }
-function G(e) {
+function W(e) {
     let { quest: t } = e,
-        { unfurlEnabled: n, unfurlDurationInMilliseconds: i } = (0, x.sH)();
-    return (0, a.jsx)(B, { quest: t, unfurlEnabled: n, unfurlDurationInMilliseconds: i });
+        { unfurlEnabled: n, unfurlDurationInMilliseconds: i } = (0, _.sH)();
+    return (0, a.jsx)(V, { quest: t, unfurlEnabled: n, unfurlDurationInMilliseconds: i });
 }
-let F =
+let H =
     21552 == n.j
         ? function () {
-              let e = (0, j.dN)();
+              let e = (0, T.dN)();
               if (null == e) return null;
-              let t = (0, x.RL)(e.config) ? (0, a.jsx)(G, { quest: e }) : (0, a.jsx)(B, { quest: e });
-              return (0, a.jsx)(b.jY, { source: M.rE.QUESTS_BAR, questId: e.id, children: t }, e.id);
+              let t = (0, _.RL)(e.config) ? (0, a.jsx)(W, { quest: e }) : (0, a.jsx)(V, { quest: e });
+              return (0, a.jsx)(A.jY, { source: L.rE.QUESTS_BAR, questId: e.id, children: t }, e.id);
           }
         : null;
