@@ -1,49 +1,51 @@
 "use strict";
-n.d(t, { A: () => A });
+n.d(t, { A: () => S, X: () => T });
 var r = n(627968),
     i = n(64700),
-    a = n(311907),
-    s = n(990078),
-    o = n(397927),
-    l = n(986268),
-    u = n(345942),
-    c = n(773669),
-    d = n(961350),
-    _ = n(696451),
-    f = n(860689),
-    p = n(661191),
-    h = n(107123),
-    m = n(985018),
-    g = n(101702);
-function E(e) {
+    s = n(503698),
+    a = n.n(s),
+    o = n(311907),
+    l = n(990078),
+    u = n(397927),
+    c = n(986268),
+    d = n(345942),
+    _ = n(773669),
+    f = n(961350),
+    p = n(696451),
+    h = n(860689),
+    m = n(661191),
+    E = n(107123),
+    g = n(985018),
+    A = n(837756);
+function I(e) {
     let { profile: t, disableGuildNameClick: n } = e,
-        l = t.id,
-        c = (0, a.bG)([_.Ay, d.default], () => _.Ay.getMember(l, d.default.getId())?.joinedAt != null, [l]),
-        f = i.useCallback(
+        s = t.id,
+        a = (0, o.bG)([p.Ay, f.default], () => p.Ay.getMember(s, f.default.getId())?.joinedAt != null, [s]),
+        c = i.useCallback(
             (e) => {
-                c && (e.stopPropagation(), (0, u.u)(t.id));
+                a && (e.stopPropagation(), (0, d.u)(t.id));
             },
-            [c, t.id],
+            [a, t.id],
         );
-    return !c || n
-        ? (0, r.jsx)(s.m, {
+    return !a || n
+        ? (0, r.jsx)(l.m, {
               text: t.name,
               overflowOnly: !0,
-              children: (0, r.jsx)(o.Heading, {
-                  className: g.J5,
+              children: (0, r.jsx)(u.Heading, {
+                  className: A.J5,
                   variant: "heading-md/semibold",
                   color: "text-strong",
                   children: t.name,
               }),
           })
-        : (0, r.jsx)(o.DUT, {
-              className: g.YS,
-              onClick: f,
-              children: (0, r.jsx)(s.m, {
+        : (0, r.jsx)(u.DUT, {
+              className: A.YS,
+              onClick: c,
+              children: (0, r.jsx)(l.m, {
                   text: t.name,
                   overflowOnly: !0,
-                  children: (0, r.jsx)(o.Heading, {
-                      className: g.J5,
+                  children: (0, r.jsx)(u.Heading, {
+                      className: A.J5,
                       variant: "heading-md/semibold",
                       color: "text-strong",
                       children: t.name,
@@ -51,54 +53,58 @@ function E(e) {
               }),
           });
 }
-function A(e) {
-    let { profile: t, disableGuildNameClick: n } = e,
-        s = (0, a.bG)([c.default], () => c.default.locale),
-        u = (0, h.P)(p.default.extractTimestamp(t.id), s),
-        d = i.useMemo(() => {
-            let e = (0, f.b9)(t);
-            return (0, r.jsx)(l.A, { guild: e, isBannerVisible: !1 });
-        }, [t]);
+function T(e) {
+    let { onlineCount: t, memberCount: n, className: i } = e;
     return (0, r.jsxs)("div", {
-        className: g.wx,
+        className: a()(A.ol, i),
         children: [
             (0, r.jsxs)("div", {
-                className: g.VW,
-                children: [(0, r.jsx)(E, { profile: t, disableGuildNameClick: n }), d],
-            }),
-            (0, r.jsxs)("div", {
-                className: g.ol,
+                className: A.Kl,
                 children: [
-                    (0, r.jsxs)("div", {
-                        className: g.Kl,
-                        children: [
-                            (0, r.jsx)("div", { className: g.JX }),
-                            (0, r.jsx)(o.Text, {
-                                variant: "text-sm/normal",
-                                color: "text-subtle",
-                                children: m.intl.format(m.t["LC+S+m"], { membersOnline: t.onlineCount }),
-                            }),
-                        ],
-                    }),
-                    (0, r.jsxs)("div", {
-                        className: g.Kl,
-                        children: [
-                            (0, r.jsx)("div", { className: g.Om }),
-                            (0, r.jsx)(o.Text, {
-                                variant: "text-sm/normal",
-                                color: "text-subtle",
-                                children: m.intl.format(m.t.zRl6XR, { count: t.memberCount }),
-                            }),
-                        ],
+                    (0, r.jsx)("div", { className: A.JX }),
+                    (0, r.jsx)(u.Text, {
+                        variant: "text-sm/normal",
+                        color: "text-subtle",
+                        children: g.intl.format(g.t["LC+S+m"], { membersOnline: t }),
                     }),
                 ],
             }),
+            (0, r.jsxs)("div", {
+                className: A.Kl,
+                children: [
+                    (0, r.jsx)("div", { className: A.Om }),
+                    (0, r.jsx)(u.Text, {
+                        variant: "text-sm/normal",
+                        color: "text-subtle",
+                        children: g.intl.format(g.t.zRl6XR, { count: n }),
+                    }),
+                ],
+            }),
+        ],
+    });
+}
+function S(e) {
+    let { profile: t, disableGuildNameClick: n } = e,
+        s = (0, o.bG)([_.default], () => _.default.locale),
+        a = (0, E.P)(m.default.extractTimestamp(t.id), s),
+        l = i.useMemo(() => {
+            let e = (0, h.b9)(t);
+            return (0, r.jsx)(c.A, { guild: e, isBannerVisible: !1 });
+        }, [t]);
+    return (0, r.jsxs)("div", {
+        className: A.wx,
+        children: [
+            (0, r.jsxs)("div", {
+                className: A.VW,
+                children: [(0, r.jsx)(I, { profile: t, disableGuildNameClick: n }), l],
+            }),
+            (0, r.jsx)(T, { onlineCount: t.onlineCount, memberCount: t.memberCount }),
             (0, r.jsx)("div", {
-                className: g.b5,
-                children: (0, r.jsx)(o.Text, {
+                className: A.b5,
+                children: (0, r.jsx)(u.Text, {
                     variant: "text-sm/normal",
                     color: "text-subtle",
-                    children: m.intl.format(m.t.zb2Q56, { createdAtDate: u }),
+                    children: g.intl.format(g.t.zb2Q56, { createdAtDate: a }),
                 }),
             }),
         ],
