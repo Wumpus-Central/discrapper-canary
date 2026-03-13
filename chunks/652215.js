@@ -4787,7 +4787,6 @@ var na = (function (e) {
             (e.MESSAGE_MENU_TIME_TO_SELECT = "message_menu_time_to_select"),
             (e.EVENT_RINGTONE_TOGGLED = "event_ringtone_toggled"),
             (e.USER_PROFILE_ACTION = "user_profile_action"),
-            (e.USER_PROFILE_UI_VIEWED = "user_profile_ui_viewed"),
             (e.USER_PROFILE_ACTIVITY_JOINED = "user_profile_activity_joined"),
             (e.USER_PROFILE_ACTIVITY_ACTION = "user_profile_activity_action"),
             (e.USER_PROFILE_BADGE_PRESSED = "user_profile_badge_pressed"),

@@ -27,37 +27,33 @@ function S(e) {
             channelId: y,
             messageId: v,
             roleId: N,
-            openedAt: C,
-            onHide: R,
-            newAnalyticsLocations: O = [],
-            disableAutoFocus: b = !1,
-            onClickContainer: D,
+            onHide: C,
+            newAnalyticsLocations: R = [],
+            disableAutoFocus: O = !1,
+            onClickContainer: b,
         } = e,
-        L = (0, s.bG)([u.A], () => u.A.isBlocked(t.id)),
-        { analyticsLocations: w } = (0, l.Ay)([...O, L ? o.A.BLOCKED_PROFILE_POPOUT : o.A.IGNORED_PROFILE_POPOUT]),
-        M = (0, d.pb)({ layout: "POPOUT", userId: t.id, guildId: n, channelId: y, messageId: v, roleId: N }),
-        x = i.useRef(null),
-        P = (0, f.Ay)(t.id, n);
+        D = (0, s.bG)([u.A], () => u.A.isBlocked(t.id)),
+        { analyticsLocations: L } = (0, l.Ay)([...R, D ? o.A.BLOCKED_PROFILE_POPOUT : o.A.IGNORED_PROFILE_POPOUT]),
+        w = (0, d.pb)({ layout: "POPOUT", userId: t.id, guildId: n, channelId: y, messageId: v, roleId: N }),
+        M = i.useRef(null),
+        x = (0, f.Ay)(t.id, n);
     i.useEffect(() => {
-        S?.(x?.current);
-    }, [x, S]);
-    let k = L ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
-        U = b ? "div" : a.lGe;
+        S?.(M?.current);
+    }, [M, S]);
+    let P = D ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
+        k = O ? "div" : a.lGe;
     return (0, r.jsx)(l.f5, {
-        value: w,
+        value: L,
         children: (0, r.jsx)(d.of, {
-            value: M,
-            openedAt: C,
-            fetchStartedAt: P?.fetchStartedAt,
-            fetchEndedAt: P?.fetchEndedAt,
-            isLoaded: P?.isLoaded,
-            children: (0, r.jsx)(U, {
-                ref: x,
+            value: w,
+            isLoaded: x?.isLoaded,
+            children: (0, r.jsx)(k, {
+                ref: M,
                 "aria-label": t.username,
-                onClick: D,
+                onClick: b,
                 children: (0, r.jsx)(h.A, {
                     user: t,
-                    displayProfile: P,
+                    displayProfile: x,
                     themeType: g.d.POPOUT,
                     children: (0, r.jsxs)("div", {
                         className: I.kL,
@@ -76,7 +72,7 @@ function S(e) {
                                             }),
                                             (0, r.jsx)(a.Text, {
                                                 variant: "text-sm/medium",
-                                                children: A.intl.format(L ? A.t["8F+WNz"] : A.t["/cZp5s"], {
+                                                children: A.intl.format(D ? A.t["8F+WNz"] : A.t["/cZp5s"], {
                                                     username: c.Ay.getName(n, y, t),
                                                 }),
                                             }),
@@ -86,19 +82,19 @@ function S(e) {
                                         align: "center",
                                         children: [
                                             (0, r.jsx)(E.A, {
-                                                isBlocked: L,
+                                                isBlocked: D,
                                                 onClick: () => {
-                                                    R(), (0, _.Wn)({ action: k, analyticsLocations: w, ...M });
+                                                    C(), (0, _.Wn)({ action: P, analyticsLocations: L, ...w });
                                                 },
                                             }),
                                             (0, r.jsx)(m.A, {
                                                 userId: t.id,
                                                 onClick: () => {
-                                                    R(),
+                                                    C(),
                                                         (0, _.Wn)({
                                                             action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
-                                                            analyticsLocations: w,
-                                                            ...M,
+                                                            analyticsLocations: L,
+                                                            ...w,
                                                         });
                                                 },
                                             }),

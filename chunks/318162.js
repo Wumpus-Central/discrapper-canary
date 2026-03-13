@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => N });
+n.d(t, { A: () => b });
 var i = n(627968),
     s = n(64700),
     l = n(158954),
@@ -11,19 +11,19 @@ var i = n(627968),
     u = n(994500),
     h = n(562153),
     A = n(183555),
-    p = n(672385),
-    g = n(950191),
-    m = n(249790),
+    m = n(672385),
+    p = n(950191),
+    g = n(249790),
     _ = n(946356),
     f = n(254828),
     x = n(783123),
     C = n(996988),
     E = n(985018),
-    I = n(226632),
-    b = n(724693);
-function N(e) {
-    let { user: t, channel: n, onHide: N } = e,
-        S = (0, g.Ay)(t.id),
+    I = n(133786),
+    N = n(724693);
+function b(e) {
+    let { user: t, channel: n, onHide: b } = e,
+        S = (0, p.Ay)(t.id),
         T = (0, o.Ay)(),
         v = (0, r.bG)([u.A], () => u.A.isBlocked(t.id)),
         { analyticsLocations: y } = (0, d.Ay)(v ? c.A.BLOCKED_PROFILE_PANEL : c.A.IGNORED_PROFILE_PANEL),
@@ -33,8 +33,6 @@ function N(e) {
         value: y,
         children: (0, i.jsx)(A.of, {
             value: j,
-            fetchStartedAt: S?.fetchStartedAt,
-            fetchEndedAt: S?.fetchEndedAt,
             isLoaded: S?.isLoaded,
             children: (0, i.jsx)(_.A, {
                 ref: R,
@@ -46,14 +44,14 @@ function N(e) {
                     children: (0, i.jsxs)("div", {
                         className: I.kL,
                         children: [
-                            (0, i.jsx)("img", { alt: "", src: b, className: I.VH, "aria-hidden": !0 }),
+                            (0, i.jsx)("img", { alt: "", src: N, className: I.VH, "aria-hidden": !0 }),
                             (0, i.jsxs)("div", {
                                 className: I.rf,
                                 children: [
                                     (0, i.jsxs)("div", {
                                         className: I.N1,
                                         children: [
-                                            (0, i.jsx)(m.A, { user: t }),
+                                            (0, i.jsx)(g.A, { user: t }),
                                             (0, i.jsx)(a.Heading, {
                                                 variant: "heading-lg/bold",
                                                 children: E.intl.string(E.t.b33pLD),
@@ -72,8 +70,8 @@ function N(e) {
                                             (0, i.jsx)(x.A, {
                                                 isBlocked: v,
                                                 onClick: () => {
-                                                    N(),
-                                                        (0, p.Wn)({
+                                                    b(),
+                                                        (0, m.Wn)({
                                                             action: v ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
                                                             analyticsLocations: y,
                                                             ...j,
@@ -83,8 +81,8 @@ function N(e) {
                                             (0, i.jsx)(f.A, {
                                                 userId: t.id,
                                                 onClick: () => {
-                                                    N(),
-                                                        (0, p.Wn)({
+                                                    b(),
+                                                        (0, m.Wn)({
                                                             action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
                                                             analyticsLocations: y,
                                                             ...j,

@@ -65,7 +65,6 @@ async function h(e) {
             messageId: a ?? void 0,
             roleId: o ?? void 0,
             sessionId: l ?? void 0,
-            openedAt: Date.now(),
             customStatusPrompt: I,
             tabSection: f,
             scrollTarget: h,
