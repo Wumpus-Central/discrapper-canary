@@ -1,11 +1,12 @@
 "use strict";
-n.d(t, { B3: () => o, Bo: () => c });
+n.d(t, { B3: () => c, Bo: () => d });
 var i = n(924985),
     s = n(576705),
     l = n(32603),
     r = n(281405),
-    a = n(652215);
-function o(e, t, n) {
+    a = n(652215),
+    o = n(349828);
+function c(e, t, n) {
     return {
         hasDivider:
             !(function (e, t) {
@@ -19,9 +20,11 @@ function o(e, t, n) {
                 return 0 === e.getSections(!1)[t];
             })(e, n) &&
             (n === l.PU ||
-                (!!t &&
-                    (n === l.HP ||
-                        (n !== l.bK && (n === e.recentsSectionNumber || (e.voiceChannelsSectionNumber, !1)))))),
+                (e.id === o.Vc
+                    ? n !== e.getSections(!1).length - 1
+                    : !!t &&
+                      (n === l.HP ||
+                          (n !== l.bK && (n === e.recentsSectionNumber || (e.voiceChannelsSectionNumber, !1)))))),
         canHaveVoiceSummary:
             n !== l.PU &&
             n !== l.HP &&
@@ -30,7 +33,7 @@ function o(e, t, n) {
             n !== e.voiceChannelsSectionNumber,
     };
 }
-function c(e) {
+function d(e) {
     let { category: t, voiceStates: n, selectedChannelId: l, selectedVoiceChannelId: r } = e;
     return (
         (function (e) {
