@@ -27,7 +27,7 @@ var r = n(627968),
     R = n(323350),
     O = n(652215),
     b = n(985018),
-    D = n(111314);
+    D = n(178588);
 new m.A("ChannelEditor.tsx");
 let L = function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
@@ -114,6 +114,13 @@ class M extends i.Component {
             null != n &&
             (t.endsWith(" ") || n.insertText(" ", void 0, !1),
             n.insertText(`<sound:${e.guildId}:${e.soundId}>`, void 0, !0));
+    }
+    insertKaomoji(e) {
+        let { textValue: t } = this.props,
+            n = this.ref.current;
+        null != e &&
+            null != n &&
+            (t.length > 0 && !t.endsWith(" ") && n.insertText(" ", void 0, !1), n.insertText(e, void 0, !0));
     }
     handleOuterClick() {
         this.focus();

@@ -46,8 +46,8 @@ var i = n(627968),
 n(827669), n(294920);
 var Y = n(478644),
     q = n(985018),
-    J = n(401376),
-    $ = n(111314);
+    J = n(204794),
+    $ = n(178588);
 function Z(e, t, n) {
     let i = e.startsWith("attachment://"),
         l = e;
@@ -198,36 +198,37 @@ let X = l.memo(
             { handleAutocompleteVisibilityChange: e2 } = (0, V.uW)(v, b.id),
             e3 = (0, V.NO)(eT),
             e7 = (0, V.Vu)(eB, v, eT),
-            e5 = (0, V.C)({ editorRef: eT, disabled: eR, textValue: s, channelId: b.id, chatInputType: v, submit: eH });
+            e5 = (0, V.HG)(eT),
+            e9 = (0, V.C)({ editorRef: eT, disabled: eR, textValue: s, channelId: b.id, chatInputType: v, submit: eH });
         (0, G.R)(eG, b.guild_id, b.id);
-        let [e9, e6] = l.useState(!1),
-            e4 = l.useCallback(() => {
-                e1(), e6(!0);
+        let [e6, e4] = l.useState(!1),
+            e8 = l.useCallback(() => {
+                e1(), e4(!0);
             }, [e1]),
-            e8 = e9 || s.length > 0 || null != e_ || ef.length > 0,
-            { editorHeaderHeight: te, paddingTop: tt } = (0, A.zhh)({
-                editorHeaderHeight: 122 * !!e8,
-                paddingTop: 16 * !!e8,
+            te = e6 || s.length > 0 || null != e_ || ef.length > 0,
+            { editorHeaderHeight: tt, paddingTop: tn } = (0, A.zhh)({
+                editorHeaderHeight: 122 * !!te,
+                paddingTop: 16 * !!te,
                 config: { tension: 120, friction: 15, clamp: !0 },
             }),
-            tn = l.useRef(null),
-            [ti, tl] = l.useState(!1),
-            ts = l.useRef(!1),
-            ta = l.useCallback(() => {
-                ts.current = !0;
-                let e = setTimeout(() => {
-                    ts.current && tl(!0);
-                }, 100);
-                return () => clearTimeout(e);
-            }, []),
+            ti = l.useRef(null),
+            [tl, ts] = l.useState(!1),
+            ta = l.useRef(!1),
             tr = l.useCallback(() => {
-                ts.current = !1;
+                ta.current = !0;
                 let e = setTimeout(() => {
-                    ts.current || tl(!1);
+                    ta.current && ts(!0);
                 }, 100);
                 return () => clearTimeout(e);
             }, []),
             to = l.useCallback(() => {
+                ta.current = !1;
+                let e = setTimeout(() => {
+                    ta.current || ts(!1);
+                }, 100);
+                return () => clearTimeout(e);
+            }, []),
+            tc = l.useCallback(() => {
                 if (null == e_) return;
                 let e = P.A.getUploads(b.id, v.drafts.type),
                     t = e.find((e) => e.filename === e_.name)?.id;
@@ -241,7 +242,7 @@ let X = l.memo(
                     (0, i.jsxs)("div", {
                         ref: eS,
                         className: a()(d, $.gM),
-                        onMouseDown: e4,
+                        onMouseDown: e8,
                         children: [
                             (0, i.jsx)("div", {
                                 ref: eN,
@@ -255,10 +256,10 @@ let X = l.memo(
                                             children: [
                                                 (0, i.jsxs)(c.animated.div, {
                                                     className: J.ov,
-                                                    style: { height: te, paddingTop: tt },
+                                                    style: { height: tt, paddingTop: tn },
                                                     children: [
                                                         null != e_
-                                                            ? (0, i.jsx)(ee, { file: e_, onRemoveHeroImage: to })
+                                                            ? (0, i.jsx)(ee, { file: e_, onRemoveHeroImage: tc })
                                                             : null,
                                                         null != e_
                                                             ? null
@@ -266,7 +267,7 @@ let X = l.memo(
                                                                   channel: b,
                                                                   onImageUploaded: (e) =>
                                                                       (0, I.x)(b.id, { heroFile: e }),
-                                                                  onFocus: () => e6(!0),
+                                                                  onFocus: () => e4(!0),
                                                               }),
                                                         (0, i.jsx)("input", {
                                                             maxLength: 140,
@@ -357,15 +358,15 @@ let X = l.memo(
                                     (0, i.jsx)("div", {
                                         className: J.j4,
                                         children: (0, i.jsx)("div", {
-                                            ref: tn,
+                                            ref: ti,
                                             className: J.Qo,
-                                            onMouseEnter: ta,
-                                            onMouseLeave: tr,
+                                            onMouseEnter: tr,
+                                            onMouseLeave: to,
                                             children: (0, i.jsx)(A.YNO, {
-                                                targetElementRef: tn,
+                                                targetElementRef: ti,
                                                 renderPopout: () =>
                                                     (0, i.jsx)(Q, { channelId: b.id, canCreateThread: eU }),
-                                                shouldShow: ti,
+                                                shouldShow: tl,
                                                 autoInvert: !0,
                                                 nudgeAlignIntoViewport: !0,
                                                 position: "top",
@@ -449,7 +450,8 @@ let X = l.memo(
                               type: v,
                               onSelectGIF: e7,
                               onSelectEmoji: e3,
-                              onSelectSticker: e5,
+                              onSelectKaomoji: e5,
+                              onSelectSticker: e9,
                               channel: b,
                               closeOnModalOuterClick: eA,
                               parentModalKey: eg,
