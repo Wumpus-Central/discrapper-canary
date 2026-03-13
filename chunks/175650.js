@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { LD: () => o, ok: () => s, rh: () => a });
+n.d(t, { LD: () => o, ok: () => a, rh: () => s });
 var r = n(600975),
     i = n(2242);
 (0, r.C)({
@@ -15,25 +15,18 @@ var r = n(600975),
         },
     ],
 });
-let a = (0, r.C)({
-    kind: "guild",
-    id: "2022-07_guild_role_subscriptions_variable_max_tiers",
-    label: "Guild Role Subscription Max Tiers",
-    defaultConfig: { enabled: !1, maxTiers: i.f7 },
-    treatments: [4, 5, 6].map((e) => ({
-        id: e,
-        label: "Enables {n} maximum published tiers",
-        config: { enabled: !0, maxTiers: e },
-    })),
-});
-(0, r.C)({
-    kind: "guild",
-    id: "2022-12_mobile_guild_role_subscription_team_setup",
-    label: "Mobile Guild Role Subscription Team Setup",
-    defaultConfig: { enabled: !1 },
-    treatments: [{ id: 1, label: "Enables guild to allow payout team setup on mobile", config: { enabled: !0 } }],
-});
 let s = (0, r.C)({
+        kind: "guild",
+        id: "2022-07_guild_role_subscriptions_variable_max_tiers",
+        label: "Guild Role Subscription Max Tiers",
+        defaultConfig: { enabled: !1, maxTiers: i.f7 },
+        treatments: [4, 5, 6].map((e) => ({
+            id: e,
+            label: "Enables {n} maximum published tiers",
+            config: { enabled: !0, maxTiers: e },
+        })),
+    }),
+    a = (0, r.C)({
         kind: "guild",
         id: "2023-03_server_subscriptions_tier_templates",
         label: "Server Subscriptions Tier Templates",
