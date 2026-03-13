@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => q, JU: () => D, fe: () => I });
+n.d(t, { Ay: () => Z, JU: () => D, fe: () => I });
 var r = n(607399),
     i = n(311907),
     s = n(73153),
@@ -53,19 +53,22 @@ function x() {
     R && u._.dispatch(E.jej.SEARCH_RESULTS_CLOSE), (T = !1), (S = !1), (y = L(y));
 }
 function P() {
+    return !y && (R && u._.dispatch(E.jej.SEARCH_RESULTS_CLOSE), (T = !1), (S = !1), (y = !0), !0);
+}
+function k() {
     v || u._.dispatch(E.jej.SEARCH_RESULTS_CLOSE), (v = L(v));
 }
-function k(e) {
+function U(e) {
     let { sidebarType: t, guildId: n, baseChannelId: r, details: i } = e;
     R = !1;
     let s = b(r);
     return null != s && ((C[n] = { type: t, baseChannelId: s, guildId: n, details: i }), !0);
 }
-function U(e) {
+function G(e) {
     let { guildId: t } = e;
     return null != C[t] && (delete C[t], !0);
 }
-function G(e) {
+function F(e) {
     let { sidebarType: t, baseChannelId: n, channelId: r, details: i } = e;
     R = !1;
     let s = b(n);
@@ -73,13 +76,13 @@ function G(e) {
     let a = { type: t, channelId: r, details: i };
     return t === l.PE.VIEW_MOD_REPORT && (a = { ...a, baseChannelId: n }), (N[s] = a), !0;
 }
-function F(e) {
+function V(e) {
     let { parentChannelId: t, parentMessageId: n, location: r } = e;
     R = !1;
     let i = b(t);
     null != i && (N[i] = { type: l.PE.CREATE_THREAD, parentChannelId: t, parentMessageId: n, location: r });
 }
-function V(e) {
+function B(e) {
     let { channel: t } = e;
     if (t.id in N) return delete N[t.id], !0;
     let n = !1;
@@ -89,13 +92,13 @@ function V(e) {
     }
     return n;
 }
-function B(e) {
+function H(e) {
     let { channel: t } = e,
         n = N[t.parent_id];
     if (null == n || n.type !== l.PE.VIEW_THREAD || n.channelId !== t.id) return !1;
     delete N[t.parent_id];
 }
-function H(e) {
+function j(e) {
     let { channel: t } = e;
     if (t.ownerId === m.default.getCurrentUser()?.id) return !1;
     let n = N[t.parent_id];
@@ -104,7 +107,7 @@ function H(e) {
         n.parentMessageId === c.default.castChannelIdAsMessageId(t.id) &&
         (N[t.parent_id] = { type: l.PE.VIEW_THREAD, channelId: t.id });
 }
-function j() {
+function Y() {
     let e = !1;
     for (let t in N) {
         let n = N[t];
@@ -115,23 +118,23 @@ function j() {
     }
     return e;
 }
-function Y(e) {
+function W(e) {
     let { baseChannelId: t } = e,
         n = b(t);
     null != n && delete N[n];
 }
-function W() {
+function K() {
     let e = null != O && o.A.hasSearchState(O);
     if (e === R) return !1;
     R = e;
 }
-function K() {
+function $() {
     r.Fr && T && ((T = !1), (S = !1), (y = !1));
 }
-function $(e) {
-    return (O = e.searchContextId), W();
+function z(e) {
+    return (O = e.searchContextId), K();
 }
-class z extends i.Ay.PersistedStore {
+class q extends i.Ay.PersistedStore {
     static displayName = "ChannelSectionStore";
     static persistKey = "ChannelSectionStore2";
     initialize(e) {
@@ -141,8 +144,8 @@ class z extends i.Ay.PersistedStore {
             (v = e.isProfileOpen ?? !0),
             (N = e.sidebars ?? {}),
             (C = e.guildSidebars ?? {})),
-            this.syncWith([o.A], W),
-            this.syncWith([f.A], j),
+            this.syncWith([o.A], K),
+            this.syncWith([f.A], Y),
             this.waitFor(d.A, a.A, _.A, f.A, o.A, p.A, h.A, m.default);
     }
     getState() {
@@ -194,19 +197,20 @@ class z extends i.Ay.PersistedStore {
         return O;
     }
 }
-let q = new z(s.h, {
-    SIDEBAR_SET_SELECTED_SEARCH_CONTEXT: $,
+let Z = new q(s.h, {
+    SIDEBAR_SET_SELECTED_SEARCH_CONTEXT: z,
     CHANNEL_TOGGLE_MEMBERS_SECTION: w,
-    USER_PROFILE_SIDEBAR_TOGGLE_SECTION: P,
+    USER_PROFILE_SIDEBAR_TOGGLE_SECTION: k,
     CHANNEL_TOGGLE_SUMMARIES_SECTION: M,
     CHANNEL_TOGGLE_CONVERSATIONS_SECTION: x,
-    SIDEBAR_VIEW_CHANNEL: G,
-    SIDEBAR_VIEW_GUILD: k,
-    SIDEBAR_CREATE_THREAD: F,
-    SIDEBAR_CLOSE: Y,
-    SIDEBAR_CLOSE_GUILD: U,
-    CHANNEL_DELETE: V,
-    CHANNEL_SELECT: K,
-    THREAD_CREATE: H,
-    THREAD_DELETE: B,
+    CHANNEL_OPEN_CONVERSATIONS_SECTION: P,
+    SIDEBAR_VIEW_CHANNEL: F,
+    SIDEBAR_VIEW_GUILD: U,
+    SIDEBAR_CREATE_THREAD: V,
+    SIDEBAR_CLOSE: W,
+    SIDEBAR_CLOSE_GUILD: G,
+    CHANNEL_DELETE: B,
+    CHANNEL_SELECT: $,
+    THREAD_CREATE: j,
+    THREAD_DELETE: H,
 });
