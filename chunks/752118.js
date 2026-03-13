@@ -16,7 +16,7 @@ var l = n(627968),
     m = n(427262),
     h = n(652215),
     p = n(985018),
-    C = n(940892);
+    C = n(398710);
 function E(t) {
     let { disabled: e = !1, user: n, setNickname: a, nickname: i, error: s, hasNick: u } = t,
         d = r.useRef(null),
@@ -86,7 +86,7 @@ let y = function (t) {
             async (t) => {
                 t.preventDefault();
                 let e = null;
-                if ((M !== (y?.nick ?? "") && ((e = e ?? {}).nick = M), null == e)) return void o();
+                if ((M !== (y?.nick ?? "") && (e = { nick: M }), null == e)) return void o();
                 try {
                     _(!0),
                         await i.Bo.patch({ url: h.Rsh.GUILD_MEMBER(c, n.id), body: e, rejectWithError: !1 }),

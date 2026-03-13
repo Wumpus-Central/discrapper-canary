@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => S });
+n.d(t, { A: () => y });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(253018),
     l = n(442433),
     u = n(267102),
@@ -14,12 +14,12 @@ var r = n(627968),
     p = n(654821),
     h = n(35277),
     m = n(711371),
-    g = n(492375),
-    E = n(249431),
+    E = n(492375),
+    g = n(249431),
     A = n(652215),
-    I = n(618273),
-    T = n(206314);
-class y extends i.PureComponent {
+    I = n(747359),
+    T = n(830412);
+class S extends i.PureComponent {
     containerRef = i.createRef();
     state;
     constructor(e) {
@@ -56,16 +56,16 @@ class y extends i.PureComponent {
     }
     renderElement(e) {
         let { guildId: t, channelId: n, renderExtraElement: i } = this.props,
-            { attributes: a, children: s } = e;
-        "rtl" === a.dir && (a.style = { ...a.style, textAlign: "right" });
-        let o = i?.(e) ?? (0, g.A)(e, t, n);
-        return null != o ? o : (0, r.jsx)("div", { ...a, children: s });
+            { attributes: s, children: a } = e;
+        "rtl" === s.dir && (s.style = { ...s.style, textAlign: "right" });
+        let o = i?.(e) ?? (0, E.A)(e, t, n);
+        return null != o ? o : (0, r.jsx)("div", { ...s, children: a });
     }
     renderLeaf(e) {
         let { editor: t, renderExtraLeaf: n } = this.props,
-            { attributes: i, children: a } = e,
-            s = n?.(e) ?? (0, E.A)(t, e);
-        return null != s ? s : (0, r.jsx)("span", { ...i, children: a });
+            { attributes: i, children: s } = e,
+            a = n?.(e) ?? (0, g.A)(t, e);
+        return null != a ? a : (0, r.jsx)("span", { ...i, children: s });
     }
     handleOnChange() {
         let { editor: e } = this.props,
@@ -145,7 +145,7 @@ class y extends i.PureComponent {
             i = (r?.rangeCount ?? 0) > 0 ? r?.getRangeAt(0) : null;
         if (null == (null != i ? m.VW.toSlateRange(e, i, { exactMatch: !0, suppressThrow: !0 }) : null) && null != i) {
             let t = m.VW.toSlateRange(e, i, { exactMatch: !1, suppressThrow: !0 });
-            (e.selection = null), null != t ? h.b.select(e, t) : h.b.select(e, e.selection ?? m.VW.end(e, []));
+            (e.selection = null), null != t ? h.b.select(e, t) : h.b.select(e, m.VW.end(e, []));
         }
         e.composition = t;
     }
@@ -171,9 +171,9 @@ class y extends i.PureComponent {
         let { editor: t, onBlur: n } = this.props,
             r = e.relatedTarget,
             i = o.rL.findDocumentOrShadowRoot(this.props.editor),
-            a = i.getElementById("textarea-context"),
-            s = i.getElementById("slate-toolbar");
-        if (null != r && !(0, p.hasDomParent)(r, a) && !(0, p.hasDomParent)(r, s)) {
+            s = i.getElementById("textarea-context"),
+            a = i.getElementById("slate-toolbar");
+        if (null != r && !(0, p.hasDomParent)(r, s) && !(0, p.hasDomParent)(r, a)) {
             let e = o.rL.findDocumentOrShadowRoot(t).getSelection();
             null != e && this.isSelectionEscaping(e) && e.removeAllRanges();
         }
@@ -185,10 +185,10 @@ class y extends i.PureComponent {
             for (let n = e.rangeCount - 1; n >= 0; n--) {
                 let r = e.getRangeAt(n),
                     i = r.startContainer,
-                    a = r.endContainer,
-                    s = r.startOffset,
+                    s = r.endContainer,
+                    a = r.startOffset,
                     o = r.endOffset;
-                if ((0, p.hasDomParent)(i, t) || (!(0, p.isDOMRangeCollapsed)(i, s, a, o) && (0, p.hasDomParent)(a, t)))
+                if ((0, p.hasDomParent)(i, t) || (!(0, p.isDOMRangeCollapsed)(i, a, s, o) && (0, p.hasDomParent)(s, t)))
                     return !0;
             }
         return !1;
@@ -199,20 +199,20 @@ class y extends i.PureComponent {
             r = !1;
         if (null != e && null != t)
             for (let i = e.rangeCount - 1; i >= 0; i--) {
-                let a = e.getRangeAt(i),
-                    s = a.startContainer,
-                    o = a.endContainer,
-                    l = a.startOffset,
-                    u = a.endOffset;
-                if ((0, p.hasDomParent)(s, t)) {
+                let s = e.getRangeAt(i),
+                    a = s.startContainer,
+                    o = s.endContainer,
+                    l = s.startOffset,
+                    u = s.endOffset;
+                if ((0, p.hasDomParent)(a, t)) {
                     if (r) return !0;
                     n = !0;
                 } else {
                     if (n) return !0;
                     r = !0;
                 }
-                if (!(0, p.isDOMRangeCollapsed)(s, l, o, u))
-                    if ((0, p.hasDomParent)(s, t)) {
+                if (!(0, p.isDOMRangeCollapsed)(a, l, o, u))
+                    if ((0, p.hasDomParent)(a, t)) {
                         if (r) return !0;
                         n = !0;
                     } else {
@@ -225,8 +225,8 @@ class y extends i.PureComponent {
     handleContextMenu(e) {
         let { editor: t } = this.props,
             i = e.pageY,
-            a = window.innerHeight,
-            s = null != i && null != a && i < a / 2 ? "top" : "bottom";
+            s = window.innerHeight,
+            a = null != i && null != s && i < s / 2 ? "top" : "bottom";
         if (c.isPlatformEmbedded) {
             let i = (0, u.zd)();
             (0, l.L3)(
@@ -235,7 +235,7 @@ class y extends i.PureComponent {
                     let { default: e } = await n.e("58127").then(n.bind(n, 446514));
                     return (n) => (0, r.jsx)(e, { ...n, editor: t, text: m.VW.getSelectedText(t, !0) });
                 },
-                { align: s, enableSpellCheck: i === A.BRT.APP },
+                { align: a, enableSpellCheck: i === A.BRT.APP },
             );
         } else blur();
     }
@@ -253,7 +253,7 @@ class y extends i.PureComponent {
             className: t,
             containerClassName: n,
             canFocus: i,
-            autoFocus: a,
+            autoFocus: s,
             placeholder: l,
             decorate: u,
             channelId: c,
@@ -263,8 +263,8 @@ class y extends i.PureComponent {
             onBlur: p,
             onKeyDown: h,
             onKeyUp: m,
-            renderExtraElement: g,
-            renderExtraLeaf: E,
+            renderExtraElement: E,
+            renderExtraLeaf: g,
             ...A
         } = this.props;
         return (0, r.jsxs)("div", {
@@ -272,14 +272,14 @@ class y extends i.PureComponent {
             className: n,
             children: [
                 this.state.showPlaceholder
-                    ? (0, r.jsx)("div", { className: s()(I.q, t), "aria-hidden": !0, children: l })
+                    ? (0, r.jsx)("div", { className: a()(I.q, t), "aria-hidden": !0, children: l })
                     : null,
                 (0, r.jsx)(o.A, {
                     editor: e,
                     value: [...this.state.initialValue],
                     children: (0, r.jsx)(o.Fo, {
                         ...A,
-                        className: s()(T.PT, I.E, t),
+                        className: a()(T.PT, I.E, t),
                         decorate: u,
                         renderElement: this.renderElement,
                         renderLeaf: this.renderLeaf,
@@ -292,7 +292,7 @@ class y extends i.PureComponent {
                         onCompositionStart: this.handleCompositionStart,
                         onCompositionEnd: this.handleCompositionEnd,
                         onPasteCapture: this.handlePasteCapture,
-                        autoFocus: a && !1 !== i,
+                        autoFocus: s && !1 !== i,
                         autoCorrect: "off",
                         "data-can-focus": !1 !== i,
                         "aria-label": l,
@@ -303,4 +303,4 @@ class y extends i.PureComponent {
         });
     }
 }
-let S = y;
+let y = S;
