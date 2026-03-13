@@ -3271,6 +3271,7 @@ var tM = (function (e) {
             (e.SERVER_PROFILE = "Server Profile"),
             (e.VOICE_INVITE_SUGGESTIONS = "Voice Invite Suggestions"),
             (e.VOICE_CHANNEL_UI_INVITE_BUTTON = "Voice Channel UI Invite Button"),
+            (e.VOICE_CHANNEL_CALL_MENU_ITEM = "Voice Channel Call Menu Item"),
             e
         );
     })({}),
