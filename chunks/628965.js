@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => I });
+n.d(t, { A: () => A });
 var r = n(311907),
     i = n(73153),
-    a = n(287809);
-let s = null,
+    s = n(287809);
+let a = null,
     o = {},
     l = {},
     u = null,
@@ -13,41 +13,45 @@ function _(e) {
     f(e);
 }
 function f(e) {
-    if (null == a.default.getCurrentUser()) return h();
-    (s = e.section ?? s),
-        null != e.subsection && null != s && (o[s] = e.subsection),
-        null != e.scrollPosition && null != s && (l[s] = e.scrollPosition),
+    if (null == s.default.getCurrentUser()) return p();
+    (a = e.section ?? a),
+        null != e.subsection && null != a && (o[a] = e.subsection),
+        null != e.scrollPosition && null != a && (l[a] = e.scrollPosition),
         (u = e.analyticsLocation ?? null),
         (c = e.analyticsLocations ?? []),
         (d = e.searchParams ?? null);
 }
-function h() {
-    (s = null), (o = {}), (l = {}), (u = null), (c = []), (d = null);
+function p() {
+    (a = null), (o = {}), (l = {}), (u = null), (c = []), (d = null);
 }
-function p(e) {
-    (s = e.section), (u = null), (c = e.analyticsLocations ?? []), null != e.subsection && (o[s] = e.subsection);
+function h(e) {
+    (a = e.section),
+        (u = null),
+        (c = e.analyticsLocations ?? []),
+        (d = null),
+        null != e.subsection && (o[a] = e.subsection);
 }
-function g(e) {
+function m(e) {
     let { forSection: t } = e;
-    null != t ? delete o[t] : null != s && delete o[s];
+    null != t ? delete o[t] : null != a && delete o[a];
 }
 function E(e) {
     let { forSection: t } = e;
-    null != t ? delete l[t] : null != s && delete l[s];
+    null != t ? delete l[t] : null != a && delete l[a];
 }
-class A extends r.Ay.Store {
+class g extends r.Ay.Store {
     static displayName = "UserSettingsModalStore";
     initialize() {
-        this.waitFor(a.default);
+        this.waitFor(s.default);
     }
     getSection() {
-        return s;
+        return a;
     }
     getSubsection() {
-        return null != s ? o[s] : null;
+        return null != a ? o[a] : null;
     }
     getScrollPosition() {
-        return null != s ? l[s] : null;
+        return null != a ? l[a] : null;
     }
     getAnalyticsLocation() {
         return u;
@@ -59,12 +63,12 @@ class A extends r.Ay.Store {
         return d;
     }
 }
-let I = new A(i.h, {
+let A = new g(i.h, {
     USER_SETTINGS_MODAL_OPEN: _,
     USER_SETTINGS_MODAL_INIT: f,
-    USER_SETTINGS_MODAL_CLOSE: h,
-    LOGOUT: h,
-    USER_SETTINGS_MODAL_SET_SECTION: p,
-    USER_SETTINGS_MODAL_CLEAR_SUBSECTION: g,
+    USER_SETTINGS_MODAL_CLOSE: p,
+    LOGOUT: p,
+    USER_SETTINGS_MODAL_SET_SECTION: h,
+    USER_SETTINGS_MODAL_CLEAR_SUBSECTION: m,
     USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: E,
 });
