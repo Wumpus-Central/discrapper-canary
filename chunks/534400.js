@@ -127,6 +127,7 @@ let E = i.memo(function (e) {
                           onRequestOpen: S,
                           onClose: y,
                           targetElementRef: N,
+                          clickTrap: !1,
                           children: (e) =>
                               (0, r.jsx)("span", {
                                   className: p,
