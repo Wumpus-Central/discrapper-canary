@@ -107,7 +107,7 @@ function P(e) {
                 (0, u.QX)(G, H.id);
             }),
             (t = () => {
-                W?.() ?? (0, u.Mp)(G);
+                null != W ? W() : (0, u.Mp)(G);
             });
         let e = (e) => {
             (0, u.mN)(G, H.id, e);
