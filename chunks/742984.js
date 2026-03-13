@@ -7,16 +7,19 @@ var r = n(665260),
     o = n(47167),
     l = n(626584),
     u = n(427930),
-    c = n(857071),
-    d = n(380335),
+    c = n(857071);
+n(250953);
+var d = n(380335),
     _ = n(451909),
     f = n(465856),
     p = n(451919),
-    h = n(143413),
-    m = n(152007),
+    h = n(143413);
+n(622794);
+var m = n(152007),
     E = n(607508),
-    g = n(253932),
-    A = n(95701),
+    g = n(253932);
+n(268829);
+var A = n(95701),
     I = n(761640),
     T = n(734057),
     S = n(71393),
@@ -32,8 +35,9 @@ var r = n(665260),
     w = n(427262);
 n(970931);
 var M = n(655237),
-    x = n(652215),
-    P = n(37411),
+    x = n(652215);
+n(5867);
+var P = n(37411),
     k = n(985018);
 let U = "> -# *";
 function G(e, t, n) {
@@ -51,51 +55,50 @@ function G(e, t, n) {
 }
 function F(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     if (null != e.flags && (0, r.Lt)(e.flags, x.pr7.SUPPRESS_NOTIFICATIONS)) return !1;
-    let o = T.A.getChannel(t);
-    e.type === x.lAJ.THREAD_STARTER_MESSAGE && (o = T.A.getChannel(o?.parent_id));
-    let l = b.default.getCurrentUser(),
-        u = b.default.getUser(e.author?.id);
+    let a = T.A.getChannel(t);
+    e.type === x.lAJ.THREAD_STARTER_MESSAGE && (a = T.A.getChannel(a?.parent_id));
+    let o = b.default.getCurrentUser(),
+        l = b.default.getUser(e.author?.id);
     if (
+        null == a ||
         null == o ||
         null == l ||
-        null == u ||
-        (o.type === x.rbe.GROUP_DM && e.type === x.lAJ.RECIPIENT_REMOVE) ||
-        (M.A.areSlayerNotificationsSuppressed() && K(o)) ||
-        !G(l, u, o, { ignoreStatus: i, ignoreSameUser: x.MRS.SELF_MENTIONABLE_SYSTEM.has(e.type) || a }) ||
+        (a.type === x.rbe.GROUP_DM && e.type === x.lAJ.RECIPIENT_REMOVE) ||
+        (M.A.areSlayerNotificationsSuppressed() && K(a)) ||
+        !G(o, l, a, { ignoreStatus: i, ignoreSameUser: x.MRS.SELF_MENTIONABLE_SYSTEM.has(e.type) }) ||
         d.A.isMessageRequest(t)
     )
         return !1;
     if (!n) {
         let e = N.A.getChannelId(C.A.getGuildId());
-        if (e === o.id || I.Ay.getCurrentSidebarChannelId(e) === o.id) return !1;
+        if (e === a.id || I.Ay.getCurrentSidebarChannelId(e) === a.id) return !1;
     }
     if (
         v.A.isBlockedOrIgnoredForMessage(e) ||
-        (void 0 !== e.activity_instance && null != e.interaction && e.interaction.user.id === l.id)
+        (void 0 !== e.activity_instance && null != e.interaction && e.interaction.user.id === o.id)
     )
         return !1;
     if (null != e.application_id) {
         let n = s.Ay.getCurrentEmbeddedActivity();
         if (n?.applicationId === e.application_id && n.location.channel_id === t) return !1;
     }
-    if (A.Le.has(o.type)) {
-        if (m.A.isMuted(o.id)) return !1;
-        let t = (0, E.l)(o);
+    if (A.Le.has(a.type)) {
+        if (m.A.isMuted(a.id)) return !1;
+        let t = (0, E.l)(a);
         return (
             t !== P.CP.NO_MESSAGES &&
             (t === P.CP.ALL_MESSAGES ||
-                (0, p.bG)({ rawMessage: e, userId: l.id, suppressEveryone: !1, suppressRoles: !1 }))
+                (0, p.bG)({ rawMessage: e, userId: o.id, suppressEveryone: !1, suppressRoles: !1 }))
         );
     }
     {
-        let t = !A.OU.has(o.type) || y.A.getChannelId() === o.id;
-        if (O.Ay.allowAllMessages(o) && t) return !0;
-        let n = O.Ay.isSuppressEveryoneEnabled(o.getGuildId()),
-            r = O.Ay.isSuppressRolesEnabled(o.getGuildId());
-        return (0, p.bG)({ rawMessage: e, userId: l.id, suppressEveryone: n, suppressRoles: r });
+        let t = !A.OU.has(a.type) || y.A.getChannelId() === a.id;
+        if (O.Ay.allowAllMessages(a) && t) return !0;
+        let n = O.Ay.isSuppressEveryoneEnabled(a.getGuildId()),
+            r = O.Ay.isSuppressRolesEnabled(a.getGuildId());
+        return (0, p.bG)({ rawMessage: e, userId: o.id, suppressEveryone: n, suppressRoles: r });
     }
 }
 function V(e, t) {
