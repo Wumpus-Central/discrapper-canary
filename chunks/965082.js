@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => L });
+n.d(t, { A: () => D });
 var r = n(627968);
 n(64700);
 var i = n(684013),
@@ -13,32 +13,29 @@ var i = n(684013),
     _ = n(203982),
     f = n(723702),
     p = n(837921),
-    h = n(1193),
-    m = n(41984),
-    E = n(589051),
-    g = n(592598),
-    A = n(395011),
-    I = n(222506),
-    T = n(145567),
-    S = n(378702),
-    y = n(119191),
-    v = n(581730),
-    N = n(672396),
-    C = n(652215),
-    R = n(822889),
-    O = n(985018);
-let b = 2,
-    D = (e) => {
+    h = n(41984),
+    m = n(589051),
+    E = n(592598),
+    g = n(395011),
+    A = n(222506),
+    I = n(145567),
+    T = n(378702),
+    S = n(119191),
+    y = n(581730),
+    v = n(672396),
+    N = n(652215),
+    C = n(822889),
+    R = n(985018);
+let O = 2,
+    b = (e) => {
         e && (0, c.Ak)(d.cH, d.pD);
     };
-function L(e, t, n, c) {
-    let { hasChat: d } = (0, E.NI)("textChatNotification");
-    if (g.A.isNotificationDisabled(N.KS.TextChat)) return D(!0), null;
-    let L = !I.A.isInputLocked(A.A.getTargetPID());
-    if (h.A.getSelectedChannelId() === e.id && L && d) return D(c), null;
-    let { icon: w, title: M, body: x } = (0, l.TB)(e, t, n),
-        { trackView: P, trackClick: k } = (0, v.Y9)(N.KS.TextChat, {
-            notif_type: N.KS.TextChat,
+function D(e, t, n, c) {
+    let { hasChat: d } = (0, m.NI)("textChatNotification");
+    if (E.A.isNotificationDisabled(v.KS.TextChat)) return b(!0), null;
+    let { icon: D, title: L, body: w } = (0, l.TB)(e, t, n),
+        { trackView: M, trackClick: x } = (0, y.Y9)(v.KS.TextChat, {
+            notif_type: v.KS.TextChat,
             notif_user_id: t.author?.id,
             message_id: t.id,
             message_type: t.type,
@@ -47,34 +44,34 @@ function L(e, t, n, c) {
             channel_type: e.type,
         });
     return {
-        icon: w,
-        title: M,
+        icon: D,
+        title: L,
         body:
             t.content.length > 0
                 ? (0, o.Ay)(t, { noStyleAndInteraction: !0, formatInline: !0, hideSimpleEmbedContent: !1 }).content
-                : x,
+                : w,
         unreadAccessory: (e) => (d ? (0, r.jsx)(a.A, { unread: !0, hovered: e }) : null),
         hint: (e, t) =>
-            e || !t ? null : (0, y.sI)((0, v.Jn)(), d ? R.default.VMcw8s : O.t.ykjOAJ, O.intl.string(O.t.jZkzVJ)),
-        maxBodyLines: b,
+            e || !t ? null : (0, S.sI)((0, y.Jn)(), d ? C.default.VMcw8s : R.t.ykjOAJ, R.intl.string(R.t.jZkzVJ)),
+        maxBodyLines: O,
         renderFooter: (n, i, s) =>
             d
                 ? null
                 : n && !s
-                  ? (0, r.jsx)(S.A, { id: i, replyToMessageId: t.id, channel: e, onSend: () => k("send") })
+                  ? (0, r.jsx)(T.A, { id: i, replyToMessageId: t.id, channel: e, onSend: () => x("send") })
                   : null,
         onNotificationShow: () => {
-            D(c), P();
+            b(c), M();
         },
         onNotificationClick: (n, r) => {
-            let a = A.A.getTargetPID();
+            let a = g.A.getTargetPID();
             if (
                 ((0, s.ack)(
                     e.id,
                     {
-                        section: C.JJy.OVERLAY,
-                        object: C.ZSU.ACK_TEXT_CHAT_NOTIFICATION,
-                        objectType: C.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
+                        section: N.JJy.OVERLAY,
+                        object: N.ZSU.ACK_TEXT_CHAT_NOTIFICATION,
+                        objectType: N.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
                     },
                     !0,
                     !0,
@@ -82,24 +79,24 @@ function L(e, t, n, c) {
                 ),
                 d)
             ) {
-                (0, T.D$)({
-                    target: { kind: T.bB.CHANNEL, channelId: e.id, guildId: e.guild_id ?? null, messageId: t.id },
-                    source: m.B9.NOTIFICATION_CLICK,
-                    widgetType: C.uss.NOTIFICATIONS,
+                (0, I.D$)({
+                    target: { kind: I.bB.CHANNEL, channelId: e.id, guildId: e.guild_id ?? null, messageId: t.id },
+                    source: h.B9.NOTIFICATION_CLICK,
+                    widgetType: N.uss.TEXT_CHAT_V3,
                 }),
-                    I.A.isInputLocked(a) ? (k("unlock"), i.A.setInputLocked(!1, a)) : k("jump"),
+                    A.A.isInputLocked(a) ? (x("unlock"), i.A.setInputLocked(!1, a)) : x("jump"),
                     requestAnimationFrame(() => {
-                        _._.dispatchToLastSubscribed(C.jej.TEXTAREA_FOCUS, { channelId: e.id });
+                        _._.dispatchToLastSubscribed(N.jej.TEXTAREA_FOCUS, { channelId: e.id });
                     }),
-                    i.A.updateNotificationStatus(r, C.yFH.DISMISSED);
+                    i.A.updateNotificationStatus(r, N.yFH.DISMISSED);
                 return;
             }
-            I.A.isInputLocked(a)
-                ? (k("unlock"), i.A.setInputLocked(!1, a))
-                : (k("jump"), (0, u.pX)(C.BVt.CHANNEL(e.guild_id, e.id, t.id)), f.isPlatformEmbedded && p.Ay.focus());
+            A.A.isInputLocked(a)
+                ? (x("unlock"), i.A.setInputLocked(!1, a))
+                : (x("jump"), (0, u.pX)(N.BVt.CHANNEL(e.guild_id, e.id, t.id)), f.isPlatformEmbedded && p.Ay.focus());
         },
         onDismissClick: () => {
-            k("dismiss");
+            x("dismiss");
         },
     };
 }

@@ -1,7 +1,7 @@
-n.d(t, { K: () => r, c: () => s });
+n.d(t, { K: () => s, c: () => r });
 var l,
     i,
-    s =
+    r =
         (((l = {}).USER_CONTEXT_MENU = "user_context_menu"),
         (l.OPEN_DIRECT_MESSAGE = "open_direct_message"),
         (l.SEND_FRIEND_REQUEST = "send_friend_request"),
@@ -10,6 +10,7 @@ var l,
         (l.CANCEL_FRIEND_REQUEST = "cancel_friend_request"),
         (l.SEND_ACTIVITY_INVITE = "send_activity_invite"),
         (l.ASK_TO_JOIN = "ask_to_join"),
+        (l.SEND_GAME_INVITE_MESSAGE = "send_game_invite_message"),
         (l.OPEN_FRIEND_MODAL = "open_friend_modal"),
         (l.OPEN_SETTINGS_MODAL = "open_settings_modal"),
         (l.SEARCH_FRIENDS = "search_friends"),
@@ -18,7 +19,7 @@ var l,
         (l.OPEN_TEXT_CHAT_CHANNEL = "open_text_chat_channel"),
         (l.TAB_CHANGE = "tab_change"),
         l),
-    r =
+    s =
         (((i = {}).FRIEND_ROW = "friend_row"),
         (i.FRIEND_GROUP = "friend_group"),
         (i.DM_CHANNEL = "dm_channel"),
