@@ -4,6 +4,7 @@ e.exports = {
     Io: "pill_cf5b44",
     Wi: "descriptionWrapper_cf5b44",
     h_: "description_cf5b44",
+    LF: "premiumGroupLink_cf5b44",
     XV: "descriptionClamped_cf5b44",
     j8: "featured_cf5b44",
     Cj: "ctaPlaceholder_cf5b44",
