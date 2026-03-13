@@ -1,43 +1,44 @@
 "use strict";
 n.d(t, { UV: () => u, rZ: () => x, uC: () => m });
-var i = n(627968),
+var a = n(627968),
     l = n(64700),
-    a = n(505779),
+    i = n(505779),
     r = n(397927),
-    s = n(880405),
+    s = n(59544),
     c = n(305080),
     o = n(985018),
-    d = n(937418);
+    d = n(435740);
 function u() {
     return l.useMemo(
         () => ({
-            [a.V.STEAM]: { icon: r.NXQ, text: o.intl.string(o.t.FsANs4), "aria-label": o.intl.string(o.t["P+ePTG"]) },
-            [a.V.ROBLOX]: { icon: r.H0M, text: o.intl.string(o.t["pJ+P+h"]), "aria-label": o.intl.string(o.t.tYxpdf) },
-            [a.V.BATTLENET]: {
+            [i.V.STEAM]: { icon: r.NXQ, text: o.intl.string(o.t.FsANs4), "aria-label": o.intl.string(o.t["P+ePTG"]) },
+            [i.V.ROBLOX]: { icon: r.H0M, text: o.intl.string(o.t["pJ+P+h"]), "aria-label": o.intl.string(o.t.tYxpdf) },
+            [i.V.BATTLENET]: {
                 icon: r.aG0,
                 text: o.intl.string(o.t["A7grp+"]),
                 "aria-label": o.intl.string(o.t.x9at20),
             },
-            [a.V.RIOT]: { icon: r.ALT, text: o.intl.string(o.t.h6MapL), "aria-label": o.intl.string(o.t["528nvc"]) },
-            [a.V.MINECRAFT]: { text: o.intl.string(o.t["HZbmO+"]), "aria-label": o.intl.string(o.t.WWTqYn) },
-            [a.V.EPICGAMES]: { icon: r.r_I, text: o.intl.string(o.t.ZbBMHa), "aria-label": o.intl.string(o.t.BwX0UW) },
+            [i.V.RIOT]: { icon: r.ALT, text: o.intl.string(o.t.h6MapL), "aria-label": o.intl.string(o.t["528nvc"]) },
+            [i.V.MINECRAFT]: { text: o.intl.string(o.t["HZbmO+"]), "aria-label": o.intl.string(o.t.WWTqYn) },
+            [i.V.EPICGAMES]: { icon: r.r_I, text: o.intl.string(o.t.ZbBMHa), "aria-label": o.intl.string(o.t.BwX0UW) },
         }),
         [],
     );
 }
 function m(e) {
     let { website: t } = e,
-        n = u()[t.category];
-    return null == n
+        n = (0, s.A)(t.url),
+        l = u()[t.category];
+    return null == l || null == n
         ? null
-        : (0, i.jsx)(x, { ...n, onClick: () => window.open((0, s.L)(t.url), "_blank", "noreferrer noopener") });
+        : (0, a.jsx)(x, { ...l, onClick: () => window.open(n, "_blank", "noreferrer noopener") });
 }
 function x(e) {
     let { ...t } = e,
         { isTwoColumn: n } = (0, c.c)();
-    return (0, i.jsx)("div", {
+    return (0, a.jsx)("div", {
         className: d.U,
-        children: (0, i.jsx)(r.Button, {
+        children: (0, a.jsx)(r.Button, {
             ...t,
             variant: n ? "overlay-secondary" : "secondary",
             fullWidth: !0,

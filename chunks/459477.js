@@ -1,34 +1,39 @@
-r.d(e, { default: () => I }), r(321073);
-var n = r(627968),
-    i = r(64700),
-    o = r(505779),
-    a = r(158954),
-    l = r(880405),
-    s = r(145963),
-    c = r(985018);
+n.d(e, { default: () => I }), n(321073);
+var r = n(627968),
+    i = n(64700),
+    o = n(505779),
+    l = n(158954),
+    a = n(240248),
+    s = n(59544),
+    c = n(145963),
+    u = n(985018);
 let I = (t) => {
-    let { transitionState: e, onClose: r, detectedGame: I, storeWebsites: E } = t,
-        T = (0, s.UV)(),
-        u = i.useMemo(() => {
+    let { transitionState: e, onClose: n, detectedGame: I, storeWebsites: E } = t,
+        T = (0, c.UV)(),
+        A = i.useMemo(() => E.map((t) => t.url), [E]),
+        d = (0, s.Q)(A),
+        m = i.useMemo(() => {
             let t = [];
-            for (let e of [...E].sort((t, e) => (t.category === o.V.STEAM ? -1 : +(e.category === o.V.STEAM)))) {
-                let r = T[e.category];
-                null != r &&
+            for (let e of [
+                ...E.map((t, e) => ({ ...t, gameStoreLink: d[e] ?? "" })).filter((t) => !(0, a.uJ)(t.gameStoreLink)),
+            ].sort((t, e) => (t.category === o.V.STEAM ? -1 : +(e.category === o.V.STEAM)))) {
+                let n = T[e.category];
+                null != n &&
                     t.push({
-                        ...r,
+                        ...n,
                         variant: "secondary",
-                        onClick: () => window.open((0, l.L)(e.url), "_blank", "noreferrer noopener"),
+                        onClick: () => window.open(e.gameStoreLink, "_blank", "noreferrer noopener"),
                         role: "link",
                     });
             }
             return t;
-        }, [E, T]);
-    return (0, n.jsx)(a.Modal, {
-        onClose: r,
+        }, [E, T, d]);
+    return (0, r.jsx)(l.Modal, {
+        onClose: n,
         transitionState: e,
         size: "sm",
-        title: c.intl.string(c.t["/4gj6r"]),
-        subtitle: c.intl.format(c.t["0acM2Y"], { gameName: I.name }),
-        actions: u,
+        title: u.intl.string(u.t["/4gj6r"]),
+        subtitle: u.intl.format(u.t["0acM2Y"], { gameName: I.name }),
+        actions: m,
     });
 };
