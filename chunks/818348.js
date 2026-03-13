@@ -14,7 +14,7 @@ n.d(t, {
     Nc: () => b,
     OL: () => N,
     Pq: () => ei,
-    Q7: () => x,
+    Q7: () => M,
     Sb: () => eo,
     TG: () => eg,
     Tk: () => el,
@@ -55,7 +55,7 @@ n.d(t, {
     sJ: () => K,
     sh: () => Q,
     tE: () => F,
-    tF: () => M,
+    tF: () => x,
     w7: () => eu,
     x0: () => eh,
     xB: () => G,
@@ -217,7 +217,7 @@ var D = (function (e) {
             (e[(e.PREMIUM = 1)] = "PREMIUM"), (e[(e.GUILD = 2)] = "GUILD"), (e[(e.APPLICATION = 3)] = "APPLICATION"), e
         );
     })({}),
-    x = (function (e) {
+    M = (function (e) {
         return (
             (e.PAYPAL_POPUP_CLOSED = "PAYPAL_POPUP_CLOSED"),
             (e.VENMO_APP_CANCELED = "VENMO_APP_CANCELED"),
@@ -227,7 +227,7 @@ var D = (function (e) {
         );
     })({});
 Object.freeze({ CONSTANT: 1, APPLE_STICKER: 2 });
-var M = (function (e) {
+var x = (function (e) {
         return (e[(e.DISCOVERY = 0)] = "DISCOVERY"), (e[(e.CHECKOUT = 1)] = "CHECKOUT"), e;
     })({}),
     P = (function (e) {
@@ -676,6 +676,8 @@ var ec = (function (e) {
             (e.EXPERIMENT_USER_EXPOSURE_SUPPRESSED = "experiment_user_exposure_suppressed"),
             (e.EXPERIMENT_INSTALLATION_EVALUATION_EXPOSED = "experiment_installation_evaluation_exposed"),
             (e.EXPERIMENT_INSTALLATION_EXPOSURE_SUPPRESSED = "experiment_installation_exposure_suppressed"),
+            (e.EXPERIMENT_GUILD_EVALUATION_EXPOSED = "experiment_guild_evaluation_exposed"),
+            (e.EXPERIMENT_GUILD_EXPOSURE_SUPPRESSED = "experiment_guild_exposure_suppressed"),
             (e.MKTG_PAGE_VIEWED = "mktg_page_viewed"),
             (e.CLICK_LANDING_CTA = "click_landing_cta"),
             (e.DOWNLOAD_APP = "download_app"),
