@@ -1,5 +1,6 @@
 "use strict";
 n.d(t, {
+    Am: () => ec,
     CV: () => k,
     Fr: () => en,
     Gn: () => J,
@@ -15,7 +16,7 @@ n.d(t, {
     WM: () => B,
     Yb: () => $,
     Yf: () => eu,
-    Zb: () => ec,
+    Zb: () => ed,
     d6: () => Z,
     dQ: () => eo,
     g5: () => W,
@@ -521,12 +522,37 @@ async function eu() {
                     query: { placements: e, platform: y.vg.WEB },
                     rejectWithError: !1,
                 });
-            a.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS", questHomeHero: (0, D.Hi)(t.body) });
+            a.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS", questHomeHero: (0, D.Wv)(t.body) });
         } catch (e) {
             throw (a.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_FAILURE", error: new o.A(e) }), e);
         }
     }
 }
-function ec(e) {
+async function ec() {
+    if (S.A.isFetchingQuestHomeHero()) return;
+    let e = S.A.getLastFetchedQuestHomeHero();
+    if (!(null != e && Date.now() - e <= el)) {
+        a.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_BEGIN" });
+        try {
+            let e = await (0, u.Ht)(),
+                t = await (0, l.sN)(),
+                n = new URLSearchParams({ placement: String(y.yW.QUEST_HOME_BANNER_DESKTOP) });
+            e?.uuid != null && n.append("client_heartbeat_session_id", e.uuid),
+                null != t.uuid && n.append("client_ad_session_id", t.uuid);
+            let r = (
+                    await s.Bo.get({
+                        url: `${w.Rsh.QUEST_FETCH_QUEST_TO_DELIVER}?${n.toString()}`,
+                        rejectWithError: !1,
+                    })
+                ).body.creative,
+                o = null;
+            null != r && r.creative_type === i.p.QUEST_HOME_HERO && (o = (0, D.Hi)(r.creative_content)),
+                a.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS", questHomeHero: o });
+        } catch (e) {
+            throw (a.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_FAILURE", error: new o.A(e) }), e);
+        }
+    }
+}
+function ed(e) {
     a.h.dispatch({ type: "UNENROLLED_ACTIVITY_QUEST_DISMISS", questId: e });
 }

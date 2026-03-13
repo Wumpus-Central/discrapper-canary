@@ -1,9 +1,10 @@
 "use strict";
 n.d(t, {
     Dv: () => T,
-    Em: () => b,
-    Rd: () => g,
+    Hi: () => C,
+    Rd: () => E,
     S: () => m,
+    Wv: () => R,
     Yn: () => l,
     _g: () => f,
     rO: () => _,
@@ -13,8 +14,8 @@ n.d(t, {
     n(801541);
 var r = n(889137),
     i = n(440703),
-    a = n(341915),
-    s = n(229695);
+    s = n(341915),
+    a = n(229695);
 function o(e) {
     try {
         return (0, r.YW)(e.config)
@@ -26,7 +27,7 @@ function o(e) {
 }
 function l(e) {
     return (0, r.YW)(e)
-        .with({ config_version: 2 }, (e) => (0, s.k)(e))
+        .with({ config_version: 2 }, (e) => (0, a.k)(e))
         .exhaustive();
 }
 function u(e) {
@@ -117,13 +118,13 @@ function h(e) {
         },
         colors: { primary: e.colors.primary, secondary: e.colors.secondary },
         rewards: e.rewards.map(p),
-        cosponsorMetadata: (0, s.j)(e.cosponsor_metadata),
+        cosponsorMetadata: (0, a.j)(e.cosponsor_metadata),
     };
 }
 function m(e) {
     return { id: e.id, config: h(e.config), userStatus: null == e.user_status ? null : d(e.user_status) };
 }
-function g(e) {
+function E(e) {
     return {
         userId: e.user_id,
         questId: e.quest_id,
@@ -133,35 +134,35 @@ function g(e) {
         tier: e.tier ?? null,
     };
 }
-function E(e) {
+function g(e) {
     if (e?.quest_rewards == null) return null;
     let t = e.quest_rewards;
     switch (t.reward.tag) {
         case i.l.IN_GAME:
             return { questRewards: { reward: { tag: t.reward.tag } } };
         case i.l.REWARD_CODE:
-            return { questRewards: { reward: { tag: t.reward.tag, rewardCode: g(t.reward.reward_code) } } };
+            return { questRewards: { reward: { tag: t.reward.tag, rewardCode: E(t.reward.reward_code) } } };
     }
 }
 function A(e) {
     return { eventName: e.event_name, title: e.title, description: e.description, target: e.target };
 }
 function I(e) {
-    return { skuId: e.sku_id, tenantMetadata: E(e.tenant_metadata), consumed: e.consumed };
+    return { skuId: e.sku_id, tenantMetadata: g(e.tenant_metadata), consumed: e.consumed };
 }
 function T(e) {
     return { claimedAt: e.claimed_at, items: e.entitlements.map(I), errors: e.errors };
 }
-function y(e) {
+function S(e) {
     return { altText: e.alt_text, assetType: e.asset_type, url: e.url };
 }
-function S(e) {
+function y(e) {
     return { ctaType: e.cta_type, title: e.title, url: e.url };
 }
 function v(e) {
     return { ctaType: e.cta_type, title: e.title, questId: e.quest_id };
 }
-function C(e) {
+function N(e) {
     return {
         linearGradientStart: e.linear_gradient_start,
         linearGradientEnd: e.linear_gradient_end,
@@ -173,25 +174,27 @@ function C(e) {
         tooltipSubtitle: e.tooltip_subtitle,
     };
 }
-function b(e) {
-    if (1 !== e.version || !(a.gh.QUEST_HOME_BANNER in e.placements)) return null;
-    let t = e.placements[a.gh.QUEST_HOME_BANNER];
-    if (null == t) return null;
-    let n = {
-        placementType: a.gh.QUEST_HOME_BANNER,
-        campaignId: t.campaign_id,
-        labelTitle: t.label_title,
-        labelSubtitle: t.label_subtitle,
-        assetHeroImage: y(t.asset_hero_image),
-        assetSponsorImage: y(t.asset_sponsor_image),
-        ctaSponsorUrl: S(t.cta_sponsor_url),
-        ctaQuests: t.cta_quests.map(v),
-        startsAt: t.starts_at,
-        expiresAt: t.expires_at,
+function C(e) {
+    let t = {
+        placementType: s.gh.QUEST_HOME_BANNER,
+        campaignId: e.campaign_id,
+        labelTitle: e.label_title,
+        labelSubtitle: e.label_subtitle,
+        assetHeroImage: S(e.asset_hero_image),
+        assetSponsorImage: S(e.asset_sponsor_image),
+        ctaSponsorUrl: y(e.cta_sponsor_url),
+        ctaQuests: e.cta_quests.map(v),
+        startsAt: e.starts_at,
+        expiresAt: e.expires_at,
     };
     return (
-        null != t.asset_hero_video && (n.assetHeroVideo = y(t.asset_hero_video)),
-        null != t.quest_home_entrypoint && (n.questHomeEntrypoint = C(t.quest_home_entrypoint)),
-        n
+        null != e.asset_hero_video && (t.assetHeroVideo = S(e.asset_hero_video)),
+        null != e.quest_home_entrypoint && (t.questHomeEntrypoint = N(e.quest_home_entrypoint)),
+        t
     );
+}
+function R(e) {
+    if (1 !== e.version || !(s.gh.QUEST_HOME_BANNER in e.placements)) return null;
+    let t = e.placements[s.gh.QUEST_HOME_BANNER];
+    return null == t ? null : C(t);
 }

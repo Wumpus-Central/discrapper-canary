@@ -53,7 +53,8 @@ class A extends r.A {
             let t = e + Math.floor(Math.random() * m);
             this.initialQuestHomeHeroFetchTimerId = window.setTimeout(() => {
                 try {
-                    (0, o.Yf)();
+                    let { enabled: e } = c.rI.getConfig({ location: "QuestFetchManager" });
+                    e ? (0, o.Am)() : (0, o.Yf)();
                 } catch (e) {}
             }, t);
         }

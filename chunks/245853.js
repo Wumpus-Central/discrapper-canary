@@ -7,6 +7,7 @@ n.d(t, {
     Ym: () => l,
     jS: () => o,
     m8: () => d,
+    rI: () => p,
     sn: () => i,
     sy: () => _,
     uK: () => s,
@@ -69,8 +70,14 @@ var _ = (function (e) {
     );
 })({});
 let f = (0, r.mj)({
-    name: "2026-03-muted-video-quest-new-defaults",
-    kind: "user",
-    defaultConfig: { enabled: !1, variant: 0 },
-    variations: { 0: { enabled: !1, variant: 0 }, 1: { enabled: !0, variant: 1 }, 2: { enabled: !0, variant: 2 } },
-});
+        name: "2026-03-muted-video-quest-new-defaults",
+        kind: "user",
+        defaultConfig: { enabled: !1, variant: 0 },
+        variations: { 0: { enabled: !1, variant: 0 }, 1: { enabled: !0, variant: 1 }, 2: { enabled: !0, variant: 2 } },
+    }),
+    p = (0, r.mj)({
+        name: "2026-03-get-decision-hero-ads",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: { 1: { enabled: !0 } },
+    });

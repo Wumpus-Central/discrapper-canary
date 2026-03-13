@@ -753,46 +753,47 @@ let e3 = (e) => {
     };
 function e4() {
     let { enabled: e } = b.sn.useConfig({ location: W.rE.QUEST_HOME_DESKTOP }),
-        [t, n] = r.useState(e),
-        [i, s] = r.useState(e),
-        [a, o] = r.useState(!1),
-        [l, c] = r.useState(!1),
-        { isFetching: d, questHomeHeroConfig: _ } = (0, u.cf)([R.A], () => ({
+        { enabled: t } = b.rI.useConfig({ location: "useFetchQuestHomeHeroConfig" }),
+        [n, i] = r.useState(e),
+        [s, a] = r.useState(e),
+        [o, l] = r.useState(!1),
+        [c, d] = r.useState(!1),
+        { isFetching: _, questHomeHeroConfig: f } = (0, u.cf)([R.A], () => ({
             isFetching: R.A.isFetchingQuestHomeHero(),
             questHomeHeroConfig: R.A.getQuestHomeHeroConfig(),
         })),
-        f = r.useMemo(() => {
-            if (!e || null == _) return null;
+        p = r.useMemo(() => {
+            if (!e || null == f) return null;
             let t = new Date(),
-                n = new Date(_.startsAt),
-                r = new Date(_.expiresAt);
-            return t < n || t > r ? null : _;
-        }, [e, _]);
+                n = new Date(f.startsAt),
+                r = new Date(f.expiresAt);
+            return t < n || t > r ? null : f;
+        }, [e, f]);
     return (
         r.useEffect(() => {
-            e && t();
-            async function t() {
+            e && n();
+            async function n() {
                 try {
-                    await (0, C.Yf)();
+                    t ? await (0, C.Am)() : await (0, C.Yf)();
                 } catch (e) {
-                    s(!1), o(!0);
+                    a(!1), l(!0);
                 } finally {
-                    n(!1);
+                    i(!1);
                 }
             }
-        }, [e]),
+        }, [e, t]),
         r.useEffect(() => {
             !(async function () {
                 try {
-                    if (null == _) return;
-                    await Promise.all([(0, T.NN)(_.assetHeroImage.url), (0, T.NN)(_.assetSponsorImage.url)]);
+                    if (null == f) return;
+                    await Promise.all([(0, T.NN)(f.assetHeroImage.url), (0, T.NN)(f.assetSponsorImage.url)]);
                 } catch (e) {
-                    c(!0);
+                    d(!0);
                 } finally {
-                    s(!1);
+                    a(!1);
                 }
             })();
-        }, [_]),
-        { questHomeHero: a || l ? null : f, isLoading: t || d || i }
+        }, [f]),
+        { questHomeHero: o || c ? null : p, isLoading: n || _ || s }
     );
 }
