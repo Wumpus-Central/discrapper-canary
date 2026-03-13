@@ -1,47 +1,51 @@
 "use strict";
-s.d(t, { A: () => E });
+s.d(t, { A: () => A });
 var n = s(627968),
     r = s(64700),
-    l = s(311907),
-    a = s(775602),
-    i = s(287809),
-    o = s(728458),
-    c = s(590180),
-    d = s(4227),
-    u = s(856686),
-    g = s(429876),
-    _ = s(599062),
-    m = s(998694),
-    h = s(231209),
-    p = s(781724),
-    f = s(758836);
-let x = [f.G2.HOME, f.G2.ORBS];
-function E(e) {
+    l = s(572944),
+    a = s(311907),
+    i = s(775602),
+    o = s(287344),
+    c = s(287809),
+    d = s(728458),
+    u = s(590180),
+    _ = s(4227),
+    g = s(856686),
+    m = s(429876),
+    h = s(599062),
+    p = s(998694),
+    f = s(231209),
+    x = s(850735),
+    E = s(781724),
+    C = s(758836);
+let b = [C.G2.HOME, C.G2.ORBS];
+function A(e) {
     let {
             tab: t,
             categories: s,
-            transitionToTab: i,
-            transitionState: o,
-            updateAnalyticsState: c,
-            refreshCategories: d,
+            transitionToTab: c,
+            transitionState: d,
+            updateAnalyticsState: u,
+            refreshCategories: _,
         } = e,
-        m = C();
-    A(m);
-    let E = (0, l.bG)([a.A], () => a.A.useReducedMotion),
-        [b, S] = r.useState(void 0),
-        [v, L] = r.useState(!0),
-        I = r.useMemo(
+        p = S();
+    v(p);
+    let A = (0, a.bG)([i.A], () => i.A.useReducedMotion),
+        [I, L] = r.useState(void 0),
+        [j, k] = r.useState(!0),
+        T = r.useMemo(
             () =>
                 s.filter(
                     (e) =>
-                        !f.MS.some((t) => {
+                        !C.MS.some((t) => {
                             let { categorySkuId: s } = t;
                             return s === e.skuId;
                         }),
                 ),
             [s],
         ),
-        j = r.useCallback(
+        O = (0, o.f)("CollectiblesContent"),
+        y = r.useCallback(
             (e) => {
                 let {
                     sourceButton: t,
@@ -50,46 +54,50 @@ function E(e) {
                     isInternalShopDeeplink: r,
                     isOrbsExclusive: l,
                 } = e;
-                c(t, s);
-                let a = n && !E,
-                    o = l ? f.G2.ORBS : f.G2.CATALOG;
-                S(s), L(!r), i(o, a);
+                u(t, s);
+                let a = n && !A,
+                    i = l ? C.G2.ORBS : C.G2.CATALOG;
+                L(s), k(!r), c(i, a);
             },
-            [E, i, c],
+            [A, c, u],
         ),
-        { searchError: k } = (0, u.S)();
-    return null != k
-        ? (0, n.jsx)(p.A, {})
-        : null != m
-          ? (0, n.jsx)(_.h, { onRetry: d, errorMessage: m, errorOrigin: _.A.SHOP_PAGE })
-          : x.includes(t)
-            ? (0, n.jsx)(h.A, { handleTransition: j, tab: t, transitionState: o })
-            : (0, n.jsx)(g.A, {
-                  tab: t,
-                  categories: I,
-                  initialCategoryId: b,
-                  showFilterInitially: v,
-                  onUnmount: () => {
-                      S(void 0), L(!0);
-                  },
-              });
+        { searchError: N } = (0, g.S)();
+    return null != N
+        ? (0, n.jsx)(E.A, {})
+        : null != p
+          ? (0, n.jsx)(h.h, { onRetry: _, errorMessage: p, errorOrigin: h.A.SHOP_PAGE })
+          : t === C.G2.HOME && O
+            ? (0, n.jsx)(x.A, { tab: l.g.HOME, transitionState: d, handleTransition: y })
+            : t === C.G2.ORBS && O
+              ? (0, n.jsx)(x.A, { tab: l.g.ORBS, transitionState: d, handleTransition: y })
+              : b.includes(t)
+                ? (0, n.jsx)(f.A, { handleTransition: y, tab: t, transitionState: d })
+                : (0, n.jsx)(m.A, {
+                      tab: t,
+                      categories: T,
+                      initialCategoryId: I,
+                      showFilterInitially: j,
+                      onUnmount: () => {
+                          L(void 0), k(!0);
+                      },
+                  });
 }
-let C = () =>
-        (0, l.bG)([c.A, d.A], () =>
-            null != c.A.error
-                ? `shop load fetch categories error: ${c.A.error.message}`
-                : null != d.A.claimError
-                  ? `shop load claim error: ${d.A.claimError.message}`
-                  : null != d.A.fetchError
-                    ? `shop load fetch purchase error: ${d.A.fetchError.message}`
+let S = () =>
+        (0, a.bG)([u.A, _.A], () =>
+            null != u.A.error
+                ? `shop load fetch categories error: ${u.A.error.message}`
+                : null != _.A.claimError
+                  ? `shop load claim error: ${_.A.claimError.message}`
+                  : null != _.A.fetchError
+                    ? `shop load fetch purchase error: ${_.A.fetchError.message}`
                     : void 0,
         ),
-    A = (e) => {
-        let t = (0, l.bG)([i.default], () => i.default.getCurrentUser()),
-            { noCache: s, includeUnpublished: n } = (0, m.A)();
+    v = (e) => {
+        let t = (0, a.bG)([c.default], () => c.default.getCurrentUser()),
+            { noCache: s, includeUnpublished: n } = (0, p.A)();
         r.useEffect(() => {
             null != e &&
-                o.A.captureMessage(e, {
+                d.A.captureMessage(e, {
                     tags: {
                         isStaff: t?.isStaff()?.toString() ?? "unknown",
                         disableCache: s.toString(),
