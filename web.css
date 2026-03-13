@@ -35142,6 +35142,10 @@ html:not(.chat-input) .inputInner_b1f01d {
     vertical-align: bottom
 }
 
+.banner__24928 {
+    padding: var(--space-12)
+}
+
 .container__581dd {
     align-items: center;
     display: flex;

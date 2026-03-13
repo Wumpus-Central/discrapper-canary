@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => O });
+n.d(t, { A: () => L });
 var i = n(627968);
 n(64700);
 var s = n(934551),
@@ -12,103 +12,106 @@ var s = n(934551),
     u = n(351906),
     h = n(562153),
     A = n(622543),
-    p = n(987112),
-    g = n(31432),
-    m = n(389996),
+    m = n(987112),
+    p = n(31432),
+    g = n(389996),
     _ = n(559506),
     f = n(361311),
     x = n(886891),
     C = n(743987),
-    E = n(383448),
-    I = n(900179),
+    E = n(501193),
+    I = n(383448),
+    N = n(900179),
     b = n(646986),
-    N = n(946356),
-    S = n(810396),
-    T = n(243166),
-    v = n(652215),
-    y = n(996988),
-    j = n(985018),
-    R = n(673721);
-function O(e) {
-    let { user: t, currentUser: n, displayProfile: O, channel: L, isHoveringOrFocusing: M, onOpenProfile: D } = e,
-        { relationshipType: G, originApplicationId: U } = (0, l.cf)([d.A], () => ({
+    S = n(946356),
+    T = n(810396),
+    v = n(243166),
+    y = n(652215),
+    j = n(996988),
+    R = n(985018),
+    O = n(627699);
+function L(e) {
+    let { user: t, currentUser: n, displayProfile: L, channel: M, isHoveringOrFocusing: D, onOpenProfile: G } = e,
+        { relationshipType: U, originApplicationId: P } = (0, l.cf)([d.A], () => ({
             relationshipType: d.A.getRelationshipType(t.id),
             originApplicationId: d.A.getOriginApplicationId(t.id),
         })),
-        P = (0, a.fi)(t.id),
-        w = (0, o.q)({ userId: t.id }),
-        k = (0, l.bG)([u.A], () => u.A.hidePersonalInformation),
-        V = (0, l.bG)([A.A], () => A.A.getUserProfile(t.id)?.application);
+        w = (0, a.fi)(t.id),
+        k = (0, o.q)({ userId: t.id }),
+        V = (0, l.bG)([u.A], () => u.A.hidePersonalInformation),
+        B = (0, l.bG)([A.A], () => A.A.getUserProfile(t.id)?.application);
     return (0, i.jsxs)("div", {
-        className: R.rf,
+        className: O.rf,
         children: [
             (0, i.jsx)(_.A, { userId: t.id }),
-            (0, i.jsx)(S.A, {
+            (0, i.jsx)(T.A, {
                 user: t,
-                guildId: L.guild_id,
-                nickname: h.Ay.getName(null, L.id, t),
-                pronouns: O?.pronouns,
-                onOpenProfile: D,
-                tags: (0, i.jsx)(g.A, { displayProfile: O, themeType: y.d.SIDEBAR }),
-                nicknameIcons: k ? null : (0, i.jsx)(T.A, { userId: t.id, isVisible: M, onOpenProfile: D }),
+                guildId: M.guild_id,
+                nickname: h.Ay.getName(null, M.id, t),
+                pronouns: L?.pronouns,
+                onOpenProfile: G,
+                tags: (0, i.jsx)(p.A, { displayProfile: L, themeType: j.d.SIDEBAR }),
+                nicknameIcons: V ? null : (0, i.jsx)(v.A, { userId: t.id, isVisible: D, onOpenProfile: G }),
             }),
-            G === v.eA$.PENDING_INCOMING &&
-                (0, i.jsx)(N.A.Overlay, { children: (0, i.jsx)(x.A, { user: t, channelId: L.id, applicationId: U }) }),
-            P.map((e) =>
+            U === y.eA$.PENDING_INCOMING &&
+                (0, i.jsx)(S.A.Overlay, { children: (0, i.jsx)(x.A, { user: t, channelId: M.id, applicationId: P }) }),
+            w.map((e) =>
                 (0, i.jsx)(
-                    N.A.Overlay,
+                    S.A.Overlay,
                     {
                         children: (0, i.jsx)(x.A, {
                             user: t,
                             isGameRelationship: !0,
                             applicationId: e.applicationId,
-                            channelId: L.id,
+                            channelId: M.id,
                         }),
                     },
                     e.applicationId,
                 ),
             ),
-            (0, i.jsx)(E.A, { user: t }),
+            (0, i.jsx)(I.A, { user: t }),
+            L?.private &&
+                (0, i.jsx)(S.A.Overlay, { children: (0, i.jsx)(E.A, { username: h.Ay.getName(null, M.id, t) }) }),
             t.isProvisional &&
-                (0, i.jsx)(N.A.Overlay, {
-                    children: (0, i.jsx)(I.A, {
-                        heading: j.intl.string(j.t.Iyka0U),
+                (0, i.jsx)(S.A.Overlay, {
+                    children: (0, i.jsx)(N.A, {
+                        heading: R.intl.string(R.t.Iyka0U),
                         headingIcon: (0, i.jsx)(s.CircleErrorIcon, { size: "xxs", color: r.A.colors.TEXT_STRONG }),
                         headingColor: "text-strong",
                         children: (0, i.jsx)(c.T, { userId: t.id }),
                     }),
                 }),
-            (0, i.jsx)(b.A, { user: t, currentUser: n, onOpenUserProfileModal: D }),
-            (0, i.jsxs)(N.A.Overlay, {
-                className: R.Lw,
+            (0, i.jsx)(b.A, { user: t, currentUser: n, onOpenUserProfileModal: G }),
+            (0, i.jsxs)(S.A.Overlay, {
+                className: O.Lw,
                 children: [
-                    !k &&
-                        O?.bio != null &&
-                        O?.bio !== "" &&
-                        (0, i.jsx)(I.A, {
-                            heading: j.intl.string(j.t.ZzAR2Y),
+                    !V &&
+                        L?.bio != null &&
+                        L?.bio !== "" &&
+                        (0, i.jsx)(N.A, {
+                            heading: R.intl.string(R.t.ZzAR2Y),
                             headingColor: "text-strong",
-                            children: (0, i.jsx)(m.A, {
+                            children: (0, i.jsx)(g.A, {
                                 userId: t.id,
-                                userBio: O.bio,
-                                isHoveringOrFocusing: M,
+                                userBio: L.bio,
+                                isHoveringOrFocusing: D,
                                 animateOnHoverOrFocusOnly: !0,
                             }),
                         }),
-                    V?.popularApplicationCommandIds != null &&
-                        (0, i.jsx)(p.A, {
-                            applicationId: V.id,
-                            commandIds: V.popularApplicationCommandIds,
-                            channel: L,
+                    B?.popularApplicationCommandIds != null &&
+                        (0, i.jsx)(m.A, {
+                            applicationId: B.id,
+                            commandIds: B.popularApplicationCommandIds,
+                            channel: M,
                         }),
-                    w.length > 0 &&
-                        (0, i.jsx)(I.A, {
-                            heading: j.intl.string(j.t["Uv/eTx"]),
+                    k.length > 0 &&
+                        (0, i.jsx)(N.A, {
+                            heading: R.intl.string(R.t["Uv/eTx"]),
                             headingColor: "text-strong",
-                            children: (0, i.jsx)(f.A, { applicationIds: w }),
+                            children: (0, i.jsx)(f.A, { applicationIds: k }),
                         }),
-                    (0, i.jsx)(I.A, {
-                        heading: t.bot ? j.intl.string(j.t["A//N4k"]) : j.intl.string(j.t.a6XYD9),
+                    (0, i.jsx)(N.A, {
+                        heading: t.bot ? R.intl.string(R.t["A//N4k"]) : R.intl.string(R.t.a6XYD9),
                         headingColor: "text-strong",
                         children: (0, i.jsx)(C.A, { userId: t.id }),
                     }),
