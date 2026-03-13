@@ -1,79 +1,80 @@
-n.d(t, { M: () => T });
+n.d(t, { M: () => N });
 var i = n(627968);
 n(64700);
 var r = n(873263),
     l = n(311907),
     a = n(397927),
     s = n(587895),
-    o = n(515610),
-    d = n(91242),
-    c = n(263063),
-    u = n(394953),
-    A = n(734057),
-    h = n(71393),
-    _ = n(309010),
-    m = n(967198),
+    o = n(5180),
+    d = n(515610),
+    c = n(91242),
+    u = n(263063),
+    A = n(394953),
+    h = n(734057),
+    _ = n(71393),
+    m = n(309010),
+    g = n(967198),
     p = n(486020),
-    g = n(652215),
-    E = n(165610),
-    I = n(985018),
-    f = n(842130),
-    C = n(878251);
-function T() {
+    E = n(652215),
+    I = n(165610),
+    f = n(985018),
+    C = n(870236),
+    T = n(963369);
+function N() {
     let e,
         t = (0, r.zy)(),
-        n = (0, l.bG)([m.A], () => m.A.getGuildId()),
-        T = (0, l.bG)([_.A], () => _.A.getChannelId()),
-        N = (0, l.bG)([A.A], () => A.A.getChannel(T), [T]),
-        S = n ?? N?.guild_id,
-        x = (0, l.bG)([h.A], () => h.A.getGuild(S), [S]),
-        v = (0, o.A)(),
-        y = (0, u.lI)(),
-        { application: b, isFrameInFocusedMode: O } = (0, l.cf)([s.A, d.A], () => {
-            let e = d.A.getConnectedFrame();
+        n = (0, l.bG)([g.A], () => g.A.getGuildId()),
+        N = (0, l.bG)([m.A], () => m.A.getChannelId()),
+        S = (0, l.bG)([h.A], () => h.A.getChannel(N), [N]),
+        x = n ?? S?.guild_id,
+        v = (0, l.bG)([_.A], () => _.A.getGuild(x), [x]),
+        y = (0, d.A)(),
+        b = (0, A.lI)(),
+        { application: O, isFrameInFocusedMode: L } = (0, l.cf)([s.A, c.A], () => {
+            let e = c.A.getConnectedFrame();
             return {
                 application: s.A.getApplication(e?.applicationId),
-                isFrameInFocusedMode: d.A.getFrameLayoutMode() === E.y.FOCUSED,
+                isFrameInFocusedMode: c.A.getFrameLayoutMode() === I.y.FOCUSED,
             };
         }),
-        L = null != b ? p.Ay.getApplicationIconURL({ id: b.id, icon: b.icon, bot: b.bot }) : void 0,
-        R = null;
-    return (null != b && O
-        ? ((e = b.name),
-          (R = (0, i.jsx)("img", {
-              className: C.Z2,
-              alt: I.intl.string(I.t.X4IxWL),
-              src: L,
+        R = null != O ? p.Ay.getApplicationIconURL({ id: O.id, icon: O.icon, bot: O.bot }) : void 0,
+        P = null;
+    return (null != O && L
+        ? ((e = O.name),
+          (P = (0, i.jsx)("img", {
+              className: T.Z2,
+              alt: f.intl.string(f.t.X4IxWL),
+              src: R,
               "aria-hidden": !0,
               draggable: !1,
           })))
-        : y
-          ? ((e = I.intl.string(I.t.HcoRu0)), (R = (0, i.jsx)(a.XFE, { size: "sm" })))
-          : null != x
-            ? ((R = v
+        : b
+          ? ((e = f.intl.string(f.t.HcoRu0)), (P = (0, i.jsx)(a.XFE, { size: "sm" })))
+          : null != v
+            ? ((e = (0, o.Y)(v)),
+              (P = y
                   ? (0, i.jsx)(a.Gg5, { size: "sm" })
-                  : (0, i.jsx)(c.Ay, { guild: x, size: c.Ay.Sizes.SMOL, active: !0, className: C.$f })),
-              (e = x.name))
-            : null != N && (N.isDM() || N.isGroupDM())
-              ? ((e = I.intl.string(I.t.YUU0RF)), (R = (0, i.jsx)(a.pVd, { size: "sm" })))
-              : t.pathname.startsWith(g.BVt.ICYMI)
-                ? ((e = I.intl.string(I.t["jnXV/V"])), (R = (0, i.jsx)(a.gXB, { size: "sm" })))
-                : t.pathname.startsWith(g.BVt.GLOBAL_DISCOVERY)
-                  ? ((e = I.intl.string(I.t["4nEZLk"])), (R = (0, i.jsx)(a.QGJ, { size: "sm" })))
-                  : t.pathname.startsWith(g.BVt.NITRO_HOME)
-                    ? ((e = I.intl.string(I.t.Ipxkog)), (R = (0, i.jsx)(a.tvc, { size: "sm" })))
-                    : t.pathname.startsWith(g.BVt.COLLECTIBLES_SHOP)
-                      ? ((e = I.intl.string(I.t.pWG4ze)), (R = (0, i.jsx)(a.U1X, { size: "sm" })))
-                      : t.pathname.startsWith(g.BVt.FRIENDS)
-                        ? ((e = I.intl.string(I.t.TdEu5X)), (R = (0, i.jsx)(a.$yI, { size: "sm" })))
-                        : t.pathname.startsWith(g.BVt.FAMILY_CENTER)
-                          ? ((e = I.intl.string(f.default.RZqaJn)), (R = (0, i.jsx)(a.nFg, { size: "sm" })))
-                          : t.pathname.startsWith(g.BVt.QUEST_HOME) &&
-                            ((e = I.intl.string(I.t.JALI2K)), (R = (0, i.jsx)(a.r2v, { size: "sm" }))),
+                  : (0, i.jsx)(u.Ay, { guild: v, size: u.Ay.Sizes.SMOL, active: !0, className: T.$f })))
+            : null != S && (S.isDM() || S.isGroupDM())
+              ? ((e = f.intl.string(f.t.YUU0RF)), (P = (0, i.jsx)(a.pVd, { size: "sm" })))
+              : t.pathname.startsWith(E.BVt.ICYMI)
+                ? ((e = f.intl.string(f.t["jnXV/V"])), (P = (0, i.jsx)(a.gXB, { size: "sm" })))
+                : t.pathname.startsWith(E.BVt.GLOBAL_DISCOVERY)
+                  ? ((e = f.intl.string(f.t["4nEZLk"])), (P = (0, i.jsx)(a.QGJ, { size: "sm" })))
+                  : t.pathname.startsWith(E.BVt.NITRO_HOME)
+                    ? ((e = f.intl.string(f.t.Ipxkog)), (P = (0, i.jsx)(a.tvc, { size: "sm" })))
+                    : t.pathname.startsWith(E.BVt.COLLECTIBLES_SHOP)
+                      ? ((e = f.intl.string(f.t.pWG4ze)), (P = (0, i.jsx)(a.U1X, { size: "sm" })))
+                      : t.pathname.startsWith(E.BVt.FRIENDS)
+                        ? ((e = f.intl.string(f.t.TdEu5X)), (P = (0, i.jsx)(a.$yI, { size: "sm" })))
+                        : t.pathname.startsWith(E.BVt.FAMILY_CENTER)
+                          ? ((e = f.intl.string(C.default.RZqaJn)), (P = (0, i.jsx)(a.nFg, { size: "sm" })))
+                          : t.pathname.startsWith(E.BVt.QUEST_HOME) &&
+                            ((e = f.intl.string(f.t.JALI2K)), (P = (0, i.jsx)(a.r2v, { size: "sm" }))),
     null == e || "" === e)
         ? null
         : (0, i.jsxs)("div", {
-              className: C.DD,
-              children: [R, (0, i.jsx)(a.Text, { variant: "text-sm/medium", lineClamp: 1, children: e })],
+              className: T.DD,
+              children: [P, (0, i.jsx)(a.Text, { variant: "text-sm/medium", lineClamp: 1, children: e })],
           });
 }
