@@ -226,20 +226,14 @@ function K(e) {
         });
     let ev = i.useCallback((e, t) => h?.(e, "emoji_picker", t), [h]),
         eN = i.useCallback((e, t) => h?.(e, "soundboard_picker", t), [h]),
-        eC = i.useCallback(
-            (e) => {
-                b?.(e);
-            },
-            [b],
-        ),
-        eR = $.soundmoji?.allowSending === !0 && null != h,
-        eO = ed && null != b && $.expressionPicker?.onlyEmojis !== !0;
+        eC = $.soundmoji?.allowSending === !0 && null != h,
+        eR = ed && null != b && $.expressionPicker?.onlyEmojis !== !0;
     i.useEffect(() => {
-        es !== P.kx.KAOMOJI || eO || (0, w.U)(P.kx.EMOJI);
-    }, [es, eO]);
-    let eb = "left" === q ? "right" : "left",
-        eD = null != Z ? Z : "left" === q ? H.sj : H.Jg,
-        eL = eh
+        es !== P.kx.KAOMOJI || eR || (0, w.U)(P.kx.EMOJI);
+    }, [es, eR]);
+    let eO = "left" === q ? "right" : "left",
+        eb = null != Z ? Z : "left" === q ? H.sj : H.Jg,
+        eD = eh
             ? (0, r.jsx)(Y, {
                   id: G.g9,
                   "aria-controls": G.ni,
@@ -249,7 +243,7 @@ function K(e) {
                   children: B.intl.string(B.t["6gUTsS"]),
               })
             : null,
-        ew = em
+        eL = em
             ? (0, r.jsx)(Y, {
                   id: V.LD,
                   "aria-controls": V.GX,
@@ -260,7 +254,7 @@ function K(e) {
                   children: (0, r.jsx)("div", { className: H.dG, children: B.intl.string(B.t.nf1s3u) }),
               })
             : null,
-        eM = (0, r.jsx)(Y, {
+        ew = (0, r.jsx)(Y, {
             id: G.k1,
             "aria-controls": G.Do,
             "aria-selected": es === P.kx.EMOJI,
@@ -271,7 +265,7 @@ function K(e) {
     return (0, r.jsx)(m.A, {
         section: k.JJy.EXPRESSION_PICKER,
         children: (0, r.jsx)(S.nE, {
-            className: a()(H.T8, eD),
+            className: a()(H.T8, eb),
             targetRef: t,
             position: z,
             align: q,
@@ -291,7 +285,7 @@ function K(e) {
                               style: { width: null == er ? void 0 : er, [q]: 0 },
                               ref: en,
                               children: [
-                                  (0, r.jsx)("div", { className: H.Di, onMouseDown: ei, style: { [eb]: -2 } }),
+                                  (0, r.jsx)("div", { className: H.Di, onMouseDown: ei, style: { [eO]: -2 } }),
                                   (0, r.jsxs)("div", {
                                       className: H.FG,
                                       children: [
@@ -303,11 +297,11 @@ function K(e) {
                                                         role: "tablist",
                                                         "aria-label": B.intl.string(B.t["2j4Vgd"]),
                                                         children: [
+                                                            eD,
                                                             eL,
                                                             ew,
-                                                            eM,
                                                             ec &&
-                                                                eR &&
+                                                                eC &&
                                                                 (0, r.jsx)(Y, {
                                                                     id: G.N6,
                                                                     "aria-controls": G.AA,
@@ -325,7 +319,7 @@ function K(e) {
                                                                         ],
                                                                     }),
                                                                 }),
-                                                            eO
+                                                            eR
                                                                 ? (0, r.jsx)(Y, {
                                                                       id: G.W3,
                                                                       "aria-controls": G.pE,
@@ -388,7 +382,7 @@ function K(e) {
                                                     }),
                                                 })
                                               : null,
-                                          eO && es === P.kx.KAOMOJI ? (0, r.jsx)(x.A, { onSelect: eC }) : null,
+                                          eR && es === P.kx.KAOMOJI ? (0, r.jsx)(x.A, { onSelect: b }) : null,
                                       ],
                                   }),
                               ],
