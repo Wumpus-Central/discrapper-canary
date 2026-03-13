@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { i$: () => i, wm: () => s, xQ: () => a });
+n.d(t, { i: () => i, w: () => s });
 var r = n(600975);
 let i = (0, r.C)({
         kind: "user",
@@ -13,13 +13,6 @@ let i = (0, r.C)({
                 config: { isUserEligibleForCreatorMonetization: !0 },
             },
         ],
-    }),
-    a = (0, r.C)({
-        kind: "guild",
-        id: "2022-11_creator_monetization_onboarding_waitlist",
-        label: "Creator Monetization Onboarding Waitlist",
-        defaultConfig: { enableWaitlist: !1 },
-        treatments: [{ id: 1, label: "Enables Guilds to (possibly) see the waitlist", config: { enableWaitlist: !0 } }],
     }),
     s = (0, r.C)({
         kind: "user",

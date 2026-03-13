@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { KD: () => h, Kw: () => p, Li: () => f, ME: () => d, Sm: () => _, Z1: () => s, oS: () => a });
+n.d(t, { KD: () => f, ME: () => d, Sm: () => _, Z1: () => a, oS: () => s });
 var r = n(967245),
     i = n(652215);
-function a() {
-    let { isUserEligibleForCreatorMonetization: e } = r.i$.useExperiment(
+function s() {
+    let { isUserEligibleForCreatorMonetization: e } = r.i.useExperiment(
         { location: "e3bb71_1" },
         { autoTrackExposure: !1 },
     );
     return e;
 }
-function s() {
-    let { isUserEligibleForCreatorMonetization: e } = r.i$.getCurrentConfig(
+function a() {
+    let { isUserEligibleForCreatorMonetization: e } = r.i.getCurrentConfig(
         { location: "e3bb71_2" },
         { autoTrackExposure: !1 },
     );
@@ -36,19 +36,8 @@ function d(e) {
 function _(e) {
     return l(e?.id) || c(e);
 }
-function f(e) {
-    let { enableWaitlist: t } = r.xQ.useExperiment(
-        { guildId: e ?? i.dJq, location: "e3bb71_9" },
-        { autoTrackExposure: !1 },
-    );
-    return t;
-}
-function p(e) {
-    let { enableWaitlist: t } = r.xQ.getCurrentConfig({ guildId: e ?? i.dJq, location: "e3bb71_10" });
-    return t;
-}
-function h() {
-    let { enableCreatorMonetizationNagActivateForUser: e } = r.wm.getCurrentConfig(
+function f() {
+    let { enableCreatorMonetizationNagActivateForUser: e } = r.w.getCurrentConfig(
         { location: "e3bb71_11" },
         { autoTrackExposure: !0 },
     );
