@@ -42705,6 +42705,10 @@ screen and (max-width:485px) {
     background: linear-gradient(90deg, var(--expressive-gradient-nitro-pink-start) 0, var(--expressive-gradient-nitro-pink-end) 100%)
 }
 
+.customGraphicContainer__3e43f {
+    flex-shrink: 0
+}
+
 .offerNoticeContainer__3e43f {
     align-items: center;
     display: flex;

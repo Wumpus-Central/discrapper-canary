@@ -10,7 +10,12 @@ function l(e) {
     let { className: t, gradientColor: n = "default", children: i, Icon: l = a.gqV, customGraphic: u } = e;
     return (0, r.jsxs)("div", {
         className: s()(o.jt, o.qw, { [o.p3]: "nitro-pink" === n }, t),
-        children: [null != u ? u : (0, r.jsx)(l, { size: "xs", color: "currentColor" }), i],
+        children: [
+            null != u
+                ? (0, r.jsx)("div", { className: o.B4, children: u })
+                : (0, r.jsx)(l, { size: "xs", color: "currentColor" }),
+            i,
+        ],
     });
 }
 function u(e) {
