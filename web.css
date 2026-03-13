@@ -34818,11 +34818,18 @@ html:not(.chat-input) .inputInner_b1f01d {
 }
 
 .custom-user-profile-theme .banner__43147 {
-    background: linear-gradient(color-mix(in oklab, var(--profile-gradient-overlay-color) 65%, var(--profile-gradient-primary-color)), color-mix(in oklab, var(--profile-gradient-overlay-color) 60%, var(--profile-gradient-primary-color)))
+    background: linear-gradient(var(--profile-gradient-primary-color), var(--profile-gradient-secondary-color));
+    background-size: 100% 600px;
+    border-radius: 0
 }
 
 .user-profile-popout .banner__43147 {
     margin-bottom: -8px
+}
+
+.custom-user-profile-theme.user-profile-modal-v2 .banner__43147 {
+    background: linear-gradient(color-mix(in oklab, var(--profile-gradient-overlay-color) 65%, var(--profile-gradient-primary-color)), color-mix(in oklab, var(--profile-gradient-overlay-color) 60%, var(--profile-gradient-primary-color)));
+    background-size: auto
 }
 
 .user-profile-modal-v2 .banner__43147 {
@@ -34834,6 +34841,10 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .user-profile-sidebar .banner__43147 {
     border-radius: 0
+}
+
+.text__43147 {
+    line-height: 2px
 }
 
 .gameIcon_b52e4f {
