@@ -182,7 +182,8 @@ class A extends s.A {
         let r = u.A.create(e, t, n);
         return (
             r.on(o.yq.Destroy, (e) => {
-                this.connections.delete(e), this.connectionsEmpty() && (0, d.i0)(h.E6.NORMAL);
+                this.connections.delete(e),
+                    this.connectionsEmpty() && ((0, d.i0)(h.E6.NORMAL), (0, d.lE)().setNativeThreadsPriority?.(0));
             }),
             r.on(o.yq.Connected, () => {
                 r.setVideoBroadcast(this.shouldConnectionBroadcastVideo(r));
@@ -191,7 +192,9 @@ class A extends s.A {
                 this.emit(o.bg.Silence, e);
             }),
             this.connections.add(r),
-            !1 !== n.boostProcessPriority && (0, d.i0)(h.E6.HIGH),
+            (0, d.i0)(n.processPriority ?? h.E6.HIGH),
+            null != n.threadPriorityConfiguration &&
+                (0, d.lE)().setNativeThreadsPriority?.(n.threadPriorityConfiguration),
             this.emit(o.bg.Connection, r),
             r
         );
