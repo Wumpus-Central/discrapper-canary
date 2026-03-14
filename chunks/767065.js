@@ -1161,8 +1161,7 @@ class eS extends _.A {
     }
     _handleVideoStreamId(e) {
         let { userId: t, streamId: n, videoSsrc: r, videoStreamParameters: i } = e;
-        if (
-            (this.emit($.q.Video, this.guildId, this.channelId, t, n, this.streamServerId),
+        this.emit($.q.Video, this.guildId, this.channelId, t, n, this.streamServerId),
             null != n &&
                 null == this.getOrCreateVideoQuality() &&
                 this.logger.error("_handleVideoStreamId: Unable to create videoQuality."),
@@ -1172,19 +1171,16 @@ class eS extends _.A {
                     let t = e.ssrc ?? 0;
                     t > 0 && !0 === e.active && this._videoQuality?.setOutboundSsrc(t);
                 }),
-            this.userId !== t)
-        ) {
-            let e = 0 === r && null === n;
-            (!e || (e && this._videoQuality?.getInboundParticipants().includes(t))) &&
-                (this._videoQuality?.setInboundUser(t, r), this._videoHealthManager?.createUser(t));
-        }
-        null != this._connection &&
             this.userId !== t &&
-            (null != this._localMediaSinkWantsManager
-                ? this._localMediaSinkWantsManager.setStreamId(t, n)
-                : null != this._goLiveQualityManager &&
-                  this._goLiveQualityManager.getUserID() === t &&
-                  this._goLiveQualityManager?.setStreamId(n));
+                (0 !== r || null !== n || this._videoQuality?.getInboundParticipants().includes(t)) &&
+                (this._videoQuality?.setInboundUser(t, r), this._videoHealthManager?.createUser(t)),
+            null != this._connection &&
+                this.userId !== t &&
+                (null != this._localMediaSinkWantsManager
+                    ? this._localMediaSinkWantsManager.setStreamId(t, n)
+                    : null != this._goLiveQualityManager &&
+                      this._goLiveQualityManager.getUserID() === t &&
+                      this._goLiveQualityManager?.setStreamId(n));
     }
     _handleLocalVideoDisabled(e, t) {
         if (this.userId !== e) {

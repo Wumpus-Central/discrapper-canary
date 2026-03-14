@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => O });
+n.d(t, { A: () => b });
 var r = n(627968);
 n(64700);
 var i = n(503698),
@@ -40,7 +40,7 @@ function C(e) {
         ],
     });
 }
-function b(e) {
+function R(e) {
     let { isTier2: t } = e,
         n = t ? S : I,
         i = t ? y : T;
@@ -52,8 +52,8 @@ function b(e) {
         ],
     });
 }
-let R = (e, t) => (t ? (0, m.DP)() : e ? E.intl.string(E.t.lG6a5x) : E.intl.string(E.t["t9uG/o"])),
-    O = function (e) {
+let O = (e, t) => (t ? (0, m.DP)() : e ? E.intl.string(E.t.lG6a5x) : E.intl.string(E.t["t9uG/o"])),
+    b = function (e) {
         let {
                 hideCloseButton: t = !1,
                 hideCloseOnFullScreen: n,
@@ -66,19 +66,19 @@ let R = (e, t) => (t ? (0, m.DP)() : e ? E.intl.string(E.t.lG6a5x) : E.intl.stri
                 forceBrandRefreshHeader: S = !1,
             } = e,
             y = _ === h.PremiumTypes.TIER_2,
-            O = (0, d.lp)(m),
+            b = (0, d.lp)(m),
             D = (0, f.O)(),
             L = D?.discount?.amount,
             w = y ? N : v,
             {
-                step: x,
-                breadcrumbs: M,
+                step: M,
+                breadcrumbs: x,
                 startedPaymentFlowWithPaymentSourcesRef: P,
                 isDisplayingWowMomentConfirmation: k,
             } = (0, u.P5)(),
             U = (0, o.D7)({ location: "PremiumBrandRefreshPaymentHeader" });
-        if (!S && (null == M || 0 === M.length)) return null;
-        let G = (M ?? []).flatMap((e) => {
+        if (!S && (null == x || 0 === x.length)) return null;
+        let G = (x ?? []).flatMap((e) => {
             let t = e.useBreadcrumbLabel(m),
                 n = e.sectionHeaderText;
             return null != t ? { id: e.id, label: t, sectionHeaderText: n } : [];
@@ -88,13 +88,13 @@ let R = (e, t) => (t ? (0, m.DP)() : e ? E.intl.string(E.t.lG6a5x) : E.intl.stri
                 if (T && e.id === c.pn.PLAN_SELECT) return !1;
                 let t = e.id !== c.pn.ADD_PAYMENT_STEPS,
                     n = e.id === c.pn.ADD_PAYMENT_STEPS && !P.current;
-                return !m || (m && (t || n));
-            })).find((e) => e.id === x),
+                return !m || t || n;
+            })).find((e) => e.id === M),
             V = F?.sectionHeaderText?.() ?? F?.label,
-            B = !(U && null != x && l.M.includes(x)) && null != V && null != x,
-            H = O && B && x === c.pn.REVIEW,
+            B = !(U && null != M && l.M.includes(M)) && null != V && null != M,
+            H = b && B && M === c.pn.REVIEW,
             j = y ? "nitro-pink" : "nitro-green",
-            Y = R(y, T),
+            Y = O(y, T),
             W = g.kL,
             K = s()(g.N1, A.headerGradient);
         return k
@@ -106,7 +106,7 @@ let R = (e, t) => (t ? (0, m.DP)() : e ? E.intl.string(E.t.lG6a5x) : E.intl.stri
                           color: j,
                           className: s()(K, { [g.s1]: !B }),
                           children: [
-                              (0, r.jsx)(b, { isTier2: y }),
+                              (0, r.jsx)(R, { isTier2: y }),
                               !t &&
                                   (0, r.jsx)(a.s_y, {
                                       "data-migration-pending": !0,
@@ -134,7 +134,7 @@ let R = (e, t) => (t ? (0, m.DP)() : e ? E.intl.string(E.t.lG6a5x) : E.intl.stri
                           ],
                       }),
                       (E || I) && (0, r.jsx)(p.A, { discountAmount: L }),
-                      B && (0, r.jsx)(C, { isOneStepCheckout: O, headerText: V, step: x, filteredBreadcrumbs: G }),
+                      B && (0, r.jsx)(C, { isOneStepCheckout: b, headerText: V, step: M, filteredBreadcrumbs: G }),
                   ],
               });
     };

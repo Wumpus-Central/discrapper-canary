@@ -14,11 +14,11 @@ var i = n(627968),
     x = n(403362),
     h = n(863694),
     _ = n(107795),
-    A = n(655943),
-    p = n(828709),
+    p = n(655943),
+    A = n(828709),
     f = n(539916),
     j = n(985018),
-    N = n(977612);
+    N = n(171774);
 let E = { optionErrors: [] };
 function b(e) {
     let {
@@ -26,7 +26,7 @@ function b(e) {
             prompt: n,
             disableAutofocus: l,
             promptIndex: u,
-            dragIndex: p,
+            dragIndex: A,
             includeCount: b,
             singleColumn: I,
             onPromptDragComplete: v,
@@ -41,13 +41,13 @@ function b(e) {
             setIsDraggable: D,
         } = (0, c.A)({
             type: "ONBOARDING_PROMPT_CARD",
-            index: p,
+            index: A,
             optionId: n.id,
             onDragStart: S,
             onDragComplete: v,
             onDragReset: y,
         }),
-        M = (0, a.cf)([A.A], () => A.A.errors[u] ?? E),
+        M = (0, a.cf)([p.A], () => p.A.errors[u] ?? E),
         [k, U] = s.useState(!1),
         [P, w] = s.useState(!1),
         B = M.options ?? M.optionErrors.filter(x.Vq)[0],
@@ -170,7 +170,7 @@ function b(e) {
                                       }),
                                       n.inOnboarding
                                           ? (0, i.jsx)(d.Checkbox, {
-                                                checked: !!(n.inOnboarding && n.required),
+                                                checked: n.required ?? !1,
                                                 onChange: (e) => (0, _.NF)(t, n.id, { required: e }),
                                                 disabled: !n.inOnboarding,
                                                 label: b
@@ -251,7 +251,7 @@ function C(e) {
         children: [
             n.options.map((e, c) =>
                 (0, i.jsx)(
-                    p.A,
+                    A.A,
                     {
                         guild: t,
                         prompt: n,
@@ -266,7 +266,7 @@ function C(e) {
                     e.id,
                 ),
             ),
-            n.options.length < f.fs ? (0, i.jsx)(p.B, { guild: t, prompt: n, promptIndex: s, singleColumn: l }) : null,
+            n.options.length < f.fs ? (0, i.jsx)(A.B, { guild: t, prompt: n, promptIndex: s, singleColumn: l }) : null,
         ],
     });
 }

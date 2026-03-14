@@ -2,8 +2,8 @@
 n.d(t, { A: () => d }), n(938796);
 var r = n(989349),
     i = n.n(r),
-    a = n(665260),
-    s = n(315069),
+    s = n(665260),
+    a = n(315069),
     o = n(835095),
     l = n(832946),
     u = n(788868);
@@ -12,7 +12,7 @@ let c = Object.freeze({
     EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED: 2,
     NOT_SELF_REDEEMABLE: 4,
 });
-class d extends s.A {
+class d extends a.A {
     userId;
     code;
     skuId;
@@ -96,13 +96,13 @@ class d extends s.A {
         return null != this.subscriptionPlanId;
     }
     get premiumSubscriptionType() {
-        return (this.isSubscription && u.WN[this.skuId]) || null;
+        return this.isSubscription ? (u.WN[this.skuId] ?? null) : null;
     }
     get isSelfRedeemable() {
-        return !(0, a.Lt)(this.flags, c.NOT_SELF_REDEEMABLE);
+        return !(0, s.Lt)(this.flags, c.NOT_SELF_REDEEMABLE);
     }
     get isExistingPremiumSubscriptionDisallowed() {
-        return (0, a.Lt)(this.flags, c.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
+        return (0, s.Lt)(this.flags, c.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
     }
     get analyticsData() {
         return { gift_code: this.code, gift_code_max_uses: this.maxUses };

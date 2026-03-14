@@ -6,11 +6,11 @@ var i = n(627968),
     r = n(928108),
     a = n(99787),
     o = n(255354),
-    d = n(957300),
+    d = n(512538),
     c = n(378427),
     u = n(411335),
     m = n(985018),
-    g = n(406947);
+    g = n(379305);
 function x(e) {
     let { rule: t, onChangeRule: n } = e,
         [x, h] = s.useState(t.triggerMetadata?.mentionTotalLimit),
@@ -91,21 +91,19 @@ function x(e) {
                                   }),
                                   (0, i.jsx)("div", {
                                       children: (0, i.jsx)(l.DUT, {
-                                          onClick: _
-                                              ? () => {
-                                                    var e;
-                                                    return (
-                                                        (e = !t.triggerMetadata?.mentionRaidProtectionEnabled),
-                                                        void n({
-                                                            ...t,
-                                                            triggerMetadata: {
-                                                                ...t.triggerMetadata,
-                                                                mentionRaidProtectionEnabled: e,
-                                                            },
-                                                        })
-                                                    );
-                                                }
-                                              : void 0,
+                                          onClick: () => {
+                                              var e;
+                                              return (
+                                                  (e = !t.triggerMetadata?.mentionRaidProtectionEnabled),
+                                                  void n({
+                                                      ...t,
+                                                      triggerMetadata: {
+                                                          ...t.triggerMetadata,
+                                                          mentionRaidProtectionEnabled: e,
+                                                      },
+                                                  })
+                                              );
+                                          },
                                           children: (0, i.jsx)(l.P7L, {
                                               checked: t.triggerMetadata?.mentionRaidProtectionEnabled,
                                               disabled: !_,

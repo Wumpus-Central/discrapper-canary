@@ -1,113 +1,113 @@
 n.d(t, { A: () => G });
 var i = n(627968),
     s = n(64700),
-    a = n(284009),
-    l = n.n(a),
-    r = n(311907),
+    l = n(284009),
+    r = n.n(l),
+    a = n(311907),
     o = n(230109),
-    c = n(397927),
-    d = n(73153),
+    d = n(397927),
+    c = n(73153),
     u = n(631670),
     _ = n(974544),
     m = n(793574),
-    A = n(688810),
-    g = n(429619),
+    g = n(688810),
+    A = n(429619),
     h = n(451909),
     x = n(550111),
     p = n(202639),
-    E = n(407217),
-    C = n(919395),
-    T = n(884546),
+    T = n(407217),
+    E = n(919395),
+    C = n(884546),
     S = n(287070),
-    I = n(196291),
-    f = n(101058),
-    N = n(836602),
-    b = n(814390),
-    j = n(351906),
-    v = n(287809),
+    f = n(196291),
+    N = n(101058),
+    b = n(836602),
+    I = n(814390),
+    v = n(351906),
+    j = n(287809),
     O = n(954571),
-    R = n(927578),
-    y = n(606532),
+    y = n(927578),
+    R = n(606532),
     P = n(161290),
-    L = n(652215),
-    D = n(985018),
+    D = n(652215),
+    L = n(985018),
     M = n(683380);
 function G() {
-    let e = (0, r.bG)([v.default], () => {
-            let e = v.default.getCurrentUser();
-            return l()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e;
+    let e = (0, a.bG)([j.default], () => {
+            let e = j.default.getCurrentUser();
+            return r()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e;
         }),
-        t = (0, r.bG)([j.A], () => j.A.hidePersonalInformation),
+        t = (0, a.bG)([v.A], () => v.A.hidePersonalInformation),
         {
             pendingBio: n,
-            pendingAvatar: a,
+            pendingAvatar: l,
             pendingNameplate: G,
             showNotice: U,
             ...k
-        } = (0, r.cf)([N.A], () => ({ ...N.A.getPendingChanges(), showNotice: N.A.showNotice() })),
-        V = (0, f.V7)({ userId: e.id, image: a }),
-        H = (0, C.lw)({ pendingValue: G, userValue: e?.collectibles?.nameplate }),
-        w = (0, b.A)() && null != n ? h.Ay.parse(void 0, n).content : n,
-        B = R.Ay.canUsePremiumProfileCustomization(e),
-        { analyticsLocations: Y, newestAnalyticsLocation: F } = (0, A.Ay)(m.A.USER_SETTINGS_USER_PROFILE);
-    s.useEffect(() => () => d.h.wait(u.IM), []);
-    let [z, W] = s.useState(!1),
-        K = !B,
-        Z = s.useRef(null);
+        } = (0, a.cf)([b.A], () => ({ ...b.A.getPendingChanges(), showNotice: b.A.showNotice() })),
+        V = (0, N.V7)({ userId: e.id, image: l }),
+        w = (0, E.lw)({ pendingValue: G, userValue: e?.collectibles?.nameplate }),
+        B = (0, I.A)() && null != n ? h.Ay.parse(void 0, n).content : n,
+        H = y.Ay.canUsePremiumProfileCustomization(e),
+        { analyticsLocations: F, newestAnalyticsLocation: Y } = (0, g.Ay)(m.A.USER_SETTINGS_USER_PROFILE);
+    s.useEffect(() => () => c.h.wait(u.IM), []);
+    let [z, X] = s.useState(!1),
+        W = !H,
+        K = s.useRef(null);
     return t
         ? (0, i.jsx)(_.A, {})
-        : (0, i.jsxs)(A.f5, {
-              value: Y,
+        : (0, i.jsxs)(g.f5, {
+              value: F,
               children: [
-                  (0, i.jsx)(g.A, {}),
-                  (0, i.jsx)(T.A, {
+                  (0, i.jsx)(A.A, {}),
+                  (0, i.jsx)(C.A, {
                       profilePreview: (0, i.jsx)(S.A, {
                           user: e,
-                          canUsePremiumCustomization: B,
-                          onUpsellClick: y.A,
-                          pendingBio: w,
+                          canUsePremiumCustomization: H,
+                          onUpsellClick: R.A,
+                          pendingBio: B,
                           ...k,
                           pendingAvatar: V,
                       }),
                       nameplatePreview: (0, i.jsx)(x.A, {
                           user: e,
-                          nameplate: H,
+                          nameplate: w,
                           ...k,
-                          className: null == H ? M.tJ : void 0,
+                          className: null == w ? M.tJ : void 0,
                           isHighlighted: !0,
                       }),
                       children: (0, i.jsx)(P.A, {}),
                   }),
                   (0, i.jsx)(o.L, {
-                      innerRef: Z,
-                      onChange: (e) => W(e),
+                      innerRef: K,
+                      onChange: (e) => X(e),
                       threshold: 0.25,
-                      active: K,
+                      active: W,
                       children: (0, i.jsx)("div", {
-                          ref: Z,
-                          children: (0, i.jsx)(I.A, { user: e, shouldShow: K, isVisible: z }),
+                          ref: K,
+                          children: (0, i.jsx)(f.A, { user: e, shouldShow: W, isVisible: z }),
                       }),
                   }),
-                  K &&
+                  W &&
                       !U &&
                       (0, i.jsx)(p.d, {
                           className: M.EL,
-                          showUpsell: K && !z,
-                          text: D.intl.format(D.t.TmfgI2, { onClick: () => (0, E.K)({ analyticsSource: F }) }),
+                          showUpsell: !z,
+                          text: L.intl.format(L.t.TmfgI2, { onClick: () => (0, T.K)({ analyticsSource: Y }) }),
                           textVariant: "heading-md/medium",
                           useUpdatedStyling: !0,
                           button: (0, i.jsx)("div", {
                               className: M.Xl,
-                              children: (0, i.jsx)(c.Button, {
+                              children: (0, i.jsx)(d.Button, {
                                   variant: "overlay-primary",
                                   onClick: () => {
-                                      O.default.track(L.HAw.TRY_IT_OUT_PRESET_CLICKED, {
+                                      O.default.track(D.HAw.TRY_IT_OUT_PRESET_CLICKED, {
                                           cta_variant: "floating_action_button",
                                       }),
-                                          Z?.current?.scrollIntoView({ behavior: "smooth" });
+                                          K?.current?.scrollIntoView({ behavior: "smooth" });
                                   },
-                                  text: D.intl.string(D.t.uw9zI7),
-                                  icon: c.tvc,
+                                  text: L.intl.string(L.t.uw9zI7),
+                                  icon: d.tvc,
                               }),
                           }),
                       }),

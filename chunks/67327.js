@@ -42,7 +42,7 @@ var s = i(627968),
     V = i(652215),
     z = i(758836),
     $ = i(985018),
-    Q = i(910143);
+    Q = i(930225);
 let q = (t) => {
         let { openedGift: e } = t,
             { createMultipleConfettiAt: i } = n.useContext(R.x);
@@ -331,7 +331,7 @@ class J extends n.Component {
                     !e &&
                     x &&
                     (null == f || null == y
-                        ? (0, s.jsx)(q, { openedGift: x && !A && !e })
+                        ? (0, s.jsx)(q, { openedGift: !0 })
                         : (0, s.jsx)(U.A, { confettiTarget: this.modalRef.current, emojiURL: y })),
                 !A && !e && x && null != p && (0, s.jsx)(W, { soundId: p, step: this.step }),
             ],

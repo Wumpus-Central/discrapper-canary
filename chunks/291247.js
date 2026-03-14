@@ -55,7 +55,7 @@ function C(e, t, C, U, D) {
         X =
             null != K && null != C && m.A.canWithPartialContext(N.xBc.VIEW_CHANNEL, { channelId: K }) && !j
                 ? [
-                      (!P || (P && !W)) && m.A.canWithPartialContext(N.xBc.MUTE_MEMBERS, { channelId: C })
+                      (!P || !W) && m.A.canWithPartialContext(N.xBc.MUTE_MEMBERS, { channelId: C })
                           ? (0, l.jsx)(
                                 o.sLh,
                                 {
@@ -70,7 +70,7 @@ function C(e, t, C, U, D) {
                                 "voice-mute",
                             )
                           : null,
-                      (!P || (P && !W)) && m.A.canWithPartialContext(N.xBc.DEAFEN_MEMBERS, { channelId: C })
+                      (!P || !W) && m.A.canWithPartialContext(N.xBc.DEAFEN_MEMBERS, { channelId: C })
                           ? (0, l.jsx)(
                                 o.sLh,
                                 {

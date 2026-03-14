@@ -164,9 +164,10 @@ function h(e, t, n, r) {
         });
         (a = c(e, n)), (o = c(t, n)), A(n);
     }
-    if (e.parent_id !== n) {
-        let t = !1;
-        d.find((i) => i.id === e.id && ((i.parent_id = n), (t = !0))), t || d.push({ id: e.id, parent_id: n });
-    }
-    return d;
+    return (
+        e.parent_id !== n &&
+            null == d.find((t) => t.id === e.id && ((t.parent_id = n), !0)) &&
+            d.push({ id: e.id, parent_id: n }),
+        d
+    );
 }

@@ -44,7 +44,6 @@ function d(e) {
                     ref: S ? void 0 : h,
                 }),
             S &&
-                t &&
                 (0, r.jsx)(o.A, {
                     autoPlay: !0,
                     loop: !0,

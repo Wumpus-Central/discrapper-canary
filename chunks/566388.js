@@ -42,13 +42,13 @@ var i = n(627968),
     H = n(571909),
     F = n(374873),
     K = n(623413),
-    W = n(707251),
-    Y = n(357819),
+    Y = n(707251),
+    W = n(357819),
     z = n(717965),
     q = n(696842),
     X = n(895903),
-    J = n(542372),
-    Q = n(533233),
+    Q = n(542372),
+    J = n(533233),
     $ = n(652215),
     Z = n(806931),
     ee = n(985018),
@@ -72,10 +72,10 @@ function es(e) {
         m = O.default.getId(),
         f =
             !(0, o.bG)([g.A], () => g.A.isFullscreenInContext(n)) &&
-            (!U.isPlatformEmbedded || (U.isPlatformEmbedded && P.Ay.supportsFeature($.BYE.POPOUT_WINDOWS))),
+            (!U.isPlatformEmbedded || P.Ay.supportsFeature($.BYE.POPOUT_WINDOWS)),
         x = null != c && c.type !== Z.lp.ACTIVITY && c.user.id !== m,
         E = s.useMemo(() => r?.window ?? window, [r]),
-        N = (0, J.A)({ channel: t, appContext: n, popoutOpen: l, popoutWindow: r, currentWindow: E }),
+        N = (0, Q.A)({ channel: t, appContext: n, popoutOpen: l, popoutWindow: r, currentWindow: E }),
         S = n === $.BRT.POPOUT && U.isPlatformEmbedded && P.Ay.supportsFeature($.BYE.POPOUT_WINDOWS);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -155,7 +155,7 @@ function er(e) {
         { isOnStartStageScreen: U } = (0, H.Ay)();
     (0, H.vI)(n);
     let P = (0, o.bG)([L.A], () => L.A.getToastsEnabled(n.id)),
-        B = (0, Q.A)(n) ? (null != y ? "84px" : "124px") : null != y ? "0px" : "48px";
+        B = (0, J.A)(n) ? (null != y ? "84px" : "124px") : null != y ? "0px" : "48px";
     return (
         U && (B = "0px"),
         (t = U
@@ -166,7 +166,7 @@ function er(e) {
                   },
               })
             : N
-              ? (0, i.jsx)(Y.A, { channel: n, onScroll: M, popoutType: A })
+              ? (0, i.jsx)(W.A, { channel: n, onScroll: M, popoutType: A })
               : (0, i.jsx)(K.A, { participants: S, channel: n, hasConnectPermission: b })),
         (0, i.jsx)(v.A, {
             style: { height: `calc(100% - ${B})`, paddingTop: B },
@@ -190,7 +190,7 @@ function er(e) {
                       })
                     : null,
             renderHeader: () =>
-                (0, i.jsx)(W.A, { toggleRequestToSpeakSidebar: l, showRequestToSpeakSidebar: c, channel: n }),
+                (0, i.jsx)(Y.A, { toggleRequestToSpeakSidebar: l, showRequestToSpeakSidebar: c, channel: n }),
             renderChatToasts: () =>
                 !P || _ || j
                     ? null
@@ -227,7 +227,7 @@ function ea(e) {
             c.w.set(en, Date.now()));
     });
     let { width: R = 0, ref: O } = (0, h.Ay)(),
-        L = !b || (b && v === $.BRT.POPOUT);
+        L = !b || v === $.BRT.POPOUT;
     return (0, i.jsx)(p.f5, {
         value: T,
         children: (0, i.jsxs)(f.qh, {

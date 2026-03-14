@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => v, B5: () => x, BP: () => g, FQ: () => _, Uj: () => h, VF: () => A, _G: () => p });
+n.d(t, { Ay: () => v, B5: () => x, BP: () => h, FQ: () => _, Uj: () => g, VF: () => A, _G: () => p });
 var l = n(627968);
 n(64700);
 var a = n(503698),
@@ -6,7 +6,7 @@ var a = n(503698),
     i = n(735438),
     s = n.n(i),
     d = n(397927),
-    o = n(406590);
+    o = n(167216);
 function c(e) {
     return `${e / 16}rem`;
 }
@@ -29,7 +29,7 @@ function m(e) {
             className: x,
             style: p,
         } = e,
-        g = a ? 50 : s().random(40, 50);
+        h = a ? 50 : s().random(40, 50);
     return (
         !a && n
             ? (t = (0, l.jsxs)(l.Fragment, {
@@ -44,7 +44,7 @@ function m(e) {
             : a &&
               (t = (0, l.jsxs)(l.Fragment, {
                   children: [
-                      a && (0, l.jsx)(_, { width: g, className: r()({ [o.ce]: !0, [o.R]: !n }) }),
+                      (0, l.jsx)(_, { width: h, className: r()({ [o.ce]: !0, [o.R]: !n }) }),
                       (0, l.jsx)(d.H, { className: o.wx, children: (0, l.jsx)(_, { width: c, opacity: m }) }),
                   ],
               })),
@@ -77,8 +77,8 @@ function m(e) {
 }
 let x = 44,
     p = 22,
-    g = 26,
     h = 26,
+    g = 26,
     A = 6;
 function v(e) {
     let { messages: t, groupSpacing: n = 0, compact: a = !1, attachmentSpecs: r, className: i } = e,
