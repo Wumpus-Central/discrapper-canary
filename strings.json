@@ -17601,7 +17601,7 @@
   "u1CFbS": "Share 2 weeks of Nitro",
   "L8nYTM": "This Share Nitro offer expired",
   "0trNJ6": "[Learn More](Learn More) about Share Nitro.",
-  "VJB6XQ": "Hey! I’ve got 2 weeks of Discord Nitro for you 🎉 Enjoy custom emojis anywhere, larger uploads, and more at [link](link).",
+  "VJB6XQ": "Hey! I’ve got 2 weeks of Discord Nitro for you 🎉 Enjoy custom emojis anywhere, larger uploads, and more at !!{inviteLink}!!.",
   "3PJw6c": "You've hit the !!{numReferrals}!! friend limit for this offer.",
   "iWtOfC": "Lift Off! You Shared !!{numReferrals}!! {numReferrals, plural, one {Trial} other {Trials} }",
   "CZaMHn": "They have !!{days}!! days to accept the trial before it is returned to you. [Learn more](Learn more).",
