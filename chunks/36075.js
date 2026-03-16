@@ -2,48 +2,48 @@
 n.d(t, { CR: () => h, RM: () => p, Wq: () => _, v5: () => f }), n(321073);
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    o = n(311907),
-    l = n(775602),
-    u = n(652215),
-    c = n(191017);
-let d = /\p{Extended_Pictographic}/gu;
+    s = n(503698),
+    a = n.n(s),
+    o = n(308050),
+    l = n(311907),
+    u = n(775602),
+    c = n(652215),
+    d = n(191017);
 function _(e) {
-    let { colorStrings: t, useReducedMotion: n, roleStyle: r, includeConvenienceGlow: i, animateGradient: a } = e,
+    let { colorStrings: t, useReducedMotion: n, roleStyle: r, includeConvenienceGlow: i, animateGradient: s } = e,
         o = "username" === r,
         l = "dot" === r,
-        d = o && i,
-        _ = t?.primaryColor ?? u.TpD,
+        u = o && i,
+        _ = t?.primaryColor ?? c.TpD,
         f = {
             "--custom-gradient-color-1": _,
             "--custom-gradient-color-2": t?.secondaryColor ?? _,
             "--custom-gradient-color-3": t?.tertiaryColor ?? _,
         },
-        p = t?.tertiaryColor != null ? c.a7 : c.oD;
+        p = t?.tertiaryColor != null ? d.a7 : d.oD;
     return {
         gradientStyle: f,
-        gradientClassname: s()(p, { [c.lC]: o, [c.FQ]: d, [c.Xy]: d && a, [c.yJ]: !n && l, [c.q]: a && o }),
-        gradientGlowClassname: s()(p, c.uk, { [c.lC]: o, [c.q]: a && o, [c.yb]: o && a }),
+        gradientClassname: a()(p, { [d.lC]: o, [d.FQ]: u, [d.Xy]: u && s, [d.yJ]: !n && l, [d.q]: s && o }),
+        gradientGlowClassname: a()(p, d.uk, { [d.lC]: o, [d.q]: s && o, [d.yb]: o && s }),
     };
 }
 function f(e) {
-    let { colorStrings: t, roleStyle: n, includeConvenienceGlow: r, animateGradient: a } = e,
-        s = (0, o.bG)([l.A], () => l.A.useReducedMotion);
+    let { colorStrings: t, roleStyle: n, includeConvenienceGlow: r, animateGradient: s } = e,
+        a = (0, l.bG)([u.A], () => u.A.useReducedMotion);
     return i.useMemo(
-        () => _({ colorStrings: t, useReducedMotion: s, roleStyle: n, includeConvenienceGlow: r, animateGradient: a }),
-        [t, n, r, s, a],
+        () => _({ colorStrings: t, useReducedMotion: a, roleStyle: n, includeConvenienceGlow: r, animateGradient: s }),
+        [t, n, r, a, s],
     );
 }
 function p(e, t, n) {
     return i.useMemo(() => {
         let i = [e, t, n].filter((e) => null != e),
-            a = i.length >= 2,
-            s = i.length > 1 ? 100 / (i.length - 1) : 0,
-            o = i.map((e, t) => (0, r.jsx)("stop", { offset: `${t * s}%`, style: { stopColor: e } }, t)),
+            s = i.length >= 2,
+            a = i.length > 1 ? 100 / (i.length - 1) : 0,
+            o = i.map((e, t) => (0, r.jsx)("stop", { offset: `${t * a}%`, style: { stopColor: e } }, t)),
             l = i.join("");
         return {
-            hasGradient: a,
+            hasGradient: s,
             stops: o,
             gradientId: `dotGradient-${l}`,
             animatedGradientId: `dotAnimatedGradient-${l}`,
@@ -54,13 +54,13 @@ function h(e, t) {
     return i.useMemo(() => {
         let n;
         if (null == e) return e;
-        let i = new RegExp(d),
-            a = [],
-            o = 0;
+        let i = (0, o.A)(),
+            s = [],
+            l = 0;
         for (; null !== (n = i.exec(e)); )
-            n.index > o && a.push(e.slice(o, n.index)),
-                a.push((0, r.jsx)("span", { className: s()(c.Zg, t), children: n[0] }, `emoji${n.index}`)),
-                (o = i.lastIndex);
-        return o < e.length && a.push(e.slice(o)), a;
+            n.index > l && s.push(e.slice(l, n.index)),
+                s.push((0, r.jsx)("span", { className: a()(d.Zg, t), children: n[0] }, `emoji${n.index}`)),
+                (l = i.lastIndex);
+        return l < e.length && s.push(e.slice(l)), s;
     }, [e, t]);
 }

@@ -426,6 +426,14 @@ let r = {
                     return "row";
                 },
             },
+            MESSAGES_HEADER_PADDING_BOTTOM: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 16;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 12;
+                    return 16;
+                },
+            },
             MESSAGES_ITEM_CHANNEL_AVATAR_SIZE: {
                 resolve(e) {
                     let { enabledExperiments: t } = e;
@@ -440,6 +448,14 @@ let r = {
                     if (0 === t.length) return "redesign/channel-title/semibold";
                     for (let e of t) if ("mobile-visual-refresh" === e) return "text-md/semibold";
                     return "redesign/channel-title/semibold";
+                },
+            },
+            MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM: {
+                resolve(e) {
+                    let { enabledExperiments: t } = e;
+                    if (0 === t.length) return 8;
+                    for (let e of t) if ("mobile-visual-refresh" === e) return 16;
+                    return 8;
                 },
             },
             SEGMENTED_CONTROL_BORDER_RADIUS: {

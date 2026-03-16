@@ -2,16 +2,16 @@ n.d(t, { A: () => h });
 var r = n(627968),
     l = n(64700),
     i = n(503698),
-    a = n.n(i),
-    s = n(442215),
+    s = n.n(i),
+    a = n(497766),
     o = n(397927),
     u = n(892358),
     c = n(341915),
     d = n(890687),
     m = n(646764),
-    p = n(203908),
-    E = n(828080);
-let f = { duration: 250 },
+    p = n(758468),
+    f = n(997382);
+let E = { duration: 250 },
     h = (e) => {
         let {
                 currentPx: t,
@@ -24,32 +24,32 @@ let f = { duration: 250 },
                 onMouseEnter: S,
                 onMouseLeave: A,
             } = e,
-            { label: C, targetSec: _, leftPx: b, rightPx: T, index: y } = n,
+            { label: C, targetSec: _, leftPx: b, rightPx: y, index: T } = n,
             { completedRatio: N } = (0, d.O9)(h),
-            [D, I] = l.useState(!1),
+            [D, R] = l.useState(!1),
             L = b - p.Ue,
-            j = t >= L ? Math.min(1, (t - L) / (T - L)) : 0,
-            M = 0 === y && N < 1,
-            { fill: w } = (0, o.zhh)({
-                fill: 100 * j,
-                config: f,
+            M = t >= L ? Math.min(1, (t - L) / (y - L)) : 0,
+            j = 0 === T && N < 1,
+            { fill: I } = (0, o.zhh)({
+                fill: 100 * M,
+                config: E,
                 onRest: () => {
-                    j <= 0 && I(!1);
+                    M <= 0 && R(!1);
                 },
                 onStart: () => {
-                    I(!0);
+                    R(!0);
                 },
             });
-        return (0, r.jsxs)(s.animated.div, {
-            className: a()(E.ck, { [E.a]: M && D, [E.C9]: !M && D }),
+        return (0, r.jsxs)(a.animated.div, {
+            className: s()(f.ck, { [f.a]: j && D, [f.C9]: !j && D }),
             style: {
                 left: i ? x.to((e) => b - e) : b,
                 "--custom-indicator-size": i ? x.to((e) => `${p.lS + 2 * e}px`) : `${p.lS}px`,
-                "--custom-indicator-fill": w.to((e) => e),
+                "--custom-indicator-fill": I.to((e) => e),
             },
             children: [
                 (0, r.jsx)(o.DUT, {
-                    className: E.E6,
+                    className: f.E6,
                     onClick:
                         null != g
                             ? (e) => {
@@ -67,7 +67,7 @@ let f = { duration: 250 },
                     }),
                 }),
                 (0, r.jsxs)("div", {
-                    className: E.Ru,
+                    className: f.Ru,
                     role: "tooltip",
                     "aria-label": null != C ? `${(0, u.rB)(_)} - ${C}` : (0, u.rB)(_),
                     children: [
@@ -79,7 +79,7 @@ let f = { duration: 250 },
                         null != C &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, r.jsx)("span", { className: E.AE, "aria-hidden": "true" }),
+                                    (0, r.jsx)("span", { className: f.AE, "aria-hidden": "true" }),
                                     (0, r.jsx)(o.Text, {
                                         variant: "text-xs/normal",
                                         color: "always-white",

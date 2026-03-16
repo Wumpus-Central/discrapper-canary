@@ -2,13 +2,13 @@ n.d(t, { A: () => f });
 var r = n(627968),
     l = n(64700),
     i = n(435371),
-    a = n(397927),
-    s = n(341915),
+    s = n(397927),
+    a = n(341915),
     o = n(590202),
     u = n(971649),
     c = n(651892),
     d = n(814793),
-    m = n(717415),
+    m = n(752231),
     p = n(985018);
 function f(e) {
     let { floatRight: t } = e,
@@ -18,12 +18,12 @@ function f(e) {
         v = l.useCallback(() => {
             h &&
                 ((0, c.Xm)(n.id, {
-                    content: s.uF.VIDEO_MODAL,
+                    content: a.uF.VIDEO_MODAL,
                     ctaContent: o.Cy.COPY_QUEST_URL,
                     impressionId: E,
                     sourceQuestContent: f,
                 }),
-                (0, a.showToast)((0, a.createToast)(p.intl.string(p.t["+5kSoW"]), a.ToastType.SUCCESS)));
+                (0, s.showToast)((0, s.createToast)(p.intl.string(p.t["+5kSoW"]), s.ToastType.SUCCESS)));
         }, [E, h, n.id, f]);
     return h
         ? (0, r.jsx)("div", {
@@ -32,9 +32,9 @@ function f(e) {
               style: { marginLeft: t ? "auto" : void 0 },
               children: (0, r.jsx)(i.m_, {
                   text: p.intl.string(p.t.WmfZHZ),
-                  children: (0, r.jsx)(a.K0, {
+                  children: (0, r.jsx)(s.K0, {
                       variant: "overlay-secondary",
-                      icon: a.qYV,
+                      icon: s.qYV,
                       "aria-label": p.intl.string(p.t.RDE0Sc),
                       onClick: v,
                   }),

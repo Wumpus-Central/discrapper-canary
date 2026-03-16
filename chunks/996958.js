@@ -1,4 +1,4 @@
-n.d(t, { A: () => b }), n(323874), n(14289), n(35956);
+n.d(t, { A: () => v }), n(323874), n(14289), n(35956);
 var a = n(627968),
     i = n(64700),
     s = n(311907),
@@ -10,35 +10,37 @@ var a = n(627968),
     u = n(581057),
     m = n(270704),
     h = n(369496),
-    x = n(565832),
-    p = n(622697),
+    p = n(565832),
+    x = n(622697),
     g = n(259059),
     _ = n(698638),
     f = n(465692);
-function b() {
+function v() {
     let [e, t] = (0, i.useState)(!1),
         [n, s] = (0, i.useState)(!1),
         [r, c] = (0, i.useState)(null),
-        x = (0, u.Ay)((e) => e.toolsCache),
-        { setToolsCache: g, removeToolsCache: b } = (0, u.DE)(),
-        { setImgCache: S } = (0, u.TW)(),
+        p = (0, u.Ay)((e) => e.toolsCache),
+        { setToolsCache: g, removeToolsCache: v } = (0, u.DE)(),
+        { setImgCache: y } = (0, u.TW)(),
         T = (0, i.useCallback)(
             (e) => {
-                let t = x[e];
+                let t = p[e];
                 null != t
-                    ? c({ previewToolKey: t.url, palette: t.palette })
-                    : c((t) => (null == t ? { previewToolKey: e, palette: m.Wj } : { ...t, previewToolKey: e }));
+                    ? c({ previewToolKey: t.url, palette: t.palette, skuId: "0" })
+                    : c((t) =>
+                          null == t ? { previewToolKey: e, palette: m.Wj, skuId: "0" } : { ...t, previewToolKey: e },
+                      );
             },
-            [x],
+            [p],
         ),
-        y = (0, i.useCallback)((e) => {
+        S = (0, i.useCallback)((e) => {
             c((t) => (null == t ? null : { ...t, palette: e }));
         }, []),
-        N = (0, i.useCallback)(
+        E = (0, i.useCallback)(
             (e) => {
-                b(e);
+                v(e);
             },
-            [b],
+            [v],
         );
     return (0, a.jsxs)(a.Fragment, {
         children: [
@@ -71,10 +73,10 @@ function b() {
                         children: [
                             e && (0, a.jsx)(d.Ix, {}),
                             n &&
-                                (0, a.jsx)(p.A, {
+                                (0, a.jsx)(x.A, {
                                     selected: r?.palette?.name,
                                     onSelect: (e) => {
-                                        r?.previewToolKey != null && g(r.previewToolKey, r.previewToolKey, e), y(e);
+                                        r?.previewToolKey != null && g(r.previewToolKey, r.previewToolKey, e), S(e);
                                     },
                                 }),
                         ],
@@ -84,7 +86,7 @@ function b() {
             (0, a.jsxs)("div", {
                 className: f.iW,
                 children: [
-                    (0, a.jsx)(v, { nameplate: r }, r?.palette?.name),
+                    (0, a.jsx)(b, { nameplate: r }, r?.palette?.name),
                     (0, a.jsxs)("div", {
                         className: f.Uo,
                         children: [
@@ -100,19 +102,19 @@ function b() {
                                     let t = URL.createObjectURL(e[0]),
                                         n = e[0],
                                         a = await n.arrayBuffer();
-                                    S(t, t, (0, h.nI)(a)), g(t, t, m.Wj);
+                                    y(t, t, (0, h.nI)(a)), g(t, t, m.Wj);
                                 },
                             }),
                             (0, a.jsx)("div", {
                                 className: f.is,
-                                children: Object.values(x).map((e) => {
+                                children: Object.values(p).map((e) => {
                                     let { url: t } = e;
-                                    return (0, a.jsx)(j, { src: t, onSetStatic: T, removeAsset: N }, t);
+                                    return (0, a.jsx)(j, { src: t, onSetStatic: T, removeAsset: E }, t);
                                 }),
                             }),
                             (0, a.jsx)(C, {
                                 label: "gradient override",
-                                onChange: (e) => y({ name: m.AK, darkBackground: e, lightBackground: e }),
+                                onChange: (e) => S({ name: m.AK, darkBackground: e, lightBackground: e }),
                             }),
                             (0, a.jsx)(A, { label: "set", onClick: () => {} }),
                         ],
@@ -122,7 +124,7 @@ function b() {
         ],
     });
 }
-function v(e) {
+function b(e) {
     let { nameplate: t } = e,
         [n, s] = (0, i.useState)(320),
         r = (0, i.useRef)(null),
@@ -168,11 +170,11 @@ function v(e) {
                 style: { width: `${n}px` },
                 children: [
                     (0, a.jsx)(l.Text, { variant: "text-sm/semibold", children: "Memberlist" }),
-                    (0, a.jsx)(S, { nameplate: t }),
+                    (0, a.jsx)(y, { nameplate: t }),
                     (0, a.jsx)(l.Text, { variant: "text-sm/semibold", children: "DMs" }),
                     (0, a.jsx)(T, { nameplate: t }),
                     (0, a.jsx)(l.Text, { variant: "text-sm/semibold", children: "RTC" }),
-                    (0, a.jsx)(y, { nameplate: t }),
+                    (0, a.jsx)(S, { nameplate: t }),
                     (0, a.jsx)("div", { className: f.Di, onMouseDown: m }),
                 ],
             }),
@@ -228,7 +230,7 @@ function C(e) {
         ],
     });
 }
-function S(e) {
+function y(e) {
     let { nameplate: t } = e,
         n = (0, s.bG)([c.default], () => c.default.getCurrentUser());
     return (0, a.jsx)("div", {
@@ -266,10 +268,10 @@ function T(e) {
         }),
     });
 }
-function y(e) {
+function S(e) {
     let { nameplate: t } = e;
     return (0, a.jsx)("div", {
         className: f.VH,
-        children: (0, a.jsx)("div", { className: f.X2, children: (0, a.jsx)(x.A, { nameplate: t }) }),
+        children: (0, a.jsx)("div", { className: f.X2, children: (0, a.jsx)(p.A, { nameplate: t }) }),
     });
 }

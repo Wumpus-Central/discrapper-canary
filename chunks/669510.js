@@ -13,41 +13,45 @@ function d(e) {
             label: t,
             totalLineItemLabel: n,
             totalLineItemLabelSubText: s,
-            showTotalWhenCollapsed: d = !1,
-            lineItems: _,
-            intervalType: f,
-            intervalCount: p,
-            currency: h,
-            defaultExpanded: m = !1,
+            totalLineItemValueSubText: d,
+            showTotalWhenCollapsed: _ = !1,
+            lineItems: f,
+            intervalType: p,
+            intervalCount: h,
+            currency: m,
+            defaultExpanded: E = !1,
         } = e,
-        [E, g] = i.useState(m),
-        A = i.useMemo(() => _.reduce((e, t) => e + t.amount, 0), [_]),
-        I = (0, l.$g)(A, h),
-        T = (0, l.CE)(I, f, p),
-        S = (0, r.jsxs)(u.h, {
+        [g, A] = i.useState(E),
+        I = i.useMemo(() => {
+            let e = f.reduce((e, t) => e + t.amount, 0),
+                t = (0, l.$g)(e, m);
+            return (0, l.CE)(t, p, h);
+        }, [f, m, p, h]),
+        T = (0, r.jsxs)(u.h, {
             label: t,
-            defaultExpanded: m,
-            isDisabled: _.length <= 0,
-            onExpandedChange: g,
-            collapsedContent: d
-                ? (0, r.jsx)(o.Text, { variant: "text-md/normal", color: "text-subtle", children: T })
+            defaultExpanded: E,
+            isDisabled: f.length <= 0,
+            onExpandedChange: A,
+            collapsedContent: _
+                ? (0, r.jsx)(o.Text, { variant: "text-md/normal", color: "text-subtle", children: I })
                 : null,
             children: [
-                _.map((e) => {
+                f.map((e) => {
                     let { formatWithoutRate: t, amount: n, ...i } = e,
-                        s = (0, l.$g)(n, h),
-                        a = t ? s : (0, l.CE)(s, f, p);
+                        s = (0, l.$g)(n, m),
+                        a = t ? s : (0, l.CE)(s, p, h);
                     return (0, r.jsx)(u.i, { value: a, ...i }, i.id);
                 }),
                 (0, r.jsx)("div", { className: c.m }),
                 (0, r.jsx)(u.i, {
                     label: n ?? t,
                     labelSubText: s,
-                    value: T,
+                    value: I,
+                    subText: d,
                     color: "text-strong",
                     valueColor: "text-strong",
                 }),
             ],
         });
-    return (0, r.jsx)("div", { className: a()({ [c.k]: E }), children: S });
+    return (0, r.jsx)("div", { className: a()({ [c.k]: g }), children: T });
 }

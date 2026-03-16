@@ -2,8 +2,8 @@ n.d(t, { A: () => A });
 var r = n(627968),
     l = n(64700),
     i = n(158954),
-    a = n(892358),
-    s = n(475815),
+    s = n(892358),
+    a = n(475815),
     o = n(341915),
     u = n(245853),
     c = n(579473),
@@ -11,12 +11,12 @@ var r = n(627968),
     m = n(971649),
     p = n(651892),
     f = n(73473),
-    E = n(717415),
-    h = n(98197),
-    v = n(583235),
+    E = n(752231),
+    h = n(881621),
+    v = n(781121),
     x = n(654487),
     g = n(985018),
-    S = n(221190);
+    S = n(681636);
 function A(e) {
     let { videoRef: t, onTrackQuestContentClick: n, orientation: A } = e,
         {
@@ -30,8 +30,8 @@ function A(e) {
         D = l.useCallback(
             (e) => {
                 if (y) {
-                    let e = (0, s.qf)(t.current?.parentNode, t.current);
-                    null != e && (0, s.sP)(e);
+                    let e = (0, a.qf)(t.current?.parentNode, t.current);
+                    null != e && (0, a.sP)(e);
                 }
                 n(e, d.Cy.LEARN_MORE), N(e, d.Cy.OPEN_GAME_LINK);
             },
@@ -41,14 +41,14 @@ function A(e) {
             title: (0, p.wr)(b),
             subtitle: b.config.ctaConfig.subtitle ?? g.intl.string(g.t.mxaHfx),
         },
-        { enabled: I } = u.uK.useConfig({ location: x.rE.VIDEO_MODAL }),
+        { enabled: M } = u.uK.useConfig({ location: x.rE.VIDEO_MODAL }),
         j = l.useMemo(() => (0, c.tW)(b, c.fY.VIDEO_PLAYER_THUMBNAIL, void 0, !1)?.url ?? null, [b]);
-    return I
+    return M
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(a.nY, { url: j }),
-                  (0, r.jsx)(a.KP, {}),
-                  (0, r.jsxs)(a.zj, {
+                  (0, r.jsx)(s.nY, { url: j }),
+                  (0, r.jsx)(s.KP, {}),
+                  (0, r.jsxs)(s.zj, {
                       orientation: A,
                       children: [
                           null != j &&
@@ -57,7 +57,7 @@ function A(e) {
                                   questContent: o.uF.VIDEO_MODAL_END_CARD,
                                   sourceQuestContent: _,
                                   children: (e) =>
-                                      (0, r.jsx)(a.Kb, {
+                                      (0, r.jsx)(s.Kb, {
                                           ref: (t) => {
                                               e.current = t;
                                           },
@@ -65,7 +65,7 @@ function A(e) {
                                           orientation: A,
                                       }),
                               }),
-                          (0, r.jsx)(a.lx, {
+                          (0, r.jsx)(s.lx, {
                               title: R,
                               subtitle: L,
                               ctaBtnLabel: b.config.ctaConfig.buttonLabel,
@@ -85,7 +85,7 @@ function A(e) {
                           questContent: o.uF.VIDEO_MODAL_END_CARD,
                           sourceQuestContent: _,
                           children: (e) =>
-                              (0, r.jsx)(a.pK, {
+                              (0, r.jsx)(s.pK, {
                                   ref: (t) => {
                                       e.current = t;
                                   },
@@ -93,7 +93,7 @@ function A(e) {
                               }),
                       }),
                   (0, r.jsx)("div", { className: S.MT, "data-testid": "discord-web-video-player-end-screen" }),
-                  (0, r.jsx)(a.OH, {
+                  (0, r.jsx)(s.OH, {
                       title: R,
                       subtitle: L,
                       icon: i.KS6,

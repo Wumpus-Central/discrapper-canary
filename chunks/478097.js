@@ -1,9 +1,14 @@
 "use strict";
-n.d(t, { A: () => r });
-let r = (0, n(600975).C)({
+n.d(t, { BI: () => s, GU: () => i });
+let r = (0, n(945810).mj)({
+    name: "2026-03-bogo-promotion-marketing-materials-v2",
     kind: "user",
-    id: "2024-06_bogo_promotion_marketing_materials",
-    label: "Summer BOGO Marketing Materials",
-    defaultConfig: { enabled: !1 },
-    treatments: [{ id: 1, label: "Enable BOGO Promotion marketing materials", config: { enabled: !0 } }],
+    defaultConfig: !1,
+    variations: { 1: !0 },
 });
+function i(e) {
+    return r.useConfig({ location: e });
+}
+function s(e) {
+    return r.getConfig({ location: e });
+}

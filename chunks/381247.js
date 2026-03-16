@@ -54,9 +54,10 @@ function c(e) {
             tooltip: f,
             tooltipAriaLabel: p,
             subText: h,
-            subTextHasStrikethrough: m,
+            subTextColor: m = "text-muted",
+            subTextHasStrikethrough: E,
         } = e,
-        E = i.useMemo(() => {
+        g = i.useMemo(() => {
             let e = (0, r.jsxs)(a.Text, {
                 variant: "text-md/normal",
                 color: c,
@@ -71,14 +72,14 @@ function c(e) {
                           e,
                           (0, r.jsx)(a.Text, {
                               variant: "text-xs/medium",
-                              color: "text-muted",
-                              className: m ? l.tP : void 0,
+                              color: m,
+                              className: E ? l.tP : void 0,
                               children: h,
                           }),
                       ],
                   });
-        }, [o, d, h, m, c]),
-        g = i.useMemo(
+        }, [o, d, h, E, c, m]),
+        A = i.useMemo(
             () =>
                 null == n
                     ? t
@@ -99,12 +100,12 @@ function c(e) {
                 className: l.yB,
                 children: [
                     _,
-                    g,
+                    A,
                     null != f &&
                         (0, r.jsx)(s.m_, { text: f, children: (0, r.jsx)(a.cBN, { size: "xs", "aria-label": p }) }),
                 ],
             }),
-            E,
+            g,
         ],
     });
 }

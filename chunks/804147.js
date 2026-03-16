@@ -8,11 +8,11 @@ var r = n(627968),
     u = n(397927),
     c = n(624600),
     d = n(972441),
-    m = n(717415),
-    p = n(961255),
-    f = n(261331),
-    E = n(203908),
-    h = n(790191),
+    m = n(163961),
+    p = n(752231),
+    f = n(104148),
+    E = n(758468),
+    h = n(381135),
     v = n(712119);
 let x = { tension: 300, friction: 30, clamp: !0 };
 function g(e) {
@@ -33,7 +33,7 @@ function g(e) {
             onScrubForward: R,
             "data-testid": L,
         } = e,
-        { quest: M, sourceQuestContent: j, useNewProgressBarStyling: I } = l.useContext(m.VideoQuestModalContext),
+        { quest: M, sourceQuestContent: j, useNewProgressBarStyling: I } = l.useContext(p.VideoQuestModalContext),
         {
             contRef: w,
             boundingRect: k,
@@ -120,7 +120,7 @@ function g(e) {
                             (0, r.jsx)(
                                 c.A,
                                 {
-                                    showGlow: T !== f.Q6.ENDED && null != Y && Y > e.startPx,
+                                    showGlow: T !== m.Q6.ENDED && null != Y && Y > e.startPx,
                                     segment: e,
                                     currentPxSpring: H,
                                     animatingIndex: X,
@@ -143,7 +143,7 @@ function g(e) {
                         let n = X === e.index,
                             l = e.targetSec;
                         return (0, r.jsx)(
-                            p.A,
+                            f.A,
                             {
                                 currentPx: null != Y ? Y : 0,
                                 indicator: e,

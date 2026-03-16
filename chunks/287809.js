@@ -102,7 +102,7 @@ function b(e) {
         r = T[e.id],
         i = void 0 !== e.id && e.id === E.default.getId();
     if (null == r)
-        void 0 !== (t = (r = new h.A(e)).premiumType) && i && (r.premiumType = L((0, p.I9)(r), r.premiumType));
+        void 0 !== (t = (r = new h.A(R(e))).premiumType) && i && (r.premiumType = L((0, p.I9)(r), r.premiumType));
     else if (n) {
         let n = R(e);
         void 0 !== (t = n.premium_type ?? n.premiumType) && i && (0, p._D)(n) && (n = D(n)),

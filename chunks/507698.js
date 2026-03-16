@@ -1,18 +1,19 @@
 "use strict";
-n.d(t, { Xq: () => i, bS: () => s, kn: () => a, uZ: () => o });
-var r = n(735438);
-let i = (e) => {
+n.d(t, { Xq: () => s, bS: () => a, kn: () => o, uZ: () => l });
+var r = n(735438),
+    i = n(628856);
+let s = (e) => {
         if ("object" != typeof e || null == e) return null;
-        let t = {};
+        let t = (0, i.V)(e);
+        if (null == t) return null;
+        let n = { skuId: t };
         return (
-            "asset" in e && "string" == typeof e.asset && (t.asset = e.asset),
-            "sku_id" in e && "string" == typeof e.sku_id && (t.skuId = e.sku_id),
-            "skuId" in e && "string" == typeof e.skuId && (t.skuId = e.skuId),
-            "expires_at" in e && "number" == typeof e.expires_at && (t.expiresAt = e.expires_at),
-            "expiresAt" in e && "number" == typeof e.expiresAt && (t.expiresAt = e.expiresAt),
-            t
+            "asset" in e && "string" == typeof e.asset && (n.asset = e.asset),
+            "expires_at" in e && "number" == typeof e.expires_at && (n.expiresAt = e.expires_at),
+            "expiresAt" in e && "number" == typeof e.expiresAt && (n.expiresAt = e.expiresAt),
+            n
         );
     },
-    s = (e) => e?.expiresAt != null && 1e3 * e.expiresAt < Date.now(),
-    a = (e, t) => (null == e || null == t ? e === t : (0, r.isEqual)(i(e), i(t))),
-    o = (e, t) => null != t && !s(e?.avatarDecoration) && e?.avatarDecoration?.asset != null;
+    a = (e) => e?.expiresAt != null && 1e3 * e.expiresAt < Date.now(),
+    o = (e, t) => (null == e || null == t ? e === t : (0, r.isEqual)(s(e), s(t))),
+    l = (e, t) => null != t && !a(e?.avatarDecoration) && e?.avatarDecoration?.asset != null;

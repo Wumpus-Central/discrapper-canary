@@ -391,6 +391,13 @@ let { Themes: r } = n(680049).zv,
                 [r.DARKER]: { raw: "PLUM_21", opacity: 1 },
                 gradient: { light: { color: "WHITE_500", opacity: 0.75 }, dark: { color: "WHITE_500", opacity: 0.05 } },
             },
+            CHANNEL_BACKGROUND_DEFAULT: {
+                category: "generic",
+                [r.DARK]: { raw: "NEUTRAL_69", opacity: 1 },
+                [r.LIGHT]: { raw: "NEUTRAL_2", opacity: 1 },
+                [r.MIDNIGHT]: { raw: "NEUTRAL_97", opacity: 1 },
+                [r.DARKER]: { raw: "NEUTRAL_86", opacity: 1 },
+            },
             CHANNEL_ICON: {
                 category: "generic",
                 [r.DARK]: { raw: "NEUTRAL_28", opacity: 1 },

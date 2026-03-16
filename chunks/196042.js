@@ -1,17 +1,14 @@
 "use strict";
-n.d(t, { Ay: () => a, fy: () => i, oy: () => r });
-let r = (0, n(600975).C)({
-        kind: "user",
-        id: "2023-06_bogo_promotion_gate",
-        label: "BOGO Promotion Manager",
-        defaultConfig: { enabled: !1 },
-        treatments: [{ id: 1, label: "Enable BOGO Promotion Manager", config: { enabled: !0 } }],
-    }),
-    i = function () {
-        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        return r.getCurrentConfig({ location: "489551_2" }, { autoTrackExposure: e });
-    },
-    a = function () {
-        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        return r.useExperiment({ location: "489551_1" }, { autoTrackExposure: e });
-    };
+n.d(t, { RK: () => s, si: () => i });
+let r = (0, n(945810).mj)({
+    name: "2026-03-bogo-promotion-gate-v2",
+    kind: "user",
+    defaultConfig: !1,
+    variations: { 1: !0 },
+});
+function i(e) {
+    return r.useConfig({ location: e });
+}
+function s(e) {
+    return r.getConfig({ location: e });
+}

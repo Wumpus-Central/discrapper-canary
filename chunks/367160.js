@@ -158,7 +158,7 @@ let y = (e) => {
         "renewalInvoicePreview" in ec &&
         null != ec.renewalInvoicePreview
     ) {
-        let e = (0, A.Gj)(ec.invoicePreview, ec.renewalInvoicePreview, eg);
+        let e = (0, A.Gj)(ec.invoicePreview, ec.renewalInvoicePreview, eg, { discountOffer: M });
         eI = (0, r.jsx)(c._, { ...e });
     }
     let eT = z

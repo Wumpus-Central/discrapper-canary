@@ -32,6 +32,7 @@ var r = {
     "heading-deprecated-12/semibold": "heading-deprecated-12/semibold__0f084",
     "heading-deprecated-12/bold": "heading-deprecated-12/bold__0f084",
     "heading-deprecated-12/extrabold": "heading-deprecated-12/extrabold__0f084",
+    "redesign/heading-18/semibold": "redesign/heading-18/semibold__0f084",
     "redesign/heading-18/bold": "redesign/heading-18/bold__0f084",
     "text-xxs/normal": "text-xxs/normal__0f084",
     "text-xxs/medium": "text-xxs/medium__0f084",

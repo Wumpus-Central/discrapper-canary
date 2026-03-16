@@ -305,11 +305,7 @@ function B(e) {
         [v] = (0, S.Kq)(y),
         [C, R] = i.useState(!1);
     if (A) {
-        let e = (0, m.Gj)(v ?? null, s, null, {
-            includeTaxLineItem: !0,
-            overrideRenewalDate: a,
-            isSubscriptionUpdate: o,
-        });
+        let e = (0, m.Gj)(n ?? null, s, null, { overrideRenewalDate: a, isSubscriptionUpdate: o });
         return (0, r.jsx)(p._D, { ...e, defaultExpanded: I });
     }
     return (0, r.jsxs)(r.Fragment, {

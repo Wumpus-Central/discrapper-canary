@@ -32,6 +32,7 @@ n.r(
         "heading-deprecated-12/semibold": "heading-deprecated-12/semibold__4ed1a",
         "heading-deprecated-12/bold": "heading-deprecated-12/bold__4ed1a",
         "heading-deprecated-12/extrabold": "heading-deprecated-12/extrabold__4ed1a",
+        "redesign/heading-18/semibold": "redesign/heading-18/semibold__4ed1a",
         "redesign/heading-18/bold": "redesign/heading-18/bold__4ed1a",
         "text-xxs/normal": "text-xxs/normal__4ed1a",
         "text-xxs/medium": "text-xxs/medium__4ed1a",

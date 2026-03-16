@@ -7,7 +7,7 @@ var r = n(64700),
     o = n(544180),
     u = n(18437),
     c = n(753386),
-    d = n(261331),
+    d = n(163961),
     m = n(652215);
 function p(e) {
     return null == e.current || e.current.currentLevel < 0 || e.current.levels.length <= e.current.currentLevel
@@ -117,7 +117,7 @@ function f(e) {
             },
             [x, t, f, n, C, E, h],
         ),
-        I = r.useCallback(
+        M = r.useCallback(
             (e) => {
                 null != t.current &&
                     null != e &&
@@ -136,7 +136,7 @@ function f(e) {
             },
             [x, t, f, n, C, E, h],
         ),
-        M = r.useCallback(
+        j = r.useCallback(
             (e, n) => {
                 null != t.current &&
                     C({
@@ -153,7 +153,7 @@ function f(e) {
             },
             [x, t, f, C, E, h],
         ),
-        j = r.useCallback(() => {
+        I = r.useCallback(() => {
             null != t.current &&
                 ((y.current += 1),
                 C({
@@ -288,7 +288,7 @@ function f(e) {
             },
             [x, t, f, n, C, E, h],
         ),
-        V = r.useCallback(
+        U = r.useCallback(
             (e) => {
                 null != t.current &&
                     C({
@@ -311,14 +311,14 @@ function f(e) {
         trackQuestVideoTimeToFirstFrame: D,
         trackQuestVideoProgressed: R,
         trackQuestVideoResumed: L,
-        trackQuestVideoPaused: I,
-        trackQuestVideoFocusChange: M,
+        trackQuestVideoPaused: M,
+        trackQuestVideoFocusChange: j,
         trackQuestContentClick: k,
-        trackQuestVideoBufferingStarted: j,
+        trackQuestVideoBufferingStarted: I,
         trackQuestVideoBufferingEnded: w,
         trackQuestVideoSegmentWatched: O,
         trackQuestVideoFullscreenChanged: Q,
         trackQuestVideoError: P,
-        trackQuestVideoVolumeChanged: V,
+        trackQuestVideoVolumeChanged: U,
     };
 }
