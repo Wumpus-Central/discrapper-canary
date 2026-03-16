@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { Uq: () => p, Z5: () => g, _9: () => m, ack: () => d, d_: () => A, fb: () => h, hK: () => E, hS: () => f }),
+n.d(t, { Uq: () => p, Z5: () => E, _9: () => m, ack: () => d, d_: () => A, fb: () => h, hK: () => g, hS: () => f }),
     n(321073);
 var r = n(73153),
     i = n(863005),
-    a = n(95701),
-    s = n(734057),
+    s = n(95701),
+    a = n(734057),
     o = n(769765),
     l = n(287809),
     u = n(661191),
@@ -12,11 +12,11 @@ var r = n(73153),
 function d(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        a = arguments.length > 4 ? arguments[4] : void 0;
+        s = arguments.length > 4 ? arguments[4] : void 0;
     r.h.dispatch({
         type: "CHANNEL_ACK",
         channelId: e,
-        messageId: a,
+        messageId: s,
         immediate: n,
         force: i,
         context: c.QCW,
@@ -26,23 +26,23 @@ function d(e, t) {
 function _(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        l = s.A.getChannel(e);
+        l = a.A.getChannel(e);
     if (null == l || null == l.guild_id) return;
     let u = o.A.getCategories(l.guild_id);
     if (null == u[e]) return;
-    let c = u[e]
-            .filter((e) => {
-                let { channel: t } = e;
-                return (0, a.Z_)(t.type);
-            })
-            .map((e) => {
-                let { channel: t } = e;
-                return t.id;
-            }),
-        _ = [...c];
+    let c = u[e].filter((e) => {
+            let { channel: t } = e;
+            return (0, s.Z_)(t.type);
+        }),
+        _ = c.map((e) => {
+            let { channel: t } = e;
+            return t.id;
+        });
     for (let e of (c.forEach((e) => {
-        let t = i.A.getActiveJoinedThreadsForParent(l.guild_id, e);
-        for (let e in t) _.push(e);
+        let { channel: t } = e,
+            n = t.guild_id ?? l.guild_id,
+            r = i.A.getActiveJoinedThreadsForParent(n, t.id);
+        for (let e in r) _.push(e);
     }),
     _))
         d(e, t, n, r);
@@ -63,10 +63,10 @@ function h(e) {
 function m(e, t) {
     r.h.dispatch({ type: "ENABLE_AUTOMATIC_ACK", channelId: e, windowId: t });
 }
-function g(e, t) {
+function E(e, t) {
     r.h.dispatch({ type: "DISABLE_AUTOMATIC_ACK", channelId: e, windowId: t });
 }
-function E(e, t, n) {
+function g(e, t, n) {
     r.h.dispatch({ type: "GUILD_FEATURE_ACK", id: e, ackType: t, ackedId: n, local: !1 });
 }
 function A(e, t) {

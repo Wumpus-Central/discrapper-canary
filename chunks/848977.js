@@ -1,46 +1,49 @@
-n.d(t, { A: () => E });
-var r = n(627968);
-n(64700);
-var i = n(311907),
-    l = n(397927),
-    a = n(334738),
-    d = n(435470),
-    s = n(970278),
-    u = n(152007),
-    o = n(95701),
-    c = n(769765),
-    A = n(222823),
-    g = n(652215),
-    f = n(985018);
-function E(e) {
-    let t,
-        n,
-        E =
-            ((t = (0, d.ed)(e.guild_id, e.id)),
-            (n = (0, i.bG)([A.Ay, c.A, s.A, u.A], () => {
+t.d(n, { A: () => h });
+var r = t(627968);
+t(64700);
+var i = t(311907),
+    l = t(397927),
+    a = t(334738),
+    d = t(435470),
+    s = t(970278),
+    u = t(152007),
+    o = t(95701),
+    c = t(769765),
+    A = t(222823),
+    g = t(652215),
+    f = t(985018);
+function h(e) {
+    let n,
+        t,
+        h =
+            ((n = (0, d.ed)(e.guild_id, e.id)),
+            (t = (0, i.bG)([A.Ay, c.A, s.A, u.A], () => {
                 if (e.isForumPost()) return A.Ay.isForumPostUnread(e.id);
                 if (e.type !== g.rbe.GUILD_CATEGORY) return A.Ay.hasUnreadOrMentions(e.id);
                 {
-                    let t = c.A.getCategories(e.getGuildId());
-                    if (null == t[e.id]) return !1;
+                    let n = c.A.getCategories(e.getGuildId());
+                    if (null == n[e.id]) return !1;
+                    let t = n[e.id].filter((e) => {
+                        let { channel: n } = e;
+                        return (0, o.Z_)(n.type);
+                    });
                     if (
-                        t[e.id].some((e) => {
-                            let { channel: t } = e;
-                            return (0, o.Z_)(t.type) && A.Ay.hasUnreadOrMentions(t.id);
+                        t.some((e) => {
+                            let { channel: n } = e;
+                            return A.Ay.hasUnreadOrMentions(n.id);
                         })
                     )
                         return !0;
-                    let n = new Set(t[e.id].map((e) => e.channel.id)),
-                        r = s.A.getThreadsForGuild(e.guild_id);
-                    for (let e in r)
-                        if (n.has(e)) {
-                            for (let t in r[e])
-                                if (u.A.hasJoined(t) && !u.A.isMuted(t) && A.Ay.hasUnreadOrMentions(t)) return !0;
-                        }
+                    for (let { channel: n } of t) {
+                        let t = n.guild_id ?? e.guild_id,
+                            r = s.A.getThreadsForParent(t, n.id);
+                        for (let e in r)
+                            if (u.A.hasJoined(e) && !u.A.isMuted(e) && A.Ay.hasUnreadOrMentions(e)) return !0;
+                    }
                     return !1;
                 }
             }, [e])),
-            e.isForumLikeChannel() ? t > 0 : n);
+            e.isForumLikeChannel() ? n > 0 : t);
     return (0, r.jsx)(l.Drp, {
         id: "mark-channel-read",
         label: f.intl.string(f.t.e6RscS),
@@ -51,6 +54,6 @@ function E(e) {
                 objectType: g.AnalyticsObjectTypes.ACK_MANUAL,
             });
         },
-        disabled: !E,
+        disabled: !h,
     });
 }
