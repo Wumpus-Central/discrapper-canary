@@ -25,7 +25,7 @@ var r = (function (e) {
         (e.PREMIUM_VOICE_FILTERS = "premiumVoiceFilters"),
         (e.APP_ICONS = "appIcons"),
         (e.CHAT_WALLPAPERS = "chatWallpapers"),
-        (e.PREMIUM_ORB_BONUS = "premiumOrbBonus"),
+        (e.QUEST_ORB_MULTIPLIER = "questOrbMultiplier"),
         e
     );
 })({});

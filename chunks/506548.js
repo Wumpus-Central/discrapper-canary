@@ -2,7 +2,7 @@
 n.d(t, { S: () => o });
 var r = n(440703),
     i = n(341915);
-function a(e) {
+function s(e) {
     let t = {};
     for (let n of Object.keys(e)) {
         let r = parseInt(n);
@@ -10,7 +10,7 @@ function a(e) {
     }
     return t;
 }
-let s = (e) => {
+let a = (e) => {
         switch (e.type) {
             case r.l.REWARD_CODE:
                 return {
@@ -19,7 +19,7 @@ let s = (e) => {
                     asset: e.asset,
                     assetVideo: e.asset_video,
                     messages: {
-                        redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
+                        redemptionInstructionsByPlatform: s(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
                         nameWithArticle: e.messages.name_with_article,
                     },
@@ -33,7 +33,7 @@ let s = (e) => {
                     asset: e.asset,
                     assetVideo: e.asset_video,
                     messages: {
-                        redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
+                        redemptionInstructionsByPlatform: s(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
                         nameWithArticle: e.messages.name_with_article,
                     },
@@ -46,11 +46,12 @@ let s = (e) => {
                     type: r.l.VIRTUAL_CURRENCY,
                     skuId: e.sku_id,
                     messages: {
-                        redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
+                        redemptionInstructionsByPlatform: s(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
                         nameWithArticle: e.messages.name_with_article,
                     },
                     orbQuantity: e.orb_quantity,
+                    premiumOrbQuantity: e.premium_orb_quantity,
                 };
             case r.l.FRACTIONAL_PREMIUM:
                 return {
@@ -60,7 +61,7 @@ let s = (e) => {
                     assetVideo: e.asset_video,
                     quantity: e.quantity,
                     messages: {
-                        redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
+                        redemptionInstructionsByPlatform: s(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
                         nameWithArticle: e.messages.name_with_article,
                     },
@@ -72,7 +73,7 @@ let s = (e) => {
                     asset: e.asset,
                     assetVideo: e.asset_video,
                     messages: {
-                        redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
+                        redemptionInstructionsByPlatform: s(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
                         nameWithArticle: e.messages.name_with_article,
                     },
@@ -81,7 +82,7 @@ let s = (e) => {
     },
     o = (e) => ({
         assignmentMethod: e.assignment_method,
-        rewards: e.rewards.map(s),
+        rewards: e.rewards.map(a),
         rewardsExpireAt: e.rewards_expire_at,
         platforms: e.platforms,
     });

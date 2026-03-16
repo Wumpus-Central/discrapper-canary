@@ -2512,6 +2512,7 @@ var tT = (function (e) {
             (e.TIERED_TENURE_BADGES_ACTION_SHEET = "Tiered Tenure Badges Action Sheet"),
             (e.SHOP_ORBS_TAB = "Shop Orbs Tab"),
             (e.ORBS_ANNOUNCEMENT_MODAL = "Orbs Announcement Modal"),
+            (e.QUEST_ORB_MULTIPLIER_PERK_INFO = "Quest Orb Multiplier Action Sheet"),
             (e.GLOBAL_DISCOVERY_QUESTS = "Global Discovery Quests"),
             (e.BOGO_PROMOTION_ACTION_SHEET = "Bogo Promotion Action Sheet"),
             (e.BOGO_PROMOTION_MARKETING_PAGE_BANNER = "Bogo Promotion Marketing Page Banner"),

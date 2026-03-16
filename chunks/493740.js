@@ -2,6 +2,7 @@
 n.d(t, {
     DG: () => U,
     G3: () => y,
+    G5: () => F,
     GS: () => p,
     He: () => h,
     II: () => O,
@@ -9,7 +10,7 @@ n.d(t, {
     OW: () => g,
     Pm: () => P,
     Qz: () => k,
-    RM: () => H,
+    RM: () => j,
     T7: () => v,
     WQ: () => L,
     Zc: () => x,
@@ -41,7 +42,7 @@ function c(e, t) {
         let n = l.u0[t.premiumType];
         if (null == n)
             return u.warn(`Cannot find the corresponding SKU to the user's premium type ${t.premiumType}`), !1;
-        let r = F[n];
+        let r = V[n];
         if (null == r)
             return (
                 u.warn(
@@ -88,7 +89,8 @@ let P = new d(r.w.INCREASED_GUILD_LIMIT),
     k = new d(r.w.INCREASED_MESSAGE_LENGTH),
     U = new d("increasedVideoUploadQuality"),
     G = new d("uploadLargeFiles"),
-    F = Object.freeze({
+    F = new d(r.w.QUEST_ORB_MULTIPLIER),
+    V = Object.freeze({
         [l.pe.TIER_0]: new o.A(l.pe.TIER_0, [_, f, p, T, x, U, G, v]),
         [l.pe.TIER_1]: new o.A(l.pe.TIER_1, [_, f, g, A, T, C, O, L, U, G, v]),
         [l.pe.TIER_2]: new o.A(l.pe.TIER_2, [
@@ -119,13 +121,14 @@ let P = new d(r.w.INCREASED_GUILD_LIMIT),
             y,
             D,
             E,
+            F,
         ]),
     }),
-    V = [C, R],
-    B = [];
-function H(e, t, n) {
+    B = [C, R, F],
+    H = [];
+function j(e, t, n) {
     return (
-        !((null != t && t.isPremiumWithFractionalPremiumOnly() && V.includes(e)) || (n && B.includes(e))) &&
+        !((null != t && t.isPremiumWithFractionalPremiumOnly() && B.includes(e)) || (n && H.includes(e))) &&
         e.getFeatureValue(t)
     );
 }
