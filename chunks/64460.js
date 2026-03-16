@@ -26,14 +26,13 @@ let h = {
         if ((0 === h && (h = 10), !isNaN(h) && 0 !== h)) {
             if (1 === h) n = p.ME;
             else {
-                let { enabled: e, hasHigherPrivileges: t } = o.o.getConfig({ location: "jumpToGuild" }),
-                    u = (0, i.dD)(r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM),
-                    c = (0, s.k8)(r.M.FAVORITES_SERVER_ONBOARDING_INTRO);
+                let { enabled: e } = o.o.getConfig({ location: "jumpToGuild" }),
+                    t = (0, i.dD)(r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM),
+                    u = (0, s.k8)(r.M.FAVORITES_SERVER_ONBOARDING_INTRO);
                 n = (0, l.J)(a.A, f.default, d.A, {
                     favoritesGuildXPEnabled: e,
-                    hasHigherPrivileges: t,
-                    isMenuItemDCSelected: u,
-                    isIntroDCDismissed: c,
+                    isMenuItemDCSelected: t,
+                    isIntroDCDismissed: u,
                 })
                     ? 2 === h
                         ? p.YYv
