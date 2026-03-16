@@ -5,6 +5,7 @@ e.exports = {
     q6: "emptyStateText__4fbcc",
     XG: "scroller__4fbcc",
     Us: "teenDisclaimer__4fbcc",
+    Q9: "privateNotice__4fbcc",
     _E: "recommendationsContainerEmptyWishlist__4fbcc",
     HZ: "recommendationsContainerWithWishlist__4fbcc",
 };

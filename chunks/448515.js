@@ -260,13 +260,7 @@ H(
                 let r = e.presences ? t(e.presences) : [],
                     i = (e.lazy_private_channels ?? []).map((e) => (0, A.UE)(e));
                 E.A.dispatchReadySupplemental.measure(() => {
-                    W({
-                        type: "CONNECTION_OPEN_SUPPLEMENTAL",
-                        guilds: n,
-                        presences: r,
-                        lazyPrivateChannels: i,
-                        userActivities: e.user_activities ?? void 0,
-                    });
+                    W({ type: "CONNECTION_OPEN_SUPPLEMENTAL", guilds: n, presences: r, lazyPrivateChannels: i });
                 });
                 let s = [];
                 n.forEach((e) => {
@@ -384,11 +378,7 @@ H(
         },
     ),
     B(["STATE_UPDATE"], (e) => {
-        W({
-            type: "CONNECTION_OPEN_STATE_UPDATE",
-            apexExperiments: e.apex_experiments ?? void 0,
-            userActivities: e.user_activities ?? void 0,
-        });
+        W({ type: "CONNECTION_OPEN_STATE_UPDATE", apexExperiments: e.apex_experiments ?? void 0 });
     }),
     B(["EXPERIMENT_SESSION_OVERRIDE_CREATE"], (e) => {
         a.h.dispatch({
