@@ -3,8 +3,8 @@ n.d(t, { A: () => N });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
-    a = n(397927),
-    r = n(73153),
+    r = n(397927),
+    a = n(73153),
     o = n(334738),
     c = n(222823),
     d = n(954571),
@@ -13,13 +13,13 @@ var i = n(627968),
     A = n(519480),
     m = n(352123),
     p = n(372536),
-    g = n(491346),
+    g = n(268965),
     _ = n(667369),
     f = n(647026),
     x = n(946116),
     C = n(652215),
     E = n(650583),
-    I = n(875514);
+    I = n(10544);
 let N = (e) => {
     let { channel: t, guild: N } = e,
         {
@@ -44,7 +44,7 @@ let N = (e) => {
         () => () => {
             let e = c.Ay.lastMessageId(t.id);
             null != e &&
-                r.h.wait(() => {
+                a.h.wait(() => {
                     (0, o.ack)(
                         t.id,
                         {
@@ -91,7 +91,7 @@ let N = (e) => {
             () =>
                 w
                     ? () => {
-                          (0, a.mMO)(async () => {
+                          (0, r.mMO)(async () => {
                               let { default: e } = await n.e("6759").then(n.bind(n, 953722));
                               return (n) =>
                                   (0, i.jsx)(e, {
@@ -130,7 +130,7 @@ let N = (e) => {
               searchFetching: O,
           })
         : null == j && null == b
-          ? (0, i.jsx)("div", { className: I.$$, children: (0, i.jsx)(a.y$y, { className: I.u1 }) })
+          ? (0, i.jsx)("div", { className: I.$$, children: (0, i.jsx)(r.y$y, { className: I.u1 }) })
           : j?.length === 0 && null == b
             ? (0, i.jsx)("div", { className: I.$$, children: (0, i.jsx)(p.A, { guild: N, onAddGuild: k }) })
             : (0, i.jsx)(g.A, {

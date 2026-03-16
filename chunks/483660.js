@@ -1,8 +1,8 @@
 n.d(t, { A: () => g });
 var i = n(627968),
     r = n(64700),
-    l = n(158954),
-    a = n(956793),
+    a = n(158954),
+    l = n(956793),
     s = n(265422),
     o = n(986268),
     d = n(529200),
@@ -11,7 +11,7 @@ var i = n(627968),
     _ = n(954571),
     m = n(652215),
     h = n(985018),
-    p = n(42441);
+    p = n(563111);
 function g(e) {
     let { guild: t, channel: n, message: g } = e,
         A = u.A.getGuildId(),
@@ -26,7 +26,7 @@ function g(e) {
                 channel_id: x,
             }),
                 (0, s.i)(t.id, n.id),
-                a.default.selectVoiceChannel(n.id);
+                l.default.selectVoiceChannel(n.id);
         }, [g, t, n, A, x]),
         C = (0, i.jsx)(d.A.Channel, { channel: n });
     return (0, i.jsx)(d.A, {
@@ -54,7 +54,7 @@ function g(e) {
                 }),
                 (0, i.jsx)("div", {
                     className: p.UD,
-                    children: (0, i.jsx)(l.$nd, {
+                    children: (0, i.jsx)(a.$nd, {
                         fullWidth: !0,
                         onClick: f,
                         variant: "active",

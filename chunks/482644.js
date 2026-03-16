@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, { baseRules: () => b, customRules: () => C });
+n.r(t), n.d(t, { baseRules: () => C, customRules: () => b });
 var l = n(627968),
     i = n(64700),
     s = n(503698),
@@ -14,8 +14,8 @@ var l = n(627968),
     g = n(840065),
     p = n(954571),
     A = n(652215),
-    f = n(559868),
-    x = n(816169);
+    x = n(559868),
+    f = n(60639);
 let v = o().defaultRules.link,
     j = { section: A.JJy.SETTINGS_CHANGELOG },
     N = (e) => {
@@ -25,8 +25,8 @@ let v = o().defaultRules.link,
             r = isNaN(a) ? 1 : a;
         return i.createElement(`h${s + r - 1}`, { className: l }, n);
     },
-    b = null != d.A ? d.A.defaultRules : null,
-    C = {
+    C = null != d.A ? d.A.defaultRules : null,
+    b = {
         link: {
             parse(e, t, n) {
                 let l,
@@ -39,7 +39,7 @@ let v = o().defaultRules.link,
                               p.default.track(A.HAw.PREMIUM_PROMOTION_OPENED, { location: j }),
                                   (0, g.openUserSettings)(h.X.NITRO_PANEL, { section: A.nc_.PREMIUM }),
                                   n.changeLog.track(A.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "nitro" }),
-                                  (0, u.OoC)(f.lb),
+                                  (0, u.OoC)(x.lb),
                                   e.preventDefault();
                           }
                         : a
@@ -49,7 +49,7 @@ let v = o().defaultRules.link,
                                         ...p.default.getCampaignParams(i),
                                     }),
                                     (0, c.bz)(),
-                                    (0, u.OoC)(f.lb),
+                                    (0, u.OoC)(x.lb),
                                     e.preventDefault();
                             }
                           : () => {
@@ -85,7 +85,7 @@ let v = o().defaultRules.link,
                     {
                         level: t.level,
                         className: a()(
-                            x["heading-md/bold"],
+                            f["heading-md/bold"],
                             ...(null == (s = t.className) ? [] : s.split(" ").map((t) => e[t])),
                         ),
                         children: n(t.content, i),
@@ -96,7 +96,7 @@ let v = o().defaultRules.link,
         }),
         heading: {
             react: (e, t, n) =>
-                (0, l.jsx)(N, { level: e.level, className: x["heading-md/bold"], children: t(e.content, n) }, n.key),
+                (0, l.jsx)(N, { level: e.level, className: f["heading-md/bold"], children: t(e.content, n) }, n.key),
         },
         image: {
             react(e, t, i) {
@@ -104,18 +104,18 @@ let v = o().defaultRules.link,
                 return (0, l.jsx)("img", { alt: e.alt, src: s }, i.key);
             },
         },
-        blockQuote: { react: b?.blockQuote.react },
+        blockQuote: { react: C?.blockQuote.react },
         list: (e) => ({
             react(t, n, i) {
                 let s = t.ordered ? "ol" : "ul",
                     r = t.items.map((t, s) =>
-                        (0, l.jsx)("li", { className: a()(x["text-md/normal"], e.listItem), children: n(t, i) }, s),
+                        (0, l.jsx)("li", { className: a()(f["text-md/normal"], e.listItem), children: n(t, i) }, s),
                     );
                 return (0, l.jsx)(s, { className: e.list, start: t.start, children: r }, i.key);
             },
         }),
         paragraph: (e) => ({
             react: (t, n, i) =>
-                (0, l.jsx)("p", { className: a()(x["text-md/normal"], e.paragraph), children: n(t.content, i) }, i.key),
+                (0, l.jsx)("p", { className: a()(f["text-md/normal"], e.paragraph), children: n(t.content, i) }, i.key),
         }),
     };

@@ -3,9 +3,9 @@ n.d(t, { A: () => D }), n(321073);
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    a = n.n(l),
-    r = n(735438),
-    o = n.n(r),
+    r = n.n(l),
+    a = n(735438),
+    o = n.n(a),
     c = n(837381),
     d = n(311907),
     u = n(397927),
@@ -24,9 +24,9 @@ var i = n(627968),
     b = n(524628),
     S = n(849077),
     T = n(652215),
-    v = n(21786),
+    v = n(228160),
     y = n(985018),
-    j = n(19e3);
+    j = n(128354);
 function R(e) {
     e.stopPropagation();
 }
@@ -35,7 +35,7 @@ function O(e) {
     return (0, i.jsx)(u.DUT, {
         "aria-expanded": n,
         onClick: s,
-        className: a()(j.TP, { [j.yZ]: !n }),
+        className: r()(j.TP, { [j.yZ]: !n }),
         children: (0, i.jsxs)(u.BJc, {
             gap: 4,
             direction: "horizontal",
@@ -45,7 +45,7 @@ function O(e) {
                     variant: "text-sm/medium",
                     color: "text-subtle",
                     className: j.P7,
-                    children: (0, r.capitalize)(y.intl.string(S.v7[t]).toLowerCase()),
+                    children: (0, a.capitalize)(y.intl.string(S.v7[t]).toLowerCase()),
                 }),
                 (0, i.jsx)(u.abt, { size: "xxs", className: j.ai }),
             ],
@@ -93,7 +93,7 @@ function D(e) {
         {
             messages: n,
             unreadMessages: l,
-            loadMore: r,
+            loadMore: a,
             renderLoadingState: A,
             renderMessageGroup: m,
             scrollerClassName: v,
@@ -115,7 +115,7 @@ function D(e) {
             hasLoadedEver: E.A.hasLoadedEver,
         })),
         K = !F && B,
-        { messageCategoryOpenStates: W, toggleOpenState: Y } = (0, C.A)(),
+        { messageCategoryOpenStates: Y, toggleOpenState: W } = (0, C.A)(),
         z =
             ((t = (0, d.yK)([E.A], () => E.A.getNotifyingChannelIds() ?? [])),
             (0, d.bG)([E.A, p.Ay], () => {
@@ -145,8 +145,8 @@ function D(e) {
             let e = P.current?.getScrollerState();
             if (null == e) return;
             let t = 0.5 * e.offsetHeight;
-            e.scrollHeight - (e.scrollTop + e.offsetHeight) <= t && r?.(S.VA.USER_SCROLL);
-        }, [r]),
+            e.scrollHeight - (e.scrollTop + e.offsetHeight) <= t && a?.(S.VA.USER_SCROLL);
+        }, [a]),
         X = s.useMemo(() => {
             let e = { [S.Ur.UNREAD]: [], [S.Ur.TODAY]: [], [S.Ur.YESTERDAY]: [], [S.Ur.OLDER]: [] },
                 t = { [S.Ur.UNREAD]: [], [S.Ur.TODAY]: [], [S.Ur.YESTERDAY]: [], [S.Ur.OLDER]: [] },
@@ -178,14 +178,14 @@ function D(e) {
                 e
             );
         }, [n, l]),
-        J = 0 === n.length && 0 === l.length && H,
-        Q = 0 === n.length && 0 === l.length && !F && B,
+        Q = 0 === n.length && 0 === l.length && H,
+        J = 0 === n.length && 0 === l.length && !F && B,
         $ = s.useMemo(() => {
             let e = [];
             return (
-                Q
+                J
                     ? e.push(A())
-                    : J
+                    : Q
                       ? e.push((0, i.jsx)(M, {}, "empty-state"))
                       : G
                         ? (e.push(...l.map((e) => m([e], !0))), e.push(...n.map((e) => m([e], !1))))
@@ -196,44 +196,44 @@ function D(e) {
                                           O,
                                           {
                                               group: t,
-                                              isOpen: W[t],
+                                              isOpen: Y[t],
                                               toggleOpenedState: () => {
-                                                  let e = W[t];
-                                                  Y(t), (0, x.Ut)({ section: t, enabled: !e, viewId: U });
+                                                  let e = Y[t];
+                                                  W(t), (0, x.Ut)({ section: t, enabled: !e, viewId: U });
                                               },
                                           },
                                           t,
                                       ),
                                   ),
-                                  W[t] && e.push(...X[t].map((e) => m(e, t === S.Ur.UNREAD))));
+                                  Y[t] && e.push(...X[t].map((e) => m(e, t === S.Ur.UNREAD))));
                           }),
                 e
             );
-        }, [n, l, A, W, Y, X, G, m, J, Q, U]),
+        }, [n, l, A, Y, W, X, G, m, Q, J, U]),
         Z = $[$.length - 1],
         ee = s.isValidElement(Z) && Z.type === O,
         et = (0, N.S)((e) => e.setInboxReadState);
     s.useEffect(() => {
-        Q || et(0 === X.UNREAD.length);
-    }, [X, Q, et]);
-    let en = (n.length > 0 || l.length > 0) && null != r && B;
+        J || et(0 === X.UNREAD.length);
+    }, [X, J, et]);
+    let en = (n.length > 0 || l.length > 0) && null != a && B;
     !(function (e) {
         let { loadingInitial: t, messagesByCategory: n } = e,
             i = s.useRef(!1),
             l = n.UNREAD.length > 0,
-            { setOpenStateFromUnreads: a } = (0, C.A)();
+            { setOpenStateFromUnreads: r } = (0, C.A)();
         s.useEffect(() => {
-            t || i.current || (a(l), (i.current = !0));
-        }, [a, l, t]);
+            t || i.current || (r(l), (i.current = !0));
+        }, [r, l, t]);
     })({ messagesByCategory: X, loadingInitial: K });
     let ei = s.useCallback(() => {
-        let e = L.filter((e) => W[e]).reduce((e, t) => e + X[t].length, 0),
+        let e = L.filter((e) => Y[e]).reduce((e, t) => e + X[t].length, 0),
             t = P.current?.getScrollerState();
         return null == t ? 0 : Math.max(0, Math.ceil(t.offsetHeight / 64) - e);
-    }, [W, X]);
+    }, [Y, X]);
     s.useEffect(() => {
-        Q || B || 0 >= ei() || ((!ee || z) && r?.(S.VA.FILL_SCROLLER));
-    }, [ei, r, Q, B, ee, z]);
+        J || B || 0 >= ei() || ((!ee || z) && a?.(S.VA.FILL_SCROLLER));
+    }, [ei, a, J, B, ee, z]);
     let es = s.useMemo(() => {
         let e = Math.min(Math.max(2, ei()), 20);
         return (0, i.jsx)(b.A, { withHeader: !1, size: e });
@@ -248,7 +248,7 @@ function D(e) {
             viewId: U,
         }),
         (0, i.jsx)("div", {
-            className: a()(y, j.KQ),
+            className: r()(y, j.KQ),
             onClick: R,
             onDoubleClick: R,
             "aria-label": e["aria-label"],
@@ -261,7 +261,7 @@ function D(e) {
                             ref: (e) => {
                                 (P.current = e), (t.current = e?.getScrollerNode() ?? null);
                             },
-                            className: a()(j.m4, v),
+                            className: r()(j.m4, v),
                             onScroll: q,
                             fade: !0,
                             ...n,

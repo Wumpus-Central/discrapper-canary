@@ -3,8 +3,8 @@ n.d(t, { A: () => v });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    a = n.n(l),
-    r = n(397927),
+    r = n.n(l),
+    a = n(397927),
     o = n(73153),
     c = n(843472),
     d = n(355622),
@@ -22,7 +22,7 @@ var i = n(627968),
     I = n(427262),
     N = n(652215),
     b = n(985018),
-    S = n(739699);
+    S = n(65309);
 let T = (e) => {
         let { channel: t, message: n, out: s = !1, noAnimate: l = !1 } = e,
             o = (0, _.A)(n, {
@@ -39,13 +39,13 @@ let T = (e) => {
             u = (0, A.A)({ userId: c.id, guildId: t.guild_id }),
             { avatarSrc: h, avatarDecorationSrc: g } = (0, f.A)({ userId: c.id, guildId: t.guild_id, size: 48 });
         return (0, i.jsxs)("div", {
-            className: a()(S.iU, { [S.FD]: s, [S.Tf]: l }),
+            className: r()(S.iU, { [S.FD]: s, [S.Tf]: l }),
             children: [
                 (0, i.jsx)("div", {
-                    children: (0, i.jsx)(r.euF, {
+                    children: (0, i.jsx)(a.euF, {
                         src: h,
                         avatarDecoration: g,
-                        size: r._3J.SIZE_24,
+                        size: a._3J.SIZE_24,
                         "aria-label": "User Avatar",
                         isTyping: !1,
                     }),
@@ -54,10 +54,10 @@ let T = (e) => {
                 (0, i.jsxs)("div", {
                     className: S.fi,
                     children: [
-                        (0, i.jsx)(r.Text, { variant: "text-md/normal", className: S.Qs, children: o.content }),
+                        (0, i.jsx)(a.Text, { variant: "text-md/normal", className: S.Qs, children: o.content }),
                         n.attachments.length > 0 &&
                             (0, i.jsx)("div", {
-                                className: a()(S.nM, S.rQ),
+                                className: r()(S.nM, S.rQ),
                                 children: n.attachments
                                     .filter((e) => !e.spoiler && e.content_type?.startsWith("image"))
                                     .map((e) =>
@@ -152,7 +152,7 @@ let T = (e) => {
                 return o.h.subscribe("MESSAGE_CREATE", e), () => o.h.unsubscribe("MESSAGE_CREATE", e);
             }, []),
             (0, i.jsxs)("div", {
-                className: a()(S.X2, { [S.R]: !l }),
+                className: r()(S.X2, { [S.R]: !l }),
                 onMouseEnter: () => (b.current = !0),
                 onMouseLeave: () => (b.current = !1),
                 onWheel: (e) => {
@@ -164,16 +164,16 @@ let T = (e) => {
                 children: [
                     (0, i.jsx)(x.A, {
                         children: (0, i.jsx)("div", {
-                            className: a()(S.TE, { [S.N7]: n }),
-                            children: (0, i.jsx)(r.HOs, {
-                                className: a()(S.b6, { [S.N7]: D && n }),
+                            className: r()(S.TE, { [S.N7]: n }),
+                            children: (0, i.jsx)(a.HOs, {
+                                className: r()(S.b6, { [S.N7]: D && n }),
                                 ref: I,
                                 children: m.map((e) => (0, i.jsx)(T, { channel: t, message: e, noAnimate: !0 }, e.id)),
                             }),
                         }),
                     }),
                     (0, i.jsx)(h.Ay, {
-                        className: a()(S.CQ, { [S.N7]: n && 0 === j.length }),
+                        className: r()(S.CQ, { [S.N7]: n && 0 === j.length }),
                         innerClassName: S.hF,
                         type: d.oU.HAVEN,
                         channel: t,

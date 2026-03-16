@@ -1,8 +1,8 @@
 n.d(t, { A: () => p });
 var i = n(627968),
     r = n(64700),
-    l = n(397927),
-    a = n(341915),
+    a = n(397927),
+    l = n(341915),
     s = n(890687),
     o = n(710969),
     d = n(814793),
@@ -10,7 +10,7 @@ var i = n(627968),
     u = n(127219),
     _ = n(636658),
     m = n(438038),
-    h = n(69542);
+    h = n(986588);
 function p(e) {
     let { questId: t } = e,
         {
@@ -21,12 +21,12 @@ function p(e) {
         A = r.useMemo(() => (0, o.vc)(t, n, p), [t, n, p]),
         x = r.useMemo(() => p.find((e) => e.id === t), [t, p]);
     return g
-        ? (0, i.jsx)(l.y$y, { className: h.u })
+        ? (0, i.jsx)(a.y$y, { className: h.u })
         : null == A
           ? null != x
               ? (0, i.jsx)(c.g, { questId: t })
               : (0, i.jsx)(u.l, { questId: t, reason: u.o.NOT_FOUND })
           : (0, d.E0)(A.config)
-            ? (0, i.jsx)(m.R, { quest: A, location: a.uF.QUESTS_EMBED, sourceQuestContent: a.uF.QUESTS_EMBED }, A.id)
+            ? (0, i.jsx)(m.R, { quest: A, location: l.uF.QUESTS_EMBED, sourceQuestContent: l.uF.QUESTS_EMBED }, A.id)
             : (0, i.jsx)(_.S, { questId: t });
 }

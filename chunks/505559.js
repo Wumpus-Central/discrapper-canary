@@ -1,9 +1,9 @@
-n.d(t, { A: () => a });
+n.d(t, { A: () => r });
 var i = n(627968);
 n(64700);
 var s = n(397927),
-    l = n(296137);
-let a = (e) => {
+    l = n(23579);
+let r = (e) => {
     let { enablePremiumBrandRefresh: t = !1, text: n } = e;
     return (0, i.jsx)("div", {
         className: t ? l.x : l.U,

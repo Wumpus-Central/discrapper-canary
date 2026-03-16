@@ -1,17 +1,17 @@
 n.d(t, { A: () => u });
 var i = n(627968),
     r = n(64700),
-    l = n(397927),
-    a = n(572211),
+    a = n(397927),
+    l = n(572211),
     s = n(443795),
     o = n(768349),
     d = n(985018),
-    c = n(62323);
+    c = n(609653);
 function u(e) {
     let { application: t, message: n, header: u, onClickContent: _, onView: m, guildId: h } = e,
         p = r.useMemo(
             () =>
-                (0, i.jsx)(l.Text, {
+                (0, i.jsx)(a.Text, {
                     variant: "text-xs/medium",
                     className: c.h_,
                     color: "none",
@@ -20,7 +20,7 @@ function u(e) {
                 }),
             [],
         );
-    return (0, i.jsx)(a.h, {
+    return (0, i.jsx)(l.h, {
         header: u,
         title: t.name,
         iconSrc: s.HT.getWhiteIconURL(),

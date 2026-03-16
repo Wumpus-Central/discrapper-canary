@@ -16,25 +16,25 @@ var l = n(627968),
     E = n(994500),
     m = n(287809),
     S = n(256415),
-    p = n(996439),
-    N = n(810412),
-    T = n(914853),
-    _ = n(483392),
-    C = n(236884),
-    y = n(542080),
+    _ = n(996439),
+    p = n(810412),
+    N = n(914853),
+    T = n(483392),
+    y = n(236884),
+    C = n(542080),
     x = n(179917),
-    M = n(419072),
-    v = n(67103),
+    v = n(419072),
+    M = n(67103),
     D = n(554932),
     R = n(406595),
-    U = n(557404),
-    O = n(535973),
+    O = n(557404),
+    U = n(535973),
     G = n(125117),
     w = n(652215),
-    F = n(822889),
-    L = n(985018),
-    b = n(817120),
-    k = n(77347);
+    L = n(895867),
+    F = n(985018),
+    b = n(488494),
+    k = n(416001);
 function P(e) {
     let {
             groupId: t,
@@ -51,8 +51,8 @@ function P(e) {
         } = e,
         f = !o,
         E = null != h && h === t,
-        m = E && g === O.I.BEFORE,
-        S = E && g === O.I.AFTER;
+        m = E && g === U.I.BEFORE,
+        S = E && g === U.I.AFTER;
     return (0, l.jsx)(I.A, {
         className: s()(k.uW, { [b.EU]: f, [b.Me]: null != d && d === t, [b.hV]: E, [b.nH]: m, [b._M]: S }),
         children: (0, l.jsx)("div", {
@@ -62,7 +62,7 @@ function P(e) {
                 onClick: a,
                 "aria-hidden": !0,
                 className: k.Ws,
-                children: [i, (0, l.jsx)(_.C, { isCollapsed: r, size: "md", className: k.t4 })],
+                children: [i, (0, l.jsx)(T.C, { isCollapsed: r, size: "md", className: k.t4 })],
             }),
         }),
     });
@@ -72,7 +72,7 @@ function j(e) {
 }
 let V = (0, a.throttle)(
     (e) => {
-        (0, N.Y)(w.uss.FRIENDS, {
+        (0, p.Y)(w.uss.FRIENDS, {
             locked: S.default.isInstanceLocked(),
             shownUserIds: e.shownUserIds,
             liveUserIds: e.liveUserIds,
@@ -86,7 +86,7 @@ function H() {}
 function Y(e) {
     let { onPrimaryAction: t, onContextMenu: n, onFriendVisible: r } = e,
         [s, I] = i.useState(new Set()),
-        [S, _] = i.useState(new Set()),
+        [S, T] = i.useState(new Set()),
         b = i.useCallback(
             (e, t, n) => {
                 I((n) => {
@@ -99,7 +99,7 @@ function Y(e) {
                     }
                     return new Set(n);
                 }),
-                    _((l) => {
+                    T((l) => {
                         if (n && t) {
                             if (l.has(e)) return l;
                             l.add(e);
@@ -113,15 +113,15 @@ function Y(e) {
             },
             [r],
         ),
-        Y = (0, N.Dk)(() => s, [s]),
-        W = (0, N.Dk)(() => S, [S]);
+        Y = (0, p.Dk)(() => s, [s]),
+        W = (0, p.Dk)(() => S, [S]);
     i.useEffect(() => {
         0 !== Y.size && V({ shownUserIds: j(Y), liveUserIds: j(W) });
     }, [Y, W]);
     let z = (0, G.b)(),
-        { searchQuery: $, setSearchQuery: B, clearSearch: K, ...X } = (0, G.n)(z),
-        { showSuggestions: Z, setShowSuggestions: Q } = (0, y.A)(),
-        J = $.trim().length > 0,
+        { searchQuery: B, setSearchQuery: $, clearSearch: K, ...X } = (0, G.n)(z),
+        { showSuggestions: Z, setShowSuggestions: Q } = (0, C.A)(),
+        J = B.trim().length > 0,
         q = i.useMemo(() => X.groups.filter((e) => e.users.length > 0), [X.groups]),
         ee = i.useMemo(() => z.groups.map((e) => e.id), [z.groups]),
         {
@@ -129,8 +129,8 @@ function Y(e) {
             dropTargetGroupId: en,
             dropTargetPosition: el,
             getDragHandleProps: ei,
-        } = (0, O.s)({ groupIds: ee, isDisabled: J, onCommitNewOrder: A.A.reorderGroups }),
-        [er, es] = (0, o.bG)([R.A], () => R.A.getFavoriteTargetIdsForTab(T.x.FRIENDS), [], p.D),
+        } = (0, U.s)({ groupIds: ee, isDisabled: J, onCommitNewOrder: A.A.reorderGroups }),
+        [er, es] = (0, o.bG)([R.A], () => R.A.getFavoriteTargetIdsForTab(N.x.FRIENDS), [], _.D),
         ea = (0, o.bG)([m.default, f.A, E.A], () => {
             let e = [];
             for (let t of er) {
@@ -150,7 +150,7 @@ function Y(e) {
                     })));
     }, [er]);
     let eo = i.useMemo(() => {
-            let e = $.trim().toLowerCase();
+            let e = B.trim().toLowerCase();
             return "" === e
                 ? ea
                 : ea.filter((t) => {
@@ -159,7 +159,7 @@ function Y(e) {
                           .filter((e) => null != e && "" !== e.trim())
                           .some((t) => t.toLowerCase().includes(e));
                   });
-        }, [ea, $]),
+        }, [ea, B]),
         ed = es > 0 && eo.length > 0,
         ec =
             !ed &&
@@ -171,13 +171,13 @@ function Y(e) {
             0 === X.activities.length &&
             0 === X.online.length &&
             0 === X.offline.length,
-        eh = (0, o.bG)([M.A], () => M.A.getCollapsedSectionOverridesForTab(T.x.FRIENDS), []),
+        eh = (0, o.bG)([v.A], () => v.A.getCollapsedSectionOverridesForTab(N.x.FRIENDS), []),
         eg = i.useRef(null),
         eI = (0, g.A)("friends-popout", eg),
         eA = i.useCallback((e) => {
-            (0, D.G)({ tab: T.x.FRIENDS, sectionKey: e });
+            (0, D.G)({ tab: N.x.FRIENDS, sectionKey: e });
         }, []),
-        ef = i.useCallback((e) => eh[e] ?? M.A.isSectionCollapsedByDefault(T.x.FRIENDS, e), [eh]),
+        ef = i.useCallback((e) => eh[e] ?? v.A.isSectionCollapsedByDefault(N.x.FRIENDS, e), [eh]),
         eE = i.useCallback(
             (e) => {
                 e.stopPropagation(), Q(!1);
@@ -187,7 +187,7 @@ function Y(e) {
         em = i.useCallback(
             (0, a.debounce)(
                 () => {
-                    t?.({ type: v.c.SEARCH_FRIENDS });
+                    t?.({ type: M.c.SEARCH_FRIENDS });
                 },
                 1e3,
                 { leading: !0, trailing: !1 },
@@ -196,14 +196,14 @@ function Y(e) {
         ),
         eS = i.useCallback(
             (e) => {
-                B(e), em(), eg.current?.scrollToTop();
+                $(e), em(), eg.current?.scrollToTop();
             },
-            [B, em],
+            [$, em],
         ),
-        ep = i.useCallback(() => {
+        e_ = i.useCallback(() => {
             K(), em(), eg.current?.scrollToTop();
         }, [K, em]),
-        eN = i.useMemo(() => {
+        ep = i.useMemo(() => {
             let e = (e) => {
                 let t = f.A.getStatus(e);
                 return t !== w.clD.ONLINE && t !== w.clD.IDLE && t !== w.clD.DND;
@@ -215,7 +215,7 @@ function Y(e) {
                 t.push({
                     kind: "FAVORITES",
                     key: "FAVORITES",
-                    title: L.intl.string(F.default.GKTlS6),
+                    title: F.intl.string(L.default.GKTlS6),
                     count: eo.length,
                     rows: n,
                     length: Math.max(n.length, 1),
@@ -227,7 +227,7 @@ function Y(e) {
                 t.push({
                     kind: "FRIEND_REQUESTS",
                     key: "FRIEND_REQUESTS",
-                    title: L.intl.formatToPlainString(L.t.xxFCW8, { count: e.length }),
+                    title: F.intl.formatToPlainString(F.t.xxFCW8, { count: e.length }),
                     count: e.length,
                     rows: n,
                     length: Math.max(n.length, 1),
@@ -265,7 +265,7 @@ function Y(e) {
                 t.push({
                     kind: "IN_GAME",
                     key: "IN_GAME",
-                    title: L.intl.string(F.default.trKJoT),
+                    title: F.intl.string(L.default.trKJoT),
                     count: e.length,
                     rows: n,
                     length: Math.max(n.length, 1),
@@ -277,7 +277,7 @@ function Y(e) {
                 t.push({
                     kind: "ACTIVITIES",
                     key: "ACTIVITIES",
-                    title: L.intl.string(L.t.TxqPQR),
+                    title: F.intl.string(F.t.TxqPQR),
                     count: e.length,
                     rows: n,
                     length: Math.max(n.length, 1),
@@ -289,7 +289,7 @@ function Y(e) {
                 t.push({
                     kind: "SUGGESTIONS",
                     key: "SUGGESTIONS",
-                    title: L.intl.string(L.t.qm9dSj),
+                    title: F.intl.string(F.t.qm9dSj),
                     count: e.length,
                     rows: n,
                     length: Math.max(n.length, 1),
@@ -301,7 +301,7 @@ function Y(e) {
                 t.push({
                     kind: "ONLINE",
                     key: "ONLINE",
-                    title: L.intl.string(L.t.WbGtnH),
+                    title: F.intl.string(F.t.WbGtnH),
                     count: e.length,
                     rows: n,
                     length: Math.max(n.length, 1),
@@ -313,7 +313,7 @@ function Y(e) {
                 t.push({
                     kind: "OFFLINE",
                     key: "OFFLINE",
-                    title: L.intl.string(L.t.Vv0abJ),
+                    title: F.intl.string(F.t.Vv0abJ),
                     count: e.length,
                     rows: n,
                     length: Math.max(n.length, 1),
@@ -336,11 +336,11 @@ function Y(e) {
             ed,
             eo,
         ]),
-        eT = i.useCallback((e) => eN[e], [eN]),
-        e_ = i.useCallback(
+        eN = i.useCallback((e) => ep[e], [ep]),
+        eT = i.useCallback(
             (e) => {
                 let { section: t } = e,
-                    i = eT(t);
+                    i = eN(t);
                 if (null == i || "EMPTY_STATE" === i.kind) return null;
                 let r = ef(i.key),
                     s = i.title,
@@ -350,12 +350,12 @@ function Y(e) {
                     h =
                         u && null != n
                             ? (e) => {
-                                  n({ type: v.K.FRIEND_GROUP, event: e, groupId: i.group?.id ?? "", groupName: s });
+                                  n({ type: M.K.FRIEND_GROUP, event: e, groupId: i.group?.id ?? "", groupName: s });
                               }
                             : void 0;
                 return (0, l.jsxs)(l.Fragment, {
                     children: [
-                        (0, l.jsx)(c.AC4, { children: L.intl.format(L.t.Uaqbke, { title: s, count: a }) }),
+                        (0, l.jsx)(c.AC4, { children: F.intl.format(F.t.Uaqbke, { title: s, count: a }) }),
                         u
                             ? (0, l.jsx)(P, {
                                   groupId: i.group?.id ?? "",
@@ -379,10 +379,10 @@ function Y(e) {
                                   rightAccessory:
                                       "SUGGESTIONS" === i.kind
                                           ? (0, l.jsx)(d.m_, {
-                                                text: L.intl.string(L.t.N86XcP),
+                                                text: F.intl.string(F.t.N86XcP),
                                                 children: (0, l.jsx)(c.DUT, {
                                                     className: k.LQ,
-                                                    "aria-label": L.intl.string(L.t.N86XcP),
+                                                    "aria-label": F.intl.string(F.t.N86XcP),
                                                     onClick: eE,
                                                     children: (0, l.jsx)(c.aXh, { size: "xs", color: "currentColor" }),
                                                 }),
@@ -392,9 +392,9 @@ function Y(e) {
                     ],
                 });
             },
-            [eT, ef, eA, J, et, en, el, ei, eE, n],
+            [eN, ef, eA, J, et, en, el, ei, eE, n],
         ),
-        eC = i.useCallback(
+        ey = i.useCallback(
             (e) => {
                 let i;
                 if (ec)
@@ -405,12 +405,12 @@ function Y(e) {
                             children: (0, l.jsx)(c.Text, {
                                 variant: "text-md/normal",
                                 color: "text-muted",
-                                children: L.intl.string(L.t["7sW4h1"]),
+                                children: F.intl.string(F.t["7sW4h1"]),
                             }),
                         },
                         "friends-popout-empty",
                     );
-                let r = eT(e.section);
+                let r = eN(e.section);
                 if (null == r) return null;
                 "GROUP" === r.kind && (i = r.group?.id);
                 let s = r.rows[e.row];
@@ -419,7 +419,7 @@ function Y(e) {
                     : (0, l.jsx)(
                           "div",
                           {
-                              children: (0, l.jsx)(C.Z, {
+                              children: (0, l.jsx)(y.Z, {
                                   ...s,
                                   closeParentPopout: H,
                                   isSuggestion: "SUGGESTIONS" === r.kind,
@@ -434,39 +434,39 @@ function Y(e) {
                           `${e.section}:${s.user.id}`,
                       );
             },
-            [eT, ec, H, t, n, b],
+            [eN, ec, H, t, n, b],
         ),
-        ey = i.useMemo(() => eN.map((e) => e.length), [eN]),
+        eC = i.useMemo(() => ep.map((e) => e.length), [ep]),
         ex = i.useCallback(
             (e) => {
-                let t = eN.findIndex((e) => "FAVORITES" === e.kind);
+                let t = ep.findIndex((e) => "FAVORITES" === e.kind);
                 if (-1 === t) return null;
-                let n = eN[t],
+                let n = ep[t],
                     l = n?.rows.findIndex((t) => t.user.id === e) ?? -1;
                 return -1 !== l ? { section: t, row: l } : null;
             },
-            [eN],
+            [ep],
         ),
-        eM = i.useCallback(() => {
-            let e = eN.findIndex((e) => "FAVORITES" === e.kind);
+        ev = i.useCallback(() => {
+            let e = ep.findIndex((e) => "FAVORITES" === e.kind);
             return -1 === e ? null : { section: e, row: void 0 };
-        }, [eN]);
-    (0, U.$)({
+        }, [ep]);
+    (0, O.$)({
         scrollerRef: eg,
         favoriteTargetIds: er,
         getScrollTargetForTargetId: (e) => ex(e),
-        getFallbackScrollTarget: eM,
+        getFallbackScrollTarget: ev,
         padding: 8,
         animate: !1,
     });
-    let ev = i.useCallback(() => 40, []),
+    let eM = i.useCallback(() => 40, []),
         eD = i.useCallback(
             (e) => {
                 if (ec) return 300;
-                let t = eT(e);
+                let t = eN(e);
                 return null == t ? 50 : 50 * (0 !== t.rows.length);
             },
-            [eT, ec],
+            [eN, ec],
         );
     return (0, l.jsxs)("div", {
         className: k.kL,
@@ -474,10 +474,10 @@ function Y(e) {
             (0, l.jsx)("div", {
                 className: k.MT,
                 children: (0, l.jsx)(c.IWV, {
-                    query: $,
+                    query: B,
                     onChange: eS,
-                    onClear: ep,
-                    placeholder: L.intl.string(L.t.lLDtTK),
+                    onClear: e_,
+                    placeholder: F.intl.string(F.t.lLDtTK),
                     size: "md",
                 }),
             }),
@@ -490,17 +490,17 @@ function Y(e) {
                             children: (e) =>
                                 (0, l.jsx)(c.B8B, {
                                     innerRole: n,
-                                    innerAriaLabel: L.intl.string(L.t.TdEu5X),
+                                    innerAriaLabel: F.intl.string(F.t.TdEu5X),
                                     ref: (e) => {
                                         (eg.current = e), (t.current = e?.getScrollerNode() ?? null);
                                     },
                                     className: k.p_,
-                                    sectionHeight: ev,
+                                    sectionHeight: eM,
                                     rowHeight: eD,
                                     sidebarHeight: 0,
-                                    renderSection: e_,
-                                    renderRow: eC,
-                                    sections: ey,
+                                    renderSection: eT,
+                                    renderRow: ey,
+                                    sections: eC,
                                     paddingBottom: 8,
                                     ...i,
                                     ...e,

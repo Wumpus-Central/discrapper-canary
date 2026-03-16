@@ -2,8 +2,8 @@ n.d(t, { i: () => x });
 var i = n(627968);
 n(64700);
 var r = n(503698),
-    l = n.n(r),
-    a = n(835245),
+    a = n.n(r),
+    l = n(835245),
     s = n(397927),
     o = n(954571),
     d = n(18437),
@@ -12,7 +12,7 @@ var r = n(503698),
     _ = n(394900),
     m = n(652215),
     h = n(985018),
-    p = n(31020),
+    p = n(933674),
     g = n(956324);
 function A(e) {
     let { questId: t, questContent: n, fullWidth: r } = e;
@@ -25,7 +25,7 @@ function A(e) {
                 (0, u.navigateToQuestHome)({ fromContent: n }),
                     o.default.track(m.HAw.QUEST_CONTENT_CLICKED, {
                         quest_id: t,
-                        click_id: (0, a.A)(),
+                        click_id: (0, l.A)(),
                         cta_name: c.Cy.VIEW_QUESTS,
                         is_targeted: !1,
                         ...(0, c.fF)(n),
@@ -36,7 +36,7 @@ function A(e) {
     });
 }
 function x(e) {
-    let { questId: t, fallbackReason: n, bodyText: r, questContent: a } = e,
+    let { questId: t, fallbackReason: n, bodyText: r, questContent: l } = e,
         { containerRef: o, size: c } = (0, _.L)();
     return (
         (0, d.Ii)(n, t),
@@ -44,7 +44,7 @@ function x(e) {
             ref: (e) => {
                 o.current = e;
             },
-            className: l()(p.kL, { [p.U]: "lg" === c, [p.SP]: "lg" !== c }),
+            className: a()(p.kL, { [p.U]: "lg" === c, [p.SP]: "lg" !== c }),
             children: [
                 (0, i.jsxs)("div", {
                     className: p.hQ,
@@ -60,7 +60,7 @@ function x(e) {
                             className: p.__invalid_mobileWebCopy,
                             children: r,
                         }),
-                        (0, i.jsx)(A, { questId: t, questContent: a, fullWidth: "lg" !== c }),
+                        (0, i.jsx)(A, { questId: t, questContent: l, fullWidth: "lg" !== c }),
                     ],
                 }),
                 (0, i.jsx)("div", {

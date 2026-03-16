@@ -1,8 +1,8 @@
 n.d(t, { A: () => p }), n(321073);
 var i = n(627968),
     r = n(64700),
-    l = n(397927),
-    a = n(572211),
+    a = n(397927),
+    l = n(572211),
     s = n(354287),
     o = n(693879),
     d = n(353411),
@@ -10,7 +10,7 @@ var i = n(627968),
     u = n(206589),
     _ = n(768349),
     m = n(985018),
-    h = n(62323);
+    h = n(609653);
 function p(e) {
     let {
             application: t,
@@ -53,7 +53,7 @@ function p(e) {
                     ? (0, i.jsxs)("div", {
                           className: h.Ym,
                           children: [
-                              (0, i.jsx)(l.T7G, { size: "xxs", color: "currentColor" }),
+                              (0, i.jsx)(a.T7G, { size: "xxs", color: "currentColor" }),
                               (0, i.jsx)(o.z, {
                                   entry: { start: y, end: g?.timestamps?.end },
                                   textColor: "currentColor",
@@ -70,7 +70,7 @@ function p(e) {
                 (0, i.jsxs)("div", {
                     className: h.pq,
                     children: [
-                        (0, i.jsx)(l.Text, {
+                        (0, i.jsx)(a.Text, {
                             variant: "text-xs/normal",
                             className: h.dS,
                             color: "none",
@@ -82,7 +82,7 @@ function p(e) {
                 }),
             [N, A, x],
         );
-    return (0, i.jsx)(a.h, {
+    return (0, i.jsx)(l.h, {
         header: p,
         title: S,
         iconSrc: (0, c.A)(g, t.id) ?? void 0,

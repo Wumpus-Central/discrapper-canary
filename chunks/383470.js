@@ -9,10 +9,10 @@ var i = n(627968),
     c = n(965660),
     u = n(599907),
     A = n(652215),
-    h = n(987134);
+    h = n(27740);
 let _ = { page: A.liQ.GUILD_DISCOVERY, object: A.ZSU.CARD, section: A.JJy.DISCOVER_POPULAR };
 function m(e) {
-    let { tab: t, guildIds: n, loading: A, onScroll: m, onGuildCardClick: p, onGuildCardSeen: g } = e,
+    let { tab: t, guildIds: n, loading: A, onScroll: m, onGuildCardClick: g, onGuildCardSeen: p } = e,
         E = (0, c.kc)(t),
         I = (0, c.Ot)(t),
         f = (0, c.UW)(t),
@@ -24,12 +24,12 @@ function m(e) {
                 t.push(
                     (0, i.jsx)(
                         u.jO,
-                        { guildId: n[r] ?? null, index: r, onClick: (e) => p(e, r, C, _), onView: (e) => g(e, C) },
+                        { guildId: n[r] ?? null, index: r, onClick: (e) => g(e, r, C, _), onView: (e) => p(e, C) },
                         n[r] ?? r,
                     ),
                 );
             return t;
-        }, [C, n, A, p, g]);
+        }, [C, n, A, g, p]);
     return (0, i.jsxs)(d.A, {
         onScroll: m,
         children: [

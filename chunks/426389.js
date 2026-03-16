@@ -12,8 +12,8 @@ var i = n(627968),
     h = n(859703),
     _ = n(341915),
     m = n(843490),
-    p = n(890687),
-    g = n(710969),
+    g = n(890687),
+    p = n(710969),
     E = n(639214),
     I = n(814793),
     f = n(219271),
@@ -29,9 +29,9 @@ var i = n(627968),
     L = n(502696),
     R = n(282447),
     P = n(652215),
-    j = n(654487),
-    D = n(985018),
-    M = n(832779);
+    D = n(654487),
+    j = n(985018),
+    M = n(23729);
 let w = 15 * x.A.Millis.MINUTE,
     U = (0, R.A)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
@@ -39,8 +39,8 @@ let w = 15 * x.A.Millis.MINUTE,
             d = (0, i.jsx)(b.A, { party: t, onUserContextMenu: n }),
             u = (0, i.jsx)(y.A, { party: t, onChannelContextMenu: l, quest: a }),
             { partiedMembers: A, applicationStreams: h, currentActivities: _, voiceChannels: m } = t,
-            p = A.length,
-            g = h.length,
+            g = A.length,
+            p = h.length,
             E = _.length,
             I = m.length > 0,
             f = r.useCallback(() => {
@@ -48,13 +48,13 @@ let w = 15 * x.A.Millis.MINUTE,
                     (e) => e.game.name,
                 );
                 S.default.track(P.HAw.NOW_PLAYING_CARD_HOVERED, {
-                    num_users: p,
-                    num_streams: g,
+                    num_users: g,
+                    num_streams: p,
                     num_activities: E,
                     in_voice_channel: I,
                     games_detected: e,
                 });
-            }, [p, g, E, I, _]),
+            }, [g, p, E, I, _]),
             C = r.useMemo(() => o()(f, w), [f]);
         return null != d || null != u
             ? (0, i.jsx)(c.YNO, {
@@ -96,7 +96,7 @@ function k() {
             currentUser: T.default.getCurrentUser(),
         })),
         s = (0, d.bG)([h.A], () => h.A.quests),
-        o = (0, p.oH)(Array.from(s.values()));
+        o = (0, g.oH)(Array.from(s.values()));
     r.useEffect(
         () => (
             u.h.wait(() => v.O()),
@@ -114,7 +114,7 @@ function k() {
             let t = new Map(),
                 n = new Map(),
                 i = new Set(),
-                r = (0, I.$e)(s, j.B3);
+                r = (0, I.$e)(s, D.B3);
             for (let l of e)
                 l.party.currentActivities.forEach((e) => {
                     let { activity: a } = e;
@@ -140,7 +140,7 @@ function k() {
             let e = new Map();
             for (let [t, n] of x.entries()) {
                 let i = y.quests.get(n);
-                (0, g.Oh)(i) && null != i.questWithUserStatus && e.set(t, i.questWithUserStatus);
+                (0, p.Oh)(i) && null != i.questWithUserStatus && e.set(t, i.questWithUserStatus);
             }
             return e;
         }, [f, y, S, x]),
@@ -158,13 +158,13 @@ function k() {
                             (0, i.jsx)(c.Heading, {
                                 variant: "heading-md/semibold",
                                 className: M.jU,
-                                children: D.intl.string(D.t["ngJ/5u"]),
+                                children: j.intl.string(j.t["ngJ/5u"]),
                             }),
                             (0, i.jsx)(c.Text, {
                                 color: "none",
                                 className: M.BI,
                                 variant: "text-sm/normal",
-                                children: D.intl.string(D.t["99ZWxQ"]),
+                                children: j.intl.string(j.t["99ZWxQ"]),
                             }),
                         ],
                     }))

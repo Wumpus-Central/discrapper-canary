@@ -15,7 +15,7 @@ var l = n(627968),
 n(253913);
 var x = n(652215),
     A = n(985018),
-    p = n(944616);
+    p = n(57046);
 function f(e) {
     let { channel: t } = e,
         s = (0, r.bG)([g.A], () => g.A.can(x.xBc.MANAGE_CHANNELS, t), [t]),

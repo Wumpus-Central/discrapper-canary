@@ -2,12 +2,12 @@ n.d(t, { V: () => u });
 var i = n(627968);
 n(64700);
 var r = n(989349),
-    l = n.n(r),
-    a = n(827734),
+    a = n.n(r),
+    l = n(827734),
     s = n(397927),
     o = n(239093),
     d = n(985018),
-    c = n(972678);
+    c = n(153400);
 function u(e) {
     if (null == e.message.embeds || null == e.message.embeds[0].fields) return null;
     let t = e.message.embeds[0],
@@ -20,7 +20,7 @@ function u(e) {
         : (0, i.jsxs)(s.DUT, {
               onClick: () => {
                   (0, s.mMO)(async () => {
-                      let { default: e } = await Promise.all([n.e("83518"), n.e("9407"), n.e("70660")]).then(
+                      let { default: e } = await Promise.all([n.e("83518"), n.e("9407"), n.e("1708")]).then(
                           n.bind(n, 956450),
                       );
                       return (t) =>
@@ -40,7 +40,7 @@ function u(e) {
                           (0, i.jsxs)("div", {
                               className: c.U1,
                               children: [
-                                  (0, i.jsx)(s.id, { className: c.QW, color: a.A.colors.ICON_FEEDBACK_CRITICAL }),
+                                  (0, i.jsx)(s.id, { className: c.QW, color: l.A.colors.ICON_FEEDBACK_CRITICAL }),
                                   (0, i.jsx)(s.Text, {
                                       variant: "text-md/semibold",
                                       children: d.intl.string(d.t["4CxGXi"]),
@@ -51,7 +51,7 @@ function u(e) {
                               className: c.VU,
                               children: (0, i.jsx)(s.Text, {
                                   variant: "text-xs/medium",
-                                  children: d.intl.format(d.t.eevFb6, { daysAgo: l()().diff(l().unix(m), "days") }),
+                                  children: d.intl.format(d.t.eevFb6, { daysAgo: a()().diff(a().unix(m), "days") }),
                               }),
                           }),
                           (0, i.jsx)("div", {

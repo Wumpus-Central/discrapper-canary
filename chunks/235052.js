@@ -9,9 +9,9 @@ var l = i(311907),
     d = i(961350),
     u = i(159426),
     c = i(762370),
-    m = i(25528),
-    A = i(652215),
-    p = i(55705),
+    A = i(25528),
+    m = i(652215),
+    p = i(426127),
     h = i(985018);
 function g(t, e, i) {
     let { enableRequestToStream: n } = u.m.useExperiment(
@@ -19,7 +19,7 @@ function g(t, e, i) {
             { autoTrackExposure: !1 },
         ),
         r = (0, l.bG)([d.default], () => d.default.getId()),
-        p = (0, m.Ay)(t, e.guild_id)[0],
+        p = (0, A.Ay)(t, e.guild_id)[0],
         h = (0, l.bG)([o.A], () => null != o.A.getStreamForUser(t, e.getGuildId())),
         g = (0, a.YY)(p?.application_id).data,
         f = (0, c.A)(t, e.id);
@@ -28,7 +28,7 @@ function g(t, e, i) {
               playingApplication: g,
               handleRequestToStream: function (i) {
                   s.A.sendActivityInvite({
-                      type: A.xL.STREAM_REQUEST,
+                      type: m.xL.STREAM_REQUEST,
                       channelId: e.id,
                       activity: p,
                       content: `<@${t}>`,

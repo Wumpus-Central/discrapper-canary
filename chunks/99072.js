@@ -2,8 +2,8 @@ n.d(t, { A: () => T });
 var i = n(627968);
 n(64700);
 var r = n(311907),
-    l = n(397927),
-    a = n(456060),
+    a = n(397927),
+    l = n(456060),
     s = n(793574),
     o = n(688810),
     d = n(572211),
@@ -19,7 +19,7 @@ var r = n(311907),
     f = n(661191),
     C = n(820672),
     E = n(768349),
-    I = n(55705),
+    I = n(426127),
     b = n(985018);
 function T(e) {
     let { currentUserId: t, message: T, application: v, channel: S, analyticsLocations: y, onView: N } = e,
@@ -33,17 +33,17 @@ function T(e) {
                 return null != n && t === n.id;
             }),
         ),
-        w = (0, r.bG)([h.A], () => h.A.getCurrentUserActiveStream()),
+        O = (0, r.bG)([h.A], () => h.A.getCurrentUserActiveStream()),
         D = (0, r.bG)([g.A], () => g.A.getChannelId()),
-        O = f.default.extractTimestamp(T.id) + C.M < Date.now(),
-        k = (0, i.jsx)(i.Fragment, { children: (0, a.Wf)(T, S, t) }),
+        w = f.default.extractTimestamp(T.id) + C.M < Date.now(),
+        k = (0, i.jsx)(i.Fragment, { children: (0, l.Wf)(T, S, t) }),
         { analyticsLocations: U } = (0, o.Ay)(y, s.A.REQUEST_TO_STREAM_INVITE_EMBED),
         G = b.intl.string(I.default["5+172e"]),
         B = !1;
     return (
-        O
+        w
             ? ((G = b.intl.string(I.default.u4QmWl)), (B = !0))
-            : null != w
+            : null != O
               ? ((G = b.intl.string(I.default.P0wwmM)), (B = !0))
               : D !== S.id
                 ? ((G = b.intl.string(I.default.qRXats)), (B = !0))
@@ -68,7 +68,7 @@ function T(e) {
                                   null != M &&
                                       ((0, x.isWindows)()
                                           ? (0, m.A)(M.pid)
-                                          : (0, l.mMO)(async () => {
+                                          : (0, a.mMO)(async () => {
                                                 let { default: e } = await Promise.all([
                                                     n.e("96811"),
                                                     n.e("48697"),
@@ -85,7 +85,7 @@ function T(e) {
                 channelId: S.id,
                 messageId: T.id,
                 onView: N,
-                isDeadEnd: O,
+                isDeadEnd: w,
             },
         })
     );

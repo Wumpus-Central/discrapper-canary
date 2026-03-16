@@ -1,8 +1,8 @@
 n.d(t, { A: () => v }), n(321073);
 var i = n(627968),
     r = n(64700),
-    l = n(503698),
-    a = n.n(l),
+    a = n(503698),
+    l = n.n(a),
     s = n(311907),
     o = n(397927),
     d = n(544420),
@@ -18,12 +18,12 @@ var i = n(627968),
     f = n(878831),
     C = n(768349),
     E = n(985018),
-    I = n(62323),
-    b = n(748921);
+    I = n(609653),
+    b = n(103467);
 function T(e) {
-    let { message: t, applicationName: n, iconSrc: r, channel: l, currentUserId: s, viewAction: d } = e,
+    let { message: t, applicationName: n, iconSrc: r, channel: a, currentUserId: s, viewAction: d } = e,
         c = (0, m.Ay)(t),
-        u = (0, h.P)({ user: t.author, channelId: l.id, guildId: l.guild_id, messageId: t.id })(c);
+        u = (0, h.P)({ user: t.author, channelId: a.id, guildId: a.guild_id, messageId: t.id })(c);
     return (0, i.jsx)(p.A, {
         compact: !1,
         children: E.intl.format(s === t.author.id ? E.t.anvg2q : E.t.AxVbYF, {
@@ -38,7 +38,7 @@ function T(e) {
                         (0, i.jsx)("img", {
                             alt: E.intl.string(E.t["2B/phM"]),
                             src: r,
-                            className: a()(b.Gt, _.M.XSMALL),
+                            className: l()(b.Gt, _.M.XSMALL),
                         }),
                         (0, i.jsx)(o.Text, { variant: "text-sm/semibold", color: "text-muted", children: n }),
                     ],
@@ -51,8 +51,8 @@ function v(e) {
     let {
             message: t,
             application: n,
-            applicationName: l,
-            channel: a,
+            applicationName: a,
+            channel: l,
             header: _,
             currentUserId: m,
             launchableAppId: h,
@@ -67,10 +67,10 @@ function v(e) {
             showAuthButton: R,
             startAuthorization: P,
             accountLinkButtonRef: M,
-            renderAccountLinkUpsell: w,
+            renderAccountLinkUpsell: O,
         } = e,
-        D = (0, s.bG)([g.A], () => g.A.getMessages(a.id)),
-        { actions: O, hasAccountLinkButton: k } = r.useMemo(() => {
+        D = (0, s.bG)([g.A], () => g.A.getMessages(l.id)),
+        { actions: w, hasAccountLinkButton: k } = r.useMemo(() => {
             let e = [],
                 i = !0,
                 r = !1;
@@ -106,9 +106,9 @@ function v(e) {
                         (r = !0));
             return { actions: e, hasAccountLinkButton: r };
         }, [p, h, b, D, j, n.id, t.id, R, P, L, M]),
-        U = O.some((e) => e.trackingArea === u.kY.CLOUD_PLAY);
+        U = w.some((e) => e.trackingArea === u.kY.CLOUD_PLAY);
     (0, f.A)(U, L);
-    let G = O.length > 0,
+    let G = w.length > 0,
         B = r.useMemo(
             () =>
                 (0, i.jsx)(o.Text, {
@@ -116,23 +116,23 @@ function v(e) {
                     className: I.h_,
                     color: "none",
                     lineClamp: 3,
-                    children: (0, A.BE)(t, l, a, m, G),
+                    children: (0, A.BE)(t, a, l, m, G),
                 }),
-            [t, l, a, m, G],
+            [t, a, l, m, G],
         );
-    return 0 === O.length
-        ? (0, i.jsx)(T, { message: t, applicationName: l, iconSrc: y, channel: a, currentUserId: m, viewAction: S })
+    return 0 === w.length
+        ? (0, i.jsx)(T, { message: t, applicationName: a, iconSrc: y, channel: l, currentUserId: m, viewAction: S })
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(c.h, {
                       header: _,
-                      title: l,
+                      title: a,
                       staticBannerSrc: v,
                       onClickBanner: S,
                       bannerAspectRatio: c.u.ACTIVITY,
                       iconSrc: y ?? void 0,
                       info: B,
-                      actions: O,
+                      actions: w,
                       primaryActionFirst: !0,
                       onClickContent: S,
                       trackingConfig: {
@@ -140,13 +140,13 @@ function v(e) {
                           linkType: C.J.RICH_PRESENCE_INVITE,
                           onView: N,
                           referrerId: t.author.id,
-                          guildId: a.guild_id,
+                          guildId: l.guild_id,
                           channelId: t.channel_id,
                           messageId: t.id,
                           isDeadEnd: !0,
                       },
                   }),
-                  k ? w() : null,
+                  k ? O() : null,
               ],
           });
 }

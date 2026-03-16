@@ -2,66 +2,66 @@ n.d(t, { A: () => h }), n(667532);
 var i = n(627968),
     s = n(64700),
     l = n(311907),
-    a = n(397927),
-    r = n(263063),
+    r = n(397927),
+    a = n(263063),
     o = n(71393),
     d = n(711014),
     c = n(403362),
     u = n(612025),
     _ = n(303351),
-    g = n(985018),
-    A = n(21973);
-let m = { label: () => g.intl.string(g.t["32u1Dx"]), value: u.YG };
+    m = n(985018),
+    g = n(208227);
+let A = { label: () => m.intl.string(m.t["32u1Dx"]), value: u.YG };
 function h() {
     let { selectedGuildId: e, setSelectedGuildId: t } = (0, u.xk)(),
         n = (0, l.bG)([d.Ay], () => d.Ay.getFlattenedGuildIds()),
-        g = (0, l.bG)([o.A], () => o.A.getGuilds()),
-        { hideGuildOptions: h, hideGlobalOption: p } = (0, _.Z)(),
-        x = n[0];
+        m = (0, l.bG)([o.A], () => o.A.getGuilds()),
+        { hideGuildOptions: h, hideGlobalOption: x } = (0, _.Z)(),
+        p = n[0];
     s.useEffect(() => {
-        (p && h) || (e === u.YG && e !== x && p && t(x), e !== u.YG && h && t(u.YG));
-    }, [e, t, p, h, x]);
-    let E = s.useMemo(() => {
+        (x && h) || (e === u.YG && e !== p && x && t(p), e !== u.YG && h && t(u.YG));
+    }, [e, t, x, h, p]);
+    let T = s.useMemo(() => {
         let e = h
             ? []
             : n
                   .map((e) => {
-                      let t = g[e];
+                      let t = m[e];
                       return null == t
                           ? null
                           : {
                                 id: t.id,
                                 label: t.name,
                                 value: t.id,
-                                leading: (0, i.jsx)(r.Ay, {
-                                    className: A.cl,
+                                leading: (0, i.jsx)(a.Ay, {
+                                    className: g.cl,
                                     guild: t,
-                                    size: r.Ay.Sizes.SMALLER,
+                                    size: a.Ay.Sizes.SMALLER,
                                     active: !0,
                                 }),
                             };
                   })
                   .filter(c.Vq);
         return (
-            p ||
+            x ||
                 e.unshift({
-                    ...m,
-                    id: m.value,
-                    label: m.label(),
+                    ...A,
+                    id: A.value,
+                    label: A.label(),
                     leading: (0, i.jsx)("div", {
-                        className: A.KP,
-                        children: (0, i.jsx)(a.pVd, { size: "sm", color: "white", "aria-hidden": !0, className: A.cl }),
+                        className: g.KP,
+                        children: (0, i.jsx)(r.pVd, { size: "sm", color: "white", "aria-hidden": !0, className: g.cl }),
                     }),
                 }),
             e
         );
-    }, [h, n, p, g]);
-    return (0, i.jsx)(a.ZiE, {
+    }, [h, n, x, m]);
+    return (0, i.jsx)(r.ZiE, {
         selectionMode: "single",
         onSelectionChange: (e) => {
             t(e);
         },
         value: e,
-        options: E,
+        options: T,
     });
 }

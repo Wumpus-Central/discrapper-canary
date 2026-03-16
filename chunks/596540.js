@@ -3,15 +3,15 @@ n.d(t, { A: () => p });
 var i = n(627968),
     s = n(64700),
     l = n(397927),
-    a = n(73153),
-    r = n(964486),
+    r = n(73153),
+    a = n(964486),
     o = n(203982),
     c = n(851109),
     d = n(355741),
     u = n(480680),
     h = n(652215),
     A = n(985018),
-    m = n(39368);
+    m = n(782462);
 function p(e) {
     let { children: t, popoutPosition: n, popoutAlign: u, targetElementRef: m, spacing: p = 0 } = e,
         { isOpen: _, setIsOpen: f } = (0, d.A)(),
@@ -21,11 +21,11 @@ function p(e) {
         C = s.useCallback(() => {
             f(!_);
         }, [_, f]);
-    (0, r.Ay)(() => {
+    (0, a.Ay)(() => {
         let e = () => {
             f(!1);
         };
-        return a.h.subscribe("USER_SETTINGS_MODAL_OPEN", e), () => a.h.unsubscribe("USER_SETTINGS_MODAL_OPEN", e);
+        return r.h.subscribe("USER_SETTINGS_MODAL_OPEN", e), () => r.h.unsubscribe("USER_SETTINGS_MODAL_OPEN", e);
     }),
         s.useEffect(
             () => (o._.subscribe(h.jej.TOGGLE_INBOX, C), () => void o._.unsubscribe(h.jej.TOGGLE_INBOX, C)),

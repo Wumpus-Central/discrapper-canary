@@ -10,7 +10,7 @@ var s,
     d = n(407058),
     S = n(772194),
     u = n(985018),
-    A = n(566429),
+    A = n(53483),
     _ =
         (((s = {}).ACTIONS = "ACTIONS"),
         (s.SAFETY_TIPS = "SAFETY_TIPS"),

@@ -12,16 +12,16 @@ var i = n(627968),
     h = n(491182),
     _ = n(860227),
     m = n(538355),
-    p = n(699352),
-    g = n(715628),
+    g = n(699352),
+    p = n(715628),
     E = n(752636),
     I = n(675722),
     f = n(268719),
     C = n(734057),
     T = n(661191),
     N = n(652215),
-    S = n(480437),
-    x = n(50397);
+    S = n(456107),
+    x = n(119907);
 let v = r.memo(function (e) {
     let {
             message: t,
@@ -36,8 +36,8 @@ let v = r.memo(function (e) {
             renderThreadAccessory: R,
             ...P
         } = e,
-        j = t.type === N.lAJ.POLL_RESULT || (e.disableInteraction ?? !1),
-        D = t.isFirstMessageInForumPost(y),
+        D = t.type === N.lAJ.POLL_RESULT || (e.disableInteraction ?? !1),
+        j = t.isFirstMessageInForumPost(y),
         M = (0, c.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
         {
             content: w,
@@ -45,8 +45,8 @@ let v = r.memo(function (e) {
             hasBailedAst: G,
         } = (0, m.A)(t, {
             hideSimpleEmbedContent: v,
-            allowList: D || M,
-            allowHeading: D || M,
+            allowList: j || M,
+            allowHeading: j || M,
             allowLinks: !0,
             previewLinkTarget: !0,
         }),
@@ -61,8 +61,8 @@ let v = r.memo(function (e) {
         Y = (0, _.ZD)(t);
     return (0, i.jsx)(h.A, {
         compact: !1,
-        className: a()(n, S.i, { [x.M1]: (0, u.ec)(t), [x.XN]: j }),
-        disableInteraction: j,
+        className: a()(n, S.i, { [x.M1]: (0, u.ec)(t), [x.XN]: D }),
+        disableInteraction: D,
         childrenExecutedCommand: (0, f.A)(t, y, !1),
         childrenHeader: (0, E.A)({
             message: t,
@@ -76,9 +76,9 @@ let v = r.memo(function (e) {
             hideTimestamp: !0,
             hideGuildTag: !1,
         }),
-        childrenAccessories: e.hideAccessories ? void 0 : (0, p.J)(e, U, G),
-        childrenMessageContent: (0, g.A)(e, w),
-        childrenSystemMessage: (0, I.A)({ ...e, disableInteraction: j }),
+        childrenAccessories: e.hideAccessories ? void 0 : (0, g.J)(e, U, G),
+        childrenMessageContent: (0, p.A)(e, w),
+        childrenSystemMessage: (0, I.A)({ ...e, disableInteraction: D }),
         onContextMenu: r,
         onClick: l,
         hasThread: R && null != B && t.hasFlag(N.pr7.HAS_THREAD),

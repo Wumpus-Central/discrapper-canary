@@ -5,7 +5,7 @@ n(64700);
 var i = n(503698),
     s = n.n(i),
     a = n(253018),
-    o = n(40672);
+    o = n(562650);
 function l(e, t) {
     let { attributes: n, children: i, element: s } = t;
     return "timestampMentionInput" === s.type ? (0, r.jsx)(u, { attributes: n, element: s, children: i }) : null;

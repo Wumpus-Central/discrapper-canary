@@ -14,9 +14,9 @@ var a = n(627968),
     x = n(686267),
     g = n(231723),
     _ = n(818348),
-    f = n(774630),
+    f = n(646284),
     v = n(985018),
-    b = n(248065);
+    b = n(36303);
 let j = n(843020);
 function A(e) {
     let { task: t, handleSubmit: n, disabled: s } = e,
@@ -36,10 +36,10 @@ let C = function (e) {
     let { transitionState: t, onClose: n } = e,
         [u, p] = i.useState(null),
         [x, C] = i.useState(!0),
-        [y, T] = i.useState(null),
+        [T, y] = i.useState(null),
         [S, E] = i.useState(!1),
         N = i.useCallback(async () => {
-            C(!0), T(null);
+            C(!0), y(null);
             try {
                 let e = await (0, c.$R)();
                 if (null == e) return void n();
@@ -53,7 +53,7 @@ let C = function (e) {
                           flow_context: { tasks: [], flow_id: e.flow_context.flow_id },
                       });
             } catch {
-                T(v.intl.string(f.default["/f++3g"]));
+                y(v.intl.string(f.default["/f++3g"]));
             } finally {
                 C(!1);
             }
@@ -66,7 +66,7 @@ let C = function (e) {
                         let t = { task_id: u.task_id, flow_id: u.flow_context.flow_id, data: e };
                         await (0, c.Rt)(t), N();
                     } catch (e) {
-                        T(v.intl.string(f.default["+QRSxc"]));
+                        y(v.intl.string(f.default["+QRSxc"]));
                     } finally {
                         E(!1);
                     }
@@ -77,12 +77,12 @@ let C = function (e) {
     (0, l.Ay)(() => {
         N();
     });
-    let k = i.useMemo(() => u?.task_type === m.wP.AGE_VERIFICATION, [u]);
+    let R = i.useMemo(() => u?.task_type === m.wP.AGE_VERIFICATION, [u]);
     return (0, a.jsxs)("div", {
         className: b.Tp,
         children: [
             (0, a.jsx)("img", { className: b.xX, src: j, alt: "" }),
-            k
+            R
                 ? (0, a.jsx)(o.default, {
                       transitionState: t ?? g.ip.ENTERED,
                       entryPoint: r.q1.SAFETY_FLOWS,
@@ -103,7 +103,7 @@ let C = function (e) {
                                     justify: "start",
                                     className: b.rf,
                                     children: [
-                                        null !== y &&
+                                        null !== T &&
                                             (0, a.jsxs)(s.BJc, {
                                                 direction: "vertical",
                                                 justify: "space-between",
@@ -150,7 +150,7 @@ let C = function (e) {
                                                     }),
                                                 ],
                                             }),
-                                        null === y &&
+                                        null === T &&
                                             null != u &&
                                             (0, a.jsx)(A, { task: u, handleSubmit: I, disabled: S }),
                                     ],

@@ -1,8 +1,8 @@
 n.d(t, { A: () => b });
 var i = n(627968),
     r = n(64700),
-    l = n(284009),
-    a = n.n(l),
+    a = n(284009),
+    l = n.n(a),
     s = n(158954),
     o = n(311907),
     d = n(846293),
@@ -18,12 +18,12 @@ var i = n(627968),
     f = n(652215),
     C = n(172799),
     E = n(985018),
-    I = n(42441);
+    I = n(563111);
 function b(e) {
     let t,
         {
             invite: n,
-            currentUserId: l,
+            currentUserId: a,
             guild: b,
             message: T,
             onTransitionToInviteChannel: v,
@@ -50,10 +50,10 @@ function b(e) {
             null != n.guild &&
             L.channelId === n.channel.id &&
             L.guildId === n.guild.id;
-    a()(null != n, "Invite cannot be null");
-    let { target_type: w, target_user: D } = n;
-    a()(w === C.yV.STREAM && null != D, "invalid streaming invite");
-    let O = l === D.id,
+    l()(null != n, "Invite cannot be null");
+    let { target_type: O, target_user: D } = n;
+    l()(O === C.yV.STREAM && null != D, "invalid streaming invite");
+    let w = a === D.id,
         k = n.state === f.elq.ACCEPTING,
         U = r.useCallback(() => {
             let e = "noop";
@@ -71,11 +71,11 @@ function b(e) {
         V = E.intl.string(E.t.I6JG46),
         W = "active";
     G && !M
-        ? ((t = O ? E.intl.string(E.t.oBLoZJ) : E.intl.formatToPlainString(E.t["0QJmA+"], { name: F })),
+        ? ((t = w ? E.intl.string(E.t.oBLoZJ) : E.intl.formatToPlainString(E.t["0QJmA+"], { name: F })),
           (V = E.intl.string(E.t.Wdi5E1)))
         : ((W = "active"),
           P && ((V = E.intl.string(E.t.Q1W99y)), (W = "secondary")),
-          (t = O ? E.intl.string(E.t["4hyaHu"]) : E.intl.formatToPlainString(E.t.QmlLEq, { name: F })));
+          (t = w ? E.intl.string(E.t["4hyaHu"]) : E.intl.formatToPlainString(E.t.QmlLEq, { name: F })));
     let q =
         N === b.id && null != B
             ? (0, i.jsx)(_.A.Channel, { channel: B })

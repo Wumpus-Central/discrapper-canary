@@ -4,11 +4,11 @@ var i = n(627968);
 n(64700);
 var s = n(735438),
     l = n.n(s),
-    a = n(813516),
-    r = n(5658),
+    r = n(813516),
+    a = n(5658),
     o = n(712209),
     c = n(985018),
-    d = n(297513);
+    d = n(48355);
 function u(e, t, n) {
     let { markChannelRead: s, markGuildRead: u, deleteChannel: h, toggle: A, getNumUnreadChannels: m } = t,
         p = null;
@@ -21,7 +21,7 @@ function u(e, t, n) {
                 (e.hasLoadedAnything && e.sortOrder === o.xB.ReallyOldChannel
                     ? l.push(
                           (0, i.jsx)(
-                              a.A,
+                              r.A,
                               { className: d.y, contentClassName: d.$, children: c.intl.string(c.t.roBMzj) },
                               "old-divider",
                           ),
@@ -30,14 +30,14 @@ function u(e, t, n) {
                       e.sortOrder === o.xB.NoNotifications &&
                       l.push(
                           (0, i.jsx)(
-                              a.A,
+                              r.A,
                               { className: d.y, contentClassName: d.$, children: c.intl.string(c.t["2Ys7nu"]) },
                               "disabled-divider",
                           ),
                       )),
             l.push(
                 (0, i.jsx)(
-                    r.A,
+                    a.A,
                     {
                         channel: e,
                         markChannelRead: s,

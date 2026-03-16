@@ -12,19 +12,19 @@ var i = n(627968),
     h = n(926441),
     _ = n(327866),
     m = n(959278),
-    p = n(575486),
-    g = n(531685),
+    g = n(575486),
+    p = n(531685),
     E = n(203982),
     I = n(249477),
     f = n(507060),
     C = n(652215),
-    T = n(563760);
+    T = n(92854);
 let N = r.memo(function () {
     let e = (0, d.A)(),
         t = r.useRef(null),
         n = r.useCallback((e) => {
             let { duration: n, intensity: i } = e;
-            if (A.A.useReducedMotion || !g.A.isFocused()) return;
+            if (A.A.useReducedMotion || !p.A.isFocused()) return;
             let { current: r } = t;
             a()(null != r, "Shakeable is shaken when not mounted"), r.shake(n, i);
         }, []);
@@ -48,7 +48,7 @@ let N = r.memo(function () {
                 (0, i.jsx)(_.A, {}),
                 (0, i.jsx)(o.A, {}),
                 (0, i.jsx)(I.A, {}),
-                (0, i.jsx)(p.A, {}),
+                (0, i.jsx)(g.A, {}),
                 !e && (0, i.jsx)(s.Smm, {}),
             ],
         })

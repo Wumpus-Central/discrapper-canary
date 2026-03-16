@@ -3,8 +3,8 @@ n.d(t, { A: () => o });
 var i = n(627968),
     s = n(64700),
     l = n(397927),
-    a = n(847599),
-    r = n(82096);
+    r = n(847599),
+    a = n(263518);
 let o = function (e) {
     let {
         title: t,
@@ -18,20 +18,20 @@ let o = function (e) {
         guildId: m,
     } = e;
     s.useEffect(() => {
-        (0, a.Bf)(h, A, m);
+        (0, r.Bf)(h, A, m);
     }, [h, A, m]);
     let p = s.useCallback(() => {
-            (0, a.mU)(a.IY.NSFW_CHANNEL_DISAGREE_CTA, h, A, m), u?.();
+            (0, r.mU)(r.IY.NSFW_CHANNEL_DISAGREE_CTA, h, A, m), u?.();
         }, [u, h, A, m]),
         g = s.useCallback(() => {
-            (0, a.mU)(a.IY.NSFW_CHANNEL_AGREE_CTA, h, A, m), d?.();
+            (0, r.mU)(r.IY.NSFW_CHANNEL_AGREE_CTA, h, A, m), d?.();
         }, [d, h, A, m]);
     return (0, i.jsxs)(l.BJc, {
         justify: "center",
         align: "center",
         direction: "vertical",
         gap: 16,
-        className: r.XG,
+        className: a.XG,
         children: [
             (0, i.jsxs)(l.BJc, {
                 gap: 8,
@@ -39,10 +39,10 @@ let o = function (e) {
                 align: "center",
                 direction: "vertical",
                 children: [
-                    (0, i.jsx)(l.Text, { variant: "text-lg/semibold", className: r.DD, children: t }),
+                    (0, i.jsx)(l.Text, { variant: "text-lg/semibold", className: a.DD, children: t }),
                     (0, i.jsx)(l.Text, {
                         variant: "text-md/medium",
-                        className: r.h_,
+                        className: a.h_,
                         color: "text-muted",
                         children: n,
                     }),

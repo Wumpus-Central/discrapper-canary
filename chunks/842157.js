@@ -1,8 +1,8 @@
 n.d(t, { A: () => U }), n(321073);
 var i = n(627968),
     r = n(64700),
-    l = n(379834),
-    a = n(934551),
+    a = n(379834),
+    l = n(934551),
     s = n(27989),
     o = n(311907),
     d = n(397927),
@@ -30,12 +30,12 @@ var i = n(627968),
     R = n(877044),
     P = n(878831),
     M = n(652215),
-    w = n(768349),
+    O = n(768349),
     D = n(985018),
-    O = n(62323);
+    w = n(609653);
 function k(e) {
-    let { presenceActivity: t, remoteJoinPlatform: n, isGameLaunchable: l } = e,
-        o = (0, L.z4)({ platforms: t?.supported_platforms, currentPlatform: M.yTV.DESKTOP, isGameLaunchable: l }),
+    let { presenceActivity: t, remoteJoinPlatform: n, isGameLaunchable: a } = e,
+        o = (0, L.z4)({ platforms: t?.supported_platforms, currentPlatform: M.yTV.DESKTOP, isGameLaunchable: a }),
         c = r.useMemo(
             () =>
                 o
@@ -52,7 +52,7 @@ function k(e) {
                             case L.FL.XBOX:
                                 return (0, i.jsx)(d.YWd, { size: "xxs", color: "currentColor" });
                             case L.FL.VR:
-                                return (0, i.jsx)(a.VrHeadsetIcon, { size: "xxs", color: "currentColor" });
+                                return (0, i.jsx)(l.VrHeadsetIcon, { size: "xxs", color: "currentColor" });
                             case L.FL.DESKTOP:
                                 return (0, i.jsx)(d.kN9, { size: "xxs", color: "currentColor" });
                             default:
@@ -65,13 +65,13 @@ function k(e) {
     if (!(null != n || c.length > 0)) return null;
     let u = null != n ? (0, S.C)(n) : D.intl.string(D.t["4dGUP0"]);
     return (0, i.jsxs)("div", {
-        className: O.qr,
+        className: w.qr,
         children: [
             (0, i.jsx)("div", {
-                className: O.E6,
-                children: c.map((e, t) => (0, i.jsx)("div", { className: O.F2, children: e }, t)),
+                className: w.E6,
+                children: c.map((e, t) => (0, i.jsx)("div", { className: w.F2, children: e }, t)),
             }),
-            (0, i.jsx)(d.Text, { variant: "text-sm/medium", color: "currentColor", className: O.kB, children: u }),
+            (0, i.jsx)(d.Text, { variant: "text-sm/medium", color: "currentColor", className: w.kB, children: u }),
         ],
     });
 }
@@ -79,7 +79,7 @@ function U(e) {
     let {
             message: t,
             application: n,
-            applicationName: a,
+            applicationName: l,
             channel: s,
             header: C,
             currentUserId: S,
@@ -106,7 +106,7 @@ function U(e) {
             () =>
                 null != $
                     ? (0, i.jsxs)("div", {
-                          className: O.Ym,
+                          className: w.Ym,
                           children: [
                               (0, i.jsx)(d._xR, { size: "xxs", color: "currentColor" }),
                               (0, i.jsx)(p.z, {
@@ -124,7 +124,7 @@ function U(e) {
         en = (0, x.s)(n.id),
         ei = r.useMemo(
             () =>
-                en.some((e) => (0, g.CZ)(e) === l.m.GLOBAL)
+                en.some((e) => (0, g.CZ)(e) === a.m.GLOBAL)
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)(d.Y3C, { size: "xxs", color: "currentColor" }),
@@ -138,18 +138,18 @@ function U(e) {
             () =>
                 (0, i.jsxs)(d.Text, {
                     variant: "text-xs/normal",
-                    className: O.dS,
+                    className: w.dS,
                     color: "none",
                     lineClamp: 2,
-                    children: [et ? (0, E.YC)(t, a, s, S, !1) : ee, et ? null : ei],
+                    children: [et ? (0, E.YC)(t, l, s, S, !1) : ee, et ? null : ei],
                 }),
-            [et, t, a, s, S, ee, ei],
+            [et, t, l, s, S, ee, ei],
         ),
-        el = r.useMemo(
-            () => (0, i.jsxs)("div", { className: O.pq, children: [er, q || et ? null : Y] }),
+        ea = r.useMemo(
+            () => (0, i.jsxs)("div", { className: w.pq, children: [er, q || et ? null : Y] }),
             [er, q, et, Y],
         ),
-        ea = !!L,
+        el = !!L,
         es = (0, A.e)(n),
         { canJoin: eo, remoteJoinPlatform: ed } = (0, I.D)({
             presenceActivity: V,
@@ -159,7 +159,7 @@ function U(e) {
             application: n,
             isEmbeddedApplication: R,
             isFrameApplication: es,
-            isGameLaunchable: ea,
+            isGameLaunchable: el,
         }),
         ec = (0, I.M)(V, W, t, n),
         eu = (0, b.E)(V, t, n, S),
@@ -269,25 +269,25 @@ function U(e) {
         eA = ep.some((e) => e.trackingArea === h.kY.CLOUD_PLAY);
     (0, P.A)(eA, z);
     let ex = r.useMemo(
-        () => (e_ ? null : (0, i.jsx)(k, { presenceActivity: V, remoteJoinPlatform: ed, isGameLaunchable: ea })),
-        [e_, V, ed, ea],
+        () => (e_ ? null : (0, i.jsx)(k, { presenceActivity: V, remoteJoinPlatform: ed, isGameLaunchable: el })),
+        [e_, V, ed, el],
     );
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(m.h, {
                 header: C,
-                title: a,
+                title: l,
                 staticBannerSrc: G,
                 onClickBanner: B,
                 bannerAspectRatio: m.u.ACTIVITY,
                 iconSrc: F ?? void 0,
-                info: el,
+                info: ea,
                 actions: ep,
                 primaryActionFirst: !0,
                 onClickContent: B,
                 trackingConfig: {
                     id: n.id,
-                    linkType: w.J.RICH_PRESENCE_INVITE,
+                    linkType: O.J.RICH_PRESENCE_INVITE,
                     onView: H,
                     referrerId: t.author.id,
                     guildId: s.guild_id,

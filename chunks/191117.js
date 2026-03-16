@@ -15,7 +15,7 @@ var i = n(627968),
     h = n(726862),
     _ = n(539916),
     p = n(985018),
-    A = n(981317);
+    A = n(42483);
 function f(e) {
     let { guild: t, prejoinOnly: n, postjoinOnly: l } = e,
         d = (0, a.bG)([x.A], () => x.A.editedOnboardingPrompts),

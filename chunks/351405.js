@@ -1,8 +1,8 @@
 n.d(t, { P: () => S }), n(321073);
 var i = n(627968),
     r = n(64700),
-    l = n(311907),
-    a = n(397927),
+    a = n(311907),
+    l = n(397927),
     s = n(138175),
     o = n(99072),
     d = n(443795),
@@ -20,9 +20,9 @@ var i = n(627968),
     E = n(536189),
     I = n(652215),
     b = n(272984),
-    T = n(62323);
+    T = n(609653);
 function v(e) {
-    let { partyMembers: t, partySize: n, maxPartySize: r, guildId: l, activityActionType: s } = e,
+    let { partyMembers: t, partySize: n, maxPartySize: r, guildId: a, activityActionType: s } = e,
         o = Math.max(n, t.length),
         d = (0, g.SJ)({ maxPartySize: r, partySize: o, activityActionType: s }),
         c = [...t];
@@ -33,38 +33,38 @@ function v(e) {
         children: [
             c.length > 0 &&
                 (0, i.jsx)(f.Ay, {
-                    guildId: l,
+                    guildId: a,
                     users: c,
                     max: r > 0 ? Math.min(r, 8) : 8,
                     size: f.DN.SIZE_16,
                     dimEmptyUsers: !0,
                 }),
-            (0, i.jsx)(a.Text, { variant: "text-xs/medium", color: "none", children: d }),
+            (0, i.jsx)(l.Text, { variant: "text-xs/medium", color: "none", children: d }),
         ],
     });
 }
 function S(e) {
-    let { analyticsLocations: t, app: n, channel: a, message: g, hideParty: T, onView: S } = e,
+    let { analyticsLocations: t, app: n, channel: l, message: g, hideParty: T, onView: S } = e,
         y = (0, s.b)(n),
-        N = (0, l.bG)([c.default], () => c.default.getId()),
-        j = (0, l.bG)([m.A], () => {
+        N = (0, a.bG)([c.default], () => c.default.getId()),
+        j = (0, a.bG)([m.A], () => {
             if (null == g.application) return m.A.findActivity(g.author.id, (e) => e.type === I.$pd.LISTENING);
             {
                 let e = g.author.id;
                 return (
-                    (0, A.v)(g) && (e = e === N && a.isPrivate() ? a.getRecipientId() : N),
+                    (0, A.v)(g) && (e = e === N && l.isPrivate() ? l.getRecipientId() : N),
                     m.A.getApplicationActivity(e, g.application.id)
                 );
             }
-        }, [g, a, N]),
-        L = (0, l.bG)([_.A, h.A], () => _.A.getApplicationActivity(y.id) ?? h.A.getApplicationActivity(y.id, !0), [
+        }, [g, l, N]),
+        L = (0, a.bG)([_.A, h.A], () => _.A.getApplicationActivity(y.id) ?? h.A.getApplicationActivity(y.id, !0), [
             y.id,
         ]),
-        R = (0, l.yK)([u.A], () => (null == j || null == j.party ? [] : Array.from(u.A.getParty(j.party.id) ?? [])), [
+        R = (0, a.yK)([u.A], () => (null == j || null == j.party ? [] : Array.from(u.A.getParty(j.party.id) ?? [])), [
             j,
         ]),
         { partySize: P, maxPartySize: M } = (0, x._)(j),
-        w = r.useMemo(
+        O = r.useMemo(
             () =>
                 R.map((e) => {
                     let t = p.default.getUser(e);
@@ -75,13 +75,13 @@ function S(e) {
         D = r.useMemo(
             () =>
                 (0, i.jsx)(v, {
-                    partyMembers: w,
+                    partyMembers: O,
                     partySize: P,
                     maxPartySize: M,
-                    guildId: a.guild_id,
+                    guildId: l.guild_id,
                     activityActionType: g.activity?.type,
                 }),
-            [w, P, M, a.guild_id, g.activity?.type],
+            [O, P, M, l.guild_id, g.activity?.type],
         );
     return (0, b.pH)(j?.party?.id) || y.id === d.HT.id
         ? (0, i.jsx)(E.A, {
@@ -92,14 +92,14 @@ function S(e) {
               onView: S,
               partyStatusElement: D,
               presenceActivity: j,
-              guildId: a.guild_id,
+              guildId: l.guild_id,
           })
         : g.activity?.type === I.xL.STREAM_REQUEST
-          ? (0, i.jsx)(o.A, { analyticsLocations: t, application: y, channel: a, currentUserId: N, message: g })
+          ? (0, i.jsx)(o.A, { analyticsLocations: t, application: y, channel: l, currentUserId: N, message: g })
           : (0, i.jsx)(C.A, {
                 analyticsLocations: t,
                 application: y,
-                channel: a,
+                channel: l,
                 currentUserId: N,
                 currentUserPresenceActivity: L,
                 hideParty: T,

@@ -14,7 +14,7 @@ var i = n(503698),
     f = n(351906),
     p = n(427262),
     h = n(985018),
-    m = n(50699);
+    m = n(479117);
 function E(e) {
     return e.isSystemUser() ? _.v.SYSTEM_DM : e.bot ? _.v.BOT : null;
 }

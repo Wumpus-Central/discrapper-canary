@@ -12,19 +12,19 @@ var i = n(627968),
     h = n(657331),
     _ = n(994500),
     m = n(287809),
-    p = n(427262),
-    g = n(390848),
+    g = n(427262),
+    p = n(390848),
     E = n(513297),
     I = n(414711),
     f = n(723690),
     C = n(652215),
     T = n(985018),
-    N = n(79676);
+    N = n(615078);
 function S(e) {
     let { user: t, applicationId: n, isGameRelationship: l, active: o, onAcceptFriendRequest: d } = e,
         [c, u] = r.useState(!1),
         A = m.default.getCurrentUser()?.isStaff() && t?.isStaff(),
-        { acceptFriendRequest: h, cancelFriendRequest: _ } = (0, g.I)({
+        { acceptFriendRequest: h, cancelFriendRequest: _ } = (0, p.I)({
             userId: t.id,
             applicationId: n,
             isGameRelationship: l,
@@ -33,7 +33,7 @@ function S(e) {
                 u(!1);
             },
         }),
-        p = r.useCallback(
+        g = r.useCallback(
             (e) => {
                 u(!0), e.stopPropagation(), d(), h();
             },
@@ -59,7 +59,7 @@ function S(e) {
                 icon: s.A9s,
                 actionType: E.A.ActionTypes.ACCEPT,
                 tooltip: T.intl.string(T.t.Zcibdf),
-                onClick: p,
+                onClick: g,
                 shouldHighlight: o,
                 loading: c,
             }),
@@ -75,7 +75,7 @@ function S(e) {
 }
 function x(e) {
     let { userId: t, applicationId: n, isGameRelationship: l, active: a } = e,
-        { cancelFriendRequest: o } = (0, g.I)({
+        { cancelFriendRequest: o } = (0, p.I)({
             userId: t,
             applicationId: n,
             isGameRelationship: l,
@@ -116,7 +116,7 @@ function v(e) {
 }
 function y(e) {
     let { user: t, hovered: n, status: r, isGameRelationship: l, applicationId: o, isFriend: d } = e,
-        c = p.Ay.useUserTag(t);
+        c = g.Ay.useUserTag(t);
     return (0, i.jsx)(f.A, {
         user: t,
         hovered: n,
@@ -147,10 +147,10 @@ function b(e) {
             isGameRelationship: A,
             onAcceptFriendRequest: m,
         } = e,
-        { analyticsLocations: p } = (0, d.Ay)(),
-        g = a === C.clD.OFFLINE ? C.clD.UNKNOWN : a,
+        { analyticsLocations: g } = (0, d.Ay)(),
+        p = a === C.clD.OFFLINE ? C.clD.UNKNOWN : a,
         E = (0, l.bG)([_.A], () => _.A.getRelationshipType(t.id)),
-        f = r.useCallback(() => (0, h.openUserProfileModal)({ userId: t.id, sourceAnalyticsLocations: p }), [p, t.id]),
+        f = r.useCallback(() => (0, h.openUserProfileModal)({ userId: t.id, sourceAnalyticsLocations: g }), [g, t.id]),
         T = (e) => {
             e.stopPropagation(), o.A.openPrivateChannel({ recipientIds: [t.id] });
         };
@@ -166,7 +166,7 @@ function b(e) {
                           (0, i.jsx)(y, {
                               user: t,
                               hovered: e,
-                              status: g,
+                              status: p,
                               isGameRelationship: A,
                               applicationId: u,
                               isFriend: E === C.eA$.FRIEND,

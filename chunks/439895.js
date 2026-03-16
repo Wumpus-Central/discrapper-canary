@@ -10,7 +10,7 @@ var a = n(627968),
     u = n(841702),
     m = n(751304),
     h = n(61750),
-    p = n(91753);
+    p = n(841015);
 let x = (e) => {
         let [t, n] = i.useState(0);
         return (
@@ -38,16 +38,16 @@ let x = (e) => {
             v = g ? t : f,
             b = g || (!_ && v.size > 0),
             [j, A] = i.useState(""),
-            [C, y] = i.useState(null),
-            [T, S] = i.useState(null);
+            [C, T] = i.useState(null),
+            [y, S] = i.useState(null);
         return (i.useEffect(() => {
             if ("" === j.trim() || !b) {
-                y(null), S(null);
+                T(null), S(null);
                 return;
             }
             let e = d.A.getProduct(j),
                 t = d.A.getCategoryForProduct(j);
-            null != e && null != t ? (y(e), S(t)) : (y(null), S(null));
+            null != e && null != t ? (T(e), S(t)) : (T(null), S(null));
         }, [j, b]),
         _)
             ? (0, a.jsx)(l.Text, { variant: "text-md/normal", children: "Loading categories and collectibles..." })
@@ -105,7 +105,7 @@ let x = (e) => {
                             className: p.uW,
                             children: [
                                 (0, a.jsx)(l.Heading, { variant: "heading-lg/semibold", children: "Product Preview" }),
-                                null != C && null != T
+                                null != C && null != y
                                     ? (0, a.jsxs)("div", {
                                           className: p.i1,
                                           children: [

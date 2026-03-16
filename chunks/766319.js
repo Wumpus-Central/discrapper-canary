@@ -3,8 +3,8 @@ n.d(t, { A: () => N });
 var i = n(627968),
     s = n(64700),
     l = n(735438),
-    a = n(110259),
-    r = n(417597),
+    r = n(110259),
+    a = n(417597),
     o = n(397927),
     c = n(308368),
     d = n(139286),
@@ -16,16 +16,16 @@ var i = n(627968),
     g = n(762370),
     _ = n(25528),
     f = n(652215),
-    x = n(55705),
+    x = n(426127),
     C = n(985018),
-    E = n(512977);
+    E = n(281783);
 function I(e) {
     let t,
-        { activity: n, channel: l, userId: a } = e,
+        { activity: n, channel: l, userId: r } = e,
         d = (0, u.YY)(n.application_id).data,
         [h, A] = s.useState(!1),
         [p, g] = s.useState(0),
-        _ = (0, r.bG)([m.A], () => m.A.getChannelId() !== l.id);
+        _ = (0, a.bG)([m.A], () => m.A.getChannelId() !== l.id);
     async function I() {
         g(1);
         try {
@@ -33,9 +33,9 @@ function I(e) {
                 type: f.xL.STREAM_REQUEST,
                 channelId: l.id,
                 activity: n,
-                content: `<@${a}>`,
+                content: `<@${r}>`,
                 location: "request to stream hover",
-                targetUserId: a,
+                targetUserId: r,
             });
         } catch (e) {
             g(0);
@@ -87,7 +87,7 @@ function I(e) {
 }
 function N(e) {
     let { userId: t, channel: n } = e,
-        o = (0, r.bG)([p.default], () => p.default.getUser(t)),
+        o = (0, a.bG)([p.default], () => p.default.getUser(t)),
         c = (0, _.Ay)(t, n.guild_id),
         u = (0, g.A)(t, n.id),
         m = s.useMemo(
@@ -102,7 +102,7 @@ function N(e) {
         ),
         f = null == o || !u || 0 === m.length;
     return ((0, d.A)(
-        { type: a.ImpressionTypes.POPOUT, name: a.ImpressionNames.VOICE_USER_ACTIVITY_POPOUT, properties: {} },
+        { type: r.ImpressionTypes.POPOUT, name: r.ImpressionNames.VOICE_USER_ACTIVITY_POPOUT, properties: {} },
         { disableTrack: f },
     ),
     f)

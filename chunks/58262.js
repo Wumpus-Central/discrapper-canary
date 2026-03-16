@@ -1,8 +1,8 @@
 n.d(t, { A: () => C });
 var i = n(627968),
     r = n(64700),
-    l = n(158954),
-    a = n(311907),
+    a = n(158954),
+    l = n(311907),
     s = n(308528),
     o = n(846293),
     d = n(793574),
@@ -15,14 +15,14 @@ var i = n(627968),
     g = n(427262),
     A = n(652215),
     x = n(985018),
-    f = n(42441);
+    f = n(563111);
 function C(e) {
     let { invite: t, message: n, getAcceptInviteContext: C } = e,
-        E = (0, a.bG)([m.default], () => m.default.getId()),
+        E = (0, l.bG)([m.default], () => m.default.getId()),
         I = t.inviter?.id === E,
         b = t.state === A.elq.ACCEPTING,
         { analyticsLocations: T } = (0, c.Ay)(d.A.INVITE_EMBED),
-        v = (0, a.bG)([p.A], () => null != t.inviter && p.A.isFriend(t.inviter?.id)),
+        v = (0, l.bG)([p.A], () => null != t.inviter && p.A.isFriend(t.inviter?.id)),
         S = r.useCallback(() => {
             let e = "noop";
             null != t.inviter &&
@@ -57,7 +57,7 @@ function C(e) {
                             (0, i.jsx)(u.A.Info, { title: P, onClick: v ? N : void 0, children: M }),
                         ],
                     }),
-                    (0, i.jsx)(l.$nd, { onClick: N, text: j, loading: b, disabled: I, variant: L }),
+                    (0, i.jsx)(a.$nd, { onClick: N, text: j, loading: b, disabled: I, variant: L }),
                 ],
             }),
         ],

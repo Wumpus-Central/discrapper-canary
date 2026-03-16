@@ -16,29 +16,29 @@ var l = n(627968),
     E = n(994500),
     m = n(287809),
     S = n(645959),
-    p = n(256415),
-    N = n(403362),
-    T = n(996439),
-    _ = n(810412),
-    C = n(914853),
-    y = n(179917),
+    _ = n(256415),
+    p = n(403362),
+    N = n(996439),
+    T = n(810412),
+    y = n(914853),
+    C = n(179917),
     x = n(419072),
-    M = n(437331),
-    v = n(91868),
+    v = n(437331),
+    M = n(91868),
     D = n(554932),
     R = n(406595),
-    U = n(557404),
-    O = n(652215),
-    G = n(822889),
+    O = n(557404),
+    U = n(652215),
+    G = n(895867),
     w = n(985018),
-    F = n(77347);
-function L(e) {
+    L = n(416001);
+function F(e) {
     return Array.from(e).sort();
 }
 let b = (0, r.throttle)(
         (e) => {
-            (0, _.Y)(O.uss.FRIENDS, {
-                locked: p.default.isInstanceLocked(),
+            (0, T.Y)(U.uss.FRIENDS, {
+                locked: _.default.isInstanceLocked(),
                 shownUserIds: e.shownUserIds,
                 liveUserIds: [],
                 contentInventoryIds: e.contentInventoryIds,
@@ -65,7 +65,7 @@ let b = (0, r.throttle)(
                     n.push(t?.username, t?.globalName, l);
                 }
             let l = null != t.guild_id ? (A.A.getGuild(t.guild_id)?.name ?? null) : null;
-            return null != l && n.push(l), n.filter(N.Vq);
+            return null != l && n.push(l), n.filter(p.Vq);
         },
         throttleMs: 100,
     };
@@ -87,34 +87,34 @@ function P() {
             }, [e])),
         [E, m] = i.useState([]);
     (0, h.RT)(r, A, m, k);
-    let p = i.useRef(null),
-        N = (0, o.A)("friends-widget-messages", p),
-        [O, P] = (0, a.bG)([R.A], () => R.A.getFavoriteTargetIdsForTab(C.x.MESSAGES), [], T.D),
+    let _ = i.useRef(null),
+        p = (0, o.A)("friends-widget-messages", _),
+        [U, P] = (0, a.bG)([R.A], () => R.A.getFavoriteTargetIdsForTab(y.x.MESSAGES), [], N.D),
         [j, V] = (0, a.bG)(
-            [v.A],
+            [M.A],
             () => {
-                let [e, t] = v.A.getRows(v.Y.ACTIVE_NOW),
-                    [n] = v.A.getRows(v.Y.DMS),
-                    [l] = v.A.getRows(v.Y.RECENT_TEXT),
+                let [e, t] = M.A.getRows(M.Y.ACTIVE_NOW),
+                    [n] = M.A.getRows(M.Y.DMS),
+                    [l] = M.A.getRows(M.Y.RECENT_TEXT),
                     i = n.slice(0, 5),
                     r = l.slice(0, 8);
                 return [{ activeNowRows: e.slice(0, 8), dmRows: i, recentTextRows: r }, t];
             },
             [],
-            T.D,
+            N.D,
         ),
-        H = (0, a.bG)([x.A], () => x.A.getCollapsedSectionOverridesForTab(C.x.MESSAGES), []),
+        H = (0, a.bG)([x.A], () => x.A.getCollapsedSectionOverridesForTab(y.x.MESSAGES), []),
         Y = i.useCallback((e) => {
-            (0, D.G)({ tab: C.x.MESSAGES, sectionKey: e });
+            (0, D.G)({ tab: y.x.MESSAGES, sectionKey: e });
         }, []),
         W = i.useMemo(() => {
             let e = new Set();
-            for (let t of O) e.add(t);
+            for (let t of U) e.add(t);
             for (let t of j.dmRows) e.add(t.channelId);
             for (let t of j.activeNowRows) e.add(t.channelId);
             for (let t of j.recentTextRows) e.add(t.channelId);
             return Array.from(e);
-        }, [O, j.activeNowRows, j.dmRows, j.recentTextRows]),
+        }, [U, j.activeNowRows, j.dmRows, j.recentTextRows]),
         { unreadOrMentionChannels: z } = (0, a.cf)([f.Ay], () => {
             let e = new Set();
             for (let t of W) {
@@ -126,7 +126,7 @@ function P() {
             }
             return { unreadOrMentionChannels: e };
         }, [W]),
-        $ = i.useMemo(() => {
+        B = i.useMemo(() => {
             let e = (e) => !0 === H[e],
                 t = (e) => z.has(e),
                 n = [];
@@ -143,13 +143,13 @@ function P() {
                     }),
                     n
                 );
-            if (O.length > 0 && P > 0) {
-                let l = e("FAVORITES") ? O.filter(t) : O;
+            if (U.length > 0 && P > 0) {
+                let l = e("FAVORITES") ? U.filter(t) : U;
                 n.push({
                     kind: "FAVORITES",
                     key: "FAVORITES",
                     title: w.intl.string(G.default.GKTlS6),
-                    count: O.length,
+                    count: U.length,
                     channelIds: l,
                     length: Math.max(l.length, 1),
                 });
@@ -191,41 +191,41 @@ function P() {
                 });
             }
             return n;
-        }, [H, z, c, O, j.activeNowRows, j.dmRows, j.recentTextRows, P, E, V]),
-        B = i.useMemo(() => $.map((e) => e.length), [$]),
+        }, [H, z, c, U, j.activeNowRows, j.dmRows, j.recentTextRows, P, E, V]),
+        $ = i.useMemo(() => B.map((e) => e.length), [B]),
         K = i.useCallback(
             (e) => {
-                let t = $.findIndex((e) => "FAVORITES" === e.kind);
+                let t = B.findIndex((e) => "FAVORITES" === e.kind);
                 if (-1 === t) {
-                    for (let t = 0; t < $.length; t += 1) {
-                        let n = $[t].channelIds.findIndex((t) => t === e);
+                    for (let t = 0; t < B.length; t += 1) {
+                        let n = B[t].channelIds.findIndex((t) => t === e);
                         if (-1 !== n) return { section: t, row: n };
                     }
                     return null;
                 }
-                let n = $[t],
+                let n = B[t],
                     l = n?.channelIds.findIndex((t) => t === e) ?? -1;
                 return -1 !== l ? { section: t, row: l } : null;
             },
-            [$],
+            [B],
         ),
         X = i.useCallback(() => {
-            let e = $.findIndex((e) => "FAVORITES" === e.kind);
+            let e = B.findIndex((e) => "FAVORITES" === e.kind);
             return -1 === e ? null : { section: e, row: void 0 };
-        }, [$]);
-    (0, U.$)({
-        scrollerRef: p,
-        favoriteTargetIds: O,
+        }, [B]);
+    (0, O.$)({
+        scrollerRef: _,
+        favoriteTargetIds: U,
         getScrollTargetForTargetId: (e) => K(e),
         getFallbackScrollTarget: X,
         padding: 8,
         animate: !1,
     });
-    let Z = (0, _.Dk)(() => {
+    let Z = (0, T.Dk)(() => {
             let e = new Set();
-            for (let t of $) for (let n of t.channelIds) e.add(n);
+            for (let t of B) for (let n of t.channelIds) e.add(n);
             return e;
-        }, [$]),
+        }, [B]),
         { shownUserIds: Q, contentInventoryIds: J } = (0, a.bG)(
             [],
             () =>
@@ -251,12 +251,12 @@ function P() {
                 })(Z),
             [Z],
         ),
-        q = (0, _.Dk)(() => Q, [Q]),
-        ee = (0, _.Dk)(() => J, [J]);
+        q = (0, T.Dk)(() => Q, [Q]),
+        ee = (0, T.Dk)(() => J, [J]);
     i.useEffect(() => {
-        (0 !== q.size || 0 !== ee.size) && b({ shownUserIds: L(q), contentInventoryIds: L(ee) });
+        (0 !== q.size || 0 !== ee.size) && b({ shownUserIds: F(q), contentInventoryIds: F(ee) });
     }, [q, ee]);
-    let et = i.useCallback((e) => $[e], [$]),
+    let et = i.useCallback((e) => B[e], [B]),
         en = i.useCallback(
             (e) => {
                 let { section: t } = e,
@@ -267,7 +267,7 @@ function P() {
                 return (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsx)(u.AC4, { children: n.title }),
-                        (0, l.jsx)(y.I, {
+                        (0, l.jsx)(C.I, {
                             title: n.title,
                             count: n.count,
                             isCollapsed: r,
@@ -287,7 +287,7 @@ function P() {
                 if (null == r) return null;
                 let s = `${i.key}:${e.row}`;
                 return (0, l.jsx)(
-                    M.V,
+                    v.V,
                     {
                         channelId: r,
                         listItemId: s,
@@ -309,13 +309,13 @@ function P() {
             [et],
         ),
         es = i.useCallback((e) => {
-            d(e), p.current?.scrollToTop();
+            d(e), _.current?.scrollToTop();
         }, []);
     return (0, l.jsxs)("div", {
-        className: F.kL,
+        className: L.kL,
         children: [
             (0, l.jsx)("div", {
-                className: F.MT,
+                className: L.MT,
                 children: (0, l.jsx)(u.IWV, {
                     query: r,
                     onChange: es,
@@ -325,7 +325,7 @@ function P() {
                 }),
             }),
             (0, l.jsx)(s.hD, {
-                navigator: N,
+                navigator: p,
                 children: (0, l.jsx)(s.PR, {
                     children: (e) => {
                         let { ref: t, role: n, ...i } = e;
@@ -335,15 +335,15 @@ function P() {
                                     innerRole: n,
                                     innerAriaLabel: w.intl.string(w.t.OIgYlQ),
                                     ref: (e) => {
-                                        (p.current = e), (t.current = e?.getScrollerNode() ?? null);
+                                        (_.current = e), (t.current = e?.getScrollerNode() ?? null);
                                     },
-                                    className: F.p_,
+                                    className: L.p_,
                                     sectionHeight: ei,
                                     rowHeight: er,
                                     sidebarHeight: 0,
                                     renderSection: en,
                                     renderRow: el,
-                                    sections: B,
+                                    sections: $,
                                     paddingBottom: 8,
                                     ...i,
                                     ...e,

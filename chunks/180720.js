@@ -16,28 +16,28 @@ var l = n(627968),
     E = n(309010),
     m = n(977997),
     S = n(607567),
-    p = n(256415),
-    N = n(996439),
-    T = n(810412),
-    _ = n(914853),
-    C = n(179917),
-    y = n(419072),
+    _ = n(256415),
+    p = n(996439),
+    N = n(810412),
+    T = n(914853),
+    y = n(179917),
+    C = n(419072),
     x = n(294809),
-    M = n(316541),
-    v = n(554932),
+    v = n(316541),
+    M = n(554932),
     D = n(406595),
     R = n(557404),
-    U = n(652215),
-    O = n(822889),
+    O = n(652215),
+    U = n(895867),
     G = n(985018),
-    w = n(77347);
-function F(e) {
+    w = n(416001);
+function L(e) {
     return Array.from(e).sort();
 }
-let L = (0, r.throttle)(
+let F = (0, r.throttle)(
     (e) => {
-        (0, T.Y)(U.uss.FRIENDS, {
-            locked: p.default.isInstanceLocked(),
+        (0, N.Y)(O.uss.FRIENDS, {
+            locked: _.default.isInstanceLocked(),
             shownUserIds: e.shownUserIds,
             liveUserIds: e.liveUserIds,
             contentInventoryIds: [],
@@ -54,9 +54,9 @@ function b(e) {
 function k() {
     let { onPrimaryAction: e, onContextMenu: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         [n, r] = i.useState(""),
-        p = n.trim().toLowerCase(),
-        [U, k] = i.useState(() => new Set()),
-        P = (0, a.bG)([y.A], () => y.A.getCollapsedSectionOverridesForTab(_.x.VOICE), []),
+        _ = n.trim().toLowerCase(),
+        [O, k] = i.useState(() => new Set()),
+        P = (0, a.bG)([C.A], () => C.A.getCollapsedSectionOverridesForTab(T.x.VOICE), []),
         j = (0, h.qZ)(),
         V = i.useMemo(() => {
             let e = new Map();
@@ -70,20 +70,20 @@ function k() {
             });
         }, []),
         Y = i.useCallback((e) => {
-            (0, v.G)({ tab: _.x.VOICE, sectionKey: e });
+            (0, M.G)({ tab: T.x.VOICE, sectionKey: e });
         }, []),
         W = i.useMemo(() => new Set(j.map((e) => e.channel.id)), [j]),
-        [z, $] = i.useState([]);
-    (0, d.RT)(n, j, $, h.MV);
-    let B = i.useRef(null),
-        K = (0, o.A)("friends-widget-voice", B),
-        [X, Z] = (0, a.bG)([D.A], () => D.A.getFavoriteTargetIdsForTab(_.x.VOICE), [], N.D),
+        [z, B] = i.useState([]);
+    (0, d.RT)(n, j, B, h.MV);
+    let $ = i.useRef(null),
+        K = (0, o.A)("friends-widget-voice", $),
+        [X, Z] = (0, a.bG)([D.A], () => D.A.getFavoriteTargetIdsForTab(T.x.VOICE), [], p.D),
         Q = i.useMemo(() => X.filter((e) => W.has(e)), [X, W]),
         { friendVoiceChannelIds: J, recentVoiceChannelIds: q } = (0, h.S4)(),
         ee = i.useMemo(() => J.filter((e) => W.has(e)), [J, W]),
         et = i.useMemo(() => q.filter((e) => W.has(e)), [q, W]),
         en = (0, a.bG)([E.A], () => E.A.getVoiceChannelId(), []),
-        el = (0, a.bG)([M.A], () => M.A.getActiveNowChannelIds({ kind: M.u.Voice }), []),
+        el = (0, a.bG)([v.A], () => v.A.getActiveNowChannelIds({ kind: v.u.Voice }), []),
         ei = (0, a.bG)(
             [A.A],
             () =>
@@ -150,12 +150,12 @@ function k() {
             let e = (e) => !0 === P[e],
                 t = (e) => (e.voiceStates?.length ?? 0) > 0,
                 n = [];
-            if ("" !== p)
+            if ("" !== _)
                 return (
                     n.push({
                         kind: "SEARCH_RESULTS",
                         key: "SEARCH_RESULTS",
-                        title: G.intl.string(O.default.DUIbKP),
+                        title: G.intl.string(U.default.DUIbKP),
                         count: z.length,
                         rows: z.map((e) => ({ channelId: e.channel.id, voiceStates: e.voiceStates })),
                         length: z.length,
@@ -168,7 +168,7 @@ function k() {
                 n.push({
                     kind: "FAVORITES",
                     key: "FAVORITES",
-                    title: G.intl.string(O.default.OskevP),
+                    title: G.intl.string(U.default.OskevP),
                     count: l.length,
                     rows: i,
                     length: Math.max(i.length, 1),
@@ -180,7 +180,7 @@ function k() {
                 n.push({
                     kind: "FRIENDS_IN_VOICE",
                     key: "FRIENDS_IN_VOICE",
-                    title: G.intl.string(O.default["C+ojiQ"]),
+                    title: G.intl.string(U.default["C+ojiQ"]),
                     count: l.length,
                     rows: i,
                     length: Math.max(i.length, 1),
@@ -192,7 +192,7 @@ function k() {
                 n.push({
                     kind: "ACTIVE_NOW",
                     key: "ACTIVE_NOW",
-                    title: G.intl.string(O.default.eiie2x),
+                    title: G.intl.string(U.default.eiie2x),
                     count: l.length,
                     rows: i,
                     length: Math.max(i.length, 1),
@@ -204,14 +204,14 @@ function k() {
                 n.push({
                     kind: "SUGGESTED_VOICE_CHANNELS",
                     key: "SUGGESTED_VOICE_CHANNELS",
-                    title: G.intl.string(O.default["9ME4wE"]),
+                    title: G.intl.string(U.default["9ME4wE"]),
                     count: l.length,
                     rows: i,
                     length: Math.max(i.length, 1),
                 });
             }
             return n;
-        }, [P, p, Q, Z, ed, ea, z, ec, V]),
+        }, [P, _, Q, Z, ed, ea, z, ec, V]),
         eg = i.useMemo(() => eh.map((e) => e.length), [eh]),
         eI = i.useCallback(
             (e) => {
@@ -228,14 +228,14 @@ function k() {
             return -1 === e ? null : { section: e, row: void 0 };
         }, [eh]);
     (0, R.$)({
-        scrollerRef: B,
+        scrollerRef: $,
         favoriteTargetIds: Q,
         getScrollTargetForTargetId: (e) => eI(e),
         getFallbackScrollTarget: eA,
         padding: 8,
         animate: !1,
     });
-    let ef = (0, T.Dk)(() => {
+    let ef = (0, N.Dk)(() => {
             let e = new Set();
             for (let t of eh) for (let n of t.rows) e.add(n.channelId);
             return e;
@@ -270,23 +270,23 @@ function k() {
             }
             return { shownUserIds: t, liveUserIds: n };
         }, [ef, j]),
-        eS = (0, T.Dk)(() => eE, [eE]),
-        ep = (0, T.Dk)(() => em, [em]);
+        eS = (0, N.Dk)(() => eE, [eE]),
+        e_ = (0, N.Dk)(() => em, [em]);
     i.useEffect(() => {
-        (0 !== eS.size || 0 !== ep.size) && L({ shownUserIds: F(eS), liveUserIds: F(ep) });
-    }, [eS, ep]);
-    let eN = i.useCallback((e) => eh[e], [eh]),
-        eT = i.useCallback(
+        (0 !== eS.size || 0 !== e_.size) && F({ shownUserIds: L(eS), liveUserIds: L(e_) });
+    }, [eS, e_]);
+    let ep = i.useCallback((e) => eh[e], [eh]),
+        eN = i.useCallback(
             (e) => {
                 let { section: t } = e,
-                    n = eN(t);
+                    n = ep(t);
                 if (null == n) return null;
                 let i = "SEARCH_RESULTS" !== n.kind,
                     r = i && !0 === P[n.key];
                 return (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsx)(u.AC4, { children: n.title }),
-                        (0, l.jsx)(C.I, {
+                        (0, l.jsx)(y.I, {
                             title: n.title,
                             count: n.count,
                             isCollapsed: r,
@@ -296,16 +296,16 @@ function k() {
                     ],
                 });
             },
-            [P, eN, Y],
+            [P, ep, Y],
         ),
-        e_ = i.useCallback(
+        eT = i.useCallback(
             (n) => {
-                let i = eN(n.section);
+                let i = ep(n.section);
                 if (null == i) return null;
                 let r = i.rows[n.row];
                 if (null == r) return null;
                 let s = `${i.key}:${r.channelId}`,
-                    a = U.has(r.channelId);
+                    a = O.has(r.channelId);
                 return (0, l.jsx)(
                     x.C,
                     {
@@ -321,24 +321,24 @@ function k() {
                     s,
                 );
             },
-            [U, eN, t, e, H],
+            [O, ep, t, e, H],
         ),
-        eC = i.useCallback(() => 40, []),
-        ey = i.useCallback(
+        ey = i.useCallback(() => 40, []),
+        eC = i.useCallback(
             (e, t) => {
-                let n = eN(e);
+                let n = ep(e);
                 if (null == n) return 50;
                 if (0 === n.rows.length) return 0;
                 let l = n.rows[t];
-                if (null == l || !U.has(l.channelId)) return 50;
+                if (null == l || !O.has(l.channelId)) return 50;
                 let i = I.A.getChannel(l.channelId),
                     r = Math.min((null != i ? S.Ay.getVoiceStatesForChannel(i) : []).length, 25);
                 return r <= 0 ? 50 : 50 + (32 * r + (r - 1) * 2 + 8);
             },
-            [U, eN],
+            [O, ep],
         ),
         ex = i.useCallback((e) => {
-            r(e), B.current?.scrollToTop();
+            r(e), $.current?.scrollToTop();
         }, []);
     return (0, l.jsxs)("div", {
         className: w.kL,
@@ -349,7 +349,7 @@ function k() {
                     query: n,
                     onChange: ex,
                     onClear: () => r(""),
-                    placeholder: G.intl.string(O.default.OV3KfO),
+                    placeholder: G.intl.string(U.default.OV3KfO),
                     size: "md",
                 }),
             }),
@@ -364,14 +364,14 @@ function k() {
                                     innerRole: n,
                                     innerAriaLabel: G.intl.string(G.t.OGiMXJ),
                                     ref: (e) => {
-                                        (B.current = e), (t.current = e?.getScrollerNode() ?? null);
+                                        ($.current = e), (t.current = e?.getScrollerNode() ?? null);
                                     },
                                     className: w.p_,
-                                    sectionHeight: eC,
-                                    rowHeight: ey,
+                                    sectionHeight: ey,
+                                    rowHeight: eC,
                                     sidebarHeight: 0,
-                                    renderSection: eT,
-                                    renderRow: e_,
+                                    renderSection: eN,
+                                    renderRow: eT,
                                     sections: eg,
                                     paddingBottom: 8,
                                     ...i,

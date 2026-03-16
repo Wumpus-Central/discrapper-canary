@@ -20,10 +20,10 @@ var a = n(627968),
     j = n(708403),
     A = n(260880),
     C = n(303054),
-    y = n(231643),
-    T = n(985018),
-    S = n(891026),
-    E = n(930821);
+    T = n(231643),
+    y = n(985018),
+    S = n(76584),
+    E = n(661251);
 let N = [
     {
         key: "event",
@@ -46,7 +46,7 @@ function I(e) {
     let { children: t } = e;
     return (0, a.jsx)(u.IpV, { className: S._D, children: (0, a.jsx)("dl", { children: t }) });
 }
-function k(e) {
+function R(e) {
     let { name: t, children: n, copyValue: s } = e,
         [l, r] = i.useState(!1);
     return (
@@ -73,12 +73,12 @@ function k(e) {
         })
     );
 }
-let R = new Set(["client_performance_cpu", "client_performance_memory"]),
+let k = new Set(["client_performance_cpu", "client_performance_memory"]),
     O = [
         {
             id: "details",
             name: "Details",
-            group: y.fu.NONE,
+            group: T.fu.NONE,
             render: (e) => {
                 let {
                         loggedEvent: { event: t, properties: n, timestamp: i, fingerprint: s },
@@ -150,7 +150,7 @@ let R = new Set(["client_performance_cpu", "client_performance_memory"]),
                         (0, a.jsx)(I, {
                             children: Object.entries(n).map((e) => {
                                 let [n, i] = e,
-                                    s = R.has(n)
+                                    s = k.has(n)
                                         ? ((e, t, n) => {
                                               let a = e.filter((e) => e.event === t);
                                               if (0 === a.length) return { average: null, count: 0 };
@@ -168,7 +168,7 @@ let R = new Set(["client_performance_cpu", "client_performance_memory"]),
                                     {
                                         children: [
                                             (0, a.jsx)(
-                                                k,
+                                                R,
                                                 {
                                                     name: `${n}:`,
                                                     copyValue: { [n]: i || null },
@@ -182,7 +182,7 @@ let R = new Set(["client_performance_cpu", "client_performance_memory"]),
                                             null !== s &&
                                                 null !== s.average &&
                                                 (0, a.jsx)(
-                                                    k,
+                                                    R,
                                                     {
                                                         name: `${n}_avg:`,
                                                         copyValue: { [n]: i || null },
@@ -249,7 +249,7 @@ function M() {
         }),
         [_, f] = i.useState(void 0),
         j = g.find((e) => e.key === _),
-        { TabBar: I, renderSelectedTab: k } = (0, y.Ay)({ tabs: O }, []);
+        { TabBar: I, renderSelectedTab: R } = (0, T.Ay)({ tabs: O }, []);
     return (0, a.jsxs)("div", {
         ref: e,
         className: l()(E.nd, S.nd),
@@ -263,11 +263,11 @@ function M() {
                         size: c.$n.Sizes.ICON,
                         onClick: b.eY,
                         children: (0, a.jsx)("span", {
-                            title: T.intl.string(T.t.VkKicb),
+                            title: y.intl.string(y.t.VkKicb),
                             children: (0, a.jsx)(u.ucK, {
                                 size: "md",
                                 color: "currentColor",
-                                "aria-label": T.intl.string(T.t.VkKicb),
+                                "aria-label": y.intl.string(y.t.VkKicb),
                             }),
                         }),
                     }),
@@ -307,7 +307,7 @@ function M() {
                     className: S.rf,
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
-                    children: [(0, a.jsx)(I, {}), k({ loggedEvent: j, onClose: () => f(void 0), filteredEvents: g })],
+                    children: [(0, a.jsx)(I, {}), R({ loggedEvent: j, onClose: () => f(void 0), filteredEvents: g })],
                 }),
         ],
     });

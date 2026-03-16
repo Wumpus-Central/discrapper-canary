@@ -18,10 +18,10 @@ var a = n(627968),
     v = n(807734),
     b = n(652215),
     j = n(239093),
-    A = n(949268),
+    A = n(536242),
     C = n(985018),
-    y = n(499453),
-    T = n(700129);
+    T = n(62959),
+    y = n(700129);
 function S(e) {
     let { modalSessionId: t, entryPoint: n } = e;
     return (0, m.W$)()
@@ -47,21 +47,21 @@ function S(e) {
 }
 let E = function (e) {
     let { transitionState: t, entryPoint: n, onClose: u, onComplete: j, dismissable: E, classificationId: N } = e,
-        [I, k] = i.useState(r.M.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
-        R = i.useRef(I),
+        [I, R] = i.useState(r.M.AGE_VERIFICATION_SURVEY_MODAL_GET_STARTED),
+        k = i.useRef(I),
         [O, w] = (0, d.kn)([I], void 0, !0),
         D = i.useMemo(() => (0, s.A)(), []),
         M = i.useRef(!1),
         P = (0, m.W$)();
     i.useEffect(() => {
-        R.current = O;
+        k.current = O;
     }, [O]);
     let { loading: U, ageVerificationMethods: L } = (0, v.A)({
         onClose: () => {
             j?.(), u();
         },
         onMethodClick: () => {
-            k(r.M.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
+            R(r.M.AGE_VERIFICATION_SURVEY_MODAL_CLOSE);
         },
         classificationId: N,
     });
@@ -69,7 +69,7 @@ let E = function (e) {
         i.useLayoutEffect(
             () => () => {
                 if (M.current) return;
-                let e = R.current;
+                let e = k.current;
                 null != e &&
                     ((M.current = !0),
                     h.A.maybeOpenAgeVerificationUserFeedback({
@@ -87,7 +87,7 @@ let E = function (e) {
             onClose: u,
             gradientColor: "blue",
             dismissable: E,
-            graphic: { type: "image", src: T.A },
+            graphic: { type: "image", src: y.A },
             title: (0, f.ST)(n),
             subtitle: (0, f.mK)(
                 n,
@@ -108,7 +108,7 @@ let E = function (e) {
                         gap: 8,
                         padding: { top: 8, bottom: 8, left: 12, right: 12 },
                         align: "center",
-                        className: y.W,
+                        className: T.W,
                         children: [
                             (0, a.jsx)(o.mir, { size: "lg", color: "currentColor" }),
                             (0, a.jsx)(o.Text, {

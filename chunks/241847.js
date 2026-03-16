@@ -14,7 +14,7 @@ var i = n(627968),
     g = n(857341),
     p = n(603266),
     f = n(985018),
-    _ = n(855945);
+    _ = n(78875);
 function E(e) {
     let { lobbyId: t, connectionTypeText: n, closePopout: l } = e,
         a = (0, s.cf)([d.A], () => ({

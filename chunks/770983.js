@@ -24,7 +24,7 @@ var i = n(627968),
     b = n(188275),
     N = n(518477),
     S = n(985018),
-    y = n(525785);
+    y = n(79711);
 function C(e) {
     let { application: t, sku: n, handleOpenUserProfileModal: a, analyticsLocations: s } = e,
         o = l.useRef(null),

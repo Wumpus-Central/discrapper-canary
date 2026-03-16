@@ -1,8 +1,8 @@
 n.d(t, { A: () => v }), n(938796);
 var i = n(627968),
     r = n(64700),
-    l = n(821418),
-    a = n(665260),
+    a = n(821418),
+    l = n(665260),
     s = n(311907),
     o = n(990078),
     d = n(397927),
@@ -20,7 +20,7 @@ var i = n(627968),
     E = n(168428),
     I = n(652215),
     b = n(985018),
-    T = n(42441);
+    T = n(563111);
 function v(e) {
     let t,
         v,
@@ -34,13 +34,13 @@ function v(e) {
             currentUserId: P,
         } = e,
         M = P === R.author.id,
-        { channel: w, approximate_member_count: D, approximate_presence_count: O } = L,
+        { channel: O, approximate_member_count: D, approximate_presence_count: w } = L,
         k = L.state === I.elq.ACCEPTING,
-        U = null != w ? (0, A.OY)(w) : null,
+        U = null != O ? (0, A.OY)(O) : null,
         G = null != j,
         B = null != U,
         F = null != U && U.isGuildStageVoice(),
-        H = (0, a.Lt)(L.flags ?? 0, l.Q.IS_GUEST_INVITE),
+        H = (0, l.Lt)(L.flags ?? 0, a.Q.IS_GUEST_INVITE),
         V = U?.isGuildVoiceOrThread() ?? !1,
         W = j?.features.has(I.GuildFeatures.HUB) ?? !1,
         q = j?.id,
@@ -98,8 +98,8 @@ function v(e) {
                       }),
                   ],
               })))
-            : (null != D && D >= 5) || (null != O && O > 0)
-              ? (t = (0, i.jsx)(g.A.Data, { members: D, membersOnline: O }))
+            : (null != D && D >= 5) || (null != w && w > 0)
+              ? (t = (0, i.jsx)(g.A.Data, { members: D, membersOnline: w }))
               : B && (t = (0, i.jsx)(g.A.Channel, { channel: U, guild: j })),
         (0, i.jsxs)(g.A, {
             children: [

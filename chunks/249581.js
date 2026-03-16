@@ -7,7 +7,7 @@ var i = n(627968),
     o = n(927018),
     d = n(64585),
     c = n(906688),
-    u = n(212963);
+    u = n(99761);
 let A = (e) => {
     let { color: t } = e;
     return (0, i.jsxs)("svg", {
@@ -66,8 +66,8 @@ let A = (e) => {
 };
 function h(e) {
     let { achievement: t, unlocked: n } = e,
-        { name: l, description: h, rarity: _, hideDescriptionUntilUnlock: m, onAction: p } = t,
-        { color: g } = (0, o.ag)(_);
+        { name: l, description: h, rarity: _, hideDescriptionUntilUnlock: m, onAction: g } = t,
+        { color: p } = (0, o.ag)(_);
     r.useEffect(() => {
         let e = setTimeout(() => {
             d.A.playAchievementUnlockSound();
@@ -76,12 +76,12 @@ function h(e) {
             clearTimeout(e);
         };
     }, []);
-    let E = null != p && n,
+    let E = null != g && n,
         I = E ? s.DUT : "div";
     return (0, i.jsxs)(I, {
         className: a()(u.kL, E && u.b),
         onClick: () => {
-            E && p();
+            E && g();
         },
         children: [
             (0, i.jsx)("div", {
@@ -99,7 +99,7 @@ function h(e) {
                     }),
                 ],
             }),
-            (0, i.jsx)("div", { className: u.Db, children: (0, i.jsx)(A, { color: g }) }),
+            (0, i.jsx)("div", { className: u.Db, children: (0, i.jsx)(A, { color: p }) }),
         ],
     });
 }

@@ -3,8 +3,8 @@ n.d(t, { A: () => B }), n(321073);
 var i = n(627968),
     s = n(64700),
     l = n(837381),
-    a = n(311907),
-    r = n(342494),
+    r = n(311907),
+    a = n(342494),
     o = n(397927),
     c = n(308528),
     d = n(933958),
@@ -33,9 +33,9 @@ var i = n(627968),
     M = n(97483),
     D = n(49999),
     G = n(788868),
-    U = n(525736),
+    U = n(665606),
     P = n(985018),
-    w = n(4720),
+    w = n(299446),
     k = n(988572);
 let V = { analyticsSource: { page: L.liQ.GUILD_CHANNEL, section: L.JJy.CHANNEL_LIST, object: L.ZSU.CHANNEL } };
 function B(e) {
@@ -44,59 +44,59 @@ function B(e) {
         H,
         F,
         K,
-        W,
         Y,
+        W,
         z,
         q,
         X,
-        J,
         Q,
+        J,
         { shouldShowIntroPopover: $, markIntroPopoverAsDismissed: Z } = e,
         ee = (0, l.Vd)("favorites"),
         { favoriteAdded: et, clearFavoriteAdded: en } = (0, y.CJ)(),
         ei = s.useRef(null),
         { analyticsLocations: es } = (0, A.Ay)(h.A.FAVORITES_GUILD_BUTTON),
-        [el, ea] = s.useState(!1),
-        er = (0, R.$)("favorite-server-context"),
+        [el, er] = s.useState(!1),
+        ea = (0, R.$)("favorite-server-context"),
         {
             favoriteGuildEnabled: eo,
             favoriteGuildMuted: ec,
             favoriteChannels: ed,
-        } = (0, a.cf)([T.A], () => ({
+        } = (0, r.cf)([T.A], () => ({
             favoriteGuildEnabled: T.A.favoriteGuildEnabled,
             favoriteChannels: T.A.getFavoriteChannels(),
             favoriteGuildMuted: T.A.favoriteGuildMuted,
         })),
-        eu = (0, a.bG)([N.A], () => N.A.getChannelId(L.YYv)),
-        eh = (0, a.bG)([I.A], () => I.A.getChannel(eu)),
+        eu = (0, r.bG)([N.A], () => N.A.getChannelId(L.YYv)),
+        eh = (0, r.bG)([I.A], () => I.A.getChannel(eu)),
         eA = (0, x.A)((e) => e.guildId) === L.YYv,
         { badge: em, unread: ep } = (0, j.A)(ed),
         eg =
-            ((B = null != (t = (0, a.bG)([N.A], () => N.A.getVoiceChannelId())) && null != ed[t]),
-            (H = (0, a.bG)([E.A], () => {
+            ((B = null != (t = (0, r.bG)([N.A], () => N.A.getVoiceChannelId())) && null != ed[t]),
+            (H = (0, r.bG)([E.A], () => {
                 if (!B) return !1;
                 let e = E.A.getCurrentUserActiveStream();
                 return null != e && null != ed[e.channelId];
             })),
-            (F = (0, a.bG)([E.A], () => E.A.getAllApplicationStreams().some((e) => null != ed[e.channelId]))),
-            (K = (0, a.bG)([b.A], () => B && null != t && b.A.hasVideo(t), [B, t])),
-            (W = (0, a.yK)([d.Ay], () =>
+            (F = (0, r.bG)([E.A], () => E.A.getAllApplicationStreams().some((e) => null != ed[e.channelId]))),
+            (K = (0, r.bG)([b.A], () => B && null != t && b.A.hasVideo(t), [B, t])),
+            (Y = (0, r.yK)([d.Ay], () =>
                 S.default.keys(ed).reduce((e, t) => (e.push(...d.Ay.getEmbeddedActivitiesForChannel(t)), e), []),
             )),
-            (Y = (0, a.bG)([d.Ay], () =>
+            (W = (0, r.bG)([d.Ay], () =>
                 Array.from(d.Ay.getSelfEmbeddedActivities().values()).some((e) => {
                     let { location: t } = e,
                         n = (0, u.H)(t);
                     return null != n && null != ed[n];
                 }),
             )),
-            (z = W.length > 0),
+            (z = Y.length > 0),
             (q = !1),
             (X = !1),
-            (J = !1),
             (Q = !1),
-            B ? ((q = !K), (X = K), (J = H), (Q = Y)) : ((J = F), (Q = z)),
-            (0, g.oi)({ audio: q, video: X, screenshare: J, liveStage: !1, isCurrentUserConnected: B, activity: Q })),
+            (J = !1),
+            B ? ((q = !K), (X = K), (Q = H), (J = W)) : ((Q = F), (J = z)),
+            (0, g.oi)({ audio: q, video: X, screenshare: Q, liveStage: !1, isCurrentUserConnected: B, activity: J })),
         e_ = em > 0 ? (0, _.w)(em) : null,
         ef = s.useRef(!1),
         { hasAccess: ex } = (0, y.TW)("FavoritesButton"),
@@ -113,7 +113,7 @@ function B(e) {
                         ? (eo || (0, v.tV)(!0),
                           e &&
                               (0, o.mMO)(async () => {
-                                  let { default: e } = await Promise.all([n.e("59839"), n.e("23006")]).then(
+                                  let { default: e } = await Promise.all([n.e("59839"), n.e("13121")]).then(
                                       n.bind(n, 889186),
                                   );
                                   return (t) => (0, i.jsx)(e, { ...t, parentId: null });
@@ -165,12 +165,12 @@ function B(e) {
                                 onClick: () => {
                                     $ && eE(!1);
                                 },
-                                onMouseEnter: () => ea(!0),
-                                onMouseLeave: () => ea(!1),
+                                onMouseEnter: () => er(!0),
+                                onMouseLeave: () => er(!1),
                                 onMouseDown: function () {
                                     null != eh && c.A.preload(eh.guild_id, eh.id);
                                 },
-                                onContextMenu: er,
+                                onContextMenu: ea,
                                 children: (0, i.jsx)(o.Gg5, {
                                     size: "custom",
                                     color: "currentColor",
@@ -183,7 +183,7 @@ function B(e) {
                     }),
                 }),
                 $ &&
-                    (0, i.jsx)(r.AM, {
+                    (0, i.jsx)(a.AM, {
                         targetElementRef: ei,
                         gradientColor: "nitro-pink",
                         position: "right",

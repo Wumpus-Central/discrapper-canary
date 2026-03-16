@@ -20,15 +20,15 @@ var a = n(627968),
     j = n(231545),
     A = n(708403),
     C = n(260880),
-    y = n(303054),
-    T = n(231643),
+    T = n(303054),
+    y = n(231643),
     S = n(652215),
-    E = n(704623),
-    N = n(930821);
+    E = n(84113),
+    N = n(661251);
 function I(e) {
     return parseFloat(e.toFixed(3));
 }
-let k = [
+let R = [
     {
         key: "store",
         cellClassName: E.lA,
@@ -46,16 +46,16 @@ let k = [
         },
     },
 ];
-function R(e) {
+function k(e) {
     let { actionLog: t } = e,
         n = i.useMemo(() => t.traces.map((e) => ({ key: e.name, trace: e })), [t]);
-    return (0, a.jsx)(h.IpV, { children: (0, a.jsx)(y.A, { columns: k, data: n }) });
+    return (0, a.jsx)(h.IpV, { children: (0, a.jsx)(T.A, { columns: R, data: n }) });
 }
 let O = [
     {
         id: "action",
         name: "Action",
-        group: T.fu.NONE,
+        group: y.fu.NONE,
         render(e) {
             let { actionLog: t } = e,
                 n = c()(t.createdAt);
@@ -83,10 +83,10 @@ let O = [
     {
         id: "traces",
         name: "Store Handlers",
-        group: T.fu.NONE,
+        group: y.fu.NONE,
         render(e) {
             let { actionLog: t } = e;
-            return (0, a.jsx)(R, { actionLog: t });
+            return (0, a.jsx)(k, { actionLog: t });
         },
     },
 ];
@@ -102,7 +102,7 @@ function w(e) {
                               name: (0, a.jsxs)(a.Fragment, {
                                   children: [(0, a.jsx)(f.A, { className: E.ik }), "Error"],
                               }),
-                              group: T.fu.NONE,
+                              group: y.fu.NONE,
                               render(e) {
                                   let { actionLog: t } = e;
                                   return (0, a.jsxs)(a.Fragment, {
@@ -131,7 +131,7 @@ function w(e) {
                     : O,
             [t],
         ),
-        { TabBar: r, renderSelectedTab: o } = (0, T.Ay)({ tabs: s }, [s]);
+        { TabBar: r, renderSelectedTab: o } = (0, y.Ay)({ tabs: s }, [s]);
     return (0, a.jsxs)(C.A, {
         className: E.rf,
         minHeight: 100,
@@ -241,7 +241,7 @@ function P() {
             [r],
         ),
         C = t.trim().length > 0,
-        T = i.useMemo(() => (C ? m : g ? d : r), [r, m, C, g, d]),
+        y = i.useMemo(() => (C ? m : g ? d : r), [r, m, C, g, d]),
         S = g ? "Enable Event Tracking" : "Pause Event Tracking";
     return (0, a.jsxs)("div", {
         ref: e,
@@ -269,9 +269,9 @@ function P() {
                     }),
                 ],
             }),
-            (0, a.jsx)(y.A, {
+            (0, a.jsx)(T.A, {
                 columns: D,
-                data: T,
+                data: y,
                 selectedRowKey: v?.id.toString(),
                 onClickRow: (e) => b(e.actionLog),
             }),

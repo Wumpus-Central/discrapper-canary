@@ -3,8 +3,8 @@ var a = i(627968),
     l = i(64700),
     n = i(503698),
     s = i.n(n),
-    c = i(192308),
-    o = i(397927),
+    o = i(192308),
+    c = i(397927),
     r = i(843472),
     _ = i(573435),
     d = i(911269),
@@ -16,8 +16,8 @@ var a = i(627968),
     x = i(734057),
     g = i(31717),
     w = i(954571),
-    T = i(403362),
-    b = i(661191),
+    b = i(403362),
+    T = i(661191),
     y = i(518960),
     v = i(372684),
     I = i(439818),
@@ -27,7 +27,7 @@ var a = i(627968),
     P = i(652215),
     R = i(381941),
     j = i(985018),
-    E = i(9378);
+    E = i(312396);
 function L(e) {
     let { clips: t } = e,
         i = t[0],
@@ -49,7 +49,7 @@ function L(e) {
                             height: 56,
                             children: n,
                         }),
-                        (0, a.jsxs)(o.Text, {
+                        (0, a.jsxs)(c.Text, {
                             className: E.mB,
                             variant: "text-xs/semibold",
                             color: "text-default",
@@ -65,8 +65,8 @@ function L(e) {
                     children: (0, a.jsxs)("div", {
                         className: E.kp,
                         children: [
-                            (0, a.jsx)(o.SfG, { size: "custom", width: 20, color: o.LU0.colors.TEXT_MUTED }),
-                            (0, a.jsx)(o.Text, {
+                            (0, a.jsx)(c.SfG, { size: "custom", width: 20, color: c.LU0.colors.TEXT_MUTED }),
+                            (0, a.jsx)(c.Text, {
                                 variant: "text-md/medium",
                                 color: "text-muted",
                                 children:
@@ -93,7 +93,7 @@ function N(e) {
                         p = [];
                     for (let e of t) {
                         let t = await (0, k.VO)(e),
-                            i = e.name ?? (0, C.cM)(b.default.extractTimestamp(e.id)),
+                            i = e.name ?? (0, C.cM)(T.default.extractTimestamp(e.id)),
                             l = (0, I.A)(i);
                         if (e.type === v.nQ.CLIP || e.type === v.nQ.VOICE_CLIP) {
                             let i = `${"" !== l ? l : "clip"}.mp4`;
@@ -103,9 +103,9 @@ function N(e) {
                             a.push(new File([t], e, { type: "image/jpeg" })), p.push({});
                         }
                     }
-                    let f = (await Promise.all(e.map(m.pk))).filter(T.Vq).filter((e) => (0, A.t)(e));
+                    let f = (await Promise.all(e.map(m.pk))).filter(b.Vq).filter((e) => (0, A.t)(e));
                     if (0 === f.length) {
-                        (0, o.showToast)((0, o.createToast)(j.intl.string(j.t.iufib1), o.ToastType.FAILURE)), l(!1);
+                        (0, c.showToast)((0, c.createToast)(j.intl.string(j.t.iufib1), c.ToastType.FAILURE)), l(!1);
                         return;
                     }
                     for (let e of (d && n(), f)) {
@@ -130,9 +130,9 @@ function N(e) {
                                 (await r.A.sendMessage(l.id, h.Ay.parse(l, s), !1, { location: R.Hx.FORWARDING }));
                         }
                     }
-                    _ && 1 === f.length && ((0, u.iN)(f[0], { openTextInVoiceIfVoiceChannel: !0 }), c.closeAllModals());
+                    _ && 1 === f.length && ((0, u.iN)(f[0], { openTextInVoiceIfVoiceChannel: !0 }), o.closeAllModals());
                 } catch (e) {
-                    (0, o.showToast)((0, o.createToast)(j.intl.string(j.t.iufib1), o.ToastType.FAILURE));
+                    (0, c.showToast)((0, c.createToast)(j.intl.string(j.t.iufib1), c.ToastType.FAILURE));
                 } finally {
                     l(!1);
                 }

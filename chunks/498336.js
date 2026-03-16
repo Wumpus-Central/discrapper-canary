@@ -19,8 +19,8 @@ var a = n(627968),
     b = n(967198),
     j = n(642020),
     A = n(652215),
-    C = n(300756);
-async function y(e, t, n) {
+    C = n(45298);
+async function T(e, t, n) {
     await r.Bo.patch({
         url: A.Rsh.APPLIED_BOOST_MODIFY_END_DATE,
         body: { applied_boost_ids: t.map((e) => e.id), ends_at: n ? null : s()().add(1, "day") },
@@ -29,7 +29,7 @@ async function y(e, t, n) {
         (0, c.VU)(e),
         (0, x.Xd)(e, !0);
 }
-async function T(e) {
+async function y(e) {
     await r.Bo.post({ url: A.Rsh.SEND_POWERUPS_SYSTEM_MESSAGE(e), rejectWithError: !0 });
 }
 function S() {
@@ -83,14 +83,14 @@ function S() {
                                     variant: "primary",
                                     text: "Set Half Boosts expiring in 1 day",
                                     onClick: () => {
-                                        y(e, i.slice(Math.floor(i.length / 2)), !1);
+                                        T(e, i.slice(Math.floor(i.length / 2)), !1);
                                     },
                                 }),
                                 (0, a.jsx)(d.Button, {
                                     variant: "primary",
                                     text: "Reset End Date",
                                     onClick: () => {
-                                        y(e, i, !0);
+                                        T(e, i, !0);
                                     },
                                 }),
                             ],
@@ -172,7 +172,7 @@ function S() {
                             variant: "primary",
                             text: "Send System Message",
                             onClick: () => {
-                                T(e);
+                                y(e);
                             },
                         }),
                     ],

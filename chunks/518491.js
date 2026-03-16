@@ -3,48 +3,48 @@ var i = n(627968);
 n(64700);
 var s = n(503698),
     l = n.n(s),
-    a = n(877624),
-    r = n(311907),
+    r = n(877624),
+    a = n(311907),
     o = n(502572),
     d = n(421380),
     c = n(397927),
     u = n(775602),
     _ = n(793574),
-    g = n(688810),
-    A = n(366999),
-    m = n(531260),
+    m = n(688810),
+    g = n(366999),
+    A = n(531260),
     h = n(166403),
-    p = n(786300),
-    x = n(975571),
-    E = n(927578),
-    T = n(40185),
-    S = n(89366),
-    C = n(637073),
-    I = n(422936),
-    f = n(234419),
-    N = n(549996),
-    b = n(371764),
+    x = n(786300),
+    p = n(975571),
+    T = n(927578),
+    E = n(40185),
+    C = n(89366),
+    S = n(637073),
+    f = n(422936),
+    N = n(234419),
+    b = n(549996),
+    I = n(371764),
     v = n(130946),
-    O = n(103411),
-    j = n(534217),
-    R = n(194509),
-    y = n(396375),
+    j = n(103411),
+    O = n(534217),
+    y = n(194509),
+    R = n(396375),
     P = n(65470),
     D = n(792656),
     L = n(511484),
-    G = n(939724),
-    M = n(795269),
+    M = n(939724),
+    G = n(795269),
     U = n(473702),
     k = n(505559),
     V = n(722274),
     w = n(103733),
-    H = n(229289),
-    B = n(253558),
+    B = n(229289),
+    H = n(253558),
     F = n(788868),
     Y = n(652215),
     z = n(985018),
-    X = n(570501),
-    W = n(58006),
+    X = n(496971),
+    W = n(871464),
     K = n(461971),
     Z = n(828694);
 let q = (e, t, s) => {
@@ -52,7 +52,7 @@ let q = (e, t, s) => {
             let { PremiumBrandRefreshSubscriptionCancellationModal: l } = await Promise.all([
                 n.e("41353"),
                 n.e("35432"),
-                n.e("36151"),
+                n.e("46409"),
             ]).then(n.bind(n, 281439));
             return (n) => (0, i.jsx)(l, { ...n, analyticsLocations: e, initialStep: s, premiumSubscription: t });
         });
@@ -61,67 +61,67 @@ let q = (e, t, s) => {
         let { className: t, isEligibleForBogoPromotion: n, isInReverseTrial: s, shouldShowReferralProgressBar: o } = e,
             {
                 headingText: d,
-                headingTop: A,
-                showPill: p,
-                userDiscountOffer: x,
-                discountedPrice: T,
-                buttonVisibilityRef: S,
+                headingTop: g,
+                showPill: x,
+                userDiscountOffer: p,
+                discountedPrice: E,
+                buttonVisibilityRef: C,
             } = en(),
-            { analyticsLocations: C } = (0, g.Ay)(_.A.PREMIUM_MARKETING_HERO_CTA),
-            O = (0, N.c)(a.C.MARKETING_PAGE_BANNER),
-            R = null;
-        null != O && "marketingPageBanner" === O.properties.properties.oneofKind
-            ? (R = (0, i.jsx)(b.x, {
-                  componentId: O.id,
-                  promotionBannerMarketingComponentFields: O.properties.properties.marketingPageBanner,
+            { analyticsLocations: S } = (0, m.Ay)(_.A.PREMIUM_MARKETING_HERO_CTA),
+            j = (0, b.c)(r.C.MARKETING_PAGE_BANNER),
+            y = null;
+        null != j && "marketingPageBanner" === j.properties.properties.oneofKind
+            ? (y = (0, i.jsx)(I.x, {
+                  componentId: j.id,
+                  promotionBannerMarketingComponentFields: j.properties.properties.marketingPageBanner,
               }))
             : n
-              ? (R = (0, i.jsx)(v.A, { variant: v.c.SUBSCRIBER_HOME }))
+              ? (y = (0, i.jsx)(v.A, { variant: v.c.SUBSCRIBER_HOME }))
               : s
-                ? (R = (0, i.jsx)(V.A, {}))
-                : o && (R = (0, i.jsx)(j.S, {}));
-        let y = (0, r.bG)([h.A], () => h.A.getPremiumTypeSubscription()),
-            M = null != y && y.status === Y.Dmq.CANCELED && null != x,
-            k = (0, f.V)(),
-            K = (0, I.O)(),
+                ? (y = (0, i.jsx)(V.A, {}))
+                : o && (y = (0, i.jsx)(O.S, {}));
+        let R = (0, a.bG)([h.A], () => h.A.getPremiumTypeSubscription()),
+            G = null != R && R.status === Y.Dmq.CANCELED && null != p,
+            k = (0, N.V)(),
+            K = (0, f.O)(),
             Z = (0, L.U9)(K, F.pe.TIER_2) ? F.pe.TIER_2 : void 0,
-            J = null != y && y.status !== Y.Dmq.ACCOUNT_HOLD && y.hasAnyPremiumNitro,
-            Q = (0, m.A)().isFractionalPremiumActive && !J && null == R && !M,
-            $ = (0, r.bG)([u.A], () => u.A.useReducedMotion),
+            J = null != R && R.status !== Y.Dmq.ACCOUNT_HOLD && R.hasAnyPremiumNitro,
+            Q = (0, A.A)().isFractionalPremiumActive && !J && null == y && !G,
+            $ = (0, a.bG)([u.A], () => u.A.useReducedMotion),
             { visibilityPercentageRef: ee, visibilityPercentage: et } = (0, w.U)(!$);
         return (0, i.jsx)("div", {
             className: l()(W.kL, t),
             "data-testid": "subscriber-nitro-home-hero-header",
-            ref: S,
+            ref: C,
             children: (0, i.jsxs)("div", {
                 className: W.Qs,
                 ref: ee,
                 children: [
-                    p && A,
+                    x && g,
                     (0, i.jsxs)("div", {
                         className: W.N1,
                         children: [
-                            (0, i.jsx)(H.A, { containerVisibilityPercentage: et }),
-                            M && null != x.expires_at && (0, i.jsx)(G.A, { expiresAt: x.expires_at, className: X.IZ }),
-                            (0, i.jsx)(B.A, {
-                                children: M ? z.intl.format(z.t["3yZP0G"], { percent: x.discount.amount }) : d,
+                            (0, i.jsx)(B.A, { containerVisibilityPercentage: et }),
+                            G && null != p.expires_at && (0, i.jsx)(M.A, { expiresAt: p.expires_at, className: X.IZ }),
+                            (0, i.jsx)(H.A, {
+                                children: G ? z.intl.format(z.t["3yZP0G"], { percent: p.discount.amount }) : d,
                             }),
-                            M &&
-                                null != T &&
+                            G &&
+                                null != E &&
                                 (0, i.jsx)(c.Text, {
                                     className: X.jG,
                                     variant: "text-sm/medium",
                                     color: "text-strong",
                                     children: z.intl.format(z.t["3Q4wCy"], {
-                                        discountedPrice: T,
-                                        billingPeriod: (0, E.Ke)(x.discount.user_usage_limit_interval),
-                                        numMonths: x.discount.user_usage_limit,
+                                        discountedPrice: E,
+                                        billingPeriod: (0, T.Ke)(p.discount.user_usage_limit_interval),
+                                        numMonths: p.discount.user_usage_limit,
                                     }),
                                 }),
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: Q || M ? W.UJ : void 0,
+                        className: Q || G ? W.UJ : void 0,
                         children: [
                             Q &&
                                 (0, i.jsx)(D.A, {
@@ -129,37 +129,37 @@ let q = (e, t, s) => {
                                     hasActivePromotion: !!n,
                                     subscriptionTier: k?.subscription_trial?.sku_id ?? Z,
                                 }),
-                            M &&
+                            G &&
                                 (0, i.jsx)(c.Button, {
                                     variant: "expressive",
                                     icon: c.tvc,
                                     size: "md",
                                     text: z.intl.string(z.t.zrCzVB),
-                                    onClick: () => q(C, y, U.g.CONFIRM_DISCOUNT),
+                                    onClick: () => q(S, R, U.g.CONFIRM_DISCOUNT),
                                 }),
                             (0, i.jsx)(P.A, {
-                                variant: Q || M ? "secondary" : "expressive",
+                                variant: Q || G ? "secondary" : "expressive",
                                 size: "md",
                                 buttonTextOverride: z.intl.string(z.t["3KomGa"]),
                             }),
                         ],
                     }),
-                    R,
+                    y,
                 ],
             }),
         });
     },
     Q = (e) => {
         let { className: t } = e,
-            { headingText: n, headingTop: s, userDiscountOffer: a, discountedPrice: o, buttonVisibilityRef: u } = en(),
-            { analyticsLocations: A } = (0, g.Ay)(_.A.PREMIUM_MARKETING_HERO_CTA),
-            p = (0, r.bG)([h.A], () => h.A.getPremiumTypeSubscription()),
-            x = null != p && p.status === Y.Dmq.CANCELED && null != a,
-            T = (0, f.V)(),
-            S = (0, I.O)(),
-            C = (0, L.U9)(S, F.pe.TIER_2) ? F.pe.TIER_2 : void 0,
-            N = null != p && p.status !== Y.Dmq.ACCOUNT_HOLD && p.hasAnyPremiumNitro,
-            b = (0, m.A)().isFractionalPremiumActive && !N && !x;
+            { headingText: n, headingTop: s, userDiscountOffer: r, discountedPrice: o, buttonVisibilityRef: u } = en(),
+            { analyticsLocations: g } = (0, m.Ay)(_.A.PREMIUM_MARKETING_HERO_CTA),
+            x = (0, a.bG)([h.A], () => h.A.getPremiumTypeSubscription()),
+            p = null != x && x.status === Y.Dmq.CANCELED && null != r,
+            E = (0, N.V)(),
+            C = (0, f.O)(),
+            S = (0, L.U9)(C, F.pe.TIER_2) ? F.pe.TIER_2 : void 0,
+            b = null != x && x.status !== Y.Dmq.ACCOUNT_HOLD && x.hasAnyPremiumNitro,
+            I = (0, A.A)().isFractionalPremiumActive && !b && !p;
         return (0, i.jsxs)("div", {
             className: l()(X.kL, t),
             "data-testid": "subscriber-nitro-home-hero-header",
@@ -167,17 +167,17 @@ let q = (e, t, s) => {
             children: [
                 (0, i.jsx)("img", { src: K, alt: "", className: X.NC }),
                 (0, i.jsxs)("div", {
-                    className: x ? X.Nr : X.Qs,
+                    className: p ? X.Nr : X.Qs,
                     children: [
                         s,
-                        x && null != a.expires_at && (0, i.jsx)(G.A, { expiresAt: a.expires_at, className: X.IZ }),
+                        p && null != r.expires_at && (0, i.jsx)(M.A, { expiresAt: r.expires_at, className: X.IZ }),
                         (0, i.jsx)(c.Heading, {
                             variant: "display-lg",
                             color: "always-white",
-                            className: x ? X.bc : X.wx,
-                            children: x && null != a ? z.intl.format(z.t["3yZP0G"], { percent: a.discount.amount }) : n,
+                            className: p ? X.bc : X.wx,
+                            children: p && null != r ? z.intl.format(z.t["3yZP0G"], { percent: r.discount.amount }) : n,
                         }),
-                        x &&
+                        p &&
                             null != o &&
                             (0, i.jsx)(c.Text, {
                                 className: X.RB,
@@ -185,20 +185,20 @@ let q = (e, t, s) => {
                                 color: "always-white",
                                 children: z.intl.format(z.t["3Q4wCy"], {
                                     discountedPrice: o,
-                                    billingPeriod: (0, E.Ke)(a.discount.user_usage_limit_interval),
-                                    numMonths: a.discount.user_usage_limit,
+                                    billingPeriod: (0, T.Ke)(r.discount.user_usage_limit_interval),
+                                    numMonths: r.discount.user_usage_limit,
                                 }),
                             }),
                         (0, i.jsxs)("div", {
                             className: X.$J,
                             children: [
-                                b &&
-                                    (0, i.jsx)(y.A, {
+                                I &&
+                                    (0, i.jsx)(R.A, {
                                         color: d.XD.BRAND,
                                         className: l()(X.x6, X.xF),
-                                        subscriptionTier: T?.subscription_trial?.sku_id ?? C,
+                                        subscriptionTier: E?.subscription_trial?.sku_id ?? S,
                                     }),
-                                x &&
+                                p &&
                                     (0, i.jsxs)("div", {
                                         className: X.Cg,
                                         children: [
@@ -207,7 +207,7 @@ let q = (e, t, s) => {
                                                 icon: c.tvc,
                                                 size: "md",
                                                 text: z.intl.string(z.t.zrCzVB),
-                                                onClick: () => q(A, p, U.g.CONFIRM_DISCOUNT),
+                                                onClick: () => q(g, x, U.g.CONFIRM_DISCOUNT),
                                                 fullWidth: !0,
                                             }),
                                             (0, i.jsx)(P.A, {
@@ -218,10 +218,10 @@ let q = (e, t, s) => {
                                             }),
                                         ],
                                     }),
-                                !x &&
+                                !p &&
                                     (0, i.jsx)("div", {
                                         className: X.UO,
-                                        children: (0, i.jsx)(R.A, {
+                                        children: (0, i.jsx)(y.A, {
                                             look: d.pR.FILLED,
                                             color: d.XD.BRAND,
                                             textOptions: { textOverride: z.intl.string(z.t["3KomGa"]) },
@@ -255,14 +255,14 @@ let q = (e, t, s) => {
                             }),
                             (0, i.jsx)("div", {
                                 className: X.UO,
-                                children: (0, i.jsx)(R.A, {
+                                children: (0, i.jsx)(y.A, {
                                     look: d.pR.FILLED,
                                     color: d.XD.BRAND,
                                     textOptions: { textOverride: z.intl.string(z.t["3KomGa"]) },
                                     className: X.x6,
                                 }),
                             }),
-                            (0, i.jsx)(j.S, { className: X.Qq }),
+                            (0, i.jsx)(O.S, { className: X.Qq }),
                         ],
                     }),
                 }),
@@ -293,7 +293,7 @@ let q = (e, t, s) => {
                         }),
                         (0, i.jsx)("div", {
                             className: X.UO,
-                            children: (0, i.jsx)(R.A, {
+                            children: (0, i.jsx)(y.A, {
                                 look: d.pR.FILLED,
                                 color: d.XD.BRAND,
                                 textOptions: { textOverride: z.intl.string(z.t["3KomGa"]) },
@@ -307,45 +307,45 @@ let q = (e, t, s) => {
             ],
         });
     },
-    [et, en] = (0, p.A)(),
+    [et, en] = (0, x.A)(),
     ei = (e) => {
         let {
                 className: t,
                 enablePremiumBrandRefresh: n,
                 buttonVisibilityRef: s,
-                userDiscountOffer: a,
-                discountedPrice: r,
+                userDiscountOffer: r,
+                discountedPrice: a,
             } = e,
-            { analyticsLocations: d } = (0, g.Ay)(_.A.PREMIUM_MARKETING_HERO_CTA),
-            u = (0, C.d)(),
-            h = (0, T.cg)(),
-            p = (0, S.QQ)(),
-            E = z.intl.string(z.t.qYKftX),
-            I = (0, O.m)(),
-            f = (0, i.jsx)(Q, { className: t }),
-            N = z.intl.string(z.t.ifwQZb),
-            { fractionalState: b, endsAt: v } = (0, m.A)(),
-            j = (0, A.Ay)(v, A.yE.CREDITS_ENDS_IN);
+            { analyticsLocations: d } = (0, m.Ay)(_.A.PREMIUM_MARKETING_HERO_CTA),
+            u = (0, S.d)(),
+            h = (0, E.cg)(),
+            x = (0, C.QQ)(),
+            T = z.intl.string(z.t.qYKftX),
+            f = (0, j.m)(),
+            N = (0, i.jsx)(Q, { className: t }),
+            b = z.intl.string(z.t.ifwQZb),
+            { fractionalState: I, endsAt: v } = (0, A.A)(),
+            O = (0, g.Ay)(v, g.yE.CREDITS_ENDS_IN);
         u || h
-            ? (f = (0, i.jsx)(ee, { isEligibleForBogoPromotion: h }))
-            : I && ((E = z.intl.string(z.t.qYKftX)), (f = (0, i.jsx)($, {})));
-        let R = null;
-        if (b === F.xc.NONE || u)
-            R = n
-                ? (0, i.jsx)(k.A, { enablePremiumBrandRefresh: !0, text: E })
-                : (0, i.jsx)(M.ir, {
-                      className: l()(X.Av, { [X.R]: !p }),
-                      text: E,
-                      colorOptions: M.at.PREMIUM_TIER_2_WHITE_FILL,
+            ? (N = (0, i.jsx)(ee, { isEligibleForBogoPromotion: h }))
+            : f && ((T = z.intl.string(z.t.qYKftX)), (N = (0, i.jsx)($, {})));
+        let y = null;
+        if (I === F.xc.NONE || u)
+            y = n
+                ? (0, i.jsx)(k.A, { enablePremiumBrandRefresh: !0, text: T })
+                : (0, i.jsx)(G.ir, {
+                      className: l()(X.Av, { [X.R]: !x }),
+                      text: T,
+                      colorOptions: G.at.PREMIUM_TIER_2_WHITE_FILL,
                   });
         else {
-            p = !0;
+            x = !0;
             let e = (0, i.jsx)("div", {
                     className: X.nW,
                     children: (0, i.jsx)(c.mir, { size: "xxs", color: "var(--premium-tier-2-purple-for-gradients)" }),
                 }),
-                t = z.intl.format(z.t["yR+oDD"], { helpCenterLink: x.A.getArticleURL(Y.MVz.FRACTIONAL_PREMIUM_ABOUT) });
-            R = (0, i.jsx)(o.A, {
+                t = z.intl.format(z.t["yR+oDD"], { helpCenterLink: p.A.getArticleURL(Y.MVz.FRACTIONAL_PREMIUM_ABOUT) });
+            y = (0, i.jsx)(o.A, {
                 text: t,
                 "aria-label": t.toString(),
                 tooltipClassName: X.YL,
@@ -357,11 +357,11 @@ let q = (e, t, s) => {
                         children: (0, i.jsx)("div", {
                             className: X.eL,
                             children: n
-                                ? (0, i.jsx)(k.A, { enablePremiumBrandRefresh: !0, text: j })
-                                : (0, i.jsx)(M.R, {
-                                      className: l()(X.Av, { [X.R]: !p }),
-                                      text: j,
-                                      colorOptions: M.at.PREMIUM_TIER_2_WHITE_FILL,
+                                ? (0, i.jsx)(k.A, { enablePremiumBrandRefresh: !0, text: O })
+                                : (0, i.jsx)(G.R, {
+                                      className: l()(X.Av, { [X.R]: !x }),
+                                      text: O,
+                                      colorOptions: G.at.PREMIUM_TIER_2_WHITE_FILL,
                                       icon: e,
                                       gap: !1,
                                   }),
@@ -369,15 +369,15 @@ let q = (e, t, s) => {
                     }),
             });
         }
-        return (0, i.jsx)(g.f5, {
+        return (0, i.jsx)(m.f5, {
             value: d,
             children: (0, i.jsx)(et.Provider, {
                 value: {
-                    headingText: N,
-                    headingTop: R,
-                    showPill: p,
-                    userDiscountOffer: a,
-                    discountedPrice: r,
+                    headingText: b,
+                    headingTop: y,
+                    showPill: x,
+                    userDiscountOffer: r,
+                    discountedPrice: a,
                     buttonVisibilityRef: s,
                 },
                 children: n
@@ -385,9 +385,9 @@ let q = (e, t, s) => {
                           className: t,
                           isEligibleForBogoPromotion: h,
                           isInReverseTrial: u,
-                          shouldShowReferralProgressBar: I,
+                          shouldShowReferralProgressBar: f,
                       })
-                    : f,
+                    : N,
             }),
         });
     };

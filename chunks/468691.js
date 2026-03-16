@@ -12,9 +12,9 @@ var i = n(627968),
     h = n(742077),
     _ = n(268387),
     m = n(715671),
-    p = n(652215),
-    g = n(985018),
-    E = n(560125);
+    g = n(652215),
+    p = n(985018),
+    E = n(75755);
 class I extends r.Component {
     searchBarRef = r.createRef();
     state = { focused: !1 };
@@ -46,10 +46,10 @@ class I extends r.Component {
         let l = (0, s.BF)(e)?.activeElement;
         if (!(l !== r.current && (0, s.Cw)(l)))
             switch (e.which) {
-                case p.Ks6.ESCAPE:
+                case g.Ks6.ESCAPE:
                     e.target !== r.current ? this.reset() : null != r.current && r.current?.blur();
                     break;
-                case p.Ks6.ENTER:
+                case g.Ks6.ENTER:
                     if (null != t) {
                         e.preventDefault();
                         let n = i.find((e) => e.key === t);
@@ -57,21 +57,21 @@ class I extends r.Component {
                         let r = n.libraryApplication;
                         m.performDefaultLibraryApplicationAction(r, {
                             analyticsParams: {
-                                source: p.ThZ.APPLICATION_LIBRARY,
+                                source: g.ThZ.APPLICATION_LIBRARY,
                                 location: {
-                                    page: p.liQ.LIBRARY,
-                                    section: p.JJy.LIBRARY_APPLICATION_LIST,
-                                    object: p.ZSU.BUTTON_CTA,
+                                    page: g.liQ.LIBRARY,
+                                    section: g.JJy.LIBRARY_APPLICATION_LIST,
+                                    object: g.ZSU.BUTTON_CTA,
                                 },
                             },
                         });
                     }
                     break;
-                case p.Ks6.ARROW_DOWN:
-                case p.Ks6.ARROW_UP:
+                case g.Ks6.ARROW_DOWN:
+                case g.Ks6.ARROW_UP:
                     e.preventDefault(),
                         e.stopPropagation(),
-                        this.updateActiveRow(e.which === p.Ks6.ARROW_DOWN ? 1 : -1);
+                        this.updateActiveRow(e.which === g.Ks6.ARROW_DOWN ? 1 : -1);
                     break;
                 default:
                     null != r.current && e.target !== r.current && r.current?.focus();
@@ -91,7 +91,7 @@ class I extends r.Component {
                     this.reset(), this.focusInput();
                 },
                 query: e,
-                placeholder: g.intl.string(g.t.aSxWSo),
+                placeholder: p.intl.string(p.t.aSxWSo),
             }),
         });
     }

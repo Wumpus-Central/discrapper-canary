@@ -17,7 +17,7 @@ var i = r(503698),
     I = r(156601),
     _ = r(788868),
     f = r(985018),
-    A = r(371214);
+    A = r(26212);
 function h(e) {
     let { defaultPriceString: t, subscriptionPlan: r, discountOffer: i } = e,
         a = (0, p.N1)(r);

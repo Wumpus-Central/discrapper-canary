@@ -1,4 +1,4 @@
-n.d(t, { default: () => g });
+n.d(t, { default: () => p });
 var i = n(627968),
     r = n(64700),
     l = n(110259),
@@ -10,21 +10,21 @@ var i = n(627968),
     u = n(870570),
     A = n(652215),
     h = n(985018),
-    _ = n(20697),
+    _ = n(665763),
     m = n(546);
-function p(e) {
+function g(e) {
     let { text: t } = e;
     return (0, i.jsxs)("li", {
         className: _.nf,
         children: [t, " ", (0, i.jsx)(a.I9m, { size: "sm", color: "currentColor" })],
     });
 }
-function g(e) {
+function p(e) {
     let { transitionState: t } = e,
         n = (0, s.bG)([u.A], () => u.A.getAction()),
-        [a, g] = r.useState(!1);
+        [a, p] = r.useState(!1);
     async function E() {
-        return g(!0), n === A.a3B.AGREEMENTS && g(await (0, d.Q9)()), null;
+        return p(!0), n === A.a3B.AGREEMENTS && p(await (0, d.Q9)()), null;
     }
     return (
         (0, c.A)(
@@ -60,13 +60,13 @@ function g(e) {
                         children: (0, i.jsxs)("ul", {
                             className: _.yJ,
                             children: [
-                                (0, i.jsx)(p, { text: h.intl.format(h.t.iw0hFi, { url: A.X7G.TERMS }) }),
+                                (0, i.jsx)(g, { text: h.intl.format(h.t.iw0hFi, { url: A.X7G.TERMS }) }),
                                 (0, i.jsx)(o.cGx, {}),
-                                (0, i.jsx)(p, { text: h.intl.format(h.t["36klnD"], { url: A.X7G.PAID_TERMS }) }),
+                                (0, i.jsx)(g, { text: h.intl.format(h.t["36klnD"], { url: A.X7G.PAID_TERMS }) }),
                                 (0, i.jsx)(o.cGx, {}),
-                                (0, i.jsx)(p, { text: h.intl.format(h.t.TquFBF, { url: A.X7G.PRIVACY }) }),
+                                (0, i.jsx)(g, { text: h.intl.format(h.t.TquFBF, { url: A.X7G.PRIVACY }) }),
                                 (0, i.jsx)(o.cGx, {}),
-                                (0, i.jsx)(p, { text: h.intl.format(h.t.ia96Tb, { url: A.X7G.GUIDELINES }) }),
+                                (0, i.jsx)(g, { text: h.intl.format(h.t.ia96Tb, { url: A.X7G.GUIDELINES }) }),
                             ],
                         }),
                     }),

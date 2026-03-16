@@ -12,18 +12,18 @@ var i = n(627968),
     h = n(533129),
     _ = n(726845),
     m = n(285395),
-    p = n(488995),
-    g = n(935266);
+    g = n(488995),
+    p = n(34352);
 let E = function () {
     let e = (0, a.bG)([o.A], () => o.A.hasLoadedExperiments),
         t = _.A.useField("selectedTab"),
         n = (function (e) {
             switch (e) {
-                case p.GlobalDiscoveryTab.SERVERS:
+                case g.GlobalDiscoveryTab.SERVERS:
                     return (0, i.jsx)(c.A, {});
-                case p.GlobalDiscoveryTab.APPS:
+                case g.GlobalDiscoveryTab.APPS:
                     return (0, i.jsx)(d.default, {});
-                case p.GlobalDiscoveryTab.QUESTS:
+                case g.GlobalDiscoveryTab.QUESTS:
                     return (0, i.jsx)(u.A, { topLevelRoute: !1 });
                 default:
                     (0, A.xb)(e);
@@ -40,8 +40,8 @@ let E = function () {
             e && (0, h.tx)({ selectedTab: t });
         }, [t, e]),
         (0, i.jsxs)("section", {
-            className: g.k,
-            children: [(0, i.jsx)(s.HI, { location: (0, m.t)(t) }), (0, i.jsx)("div", { className: g.T }), n],
+            className: p.k,
+            children: [(0, i.jsx)(s.HI, { location: (0, m.t)(t) }), (0, i.jsx)("div", { className: p.T }), n],
         })
     );
 };

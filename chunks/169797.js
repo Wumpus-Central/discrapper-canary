@@ -10,7 +10,7 @@ var r = n(627968),
     c = n(683433),
     d = n(981036),
     _ = n(725836),
-    f = n(13499);
+    f = n(996541);
 function p(e) {
     let { gradientColor: t, title: n, headerBadgeText: s, headerBadgeIcon: a, countryCode: c, ...d } = e,
         { checkoutHeaderConfigs: p } = (0, _.ck)(),
@@ -34,7 +34,7 @@ function p(e) {
         titleTextVariant: "heading-lg/semibold",
         alignCenter: !1,
         title: n,
-        subtitle: null != c ? { text: (0, u.Gw)((0, u.ni)(c)), leadingIcon: h } : void 0,
+        subtitle: null != c ? { text: (0, u.j7)((0, u.ni)(c)), leadingIcon: h } : void 0,
     });
 }
 let h = { top: 16, bottom: 8 };
