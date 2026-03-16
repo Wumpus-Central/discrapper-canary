@@ -190,9 +190,8 @@ let y = (e) => {
             isTrial: C,
             plan: Y,
             isGift: k,
-            priceOptions: y,
-            renewalInvoicePreview: H,
             paymentSourceType: J,
+            invoiceSummaryTypeWithPreview: ec,
         }),
         ev =
             ec.type === p.N$.PREMIUM_WITH_TRIAL
