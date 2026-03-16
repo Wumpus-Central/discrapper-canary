@@ -1,21 +1,22 @@
 "use strict";
 n.d(t, {
     DG: () => m,
+    Fy: () => A,
     Iv: () => _,
     Rb: () => f,
-    af: () => g,
+    af: () => E,
     bM: () => p,
     do: () => d,
-    kn: () => E,
+    kn: () => g,
     ok: () => h,
     uA: () => c,
     vI: () => u,
-    wh: () => A,
+    wh: () => I,
 });
 var r = n(867051),
     i = n(329972),
-    a = n(486020),
-    s = n(661191),
+    s = n(486020),
+    a = n(661191),
     o = n(240248),
     l = n(652215);
 let u = "Guild",
@@ -58,11 +59,12 @@ let u = "Guild",
         profile: null,
         premiumFeatures: null,
         moderatorReporting: null,
+        gameApplicationIds: null,
     });
 function _(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-    return a.Ay.getGuildIconURL({ id: e.id, size: t, icon: e.icon, canAnimate: n, lossless: r });
+    return s.Ay.getGuildIconURL({ id: e.id, size: t, icon: e.icon, canAnimate: n, lossless: r });
 }
 function f(e) {
     return (0, o.oN)(e.name);
@@ -77,13 +79,16 @@ function h(e, t) {
 function m(e) {
     return null == e.joinedAt;
 }
-function g(e) {
-    return s.default.castGuildIdAsEveryoneGuildRoleId(e.id);
+function E(e) {
+    return a.default.castGuildIdAsEveryoneGuildRoleId(e.id);
 }
-function E(e, t) {
+function g(e, t) {
     return (0, r.hZ)(e, "joinedAt", "string" == typeof t ? new Date(t) : t);
 }
-function A(e) {
+function A(e, t) {
+    return (0, r.hZ)(e, "gameApplicationIds", t);
+}
+function I(e) {
     return (
         null != e &&
         ((0, i.v)("guild_record") ? c.has(e.nsfwLevel) : c.has(e.ownerConfiguredContentLevel ?? l.ftr.DEFAULT))

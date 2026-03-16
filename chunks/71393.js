@@ -109,6 +109,11 @@ let h = new p(
             let l = "string" == typeof r ? new Date(r) : r;
             l !== a.joinedAt && null != l && t.set(n, (0, o.kn)(a, l));
         },
+        GUILD_OFFICIAL_GAME_APPLICATIONS_UPDATE: (e, t) => {
+            let { guildId: n, gameApplicationIds: r } = e,
+                i = t.get(n);
+            null != i && t.set(n, (0, o.Fy)(i, r));
+        },
     },
     s.P4.getCachedBridgedStoreMode(),
 );

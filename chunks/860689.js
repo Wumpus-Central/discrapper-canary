@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, {
-    $O: () => S,
+    $O: () => y,
     DY: () => h,
     Me: () => _,
     Wj: () => d,
@@ -10,24 +10,24 @@ n.d(t, {
     dangerouslyConstructGuildRecordFromUntypedObject: () => T,
     fh: () => u,
     kI: () => f,
-    rx: () => g,
+    rx: () => E,
     tJ: () => v,
-    xi: () => E,
+    xi: () => g,
     yF: () => I,
-    yN: () => y,
+    yN: () => S,
     zT: () => c,
 });
 var r = n(284009),
     i = n.n(r),
-    a = n(357758),
-    s = n(867051),
+    s = n(357758),
+    a = n(867051),
     o = n(260509),
     l = n(652215);
 function u(e) {
-    return (0, s.Wj)(o.vI, e);
+    return (0, a.Wj)(o.vI, e);
 }
 function c(e, t, n) {
-    return (0, s.e)(o.vI, n, {
+    return (0, a.e)(o.vI, n, {
         id: e.id,
         joinedAt: t.joinedAt,
         premiumSubscriberCount: t.premiumSubscriberCount,
@@ -37,7 +37,7 @@ function c(e, t, n) {
         splash: e.splash ?? null,
         banner: e.banner ?? null,
         homeHeader: e.home_header ?? null,
-        features: (0, a.y)(e.features),
+        features: (0, s.y)(e.features),
         preferredLocale: e.preferred_locale ?? o.do.preferredLocale,
         ownerId: e.owner_id,
         application_id: e.application_id ?? null,
@@ -68,8 +68,9 @@ function c(e, t, n) {
         hubType: e.hub_type ?? null,
         latestOnboardingQuestionId: e.latest_onboarding_question_id ?? null,
         profile: e.profile ?? null,
-        premiumFeatures: null != e.premium_features ? b(e.premium_features) : null,
-        moderatorReporting: null != e.moderator_reporting ? R(e.moderator_reporting) : null,
+        premiumFeatures: null != e.premium_features ? C(e.premium_features) : null,
+        moderatorReporting: null != e.moderator_reporting ? O(e.moderator_reporting) : null,
+        gameApplicationIds: e.game_application_ids ?? null,
     });
 }
 function d(e, t) {
@@ -77,7 +78,7 @@ function d(e, t) {
         r = e.premium_subscription_count ?? 0;
     return null == e.properties
         ? (i()(null != t, "If guild.properties is null, existingGuild must be passed in"),
-          (0, s.h1)(t, { joinedAt: n, premiumSubscriberCount: r }))
+          (0, a.h1)(t, { joinedAt: n, premiumSubscriberCount: r }))
         : c(e.properties, { joinedAt: n, premiumSubscriberCount: r }, t);
 }
 function _(e, t, n) {
@@ -116,7 +117,7 @@ function h(e) {
         icon: e.icon,
         splash: e.splash,
         banner: e.banner,
-        features: (0, a.y)(e.features),
+        features: (0, s.y)(e.features),
         verificationLevel: e.verification_level,
         vanityURLCode: e.vanity_url_code,
         premiumSubscriberCount: e.premium_subscription_count,
@@ -133,20 +134,20 @@ function m(e) {
         icon: e.icon,
         premiumSubscriberCount: e.premiumSubscriberCount ?? o.do.premiumSubscriberCount,
         premiumTier: e.premiumTier ?? o.do.premiumTier,
-        features: (0, a.y)(e.features),
+        features: (0, s.y)(e.features),
     });
 }
-function g(e) {
+function E(e) {
     return v({ id: e.id, name: e.name, icon: e.icon ?? null });
 }
-function E(e) {
+function g(e) {
     return v({
         id: e.guildId,
         name: e.name ?? "",
         icon: e.icon ?? null,
         description: e.description ?? null,
         splash: e.splash ?? null,
-        features: (0, a.y)(e.features),
+        features: (0, s.y)(e.features),
     });
 }
 function A(e) {
@@ -156,7 +157,7 @@ function A(e) {
         icon: e.icon ?? null,
         description: e.description ?? null,
         splash: e.splash ?? null,
-        features: (0, a.y)(e.features),
+        features: (0, s.y)(e.features),
         verificationLevel: e.verification_level ?? o.do.verificationLevel,
     });
 }
@@ -168,11 +169,11 @@ function I(e) {
         description: e.description ?? null,
         splash: e.splash ?? null,
         discoverySplash: e.discovery_splash ?? null,
-        features: (0, a.y)(e.features),
+        features: (0, s.y)(e.features),
     });
 }
 function T(e) {
-    return C({
+    return N({
         id: e.id,
         name: e.name || "",
         description: e.description || null,
@@ -181,7 +182,7 @@ function T(e) {
         splash: e.splash || null,
         banner: e.banner || null,
         homeHeader: e.homeHeader || null,
-        features: (0, a.y)(e.features),
+        features: (0, s.y)(e.features),
         preferredLocale: e.preferredLocale || o.do.preferredLocale,
         afkChannelId: e.afkChannelId || null,
         afkTimeout: e.afkTimeout,
@@ -217,9 +218,10 @@ function T(e) {
         profile: e.profile ?? null,
         premiumFeatures: e.premiumFeatures ?? null,
         moderatorReporting: e.moderatorReporting ?? null,
+        gameApplicationIds: e.gameApplicationIds ?? null,
     });
 }
-function y(e) {
+function S(e) {
     return {
         id: e.id,
         name: e.name,
@@ -243,7 +245,7 @@ function y(e) {
         premium_tier: e.premiumTier,
         premium_progress_bar_enabled: e.premiumProgressBarEnabled,
         premium_progress_bar_enabled_user_updated_at: e.premiumProgressBarEnabledUserUpdatedAt?.toISOString() ?? null,
-        premium_features: null != e.premiumFeatures ? N(e.premiumFeatures) : null,
+        premium_features: null != e.premiumFeatures ? R(e.premiumFeatures) : null,
         system_channel_flags: e.systemChannelFlags,
         discovery_splash: e.discoverySplash,
         rules_channel_id: e.rulesChannelId,
@@ -258,29 +260,30 @@ function y(e) {
         hub_type: e.hubType,
         latest_onboarding_question_id: e.latestOnboardingQuestionId,
         profile: e.profile,
-        moderator_reporting: null != e.moderatorReporting ? O(e.moderatorReporting) : null,
+        moderator_reporting: null != e.moderatorReporting ? b(e.moderatorReporting) : null,
         incidents_data: null,
+        game_application_ids: e.gameApplicationIds,
     };
 }
-function S(e) {
+function y(e) {
     let t = {
         ...e,
-        features: (0, a.y)(e.features),
+        features: (0, s.y)(e.features),
         joinedAt: null != e.joinedAt ? new Date(e.joinedAt) : null,
         premiumProgressBarEnabledUserUpdatedAt:
             null != e.premiumProgressBarEnabledUserUpdatedAt
                 ? new Date(e.premiumProgressBarEnabledUserUpdatedAt)
                 : null,
     };
-    return delete t.roles, delete t.member, C(t);
+    return delete t.roles, delete t.member, N(t);
 }
 function v(e) {
-    return C({ ...o.do, ...e });
+    return N({ ...o.do, ...e });
+}
+function N(e) {
+    return (0, a.yE)(o.vI, e);
 }
 function C(e) {
-    return (0, s.yE)(o.vI, e);
-}
-function b(e) {
     return {
         features: e.features,
         additionalEmojiSlots: e.additional_emoji_slots,
@@ -288,7 +291,7 @@ function b(e) {
         additionalSoundSlots: e.additional_sound_slots,
     };
 }
-function N(e) {
+function R(e) {
     return {
         features: e.features,
         additional_emoji_slots: e.additionalEmojiSlots,
@@ -296,13 +299,13 @@ function N(e) {
         additional_sound_slots: e.additionalSoundSlots,
     };
 }
-function R(e) {
+function O(e) {
     return {
         moderatorReportingEnabled: e.moderator_reporting_enabled,
         moderatorReportChannelId: e.moderator_report_channel_id,
     };
 }
-function O(e) {
+function b(e) {
     return {
         moderator_reporting_enabled: e.moderatorReportingEnabled,
         moderator_report_channel_id: e.moderatorReportChannelId,

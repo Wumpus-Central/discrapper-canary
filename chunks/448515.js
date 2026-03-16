@@ -1509,4 +1509,7 @@ H(
     }),
     B(["HAVEN_UPDATE"], (e, t) => {
         W({ type: t, room: (0, _.xf)(e) });
+    }),
+    B(["GUILD_OFFICIAL_GAME_APPLICATIONS_UPDATE"], (e, t) => {
+        W({ type: t, gameApplicationIds: e.game_application_ids, guildId: e.guild_id });
     });

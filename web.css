@@ -24746,7 +24746,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-sm\/normal__13533 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.2857142857142858
 }
@@ -24757,7 +24757,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-sm\/medium__13533 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.2857142857142858
 }
@@ -24768,7 +24768,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-sm\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
@@ -24779,7 +24779,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-sm\/bold__13533 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.2857142857142858
 }
@@ -24790,7 +24790,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-sm\/extrabold__13533 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 800;
     line-height: 1.2857142857142858
 }
@@ -24801,7 +24801,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-md\/normal__13533 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -24812,7 +24812,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-md\/medium__13533 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -24823,7 +24823,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-md\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -24834,7 +24834,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-md\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -24845,7 +24845,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-md\/extrabold__13533 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 800;
     line-height: 1.25
 }
@@ -24856,7 +24856,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-lg\/normal__13533 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.2
 }
@@ -24867,7 +24867,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-lg\/medium__13533 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.2
 }
@@ -24878,7 +24878,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-lg\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.2
 }
@@ -24889,7 +24889,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-lg\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -24900,7 +24900,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-lg\/extrabold__13533 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 800;
     line-height: 1.2
 }
@@ -24911,7 +24911,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-xl\/normal__13533 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -24922,7 +24922,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-xl\/medium__13533 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -24933,7 +24933,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-xl\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -24944,7 +24944,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-xl\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -24955,7 +24955,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-xl\/extrabold__13533 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 800;
     line-height: 1.25
 }
@@ -24966,7 +24966,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-xxl\/normal__13533 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -24977,7 +24977,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-xxl\/medium__13533 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -24988,7 +24988,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-xxl\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -24999,7 +24999,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-xxl\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -25010,7 +25010,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-xxl\/extrabold__13533 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 800;
     line-height: 1.25
 }
@@ -25021,20 +25021,20 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .eyebrow__13533 {
     font-family: var(--font-display);
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: .02em;
     line-height: 1.3333333333333333;
     text-transform: uppercase
 }
 
-.eyebrow__13533,
 .eyebrow__13533.fontScaling__13533 {
     font-size: .75rem
 }
 
 .heading-deprecated-12\/normal__13533 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -25045,7 +25045,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-deprecated-12\/medium__13533 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -25056,7 +25056,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-deprecated-12\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
@@ -25067,7 +25067,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-deprecated-12\/bold__13533 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -25078,7 +25078,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-deprecated-12\/extrabold__13533 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 800;
     line-height: 1.3333333333333333
 }
@@ -25089,7 +25089,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .redesign\/heading-18\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -25100,7 +25100,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-xxs\/normal__13533 {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     font-weight: 400;
     line-height: 1.2
 }
@@ -25111,7 +25111,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-xxs\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     font-weight: 500;
     line-height: 1.2
 }
@@ -25122,18 +25122,18 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-xxs\/semibold__13533 {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     font-weight: 600;
     line-height: 1.2
 }
 
-.text-xxs\/bold__13533,
 .text-xxs\/semibold__13533.fontScaling__13533 {
     font-size: .625rem
 }
 
 .text-xxs\/bold__13533 {
     font-family: var(--font-primary);
+    font-size: 10px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -25144,7 +25144,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-xs\/normal__13533 {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -25155,7 +25155,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-xs\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -25166,18 +25166,18 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-xs\/semibold__13533 {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
 
-.text-xs\/bold__13533,
 .text-xs\/semibold__13533.fontScaling__13533 {
     font-size: .75rem
 }
 
 .text-xs\/bold__13533 {
     font-family: var(--font-primary);
+    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -25188,18 +25188,18 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-sm\/normal__13533 {
     font-family: var(--font-primary);
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.2857142857142858
 }
 
-.text-sm\/medium__13533,
-.text-sm\/normal__13533,
 .text-sm\/normal__13533.fontScaling__13533 {
     font-size: .875rem
 }
 
 .text-sm\/medium__13533 {
     font-family: var(--font-primary);
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.2857142857142858
 }
@@ -25210,18 +25210,18 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-sm\/semibold__13533 {
     font-family: var(--font-primary);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
 
-.text-sm\/bold__13533,
 .text-sm\/semibold__13533.fontScaling__13533 {
     font-size: .875rem
 }
 
 .text-sm\/bold__13533 {
     font-family: var(--font-primary);
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.2857142857142858
 }
@@ -25232,7 +25232,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-md\/normal__13533 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -25243,7 +25243,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-md\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -25254,7 +25254,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-md\/semibold__13533 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -25265,7 +25265,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-md\/bold__13533 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -25276,18 +25276,18 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-lg\/normal__13533 {
     font-family: var(--font-primary);
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.2
 }
 
-.text-lg\/medium__13533,
-.text-lg\/normal__13533,
 .text-lg\/normal__13533.fontScaling__13533 {
     font-size: 1.25rem
 }
 
 .text-lg\/medium__13533 {
     font-family: var(--font-primary);
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.2
 }
@@ -25298,18 +25298,18 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-lg\/semibold__13533 {
     font-family: var(--font-primary);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.2
 }
 
-.text-lg\/bold__13533,
 .text-lg\/semibold__13533.fontScaling__13533 {
     font-size: 1.25rem
 }
 
 .text-lg\/bold__13533 {
     font-family: var(--font-primary);
+    font-size: 20px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -25320,7 +25320,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .redesign\/message-preview\/normal__13533 {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -25331,7 +25331,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .redesign\/message-preview\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -25342,7 +25342,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .redesign\/message-preview\/semibold__13533 {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
@@ -25353,7 +25353,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .redesign\/message-preview\/bold__13533 {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -25364,7 +25364,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .redesign\/channel-title\/normal__13533 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.375
 }
@@ -25375,7 +25375,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .redesign\/channel-title\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.375
 }
@@ -25386,7 +25386,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .redesign\/channel-title\/semibold__13533 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.375
 }
@@ -25397,7 +25397,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .redesign\/channel-title\/bold__13533 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.375
 }
@@ -25408,44 +25408,44 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .display-sm__13533 {
     font-family: var(--font-headline);
+    font-size: 20px;
     font-weight: 800;
     line-height: 1
 }
 
-.display-sm__13533,
 .display-sm__13533.fontScaling__13533 {
     font-size: 1.25rem
 }
 
 .display-md__13533 {
     font-family: var(--font-headline);
+    font-size: 34px;
     font-weight: 800;
     line-height: 1.0588235294117647
 }
 
-.display-md__13533,
 .display-md__13533.fontScaling__13533 {
     font-size: 2.125rem
 }
 
 .display-lg__13533 {
     font-family: var(--font-headline);
+    font-size: 44px;
     font-weight: 800;
     line-height: .9545454545454546
 }
 
-.display-lg__13533,
 .display-lg__13533.fontScaling__13533 {
     font-size: 2.75rem
 }
 
 .code__13533 {
     font-family: var(--font-code);
+    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
 
-.code__13533,
 .code__13533.fontScaling__13533 {
     font-size: .75rem
 }
@@ -25464,9 +25464,9 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 }
 
 .autocompleteRow__13533 {
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: var(--font-weight-medium);
-    line-height: 1rem;
+    line-height: 16px;
     padding: 0 8px
 }
 
@@ -25581,7 +25581,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .emojiRaw__13533 {
     display: block;
-    font-size: 1.25rem
+    font-size: 20px
 }
 
 .descriptionDiscriminator__13533 {
@@ -28833,7 +28833,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-sm\/normal__84522 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.2857142857142858
 }
@@ -28844,7 +28844,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-sm\/medium__84522 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.2857142857142858
 }
@@ -28855,7 +28855,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-sm\/semibold__84522 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
@@ -28866,7 +28866,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-sm\/bold__84522 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.2857142857142858
 }
@@ -28877,7 +28877,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-sm\/extrabold__84522 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 800;
     line-height: 1.2857142857142858
 }
@@ -28888,7 +28888,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-md\/normal__84522 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -28899,7 +28899,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-md\/medium__84522 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -28910,7 +28910,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-md\/semibold__84522 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -28921,7 +28921,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-md\/bold__84522 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -28932,7 +28932,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-md\/extrabold__84522 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 800;
     line-height: 1.25
 }
@@ -28943,7 +28943,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-lg\/normal__84522 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.2
 }
@@ -28954,7 +28954,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-lg\/medium__84522 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.2
 }
@@ -28965,7 +28965,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-lg\/semibold__84522 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.2
 }
@@ -28976,7 +28976,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-lg\/bold__84522 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -28987,7 +28987,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-lg\/extrabold__84522 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 800;
     line-height: 1.2
 }
@@ -28998,7 +28998,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-xl\/normal__84522 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -29009,7 +29009,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-xl\/medium__84522 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -29020,7 +29020,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-xl\/semibold__84522 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -29031,7 +29031,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-xl\/bold__84522 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -29042,7 +29042,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-xl\/extrabold__84522 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 800;
     line-height: 1.25
 }
@@ -29053,7 +29053,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-xxl\/normal__84522 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -29064,7 +29064,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-xxl\/medium__84522 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -29075,7 +29075,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-xxl\/semibold__84522 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -29086,7 +29086,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-xxl\/bold__84522 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -29097,7 +29097,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-xxl\/extrabold__84522 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 800;
     line-height: 1.25
 }
@@ -29108,20 +29108,20 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .eyebrow__84522 {
     font-family: var(--font-display);
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: .02em;
     line-height: 1.3333333333333333;
     text-transform: uppercase
 }
 
-.eyebrow__84522,
 .eyebrow__84522.fontScaling__84522 {
     font-size: .75rem
 }
 
 .heading-deprecated-12\/normal__84522 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -29132,7 +29132,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-deprecated-12\/medium__84522 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -29143,7 +29143,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-deprecated-12\/semibold__84522 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
@@ -29154,7 +29154,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-deprecated-12\/bold__84522 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -29165,7 +29165,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .heading-deprecated-12\/extrabold__84522 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 800;
     line-height: 1.3333333333333333
 }
@@ -29176,7 +29176,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .redesign\/heading-18\/bold__84522 {
     font-family: var(--font-display);
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -29187,7 +29187,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-xxs\/normal__84522 {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     font-weight: 400;
     line-height: 1.2
 }
@@ -29198,7 +29198,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-xxs\/medium__84522 {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     font-weight: 500;
     line-height: 1.2
 }
@@ -29209,18 +29209,18 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-xxs\/semibold__84522 {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     font-weight: 600;
     line-height: 1.2
 }
 
-.text-xxs\/bold__84522,
 .text-xxs\/semibold__84522.fontScaling__84522 {
     font-size: .625rem
 }
 
 .text-xxs\/bold__84522 {
     font-family: var(--font-primary);
+    font-size: 10px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -29231,7 +29231,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-xs\/normal__84522 {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -29242,7 +29242,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-xs\/medium__84522 {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -29253,18 +29253,18 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-xs\/semibold__84522 {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
 
-.text-xs\/bold__84522,
 .text-xs\/semibold__84522.fontScaling__84522 {
     font-size: .75rem
 }
 
 .text-xs\/bold__84522 {
     font-family: var(--font-primary);
+    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -29275,18 +29275,18 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-sm\/normal__84522 {
     font-family: var(--font-primary);
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.2857142857142858
 }
 
-.text-sm\/medium__84522,
-.text-sm\/normal__84522,
 .text-sm\/normal__84522.fontScaling__84522 {
     font-size: .875rem
 }
 
 .text-sm\/medium__84522 {
     font-family: var(--font-primary);
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.2857142857142858
 }
@@ -29297,18 +29297,18 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-sm\/semibold__84522 {
     font-family: var(--font-primary);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
 
-.text-sm\/bold__84522,
 .text-sm\/semibold__84522.fontScaling__84522 {
     font-size: .875rem
 }
 
 .text-sm\/bold__84522 {
     font-family: var(--font-primary);
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.2857142857142858
 }
@@ -29319,7 +29319,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-md\/normal__84522 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -29330,7 +29330,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-md\/medium__84522 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -29341,7 +29341,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-md\/semibold__84522 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -29352,7 +29352,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-md\/bold__84522 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -29363,18 +29363,18 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-lg\/normal__84522 {
     font-family: var(--font-primary);
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.2
 }
 
-.text-lg\/medium__84522,
-.text-lg\/normal__84522,
 .text-lg\/normal__84522.fontScaling__84522 {
     font-size: 1.25rem
 }
 
 .text-lg\/medium__84522 {
     font-family: var(--font-primary);
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.2
 }
@@ -29385,18 +29385,18 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .text-lg\/semibold__84522 {
     font-family: var(--font-primary);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.2
 }
 
-.text-lg\/bold__84522,
 .text-lg\/semibold__84522.fontScaling__84522 {
     font-size: 1.25rem
 }
 
 .text-lg\/bold__84522 {
     font-family: var(--font-primary);
+    font-size: 20px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -29407,7 +29407,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .redesign\/message-preview\/normal__84522 {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -29418,7 +29418,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .redesign\/message-preview\/medium__84522 {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -29429,7 +29429,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .redesign\/message-preview\/semibold__84522 {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
@@ -29440,7 +29440,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .redesign\/message-preview\/bold__84522 {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -29451,7 +29451,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .redesign\/channel-title\/normal__84522 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.375
 }
@@ -29462,7 +29462,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .redesign\/channel-title\/medium__84522 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.375
 }
@@ -29473,7 +29473,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .redesign\/channel-title\/semibold__84522 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.375
 }
@@ -29484,7 +29484,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .redesign\/channel-title\/bold__84522 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.375
 }
@@ -29495,44 +29495,44 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .display-sm__84522 {
     font-family: var(--font-headline);
+    font-size: 20px;
     font-weight: 800;
     line-height: 1
 }
 
-.display-sm__84522,
 .display-sm__84522.fontScaling__84522 {
     font-size: 1.25rem
 }
 
 .display-md__84522 {
     font-family: var(--font-headline);
+    font-size: 34px;
     font-weight: 800;
     line-height: 1.0588235294117647
 }
 
-.display-md__84522,
 .display-md__84522.fontScaling__84522 {
     font-size: 2.125rem
 }
 
 .display-lg__84522 {
     font-family: var(--font-headline);
+    font-size: 44px;
     font-weight: 800;
     line-height: .9545454545454546
 }
 
-.display-lg__84522,
 .display-lg__84522.fontScaling__84522 {
     font-size: 2.75rem
 }
 
 .code__84522 {
     font-family: var(--font-code);
+    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
 
-.code__84522,
 .code__84522.fontScaling__84522 {
     font-size: .75rem
 }
@@ -29550,17 +29550,17 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     align-items: baseline;
     display: flex;
     flex: 1 1 auto;
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: var(--font-weight-medium);
     gap: 8px;
-    line-height: 1rem
+    line-height: 16px
 }
 
 .name__84522 {
     color: var(--interactive-text-active);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: var(--font-weight-semibold);
-    line-height: 1.25rem
+    line-height: 20px
 }
 
 .description__84522 {
@@ -32881,7 +32881,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-sm\/normal_a7acae {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.2857142857142858
 }
@@ -32892,7 +32892,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-sm\/medium_a7acae {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.2857142857142858
 }
@@ -32903,7 +32903,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-sm\/semibold_a7acae {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
@@ -32914,7 +32914,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-sm\/bold_a7acae {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.2857142857142858
 }
@@ -32925,7 +32925,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-sm\/extrabold_a7acae {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 800;
     line-height: 1.2857142857142858
 }
@@ -32936,7 +32936,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-md\/normal_a7acae {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -32947,7 +32947,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-md\/medium_a7acae {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -32958,7 +32958,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-md\/semibold_a7acae {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -32969,7 +32969,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-md\/bold_a7acae {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -32980,7 +32980,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-md\/extrabold_a7acae {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 800;
     line-height: 1.25
 }
@@ -32991,7 +32991,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-lg\/normal_a7acae {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.2
 }
@@ -33002,7 +33002,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-lg\/medium_a7acae {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.2
 }
@@ -33013,7 +33013,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-lg\/semibold_a7acae {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.2
 }
@@ -33024,7 +33024,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-lg\/bold_a7acae {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -33035,7 +33035,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-lg\/extrabold_a7acae {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 800;
     line-height: 1.2
 }
@@ -33046,7 +33046,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-xl\/normal_a7acae {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -33057,7 +33057,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-xl\/medium_a7acae {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -33068,7 +33068,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-xl\/semibold_a7acae {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -33079,7 +33079,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-xl\/bold_a7acae {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -33090,7 +33090,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-xl\/extrabold_a7acae {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 800;
     line-height: 1.25
 }
@@ -33101,7 +33101,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-xxl\/normal_a7acae {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -33112,7 +33112,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-xxl\/medium_a7acae {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -33123,7 +33123,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-xxl\/semibold_a7acae {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -33134,7 +33134,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-xxl\/bold_a7acae {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -33145,7 +33145,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-xxl\/extrabold_a7acae {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 800;
     line-height: 1.25
 }
@@ -33156,20 +33156,20 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .eyebrow_a7acae {
     font-family: var(--font-display);
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: .02em;
     line-height: 1.3333333333333333;
     text-transform: uppercase
 }
 
-.eyebrow_a7acae,
 .eyebrow_a7acae.fontScaling_a7acae {
     font-size: .75rem
 }
 
 .heading-deprecated-12\/normal_a7acae {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -33180,7 +33180,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-deprecated-12\/medium_a7acae {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -33191,7 +33191,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-deprecated-12\/semibold_a7acae {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
@@ -33202,7 +33202,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-deprecated-12\/bold_a7acae {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -33213,7 +33213,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .heading-deprecated-12\/extrabold_a7acae {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 800;
     line-height: 1.3333333333333333
 }
@@ -33224,7 +33224,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .redesign\/heading-18\/bold_a7acae {
     font-family: var(--font-display);
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -33235,7 +33235,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-xxs\/normal_a7acae {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     font-weight: 400;
     line-height: 1.2
 }
@@ -33246,7 +33246,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-xxs\/medium_a7acae {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     font-weight: 500;
     line-height: 1.2
 }
@@ -33257,18 +33257,18 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-xxs\/semibold_a7acae {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     font-weight: 600;
     line-height: 1.2
 }
 
-.text-xxs\/bold_a7acae,
 .text-xxs\/semibold_a7acae.fontScaling_a7acae {
     font-size: .625rem
 }
 
 .text-xxs\/bold_a7acae {
     font-family: var(--font-primary);
+    font-size: 10px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -33279,7 +33279,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-xs\/normal_a7acae {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -33290,7 +33290,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-xs\/medium_a7acae {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -33301,18 +33301,18 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-xs\/semibold_a7acae {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
 
-.text-xs\/bold_a7acae,
 .text-xs\/semibold_a7acae.fontScaling_a7acae {
     font-size: .75rem
 }
 
 .text-xs\/bold_a7acae {
     font-family: var(--font-primary);
+    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -33323,18 +33323,18 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-sm\/normal_a7acae {
     font-family: var(--font-primary);
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.2857142857142858
 }
 
-.text-sm\/medium_a7acae,
-.text-sm\/normal_a7acae,
 .text-sm\/normal_a7acae.fontScaling_a7acae {
     font-size: .875rem
 }
 
 .text-sm\/medium_a7acae {
     font-family: var(--font-primary);
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.2857142857142858
 }
@@ -33345,18 +33345,18 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-sm\/semibold_a7acae {
     font-family: var(--font-primary);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
 
-.text-sm\/bold_a7acae,
 .text-sm\/semibold_a7acae.fontScaling_a7acae {
     font-size: .875rem
 }
 
 .text-sm\/bold_a7acae {
     font-family: var(--font-primary);
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.2857142857142858
 }
@@ -33367,7 +33367,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-md\/normal_a7acae {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -33378,7 +33378,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-md\/medium_a7acae {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -33389,7 +33389,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-md\/semibold_a7acae {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -33400,7 +33400,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-md\/bold_a7acae {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -33411,18 +33411,18 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-lg\/normal_a7acae {
     font-family: var(--font-primary);
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.2
 }
 
-.text-lg\/medium_a7acae,
-.text-lg\/normal_a7acae,
 .text-lg\/normal_a7acae.fontScaling_a7acae {
     font-size: 1.25rem
 }
 
 .text-lg\/medium_a7acae {
     font-family: var(--font-primary);
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.2
 }
@@ -33433,18 +33433,18 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .text-lg\/semibold_a7acae {
     font-family: var(--font-primary);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.2
 }
 
-.text-lg\/bold_a7acae,
 .text-lg\/semibold_a7acae.fontScaling_a7acae {
     font-size: 1.25rem
 }
 
 .text-lg\/bold_a7acae {
     font-family: var(--font-primary);
+    font-size: 20px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -33455,7 +33455,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .redesign\/message-preview\/normal_a7acae {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -33466,7 +33466,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .redesign\/message-preview\/medium_a7acae {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -33477,7 +33477,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .redesign\/message-preview\/semibold_a7acae {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
@@ -33488,7 +33488,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .redesign\/message-preview\/bold_a7acae {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -33499,7 +33499,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .redesign\/channel-title\/normal_a7acae {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.375
 }
@@ -33510,7 +33510,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .redesign\/channel-title\/medium_a7acae {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.375
 }
@@ -33521,7 +33521,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .redesign\/channel-title\/semibold_a7acae {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.375
 }
@@ -33532,7 +33532,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .redesign\/channel-title\/bold_a7acae {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.375
 }
@@ -33543,44 +33543,44 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .display-sm_a7acae {
     font-family: var(--font-headline);
+    font-size: 20px;
     font-weight: 800;
     line-height: 1
 }
 
-.display-sm_a7acae,
 .display-sm_a7acae.fontScaling_a7acae {
     font-size: 1.25rem
 }
 
 .display-md_a7acae {
     font-family: var(--font-headline);
+    font-size: 34px;
     font-weight: 800;
     line-height: 1.0588235294117647
 }
 
-.display-md_a7acae,
 .display-md_a7acae.fontScaling_a7acae {
     font-size: 2.125rem
 }
 
 .display-lg_a7acae {
     font-family: var(--font-headline);
+    font-size: 44px;
     font-weight: 800;
     line-height: .9545454545454546
 }
 
-.display-lg_a7acae,
 .display-lg_a7acae.fontScaling_a7acae {
     font-size: 2.75rem
 }
 
 .code_a7acae {
     font-family: var(--font-code);
+    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
 
-.code_a7acae,
 .code_a7acae.fontScaling_a7acae {
     font-size: .75rem
 }
@@ -33607,8 +33607,8 @@ html:not(.chat-input) .inputInner_b1f01d {
 }
 
 .liveLarge_a7acae {
-    font-size: .875rem;
-    line-height: .9375rem
+    font-size: 14px;
+    line-height: 15px
 }
 
 .liveSmall_a7acae {}
