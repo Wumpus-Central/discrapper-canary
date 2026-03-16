@@ -5,6 +5,7 @@ e.exports = {
     IC: "heroAssetWrapper_b5b7aa",
     l1: "heroAssetCont_b5b7aa",
     Lw: "overlay_b5b7aa",
+    c8: "heroImage_b5b7aa",
     mY: "topRow_b5b7aa",
     Bv: "pills_b5b7aa",
     Io: "pill_b5b7aa",

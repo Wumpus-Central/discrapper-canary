@@ -3,15 +3,15 @@ var a = n(627968),
     i = n(64700),
     s = n(503698),
     l = n.n(s),
-    r = n(490249),
+    r = n(497766),
     o = n(417597),
     d = n(990078),
     c = n(582754),
     u = n(397927),
     m = n(765671),
     h = n(736653),
-    x = n(496885),
-    p = n(178540),
+    p = n(496885),
+    x = n(178540),
     g = n(859703),
     _ = n(341915),
     f = n(12251),
@@ -26,9 +26,9 @@ var a = n(627968),
     E = n(57718),
     N = n(398025),
     I = n(545986),
-    k = n(516226),
+    O = n(516226),
     R = n(720875),
-    O = n(654487),
+    k = n(654487),
     w = n(419367),
     D = n(652215),
     M = n(985018),
@@ -49,23 +49,23 @@ function L(e) {
     let { quest: t, errorHints: n, warningHints: s, isDarkTheme: l, sourceQuestContent: o } = e,
         { ref: d, height: c = 0 } = (0, m.Ay)([n]),
         h = t.userStatus?.completedAt != null,
-        x = (0, v.Vn)(t),
-        { type: p, hints: g } = i.useMemo(
+        p = (0, v.Vn)(t),
+        { type: x, hints: g } = i.useMemo(
             () =>
-                h || x
+                h || p
                     ? { type: 2, hints: [] }
                     : n.length > 0
                       ? { type: 0, hints: n.map((e) => e.message) }
                       : s.length > 0
                         ? { type: 1, hints: s }
                         : { type: 2, hints: [] },
-            [n, h, x, s],
+            [n, h, p, s],
         ),
-        _ = 2 !== p,
+        _ = 2 !== x,
         f = (0, u.zhh)({ opacity: +!!_, height: _ ? c : 0, config: w.N }),
-        b = 0 === p ? u.EpV : u.mir,
+        b = 0 === x ? u.EpV : u.mir,
         j = u.LU0.unsafe_rawColors.RED_345.css,
-        A = 0 === p ? j : l ? u.LU0.colors.TEXT_DEFAULT : u.LU0.colors.WHITE;
+        A = 0 === x ? j : l ? u.LU0.colors.TEXT_DEFAULT : u.LU0.colors.WHITE;
     return (0, a.jsx)(r.animated.div, {
         style: { height: f.height, opacity: (0, N.a)(f.opacity) },
         children: (0, a.jsxs)("div", {
@@ -83,7 +83,7 @@ function L(e) {
                         }),
                     ],
                 }),
-                0 === p &&
+                0 === x &&
                     (0, a.jsx)(u.QWc, {
                         text: M.intl.string(M.t["yKJi+/"]),
                         onClick: () => (0, y.i)({ quest: t, errorHints: n, sourceQuestContent: o }),
@@ -106,7 +106,7 @@ function B(e) {
             onCtxMenuSelect: N,
             sourceQuestContent: w,
         } = e,
-        B = (0, p.O)((e) => e.getErrorHints(t.id)),
+        B = (0, x.O)((e) => e.getErrorHints(t.id)),
         G = B.length > 0 ? B : s,
         F = (0, A.IO)(t),
         V = (0, h.Ay)(),
@@ -116,7 +116,7 @@ function B(e) {
         z = (0, v.S5)(t.config.expiresAt, { month: "numeric", day: "numeric" }),
         $ = t.userStatus?.enrolledAt != null,
         q = t.userStatus?.completedAt != null,
-        { onAssetLoadComplete: Q } = i.useContext(k.M),
+        { onAssetLoadComplete: Q } = i.useContext(O.M),
         Y = W ? "text-muted" : "always-white",
         J = i.useCallback(() => {
             F &&
@@ -129,7 +129,7 @@ function B(e) {
         }, [F, t, w]),
         X = (0, o.bG)([g.A], () => g.A.getQuestHomeHeroConfig()),
         Z = i.useMemo(() => null != X && (0, C.I0)(X, t.id), [X, t.id]),
-        ee = f.s5.useConfig({ location: O.rE.QUESTS_CARD }),
+        ee = f.s5.useConfig({ location: k.rE.QUESTS_CARD }),
         et = ee.enabled && ee.variant === f.tL.INFO_ICON,
         en = (0, v.do)({
             quest: t,
@@ -148,6 +148,7 @@ function B(e) {
                     hideAssets: !r,
                     imageSize: { width: 1320, height: 370 },
                     containerClassName: P.l1,
+                    imageClassName: P.c8,
                 }),
             }),
             (0, a.jsx)("div", { className: P.Lw }),
@@ -252,7 +253,7 @@ function B(e) {
                                                 color: Y,
                                                 children: M.intl.string(M.t.VAbKhK),
                                             }),
-                                            (0, a.jsx)(x.A, {
+                                            (0, a.jsx)(p.A, {
                                                 className: P.w$,
                                                 size: 16,
                                                 color: u.LU0.unsafe_rawColors.GREEN_360.css,
