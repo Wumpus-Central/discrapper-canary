@@ -6,5 +6,7 @@ e.exports = {
     ib: "twoItemBundle__6d099",
     c$: "threeItemBundle__6d099",
     M4: "nameplatePreview__6d099",
+    d2: "staticPreview__6d099",
+    M2: "staticPreviewHighlighted__6d099",
     my: "avatar__6d099",
 };

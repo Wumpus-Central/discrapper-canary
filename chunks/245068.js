@@ -1,71 +1,86 @@
 "use strict";
-n.d(t, { X: () => E });
+n.d(t, { X: () => I });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(582754),
-    l = n(397927),
-    u = n(736653),
-    c = n(550111),
-    d = n(331402),
-    _ = n(442759),
-    f = n(929283),
-    p = n(122952),
-    h = n(180171),
-    m = n(989099);
-let E = i.memo(function (e) {
+    o = n(311907),
+    l = n(582754),
+    u = n(397927),
+    c = n(736653),
+    d = n(775602),
+    _ = n(550111),
+    f = n(331402),
+    p = n(320447),
+    h = n(442759),
+    m = n(929283),
+    E = n(650906),
+    g = n(180171),
+    A = n(989099);
+let I = i.memo(function (e) {
     let {
             product: t,
             isHighlighted: n,
             user: i,
             forCollectedModal: s,
-            showDefaultAvatar: E = !1,
-            disableAnimation: g = !1,
+            showDefaultAvatar: I = !1,
+            disableAnimation: T = !1,
         } = e,
-        { firstProfileEffect: A, firstAvatarDecoration: I, firstNameplate: T } = (0, _.f5)(t),
-        S = (0, u.Ay)(),
-        y = (0, o.qB)(S),
-        v = null != T && null != I && null != A,
-        N = v ? l._3J.SIZE_72 : l._3J.SIZE_80,
-        C = y ? m : h;
+        { firstProfileEffect: S, firstAvatarDecoration: y, firstNameplate: v } = (0, h.f5)(t),
+        { enabled: N } = (0, p.P)("BundlePreview"),
+        C = (0, o.bG)([d.A], () => d.A.useReducedMotion),
+        R = (0, c.Ay)(),
+        O = (0, l.qB)(R),
+        b = null != v && null != y && null != S,
+        D = b ? u._3J.SIZE_72 : u._3J.SIZE_80,
+        L = O ? A : g,
+        w = t.previewAssets?.fgStatic;
+    if (N && null != w) {
+        let e = n && !C,
+            i = t.previewAssets?.fgAnimated,
+            s = e && null != i ? i : w;
+        return (0, r.jsx)("div", {
+            className: E.kL,
+            children: (0, r.jsx)("img", { className: a()(E.d2, { [E.M2]: n }), src: s, alt: t.name }),
+        });
+    }
     return (0, r.jsxs)("div", {
-        className: a()(p.kL, { [p.ib]: !v, [p.c$]: v }),
+        className: a()(E.kL, { [E.ib]: !b, [E.c$]: b }),
         children: [
-            null != A &&
+            null != S &&
                 (0, r.jsx)("div", {
-                    className: p.NM,
-                    children: (0, r.jsx)(d.A, {
+                    className: E.NM,
+                    children: (0, r.jsx)(f.A, {
                         isHighlighted: n,
-                        skuId: A.skuId,
+                        skuId: S.skuId,
                         removeSetHeight: !0,
                         delayProfileEffectIntro: s,
                         withScaleAnimation: s,
                     }),
                 }),
-            v &&
+            b &&
                 (0, r.jsx)("div", {
-                    className: p.M4,
-                    children: (0, r.jsx)(c.A, {
+                    className: E.M4,
+                    children: (0, r.jsx)(_.A, {
                         user: i,
-                        nameplate: T,
+                        nameplate: v,
                         isHighlighted: n,
-                        showPlaceholderUser: !n || E,
-                        pendingAvatarDecoration: I,
+                        showPlaceholderUser: !n || I,
+                        pendingAvatarDecoration: y,
                     }),
                 }),
-            null != I &&
+            null != y &&
                 (0, r.jsx)("div", {
-                    className: p._P,
-                    children: (0, r.jsx)(f.i, {
-                        item: I,
+                    className: E._P,
+                    children: (0, r.jsx)(m.i, {
+                        item: y,
                         user: i,
-                        avatarSize: N,
+                        avatarSize: D,
                         isHighlighted: n,
-                        showDefaultAvatar: E,
-                        disableAnimation: g,
-                        avatarPlaceholderSrc: C,
-                        className: p.my,
+                        showDefaultAvatar: I,
+                        disableAnimation: T,
+                        avatarPlaceholderSrc: L,
+                        className: E.my,
                     }),
                 }),
         ],
