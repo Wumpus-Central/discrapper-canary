@@ -79,7 +79,7 @@ let N = (e) => {
                 eligibleForMultiMonthPlans: a,
                 subscriptionPeriodEnd: l,
                 discountInvoiceItems: u,
-                showSecondarySubTexts: d,
+                showPlanStatusSubText: d,
                 disabled: _,
                 isInPlanSelectStep: p,
                 headingSubText: h,
@@ -124,46 +124,50 @@ let N = (e) => {
                 userLocale: U,
                 priceOptions: G,
                 isGift: F,
-                shouldUseCalculatedDiscount: V,
-                discountOffer: B,
+                isEligibleForDiscount: V,
+                shouldUseCalculatedDiscount: B,
+                discountOffer: H,
+                discountAmountOff: j,
             } = (0, f.Rx)(m),
-            H = i.useMemo(() => (s.length > 0 ? T.hd[s[0]].premiumType : void 0), [s]),
-            j = i.useCallback(
+            Y = i.useMemo(() => (s.length > 0 ? T.hd[s[0]].premiumType : void 0), [s]),
+            W = i.useCallback(
                 (e) => {
                     P(e.value);
                 },
                 [P],
             ),
-            Y = i.useMemo(
-                () =>
-                    s.map((e) => {
-                        let { isCurrentPlan: t, disabled: n } = (0, f.cD)(k, e),
-                            r = (0, A.Rs)(k, {
-                                planId: e,
-                                isCurrentPlan: t,
-                                disabled: n,
-                                userLocale: U,
-                                showSecondarySubTexts: d,
-                                isInPlanSelectStep: p,
-                                discountOffer: B,
-                                priceOptions: G,
-                                isGift: F,
-                                shouldUseCalculatedDiscount: V,
-                                isEligibleForTrial: O,
-                                isEligibleForBOGOPromotion: b,
-                            });
-                        return {
-                            value: r.id,
-                            secondarySubText: r.secondarySubText,
-                            primaryText: r.planName,
-                            badgeText: r.promoText,
-                            subText: r.priceText,
-                            isDisabled: r.isDisabled || _,
-                        };
-                    }),
-                [_, d, s, U, B, G, F, V, O, b, k, p],
-            );
-        return null == H
+            K = i.useMemo(() => {
+                let e = null != H && H.discount.user_usage_limit_interval === T.Ff.MONTH;
+                return s.map((t) => {
+                    let { isCurrentPlan: n, disabled: r } = (0, f.cD)(k, t),
+                        i = (0, A.Rs)(k, {
+                            planId: t,
+                            isEligibleForDiscount: V,
+                            isCurrentPlan: n,
+                            disabled: r,
+                            userLocale: U,
+                            showPlanStatusSubText: d,
+                            isInPlanSelectStep: p,
+                            discountOffer: H,
+                            discountAmountOff: j,
+                            isMonthlyDiscountOffer: e,
+                            priceOptions: G,
+                            isGift: F,
+                            shouldUseCalculatedDiscount: B,
+                            isEligibleForTrial: O,
+                            isEligibleForBOGOPromotion: b,
+                        });
+                    return {
+                        value: i.id,
+                        secondarySubText: i.secondarySubText,
+                        primaryText: i.planName,
+                        badgeText: i.promoText,
+                        subText: i.priceText,
+                        isDisabled: i.isDisabled || _,
+                    };
+                });
+            }, [_, d, s, U, V, H, j, G, F, B, O, b, k, p]);
+        return null == Y
             ? null
             : (0, r.jsxs)(r.Fragment, {
                   children: [
@@ -175,11 +179,11 @@ let N = (e) => {
                               children: M,
                           }),
                       (0, r.jsx)(c.me, {
-                          headingComponent: (0, r.jsx)(c.ec, { size: "sm", color: "text-strong", premiumType: H }),
+                          headingComponent: (0, r.jsx)(c.ec, { size: "sm", color: "text-strong", premiumType: Y }),
                           headingSubText: x,
-                          planRadioOptions: Y,
+                          planRadioOptions: K,
                           value: E?.id ?? "",
-                          onChange: j,
+                          onChange: W,
                       }),
                       p
                           ? (0, f.LR)({

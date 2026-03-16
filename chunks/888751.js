@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { EA: () => I, Gj: () => C, IY: () => y, Ig: () => S, Rs: () => O, fk: () => v, iK: () => A, ib: () => E }),
+n.d(t, { EA: () => I, Gj: () => C, IY: () => y, Ig: () => S, Rs: () => b, fk: () => v, iK: () => A, ib: () => E }),
     n(321073);
 var r = n(284009),
     i = n.n(r),
@@ -14,7 +14,7 @@ var r = n(284009),
     f = n(580630),
     p = n(788868),
     h = n(985018),
-    m = n(523376);
+    m = n(756366);
 let E = function (e) {
         let { includeNowSuffix: t } =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { includeNowSuffix: !1 };
@@ -217,59 +217,84 @@ let E = function (e) {
     R = (e, t) => {
         let { isEligibleForTrial: n } = t;
         return n
-            ? h.intl.format(h.t.hXcaLT, {
+            ? h.intl.formatToPlainString(h.t.hXcaLT, {
                   price: (0, f.$g)(0, e.currency, { minimumFractionDigits: 0, maximumFractionDigits: 0 }),
               })
             : (0, f.$g)(e.amount, e.currency);
     },
-    O = (e, t) => {
+    O = (e) => (null != e && "object" == typeof e && "badge" === e.type ? e.text : null),
+    b = (e, t) => {
         let n,
             {
                 planId: r,
                 disabled: s,
                 userLocale: o,
                 discountOffer: l,
-                priceOptions: c,
-                shouldUseCalculatedDiscount: f,
-                isCurrentPlan: p,
-                isGift: m,
-                isEligibleForTrial: E,
-                isEligibleForBOGOPromotion: g,
-                showSecondarySubTexts: A,
-                isInPlanSelectStep: I,
+                isEligibleForDiscount: c,
+                discountAmountOff: E,
+                isMonthlyDiscountOffer: g,
+                priceOptions: A,
+                shouldUseCalculatedDiscount: I,
+                isCurrentPlan: T,
+                isGift: S,
+                isEligibleForTrial: y,
+                isEligibleForBOGOPromotion: v,
+                showPlanStatusSubText: N,
+                isInPlanSelectStep: C,
             } = t,
-            T = d.A.get(r);
-        i()(null != T, "Missing subscriptionPlan");
-        let S = (0, _.L_)({
+            b = d.A.get(r);
+        i()(null != b, "Missing subscriptionPlan");
+        let D = (0, _.L_)({
                 planId: r,
-                shouldUseCalculatedDiscount: f,
-                isGift: m,
-                priceOptions: c,
-                subscriptionPlan: T,
+                shouldUseCalculatedDiscount: I,
+                isGift: S,
+                priceOptions: A,
+                subscriptionPlan: b,
             }),
-            y = null != S,
-            v = (0, _.y8)(r, !1, m, c),
-            N = (0, a.Nc)({ subscriptionPlan: T, userLocale: o, discountOffer: l, yearlyPercentSavings: S }),
-            C = (0, u.gS)(e, T, {
+            L = null != D && null == l,
+            w = (0, _.y8)(r, !1, S, A),
+            M = (0, u.gS)(e, b, {
                 userLocale: o,
-                isEligibleForBOGOPromotion: g,
-                shouldShowDiscount: y,
-                isGift: m,
+                isEligibleForBOGOPromotion: v,
+                shouldShowSavingsPercent: L,
+                isGift: S,
                 planId: r,
-                savingsPercent: S,
-            });
-        A && (I && E ? (n = (0, u.O7)(T, v)) : p ? (n = h.intl.string(h.t.ymSxhy)) : "string" == typeof C && (n = C));
-        let O = N;
-        return (
-            null != C && "object" == typeof C && (O = C.text),
-            {
-                id: r,
-                planName: (0, a.YR)(T.interval, T.intervalCount, !0),
-                priceText: R(v, { isEligibleForTrial: E }),
-                secondarySubText: n,
-                promoText: O,
-                isDisabled: s,
-                savingsPercent: S,
+                savingsPercent: D,
+            }),
+            x = R(w, { isEligibleForTrial: y }),
+            P = x;
+        if (g && null != l && !y) {
+            if (b.interval === p.WT.YEAR) n = h.intl.format(m.default.ODKoJd, { percent: D ?? "" });
+            else if (b.interval === p.WT.MONTH) {
+                if (c && null != E) {
+                    let e = (0, f.$g)(w.amount - E, w.currency);
+                    P = h.intl.format(h.t.hXcaLT, { price: e });
+                }
+                n = h.intl.format(m.default.JsSin7, {
+                    priceRate: (0, f.CE)(x, b.interval, b.intervalCount),
+                    intervalCount: l.discount.user_usage_limit_interval_count,
+                });
             }
-        );
+        }
+        N && (C && y ? (n = (0, u.O7)(b, w)) : T ? (n = h.intl.string(h.t.ymSxhy)) : "string" == typeof M && (n = M));
+        let k = O(M),
+            U =
+                null != k
+                    ? k
+                    : (0, a.Nc)({
+                          subscriptionPlan: b,
+                          userLocale: o,
+                          discountOffer: l,
+                          yearlyPercentSavings: D,
+                          shouldHideYearlySavingsBadge: null != e || null != l,
+                      });
+        return {
+            id: r,
+            planName: (0, a.YR)(b.interval, b.intervalCount, !0),
+            priceText: P,
+            secondarySubText: n,
+            promoText: U,
+            isDisabled: s,
+            savingsPercent: D,
+        };
     };

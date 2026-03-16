@@ -4,7 +4,7 @@ var r = n(252424),
     i = n(927578),
     s = n(580630),
     a = n(788868),
-    o = n(523376),
+    o = n(756366),
     l = n(985018);
 function u(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -20,12 +20,18 @@ function u(e, t) {
     }
 }
 let c = (e) => {
-        let { subscriptionPlan: t, userLocale: n, discountOffer: i, yearlyPercentSavings: s } = e;
-        if (null != s && t.interval === a.WT.YEAR)
+        let {
+            subscriptionPlan: t,
+            userLocale: n,
+            discountOffer: i,
+            yearlyPercentSavings: s,
+            shouldHideYearlySavingsBadge: u,
+        } = e;
+        if (null != s && t.interval === a.WT.YEAR && !u)
             return l.intl.formatToPlainString(o.default.nsG1jw, { savingsText: (0, r.l9)(n, s / 100) });
-        let u = null != i ? i.discount.amount : null;
-        return null != i && i.discount.plan_ids.includes(t.id) && null != u
-            ? l.intl.formatToPlainString(o.default.MSB4E4, { amountOrPercentOffText: (0, r.l9)(n, parseInt(u) / 100) })
+        let c = null != i ? i.discount.amount : null;
+        return null != i && i.discount.plan_ids.includes(t.id) && null != c
+            ? l.intl.formatToPlainString(o.default.MSB4E4, { amountOrPercentOffText: (0, r.l9)(n, parseInt(c) / 100) })
             : null;
     },
     d = function (e) {
