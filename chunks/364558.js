@@ -1,29 +1,27 @@
-n.d(t, { u: () => g });
+n.d(t, { u: () => m });
 var i = n(627968),
     s = n(397927),
-    r = n(975807),
-    a = n(95035),
-    l = n(975571),
-    o = n(975662),
-    c = n(88001),
-    d = n(652215),
-    u = n(519412),
-    _ = n(985018),
-    m = n(817577);
-let A = () => {
-        (0, r.A)(l.A.getArticleURL(d.MVz.PREMIUM_GROUP_ABOUT));
+    l = n(975807),
+    r = n(95035),
+    a = n(975662),
+    o = n(88001),
+    d = n(519412),
+    c = n(985018),
+    u = n(817577);
+let _ = () => {
+        (0, l.A)(o.TE);
     },
-    g = () => ({
-        name: o.U.PREMIUM_GROUP,
-        title: _.intl.string(u.default.YkvksF),
-        subtitle: _.intl.formatToPlainString(u.default.JlyGQj, {
-            totalSeats: c.aw,
-            premiumGroupProductName: (0, c.DP)(),
+    m = () => ({
+        name: a.U.PREMIUM_GROUP,
+        title: c.intl.string(d.default.YkvksF),
+        subtitle: c.intl.formatToPlainString(d.default.JlyGQj, {
+            totalSeats: o.aw,
+            premiumGroupProductName: (0, o.DP)(),
         }),
-        description: (0, i.jsx)(a.A, { onClick: A, children: _.intl.string(u.default.yYyGJH) }),
-        descriptionCta: _.intl.string(_.t.jVcuVY),
-        pillText: _.intl.string(_.t.oW0eUd).toLocaleUpperCase(),
-        perkImage: m,
+        description: (0, i.jsx)(r.A, { onClick: _, children: c.intl.string(d.default.yYyGJH) }),
+        descriptionCta: c.intl.string(c.t.jVcuVY),
+        pillText: c.intl.string(c.t.oW0eUd).toLocaleUpperCase(),
+        perkImage: u,
         onCtaClick: () => {
             (0, s.mMO)(async () => {
                 let { default: e } = await n.e("69595").then(n.bind(n, 526710));

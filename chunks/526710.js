@@ -1,71 +1,55 @@
-e.d(i, { default: () => f });
+e.d(i, { default: () => g });
 var r = e(627968),
     a = e(158954),
     n = e(311907),
     l = e(192308),
-    o = e(975807),
-    s = e(166403),
-    u = e(975571),
-    d = e(783420),
-    c = e(938973),
+    s = e(975807),
+    o = e(166403),
+    u = e(783420),
+    d = e(938973),
+    c = e(516044),
     p = e(788868),
-    P = e(88001),
-    m = e(652215),
-    g = e(519412),
+    m = e(88001),
+    P = e(519412),
     b = e(985018),
-    T = e(438705);
-function M(t) {
-    return (0, r.jsx)(a.Modal, {
-        ...t,
-        size: "md",
-        title: b.intl.formatToPlainString(g.default.BcZLdW, { premiumGroupProductName: (0, P.DP)() }),
-        subtitle: b.intl.string(g.default.EjhBrs),
-        actions: [
-            {
-                text: b.intl.string(g.default["IO+nlU"]),
-                variant: "secondary",
-                onClick: () => {
-                    (0, o.A)(P.TE);
-                },
-            },
-        ],
-    });
-}
-let f = (t) => {
-    let { subscribeButtonProps: i } = (0, c.B)({
+    f = e(438705);
+let g = (t) => {
+    let { subscribeButtonProps: i } = (0, d.B)({
             subscriptionTier: p.pe.TIER_2,
             subscriptionPlanId: p.gD.PREMIUM_GROUP_MONTH,
         }),
-        { disabled: e, ...f } = i,
-        A = (0, n.bG)([s.A], () => s.A.getPremiumTypeSubscription()),
-        _ = A?.hasActiveTrial ?? !1,
-        h = e && !_;
-    return (0, r.jsx)(d.A, {
+        { disabled: e, ...g } = i,
+        T = (0, n.bG)([o.A], () => o.A.getPremiumTypeSubscription()),
+        h = T?.hasActiveTrial ?? !1,
+        k = e && !h;
+    return (0, r.jsx)(u.A, {
         subscriptionTier: p.pe.TIER_2,
         initialPlanId: p.gD.PREMIUM_GROUP_MONTH,
         children: (i) => {
             let { onClick: e } = i;
             return (0, r.jsx)(a.ExpressiveModal, {
                 ...t,
-                graphic: { src: T, type: "image" },
+                graphic: { src: f, type: "image" },
                 gradientColor: "nitro-pink",
-                title: b.intl.formatToPlainString(g.default.tJbHtN, { premiumGroupProductName: (0, P.DP)() }),
+                title: b.intl.formatToPlainString(P.default.tJbHtN, { premiumGroupProductName: (0, m.DP)() }),
                 badge: { type: "beta", variant: "expressive" },
-                subtitle: b.intl.formatToPlainString(g.default.csDq8A, {
-                    premiumGroupProductName: (0, P.DP)(),
-                    totalSeats: P.aw,
+                subtitle: b.intl.formatToPlainString(P.default.csDq8A, {
+                    premiumGroupProductName: (0, m.DP)(),
+                    totalSeats: m.aw,
                 }),
                 actions: [
                     {
-                        text: b.intl.string(g.default.z8re5H),
+                        text: b.intl.string(P.default.z8re5H),
                         variant: "secondary",
-                        onClick: () => void (0, o.A)(u.A.getArticleURL(m.MVz.PREMIUM_GROUP_ABOUT)),
+                        onClick: () => {
+                            (0, s.A)(m.TE);
+                        },
                     },
                     {
-                        ...f,
-                        disabled: h,
+                        ...g,
+                        disabled: k,
                         onClick: (i) => {
-                            _ ? (0, l.openModalLazy)(() => Promise.resolve(M)) : (e?.(i), t.onClose?.());
+                            h ? (0, l.openModalLazy)(() => Promise.resolve(c.default)) : (e?.(i), t.onClose?.());
                         },
                     },
                 ],
