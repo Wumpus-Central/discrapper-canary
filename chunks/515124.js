@@ -1,33 +1,54 @@
-n.d(t, { h: () => m });
+n.d(t, { h: () => x });
 var a = n(627968);
 n(64700);
-var i = n(397927),
-    s = n(296555),
-    l = n(83104),
-    r = n(904080),
-    o = n(244881),
-    d = n(501068),
-    c = n(922529),
-    u = n(300902);
-let m = () =>
-    (0, a.jsx)(s.B, {
+var i = n(311907),
+    s = n(397927),
+    l = n(296555),
+    r = n(83104),
+    o = n(904080),
+    d = n(244881),
+    c = n(501068),
+    u = n(922529),
+    m = n(53705),
+    h = n(154323),
+    p = n(300902);
+let x = () => {
+    let e = (0, i.bG)([h.A], () => h.A.get("shop_disable_cache")),
+        t = (0, i.bG)([h.A], () => h.A.get("shop_include_unpublished"));
+    return (0, a.jsx)(l.B, {
         children: (0, a.jsxs)("div", {
-            className: u.Lm,
+            className: p.Lm,
             children: [
-                (0, a.jsx)(d.p, { className: u._l }),
                 (0, a.jsxs)("div", {
-                    className: u._l,
+                    className: p.gf,
                     children: [
-                        (0, a.jsx)(i.Heading, { variant: "heading-md/semibold", children: "Shop Overrides" }),
-                        (0, a.jsx)(r.R, {}),
-                        (0, a.jsx)(c.A, { className: u.yF }),
-                        (0, a.jsx)(o.e, {}),
-                        (0, a.jsx)(c.A, { className: u.yF }),
-                        (0, a.jsx)(l.N, {}),
-                        (0, a.jsx)(c.A, { className: u.yF }),
-                        (0, a.jsx)(s.G, {}),
+                        (0, a.jsx)(s.dOG, {
+                            label: "Disable collectibles cache",
+                            checked: e,
+                            onChange: (e) => (0, m.L)("shop_disable_cache", e),
+                        }),
+                        (0, a.jsx)(s.dOG, {
+                            label: "Show unpublished collectibles",
+                            checked: t,
+                            onChange: (e) => (0, m.L)("shop_include_unpublished", e),
+                        }),
+                    ],
+                }),
+                (0, a.jsx)(c.p, { className: p._l }),
+                (0, a.jsxs)("div", {
+                    className: p._l,
+                    children: [
+                        (0, a.jsx)(s.Heading, { variant: "heading-md/semibold", children: "Shop Overrides" }),
+                        (0, a.jsx)(o.R, {}),
+                        (0, a.jsx)(u.A, { className: p.yF }),
+                        (0, a.jsx)(d.e, {}),
+                        (0, a.jsx)(u.A, { className: p.yF }),
+                        (0, a.jsx)(r.N, {}),
+                        (0, a.jsx)(u.A, { className: p.yF }),
+                        (0, a.jsx)(l.G, {}),
                     ],
                 }),
             ],
         }),
     });
+};
