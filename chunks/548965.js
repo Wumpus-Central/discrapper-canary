@@ -133,7 +133,8 @@ class g extends d {
 }
 new g("2026-01-android-rmle", "Android Pull Mode Rendering", 4),
     new g("2026-02-android-fresco-cache", "Android Fresco Cache", 3),
-    new _("2026-02-android-chat-mosaic-shared-pool", "Android Chat Mosaic Shared Pool");
+    new _("2026-02-android-chat-mosaic-shared-pool", "Android Chat Mosaic Shared Pool"),
+    new _("2026-03_mobile-hermes-occupancy-target", "Android Hermes Occupancy Target");
 let A = !1;
 function I() {
     return A;
