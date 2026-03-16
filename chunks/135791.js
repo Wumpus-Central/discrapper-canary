@@ -46,6 +46,5 @@ let n = {
             controls: {},
         },
         { name: "File Upload Upsell", component: a.mi, id: "file-upload-upsell", controls: {} },
-        { name: "Reverse Trial Upsell", component: a.n2, id: "reverse-trial-upsell", controls: {} },
     ],
 };

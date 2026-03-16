@@ -1,14 +1,13 @@
 l.d(t, {
     D5: () => f,
     Ec: () => b,
-    KF: () => A,
+    KF: () => P,
     LF: () => m,
     NA: () => x,
     Z1: () => h,
     lz: () => T,
     mi: () => R,
-    n2: () => k,
-    s2: () => P,
+    s2: () => A,
     t$: () => p,
     yJ: () => j,
     yi: () => C,
@@ -18,8 +17,8 @@ var a = l(627968),
     n = l(64700),
     r = l(311907),
     i = l(397927),
-    s = l(252561),
-    o = l(287809),
+    o = l(252561),
+    s = l(287809),
     u = l(652215),
     c = l(339984),
     d = l(788868);
@@ -30,7 +29,7 @@ function p() {
             return (t) => (0, a.jsx)(e, { analyticsSource: {}, ...t });
         });
     }, []);
-    return (0, a.jsx)(s.LB, {
+    return (0, a.jsx)(o.LB, {
         children: (0, a.jsx)(i.Button, {
             onClick: e,
             variant: "primary",
@@ -46,7 +45,7 @@ function m() {
             return (t) => (0, a.jsx)(e, { source: {}, ...t });
         });
     }, []);
-    return (0, a.jsx)(s.LB, {
+    return (0, a.jsx)(o.LB, {
         children: (0, a.jsx)(i.Button, {
             onClick: e,
             variant: "primary",
@@ -62,7 +61,7 @@ function h() {
             return (t) => (0, a.jsx)(e, { source: {}, ...t });
         });
     }, []);
-    return (0, a.jsx)(s.LB, {
+    return (0, a.jsx)(o.LB, {
         children: (0, a.jsx)(i.Button, {
             onClick: e,
             variant: "primary",
@@ -78,7 +77,7 @@ function x() {
             return (t) => (0, a.jsx)(e, { channel: null, ...t });
         });
     }, []);
-    return (0, a.jsx)(s.LB, {
+    return (0, a.jsx)(o.LB, {
         children: (0, a.jsx)(i.Button, {
             onClick: e,
             variant: "primary",
@@ -95,7 +94,7 @@ function b() {
                 return (l) => (0, a.jsx)(t, { channel: null, content: e, ...l });
             });
         }, [e]);
-    return (0, a.jsx)(s.LB, {
+    return (0, a.jsx)(o.LB, {
         children: (0, a.jsx)(i.Button, {
             onClick: t,
             variant: "primary",
@@ -104,12 +103,12 @@ function b() {
         }),
     });
 }
-let g = [
+let y = [
         { id: "avatar_decoration", label: "Avatar Decoration", value: d.e.AVATAR_DECORATION_MODAL_UPSELL },
         { id: "profile_effect", label: "Profile Effect", value: d.e.PROFILE_EFFECT_MODAL_UPSELL },
         { id: "nameplate", label: "Nameplate", value: d.e.NAMEPLATE_MODAL_UPSELL },
     ],
-    y = {
+    g = {
         [d.e.AVATAR_DECORATION_MODAL_UPSELL]: {
             title: "Express Yourself with Avatar Decorations",
             body: "Stand out with unique avatar decorations exclusive to Nitro subscribers.",
@@ -129,7 +128,7 @@ let g = [
 function f() {
     let [e, t] = n.useState(d.e.AVATAR_DECORATION_MODAL_UPSELL),
         r = n.useCallback(() => {
-            let { title: t, body: n, glowUp: r } = y[e];
+            let { title: t, body: n, glowUp: r } = g[e];
             (0, i.mMO)(async () => {
                 let { default: i } = await Promise.all([l.e("59701"), l.e("64864")]).then(l.bind(l, 948265));
                 return (l) =>
@@ -144,15 +143,15 @@ function f() {
                     });
             });
         }, [e]);
-    return (0, a.jsxs)(s.LB, {
+    return (0, a.jsxs)(o.LB, {
         children: [
-            (0, a.jsx)(s.MG, {
+            (0, a.jsx)(o.MG, {
                 children: (0, a.jsx)(i.l6P, {
                     label: "Upsell Type",
                     placeholder: "Select type",
                     onSelectionChange: (e) => t(e),
                     value: e,
-                    options: g,
+                    options: y,
                     selectionMode: "single",
                     fullWidth: !0,
                 }),
@@ -185,9 +184,9 @@ function E() {
                     });
             });
         }, [e]);
-    return (0, a.jsxs)(s.LB, {
+    return (0, a.jsxs)(o.LB, {
         children: [
-            (0, a.jsx)(s.MG, {
+            (0, a.jsx)(o.MG, {
                 children: (0, a.jsx)(i.l6P, {
                     label: "Guild Count State",
                     placeholder: "Select state",
@@ -208,7 +207,7 @@ let S = [
 ];
 function j() {
     let [e, t] = n.useState(c.HL.AVATAR),
-        u = (0, r.bG)([o.default], () => o.default.getCurrentUser()),
+        u = (0, r.bG)([s.default], () => s.default.getCurrentUser()),
         d = n.useCallback(() => {
             null != u &&
                 (0, i.mMO)(async () => {
@@ -217,9 +216,9 @@ function j() {
                         (0, a.jsx)(t, { user: u, uploadType: e, analyticsSource: {}, analyticsLocation: {}, ...l });
                 });
         }, [u, e]);
-    return (0, a.jsxs)(s.LB, {
+    return (0, a.jsxs)(o.LB, {
         children: [
-            (0, a.jsx)(s.MG, {
+            (0, a.jsx)(o.MG, {
                 children: (0, a.jsx)(i.l6P, {
                     label: "Upload Type",
                     placeholder: "Select type",
@@ -235,7 +234,7 @@ function j() {
     });
 }
 function T() {
-    let e = (0, r.bG)([o.default], () => o.default.getCurrentUser()),
+    let e = (0, r.bG)([s.default], () => s.default.getCurrentUser()),
         t = n.useCallback(() => {
             null != e &&
                 (0, i.mMO)(async () => {
@@ -243,7 +242,7 @@ function T() {
                     return (l) => (0, a.jsx)(t, { user: e, analyticsSource: {}, analyticsLocation: {}, ...l });
                 });
         }, [e]);
-    return (0, a.jsx)(s.LB, {
+    return (0, a.jsx)(o.LB, {
         children: (0, a.jsx)(i.Button, {
             onClick: t,
             variant: "primary",
@@ -259,7 +258,7 @@ function C() {
             return (t) => (0, a.jsx)(e, { analyticsSource: {}, ...t });
         });
     }, []);
-    return (0, a.jsx)(s.LB, {
+    return (0, a.jsx)(o.LB, {
         children: (0, a.jsx)(i.Button, {
             onClick: e,
             variant: "primary",
@@ -268,14 +267,14 @@ function C() {
         }),
     });
 }
-function P() {
+function A() {
     let e = n.useCallback(() => {
         (0, i.mMO)(async () => {
             let { default: e } = await l.e("90617").then(l.bind(l, 663072));
             return (t) => (0, a.jsx)(e, { analyticsSource: {}, analyticsLocation: {}, ...t });
         });
     }, []);
-    return (0, a.jsx)(s.LB, {
+    return (0, a.jsx)(o.LB, {
         children: (0, a.jsx)(i.Button, {
             onClick: e,
             variant: "primary",
@@ -284,14 +283,14 @@ function P() {
         }),
     });
 }
-function A() {
+function P() {
     let e = n.useCallback(() => {
         (0, i.mMO)(async () => {
             let { default: e } = await l.e("65281").then(l.bind(l, 547352));
             return (t) => (0, a.jsx)(e, { source: {}, ...t });
         });
     }, []);
-    return (0, a.jsx)(s.LB, {
+    return (0, a.jsx)(o.LB, {
         children: (0, a.jsx)(i.Button, {
             onClick: e,
             variant: "primary",
@@ -307,36 +306,7 @@ function R() {
             return (t) => (0, a.jsx)(e, { handleLearnMore: t.onClose, ...t });
         });
     }, []);
-    return (0, a.jsx)(s.LB, {
+    return (0, a.jsx)(o.LB, {
         children: (0, a.jsx)(i.Button, { onClick: e, variant: "primary", size: "md", text: "Open File Upload Upsell" }),
-    });
-}
-let _ = [
-    { id: "ended", label: "Reverse Trial Ended", value: d.e.REVERSE_TRIAL_ENDED_UPSELL },
-    { id: "followup", label: "Reverse Trial Followup", value: d.e.REVERSE_TRIAL_FOLLOWUP_UPSELL },
-];
-function k() {
-    let [e, t] = n.useState(d.e.REVERSE_TRIAL_ENDED_UPSELL),
-        r = n.useCallback(() => {
-            (0, i.mMO)(async () => {
-                let { default: t } = await l.e("78723").then(l.bind(l, 199630));
-                return (l) => (0, a.jsx)(t, { upsellType: e, ...l });
-            });
-        }, [e]);
-    return (0, a.jsxs)(s.LB, {
-        children: [
-            (0, a.jsx)(s.MG, {
-                children: (0, a.jsx)(i.l6P, {
-                    label: "Upsell Type",
-                    placeholder: "Select type",
-                    onSelectionChange: (e) => t(e),
-                    value: e,
-                    options: _,
-                    selectionMode: "single",
-                    fullWidth: !0,
-                }),
-            }),
-            (0, a.jsx)(i.Button, { onClick: r, variant: "primary", size: "md", text: "Open Reverse Trial Upsell" }),
-        ],
     });
 }
