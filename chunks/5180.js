@@ -1,11 +1,13 @@
-"use strict";
-n.d(t, { Y: () => r });
+n.d(t, { IF: () => d, YC: () => a });
 var i = n(349828),
-    s = n(652215),
+    r = n(652215),
     l = n(985018);
-function r(e) {
+function a(e) {
     if (null != e) {
         var t;
-        return (t = e.id) === i.Vc || t === s.YYv ? l.intl.string(l.t.wMWyci) : e.name;
+        return (t = e.id) === i.Vc || t === r.YYv ? l.intl.string(l.t.wMWyci) : e.name;
     }
+}
+function d(e, t) {
+    return !e.isThread() || t;
 }

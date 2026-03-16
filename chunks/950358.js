@@ -115,7 +115,7 @@ let N = s.memo(function () {
                                           n.e("21420"),
                                           n.e("57287"),
                                           n.e("40394"),
-                                          n.e("2422"),
+                                          n.e("69701"),
                                       ]).then(n.bind(n, 698193));
                                       return (n) => (0, i.jsx)(e, { ...n, channel: t, guild: l });
                                   })
@@ -124,7 +124,7 @@ let N = s.memo(function () {
                                           n.e("97262"),
                                           n.e("21420"),
                                           n.e("57287"),
-                                          n.e("17091"),
+                                          n.e("34180"),
                                       ]).then(n.bind(n, 370372));
                                       return (n) => (0, i.jsx)(e, { ...n, channel: t, guild: l });
                                   });

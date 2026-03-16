@@ -1,7 +1,7 @@
 n.d(t, { A: () => e_ }), n(321073);
 var i = n(627968),
     r = n(64700),
-    l = n(490249),
+    l = n(497766),
     a = n(942381),
     s = n(311907),
     o = n(554146),
@@ -60,7 +60,7 @@ var i = n(627968),
     es = n(49999),
     eo = n(349828),
     ed = n(985018),
-    ec = n(175739);
+    ec = n(484241);
 let eu = "server-settings",
     eA = { origin: { x: -8, y: -48 }, targetWidth: 40, targetHeight: 40, offset: { x: 0, y: 0 } };
 class eh extends r.PureComponent {
@@ -130,12 +130,12 @@ class eh extends r.PureComponent {
                     n.e("16301"),
                     n.e("22191"),
                     n.e("25961"),
-                    n.e("96760"),
+                    n.e("21968"),
                     n.e("35894"),
                     n.e("50796"),
                     n.e("8458"),
                     n.e("11810"),
-                    n.e("52848"),
+                    n.e("39048"),
                     n.e("54469"),
                     n.e("52191"),
                 ]).then(n.bind(n, 544676));
@@ -342,7 +342,7 @@ class eh extends r.PureComponent {
     }
     render() {
         let { guild: e } = this.props,
-            t = (0, C.Y)(e);
+            t = (0, C.YC)(e);
         return (0, i.jsxs)("nav", {
             className: ec.kL,
             onContextMenu: this.handleContextMenu,

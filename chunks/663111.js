@@ -18,8 +18,8 @@ var r = n(873263),
     E = n(652215),
     I = n(165610),
     f = n(985018),
-    C = n(870236),
-    T = n(963369);
+    C = n(842130),
+    T = n(878251);
 function N() {
     let e,
         t = (0, r.zy)(),
@@ -51,7 +51,7 @@ function N() {
         : b
           ? ((e = f.intl.string(f.t.HcoRu0)), (P = (0, i.jsx)(a.XFE, { size: "sm" })))
           : null != v
-            ? ((e = (0, o.Y)(v)),
+            ? ((e = (0, o.YC)(v)),
               (P = y
                   ? (0, i.jsx)(a.Gg5, { size: "sm" })
                   : (0, i.jsx)(u.Ay, { guild: v, size: u.Ay.Sizes.SMOL, active: !0, className: T.$f })))
