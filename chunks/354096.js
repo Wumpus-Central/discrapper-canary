@@ -5,12 +5,12 @@ var a = n(627968),
     s = n(631670),
     l = n(287809),
     o = n(954571),
-    c = n(29711),
-    E = n(755447),
-    u = n(972201),
-    A = n(405015),
-    _ = n(334622),
-    C = n(599436),
+    c = n(660307),
+    E = n(179659),
+    u = n(703117),
+    A = n(677768),
+    _ = n(606917),
+    C = n(330248),
     g = n(355097),
     N = n(652215),
     S = n(87404);
@@ -22,8 +22,8 @@ function d(t) {
         m = k ? g.ko.CONFIRM_START : g.ko.EMAIL_AND_PASSWORD,
         [h, x] = r.useState(m),
         [p, T] = r.useState(null),
-        [f, y] = r.useState(null),
-        [R, v] = r.useState(""),
+        [f, R] = r.useState(null),
+        [y, v] = r.useState(""),
         [M, O] = r.useState();
     switch (h) {
         case g.ko.CONFIRM_START:
@@ -31,7 +31,7 @@ function d(t) {
         case g.ko.CONFIRM_CODE:
             return (0, a.jsx)(u.A, {
                 error: f,
-                setError: y,
+                setError: R,
                 setEmailToken: T,
                 onNext: () => x(g.ko.CHANGE_EMAIL_REASONS),
                 transitionState: e,
@@ -72,7 +72,7 @@ function d(t) {
                 transitionState: e,
             });
         case g.ko.COMPLETE:
-            return (0, a.jsx)(E.A, { email: R, onClose: n, transitionState: e });
+            return (0, a.jsx)(E.A, { email: y, onClose: n, transitionState: e });
         default:
             return null;
     }

@@ -5,7 +5,7 @@ var a = n(627968),
     s = n(397927),
     l = n(631670),
     o = n(836602),
-    c = n(592074),
+    c = n(828578),
     E = n(985018),
     u = n(222872);
 function A(t) {
@@ -17,7 +17,7 @@ function A(t) {
         x = r.useRef(null);
     async function p(t) {
         t.preventDefault(), m(!0);
-        let n = await (0, l.yu)({ email: g, emailToken: e, password: S });
+        let n = await (0, l._L)({ email: g, emailToken: e, password: S });
         m(!1), n?.ok ? _(g) : n?.body?.username != null ? (0, c.E)() : n?.body?.email_token != null && A?.();
     }
     return (

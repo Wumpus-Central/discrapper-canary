@@ -1,43 +1,37 @@
-E.d(A, { default: () => a });
-var e = E(627968);
-E(64700);
-var I = E(397927),
-    T = E(780964),
-    C = E(840065),
-    t = E(393033),
-    S = E(257110),
-    i = E(706069),
-    n = E(652215),
-    N = E(531525),
-    R = E(265626);
-let a = (_) => {
-    let { transitionState: A, onClose: E, classificationId: a, source: l } = _,
-        O = (0, S.A)(),
-        s = (0, t.W$)(),
-        o = () => {
-            E(),
-                s ||
-                    (0, C.openUserSettings)(T.X.ACCOUNT_PANEL, {
-                        section: n.nc_.ACCOUNT,
-                        subsection: N.H.PRIVACY_AND_SAFETY_STANDING,
-                    });
+i.d(t, { default: () => h });
+var n = i(627968);
+i(64700);
+var a = i(397927),
+    l = i(780964),
+    s = i(840065),
+    o = i(393033),
+    r = i(257110),
+    d = i(706069),
+    c = i(652215),
+    m = i(524988);
+let h = (e) => {
+    let { transitionState: t, onClose: i, classificationId: h, source: u } = e,
+        p = (0, r.A)(),
+        A = (0, o.W$)(),
+        _ = () => {
+            i(), A || (0, s.openUserSettings)(l.X.ACCOUNT_STANDING_CATEGORY, { section: c.nc_.ACCOUNT });
         };
-    return (0, e.jsxs)(I.EOs, {
-        className: R.CR,
-        transitionState: A,
+    return (0, n.jsxs)(a.EOs, {
+        className: m.CR,
+        transitionState: t,
         parentComponent: "ClassificationDetailModal",
         "data-migration-pending": !0,
         children: [
-            (0, e.jsx)("div", {
-                className: R.Hc,
-                children: (0, e.jsx)(I.s_y, { "data-migration-pending": !0, className: R.g8, onClick: E }),
+            (0, n.jsx)("div", {
+                className: m.Hc,
+                children: (0, n.jsx)(a.s_y, { "data-migration-pending": !0, className: m.g8, onClick: i }),
             }),
-            (0, e.jsx)(I.$mQ, {
+            (0, n.jsx)(a.$mQ, {
                 "data-migration-pending": !0,
-                className: R.jE,
-                children: O
-                    ? (0, e.jsx)(I.y$y, {})
-                    : (0, e.jsx)(i.A, { classificationId: a, source: l, onError: o, onClose: o }),
+                className: m.jE,
+                children: p
+                    ? (0, n.jsx)(a.y$y, {})
+                    : (0, n.jsx)(d.A, { classificationId: h, source: u, onError: _, onClose: _ }),
             }),
         ],
     });

@@ -3,7 +3,7 @@ var a = n(627968);
 n(64700);
 var r = n(397927),
     i = n(985018),
-    s = n(297002),
+    s = n(30206),
     l = n(222872);
 function o(t) {
     let { email: e, onClose: n, transitionState: o } = t;

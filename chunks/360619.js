@@ -1,75 +1,66 @@
-n.d(t, { AC: () => b, NI: () => I, PH: () => N }), n(321073);
+n.d(t, { AC: () => C, NI: () => f, PH: () => S }), n(321073);
 var i = n(64700),
     s = n(311907);
 n(361739);
-var l = n(406360),
-    r = n(86379),
+var l = n(86379),
     a = n(643015),
-    o = n(945276),
-    d = n(35587),
-    c = n(677402),
-    u = n(207560),
-    _ = n(818143),
-    m = n(639555),
-    g = n(617641),
-    A = n(961350);
+    r = n(945276),
+    o = n(35587),
+    d = n(677402),
+    c = n(818143),
+    u = n(639555),
+    _ = n(617641);
 n(540999);
-var h = n(189081),
-    x = n(994500),
-    p = n(628965),
-    T = n(253932),
-    E = n(368631),
-    C = n(682262),
-    S = n(987281);
+var m = n(189081),
+    g = n(994500),
+    A = n(628965),
+    h = n(253932),
+    x = n(368631),
+    p = n(682262),
+    T = n(987281);
 n(531525);
-var f = n(654487);
-function N() {
-    let e = (0, d.IO)().length,
-        t = (0, s.bG)([p.A], () => p.A.getSearchParams()),
-        n = (0, C.b_)(),
-        S = (0, g.Lc)({ location: "settings" }),
-        N = (0, m.Rv)({ location: "settings" }),
-        b = (0, r.H)(),
-        I = (0, c.H)({ location: f.rE.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
-        v = (0, s.bG)([h.A], () => h.A.hasLibraryApplication()),
-        j = (0, s.bG)([A.default], () => A.default.hasTOTPEnabled()),
-        O = T.Q_.useSetting(),
-        y = (0, a.A)(),
-        R = (0, o.A)() ?? !0,
-        P = (0, _.G)()?.length > 0,
-        { hasBlockedUsers: D, hasIgnoredUsers: L } = (0, s.cf)([x.A], () => ({
-            hasBlockedUsers: x.A.getBlockedIDs().length > 0,
-            hasIgnoredUsers: x.A.getIgnoredIDs().length > 0,
-        })),
-        M = (0, u.fk)(),
-        G = (0, l.i)("useGenerateUserSettingsSections");
+var E = n(654487);
+function S() {
+    let e = (0, o.IO)().length,
+        t = (0, s.bG)([A.A], () => A.A.getSearchParams()),
+        n = (0, p.b_)(),
+        T = (0, _.Lc)({ location: "settings" }),
+        S = (0, u.Rv)({ location: "settings" }),
+        C = (0, l.H)(),
+        f = (0, d.H)({ location: E.rE.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
+        b = (0, s.bG)([m.A], () => m.A.hasLibraryApplication()),
+        N = h.Q_.useSetting(),
+        I = (0, a.A)(),
+        v = (0, r.A)() ?? !0,
+        j = (0, c.G)()?.length > 0,
+        { hasBlockedUsers: y, hasIgnoredUsers: R } = (0, s.cf)([g.A], () => ({
+            hasBlockedUsers: g.A.getBlockedIDs().length > 0,
+            hasIgnoredUsers: g.A.getIgnoredIDs().length > 0,
+        }));
     return i.useMemo(
         () =>
-            (0, E.zj)({
+            (0, x.zj)({
                 unseenGiftCount: e,
                 searchParams: t,
                 isOverlaySupported: n,
-                isInappropriateConversationWarningEnabled: S,
-                isInapproprateConversationsDefaultOn: N,
-                paymentsBlocked: b,
-                isEligibleForQuests: I,
-                isStricterMessageRequestsEnabled: y,
-                hasLibraryApplication: v,
-                hasTOTPEnabled: j,
-                developerMode: O,
-                isAdultUser: R,
-                hasSecureFramesVerifiedUserIds: P,
-                hasIgnoredUsers: L,
-                hasBlockedUsers: D,
-                hasAgeGatedFeature: M,
-                isHDRAccessibilitySettingExperimentEnabled: G,
+                isInappropriateConversationWarningEnabled: T,
+                isInapproprateConversationsDefaultOn: S,
+                paymentsBlocked: C,
+                isEligibleForQuests: f,
+                isStricterMessageRequestsEnabled: I,
+                hasLibraryApplication: b,
+                developerMode: N,
+                isAdultUser: v,
+                hasSecureFramesVerifiedUserIds: j,
+                hasIgnoredUsers: R,
+                hasBlockedUsers: y,
             }),
-        [O, D, L, v, P, j, t, R, I, N, S, n, y, b, e, M, G],
+        [N, y, R, b, j, t, v, f, S, T, n, I, C, e],
     );
 }
-function b(e) {
-    let t = S.a.useField("searchResults"),
-        n = N(),
+function C(e) {
+    let t = T.a.useField("searchResults"),
+        n = S(),
         i = n[e],
         s = Object.fromEntries(
             Object.entries(n).filter((e) => {
@@ -88,16 +79,16 @@ function b(e) {
                     return [t, n];
                 }),
         ),
-        r = new Set(),
-        a = (e) => {
+        a = new Set(),
+        r = (e) => {
             let t = s[e];
             if (null == t) return;
-            r.add(e);
+            a.add(e);
             let n = t.parent;
-            null != n && a(n);
+            null != n && r(n);
         },
         o = (e) => {
-            for (let t of (r.add(e),
+            for (let t of (a.add(e),
             Object.entries(l)
                 .filter((t) => {
                     let [n, i] = t;
@@ -110,16 +101,16 @@ function b(e) {
                 o(t);
         };
     for (let e of t.filter((e) => e in s))
-        if (!r.has(e)) {
+        if (!a.has(e)) {
             if (null != s[e].element && null == s[e].parent) {
-                r.clear();
+                a.clear();
                 break;
             }
-            Object.values(l).includes(e) && o(e), a(e);
+            Object.values(l).includes(e) && o(e), r(e);
         }
-    return r;
+    return a;
 }
-function I(e) {
+function f(e) {
     return Array.from(
         new Map(
             Object.entries(e).filter((e) => {

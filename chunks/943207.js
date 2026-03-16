@@ -1,12 +1,12 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => g });
 var i = n(627968),
     s = n(64700),
-    r = n(397927),
+    l = n(397927),
     a = n(98207),
-    l = n(235986),
+    r = n(235986),
     o = n(670492),
-    c = n(957565),
-    d = n(985018),
+    d = n(957565),
+    c = n(985018),
     u = n(139674),
     _ = n(473169);
 function m(e) {
@@ -14,48 +14,48 @@ function m(e) {
             code: { code: t, consumed: n },
         } = e,
         a = `${t.substr(0, 4)}-${t.substr(4)}`,
-        l = s.useRef(null),
+        r = s.useRef(null),
         o = s.useCallback(
             (e) => {
                 "c" === e.key &&
                     e.metaKey &&
-                    c.p5 &&
-                    (e.preventDefault(), e.stopPropagation(), (0, c.C)(a), l?.current?.focus());
+                    d.p5 &&
+                    (e.preventDefault(), e.stopPropagation(), (0, d.C)(a), r?.current?.focus());
             },
             [a],
         );
     return (0, i.jsx)("li", {
         className: _.SX,
-        children: (0, i.jsxs)(r.DUT, {
-            innerRef: l,
+        children: (0, i.jsxs)(l.DUT, {
+            innerRef: r,
             className: u.Uc,
             onKeyDown: o,
-            children: [(0, i.jsx)(r.P7L, { checked: n }), (0, i.jsx)("span", { className: u.aY, children: a })],
+            children: [(0, i.jsx)(l.P7L, { checked: n }), (0, i.jsx)("span", { className: u.aY, children: a })],
         }),
     });
 }
-function A(e) {
+function g(e) {
     let { backupCodes: t } = e,
         n = s.useCallback((e) => e.map((e) => (0, i.jsx)(m, { code: e }, e.code)), []),
-        c = s.useCallback(async () => {
+        d = s.useCallback(async () => {
             let e = o.A.getVerificationKey();
             await a.A.confirmViewBackupCodes(e, !0);
         }, []);
-    return (0, i.jsxs)(r.D0$, {
-        label: d.intl.string(d.t.GfqHPn),
-        description: d.intl.format(d.t.OhmvYt, {}),
+    return (0, i.jsxs)(l.D0$, {
+        label: c.intl.string(c.t.GfqHPn),
+        description: c.intl.format(c.t.OhmvYt, {}),
         children: [
-            (0, i.jsxs)(l.A, {
+            (0, i.jsxs)(r.A, {
                 children: [
-                    (0, i.jsx)(l.A.Child, {
+                    (0, i.jsx)(r.A.Child, {
                         children: (0, i.jsx)("ul", { className: u.Pm, children: n(t.slice(0, t.length / 2)) }),
                     }),
-                    (0, i.jsx)(l.A.Child, {
+                    (0, i.jsx)(r.A.Child, {
                         children: (0, i.jsx)("ul", { className: u.Pm, children: n(t.slice(t.length / 2)) }),
                     }),
                 ],
             }),
-            (0, i.jsx)(r.QWc, { textVariant: "text-sm/medium", onClick: c, text: d.intl.string(d.t.RIThUu) }),
+            (0, i.jsx)(l.QWc, { textVariant: "text-sm/medium", onClick: d, text: c.intl.string(c.t.RIThUu) }),
         ],
     });
 }
