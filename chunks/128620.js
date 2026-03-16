@@ -140,6 +140,7 @@ let U = (e) => {
         children: (0, n.jsxs)(R.A, {
             cardType: c.sl2.CUSTOM,
             cardClassName: P.Nr,
+            glowing: !0,
             ...M,
             children: [
                 (0, n.jsx)(p.A, { className: P.Ki, src: y.A }),

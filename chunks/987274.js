@@ -4,12 +4,12 @@ l(64700);
 var n = l(397927),
     r = l(706276),
     i = l(808411),
-    s = l(919470),
-    o = l(624716),
+    o = l(919470),
+    s = l(624716),
     u = l(872725),
     c = l(985018);
 let d = { name: "Expressive Progress", component: i.A, id: "expressive-progress", controls: {} },
-    p = { name: "Tab Tooltip", component: o.A, id: "tab-tooltip", controls: {} },
+    p = { name: "Tab Tooltip", component: s.A, id: "tab-tooltip", controls: {} },
     m = {
         title: "Nitro Components",
         stories: [
@@ -27,6 +27,7 @@ let d = { name: "Expressive Progress", component: i.A, id: "expressive-progress"
                                 blurAmount: e.blurAmount,
                                 hueRotate: e.hueRotate,
                                 cardType: n.sl2.PRIMARY,
+                                glowing: !0,
                                 children: (0, a.jsxs)("div", {
                                     style: { padding: 16, display: "flex", flexDirection: "column", gap: 8 },
                                     children: [
@@ -108,7 +109,7 @@ let d = { name: "Expressive Progress", component: i.A, id: "expressive-progress"
             d,
             {
                 name: "Premium Tooltip",
-                component: s.A,
+                component: o.A,
                 id: "premium-tooltip",
                 controls: {
                     title: { label: "Title", type: "text", defaultValue: c.intl.string(c.t.lG6a5x).toUpperCase() },
