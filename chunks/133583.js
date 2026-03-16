@@ -169,63 +169,55 @@ function F(e) {
                     productLines: a?.getProductLines(),
                 });
         }, [x, _, p, a]);
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, i.jsxs)("div", {
+        ref: v,
+        className: D.U1,
         children: [
-            !_ &&
-                (0, i.jsxs)("div", {
-                    className: D.Q9,
-                    children: [
-                        (0, i.jsx)(u.G3N, { size: "custom", width: 16, height: 16 }),
-                        (0, i.jsx)(u.Text, {
-                            variant: "text-xs/normal",
-                            color: "text-subtle",
-                            children: P.intl.string(P.t.RX7D9h),
-                        }),
-                    ],
-                }),
             (0, i.jsxs)("div", {
-                ref: v,
-                className: D.U1,
+                className: D.Us,
                 children: [
-                    (0, i.jsxs)("div", {
-                        className: D.Us,
-                        children: [
-                            (0, i.jsx)(u.Text, {
-                                variant: "text-xs/semibold",
-                                color: "text-subtle",
-                                children: P.intl.format(P.t.r6Y1Lg, { count: a.items.length }),
-                            }),
-                            _ &&
-                                h &&
-                                (0, i.jsx)(d.m, {
-                                    text: P.intl.string(P.t.d78ChW),
-                                    asContainer: !0,
-                                    children: (0, i.jsx)(u.vN3, {
-                                        children: (0, i.jsx)("div", {
-                                            role: "tooltip",
-                                            tabIndex: 0,
-                                            children: (0, i.jsx)(u.mir, { size: "custom", width: 16, height: 16 }),
-                                        }),
-                                    }),
-                                }),
-                        ],
+                    (0, i.jsx)(u.Text, {
+                        variant: "text-xs/semibold",
+                        color: "text-subtle",
+                        children: P.intl.format(P.t.r6Y1Lg, { count: a.items.length }),
                     }),
-                    t
-                        ? (0, i.jsx)(M, {
-                              isSocialLayerStorefrontEnabled: c,
-                              isWishlistPublic: _,
-                              handleOpenShop: m,
-                              handleOpenGameShop: g,
-                              handleToggleWishlistVisibility: b,
-                              socialLayerStorefrontApplicationId: s,
-                          })
-                        : (0, i.jsx)(G, {
-                              isSocialLayerStorefrontEnabled: c,
-                              handleOpenShop: m,
-                              handleOpenGameShop: g,
-                          }),
+                    !_ &&
+                        (0, i.jsx)(d.m, {
+                            text: P.intl.string(P.t.RX7D9h),
+                            asContainer: !0,
+                            children: (0, i.jsx)(u.vN3, {
+                                children: (0, i.jsx)("div", {
+                                    role: "tooltip",
+                                    tabIndex: 0,
+                                    children: (0, i.jsx)(u.G3N, { size: "custom", width: 16, height: 16 }),
+                                }),
+                            }),
+                        }),
+                    _ &&
+                        h &&
+                        (0, i.jsx)(d.m, {
+                            text: P.intl.string(P.t.d78ChW),
+                            asContainer: !0,
+                            children: (0, i.jsx)(u.vN3, {
+                                children: (0, i.jsx)("div", {
+                                    role: "tooltip",
+                                    tabIndex: 0,
+                                    children: (0, i.jsx)(u.mir, { size: "custom", width: 16, height: 16 }),
+                                }),
+                            }),
+                        }),
                 ],
             }),
+            t
+                ? (0, i.jsx)(M, {
+                      isSocialLayerStorefrontEnabled: c,
+                      isWishlistPublic: _,
+                      handleOpenShop: m,
+                      handleOpenGameShop: g,
+                      handleToggleWishlistVisibility: b,
+                      socialLayerStorefrontApplicationId: s,
+                  })
+                : (0, i.jsx)(G, { isSocialLayerStorefrontEnabled: c, handleOpenShop: m, handleOpenGameShop: g }),
         ],
     });
 }
