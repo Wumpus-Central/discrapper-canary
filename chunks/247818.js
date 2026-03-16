@@ -21,63 +21,70 @@ function x(e) {
 var N = (((l = {})[(l.PILL_ICON_SIZE = 16)] = "PILL_ICON_SIZE"), (l[(l.ROW_ICON_SIZE = 24)] = "ROW_ICON_SIZE"), l);
 function I(e) {
     let { selectActionComponent: t, queryOptions: n, renderIcon: l, renderOptionLabel: s, defaultValues: o } = e,
-        { type: N, maxValues: I, disabled: f } = t,
-        _ = (0, h.c7)(t),
-        [g, T] = r.useState(!1),
-        [v, j] = r.useState(!1),
-        [S, O] = r.useState(new Map(o?.map((e) => [e.value, e]))),
-        [R, y] = r.useState(new Set(S.keys())),
-        b = r.useRef((o ?? []).map((e) => e.value)),
-        P = r.useRef(N),
-        [L, D] = r.useState(0);
+        { type: N, customId: I, maxValues: f, disabled: _ } = t,
+        g = (0, h.c7)(t),
+        [T, v] = r.useState(!1),
+        [j, S] = r.useState(!1),
+        [O, R] = r.useState(new Map(o?.map((e) => [e.value, e]))),
+        [y, b] = r.useState(new Set(O.keys())),
+        P = r.useRef((o ?? []).map((e) => e.value)),
+        L = r.useRef(N),
+        D = r.useRef(I),
+        [U, k] = r.useState(0);
     r.useEffect(() => {
         let e = (o ?? []).map((e) => e.value);
-        if (e.every((e) => b.current.includes(e)) && b.current.every((t) => e.includes(t)) && N === P.current) return;
-        (b.current = e), (P.current = N);
+        if (
+            e.every((e) => P.current.includes(e)) &&
+            P.current.every((t) => e.includes(t)) &&
+            N === L.current &&
+            I === D.current
+        )
+            return;
+        (P.current = e), (L.current = N), (D.current = I);
         let t = new Map(o?.map((e) => [e.value, e]));
-        O(t), y(new Set(t.keys())), D((e) => e + 1);
-    }, [o, N]);
-    let U = (0, p.jc)();
-    c()(null != U, "SearchableSelectActionComponent must be rendered inside a ComponentStateContext");
+        R(t), b(new Set(t.keys())), k((e) => e + 1);
+    }, [o, N, I]);
+    let w = (0, p.jc)();
+    c()(null != w, "SearchableSelectActionComponent must be rendered inside a ComponentStateContext");
     let {
-            state: k,
-            executeStateUpdate: w,
-            visualState: M,
-            isDisabled: H,
-            error: K,
-        } = U.useComponentState(t, S.size > 0 ? { type: N, selectedOptions: Array.from(S.values()) } : void 0),
-        F = null != U.modal,
-        G = M === A.BB.LOADING;
+            state: M,
+            executeStateUpdate: H,
+            visualState: K,
+            isDisabled: F,
+            error: G,
+        } = w.useComponentState(t, O.size > 0 ? { type: N, selectedOptions: Array.from(O.values()) } : void 0),
+        B = null != w.modal,
+        Y = K === A.BB.LOADING;
     r.useEffect(() => {
         if (
-            k?.type === u.I5.USER_SELECT ||
-            k?.type === u.I5.ROLE_SELECT ||
-            k?.type === u.I5.MENTIONABLE_SELECT ||
-            k?.type === u.I5.CHANNEL_SELECT
+            M?.type === u.I5.USER_SELECT ||
+            M?.type === u.I5.ROLE_SELECT ||
+            M?.type === u.I5.MENTIONABLE_SELECT ||
+            M?.type === u.I5.CHANNEL_SELECT
         ) {
-            let e = new Map(k.selectedOptions.map((e) => [e.value, e]));
-            O(e), y(new Set(e.keys()));
+            let e = new Map(M.selectedOptions.map((e) => [e.value, e]));
+            R(e), b(new Set(e.keys()));
         }
-    }, [k]);
-    let B = r.useCallback(() => {
-        w({ type: N, selectedOptions: Array.from(S.values()) }) && y(new Set(S.keys()));
-    }, [w, N, S]);
+    }, [M]);
+    let z = r.useCallback(() => {
+        H({ type: N, selectedOptions: Array.from(O.values()) }) && b(new Set(O.keys()));
+    }, [H, N, O]);
     r.useEffect(() => {
-        g || v || (S.size === R.size && Array.from(S.keys()).every((e) => R.has(e))) || B();
-    }, [g, v, R, S, B]);
-    let Y = 0 === S.size || g,
-        z = {
-            isProcessing: G,
-            isDisabled: f || M === A.BB.DISABLED || H,
-            wrapperClassName: i()(C.Lt, { [C.zE]: F }),
+        T || j || (O.size === y.size && Array.from(O.keys()).every((e) => y.has(e))) || z();
+    }, [T, j, y, O, z]);
+    let V = 0 === O.size || T,
+        X = {
+            isProcessing: Y,
+            isDisabled: _ || K === A.BB.DISABLED || F,
+            wrapperClassName: i()(C.Lt, { [C.zE]: B }),
             options: (e) =>
                 new Promise((t) => {
                     t(n(e));
                 }),
-            placeholder: Y ? _ : void 0,
-            onClose: () => T(!1),
-            onOpen: () => T(!0),
-            onBlur: () => j(!1),
+            placeholder: V ? g : void 0,
+            onClose: () => v(!1),
+            onOpen: () => v(!0),
+            onBlur: () => S(!1),
             maxVisibleItems: 5,
             renderOptionPrefix: (e, t) => {
                 let { inPill: n } = t,
@@ -92,35 +99,35 @@ function I(e) {
             (0, a.jsx)("div", {
                 className: C.kL,
                 children:
-                    I > 1
+                    f > 1
                         ? (0, a.jsx)(
                               d.p,
                               {
-                                  value: Array.from(S.values()),
+                                  value: Array.from(O.values()),
                                   onChange: (e) => {
-                                      g || j(!0), O(new Map(e.map((e) => [e.value, e])));
+                                      T || S(!0), R(new Map(e.map((e) => [e.value, e])));
                                   },
                                   multi: !0,
-                                  inputClassNames: i()({ [C.R]: !Y }),
+                                  inputClassNames: i()({ [C.R]: !V }),
                                   closeOnSelect: !1,
-                                  ...z,
+                                  ...X,
                                   "data-migration-pending": !0,
                               },
-                              L,
+                              U,
                           )
                         : (0, a.jsx)(
                               d.p,
                               {
-                                  value: [...S.values()][0],
-                                  onChange: (e) => O(null != e ? new Map([[e.value, e]]) : new Map()),
+                                  value: [...O.values()][0],
+                                  onChange: (e) => R(null != e ? new Map([[e.value, e]]) : new Map()),
                                   clearable: !0,
-                                  ...z,
+                                  ...X,
                                   "data-migration-pending": !0,
                               },
-                              L,
+                              U,
                           ),
             }),
-            null == K || F ? null : (0, a.jsx)(m.S0, { ...(0, m.PS)(K), className: E.z3 }),
+            null == G || B ? null : (0, a.jsx)(m.S0, { ...(0, m.PS)(G), className: E.z3 }),
         ],
     });
 }
