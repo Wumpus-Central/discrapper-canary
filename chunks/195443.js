@@ -1,6 +1,7 @@
-l.d(n, { z: () => s });
-var t = l(311907),
-    i = l(157550);
+"use strict";
+n.d(t, { z: () => s });
+var r = n(311907),
+    i = n(157550);
 function s(e) {
-    return (0, t.bG)([i.A], () => i.A.isSpam(e), [e]);
+    return (0, r.bG)([i.A], () => i.A.isSpam(e), [e]);
 }
