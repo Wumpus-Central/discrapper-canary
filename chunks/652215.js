@@ -907,6 +907,7 @@ var Y = (function (e) {
             (e[(e.IS_COMPONENTS_V2 = 32768)] = "IS_COMPONENTS_V2"),
             (e[(e.SENT_BY_SOCIAL_LAYER_INTEGRATION = 65536)] = "SENT_BY_SOCIAL_LAYER_INTEGRATION"),
             (e[(e.HIDDEN_SUSPENDED_USER = 131072)] = "HIDDEN_SUSPENDED_USER"),
+            (e[(e.IS_FIRST_BOOSTER = 262144)] = "IS_FIRST_BOOSTER"),
             e
         );
     })({}),
