@@ -1,81 +1,81 @@
-t.d(e, { m: () => _, y: () => m });
-var i = t(627968);
-t(64700);
-var r = t(735438),
-    l = t.n(r),
-    d = t(311907),
-    a = t(397927),
-    s = t(260509),
-    u = t(808728),
-    c = t(71393),
-    o = t(181079),
-    A = t(422258),
-    h = t(93055),
-    f = t(652215),
-    g = t(525736),
-    j = t(985018);
-function x(n) {
-    return n ? j.intl.string(g.default.TN4nAX) : j.intl.string(g.default.G9fGlP);
+i.d(n, { m: () => b, y: () => j });
+var r = i(627968);
+i(64700);
+var t = i(735438),
+    l = i.n(t),
+    a = i(311907),
+    d = i(397927),
+    s = i(260509),
+    u = i(808728),
+    o = i(71393),
+    c = i(181079),
+    A = i(422258),
+    h = i(93055),
+    f = i(652215),
+    _ = i(665606),
+    g = i(985018);
+function v(e) {
+    return e ? g.intl.string(_.default.TN4nAX) : g.intl.string(_.default.G9fGlP);
 }
-function _(n) {
-    let e = (0, d.bG)([u.Ay], () => u.Ay.getChannels(f.YYv))[f.rbe.GUILD_CATEGORY],
-        { notifyFavoriteAdded: r } = (0, h.CJ)(),
-        { hasAccess: _, isExperimentEnabled: m, hasHigherPrivileges: b } = (0, h.TW)("useAddToFavoritesItem"),
-        p = n.isThread(),
-        I = (0, d.bG)([c.A], () => {
-            if (null == n.guild_id) return !0;
-            let e = c.A.getGuild(n.guild_id);
-            return null != e && !(0, s.DG)(e);
+function b(e) {
+    let n = (0, a.bG)([u.Ay], () => u.Ay.getChannels(f.YYv))[f.rbe.GUILD_CATEGORY],
+        { notifyFavoriteAdded: t } = (0, h.CJ)(),
+        { hasAccess: b, isExperimentEnabled: j, hasHigherPrivileges: m } = (0, h.TW)("useAddToFavoritesItem"),
+        p = e.isThread(),
+        x = (0, a.bG)([o.A], () => {
+            if (null == e.guild_id) return !0;
+            let n = o.A.getGuild(e.guild_id);
+            return null != n && !(0, s.DG)(n);
         }),
-        v = !__OVERLAY__ && (!p || b) && I,
-        C = (0, d.bG)([o.A], () => o.A.isFavorite(n.id)),
-        E = x(!1);
-    function y(n, e, t) {
-        return (0, i.jsx)(a.Drp, {
+        y = !__OVERLAY__ && (!p || m) && x,
+        G = (0, a.bG)([c.A], () => c.A.isFavorite(e.id)),
+        C = v(!1);
+    function T(e, n, i) {
+        return (0, r.jsx)(d.Drp, {
             id: "favorite-channel",
-            label: E,
-            leadingAccessory: { type: "icon", icon: n },
-            action: e,
-            children: t,
+            label: C,
+            leadingAccessory: { type: "icon", icon: e },
+            action: n,
+            children: i,
         });
     }
-    if (!m || !v) return null;
-    if (!_)
-        return y(a.tvc, () =>
-            (0, a.mMO)(async () => {
-                let { default: n } = await t.e("48609").then(t.bind(t, 168088));
-                return (e) => (0, i.jsx)(n, { ...e });
+    if (!j || !y) return null;
+    if (!b)
+        return T(d.tvc, () =>
+            (0, d.mMO)(async () => {
+                let { default: e } = await i.e("48609").then(i.bind(i, 168088));
+                return (n) => (0, r.jsx)(e, { ...n });
             }),
         );
-    if (C) return null;
-    let [[T], V] = l().partition(e, (n) => "null" === n.channel.id);
-    function D(e) {
-        r(), (0, A.Jz)(n.id, e);
+    if (G) return null;
+    let [[E], N] = l().partition(n, (e) => "null" === e.channel.id);
+    function O(n) {
+        t(), c.A.favoriteGuildEnabled || (0, A.tV)(!0), (0, A.Jz)(e.id, n);
     }
-    if (0 === V.length) return y(a.Gg5, () => D(null));
-    let G = j.intl.string(g.default.CgmkFJ);
-    return y(
-        a.Gg5,
-        () => D(null),
-        (0, i.jsxs)(i.Fragment, {
+    if (0 === N.length) return T(d.Gg5, () => O(null));
+    let D = g.intl.string(_.default.CgmkFJ);
+    return T(
+        d.Gg5,
+        () => O(null),
+        (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsx)(a.rXV, {
-                    children: (0, i.jsx)(
-                        a.Drp,
+                (0, r.jsx)(d.rXV, {
+                    children: (0, r.jsx)(
+                        d.Drp,
                         {
-                            id: `favorite-${T.channel.id}`,
-                            label: G,
-                            action: () => D("null" === T.channel.id ? null : T.channel.id),
+                            id: `favorite-${E.channel.id}`,
+                            label: D,
+                            action: () => O("null" === E.channel.id ? null : E.channel.id),
                         },
-                        T.channel.id,
+                        E.channel.id,
                     ),
                 }),
-                (0, i.jsx)(a.rXV, {
-                    children: V.map((n) =>
-                        (0, i.jsx)(
-                            a.Drp,
-                            { id: `favorite-${n.channel.id}`, label: n.channel.name, action: () => D(n.channel.id) },
-                            n.channel.id,
+                (0, r.jsx)(d.rXV, {
+                    children: N.map((e) =>
+                        (0, r.jsx)(
+                            d.Drp,
+                            { id: `favorite-${e.channel.id}`, label: e.channel.name, action: () => O(e.channel.id) },
+                            e.channel.id,
                         ),
                     ),
                 }),
@@ -83,28 +83,28 @@ function _(n) {
         }),
     );
 }
-function m(n) {
-    let e = (0, d.bG)([o.A], () => o.A.isFavorite(n.id)),
-        { hasAccess: r } = (0, h.TW)("useRemoveFromFavoritesItem");
-    return !__OVERLAY__ && r && e
-        ? (0, i.jsx)(a.Drp, {
+function j(e) {
+    let n = (0, a.bG)([c.A], () => c.A.isFavorite(e.id)),
+        { hasAccess: t } = (0, h.TW)("useRemoveFromFavoritesItem");
+    return !__OVERLAY__ && t && n
+        ? (0, r.jsx)(d.Drp, {
               id: "favorite-channel",
-              label: x(!0),
+              label: v(!0),
               color: "danger",
               action: () =>
-                  n.type === f.rbe.GUILD_CATEGORY
-                      ? (0, a.mMO)(async () => {
-                            let { default: e } = await t.e("52210").then(t.bind(t, 862377));
-                            return (t) =>
-                                (0, i.jsx)(e, {
-                                    ...t,
+                  e.type === f.rbe.GUILD_CATEGORY
+                      ? (0, d.mMO)(async () => {
+                            let { default: n } = await i.e("52210").then(i.bind(i, 862377));
+                            return (i) =>
+                                (0, r.jsx)(n, {
+                                    ...i,
                                     onConfirm: () => {
-                                        t.onClose(), (0, A.i_)(n.id);
+                                        i.onClose(), (0, A.i_)(e.id);
                                     },
-                                    channel: n,
+                                    channel: e,
                                 });
                         })
-                      : (0, A.i_)(n.id),
+                      : (0, A.i_)(e.id),
           })
         : null;
 }
