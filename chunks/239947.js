@@ -271,6 +271,7 @@ var r = (function (e) {
             (e.BUG_REPORT_SUBMIT = "network_action_bug_report_submit"),
             (e.CHANNEL_CREATE = "network_action_channel_create"),
             (e.DETECTABLE_APPLICATIONS_FETCH = "network_action_detectable_applications_fetch"),
+            (e.DETECTABLE_NON_GAMES_FETCH = "network_action_detectable_non_games_fetch"),
             (e.DIRECTORY_GUILD_ENTRY_CREATE = "network_action_directory_guild_entry_create"),
             (e.DIRECTORY_GUILD_ENTRY_DELETE = "network_action_directory_guild_entry_delete"),
             (e.EMAIL_SETTINGS_FETCH = "network_action_email_settings_fetch"),

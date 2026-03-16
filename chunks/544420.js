@@ -289,10 +289,14 @@ let F = {
         let e = m.A.etag;
         u.h.wait(() => {
             u.h.dispatch({ type: "NON_GAMES_DATABASE_FETCH" }),
-                o.Bo.get({
+                C.A.get({
                     url: D.Rsh.NON_GAMES_DETECTABLE,
                     headers: { "If-None-Match": e },
                     retries: 1,
+                    trackedActionData: {
+                        event: i.NetworkActionNames.DETECTABLE_NON_GAMES_FETCH,
+                        properties: (t) => (0, l.e0)({ sent_etag: e, received_etag: t?.headers?.etag }),
+                    },
                     rejectWithError: !1,
                 }).then(
                     (e) => {
