@@ -500,25 +500,15 @@ async function es(e) {
     }
 }
 async function ea(e) {
-    u.h.dispatch({ type: "BILLING_WALLET_BALANCE_FETCH_START", paymentSourceId: e });
     try {
         let t = await l.Bo.get({
-                url: y.Rsh.BILLING_WALLET_INFORMATION(e),
-                query: { get_history: !1 },
-                rejectWithError: !0,
-            }),
-            n = { currency: t.body.currency, amount: t.body.balance };
-        return (
-            u.h.dispatch({
-                type: "BILLING_WALLET_BALANCE_FETCH_SUCCESS",
-                paymentSourceId: e,
-                currency: n.currency,
-                amount: n.amount,
-            }),
-            n
-        );
-    } catch (t) {
-        return u.h.dispatch({ type: "BILLING_WALLET_BALANCE_FETCH_FAIL", paymentSourceId: e }), null;
+            url: y.Rsh.BILLING_WALLET_INFORMATION(e),
+            query: { get_history: !1 },
+            rejectWithError: !0,
+        });
+        return { currency: t.body.currency, amount: t.body.balance };
+    } catch (e) {
+        return null;
     }
 }
 async function eo(e) {

@@ -42672,8 +42672,7 @@ screen and (max-width:485px) {
 }
 
 .formTitle__553e7 {
-    margin-bottom: 8px;
-    margin-top: 8px
+    margin-bottom: 8px
 }
 
 .checkbox__553e7 {
@@ -43967,21 +43966,6 @@ screen and (max-width:485px) {
     width: auto
 }
 
-.container__63de2 {
-    align-items: center;
-    background-color: var(--background-mod-subtle);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-md);
-    display: flex;
-    flex-direction: row;
-    gap: var(--space-12);
-    padding: var(--space-12) var(--space-16)
-}
-
-.container__63de2:hover {
-    background-color: var(--background-mod-muted)
-}
-
 .currencyWrapper_b41cc5,
 .previewTotalSectionContainer_b41cc5 {
     margin-top: var(--space-16)
@@ -44572,19 +44556,6 @@ screen and (max-width:485px) {
 
 .socialLayerGameItemDisclaimer_b44961 {
     margin-top: 16px
-}
-
-.paymentMethodContainer_b44961 {
-    display: flex;
-    flex-direction: column
-}
-
-.giftCardCreditsCheckbox_b44961 {
-    margin-bottom: var(--space-8)
-}
-
-.giftCardRedemptionLink_b44961 {
-    margin-top: var(--space-8)
 }
 
 .oneTimePurchaseRewardNotice_b44961 {
