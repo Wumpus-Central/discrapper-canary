@@ -1,31 +1,37 @@
-i.d(e, { p: () => _ });
-var n = i(311907),
-    l = i(506774),
-    s = i(832712),
-    r = i(419954),
-    a = i(71393),
-    u = i(543465),
-    o = i(287809),
-    d = i(954571),
-    T = i(780964),
-    A = i(652215),
-    S = i(406535),
-    E = i(790782),
-    g = i(985018);
-let _ = (0, r.zD)(T.X.EXPERIMENTAL_UNREADS, {
-    useTitle: () => g.intl.string(g.t["k6m/si"]),
-    useSubtitle: () => g.intl.string(g.t.LGynPs),
-    useValue: () => (0, n.bG)([u.Ay], () => u.Ay.useNewNotifications),
-    setValue: function (t) {
-        s.A.setAccountFlag(S.i.USE_NEW_NOTIFICATIONS, t),
-            t ||
-                (l.w.set("turnedOffNewNotifications", !0),
-                d.default.track(A.HAw.NOTIFICATION_MIGRATION_OPTOUT, {
-                    num_guilds_with_new_setting: a.A.getGuildsArray().filter(
-                        (t) => u.Ay.resolveGuildUnreadSetting(t) === E.e.ONLY_MENTIONS,
+n.d(t, { p: () => h });
+var i = n(311907),
+    s = n(506774),
+    l = n(832712),
+    a = n(419954),
+    r = n(71393),
+    o = n(543465),
+    d = n(287809),
+    c = n(954571),
+    u = n(780964),
+    _ = n(652215),
+    m = n(406535),
+    g = n(790782),
+    A = n(985018);
+let h = (0, a.zD)(u.X.EXPERIMENTAL_UNREADS, {
+    useTitle: () => A.intl.string(A.t["k6m/si"]),
+    useSubtitle: () => A.intl.string(A.t.LGynPs),
+    useValue: () => (0, i.bG)([o.Ay], () => o.Ay.useNewNotifications),
+    setValue: function (e) {
+        l.A.setAccountFlag(m.i.USE_NEW_NOTIFICATIONS, e),
+            e ||
+                (s.w.set("turnedOffNewNotifications", !0),
+                c.default.track(_.HAw.NOTIFICATION_MIGRATION_OPTOUT, {
+                    num_guilds_with_new_setting: r.A.getGuildsArray().filter(
+                        (e) => o.Ay.resolveGuildUnreadSetting(e) === g.e.ONLY_MENTIONS,
                     ).length,
                 }));
     },
     usePredicate: () =>
-        (0, n.bG)([o.default, u.Ay], () => o.default.getCurrentUser()?.isStaff() || u.Ay.useNewNotifications),
+        (0, i.bG)(
+            [d.default, o.Ay],
+            () =>
+                d.default.getCurrentUser()?.isStaff() ||
+                d.default.getCurrentUser()?.isStaffPersonal() ||
+                o.Ay.useNewNotifications,
+        ),
 });
