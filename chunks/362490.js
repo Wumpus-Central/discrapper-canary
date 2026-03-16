@@ -1,32 +1,31 @@
 "use strict";
-n.d(t, { RD: () => E, U9: () => A, _M: () => h }), n(321073);
+n.d(t, { RD: () => m, U9: () => g, _M: () => p }), n(321073);
 var r = n(64700),
     i = n(868714),
     s = n(975807),
     a = n(474951),
     o = n(954571),
     l = n(307600),
-    u = n(312083),
-    c = n(975460),
-    d = n(704824),
-    _ = n(308151),
-    f = n(652215);
-let p = "AUTHORIZE_REQUEST";
-var h = (function (e) {
+    u = n(975460),
+    c = n(704824),
+    d = n(308151),
+    _ = n(652215);
+let f = "AUTHORIZE_REQUEST";
+var p = (function (e) {
     return (e.RPC = "rpc"), (e.WEB = "web"), e;
 })({});
-let m = ["rpc", "web"];
-function E(e) {
+let h = ["rpc", "web"];
+function m(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { debug: n = !1 } = t,
-        i = (0, c.g)(e),
-        s = I(i, t),
+        i = (0, u.g)(e),
+        s = A(i, t),
         a = s?.preferredFlow,
         o = null != a,
-        { token: l, fetched: u } = (0, d.U)(i?.parentId ?? i?.id),
-        _ = u && null != l;
+        { token: l, fetched: d } = (0, c.U)(i?.parentId ?? i?.id),
+        _ = d && null != l;
     return {
-        fetched: u,
+        fetched: d,
         hasAlreadyLinked: _,
         canStartAuthorization: o,
         startAuthorization: r.useCallback((e) => (null == a ? null : (a.initiate(e), a.type)), [a]),
@@ -43,21 +42,21 @@ function E(e) {
             : void 0,
     };
 }
-function g(e) {
+function E(e) {
     return a.A.listenIsSubscribed(e);
 }
-function A(e, t) {
-    let n = (0, i.A)(t?.allowedFlows ?? m),
-        c = (0, _.A)(
-            g,
+function g(e, t) {
+    let n = (0, i.A)(t?.allowedFlows ?? h),
+        u = (0, d.A)(
+            E,
             r.useCallback(
-                () => e.map((e) => ({ application: e, isSubscribedToAuthorizeRequest: a.A.isSubscribed(e.id, p) })),
+                () => e.map((e) => ({ application: e, isSubscribedToAuthorizeRequest: a.A.isSubscribed(e.id, f) })),
                 [e],
             ),
         );
     return r.useMemo(
         () =>
-            c.map((e) => {
+            u.map((e) => {
                 let t = [];
                 if (
                     (n.includes("rpc") &&
@@ -65,15 +64,13 @@ function A(e, t) {
                         t.push({
                             type: "rpc",
                             initiate(t) {
-                                let n = u.A.getConfig({ location: "useStartAuthorize" }).enabled;
-                                a.A.dispatchToSubscriptions(p, (t) => t.socket.application.id === e.application.id, {}),
+                                a.A.dispatchToSubscriptions(f, (t) => t.socket.application.id === e.application.id, {}),
                                     t.onConfirm?.(),
-                                    n &&
-                                        o.default.track(f.HAw.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, {
-                                            location_stack: t.analyticsLocations,
-                                            application_id: e.application.id,
-                                            flow_type: "rpc",
-                                        });
+                                    o.default.track(_.HAw.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, {
+                                        location_stack: t.analyticsLocations,
+                                        application_id: e.application.id,
+                                        flow_type: "rpc",
+                                    });
                             },
                         }),
                     n.includes("web") && null != e.application.connectionEntrypointUrl)
@@ -82,29 +79,27 @@ function A(e, t) {
                     t.push({
                         type: "web",
                         initiate(t) {
-                            let r = u.A.getConfig({ location: "useStartAuthorize" }).enabled;
                             (0, l.h)({
                                 href: n,
                                 onConfirm: () => {
                                     (0, s.A)(n), t?.onConfirm?.();
                                 },
                             }),
-                                r &&
-                                    o.default.track(f.HAw.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, {
-                                        location_stack: t.analyticsLocations,
-                                        application_id: e.application.id,
-                                        flow_type: "web",
-                                    });
+                                o.default.track(_.HAw.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, {
+                                    location_stack: t.analyticsLocations,
+                                    application_id: e.application.id,
+                                    flow_type: "web",
+                                });
                         },
                     });
                 }
                 return { context: e, availableFlows: t, preferredFlow: t.length > 0 ? t[0] : null };
             }),
-        [c, n],
+        [u, n],
     );
 }
-function I(e, t) {
-    let n = A(
+function A(e, t) {
+    let n = g(
         r.useMemo(() => (null != e ? [e] : []), [e]),
         t,
     );
