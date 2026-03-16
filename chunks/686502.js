@@ -24,12 +24,20 @@ var i = n(627968),
     b = n(89996),
     S = n(867010);
 function T(e) {
-    let { channel: t, guild: n, width: s, inPopout: l, handleClose: r, userParticipantCount: a } = e;
+    let {
+        channel: t,
+        guild: n,
+        width: s,
+        inPopout: l,
+        handleClose: r,
+        userParticipantCount: a,
+        activitiesEnabled: o = !0,
+    } = e;
     return s < 250
         ? (0, i.jsx)(v, { channel: t, guild: n, width: s, inPopout: l, handleClose: r, userParticipantCount: a })
         : a > 1
           ? (0, i.jsx)(j, { channel: t, guild: n, width: s, inPopout: l, handleClose: r, userParticipantCount: a })
-          : (0, i.jsx)(y, { channel: t, guild: n, width: s, inPopout: l });
+          : (0, i.jsx)(y, { channel: t, guild: n, width: s, inPopout: l, activitiesEnabled: o });
 }
 function v(e) {
     let { channel: t, inPopout: n, handleClose: s } = e,
@@ -81,15 +89,15 @@ function v(e) {
     });
 }
 function y(e) {
-    let { channel: t, guild: l, inPopout: a } = e;
+    let { channel: t, guild: l, inPopout: a, activitiesEnabled: o = !0 } = e;
     s.useEffect(() => {
         C.default.track(I.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: "activity invite",
             n_participants: 1,
         });
     }, []);
-    let { analyticsLocations: o, newestAnalyticsLocation: c } = (0, p.Ay)(m.A.VC_TILE_ACTIVITY_INVITE);
-    function u() {
+    let { analyticsLocations: c, newestAnalyticsLocation: u } = (0, p.Ay)(m.A.VC_TILE_ACTIVITY_INVITE);
+    function h() {
         (0, d.mMO)(
             async () => {
                 let { default: e } = await Promise.all([n.e("43600"), n.e("28136"), n.e("74918")]).then(
@@ -100,15 +108,15 @@ function y(e) {
             { contextKey: a ? d.KX8 : d.SYi },
         );
     }
-    function h() {
+    function A() {
         (0, g.A)({
             context: null != t ? { type: "channel", channel: t } : { type: "contextless" },
             openInPopout: a,
-            analyticsLocation: c,
+            analyticsLocation: u,
         });
     }
     return (0, i.jsx)(p.f5, {
-        value: o,
+        value: c,
         children: (0, i.jsx)(d.NPJ, {
             disableAdaptiveTheme: !0,
             theme: I.NJ8.MIDNIGHT,
@@ -125,14 +133,15 @@ function y(e) {
                                     variant: "secondary",
                                     icon: d.Rvf,
                                     text: N.intl.string(N.t["EE+P0H"]),
-                                    onClick: u,
-                                }),
-                                (0, i.jsx)(d.Button, {
-                                    variant: "secondary",
-                                    icon: d.k9F,
-                                    text: N.intl.string(N.t.qnFavR),
                                     onClick: h,
                                 }),
+                                o &&
+                                    (0, i.jsx)(d.Button, {
+                                        variant: "secondary",
+                                        icon: d.k9F,
+                                        text: N.intl.string(N.t.qnFavR),
+                                        onClick: A,
+                                    }),
                             ],
                         }),
                     ],
