@@ -5252,6 +5252,13 @@ var na = (function (e) {
             (e.PARENTAL_CONSENT_CHECKED = "parental_consent_checked"),
             (e.SEO_PAGE_CWV_MEASURED = "seo_page_cwv_measured"),
             (e.UI_SETTING_INTERACTED = "ui_setting_interacted"),
+            (e.FAVORITES_GUILD_VIEWED = "favorites_guild_viewed"),
+            (e.FAVORITES_GUILD_ADD_TO_FAVORITES = "favorites_guild_add_to_favorites"),
+            (e.FAVORITES_GUILD_REMOVE_FROM_FAVORITES = "favorites_guild_remove_from_favorites"),
+            (e.FAVORITES_GUILD_ORDER_UPDATED = "favorites_guild_order_updated"),
+            (e.FAVORITES_GUILD_SETTING_TOGGLED = "favorites_guild_setting_toggled"),
+            (e.FAVORITES_GUILD_UPSELL_MODAL_OPENED = "favorites_guild_upsell_modal_opened"),
+            (e.FAVORITES_GUILD_ADD_MODAL_OPENED = "favorites_guild_add_modal_opened"),
             e
         );
     })({}),
