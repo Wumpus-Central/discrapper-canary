@@ -16,8 +16,8 @@ var p = n(173628),
     g = n(374058),
     _ = n(974857),
     f = n(358622),
-    b = n(568834),
-    v = n(19767),
+    v = n(568834),
+    b = n(19767),
     j = n(648514),
     A = n(866001),
     C = n(855936),
@@ -27,9 +27,9 @@ var p = n(173628),
     E = n(821306),
     N = n(226936),
     I = n(27126),
-    k = n(498336),
-    R = n(615112),
-    O = n(501379),
+    R = n(498336),
+    O = n(615112),
+    k = n(501379),
     w = n(517538),
     D = n(211162),
     M = n(436102),
@@ -95,7 +95,7 @@ function ec() {
         ];
         return (
             m.A.isDeveloper &&
-                (e.push({ id: "shop", name: "Shop", group: er.fu.BILLING, render: () => (0, a.jsx)(J.h, {}) }),
+                (e.push({ id: "shop", name: "Shop Overrides", group: er.fu.SHOP, render: () => (0, a.jsx)(J.h, {}) }),
                 e.push({
                     id: "payment_flow_modals",
                     name: "Payment Flow Modals",
@@ -105,8 +105,8 @@ function ec() {
                 }),
                 e.push({
                     id: "shop_collectibles",
-                    name: "Shop Collectibles",
-                    group: er.fu.BILLING,
+                    name: "Collectibles Preview",
+                    group: er.fu.SHOP,
                     render: () => (0, a.jsx)(l.A, {}),
                 }),
                 e.push({
@@ -183,7 +183,7 @@ function ec() {
                 name: "Intl",
                 group: er.fu.UI,
                 tags: ["i18n", "localization", "messages"],
-                render: () => (0, a.jsx)(O.A, {}),
+                render: () => (0, a.jsx)(k.A, {}),
             }),
             e.push({
                 id: "colors",
@@ -196,7 +196,7 @@ function ec() {
                 id: "design_toggles",
                 name: "Design Toggles",
                 group: er.fu.UI,
-                render: () => (0, a.jsx)(v.A, {}),
+                render: () => (0, a.jsx)(b.A, {}),
             }),
             e.push({
                 id: "appearance_randomizer",
@@ -265,14 +265,14 @@ function ec() {
                     group: er.fu.USERS,
                     render: () => (0, a.jsx)(o.A, {}),
                 })),
-            e.push({ id: "dcf_overrides", name: "DCF Overrides", group: er.fu.DCF, render: () => (0, a.jsx)(b.A, {}) }),
+            e.push({ id: "dcf_overrides", name: "DCF Overrides", group: er.fu.DCF, render: () => (0, a.jsx)(v.A, {}) }),
             e.push({ id: "dcf_events", name: "DCF Events", group: er.fu.DCF, render: () => (0, a.jsx)(f.A, {}) }),
             e.push({
                 id: "hotspots",
                 name: "Hotspots",
                 group: er.fu.EXPERIMENTS,
                 tags: ["coachmarks", "nux", "onboarding"],
-                render: () => (0, a.jsx)(R.A, {}),
+                render: () => (0, a.jsx)(O.A, {}),
             }),
             e.push({
                 id: "perks",
@@ -336,7 +336,7 @@ function ec() {
                 name: "Skill Trees",
                 group: er.fu.BOOSTING,
                 tags: ["boosting", "powerups", "server tag"],
-                render: () => (0, a.jsx)(k.A, {}),
+                render: () => (0, a.jsx)(R.A, {}),
             }),
             e.push({
                 id: "game_server",
