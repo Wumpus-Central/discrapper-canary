@@ -25,6 +25,7 @@ class o extends r.A {
     thirdPartySkus;
     themes;
     linkedApplications;
+    content_classification;
     genres;
     platforms;
     bannerHash;
@@ -51,6 +52,7 @@ class o extends r.A {
             (this.thirdPartySkus = e.thirdPartySkus || []),
             (this.themes = e.themes || []),
             (this.linkedApplications = e.linkedApplications),
+            (this.content_classification = e.content_classification),
             (this.genres = e.genres),
             (this.platforms = e.platforms),
             (this.bannerHash = e.bannerHash),

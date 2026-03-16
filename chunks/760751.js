@@ -24,14 +24,14 @@ let I = "GameStoreReportedGames",
     v = Object.create(null),
     N = Object.create(null),
     C = s.w.get(I) ?? Object.create(null),
-    b = "",
-    R = null,
-    O = !1,
+    R = "",
+    O = null,
+    b = !1,
     D = null,
     L = !1,
     w = "",
-    x = [],
     M = [],
+    x = [],
     P = new Map(),
     k = p.A.Millis.HOUR;
 function U(e) {
@@ -49,6 +49,7 @@ function U(e) {
         icon: e.icon_hash ?? void 0,
         thirdPartySkus: e.third_party_skus ?? [],
         cover_image_hash: e.cover_image_hash ?? void 0,
+        content_classification: e.content_classification ?? void 0,
     };
 }
 function G(e) {
@@ -66,13 +67,14 @@ function G(e) {
         icon: e.icon,
         thirdPartySkus: e.thirdPartySkus ?? [],
         cover_image_hash: e.cover_image_hash ?? void 0,
+        content_classification: e.content_classification ?? void 0,
     };
 }
 function F(e, t) {
     null == v[t] && (v[t] = []), v[t].push(e);
 }
 function V(e) {
-    let t = e instanceof c.Ay ? G(e) : e;
+    let t = e instanceof c.xg ? G(e) : e;
     for (let n of (y.set(e.id, t), F(t.id, t.name.toLowerCase()), e.aliases)) F(t.id, n.toLowerCase());
     if ((0, m.isDesktop)()) for (let n of e.executables) N[n.name] = t.id;
 }
@@ -84,14 +86,14 @@ function H() {
     r = !0;
 }
 function j() {
-    (r = !1), (O = !0);
+    (r = !1), (b = !0);
 }
 function Y(e) {
     let { games: t, etag: n } = e;
-    for (let e of (null != n && b !== n && (y.clear(), (v = Object.create(null)), (N = Object.create(null)), (b = n)),
+    for (let e of (null != n && R !== n && (y.clear(), (v = Object.create(null)), (N = Object.create(null)), (R = n)),
     t))
         V(U(e));
-    (r = void 0), (R = Date.now()), (O = !0);
+    (r = void 0), (O = Date.now()), (b = !0);
 }
 function W() {
     L = !0;
@@ -99,13 +101,13 @@ function W() {
 function K() {
     L = !1;
 }
-function z(e) {
+function $(e) {
     let { executables: t, patterns: n, etag: r } = e;
-    null != r && w !== r && ((w = r), (x = t.map((e) => e.toLowerCase())), (M = n.map((e) => RegExp(e, "i")))),
+    null != r && w !== r && ((w = r), (M = t.map((e) => e.toLowerCase())), (x = n.map((e) => RegExp(e, "i")))),
         (L = !1),
         (D = Date.now());
 }
-class $ extends i.Ay.PersistedStore {
+class z extends i.Ay.PersistedStore {
     static displayName = "GameStore";
     static persistKey = "GameStore";
     static migrations = [
@@ -113,7 +115,7 @@ class $ extends i.Ay.PersistedStore {
             null != e
                 ? {
                       detectableGamesEtag: e.detectableGamesEtag,
-                      detectableGames: e.detectableGames?.map((e) => G(new c.Ay(e))) ?? [],
+                      detectableGames: e.detectableGames?.map((e) => G(new c.xg(e))) ?? [],
                   }
                 : { detectableGamesEtag: "", detectableGames: [] },
         (e) => ((0, m.isDesktop)() ? e : { detectableGamesEtag: "", detectableGames: [] }),
@@ -127,20 +129,20 @@ class $ extends i.Ay.PersistedStore {
     ];
     initialize(e) {
         null != e &&
-            (null != e.detectableGamesEtag && (b = e.detectableGamesEtag),
+            (null != e.detectableGamesEtag && (R = e.detectableGamesEtag),
             null != e.blocklistEtag && (w = e.blocklistEtag),
-            null != e.blocklistExecutables && (x = e.blocklistExecutables),
-            null != e.blocklistPatterns && (M = e.blocklistPatterns.map((e) => RegExp(e, "i"))),
+            null != e.blocklistExecutables && (M = e.blocklistExecutables),
+            null != e.blocklistPatterns && (x = e.blocklistPatterns.map((e) => RegExp(e, "i"))),
             e.detectableGames?.forEach((e) => V(e)));
     }
     getState() {
         return (0, m.isDesktop)()
             ? {
-                  detectableGamesEtag: b,
+                  detectableGamesEtag: R,
                   detectableGames: y.values(),
                   blocklistEtag: w,
-                  blocklistExecutables: x,
-                  blocklistPatterns: M.map((e) => e.source),
+                  blocklistExecutables: M,
+                  blocklistPatterns: x.map((e) => e.source),
               }
             : {
                   detectableGamesEtag: "",
@@ -216,22 +218,22 @@ class $ extends i.Ay.PersistedStore {
         return !0 === r;
     }
     get detectableGamesEtag() {
-        return b;
+        return R;
     }
     get blocklistEtag() {
         return w;
     }
     get lastFetched() {
-        return R;
+        return O;
     }
     get hasAttemptedFetch() {
-        return O;
+        return b;
     }
     get detectableGamesTtl() {
         return S;
     }
     canFetchDetectableGames() {
-        return !0 !== r && (null == R || Date.now() >= R + S);
+        return !0 !== r && (null == O || Date.now() >= O + S);
     }
     canFetchExecutableBlocklist() {
         return (
@@ -247,9 +249,9 @@ class $ extends i.Ay.PersistedStore {
         if (!u.n.getConfig({ location: "GameStore.shouldBlock" }).enabled || null == e.exePath || "" === e.exePath)
             return !1;
         let t = e.exePath.toLowerCase(),
-            n = x.find((e) => t.includes(e));
+            n = M.find((e) => t.includes(e));
         if (null != n) return this.maybeTrackBlock(e, "explicit_list", n), !0;
-        let r = M.find((t) => t.test(e.exePath));
+        let r = x.find((t) => t.test(e.exePath));
         return null != r && (this.maybeTrackBlock(e, "pattern_match", r.source), !0);
     }
     maybeTrackBlock(e, t, n) {
@@ -275,12 +277,12 @@ class $ extends i.Ay.PersistedStore {
         (C[e] = !0), s.w.set(I, C);
     }
 }
-let q = new $(a.h, {
+let q = new z(a.h, {
     OVERLAY_INITIALIZE: B,
     GAMES_DATABASE_FETCH: H,
     GAMES_DATABASE_FETCH_FAIL: j,
     GAMES_DATABASE_UPDATE: Y,
     GAMES_BLOCKLIST_FETCH: W,
     GAMES_BLOCKLIST_FETCH_FAIL: K,
-    GAMES_BLOCKLIST_UPDATE: z,
+    GAMES_BLOCKLIST_UPDATE: $,
 });
