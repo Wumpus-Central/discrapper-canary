@@ -5,13 +5,13 @@ n.d(t, {
     Df: () => D,
     Sb: () => T.Sb,
     TG: () => L,
-    _N: () => V,
-    bW: () => O,
-    cE: () => b,
+    _N: () => F,
+    bW: () => b,
+    cE: () => C,
     ji: () => w,
-    nT: () => F,
-    o_: () => x,
-    wc: () => R,
+    nT: () => V,
+    o_: () => M,
+    wc: () => O,
     xB: () => G,
     xs: () => U,
 }),
@@ -24,8 +24,8 @@ n.d(t, {
     n(65162);
 var r = n(284009),
     i = n.n(r),
-    a = n(562465),
-    s = n(554146),
+    s = n(562465),
+    a = n(554146),
     o = n(803805),
     l = n(873298),
     u = n(506774),
@@ -36,30 +36,30 @@ var r = n(284009),
     p = n(954571),
     h = n(927813),
     m = n(460288),
-    g = n(405892),
-    E = n(617617),
+    E = n(405892),
+    g = n(617617),
     A = n(159201),
     I = n(761821),
     T = n(355097),
-    y = n(652215);
-let S = 5e3,
+    S = n(652215);
+let y = 5e3,
     v = "UserSettingsProtoLastWriteTimes",
-    C = Date.now();
-function b() {}
+    N = Date.now();
+function C() {}
 c.h.subscribe("CONNECTION_OPEN", () => {
-    C = Date.now();
+    N = Date.now();
 }),
     c.h.subscribe("CONNECTION_CLOSED", () => {
-        C = Date.now();
+        N = Date.now();
     }),
     "u" > typeof document &&
         (document.addEventListener("mousedown", () => {
-            C = 0;
+            N = 0;
         }),
         document.addEventListener("keydown", () => {
-            C = 0;
+            N = 0;
         }));
-class N {
+class R {
     ProtoClass;
     type;
     logger;
@@ -69,16 +69,16 @@ class N {
         (this.ProtoClass = e), (this.type = t), (this.logger = new d.A(this.ProtoClass.typeName));
     }
     getEditInfo() {
-        return E.A.getFullState()[this.type];
+        return g.A.getFullState()[this.type];
     }
     getCurrentValue() {
         return this.getEditInfo().proto;
     }
-    async updateAsync(e, t, n) {
+    async updateAsync(e, t, n, r) {
         await this.loadIfNecessary();
-        let r = (0, A.f)(this.ProtoClass, e),
-            i = this.getCurrentValue()[e],
-            a = (0, A.a)(i, t, r, this.ProtoClass, e);
+        let i = (0, A.f)(this.ProtoClass, e),
+            s = this.getCurrentValue()[e],
+            a = (0, A.a)(s, t, i, this.ProtoClass, e);
         null != a &&
             (__OVERLAY__
                 ? c.h.dispatch({
@@ -91,7 +91,11 @@ class N {
                       local: !0,
                   })
                 : (this.logger.log(`Updating ${String(e)} with delay ${n}`),
-                  this.markDirty(a, { delaySeconds: n, jitter: n === T.Sb.AUTOMATED || n === T.Sb.DAILY })));
+                  this.markDirty(a, {
+                      delaySeconds: n,
+                      jitter: n === T.Sb.AUTOMATED || n === T.Sb.DAILY,
+                      onError: r,
+                  })));
     }
     markDirty(e, t) {
         i()(!__OVERLAY__, "this cannot run in the overlay");
@@ -108,21 +112,24 @@ class N {
                 partial: !0,
                 local: !0,
             });
-        let a = t.delaySeconds ?? 0;
+        let s = t.delaySeconds ?? 0;
         if (
             (null != r.timeout &&
-                a < n.timeoutDelay &&
+                s < n.timeoutDelay &&
                 !n.rateLimited &&
                 (clearTimeout(r.timeout), (r.timeout = void 0)),
             null == r.timeout)
         ) {
-            let e = a * h.A.Millis.SECOND;
+            let e = s * h.A.Millis.SECOND;
             t.jitter && (e += Math.floor(Math.random() * Math.min(e, 30 * h.A.Millis.SECOND))),
                 this.logger.log("Scheduling save from markDirty"),
                 (r.timeout = setTimeout(this.persistChanges, e)),
-                (r.timeoutDelay = a);
+                (r.timeoutDelay = s);
         }
         null != t.cleanup && (r.cleanupFuncs = [...n.cleanupFuncs, ...t.cleanup]),
+            null == t.onError ||
+                n.errorCallbacks.includes(t.onError) ||
+                (r.errorCallbacks = [...n.errorCallbacks, t.onError]),
             null == n.protoToSave
                 ? (r.protoToSave = e)
                 : (r.protoToSave = (0, I.RK)(this.ProtoClass, n.protoToSave, e)),
@@ -141,8 +148,8 @@ class N {
             return void this.logger.log("Not persisting proto because there is nothing to change");
         try {
             this.saveLastSendTime();
-            let { body: n } = await a.Bo.patch({
-                url: y.Rsh.USER_SETTINGS_PROTO(this.type),
+            let { body: n } = await s.Bo.patch({
+                url: S.Rsh.USER_SETTINGS_PROTO(this.type),
                 body: { settings: t, required_data_version: e.offlineEditDataVersion },
                 rejectWithError: !1,
             });
@@ -164,9 +171,19 @@ class N {
                 isNaN(t) && (t = 60);
                 let n = setTimeout(this.persistChanges, Math.min(30 * h.A.Millis.SECOND, t * h.A.Millis.SECOND));
                 this.dispatchChanges({ rateLimited: !0, timeout: n });
-            } else if (400 === e.status && e.body?.code === y.t02.INVALID_USER_SETTINGS_DATA)
-                throw (this.logger.log("Reloading do to invalid data"), this.loadIfNecessary(!0), e);
-            else throw (this.logger.log("Unknown user settings error"), e);
+            } else if (400 === e.status && e.body?.code === S.t02.INVALID_USER_SETTINGS_DATA)
+                throw (
+                    (this.logger.log("Reloading do to invalid data"),
+                    this.getEditInfo().editInfo.errorCallbacks.forEach((e) => e()),
+                    this.loadIfNecessary(!0),
+                    e)
+                );
+            else
+                throw (
+                    (this.logger.log("Unknown user settings error"),
+                    this.getEditInfo().editInfo.errorCallbacks.forEach((e) => e()),
+                    e)
+                );
         }
     };
     dispatchChanges(e) {
@@ -177,7 +194,7 @@ class N {
         (e[this.type] = Date.now()), u.w.set(v, e);
     }
     loadIfUncached(e, t) {
-        (E.A.hasLoaded(e) && !0 !== t) || this.loadIfNecessary(t);
+        (g.A.hasLoaded(e) && !0 !== t) || this.loadIfNecessary(t);
     }
     async loadIfNecessary(e) {
         if (__OVERLAY__)
@@ -188,19 +205,19 @@ class N {
             try {
                 let {
                         body: { settings: t },
-                    } = await a.Bo.get({ url: y.Rsh.USER_SETTINGS_PROTO(this.type), rejectWithError: !1 }),
+                    } = await s.Bo.get({ url: S.Rsh.USER_SETTINGS_PROTO(this.type), rejectWithError: !1 }),
                     n = (0, I.ii)(this.ProtoClass, t);
                 if (null == n) return void this.dispatchChanges({ loading: !1, loaded: !0 });
-                let r = g.A[this.type],
-                    { proto: i, isDirty: s, cleanupFuncs: o } = (0, I.vI)(n, r);
+                let r = E.A[this.type],
+                    { proto: i, isDirty: a, cleanupFuncs: o } = (0, I.vI)(n, r);
                 return (
                     await c.h.dispatch({
                         type: "USER_SETTINGS_PROTO_UPDATE",
                         settings: { type: this.type, proto: n },
-                        resetEditInfo: s || e,
+                        resetEditInfo: a || e,
                         local: !1,
                     }),
-                    s && this.markDirtyFromMigration(i, o),
+                    a && this.markDirtyFromMigration(i, o),
                     n
                 );
             } catch (e) {
@@ -229,24 +246,24 @@ class N {
         i()(null != e.protoToSave, "protoToSave cannot be null"),
             i()(null != e.offlineEditDataVersion, "offlineEditDataVersion cannot be null"),
             i()(null == e.timeout, "timeout must not be set already");
-        let t = S + Math.floor(Math.random() * S),
+        let t = y + Math.floor(Math.random() * y),
             n = setTimeout(this.persistChanges, t);
         this.dispatchChanges({ timeout: n, timeoutDelay: t });
     }
 }
-let R = new N(l.nT, T.oD.PRELOADED_USER_SETTINGS),
-    O = new N(o.aw, T.oD.FRECENCY_AND_FAVORITES_SETTINGS),
-    D = { [T.oD.PRELOADED_USER_SETTINGS]: R, [T.oD.FRECENCY_AND_FAVORITES_SETTINGS]: O };
+let O = new R(l.nT, T.oD.PRELOADED_USER_SETTINGS),
+    b = new R(o.aw, T.oD.FRECENCY_AND_FAVORITES_SETTINGS),
+    D = { [T.oD.PRELOADED_USER_SETTINGS]: O, [T.oD.FRECENCY_AND_FAVORITES_SETTINGS]: b };
 function L(e, t, n) {
-    return R.updateAsync("guilds", (n) => (0, I.$o)(n, e, t), n);
+    return O.updateAsync("guilds", (n) => (0, I.$o)(n, e, t), n);
 }
 function w(e, t, n, r) {
     return L(e, (e) => (0, I.VB)(e, t, n), r);
 }
-function x(e) {
+function M(e) {
     return (
-        P(e),
-        R.updateAsync(
+        x(e),
+        O.updateAsync(
             "userContent",
             (t) => {
                 if ((0, m.c0)(t.dismissedContents, e)) return !1;
@@ -256,17 +273,17 @@ function x(e) {
         )
     );
 }
-function P(e) {
-    E.A.hasLoaded(T.oD.PRELOADED_USER_SETTINGS) ||
-        M(e) ||
-        p.default.track(y.HAw.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, { content_type: s.M[e] });
+function x(e) {
+    g.A.hasLoaded(T.oD.PRELOADED_USER_SETTINGS) ||
+        P(e) ||
+        p.default.track(S.HAw.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, { content_type: a.M[e] });
 }
-function M(e) {
-    let t = E.A.settings.userContent?.dismissedContents;
+function P(e) {
+    let t = g.A.settings.userContent?.dismissedContents;
     return null != t && (0, m.c0)(t, e);
 }
 async function k(e, t) {
-    return await R.updateAsync(
+    return await O.updateAsync(
         "userContent",
         (n) => {
             n.recurringDismissibleContentStates[e] = { ...n.recurringDismissibleContentStates[e], ...t };
@@ -284,7 +301,7 @@ async function U(e, t, n) {
     );
 }
 function G(e) {
-    return R.updateAsync(
+    return O.updateAsync(
         "userContent",
         (t) => {
             if (!(0, m.c0)(t.dismissedContents, e)) return !1;
@@ -293,11 +310,11 @@ function G(e) {
         T.Sb.INFREQUENT_USER_ACTION,
     );
 }
-function V(e) {
+function F(e) {
     return k(e, { lastDismissedVersion: 0, lastDismissedAtMs: "0", lastDismissedObjectId: "0", numTimesDismissed: 0 });
 }
-function F() {
-    return R.updateAsync(
+function V() {
+    return O.updateAsync(
         "userContent",
         (e) => {
             (e.dismissedContents = new Uint8Array()), (e.recurringDismissibleContentStates = {});
@@ -306,7 +323,7 @@ function F() {
     );
 }
 function B() {
-    return R.updateAsync(
+    return O.updateAsync(
         "userContent",
         (e) => {
             let t = new Uint8Array();

@@ -85,6 +85,7 @@ function E() {
         timeoutDelay: Number.MIN_SAFE_INTEGER,
         rateLimited: !1,
         cleanupFuncs: [],
+        errorCallbacks: [],
         loaded: !1,
         loading: !1,
         triggeredMigrations: !1,
