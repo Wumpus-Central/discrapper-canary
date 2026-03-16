@@ -25,27 +25,30 @@ var i = n(64700),
     L = n(818348);
 let O = 21552 == n.j ? [l.Ay, o.A, _.Ay, u.A, A.A, g.A, I.A, C.A, p.A, f.Ay, m.A, S.Ay] : null;
 function y() {
-    let e,
-        t = (function () {
-            let { hasAccess: e } = (0, d.TW)("FavoritesGuildChannelList"),
-                [t, n] = i.useState(() => R()),
-                r = i.useMemo(() => R({}), []);
-            return (
-                i.useEffect(() => {
-                    let e = a().throttle(() => n(R()), 100);
-                    return O.forEach((t) => t.addChangeListener(e)), () => O.forEach((t) => t.removeChangeListener(e));
-                }, []),
-                e ? t : r
-            );
-        })();
+    let e = (function () {
+        let { hasAccess: e } = (0, d.TW)("FavoritesGuildChannelList"),
+            [t, n] = i.useState(() => R()),
+            r = i.useMemo(() => R({}), []);
+        return (
+            i.useEffect(() => {
+                let e = a().throttle(() => n(R()), 100);
+                return O.forEach((t) => t.addChangeListener(e)), () => O.forEach((t) => t.removeChangeListener(e));
+            }, []),
+            e ? t : r
+        );
+    })();
     return {
-        guildChannels: t,
-        hasShownFavoritedChannels:
-            ((e = !1),
-            t.forEachShownChannel(() => {
-                e = !0;
-            }),
-            e),
+        guildChannels: e,
+        hasShownFavoritedChannels: (function (e) {
+            if (e.getSections().length > b.TF) return !0;
+            let t = !1;
+            return (
+                e.forEachShownChannel(() => {
+                    t = !0;
+                }),
+                t
+            );
+        })(e),
     };
 }
 function R(e) {
