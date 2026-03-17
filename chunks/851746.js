@@ -41,12 +41,12 @@ function C() {
         (_ = new Map()),
         (N = null);
 }
-let b = () => !0;
-function R(e) {
+let R = () => !0;
+function O(e) {
     let {} = e;
     (v = null), (f = !0);
 }
-function O(e) {
+function b(e) {
     let {
         referrals_remaining: t,
         sent_user_ids: n,
@@ -69,10 +69,10 @@ function w(e) {
     let { userTrialOffers: t } = e;
     for (let e of ((0, o.xM)(), t)) m.set(e.id, e), d.add(e.user_id);
 }
-function x(e) {
+function M(e) {
     p.add(e);
 }
-function M(e) {
+function x(e) {
     let { userTrialOffer: t } = e;
     null != t && (p.delete(t.id), h.add(t.id), m.set(t.id, t));
 }
@@ -90,12 +90,12 @@ function U(e) {
 }
 function G(e) {
     let { userTrialOfferId: t } = e;
-    f || (0, o.xM)(), p.has(t) || (x(t), s.h.wait(() => (0, o.kZ)(t).catch(l.FXj)));
+    f || (0, o.xM)(), p.has(t) || (M(t), s.h.wait(() => (0, o.kZ)(t).catch(l.FXj)));
 }
 function F(e) {
     let t = e.type === r.l.PREMIUM_REFERRAL ? e.content : null;
     if (null == t) return !1;
-    h.has(t) || p.has(t) || (x(t), s.h.wait(() => (0, o.kZ)(t).catch(l.FXj)));
+    h.has(t) || p.has(t) || (M(t), s.h.wait(() => (0, o.kZ)(t).catch(l.FXj)));
 }
 function V() {
     I = !0;
@@ -110,13 +110,14 @@ function H() {
 class j extends i.Ay.Store {
     static displayName = "ReferralTrialStore";
     initialize() {
-        this.waitFor(a.default), this.syncWith([a.default], b);
+        this.waitFor(a.default), this.syncWith([a.default], R);
     }
     checkAndFetchReferralsRemaining() {
         null == c && !f && E < u && (null == g || g < Date.now()) && (0, o.xM)();
     }
     getReferralsRemaining() {
-        return this.checkAndFetchReferralsRemaining(), c;
+        let { bypassFetch: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        return e || this.checkAndFetchReferralsRemaining(), c;
     }
     getSentUserIds() {
         return this.checkAndFetchReferralsRemaining(), Array.from(d.values());
@@ -160,12 +161,12 @@ class j extends i.Ay.Store {
 }
 let Y = new j(s.h, {
     BILLING_REFERRAL_TRIAL_OFFER_UPDATE: G,
-    BILLING_REFERRALS_REMAINING_FETCH_START: R,
-    BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: O,
+    BILLING_REFERRALS_REMAINING_FETCH_START: O,
+    BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: b,
     BILLING_REFERRALS_REMAINING_FETCH_FAIL: D,
     BILLING_CREATE_REFERRAL_SUCCESS: L,
     CREATE_REFERRALS_SUCCESS: w,
-    BILLING_REFERRAL_RESOLVE_SUCCESS: M,
+    BILLING_REFERRAL_RESOLVE_SUCCESS: x,
     BILLING_REFERRAL_RESOLVE_FAIL: P,
     REFERRALS_FETCH_ELIGIBLE_USER_START: V,
     REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: B,
