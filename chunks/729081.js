@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => L });
+n.d(t, { A: () => M });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -13,142 +13,144 @@ var i = n(627968),
     A = n(313961),
     m = n(246356),
     p = n(178213),
-    g = n(594832),
-    _ = n(290863),
-    f = n(954571),
-    x = n(403362),
-    C = n(871123),
-    E = n(79871),
-    I = n(592356),
-    N = n(568751),
-    b = n(620406),
-    S = n(84511),
-    T = n(188275),
-    v = n(652215),
-    y = n(806931),
-    j = n(985018),
-    R = n(430071);
-let O = `vc-gifting-${(0, o.A)()}`;
-function L(e) {
-    let { isHovered: t, closePopout: n, onMouseEnter: l, onMouseLeave: o, channel: L } = e;
+    g = n(332772),
+    _ = n(594832),
+    f = n(290863),
+    x = n(954571),
+    C = n(403362),
+    E = n(871123),
+    I = n(79871),
+    N = n(592356),
+    b = n(568751),
+    S = n(620406),
+    T = n(84511),
+    v = n(188275),
+    y = n(652215),
+    j = n(806931),
+    R = n(985018),
+    O = n(877409);
+let L = `vc-gifting-${(0, o.A)()}`;
+function M(e) {
+    let { isHovered: t, closePopout: n, onMouseEnter: l, onMouseLeave: o, channel: M } = e;
     s.useEffect(() => {
         t || n();
     }, [n, t]);
-    let M = (0, p.GG)("social_layer_storefront_gifting_mini_shelf"),
-        D = (0, d.bG)([u.A], () => u.A.getApplication(T.XR)),
-        [G] = (0, d.bG)(
+    let D = (0, p.GG)("social_layer_storefront_gifting_mini_shelf");
+    (0, g.T)({ location: "social_layer_storefront_gifting_mini_shelf" });
+    let G = (0, d.bG)([u.A], () => u.A.getApplication(v.XR)),
+        [U] = (0, d.bG)(
             [A.A],
-            () => (null != L.id ? [A.A.getParticipants(L.id), A.A.getParticipantsVersion(L.id)] : [[], 0]),
-            [L.id],
+            () => (null != M.id ? [A.A.getParticipants(M.id), A.A.getParticipantsVersion(M.id)] : [[], 0]),
+            [M.id],
             h.hS,
         ),
-        U = (0, d.yK)([_.A], () => {
+        P = (0, d.yK)([f.A], () => {
             let e = new Set();
-            for (let t of G)
-                if ((0, y.Xw)(t) || (0, y.Ay)(t)) {
-                    for (let n of _.A.getActivities(t.user.id))
+            for (let t of U)
+                if ((0, j.Xw)(t) || (0, j.Ay)(t)) {
+                    for (let n of f.A.getActivities(t.user.id))
                         if (
-                            n.application_id === D?.id ||
-                            D?.linkedGames?.some((e) => e.id === n.application_id) === !0
+                            n.application_id === G?.id ||
+                            G?.linkedGames?.some((e) => e.id === n.application_id) === !0
                         ) {
                             e.add(t.user.id);
                             break;
                         }
                 }
             return Array.from(e).sort();
-        }, [G, D]),
-        P = s.useMemo(() => {
-            let e = G.map((e) => ((0, y.Xw)(e) || (0, y.Ay)(e) ? e.user.id : null)).filter(x.Vq);
-            return (0, a.uniq)([...U, ...e]);
-        }, [G, U]),
+        }, [U, G]),
+        w = s.useMemo(() => {
+            let e = U.map((e) => ((0, j.Xw)(e) || (0, j.Ay)(e) ? e.user.id : null)).filter(C.Vq);
+            return (0, a.uniq)([...P, ...e]);
+        }, [U, P]),
         {
-            state: w,
-            recommendations: k,
-            skuIdToUserIdsReasons: V,
-        } = (0, I.A)({ applicationId: T.XR, numWishlistItems: I.o, userIds: P, includeWishlists: !0 }),
-        B = s.useMemo(() => {
-            let e = new Set(P),
-                { hasWishlist: t, hasPopular: n } = (0, C.wH)(k, V, e),
+            state: k,
+            recommendations: V,
+            skuIdToUserIdsReasons: B,
+        } = (0, N.A)({ applicationId: v.XR, numWishlistItems: N.o, userIds: w, includeWishlists: !0 }),
+        H = s.useMemo(() => {
+            let e = new Set(w),
+                { hasWishlist: t, hasPopular: n } = (0, E.wH)(V, B, e),
                 s = t && n;
-            return k.map((t) => {
+            return V.map((t) => {
                 let n =
-                    V[t.skuId]
-                        ?.filter((t) => t.reason === E.G.WISHLIST && e.has(t.userId))
+                    B[t.skuId]
+                        ?.filter((t) => t.reason === I.G.WISHLIST && e.has(t.userId))
                         .map((e) => e.userId)
-                        .filter(x.Vq) ?? [];
-                return M
+                        .filter(C.Vq) ?? [];
+                return D
                     ? (0, i.jsx)(
-                          N.A,
+                          b.A,
                           {
                               sku: t.sku,
-                              source: n.length > 0 ? g.uS.WISHLIST : g.uS.POPULAR,
-                              application: D,
-                              guildId: L.guild_id,
-                              channelId: L.id,
+                              source: n.length > 0 ? _.uS.WISHLIST : _.uS.POPULAR,
+                              application: G,
+                              guildId: M.guild_id,
+                              channelId: M.id,
                               showIcons: s,
-                              userIdsForGifting: P,
+                              userIdsForGifting: w,
                               userIdsForRecommendation: n,
                           },
                           t.skuId,
                       )
                     : (0, i.jsx)(
-                          b.A,
+                          S.A,
                           {
-                              variant: n.length > 0 ? b.$.WISHLIST : b.$.POPULAR,
+                              variant: n.length > 0 ? S.$.WISHLIST : S.$.POPULAR,
                               wishlistItem: t,
                               userIdsForRecommendation: n,
-                              userIdsForGifting: P,
-                              guildId: L.guild_id,
-                              channelId: L.id,
-                              contextContainerClassName: R.RL,
+                              userIdsForGifting: w,
+                              guildId: M.guild_id,
+                              channelId: M.id,
+                              contextContainerClassName: O.RL,
                           },
                           t.skuId,
                       );
             });
-        }, [L.guild_id, L.id, k, V, P, M, D]);
+        }, [M.guild_id, M.id, V, B, w, D, G]);
     return (
         s.useEffect(() => {
-            0 !== k.length &&
-                f.default.track(v.HAw.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED, {
-                    guild_id: L.guild_id,
-                    channel_id: L.id,
-                    sku_ids: k.map((e) => e.skuId),
+            0 !== V.length &&
+                x.default.track(y.HAw.COMMERCE_SHOP_VC_GIFT_BUTTON_VIEWED, {
+                    guild_id: M.guild_id,
+                    channel_id: M.id,
+                    sku_ids: V.map((e) => e.skuId),
                 });
-        }, [L.id, L.guild_id, k]),
+        }, [M.id, M.guild_id, V]),
         (0, i.jsx)(m.A, {
             children: (0, i.jsx)(c.lGe, {
-                "aria-labelledby": O,
+                "aria-labelledby": L,
                 modal: !1,
                 children: (0, i.jsxs)("div", {
-                    className: R.kL,
+                    className: O.kL,
                     onMouseEnter: l,
                     onMouseLeave: o,
                     children: [
                         (0, i.jsx)("div", {
-                            className: R.wx,
+                            className: O.wx,
                             children: (0, i.jsxs)("div", {
                                 children: [
                                     (0, i.jsx)(c.DZT, {
-                                        className: R.DD,
+                                        className: O.DD,
                                         variant: "text-lg/bold",
                                         color: "text-strong",
-                                        children: j.intl.string(j.t.xLP3bi),
+                                        children: R.intl.string(R.t.xLP3bi),
                                     }),
                                     (0, i.jsx)(c.EYj, {
                                         variant: "text-sm/medium",
                                         color: "text-subtle",
-                                        children: j.intl.format(j.t["+SqhBF"], {
-                                            applicationName: D?.name ?? j.intl.string(j.t["/1hhto"]),
+                                        children: R.intl.format(R.t["+SqhBF"], {
+                                            applicationName: G?.name ?? R.intl.string(R.t["/1hhto"]),
                                         }),
                                     }),
                                 ],
                             }),
                         }),
                         (0, i.jsx)("div", {
-                            className: r()(R.Xb, { [R.Im]: M }),
-                            children: "loading" === w || 0 === k.length ? (0, i.jsx)(c.y$y, { className: R.Lq }) : B,
+                            className: r()(O.Xb, { [O.Im]: D }),
+                            children: "loading" === k || 0 === V.length ? (0, i.jsx)(c.y$y, { className: O.Lq }) : H,
                         }),
-                        (0, i.jsx)(S.A, { location: "social_layer_gifting_mini_shelf", className: R.Ij }),
+                        (0, i.jsx)(T.A, { location: "social_layer_gifting_mini_shelf", className: O.Ij }),
                     ],
                 }),
             }),

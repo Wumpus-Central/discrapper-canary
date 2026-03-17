@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => N });
+n.d(t, { A: () => C });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -8,120 +8,122 @@ var r = n(627968),
     l = n(429913),
     u = n(798048),
     c = n(178213),
-    d = n(594832),
-    _ = n(954571),
-    f = n(403362),
-    p = n(871123),
-    h = n(79871),
-    m = n(453774),
-    E = n(592356),
-    g = n(568751),
-    A = n(620406),
-    I = n(84511),
-    T = n(652215),
-    S = n(360469),
-    y = n(985018),
-    v = n(809519);
-function N(e) {
+    d = n(332772),
+    _ = n(594832),
+    f = n(954571),
+    p = n(403362),
+    h = n(871123),
+    m = n(79871),
+    E = n(453774),
+    g = n(592356),
+    A = n(568751),
+    I = n(620406),
+    T = n(84511),
+    S = n(652215),
+    y = n(360469),
+    v = n(985018),
+    N = n(809519);
+function C(e) {
     let {
             className: t,
             rewardOfferNoticeClassName: n,
             applicationId: s,
-            userIds: N,
-            cardSize: C = u.Y.SMALL,
-            location: R,
-            guildId: O,
-            channelId: b,
-            numWishlistItems: D = 2,
-            cardSpec: L,
+            userIds: C,
+            cardSize: R = u.Y.SMALL,
+            location: O,
+            guildId: b,
+            channelId: D,
+            numWishlistItems: L = 2,
+            cardSpec: w,
         } = e,
-        w = (0, l.h)(s),
-        M = (0, m.A)(w),
-        x = (0, c.GG)("social_layer_storefront_gifting_breadcrumb"),
-        P = i.useMemo(() => {
-            if (x) return null;
-            let e = null != M ? M.getIconURL(S.iu.SMALL) : void 0;
-            return null != e ? (0, r.jsx)("img", { className: v.In, src: e, alt: "" }) : void 0;
-        }, [M, x]),
+        M = (0, l.h)(s),
+        x = (0, E.A)(M),
+        P = (0, c.GG)("social_layer_storefront_gifting_breadcrumb");
+    (0, d.T)({ location: "social_layer_storefront_gifting_breadcrumb" });
+    let k = i.useMemo(() => {
+            if (P) return null;
+            let e = null != x ? x.getIconURL(y.iu.SMALL) : void 0;
+            return null != e ? (0, r.jsx)("img", { className: N.In, src: e, alt: "" }) : void 0;
+        }, [x, P]),
         {
-            state: k,
-            recommendations: U,
-            skuIdToUserIdsReasons: G,
-        } = (0, E.A)({ applicationId: M?.id, numWishlistItems: D, includeWishlists: !0, userIds: N }),
-        F = i.useMemo(() => new Set(N), [N]),
-        { hasWishlist: V, hasPopular: B } = i.useMemo(() => (0, p.wH)(U, G, F), [U, G, F]),
-        H = i.useMemo(() => {
-            let e = V && !B && 1 === N.length,
-                t = V && B;
-            return U.map((n) => {
+            state: U,
+            recommendations: G,
+            skuIdToUserIdsReasons: F,
+        } = (0, g.A)({ applicationId: x?.id, numWishlistItems: L, includeWishlists: !0, userIds: C }),
+        V = i.useMemo(() => new Set(C), [C]),
+        { hasWishlist: B, hasPopular: H } = i.useMemo(() => (0, h.wH)(G, F, V), [G, F, V]),
+        j = i.useMemo(() => {
+            let e = B && !H && 1 === C.length,
+                t = B && H;
+            return G.map((n) => {
                 let i =
-                    G[n.skuId]
-                        ?.filter((e) => e.reason === h.G.WISHLIST && F.has(e.userId))
+                    F[n.skuId]
+                        ?.filter((e) => e.reason === m.G.WISHLIST && V.has(e.userId))
                         .map((e) => e.userId)
-                        .filter(f.Vq) ?? [];
-                return x
+                        .filter(p.Vq) ?? [];
+                return P
                     ? (0, r.jsx)(
-                          g.A,
+                          A.A,
                           {
                               sku: n.sku,
-                              source: i.length > 0 ? d.uS.WISHLIST : d.uS.POPULAR,
-                              application: M,
+                              source: i.length > 0 ? _.uS.WISHLIST : _.uS.POPULAR,
+                              application: x,
                               showIcons: t,
-                              guildId: O,
-                              channelId: b,
-                              userIdsForGifting: N,
+                              guildId: b,
+                              channelId: D,
+                              userIdsForGifting: C,
                               userIdsForRecommendation: i,
-                              spec: L,
+                              spec: w,
                           },
                           n.sku.id,
                       )
                     : (0, r.jsx)(
-                          A.A,
+                          I.A,
                           {
-                              variant: e ? A.$.NO_ICON : i.length > 0 ? A.$.WISHLIST : A.$.POPULAR,
+                              variant: e ? I.$.NO_ICON : i.length > 0 ? I.$.WISHLIST : I.$.POPULAR,
                               userIdsForRecommendation: i,
-                              userIdsForGifting: N,
+                              userIdsForGifting: C,
                               wishlistItem: n,
-                              guildId: O,
-                              channelId: b,
-                              cardSize: C,
-                              contextContainerClassName: v.RL,
+                              guildId: b,
+                              channelId: D,
+                              cardSize: R,
+                              contextContainerClassName: N.RL,
                           },
                           n.skuId,
                       );
             });
-        }, [C, b, O, x, U, G, V, B, N, M, F, L]);
+        }, [R, D, b, P, G, F, B, H, C, x, V, w]);
     i.useEffect(() => {
-        0 !== U.length &&
-            _.default.track(T.HAw.COMMERCE_SHOP_GIFTING_BREADCRUMB_VIEWED, {
-                guild_id: O,
-                channel_id: b,
-                sku_ids: U.map((e) => e.skuId),
-                location: R,
+        0 !== G.length &&
+            f.default.track(S.HAw.COMMERCE_SHOP_GIFTING_BREADCRUMB_VIEWED, {
+                guild_id: b,
+                channel_id: D,
+                sku_ids: G.map((e) => e.skuId),
+                location: O,
             });
-    }, [O, b, U, R]);
-    let j = "loading" === k || 0 === U.length;
-    return "error" === k && 0 === U.length
+    }, [b, D, G, O]);
+    let Y = "loading" === U || 0 === G.length;
+    return "error" === U && 0 === G.length
         ? null
         : (0, r.jsxs)("div", {
-              className: a()(v.kL, t),
+              className: a()(N.kL, t),
               children: [
                   (0, r.jsxs)("div", {
-                      className: v.wx,
+                      className: N.wx,
                       children: [
                           (0, r.jsx)(o.EYj, {
                               variant: "text-xs/medium",
                               color: "text-muted",
-                              children: V && !B ? y.intl.string(y.t["7lZ31J"]) : y.intl.string(y.t.BCi1gT),
+                              children: B && !H ? v.intl.string(v.t["7lZ31J"]) : v.intl.string(v.t.BCi1gT),
                           }),
-                          null != P ? P : null,
+                          null != k ? k : null,
                       ],
                   }),
                   (0, r.jsx)("div", {
-                      className: v.ld,
-                      children: j ? (0, r.jsx)(o.y$y, { type: o.y$y.Type.SPINNING_CIRCLE, className: v.u1 }) : H,
+                      className: N.ld,
+                      children: Y ? (0, r.jsx)(o.y$y, { type: o.y$y.Type.SPINNING_CIRCLE, className: N.u1 }) : j,
                   }),
-                  !j && U.length > 0 && (0, r.jsx)(I.A, { location: R, className: n }),
+                  !Y && G.length > 0 && (0, r.jsx)(T.A, { location: O, className: n }),
               ],
           });
 }
