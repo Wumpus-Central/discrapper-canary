@@ -1,67 +1,84 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => _ });
 var i = n(627968),
+    l = n(64700),
     r = n(503698),
-    l = n.n(r),
-    a = n(397927),
-    s = n(486020),
-    o = n(558770);
-function d(e) {
-    let { className: t, voiceStates: n, guildId: r } = e,
-        d = n.length <= 4 ? n : n.slice(0, 3),
-        c = Math.max(0, n.length - 4),
-        u = d.length + +(c > 0);
-    return (0, i.jsxs)("div", {
-        className: l()(o.gg, t),
-        "data-count": u,
-        "aria-hidden": !0,
-        children: [
-            d.map((e, t) => {
-                var n;
-                return (0, i.jsx)(
-                    "div",
-                    {
-                        className: o.my,
-                        children: (0, i.jsx)(
-                            a.euF,
-                            {
-                                src:
-                                    ((n = 0 === t ? 80 : 56),
-                                    (null != e.member ? (0, s.xT)(e.member) : null) ?? e.user.getAvatarURL(r, n)),
-                                size:
-                                    1 === u
-                                        ? a._3J.SIZE_80
-                                        : 2 === u && 0 === t
-                                          ? a._3J.DEPRECATED_SIZE_60
-                                          : 2 === u && 1 === t
-                                            ? a._3J.SIZE_40
-                                            : u > 2 && 0 === t
-                                              ? a._3J.DEPRECATED_SIZE_60
-                                              : u > 2 && 1 === t
-                                                ? a._3J.SIZE_48
-                                                : u > 2
-                                                  ? a._3J.SIZE_40
-                                                  : a._3J.SIZE_48,
-                                "aria-hidden": !0,
-                            },
-                            e.user.id,
-                        ),
-                    },
-                    e.user.id,
-                );
-            }),
-            c > 0 &&
-                (0, i.jsx)(
-                    "div",
-                    {
-                        className: o.k2,
-                        children: (0, i.jsx)(a.Text, {
-                            variant: "text-sm/semibold",
-                            color: "text-default",
-                            children: c > 99 ? ">99" : `+${c}`,
-                        }),
-                    },
-                    "overflow",
-                ),
-        ],
-    });
+    a = n.n(r),
+    s = n(497766),
+    o = n(397927),
+    d = n(486020),
+    c = n(558770);
+let u = { mass: 1, tension: 170, friction: 26 };
+function _(e) {
+    let { className: t, voiceStates: n, guildId: r, ref: _, motion: m } = e,
+        h = n.length > 4,
+        p = h ? n.slice(0, 3) : n,
+        g = Math.max(0, n.length - 4 + 1),
+        A = p.length + +(g > 0),
+        x = (m?.percentX ?? 0) * 6,
+        f = (m?.percentY ?? 0) * 6,
+        C = 1 + ((m?.proximity ?? 0) / 2) * 0.08,
+        [I, E] = (0, o.zhh)(() => ({ x: 0, y: 0, scale: 1, config: u }));
+    return (
+        l.useEffect(() => {
+            E({ x: x, y: f, scale: C });
+        }, [x, f, C, E]),
+        (0, i.jsxs)(s.animated.div, {
+            ref: _,
+            className: a()(c.gg, t),
+            "data-count": A,
+            "aria-hidden": !0,
+            style: {
+                transform: (0, s.to)([I.x, I.y, I.scale], (e, t, n) => `translate3d(${e}px, ${t}px, 0) scale(${n})`),
+            },
+            children: [
+                p.map((e, t) => {
+                    var n;
+                    return (0, i.jsx)(
+                        "div",
+                        {
+                            className: c.my,
+                            children: (0, i.jsx)(
+                                o.euF,
+                                {
+                                    src:
+                                        ((n = 0 === t ? 80 : 56),
+                                        (null != e.member ? (0, d.xT)(e.member) : null) ?? e.user.getAvatarURL(r, n)),
+                                    size:
+                                        1 === A
+                                            ? o._3J.SIZE_80
+                                            : 2 === A && 0 === t
+                                              ? o._3J.DEPRECATED_SIZE_60
+                                              : 2 === A && 1 === t
+                                                ? o._3J.SIZE_40
+                                                : A > 2 && 0 === t
+                                                  ? o._3J.DEPRECATED_SIZE_60
+                                                  : A > 2 && 1 === t
+                                                    ? o._3J.SIZE_48
+                                                    : A > 2
+                                                      ? o._3J.SIZE_40
+                                                      : o._3J.SIZE_48,
+                                    "aria-hidden": !0,
+                                },
+                                e.user.id,
+                            ),
+                        },
+                        e.user.id,
+                    );
+                }),
+                h &&
+                    (0, i.jsx)(
+                        "div",
+                        {
+                            className: c.k2,
+                            children: (0, i.jsx)(o.Text, {
+                                variant: "text-sm/semibold",
+                                color: "text-default",
+                                children: g > 99 ? ">99" : `+${g}`,
+                            }),
+                        },
+                        "overflow",
+                    ),
+            ],
+        })
+    );
 }

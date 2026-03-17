@@ -1,173 +1,208 @@
-n.d(t, { A: () => w });
+n.d(t, { A: () => U });
 var i = n(627968),
-    r = n(64700),
-    l = n(503698),
-    a = n.n(l),
+    l = n(64700),
+    r = n(503698),
+    a = n.n(r),
     s = n(284009),
     o = n.n(s),
-    d = n(311907),
-    c = n(397927),
-    u = n(846293),
-    _ = n(956793),
-    m = n(401843),
-    h = n(104171),
-    p = n(793574),
-    g = n(688810),
-    A = n(450149),
-    x = n(290331),
-    f = n(21119),
-    C = n(95701),
-    I = n(734057),
-    E = n(696451),
-    v = n(71393),
-    b = n(576705),
-    T = n(607567),
-    S = n(860689),
-    y = n(422844),
-    N = n(72951),
-    j = n(453178),
-    L = n(182912),
-    R = n(341678),
-    P = n(652215),
-    M = n(985018),
-    D = n(519934);
-function w(e) {
+    d = n(735438),
+    c = n.n(d),
+    u = n(311907),
+    _ = n(397927),
+    m = n(846293),
+    h = n(956793),
+    p = n(401843),
+    g = n(775602),
+    A = n(104171),
+    x = n(793574),
+    f = n(688810),
+    C = n(450149),
+    I = n(290331),
+    E = n(21119),
+    v = n(95701),
+    b = n(734057),
+    T = n(696451),
+    S = n(71393),
+    y = n(576705),
+    N = n(607567),
+    j = n(860689),
+    L = n(422844),
+    R = n(72951),
+    P = n(453178),
+    M = n(182912),
+    D = n(341678),
+    w = n(652215),
+    O = n(985018),
+    k = n(519934);
+function U(e) {
     let {
             invite: t,
             currentUserId: n,
-            message: l,
+            message: r,
             guild: s,
-            onTransitionToInviteChannel: A,
-            onAcceptInstantInvite: w,
+            onTransitionToInviteChannel: d,
+            onAcceptInstantInvite: C,
         } = e,
-        k = (0, y.xR)("VoiceInviteEmbed"),
-        U = s ?? null;
-    null == U && null != t.guild && (U = S.DY(t.guild));
-    let G = null != t.channel ? (0, C.OY)(t.channel) : null;
-    o()(null != U, "Voice Invite Embed must be used in context of a guild."),
-        o()(null != G, "Voice Invite Embed must be able to resolve an invite channel.");
-    let B = (0, d.bG)([b.A, I.A], () => {
-            let e = I.A.getChannel(G.id);
-            return null == e || b.A.canBasicChannel(P.hVb.VIEW_CHANNEL, e);
-        }, [G.id]),
-        F = (0, d.bG)([T.Ay], () => (B ? T.Ay.getVoiceStatesForChannelAlt(G.id, U.id) : []), [G.id, U.id, B]),
-        { label: H, sublabel: V } = (function (e) {
+        U = (0, L.xR)("VoiceInviteEmbed"),
+        G = s ?? null;
+    null == G && null != t.guild && (G = j.DY(t.guild));
+    let F = null != t.channel ? (0, v.OY)(t.channel) : null;
+    o()(null != G, "Voice Invite Embed must be used in context of a guild."),
+        o()(null != F, "Voice Invite Embed must be able to resolve an invite channel.");
+    let H = (0, u.bG)([y.A, b.A], () => {
+            let e = b.A.getChannel(F.id);
+            return null == e || y.A.canBasicChannel(w.hVb.VIEW_CHANNEL, e);
+        }, [F.id]),
+        V = (0, u.bG)([N.Ay], () => (H ? N.Ay.getVoiceStatesForChannelAlt(F.id, G.id) : []), [F.id, G.id, H]),
+        { label: W, sublabel: q } = (function (e) {
             let { currentUserId: t, author: n, voiceStates: i } = e,
-                r = n.id === t,
-                l = i.length > 0,
+                l = n.id === t,
+                r = i.length > 0,
                 a = i.some((e) => e.user?.id === n.id),
                 s = i.length - !!a;
-            return l
-                ? r
+            return r
+                ? l
                     ? {
                           label: a
-                              ? M.intl.format(M.t["2RWMFV"], { othersCount: s })
-                              : M.intl.format(M.t.IWXzHV, { othersCount: s }),
+                              ? O.intl.format(O.t["2RWMFV"], { othersCount: s })
+                              : O.intl.format(O.t.IWXzHV, { othersCount: s }),
                       }
                     : {
                           label: a
-                              ? M.intl.format(M.t.Da7tZx, { othersCount: s })
-                              : M.intl.format(M.t["3VbQvv"], { othersCount: s }),
+                              ? O.intl.format(O.t.Da7tZx, { othersCount: s })
+                              : O.intl.format(O.t["3VbQvv"], { othersCount: s }),
                       }
                 : {
-                      label: r ? M.intl.string(M.t.DVDvCD) : M.intl.string(M.t.TY77rq),
-                      sublabel: M.intl.string(M.t.wM2WTM),
+                      label: l ? O.intl.string(O.t.DVDvCD) : O.intl.string(O.t.TY77rq),
+                      sublabel: O.intl.string(O.t.wM2WTM),
                   };
-        })({ currentUserId: n, author: l.author, voiceStates: F }),
-        W = (0, d.bG)([v.A], () => null != v.A.getGuild(U.id), [U.id]),
-        q = (0, d.bG)([E.Ay], () => x.A.canAcceptInvite([E.Ay], t), [t]),
-        Y = t.state === P.elq.ACCEPTING,
-        { analyticsLocations: z } = (0, g.Ay)(p.A.INVITE_EMBED),
-        Q = r.useCallback(() => {
-            let e = W ? "transition" : "accept";
-            W ? A() : w(), (0, u.he)({ invite: t, action: e, inviter_id: l.author.id, invite_message_id: l.id }, z);
-        }, [t, l, z, W, A, w]),
-        K = (0, R.A)({ invite: t, message: l, voiceStates: F, guildId: U.id, channelId: G.id }),
-        J = k.activityPreviewEnabled && null != K,
-        X = r.useCallback(() => {
-            null != K &&
-                (W ? (_.default.selectVoiceChannel(K.channelId), (0, m.Nl)(K)) : w(),
-                (0, u.he)(
-                    { invite: t, action: W ? "watch" : "accept", inviter_id: l.author.id, invite_message_id: l.id },
-                    z,
+        })({ currentUserId: n, author: r.author, voiceStates: V }),
+        Y = (0, u.bG)([S.A], () => null != S.A.getGuild(G.id), [G.id]),
+        z = (0, u.bG)([T.Ay], () => I.A.canAcceptInvite([T.Ay], t), [t]),
+        Q = t.state === w.elq.ACCEPTING,
+        { analyticsLocations: K } = (0, f.Ay)(x.A.INVITE_EMBED),
+        J = l.useCallback(() => {
+            let e = Y ? "transition" : "accept";
+            Y ? d() : C(), (0, m.he)({ invite: t, action: e, inviter_id: r.author.id, invite_message_id: r.id }, K);
+        }, [t, r, K, Y, d, C]),
+        X = (0, D.A)({ invite: t, message: r, voiceStates: V, guildId: G.id, channelId: F.id }),
+        Z = U.activityPreviewEnabled && null != X,
+        $ = l.useCallback(() => {
+            null != X &&
+                (Y ? (h.default.selectVoiceChannel(X.channelId), (0, p.Nl)(X)) : C(),
+                (0, m.he)(
+                    { invite: t, action: Y ? "watch" : "accept", inviter_id: r.author.id, invite_message_id: r.id },
+                    K,
                 ));
-        }, [K, W, t, l, z, w]),
-        Z = (0, d.bG)([f.A], () => {
-            let e = l.author.id,
-                t = F.map((e) => e.user),
+        }, [X, Y, t, r, K, C]),
+        ee = (0, u.bG)([g.A], () => g.A.useReducedMotion),
+        et = l.useRef(null),
+        en = l.useRef(null),
+        [ei, el] = l.useState({ percentX: 0, percentY: 0, proximity: 0 }),
+        er = l.useMemo(() => c().throttle(el, 20), [el]);
+    l.useEffect(() => () => er.cancel(), [er]);
+    let ea = l.useCallback(
+            (e) => {
+                if (ee) return;
+                let t = et.current?.getBoundingClientRect();
+                if (null == t) return;
+                let n = ((e.clientX - t.left) / t.width) * 2 - 1,
+                    i = ((e.clientY - t.top) / t.height) * 2 - 1,
+                    l = 0,
+                    r = en.current?.getBoundingClientRect();
+                if (null != r) {
+                    let n = r.left + r.width / 2,
+                        i = r.top + r.height / 2,
+                        a = e.clientX - n,
+                        s = e.clientY - i;
+                    l = 2 * Math.exp(-Math.sqrt(a * a + s * s) / (0.2 * Math.sqrt(t.width ** 2 + t.height ** 2)));
+                }
+                er({ percentX: n, percentY: i, proximity: l });
+            },
+            [ee, er],
+        ),
+        es = l.useCallback(() => {
+            er.cancel(), el({ percentX: 0, percentY: 0, proximity: 0 });
+        }, [er]),
+        eo = (0, u.bG)([E.A], () => {
+            let e = r.author.id,
+                t = V.map((e) => e.user),
                 n = t.find((t) => t.id === e),
                 i = t
                     .filter((t) => t.id !== e)
                     .sort((e, t) => {
-                        let n = f.A.getUserAffinity(e.id)?.vcProbability ?? 0;
-                        return (f.A.getUserAffinity(t.id)?.vcProbability ?? 0) - n;
+                        let n = E.A.getUserAffinity(e.id)?.vcProbability ?? 0;
+                        return (E.A.getUserAffinity(t.id)?.vcProbability ?? 0) - n;
                     });
             return null != n ? [n, ...i] : i;
-        }, [F, l.author.id]);
+        }, [V, r.author.id]);
     return (0, i.jsxs)("div", {
-        className: a()(D.kL, { [D.VD]: J }),
+        ref: et,
+        className: a()(k.kL, { [k.VD]: Z }),
+        onMouseMove: ea,
+        onMouseLeave: es,
         children: [
-            (0, i.jsx)("div", { className: D.ys }),
-            (0, i.jsx)("div", { className: D.r$, style: { "--custom-number-of-dots": 24 } }),
-            J ? (0, i.jsx)(O, { className: D.tB, stream: K }) : null,
+            (0, i.jsx)("div", { className: k.ys }),
+            (0, i.jsx)("div", { className: k.r$, style: { "--custom-number-of-dots": 24 } }),
+            Z ? (0, i.jsx)(B, { className: k.tB, stream: X }) : null,
             (0, i.jsxs)("div", {
-                className: D.rf,
+                className: k.rf,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: D.Qs,
+                        className: k.Qs,
                         children: [
-                            (0, i.jsx)(N.A, { channel: G, guild: U, onClick: A }),
+                            (0, i.jsx)(R.A, { channel: F, guild: G, onClick: d }),
                             (0, i.jsxs)("div", {
-                                className: D.WD,
+                                className: k.WD,
                                 children: [
-                                    J
-                                        ? (0, i.jsx)(h.Ay, {
-                                              className: D.WM,
+                                    Z
+                                        ? (0, i.jsx)(A.Ay, {
+                                              className: k.WM,
                                               showDefaultAvatarsForNullUsers: !0,
-                                              guildId: G.guild_id,
-                                              users: Z,
-                                              count: F.length,
+                                              guildId: F.guild_id,
+                                              users: eo,
+                                              count: V.length,
                                               max: 3,
                                           })
                                         : null,
-                                    (0, i.jsx)(c.Text, { variant: "text-md/medium", children: H }),
-                                    null != V
-                                        ? (0, i.jsx)(c.Text, {
+                                    (0, i.jsx)(_.Text, { variant: "text-md/medium", children: W }),
+                                    null != q
+                                        ? (0, i.jsx)(_.Text, {
                                               variant: "text-sm/normal",
-                                              className: D.$B,
-                                              children: V,
+                                              className: k.$B,
+                                              children: q,
                                           })
                                         : null,
                                 ],
                             }),
                         ],
                     }),
-                    J
-                        ? (0, i.jsx)(j.A, { stream: K, currentUserId: n, onClick: X, className: D.Rh })
-                        : (0, i.jsx)(L.A, { voiceStates: F, guildId: U.id }),
+                    Z
+                        ? (0, i.jsx)(P.A, { stream: X, currentUserId: n, onClick: $, className: k.Rh })
+                        : (0, i.jsx)(M.A, { voiceStates: V, guildId: G.id, ref: en, motion: ei }),
                 ],
             }),
             (0, i.jsx)("div", {
-                className: D.xk,
-                children: (0, i.jsx)(c.Button, {
-                    onClick: Q,
-                    loading: Y,
+                className: k.xk,
+                children: (0, i.jsx)(_.Button, {
+                    onClick: J,
+                    loading: Q,
                     variant: "active",
                     fullWidth: !0,
-                    disabled: !q,
-                    text: M.intl.string(M.t.gpqgah),
+                    disabled: !z,
+                    text: O.intl.string(O.t.gpqgah),
                 }),
             }),
         ],
     });
 }
-function O(e) {
+function B(e) {
     let { className: t, stream: n } = e,
-        { previewUrl: r, isLoading: l } = (0, A.A)(n.guildId, n.channelId, n.ownerId),
-        s = null != r && !l;
+        { previewUrl: l, isLoading: r } = (0, C.A)(n.guildId, n.channelId, n.ownerId),
+        s = null != l && !r;
     return (0, i.jsx)("div", {
-        className: a()(t, D.rr, { [D.pc]: !s }),
-        style: { "--custom-bg-url": s ? `url(${r})` : "unset" },
-        children: (0, i.jsx)("div", { className: D.bW }),
+        className: a()(t, k.rr, { [k.pc]: !s }),
+        style: { "--custom-bg-url": s ? `url(${l})` : "unset" },
+        children: (0, i.jsx)("div", { className: k.bW }),
     });
 }
