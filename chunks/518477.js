@@ -174,6 +174,7 @@ var a = (function (e) {
             (e.PRESS_SHOW_MORE_WIDGETS = "PRESS_SHOW_MORE_WIDGETS"),
             (e.COPY_AVATAR_IMAGE_LINK = "COPY_AVATAR_IMAGE_LINK"),
             (e.COPY_BANNER_IMAGE_LINK = "COPY_BANNER_IMAGE_LINK"),
+            (e.GIFT = "GIFT"),
             e
         );
     })({}),
