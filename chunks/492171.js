@@ -2,7 +2,7 @@ e.exports = {
     cG: "closeButtonContainer__62e7a",
     g3: "modalContainerV1__62e7a",
     se: "bannerV1__62e7a",
-    X$: "fixedContentWrapper__62e7a",
+    D7: "gradient__62e7a",
     qm: "contentWrapperV1__62e7a",
     rd: "contentWrapperV1Expanded__62e7a",
     i: "footerWrapperV1__62e7a",

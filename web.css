@@ -15048,6 +15048,10 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     position: relative
 }
 
+.extraGameItem__4e338.clickable__4e338 {
+    cursor: pointer
+}
+
 .extraGameIconImage__4e338 {
     position: absolute;
     z-index: 1
@@ -15093,6 +15097,30 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     align-items: center;
     display: flex;
     gap: 8px
+}
+
+.gameCoverArt__4e338 {
+    flex-shrink: 0;
+    height: 76px;
+    position: relative;
+    width: 56px
+}
+
+.gameCoverArtImage__4e338 {
+    border: 1px solid var(--border-muted);
+    border-radius: 4px;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.gameCoverArtActivityLevelInner__4e338 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    padding: 2px
 }
 
 @value traitMaxWidth: 268px;

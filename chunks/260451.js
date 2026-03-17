@@ -1,35 +1,41 @@
-i.d(t, { q: () => d, z: () => r });
-var l = i(64700),
-    n = i(945810),
-    s = i(449054),
-    a = i(652215);
-let r = (0, n.mj)({
-    name: "2026-02-silp-in-app-redesign",
-    kind: "user",
-    defaultConfig: { enabled: !1, treatment: void 0 },
-    variations: { 1: { enabled: !0, treatment: "v1" }, 2: { enabled: !0, treatment: "v2" } },
-});
-function d(e, t) {
-    let { enabled: i, treatment: n } = r.useConfig({ location: t }),
-        [d, c] = l.useState(null),
-        [o, u] = l.useState(!1),
-        m = i && null != e && e.features.has(a.GuildFeatures.DISCOVERABLE);
-    l.useEffect(() => {
-        if (!m || null == e) {
-            c(null), u(!1);
+n.d(t, { SH: () => o, qE: () => _, zQ: () => d });
+var i = n(64700),
+    l = n(945810),
+    a = n(449054),
+    r = n(652215);
+let d = (0, l.mj)({
+        name: "2026-02-silp-in-app-redesign",
+        kind: "user",
+        defaultConfig: { enabled: !1, treatment: void 0 },
+        variations: { 1: { enabled: !0, treatment: "v1" }, 2: { enabled: !0, treatment: "v2" } },
+    }),
+    o = (0, l.mj)({
+        name: "2026-03-silp-in-app-redesign-profile",
+        kind: "user",
+        defaultConfig: { enabled: !1, treatment: void 0 },
+        variations: { 1: { enabled: !0, treatment: "v1" }, 2: { enabled: !0, treatment: "v2" } },
+    });
+function _(e, t) {
+    let { enabled: n, treatment: l } = d.useConfig({ location: t }),
+        [o, _] = i.useState(null),
+        [u, s] = i.useState(!1),
+        c = n && null != e && e.features.has(r.GuildFeatures.DISCOVERABLE);
+    i.useEffect(() => {
+        if (!c || null == e) {
+            _(null), s(!1);
             return;
         }
-        u(!0);
+        s(!0);
         let t = !1;
         return (
-            (0, s.jm)(e.id).then((e) => {
-                t || (u(!1), null != e ? c(e.guild) : c(null));
+            (0, a.jm)(e.id).then((e) => {
+                t || (s(!1), null != e ? _(e.guild) : _(null));
             }),
             () => {
                 t = !0;
             }
         );
-    }, [m, e]);
-    let x = i && null != e && e.features.has(a.GuildFeatures.DISCOVERABLE) && d?.is_published === !0;
-    return { enabled: x, discoveryGuild: x ? d : null, treatment: n, isLoading: o };
+    }, [c, e]);
+    let f = n && null != e && e.features.has(r.GuildFeatures.DISCOVERABLE) && o?.is_published === !0;
+    return { enabled: f, discoveryGuild: f ? o : null, treatment: l, isLoading: u };
 }

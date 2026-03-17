@@ -2,8 +2,8 @@
 n.d(t, { w: () => m });
 var r = n(627968),
     i = n(64700),
-    a = n(503698),
-    s = n.n(a),
+    s = n(503698),
+    a = n.n(s),
     o = n(311907),
     l = n(397927),
     u = n(565645),
@@ -18,52 +18,52 @@ function p(e) {
     return (0, r.jsx)(u.A, { className: f.Pw, emojiId: t.id, emojiName: i, animated: t.animated, shouldAnimate: n });
 }
 function h(e) {
-    let { trait: t, ellipsize: n } = e,
-        a = i.useRef(null),
-        u = (0, d.M)(a),
-        _ = !(0, o.bG)([c.A], () => c.A.useReducedMotion) && u;
+    let { trait: t, ellipsize: n, traitColor: s } = e,
+        u = i.useRef(null),
+        _ = (0, d.M)(u),
+        h = !(0, o.bG)([c.A], () => c.A.useReducedMotion) && _;
     return null == t.label || t.label.length <= 0
         ? null
         : (0, r.jsxs)("div", {
-              ref: a,
-              className: s()(f.Bj, { [f.mc]: n }),
+              ref: u,
+              className: a()(f.Bj, { [f.mc]: n }),
               children: [
-                  (0, r.jsx)(p, { emoji: t.emoji, shouldAnimate: _ }),
+                  (0, r.jsx)(p, { emoji: t.emoji, shouldAnimate: h }),
                   (0, r.jsx)(l.Text, {
                       tag: "span",
                       className: n ? f.mc : void 0,
                       variant: "text-sm/normal",
-                      color: "text-default",
+                      color: s,
                       children: t.label,
                   }),
               ],
           });
 }
 function m(e) {
-    let { items: t } = e,
-        n = i.useCallback(
+    let { items: t, traitColor: n = "text-default" } = e,
+        s = i.useCallback(
             (e, t) =>
                 "string" == typeof e
                     ? (0, r.jsx)(
                           "div",
                           {
-                              className: s()(f.Bj, { [f.mc]: t.ellipsize }),
+                              className: a()(f.Bj, { [f.mc]: t.ellipsize }),
                               children: (0, r.jsx)(l.Text, {
                                   tag: "span",
                                   variant: "text-sm/normal",
-                                  color: "text-default",
+                                  color: n,
                                   children: e,
                               }),
                           },
                           "overflow",
                       )
-                    : (0, r.jsx)(h, { trait: e, ellipsize: t.ellipsize }, e.key),
-            [],
+                    : (0, r.jsx)(h, { trait: e, ellipsize: t.ellipsize, traitColor: n }, e.key),
+            [n],
         ),
-        a = i.useCallback((e) => n(e, { ellipsize: !0 }), [n]),
-        o = i.useCallback((e) => n(e, { ellipsize: !1 }), [n]),
-        u = i.useCallback((e) => (0, r.jsx)(l.g2v, { items: e, renderItem: o }), [o]);
+        o = i.useCallback((e) => s(e, { ellipsize: !0 }), [s]),
+        u = i.useCallback((e) => s(e, { ellipsize: !1 }), [s]),
+        c = i.useCallback((e) => (0, r.jsx)(l.g2v, { items: e, renderItem: u }), [u]);
     return 0 === t.length
         ? null
-        : (0, r.jsx)(l.ZVu, { className: f.kL, items: t, renderItem: a, renderOverflow: u, maxLines: 2, itemGapPx: 4 });
+        : (0, r.jsx)(l.ZVu, { className: f.kL, items: t, renderItem: o, renderOverflow: c, maxLines: 2, itemGapPx: 4 });
 }
