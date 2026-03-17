@@ -1,12 +1,19 @@
 "use strict";
-n.d(t, { $: () => s, w: () => a });
-var r = n(503278),
-    i = n(652215);
+n.d(t, { $: () => o, w: () => a });
+var r = n(311907),
+    i = n(71393),
+    s = n(652215);
 function a(e, t) {
-    let { enabled: n } = r.l.useExperiment({ guildId: e ?? i.dJq, location: t });
-    return n;
+    return (0, r.bG)([i.A], () => {
+        if (null == e) return !1;
+        let t = i.A.getGuild(e);
+        return (
+            null != t && (t.features.has(s.GuildFeatures.COMMUNITY) || t.features.has(s.GuildFeatures.GUILD_PRODUCTS))
+        );
+    }, [e]);
 }
-function s(e, t) {
-    let { enabled: n } = r.l.getCurrentConfig({ guildId: e ?? i.dJq, location: t });
-    return n;
+function o(e, t) {
+    if (null == e) return !1;
+    let n = i.A.getGuild(e);
+    return null != n && (n.features.has(s.GuildFeatures.COMMUNITY) || n.features.has(s.GuildFeatures.GUILD_PRODUCTS));
 }
