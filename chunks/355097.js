@@ -1,28 +1,48 @@
 "use strict";
 n.d(t, {
-    Eq: () => s,
-    O9: () => c,
-    PZ: () => i,
-    Sb: () => u,
-    W: () => h,
-    _F: () => a,
-    bf: () => l,
-    ko: () => _,
-    n3: () => p,
-    nR: () => r,
-    oD: () => o,
-    od: () => d,
-    vv: () => f,
+    Eq: () => l,
+    O9: () => f,
+    PZ: () => o,
+    Sb: () => _,
+    W: () => g,
+    Xx: () => r,
+    YP: () => s,
+    _A: () => i,
+    _F: () => u,
+    bf: () => d,
+    ko: () => h,
+    n3: () => E,
+    nR: () => a,
+    oD: () => c,
+    od: () => p,
+    vv: () => m,
 });
-let r = "ROLE_SUBSCRIPTIONS",
-    i = "APPLICATION_SUBSCRIPTION_SUBSECTION";
-var s = (function (e) {
+var r = (function (e) {
+        return (
+            (e[(e.MINUTES_15 = 900)] = "MINUTES_15"),
+            (e[(e.HOURS_1 = 3600)] = "HOURS_1"),
+            (e[(e.HOURS_3 = 10800)] = "HOURS_3"),
+            (e[(e.HOURS_8 = 28800)] = "HOURS_8"),
+            (e[(e.HOURS_24 = 86400)] = "HOURS_24"),
+            (e[(e.ALWAYS = -1)] = "ALWAYS"),
+            e
+        );
+    })({}),
+    i = (function (e) {
+        return (e.REDUCED_MOTION = "REDUCED_MOTION"), (e.REDUCED_MOTION_STICKERS = "REDUCED_MOTION_STICKERS"), e;
+    })({}),
+    s = (function (e) {
+        return (e.AUTO = "auto"), (e.COMPACT = "compact"), (e.COZY = "cozy"), e;
+    })({});
+let a = "ROLE_SUBSCRIPTIONS",
+    o = "APPLICATION_SUBSCRIPTION_SUBSECTION";
+var l = (function (e) {
         return (e.USER_PROFILE = "user_profile"), (e.GUILD = "guild"), e;
     })({}),
-    a = (function (e) {
+    u = (function (e) {
         return (e.TRY_IT_OUT = "try_it_out"), (e.GUILD_TAG = "guild_tag"), e;
     })({}),
-    o = (function (e) {
+    c = (function (e) {
         return (
             (e[(e.PRELOADED_USER_SETTINGS = 1)] = "PRELOADED_USER_SETTINGS"),
             (e[(e.FRECENCY_AND_FAVORITES_SETTINGS = 2)] = "FRECENCY_AND_FAVORITES_SETTINGS"),
@@ -30,7 +50,7 @@ var s = (function (e) {
             e
         );
     })({}),
-    l = (function (e) {
+    d = (function (e) {
         return (
             (e.USER_SETTINGS_PRIVACY_SAFETY = "user_settings_privacy_safety"),
             (e.USER_SETTINGS_ACTIVITY_PRIVACY = "user_settings_activity_privacy"),
@@ -38,7 +58,7 @@ var s = (function (e) {
             e
         );
     })({}),
-    u = (function (e) {
+    _ = (function (e) {
         return (
             (e[(e.INFREQUENT_USER_ACTION = 0)] = "INFREQUENT_USER_ACTION"),
             (e[(e.FREQUENT_USER_ACTION = 10)] = "FREQUENT_USER_ACTION"),
@@ -48,7 +68,7 @@ var s = (function (e) {
             e
         );
     })({});
-function c() {
+function f() {
     return {
         protoToSave: void 0,
         timeout: void 0,
@@ -62,7 +82,7 @@ function c() {
         offlineEditDataVersion: void 0,
     };
 }
-var d = (function (e) {
+var p = (function (e) {
         return (
             (e.ACCOUNT = "account"),
             (e.ACCOUNT_STANDING = "account-standing"),
@@ -106,7 +126,7 @@ var d = (function (e) {
             e
         );
     })({}),
-    _ = (function (e) {
+    h = (function (e) {
         return (
             (e[(e.CONFIRM_START = 0)] = "CONFIRM_START"),
             (e[(e.CONFIRM_CODE = 1)] = "CONFIRM_CODE"),
@@ -117,7 +137,7 @@ var d = (function (e) {
             e
         );
     })({});
-let f = {
+let m = {
         NEW_FORUM_THREADS_ON: 16384,
         NEW_FORUM_THREADS_OFF: 8192,
         OPT_IN_ENABLED: 4096,
@@ -125,12 +145,12 @@ let f = {
         UNREADS_ALL_MESSAGES: 1024,
         UNREADS_ONLY_MENTIONS: 512,
     },
-    p = {
+    E = {
         OPT_IN_CHANNELS_ON: 16384,
         OPT_IN_CHANNELS_OFF: 8192,
         UNREADS_ONLY_MENTIONS: 4096,
         UNREADS_ALL_MESSAGES: 2048,
     };
-var h = (function (e) {
+var g = (function (e) {
     return (e.USER = "user"), (e.STREAM = "stream"), e;
 })({});

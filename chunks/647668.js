@@ -11,27 +11,27 @@ var i = n(627968),
     u = n(397927),
     h = n(933958),
     A = n(104171),
-    p = n(297334),
-    g = n(454938),
-    m = n(714991),
+    m = n(297334),
+    p = n(454938),
+    g = n(714991),
     _ = n(57991),
     f = n(513461),
     x = n(199285),
     C = n(347951),
     E = n(164956),
-    I = n(392567),
-    b = n(63995),
+    I = n(63995),
     N = n(69407),
-    S = n(624265),
-    T = n(970278),
-    v = n(21119),
-    y = n(907459),
-    j = n(616356),
-    R = n(808728),
-    O = n(994500),
-    L = n(543465),
-    M = n(287809),
-    D = n(607567),
+    b = n(624265),
+    S = n(970278),
+    T = n(21119),
+    v = n(907459),
+    y = n(616356),
+    j = n(808728),
+    R = n(994500),
+    O = n(543465),
+    L = n(287809),
+    M = n(607567),
+    D = n(145408),
     G = n(652215),
     U = n(985018),
     P = n(653750);
@@ -55,7 +55,7 @@ function k(e) {
               className: n,
               children: U.intl.string(U.t.fpKdS1),
           })
-        : (0, i.jsx)(I.A, { muteConfig: t, className: n });
+        : (0, i.jsx)(D.A, { muteConfig: t, className: n });
 }
 function V(e) {
     let t,
@@ -63,14 +63,14 @@ function V(e) {
         l,
         a,
         d,
+        p,
         g,
-        m,
         _,
         f,
         x,
         C,
         E,
-        I,
+        D,
         U,
         V,
         B,
@@ -81,17 +81,17 @@ function V(e) {
         { guild: Y } = e,
         z = Y.id,
         {
-            voiceUsersToShow: X,
-            stageSpeakers: q,
-            numStageListeners: J,
-            streamUsersToShow: Q,
+            voiceUsersToShow: q,
+            stageSpeakers: X,
+            numStageListeners: Q,
+            streamUsersToShow: J,
             embeddedActivitiesUsers: $,
         } = ((t = Y.id),
         (n = (0, c.yK)(
-            [R.Ay, T.A],
+            [j.Ay, S.A],
             () => [
-                ...R.Ay.getChannels(t)
-                    [R.vM].filter((e) => {
+                ...j.Ay.getChannels(t)
+                    [j.vM].filter((e) => {
                         let { channel: t } = e;
                         return t.type === G.rbe.GUILD_VOICE;
                     })
@@ -99,78 +99,78 @@ function V(e) {
                         let { channel: t } = e;
                         return t.id;
                     }),
-                ...Object.values(T.A.getThreadsForGuild(t)).flatMap((e) => Object.keys(e)),
+                ...Object.values(S.A.getThreadsForGuild(t)).flatMap((e) => Object.keys(e)),
             ],
             [t],
         )),
-        (l = (0, S.Ay)(t)),
+        (l = (0, b.Ay)(t)),
         (a = s.useMemo(() => l.map((e) => e.id), [l])),
-        (d = (0, c.bG)([D.Ay], () => D.Ay.getVoiceStates(t), [t])),
-        (g = (0, c.yK)([O.A], () => O.A.getBlockedOrIgnoredIDs())),
-        (m = o().flatMap(n, (e) => {
+        (d = (0, c.bG)([M.Ay], () => M.Ay.getVoiceStates(t), [t])),
+        (p = (0, c.yK)([R.A], () => R.A.getBlockedOrIgnoredIDs())),
+        (g = o().flatMap(n, (e) => {
             if (e === Y.afkChannelId) return [];
             let t = (d[e] ?? []).map((e) => {
                 let { user: t } = e;
                 return t;
             });
-            return (0, p.aw)(t, g);
+            return (0, m.aw)(t, p);
         })),
-        (_ = (0, c.yK)([b.A], () =>
+        (_ = (0, c.yK)([I.A], () =>
             o().flatMap(a, (e) => {
                 if (e === Y.afkChannelId) return [];
-                let t = b.A.getMutableParticipants(e, N.ip.SPEAKER)
+                let t = I.A.getMutableParticipants(e, N.ip.SPEAKER)
                     .filter((e) => e.type === N.wY.VOICE)
                     .map((e) => {
                         let { user: t } = e;
                         return t;
                     });
-                return (0, p.aw)(t, g);
+                return (0, m.aw)(t, p);
             }),
         )),
-        (f = (0, c.bG)([b.A], () => {
+        (f = (0, c.bG)([I.A], () => {
             let e = 0;
-            for (let t of a) e += b.A.getParticipantCount(t, N.ip.AUDIENCE);
+            for (let t of a) e += I.A.getParticipantCount(t, N.ip.AUDIENCE);
             return e;
         })),
-        (x = (0, c.yK)([j.A], () => {
-            let e = j.A.getAllApplicationStreams()
+        (x = (0, c.yK)([y.A], () => {
+            let e = y.A.getAllApplicationStreams()
                 .filter((e) => e.guildId === t)
                 .map((e) => e.ownerId);
-            return (0, p.F7)(e, g);
-        }, [g, t])),
+            return (0, m.F7)(e, p);
+        }, [p, t])),
         (C = (0, c.yK)([h.Ay], () => {
             let e = h.Ay.getEmbeddedActivitiesForGuild(t).flatMap((e) => Array.from(e.userIds));
-            return (0, p.F7)(e, g);
-        }, [t, g])),
-        (E = (0, c.yK)([M.default], () => {
-            let e = C.map((e) => M.default.getUser(e));
-            return (0, p.aw)(e);
+            return (0, m.F7)(e, p);
+        }, [t, p])),
+        (E = (0, c.yK)([L.default], () => {
+            let e = C.map((e) => L.default.getUser(e));
+            return (0, m.aw)(e);
         }, [C])),
-        (I = (0, c.yK)([M.default], () => x.map((e) => M.default.getUser(e)), [x])),
-        (U = m.filter((e) => !x.includes(e.id) && !C.includes(e.id))),
-        (V = (0, p.aw)(U)),
-        (B = I.filter((e) => null != e && !C.includes(e.id))),
-        (H = (0, c.bG)([v.A], () => v.A.getUserAffinitiesMap(), [])),
-        (F = s.useMemo(() => (0, y.L)(V, H, "GuildTooltip - nonBlockedUsers"), [V, H])),
-        (K = s.useMemo(() => (0, y.L)(_, H, "GuildTooltip - stageSpeakers"), [_, H])),
-        (W = s.useMemo(() => (0, y.L)(B, H, "GuildTooltip - streamUsers"), [B, H])),
+        (D = (0, c.yK)([L.default], () => x.map((e) => L.default.getUser(e)), [x])),
+        (U = g.filter((e) => !x.includes(e.id) && !C.includes(e.id))),
+        (V = (0, m.aw)(U)),
+        (B = D.filter((e) => null != e && !C.includes(e.id))),
+        (H = (0, c.bG)([T.A], () => T.A.getUserAffinitiesMap(), [])),
+        (F = s.useMemo(() => (0, v.L)(V, H, "GuildTooltip - nonBlockedUsers"), [V, H])),
+        (K = s.useMemo(() => (0, v.L)(_, H, "GuildTooltip - stageSpeakers"), [_, H])),
+        (W = s.useMemo(() => (0, v.L)(B, H, "GuildTooltip - streamUsers"), [B, H])),
         {
             voiceUsersToShow: F,
             stageSpeakers: K,
             numStageListeners: f,
             streamUsersToShow: W,
-            embeddedActivitiesUsers: s.useMemo(() => (0, y.L)(E, H, "GuildTooltip - embeddedActivitiesUsers"), [E, H]),
+            embeddedActivitiesUsers: s.useMemo(() => (0, v.L)(E, H, "GuildTooltip - embeddedActivitiesUsers"), [E, H]),
             hasActivity: _.length > 0 || U.length > 0 || B.length > 0 || E.length > 0,
         }),
-        Z = w(u.HKD, X, z),
+        Z = w(u.HKD, q, z),
         ee =
-            0 === q.length
+            0 === X.length
                 ? null
                 : (0, i.jsxs)("div", {
                       className: P.nM,
                       children: [
                           (0, i.jsx)(u.qux, { size: "lg", color: "currentColor", className: P.RI }),
-                          (0, i.jsx)(A.Ay, { guildId: z, users: q, max: 3 }),
+                          (0, i.jsx)(A.Ay, { guildId: z, users: X, max: 3 }),
                           (0, i.jsxs)("div", {
                               className: P.GZ,
                               children: [
@@ -179,17 +179,17 @@ function V(e) {
                                       className: P._I,
                                       color: "text-default",
                                       variant: "text-xs/normal",
-                                      children: J,
+                                      children: Q,
                                   }),
                               ],
                           }),
                       ],
                   }),
-        et = w(u.Fzq, Q, z),
+        et = w(u.Fzq, J, z),
         en = w(u.k9F, $, z),
         { isMuted: ei, muteConfig: es } = (0, c.cf)(
-            [L.Ay],
-            () => ({ isMuted: L.Ay.isMuted(z), muteConfig: L.Ay.getMuteConfig(z) }),
+            [O.Ay],
+            () => ({ isMuted: O.Ay.isMuted(z), muteConfig: O.Ay.getMuteConfig(z) }),
             [z],
         );
     return (0, i.jsxs)(i.Fragment, {
@@ -224,7 +224,7 @@ function B(e) {
 }
 function H(e) {
     let { guild: t } = e,
-        n = (0, g.A)(t),
+        n = (0, p.A)(t),
         s = (0, x.a)(t),
         l = null != s ? (0, i.jsx)(B, { guildJoinRequestStatus: s }) : null,
         a = (0, i.jsx)(V, { guild: t }),
@@ -237,7 +237,7 @@ function H(e) {
                 children: [
                     n
                         ? (0, i.jsx)(_.A, { guild: t, className: P.WX })
-                        : (0, i.jsx)(m.A, { guild: t, size: 20, className: P.aL }),
+                        : (0, i.jsx)(g.A, { guild: t, size: 20, className: P.aL }),
                     (0, i.jsx)("span", { className: r()(P.cN, P.NT), children: t.name }),
                 ],
             }),
