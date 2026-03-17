@@ -20,8 +20,8 @@ async function p(e) {
             tabSection: s,
             scrollTarget: a,
             guildId: p,
-            channelId: h,
-            showGuildProfile: m = !0,
+            originGuildId: h,
+            channelId: m,
             appContext: E,
             customStatusPrompt: g,
             ...A
@@ -30,7 +30,7 @@ async function p(e) {
     if (null == I) return;
     let T = l.default.getCurrentUser();
     if (null == T) return;
-    let S = f(t, m ? p : void 0);
+    let S = f(t, p);
     _.add(
         await (0, i.mMO)(
             async () => {
@@ -38,12 +38,12 @@ async function p(e) {
                     await Promise.all([
                         n.e("10614"),
                         n.e("28936"),
-                        n.e("72210"),
+                        n.e("64129"),
                         n.e("10117"),
                         n.e("95814"),
                         n.e("45672"),
                         n.e("49282"),
-                        n.e("65073"),
+                        n.e("27723"),
                     ]).then(n.bind(n, 293071))
                 ).default;
                 return (t) =>
@@ -51,10 +51,10 @@ async function p(e) {
                         user: I,
                         currentUser: T,
                         guildId: p,
+                        originGuildId: h ?? p,
                         initialTabSection: s,
                         initialScrollTarget: a,
-                        channelId: h,
-                        showGuildProfile: m,
+                        channelId: m,
                         customStatusPrompt: g,
                         ...t,
                         ...A,

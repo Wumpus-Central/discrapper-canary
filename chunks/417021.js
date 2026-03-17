@@ -1,128 +1,120 @@
-n.d(t, { A: () => b });
-var i = n(627968),
-    s = n(311907),
-    r = n(397927),
-    l = n(793574),
-    a = n(688810),
-    o = n(632738),
-    d = n(994500),
-    c = n(562153),
-    u = n(183555),
-    m = n(672385),
-    A = n(950191),
-    x = n(249790),
-    _ = n(946356),
-    p = n(254828),
-    f = n(783123),
-    h = n(652215),
-    g = n(996988),
-    I = n(985018),
-    j = n(872563);
+t.d(n, { A: () => b });
+var i = t(627968),
+    s = t(311907),
+    l = t(397927),
+    a = t(793574),
+    r = t(688810),
+    o = t(632738),
+    d = t(994500),
+    c = t(562153),
+    u = t(183555),
+    m = t(672385),
+    x = t(950191),
+    A = t(249790),
+    p = t(946356),
+    _ = t(254828),
+    f = t(783123),
+    h = t(652215),
+    g = t(996988),
+    j = t(985018),
+    I = t(599929);
 function b(e) {
     let {
-            user: t,
-            guildId: n,
+            user: n,
+            guildId: t,
             channelId: b,
             messageId: v,
             roleId: N,
-            transitionState: C,
-            onHide: y,
+            transitionState: y,
+            onHide: C,
             sourceAnalyticsLocations: T = [],
         } = e,
-        E = n === h.ME ? void 0 : n,
-        L = (0, s.bG)([d.A], () => d.A.isBlocked(t.id)),
-        { analyticsLocations: P } = (0, a.Ay)([...T, L ? l.A.BLOCKED_PROFILE_MODAL : l.A.IGNORED_PROFILE_MODAL]),
-        O = (0, u.pb)({
-            layout: "MODAL_V2",
-            userId: t.id,
-            showGuildProfile: !0,
-            guildId: E,
-            channelId: b,
-            messageId: v,
-            roleId: N,
-        }),
-        R = [
-            { icon: r.yr3, description: I.intl.string(I.t.kcuWva) },
-            { icon: r.yr3, description: I.intl.string(L ? I.t.QxrDY1 : I.t.W6fjkS) },
+        E = t === h.ME ? void 0 : t,
+        L = (0, s.bG)([d.A], () => d.A.isBlocked(n.id)),
+        { analyticsLocations: P } = (0, r.Ay)([...T, L ? a.A.BLOCKED_PROFILE_MODAL : a.A.IGNORED_PROFILE_MODAL]),
+        R = (0, u.pb)({ layout: "MODAL_V2", userId: n.id, guildId: E, channelId: b, messageId: v, roleId: N }),
+        O = [
+            { icon: l.yr3, description: j.intl.string(j.t.kcuWva) },
+            { icon: l.yr3, description: j.intl.string(L ? j.t.QxrDY1 : j.t.W6fjkS) },
         ],
-        S = (0, A.Ay)(t.id, E),
-        M = c.Ay.getName(S?.guildId, b, t),
-        G = I.intl.formatToPlainString(I.t.KRe1Fk, { name: M });
-    return (0, i.jsx)(a.f5, {
+        S = (0, x.Ay)(n.id, E),
+        M = c.Ay.getName(S?.guildId, b, n),
+        G = j.intl.formatToPlainString(j.t.KRe1Fk, { name: M });
+    return (0, i.jsx)(r.f5, {
         value: P,
         children: (0, i.jsx)(u.of, {
-            value: O,
+            value: R,
             isLoaded: S?.isLoaded,
-            children: (0, i.jsx)(r.EOs, {
+            children: (0, i.jsx)(l.EOs, {
                 "data-migration-pending": !0,
-                transitionState: C,
-                className: j.zr,
+                transitionState: y,
+                className: I.zr,
                 "aria-label": G,
                 parentComponent: "RestrictedUserProfileModalV2",
-                children: (0, i.jsxs)(_.A, {
-                    user: t,
+                children: (0, i.jsxs)(p.A, {
+                    user: n,
                     displayProfile: S,
                     themeType: g.d.MODAL_V2,
                     children: [
-                        (0, i.jsx)("div", { className: j.Tp }),
+                        (0, i.jsx)("div", { className: I.Tp }),
                         (0, i.jsxs)("div", {
-                            className: j.Qs,
+                            className: I.Qs,
                             children: [
-                                (0, i.jsx)(x.A, { user: t, guildId: E }),
+                                (0, i.jsx)(A.A, { user: n, guildId: E }),
                                 (0, i.jsxs)("div", {
-                                    className: j.FS,
+                                    className: I.FS,
                                     children: [
-                                        (0, i.jsx)(r.Heading, {
+                                        (0, i.jsx)(l.Heading, {
                                             variant: "heading-xl/bold",
                                             color: "text-default",
-                                            children: I.intl.string(I.t.b33pLD),
+                                            children: j.intl.string(j.t.b33pLD),
                                         }),
-                                        (0, i.jsx)(r.Text, {
+                                        (0, i.jsx)(l.Text, {
                                             variant: "text-md/medium",
                                             color: "text-default",
-                                            children: I.intl.format(L ? I.t.T7QiLn : I.t.MnEowy, { username: M }),
+                                            children: j.intl.format(L ? j.t.T7QiLn : j.t.MnEowy, { username: M }),
                                         }),
                                     ],
                                 }),
                                 (0, i.jsx)("div", {
-                                    className: j.vb,
-                                    children: R.map((e, t) => {
-                                        let { icon: n, description: s } = e;
+                                    className: I.vb,
+                                    children: O.map((e, n) => {
+                                        let { icon: t, description: s } = e;
                                         return (0, i.jsx)(
                                             o.PQ,
                                             {
-                                                icon: n,
+                                                icon: t,
                                                 title: s,
                                                 titleVariant: "text-md/normal",
-                                                color: r.LU0.colors.TEXT_DEFAULT.css,
+                                                color: l.LU0.colors.TEXT_DEFAULT.css,
                                             },
-                                            t,
+                                            n,
                                         );
                                     }),
                                 }),
-                                (0, i.jsxs)(r.BJc, {
+                                (0, i.jsxs)(l.BJc, {
                                     align: "center",
                                     children: [
                                         (0, i.jsx)(f.A, {
                                             size: "md",
                                             isBlocked: L,
                                             onClick: () => {
-                                                y(),
+                                                C(),
                                                     (0, m.Wn)({
                                                         action: L ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
                                                         analyticsLocations: P,
-                                                        ...O,
+                                                        ...R,
                                                     });
                                             },
                                         }),
-                                        (0, i.jsx)(p.A, {
-                                            userId: t.id,
+                                        (0, i.jsx)(_.A, {
+                                            userId: n.id,
                                             onClick: () => {
-                                                y(),
+                                                C(),
                                                     (0, m.Wn)({
                                                         action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
                                                         analyticsLocations: P,
-                                                        ...O,
+                                                        ...R,
                                                     });
                                             },
                                         }),

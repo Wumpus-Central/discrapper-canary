@@ -16,65 +16,64 @@ var r = n(627968),
     m = n(985018);
 function E(e) {
     let { user: t, guildId: n, viewProfileItem: i, appContext: p, popoutTargetRef: E, children: g } = e,
-        { trackUserProfileAction: A, context: I } = (0, f.NJ)(),
-        { analyticsLocations: T, newestAnalyticsLocation: S } = (0, o.Ay)(a.A.USER_PROFILE_OVERFLOW_MENU),
-        y = null != I && I.showGuildProfile ? n : void 0,
-        v = {
+        { trackUserProfileAction: A } = (0, f.NJ)(),
+        { analyticsLocations: I, newestAnalyticsLocation: T } = (0, o.Ay)(a.A.USER_PROFILE_OVERFLOW_MENU),
+        S = {
             action: h.pt.PRESS_OPTIONS,
             icon: s.jNK,
             tooltipText: m.intl.string(m.t["UKOtz+"]),
             "aria-label": m.intl.string(m.t["UKOtz+"]),
         },
-        N = (0, d.A)({
+        y = (0, d.A)({
             user: t,
             guildId: n,
-            onAction: () => A({ action: "PRESS_INVITE_TO_SERVER", analyticsLocations: T }),
+            onAction: () => A({ action: "PRESS_INVITE_TO_SERVER", analyticsLocations: I }),
         }),
-        C = (0, l.A)({
+        v = (0, l.A)({
             user: t,
             guildId: n,
-            location: S,
+            location: T,
             appContext: p,
-            onBlock: () => A({ action: "BLOCK", analyticsLocations: T }),
-            onIgnore: () => A({ action: "IGNORE", analyticsLocations: T }),
-            onUnblock: () => A({ action: "UNBLOCK", analyticsLocations: T }),
+            onBlock: () => A({ action: "BLOCK", analyticsLocations: I }),
+            onIgnore: () => A({ action: "IGNORE", analyticsLocations: I }),
+            onUnblock: () => A({ action: "UNBLOCK", analyticsLocations: I }),
         }),
-        R = [
-            [i, N],
+        N = [
+            [i, y],
             [
                 (0, c.A)({
                     user: t,
                     guildId: n,
-                    location: S,
+                    location: T,
                     appContext: p,
-                    onBlock: () => A({ action: "BLOCK", analyticsLocations: T }),
-                    onIgnore: () => A({ action: "IGNORE", analyticsLocations: T }),
-                    onUnignore: () => A({ action: "UNIGNORE", analyticsLocations: T }),
+                    onBlock: () => A({ action: "BLOCK", analyticsLocations: I }),
+                    onIgnore: () => A({ action: "IGNORE", analyticsLocations: I }),
+                    onUnignore: () => A({ action: "UNIGNORE", analyticsLocations: I }),
                 }),
-                C,
+                v,
                 (0, _.A)({
                     user: t,
                     guildId: n,
-                    location: S,
+                    location: T,
                     appContext: p,
                     color: "danger",
-                    onAction: () => A({ action: "REPORT", analyticsLocations: T }),
+                    onAction: () => A({ action: "REPORT", analyticsLocations: I }),
                 }),
                 (0, _.M)({
                     user: t,
                     guildId: n,
-                    location: S,
+                    location: T,
                     appContext: p,
                     color: "danger",
-                    onAction: () => A({ action: "REPORT", analyticsLocations: T }),
+                    onAction: () => A({ action: "REPORT", analyticsLocations: I }),
                 }),
             ],
-            [(0, u.A)({ user: t, guildId: y, onSuccess: () => A({ action: "COPY_USER_ID", analyticsLocations: T }) })],
+            [(0, u.A)({ user: t, guildId: n, onSuccess: () => A({ action: "COPY_USER_ID", analyticsLocations: I }) })],
         ];
-    return R.every((e) => e.every((e) => null == e))
+    return N.every((e) => e.every((e) => null == e))
         ? null
         : (0, r.jsx)(o.f5, {
-              value: T,
+              value: I,
               children: (0, r.jsx)(s.YNO, {
                   targetElementRef: E,
                   renderPopout: (e) => {
@@ -85,10 +84,10 @@ function E(e) {
                           onSelect: void 0,
                           onClose: t,
                           "aria-label": m.intl.string(m.t.AXIHpV),
-                          children: R.map((e, t) => (0, r.jsx)(s.rXV, { children: e.map((e) => e) }, t)),
+                          children: N.map((e, t) => (0, r.jsx)(s.rXV, { children: e.map((e) => e) }, t)),
                       });
                   },
-                  children: (e) => g({ ...e, ...v }),
+                  children: (e) => g({ ...e, ...S }),
               }),
           });
 }
