@@ -1,49 +1,45 @@
 "use strict";
-n.d(t, { A: () => I });
+n.d(t, { A: () => g });
 var r = n(64700),
     i = n(735438),
-    a = n(311907),
-    s = n(87664),
+    s = n(311907),
+    a = n(87664),
     o = n(517164),
     l = n(20805),
     u = n(83971),
     c = n(583846),
     d = n(890330),
-    _ = n(961350),
-    f = n(734057),
-    p = n(290863),
-    h = n(977997),
-    m = n(840907),
-    g = n(652215);
-let E = [],
-    A = [];
-function I(e) {
-    let { recentActivityTabEnabled: t } = (0, m.s)({ location: "useUserProfileActivity" }),
-        n = (0, a.bG)([_.default], () => _.default.getId() === e),
-        I = (0, s.A)(e),
-        T = (0, a.bG)([p.A], () => p.A.getActivities(e)),
-        y = (0, a.bG)([o.A], () => (n || t ? o.A.getUserOutbox(e) : void 0)),
-        S = (0, a.bG)([h.A], () => h.A.getVoiceStateForUser(e)),
-        v = (0, a.bG)([f.A], () => f.A.getChannel(S?.channelId)),
-        C = (0, d.v)("UserProfileActivity", v),
-        b = (0, r.useMemo)(
+    _ = n(734057),
+    f = n(290863),
+    p = n(977997),
+    h = n(652215);
+let m = [],
+    E = [];
+function g(e) {
+    let t = (0, a.A)(e),
+        n = (0, s.bG)([f.A], () => f.A.getActivities(e)),
+        g = (0, s.bG)([o.A], () => o.A.getUserOutbox(e)),
+        A = (0, s.bG)([p.A], () => p.A.getVoiceStateForUser(e)),
+        I = (0, s.bG)([_.A], () => _.A.getChannel(A?.channelId)),
+        T = (0, d.v)("UserProfileActivity", I),
+        S = (0, r.useMemo)(
             () =>
-                T.filter((e) => {
+                n.filter((e) => {
                     let { type: t } = e;
-                    return t === g.$pd.HANG_STATUS ? C : t !== g.$pd.CUSTOM_STATUS;
+                    return t === h.$pd.HANG_STATUS ? T : t !== h.$pd.CUSTOM_STATUS;
                 }),
-            [T, C],
+            [n, T],
         ),
-        { live: N, recent: R } = (0, r.useMemo)(() => {
+        { live: y, recent: v } = (0, r.useMemo)(() => {
             let e = (0, i.uniqWith)(
-                    b,
+                    S,
                     (e, t) =>
                         (null != e.application_id &&
                             null != t.application_id &&
                             e.application_id === t.application_id) ||
                         (null != e.name && null != t.name && e.name === t.name),
                 ),
-                t = y?.entries.filter(
+                t = g?.entries.filter(
                     (t) =>
                         !(0, c.Hd)(t) &&
                         ((0, l.Tq)(t)
@@ -52,7 +48,7 @@ function I(e) {
                               ? !e.some((e) => null != e && (0, u.SU)(t, e))
                               : (0, l.$R)(t)),
                 );
-            return { live: 0 === e.length ? E : e, recent: null == t || 0 === t.length ? A : t };
-        }, [b, y?.entries]);
-    return { live: N, recent: R, stream: I, outbox: y };
+            return { live: 0 === e.length ? m : e, recent: null == t || 0 === t.length ? E : t };
+        }, [S, g?.entries]);
+    return { live: y, recent: v, stream: t, outbox: g };
 }
