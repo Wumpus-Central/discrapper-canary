@@ -4763,6 +4763,7 @@ var na = (function (e) {
             (e.IN_APP_NOTIFICATION_DISMISSED = "in_app_notification_dismissed"),
             (e.IN_APP_NOTIFICATION_SUPPRESSED = "in_app_notification_suppressed"),
             (e.IN_APP_NOTIFICATION_CREATED = "in_app_notification_created"),
+            (e.IN_APP_NOTIFICATION_LONG_PRESSED = "in_app_notification_long_pressed"),
             (e.PASSPORT_CHALLENGE_VIEWED = "passport_challenge_viewed"),
             (e.PASSPORT_CHALLENGE_STARTED = "passport_challenge_started"),
             (e.PASSPORT_CHALLENGE_FINISHED = "passport_challenge_finished"),
