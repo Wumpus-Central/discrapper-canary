@@ -1,5 +1,4 @@
-"use strict";
-n.d(t, { L$: () => c, NP: () => s, Qq: () => d }), n(323874), n(14289), n(35956);
+n.d(t, { L$: () => o, NP: () => s, Qq: () => d }), n(323874), n(14289), n(35956);
 var a = n(562465),
     l = n(73153),
     i = n(198982),
@@ -14,8 +13,8 @@ let s = async (e) => {
             throw new i.LG(e);
         }
     },
-    c = (e) => o(e, { utm_source: "discord" }),
-    o = (e, t) => {
+    o = (e) => c(e, { utm_source: "discord" }),
+    c = (e, t) => {
         try {
             let n = new URL(e, window.location.origin);
             return (
@@ -50,7 +49,7 @@ let s = async (e) => {
     };
 function d(e, t) {
     if (null == e) return null;
-    let n = c(e),
+    let n = o(e),
         a = (function (e) {
             try {
                 let t = new URL(e);

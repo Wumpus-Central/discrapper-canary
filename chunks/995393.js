@@ -1,5 +1,4 @@
-"use strict";
-n.d(t, { Jq: () => o, Ng: () => c, ST: () => d, bB: () => i });
+n.d(t, { Jq: () => o, Ng: () => d, ST: () => c, bB: () => i });
 var a,
     l,
     s,
@@ -24,5 +23,5 @@ var a,
         (l.MUTE_BUTTON = "mute_button"),
         (l.FORWARD_BUTTON = "forward_button"),
         l),
-    c = (((s = {}).COPY_LINK_BUTTON = "copy_link_button"), s),
-    d = 21552 == n.j ? (((r = {}).LEARN_MORE = "learn_more"), r) : null;
+    d = (((s = {}).COPY_LINK_BUTTON = "copy_link_button"), s),
+    c = 21552 == n.j ? (((r = {}).LEARN_MORE = "learn_more"), r) : null;

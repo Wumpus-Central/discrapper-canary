@@ -1,24 +1,23 @@
-"use strict";
 n.d(t, { I: () => u });
 var a = n(792216),
     l = n(505779),
     i = n(311907),
     r = n(587895),
     s = n(223273),
-    c = n(136086),
-    o = n(240248),
+    o = n(136086),
+    c = n(240248),
     d = n(652215);
 function u(e) {
-    return (0, i.bG)([c.A, r.A], () => {
+    return (0, i.bG)([o.A, r.A], () => {
         if (null == e) return null;
-        let t = c.A.getGame(e),
+        let t = o.A.getGame(e),
             n = t?.supplementalData,
             i = r.A.getApplication(e);
         if (n?.steamReleaseStatus === a.Y.RETIRED_ABANDONED) return null;
         if (i?.linkedGames?.some((e) => e.type === s.Mh.OFFICIAL)) {
             let e = t?.thirdPartySkus?.find((e) => e.distributor === d.d3x.STEAM),
                 n = e?.id;
-            if (!(0, o.uJ)(n)) return `https://store.steampowered.com/app/${encodeURIComponent(n)}`;
+            if (!(0, c.uJ)(n)) return `https://store.steampowered.com/app/${encodeURIComponent(n)}`;
             return null;
         }
         if (n?.websites == null) return null;

@@ -1,5 +1,4 @@
-"use strict";
-n.d(t, { A: () => s, Q: () => c });
+n.d(t, { A: () => s, Q: () => o });
 var a = n(64700),
     l = n(25171),
     i = n(880405);
@@ -16,7 +15,7 @@ function s(e) {
     let t = r();
     return (0, i.Qq)(e, t);
 }
-function c(e) {
+function o(e) {
     let t = r();
     return a.useMemo(() => e.map((e) => (0, i.Qq)(e, t)), [e, t]);
 }

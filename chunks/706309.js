@@ -1,19 +1,18 @@
-"use strict";
-a.d(t, { s: () => u });
+a.d(t, { s: () => x });
 var l = a(627968);
 a(64700);
 var r = a(397927),
     n = a(18769),
-    s = a(653793),
-    i = a(673277),
-    o = a(118713);
-let d = () =>
+    o = a(653793),
+    s = a(673277),
+    d = a(118713);
+let i = () =>
         (0, l.jsx)("div", {
             style: { display: "flex", justifyContent: "center", alignItems: "center" },
             children: (0, l.jsx)("div", { style: { height: 96, width: 96, borderRadius: 48, background: "grey" } }),
         }),
     c = () => (0, l.jsx)("div", { style: { background: "rgba(255, 255, 255, 0.6)", height: 240 } }),
-    u = {
+    x = {
         name: "Carousel",
         id: "carousel",
         component: (e) =>
@@ -33,8 +32,8 @@ let d = () =>
                         children:
                             "The carousel will pause slidding when the mouse hovers it, and resume on mouse leave.",
                     }),
-                    (0, l.jsx)(i.A, {
-                        children: (0, l.jsxs)(o.A, {
+                    (0, l.jsx)(s.A, {
+                        children: (0, l.jsxs)(d.A, {
                             ...e,
                             children: [
                                 (0, l.jsx)("div", { style: { background: "red" }, children: (0, l.jsx)(c, {}) }),
@@ -46,7 +45,7 @@ let d = () =>
                             ],
                         }),
                     }),
-                    (0, l.jsxs)(i.A, {
+                    (0, l.jsxs)(s.A, {
                         children: [
                             (0, l.jsx)(r.Text, {
                                 variant: "text-md/normal",
@@ -54,7 +53,7 @@ let d = () =>
                                     "Here is an example of what a carousel inside of a card might look like for showing off different products",
                             }),
                             (0, l.jsx)("br", {}),
-                            (0, l.jsx)(s.A, {
+                            (0, l.jsx)(o.A, {
                                 children: (0, l.jsx)("div", {
                                     style: {
                                         background: "white",
@@ -65,28 +64,28 @@ let d = () =>
                                         display: "flex",
                                         overflow: "hidden",
                                     },
-                                    children: (0, l.jsxs)(o.A, {
+                                    children: (0, l.jsxs)(d.A, {
                                         ...e,
                                         children: [
-                                            (0, l.jsx)(d, {}),
-                                            (0, l.jsx)(d, {}),
-                                            (0, l.jsx)(d, {}),
-                                            (0, l.jsx)(d, {}),
-                                            (0, l.jsx)(d, {}),
+                                            (0, l.jsx)(i, {}),
+                                            (0, l.jsx)(i, {}),
+                                            (0, l.jsx)(i, {}),
+                                            (0, l.jsx)(i, {}),
+                                            (0, l.jsx)(i, {}),
                                         ],
                                     }),
                                 }),
                             }),
                         ],
                     }),
-                    (0, l.jsxs)(i.A, {
+                    (0, l.jsxs)(s.A, {
                         children: [
                             (0, l.jsx)(r.Text, {
                                 variant: "text-md/normal",
                                 children: "And here is an example of a FeaturedBlock Carousel",
                             }),
                             (0, l.jsx)("br", {}),
-                            (0, l.jsxs)(o.A, {
+                            (0, l.jsxs)(d.A, {
                                 ...e,
                                 children: [
                                     (0, l.jsx)(n.A, {

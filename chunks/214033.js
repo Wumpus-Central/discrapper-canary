@@ -1,19 +1,18 @@
-"use strict";
 a.d(t, { t: () => c });
 var l = a(627968);
 a(64700);
 var r = a(397927),
     n = a(206845),
-    s = a(604238),
-    i = a(261225),
-    o = a(282203),
-    d = a(985018);
+    o = a(604238),
+    s = a(261225),
+    d = a(282203),
+    i = a(985018);
 let c = {
     name: "SkuList",
     id: "skulist",
     component: (e) => {
-        let { skuIds: t, sortPurchased: a, eagerLoad: c, showSkeleton: u } = e,
-            x = (0, s.e)();
+        let { skuIds: t, sortPurchased: a, eagerLoad: c, showSkeleton: x } = e,
+            u = (0, o.e)();
         return (0, l.jsxs)("div", {
             children: [
                 (0, l.jsx)(r.Heading, {
@@ -31,15 +30,15 @@ let c = {
                         "This will be useful when wanting to get a dynamic list of sku ids from the server (like popular picks) and push them into a product grid",
                 }),
                 (0, l.jsx)("br", {}),
-                (0, l.jsx)(i.A, {
+                (0, l.jsx)(s.A, {
                     columns: 3,
-                    children: (0, l.jsx)(o.A, {
+                    children: (0, l.jsx)(d.A, {
                         skuIds: t?.split(","),
                         skuBlock: "ShopProductCard",
                         sortPurchased: a,
                         eagerLoad: c,
-                        showSkeleton: u,
-                        componentMap: x,
+                        showSkeleton: x,
+                        componentMap: u,
                     }),
                 }),
                 (0, l.jsx)("hr", {}),
@@ -49,7 +48,7 @@ let c = {
                     children: [
                         (0, l.jsx)(r.Text, { variant: "text-sm/bold", children: "Avatar Decoration" }),
                         (0, l.jsx)(n.A, {
-                            text: d.intl.string(d.t.OpuAlK),
+                            text: i.intl.string(i.t.OpuAlK),
                             delay: 0,
                             "aria-label": !1,
                             copyValue: "1458472704192811088",
@@ -70,7 +69,7 @@ let c = {
                     children: [
                         (0, l.jsx)(r.Text, { variant: "text-sm/bold", children: "Profile Effect" }),
                         (0, l.jsx)(n.A, {
-                            text: d.intl.string(d.t.OpuAlK),
+                            text: i.intl.string(i.t.OpuAlK),
                             delay: 0,
                             "aria-label": !1,
                             copyValue: "1458479739110166560",
@@ -91,7 +90,7 @@ let c = {
                     children: [
                         (0, l.jsx)(r.Text, { variant: "text-sm/bold", children: "Nameplate" }),
                         (0, l.jsx)(n.A, {
-                            text: d.intl.string(d.t.OpuAlK),
+                            text: i.intl.string(i.t.OpuAlK),
                             delay: 0,
                             "aria-label": !1,
                             copyValue: "1458472704524156959",

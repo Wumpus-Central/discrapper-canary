@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     kL: "container__81040",
     jC: "twoColumnMainContent__81040",

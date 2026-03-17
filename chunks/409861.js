@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     uW: "section__3ae56",
     Gf: "sectionTitle__3ae56",

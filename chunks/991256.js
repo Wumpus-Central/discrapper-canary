@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     x6: "button__46219",
     rK: "separatorDot__46219",

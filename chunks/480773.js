@@ -1,23 +1,22 @@
-"use strict";
-a.d(t, { u: () => d });
+a.d(t, { u: () => i });
 var l = a(627968);
 a(64700);
 var r = a(397927),
     n = a(261225),
-    s = a(673277),
-    i = a(458306),
-    o = a(18769);
-let d = {
+    o = a(673277),
+    s = a(458306),
+    d = a(18769);
+let i = {
     name: "FeaturedCollection",
     id: "featured-collection",
     component: (e) => {
-        let { columns: t, backgroundImage: a, logoSrc: d, supplementalImage: c, ctaText: u, href: x } = e,
+        let { columns: t, backgroundImage: a, logoSrc: i, supplementalImage: c, ctaText: x, href: u } = e,
             h = {
                 backgroundImage: { src: a },
-                logoSrc: { src: d },
+                logoSrc: { src: i },
                 supplementalImage: { src: c },
-                ctaText: u,
-                href: x,
+                ctaText: x,
+                href: u,
             };
         return (0, l.jsxs)("div", {
             children: [
@@ -26,26 +25,26 @@ let d = {
                     children:
                         "Featured Collection will take up the full width of the parent, so it is best suited for CmsStack or Grid parents",
                 }),
-                (0, l.jsx)(s.A, { children: (0, l.jsx)(o.A, { ...h }) }),
-                (0, l.jsxs)(s.A, {
+                (0, l.jsx)(o.A, { children: (0, l.jsx)(d.A, { ...h }) }),
+                (0, l.jsxs)(o.A, {
                     children: [
                         (0, l.jsxs)(r.Text, { variant: "text-lg/semibold", children: ["Grid (", t, "):"] }),
                         (0, l.jsxs)(n.A, {
                             columns: t,
-                            children: [(0, l.jsx)(o.A, { ...h }), (0, l.jsx)(o.A, { ...h })],
+                            children: [(0, l.jsx)(d.A, { ...h }), (0, l.jsx)(d.A, { ...h })],
                         }),
                     ],
                 }),
-                (0, l.jsxs)(s.A, {
+                (0, l.jsxs)(o.A, {
                     children: [
                         (0, l.jsx)(r.Text, { variant: "text-lg/semibold", children: "Stack:" }),
-                        (0, l.jsxs)(i.Kp, {
+                        (0, l.jsxs)(s.Kp, {
                             direction: "horizontal",
                             children: [
-                                (0, l.jsx)(o.A, { ...h }),
-                                (0, l.jsx)(o.A, { ...h }),
-                                (0, l.jsx)(o.A, { ...h }),
-                                (0, l.jsx)(o.A, { ...h }),
+                                (0, l.jsx)(d.A, { ...h }),
+                                (0, l.jsx)(d.A, { ...h }),
+                                (0, l.jsx)(d.A, { ...h }),
+                                (0, l.jsx)(d.A, { ...h }),
                             ],
                         }),
                     ],

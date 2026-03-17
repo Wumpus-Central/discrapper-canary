@@ -1,30 +1,31 @@
-l.d(t, { e: () => c });
-var n = l(64700),
-    r = l(793574),
-    a = l(590180),
-    i = l(315949),
-    s = l(572595),
-    u = l(57020),
-    o = l(976860),
-    d = l(901123);
-function c(e) {
-    let { sku: t, analyticsLocations: l, analyticsSource: c = r.A.USER_PROFILE_WISHLIST } = e;
+"use strict";
+n.d(t, { e: () => u });
+var i = n(64700),
+    s = n(793574),
+    l = n(590180),
+    a = n(315949),
+    r = n(572595),
+    o = n(57020),
+    d = n(976860),
+    c = n(901123);
+function u(e) {
+    let { sku: t, analyticsLocations: n, analyticsSource: u = s.A.USER_PROFILE_WISHLIST } = e;
     return (
-        (0, i.A)(),
-        n.useCallback(() => {
-            let e = a.A.getProduct(t.id),
-                n = a.A.getCategoryForProduct(t.id);
-            null == e || null == n
-                ? (0, o.pX)(`${d.BV.COLLECTIBLES_SHOP}#itemSkuId=${t.id}`)
-                : (0, s.t)({
+        (0, a.A)(),
+        i.useCallback(() => {
+            let e = l.A.getProduct(t.id),
+                i = l.A.getCategoryForProduct(t.id);
+            null == e || null == i
+                ? (0, d.pX)(`${c.BV.COLLECTIBLES_SHOP}#itemSkuId=${t.id}`)
+                : (0, r.t)({
                       product: e,
-                      category: n,
-                      shouldCheckoutWithOrbs: (0, u.A)({ product: e }),
-                      analyticsLocations: l ?? [],
-                      analyticsSource: c,
+                      category: i,
+                      shouldCheckoutWithOrbs: (0, o.A)({ product: e }),
+                      analyticsLocations: n ?? [],
+                      analyticsSource: u,
                       returnRef: void 0,
                       tab: void 0,
                   });
-        }, [l, c, t.id])
+        }, [n, u, t.id])
     );
 }

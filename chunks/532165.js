@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     XV: "topBar__31961",
     cB: "dragging__31961",

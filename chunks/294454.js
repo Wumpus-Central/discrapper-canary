@@ -1,5 +1,4 @@
-"use strict";
-n.d(t, { Be: () => o, aU: () => r, fO: () => i, vK: () => c });
+n.d(t, { Be: () => o, aU: () => r, fO: () => i, vK: () => d });
 var a = n(627968);
 n(64700);
 var l = n(397927),
@@ -10,14 +9,14 @@ function i(e) {
         message: t,
         source: i,
         initialSelectedDestinations: o = [],
-        forwardOptions: c,
-        onRequestSent: d,
+        forwardOptions: d,
+        onRequestSent: c,
         customSendHandler: u,
     } = e;
     (0, s.pp)(t.channel_id, t.id, i),
         (0, l.mMO)(
             async () => {
-                let { ForwardModal: e } = await Promise.all([n.e("96758"), n.e("43622"), n.e("43899")]).then(
+                let { ForwardModal: e } = await Promise.all([n.e("96758"), n.e("43622"), n.e("89483")]).then(
                     n.bind(n, 911269),
                 );
                 return (n) =>
@@ -25,8 +24,8 @@ function i(e) {
                         ...n,
                         message: t,
                         initialSelectedDestinations: o,
-                        forwardOptions: c,
-                        onRequestSent: d,
+                        forwardOptions: d,
+                        onRequestSent: c,
                         customSendHandler: u,
                         source: i,
                     });
@@ -37,7 +36,7 @@ function i(e) {
 function o() {
     (0, l.OoC)(r);
 }
-function c(e) {
+function d(e) {
     let { message: t, failedDestinations: s, forwardOptions: r } = e;
     (0, l.mMO)(async () => {
         let { ForwardFailedAlertModal: e } = await n.e("66139").then(n.bind(n, 181622));

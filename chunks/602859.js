@@ -1,4 +1,3 @@
-"use strict";
 n.d(t, { s: () => l });
 let a = (0, n(945810).mj)({
     name: "2026-03-game-profile-claim-game-cta",

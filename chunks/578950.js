@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     UT: "gridContainer_ad58e7",
     ux: "gridItem_ad58e7",

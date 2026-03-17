@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { Jf: () => _, TA: () => u, VF: () => h, hH: () => d, nL: () => m, pp: () => c });
+n.d(t, { Jf: () => _, TA: () => u, VF: () => h, hH: () => c, nL: () => m, pp: () => d });
 var a = n(64700),
     l = n(735438),
     s = n(58149),
     r = n(734057),
     i = n(954571),
     o = n(652215);
-function c(e, t, n) {
+function d(e, t, n) {
     i.default.track(o.HAw.FORWARD_MESSAGE_STARTED, { channel_id: e, message_id: t, source: n });
 }
-function d(e) {
+function c(e) {
     let { channelId: t, messageId: n, numDestinationChanges: a, numQueryChanges: l } = e;
     i.default.track(o.HAw.FORWARD_MESSAGE_CANCELLED, {
         channel_id: t,
@@ -24,8 +23,8 @@ function u(e) {
         messageId: n,
         hasError: a,
         hasContextMessage: l,
-        numDestinations: c,
-        numDestinationChanges: d,
+        numDestinations: d,
+        numDestinationChanges: c,
         numQueryChanges: u,
         anyDestinationHasSlowmode: _,
         source: m,
@@ -36,8 +35,8 @@ function u(e) {
             message_id: n,
             has_error: a,
             has_context_message: l,
-            num_destinations: c,
-            num_destination_changes: d,
+            num_destinations: d,
+            num_destination_changes: c,
             num_query_changes: u,
             any_destination_has_slowmode: _,
         }),

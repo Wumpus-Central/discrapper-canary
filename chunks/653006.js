@@ -1,5 +1,4 @@
-"use strict";
-n.d(t, { K: () => a });
-var r = n(214033),
-    i = n(715185);
-let a = { title: "Recursive", stories: [r.t, i.M, i.H] };
+a.d(t, { K: () => n });
+var l = a(214033),
+    r = a(715185);
+let n = { title: "Recursive", stories: [l.t, r.M, r.H] };

@@ -1,39 +1,38 @@
-"use strict";
 n.d(t, { A: () => g });
 var a = n(627968),
     l = n(64700),
     i = n(397927),
     r = n(541830),
     s = n(240248),
-    c = n(899273),
-    o = n(504186),
+    o = n(899273),
+    c = n(504186),
     d = n(814698),
     u = n(839671),
     m = n(936636),
     x = n(985018),
-    h = n(82890);
-function f() {
+    f = n(82890);
+function h() {
     return (0, a.jsx)(i.Text, { variant: "text-sm/normal", color: "text-subtle", children: x.intl.string(x.t.GruYxV) });
 }
 let g = function (e) {
     let { application: t, detectedGame: n, trackAction: g } = e,
         p = l.useMemo(() => n.genres.map(r.du).join(", "), [n]),
-        _ = n.publishers.join(", "),
-        v = n.developers.join(", "),
-        j = n.firstReleaseDate,
-        A = (0, o.A)(n),
-        E = (0, c.Y)(n),
+        v = n.publishers.join(", "),
+        j = n.developers.join(", "),
+        _ = n.firstReleaseDate,
+        A = (0, c.A)(n),
+        E = (0, o.Y)(n),
         I = !(0, s.uJ)(p),
-        b = !(0, s.uJ)(_),
-        N = !(0, s.uJ)(v),
-        C = !(0, s.uJ)(j),
+        b = !(0, s.uJ)(v),
+        N = !(0, s.uJ)(j),
+        C = !(0, s.uJ)(_),
         T = A.length > 0,
         S = E.length > 0 && !E.every((e) => (0, s.uJ)(e.url));
     return (0, a.jsxs)("div", {
-        className: h.uW,
+        className: f.uW,
         children: [
             (0, a.jsx)("div", {
-                className: h.Gf,
+                className: f.Gf,
                 children: (0, a.jsx)(i.Heading, {
                     variant: "heading-sm/semibold",
                     color: "text-strong",
@@ -41,10 +40,10 @@ let g = function (e) {
                 }),
             }),
             (0, a.jsxs)("div", {
-                className: h.kL,
+                className: f.kL,
                 children: [
                     (0, a.jsxs)("div", {
-                        className: h.J1,
+                        className: f.J1,
                         children: [
                             (0, a.jsx)(i.Text, {
                                 variant: "text-sm/normal",
@@ -55,14 +54,14 @@ let g = function (e) {
                                 ? (0, a.jsx)(i.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-subtle",
-                                      className: h.Gu,
+                                      className: f.Gu,
                                       children: p,
                                   })
-                                : (0, a.jsx)(f, {}),
+                                : (0, a.jsx)(h, {}),
                         ],
                     }),
                     (0, a.jsxs)("div", {
-                        className: h.J1,
+                        className: f.J1,
                         children: [
                             (0, a.jsx)(i.Text, {
                                 variant: "text-sm/normal",
@@ -76,14 +75,14 @@ let g = function (e) {
                                 ? (0, a.jsx)(i.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-subtle",
-                                      className: h.Gu,
-                                      children: _,
+                                      className: f.Gu,
+                                      children: v,
                                   })
-                                : (0, a.jsx)(f, {}),
+                                : (0, a.jsx)(h, {}),
                         ],
                     }),
                     (0, a.jsxs)("div", {
-                        className: h.J1,
+                        className: f.J1,
                         children: [
                             (0, a.jsx)(i.Text, {
                                 variant: "text-sm/normal",
@@ -95,14 +94,14 @@ let g = function (e) {
                                 ? (0, a.jsx)(i.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-subtle",
-                                      className: h.Gu,
-                                      children: v,
+                                      className: f.Gu,
+                                      children: j,
                                   })
-                                : (0, a.jsx)(f, {}),
+                                : (0, a.jsx)(h, {}),
                         ],
                     }),
                     (0, a.jsxs)("div", {
-                        className: h.J1,
+                        className: f.J1,
                         children: [
                             (0, a.jsx)(i.Text, {
                                 variant: "text-sm/normal",
@@ -113,18 +112,18 @@ let g = function (e) {
                                 ? (0, a.jsx)(i.Text, {
                                       variant: "text-sm/normal",
                                       color: "text-subtle",
-                                      className: h.Gu,
-                                      children: new Date(j).toLocaleDateString(x.intl.currentLocale, {
+                                      className: f.Gu,
+                                      children: new Date(_).toLocaleDateString(x.intl.currentLocale, {
                                           year: "numeric",
                                           month: "long",
                                           day: "numeric",
                                       }),
                                   })
-                                : (0, a.jsx)(f, {}),
+                                : (0, a.jsx)(h, {}),
                         ],
                     }),
                     (0, a.jsxs)("div", {
-                        className: h.J1,
+                        className: f.J1,
                         children: [
                             (0, a.jsx)(i.Text, {
                                 variant: "text-sm/normal",
@@ -133,14 +132,14 @@ let g = function (e) {
                             }),
                             T
                                 ? (0, a.jsx)("div", {
-                                      className: h.Gu,
+                                      className: f.Gu,
                                       children: A.map((e) => (0, a.jsx)(m.s, { platform: e }, e)),
                                   })
-                                : (0, a.jsx)(f, {}),
+                                : (0, a.jsx)(h, {}),
                         ],
                     }),
                     (0, a.jsxs)("div", {
-                        className: h.J1,
+                        className: f.J1,
                         children: [
                             (0, a.jsx)(i.Text, {
                                 variant: "text-sm/normal",
@@ -149,15 +148,15 @@ let g = function (e) {
                             }),
                             S
                                 ? (0, a.jsx)("div", {
-                                      className: h.Gu,
+                                      className: f.Gu,
                                       children: E.map((e) => (0, a.jsx)(u.K, { website: e, trackClick: g }, e.url)),
                                   })
-                                : (0, a.jsx)(f, {}),
+                                : (0, a.jsx)(h, {}),
                         ],
                     }),
                 ],
             }),
-            (0, a.jsx)("div", { className: h.OQ, children: (0, a.jsx)(d.A, { application: t, trackAction: g }) }),
+            (0, a.jsx)("div", { className: f.OQ, children: (0, a.jsx)(d.A, { application: t, trackAction: g }) }),
         ],
     });
 };

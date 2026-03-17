@@ -1,15 +1,14 @@
-"use strict";
 n.d(t, { A: () => r });
-var i = n(627968),
+var a = n(627968),
     l = n(942528),
-    a = n(409626);
+    i = n(409626);
 function r(e) {
     let { entry: t, viewId: n, officialGuildId: r, source: s } = e;
-    return (0, i.jsx)(l.A, {
+    return (0, a.jsx)(l.A, {
         ...e,
         onReaction: () => {
-            (0, a.Tn)({
-                action: a.Ws.SendMessageUser,
+            (0, i.Tn)({
+                action: i.Ws.SendMessageUser,
                 applicationId: t.extra.application_id,
                 gameName: t.extra.game_name,
                 recipientUserId: t.author_id,
@@ -19,8 +18,8 @@ function r(e) {
             });
         },
         onRequestOpen: () => {
-            (0, a.Tn)({
-                action: a.Ws.ClickMessageUser,
+            (0, i.Tn)({
+                action: i.Ws.ClickMessageUser,
                 applicationId: t.extra.application_id,
                 gameName: t.extra.game_name,
                 recipientUserId: t.author_id,

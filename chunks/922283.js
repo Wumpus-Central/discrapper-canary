@@ -1,25 +1,24 @@
-"use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => f });
 var a = n(627968),
     l = n(64700),
     i = n(990078),
     r = n(397927),
     s = n(223273),
-    c = n(317607),
-    o = n(676937),
+    o = n(317607),
+    c = n(676937),
     d = n(59544),
     u = n(778591),
     m = n(985018),
-    x = n(107701);
-let h = function (e) {
+    x = n(719187);
+let f = function (e) {
     let { detectedGame: t } = e,
-        { reviews: n, applicationId: h } = t,
-        f = n?.steam ?? { rating: void 0, ratingCount: void 0 },
-        g = (0, u.I)(h),
+        { reviews: n, applicationId: f } = t,
+        h = n?.steam ?? { rating: void 0, ratingCount: void 0 },
+        g = (0, u.I)(f),
         p = (0, d.A)(g),
-        _ = (0, c.j)(f.rating, f.ratingCount),
-        v = (0, o.y)(_),
-        [j, A] = l.useState(!1),
+        v = (0, o.j)(h.rating, h.ratingCount),
+        j = (0, c.y)(v),
+        [_, A] = l.useState(!1),
         E = l.useCallback(() => {
             A(!0);
         }, []),
@@ -44,7 +43,7 @@ let h = function (e) {
                   }),
                   (0, a.jsx)(i.m, {
                       text: m.intl.string(m.t.YNC5Di),
-                      shouldShow: !j,
+                      shouldShow: !_,
                       children: (0, a.jsx)(r.DUT, {
                           onClick: b,
                           className: x.nf,
@@ -75,12 +74,12 @@ let h = function (e) {
                                               i.m,
                                               {
                                                   text:
-                                                      _ === s.vI.NO_USER_REVIEWS
+                                                      v === s.vI.NO_USER_REVIEWS
                                                           ? m.intl.string(m.t.CLMt8J)
                                                           : m.intl
                                                                 .format(m.t["lzANJ/"], {
-                                                                    rating: f.rating,
-                                                                    rating_count: f.ratingCount?.toLocaleString(),
+                                                                    rating: h.rating,
+                                                                    rating_count: h.ratingCount?.toLocaleString(),
                                                                 })
                                                                 .toString(),
                                                   onTooltipShow: E,
@@ -90,17 +89,17 @@ let h = function (e) {
                                                       children: [
                                                           (0, a.jsx)(r.Text, {
                                                               variant: "text-xs/medium",
-                                                              color: v,
-                                                              children: (0, o.a)(_),
+                                                              color: j,
+                                                              children: (0, c.a)(v),
                                                           }),
-                                                          null != f.ratingCount &&
-                                                              _ !== s.vI.NO_USER_REVIEWS &&
+                                                          null != h.ratingCount &&
+                                                              v !== s.vI.NO_USER_REVIEWS &&
                                                               (0, a.jsx)(r.Text, {
                                                                   variant: "text-xs/medium",
                                                                   color: "text-subtle",
                                                                   children: m.intl
                                                                       .format(m.t.sgIoin, {
-                                                                          rating_count: f.ratingCount?.toLocaleString(),
+                                                                          rating_count: h.ratingCount?.toLocaleString(),
                                                                       })
                                                                       .toString(),
                                                               }),

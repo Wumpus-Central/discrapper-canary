@@ -1,6 +1,5 @@
-"use strict";
-l.d(t, { j: () => i });
-var r = l(556810),
-    a = l(204094),
-    n = l(506273);
-let i = { title: "Sku", stories: [r.l, n.P, a.r] };
+a.d(t, { j: () => o });
+var l = a(556810),
+    r = a(204094),
+    n = a(506273);
+let o = { title: "Sku", stories: [l.l, n.P, r.r] };

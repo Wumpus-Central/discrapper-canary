@@ -1,12 +1,11 @@
-"use strict";
 a.d(t, { A: () => o });
 var n = a(64700),
-    r = a(884362),
-    i = a(311907),
-    s = a(775602);
+    i = a(884362),
+    r = a(311907),
+    l = a(775602);
 function o(e, t, a) {
-    let o = (0, i.bG)([s.A], () => s.A.keyboardModeEnabled),
-        l = n.useCallback(
+    let o = (0, r.bG)([l.A], () => l.A.keyboardModeEnabled),
+        s = n.useCallback(
             (e) => {
                 let a = document.querySelector(e),
                     n = t.current;
@@ -14,7 +13,7 @@ function o(e, t, a) {
             },
             [t],
         ),
-        c = n.useCallback(
+        _ = n.useCallback(
             () =>
                 new Promise((e) => {
                     let a = t.current;
@@ -23,7 +22,7 @@ function o(e, t, a) {
                 }),
             [t],
         ),
-        _ = n.useCallback(
+        c = n.useCallback(
             () =>
                 new Promise((e) => {
                     let a = t.current;
@@ -32,12 +31,12 @@ function o(e, t, a) {
                 }),
             [t],
         );
-    return (0, r.Ay)({
+    return (0, i.Ay)({
         id: e,
         isEnabled: o,
-        setFocus: l,
-        scrollToStart: c,
-        scrollToEnd: _,
+        setFocus: s,
+        scrollToStart: _,
+        scrollToEnd: c,
         orientation: a?.orientation,
     });
 }

@@ -1,32 +1,31 @@
-"use strict";
 n.d(t, { R: () => s });
-var i = n(627968);
+var a = n(627968);
 n(64700);
 var l = n(720462),
-    a = n(183802),
+    i = n(183802),
     r = n(695314);
 function s(e) {
-    let { applicationId: t, skuIds: n, guildId: s, analyticsLocations: c, onCardClick: o } = e;
+    let { applicationId: t, skuIds: n, guildId: s, analyticsLocations: o, onCardClick: c } = e;
     return null == n || 0 === n.length
         ? null
-        : (0, i.jsx)(l.A, {
+        : (0, a.jsx)(l.A, {
               gap: "md",
               children: n.map((e, n) =>
-                  (0, i.jsx)(
+                  (0, a.jsx)(
                       "div",
                       {
                           className: r.B,
-                          children: (0, i.jsx)(a.A, {
+                          children: (0, a.jsx)(i.A, {
                               positionInSection: n,
                               applicationId: t,
                               skuId: e,
-                              variant: a.s.SMALL,
+                              variant: i.s.SMALL,
                               guildId: s,
-                              analyticsLocations: c,
+                              analyticsLocations: o,
                               onClick:
-                                  null != o
+                                  null != c
                                       ? (t) => {
-                                            t.preventDefault(), o(e);
+                                            t.preventDefault(), c(e);
                                         }
                                       : void 0,
                           }),

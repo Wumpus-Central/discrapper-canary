@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     pc: "navItem__4ccc5",
     St: "navItemIconBadgeContainer__4ccc5",

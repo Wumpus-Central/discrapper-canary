@@ -1,37 +1,36 @@
-"use strict";
-a.d(t, { A: () => o });
+a.d(t, { A: () => d });
 var l = a(64700),
     r = a(311907),
     n = a(475743),
-    s = a(828596),
-    i = a(124338);
-function o(e) {
+    o = a(828596),
+    s = a(124338);
+function d(e) {
     let {
             collectionId: t,
             includeUnpublishedProducts: a = !1,
-            includeUnpublishedCollection: o = !1,
-            includePricing: d = !1,
+            includeUnpublishedCollection: d = !1,
+            includePricing: i = !1,
             ignoreCache: c = !1,
         } = e,
-        [u, x, h] = (0, r.yK)([i.A], () => [i.A.getCollection(t), i.A.isFetching(t), i.A.getApiError(t)]),
+        [x, u, h] = (0, r.yK)([s.A], () => [s.A.getCollection(t), s.A.isFetching(t), s.A.getApiError(t)]),
         m = (0, n.A)(a),
-        b = (0, n.A)(o),
-        p = (0, n.A)(d),
+        b = (0, n.A)(d),
+        p = (0, n.A)(i),
         g = (0, n.A)(c),
-        f = !!t && !x && h?.status !== 404 && h?.status !== 429,
-        j = null == u || a !== m || o !== b || d !== p || c !== g;
+        f = !!t && !u && h?.status !== 404 && h?.status !== 429,
+        j = null == x || a !== m || d !== b || i !== p || c !== g;
     return (
         (0, l.useEffect)(() => {
             f &&
                 j &&
-                (0, s.vZ)({
+                (0, o.vZ)({
                     collectionId: t,
                     includeUnpublishedProducts: a,
-                    includeUnpublishedCollection: o,
-                    includePricing: d,
+                    includeUnpublishedCollection: d,
+                    includePricing: i,
                     ignoreCache: c,
                 });
-        }, [f, j, t, a, o, d, c]),
-        { collection: u, isFetching: x, apiError: h }
+        }, [f, j, t, a, d, i, c]),
+        { collection: x, isFetching: u, apiError: h }
     );
 }

@@ -1,4 +1,3 @@
-"use strict";
 function n(e, t, r) {
     var n = r.getRegistry(),
         i = n.addTarget(e, t);

@@ -1,11 +1,10 @@
-"use strict";
-a.d(t, { D: () => i });
+a.d(t, { D: () => s });
 var l = a(627968);
 a(64700);
 var r = a(720462),
     n = a(528226);
-let s = () => (0, l.jsx)("div", { style: { height: 250, width: 250, background: "pink", borderRadius: 6 } }),
-    i = {
+let o = () => (0, l.jsx)("div", { style: { height: 250, width: 250, background: "pink", borderRadius: 6 } }),
+    s = {
         title: "Contained Hero",
         stories: [
             {
@@ -15,31 +14,31 @@ let s = () => (0, l.jsx)("div", { style: { height: 250, width: 250, background: 
                     let {
                         containerHeight: t,
                         showChildren: a,
-                        bannerSrc: i,
-                        logoSrc: o,
-                        href: d,
+                        bannerSrc: s,
+                        logoSrc: d,
+                        href: i,
                         backgroundColor: c,
                     } = e;
                     return (0, l.jsx)("div", {
                         style: { height: a ? void 0 : t },
                         children: (0, l.jsx)(n.A, {
-                            bannerSrc: { src: i },
-                            logoSrc: { src: o },
-                            href: d,
+                            bannerSrc: { src: s },
+                            logoSrc: { src: d },
+                            href: i,
                             backgroundColor: c,
                             children: a
                                 ? (0, l.jsxs)(r.A, {
                                       children: [
-                                          (0, l.jsx)(s, {}),
-                                          (0, l.jsx)(s, {}),
-                                          (0, l.jsx)(s, {}),
-                                          (0, l.jsx)(s, {}),
-                                          (0, l.jsx)(s, {}),
-                                          (0, l.jsx)(s, {}),
-                                          (0, l.jsx)(s, {}),
-                                          (0, l.jsx)(s, {}),
-                                          (0, l.jsx)(s, {}),
-                                          (0, l.jsx)(s, {}),
+                                          (0, l.jsx)(o, {}),
+                                          (0, l.jsx)(o, {}),
+                                          (0, l.jsx)(o, {}),
+                                          (0, l.jsx)(o, {}),
+                                          (0, l.jsx)(o, {}),
+                                          (0, l.jsx)(o, {}),
+                                          (0, l.jsx)(o, {}),
+                                          (0, l.jsx)(o, {}),
+                                          (0, l.jsx)(o, {}),
+                                          (0, l.jsx)(o, {}),
                                       ],
                                   })
                                 : null,

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => T });
+n.d(t, { A: () => S });
 var r = n(627968),
     i = n(64700),
     s = n(735438),
@@ -10,82 +10,84 @@ var r = n(627968),
     c = n(688810),
     d = n(594832),
     _ = n(146423),
-    f = n(662349),
-    p = n(754804),
-    h = n(287809),
-    m = n(403362),
-    E = n(317560),
-    g = n(533406),
-    A = n(788868);
-let I = n(699976).Z.SIZE_90;
-function T(e) {
+    f = n(121700),
+    p = n(662349),
+    h = n(754804),
+    m = n(287809),
+    E = n(403362),
+    g = n(317560),
+    A = n(533406),
+    I = n(788868);
+let T = n(699976).Z.SIZE_90;
+function S(e) {
     let {
             sku: t,
             source: n,
             application: s,
-            guildId: T,
-            showIcons: S,
-            channelId: y,
-            userIdsForGifting: v,
-            userIdsForRecommendation: N,
-            spec: C = I,
+            guildId: S,
+            showIcons: y,
+            channelId: v,
+            userIdsForGifting: N,
+            userIdsForRecommendation: C,
+            spec: R = T,
         } = e,
-        [R, O] = i.useState(a().uniq(v)),
-        [b, D] = i.useState(!1),
-        [L, w] = i.useState(a().uniq(N)),
-        { analyticsLocations: M } = (0, c.Ay)(
+        [O, b] = i.useState(a().uniq(N)),
+        [D, L] = i.useState(!1),
+        [w, M] = i.useState(a().uniq(C)),
+        { analyticsLocations: x } = (0, c.Ay)(
             u.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD,
             u.A.SLAYER_STOREFRONT_WISHLIST_ITEM_CARD_GIFT_BUTTON,
         );
     i.useEffect(() => {
-        w((e) => {
-            let t = a().uniq(N);
+        M((e) => {
+            let t = a().uniq(C);
             return (0, l.v)(e, t) ? e : t;
         });
-    }, [N]),
+    }, [C]),
         i.useEffect(() => {
-            O((e) => {
-                let t = a().uniq(v);
+            b((e) => {
+                let t = a().uniq(N);
                 return (0, l.v)(e, t) ? e : t;
             });
-        }, [v]);
-    let x = (0, o.bG)([h.default], () => (1 === R.length ? h.default.getUser(R[0]) : void 0), [R]),
-        P = (0, o.yK)([h.default], () => L.map((e) => h.default.getUser(e)).filter(m.Vq), [L]),
-        k = i.useCallback(() => {
+        }, [N]);
+    let P = (0, o.bG)([m.default], () => (1 === O.length ? m.default.getUser(O[0]) : void 0), [O]),
+        k = (0, o.yK)([m.default], () => w.map((e) => m.default.getUser(e)).filter(E.Vq), [w]),
+        U = i.useCallback(() => {
             null != s &&
                 null != s.guildId &&
-                (0, E.R)({
+                (0, g.R)({
                     skuId: t.id,
                     applicationId: t.applicationId,
                     guildId: s.guildId,
                     isStorefront: !1,
-                    analyticsLocations: M,
+                    analyticsLocations: x,
                 });
-        }, [t.id, t.applicationId, s, M]),
-        U = i.useCallback(() => {
-            (0, g.a)(
+        }, [t.id, t.applicationId, s, x]),
+        G = i.useCallback(() => {
+            (0, A.a)(
                 t,
                 {
                     isGift: !0,
-                    giftRecipient: x,
-                    additionalUserIds: R.length > 1 ? R : void 0,
-                    giftingOrigin: A.vQ.SHOP_PAGE,
+                    giftRecipient: P,
+                    additionalUserIds: O.length > 1 ? O : void 0,
+                    giftingOrigin: I.vQ.SHOP_PAGE,
                 },
-                { analyticsLocations: M },
+                { analyticsLocations: x },
             );
-        }, [t, x, R, M]);
+        }, [t, P, O, x]);
     return (0, r.jsxs)(_.A, {
         sku: t,
-        user: x,
-        spec: C,
-        onClick: k,
-        onHoverOrFocusChange: D,
+        user: P,
+        spec: R,
+        onClick: U,
+        onHoverOrFocusChange: L,
         children: [
-            (0, r.jsx)(f.lQ, { sku: t, spec: C, onClick: U, isHoveringOrFocusing: b }),
-            S &&
+            (0, r.jsx)(p.lQ, { sku: t, spec: R, onClick: G, isHoveringOrFocusing: D }),
+            y &&
                 n === d.uS.WISHLIST &&
-                P.length > 0 &&
-                (0, r.jsx)(p.X, { spec: C, users: P, guildId: T ?? void 0, channelId: y ?? void 0 }),
+                k.length > 0 &&
+                (0, r.jsx)(h.X, { spec: R, users: k, guildId: S ?? void 0, channelId: v ?? void 0 }),
+            (0, r.jsx)(f.A, { spec: R, sku: t, isCardHovered: D, location: "ContextualSocialLayerSkuItemCard" }),
         ],
     });
 }

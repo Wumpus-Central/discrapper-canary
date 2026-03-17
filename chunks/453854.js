@@ -1,28 +1,27 @@
-"use strict";
-l.d(t, { A: () => c });
-var r = l(627968),
-    a = l(575593),
-    n = l(674658),
-    i = l(226540),
-    s = l(369496),
-    o = l(227),
-    d = l(486020);
+a.d(t, { A: () => c });
+var l = a(627968),
+    r = a(575593),
+    n = a(674658),
+    o = a(226540),
+    s = a(369496),
+    d = a(227),
+    i = a(486020);
 let c = (e) => {
-    let { skuId: t, size: l = 128, animated: c = !1 } = e,
-        { product: u } = (0, n.q)(t, !0),
-        m = u?.items[0];
-    if (null == m) return null;
-    if (m.type === a.R.AVATAR_DECORATION) {
-        let e = d.Ay.getAvatarDecorationURL({ avatarDecoration: m, size: l, canAnimate: c });
-        return null != e ? (0, r.jsx)("img", { src: e, alt: m.label }) : null;
+    let { skuId: t, size: a = 128, animated: c = !1 } = e,
+        { product: x } = (0, n.q)(t, !0),
+        u = x?.items[0];
+    if (null == u) return null;
+    if (u.type === r.R.AVATAR_DECORATION) {
+        let e = i.Ay.getAvatarDecorationURL({ avatarDecoration: u, size: a, canAnimate: c });
+        return null != e ? (0, l.jsx)("img", { src: e, alt: u.label }) : null;
     }
-    if (m.type === a.R.PROFILE_EFFECT) {
-        let e = m.thumbnailPreviewSrc;
-        return (0, r.jsx)("img", { src: e, alt: m.accessibilityLabel });
+    if (u.type === r.R.PROFILE_EFFECT) {
+        let e = u.thumbnailPreviewSrc;
+        return (0, l.jsx)("img", { src: e, alt: u.accessibilityLabel });
     }
-    if (m.type === a.R.NAMEPLATE) {
-        let e = (0, s.WK)(m);
-        return (0, r.jsx)(o.A, { nameplate: e, placement: i.u.PREVIEW });
+    if (u.type === r.R.NAMEPLATE) {
+        let e = (0, s.WK)(u);
+        return (0, l.jsx)(d.A, { nameplate: e, placement: o.u.PREVIEW });
     }
     return null;
 };

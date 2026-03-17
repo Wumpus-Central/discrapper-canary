@@ -1,11 +1,10 @@
-"use strict";
-a.d(t, { d: () => i });
+a.d(t, { d: () => s });
 var l = a(627968);
 a(64700);
 var r = a(397927),
     n = a(673277);
-let s = () => (0, l.jsx)("div", { style: { background: "rgba(255, 255, 255, 0.6)", height: 120 } }),
-    i = {
+let o = () => (0, l.jsx)("div", { style: { background: "rgba(255, 255, 255, 0.6)", height: 120 } }),
+    s = {
         name: "Section",
         id: "section",
         component: (e) => {
@@ -24,7 +23,7 @@ let s = () => (0, l.jsx)("div", { style: { background: "rgba(255, 255, 255, 0.6)
                                 children: (0, l.jsx)(n.A, {
                                     verticalMargin: t,
                                     padding: a,
-                                    children: (0, l.jsx)(s, {}),
+                                    children: (0, l.jsx)(o, {}),
                                 }),
                             }),
                             (0, l.jsx)("div", {
@@ -32,7 +31,7 @@ let s = () => (0, l.jsx)("div", { style: { background: "rgba(255, 255, 255, 0.6)
                                 children: (0, l.jsx)(n.A, {
                                     verticalMargin: t,
                                     padding: a,
-                                    children: (0, l.jsx)(s, {}),
+                                    children: (0, l.jsx)(o, {}),
                                 }),
                             }),
                             (0, l.jsx)("div", {
@@ -40,7 +39,7 @@ let s = () => (0, l.jsx)("div", { style: { background: "rgba(255, 255, 255, 0.6)
                                 children: (0, l.jsx)(n.A, {
                                     verticalMargin: t,
                                     padding: a,
-                                    children: (0, l.jsx)(s, {}),
+                                    children: (0, l.jsx)(o, {}),
                                 }),
                             }),
                             (0, l.jsx)("div", {
@@ -48,7 +47,7 @@ let s = () => (0, l.jsx)("div", { style: { background: "rgba(255, 255, 255, 0.6)
                                 children: (0, l.jsx)(n.A, {
                                     verticalMargin: t,
                                     padding: a,
-                                    children: (0, l.jsx)(s, {}),
+                                    children: (0, l.jsx)(o, {}),
                                 }),
                             }),
                             (0, l.jsx)("div", {
@@ -56,7 +55,7 @@ let s = () => (0, l.jsx)("div", { style: { background: "rgba(255, 255, 255, 0.6)
                                 children: (0, l.jsx)(n.A, {
                                     verticalMargin: t,
                                     padding: a,
-                                    children: (0, l.jsx)(s, {}),
+                                    children: (0, l.jsx)(o, {}),
                                 }),
                             }),
                             (0, l.jsx)("div", {
@@ -64,7 +63,7 @@ let s = () => (0, l.jsx)("div", { style: { background: "rgba(255, 255, 255, 0.6)
                                 children: (0, l.jsx)(n.A, {
                                     verticalMargin: t,
                                     padding: a,
-                                    children: (0, l.jsx)(s, {}),
+                                    children: (0, l.jsx)(o, {}),
                                 }),
                             }),
                         ],

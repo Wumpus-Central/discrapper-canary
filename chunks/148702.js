@@ -1,37 +1,36 @@
-"use strict";
-a.d(t, { A: () => d });
+a.d(t, { A: () => i });
 var l = a(627968),
     r = a(64700),
     n = a(503698),
-    s = a.n(n),
-    i = a(752238),
-    o = a(781992);
-function d(e) {
+    o = a.n(n),
+    s = a(752238),
+    d = a(781992);
+function i(e) {
     let { value: t, onChange: a } = e,
         n = "json",
-        d = r.useRef(null),
-        [c, u] = r.useState("");
+        i = r.useRef(null),
+        [c, x] = r.useState("");
     return (
         r.useEffect(() => {
-            if (null != t && i.default.hasLanguage(n)) {
-                let e = i.default.highlight(n, t, !0);
-                null != e ? u(e.value + "\n") : u(t + "\n");
-            } else u(t + "\n");
+            if (null != t && s.default.hasLanguage(n)) {
+                let e = s.default.highlight(n, t, !0);
+                null != e ? x(e.value + "\n") : x(t + "\n");
+            } else x(t + "\n");
         }, [t, n]),
         (0, l.jsxs)("div", {
-            className: o.t,
+            className: d.t,
             children: [
                 (0, l.jsx)("pre", {
-                    className: o.c5,
+                    className: d.c5,
                     "aria-hidden": "true",
                     children: (0, l.jsx)("code", {
-                        className: s()("hljs", n),
+                        className: o()("hljs", n),
                         dangerouslySetInnerHTML: { __html: c ?? "" },
                     }),
                 }),
                 (0, l.jsx)("textarea", {
-                    ref: d,
-                    className: o.mW,
+                    ref: i,
+                    className: d.mW,
                     value: t,
                     onChange: (e) => {
                         a(e.target.value);
@@ -51,23 +50,23 @@ function d(e) {
                                 let e = t.lastIndexOf("\n", r - 1) + 1,
                                     l = t.indexOf("\n", r),
                                     n = t.substring(e, -1 === l ? t.length : l),
-                                    s = 0;
+                                    o = 0;
                                 for (let e = 0; e < Math.min(2, n.length); e++)
-                                    if (" " === n[e]) s++;
+                                    if (" " === n[e]) o++;
                                     else break;
-                                s > 0 &&
-                                    (a(t.substring(0, e) + t.substring(e + s)),
+                                o > 0 &&
+                                    (a(t.substring(0, e) + t.substring(e + o)),
                                     setTimeout(() => {
-                                        if (null != d.current) {
-                                            let t = Math.max(e, r - s);
-                                            d.current.selectionStart = d.current.selectionEnd = t;
+                                        if (null != i.current) {
+                                            let t = Math.max(e, r - o);
+                                            i.current.selectionStart = i.current.selectionEnd = t;
                                         }
                                     }, 0));
                             } else
                                 a(t.substring(0, r) + "  " + t.substring(n)),
                                     setTimeout(() => {
-                                        null != d.current &&
-                                            (d.current.selectionStart = d.current.selectionEnd = r + 2);
+                                        null != i.current &&
+                                            (i.current.selectionStart = i.current.selectionEnd = r + 2);
                                     }, 0);
                         }
                     },

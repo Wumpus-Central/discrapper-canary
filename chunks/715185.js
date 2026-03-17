@@ -1,11 +1,10 @@
-"use strict";
-a.d(t, { H: () => d, M: () => o });
+a.d(t, { H: () => i, M: () => d });
 var l = a(627968);
 a(64700);
 var r = a(397927),
     n = a(41770),
-    s = a(785330);
-let i = {
+    o = a(785330);
+let s = {
         id: "dummy-show-of-skeletons",
         children: [
             {
@@ -66,7 +65,7 @@ let i = {
             },
         ],
     },
-    o = {
+    d = {
         name: "SubLayout",
         id: "sub-layout-basic",
         component: () =>
@@ -89,12 +88,12 @@ let i = {
                     (0, l.jsx)("br", {}),
                     (0, l.jsx)("hr", {}),
                     (0, l.jsx)("br", {}),
-                    (0, l.jsx)(s.Ay, { layout: n.uG }),
+                    (0, l.jsx)(o.Ay, { layout: n.uG }),
                 ],
             }),
         controls: {},
     },
-    d = {
+    i = {
         name: "SubLayout - Loading State",
         id: "sub-layout-skeleton",
         component: () =>
@@ -113,7 +112,7 @@ let i = {
                     (0, l.jsx)("br", {}),
                     (0, l.jsx)("hr", {}),
                     (0, l.jsx)("br", {}),
-                    (0, l.jsx)(s.Ay, { layout: i }),
+                    (0, l.jsx)(o.Ay, { layout: s }),
                 ],
             }),
         controls: {},

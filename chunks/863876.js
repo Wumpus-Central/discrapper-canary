@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     AS: "item__87d05",
     Xt: "currentItem__87d05",

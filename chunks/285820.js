@@ -1,39 +1,38 @@
-"use strict";
 n.d(t, { A: () => u }), n(321073);
-var i = n(627968),
+var a = n(627968),
     l = n(64700),
-    a = n(505779),
+    i = n(505779),
     r = n(60465),
     s = n(778591),
-    c = n(145963),
-    o = n(985018);
+    o = n(145963),
+    c = n(985018);
 let d = new Set(["1402418703554842694", "356877880938070016"]),
     u = function (e) {
         let { detectedGame: t } = e,
             n = (function (e) {
                 let t = (0, s.I)(e.applicationId),
-                    { applicationId: n, websites: i } = e;
+                    { applicationId: n, websites: a } = e;
                 return l.useMemo(() => {
-                    let e = i.reduce((e, t) => ((e[t.category] = t), e), {}),
+                    let e = a.reduce((e, t) => ((e[t.category] = t), e), {}),
                         l = [];
                     return (
-                        null != e[a.V.EPICGAMES] && d.has(n) && l.push(e[a.V.EPICGAMES]),
-                        null != t && l.push({ category: a.V.STEAM, url: t }),
-                        null != e[a.V.ROBLOX] && l.push(e[a.V.ROBLOX]),
-                        null != e[a.V.BATTLENET] && l.push(e[a.V.BATTLENET]),
-                        null != e[a.V.RIOT] && l.push(e[a.V.RIOT]),
-                        null != e[a.V.MINECRAFT] && l.push(e[a.V.MINECRAFT]),
+                        null != e[i.V.EPICGAMES] && d.has(n) && l.push(e[i.V.EPICGAMES]),
+                        null != t && l.push({ category: i.V.STEAM, url: t }),
+                        null != e[i.V.ROBLOX] && l.push(e[i.V.ROBLOX]),
+                        null != e[i.V.BATTLENET] && l.push(e[i.V.BATTLENET]),
+                        null != e[i.V.RIOT] && l.push(e[i.V.RIOT]),
+                        null != e[i.V.MINECRAFT] && l.push(e[i.V.MINECRAFT]),
                         l
                     );
-                }, [t, i, n]);
+                }, [t, a, n]);
             })(t);
         return 0 === n.length
             ? null
             : 1 === n.length
-              ? (0, i.jsx)(c.uC, { website: n[0] })
-              : (0, i.jsx)(c.rZ, {
-                    text: o.intl.string(o.t["/hMurx"]),
-                    "aria-label": o.intl.string(o.t.nK60cc),
+              ? (0, a.jsx)(o.uC, { website: n[0] })
+              : (0, a.jsx)(o.rZ, {
+                    text: c.intl.string(c.t["/hMurx"]),
+                    "aria-label": c.intl.string(c.t.nK60cc),
                     onClick: () => r.A.openGameProfileStoreLinksModal({ detectedGame: t, storeWebsites: n }),
                 });
     };

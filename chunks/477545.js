@@ -1,4 +1,3 @@
-"use strict";
 e.exports = {
     A: "overlayBackgroundNux__3db18",
     rs: "mainContainer__3db18",
