@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => H }), n(321073);
+n.d(t, { A: () => F }), n(321073);
 var i = n(627968),
     s = n(64700),
     l = n(837381),
@@ -25,23 +25,23 @@ var i = n(627968),
     S = n(661191),
     T = n(181079),
     v = n(422258),
-    y = n(93055),
-    j = n(5180),
-    R = n(210082),
-    O = n(780645),
-    L = n(332396),
-    M = n(652215),
-    D = n(97483),
-    G = n(49999),
-    U = n(788868),
-    P = n(665606),
-    w = n(985018),
-    k = n(299446),
-    V = n(988572);
-let B = { analyticsSource: { page: M.liQ.GUILD_CHANNEL, section: M.JJy.CHANNEL_LIST, object: M.ZSU.CHANNEL } };
-function H(e) {
+    y = n(668267),
+    j = n(93055),
+    R = n(5180),
+    O = n(210082),
+    L = n(780645),
+    M = n(332396),
+    D = n(652215),
+    G = n(97483),
+    U = n(49999),
+    P = n(788868),
+    w = n(665606),
+    k = n(985018),
+    V = n(299446),
+    B = n(988572);
+let H = { analyticsSource: { page: D.liQ.GUILD_CHANNEL, section: D.JJy.CHANNEL_LIST, object: D.ZSU.CHANNEL } };
+function F(e) {
     let t,
-        H,
         F,
         K,
         W,
@@ -52,129 +52,131 @@ function H(e) {
         Q,
         J,
         $,
-        { shouldShowIntroPopover: Z, markIntroPopoverAsDismissed: ee } = e,
-        et = (0, l.Vd)("favorites"),
-        { favoriteAdded: en, clearFavoriteAdded: ei } = (0, y.CJ)(),
-        es = s.useRef(null),
-        { analyticsLocations: el } = (0, A.Ay)(h.A.FAVORITES_GUILD_BUTTON),
-        [er, ea] = s.useState(!1),
-        eo = (0, O.$)("favorite-server-context"),
+        Z,
+        { shouldShowIntroPopover: ee, markIntroPopoverAsDismissed: et } = e,
+        en = (0, l.Vd)("favorites"),
+        { favoriteAdded: ei, clearFavoriteAdded: es } = (0, j.CJ)(),
+        el = s.useRef(null),
+        { analyticsLocations: er } = (0, A.Ay)(h.A.FAVORITES_GUILD_BUTTON),
+        [ea, eo] = s.useState(!1),
+        ec = (0, L.$)("favorite-server-context"),
         {
-            favoriteGuildEnabled: ec,
-            favoriteGuildMuted: ed,
-            favoriteChannels: eu,
+            favoriteGuildEnabled: ed,
+            favoriteGuildMuted: eu,
+            favoriteChannels: eh,
         } = (0, r.cf)([T.A], () => ({
             favoriteGuildEnabled: T.A.favoriteGuildEnabled,
             favoriteChannels: T.A.getFavoriteChannels(),
             favoriteGuildMuted: T.A.favoriteGuildMuted,
         })),
-        eh = (0, r.bG)([N.A], () => N.A.getChannelId(M.YYv)),
-        eA = (0, r.bG)([I.A], () => I.A.getChannel(eh)),
-        em = (0, x.A)((e) => e.guildId),
-        ep = (0, j.ai)(em),
-        { badge: eg, unread: e_ } = (0, R.A)(eu),
-        ef =
-            ((H = null != (t = (0, r.bG)([N.A], () => N.A.getVoiceChannelId())) && null != eu[t]),
-            (F = (0, r.bG)([E.A], () => {
-                if (!H) return !1;
+        eA = (0, r.bG)([N.A], () => N.A.getChannelId(D.YYv)),
+        em = (0, r.bG)([I.A], () => I.A.getChannel(eA)),
+        ep = (0, x.A)((e) => e.guildId),
+        eg = (0, R.ai)(ep),
+        { badge: e_, unread: ef } = (0, O.A)(eh),
+        ex =
+            ((F = null != (t = (0, r.bG)([N.A], () => N.A.getVoiceChannelId())) && null != eh[t]),
+            (K = (0, r.bG)([E.A], () => {
+                if (!F) return !1;
                 let e = E.A.getCurrentUserActiveStream();
-                return null != e && null != eu[e.channelId];
+                return null != e && null != eh[e.channelId];
             })),
-            (K = (0, r.bG)([E.A], () => E.A.getAllApplicationStreams().some((e) => null != eu[e.channelId]))),
-            (W = (0, r.bG)([b.A], () => H && null != t && b.A.hasVideo(t), [H, t])),
-            (Y = (0, r.yK)([d.Ay], () =>
-                S.default.keys(eu).reduce((e, t) => (e.push(...d.Ay.getEmbeddedActivitiesForChannel(t)), e), []),
+            (W = (0, r.bG)([E.A], () => E.A.getAllApplicationStreams().some((e) => null != eh[e.channelId]))),
+            (Y = (0, r.bG)([b.A], () => F && null != t && b.A.hasVideo(t), [F, t])),
+            (z = (0, r.yK)([d.Ay], () =>
+                S.default.keys(eh).reduce((e, t) => (e.push(...d.Ay.getEmbeddedActivitiesForChannel(t)), e), []),
             )),
-            (z = (0, r.bG)([d.Ay], () =>
+            (q = (0, r.bG)([d.Ay], () =>
                 Array.from(d.Ay.getSelfEmbeddedActivities().values()).some((e) => {
                     let { location: t } = e,
                         n = (0, u.H)(t);
-                    return null != n && null != eu[n];
+                    return null != n && null != eh[n];
                 }),
             )),
-            (q = Y.length > 0),
-            (X = !1),
+            (X = z.length > 0),
             (Q = !1),
             (J = !1),
             ($ = !1),
-            H ? ((X = !W), (Q = W), (J = F), ($ = z)) : ((J = K), ($ = q)),
-            (0, g.oi)({ audio: X, video: Q, screenshare: J, liveStage: !1, isCurrentUserConnected: H, activity: $ })),
-        ex = eg > 0 ? (0, _.w)(eg) : null,
-        eC = s.useRef(!1),
-        { hasAccess: eE } = (0, y.TW)("FavoritesButton"),
-        eI = s.useCallback(
-            (e, t) => {
-                (eC.current = !0), ee(e, t);
-            },
-            [ee],
-        ),
+            (Z = !1),
+            F ? ((Q = !Y), (J = Y), ($ = K), (Z = q)) : (($ = W), (Z = X)),
+            (0, g.oi)({ audio: Q, video: J, screenshare: $, liveStage: !1, isCurrentUserConnected: F, activity: Z })),
+        eC = e_ > 0 ? (0, _.w)(e_) : null,
+        eE = s.useRef(!1),
+        { hasAccess: eI } = (0, j.TW)("FavoritesButton"),
         eN = s.useCallback(
+            (e, t) => {
+                (eE.current = !0), et(e, t);
+            },
+            [et],
+        ),
+        eb = s.useCallback(
             (e) => {
-                e && (0, C.u)(M.YYv),
-                    eE
-                        ? (ec || (0, v.tV)(!0),
+                e && ((0, y.mv)("intro_dc"), (0, C.u)(D.YYv)),
+                    eI
+                        ? (ed || (0, v.tV)(!0, "favorites_button_onboarding"),
                           e &&
                               (0, o.mMO)(async () => {
                                   let { default: e } = await n.e("59839").then(n.bind(n, 889186));
-                                  return (t) => (0, i.jsx)(e, { ...t, parentId: null });
+                                  return (t) =>
+                                      (0, i.jsx)(e, { ...t, parentId: null, source: "favorites_button_onboarding" });
                               }))
-                        : e && (0, f.A)({ subscriptionTier: U.pe.TIER_2, analyticsLocations: el }),
-                    eI(G.i.TAKE_ACTION);
+                        : e && (0, f.A)({ subscriptionTier: P.pe.TIER_2, analyticsLocations: er }),
+                    eN(U.i.TAKE_ACTION);
             },
-            [eI, ec, eE, el],
+            [eN, ed, eI, er],
         );
     return (
         s.useEffect(() => {
-            Z && (eC.current = !1);
-        }, [Z]),
+            ee && (eE.current = !1);
+        }, [ee]),
         s.useEffect(
             () => () => {
-                Z && !eC.current && eI(G.i.AUTO_DISMISS, !0);
+                ee && !eE.current && eN(U.i.AUTO_DISMISS, !0);
             },
-            [eI, Z],
+            [eN, ee],
         ),
         s.useEffect(() => {
-            if (en) {
-                let e = (0, o.createToast)(w.intl.string(w.t["4tSWQg"]), D.Ck.FAVORITE);
+            if (ei) {
+                let e = (0, o.createToast)(k.intl.string(k.t["4tSWQg"]), G.Ck.FAVORITE);
                 (0, o.showToast)(e);
-                let t = setTimeout(ei, e.options?.duration ?? D.jg.duration);
+                let t = setTimeout(es, e.options?.duration ?? G.jg.duration);
                 return () => {
-                    ei(), clearTimeout(t);
+                    es(), clearTimeout(t);
                 };
             }
-        }, [en, ei]),
+        }, [ei, es]),
         (0, i.jsxs)(p.c, {
             children: [
-                (0, i.jsx)(m.A, { selected: ep, hovered: er, unread: e_ && !ed, className: k.I }),
-                (0, i.jsx)(L.A, {
+                (0, i.jsx)(m.A, { selected: eg, hovered: ea, unread: ef && !eu, className: V.I }),
+                (0, i.jsx)(M.A, {
                     children: (0, i.jsx)(o.Qk9, {
                         selected: !0,
-                        upperBadge: ef,
-                        lowerBadge: ex,
+                        upperBadge: ex,
+                        lowerBadge: eC,
                         children: (0, i.jsx)("div", {
-                            ref: es,
+                            ref: el,
                             children: (0, i.jsx)(o.jlP, {
-                                ...et,
-                                ariaLabel: w.intl.formatToPlainString(w.t["/uzRss"], {
-                                    guildName: w.intl.string(w.t.wMWyci),
-                                    mentions: eg,
+                                ...en,
+                                ariaLabel: k.intl.formatToPlainString(k.t["/uzRss"], {
+                                    guildName: k.intl.string(k.t.wMWyci),
+                                    mentions: e_,
                                 }),
-                                "aria-selected": ep,
-                                to: { pathname: M.BVt.CHANNEL(M.YYv, eh), state: B },
-                                selected: ep || er,
+                                "aria-selected": eg,
+                                to: { pathname: D.BVt.CHANNEL(D.YYv, eA), state: H },
+                                selected: eg || ea,
                                 onClick: () => {
-                                    Z && eN(!1);
+                                    ee && eb(!1);
                                 },
-                                onMouseEnter: () => ea(!0),
-                                onMouseLeave: () => ea(!1),
+                                onMouseEnter: () => eo(!0),
+                                onMouseLeave: () => eo(!1),
                                 onMouseDown: function () {
-                                    null != eA && c.A.preload(eA.guild_id, eA.id);
+                                    null != em && c.A.preload(em.guild_id, em.id);
                                 },
-                                onContextMenu: eo,
+                                onContextMenu: ec,
                                 children: (0, i.jsx)(o.Gg5, {
                                     size: "custom",
                                     color: "currentColor",
-                                    className: k.w,
+                                    className: V.w,
                                     width: 20,
                                     height: 20,
                                 }),
@@ -182,25 +184,25 @@ function H(e) {
                         }),
                     }),
                 }),
-                Z &&
+                ee &&
                     (0, i.jsx)(a.AM, {
-                        targetElementRef: es,
+                        targetElementRef: el,
                         gradientColor: "nitro-pink",
                         position: "right",
                         alignmentStrategy: "edge",
                         align: "top",
                         caretConfig: { align: "start" },
                         badge: { type: "beta", variant: "expressive" },
-                        graphic: { src: V.A, type: "image", aspectRatio: "16/9" },
-                        title: w.intl.string(P.default["bu/mLv"]),
-                        body: w.intl.string(P.default["/x2jT7"]),
-                        onRequestClose: () => eI(G.i.USER_DISMISS),
+                        graphic: { src: B.A, type: "image", aspectRatio: "16/9" },
+                        title: k.intl.string(w.default["bu/mLv"]),
+                        body: k.intl.string(w.default["/x2jT7"]),
+                        onRequestClose: () => eN(U.i.USER_DISMISS),
                         actions: [
                             {
                                 icon: o.tvc,
-                                text: eE ? w.intl.string(P.default["0lHa0Z"]) : w.intl.string(P.default["0nZZEk"]),
-                                onClick: () => eN(!0),
-                                variant: eE ? void 0 : "expressive",
+                                text: eI ? k.intl.string(w.default["0lHa0Z"]) : k.intl.string(w.default["0nZZEk"]),
+                                onClick: () => eb(!0),
+                                variant: eI ? void 0 : "expressive",
                             },
                         ],
                     }),

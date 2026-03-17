@@ -20,7 +20,7 @@ function g(e) {
         f = s.useCallback(() => {
             (0, r.mMO)(async () => {
                 let { default: e } = await n.e("59839").then(n.bind(n, 889186));
-                return (t) => (0, i.jsx)(e, { ...t });
+                return (t) => (0, i.jsx)(e, { ...t, source: "favorites_empty_state" });
             });
         }, []);
     return (0, i.jsx)(o.f5, {

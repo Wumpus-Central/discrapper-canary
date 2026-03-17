@@ -1,37 +1,37 @@
-n.d(e, { default: () => c });
-var i = n(627968),
-    a = n(64700),
-    o = n(158954),
-    r = n(397927),
-    s = n(422258),
-    l = n(985018);
-function c(t) {
-    let { onClose: e, transitionState: n } = t,
-        [c, f] = a.useState("");
+e.d(n, { default: () => s });
+var i = e(627968),
+    a = e(64700),
+    l = e(158954),
+    o = e(397927),
+    r = e(422258),
+    u = e(985018);
+function s(t) {
+    let { onClose: n, transitionState: e } = t,
+        [s, f] = a.useState("");
     return (0, i.jsx)("form", {
         onSubmit: function (t) {
-            t.preventDefault(), (0, s.od)(c), e();
+            t.preventDefault(), (0, r.od)(s, "modal"), n();
         },
-        children: (0, i.jsx)(o.Modal, {
-            title: l.intl.string(l.t["ISN+NM"]),
+        children: (0, i.jsx)(l.Modal, {
+            title: u.intl.string(u.t["ISN+NM"]),
             actions: [
-                { text: l.intl.string(l.t["ETE/oC"]), onClick: e, variant: "secondary" },
+                { text: u.intl.string(u.t["ETE/oC"]), onClick: n, variant: "secondary" },
                 {
-                    text: l.intl.string(l.t["ISN+NM"]),
+                    text: u.intl.string(u.t["ISN+NM"]),
                     variant: "primary",
                     type: "submit",
                     autoFocus: !1,
-                    disabled: "" === c,
+                    disabled: "" === s,
                 },
             ],
-            transitionState: n,
-            onClose: e,
-            children: (0, i.jsx)(r.ksK, {
-                label: l.intl.string(l.t.OCAkGP),
-                value: c,
+            transitionState: e,
+            onClose: n,
+            children: (0, i.jsx)(o.ksK, {
+                label: u.intl.string(u.t.OCAkGP),
+                value: s,
                 onChange: f,
                 maxLength: 100,
-                placeholder: l.intl.string(l.t.eTVbtx),
+                placeholder: u.intl.string(u.t.eTVbtx),
                 autoFocus: !0,
             }),
         }),

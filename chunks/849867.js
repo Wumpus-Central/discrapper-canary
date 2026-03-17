@@ -13,7 +13,7 @@ function A(n) {
         u = r.useCallback(() => {
             (0, a.mMO)(async () => {
                 let { default: t } = await e.e("59839").then(e.bind(e, 889186));
-                return (e) => (0, i.jsx)(t, { ...e, parentId: n.id });
+                return (e) => (0, i.jsx)(t, { ...e, parentId: n.id, source: "favorites_add_to_category" });
             });
         }, [n.id]);
     return __OVERLAY__ || t !== s.YYv || !A

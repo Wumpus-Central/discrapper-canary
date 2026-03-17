@@ -18,7 +18,7 @@ function p() {
         subtext: e ? A.intl.string(g.default.FaHxWl) : void 0,
         color: e ? "danger" : "default",
         action: function () {
-            (0, a.Z)(!1), e && (0, s.tV)(!1), (0, o.ai)(d.A.getGuildId()) && (0, r.pX)(u.BVt.ME);
+            (0, a.Z)(!1), e && (0, s.tV)(!1, "server_context_menu"), (0, o.ai)(d.A.getGuildId()) && (0, r.pX)(u.BVt.ME);
         },
     });
 }
