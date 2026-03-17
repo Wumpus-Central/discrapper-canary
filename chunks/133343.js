@@ -223,9 +223,10 @@ function eT(e, t) {
 }
 function eS(e) {
     return i.useCallback(
-        (t) => {
-            let n = e.current;
-            null != n && n.insertKaomoji(t), (0, b.v8)(), n?.focus();
+        function (t) {
+            let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+                r = e.current;
+            null != r && r.insertKaomoji(t), n && ((0, b.v8)(), r?.focus());
         },
         [e],
     );

@@ -1,83 +1,105 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => p });
 var r = n(627968),
     i = n(64700),
     s = n(397927),
-    a = n(307618),
-    o = n(732139),
-    l = n(985018),
-    u = n(395913);
-function c(e, t) {
+    a = n(58149),
+    o = n(307618),
+    l = n(652215),
+    u = n(732139),
+    c = n(985018),
+    d = n(395913);
+function _(e, t) {
     let n = t.trim().toLowerCase();
     return "" === n || e.keywords.some((e) => e.toLowerCase().startsWith(n) || n.startsWith(e.toLowerCase()))
         ? e.kaomojis
         : [];
 }
-function d(e) {
+function f(e) {
     let { onSelect: t } = e,
-        [n, o] = i.useState(""),
-        d = i.useMemo(() => {
+        [n, u] = i.useState(""),
+        f = i.useMemo(() => {
             let e = n.trim();
-            return a.W.map((e) => ({ ...e, kaomojis: c(e, n) }))
+            return o.W.map((e) => ({ ...e, kaomojis: _(e, n) }))
                 .filter((e) => e.kaomojis.length > 0)
                 .filter((t) => "" !== e || !0 !== t.hidden);
         }, [n]),
-        _ = i.useCallback(
-            (e) => {
-                t(e);
+        p = i.useCallback(
+            (e, n, r, i) => {
+                a.Ay.trackWithMetadata(l.HAw.EXPRESSION_PICKER_KAOMOJI_SELECTED, {
+                    kaomoji: e,
+                    category: n,
+                    keyword: r,
+                }),
+                    t(e, !i.shiftKey);
             },
             [t],
         ),
-        f = i.useCallback((e) => {
-            o(e);
+        h = i.useCallback((e) => {
+            u(e);
         }, []),
-        p = i.useCallback(() => {
-            o("");
+        m = i.useCallback(() => {
+            u("");
         }, []);
     return (0, r.jsxs)("div", {
-        className: u.Zp,
+        className: d.Zp,
+        role: "region",
+        "aria-label": c.intl.string(c.t["2pR2JI"]),
         children: [
             (0, r.jsx)("div", {
-                className: u.wx,
+                className: d.wx,
                 children: (0, r.jsx)(s.IWV, {
                     query: n,
-                    onChange: f,
-                    onClear: p,
-                    placeholder: l.intl.string(l.t["5h0QOP"]),
+                    onChange: h,
+                    onClear: m,
+                    placeholder: c.intl.string(c.t["5h0QOP"]),
+                    "aria-label": c.intl.string(c.t["5h0QOP"]),
                 }),
             }),
             (0, r.jsx)(s.HOs, {
                 fade: !0,
-                className: u.IA,
+                className: d.IA,
                 children:
-                    d.length > 0
+                    f.length > 0
                         ? (0, r.jsx)("div", {
-                              className: u.tt,
-                              children: d.map((e) =>
+                              className: d.tt,
+                              children: f.map((e) =>
                                   (0, r.jsxs)(
                                       "div",
                                       {
-                                          className: u.hl,
+                                          className: d.hl,
+                                          role: "group",
+                                          "aria-labelledby": `kaomoji-category-${e.category}`,
                                           children: [
                                               (0, r.jsx)(s.Text, {
+                                                  id: `kaomoji-category-${e.category}`,
                                                   variant: "text-xs/semibold",
                                                   color: "text-muted",
-                                                  className: u.Jm,
-                                                  children: l.intl.string(e.categoryMessageKey),
+                                                  className: d.Jm,
+                                                  children: c.intl.string(e.categoryMessageKey),
                                               }),
                                               (0, r.jsx)("div", {
-                                                  className: u.Hu,
-                                                  children: e.kaomojis.map((t) =>
+                                                  className: d.Hu,
+                                                  role: "list",
+                                                  children: e.kaomojis.map((t, i) =>
                                                       (0, r.jsx)(
                                                           "div",
                                                           {
-                                                              className: u.Yx,
+                                                              className: d.Yx,
+                                                              role: "listitem",
                                                               children: (0, r.jsx)(s.Button, {
                                                                   variant: "secondary",
                                                                   size: "sm",
                                                                   fullWidth: !0,
-                                                                  onClick: () => _(t),
+                                                                  onClick: (r) => p(t, e.category, n.trim(), r),
                                                                   text: t,
+                                                                  "aria-label": c.intl.formatToPlainString(
+                                                                      c.t["hi+F96"],
+                                                                      {
+                                                                          category: c.intl.string(e.categoryMessageKey),
+                                                                          number: i + 1,
+                                                                      },
+                                                                  ),
                                                               }),
                                                           },
                                                           `${e.category}-${t}`,
@@ -90,22 +112,26 @@ function d(e) {
                                   ),
                               ),
                           })
-                        : (0, r.jsx)(s.Text, {
-                              variant: "text-sm/normal",
-                              color: "text-muted",
-                              className: u.p$,
-                              children: l.intl.string(l.t.V6nAfF),
+                        : (0, r.jsx)("div", {
+                              "aria-live": "polite",
+                              "aria-atomic": !0,
+                              children: (0, r.jsx)(s.Text, {
+                                  variant: "text-sm/normal",
+                                  color: "text-muted",
+                                  className: d.p$,
+                                  children: c.intl.string(c.t.V6nAfF),
+                              }),
                           }),
             }),
         ],
     });
 }
-function _(e) {
+function p(e) {
     return (0, r.jsx)("div", {
-        className: u.iE,
-        id: o.pE,
+        className: d.iE,
+        id: u.pE,
         role: "tabpanel",
-        "aria-labelledby": o.W3,
-        children: (0, r.jsx)(d, { ...e }),
+        "aria-labelledby": u.W3,
+        children: (0, r.jsx)(f, { ...e }),
     });
 }

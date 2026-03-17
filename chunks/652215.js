@@ -4316,6 +4316,7 @@ var na = (function (e) {
             (e.GUILD_WELCOME_SCREEN_OPTION_SELECTED = "guild_welcome_screen_option_selected"),
             (e.MESSAGE_REPORTED = "message_reported"),
             (e.EXPRESSION_PICKER_TAB_CLICKED = "expression_picker_tab_clicked"),
+            (e.EXPRESSION_PICKER_KAOMOJI_SELECTED = "expression_picker_kaomoji_selected"),
             (e.EXPRESSION_PICKER_OPENED = "expression_picker_opened"),
             (e.EXPRESSION_PICKER_CATEGORY_SELECTED = "expression_picker_category_selected"),
             (e.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED = "expression_picker_category_collapse_toggled"),

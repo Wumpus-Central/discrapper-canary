@@ -39,7 +39,7 @@ var r = n(627968),
     F = n(307731),
     V = n(823894),
     B = n(985018),
-    H = n(579037);
+    H = n(228539);
 let j = 498 + G.as.MEDIUM,
     Y = i.memo(function (e) {
         let { isActive: t, className: n, viewType: i, autoFocus: s = !1, "aria-controls": o, ...l } = e;
@@ -326,6 +326,7 @@ function K(e) {
                                                                       "aria-selected": es === P.kx.KAOMOJI,
                                                                       isActive: es === P.kx.KAOMOJI,
                                                                       viewType: P.kx.KAOMOJI,
+                                                                      "aria-label": B.intl.string(B.t["2pR2JI"]),
                                                                       children: "^▽^",
                                                                   })
                                                                 : null,
