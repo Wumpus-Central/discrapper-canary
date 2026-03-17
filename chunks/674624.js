@@ -48,36 +48,24 @@ function L() {
         P = (0, m.A)({ scrollPosition: f._F.TRY_IT_OUT, analyticsLocations: i }),
         D = (0, l.useCallback)(() => {
             let e = (0, h.Ci)("openClientThemes");
-            (0, x.openUserSettings)(e ? A.X.DISPLAY_THEME_CATEGORY : A.X.APPEARANCE_PANEL, {
-                section: C.nc_.APPEARANCE,
-                analyticsLocations: i,
-            });
+            (0, x.openUserSettings)(e ? A.X.DISPLAY_THEME_CATEGORY : A.X.APPEARANCE_PANEL, { analyticsLocations: i });
         }, [i]),
         L = (0, l.useCallback)(() => {
-            (0, x.openUserSettings)(A.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, {
-                section: C.nc_.GUILD_BOOSTING,
-                analyticsLocations: i,
-            });
+            (0, x.openUserSettings)(A.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL, { analyticsLocations: i });
         }, [i]),
         G = (0, l.useCallback)(() => {
             let e = (0, h.Ci)("openCustomAppSettings") ? A.X.DISPLAY_IN_APP_ICON_CATEGORY : A.X.APPEARANCE_IN_APP_ICON;
-            (0, x.openUserSettings)(e, { section: C.nc_.APPEARANCE, analyticsLocations: i });
+            (0, x.openUserSettings)(e, { analyticsLocations: i });
         }, [i]),
         M = (0, l.useCallback)(() => {
             (0, g.pX)(C.BVt.COLLECTIBLES_SHOP);
         }, []),
         U = (0, l.useCallback)(() => {
-            (0, x.openUserSettings)(A.X.SOUNDBOARD_CATEGORY, {
-                section: C.nc_.VOICE,
-                subsection: f.MJ,
-                analyticsLocations: i,
-            });
+            (0, x.openUserSettings)(A.X.SOUNDBOARD_CATEGORY, { analyticsLocations: i });
         }, [i]),
         k = (0, l.useCallback)(() => {
-            (0, x.openUserSettings)(
-                A.X.PROFILE_PANEL,
-                { section: C.nc_.PROFILE_CUSTOMIZATION, analyticsLocations: i },
-                () => (0, _.L)({ analyticsLocations: i }),
+            (0, x.openUserSettings)(A.X.PROFILE_PANEL, { analyticsLocations: i }, () =>
+                (0, _.L)({ analyticsLocations: i }),
             );
         }, [i]),
         V = (0, S.A)(),

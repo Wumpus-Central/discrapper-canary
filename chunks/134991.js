@@ -1,29 +1,28 @@
-n.d(t, { V: () => h });
+n.d(t, { V: () => m });
 var a = n(627968),
-    s = n(64700),
-    i = n(342494),
+    i = n(64700),
+    s = n(342494),
     l = n(780964),
     r = n(840065),
     o = n(88001),
-    d = n(652215),
-    c = n(519412),
-    u = n(985018),
-    m = n(438705);
-let h = (e) => {
-    let { targetElementRef: t, shouldShow: n, onDismiss: h } = e,
-        x = s.useCallback(() => {
-            h(), (0, r.openUserSettings)(l.X.SUBSCRIPTIONS_PANEL, { section: d.nc_.SUBSCRIPTIONS });
-        }, [h]);
-    return (0, a.jsx)(i.AM, {
+    d = n(519412),
+    c = n(985018),
+    u = n(438705);
+let m = (e) => {
+    let { targetElementRef: t, shouldShow: n, onDismiss: m } = e,
+        h = i.useCallback(() => {
+            m(), (0, r.openUserSettings)(l.X.SUBSCRIPTIONS_PANEL);
+        }, [m]);
+    return (0, a.jsx)(s.AM, {
         targetElementRef: t,
         position: "top",
         caretConfig: { align: "start" },
         size: "md",
-        graphic: { type: "image", src: m },
+        graphic: { type: "image", src: u },
         shouldShow: n,
-        title: u.intl.format(c.default.bx8sR9, { premiumGroupProductName: (0, o.DP)() }),
-        body: u.intl.format(c.default.Pw4OFZ, { premiumGroupProductName: (0, o.DP)() }),
-        onRequestClose: h,
-        actions: [{ text: u.intl.string(c.default.DD26QR), onClick: x }],
+        title: c.intl.format(d.default.bx8sR9, { premiumGroupProductName: (0, o.DP)() }),
+        body: c.intl.format(d.default.Pw4OFZ, { premiumGroupProductName: (0, o.DP)() }),
+        onRequestClose: m,
+        actions: [{ text: c.intl.string(d.default.DD26QR), onClick: h }],
     });
 };

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => Z, i: () => q }), n(321073);
+n.d(t, { A: () => q, i: () => z }), n(321073);
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -35,49 +35,48 @@ var r = n(627968),
     P = n(801264),
     k = n(840065),
     U = n(340062),
-    G = n(652215),
-    F = n(985018),
-    V = n(898969),
-    B = n(206314),
-    H = n(473169);
-let j = _.Ay.connectStores([w.A], () => ({ theme: w.A.theme }))(p.ppr);
-function Y(e) {
+    G = n(985018),
+    F = n(898969),
+    V = n(206314),
+    B = n(473169);
+let H = _.Ay.connectStores([w.A], () => ({ theme: w.A.theme }))(p.ppr);
+function j(e) {
     let { className: t, text: n } = e;
     return (0, r.jsxs)("div", {
-        className: a()(V.GC, t),
+        className: a()(F.GC, t),
         children: [
-            (0, r.jsx)(p.mir, { size: "md", color: "currentColor", className: V.QW }),
+            (0, r.jsx)(p.mir, { size: "md", color: "currentColor", className: F.QW }),
             (0, r.jsx)(p.Text, { color: "text-default", variant: "text-sm/medium", children: n }),
         ],
     });
 }
-let W = (e) => {
+let Y = (e) => {
         let { disclosure: t } = e;
         return i.useMemo(() => {
             switch (t) {
                 case f.mo.IP_LOCATION:
-                    return (0, r.jsx)(p.L_e, { size: "md", color: "currentColor", className: V.PR });
+                    return (0, r.jsx)(p.L_e, { size: "md", color: "currentColor", className: F.PR });
                 case f.mo.DISPLAYS_ADVERTISEMENTS:
-                    return (0, r.jsx)(p.JD7, { className: V.PR });
+                    return (0, r.jsx)(p.JD7, { className: F.PR });
                 default:
-                    return (0, r.jsx)(p.mir, { className: V.PR });
+                    return (0, r.jsx)(p.mir, { className: F.PR });
             }
         }, [t]);
     },
-    K = (e, t) => {
-        let n = F.intl.string(F.t["DT39A+"]),
-            i = F.intl.formatToPlainString(F.t.QWGvxA, { applicationName: e.name }),
+    W = (e, t) => {
+        let n = G.intl.string(G.t["DT39A+"]),
+            i = G.intl.formatToPlainString(G.t.QWGvxA, { applicationName: e.name }),
             s = null;
         return (
             (0, A.A)(e) &&
-                ((n = F.intl.formatToPlainString(F.t["paC+US"], { applicationName: e.name })),
-                (i = F.intl.formatToPlainString(F.t.inM1Yt, { applicationName: e.name })),
-                (s = (0, r.jsx)(P.A, { look: P.k.WARNING, children: F.intl.string(F.t.LY35Zy) }))),
+                ((n = G.intl.formatToPlainString(G.t["paC+US"], { applicationName: e.name })),
+                (i = G.intl.formatToPlainString(G.t.inM1Yt, { applicationName: e.name })),
+                (s = (0, r.jsx)(P.A, { look: P.k.WARNING, children: G.intl.string(G.t.LY35Zy) }))),
             (0, x.A)(e.id) &&
                 (s = (0, r.jsxs)(r.Fragment, {
                     children: [
                         s,
-                        (0, r.jsx)(P.A, { children: F.intl.format(F.t.KRnERi, { applicationName: e.name }) }),
+                        (0, r.jsx)(P.A, { children: G.intl.format(G.t.KRnERi, { applicationName: e.name }) }),
                     ],
                 })),
             (0, p.qfG)((e) =>
@@ -85,9 +84,9 @@ let W = (e) => {
                     title: n,
                     subtitle: i,
                     actions: [
-                        { text: F.intl.string(F.t["ETE/oC"]), onClick: e.onClose, variant: "secondary" },
+                        { text: G.intl.string(G.t["ETE/oC"]), onClick: e.onClose, variant: "secondary" },
                         {
-                            text: F.intl.string(F.t.xUqheM),
+                            text: G.intl.string(G.t.xUqheM),
                             onClick: () => {
                                 t(), e.onClose();
                             },
@@ -95,12 +94,12 @@ let W = (e) => {
                         },
                     ],
                     ...e,
-                    children: (0, r.jsx)("div", { className: V.rO, children: s }),
+                    children: (0, r.jsx)("div", { className: F.rO, children: s }),
                 }),
             )
         );
     },
-    $ = (e) => {
+    K = (e) => {
         let { application: t, isVisible: n } = e,
             i = () => {
                 null != t.terms_of_service_url && (0, b.h)({ href: t.terms_of_service_url, shouldConfirm: !0 });
@@ -110,41 +109,41 @@ let W = (e) => {
             };
         return null != t.terms_of_service_url || null != t.privacy_policy_url
             ? (0, r.jsxs)("div", {
-                  className: V.vi,
+                  className: F.vi,
                   children: [
                       null != t.terms_of_service_url
                           ? (0, r.jsxs)(p.MzZ, {
                                 onClick: i,
                                 tabIndex: n ? 0 : -1,
-                                className: V.Dt,
+                                className: F.Dt,
                                 children: [
                                     (0, r.jsx)(p.Text, {
                                         variant: "text-sm/normal",
                                         color: "text-link",
-                                        children: F.intl.string(F.t["lx+Gec"]),
+                                        children: G.intl.string(G.t["lx+Gec"]),
                                     }),
-                                    (0, r.jsx)(p.I9m, { size: "sm", className: V.X6, color: "var(--text-link)" }),
+                                    (0, r.jsx)(p.I9m, { size: "sm", className: F.X6, color: "var(--text-link)" }),
                                 ],
                             })
                           : null,
                       null != t.privacy_policy_url
                           ? (0, r.jsxs)("div", {
-                                className: V.Fb,
+                                className: F.Fb,
                                 children: [
-                                    null != t.terms_of_service_url ? (0, r.jsx)("div", { className: V.yF }) : null,
+                                    null != t.terms_of_service_url ? (0, r.jsx)("div", { className: F.yF }) : null,
                                     (0, r.jsxs)(p.MzZ, {
                                         onClick: s,
-                                        className: V.Fb,
+                                        className: F.Fb,
                                         tabIndex: n ? 0 : -1,
                                         children: [
                                             (0, r.jsx)(p.Text, {
                                                 variant: "text-sm/normal",
                                                 color: "text-link",
-                                                children: F.intl.string(F.t.okSwq9),
+                                                children: G.intl.string(G.t.okSwq9),
                                             }),
                                             (0, r.jsx)(p.I9m, {
                                                 size: "sm",
-                                                className: V.X6,
+                                                className: F.X6,
                                                 color: "var(--text-link)",
                                             }),
                                         ],
@@ -156,7 +155,7 @@ let W = (e) => {
               })
             : null;
     },
-    z = (e) => {
+    $ = (e) => {
         let {
                 scopes: t,
                 application: n,
@@ -173,21 +172,21 @@ let W = (e) => {
             N = () => {
                 let e = [];
                 for (let n of t)
-                    e.push(...(0, y.rY)(n, t)), n === c.F.APPLICATIONS_COMMANDS && e.push(F.intl.string(F.t.Ls2XRq));
+                    e.push(...(0, y.rY)(n, t)), n === c.F.APPLICATIONS_COMMANDS && e.push(G.intl.string(G.t.Ls2XRq));
                 if (e.length > 0 || (null != u && u.length > 0))
                     return (0, r.jsx)(p.Nt8, {
-                        className: V.Nm,
+                        className: F.Nm,
                         isExpanded: E,
                         collapsibleContent: (0, r.jsxs)("ul", {
-                            className: V.vo,
+                            className: F.vo,
                             children: [
                                 e.map((e, t) =>
                                     (0, r.jsxs)(
                                         "li",
                                         {
-                                            className: V.EK,
+                                            className: F.EK,
                                             children: [
-                                                (0, r.jsx)("i", { className: V.dv }),
+                                                (0, r.jsx)("i", { className: F.dv }),
                                                 (0, r.jsx)(p.Text, { variant: "text-sm/normal", children: e }),
                                             ],
                                         },
@@ -200,9 +199,9 @@ let W = (e) => {
                                         ? (0, r.jsxs)(
                                               "li",
                                               {
-                                                  className: V.EK,
+                                                  className: F.EK,
                                                   children: [
-                                                      (0, r.jsx)(W, { disclosure: t }),
+                                                      (0, r.jsx)(Y, { disclosure: t }),
                                                       (0, r.jsx)(p.Text, { variant: "text-sm/normal", children: i }),
                                                   ],
                                               },
@@ -217,7 +216,7 @@ let W = (e) => {
                             return (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsxs)(p.DUT, {
-                                        className: V.gF,
+                                        className: F.gF,
                                         onClick: (e) => {
                                             A(!E), n(e);
                                         },
@@ -225,7 +224,7 @@ let W = (e) => {
                                             (0, r.jsx)(p.Heading, {
                                                 variant: "heading-sm/medium",
                                                 color: "text-strong",
-                                                children: F.intl.string(F.t.xrmhRX),
+                                                children: G.intl.string(G.t.xrmhRX),
                                             }),
                                             E
                                                 ? (0, r.jsx)(p.abt, {
@@ -242,8 +241,8 @@ let W = (e) => {
                                         (0, r.jsx)(p.Text, {
                                             variant: "text-sm/normal",
                                             color: "text-subtle",
-                                            className: a()(V.vo, V.k8),
-                                            children: F.intl.format(F.t.nZOS8j, { numPermissions: e.length }),
+                                            className: a()(F.vo, F.k8),
+                                            children: G.intl.format(G.t.nZOS8j, { numPermissions: e.length }),
                                         }),
                                 ],
                             });
@@ -253,7 +252,7 @@ let W = (e) => {
             C = i.useMemo(() => {
                 if (null != n.description && "" !== n.description)
                     return (0, r.jsx)(p.Text, {
-                        className: B.PT,
+                        className: V.PT,
                         variant: "text-sm/normal",
                         color: "text-default",
                         children: (0, S.parseBioReact)(n.description),
@@ -264,16 +263,16 @@ let W = (e) => {
                     t = null != n.terms_of_service_url || null != n.privacy_policy_url;
                 return e || t
                     ? (0, r.jsx)(p.Nt8, {
-                          className: V.Nm,
+                          className: F.Nm,
                           isExpanded: h,
                           collapsibleContent: (0, r.jsxs)("div", {
-                              className: V.vo,
-                              children: [e && C, t && (0, r.jsx)($, { application: n, isVisible: h })],
+                              className: F.vo,
+                              children: [e && C, t && (0, r.jsx)(K, { application: n, isVisible: h })],
                           }),
                           children: (e) => {
                               let { onClick: t } = e;
                               return (0, r.jsxs)(p.DUT, {
-                                  className: V.gF,
+                                  className: F.gF,
                                   onClick: (e) => {
                                       m(!h), t(e);
                                   },
@@ -281,7 +280,7 @@ let W = (e) => {
                                       (0, r.jsx)(p.Heading, {
                                           variant: "heading-sm/medium",
                                           color: "text-strong",
-                                          children: F.intl.string(F.t.fcYgiY),
+                                          children: G.intl.string(G.t.fcYgiY),
                                       }),
                                       h
                                           ? (0, r.jsx)(p.abt, {
@@ -303,28 +302,28 @@ let W = (e) => {
                     t =
                         null != e
                             ? (0, r.jsx)(T.A.Child, {
-                                  className: V.zN,
+                                  className: F.zN,
                                   grow: 0,
                                   children: (0, r.jsx)("img", { src: e, alt: "" }),
                               })
                             : null,
                     i = new Date(D.default.extractTimestamp(_)).toLocaleDateString(d);
                 return (0, r.jsxs)("div", {
-                    className: V.ie,
+                    className: F.ie,
                     children: [
                         t,
                         (0, r.jsxs)("div", {
-                            className: V.gC,
+                            className: F.gC,
                             children: [
                                 (0, r.jsx)(p.Heading, {
                                     variant: "heading-md/semibold",
-                                    className: a()(V.TK, H.Q5),
+                                    className: a()(F.TK, B.Q5),
                                     children: n.name,
                                 }),
                                 (0, r.jsx)(p.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-default",
-                                    children: F.intl.format(F.t.yOApCK, { date: i }),
+                                    children: G.intl.format(G.t.yOApCK, { date: i }),
                                 }),
                             ],
                         }),
@@ -336,46 +335,43 @@ let W = (e) => {
             w = (0, I.A)(n),
             P = () =>
                 (0, r.jsxs)("div", {
-                    className: V.qr,
+                    className: F.qr,
                     children: [
                         w
-                            ? (0, r.jsx)(Y, {
-                                  className: V.UW,
-                                  text: F.intl.format(F.t.j4B7EW, { applicationName: n.name }),
+                            ? (0, r.jsx)(j, {
+                                  className: F.UW,
+                                  text: G.intl.format(G.t.j4B7EW, { applicationName: n.name }),
                               })
                             : L
-                              ? (0, r.jsx)(Y, {
-                                    className: V.UW,
-                                    text: F.intl.format(F.t.jUhnwb, {
+                              ? (0, r.jsx)(j, {
+                                    className: F.UW,
+                                    text: G.intl.format(G.t.jUhnwb, {
                                         applicationName: n.name,
-                                        onConnectionPress: () =>
-                                            (0, k.openUserSettings)(M.X.CONNECTIONS_PANEL, {
-                                                section: G.nc_.CONNECTIONS,
-                                            }),
+                                        onConnectionPress: () => (0, k.openUserSettings)(M.X.CONNECTIONS_PANEL),
                                     }),
                                 })
                               : null,
                         (0, r.jsx)("div", {
-                            className: V.hU,
+                            className: F.hU,
                             children: (0, r.jsx)(p.Button, {
                                 variant: "critical-secondary",
                                 size: "sm",
-                                text: F.intl.string(F.t.xUqheM),
-                                onClick: () => K(n, l),
+                                text: G.intl.string(G.t.xUqheM),
+                                onClick: () => W(n, l),
                             }),
                         }),
                     ],
                 });
         return (0, r.jsx)("div", {
-            className: V.Zy,
+            className: F.Zy,
             children: (0, r.jsx)(p.Fmo, {
                 component: b(),
-                children: (0, r.jsxs)("div", { className: V.TD, children: [R(), N(), P()] }),
+                children: (0, r.jsxs)("div", { className: F.TD, children: [R(), N(), P()] }),
             }),
         });
     },
-    q = (0, u.v)(() => ({ searchQuery: "" })),
-    Z = () => {
+    z = (0, u.v)(() => ({ searchQuery: "" })),
+    q = () => {
         let { fetchState: e, appAuthTokens: t } = (0, _.cf)([N.default], () => ({
                 fetchState: N.default.getFetchState(),
                 appAuthTokens: N.default.getNewestTokensForNonChildrenApplications(),
@@ -390,8 +386,8 @@ let W = (e) => {
                 let r = s.get(n.id);
                 null != r && E.A.leaveActivity({ location: r.location, applicationId: n.id, showFeedback: !1 });
             },
-            c = q((e) => e.searchQuery),
-            d = (e) => q.setState({ searchQuery: e }),
+            c = z((e) => e.searchQuery),
+            d = (e) => z.setState({ searchQuery: e }),
             f = (e) => {
                 d(e);
             },
@@ -400,18 +396,18 @@ let W = (e) => {
             },
             A = () =>
                 (0, r.jsx)("div", {
-                    className: V.MT,
+                    className: F.MT,
                     children: (0, r.jsx)(p.IWV, {
                         query: c,
                         onChange: f,
                         onClear: g,
-                        placeholder: F.intl.string(F.t["5prvKe"]),
-                        "aria-label": F.intl.string(F.t["5prvKe"]),
+                        placeholder: G.intl.string(G.t["5prvKe"]),
+                        "aria-label": G.intl.string(G.t["5prvKe"]),
                     }),
                 }),
             I = (e, t) =>
-                (0, r.jsx)(j, {
-                    className: V.__invalid_marginTop20,
+                (0, r.jsx)(H, {
+                    className: F.__invalid_marginTop20,
                     children: (0, r.jsx)(p.SGT, { note: e, children: t }),
                 }),
             T = i.useMemo(() => {
@@ -424,17 +420,17 @@ let W = (e) => {
             }, [t, c]),
             S = () =>
                 null == t || null == T || e !== N.FetchState.FETCHED
-                    ? (0, r.jsx)(p.y$y, { className: H.QX, type: p.y$y.Type.SPINNING_CIRCLE })
+                    ? (0, r.jsx)(p.y$y, { className: B.QX, type: p.y$y.Type.SPINNING_CIRCLE })
                     : 0 === t.length
-                      ? I(F.intl.string(F.t.CpPv5l), F.intl.string(F.t["E+SM6T"]))
+                      ? I(G.intl.string(G.t.CpPv5l), G.intl.string(G.t["E+SM6T"]))
                       : 0 === T.length
-                        ? (0, r.jsxs)(r.Fragment, { children: [A(), I(null, F.intl.string(F.t.EVWFNr))] })
+                        ? (0, r.jsxs)(r.Fragment, { children: [A(), I(null, G.intl.string(G.t.EVWFNr))] })
                         : (0, r.jsxs)(r.Fragment, {
                               children: [
                                   A(),
                                   T.sort((e, t) => Number(t.id) - Number(e.id)).map((e) =>
                                       (0, r.jsx)(
-                                          z,
+                                          $,
                                           {
                                               locale: n,
                                               onDelete: () => u(e),
@@ -451,10 +447,10 @@ let W = (e) => {
             children: (0, r.jsx)(p.Fmo, {
                 component: (0, r.jsxs)(p.ZpM, {
                     type: p.ZpM.Types.PRIMARY,
-                    className: V.Rd,
+                    className: F.Rd,
                     children: [
-                        (0, r.jsx)(p.Heading, { variant: "heading-md/medium", children: F.intl.string(F.t.HU3RFw) }),
-                        (0, r.jsx)(p.Text, { variant: "text-sm/normal", children: F.intl.string(F.t.Nu5Yi0) }),
+                        (0, r.jsx)(p.Heading, { variant: "heading-md/medium", children: G.intl.string(G.t.HU3RFw) }),
+                        (0, r.jsx)(p.Text, { variant: "text-sm/normal", children: G.intl.string(G.t.Nu5Yi0) }),
                     ],
                 }),
                 children: S(),

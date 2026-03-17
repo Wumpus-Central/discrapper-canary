@@ -37,7 +37,7 @@ let v = o().defaultRules.link,
                     (l = s
                         ? (e) => {
                               p.default.track(A.HAw.PREMIUM_PROMOTION_OPENED, { location: j }),
-                                  (0, g.openUserSettings)(h.X.NITRO_PANEL, { section: A.nc_.PREMIUM }),
+                                  (0, g.openUserSettings)(h.X.NITRO_PANEL),
                                   n.changeLog.track(A.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "nitro" }),
                                   (0, u.OoC)(x.lb),
                                   e.preventDefault();

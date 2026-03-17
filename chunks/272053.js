@@ -7,11 +7,11 @@ var r = n(775602),
 class o {
     accessibleDirectory = null;
     navigateWithValidation = null;
-    onPanelChange = null;
+    onViewChange = null;
     accordionExpandResolvers = new Map();
     init(e) {
-        let { accessibleDirectory: t, navigateWithValidation: n, onPanelChange: r } = e;
-        (this.accessibleDirectory = t), (this.navigateWithValidation = n), (this.onPanelChange = r);
+        let { accessibleDirectory: t, navigateWithValidation: n, onViewChange: r } = e;
+        (this.accessibleDirectory = t), (this.navigateWithValidation = n), (this.onViewChange = r);
     }
     async maybeWaitForAccordionExpansion(e) {
         null != e &&
@@ -34,10 +34,11 @@ class o {
         if (null == o) return;
         let l = s.A.getField("currentTabKeys"),
             u = s.A.getField("currentPanelKey"),
-            c = n.parentPanelKey === u,
-            d = null == n.parentTabKey || n.parentTabKey === l.get(o),
-            _ = c && d,
-            f = async () => {
+            c = l.get(o),
+            d = n.parentPanelKey === u,
+            _ = null == n.parentTabKey || n.parentTabKey === c,
+            f = d && _,
+            p = async () => {
                 t.onTransitionStart?.(),
                     n.node.type === i.Z6.PANEL && a.A.enableSidebarCategoryAutoSelect(),
                     s.A.setState({
@@ -50,22 +51,27 @@ class o {
                                 ? t.showNavigationMobile
                                 : s.A.getField("showNavigationMobile"),
                     });
-                let u = null != t.animatePanelScroll ? t.animatePanelScroll : _,
-                    d = null != t.animateSidebarScroll && t.animateSidebarScroll;
-                await this.scrollToTarget({
-                    targetKey: e,
-                    targetPanelKey: o,
-                    targetAccordionKey: n.parentAccordionKey,
-                    scrollBlock: t.panelScrollBlock ?? "start",
-                    animatePanelScroll: u,
-                    animateSidebarScroll: d,
-                }),
-                    c || this.onPanelChange?.(n.parentPanelKey),
-                    (!u || r.A.useReducedMotion) &&
-                        n.node.type !== i.Z6.CATEGORY &&
-                        s.A.setState({ requestFlashKey: e });
+                let u = null != t.animatePanelScroll ? t.animatePanelScroll : f,
+                    c = null != t.animateSidebarScroll && t.animateSidebarScroll;
+                if (
+                    (await this.scrollToTarget({
+                        targetKey: e,
+                        targetPanelKey: o,
+                        targetAccordionKey: n.parentAccordionKey,
+                        scrollBlock: t.panelScrollBlock ?? "start",
+                        animatePanelScroll: u,
+                        animateSidebarScroll: c,
+                    }),
+                    !f)
+                ) {
+                    let e = this.accessibleDirectory?.get(o),
+                        t = e?.type === i.Z6.PANEL && (0, i.zY)(e.layout) ? e.layout[0].key : void 0,
+                        r = n.parentTabKey ?? t ?? o;
+                    this.onViewChange?.(r);
+                }
+                (!u || r.A.useReducedMotion) && n.node.type !== i.Z6.CATEGORY && s.A.setState({ requestFlashKey: e });
             };
-        c ? f() : this.navigateWithValidation?.(e, f);
+        d ? p() : this.navigateWithValidation?.(e, p);
     }
     async scrollToTarget(e) {
         let {
@@ -88,7 +94,7 @@ class o {
     reset() {
         (this.accessibleDirectory = null),
             (this.navigateWithValidation = null),
-            (this.onPanelChange = null),
+            (this.onViewChange = null),
             this.accordionExpandResolvers.clear();
     }
 }

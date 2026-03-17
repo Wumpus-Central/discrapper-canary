@@ -16,4 +16,7 @@ let i = {
     clearScrollPosition(e) {
         r.h.dispatch({ type: "USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION", forSection: e });
     },
+    clearLocation() {
+        r.h.dispatch({ type: "USER_SETTINGS_MODAL_CLEAR_LOCATION" });
+    },
 };

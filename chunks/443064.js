@@ -40,7 +40,7 @@ var i = n(627968),
     B = n(609290);
 let H = P.Ay.getEnableHardwareAcceleration() ? c.JsQ : c.euF;
 function F() {
-    (0, M.openUserSettings)(L.X.PROFILE_PANEL, { section: U.nc_.PROFILE_CUSTOMIZATION });
+    (0, M.openUserSettings)(L.X.PROFILE_PANEL);
 }
 function Y(e) {
     let { className: t, user: l } = e,

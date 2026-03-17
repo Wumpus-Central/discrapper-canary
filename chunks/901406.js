@@ -99,7 +99,7 @@ function v(e, t) {
 function N() {
     {
         let { openUserSettings: e } = n(840065);
-        e(o.X.CONNECTIONS_PANEL, { section: h.nc_.CONNECTIONS });
+        e(o.X.CONNECTIONS_PANEL);
     }
 }
 function C(e, t) {

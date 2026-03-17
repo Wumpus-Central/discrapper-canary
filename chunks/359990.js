@@ -13,8 +13,8 @@ var s = n(627968),
     g = n(840065),
     m = n(464477),
     p = n(723702),
-    C = n(728458),
-    S = n(837921),
+    S = n(728458),
+    C = n(837921),
     j = n(3928),
     f = n(917136),
     v = n(976910),
@@ -23,7 +23,7 @@ var s = n(627968),
     N = n(31758),
     y = n(652215),
     E = n(985018),
-    T = n(937385);
+    T = n(754388);
 function I(t) {
     let {
             transitionState: e,
@@ -43,12 +43,12 @@ function I(t) {
         F = i.useCallback(async () => {
             U(N.C.REGISTER);
             let t =
-                p.isPlatformEmbedded && S.Ay.supportsFeature(y.BYE.WEBAUTHN) ? S.Ay.webAuthnRegister(d) : (0, b.v)(d);
+                p.isPlatformEmbedded && C.Ay.supportsFeature(y.BYE.WEBAUTHN) ? C.Ay.webAuthnRegister(d) : (0, b.v)(d);
             try {
                 let e = await t;
                 J(e), U(N.C.NAME);
             } catch (t) {
-                C.A.captureException(t), M(E.intl.string(E.t.xSCvBf)), U(N.C.INIT);
+                S.A.captureException(t), M(E.intl.string(E.t.xSCvBf)), U(N.C.INIT);
             }
         }, [d]);
     return (0, s.jsxs)(l.EOs, {
@@ -234,10 +234,7 @@ function I(t) {
                                             variant: "primary",
                                             text: E.intl.string(E.t.MubYG8),
                                             onClick: () => {
-                                                a(),
-                                                    (0, g.openUserSettings)(h.X.ACCOUNT_PANEL, {
-                                                        section: y.nc_.ACCOUNT,
-                                                    });
+                                                a(), (0, g.openUserSettings)(h.X.ACCOUNT_PANEL);
                                             },
                                         }),
                                         (0, s.jsx)(l.Button, {
@@ -314,7 +311,7 @@ function _() {
                         (0, l.qfG)((t) => (0, s.jsx)(I, { ...t, ticket: e, challenge: n }));
                     })
                     .catch((t) => {
-                        t.message !== E.intl.string(E.t.N2yb9a) && C.A.captureException(t);
+                        t.message !== E.intl.string(E.t.N2yb9a) && S.A.captureException(t);
                     })
                     .finally(() => {
                         c(!1);

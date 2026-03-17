@@ -1,51 +1,50 @@
-i.d(e, { K: () => I });
-var n = i(311907),
-    l = i(775602),
-    s = i(502229),
-    r = i(47671),
-    a = i(419954),
-    u = i(933297),
-    o = i(780964),
-    d = i(70040),
-    A = i(840065),
-    T = i(506305),
-    S = i(69551),
-    E = i(225216),
-    g = i(866352),
-    _ = i(652215),
-    c = i(985018);
-let I = (0, a.zZ)(o.X.DISPLAY_THEME_CATEGORY, {
-    useTitle: () => c.intl.string(c.t.Ksh3ik),
+n.d(t, { K: () => x });
+var i = n(311907),
+    s = n(775602),
+    l = n(502229),
+    a = n(47671),
+    r = n(419954),
+    o = n(933297),
+    d = n(780964),
+    c = n(70040),
+    u = n(840065),
+    _ = n(506305),
+    m = n(69551),
+    g = n(225216),
+    A = n(866352),
+    h = n(985018);
+let x = (0, r.zZ)(d.X.DISPLAY_THEME_CATEGORY, {
+    useTitle: () => h.intl.string(h.t.Ksh3ik),
     useInlineNotice: function () {
-        return (0, n.bG)([l.A], () => l.A.useForcedColors)
+        return (0, i.bG)([s.A], () => s.A.useForcedColors)
             ? {
-                  type: u.lT.INLINE_NOTICE,
+                  type: o.lT.INLINE_NOTICE,
                   noticeType: "info",
                   useText: () =>
-                      (0, s.D)()
-                          ? c.intl.format(c.t.Jae48E, {
+                      (0, l.D)()
+                          ? h.intl.format(h.t.Jae48E, {
                                 onClick: () => {
-                                    (0, A.openUserSettings)(o.X.SYNC_FORCED_COLORS, { section: _.nc_.ACCESSIBILITY });
+                                    (0, u.openUserSettings)(d.X.SYNC_FORCED_COLORS);
                                 },
                             })
-                          : c.intl.string(c.t.AUMSZP),
+                          : h.intl.string(h.t.AUMSZP),
               }
             : null;
     },
     useHeaderDecoration: function () {
-        return (0, n.bG)([r.A, l.A], () => l.A.useForcedColors || r.A.isPreview)
+        return (0, i.bG)([a.A, s.A], () => s.A.useForcedColors || a.A.isPreview)
             ? null
             : {
-                  type: u.WX.BUTTON_GROUP,
+                  type: o.WX.BUTTON_GROUP,
                   buttons: [
                       {
                           id: "open-client-themes-button",
-                          type: u.UV.BUTTON,
-                          useText: () => c.intl.string(c.t["E+COuA"]),
-                          onClick: d.J3,
+                          type: o.UV.BUTTON,
+                          useText: () => h.intl.string(h.t["E+COuA"]),
+                          onClick: c.J3,
                       },
                   ],
               };
     },
-    buildLayout: () => [E.k, S.l, T.p, g.W],
+    buildLayout: () => [g.k, m.l, _.p, A.W],
 });

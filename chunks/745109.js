@@ -1,4 +1,4 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => y });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -9,80 +9,85 @@ var i = n(627968),
     c = n(159001),
     u = n(766569),
     _ = n(836602),
-    g = n(576622),
-    m = n(740625),
-    A = n(955872),
-    h = n(71393),
+    m = n(576622),
+    g = n(740625),
+    A = n(841329),
+    h = n(955872),
+    x = n(71393),
     p = n(967198),
-    x = n(711014),
+    T = n(711014),
     E = n(287809),
-    T = n(203982),
-    S = n(115063),
-    C = n(894013),
-    I = n(652215),
-    f = n(355097),
-    b = n(985018),
-    N = n(298109);
-function v() {
-    let e = (0, r.bG)([p.A, x.Ay, _.A], () => {
+    S = n(203982),
+    C = n(115063),
+    f = n(955838),
+    b = n(652215),
+    N = n(355097),
+    I = n(985018),
+    v = n(298109);
+let j = { [N.Eq.USER_PROFILE]: "main_profile_tab", [N.Eq.GUILD]: "guild_profile_tab" };
+function y() {
+    let e = (0, r.bG)([p.A, T.Ay, _.A], () => {
             let e = _.A.selectedGuildId ?? p.A.getGuildId();
-            return null == e || _._.has(e) ? x.Ay.getFlattenedGuildIds().find((e) => !_._.has(e)) : e;
+            return null == e || _._.has(e) ? T.Ay.getFlattenedGuildIds().find((e) => !_._.has(e)) : e;
         }),
-        t = (0, r.bG)([h.A], () => h.A.getGuild(e)),
+        t = (0, r.bG)([x.A], () => x.A.getGuild(e)),
         n = (0, r.bG)([_.A], () => _.A.showNotice()),
         l = (0, r.bG)([E.default], () => E.default.getCurrentUser()),
-        { subsection: v, setSubsection: j } = (0, C.A)();
+        y = f.default.useField("subsection");
     return (
         s.useEffect(() => {
-            null != l && t?.id != null && (0, g.A)(l.id, l.getAvatarURL(t?.id, 80), { guildId: t?.id });
+            (0, A._)(j[y]);
+        }, [y]),
+        s.useEffect(() => {
+            null != l && t?.id != null && (0, m.A)(l.id, l.getAvatarURL(t?.id, 80), { guildId: t?.id });
         }, [t?.id, l]),
-        (0, i.jsxs)(m.R, {
-            header: b.intl.string(b.t["vi7f+q"]),
+        (0, i.jsxs)(g.R, {
+            header: I.intl.string(I.t["vi7f+q"]),
             children: [
                 (0, i.jsxs)(o.VQ0, {
-                    className: N.$H,
+                    className: v.$H,
                     type: "top",
                     look: "brand",
-                    selectedItem: v,
+                    selectedItem: y,
                     onItemSelect: function (e) {
-                        if (v !== e) {
+                        if (y !== e) {
                             if (n) {
-                                (0, S.fO)({ duration: 300, intensity: d.n3 }), T._.dispatch(I.jej.EMPHASIZE_NOTICE);
+                                (0, C.fO)({ duration: 300, intensity: d.n3 }), S._.dispatch(b.jej.EMPHASIZE_NOTICE);
                                 return;
                             }
-                            e === f.Eq.GUILD && null != t && (0, c.V2)(t.id), j(e);
+                            e === N.Eq.GUILD && null != t && (0, c.V2)(t.id), f.default.setState({ subsection: e });
                         }
                     },
                     children: [
                         (0, i.jsx)(
                             o.VQ0.Item,
-                            { className: N.YU, id: f.Eq.USER_PROFILE, children: b.intl.string(b.t["2p07FR"]) },
-                            f.Eq.USER_PROFILE,
+                            { className: v.YU, id: N.Eq.USER_PROFILE, children: I.intl.string(I.t["2p07FR"]) },
+                            N.Eq.USER_PROFILE,
                         ),
                         (0, i.jsx)(
                             o.VQ0.Item,
                             {
-                                className: a()(N.YU, N.HY),
-                                "aria-label": b.intl.string(b.t.kPHroX),
-                                id: f.Eq.GUILD,
-                                children: b.intl.string(b.t.kPHroX),
+                                className: a()(v.YU, v.HY),
+                                "aria-label": I.intl.string(I.t.kPHroX),
+                                id: N.Eq.GUILD,
+                                children: I.intl.string(I.t.kPHroX),
                             },
-                            f.Eq.GUILD,
+                            N.Eq.GUILD,
                         ),
                     ],
                 }),
-                v === f.Eq.GUILD
+                y === N.Eq.GUILD
                     ? (0, i.jsx)(u.A, {
                           selectedGuild: t,
                           onGuildChange: function (e) {
                               if (n) {
-                                  (0, S.fO)({ duration: 300, intensity: d.n3 }), T._.dispatch(I.jej.EMPHASIZE_NOTICE);
+                                  (0, C.fO)({ duration: 300, intensity: d.n3 }), S._.dispatch(b.jej.EMPHASIZE_NOTICE);
                                   return;
                               }
                               null != e && (0, c.JJ)(e.id);
                           },
                       })
-                    : (0, i.jsx)(A.A, {}),
+                    : (0, i.jsx)(h.A, {}),
             ],
         })
     );

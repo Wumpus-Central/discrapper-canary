@@ -110,9 +110,7 @@ let F = () =>
             _ = () => {
                 if ((null != t && t(P.i.DISMISS), d(x.HAw.CLIENT_THEME_PREVIEW_CLOSED), (0, b.D)(), !n)) {
                     let e = (0, y.Ci)("ClientThemesEditor_handleBack");
-                    (0, v.openUserSettings)(e ? S.X.DISPLAY_THEME_CATEGORY : S.X.APPEARANCE_PANEL, {
-                        section: x.nc_.APPEARANCE,
-                    });
+                    (0, v.openUserSettings)(e ? S.X.DISPLAY_THEME_CATEGORY : S.X.APPEARANCE_PANEL);
                 }
             },
             f = (0, g.X)(

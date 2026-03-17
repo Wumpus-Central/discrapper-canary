@@ -41,7 +41,7 @@ function I() {
 function T(e) {
     {
         let { openUserSettings: t } = n(840065);
-        t(c.X.NOTIFICATIONS_PANEL, { section: E.nc_.NOTIFICATIONS, analyticsLocations: e });
+        t(c.X.NOTIFICATIONS_PANEL, { analyticsLocations: e });
     }
 }
 function S() {

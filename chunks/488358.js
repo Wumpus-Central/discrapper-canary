@@ -37,8 +37,8 @@ var a = n(627968),
     M = n(954571),
     H = n(619006),
     V = n(370480),
-    D = n(882997),
-    F = n(355971),
+    F = n(882997),
+    D = n(355971),
     $ = n(967740),
     B = n(293260),
     Y = n(783419),
@@ -156,7 +156,7 @@ function q(e) {
                     S = A?.application,
                     I = S?.bot != null ? new O.A(S.bot) : null;
                 V.iC.includes(S?.id ?? "")
-                    ? (t = (0, a.jsx)(F.A, { className: Q.AO, color: T, size: 16 }))
+                    ? (t = (0, a.jsx)(D.A, { className: Q.AO, color: T, size: 16 }))
                     : null != I && (t = (0, a.jsx)(g.A, { className: Q.AO, verified: I.isVerifiedBot() }));
                 let k = i[y?.type ?? Y.zR],
                     G = !C && null != k && k <= u;
@@ -189,7 +189,7 @@ function q(e) {
                                           var e;
                                           return (
                                               (e = y?.type ?? Y.zR),
-                                              void ((0, D.A)({
+                                              void ((0, F.A)({
                                                   platformType: e,
                                                   location: "Verified Roles Connect Accounts Modal",
                                                   overrideUrl: S?.role_connections_verification_url,
@@ -341,14 +341,14 @@ function ee(e) {
         [A, g] = l.useState(!1),
         [T, O] = l.useState(!0),
         [U, V] = l.useState(!1),
-        D = (0, u.bG)([w.A], () => w.A.getAccounts()),
-        F = (0, u.bG)([G.default], () => G.default.getId()),
+        F = (0, u.bG)([w.A], () => w.A.getAccounts()),
+        D = (0, u.bG)([G.default], () => G.default.getId()),
         [Y, W] = l.useState(null),
         [Z, ee] = l.useState(null),
         [et, en] = l.useState(null),
         ea = (0, N.Ay)(),
         el = (0, u.bG)([S.default], () => S.default.locale),
-        ec = (0, u.bG)([P.Ay], () => P.Ay.getMember(c, F)),
+        ec = (0, u.bG)([P.Ay], () => P.Ay.getMember(c, D)),
         eo = Object.values((0, u.bG)([R.A], () => R.A.getMutableGuildChannelsForGuild(c))).filter(
             (e) => L.A.can(z.xBc.VIEW_CHANNEL, e) && L.A.can(z.xBc.SEND_MESSAGES, e) && (0, v.A)(e).includes(o),
         );
@@ -357,10 +357,10 @@ function ee(e) {
         n?.(), e && (0, _.OoC)(B.CB, _.SYi);
     }
     function es() {
-        ei(!0), (0, k.openUserSettings)(I.X.AUTHORIZED_APPS_PANEL, { section: z.nc_.AUTHORIZED_APPS });
+        ei(!0), (0, k.openUserSettings)(I.X.AUTHORIZED_APPS_PANEL);
     }
     function er() {
-        ei(!0), (0, k.openUserSettings)(I.X.CONNECTIONS_PANEL, { section: z.nc_.CONNECTIONS });
+        ei(!0), (0, k.openUserSettings)(I.X.CONNECTIONS_PANEL);
     }
     async function ed() {
         g(!0), await f.A.assignGuildRoleConnection(c, o.id);
@@ -385,7 +385,7 @@ function ee(e) {
             f.A.fetchGuildRoleConnectionsEligibility(c, o.id).then((e) => {
                 h(e), p(e.some((e) => e.every((e) => e.result))), b(!1);
             });
-        }, [c, o.id, D]),
+        }, [c, o.id, F]),
         l.useEffect(() => {
             M.default.track(z.HAw.PASSPORT_CHALLENGE_VIEWED, { role_id: o.id, ...(0, y.H$)(c) });
         }, [c, o.id]),
@@ -500,7 +500,7 @@ function ee(e) {
                             }
                             case 1: {
                                 s()(null != Y, "lastPlatformConnected is null");
-                                let e = D.find((e) => {
+                                let e = F.find((e) => {
                                         let { type: t } = e;
                                         return Y === t;
                                     }),
@@ -541,7 +541,7 @@ function ee(e) {
                                                                                     }),
                                                                                     (0, a.jsx)(E.wQ, {
                                                                                         connectedAccount: e,
-                                                                                        userId: F,
+                                                                                        userId: D,
                                                                                         theme: ea,
                                                                                         locale: el,
                                                                                         className: Q.eT,

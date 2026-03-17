@@ -1,19 +1,10 @@
-n.d(t, { z: () => d });
+n.d(t, { z: () => r });
 var i = n(419954),
     s = n(780964),
-    l = n(782844),
-    a = n(840065),
-    r = n(652215),
-    o = n(985018);
-let d = (0, i.v_)(s.X.DATA_USAGE_DISCLAIMER_SETTING, {
-    useTitle: () => o.intl.string(o.t.D60Gfj),
+    l = n(840065),
+    a = n(985018);
+let r = (0, i.v_)(s.X.DATA_USAGE_DISCLAIMER_SETTING, {
+    useTitle: () => a.intl.string(a.t.D60Gfj),
     useSubtitle: () =>
-        o.intl.format(o.t.R5N31P, {
-            onClick: () => {
-                (0, a.openUserSettings)(s.X.ACCOUNT_REMOVAL_SETTING, {
-                    section: r.nc_.ACCOUNT,
-                    subsection: l.D.SECURITY,
-                });
-            },
-        }),
+        a.intl.format(a.t.R5N31P, { onClick: () => (0, l.openUserSettings)(s.X.ACCOUNT_REMOVAL_SETTING) }),
 });

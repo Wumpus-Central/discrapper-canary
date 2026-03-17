@@ -34,10 +34,10 @@ function A(e) {
 }
 function v(e) {
     let { settingsUpsells: t, channelId: n, onModalClose: a, reportId: s, reportType: o, reportSubType: v } = e,
-        f = (0, r.bG)([_.A], () => _.A.getChannel(n)),
-        b = (0, m.MR)(t, f?.type),
-        C = (0, x.Mw)(o, v, s);
-    return 0 === b.length
+        b = (0, r.bG)([_.A], () => _.A.getChannel(n)),
+        f = (0, m.MR)(t, b?.type),
+        j = (0, x.Mw)(o, v, s);
+    return 0 === f.length
         ? null
         : (0, l.jsxs)("div", {
               className: g.kL,
@@ -49,11 +49,11 @@ function v(e) {
                   }),
                   (0, l.jsx)("div", {
                       className: g.uk,
-                      children: b.map((e, n) => {
+                      children: f.map((e, n) => {
                           let { getTitle: a, getDescription: r, onApply: i } = e;
                           return (0, l.jsx)(
                               A,
-                              { title: a(), description: r(), onButtonClick: i, trackSettingsUpsellsAction: C(t[n]) },
+                              { title: a(), description: r(), onButtonClick: i, trackSettingsUpsellsAction: j(t[n]) },
                               n,
                           );
                       }),
@@ -61,7 +61,7 @@ function v(e) {
                   (0, l.jsx)(i.QWc, {
                       text: h.intl.string(h.t.olebGx),
                       onClick: () => {
-                          (0, u.openUserSettings)(c.X.CONTENT_AND_SOCIAL_PANEL, { section: p.nc_.CONTENT_AND_SOCIAL }),
+                          (0, u.openUserSettings)(c.X.CONTENT_AND_SOCIAL_PANEL),
                               a(),
                               d.Ay.trackWithMetadata(p.HAw.IAR_SETTINGS_UPSELLS_ACTION, {
                                   report_id: s,

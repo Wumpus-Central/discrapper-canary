@@ -14,8 +14,8 @@ var i = n(627968),
     x = n(260509),
     h = n(576705),
     _ = n(351906),
-    A = n(287809),
-    p = n(975571),
+    p = n(287809),
+    A = n(975571),
     f = n(809505),
     j = n(997509),
     N = n(555337),
@@ -116,7 +116,7 @@ function y(e) {
                                 color: "text-default",
                                 variant: "text-sm/normal",
                                 children: I.intl.format(I.t.BI4ukC, {
-                                    helpdeskArticle: p.A.getArticleURL(C.MVz.SAFE_DIRECT_MESSAGING),
+                                    helpdeskArticle: A.A.getArticleURL(C.MVz.SAFE_DIRECT_MESSAGING),
                                 }),
                             }),
                         ],
@@ -184,7 +184,7 @@ function O(e) {
 function G(e) {
     let { guild: t, mfaLevel: n } = e,
         l = (0, o.bG)([h.A], () => null != t && h.A.can(C.xBc.MANAGE_GUILD, t), [t]),
-        r = (0, o.bG)([A.default], () => A.default.getCurrentUser()),
+        r = (0, o.bG)([p.default], () => p.default.getCurrentUser()),
         { isGuildOwnerWithMFA: c, showMFAUserTooltip: u } = s.useMemo(
             () =>
                 null == r
@@ -193,7 +193,7 @@ function G(e) {
             [r, t],
         ),
         _ = n === C.EkJ.ELEVATED,
-        p = (0, a.throttle)(async (e) => {
+        A = (0, a.throttle)(async (e) => {
             !c || u || (await j.A.updateMFALevel({ guildId: t.id, level: e ? C.EkJ.ELEVATED : C.EkJ.NONE }));
         }, 1e3);
     return l
@@ -207,7 +207,7 @@ function G(e) {
                               label: I.intl.string(I.t.lbBfEQ),
                               description: I.intl.string(I.t.REr5AI),
                               checked: _,
-                              onChange: p,
+                              onChange: A,
                               disabled: !c,
                           }),
                           u &&
@@ -216,7 +216,7 @@ function G(e) {
                                   textVariant: "text-xs/normal",
                                   children: I.intl.format(I.t.Xz1O0W, {
                                       onClick: function () {
-                                          (0, g.openUserSettings)(m.X.ACCOUNT_PANEL, { section: C.nc_.ACCOUNT });
+                                          (0, g.openUserSettings)(m.X.ACCOUNT_PANEL);
                                       },
                                   }),
                               }),

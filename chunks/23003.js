@@ -13,15 +13,15 @@ var n,
     f = a(532794),
     b = a(206835),
     A = a(649032),
-    _ = a(26508),
-    h = a(780964),
+    h = a(26508),
+    _ = a(780964),
     g = a(358776),
     R = a(840065),
     x = a(676279),
     E = a(975571),
     C = a(457569),
-    N = a(612669),
-    v = a(788868),
+    v = a(612669),
+    N = a(788868),
     I = a(88001),
     S = a(652215),
     T = a(355097),
@@ -32,8 +32,8 @@ var n,
     j = a(927961),
     U = a(817577),
     M = a(748222),
-    L = a(743501),
-    w = a(652700),
+    w = a(743501),
+    L = a(652700),
     B = a(282818),
     k = a(965132),
     G = a(576765),
@@ -74,17 +74,15 @@ var n,
 let ec = () => {
     let { analyticsLocations: e } = (0, u.Ay)(c.A.PREMIUM_MARKETING_BENTO_BOX),
         t = (0, b.A)({ scrollPosition: T._F.TRY_IT_OUT, analyticsLocations: e }),
-        n = (0, N.O9)(),
+        n = (0, v.O9)(),
         r = (0, C.A)({ location: "bento_box" }),
         s = (0, i.useCallback)(() => {
-            (0, R.openUserSettings)(
-                h.X.PROFILE_PANEL,
-                { section: S.nc_.PROFILE_CUSTOMIZATION, analyticsLocations: e },
-                () => (0, p.L)({ analyticsLocations: e }),
+            (0, R.openUserSettings)(_.X.PROFILE_PANEL, { analyticsLocations: e }, () =>
+                (0, p.L)({ analyticsLocations: e }),
             );
         }, [e]),
         ei = (0, i.useCallback)(() => {
-            (0, f.A)({ subscriptionTier: v.pe.TIER_2, initialPlanId: v.gD.PREMIUM_GROUP_MONTH, analyticsLocations: e });
+            (0, f.A)({ subscriptionTier: N.pe.TIER_2, initialPlanId: N.gD.PREMIUM_GROUP_MONTH, analyticsLocations: e });
         }, [e]),
         ed = (0, x.TM)(),
         eo = E.A.getArticleURL(S.MVz.REFERRAL_PROGRAM),
@@ -92,7 +90,7 @@ let ec = () => {
             premiumGroup: { thumbnail: U, assetUrl: U },
             serverProfiles: { thumbnail: M, assetUrl: ed ? es.Ay : el.Ay },
             customThemes: { thumbnail: en.A, assetUrl: ed ? ea.A : er.A },
-            displayNameStyles: { thumbnail: w.A, assetUrl: ed ? L.A : B.A },
+            displayNameStyles: { thumbnail: L.A, assetUrl: ed ? w.A : B.A },
             referralProgram: { thumbnail: K.A, assetUrl: ed ? F.A : X.A },
             showYourStyle: { thumbnail: z.A, assetUrl: ed ? $.A : J.A },
             yourSpace: { thumbnail: Z.A, assetUrl: ed ? q.A : Q.A },
@@ -183,7 +181,7 @@ let ec = () => {
             onClick: t,
             videoUrl: ec.showYourStyle.assetUrl,
         },
-        e_ = {
+        eh = {
             name: "yourSpace",
             title: D.intl.string(D.t.Wme3nX),
             description: D.intl.string(D.t["/aAIqV"]),
@@ -193,15 +191,12 @@ let ec = () => {
                 {
                     let t = (0, g.Ci)("openClientThemes"),
                         { openUserSettings: n } = a(840065);
-                    n(t ? h.X.DISPLAY_THEME_CATEGORY : h.X.APPEARANCE_PANEL, {
-                        section: S.nc_.APPEARANCE,
-                        analyticsLocations: e,
-                    });
+                    n(t ? _.X.DISPLAY_THEME_CATEGORY : _.X.APPEARANCE_PANEL, { analyticsLocations: e });
                 }
             },
             videoUrl: ec.yourSpace.assetUrl,
         },
-        eh = {
+        e_ = {
             name: "emojis",
             title: D.intl.string(D.t.zY5PPb),
             description: D.intl.string(D.t.R5Xag2),
@@ -215,7 +210,7 @@ let ec = () => {
             previewImage: ec.noLimits.thumbnail,
             videoUrl: ec.noLimits.assetUrl,
         },
-        eR = (0, _.DK)(A.W.NITRO, "useBentoBoxes"),
+        eR = (0, h.DK)(A.W.NITRO, "useBentoBoxes"),
         ex = {
             name: "orbRewards",
             title: D.intl.string(y.default["ZFJ/NU"]),
@@ -232,6 +227,6 @@ let ec = () => {
         };
     return {
         whatsNewBoxes: n ? (eR ? [[eb], [ex, em]] : [[eb], [eu, em]]) : eR ? [[ex], [eu, em]] : [[ef], [ep, em]],
-        bestOfBoxes: [[eA], [e_], [eh, eg]],
+        bestOfBoxes: [[eA], [eh], [e_, eg]],
     };
 };

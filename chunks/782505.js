@@ -1,9 +1,9 @@
-n.d(t, { IA: () => v, jB: () => T, qv: () => y, zf: () => E });
+n.d(t, { IA: () => v, jB: () => E, qv: () => N, zf: () => T });
 var i = n(627968),
     l = n(64700),
     a = n(735438),
-    r = n(397927),
-    s = n(308528),
+    s = n(397927),
+    r = n(308528),
     o = n(736653),
     d = n(573648),
     c = n(780964),
@@ -11,39 +11,39 @@ var i = n(627968),
     g = n(562153),
     m = n(993401),
     x = n(652215),
-    f = n(985018),
-    h = n(308497);
-let p = [
-        () => f.intl.string(f.t.madJdE),
-        () => f.intl.string(f.t.NYmfoP),
-        () => f.intl.string(f.t.R2PaCg),
-        () => f.intl.string(f.t.laSR8h),
-        () => f.intl.string(f.t.DnsJE8),
+    p = n(985018),
+    f = n(308497);
+let h = [
+        () => p.intl.string(p.t.madJdE),
+        () => p.intl.string(p.t.NYmfoP),
+        () => p.intl.string(p.t.R2PaCg),
+        () => p.intl.string(p.t.laSR8h),
+        () => p.intl.string(p.t.DnsJE8),
     ],
     _ = [
-        () => f.intl.string(f.t.nFSbeE),
-        () => f.intl.string(f.t.gTcxOz),
-        () => f.intl.string(f.t["8T0wYj"]),
-        () => f.intl.string(f.t.BIHl1g),
-        () => f.intl.string(f.t["jhBm0+"]),
+        () => p.intl.string(p.t.nFSbeE),
+        () => p.intl.string(p.t.gTcxOz),
+        () => p.intl.string(p.t["8T0wYj"]),
+        () => p.intl.string(p.t.BIHl1g),
+        () => p.intl.string(p.t["jhBm0+"]),
     ],
     A = [
-        () => f.intl.string(f.t.AyMGXA),
-        () => f.intl.string(f.t.aAFW7V),
-        (e) => f.intl.formatToPlainString(f.t.h2g0cM, { name: e }),
-        () => f.intl.string(f.t.rrYh58),
-        () => f.intl.string(f.t["HX3K+F"]),
-        () => f.intl.string(f.t["/yW3aY"]),
-        () => f.intl.string(f.t["PmL/v0"]),
-        () => f.intl.string(f.t.IALa3h),
-        () => f.intl.string(f.t.HRcTFL),
-        () => f.intl.string(f.t.NuCqPt),
-        () => f.intl.string(f.t["M1tw+4"]),
-        () => f.intl.string(f.t.UBm1y2),
-        () => f.intl.string(f.t.Cu95PQ),
-        () => f.intl.string(f.t["R/wFuh"]),
-        () => f.intl.string(f.t.HQPAVT),
-        () => f.intl.string(f.t.YolGh4),
+        () => p.intl.string(p.t.AyMGXA),
+        () => p.intl.string(p.t.aAFW7V),
+        (e) => p.intl.formatToPlainString(p.t.h2g0cM, { name: e }),
+        () => p.intl.string(p.t.rrYh58),
+        () => p.intl.string(p.t["HX3K+F"]),
+        () => p.intl.string(p.t["/yW3aY"]),
+        () => p.intl.string(p.t["PmL/v0"]),
+        () => p.intl.string(p.t.IALa3h),
+        () => p.intl.string(p.t.HRcTFL),
+        () => p.intl.string(p.t.NuCqPt),
+        () => p.intl.string(p.t["M1tw+4"]),
+        () => p.intl.string(p.t.UBm1y2),
+        () => p.intl.string(p.t.Cu95PQ),
+        () => p.intl.string(p.t["R/wFuh"]),
+        () => p.intl.string(p.t.HQPAVT),
+        () => p.intl.string(p.t.YolGh4),
     ],
     I = [
         x.fg2.STEAM,
@@ -63,13 +63,13 @@ let p = [
 function j(e) {
     let { heading: t, bodyText: n, children: l } = e;
     return (0, i.jsxs)("div", {
-        className: h.Ie,
+        className: f.Ie,
         children: [
             (0, i.jsxs)("div", {
-                className: h.FS,
+                className: f.FS,
                 children: [
-                    (0, i.jsx)(r.Heading, { variant: "heading-md/medium", color: "text-strong", children: t }),
-                    (0, i.jsx)(r.Text, { variant: "text-sm/normal", color: "text-default", children: n }),
+                    (0, i.jsx)(s.Heading, { variant: "heading-md/medium", color: "text-strong", children: t }),
+                    (0, i.jsx)(s.Text, { variant: "text-sm/normal", color: "text-default", children: n }),
                 ],
             }),
             l,
@@ -77,66 +77,62 @@ function j(e) {
     });
 }
 function v() {
-    let e = f.intl.string(f.t.RnD2yZ),
-        [t] = l.useState(() => ((0, a.sample)(p) ?? p[0])());
+    let e = p.intl.string(p.t.RnD2yZ),
+        [t] = l.useState(() => ((0, a.sample)(h) ?? h[0])());
     return (0, i.jsx)(j, { heading: e, bodyText: t });
 }
-function T() {
-    let e = f.intl.string(f.t.bFgqYJ),
+function E() {
+    let e = p.intl.string(p.t.bFgqYJ),
         [t] = l.useState(() => ((0, a.sample)(_) ?? _[0])());
     return (0, i.jsx)(j, { heading: e, bodyText: t });
 }
-function E(e) {
+function T(e) {
     let { user: t, guildId: n, channelId: o, onClose: d } = e,
         c = g.Ay.getName(n, o, t),
-        u = f.intl.formatToPlainString(f.t.sjSitP, { name: c }),
+        u = p.intl.formatToPlainString(p.t.sjSitP, { name: c }),
         [x] = l.useState(() => ((0, a.sample)(A) ?? A[0])(c)),
-        p = l.useCallback(() => {
-            s.A.openPrivateChannel({ recipientIds: t.id }), d?.();
+        h = l.useCallback(() => {
+            r.A.openPrivateChannel({ recipientIds: t.id }), d?.();
         }, [t.id, d]);
     return (0, i.jsx)(j, {
         heading: u,
         bodyText: x,
         children: (0, i.jsx)("div", {
-            className: h.v0,
-            children: (0, i.jsx)(m.FD, { icon: r.oyn, text: f.intl.string(f.t["g33r/P"]), onClick: p }),
+            className: f.v0,
+            children: (0, i.jsx)(m.FD, { icon: s.oyn, text: p.intl.string(p.t["g33r/P"]), onClick: h }),
         }),
     });
 }
 function b() {
     let e = (0, o.Ay)();
     return (0, i.jsx)("div", {
-        className: h.HU,
+        className: f.HU,
         children: I.map((t, n) => {
             let l = d.A.get(t);
             if (null == l) return null;
-            let a = (0, r.Mwr)(e) ? l.icon.darkPNG : l.icon.lightPNG;
-            return (0, i.jsx)("img", { src: a, alt: l.name, className: h.gj }, n);
+            let a = (0, s.Mwr)(e) ? l.icon.darkPNG : l.icon.lightPNG;
+            return (0, i.jsx)("img", { src: a, alt: l.name, className: f.gj }, n);
         }),
     });
 }
-function y(e) {
+function N(e) {
     let { onClose: t } = e,
         n = l.useCallback(() => {
-            t?.(), (0, u.openUserSettings)(c.X.CONNECTIONS_PANEL, { section: x.nc_.CONNECTIONS });
+            t?.(), (0, u.openUserSettings)(c.X.CONNECTIONS_PANEL);
         }, [t]),
         a = l.useCallback(() => {
-            t?.(),
-                (0, u.openUserSettings)(c.X.CONTENT_AND_SOCIAL_PANEL, {
-                    section: x.nc_.CONTENT_AND_SOCIAL,
-                    subsection: "CONNECTED_GAMES",
-                });
+            t?.(), (0, u.openUserSettings)(c.X.CONTENT_AND_SOCIAL_CONNECTED_GAMES_TAB);
         }, [t]);
     return (0, i.jsxs)(j, {
-        heading: f.intl.string(f.t.VB6LWY),
-        bodyText: f.intl.string(f.t.KpjsU9),
+        heading: p.intl.string(p.t.VB6LWY),
+        bodyText: p.intl.string(p.t.KpjsU9),
         children: [
             (0, i.jsx)(b, {}),
             (0, i.jsxs)("div", {
-                className: h.v0,
+                className: f.v0,
                 children: [
-                    (0, i.jsx)(m.FD, { text: f.intl.string(f.t["/Hl24U"]), onClick: n }),
-                    (0, i.jsx)(m.FD, { text: f.intl.string(f.t.GTCx0p), onClick: a }),
+                    (0, i.jsx)(m.FD, { text: p.intl.string(p.t["/Hl24U"]), onClick: n }),
+                    (0, i.jsx)(m.FD, { text: p.intl.string(p.t.GTCx0p), onClick: a }),
                 ],
             }),
         ],

@@ -24,14 +24,14 @@ var r = n(627968),
     v = n(358776),
     N = n(840065),
     C = n(954571),
-    b = n(467135),
-    R = n(935444),
-    O = n(230835),
+    R = n(467135),
+    O = n(935444),
+    b = n(230835),
     D = n(74396),
     L = n(738419),
     w = n(145272),
-    x = n(572047),
-    M = n(278938),
+    M = n(572047),
+    x = n(278938),
     P = n(652215),
     k = n(49999),
     U = n(788868),
@@ -80,11 +80,11 @@ function K(e) {
     let { markAsDismissed: t, isCoachmark: n } = e;
     return (0, g.JZ)(l.M.CUSTOM_THEME_COACHMARK)
         ? n
-            ? (0, r.jsx)(z, { markAsDismissed: t })
+            ? (0, r.jsx)($, { markAsDismissed: t })
             : (0, r.jsx)(W, {})
-        : (0, r.jsx)(z, { markAsDismissed: () => (0, g.Dr)(l.M.CUSTOM_THEME_COACHMARK) });
+        : (0, r.jsx)($, { markAsDismissed: () => (0, g.Dr)(l.M.CUSTOM_THEME_COACHMARK) });
 }
-function z(e) {
+function $(e) {
     let { markAsDismissed: t } = e,
         n = (0, I.L)(U.PremiumTypes.TIER_2);
     return (0, r.jsxs)("div", {
@@ -109,7 +109,7 @@ function z(e) {
         ],
     });
 }
-function $(e) {
+function z(e) {
     let t = 10;
     for (let n of [90, 180, 270]) if (Math.abs(e - n) <= t) return n;
     return e;
@@ -168,7 +168,7 @@ function q(e) {
                             fillStyles: { display: "none" },
                             onValueChange: (e) => {
                                 (0, L.PT)();
-                                let t = $(e);
+                                let t = z(e);
                                 t !== e || o(e), n(t);
                             },
                             onValueRender: () => null,
@@ -181,7 +181,7 @@ function q(e) {
         ],
     });
 }
-function X(e) {
+function Z(e) {
     let { chassisMixAmount: t, setChassisMixAmount: n } = e,
         { key: s, handleInternalChange: a } = j(t),
         [o, l] = i.useState(`${Math.round(t)}%`);
@@ -207,7 +207,7 @@ function X(e) {
                         type: "text",
                         value: o,
                         onChange: (e) => u(e.target.value),
-                        placeholder: `${b.kJ}%`,
+                        placeholder: `${R.kJ}%`,
                         className: V.A9,
                     }),
                 ],
@@ -216,7 +216,7 @@ function X(e) {
                 _.Apm,
                 {
                     initialValue: t,
-                    defaultValue: b.kJ,
+                    defaultValue: R.kJ,
                     minValue: 0,
                     maxValue: 100,
                     onValueChange: (e) => {
@@ -230,7 +230,7 @@ function X(e) {
         ],
     });
 }
-function Z(e) {
+function X(e) {
     let { isCoachmark: t, isMobile: n } = e,
         [s, a] = i.useState(!1),
         o = i.useRef(!1),
@@ -239,12 +239,12 @@ function Z(e) {
         p = i.useRef(null),
         h = i.useCallback(() => {
             (0, L.y4)();
-            let e = (0, R.mf)();
-            b.ko
+            let e = (0, O.mf)();
+            R.ko
                 .getState()
                 .setAll({
                     colors: e.colors,
-                    gradientAngle: e.angle ?? b.ko.getState().gradientAngle,
+                    gradientAngle: e.angle ?? R.ko.getState().gradientAngle,
                     chassisMixAmount: e.intensity,
                 });
         }, []);
@@ -341,10 +341,7 @@ function ee(e) {
     let u = () => {
             if (((0, L.uk)(), (0, g.Dr)(l.M.CUSTOM_THEME_COACHMARK), i?.from === E.xv.SETTING)) {
                 let e = (0, v.Ci)("CustomThemesEditorV2_handleBackButtonClick");
-                (0, N.openUserSettings)(e ? y.X.DISPLAY_THEME_CATEGORY : y.X.APPEARANCE_PANEL, {
-                    section: P.nc_.APPEARANCE,
-                }),
-                    (0, E.Jp)();
+                (0, N.openUserSettings)(e ? y.X.DISPLAY_THEME_CATEGORY : y.X.APPEARANCE_PANEL), (0, E.Jp)();
             } else i?.from === E.xv.CLIENT_THEMES_EDITOR ? (0, E.nf)(E.HP.CLIENT_THEMES) : (0, E.Jp)();
         },
         c = a()(V.xQ, { [V.NI]: !s });
@@ -353,7 +350,7 @@ function ee(e) {
         children: s
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)(x.w, {}),
+                      (0, r.jsx)(M.w, {}),
                       (0, r.jsx)(d.$nd, { variant: "secondary", onClick: u, text: F.intl.string(F.t["13/7kX"]) }),
                       (0, r.jsx)(Q, {
                           disabled: !n,
@@ -386,8 +383,8 @@ function ee(e) {
 }
 function et(e) {
     let { metadata: t, markAsDismissed: n, isCoachmark: s, isMobile: a } = e,
-        u = (0, O.vC)(),
-        c = (0, O.tr)(),
+        u = (0, b.vC)(),
+        c = (0, b.tr)(),
         A = i.useRef(!1),
         {
             colors: I,
@@ -395,9 +392,9 @@ function et(e) {
             gradientAngle: v,
             setColors: N,
             setChassisMixAmount: C,
-            setGradientAngle: R,
-        } = (0, b.ko)(),
-        [x, P] = i.useState(I[0] ?? b.OT),
+            setGradientAngle: O,
+        } = (0, R.ko)(),
+        [M, P] = i.useState(I[0] ?? R.OT),
         U = (0, o.bG)([S.A], () => S.A.theme),
         B = (0, g.JZ)(l.M.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
         { analyticsLocations: H } = (0, m.Ay)(h.A.CUSTOM_THEMES_EDITOR),
@@ -415,13 +412,13 @@ function et(e) {
                 (0, T.XG)();
         },
         W = () => {
-            u(O.JB.RESET_BUTTON), (0, L.G_)();
+            u(b.JB.RESET_BUTTON), (0, L.G_)();
         },
-        z = I.length > 0;
+        $ = I.length > 0;
     return (
         i.useEffect(
             () => () => {
-                A.current || u(O.JB.EDITOR_CLOSE);
+                A.current || u(b.JB.EDITOR_CLOSE);
             },
             [u],
         ),
@@ -430,11 +427,11 @@ function et(e) {
                 let e = (I?.length ?? 0) > 0,
                     t = null != j;
                 !e && t
-                    ? (b.ko
+                    ? (R.ko
                           .getState()
                           .setAll({ colors: j.colors, gradientAngle: j.gradient_angle, chassisMixAmount: j.base_mix }),
-                      (0, O.IE)(j.base_theme))
-                    : (0, O.$Y)(I, x, N);
+                      (0, b.IE)(j.base_theme))
+                    : (0, b.$Y)(I, M, N);
             }
         }),
         (0, r.jsxs)("div", {
@@ -454,7 +451,7 @@ function et(e) {
                                         color: "text-subtle",
                                         children: F.intl.string(G.default.o2NfLF),
                                     }),
-                                    (0, r.jsx)(M.F, {}),
+                                    (0, r.jsx)(x.F, {}),
                                 ],
                             }),
                             (0, r.jsxs)("div", {
@@ -467,9 +464,9 @@ function et(e) {
                                     }),
                                     (0, r.jsx)(w.e, {
                                         onChange: (e) => {
-                                            P(e), 0 === I.length && (0, O.$Y)(I, e, N);
+                                            P(e), 0 === I.length && (0, b.$Y)(I, e, N);
                                         },
-                                        value: x,
+                                        value: M,
                                         colors: I,
                                         setColors: N,
                                     }),
@@ -483,11 +480,11 @@ function et(e) {
                                         color: "text-subtle",
                                         children: F.intl.string(G.default.F1t0c8),
                                     }),
-                                    I.length > 1 && (0, r.jsx)(q, { gradientAngle: v, setGradientAngle: R }),
-                                    (0, r.jsx)(X, {
+                                    I.length > 1 && (0, r.jsx)(q, { gradientAngle: v, setGradientAngle: O }),
+                                    (0, r.jsx)(Z, {
                                         chassisMixAmount: y,
                                         setChassisMixAmount: (e) => {
-                                            C(e), 0 === I.length && (0, O.$Y)(I, x, N);
+                                            C(e), 0 === I.length && (0, b.$Y)(I, M, N);
                                         },
                                     }),
                                 ],
@@ -495,7 +492,7 @@ function et(e) {
                             (0, r.jsxs)("div", {
                                 className: V.WA,
                                 children: [
-                                    (0, r.jsx)(Z, { isCoachmark: s, isMobile: a }),
+                                    (0, r.jsx)(X, { isCoachmark: s, isMobile: a }),
                                     (0, r.jsx)(d.$nd, {
                                         variant: "secondary",
                                         onClick: W,
@@ -509,8 +506,8 @@ function et(e) {
                     }),
                 }),
                 s
-                    ? (0, r.jsx)(J, { onSaveTheme: Y, canApply: z })
-                    : (0, r.jsx)(ee, { onSaveTheme: Y, canApply: z, metadata: t }),
+                    ? (0, r.jsx)(J, { onSaveTheme: Y, canApply: $ })
+                    : (0, r.jsx)(ee, { onSaveTheme: Y, canApply: $, metadata: t }),
             ],
         })
     );

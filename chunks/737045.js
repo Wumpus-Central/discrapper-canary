@@ -369,7 +369,7 @@ function D(t, e, i) {
                     onClick: () => {
                         {
                             let { openUserSettings: t } = r(840065);
-                            t(s.X.KEYBINDS_PANEL, { section: _.nc_.KEYBINDS });
+                            t(s.X.KEYBINDS_PANEL);
                         }
                     },
                 };

@@ -1,42 +1,24 @@
 "use strict";
-n.r(t),
-    n.d(t, {
-        USER_SETTINGS_MODAL_KEY: () => f,
-        getUserSettingsSectionsByWebUserSettings: () => m,
-        getWebUserSettingsByUserSettingsSections: () => h,
-        openUserSettings: () => p,
-    });
+n.r(t), n.d(t, { USER_SETTINGS_MODAL_KEY: () => c, openUserSettings: () => d });
 var r = n(627968),
     i = n(397927),
     s = n(73153),
     a = n(790284),
     o = n(272053),
-    l = n(780964),
-    u = n(358776),
-    c = n(995377),
-    d = n(355097),
-    _ = n(652215);
-let f = "USER_SETTINGS_MODAL_MODAL_KEY";
-async function p(e) {
+    l = n(995377),
+    u = n(355097);
+let c = "USER_SETTINGS_MODAL_MODAL_KEY";
+async function d(e) {
     let {
-            subsection: t,
-            section: l,
-            path: u,
-            stackingBehavior: p = "replaceAll",
-            ...h
+            path: t,
+            stackingBehavior: d = "replaceAll",
+            ..._
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        E = arguments.length > 2 ? arguments[2] : void 0,
-        g = (null != t && t === d.nR) || (null != u && u === d.od.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS);
-    g && a.A.setState({ subsection: d.nR });
-    let A = l ?? (null != e ? m().get(e) : null) ?? _.nc_.ACCOUNT;
+        f = arguments.length > 2 ? arguments[2] : void 0;
     if (
-        (s.h.dispatch({
-            type: "USER_SETTINGS_MODAL_OPEN",
-            section: A ?? null,
-            subsection: t ?? (g ? d.nR : null),
-            ...h,
-        }),
-        (0, c.f)())
+        (null != t && t === u.od.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS && a.A.setState({ subsection: u.nR }),
+        s.h.dispatch({ type: "USER_SETTINGS_MODAL_OPEN", ..._ }),
+        (0, l.f)())
     ) {
         if (null == e) return;
         o.A.navigate(e);
@@ -64,15 +46,15 @@ async function p(e) {
                     n.e("37372"),
                     n.e("28644"),
                     n.e("3183"),
-                    n.e("91991"),
+                    n.e("63238"),
                     n.e("97283"),
                     n.e("62175"),
                     n.e("12437"),
                     n.e("62452"),
                     n.e("41606"),
                     n.e("21597"),
+                    n.e("39501"),
                     n.e("30453"),
-                    n.e("13723"),
                     n.e("74352"),
                     n.e("13987"),
                     n.e("49164"),
@@ -90,59 +72,13 @@ async function p(e) {
                     n.e("84704"),
                     n.e("22777"),
                     n.e("67646"),
-                    n.e("28726"),
+                    n.e("27160"),
                     n.e("80011"),
                     n.e("82981"),
                 ]).then(n.bind(n, 796150));
                 return (n) => (0, r.jsx)(t, { ...n, target: e });
             },
-            { modalKey: f, stackingBehavior: p, stackNextByDefault: !0, contextKey: i.SYi },
+            { modalKey: c, stackingBehavior: d, stackNextByDefault: !0, contextKey: i.SYi },
         );
-    E?.();
-}
-function h() {
-    let e = (0, u.Ci)("getWebUserSettingFromSection");
-    return new Map([
-        [_.nc_.ACCOUNT, l.X.ACCOUNT_PANEL],
-        [_.nc_.PROFILE_CUSTOMIZATION, l.X.PROFILE_PANEL],
-        [_.nc_.CONTENT_AND_SOCIAL, l.X.CONTENT_AND_SOCIAL_PANEL],
-        [_.nc_.DATA_AND_PRIVACY, l.X.DATA_AND_PRIVACY_PANEL],
-        [_.nc_.PRIVACY_AND_SAFETY, l.X.DATA_AND_PRIVACY_PANEL],
-        [_.nc_.FAMILY_CENTER, l.X.FAMILY_CENTER_PANEL],
-        [_.nc_.SESSIONS, l.X.SESSIONS_PANEL],
-        [_.nc_.AUTHORIZED_APPS, l.X.AUTHORIZED_APPS_PANEL],
-        [_.nc_.CONNECTIONS, l.X.CONNECTIONS_PANEL],
-        [_.nc_.CLIPS, l.X.CLIPS_PANEL],
-        [_.nc_.PREMIUM, l.X.NITRO_PANEL],
-        [_.nc_.GUILD_BOOSTING, l.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL],
-        [_.nc_.SUBSCRIPTIONS, l.X.SUBSCRIPTIONS_PANEL],
-        [_.nc_.INVENTORY, l.X.GIFT_PANEL],
-        [_.nc_.BILLING, l.X.BILLING_PANEL],
-        [_.nc_.APPEARANCE, e ? l.X.DISPLAY_PANEL : l.X.APPEARANCE_PANEL],
-        [_.nc_.ACCESSIBILITY, l.X.ACCESSIBILITY_PANEL],
-        [_.nc_.VOICE, l.X.VOICE_AND_VIDEO_PANEL],
-        [_.nc_.POGGERMODE, l.X.POGGERMODE_PANEL],
-        [_.nc_.TEXT, e ? l.X.DISPLAY_MESSAGES_CATEGORY : l.X.CHAT_PANEL],
-        [_.nc_.NOTIFICATIONS, l.X.NOTIFICATIONS_PANEL],
-        [_.nc_.KEYBINDS, l.X.KEYBINDS_PANEL],
-        [_.nc_.LANGUAGE, l.X.LANGUAGE_AND_TIME_PANEL],
-        [_.nc_.WINDOWS, e ? l.X.ADVANCED_CATEGORY : l.X.WINDOWS_PANEL],
-        [_.nc_.LINUX, e ? l.X.ADVANCED_CATEGORY : l.X.LINUX_PANEL],
-        [_.nc_.STREAMER_MODE, e ? l.X.STREAMER_MODE_CATEGORY : l.X.STREAMER_MODE_PANEL],
-        [_.nc_.ADVANCED, e ? l.X.DEVELOPER_PANEL : l.X.ADVANCED_PANEL],
-        [_.nc_.ACTIVITY_PRIVACY, l.X.ACTIVITY_PRIVACY_PANEL],
-        [_.nc_.REGISTERED_GAMES, l.X.REGISTERED_GAMES_PANEL],
-        [_.nc_.OVERLAY, l.X.OVERLAY_PANEL],
-        [_.nc_.EXPERIMENTS, l.X.EXPERIMENTS_PANEL],
-        [_.nc_.DEVELOPER_OPTIONS, l.X.DEVELOPER_OPTIONS_PANEL],
-        [_.nc_.ACCOUNT_STANDING, l.X.ACCOUNT_STANDING_CATEGORY],
-        [_.nc_.CONNECTED_GAMES, l.X.CONTENT_AND_SOCIAL_CONNECTED_GAMES_CATEGORY],
-        [_.nc_.EMAILS, l.X.NOTIFICATIONS_EMAIL_CATEGORY],
-    ]);
-}
-function m() {
-    let e = h(),
-        t = new Map();
-    for (let [n, r] of e.entries()) t.set(r, n);
-    return t;
+    f?.();
 }

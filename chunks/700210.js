@@ -41,7 +41,7 @@ function g(e) {
             y?.id != null && (u.A.open(y.id, m.BEX.INTEGRATIONS), o.A.setSection(m.wLn.APPLICATION, S), T?.());
         }, [S, y?.id, T]),
         M = i.useCallback(() => {
-            (0, _.openUserSettings)(c.X.AUTHORIZED_APPS_PANEL, { section: m.nc_.AUTHORIZED_APPS });
+            (0, _.openUserSettings)(c.X.AUTHORIZED_APPS_PANEL);
             let e = "";
             null != g ? (e = g.name) : null != t && (e = t.username),
                 "" !== e && d.i.setState({ searchQuery: e }),

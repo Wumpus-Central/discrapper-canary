@@ -82,9 +82,7 @@ let x = () => {
             s = () => {
                 if ((n?.(D.i.DISMISS), (0, h.Jp)(), (0, N.U)(), !t)) {
                     let e = (0, I.Ci)("AppIconEditor_handleBack");
-                    (0, T.openUserSettings)(e ? A.X.DISPLAY_IN_APP_ICON_CATEGORY : A.X.APPEARANCE_PANEL, {
-                        section: b.nc_.APPEARANCE,
-                    });
+                    (0, T.openUserSettings)(e ? A.X.DISPLAY_IN_APP_ICON_CATEGORY : A.X.APPEARANCE_PANEL);
                 }
             };
         return (0, r.jsxs)("div", {

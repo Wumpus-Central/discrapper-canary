@@ -26,7 +26,7 @@ function M(t) {
             onClick: () => {
                 {
                     let { openUserSettings: t } = n(840065);
-                    t(_.X.KEYBINDS_PANEL, { section: x.nc_.KEYBINDS });
+                    t(_.X.KEYBINDS_PANEL);
                 }
             },
         }),

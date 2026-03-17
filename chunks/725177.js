@@ -1,21 +1,19 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var r = n(780964),
     i = n(840065),
-    a = n(857266),
-    s = n(652215);
-function o(e) {
+    s = n(857266);
+function a(e) {
     switch (e) {
-        case a.J.MY_GAMES:
-            return [r.X.REGISTERED_GAMES_PANEL, s.nc_.REGISTERED_GAMES];
-        case a.J.OVERLAY:
-            return [r.X.OVERLAY_PANEL, s.nc_.OVERLAY];
-        case a.J.ACTIVITY_PRIVACY:
-            return [r.X.ACTIVITY_PRIVACY_PANEL, s.nc_.ACTIVITY_PRIVACY];
+        case s.J.MY_GAMES:
+            return r.X.REGISTERED_GAMES_PANEL;
+        case s.J.OVERLAY:
+            return r.X.OVERLAY_PANEL;
+        case s.J.ACTIVITY_PRIVACY:
+            return r.X.ACTIVITY_PRIVACY_PANEL;
     }
 }
-function l(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        [n, r] = o(e);
-    (0, i.openUserSettings)(n, { section: r, ...t });
+function o(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    (0, i.openUserSettings)(a(e), t);
 }

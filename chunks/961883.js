@@ -20,8 +20,8 @@ var i = n(64700),
     I = n(442759),
     _ = n(158216),
     O = n(758836),
-    R = n(652215),
-    b = n(22104),
+    b = n(652215),
+    R = n(22104),
     S = n(985018);
 let k = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null),
     C = (t) => {
@@ -34,7 +34,7 @@ let k = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null
             itemConsumed: r,
         } = t;
         if (null != n) return n;
-        if (O.Dp.ORB_PROFILE_BADGE === e.skuId) return S.intl.string(b.default.nvaTQq);
+        if (O.Dp.ORB_PROFILE_BADGE === e.skuId) return S.intl.string(R.default.nvaTQq);
         if (O.Dp.FRACTIONAL_PREMIUM === e.skuId)
             if (r) return S.intl.string(S.t.t0xkSB);
             else return S.intl.string(S.t.g5W1g8);
@@ -53,19 +53,19 @@ let k = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null
             expiresAt: o,
         } = t;
         if (null != n) return n;
-        if (O.Dp.ORB_PROFILE_BADGE === e.skuId) return S.intl.string(b.default.UnPGii);
+        if (O.Dp.ORB_PROFILE_BADGE === e.skuId) return S.intl.string(R.default.UnPGii);
         if (O.Dp.FRACTIONAL_PREMIUM === e.skuId) {
             let t = S.intl.formatToPlainString(S.t.Cz1G97, { days: 3 });
             return r
                 ? S.intl.format(S.t.bhLChO, {
-                      helpCenterLink: E.A.getArticleURL(R.MVz.FRACTIONAL_PREMIUM_ABOUT),
+                      helpCenterLink: E.A.getArticleURL(b.MVz.FRACTIONAL_PREMIUM_ABOUT),
                       duration: t,
                       expirationDate: o,
                   })
                 : s
                   ? S.intl.string(S.t.fBmhE9)
                   : S.intl.format(S.t["1ZBX4E"], {
-                        helpCenterLink: E.A.getArticleURL(R.MVz.FRACTIONAL_PREMIUM_ABOUT),
+                        helpCenterLink: E.A.getArticleURL(b.MVz.FRACTIONAL_PREMIUM_ABOUT),
                         duration: t,
                     });
         }
@@ -90,10 +90,10 @@ let k = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null
         if (O.Dp.ORB_PROFILE_BADGE === e.skuId)
             I.push(
                 {
-                    text: S.intl.string(b.default.yfwZuy),
+                    text: S.intl.string(R.default.yfwZuy),
                     variant: "primary",
                     onClick: () => {
-                        n(), y._.dispatch(R.jej.SHOW_ACCOUNT_PROFILE_POPOUT, {});
+                        n(), y._.dispatch(b.jej.SHOW_ACCOUNT_PROFILE_POPOUT, {});
                     },
                 },
                 {
@@ -102,9 +102,9 @@ let k = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null
                     onClick: () => {
                         n(),
                             (0, f.Y)({
-                                pageType: R.liQ.SHOP_ORBS_TAB,
-                                sectionType: R.JJy.ORBS_BADGE_REDEMPTION_MODAL,
-                                ctaObject: R.ZSU.CTA_TO_QUEST_HOME,
+                                pageType: b.liQ.SHOP_ORBS_TAB,
+                                sectionType: b.JJy.ORBS_BADGE_REDEMPTION_MODAL,
+                                ctaObject: b.ZSU.CTA_TO_QUEST_HOME,
                             }),
                             (0, g.navigateToQuestHome)();
                     },
@@ -128,7 +128,7 @@ let k = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null
                           text: S.intl.string(S.t["Jr6N+s"]),
                           variant: "primary",
                           onClick: () => {
-                              (0, h.openUserSettings)(A.X.SUBSCRIPTIONS_PANEL, { section: R.nc_.SUBSCRIPTIONS }), n();
+                              (0, h.openUserSettings)(A.X.SUBSCRIPTIONS_PANEL), n();
                           },
                       },
                   );
@@ -162,8 +162,8 @@ let k = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null
         let n = i.useMemo(() => (0, v.V6)(t.type, t.skuId), [t.type, t.skuId]);
         return (
             i.useEffect(() => {
-                m.default.track(R.HAw.OPEN_MODAL, {
-                    type: R.JJy.COLLECTIBLES_SHOP_COLLECTED_MODAL,
+                m.default.track(b.HAw.OPEN_MODAL, {
+                    type: b.JJy.COLLECTIBLES_SHOP_COLLECTED_MODAL,
                     location_stack: e,
                     sku_id: t.skuId,
                     product_type: n,

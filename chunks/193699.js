@@ -1,8 +1,8 @@
 n.d(t, { A: () => m });
 var i = n(627968);
 n(64700);
-var r = n(503698),
-    a = n.n(r),
+var a = n(503698),
+    r = n.n(a),
     l = n(397927),
     s = n(290595),
     o = n(755395),
@@ -15,7 +15,7 @@ var r = n(503698),
 function m(e) {
     let { className: t, markAsDismissed: n } = e;
     return (0, i.jsxs)(o.A, {
-        className: a()(_.Nr, t),
+        className: r()(_.Nr, t),
         children: [
             (0, i.jsx)(l.Heading, {
                 variant: "heading-md/semibold",
@@ -26,7 +26,7 @@ function m(e) {
                 variant: "text-sm/normal",
                 children: h.intl.format(h.t.NkFrzN, {
                     onPrivacyClick: () => {
-                        (0, c.openUserSettings)(d.X.DATA_AND_PRIVACY_PANEL, { section: u.nc_.DATA_AND_PRIVACY });
+                        (0, c.openUserSettings)(d.X.DATA_AND_PRIVACY_PANEL);
                     },
                 }),
             }),

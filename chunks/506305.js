@@ -1,24 +1,23 @@
-i.d(e, { p: () => A });
-var n = i(311907),
-    l = i(955572),
-    s = i(775602),
-    r = i(419954),
-    a = i(780964),
-    u = i(358776),
-    o = i(840065),
-    d = i(652215),
-    T = i(985018);
-let A = (0, r.zD)(a.X.SYNC_PROFILE_THEMES, {
+n.d(t, { p: () => u });
+var i = n(311907),
+    s = n(955572),
+    l = n(775602),
+    a = n(419954),
+    r = n(780964),
+    o = n(358776),
+    d = n(840065),
+    c = n(985018);
+let u = (0, a.zD)(r.X.SYNC_PROFILE_THEMES, {
     useTitle: () =>
-        (0, u.bp)("SyncProfileThemes_useTitle") ? T.intl.string(T.t.gAieYA) : T.intl.string(T.t["sSY+mD"]),
+        (0, o.bp)("SyncProfileThemes_useTitle") ? c.intl.string(c.t.C00w4l) : c.intl.string(c.t["sSY+mD"]),
     useSubtitle: () =>
-        (0, u.bp)("SyncProfileThemes_useSubtitle")
+        (0, o.bp)("SyncProfileThemes_useSubtitle")
             ? void 0
-            : T.intl.format(T.t.u6UjrL, {
+            : c.intl.format(c.t.u6UjrL, {
                   onThemeClick() {
-                      (0, o.openUserSettings)(a.X.APPEARANCE_PANEL, { section: d.nc_.APPEARANCE });
+                      (0, d.openUserSettings)(r.X.APPEARANCE_PANEL);
                   },
               }),
-    useValue: () => (0, n.bG)([s.A], () => s.A.syncProfileThemeWithUserTheme),
-    setValue: () => (0, l.M1)(),
+    useValue: () => (0, i.bG)([l.A], () => l.A.syncProfileThemeWithUserTheme),
+    setValue: () => (0, s.M1)(),
 });

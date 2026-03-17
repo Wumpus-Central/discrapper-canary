@@ -15,17 +15,17 @@ function f(e) {
             partialRoot: t,
             target: n,
             defaultTarget: f,
-            onPanelChange: g,
-            sidebarFooter: h,
-            emptyState: y,
-            searchQuery: p,
+            onViewChange: h,
+            sidebarFooter: g,
+            emptyState: p,
+            searchQuery: y,
             clearSearchQuery: _,
             searchBar: x,
             ...b
         } = e,
         [v, A] = i.useState(!1),
-        [j, S] = i.useState(1.4),
-        N = i.useRef(null),
+        [j, N] = i.useState(1.4),
+        S = i.useRef(null),
         C = (0, a.bG)([o.A], () => o.A.useReducedMotion),
         k = (0, a.bG)([c.A], () => c.A.isFocused());
     return (
@@ -34,12 +34,12 @@ function f(e) {
                 let { intensity: t, duration: n } = e;
                 !C &&
                     k &&
-                    (A(!0), S(t ?? 1.4), clearTimeout(N.current), (N.current = setTimeout(() => A(!1), n ?? 1e3)));
+                    (A(!0), N(t ?? 1.4), clearTimeout(S.current), (S.current = setTimeout(() => A(!1), n ?? 1e3)));
             };
             return (
                 u._.subscribe(m.jej.SHAKE_SETTINGS_MODAL, e),
                 () => {
-                    u._.unsubscribe(m.jej.SHAKE_SETTINGS_MODAL, e), clearTimeout(N.current);
+                    u._.unsubscribe(m.jej.SHAKE_SETTINGS_MODAL, e), clearTimeout(S.current);
                 }
             );
         }, [C, k]),
@@ -53,10 +53,10 @@ function f(e) {
                     partialRoot: t,
                     target: n,
                     defaultTarget: f,
-                    onPanelChange: g,
-                    emptyState: y,
-                    sidebarFooter: h,
-                    searchQuery: p,
+                    onViewChange: h,
+                    emptyState: p,
+                    sidebarFooter: g,
+                    searchQuery: y,
                     clearSearchQuery: _,
                     searchBar: x,
                 }),

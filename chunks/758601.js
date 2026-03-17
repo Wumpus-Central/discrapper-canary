@@ -1,43 +1,40 @@
-n.d(e, { A: () => _ });
+n.d(e, { A: () => x });
 var s = n(627968),
     i = n(64700),
     l = n(397927),
     r = n(780964),
     a = n(840065),
-    T = n(975571),
-    o = n(544231),
+    o = n(975571),
+    T = n(544231),
     c = n(110168),
     d = n(403403),
     S = n(652215),
     u = n(985018),
     A = n(24745);
-let _ = function (t) {
+let x = function (t) {
     let { onClose: e, channelId: n } = t,
-        [_, x] = i.useState(!1),
+        [x, _] = i.useState(!1),
         E = i.useCallback(() => {
-            (0, a.openUserSettings)(r.X.CONTENT_AND_SOCIAL_DM_SAFETY_ALERTS_SETTING, {
-                section: S.nc_.CONTENT_AND_SOCIAL,
-            }),
-                e();
+            (0, a.openUserSettings)(r.X.CONTENT_AND_SOCIAL_DM_SAFETY_ALERTS_SETTING), e();
         }, [e]),
         m = i.useCallback(() => {
-            _ ||
-                (x(!0),
-                (0, o.XR)(n)
+            x ||
+                (_(!0),
+                (0, T.XR)(n)
                     .then(() => {
                         e(), (0, c.r)({ text: u.intl.string(u.t.FhgVWi), id: "safety-tools-report-false-positive" });
                     })
                     .catch(() => {
-                        x(!1), (0, l.showToast)((0, l.createToast)(u.intl.string(u.t.R0RpRX), l.ToastType.FAILURE));
+                        _(!1), (0, l.showToast)((0, l.createToast)(u.intl.string(u.t.R0RpRX), l.ToastType.FAILURE));
                     }));
-        }, [n, e, _]);
+        }, [n, e, x]);
     return (0, s.jsxs)(d.A, {
         style: A.T1,
         children: [
             (0, s.jsx)(l.Text, {
                 variant: "text-md/normal",
                 color: "text-default",
-                children: u.intl.format(u.t["njJ/Cg"], { learnMoreLink: T.A.getArticleURL(S.MVz.SAFETY_ALERTS) }),
+                children: u.intl.format(u.t["njJ/Cg"], { learnMoreLink: o.A.getArticleURL(S.MVz.SAFETY_ALERTS) }),
             }),
             (0, s.jsxs)("div", {
                 children: [

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => A });
 var i = n(627968);
 n(64700);
 var s = n(735438),
@@ -15,16 +15,16 @@ var s = n(735438),
     x = n(600955),
     h = n(652215),
     _ = n(985018),
-    A = n(690450);
-function p(e) {
+    p = n(690450);
+function A(e) {
     let t,
         { guild: n } = e,
-        p = n.mfaLevel,
+        A = n.mfaLevel,
         f = (0, l.bG)([u.A], () => null != n && u.A.can(h.xBc.MANAGE_GUILD, n), [n]),
         j = (0, l.bG)([m.default], () => m.default.getCurrentUser()),
         N = (0, c.bM)(n, j),
         E = j?.mfaEnabled,
-        b = p === h.EkJ.ELEVATED,
+        b = A === h.EkJ.ELEVATED,
         T = N && E,
         C = (0, s.throttle)(async (e) => {
             T && (await g.A.updateMFALevel({ guildId: n.id, level: e ? h.EkJ.ELEVATED : h.EkJ.NONE }));
@@ -32,16 +32,14 @@ function p(e) {
     if (!f) return null;
     T ||
         (t = N
-            ? _.intl.format(_.t.nFwNyR, {
-                  settingsHook: () => (0, d.openUserSettings)(o.X.ACCOUNT_PANEL, { section: h.nc_.ACCOUNT }),
-              })
+            ? _.intl.format(_.t.nFwNyR, { settingsHook: () => (0, d.openUserSettings)(o.X.ACCOUNT_PANEL) })
             : _.intl.string(_.t["9Ghu40"]));
     let I = n.features.has(h.GuildFeatures.DISCOVERABLE);
     return (0, i.jsxs)("div", {
-        className: A.ph,
+        className: p.ph,
         children: [
             (0, i.jsxs)("div", {
-                className: A.Ly,
+                className: p.Ly,
                 children: [
                     (0, i.jsx)(a.Heading, {
                         variant: "text-md/semibold",
@@ -62,9 +60,9 @@ function p(e) {
                           : N
                             ? _.intl.string(_.t.NmsheT)
                             : _.intl.string(_.t.LieBta),
-                      children: (0, i.jsx)(x.A, { checked: b, disabled: !0, onChange: C, className: A.R0 }),
+                      children: (0, i.jsx)(x.A, { checked: b, disabled: !0, onChange: C, className: p.R0 }),
                   })
-                : (0, i.jsx)(x.A, { checked: b, onChange: C, className: A.R0 }),
+                : (0, i.jsx)(x.A, { checked: b, onChange: C, className: p.R0 }),
         ],
     });
 }

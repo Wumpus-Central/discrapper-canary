@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => E });
 var r = n(627968);
 n(64700);
 var i = n(311907),
-    a = n(397927),
-    s = n(688810),
+    s = n(397927),
+    a = n(688810),
     o = n(822123),
     l = n(532794),
     u = n(976860),
@@ -15,35 +15,35 @@ var i = n(311907),
     p = n(234419),
     h = n(788868),
     m = n(652215);
-function g(e) {
+function E(e) {
     let {
             onClick: t,
-            subscriptionTier: g,
-            postSuccessGuild: E,
+            subscriptionTier: E,
+            postSuccessGuild: g,
             onSubscribeModalClose: A,
             premiumModalAnalyticsLocation: I,
             applicationId: T,
-            giftMessage: y,
-            confirmationFooter: S,
+            giftMessage: S,
+            confirmationFooter: y,
             isGift: v,
-            initialPlanId: C = null,
-            children: b,
+            initialPlanId: N = null,
+            children: C,
         } = e,
-        N = (0, i.bG)([_.default], () => _.default.getCurrentUser()),
-        R = (0, i.bG)([f.A], () => f.A.getPremiumTypeSubscription()),
-        { analyticsLocations: O } = (0, s.Ay)(),
+        R = (0, i.bG)([_.default], () => _.default.getCurrentUser()),
+        O = (0, i.bG)([f.A], () => f.A.getPremiumTypeSubscription()),
+        { analyticsLocations: b } = (0, a.Ay)(),
         D = (0, p.V)(),
-        L = !v && null != D && null != g && h.TP[D.trial_id].skus.includes(g);
-    return b({
+        L = !v && null != D && null != E && h.TP[D.trial_id].skus.includes(E);
+    return C({
         onClick: (e) => {
-            if ((e.preventDefault(), null == N))
+            if ((e.preventDefault(), null == R))
                 return void (0, u.pX)(m.BVt.LOGIN, { source: "premium_subscribe_button" });
-            if ((t?.(e), R?.status === m.Dmq.ACCOUNT_HOLD)) {
-                (0, o.xf)(), (0, d.openUserSettings)(c.X.NITRO_PANEL, { section: m.nc_.PREMIUM }), A?.(!1);
+            if ((t?.(e), O?.status === m.Dmq.ACCOUNT_HOLD)) {
+                (0, o.xf)(), (0, d.openUserSettings)(c.X.NITRO_PANEL), A?.(!1);
                 return;
             }
-            if (!N.isClaimed())
-                return void (0, a.mMO)(async () => {
+            if (!R.isClaimed())
+                return void (0, s.mMO)(async () => {
                     let { default: e } = await Promise.all([n.e("12206"), n.e("24806"), n.e("80388")]).then(
                         n.bind(n, 195759),
                     );
@@ -52,8 +52,8 @@ function g(e) {
                         return (0, r.jsx)(e, { ...i, onClose: n });
                     };
                 });
-            if (!N.verified)
-                return void (0, a.mMO)(async () => {
+            if (!R.verified)
+                return void (0, s.mMO)(async () => {
                     let { default: e } = await Promise.all([n.e("12206"), n.e("90406")]).then(n.bind(n, 661925));
                     return (t) => {
                         let { onClose: n, ...i } = t;
@@ -61,20 +61,20 @@ function g(e) {
                     };
                 });
             let i = L ? D.subscription_trial?.id : null,
-                s = m.AnalyticsObjectTypes.BUY;
-            null != i ? (s = m.AnalyticsObjectTypes.TRIAL) : v && (s = m.AnalyticsObjectTypes.GIFT),
+                a = m.AnalyticsObjectTypes.BUY;
+            null != i ? (a = m.AnalyticsObjectTypes.TRIAL) : v && (a = m.AnalyticsObjectTypes.GIFT),
                 (0, l.A)({
                     isGift: v,
-                    initialPlanId: C,
-                    subscriptionTier: g,
-                    analyticsLocations: O,
-                    analyticsObject: { object: m.ZSU.BUTTON_CTA, objectType: s, ...I },
+                    initialPlanId: N,
+                    subscriptionTier: E,
+                    analyticsLocations: b,
+                    analyticsObject: { object: m.ZSU.BUTTON_CTA, objectType: a, ...I },
                     trialId: i,
-                    postSuccessGuild: E,
+                    postSuccessGuild: g,
                     onClose: A,
                     applicationId: T,
-                    giftMessage: y,
-                    confirmationFooter: S,
+                    giftMessage: S,
+                    confirmationFooter: y,
                 });
         },
     });

@@ -1,8 +1,8 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => f });
 var a = n(627968);
 n(64700);
-var s = n(397927),
-    i = n(793574),
+var i = n(397927),
+    s = n(793574),
     l = n(688810),
     r = n(826673),
     o = n(750506),
@@ -11,62 +11,60 @@ var s = n(397927),
     u = n(223567),
     m = n(552122),
     h = n(41280),
-    x = n(652215),
     p = n(49999),
-    g = n(985018),
-    _ = n(653246);
-function f(e) {
+    x = n(985018),
+    g = n(653246);
+function _(e) {
     let { dismissibleContent: t, backgroundColor: n, specialTextColor: u } = e,
-        f = m.A.useIsEligible(),
-        v = (0, r.JZ)(t),
-        b = null != n,
-        j = null != u ? { color: u } : void 0,
-        { analyticsLocations: A } = (0, l.Ay)(i.A.HOLIDAY_COACHMARK),
-        C = (e) => {
+        _ = m.A.useIsEligible(),
+        f = (0, r.JZ)(t),
+        v = null != n,
+        b = null != u ? { color: u } : void 0,
+        { analyticsLocations: j } = (0, l.Ay)(s.A.HOLIDAY_COACHMARK),
+        A = (e) => {
             (0, r.Dr)(t, { dismissAction: e });
         },
-        S = () => {
-            (0, c.openUserSettings)(d.X.NOTIFICATIONS_PANEL, { section: x.nc_.NOTIFICATIONS, analyticsLocations: A }),
-                C(p.i.TAKE_ACTION);
+        C = () => {
+            (0, c.openUserSettings)(d.X.NOTIFICATIONS_PANEL, { analyticsLocations: j }), A(p.i.TAKE_ACTION);
         };
-    return f && !v
+    return _ && !f
         ? (0, a.jsx)(o.Ay, {
               children: (0, a.jsxs)("div", {
-                  className: _.iE,
-                  style: { backgroundColor: b ? n : void 0 },
+                  className: g.iE,
+                  style: { backgroundColor: v ? n : void 0 },
                   children: [
-                      !b &&
+                      !v &&
                           (0, a.jsxs)("div", {
-                              className: _.o5,
+                              className: g.o5,
                               children: [
-                                  (0, a.jsx)(h.A, { className: _.iL, pageMultiplier: 5 }),
-                                  (0, a.jsx)("div", { className: _.Np }),
+                                  (0, a.jsx)(h.A, { className: g.iL, pageMultiplier: 5 }),
+                                  (0, a.jsx)("div", { className: g.Np }),
                               ],
                           }),
-                      (0, a.jsx)("div", { className: _.c8 }),
+                      (0, a.jsx)("div", { className: g.c8 }),
                       (0, a.jsxs)("div", {
-                          className: _.Qs,
+                          className: g.Qs,
                           children: [
                               (0, a.jsxs)("div", {
                                   children: [
-                                      (0, a.jsx)(s.Heading, {
+                                      (0, a.jsx)(i.Heading, {
                                           variant: "heading-md/bold",
-                                          color: null != j ? void 0 : "always-white",
-                                          style: j,
-                                          children: g.intl.string(g.t["6CxPoB"]),
+                                          color: null != b ? void 0 : "always-white",
+                                          style: b,
+                                          children: x.intl.string(x.t["6CxPoB"]),
                                       }),
-                                      (0, a.jsx)(s.Text, {
+                                      (0, a.jsx)(i.Text, {
                                           variant: "text-xs/normal",
                                           color: "always-white",
-                                          children: g.intl.format(g.t.IVzJ8G, {
+                                          children: x.intl.format(x.t.IVzJ8G, {
                                               settingsHook: (e, t) =>
                                                   (0, a.jsx)(
-                                                      s.DUT,
+                                                      i.DUT,
                                                       {
                                                           tag: "span",
-                                                          className: _.nf,
-                                                          style: j,
-                                                          onClick: S,
+                                                          className: g.nf,
+                                                          style: b,
+                                                          onClick: C,
                                                           children: e,
                                                       },
                                                       t,
@@ -75,10 +73,10 @@ function f(e) {
                                       }),
                                   ],
                               }),
-                              (0, a.jsx)(s.DUT, {
-                                  className: _.l2,
-                                  onClick: () => C(p.i.USER_DISMISS),
-                                  children: (0, a.jsx)(s.PGe, { color: "currentColor", size: "xs" }),
+                              (0, a.jsx)(i.DUT, {
+                                  className: g.l2,
+                                  onClick: () => A(p.i.USER_DISMISS),
+                                  children: (0, a.jsx)(i.PGe, { color: "currentColor", size: "xs" }),
                               }),
                           ],
                       }),
@@ -87,10 +85,10 @@ function f(e) {
           })
         : null;
 }
-function v() {
+function f() {
     return null == u.A.coachmarkDismissibleContent
         ? null
-        : (0, a.jsx)(f, {
+        : (0, a.jsx)(_, {
               dismissibleContent: u.A.coachmarkDismissibleContent,
               backgroundColor: u.A.coachmarkBackgroundColor,
               specialTextColor: u.A.coachmarkSpecialTextColor,

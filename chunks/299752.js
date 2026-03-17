@@ -1,37 +1,35 @@
-i.d(e, { C: () => _ });
-var n = i(627968),
-    l = i(158954),
-    s = i(311907),
-    r = i(827343),
-    a = i(117178),
-    u = i(419954),
-    o = i(430452),
-    d = i(780964),
-    A = i(840065),
-    T = i(903427),
-    S = i(652215),
-    E = i(985018),
-    g = i(755087);
-let _ = (0, u.E2)(d.X.VOICE_PUSH_TO_TALK_KEYBIND_SETTING, {
-    useSearchTerms: () => [E.intl.string(E.t["pS+K2L"]), E.intl.string(E.t.nuFtHH)],
-    usePredicate: T.P,
+n.d(t, { C: () => h });
+var i = n(627968),
+    s = n(158954),
+    l = n(311907),
+    a = n(827343),
+    r = n(117178),
+    o = n(419954),
+    d = n(430452),
+    c = n(780964),
+    u = n(840065),
+    _ = n(903427),
+    m = n(652215),
+    g = n(985018),
+    A = n(755087);
+let h = (0, o.E2)(c.X.VOICE_PUSH_TO_TALK_KEYBIND_SETTING, {
+    useSearchTerms: () => [g.intl.string(g.t["pS+K2L"]), g.intl.string(g.t.nuFtHH)],
+    usePredicate: _.P,
     Component: function () {
-        let t = (0, s.bG)([o.Ay], () => {
-                let { shortcut: t } = o.Ay.getModeOptions();
-                return t;
+        let e = (0, l.bG)([d.Ay], () => {
+                let { shortcut: e } = d.Ay.getModeOptions();
+                return e;
             }),
-            e = E.intl.format(E.t.HVvn5T, {
-                onClick: () => (0, A.openUserSettings)(d.X.KEYBINDS_PANEL, { section: S.nc_.KEYBINDS }),
-            });
-        return (0, n.jsx)(l.D0$, {
-            label: E.intl.string(E.t["o+BJQR"]),
-            description: e,
+            t = g.intl.format(g.t.HVvn5T, { onClick: () => (0, u.openUserSettings)(c.X.KEYBINDS_PANEL) });
+        return (0, i.jsx)(s.D0$, {
+            label: g.intl.string(g.t["o+BJQR"]),
+            description: t,
             layout: "horizontal-responsive",
-            children: (0, n.jsx)("div", {
-                className: g.e,
-                children: (0, n.jsx)(a.A, {
-                    defaultValue: t,
-                    onChange: (t) => r.A.setMode(S.TBI.PUSH_TO_TALK, { shortcut: t }),
+            children: (0, i.jsx)("div", {
+                className: A.e,
+                children: (0, i.jsx)(r.A, {
+                    defaultValue: e,
+                    onChange: (e) => a.A.setMode(m.TBI.PUSH_TO_TALK, { shortcut: e }),
                 }),
             }),
         });

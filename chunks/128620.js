@@ -13,22 +13,22 @@ var n = a(627968),
     f = a(649032),
     b = a(320118),
     A = a(976860),
-    _ = a(780964),
-    h = a(840065),
+    h = a(780964),
+    _ = a(840065),
     g = a(975571),
     R = a(872725),
     x = a(566119),
     E = a(570627),
     C = a(94264),
-    N = a(652215),
-    v = a(758836),
+    v = a(652215),
+    N = a(758836),
     I = a(901123),
     S = a(49370),
     T = a(985018),
     P = a(970466),
     y = a(909340),
     D = a(455482);
-let O = g.A.getArticleURL(N.MVz.ORBS_REWARDS_FAQ);
+let O = g.A.getArticleURL(v.MVz.ORBS_REWARDS_FAQ);
 function j(e) {
     (0, x.o8)(e), window.open(O, "_blank");
 }
@@ -40,7 +40,7 @@ let U = (e) => {
         U = (0, m.DP)(),
         M = r.useMemo(() => ({ hueRotate: 25, glowAmount: (0, o.M)(U) ? 2 : 8, blurAmount: g ? 10 : 20 }), [U, g]);
     if (!a || null == s) return null;
-    let L = (function (e, t) {
+    let w = (function (e, t) {
         let a = e.program_current_state,
             r =
                 null != e.next_reward_date && "" !== e.next_reward_date
@@ -57,7 +57,7 @@ let U = (e) => {
                         text: T.intl.string(S.default.BxjHiu),
                         variant: t ? "overlay-primary" : "secondary",
                         onClick: () => {
-                            (0, x.WD)(a), (0, A.pX)(I.BV.COLLECTIBLES_SHOP_WITH_TAB(v.G2.ORBS));
+                            (0, x.WD)(a), (0, A.pX)(I.BV.COLLECTIBLES_SHOP_WITH_TAB(N.G2.ORBS));
                         },
                     }),
                     headerText: T.intl.format(S.default.BxLJQL, { days: Math.max(1, r), orbsCount: e.reward_amount }),
@@ -71,7 +71,7 @@ let U = (e) => {
                         text: T.intl.string(S.default.KVCfnE),
                         variant: t ? "overlay-primary" : "secondary",
                         onClick: () => {
-                            (0, x.CC)(a), (0, h.openUserSettings)(_.X.BILLING_PANEL, { section: N.nc_.BILLING });
+                            (0, x.CC)(a), (0, _.openUserSettings)(h.X.BILLING_PANEL);
                         },
                     }),
                     headerText: T.intl.string(S.default.uuZJXR),
@@ -82,7 +82,7 @@ let U = (e) => {
                     displayTotalLifetimeRewards: null != s,
                     displayProgressBar: !1,
                     actionButton: (0, n.jsx)(d.NPJ, {
-                        theme: t ? N.NJ8.DARKER : void 0,
+                        theme: t ? v.NJ8.DARKER : void 0,
                         children: (e) =>
                             (0, n.jsx)("span", {
                                 className: e,
@@ -90,8 +90,7 @@ let U = (e) => {
                                     text: T.intl.string(S.default.KVCfnE),
                                     variant: "critical-secondary",
                                     onClick: () => {
-                                        (0, x.ue)(a),
-                                            (0, h.openUserSettings)(_.X.BILLING_PANEL, { section: N.nc_.BILLING });
+                                        (0, x.ue)(a), (0, _.openUserSettings)(h.X.BILLING_PANEL);
                                     },
                                 }),
                             }),
@@ -107,7 +106,7 @@ let U = (e) => {
                         text: T.intl.string(S.default["wLAd/+"]),
                         variant: t ? "overlay-primary" : "secondary",
                         onClick: () => {
-                            (0, x.WD)(a), (0, A.pX)(I.BV.COLLECTIBLES_SHOP_WITH_TAB(v.G2.ORBS));
+                            (0, x.WD)(a), (0, A.pX)(I.BV.COLLECTIBLES_SHOP_WITH_TAB(N.G2.ORBS));
                         },
                     }),
                     headerText: T.intl.string(S.default.zF0HnJ),
@@ -122,8 +121,7 @@ let U = (e) => {
                         variant: t ? "overlay-primary" : "secondary",
                         icon: d.tvc,
                         onClick: () => {
-                            (0, x.Jv)(a),
-                                (0, h.openUserSettings)(_.X.SUBSCRIPTIONS_PANEL, { section: N.nc_.SUBSCRIPTIONS });
+                            (0, x.Jv)(a), (0, _.openUserSettings)(h.X.SUBSCRIPTIONS_PANEL);
                         },
                     }),
                     headerText: T.intl.string(S.default.ISnOet),
@@ -133,8 +131,8 @@ let U = (e) => {
                 return null;
         }
     })(s, O);
-    if (null == L) return null;
-    let { displayTotalLifetimeRewards: w, displayProgressBar: B, actionButton: k, headerText: G, subheaderText: V } = L;
+    if (null == w) return null;
+    let { displayTotalLifetimeRewards: L, displayProgressBar: B, actionButton: k, headerText: G, subheaderText: V } = w;
     return (0, n.jsx)("div", {
         className: l()(P.Hc, t),
         children: (0, n.jsxs)(R.A, {
@@ -155,7 +153,7 @@ let U = (e) => {
                     className: P.FS,
                     children: [
                         (0, n.jsx)(d.NPJ, {
-                            theme: O ? N.NJ8.DARKER : void 0,
+                            theme: O ? v.NJ8.DARKER : void 0,
                             children: (e) =>
                                 (0, n.jsx)("div", {
                                     className: l()(e, P.aZ),
@@ -165,7 +163,7 @@ let U = (e) => {
                         (0, n.jsx)(d.DZT, { variant: "heading-xl/bold", className: P.R_, children: G }),
                         (0, n.jsx)(d.EYj, { variant: "text-md/medium", className: P.G3, children: V }),
                         B && (0, n.jsx)(C.A, { className: P.L$ }),
-                        w &&
+                        L &&
                             s.total_rewarded_from_program > 0 &&
                             (0, n.jsxs)("div", {
                                 className: P.fB,

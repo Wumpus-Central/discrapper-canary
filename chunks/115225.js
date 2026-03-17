@@ -1,34 +1,34 @@
-e.d(i, { default: () => S });
+e.d(i, { default: () => g });
 var a = e(627968),
-    n = e(64700),
-    s = e(158954),
-    l = e(397927),
+    l = e(64700),
+    n = e(158954),
+    s = e(397927),
     r = e(964486),
     d = e(780964),
     u = e(840065),
-    c = e(954571),
-    o = e(427262),
-    _ = e(677185),
+    o = e(954571),
+    _ = e(427262),
+    c = e(677185),
     C = e(88001),
     I = e(652215),
     E = e(519412),
     p = e(985018);
-let S = (t) => {
-    let { subscriptionId: i, invitedUser: e, subscriptionGroupMemberId: S, onClose: P, ...g } = t,
-        [N, T] = (0, n.useState)(!1),
-        [k, m] = (0, n.useState)(!1),
-        [A, U] = (0, n.useState)(!1);
+let g = (t) => {
+    let { subscriptionId: i, invitedUser: e, subscriptionGroupMemberId: g, onClose: P, ...k } = t,
+        [m, A] = (0, l.useState)(!1),
+        [N, S] = (0, l.useState)(!1),
+        [T, f] = (0, l.useState)(!1);
     (0, r.Ay)(() => {
-        c.default.track(I.HAw.PREMIUM_GROUP_CANCEL_INVITE_MODAL_VIEWED, { subscription_id: i, invited_user_id: e.id });
+        o.default.track(I.HAw.PREMIUM_GROUP_CANCEL_INVITE_MODAL_VIEWED, { subscription_id: i, invited_user_id: e.id });
     });
-    let f = async () => {
-        c.default.track(I.HAw.PREMIUM_GROUP_CANCEL_INVITE_CTA_CLICKED, { subscription_id: i, invited_user_id: e.id }),
-            U(!0);
-        let t = await (0, _.kE)(i, e.id, S);
-        U(!1), t.ok ? P() : t.body?.code === C.Hy.BILLING_SUBSCRIPTION_GROUP_INVITE_ALREADY_ACCEPTED ? T(!0) : m(!0);
+    let U = async () => {
+        o.default.track(I.HAw.PREMIUM_GROUP_CANCEL_INVITE_CTA_CLICKED, { subscription_id: i, invited_user_id: e.id }),
+            f(!0);
+        let t = await (0, c.kE)(i, e.id, g);
+        f(!1), t.ok ? P() : t.body?.code === C.Hy.BILLING_SUBSCRIPTION_GROUP_INVITE_ALREADY_ACCEPTED ? A(!0) : S(!0);
     };
-    return N
-        ? (0, a.jsx)(s.Modal, {
+    return m
+        ? (0, a.jsx)(n.Modal, {
               size: "md",
               title: p.intl.string(E.default.grjTat),
               subtitle: p.intl.string(E.default.VgTgGu),
@@ -37,25 +37,25 @@ let S = (t) => {
                       text: p.intl.string(E.default["+YO9kw"]),
                       variant: "secondary",
                       onClick: () => {
-                          (0, u.openUserSettings)(d.X.SUBSCRIPTIONS_PANEL, { section: I.nc_.SUBSCRIPTIONS }), P();
+                          (0, u.openUserSettings)(d.X.SUBSCRIPTIONS_PANEL), P();
                       },
                   },
               ],
               onClose: P,
-              ...g,
+              ...k,
           })
-        : (0, a.jsx)(s.Modal, {
+        : (0, a.jsx)(n.Modal, {
               size: "md",
               title: p.intl.string(E.default.U439m2),
               subtitle: p.intl.formatToPlainString(E.default["Sv6+Ox"], {
-                  memberName: (0, o.$3)(e),
+                  memberName: (0, _.$3)(e),
                   premiumGroupProductName: (0, C.DP)(),
               }),
               onClose: P,
               actions: [
-                  { text: p.intl.string(E.default["2blqtw"]), variant: "critical-primary", onClick: f, loading: A },
+                  { text: p.intl.string(E.default["2blqtw"]), variant: "critical-primary", onClick: U, loading: T },
               ],
-              ...g,
-              children: k && (0, a.jsx)(l.wx6, { type: "critical", children: p.intl.string(p.t["rTU7/z"]) }),
+              ...k,
+              children: N && (0, a.jsx)(s.wx6, { type: "critical", children: p.intl.string(p.t["rTU7/z"]) }),
           });
 };

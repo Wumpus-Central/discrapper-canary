@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => A });
+n.d(t, { A: () => I });
 var r = n(311907),
     i = n(73153),
     s = n(287809);
@@ -35,11 +35,14 @@ function m(e) {
     let { forSection: t } = e;
     null != t ? delete o[t] : null != a && delete o[a];
 }
-function E(e) {
+function E() {
+    (u = null), (c = []), (d = null);
+}
+function g(e) {
     let { forSection: t } = e;
     null != t ? delete l[t] : null != a && delete l[a];
 }
-class g extends r.Ay.Store {
+class A extends r.Ay.Store {
     static displayName = "UserSettingsModalStore";
     initialize() {
         this.waitFor(s.default);
@@ -63,12 +66,13 @@ class g extends r.Ay.Store {
         return d;
     }
 }
-let A = new g(i.h, {
+let I = new A(i.h, {
     USER_SETTINGS_MODAL_OPEN: _,
     USER_SETTINGS_MODAL_INIT: f,
     USER_SETTINGS_MODAL_CLOSE: p,
     LOGOUT: p,
     USER_SETTINGS_MODAL_SET_SECTION: h,
     USER_SETTINGS_MODAL_CLEAR_SUBSECTION: m,
-    USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: E,
+    USER_SETTINGS_MODAL_CLEAR_LOCATION: E,
+    USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: g,
 });

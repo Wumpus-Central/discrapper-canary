@@ -1,17 +1,17 @@
 n.d(t, { A: () => A });
 var i = n(627968),
-    r = n(64700),
-    a = n(780964),
+    a = n(64700),
+    r = n(780964),
     l = n(840065),
     s = n(64983),
     o = n(652215),
     d = n(985018),
     c = n(72692);
-class u extends r.PureComponent {
+class u extends a.PureComponent {
     render() {
         return (0, i.jsx)(s.A, {
             guild: this.props.guild,
-            onClick: () => (0, l.openUserSettings)(a.X.ACCOUNT_PANEL, { section: o.nc_.ACCOUNT }),
+            onClick: () => (0, l.openUserSettings)(r.X.ACCOUNT_PANEL),
             message: d.intl.format(d.t["oCd+at"], {}),
             cta: d.intl.string(d.t["8dCrV9"]),
             trackingSource: o.kZU.GUILD_MFA_WARNING,

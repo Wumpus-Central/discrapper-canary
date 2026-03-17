@@ -3,8 +3,8 @@ var a = s(627968),
     r = s(64700),
     i = s(158954),
     n = s(311907),
-    c = s(397927),
-    l = s(718213),
+    l = s(397927),
+    c = s(718213),
     _ = s(964486),
     d = s(780964),
     u = s(840065),
@@ -25,7 +25,7 @@ let g = (e) => {
         let { onInvite: t, onClose: s, subscriptionId: _, ...d } = e,
             [u, h] = r.useState([]),
             [I, T] = r.useState(""),
-            g = (0, l.A)(I, 400),
+            g = (0, c.A)(I, 400),
             f = (0, n.bG)([R.A], () => R.A.getNumAvailableInvites()),
             {
                 eligibleUsers: C,
@@ -62,7 +62,7 @@ let g = (e) => {
                     onClose: s,
                     input: (0, a.jsx)("div", {
                         className: b.c,
-                        children: (0, a.jsx)(c.ksK, {
+                        children: (0, a.jsx)(l.ksK, {
                             value: I,
                             onChange: T,
                             placeholder: 0 === u.length ? P.intl.string(S.default.wRS8vo) : "",
@@ -70,7 +70,7 @@ let g = (e) => {
                         }),
                     }),
                     actions: [],
-                    actionBarInput: (0, a.jsx)(c.Button, {
+                    actionBarInput: (0, a.jsx)(l.Button, {
                         variant: "primary",
                         disabled: 0 === u.length || x,
                         text: P.intl.string(S.default["5fZHp3"]),
@@ -131,7 +131,7 @@ let g = (e) => {
             }),
             subtitle: P.intl.format(S.default.olkQkj, {
                 onClick: () => {
-                    t(), (0, u.openUserSettings)(d.X.SUBSCRIPTIONS_PANEL, { section: p.nc_.SUBSCRIPTIONS });
+                    t(), (0, u.openUserSettings)(d.X.SUBSCRIPTIONS_PANEL);
                 },
             }),
             onClose: t,
@@ -146,13 +146,13 @@ let g = (e) => {
     },
     C = (e) => {
         let { subscription: t, isFromPurchaseFlow: s = !1, ...i } = e,
-            [n, c] = r.useState([]);
+            [n, l] = r.useState([]);
         (0, _.Ay)(() => {
             E.default.track(p.HAw.PREMIUM_GROUP_INVITE_FRIENDS_MODAL_VIEWED, {
                 source: s ? "purchase_flow" : "subscription_card",
             });
         });
-        let [l, d] = r.useState(1),
+        let [c, d] = r.useState(1),
             u = async (e) => {
                 let s = new Map(),
                     a = [];
@@ -163,7 +163,7 @@ let g = (e) => {
                         successful_user_ids: [],
                         failed_user_ids: a,
                     }),
-                        c(e.map((e) => ({ user: e, isSuccess: !1 }))),
+                        l(e.map((e) => ({ user: e, isSuccess: !1 }))),
                         d(2);
                     return;
                 }
@@ -172,15 +172,15 @@ let g = (e) => {
                     successful_user_ids: i,
                     failed_user_ids: n,
                 }),
-                    c([
+                    l([
                         ...i.map((e) => ({ user: s.get(e), isSuccess: !0 })),
                         ...n.map((e) => ({ user: s.get(e), isSuccess: !1 })),
                     ]),
                     d(2);
             };
-        return 1 === l
+        return 1 === c
             ? (0, a.jsx)(g, { ...i, onInvite: u, subscriptionId: t.id })
-            : 2 === l
+            : 2 === c
               ? (0, a.jsx)(f, { ...i, inviteUsersResult: n })
               : void 0;
     };

@@ -1,4 +1,4 @@
-n.d(t, { A: () => eM, w: () => eU });
+n.d(t, { A: () => eM, w: () => eD });
 var i = n(627968),
     l = n(64700),
     r = n(989349),
@@ -26,8 +26,8 @@ var i = n(627968),
     x = n(587895),
     f = n(315982),
     P = n(235986),
-    U = n(420216),
-    D = n(984870),
+    D = n(420216),
+    U = n(984870),
     M = n(626262),
     L = n(813803),
     j = n(487329),
@@ -105,7 +105,7 @@ let ey = (e) => {
                 (0, i.jsx)(u.PMB, {
                     noticeType: t,
                     onClick: () => {
-                        eU();
+                        eD();
                     },
                 }),
                 eC.intl.string(eC.t.o3zuYz),
@@ -146,7 +146,7 @@ function eP(e) {
                   (c = !0),
                   (n = (0, i.jsx)(u.zr9, {
                       onClick: () => {
-                          (0, er.openUserSettings)(el.X.VOICE_AND_VIDEO_PANEL, { section: em.nc_.VOICE });
+                          (0, er.openUserSettings)(el.X.VOICE_AND_VIDEO_PANEL);
                       },
                       children: eC.intl.string(eC.t.I6YlB4),
                   })))
@@ -162,7 +162,7 @@ function eP(e) {
                 (0, i.jsx)(u.PMB, {
                     noticeType: l,
                     onClick: () => {
-                        eU(), (0, ea.h)();
+                        eD(), (0, ea.h)();
                     },
                 }),
                 t,
@@ -172,10 +172,10 @@ function eP(e) {
         })
     );
 }
-function eU(e) {
+function eD(e) {
     I.A.dismiss(null != e ? { untilAtLeast: s()(e) } : void 0);
 }
-let eD = l.memo(function () {
+let eU = l.memo(function () {
     let e = (0, d.bG)([e_.default], () => e_.default.getCurrentUser()),
         t = (0, d.bG)([eu.A], () => eu.A.getGuildId()),
         r = (0, d.bG)([eA.Ay], () => eA.Ay.getNotice()),
@@ -217,8 +217,8 @@ let eD = l.memo(function () {
         j = eA.pe[r.type];
     if (null != I) return (0, i.jsx)(M.$, { dismissibleContent: I, noticeType: r.type });
     if (null != g) return (0, i.jsx)(L._, { dismissibleContent: g, noticeType: r.type });
-    if (null != O) return (0, i.jsx)(D.T, { dismissibleContent: O });
-    if (null != j) return (0, i.jsx)(U.r, { dismissibleContent: j, noticeType: r.type });
+    if (null != O) return (0, i.jsx)(U.T, { dismissibleContent: O });
+    if (null != j) return (0, i.jsx)(D.r, { dismissibleContent: j, noticeType: r.type });
     let K = r.metadata?.premiumType;
     switch (r.type) {
         case em.kqX.PTT_NO_KEYBIND_WARNING:
@@ -231,13 +231,13 @@ let eD = l.memo(function () {
             return (0, i.jsx)(en.A, {});
         case em.kqX.GUILD_RAID_NOTIFICATION:
             let { dismissUntil: ea } = r.metadata;
-            return (0, i.jsx)(k.A, { onDismiss: () => eU(ea) });
+            return (0, i.jsx)(k.A, { onDismiss: () => eD(ea) });
         case em.kqX.WIN32_DEPRECATED_MESSAGE:
             let { dismissUntil: ec } = r.metadata;
             return (0, i.jsxs)(u.$Td, {
                 color: u.Hv$.WARNING,
                 children: [
-                    (0, i.jsx)(u.PMB, { onClick: () => eU(ec), noticeType: r.type }),
+                    (0, i.jsx)(u.PMB, { onClick: () => eD(ec), noticeType: r.type }),
                     eC.intl.format(eC.t["08KQ1P"], { helpCenterLink: eN.A.getArticleURL(em.MVz.WIN32_DEPRECATE) }),
                 ],
             });
@@ -246,7 +246,7 @@ let eD = l.memo(function () {
             return (0, i.jsxs)(u.$Td, {
                 color: u.Hv$.WARNING,
                 children: [
-                    (0, i.jsx)(u.PMB, { onClick: () => eU(eR), noticeType: r.type }),
+                    (0, i.jsx)(u.PMB, { onClick: () => eD(eR), noticeType: r.type }),
                     eC.intl.format(eC.t["8Je+dX"], { helpCenterLink: eN.A.getArticleURL(em.MVz.WIN7_8_DEPRECATE) }),
                 ],
             });
@@ -255,7 +255,7 @@ let eD = l.memo(function () {
             return (0, i.jsxs)(u.$Td, {
                 color: u.Hv$.WARNING,
                 children: [
-                    (0, i.jsx)(u.PMB, { onClick: () => eU(eg), noticeType: r.type }),
+                    (0, i.jsx)(u.PMB, { onClick: () => eD(eg), noticeType: r.type }),
                     eC.intl.string(eC.t["9DJgOg"]),
                 ],
             });
@@ -264,7 +264,7 @@ let eD = l.memo(function () {
             return (0, i.jsxs)(u.$Td, {
                 color: u.Hv$.WARNING,
                 children: [
-                    (0, i.jsx)(u.PMB, { onClick: () => eU(ey), noticeType: r.type }),
+                    (0, i.jsx)(u.PMB, { onClick: () => eD(ey), noticeType: r.type }),
                     eC.intl.format(eC.t.q8VPLo, { helpCenterLink: eN.A.getArticleURL(em.MVz.MACOS_19_DEPRECATE) }),
                 ],
             });
@@ -273,7 +273,7 @@ let eD = l.memo(function () {
             return (0, i.jsxs)(u.$Td, {
                 color: u.Hv$.WARNING,
                 children: [
-                    (0, i.jsx)(u.PMB, { onClick: () => eU(ef), noticeType: r.type }),
+                    (0, i.jsx)(u.PMB, { onClick: () => eD(ef), noticeType: r.type }),
                     eC.intl.format(ep.isPlatformEmbedded ? eC.t.J232TI : eC.t.vceuiL, {
                         helpCenterLink: eN.A.getArticleURL(em.MVz.END_TO_END_ENCRYPTION),
                     }),
@@ -283,7 +283,7 @@ let eD = l.memo(function () {
             return (0, i.jsxs)(u.$Td, {
                 color: u.Hv$.WARNING,
                 children: [
-                    (0, i.jsx)(u.PMB, { onClick: () => eU(), noticeType: r.type }),
+                    (0, i.jsx)(u.PMB, { onClick: () => eD(), noticeType: r.type }),
                     eC.intl.string(eC.t.iW0fcQ),
                     (0, i.jsx)(u.eCN, {
                         href: eN.A.getArticleURL(em.MVz.WINDOWS_MEDIA_PACK),
@@ -297,7 +297,7 @@ let eD = l.memo(function () {
             return (0, i.jsxs)(u.$Td, {
                 color: u.Hv$.DEFAULT,
                 children: [
-                    (0, i.jsx)(u.PMB, { onClick: () => eU(), noticeType: r.type }),
+                    (0, i.jsx)(u.PMB, { onClick: () => eD(), noticeType: r.type }),
                     r.message,
                     null != r.buttonText
                         ? (0, i.jsx)(u.Z_L, { onClick: r.callback, noticeType: r.type, children: r.buttonText })
@@ -308,7 +308,7 @@ let eD = l.memo(function () {
             return (0, i.jsxs)(u.$Td, {
                 color: u.Hv$.DANGER,
                 children: [
-                    (0, i.jsx)(u.PMB, { onClick: () => eU(), noticeType: r.type }),
+                    (0, i.jsx)(u.PMB, { onClick: () => eD(), noticeType: r.type }),
                     r.message,
                     null != r.buttonText
                         ? (0, i.jsx)(u.Z_L, { onClick: r.callback, noticeType: r.type, children: r.buttonText })
@@ -321,7 +321,7 @@ let eD = l.memo(function () {
                 children: [
                     (0, i.jsx)(u.PMB, {
                         onClick: () => {
-                            N.A.clearRemoteDisconnectVoiceChannelId(), eU();
+                            N.A.clearRemoteDisconnectVoiceChannelId(), eD();
                         },
                         noticeType: r.type,
                     }),
@@ -342,7 +342,7 @@ let eD = l.memo(function () {
                 children: [
                     (0, i.jsx)(u.PMB, {
                         onClick: () => {
-                            N.A.clearLastSessionVoiceChannelId(), eU();
+                            N.A.clearLastSessionVoiceChannelId(), eD();
                         },
                         noticeType: r.type,
                     }),
@@ -358,15 +358,15 @@ let eD = l.memo(function () {
                 ],
             });
         case em.kqX.SPOTIFY_AUTO_PAUSED:
-            let eD = C.A.get(em.fg2.SPOTIFY);
+            let eU = C.A.get(em.fg2.SPOTIFY);
             return (0, i.jsxs)(u.$Td, {
                 color: u.Hv$.DANGER,
                 children: [
-                    (0, i.jsx)(u.PMB, { onClick: () => eU(), noticeType: r.type }),
-                    (0, i.jsx)("img", { alt: "", className: eO.tV, src: eD.icon.whiteSVG }),
+                    (0, i.jsx)(u.PMB, { onClick: () => eD(), noticeType: r.type }),
+                    (0, i.jsx)("img", { alt: "", className: eO.tV, src: eU.icon.whiteSVG }),
                     eC.intl.string(eC.t.D8Cp76),
                     (0, i.jsx)(u.Z_L, {
-                        onClick: () => (0, er.openUserSettings)(el.X.VOICE_AND_VIDEO_PANEL, { section: em.nc_.VOICE }),
+                        onClick: () => (0, er.openUserSettings)(el.X.VOICE_AND_VIDEO_PANEL),
                         noticeType: r.type,
                         children: eC.intl.string(eC.t.NiTd0e),
                     }),
@@ -438,7 +438,7 @@ let eD = l.memo(function () {
                         (0, i.jsx)(u.PMB, {
                             noticeType: r.type,
                             onClick: () => {
-                                E.A.setEnableHardwareMuteNotice(!1), eU();
+                                E.A.setEnableHardwareMuteNotice(!1), eD();
                             },
                         }),
                         (0, i.jsx)(u.eCN, {
@@ -459,7 +459,7 @@ let eD = l.memo(function () {
                         (0, i.jsx)(u.PMB, {
                             noticeType: r.type,
                             onClick: () => {
-                                E.A.setEnableHardwareMuteNotice(!1), eU();
+                                E.A.setEnableHardwareMuteNotice(!1), eD();
                             },
                         }),
                     ],
@@ -469,7 +469,7 @@ let eD = l.memo(function () {
             return (0, i.jsxs)(u.$Td, {
                 color: u.Hv$.STREAMER_MODE,
                 children: [
-                    (0, i.jsx)(u.PMB, { onClick: () => eU(), noticeType: em.kqX.STREAMER_MODE }),
+                    (0, i.jsx)(u.PMB, { onClick: () => eD(), noticeType: em.kqX.STREAMER_MODE }),
                     eC.intl.string(eC.t.iEgBXp),
                     (0, i.jsx)(u.Z_L, {
                         onClick: () => R.A.setEnabled(!1),
@@ -526,14 +526,14 @@ let eD = l.memo(function () {
                 color: u.Hv$.PREMIUM_TIER_1,
                 children: [
                     (0, i.jsx)(u.PMB, {
-                        onClick: () => eU(),
+                        onClick: () => eD(),
                         noticeType: em.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL,
                     }),
                     (0, i.jsx)(u.tvc, { size: "md", color: "currentColor", className: eO.PC }),
                     eC.intl.format(eC.t.LquIKC, { applicationName: l.name, skuName: n.name }),
                     (0, i.jsx)(u.zr9, {
                         children: (0, i.jsx)(a.N_, {
-                            onClick: () => eU(),
+                            onClick: () => eD(),
                             to: {
                                 pathname: em.BVt.APPLICATION_STORE_LISTING_SKU(n.id),
                                 state: { scrollRestoration: !1 },
@@ -585,7 +585,7 @@ let eD = l.memo(function () {
             return (0, i.jsxs)(u.$Td, {
                 color: u.Hv$.WARNING,
                 children: [
-                    (0, i.jsx)(u.PMB, { onClick: () => eU(), noticeType: em.kqX.VIDEO_UNSUPPORTED_BROWSER }),
+                    (0, i.jsx)(u.PMB, { onClick: () => eD(), noticeType: em.kqX.VIDEO_UNSUPPORTED_BROWSER }),
                     eC.intl.string(eC.t.wVjKGi),
                     (0, i.jsx)(u.Z_L, {
                         noticeType: em.kqX.VIDEO_UNSUPPORTED_BROWSER,
@@ -607,7 +607,7 @@ let eD = l.memo(function () {
             return (0, i.jsxs)(u.$Td, {
                 color: u.Hv$.DANGER,
                 children: [
-                    (0, i.jsx)(u.PMB, { onClick: () => eU(), noticeType: em.kqX.DISPATCH_ERROR }),
+                    (0, i.jsx)(u.PMB, { onClick: () => eD(), noticeType: em.kqX.DISPATCH_ERROR }),
                     ek?.displayMessage,
                     (0, i.jsx)(u.Z_L, {
                         noticeType: em.kqX.DISPATCH_ERROR,
@@ -626,7 +626,7 @@ let eD = l.memo(function () {
             return (0, i.jsxs)(u.$Td, {
                 color: u.Hv$.DEFAULT,
                 children: [
-                    (0, i.jsx)(u.PMB, { onClick: () => eU(), noticeType: em.kqX.DISPATCH_INSTALL_SCRIPT_PROGRESS }),
+                    (0, i.jsx)(u.PMB, { onClick: () => eD(), noticeType: em.kqX.DISPATCH_INSTALL_SCRIPT_PROGRESS }),
                     (0, i.jsxs)(P.A, {
                         justify: P.A.Justify.CENTER,
                         children: [
@@ -687,7 +687,7 @@ let eD = l.memo(function () {
                     (0, i.jsx)(u.PMB, {
                         noticeType: em.kqX.PREMIUM_UNCANCEL,
                         onClick: () => {
-                            eU(r.metadata?.premiumSubscription?.currentPeriodEnd);
+                            eD(r.metadata?.premiumSubscription?.currentPeriodEnd);
                         },
                     }),
                     (0, i.jsx)(u.tvc, { size: "md", color: "currentColor", className: eO.PC }),
@@ -699,7 +699,7 @@ let eD = l.memo(function () {
                     (0, i.jsx)(u.Z_L, {
                         noticeType: em.kqX.PREMIUM_UNCANCEL,
                         onClick: () => {
-                            eU(r.metadata?.premiumSubscription?.currentPeriodEnd),
+                            eD(r.metadata?.premiumSubscription?.currentPeriodEnd),
                                 (0, u.mMO)(async () => {
                                     let { default: e } = await Promise.all([
                                         n.e("41353"),
@@ -734,15 +734,14 @@ let eD = l.memo(function () {
                     (0, i.jsx)(u.PMB, {
                         noticeType: r.type,
                         onClick: () => {
-                            eU(eF);
+                            eD(eF);
                         },
                     }),
                     eC.intl.format(eC.t.zxU0Kp, { daysPastDue: eH }),
                     (0, i.jsx)(u.Z_L, {
                         noticeType: em.kqX.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT,
                         onClick: () => {
-                            eU(eF),
-                                (0, er.openUserSettings)(el.X.SUBSCRIPTIONS_PANEL, { section: em.nc_.SUBSCRIPTIONS });
+                            eD(eF), (0, er.openUserSettings)(el.X.SUBSCRIPTIONS_PANEL);
                         },
                         children: eC.intl.string(eC.t.q8rxeS),
                     }),
@@ -755,15 +754,15 @@ let eD = l.memo(function () {
                     (0, i.jsx)(u.PMB, {
                         noticeType: em.kqX.PREMIUM_PAST_DUE_INVALID_PAYMENT,
                         onClick: () => {
-                            eU(r.metadata?.premiumSubscription?.currentPeriodEnd);
+                            eD(r.metadata?.premiumSubscription?.currentPeriodEnd);
                         },
                     }),
                     eC.intl.string(eC.t.LlZaoX),
                     (0, i.jsx)(u.Z_L, {
                         noticeType: em.kqX.PREMIUM_PAST_DUE_INVALID_PAYMENT,
                         onClick: () => {
-                            eU(r.metadata?.premiumSubscription?.currentPeriodEnd),
-                                (0, er.openUserSettings)(el.X.SUBSCRIPTIONS_PANEL, { section: em.nc_.SUBSCRIPTIONS });
+                            eD(r.metadata?.premiumSubscription?.currentPeriodEnd),
+                                (0, er.openUserSettings)(el.X.SUBSCRIPTIONS_PANEL);
                         },
                         children: eC.intl.string(eC.t["Zpd+Yq"]),
                     }),
@@ -776,15 +775,15 @@ let eD = l.memo(function () {
                     (0, i.jsx)(u.PMB, {
                         noticeType: em.kqX.PREMIUM_PAST_DUE_MISSING_PAYMENT,
                         onClick: () => {
-                            eU(r.metadata?.premiumSubscription?.currentPeriodEnd);
+                            eD(r.metadata?.premiumSubscription?.currentPeriodEnd);
                         },
                     }),
                     eC.intl.string(eC.t["30YfCr"]),
                     (0, i.jsx)(u.Z_L, {
                         noticeType: em.kqX.PREMIUM_PAST_DUE_MISSING_PAYMENT,
                         onClick: () => {
-                            eU(r.metadata?.premiumSubscription?.currentPeriodEnd),
-                                (0, er.openUserSettings)(el.X.SUBSCRIPTIONS_PANEL, { section: em.nc_.SUBSCRIPTIONS });
+                            eD(r.metadata?.premiumSubscription?.currentPeriodEnd),
+                                (0, er.openUserSettings)(el.X.SUBSCRIPTIONS_PANEL);
                         },
                         children: eC.intl.string(eC.t.U5pKWA),
                     }),
@@ -797,7 +796,7 @@ let eD = l.memo(function () {
                     (0, i.jsx)(u.PMB, {
                         noticeType: em.kqX.PREMIUM_MISSING_PAYMENT,
                         onClick: () => {
-                            eU(r.metadata?.premiumSubscription?.currentPeriodEnd);
+                            eD(r.metadata?.premiumSubscription?.currentPeriodEnd);
                         },
                     }),
                     K === eh.PremiumTypes.TIER_1
@@ -808,8 +807,8 @@ let eD = l.memo(function () {
                     (0, i.jsx)(u.Z_L, {
                         noticeType: em.kqX.PREMIUM_MISSING_PAYMENT,
                         onClick: () => {
-                            eU(r.metadata?.premiumSubscription?.currentPeriodEnd),
-                                (0, er.openUserSettings)(el.X.SUBSCRIPTIONS_PANEL, { section: em.nc_.SUBSCRIPTIONS });
+                            eD(r.metadata?.premiumSubscription?.currentPeriodEnd),
+                                (0, er.openUserSettings)(el.X.SUBSCRIPTIONS_PANEL);
                         },
                         children:
                             K === eh.PremiumTypes.TIER_1
@@ -824,7 +823,7 @@ let eD = l.memo(function () {
             return (0, i.jsx)(V.y, {
                 buttonText: r.buttonText ?? eC.intl.string(eC.t["/g10LC"]),
                 onGoBack: r.callback,
-                onDismiss: () => eU(),
+                onDismiss: () => eD(),
                 showCloseButton: !0,
             });
         case em.kqX.AUTOMOD_QUARANTINED_USER_PROFILE:
@@ -856,7 +855,7 @@ let eD = l.memo(function () {
                     (0, i.jsx)(u.PMB, {
                         noticeType: em.kqX.AUTO_MODERATION_MENTION_RAID_DETECTION,
                         onClick: () => {
-                            null != t && (0, G.wu)(t), eU(eV);
+                            null != t && (0, G.wu)(t), eD(eV);
                         },
                     }),
                     eC.intl.string(eC.t.B8ruyY),
@@ -864,7 +863,7 @@ let eD = l.memo(function () {
                         onClick: () => {
                             null != t &&
                                 (0, G.W5)(t, e$, () => {
-                                    eU(eV), (0, G.wu)(t);
+                                    eD(eV), (0, G.wu)(t);
                                 });
                         },
                         children: eC.intl.string(eC.t.oX14El),
@@ -896,14 +895,14 @@ let eD = l.memo(function () {
                 children: [
                     (0, i.jsx)(u.PMB, {
                         onClick: () => {
-                            eU(r.metadata?.dismissUntil);
+                            eD(r.metadata?.dismissUntil);
                         },
                         noticeType: em.kqX.BLOCK_USER_FEEDBACK_NAGBAR,
                     }),
                     eC.intl.string(eC.t["0klLS7"]),
                     (0, i.jsx)(u.Z_L, {
                         onClick: () => {
-                            (0, et.$)(), eU(r.metadata?.dismissUntil);
+                            (0, et.$)(), eD(r.metadata?.dismissUntil);
                         },
                         noticeType: em.kqX.BLOCK_USER_FEEDBACK_NAGBAR,
                         children: eC.intl.string(eC.t.e4y2VM),
@@ -920,5 +919,5 @@ let eD = l.memo(function () {
 });
 function eM() {
     let { analyticsLocations: e } = (0, y.Ay)(O.A.NOTICE);
-    return (0, i.jsx)(y.f5, { value: e, children: (0, i.jsx)(eD, {}) });
+    return (0, i.jsx)(y.f5, { value: e, children: (0, i.jsx)(eU, {}) });
 }
