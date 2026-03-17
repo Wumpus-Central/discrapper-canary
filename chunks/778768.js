@@ -3,16 +3,16 @@ n.d(t, { w: () => H });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
-    a = n.n(l),
-    r = n(284009),
-    o = n.n(r),
+    r = n.n(l),
+    a = n(284009),
+    o = n.n(a),
     c = n(110259),
     d = n(311907),
     u = n(435371),
     h = n(397927),
     A = n(846293),
-    p = n(774300),
-    m = n(566903),
+    m = n(774300),
+    p = n(566903),
     g = n(714114),
     _ = n(864436),
     f = n(835072),
@@ -21,8 +21,8 @@ var i = n(627968),
     E = n(139286),
     I = n(47167),
     N = n(713517),
-    S = n(854627),
-    b = n(10862),
+    b = n(854627),
+    S = n(10862),
     T = n(164891),
     v = n(135635),
     y = n(696451),
@@ -40,11 +40,11 @@ var i = n(627968),
     V = n(165180);
 let B = "VoiceInviteSuggestionsPopover";
 function H(e) {
-    let { channel: t, onHoverOrFocus: l, setPopoutRef: r, closePopout: d } = e,
+    let { channel: t, onHoverOrFocus: l, setPopoutRef: a, closePopout: d } = e,
         u = s.useRef(null),
         A = (0, N.A)(u),
-        p = (0, G.k)({ channel: t }),
-        { enabled: m } = T.A.useExperiment({ guildId: t.guild_id, location: "VoiceInviteSuggestionsPopover" }),
+        m = (0, G.kt)({ channel: t }),
+        { enabled: p } = T.A.useExperiment({ guildId: t.guild_id, location: "VoiceInviteSuggestionsPopover" }),
         { analyticsLocations: g } = (0, C.Ay)(x.A.VOICE_INVITE_SUGGESTIONS_POPOVER);
     (0, E.A)({
         name: c.ImpressionNames.VOICE_INVITE_SUGGESTIONS_POPOVER,
@@ -52,8 +52,8 @@ function H(e) {
         properties: { voice_channel_id: t.id, voice_guild_id: t.guild_id, location_stack: g },
     }),
         s.useEffect(() => {
-            r?.(u.current);
-        }, [r]),
+            a?.(u.current);
+        }, [a]),
         s.useEffect(() => {
             l?.(A.isHoveringOrFocusing);
         }, [l, A]);
@@ -71,11 +71,11 @@ function H(e) {
     return (0, i.jsx)("div", {
         ref: u,
         "aria-label": P.intl.string(P.t.o53CL2),
-        className: a()(k.popover, w.oO),
+        className: r()(k.popover, w.oO),
         children: (0, i.jsxs)("div", {
             className: w.vW,
             children: [
-                m &&
+                p &&
                     (0, i.jsx)(h.Text, {
                         variant: "text-sm/medium",
                         color: "text-muted",
@@ -85,11 +85,11 @@ function H(e) {
                 (0, i.jsxs)("ul", {
                     className: w.p_,
                     children: [
-                        p.map((e) => (0, i.jsx)(F, { channel: t, user: e, ringingEnabled: m }, e.id)),
+                        m.map((e) => (0, i.jsx)(F, { channel: t, user: e, ringingEnabled: p }, e.id)),
                         (0, i.jsxs)(h.DUT, {
                             tag: "li",
                             onClick: _,
-                            className: a()(w.nM, w.vk),
+                            className: r()(w.nM, w.vk),
                             children: [
                                 (0, i.jsx)("div", {
                                     className: w.R4,
@@ -111,9 +111,9 @@ function H(e) {
 }
 function F(e) {
     let { channel: t, user: n, ringingEnabled: l } = e,
-        r = t.guild_id,
+        a = t.guild_id,
         o = s.useRef(null),
-        c = (0, d.bG)([y.Ay], () => y.Ay.getMember(r, n.id), [r, n.id]),
+        c = (0, d.bG)([y.Ay], () => y.Ay.getMember(a, n.id), [a, n.id]),
         { isHoveringOrFocusing: x } = (0, N.A)(o),
         [C, E] = s.useState(null),
         {
@@ -125,7 +125,7 @@ function F(e) {
             onClick: F,
         } = (0, v.A)({ user: n, channel: t, location: B }),
         { showActivityStatus: K } = D.o.useExperiment(
-            { guildId: r, location: "VoiceInviteSuggestionsPopover.InviteRow" },
+            { guildId: a, location: "VoiceInviteSuggestionsPopover.InviteRow" },
             { autoTrackExposure: !1 },
         ),
         {
@@ -135,19 +135,19 @@ function F(e) {
         } = (0, d.cf)(
             [L.A],
             () => ({
-                status: L.A.getStatus(n.id, r),
+                status: L.A.getStatus(n.id, a),
                 isMobileOnline: L.A.isMobileOnline(n.id),
-                activities: L.A.getActivities(n.id, r),
+                activities: L.A.getActivities(n.id, a),
             }),
-            [n.id, r],
+            [n.id, a],
         ),
         { activityStatusText: q, activityStatusIcon: X } = s.useMemo(() => {
             if (!K) return { activityStatusText: {}, activityStatusIcon: void 0 };
             let e = z.find((e) => e.type !== U.$pd.CUSTOM_STATUS && e.type !== U.$pd.HANG_STATUS);
-            return { activityStatusText: (0, m.A)(e, !1), activityStatusIcon: null == e ? void 0 : (0, f.f)(e) };
+            return { activityStatusText: (0, p.A)(e, !1), activityStatusIcon: null == e ? void 0 : (0, f.f)(e) };
         }, [K, z]),
-        { voiceChannel: J } = (0, g.A)({ userId: n.id }),
-        Q = (0, I.Ay)(J),
+        { voiceChannel: Q } = (0, g.A)({ userId: n.id }),
+        J = (0, I.Ay)(Q),
         $ = (0, h.S31)(h.clD.ONLINE),
         Z = "success" === C || "sending" === C,
         ee = s.useCallback(
@@ -175,9 +175,9 @@ function F(e) {
             let i = await e();
             null == i
                 ? E(null)
-                : p.A.enqueue(
+                : m.A.enqueue(
                       {
-                          type: p.F.USER,
+                          type: m.F.USER,
                           user: n,
                           inviteKey: i,
                           location: B,
@@ -192,20 +192,20 @@ function F(e) {
             avatarDecorationSrc: en,
             avatarSrc: ei,
             eventHandlers: es,
-        } = (0, S.A)({ userId: n.id, size: h._3J.SIZE_24, animateOnHover: !x, guildId: r });
+        } = (0, b.A)({ userId: n.id, size: h._3J.SIZE_24, animateOnHover: !x, guildId: a });
     if (null == c) return null;
     let el = M.Ay.getName(n),
-        ea = P.intl.string(P.t.jYnGPG),
-        er = W !== h.clD.OFFLINE ? W : void 0,
+        er = P.intl.string(P.t.jYnGPG),
+        ea = W !== h.clD.OFFLINE ? W : void 0,
         eo = K && null != q.text,
-        ec = K && null != J && null != Q;
+        ec = K && null != Q && null != J;
     return (0, i.jsxs)(h.DUT, {
         innerRef: o,
         tag: "li",
-        className: a()(w.nM, { [w.vk]: !Z }),
+        className: r()(w.nM, { [w.vk]: !Z }),
         "aria-disabled": Z,
         onClick: et,
-        "aria-label": ea,
+        "aria-label": er,
         children: [
             (0, i.jsx)(h.euF, {
                 className: w.my,
@@ -213,7 +213,7 @@ function F(e) {
                 size: h._3J.SIZE_24,
                 src: ei,
                 avatarDecoration: en,
-                status: K ? er : void 0,
+                status: K ? ea : void 0,
                 isMobile: K ? Y : void 0,
                 ...es,
             }),
@@ -226,7 +226,7 @@ function F(e) {
                             className: w.J2,
                             children: [
                                 ec
-                                    ? (0, i.jsx)(b.A, { size: "custom", color: $, channel: J, className: w.RI })
+                                    ? (0, i.jsx)(S.A, { size: "custom", color: $, channel: Q, className: w.RI })
                                     : null != X
                                       ? (0, i.jsx)(_.A, { icon: X, className: w.RI })
                                       : null,
@@ -234,7 +234,7 @@ function F(e) {
                                     variant: "text-xs/medium",
                                     color: "text-status-online",
                                     lineClamp: 1,
-                                    children: ec ? Q : q.text,
+                                    children: ec ? J : q.text,
                                 }),
                             ],
                         }),
@@ -261,7 +261,7 @@ function F(e) {
                 (0, i.jsx)(u.m_, {
                     text: G,
                     children: (0, i.jsx)(h.DUT, {
-                        className: a()(w.D9, V.button, V.secondary, { [w.r9]: k }),
+                        className: r()(w.D9, V.button, V.secondary, { [w.r9]: k }),
                         onClick: ee,
                         "aria-disabled": k,
                         children: (0, i.jsx)(T, { size: "xxs", color: j, className: w.Kk }),

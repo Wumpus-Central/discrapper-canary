@@ -63,8 +63,8 @@ let k = s.memo((e) => {
         ),
         F = (0, h.A)(null != H ? [H.applicationId] : []),
         K = (0, N.Ay)(x, l.guild_id)[0],
-        Y = (0, u.YY)(K?.application_id).data ?? void 0,
-        [W, z] = (0, a.yK)(
+        W = (0, u.YY)(K?.application_id).data ?? void 0,
+        [Y, z] = (0, a.yK)(
             [T.A],
             () => [T.A.getStreamForUser(x, l.getGuildId()), T.A.getActiveStreamForUser(x, l.getGuildId())],
             [l, x],
@@ -100,12 +100,12 @@ let k = s.memo((e) => {
             ringing: B,
             priority: w,
             embeddedApplication: F[0],
-            isStreaming: null != W && W.channelId === l.id,
+            isStreaming: null != Y && Y.channelId === l.id,
             isWatching: null != z && z.state !== U.XYD.ENDED,
             isGuest: V,
             isSelf: C,
             requestToStreamActivity: ei ? K : void 0,
-            application: es && K?.session_id != null ? Y : void 0,
+            application: es && K?.session_id != null ? W : void 0,
             showHangStatus: $ && J && (C || null != ee),
             hangStatusActivity: C ? Z : ee,
         }),
@@ -133,7 +133,7 @@ let V = [],
             [y, O] = s.useState(!1),
             L = s.useRef(null),
             M = (0, b.$n)(l.id, c ?? V),
-            { shouldShow: D, dismiss: P } = (0, C.Z)(l, { collapsed: d }),
+            { shouldShow: D, dismiss: P } = (0, C.Z0)(l, { collapsed: d }),
             B = s.useRef(
                 new o.J_(50, () => {
                     T(L.current), (L.current = null);
@@ -156,7 +156,7 @@ let V = [],
                 },
                 [t],
             ),
-            Y = (0, a.yK)([R.A], () => {
+            W = (0, a.yK)([R.A], () => {
                 if (d) return [];
                 let e = new Set();
                 return (
@@ -169,8 +169,8 @@ let V = [],
                     Array.from(e)
                 );
             });
-        (0, h.A)(Y);
-        let W = (() => {
+        (0, h.A)(W);
+        let Y = (() => {
             if (null == M || 0 === M.length) return null;
             let e = d && M.length > u + 1 ? M.slice(0, u) : M,
                 t = A.A.getGuildRingingUsers(l.id),
@@ -210,11 +210,11 @@ let V = [],
                 s
             );
         })();
-        return null == W && null == E
+        return null == Y && null == E
             ? null
             : (0, i.jsxs)(S.Wr, {
                   className: r()(f, w.p_, { [w.yZ]: d, [w.lY]: _, [w.fT]: I }),
                   collapsed: d,
-                  children: [W, E],
+                  children: [Y, E],
               });
     };
