@@ -4268,6 +4268,7 @@ var na = (function (e) {
             (e.EXPERIMENT_INSTALLATION_EXPOSURE_SUPPRESSED = "experiment_installation_exposure_suppressed"),
             (e.EXPERIMENT_GUILD_EVALUATION_EXPOSED = "experiment_guild_evaluation_exposed"),
             (e.EXPERIMENT_GUILD_EXPOSURE_SUPPRESSED = "experiment_guild_exposure_suppressed"),
+            (e.EXPERIMENT_APEX_DEBUGGING_EVENT = "experiment_apex_debugging_event"),
             (e.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED = "guild_insights_settings_cta_clicked"),
             (e.GUILD_SETTINGS_DISCOVERY_VIEWED = "guild_settings_discovery_viewed"),
             (e.GUILD_SETTINGS_DISCOVERY_UPDATED = "guild_settings_discovery_updated"),
