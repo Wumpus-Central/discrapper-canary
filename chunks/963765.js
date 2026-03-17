@@ -30,7 +30,7 @@ function k(e) {
         [T, H] = r.useState(!1),
         R = (0, o.bG)([f.A], () => f.A.getGuild(t), [t]),
         U = (0, g.R)(t),
-        B = (0, h.Vf)(R),
+        B = (0, h.V)(R),
         O = r.useMemo(
             () =>
                 (function (e) {
