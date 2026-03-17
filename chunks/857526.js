@@ -407,6 +407,56 @@ let { Themes: r } = n(680049).zv,
                     },
                 },
             },
+            SHADOW_MOBILE_CHATINPUT: {
+                [r.DARK]: {
+                    boxShadow: "0 -1px 4px 0 hsl(240 7.1% 11% / 0.5)",
+                    filter: "drop-shadow(0 -1px 4px hsl(240 7.1% 11% / 0.5))",
+                    nativeStyles: {
+                        shadowOffset: { width: 0, height: -1 },
+                        shadowColor: "#1a1a1e",
+                        shadowOpacity: 0.5,
+                        shadowRadius: 4,
+                        elevation: 4,
+                        shadowColorAndroid: "#1a1a1e",
+                    },
+                },
+                [r.LIGHT]: {
+                    boxShadow: "0 -1px 4px 0 hsl(240 7.1% 11% / 0.5)",
+                    filter: "drop-shadow(0 -1px 4px hsl(240 7.1% 11% / 0.5))",
+                    nativeStyles: {
+                        shadowOffset: { width: 0, height: -1 },
+                        shadowColor: "#1a1a1e",
+                        shadowOpacity: 0.5,
+                        shadowRadius: 4,
+                        elevation: 4,
+                        shadowColorAndroid: "#1a1a1e",
+                    },
+                },
+                [r.MIDNIGHT]: {
+                    boxShadow: "0 -1px 4px 0 hsl(240 7.1% 11% / 0.5)",
+                    filter: "drop-shadow(0 -1px 4px hsl(240 7.1% 11% / 0.5))",
+                    nativeStyles: {
+                        shadowOffset: { width: 0, height: -1 },
+                        shadowColor: "#1a1a1e",
+                        shadowOpacity: 0.5,
+                        shadowRadius: 4,
+                        elevation: 4,
+                        shadowColorAndroid: "#1a1a1e",
+                    },
+                },
+                [r.DARKER]: {
+                    boxShadow: "0 -1px 4px 0 hsl(240 7.1% 11% / 0.5)",
+                    filter: "drop-shadow(0 -1px 4px hsl(240 7.1% 11% / 0.5))",
+                    nativeStyles: {
+                        shadowOffset: { width: 0, height: -1 },
+                        shadowColor: "#1a1a1e",
+                        shadowOpacity: 0.5,
+                        shadowRadius: 4,
+                        elevation: 4,
+                        shadowColorAndroid: "#1a1a1e",
+                    },
+                },
+            },
             SHADOW_MOBILE_NAVIGATOR_X: {
                 [r.DARK]: {
                     boxShadow: "0 0 10px 0 hsl(none 0% 0% / 0.22)",
