@@ -34,7 +34,7 @@ let E = function (e) {
               })
             : (0, f.$g)(0, e);
     },
-    g = (e, t, n) => ({ id: e.discount_id ?? t, label: n, amount: -e.amount }),
+    g = (e, t, n) => ({ id: e.discount_id ?? t, label: n, amount: -e.amount, lineItemType: "discount" }),
     A = (e) => {
         let { interval: t } = e,
             n = (0, _.m6)(e.id);
@@ -87,7 +87,7 @@ let E = function (e) {
                 currency: s,
             }),
             p = null != _ || null != f,
-            E = { id: e.id, label: u, amount: p ? d : c },
+            E = { id: e.id, label: u, amount: p ? d : c, lineItemType: "main" },
             A = [
                 E,
                 ...i.map((e) => ({
@@ -96,6 +96,7 @@ let E = function (e) {
                     amount: e.amount,
                     tooltip: e.tooltipText,
                     tooltipAriaLabel: e.tooltipAriaLabel,
+                    lineItemType: "adjustment",
                 })),
             ];
         return (
@@ -131,7 +132,7 @@ let E = function (e) {
         });
         return (
             0 !== c && null != o && null != u && null != d && _.push({ id: o.id, label: d, amount: c }),
-            s && _.push({ id: "tax", label: h.intl.string(h.t.jiRvC7), amount: e.tax }),
+            s && _.push({ id: "tax", label: h.intl.string(h.t.jiRvC7), amount: e.tax, lineItemType: "tax" }),
             { lineItems: _, primaryLineItem: f, entitlementDiscount: p }
         );
     },
@@ -150,7 +151,7 @@ let E = function (e) {
                 currency: e.currency,
                 invoiceAdjustmentDisplayItems: u,
             });
-        return { lineItems: d, primaryLineItem: _, entitlementDiscount: f };
+        return { lineItems: d, primaryLineItem: _, entitlementDiscount: f, hasAdjustmentLineItem: u.length > 0 };
     },
     v = (e, t) => {
         let { isCustomGift: n = !1, isPrepaidPaymentSource: r = !1, subscriptionPlan: i } = t;

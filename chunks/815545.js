@@ -1,5 +1,15 @@
 "use strict";
-n.d(t, { Ae: () => y, NL: () => S, Q8: () => E, SA: () => b, Sb: () => v, Tp: () => I, rc: () => R, wt: () => O }),
+n.d(t, {
+    Ae: () => v,
+    NL: () => S,
+    Q8: () => E,
+    Ro: () => y,
+    SA: () => D,
+    Sb: () => N,
+    Tp: () => I,
+    rc: () => O,
+    wt: () => b,
+}),
     n(321073);
 var r = n(284009),
     i = n.n(r),
@@ -94,7 +104,8 @@ let T = (e) => {
     S = (e) => {
         if (null != e.discounts) return e.discounts.find((e) => e.type === a.iS.SUBSCRIPTION_PLAN);
     },
-    y = (e, t) => {
+    y = (e, t) => e.invoiceItems.some((e) => (e.discounts ?? []).some((e) => e.discount_id === t)),
+    v = (e, t) => {
         let {
                 subscriptionTrial: n,
                 subscriptionPlan: r,
@@ -129,17 +140,17 @@ let T = (e) => {
             entitlementDiscount: v,
         };
     },
-    v = (e, t) => {
+    N = (e, t) => {
         let n = (0, c.Z)(e.invoiceItems);
         return { subscriptionPlanInvoiceItem: n.find((e) => e.subscriptionPlanId === t.id), coalescedInvoiceItems: n };
     },
-    N = (e) => {
+    C = (e) => {
         let t = (0, c.Z)(e.invoiceItems),
             n = t.find((e) => !(0, l.z4)(e.subscriptionPlanId) && e.amount >= 0),
             r = t.find((e) => (0, l.z4)(e.subscriptionPlanId) && e.amount >= 0);
         return { coalescedInvoiceItems: t, basePlanInvoiceItem: n, guildSubscriptionInvoiceItem: r };
     },
-    C = (e, t, n) => {
+    R = (e, t, n) => {
         let { currency: r, isPrepaidPaymentSource: i } = n,
             s = null != t ? t.amount : 0,
             a = (0, u.$g)(s, r),
@@ -157,22 +168,22 @@ let T = (e) => {
                     : null,
         };
     },
-    R = (e, t) => {
-        let { isPrepaidPaymentSource: n = !1 } = t,
-            { guildSubscriptionInvoiceItem: r, ...i } = N(e),
-            a = (0, s.bG)([o.A], () => (null != r ? o.A.get(r.subscriptionPlanId) : null)),
-            l = C(a, r, { currency: e.currency, isPrepaidPaymentSource: n });
-        return { ...i, guildSubscriptionInvoiceItem: r, guildSubscriptionPlan: a, ...l };
-    },
     O = (e, t) => {
         let { isPrepaidPaymentSource: n = !1 } = t,
-            { guildSubscriptionInvoiceItem: r, ...i } = N(e),
-            s = null != r ? o.A.get(r.subscriptionPlanId) : null,
-            a = C(s, r, { currency: e.currency, isPrepaidPaymentSource: n });
-        return { ...i, guildSubscriptionInvoiceItem: r, guildSubscriptionPlan: s, ...a };
+            { guildSubscriptionInvoiceItem: r, ...i } = C(e),
+            a = (0, s.bG)([o.A], () => (null != r ? o.A.get(r.subscriptionPlanId) : null)),
+            l = R(a, r, { currency: e.currency, isPrepaidPaymentSource: n });
+        return { ...i, guildSubscriptionInvoiceItem: r, guildSubscriptionPlan: a, ...l };
     },
     b = (e, t) => {
-        let { subscriptionPlanInvoiceItem: n, coalescedInvoiceItems: r } = v(e, t);
+        let { isPrepaidPaymentSource: n = !1 } = t,
+            { guildSubscriptionInvoiceItem: r, ...i } = C(e),
+            s = null != r ? o.A.get(r.subscriptionPlanId) : null,
+            a = R(s, r, { currency: e.currency, isPrepaidPaymentSource: n });
+        return { ...i, guildSubscriptionInvoiceItem: r, guildSubscriptionPlan: s, ...a };
+    },
+    D = (e, t) => {
+        let { subscriptionPlanInvoiceItem: n, coalescedInvoiceItems: r } = N(e, t);
         i()(null != n, "Expected newPlanInvoiceItem");
         let s = r.find((e) => !(0, l.z4)(e.subscriptionPlanId) && e.amount < 0),
             o = r.find(
@@ -204,6 +215,7 @@ let T = (e) => {
                     tooltipAriaLabel: "",
                     value: (0, u.$g)(h, e.currency),
                     amount: h,
+                    lineItemType: "adjustment",
                 }),
             0 !== E &&
                 I.push({
@@ -213,6 +225,7 @@ let T = (e) => {
                     tooltipAriaLabel: p.intl.string(p.t.P68ePO),
                     value: (0, u.$g)(E, e.currency),
                     amount: E,
+                    lineItemType: "adjustment",
                 }),
             {
                 newPlanInvoiceItem: n,

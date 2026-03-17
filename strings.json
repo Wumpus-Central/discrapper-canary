@@ -23234,6 +23234,7 @@
   "2pNIbI": "By clicking '!!{purchaseButtonText}!!', you are signing up for a recurring subscription. You'll be charged !!{totalDue}!! today. When your trial ends on {startDate, date, short}, you'll be charged !!{renewalPrice}!! plus applicable taxes every !!{interval}!! until you cancel. Prices subject to change. We'll send you a reminder before your trial ends. Cancel anytime in your Settings. [Paid Services Terms](Paid Services Terms) apply. Have questions? [Contact us](Contact us) or see our [Subscriptions FAQ](Subscriptions FAQ).",
   "mXvZt2": "Subscribing !!{icon}!! **!!{guildName}!!**",
   "R0cZsM": "Today's Total",
+  "i3Q/6S": "Total adjustments !!{amount}!!",
   "Zxav97": "Total Due",
   "pDVleg": "Total savings !!{amount}!!",
   "r29Oel": "Avatar Decoration",

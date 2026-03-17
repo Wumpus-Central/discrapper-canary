@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Qf: () => T, Vm: () => h });
+n.d(t, { Qf: () => y, Vm: () => h });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -14,7 +14,7 @@ var d = n(381247),
     f = n(985018),
     p = n(794873);
 function h(e) {
-    return (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)("div", { className: p.y }), (0, r.jsx)(A, { ...e })] });
+    return (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)("div", { className: p.y }), (0, r.jsx)(T, { ...e })] });
 }
 function m(e) {
     return "tax" === e.id;
@@ -31,14 +31,27 @@ function g(e) {
     }
     return t;
 }
-function A(e) {
+let A = (e) => "adjustment" === e.lineItemType || ("string" == typeof e.id && e.id.includes("adjustment")),
+    I = (e) =>
+        !!(
+            "adjustment" === e.lineItemType ||
+            "discount" === e.lineItemType ||
+            ("string" == typeof e.id && (e.id.includes("discount") || e.id.includes("adjustment")))
+        );
+function T(e) {
     let { label: t, lineItems: n, currency: s, collapsedContentLabelOverride: a, defaultExpanded: o = !1 } = e,
         l = n.length > 0,
-        _ = i.useMemo(() => n.reduce((e, t) => (t.amount < 0 ? e + Math.abs(t.amount) : e), 0), [n]),
-        f = g(n);
-    if (0 === f.length) return null;
-    if (1 === f.length) {
-        let { amount: e, ...t } = f[0],
+        { hasAdjustments: _, totalAdjustmentsOrSavings: f } = i.useMemo(
+            () => ({
+                hasAdjustments: n.some((e) => A(e)),
+                totalAdjustmentsOrSavings: n.reduce((e, t) => (I(t) ? e + t.amount : e), 0),
+            }),
+            [n],
+        ),
+        p = g(n);
+    if (0 === p.length) return null;
+    if (1 === p.length) {
+        let { amount: e, ...t } = p[0],
             n = (0, c.$g)(e, s);
         return (0, r.jsx)(d.i, { value: n, valueColor: e < 0 ? "text-feedback-positive" : "text-muted", ...t });
     }
@@ -49,8 +62,12 @@ function A(e) {
         collapsedContent:
             null != a
                 ? (0, r.jsx)(u.Text, { variant: "text-md/medium", color: "text-feedback-positive", children: a })
-                : (0, r.jsx)(I, { amount: _, currency: s }),
-        children: f.map((e) => {
+                : (0, r.jsx)(S, {
+                      amount: f < 0 ? Math.abs(f) : null,
+                      currency: s,
+                      labelType: _ ? "adjustments" : "savings",
+                  }),
+        children: p.map((e) => {
             let { id: t, label: n, amount: i, ...a } = e,
                 o = (0, c.$g)(i, s);
             return (0, r.jsx)(
@@ -61,17 +78,17 @@ function A(e) {
         }),
     });
 }
-function I(e) {
-    let { amount: t, currency: n } = e;
-    if (0 === t) return null;
-    let i = (0, c.$g)(t, n);
+function S(e) {
+    let { amount: t, currency: n, labelType: i } = e;
+    if (0 === t || null == t) return null;
+    let s = (0, c.$g)(t, n);
     return (0, r.jsx)(u.Text, {
         variant: "text-md/medium",
         color: "text-feedback-positive",
-        children: f.intl.format(_.default.pDVleg, { amount: i }),
+        children: f.intl.format("adjustments" === i ? _.default["i3Q/6S"] : _.default.pDVleg, { amount: s }),
     });
 }
-function T(e) {
+function y(e) {
     let { label: t, value: n, className: i } = e;
     return (0, r.jsxs)(u.Text, {
         variant: "text-lg/semibold",
