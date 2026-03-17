@@ -1,23 +1,22 @@
 "use strict";
 n.d(t, {
-    Aq: () => V,
-    BX: () => H,
+    Aq: () => F,
+    BX: () => B,
     CK: () => D,
     Cz: () => N,
     JJ: () => P,
     Jp: () => w,
-    LX: () => U,
-    Og: () => k,
-    Or: () => F,
+    LX: () => k,
+    Or: () => G,
     RD: () => R,
     RE: () => M,
     Sw: () => C,
-    T2: () => j,
+    T2: () => H,
     gB: () => L,
     gn: () => b,
-    h$: () => G,
+    h$: () => U,
     iJ: () => x,
-    ue: () => B,
+    ue: () => V,
 });
 var r = n(782111),
     i = n(148803),
@@ -170,20 +169,7 @@ let N = (e) => {
             return (0, y.o)(new l.LG(e)), !1;
         }
     },
-    k = async (e, t) => {
-        try {
-            return (
-                await a.Bo.get({
-                    url: v.Rsh.COLLECTIBLES_VALID_GIFT_RECIPIENTS_BATCH,
-                    query: { sku_ids: t, recipient_id: e },
-                    rejectWithError: !0,
-                })
-            ).body;
-        } catch (e) {
-            return (0, y.o)(new l.LG(e)), {};
-        }
-    },
-    U = async (e) => {
+    k = async (e) => {
         let { release: t = i.P.PROD } = e;
         o.h.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH" });
         let n = { platform: r.b.DESKTOP };
@@ -195,7 +181,7 @@ let N = (e) => {
             (0, y.o)(new l.LG(e)), o.h.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" });
         }
     },
-    G = async (e, t, n) => {
+    U = async (e, t, n) => {
         o.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH", tab: e, options: t ?? {} });
         let r = (0, S.ao)(t, e);
         t?.logPerf &&
@@ -226,16 +212,16 @@ let N = (e) => {
             (0, y.o)(t), o.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH_FAILURE", tab: e, error: t });
         }
     },
-    F = (e) => {
+    G = (e) => {
         o.h.dispatch({ type: "COLLECTIBLES_SET_SHOP_HOME_CONFIG_OVERRIDE", shopHomeConfigOverride: e });
     },
-    V = (e) => {
+    F = (e) => {
         o.h.dispatch({ type: "COLLECTIBLES_SET_SHOP_LAYOUT_URL_OVERRIDE", shopLayoutUrlOverride: e });
     },
-    B = (e) => {
+    V = (e) => {
         o.h.dispatch({ type: "COLLECTIBLES_SKIP_NUM_CATEGORIES", skipNumCategories: e });
     },
-    H = async (e, t) => {
+    B = async (e, t) => {
         o.h.dispatch({ type: "COLLECTIBLES_CLAIM", skuId: t });
         try {
             let n = await a.Bo.put({
@@ -249,7 +235,7 @@ let N = (e) => {
             throw (o.h.dispatch({ type: "COLLECTIBLES_CLAIM_FAILURE", skuId: t, error: e }), e);
         }
     },
-    j = async (e) => {
+    H = async (e) => {
         let { tab: t, abortSignal: n } = e;
         if (h.A.isFetchingLayout(t)) return;
         let r = h.A.getLayoutFetchError(t);

@@ -1,40 +1,36 @@
-i.d(t, { A: () => u });
-var n = i(627968);
-i(64700);
-var s = i(937008),
-    r = i(310250),
-    l = i(672525),
-    o = i(802246),
-    a = i(788868),
-    d = i(751690);
-let u = function (e) {
-    let { onSelectSku: t, priceOptions: i, giftRecipient: u, onWishlistItemClick: c } = e,
-        { claimableRewards: m } = (0, s.Pv)(),
-        _ = null != m && m.length > 0,
-        f = (0, r.T)("Select Gift Option");
+t.d(i, { A: () => d });
+var n = t(627968);
+t(64700);
+var r = t(937008),
+    s = t(672525),
+    a = t(802246),
+    l = t(788868),
+    o = t(751690);
+let d = function (e) {
+    let { onSelectSku: i, priceOptions: t, giftRecipient: d, onWishlistItemClick: c } = e,
+        { claimableRewards: _ } = (0, r.Pv)(),
+        u = null != _ && _.length > 0;
     return (0, n.jsxs)("div", {
-        className: d.H,
+        className: o.H,
         children: [
             (0, n.jsxs)("div", {
-                className: d.u,
+                className: o.u,
                 children: [
-                    (0, n.jsx)(l.D3, {
-                        onClick: () => t(a.pe.TIER_2),
+                    (0, n.jsx)(s.D3, {
+                        onClick: () => i(l.pe.TIER_2),
                         isGift: !0,
-                        priceOptions: i,
-                        showPromotionalGiftBanner: _,
+                        priceOptions: t,
+                        showPromotionalGiftBanner: u,
                     }),
-                    (0, n.jsx)(l.Ls, {
-                        onClick: () => t(a.pe.TIER_0),
+                    (0, n.jsx)(s.Ls, {
+                        onClick: () => i(l.pe.TIER_0),
                         isGift: !0,
-                        priceOptions: i,
+                        priceOptions: t,
                         removeTopMargin: !0,
                     }),
                 ],
             }),
-            f
-                ? (0, n.jsx)(o.s, { giftRecipient: u, onWishlistItemClick: c })
-                : (0, n.jsx)(o.A, { giftRecipient: u, onWishlistItemClick: c }),
+            (0, n.jsx)(a.s, { giftRecipient: d, onWishlistItemClick: c }),
         ],
     });
 };

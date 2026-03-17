@@ -1,91 +1,83 @@
 "use strict";
 n.d(t, {
-    B5: () => N,
-    KQ: () => I,
-    Q8: () => S,
-    Zh: () => T,
-    eT: () => M,
-    fw: () => O,
-    mk: () => x,
-    pE: () => k,
-    rJ: () => b,
-    sv: () => R,
-    tA: () => P,
-    uS: () => v,
-}),
-    n(321073);
+    B5: () => I,
+    KQ: () => h,
+    Q8: () => E,
+    Zh: () => m,
+    fw: () => y,
+    pE: () => C,
+    rJ: () => v,
+    sv: () => S,
+    tA: () => N,
+    uS: () => A,
+});
 var r = n(64700),
     i = n(311907),
-    s = n(979286),
-    a = n(590180),
-    o = n(20424),
-    l = n(622543),
-    u = n(576622),
-    c = n(961350),
-    d = n(287809),
-    _ = n(927813),
-    f = n(808247),
-    p = n(107563),
-    h = n(178213),
-    m = n(872472),
-    E = n(792334),
-    g = n(652215),
-    A = n(758836);
-let I = (e) => (e ? 5 : 6),
-    T = 350,
-    S = 16,
-    y = 24 * _.A.Millis.HOUR;
-var v = (function (e) {
+    s = n(20424),
+    a = n(622543),
+    o = n(576622),
+    l = n(961350),
+    u = n(287809),
+    c = n(927813),
+    d = n(808247),
+    _ = n(107563),
+    f = n(178213),
+    p = n(792334);
+let h = (e) => (e ? 5 : 6),
+    m = 350,
+    E = 16,
+    g = 24 * c.A.Millis.HOUR;
+var A = (function (e) {
         return (e.WISHLIST = "wishlist"), (e.POPULAR = "popular"), e;
     })({}),
-    N = (function (e) {
+    I = (function (e) {
         return (e.USER_PROFILE = "user_profile"), e;
     })({});
-function C(e, t) {
+function T(e, t) {
     return null != t ? `${e}:${t}` : `${e}:default`;
 }
-function R(e) {
+function S(e) {
     let { wishlistIdsAndUsers: t, source: n = "user_profile" } = e,
-        s = (0, h.AZ)("use_fetch_wishlists"),
-        a = (0, i.yK)(
-            [p.A],
+        s = (0, f.AZ)("use_fetch_wishlists"),
+        o = (0, i.yK)(
+            [_.A],
             () =>
                 t.map((e) => {
                     let { wishlistId: t } = e;
-                    return null != t ? p.A.getWishlist(t) : null;
+                    return null != t ? _.A.getWishlist(t) : null;
                 }),
             [t],
         ),
-        o = (0, i.bG)(
-            [p.A],
+        l = (0, i.bG)(
+            [_.A],
             () =>
                 t.some((e) => {
                     let { wishlistId: t } = e;
-                    return null != t && p.A.isFetching(t);
+                    return null != t && _.A.isFetching(t);
                 }),
             [t],
         ),
         u = (0, i.yK)(
-            [p.A],
+            [_.A],
             () =>
                 t.map((e) => {
                     let { wishlistId: t } = e;
-                    return null != t ? p.A.getError(t) : void 0;
+                    return null != t ? _.A.getError(t) : void 0;
                 }),
             [t],
         ),
-        c = (0, i.yK)([l.A], () =>
+        c = (0, i.yK)([a.A], () =>
             t.map((e) => {
                 let { wishlistId: t, userId: n } = e;
-                return null != t ? l.A.getWishlistSettings(n, t)?.updated_at : void 0;
+                return null != t ? a.A.getWishlistSettings(n, t)?.updated_at : void 0;
             }),
         ),
-        d = r.useMemo(() => {
+        p = r.useMemo(() => {
             let e = {};
             return (
                 t.forEach((t, n) => {
                     let { userId: r, wishlistId: i } = t;
-                    n >= c.length || (e[C(r, i)] = c[n]);
+                    n >= c.length || (e[T(r, i)] = c[n]);
                 }),
                 e
             );
@@ -93,161 +85,69 @@ function R(e) {
     return (
         (0, r.useEffect)(() => {
             for (let { wishlistId: e, userId: r } of t) {
-                if (null == e || p.A.isFetching(e) || null != p.A.getError(e)) continue;
-                let t = p.A.getWishlist(e),
-                    i = p.A.getUpdatedAt(e),
-                    a = d[C(r, e)],
-                    o = p.A.getLastFetchedAt(e),
-                    l = s && (null == o || Date.now() - o > y);
-                (null == t || (null != a && i !== a) || l) && f.A.fetchWishlist(e, a, n);
+                if (null == e || _.A.isFetching(e) || null != _.A.getError(e)) continue;
+                let t = _.A.getWishlist(e),
+                    i = _.A.getUpdatedAt(e),
+                    a = p[T(r, e)],
+                    o = _.A.getLastFetchedAt(e),
+                    l = s && (null == o || Date.now() - o > g);
+                (null == t || (null != a && i !== a) || l) && d.A.fetchWishlist(e, a, n);
             }
-        }, [t, n, d, s]),
-        { wishlists: a, isFetching: o, errors: u }
+        }, [t, n, p, s]),
+        { wishlists: o, isFetching: l, errors: u }
     );
 }
-function O(e) {
+function y(e) {
     let { wishlistId: t, userId: n, source: s = "user_profile" } = e,
-        [a, o, u, c] = (0, i.yK)([p.A], () =>
+        [o, l, u, c] = (0, i.yK)([_.A], () =>
             null == t
                 ? [null, "success", void 0, void 0]
-                : [p.A.getWishlist(t), p.A.getStatus(t), p.A.getError(t), p.A.getUpdatedAt(t)],
+                : [_.A.getWishlist(t), _.A.getStatus(t), _.A.getError(t), _.A.getUpdatedAt(t)],
         ),
-        d = "fetching" === o,
-        _ = "success" === o || "error" === o,
-        m = (0, h.AZ)("use_fetch_wishlist"),
-        E = (0, i.bG)([l.A], () => {
-            if (null != t && null != n) return l.A.getWishlistSettings(n, t)?.updated_at;
+        p = "fetching" === l,
+        h = "success" === l || "error" === l,
+        m = (0, f.AZ)("use_fetch_wishlist"),
+        E = (0, i.bG)([a.A], () => {
+            if (null != t && null != n) return a.A.getWishlistSettings(n, t)?.updated_at;
         });
     return (
         (0, r.useEffect)(() => {
-            if (null == t || p.A.isFetching(t) || null != u) return;
-            let e = p.A.getLastFetchedAt(t),
-                n = m && (null == e || Date.now() - e > y);
-            (null == a || (null != E && c !== E) || n) && f.A.fetchWishlist(t, E, s);
-        }, [t, s, m, a, E, c, u]),
-        { wishlist: a, isFetching: d, wasFetched: _, error: u }
+            if (null == t || _.A.isFetching(t) || null != u) return;
+            let e = _.A.getLastFetchedAt(t),
+                n = m && (null == e || Date.now() - e > g);
+            (null == o || (null != E && c !== E) || n) && d.A.fetchWishlist(t, E, s);
+        }, [t, s, m, o, E, c, u]),
+        { wishlist: o, isFetching: p, wasFetched: h, error: u }
     );
 }
-function b(e, t) {
-    return (0, i.bG)([p.A], () => null != e && p.A.hasSkuId(e, t));
+function v(e, t) {
+    return (0, i.bG)([_.A], () => null != e && _.A.hasSkuId(e, t));
 }
-function D(e) {
-    if (null == e.items || 0 === e.items.length) return null;
-    let t = { sku_id: e.skuId, sku_name: e.name, sku_product_line: g.EZt.COLLECTIBLES, collectibles_item: e.items[0] };
-    return m.A.fromServer(t);
+function N(e) {
+    let { isGift: t, giftRecipient: n, isSocialLayerStorefrontEnabled: o = !0 } = e,
+        l = (0, s.c)({ userId: n?.id }),
+        u = (0, i.bG)([a.A], () => (n?.id == null ? null : a.A.getFirstWishlistId(n.id))),
+        { wishlist: c } = y({ wishlistId: null != u && t && null != n ? u : null, userId: n?.id }),
+        d = (0, p.B)(c);
+    return r.useMemo(() => !0 === t && null != n && (d.length > 0 || (o && l)), [t, n, d, l, o]);
 }
-function L(e) {
-    let [t, n] = r.useState([]),
-        [i, a] = r.useState(!1);
-    return (
-        r.useEffect(() => {
-            let t = !1;
-            a(!0);
-            let r = A.PI.map((e) => e);
-            return (
-                (0, s.Og)(e, r).then((e) => {
-                    t || (n(r.filter((t) => e[t]?.valid === !0)), a(!1));
-                }),
-                () => {
-                    t = !0;
-                }
-            );
-        }, [e]),
-        { validatedSkuIds: t, isValidating: i }
-    );
+function C() {
+    return R((0, i.bG)([l.default], () => l.default.getId()));
 }
-function w(e, t) {
-    let n = e.slice(0, t),
-        o = (0, i.bG)([a.A], () => n.some((e) => a.A.isFetchingProduct(e)));
-    return (
-        r.useEffect(() => {
-            if (0 !== n.length)
-                for (let e of n) {
-                    let t = a.A.getProduct(e),
-                        n = a.A.isFetchingProduct(e);
-                    null != t || n || (0, s.Jp)(e);
-                }
-        }, [n]),
-        { isFetching: o }
-    );
-}
-function M(e) {
-    let { giftRecipient: t, minNumItems: n, source: s } = e,
-        { defaultWishlistId: o } = (0, i.cf)([l.A], () => ({ defaultWishlistId: l.A.getFirstWishlistId(t.id) })),
-        { wishlist: u, isFetching: c, error: d } = O({ wishlistId: o, source: s }),
-        _ = r.useMemo(() => null != u && u.items.filter((e) => !0 !== e.isOwned).length >= n, [u, n]),
-        { validatedSkuIds: f, isValidating: p } = L(t.id),
-        { isFetching: h } = w(f, n);
-    return {
-        defaultWishlistId: o,
-        wishlist: u,
-        popularCollectiblesProducts: (0, i.yK)([a.A], () => {
-            if (_) return [];
-            let e = new Set(f),
-                t = [];
-            for (let n of A.PI) {
-                let r = a.A.getProduct(n);
-                null != r && e.has(r.skuId) && t.push(r);
-            }
-            return t;
-        }, [_, f]),
-        isFetchingWishlist: c,
-        isValidatingPopularProducts: !_ && p,
-        isFetchingPopularProducts: !_ && h,
-        wishlistError: d,
-    };
-}
-function x(e) {
-    let {
-        wishlist: t,
-        popularCollectiblesProducts: n,
-        popularSocialLayerStorefrontItems: i,
-        wishlistError: s,
-        numItems: a,
-    } = e;
-    return r.useMemo(() => {
-        if (null != s) return { displayItems: [], totalUnownedWishlistItemCount: 0 };
-        let e = (t?.items ?? []).filter((e) => !0 !== e.isOwned),
-            r = e.slice(0, a),
-            o = [];
-        if ((o.push(...r.map((e) => ({ item: e, source: "wishlist" }))), o.length < a)) {
-            let e = new Set(r.map((e) => e.skuId)),
-                t = i.filter((t) => !e.has(t.skuId));
-            for (let e = 0; e < t.length && o.length < a; e++) o.push({ item: t[e], source: "popular" });
-            let s = n.filter((t) => !e.has(t.skuId));
-            for (let e = 0; e < s.length && o.length < a; e++) {
-                let t = D(s[e]);
-                null !== t && o.push({ item: t, source: "popular" });
-            }
-        }
-        return { displayItems: o, totalUnownedWishlistItemCount: e.length };
-    }, [s, t?.items, n, i, a]);
-}
-function P(e) {
-    let { isGift: t, giftRecipient: n, isSocialLayerStorefrontEnabled: s = !0 } = e,
-        a = (0, o.c)({ userId: n?.id }),
-        u = (0, i.bG)([l.A], () => (n?.id == null ? null : l.A.getFirstWishlistId(n.id))),
-        { wishlist: c } = O({ wishlistId: null != u && t && null != n ? u : null, userId: n?.id }),
-        d = (0, E.B)(c);
-    return r.useMemo(() => !0 === t && null != n && (d.length > 0 || (s && a)), [t, n, d, a, s]);
-}
-function k() {
-    return U((0, i.bG)([c.default], () => c.default.getId()));
-}
-function U(e) {
-    let t = (0, i.bG)([d.default], () => d.default.getUser(e)),
+function R(e) {
+    let t = (0, i.bG)([u.default], () => u.default.getUser(e)),
         { userProfile: n, wishlistId: s } = (0, i.cf)(
-            [l.A],
+            [a.A],
             () => ({
-                userProfile: null != e ? l.A.getUserProfile(e) : null,
-                wishlistId: null != e ? l.A.getFirstWishlistId(e) : null,
+                userProfile: null != e ? a.A.getUserProfile(e) : null,
+                wishlistId: null != e ? a.A.getFirstWishlistId(e) : null,
             }),
             [e],
         );
     return (
         r.useEffect(() => {
-            null != e && null == n && null != t && null == n && (0, u.A)(t.id, t.getAvatarURL(null, 80));
+            null != e && null == n && null != t && null == n && (0, o.A)(t.id, t.getAvatarURL(null, 80));
         }, [t, e, n]),
-        { ...O({ wishlistId: s, userId: e }), wishlistId: s, userProfile: n }
+        { ...y({ wishlistId: s, userId: e }), wishlistId: s, userProfile: n }
     );
 }
