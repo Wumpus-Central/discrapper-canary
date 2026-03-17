@@ -48,7 +48,7 @@ var r = n(627968),
 n(601107);
 var G = n(818348),
     F = n(985018),
-    V = n(892191);
+    V = n(329221);
 function B(e, t) {
     let { isEligibleForBOGOPromotion: n } = t;
     return null != e && !n;
@@ -315,10 +315,7 @@ let j = () => {
             c = (0, o.bG)([m.default], () => m.default.locale),
             { isGift: d, giftRecipient: _ } = (0, f.Pv)(),
             p = d && (0, A.Ik)(_),
-            { enabled: h } = N.A.getCurrentConfig(
-                { location: "PremiumSwitchPlanSelectOption" },
-                { autoTrackExposure: !1 },
-            );
+            { enabled: h } = N.A.getConfig({ location: "PremiumSwitchPlanSelectOption" });
         return {
             isPrepaid: t,
             selectPlan: r,
