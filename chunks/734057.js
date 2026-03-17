@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => eD, D: () => H }), n(205816);
+n.d(t, { A: () => eb, D: () => H }), n(205816);
 var r = n(735438),
     i = n.n(r),
     s = n(61090),
@@ -122,7 +122,7 @@ function $(e) {
     return Y(e, 1, "getChannel"), N[e] ?? R[e] ?? b[e] ?? x[e] ?? G[e];
 }
 function z(e) {
-    e.isPrivate() ? (delete G[e.id], q(e)) : e.isThread() ? Z(e) : m.uL.has(e.type) && Q(e);
+    e.isPrivate() ? (delete G[e.id], q(e)) : e.isThread() ? Z(e) : m.uL.has(e.type) && X(e);
 }
 function q(e) {
     if (null != e.recipients.find((e) => (0, f.A)(e))) return !1;
@@ -142,12 +142,9 @@ function X(e) {
         null != e.linkedLobby ? ((D[n] = D[n] ?? {}), (D[n][t] = e)) : delete D[n]?.[t];
 }
 function Q(e) {
-    X(e);
-}
-function J(e) {
     null == e.guild_id || m.Le.has(e.type) ? (0, m.Gw)(e.type) && (w += 1) : (M[e.guild_id] = (M[e.guild_id] ?? 0) + 1);
 }
-function ee(e) {
+function J(e) {
     let t = C;
     for (let n of ((L = {}),
     (N = {}),
@@ -162,11 +159,11 @@ function ee(e) {
     e.initialPrivateChannels.forEach(q),
     e.guilds))
         "partial" === n.dataMode &&
-            (i().forEach(t[n.id], X), y.fileOnly(`Restoring guild channels for ${n.id} #:${eb(n.id)}`)),
-            et(n);
-    eC();
+            (i().forEach(t[n.id], X), y.fileOnly(`Restoring guild channels for ${n.id} #:${eO(n.id)}`)),
+            ee(n);
+    eN();
 }
-function et(e) {
+function ee(e) {
     let { id: t, channels: n, threads: r } = e;
     switch (n.op) {
         case "full_sync":
@@ -178,16 +175,16 @@ function et(e) {
                 X(e);
             break;
         case "update":
-            for (let e of ((n.writes.length > 0 || n.deletes.length > 0) && d.A.invalidate(t), n.deletes)) eE(N[e]);
+            for (let e of ((n.writes.length > 0 || n.deletes.length > 0) && d.A.invalidate(t), n.deletes)) em(N[e]);
             for (let e of n.writes) X(e);
     }
     if (null != r) for (let e of r) Z(e);
 }
-function en(e) {
+function et(e) {
     let { lazyPrivateChannels: t } = e;
     null != O && ((R = {}), O.forEach(q)), t.forEach(q);
 }
-function er(e) {
+function en(e) {
     let { guilds: t } = e,
         n = C;
     (N = {}),
@@ -196,13 +193,13 @@ function er(e) {
         (D = {}),
         t.forEach((e) => {
             if ("unavailable" === e.data_mode)
-                y.fileOnly(`Restoring guild channels b/c unavailable in bg sync, for ${e.id} #:${eb(e.id)}`),
+                y.fileOnly(`Restoring guild channels b/c unavailable in bg sync, for ${e.id} #:${eO(e.id)}`),
                     i().forEach(n[e.id], X);
             else if ("partial" === e.data_mode) {
-                y.fileOnly(`Restoring guild channels b/c partial in bg sync, for ${e.id} #:${eb(e.id)}`),
+                y.fileOnly(`Restoring guild channels b/c partial in bg sync, for ${e.id} #:${eO(e.id)}`),
                     i().forEach(n[e.id], X);
                 let t = e.partial_updates.deleted_channel_ids ?? [];
-                t.length > 0 && (j(e.id, 1, "handleBackgroundSync"), t.forEach((e) => eE(N[e]))),
+                t.length > 0 && (j(e.id, 1, "handleBackgroundSync"), t.forEach((e) => em(N[e]))),
                     e.partial_updates.channels?.forEach((t) => X((0, m.UE)(t, e.id)));
             } else
                 y.fileOnly(`BG sync contained full channels for ${e.id} #:${e.channels.length}`),
@@ -212,13 +209,13 @@ function er(e) {
                     e.channels.forEach((t) => X((0, m.UE)(t, e.id)));
         });
 }
-function ei(e) {
+function er(e) {
     for (let { guildId: t, channels: n } of e.channels)
         for (let e of (y.fileOnly(`Lazy loaded guild channels for ${t}`), (0, _.Ay)(n), P.add(t), d.A.restored(t), n))
             Object.hasOwn(N, e.id) || X((0, m.oh)(e));
     return !1;
 }
-function es() {
+function ei() {
     y.fileOnly("initializeClear()"),
         (L = {}),
         (N = {}),
@@ -232,43 +229,43 @@ function es() {
         (k = {}),
         (U = Date.now());
 }
-function ea(e) {
+function es(e) {
     F = Math.max(F, e.guilds.length);
     let { privateChannels: t, initialGuildChannels: n } = e;
     for (let e of [t, n]) for (let t of e) z((0, _.n2)((0, m.oh)(t)));
     let r = n[0]?.guild_id;
     null != r && (y.fileOnly(`Early cache contained full guild channels for ${r}`), P.add(r));
 }
-function eo(e) {
+function ea(e) {
     for (let t of e.channels) z((0, _.n2)((0, m.oh)(t)));
 }
-function el(e) {
+function eo(e) {
     for (let [t, n] of ((F = Math.max(F, e.guilds.length)), (B = !0), e.guildChannels))
         for (let e of (y.fileOnly(`Lazy cache contained full guild channels for ${t} #:${n.length}`), P.add(t), n))
             z((0, m.oh)(e));
 }
-function eu(e) {
+function el(e) {
     z(e.channel);
 }
-function ec(e) {
+function eu(e) {
     if (!m.A_.has(e.channel.type)) return !1;
     let t = $(e.channel.id);
     z((t = null == t ? e.channel : t.merge({ ...e.channel.toJS(), bitrate: e.channel.bitrate ?? t.bitrate })));
 }
-function ed(e) {
+function ec(e) {
     let { channelId: t, overwrite: n } = e,
         r = $(t);
     if (null == r) return !1;
     z(r.set("permissionOverwrites", { ...r.permissionOverwrites, [n.id]: n }));
 }
-function e_(e) {
+function ed(e) {
     let { channelId: t, overwriteId: n } = e,
         r = $(t);
     if (null == r) return !1;
     let i = { ...r.permissionOverwrites };
     delete i[n], z(r.set("permissionOverwrites", i));
 }
-function ef(e) {
+function e_(e) {
     let t = e.channels.some((e) => {
         let t = e,
             n = $(e.id);
@@ -277,24 +274,24 @@ function ef(e) {
     for (let t of e.channels) z(t);
     t && Object.values(b).forEach((e) => z(e));
 }
-function ep(e) {
+function ef(e) {
     let { threads: t } = e;
     t.forEach((e) => {
         m.A_.has(e.type) && z(e);
     });
 }
-function eh(e) {
+function ep(e) {
     let { threads: t } = e;
     t.forEach((e) => {
         m.A_.has(e.type) && z((0, m.UE)(e));
     });
 }
-function em(e) {
+function eh(e) {
     if ("basicPermissions" in e || e.type !== S.rbe.DM) return;
     let t = e.getRecipientId();
     L[t] === e.id && delete L[t];
 }
-function eE(e) {
+function em(e) {
     if (null == e) return;
     let t = e.guild_id;
     e.id in R && delete R[e.id],
@@ -302,43 +299,43 @@ function eE(e) {
         e.id in b && delete b[e.id],
         null != t &&
             (null != C[t] && e.id in C[t] && delete C[t][e.id], null != D[t] && e.id in D[t] && delete D[t][e.id]),
-        J(e);
+        Q(e);
 }
-function eg(e) {
+function eE(e) {
     let { channel: t } = e,
         n = N[t.id] ?? R[t.id] ?? b[t.id];
     if (null == n) return !1;
-    eE(n), em(n);
+    em(n), eh(n);
+}
+function eg(e) {
+    ee(e.guild);
 }
 function eA(e) {
-    et(e.guild);
-}
-function eI(e) {
     y.fileOnly(`GuildDelete of ${e.guild.id}`), W(e.guild.id), P.delete(e.guild.id), d.A.invalidate(e.guild.id);
 }
-function eT(e) {
+function eI(e) {
     let t = $(e.channelId),
         n = A.default.getId();
     return !!t?.isPrivate() && (z(t.addRecipient(e.user.id, e.nick, n)), !0);
 }
-function eS(e) {
+function eT(e) {
     let t = $(e.channelId);
     return !!t?.isPrivate() && (z(t.removeRecipient(e.user.id)), !0);
 }
-function ey(e) {
+function eS(e) {
     let { messages: t } = e;
     for (let e of t) null != e.thread && !(e.thread.id in b) && m.A_.has(e.thread.type) && Z((0, m.UE)(e.thread));
 }
-function ev(e) {
+function ey(e) {
     let { data: t } = e;
     t.forEach((e) => {
         let { messages: t, threads: n, channels: r } = e;
         t.forEach((e) => {
             e.forEach((e) => {
-                eN(e.thread);
+                ev(e.thread);
             });
         }),
-            n.forEach(eN),
+            n.forEach(ev),
             r.forEach((e) => {
                 let t = (0, m.UE)(e),
                     n = null != $(e.id),
@@ -347,22 +344,22 @@ function ev(e) {
             });
     });
 }
-function eN(e) {
+function ev(e) {
     null != e && !(e.id in b) && m.A_.has(e.type) && Z((0, m.UE)(e));
 }
-function eC() {
+function eN() {
     for (let e in ((x = {}), h.A.getFavoriteChannels())) {
         let t = h.A.getCategoryRecord(e);
         null != t && (x[e] = t);
     }
 }
-function eR() {
-    es();
+function eC() {
+    ei();
 }
-class eO extends a.Ay.Store {
+class eR extends a.Ay.Store {
     static displayName = "ChannelStore";
     initialize() {
-        this.waitFor(A.default, d.A, h.A, I.A, T.default), this.syncWith([h.A], eC);
+        this.waitFor(A.default, d.A, h.A, I.A, T.default), this.syncWith([h.A], eN);
     }
     hasChannel(e) {
         return null != K(e);
@@ -440,39 +437,39 @@ class eO extends a.Ay.Store {
             pendingGuildLoads: Object.keys(k).sort(g.default.compare),
             guildSizes: Object.keys(C)
                 .sort(g.default.compare)
-                .map((e) => `${e}: ${eb(e)}`),
+                .map((e) => `${e}: ${eO(e)}`),
         };
     }
 }
-function eb(e) {
+function eO(e) {
     return null == C[e] ? null : Object.keys(C[e]).length;
 }
-let eD = new eO(o.h, {
-    BACKGROUND_SYNC: er,
-    CACHE_LOADED_LAZY: el,
-    CACHE_LOADED: ea,
-    CHANNEL_CREATE: eu,
-    CHANNEL_DELETE: eg,
-    CHANNEL_RECIPIENT_ADD: eT,
-    CHANNEL_RECIPIENT_REMOVE: eS,
-    CHANNEL_UPDATES: ef,
-    CONNECTION_OPEN_SUPPLEMENTAL: en,
-    CONNECTION_OPEN: ee,
-    CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: ed,
-    CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: e_,
-    GUILD_CREATE: eA,
-    GUILD_DELETE: eI,
-    LOAD_ARCHIVED_THREADS_SUCCESS: eh,
-    LOAD_CHANNELS: ei,
-    LOAD_MESSAGES_AROUND_SUCCESS: ey,
-    LOAD_MESSAGES_SUCCESS: ey,
-    LOAD_THREADS_SUCCESS: eh,
-    LOGOUT: eR,
-    OVERLAY_INITIALIZE: eo,
-    SEARCH_MESSAGES_SUCCESS: ev,
-    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: ev,
-    THREAD_CREATE: ec,
-    THREAD_DELETE: eg,
-    THREAD_LIST_SYNC: ep,
-    THREAD_UPDATE: ec,
+let eb = new eR(o.h, {
+    BACKGROUND_SYNC: en,
+    CACHE_LOADED_LAZY: eo,
+    CACHE_LOADED: es,
+    CHANNEL_CREATE: el,
+    CHANNEL_DELETE: eE,
+    CHANNEL_RECIPIENT_ADD: eI,
+    CHANNEL_RECIPIENT_REMOVE: eT,
+    CHANNEL_UPDATES: e_,
+    CONNECTION_OPEN_SUPPLEMENTAL: et,
+    CONNECTION_OPEN: J,
+    CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: ec,
+    CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: ed,
+    GUILD_CREATE: eg,
+    GUILD_DELETE: eA,
+    LOAD_ARCHIVED_THREADS_SUCCESS: ep,
+    LOAD_CHANNELS: er,
+    LOAD_MESSAGES_AROUND_SUCCESS: eS,
+    LOAD_MESSAGES_SUCCESS: eS,
+    LOAD_THREADS_SUCCESS: ep,
+    LOGOUT: eC,
+    OVERLAY_INITIALIZE: ea,
+    SEARCH_MESSAGES_SUCCESS: ey,
+    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: ey,
+    THREAD_CREATE: eu,
+    THREAD_DELETE: eE,
+    THREAD_LIST_SYNC: ef,
+    THREAD_UPDATE: eu,
 });
