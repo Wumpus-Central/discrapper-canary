@@ -1,30 +1,38 @@
-t.d(l, { A: () => i });
-var r = t(627968);
-t(64700);
-var o = t(506456),
-    n = t(458306),
-    a = t(988064);
-let i = (e) => {
-    let { bannerSrc: l, logoSrc: t, backgroundColor: i, href: d, children: c } = e,
-        s = (0, o.A)(l.src),
-        u = (0, o.A)(t?.src);
-    return (0, r.jsxs)("div", {
+l.d(t, { A: () => s });
+var r = l(627968),
+    n = l(427941),
+    i = l(458306),
+    o = l(190503),
+    a = l(988064);
+let s = (e) => {
+    let { bannerSrc: t, logoSrc: l, backgroundColor: s, href: d, children: c } = e;
+    return (0, r.jsx)("div", {
         className: a.ZK,
-        style: { backgroundImage: `url(${s})`, backgroundColor: i },
-        children: [
-            (0, r.jsxs)("div", {
-                className: a.VW,
+        children: (0, r.jsx)(n.A, {
+            backgroundImage: t,
+            backgroundColor: s,
+            backgroundSize: "100% auto",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "top center",
+            padding: "var(--space-8)",
+            children: (0, r.jsxs)("div", {
+                className: a.Qs,
                 children: [
-                    null != u && (0, r.jsx)("img", { src: u, alt: t?.alt ?? "", className: a.wm }),
-                    null != d &&
-                        (0, r.jsx)(n.ar, {
-                            variant: "overlay-primary",
-                            href: d,
-                            ctaText: "COLLECTIBLES_SHOP_THE_COLLECTION",
-                        }),
+                    (0, r.jsxs)("div", {
+                        className: a.VW,
+                        children: [
+                            null != l && (0, r.jsx)("div", { className: a.wm, children: (0, r.jsx)(o.A, { src: l }) }),
+                            null != d &&
+                                (0, r.jsx)(i.ar, {
+                                    variant: "overlay-primary",
+                                    href: d,
+                                    ctaText: "COLLECTIBLES_SHOP_THE_COLLECTION",
+                                }),
+                        ],
+                    }),
+                    null != c && (0, r.jsx)("div", { className: a.Y_, children: c }),
                 ],
             }),
-            null != c && (0, r.jsx)("div", { className: a.Y_, children: c }),
-        ],
+        }),
     });
 };
