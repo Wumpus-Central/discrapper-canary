@@ -9,12 +9,12 @@ var r = n(311907),
     u = n(474090),
     c = n(181079),
     d = n(379587),
-    _ = n(652215),
+    _ = n(5180),
     f = n(788868);
 function p(e, t, n, r) {
     let { favoritesGuildXPEnabled: i, isMenuItemDCSelected: s, isIntroDCDismissed: a } = r;
     if (!i) return !1;
-    if ((s && !a) || n.getGuildId() === _.YYv) return !0;
+    if ((s && !a) || (0, _.ai)(n.getGuildId())) return !0;
     let o = t.getCurrentUser();
     return null != o && !!u.Ay.isPremiumExactly(o, f.PremiumTypes.TIER_2) && e.favoriteGuildEnabled;
 }

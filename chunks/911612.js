@@ -1,20 +1,20 @@
-i.d(t, { A: () => c });
+i.d(t, { A: () => o });
 var n = i(627968);
 i(64700);
 var l = i(311907),
     s = i(397927),
-    r = i(576705),
-    a = i(652215),
-    d = i(349828),
-    o = i(985018);
-function c(e) {
-    let t = (0, l.bG)([r.A], () => r.A.can(a.xBc.MANAGE_CHANNELS, e));
+    r = i(5180),
+    a = i(576705),
+    d = i(652215),
+    c = i(985018);
+function o(e) {
+    let t = (0, l.bG)([a.A], () => a.A.can(d.xBc.MANAGE_CHANNELS, e));
     return __OVERLAY__
         ? null
-        : e.id === d.Vc
+        : (0, r.ai)(e.id)
           ? (0, n.jsx)(s.Drp, {
                 id: "create-category",
-                label: o.intl.string(o.t["ISN+NM"]),
+                label: c.intl.string(c.t["ISN+NM"]),
                 action: () =>
                     (0, s.mMO)(async () => {
                         let { default: e } = await i.e("28020").then(i.bind(i, 395199));
@@ -27,7 +27,7 @@ function c(e) {
                       s.Drp,
                       {
                           id: "create-channel",
-                          label: o.intl.string(o.t["fUYU+j"]),
+                          label: c.intl.string(c.t["fUYU+j"]),
                           action: () =>
                               (0, s.mMO)(async () => {
                                   let { default: t } = await Promise.all([
@@ -36,7 +36,7 @@ function c(e) {
                                       i.e("64233"),
                                       i.e("76738"),
                                   ]).then(i.bind(i, 409200));
-                                  return (i) => (0, n.jsx)(t, { ...i, channelType: a.rbe.GUILD_TEXT, guildId: e.id });
+                                  return (i) => (0, n.jsx)(t, { ...i, channelType: d.rbe.GUILD_TEXT, guildId: e.id });
                               }),
                       },
                       "create-channel",
@@ -45,7 +45,7 @@ function c(e) {
                       s.Drp,
                       {
                           id: "create-category",
-                          label: o.intl.string(o.t["ISN+NM"]),
+                          label: c.intl.string(c.t["ISN+NM"]),
                           action: () =>
                               (0, s.mMO)(async () => {
                                   let { default: t } = await Promise.all([
@@ -55,7 +55,7 @@ function c(e) {
                                       i.e("76738"),
                                   ]).then(i.bind(i, 409200));
                                   return (i) =>
-                                      (0, n.jsx)(t, { ...i, channelType: a.rbe.GUILD_CATEGORY, guildId: e.id });
+                                      (0, n.jsx)(t, { ...i, channelType: d.rbe.GUILD_CATEGORY, guildId: e.id });
                               }),
                       },
                       "create-category",

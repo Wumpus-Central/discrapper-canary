@@ -18,12 +18,12 @@ var o = n(311907),
     A = n(945096),
     x = n(922301),
     T = n(750112),
-    v = n(584682),
-    b = n(515610),
+    v = n(93055),
+    b = n(584682),
     S = n(598104),
     R = n(95035),
-    y = n(71393),
-    D = n(290863),
+    D = n(71393),
+    y = n(290863),
     C = n(741961),
     M = n(287809),
     j = n(977997),
@@ -31,14 +31,14 @@ var o = n(311907),
     _ = n(652215),
     L = n(790782),
     w = n(728444),
-    G = n(811094);
-let O = {
-    SELECTED: G.J1,
-    CONNECTED: G.d4,
-    UNREAD_IMPORTANT: G.V2,
-    UNREAD_LESS_IMPORTANT: G.modeUnreadLessImportant,
-    MUTED: G.F4,
-    LOCKED: G.yg,
+    O = n(811094);
+let G = {
+    SELECTED: O.J1,
+    CONNECTED: O.d4,
+    UNREAD_IMPORTANT: O.V2,
+    UNREAD_LESS_IMPORTANT: O.modeUnreadLessImportant,
+    MUTED: O.F4,
+    LOCKED: O.yg,
 };
 function P(e) {
     e.preventDefault(), e.stopPropagation();
@@ -61,10 +61,10 @@ function U(e) {
             status: r,
             isMobile: u,
             isVR: c,
-        } = (0, o.cf)([D.A], () =>
+        } = (0, o.cf)([y.A], () =>
             null == a || null == t || t.isMultiUserDM()
                 ? { status: null, isMobile: !1, isVR: !1 }
-                : { status: D.A.getStatus(a.id), isMobile: D.A.isMobileOnline(a.id), isVR: D.A.isVROnline(a.id) },
+                : { status: y.A.getStatus(a.id), isMobile: y.A.isMobileOnline(a.id), isVR: y.A.isVROnline(a.id) },
         );
     return (0, l.jsx)(k, {
         className: i,
@@ -87,19 +87,19 @@ let B = i.memo(function (e) {
                 hasActiveThreads: r,
                 hasUsersInVoiceChannel: u,
             } = e,
-            f = (0, o.bG)([y.A], () => y.A.getGuild(i.guild_id), [i.guild_id]),
+            f = (0, o.bG)([D.A], () => D.A.getGuild(i.guild_id), [i.guild_id]),
             p = i.type === _.rbe.DM || i.type === _.rbe.GROUP_DM,
-            A = (0, b.A)(),
+            A = (0, v.DZ)(),
             x = A && p,
             { enableWaveformIcon: T } = (0, g.b)(i.guild_id, "ChannelItemIcon"),
-            v = (0, o.bG)([h.A], () => h.A.getAnimationStyle(i.id), [i.id]),
+            b = (0, o.bG)([h.A], () => h.A.getAnimationStyle(i.id), [i.id]),
             S = i.type === _.rbe.GUILD_VOICE,
             R = null;
         if (T && S && !a && u)
             R = (0, l.jsx)(E.A, {
                 color: "currentColor",
-                className: s()(G.Kk, t),
-                animationStyle: v,
+                className: s()(O.Kk, t),
+                animationStyle: b,
                 locked: (0, m.A)(i),
             });
         else {
@@ -121,18 +121,18 @@ let B = i.memo(function (e) {
                 }
             })(i, f, { locked: a, hasActiveThreads: r }, x, x);
             if (null == e) return null;
-            R = (0, l.jsx)(e, { color: "currentColor", className: s()(G.Kk, t) });
+            R = (0, l.jsx)(e, { color: "currentColor", className: s()(O.Kk, t) });
         }
-        let D = (0, N.Bq)(i, f, a, r),
-            C = `${D} icon`;
+        let y = (0, N.Bq)(i, f, a, r),
+            C = `${y} icon`;
         return (0, l.jsx)(c.m, {
-            text: D,
+            text: y,
             delay: 500,
             children: (0, l.jsx)("div", {
                 role: "img",
                 "aria-label": C,
-                className: s()(G.zc, n),
-                children: A ? (0, l.jsx)("div", { className: G.QO, children: R }) : R,
+                className: s()(O.zc, n),
+                children: A ? (0, l.jsx)("div", { className: O.QO, children: R }) : R,
             }),
         });
     }),
@@ -152,10 +152,10 @@ let B = i.memo(function (e) {
                           onMouseDown: A,
                           onMouseUp: x,
                           onContextMenu: T,
-                          connectDragPreview: b,
+                          connectDragPreview: v,
                           className: S,
-                          iconClassName: y,
-                          subtitle: D,
+                          iconClassName: D,
+                          subtitle: y,
                           subtitleColor: C,
                           channel: { type: M },
                           onMouseEnter: I,
@@ -167,38 +167,38 @@ let B = i.memo(function (e) {
                           forceInteractable: K,
                           mentionCount: W,
                           resolvedUnreadSetting: $,
-                          isFavoriteSuggestion: q,
-                          hasActiveEvent: Z = !1,
+                          isFavoriteSuggestion: Z,
+                          hasActiveEvent: q = !1,
                       } = e,
                       J = $ === L.e.ALL_MESSAGES || (null != W && W > 0),
                       Y = (0, o.bG)([j.A], () => Object.values(j.A.getVoiceStatesForChannel(n.id)).length > 0, [n.id]),
                       { role: X, ...Q } = (0, r.rm)(n.id),
                       ee = i.useRef(null),
                       et = i.useRef(null),
-                      en = (0, v.A)(n),
+                      en = (0, b.A)(n),
                       el = _.BVt.CHANNEL(en, n.id),
                       ei = (0, p.Ay)(n),
                       ea = n.isGuildVocal(),
                       es = null != N || null != x || null != A || K,
                       er = (0, l.jsx)("div", {
-                          className: s()({ [G.ow]: q }),
+                          className: s()({ [O.ow]: Z }),
                           ref: et,
                           children: (0, l.jsxs)(R.A, {
                               role: ea && !g ? "button" : "link",
                               href: ea ? void 0 : el,
                               target: "_blank",
                               ref: ee,
-                              className: G.nf,
+                              className: O.nf,
                               onClick: () => N?.(n),
                               ...Q,
                               "aria-label": H,
                               focusProps: { enabled: !1 },
                               children: [
                                   (0, l.jsxs)("div", {
-                                      className: G.Y5,
+                                      className: O.Y5,
                                       children: [
                                           (0, l.jsx)(B, {
-                                              className: y,
+                                              className: D,
                                               channel: n,
                                               guild: z,
                                               hasUsersInVoiceChannel: Y,
@@ -206,23 +206,23 @@ let B = i.memo(function (e) {
                                               locked: m,
                                           }),
                                           (0, l.jsx)(u.A, {
-                                              className: s()(G.UU, { [G.NW]: Z }),
+                                              className: s()(O.UU, { [O.NW]: q }),
                                               "aria-hidden": !0,
                                               children: (0, l.jsx)(F, { channel: n, name: null != a ? a : ei }),
                                           }),
                                           i.Children.count(U) > 0
-                                              ? (0, l.jsx)("div", { onClick: P, className: G.Y_, children: U })
+                                              ? (0, l.jsx)("div", { onClick: P, className: O.Y_, children: U })
                                               : null,
                                       ],
                                   }),
-                                  null != D
+                                  null != y
                                       ? (0, l.jsx)("div", {
-                                            className: G.MA,
+                                            className: O.MA,
                                             children: (0, l.jsx)(d.Text, {
                                                 color: C ?? "text-muted",
                                                 variant: "text-xs/medium",
-                                                className: G.VA,
-                                                children: D,
+                                                className: O.VA,
+                                                children: y,
                                             }),
                                         })
                                       : null,
@@ -237,33 +237,33 @@ let B = i.memo(function (e) {
                           ref: t,
                           className: s()(
                               S,
-                              es ? G.iE : G.IA,
+                              es ? O.iE : O.IA,
                               (() => {
-                                  if (h) return s()(w.rM, O.SELECTED);
-                                  if (g) return s()(w.rM, O.CONNECTED);
-                                  if (m) return O.LOCKED;
-                                  if (c) return O.MUTED;
+                                  if (h) return s()(w.rM, G.SELECTED);
+                                  if (g) return s()(w.rM, G.CONNECTED);
+                                  if (m) return G.LOCKED;
+                                  if (c) return G.MUTED;
                                   if (f)
-                                      if (J) return O.UNREAD_IMPORTANT;
-                                      else return O.UNREAD_LESS_IMPORTANT;
+                                      if (J) return G.UNREAD_IMPORTANT;
+                                      else return G.UNREAD_LESS_IMPORTANT;
                                   return null;
                               })(),
                               (function (e) {
                                   switch (e) {
                                       case _.rbe.GUILD_STAGE_VOICE:
                                       case _.rbe.GUILD_VOICE:
-                                          return G.typeVoice;
+                                          return O.typeVoice;
                                       case _.rbe.ANNOUNCEMENT_THREAD:
                                       case _.rbe.PUBLIC_THREAD:
                                       case _.rbe.PRIVATE_THREAD:
-                                          return G.ZS;
+                                          return O.ZS;
                                       case _.rbe.GUILD_ANNOUNCEMENT:
                                       case _.rbe.GUILD_TEXT:
                                       case _.rbe.GUILD_STORE:
                                       case _.rbe.GUILD_FORUM:
                                       case _.rbe.GUILD_MEDIA:
                                       default:
-                                          return G.typeDefault;
+                                          return O.typeDefault;
                                   }
                               })(V ?? M),
                           ),
@@ -273,8 +273,8 @@ let B = i.memo(function (e) {
                           onMouseEnter: I,
                           onMouseLeave: k,
                           children: [
-                              c || !f ? null : (0, l.jsx)("div", { className: s()(G.gy, J ? G.WS : void 0) }),
-                              b?.(er) ?? er,
+                              c || !f ? null : (0, l.jsx)("div", { className: s()(O.gy, J ? O.WS : void 0) }),
+                              v?.(er) ?? er,
                           ],
                       }),
                   });

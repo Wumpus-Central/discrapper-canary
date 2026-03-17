@@ -1,4 +1,4 @@
-n.d(i, { A: () => A });
+n.d(i, { A: () => p });
 var t = n(627968),
     l = n(397927),
     a = n(72152),
@@ -6,18 +6,19 @@ var t = n(627968),
     d = n(967198),
     s = n(422258),
     c = n(93055),
-    o = n(652215),
-    u = n(525736),
-    g = n(985018);
-function A() {
+    o = n(5180),
+    u = n(652215),
+    g = n(665606),
+    A = n(985018);
+function p() {
     let { hasAccess: e } = (0, c.TW)("useHideServerItem");
     return (0, t.jsx)(l.Drp, {
         id: "hide-favorites",
-        label: e ? g.intl.string(u.default["8FO0y9"]) : g.intl.string(g.t.ojM1xJ),
-        subtext: e ? g.intl.string(u.default.FaHxWl) : void 0,
+        label: e ? A.intl.string(g.default["8FO0y9"]) : A.intl.string(A.t.ojM1xJ),
+        subtext: e ? A.intl.string(g.default.FaHxWl) : void 0,
         color: e ? "danger" : "default",
         action: function () {
-            (0, a.Z)(!1), e && (0, s.tV)(!1), d.A.getGuildId() === o.YYv && (0, r.pX)(o.BVt.ME);
+            (0, a.Z)(!1), e && (0, s.tV)(!1), (0, o.ai)(d.A.getGuildId()) && (0, r.pX)(u.BVt.ME);
         },
     });
 }

@@ -25,7 +25,7 @@ function a(e, t, a) {
                     i.e("42128"),
                     i.e("97283"),
                     i.e("39778"),
-                    i.e("360"),
+                    i.e("28224"),
                 ]).then(i.bind(i, 385913));
                 return (i) => (0, n.jsx)(e, { ...i, user: t, channel: a, showMute: !1, targetIsUser: !0 });
             })

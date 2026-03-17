@@ -5,8 +5,8 @@ var r = n(873263),
     l = n(311907),
     a = n(397927),
     s = n(587895),
-    o = n(5180),
-    d = n(515610),
+    o = n(93055),
+    d = n(5180),
     c = n(91242),
     u = n(263063),
     A = n(394953),
@@ -28,7 +28,7 @@ function N() {
         S = (0, l.bG)([h.A], () => h.A.getChannel(N), [N]),
         x = n ?? S?.guild_id,
         v = (0, l.bG)([_.A], () => _.A.getGuild(x), [x]),
-        y = (0, d.A)(),
+        y = (0, o.DZ)(),
         b = (0, A.lI)(),
         { application: O, isFrameInFocusedMode: L } = (0, l.cf)([s.A, c.A], () => {
             let e = c.A.getConnectedFrame();
@@ -51,7 +51,7 @@ function N() {
         : b
           ? ((e = f.intl.string(f.t.HcoRu0)), (P = (0, i.jsx)(a.XFE, { size: "sm" })))
           : null != v
-            ? ((e = (0, o.YC)(v)),
+            ? ((e = (0, d.YC)(v)),
               (P = y
                   ? (0, i.jsx)(a.Gg5, { size: "sm" })
                   : (0, i.jsx)(u.Ay, { guild: v, size: u.Ay.Sizes.SMOL, active: !0, className: T.$f })))

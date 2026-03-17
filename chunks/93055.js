@@ -1,40 +1,42 @@
-n.d(t, { Af: () => g, CJ: () => C, Fe: () => h, Rm: () => I, TW: () => E }), n(321073);
-var i = n(478437),
-    r = n(311907);
-n(734057);
-var a = n(808728),
-    s = n(967198),
-    l = n(287809),
-    o = n(474090);
-n(661191);
-var d = n(181079),
-    c = n(379587),
-    _ = n(11531),
-    u = n(652215),
-    A = n(788868);
-function E(e) {
-    let { enabled: t, hasHigherPrivileges: n } = (0, c.m)({ location: e }),
-        i = (0, r.bG)([l.default], () => l.default.getCurrentUser()),
-        a = o.Ay.isPremiumExactly(i, A.PremiumTypes.TIER_2);
-    return { hasAccess: t && a, isExperimentEnabled: t, hasHigherPrivileges: n };
+a.d(t, { Af: () => p, CJ: () => b, DZ: () => h, Rm: () => g, TW: () => A }), a(321073);
+var n = a(478437),
+    i = a(311907);
+a(734057);
+var r = a(808728),
+    l = a(967198),
+    o = a(287809),
+    s = a(474090);
+a(661191);
+var _ = a(181079),
+    c = a(379587),
+    d = a(11531),
+    u = a(5180),
+    f = a(652215),
+    m = a(788868);
+function A(e) {
+    let { enabled: t, hasHigherPrivileges: a } = (0, c.m)({ location: e }),
+        n = (0, i.bG)([o.default], () => o.default.getCurrentUser()),
+        r = s.Ay.isPremiumExactly(n, m.PremiumTypes.TIER_2);
+    return { hasAccess: t && r, isExperimentEnabled: t, hasHigherPrivileges: a };
 }
-function g(e) {
-    return (0, r.bG)([d.A], () => d.A.getFavorite(e));
+function p(e) {
+    return (0, i.bG)([_.A], () => _.A.getFavorite(e));
 }
-function I() {
-    return (0, r.bG)([a.Ay], () => a.Ay.getChannels(u.YYv))[i.r.GUILD_CATEGORY].map((e) => ({
+function g() {
+    return (0, i.bG)([r.Ay], () => r.Ay.getChannels(f.YYv))[n.r.GUILD_CATEGORY].map((e) => ({
         id: "null" === e.channel.id ? null : e.channel.id,
         name: e.channel.name,
     }));
 }
 function h() {
-    return (0, r.bG)([s.A], () => s.A.getGuildId()) === u.YYv;
+    let e = (0, i.bG)([l.A], () => l.A.getGuildId());
+    return (0, u.ai)(e);
 }
-function C() {
-    let e = (0, _.J)((e) => e.favoriteAdded);
+function b() {
+    let e = (0, d.J)((e) => e.favoriteAdded);
     return {
         favoriteAdded: e,
-        notifyFavoriteAdded: (0, _.J)((e) => e.notifyFavoriteAdded),
-        clearFavoriteAdded: (0, _.J)((e) => e.clearFavoriteAdded),
+        notifyFavoriteAdded: (0, d.J)((e) => e.notifyFavoriteAdded),
+        clearFavoriteAdded: (0, d.J)((e) => e.clearFavoriteAdded),
     };
 }

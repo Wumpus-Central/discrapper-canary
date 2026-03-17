@@ -12,7 +12,7 @@ function A(n) {
         A = n.type === s.rbe.GUILD_CATEGORY,
         u = r.useCallback(() => {
             (0, a.mMO)(async () => {
-                let { default: t } = await Promise.all([e.e("59839"), e.e("51598")]).then(e.bind(e, 889186));
+                let { default: t } = await e.e("59839").then(e.bind(e, 889186));
                 return (e) => (0, i.jsx)(t, { ...e, parentId: n.id });
             });
         }, [n.id]);
