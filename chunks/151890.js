@@ -2,25 +2,31 @@ a.d(t, { A: () => p });
 var n = a(627968);
 a(64700);
 var i = a(791332),
-    s = a.n(i),
-    l = a(397927),
+    l = a.n(i),
+    s = a(397927),
     r = a(846293),
-    o = a(179389),
-    c = a(167189),
-    d = a(833291),
+    o = a(167189),
+    c = a(833291),
+    d = a(481859),
     u = a(365526),
-    h = a(558179);
-let m = /^discord.gg\/[a-zA-Z0-9-]+/,
+    m = a(558179);
+let h = /^discord.gg\/[a-zA-Z0-9-]+/,
     p = {
-        ...h.A.rules,
-        heading: { ...o.i.heading },
-        image: { ...s().defaultRules.image },
+        ...m.A.rules,
+        heading: {
+            ...m.A.rules.heading,
+            react(e, t, a) {
+                let i = `h${Math.min(Math.max(2, e.level + 1), 4)}`;
+                return (0, n.jsx)(d.A, { tag: i, children: t(e.content, a) }, a.key);
+            },
+        },
+        image: { ...l().defaultRules.image },
         inviteLink: {
-            order: h.A.rules.link.order + 1,
-            match: (e, t) => (t.inline ? m.exec(e) : null),
+            order: m.A.rules.link.order + 1,
+            match: (e, t) => (t.inline ? h.exec(e) : null),
             parse: (e, t, a) => {
-                let n = (0, d.br)(e[0]);
-                return null == n || n.type !== c.I.INVITE
+                let n = (0, c.br)(e[0]);
+                return null == n || n.type !== o.I.INVITE
                     ? { type: "text", content: e[0] }
                     : {
                           type: "inviteLink",
@@ -36,7 +42,7 @@ let m = /^discord.gg\/[a-zA-Z0-9-]+/,
             },
             react: (e, t, a) =>
                 (0, n.jsx)(
-                    l.MzZ,
+                    s.MzZ,
                     {
                         onClick: (t) => {
                             t.preventDefault(), e.onClick();

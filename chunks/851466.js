@@ -1,19 +1,18 @@
-n.d(t, { A: () => s });
 var i = n(311907),
-    r = n(73153);
-let a = {};
+    a = n(73153);
+let r = {};
 class l extends i.Ay.Store {
     static displayName = "ChannelSKUStore";
     getSkuIdForChannel(e) {
-        return a[e];
+        return r[e];
     }
 }
-let s = new l(r.h, {
+new l(a.h, {
     CONNECTION_OPEN: function () {
-        a = {};
+        r = {};
     },
     STORE_LISTING_FETCH_SUCCESS: function (e) {
         let { channelId: t, storeListing: n } = e;
-        null != t && (a[t] = n.sku.id);
+        null != t && (r[t] = n.sku.id);
     },
 });

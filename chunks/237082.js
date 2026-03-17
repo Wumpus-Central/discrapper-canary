@@ -9,7 +9,6 @@ e.exports = {
     TN: "iconMetaQuest_b68a35 icon_b68a35",
     uD: "textLink_b68a35",
     N0: "textLinkSmall_b68a35 textLink_b68a35",
-    aV: "testModeSKUSelector_b68a35",
     lK: "premiumLogo_b68a35",
     $t: "premiumText_b68a35",
     CO: "premiumAction_b68a35",

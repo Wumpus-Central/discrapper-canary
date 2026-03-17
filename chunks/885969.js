@@ -1,7 +1,7 @@
-n.d(t, { A: () => p });
-var i = n(86980),
-    r = n(793574),
-    a = n(580960),
+n.d(t, { A: () => g });
+var i = n(793574),
+    a = n(39771),
+    r = n(580960),
     l = n(636401),
     s = n(629471),
     o = n(569475),
@@ -10,19 +10,19 @@ var i = n(86980),
     u = n(613057),
     A = n(652215),
     h = n(788868);
-let _ = [r.A.RPC];
+let _ = [i.A.RPC];
 function m(e, t) {
     let n = { subscriptionTier: h.pe.TIER_2, analyticsLocations: _, analyticsObject: t };
     switch (e) {
         case A.BRT.APP:
-            return a.A.openPremiumPaymentModalInApp(n);
+            return r.A.openPremiumPaymentModalInApp(n);
         case A.BRT.OVERLAY:
-            return a.A.openPremiumPaymentModalInOverlay(n);
+            return r.A.openPremiumPaymentModalInOverlay(n);
         default:
             throw Error(`Unexpected app context: ${e}`);
     }
 }
-let p = {
+let g = {
     [A.e$_.START_PURCHASE]: {
         [u.sm.ANY]: [u.VH, u.hj],
         validation: (e) =>
@@ -32,22 +32,22 @@ let p = {
         handler(e) {
             let {
                 socket: t,
-                args: { sku_id: n, pid: r },
+                args: { sku_id: n, pid: i },
             } = e;
             (0, d.C)(t.transport);
-            let a = t.application.id;
-            if (null == a) throw new l.A({ errorCode: A.Lw6.INVALID_COMMAND }, "No application.");
-            let { lock: s, context: h } = (0, c.d5)(t.transport !== u.z4.POST_MESSAGE ? r : null);
+            let r = t.application.id;
+            if (null == r) throw new l.A({ errorCode: A.Lw6.INVALID_COMMAND }, "No application.");
+            let { lock: s, context: h } = (0, c.d5)(t.transport !== u.z4.POST_MESSAGE ? i : null);
             if (null == (0, o.A)()) throw new l.A({ errorCode: A.Lw6.INVALID_CHANNEL }, "Invalid channel");
-            let p = { page: A.liQ.IN_APP };
+            let g = { page: A.liQ.IN_APP };
             return (async () => {
                 try {
-                    let e = await (0, i.j)({
-                        applicationId: a,
+                    let e = await (0, a.j)({
+                        applicationId: r,
                         skuId: n,
-                        openPremiumPaymentModal: () => m(h, p),
+                        openPremiumPaymentModal: () => m(h, g),
                         analyticsLocations: _,
-                        analyticsLocationObject: p,
+                        analyticsLocationObject: g,
                         context: h,
                     });
                     return s(), e;
@@ -79,8 +79,8 @@ let p = {
             } = e;
             if (((0, d.C)(t.transport), null == t.application.id))
                 throw new l.A({ errorCode: A.Lw6.INVALID_COMMAND }, "No application.");
-            let { lock: i, context: r } = (0, c.d5)(t.transport !== u.z4.POST_MESSAGE ? n : null);
-            return m(r, { page: A.liQ.IN_APP }).then(
+            let { lock: i, context: a } = (0, c.d5)(t.transport !== u.z4.POST_MESSAGE ? n : null);
+            return m(a, { page: A.liQ.IN_APP }).then(
                 () => {
                     i();
                 },

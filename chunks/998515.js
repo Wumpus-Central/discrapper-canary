@@ -1,123 +1,89 @@
-n.r(t), n.d(t, { default: () => O, getPageSize: () => y });
-var i = n(627968),
-    r = n(64700),
-    l = n(492462),
-    a = n(873263),
-    s = n(311907),
-    o = n(255363),
-    d = n(384904),
-    c = n(820284),
-    u = n(490415),
-    A = n(456412),
-    h = n(441271),
-    _ = n(915967),
-    m = n(775121),
-    g = n(268218),
-    p = n(670735),
-    E = n(976860),
-    I = n(210714),
-    f = n(75587),
-    C = n(196661),
-    T = n(590858),
-    N = n(652215),
-    S = n(985018),
-    x = n(58682);
-let v = (0, g.Fe)({
-    createPromise: () => Promise.all([n.e("19846"), n.e("41031")]).then(n.bind(n, 554238)),
+s.r(e), s.d(e, { default: () => N });
+var i = s(627968),
+    n = s(64700),
+    r = s(873263),
+    o = s(311907),
+    a = s(255363),
+    d = s(384904),
+    l = s(820284),
+    A = s(490415),
+    c = s(441271),
+    _ = s(915967),
+    p = s(775121),
+    I = s(268218),
+    O = s(670735),
+    h = s(976860),
+    u = s(210714),
+    E = s(75587),
+    T = s(652215),
+    P = s(985018),
+    j = s(58682);
+let L = (0, I.Fe)({
+    createPromise: () => Promise.all([s.e("19846"), s.e("41031")]).then(s.bind(s, 554238)),
     webpackId: 554238,
 });
-function y(e) {
-    return e < 1e3 ? T.q.SMALL : T.q.LARGE;
-}
-s.Ay.initialize();
-class b extends r.PureComponent {
+o.Ay.initialize();
+class C extends n.PureComponent {
     stopListeningToHistory;
     componentDidMount() {
-        (0, o.N)(this.props.location),
-            (this.stopListeningToHistory = (0, E.JK)().listen((e) => {
-                e.pathname.startsWith(N.BVt.APPLICATION_STORE) && (0, o.N)(e);
+        (0, a.N)(this.props.location),
+            (this.stopListeningToHistory = (0, h.JK)().listen((t) => {
+                t.pathname.startsWith(T.BVt.APPLICATION_STORE) && (0, a.N)(t);
             })),
             this.props.isAuthenticated && (0, d.$o)(),
-            m.A.disable(),
-            m.A.setLayout(h.E),
-            m.A.enable(),
-            (0, I.d)("application_store");
+            p.A.disable(),
+            p.A.setLayout(c.E),
+            p.A.enable(),
+            (0, u.d)("application_store");
     }
     componentWillUnmount() {
         null != this.stopListeningToHistory && this.stopListeningToHistory(),
-            m.A.disable(),
-            m.A.setLayout(_.zR),
-            m.A.enable();
+            p.A.disable(),
+            p.A.setLayout(_.zR),
+            p.A.enable();
     }
-    renderStoreListing = (e) => {
-        let {
-                match: {
-                    params: { skuId: t, applicationId: n, slug: r },
-                },
-                location: a,
-            } = e,
-            { width: s } = this.props,
-            o = (0, l.parse)(a.search);
-        return (0, i.jsx)(c.A, {
-            page: N.liQ.STORE_LISTING,
-            root: !0,
-            children: (0, i.jsx)(C.A, {
-                skuId: t,
-                applicationId: n,
-                slug: r,
-                location: a,
-                storeListingId: o.store_listing_id,
-                pageSize: y(s),
-            }),
-        });
-    };
     renderContent = () =>
-        (0, i.jsxs)(a.dO, {
+        (0, i.jsxs)(r.dO, {
             children: [
-                (0, i.jsx)(a.qh, {
-                    path: N.BVt.APPLICATION_STORE,
+                (0, i.jsx)(r.qh, {
+                    path: T.BVt.APPLICATION_STORE,
                     exact: !0,
                     render: () =>
-                        (0, i.jsx)(c.A, { page: N.liQ.STORE_DIRECTORY_HOME, root: !0, children: (0, i.jsx)(f.A, {}) }),
+                        (0, i.jsx)(l.A, { page: T.liQ.STORE_DIRECTORY_HOME, root: !0, children: (0, i.jsx)(E.A, {}) }),
                 }),
-                (0, i.jsx)(a.qh, {
-                    path: N.BVt.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),
-                    render: this.renderStoreListing,
+                (0, i.jsx)(r.rd, {
+                    from: T.BVt.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),
+                    to: T.BVt.APPLICATION_STORE,
                 }),
-                (0, i.jsx)(a.qh, {
-                    path: N.BVt.APPLICATION_STORE_LISTING_APPLICATION(":applicationId"),
-                    render: this.renderStoreListing,
+                (0, i.jsx)(r.rd, {
+                    from: T.BVt.APPLICATION_STORE_LISTING_APPLICATION(":applicationId"),
+                    to: T.BVt.APPLICATION_STORE,
                 }),
-                (0, i.jsx)(a.qh, {
-                    path: N.BVt.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug"),
-                    render: this.renderStoreListing,
+                (0, i.jsx)(r.rd, {
+                    from: T.BVt.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug"),
+                    to: T.BVt.APPLICATION_STORE,
                 }),
-                (0, i.jsx)(a.qh, {
-                    path: N.BVt.APPLICATION_STORE_LISTING_SKU(":skuId"),
-                    render: this.renderStoreListing,
-                }),
-                (0, i.jsx)(a.rd, { to: N.BVt.APP }),
+                (0, i.jsx)(r.rd, { from: T.BVt.APPLICATION_STORE_LISTING_SKU(":skuId"), to: T.BVt.APPLICATION_STORE }),
+                (0, i.jsx)(r.rd, { to: T.BVt.APP }),
             ],
         });
     renderCustomErrorMessage() {
         return (0, i.jsxs)("div", {
             children: [
-                (0, i.jsx)("p", { children: S.intl.string(S.t["1PZdF7"]) }),
-                (0, i.jsx)("p", { children: S.intl.string(S.t.CvQlAH) }),
+                (0, i.jsx)("p", { children: P.intl.string(P.t["1PZdF7"]) }),
+                (0, i.jsx)("p", { children: P.intl.string(P.t.CvQlAH) }),
             ],
         });
     }
     render() {
-        let { isAuthenticated: e, location: t } = this.props,
-            n = e
-                ? (0, i.jsx)("div", { className: x.gE, children: this.renderContent() })
-                : (0, i.jsx)(v, { className: x.gE, location: t, render: this.renderContent });
-        return (0, i.jsx)(p.A, { renderCustomMessage: this.renderCustomErrorMessage, children: n });
+        let { isAuthenticated: t, location: e } = this.props,
+            s = t
+                ? (0, i.jsx)("div", { className: j.gE, children: this.renderContent() })
+                : (0, i.jsx)(L, { className: j.gE, location: e, render: this.renderContent });
+        return (0, i.jsx)(O.A, { renderCustomMessage: this.renderCustomErrorMessage, children: s });
     }
 }
-let O = (0, u.A)(
-    (0, A.A)(function (e) {
-        let t = (0, a.zy)();
-        return (0, i.jsx)(b, { ...e, location: t });
-    }),
-);
+let N = (0, A.A)(function (t) {
+    let e = (0, r.zy)();
+    return (0, i.jsx)(C, { ...t, location: e });
+});
