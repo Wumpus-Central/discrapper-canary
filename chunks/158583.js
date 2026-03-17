@@ -1,4 +1,4 @@
-n.d(t, { T: () => N });
+n.d(t, { T: () => b });
 var i = n(627968),
     s = n(64700),
     l = n(311907),
@@ -14,23 +14,21 @@ var i = n(627968),
     A = n(181079),
     h = n(422258),
     x = n(93055),
-    p = n(957300),
-    T = n(652215),
-    E = n(788868),
-    S = n(665606),
-    C = n(985018);
-let f = m.A.getArticleURL(T.MVz.FAVORITES_GUILD);
-function b() {
-    let e = (0, p.E)((e) => e.enterPreview),
-        { analyticsLocations: t } = (0, o.Ay)(r.A.USER_SETTINGS_FAVORITES),
-        n = s.useCallback(() => {
-            e(), (0, c.uh)(T.YYv), (0, u.default)();
-        }, [e]);
+    p = n(652215),
+    T = n(788868),
+    E = n(665606),
+    S = n(985018);
+let C = m.A.getArticleURL(p.MVz.FAVORITES_GUILD);
+function f() {
+    let { analyticsLocations: e } = (0, o.Ay)(r.A.USER_SETTINGS_FAVORITES),
+        t = s.useCallback(() => {
+            (0, c.uh)(p.YYv), (0, u.default)();
+        }, []);
     return (0, i.jsx)(o.f5, {
-        value: t,
+        value: e,
         children: (0, i.jsx)(a.D0$, {
-            label: C.intl.string(S.default.OT1NK5),
-            description: C.intl.format(S.default.GR2KOG, { helpCenterLink: f }),
+            label: S.intl.string(E.default.OT1NK5),
+            description: S.intl.format(E.default.GR2KOG, { helpCenterLink: C }),
             layout: "horizontal-responsive",
             badge: "beta",
             children: (0, i.jsxs)(a.BJc, {
@@ -40,38 +38,38 @@ function b() {
                 children: [
                     (0, i.jsx)(a.Button, {
                         variant: "secondary",
-                        text: C.intl.string(S.default["7WwLnr"]),
-                        onClick: n,
+                        text: S.intl.string(E.default["7WwLnr"]),
+                        onClick: t,
                     }),
                     (0, i.jsx)(d.A, {
-                        subscriptionTier: E.pe.TIER_2,
-                        defaultTextOverride: C.intl.string(S.default["20sYUU"]),
+                        subscriptionTier: T.pe.TIER_2,
+                        defaultTextOverride: S.intl.string(E.default["20sYUU"]),
                     }),
                 ],
             }),
         }),
     });
 }
-function N() {
+function b() {
     let e = (0, l.bG)([A.A], () => A.A.favoriteGuildEnabled),
         t = (0, l.bG)([_.default], () => {
             let e = _.default.getCurrentUser();
-            return null != e && g.Ay.isPremiumExactly(e, E.PremiumTypes.TIER_2);
+            return null != e && g.Ay.isPremiumExactly(e, T.PremiumTypes.TIER_2);
         }),
         n = (0, x.Fe)(),
         r = s.useCallback(
             (e) => {
-                (0, h.tV)(e), !e && n && (0, c.pX)(T.BVt.ME);
+                (0, h.tV)(e), !e && n && (0, c.pX)(p.BVt.ME);
             },
             [n],
         );
     return t
         ? (0, i.jsx)(a.dOG, {
               checked: e,
-              description: C.intl.format(S.default.GR2KOG, { helpCenterLink: f }),
+              description: S.intl.format(E.default.GR2KOG, { helpCenterLink: C }),
               onChange: r,
-              label: C.intl.string(S.default.OT1NK5),
+              label: S.intl.string(E.default.OT1NK5),
               badge: "beta",
           })
-        : (0, i.jsx)(b, {});
+        : (0, i.jsx)(f, {});
 }
