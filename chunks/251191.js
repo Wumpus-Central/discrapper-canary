@@ -3,8 +3,8 @@ s.d(t, { A: () => b });
 var n = s(627968),
     r = s(64700),
     l = s(503698),
-    i = s.n(l),
-    a = s(311907),
+    a = s.n(l),
+    i = s(311907),
     o = s(397927),
     c = s(720462),
     d = s(287809),
@@ -20,17 +20,16 @@ var n = s(627968),
     C = s(201073);
 let b = (e) => {
     let { shelf: t, handleTransition: s, tab: l } = e,
-        b = (0, a.bG)([d.default], () => d.default.getCurrentUser()),
+        b = (0, i.bG)([d.default], () => d.default.getCurrentUser()),
         A = (0, g.W)("ShelfBlock"),
-        S = (0, a.bG)([_.A], () => _.A.getCategory(t.categorySkuId)),
-        v = (0, u.uM)(),
-        I = (0, m.A)(),
-        L = r.useMemo(() => I(t.rankedSkuIds), [t.rankedSkuIds, I]),
-        j = (0, h.X)(L);
+        S = (0, i.bG)([_.A], () => _.A.getCategory(t.categorySkuId)),
+        v = (0, m.A)(),
+        I = r.useMemo(() => v(t.rankedSkuIds), [t.rankedSkuIds, v]),
+        L = (0, h.X)(I);
     return null == b
         ? null
         : (0, n.jsxs)("div", {
-              className: i()(C.Vp, C.YB),
+              className: a()(C.Vp, C.YB),
               children: [
                   (0, n.jsxs)("div", {
                       className: C.$6,
@@ -53,7 +52,7 @@ let b = (e) => {
                   (0, n.jsx)(c.A, {
                       gap: "xl",
                       children: (0, n.jsx)(n.Fragment, {
-                          children: j.map((e, s) => {
+                          children: L.map((e, s) => {
                               if (null == _.A.getCategoryForProduct(e.skuId) || null == e) return null;
                               let r = e.skuId;
                               return (0, n.jsx)(
@@ -65,7 +64,6 @@ let b = (e) => {
                                           {
                                               skuId: r,
                                               prioritizedCurrency: l === x.G2.ORBS ? f.Hi.ORBS : A ? f.Hi.FIAT : void 0,
-                                              onClickAnalytics: (0, f.UU)(e, l, v),
                                           },
                                           r,
                                       ),

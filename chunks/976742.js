@@ -3,8 +3,8 @@ s.d(t, { A: () => v });
 var n = s(627968),
     r = s(64700),
     l = s(172218),
-    i = s(417597),
-    a = s(397927),
+    a = s(417597),
+    i = s(397927),
     o = s(287809),
     c = s(440938),
     d = s(940980),
@@ -21,11 +21,10 @@ var n = s(627968),
     b = s(157884);
 function A(e) {
     let { category: t } = e,
-        s = (0, i.bG)([o.default], () => o.default.getCurrentUser()),
+        s = (0, a.bG)([o.default], () => o.default.getCurrentUser()),
         r = (0, _.X)(t.products),
         l = (0, u.p)()(r),
-        a = (0, d.W)("CollectiblesCatalogContent"),
-        g = (0, c.uM)();
+        i = (0, d.W)("CollectiblesCatalogContent");
     return null == s || 0 === l.length
         ? null
         : (0, n.jsx)("div", {
@@ -37,12 +36,7 @@ function A(e) {
                           newValue: { tilePosition: t },
                           children: (0, n.jsx)(
                               p.A,
-                              {
-                                  skuId: e.skuId,
-                                  skipLimitedTimeCheck: !0,
-                                  prioritizedCurrency: a ? f.Hi.FIAT : void 0,
-                                  onClickAnalytics: (0, f.UU)(e, C.G2.CATALOG, g),
-                              },
+                              { skuId: e.skuId, skipLimitedTimeCheck: !0, prioritizedCurrency: i ? f.Hi.FIAT : void 0 },
                               e.skuId,
                           ),
                       },
@@ -53,18 +47,18 @@ function A(e) {
 }
 function S(e) {
     let { category: t } = e,
-        [s, i] = r.useState(!1),
-        a = (0, l.K)((e) => {
-            i(e);
+        [s, a] = r.useState(!1),
+        i = (0, l.K)((e) => {
+            a(e);
         }, 0.15);
     return (0, n.jsxs)("div", {
         className: b.EF,
-        ref: a,
+        ref: i,
         children: [(0, n.jsx)(m.A, { category: t }), (0, n.jsx)(A, { category: t })],
     });
 }
 function v(e) {
-    let { categories: t, setCategoryRef: s, currentPage: l, handlePageChange: i, initialCategoryId: o } = e,
+    let { categories: t, setCategoryRef: s, currentPage: l, handlePageChange: a, initialCategoryId: o } = e,
         d = (0, c.uM)(),
         u = (0, x.U)(),
         _ = d?.sessionId ?? "",
@@ -89,8 +83,8 @@ function v(e) {
         let e = f.findIndex((e) => e.skuId === o);
         if (-1 === e) return;
         let t = Math.floor(e / C.l5) + 1;
-        t !== l && i(t), (A.current = o);
-    }, [o, f, i, l]);
+        t !== l && a(t), (A.current = o);
+    }, [o, f, a, l]);
     let v = r.useMemo(() => {
         let e = (l - 1) * C.l5;
         return f.slice(e, e + C.l5);
@@ -135,11 +129,11 @@ function v(e) {
                   ),
                   (0, n.jsx)("div", {
                       className: b.Ej,
-                      children: (0, n.jsx)(a.mgR, {
+                      children: (0, n.jsx)(i.mgR, {
                           currentPage: l,
                           totalCount: f.length,
                           pageSize: C.l5,
-                          onPageChange: i,
+                          onPageChange: a,
                           disablePaginationGap: !0,
                       }),
                   }),
