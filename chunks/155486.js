@@ -1,81 +1,86 @@
-s.d(t, { G: () => O });
+s.d(t, { G: () => R });
 var r = s(627968),
     l = s(64700),
-    a = s(696292),
-    n = s(311907),
+    n = s(696292),
+    a = s(311907),
     o = s(397927),
     i = s(770178),
     c = s(742589),
     u = s(545986),
-    d = s(657331),
-    b = s(318346),
-    p = s(151252),
-    E = s(142270),
-    S = s(287809),
-    A = s(365491),
-    h = s(628979),
-    m = s(494573),
-    f = s(758836),
-    C = s(652215);
+    d = s(92615),
+    b = s(44724),
+    p = s(657331),
+    S = s(318346),
+    E = s(151252),
+    h = s(142270),
+    A = s(287809),
+    f = s(365491),
+    m = s(628979),
+    C = s(494573),
+    T = s(758836),
+    g = s(652215);
 s(801416);
-var T = s(518477),
-    g = s(985018),
-    y = s(78716);
-function O(e) {
+var y = s(188275),
+    O = s(518477),
+    L = s(985018),
+    x = s(78716);
+function R(e) {
     let { selectedTab: t, handleTransition: s } = e,
-        O = (0, n.bG)([S.default], () => S.default.getCurrentUser()),
-        { enabled: L } = (0, p.Z)({ location: "collectibles_shop_header_bar" }),
-        { searchQuery: x } = (0, A.v)(),
-        R = l.useRef(null),
-        [N, v] = l.useState(!1);
+        R = (0, a.bG)([A.default], () => A.default.getCurrentUser()),
+        { enabled: I } = (0, E.Z)({ location: "collectibles_shop_header_bar" }),
+        N = (0, d.B)({ location: "collectibles_shop_header_bar" }),
+        { searchQuery: v } = (0, f.v)(),
+        G = l.useRef(null),
+        [_, j] = l.useState(!1);
     (0, i.g)(
-        R,
+        G,
         l.useCallback((e) => {
-            v(e.contentRect.width < 800);
+            j(e.contentRect.width < 800);
         }, []),
     );
-    let I = l.useMemo(
+    let F = l.useMemo(
             () => [
-                { tab: f.G2.HOME, label: g.intl.string(g.t["xNiB/O"]) },
-                { tab: f.G2.CATALOG, label: g.intl.string(g.t.Ah5sJo), hasSubmenu: !0 },
-                ...(L ? [{ tab: f.G2.ORBS, label: g.intl.string(g.t.EBYkzk) }] : []),
+                { tab: T.G2.HOME, label: L.intl.string(L.t["xNiB/O"]) },
+                { tab: T.G2.CATALOG, label: L.intl.string(L.t.Ah5sJo), hasSubmenu: !0 },
+                ...(I ? [{ tab: T.G2.ORBS, label: L.intl.string(L.t.EBYkzk) }] : []),
+                ...(N ? [{ tab: T.G2.RIVALS, label: L.intl.string(L.t["kq/75v"]), icon: o.I9m }] : []),
             ],
-            [L],
+            [I, N],
         ),
-        G = t === f.G2.ORBS ? C.liQ.SHOP_ORBS_TAB : C.liQ.COLLECTIBLES_SHOP,
-        _ = l.useCallback(() => {
-            (0, b.Y)({ pageType: G, sectionType: C.JJy.ORBS_BALANCE_MENU, ctaObject: C.ZSU.CTA_TO_QUEST_HOME }),
-                (0, u.navigateToQuestHome)({ fromContent: a.u.ORBS_BALANCE_MENU });
-        }, [G]),
-        j = l.useCallback(() => {
-            O?.id != null && (0, d.openUserProfileModal)({ userId: O.id, tabSection: T.RP.WISHLIST });
-        }, [O?.id]),
-        F = l.useCallback(
+        P = t === T.G2.ORBS ? g.liQ.SHOP_ORBS_TAB : g.liQ.COLLECTIBLES_SHOP,
+        k = l.useCallback(() => {
+            (0, S.Y)({ pageType: P, sectionType: g.JJy.ORBS_BALANCE_MENU, ctaObject: g.ZSU.CTA_TO_QUEST_HOME }),
+                (0, u.navigateToQuestHome)({ fromContent: n.u.ORBS_BALANCE_MENU });
+        }, [P]),
+        $ = l.useCallback(() => {
+            R?.id != null && (0, p.openUserProfileModal)({ userId: R.id, tabSection: O.RP.WISHLIST });
+        }, [R?.id]),
+        M = l.useCallback(
             (e) => {
-                s(e);
+                e === T.G2.RIVALS ? (0, b.default)({ guildId: y.Kf }).catch(() => {}) : s(e);
             },
             [s],
         );
     return (0, r.jsx)("div", {
-        ref: R,
+        ref: G,
         children: (0, r.jsxs)(c.A, {
             disableDoubleClick: !0,
-            className: y.jr,
+            className: x.jr,
             toolbar: (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(h.A, { handleTransition: s, selectedTab: t, isNarrow: N, hasText: "" !== x }),
+                    (0, r.jsx)(m.A, { handleTransition: s, selectedTab: t, isNarrow: _, hasText: "" !== v }),
                     (0, r.jsx)(o.DUT, {
-                        className: y.ij,
-                        onClick: j,
-                        "aria-label": g.intl.string(g.t["7lZ31J"]),
+                        className: x.ij,
+                        onClick: $,
+                        "aria-label": L.intl.string(L.t["7lZ31J"]),
                         children: (0, r.jsx)(o.C3E, { size: "xs", color: "currentColor" }),
                     }),
-                    L &&
-                        (0, r.jsx)(E.SS, {
-                            analyticsPage: G,
-                            cardAlignment: E.SS.CardAlignment.END,
-                            ctaText: g.intl.string(g.t.VC4Mq0),
-                            ctaOnClick: _,
+                    I &&
+                        (0, r.jsx)(h.SS, {
+                            analyticsPage: P,
+                            cardAlignment: h.SS.CardAlignment.END,
+                            ctaText: L.intl.string(L.t.VC4Mq0),
+                            ctaOnClick: k,
                         }),
                 ],
             }),
@@ -83,12 +88,12 @@ function O(e) {
             hideSearch: !0,
             children: [
                 (0, r.jsx)(o.DUT, {
-                    className: y.sU,
-                    onClick: () => s(f.G2.HOME),
-                    "aria-label": g.intl.string(g.t["5upuqx"]),
+                    className: x.sU,
+                    onClick: () => s(T.G2.HOME),
+                    "aria-label": L.intl.string(L.t["5upuqx"]),
                     children: (0, r.jsx)(o.U1X, { size: "md", color: o.LU0.colors.TEXT_DEFAULT }),
                 }),
-                (0, r.jsx)(m.A, { tabs: I, selectedTab: t, onTabSelect: F }),
+                (0, r.jsx)(C.A, { tabs: F, selectedTab: t, onTabSelect: M }),
             ],
         }),
     });

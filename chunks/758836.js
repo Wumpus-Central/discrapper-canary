@@ -59,12 +59,13 @@ var g = (function (e) {
             (e.BUNDLES = "bundles"),
             (e.LAYOUT = "layout"),
             (e.COLLECTION_INDEX = "collection-index"),
+            (e.RIVALS = "rivals"),
             e
         );
     })({});
 let I = ["avatar-decorations", "profile-effects", "nameplates", "bundles"],
     T = (e) => I.includes(e),
-    S = (e) => null != e && "home" !== e && "catalog" !== e,
+    S = (e) => null != e && "home" !== e && "catalog" !== e && "rivals" !== e,
     y = 800,
     v = [
         "1212569433839636530",
