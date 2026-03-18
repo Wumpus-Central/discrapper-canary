@@ -1,49 +1,47 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => u });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
     r = n.n(l),
     a = n(397927),
-    o = n(567305),
-    c = n(985018),
-    d = n(801985);
-function u(e) {
+    o = n(985018),
+    c = n(801985);
+function d(e) {
     let { text: t, hasScrolled: n } = e;
     return (0, i.jsxs)("div", {
-        className: r()(d.kL, { [d.sz]: n }),
+        className: r()(c.kL, { [c.sz]: n }),
         children: [
             (0, i.jsx)("div", {
-                className: d.lm,
+                className: c.lm,
                 children: (0, i.jsx)(a.Text, {
-                    className: d.__invalid_label,
+                    className: c.__invalid_label,
                     variant: "text-md/medium",
                     color: "text-strong",
                     children: t,
                 }),
             }),
-            (0, i.jsx)("div", { className: d._p }),
+            (0, i.jsx)("div", { className: c._p }),
         ],
     });
 }
-function h(e) {
-    let [t, n] = s.useState(),
-        [l, r] = s.useState(),
-        [a, d] = s.useState(!1),
-        [h, A] = s.useState(!1),
-        { enabled: m } = (0, o.DN)(e);
+function u() {
+    let [e, t] = s.useState(),
+        [n, l] = s.useState(),
+        [r, a] = s.useState(!1),
+        [c, u] = s.useState(!1);
     return (
         s.useEffect(() => {
-            m && null != t && null != l ? d(t < l) : d(!1);
-        }, [m, t, l]),
+            null == e || null == n ? a(!1) : a(e < n);
+        }, [e, n]),
         {
             horizontalScrollNotice: s.useMemo(
-                () => (a ? (0, i.jsx)(u, { text: c.intl.string(c.t.RfAAH9), hasScrolled: h }) : null),
-                [a, h],
+                () => (r ? (0, i.jsx)(d, { text: o.intl.string(o.t.RfAAH9), hasScrolled: c }) : null),
+                [r, c],
             ),
-            handleScroll: () => A(!0),
-            handleSetScrollerRef: (e) => r(e?.getScrollerState()?.scrollWidth),
-            handleSetContainerRef: (e) => n(e?.clientWidth),
+            handleScroll: () => u(!0),
+            handleSetScrollerRef: (e) => l(e?.getScrollerState()?.scrollWidth),
+            handleSetContainerRef: (e) => t(e?.clientWidth),
         }
     );
 }

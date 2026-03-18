@@ -9,20 +9,20 @@ var s = n(503698),
     o = n(772577),
     c = n(216042);
 function d(e) {
-    let { guildId: t, children: n, className: s } = e,
-        { horizontalScrollNotice: d, handleScroll: u, handleSetScrollerRef: h, handleSetContainerRef: A } = (0, o.A)(t),
-        m = (0, i.jsx)("div", {
+    let { children: t, className: n } = e,
+        { horizontalScrollNotice: s, handleScroll: d, handleSetScrollerRef: u, handleSetContainerRef: h } = (0, o.A)(),
+        A = (0, i.jsx)("div", {
             className: c.vi,
-            children: (0, i.jsx)("div", { className: l()(c._s, s), children: n }),
+            children: (0, i.jsx)("div", { className: l()(c._s, n), children: t }),
         });
     return (
         r.Fr ||
-            (m = (0, i.jsxs)(i.Fragment, {
+            (A = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    d,
-                    (0, i.jsx)(a.T7Y, { className: c.XG, orientation: "horizontal", ref: h, onScroll: u, children: m }),
+                    s,
+                    (0, i.jsx)(a.T7Y, { className: c.XG, orientation: "horizontal", ref: u, onScroll: d, children: A }),
                 ],
             })),
-        (0, i.jsx)("div", { className: c.Rc, ref: A, children: m })
+        (0, i.jsx)("div", { className: c.Rc, ref: h, children: A })
     );
 }

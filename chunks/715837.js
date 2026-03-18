@@ -1,9 +1,9 @@
 n.d(t, { A: () => p });
 var i = n(627968);
 n(64700);
-var r = n(397927),
+var a = n(397927),
     l = n(599941),
-    a = n(922975),
+    r = n(922975),
     s = n(700206),
     o = n(950344),
     d = n(815332),
@@ -26,7 +26,7 @@ let p = (e) => {
     let { activeSubscription: p } = (0, s.A)(n?.id),
         E = (0, l.Tq)(t.id),
         I = E?.description,
-        { editStateIds: f } = a.d0(n?.id ?? null, t.id);
+        { editStateIds: f } = r.d0(n?.id ?? null, t.id);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(h.A, {
@@ -39,9 +39,8 @@ let p = (e) => {
                     (0, i.jsx)(c.A, { subscription: p }),
                 ],
             }),
-            (0, i.jsx)(r.Fmo, {
+            (0, i.jsx)(a.Fmo, {
                 children: (0, i.jsx)(u.A, {
-                    guildId: t.id,
                     children: f.map((e) =>
                         (0, i.jsx)(
                             A.A,

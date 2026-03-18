@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => C });
+n.d(t, { A: () => I });
 var i = n(627968),
     s = n(64700),
     l = n(503698),
@@ -14,22 +14,23 @@ var i = n(627968),
     x = n(567305),
     h = n(599941),
     _ = n(695825),
-    A = n(11351),
-    p = n(922975),
+    p = n(11351),
+    A = n(922975),
     f = n(822525),
-    j = n(652215),
-    N = n(985018),
-    E = n(862238);
-let b = "guild-role-subscription-tier-template-selector";
-function T(e) {
+    j = n(2242),
+    N = n(652215),
+    E = n(985018),
+    b = n(862238);
+let T = "guild-role-subscription-tier-template-selector";
+function C(e) {
     let { guildId: t, priceTiers: l, groupListingId: _ } = e,
-        T = (0, h.cY)(_),
+        j = (0, h.cY)(_),
         {
             editStateIds: C,
             addNewEditStateId: I,
             addNewEditStateFromTemplate: v,
             removeEditStateId: S,
-        } = p.d0(_, t, { includeSoftDeleted: !0 }),
+        } = A.d0(_, t, { includeSoftDeleted: !0 }),
         [y, R] = s.useState({}),
         O = s.useMemo(() => {
             let e = C.map((e) => y[e] ?? e);
@@ -52,20 +53,20 @@ function T(e) {
                                       priceTiers: l,
                                   });
                           },
-                          { modalKey: b },
+                          { modalKey: T },
                       )
                     : I();
         }, [t, v, I, l, L, G]),
-        M = p.Zw(O),
-        k = s.useCallback(() => O.forEach(p.Ts), [O]),
-        U = (0, A.gN)(),
+        M = A.Zw(O),
+        k = s.useCallback(() => O.forEach(A.Ts), [O]),
+        U = (0, p.gN)(),
         P = (0, o.bG)([m.A], () => m.A.getProps().subsection);
     return (
         s.useEffect(
             () => (
-                P === j.nd0.ROLE_SUBSCRIPTION_TIER_TEMPLATE && D(),
+                P === N.nd0.ROLE_SUBSCRIPTION_TIER_TEMPLATE && D(),
                 () => {
-                    (0, u.OoC)(b);
+                    (0, u.OoC)(T);
                 }
             ),
             [P, D],
@@ -73,7 +74,7 @@ function T(e) {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)("div", {
-                    className: E.B2,
+                    className: b.B2,
                     children: [
                         O.map((e) =>
                             (0, i.jsx)(
@@ -81,7 +82,7 @@ function T(e) {
                                 {
                                     guildId: t,
                                     initialEditStateId: e,
-                                    allSubscriptionListings: T,
+                                    allSubscriptionListings: j,
                                     priceTiers: l,
                                     groupListingId: _,
                                     onDeleteEditState: () => S(e),
@@ -96,14 +97,14 @@ function T(e) {
                         ),
                         (0, i.jsxs)(u.DUT, {
                             onClick: U ? void 0 : D,
-                            className: r()(E.l2, { [E.r9]: U }),
+                            className: r()(b.l2, { [b.r9]: U }),
                             "aria-disabled": U,
                             children: [
-                                (0, i.jsx)(u.U1e, { size: "xs", color: "currentColor", className: E.qE }),
+                                (0, i.jsx)(u.U1e, { size: "xs", color: "currentColor", className: b.qE }),
                                 (0, i.jsx)(u.Text, {
                                     variant: "text-md/normal",
                                     color: "interactive-text-active",
-                                    children: N.intl.string(N.t.PiFnny),
+                                    children: E.intl.string(E.t.PiFnny),
                                 }),
                             ],
                         }),
@@ -111,14 +112,14 @@ function T(e) {
                 }),
                 (0, i.jsx)(d.F, {
                     component: "div",
-                    className: E.se,
+                    className: b.se,
                     children: M && (0, i.jsx)(u.FQk, { children: (0, i.jsx)(c.A, { onReset: k }) }),
                 }),
             ],
         })
     );
 }
-function C(e) {
+function I(e) {
     let { guildId: t } = e,
         { priceTiers: n } = ((e) => {
             let [t, n] = s.useState(!0),
@@ -134,11 +135,11 @@ function C(e) {
             );
         })(t),
         l = (0, h.uk)(t),
-        { maxTiers: r } = (0, x.DN)(t),
+        r = j.f7,
         a = l.map((e) => e.id);
     return (0, i.jsx)(u.D0$, {
-        label: N.intl.string(N.t["72+Sos"]),
-        description: N.intl.format(N.t.nHRSvM, { maxTiers: r }),
-        children: (0, i.jsx)(T, { priceTiers: n, guildId: t, groupListingId: a[0] }),
+        label: E.intl.string(E.t["72+Sos"]),
+        description: E.intl.format(E.t.nHRSvM, { maxTiers: r }),
+        children: (0, i.jsx)(C, { priceTiers: n, guildId: t, groupListingId: a[0] }),
     });
 }

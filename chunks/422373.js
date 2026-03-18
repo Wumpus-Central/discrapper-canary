@@ -22,7 +22,6 @@ function h(e) {
             null != i ? (0, s.jsx)(a.A, { groupListingId: i.id, subscription: h }) : null,
             (0, s.jsx)(o.A, { subscription: h }),
             (0, s.jsx)(c.A, {
-                guildId: t,
                 children: r.map((e) =>
                     (0, s.jsx)(
                         C.A,
