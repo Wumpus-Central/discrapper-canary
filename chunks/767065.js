@@ -25,7 +25,7 @@ var r = n(824120),
     N = n(835498),
     C = n(624694),
     R = n(390391),
-    O = n(276006),
+    O = n(147490),
     b = n(559633),
     D = n(714763),
     L = n(34135),
@@ -879,14 +879,17 @@ class eS extends _.A {
             x.Ay.supports(ea.O5.IMAGE_QUALITY_MEASUREMENT) &&
                 m.setVideoQualityMeasurement("imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec");
         let A = ["unk"];
-        A.push("nvNewPresets"),
+        if (
+            (A.push("nvNewPresets"),
             this.context === ea.x.STREAM ? A.push("nvRelaxRc=250") : A.push("nvRelaxRc=75"),
             x.Ay.getUseVaapiEncoder() && A.push("vaapi"),
-            this.context === ea.x.STREAM &&
-                "streamer" === this.getVoiceParticipantType() &&
-                (0, O.b)("handleReady").enabled &&
-                A.push("useCaptureDeviceForEncode"),
-            m.setVideoEncoderExperiments(A.join(",")),
+            this.context === ea.x.STREAM && "streamer" === this.getVoiceParticipantType() && (0, H.isWindows)())
+        ) {
+            A.push("useCaptureDeviceForEncode");
+            let { overrideDeviceReuse: e } = O.g.getConfig({ location: "handleReady" });
+            e && A.push("videoCaptureDeviceOverrideReuse");
+        }
+        m.setVideoEncoderExperiments(A.join(",")),
             m.on(f.yq.Speaking, (e, t, n) => {
                 this.userId === e && this.sendSpeaking(t, n), this.emit($.q.Speaking, eE(e), t);
             }),
