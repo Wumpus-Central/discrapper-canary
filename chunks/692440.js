@@ -107,11 +107,17 @@ function M(e) {
         className: L._H,
         children: [
             t,
-            (0, r.jsx)(c.m_, {
-                __unsupportedReactNodeAsText: n,
-                ariaHidden: !0,
-                children: (0, r.jsx)(d.cBN, { size: "md", color: "currentColor", "aria-label": i, className: L.kK }),
-            }),
+            null != n &&
+                (0, r.jsx)(c.m_, {
+                    __unsupportedReactNodeAsText: n,
+                    ariaHidden: !0,
+                    children: (0, r.jsx)(d.cBN, {
+                        size: "md",
+                        color: "currentColor",
+                        "aria-label": i,
+                        className: L.kK,
+                    }),
+                }),
         ],
     });
 }
