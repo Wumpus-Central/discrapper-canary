@@ -1,7 +1,8 @@
 "use strict";
 var r = n(265690),
     i = n(121894),
-    s = n(734057);
+    s = n(712089),
+    a = n(734057);
 (0, r.h)((e, t) => ({
     channels: new Set(),
     isActivityFocused: !1,
@@ -11,7 +12,7 @@ var r = n(265690),
     voicePanelsOpened: new Set(),
     voicePanelsPIP: new Set(),
     openChannel(n) {
-        s.A.getChannel(n)?.isGuildStageVoice() === !0 ||
+        (!(0, s.i)("voice_panel_store") && a.A.getChannel(n)?.isGuildStageVoice() === !0) ||
             t().channels.has(n) ||
             (0, i.r)(() => {
                 e((e) => ({
