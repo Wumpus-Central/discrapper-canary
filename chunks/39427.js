@@ -4,8 +4,7 @@ e.exports = {
     y7: "emptyStateContainer__4fbcc",
     q6: "emptyStateText__4fbcc",
     XG: "scroller__4fbcc",
-    Q9: "privateNotice__4fbcc",
-    n3: "teenNotice__4fbcc",
+    lm: "notice__4fbcc",
     _E: "recommendationsContainerEmptyWishlist__4fbcc",
     HZ: "recommendationsContainerWithWishlist__4fbcc",
 };
