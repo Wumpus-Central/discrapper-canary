@@ -48,7 +48,7 @@ function R(e) {
 }
 function O() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-        { paymentsBlocked: t } = l.A.useExperiment({ location: "153d31_1" }, { autoTrackExposure: !1 }),
+        t = (0, l.dw)(),
         { promotion: n } = (0, S.Eu)(),
         r = (0, E.si)("bogo eligibility hook"),
         { enabled: i } = (0, m.Ay)(),
@@ -82,7 +82,7 @@ async function b() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = u.default.getCurrentUser(),
         n = !t?.isClaimed(),
-        { paymentsBlocked: r } = l.A.getCurrentConfig({ location: "153d31_3" }, { autoTrackExposure: !1 }),
+        r = (0, l.cx)(),
         i = (0, E.RK)("bogo eligibility async check"),
         { enabled: a } = (0, m.LB)(),
         _ = (0, h.BI)("bogo marketing eligibility async check"),

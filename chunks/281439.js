@@ -43,7 +43,7 @@ let F = [U.Dmq.PAST_DUE, U.Dmq.PAUSED, U.Dmq.BILLING_RETRY],
         let V = H === b.PremiumTypes.TIER_0 || H === b.PremiumTypes.TIER_1 || H === b.PremiumTypes.TIER_2;
         null == M && (M = V ? P.g.WHAT_YOU_LOSE : P.g.CONFIRM);
         let [K, Y, G, z] = (0, x.U)(M, j, r),
-            $ = (0, m.H)(),
+            $ = (0, m.Hp)(),
             X = (0, D.f9)(),
             { churnUserDiscountOffer: Q, isFetchingChurnDiscountOffer: Z } = (0, D.g5)(
                 !X || (j.status === U.Dmq.CANCELED && K !== P.g.CONFIRM_DISCOUNT),

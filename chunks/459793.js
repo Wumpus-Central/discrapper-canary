@@ -3,8 +3,8 @@ n.d(t, { kb: () => T, oO: () => I, uK: () => A });
 var r = n(627968);
 n(64700);
 var i = n(503698),
-    a = n.n(i),
-    s = n(827734),
+    s = n.n(i),
+    a = n(827734),
     o = n(582754),
     l = n(397927),
     u = n(736653),
@@ -15,13 +15,13 @@ var i = n(503698),
     p = n(985018),
     h = n(389797),
     m = n(270516),
-    g = n(480540);
-function E(e) {
+    E = n(480540);
+function g(e) {
     let { className: t } = e,
         n = (0, u.Ay)(),
-        i = (0, o.Mw)(n) ? m : g;
+        i = (0, o.Mw)(n) ? m : E;
     return (0, r.jsxs)("div", {
-        className: a()(h.kL, t),
+        className: s()(h.kL, t),
         children: [
             (0, r.jsx)(l.Heading, {
                 className: h.wx,
@@ -46,7 +46,7 @@ function E(e) {
     });
 }
 function A() {
-    return (0, r.jsx)(E, { className: h.W0 });
+    return (0, r.jsx)(g, { className: h.W0 });
 }
 function I(e) {
     let { onClose: t } = e;
@@ -61,16 +61,16 @@ function I(e) {
             (0, r.jsx)(l.$mQ, {
                 className: h.Gv,
                 "data-migration-pending": !0,
-                children: (0, r.jsx)(E, { className: h.yl }),
+                children: (0, r.jsx)(g, { className: h.yl }),
             }),
         ],
     });
 }
 function T(e) {
     let { className: t } = e;
-    return (0, _.H)()
+    return (0, _.Hp)()
         ? (0, r.jsxs)(l.ZpM, {
-              className: a()(h.ek, t),
+              className: s()(h.ek, t),
               type: l.ZpM.Types.CUSTOM,
               children: [
                   (0, r.jsx)(l.EpV, {
@@ -78,7 +78,7 @@ function T(e) {
                       width: 20,
                       height: 20,
                       className: h.XJ,
-                      color: s.A.unsafe_rawColors.YELLOW_300.css,
+                      color: a.A.unsafe_rawColors.YELLOW_300.css,
                   }),
                   (0, r.jsx)(l.Text, {
                       variant: "text-sm/normal",

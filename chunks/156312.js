@@ -68,7 +68,7 @@ function Q(e) {
             referralTrialOfferId: el,
         } = e,
         eu = (0, H.A)(),
-        ec = (0, m.H)(),
+        ec = (0, m.Hp)(),
         ed = (0, x.A)(),
         e_ = X[0],
         ef = (0, u.bG)([N.A], () => N.A.get(e_), [e_]),
