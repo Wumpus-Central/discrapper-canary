@@ -7,7 +7,6 @@ e.exports = {
     vi: "accountName__9bfb9",
     GW: "accountNameText__9bfb9",
     Y2: "platformUrlAnchor__9bfb9",
-    E4: "platformUrlIcon__9bfb9",
     yu: "metadata__9bfb9",
     OB: "connectedAppRoleAccountClickable__9bfb9",
     nk: "connectedAppRoleAccountPoweredBy__9bfb9",
