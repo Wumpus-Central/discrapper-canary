@@ -599,6 +599,7 @@ class g {
             hasFetched: e.hasFetched,
             error: !1,
             initialScrollSequenceId: m ? h.initialScrollSequenceId + 1 : h.initialScrollSequenceId,
+            suppressRowAnimationSequenceId: m ? h.suppressRowAnimationSequenceId + 1 : h.suppressRowAnimationSequenceId,
         });
     }
     addCachedMessages(e, t) {
