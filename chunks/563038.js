@@ -1,4 +1,4 @@
-i.d(t, { default: () => G });
+i.d(t, { default: () => k });
 var l = i(627968),
     n = i(64700),
     a = i(110259),
@@ -7,168 +7,172 @@ var l = i(627968),
     d = i(397927),
     o = i(890698),
     c = i(966327),
-    u = i(616755),
-    m = i(793574),
-    x = i(688810),
-    g = i(915089),
-    h = i(960736),
-    _ = i(9994),
-    p = i(398884),
-    A = i(611010),
-    j = i(427157),
-    E = i(299091),
-    v = i(287809),
-    I = i(954571),
-    f = i(486020),
-    T = i(723702),
-    C = i(837921),
-    N = i(430914),
-    y = i(260451),
-    D = i(972387),
-    S = i(539895),
-    b = i(233761),
-    L = i(652215),
-    R = i(985018),
+    u = i(964486),
+    m = i(616755),
+    x = i(793574),
+    g = i(688810),
+    h = i(915089),
+    _ = i(960736),
+    p = i(9994),
+    A = i(398884),
+    j = i(611010),
+    E = i(427157),
+    v = i(299091),
+    I = i(287809),
+    f = i(954571),
+    T = i(486020),
+    C = i(723702),
+    N = i(837921),
+    y = i(430914),
+    D = i(260451),
+    S = i(972387),
+    b = i(539895),
+    L = i(233761),
+    R = i(652215),
+    O = i(985018),
     U = i(929252);
-function O(e) {
+function G(e) {
     let { transitionState: t } = e,
-        { analyticsLocations: i } = (0, x.Ay)(m.A.INVITE_MODAL);
-    return (0, l.jsx)(x.f5, {
+        { analyticsLocations: i } = (0, g.Ay)(x.A.INVITE_MODAL);
+    return (0, l.jsx)(g.f5, {
         value: i,
         children: (0, l.jsx)(s.Modal, {
-            "aria-label": R.intl.string(R.t.u9zxnX),
-            title: R.intl.string(R.t.u9zxnX),
-            subtitle: R.intl.string(R.t.FWkU6P),
+            "aria-label": O.intl.string(O.t.u9zxnX),
+            title: O.intl.string(O.t.u9zxnX),
+            subtitle: O.intl.string(O.t.FWkU6P),
             transitionState: t,
-            onClose: () => (D.A.close(), Promise.resolve()),
+            onClose: () => (S.A.close(), Promise.resolve()),
             size: "sm",
-            actions: [{ text: R.intl.string(R.t.wcqOoF), onClick: D.A.close }],
+            actions: [{ text: O.intl.string(O.t.wcqOoF), onClick: S.A.close }],
         }),
     });
 }
-function G(e) {
+function k(e) {
     let t,
         i,
-        G,
-        { transitionState: k } = e;
-    (0, r.bG)([v.default], () => v.default.getCurrentUser()?.premiumType);
-    let M = (0, r.bG)([v.default], () => v.default.getCurrentUser()),
-        { invite: P, error: V, submitting: F } = (0, r.cf)([S.A], () => S.A.getProps()),
-        Y = (0, r.bG)([E.A], () => E.A.getInvite(P?.code ?? "") ?? null),
-        z = (0, r.bG)([E.A], () => E.A.getFriendMemberIds(P?.code ?? ""));
+        k,
+        { transitionState: M } = e;
+    (0, r.bG)([I.default], () => I.default.getCurrentUser()?.premiumType);
+    let P = (0, r.bG)([I.default], () => I.default.getCurrentUser()),
+        { invite: V, error: F, submitting: Y } = (0, r.cf)([b.A], () => b.A.getProps()),
+        z = (0, r.bG)([v.A], () => v.A.getInvite(V?.code ?? "") ?? null),
+        w = (0, r.bG)([v.A], () => v.A.getFriendMemberIds(V?.code ?? ""));
     n.useEffect(() => {
-        null != P && null != P.guild && (0, h.dR)(P.approximate_member_count ?? 0, P.code, P.guild.id);
-    }, [P, P?.approximate_member_count, P?.code, P?.guild?.id]);
-    let w = (0, h.uE)(),
-        { showFriendsInServer: H, showInviter: B } = (0, N.uS)({
+        null != V && null != V.guild && (0, _.dR)(V.approximate_member_count ?? 0, V.code, V.guild.id);
+    }, [V, V?.approximate_member_count, V?.code, V?.guild?.id]);
+    let H = (0, _.uE)(),
+        { showFriendsInServer: B, showInviter: W } = (0, y.uS)({
             location: "accept_invite_modal",
             autoTrackExposure: !0,
-            guild: P?.guild,
+            guild: V?.guild,
         }),
-        { enabled: W, discoveryGuild: J, isLoading: Z } = (0, y.qE)(P?.guild ?? null, "AcceptInviteModal"),
-        { enabled: K } = y.SH.useConfig({ location: "AcceptInviteModal" }),
-        Q = H || K ? z : null;
+        { enabled: J, discoveryGuild: Z, isLoading: K } = (0, D.qE)(V?.guild ?? null, "AcceptInviteModal"),
+        { enabled: Q } = D.SH.useConfig({ location: "AcceptInviteModal" }),
+        $ = B || Q ? w : null;
     n.useEffect(() => {
-        !__OVERLAY__ && T.isPlatformEmbedded && ((0, T.isWindows)() ? C.Ay.minimize() : C.Ay.restore(), C.Ay.focus());
-    }, []);
-    let $ = (0, g.GV)(),
-        { analyticsLocations: q } = (0, x.Ay)(m.A.INVITE_MODAL),
-        X = Q?.length ?? 0,
-        ee = X > 0;
+        !__OVERLAY__ && C.isPlatformEmbedded && ((0, C.isWindows)() ? N.Ay.minimize() : N.Ay.restore(), N.Ay.focus());
+    }, []),
+        (0, u.Ay)(() => {
+            f.default.track(R.HAw.OPEN_MODAL, { type: "Accept Invite", invite_code: V?.code, guild_id: V?.guild?.id });
+        });
+    let q = (0, h.GV)(),
+        { analyticsLocations: X } = (0, g.Ay)(x.A.INVITE_MODAL),
+        ee = $?.length ?? 0,
+        et = ee > 0;
     if (
         (n.useEffect(() => {
-            ee &&
-                P?.code != null &&
-                I.default.track(L.HAw.INVITE_FRIEND_MEMBERS_VIEWED, {
-                    invite_code: P?.code,
-                    guild_id: P.guild?.id,
-                    friend_count: X,
+            et &&
+                V?.code != null &&
+                f.default.track(R.HAw.INVITE_FRIEND_MEMBERS_VIEWED, {
+                    invite_code: V?.code,
+                    guild_id: V.guild?.id,
+                    friend_count: ee,
                 });
-        }, [ee, X, P?.code, P?.guild?.id]),
-        null == P || null == M)
+        }, [et, ee, V?.code, V?.guild?.id]),
+        null == V || null == P)
     )
         return null;
-    if (P.state === L.elq.EXPIRED || P.state === L.elq.BANNED || P.state === L.elq.ERROR)
-        return (0, l.jsx)(O, { transitionState: k });
-    if (null == P.channel) return null;
-    function et() {
-        null != P && D.A.acceptInvite(P);
-    }
+    if (V.state === R.elq.EXPIRED || V.state === R.elq.BANNED || V.state === R.elq.ERROR)
+        return (0, l.jsx)(G, { transitionState: M });
+    if (null == V.channel) return null;
     function ei() {
-        I.default.track(L.HAw.INVITE_ACCEPT_DISMISSED, { invite_code: P?.code, guild_id: P?.guild?.id }), D.A.close();
+        null != V && S.A.acceptInvite(V);
     }
-    let { guild: el, channel: en, inviter: ea, target_application: es } = P,
-        er = null == P.guild && null == P.channel && null != ea,
-        ed = B && (Q?.length ?? 0) > 0 && null != ea,
-        eo = null != el || ed;
-    if (null != es) (t = el?.name), (i = A.Ay.createFromServer(es).getCoverImageURL(1024));
-    else if (null != el) (t = el.name), (i = f.Ay.getGuildSplashURL({ id: el.id, splash: el.splash }));
-    else if (((null == (t = en.name) || "" === t) && null != ea && (t = ea.username), null == t))
+    function el() {
+        f.default.track(R.HAw.INVITE_ACCEPT_DISMISSED, { invite_code: V?.code, guild_id: V?.guild?.id }), S.A.close();
+    }
+    let { guild: en, channel: ea, inviter: es, target_application: er } = V,
+        ed = null == V.guild && null == V.channel && null != es,
+        eo = W && ($?.length ?? 0) > 0 && null != es,
+        ec = null != en || eo;
+    if (null != er) (t = en?.name), (i = j.Ay.createFromServer(er).getCoverImageURL(1024));
+    else if (null != en) (t = en.name), (i = T.Ay.getGuildSplashURL({ id: en.id, splash: en.splash }));
+    else if (((null == (t = ea.name) || "" === t) && null != es && (t = es.username), null == t))
         throw Error("no name for group DM invite");
-    let ec = (0, p.Sn)();
+    let eu = (0, A.Sn)();
     if (
-        ((G = er
-            ? R.intl.string(R.t["e/6Ogt"])
-            : R.intl.format(R.t["9sWQNT"], { usernameHook: () => (0, l.jsx)("span", { children: w }) })),
-        Z)
+        ((k = ed
+            ? O.intl.string(O.t["e/6Ogt"])
+            : O.intl.format(O.t["9sWQNT"], { usernameHook: () => (0, l.jsx)("span", { children: H }) })),
+        K)
     )
         return (0, l.jsx)(s.dWK, {
             size: "md",
-            "aria-labelledby": $,
-            transitionState: k,
-            onClose: () => (ei(), Promise.resolve()),
+            "aria-labelledby": q,
+            transitionState: M,
+            onClose: () => (el(), Promise.resolve()),
             children: (0, l.jsx)("div", { className: U.g4, children: (0, l.jsx)(s.y$y, {}) }),
         });
-    if (W && null != el)
-        return (0, l.jsx)(x.f5, {
-            value: q,
-            children: (0, l.jsx)(u.A, {
-                transitionState: k,
-                headerId: $,
-                channel: en,
-                invite: P,
-                guild: el,
+    if (J && null != en)
+        return (0, l.jsx)(g.f5, {
+            value: X,
+            children: (0, l.jsx)(m.A, {
+                transitionState: M,
+                headerId: q,
+                channel: ea,
+                invite: V,
+                guild: en,
                 splashURL: i,
-                friendMemberIds: Q ?? void 0,
-                discoveryGuild: J,
-                onClose: ei,
+                friendMemberIds: $ ?? void 0,
+                discoveryGuild: Z,
+                onClose: el,
             }),
         });
-    let eu = null != Y ? (0, _.oO)(Y) : null,
-        em = (function (e) {
+    let em = null != z ? (0, p.oO)(z) : null,
+        ex = (function (e) {
             if (null == e) return !1;
             let t = null != e.description && e.description.length > 0,
                 i = null != e.traits && e.traits.filter((e) => e.label.length > 0).length > 0,
                 l = null != e.gameApplicationIds && e.gameApplicationIds.length > 0;
             return t && (i || l);
-        })(eu);
-    return null != eu && em && null != el && (y.SH.getConfig({ location: "AcceptInviteModal.hasProfile" }), K)
-        ? (0, l.jsx)(x.f5, {
-              value: q,
-              children: (0, l.jsx)(u.H, {
-                  transitionState: k,
-                  headerId: $,
-                  channel: en,
-                  invite: P,
-                  guild: el,
+        })(em);
+    return null != em && ex && null != en && (D.SH.getConfig({ location: "AcceptInviteModal.hasProfile" }), Q)
+        ? (0, l.jsx)(g.f5, {
+              value: X,
+              children: (0, l.jsx)(m.H, {
+                  transitionState: M,
+                  headerId: q,
+                  channel: ea,
+                  invite: V,
+                  guild: en,
                   splashURL: i,
-                  friendMemberIds: Q ?? void 0,
-                  profile: eu,
-                  onClose: ei,
+                  friendMemberIds: $ ?? void 0,
+                  profile: em,
+                  onClose: el,
               }),
           })
-        : (0, l.jsx)(x.f5, {
-              value: q,
+        : (0, l.jsx)(g.f5, {
+              value: X,
               children: (0, l.jsx)(s.dWK, {
                   size: null != i ? "xl" : "sm",
-                  "aria-labelledby": $,
-                  "aria-label": el?.name ?? en?.name ?? "",
-                  transitionState: k,
-                  onClose: () => (ei(), Promise.resolve()),
+                  "aria-labelledby": q,
+                  "aria-label": en?.name ?? ea?.name ?? "",
+                  transitionState: M,
+                  onClose: () => (el(), Promise.resolve()),
                   trackingProps: {
                       impression: {
                           impressionName: a.ImpressionNames.INVITE_ACCEPT,
-                          impressionProperties: { guild_id: el?.id, invite_code: P.code },
+                          impressionProperties: { guild_id: en?.id, invite_code: V.code },
                       },
                   },
                   children: (0, l.jsxs)("div", {
@@ -177,16 +181,16 @@ function G(e) {
                           (0, l.jsxs)("div", {
                               className: U.FG,
                               children: [
-                                  ed &&
+                                  eo &&
                                       (0, l.jsxs)("div", {
                                           className: U.$N,
                                           children: [
-                                              (0, l.jsx)(c.A, { user: new j.A(ea), size: d._3J.SIZE_20 }),
+                                              (0, l.jsx)(c.A, { user: new E.A(es), size: d._3J.SIZE_20 }),
                                               (0, l.jsx)(d.Text, {
                                                   tag: "span",
                                                   variant: "text-md/medium",
                                                   color: "text-subtle",
-                                                  children: R.intl.format(R.t.ri1ubC, {
+                                                  children: O.intl.format(O.t.ri1ubC, {
                                                       usernameHook: (e, t) =>
                                                           (0, l.jsx)(
                                                               d.Text,
@@ -194,7 +198,7 @@ function G(e) {
                                                                   variant: "text-md/semibold",
                                                                   color: "text-default",
                                                                   tag: "span",
-                                                                  children: ea.username,
+                                                                  children: es.username,
                                                               },
                                                               t,
                                                           ),
@@ -206,38 +210,38 @@ function G(e) {
                                       className: U.Ro,
                                       children: [
                                           (0, l.jsx)("div", {
-                                              id: $,
+                                              id: q,
                                               children: (0, l.jsx)(o.A, {
-                                                  invite: P,
-                                                  disableUser: eo,
-                                                  error: V,
-                                                  friendMemberIds: Q,
-                                                  showInvitedByHeader: !ed,
+                                                  invite: V,
+                                                  disableUser: ec,
+                                                  error: F,
+                                                  friendMemberIds: $,
+                                                  showInvitedByHeader: !eo,
                                               }),
                                           }),
                                           (0, l.jsxs)("div", {
                                               children: [
-                                                  ec ? (0, l.jsx)(b.A, {}) : null,
+                                                  eu ? (0, l.jsx)(L.A, {}) : null,
                                                   (0, l.jsxs)(s.BJc, {
                                                       gap: 8,
                                                       align: "center",
                                                       children: [
-                                                          null == es
+                                                          null == er
                                                               ? (0, l.jsx)(s.$nd, {
-                                                                    onClick: et,
-                                                                    loading: F,
-                                                                    disabled: ec,
+                                                                    onClick: ei,
+                                                                    loading: Y,
+                                                                    disabled: eu,
                                                                     variant: "primary",
                                                                     fullWidth: !0,
-                                                                    text: ec ? R.intl.string(R.t.ZNCziL) : G,
+                                                                    text: eu ? O.intl.string(O.t.ZNCziL) : k,
                                                                     icon:
-                                                                        ec || null == M
+                                                                        eu || null == P
                                                                             ? void 0
                                                                             : () =>
                                                                                   (0, l.jsx)(c.A, {
                                                                                       "aria-hidden": !0,
                                                                                       size: d._3J.SIZE_16,
-                                                                                      user: M,
+                                                                                      user: P,
                                                                                       className: U.Mp,
                                                                                   }),
                                                                 })
@@ -246,22 +250,22 @@ function G(e) {
                                                                     children: [
                                                                         (0, l.jsx)(s.$nd, {
                                                                             variant: "secondary",
-                                                                            text: R.intl.string(R.t.eylRaY),
-                                                                            onClick: et,
-                                                                            loading: F,
+                                                                            text: O.intl.string(O.t.eylRaY),
+                                                                            onClick: ei,
+                                                                            loading: Y,
                                                                         }),
                                                                         (0, l.jsx)(s.$nd, {
                                                                             variant: "primary",
-                                                                            text: R.intl.string(R.t.RscU7I),
-                                                                            onClick: et,
-                                                                            loading: F,
+                                                                            text: O.intl.string(O.t.RscU7I),
+                                                                            onClick: ei,
+                                                                            loading: Y,
                                                                         }),
                                                                     ],
                                                                 }),
                                                           (0, l.jsx)(s.QWc, {
-                                                              onClick: ei,
+                                                              onClick: el,
                                                               variant: "secondary",
-                                                              text: R.intl.string(R.t.ndsK4Z),
+                                                              text: O.intl.string(O.t.ndsK4Z),
                                                               textVariant: "text-sm/medium",
                                                           }),
                                                       ],
