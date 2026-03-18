@@ -892,9 +892,8 @@ class C extends f.A {
                 "H265" === n.name &&
                     (n.params["software-h265"] = this.experimentFlags.has(I.fd.H265_HARDWARE_ONLY) ? "0" : "1"),
                 (n.params["hardware-h264"] = this.useElectronVideo ? "1" : "0"),
-                this.experimentFlags.has(I.fd.USE_H264_MF_DECODER) &&
-                    ((n.params["h264-mf"] = "1"),
-                    this.experimentFlags.has(I.fd.H264_MF_ZERO_COPY) && (n.params["h264-mf-zero-copy"] = "1")),
+                (n.params["h264-mf"] = "1"),
+                this.experimentFlags.has(I.fd.H264_MF_ZERO_COPY) && (n.params["h264-mf-zero-copy"] = "1"),
                 this.experimentFlags.has(I.fd.USE_LIBOPENH264_DECODER))
             ) {
                 let e = (0, g.XH)();

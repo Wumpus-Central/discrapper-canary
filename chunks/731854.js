@@ -266,7 +266,6 @@ var Y = (function (e) {
             (e.H265_HARDWARE_ONLY = "h265_hardware_only"),
             (e.H265_HARDWARE_DECODE_AVAILABLE = "h265_hardware_decode_available"),
             (e.WMF_GPU_ENCODE = "wmf_gpu_encode"),
-            (e.USE_H264_MF_DECODER = "use_h264_mf_decoder"),
             (e.H264_MF_ZERO_COPY = "h264_mf_zero_copy"),
             (e.USE_LIBOPENH264_DECODER = "use_libopenh264_decoder"),
             (e.SWALLOW_VOLUME_ONLY_SPEAKING_EVENTS = "swallow_volume_only_speaking_events"),
