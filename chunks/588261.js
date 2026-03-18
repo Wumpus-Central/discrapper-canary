@@ -299,6 +299,14 @@ let { Themes: r } = n(680049).zv,
                     [r.DARKER]: { raw: "GREEN_NEW_50", opacity: 1 },
                 },
             },
+            CONTROL_CONNECTED_BORDER_ACTIVE: {
+                "mobile-visual-refresh": {
+                    [r.DARK]: { raw: "OPACITY_WHITE_8", opacity: 0.0784313725490196 },
+                    [r.LIGHT]: { raw: "OPACITY_WHITE_8", opacity: 0.0784313725490196 },
+                    [r.MIDNIGHT]: { raw: "OPACITY_WHITE_8", opacity: 0.0784313725490196 },
+                    [r.DARKER]: { raw: "OPACITY_WHITE_8", opacity: 0.0784313725490196 },
+                },
+            },
             CONTROL_CONNECTED_BORDER_DEFAULT: {
                 "mobile-visual-refresh": {
                     [r.DARK]: { raw: "OPACITY_WHITE_8", opacity: 0.0784313725490196 },
@@ -329,6 +337,14 @@ let { Themes: r } = n(680049).zv,
                     [r.LIGHT]: { raw: "RED_NEW_50", opacity: 1 },
                     [r.MIDNIGHT]: { raw: "RED_NEW_50", opacity: 1 },
                     [r.DARKER]: { raw: "RED_NEW_50", opacity: 1 },
+                },
+            },
+            CONTROL_CRITICAL_PRIMARY_BORDER_ACTIVE: {
+                "mobile-visual-refresh": {
+                    [r.DARK]: { raw: "OPACITY_WHITE_8", opacity: 0.0784313725490196 },
+                    [r.LIGHT]: { raw: "OPACITY_WHITE_8", opacity: 0.0784313725490196 },
+                    [r.MIDNIGHT]: { raw: "OPACITY_WHITE_8", opacity: 0.0784313725490196 },
+                    [r.DARKER]: { raw: "OPACITY_WHITE_8", opacity: 0.0784313725490196 },
                 },
             },
             CONTROL_CRITICAL_PRIMARY_BORDER_DEFAULT: {
@@ -425,6 +441,14 @@ let { Themes: r } = n(680049).zv,
                     [r.LIGHT]: { raw: "BLURPLE_50", opacity: 1 },
                     [r.MIDNIGHT]: { raw: "BLURPLE_50", opacity: 1 },
                     [r.DARKER]: { raw: "BLURPLE_50", opacity: 1 },
+                },
+            },
+            CONTROL_PRIMARY_BORDER_ACTIVE: {
+                "mobile-visual-refresh": {
+                    [r.DARK]: { raw: "OPACITY_WHITE_8", opacity: 0.0784313725490196 },
+                    [r.LIGHT]: { raw: "OPACITY_WHITE_8", opacity: 0.0784313725490196 },
+                    [r.MIDNIGHT]: { raw: "OPACITY_WHITE_8", opacity: 0.0784313725490196 },
+                    [r.DARKER]: { raw: "OPACITY_WHITE_8", opacity: 0.0784313725490196 },
                 },
             },
             CONTROL_PRIMARY_BORDER_DEFAULT: {
