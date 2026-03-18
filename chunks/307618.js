@@ -6,19 +6,19 @@ let i = [
         category: "wave",
         categoryMessageKey: r.t.GrrYHn,
         keywords: ["wave", "waving", "hand", "hello", "hi", "hey"],
-        kaomojis: ["ヾ(＾-＾)ノ", "ヽ(•̀ᴗ•́)ノ", "ヾ(＾∇＾)", "|˶˙ᵕ˙ )ﾉﾞ", "☆ﾐ(o*･ω･)ﾉ"],
+        kaomojis: ["ヾ(＾-＾)ノ", "ヽ(•̀ᴗ•́)ノ", "ヾ(＾∇＾)", "|˶˙ᵕ˙ )ﾉﾞ", "☆ﾐ(o*･ω･)ﾉ", "(｡･ω･｡)ﾉ♡"],
     },
     {
         category: "happy",
         categoryMessageKey: r.t.Tj0FXM,
         keywords: ["happy", "smile", "smiling", "joy"],
-        kaomojis: ["^▽^", "⸂⸂⸜(രᴗര๑)⸝⸃⸃", "(◍•ᴗ•◍)", "(◕‿◕)", "꒰｡•◡•｡꒱", "(\xb4▽`)", "ദ്ദി ( ᵔ ᗜ ᵔ )"],
+        kaomojis: ["^▽^", "⸂⸂⸜(രᴗര๑)⸝⸃⸃", "(◍•ᴗ•◍)", "(◕‿◕)", "꒰｡•◡•｡꒱", "(\xb4▽`)", "ദ്ദി ( ᵔ ᗜ ᵔ )", "( ͡• ͜ʖ ͡• )"],
     },
     {
         category: "excited",
         categoryMessageKey: r.t.gQsrOG,
         keywords: ["excited", "enthusiastic", "thrilled", "cheerful", "hype", "yay"],
-        kaomojis: ["(๑˃ᴗ˂)ﻭ", "ᕕ( ᐛ )ᕗ", "(ﾉ◕ヮ◕)ﾉ･ﾟ✧", "(☆▽☆)", "(੭ ˙ᗜ˙)੭", "(ﾉ≧∀≦)ﾉ"],
+        kaomojis: ["(๑˃ᴗ˂)ﻭ", "ᕕ( ᐛ )ᕗ", "(ﾉ◕ヮ◕)ﾉ･ﾟ✧", "(☆▽☆)", "(੭ ˙ᗜ˙)੭", "(ﾉ≧∀≦)ﾉ", "ദ്ദി◝ ⩊ ◜.ᐟ"],
     },
     {
         category: "cute",
@@ -44,8 +44,17 @@ let i = [
     {
         category: "cool",
         categoryMessageKey: r.t.X4O8dY,
-        keywords: ["cool", "chill", "awesome", "swag"],
-        kaomojis: ["(｡•̀ᴗ-)✧", "(⌐■_■)", "ᕦ(\xf2_\xf3ˇ)ᕤ", "(•̀ᴗ•́)و ̑̑", "( ˘⌣˘)", "(\xac‿\xac )✧"],
+        keywords: ["cool", "chill", "awesome", "swag", "mischievous", "smug"],
+        kaomojis: [
+            "(｡•̀ᴗ-)✧",
+            "(⌐■_■)",
+            "ᕦ(\xf2_\xf3ˇ)ᕤ",
+            "(•̀ᴗ•́)و ̑̑",
+            "(\xac‿\xac )✧",
+            "( ͡\xb0 ͜ʖ ͡\xb0)",
+            "(≖ᴗ≖✿)",
+            "( ͡ಠ ͜ʖ ͡ಠ)",
+        ],
     },
     {
         category: "confused",
