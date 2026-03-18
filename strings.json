@@ -23285,7 +23285,7 @@
   "yvUaHi": "Plus applicable taxes",
   "wCkwJf": "You are saving **!!{percentOff}!!% off** your first {intervalCount, plural, one { month} other { months} }!",
   "7LeLN4": "Nitro Trial applied",
-  "IAsfR5": "Enjoy **Nitro for {daysCount, plural, one {Day} other { Days} }** before getting charged!",
+  "IAsfR5": "Enjoy **Nitro for {daysCount, plural, one { Day} other { Days} }** before getting charged!",
   "U2CmMW": "!!{priceAmount}!! now",
   "JsSin7": "!!{priceRate}!! after **{intervalCount, plural, one {one month} =2 {two months} =3 {three months} other { months} }**",
   "Fjpyfj": "Promo",
