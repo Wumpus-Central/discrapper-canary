@@ -1,46 +1,47 @@
-n.d(t, { f: () => g });
-var i = n(627968);
-n(64700);
-var s = n(444802),
-    l = n(975571),
-    a = n(524738),
-    r = n(421248),
-    o = n(42765),
-    d = n(871930),
-    c = n(531525),
-    u = n(652215),
-    _ = n(985018),
-    m = n(456144);
-function g() {
-    let e = (0, s.WX)(),
-        t = [
-            {
-                title: _.intl.string(_.t.GYpoAq),
-                component: r.Z,
-                orientation: "vertical",
-                setting: c.H.SEXUALLY_EXPLICIT_MEDIA_REDACTION,
-            },
-            {
-                title: _.intl.string(_.t["16/3Bi"]),
-                component: o.q,
-                orientation: "vertical",
-                setting: c.H.GORE_MEDIA_REDACTION,
-            },
-        ];
-    return (0, i.jsxs)(d.h, {
-        setting: c.H.SENSITIVE_CONTENT_FILTERS,
+n.d(t, { f: () => x });
+var i = n(627968),
+    s = n(64700),
+    l = n(252452),
+    a = n(444802),
+    r = n(975571),
+    o = n(524738),
+    d = n(421248),
+    c = n(42765),
+    u = n(871930),
+    _ = n(531525),
+    m = n(652215),
+    g = n(985018),
+    A = n(456144);
+function x() {
+    let e = (0, a.WX)(),
+        t = s.useMemo(
+            () => [
+                {
+                    title: g.intl.string(g.t.GYpoAq),
+                    component: d.Z,
+                    orientation: "vertical",
+                    setting: _.H.SEXUALLY_EXPLICIT_MEDIA_REDACTION,
+                },
+                {
+                    title: g.intl.string(g.t["16/3Bi"]),
+                    component: c.q,
+                    orientation: "vertical",
+                    setting: _.H.GORE_MEDIA_REDACTION,
+                },
+            ],
+            [],
+        ),
+        n = s.useCallback((e) => {
+            l.A.setSection(m.nc_.CONTENT_AND_SOCIAL, e);
+        }, []);
+    return (0, i.jsxs)(u.h, {
+        setting: _.H.SENSITIVE_CONTENT_FILTERS,
         children: [
-            (0, i.jsx)(d._, {
-                header: _.intl.string(_.t["Hj/But"]),
-                description: _.intl.format(_.t.dliU4j, { learnMoreLink: l.A.getArticleURL(e) }),
+            (0, i.jsx)(u._, {
+                header: g.intl.string(g.t["Hj/But"]),
+                description: g.intl.format(g.t.dliU4j, { learnMoreLink: r.A.getArticleURL(e) }),
             }),
-            (0, i.jsx)(a.A, {
-                parentSetting: c.H.CONTENT_SOCIAL,
-                settingsSection: u.nc_.CONTENT_AND_SOCIAL,
-                tabs: t,
-                orientation: "vertical",
-                tabsClassName: m.v,
-            }),
+            (0, i.jsx)(o._, { tabs: t, onTabChange: n, orientation: "vertical", tabsClassName: A.v }),
         ],
     });
 }
