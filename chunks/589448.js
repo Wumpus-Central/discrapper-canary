@@ -397,6 +397,7 @@ let { Themes: r } = n(680049).zv,
                 [r.LIGHT]: { raw: "NEUTRAL_2", opacity: 1 },
                 [r.MIDNIGHT]: { raw: "NEUTRAL_97", opacity: 1 },
                 [r.DARKER]: { raw: "NEUTRAL_86", opacity: 1 },
+                gradient: { light: { color: "WHITE_500", opacity: 0.8 }, dark: { color: "BLACK_500", opacity: 0.7 } },
             },
             CHANNEL_ICON: {
                 category: "generic",
