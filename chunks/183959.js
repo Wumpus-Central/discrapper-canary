@@ -8,4 +8,5 @@ e.exports = {
     oR: "toast__5be3e",
     g$: "friendRequestToastContainer__5be3e",
     $J: "friendRequestToast__5be3e",
+    i3: "xIcon__5be3e",
 };

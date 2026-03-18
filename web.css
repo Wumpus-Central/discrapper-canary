@@ -34656,16 +34656,28 @@ html:not(.chat-input) .inputInner_b1f01d {
 }
 
 .friendRequestToast__5be3e {
-    align-items: center;
     background-color: var(--background-surface-highest);
     border: 1px solid var(--border-normal);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-medium);
-    display: flex;
     flex-direction: row;
     gap: 8px;
-    justify-content: center;
     padding: 12px
+}
+
+.friendRequestToast__5be3e,
+.xIcon__5be3e {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.xIcon__5be3e {
+    background-color: var(--background-code-deletion);
+    border-radius: 8px;
+    flex-shrink: 0;
+    height: 36px;
+    width: 36px
 }
 
 .container__10737 {
