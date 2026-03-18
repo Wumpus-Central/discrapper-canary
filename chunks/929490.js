@@ -78,6 +78,7 @@ class a extends r.A {
                     steamReleaseStatus: t.steam_release_status,
                     reviews: s(t.reviews),
                     steam_id: t.steam_id,
+                    announcementsChannelId: t.announcements_channel_id,
                 });
     }
 }
