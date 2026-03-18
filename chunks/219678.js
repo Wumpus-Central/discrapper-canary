@@ -1,37 +1,37 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => _ });
 var r = n(439372),
     i = n(217222),
     s = n(353835),
     a = n(723702),
-    o = n(751496),
-    l = n(532055);
-let u = !1,
-    c = null,
-    d = null;
-async function _() {
-    if ((0, a.isWindows)() && !s.A.getAppHardwareAccelerationEnabled() && window.DiscordNative?.settings?.set != null) {
-        let { enabled: e } = (0, o.b)({ location: "updateSwitch" });
-        await window.DiscordNative.settings.set("enableH264MFElectron", e), (c = e);
-        let { enabled: t } = (0, l.W)({ location: "updateSwitch" });
-        await window.DiscordNative.settings.set("enableH264MFZeroCopy", t), (d = t);
+    o = n(532055);
+let l = !1,
+    u = null;
+async function c() {
+    if (
+        (0, a.isWindows)() &&
+        (window.DiscordNative?.settings?.set != null &&
+            (await window.DiscordNative.settings.set("enableH264MFElectron", !0)),
+        !s.A.getAppHardwareAccelerationEnabled() && window.DiscordNative?.settings?.set != null)
+    ) {
+        let { enabled: e } = (0, o.W)({ location: "updateSwitch" });
+        await window.DiscordNative.settings.set("enableH264MFZeroCopy", e), (u = e);
     }
 }
-class f extends r.A {
+class d extends r.A {
     stores = new Map().set(i.A, () => {
-        if (u && !s.A.getAppHardwareAccelerationEnabled()) {
-            let { enabled: e } = (0, o.b)({ location: "experimentStoreUpdate" }),
-                { enabled: t } = (0, l.W)({ location: "experimentStoreUpdate" });
-            (c !== e || d !== t) && _();
+        if (l && !s.A.getAppHardwareAccelerationEnabled()) {
+            let { enabled: e } = (0, o.W)({ location: "experimentStoreUpdate" });
+            u !== e && c();
         }
     });
     actions = {
         POST_CONNECTION_OPEN: async () => {
-            u || window.DiscordNative?.settings?.set == null || ((0, a.isWindows)() && ((u = !0), await _()));
+            l || window.DiscordNative?.settings?.set == null || ((0, a.isWindows)() && ((l = !0), await c()));
         },
         LOGOUT: () => {
-            (u = !1), (c = null), (d = null);
+            (l = !1), (u = null);
         },
     };
 }
-let p = new f();
+let _ = new d();
