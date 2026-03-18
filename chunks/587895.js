@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => K }), n(321073);
+n.d(t, { A: () => W }), n(321073);
 var r = n(311907),
     i = n(73153),
     s = n(611010);
@@ -37,44 +37,40 @@ function m(e) {
     for (let e of t) p(e);
 }
 function E(e) {
-    let { application: t } = e;
-    p(t);
-}
-function g(e) {
     let {
         data: { applications: t },
     } = e;
     if (null == t || 0 === t.length) return !1;
     for (let e of t) p(e);
 }
-function A(e) {
+function g(e) {
     let {
         storefront: { application: t },
     } = e;
     if (null == t) return !1;
     p(t);
 }
-function I(e) {
+function A(e) {
     let { applications: t } = e;
     for (let e of t) p(new s.Ay(e));
 }
-function T(e) {
+function I(e) {
     let { applicationId: t } = e,
         n = d.get(t);
     return d.set(t, !0), !0 !== n;
 }
+function T(e) {
+    let { application: t } = e;
+    y(t);
+}
 function S(e) {
     let { application: t } = e;
-    v(t);
+    y(t);
 }
 function y(e) {
-    let { application: t } = e;
-    v(t);
-}
-function v(e) {
     p(s.Ay.createFromServer(e));
 }
-function N(e) {
+function v(e) {
     let { userId: t, applicationId: n } = e,
         r = _.botUserIdToAppUsage[t];
     null == r
@@ -89,12 +85,12 @@ function N(e) {
             delete _.botUserIdToAppUsage[t];
         }
 }
-function C(e) {
+function N(e) {
     let { applicationId: t } = e,
         n = d.get(t);
     return d.set(t, !1), !1 !== n;
 }
-function R(e) {
+function C(e) {
     let { applicationIds: t } = e,
         n = !1;
     for (let e of t) {
@@ -103,25 +99,25 @@ function R(e) {
     }
     return n;
 }
-function O(e) {
+function R(e) {
     let { libraryApplications: t } = e;
     for (let e of t) p(s.Ay.createFromServer(e.application));
 }
-function b(e) {
+function O(e) {
     let { applications: t } = e;
     for (let e of t) p(s.Ay.createFromServer(e));
 }
-function D(e) {
+function b(e) {
     let { userProfile: t } = e,
         { user: n, application: r } = t;
-    n.bot && null != r && N({ userId: n.id, applicationId: r.id });
+    n.bot && null != r && v({ userId: n.id, applicationId: r.id });
 }
-function L(e) {
+function D(e) {
     let { botUserId: t } = e,
         n = _.botUserIdToAppUsage[t];
     null != n && (_.botUserIdToAppUsage[t] = { ...n, lastUsedMs: Date.now() });
 }
-function w(e) {
+function L(e) {
     let { applicationIds: t } = e,
         n = !1;
     for (let e of t) {
@@ -130,19 +126,19 @@ function w(e) {
     }
     return n;
 }
-function M(e) {
+function w(e) {
     let { entitlements: t } = e,
         n = !1;
     for (let { sku: e } of t) e?.application != null && (p(s.Ay.createFromServer(e.application)), (n = !0));
     return n;
 }
-function x(e) {
+function M(e) {
     let { guildId: t, applications: n } = e,
         r = [];
     for (let e of n) r.push(e.id), p(s.Ay.createFromServer(e));
     l.set(t, r);
 }
-function P(e) {
+function x(e) {
     let { payments: t } = e,
         n = new Set();
     for (let e of t) {
@@ -151,52 +147,52 @@ function P(e) {
     }
     return n.size > 0;
 }
-function k(e) {
+function P(e) {
     let { payment: t } = e;
     if (t.sku?.application == null) return !1;
     p(s.Ay.createFromServer(t.sku.application));
 }
-function U(e) {
+function k(e) {
     let { giftCode: t } = e;
     if (t.store_listing?.sku.application == null) return !1;
     p(s.Ay.createFromServer(t.store_listing.sku.application));
 }
-function G(e) {
+function U(e) {
     let { invite: t } = e;
     if (null == t.target_application) return !1;
     p(s.Ay.createFromServer(t.target_application));
 }
-function F(e) {
+function G(e) {
     let { storeListing: t } = e;
     if (null == t.sku.application) return !1;
     p(s.Ay.createFromServer(t.sku.application));
 }
-function V(e) {
+function F(e) {
     let { messages: t } = e;
-    t.forEach((e) => B(e));
+    t.forEach((e) => V(e));
 }
-function B(e) {
+function V(e) {
     e.attachments?.forEach((e) => {
         null != e.application && p(s.Ay.createFromServer(e.application));
     });
 }
-function H(e) {
+function B(e) {
     let { application: t } = e;
     p(s.Ay.createFromServer(t));
 }
-function j(e) {
+function H(e) {
     e.tokens.forEach((e) => {
         p(s.Ay.createFromServer(e.application));
         let t = e.application.bot;
-        null != t && N({ userId: t.id, applicationId: e.application.id });
+        null != t && v({ userId: t.id, applicationId: e.application.id });
     });
 }
-function Y(e) {
+function j(e) {
     e.items.forEach((e) => {
         null != e.application && p(s.Ay.createFromServer(e.application));
     });
 }
-class W extends r.Ay.PersistedStore {
+class Y extends r.Ay.PersistedStore {
     static displayName = "ApplicationStore";
     static persistKey = "ApplicationStore";
     initialize(e) {
@@ -250,36 +246,35 @@ class W extends r.Ay.PersistedStore {
         if (null != e) return _.botUserIdToAppUsage[e]?.applicationId;
     }
 }
-let K = new W(i.h, {
+let W = new Y(i.h, {
     LOGOUT: h,
-    OVERLAY_INITIALIZE: I,
-    APPLICATION_FETCH: T,
-    APPLICATION_FETCH_SUCCESS: y,
-    APPLICATION_FETCH_FAIL: C,
-    APPLICATIONS_FETCH: R,
-    APPLICATIONS_FETCH_SUCCESS: b,
-    APPLICATIONS_FETCH_FAIL: w,
-    APPLICATION_UPDATE: S,
-    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: M,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: M,
-    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: M,
-    GUILD_APPLICATIONS_FETCH_SUCCESS: x,
-    BILLING_PAYMENTS_FETCH_SUCCESS: P,
-    PAYMENT_UPDATE: k,
-    INVITE_RESOLVE_SUCCESS: G,
-    GIFT_CODE_RESOLVE_SUCCESS: U,
-    LIBRARY_FETCH_SUCCESS: O,
-    STORE_LISTING_FETCH_SUCCESS: F,
-    LOAD_MESSAGES_SUCCESS: V,
-    USER_PROFILE_FETCH_SUCCESS: D,
-    APP_DM_OPEN: L,
-    USER_AUTHORIZED_APPS_UPDATE: j,
-    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: Y,
-    OAUTH2_TOKEN_CREATE: H,
+    OVERLAY_INITIALIZE: A,
+    APPLICATION_FETCH: I,
+    APPLICATION_FETCH_SUCCESS: S,
+    APPLICATION_FETCH_FAIL: N,
+    APPLICATIONS_FETCH: C,
+    APPLICATIONS_FETCH_SUCCESS: O,
+    APPLICATIONS_FETCH_FAIL: L,
+    APPLICATION_UPDATE: T,
+    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: w,
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: w,
+    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: w,
+    GUILD_APPLICATIONS_FETCH_SUCCESS: M,
+    BILLING_PAYMENTS_FETCH_SUCCESS: x,
+    PAYMENT_UPDATE: P,
+    INVITE_RESOLVE_SUCCESS: U,
+    GIFT_CODE_RESOLVE_SUCCESS: k,
+    LIBRARY_FETCH_SUCCESS: R,
+    STORE_LISTING_FETCH_SUCCESS: G,
+    LOAD_MESSAGES_SUCCESS: F,
+    USER_PROFILE_FETCH_SUCCESS: b,
+    APP_DM_OPEN: D,
+    USER_AUTHORIZED_APPS_UPDATE: H,
+    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: j,
+    OAUTH2_TOKEN_CREATE: B,
     WISHLIST_FETCH_SUCCESS: m,
     WISHLIST_ADD_SKU_SUCCESS: m,
     WISHLIST_REMOVE_SKU_SUCCESS: m,
-    SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: A,
-    SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_FETCH_SUCCESS: E,
-    WISHLIST_RECOMMENDATIONS_FETCH_SUCCESS: g,
+    SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: g,
+    WISHLIST_RECOMMENDATIONS_FETCH_SUCCESS: E,
 });

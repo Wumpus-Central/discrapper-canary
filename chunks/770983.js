@@ -128,6 +128,6 @@ function y(e) {
 }
 function C(e) {
     let { userId: t, numWishlistItemsToRecommend: n, ...l } = e,
-        { recommendations: a, status: s } = (0, j.U)({ userId: t, numItems: n, source: I.B5.USER_PROFILE });
+        { recommendations: a, status: s } = (0, j.Ul)({ userId: t, numItems: n, source: I.B5.USER_PROFILE });
     return (0, i.jsx)(y, { isLoading: "loading" === s, recommendations: a, numWishlistItemsToRecommend: n, ...l });
 }

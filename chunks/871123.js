@@ -1,45 +1,43 @@
 "use strict";
 n.d(t, {
-    Cv: () => I,
-    OY: () => y,
-    Q6: () => v,
-    Xg: () => p,
-    Ye: () => N,
-    bF: () => h,
-    fq: () => T,
-    jz: () => E,
-    pV: () => f,
-    sq: () => g,
-    ty: () => A,
-    wH: () => C,
-    xf: () => S,
-    zf: () => m,
+    Cv: () => g,
+    OY: () => T,
+    Q6: () => S,
+    Xg: () => f,
+    Ye: () => y,
+    bF: () => p,
+    fq: () => A,
+    jz: () => m,
+    pV: () => _,
+    sq: () => E,
+    wH: () => v,
+    xf: () => I,
+    zf: () => h,
 });
 var r = n(735438),
     i = n.n(r),
-    s = n(260811),
+    s = n(310209),
     a = n(611010),
     o = n(71393),
     l = n(371794),
     u = n(998218),
-    c = n(79871),
-    d = n(188275),
-    _ = n(652215);
-let f = l.QB ? "webp" : "jpg";
+    c = n(188275),
+    d = n(652215);
+let _ = l.QB ? "webp" : "jpg";
+function f(e) {
+    return null != e && c.Pc.has(e.id);
+}
 function p(e) {
-    return null != e && d.Pc.has(e.id);
+    return null != e && e.productLine === d.EZt.SOCIAL_LAYER_GAME_ITEM;
 }
-function h(e) {
-    return null != e && e.productLine === _.EZt.SOCIAL_LAYER_GAME_ITEM;
+function h() {
+    let e = o.A.getGuild(c.v8);
+    return null != e && e.features.has(d.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ? e.id : c.Kf;
 }
-function m() {
-    let e = o.A.getGuild(d.v8);
-    return null != e && e.features.has(_.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ? e.id : d.Kf;
+function m(e) {
+    return e.id === h() || (e.features?.has(d.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1);
 }
 function E(e) {
-    return e.id === m() || (e.features?.has(_.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1);
-}
-function g(e) {
     return {
         applicationId: e.application_id,
         title: e.title,
@@ -62,19 +60,7 @@ function g(e) {
         application: null != e.application ? a.Ay.createFromServer(e.application) : void 0,
     };
 }
-function A(e) {
-    return {
-        skus: e.skus.map((e) => s.A.createFromServer(e)),
-        skusToRecommendationReasons: Object.fromEntries(
-            Object.entries(e.skus_to_user_ids).map((e) => {
-                let [t, n] = e;
-                return [t, n.map((e) => ({ userId: e.user_id, reason: e.reason }))];
-            }),
-        ),
-        application: a.Ay.createFromServer(e.application),
-    };
-}
-function I(e, t) {
+function g(e, t) {
     if (
         null == t ||
         e?.tenantMetadata?.socialLayer?.carouselItems == null ||
@@ -89,38 +75,48 @@ function I(e, t) {
               primaryIconLabel: n.label,
           };
 }
-function T(e) {
+function A(e) {
     let t = e?.applicationId,
         n = e?.tenantMetadata?.socialLayer?.cardImageAssetId ?? e?.thumbnailAssetId;
     if (null != n && null != t) return u.A.toURLSafe((0, l.YE)(t, n, 512, "webp"));
 }
-function S(e) {
+function I(e) {
     if (e?.tenantMetadata?.socialLayer?.cardBackgroundImageAssetId != null && e?.applicationId != null)
         return u.A.toURLSafe(
-            (0, l.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, f),
+            (0, l.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, _),
         );
 }
-function y(e, t) {
-    return `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${_.BVt.GAME_SHOP(e, t.id, t.slug)}`;
+function T(e, t) {
+    return `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${d.BVt.GAME_SHOP(e, t.id, t.slug)}`;
 }
-function v(e, t) {
-    return `${y(e, t)}
+function S(e, t) {
+    return `${T(e, t)}
 
 `;
 }
-function N(e) {
+function y(e) {
     let t = o.A.getGuild(e);
-    return null != t && E(t);
+    return null != t && m(t);
 }
-function C(e, t, n) {
+function v(e, t, n) {
     return 0 === e.length
         ? { hasWishlist: !1, hasPopular: !1 }
         : {
-              hasWishlist: e.some((e) => t[e.skuId]?.some((e) => e.reason === c.G.WISHLIST && n.has(e.userId))),
-              hasPopular: e.some(
-                  (e) =>
-                      null == t[e.skuId] ||
-                      t[e.skuId].every((e) => (e.reason === c.G.RECOMMENDATION && n.has(e.userId)) || !n.has(e.userId)),
+              hasWishlist: e.some((e) =>
+                  Object.entries(t[e.id] ?? {}).some((e) => {
+                      let [t, r] = e;
+                      return r === s.j.WISHLIST && n.has(t);
+                  }),
               ),
+              hasPopular: e.some((e) => {
+                  let r = t[e.id];
+                  return (
+                      null == r ||
+                      Object.entries(r).every((e) => {
+                          let [t, r] = e;
+                          return (r === s.j.RECOMMENDATION && n.has(t)) || !n.has(t);
+                      })
+                  );
+              }),
           };
 }

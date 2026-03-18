@@ -1557,7 +1557,6 @@ let e_ = "",
         STORE_LISTING: (e) => `/store/listings/${e}`,
         STORE_LISTINGS_SKU: (e) => `/store/skus/${e}/listings`,
         SOCIAL_LAYER_APPLICATION_STOREFRONT: (e) => `/partner-sdk/guilds/${e}/application-storefront`,
-        SOCIAL_LAYER_APPLCIATION_RECOMMENDATIONS: (e) => `/partner-sdk/applications/${e}/skus/recommendations`,
         SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU: (e, t) => `/partner-sdk/guilds/${e}/application-storefront/skus/${t}`,
         SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_ELIGIBILITY: (e, t) =>
             `/partner-sdk/guilds/${e}/application-storefront/skus/${t}/eligibility`,

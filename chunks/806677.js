@@ -409,7 +409,7 @@ function ee(e) {
             skusToUserAndReason: c,
             status: _,
             defaultWishlistId: u,
-        } = (0, w.r)({ userId: t.id, numItems: 12, source: b.B5.USER_PROFILE }),
+        } = (0, w.rg)({ userId: t.id, numItems: 12, source: b.B5.USER_PROFILE }),
         f = s.useMemo(
             () =>
                 n()(

@@ -1,33 +1,90 @@
-n.d(t, { U: () => R, r: () => L });
-var s = n(64700),
-    r = n(311907),
-    i = n(20424),
-    l = n(622543),
+"use strict";
+n.d(t, { Ul: () => O, XQ: () => R, rg: () => C });
+var r = n(64700),
+    i = n(311907),
+    s = n(20424),
+    a = n(622543),
     o = n(950191),
+    l = n(576622),
     u = n(927813),
-    d = n(403362),
-    a = n(808247),
-    c = n(133025),
-    m = n(310209),
-    I = n(321902),
+    c = n(403362),
+    d = n(808247),
+    _ = n(133025),
+    f = n(310209),
+    p = n(321902),
     h = n(594832),
-    f = n(746081);
-let S = 30 * u.A.Millis.MINUTE;
-function g(e) {
-    let { userIdsAndWishlistIds: t, numItems: n, applicationIds: i, source: l = h.B5.USER_PROFILE } = e,
-        o = (function (e) {
-            let { userIds: t, numItems: n, applicationIds: i } = e,
-                l = (0, r.bG)([c.A], () => c.A.getRecommendations(t, i));
-            return (
-                s.useEffect(() => {
-                    let e = c.A.getRecommendations(t, i);
-                    (null != e && ("loading" === e.state || e.fetchedAt >= Date.now() - S)) ||
-                        a.A.fetchWishlistRecommendations(i, t, n);
-                }, [t, i, n]),
-                l
-            );
-        })({
-            userIds: s.useMemo(
+    m = n(746081);
+let E = 30 * u.A.Millis.MINUTE,
+    g = 5,
+    A = { state: "success", data: new f.A({ skus: [], skus_to_user_and_reason: {}, applications: [] }), fetchedAt: 0 };
+function I(e) {
+    let { userIdsAndWishlistIds: t, source: n, applicationIdsFilter: i } = e,
+        { wishlists: s, isFetching: a, errors: o } = (0, h.sv)({ wishlistIdsAndUsers: t, source: n }),
+        l = r.useMemo(() => {
+            let e = s.filter(c.Vq),
+                t = {};
+            for (let n of e)
+                for (let e of n.items)
+                    null != e.sku &&
+                        !e.isOwned &&
+                        (null == i || i.includes(e.sku.applicationId)) &&
+                        (t[e.skuId] = { ...(null != t[e.skuId] ? t[e.skuId] : {}), [n.userId]: f.j.WISHLIST });
+            return t;
+        }, [s, i]),
+        u = r.useMemo(
+            () =>
+                Object.fromEntries(
+                    s
+                        .filter(c.Vq)
+                        .flatMap((e) => e.items)
+                        .filter(
+                            (e) =>
+                                null != e &&
+                                null != e.sku &&
+                                !e.isOwned &&
+                                (null == i || i.includes(e.sku.applicationId)),
+                        )
+                        .map((e) => [e.skuId, e.sku]),
+                ),
+            [s, i],
+        );
+    return {
+        sortedWishlistSkus: r.useMemo(
+            () =>
+                Object.keys(u)
+                    .sort((e, t) => Object.keys(l[t] ?? {}).length - Object.keys(l[e] ?? {}).length)
+                    .map((e) => u[e]),
+            [u, l],
+        ),
+        wishlistSkuIdToSku: u,
+        wishlistSkusToUserAndReasonMap: l,
+        wishlistsAreFetching: a,
+        wishlistErrors: o,
+    };
+}
+function T(e) {
+    let { userIds: t, numItems: n, applicationIds: s } = e,
+        a = (0, i.bG)([_.A], () => _.A.getRecommendations(t, s));
+    return (r.useEffect(() => {
+        if (0 === t.length || 0 === s.length) return;
+        let e = _.A.getRecommendations(t, s);
+        (null != e && ("loading" === e.state || e.fetchedAt >= Date.now() - E)) ||
+            d.A.fetchWishlistRecommendations(s, t, n);
+    }, [t, s, n]),
+    0 === t.length || 0 === s.length)
+        ? A
+        : a;
+}
+function S(e) {
+    let {
+            userIdsAndWishlistIds: t,
+            numItems: n,
+            applicationIds: i,
+            source: s = h.B5.USER_PROFILE,
+            filterByApplicationIds: a = !1,
+        } = e,
+        o = T({
+            userIds: r.useMemo(
                 () =>
                     t.map((e) => {
                         let { userId: t } = e;
@@ -39,117 +96,104 @@ function g(e) {
             applicationIds: i,
         }),
         {
-            sortedWishlistSkus: u,
-            wishlistSkuIdToSku: I,
-            wishlistSkusToUserAndReasonMap: f,
-            wishlistsAreFetching: g,
-            wishlistErrors: A,
-        } = (function (e) {
-            let { userIdsAndWishlistIds: t, source: n } = e,
-                { wishlists: r, isFetching: i, errors: l } = (0, h.sv)({ wishlistIdsAndUsers: t, source: n }),
-                o = s.useMemo(() => {
-                    let e = r.filter(d.Vq),
-                        t = {};
-                    for (let n of e)
-                        for (let e of n.items)
-                            null == e.sku ||
-                                e.isOwned ||
-                                (t[e.skuId] = { ...(null != t[e.skuId] ? t[e.skuId] : {}), [n.userId]: m.j.WISHLIST });
-                    return t;
-                }, [r]),
-                u = s.useMemo(
-                    () =>
-                        Object.fromEntries(
-                            r
-                                .filter(d.Vq)
-                                .flatMap((e) => e.items)
-                                .filter((e) => null != e && null != e.sku && !e.isOwned)
-                                .map((e) => [e.skuId, e.sku]),
-                        ),
-                    [r],
-                );
-            return {
-                sortedWishlistSkus: s.useMemo(
-                    () =>
-                        Object.keys(u)
-                            .sort((e, t) => Object.keys(o[t] ?? {}).length - Object.keys(o[e] ?? {}).length)
-                            .map((e) => u[e]),
-                    [u, o],
-                ),
-                wishlistSkuIdToSku: u,
-                wishlistSkusToUserAndReasonMap: o,
-                wishlistsAreFetching: i,
-                wishlistErrors: l,
-            };
-        })({ userIdsAndWishlistIds: t, source: l }),
-        { filteredRecommendations: E, skusToUserAndReasonRecommendations: L } = s.useMemo(
+            sortedWishlistSkus: l,
+            wishlistSkuIdToSku: u,
+            wishlistSkusToUserAndReasonMap: d,
+            wishlistsAreFetching: _,
+            wishlistErrors: f,
+        } = I({ userIdsAndWishlistIds: t, source: s, applicationIdsFilter: a ? i : void 0 }),
+        { filteredRecommendations: p, skusToUserAndReasonRecommendations: m } = r.useMemo(
             () =>
                 null == o || "success" !== o.state
                     ? { filteredRecommendations: [], skusToUserAndReasonRecommendations: {} }
                     : {
-                          filteredRecommendations: o.data.skus.filter((e) => !(e.id in I)),
+                          filteredRecommendations: o.data.skus.filter((e) => !(e.id in u)),
                           skusToUserAndReasonRecommendations: o.data.skusToUserAndReason,
                       },
-            [o, I],
+            [o, u],
         ),
-        { combinedSkus: R, combinedSkusToUserAndReason: M } = s.useMemo(() => {
-            let e = { ...L };
-            for (let [t, n] of Object.entries(f)) e[t] = { ...e[t], ...n };
-            return { combinedSkus: [...u, ...E], combinedSkusToUserAndReason: e };
-        }, [u, E, f, L]);
+        { combinedSkus: E, combinedSkusToUserAndReason: g } = r.useMemo(() => {
+            let e = { ...m };
+            for (let [t, n] of Object.entries(d)) e[t] = { ...e[t], ...n };
+            return { combinedSkus: [...l, ...p], combinedSkusToUserAndReason: e };
+        }, [l, p, d, m]);
     return {
-        recommendations: E,
-        wishlistAndRecommendations: R,
-        skusToUserAndReason: M,
-        status: s.useMemo(
+        recommendations: p,
+        wishlistAndRecommendations: E,
+        skusToUserAndReason: g,
+        status: r.useMemo(
             () =>
-                g || null == o || (null != o && "loading" === o.state)
+                _ || null == o || (null != o && "loading" === o.state)
                     ? "loading"
-                    : A.filter(d.Vq).length > 0 || "error" === o.state
+                    : f.filter(c.Vq).length > 0 || "error" === o.state
                       ? "error"
                       : "success",
-            [g, o, A],
+            [_, o, f],
         ),
     };
 }
-function A(e) {
+function y(e) {
     let t = (0, o.Ay)(e),
-        n = (0, i.A)({ displayProfile: t });
-    return (0, I.T)(n);
+        n = (0, s.A)({ displayProfile: t });
+    return (0, p.T)(n);
 }
-function E(e) {
-    let { defaultWishlistId: t } = (0, r.cf)([l.A], () => ({ defaultWishlistId: l.A.getFirstWishlistId(e) }));
-    return { userIdsAndWishlistIds: s.useMemo(() => [{ userId: e, wishlistId: t }], [e, t]), defaultWishlistId: t };
+function v(e) {
+    let { defaultWishlistId: t } = (0, i.cf)([a.A], () => ({ defaultWishlistId: a.A.getFirstWishlistId(e) }));
+    return { userIdsAndWishlistIds: r.useMemo(() => [{ userId: e, wishlistId: t }], [e, t]), defaultWishlistId: t };
 }
-function L(e) {
-    let { userId: t, numItems: n, source: s = h.B5.USER_PROFILE } = e,
-        { userIdsAndWishlistIds: r, defaultWishlistId: i } = E(t),
+function N(e) {
+    r.useEffect(() => {
+        e.forEach((e) => {
+            (0, l.A)(e);
+        });
+    }, [e]);
+    let t = (0, i.yK)([a.A], () => e.map((e) => a.A.getFirstWishlistId(e) ?? null));
+    return r.useMemo(() => e.map((e, n) => ({ userId: e, wishlistId: t[n] })), [e, t]);
+}
+function C(e) {
+    let { userId: t, numItems: n, source: r = h.B5.USER_PROFILE } = e,
+        { userIdsAndWishlistIds: i, defaultWishlistId: s } = v(t),
         {
-            wishlistAndRecommendations: l,
+            wishlistAndRecommendations: a,
             skusToUserAndReason: o,
-            status: u,
-        } = g({ userIdsAndWishlistIds: r, applicationIds: A(t), numItems: n, source: s }),
-        { totalUnownedWishlistItemCount: d, slicedWishlistAndRecommendations: a } = (0, f.m)({
-            wishlistAndRecommendations: l,
+            status: l,
+        } = S({ userIdsAndWishlistIds: i, applicationIds: y(t), numItems: n, source: r }),
+        { totalUnownedWishlistItemCount: u, slicedWishlistAndRecommendations: c } = (0, m.m)({
+            wishlistAndRecommendations: a,
             skusToUserAndReason: o,
             userId: t,
             numItems: n,
         });
     return {
-        wishlistAndRecommendations: a,
+        wishlistAndRecommendations: c,
         skusToUserAndReason: o,
-        status: u,
-        defaultWishlistId: i,
-        totalUnownedWishlistItemCount: d,
+        status: l,
+        defaultWishlistId: s,
+        totalUnownedWishlistItemCount: u,
     };
 }
 function R(e) {
-    let { userId: t, numItems: n, source: r = h.B5.USER_PROFILE } = e,
-        { userIdsAndWishlistIds: i } = E(t),
+    let { applicationIds: t, userIds: n, numItems: i, source: s = h.B5.USER_PROFILE } = e,
         {
-            recommendations: l,
+            wishlistAndRecommendations: a,
             skusToUserAndReason: o,
-            status: u,
-        } = g({ userIdsAndWishlistIds: i, applicationIds: A(t), numItems: n, source: r });
-    return { recommendations: s.useMemo(() => l.slice(0, n), [l, n]), skusToUserAndReason: o, status: u };
+            status: l,
+        } = S({
+            userIdsAndWishlistIds: N(r.useMemo(() => n?.slice(0, g), [n])),
+            applicationIds: t,
+            numItems: i,
+            source: s,
+            filterByApplicationIds: !0,
+        });
+    return { recommendations: r.useMemo(() => a.slice(0, i), [a, i]), skusToUserAndReason: o, status: l };
+}
+function O(e) {
+    let { userId: t, numItems: n, source: i = h.B5.USER_PROFILE } = e,
+        { userIdsAndWishlistIds: s } = v(t),
+        {
+            recommendations: a,
+            skusToUserAndReason: o,
+            status: l,
+        } = S({ userIdsAndWishlistIds: s, applicationIds: y(t), numItems: n, source: i });
+    return { recommendations: r.useMemo(() => a.slice(0, n), [a, n]), skusToUserAndReason: o, status: l };
 }
