@@ -1,4 +1,4 @@
-n.d(t, { $: () => T });
+n.d(t, { $: () => E });
 var i = n(419954),
     s = n(403362),
     l = n(780964),
@@ -9,30 +9,30 @@ var i = n(419954),
     c = n(340186),
     u = n(85648),
     _ = n(890801),
-    g = n(268272),
-    m = n(832688),
+    m = n(268272),
+    g = n(832688),
     A = n(334219),
-    h = n(540576),
-    p = n(773140),
-    x = n(836799),
-    E = n(985018);
-let T = (0, i.WI)(l.X.APP_SECTION, {
-    useTitle: () => E.intl.string(E.t.f2n1TP),
+    x = n(540576),
+    h = n(773140),
+    p = n(836799),
+    T = n(985018);
+let E = (0, i.WI)(l.X.APP_SECTION, {
+    useTitle: () => T.intl.string(T.t.f2n1TP),
     buildLayout: function () {
         let e = (0, a.Ci)("AppSection_buildLayout");
         return [
-            e ? p.q : null,
+            e ? h.q : null,
             e ? null : d.yj,
             e ? u.S : null,
             r.w,
-            e ? null : p.q,
+            e ? null : h.q,
             A.z,
             e ? null : c.g,
             _.$,
-            g.w,
-            e ? null : x.$,
-            e ? null : m.a,
-            e ? null : h.i,
+            m.w,
+            p.$,
+            g.a,
+            e ? null : x.i,
             e ? null : o._,
         ].filter(s.Vq);
     },
