@@ -1,4 +1,4 @@
-n.d(t, { AC: () => f, NI: () => C, PH: () => S });
+n.d(t, { AC: () => S, NI: () => C, PH: () => E });
 var i = n(64700),
     s = n(311907),
     l = n(86379),
@@ -11,53 +11,50 @@ var i = n(64700),
     _ = n(617641),
     m = n(189081),
     g = n(994500),
-    A = n(628965),
-    x = n(253932),
-    h = n(368631),
-    p = n(682262),
-    T = n(987281),
-    E = n(654487);
-function S() {
+    A = n(253932),
+    x = n(368631),
+    h = n(682262),
+    p = n(987281),
+    T = n(654487);
+function E() {
     let e = (0, o.IO)().length,
-        t = (0, s.bG)([A.A], () => A.A.getSearchParams()),
-        n = (0, p.b_)(),
-        T = (0, _.Lc)({ location: "settings" }),
-        S = (0, u.Rv)({ location: "settings" }),
-        f = (0, l.H)(),
-        C = (0, d.H)({ location: E.rE.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
-        b = (0, s.bG)([m.A], () => m.A.hasLibraryApplication()),
-        N = x.Q_.useSetting(),
-        I = (0, a.A)(),
-        v = (0, r.A)() ?? !0,
-        j = (0, c.G)()?.length > 0,
-        { hasBlockedUsers: y, hasIgnoredUsers: R } = (0, s.cf)([g.A], () => ({
+        t = (0, h.b_)(),
+        n = (0, _.Lc)({ location: "settings" }),
+        p = (0, u.Rv)({ location: "settings" }),
+        E = (0, l.H)(),
+        S = (0, d.H)({ location: T.rE.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
+        C = (0, s.bG)([m.A], () => m.A.hasLibraryApplication()),
+        f = A.Q_.useSetting(),
+        b = (0, a.A)(),
+        N = (0, r.A)() ?? !0,
+        I = (0, c.G)()?.length > 0,
+        { hasBlockedUsers: v, hasIgnoredUsers: j } = (0, s.cf)([g.A], () => ({
             hasBlockedUsers: g.A.getBlockedIDs().length > 0,
             hasIgnoredUsers: g.A.getIgnoredIDs().length > 0,
         }));
     return i.useMemo(
         () =>
-            (0, h.zj)({
+            (0, x.zj)({
                 unseenGiftCount: e,
-                searchParams: t,
-                isOverlaySupported: n,
-                isInappropriateConversationWarningEnabled: T,
-                isInapproprateConversationsDefaultOn: S,
-                paymentsBlocked: f,
-                isEligibleForQuests: C,
-                isStricterMessageRequestsEnabled: I,
-                hasLibraryApplication: b,
-                developerMode: N,
-                isAdultUser: v,
-                hasSecureFramesVerifiedUserIds: j,
-                hasIgnoredUsers: R,
-                hasBlockedUsers: y,
+                isOverlaySupported: t,
+                isInappropriateConversationWarningEnabled: n,
+                isInapproprateConversationsDefaultOn: p,
+                paymentsBlocked: E,
+                isEligibleForQuests: S,
+                isStricterMessageRequestsEnabled: b,
+                hasLibraryApplication: C,
+                developerMode: f,
+                isAdultUser: N,
+                hasSecureFramesVerifiedUserIds: I,
+                hasIgnoredUsers: j,
+                hasBlockedUsers: v,
             }),
-        [N, y, R, b, j, t, v, C, S, T, n, I, f, e],
+        [f, v, j, C, I, N, S, p, n, t, b, E, e],
     );
 }
-function f(e) {
-    let t = T.a.useField("searchResults"),
-        n = S(),
+function S(e) {
+    let t = p.a.useField("searchResults"),
+        n = E(),
         i = n[e],
         s = Object.fromEntries(
             Object.entries(n).filter((e) => {
