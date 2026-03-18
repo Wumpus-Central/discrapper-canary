@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => I });
+n.d(t, { A: () => T });
 var r = n(439372),
     i = n(183636),
     s = n(927813),
@@ -15,8 +15,9 @@ let p = s.A.Millis.DAY,
     h = 30 * s.A.Millis.MINUTE,
     m = 5 * s.A.Millis.SECOND,
     E = 5 * s.A.Millis.MINUTE,
-    g = 12 * s.A.Millis.HOUR;
-class A extends r.A {
+    g = 12 * s.A.Millis.HOUR,
+    A = 5 * s.A.Millis.MINUTE;
+class I extends r.A {
     instantiatedAt = Date.now();
     initialFetchTimerId = null;
     initialQuestHomeHeroFetchTimerId = null;
@@ -45,7 +46,7 @@ class A extends r.A {
             }, h));
         let e = Math.floor(Math.random() * m);
         this.initialFetchTimerId = window.setTimeout(() => {
-            Date.now() - e < l.A.lastFetchedCurrentQuests || this._fetch("post_connect_initial");
+            Date.now() - l.A.lastFetchedCurrentQuests <= A || this._fetch("post_connect_initial");
         }, e);
         let { enabled: t } = c.sn.getConfig({ location: f.rE.QUESTS_MANAGER }),
             { enabled: n } = c.Iq.getConfig({ location: f.rE.QUESTS_MANAGER });
@@ -88,4 +89,4 @@ class A extends r.A {
         LOGOUT: this.handleLogout,
     };
 }
-let I = new A();
+let T = new I();
