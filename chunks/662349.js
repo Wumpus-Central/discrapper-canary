@@ -12,30 +12,38 @@ var r = n(627968),
     _ = n(178213),
     f = n(818348),
     p = n(985018),
-    h = n(433107);
+    h = n(333245);
 function m(e) {
     return { margin: e.buttonInset };
 }
 function E(e) {
-    let { sku: t, wishlistOwner: n, isOwned: r, hideIcon: s, location: a } = e,
-        f = (0, o.bG)([c.default], () => c.default.getCurrentUser()),
-        h = (0, _.AZ)(a ?? "User Profile Wishlist Overlay Button"),
-        m = (0, u.Xi)(t);
+    let { sku: t, wishlistOwner: n, isOwned: r, hideIcon: s, shortText: a, location: f } = e,
+        h = (0, o.bG)([c.default], () => c.default.getCurrentUser()),
+        m = (0, _.AZ)(f ?? "User Profile Wishlist Overlay Button"),
+        E = (0, u.Xi)(t);
     return i.useMemo(() => {
-        if (h && null != t && !r) {
-            if (null != m)
+        if (m && null != t && !r) {
+            if (null != E)
                 return {
-                    label: p.intl.formatToPlainString(p.t.AYcXGW, { discountOfferAmount: m.amount }),
+                    label: p.intl.formatToPlainString(p.t.AYcXGW, { discountOfferAmount: E.amount }),
                     icon: void 0,
                     isPromptingPurchase: !0,
                 };
-            let e = t.getPrice(f?.premiumType);
+            let e = t.getPrice(h?.premiumType);
             if (null != e) return { label: (0, d.$g)(e.amount, e.currency), icon: void 0, isPromptingPurchase: !0 };
         }
-        return null == n || n.id === f?.id || r
-            ? { label: p.intl.string(p.t.FdGl5A), icon: void 0, isPromptingPurchase: !1 }
-            : { label: p.intl.string(p.t.ilhtIa), icon: s ? void 0 : l.okO, isPromptingPurchase: !0 };
-    }, [t, n, f, r, s, h, m]);
+        return null == n || n.id === h?.id || r
+            ? {
+                  label: a ? p.intl.string(p.t["99GFiS"]) : p.intl.string(p.t.FdGl5A),
+                  icon: void 0,
+                  isPromptingPurchase: !1,
+              }
+            : {
+                  label: a ? p.intl.string(p.t["3wFtNJ"]) : p.intl.string(p.t.ilhtIa),
+                  icon: s ? void 0 : l.okO,
+                  isPromptingPurchase: !0,
+              };
+    }, [m, t, r, n, h?.id, h?.premiumType, a, s, E]);
 }
 function g(e) {
     let { spec: t, label: n, icon: s, onClick: o, isHoveringOrFocusing: u, fullWidth: c = !1 } = e,

@@ -1,32 +1,31 @@
-"use strict";
-n.d(t, { GM: () => h, mW: () => p, uq: () => u });
-var i = n(627968);
-n(64700);
-var s = n(158954),
-    l = n(311907),
-    a = n(397927),
-    r = n(587895),
-    o = n(721932),
-    d = n(287809),
-    c = n(360469);
-function u(e) {
-    let t = null != e.gifterUserId ? d.default.getUser(e.gifterUserId) : null;
+l.d(t, { GM: () => h, mW: () => A, uq: () => d });
+var i = l(627968);
+l(64700);
+var r = l(158954),
+    n = l(311907),
+    a = l(397927),
+    s = l(587895),
+    u = l(721932),
+    o = l(287809),
+    c = l(360469);
+function d(e) {
+    let t = null != e.gifterUserId ? o.default.getUser(e.gifterUserId) : null;
     return null == t
         ? null
         : (0, i.jsx)(a.euF, { src: t.getAvatarURL(void 0, 48), size: a._3J.SIZE_48, "aria-label": t.username });
 }
 function h(e) {
-    return (0, i.jsx)(A, { wishlistItem: e });
-}
-function p(e) {
-    let { application: t } = e,
-        n = null != t ? t.getIconURL(c.iu.SMALL) : void 0;
-    return null != n
-        ? (0, i.jsx)("img", { src: n, alt: t?.name })
-        : (0, i.jsx)(s.U1X, { color: "currentColor", size: "xs" });
+    return (0, i.jsx)(p, { wishlistItem: e });
 }
 function A(e) {
+    let { application: t } = e,
+        l = null != t ? t.getIconURL(c.iu.SMALL) : void 0;
+    return null != l
+        ? (0, i.jsx)("img", { src: l, alt: t?.name })
+        : (0, i.jsx)(r.U1X, { color: "currentColor", size: "xs" });
+}
+function p(e) {
     let { wishlistItem: t } = e,
-        n = (0, l.bG)([r.A], () => ((0, o.$)(t) ? r.A.getApplication(t.sku.applicationId) : void 0));
-    return (0, i.jsx)(p, { application: n });
+        l = (0, n.bG)([s.A], () => ((0, u.$)(t) ? s.A.getApplication(t.sku.applicationId) : void 0));
+    return (0, i.jsx)(A, { application: l });
 }

@@ -36699,6 +36699,12 @@ html:not(.chat-input) .inputInner_b1f01d {
     transition: background-color .15s ease-out
 }
 
+.xs__979b1 {
+    border-radius: 6px;
+    height: 24px;
+    width: 24px
+}
+
 .sm__979b1 {
     height: 32px;
     width: 32px

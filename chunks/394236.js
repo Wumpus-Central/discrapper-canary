@@ -2,6 +2,7 @@
 var r = {
     wishlistButton: "wishlistButton__979b1",
     disabled: "disabled__979b1",
+    xs: "xs__979b1",
     sm: "sm__979b1",
     md: "md__979b1",
     variantDefault: "variantDefault__979b1",

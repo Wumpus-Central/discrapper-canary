@@ -17,7 +17,7 @@ var r = n(627968),
     E = n(49999),
     g = n(985018),
     A = n(394236);
-let I = { sm: "xs", md: "refresh_sm" },
+let I = { xs: "xxs", sm: "xs", md: "refresh_sm" },
     T = (e) => {
         let { product: t, selectedVariantIndex: n, ...s } = e,
             a = i.useMemo(

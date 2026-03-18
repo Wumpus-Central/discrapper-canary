@@ -8,16 +8,16 @@ var i = n(627968),
     d = n(554146),
     c = n(932001),
     u = n(178213),
-    m = n(770983),
-    g = n(927813),
+    g = n(770983),
+    m = n(927813),
     x = n(622543),
-    f = n(49999),
-    p = n(985018),
-    h = n(757424);
-let _ = 90 * g.A.Millis.DAY,
-    A = 90 * g.A.Millis.DAY;
+    p = n(49999),
+    f = n(985018),
+    h = n(881562);
+let _ = 90 * m.A.Millis.DAY,
+    A = 90 * m.A.Millis.DAY;
 function I(e) {
-    let { user: t, wishlist: n, hasFetchedWishlist: a = !1, analyticsLocations: g, className: I } = e,
+    let { user: t, wishlist: n, hasFetchedWishlist: a = !1, analyticsLocations: m, className: I } = e,
         j = (0, u.GG)("social_layer_wishlist_recommendations_on_profile"),
         v = (n?.items.length ?? 0) > 0,
         [E, T] = l.useState(!1);
@@ -42,24 +42,24 @@ function I(e) {
                           (0, i.jsx)(r.EYj, {
                               variant: "text-xs/normal",
                               color: "text-subtle",
-                              children: p.intl.string(p.t["+GB8Kt"]),
+                              children: f.intl.string(f.t["+GB8Kt"]),
                           }),
                           v &&
                               (0, i.jsx)(r.JnF, {
                                   size: "xs",
                                   onClick: () => {
-                                      T(!1), S(f.i.USER_DISMISS);
+                                      T(!1), S(p.i.USER_DISMISS);
                                   },
                               }),
                       ],
                   }),
-                  (0, i.jsx)(m.A, {
+                  (0, i.jsx)(g.A, {
                       userId: t.id,
                       wishlist: n,
                       className: s()(h.Vg, { [h.e6]: j }),
-                      analyticsLocations: g,
+                      analyticsLocations: m,
                       numWishlistItemsToRecommend: 15,
-                      maxWishlistItemsToShow: 8,
+                      maxWishlistItemsToShow: j ? 8 : 6,
                   }),
               ],
           })
