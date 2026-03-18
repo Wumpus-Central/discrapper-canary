@@ -224,35 +224,37 @@ function L(e) {
             paymentSourceType: a,
             activeSubscription: o,
             invoiceSummaryTypeWithPreview: l,
+            hideLegalContent: u,
         } = e,
-        { immediateDelivery: u } = (0, g.U)(),
-        { discountOffer: d } = (0, E.P5)();
+        { immediateDelivery: d } = (0, g.U)(),
+        { discountOffer: _ } = (0, E.P5)();
     if (l.type === h.N$.LOADING) return null;
-    let { invoicePreview: _ } = l,
-        f = ("renewalInvoicePreview" in l ? l.renewalInvoicePreview : null) ?? _,
-        m = f.invoiceItems.find((e) => e.subscriptionPlanId === i.id),
-        T = null != m ? (0, A.Re)(m, d).amount : f.subtotal,
-        S = {
-            purchaseButtonText: (0, p.Ro)({
-                productLine: I.EZt.PREMIUM,
-                purchaseType: I.VVm.SUBSCRIPTION,
-                plan: i,
-                premiumSubscription: o,
-                isGift: s,
-                planGroup: t,
-                isPrepaidPaymentSource: !1,
-            }),
-            totalDue: _.total,
-            renewalPrice: T,
-            currency: _.currency,
-            interval: i.interval,
-            intervalCount: i.intervalCount,
-            startDate: _.subscriptionPeriodEnd,
-        };
+    let { invoicePreview: f } = l,
+        m = ("renewalInvoicePreview" in l ? l.renewalInvoicePreview : null) ?? f,
+        T = m.invoiceItems.find((e) => e.subscriptionPlanId === i.id),
+        S = null != T ? (0, A.Re)(T, _).amount : m.subtotal;
+    if (u) return null;
+    let y = {
+        purchaseButtonText: (0, p.Ro)({
+            productLine: I.EZt.PREMIUM,
+            purchaseType: I.VVm.SUBSCRIPTION,
+            plan: i,
+            premiumSubscription: o,
+            isGift: s,
+            planGroup: t,
+            isPrepaidPaymentSource: !1,
+        }),
+        totalDue: f.total,
+        renewalPrice: S,
+        currency: f.currency,
+        interval: i.interval,
+        intervalCount: i.intervalCount,
+        startDate: f.subscriptionPeriodEnd,
+    };
     return (0, r.jsx)(c._P, {
-        variant: { type: s ? c.I0.GiftNitro : n ? c.I0.SubscriptionTrial : c.I0.Subscription, ...S },
+        variant: { type: s ? c.I0.GiftNitro : n ? c.I0.SubscriptionTrial : c.I0.Subscription, ...y },
         paymentSourceType: a,
-        immediateDelivery: u,
+        immediateDelivery: d,
     });
 }
 function w(e) {

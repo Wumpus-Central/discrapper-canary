@@ -180,7 +180,9 @@ function j(e) {
             className: a()({ [H.E4]: eu }),
             shouldUseUnifiedCheckoutUI: er,
         }),
-        eH = er
+        eH = null != n && (0, D.Ge)(n, W, X),
+        ej = eH && null != Z,
+        eY = er
             ? null != ed && null != eI
                 ? (0, r.jsx)(y.PI, {
                       planGroup: X,
@@ -194,47 +196,46 @@ function j(e) {
                           invoicePreview: ed,
                           renewalInvoicePreview: eI,
                       },
+                      hideLegalContent: ej,
                   })
                 : null
             : (0, r.jsx)(w.A, {
                   isActive: z,
                   ref: $,
-                  children:
-                      null != n && (0, D.Ge)(n, W, X)
-                          ? (0, r.jsx)(k.vi, {
-                                premiumSubscription: n,
-                                newPlan: em,
-                                onInvoiceError: q,
-                                planGroup: X,
-                                priceOptions: o,
-                                preventFetch: eR,
-                                disabled: eR,
-                                isEEA: eC,
-                                paymentSources: s,
-                                setHasAcceptedTerms: K,
-                                shouldUseUnifiedCheckoutUI: er,
-                                onRenewalInvoicePreview: eT,
-                            })
-                          : (0, r.jsx)(h.A, {
-                                onChange: K,
-                                finePrint: (0, r.jsx)(f.A, {
-                                    subscriptionPlan: em,
-                                    paymentSourceType: eh,
-                                    basePrice: (0, b.y8)(em.id, !1, ef, o),
-                                    currentSubscription: n,
-                                    planGroup: X,
-                                }),
-                                forceShow: !0,
-                                showPricingLink: em.currency !== F.Yri.USD,
-                                showWithdrawalWaiver: eC,
-                                disabled: eR,
+                  children: eH
+                      ? (0, r.jsx)(k.vi, {
+                            premiumSubscription: n,
+                            newPlan: em,
+                            onInvoiceError: q,
+                            planGroup: X,
+                            priceOptions: o,
+                            preventFetch: eR,
+                            disabled: eR,
+                            isEEA: eC,
+                            paymentSources: s,
+                            setHasAcceptedTerms: K,
+                            onRenewalInvoicePreview: eT,
+                        })
+                      : (0, r.jsx)(h.A, {
+                            onChange: K,
+                            finePrint: (0, r.jsx)(f.A, {
                                 subscriptionPlan: em,
+                                paymentSourceType: eh,
+                                basePrice: (0, b.y8)(em.id, !1, ef, o),
                                 currentSubscription: n,
                                 planGroup: X,
                             }),
+                            forceShow: !0,
+                            showPricingLink: em.currency !== F.Yri.USD,
+                            showWithdrawalWaiver: eC,
+                            disabled: eR,
+                            subscriptionPlan: em,
+                            currentSubscription: n,
+                            planGroup: X,
+                        }),
               }),
-        ej = !eb && eO && !ec,
-        eY = i.useMemo(() => (ej ? (0, r.jsx)(T.P, { planSkuId: em.skuId }) : null), [ej, em.skuId]);
+        eW = !eb && eO && !ec,
+        eK = i.useMemo(() => (eW ? (0, r.jsx)(T.P, { planSkuId: em.skuId }) : null), [eW, em.skuId]);
     return er
         ? (0, r.jsx)(U.n, {
               disabled: eR,
@@ -246,7 +247,7 @@ function j(e) {
               unifiedPlainNoticeText: ew,
               invoicePreview: ed,
               invoicePreviewComponent: eP,
-              shouldShowPlanSelectAndPromoBanner: ej,
+              shouldShowPlanSelectAndPromoBanner: eW,
               shouldRenderInvoicePreviewSubscriptionDetailsDirectly:
                   eU.shouldRenderToUnifiedSubscriptionDetailsDirectly,
               newPlan: em,
@@ -257,16 +258,16 @@ function j(e) {
               isInvoiceBilledImmediately: ek,
               paymentSelectContent: eB,
               currencySelectComponent: (0, r.jsx)(y.rk, { ...eV }),
-              legalContent: eH,
+              legalContent: eY,
           })
         : (0, r.jsxs)("div", {
               className: H.Du,
               children: [
                   (0, r.jsx)(M.je, { paymentRestrictionBannerType: eF }),
-                  ej &&
+                  eW &&
                       (0, r.jsxs)("div", {
                           children: [
-                              eY,
+                              eK,
                               (0, r.jsx)(x.$p, {
                                   disabled: eR,
                                   planOptions: eD,
@@ -290,7 +291,7 @@ function j(e) {
                   (0, r.jsx)(d.D0$, { label: t, children: eP }),
                   (0, r.jsx)("div", { className: H.LC, children: eB }),
                   (0, r.jsx)(_.f, { currencies: Q, className: H.p2, children: (0, r.jsx)(_.A, { ...eV }) }),
-                  eH,
+                  eY,
               ],
           });
 }

@@ -202,48 +202,46 @@ function U(e) {
             isEEA: p,
             paymentSources: h,
             setHasAcceptedTerms: m,
-            shouldUseUnifiedCheckoutUI: A,
-            onRenewalInvoicePreview: I,
+            onRenewalInvoicePreview: A,
         } = e,
-        { analyticsLocations: T } = (0, _.Ay)(),
-        S = (0, g.Pg)(n, s.id, 1, new Set(o)),
+        { analyticsLocations: I } = (0, _.Ay)(),
+        T = (0, g.Pg)(n, s.id, 1, new Set(o)),
         {
-            proratedInvoicePreview: y,
-            proratedInvoiceError: v,
-            renewalInvoicePreview: N,
-            renewalInvoiceError: R,
-        } = x({ premiumSubscription: n, newItems: S, priceOptions: l, preventFetch: d, analyticsLocations: T });
+            proratedInvoicePreview: S,
+            proratedInvoiceError: y,
+            renewalInvoicePreview: v,
+            renewalInvoiceError: N,
+        } = x({ premiumSubscription: n, newItems: T, priceOptions: l, preventFetch: d, analyticsLocations: I });
     i.useEffect(() => {
-        I(N);
-    }, [I, N]);
-    let O = (0, E.g)(h, l.paymentSourceId),
-        b = R ?? v;
+        A(v);
+    }, [A, v]);
+    let R = (0, E.g)(h, l.paymentSourceId),
+        O = N ?? y;
     return (i.useEffect(() => {
-        a(b);
-    }, [a, b]),
-    null != b)
-        ? L(b, A)
-        : (null != N && (t = { amount: N.subtotal, currency: N.currency, tax: N.tax, taxInclusive: N.taxInclusive }),
-            null == t)
-          ? null
-          : (0, r.jsx)(c.A, {
-                onChange: m,
-                finePrint: (0, r.jsx)(u.A, {
-                    subscriptionPlan: s,
-                    paymentSourceType: O,
-                    basePrice: t,
-                    proratedAmount: null != y ? y.total : void 0,
-                    currentSubscription: n,
-                    planGroup: o,
-                }),
-                forceShow: !0,
-                showPricingLink: s.currency !== C.Yri.USD,
-                showWithdrawalWaiver: p,
-                disabled: f,
-                subscriptionPlan: s,
-                currentSubscription: n,
-                planGroup: o,
-            });
+        a(O);
+    }, [a, O]),
+    null != O ||
+        (null != v && (t = { amount: v.subtotal, currency: v.currency, tax: v.tax, taxInclusive: v.taxInclusive }),
+        null == t))
+        ? null
+        : (0, r.jsx)(c.A, {
+              onChange: m,
+              finePrint: (0, r.jsx)(u.A, {
+                  subscriptionPlan: s,
+                  paymentSourceType: R,
+                  basePrice: t,
+                  proratedAmount: null != S ? S.total : void 0,
+                  currentSubscription: n,
+                  planGroup: o,
+              }),
+              forceShow: !0,
+              showPricingLink: s.currency !== C.Yri.USD,
+              showWithdrawalWaiver: p,
+              disabled: f,
+              subscriptionPlan: s,
+              currentSubscription: n,
+              planGroup: o,
+          });
 }
 function G(e) {
     let {
