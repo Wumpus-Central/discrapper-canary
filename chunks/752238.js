@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, { default: () => f });
-var r = n(28728),
+var r = n(79719),
     i = n(735438),
-    a = n.n(i),
-    s = n(319888);
-r.A.registerLanguage("ansi", s.A);
+    s = n.n(i),
+    a = n(319888);
+r.A.registerLanguage("ansi", a.A);
 let o = /(<script\/?\\?>)|(html\\?`)/g,
     l = new Set(["html", "xml", "javascript", "typescript", "handlebars"]),
     u = /^[a-z0-9_+\-.#]+$/,
@@ -26,13 +26,15 @@ let f = {
             if (!h(t, e)) return null;
             Date.now();
             let i = r.A.highlight(t, { ignoreIllegals: n, language: e });
-            return Date.now(), i;
+            Date.now();
+            let s = i.value.match(/</g)?.length;
+            return null != s && s > 2e3 ? null : i;
         },
         hasLanguage: (e) => null != r.A.getLanguage(e),
         isKnownLanguage: (e) => d.has(e.toLowerCase()),
         resolveLanguageName: _,
     },
-    p = a().repeat("/", 15);
+    p = s().repeat("/", 15);
 function h(e, t) {
     if (e.indexOf(p) >= 0) return !1;
     let n = 0;
