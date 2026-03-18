@@ -198,6 +198,9 @@ let W = {
                         : s.setObservedGamesCallback(a, l);
             } catch (e) {}
         },
+        setProcessObserverCollectExecutableFingerprint(e) {
+            this.getDiscordUtils().setProcessObserverCollectExecutableFingerprint?.(e);
+        },
         setGameDetectionCallback(e) {
             this.getDiscordUtils().setGameDetectionCallback?.((t, n) =>
                 e(

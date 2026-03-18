@@ -1,12 +1,13 @@
-n.d(t, { A: () => r });
-var i = n(600975),
-    s = n(688151);
-let r = (0, i.C)({
+"use strict";
+n.d(t, { A: () => s });
+var r = n(600975),
+    i = n(688151);
+let s = (0, r.C)({
     kind: "user",
     id: "2025-10_recurring_3p_promotion",
     label: "Recurring 3P Promotion Experiment",
     defaultConfig: { enabled: !1 },
-    commonTriggerPoint: s.$G.CONNECTION_OPEN,
+    commonTriggerPoint: i.$G.CONNECTION_OPEN,
     treatments: [
         {
             id: 0,
