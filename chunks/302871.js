@@ -1,34 +1,34 @@
-i.d(t, { u: () => S });
-var n = i(627968),
-    l = i(311907),
-    s = i(397927),
-    r = i(775602),
-    a = i(502229),
-    u = i(419954),
-    o = i(780964),
-    d = i(614651),
-    _ = i(70040),
-    T = i(985018),
-    A = i(402699);
-let S = (0, u.E2)(o.X.APPEARANCE_CLIENT_THEMES, {
-    useSearchTerms: () => [T.intl.string(T.t.Ksh3ik), T.intl.string(T.t["0EzVst"]), T.intl.string(T.t.OCOOiI)],
+n.d(t, { u: () => g });
+var i = n(627968),
+    s = n(311907),
+    l = n(397927),
+    a = n(775602),
+    r = n(502229),
+    o = n(419954),
+    d = n(780964),
+    c = n(428130),
+    u = n(123857),
+    _ = n(985018),
+    m = n(402699);
+let g = (0, o.E2)(d.X.APPEARANCE_CLIENT_THEMES, {
+    useSearchTerms: () => [_.intl.string(_.t.Ksh3ik), _.intl.string(_.t["0EzVst"]), _.intl.string(_.t.OCOOiI)],
     Component: () => {
-        let e = (0, l.bG)([r.A], () => r.A.useForcedColors);
-        return (0, n.jsxs)("fieldset", {
+        let e = (0, s.bG)([a.A], () => a.A.useForcedColors);
+        return (0, i.jsxs)("fieldset", {
             children: [
-                (0, n.jsx)(s.Text, {
+                (0, i.jsx)(l.Text, {
                     tag: "legend",
                     variant: "heading-xl/normal",
                     color: "text-strong",
-                    className: A.D,
-                    children: T.intl.string(T.t.Ksh3ik),
+                    className: m.D,
+                    children: _.intl.string(_.t.Ksh3ik),
                 }),
                 e
-                    ? (0, n.jsx)(s.wx6, {
+                    ? (0, i.jsx)(l.wx6, {
                           type: "info",
-                          children: (0, a.D)() ? (0, n.jsx)(d.Ys, {}) : T.intl.string(T.t.AUMSZP),
+                          children: (0, r.D)() ? (0, i.jsx)(c.Ys, {}) : _.intl.string(_.t.AUMSZP),
                       })
-                    : (0, n.jsxs)("div", { children: [(0, n.jsx)(d.ac, {}), (0, n.jsx)(_.Ix, {})] }),
+                    : (0, i.jsxs)("div", { children: [(0, i.jsx)(c.ac, {}), (0, i.jsx)(u.Ix, {})] }),
             ],
         });
     },

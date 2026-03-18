@@ -1,19 +1,20 @@
-i.d(e, { Z: () => o });
-var n = i(955572),
-    l = i(419954),
-    s = i(253932),
-    r = i(780964),
-    a = i(614651),
-    u = i(985018);
-let o = (0, l.Qx)(r.X.APPEARANCE_MESSAGE_DISPLAY_MODE, {
-    useTitle: () => u.intl.string(u.t.nKRoPv),
-    useSubtitle: () => u.intl.string(u.t.QntEEG),
+n.d(t, { Z: () => d });
+var i = n(955572),
+    s = n(419954),
+    l = n(253932),
+    a = n(780964),
+    r = n(428130),
+    o = n(985018);
+let d = (0, s.Qx)(a.X.APPEARANCE_MESSAGE_DISPLAY_MODE, {
+    useTitle: () => o.intl.string(o.t.nKRoPv),
+    useSubtitle: () => o.intl.string(o.t.QntEEG),
+    useSearchTerms: () => [o.intl.string(o.t.ZEoGMd)],
     useOptions: () => [
-        { name: u.intl.string(u.t.Jqj4cZ), value: a.IE.COZY },
-        { name: u.intl.string(u.t["1JNcPS"]), value: a.IE.COMPACT },
+        { name: o.intl.string(o.t.Jqj4cZ), value: r.IE.COZY },
+        { name: o.intl.string(o.t["1JNcPS"]), value: r.IE.COMPACT },
     ],
-    useValue: () => (s.hH.useSetting() ? a.IE.COMPACT : a.IE.COZY),
-    setValue: (t) => {
-        s.hH.updateSetting(t === a.IE.COMPACT), (0, n.AC)();
+    useValue: () => (l.hH.useSetting() ? r.IE.COMPACT : r.IE.COZY),
+    setValue: (e) => {
+        l.hH.updateSetting(e === r.IE.COMPACT), (0, i.AC)();
     },
 });

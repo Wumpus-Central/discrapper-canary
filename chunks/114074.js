@@ -1,4 +1,4 @@
-n.d(t, { K: () => x });
+n.d(t, { K: () => h });
 var i = n(311907),
     s = n(775602),
     l = n(502229),
@@ -6,15 +6,15 @@ var i = n(311907),
     r = n(419954),
     o = n(933297),
     d = n(780964),
-    c = n(70040),
+    c = n(123857),
     u = n(840065),
     _ = n(506305),
     m = n(69551),
     g = n(225216),
     A = n(866352),
-    h = n(985018);
-let x = (0, r.zZ)(d.X.DISPLAY_THEME_CATEGORY, {
-    useTitle: () => h.intl.string(h.t.Ksh3ik),
+    x = n(985018);
+let h = (0, r.zZ)(d.X.DISPLAY_THEME_CATEGORY, {
+    useTitle: () => x.intl.string(x.t.Ksh3ik),
     useInlineNotice: function () {
         return (0, i.bG)([s.A], () => s.A.useForcedColors)
             ? {
@@ -22,12 +22,12 @@ let x = (0, r.zZ)(d.X.DISPLAY_THEME_CATEGORY, {
                   noticeType: "info",
                   useText: () =>
                       (0, l.D)()
-                          ? h.intl.format(h.t.Jae48E, {
+                          ? x.intl.format(x.t.Jae48E, {
                                 onClick: () => {
                                     (0, u.openUserSettings)(d.X.SYNC_FORCED_COLORS);
                                 },
                             })
-                          : h.intl.string(h.t.AUMSZP),
+                          : x.intl.string(x.t.AUMSZP),
               }
             : null;
     },
@@ -40,7 +40,7 @@ let x = (0, r.zZ)(d.X.DISPLAY_THEME_CATEGORY, {
                       {
                           id: "open-client-themes-button",
                           type: o.UV.BUTTON,
-                          useText: () => h.intl.string(h.t["E+COuA"]),
+                          useText: () => x.intl.string(x.t["E+COuA"]),
                           onClick: c.J3,
                       },
                   ],

@@ -1,13 +1,13 @@
-i.d(e, { k: () => o });
-var n = i(627968),
-    l = i(419954),
-    s = i(780964),
-    r = i(70040),
-    a = i(385803),
-    u = i(985018);
-let o = (0, l.E2)(s.X.DISPLAY_CLIENT_THEMES, {
-    useSearchTerms: () => [u.intl.string(u.t.Ksh3ik)],
+n.d(t, { k: () => d });
+var i = n(627968),
+    s = n(419954),
+    l = n(780964),
+    a = n(123857),
+    r = n(385803),
+    o = n(985018);
+let d = (0, s.E2)(l.X.DISPLAY_CLIENT_THEMES, {
+    useSearchTerms: () => [o.intl.string(o.t.Ksh3ik)],
     Component: function () {
-        return (0, n.jsx)(r.mx, { size: a.ni.SIZE_48 });
+        return (0, i.jsx)(a.mx, { size: r.ni.SIZE_48 });
     },
 });
