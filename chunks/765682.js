@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { F5: () => r, hL: () => i, iL: () => a });
+n.d(t, { F5: () => r, hL: () => i, iL: () => s });
 var r = (function (e) {
         return (
             (e.AUTHORIZED = "authorized"),
@@ -21,10 +21,11 @@ var r = (function (e) {
             e
         );
     })({}),
-    a = (function (e) {
+    s = (function (e) {
         return (
             (e.AUDIO = "audio"),
             (e.CAMERA = "camera"),
+            (e.HEADSET_CAMERA = "headset_camera"),
             (e.STORAGE = "storage"),
             (e.NOTIFICATIONS = "notifications"),
             (e.PHOTOS = "photos"),
