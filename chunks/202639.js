@@ -1,28 +1,27 @@
 "use strict";
-n.d(t, { d: () => g });
+n.d(t, { d: () => E });
 var r = n(627968);
 n(64700);
 var i = n(503698),
     s = n.n(i),
-    a = n(380278),
+    a = n(497766),
     o = n(397927),
     l = n(565645),
-    u = n(736653),
-    c = n(220625),
-    d = n(1018),
-    _ = n(71393),
-    f = n(857586),
-    p = n(465794),
-    h = n(788868),
-    m = n(985018),
-    E = n(431009);
-function g(e) {
+    u = n(220625),
+    c = n(1018),
+    d = n(71393),
+    _ = n(857586),
+    f = n(465794),
+    p = n(788868),
+    h = n(985018),
+    m = n(732591);
+function E(e) {
     let {
             showUpsell: t,
             text: n,
             textVariant: i,
-            button: u,
-            buttonAnalyticsObject: g,
+            button: E,
+            buttonAnalyticsObject: A,
             className: I,
             onSubscribeModalClose: T,
             position: S = "floating",
@@ -31,8 +30,8 @@ function g(e) {
             useUpdatedStyling: N = !1,
             subscribeButtonVariantOverride: C,
         } = e,
-        { enabled: R } = c.e.useConfig({ location: "PremiumFloatingPickerUpsell" }),
-        { useLegacyButton: O } = d.h.useConfig({ location: "PremiumFloatingPickerUpsell" }),
+        { enabled: R } = u.e.useConfig({ location: "PremiumFloatingPickerUpsell" }),
+        { useLegacyButton: O } = c.h.useConfig({ location: "PremiumFloatingPickerUpsell" }),
         b = (0, o.zhh)({
             transform: t ? "translateY(0%)" : "translateY(120%)",
             opacity: +!!t,
@@ -42,22 +41,22 @@ function g(e) {
         L = v?.emojiId != null || v?.emojiName != null,
         w = n;
     if (D) {
-        let e = _.A.getGuild(v.guildId);
-        w = m.intl.format(m.t.eku049, { serverName: e?.name ?? m.intl.string(m.t.DmIUGK) });
+        let e = d.A.getGuild(v.guildId);
+        w = h.intl.format(h.t.eku049, { serverName: e?.name ?? h.intl.string(h.t.DmIUGK) });
     }
     return (0, r.jsx)(a.animated.div, {
         style: { ...b },
-        className: s()(E.Zj, y && E.Me, N && E.ww, { [E.tO]: "floating" === S, [E.Kx]: "inline" === S }, I),
-        children: (0, r.jsxs)(A, {
+        className: s()(m.Zj, y && m.Me, N && m.ww, { [m.tO]: "floating" === S, [m.Kx]: "inline" === S }, I),
+        children: (0, r.jsxs)(g, {
             hasPreviewSound: D,
             useGradientBg: y,
             children: [
                 D &&
                     (0, r.jsxs)("div", {
-                        className: E.Ed,
+                        className: m.Ed,
                         children: [
                             (0, r.jsxs)("div", {
-                                className: E.vg,
+                                className: m.vg,
                                 children: [
                                     L && (0, r.jsx)(l.A, { emojiId: v.emojiId, emojiName: v.emojiName }),
                                     (0, r.jsx)(o.Text, {
@@ -70,7 +69,7 @@ function g(e) {
                             (0, r.jsx)(o.Text, {
                                 variant: "text-xs/normal",
                                 color: "text-muted",
-                                className: E.Fr,
+                                className: m.Fr,
                                 children: w ?? n,
                             }),
                         ],
@@ -79,44 +78,38 @@ function g(e) {
                     (0, r.jsx)(o.Text, {
                         variant: i ?? "text-sm/medium",
                         color: "text-strong",
-                        className: E.tD,
+                        className: m.tD,
                         children: n,
                     }),
-                "string" == typeof u
+                "string" == typeof E
                     ? O
-                        ? (0, r.jsx)(p.A, {
+                        ? (0, r.jsx)(f.A, {
                               size: "m",
-                              className: E.Z3,
-                              shinyButtonClassName: E.Z3,
-                              subscriptionTier: h.pe.TIER_2,
-                              textOptions: { textOverride: u },
-                              premiumModalAnalyticsLocation: g,
+                              className: m.Z3,
+                              shinyButtonClassName: m.Z3,
+                              subscriptionTier: p.pe.TIER_2,
+                              textOptions: { textOverride: E },
+                              premiumModalAnalyticsLocation: A,
                               tabIndex: t ? 0 : -1,
                               onSubscribeModalClose: T,
                           })
-                        : (0, r.jsx)(f.A, {
+                        : (0, r.jsx)(_.A, {
                               size: "sm",
-                              subscriptionTier: h.pe.TIER_2,
-                              buttonTextOverride: u,
-                              premiumModalAnalyticsLocation: g,
+                              subscriptionTier: p.pe.TIER_2,
+                              buttonTextOverride: E,
+                              premiumModalAnalyticsLocation: A,
                               tabIndex: t ? 0 : -1,
                               onSubscribeModalClose: T,
                               variantOverride: C,
                           })
-                    : u,
+                    : E,
             ],
         }),
     });
 }
-function A(e) {
-    let { hasPreviewSound: t, useGradientBg: n, children: i } = e,
-        a = (0, u.Ay)();
+function g(e) {
+    let { hasPreviewSound: t, useGradientBg: n, children: i } = e;
     return n
-        ? (0, r.jsx)(o.hLv, {
-              color: "nitro-pink",
-              offsetBottom: -3,
-              className: s()(E.nC, { [E.Ay]: (0, o.Mwr)(a), [E.u8]: t }),
-              children: i,
-          })
+        ? (0, r.jsx)(o.hLv, { color: "nitro-pink", offsetBottom: -3, className: s()(m.nC, { [m.u8]: t }), children: i })
         : i;
 }

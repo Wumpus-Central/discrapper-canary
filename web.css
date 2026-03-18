@@ -22472,8 +22472,12 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     padding: 12px
 }
 
-.expressiveGradient__0b69f.radialMask__0b69f {
+.theme-dark .expressiveGradient__0b69f {
     background: radial-gradient(100% 100% at 50% 100%, #000 60%)
+}
+
+.theme-light .expressiveGradient__0b69f:before {
+    opacity: .2
 }
 
 .expressiveGradient__0b69f.hasPreviewSound__0b69f {
@@ -22520,7 +22524,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 .legacyUpsellButton__0b69f {
     background: var(--custom-premium-colors-premium-gradient-tier-2-tri-color);
     background-clip: padding-box;
-    border-radius: 3px;
+    border-radius: 4px;
     flex-shrink: 0;
     height: 2lh;
     margin-inline-start: auto
