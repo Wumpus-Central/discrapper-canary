@@ -1,7 +1,11 @@
-"use strict";
-n.d(t, { XA: () => a, fu: () => i });
-let r = (0, n(353640).v)((e) => ({ toastType: null, showToast: (t) => e({ toastType: t }) })),
-    i = () => r((e) => e.toastType),
-    a = (e) => {
-        r.getState().showToast(e);
+e.exports = function (e) {
+    return {
+        name: "LDIF",
+        contains: [
+            { className: "attribute", match: "^dn(?=:)", relevance: 10 },
+            { className: "attribute", match: "^\\w+(?=:)" },
+            { className: "literal", match: "^-" },
+            e.HASH_COMMENT_MODE,
+        ],
     };
+};
