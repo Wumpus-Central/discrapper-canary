@@ -19,14 +19,14 @@ var r = n(627968),
     A = n(394236);
 let I = { xs: "xxs", sm: "xs", md: "refresh_sm" },
     T = (e) => {
-        let { product: t, selectedVariantIndex: n, ...s } = e,
-            a = i.useMemo(
+        let { product: t, selectedVariantIndex: n, hideIfPurchased: s = !0, ...a } = e,
+            l = i.useMemo(
                 () => (t.type === o.R.VARIANTS_GROUP && null != n && t.variants?.[n] != null ? t.variants[n] : t),
                 [t, n],
             ),
-            l = a.skuId,
-            { isPurchased: u } = (0, h.h)(a),
-            c = i.useMemo(() => {
+            u = l.skuId,
+            { isPurchased: c } = (0, h.h)(l),
+            _ = i.useMemo(() => {
                 let e = "6/4";
                 switch (t.type) {
                     case o.R.NAMEPLATE:
@@ -45,7 +45,9 @@ let I = { xs: "xxs", sm: "xs", md: "refresh_sm" },
                     props: { product: t, forCollectedModal: !0 },
                 };
             }, [t]);
-        return u ? null : (0, r.jsx)(S, { skuId: l, productName: a.name, nuxGraphic: c, disabled: !(0, f.q)(a), ...s });
+        return c && s
+            ? null
+            : (0, r.jsx)(S, { skuId: u, productName: l.name, nuxGraphic: _, disabled: !(0, f.q)(l), ...a });
     };
 function S(e) {
     let {

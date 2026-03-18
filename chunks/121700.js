@@ -15,7 +15,7 @@ function d(e) {
 function _(e) {
     let { sku: t, ...n } = e,
         o = (0, i.bG)([s.A], () => s.A.getProduct(t.id));
-    return null != o ? (0, r.jsx)(a.R, { product: o, ...n }) : null;
+    return null != o ? (0, r.jsx)(a.R, { product: o, hideIfPurchased: !1, ...n }) : null;
 }
 function f(e) {
     let { sku: t, isCardHovered: n, spec: i, ...s } = e,
