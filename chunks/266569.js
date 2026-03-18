@@ -39,6 +39,7 @@ class v {
     minViewTimeSeconds;
     minViewportPercentage;
     isQuestEnrollmentBlocked;
+    onImpressionCallback;
     isRunning = !1;
     constructor(e) {
         const {
@@ -51,7 +52,8 @@ class v {
             questContentRowIndex: u,
             minViewTimeSeconds: c = 1,
             isQuestEnrollmentBlocked: d,
-            sourceQuestContent: _,
+            onImpression: _,
+            sourceQuestContent: f,
         } = e;
         (this.id = (0, s.A)()),
             (this.questContent = r),
@@ -62,7 +64,8 @@ class v {
             (this.triggeredByStatusChange = i),
             (this.questContentRowIndex = u),
             (this.isQuestEnrollmentBlocked = d),
-            (this.sourceQuestContent = _),
+            (this.onImpressionCallback = _),
+            (this.sourceQuestContent = f),
             a.p.QUEST,
             (this.entity = { adContentIds: t, adCreativeType: n });
     }
@@ -135,7 +138,8 @@ class v {
                         properties: { ...i, ...this.commonProperties() },
                     });
             }
-        });
+        }),
+            this.onImpressionCallback?.();
     };
     beat = (() => {
         var e = this;
@@ -202,6 +206,7 @@ class v {
                 trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata,
                 triggeredByStatusChange: t,
                 isQuestEnrollmentBlocked: this.isQuestEnrollmentBlocked,
+                onImpression: this.onImpressionCallback,
                 sourceQuestContent: this.sourceQuestContent,
                 ...this.entity,
             })
@@ -295,6 +300,7 @@ function C(e) {
                 let t = {
                     isQuestEnrollmentBlocked: h,
                     minViewTimeSeconds: e.minViewTimeSeconds,
+                    onImpression: e.onImpression,
                     questContent: e.questContent,
                     questContentPosition: e.questContentPosition,
                     questContentRowIndex: e.questContentRowIndex,
@@ -313,6 +319,7 @@ function C(e) {
             c,
             n,
             e.adContentIds,
+            e.onImpression,
             e.questContent,
             e.questContentPosition,
             e.questContentRowIndex,
