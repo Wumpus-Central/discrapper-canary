@@ -9,8 +9,8 @@ var i = n(627968),
     d = n(997509),
     c = n(985018),
     u = n(600854),
-    g = n(864608),
-    m = n(515176);
+    m = n(515176),
+    g = n(2330);
 function x(e) {
     let { guildId: t, canManageGuild: n, premiumProgressBarEnabled: x } = e,
         h = (0, a.Ay)(),
