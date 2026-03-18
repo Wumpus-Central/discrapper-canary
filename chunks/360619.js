@@ -1,35 +1,32 @@
-n.d(t, { AC: () => C, NI: () => f, PH: () => S }), n(321073);
+n.d(t, { AC: () => f, NI: () => C, PH: () => S });
 var i = n(64700),
-    s = n(311907);
-n(361739);
-var l = n(86379),
+    s = n(311907),
+    l = n(86379),
     a = n(643015),
     r = n(945276),
     o = n(35587),
     d = n(677402),
     c = n(818143),
     u = n(639555),
-    _ = n(617641);
-n(540999);
-var m = n(189081),
+    _ = n(617641),
+    m = n(189081),
     g = n(994500),
     A = n(628965),
-    h = n(253932),
-    x = n(368631),
+    x = n(253932),
+    h = n(368631),
     p = n(682262),
-    T = n(987281);
-n(531525);
-var E = n(654487);
+    T = n(987281),
+    E = n(654487);
 function S() {
     let e = (0, o.IO)().length,
         t = (0, s.bG)([A.A], () => A.A.getSearchParams()),
         n = (0, p.b_)(),
         T = (0, _.Lc)({ location: "settings" }),
         S = (0, u.Rv)({ location: "settings" }),
-        C = (0, l.H)(),
-        f = (0, d.H)({ location: E.rE.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
+        f = (0, l.H)(),
+        C = (0, d.H)({ location: E.rE.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
         b = (0, s.bG)([m.A], () => m.A.hasLibraryApplication()),
-        N = h.Q_.useSetting(),
+        N = x.Q_.useSetting(),
         I = (0, a.A)(),
         v = (0, r.A)() ?? !0,
         j = (0, c.G)()?.length > 0,
@@ -39,14 +36,14 @@ function S() {
         }));
     return i.useMemo(
         () =>
-            (0, x.zj)({
+            (0, h.zj)({
                 unseenGiftCount: e,
                 searchParams: t,
                 isOverlaySupported: n,
                 isInappropriateConversationWarningEnabled: T,
                 isInapproprateConversationsDefaultOn: S,
-                paymentsBlocked: C,
-                isEligibleForQuests: f,
+                paymentsBlocked: f,
+                isEligibleForQuests: C,
                 isStricterMessageRequestsEnabled: I,
                 hasLibraryApplication: b,
                 developerMode: N,
@@ -55,10 +52,10 @@ function S() {
                 hasIgnoredUsers: R,
                 hasBlockedUsers: y,
             }),
-        [N, y, R, b, j, t, v, f, S, T, n, I, C, e],
+        [N, y, R, b, j, t, v, C, S, T, n, I, f, e],
     );
 }
-function C(e) {
+function f(e) {
     let t = T.a.useField("searchResults"),
         n = S(),
         i = n[e],
@@ -110,7 +107,7 @@ function C(e) {
         }
     return a;
 }
-function f(e) {
+function C(e) {
     return Array.from(
         new Map(
             Object.entries(e).filter((e) => {
@@ -127,4 +124,3 @@ function f(e) {
         return [t, n.searchableTitles];
     });
 }
-n(985018);
