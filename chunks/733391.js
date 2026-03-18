@@ -94,7 +94,16 @@ async function A() {
             }
             i.h.dispatch({
                 type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
-                config: { promotionalSkuIds: e.promotional_sku_ids, promotionEndDatetime: t },
+                config: {
+                    promotionalSkuIds: e.promotional_sku_ids,
+                    promotionEndDatetime: t,
+                    storefronts:
+                        e.storefronts?.map((e) => ({
+                            guildId: e.guild_id,
+                            applicationId: e.application_id,
+                            gameId: e.game_id,
+                        })) ?? [],
+                },
             });
         } catch {
             i.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_FAILURE" });

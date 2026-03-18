@@ -1,12 +1,14 @@
 "use strict";
-n.d(t, { A: () => s });
-var r = n(429913),
-    i = n(871123);
-function s(e) {
-    let t = (0, i.Xg)(e) ? [] : (e?.linkedGames?.map((e) => e.id) ?? []),
-        n = (0, r.A)(t);
+n.d(t, { A: () => a });
+var r = n(311907),
+    i = n(429913),
+    s = n(832163);
+function a(e) {
+    let t = (0, r.bG)([s.A], () => s.A.getStorefrontDetectableGameAndApplicationIds()),
+        n = null != e && t.has(e.id) ? [] : (e?.linkedGames?.map((e) => e.id) ?? []),
+        a = (0, i.A)(n);
     if (null == e) return null;
-    if ((0, i.Xg)(e)) return e;
-    for (let e of n) if (null != e && (0, i.Xg)(e)) return e;
+    if (null != e && t.has(e.id)) return e;
+    for (let e of a) if (null != e && t.has(e.id)) return e;
     return null;
 }

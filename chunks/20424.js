@@ -1,38 +1,40 @@
 "use strict";
-n.d(t, { A: () => c, c: () => d });
+n.d(t, { A: () => d, c: () => _ });
 var r = n(64700),
-    i = n(633075),
-    s = n(289173),
-    a = n(950191),
-    o = n(403362),
-    l = n(501838),
-    u = n(188275);
-function c(e) {
+    i = n(311907),
+    s = n(633075),
+    a = n(289173),
+    o = n(950191),
+    l = n(403362),
+    u = n(832163),
+    c = n(501838);
+function d(e) {
     let { displayProfile: t } = e,
         n = r.useMemo(() => (t?.userId != null ? [t.userId] : []), [t]),
-        a = (0, l.gT)({ gameIds: u.sQ, userIds: n }),
-        c = (0, l.K6)({ gameIds: u.sQ, userIds: n }),
-        d = (0, l.l1)(n),
-        _ = r.useMemo(() => {
+        o = (0, c.gT)({ userIds: n }),
+        d = (0, c.K6)({ userIds: n }),
+        _ = (0, c.l1)(n),
+        f = (0, i.bG)([u.A], () => u.A.getStorefrontDetectableGameAndApplicationIds()),
+        p = r.useMemo(() => {
             if (t?.widgets == null) return !1;
             let e = new Set(
                 t?.widgets
                     .map((e) =>
-                        e instanceof s.Yy
+                        e instanceof a.Yy
                             ? e.games.map((e) => e.applicationId)
-                            : e instanceof i.R
+                            : e instanceof s.R
                               ? e.applicationId
                               : void 0,
                     )
-                    .filter(o.Vq)
+                    .filter(l.Vq)
                     .flat(),
             );
-            for (let t of u.sQ) if (e.has(t)) return !0;
+            for (let t of f) if (e.has(t)) return !0;
             return !1;
-        }, [t?.widgets]);
-    return t?.application == null && (a || c || d || _);
+        }, [t?.widgets, f]);
+    return t?.application == null && (o || d || _ || p);
 }
-function d(e) {
+function _(e) {
     let { userId: t } = e;
-    return c({ displayProfile: (0, a.Ay)(t) });
+    return d({ displayProfile: (0, o.Ay)(t) });
 }

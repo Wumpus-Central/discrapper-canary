@@ -1,32 +1,36 @@
-n.d(t, { V: () => d });
+n.d(t, { V: () => u });
 var a = n(64700),
-    l = n(223273),
-    i = n(871123),
-    r = n(594832),
-    s = n(631784),
-    o = n(287809),
-    c = n(705751);
-function d(e) {
-    let t = o.default.getCurrentUser()?.id,
+    l = n(311907),
+    i = n(223273),
+    r = n(832163),
+    s = n(594832),
+    o = n(631784),
+    c = n(287809),
+    d = n(705751);
+function u(e) {
+    let t = c.default.getCurrentUser()?.id,
         n = a.useMemo(() => (null != t ? [t] : []), [t]),
-        d = a.useMemo(() => {
-            if (null != e && e.type === c.S7.GAME)
-                return e.linkedGames?.find((e) => e.type === l.Mh.OFFICIAL && (0, i.Xg)(e.application))?.application;
-        }, [e]),
-        u = a.useMemo(() => (d?.id != null ? [d.id] : []), [d]),
-        { recommendations: m, status: x } = (0, s.XQ)({
-            applicationIds: u,
+        u = (0, l.bG)([r.A], () => r.A.getStorefrontDetectableGameAndApplicationIds()),
+        m = a.useMemo(() => {
+            if (null != e && e.type === d.S7.GAME)
+                return e.linkedGames?.find(
+                    (e) => e.type === i.Mh.OFFICIAL && null != e.application && u.has(e.application.id),
+                )?.application;
+        }, [e, u]),
+        x = a.useMemo(() => (m?.id != null ? [m.id] : []), [m]),
+        { recommendations: f, status: h } = (0, o.XQ)({
+            applicationIds: x,
             userIds: n,
             numItems: 6,
-            source: r.B5.USER_PROFILE,
+            source: s.B5.USER_PROFILE,
         });
     return {
         socialLayerStorefrontRecommendationsData: a.useMemo(
             () =>
-                null == d || null == d.guildId || "success" !== x || 0 === m.length
+                null == m || null == m.guildId || "success" !== h || 0 === f.length
                     ? null
-                    : { application: d, skuIds: m.map((e) => e.id), guildId: d.guildId },
-            [d, x, m],
+                    : { application: m, skuIds: f.map((e) => e.id), guildId: m.guildId },
+            [m, h, f],
         ),
     };
 }
