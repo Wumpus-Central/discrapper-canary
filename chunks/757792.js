@@ -2,8 +2,8 @@
 n.d(t, { P3: () => _, Sg: () => d });
 var r = n(417597),
     i = n(554146),
-    a = n(961350),
-    s = n(927813),
+    s = n(961350),
+    a = n(927813),
     o = n(661191),
     l = n(199773);
 let u = {
@@ -33,24 +33,21 @@ let u = {
         [i.M.REVERSE_TRIAL_NITRO_TAB_BADGE_V2]: 0,
         [i.M.PERMADECOS_NITRO_TAB_NEW_BADGE]: 0,
         [i.M.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE]: 0,
-        [i.M.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2]: 0,
-        [i.M.Q2_2025_MARKETING_MOMENT_FOLLOW_UP_MODAL]: 0,
-        [i.M.Q2_2025_MARKETING_MOMENT_FIRST_IMPRESSION_MODAL]: 0,
         [i.M.BOGO_2025_ANNOUNCEMENT_MODAL]: 0,
         [i.M.NITRO_DROP_REWARD]: 0,
         [i.M.QUEST_HOME_ENTRYPOINT_ONBOARDING]: 0,
         [i.M.QUEST_HOME_ENTRYPOINT_TAKEOVER_BADGE]: 0,
     },
-    c = s.A.Millis.DAY;
+    c = a.A.Millis.DAY;
 function d(e) {
-    let { userId: t, newUserMinAgeRequiredOverridden: n } = (0, r.cf)([a.default, l.A], () => ({
-        userId: a.default.getId(),
+    let { userId: t, newUserMinAgeRequiredOverridden: n } = (0, r.cf)([s.default, l.A], () => ({
+        userId: s.default.getId(),
         newUserMinAgeRequiredOverridden: l.A.newUserMinAgeRequiredOverridden,
     }));
     return n ? e : e.filter((e) => f(t, e));
 }
 function _(e) {
-    return !l.A.newUserMinAgeRequiredOverridden && !f(a.default.getId(), e);
+    return !l.A.newUserMinAgeRequiredOverridden && !f(s.default.getId(), e);
 }
 function f(e, t) {
     return null != e && o.default.age(e) >= (u[t] ?? c);
