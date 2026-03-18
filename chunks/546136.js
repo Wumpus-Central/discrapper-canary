@@ -1,33 +1,41 @@
-i.d(l, { A: () => c });
-var n = i(627968);
-i(64700);
-var t = i(503698),
-    s = i.n(t),
-    a = i(397927),
-    r = i(642737),
-    o = i(891726);
-function d(e) {
+t.d(l, { A: () => A });
+var i = t(627968);
+t(64700);
+var n = t(503698),
+    s = t.n(n),
+    a = t(397927),
+    r = t(642737),
+    o = t(985018),
+    d = t(891726);
+let c = "profile-modal-editing-panel",
+    u = "profile-modal-editing-panel-heading";
+function m(e) {
     let { onClick: l } = e;
-    return (0, n.jsxs)(a.DUT, {
-        className: o.cS,
-        "aria-label": "Close editing panel",
+    return (0, i.jsxs)(a.DUT, {
+        className: d.cS,
+        "aria-label": o.intl.string(o.t.X6NklS),
         onClick: l,
+        "aria-controls": c,
+        "aria-expanded": !0,
         children: [
-            (0, n.jsx)(a._BQ, { size: "md", color: "currentColor" }),
-            (0, n.jsx)(a._BQ, { size: "md", color: "currentColor" }),
+            (0, i.jsx)(a._BQ, { size: "md", color: "currentColor" }),
+            (0, i.jsx)(a._BQ, { size: "md", color: "currentColor" }),
         ],
     });
 }
-function c(e) {
-    let { guildId: l, onChangeGuildId: i, onClose: t, className: c } = e;
-    return (0, n.jsxs)("aside", {
-        className: s()(o.nd, c),
+function A(e) {
+    let { guildId: l, onChangeGuildId: t, onClose: n, className: A } = e;
+    return (0, i.jsxs)("aside", {
+        id: c,
+        "aria-labelledby": u,
+        className: s()(d.nd, A),
         children: [
-            (0, n.jsxs)("div", {
-                className: o.wx,
-                children: [(0, n.jsx)(r.A, { selectedGuildId: l ?? null, onChange: i }), (0, n.jsx)(d, { onClick: t })],
+            (0, i.jsx)(a.AC4, { children: (0, i.jsx)(a.H, { id: u, children: o.intl.string(o.t["L+ch00"]) }) }),
+            (0, i.jsxs)("div", {
+                className: d.wx,
+                children: [(0, i.jsx)(r.A, { selectedGuildId: l ?? null, onChange: t }), (0, i.jsx)(m, { onClick: n })],
             }),
-            (0, n.jsx)(a.HOs, { className: o.XG, fade: !0, children: (0, n.jsx)("div", {}) }),
+            (0, i.jsx)(a.HOs, { className: d.XG, fade: !0, children: (0, i.jsx)("div", {}) }),
         ],
     });
 }

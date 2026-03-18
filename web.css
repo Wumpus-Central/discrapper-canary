@@ -20145,7 +20145,6 @@ img.thumbnail__0f2e8 {
     background: var(--background-surface-high);
     display: flex;
     flex-direction: column;
-    overflow: hidden;
     position: relative
 }
 
@@ -20153,6 +20152,7 @@ img.thumbnail__0f2e8 {
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-border), var(--shadow-high);
     max-height: calc(100vh - 20px);
+    overflow: hidden;
     width: 300px
 }
 
@@ -20179,7 +20179,6 @@ img.thumbnail__0f2e8 {
 
 :where(.outer_c0bea0).user-profile-sidebar {
     height: 100%;
-    overflow: initial;
     width: 340px
 }
 
@@ -20225,13 +20224,14 @@ img.thumbnail__0f2e8 {
 }
 
 .user-profile-modal-v2 .inner_c0bea0 {
-    border-radius: 0;
+    border-radius: inherit;
     flex-direction: row;
     gap: 0;
     height: 100%;
     padding-block: var(--custom-modal-v2-padding) 0;
     padding-inline-end: calc(var(--custom-modal-v2-padding) - var(--custom-modal-v2-tabpanel-scrollbar-offset));
     padding-inline-start: var(--custom-modal-v2-padding);
+    position: relative;
 
     @container (min-width: 714px) {
         --custom-modal-v2-padding: var(--space-32)
