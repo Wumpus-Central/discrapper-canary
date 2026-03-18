@@ -2,8 +2,8 @@
 n.d(t, { ew: () => y }), n(321073);
 var r = n(852015),
     i = n(144367),
-    a = n(428420),
-    s = n(324281),
+    s = n(428420),
+    a = n(324281),
     o = n(406935),
     l = n(56426),
     u = n(335871),
@@ -24,6 +24,7 @@ var r = n(852015),
             (e[(e.SAFETY_SYSTEM_UNBAN = 11)] = "SAFETY_SYSTEM_UNBAN"),
             (e[(e.GENERIC_AUTOMATED_SAFETY_ACTION = 12)] = "GENERIC_AUTOMATED_SAFETY_ACTION"),
             (e[(e.GENERIC_MANUAL_SAFETY_ACTION = 13)] = "GENERIC_MANUAL_SAFETY_ACTION"),
+            (e[(e.BANNED_USER_BACKFILL = 14)] = "BANNED_USER_BACKFILL"),
             e
         );
     })({}),
@@ -40,14 +41,14 @@ var r = n(852015),
             e
         );
     })({});
-class _ extends s.G {
+class _ extends a.G {
     constructor() {
         super("discord_protos.safety_common.v1.NormalState", []);
     }
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
             t
         );
@@ -61,7 +62,7 @@ class _ extends s.G {
     }
 }
 let f = new _();
-class p extends s.G {
+class p extends a.G {
     constructor() {
         super("discord_protos.safety_common.v1.RestrictedState", [
             { no: 1, name: "restricted_until", kind: "message", T: () => u.D },
@@ -70,26 +71,26 @@ class p extends s.G {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = i ?? this.create(),
-            s = e.pos + t;
-        for (; e.pos < s; ) {
+        let s = i ?? this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
             let [t, i] = e.tag();
-            if (1 === t) a.restrictedUntil = u.D.internalBinaryRead(e, e.uint32(), n, a.restrictedUntil);
+            if (1 === t) s.restrictedUntil = u.D.internalBinaryRead(e, e.uint32(), n, s.restrictedUntil);
             else {
-                let s = n.readUnknownField;
-                if ("throw" === s)
+                let a = n.readUnknownField;
+                if ("throw" === a)
                     throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                 let o = e.skip(i);
-                !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, o);
+                !1 !== a && (!0 === a ? r.f$.onRead : a)(this.typeName, s, t, i, o);
             }
         }
-        return a;
+        return s;
     }
     internalBinaryWrite(e, t, n) {
         e.restrictedUntil &&
@@ -99,7 +100,7 @@ class p extends s.G {
     }
 }
 let h = new p();
-class m extends s.G {
+class m extends a.G {
     constructor() {
         super("discord_protos.safety_common.v1.DeferredActionState", [
             { no: 1, name: "action_deferred_until", kind: "message", T: () => u.D },
@@ -108,26 +109,26 @@ class m extends s.G {
     create(e) {
         let t = {};
         return (
-            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = i ?? this.create(),
-            s = e.pos + t;
-        for (; e.pos < s; ) {
+        let s = i ?? this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
             let [t, i] = e.tag();
-            if (1 === t) a.actionDeferredUntil = u.D.internalBinaryRead(e, e.uint32(), n, a.actionDeferredUntil);
+            if (1 === t) s.actionDeferredUntil = u.D.internalBinaryRead(e, e.uint32(), n, s.actionDeferredUntil);
             else {
-                let s = n.readUnknownField;
-                if ("throw" === s)
+                let a = n.readUnknownField;
+                if ("throw" === a)
                     throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                 let o = e.skip(i);
-                !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, o);
+                !1 !== a && (!0 === a ? r.f$.onRead : a)(this.typeName, s, t, i, o);
             }
         }
-        return a;
+        return s;
     }
     internalBinaryWrite(e, t, n) {
         e.actionDeferredUntil &&
@@ -136,8 +137,8 @@ class m extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let g = new m();
-class E extends s.G {
+let E = new m();
+class g extends a.G {
     constructor() {
         super("discord_protos.safety_common.v1.TempBannedState", [
             { no: 1, name: "banned_until", kind: "message", T: () => u.D },
@@ -153,34 +154,34 @@ class E extends s.G {
     create(e) {
         let t = { classificationTypes: [] };
         return (
-            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = i ?? this.create(),
-            s = e.pos + t;
-        for (; e.pos < s; ) {
+        let s = i ?? this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    a.bannedUntil = u.D.internalBinaryRead(e, e.uint32(), n, a.bannedUntil);
+                    s.bannedUntil = u.D.internalBinaryRead(e, e.uint32(), n, s.bannedUntil);
                     break;
                 case 2:
                     if (i === r.O0.LengthDelimited)
-                        for (let t = e.int32() + e.pos; e.pos < t; ) a.classificationTypes.push(e.int32());
-                    else a.classificationTypes.push(e.int32());
+                        for (let t = e.int32() + e.pos; e.pos < t; ) s.classificationTypes.push(e.int32());
+                    else s.classificationTypes.push(e.int32());
                     break;
                 default:
-                    let s = n.readUnknownField;
-                    if ("throw" === s)
+                    let a = n.readUnknownField;
+                    if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let o = e.skip(i);
-                    !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, o);
+                    !1 !== a && (!0 === a ? r.f$.onRead : a)(this.typeName, s, t, i, o);
             }
         }
-        return a;
+        return s;
     }
     internalBinaryWrite(e, t, n) {
         if (
@@ -195,8 +196,8 @@ class E extends s.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let A = new E();
-class I extends s.G {
+let A = new g();
+class I extends a.G {
     constructor() {
         super("discord_protos.safety_common.v1.BannedState", [
             {
@@ -211,29 +212,29 @@ class I extends s.G {
     create(e) {
         let t = { classificationTypes: [] };
         return (
-            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = i ?? this.create(),
-            s = e.pos + t;
-        for (; e.pos < s; ) {
+        let s = i ?? this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
             let [t, i] = e.tag();
             if (1 === t)
                 if (i === r.O0.LengthDelimited)
-                    for (let t = e.int32() + e.pos; e.pos < t; ) a.classificationTypes.push(e.int32());
-                else a.classificationTypes.push(e.int32());
+                    for (let t = e.int32() + e.pos; e.pos < t; ) s.classificationTypes.push(e.int32());
+                else s.classificationTypes.push(e.int32());
             else {
-                let s = n.readUnknownField;
-                if ("throw" === s)
+                let a = n.readUnknownField;
+                if ("throw" === a)
                     throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                 let o = e.skip(i);
-                !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, o);
+                !1 !== a && (!0 === a ? r.f$.onRead : a)(this.typeName, s, t, i, o);
             }
         }
-        return a;
+        return s;
     }
     internalBinaryWrite(e, t, n) {
         if (e.classificationTypes.length) {
@@ -246,12 +247,12 @@ class I extends s.G {
     }
 }
 let T = new I();
-class S extends s.G {
+class S extends a.G {
     constructor() {
         super("discord_protos.safety_common.v1.SafetyState", [
             { no: 101, name: "normal", kind: "message", oneof: "state", T: () => f },
             { no: 102, name: "restricted", kind: "message", oneof: "state", T: () => h },
-            { no: 103, name: "deferred_action", kind: "message", oneof: "state", T: () => g },
+            { no: 103, name: "deferred_action", kind: "message", oneof: "state", T: () => E },
             { no: 104, name: "temp_banned", kind: "message", oneof: "state", T: () => A },
             { no: 105, name: "banned", kind: "message", oneof: "state", T: () => T },
             { no: 1, name: "reason", kind: "enum", T: () => ["discord_protos.safety_common.v1.SafetyStateReason", c] },
@@ -268,61 +269,61 @@ class S extends s.G {
     create(e) {
         let t = { state: { oneofKind: void 0 }, reason: 0, annotations: [] };
         return (
-            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
+            globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, i.x)(this, t, e),
             t
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = i ?? this.create(),
-            s = e.pos + t;
-        for (; e.pos < s; ) {
+        let s = i ?? this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
             let [t, i] = e.tag();
             switch (t) {
                 case 101:
-                    a.state = { oneofKind: "normal", normal: f.internalBinaryRead(e, e.uint32(), n, a.state.normal) };
+                    s.state = { oneofKind: "normal", normal: f.internalBinaryRead(e, e.uint32(), n, s.state.normal) };
                     break;
                 case 102:
-                    a.state = {
+                    s.state = {
                         oneofKind: "restricted",
-                        restricted: h.internalBinaryRead(e, e.uint32(), n, a.state.restricted),
+                        restricted: h.internalBinaryRead(e, e.uint32(), n, s.state.restricted),
                     };
                     break;
                 case 103:
-                    a.state = {
+                    s.state = {
                         oneofKind: "deferredAction",
-                        deferredAction: g.internalBinaryRead(e, e.uint32(), n, a.state.deferredAction),
+                        deferredAction: E.internalBinaryRead(e, e.uint32(), n, s.state.deferredAction),
                     };
                     break;
                 case 104:
-                    a.state = {
+                    s.state = {
                         oneofKind: "tempBanned",
-                        tempBanned: A.internalBinaryRead(e, e.uint32(), n, a.state.tempBanned),
+                        tempBanned: A.internalBinaryRead(e, e.uint32(), n, s.state.tempBanned),
                     };
                     break;
                 case 105:
-                    a.state = { oneofKind: "banned", banned: T.internalBinaryRead(e, e.uint32(), n, a.state.banned) };
+                    s.state = { oneofKind: "banned", banned: T.internalBinaryRead(e, e.uint32(), n, s.state.banned) };
                     break;
                 case 1:
-                    a.reason = e.int32();
+                    s.reason = e.int32();
                     break;
                 case 2:
                     if (i === r.O0.LengthDelimited)
-                        for (let t = e.int32() + e.pos; e.pos < t; ) a.annotations.push(e.int32());
-                    else a.annotations.push(e.int32());
+                        for (let t = e.int32() + e.pos; e.pos < t; ) s.annotations.push(e.int32());
+                    else s.annotations.push(e.int32());
                     break;
                 case 3:
-                    a.lastMutationId = o.ol.internalBinaryRead(e, e.uint32(), n, a.lastMutationId);
+                    s.lastMutationId = o.ol.internalBinaryRead(e, e.uint32(), n, s.lastMutationId);
                     break;
                 default:
-                    let s = n.readUnknownField;
-                    if ("throw" === s)
+                    let a = n.readUnknownField;
+                    if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let l = e.skip(i);
-                    !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, l);
+                    !1 !== a && (!0 === a ? r.f$.onRead : a)(this.typeName, s, t, i, l);
             }
         }
-        return a;
+        return s;
     }
     internalBinaryWrite(e, t, n) {
         if (
@@ -331,7 +332,7 @@ class S extends s.G {
             "restricted" === e.state.oneofKind &&
                 h.internalBinaryWrite(e.state.restricted, t.tag(102, r.O0.LengthDelimited).fork(), n).join(),
             "deferredAction" === e.state.oneofKind &&
-                g.internalBinaryWrite(e.state.deferredAction, t.tag(103, r.O0.LengthDelimited).fork(), n).join(),
+                E.internalBinaryWrite(e.state.deferredAction, t.tag(103, r.O0.LengthDelimited).fork(), n).join(),
             "tempBanned" === e.state.oneofKind &&
                 A.internalBinaryWrite(e.state.tempBanned, t.tag(104, r.O0.LengthDelimited).fork(), n).join(),
             "banned" === e.state.oneofKind &&
