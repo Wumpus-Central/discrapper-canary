@@ -26,14 +26,6 @@ class o extends r.A {
     themes;
     linkedApplications;
     content_classification;
-    genres;
-    platforms;
-    bannerHash;
-    screenshotHashes;
-    screenshotUrls;
-    websites;
-    companies;
-    supplementalGameData;
     constructor(e) {
         super(),
             (this.id = e.id),
@@ -52,15 +44,7 @@ class o extends r.A {
             (this.thirdPartySkus = e.thirdPartySkus || []),
             (this.themes = e.themes || []),
             (this.linkedApplications = e.linkedApplications),
-            (this.content_classification = e.content_classification),
-            (this.genres = e.genres),
-            (this.platforms = e.platforms),
-            (this.bannerHash = e.bannerHash),
-            (this.screenshotHashes = e.screenshotHashes),
-            (this.screenshotUrls = e.screenshotUrls),
-            (this.websites = e.websites),
-            (this.companies = e.companies),
-            (this.supplementalGameData = e.supplementalGameData);
+            (this.content_classification = e.content_classification);
     }
     getIconURL(e) {
         return null == this.icon
