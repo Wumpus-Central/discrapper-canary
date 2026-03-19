@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => g });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
@@ -9,10 +9,10 @@ var r = n(627968),
     c = n(212031),
     u = n(975571),
     d = n(809465),
-    _ = n(652215),
-    g = n(985018),
-    m = n(535790);
-function b(e) {
+    m = n(652215),
+    f = n(985018),
+    h = n(535790);
+function p(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(l.W1t, {
         "data-menu-migrated-auto": !0,
@@ -22,45 +22,45 @@ function b(e) {
         "aria-label": "More options",
         children: (0, r.jsxs)(l.rXV, {
             children: [
-                (0, r.jsx)(l.Drp, { id: "changelog", label: g.intl.string(g.t.LRmNAl), action: () => (0, c.j)(!0) }),
+                (0, r.jsx)(l.Drp, { id: "changelog", label: f.intl.string(f.t.LRmNAl), action: () => (0, c.j)(!0) }),
                 (0, r.jsx)(l.Drp, {
                     id: "acknowledgements",
-                    label: g.intl.string(g.t["0nUKy3"]),
-                    action: () => (0, o.A)(_.X7G.ACKNOWLEDGEMENTS),
+                    label: f.intl.string(f.t["0nUKy3"]),
+                    action: () => (0, o.A)(m.X7G.ACKNOWLEDGEMENTS),
                 }),
-                (0, r.jsx)(l.Drp, { id: "support", label: g.intl.string(g.t["Yl/Riu"]), action: () => (0, o.A)(u.C) }),
+                (0, r.jsx)(l.Drp, { id: "support", label: f.intl.string(f.t["Yl/Riu"]), action: () => (0, o.A)(u.C) }),
             ],
         }),
     });
 }
-function f() {
+function g() {
     let e = i.useRef(null);
     return (0, r.jsxs)("div", {
         children: [
-            (0, r.jsx)(d.A, { compact: !0 }),
+            (0, r.jsx)(d.A, {}),
             (0, r.jsxs)("div", {
-                className: m.yJ,
+                className: h.yJ,
                 children: [
                     (0, r.jsx)(l.MzZ, {
-                        href: _.X7G.PRIVACY,
+                        href: m.X7G.PRIVACY,
                         children: (0, r.jsx)(l.Text, {
                             tag: "span",
                             variant: "text-xxs/normal",
                             color: "currentColor",
-                            children: g.intl.string(g.t["Knf/f/"]),
+                            children: f.intl.string(f.t["Knf/f/"]),
                         }),
                     }),
-                    (0, r.jsx)("span", { className: m.xE, "aria-hidden": "true", children: "•" }),
+                    (0, r.jsx)("span", { className: h.xE, "aria-hidden": "true", children: "•" }),
                     (0, r.jsx)(l.MzZ, {
-                        href: _.X7G.TERMS,
+                        href: m.X7G.TERMS,
                         children: (0, r.jsx)(l.Text, {
                             tag: "span",
                             variant: "text-xxs/normal",
                             color: "currentColor",
-                            children: g.intl.string(g.t.uFSTGq),
+                            children: f.intl.string(f.t.uFSTGq),
                         }),
                     }),
-                    (0, r.jsx)("span", { className: m.xE, "aria-hidden": "true", children: "•" }),
+                    (0, r.jsx)("span", { className: h.xE, "aria-hidden": "true", children: "•" }),
                     (0, r.jsx)(l.YNO, {
                         targetElementRef: e,
                         position: "top",
@@ -69,19 +69,19 @@ function f() {
                         animation: l.YNO.Animation.NONE,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
-                            return (0, r.jsx)(b, { onClose: t });
+                            return (0, r.jsx)(p, { onClose: t });
                         },
                         children: (t, n) =>
                             (0, r.jsx)(l.MzZ, {
                                 ...t,
                                 ref: e,
                                 useDefaultUnderlineStyles: !1,
-                                className: s()(m.Mj, { [m.vu]: n.isShown }),
+                                className: s()(h.Mj, { [h.vu]: n.isShown }),
                                 children: (0, r.jsx)(l.Text, {
                                     tag: "span",
                                     variant: "text-xxs/normal",
                                     color: "currentColor",
-                                    children: g.intl.string(g.t["UKOtz+"]),
+                                    children: f.intl.string(f.t["UKOtz+"]),
                                 }),
                             }),
                     }),
