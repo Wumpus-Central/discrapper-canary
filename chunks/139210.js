@@ -1,9 +1,9 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => C });
 var a = n(627968),
     i = n(64700),
-    s = n(503698),
-    l = n.n(s),
-    r = n(475539),
+    l = n(503698),
+    s = n.n(l),
+    r = n(497766),
     o = n(397927),
     d = n(341915),
     c = n(590202),
@@ -15,105 +15,98 @@ var a = n(627968),
     g = n(545986),
     _ = n(568329),
     f = n(963713),
-    b = n(223352),
-    v = n(152515);
+    v = n(223352);
 n(272111);
-var j = n(985018),
-    C = n(116224);
+var b = n(985018),
+    j = n(229170);
 let A = (0, r.animated)(x.Ay),
-    T = (e) => {
-        let { withUnfurlTimeout: t, unfurlTimeoutDurationInMilliseconds: n, onUnfurlTimeoutComplete: s } = e,
-            x = (0, u.go)(),
-            { expansionSpring: T } = i.useContext(_.PW),
+    C = () => {
+        let e = (0, u.go)(),
+            { expansionSpring: t } = i.useContext(_.PW),
             {
-                onCtxMenuOpen: y,
-                onCtxMenuClose: S,
-                onCtxMenuSelect: E,
-                isExpanded: N,
-                isExpansionAnimationComplete: I,
-                quest: k,
+                onCtxMenuOpen: n,
+                onCtxMenuClose: l,
+                onCtxMenuSelect: x,
+                isExpanded: C,
+                isExpansionAnimationComplete: y,
+                quest: T,
             } = i.useContext(f.T),
-            R = i.useCallback(() => {
-                (0, g.Zc)(k, {
+            S = i.useCallback(() => {
+                (0, g.Zc)(T, {
                     content: d.uF.QUEST_BAR_V2,
                     ctaContent: c.Cy.OPEN_DISCLOSURE,
                     sourceQuestContent: d.uF.QUEST_BAR_V2,
                 });
-            }, [k]),
-            O = i.useCallback(() => {
-                (0, m.pu)(k, {
+            }, [T]),
+            E = i.useCallback(() => {
+                (0, m.pu)(T, {
                     content: d.uF.QUEST_BAR_V2,
                     ctaContent: c.Cy.OPEN_GAME_LINK,
-                    impressionId: x,
+                    impressionId: e,
                     sourceQuestContent: d.uF.QUEST_BAR_V2,
                 });
-            }, [x, k]),
-            w = N && I,
-            D = (0, a.jsx)(o.DUT, {
-                onClick: O,
-                className: l()(C.vk, { [C.wm]: w }),
+            }, [e, T]),
+            N = C && y,
+            I = (0, a.jsx)(o.DUT, {
+                onClick: E,
+                className: s()(j.vk, { [j.wm]: N }),
                 children: (0, a.jsx)(A, {
-                    quest: k,
+                    quest: T,
                     withGameTile: !1,
-                    logotypeClassName: C.Iu,
+                    logotypeClassName: j.Iu,
                     logotypeStyle: {
                         height: 24,
                         maxWidth: 92,
-                        transform: (0, r.to)([T.to({ range: [0, 1], output: [1, 1] })], (e) => `scale(${e})`),
+                        transform: (0, r.to)([t.to({ range: [0, 1], output: [1, 1] })], (e) => `scale(${e})`),
                     },
                 }),
             });
         return (0, a.jsxs)(r.animated.div, {
-            className: l()(C.iE, C.Ht, { [C.tT]: w }),
-            style: { transform: (0, r.to)([T.to({ range: [0, 1], output: [6, 0] })], (e) => `translateY(${e}px)`) },
+            className: s()(j.iE, j.Ht, { [j.tT]: N }),
+            style: { transform: (0, r.to)([t.to({ range: [0, 1], output: [6, 0] })], (e) => `translateY(${e}px)`) },
             children: [
                 (0, a.jsx)(r.animated.div, {
-                    className: C.Tu,
-                    style: { opacity: (0, p.a)(T.to({ range: [0, 1], output: [0, 1] })) },
+                    className: j.Tu,
+                    style: { opacity: (0, p.a)(t.to({ range: [0, 1], output: [0, 1] })) },
                 }),
-                (0, a.jsx)(b.A, { isFullyExpanded: w, partnerBranding: D }),
+                (0, a.jsx)(v.A, { isFullyExpanded: N, partnerBranding: I }),
                 (0, a.jsxs)(r.animated.div, {
-                    className: C.P0,
-                    style: { opacity: (0, p.a)(T.to({ range: [0, 1], output: [0, 1] })) },
+                    className: j.P0,
+                    style: { opacity: (0, p.a)(t.to({ range: [0, 1], output: [0, 1] })) },
                     children: [
                         (0, a.jsxs)(o.DUT, {
-                            className: C.y8,
-                            onClick: R,
+                            className: j.y8,
+                            onClick: S,
                             children: [
                                 (0, a.jsx)(o.Text, {
                                     color: "always-white",
                                     variant: "text-xs/normal",
-                                    children: j.intl.string(j.t.o6FLcF),
+                                    children: b.intl.string(b.t.o6FLcF),
                                 }),
-                                (0, a.jsx)(o.cBN, { color: o.LU0.colors.WHITE, className: C.P$ }),
+                                (0, a.jsx)(o.cBN, { color: o.LU0.colors.WHITE, className: j.P$ }),
                             ],
                         }),
-                        t
-                            ? (0, a.jsx)("div", {
-                                  className: C.uJ,
-                                  children: (0, a.jsx)(v.n, { timeoutDurationInMilliseconds: n, onTimeoutComplete: s }),
-                              })
-                            : (0, a.jsx)(h.C, {
-                                  onOpen: y,
-                                  onClose: S,
-                                  onSelect: E,
-                                  questContent: d.uF.QUEST_BAR_V2,
-                                  quest: k,
-                                  shouldShowDisclosure: !0,
-                                  showShareLink: !0,
-                                  sourceQuestContent: d.uF.QUEST_BAR_V2,
-                                  children: (e) =>
-                                      (0, a.jsx)(o.DUT, {
-                                          ...e,
-                                          className: l()(C.uJ, C.rb),
-                                          "aria-label": j.intl.string(j.t.DEoVWZ),
-                                          children: (0, a.jsx)(o.jNK, {
-                                              size: "md",
-                                              color: "currentColor",
-                                              className: l()(C.Bx, C.ON),
-                                          }),
-                                      }),
-                              }),
+                        (0, a.jsx)(h.C, {
+                            onOpen: n,
+                            onClose: l,
+                            onSelect: x,
+                            questContent: d.uF.QUEST_BAR_V2,
+                            quest: T,
+                            shouldShowDisclosure: !0,
+                            showShareLink: !0,
+                            sourceQuestContent: d.uF.QUEST_BAR_V2,
+                            children: (e) =>
+                                (0, a.jsx)(o.DUT, {
+                                    ...e,
+                                    className: s()(j.uJ, j.rb),
+                                    "aria-label": b.intl.string(b.t.DEoVWZ),
+                                    children: (0, a.jsx)(o.jNK, {
+                                        size: "md",
+                                        color: "currentColor",
+                                        className: s()(j.Bx, j.ON),
+                                    }),
+                                }),
+                        }),
                     ],
                 }),
             ],

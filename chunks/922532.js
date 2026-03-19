@@ -1,8 +1,8 @@
 n.d(t, { m: () => o });
 var a = n(64700),
-    s = n(341915),
-    i = n(561844),
-    l = n(590202),
+    i = n(341915),
+    l = n(561844),
+    s = n(590202),
     r = n(652215);
 function o(e) {
     let {
@@ -14,94 +14,93 @@ function o(e) {
             isQuestAccepted: u,
             prevIsQuestAccepted: m,
             impressionRef: h,
-            onQuestBarFocus: x,
         } = e,
-        p = a.useRef(-1),
-        g = a.useRef(!1),
-        [_, f] = a.useState(!1),
-        [v, b] = a.useState(!1),
-        j = a.useCallback(() => {
-            f(!0);
+        x = a.useRef(-1),
+        p = a.useRef(!1),
+        [g, _] = a.useState(!1),
+        [f, v] = a.useState(!1),
+        b = a.useCallback(() => {
+            _(!0);
         }, []),
+        j = a.useCallback(() => {
+            _(!1), p.current || c || o(!1);
+        }, [c, o]),
         A = a.useCallback(() => {
-            f(!1), g.current || c || o(!1);
+            _(!1), c || o(!1), (p.current = !1);
         }, [c, o]),
         C = a.useCallback(() => {
-            f(!1), c || o(!1), (g.current = !1);
-        }, [c, o]),
-        S = a.useCallback(() => {
-            b(!0);
+            v(!0);
         }, []),
-        T = a.useCallback(() => {
-            b(!1), o(!1);
+        y = a.useCallback(() => {
+            v(!1), o(!1);
         }, [o]),
-        y = a.useCallback(
+        T = a.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                if ((x(), n)) return;
+                if (n) return;
                 let { withDelay: t = !1 } = e;
-                t ? (p.current = window.setTimeout(d, 75)) : d();
+                t ? (x.current = window.setTimeout(d, 75)) : d();
             },
-            [d, n, x],
+            [d, n],
         ),
-        N = a.useCallback(() => {
-            y();
-        }, [y]),
+        S = a.useCallback(() => {
+            T();
+        }, [T]),
         E = a.useCallback(() => {
-            window.clearTimeout(p.current), _ || v || g.current || o(!1);
-        }, [_, v, o]),
-        I = a.useCallback(() => {
-            (0, i.av)({
+            window.clearTimeout(x.current), g || f || p.current || o(!1);
+        }, [g, f, o]),
+        N = a.useCallback(() => {
+            (0, l.av)({
                 questId: t.id,
                 event: r.HAw.QUEST_HOVER,
                 properties: {
-                    content_id: s.uF.QUEST_BAR,
-                    content_name: (0, l.jO)(s.uF.QUEST_BAR),
+                    content_id: i.uF.QUEST_BAR,
+                    content_name: (0, s.jO)(i.uF.QUEST_BAR),
                     impression_id: h.current?.getId(),
                 },
                 shouldExtendSession: !0,
-                sourceQuestContent: s.uF.QUEST_BAR_V2,
+                sourceQuestContent: i.uF.QUEST_BAR_V2,
             }),
-                (g.current = !0),
-                y({ withDelay: !0 });
-        }, [y, h, t.id]),
-        k = a.useCallback(() => {
-            (0, i.av)({
+                (p.current = !0),
+                T({ withDelay: !0 });
+        }, [T, h, t.id]),
+        I = a.useCallback(() => {
+            (0, l.av)({
                 questId: t.id,
                 event: r.HAw.QUEST_HOVER_OFF,
                 properties: {
-                    content_id: s.uF.QUEST_BAR,
-                    content_name: (0, l.jO)(s.uF.QUEST_BAR),
+                    content_id: i.uF.QUEST_BAR,
+                    content_name: (0, s.jO)(i.uF.QUEST_BAR),
                     impression_id: h.current?.getId(),
                 },
-                sourceQuestContent: s.uF.QUEST_BAR_V2,
+                sourceQuestContent: i.uF.QUEST_BAR_V2,
             }),
-                (g.current = !1),
+                (p.current = !1),
                 E();
         }, [E, h, t.id]);
     return (
         a.useEffect(() => {
-            v && k();
-        }, [v, k]),
+            f && I();
+        }, [f, I]),
         a.useLayoutEffect(() => {
-            u && !m && g.current && d();
+            u && !m && p.current && d();
         }, [d, u, m]),
         a.useLayoutEffect(() => {
-            c || !u || m || g.current || o(!1);
+            c || !u || m || p.current || o(!1);
         }, [u, c, m, o]),
         {
-            ctxMenuOpen: _,
-            gameSheetOpen: v,
-            handleCtxMenuOpened: j,
-            handleCtxMenuClosed: A,
-            handleCtxMenuSelection: C,
-            handleGameSheetOpened: S,
-            handleGameSheetClosed: T,
-            handleFocus: y,
-            handleFocusWithoutDelay: N,
+            ctxMenuOpen: g,
+            gameSheetOpen: f,
+            handleCtxMenuOpened: b,
+            handleCtxMenuClosed: j,
+            handleCtxMenuSelection: A,
+            handleGameSheetOpened: C,
+            handleGameSheetClosed: y,
+            handleFocus: T,
+            handleFocusWithoutDelay: S,
             handleBlur: E,
-            handleMouseEnter: I,
-            handleMouseLeave: k,
+            handleMouseEnter: N,
+            handleMouseLeave: I,
         }
     );
 }
