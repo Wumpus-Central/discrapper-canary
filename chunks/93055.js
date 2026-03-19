@@ -1,4 +1,4 @@
-a.d(t, { Af: () => p, CJ: () => b, DZ: () => h, Rm: () => g, TW: () => A }), a(321073);
+a.d(t, { Af: () => p, CJ: () => I, DZ: () => h, Rm: () => g, TW: () => A, e4: () => b }), a(321073);
 var n = a(478437),
     i = a(311907);
 a(734057);
@@ -32,7 +32,17 @@ function h() {
     let e = (0, i.bG)([l.A], () => l.A.getGuildId());
     return (0, u.ai)(e);
 }
-function b() {
+function b(e, t) {
+    let a = h(),
+        { hasAccess: n } = A(t),
+        r = (0, i.bG)(
+            [_.A],
+            () => null != e && (_.A.isFavorite(e.id) || (e.isThread() && _.A.isFavorite(e.parent_id))),
+            [e],
+        );
+    return !a || (n && r) ? (e ?? null) : null;
+}
+function I() {
     let e = (0, d.J)((e) => e.favoriteAdded);
     return {
         favoriteAdded: e,
