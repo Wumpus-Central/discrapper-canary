@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { Dr: () => o, Kd: () => l, P2: () => c, u5: () => u });
+n.d(t, { P2: () => c, u5: () => u });
 var r = n(600975),
     i = n(49463);
-function a(e) {
+function s(e) {
     function t(t, n) {
         let r = !1,
-            a = i.A.getUserExperimentDescriptor(n.definition.id),
-            s = `location:${t.location} experiment_name:${n.definition.id}`;
-        for (let n of (null != a && (s = `${s} revision:${a.revision}`), e))
-            if (n.getCurrentConfig({ location: s }, { autoTrackExposure: t.autoTrackExposure ?? !0 }).inHoldout) {
+            s = i.A.getUserExperimentDescriptor(n.definition.id),
+            a = `location:${t.location} experiment_name:${n.definition.id}`;
+        for (let n of (null != s && (a = `${a} revision:${s.revision}`), e))
+            if (n.getCurrentConfig({ location: a }, { autoTrackExposure: t.autoTrackExposure ?? !0 }).inHoldout) {
                 r = !0;
                 break;
             }
@@ -31,7 +31,7 @@ function a(e) {
         },
     };
 }
-let s = (0, r.C)({
+let a = (0, r.C)({
         kind: "user",
         id: "2025-07_growth_holdout_h2",
         label: "Growth Holdout H2",
@@ -41,8 +41,8 @@ let s = (0, r.C)({
             { id: 1, label: "Treatment for comparison to holdout", config: { inHoldout: !1 } },
         ],
     }),
-    { useHoldoutExperiment: o, getHoldoutExperiment: l } = a([
-        s,
+    { useHoldoutExperiment: o, getHoldoutExperiment: l } = s([
+        a,
         (0, r.C)({
             kind: "user",
             id: "2025-07_access_holdout_h2",
@@ -54,8 +54,8 @@ let s = (0, r.C)({
             ],
         }),
     ]),
-    { useHoldoutExperiment: u, getHoldoutExperiment: c } = a([
-        s,
+    { useHoldoutExperiment: u, getHoldoutExperiment: c } = s([
+        a,
         (0, r.C)({
             kind: "user",
             id: "2025-07_experiences_holdout_h2",
@@ -67,8 +67,8 @@ let s = (0, r.C)({
             ],
         }),
     ]),
-    { useHoldoutExperiment: d, getHoldoutExperiment: _ } = a([
-        s,
+    { useHoldoutExperiment: d, getHoldoutExperiment: _ } = s([
+        a,
         (0, r.C)({
             kind: "user",
             id: "2025-07_notifications_platform_holdout_h2",
