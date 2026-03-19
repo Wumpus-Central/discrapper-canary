@@ -1,8 +1,8 @@
 n.d(t, { A: () => j });
 var a = n(627968),
-    s = n(64700),
-    i = n(503698),
-    l = n.n(i),
+    i = n(64700),
+    s = n(503698),
+    l = n.n(s),
     r = n(341915),
     o = n(890687),
     d = n(18437),
@@ -20,40 +20,40 @@ function b(e) {
     let {
             quest: t,
             className: n,
-            questContent: i,
+            questContent: s,
             contentPosition: r,
             rowIndex: m,
             impressionRef: b,
             sourceQuestContent: j,
         } = e,
-        [A, C] = s.useState(!1),
-        [S, T] = s.useState([]),
-        y = (0, o.aC)(t),
-        N = s.useMemo(() => (0, u.vv)(t), [t]),
-        E = (0, d.u0)(),
-        I = s.useCallback(() => {
+        [A, C] = i.useState(!1),
+        [y, T] = i.useState([]),
+        S = (0, o.aC)(t),
+        E = i.useMemo(() => (0, u.vv)(t), [t]),
+        N = (0, d.u0)(),
+        I = i.useCallback(() => {
             C(!0),
-                E({
+                N({
                     questId: t.id,
                     event: f.HAw.QUEST_HOVER,
-                    properties: { content_id: i, content_name: (0, c.jO)(i), content_position: r },
+                    properties: { content_id: s, content_name: (0, c.jO)(s), content_position: r },
                     sourceQuestContent: j,
                 }),
-                N && (0, h.l9)();
-        }, [E, t.id, i, N, j, r]),
-        k = s.useCallback(() => {
+                E && (0, h.l9)();
+        }, [N, t.id, s, E, j, r]),
+        k = i.useCallback(() => {
             C(!1),
-                E({
+                N({
                     questId: t.id,
                     event: f.HAw.QUEST_HOVER_OFF,
-                    properties: { content_id: i, content_name: (0, c.jO)(i), content_position: r },
+                    properties: { content_id: s, content_name: (0, c.jO)(s), content_position: r },
                     sourceQuestContent: j,
                 });
-        }, [E, t.id, i, j, r]),
-        R = s.useContext(p.X),
+        }, [N, t.id, s, j, r]),
+        R = i.useContext(p.X),
         { visibilityElementRef: O, almostVisibleInViewport: w } = (function (e) {
-            let [t, n] = s.useState(!1),
-                a = s.useCallback((e) => {
+            let [t, n] = i.useState(!1),
+                a = i.useCallback((e) => {
                     e.isIntersecting && n(!0);
                 }, []);
             return {
@@ -79,14 +79,14 @@ function b(e) {
             (0, a.jsx)(g.A, {
                 quest: t,
                 isHovering: A,
-                errorHints: S,
-                warningHints: y,
+                errorHints: y,
+                warningHints: S,
                 isVisibleInViewport: w,
                 sourceQuestContent: j,
             }),
             (0, a.jsx)(_.A, {
                 quest: t,
-                questContent: i,
+                questContent: s,
                 isHovering: A,
                 contentPosition: r,
                 rowIndex: m,
@@ -97,7 +97,7 @@ function b(e) {
         ],
     });
 }
-function j(e) {
+let j = i.memo(function (e) {
     return (0, a.jsx)(m.R, {
         questOrQuests: e.quest,
         questContent: e.questContent,
@@ -107,4 +107,4 @@ function j(e) {
         sourceQuestContent: e.sourceQuestContent,
         children: (t) => (0, a.jsx)(b, { ...e, impressionRef: t }),
     });
-}
+});

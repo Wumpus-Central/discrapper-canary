@@ -1,8 +1,8 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => f });
 var i = n(627968),
-    r = n(64700),
-    a = n(960488),
-    l = n(397927),
+    a = n(64700),
+    l = n(873263),
+    r = n(397927),
     s = n(403362),
     o = n(240248),
     d = n(890687),
@@ -12,20 +12,21 @@ var i = n(627968),
     h = n(352670),
     _ = n(654487),
     m = n(985018),
-    p = n(153153);
-let g = [],
+    g = n(153153);
+let p = [],
     E = d.L1.SORT,
-    f = d.L1.FILTER,
-    I = r.forwardRef(function (e, t) {
-        let [n, I] = (0, h.Y)(),
-            C = r.useMemo(() => {
+    I = d.L1.FILTER,
+    f = a.forwardRef(function (e, t) {
+        let n = a.useRef(null),
+            [f, C] = (0, h.Y)(),
+            T = a.useMemo(() => {
                 var e;
                 return (
-                    (e = n.get(E)),
+                    (e = f.get(E)),
                     ((0, o.uJ)(e) ? null : Object.values(_.kL).find((t) => t === e) || null) ?? _.kL.SUGGESTED
                 );
-            }, [n]),
-            N = r.useMemo(
+            }, [f]),
+            N = a.useMemo(
                 () =>
                     (function (e) {
                         if ((0, o.uJ)(e)) return null;
@@ -34,19 +35,19 @@ let g = [],
                             .map((e) => (0, _.WQ)(e))
                             .filter(s.Vq);
                         return t.length > 0 ? t : null;
-                    })(n.get(f)) ?? g,
-                [n],
+                    })(f.get(I)) ?? p,
+                [f],
             ),
-            T = r.useCallback(
+            S = a.useCallback(
                 (e) => {
-                    I({ [E]: e });
+                    C({ [E]: e });
                 },
-                [I],
+                [C],
             ),
-            S = r.useCallback(
+            x = a.useCallback(
                 (e) => {
-                    I({
-                        [f]:
+                    C({
+                        [I]:
                             0 === e.length
                                 ? null
                                 : e
@@ -57,71 +58,75 @@ let g = [],
                                       .join(","),
                     });
                 },
-                [I],
+                [C],
             ),
             {
-                quests: x,
-                excludedQuests: v,
+                quests: v,
+                excludedQuests: y,
                 isFetchingCurrentQuests: b,
-                hasFetched: y,
+                hasFetched: O,
             } = (0, d.Qh)(
                 d.NC.ALL,
-                r.useMemo(() => ({ sortMethod: C, filters: N }), [C, N]),
+                a.useMemo(() => ({ sortMethod: T, filters: N }), [T, N]),
             ),
-            L = r.useCallback(() => {
-                S(g);
-            }, [S]),
-            O = r.useRef(null),
-            R = r.useRef(null),
-            P = (0, a.zy)(),
-            j = (0, a.W6)();
+            L = a.useCallback(() => {
+                x(p);
+            }, [x]),
+            R = a.useRef(null),
+            P = a.useRef(null),
+            D = (0, l.zy)(),
+            M = (0, l.W6)();
         return (
-            r.useEffect(() => {
-                "" !== P.hash &&
-                    null != O.current &&
+            a.useEffect(() => {
+                "" !== D.hash &&
                     null != R.current &&
-                    (C !== O.current || N !== R.current) &&
-                    j.replace({ ...P, hash: void 0 });
-            }, [C, N, P, j]),
-            r.useEffect(() => {
-                O.current = C;
-            }, [C]),
-            r.useEffect(() => {
-                R.current = N;
+                    null != P.current &&
+                    (T !== R.current || N !== P.current) &&
+                    M.replace({ ...D, hash: void 0 });
+            }, [T, N, D, M]),
+            a.useEffect(() => {
+                R.current = T;
+            }, [T]),
+            a.useEffect(() => {
+                P.current = N;
             }, [N]),
-            (0, d.$P)({ selectedSortMethod: C, selectedFilters: N, numQuestsVisible: x.length }),
-            r.useImperativeHandle(
+            (0, d.$P)({ selectedSortMethod: T, selectedFilters: N, numQuestsVisible: v.length }),
+            a.useImperativeHandle(
                 t,
                 () => ({
                     resetSortingFiltering: () => {
-                        L(), T(_.kL.SUGGESTED);
+                        L(), S(_.kL.SUGGESTED);
+                    },
+                    scrollToQuest: (e) => {
+                        n.current?.scrollToQuest(e);
                     },
                 }),
-                [L, T],
+                [L, S],
             ),
             (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsxs)("div", {
-                        className: p.Mj,
+                        className: g.Mj,
                         children: [
-                            (0, i.jsx)(l.Heading, {
+                            (0, i.jsx)(r.Heading, {
                                 variant: "heading-lg/medium",
                                 children: m.intl.string(m.t.giYD00),
                             }),
                             (0, i.jsxs)("div", {
-                                className: p.Nf,
+                                className: g.Nf,
                                 children: [
-                                    (0, i.jsx)(u.A, { onChange: T, optionClassName: p.Uq, selectedSortMethod: C }),
-                                    (0, i.jsx)(c.A, { onChange: S, selectedFilters: N }),
+                                    (0, i.jsx)(u.A, { onChange: S, optionClassName: g.Uq, selectedSortMethod: T }),
+                                    (0, i.jsx)(c.A, { onChange: x, selectedFilters: N }),
                                 ],
                             }),
                         ],
                     }),
                     (0, i.jsx)(A.A, {
-                        quests: x,
-                        excludedQuests: v,
+                        ref: n,
+                        quests: v,
+                        excludedQuests: y,
                         isFetching: b,
-                        hasFetched: y,
+                        hasFetched: O,
                         hasFiltersApplied: N.length > 0,
                         onClearFilters: L,
                     }),
