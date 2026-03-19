@@ -1,11 +1,10 @@
 "use strict";
 n.d(t, {
-    Ay: () => e_,
+    Ay: () => ed,
     G0: () => el,
     If: () => eu,
-    WL: () => ed,
+    WL: () => ec,
     Yd: () => K,
-    gR: () => ec,
     gU: () => eo,
     sC: () => H,
     v1: () => ei,
@@ -609,18 +608,8 @@ function eu(e) {
     return N.l90.test(e);
 }
 function ec(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.keys(ea).length,
-        n = [];
-    for (let r of Object.keys(ea)) {
-        if (n.length >= t) break;
-        let s = ea[r].key;
-        eu(r) && null != s && i()(e.toLowerCase(), s) && n.push({ token: r, text: s });
-    }
-    return n;
-}
-function ed(e) {
     if (0 === e.length) return !1;
     let t = e.toLowerCase().replace(/^@/, "");
     return C.intl.string(C.t.Qf3ptv).startsWith(t) || N.ME.substring(1).startsWith(t);
 }
-let e_ = ea;
+let ed = ea;

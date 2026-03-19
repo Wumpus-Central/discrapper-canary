@@ -1,29 +1,28 @@
 "use strict";
 n.d(t, {
-    E3: () => K,
-    EH: () => z,
-    Eq: () => $,
+    E3: () => W,
+    EH: () => $,
+    Eq: () => K,
     Gk: () => x,
-    IY: () => Y,
+    IY: () => j,
     Jl: () => I,
     L5: () => b,
-    Pe: () => B,
+    Pe: () => V,
     Pp: () => w,
-    Rt: () => W,
+    Rt: () => Y,
     TZ: () => P,
     XC: () => N,
     Zf: () => D,
-    Zh: () => j,
+    Zh: () => H,
     _B: () => S,
     _b: () => y,
-    _o: () => V,
-    av: () => H,
+    _o: () => F,
+    av: () => B,
     bS: () => A,
     dX: () => L,
-    lX: () => U,
+    lX: () => k,
     mt: () => T,
     nm: () => v,
-    rI: () => k,
     sh: () => C,
     zZ: () => M,
 }),
@@ -239,32 +238,29 @@ function P(e) {
     }
 }
 function k(e) {
-    return e.reduce((e, t) => (null == t ? e : t.results.length + e), 0);
-}
-function U(e) {
     return null == e ? "" : e.map((e) => e.getFullMatch()).join("");
 }
-let G = new s.Ay(),
-    F = new s.Ay();
-function V(e) {
-    return G.tokenize(e);
+let U = new s.Ay(),
+    G = new s.Ay();
+function F(e) {
+    return U.tokenize(e);
 }
-function B() {
-    G.clearCache(), F.clearCache();
+function V() {
+    U.clearCache(), G.clearCache();
 }
-function H(e) {
+function B(e) {
     return null != e ? R[e] : null;
 }
-function j(e, t) {
+function H(e, t) {
     let n = E.l90.test(e.type);
     return (null != t || !n) && (null == t || !n || !!E.T2E.test(t.type));
 }
-function Y() {
-    (0, m.G0)(), G.reset(), i()(m.Ay).forOwn((e, t) => G.addRule({ type: t, ...e })), F.reset();
+function j() {
+    (0, m.G0)(), U.reset(), i()(m.Ay).forOwn((e, t) => U.addRule({ type: t, ...e })), G.reset();
     let e = (0, m.gU)();
-    i()(e).forOwn((e, t) => F.addRule({ type: t, ...e })), h.A.markSearchTokensRefreshed();
+    i()(e).forOwn((e, t) => G.addRule({ type: t, ...e })), h.A.markSearchTokensRefreshed();
 }
-function W(e) {
+function Y(e) {
     let t = e.name,
         n = !1;
     if (e.isGroupDM()) t = (0, a.m1)(e, _.default, c.A);
@@ -281,7 +277,7 @@ function W(e) {
     }
     return ((t = P(t)), n) ? `#${t}` : t;
 }
-function K(e) {
+function W(e) {
     if (e.isGroupDM()) return (0, a.m1)(e, _.default, c.A);
     if (e.isDM()) {
         let t = e.getRecipientId(),
@@ -291,11 +287,11 @@ function K(e) {
     let t = l.Ay.getTextChannelNameDisambiguations(e.getGuildId())[e.id];
     return t?.name ?? e.name;
 }
-function $() {
+function K() {
     return _.default.getCurrentUser()?.isStaff() ?? !1;
 }
-function z(e) {
-    let t = F.tokenize(e),
+function $(e) {
+    let t = G.tokenize(e),
         n = [];
     t.forEach((e) => {
         e.type !== E.LWr.FILTER_IN && e.type !== E.LWr.ANSWER_IN && n.push(e);

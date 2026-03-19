@@ -3544,7 +3544,7 @@ var tJ = (function (e) {
         );
     })({}),
     t1 = (function (e) {
-        return (e.HISTORY = "HISTORY"), (e.SEARCH_OPTIONS = "SEARCH_OPTIONS"), (e.DATES = "DATES"), e;
+        return (e.HISTORY = "HISTORY"), (e.DATES = "DATES"), e;
     })({}),
     t2 = (function (e) {
         return (e.EMPTY = "EMPTY"), (e.FILTER = "FILTER"), (e.FILTER_ALL = "FILTER_ALL"), e;
