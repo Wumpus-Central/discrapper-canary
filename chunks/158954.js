@@ -369,6 +369,7 @@ n.d(t, {
     lmn: () => z.ShieldIcon,
     m5V: () => z.ShieldLockIcon,
     mF0: () => z.ThreadWarningIcon,
+    mP8: () => z.MinecraftNeutralIcon,
     mXj: () => z.WaveformSlashIcon,
     m_x: () => z.FileWarningIcon,
     mdx: () => Z.DiceRive,

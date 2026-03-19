@@ -29,6 +29,12 @@ var r = n(835245),
             (e[(e.BlueskyLink = 19)] = "BlueskyLink"),
             (e[(e.RedditLink = 20)] = "RedditLink"),
             (e[(e.TwitchLink = 21)] = "TwitchLink"),
+            (e[(e.SteamStoreLink = 22)] = "SteamStoreLink"),
+            (e[(e.EpicStoreLink = 23)] = "EpicStoreLink"),
+            (e[(e.RobloxStoreLink = 24)] = "RobloxStoreLink"),
+            (e[(e.BattlenetStoreLink = 25)] = "BattlenetStoreLink"),
+            (e[(e.RiotStoreLink = 26)] = "RiotStoreLink"),
+            (e[(e.MinecraftStoreLink = 27)] = "MinecraftStoreLink"),
             e
         );
     })({}),
