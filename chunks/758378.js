@@ -1,25 +1,25 @@
-n.d(t, { J: () => A });
+n.d(t, { J: () => g });
 var i = n(627968),
     s = n(64700),
-    r = n(311907),
+    l = n(311907),
     a = n(397927),
-    l = n(15285),
+    r = n(15285),
     o = n(942405),
-    c = n(403362),
-    d = n(975571),
+    d = n(403362),
+    c = n(975571),
     u = n(652215),
     _ = n(985018),
-    m = n(476555);
-function A() {
+    m = n(526770);
+function g() {
     let e = (0, o.XQ)(),
         [t, n] = s.useState(!1),
-        [A, g] = s.useState(() => (0, o.TC)()),
-        E = (0, r.bG)([l.Ay], () => l.Ay.getSystemServiceStatus("input-service")),
+        [g, A] = s.useState(() => (0, o.TC)()),
+        x = (0, l.bG)([r.Ay], () => r.Ay.getSystemServiceStatus("input-service")),
         h = s.useCallback(async () => {
-            n(!0), A ? await (0, o.z8)("windows-settings") : await (0, o.sL)("windows-settings"), n(!1), g((0, o.TC)());
-        }, [A]);
+            n(!0), g ? await (0, o.z8)("windows-settings") : await (0, o.sL)("windows-settings"), n(!1), A((0, o.TC)());
+        }, [g]);
     if (!e) return null;
-    let p = "running" === E.state;
+    let p = "running" === x.state;
     return (0, i.jsxs)("div", {
         className: m.q,
         children: [
@@ -35,10 +35,10 @@ function A() {
                         variant: "text-sm/normal",
                         color: "text-subtle",
                         children: _.intl.format(_.t["8CAL+D"], {
-                            helpCenterLink: d.A.getArticleURL(u.MVz.SYSTEM_SERVICE),
+                            helpCenterLink: c.A.getArticleURL(u.MVz.SYSTEM_SERVICE),
                         }),
                     }),
-                    A
+                    g
                         ? (0, i.jsx)(a.Text, {
                               variant: "text-sm/normal",
                               color: p ? "text-feedback-positive" : "text-feedback-warning",
@@ -66,19 +66,19 @@ function A() {
                                                 case "failure":
                                                     return _.intl.string(_.t.Ic0nkd);
                                                 default:
-                                                    (0, c.xb)(e.state);
+                                                    (0, d.xb)(e.state);
                                             }
-                                        })(E),
+                                        })(x),
                                     }),
                           })
                         : null,
                 ],
             }),
             (0, i.jsx)(a.Button, {
-                variant: A ? "critical-secondary" : "primary",
+                variant: g ? "critical-secondary" : "primary",
                 loading: t,
                 onClick: h,
-                text: A ? _.intl.string(_.t.pAwbdL) : _.intl.string(_.t["1iI46O"]),
+                text: g ? _.intl.string(_.t.pAwbdL) : _.intl.string(_.t["1iI46O"]),
             }),
         ],
     });
