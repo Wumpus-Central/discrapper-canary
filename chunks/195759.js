@@ -13,7 +13,7 @@ class c extends n.Component {
         let { onClose: e } = this.props;
         e?.(),
             (0, l.mMO)(async () => {
-                let { default: e } = await i.e("27672").then(i.bind(i, 888363));
+                let { default: e } = await Promise.all([i.e("78925"), i.e("27672")]).then(i.bind(i, 888363));
                 return (a) => (0, t.jsx)(e, { ...a });
             });
     };

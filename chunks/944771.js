@@ -37,12 +37,12 @@ async function a() {
                 n.e("35432"),
                 n.e("78982"),
                 n.e("62381"),
-                n.e("87874"),
+                n.e("51227"),
             ]).then(n.bind(n, 890908))
         ).playgroundConfig,
         (await n.e("10264").then(n.bind(n, 61003))).mfaPlaygroundConfig,
         (
-            await Promise.all([n.e("69839"), n.e("93612"), n.e("22777"), n.e("58801"), n.e("5842")]).then(
+            await Promise.all([n.e("52473"), n.e("69839"), n.e("22777"), n.e("58801"), n.e("96277")]).then(
                 n.bind(n, 395058),
             )
         ).cmsConfig,

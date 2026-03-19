@@ -1,136 +1,87 @@
 "use strict";
 let r;
-n.d(t, { A: () => en, _: () => p });
-var i = n(575593),
-    s = n(311907),
-    a = n(73153),
-    o = n(652215),
-    l = n(349828),
-    u = n(849077),
-    c = n(901123);
-let d = {},
+n.d(t, { A: () => Y, _: () => f });
+var i = n(311907),
+    s = n(73153),
+    a = n(652215),
+    o = n(349828),
+    l = n(849077),
+    u = n(901123);
+let c = {},
+    d = {},
     _ = {},
-    f = {},
-    p = new Set([...c.Cr, l.Vc, u.Hy]),
-    h = {},
-    m = _,
-    E = o.XlH.CLOSED,
-    g = {};
+    f = new Set([...u.Cr, o.Vc, l.Hy]),
+    p = {},
+    h = d,
+    m = a.XlH.CLOSED,
+    E = {};
+function g() {
+    (m = a.XlH.OPEN), (E = {});
+}
 function A() {
-    (E = o.XlH.OPEN), (g = {});
+    (m = a.XlH.CLOSED), (E = {});
 }
 function I() {
-    (E = o.XlH.CLOSED), (g = {});
+    (m = a.XlH.SUBMITTING), (E = {});
 }
-function T() {
-    (E = o.XlH.SUBMITTING), (g = {});
+function T(e) {
+    let { guildId: t } = e;
+    if (m !== a.XlH.SUBMITTING) return !1;
+    (m = a.XlH.OPEN), (E[t ?? a.ME] = _);
 }
 function S(e) {
-    let { guildId: t } = e;
-    if (E !== o.XlH.SUBMITTING) return !1;
-    (E = o.XlH.OPEN), (g[t ?? o.ME] = f);
+    let { guildId: t, errors: n } = e;
+    if (m !== a.XlH.SUBMITTING) return !1;
+    (m = a.XlH.OPEN), (E[t ?? a.ME] = n ?? _);
 }
 function y(e) {
-    let { guildId: t, errors: n } = e;
-    if (E !== o.XlH.SUBMITTING) return !1;
-    (E = o.XlH.OPEN), (g[t ?? o.ME] = n ?? f);
+    let { guildId: t } = e;
+    (r = null == t || f.has(t) ? void 0 : t), (m = a.XlH.OPEN), (E = {});
 }
 function v(e) {
     let { guildId: t } = e;
-    (r = null == t || p.has(t) ? void 0 : t), (E = o.XlH.OPEN), (g = {});
+    (r = null == t || f.has(t) ? void 0 : t), (E = {});
 }
 function N(e) {
-    let { guildId: t } = e;
-    (r = null == t || p.has(t) ? void 0 : t), (g = {});
+    let { section: t } = e;
+    if (t !== a.nc_.ACCOUNT) return !1;
+    (m = a.XlH.OPEN), (E = {});
 }
 function C(e) {
-    let { section: t } = e;
-    if (t !== o.nc_.ACCOUNT) return !1;
-    (E = o.XlH.OPEN), (g = {});
-}
-function b(e) {
-    let { guildId: t, avatar: n } = e;
-    (h[t ?? o.ME] = { ...h[t ?? o.ME], pendingAvatar: n }), (m = { ...m, tryItOutAvatar: void 0 });
+    let { type: t, guildId: n, ...r } = e;
+    p[n ?? a.ME] = { ...p[n ?? a.ME], ...r };
 }
 function R(e) {
-    let { globalName: t } = e;
-    h[o.ME] = { ...h[o.ME], pendingGlobalName: t };
+    let { themeColors: t } = e;
+    h = { ...h, tryItOutThemeColors: t };
 }
 function O(e) {
-    let { guildId: t, nickname: n } = e;
-    h[t] = { ...h[t], pendingNickname: n };
+    let { avatar: t } = e;
+    h = { ...h, tryItOutAvatar: t };
+}
+function b(e) {
+    let { avatarDecoration: t } = e;
+    h = { ...h, tryItOutAvatarDecoration: t };
 }
 function D(e) {
-    let { legacyUsernameDisabled: t } = e;
-    h[o.ME] = { ...h[o.ME], pendingLegacyUsernameDisabled: t };
+    let { profileEffect: t } = e;
+    h = { ...h, tryItOutProfileEffect: t };
 }
 function L(e) {
-    let { guildId: t, item: n } = e;
-    n.type === i.R.AVATAR_DECORATION
-        ? (h[t ?? o.ME] = { ...h[t ?? o.ME], pendingAvatarDecoration: n.value })
-        : n.type === i.R.PROFILE_EFFECT
-          ? (h[t ?? o.ME] = { ...h[t ?? o.ME], pendingProfileEffect: n.value })
-          : n.type === i.R.NAMEPLATE && (h[t ?? o.ME] = { ...h[t ?? o.ME], pendingNameplate: n.value });
+    let { banner: t } = e;
+    h = { ...h, tryItOutBanner: t };
 }
 function w(e) {
-    let { guildId: t, banner: n } = e;
-    h[t ?? o.ME] = { ...h[t ?? o.ME], pendingBanner: n };
-}
-function x(e) {
-    let { guildId: t, bio: n } = e;
-    h[t ?? o.ME] = { ...h[t ?? o.ME], pendingBio: n };
+    let { displayNameStyles: t } = e;
+    h = { ...h, tryItOutDisplayNameStyles: t };
 }
 function M(e) {
-    let { guildId: t, pronouns: n } = e;
-    h[t ?? o.ME] = { ...h[t ?? o.ME], pendingPronouns: n };
-}
-function P(e) {
-    let { color: t } = e;
-    h[o.ME] = { ...h[o.ME], pendingAccentColor: t };
-}
-function k(e) {
-    let { guildId: t, themeColors: n } = e;
-    h[t ?? o.ME] = { ...h[t ?? o.ME], pendingThemeColors: n };
-}
-function U(e) {
-    let { primaryGuildId: t } = e;
-    h[o.ME] = { ...h[o.ME], pendingPrimaryGuildId: t };
-}
-function G(e) {
-    let { guildId: t, displayNameStyles: n } = e;
-    h[t ?? o.ME] = { ...h[t ?? o.ME], pendingDisplayNameStyles: n };
-}
-function F(e) {
-    let { themeColors: t } = e;
-    m = { ...m, tryItOutThemeColors: t };
-}
-function V(e) {
-    let { avatar: t } = e;
-    m = { ...m, tryItOutAvatar: t };
-}
-function B(e) {
-    let { avatarDecoration: t } = e;
-    m = { ...m, tryItOutAvatarDecoration: t };
-}
-function H(e) {
-    let { profileEffect: t } = e;
-    m = { ...m, tryItOutProfileEffect: t };
-}
-function j(e) {
-    let { banner: t } = e;
-    m = { ...m, tryItOutBanner: t };
-}
-function Y(e) {
-    let { displayNameStyles: t } = e;
-    m = { ...m, tryItOutDisplayNameStyles: t };
-}
-function W(e) {
     let { banner: t, themeColors: n, avatarDecoration: r, displayNameStyles: i } = e;
-    m = { ...m, tryItOutBanner: t, tryItOutThemeColors: n, tryItOutAvatarDecoration: r, tryItOutDisplayNameStyles: i };
+    h = { ...h, tryItOutBanner: t, tryItOutThemeColors: n, tryItOutAvatarDecoration: r, tryItOutDisplayNameStyles: i };
 }
-function K() {
-    h = Object.fromEntries(
-        Object.entries(h).map((e) => {
+function x() {
+    p = Object.fromEntries(
+        Object.entries(p).map((e) => {
             let [t, n] = e;
             return [
                 t,
@@ -147,9 +98,9 @@ function K() {
         }),
     );
 }
-function z() {
-    h = Object.fromEntries(
-        Object.entries(h).map((e) => {
+function P() {
+    p = Object.fromEntries(
+        Object.entries(p).map((e) => {
             let [t, n] = e;
             return [
                 t,
@@ -166,105 +117,94 @@ function z() {
         }),
     );
 }
-function $() {
-    m = _;
+function k() {
+    h = d;
 }
-function q() {
-    if ((h[o.ME] ?? {})?.pendingLegacyUsernameDisabled === void 0) return !1;
-    h[o.ME] = { ...h[o.ME], pendingLegacyUsernameDisabled: void 0 };
+function U() {
+    if ((p[a.ME] ?? {})?.pendingLegacyUsernameDisabled === void 0) return !1;
+    p[a.ME] = { ...p[a.ME], pendingLegacyUsernameDisabled: void 0 };
 }
-function Z() {
-    if ((h[o.ME] ?? {})?.pendingPrimaryGuildId === void 0) return !1;
-    h[o.ME] = { ...h[o.ME], pendingPrimaryGuildId: void 0 };
+function G() {
+    if ((p[a.ME] ?? {})?.pendingPrimaryGuildId === void 0) return !1;
+    p[a.ME] = { ...p[a.ME], pendingPrimaryGuildId: void 0 };
 }
-function X() {
-    g = {};
+function F() {
+    E = {};
 }
-function Q() {
-    (h = {}), (g = {});
+function V() {
+    (p = {}), (E = {});
 }
-function J() {
-    Q(), $(), I();
+function B() {
+    V(), k(), A();
 }
-function ee(e) {
+function H(e) {
     let { guildId: t, errors: n } = e;
-    (E = o.XlH.OPEN),
-        (g[t ?? o.ME] =
+    (m = a.XlH.OPEN),
+        (E[t ?? a.ME] =
             Object.fromEntries(
                 Object.entries(n).map((e) => {
                     let [t, n] = e;
                     return [t, [n]];
                 }),
-            ) ?? f);
+            ) ?? _);
 }
-class et extends s.Ay.Store {
+class j extends i.Ay.Store {
     static displayName = "UserProfileSettingsStore";
     get selectedGuildId() {
         return r;
     }
     getFormState() {
-        return E;
+        return m;
     }
     getErrors(e) {
-        return g[e ?? o.ME] ?? f;
+        return E[e ?? a.ME] ?? _;
     }
     getPendingChanges(e) {
-        return h[e ?? o.ME] ?? d;
+        return p[e ?? a.ME] ?? c;
     }
     getTryItOutChanges() {
-        return m;
+        return h;
     }
     showNotice() {
         return !!(
-            Object.values(this.getPendingChanges(o.ME)).some((e) => void 0 !== e) ||
+            Object.values(this.getPendingChanges(a.ME)).some((e) => void 0 !== e) ||
             Object.values(this.getPendingChanges(r)).some((e) => void 0 !== e)
         );
     }
     canSubmit() {
-        for (let e of [o.ME, r]) {
+        for (let e of [a.ME, r]) {
             let t = this.getPendingChanges(e);
-            if (void 0 !== t.pendingBio && t.pendingBio.length > o.NA2) return !1;
+            if (void 0 !== t.pendingBio && t.pendingBio.length > a.NA2) return !1;
         }
         return !0;
     }
 }
-let en = new et(a.h, {
-    USER_SETTINGS_MODAL_INIT: A,
-    USER_SETTINGS_MODAL_OPEN: A,
-    USER_SETTINGS_MODAL_SET_SECTION: C,
-    USER_PROFILE_SETTINGS_INIT: v,
-    USER_PROFILE_SETTINGS_SET_GUILD: N,
-    USER_PROFILE_SETTINGS_CLOSE: I,
-    USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM: J,
-    USER_PROFILE_SETTINGS_SUBMIT: T,
-    USER_PROFILE_SETTINGS_SUBMIT_SUCCESS: S,
-    USER_PROFILE_SETTINGS_SUBMIT_FAILURE: y,
-    USER_PROFILE_SETTINGS_SET_PENDING_AVATAR: b,
-    USER_PROFILE_SETTINGS_SET_PENDING_GLOBAL_NAME: R,
-    USER_PROFILE_SETTINGS_SET_PENDING_NICKNAME: O,
-    USER_PROFILE_SETTINGS_SET_PENDING_LEGACY_USERNAME_DISABLED: D,
-    USER_PROFILE_SETTINGS_SET_PENDING_COLLECTIBLES_ITEM: L,
-    USER_PROFILE_SETTINGS_SET_PENDING_BANNER: w,
-    USER_PROFILE_SETTINGS_SET_PENDING_BIO: x,
-    USER_PROFILE_SETTINGS_SET_PENDING_PRONOUNS: M,
-    USER_PROFILE_SETTINGS_SET_PENDING_ACCENT_COLOR: P,
-    USER_PROFILE_SETTINGS_SET_PENDING_THEME_COLORS: k,
-    USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR: V,
-    USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION: B,
-    USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PROFILE_EFFECT: H,
-    USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER: j,
-    USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS: F,
-    USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES: Y,
-    USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET: W,
-    USER_PROFILE_SETTINGS_SET_PENDING_PRIMARY_GUILD_ID: U,
-    USER_PROFILE_SETTINGS_SET_PENDING_DISPLAY_NAME_STYLES: G,
-    USER_PROFILE_SETTINGS_CLEAR_ERRORS: X,
-    USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: K,
-    USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES: z,
-    USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES: Q,
-    USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES: $,
-    USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED: q,
-    USER_PROFILE_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES: Z,
-    USER_PROFILE_UPDATE_FAILURE: ee,
-    LOGOUT: J,
+let Y = new j(s.h, {
+    USER_SETTINGS_MODAL_INIT: g,
+    USER_SETTINGS_MODAL_OPEN: g,
+    USER_SETTINGS_MODAL_SET_SECTION: N,
+    USER_PROFILE_SETTINGS_INIT: y,
+    USER_PROFILE_SETTINGS_SET_GUILD: v,
+    USER_PROFILE_SETTINGS_CLOSE: A,
+    USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM: B,
+    USER_PROFILE_SETTINGS_SUBMIT: I,
+    USER_PROFILE_SETTINGS_SUBMIT_SUCCESS: T,
+    USER_PROFILE_SETTINGS_SUBMIT_FAILURE: S,
+    USER_PROFILE_SETTINGS_SET_PENDING_CHANGES: C,
+    USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR: O,
+    USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION: b,
+    USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PROFILE_EFFECT: D,
+    USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER: L,
+    USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS: R,
+    USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES: w,
+    USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET: M,
+    USER_PROFILE_SETTINGS_CLEAR_ERRORS: F,
+    USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: x,
+    USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES: P,
+    USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES: V,
+    USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES: k,
+    USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED: U,
+    USER_PROFILE_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES: G,
+    USER_PROFILE_UPDATE_FAILURE: H,
+    LOGOUT: B,
 });

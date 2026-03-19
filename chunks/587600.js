@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { C5: () => l, Sk: () => i, yX: () => a, yg: () => s }), n(321073);
-var r = n(392107);
+n.d(t, { C5: () => l, Sk: () => r, yX: () => a, yg: () => s }), n(321073);
+var i = n(392107);
 function a(e) {
     let t = {};
     return (
@@ -15,7 +14,7 @@ function a(e) {
         t
     );
 }
-function i(e) {
+function r(e) {
     let t = {};
     if (
         (void 0 !== e.pendingGlobalName && (t.globalName = e.pendingGlobalName),
@@ -25,7 +24,7 @@ function i(e) {
         let { pendingAvatar: n } = e;
         null === n
             ? (t.avatar = null)
-            : n.assetOrigin === r.E.ARCHIVED_ASSET
+            : n.assetOrigin === i.E.ARCHIVED_ASSET
               ? (t.avatarId = n.originalAsset.id)
               : ((t.avatar = n.imageUri), (t.avatarDescription = n.description));
     }
@@ -41,7 +40,7 @@ function l(e) {
         let { pendingAvatar: n } = e;
         null === n
             ? (t.avatar = null)
-            : n.assetOrigin === r.E.ARCHIVED_ASSET
+            : n.assetOrigin === i.E.ARCHIVED_ASSET
               ? (t.avatarId = n.originalAsset.id)
               : ((t.avatar = n.imageUri), (t.avatarDescription = n.description));
     }

@@ -2,19 +2,18 @@
 n.d(t, { A: () => c });
 var r = n(64700),
     i = n(417597),
-    a = n(727170),
-    s = n(919395),
-    o = n(287809),
-    l = n(207803),
+    s = n(727170),
+    a = n(919395),
+    o = n(207803),
+    l = n(84540),
     u = n(836602);
 function c(e) {
     let { isTryItOut: t, analyticsLocations: n, guildId: c } = e,
-        d = (0, i.bG)([o.default], () => o.default.getCurrentUser()),
-        _ = (0, a.A)(n),
+        d = (0, s.A)(n),
         {
-            pendingAvatar: f,
-            pendingAvatarDecoration: p,
-            pendingErrors: h,
+            pendingAvatar: _,
+            pendingAvatarDecoration: f,
+            pendingErrors: p,
         } = (0, i.cf)([u.A], () => {
             if (t) {
                 let e = u.A.getTryItOutChanges();
@@ -31,18 +30,23 @@ function c(e) {
                 pendingErrors: u.A.getErrors(c).avatarDecoration,
             };
         }),
-        m = (0, r.useCallback)((e) => (0, s.ru)(e, d?.avatar), [d?.avatar]),
-        g = (0, r.useCallback)(
+        h = (0, r.useCallback)(
             (e) => {
-                (0, s.Dx)(e, c), null != e && _(e);
+                (0, l.p)({ guildId: c, avatar: e }), (0, a.WU)(e);
             },
-            [_, c],
+            [c],
+        ),
+        m = (0, r.useCallback)(
+            (e) => {
+                (0, l.p)({ guildId: c, avatarDecoration: e }), null != e && d(e);
+            },
+            [d, c],
         );
     return {
-        pendingAvatar: f,
-        pendingAvatarDecoration: p,
-        pendingErrors: h,
-        setPendingAvatar: t ? l.e$ : m,
-        setPendingAvatarDecoration: t ? l.Go : g,
+        pendingAvatar: _,
+        pendingAvatarDecoration: f,
+        pendingErrors: p,
+        setPendingAvatar: t ? o.e$ : h,
+        setPendingAvatarDecoration: t ? o.Go : m,
     };
 }
