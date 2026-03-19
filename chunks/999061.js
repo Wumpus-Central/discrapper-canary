@@ -25,13 +25,13 @@ function f(e) {
                 .filter((t) => "" !== e || !0 !== t.hidden);
         }, [n]),
         p = i.useCallback(
-            (e, n, r, i) => {
+            (e, n, r) => {
                 a.Ay.trackWithMetadata(l.HAw.EXPRESSION_PICKER_KAOMOJI_SELECTED, {
                     kaomoji: e,
                     category: n,
                     keyword: r,
                 }),
-                    t(e, !i.shiftKey);
+                    t(e);
             },
             [t],
         ),
@@ -91,7 +91,7 @@ function f(e) {
                                                                   variant: "secondary",
                                                                   size: "sm",
                                                                   fullWidth: !0,
-                                                                  onClick: (r) => p(t, e.category, n.trim(), r),
+                                                                  onClick: () => p(t, e.category, n.trim()),
                                                                   text: t,
                                                                   "aria-label": c.intl.formatToPlainString(
                                                                       c.t["hi+F96"],

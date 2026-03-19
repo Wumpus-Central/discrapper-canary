@@ -1,20 +1,26 @@
-n.d(t, { p: () => u });
+n.d(t, { p: () => m });
 var i = n(627968);
 n(64700);
-var r = n(342494),
-    a = n(397927),
-    l = n(88001),
-    s = n(49999),
-    o = n(519412),
-    d = n(985018),
-    c = n(438705);
-let u = (e) => {
-    let { targetElementRef: t, dismissPopover: u, children: A } = e,
-        h = (0, i.jsx)(r.AM, {
+var a = n(342494),
+    r = n(397927),
+    l = n(688810),
+    s = n(532794),
+    o = n(113359),
+    d = n(788868),
+    c = n(88001),
+    u = n(49999),
+    A = n(519412),
+    h = n(985018),
+    _ = n(438705);
+let m = (e) => {
+    let { targetElementRef: t, dismissPopover: m, children: g } = e,
+        p = (0, o.QG)({ location: "nitro_tab_popover" }) === o.xb.POPOVER,
+        { analyticsLocations: E } = (0, l.Ay)(),
+        I = (0, i.jsx)(a.AM, {
             targetElementRef: t,
-            title: d.intl.format(o.default["c+NBSl"], { premiumGroupProductName: (0, l.DP)() }),
-            body: d.intl.format(o.default.MuUV5u, { premiumGroupProductName: (0, l.DP)(), totalSeats: l.aw }),
-            graphic: { type: "image", src: c },
+            title: h.intl.format(A.default["c+NBSl"], { premiumGroupProductName: (0, c.DP)() }),
+            body: h.intl.format(A.default.MuUV5u, { premiumGroupProductName: (0, c.DP)(), totalSeats: c.aw }),
+            graphic: { type: "image", src: _ },
             badge: { type: "beta", variant: "expressive" },
             size: "md",
             align: "top",
@@ -22,17 +28,27 @@ let u = (e) => {
             caretConfig: { align: "start" },
             actions: [
                 {
-                    text: d.intl.string(o.default["IO+nlU"]),
+                    text: p
+                        ? h.intl.format(A.default.LwdrNi, { premiumGroupProductName: (0, c.DP)() })
+                        : h.intl.string(A.default["IO+nlU"]),
+                    variant: p ? "expressive" : "primary",
                     onClick: () => {
-                        u(s.i.TAKE_ACTION),
-                            (0, a.mMO)(async () => {
-                                let { default: e } = await n.e("91976").then(n.bind(n, 526710));
-                                return (t) => (0, i.jsx)(e, { ...t });
-                            });
+                        m(u.i.TAKE_ACTION),
+                            p
+                                ? (0, s.A)({
+                                      subscriptionTier: d.pe.TIER_2,
+                                      initialPlanId: d.gD.PREMIUM_GROUP_MONTH,
+                                      analyticsLocations: E,
+                                  })
+                                : (0, r.mMO)(async () => {
+                                      let { default: e } = await n.e("91976").then(n.bind(n, 526710));
+                                      return (t) => (0, i.jsx)(e, { ...t });
+                                  });
                     },
+                    ...(p ? { icon: r.tvc, iconPosition: "start" } : {}),
                 },
             ],
-            onRequestClose: () => u(s.i.USER_DISMISS),
+            onRequestClose: () => m(u.i.USER_DISMISS),
         });
-    return (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)("div", { children: A }), h] });
+    return (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)("div", { children: g }), I] });
 };

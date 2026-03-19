@@ -54,22 +54,14 @@ let i = [
             "( ͡\xb0 ͜ʖ ͡\xb0)",
             "(≖ᴗ≖✿)",
             "( ͡ಠ ͜ʖ ͡ಠ)",
+            "\xaf\\_(ツ)_/\xaf",
         ],
     },
     {
         category: "confused",
         categoryMessageKey: r.t.ZUaZLp,
         keywords: ["confused", "huh", "what", "shrug", "idk"],
-        kaomojis: [
-            "(\xb7•᷄‎ࡇ•᷅ )",
-            "(・_・;)",
-            "(\xb4･_･`)",
-            "( ・◇・)？",
-            "(◉_◉)",
-            "(⊙_⊙)",
-            "(o\xb4〰`o)",
-            "(\xaf\\_(ツ)_/\xaf)",
-        ],
+        kaomojis: ["(\xb7•᷄‎ࡇ•᷅ )", "(•́＿•̀)", "( ・◇・)？", "(◉＿◉)", "(⊙＿⊙)", "(o\xb4〰`o)"],
     },
     {
         category: "sad",
@@ -81,7 +73,7 @@ let i = [
         category: "angry",
         categoryMessageKey: r.t.GUrGRo,
         keywords: ["angry", "mad", "rage", "frustrated", "annoyed"],
-        kaomojis: ["(ಠ_ಠ)", "(｀皿\xb4)", "(\xac_\xac)", "(ಠ益ಠ)", "(≖_≖ )", "(｀･_･\xb4)", "(ᓀ‸ᓂ)"],
+        kaomojis: ["(ಠ＿ಠ)", "(｀皿\xb4)", "(\xac＿\xac)", "(ಠ益ಠ)", "(≖＿≖ )", "(ᓀ‸ᓂ)", "( `へ\xb4* )"],
     },
     {
         category: "music",
