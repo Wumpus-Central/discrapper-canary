@@ -1,9 +1,10 @@
-r.d(t, { A: () => l });
-var n = r(64700),
-    i = r(607399),
-    a = r(437852),
-    s = r(657515);
-function l() {
-    let { enabled: e } = a.Ay.useConfig({ location: "useGiftingPromotionConfig" });
-    return n.useMemo(() => (i.Fr || i.v1 ? null : e ? s.zH : null), [e]);
+"use strict";
+n.d(t, { A: () => o });
+var i = n(64700),
+    a = n(607399),
+    r = n(437852),
+    s = n(657515);
+function o() {
+    let { enabled: e } = r.Ay.useConfig({ location: "useGiftingPromotionConfig" });
+    return i.useMemo(() => (a.Fr || a.v1 ? null : e ? s.zH : null), [e]);
 }
