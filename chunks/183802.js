@@ -15,35 +15,35 @@ var r,
     R = n(397927),
     E = n(442433),
     m = n(775602),
-    H = n(793574),
-    S = n(688810),
-    O = n(713517),
-    f = n(427209),
-    C = n(544028),
-    I = n(253932),
+    I = n(793574),
+    H = n(688810),
+    S = n(713517),
+    O = n(427209),
+    f = n(544028),
+    C = n(253932),
     N = n(67480),
     M = n(954571),
     L = n(580630),
     h = n(871123),
-    x = n(733391),
-    D = n(439303),
-    b = n(832163),
-    p = n(35826),
+    p = n(733391),
+    x = n(439303),
+    D = n(832163),
+    b = n(35826),
     k = n(310962),
     B = n(44724),
     U = n(345938),
     y = n(533406),
-    v = n(366523),
-    G = n(300182),
+    G = n(366523),
+    v = n(300182),
     w = n(620999),
     j = n(743693),
     P = n(696028),
-    Y = n(914887),
-    F = n(995393),
+    F = n(914887),
+    Y = n(995393),
     V = n(652215),
     W = n(818348),
     K = n(985018),
-    z = n(610084);
+    z = n(120690);
 let q = [
         [0, 50],
         [0, 50],
@@ -67,7 +67,7 @@ function J(t) {
                 t.stopPropagation(),
                     null != n &&
                         null != e &&
-                        (i(F.bB.FORWARD_BUTTON),
+                        (i(Y.bB.FORWARD_BUTTON),
                         (0, U.d)({
                             sku: n,
                             guildId: e,
@@ -79,7 +79,7 @@ function J(t) {
             [n, e, i, o, u],
         ),
         _ = a.useCallback(() => {
-            i(F.bB.WISHLIST_BUTTON);
+            i(Y.bB.WISHLIST_BUTTON);
         }, [i]),
         g = a.useMemo(() => c()(z.o, { [z.H5]: r }), [r]);
     return (0, s.jsxs)("div", {
@@ -89,63 +89,55 @@ function J(t) {
                 (0, s.jsx)(A.DUT, {
                     className: c()(g, z.gy),
                     onClick: d,
-                    children: (0, s.jsx)(f.A, { size: "refresh_sm", color: "currentColor" }),
+                    children: (0, s.jsx)(O.A, { size: "refresh_sm", color: "currentColor" }),
                 }),
             (0, s.jsx)(j._, { sku: n, isCardHovered: r, trackButtonClick: _, className: c()(g, z.ij) }),
         ],
     });
 }
 function Z(t) {
-    let {
-            positionInSection: e,
-            applicationId: r,
-            skuId: i,
-            variant: l = 0,
-            guildId: u,
-            onClick: o,
-            className: f,
-            analyticsLocations: U,
-        } = t,
-        j = a.useRef(null),
-        $ = a.useRef(null),
-        Z = (0, _.bG)([N.A], () => N.A.get(i)),
-        tt = (0, _.bG)([C.A], () => (0, A.Mwr)(C.A.theme)),
-        te = (0, _.bG)([m.A], () => m.A.useReducedMotion),
-        tn = I.Q_.useSetting(),
-        { isHoveringOrFocusing: tr } = (0, O.A)(j),
-        ts = (0, D.jM)(),
-        { analyticsLocations: ta } = (0, S.Ay)(U ?? []),
-        ti = a.useRef({ positionInSection: e, analyticsLocations: ta }),
-        [tl, tu] = a.useState(!1),
-        tc = (0, _.bG)([b.A], () => (null != i ? b.A.getNormalizedSKUEligibility(i) : void 0), [i]),
-        to = (0, k.A)(i, tl),
-        td = a.useCallback((t) => {
-            tu(t);
+    let { positionInSection: e, skuId: r, variant: i = 0, onClick: l, className: u, analyticsLocations: o } = t,
+        O = a.useRef(null),
+        U = a.useRef(null),
+        j = (0, _.bG)([N.A], () => N.A.get(r)),
+        $ = (0, _.bG)([D.A], () => D.A.getGuildIdFromApplicationId(j?.applicationId)),
+        Z = (0, _.bG)([f.A], () => (0, A.Mwr)(f.A.theme)),
+        tt = (0, _.bG)([m.A], () => m.A.useReducedMotion),
+        te = C.Q_.useSetting(),
+        { isHoveringOrFocusing: tn } = (0, S.A)(O),
+        tr = (0, x.jM)(),
+        { analyticsLocations: ts } = (0, H.Ay)(o ?? []),
+        ta = a.useRef({ positionInSection: e, analyticsLocations: ts }),
+        [ti, tl] = a.useState(!1),
+        tu = (0, _.bG)([D.A], () => (null != r ? D.A.getNormalizedSKUEligibility(r) : void 0), [r]),
+        tc = (0, k.A)(r, ti),
+        to = a.useCallback((t) => {
+            tl(t);
         }, []),
-        tA = a.useMemo(() => c()(z.Nr, { [z.ax]: 0 === l, [z.GW]: 1 === l, [z.jz]: 2 === l }), [l]),
-        { handleCardHover: t_, handleCardUnhover: tg } = (0, P.Z)(i, ts, e, ta),
-        { handleCardVisibilityChange: tT } = (0, Y.a)(i, ts, e, ta);
+        td = a.useMemo(() => c()(z.Nr, { [z.ax]: 0 === i, [z.GW]: 1 === i, [z.jz]: 2 === i }), [i]),
+        { handleCardHover: tA, handleCardUnhover: t_ } = (0, P.Z)(r, tr, e, ts),
+        { handleCardVisibilityChange: tg } = (0, F.a)(r, tr, e, ts);
     a.useEffect(() => {
-        tT(tl);
-    }, [tl]);
-    let tR = a.useCallback(
+        tg(ti);
+    }, [ti]);
+    let tT = a.useCallback(
             (t) => {
-                let { analyticsLocations: e, positionInSection: n } = ti.current,
+                let { analyticsLocations: e, positionInSection: n } = ta.current,
                     {
-                        sessionId: r,
-                        guildId: s,
-                        pageIndex: a,
+                        sessionId: s,
+                        guildId: a,
+                        pageIndex: i,
                         pageTitle: l,
                         pageSection: u,
                         pageSectionTitle: c,
                         isUserGuildMember: o,
                         pageHasLeaderboard: d,
-                    } = ts;
+                    } = tr;
                 M.default.track(V.HAw.SLAYER_STOREFRONT_CARD_ELEMENT_CLICKED, {
-                    slayer_storefront_session_id: r,
-                    sku_id: i,
-                    guild_id: s,
-                    page_index: a,
+                    slayer_storefront_session_id: s,
+                    sku_id: r,
+                    guild_id: a,
+                    page_index: i,
                     page_title: l,
                     page_section: u,
                     page_section_title: c,
@@ -156,100 +148,102 @@ function Z(t) {
                     location_stack: e,
                 });
             },
-            [i, ts],
+            [r, tr],
         ),
-        { primaryIconAsset: tE, primaryIconLabel: tm } = a.useMemo(() => (0, h.Cv)(Z, r), [Z, r]),
-        tH = (0, _.bG)([b.A], () => (null != u ? (b.A.getStorefrontState(u)?.activePage ?? 0) : 0)),
-        tS = a.useMemo(() => {
-            if (Z?.tenantMetadata?.socialLayer?.expiresAt == null) return null;
+        { primaryIconAsset: tR, primaryIconLabel: tE } = a.useMemo(() => (0, h.Cv)(j, j?.applicationId), [j]),
+        tm = (0, _.bG)([D.A], () => (null != $ ? (D.A.getStorefrontState($)?.activePage ?? 0) : 0)),
+        tI = a.useMemo(() => {
+            if (j?.tenantMetadata?.socialLayer?.expiresAt == null) return null;
             let t = d()(),
-                e = Math.max(d()(Z.tenantMetadata.socialLayer.expiresAt).diff(t, "days"), 1);
+                e = Math.max(d()(j.tenantMetadata.socialLayer.expiresAt).diff(t, "days"), 1);
             return e <= 3 ? K.intl.format(K.t.PWw4Vp, { days: e }) : null;
-        }, [Z?.tenantMetadata?.socialLayer?.expiresAt]),
-        tO = (0, h.xf)(Z),
-        tf = a.useMemo(() => {
-            if (!to) return "none";
-            let [t, e] = q[l];
+        }, [j?.tenantMetadata?.socialLayer?.expiresAt]),
+        tH = (0, h.xf)(j),
+        tS = a.useMemo(() => {
+            if (!tc) return "none";
+            let [t, e] = q[i];
             return `linear-gradient(to top, ${X} ${30 + t}%, ${Q} ${30 + e}%)`;
-        }, [l, to]),
+        }, [i, tc]),
+        tO = a.useCallback(() => {
+            (0, B.X)({ guildId: $ });
+        }, [$]),
+        tf = a.useCallback(() => {
+            null != $ && (0, p.iR)($, r, "SocialLayerStorefrontCard");
+        }, [$, r]),
         tC = a.useCallback(() => {
-            (0, B.X)({ guildId: u });
-        }, [u]),
-        tI = a.useCallback(() => {
-            null != u && (0, x.iR)(u, i, "SocialLayerStorefrontCard");
-        }, [u, i]),
-        tN = a.useCallback(() => {
-            t_(),
-                null != u &&
-                    ($.current = setTimeout(() => {
-                        (0, x.iR)(u, i, "SocialLayerStorefrontCard");
+            tA(),
+                null != $ &&
+                    (U.current = setTimeout(() => {
+                        (0, p.iR)($, r, "SocialLayerStorefrontCard");
                     }, 1e3));
-        }, [u, i, t_]),
-        tM = a.useCallback(() => {
-            tg(), null != $.current && (clearTimeout($.current), ($.current = null));
-        }, [tg]);
+        }, [$, r, tA]),
+        tN = a.useCallback(() => {
+            t_(), null != U.current && (clearTimeout(U.current), (U.current = null));
+        }, [t_]);
     a.useEffect(
         () => () => {
-            null != $.current && clearTimeout($.current);
+            null != U.current && clearTimeout(U.current);
         },
         [],
     );
-    let tL = a.useCallback(() => {
-            null != u && (0, p.A)({ guildId: u, pageIndex: tH, skuId: i, slug: Z?.slug });
-        }, [u, i, tH, Z?.slug]),
+    let tM = a.useCallback(() => {
+            null != $ && (0, b.A)({ guildId: $, pageIndex: tm, skuId: r, slug: j?.slug });
+        }, [$, r, tm, j?.slug]),
+        tL = a.useCallback(
+            (t) => {
+                (tT(Y.bB.CARD), null != l && null != $ && j?.applicationId != null)
+                    ? l(t, { skuId: r, applicationId: j.applicationId, guildId: $ })
+                    : tM();
+            },
+            [tT, l, tM, r, j?.applicationId, $],
+        ),
         th = a.useCallback(
             (t) => {
-                (tR(F.bB.CARD), null != o) ? o(t) : tL();
-            },
-            [tR, o, tL],
-        ),
-        tx = a.useCallback(
-            (t) => {
-                tn &&
+                te &&
                     (0, E.L3)(t, async () => {
                         let { default: t } = await n.e("97249").then(n.bind(n, 10680));
-                        return (e) => (0, s.jsx)(t, { ...e, skuId: i });
+                        return (e) => (0, s.jsx)(t, { ...e, skuId: r });
                     });
             },
-            [tn, i],
+            [te, r],
         );
-    if (null == Z) return null;
-    let tD = (0, h.fq)(Z);
+    if (null == j) return null;
+    let tp = (0, h.fq)(j);
     return (0, s.jsx)(g.L, {
-        innerRef: j,
-        onChange: td,
+        innerRef: O,
+        onChange: to,
         threshold: 0,
         children: (0, s.jsx)(A.vN3, {
             children: (0, s.jsxs)(R.sqX, {
-                onClick: th,
-                onContextMenu: tx,
-                onMouseDown: tC,
-                onMouseEnter: tN,
-                onMouseLeave: tM,
-                className: c()(tA, { [z.Zl]: !te && 2 !== l, [z.BN]: tt, [tt ? z.Mn : z.YF]: tr, [z.Rc]: !to }, f),
-                ref: j,
-                "aria-label": Z.name,
+                onClick: tL,
+                onContextMenu: th,
+                onMouseDown: tO,
+                onMouseEnter: tC,
+                onMouseLeave: tN,
+                className: c()(td, { [z.Zl]: !tt && 2 !== i, [z.BN]: Z, [Z ? z.Mn : z.YF]: tn, [z.Rc]: !tc }, u),
+                ref: O,
+                "aria-label": j.name,
                 children: [
-                    null != tS && (0, s.jsx)(R.LpS, { text: tS, disableColor: !0, className: z.qS }),
+                    null != tI && (0, s.jsx)(R.LpS, { text: tI, disableColor: !0, className: z.qS }),
                     (0, s.jsx)(J, {
-                        guildId: u,
-                        sku: Z,
-                        isCardHovered: tr,
-                        variant: l,
-                        trackCardClick: tR,
-                        analyticsLocations: ta,
-                        analyticsContext: ts,
+                        guildId: $,
+                        sku: j,
+                        isCardHovered: tn,
+                        variant: i,
+                        trackCardClick: tT,
+                        analyticsLocations: ts,
+                        analyticsContext: tr,
                     }),
-                    null != tD
-                        ? to
-                            ? (0, s.jsx)(v.A, {
+                    null != tp
+                        ? tc
+                            ? (0, s.jsx)(G.A, {
                                   containerClassName: z.Vl,
                                   foregroundImageClassName: z.wP,
-                                  cardImage: tD,
-                                  altText: Z.name,
+                                  cardImage: tp,
+                                  altText: j.name,
                                   shape: "custom",
                                   backgroundImageClassName: z.GC,
-                                  cardBackgroundImage: tO,
+                                  cardBackgroundImage: tH,
                               })
                             : (0, s.jsx)(w.t, {})
                         : (0, s.jsx)("div", {
@@ -262,29 +256,29 @@ function Z(t) {
                                   className: z.Cw,
                               }),
                           }),
-                    2 !== l
+                    2 !== i
                         ? (0, s.jsxs)(s.Fragment, {
                               children: [
-                                  (0, s.jsx)("div", { className: z.iZ, style: { background: tf } }),
+                                  (0, s.jsx)("div", { className: z.iZ, style: { background: tS } }),
                                   (0, s.jsxs)("div", {
                                       className: z.zH,
                                       children: [
                                           (0, s.jsx)("div", {
                                               className: z.gn,
-                                              children: to
+                                              children: tc
                                                   ? (0, s.jsxs)(s.Fragment, {
                                                         children: [
-                                                            null != tE &&
+                                                            null != tR &&
                                                                 (0, s.jsx)("img", {
-                                                                    src: tE.toString(),
-                                                                    alt: tm,
+                                                                    src: tR.toString(),
+                                                                    alt: tE,
                                                                     className: z.ye,
                                                                 }),
                                                             (0, s.jsx)(R.Text, {
                                                                 color: "always-white",
                                                                 variant: "text-md/medium",
                                                                 lineClamp: 1,
-                                                                children: Z.name,
+                                                                children: j.name,
                                                             }),
                                                         ],
                                                     })
@@ -292,7 +286,7 @@ function Z(t) {
                                           }),
                                           (0, s.jsx)("div", {
                                               className: z.iQ,
-                                              children: to
+                                              children: tc
                                                   ? (0, s.jsxs)(s.Fragment, {
                                                         children: [
                                                             (0, s.jsx)(R.Text, {
@@ -300,19 +294,19 @@ function Z(t) {
                                                                 color: "always-white",
                                                                 lineClamp: 1,
                                                                 children: (0, L.$g)(
-                                                                    Z.price?.amount ?? 0,
-                                                                    Z.price?.currency ?? W.Yr.USD,
+                                                                    j.price?.amount ?? 0,
+                                                                    j.price?.currency ?? W.Yr.USD,
                                                                 ),
                                                             }),
-                                                            null != Z.orbsReward &&
-                                                                Z.orbsReward > 0 &&
+                                                            null != j.orbsReward &&
+                                                                j.orbsReward > 0 &&
                                                                 (0, s.jsx)("div", {
                                                                     className: z.pt,
                                                                     children: (0, s.jsx)(R.Text, {
                                                                         variant: "text-sm/semibold",
                                                                         color: "currentColor",
                                                                         children: K.intl.format(K.t.GiVd2Q, {
-                                                                            orbCount: Z.orbsReward,
+                                                                            orbCount: j.orbsReward,
                                                                             orbIconHook: () =>
                                                                                 (0, s.jsx)(
                                                                                     A.Cp8,
@@ -337,29 +331,29 @@ function Z(t) {
                                           wrap: !1,
                                           fullWidth: !0,
                                           children: [
-                                              tc
+                                              tu
                                                   ? (0, s.jsx)(A.$nd, {
                                                         variant: "primary",
-                                                        onMouseDown: tI,
+                                                        onMouseDown: tf,
                                                         onClick: (t) => {
                                                             t.stopPropagation(),
-                                                                tR(F.bB.BUY_BUTTON),
+                                                                tT(Y.bB.BUY_BUTTON),
                                                                 (0, y.a)(
-                                                                    Z,
+                                                                    j,
                                                                     { isGift: !1 },
                                                                     {
                                                                         analyticsLocations: [
-                                                                            ...ta,
-                                                                            H.A.SLAYER_STOREFRONT_CARD_PURCHASE_BUTTON,
+                                                                            ...ts,
+                                                                            I.A.SLAYER_STOREFRONT_CARD_PURCHASE_BUTTON,
                                                                         ],
-                                                                        guildId: u,
+                                                                        guildId: $,
                                                                     },
                                                                 );
                                                         },
                                                         text: K.intl.format(K.t.Xp5WTn, {
                                                             price: (0, L.$g)(
-                                                                Z.price?.amount ?? 0,
-                                                                Z.price?.currency ?? W.Yr.USD,
+                                                                j.price?.amount ?? 0,
+                                                                j.price?.currency ?? W.Yr.USD,
                                                             ),
                                                         }),
                                                         fullWidth: !0,
@@ -369,23 +363,23 @@ function Z(t) {
                                                         children: (0, s.jsx)(A.$nd, {
                                                             variant: "primary",
                                                             onClick: (t) => {
-                                                                t.stopPropagation(), tR(F.bB.VIEW_DETAILS_BUTTON), tL();
+                                                                t.stopPropagation(), tT(Y.bB.VIEW_DETAILS_BUTTON), tM();
                                                             },
                                                             text: K.intl.string(K.t.KLBTgF),
                                                             fullWidth: !0,
                                                         }),
                                                     }),
-                                              (0, s.jsx)(G.A, {
+                                              (0, s.jsx)(v.A, {
                                                   onGift: (t) => {
                                                       t.stopPropagation(),
-                                                          tR(F.bB.GIFT_BUTTON),
+                                                          tT(Y.bB.GIFT_BUTTON),
                                                           (0, y.a)(
-                                                              Z,
+                                                              j,
                                                               { isGift: !0 },
                                                               {
                                                                   analyticsLocations: [
-                                                                      ...ta,
-                                                                      H.A.SLAYER_STOREFRONT_CARD_GIFT_BUTTON,
+                                                                      ...ts,
+                                                                      I.A.SLAYER_STOREFRONT_CARD_GIFT_BUTTON,
                                                                   ],
                                                               },
                                                           );

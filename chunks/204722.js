@@ -76,7 +76,7 @@ let z = s.memo(function (e) {
                 connectionApp: et,
             } = e,
             { parentAnalyticsLocation: en, analyticsLocations: ei } = (0, f.Ay)(),
-            es = (0, L.A)(D),
+            es = (0, L.Ay)(D?.id),
             el = Y(D, M, I),
             { enabled: ea } = y._.useConfig({ location: "activity-panel" }),
             er = (0, j.Bp)("activity-panel"),
