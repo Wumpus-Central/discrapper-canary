@@ -2,9 +2,9 @@
 let r;
 n.d(t, { A: () => L });
 var i = n(311907),
-    a = n(73153),
-    s = n(773669),
-    o = n(731935),
+    s = n(73153),
+    a = n(260811),
+    o = n(773669),
     l = n(760751);
 let u = new Map(),
     c = new Set(),
@@ -13,7 +13,9 @@ let u = new Map(),
     f = new Map(),
     p = new Map();
 function h(e) {
-    _.set(e.id, o.A.createFromServer(e)),
+    let t = a.A.createFromServer(e);
+    null == t.price && _.get(e.id)?.price != null && (t.price = _.get(e.id)?.price),
+        _.set(e.id, t),
         c.delete(e.id),
         d.delete(e.id),
         e.bundled_sku_ids?.forEach((t) => {
@@ -25,11 +27,11 @@ function h(e) {
 function m(e) {
     h(e);
 }
-function g(e) {
+function E(e) {
     let { skuId: t } = e;
     c.add(t);
 }
-function E(e) {
+function g(e) {
     let { skuId: t } = e;
     c.add(t);
 }
@@ -46,11 +48,11 @@ function T(e) {
     if (null == t.store_listing) return !1;
     h(t.store_listing.sku);
 }
-function y(e) {
+function S(e) {
     let { sku: t } = e;
     m(t);
 }
-function S(e) {
+function y(e) {
     let { guildId: t, skus: n } = e;
     for (let e of n) m(e);
     null != t && p.set(t, new Set(n.map((e) => e.id)));
@@ -60,29 +62,29 @@ function v(e) {
         null != e.child_skus && e.child_skus.forEach((e) => h(e)),
         null != e.alternative_skus && e.alternative_skus.forEach((e) => h(e));
 }
-function C(e) {
+function N(e) {
     let { storeListings: t } = e;
     for (let e of t) v(e);
 }
-function b(e) {
+function C(e) {
     let { storeListing: t } = e;
     v(t);
 }
-function N(e) {
+function R(e) {
     let { entitlements: t } = e;
     for (let e of t) null != e.sku && h(e.sku);
 }
-function R() {
+function O() {
     (u = new Map()), (c = new Set()), (d = new Set()), (_ = new Map()), (f = new Map()), (p = new Map());
 }
-function O() {
-    if (r === s.default.locale) return !1;
-    (r = s.default.locale), R();
+function b() {
+    if (r === o.default.locale) return !1;
+    (r = o.default.locale), O();
 }
 class D extends i.il {
     static displayName = "SKUStore";
     initialize() {
-        this.waitFor(s.default, l.A), this.syncWith([s.default], O), (r = s.default.locale);
+        this.waitFor(o.default, l.A), this.syncWith([o.default], b), (r = o.default.locale);
     }
     get(e) {
         return _.get(e);
@@ -105,18 +107,18 @@ class D extends i.il {
         return d.has(e);
     }
 }
-let L = new D(a.h, {
-    STORE_LISTINGS_FETCH_START: g,
+let L = new D(s.h, {
+    STORE_LISTINGS_FETCH_START: E,
     STORE_LISTINGS_FETCH_FAIL: A,
-    STORE_LISTINGS_FETCH_SUCCESS: C,
-    STORE_LISTING_FETCH_SUCCESS: b,
+    STORE_LISTINGS_FETCH_SUCCESS: N,
+    STORE_LISTING_FETCH_SUCCESS: C,
     GIFT_CODE_RESOLVE_SUCCESS: T,
-    SKU_FETCH_START: E,
-    SKU_FETCH_SUCCESS: y,
+    SKU_FETCH_START: g,
+    SKU_FETCH_SUCCESS: S,
     SKU_FETCH_FAIL: I,
-    SKUS_FETCH_SUCCESS: S,
-    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: N,
-    APPLICATION_STORE_CLEAR_DATA: R,
-    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: N,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: N,
+    SKUS_FETCH_SUCCESS: y,
+    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: R,
+    APPLICATION_STORE_CLEAR_DATA: O,
+    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: R,
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: R,
 });

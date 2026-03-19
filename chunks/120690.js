@@ -17,6 +17,7 @@ e.exports = {
     gn: "titleContainer_abfd90",
     iQ: "descriptionContainer_abfd90",
     li: "buttonHover_abfd90",
+    ov: "titleContainerNoPrice_abfd90",
     iZ: "bottomGradient_abfd90",
     ye: "iconAsset_abfd90",
     qS: "badge_abfd90",

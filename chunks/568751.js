@@ -74,7 +74,14 @@ function S(e) {
                 },
                 { analyticsLocations: x },
             );
-        }, [t, P, O, x]);
+        }, [t, P, O, x]),
+        { label: F, icon: V } = (0, p.h)({
+            sku: t,
+            wishlistOwner: P,
+            isOwned: !1,
+            shortText: !0,
+            location: "Contextual Social Layer Sku Item Card",
+        });
     return (0, r.jsxs)(_.A, {
         sku: t,
         user: P,
@@ -82,7 +89,7 @@ function S(e) {
         onClick: U,
         onHoverOrFocusChange: L,
         children: [
-            (0, r.jsx)(p.lQ, { sku: t, spec: R, onClick: G, isHoveringOrFocusing: D }),
+            (0, r.jsx)(p.A, { spec: R, onClick: G, isHoveringOrFocusing: D, label: F, icon: V }),
             y &&
                 n === d.uS.WISHLIST &&
                 k.length > 0 &&

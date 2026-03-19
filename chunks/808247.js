@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => I });
+n.d(t, { A: () => S });
 var r = n(574381),
     i = n(562465),
     s = n(73153),
@@ -10,56 +10,65 @@ var r = n(574381),
     c = n(287809),
     d = n(615405),
     _ = n(954571),
-    f = n(728458),
-    p = n(594832),
-    h = n(310209),
-    m = n(855052),
-    E = n(652215);
-function g() {
+    f = n(403362),
+    p = n(728458),
+    h = n(594832),
+    m = n(310209),
+    E = n(855052),
+    g = n(652215);
+function A() {
     let e = {};
     return (
         null != d.A.ipCountryCode && (e.country_code = d.A.ipCountryCode),
-        (0, r.m0)() ? (e.payment_gateway = E.kM_.GOOGLE) : (0, r.un)() && (e.payment_gateway = E.kM_.APPLE),
+        (0, r.m0)() ? (e.payment_gateway = g.kM_.GOOGLE) : (0, r.un)() && (e.payment_gateway = g.kM_.APPLE),
         e
     );
 }
-function A(e) {
+function I(e) {
     if (e.body?.user_discounts != null) {
         let t = e.body.user_discounts.map((e) => l.T.fromServer(e));
         s.h.dispatch({ type: "WISHLIST_USER_DISCOUNTS_RESPONSE_SUCCESS", userDiscounts: t });
     }
 }
-let I = {
+function T(e) {
+    let t = e.wishlist_items.map((e) => e.sku).filter(f.Vq);
+    s.h.dispatch({ type: "SKUS_FETCH_SUCCESS", skus: t });
+}
+let S = {
     async fetchWishlist(e, t, n) {
         s.h.dispatch({ type: "WISHLIST_FETCH_START", wishlistId: e });
         try {
             let r = await i.Bo.get({
-                url: E.Rsh.USER_WISHLIST(e),
-                query: { source: n ?? p.B5.USER_PROFILE, ...g() },
+                url: g.Rsh.USER_WISHLIST(e),
+                query: { source: n ?? h.B5.USER_PROFILE, ...A() },
                 rejectWithError: !0,
             });
-            r.body?.wishlist_items == null && f.A.captureMessage("Wishlist items not found in response"), A(r);
-            let a = m.A.fromServer(r.body);
-            s.h.dispatch({ type: "WISHLIST_FETCH_SUCCESS", wishlistId: e, wishlistData: a, updatedAt: t });
+            r.body?.wishlist_items == null && p.A.captureMessage("Wishlist items not found in response"), I(r);
+            let a = r.body;
+            T(a);
+            let o = E.A.fromServer(a);
+            s.h.dispatch({ type: "WISHLIST_FETCH_SUCCESS", wishlistId: e, wishlistData: o, updatedAt: t });
         } catch (t) {
             s.h.dispatch({ type: "WISHLIST_FETCH_FAILURE", wishlistId: e, error: new o.LG(t) }),
-                f.A.captureException(t);
+                p.A.captureException(t);
         }
     },
     async addSkuToWishlist(e, t) {
         let n = null;
         try {
-            (n = await i.Bo.post({ url: E.Rsh.USER_WISHLIST_ITEMS, body: { sku_id: e, ...g() }, rejectWithError: !0 })),
-                A(n);
-            let r = m.A.fromServer(n.body);
+            (n = await i.Bo.post({ url: g.Rsh.USER_WISHLIST_ITEMS, body: { sku_id: e, ...A() }, rejectWithError: !0 })),
+                I(n);
+            let r = n.body;
+            T(r);
+            let a = E.A.fromServer(r);
             if (
-                (s.h.dispatch({ type: "WISHLIST_ADD_SKU_SUCCESS", wishlistId: r.id, skuId: e, wishlistData: r }),
+                (s.h.dispatch({ type: "WISHLIST_ADD_SKU_SUCCESS", wishlistId: a.id, skuId: e, wishlistData: a }),
                 null != t)
             )
                 try {
-                    let n = r.getSkuIds();
-                    _.default.track(E.HAw.WISHLIST_UPDATED, {
-                        wishlist_id: r.id,
+                    let n = a.getSkuIds();
+                    _.default.track(g.HAw.WISHLIST_UPDATED, {
+                        wishlist_id: a.id,
                         action_type: "ADD",
                         sku_id: e,
                         sku_ids: n,
@@ -79,17 +88,19 @@ let I = {
     async removeSkuFromWishlist(e, t, n) {
         s.h.dispatch({ type: "WISHLIST_REMOVE_SKU_START", wishlistId: e, skuId: t });
         try {
-            let r = await i.Bo.del({ url: E.Rsh.USER_WISHLIST_ITEM(e, t), query: { ...g() }, rejectWithError: !0 });
-            A(r);
-            let a = m.A.fromServer(r.body);
+            let r = await i.Bo.del({ url: g.Rsh.USER_WISHLIST_ITEM(e, t), query: { ...A() }, rejectWithError: !0 });
+            I(r);
+            let a = r.body;
+            T(a);
+            let o = E.A.fromServer(a);
             if (
-                (s.h.dispatch({ type: "WISHLIST_REMOVE_SKU_SUCCESS", wishlistId: e, skuId: t, wishlistData: a }),
+                (s.h.dispatch({ type: "WISHLIST_REMOVE_SKU_SUCCESS", wishlistId: e, skuId: t, wishlistData: o }),
                 null != n)
             )
                 try {
-                    let e = a.getSkuIds();
-                    _.default.track(E.HAw.WISHLIST_UPDATED, {
-                        wishlist_id: a.id,
+                    let e = o.getSkuIds();
+                    _.default.track(g.HAw.WISHLIST_UPDATED, {
+                        wishlist_id: o.id,
                         action_type: "REMOVE",
                         sku_id: t,
                         sku_ids: e,
@@ -107,11 +118,11 @@ let I = {
         if (null != n)
             try {
                 let r = await i.Bo.patch({
-                    url: E.Rsh.USER_WISHLIST_PATCH(e),
-                    body: { visibility: t, ...g() },
+                    url: g.Rsh.USER_WISHLIST_PATCH(e),
+                    body: { visibility: t, ...A() },
                     rejectWithError: !0,
                 });
-                A(r), s.h.dispatch({ type: "WISHLIST_UPDATE_VISIBILITY_SUCCESS", wishlistId: e, visibility: t });
+                I(r), s.h.dispatch({ type: "WISHLIST_UPDATE_VISIBILITY_SUCCESS", wishlistId: e, visibility: t });
                 try {
                     await (0, a.eO)(n.id);
                 } catch {}
@@ -133,16 +144,18 @@ let I = {
         });
         try {
             let n = await i.Bo.patch({
-                url: E.Rsh.USER_WISHLIST_ITEM(e, t),
-                body: { previous_sku_id: r, next_sku_id: a, ...g() },
+                url: g.Rsh.USER_WISHLIST_ITEM(e, t),
+                body: { previous_sku_id: r, next_sku_id: a, ...A() },
                 rejectWithError: !0,
             });
-            A(n);
-            let o = m.A.fromServer(n.body);
-            if ((s.h.dispatch({ type: "WISHLIST_REORDER_SUCCESS", wishlistId: e, wishlistData: o }), null != u))
+            I(n);
+            let o = n.body;
+            T(o);
+            let l = E.A.fromServer(o);
+            if ((s.h.dispatch({ type: "WISHLIST_REORDER_SUCCESS", wishlistId: e, wishlistData: l }), null != u))
                 try {
-                    let n = o.getSkuIds();
-                    _.default.track(E.HAw.WISHLIST_UPDATED, {
+                    let n = l.getSkuIds();
+                    _.default.track(g.HAw.WISHLIST_UPDATED, {
                         wishlist_id: e,
                         action_type: "REORDER",
                         sku_id: t,
@@ -152,7 +165,7 @@ let I = {
                 } catch (e) {}
         } catch (n) {
             s.h.dispatch({ type: "WISHLIST_REORDER_FAILURE", wishlistId: e, skuId: t, error: new o.LG(n) }),
-                f.A.captureException(n);
+                p.A.captureException(n);
         }
     },
     async fetchWishlistRecommendations(e, t) {
@@ -161,15 +174,17 @@ let I = {
         s.h.dispatch({ type: "WISHLIST_RECOMMENDATIONS_FETCH_START", userIds: t, applicationIds: e });
         try {
             let a = await i.Bo.get({
-                url: E.Rsh.USER_WISHLIST_RECOMMENDATIONS,
-                query: { application_ids: e, user_ids: t, max_recommendations: n, localize: r, ...g() },
+                url: g.Rsh.USER_WISHLIST_RECOMMENDATIONS,
+                query: { application_ids: e, user_ids: t, max_recommendations: n, localize: r, ...A() },
                 rejectWithError: !0,
             });
-            A(a);
-            let o = h.A.fromServer(a.body);
-            s.h.dispatch({ type: "WISHLIST_RECOMMENDATIONS_FETCH_SUCCESS", userIds: t, applicationIds: e, data: o });
+            I(a);
+            let o = a.body,
+                l = m.A.fromServer(o);
+            s.h.dispatch({ type: "WISHLIST_RECOMMENDATIONS_FETCH_SUCCESS", userIds: t, applicationIds: e, data: l }),
+                s.h.dispatch({ type: "SKUS_FETCH_SUCCESS", skus: o.skus });
         } catch (n) {
-            f.A.captureException(n),
+            p.A.captureException(n),
                 s.h.dispatch({ type: "WISHLIST_RECOMMENDATIONS_FETCH_FAILURE", userIds: t, applicationIds: e });
         }
     },

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { AJ: () => A, hB: () => E, lQ: () => I });
+n.d(t, { A: () => g, h: () => m });
 var r = n(627968),
     i = n(64700),
     s = n(503698),
@@ -10,22 +10,21 @@ var r = n(627968),
     c = n(287809),
     d = n(580630),
     _ = n(178213),
-    f = n(818348),
-    p = n(985018),
-    h = n(333245);
-function m(e) {
+    f = n(985018),
+    p = n(433107);
+function h(e) {
     return { margin: e.buttonInset };
 }
-function E(e) {
-    let { sku: t, wishlistOwner: n, isOwned: r, hideIcon: s, shortText: a, location: f } = e,
+function m(e) {
+    let { sku: t, wishlistOwner: n, isOwned: r, hideIcon: s, shortText: a, location: p } = e,
         h = (0, o.bG)([c.default], () => c.default.getCurrentUser()),
-        m = (0, _.AZ)(f ?? "User Profile Wishlist Overlay Button"),
+        m = (0, _.AZ)(p ?? "User Profile Wishlist Overlay Button"),
         E = (0, u.Xi)(t);
     return i.useMemo(() => {
         if (m && null != t && !r) {
             if (null != E)
                 return {
-                    label: p.intl.formatToPlainString(p.t.AYcXGW, { discountOfferAmount: E.amount }),
+                    label: f.intl.formatToPlainString(f.t.AYcXGW, { discountOfferAmount: E.amount }),
                     icon: void 0,
                     isPromptingPurchase: !0,
                 };
@@ -34,18 +33,18 @@ function E(e) {
         }
         return null == n || n.id === h?.id || r
             ? {
-                  label: a ? p.intl.string(p.t["99GFiS"]) : p.intl.string(p.t.FdGl5A),
+                  label: a ? f.intl.string(f.t["99GFiS"]) : f.intl.string(f.t.FdGl5A),
                   icon: void 0,
                   isPromptingPurchase: !1,
               }
             : {
-                  label: a ? p.intl.string(p.t["3wFtNJ"]) : p.intl.string(p.t.ilhtIa),
+                  label: a ? f.intl.string(f.t["3wFtNJ"]) : f.intl.string(f.t.ilhtIa),
                   icon: s ? void 0 : l.okO,
                   isPromptingPurchase: !0,
               };
     }, [m, t, r, n, h?.id, h?.premiumType, a, s, E]);
 }
-function g(e) {
+function E(e) {
     let { spec: t, label: n, icon: s, onClick: o, isHoveringOrFocusing: u, fullWidth: c = !1 } = e,
         d = i.useCallback(
             (e) => {
@@ -54,8 +53,8 @@ function g(e) {
             [o],
         );
     return (0, r.jsx)("div", {
-        className: a()(h.L, { [h.K]: u }),
-        style: m(t),
+        className: a()(p.L, { [p.K]: u }),
+        style: h(t),
         children: (0, r.jsx)(l.Button, {
             variant: "primary",
             size: "sm",
@@ -67,12 +66,7 @@ function g(e) {
         }),
     });
 }
-function A(e) {
+function g(e) {
     let { spec: t, onClick: n, isHoveringOrFocusing: i, label: s, icon: a } = e;
-    return (0, r.jsx)(g, { spec: t, label: s, icon: a, onClick: n, isHoveringOrFocusing: i, fullWidth: !0 });
-}
-function I(e) {
-    let { sku: t, spec: n, onClick: s, isHoveringOrFocusing: a } = e,
-        o = i.useMemo(() => (0, d.$g)(t.price?.amount ?? 0, t.price?.currency ?? f.Yr.USD), [t]);
-    return (0, r.jsx)(g, { spec: n, label: o, icon: void 0, onClick: s, isHoveringOrFocusing: a, fullWidth: !0 });
+    return (0, r.jsx)(E, { spec: t, label: s, icon: a, onClick: n, isHoveringOrFocusing: i, fullWidth: !0 });
 }

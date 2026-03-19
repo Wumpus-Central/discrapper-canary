@@ -153,7 +153,9 @@ class F extends i.Ay.Store {
                 : void 0;
     }
     getGuildIdFromApplicationId(e) {
-        return "success" === p.state ? p.config.storefronts.find((t) => t.applicationId === e)?.guildId : void 0;
+        return "success" === p.state
+            ? p.config.storefronts.find((t) => t.applicationId === e || t.gameId === e)?.guildId
+            : void 0;
     }
     getConfigFetchState() {
         return p;
