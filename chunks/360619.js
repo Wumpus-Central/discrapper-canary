@@ -1,4 +1,4 @@
-n.d(t, { AC: () => E, NI: () => S, PH: () => T });
+n.d(t, { AC: () => p, NI: () => T, PH: () => h });
 var i = n(64700),
     s = n(311907),
     l = n(86379),
@@ -8,50 +8,44 @@ var i = n(64700),
     d = n(677402),
     c = n(639555),
     u = n(617641),
-    _ = n(189081),
-    m = n(994500),
-    g = n(253932),
-    A = n(368631),
-    x = n(682262),
-    h = n(987281),
-    p = n(654487);
-function T() {
+    _ = n(994500),
+    m = n(368631),
+    g = n(682262),
+    A = n(987281),
+    x = n(654487);
+function h() {
     let e = (0, o.IO)().length,
-        t = (0, x.b_)(),
+        t = (0, g.b_)(),
         n = (0, u.Lc)({ location: "settings" }),
-        h = (0, c.Rv)({ location: "settings" }),
-        T = (0, l.Hp)(),
-        E = (0, d.H)({ location: p.rE.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
-        S = (0, s.bG)([_.A], () => _.A.hasLibraryApplication()),
-        C = g.Q_.useSetting(),
-        f = (0, a.A)(),
-        N = (0, r.A)() ?? !0,
-        { hasBlockedUsers: I, hasIgnoredUsers: b } = (0, s.cf)([m.A], () => ({
-            hasBlockedUsers: m.A.getBlockedIDs().length > 0,
-            hasIgnoredUsers: m.A.getIgnoredIDs().length > 0,
+        A = (0, c.Rv)({ location: "settings" }),
+        h = (0, l.Hp)(),
+        p = (0, d.H)({ location: x.rE.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
+        T = (0, a.A)(),
+        E = (0, r.A)() ?? !0,
+        { hasBlockedUsers: S, hasIgnoredUsers: C } = (0, s.cf)([_.A], () => ({
+            hasBlockedUsers: _.A.getBlockedIDs().length > 0,
+            hasIgnoredUsers: _.A.getIgnoredIDs().length > 0,
         }));
     return i.useMemo(
         () =>
-            (0, A.zj)({
+            (0, m.zj)({
                 unseenGiftCount: e,
                 isOverlaySupported: t,
                 isInappropriateConversationWarningEnabled: n,
-                isInapproprateConversationsDefaultOn: h,
-                paymentsBlocked: T,
-                isEligibleForQuests: E,
-                isStricterMessageRequestsEnabled: f,
-                hasLibraryApplication: S,
-                developerMode: C,
-                isAdultUser: N,
-                hasIgnoredUsers: b,
-                hasBlockedUsers: I,
+                isInapproprateConversationsDefaultOn: A,
+                paymentsBlocked: h,
+                isEligibleForQuests: p,
+                isStricterMessageRequestsEnabled: T,
+                isAdultUser: E,
+                hasIgnoredUsers: C,
+                hasBlockedUsers: S,
             }),
-        [C, I, b, S, N, E, h, n, t, f, T, e],
+        [S, C, E, p, A, n, t, T, h, e],
     );
 }
-function E(e) {
-    let t = h.a.useField("searchResults"),
-        n = T(),
+function p(e) {
+    let t = A.a.useField("searchResults"),
+        n = h(),
         i = n[e],
         s = Object.fromEntries(
             Object.entries(n).filter((e) => {
@@ -101,7 +95,7 @@ function E(e) {
         }
     return a;
 }
-function S(e) {
+function T(e) {
     return Array.from(
         new Map(
             Object.entries(e).filter((e) => {
