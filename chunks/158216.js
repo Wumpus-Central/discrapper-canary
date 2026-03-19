@@ -2,8 +2,8 @@
 n.d(t, { AB: () => _, FF: () => u, K9: () => f }), n(64700);
 var r = n(758836),
     i = n(955971),
-    a = n(536769),
-    s = n(205942),
+    s = n(536769),
+    a = n(205942),
     o = n(550879),
     l = n(731242),
     u = (function (e) {
@@ -14,6 +14,7 @@ var r = n(758836),
             (e[(e.COACHTIP_HEADLINE_ONLY = 3)] = "COACHTIP_HEADLINE_ONLY"),
             (e[(e.BADGE = 4)] = "BADGE"),
             (e[(e.COACHMARK = 5)] = "COACHMARK"),
+            (e[(e.TAB_TOOLTIP = 6)] = "TAB_TOOLTIP"),
             e
         );
     })({});
@@ -33,7 +34,7 @@ class c {
     })();
 }
 let d = {
-        ROBERT: new c({ src: s.A, style: { position: "absolute", width: "400px", right: "-200px", zIndex: 10 } }),
+        ROBERT: new c({ src: a.A, style: { position: "absolute", width: "400px", right: "-200px", zIndex: 10 } }),
         SHY: new c({
             src: o.A,
             style: { position: "absolute", width: "600px", left: "calc(50vw - 300px)", top: "calc(50vh - 300px)" },
@@ -43,7 +44,7 @@ let d = {
             style: { position: "absolute", width: "850px", left: "calc(50vw - 425px)", top: "calc(50vh - 425px)" },
         }),
         ORB_PURCHASE: new c({
-            src: { dark: i.A, light: a.A },
+            src: { dark: i.A, light: s.A },
             animated: !0,
             style: { position: "fixed", width: "100%", height: "100%", top: 0, left: 0, objectFit: "cover" },
         }),

@@ -1,10 +1,33 @@
-i.d(e, { z: () => u });
-var n = i(419954),
-    l = i(780964),
-    s = i(400442),
-    r = i(962180),
-    a = i(985018);
-let u = (0, n.zZ)(l.X.CHAT_EMOJI_CATEGORY, {
-    useTitle: () => a.intl.string(a.t.sMOuuS),
-    buildLayout: () => [r.j, s.j],
-});
+"use strict";
+n.d(t, { A: () => i });
+var r = n(488430);
+class i {
+    title;
+    body;
+    asset;
+    dismissibleContent;
+    version;
+    refTargetBackground;
+    badgeIcon;
+    badgeText;
+    constructor(e) {
+        (this.type = r.G.TAB_TOOLTIP),
+            (this.title = e.title),
+            (this.body = e.body),
+            (this.asset = e.asset),
+            (this.dismissibleContent = e.dismissibleContent),
+            (this.version = e.version),
+            (this.refTargetBackground = e.refTargetBackground),
+            (this.badgeIcon = e.badgeIcon),
+            (this.badgeText = e.badgeText);
+    }
+    static fromServer(e) {
+        return new i({
+            ...e,
+            dismissibleContent: e.dismissible_content,
+            refTargetBackground: e.ref_target_background,
+            badgeIcon: e.badge_icon,
+            badgeText: e.badge_text,
+        });
+    }
+}
