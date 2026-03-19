@@ -39,7 +39,7 @@ var r = n(627968),
     F = n(307731),
     V = n(823894),
     B = n(985018),
-    H = n(228539);
+    H = n(579037);
 let j = 498 + G.as.MEDIUM,
     Y = i.memo(function (e) {
         let { isActive: t, className: n, viewType: i, autoFocus: s = !1, "aria-controls": o, ...l } = e;
@@ -357,6 +357,7 @@ function K(e) {
                                                     containerWidth: er,
                                                     emojiSize: null != er && er < j ? G.as.MEDIUM : G.as.LARGE,
                                                     pickerIntention: $.expressionPicker?.emojiIntention ?? F.b_.CHAT,
+                                                    showAddEmojiButton: null == K || null != K.guild_id,
                                                     closePopout: eA,
                                                     onSelectEmoji: o,
                                                     onSelectSoundmoji: ev,

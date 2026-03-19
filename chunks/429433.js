@@ -1,17 +1,18 @@
 "use strict";
-n.d(t, { C: () => s });
+n.d(t, { C: () => a });
 var r = n(627968);
 n(64700);
 var i = n(937773),
-    a = n(307731);
-function s(e) {
-    let { channel: t, closePopout: n, analyticsOverride: s, onSelectEmoji: o, messageId: l } = e;
+    s = n(307731);
+function a(e) {
+    let { channel: t, closePopout: n, analyticsOverride: a, onSelectEmoji: o, messageId: l } = e;
     return (0, r.jsx)(i.A, {
         closePopout: n,
         channel: t,
         onSelectEmoji: o,
-        pickerIntention: a.b_.REACTION,
-        analyticsOverride: s,
+        pickerIntention: s.b_.REACTION,
+        showAddEmojiButton: null == t || null != t.guild_id,
+        analyticsOverride: a,
         messageId: l,
     });
 }

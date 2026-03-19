@@ -10,7 +10,7 @@ var r = n(627968),
     c = n(652215),
     d = n(307731),
     _ = n(985018),
-    f = n(752729);
+    f = n(421631);
 let p = { section: c.JJy.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER, openPopoutType: "gift_effect_emoji_picker" },
     h = d.b_.GIFT;
 function m(e) {
@@ -51,6 +51,7 @@ function m(e) {
                     onSelectEmoji: g,
                     wrapper: "div",
                     pickerIntention: h,
+                    showAddEmojiButton: !1,
                     renderHeader: E,
                     headerClassName: f.a8,
                     className: f.vX,

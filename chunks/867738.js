@@ -11,7 +11,7 @@ var i = n(503698),
     c = n(672594),
     d = n(732139),
     _ = n(307731),
-    f = n(836553);
+    f = n(117155);
 let p = (e) => {
     let {
             channel: t,
@@ -27,8 +27,9 @@ let p = (e) => {
             isBurstReaction: T,
             onBurstReactionToggle: S,
             renderHeader: y,
+            showAddEmojiButton: v = !0,
         } = e,
-        v = (0, r.jsxs)(r.Fragment, {
+        N = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(c.A, {
                     emojiListRef: h,
@@ -41,10 +42,8 @@ let p = (e) => {
                 }),
                 i === _.b_.REACTION ? (0, r.jsx)(a.A, { checked: T, onClick: S }) : null,
                 n ?? (0, r.jsx)(u.A, { searchBarRef: A, className: f.fx, selectedSurrogate: I }),
-                i !== _.b_.NO_CUSTOM_EMOJI && (null == t || null != t.guild_id)
-                    ? (0, r.jsx)(l.A, { channel: t })
-                    : null,
+                i !== _.b_.NO_CUSTOM_EMOJI && v ? (0, r.jsx)(l.A, { channel: t }) : null,
             ],
         });
-    return (0, r.jsx)("div", { className: s()(f.wx, p), children: null != y ? y(v) : v });
+    return (0, r.jsx)("div", { className: s()(f.wx, p), children: null != y ? y(N) : N });
 };
