@@ -8,4 +8,5 @@ e.exports = {
     S0: "sectionClickable__131a1",
     W0: "sectionUnderline__131a1",
     Kt: "underlineAppear__131a1",
+    MQ: "navBarActions__131a1",
 };
