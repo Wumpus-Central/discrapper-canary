@@ -1,28 +1,35 @@
-n.d(t, { r: () => d });
-var i = n(311907),
-    l = n(380335),
+n.d(t, { r: () => u });
+var i = n(64700),
+    l = n(311907),
+    s = n(380335),
     a = n(74114),
-    s = n(320501),
-    r = n(994500),
-    o = n(287809),
-    c = n(652215);
-function d(e) {
-    let t = e.isDM() && !e.isSystemDM() && !e.rawRecipients.some((e) => e.bot),
-        n = t ? e.getRecipientId() : null,
-        d = (0, a.l)(e.id);
-    return (0, i.bG)([s.A, l.A, r.A, o.default], () => {
+    r = n(320501),
+    o = n(994500),
+    c = n(287809),
+    d = n(652215);
+function u(e) {
+    let t = (0, i.useRef)(!1),
+        n = (0, i.useRef)(e.id),
+        u = e.isDM() && !e.isSystemDM() && !e.rawRecipients.some((e) => e.bot),
+        h = u ? e.getRecipientId() : null,
+        m = (0, a.l)(e.id);
+    return (0, l.bG)([r.A, s.A, o.A, c.default], () => {
         if (
-            null != d ||
-            !t ||
-            l.A.isMessageRequest(e.id) ||
-            (null != n && r.A.getRelationshipType(n) === c.eA$.BLOCKED)
+            (n.current !== e.id && ((t.current = !1), (n.current = e.id)),
+            null != m ||
+                !u ||
+                s.A.isMessageRequest(e.id) ||
+                (null != h && o.A.getRelationshipType(h) === d.eA$.BLOCKED))
         )
             return !1;
-        if (null != n) {
-            let e = o.default.getUser(n);
-            if (null != e && e.hasFlag(c.nhx.PROVISIONAL_ACCOUNT)) return !1;
+        if (null != h) {
+            let e = c.default.getUser(h);
+            if (null != e && e.hasFlag(d.nhx.PROVISIONAL_ACCOUNT)) return !1;
         }
-        let i = s.A.getMessages(e.id);
-        return i.ready && !i.hasMoreBefore && !i.hasMoreAfter && i.length < 25 && !s.A.hasCurrentUserSentMessage(e.id);
-    }, [d, t, e.id, n]);
+        let i = r.A.getMessages(e.id),
+            l = !i.hasMoreBefore && !i.hasMoreAfter && i.length < 25,
+            a = r.A.hasCurrentUserSentMessage(e.id),
+            A = (i.ready || t.current) && l && !a;
+        return (t.current = A), A;
+    }, [m, u, e.id, h]);
 }
