@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { l: () => F });
+n.d(t, { l: () => B });
 var r = n(64700),
     i = n(311907),
     s = n(308368),
@@ -24,169 +24,173 @@ var r = n(64700),
     v = n(498642),
     N = n(71393),
     C = n(189081),
-    b = n(576705),
-    R = n(994500),
-    O = n(309010),
-    D = n(287809),
-    L = n(977997),
-    w = n(689168),
-    x = n(194871),
-    M = n(723702),
-    P = n(144914),
-    k = n(652215),
-    U = n(360469),
-    G = n(985018);
-function F(e) {
+    R = n(375492),
+    O = n(576705),
+    b = n(994500),
+    D = n(309010),
+    L = n(461213),
+    w = n(287809),
+    M = n(977997),
+    x = n(689168),
+    P = n(194871),
+    k = n(723702),
+    U = n(144914),
+    G = n(652215),
+    F = n(360469),
+    V = n(985018);
+function B(e) {
     let t,
         {
             activity: n,
-            embeddedActivity: F,
-            user: V,
-            onGameJoin: B,
-            onClose: H,
-            location: j,
-            supportsAskToJoin: Y = !0,
+            embeddedActivity: B,
+            user: H,
+            onGameJoin: j,
+            onClose: Y,
+            location: W,
+            supportsAskToJoin: K = !0,
         } = e,
-        { analyticsLocations: W } = (0, g.Ay)(j ?? []),
-        [K, z] = r.useState(!1),
-        $ = F?.applicationId ?? n?.application_id,
-        q = null != F || (0, m.A)(n),
-        Z = (0, i.bG)([D.default], () => D.default.getCurrentUser()),
-        X = V.id === Z?.id,
-        Q = (0, f.A)({ channelId: (0, _.H)(F?.location), userId: V.id, activity: n }),
-        J = (0, i.bG)(
-            [C.A, T.A, x.A, y.A],
+        { analyticsLocations: $ } = (0, g.Ay)(W ?? []),
+        [z, q] = r.useState(!1),
+        Z = B?.applicationId ?? n?.application_id,
+        X = null != B || (0, m.A)(n),
+        Q = (0, i.bG)([w.default], () => w.default.getCurrentUser()),
+        J = H.id === Q?.id,
+        ee = (0, f.A)({ channelId: (0, _.H)(B?.location), userId: H.id, activity: n }),
+        et = (0, i.bG)(
+            [C.A, T.A, P.A, y.A],
             () =>
-                q ||
-                (null != $ &&
-                    (0, P.A)({
+                X ||
+                (null != Z &&
+                    (0, U.A)({
                         LibraryApplicationStore: C.A,
                         LaunchableGameStore: T.A,
-                        DispatchApplicationStore: x.A,
+                        DispatchApplicationStore: P.A,
                         ConnectedAppsStore: y.A,
-                        applicationId: $,
+                        applicationId: Z,
                     })),
         ),
-        ee = (0, i.bG)([u.Ay], () =>
+        en = (0, i.bG)([u.Ay], () =>
             Array.from(u.Ay.getSelfEmbeddedActivities().values()).some((e) => {
                 let { applicationId: t, location: r } = e;
-                return (t === n?.application_id || t === F?.applicationId) && (0, _.H)(r) === Q;
+                return (t === n?.application_id || t === B?.applicationId) && (0, _.H)(r) === ee;
             }),
         ),
-        et = (0, i.bG)(
-            [w.A],
-            () => null != n && null != n.application_id && w.A.getState(n.application_id, k.xL.JOIN) === k.eAD.LOADING,
+        er = (0, i.bG)(
+            [x.A],
+            () => null != n && null != n.application_id && x.A.getState(n.application_id, G.xL.JOIN) === G.eAD.LOADING,
         ),
-        en = (0, A.h)($),
-        er = (0, I.e)(en),
-        ei = (0, p.vG)({ userId: V.id, activity: n, channelId: Q, application: en }),
-        es = (0, i.bG)([S.A, N.A, v.A, R.A, O.A, L.A, b.A], () =>
-            null != F
-                ? ei === p.Gy.CAN_JOIN
+        ei = (0, A.h)(Z),
+        es = (0, I.e)(ei),
+        ea = (0, p.vG)({ userId: H.id, activity: n, channelId: ee, application: ei }),
+        eo = (0, i.bG)([S.A, N.A, v.A, b.A, D.A, M.A, O.A, R.A, L.A], () =>
+            null != B
+                ? ea === p.Gy.CAN_JOIN
                 : (0, d.A)({
-                      user: V,
+                      user: H,
                       activity: n,
-                      application: en,
-                      channelId: Q,
-                      currentUser: Z,
-                      isEmbedded: q,
+                      application: ei,
+                      channelId: ee,
+                      currentUser: Q,
+                      isEmbedded: X,
                       ChannelStore: S.A,
                       GuildStore: N.A,
                       GuildMemberCountStore: v.A,
-                      RelationshipStore: R.A,
-                      SelectedChannelStore: O.A,
-                      VoiceStateStore: L.A,
-                      PermissionStore: b.A,
+                      RelationshipStore: b.A,
+                      SelectedChannelStore: D.A,
+                      VoiceStateStore: M.A,
+                      PermissionStore: O.A,
+                      LocalActivityStore: R.A,
+                      SelfPresenceStore: L.A,
                   }),
         ),
-        ea = (0, i.bG)([u.Ay], () => {
+        el = (0, i.bG)([u.Ay], () => {
             if (
                 Array.from(u.Ay.getSelfEmbeddedActivities().values()).some(
-                    (e) => e.applicationId === F?.applicationId && e.location.id === F?.location.id,
+                    (e) => e.applicationId === B?.applicationId && e.location.id === B?.location.id,
                 )
             )
                 return !0;
             let e = u.Ay.getCurrentEmbeddedActivity();
             return null != e && e.applicationId === n?.application_id;
         }),
-        eo = (0, l.p)();
-    if (q && null == F && (null == n || !(0, h.A)(n, k.jUm.CONTEXTLESS))) return null;
-    let el = !M.isPlatformEmbedded;
-    if (!((0, h.A)(n, k.jUm.JOIN) || q) || null == $) return null;
-    let eu = !X || (q && !ea),
-        ec = eu && (el || J) && !K && !ee;
-    eu
-        ? el || J || null == n || (t = G.intl.formatToPlainString(G.t.SqJBnN, { name: n.name }))
-        : (t = G.intl.string(G.t["0OiwfH"]));
-    let ed = F?.launchId ?? n?.session_id,
-        e_ = async (e, t) => {
-            if (null == ed || null == $) return;
-            let n = (0, h.A)(t, k.jUm.EMBEDDED),
-                r = O.A.getVoiceChannelId(),
+        eu = (0, l.p)();
+    if (X && null == B && (null == n || !(0, h.A)(n, G.jUm.CONTEXTLESS))) return null;
+    let ec = !k.isPlatformEmbedded;
+    if (!((0, h.A)(n, G.jUm.JOIN) || X) || null == Z) return null;
+    let ed = !J || (X && !el),
+        e_ = ed && (ec || et) && !z && !en;
+    ed
+        ? ec || et || null == n || (t = V.intl.formatToPlainString(V.t.SqJBnN, { name: n.name }))
+        : (t = V.intl.string(V.t["0OiwfH"]));
+    let ef = B?.launchId ?? n?.session_id,
+        ep = async (e, t) => {
+            if (null == ef || null == Z) return;
+            let n = (0, h.A)(t, G.jUm.EMBEDDED),
+                r = D.A.getVoiceChannelId(),
                 i = S.A.getChannel(r);
             await a.A.join({
                 userId: e.id,
-                sessionId: ed,
-                applicationId: $,
+                sessionId: ef,
+                applicationId: Z,
                 channelId: r,
                 messageId: null,
-                intent: U.W9.PLAY,
+                intent: F.W9.PLAY,
                 embedded: n,
-                locationObject: eo.location,
-                analyticsLocations: W,
+                locationObject: eu.location,
+                analyticsLocations: $,
             }),
                 n ||
                     (0, E.A)({
-                        type: k.UqL.JOIN,
+                        type: G.UqL.JOIN,
                         userId: e.id,
                         guildId: i?.guild_id,
                         channelId: r,
                         channelType: i?.type,
-                        applicationId: $,
+                        applicationId: Z,
                         partyId: null != t ? t?.party?.id : "",
-                        locationObject: eo.location,
-                        analyticsLocations: W,
+                        locationObject: eu.location,
+                        analyticsLocations: $,
                     });
         },
-        ef = async () => {
+        eh = async () => {
             let e = !1;
             async function t() {
                 let e;
-                z(!0),
+                q(!0),
                     null != n &&
                         (e = await s.A.sendActivityInviteUser({
-                            type: k.xL.JOIN_REQUEST,
-                            userId: V.id,
+                            type: G.xL.JOIN_REQUEST,
+                            userId: H.id,
                             activity: n,
-                            location: k.ThZ.USER_ACTIVITY_ACTIONS,
+                            location: G.ThZ.USER_ACTIVITY_ACTIONS,
                         })),
                     null != e && o.default.selectPrivateChannel(e.id);
             }
-            if (q && !er) {
-                if (null == $) return;
-                if (!es) return t();
+            if (X && !es) {
+                if (null == Z) return;
+                if (!eo) return t();
                 if (
                     (e = await (0, c.A)({
-                        applicationId: $,
-                        activityChannelId: Q,
-                        locationObject: eo.location,
-                        analyticsLocations: W,
+                        applicationId: Z,
+                        activityChannelId: ee,
+                        locationObject: eu.location,
+                        analyticsLocations: $,
                     }))
                 )
-                    return void H?.();
+                    return void Y?.();
             }
             if (!e) {
-                if (es) {
-                    B?.(), e_(V, n), H?.();
+                if (eo) {
+                    j?.(), ep(H, n), Y?.();
                     return;
                 }
                 await t();
             }
         };
-    if ((!es && !Y) || (!ec && null == t)) return null;
-    let ep = es ? G.intl.string(G.t.VJlc0S) : G.intl.string(G.t.OKsSCR);
+    if ((!eo && !K) || (!e_ && null == t)) return null;
+    let em = eo ? V.intl.string(V.t.VJlc0S) : V.intl.string(V.t.OKsSCR);
     return (
-        ea && (ep = G.intl.string(G.t.DPfdsq)),
-        { buttonCTA: ep, tooltip: t, handleJoinRequest: ef, isEnabled: ec, isJoining: et, isEmbedded: q }
+        el && (em = V.intl.string(V.t.DPfdsq)),
+        { buttonCTA: em, tooltip: t, handleJoinRequest: eh, isEnabled: e_, isJoining: er, isEmbedded: X }
     );
 }
