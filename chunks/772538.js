@@ -1,51 +1,49 @@
-n.d(t, { A: () => p });
+n.d(e, { A: () => E });
 var i = n(627968),
-    s = n(64700),
+    l = n(64700),
     r = n(954571),
-    a = n(975571),
-    l = n(115063),
-    o = n(253932),
-    c = n(112469),
-    d = n(871930),
-    u = n(578746),
-    _ = n(542457),
-    m = n(355097),
-    A = n(531525);
-n(820575);
-var g = n(652215),
-    E = n(985018);
-function h(e) {
-    let { ingress: t, guildId: n } = e,
-        c = o.pE.useSetting().includes(n),
-        m = s.useCallback(
-            (e) => {
-                let i = (0, l.CN)();
-                e ? i.delete(n) : i.add(n),
-                    o.pE.updateSetting([...i]),
-                    r.default.track(g.HAw.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
-                        action: _.m.RESTRICT_GUILD_ACTIVITY_JOIN_TOGGLE,
-                        ingress: t,
+    u = n(975571),
+    d = n(115063),
+    s = n(253932),
+    a = n(112469),
+    o = n(106148),
+    c = n(650832),
+    g = n(542457),
+    S = n(355097);
+n(927693);
+var _ = n(652215),
+    T = n(985018);
+function A(t) {
+    let { ingress: e, guildId: n } = t,
+        a = s.pE.useSetting().includes(n),
+        S = l.useCallback(
+            (t) => {
+                let i = (0, d.CN)();
+                t ? i.delete(n) : i.add(n),
+                    s.pE.updateSetting([...i]),
+                    r.default.track(_.HAw.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+                        action: g.m.RESTRICT_GUILD_ACTIVITY_JOIN_TOGGLE,
+                        ingress: e,
                         guild_id: n,
                     });
             },
-            [t, n],
+            [e, n],
         );
     return "0" === n
         ? null
-        : (0, i.jsx)(d.h, {
-              setting: A.H.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_JOINING_V2,
-              children: (0, i.jsx)(u.Ay, {
-                  title: E.intl.string(E.t["T+nevN"]),
-                  value: !c,
-                  onChange: m,
-                  note: E.intl.format(E.t.jXKQCu, {
-                      helpdeskArticle: a.A.getArticleURL(g.MVz.ACTIVITY_STATUS_SETTINGS),
+        : (0, i.jsx)(o.h, {
+              children: (0, i.jsx)(c.Ay, {
+                  title: T.intl.string(T.t["T+nevN"]),
+                  value: !a,
+                  onChange: S,
+                  note: T.intl.format(T.t.jXKQCu, {
+                      helpdeskArticle: u.A.getArticleURL(_.MVz.ACTIVITY_STATUS_SETTINGS),
                   }),
               }),
           });
 }
-function p(e) {
-    let { ingress: t = m.bf.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = e,
-        s = (0, c.Tx)();
-    return (0, i.jsx)(h, { ingress: t, guildId: n ?? s });
+function E(t) {
+    let { ingress: e = S.bf.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = t,
+        l = (0, a.Tx)();
+    return (0, i.jsx)(A, { ingress: e, guildId: n ?? l });
 }

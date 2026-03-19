@@ -1,90 +1,88 @@
-n.d(t, { A: () => f });
+n.d(e, { A: () => m });
 var i = n(627968),
-    s = n(64700),
+    l = n(64700),
     r = n(421380),
-    a = n(171316),
-    l = n(71393),
-    o = n(954571),
-    c = n(115063),
-    d = n(762183),
-    u = n(253932),
-    _ = n(445176),
-    m = n(112469),
-    A = n(871930),
-    g = n(578746),
-    E = n(997913),
-    h = n(542457),
-    p = n(355097),
-    C = n(531525);
-n(820575);
-var x = n(652215),
-    T = n(985018),
-    I = n(842130);
-function S(e) {
-    let { ingress: t, guildId: n } = e,
-        p = (0, m.q9)(),
-        S = u.$s.useSetting().includes(n),
-        f = (0, d.K)(),
-        N = (0, _.e)(),
-        b = (0, a.uM)(),
-        R = s.useCallback(
-            (e) => {
-                let i = (0, c.Tb)();
-                e ? i.delete(n) : i.add(n),
-                    u.$s.updateSetting(Array.from(i)),
-                    o.default.track(x.HAw.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
-                        action: h.m.DIRECT_MESSAGES_TOGGLE,
-                        ingress: t,
+    u = n(171316),
+    d = n(71393),
+    s = n(954571),
+    a = n(115063),
+    o = n(762183),
+    c = n(253932),
+    g = n(445176),
+    S = n(112469),
+    _ = n(106148),
+    T = n(650832),
+    A = n(137675),
+    E = n(542457),
+    f = n(355097);
+n(927693);
+var C = n(652215),
+    G = n(985018),
+    p = n(842130);
+function I(t) {
+    let { ingress: e, guildId: n } = t,
+        f = (0, S.q9)(),
+        I = c.$s.useSetting().includes(n),
+        m = (0, o.K)(),
+        x = (0, g.e)(),
+        R = (0, u.uM)(),
+        v = l.useCallback(
+            (t) => {
+                let i = (0, a.Tb)();
+                t ? i.delete(n) : i.add(n),
+                    c.$s.updateSetting(Array.from(i)),
+                    s.default.track(C.HAw.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+                        action: E.m.DIRECT_MESSAGES_TOGGLE,
+                        ingress: e,
                         guild_id: n,
                     });
             },
-            [n, t],
+            [n, e],
         );
-    function v(e, t) {
-        o.default.track(x.HAw.GUILD_DEFAULT_DMS_UPDATED, {
-            default_guilds_restricted: e,
-            applied_to_existing_guilds: t,
+    function h(t, e) {
+        s.default.track(C.HAw.GUILD_DEFAULT_DMS_UPDATED, {
+            default_guilds_restricted: t,
+            applied_to_existing_guilds: e,
         });
     }
-    let O = N ? T.intl.string(T.t.PMsfcH) : T.intl.string(T.t.RAQUSN);
-    return (0, i.jsx)(A.h, {
-        setting: C.H.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS_V2,
+    let D = x ? G.intl.string(G.t.PMsfcH) : G.intl.string(G.t.RAQUSN);
+    return (0, i.jsx)(_.h, {
         children:
             "0" === n
-                ? (0, i.jsx)(g.Ay, {
-                      title: O,
-                      note: N ? T.intl.string(T.t.XXGmuB) : T.intl.string(T.t.wbYDfT),
-                      value: !f,
-                      onChange: (e) => {
-                          var t;
-                          (t = !e),
-                              (0, E.O)({
-                                  header: T.intl.string(T.t["uUr+GR"]),
-                                  body: T.intl.string(T.t.hjGJBp),
-                                  confirmText: T.intl.string(T.t.gm1Vej),
-                                  cancelText: T.intl.string(T.t.p89ACt),
+                ? (0, i.jsx)(T.Ay, {
+                      title: D,
+                      note: x ? G.intl.string(G.t.XXGmuB) : G.intl.string(G.t.wbYDfT),
+                      value: !m,
+                      onChange: (t) => {
+                          var e;
+                          (e = !t),
+                              (0, A.O)({
+                                  header: G.intl.string(G.t["uUr+GR"]),
+                                  body: G.intl.string(G.t.hjGJBp),
+                                  confirmText: G.intl.string(G.t.gm1Vej),
+                                  cancelText: G.intl.string(G.t.p89ACt),
                                   confirmButtonColor: r.$n.Colors.BRAND,
                                   onConfirm: () => {
-                                      u.n6.updateSetting(t), v(t, !1);
+                                      c.n6.updateSetting(e), h(e, !1);
                                   },
                                   onCancel: () => {
-                                      u.n6.updateSetting(t), u.$s.updateSetting(t ? l.A.getGuildIds() : []), v(t, !0);
+                                      c.n6.updateSetting(e), c.$s.updateSetting(e ? d.A.getGuildIds() : []), h(e, !0);
                                   },
                               });
                       },
-                      disabled: b,
-                      tooltipText: b ? T.intl.string(I.default["6Af/cw"]) : void 0,
+                      disabled: R,
+                      tooltipText: R ? G.intl.string(p.default["6Af/cw"]) : void 0,
                   })
-                : (0, i.jsx)(g.Ay, {
-                      title: O,
-                      note: p ? T.intl.string(T.t.V0ka0Q) : N ? T.intl.string(T.t.F9WY3f) : T.intl.string(T.t.G7c3Xo),
-                      value: !S,
-                      onChange: R,
+                : (0, i.jsx)(T.Ay, {
+                      title: D,
+                      note: f ? G.intl.string(G.t.V0ka0Q) : x ? G.intl.string(G.t.F9WY3f) : G.intl.string(G.t.G7c3Xo),
+                      value: !I,
+                      onChange: v,
                   }),
     });
 }
-function f(e) {
-    let { ingress: t = p.bf.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = e,
-        s = (0, m.Tx)();
-    return (0, i.jsx)(S, { ingress: t, guildId: n ?? s });
+function m(t) {
+    let { ingress: e = f.bf.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = t,
+        l = (0, S.Tx)();
+    return (0, i.jsx)(I, { ingress: e, guildId: n ?? l });
 }

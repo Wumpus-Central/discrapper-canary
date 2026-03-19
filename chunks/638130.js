@@ -5,9 +5,9 @@ var i = n(627968),
     a = n(444802),
     r = n(975571),
     o = n(524738),
-    d = n(421248),
-    c = n(42765),
-    u = n(871930),
+    d = n(106148),
+    c = n(421248),
+    u = n(42765),
     _ = n(531525),
     m = n(652215),
     g = n(985018),
@@ -18,13 +18,13 @@ function x() {
             () => [
                 {
                     title: g.intl.string(g.t.GYpoAq),
-                    component: d.Z,
+                    component: c.Z,
                     orientation: "vertical",
                     setting: _.H.SEXUALLY_EXPLICIT_MEDIA_REDACTION,
                 },
                 {
                     title: g.intl.string(g.t["16/3Bi"]),
-                    component: c.q,
+                    component: u.q,
                     orientation: "vertical",
                     setting: _.H.GORE_MEDIA_REDACTION,
                 },
@@ -34,10 +34,9 @@ function x() {
         n = s.useCallback((e) => {
             l.A.setSection(m.nc_.CONTENT_AND_SOCIAL, e);
         }, []);
-    return (0, i.jsxs)(u.h, {
-        setting: _.H.SENSITIVE_CONTENT_FILTERS,
+    return (0, i.jsxs)(d.h, {
         children: [
-            (0, i.jsx)(u._, {
+            (0, i.jsx)(d._, {
                 header: g.intl.string(g.t["Hj/But"]),
                 description: g.intl.format(g.t.dliU4j, { learnMoreLink: r.A.getArticleURL(e) }),
             }),
