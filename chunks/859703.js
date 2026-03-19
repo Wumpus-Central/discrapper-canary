@@ -74,6 +74,14 @@ function ei(e, t) {
             let n = L.get(e);
             null != n && (L = new Map(L)).set(e, { ...n, ...t });
         }
+        for (let [n, r] of R) {
+            let i = r.quests.get(e);
+            if (i?.questWithUserStatus != null) {
+                let s = new Map(r.quests);
+                s.set(e, { ...i, questWithUserStatus: { ...i.questWithUserStatus, ...t } }),
+                    (R = new Map(R)).set(n, { ...r, quests: s });
+            }
+        }
     }
 }
 function es(e, t) {
