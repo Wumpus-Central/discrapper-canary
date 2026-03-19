@@ -75,6 +75,7 @@ class a extends r.A {
                     publishers: t.publisher_names ?? [],
                     developers: t.developer_names ?? [],
                     trailers: e.trailers,
+                    shopCollectionIds: e.shop_collection_ids,
                     steamReleaseStatus: t.steam_release_status,
                     reviews: s(t.reviews),
                     steam_id: t.steam_id,

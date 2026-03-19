@@ -116,9 +116,13 @@ let V = (e) => {
                     }),
                     await (0, u.mMO)(
                         async () => {
-                            let { default: e } = await Promise.all([n.e("42006"), n.e("60815")]).then(
-                                n.bind(n, 225732),
-                            );
+                            let { default: e } = await Promise.all([
+                                n.e("42006"),
+                                n.e("52473"),
+                                n.e("69839"),
+                                n.e("67202"),
+                                n.e("35899"),
+                            ]).then(n.bind(n, 225732));
                             return (t) =>
                                 (0, r.jsx)(e, {
                                     applicationId: a.applicationId,

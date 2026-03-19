@@ -35,6 +35,7 @@ var r = n(835245),
             (e[(e.BattlenetStoreLink = 25)] = "BattlenetStoreLink"),
             (e[(e.RiotStoreLink = 26)] = "RiotStoreLink"),
             (e[(e.MinecraftStoreLink = 27)] = "MinecraftStoreLink"),
+            (e[(e.DiscordCollectiblesShop = 28)] = "DiscordCollectiblesShop"),
             e
         );
     })({}),

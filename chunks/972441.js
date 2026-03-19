@@ -1,74 +1,86 @@
-n.d(t, { A: () => u });
-var r = n(64700),
-    l = n(158954),
-    i = n(61491),
-    a = n(770178),
-    s = n(765548),
-    o = n(650583);
-function u(e) {
-    let {
-            onScrubBack: t,
-            onScrubForward: n,
-            maxSeekableTime: u,
-            interactionEnabled: c,
-            duration: d,
-            onClick: m,
-            percent: p,
-        } = e,
-        [E, f] = r.useState(null),
-        [h, v] = r.useState(null),
-        [x, g] = r.useState(!1),
-        { i18n: S } = (0, l.G98)(),
-        A = r.useMemo(() => {
-            let e = { role: "progressbar", "aria-label": "Progress Bar" };
-            return (
-                null != p &&
-                    "number" == typeof p &&
-                    ((e["aria-valuenow"] = p),
-                    (e["aria-valuemin"] = 0),
-                    (e["aria-valuemax"] = 100),
-                    (e["aria-label"] = S.PERCENT_COMPLETE(Math.round(p)))),
-                e
-            );
-        }, [p, S]),
-        C = r.useMemo(() => (null == E || null == u ? null : (0, i.DX)(u, d, E)), [E, u, d]),
-        _ = (0, s.A)((e) => {
-            f(e.contentRect);
-        }),
-        b = (0, a.w)(_),
-        T = (e) => {
-            null != b.current && v(e.clientX - b.current.getBoundingClientRect().left);
-        };
-    return {
-        contRef: b,
-        boundingRect: E,
-        handleMouseEnter: (e) => {
-            c && (g(!0), T(e));
-        },
-        handleMouseLeave: (e) => {
-            c && (g(!1), v(null));
-        },
-        handleMouseMove: (e) => {
-            c && x && T(e);
-        },
-        handleKeyDown: r.useCallback(
-            (e) => {
-                let { key: r } = e;
-                r === o.N$.ArrowLeft && null != t
-                    ? (e.preventDefault(), e.stopPropagation(), t())
-                    : r === o.N$.ArrowRight && null != n && (e.preventDefault(), e.stopPropagation(), n());
-            },
-            [t, n],
-        ),
-        hoveredAtX: h,
-        maxSeekableX: C,
-        isHovering: x,
-        handleClick: (e) => {
-            if (!c || null == m) return;
-            let t = e.currentTarget.getBoundingClientRect(),
-                n = e.clientX - t.left;
-            m((0, i.hc)(n, t, d));
-        },
-        ariaProps: A,
+l.d(t, { A: () => E });
+var r = l(311907),
+    n = l(73153),
+    i = l(403362),
+    o = l(41770);
+let a = (0, i.m6)() ? { [o.C8]: { "dummy-shop-home": o.uG, "dummy-orb-shelf": o.oP, "dummy-sku-list": o.Ej } } : {},
+    s = (0, i.m6)() ? ["dummy-skeleton"] : [],
+    d = (0, i.m6)() ? { [o.C8]: { "dummy-popular-picks": o.Ot } } : {},
+    c = (0, i.m6)() ? ["dummy-skeleton-template"] : [],
+    u = (e, t) => `${e}/${t}`,
+    h = a,
+    m = new Set(s),
+    p = {},
+    _ = d,
+    T = new Set(c),
+    g = {},
+    S = function (e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            l = Object.entries(t)
+                .sort((e, t) => {
+                    let [l] = e,
+                        [r] = t;
+                    return l.localeCompare(r);
+                })
+                .map((e) => {
+                    let [t, l] = e;
+                    return `${t}:${l}`;
+                })
+                .join("-");
+        return "" !== l ? `${e}-${l}` : e;
     };
+class A extends r.Ay.Store {
+    static displayName = "CmsLayoutStore";
+    getLayout(e, t) {
+        return null == e || null == t ? null : (h[e]?.[t] ?? null);
+    }
+    isFetchingLayout(e, t) {
+        return null != e && null != t && m.has(u(e, t));
+    }
+    getFetchError(e, t) {
+        return null == e || null == t ? null : (p[u(e, t)] ?? null);
+    }
+    getTemplateLayout(e, t, l) {
+        if (null == e || null == t) return null;
+        let r = S(t, l);
+        return _[e]?.[r] ?? null;
+    }
+    isFetchingTemplate(e, t, l) {
+        let r = S(t ?? "", l);
+        return null != e && null != t && T.has(u(e, r));
+    }
+    getTemplateFetchError(e, t, l) {
+        return null == e || null == t ? null : (g[u(e, S(t ?? "", l))] ?? null);
+    }
 }
+let E = new A(n.h, {
+    CMS_LAYOUT_FETCH: (e) => {
+        let { tenantId: t, layoutId: l } = e;
+        m.add(u(t, l));
+    },
+    CMS_LAYOUT_FETCH_SUCCESS: (e) => {
+        let { tenantId: t, layout: l } = e;
+        ((h[t] ??= {})[l.id] = l), delete p[u(t, l.id)], m.delete(u(t, l.id));
+    },
+    CMS_LAYOUT_FETCH_FAILURE: (e) => {
+        let { tenantId: t, layoutId: l, apiError: r } = e;
+        (p[u(t, l)] = r), m.delete(u(t, l));
+    },
+    CMS_TEMPLATE_FETCH: (e) => {
+        let { tenantId: t, templateId: l, requestParams: r } = e;
+        T.add(u(t, S(l, r)));
+    },
+    CMS_TEMPLATE_FETCH_SUCCESS: (e) => {
+        let { tenantId: t, templateId: l, requestParams: r, layout: n } = e,
+            i = S(l, r);
+        ((_[t] ??= {})[i] = n), delete g[u(t, i)], T.delete(u(t, i));
+    },
+    CMS_TEMPLATE_FETCH_FAILURE: (e) => {
+        let { tenantId: t, templateId: l, requestParams: r, apiError: n } = e,
+            i = S(l, r);
+        (g[u(t, i)] = n), T.delete(u(t, i));
+    },
+    LOGOUT: function () {
+        (h = {}), (m = new Set()), (p = {}), (_ = {}), (T = new Set()), (g = {});
+    },
+});

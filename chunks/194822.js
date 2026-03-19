@@ -1,86 +1,74 @@
-t.d(l, { A: () => A });
-var r = t(311907),
-    o = t(73153),
-    n = t(403362),
-    a = t(41770);
-let i = (0, n.m6)() ? { [a.C8]: { "dummy-shop-home": a.uG, "dummy-orb-shelf": a.oP, "dummy-sku-list": a.Ej } } : {},
-    d = (0, n.m6)() ? ["dummy-skeleton"] : [],
-    s = (0, n.m6)() ? { [a.C8]: { "dummy-popular-picks": a.Ot } } : {},
-    c = (0, n.m6)() ? ["dummy-skeleton-template"] : [],
-    u = (e, l) => `${e}/${l}`,
-    h = i,
-    p = new Set(d),
-    m = {},
-    _ = s,
-    S = new Set(c),
-    b = {},
-    T = function (e) {
-        let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            t = Object.entries(l)
-                .sort((e, l) => {
-                    let [t] = e,
-                        [r] = l;
-                    return t.localeCompare(r);
-                })
-                .map((e) => {
-                    let [l, t] = e;
-                    return `${l}:${t}`;
-                })
-                .join("-");
-        return "" !== t ? `${e}-${t}` : e;
+n.d(t, { A: () => u });
+var r = n(64700),
+    l = n(158954),
+    i = n(61491),
+    s = n(770178),
+    a = n(765548),
+    o = n(650583);
+function u(e) {
+    let {
+            onScrubBack: t,
+            onScrubForward: n,
+            maxSeekableTime: u,
+            interactionEnabled: c,
+            duration: d,
+            onClick: m,
+            percent: p,
+        } = e,
+        [f, E] = r.useState(null),
+        [h, v] = r.useState(null),
+        [x, g] = r.useState(!1),
+        { i18n: S } = (0, l.G98)(),
+        A = r.useMemo(() => {
+            let e = { role: "progressbar", "aria-label": "Progress Bar" };
+            return (
+                null != p &&
+                    "number" == typeof p &&
+                    ((e["aria-valuenow"] = p),
+                    (e["aria-valuemin"] = 0),
+                    (e["aria-valuemax"] = 100),
+                    (e["aria-label"] = S.PERCENT_COMPLETE(Math.round(p)))),
+                e
+            );
+        }, [p, S]),
+        C = r.useMemo(() => (null == f || null == u ? null : (0, i.DX)(u, d, f)), [f, u, d]),
+        _ = (0, a.A)((e) => {
+            E(e.contentRect);
+        }),
+        b = (0, s.w)(_),
+        y = (e) => {
+            null != b.current && v(e.clientX - b.current.getBoundingClientRect().left);
+        };
+    return {
+        contRef: b,
+        boundingRect: f,
+        handleMouseEnter: (e) => {
+            c && (g(!0), y(e));
+        },
+        handleMouseLeave: (e) => {
+            c && (g(!1), v(null));
+        },
+        handleMouseMove: (e) => {
+            c && x && y(e);
+        },
+        handleKeyDown: r.useCallback(
+            (e) => {
+                let { key: r } = e;
+                r === o.N$.ArrowLeft && null != t
+                    ? (e.preventDefault(), e.stopPropagation(), t())
+                    : r === o.N$.ArrowRight && null != n && (e.preventDefault(), e.stopPropagation(), n());
+            },
+            [t, n],
+        ),
+        hoveredAtX: h,
+        maxSeekableX: C,
+        isHovering: x,
+        handleClick: (e) => {
+            if (!c || null == m) return;
+            let t = e.currentTarget.getBoundingClientRect(),
+                n = e.clientX - t.left;
+            m((0, i.hc)(n, t, d));
+        },
+        ariaProps: A,
     };
-class C extends r.Ay.Store {
-    static displayName = "CmsLayoutStore";
-    getLayout(e, l) {
-        return null == e || null == l ? null : (h[e]?.[l] ?? null);
-    }
-    isFetchingLayout(e, l) {
-        return null != e && null != l && p.has(u(e, l));
-    }
-    getFetchError(e, l) {
-        return null == e || null == l ? null : (m[u(e, l)] ?? null);
-    }
-    getTemplateLayout(e, l, t) {
-        if (null == e || null == l) return null;
-        let r = T(l, t);
-        return _[e]?.[r] ?? null;
-    }
-    isFetchingTemplate(e, l, t) {
-        let r = T(l ?? "", t);
-        return null != e && null != l && S.has(u(e, r));
-    }
-    getTemplateFetchError(e, l, t) {
-        return null == e || null == l ? null : (b[u(e, T(l ?? "", t))] ?? null);
-    }
 }
-let A = new C(o.h, {
-    CMS_LAYOUT_FETCH: (e) => {
-        let { tenantId: l, layoutId: t } = e;
-        p.add(u(l, t));
-    },
-    CMS_LAYOUT_FETCH_SUCCESS: (e) => {
-        let { tenantId: l, layout: t } = e;
-        ((h[l] ??= {})[t.id] = t), delete m[u(l, t.id)], p.delete(u(l, t.id));
-    },
-    CMS_LAYOUT_FETCH_FAILURE: (e) => {
-        let { tenantId: l, layoutId: t, apiError: r } = e;
-        (m[u(l, t)] = r), p.delete(u(l, t));
-    },
-    CMS_TEMPLATE_FETCH: (e) => {
-        let { tenantId: l, templateId: t, requestParams: r } = e;
-        S.add(u(l, T(t, r)));
-    },
-    CMS_TEMPLATE_FETCH_SUCCESS: (e) => {
-        let { tenantId: l, templateId: t, requestParams: r, layout: o } = e,
-            n = T(t, r);
-        ((_[l] ??= {})[n] = o), delete b[u(l, n)], S.delete(u(l, n));
-    },
-    CMS_TEMPLATE_FETCH_FAILURE: (e) => {
-        let { tenantId: l, templateId: t, requestParams: r, apiError: o } = e,
-            n = T(t, r);
-        (b[u(l, n)] = o), S.delete(u(l, n));
-    },
-    LOGOUT: function () {
-        (h = {}), (p = new Set()), (m = {}), (_ = {}), (S = new Set()), (b = {});
-    },
-});
